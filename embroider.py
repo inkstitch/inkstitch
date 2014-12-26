@@ -615,11 +615,14 @@ class Embroider(inkex.Effect):
 
 		emb_point_list = []
 		for (type,points) in path:
-			dbg.write("path_to_patch_list parses pt %s\n" % points)
-			pointscopy = list(points)
-			while (len(pointscopy)>0):
-				emb_point_list.append(PyEmb.Point(pointscopy[0], pointscopy[1]))
-				pointscopy = pointscopy[2:]
+			dbg.write("path_to_patch_list parses pt %s with type=%s\n" % (points, type))
+			if type == 'Z':
+				emb_point_list.append(emb_point_list[0])
+			else:
+				pointscopy = list(points)
+				while (len(pointscopy)>0):
+					emb_point_list.append(PyEmb.Point(pointscopy[0], pointscopy[1]))
+					pointscopy = pointscopy[2:]
 
 		STROKE_MIN = 0.5	# a 0.5pt stroke becomes a straight line.
 		if (stroke_width <= STROKE_MIN):
