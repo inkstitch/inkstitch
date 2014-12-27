@@ -328,19 +328,29 @@ class EmbroideryObject:
 		self.patchList = patchList
 		self.row_spacing_px = row_spacing_px
 
-	def emit_melco(self):
+	def emit_file(self, filename, output_format):
 		emb = PyEmb.Embroidery()
 		for patch in self.patchList.patches:
+			jumpStitch = True
 			for stitch in patch.stitches:
+				dbg.write("stitch color %s\n" % patch.color)
+
 				newStitch = PyEmb.Point(stitch.x, -stitch.y)
-				dbg.write("melco stitch color %s\n" % patch.color)
 				newStitch.color = patch.color
+				newStitch.jumpStitch = jumpStitch
 				emb.addStitch(newStitch)
+
+				jumpStitch = False
+
 		emb.translate_to_origin()
 		emb.scale(10.0/pixels_per_millimeter)
-		fp = open("embroider-output.exp", "wb")
-		#fp = open("output.ksm", "wb")
-		fp.write(emb.export_melco(dbg))
+
+		fp = open(filename, "wb")
+
+		if output_format == "melco":
+			fp.write(emb.export_melco(dbg))
+		elif output_format == "csv":
+			fp.write(emb.export_csv(dbg))
 		fp.close()
 
 	def emit_inkscape(self, parent):
@@ -352,7 +362,7 @@ class EmbroideryObject:
 					inkex.addNS('path', 'svg'),
 					{	'style':simplestyle.formatStyle(
 							{ 'stroke': lastPatch.color,
-								'stroke-width':str(self.row_spacing_px*0.25),
+								'stroke-width':str(self.row_spacing_px*.25),
 								'stroke-dasharray':'0.99, 1.98',
 								'fill': 'none' }),
 						'd':simplepath.formatPath([
@@ -422,6 +432,15 @@ class Embroider(inkex.Effect):
 			choices=["true","false"],
 			dest="preserve_order", default="false",
 			help="Sort by stacking order instead of color")
+		self.OptionParser.add_option("-O", "--output_format",
+			action="store", type="choice",
+			choices=["melco", "csv"],
+			dest="output_format", default="melco",
+			help="File output format")
+		self.OptionParser.add_option("-F", "--filename",
+			action="store", type="string",
+			dest="filename", default="embroider-output.exp",
+			help="Name (and possibly path) of output file")
 		self.patches = []
 
 	def get_sort_order(self, threadcolor):
@@ -570,8 +589,7 @@ class Embroider(inkex.Effect):
 		dbg.write("patch count: %d\n" % len(self.patchList.patches))
 
 		eo = EmbroideryObject(self.patchList, self.row_spacing_px)
-
-		eo.emit_melco()
+		eo.emit_file(self.options.filename, self.options.output_format)
 
 		new_group = inkex.etree.SubElement(self.current_layer,
 				inkex.addNS('g', 'svg'), {})

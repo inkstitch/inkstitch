@@ -144,6 +144,30 @@ class Embroidery:
 			self.pos = stitch
 		return self.str
 
+        def export_csv(self, dbg):
+                self.str = ""
+                self.str += '"#","[THREAD_NUMBER]","[RED]","[GREEN]","[BLUE]","[DESCRIPTION]","[CATALOG_NUMBER]"\n'
+                self.str += '"#","[STITCH_TYPE]","[X]","[Y]"\n'
+
+                lastColor = None
+                colorIndex = 0
+                for stitch in self.coords:
+                        if lastColor == None or stitch.color != lastColor:
+                                colorIndex += 1
+                                self.str += '"$","%d","%d","%d","%d","(null)","(null)"\n' % (
+                                        colorIndex,
+                                        int(stitch.color[1:3], 16),
+                                        int(stitch.color[3:5], 16),
+                                        int(stitch.color[5:7], 16))
+                        if stitch.jumpStitch:
+                                self.str += '"*","JUMP","%f","%f"\n' % (stitch.x/10, stitch.y/10)
+                        if lastColor != None and stitch.color != lastColor:
+                                # not first color choice, add color change record
+                                self.str += '"*","COLOR","%f","%f"\n' % (stitch.x/10, stitch.y/10)
+                        self.str += '"*","STITCH","%f","%f"\n' % (stitch.x/10, stitch.y/10)
+                        lastColor = stitch.color
+                return self.str
+
 class Test:
 	def __init__(self):
 		emb = Embroidery()
