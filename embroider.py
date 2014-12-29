@@ -328,11 +328,21 @@ class EmbroideryObject:
 		self.patchList = patchList
 		self.row_spacing_px = row_spacing_px
 
-	def emit_file(self, filename, output_format):
+	def emit_file(self, filename, output_format, collapse_len_px):
 		emb = PyEmb.Embroidery()
+		lastStitch = None
+		lastColor = None
 		for patch in self.patchList.patches:
 			jumpStitch = True
 			for stitch in patch.stitches:
+				if jumpStitch and lastStitch and lastColor == patch.color:
+					# consider collapsing jump stich, if it is pretty short
+					c = math.sqrt((stitch.x - lastStitch.x) ** 2 + (stitch.y + lastStitch.y) ** 2)
+					dbg.write("jump stitch length: %f (%d/%d -> %d/%d)\n" % (c, lastStitch.x, lastStitch.y, stitch.x, stitch.y))
+					if c < collapse_len_px:
+						dbg.write("... collapsed\n")
+						jumpStitch = False
+
 				dbg.write("stitch color %s\n" % patch.color)
 
 				newStitch = PyEmb.Point(stitch.x, -stitch.y)
@@ -341,6 +351,8 @@ class EmbroideryObject:
 				emb.addStitch(newStitch)
 
 				jumpStitch = False
+				lastStitch = newStitch
+				lastColor = patch.color
 
 		emb.translate_to_origin()
 		emb.scale(10.0/pixels_per_millimeter)
@@ -423,6 +435,10 @@ class Embroider(inkex.Effect):
 			action="store", type="float",
 			dest="max_stitch_len_mm", default=3.0,
 			help="max stitch length (mm)")
+		self.OptionParser.add_option("-c", "--collapse_len_mm",
+			action="store", type="float",
+			dest="collapse_len_mm", default=0.0,
+			help="max collapse length (mm)")
 		self.OptionParser.add_option("-f", "--flatness",
 			action="store", type="float", 
 			dest="flat", default=0.1,
@@ -594,7 +610,8 @@ class Embroider(inkex.Effect):
 		
 	def effect(self):
 		self.row_spacing_px = self.options.row_spacing_mm * pixels_per_millimeter
-		self.max_stitch_len_px = self.options.max_stitch_len_mm*pixels_per_millimeter 
+		self.max_stitch_len_px = self.options.max_stitch_len_mm*pixels_per_millimeter
+		self.collapse_len_px = self.options.collapse_len_mm*pixels_per_millimeter
 
 		self.svgpath = inkex.addNS('path', 'svg')
 		self.patchList = PatchList([])
@@ -605,7 +622,7 @@ class Embroider(inkex.Effect):
 		dbg.write("patch count: %d\n" % len(self.patchList.patches))
 
 		eo = EmbroideryObject(self.patchList, self.row_spacing_px)
-		eo.emit_file(self.options.filename, self.options.output_format)
+		eo.emit_file(self.options.filename, self.options.output_format, self.collapse_len_px)
 
 		new_group = inkex.etree.SubElement(self.current_layer,
 				inkex.addNS('g', 'svg'), {})
