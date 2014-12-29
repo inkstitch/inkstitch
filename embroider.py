@@ -432,6 +432,11 @@ class Embroider(inkex.Effect):
 			choices=["true","false"],
 			dest="preserve_order", default="false",
 			help="Sort by stacking order instead of color")
+		self.OptionParser.add_option("-H", "--hatch_filled_paths",
+			action="store", type="choice",
+			choices=["true","false"],
+			dest="hatch_filled_paths", default="false",
+			help="Use hatching lines instead of equally-spaced lines to fill paths")
 		self.OptionParser.add_option("-O", "--output_format",
 			action="store", type="choice",
 			choices=["melco", "csv"],
@@ -482,6 +487,8 @@ class Embroider(inkex.Effect):
 	def intersect_region_with_grating(self, shpath):
 		dbg.write("bounds = %s\n" % str(shpath.bounds))
 		bbox = shpath.bounds
+		hatching = self.options.hatch_filled_paths == "true"
+		dbg.write("hatching is %s\n" % hatching)
 		
 		delta = self.row_spacing_px/2.0
 		bbox_sz = (bbox[2]-bbox[0],bbox[3]-bbox[1])
@@ -498,13 +505,22 @@ class Embroider(inkex.Effect):
 			p_inc = PyEmb.Point(0, self.row_spacing_px)
 			count = (bbox[3]-bbox[1])/self.row_spacing_px + 2
 
+		if hatching:
+			count *= 2
+
 		rows = []
 		steps = 0
 		while (steps < count):
 			try:
 				steps += 1
-				p0 += p_inc
-				p1 += p_inc
+				if hatching:
+					if steps % 2 == 1:
+						p1 += p_inc
+					else:
+						p0 += p_inc
+				else:
+					p0 += p_inc
+					p1 += p_inc
 				endpoints = [p0.as_tuple(), p1.as_tuple()]
 				shline = shgeo.LineString(endpoints)
 				res = shline.intersection(shpath)
