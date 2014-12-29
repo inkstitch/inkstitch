@@ -631,24 +631,39 @@ class Embroider(inkex.Effect):
 		# (If we're parsing beziers, there will be a list of multi-point
 		# subarrays.)
 
+		patches = []
 		emb_point_list = []
+
+		def flush_point_list():
+			STROKE_MIN = 0.5	# a 0.5pt stroke becomes a straight line.
+			if (stroke_width <= STROKE_MIN):
+				dbg.write("self.max_stitch_len_px = %s\n" % self.max_stitch_len_px)
+				patch = self.stroke_points(emb_point_list, self.max_stitch_len_px, 0.0, threadcolor, sortorder)
+			else:
+				patch = self.stroke_points(emb_point_list, self.row_spacing_px*0.5, stroke_width, threadcolor, sortorder)
+			patches.extend(patch)
+
+		close_point = None
 		for (type,points) in path:
 			dbg.write("path_to_patch_list parses pt %s with type=%s\n" % (points, type))
+			if type == 'M' and len(emb_point_list):
+				flush_point_list()
+				emb_point_list = []
+
 			if type == 'Z':
-				emb_point_list.append(emb_point_list[0])
+				dbg.write("... closing patch to %s\n" % close_point)
+				emb_point_list.append(close_point)
 			else:
 				pointscopy = list(points)
 				while (len(pointscopy)>0):
 					emb_point_list.append(PyEmb.Point(pointscopy[0], pointscopy[1]))
 					pointscopy = pointscopy[2:]
+			if type == 'M':
+				dbg.write("latching close_point %s\n" % emb_point_list[-1])
+				close_point = emb_point_list[-1]
 
-		STROKE_MIN = 0.5	# a 0.5pt stroke becomes a straight line.
-		if (stroke_width <= STROKE_MIN):
-			dbg.write("self.max_stitch_len_px = %s\n" % self.max_stitch_len_px)
-			patch = self.stroke_points(emb_point_list, self.max_stitch_len_px, 0.0, threadcolor, sortorder)
-		else:
-			patch = self.stroke_points(emb_point_list, self.row_spacing_px*0.5, stroke_width, threadcolor, sortorder)
-		return patch
+		flush_point_list()
+		return patches
 
 	def stroke_points(self, emb_point_list, row_spacing_px, stroke_width, threadcolor, sortorder):
 		patch = Patch(color=threadcolor, sortorder=sortorder)
