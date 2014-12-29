@@ -335,13 +335,20 @@ class EmbroideryObject:
 		for patch in self.patchList.patches:
 			jumpStitch = True
 			for stitch in patch.stitches:
-				if jumpStitch and lastStitch and lastColor == patch.color:
-					# consider collapsing jump stich, if it is pretty short
-					c = math.sqrt((stitch.x - lastStitch.x) ** 2 + (stitch.y + lastStitch.y) ** 2)
-					dbg.write("jump stitch length: %f (%d/%d -> %d/%d)\n" % (c, lastStitch.x, lastStitch.y, stitch.x, stitch.y))
-					if c < collapse_len_px:
-						dbg.write("... collapsed\n")
-						jumpStitch = False
+                                if lastStitch and lastColor == patch.color:
+                                        c = math.sqrt((stitch.x - lastStitch.x) ** 2 + (stitch.y + lastStitch.y) ** 2)
+                                        dbg.write("stitch length: %f (%d/%d -> %d/%d)\n" % (c, lastStitch.x, lastStitch.y, stitch.x, stitch.y))
+
+                                        if c == 0:
+                                                # filter out duplicate successive stitches
+                                                jumpStitch = False
+                                                continue
+
+                                        if jumpStitch:
+                                                # consider collapsing jump stich, if it is pretty short
+                                                if c < collapse_len_px:
+                                                        dbg.write("... collapsed\n")
+                                                        jumpStitch = False
 
 				dbg.write("stitch color %s\n" % patch.color)
 
