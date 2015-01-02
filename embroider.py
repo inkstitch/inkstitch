@@ -328,7 +328,36 @@ class EmbroideryObject:
 		self.patchList = patchList
 		self.row_spacing_px = row_spacing_px
 
-	def emit_file(self, filename, output_format, collapse_len_px):
+
+	def make_preamble_stitch(self, lastp, nextp):
+		def fromPolar(r, phi):
+			x = r * math.cos(phi)
+			y = r * math.sin(phi)
+			return (x, y)
+
+		def toPolar(x, y):
+			r = math.sqrt(x ** 2 + y ** 2)
+			if r == 0:
+				phi = 0
+			elif y == 0:
+				phi = 0 if x > 0 else math.pi
+			else:
+				phi = cmp(y, 0) * math.acos(x / r)
+			return (r, phi)
+
+		v = nextp - lastp
+		(r, phi) = toPolar(v.x, v.y)
+
+		PREAMBLE_MAX_DIST = 0.5 * pixels_per_millimeter  # 1/2mm
+		if r < PREAMBLE_MAX_DIST:
+			# nextp is close enough to lastp, so we don't generate
+			# extra points in between, but just use nextp
+			return nextp
+		r = PREAMBLE_MAX_DIST
+		(x, y) = fromPolar(r, phi)
+		return PyEmb.Point(x, y) + lastp
+
+	def emit_file(self, filename, output_format, collapse_len_px, add_preamble):
 		emb = PyEmb.Embroidery()
 		lastStitch = None
 		lastColor = None
@@ -356,6 +385,24 @@ class EmbroideryObject:
 				newStitch.color = patch.color
 				newStitch.jumpStitch = jumpStitch
 				emb.addStitch(newStitch)
+
+				if jumpStitch and add_preamble != "0":
+					locs = [ newStitch ]
+					i = 0
+					nextp = PyEmb.Point(patch.stitches[i].x, -patch.stitches[i].y)
+
+					for j in xrange(1, 4):
+						if locs[-1] == nextp:
+							i += 1
+							nextp = PyEmb.Point(patch.stitches[i].x, -patch.stitches[i].y)
+						locs.append(self.make_preamble_stitch(locs[-1], nextp))
+					dbg.write("preamble locations: %s\n" % locs)
+
+					for j in add_preamble[1:]:
+						stitch = deepcopy(locs[int(j)])
+						stitch.color = patch.color
+						stitch.jumpStitch = False
+						emb.addStitch(stitch)
 
 				jumpStitch = False
 				lastStitch = newStitch
@@ -460,6 +507,11 @@ class Embroider(inkex.Effect):
 			choices=["true","false"],
 			dest="hatch_filled_paths", default="false",
 			help="Use hatching lines instead of equally-spaced lines to fill paths")
+		self.OptionParser.add_option("-p", "--add_preamble",
+			action="store", type="choice",
+			choices=["0","010","01010","01210","012101210"],
+			dest="add_preamble", default="0",
+			help="Add preamble")
 		self.OptionParser.add_option("-O", "--output_format",
 			action="store", type="choice",
 			choices=["melco", "csv"],
@@ -629,7 +681,8 @@ class Embroider(inkex.Effect):
 		dbg.write("patch count: %d\n" % len(self.patchList.patches))
 
 		eo = EmbroideryObject(self.patchList, self.row_spacing_px)
-		eo.emit_file(self.options.filename, self.options.output_format, self.collapse_len_px)
+		eo.emit_file(self.options.filename, self.options.output_format,
+			     self.collapse_len_px, self.options.add_preamble)
 
 		new_group = inkex.etree.SubElement(self.current_layer,
 				inkex.addNS('g', 'svg'), {})

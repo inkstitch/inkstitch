@@ -9,6 +9,13 @@
     <param name="collapse_len_mm" type="float" min="0.0" max="10.0" _gui-text="Maximum collapse length (mm)">0.0</param>
     <param name="preserve_order"       type="boolean"   _gui-text="Preserve stacking order" description="if false, sorts by color, which saves thread changes. True preserves stacking order, important if you're laying colors over each other.">false</param>
     <param name="hatch_filled_paths" type="boolean" _gui-text="Hatch filled paths" description="If false, filled paths are filled using equally-spaced lines.  If true, filled paths are filled using hatching lines.">false</param>
+    <param name="add_preamble" type="optiongroup" _gui-text="Add preamble" appearance="minimal">
+        <_option value="0">None</_option>
+        <_option value="010">0-1-0</_option>
+        <_option value="01010">0-1-0-1-0</_option>
+        <_option value="01210">0-1-2-1-0</_option>
+        <_option value="012101210">0-1-2-1-0-1-2-1-0</_option>
+    </param>
     <param name="output_format" type="optiongroup" _gui-text="Output file format" appearance="minimal">
         <_option value="melco">Melco</_option>
         <_option value="csv">Embroidermodder 2 CSV</_option>
