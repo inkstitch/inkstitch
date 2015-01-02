@@ -485,6 +485,10 @@ class Embroider(inkex.Effect):
 			action="store", type="float",
 			dest="row_spacing_mm", default=0.4,
 			help="row spacing (mm)")
+		self.OptionParser.add_option("-z", "--zigzag_spacing_mm",
+			action="store", type="float",
+			dest="zigzag_spacing_mm", default=1.0,
+			help="zigzag spacing (mm)")
 		self.OptionParser.add_option("-l", "--max_stitch_len_mm",
 			action="store", type="float",
 			dest="max_stitch_len_mm", default=3.0,
@@ -669,6 +673,7 @@ class Embroider(inkex.Effect):
 		
 	def effect(self):
 		self.row_spacing_px = self.options.row_spacing_mm * pixels_per_millimeter
+		self.zigzag_spacing_px = self.options.zigzag_spacing_mm * pixels_per_millimeter
 		self.max_stitch_len_px = self.options.max_stitch_len_mm*pixels_per_millimeter
 		self.collapse_len_px = self.options.collapse_len_mm*pixels_per_millimeter
 
@@ -733,7 +738,7 @@ class Embroider(inkex.Effect):
 				dbg.write("self.max_stitch_len_px = %s\n" % self.max_stitch_len_px)
 				patch = self.stroke_points(emb_point_list, self.max_stitch_len_px, 0.0, threadcolor, sortorder)
 			else:
-				patch = self.stroke_points(emb_point_list, self.row_spacing_px*0.5, stroke_width, threadcolor, sortorder)
+				patch = self.stroke_points(emb_point_list, self.zigzag_spacing_px*0.5, stroke_width, threadcolor, sortorder)
 			patches.extend(patch)
 
 		close_point = None
@@ -758,19 +763,19 @@ class Embroider(inkex.Effect):
 		flush_point_list()
 		return patches
 
-	def stroke_points(self, emb_point_list, row_spacing_px, stroke_width, threadcolor, sortorder):
+	def stroke_points(self, emb_point_list, zigzag_spacing_px, stroke_width, threadcolor, sortorder):
 		patch = Patch(color=threadcolor, sortorder=sortorder)
 		p0 = emb_point_list[0]
+		rho = 0.0
+		fact = 1
+
 		for segi in range(1, len(emb_point_list)):
 			p1 = emb_point_list[segi]
 
 			# how far we have to go along segment
 			seg_len = (p1 - p0).length()
-			if (seg_len < row_spacing_px*0.5):
-				# hmm. segment so short we can't do much sane with
-				# it. Ignore the point p1 and move along (but keep p0
-				# as the beginning).
-				continue;
+			if (seg_len == 0):
+				continue
 
 			# vector pointing along segment
 			along = (p1 - p0).unit()
@@ -778,22 +783,14 @@ class Embroider(inkex.Effect):
 			perp = along.rotate_left().mul(stroke_width*0.5)
 
 			# iteration variable: how far we are along segment
-			rho = 0.0
 			while (rho <= seg_len):
-				left_pt = p0+along.mul(rho)+perp
+				left_pt = p0+along.mul(rho)+perp.mul(fact)
 				patch.addStitch(left_pt)
-				rho += row_spacing_px
-				if (rho > seg_len):
-					break
-
-				right_pt = p0+along.mul(rho)+perp.mul(-1.0)
-				patch.addStitch(right_pt)
-				rho += row_spacing_px
-
-			# make sure we turn sharp corners when stroking thin paths.
-			patch.addStitch(p1)
+				rho += zigzag_spacing_px
+				fact = -fact
 
 			p0 = p1
+			rho -= seg_len
 
 		return [patch]
 
