@@ -4,8 +4,8 @@
     <id>jonh.embroider</id>
     <dependency type="executable" location="extensions">embroider.py</dependency>
     <dependency type="executable" location="extensions">inkex.py</dependency>
-    <param name="zigzag_spacing_mm"       type="float"   min="0.01" max="5.00" _gui-text="Zigzag spacing (mm)">1.00</param>
-    <param name="row_spacing_mm"       type="float"   min="0.01" max="5.00" _gui-text="Row spacing (mm)">0.40</param>
+    <param name="zigzag_spacing_mm"       type="float"   min="0.01" max="5.00" precision="2" _gui-text="Zigzag spacing (mm)">1.00</param>
+    <param name="row_spacing_mm"       type="float"   min="0.01" max="5.00" precision="2" _gui-text="Row spacing (mm)">0.40</param>
     <param name="max_stitch_len_mm"       type="float"   min="0.1" max="10.0" _gui-text="Maximum stitch length (mm)">3.0</param>
     <param name="collapse_len_mm" type="float" min="0.0" max="10.0" _gui-text="Maximum collapse length (mm)">0.0</param>
     <param name="preserve_order"       type="boolean"   _gui-text="Preserve stacking order" description="if false, sorts by color, which saves thread changes. True preserves stacking order, important if you're laying colors over each other.">false</param>
