@@ -391,18 +391,25 @@ class EmbroideryObject:
 					i = 0
 					nextp = PyEmb.Point(patch.stitches[i].x, -patch.stitches[i].y)
 
-					for j in xrange(1, 4):
-						if locs[-1] == nextp:
-							i += 1
-							nextp = PyEmb.Point(patch.stitches[i].x, -patch.stitches[i].y)
-						locs.append(self.make_preamble_stitch(locs[-1], nextp))
+					try:
+						for j in xrange(1, 4):
+							if locs[-1] == nextp:
+								i += 1
+								nextp = PyEmb.Point(patch.stitches[i].x, -patch.stitches[i].y)
+							locs.append(self.make_preamble_stitch(locs[-1], nextp))
+					except IndexError:
+						# happens when the patch is very short and we increment i beyond the number of stitches
+						pass
 					dbg.write("preamble locations: %s\n" % locs)
 
 					for j in add_preamble[1:]:
-						stitch = deepcopy(locs[int(j)])
-						stitch.color = patch.color
-						stitch.jumpStitch = False
-						emb.addStitch(stitch)
+						try:
+							stitch = deepcopy(locs[int(j)])
+							stitch.color = patch.color
+							stitch.jumpStitch = False
+							emb.addStitch(stitch)
+						except IndexError:
+							pass
 
 				jumpStitch = False
 				lastStitch = newStitch
