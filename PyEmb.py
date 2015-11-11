@@ -4,11 +4,6 @@
 
 import math
 import sys
-dbg = sys.stderr
-
-def abs(x):
-	if (x<0): return -x
-	return x
 
 class Point:
 	def __init__(self, x, y):
@@ -50,7 +45,8 @@ class Embroidery:
 		self.coords = []
 
 	def addStitch(self, coord):
-		self.coords.append(coord)
+		if len(self.coords) == 0 or self.coords[-1] != coord:
+			self.coords.append(coord)
 
 	def translate_to_origin(self):
 		if (len(self.coords)==0):
@@ -67,12 +63,13 @@ class Embroidery:
 		for p in self.coords:
 			p.x -= minx
 			p.y -= miny
-		dbg.write("Field size %s x %s\n" % (sx,sy))
 
 	def scale(self, sc):
+		if not isinstance(sc, (tuple, list)):
+			sc = (sc, sc)
 		for p in self.coords:
-			p.x *= sc
-			p.y *= sc
+			p.x *= sc[0]
+			p.y *= sc[1]
 			
 	def export_ksm(self, dbg):
 		str = ""
@@ -104,7 +101,7 @@ class Embroidery:
 	def export_melco(self, dbg):
 		self.str = ""
 		self.pos = self.coords[0]
-		dbg.write("stitch count: %d\n" % len(self.coords))
+		#dbg.write("stitch count: %d\n" % len(self.coords))
 		lastColor = None
 		numColors = 0x0
 		for stitch in self.coords[1:]:
@@ -144,29 +141,59 @@ class Embroidery:
 			self.pos = stitch
 		return self.str
 
-        def export_csv(self, dbg):
-                self.str = ""
-                self.str += '"#","[THREAD_NUMBER]","[RED]","[GREEN]","[BLUE]","[DESCRIPTION]","[CATALOG_NUMBER]"\n'
-                self.str += '"#","[STITCH_TYPE]","[X]","[Y]"\n'
+	def export_csv(self, dbg):
+		self.str = ""
+		self.str += '"#","[THREAD_NUMBER]","[RED]","[GREEN]","[BLUE]","[DESCRIPTION]","[CATALOG_NUMBER]"\n'
+		self.str += '"#","[STITCH_TYPE]","[X]","[Y]"\n'
 
-                lastColor = None
-                colorIndex = 0
-                for stitch in self.coords:
-                        if lastColor == None or stitch.color != lastColor:
-                                colorIndex += 1
-                                self.str += '"$","%d","%d","%d","%d","(null)","(null)"\n' % (
-                                        colorIndex,
-                                        int(stitch.color[1:3], 16),
-                                        int(stitch.color[3:5], 16),
-                                        int(stitch.color[5:7], 16))
-                        if stitch.jumpStitch:
-                                self.str += '"*","JUMP","%f","%f"\n' % (stitch.x/10, stitch.y/10)
-                        if lastColor != None and stitch.color != lastColor:
-                                # not first color choice, add color change record
-                                self.str += '"*","COLOR","%f","%f"\n' % (stitch.x/10, stitch.y/10)
-                        self.str += '"*","STITCH","%f","%f"\n' % (stitch.x/10, stitch.y/10)
-                        lastColor = stitch.color
-                return self.str
+		lastColor = None
+		colorIndex = 0
+		for stitch in self.coords:
+			if lastColor == None or stitch.color != lastColor:
+				colorIndex += 1
+				self.str += '"$","%d","%d","%d","%d","(null)","(null)"\n' % (
+					colorIndex,
+					int(stitch.color[1:3], 16),
+					int(stitch.color[3:5], 16),
+					int(stitch.color[5:7], 16))
+			if stitch.jumpStitch:
+				self.str += '"*","JUMP","%f","%f"\n' % (stitch.x/10, stitch.y/10)
+			if lastColor != None and stitch.color != lastColor:
+				# not first color choice, add color change record
+				self.str += '"*","COLOR","%f","%f"\n' % (stitch.x/10, stitch.y/10)
+			self.str += '"*","STITCH","%f","%f"\n' % (stitch.x/10, stitch.y/10)
+			lastColor = stitch.color
+		return self.str
+
+	def export_gcode(self, dbg):
+		ret = []
+		lastColor = None
+		for stitch in self.coords:
+			if stitch.color != lastColor:
+				ret.append('M0 ;MSG, Color change; prepare for %s\n' % stitch.color)
+			lastColor = stitch.color
+			ret.append('G1 X%f Y%f\n' % stitch.as_tuple())
+			ret.append('M0 ;MSG, EMBROIDER stitch\n')
+		return ''.join(ret)
+
+	def export_paths(self, dbg):
+		paths = []
+		lastColor = None
+		lastStitch = None
+		for stitch in self.coords:
+			if stitch.jumpStitch:
+				if lastColor == stitch.color:
+					paths.append([None, []])
+					if lastStitch is not None:
+						paths[-1][1].append(['M', lastStitch.as_tuple()])
+						paths[-1][1].append(['L', stitch.as_tuple()])
+				lastColor = None
+			if stitch.color != lastColor:
+				paths.append([stitch.color, []])
+			paths[-1][1].append(['L' if len(paths[-1][1]) > 0 else 'M', stitch.as_tuple()])
+			lastColor = stitch.color
+			lastStitch = stitch
+		return paths
 
 class Test:
 	def __init__(self):
