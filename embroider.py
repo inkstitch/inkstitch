@@ -2,8 +2,11 @@
 #
 # documentation: see included index.html
 # LICENSE:
-# This code is copyright 2010 by Jon Howell,
-# licensed under <a href="http://www.gnu.org/licenses/quick-guide-gplv3.html">GPLv3</a>.
+# Copyright 2010 by Jon Howell,
+# Originally licensed under <a href="http://www.gnu.org/licenses/quick-guide-gplv3.html">GPLv3</a>.
+# Copyright 2015 by Bas Wijnen <wijnen@debian.org>.
+# New parts are licensed under AGPL3 or later.
+# (Note that this means this work is licensed under the common part of those two: AGPL version 3.)
 #
 # Important resources:
 # lxml interface for walking SVG tree:
@@ -14,7 +17,6 @@
 # http://gispython.org/shapely/manual.html#multipolygons
 # Embroidery file format documentation:
 # http://www.achatina.de/sewing/main/TECHNICL.HTM
-# 
 
 import sys
 sys.path.append("/usr/share/inkscape/extensions")
@@ -33,6 +35,7 @@ import operator
 import lxml.etree as etree
 from lxml.builder import E
 import shapely.geometry as shgeo
+import shapely.affinity as affinity
 
 dbg = open("/tmp/embroider-debug.txt", "w")
 PyEmb.dbg = dbg
@@ -515,14 +518,21 @@ class Embroider(inkex.Effect):
 		self.stacking_order_counter += 1
 		return SortOrder(threadcolor, self.stacking_order_counter, self.options.preserve_order=="true")
 
-	def process_one_path(self, shpath, threadcolor, sortorder):
+	def process_one_path(self, shpath, threadcolor, sortorder, angle):
 		#self.add_shapely_geo_to_svg(shpath.boundary, color="#c0c000")
 
-		rows_of_segments = self.intersect_region_with_grating(shpath)
+		rows_of_segments = self.intersect_region_with_grating(shpath, angle)
 		segments = self.visit_segments_one_by_one(rows_of_segments)
 
 		def small_stitches(patch, beg, end):
-			old_dist = None
+			vector = (end-beg)
+			patch.addStitch(beg)
+			old_dist = vector.length()
+			if (old_dist < self.max_stitch_len_px):
+				patch.addStitch(end)
+				return
+			one_stitch = vector.mul(1.0 / old_dist * self.max_stitch_len_px * random.random())
+			beg = beg + one_stitch
 			while (True):
 				vector = (end-beg)
 				dist = vector.length()
@@ -546,17 +556,19 @@ class Embroider(inkex.Effect):
 			small_stitches(patch, PyEmb.Point(*beg),PyEmb.Point(*end))
 		return [patch]
 
-	def intersect_region_with_grating(self, shpath):
+	def intersect_region_with_grating(self, shpath, angle):
 		#dbg.write("bounds = %s\n" % str(shpath.bounds))
-		bbox = shpath.bounds
-		#dbg.write("hatching is %s\n" % hatching)
+		rotated_shpath = affinity.rotate(shpath, angle, use_radians = True)
+		bbox = rotated_shpath.bounds
+		delta = self.row_spacing_px * 50 # *2 should be enough but isn't.  TODO: find out why, and if this always works.
+		bbox = affinity.rotate(shgeo.LinearRing(((bbox[0] - delta, bbox[1] - delta), (bbox[2] + delta, bbox[1] - delta), (bbox[2] + delta, bbox[3] + delta), (bbox[0] - delta, bbox[3] + delta))), -angle, use_radians = True).coords
 		
-		delta = self.row_spacing_px/2.0
-		bbox_sz = (bbox[2]-bbox[0],bbox[3]-bbox[1])
-		p0 = PyEmb.Point(bbox[0]-delta,bbox[1])
-		p1 = PyEmb.Point(bbox[0]-delta,bbox[3])
-		p_inc = PyEmb.Point(self.row_spacing_px, 0)
-		count = (bbox[2]-bbox[0])/self.row_spacing_px + 2
+		p0 = PyEmb.Point(bbox[0][0], bbox[0][1])
+		p1 = PyEmb.Point(bbox[1][0], bbox[1][1])
+		p2 = PyEmb.Point(bbox[3][0], bbox[3][1])
+		count = (p2 - p0).length() / self.row_spacing_px
+		p_inc = (p2 - p0).mul(1 / count)
+		count += 2
 
 		rows = []
 		steps = 0
@@ -619,13 +631,22 @@ class Embroider(inkex.Effect):
 
 		israw = False
 		desc = node.findtext(inkex.addNS('desc', 'svg'))
-		if (desc!=None):
-			israw = desc.find("embroider_raw")>=0
+		if desc is None:
+			desc = ''
+		descparts = {}
+		for part in desc.split(';'):
+			if '=' in part:
+				k, v = part.split('=', 1)
+			else:
+				k, v = part, ''
+			descparts[k] = v
+		israw = 'embroider_raw' in descparts
 		if (israw):
 			self.patchList.patches.extend(self.path_to_patch_list(node))
 		else:
 			if (self.get_style(node, "fill")!=None):
-				self.patchList.patches.extend(self.filled_region_to_patchlist(node))
+				angle = math.radians(float(descparts.get('embroider_angle', 0)))
+				self.patchList.patches.extend(self.filled_region_to_patchlist(node, angle))
 			if (self.get_style(node, "stroke")!=None):
 				self.patchList.patches.extend(self.path_to_patch_list(node))
 
@@ -762,7 +783,7 @@ class Embroider(inkex.Effect):
 
 		return [patch]
 
-	def filled_region_to_patchlist(self, node):
+	def filled_region_to_patchlist(self, node, angle):
 		p = cubicsuperpath.parsePath(node.get("d"))
 		cspsubdiv.cspsubdiv(p, self.options.flat)
 		shapelyPolygon = cspToShapelyPolygon(p)
@@ -771,7 +792,8 @@ class Embroider(inkex.Effect):
 		return self.process_one_path(
 				shapelyPolygon,
 				threadcolor,
-				sortorder)
+				sortorder,
+				angle)
 
 	#TODO def make_stroked_patch(self, node):
 

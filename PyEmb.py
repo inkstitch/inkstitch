@@ -31,6 +31,9 @@ class Point:
 	def rotate_left(self):
 		return Point(-self.y, self.x)
 
+	def rotate(self, angle):
+		return Point(self.x * math.cos(angle) - self.y * math.sin(angle), self.y * math.cos(angle) + self.x * math.sin(angle))
+
 	def as_int(self):
 		return Point(int(round(self.x)), int(round(self.y)))
 
