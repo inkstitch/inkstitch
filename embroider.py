@@ -2,8 +2,11 @@
 #
 # documentation: see included index.html
 # LICENSE:
-# This code is copyright 2010 by Jon Howell,
-# licensed under <a href="http://www.gnu.org/licenses/quick-guide-gplv3.html">GPLv3</a>.
+# Copyright 2010 by Jon Howell,
+# Originally licensed under <a href="http://www.gnu.org/licenses/quick-guide-gplv3.html">GPLv3</a>.
+# Copyright 2015 by Bas Wijnen <wijnen@debian.org>.
+# New parts are licensed under AGPL3 or later.
+# (Note that this means this work is licensed under the common part of those two: AGPL version 3.)
 #
 # Important resources:
 # lxml interface for walking SVG tree:
@@ -14,7 +17,6 @@
 # http://gispython.org/shapely/manual.html#multipolygons
 # Embroidery file format documentation:
 # http://www.achatina.de/sewing/main/TECHNICL.HTM
-# 
 
 import sys
 sys.path.append("/usr/share/inkscape/extensions")
@@ -33,8 +35,9 @@ import operator
 import lxml.etree as etree
 from lxml.builder import E
 import shapely.geometry as shgeo
+import shapely.affinity as affinity
 
-dbg = open("embroider-debug.txt", "w")
+dbg = open("/tmp/embroider-debug.txt", "w")
 PyEmb.dbg = dbg
 pixels_per_millimeter = 90.0 / 25.4
 
@@ -132,8 +135,8 @@ class PatchList:
 
 	def partition_by_color(self):
 		self.sort_by_sortorder()
-		dbg.write("Sorted by sortorder:\n");
-		dbg.write("  %s\n" % ("\n".join(map(lambda p: str(p.sortorder), self.patches))))
+		#dbg.write("Sorted by sortorder:\n");
+		#dbg.write("  %s\n" % ("\n".join(map(lambda p: str(p.sortorder), self.patches))))
 		out = []
 		lastPatch = None
 		for patch in self.patches:
@@ -142,7 +145,7 @@ class PatchList:
 			else:
 				out.append(PatchList([patch]))
 			lastPatch = patch
-		dbg.write("Emitted %s partitions\n" % len(out))
+		#dbg.write("Emitted %s partitions\n" % len(out))
 		return out
 		
 	def tsp_by_color(self):
@@ -182,7 +185,7 @@ class PatchList:
 
 	def try_swap(self, i, j):
 		# i,j are indices;
-		dbg.write("swap(%d, %d)\n" % (i,j))
+		#dbg.write("swap(%d, %d)\n" % (i,j))
 		oldCost = (
 			 self.cost(self.get(i-1), self.get(i))
 			+self.cost(self.get(i), self.get(i+1))
@@ -216,11 +219,11 @@ class PatchList:
 		else:
 			success = "."
 
-		dbg.write("old %5.1f new %5.1f savings: %5.1f\n" % (oldCost, cost, savings))
+		#dbg.write("old %5.1f new %5.1f savings: %5.1f\n" % (oldCost, cost, savings))
 		return success
 
 	def try_reverse(self, i):
-		dbg.write("reverse(%d)\n" % i)
+		#dbg.write("reverse(%d)\n" % i)
 		oldCost = (self.cost(self.get(i-1), self.get(i))
 			+self.cost(self.get(i), self.get(i+1)))
 		reversed = self.get(i).reverse()
@@ -265,27 +268,19 @@ class PatchList:
 		sortedPatchList = PatchList([])
 		def takePatchStartingAtPoint(point):
 			patch = point.patch
-			dbg.write("takePatchStartingAtPoint angling for patch %s--%s\n" % (
-				patch.stitches[0],
-				patch.stitches[-1]))
+			#dbg.write("takePatchStartingAtPoint angling for patch %s--%s\n" % (patch.stitches[0],patch.stitches[-1]))
 			self.pointList = filter(lambda pt: pt.patch!=patch, self.pointList)
 			reversed = ""
 			if (point!=patch.stitches[0]):
 				reversed = " (reversed)"
-				dbg.write('patch.stitches[0] %s point %s match %s\n' % (
-					patch.stitches[0],
-					point,
-					point==patch.stitches[0]))
+				#dbg.write('patch.stitches[0] %s point %s match %s\n' % (patch.stitches[0], point, point==patch.stitches[0]))
 				patch = patch.reverse()
 			sortedPatchList.patches.append(patch)
-			dbg.write('took patch %s--%s %s\n' % (
-				patch.stitches[0],
-				patch.stitches[-1],
-				reversed))
+			#dbg.write('took patch %s--%s %s\n' % (patch.stitches[0], patch.stitches[-1], reversed))
 
 		# Take the patch farthest from the centroid first
 		# O(n)
-		dbg.write('centroid: %s\n' % self.centroid)
+		#dbg.write('centroid: %s\n' % self.centroid)
 		def neg_distance_from_centroid(p):
 			return -(p-self.centroid).length()
 		farthestPoint = linear_min(self.pointList, neg_distance_from_centroid)
@@ -295,9 +290,9 @@ class PatchList:
 		# Then greedily take closer-and-closer patches
 		# O(n^2)
 		while (len(self.pointList)>0):
-			dbg.write('pass %s\n' % len(self.pointList));
+			#dbg.write('pass %s\n' % len(self.pointList));
 			last_point = sortedPatchList.patches[-1].stitches[-1]
-			dbg.write('last_point now %s\n' % last_point)
+			#dbg.write('last_point now %s\n' % last_point)
 			def distance_from_last_point(p):
 				return (p-last_point).length()
 			nearestPoint = linear_min(self.pointList, distance_from_last_point)
@@ -308,7 +303,7 @@ class PatchList:
 
 		if (1):
 			# Then hill-climb.
-			dbg.write("len(self.patches) = %d\n" % len(self.patches))
+			#dbg.write("len(self.patches) = %d\n" % len(self.patches))
 			count = 0
 			successStr = ""
 			while (count < 100):
@@ -321,7 +316,7 @@ class PatchList:
 			for i in range(len(self.patches)):
 				successStr += self.try_reverse(i)
 
-			dbg.write("success: %s\n" % successStr)
+			#dbg.write("success: %s\n" % successStr)
 
 class EmbroideryObject:
 	def __init__(self, patchList, row_spacing_px):
@@ -365,8 +360,8 @@ class EmbroideryObject:
 			jumpStitch = True
 			for stitch in patch.stitches:
                                 if lastStitch and lastColor == patch.color:
-                                        c = math.sqrt((stitch.x - lastStitch.x) ** 2 + (stitch.y + lastStitch.y) ** 2)
-                                        dbg.write("stitch length: %f (%d/%d -> %d/%d)\n" % (c, lastStitch.x, lastStitch.y, stitch.x, stitch.y))
+                                        c = math.sqrt((stitch.x - lastStitch.x) ** 2 + (stitch.y - lastStitch.y) ** 2)
+					#dbg.write("stitch length: %f (%d/%d -> %d/%d)\n" % (c, lastStitch.x, lastStitch.y, stitch.x, stitch.y))
 
                                         if c == 0:
                                                 # filter out duplicate successive stitches
@@ -376,10 +371,10 @@ class EmbroideryObject:
                                         if jumpStitch:
                                                 # consider collapsing jump stich, if it is pretty short
                                                 if c < collapse_len_px:
-                                                        dbg.write("... collapsed\n")
+							#dbg.write("... collapsed\n")
                                                         jumpStitch = False
 
-				dbg.write("stitch color %s\n" % patch.color)
+				#dbg.write("stitch color %s\n" % patch.color)
 
 				newStitch = PyEmb.Point(stitch.x, -stitch.y)
 				newStitch.color = patch.color
@@ -400,7 +395,7 @@ class EmbroideryObject:
 					except IndexError:
 						# happens when the patch is very short and we increment i beyond the number of stitches
 						pass
-					dbg.write("preamble locations: %s\n" % locs)
+					#dbg.write("preamble locations: %s\n" % locs)
 
 					for j in add_preamble[1:]:
 						try:
@@ -415,8 +410,8 @@ class EmbroideryObject:
 				lastStitch = newStitch
 				lastColor = patch.color
 
-		emb.translate_to_origin()
-		emb.scale(10.0/pixels_per_millimeter)
+		#emb.translate_to_origin()
+		emb.scale(1.0/pixels_per_millimeter)
 
 		fp = open(filename, "wb")
 
@@ -424,38 +419,23 @@ class EmbroideryObject:
 			fp.write(emb.export_melco(dbg))
 		elif output_format == "csv":
 			fp.write(emb.export_csv(dbg))
+		elif output_format == "gcode":
+			fp.write(emb.export_gcode(dbg))
 		fp.close()
+		emb.scale(pixels_per_millimeter)
+		return emb
 
-	def emit_inkscape(self, parent):
-		lastPatch = None
-		for patch in self.patchList.patches:
-			if (lastPatch!=None):
-				# draw jump stitch
-				inkex.etree.SubElement(parent,
-					inkex.addNS('path', 'svg'),
-					{	'style':simplestyle.formatStyle(
-							{ 'stroke': lastPatch.color,
-								'stroke-width':str(self.row_spacing_px*.25),
-								'stroke-dasharray':'0.99, 1.98',
-								'fill': 'none' }),
-						'd':simplepath.formatPath([
-							['M', (lastPatch.stitches[-1].as_tuple())],
-							['L', (patch.stitches[0].as_tuple())]
-						]),
-					})
-			lastPatch = patch
-				
-			new_path = []
-			new_path.append(['M', patch.stitches[0].as_tuple()])
-			for stitch in patch.stitches[1:]:
-				new_path.append(['L', stitch.as_tuple()])
+	def emit_inkscape(self, parent, emb):
+		emb.scale((1, -1));
+		for color, path in emb.export_paths(dbg):
+			dbg.write('path: %s %s\n' % (color, repr(path)))
 			inkex.etree.SubElement(parent,
 				inkex.addNS('path', 'svg'),
 				{	'style':simplestyle.formatStyle(
-						{ 'stroke': patch.color,
-							'stroke-width':str(self.row_spacing_px*0.25),
+						{ 'stroke': color if color is not None else '#000000',
+							'stroke-width':str(self.row_spacing_px*0.5),
 							'fill': 'none' }),
-					'd':simplepath.formatPath(new_path),
+					'd':simplepath.formatPath(path),
 				})
 
 	def bbox(self):
@@ -471,10 +451,10 @@ class SortOrder:
 	def __init__(self, threadcolor, stacking_order, preserve_order):
 		self.threadcolor = threadcolor
 		if (preserve_order):
-			dbg.write("preserve_order is true:\n");
+			#dbg.write("preserve_order is true:\n");
 			self.sorttuple = (stacking_order, threadcolor)
 		else:
-			dbg.write("preserve_order is false:\n");
+			#dbg.write("preserve_order is false:\n");
 			self.sorttuple = (threadcolor, stacking_order)
 
 	def __cmp__(self, other):
@@ -485,7 +465,7 @@ class SortOrder:
 
 class Embroider(inkex.Effect):
 	def __init__(self, *args, **kwargs):
-		dbg.write("args: %s\n" % repr(sys.argv))
+		#dbg.write("args: %s\n" % repr(sys.argv))
 		inkex.Effect.__init__(self)
 		self.stacking_order_counter = 0
 		self.OptionParser.add_option("-r", "--row_spacing_mm",
@@ -525,7 +505,7 @@ class Embroider(inkex.Effect):
 			help="Add preamble")
 		self.OptionParser.add_option("-O", "--output_format",
 			action="store", type="choice",
-			choices=["melco", "csv"],
+			choices=["melco", "csv", "gcode"],
 			dest="output_format", default="melco",
 			help="File output format")
 		self.OptionParser.add_option("-F", "--filename",
@@ -538,14 +518,21 @@ class Embroider(inkex.Effect):
 		self.stacking_order_counter += 1
 		return SortOrder(threadcolor, self.stacking_order_counter, self.options.preserve_order=="true")
 
-	def process_one_path(self, shpath, threadcolor, sortorder):
+	def process_one_path(self, shpath, threadcolor, sortorder, angle):
 		#self.add_shapely_geo_to_svg(shpath.boundary, color="#c0c000")
 
-		rows_of_segments = self.intersect_region_with_grating(shpath)
+		rows_of_segments = self.intersect_region_with_grating(shpath, angle)
 		segments = self.visit_segments_one_by_one(rows_of_segments)
 
 		def small_stitches(patch, beg, end):
-			old_dist = None
+			vector = (end-beg)
+			patch.addStitch(beg)
+			old_dist = vector.length()
+			if (old_dist < self.max_stitch_len_px):
+				patch.addStitch(end)
+				return
+			one_stitch = vector.mul(1.0 / old_dist * self.max_stitch_len_px * random.random())
+			beg = beg + one_stitch
 			while (True):
 				vector = (end-beg)
 				dist = vector.length()
@@ -560,53 +547,36 @@ class Embroider(inkex.Effect):
 				beg = beg + one_stitch
 				
 		swap = False
-		patches = []
+		patch = Patch(color=threadcolor,sortorder=sortorder)
 		for (beg,end) in segments:
-			patch = Patch(color=threadcolor,sortorder=sortorder)
 			if (swap):
 				(beg,end)=(end,beg)
-			swap = not swap
+			if not self.hatching:
+				swap = not swap
 			small_stitches(patch, PyEmb.Point(*beg),PyEmb.Point(*end))
-			patches.append(patch)
-		return patches
+		return [patch]
 
-	def intersect_region_with_grating(self, shpath):
-		dbg.write("bounds = %s\n" % str(shpath.bounds))
-		bbox = shpath.bounds
-		hatching = self.options.hatch_filled_paths == "true"
-		dbg.write("hatching is %s\n" % hatching)
+	def intersect_region_with_grating(self, shpath, angle):
+		#dbg.write("bounds = %s\n" % str(shpath.bounds))
+		rotated_shpath = affinity.rotate(shpath, angle, use_radians = True)
+		bbox = rotated_shpath.bounds
+		delta = self.row_spacing_px * 50 # *2 should be enough but isn't.  TODO: find out why, and if this always works.
+		bbox = affinity.rotate(shgeo.LinearRing(((bbox[0] - delta, bbox[1] - delta), (bbox[2] + delta, bbox[1] - delta), (bbox[2] + delta, bbox[3] + delta), (bbox[0] - delta, bbox[3] + delta))), -angle, use_radians = True).coords
 		
-		delta = self.row_spacing_px/2.0
-		bbox_sz = (bbox[2]-bbox[0],bbox[3]-bbox[1])
-		if (bbox_sz[0] > bbox_sz[1]):
-			# wide box, use vertical stripes
-			p0 = PyEmb.Point(bbox[0]-delta,bbox[1])
-			p1 = PyEmb.Point(bbox[0]-delta,bbox[3])
-			p_inc = PyEmb.Point(self.row_spacing_px, 0)
-			count = (bbox[2]-bbox[0])/self.row_spacing_px + 2
-		else:
-			# narrow box, use horizontal stripes
-			p0 = PyEmb.Point(bbox[0], bbox[1]-delta)
-			p1 = PyEmb.Point(bbox[2], bbox[1]-delta)
-			p_inc = PyEmb.Point(0, self.row_spacing_px)
-			count = (bbox[3]-bbox[1])/self.row_spacing_px + 2
-
-		if hatching:
-			count *= 2
+		p0 = PyEmb.Point(bbox[0][0], bbox[0][1])
+		p1 = PyEmb.Point(bbox[1][0], bbox[1][1])
+		p2 = PyEmb.Point(bbox[3][0], bbox[3][1])
+		count = (p2 - p0).length() / self.row_spacing_px
+		p_inc = (p2 - p0).mul(1 / count)
+		count += 2
 
 		rows = []
 		steps = 0
 		while (steps < count):
 			try:
 				steps += 1
-				if hatching:
-					if steps % 2 == 1:
-						p1 += p_inc
-					else:
-						p0 += p_inc
-				else:
-					p0 += p_inc
-					p1 += p_inc
+				p0 += p_inc
+				p1 += p_inc
 				endpoints = [p0.as_tuple(), p1.as_tuple()]
 				shline = shgeo.LineString(endpoints)
 				res = shline.intersection(shpath)
@@ -614,6 +584,8 @@ class Embroider(inkex.Effect):
 					runs = map(shapelyLineSegmentToPyTuple, res.geoms)
 				else:
 					runs = [shapelyLineSegmentToPyTuple(res)]
+				if self.hatching and len(rows) > 0:
+					rows.append([(rows[-1][0][1], runs[0][0])])
 				rows.append(runs)
 			except Exception, ex:
 				dbg.write("--------------\n")
@@ -649,23 +621,32 @@ class Embroider(inkex.Effect):
 	def handle_node(self, node):
 
 		if (node.tag != self.svgpath):
-			dbg.write("%s\n"%str((id, etree.tostring(node, pretty_print=True))))
-			dbg.write("not a path; recursing:\n")
+			#dbg.write("%s\n"%str((id, etree.tostring(node, pretty_print=True))))
+			#dbg.write("not a path; recursing:\n")
 			for child in node.iter(self.svgpath):
 				self.handle_node(child)
 			return
 
-		dbg.write("Node: %s\n"%str((id, etree.tostring(node, pretty_print=True))))
+		#dbg.write("Node: %s\n"%str((id, etree.tostring(node, pretty_print=True))))
 
 		israw = False
 		desc = node.findtext(inkex.addNS('desc', 'svg'))
-		if (desc!=None):
-			israw = desc.find("embroider_raw")>=0
+		if desc is None:
+			desc = ''
+		descparts = {}
+		for part in desc.split(';'):
+			if '=' in part:
+				k, v = part.split('=', 1)
+			else:
+				k, v = part, ''
+			descparts[k] = v
+		israw = 'embroider_raw' in descparts
 		if (israw):
 			self.patchList.patches.extend(self.path_to_patch_list(node))
 		else:
 			if (self.get_style(node, "fill")!=None):
-				self.patchList.patches.extend(self.filled_region_to_patchlist(node))
+				angle = math.radians(float(descparts.get('embroider_angle', 0)))
+				self.patchList.patches.extend(self.filled_region_to_patchlist(node, angle))
 			if (self.get_style(node, "stroke")!=None):
 				self.patchList.patches.extend(self.path_to_patch_list(node))
 
@@ -683,6 +664,7 @@ class Embroider(inkex.Effect):
 		self.zigzag_spacing_px = self.options.zigzag_spacing_mm * pixels_per_millimeter
 		self.max_stitch_len_px = self.options.max_stitch_len_mm*pixels_per_millimeter
 		self.collapse_len_px = self.options.collapse_len_mm*pixels_per_millimeter
+		self.hatching = self.options.hatch_filled_paths == "true"
 
 		self.svgpath = inkex.addNS('path', 'svg')
 		self.patchList = PatchList([])
@@ -690,15 +672,15 @@ class Embroider(inkex.Effect):
 			self.handle_node(node)
 
 		self.patchList = self.patchList.tsp_by_color()
-		dbg.write("patch count: %d\n" % len(self.patchList.patches))
+		#dbg.write("patch count: %d\n" % len(self.patchList.patches))
 
 		eo = EmbroideryObject(self.patchList, self.row_spacing_px)
-		eo.emit_file(self.options.filename, self.options.output_format,
+		emb = eo.emit_file(self.options.filename, self.options.output_format,
 			     self.collapse_len_px, self.options.add_preamble)
 
 		new_group = inkex.etree.SubElement(self.current_layer,
 				inkex.addNS('g', 'svg'), {})
-		eo.emit_inkscape(new_group)
+		eo.emit_inkscape(new_group, emb)
 
 		self.emit_inkscape_bbox(new_group, eo)
 
@@ -727,8 +709,8 @@ class Embroider(inkex.Effect):
 			# but let's hope px are kind of like pts?
 			stroke_width_str = stroke_width_str[:-2]
 		stroke_width = float(stroke_width_str)
-		dbg.write("stroke_width is <%s>\n" % repr(stroke_width))
-		dbg.flush()
+		#dbg.write("stroke_width is <%s>\n" % repr(stroke_width))
+		#dbg.flush()
 		sortorder = self.get_sort_order(threadcolor)
 		path = simplepath.parsePath(node.get("d"))
 
@@ -742,7 +724,7 @@ class Embroider(inkex.Effect):
 		def flush_point_list():
 			STROKE_MIN = 0.5	# a 0.5pt stroke becomes a straight line.
 			if (stroke_width <= STROKE_MIN):
-				dbg.write("self.max_stitch_len_px = %s\n" % self.max_stitch_len_px)
+				#dbg.write("self.max_stitch_len_px = %s\n" % self.max_stitch_len_px)
 				patch = self.stroke_points(emb_point_list, self.max_stitch_len_px, 0.0, threadcolor, sortorder)
 			else:
 				patch = self.stroke_points(emb_point_list, self.zigzag_spacing_px*0.5, stroke_width, threadcolor, sortorder)
@@ -750,13 +732,13 @@ class Embroider(inkex.Effect):
 
 		close_point = None
 		for (type,points) in path:
-			dbg.write("path_to_patch_list parses pt %s with type=%s\n" % (points, type))
+			#dbg.write("path_to_patch_list parses pt %s with type=%s\n" % (points, type))
 			if type == 'M' and len(emb_point_list):
 				flush_point_list()
 				emb_point_list = []
 
 			if type == 'Z':
-				dbg.write("... closing patch to %s\n" % close_point)
+				#dbg.write("... closing patch to %s\n" % close_point)
 				emb_point_list.append(close_point)
 			else:
 				pointscopy = list(points)
@@ -764,7 +746,7 @@ class Embroider(inkex.Effect):
 					emb_point_list.append(PyEmb.Point(pointscopy[0], pointscopy[1]))
 					pointscopy = pointscopy[2:]
 			if type == 'M':
-				dbg.write("latching close_point %s\n" % emb_point_list[-1])
+				#dbg.write("latching close_point %s\n" % emb_point_list[-1])
 				close_point = emb_point_list[-1]
 
 		flush_point_list()
@@ -801,7 +783,7 @@ class Embroider(inkex.Effect):
 
 		return [patch]
 
-	def filled_region_to_patchlist(self, node):
+	def filled_region_to_patchlist(self, node, angle):
 		p = cubicsuperpath.parsePath(node.get("d"))
 		cspsubdiv.cspsubdiv(p, self.options.flat)
 		shapelyPolygon = cspToShapelyPolygon(p)
@@ -810,7 +792,8 @@ class Embroider(inkex.Effect):
 		return self.process_one_path(
 				shapelyPolygon,
 				threadcolor,
-				sortorder)
+				sortorder,
+				angle)
 
 	#TODO def make_stroked_patch(self, node):
 
@@ -818,7 +801,7 @@ if __name__ == '__main__':
 	sys.setrecursionlimit(100000);
 	e = Embroider()
 	e.affect()
-	dbg.write("aaaand, I'm done. seeeya!\n")
+	#dbg.write("aaaand, I'm done. seeeya!\n")
 	dbg.flush()
 
 dbg.close()
