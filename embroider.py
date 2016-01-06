@@ -39,7 +39,10 @@ import shapely.affinity as affinity
 
 dbg = open("/tmp/embroider-debug.txt", "w")
 PyEmb.dbg = dbg
-pixels_per_millimeter = 90.0 / 25.4
+#pixels_per_millimeter = 90.0 / 25.4
+
+#this actually makes each pixel worth one tenth of a millimeter
+pixels_per_millimeter = 1
 
 def bboxarea(poly):
 	x0=None
