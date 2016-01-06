@@ -21,6 +21,7 @@
 import sys
 sys.path.append("/usr/share/inkscape/extensions")
 import os
+import subprocess
 from copy import deepcopy
 import time
 import inkex
@@ -413,7 +414,7 @@ class EmbroideryObject:
 				lastStitch = newStitch
 				lastColor = patch.color
 
-		#emb.translate_to_origin()
+		emb.translate_to_origin()
 		emb.scale(1.0/pixels_per_millimeter)
 
 		fp = open(filename, "wb")
@@ -454,7 +455,7 @@ class SortOrder:
 	def __init__(self, threadcolor, stacking_order, preserve_order):
 		self.threadcolor = threadcolor
 		if (preserve_order):
-			#dbg.write("preserve_order is true:\n");
+			dbg.write("preserve_order is true: %s %s\n" % (stacking_order, threadcolor));
 			self.sorttuple = (stacking_order, threadcolor)
 		else:
 			#dbg.write("preserve_order is false:\n");
@@ -516,10 +517,10 @@ class Embroider(inkex.Effect):
 			dest="filename", default="embroider-output.exp",
 			help="Name (and possibly path) of output file")
 		self.patches = []
+		self.stacking_order = {}
 
-	def get_sort_order(self, threadcolor):
-		self.stacking_order_counter += 1
-		return SortOrder(threadcolor, self.stacking_order_counter, self.options.preserve_order=="true")
+	def get_sort_order(self, threadcolor, id):
+		return SortOrder(threadcolor, self.stacking_order.get(id), self.options.preserve_order=="true")
 
 	def process_one_path(self, shpath, threadcolor, sortorder, angle):
 		#self.add_shapely_geo_to_svg(shpath.boundary, color="#c0c000")
@@ -621,7 +622,7 @@ class Embroider(inkex.Effect):
 			if (count>100): raise "kablooey"
 		return linearized_runs
 
-	def handle_node(self, node):
+	def handle_node(self, node, id):
 
 		if (node.tag != self.svgpath):
 			#dbg.write("%s\n"%str((id, etree.tostring(node, pretty_print=True))))
@@ -649,9 +650,9 @@ class Embroider(inkex.Effect):
 		else:
 			if (self.get_style(node, "fill")!=None):
 				angle = math.radians(float(descparts.get('embroider_angle', 0)))
-				self.patchList.patches.extend(self.filled_region_to_patchlist(node, angle))
+				self.patchList.patches.extend(self.filled_region_to_patchlist(node, id, angle))
 			if (self.get_style(node, "stroke")!=None):
-				self.patchList.patches.extend(self.path_to_patch_list(node))
+				self.patchList.patches.extend(self.path_to_patch_list(node, id))
 
 	def get_style(self, node, style_name):
 		style = simplestyle.parseStyle(node.get("style"))
@@ -662,7 +663,16 @@ class Embroider(inkex.Effect):
 			return None
 		return value
 		
+	def cache_stacking_order(self):
+		output = subprocess.check_output('inkscape --query-all "%s" 2>/dev/null' % self.args[-1], shell=True)
+
+		ids = [line.split(',')[0] for line in output.splitlines()]
+		self.stacking_order = {id: order for order, id in enumerate(ids)}
+
 	def effect(self):
+		if self.options.preserve_order == "true":
+			self.cache_stacking_order()
+
 		self.row_spacing_px = self.options.row_spacing_mm * pixels_per_millimeter
 		self.zigzag_spacing_px = self.options.zigzag_spacing_mm * pixels_per_millimeter
 		self.max_stitch_len_px = self.options.max_stitch_len_mm*pixels_per_millimeter
@@ -672,7 +682,7 @@ class Embroider(inkex.Effect):
 		self.svgpath = inkex.addNS('path', 'svg')
 		self.patchList = PatchList([])
 		for id, node in self.selected.iteritems():
-			self.handle_node(node)
+			self.handle_node(node, id)
 
 		self.patchList = self.patchList.tsp_by_color()
 		#dbg.write("patch count: %d\n" % len(self.patchList.patches))
@@ -704,7 +714,7 @@ class Embroider(inkex.Effect):
 				'd':simplepath.formatPath(new_path),
 			})
 
-	def path_to_patch_list(self, node):
+	def path_to_patch_list(self, node, id):
 		threadcolor = simplestyle.parseStyle(node.get("style"))["stroke"]
 		stroke_width_str = simplestyle.parseStyle(node.get("style"))["stroke-width"]
 		if (stroke_width_str.endswith("px")):
@@ -714,7 +724,7 @@ class Embroider(inkex.Effect):
 		stroke_width = float(stroke_width_str)
 		#dbg.write("stroke_width is <%s>\n" % repr(stroke_width))
 		#dbg.flush()
-		sortorder = self.get_sort_order(threadcolor)
+		sortorder = self.get_sort_order(threadcolor, id)
 		path = simplepath.parsePath(node.get("d"))
 
 		# regularize the points lists.
@@ -786,12 +796,12 @@ class Embroider(inkex.Effect):
 
 		return [patch]
 
-	def filled_region_to_patchlist(self, node, angle):
+	def filled_region_to_patchlist(self, node, id, angle):
 		p = cubicsuperpath.parsePath(node.get("d"))
 		cspsubdiv.cspsubdiv(p, self.options.flat)
 		shapelyPolygon = cspToShapelyPolygon(p)
 		threadcolor = simplestyle.parseStyle(node.get("style"))["fill"]
-		sortorder = self.get_sort_order(threadcolor)
+		sortorder = self.get_sort_order(threadcolor, id)
 		return self.process_one_path(
 				shapelyPolygon,
 				threadcolor,
