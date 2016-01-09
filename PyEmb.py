@@ -63,9 +63,14 @@ class Embroidery:
 			maxy = max(maxy,p.y)
 		sx = maxx-minx
 		sy = maxy-miny
+
+		self.translate(-minx, -miny)
+		return (minx, miny)
+
+	def translate(self, dx, dy):
 		for p in self.coords:
-			p.x -= minx
-			p.y -= miny
+			p.x += dx
+			p.y += dy
 
 	def scale(self, sc):
 		if not isinstance(sc, (tuple, list)):
@@ -160,11 +165,11 @@ class Embroidery:
 					int(stitch.color[3:5], 16),
 					int(stitch.color[5:7], 16))
 			if stitch.jumpStitch:
-				self.str += '"*","JUMP","%f","%f"\n' % (stitch.x/10, stitch.y/10)
+				self.str += '"*","JUMP","%f","%f"\n' % (stitch.x, stitch.y)
 			if lastColor != None and stitch.color != lastColor:
 				# not first color choice, add color change record
-				self.str += '"*","COLOR","%f","%f"\n' % (stitch.x/10, stitch.y/10)
-			self.str += '"*","STITCH","%f","%f"\n' % (stitch.x/10, stitch.y/10)
+				self.str += '"*","COLOR","%f","%f"\n' % (stitch.x, stitch.y)
+			self.str += '"*","STITCH","%f","%f"\n' % (stitch.x, stitch.y)
 			lastColor = stitch.color
 		return self.str
 
