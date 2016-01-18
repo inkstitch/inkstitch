@@ -217,7 +217,7 @@ class PatchList:
 		out = []
 		lastPatch = None
 		for patch in self.patches:
-			if (lastPatch!=None and patch.color==lastPatch.color):
+			if (lastPatch!=None and patch.sortorder==lastPatch.sortorder):
 				out[-1].patches.append(patch)
 			else:
 				out.append(PatchList([patch]))
@@ -511,7 +511,7 @@ class EmbroideryObject:
 				inkex.addNS('path', 'svg'),
 				{	'style':simplestyle.formatStyle(
 						{ 'stroke': color if color is not None else '#000000',
-							'stroke-width':str(self.row_spacing_px*0.5),
+							'stroke-width':"1",
 							'fill': 'none' }),
 					'd':simplepath.formatPath(path),
 				})
@@ -526,14 +526,14 @@ class EmbroideryObject:
 		return (min(x), min(y), max(x), max(y))
 
 class SortOrder:
-	def __init__(self, threadcolor, stacking_order, preserve_order):
+	def __init__(self, threadcolor, layer, preserve_layers):
 		self.threadcolor = threadcolor
-		if (preserve_order):
-			dbg.write("preserve_order is true: %s %s\n" % (stacking_order, threadcolor));
-			self.sorttuple = (stacking_order, threadcolor)
+		if (preserve_layers):
+			#dbg.write("preserve_layers is true: %s %s\n" % (layer, threadcolor));
+			self.sorttuple = (layer, threadcolor)
 		else:
-			#dbg.write("preserve_order is false:\n");
-			self.sorttuple = (threadcolor, stacking_order)
+			#dbg.write("preserve_layers is false:\n");
+			self.sorttuple = (threadcolor,)
 
 	def __cmp__(self, other):
 		return cmp(self.sorttuple, other.sorttuple)
@@ -570,16 +570,21 @@ class Embroider(inkex.Effect):
 			action="store", type="float", 
 			dest="flat", default=0.1,
 			help="Minimum flatness of the subdivided curves")
-		self.OptionParser.add_option("-o", "--preserve_order",
+		self.OptionParser.add_option("-o", "--preserve_layers",
 			action="store", type="choice", 
 			choices=["true","false"],
-			dest="preserve_order", default="false",
+			dest="preserve_layers", default="false",
 			help="Sort by stacking order instead of color")
 		self.OptionParser.add_option("-H", "--hatch_filled_paths",
 			action="store", type="choice",
 			choices=["true","false"],
 			dest="hatch_filled_paths", default="false",
 			help="Use hatching lines instead of equally-spaced lines to fill paths")
+		self.OptionParser.add_option("--hide_layers",
+			action="store", type="choice",
+			choices=["true","false"],
+			dest="hide_layers", default="true",
+			help="Hide all other layers when the embroidery layer is generated")
 		self.OptionParser.add_option("-p", "--add_preamble",
 			action="store", type="choice",
 			choices=["0","010","01010","01210","012101210"],
@@ -595,10 +600,11 @@ class Embroider(inkex.Effect):
 			dest="filename", default="embroider-output.exp",
 			help="Name (and possibly path) of output file")
 		self.patches = []
-		self.stacking_order = {}
+		self.layer_cache = {}
 
 	def get_sort_order(self, threadcolor, node):
-		return SortOrder(threadcolor, self.stacking_order.get(node.get("id")), self.options.preserve_order=="true")
+		#print >> sys.stderr, "node", node.get("id"), self.layer_cache.get(node.get("id"))
+		return SortOrder(threadcolor, self.layer_cache.get(node.get("id")), self.options.preserve_layers=="true")
 
 	def process_one_path(self, node, shpath, threadcolor, sortorder, angle):
 		#self.add_shapely_geo_to_svg(shpath.boundary, color="#c0c000")
@@ -732,15 +738,33 @@ class Embroider(inkex.Effect):
 			return None
 		return value
 		
-	def cache_stacking_order(self):
-		output = subprocess.check_output('inkscape --query-all "%s" 2>/dev/null' % self.args[-1], shell=True)
+	def cache_layers(self):
+		self.layer_cache = {}
 
-		ids = [line.split(',')[0] for line in output.splitlines()]
-		self.stacking_order = {id: order for order, id in enumerate(ids)}
+		layer_tag = inkex.addNS("g", "svg")
+		group_attr = inkex.addNS('groupmode', 'inkscape')
+
+
+		def is_layer(node):
+			return node.tag == layer_tag and node.get(group_attr) == "layer"
+			
+		def process(node, layer=0):
+			if is_layer(node):
+				layer += 1
+			else:
+				self.layer_cache[node.get("id")] = layer
+
+			for child in node:
+				layer = process(child, layer)
+
+			return layer
+
+		process(self.document.getroot())
 
 	def effect(self):
-		if self.options.preserve_order == "true":
-			self.cache_stacking_order()
+		if self.options.preserve_layers == "true":
+			self.cache_layers()
+			#print >> sys.stderr, "cached stacking order:", self.stacking_order
 
 		self.row_spacing_px = self.options.row_spacing_mm * pixels_per_millimeter
 		self.zigzag_spacing_px = self.options.zigzag_spacing_mm * pixels_per_millimeter
@@ -761,15 +785,19 @@ class Embroider(inkex.Effect):
 		self.patchList = self.patchList.tsp_by_color()
 		#dbg.write("patch count: %d\n" % len(self.patchList.patches))
 
+		if self.options.hide_layers:
+			self.hide_layers()
+
 		eo = EmbroideryObject(self.patchList, self.row_spacing_px)
 		emb = eo.emit_file(self.options.filename, self.options.output_format,
 			     self.collapse_len_px, self.options.add_preamble)
 
-		new_group = inkex.etree.SubElement(self.current_layer,
+		new_layer = inkex.etree.SubElement(self.document.getroot(),
 				inkex.addNS('g', 'svg'), {})
-		eo.emit_inkscape(new_group, emb)
-
-		self.emit_inkscape_bbox(new_group, eo)
+		new_layer.set('id', self.uniqueId("embroidery"))
+		new_layer.set(inkex.addNS('label', 'inkscape'), 'Embroidery')
+		new_layer.set(inkex.addNS('groupmode', 'inkscape'), 'layer')
+		eo.emit_inkscape(new_layer, emb)
 
 	def emit_inkscape_bbox(self, parent, eo):
 		(x0, y0, x1, y1) = eo.bbox()
@@ -787,6 +815,11 @@ class Embroider(inkex.Effect):
 						'fill': 'none' }),
 				'd':simplepath.formatPath(new_path),
 			})
+
+	def hide_layers(self):
+		for g in self.document.getroot().findall(inkex.addNS("g","svg")):
+			if g.get(inkex.addNS("groupmode", "inkscape")) == "layer":
+				g.set("style", "display:none")
 
 	def path_to_patch_list(self, node):
 		threadcolor = simplestyle.parseStyle(node.get("style"))["stroke"]
