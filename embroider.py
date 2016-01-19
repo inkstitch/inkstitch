@@ -649,43 +649,58 @@ class Embroider(inkex.Effect):
         return [patch]
 
     def intersect_region_with_grating(self, shpath, row_spacing_px, angle):
-        #dbg.write("bounds = %s\n" % str(shpath.bounds))
-        rotated_shpath = affinity.rotate(shpath, angle, use_radians = True)
-        bbox = rotated_shpath.bounds
-        delta = row_spacing_px * 50 # *2 should be enough but isn't.  TODO: find out why, and if this always works.
-        bbox = affinity.rotate(shgeo.LinearRing(((bbox[0] - delta, bbox[1] - delta), (bbox[2] + delta, bbox[1] - delta), (bbox[2] + delta, bbox[3] + delta), (bbox[0] - delta, bbox[3] + delta))), -angle, use_radians = True).coords
-        
-        p0 = PyEmb.Point(bbox[0][0], bbox[0][1])
-        p1 = PyEmb.Point(bbox[1][0], bbox[1][1])
-        p2 = PyEmb.Point(bbox[3][0], bbox[3][1])
-        count = (p2 - p0).length() / row_spacing_px
-        p_inc = (p2 - p0).mul(1 / count)
-        count += 2
+        # the max line length I'll need to intersect the whole shape is the diagonal
+        (minx, miny, maxx, maxy) = shpath.bounds
+        length = (PyEmb.Point(maxx, maxy) - PyEmb.Point(minx, miny)).length()
+        half_length = length / 2.0
+
+        # Now get a unit vector rotated to the requested angle.  I use -angle
+        # because shapely rotates clockwise, but my geometry textbooks taught
+        # me to consider angles as counter-clockwise from the X axis.
+        direction = PyEmb.Point(1, 0).rotate(-angle)
+
+        # and get a normal vector
+        normal = direction.rotate(math.pi/2)
+
+        # I'll start from the center, move in the normal direction some amount,
+        # and then walk left and right half_length in each direction to create
+        # a line segment in the grating.
+        center = PyEmb.Point((minx + maxx) / 2.0, (miny + maxy) / 2.0)
+
+        # I need to figure out how far I need to go along the normal to get to
+        # the edge of the shape.  To do that, I'll rotate the bounding box
+        # angle degrees clockwise and ask for the new bounding box.  The max
+        # and min y tell me how far to go.
+
+        _, start, _, end = affinity.rotate(shpath, angle, origin='center', use_radians = True).bounds
+        start -= center.y
+        end -= center.y
+
+        # don't start right at the edge or we'll make a ridiculous single
+        # stitch
+        start += row_spacing_px / 2.0
 
         rows = []
-        steps = 0
-        while (steps < count):
-            try:
-                steps += 1
-                p0 += p_inc
-                p1 += p_inc
-                endpoints = [p0.as_tuple(), p1.as_tuple()]
-                shline = shgeo.LineString(endpoints)
-                res = shline.intersection(shpath)
-                if (isinstance(res, shgeo.MultiLineString)):
-                    runs = map(shapelyLineSegmentToPyTuple, res.geoms)
-                else:
-                    runs = [shapelyLineSegmentToPyTuple(res)]
-                if self.hatching and len(rows) > 0:
-                    rows.append([(rows[-1][0][1], runs[0][0])])
-                rows.append(runs)
-            except Exception, ex:
-                dbg.write("--------------\n")
-                dbg.write("%s\n" % ex)
-                dbg.write("%s\n" % shline)
-                dbg.write("%s\n" % shpath)
-                dbg.write("==============\n")
-                continue
+
+        while start < end:
+            p0 = center + normal.mul(start) + direction.mul(half_length)
+            p1 = center + normal.mul(start) - direction.mul(half_length)
+            endpoints = [p0.as_tuple(), p1.as_tuple()]
+            shline = shgeo.LineString(endpoints)
+
+            res = shline.intersection(shpath)
+
+            if (isinstance(res, shgeo.MultiLineString)):
+                runs = map(shapelyLineSegmentToPyTuple, res.geoms)
+            else:
+                runs = [shapelyLineSegmentToPyTuple(res)]
+
+            if self.hatching and len(rows) > 0:
+                rows.append([(rows[-1][0][1], runs[0][0])])
+
+            rows.append(runs)
+
+            start += row_spacing_px
         return rows
         
     def visit_segments_one_by_one(self, rows):
