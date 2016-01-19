@@ -600,11 +600,11 @@ class Embroider(inkex.Effect):
             dest="collapse_len_mm", default=0.0,
             help="max collapse length (mm)")
         self.OptionParser.add_option("-f", "--flatness",
-            action="store", type="float", 
+            action="store", type="float",
             dest="flat", default=0.1,
             help="Minimum flatness of the subdivided curves")
         self.OptionParser.add_option("-o", "--preserve_layers",
-            action="store", type="choice", 
+            action="store", type="choice",
             choices=["true","false"],
             dest="preserve_layers", default="false",
             help="Sort by stacking order instead of color")
