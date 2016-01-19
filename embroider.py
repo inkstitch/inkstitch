@@ -224,7 +224,7 @@ class PatchList:
             lastPatch = patch
         #dbg.write("Emitted %s partitions\n" % len(out))
         return out
-        
+
     def tsp_by_color(self):
         list_of_patchLists = self.partition_by_color()
         for patchList in list_of_patchLists:
@@ -537,7 +537,7 @@ class SortOrder:
 
     def __cmp__(self, other):
         return cmp(self.sorttuple, other.sorttuple)
-    
+
     def __repr__(self):
         return "sort %s color %s" % (self.sorttuple, self.threadcolor)
 
@@ -614,7 +614,7 @@ class Embroider(inkex.Effect):
         max_stitch_len_px = get_float_param(node, "max_stitch_length", self.max_stitch_len_px)
 
         rows_of_segments = self.intersect_region_with_grating(shpath, row_spacing_px, angle)
-        segments = self.visit_segments_one_by_one(rows_of_segments)
+        segments = self.visit_segments_one_by_one(rows_of_segments, shpath)
 
         def small_stitches(patch, beg, end):
             vector = (end-beg)
@@ -637,7 +637,7 @@ class Embroider(inkex.Effect):
 
                 one_stitch = vector.mul(1.0/dist*max_stitch_len_px)
                 beg = beg + one_stitch
-                
+
         swap = False
         patch = Patch(color=threadcolor,sortorder=sortorder)
         for (beg,end) in segments:
@@ -702,14 +702,46 @@ class Embroider(inkex.Effect):
 
             start += row_spacing_px
         return rows
-        
-    def visit_segments_one_by_one(self, rows):
+
+    def visit_segments_one_by_one(self, rows, shpath):
+        # Given a list of rows, each containing a set of line segments,
+        # break the area up into contiguous patches of line segments.
+        #
+        # This is done by repeatedly pulling off the first line segment in
+        # each row and calling that a shape.  We have to be careful to make
+        # sure that the line segments are part of the same shape.  Consider
+        # the letter "H", with an embroidery angle of 45 degrees.  When
+        # we get to the bottom of the lower left leg, the next row will jump
+        # over to midway up the lower right leg.  We want to stop there and
+        # start a new patch.
+
+        def make_quadrilateral(segment1, segment2):
+            return shgeo.Polygon((segment1[0], segment1[1], segment2[1], segment2[0], segment1[0]))
+
         def pull_runs(rows):
             new_rows = []
             run = []
+            prev = None
+            done = False
             for r in rows:
+                if done:
+                    new_rows.append(r)
+                    continue
+
                 (first,rest) = (r[0], r[1:])
+
+                if prev is not None:
+                    quad = make_quadrilateral(prev, first)
+                    quad_area = quad.area
+                    intersection_area = shpath.intersection(quad).area
+
+                    if intersection_area / quad_area < .9:
+                        new_rows.append(r)
+                        done = True
+                        continue
+
                 run.append(first)
+                prev = first
                 if (len(rest)>0):
                     new_rows.append(rest)
             return (run, new_rows)
@@ -722,7 +754,6 @@ class Embroider(inkex.Effect):
 
             rows = rows[::-1]
             count += 1
-            if (count>100): raise "kablooey"
         return linearized_runs
 
     def handle_node(self, node):
@@ -752,7 +783,7 @@ class Embroider(inkex.Effect):
         if (value==None or value=="none"):
             return None
         return value
-        
+
     def cache_layers(self):
         self.layer_cache = {}
 
@@ -762,7 +793,7 @@ class Embroider(inkex.Effect):
 
         def is_layer(node):
             return node.tag == layer_tag and node.get(group_attr) == "layer"
-            
+
         def process(node, layer=0):
             if is_layer(node):
                 layer += 1
@@ -859,7 +890,7 @@ class Embroider(inkex.Effect):
         # subarrays.)
 
         patches = []
-        
+
         for path in paths:
             path = [PyEmb.Point(x, y) for x, y in path]
             if (stroke_width <= STROKE_MIN):
