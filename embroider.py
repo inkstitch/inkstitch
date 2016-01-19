@@ -335,19 +335,15 @@ class PatchList:
 
     def traveling_salesman(self):
         # shockingly, this is non-optimal and pretty much non-efficient. Sorry.
-        self.centroid = PyEmb.Point(0.0,0.0)
         self.pointList = []
         for patch in self.patches:
             def visit(idx):
                 ep = deepcopy(patch.stitches[idx])
                 ep.patch = patch
-                self.centroid+=ep
                 self.pointList.append(ep)
 
             visit(0)
             visit(-1)
-
-        self.centroid = self.centroid.mul(1.0/float(len(self.pointList)))
 
         def linear_min(list, func):
             min_item = None
@@ -374,30 +370,48 @@ class PatchList:
             sortedPatchList.patches.append(patch)
             #dbg.write('took patch %s--%s %s\n' % (patch.stitches[0], patch.stitches[-1], reversed))
 
-        # Take the patch farthest from the centroid first
-        # O(n)
-        #dbg.write('centroid: %s\n' % self.centroid)
-        def neg_distance_from_centroid(p):
-            return -(p-self.centroid).length()
-        farthestPoint = linear_min(self.pointList, neg_distance_from_centroid)
-        takePatchStartingAtPoint(farthestPoint)
-        #sortedPatchList.patches[0].color = "#000000"
+        # Try a greedy algorithm starting from each point in turn, and pick
+        # the best result.  O(n^2).
 
-        # Then greedily take closer-and-closer patches
-        # O(n^2)
-        while (len(self.pointList)>0):
-            #dbg.write('pass %s\n' % len(self.pointList));
-            last_point = sortedPatchList.patches[-1].stitches[-1]
-            #dbg.write('last_point now %s\n' % last_point)
-            def distance_from_last_point(p):
-                return (p-last_point).length()
-            nearestPoint = linear_min(self.pointList, distance_from_last_point)
-            takePatchStartingAtPoint(nearestPoint)
+        min_cost = None
+        min_path = []
+
+        def mate(point):
+            for p in self.pointList:
+                if p is not point and p.patch == point.patch:
+                    return p
+
+        for starting_point in self.pointList:
+            point_list = self.pointList[:]
+            last_point = mate(starting_point)
+
+            point_list.remove(starting_point)
+            point_list.remove(last_point)
+
+            path = [starting_point]
+            cost = 0
+
+            while point_list:
+                next_point = min(point_list, key=lambda p: (p - last_point).length())
+                cost += (next_point - last_point).length()
+
+                path.append(next_point)
+                last_point = mate(next_point)
+
+                point_list.remove(next_point)
+                point_list.remove(last_point)
+
+            if min_cost is None or cost < min_cost:
+                min_cost = cost
+                min_path = path
+
+        for point in min_path:
+            takePatchStartingAtPoint(point)
 
         # install the initial result
         self.patches = sortedPatchList.patches
 
-        if (1):
+        if 1:
             # Then hill-climb.
             #dbg.write("len(self.patches) = %d\n" % len(self.patches))
             count = 0
