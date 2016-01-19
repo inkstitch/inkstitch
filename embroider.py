@@ -253,21 +253,35 @@ class PatchList:
         return self.patches[i]
 
     def cost(self, a, b):
-        if (a==None or b==None):
+        if (a is None or b is None):
             rc = 0.0
         else:
             rc = (a.stitches[-1] - b.stitches[0]).length()
         #dbg.write("cost(%s, %s) = %5.1f\n" % (a, b, rc))
         return rc
 
+    def total_cost(self):
+        total = 0
+
+        for i in xrange(1, len(self.patches)):
+            total += self.cost(self.get(i-1), self.get(i))
+
+        return total
+
     def try_swap(self, i, j):
         # i,j are indices;
         #dbg.write("swap(%d, %d)\n" % (i,j))
-        oldCost = (
-             self.cost(self.get(i-1), self.get(i))
-            +self.cost(self.get(i), self.get(i+1))
-            +self.cost(self.get(j-1), self.get(j))
-            +self.cost(self.get(j), self.get(j+1)))
+        i, j = sorted((i, j))
+        neighbors = abs(i - j) == 1
+        if neighbors:
+            oldCost = sum((self.cost(self.get(i-1), self.get(i)),
+                           self.cost(self.get(i), self.get(j)),
+                           self.cost(self.get(j), self.get(j+1))))
+        else:
+            oldCost = sum((self.cost(self.get(i-1), self.get(i)),
+                           self.cost(self.get(i), self.get(i+1)),
+                           self.cost(self.get(j-1), self.get(j)),
+                           self.cost(self.get(j), self.get(j+1))))
         npi = self.get(j)
         npj = self.get(i)
         rpi = npi.reverse()
@@ -280,11 +294,16 @@ class PatchList:
         ]
         def costOf(np):
             (npi,npj) = np
-            return (
-                 self.cost(self.get(i-1), npi)
-                +self.cost(npi, self.get(i+1))
-                +self.cost(self.get(j-1), npj)
-                +self.cost(npj, self.get(j+1)))
+
+            if abs(i - j) == 1:
+                return sum((self.cost(self.get(i-1), npi),
+                            self.cost(npi, npj),
+                            self.cost(npj, self.get(j+1))))
+            else:
+                return sum((self.cost(self.get(i-1), npi),
+                            self.cost(npi, self.get(i+1)),
+                            self.cost(self.get(j-1), npj),
+                            self.cost(npj, self.get(j+1))))
         costs = map(lambda o: (costOf(o), o), options)
         costs.sort()
         (cost,option) = costs[0]
