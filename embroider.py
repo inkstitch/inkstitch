@@ -28,6 +28,7 @@ import inkex
 import simplepath
 import simplestyle
 import simpletransform
+from bezmisc import bezierlength, beziertatlength, bezierpointatt
 from cspsubdiv import cspsubdiv
 import cubicsuperpath
 import PyEmb
@@ -54,7 +55,7 @@ def parse_boolean(s):
     if isinstance(s, bool):
         return s
     else:
-        return s and s.lower in ('yes', 'y', 'true', 't', '1')
+        return s and (s.lower() in ('yes', 'y', 'true', 't', '1'))
 
 def get_param(node, param, default):
     value = node.get("embroider_" + param)
@@ -544,7 +545,7 @@ class EmbroideryObject:
                 inkex.addNS('path', 'svg'),
                 {    'style':simplestyle.formatStyle(
                         { 'stroke': color if color is not None else '#000000',
-                            'stroke-width':"1",
+                            'stroke-width':"0.25",
                             'fill': 'none' }),
                     'd':simplepath.formatPath(path),
                 })
@@ -799,9 +800,8 @@ class Embroider(inkex.Effect):
 
         #dbg.write("Node: %s\n"%str((id, etree.tostring(node, pretty_print=True))))
 
-        israw = parse_boolean(node.get('embroider_raw'))
-        if (israw):
-            self.patchList.patches.extend(self.path_to_patch_list(node))
+        if get_boolean_param(node, "satin_column"):
+            self.patchList.patches.extend(self.satin_column(node))
         else:
             if (self.get_style(node, "fill")!=None):
                 self.patchList.patches.extend(self.filled_region_to_patchlist(node))
@@ -985,7 +985,161 @@ class Embroider(inkex.Effect):
                 sortorder,
                 angle)
 
-    #TODO def make_stroked_patch(self, node):
+    def fatal(self, message):
+        print >> sys.stderr, "error:", message
+        sys.exit(1)
+
+    def validate_satin_column(self, node, csp):
+        node_id = node.get("id")
+
+        if len(csp) != 2:
+            self.fatal("satin column: object %s invalid: expected exactly two sub-paths" % node_id)
+
+        if self.get_style(node, "fill")!=None:
+            self.fatal("satin column: object %s has a fill (but should not)" % node_id)
+
+        if len(csp[0]) != len(csp[1]):
+            self.fatal("satin column: object %s has two paths with an unequal number of points (should be equal)" % node_id)
+
+    def satin_column(self, node):
+        # Stitch a variable-width satin column, zig-zagging between two paths.
+
+        # The node should have exactly two paths with no fill.  Each
+        # path should have the same number of points.  The two paths will be
+        # split into segments, and each segment will have a number of zigzags
+        # defined by the length of the longer of the two segments, divided
+        # by the zigzag spacing parameter.
+
+        id = node.get("id")
+
+        # First, verify that we have a valid node.
+        csp = cubicsuperpath.parsePath(node.get("d"))
+        self.validate_satin_column(node, csp)
+
+        # fetch parameters
+        zigzag_spacing_px = get_float_param(node, "zigzag_spacing", self.zigzag_spacing_px)
+
+        # A path is a collection of tuples, each of the form:
+        #
+        # (control_before, point, control_after)
+        #
+        # A bezier curve segment is defined by an endpoint, a control point,
+        # a second control point, and a final endpoint.  A path is a bunch of
+        # bezier curves strung together.  One could represent a path as a set
+        # of four-tuples, but there would be redundancy because the ending
+        # point of one bezier is the starting point of the next.  Instead, a
+        # path is a set of 3-tuples as shown above, and one must construct
+        # each bezier curve by taking the appropriate endpoints and control
+        # points.  Bleh. It should be noted that a straight segment is
+        # represented by having the control point on each end equal to that
+        # end's point.
+        #
+        # A "superpath" is a collection of paths that are all in one object.
+        # The "cubic" bit in "cubic superpath" is because the bezier curves
+        # inkscape uses involve cubic polynomials.
+        #
+        # In a path, each element in the 3-tuple is itself a tuple of (x, y).
+        # Tuples all the way down.  Hasn't anyone heard of using classes?
+
+        path1 = csp[0]
+        path2 = csp[1]
+
+        threadcolor = simplestyle.parseStyle(node.get("style"))["stroke"]
+        sortorder = self.get_sort_order(threadcolor, node)
+        patch = Patch(color=threadcolor, sortorder=sortorder)
+
+        # Take each bezier segment in turn, drawing zigzags between the two
+        # paths in that segment.
+
+        for segment in xrange(1, len(path1)):
+            # construct the current bezier segments
+            bezier1 = (path1[segment - 1][1], # point from previous 3-tuple
+                       path1[segment - 1][2], # "after" control point from previous 3-tuple
+                       path1[segment][0], # "before" control point from this 3-tuple
+                       path1[segment][1], # point from this 3-tuple
+                      )
+
+            bezier2 = (path2[segment - 1][1],
+                       path2[segment - 1][2],
+                       path2[segment][0],
+                       path2[segment][1],
+                      )
+
+            # Find their lengths.  The math is actually fairly involved.
+            len1 = bezierlength(bezier1)
+            len2 = bezierlength(bezier2)
+
+            # Base the number of stitches in each section on the _longest_ of
+            # the two beziers. Otherwise, things could get too sparse when one
+            # side is significantly longer (e.g. when going around a corner).
+            # The risk here is that we poke a hole in the fabric if we try to
+            # cram too many stitches on the short bezier.  The user will need
+            # to avoid this through careful construction of paths.
+            num_zigzags = int(max(len1, len2) / zigzag_spacing_px)
+
+            stitch_len1 = len1 / num_zigzags
+            stitch_len2 = len2 / num_zigzags
+
+            # Now do the stitches.  Each "zigzag" has a "zig" and a "zag", that
+            # is, go from path1 to path2 and then back to path1.
+
+            # Here's what I want to be able to do.  However, beziertatlength is so incredibly slow that it's unusable.
+            #for stitch in xrange(num_zigzags):
+            #    patch.addStitch(bezierpointatt(bezier1, beziertatlength(bezier1, stitch_len1 * stitch)))
+            #    patch.addStitch(bezierpointatt(bezier2, beziertatlength(bezier2, stitch_len2 * (stitch + 0.5))))
+
+            # Instead, flatten the beziers down to a set of line segments.
+            subpath1 = flatten([[path1[segment - 1], path1[segment]]], self.options.flat)
+            subpath2 = flatten([[path2[segment - 1], path2[segment]]], self.options.flat)
+
+            subpath1 = [PyEmb.Point(*p) for p in subpath1[0]]
+            subpath2 = [PyEmb.Point(*p) for p in subpath2[0]]
+
+            def walk(path, start_pos, start_index, distance):
+                # Move <distance> pixels along <path>'s line segments.
+                # <start_index> is the index of the line segment in <path> that
+                # we're currently on.  <start_pos> is where along that line
+                # segment we are.  Return a new position and index.
+
+                pos = start_pos
+                index = start_index
+
+                if index >= len(path) - 1:
+                    # it's possible we'll go too far due to inaccuracy in the
+                    # bezier length calculation
+                    return start_pos, start_index
+
+                while True:
+                    segment_end = path[index + 1]
+                    segment_remaining = (next_pos - pos)
+                    distance_remaining = remaining.length()
+
+                    if distance_remaining > distance:
+                        return pos + segment_remaining.unit().mul(distance), index
+                    else:
+                        index += 1
+
+                        if index >= len(path) - 1:
+                            return segment_end, index
+
+                        distance -= distance_remaining
+                        pos = segment_end
+
+            pos1 = subpath1[0]
+            i1 = 0
+
+            pos2, i2 = walk(subpath2, subpath2[0], 0, stitch_len2 * 0.5)
+            i2 = 0
+
+            for stitch in xrange(num_zigzags):
+                # In each iteration, do a "zig" and a "zag".
+                patch.addStitch(pos1)
+                pos1, i1 = walk(subpath1, pos1, i1, stitch_len1)
+
+                patch.addStitch(pos2)
+                pos2, i2 = walk(subpath2, pos2, i2, stitch_len2)
+
+        return [patch]
 
 if __name__ == '__main__':
     sys.setrecursionlimit(100000);
