@@ -22,6 +22,7 @@ class EmbroiderParams(inkex.Effect):
                        "repeats",
                        "angle",
                        "hatching",
+                       "satin_column"
                       ]
        
         for param in self.params:
