@@ -993,13 +993,13 @@ class Embroider(inkex.Effect):
         node_id = node.get("id")
 
         if len(csp) != 2:
-            self.fatal("satin column: object %s invalid: expected exactly two sub-paths" % node_id)
+            self.fatal("satin column: object %s invalid: expected exactly two sub-paths, but there are %s" % (node_id, len(csp)))
 
         if self.get_style(node, "fill")!=None:
             self.fatal("satin column: object %s has a fill (but should not)" % node_id)
 
         if len(csp[0]) != len(csp[1]):
-            self.fatal("satin column: object %s has two paths with an unequal number of points (should be equal)" % node_id)
+            self.fatal("satin column: object %s has two paths with an unequal number of points (%s and %s)" % (node_id, len(csp[0]), len(csp[1])))
 
     def satin_column(self, node):
         # Stitch a variable-width satin column, zig-zagging between two paths.
@@ -1111,8 +1111,8 @@ class Embroider(inkex.Effect):
 
                 while True:
                     segment_end = path[index + 1]
-                    segment_remaining = (next_pos - pos)
-                    distance_remaining = remaining.length()
+                    segment_remaining = (segment_end - pos)
+                    distance_remaining = segment_remaining.length()
 
                     if distance_remaining > distance:
                         return pos + segment_remaining.unit().mul(distance), index
