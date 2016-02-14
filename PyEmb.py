@@ -19,6 +19,21 @@ class Point:
 	def mul(self, scalar):
 		return Point(self.x*scalar, self.y*scalar)
 	
+	def __mul__(self, other):
+		if isinstance(other, Point):
+			# dot product
+			return self.x * other.x + self.y * other.y
+		elif isinstance(other, (int, float)):
+			return self.mul(other)
+		else:
+			raise ValueError("cannot multiply Point by %s" % type(other))
+
+	def __rmul__(self, other):
+		if isinstance(other, (int, float)):
+			return self.mul(other)
+		else:
+			raise ValueError("cannot multiply Point by %s" % type(other))
+
 	def __repr__(self):
 		return "Pt(%s,%s)" % (self.x,self.y)
 
@@ -170,6 +185,7 @@ class Embroidery:
 				self.str += '"*","JUMP","%f","%f"\n' % (stitch.x, stitch.y)
 			self.str += '"*","STITCH","%f","%f"\n' % (stitch.x, stitch.y)
 			lastStitch = stitch
+		self.str += '"*","END","%f","%f"\n' % (lastStitch.x, lastStitch.y)
 		return self.str
 
 	def export_gcode(self, dbg):
