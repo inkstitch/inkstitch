@@ -154,10 +154,12 @@ class Embroidery:
 		self.str += '"#","[THREAD_NUMBER]","[RED]","[GREEN]","[BLUE]","[DESCRIPTION]","[CATALOG_NUMBER]"\n'
 		self.str += '"#","[STITCH_TYPE]","[X]","[Y]"\n'
 
-		lastColor = None
+		lastStitch = None
 		colorIndex = 0
 		for stitch in self.coords:
-			if lastColor == None or stitch.color != lastColor:
+			if lastStitch is not None and stitch.color != lastStitch.color:
+				self.str += '"*","COLOR","%f","%f"\n' % (lastStitch.x, lastStitch.y)
+			if lastStitch is None or stitch.color != lastStitch.color:
 				colorIndex += 1
 				self.str += '"$","%d","%d","%d","%d","(null)","(null)"\n' % (
 					colorIndex,
@@ -166,11 +168,8 @@ class Embroidery:
 					int(stitch.color[5:7], 16))
 			if stitch.jumpStitch:
 				self.str += '"*","JUMP","%f","%f"\n' % (stitch.x, stitch.y)
-			if lastColor != None and stitch.color != lastColor:
-				# not first color choice, add color change record
-				self.str += '"*","COLOR","%f","%f"\n' % (stitch.x, stitch.y)
 			self.str += '"*","STITCH","%f","%f"\n' % (stitch.x, stitch.y)
-			lastColor = stitch.color
+			lastStitch = stitch
 		return self.str
 
 	def export_gcode(self, dbg):
