@@ -655,9 +655,13 @@ class Embroider(inkex.Effect):
         hatching = get_boolean_param(node, "hatching", self.hatching)
         row_spacing_px = get_float_param(node, "row_spacing", self.row_spacing_px)
         max_stitch_len_px = get_float_param(node, "max_stitch_length", self.max_stitch_len_px)
+        num_staggers = get_int_param(node, "staggers", 4)
 
         rows_of_segments = self.intersect_region_with_grating(shpath, row_spacing_px, angle)
         groups_of_segments = self.pull_runs(rows_of_segments, shpath, row_spacing_px)
+ 
+        # "east" is the name of the direction that is to the right along a row
+        east = PyEmb.Point(1, 0).rotate(-angle)
 
         #print >> sys.stderr, len(groups_of_segments)
 
@@ -666,108 +670,78 @@ class Embroider(inkex.Effect):
             patch = Patch(color=threadcolor,sortorder=sortorder)
             first_segment = True
             swap = False
-            last_length = 0
             last_end = None
 
             for segment in group_of_segments:
-                # want to try to keep needle-holes as far apart as possible
-                # (tatami fill)
-                # check last stitch in last row.  If less than half of max stitch length,
-                # go straight for the midpoint between the last two stitches in the last
-                # row.  Otherwise, go for the midpoint between the last stitch and the end
-                # of the last row, then go for the midpoint between the last two stitches
+                # We want our stitches to look like this:
+                # 
+                # ---*-----------*-----------
+                # ------*-----------*--------
+                # ---------*-----------*-----
+                # ------------*-----------*--
+                # ---*-----------*-----------
+                #
+                # Each successive row of stitches will be staggered, with
+                # num_staggers rows before the pattern repeats.  A value of
+                # 4 gives a nice fill while hiding the needle holes.  The
+                # first row is offset 0%, the second 25%, the third 50%, and
+                # the fourth 75%.
+                #
+                # Actually, instead of just starting at an offset of 0, we
+                # can calculate a row's offset relative to the origin.  This
+                # way if we have two abutting fill regions, they'll perfectly
+                # tile with each other.  That's important because we often get
+                # abutting fill regions from pull_runs().
 
                 (beg, end) = segment
 
                 if (swap):
                     (beg,end)=(end,beg)
-                if not hatching:
-                    swap = not swap
 
                 beg = PyEmb.Point(*beg)
                 end = PyEmb.Point(*end)
 
-                along = (end - beg).unit()
+                row_direction = (end - beg).unit()
                 segment_length = (end - beg).length()
 
-                # We want to try to interleave stitches so that the needle-
-                # holes are as far apart as possible from the previous row's
-                # holes.  It should look like this:
-                #
-                #  ---1---2---3---4-|
-                #  -8---7---6---5---|
-                #
-                # This represents filling a region with two successive rows
-                # of stitching, where the numbers indicate the positions that
-                # the needle punctures the fabric and engages the bobbin
-                # thread.  We need to make sure that stitch 5 falls between
-                # 3 and 4.
-                #
-                # The | characters indicate the right side of the fill area.
-                # The trick is that the space after stitch 4 is entirely
-                # dependent on how much space is left after filling the row
-                # with stitches of length max_stitch_len_px (M).  Call that
-                # remainder R.  It could be anywhere from 0 to M.
-                #
-                # There's one more wrinkle.  In reality, if the side of the
-                # fill region is not perpendicular, we have this:
-                #
-                #  ---1---2---3---4--/
-                #  -8---7---6---5---/
-                #
-                # In this example, R is shortened by the angled side.  We can
-                # figure out how much it's shortened by taking the dot product
-                # of the side segment and a unit vector in the direction of the
-                # second row, to get the projection, P:
-                # 
-                #  ---1---2---3---4-P/
-                #  -8---7---6---5---/
-                #
-                # Therefore, stitch 5 is at position D = R - P + M/2.  It's
-                # possible that D may be greater than M, so we need to stitch
-                # one or more times before D.  It's also possible, in extreme
-                # fill shapes, that D is negative.  In that case we should
-                # add successive Ms until we get back into the fill region.
-                #
-                # Geometry is hard.
+                # only stitch the first point if it's a reasonable distance away from the
+                # last stitch
+                if last_end is None or (beg - last_end).length() > 0.5 * pixels_per_millimeter:
+                    patch.addStitch(beg)
 
-                d = last_length
-                if first_segment:
-                    first_segment = False
-                else:
-                    side = beg - last_end
-                    d -= side * along
+                # Now, imagine the coordinate axes rotated by 'angle' degrees, such that
+                # the rows are parallel to the X axis.  We can find the coordinates in these
+                # axes of the beginning point in this way:
+                relative_beg = beg.rotate(angle)
 
-                d += max_stitch_len_px / 2.0
-                while d < 0:
-                    d += max_stitch_len_px
+                absolute_row_num = math.floor(relative_beg.y / row_spacing_px)
+                row_stagger = absolute_row_num % num_staggers
+                row_stagger_offset = (float(row_stagger) / num_staggers) * max_stitch_len_px
 
-                patch.addStitch(beg)
+                first_stitch_offset = (relative_beg.x - row_stagger_offset) % max_stitch_len_px
 
-                runup = []
-                while d > 0:
-                    if d < segment_length:
-                        runup.insert(0, beg + along * d)
-                    d -= max_stitch_len_px
+                first_stitch = beg - east * first_stitch_offset
 
-                for stitch in runup:
-                    patch.addStitch(stitch)
+                # we might have chosen our first stitch just outside this row, so move back in
+                if (first_stitch - beg) * row_direction < 0:
+                    first_stitch += row_direction * max_stitch_len_px
 
-                # Now we'll set d as the distance of the last stitch along the
-                # segment and continue on.
-                d = (patch.stitches[-1] - beg) * along
-                d += max_stitch_len_px
+                offset = (first_stitch - beg).length()
 
-                while d < segment_length:
-                    patch.addStitch(beg + d * along)
-                    d += max_stitch_len_px
+                while True:
+                    patch.addStitch(beg + offset * row_direction)
+                    offset += max_stitch_len_px
 
-                # add the endpoint if we're not already there
-                last_length = (end - patch.stitches[-1]).length()
-                last_end = end
-                if last_length > 0.1 * pixels_per_millimeter:
-                    # skip the stitch if it's ridiculously short
+                    if offset > segment_length:
+                        break
+
+                if (end - patch.stitches[-1]).length() > 0.1 * pixels_per_millimeter:
                     patch.addStitch(end)
+
+                last_end = end
+
+                if not hatching:
+                    swap = not swap
 
             patches.append(patch)
         return patches
