@@ -16,13 +16,14 @@ class EmbroiderParams(inkex.Effect):
         inkex.Effect.__init__(self)
         
         self.params = ["zigzag_spacing",
-                       "running_stitch_length",
+                       "stitch_length",
                        "row_spacing",
                        "max_stitch_length",
                        "repeats",
                        "angle",
                        "hatching",
-                       "satin_column"
+                       "satin_column",
+                       "stroke_first",
                       ]
        
         for param in self.params:

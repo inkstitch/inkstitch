@@ -382,7 +382,9 @@ class PatchList:
                 if p is not point and p.patch == point.patch:
                     return p
 
-        for starting_point in self.pointList:
+        start_time = time.time()
+
+        for starting_point in random.sample(self.pointList, len(self.pointList)):
             point_list = self.pointList[:]
             last_point = mate(starting_point)
 
@@ -405,6 +407,10 @@ class PatchList:
             if min_cost is None or cost < min_cost:
                 min_cost = cost
                 min_path = path
+
+            # timebox this bit to avoid spinning our wheels forever
+            if time.time() - start_time > 1.0:
+                break
 
         for point in min_path:
             takePatchStartingAtPoint(point)
@@ -569,6 +575,9 @@ class SortOrder:
             #dbg.write("preserve_layers is false:\n");
             self.sorttuple = (threadcolor,)
 
+    def append(self, criterion):
+        self.sorttuple += (criterion,)
+
     def __cmp__(self, other):
         return cmp(self.sorttuple, other.sorttuple)
 
@@ -648,39 +657,120 @@ class Embroider(inkex.Effect):
         max_stitch_len_px = get_float_param(node, "max_stitch_length", self.max_stitch_len_px)
 
         rows_of_segments = self.intersect_region_with_grating(shpath, row_spacing_px, angle)
-        segments = self.visit_segments_one_by_one(rows_of_segments, shpath)
+        groups_of_segments = self.pull_runs(rows_of_segments, shpath, row_spacing_px)
 
-        def small_stitches(patch, beg, end):
-            vector = (end-beg)
-            patch.addStitch(beg)
-            old_dist = vector.length()
-            if (old_dist < max_stitch_len_px):
-                patch.addStitch(end)
-                return
-            one_stitch = vector.mul(1.0 / old_dist * max_stitch_len_px * random.random())
-            beg = beg + one_stitch
-            while (True):
-                vector = (end-beg)
-                dist = vector.length()
-                assert(old_dist==None or dist<old_dist)
-                old_dist = dist
+        #print >> sys.stderr, len(groups_of_segments)
+
+        patches = []
+        for group_of_segments in groups_of_segments:
+            patch = Patch(color=threadcolor,sortorder=sortorder)
+            first_segment = True
+            swap = False
+            last_length = 0
+            last_end = None
+
+            for segment in group_of_segments:
+                # want to try to keep needle-holes as far apart as possible
+                # (tatami fill)
+                # check last stitch in last row.  If less than half of max stitch length,
+                # go straight for the midpoint between the last two stitches in the last
+                # row.  Otherwise, go for the midpoint between the last stitch and the end
+                # of the last row, then go for the midpoint between the last two stitches
+
+                (beg, end) = segment
+
+                if (swap):
+                    (beg,end)=(end,beg)
+                if not hatching:
+                    swap = not swap
+
+                beg = PyEmb.Point(*beg)
+                end = PyEmb.Point(*end)
+
+                along = (end - beg).unit()
+                segment_length = (end - beg).length()
+
+                # We want to try to interleave stitches so that the needle-
+                # holes are as far apart as possible from the previous row's
+                # holes.  It should look like this:
+                #
+                #  ---1---2---3---4-|
+                #  -8---7---6---5---|
+                #
+                # This represents filling a region with two successive rows
+                # of stitching, where the numbers indicate the positions that
+                # the needle punctures the fabric and engages the bobbin
+                # thread.  We need to make sure that stitch 5 falls between
+                # 3 and 4.
+                #
+                # The | characters indicate the right side of the fill area.
+                # The trick is that the space after stitch 4 is entirely
+                # dependent on how much space is left after filling the row
+                # with stitches of length max_stitch_len_px (M).  Call that
+                # remainder R.  It could be anywhere from 0 to M.
+                #
+                # There's one more wrinkle.  In reality, if the side of the
+                # fill region is not perpendicular, we have this:
+                #
+                #  ---1---2---3---4--/
+                #  -8---7---6---5---/
+                #
+                # In this example, R is shortened by the angled side.  We can
+                # figure out how much it's shortened by taking the dot product
+                # of the side segment and a unit vector in the direction of the
+                # second row, to get the projection, P:
+                # 
+                #  ---1---2---3---4-P/
+                #  -8---7---6---5---/
+                #
+                # Therefore, stitch 5 is at position D = R - P + M/2.  It's
+                # possible that D may be greater than M, so we need to stitch
+                # one or more times before D.  It's also possible, in extreme
+                # fill shapes, that D is negative.  In that case we should
+                # add successive Ms until we get back into the fill region.
+                #
+                # Geometry is hard.
+
+                d = last_length
+                if first_segment:
+                    first_segment = False
+                else:
+                    side = beg - last_end
+                    d -= side * along
+
+                d += max_stitch_len_px / 2.0
+                while d < 0:
+                    d += max_stitch_len_px
+
                 patch.addStitch(beg)
-                if (dist < max_stitch_len_px):
+
+                runup = []
+                while d > 0:
+                    if d < segment_length:
+                        runup.insert(0, beg + along * d)
+                    d -= max_stitch_len_px
+
+                for stitch in runup:
+                    patch.addStitch(stitch)
+
+                # Now we'll set d as the distance of the last stitch along the
+                # segment and continue on.
+                d = (patch.stitches[-1] - beg) * along
+                d += max_stitch_len_px
+
+                while d < segment_length:
+                    patch.addStitch(beg + d * along)
+                    d += max_stitch_len_px
+
+                # add the endpoint if we're not already there
+                last_length = (end - patch.stitches[-1]).length()
+                last_end = end
+                if last_length > 0.1 * pixels_per_millimeter:
+                    # skip the stitch if it's ridiculously short
                     patch.addStitch(end)
-                    return
 
-                one_stitch = vector.mul(1.0/dist*max_stitch_len_px)
-                beg = beg + one_stitch
-
-        swap = False
-        patch = Patch(color=threadcolor,sortorder=sortorder)
-        for (beg,end) in segments:
-            if (swap):
-                (beg,end)=(end,beg)
-            if not hatching:
-                swap = not swap
-            small_stitches(patch, PyEmb.Point(*beg),PyEmb.Point(*end))
-        return [patch]
+            patches.append(patch)
+        return patches
 
     def intersect_region_with_grating(self, shpath, row_spacing_px, angle):
         # the max line length I'll need to intersect the whole shape is the diagonal
@@ -735,9 +825,10 @@ class Embroider(inkex.Effect):
             rows.append(runs)
 
             start += row_spacing_px
+
         return rows
 
-    def visit_segments_one_by_one(self, rows, shpath):
+    def pull_runs(self, rows, shpath, row_spacing_px):
         # Given a list of rows, each containing a set of line segments,
         # break the area up into contiguous patches of line segments.
         #
@@ -749,46 +840,57 @@ class Embroider(inkex.Effect):
         # over to midway up the lower right leg.  We want to stop there and
         # start a new patch.
 
+        # Segments more than this far apart are considered not to be part of
+        # the same run.  
+        row_distance_cutoff = row_spacing_px * 1.1
+
         def make_quadrilateral(segment1, segment2):
             return shgeo.Polygon((segment1[0], segment1[1], segment2[1], segment2[0], segment1[0]))
 
-        def pull_runs(rows):
-            new_rows = []
-            run = []
-            prev = None
-            done = False
-            for r in rows:
-                if done:
-                    new_rows.append(r)
-                    continue
+        def is_same_run(segment1, segment2):
+            if self.options.hatch_filled_paths:
+                return True
 
-                (first,rest) = (r[0], r[1:])
+            if shgeo.LineString(segment1).distance(shgeo.LineString(segment1)) > row_spacing_px * 1.1:
+                return False
 
-                if prev is not None:
-                    quad = make_quadrilateral(prev, first)
-                    quad_area = quad.area
-                    intersection_area = shpath.intersection(quad).area
+            quad = make_quadrilateral(segment1, segment2)
+            quad_area = quad.area
+            intersection_area = shpath.intersection(quad).area
 
-                    if intersection_area / quad_area < .9:
-                        new_rows.append(r)
-                        done = True
-                        continue
+            return (intersection_area / quad_area) >= 0.9
 
-                run.append(first)
-                prev = first
-                if (len(rest)>0):
-                    new_rows.append(rest)
-            return (run, new_rows)
+        #for row in rows:
+        #    print >> sys.stderr, len(row)
 
-        linearized_runs = []
+        #print >>sys.stderr, "\n".join(str(len(row)) for row in rows)
+
+        runs = []
         count = 0
         while (len(rows) > 0):
-            (one_run,rows) = pull_runs(rows)
-            linearized_runs.extend(one_run)
+            run = []
+            prev = None
 
-            rows = rows[::-1]
+            for row_num in xrange(len(rows)):
+                row = rows[row_num]
+                first, rest = row[0], row[1:]
+
+                # TODO: only accept actually adjacent rows here
+                if prev is not None and not is_same_run(prev, first):
+                    break
+    
+                run.append(first)
+                prev = first
+
+                rows[row_num] = rest
+
+            #print >> sys.stderr, len(run)
+            runs.append(run)
+            rows = [row for row in rows if len(row) > 0]
+
             count += 1
-        return linearized_runs
+
+        return runs
 
     def handle_node(self, node):
         if (node.tag == inkex.addNS('g', 'svg')):
@@ -803,10 +905,23 @@ class Embroider(inkex.Effect):
         if get_boolean_param(node, "satin_column"):
             self.patchList.patches.extend(self.satin_column(node))
         else:
-            if (self.get_style(node, "fill")!=None):
-                self.patchList.patches.extend(self.filled_region_to_patchlist(node))
+            stroke = []
+            fill = []
+
             if (self.get_style(node, "stroke")!=None):
-                self.patchList.patches.extend(self.path_to_patch_list(node))
+                stroke = self.path_to_patch_list(node)
+            if (self.get_style(node, "fill")!=None):
+                fill = self.filled_region_to_patchlist(node)
+
+            if get_boolean_param(node, "stroke_first", False):
+                for patch in stroke:
+                    patch.sortorder.append(0)
+
+                for patch in fill:
+                    patch.sortorder.append(1)
+
+            self.patchList.patches.extend(stroke)
+            self.patchList.patches.extend(fill)
 
     def get_style(self, node, style_name):
         style = simplestyle.parseStyle(node.get("style"))
@@ -854,14 +969,21 @@ class Embroider(inkex.Effect):
 
         self.svgpath = inkex.addNS('path', 'svg')
         self.patchList = PatchList([])
+
+        dbg.write("starting nodes: %s" % time.time())
+        dbg.flush()
         for node in self.selected.itervalues():
             self.handle_node(node)
+        dbg.write("finished nodes: %s" % time.time())
+        dbg.flush()
 
         if not self.patchList:
             inkex.errormsg("No paths selected.")
             return
 
+        dbg.write("starting tsp: %s" % time.time())
         self.patchList = self.patchList.tsp_by_color()
+        dbg.write("finished tsp: %s" % time.time())
         #dbg.write("patch count: %d\n" % len(self.patchList.patches))
 
         if self.options.hide_layers:
@@ -1013,7 +1135,7 @@ class Embroider(inkex.Effect):
         id = node.get("id")
 
         # First, verify that we have a valid node.
-        csp = cubicsuperpath.parsePath(node.get("d"))
+        csp = parse_path(node)
         self.validate_satin_column(node, csp)
 
         # fetch parameters

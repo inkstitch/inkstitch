@@ -5,13 +5,14 @@
     <dependency type="executable" location="extensions">embroider_params.py</dependency>
     <dependency type="executable" location="extensions">inkex.py</dependency>
     <param name="zigzag_spacing" type="string" _gui-text="Zigzag spacing (pixels)"></param>
-    <param name="running_stitch_length" type="string" _gui-text="Running stitch length (pixels)"></param>
+    <param name="stitch_length" type="string" _gui-text="Running stitch length (pixels)"></param>
     <param name="row_spacing" type="string" _gui-text="Row spacing (pixels)"></param>
     <param name="max_stitch_length" type="string" _gui-text="Maximum stitch length (pixels)"></param>
     <param name="repeats" type="string" _gui-text="Repeats (stroke only)"></param>
     <param name="angle" type="string" _gui-text="Angle for lines in fills"></param>
     <param name="hatching" type="string" _gui-text="Hatching? (yes/no)"></param>
     <param name="satin_column" type="string" _gui-text="Satin Column? (yes/no)"></param>
+    <param name="stroke_first" type="string" _gui-text="Stitch stroke before fill? (yes/no)"></param>
     <effect>
         <object-type>all</object-type>
         <effects-menu>
