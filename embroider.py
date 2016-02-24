@@ -749,7 +749,9 @@ class Embroider(inkex.Effect):
     def intersect_region_with_grating(self, shpath, row_spacing_px, angle):
         # the max line length I'll need to intersect the whole shape is the diagonal
         (minx, miny, maxx, maxy) = shpath.bounds
-        length = (PyEmb.Point(maxx, maxy) - PyEmb.Point(minx, miny)).length()
+        upper_left = PyEmb.Point(minx, miny)
+        lower_right = PyEmb.Point(maxx, maxy)
+        length = (upper_left - lower_right).length()
         half_length = length / 2.0
 
         # Now get a unit vector rotated to the requested angle.  I use -angle
@@ -796,6 +798,7 @@ class Embroider(inkex.Effect):
             if self.hatching and len(rows) > 0:
                 rows.append([(rows[-1][0][1], runs[0][0])])
 
+            runs.sort(key=lambda seg: (PyEmb.Point(*seg[0]) - upper_left).length())
             rows.append(runs)
 
             start += row_spacing_px
