@@ -1150,6 +1150,9 @@ class Embroider(inkex.Effect):
         # Take each bezier segment in turn, drawing zigzags between the two
         # paths in that segment.
 
+        remainder_path1 = []
+        remainder_path2 = []
+
         for segment in xrange(1, len(path1)):
             # construct the current bezier segments
             bezier1 = (path1[segment - 1][1], # point from previous 3-tuple
@@ -1164,9 +1167,20 @@ class Embroider(inkex.Effect):
                        path2[segment][1],
                       )
 
-            # Find their lengths.  The math is actually fairly involved.
-            len1 = bezierlength(bezier1)
-            len2 = bezierlength(bezier2)
+            # Here's what I want to be able to do.  However, beziertatlength is so incredibly slow that it's unusable.
+            #for stitch in xrange(num_zigzags):
+            #    patch.addStitch(bezierpointatt(bezier1, beziertatlength(bezier1, stitch_len1 * stitch)))
+            #    patch.addStitch(bezierpointatt(bezier2, beziertatlength(bezier2, stitch_len2 * (stitch + 0.5))))
+
+            # Instead, flatten the beziers down to a set of line segments.
+            subpath1 = remainder_path1 + flatten([[path1[segment - 1], path1[segment]]], self.options.flat)[0]
+            subpath2 = remainder_path2 + flatten([[path2[segment - 1], path2[segment]]], self.options.flat)[0]
+
+            len1 = shgeo.LineString(subpath1).length
+            len2 = shgeo.LineString(subpath2).length
+
+            subpath1 = [PyEmb.Point(*p) for p in subpath1]
+            subpath2 = [PyEmb.Point(*p) for p in subpath2]
 
             # Base the number of stitches in each section on the _longest_ of
             # the two beziers. Otherwise, things could get too sparse when one
@@ -1174,25 +1188,13 @@ class Embroider(inkex.Effect):
             # The risk here is that we poke a hole in the fabric if we try to
             # cram too many stitches on the short bezier.  The user will need
             # to avoid this through careful construction of paths.
-            num_zigzags = int(max(len1, len2) / zigzag_spacing_px)
+            num_zigzags = max(len1, len2) / zigzag_spacing_px
 
             stitch_len1 = len1 / num_zigzags
             stitch_len2 = len2 / num_zigzags
 
             # Now do the stitches.  Each "zigzag" has a "zig" and a "zag", that
             # is, go from path1 to path2 and then back to path1.
-
-            # Here's what I want to be able to do.  However, beziertatlength is so incredibly slow that it's unusable.
-            #for stitch in xrange(num_zigzags):
-            #    patch.addStitch(bezierpointatt(bezier1, beziertatlength(bezier1, stitch_len1 * stitch)))
-            #    patch.addStitch(bezierpointatt(bezier2, beziertatlength(bezier2, stitch_len2 * (stitch + 0.5))))
-
-            # Instead, flatten the beziers down to a set of line segments.
-            subpath1 = flatten([[path1[segment - 1], path1[segment]]], self.options.flat)
-            subpath2 = flatten([[path2[segment - 1], path2[segment]]], self.options.flat)
-
-            subpath1 = [PyEmb.Point(*p) for p in subpath1[0]]
-            subpath2 = [PyEmb.Point(*p) for p in subpath2[0]]
 
             def walk(path, start_pos, start_index, distance):
                 # Move <distance> pixels along <path>'s line segments.
@@ -1227,16 +1229,35 @@ class Embroider(inkex.Effect):
             pos1 = subpath1[0]
             i1 = 0
 
-            pos2, i2 = walk(subpath2, subpath2[0], 0, stitch_len2 * 0.5)
+            pos2 = subpath2[0]
             i2 = 0
 
-            for stitch in xrange(num_zigzags):
-                # In each iteration, do a "zig" and a "zag".
+#            if num_zigzags >= 1.0:
+#                for stitch in xrange(int(num_zigzags) + 1):
+            for stitch in xrange(int(num_zigzags)):
+            # In each iteration, do a "zig" and a "zag".
                 patch.addStitch(pos1)
                 pos1, i1 = walk(subpath1, pos1, i1, stitch_len1)
 
                 patch.addStitch(pos2)
                 pos2, i2 = walk(subpath2, pos2, i2, stitch_len2)
+
+            if i1 < len(subpath1) - 1:
+                remainder_path1 = [pos1] + subpath1[i1 + 1:]
+            else:
+                remainder_path1 = []
+
+            if i2 < len(subpath2) - 1:
+                remainder_path2 = [pos2] + subpath2[i2 + 1:]
+            else:
+                remainder_path2 = []
+
+            remainder_path1 = [p.as_tuple() for p in remainder_path1]
+            remainder_path2 = [p.as_tuple() for p in remainder_path2]
+
+        # We're off by one in the algorithm above, so add one more stitch.
+        patch.addStitch(pos1)
+        patch.addStitch(pos2)
 
         return [patch]
 
