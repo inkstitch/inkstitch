@@ -864,11 +864,10 @@ class Embroider(inkex.Effect):
         return runs
 
     def handle_node(self, node):
-        if (node.tag == inkex.addNS('g', 'svg')):
-            #dbg.write("%s\n"%str((id, etree.tostring(node, pretty_print=True))))
-            #dbg.write("not a path; recursing:\n")
-            for child in node.iter(self.svgpath):
-                self.handle_node(child)
+        for child in node:
+            self.handle_node(child)
+
+        if node.tag != self.svgpath:
             return
 
         #dbg.write("Node: %s\n"%str((id, etree.tostring(node, pretty_print=True))))
@@ -945,13 +944,20 @@ class Embroider(inkex.Effect):
 
         dbg.write("starting nodes: %s" % time.time())
         dbg.flush()
-        for node in self.selected.itervalues():
-            self.handle_node(node)
+        if self.selected:
+            for node in self.selected.itervalues():
+                self.handle_node(node)
+        else:
+            self.handle_node(self.document.getroot())
         dbg.write("finished nodes: %s" % time.time())
         dbg.flush()
 
         if not self.patchList:
-            inkex.errormsg("No paths selected.")
+            if self.selected:
+                inkex.errormsg("No embroiderable paths selected.")
+            else:
+                inkex.errormsg("No embroiderable paths found in document.")
+            inkex.errormsg("Tip: use Path -> Object to Path to convert non-paths before embroidering.")
             return
 
         dbg.write("starting tsp: %s" % time.time())
