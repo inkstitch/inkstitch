@@ -229,7 +229,8 @@ class PatchList:
     def tsp_by_color(self):
         list_of_patchLists = self.partition_by_color()
         for patchList in list_of_patchLists:
-            patchList.traveling_salesman()
+            if len(patchList) > 1:
+                patchList.traveling_salesman()
         return PatchList(reduce(operator.add,
             map(lambda pl: pl.patches, list_of_patchLists)))
 
@@ -566,14 +567,8 @@ class EmbroideryObject:
         return (min(x), min(y), max(x), max(y))
 
 class SortOrder:
-    def __init__(self, threadcolor, layer, preserve_layers):
-        self.threadcolor = threadcolor
-        if (preserve_layers):
-            #dbg.write("preserve_layers is true: %s %s\n" % (layer, threadcolor));
-            self.sorttuple = (layer, threadcolor)
-        else:
-            #dbg.write("preserve_layers is false:\n");
-            self.sorttuple = (threadcolor,)
+    def __init__(self, *terms):
+        self.sorttuple = terms
 
     def append(self, criterion):
         self.sorttuple += (criterion,)
@@ -582,7 +577,7 @@ class SortOrder:
         return cmp(self.sorttuple, other.sorttuple)
 
     def __repr__(self):
-        return "sort %s color %s" % (self.sorttuple, self.threadcolor)
+        return "Sort%s" % self.sorttuple
 
 class Embroider(inkex.Effect):
     def __init__(self, *args, **kwargs):
@@ -613,11 +608,11 @@ class Embroider(inkex.Effect):
             action="store", type="float",
             dest="flat", default=0.1,
             help="Minimum flatness of the subdivided curves")
-        self.OptionParser.add_option("-o", "--preserve_layers",
+        self.OptionParser.add_option("-o", "--order",
             action="store", type="choice",
-            choices=["true","false"],
-            dest="preserve_layers", default="false",
-            help="Sort by stacking order instead of color")
+            choices=["automatic", "layer", "object"],
+            dest="order", default="automatic",
+            help="patch stitching order")
         self.OptionParser.add_option("-H", "--hatch_filled_paths",
             action="store", type="choice",
             choices=["true","false"],
@@ -643,11 +638,10 @@ class Embroider(inkex.Effect):
             dest="filename", default="embroider-output.exp",
             help="Name (and possibly path) of output file")
         self.patches = []
-        self.layer_cache = {}
 
     def get_sort_order(self, threadcolor, node):
-        #print >> sys.stderr, "node", node.get("id"), self.layer_cache.get(node.get("id"))
-        return SortOrder(threadcolor, self.layer_cache.get(node.get("id")), self.options.preserve_layers=="true")
+        #print >> sys.stderr, "node", node.get("id"), self.order.get(node.get("id"))
+        return SortOrder(self.order.get(node.get("id")), threadcolor)
 
     def process_one_path(self, node, shpath, threadcolor, sortorder, angle):
         #self.add_shapely_geo_to_svg(shpath.boundary, color="#c0c000")
@@ -909,33 +903,35 @@ class Embroider(inkex.Effect):
             return None
         return value
 
-    def cache_layers(self):
-        self.layer_cache = {}
+    def cache_order(self):
+        if self.options.order == "automatic":
+            self.order = defaultdict(lambda: 0)
+            return
+
+        self.order = {}
 
         layer_tag = inkex.addNS("g", "svg")
         group_attr = inkex.addNS('groupmode', 'inkscape')
 
-
         def is_layer(node):
             return node.tag == layer_tag and node.get(group_attr) == "layer"
 
-        def process(node, layer=0):
-            if is_layer(node):
-                layer += 1
+        def process(node, order=0):
+            if self.options.order == "object" or (self.options.order == "layer" and is_layer(node)):
+                order += 1
             else:
-                self.layer_cache[node.get("id")] = layer
+                self.order[node.get("id")] = order
 
             for child in node:
-                layer = process(child, layer)
+                order = process(child, order)
 
-            return layer
+            return order
 
         process(self.document.getroot())
 
     def effect(self):
-        if self.options.preserve_layers == "true":
-            self.cache_layers()
-            #print >> sys.stderr, "cached stacking order:", self.stacking_order
+        self.cache_order()
+        #print >> sys.stderr, "cached stacking order:", self.stacking_order
 
         self.row_spacing_px = self.options.row_spacing_mm * pixels_per_millimeter
         self.zigzag_spacing_px = self.options.zigzag_spacing_mm * pixels_per_millimeter
