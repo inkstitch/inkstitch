@@ -864,6 +864,9 @@ class Embroider(inkex.Effect):
         return runs
 
     def handle_node(self, node):
+        if simplestyle.parseStyle(node.get("style")).get('display') == "none":
+            return
+
         for child in node:
             self.handle_node(child)
 
