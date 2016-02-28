@@ -722,12 +722,9 @@ class Embroider(inkex.Effect):
 
                 offset = (first_stitch - beg).length()
 
-                while True:
+                while offset < segment_length:
                     patch.addStitch(beg + offset * row_direction)
                     offset += max_stitch_len_px
-
-                    if offset > segment_length:
-                        break
 
                 if (end - patch.stitches[-1]).length() > 0.1 * pixels_per_millimeter:
                     patch.addStitch(end)
