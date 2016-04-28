@@ -718,7 +718,7 @@ class Embroider(inkex.Effect):
                 # axes of the beginning point in this way:
                 relative_beg = beg.rotate(angle)
 
-                absolute_row_num = math.floor(relative_beg.y / row_spacing_px)
+                absolute_row_num = round(relative_beg.y / row_spacing_px)
                 row_stagger = absolute_row_num % num_staggers
                 row_stagger_offset = (float(row_stagger) / num_staggers) * max_stitch_len_px
 
@@ -775,14 +775,14 @@ class Embroider(inkex.Effect):
 
         _, start, _, end = affinity.rotate(shpath, angle, origin='center', use_radians = True).bounds
 
-        # offset start slightly so that rows are always an even multiple of
-        # row_spacing_px from the origin.  This makes it so that abutting
-        # fill regions at the same angle and spacing always line up nicely.
-        start -= start % row_spacing_px
-
         # convert start and end to be relative to center (simplifies things later)
         start -= center.y
         end -= center.y
+
+        # offset start slightly so that rows are always an even multiple of
+        # row_spacing_px from the origin.  This makes it so that abutting
+        # fill regions at the same angle and spacing always line up nicely.
+        start -= (start + normal * center) % row_spacing_px
 
         rows = []
 
