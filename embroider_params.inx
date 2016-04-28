@@ -11,6 +11,7 @@
     <param name="repeats" type="string" _gui-text="Repeats (stroke only)"></param>
     <param name="angle" type="string" _gui-text="Angle for lines in fills"></param>
     <param name="hatching" type="string" _gui-text="Hatching? (yes/no)"></param>
+    <param name="flip" type="string" _gui-text="Flip fill? (yes/no)"></param>
     <param name="satin_column" type="string" _gui-text="Satin Column? (yes/no)"></param>
     <param name="stroke_first" type="string" _gui-text="Stitch stroke before fill? (yes/no)"></param>
     <effect>

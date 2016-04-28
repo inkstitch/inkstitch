@@ -158,6 +158,7 @@ def cspToShapelyPolygon(path):
     poly_ary.sort(byarea)
 
     polygon = shgeo.MultiPolygon([(poly_ary[0], poly_ary[1:])])
+    #print >> sys.stderr, "polygon valid:", polygon.is_valid
     return polygon
 
 def shapelyCoordsToSvgD(geo):
@@ -172,6 +173,9 @@ def shapelyLineSegmentToPyTuple(shline):
     tuple = ((shline.coords[0][0],shline.coords[0][1]),
             (shline.coords[1][0],shline.coords[1][1]))
     return tuple
+
+def reverseTuple(t):
+    return tuple(reversed(t))
 
 def dupNodeAttrs(node):
     n2 = E.node()
@@ -336,6 +340,8 @@ class PatchList:
         return success
 
     def traveling_salesman(self):
+        #print >> sys.stderr, "TSPing %s patches" % len(self)
+
         # shockingly, this is non-optimal and pretty much non-efficient. Sorry.
         self.pointList = []
         for patch in self.patches:
@@ -403,7 +409,10 @@ class PatchList:
                 last_point = mate(next_point)
 
                 point_list.remove(next_point)
-                point_list.remove(last_point)
+                try:
+                    point_list.remove(last_point)
+                except:
+                    pass
 
             if min_cost is None or cost < min_cost:
                 min_cost = cost
@@ -481,7 +490,7 @@ class EmbroideryObject:
                     c = math.sqrt((stitch.x - lastStitch.x) ** 2 + (stitch.y - lastStitch.y) ** 2)
                     #dbg.write("stitch length: %f (%d/%d -> %d/%d)\n" % (c, lastStitch.x, lastStitch.y, stitch.x, stitch.y))
 
-                    if c == 0:
+                    if c <= 0.1:
                         # filter out duplicate successive stitches
                         jumpStitch = False
                         continue
@@ -552,7 +561,7 @@ class EmbroideryObject:
                 inkex.addNS('path', 'svg'),
                 {    'style':simplestyle.formatStyle(
                         { 'stroke': color if color is not None else '#000000',
-                            'stroke-width':"0.25",
+                            'stroke-width':"0.4",
                             'fill': 'none' }),
                     'd':simplepath.formatPath(path),
                 })
@@ -647,11 +656,12 @@ class Embroider(inkex.Effect):
         #self.add_shapely_geo_to_svg(shpath.boundary, color="#c0c000")
 
         hatching = get_boolean_param(node, "hatching", self.hatching)
+        flip = get_boolean_param(node, "flip", False)
         row_spacing_px = get_float_param(node, "row_spacing", self.row_spacing_px)
         max_stitch_len_px = get_float_param(node, "max_stitch_length", self.max_stitch_len_px)
         num_staggers = get_int_param(node, "staggers", 4)
 
-        rows_of_segments = self.intersect_region_with_grating(shpath, row_spacing_px, angle)
+        rows_of_segments = self.intersect_region_with_grating(shpath, row_spacing_px, angle, flip)
         groups_of_segments = self.pull_runs(rows_of_segments, shpath, row_spacing_px)
  
         # "east" is the name of the direction that is to the right along a row
@@ -737,7 +747,7 @@ class Embroider(inkex.Effect):
             patches.append(patch)
         return patches
 
-    def intersect_region_with_grating(self, shpath, row_spacing_px, angle):
+    def intersect_region_with_grating(self, shpath, row_spacing_px, angle, flip=False):
         # the max line length I'll need to intersect the whole shape is the diagonal
         (minx, miny, maxx, maxy) = shpath.bounds
         upper_left = PyEmb.Point(minx, miny)
@@ -764,12 +774,15 @@ class Embroider(inkex.Effect):
         # and min y tell me how far to go.
 
         _, start, _, end = affinity.rotate(shpath, angle, origin='center', use_radians = True).bounds
+
+        # offset start slightly so that rows are always an even multiple of
+        # row_spacing_px from the origin.  This makes it so that abutting
+        # fill regions at the same angle and spacing always line up nicely.
+        start -= start % row_spacing_px
+
+        # convert start and end to be relative to center (simplifies things later)
         start -= center.y
         end -= center.y
-
-        # don't start right at the edge or we'll make a ridiculous single
-        # stitch
-        start += row_spacing_px / 2.0
 
         rows = []
 
@@ -784,12 +797,21 @@ class Embroider(inkex.Effect):
             if (isinstance(res, shgeo.MultiLineString)):
                 runs = map(shapelyLineSegmentToPyTuple, res.geoms)
             else:
+                if res.is_empty or len(res.coords) == 1:
+                    # ignore if we intersected at a single point or no points
+                    start += row_spacing_px
+                    continue
                 runs = [shapelyLineSegmentToPyTuple(res)]
+
+            runs.sort(key=lambda seg: (PyEmb.Point(*seg[0]) - upper_left).length())
+
+            if flip:
+                runs.reverse()
+                runs = map(reverseTuple, runs)
 
             if self.hatching and len(rows) > 0:
                 rows.append([(rows[-1][0][1], runs[0][0])])
 
-            runs.sort(key=lambda seg: (PyEmb.Point(*seg[0]) - upper_left).length())
             rows.append(runs)
 
             start += row_spacing_px
@@ -864,6 +886,9 @@ class Embroider(inkex.Effect):
         if simplestyle.parseStyle(node.get("style")).get('display') == "none":
             return
 
+        if node.tag == self.svgmarker:
+            return
+
         for child in node:
             self.handle_node(child)
 
@@ -918,8 +943,8 @@ class Embroider(inkex.Effect):
         def process(node, order=0):
             if self.options.order == "object" or (self.options.order == "layer" and is_layer(node)):
                 order += 1
-            else:
-                self.order[node.get("id")] = order
+
+            self.order[node.get("id")] = order
 
             for child in node:
                 order = process(child, order)
@@ -930,7 +955,7 @@ class Embroider(inkex.Effect):
 
     def effect(self):
         self.cache_order()
-        #print >> sys.stderr, "cached stacking order:", self.stacking_order
+        #print >> sys.stderr, "cached stacking order:", self.order
 
         self.row_spacing_px = self.options.row_spacing_mm * pixels_per_millimeter
         self.zigzag_spacing_px = self.options.zigzag_spacing_mm * pixels_per_millimeter
@@ -940,6 +965,7 @@ class Embroider(inkex.Effect):
         self.hatching = self.options.hatch_filled_paths == "true"
 
         self.svgpath = inkex.addNS('path', 'svg')
+        self.svgmarker = inkex.addNS('marker', 'svg')
         self.patchList = PatchList([])
 
         dbg.write("starting nodes: %s" % time.time())
@@ -1009,6 +1035,7 @@ class Embroider(inkex.Effect):
             # but let's hope px are kind of like pts?
             stroke_width_str = stroke_width_str[:-2]
         stroke_width = float(stroke_width_str)
+        dashed = self.get_style(node, "stroke-dasharray") is not None
         #dbg.write("stroke_width is <%s>\n" % repr(stroke_width))
         #dbg.flush()
 
@@ -1027,7 +1054,7 @@ class Embroider(inkex.Effect):
 
         for path in paths:
             path = [PyEmb.Point(x, y) for x, y in path]
-            if (stroke_width <= STROKE_MIN):
+            if (stroke_width <= STROKE_MIN or dashed):
                 #dbg.write("self.max_stitch_len_px = %s\n" % self.max_stitch_len_px)
                 patch = self.stroke_points(path, running_stitch_len_px, 0.0, repeats, threadcolor, sortorder)
             else:
@@ -1041,6 +1068,7 @@ class Embroider(inkex.Effect):
         p0 = emb_point_list[0]
         rho = 0.0
         fact = 1
+        last_segment_direction = None
 
         for repeat in xrange(repeats):
             if repeat % 2 == 0:
@@ -1061,6 +1089,13 @@ class Embroider(inkex.Effect):
                 # vector pointing to edge of stroke width
                 perp = along.rotate_left().mul(stroke_width*0.5)
 
+                if stroke_width == 0.0 and last_segment_direction is not None:
+                    if abs(1.0 - along * last_segment_direction) > 0.5:
+                        # if greater than 45 degree angle, stitch the corner
+                        #print >> sys.stderr, "corner", along * last_segment_direction
+                        rho = zigzag_spacing_px
+                        patch.addStitch(p0)
+
                 # iteration variable: how far we are along segment
                 while (rho <= seg_len):
                     left_pt = p0+along.mul(rho)+perp.mul(fact)
@@ -1069,7 +1104,11 @@ class Embroider(inkex.Effect):
                     fact = -fact
 
                 p0 = p1
+                last_segment_direction = along
                 rho -= seg_len
+
+            if (p0 - patch.stitches[-1]).length() > 0.1:
+                patch.addStitch(p0)
 
         return [patch]
 

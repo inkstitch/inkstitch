@@ -22,6 +22,7 @@ class EmbroiderParams(inkex.Effect):
                        "repeats",
                        "angle",
                        "hatching",
+                       "flip",
                        "satin_column",
                        "stroke_first",
                       ]
