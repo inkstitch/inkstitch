@@ -886,7 +886,7 @@ class Embroider(inkex.Effect):
         if simplestyle.parseStyle(node.get("style")).get('display') == "none":
             return
 
-        if node.tag == self.svgmarker:
+        if node.tag == self.svgdefs:
             return
 
         for child in node:
@@ -965,7 +965,7 @@ class Embroider(inkex.Effect):
         self.hatching = self.options.hatch_filled_paths == "true"
 
         self.svgpath = inkex.addNS('path', 'svg')
-        self.svgmarker = inkex.addNS('marker', 'svg')
+        self.svgdefs = inkex.addNS('defs', 'svg')
         self.patchList = PatchList([])
 
         dbg.write("starting nodes: %s" % time.time())
@@ -1141,6 +1141,15 @@ class Embroider(inkex.Effect):
         if len(csp[0]) != len(csp[1]):
             self.fatal("satin column: object %s has two paths with an unequal number of points (%s and %s)" % (node_id, len(csp[0]), len(csp[1])))
 
+    def pull_compensation(self, pos1, pos2, pull_compensation_px):
+        # Stitches in satin tend to pull toward each other.  We can compensate
+        # by spreading the points out.
+        midpoint = (pos2 + pos1) * 0.5
+        pos1 = pos1 + (pos1 - midpoint).unit() * pull_compensation_px
+        pos2 = pos2 + (pos2 - midpoint).unit() * pull_compensation_px
+
+        return pos1, pos2
+
     def satin_column(self, node):
         # Stitch a variable-width satin column, zig-zagging between two paths.
 
@@ -1158,6 +1167,7 @@ class Embroider(inkex.Effect):
 
         # fetch parameters
         zigzag_spacing_px = get_float_param(node, "zigzag_spacing", self.zigzag_spacing_px)
+        pull_compensation_px = get_float_param(node, "pull_compensation", 0)
 
         # A path is a collection of tuples, each of the form:
         #
@@ -1277,11 +1287,11 @@ class Embroider(inkex.Effect):
 #                for stitch in xrange(int(num_zigzags) + 1):
             for stitch in xrange(int(num_zigzags)):
             # In each iteration, do a "zig" and a "zag".
-                patch.addStitch(pos1)
-                pos1, i1 = walk(subpath1, pos1, i1, stitch_len1)
+                for stitch in self.pull_compensation(pos1, pos2, pull_compensation_px):
+                    patch.addStitch(stitch)
 
-                patch.addStitch(pos2)
                 pos2, i2 = walk(subpath2, pos2, i2, stitch_len2)
+                pos1, i1 = walk(subpath1, pos1, i1, stitch_len1)
 
             if i1 < len(subpath1) - 1:
                 remainder_path1 = [pos1] + subpath1[i1 + 1:]
@@ -1296,9 +1306,17 @@ class Embroider(inkex.Effect):
             remainder_path1 = [p.as_tuple() for p in remainder_path1]
             remainder_path2 = [p.as_tuple() for p in remainder_path2]
 
-        # We're off by one in the algorithm above, so add one more stitch.
-        patch.addStitch(pos1)
-        patch.addStitch(pos2)
+        # We're off by one in the algorithm above, so add one more pair of
+        # stitches.
+        
+        for stitch in self.pull_compensation(pos1, pos2, pull_compensation_px):
+            patch.addStitch(stitch)
+
+        end1 = PyEmb.Point(*remainder_path1[-1])
+        end2 = PyEmb.Point(*remainder_path2[-1])
+        if (end1 - pos2).length() > 0.2:
+            for stitch in self.pull_compensation(end1, end2, pull_compensation_px):
+                patch.addStitch(stitch)
 
         return [patch]
 

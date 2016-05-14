@@ -25,6 +25,7 @@ class EmbroiderParams(inkex.Effect):
                        "flip",
                        "satin_column",
                        "stroke_first",
+                       "pull_compensation",
                       ]
        
         for param in self.params:
