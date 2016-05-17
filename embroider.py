@@ -962,6 +962,10 @@ class Embroider(inkex.Effect):
         process(self.document.getroot())
 
     def effect(self):
+        # Printing anything other than a valid SVG on stdout blows inkscape up.
+        old_stdout = sys.stdout
+        sys.stdout = sys.stderr
+
         self.cache_order()
         #print >> sys.stderr, "cached stacking order:", self.order
 
@@ -1012,6 +1016,8 @@ class Embroider(inkex.Effect):
         new_layer.set(inkex.addNS('label', 'inkscape'), 'Embroidery')
         new_layer.set(inkex.addNS('groupmode', 'inkscape'), 'layer')
         eo.emit_inkscape(new_layer, emb)
+
+        sys.stdout = old_stdout
 
     def emit_inkscape_bbox(self, parent, eo):
         (x0, y0, x1, y1) = eo.bbox()
@@ -1205,7 +1211,8 @@ class Embroider(inkex.Effect):
                 # if they're the same, we don't know which direction
                 # to offset in, so we have to just return the points
                 return pos1, pos2
-            print >> sys.stderr, pos1, pos2
+
+            print pos1, pos2
 
             midpoint = (pos2 + pos1) * 0.5
             pos1 = pos1 + (pos1 - midpoint).unit() * offset_px
