@@ -105,6 +105,8 @@ def parse_path(node):
 def flatten(path, flatness):
     """approximate a path containing beziers with a series of points"""
 
+    path = deepcopy(path)
+
     cspsubdiv(path, flatness)
 
     flattened = []
@@ -193,6 +195,12 @@ class Patch:
             self.stitches = stitches
         else:
             self.stitches = []
+
+    def __add__(self, other):
+        if isinstance(other, Patch):
+            return Patch(self.color, self.sortorder, self.stitches + other.stitches)
+        else:
+            raise TypeError("Patch can only be added to another Patch")
 
     def addStitch(self, stitch):
         self.stitches.append(stitch)
@@ -1141,15 +1149,6 @@ class Embroider(inkex.Effect):
         if len(csp[0]) != len(csp[1]):
             self.fatal("satin column: object %s has two paths with an unequal number of points (%s and %s)" % (node_id, len(csp[0]), len(csp[1])))
 
-    def pull_compensation(self, pos1, pos2, pull_compensation_px):
-        # Stitches in satin tend to pull toward each other.  We can compensate
-        # by spreading the points out.
-        midpoint = (pos2 + pos1) * 0.5
-        pos1 = pos1 + (pos1 - midpoint).unit() * pull_compensation_px
-        pos2 = pos2 + (pos2 - midpoint).unit() * pull_compensation_px
-
-        return pos1, pos2
-
     def satin_column(self, node):
         # Stitch a variable-width satin column, zig-zagging between two paths.
 
@@ -1168,6 +1167,9 @@ class Embroider(inkex.Effect):
         # fetch parameters
         zigzag_spacing_px = get_float_param(node, "zigzag_spacing", self.zigzag_spacing_px)
         pull_compensation_px = get_float_param(node, "pull_compensation", 0)
+        underlay_inset = get_float_param(node, "satin_underlay_inset", 0)
+        underlay_stitch_len_px = get_float_param(node, "stitch_length", self.running_stitch_len_px)
+        underlay = get_boolean_param(node, "satin_underlay", False)
 
         # A path is a collection of tuples, each of the form:
         #
@@ -1198,125 +1200,166 @@ class Embroider(inkex.Effect):
         sortorder = self.get_sort_order(threadcolor, node)
         patch = Patch(color=threadcolor, sortorder=sortorder)
 
-        # Take each bezier segment in turn, drawing zigzags between the two
-        # paths in that segment.
+        def offset_stitches(pos1, pos2, offset_px):
+            if pos1 == pos2:
+                # if they're the same, we don't know which direction
+                # to offset in, so we have to just return the points
+                return pos1, pos2
+            print >> sys.stderr, pos1, pos2
 
-        remainder_path1 = []
-        remainder_path2 = []
+            midpoint = (pos2 + pos1) * 0.5
+            pos1 = pos1 + (pos1 - midpoint).unit() * offset_px
+            pos2 = pos2 + (pos2 - midpoint).unit() * offset_px
+    
+            return pos1, pos2
+    
+        def calculate_satin(zigzag_spacing, offset):
+            # Take each bezier segment in turn, drawing zigzags between the two
+            # paths in that segment.
 
-        for segment in xrange(1, len(path1)):
-            # construct the current bezier segments
-            bezier1 = (path1[segment - 1][1], # point from previous 3-tuple
-                       path1[segment - 1][2], # "after" control point from previous 3-tuple
-                       path1[segment][0], # "before" control point from this 3-tuple
-                       path1[segment][1], # point from this 3-tuple
-                      )
+            # This code used to construct the Patch directly, but now it
+            # returns the zig-zag stitches as two parallel lists (useful
+            # for underlay)
+            zigs = []
+            zags = []
+    
+            def add_satin_stitch(pos1, pos2):
+                # Stitches in satin tend to pull toward each other.  We can compensate
+                # by spreading the points out.
+                zig, zag = offset_stitches(pos1, pos2, offset)
+                zigs.append(zig)
+                zags.append(zag)
+    
+            remainder_path1 = []
+            remainder_path2 = []
+    
+            for segment in xrange(1, len(path1)):
+                # construct the current bezier segments
+                bezier1 = (path1[segment - 1][1], # point from previous 3-tuple
+                           path1[segment - 1][2], # "after" control point from previous 3-tuple
+                           path1[segment][0], # "before" control point from this 3-tuple
+                           path1[segment][1], # point from this 3-tuple
+                          )
+    
+                bezier2 = (path2[segment - 1][1],
+                           path2[segment - 1][2],
+                           path2[segment][0],
+                           path2[segment][1],
+                          )
+    
+                # Here's what I want to be able to do.  However, beziertatlength is so incredibly slow that it's unusable.
+                #for stitch in xrange(num_zigzags):
+                #    patch.addStitch(bezierpointatt(bezier1, beziertatlength(bezier1, stitch_len1 * stitch)))
+                #    patch.addStitch(bezierpointatt(bezier2, beziertatlength(bezier2, stitch_len2 * (stitch + 0.5))))
+    
+                # Instead, flatten the beziers down to a set of line segments.
+                subpath1 = remainder_path1 + flatten([[path1[segment - 1], path1[segment]]], self.options.flat)[0]
+                subpath2 = remainder_path2 + flatten([[path2[segment - 1], path2[segment]]], self.options.flat)[0]
+    
+                len1 = shgeo.LineString(subpath1).length
+                len2 = shgeo.LineString(subpath2).length
+    
+                subpath1 = [PyEmb.Point(*p) for p in subpath1]
+                subpath2 = [PyEmb.Point(*p) for p in subpath2]
+    
+                # Base the number of stitches in each section on the _longest_ of
+                # the two beziers. Otherwise, things could get too sparse when one
+                # side is significantly longer (e.g. when going around a corner).
+                # The risk here is that we poke a hole in the fabric if we try to
+                # cram too many stitches on the short bezier.  The user will need
+                # to avoid this through careful construction of paths.
+                num_zigzags = max(len1, len2) / zigzag_spacing
+    
+                stitch_len1 = len1 / num_zigzags
+                stitch_len2 = len2 / num_zigzags
+    
+                # Now do the stitches.  Each "zigzag" has a "zig" and a "zag", that
+                # is, go from path1 to path2 and then back to path1.
+    
+                def walk(path, start_pos, start_index, distance):
+                    # Move <distance> pixels along <path>'s line segments.
+                    # <start_index> is the index of the line segment in <path> that
+                    # we're currently on.  <start_pos> is where along that line
+                    # segment we are.  Return a new position and index.
+    
+                    pos = start_pos
+                    index = start_index
+    
+                    if index >= len(path) - 1:
+                        # it's possible we'll go too far due to inaccuracy in the
+                        # bezier length calculation
+                        return start_pos, start_index
+    
+                    while True:
+                        segment_end = path[index + 1]
+                        segment_remaining = (segment_end - pos)
+                        distance_remaining = segment_remaining.length()
+    
+                        if distance_remaining > distance:
+                            return pos + segment_remaining.unit().mul(distance), index
+                        else:
+                            index += 1
+    
+                            if index >= len(path) - 1:
+                                return segment_end, index
+    
+                            distance -= distance_remaining
+                            pos = segment_end
+    
+                pos1 = subpath1[0]
+                i1 = 0
+    
+                pos2 = subpath2[0]
+                i2 = 0
+    
+    #            if num_zigzags >= 1.0:
+    #                for stitch in xrange(int(num_zigzags) + 1):
+                for stitch in xrange(int(num_zigzags)):
+                    # In each iteration, do a "zig" (pos1) and a "zag" (pos2).
+    
+                    add_satin_stitch(pos1, pos2)
+    
+                    pos2, i2 = walk(subpath2, pos2, i2, stitch_len2)
+                    pos1, i1 = walk(subpath1, pos1, i1, stitch_len1)
+    
+                if i1 < len(subpath1) - 1:
+                    remainder_path1 = [pos1] + subpath1[i1 + 1:]
+                else:
+                    remainder_path1 = []
+    
+                if i2 < len(subpath2) - 1:
+                    remainder_path2 = [pos2] + subpath2[i2 + 1:]
+                else:
+                    remainder_path2 = []
+    
+                remainder_path1 = [p.as_tuple() for p in remainder_path1]
+                remainder_path2 = [p.as_tuple() for p in remainder_path2]
+    
+            # We're off by one in the algorithm above, so we need one more
+            # pair of stitches.  We also want to stitch at the very end to
+            # make sure we match the vectors on screen as best as possible.
+            # Try to avoid doing both if they're going to stack up too
+            # closely.
+ 
+            end1 = PyEmb.Point(*remainder_path1[-1])
+            end2 = PyEmb.Point(*remainder_path2[-1])
+            if (end1 - pos1).length() > 0.3 * zigzag_spacing:
+                add_satin_stitch(pos1, pos2)
 
-            bezier2 = (path2[segment - 1][1],
-                       path2[segment - 1][2],
-                       path2[segment][0],
-                       path2[segment][1],
-                      )
+            add_satin_stitch(end1, end2)
 
-            # Here's what I want to be able to do.  However, beziertatlength is so incredibly slow that it's unusable.
-            #for stitch in xrange(num_zigzags):
-            #    patch.addStitch(bezierpointatt(bezier1, beziertatlength(bezier1, stitch_len1 * stitch)))
-            #    patch.addStitch(bezierpointatt(bezier2, beziertatlength(bezier2, stitch_len2 * (stitch + 0.5))))
+            return zigs, zags
 
-            # Instead, flatten the beziers down to a set of line segments.
-            subpath1 = remainder_path1 + flatten([[path1[segment - 1], path1[segment]]], self.options.flat)[0]
-            subpath2 = remainder_path2 + flatten([[path2[segment - 1], path2[segment]]], self.options.flat)[0]
+        if underlay:
+            forward, back = calculate_satin(underlay_stitch_len_px, -underlay_inset)
 
-            len1 = shgeo.LineString(subpath1).length
-            len2 = shgeo.LineString(subpath2).length
+            patch = Patch(color=threadcolor, sortorder=sortorder, stitches=(forward + list(reversed(back))))
 
-            subpath1 = [PyEmb.Point(*p) for p in subpath1]
-            subpath2 = [PyEmb.Point(*p) for p in subpath2]
+        left_points, right_points = calculate_satin(zigzag_spacing_px, pull_compensation_px)
 
-            # Base the number of stitches in each section on the _longest_ of
-            # the two beziers. Otherwise, things could get too sparse when one
-            # side is significantly longer (e.g. when going around a corner).
-            # The risk here is that we poke a hole in the fabric if we try to
-            # cram too many stitches on the short bezier.  The user will need
-            # to avoid this through careful construction of paths.
-            num_zigzags = max(len1, len2) / zigzag_spacing_px
-
-            stitch_len1 = len1 / num_zigzags
-            stitch_len2 = len2 / num_zigzags
-
-            # Now do the stitches.  Each "zigzag" has a "zig" and a "zag", that
-            # is, go from path1 to path2 and then back to path1.
-
-            def walk(path, start_pos, start_index, distance):
-                # Move <distance> pixels along <path>'s line segments.
-                # <start_index> is the index of the line segment in <path> that
-                # we're currently on.  <start_pos> is where along that line
-                # segment we are.  Return a new position and index.
-
-                pos = start_pos
-                index = start_index
-
-                if index >= len(path) - 1:
-                    # it's possible we'll go too far due to inaccuracy in the
-                    # bezier length calculation
-                    return start_pos, start_index
-
-                while True:
-                    segment_end = path[index + 1]
-                    segment_remaining = (segment_end - pos)
-                    distance_remaining = segment_remaining.length()
-
-                    if distance_remaining > distance:
-                        return pos + segment_remaining.unit().mul(distance), index
-                    else:
-                        index += 1
-
-                        if index >= len(path) - 1:
-                            return segment_end, index
-
-                        distance -= distance_remaining
-                        pos = segment_end
-
-            pos1 = subpath1[0]
-            i1 = 0
-
-            pos2 = subpath2[0]
-            i2 = 0
-
-#            if num_zigzags >= 1.0:
-#                for stitch in xrange(int(num_zigzags) + 1):
-            for stitch in xrange(int(num_zigzags)):
-            # In each iteration, do a "zig" and a "zag".
-                for stitch in self.pull_compensation(pos1, pos2, pull_compensation_px):
-                    patch.addStitch(stitch)
-
-                pos2, i2 = walk(subpath2, pos2, i2, stitch_len2)
-                pos1, i1 = walk(subpath1, pos1, i1, stitch_len1)
-
-            if i1 < len(subpath1) - 1:
-                remainder_path1 = [pos1] + subpath1[i1 + 1:]
-            else:
-                remainder_path1 = []
-
-            if i2 < len(subpath2) - 1:
-                remainder_path2 = [pos2] + subpath2[i2 + 1:]
-            else:
-                remainder_path2 = []
-
-            remainder_path1 = [p.as_tuple() for p in remainder_path1]
-            remainder_path2 = [p.as_tuple() for p in remainder_path2]
-
-        # We're off by one in the algorithm above, so add one more pair of
-        # stitches.
-        
-        for stitch in self.pull_compensation(pos1, pos2, pull_compensation_px):
-            patch.addStitch(stitch)
-
-        end1 = PyEmb.Point(*remainder_path1[-1])
-        end2 = PyEmb.Point(*remainder_path2[-1])
-        if (end1 - pos2).length() > 0.2:
-            for stitch in self.pull_compensation(end1, end2, pull_compensation_px):
-                patch.addStitch(stitch)
+        for i in xrange(len(left_points)):
+            patch.addStitch(left_points[i])
+            patch.addStitch(right_points[i])
 
         return [patch]
 
