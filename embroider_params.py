@@ -26,6 +26,8 @@ class EmbroiderParams(inkex.Effect):
                        "satin_column",
                        "stroke_first",
                        "pull_compensation",
+                       "satin_underlay",
+                       "satin_underlay_inset",
                       ]
        
         for param in self.params:
