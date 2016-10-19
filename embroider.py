@@ -480,6 +480,10 @@ class Embroider(inkex.Effect):
 			action="store", type="float",
 			dest="max_stitch_len_mm", default=3.0,
 			help="max stitch length (mm)")
+		self.OptionParser.add_option("-a", "--fill_angle_deg",
+			action="store", type="float",
+			dest="fill_angle_deg", default=0,
+			help="fill angle (deg)")
 		self.OptionParser.add_option("-c", "--collapse_len_mm",
 			action="store", type="float",
 			dest="collapse_len_mm", default=0.0,
@@ -645,7 +649,7 @@ class Embroider(inkex.Effect):
 			self.patchList.patches.extend(self.path_to_patch_list(node))
 		else:
 			if (self.get_style(node, "fill")!=None):
-				angle = math.radians(float(descparts.get('embroider_angle', 0)))
+				angle = math.radians(float(descparts.get('embroider_angle', 0))) + self.options.fill_angle_deg/180.0*math.pi
 				self.patchList.patches.extend(self.filled_region_to_patchlist(node, angle))
 			if (self.get_style(node, "stroke")!=None):
 				self.patchList.patches.extend(self.path_to_patch_list(node))
