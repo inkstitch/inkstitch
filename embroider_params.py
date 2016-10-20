@@ -28,6 +28,8 @@ class EmbroiderParams(inkex.Effect):
                        "pull_compensation",
                        "satin_underlay",
                        "satin_underlay_inset",
+                       "satin_center_walk",
+                       "satin_zigzag_underlay_spacing",
                       ]
        
         for param in self.params:

@@ -24,6 +24,7 @@ import os
 import subprocess
 from copy import deepcopy
 import time
+from itertools import chain, izip
 import inkex
 import simplepath
 import simplestyle
@@ -1207,6 +1208,9 @@ class Embroider(inkex.Effect):
         underlay_inset = get_float_param(node, "satin_underlay_inset", 0)
         underlay_stitch_len_px = get_float_param(node, "stitch_length", self.running_stitch_len_px)
         underlay = get_boolean_param(node, "satin_underlay", False)
+        center_walk = get_boolean_param(node, "satin_center_walk", False)
+        zigzag_underlay_spacing = get_float_param(node, "satin_zigzag_underlay_spacing", 0)
+        zigzag_underlay_inset = underlay_inset / 2.0
 
         # A path is a collection of tuples, each of the form:
         #
@@ -1390,18 +1394,40 @@ class Embroider(inkex.Effect):
 
             add_satin_stitch(end1, end2)
 
-            return zigs, zags
+            return [zigs, zags]
+
+        def calculate_underlay(inset):
+            forward, back = calculate_satin(underlay_stitch_len_px, -inset)
+            return Patch(color=threadcolor, sortorder=sortorder, stitches=(forward + list(reversed(back))))
+
+        def satin_to_patch(zigzag_spacing, pull_compensation, reverse=False):
+            patch = Patch(color=threadcolor, sortorder=sortorder)
+
+            sides = calculate_satin(zigzag_spacing, pull_compensation)
+
+            if reverse:
+                sides.reverse()
+
+            for point in chain.from_iterable(izip(*sides)):
+                patch.addStitch(point)
+
+            if reverse:
+                patch = patch.reverse()
+
+            return patch
+
+        if center_walk:
+            # inset will be clamped to the center point between the stitches
+            patch += calculate_underlay(10000)
 
         if underlay:
-            forward, back = calculate_satin(underlay_stitch_len_px, -underlay_inset)
+            patch += calculate_underlay(underlay_inset)
 
-            patch = Patch(color=threadcolor, sortorder=sortorder, stitches=(forward + list(reversed(back))))
+        if zigzag_underlay_spacing:
+            patch += satin_to_patch(zigzag_underlay_spacing, -zigzag_underlay_inset)
+            patch += satin_to_patch(zigzag_underlay_spacing, -zigzag_underlay_inset, reverse=True)
 
-        left_points, right_points = calculate_satin(zigzag_spacing_px, pull_compensation_px)
-
-        for i in xrange(len(left_points)):
-            patch.addStitch(left_points[i])
-            patch.addStitch(right_points[i])
+        patch += satin_to_patch(zigzag_spacing_px, pull_compensation_px)
 
         return [patch]
 

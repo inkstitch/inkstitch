@@ -16,6 +16,8 @@
     <param name="satin_column" type="string" _gui-text="Satin Column? (yes/no)"></param>
     <param name="satin_underlay" type="string" _gui-text="Edge-walk underlay for satin Column? (yes/no)"></param>
     <param name="satin_underlay_inset" type="string" _gui-text="Inset for satin colum underlay (pixels)"></param>    
+    <param name="satin_center_walk" type="string" _gui-text="Satin center walk underlay? (yes/no)"></param>
+    <param name="satin_zigzag_underlay_spacing" type="string" _gui-text="Zigzag underlay spacing (pixels)"></param>
     <param name="stroke_first" type="string" _gui-text="Stitch stroke before fill? (yes/no)"></param>
     <effect>
         <object-type>all</object-type>
