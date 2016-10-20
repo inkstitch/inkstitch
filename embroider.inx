@@ -28,7 +28,7 @@
         <_option value="csv">Embroidermodder 2 CSV</_option>
         <_option value="gcode">Franklin G-Code</_option>
     </param>
-    <param name="filename" type="string" _gui-text="File">embroider-output.exp</param>
+    <param name="path" type="string" _gui-text="Directory"></param>
     <effect>
         <object-type>all</object-type>
         <effects-menu>

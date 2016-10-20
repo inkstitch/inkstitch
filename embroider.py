@@ -650,10 +650,14 @@ class Embroider(inkex.Effect):
             choices=["melco", "csv", "gcode"],
             dest="output_format", default="melco",
             help="File output format")
-        self.OptionParser.add_option("-F", "--filename",
+        self.OptionParser.add_option("-P", "--path",
             action="store", type="string",
-            dest="filename", default="embroider-output.exp",
-            help="Name (and possibly path) of output file")
+            dest="path", default=".",
+            help="Directory in which to store output file")
+        self.OptionParser.add_option("-b", "--max-backups",
+            action="store", type="int",
+            dest="max_backups", default=5,
+            help="Max number of backups of output files to keep.")
         self.patches = []
 
     def get_sort_order(self, threadcolor, node):
@@ -961,6 +965,33 @@ class Embroider(inkex.Effect):
 
         process(self.document.getroot())
 
+    def get_output_path(self):
+        svg_filename = self.document.getroot().get(inkex.addNS('docname', 'sodipodi'))
+        csv_filename = svg_filename.replace('.svg', '.csv')
+        output_path = os.path.join(self.options.path, csv_filename)
+
+        def add_suffix(path, suffix):
+            if suffix > 0:
+                path = "%s.%s" % (path, suffix)
+
+            return path
+
+        def move_if_exists(path, suffix=0):
+            source = add_suffix(path, suffix)
+
+            if suffix >= self.options.max_backups:
+                return
+
+            dest = add_suffix(path, suffix + 1)
+
+            if os.path.exists(source):
+                move_if_exists(path, suffix + 1)
+                os.rename(source, dest)
+
+        move_if_exists(output_path)
+
+        return output_path
+
     def effect(self):
         # Printing anything other than a valid SVG on stdout blows inkscape up.
         old_stdout = sys.stdout
@@ -1007,7 +1038,7 @@ class Embroider(inkex.Effect):
             self.hide_layers()
 
         eo = EmbroideryObject(self.patchList, self.row_spacing_px)
-        emb = eo.emit_file(self.options.filename, self.options.output_format,
+        emb = eo.emit_file(self.get_output_path(), self.options.output_format,
                  self.collapse_len_px, self.options.add_preamble)
 
         new_layer = inkex.etree.SubElement(self.document.getroot(),
@@ -1207,12 +1238,16 @@ class Embroider(inkex.Effect):
         patch = Patch(color=threadcolor, sortorder=sortorder)
 
         def offset_stitches(pos1, pos2, offset_px):
-            if pos1 == pos2:
+            distance = (pos1 - pos2).length()
+
+            if (pos1 - pos2).length() < 0.0001:
                 # if they're the same, we don't know which direction
                 # to offset in, so we have to just return the points
                 return pos1, pos2
 
-            print pos1, pos2
+            # don't offset so far that pos1 and pos2 switch places
+            if offset_px < -distance/2.0:
+                offset_px = -distance/2.0 
 
             midpoint = (pos2 + pos1) * 0.5
             pos1 = pos1 + (pos1 - midpoint).unit() * offset_px
