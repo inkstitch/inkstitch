@@ -1400,19 +1400,24 @@ class Embroider(inkex.Effect):
             forward, back = calculate_satin(underlay_stitch_len_px, -inset)
             return Patch(color=threadcolor, sortorder=sortorder, stitches=(forward + list(reversed(back))))
 
-        def satin_to_patch(zigzag_spacing, pull_compensation, reverse=False):
+        def satin_to_patch(zigzag_spacing, pull_compensation):
             patch = Patch(color=threadcolor, sortorder=sortorder)
 
             sides = calculate_satin(zigzag_spacing, pull_compensation)
 
-            if reverse:
-                sides.reverse()
-
             for point in chain.from_iterable(izip(*sides)):
                 patch.addStitch(point)
 
-            if reverse:
-                patch = patch.reverse()
+            return patch
+
+        def do_zigzag_underlay(zigzag_spacing, inset):
+            patch = Patch(color=threadcolor, sortorder=sortorder)
+
+            sides = calculate_satin(zigzag_spacing/2.0, -inset)
+            sides = [sides[0][::2] + list(reversed(sides[0][1::2])), sides[1][1::2] + list(reversed(sides[1][::2]))] 
+
+            for point in chain.from_iterable(izip(*sides)):
+                patch.addStitch(point)
 
             return patch
 
@@ -1424,8 +1429,7 @@ class Embroider(inkex.Effect):
             patch += calculate_underlay(underlay_inset)
 
         if zigzag_underlay_spacing:
-            patch += satin_to_patch(zigzag_underlay_spacing, -zigzag_underlay_inset)
-            patch += satin_to_patch(zigzag_underlay_spacing, -zigzag_underlay_inset, reverse=True)
+            patch += do_zigzag_underlay(zigzag_underlay_spacing, zigzag_underlay_inset)
 
         patch += satin_to_patch(zigzag_spacing_px, pull_compensation_px)
 
