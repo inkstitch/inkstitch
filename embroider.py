@@ -874,6 +874,8 @@ class Embroider(inkex.Effect):
         runs = []
         count = 0
         while (len(rows) > 0):
+            prevrownum = len(rows[0])
+            #print >>sys.stderr, str(prevrownum)
             run = []
             prev = None
 
@@ -882,6 +884,9 @@ class Embroider(inkex.Effect):
                 first, rest = row[0], row[1:]
 
                 if prev is not None and not is_same_run(prev, first):
+                    break
+
+                if prevrownum != len(row):
                     break
     
                 run.append(first)
