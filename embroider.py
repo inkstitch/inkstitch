@@ -680,7 +680,8 @@ class Embroider(inkex.Effect):
         # "east" is the name of the direction that is to the right along a row
         east = PyEmb.Point(1, 0).rotate(-angle)
 
-        #print >> sys.stderr, len(groups_of_segments)
+        #print >> sys.stderr, "rows", len(rows_of_segments)
+        #print >> sys.stderr, "groups", len(groups_of_segments)
 
         patches = []
         for group_of_segments in groups_of_segments:
@@ -822,8 +823,9 @@ class Embroider(inkex.Effect):
                 runs.reverse()
                 runs = map(reverseTuple, runs)
 
-            if self.hatching and len(rows) > 0:
-                rows.append([(rows[-1][0][1], runs[0][0])])
+            #seems to add odd rows
+	    #if self.hatching and len(rows) > 0:
+            #    rows.append([(rows[-1][0][1], runs[0][0])])
 
             rows.append(runs)
 
@@ -851,10 +853,11 @@ class Embroider(inkex.Effect):
             return shgeo.Polygon((segment1[0], segment1[1], segment2[1], segment2[0], segment1[0]))
 
         def is_same_run(segment1, segment2):
-            if self.options.hatch_filled_paths:
-                return True
-
-            if shgeo.LineString(segment1).distance(shgeo.LineString(segment1)) > row_spacing_px * 1.1:
+            #This actually prevents detection of unajacent blocks
+            #print >>sys.stderr, shgeo.LineString(segment1).distance(shgeo.LineString(segment2))
+            #if self.options.hatch_filled_paths:
+            #    return True
+            if shgeo.LineString(segment1).distance(shgeo.LineString(segment2)) > row_spacing_px * 1.1:
                 return False
 
             quad = make_quadrilateral(segment1, segment2)
@@ -878,7 +881,6 @@ class Embroider(inkex.Effect):
                 row = rows[row_num]
                 first, rest = row[0], row[1:]
 
-                # TODO: only accept actually adjacent rows here
                 if prev is not None and not is_same_run(prev, first):
                     break
     
@@ -1159,7 +1161,7 @@ class Embroider(inkex.Effect):
         return [patch]
 
     def filled_region_to_patchlist(self, node):
-        angle = math.radians(float(get_float_param(node,'angle',0)))
+        angle = math.radians(float(get_float_param(node,"angle",0)))
         paths = flatten(parse_path(node), self.options.flat)
         shapelyPolygon = cspToShapelyPolygon(paths)
         threadcolor = simplestyle.parseStyle(node.get("style"))["fill"]
