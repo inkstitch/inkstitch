@@ -189,13 +189,10 @@ def dupNodeAttrs(node):
     return n2
 
 class Patch:
-    def __init__(self, color, sortorder, stitches=None):
+    def __init__(self, color=None, sortorder=None, stitches=None):
         self.color = color
         self.sortorder = sortorder
-        if (stitches!=None):
-            self.stitches = stitches
-        else:
-            self.stitches = []
+        self.stitches = stitches or []
 
     def __add__(self, other):
         if isinstance(other, Patch):
