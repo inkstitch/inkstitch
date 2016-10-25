@@ -190,9 +190,6 @@ class Patch:
     def reverse(self):
         return Patch(self.color, self.sortorder, self.stitches[::-1])
 
-class DebugHole:
-    pass
-
 class PatchList:
     def __init__(self, patches):
         self.patches = patches
@@ -441,35 +438,7 @@ class EmbroideryObject:
         self.row_spacing_px = row_spacing_px
 
 
-    def make_preamble_stitch(self, lastp, nextp):
-        def fromPolar(r, phi):
-            x = r * math.cos(phi)
-            y = r * math.sin(phi)
-            return (x, y)
-
-        def toPolar(x, y):
-            r = math.sqrt(x ** 2 + y ** 2)
-            if r == 0:
-                phi = 0
-            elif y == 0:
-                phi = 0 if x > 0 else math.pi
-            else:
-                phi = cmp(y, 0) * math.acos(x / r)
-            return (r, phi)
-
-        v = nextp - lastp
-        (r, phi) = toPolar(v.x, v.y)
-
-        PREAMBLE_MAX_DIST = 0.5 * pixels_per_millimeter  # 1/2mm
-        if r < PREAMBLE_MAX_DIST:
-            # nextp is close enough to lastp, so we don't generate
-            # extra points in between, but just use nextp
-            return nextp
-        r = PREAMBLE_MAX_DIST
-        (x, y) = fromPolar(r, phi)
-        return PyEmb.Point(x, y) + lastp
-
-    def emit_file(self, filename, output_format, collapse_len_px, add_preamble):
+    def emit_file(self, filename, output_format, collapse_len_px):
         emb = PyEmb.Embroidery()
         lastStitch = None
         lastColor = None
@@ -497,31 +466,6 @@ class EmbroideryObject:
                 newStitch.color = patch.color
                 newStitch.jumpStitch = jumpStitch
                 emb.addStitch(newStitch)
-
-                if jumpStitch and add_preamble != "0":
-                    locs = [ newStitch ]
-                    i = 0
-                    nextp = PyEmb.Point(patch.stitches[i].x, -patch.stitches[i].y)
-
-                    try:
-                        for j in xrange(1, 4):
-                            if locs[-1] == nextp:
-                                i += 1
-                                nextp = PyEmb.Point(patch.stitches[i].x, -patch.stitches[i].y)
-                            locs.append(self.make_preamble_stitch(locs[-1], nextp))
-                    except IndexError:
-                        # happens when the patch is very short and we increment i beyond the number of stitches
-                        pass
-                    #dbg.write("preamble locations: %s\n" % locs)
-
-                    for j in add_preamble[1:]:
-                        try:
-                            stitch = deepcopy(locs[int(j)])
-                            stitch.color = patch.color
-                            stitch.jumpStitch = False
-                            emb.addStitch(stitch)
-                        except IndexError:
-                            pass
 
                 jumpStitch = False
                 lastStitch = newStitch
@@ -622,11 +566,6 @@ class Embroider(inkex.Effect):
             choices=["true","false"],
             dest="hide_layers", default="true",
             help="Hide all other layers when the embroidery layer is generated")
-        self.OptionParser.add_option("-p", "--add_preamble",
-            action="store", type="choice",
-            choices=["0","010","01010","01210","012101210"],
-            dest="add_preamble", default="0",
-            help="Add preamble")
         self.OptionParser.add_option("-O", "--output_format",
             action="store", type="choice",
             choices=["melco", "csv", "gcode"],
@@ -1021,7 +960,7 @@ class Embroider(inkex.Effect):
 
         eo = EmbroideryObject(self.patchList, self.row_spacing_px)
         emb = eo.emit_file(self.get_output_path(), self.options.output_format,
-                 self.collapse_len_px, self.options.add_preamble)
+                 self.collapse_len_px)
 
         new_layer = inkex.etree.SubElement(self.document.getroot(),
                 inkex.addNS('g', 'svg'), {})
