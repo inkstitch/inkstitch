@@ -433,10 +433,8 @@ class PatchList:
             #dbg.write("success: %s\n" % successStr)
 
 class EmbroideryObject:
-    def __init__(self, patchList, row_spacing_px):
+    def __init__(self, patchList):
         self.patchList = patchList
-        self.row_spacing_px = row_spacing_px
-
 
     def emit_file(self, filename, output_format, collapse_len_px):
         emb = PyEmb.Embroidery()
@@ -958,7 +956,7 @@ class Embroider(inkex.Effect):
         if self.options.hide_layers:
             self.hide_layers()
 
-        eo = EmbroideryObject(self.patchList, self.row_spacing_px)
+        eo = EmbroideryObject(self.patchList)
         emb = eo.emit_file(self.get_output_path(), self.options.output_format,
                  self.collapse_len_px)
 
