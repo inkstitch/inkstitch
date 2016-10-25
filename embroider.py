@@ -164,14 +164,6 @@ def cspToShapelyPolygon(path):
     #print >> sys.stderr, "polygon valid:", polygon.is_valid
     return polygon
 
-def shapelyCoordsToSvgD(geo):
-    coords = list(geo.coords)
-    new_path = []
-    new_path.append(['M', coords[0]])
-    for c in coords[1:]:
-        new_path.append(['L', c])
-    return simplepath.formatPath(new_path)
-
 def shapelyLineSegmentToPyTuple(shline):
     tuple = ((shline.coords[0][0],shline.coords[0][1]),
             (shline.coords[1][0],shline.coords[1][1]))
@@ -179,14 +171,6 @@ def shapelyLineSegmentToPyTuple(shline):
 
 def reverseTuple(t):
     return tuple(reversed(t))
-
-def dupNodeAttrs(node):
-    n2 = E.node()
-    for k in node.attrib.keys():
-        n2.attrib[k] = node.attrib[k]
-    del n2.attrib["id"]
-    del n2.attrib["d"]
-    return n2
 
 class Patch:
     def __init__(self, color=None, sortorder=None, stitches=None):
