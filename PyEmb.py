@@ -19,6 +19,21 @@ class Point:
 	def mul(self, scalar):
 		return Point(self.x*scalar, self.y*scalar)
 	
+	def __mul__(self, other):
+		if isinstance(other, Point):
+			# dot product
+			return self.x * other.x + self.y * other.y
+		elif isinstance(other, (int, float)):
+			return self.mul(other)
+		else:
+			raise ValueError("cannot multiply Point by %s" % type(other))
+
+	def __rmul__(self, other):
+		if isinstance(other, (int, float)):
+			return self.mul(other)
+		else:
+			raise ValueError("cannot multiply Point by %s" % type(other))
+
 	def __repr__(self):
 		return "Pt(%s,%s)" % (self.x,self.y)
 
@@ -63,9 +78,14 @@ class Embroidery:
 			maxy = max(maxy,p.y)
 		sx = maxx-minx
 		sy = maxy-miny
+
+		self.translate(-minx, -miny)
+		return (minx, miny)
+
+	def translate(self, dx, dy):
 		for p in self.coords:
-			p.x -= minx
-			p.y -= miny
+			p.x += dx
+			p.y += dy
 
 	def scale(self, sc):
 		if not isinstance(sc, (tuple, list)):
@@ -149,10 +169,12 @@ class Embroidery:
 		self.str += '"#","[THREAD_NUMBER]","[RED]","[GREEN]","[BLUE]","[DESCRIPTION]","[CATALOG_NUMBER]"\n'
 		self.str += '"#","[STITCH_TYPE]","[X]","[Y]"\n'
 
-		lastColor = None
+		lastStitch = None
 		colorIndex = 0
 		for stitch in self.coords:
-			if lastColor == None or stitch.color != lastColor:
+			if lastStitch is not None and stitch.color != lastStitch.color:
+				self.str += '"*","COLOR","%f","%f"\n' % (lastStitch.x, lastStitch.y)
+			if lastStitch is None or stitch.color != lastStitch.color:
 				colorIndex += 1
 				self.str += '"$","%d","%d","%d","%d","(null)","(null)"\n' % (
 					colorIndex,
@@ -160,12 +182,10 @@ class Embroidery:
 					int(stitch.color[3:5], 16),
 					int(stitch.color[5:7], 16))
 			if stitch.jumpStitch:
-				self.str += '"*","JUMP","%f","%f"\n' % (stitch.x/10, stitch.y/10)
-			if lastColor != None and stitch.color != lastColor:
-				# not first color choice, add color change record
-				self.str += '"*","COLOR","%f","%f"\n' % (stitch.x/10, stitch.y/10)
-			self.str += '"*","STITCH","%f","%f"\n' % (stitch.x/10, stitch.y/10)
-			lastColor = stitch.color
+				self.str += '"*","JUMP","%f","%f"\n' % (stitch.x, stitch.y)
+			self.str += '"*","STITCH","%f","%f"\n' % (stitch.x, stitch.y)
+			lastStitch = stitch
+		self.str += '"*","END","%f","%f"\n' % (lastStitch.x, lastStitch.y)
 		return self.str
 
 	def export_gcode(self, dbg):
