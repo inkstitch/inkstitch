@@ -1241,7 +1241,10 @@ class Embroider(inkex.Effect):
         sortorder = self.get_sort_order(threadcolor, node)
         patch = Patch(color=threadcolor, sortorder=sortorder)
 
-        def offset_stitches(pos1, pos2, offset_px):
+        def offset_points(pos1, pos2, offset_px):
+            # Expand or contract points.  This is useful for pull
+            # compensation and insetting underlay.
+
             distance = (pos1 - pos2).length()
 
             if (pos1 - pos2).length() < 0.0001:
@@ -1249,7 +1252,8 @@ class Embroider(inkex.Effect):
                 # to offset in, so we have to just return the points
                 return pos1, pos2
 
-            # don't offset so far that pos1 and pos2 switch places
+            # if offset is negative, don't contract so far that pos1
+            # and pos2 switch places
             if offset_px < -distance/2.0:
                 offset_px = -distance/2.0 
 
@@ -1259,22 +1263,20 @@ class Embroider(inkex.Effect):
     
             return pos1, pos2
     
-        def calculate_satin(zigzag_spacing, offset):
-            # Take each bezier segment in turn, drawing zigzags between the two
-            # paths in that segment.
+        def walk_paths(spacing, offset):
+            # Take a bezier segment from each path in turn, and plot out an
+            # equal number of points on each side.  Later code can alternate
+            # between these points to create satin stitch, underlay, etc.
 
-            # This code used to construct the Patch directly, but now it
-            # returns the zig-zag stitches as two parallel lists (useful
-            # for underlay)
-            zigs = []
-            zags = []
+            side1 = []
+            side2 = []
     
-            def add_satin_stitch(pos1, pos2):
+            def add_pair(pos1, pos2):
                 # Stitches in satin tend to pull toward each other.  We can compensate
                 # by spreading the points out.
-                zig, zag = offset_stitches(pos1, pos2, offset)
-                zigs.append(zig)
-                zags.append(zag)
+                pos1, pos2 = offset_points(pos1, pos2, offset)
+                side1.append(pos1)
+                side2.append(pos2)
     
             remainder_path1 = []
             remainder_path2 = []
@@ -1314,13 +1316,10 @@ class Embroider(inkex.Effect):
                 # The risk here is that we poke a hole in the fabric if we try to
                 # cram too many stitches on the short bezier.  The user will need
                 # to avoid this through careful construction of paths.
-                num_zigzags = max(len1, len2) / zigzag_spacing
+                num_points = max(len1, len2) / spacing
     
-                stitch_len1 = len1 / num_zigzags
-                stitch_len2 = len2 / num_zigzags
-    
-                # Now do the stitches.  Each "zigzag" has a "zig" and a "zag", that
-                # is, go from path1 to path2 and then back to path1.
+                spacing1 = len1 / num_points
+                spacing2 = len2 / num_points
     
                 def walk(path, start_pos, start_index, distance):
                     # Move <distance> pixels along <path>'s line segments.
@@ -1360,13 +1359,11 @@ class Embroider(inkex.Effect):
     
     #            if num_zigzags >= 1.0:
     #                for stitch in xrange(int(num_zigzags) + 1):
-                for stitch in xrange(int(num_zigzags)):
-                    # In each iteration, do a "zig" (pos1) and a "zag" (pos2).
+                for i in xrange(int(num_points)):
+                    add_pair(pos1, pos2)
     
-                    add_satin_stitch(pos1, pos2)
-    
-                    pos2, i2 = walk(subpath2, pos2, i2, stitch_len2)
-                    pos1, i1 = walk(subpath1, pos1, i1, stitch_len1)
+                    pos2, i2 = walk(subpath2, pos2, i2, spacing2)
+                    pos1, i1 = walk(subpath1, pos1, i1, spacing1)
     
                 if i1 < len(subpath1) - 1:
                     remainder_path1 = [pos1] + subpath1[i1 + 1:]
@@ -1382,39 +1379,58 @@ class Embroider(inkex.Effect):
                 remainder_path2 = [p.as_tuple() for p in remainder_path2]
     
             # We're off by one in the algorithm above, so we need one more
-            # pair of stitches.  We also want to stitch at the very end to
+            # pair of points.  We also want to add points at the very end to
             # make sure we match the vectors on screen as best as possible.
             # Try to avoid doing both if they're going to stack up too
             # closely.
  
             end1 = PyEmb.Point(*remainder_path1[-1])
             end2 = PyEmb.Point(*remainder_path2[-1])
-            if (end1 - pos1).length() > 0.3 * zigzag_spacing:
-                add_satin_stitch(pos1, pos2)
+            if (end1 - pos1).length() > 0.3 * spacing:
+                add_pair(pos1, pos2)
 
-            add_satin_stitch(end1, end2)
+            add_pair(end1, end2)
 
-            return [zigs, zags]
+            return [side1, side2]
 
         def calculate_underlay(inset):
-            forward, back = calculate_satin(underlay_stitch_len_px, -inset)
+            # "contour walk" underlay: do stitches up one side and down the
+            # other.
+            forward, back = walk_paths(underlay_stitch_len_px, -inset)
             return Patch(color=threadcolor, sortorder=sortorder, stitches=(forward + list(reversed(back))))
 
-        def satin_to_patch(zigzag_spacing, pull_compensation):
+        def calculate_zigzag_underlay(zigzag_spacing, inset):
+            # zigzag underlay, usually done at a much lower density than the
+            # satin itself.  It looks like this:
+            #
+            # \/\/\/\/\/\/\/\/\/\/|
+            # /\/\/\/\/\/\/\/\/\/\|
+            #
+            # In combination with the "contour walk" underlay, this is the
+            # "German underlay" described here:
+            #   http://www.mrxstitch.com/underlay-what-lies-beneath-machine-embroidery/
+
             patch = Patch(color=threadcolor, sortorder=sortorder)
 
-            sides = calculate_satin(zigzag_spacing, pull_compensation)
+            sides = walk_paths(zigzag_spacing/2.0, -inset)
+            sides = [sides[0][::2] + list(reversed(sides[0][1::2])), sides[1][1::2] + list(reversed(sides[1][::2]))] 
 
+            # this fancy bit of iterable magic just repeatedly takes a point
+            # from each list in turn
             for point in chain.from_iterable(izip(*sides)):
                 patch.addStitch(point)
 
             return patch
 
-        def do_zigzag_underlay(zigzag_spacing, inset):
+        def calculate_satin(zigzag_spacing, pull_compensation):
+            # satin: do a zigzag pattern, alternating between the paths.  The
+            # zigzag looks like this:
+            #
+            # /|/|/|/|/|/|/|/|
+
             patch = Patch(color=threadcolor, sortorder=sortorder)
 
-            sides = calculate_satin(zigzag_spacing/2.0, -inset)
-            sides = [sides[0][::2] + list(reversed(sides[0][1::2])), sides[1][1::2] + list(reversed(sides[1][::2]))] 
+            sides = walk_paths(zigzag_spacing, pull_compensation)
 
             for point in chain.from_iterable(izip(*sides)):
                 patch.addStitch(point)
@@ -1422,16 +1438,25 @@ class Embroider(inkex.Effect):
             return patch
 
         if center_walk:
-            # inset will be clamped to the center point between the stitches
+            # Center walk is a running stitch exactly between the paths, down
+            # and back.  It comes first.
+
+            # Bit of a hack: do it just like contour walk underlay but inset it
+            # really far.  The inset will be clamped to the center between the
+            # paths.
             patch += calculate_underlay(10000)
 
         if underlay:
+            # Now do the contour walk underlay.
             patch += calculate_underlay(underlay_inset)
 
         if zigzag_underlay_spacing:
-            patch += do_zigzag_underlay(zigzag_underlay_spacing, zigzag_underlay_inset)
+            # zigzag underlay comes after contour walk underlay, so that the
+            # zigzags sit on the contour walk underlay like rail ties on rails.
+            patch += calculate_zigzag_underlay(zigzag_underlay_spacing, zigzag_underlay_inset)
 
-        patch += satin_to_patch(zigzag_spacing_px, pull_compensation_px)
+        # Finally, add the satin itself.
+        patch += calculate_satin(zigzag_spacing_px, pull_compensation_px)
 
         return [patch]
 
