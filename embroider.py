@@ -649,7 +649,7 @@ class Embroider(inkex.Effect):
 			self.patchList.patches.extend(self.path_to_patch_list(node))
 		else:
 			if (self.get_style(node, "fill")!=None):
-				angle = math.radians(float(descparts.get('embroider_angle', 0))) + self.options.fill_angle_deg/180.0*math.pi
+				angle = math.radians(float(descparts.get('embroider_angle', 0)) + self.options.fill_angle_deg)
 				self.patchList.patches.extend(self.filled_region_to_patchlist(node, angle))
 			if (self.get_style(node, "stroke")!=None):
 				self.patchList.patches.extend(self.path_to_patch_list(node))
