@@ -27,7 +27,7 @@
     <effect>
         <object-type>all</object-type>
         <effects-menu>
-            <submenu _name="Render"/>
+            <submenu _name="Embroidery"/>
         </effects-menu>
     </effect>
     <script>
