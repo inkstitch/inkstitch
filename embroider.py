@@ -46,7 +46,7 @@ dbg = open("/tmp/embroider-debug.txt", "w")
 PyEmb.dbg = dbg
 #pixels_per_millimeter = 90.0 / 25.4
 
-#this actually makes each pixel worth one tenth of a millimeter
+#this makes each pixel worth one tenth of a millimeter
 pixels_per_millimeter = 10
 
 # a 0.5pt stroke becomes a straight line.
@@ -189,80 +189,69 @@ class Patch:
     def reverse(self):
         return Patch(self.color, self.stitches[::-1])
 
-class EmbroideryObject:
-    def __init__(self, patch_list):
-        self.patch_list = patch_list
+def patches_to_stitches(patch_list, collapse_len_px=0):
+    stitches = []
 
-    def emit_file(self, filename, output_format, collapse_len_px):
-        emb = PyEmb.Embroidery()
-        lastStitch = None
-        lastColor = None
-        for patch in self.patch_list:
-            jumpStitch = True
-            for stitch in patch.stitches:
-                if lastStitch and lastColor == patch.color:
-                    c = math.sqrt((stitch.x - lastStitch.x) ** 2 + (stitch.y - lastStitch.y) ** 2)
-                    #dbg.write("stitch length: %f (%d/%d -> %d/%d)\n" % (c, lastStitch.x, lastStitch.y, stitch.x, stitch.y))
+    lastStitch = None
+    lastColor = None
+    for patch in patch_list:
+        jumpStitch = True
+        for stitch in patch.stitches:
+            if lastStitch and lastColor == patch.color:
+                l = (stitch - lastStitch).length()
+                if l <= 0.1:
+                    # filter out duplicate successive stitches
+                    jumpStitch = False
+                    continue
 
-                    if c <= 0.1:
-                        # filter out duplicate successive stitches
+                if jumpStitch:
+                    # consider collapsing jump stitch, if it is pretty short
+                    if l < collapse_len_px:
+                        #dbg.write("... collapsed\n")
                         jumpStitch = False
-                        continue
 
-                    if jumpStitch:
-                        # consider collapsing jump stich, if it is pretty short
-                        if c < collapse_len_px:
-                            #dbg.write("... collapsed\n")
-                            jumpStitch = False
+            #dbg.write("stitch color %s\n" % patch.color)
 
-                #dbg.write("stitch color %s\n" % patch.color)
+            newStitch = PyEmb.Stitch(stitch.x, stitch.y, patch.color, jumpStitch)
+            stitches.append(newStitch)
 
-                newStitch = PyEmb.Point(stitch.x, -stitch.y)
-                newStitch.color = patch.color
-                newStitch.jumpStitch = jumpStitch
-                emb.addStitch(newStitch)
+            jumpStitch = False
+            lastStitch = stitch
+            lastColor = patch.color
 
-                jumpStitch = False
-                lastStitch = newStitch
-                lastColor = patch.color
+    return stitches
 
-        dx, dy = emb.translate_to_origin()
-        emb.scale(1.0/pixels_per_millimeter)
+def stitches_to_paths(stitches):
+    paths = []
+    lastColor = None
+    lastStitch = None
+    for stitch in stitches:
+        if stitch.jumpStitch:
+            if lastColor == stitch.color:
+                paths.append([None, []])
+                if lastStitch is not None:
+                    paths[-1][1].append(['M', lastStitch.as_tuple()])
+                    paths[-1][1].append(['L', stitch.as_tuple()])
+            lastColor = None
+        if stitch.color != lastColor:
+            paths.append([stitch.color, []])
+        paths[-1][1].append(['L' if len(paths[-1][1]) > 0 else 'M', stitch.as_tuple()])
+        lastColor = stitch.color
+        lastStitch = stitch
+    return paths
 
-        fp = open(filename, "wb")
 
-        if output_format == "melco":
-            fp.write(emb.export_melco(dbg))
-        elif output_format == "csv":
-            fp.write(emb.export_csv(dbg))
-        elif output_format == "gcode":
-            fp.write(emb.export_gcode(dbg))
-        fp.close()
-        emb.scale(pixels_per_millimeter)
-        emb.translate(dx, dy)
-        return emb
-
-    def emit_inkscape(self, parent, emb):
-        emb.scale((1, -1));
-        for color, path in emb.export_paths(dbg):
-            dbg.write('path: %s %s\n' % (color, repr(path)))
-            inkex.etree.SubElement(parent,
-                inkex.addNS('path', 'svg'),
-                {    'style':simplestyle.formatStyle(
-                        { 'stroke': color if color is not None else '#000000',
-                            'stroke-width':"0.4",
-                            'fill': 'none' }),
-                    'd':simplepath.formatPath(path),
-                })
-
-    def bbox(self):
-        x = []
-        y = []
-        for patch in self.patch_list:
-            for stitch in patch.stitches:
-                x.append(stitch.x)
-                y.append(stitch.y)
-        return (min(x), min(y), max(x), max(y))
+def emit_inkscape(parent, stitches):
+    for color, path in stitches_to_paths(stitches):
+        dbg.write('path: %s %s\n' % (color, repr(path)))
+        inkex.etree.SubElement(parent,
+            inkex.addNS('path', 'svg'),
+            {    'style':simplestyle.formatStyle(
+                    { 'stroke': color if color is not None else '#000000',
+                        'stroke-width':"0.4",
+                        'fill': 'none' }),
+                'd':simplepath.formatPath(path),
+            })
 
 class Embroider(inkex.Effect):
     def __init__(self, *args, **kwargs):
@@ -662,35 +651,18 @@ class Embroider(inkex.Effect):
         if self.options.hide_layers:
             self.hide_layers()
 
-        eo = EmbroideryObject(self.patch_list)
-        emb = eo.emit_file(self.get_output_path(), self.options.output_format,
-                 self.collapse_len_px)
+        stitches = patches_to_stitches(self.patch_list, self.collapse_len_px)
+        emb = PyEmb.Embroidery(stitches, pixels_per_millimeter)
+        emb.export(self.get_output_path(), self.options.output_format)
 
         new_layer = inkex.etree.SubElement(self.document.getroot(),
                 inkex.addNS('g', 'svg'), {})
         new_layer.set('id', self.uniqueId("embroidery"))
         new_layer.set(inkex.addNS('label', 'inkscape'), 'Embroidery')
         new_layer.set(inkex.addNS('groupmode', 'inkscape'), 'layer')
-        eo.emit_inkscape(new_layer, emb)
+        emit_inkscape(new_layer, stitches)
 
         sys.stdout = old_stdout
-
-    def emit_inkscape_bbox(self, parent, eo):
-        (x0, y0, x1, y1) = eo.bbox()
-        new_path = []
-        new_path.append(['M', (x0,y0)])
-        new_path.append(['L', (x1,y0)])
-        new_path.append(['L', (x1,y1)])
-        new_path.append(['L', (x0,y1)])
-        new_path.append(['L', (x0,y0)])
-        inkex.etree.SubElement(parent,
-            inkex.addNS('path', 'svg'),
-            {    'style':simplestyle.formatStyle(
-                    { 'stroke': '#ff00ff',
-                        'stroke-width':str(1),
-                        'fill': 'none' }),
-                'd':simplepath.formatPath(new_path),
-            })
 
     def hide_layers(self):
         for g in self.document.getroot().findall(inkex.addNS("g","svg")):
