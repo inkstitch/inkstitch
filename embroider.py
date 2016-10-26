@@ -173,14 +173,13 @@ def reverseTuple(t):
     return tuple(reversed(t))
 
 class Patch:
-    def __init__(self, color=None, sortorder=None, stitches=None):
+    def __init__(self, color=None, stitches=None):
         self.color = color
-        self.sortorder = sortorder
         self.stitches = stitches or []
 
     def __add__(self, other):
         if isinstance(other, Patch):
-            return Patch(self.color, self.sortorder, self.stitches + other.stitches)
+            return Patch(self.color, self.stitches + other.stitches)
         else:
             raise TypeError("Patch can only be added to another Patch")
 
@@ -188,7 +187,7 @@ class Patch:
         self.stitches.append(stitch)
 
     def reverse(self):
-        return Patch(self.color, self.sortorder, self.stitches[::-1])
+        return Patch(self.color, self.stitches[::-1])
 
 class PatchList:
     def __init__(self, patches):
@@ -272,19 +271,6 @@ class EmbroideryObject:
                 y.append(stitch.y)
         return (min(x), min(y), max(x), max(y))
 
-class SortOrder:
-    def __init__(self, *terms):
-        self.sorttuple = terms
-
-    def append(self, criterion):
-        self.sorttuple += (criterion,)
-
-    def __cmp__(self, other):
-        return cmp(self.sorttuple, other.sorttuple)
-
-    def __repr__(self):
-        return "Sort%s" % self.sorttuple
-
 class Embroider(inkex.Effect):
     def __init__(self, *args, **kwargs):
         #dbg.write("args: %s\n" % repr(sys.argv))
@@ -344,11 +330,7 @@ class Embroider(inkex.Effect):
             help="Max number of backups of output files to keep.")
         self.patches = []
 
-    def get_sort_order(self, threadcolor, node):
-        #print >> sys.stderr, "node", node.get("id"), self.order.get(node.get("id"))
-        return SortOrder(self.order.get(node.get("id")), threadcolor)
-
-    def process_one_path(self, node, shpath, threadcolor, sortorder, angle):
+    def process_one_path(self, node, shpath, threadcolor, angle):
         #self.add_shapely_geo_to_svg(shpath.boundary, color="#c0c000")
 
         hatching = get_boolean_param(node, "hatching", self.hatching)
@@ -367,7 +349,7 @@ class Embroider(inkex.Effect):
 
         patches = []
         for group_of_segments in groups_of_segments:
-            patch = Patch(color=threadcolor,sortorder=sortorder)
+            patch = Patch(color=threadcolor)
             first_segment = True
             swap = False
             last_end = None
@@ -605,14 +587,11 @@ class Embroider(inkex.Effect):
                 fill = self.filled_region_to_patchlist(node)
 
             if get_boolean_param(node, "stroke_first", False):
-                for patch in stroke:
-                    patch.sortorder.append(0)
-
-                for patch in fill:
-                    patch.sortorder.append(1)
-
-            self.patchList.patches.extend(stroke)
-            self.patchList.patches.extend(fill)
+                self.patchList.patches.extend(stroke)
+                self.patchList.patches.extend(fill)
+            else:
+                self.patchList.patches.extend(fill)
+                self.patchList.patches.extend(stroke)
 
     def get_style(self, node, style_name):
         style = simplestyle.parseStyle(node.get("style"))
@@ -622,32 +601,6 @@ class Embroider(inkex.Effect):
         if (value==None or value=="none"):
             return None
         return value
-
-    def cache_order(self):
-        if self.options.order == "automatic":
-            self.order = defaultdict(lambda: 0)
-            return
-
-        self.order = {}
-
-        layer_tag = inkex.addNS("g", "svg")
-        group_attr = inkex.addNS('groupmode', 'inkscape')
-
-        def is_layer(node):
-            return node.tag == layer_tag and node.get(group_attr) == "layer"
-
-        def process(node, order=0):
-            if self.options.order == "object" or (self.options.order == "layer" and is_layer(node)):
-                order += 1
-
-            self.order[node.get("id")] = order
-
-            for child in node:
-                order = process(child, order)
-
-            return order
-
-        process(self.document.getroot())
 
     def get_output_path(self):
         svg_filename = self.document.getroot().get(inkex.addNS('docname', 'sodipodi'))
@@ -681,9 +634,6 @@ class Embroider(inkex.Effect):
         old_stdout = sys.stdout
         sys.stdout = sys.stderr
 
-        self.cache_order()
-        #print >> sys.stderr, "cached stacking order:", self.order
-
         self.row_spacing_px = self.options.row_spacing_mm * pixels_per_millimeter
         self.zigzag_spacing_px = self.options.zigzag_spacing_mm * pixels_per_millimeter
         self.max_stitch_len_px = self.options.max_stitch_len_mm*pixels_per_millimeter
@@ -698,7 +648,7 @@ class Embroider(inkex.Effect):
         dbg.write("starting nodes: %s" % time.time())
         dbg.flush()
         if self.selected:
-            # be sure to visit selected nodes in the order they're stacked in 
+            # be sure to visit selected nodes in the order they're stacked in
             # the document
             for node in self.document.getroot().iter():
                 if node.get("id") in self.selected:
@@ -770,7 +720,6 @@ class Embroider(inkex.Effect):
         zigzag_spacing_px = get_float_param(node, "zigzag_spacing", self.zigzag_spacing_px)
         repeats = get_int_param(node, "repeats", 1)
 
-        sortorder = self.get_sort_order(threadcolor, node)
         paths = flatten(parse_path(node), self.options.flat)
 
         # regularize the points lists.
@@ -783,15 +732,15 @@ class Embroider(inkex.Effect):
             path = [PyEmb.Point(x, y) for x, y in path]
             if (stroke_width <= STROKE_MIN or dashed):
                 #dbg.write("self.max_stitch_len_px = %s\n" % self.max_stitch_len_px)
-                patch = self.stroke_points(path, running_stitch_len_px, 0.0, repeats, threadcolor, sortorder)
+                patch = self.stroke_points(path, running_stitch_len_px, 0.0, repeats, threadcolor)
             else:
-                patch = self.stroke_points(path, zigzag_spacing_px*0.5, stroke_width, repeats, threadcolor, sortorder)
+                patch = self.stroke_points(path, zigzag_spacing_px*0.5, stroke_width, repeats, threadcolor)
             patches.extend(patch)
 
         return patches
 
-    def stroke_points(self, emb_point_list, zigzag_spacing_px, stroke_width, repeats, threadcolor, sortorder):
-        patch = Patch(color=threadcolor, sortorder=sortorder)
+    def stroke_points(self, emb_point_list, zigzag_spacing_px, stroke_width, repeats, threadcolor):
+        patch = Patch(color=threadcolor)
         p0 = emb_point_list[0]
         rho = 0.0
         fact = 1
@@ -844,12 +793,10 @@ class Embroider(inkex.Effect):
         paths = flatten(parse_path(node), self.options.flat)
         shapelyPolygon = cspToShapelyPolygon(paths)
         threadcolor = simplestyle.parseStyle(node.get("style"))["fill"]
-        sortorder = self.get_sort_order(threadcolor, node)
         return self.process_one_path(
                 node,
                 shapelyPolygon,
                 threadcolor,
-                sortorder,
                 angle)
 
     def fatal(self, message):
@@ -919,8 +866,7 @@ class Embroider(inkex.Effect):
         path2 = csp[1]
 
         threadcolor = simplestyle.parseStyle(node.get("style"))["stroke"]
-        sortorder = self.get_sort_order(threadcolor, node)
-        patch = Patch(color=threadcolor, sortorder=sortorder)
+        patch = Patch(color=threadcolor)
 
         def offset_points(pos1, pos2, offset_px):
             # Expand or contract points.  This is useful for pull
@@ -1078,7 +1024,7 @@ class Embroider(inkex.Effect):
             # "contour walk" underlay: do stitches up one side and down the
             # other.
             forward, back = walk_paths(underlay_stitch_len_px, -inset)
-            return Patch(color=threadcolor, sortorder=sortorder, stitches=(forward + list(reversed(back))))
+            return Patch(color=threadcolor, stitches=(forward + list(reversed(back))))
 
         def calculate_zigzag_underlay(zigzag_spacing, inset):
             # zigzag underlay, usually done at a much lower density than the
@@ -1091,7 +1037,7 @@ class Embroider(inkex.Effect):
             # "German underlay" described here:
             #   http://www.mrxstitch.com/underlay-what-lies-beneath-machine-embroidery/
 
-            patch = Patch(color=threadcolor, sortorder=sortorder)
+            patch = Patch(color=threadcolor)
 
             sides = walk_paths(zigzag_spacing/2.0, -inset)
             sides = [sides[0][::2] + list(reversed(sides[0][1::2])), sides[1][1::2] + list(reversed(sides[1][::2]))] 
@@ -1109,7 +1055,7 @@ class Embroider(inkex.Effect):
             #
             # /|/|/|/|/|/|/|/|
 
-            patch = Patch(color=threadcolor, sortorder=sortorder)
+            patch = Patch(color=threadcolor)
 
             sides = walk_paths(zigzag_spacing, pull_compensation)
 
