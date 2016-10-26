@@ -189,22 +189,15 @@ class Patch:
     def reverse(self):
         return Patch(self.color, self.stitches[::-1])
 
-class PatchList:
-    def __init__(self, patches):
-        self.patches = patches
-
-    def __len__(self):
-        return len(self.patches)
-
 class EmbroideryObject:
-    def __init__(self, patchList):
-        self.patchList = patchList
+    def __init__(self, patch_list):
+        self.patch_list = patch_list
 
     def emit_file(self, filename, output_format, collapse_len_px):
         emb = PyEmb.Embroidery()
         lastStitch = None
         lastColor = None
-        for patch in self.patchList.patches:
+        for patch in self.patch_list:
             jumpStitch = True
             for stitch in patch.stitches:
                 if lastStitch and lastColor == patch.color:
@@ -265,7 +258,7 @@ class EmbroideryObject:
     def bbox(self):
         x = []
         y = []
-        for patch in self.patchList.patches:
+        for patch in self.patch_list:
             for stitch in patch.stitches:
                 x.append(stitch.x)
                 y.append(stitch.y)
@@ -576,7 +569,7 @@ class Embroider(inkex.Effect):
         #dbg.write("Node: %s\n"%str((id, etree.tostring(node, pretty_print=True))))
 
         if get_boolean_param(node, "satin_column"):
-            self.patchList.patches.extend(self.satin_column(node))
+            self.patch_list.extend(self.satin_column(node))
         else:
             stroke = []
             fill = []
@@ -587,11 +580,11 @@ class Embroider(inkex.Effect):
                 fill = self.filled_region_to_patchlist(node)
 
             if get_boolean_param(node, "stroke_first", False):
-                self.patchList.patches.extend(stroke)
-                self.patchList.patches.extend(fill)
+                self.patch_list.extend(stroke)
+                self.patch_list.extend(fill)
             else:
-                self.patchList.patches.extend(fill)
-                self.patchList.patches.extend(stroke)
+                self.patch_list.extend(fill)
+                self.patch_list.extend(stroke)
 
     def get_style(self, node, style_name):
         style = simplestyle.parseStyle(node.get("style"))
@@ -643,7 +636,7 @@ class Embroider(inkex.Effect):
 
         self.svgpath = inkex.addNS('path', 'svg')
         self.svgdefs = inkex.addNS('defs', 'svg')
-        self.patchList = PatchList([])
+        self.patch_list = []
 
         dbg.write("starting nodes: %s" % time.time())
         dbg.flush()
@@ -658,7 +651,7 @@ class Embroider(inkex.Effect):
         dbg.write("finished nodes: %s" % time.time())
         dbg.flush()
 
-        if not self.patchList:
+        if not self.patch_list:
             if self.selected:
                 inkex.errormsg("No embroiderable paths selected.")
             else:
@@ -669,7 +662,7 @@ class Embroider(inkex.Effect):
         if self.options.hide_layers:
             self.hide_layers()
 
-        eo = EmbroideryObject(self.patchList)
+        eo = EmbroideryObject(self.patch_list)
         emb = eo.emit_file(self.get_output_path(), self.options.output_format,
                  self.collapse_len_px)
 
