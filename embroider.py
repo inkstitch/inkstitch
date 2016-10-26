@@ -698,8 +698,11 @@ class Embroider(inkex.Effect):
         dbg.write("starting nodes: %s" % time.time())
         dbg.flush()
         if self.selected:
-            for node in self.selected.itervalues():
-                self.handle_node(node)
+            # be sure to visit selected nodes in the order they're stacked in 
+            # the document
+            for node in self.document.getroot().iter():
+                if node.get("id") in self.selected:
+                    self.handle_node(node)
         else:
             self.handle_node(self.document.getroot())
         dbg.write("finished nodes: %s" % time.time())
