@@ -825,7 +825,7 @@ class Embroider(inkex.Effect):
                 runs = map(reverseTuple, runs)
 
             #seems to add odd rows
-        #if self.hatching and len(rows) > 0:
+            #if self.hatching and len(rows) > 0:
             #    rows.append([(rows[-1][0][1], runs[0][0])])
 
             rows.append(runs)

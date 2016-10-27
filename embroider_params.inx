@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <_name>Params</_name>
+    <id>jonh.embroider.params</id>
+    <dependency type="executable" location="extensions">embroider_params.py</dependency>
+    <dependency type="executable" location="extensions">inkex.py</dependency>
+    <param name="zigzag_spacing" type="string" _gui-text="Zigzag spacing (pixels)"></param>
+    <param name="stitch_length" type="string" _gui-text="Running stitch length (pixels)"></param>
+    <param name="row_spacing" type="string" _gui-text="Row spacing (pixels)"></param>
+    <param name="max_stitch_length" type="string" _gui-text="Maximum stitch length (pixels)"></param>
+    <param name="repeats" type="string" _gui-text="Repeats (stroke only)"></param>
+    <param name="angle" type="string" _gui-text="Angle for lines in fills"></param>
+    <param name="pull_compensation" type="string" _gui-text="Pull compensation for satin column (pixels)"></param>
+    <param name="hatching" type="string" _gui-text="Hatching? (yes/no)"></param>
+    <param name="flip" type="string" _gui-text="Flip fill? (yes/no)"></param>
+    <param name="satin_column" type="string" _gui-text="Satin Column? (yes/no)"></param>
+    <param name="satin_underlay" type="string" _gui-text="Edge-walk underlay for satin Column? (yes/no)"></param>
+    <param name="satin_underlay_inset" type="string" _gui-text="Inset for satin colum underlay (pixels)"></param>    
+    <param name="satin_center_walk" type="string" _gui-text="Satin center walk underlay? (yes/no)"></param>
+    <param name="satin_zigzag_underlay_spacing" type="string" _gui-text="Zigzag underlay spacing (pixels)"></param>
+    <param name="stroke_first" type="string" _gui-text="Stitch stroke before fill? (yes/no)"></param>
+    <effect>
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu _name="Embroidery"/>
+        </effects-menu>
+    </effect>
+    <script>
+        <command reldir="extensions" interpreter="python">embroider_params.py</command>
+    </script>
+</inkscape-extension>
