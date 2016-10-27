@@ -44,10 +44,7 @@ from pprint import pformat
 
 dbg = open("/tmp/embroider-debug.txt", "w")
 PyEmb.dbg = dbg
-#pixels_per_millimeter = 90.0 / 25.4
-
-#this actually makes each pixel worth one tenth of a millimeter
-pixels_per_millimeter = 10
+pixels_per_millimeter = 90.0 / 25.4
 
 # a 0.5pt stroke becomes a straight line.
 STROKE_MIN = 0.5
@@ -164,14 +161,6 @@ def cspToShapelyPolygon(path):
     #print >> sys.stderr, "polygon valid:", polygon.is_valid
     return polygon
 
-def shapelyCoordsToSvgD(geo):
-    coords = list(geo.coords)
-    new_path = []
-    new_path.append(['M', coords[0]])
-    for c in coords[1:]:
-        new_path.append(['L', c])
-    return simplepath.formatPath(new_path)
-
 def shapelyLineSegmentToPyTuple(shline):
     tuple = ((shline.coords[0][0],shline.coords[0][1]),
             (shline.coords[1][0],shline.coords[1][1]))
@@ -180,26 +169,14 @@ def shapelyLineSegmentToPyTuple(shline):
 def reverseTuple(t):
     return tuple(reversed(t))
 
-def dupNodeAttrs(node):
-    n2 = E.node()
-    for k in node.attrib.keys():
-        n2.attrib[k] = node.attrib[k]
-    del n2.attrib["id"]
-    del n2.attrib["d"]
-    return n2
-
 class Patch:
-    def __init__(self, color, sortorder, stitches=None):
+    def __init__(self, color=None, stitches=None):
         self.color = color
-        self.sortorder = sortorder
-        if (stitches!=None):
-            self.stitches = stitches
-        else:
-            self.stitches = []
+        self.stitches = stitches or []
 
     def __add__(self, other):
         if isinstance(other, Patch):
-            return Patch(self.color, self.sortorder, self.stitches + other.stitches)
+            return Patch(self.color, self.stitches + other.stitches)
         else:
             raise TypeError("Patch can only be added to another Patch")
 
@@ -207,395 +184,71 @@ class Patch:
         self.stitches.append(stitch)
 
     def reverse(self):
-        return Patch(self.color, self.sortorder, self.stitches[::-1])
+        return Patch(self.color, self.stitches[::-1])
 
-class DebugHole:
-    pass
+def patches_to_stitches(patch_list, collapse_len_px=0):
+    stitches = []
 
-class PatchList:
-    def __init__(self, patches):
-        self.patches = patches
+    lastStitch = None
+    lastColor = None
+    for patch in patch_list:
+        jumpStitch = True
+        for stitch in patch.stitches:
+            if lastStitch and lastColor == patch.color:
+                l = (stitch - lastStitch).length()
+                if l <= 0.1:
+                    # filter out duplicate successive stitches
+                    jumpStitch = False
+                    continue
 
-    def __len__(self):
-        return len(self.patches)
-
-    def sort_by_sortorder(self):
-        def by_sort_order(a,b):
-            return cmp(a.sortorder, b.sortorder)
-        self.patches.sort(by_sort_order)
-
-    def partition_by_color(self):
-        self.sort_by_sortorder()
-        #dbg.write("Sorted by sortorder:\n");
-        #dbg.write("  %s\n" % ("\n".join(map(lambda p: str(p.sortorder), self.patches))))
-        out = []
-        lastPatch = None
-        for patch in self.patches:
-            if (lastPatch!=None and patch.sortorder==lastPatch.sortorder):
-                out[-1].patches.append(patch)
-            else:
-                out.append(PatchList([patch]))
-            lastPatch = patch
-        #dbg.write("Emitted %s partitions\n" % len(out))
-        return out
-
-    def tsp_by_color(self):
-        list_of_patchLists = self.partition_by_color()
-        for patchList in list_of_patchLists:
-            if len(patchList) > 1:
-                patchList.traveling_salesman()
-        return PatchList(reduce(operator.add,
-            map(lambda pl: pl.patches, list_of_patchLists)))
-
-#    # TODO apparently dead code; replaced by partition_by_color above
-#    def clump_like_colors_together(self):
-#        out = PatchList([])
-#        lastPatch = None
-#        for patch in self.patches:
-#            if (lastPatch!=None and patch.color==lastPatch.color):
-#                out.patches[-1] = Patch(
-#                    out.patches[-1].color,
-#                    out.patches[-1].sortorder,
-#                    out.patches[-1].stitches+patch.stitches)
-#            else:
-#                out.patches.append(patch)
-#            lastPatch = patch
-#        return out
-
-    def get(self, i):
-        if (i<0 or i>=len(self.patches)):
-            return None
-        return self.patches[i]
-
-    def cost(self, a, b):
-        if (a is None or b is None):
-            rc = 0.0
-        else:
-            rc = (a.stitches[-1] - b.stitches[0]).length()
-        #dbg.write("cost(%s, %s) = %5.1f\n" % (a, b, rc))
-        return rc
-
-    def total_cost(self):
-        total = 0
-
-        for i in xrange(1, len(self.patches)):
-            total += self.cost(self.get(i-1), self.get(i))
-
-        return total
-
-    def try_swap(self, i, j):
-        # i,j are indices;
-        #dbg.write("swap(%d, %d)\n" % (i,j))
-        i, j = sorted((i, j))
-        neighbors = abs(i - j) == 1
-        if neighbors:
-            oldCost = sum((self.cost(self.get(i-1), self.get(i)),
-                           self.cost(self.get(i), self.get(j)),
-                           self.cost(self.get(j), self.get(j+1))))
-        else:
-            oldCost = sum((self.cost(self.get(i-1), self.get(i)),
-                           self.cost(self.get(i), self.get(i+1)),
-                           self.cost(self.get(j-1), self.get(j)),
-                           self.cost(self.get(j), self.get(j+1))))
-        npi = self.get(j)
-        npj = self.get(i)
-        rpi = npi.reverse()
-        rpj = npj.reverse()
-        options = [
-            (npi,npj),
-            (rpi,npj),
-            (npi,rpj),
-            (rpi,rpj),
-        ]
-        def costOf(np):
-            (npi,npj) = np
-
-            if abs(i - j) == 1:
-                return sum((self.cost(self.get(i-1), npi),
-                            self.cost(npi, npj),
-                            self.cost(npj, self.get(j+1))))
-            else:
-                return sum((self.cost(self.get(i-1), npi),
-                            self.cost(npi, self.get(i+1)),
-                            self.cost(self.get(j-1), npj),
-                            self.cost(npj, self.get(j+1))))
-        costs = map(lambda o: (costOf(o), o), options)
-        costs.sort()
-        (cost,option) = costs[0]
-        savings = oldCost - cost
-        if (savings > 0):
-            self.patches[i] = option[0]
-            self.patches[j] = option[1]
-            success = "!"
-        else:
-            success = "."
-
-        #dbg.write("old %5.1f new %5.1f savings: %5.1f\n" % (oldCost, cost, savings))
-        return success
-
-    def try_reverse(self, i):
-        #dbg.write("reverse(%d)\n" % i)
-        oldCost = (self.cost(self.get(i-1), self.get(i))
-            +self.cost(self.get(i), self.get(i+1)))
-        reversed = self.get(i).reverse()
-        newCost = (self.cost(self.get(i-1), reversed)
-            +self.cost(reversed, self.get(i+1)))
-        savings = oldCost - newCost
-        if (savings > 0.0):
-            self.patches[i] = reversed
-            success = "#"
-        else:
-            success = "_"
-        return success
-
-    def traveling_salesman(self):
-        #print >> sys.stderr, "TSPing %s patches" % len(self)
-
-        # shockingly, this is non-optimal and pretty much non-efficient. Sorry.
-        self.pointList = []
-        for patch in self.patches:
-            def visit(idx):
-                ep = deepcopy(patch.stitches[idx])
-                ep.patch = patch
-                self.pointList.append(ep)
-
-            visit(0)
-            visit(-1)
-
-        def linear_min(list, func):
-            min_item = None
-            min_value = None
-            for item in list:
-                value = func(item)
-                #dbg.write('linear_min %s: value %s => %s (%s)\n' % (func, item, value, value<min_value))
-                if (min_value==None or value<min_value):
-                    min_item = item
-                    min_value = value
-            #dbg.write('linear_min final item %s value %s\n' % (min_item, min_value))
-            return min_item
-
-        sortedPatchList = PatchList([])
-        def takePatchStartingAtPoint(point):
-            patch = point.patch
-            #dbg.write("takePatchStartingAtPoint angling for patch %s--%s\n" % (patch.stitches[0],patch.stitches[-1]))
-            self.pointList = filter(lambda pt: pt.patch!=patch, self.pointList)
-            reversed = ""
-            if (point!=patch.stitches[0]):
-                reversed = " (reversed)"
-                #dbg.write('patch.stitches[0] %s point %s match %s\n' % (patch.stitches[0], point, point==patch.stitches[0]))
-                patch = patch.reverse()
-            sortedPatchList.patches.append(patch)
-            #dbg.write('took patch %s--%s %s\n' % (patch.stitches[0], patch.stitches[-1], reversed))
-
-        # Try a greedy algorithm starting from each point in turn, and pick
-        # the best result.  O(n^2).
-
-        min_cost = None
-        min_path = []
-
-        def mate(point):
-            for p in self.pointList:
-                if p is not point and p.patch == point.patch:
-                    return p
-
-        start_time = time.time()
-
-        for starting_point in random.sample(self.pointList, len(self.pointList)):
-            point_list = self.pointList[:]
-            last_point = mate(starting_point)
-
-            point_list.remove(starting_point)
-            point_list.remove(last_point)
-
-            path = [starting_point]
-            cost = 0
-
-            while point_list:
-                next_point = min(point_list, key=lambda p: (p - last_point).length())
-                cost += (next_point - last_point).length()
-
-                path.append(next_point)
-                last_point = mate(next_point)
-
-                point_list.remove(next_point)
-                try:
-                    point_list.remove(last_point)
-                except:
-                    pass
-
-            if min_cost is None or cost < min_cost:
-                min_cost = cost
-                min_path = path
-
-            # timebox this bit to avoid spinning our wheels forever
-            if time.time() - start_time > 1.0:
-                break
-
-        for point in min_path:
-            takePatchStartingAtPoint(point)
-
-        # install the initial result
-        self.patches = sortedPatchList.patches
-
-        if 1:
-            # Then hill-climb.
-            #dbg.write("len(self.patches) = %d\n" % len(self.patches))
-            count = 0
-            successStr = ""
-            while (count < 100):
-                i = random.randint(0, len(self.patches)-1)
-                j = random.randint(0, len(self.patches)-1)
-                successStr += self.try_swap(i,j)
-
-                count += 1
-            # tidy up at end as best we can
-            for i in range(len(self.patches)):
-                successStr += self.try_reverse(i)
-
-            #dbg.write("success: %s\n" % successStr)
-
-class EmbroideryObject:
-    def __init__(self, patchList, row_spacing_px):
-        self.patchList = patchList
-        self.row_spacing_px = row_spacing_px
-
-
-    def make_preamble_stitch(self, lastp, nextp):
-        def fromPolar(r, phi):
-            x = r * math.cos(phi)
-            y = r * math.sin(phi)
-            return (x, y)
-
-        def toPolar(x, y):
-            r = math.sqrt(x ** 2 + y ** 2)
-            if r == 0:
-                phi = 0
-            elif y == 0:
-                phi = 0 if x > 0 else math.pi
-            else:
-                phi = cmp(y, 0) * math.acos(x / r)
-            return (r, phi)
-
-        v = nextp - lastp
-        (r, phi) = toPolar(v.x, v.y)
-
-        PREAMBLE_MAX_DIST = 0.5 * pixels_per_millimeter  # 1/2mm
-        if r < PREAMBLE_MAX_DIST:
-            # nextp is close enough to lastp, so we don't generate
-            # extra points in between, but just use nextp
-            return nextp
-        r = PREAMBLE_MAX_DIST
-        (x, y) = fromPolar(r, phi)
-        return PyEmb.Point(x, y) + lastp
-
-    def emit_file(self, filename, output_format, collapse_len_px, add_preamble):
-        emb = PyEmb.Embroidery()
-        lastStitch = None
-        lastColor = None
-        for patch in self.patchList.patches:
-            jumpStitch = True
-            for stitch in patch.stitches:
-                if lastStitch and lastColor == patch.color:
-                    c = math.sqrt((stitch.x - lastStitch.x) ** 2 + (stitch.y - lastStitch.y) ** 2)
-                    #dbg.write("stitch length: %f (%d/%d -> %d/%d)\n" % (c, lastStitch.x, lastStitch.y, stitch.x, stitch.y))
-
-                    if c <= 0.1:
-                        # filter out duplicate successive stitches
+                if jumpStitch:
+                    # consider collapsing jump stitch, if it is pretty short
+                    if l < collapse_len_px:
+                        #dbg.write("... collapsed\n")
                         jumpStitch = False
-                        continue
 
-                    if jumpStitch:
-                        # consider collapsing jump stich, if it is pretty short
-                        if c < collapse_len_px:
-                            #dbg.write("... collapsed\n")
-                            jumpStitch = False
+            #dbg.write("stitch color %s\n" % patch.color)
 
-                #dbg.write("stitch color %s\n" % patch.color)
+            newStitch = PyEmb.Stitch(stitch.x, stitch.y, patch.color, jumpStitch)
+            stitches.append(newStitch)
 
-                newStitch = PyEmb.Point(stitch.x, -stitch.y)
-                newStitch.color = patch.color
-                newStitch.jumpStitch = jumpStitch
-                emb.addStitch(newStitch)
+            jumpStitch = False
+            lastStitch = stitch
+            lastColor = patch.color
 
-                if jumpStitch and add_preamble != "0":
-                    locs = [ newStitch ]
-                    i = 0
-                    nextp = PyEmb.Point(patch.stitches[i].x, -patch.stitches[i].y)
+    return stitches
 
-                    try:
-                        for j in xrange(1, 4):
-                            if locs[-1] == nextp:
-                                i += 1
-                                nextp = PyEmb.Point(patch.stitches[i].x, -patch.stitches[i].y)
-                            locs.append(self.make_preamble_stitch(locs[-1], nextp))
-                    except IndexError:
-                        # happens when the patch is very short and we increment i beyond the number of stitches
-                        pass
-                    #dbg.write("preamble locations: %s\n" % locs)
+def stitches_to_paths(stitches):
+    paths = []
+    lastColor = None
+    lastStitch = None
+    for stitch in stitches:
+        if stitch.jumpStitch:
+            if lastColor == stitch.color:
+                paths.append([None, []])
+                if lastStitch is not None:
+                    paths[-1][1].append(['M', lastStitch.as_tuple()])
+                    paths[-1][1].append(['L', stitch.as_tuple()])
+            lastColor = None
+        if stitch.color != lastColor:
+            paths.append([stitch.color, []])
+        paths[-1][1].append(['L' if len(paths[-1][1]) > 0 else 'M', stitch.as_tuple()])
+        lastColor = stitch.color
+        lastStitch = stitch
+    return paths
 
-                    for j in add_preamble[1:]:
-                        try:
-                            stitch = deepcopy(locs[int(j)])
-                            stitch.color = patch.color
-                            stitch.jumpStitch = False
-                            emb.addStitch(stitch)
-                        except IndexError:
-                            pass
 
-                jumpStitch = False
-                lastStitch = newStitch
-                lastColor = patch.color
-
-        dx, dy = emb.translate_to_origin()
-        emb.scale(1.0/pixels_per_millimeter)
-
-        fp = open(filename, "wb")
-
-        if output_format == "melco":
-            fp.write(emb.export_melco(dbg))
-        elif output_format == "csv":
-            fp.write(emb.export_csv(dbg))
-        elif output_format == "gcode":
-            fp.write(emb.export_gcode(dbg))
-        fp.close()
-        emb.scale(pixels_per_millimeter)
-        emb.translate(dx, dy)
-        return emb
-
-    def emit_inkscape(self, parent, emb):
-        emb.scale((1, -1));
-        for color, path in emb.export_paths(dbg):
-            dbg.write('path: %s %s\n' % (color, repr(path)))
-            inkex.etree.SubElement(parent,
-                inkex.addNS('path', 'svg'),
-                {    'style':simplestyle.formatStyle(
-                        { 'stroke': color if color is not None else '#000000',
-                            'stroke-width':"0.4",
-                            'fill': 'none' }),
-                    'd':simplepath.formatPath(path),
-                })
-
-    def bbox(self):
-        x = []
-        y = []
-        for patch in self.patchList.patches:
-            for stitch in patch.stitches:
-                x.append(stitch.x)
-                y.append(stitch.y)
-        return (min(x), min(y), max(x), max(y))
-
-class SortOrder:
-    def __init__(self, *terms):
-        self.sorttuple = terms
-
-    def append(self, criterion):
-        self.sorttuple += (criterion,)
-
-    def __cmp__(self, other):
-        return cmp(self.sorttuple, other.sorttuple)
-
-    def __repr__(self):
-        return "Sort%s" % self.sorttuple
+def emit_inkscape(parent, stitches):
+    for color, path in stitches_to_paths(stitches):
+        dbg.write('path: %s %s\n' % (color, repr(path)))
+        inkex.etree.SubElement(parent,
+            inkex.addNS('path', 'svg'),
+            {    'style':simplestyle.formatStyle(
+                    { 'stroke': color if color is not None else '#000000',
+                        'stroke-width':"0.4",
+                        'fill': 'none' }),
+                'd':simplepath.formatPath(path),
+            })
 
 class Embroider(inkex.Effect):
     def __init__(self, *args, **kwargs):
@@ -622,6 +275,10 @@ class Embroider(inkex.Effect):
             action="store", type="float",
             dest="collapse_len_mm", default=0.0,
             help="max collapse length (mm)")
+        self.OptionParser.add_option("-a", "--fill_angle_deg",
+            action="store", type="float",
+            dest="fill_angle_deg", default=0,
+            help="fill angle (deg)")
         self.OptionParser.add_option("-f", "--flatness",
             action="store", type="float",
             dest="flat", default=0.1,
@@ -641,11 +298,6 @@ class Embroider(inkex.Effect):
             choices=["true","false"],
             dest="hide_layers", default="true",
             help="Hide all other layers when the embroidery layer is generated")
-        self.OptionParser.add_option("-p", "--add_preamble",
-            action="store", type="choice",
-            choices=["0","010","01010","01210","012101210"],
-            dest="add_preamble", default="0",
-            help="Add preamble")
         self.OptionParser.add_option("-O", "--output_format",
             action="store", type="choice",
             choices=["melco", "csv", "gcode"],
@@ -661,17 +313,13 @@ class Embroider(inkex.Effect):
             help="Max number of backups of output files to keep.")
         self.patches = []
 
-    def get_sort_order(self, threadcolor, node):
-        #print >> sys.stderr, "node", node.get("id"), self.order.get(node.get("id"))
-        return SortOrder(self.order.get(node.get("id")), threadcolor)
-
-    def process_one_path(self, node, shpath, threadcolor, sortorder, angle):
+    def process_one_path(self, node, shpath, threadcolor, angle):
         #self.add_shapely_geo_to_svg(shpath.boundary, color="#c0c000")
 
         hatching = get_boolean_param(node, "hatching", self.hatching)
         flip = get_boolean_param(node, "flip", False)
-        row_spacing_px = get_float_param(node, "row_spacing", self.row_spacing_px)
-        max_stitch_len_px = get_float_param(node, "max_stitch_length", self.max_stitch_len_px)
+        row_spacing_px = get_float_param(node, "row_spacing", self.options.row_spacing_mm)*pixels_per_millimeter
+        max_stitch_len_px = get_float_param(node, "max_stitch_length", self.options.max_stitch_len_mm)*pixels_per_millimeter
         num_staggers = get_int_param(node, "staggers", 4)
 
         rows_of_segments = self.intersect_region_with_grating(shpath, row_spacing_px, angle, flip)
@@ -680,12 +328,11 @@ class Embroider(inkex.Effect):
         # "east" is the name of the direction that is to the right along a row
         east = PyEmb.Point(1, 0).rotate(-angle)
 
-        #print >> sys.stderr, "rows", len(rows_of_segments)
-        #print >> sys.stderr, "groups", len(groups_of_segments)
+        #print >> sys.stderr, len(groups_of_segments)
 
         patches = []
         for group_of_segments in groups_of_segments:
-            patch = Patch(color=threadcolor,sortorder=sortorder)
+            patch = Patch(color=threadcolor)
             first_segment = True
             swap = False
             last_end = None
@@ -823,9 +470,8 @@ class Embroider(inkex.Effect):
                 runs.reverse()
                 runs = map(reverseTuple, runs)
 
-            #seems to add odd rows
-	    #if self.hatching and len(rows) > 0:
-            #    rows.append([(rows[-1][0][1], runs[0][0])])
+            if self.hatching and len(rows) > 0:
+                rows.append([(rows[-1][0][1], runs[0][0])])
 
             rows.append(runs)
 
@@ -853,11 +499,10 @@ class Embroider(inkex.Effect):
             return shgeo.Polygon((segment1[0], segment1[1], segment2[1], segment2[0], segment1[0]))
 
         def is_same_run(segment1, segment2):
-            #This actually prevents detection of unajacent blocks
-            #print >>sys.stderr, shgeo.LineString(segment1).distance(shgeo.LineString(segment2))
-            #if self.options.hatch_filled_paths:
-            #    return True
-            if shgeo.LineString(segment1).distance(shgeo.LineString(segment2)) > row_spacing_px * 1.1:
+            if self.options.hatch_filled_paths:
+                return True
+
+            if shgeo.LineString(segment1).distance(shgeo.LineString(segment1)) > row_spacing_px * 1.1:
                 return False
 
             quad = make_quadrilateral(segment1, segment2)
@@ -874,8 +519,6 @@ class Embroider(inkex.Effect):
         runs = []
         count = 0
         while (len(rows) > 0):
-            prevrownum = len(rows[0])
-            #print >>sys.stderr, str(prevrownum)
             run = []
             prev = None
 
@@ -883,10 +526,8 @@ class Embroider(inkex.Effect):
                 row = rows[row_num]
                 first, rest = row[0], row[1:]
 
+                # TODO: only accept actually adjacent rows here
                 if prev is not None and not is_same_run(prev, first):
-                    break
-
-                if prevrownum != len(row):
                     break
     
                 run.append(first)
@@ -918,7 +559,7 @@ class Embroider(inkex.Effect):
         #dbg.write("Node: %s\n"%str((id, etree.tostring(node, pretty_print=True))))
 
         if get_boolean_param(node, "satin_column"):
-            self.patchList.patches.extend(self.satin_column(node))
+            self.patch_list.extend(self.satin_column(node))
         else:
             stroke = []
             fill = []
@@ -929,14 +570,11 @@ class Embroider(inkex.Effect):
                 fill = self.filled_region_to_patchlist(node)
 
             if get_boolean_param(node, "stroke_first", False):
-                for patch in stroke:
-                    patch.sortorder.append(0)
-
-                for patch in fill:
-                    patch.sortorder.append(1)
-
-            self.patchList.patches.extend(stroke)
-            self.patchList.patches.extend(fill)
+                self.patch_list.extend(stroke)
+                self.patch_list.extend(fill)
+            else:
+                self.patch_list.extend(fill)
+                self.patch_list.extend(stroke)
 
     def get_style(self, node, style_name):
         style = simplestyle.parseStyle(node.get("style"))
@@ -946,32 +584,6 @@ class Embroider(inkex.Effect):
         if (value==None or value=="none"):
             return None
         return value
-
-    def cache_order(self):
-        if self.options.order == "automatic":
-            self.order = defaultdict(lambda: 0)
-            return
-
-        self.order = {}
-
-        layer_tag = inkex.addNS("g", "svg")
-        group_attr = inkex.addNS('groupmode', 'inkscape')
-
-        def is_layer(node):
-            return node.tag == layer_tag and node.get(group_attr) == "layer"
-
-        def process(node, order=0):
-            if self.options.order == "object" or (self.options.order == "layer" and is_layer(node)):
-                order += 1
-
-            self.order[node.get("id")] = order
-
-            for child in node:
-                order = process(child, order)
-
-            return order
-
-        process(self.document.getroot())
 
     def get_output_path(self):
         svg_filename = self.document.getroot().get(inkex.addNS('docname', 'sodipodi'))
@@ -1005,9 +617,6 @@ class Embroider(inkex.Effect):
         old_stdout = sys.stdout
         sys.stdout = sys.stderr
 
-        self.cache_order()
-        #print >> sys.stderr, "cached stacking order:", self.order
-
         self.row_spacing_px = self.options.row_spacing_mm * pixels_per_millimeter
         self.zigzag_spacing_px = self.options.zigzag_spacing_mm * pixels_per_millimeter
         self.max_stitch_len_px = self.options.max_stitch_len_mm*pixels_per_millimeter
@@ -1017,19 +626,22 @@ class Embroider(inkex.Effect):
 
         self.svgpath = inkex.addNS('path', 'svg')
         self.svgdefs = inkex.addNS('defs', 'svg')
-        self.patchList = PatchList([])
+        self.patch_list = []
 
         dbg.write("starting nodes: %s" % time.time())
         dbg.flush()
         if self.selected:
-            for node in self.selected.itervalues():
-                self.handle_node(node)
+            # be sure to visit selected nodes in the order they're stacked in
+            # the document
+            for node in self.document.getroot().iter():
+                if node.get("id") in self.selected:
+                    self.handle_node(node)
         else:
             self.handle_node(self.document.getroot())
         dbg.write("finished nodes: %s" % time.time())
         dbg.flush()
 
-        if not self.patchList:
+        if not self.patch_list:
             if self.selected:
                 inkex.errormsg("No embroiderable paths selected.")
             else:
@@ -1037,43 +649,21 @@ class Embroider(inkex.Effect):
             inkex.errormsg("Tip: use Path -> Object to Path to convert non-paths before embroidering.")
             return
 
-        dbg.write("starting tsp: %s" % time.time())
-        self.patchList = self.patchList.tsp_by_color()
-        dbg.write("finished tsp: %s" % time.time())
-        #dbg.write("patch count: %d\n" % len(self.patchList.patches))
-
         if self.options.hide_layers:
             self.hide_layers()
 
-        eo = EmbroideryObject(self.patchList, self.row_spacing_px)
-        emb = eo.emit_file(self.get_output_path(), self.options.output_format,
-                 self.collapse_len_px, self.options.add_preamble)
+        stitches = patches_to_stitches(self.patch_list, self.collapse_len_px)
+        emb = PyEmb.Embroidery(stitches, pixels_per_millimeter)
+        emb.export(self.get_output_path(), self.options.output_format)
 
         new_layer = inkex.etree.SubElement(self.document.getroot(),
                 inkex.addNS('g', 'svg'), {})
         new_layer.set('id', self.uniqueId("embroidery"))
         new_layer.set(inkex.addNS('label', 'inkscape'), 'Embroidery')
         new_layer.set(inkex.addNS('groupmode', 'inkscape'), 'layer')
-        eo.emit_inkscape(new_layer, emb)
+        emit_inkscape(new_layer, stitches)
 
         sys.stdout = old_stdout
-
-    def emit_inkscape_bbox(self, parent, eo):
-        (x0, y0, x1, y1) = eo.bbox()
-        new_path = []
-        new_path.append(['M', (x0,y0)])
-        new_path.append(['L', (x1,y0)])
-        new_path.append(['L', (x1,y1)])
-        new_path.append(['L', (x0,y1)])
-        new_path.append(['L', (x0,y0)])
-        inkex.etree.SubElement(parent,
-            inkex.addNS('path', 'svg'),
-            {    'style':simplestyle.formatStyle(
-                    { 'stroke': '#ff00ff',
-                        'stroke-width':str(1),
-                        'fill': 'none' }),
-                'd':simplepath.formatPath(new_path),
-            })
 
     def hide_layers(self):
         for g in self.document.getroot().findall(inkex.addNS("g","svg")):
@@ -1092,11 +682,10 @@ class Embroider(inkex.Effect):
         #dbg.write("stroke_width is <%s>\n" % repr(stroke_width))
         #dbg.flush()
 
-        running_stitch_len_px = get_float_param(node, "stitch_length", self.running_stitch_len_px)
-        zigzag_spacing_px = get_float_param(node, "zigzag_spacing", self.zigzag_spacing_px)
+        running_stitch_len_px = get_float_param(node, "stitch_length", self.options.running_stitch_len_mm)*pixels_per_millimeter
+        zigzag_spacing_px = get_float_param(node, "zigzag_spacing", self.options.zigzag_spacing_mm)*pixels_per_millimeter
         repeats = get_int_param(node, "repeats", 1)
 
-        sortorder = self.get_sort_order(threadcolor, node)
         paths = flatten(parse_path(node), self.options.flat)
 
         # regularize the points lists.
@@ -1109,15 +698,15 @@ class Embroider(inkex.Effect):
             path = [PyEmb.Point(x, y) for x, y in path]
             if (stroke_width <= STROKE_MIN or dashed):
                 #dbg.write("self.max_stitch_len_px = %s\n" % self.max_stitch_len_px)
-                patch = self.stroke_points(path, running_stitch_len_px, 0.0, repeats, threadcolor, sortorder)
+                patch = self.stroke_points(path, running_stitch_len_px, 0.0, repeats, threadcolor)
             else:
-                patch = self.stroke_points(path, zigzag_spacing_px*0.5, stroke_width, repeats, threadcolor, sortorder)
+                patch = self.stroke_points(path, zigzag_spacing_px*0.5, stroke_width, repeats, threadcolor)
             patches.extend(patch)
 
         return patches
 
-    def stroke_points(self, emb_point_list, zigzag_spacing_px, stroke_width, repeats, threadcolor, sortorder):
-        patch = Patch(color=threadcolor, sortorder=sortorder)
+    def stroke_points(self, emb_point_list, zigzag_spacing_px, stroke_width, repeats, threadcolor):
+        patch = Patch(color=threadcolor)
         p0 = emb_point_list[0]
         rho = 0.0
         fact = 1
@@ -1166,16 +755,14 @@ class Embroider(inkex.Effect):
         return [patch]
 
     def filled_region_to_patchlist(self, node):
-        angle = math.radians(float(get_float_param(node,"angle",0)))
+        angle = math.radians(float(get_float_param(node,'angle',self.options.fill_angle_deg)))
         paths = flatten(parse_path(node), self.options.flat)
         shapelyPolygon = cspToShapelyPolygon(paths)
         threadcolor = simplestyle.parseStyle(node.get("style"))["fill"]
-        sortorder = self.get_sort_order(threadcolor, node)
         return self.process_one_path(
                 node,
                 shapelyPolygon,
                 threadcolor,
-                sortorder,
                 angle)
 
     def fatal(self, message):
@@ -1210,10 +797,10 @@ class Embroider(inkex.Effect):
         self.validate_satin_column(node, csp)
 
         # fetch parameters
-        zigzag_spacing_px = get_float_param(node, "zigzag_spacing", self.zigzag_spacing_px)
+        zigzag_spacing_px = get_float_param(node, "zigzag_spacing", self.options.zigzag_spacing_mm)*pixels_per_millimeter
         pull_compensation_px = get_float_param(node, "pull_compensation", 0)
         underlay_inset = get_float_param(node, "satin_underlay_inset", 0)
-        underlay_stitch_len_px = get_float_param(node, "stitch_length", self.running_stitch_len_px)
+        underlay_stitch_len_px = get_float_param(node, "stitch_length", self.oprions.running_stitch_len_mm)*pixels_per_millimeter
         underlay = get_boolean_param(node, "satin_underlay", False)
         center_walk = get_boolean_param(node, "satin_center_walk", False)
         zigzag_underlay_spacing = get_float_param(node, "satin_zigzag_underlay_spacing", 0)
@@ -1245,10 +832,12 @@ class Embroider(inkex.Effect):
         path2 = csp[1]
 
         threadcolor = simplestyle.parseStyle(node.get("style"))["stroke"]
-        sortorder = self.get_sort_order(threadcolor, node)
-        patch = Patch(color=threadcolor, sortorder=sortorder)
+        patch = Patch(color=threadcolor)
 
-        def offset_stitches(pos1, pos2, offset_px):
+        def offset_points(pos1, pos2, offset_px):
+            # Expand or contract points.  This is useful for pull
+            # compensation and insetting underlay.
+
             distance = (pos1 - pos2).length()
 
             if (pos1 - pos2).length() < 0.0001:
@@ -1256,7 +845,8 @@ class Embroider(inkex.Effect):
                 # to offset in, so we have to just return the points
                 return pos1, pos2
 
-            # don't offset so far that pos1 and pos2 switch places
+            # if offset is negative, don't contract so far that pos1
+            # and pos2 switch places
             if offset_px < -distance/2.0:
                 offset_px = -distance/2.0 
 
@@ -1266,22 +856,20 @@ class Embroider(inkex.Effect):
     
             return pos1, pos2
     
-        def calculate_satin(zigzag_spacing, offset):
-            # Take each bezier segment in turn, drawing zigzags between the two
-            # paths in that segment.
+        def walk_paths(spacing, offset):
+            # Take a bezier segment from each path in turn, and plot out an
+            # equal number of points on each side.  Later code can alternate
+            # between these points to create satin stitch, underlay, etc.
 
-            # This code used to construct the Patch directly, but now it
-            # returns the zig-zag stitches as two parallel lists (useful
-            # for underlay)
-            zigs = []
-            zags = []
+            side1 = []
+            side2 = []
     
-            def add_satin_stitch(pos1, pos2):
+            def add_pair(pos1, pos2):
                 # Stitches in satin tend to pull toward each other.  We can compensate
                 # by spreading the points out.
-                zig, zag = offset_stitches(pos1, pos2, offset)
-                zigs.append(zig)
-                zags.append(zag)
+                pos1, pos2 = offset_points(pos1, pos2, offset)
+                side1.append(pos1)
+                side2.append(pos2)
     
             remainder_path1 = []
             remainder_path2 = []
@@ -1321,13 +909,10 @@ class Embroider(inkex.Effect):
                 # The risk here is that we poke a hole in the fabric if we try to
                 # cram too many stitches on the short bezier.  The user will need
                 # to avoid this through careful construction of paths.
-                num_zigzags = max(len1, len2) / zigzag_spacing
+                num_points = max(len1, len2) / spacing
     
-                stitch_len1 = len1 / num_zigzags
-                stitch_len2 = len2 / num_zigzags
-    
-                # Now do the stitches.  Each "zigzag" has a "zig" and a "zag", that
-                # is, go from path1 to path2 and then back to path1.
+                spacing1 = len1 / num_points
+                spacing2 = len2 / num_points
     
                 def walk(path, start_pos, start_index, distance):
                     # Move <distance> pixels along <path>'s line segments.
@@ -1367,13 +952,11 @@ class Embroider(inkex.Effect):
     
     #            if num_zigzags >= 1.0:
     #                for stitch in xrange(int(num_zigzags) + 1):
-                for stitch in xrange(int(num_zigzags)):
-                    # In each iteration, do a "zig" (pos1) and a "zag" (pos2).
+                for i in xrange(int(num_points)):
+                    add_pair(pos1, pos2)
     
-                    add_satin_stitch(pos1, pos2)
-    
-                    pos2, i2 = walk(subpath2, pos2, i2, stitch_len2)
-                    pos1, i1 = walk(subpath1, pos1, i1, stitch_len1)
+                    pos2, i2 = walk(subpath2, pos2, i2, spacing2)
+                    pos1, i1 = walk(subpath1, pos1, i1, spacing1)
     
                 if i1 < len(subpath1) - 1:
                     remainder_path1 = [pos1] + subpath1[i1 + 1:]
@@ -1389,52 +972,84 @@ class Embroider(inkex.Effect):
                 remainder_path2 = [p.as_tuple() for p in remainder_path2]
     
             # We're off by one in the algorithm above, so we need one more
-            # pair of stitches.  We also want to stitch at the very end to
+            # pair of points.  We also want to add points at the very end to
             # make sure we match the vectors on screen as best as possible.
             # Try to avoid doing both if they're going to stack up too
             # closely.
  
             end1 = PyEmb.Point(*remainder_path1[-1])
             end2 = PyEmb.Point(*remainder_path2[-1])
-            if (end1 - pos1).length() > 0.3 * zigzag_spacing:
-                add_satin_stitch(pos1, pos2)
+            if (end1 - pos1).length() > 0.3 * spacing:
+                add_pair(pos1, pos2)
 
-            add_satin_stitch(end1, end2)
+            add_pair(end1, end2)
 
-            return [zigs, zags]
+            return [side1, side2]
 
         def calculate_underlay(inset):
-            forward, back = calculate_satin(underlay_stitch_len_px, -inset)
-            return Patch(color=threadcolor, sortorder=sortorder, stitches=(forward + list(reversed(back))))
+            # "contour walk" underlay: do stitches up one side and down the
+            # other.
+            forward, back = walk_paths(underlay_stitch_len_px, -inset)
+            return Patch(color=threadcolor, stitches=(forward + list(reversed(back))))
 
-        def satin_to_patch(zigzag_spacing, pull_compensation, reverse=False):
-            patch = Patch(color=threadcolor, sortorder=sortorder)
+        def calculate_zigzag_underlay(zigzag_spacing, inset):
+            # zigzag underlay, usually done at a much lower density than the
+            # satin itself.  It looks like this:
+            #
+            # \/\/\/\/\/\/\/\/\/\/|
+            # /\/\/\/\/\/\/\/\/\/\|
+            #
+            # In combination with the "contour walk" underlay, this is the
+            # "German underlay" described here:
+            #   http://www.mrxstitch.com/underlay-what-lies-beneath-machine-embroidery/
 
-            sides = calculate_satin(zigzag_spacing, pull_compensation)
+            patch = Patch(color=threadcolor)
 
-            if reverse:
-                sides.reverse()
+            sides = walk_paths(zigzag_spacing/2.0, -inset)
+            sides = [sides[0][::2] + list(reversed(sides[0][1::2])), sides[1][1::2] + list(reversed(sides[1][::2]))] 
+
+            # this fancy bit of iterable magic just repeatedly takes a point
+            # from each list in turn
+            for point in chain.from_iterable(izip(*sides)):
+                patch.addStitch(point)
+
+            return patch
+
+        def calculate_satin(zigzag_spacing, pull_compensation):
+            # satin: do a zigzag pattern, alternating between the paths.  The
+            # zigzag looks like this:
+            #
+            # /|/|/|/|/|/|/|/|
+
+            patch = Patch(color=threadcolor)
+
+            sides = walk_paths(zigzag_spacing, pull_compensation)
 
             for point in chain.from_iterable(izip(*sides)):
                 patch.addStitch(point)
 
-            if reverse:
-                patch = patch.reverse()
-
             return patch
 
         if center_walk:
-            # inset will be clamped to the center point between the stitches
+            # Center walk is a running stitch exactly between the paths, down
+            # and back.  It comes first.
+
+            # Bit of a hack: do it just like contour walk underlay but inset it
+            # really far.  The inset will be clamped to the center between the
+            # paths.
             patch += calculate_underlay(10000)
 
         if underlay:
+            # Now do the contour walk underlay.
             patch += calculate_underlay(underlay_inset)
 
         if zigzag_underlay_spacing:
-            patch += satin_to_patch(zigzag_underlay_spacing, -zigzag_underlay_inset)
-            patch += satin_to_patch(zigzag_underlay_spacing, -zigzag_underlay_inset, reverse=True)
+            # zigzag underlay comes after contour walk underlay, so that the
+            # zigzags sit on the contour walk underlay like rail ties on rails.
+            patch += calculate_zigzag_underlay(zigzag_underlay_spacing, zigzag_underlay_inset)
 
-        patch += satin_to_patch(zigzag_spacing_px, pull_compensation_px)
+        # Finally, add the satin itself.
+        patch += calculate_satin(zigzag_spacing_px, pull_compensation_px)
 
         return [patch]
 
