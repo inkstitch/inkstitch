@@ -4,6 +4,7 @@
 
 import math
 import sys
+from copy import deepcopy
 
 class Point:
 	def __init__(self, x, y):
@@ -58,20 +59,25 @@ class Point:
 	def __cmp__(self, other):
 		return cmp(self.as_tuple(), other.as_tuple())
 
-class Embroidery:
-	def __init__(self):
-		self.coords = []
+class Stitch(Point):
+    def __init__(self, x, y, color=None, jumpStitch=False):
+        Point.__init__(self, x, y)
+        self.color = color
+        self.jumpStitch = jumpStitch
 
-	def addStitch(self, coord):
-		if len(self.coords) == 0 or self.coords[-1] != coord:
-			self.coords.append(coord)
+class Embroidery:
+	def __init__(self, stitches, pixels_per_millimeter=1):
+		self.stitches = deepcopy(stitches)
+		self.scale(1.0/pixels_per_millimeter)
+		self.scale((1, -1))
+		self.translate_to_origin()
 
 	def translate_to_origin(self):
-		if (len(self.coords)==0):
+		if (len(self.stitches)==0):
 			return
-		(maxx,maxy) = (self.coords[0].x,self.coords[0].y)
-		(minx,miny) = (self.coords[0].x,self.coords[0].y)
-		for p in self.coords:
+		(maxx,maxy) = (self.stitches[0].x,self.stitches[0].y)
+		(minx,miny) = (self.stitches[0].x,self.stitches[0].y)
+		for p in self.stitches:
 			minx = min(minx,p.x)
 			miny = min(miny,p.y)
 			maxx = max(maxx,p.x)
@@ -83,22 +89,22 @@ class Embroidery:
 		return (minx, miny)
 
 	def translate(self, dx, dy):
-		for p in self.coords:
+		for p in self.stitches:
 			p.x += dx
 			p.y += dy
 
 	def scale(self, sc):
 		if not isinstance(sc, (tuple, list)):
 			sc = (sc, sc)
-		for p in self.coords:
+		for p in self.stitches:
 			p.x *= sc[0]
 			p.y *= sc[1]
 			
-	def export_ksm(self, dbg):
+	def export_ksm(self):
 		str = ""
 		self.pos = Point(0,0)
 		lastColor = None
-		for stitch in self.coords:
+		for stitch in self.stitches:
 			if (lastColor!=None and stitch.color!=lastColor):
 				mode_byte = 0x99
 				#dbg.write("Color change!\n")
@@ -121,13 +127,13 @@ class Embroidery:
 			self.pos = stitch
 		return str
 
-	def export_melco(self, dbg):
+	def export_melco(self):
 		self.str = ""
-		self.pos = self.coords[0]
-		#dbg.write("stitch count: %d\n" % len(self.coords))
+		self.pos = self.stitches[0]
+		#dbg.write("stitch count: %d\n" % len(self.stitches))
 		lastColor = None
 		numColors = 0x0
-		for stitch in self.coords[1:]:
+		for stitch in self.stitches[1:]:
 			if (lastColor!=None and stitch.color!=lastColor):
 				numColors += 1
 				# color change
@@ -164,14 +170,14 @@ class Embroidery:
 			self.pos = stitch
 		return self.str
 
-	def export_csv(self, dbg):
+	def export_csv(self):
 		self.str = ""
 		self.str += '"#","[THREAD_NUMBER]","[RED]","[GREEN]","[BLUE]","[DESCRIPTION]","[CATALOG_NUMBER]"\n'
 		self.str += '"#","[STITCH_TYPE]","[X]","[Y]"\n'
 
 		lastStitch = None
 		colorIndex = 0
-		for stitch in self.coords:
+		for stitch in self.stitches:
 			if lastStitch is not None and stitch.color != lastStitch.color:
 				self.str += '"*","COLOR","%f","%f"\n' % (lastStitch.x, lastStitch.y)
 			if lastStitch is None or stitch.color != lastStitch.color:
@@ -188,10 +194,10 @@ class Embroidery:
 		self.str += '"*","END","%f","%f"\n' % (lastStitch.x, lastStitch.y)
 		return self.str
 
-	def export_gcode(self, dbg):
+	def export_gcode(self):
 		ret = []
 		lastColor = None
-		for stitch in self.coords:
+		for stitch in self.stitches:
 			if stitch.color != lastColor:
 				ret.append('M0 ;MSG, Color change; prepare for %s\n' % stitch.color)
 			lastColor = stitch.color
@@ -199,24 +205,16 @@ class Embroidery:
 			ret.append('M0 ;MSG, EMBROIDER stitch\n')
 		return ''.join(ret)
 
-	def export_paths(self, dbg):
-		paths = []
-		lastColor = None
-		lastStitch = None
-		for stitch in self.coords:
-			if stitch.jumpStitch:
-				if lastColor == stitch.color:
-					paths.append([None, []])
-					if lastStitch is not None:
-						paths[-1][1].append(['M', lastStitch.as_tuple()])
-						paths[-1][1].append(['L', stitch.as_tuple()])
-				lastColor = None
-			if stitch.color != lastColor:
-				paths.append([stitch.color, []])
-			paths[-1][1].append(['L' if len(paths[-1][1]) > 0 else 'M', stitch.as_tuple()])
-			lastColor = stitch.color
-			lastStitch = stitch
-		return paths
+	def export(self, filename, format):
+		fp = open(filename, "wb")
+
+		if format == "melco":
+			fp.write(self.export_melco())
+		elif format == "csv":
+ 			fp.write(self.export_csv())
+		elif format == "gcode":
+ 			fp.write(self.export_gcode())
+		fp.close()
 
 class Test:
 	def __init__(self):

@@ -17,13 +17,6 @@
         <_option value="layer">Preserve layer order only</_option>
         <_option value="object">Preserve object stacking order</_option>
     </param>
-    <param name="add_preamble" type="optiongroup" _gui-text="Add preamble" appearance="minimal">
-        <_option value="0">None</_option>
-        <_option value="010">0-1-0</_option>
-        <_option value="01010">0-1-0-1-0</_option>
-        <_option value="01210">0-1-2-1-0</_option>
-        <_option value="012101210">0-1-2-1-0-1-2-1-0</_option>
-    </param>
     <param name="output_format" type="optiongroup" _gui-text="Output file format" appearance="minimal">
         <_option value="melco">Melco</_option>
         <_option value="csv">Embroidermodder 2 CSV</_option>
