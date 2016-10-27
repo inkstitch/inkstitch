@@ -9,6 +9,7 @@
     <param name="max_stitch_len_mm"       type="float"   min="0.1" max="100.0" _gui-text="Maximum stitch length (mm)">3.0</param>
     <param name="running_stitch_len_mm"       type="float"   min="0.1" max="100.0" _gui-text="Running stitch length (mm)">3.0</param>
     <param name="collapse_len_mm" type="float" min="0.0" max="10.0" _gui-text="Maximum collapse length (mm)">0.0</param>
+    <param name="fill_angle_deg"       type="float"   min="0" max="180" precision="0" _gui-text="Fill angle (deg)">0.0</param>
     <param name="hatch_filled_paths" type="boolean" _gui-text="Hatch filled paths" description="If false, filled paths are filled using equally-spaced lines.  If true, filled paths are filled using hatching lines.">false</param>
     <param name="hide_layers" type="boolean" _gui-text="Hide other layers" description="Hide all other top-level layers when the embroidery layer is generated, in order to make stitching discernable.">true</param>
     <param name="order" type="optiongroup" _gui-text="Stitch Order" appearance="minimal">

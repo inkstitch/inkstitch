@@ -44,10 +44,7 @@ from pprint import pformat
 
 dbg = open("/tmp/embroider-debug.txt", "w")
 PyEmb.dbg = dbg
-#pixels_per_millimeter = 90.0 / 25.4
-
-#this makes each pixel worth one tenth of a millimeter
-pixels_per_millimeter = 10
+pixels_per_millimeter = 90.0 / 25.4
 
 # a 0.5pt stroke becomes a straight line.
 STROKE_MIN = 0.5
@@ -278,6 +275,10 @@ class Embroider(inkex.Effect):
             action="store", type="float",
             dest="collapse_len_mm", default=0.0,
             help="max collapse length (mm)")
+        self.OptionParser.add_option("-a", "--fill_angle_deg",
+            action="store", type="float",
+            dest="fill_angle_deg", default=0,
+            help="fill angle (deg)")
         self.OptionParser.add_option("-f", "--flatness",
             action="store", type="float",
             dest="flat", default=0.1,
@@ -317,8 +318,8 @@ class Embroider(inkex.Effect):
 
         hatching = get_boolean_param(node, "hatching", self.hatching)
         flip = get_boolean_param(node, "flip", False)
-        row_spacing_px = get_float_param(node, "row_spacing", self.row_spacing_px)
-        max_stitch_len_px = get_float_param(node, "max_stitch_length", self.max_stitch_len_px)
+        row_spacing_px = get_float_param(node, "row_spacing", self.options.row_spacing_mm)*pixels_per_millimeter
+        max_stitch_len_px = get_float_param(node, "max_stitch_length", self.options.max_stitch_len_mm)*pixels_per_millimeter
         num_staggers = get_int_param(node, "staggers", 4)
 
         rows_of_segments = self.intersect_region_with_grating(shpath, row_spacing_px, angle, flip)
@@ -681,8 +682,8 @@ class Embroider(inkex.Effect):
         #dbg.write("stroke_width is <%s>\n" % repr(stroke_width))
         #dbg.flush()
 
-        running_stitch_len_px = get_float_param(node, "stitch_length", self.running_stitch_len_px)
-        zigzag_spacing_px = get_float_param(node, "zigzag_spacing", self.zigzag_spacing_px)
+        running_stitch_len_px = get_float_param(node, "stitch_length", self.options.running_stitch_len_mm)*pixels_per_millimeter
+        zigzag_spacing_px = get_float_param(node, "zigzag_spacing", self.options.zigzag_spacing_mm)*pixels_per_millimeter
         repeats = get_int_param(node, "repeats", 1)
 
         paths = flatten(parse_path(node), self.options.flat)
@@ -754,7 +755,7 @@ class Embroider(inkex.Effect):
         return [patch]
 
     def filled_region_to_patchlist(self, node):
-        angle = math.radians(float(get_float_param(node,'angle',0)))
+        angle = math.radians(float(get_float_param(node,'angle',self.options.fill_angle_deg)))
         paths = flatten(parse_path(node), self.options.flat)
         shapelyPolygon = cspToShapelyPolygon(paths)
         threadcolor = simplestyle.parseStyle(node.get("style"))["fill"]
@@ -796,10 +797,10 @@ class Embroider(inkex.Effect):
         self.validate_satin_column(node, csp)
 
         # fetch parameters
-        zigzag_spacing_px = get_float_param(node, "zigzag_spacing", self.zigzag_spacing_px)
+        zigzag_spacing_px = get_float_param(node, "zigzag_spacing", self.options.zigzag_spacing_mm)*pixels_per_millimeter
         pull_compensation_px = get_float_param(node, "pull_compensation", 0)
         underlay_inset = get_float_param(node, "satin_underlay_inset", 0)
-        underlay_stitch_len_px = get_float_param(node, "stitch_length", self.running_stitch_len_px)
+        underlay_stitch_len_px = get_float_param(node, "stitch_length", self.oprions.running_stitch_len_mm)*pixels_per_millimeter
         underlay = get_boolean_param(node, "satin_underlay", False)
         center_walk = get_boolean_param(node, "satin_center_walk", False)
         zigzag_underlay_spacing = get_float_param(node, "satin_zigzag_underlay_spacing", 0)
