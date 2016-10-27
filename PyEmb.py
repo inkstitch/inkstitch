@@ -19,7 +19,7 @@ class Point:
 
     def mul(self, scalar):
         return Point(self.x*scalar, self.y*scalar)
-    
+
     def __mul__(self, other):
         if isinstance(other, Point):
             # dot product
@@ -99,7 +99,7 @@ class Embroidery:
         for p in self.stitches:
             p.x *= sc[0]
             p.y *= sc[1]
-            
+
     def export_ksm(self):
         str = ""
         self.pos = Point(0,0)
@@ -152,7 +152,7 @@ class Embroidery:
                 self.str+=chr(x)
                 if (y<0): y = y + 256
                 self.str+=chr(y)
-                
+
             while (delta.x!=0 or delta.y!=0):
                 def clamp(v):
                     if (v>127):
@@ -165,7 +165,7 @@ class Embroidery:
                 move(dx,dy)
                 delta.x -= dx
                 delta.y -= dy
-                
+
             #dbg.write("Stitch: %s delta %s\n" % (stitch, delta))
             self.pos = stitch
         return self.str
@@ -255,7 +255,7 @@ class Turtle:
 
     def left(self, degreesccw):
         self.turn(-degreesccw)
-    
+
 class Koch(Turtle):
     def __init__(self, depth):
         Turtle.__init__(self)
@@ -268,7 +268,7 @@ class Koch(Turtle):
         fp = open("koch%d.exp" % depth, "wb")
         fp.write(self.emb.export_melco())
         fp.close()
-    
+
     def edge(self, depth, dist):
         if (depth==0):
             self.forward(dist)
