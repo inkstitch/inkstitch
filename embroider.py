@@ -287,11 +287,6 @@ class Embroider(inkex.Effect):
             choices=["automatic", "layer", "object"],
             dest="order", default="automatic",
             help="patch stitching order")
-        self.OptionParser.add_option("-H", "--hatch_filled_paths",
-            action="store", type="choice",
-            choices=["true","false"],
-            dest="hatch_filled_paths", default="false",
-            help="Use hatching lines instead of equally-spaced lines to fill paths")
         self.OptionParser.add_option("--hide_layers",
             action="store", type="choice",
             choices=["true","false"],
@@ -315,7 +310,6 @@ class Embroider(inkex.Effect):
     def process_one_path(self, node, shpath, threadcolor, angle):
         #self.add_shapely_geo_to_svg(shpath.boundary, color="#c0c000")
 
-        hatching = get_boolean_param(node, "hatching", self.hatching)
         flip = get_boolean_param(node, "flip", False)
         row_spacing_px = get_float_param(node, "row_spacing", self.row_spacing_px)
         max_stitch_len_px = get_float_param(node, "max_stitch_length", self.max_stitch_len_px)
@@ -400,9 +394,7 @@ class Embroider(inkex.Effect):
                     patch.addStitch(end)
 
                 last_end = end
-
-                if not hatching:
-                    swap = not swap
+                swap = not swap
 
             patches.append(patch)
         return patches
@@ -469,9 +461,6 @@ class Embroider(inkex.Effect):
                 runs.reverse()
                 runs = map(reverseTuple, runs)
 
-            if self.hatching and len(rows) > 0:
-                rows.append([(rows[-1][0][1], runs[0][0])])
-
             rows.append(runs)
 
             start += row_spacing_px
@@ -498,9 +487,6 @@ class Embroider(inkex.Effect):
             return shgeo.Polygon((segment1[0], segment1[1], segment2[1], segment2[0], segment1[0]))
 
         def is_same_run(segment1, segment2):
-            if self.options.hatch_filled_paths:
-                return True
-
             if shgeo.LineString(segment1).distance(shgeo.LineString(segment1)) > row_spacing_px * 1.1:
                 return False
 
@@ -621,7 +607,6 @@ class Embroider(inkex.Effect):
         self.max_stitch_len_px = self.options.max_stitch_len_mm*pixels_per_millimeter
         self.running_stitch_len_px = self.options.running_stitch_len_mm*pixels_per_millimeter
         self.collapse_len_px = self.options.collapse_len_mm*pixels_per_millimeter
-        self.hatching = self.options.hatch_filled_paths == "true"
 
         self.svgpath = inkex.addNS('path', 'svg')
         self.svgdefs = inkex.addNS('defs', 'svg')
