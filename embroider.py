@@ -120,24 +120,6 @@ def flatten(path, flatness):
 
     return flattened
 
-def bboxarea(poly):
-    x0=None
-    x1=None
-    y0=None
-    y1=None
-    for pt in poly:
-        if (x0==None or pt[0]<x0): x0 = pt[0]
-        if (x1==None or pt[0]>x1): x1 = pt[0]
-        if (y0==None or pt[1]<y0): y0 = pt[1]
-        if (y1==None or pt[1]>y1): y1 = pt[1]
-    return (x1-x0)*(y1-y0)
-
-def area(poly):
-    return bboxarea(poly)
-
-def byarea(a,b):
-    return -cmp(area(a), area(b))
-
 def cspToShapelyPolygon(path):
     poly_ary = []
     for sub_path in path:
@@ -158,7 +140,8 @@ def cspToShapelyPolygon(path):
     # shapely's idea of "holes" are to subtract everything in the second set
     # from the first. So let's at least make sure the "first" thing is the
     # biggest path.
-    poly_ary.sort(byarea)
+    # TODO: actually figure out which things are holes and which are shells
+    poly_ary.sort(key=lambda point_list: shgeo.Polygon(point_list).area, reverse=True)
 
     polygon = shgeo.MultiPolygon([(poly_ary[0], poly_ary[1:])])
     #print >> sys.stderr, "polygon valid:", polygon.is_valid
