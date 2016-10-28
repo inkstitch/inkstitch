@@ -146,6 +146,8 @@ def csp_to_shapely_polygon(path):
     polygon = shgeo.MultiPolygon([(poly_ary[0], poly_ary[1:])])
     #print >> sys.stderr, "polygon valid:", polygon.is_valid
     return polygon
+
+
 class Patch:
     def __init__(self, color=None, stitches=None):
         self.color = color
@@ -162,6 +164,7 @@ class Patch:
 
     def reverse(self):
         return Patch(self.color, self.stitches[::-1])
+
 
 def patches_to_stitches(patch_list, collapse_len_px=0):
     stitches = []
@@ -195,6 +198,7 @@ def patches_to_stitches(patch_list, collapse_len_px=0):
 
     return stitches
 
+
 def stitches_to_paths(stitches):
     paths = []
     lastColor = None
@@ -226,6 +230,7 @@ def emit_inkscape(parent, stitches):
                         'fill': 'none' }),
                 'd':simplepath.formatPath(path),
             })
+
 
 class Embroider(inkex.Effect):
     def __init__(self, *args, **kwargs):
@@ -1019,7 +1024,6 @@ if __name__ == '__main__':
     sys.setrecursionlimit(100000);
     e = Embroider()
     e.affect()
-    #dbg.write("aaaand, I'm done. seeeya!\n")
     dbg.flush()
 
 dbg.close()
