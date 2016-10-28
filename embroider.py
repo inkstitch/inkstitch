@@ -146,10 +146,6 @@ def cspToShapelyPolygon(path):
     polygon = shgeo.MultiPolygon([(poly_ary[0], poly_ary[1:])])
     #print >> sys.stderr, "polygon valid:", polygon.is_valid
     return polygon
-
-def reverseTuple(t):
-    return tuple(reversed(t))
-
 class Patch:
     def __init__(self, color=None, stitches=None):
         self.color = color
@@ -437,7 +433,7 @@ class Embroider(inkex.Effect):
 
             if flip:
                 runs.reverse()
-                runs = map(reverseTuple, runs)
+                runs = map(lambda run: tuple(reversed(run)), runs)
 
             rows.append(runs)
 
