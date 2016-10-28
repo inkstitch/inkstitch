@@ -120,7 +120,7 @@ def flatten(path, flatness):
 
     return flattened
 
-def cspToShapelyPolygon(path):
+def csp_to_shapely_polygon(path):
     poly_ary = []
     for sub_path in path:
         point_ary = []
@@ -719,7 +719,7 @@ class Embroider(inkex.Effect):
     def filled_region_to_patchlist(self, node):
         angle = math.radians(float(get_float_param(node,'angle',0)))
         paths = flatten(parse_path(node), self.options.flat)
-        shapelyPolygon = cspToShapelyPolygon(paths)
+        shapelyPolygon = csp_to_shapely_polygon(paths)
         threadcolor = simplestyle.parseStyle(node.get("style"))["fill"]
         return self.process_one_path(
                 node,
