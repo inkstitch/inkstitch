@@ -147,11 +147,6 @@ def cspToShapelyPolygon(path):
     #print >> sys.stderr, "polygon valid:", polygon.is_valid
     return polygon
 
-def shapelyLineSegmentToPyTuple(shline):
-    tuple = ((shline.coords[0][0],shline.coords[0][1]),
-            (shline.coords[1][0],shline.coords[1][1]))
-    return tuple
-
 def reverseTuple(t):
     return tuple(reversed(t))
 
@@ -430,13 +425,13 @@ class Embroider(inkex.Effect):
             res = shline.intersection(shpath)
 
             if (isinstance(res, shgeo.MultiLineString)):
-                runs = map(shapelyLineSegmentToPyTuple, res.geoms)
+                runs = map(lambda line_string: line_string.coords, res.geoms)
             else:
                 if res.is_empty or len(res.coords) == 1:
                     # ignore if we intersected at a single point or no points
                     start += row_spacing_px
                     continue
-                runs = [shapelyLineSegmentToPyTuple(res)]
+                runs = [res.coords]
 
             runs.sort(key=lambda seg: (PyEmb.Point(*seg[0]) - upper_left).length())
 
@@ -475,7 +470,11 @@ class Embroider(inkex.Effect):
 
             quad = make_quadrilateral(segment1, segment2)
             quad_area = quad.area
-            intersection_area = shpath.intersection(quad).area
+            try:
+                intersection_area = shpath.intersection(quad).area
+            except:
+                dbg.write("blowup: %s" % quad)
+                raise
 
             return (intersection_area / quad_area) >= 0.9
 
