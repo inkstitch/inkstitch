@@ -34,10 +34,7 @@ from cspsubdiv import cspsubdiv
 import cubicsuperpath
 import PyEmb
 import math
-import random
-import operator
 import lxml.etree as etree
-from lxml.builder import E
 import shapely.geometry as shgeo
 import shapely.affinity as affinity
 from pprint import pformat
