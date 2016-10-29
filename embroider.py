@@ -419,7 +419,7 @@ class Embroider(inkex.Effect):
         # Now get a unit vector rotated to the requested angle.  I use -angle
         # because shapely rotates clockwise, but my geometry textbooks taught
         # me to consider angles as counter-clockwise from the X axis.
-        direction = PyEmb.Point(1, 0).rotate(-angle)
+        direction = PyEmb.Point(1, 0).rotate(angle)
 
         # and get a normal vector
         normal = direction.rotate(math.pi/2)
@@ -434,7 +434,7 @@ class Embroider(inkex.Effect):
         # angle degrees clockwise and ask for the new bounding box.  The max
         # and min y tell me how far to go.
 
-        _, start, _, end = affinity.rotate(shpath, angle, origin='center', use_radians = True).bounds
+        _, start, _, end = affinity.rotate(shpath, -angle, origin='center', use_radians = True).bounds
 
         # convert start and end to be relative to center (simplifies things later)
         start -= center.y
@@ -494,13 +494,7 @@ class Embroider(inkex.Effect):
 
         # Segments more than this far apart are considered not to be part of
         # the same run.  
-        row_distance_cutoff = row_spacing_px * 1.1
-
-        def make_quadrilateral(segment1, segment2):
-            return shgeo.Polygon((segment1[0], segment1[1], segment2[1], segment2[0], segment1[0]))
-
         def is_same_run(segment1, segment2):
-            print >>sys.stderr, "dist:", shgeo.LineString(segment1).distance(shgeo.LineString(segment2))
             if shgeo.LineString(segment1).distance(shgeo.LineString(segment2)) <= row_spacing_px * 1.01:
                 return True
             return False
@@ -511,37 +505,38 @@ class Embroider(inkex.Effect):
                 for onesegment in row:
                     if is_same_run(onesegment,segment):
                         count = count + 1
-            print >>sys.stderr, "acount:", str(count)
             return count
 
-        def find_adjacent_run(runs, segment):
-            print >>sys.stderr, "asearch:", str(segment)
-            for run in runs:
-                print >>sys.stderr, "rnum:", runs.index(run),"seg:",run[-1]
-                if run[-1] == segment:
-                    print >>sys.stderr, "afound:"
-                    return runs.index(run)
+        def find_adjacent_run(runs, prevrow, segment):
+            for onesegment in prevrow:
+                if is_same_run(onesegment,segment):
+                    for run in runs:
+                        if run[-1] == onesegment:
+                            return runs.index(run)
             return -1 #something went wrong, we must crash here or smth else
 
-        #for row in rows:
-        #    print >> sys.stderr, len(row)
-
-        #print >>sys.stderr, "\n".join(str(len(row)) for row in rows)
 
         #remake: splitting into runs
-        #each run must know neighbours up/down to have ability of optimizing jump stiches
+        #each run should not be enclosed by any other one
+        #all runs can figure out their neighbours up and down 
+        #thus we can determine right sequence for jump/running stitches
+        #which connect runs to avoid going through already filled area
+        #Sequence detection algorithm:
+        #run can be filled starting from side where it has no neighbours (top or bottom)
+        #after being filled the run is eliminated from list
+        #Shape detection algorithm
         #scan segments of current row with previous row segments
         #if adjacent_count == 0: start new run
         #if adjacent_count == 1: append this segment to shape
         #if adjacent_count >1: eliminate first segment from prevrow
-        #       (aka close its shape from bottom)
+        #       (aka close corresponding shape from bottom)
         runs = []
         count = 0
         prevrow = []
         for row in rows:
             for segment in row:
-                print >>sys.stderr, "P", str(prevrow)
-                print >>sys.stderr, "R", str(row)
+                #print >>sys.stderr, "P", str(prevrow)
+                #print >>sys.stderr, "R", str(row)
                 while adjacent_count(prevrow,segment) > 1:
                     prevrow = prevrow[1:]
                 acount = adjacent_count(prevrow,segment)
@@ -550,11 +545,12 @@ class Embroider(inkex.Effect):
                     run.append(segment)
                     runs.append(run)
                 else: #i.e. == 1
-                    rindex = find_adjacent_run(runs,prevrow[0])
+                    rindex = find_adjacent_run(runs,prevrow,segment)
                     runs[rindex].append(segment)
                     prevrow = prevrow[1:]
-                    print >>sys.stderr, "rindex", str(rindex)
+                    #print >>sys.stderr, "rindex", str(rindex)
             prevrow = row
+        #print >>sys.stderr, "runs:", str(len(runs))
         return runs
 
     def handle_node(self, node):
