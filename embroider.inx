@@ -11,11 +11,6 @@
     <param name="running_stitch_len_mm"       type="float"   min="0.1" max="100.0" _gui-text="Running stitch length (mm)">3.0</param>
     <param name="collapse_len_mm" type="float" min="0.0" max="10.0" _gui-text="Maximum collapse length (mm)">0.0</param>
     <param name="hide_layers" type="boolean" _gui-text="Hide other layers" description="Hide all other top-level layers when the embroidery layer is generated, in order to make stitching discernable.">true</param>
-    <param name="order" type="optiongroup" _gui-text="Stitch Order" appearance="minimal">
-        <_option value="automatic">Automatic</_option>
-        <_option value="layer">Preserve layer order only</_option>
-        <_option value="object">Preserve object stacking order</_option>
-    </param>
     <param name="output_format" type="optiongroup" _gui-text="Output file format" appearance="minimal">
         <_option value="melco">Melco</_option>
         <_option value="csv">Embroidermodder 2 CSV</_option>

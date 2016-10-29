@@ -229,7 +229,6 @@ class Embroider(inkex.Effect):
     def __init__(self, *args, **kwargs):
         #dbg.write("args: %s\n" % repr(sys.argv))
         inkex.Effect.__init__(self)
-        self.stacking_order_counter = 0
         self.OptionParser.add_option("-r", "--row_spacing_mm",
             action="store", type="float",
             dest="row_spacing_mm", default=0.4,
@@ -254,11 +253,6 @@ class Embroider(inkex.Effect):
             action="store", type="float",
             dest="flat", default=0.1,
             help="Minimum flatness of the subdivided curves")
-        self.OptionParser.add_option("-o", "--order",
-            action="store", type="choice",
-            choices=["automatic", "layer", "object"],
-            dest="order", default="automatic",
-            help="patch stitching order")
         self.OptionParser.add_option("--hide_layers",
             action="store", type="choice",
             choices=["true","false"],
