@@ -326,7 +326,7 @@ class Embroider(inkex.Effect):
         groups_of_segments = self.pull_runs(rows_of_segments, shpath, row_spacing_px)
  
         # "east" is the name of the direction that is to the right along a row
-        east = PyEmb.Point(1, 0).rotate(-angle)
+        east = PyEmb.Point(1, 0).rotate(angle)
 
         #print >> sys.stderr, len(groups_of_segments)
 
@@ -515,6 +515,17 @@ class Embroider(inkex.Effect):
                             return runs.index(run)
             return -1 #something went wrong, we must crash here or smth else
 
+        def neighbours_count(runs, run):
+            top = 0
+            bottom = 0
+            for onerun in runs:
+                if (onerun == run):
+                    continue
+                if is_same_run(run[0],onerun[-1]):
+                    top = top + 1
+                if is_same_run(run[-1],onerun[0]):
+                    bottom = bottom + 1
+            return top,bottom
 
         #remake: splitting into runs
         #each run should not be enclosed by any other one
@@ -538,6 +549,7 @@ class Embroider(inkex.Effect):
         #-------\   /--------
         #--------\_/--------- segment from next row intersect couple of segments from
         #-------------------- prev row. obstacle end detected. We split block here too.
+        #Jump stitch will go though the middle of common segments betwenn adjacent blocks
         runs = []
         prevrow = []
         for row in rows:
@@ -556,8 +568,31 @@ class Embroider(inkex.Effect):
                     runs.append(run)
 
             prevrow = row
-        #print >>sys.stderr, "runs:", str(len(runs))
-        return runs
+
+        #let's try to reorder runs for no visible jumpstitches on the surface
+        orderedruns = []
+        cnt = 0
+        mintop = 0
+        while (len(runs)>1):
+            cnt = cnt+1
+            mincnt = len(runs)
+            minrun = runs[0]
+            for run in runs:
+                top,bottom = neighbours_count(runs,run)
+                if  top == 0 or bottom == 0:
+                    if (top+bottom) < mincnt:
+                        minrun = run
+                        mincnt = top+bottom
+                        mintop = top
+            runs.remove(minrun)
+            if (mintop != 0):   #if needs to fill from bottom
+                minrun.reverse()
+            orderedruns.append(minrun)
+        if (mintop != 0):   #if prelast was filled from bottom last will bee the same
+            minrun.reverse()
+        orderedruns.append(runs[0])
+
+        return orderedruns
 
     def handle_node(self, node):
         if simplestyle.parseStyle(node.get("style")).get('display') == "none":
@@ -771,7 +806,7 @@ class Embroider(inkex.Effect):
         return [patch]
 
     def filled_region_to_patchlist(self, node):
-        angle = math.radians(float(180 - get_float_param(node,'angle',self.options.fill_angle_deg)))
+        angle = math.radians(-float(get_float_param(node,'angle',self.options.fill_angle_deg)))
         paths = flatten(parse_path(node), self.options.flat)
         shapelyPolygon = cspToShapelyPolygon(paths)
         threadcolor = simplestyle.parseStyle(node.get("style"))["fill"]
