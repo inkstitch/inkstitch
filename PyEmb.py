@@ -1,24 +1,25 @@
-#!python
-#!/usr/bin/python
+#!/usr/bin/env python
 # http://www.achatina.de/sewing/main/TECHNICL.HTM
 
 import math
 import sys
 from copy import deepcopy
 
+
 class Point:
+
     def __init__(self, x, y):
         self.x = x
         self.y = y
 
     def __add__(self, other):
-        return Point(self.x+other.x, self.y+other.y)
+        return Point(self.x + other.x, self.y + other.y)
 
     def __sub__(self, other):
-        return Point(self.x-other.x, self.y-other.y)
+        return Point(self.x - other.x, self.y - other.y)
 
     def mul(self, scalar):
-        return Point(self.x*scalar, self.y*scalar)
+        return Point(self.x * scalar, self.y * scalar)
 
     def __mul__(self, other):
         if isinstance(other, Point):
@@ -36,13 +37,13 @@ class Point:
             raise ValueError("cannot multiply Point by %s" % type(other))
 
     def __repr__(self):
-        return "Pt(%s,%s)" % (self.x,self.y)
+        return "Pt(%s,%s)" % (self.x, self.y)
 
     def length(self):
-        return math.sqrt(math.pow(self.x,2.0)+math.pow(self.y,2.0))
+        return math.sqrt(math.pow(self.x, 2.0) + math.pow(self.y, 2.0))
 
     def unit(self):
-        return self.mul(1.0/self.length())
+        return self.mul(1.0 / self.length())
 
     def rotate_left(self):
         return Point(-self.y, self.x)
@@ -54,36 +55,40 @@ class Point:
         return Point(int(round(self.x)), int(round(self.y)))
 
     def as_tuple(self):
-        return (self.x,self.y)
+        return (self.x, self.y)
 
     def __cmp__(self, other):
         return cmp(self.as_tuple(), other.as_tuple())
 
+
 class Stitch(Point):
-    def __init__(self, x, y, color=None, jumpStitch=False):
+
+    def __init__(self, x, y, color=None, jump_stitch=False):
         Point.__init__(self, x, y)
         self.color = color
-        self.jumpStitch = jumpStitch
+        self.jump_stitch = jump_stitch
+
 
 class Embroidery:
+
     def __init__(self, stitches, pixels_per_millimeter=1):
         self.stitches = deepcopy(stitches)
-        self.scale(1.0/pixels_per_millimeter)
+        self.scale(1.0 / pixels_per_millimeter)
         self.scale((1, -1))
         self.translate_to_origin()
 
     def translate_to_origin(self):
-        if (len(self.stitches)==0):
+        if (len(self.stitches) == 0):
             return
-        (maxx,maxy) = (self.stitches[0].x,self.stitches[0].y)
-        (minx,miny) = (self.stitches[0].x,self.stitches[0].y)
+        (maxx, maxy) = (self.stitches[0].x, self.stitches[0].y)
+        (minx, miny) = (self.stitches[0].x, self.stitches[0].y)
         for p in self.stitches:
-            minx = min(minx,p.x)
-            miny = min(miny,p.y)
-            maxx = max(maxx,p.x)
-            maxy = max(maxy,p.y)
-        sx = maxx-minx
-        sy = maxy-miny
+            minx = min(minx, p.x)
+            miny = min(miny, p.y)
+            maxx = max(maxx, p.x)
+            maxy = max(maxy, p.y)
+        sx = maxx - minx
+        sy = maxy - miny
 
         self.translate(-minx, -miny)
         return (minx, miny)
@@ -102,39 +107,39 @@ class Embroidery:
 
     def export_ksm(self):
         str = ""
-        self.pos = Point(0,0)
+        self.pos = Point(0, 0)
         lastColor = None
         for stitch in self.stitches:
-            if (lastColor!=None and stitch.color!=lastColor):
+            if (lastColor is not None and stitch.color != lastColor):
                 mode_byte = 0x99
-                #dbg.write("Color change!\n")
+                # dbg.write("Color change!\n")
             else:
                 mode_byte = 0x80
-                #dbg.write("color still %s\n" % stitch.color)
+                # dbg.write("color still %s\n" % stitch.color)
             lastColor = stitch.color
             new_int = stitch.as_int()
             old_int = self.pos.as_int()
             delta = new_int - old_int
-            assert(abs(delta.x)<=127)
-            assert(abs(delta.y)<=127)
-            str+=chr(abs(delta.y))
-            str+=chr(abs(delta.x))
-            if (delta.y<0):
+            assert(abs(delta.x) <= 127)
+            assert(abs(delta.y) <= 127)
+            str += chr(abs(delta.y))
+            str += chr(abs(delta.x))
+            if (delta.y < 0):
                 mode_byte |= 0x20
-            if (delta.x<0):
+            if (delta.x < 0):
                 mode_byte |= 0x40
-            str+=chr(mode_byte)
+            str += chr(mode_byte)
             self.pos = stitch
         return str
 
     def export_melco(self):
         self.str = ""
         self.pos = self.stitches[0]
-        #dbg.write("stitch count: %d\n" % len(self.stitches))
+        # dbg.write("stitch count: %d\n" % len(self.stitches))
         lastColor = None
         numColors = 0x0
         for stitch in self.stitches[1:]:
-            if (lastColor!=None and stitch.color!=lastColor):
+            if (lastColor is not None and stitch.color != lastColor):
                 numColors += 1
                 # color change
                 self.str += chr(0x80)
@@ -147,26 +152,28 @@ class Embroidery:
             old_int = self.pos.as_int()
             delta = new_int - old_int
 
-            def move(x,y):
-                if (x<0): x = x + 256
-                self.str+=chr(x)
-                if (y<0): y = y + 256
-                self.str+=chr(y)
+            def move(x, y):
+                if (x < 0):
+                    x = x + 256
+                self.str += chr(x)
+                if (y < 0):
+                    y = y + 256
+                self.str += chr(y)
 
-            while (delta.x!=0 or delta.y!=0):
+            while (delta.x != 0 or delta.y != 0):
                 def clamp(v):
-                    if (v>127):
+                    if (v > 127):
                         v = 127
-                    if (v<-127):
+                    if (v < -127):
                         v = -127
                     return v
                 dx = clamp(delta.x)
                 dy = clamp(delta.y)
-                move(dx,dy)
+                move(dx, dy)
                 delta.x -= dx
                 delta.y -= dy
 
-            #dbg.write("Stitch: %s delta %s\n" % (stitch, delta))
+            # dbg.write("Stitch: %s delta %s\n" % (stitch, delta))
             self.pos = stitch
         return self.str
 
@@ -187,7 +194,7 @@ class Embroidery:
                     int(stitch.color[1:3], 16),
                     int(stitch.color[3:5], 16),
                     int(stitch.color[5:7], 16))
-            if stitch.jumpStitch:
+            if stitch.jump_stitch:
                 self.str += '"*","JUMP","%f","%f"\n' % (stitch.x, stitch.y)
             self.str += '"*","STITCH","%f","%f"\n' % (stitch.x, stitch.y)
             lastStitch = stitch
@@ -211,44 +218,48 @@ class Embroidery:
         if format == "melco":
             fp.write(self.export_melco())
         elif format == "csv":
-             fp.write(self.export_csv())
+            fp.write(self.export_csv())
         elif format == "gcode":
-             fp.write(self.export_gcode())
+            fp.write(self.export_gcode())
         fp.close()
 
+
 class Test:
+
     def __init__(self):
         emb = Embroidery()
-        for x in range(0,301,30):
-            emb.addStitch(Point(x, 0));
-            emb.addStitch(Point(x, 15));
-            emb.addStitch(Point(x, 0));
+        for x in range(0, 301, 30):
+            emb.addStitch(Point(x, 0))
+            emb.addStitch(Point(x, 15))
+            emb.addStitch(Point(x, 0))
 
-        for x in range(300,-1,-30):
-            emb.addStitch(Point(x, -12));
-            emb.addStitch(Point(x, -27));
-            emb.addStitch(Point(x, -12));
+        for x in range(300, -1, -30):
+            emb.addStitch(Point(x, -12))
+            emb.addStitch(Point(x, -27))
+            emb.addStitch(Point(x, -12))
 
         fp = open("test.exp", "wb")
         fp.write(emb.export_melco())
         fp.close()
 
+
 class Turtle:
+
     def __init__(self):
         self.emb = Embroidery()
-        self.pos = Point(0.0,0.0)
-        self.dir = Point(1.0,0.0)
+        self.pos = Point(0.0, 0.0)
+        self.dir = Point(1.0, 0.0)
         self.emb.addStitch(self.pos)
 
     def forward(self, dist):
-        self.pos = self.pos+self.dir.mul(dist)
+        self.pos = self.pos + self.dir.mul(dist)
         self.emb.addStitch(self.pos)
 
     def turn(self, degreesccw):
-        radcw =  -degreesccw/180.0*3.141592653589
+        radcw = -degreesccw / 180.0 * 3.141592653589
         self.dir = Point(
-            math.cos(radcw)*self.dir.x-math.sin(radcw)*self.dir.y,
-            math.sin(radcw)*self.dir.x+math.cos(radcw)*self.dir.y)
+            math.cos(radcw) * self.dir.x - math.sin(radcw) * self.dir.y,
+            math.sin(radcw) * self.dir.x + math.cos(radcw) * self.dir.y)
 
     def right(self, degreesccw):
         self.turn(degreesccw)
@@ -256,7 +267,9 @@ class Turtle:
     def left(self, degreesccw):
         self.turn(-degreesccw)
 
+
 class Koch(Turtle):
+
     def __init__(self, depth):
         Turtle.__init__(self)
 
@@ -270,18 +283,20 @@ class Koch(Turtle):
         fp.close()
 
     def edge(self, depth, dist):
-        if (depth==0):
+        if (depth == 0):
             self.forward(dist)
         else:
-            self.edge(depth-1, dist/3.0)
+            self.edge(depth - 1, dist / 3.0)
             self.turn(-60.0)
-            self.edge(depth-1, dist/3.0)
+            self.edge(depth - 1, dist / 3.0)
             self.turn(120.0)
-            self.edge(depth-1, dist/3.0)
+            self.edge(depth - 1, dist / 3.0)
             self.turn(-60.0)
-            self.edge(depth-1, dist/3.0)
+            self.edge(depth - 1, dist / 3.0)
+
 
 class Hilbert(Turtle):
+
     def __init__(self, level):
         Turtle.__init__(self)
 
@@ -294,20 +309,20 @@ class Hilbert(Turtle):
 
     # http://en.wikipedia.org/wiki/Hilbert_curve#Python
     def hilbert(self, level, angle):
-        if (level==0):
+        if (level == 0):
             return
         self.right(angle)
-        self.hilbert(level-1, -angle)
+        self.hilbert(level - 1, -angle)
         self.forward(self.size)
         self.left(angle)
-        self.hilbert(level-1, angle)
+        self.hilbert(level - 1, angle)
         self.forward(self.size)
-        self.hilbert(level-1, angle)
+        self.hilbert(level - 1, angle)
         self.left(angle)
         self.forward(self.size)
-        self.hilbert(level-1, -angle)
+        self.hilbert(level - 1, -angle)
         self.right(angle)
 
-if (__name__=='__main__'):
-    #Koch(4)
+if (__name__ == '__main__'):
+    # Koch(4)
     Hilbert(6)

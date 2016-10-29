@@ -14,7 +14,7 @@ import inkex
 class EmbroiderParams(inkex.Effect):
     def __init__(self, *args, **kwargs):
         inkex.Effect.__init__(self)
-        
+
         self.params = ["zigzag_spacing",
                        "stitch_length",
                        "row_spacing",
@@ -31,7 +31,7 @@ class EmbroiderParams(inkex.Effect):
                        "satin_center_walk",
                        "satin_zigzag_underlay_spacing",
                       ]
-       
+
         for param in self.params:
             self.OptionParser.add_option("--%s" % param, default="")
 
@@ -40,7 +40,7 @@ class EmbroiderParams(inkex.Effect):
             for param in self.params:
                 value = getattr(self.options, param).strip()
                 param = "embroider_" + param
-                
+
                 if node.get(param) is not None and not value:
                     # only overwrite existing params if they gave a value
                     continue
