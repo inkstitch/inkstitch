@@ -530,25 +530,31 @@ class Embroider(inkex.Effect):
         #if adjacent_count == 1: append this segment to shape
         #if adjacent_count >1: eliminate first segment from prevrow
         #       (aka close corresponding shape from bottom)
+        #--------------------
+        #-------------------- segment from prevrow intersect couple of segments from
+        #------/^^^^^\------- next row. Obstacle begin detected. We split block here
+        #------|     |-------
+        #------|     |-------
+        #-------\   /--------
+        #--------\_/--------- segment from next row intersect couple of segments from
+        #-------------------- prev row. obstacle end detected. We split block here too.
         runs = []
-        count = 0
         prevrow = []
         for row in rows:
             for segment in row:
                 #print >>sys.stderr, "P", str(prevrow)
                 #print >>sys.stderr, "R", str(row)
-                while adjacent_count(prevrow,segment) > 1:
-                    prevrow = prevrow[1:]
-                acount = adjacent_count(prevrow,segment)
-                if acount == 0:
+                obstacleedge = True
+                if adjacent_count(prevrow,segment) == 1:
+                    rindex = find_adjacent_run(runs,prevrow,segment)
+                    if adjacent_count(row,runs[rindex][-1]) == 1:
+                        runs[rindex].append(segment)
+                        obstacleedge = False
+                if(obstacleedge):
                     run = []
                     run.append(segment)
                     runs.append(run)
-                else: #i.e. == 1
-                    rindex = find_adjacent_run(runs,prevrow,segment)
-                    runs[rindex].append(segment)
-                    prevrow = prevrow[1:]
-                    #print >>sys.stderr, "rindex", str(rindex)
+
             prevrow = row
         #print >>sys.stderr, "runs:", str(len(runs))
         return runs
@@ -765,7 +771,7 @@ class Embroider(inkex.Effect):
         return [patch]
 
     def filled_region_to_patchlist(self, node):
-        angle = math.radians(float(get_float_param(node,'angle',self.options.fill_angle_deg)))
+        angle = math.radians(float(180 - get_float_param(node,'angle',self.options.fill_angle_deg)))
         paths = flatten(parse_path(node), self.options.flat)
         shapelyPolygon = cspToShapelyPolygon(paths)
         threadcolor = simplestyle.parseStyle(node.get("style"))["fill"]
