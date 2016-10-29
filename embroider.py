@@ -500,26 +500,26 @@ class Embroider(inkex.Effect):
             return shgeo.Polygon((segment1[0], segment1[1], segment2[1], segment2[0], segment1[0]))
 
         def is_same_run(segment1, segment2):
+            print >>sys.stderr, "dist:", shgeo.LineString(segment1).distance(shgeo.LineString(segment2))
             if shgeo.LineString(segment1).distance(shgeo.LineString(segment2)) <= row_spacing_px * 1.01:
                 return True
             return False
 
         def adjacent_count(row, segment):
-            print >>sys.stderr, "pR", str(row)
-            print >>sys.stderr, "pS", str(segment)
-
             count = 0
             if len(row):
                 for onesegment in row:
-                    print >>sys.stderr, "sO", str(onesegment)
-                    print >>sys.stderr, "sS", str(segment)
                     if is_same_run(onesegment,segment):
                         count = count + 1
+            print >>sys.stderr, "acount:", str(count)
             return count
 
         def find_adjacent_run(runs, segment):
+            print >>sys.stderr, "asearch:", str(segment)
             for run in runs:
-                if is_same_run(run[-1],segment):
+                print >>sys.stderr, "rnum:", runs.index(run),"seg:",run[-1]
+                if run[-1] == segment:
+                    print >>sys.stderr, "afound:"
                     return runs.index(run)
             return -1 #something went wrong, we must crash here or smth else
 
@@ -542,16 +542,18 @@ class Embroider(inkex.Effect):
             for segment in row:
                 print >>sys.stderr, "P", str(prevrow)
                 print >>sys.stderr, "R", str(row)
+                while adjacent_count(prevrow,segment) > 1:
+                    prevrow = prevrow[1:]
                 acount = adjacent_count(prevrow,segment)
                 if acount == 0:
                     run = []
                     run.append(segment)
                     runs.append(run)
-                elif acount == 1:
-                    rindex = find_adjacent_run(runs,segment)
+                else: #i.e. == 1
+                    rindex = find_adjacent_run(runs,prevrow[0])
                     runs[rindex].append(segment)
-                else:
                     prevrow = prevrow[1:]
+                    print >>sys.stderr, "rindex", str(rindex)
             prevrow = row
         return runs
 
