@@ -500,53 +500,59 @@ class Embroider(inkex.Effect):
             return shgeo.Polygon((segment1[0], segment1[1], segment2[1], segment2[0], segment1[0]))
 
         def is_same_run(segment1, segment2):
-            #This actually prevents detection of unajacent blocks
-            #print >>sys.stderr, shgeo.LineString(segment1).distance(shgeo.LineString(segment2))
-            #if self.options.hatch_filled_paths:
-            #    return True
-            if shgeo.LineString(segment1).distance(shgeo.LineString(segment2)) > row_spacing_px * 1.1:
-                return False
+            if shgeo.LineString(segment1).distance(shgeo.LineString(segment2)) <= row_spacing_px * 1.01:
+                return True
+            return False
 
-            quad = make_quadrilateral(segment1, segment2)
-            quad_area = quad.area
-            intersection_area = shpath.intersection(quad).area
+        def adjacent_count(row, segment):
+            print >>sys.stderr, "pR", str(row)
+            print >>sys.stderr, "pS", str(segment)
 
-            return (intersection_area / quad_area) >= 0.9
+            count = 0
+            if len(row):
+                for onesegment in row:
+                    print >>sys.stderr, "sO", str(onesegment)
+                    print >>sys.stderr, "sS", str(segment)
+                    if is_same_run(onesegment,segment):
+                        count = count + 1
+            return count
+
+        def find_adjacent_run(runs, segment):
+            for run in runs:
+                if is_same_run(run[-1],segment):
+                    return runs.index(run)
+            return -1 #something went wrong, we must crash here or smth else
 
         #for row in rows:
         #    print >> sys.stderr, len(row)
 
         #print >>sys.stderr, "\n".join(str(len(row)) for row in rows)
 
+        #remake: splitting into runs
+        #each run must know neighbours up/down to have ability of optimizing jump stiches
+        #scan segments of current row with previous row segments
+        #if adjacent_count == 0: start new run
+        #if adjacent_count == 1: append this segment to shape
+        #if adjacent_count >1: eliminate first segment from prevrow
+        #       (aka close its shape from bottom)
         runs = []
         count = 0
-        while (len(rows) > 0):
-            prevrownum = len(rows[0])
-            #print >>sys.stderr, str(prevrownum)
-            run = []
-            prev = None
-
-            for row_num in xrange(len(rows)):
-                row = rows[row_num]
-                first, rest = row[0], row[1:]
-
-                if prev is not None and not is_same_run(prev, first):
-                    break
-
-                if prevrownum != len(row):
-                    break
-    
-                run.append(first)
-                prev = first
-
-                rows[row_num] = rest
-
-            #print >> sys.stderr, len(run)
-            runs.append(run)
-            rows = [row for row in rows if len(row) > 0]
-
-            count += 1
-
+        prevrow = []
+        for row in rows:
+            for segment in row:
+                print >>sys.stderr, "P", str(prevrow)
+                print >>sys.stderr, "R", str(row)
+                acount = adjacent_count(prevrow,segment)
+                if acount == 0:
+                    run = []
+                    run.append(segment)
+                    runs.append(run)
+                elif acount == 1:
+                    rindex = find_adjacent_run(runs,segment)
+                    runs[rindex].append(segment)
+                else:
+                    prevrow = prevrow[1:]
+            prevrow = row
         return runs
 
     def handle_node(self, node):
