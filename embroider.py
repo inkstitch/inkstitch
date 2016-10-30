@@ -495,7 +495,7 @@ class Embroider(inkex.Effect):
         # Segments more than this far apart are considered not to be part of
         # the same run.  
         def is_same_run(segment1, segment2):
-            if shgeo.LineString(segment1).distance(shgeo.LineString(segment2)) <= row_spacing_px * 1.01:
+            if shgeo.LineString(segment1).distance(shgeo.LineString(segment2)) <= row_spacing_px * 1.001:
                 return True
             return False
 
@@ -530,16 +530,17 @@ class Embroider(inkex.Effect):
         #remake: splitting into runs
         #each run should not be enclosed by any other one
         #all runs can figure out their neighbours up and down 
-        #thus we can determine right sequence for jump/running stitches
+        #thus we can determine right sequence for jump stitches
         #which connect runs to avoid going through already filled area
         #Sequence detection algorithm:
         #run can be filled starting from side where it has no neighbours (top or bottom)
         #after being filled the run is eliminated from list
         #Shape detection algorithm
-        #scan segments of current row with previous row segments
-        #if adjacent_count == 0: start new run
+        #scan each segment of current row agains all previous row segments and 
+        #each segment of previous row against all segments of current row 
         #if adjacent_count == 1: append this segment to shape
-        #if adjacent_count >1: eliminate first segment from prevrow
+        #if adjacent_count == 0: start new run
+        #if adjacent_count >1: start new run (obstacle detected)
         #       (aka close corresponding shape from bottom)
         #--------------------
         #-------------------- segment from prevrow intersect couple of segments from
