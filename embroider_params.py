@@ -15,21 +15,23 @@ class EmbroiderParams(inkex.Effect):
     def __init__(self, *args, **kwargs):
         inkex.Effect.__init__(self)
 
-        self.params = ["zigzag_spacing",
-                       "stitch_length",
-                       "row_spacing",
-                       "max_stitch_length",
+        self.params = ["zigzag_spacing_mm",
+                       "running_stitch_length_mm",
+                       "row_spacing_mm",
+                       "max_stitch_length_mm",
                        "repeats",
                        "angle",
-                       "hatching",
                        "flip",
                        "satin_column",
                        "stroke_first",
-                       "pull_compensation",
-                       "satin_underlay",
-                       "satin_underlay_inset",
-                       "satin_center_walk",
-                       "satin_zigzag_underlay_spacing",
+                       "pull_compensation_mm",
+                       "contour_underlay",
+                       "contour_underlay_inset_mm",
+                       "contour_underlay_stitch_length_mm",
+                       "center_walk_underlay",
+                       "center_walk_underlay_stitch_length_mm",
+                       "zigzag_underlay",
+                       "zigzag_underlay_inset_mm",
                       ]
 
         for param in self.params:

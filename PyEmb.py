@@ -60,6 +60,11 @@ class Point:
     def __cmp__(self, other):
         return cmp(self.as_tuple(), other.as_tuple())
 
+    def __getitem__(self, item):
+        return self.as_tuple()[item]
+
+    def __len__(self):
+        return 2
 
 class Stitch(Point):
 

@@ -53,12 +53,18 @@ class EmbroideryElement(object):
         self.options = options
 
     def get_param(self, param, default):
-        value = self.node.get("embroider_" + param, "").strip()
+        value = self.node.get("embroider_" + param)
 
-        if not value:
-            value = getattr(self.options, param, None)
+        if value is None or not value.strip():
+            if default is None:
+                try:
+                    default = getattr(self.options, "%s_mm" % param) * self.options.pixels_per_mm
+                except AttributeError:
+                    default = getattr(self.options, param, None)
 
-        return value
+            return default
+
+        return value.strip()
         
     def get_boolean_param(self, param, default=None):
         value = self.get_param(param, default)
@@ -68,29 +74,22 @@ class EmbroideryElement(object):
         else:
             return value and (value.lower() in ('yes', 'y', 'true', 't', '1'))
         
-    def get_float_param(self, param, default=None):    
+    def get_float_param(self, param, default=None):
+        value = self.get_param(param, default)
+    
         try:
-            value = float(self.get_param(param, default))
-        except (TypeError, ValueError):
+            return float(value)
+        except TypeError:
             return default
     
-        if param.endswith('_mm'):
-            print >> dbg, "get_float_param", param, value, "*", self.options.pixels_per_mm
-            value = value * self.options.pixels_per_mm
-
-        return value
-
         
     def get_int_param(self, param, default=None):
+        value = self.get_param(param, default)
+
         try:
-            value = int(self.get_param(param, default))
-        except (TypeError, ValueError):
+            return int(value)
+        except ValueError:
             return default
-
-        if param.endswith('_mm'):
-            value = int(value * self.options.pixels_per_mm)
-
-        return value
     
     def get_style(self, style_name):
         style = simplestyle.parseStyle(self.node.get("style"))
@@ -193,11 +192,11 @@ class Fill(EmbroideryElement):
 
     @property
     def row_spacing(self):
-        return self.get_float_param("row_spacing_mm")
+        return self.get_float_param("row_spacing")
 
     @property
     def max_stitch_length(self):
-        return self.get_float_param("max_stitch_length_mm")
+        return self.get_float_param("max_stitch_length")
 
     @property
     def staggers(self):
@@ -224,6 +223,8 @@ class Fill(EmbroideryElement):
                 else:
                     last_pt = pt
             poly_ary.append(point_ary)
+
+        print >> dbg, poly_ary
 
         # shapely's idea of "holes" are to subtract everything in the second set
         # from the first. So let's at least make sure the "first" thing is the
@@ -470,11 +471,11 @@ class Stroke(EmbroideryElement):
 
     @property
     def running_stitch_length(self):
-        return self.get_float_param("running_stitch_length_mm")
+        return self.get_float_param("running_stitch_length")
 
     @property
     def zigzag_spacing(self):
-        return self.get_float_param("zigzag_spacing_mm")
+        return self.get_float_param("zigzag_spacing")
 
     @property
     def repeats(self):
@@ -559,8 +560,6 @@ class SatinColumn(EmbroideryElement):
         self.csp = self.parse_path()
         self.flattened_beziers = self.get_flattened_paths()
 
-        # print >> dbg, "flattened beziers", self.flattened_beziers
-
     @property
     def color(self):
         return self.get_style("stroke")
@@ -568,15 +567,14 @@ class SatinColumn(EmbroideryElement):
     @property
     def zigzag_spacing(self):
         # peak-to-peak distance between zigzags
-        print >> dbg, "satin zigzag spacing", self.get_float_param("zigzag_spacing_mm")
-        return self.get_float_param("zigzag_spacing_mm")
+        return self.get_float_param("zigzag_spacing")
 
     @property
     def pull_compensation(self):
         # In satin stitch, the stitches have a tendency to pull together and
         # narrow the entire column.  We can compensate for this by stitching
         # wider than we desire the column to end up.
-        return self.get_float_param("pull_compensation_mm", 0)
+        return self.get_float_param("pull_compensation", 0)
 
     @property
     def contour_underlay(self):
@@ -587,12 +585,12 @@ class SatinColumn(EmbroideryElement):
     @property
     def contour_underlay_stitch_length(self):
         # use "contour_underlay_stitch_length", or, if not set, default to "stitch_length"
-        return self.get_float_param("contour_underlay_stitch_length_mm", self.get_float_param("running_stitch_length_mm"))
+        return self.get_float_param("contour_underlay_stitch_length", self.get_float_param("stitch_length"))
 
     @property
     def contour_underlay_inset(self):
         # how far inside the edge of the column to stitch the underlay
-        return self.get_float_param("contour_underlay_inset_mm", 0.4)
+        return self.get_float_param("contour_underlay_inset", 0.4)
 
     @property
     def center_walk_underlay(self):
@@ -603,7 +601,7 @@ class SatinColumn(EmbroideryElement):
     @property
     def center_walk_underlay_stitch_length(self):
         # use "center_walk_underlay_stitch_length", or, if not set, default to "stitch_length"
-        return self.get_float_param("center_walk_underlay_stitch_length_mm", self.get_float_param("running_stitch_length_mm"))
+        return self.get_float_param("center_walk_underlay_stitch_length", self.get_float_param("stitch_length"))
 
     @property
     def zigzag_underlay(self):
@@ -612,7 +610,7 @@ class SatinColumn(EmbroideryElement):
     @property
     def zigzag_underlay_spacing(self):
         # peak-to-peak distance between zigzags in zigzag underlay
-        return self.get_float_param("zigzag_underlay_spacing_mm", 1)
+        return self.get_float_param("zigzag_underlay_spacing", 1)
 
     @property
     def zigzag_underlay_inset(self):
@@ -623,7 +621,7 @@ class SatinColumn(EmbroideryElement):
         # doing both contour underlay and zigzag underlay, make sure the
         # points of the zigzag fall outside the contour underlay but inside
         # the edges of the satin column.
-        return self.get_float_param("zigzag_underlay_inset_mm", self.contour_underlay_inset / 2.0)
+        return self.get_float_param("zigzag_underlay_inset", self.contour_underlay_inset / 2.0)
 
     def get_flattened_paths(self):
         # Given a pair of paths made up of bezier segments, flatten
@@ -638,15 +636,15 @@ class SatinColumn(EmbroideryElement):
             # description of the format of the CSP.  Each bezier is constructed
             # using two neighboring 3-tuples in the list.
 
-            flattened_path = []
+            path = []
 
             # iterate over pairs of 3-tuples
             for prev, current in zip(path[:-1], path[1:]):
-                flattened_segment = self.flatten([[prev, current]])
-                flattened_segment = [PyEmb.Point(x, y) for x, y in flattened_segment[0]]
-                flattened_path.append(flattened_segment)
+                flattened = self.flatten([prev, current])
+                flattened = [PyEmb.point(x, y) for x, y in flattened]
+                path.append(flattened)
 
-            paths.append(flattened_path)
+            paths.append(path)
 
         return zip(*paths)
 
@@ -666,7 +664,7 @@ class SatinColumn(EmbroideryElement):
         if len(self.csp[0]) != len(self.csp[1]):
             self.fatal("satin column: object %s has two paths with an unequal number of points (%s and %s)" % (node_id, len(self.csp[0]), len(self.csp[1])))
 
-    def offset_points(self, pos1, pos2, offset_px):
+    def offset_points(pos1, pos2, offset_px):
         # Expand or contract two points about their midpoint.  This is
         # useful for pull compensation and insetting underlay.
 
@@ -686,15 +684,13 @@ class SatinColumn(EmbroideryElement):
 
         return pos1, pos2
 
-    def walk(self, path, start_pos, start_index, distance):
+    def walk(path, start_pos, start_index, distance):
         # Move <distance> pixels along <path>, which is a sequence of line
         # segments defined by points.
 
         # <start_index> is the index of the line segment in <path> that
         # we're currently on.  <start_pos> is where along that line
         # segment we are.  Return a new position and index.
-
-        #print >> dbg, "walk", start_pos, start_index, distance
 
         pos = start_pos
         index = start_index
@@ -703,7 +699,7 @@ class SatinColumn(EmbroideryElement):
 
         while True:
             if index >= last_index:
-                return pos, index
+                return pos, last_index
 
             segment_end = path[index + 1]
             segment = segment_end - pos
@@ -711,7 +707,7 @@ class SatinColumn(EmbroideryElement):
 
             if segment_length > distance_remaining:
                 # our walk ends partway along this segment
-                return pos + segment.unit() * distance_remaining, index
+                return pos + segment.unit() * distance, index
             else:
                 # our walk goes past the end of this segment, so advance
                 # one point
@@ -728,7 +724,7 @@ class SatinColumn(EmbroideryElement):
         points = [[], []]
 
         def add_pair(pos1, pos2):
-            pos1, pos2 = self.offset_points(pos1, pos2, offset)
+            pos1, pos2 = offset_points(pos1, pos2, offset)
             points[0].append(pos1)
             points[1].append(pos2)
 
@@ -770,8 +766,8 @@ class SatinColumn(EmbroideryElement):
             for i in xrange(int(num_points)):
                 add_pair(pos1, pos2)
 
-                pos1, index1 = self.walk(subpath1, pos1, index1, spacing1)
-                pos2, index2 = self.walk(subpath2, pos2, index2, spacing2)
+                pos1, index1 = walk(subpath1, pos1, index1, spacing1)
+                pos2, index2 = walk(subpath2, pos2, index2, spacing2)
 
             if index1 < len(subpath1) - 1:
                 remainder_path1 = [pos1] + subpath1[index1 + 1:]
@@ -789,33 +785,34 @@ class SatinColumn(EmbroideryElement):
         # Try to avoid doing both if they're going to stack up too
         # closely.
 
-        end1 = remainder_path1[-1]
-        end2 = remainder_path2[-1]
+        if remainder_path1:
+            end1 = remainder_path1[-1]
+            end2 = remainder_path2[-1]
     
-        if (end1 - pos1).length() > 0.3 * spacing:
-            add_pair(pos1, pos2)
+            if (end1 - pos1).length() > 0.3 * spacing:
+                add_pair(pos1, pos2)
     
-        add_pair(end1, end2)
+            add_pair(end1, end2)
     
         return points
 
-    def do_contour_underlay(self):
+    def contour_underlay(self):
         # "contour walk" underlay: do stitches up one side and down the
         # other.
         forward, back = self.walk_paths(self.contour_underlay_stitch_length,
                                         -self.contour_underlay_inset)
         return Patch(color=self.color, stitches=(forward + list(reversed(back))))
 
-    def do_center_walk(self):
+    def center_walk(self):
         # Center walk underlay is just a running stitch down and back on the
         # center line between the bezier curves.
 
         # Do it like contour underlay, but inset all the way to the center.
-        forward, back = self.walk_paths(self.center_walk_underlay_stitch_length,
+        forward, back = self.walk_paths(self.center_walk_underlay_stitch_len_px,
                                         -100000)
         return Patch(color=self.color, stitches=(forward + list(reversed(back))))
 
-    def do_zigzag_underlay(self):
+    def zigzag_underlay(self):
         # zigzag underlay, usually done at a much lower density than the
         # satin itself.  It looks like this:
         #
@@ -843,16 +840,16 @@ class SatinColumn(EmbroideryElement):
 
         return patch
 
-    def do_satin(self):
+    def satin(self):
         # satin: do a zigzag pattern, alternating between the paths.  The
         # zigzag looks like this to make the satin stitches look perpendicular
         # to the column:
         #
         # /|/|/|/|/|/|/|/|
 
-        # print >> dbg, "satin", self.zigzag_spacing, self.pull_compensation
+        print >> dbg, "satin", self.zigzag_spacing, self.pull_compensation
 
-        patch = Patch(color=self.color)
+        patch = Patch()
 
         sides = self.walk_paths(self.zigzag_spacing, self.pull_compensation)
 
@@ -875,17 +872,17 @@ class SatinColumn(EmbroideryElement):
         patches = []
 
         if self.center_walk_underlay:
-            patches.append(self.do_center_walk())
+            patches.append(self.center_walk_underlay)
 
         if self.contour_underlay:
-            patches.append(self.do_contour_underlay())
+            patches.append(self.contour_underlay())
 
         if self.zigzag_underlay:
             # zigzag underlay comes after contour walk underlay, so that the
             # zigzags sit on the contour walk underlay like rail ties on rails.
-            patches.append(self.do_zigzag_underlay())
+            patches.append(self.zigzag_underlay())
 
-        patches.append(self.do_satin())
+        patches.append(self.satin())
 
         return patches
 
