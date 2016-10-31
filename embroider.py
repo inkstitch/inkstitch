@@ -371,7 +371,7 @@ class Embroider(inkex.Effect):
 
                 # only stitch the first point if it's a reasonable distance away from the
                 # last stitch
-                if last_end is None or (beg - last_end).length() > 0.5 * pixels_per_millimeter:
+                if last_end is None or (beg - last_end).length() > 0.1 * pixels_per_millimeter:
                     patch.addStitch(beg)
 
                 # Now, imagine the coordinate axes rotated by 'angle' degrees, such that
@@ -397,7 +397,7 @@ class Embroider(inkex.Effect):
                     patch.addStitch(beg + offset * row_direction)
                     offset += max_stitch_len_px
 
-                if (end - patch.stitches[-1]).length() > 0.1 * pixels_per_millimeter:
+                if (end - patch.stitches[-1]).length() >= 0.1 * pixels_per_millimeter:
                     patch.addStitch(end)
 
                 last_end = end
