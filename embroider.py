@@ -504,9 +504,12 @@ class Embroider(inkex.Effect):
         # start a new patch.
 
         # Segments more than this far apart are considered not to be part of
-        # the same run.  
+        # the same run.
+        def inter_distance(segment1, segment2):
+            return shgeo.LineString(segment1).distance(shgeo.LineString(segment2))
+
         def is_same_run(segment1, segment2):
-            if shgeo.LineString(segment1).distance(shgeo.LineString(segment2)) <= row_spacing_px * 1.001:
+            if inter_distance(segment1, segment2) <= row_spacing_px * 1.001:
                 return True
             return False
 
@@ -585,23 +588,49 @@ class Embroider(inkex.Effect):
         orderedruns = []
         cnt = 0
         mintop = 0
+        direction = 'down'
+        mindist = 0
+        dist = 0
+        dist1 = 0
+        isadjacent = 0
         while (len(runs)>1):
             cnt = cnt+1
             mincnt = len(runs)
             minrun = runs[0]
+            mindist = 10000;
             for run in runs:
                 top,bottom = neighbours_count(runs,run)
+                isadjacent = False
                 if  top == 0 or bottom == 0:
-                    if (top+bottom) < mincnt:
+                    if len(orderedruns) >0:
+                    #if direction == 'down' and len(orderedruns) > 0:
+                        dist = inter_distance(orderedruns[-1][-1],run[0])
+                    #elif direction == 'up' and len(orderedruns) > 0:
+                        dist1 = inter_distance(orderedruns[-1][-1],run[-1])
+                        if dist1 < dist:
+                            dist = dist1
+                    #print >> sys.stderr, "dist:", dist, "dist1:", dist1
+
+                    if ((top+bottom) < mincnt
+                        or (top+bottom==mincnt and mindist > dist)):
                         minrun = run
                         mincnt = top+bottom
                         mintop = top
+                        mindist = dist
+                        if len(orderedruns) >0:
+                            isadjacent = isadjacent or is_same_run(orderedruns[-1][-1],run[0])
+                            isadjacent = isadjacent or is_same_run(orderedruns[-1][-1],run[-1])
             runs.remove(minrun)
+            #if (mintop != 0 or (isadjacent and direction == 'up')):   #if needs to fill from bottom
+            #print >> sys.stderr, "mintop:", mintop
             if (mintop != 0):   #if needs to fill from bottom
                 minrun.reverse()
+                direction = 'up'
+            else:
+                direction = 'down'
             orderedruns.append(minrun)
-        if (mintop != 0):   #if prelast was filled from bottom last will bee the same
-            minrun.reverse()
+        if (direction == 'up'):   #if prelast was filled from bottom last will bee the same
+            runs[0].reverse()
         orderedruns.append(runs[0])
 
         return orderedruns
