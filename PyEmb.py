@@ -60,7 +60,7 @@ class Point:
 		return cmp(self.as_tuple(), other.as_tuple())
 
 class Stitch(Point):
-    def __init__(self, x, y, color=None, jumpStitch=False):
+    def __init__(self, x, y, color=None, jumpStitch='s'):
         Point.__init__(self, x, y)
         self.color = color
         self.jumpStitch = jumpStitch
@@ -187,8 +187,10 @@ class Embroidery:
 					int(stitch.color[1:3], 16),
 					int(stitch.color[3:5], 16),
 					int(stitch.color[5:7], 16))
-			if stitch.jumpStitch:
+			if stitch.jumpStitch == 'j':
 				self.str += '"*","JUMP","%f","%f"\n' % (stitch.x, stitch.y)
+			elif stitch.jumpStitch == 't':
+				self.str += '"*","TRIM","%f","%f"\n' % (stitch.x, stitch.y)
 			self.str += '"*","STITCH","%f","%f"\n' % (stitch.x, stitch.y)
 			lastStitch = stitch
 		self.str += '"*","END","%f","%f"\n' % (lastStitch.x, lastStitch.y)

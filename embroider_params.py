@@ -15,6 +15,8 @@ class EmbroiderParams(inkex.Effect):
     def __init__(self, *args, **kwargs):
         inkex.Effect.__init__(self)
         
+        self.OptionParser.add_option("--tab", default="") #don't save in SVG XML attr
+
         self.params = ["zigzag_spacing",
                        "stitch_length",
                        "row_spacing",

@@ -186,44 +186,46 @@ class Patch:
     def reverse(self):
         return Patch(self.color, self.stitches[::-1])
 
-def patches_to_stitches(patch_list, collapse_len_px=0):
+def patches_to_stitches(patch_list, collapse_len_px=0, trim_len_px=0):
     stitches = []
 
     lastStitch = None
     lastColor = None
     for patch in patch_list:
-        jumpStitch = True
+        jumpStitch = 'j'
         for stitch in patch.stitches:
             if lastStitch and lastColor == patch.color:
                 l = (stitch - lastStitch).length()
                 if l <= 0.1:
                     # filter out duplicate successive stitches
-                    jumpStitch = False
+                    jumpStitch = 's'
                     continue
 
-                if jumpStitch:
+                if jumpStitch == 'j':
                     # consider collapsing jump stitch, if it is pretty short
                     if l < collapse_len_px:
                         #dbg.write("... collapsed\n")
-                        jumpStitch = False
+                        jumpStitch = 's'
+                    if l >= trim_len_px and trim_len_px > 0:
+                        jumpStitch = 't'
 
             #dbg.write("stitch color %s\n" % patch.color)
 
             newStitch = PyEmb.Stitch(stitch.x, stitch.y, patch.color, jumpStitch)
             stitches.append(newStitch)
 
-            jumpStitch = False
+            jumpStitch = 's'
             lastStitch = stitch
             lastColor = patch.color
 
     return stitches
 
-def stitches_to_paths(stitches):
+def stitches_to_paths(stitches, split_path_on_jumps):
     paths = []
     lastColor = None
     lastStitch = None
     for stitch in stitches:
-        if stitch.jumpStitch:
+        if stitch.jumpStitch=='t' or (stitch.jumpStitch=='j' and split_path_on_jumps):
             if lastColor == stitch.color:
                 paths.append([None, []])
                 if lastStitch is not None:
@@ -238,8 +240,8 @@ def stitches_to_paths(stitches):
     return paths
 
 
-def emit_inkscape(parent, stitches):
-    for color, path in stitches_to_paths(stitches):
+def emit_inkscape(parent, stitches, split_path_on_jumps):
+    for color, path in stitches_to_paths(stitches, split_path_on_jumps):
         dbg.write('path: %s %s\n' % (color, repr(path)))
         inkex.etree.SubElement(parent,
             inkex.addNS('path', 'svg'),
@@ -275,6 +277,10 @@ class Embroider(inkex.Effect):
             action="store", type="float",
             dest="collapse_len_mm", default=0.0,
             help="max collapse length (mm)")
+        self.OptionParser.add_option("-t", "--trim_len_mm",
+            action="store", type="float",
+            dest="trim_len_mm", default=20.0,
+            help="min trim length (mm)")
         self.OptionParser.add_option("-a", "--fill_angle_deg",
             action="store", type="float",
             dest="fill_angle_deg", default=0,
@@ -298,6 +304,11 @@ class Embroider(inkex.Effect):
             choices=["true","false"],
             dest="hide_layers", default="true",
             help="Hide all other layers when the embroidery layer is generated")
+        self.OptionParser.add_option("--split_path_on_jumps",
+            action="store", type="choice",
+            choices=["true","false"],
+            dest="split_path_on_jumps", default="false",
+            help="Split SVG path on every jump stitch")
         self.OptionParser.add_option("-O", "--output_format",
             action="store", type="choice",
             choices=["melco", "csv", "gcode"],
@@ -397,7 +408,7 @@ class Embroider(inkex.Effect):
                     patch.addStitch(beg + offset * row_direction)
                     offset += max_stitch_len_px
 
-                if (end - patch.stitches[-1]).length() >= 0.1 * pixels_per_millimeter:
+                if (end - patch.stitches[-1]).length() > 0.1 * pixels_per_millimeter:
                     patch.addStitch(end)
 
                 last_end = end
@@ -674,7 +685,9 @@ class Embroider(inkex.Effect):
         self.max_stitch_len_px = self.options.max_stitch_len_mm*pixels_per_millimeter
         self.running_stitch_len_px = self.options.running_stitch_len_mm*pixels_per_millimeter
         self.collapse_len_px = self.options.collapse_len_mm*pixels_per_millimeter
+        self.trim_len_px = self.options.trim_len_mm*pixels_per_millimeter
         self.hatching = self.options.hatch_filled_paths == "true"
+        self.split_path_on_jumps = self.options.split_path_on_jumps == "true"
 
         self.svgpath = inkex.addNS('path', 'svg')
         self.svgdefs = inkex.addNS('defs', 'svg')
@@ -704,7 +717,7 @@ class Embroider(inkex.Effect):
         if self.options.hide_layers:
             self.hide_layers()
 
-        stitches = patches_to_stitches(self.patch_list, self.collapse_len_px)
+        stitches = patches_to_stitches(self.patch_list, self.collapse_len_px, self.trim_len_px)
         emb = PyEmb.Embroidery(stitches, pixels_per_millimeter)
         emb.export(self.get_output_path(), self.options.output_format)
 
@@ -713,7 +726,7 @@ class Embroider(inkex.Effect):
         new_layer.set('id', self.uniqueId("embroidery"))
         new_layer.set(inkex.addNS('label', 'inkscape'), 'Embroidery')
         new_layer.set(inkex.addNS('groupmode', 'inkscape'), 'layer')
-        emit_inkscape(new_layer, stitches)
+        emit_inkscape(new_layer, stitches, self.split_path_on_jumps)
 
         sys.stdout = old_stdout
 
