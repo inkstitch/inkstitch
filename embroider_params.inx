@@ -12,7 +12,6 @@
             <param name="max_stitch_length" type="string" _gui-text="Maximum stitch length (mm)"></param>
             <param name="repeats" type="string" _gui-text="Repeats (stroke only)"></param>
             <param name="angle" type="string" _gui-text="Angle for lines in fills (deg)"></param>
-            <param name="pull_compensation" type="string" _gui-text="Pull compensation for satin column (mm)"></param>
             <param name="hatching" type="string" _gui-text="Hatching? (yes/no)"></param>
             <param name="flip" type="string" _gui-text="Flip fill? (yes/no)"></param>
             <param name="stroke_first" type="string" _gui-text="Stitch stroke before fill? (yes/no)"></param>
@@ -23,6 +22,7 @@
             <param name="satin_underlay_inset" type="string" _gui-text="Inset for satin colum underlay (mm)"></param>    
             <param name="satin_center_walk" type="string" _gui-text="Satin center walk underlay? (yes/no)"></param>
             <param name="satin_zigzag_underlay_spacing" type="string" _gui-text="Zigzag underlay spacing (mm)"></param>
+            <param name="pull_compensation" type="string" _gui-text="Pull compensation for satin column (mm)"></param>
         </page>
     </param>
     <effect>
