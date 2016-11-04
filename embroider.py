@@ -36,6 +36,7 @@ import math
 import lxml.etree as etree
 import shapely.geometry as shgeo
 import shapely.affinity as affinity
+import shapely.ops
 from pprint import pformat
 
 import PyEmb
@@ -75,7 +76,7 @@ class EmbroideryElement(object):
             return default
     
         if param.endswith('_mm'):
-            print >> dbg, "get_float_param", param, value, "*", self.options.pixels_per_mm
+            #print >> dbg, "get_float_param", param, value, "*", self.options.pixels_per_mm
             value = value * self.options.pixels_per_mm
 
         return value
@@ -449,6 +450,67 @@ class Fill(EmbroideryElement):
 
         return [self.section_to_patch(group) for group in groups_of_segments]
 
+
+class AutoFill(Fill):
+    @property
+    def flip(self):
+        return False
+
+    @property
+    def outline(self):
+        return self.shape.boundary[0]
+
+    @property
+    def running_stitch_length(self):
+        return self.get_float_param("running_stitch_length_mm")    
+
+    def get_corner_points(self, section):
+        return section[0][0], section[0][-1], section[-1][0], section[-1][-1]
+
+    def connect_points(self, p1, p2):
+        p1 = shgeo.Point(p1)
+        p2 = shgeo.Point(p2)
+
+        patch = Patch(color=self.color)
+
+        outline = self.outline
+        outline_length = outline.length
+        start = outline.project(p1)
+        stitch_length = self.running_stitch_length
+        stitches = int(outline.length / stitch_length)
+
+        # TODO: tidy this code up, make pull_runs split more aggressively to
+        # completely avoid discontiguous sections, find the shorter direction
+        # around the shape to the destination
+
+        for i in xrange(stitches):
+            next_point = outline.interpolate((start + i * stitch_length) % outline_length)
+            patch.add_stitch(PyEmb.Point(next_point.x, next_point.y))
+
+            if next_point.distance(p2) <= stitch_length:
+                break
+
+        return patch
+
+    def to_patches(self):
+        rows_of_segments = self.intersect_region_with_grating()
+        sections = self.pull_runs(rows_of_segments)
+        # to do: perhaps travel to the sections in a more intelligent manner, by
+        # finding the next nearest corner point?
+        #corner_points = [self.get_corner_points(section) for section in sections]
+
+        print >> dbg, "autofill"
+
+        patches = []
+        last_section = None
+        for section in sections:
+            if last_section:
+                patches.append(self.connect_points(patches[-1].stitches[-1], section[0][0]))
+
+            patches.append(self.section_to_patch(section))
+            last_section = section
+
+        return patches
 
 class Stroke(EmbroideryElement):
     @property
@@ -1050,7 +1112,10 @@ class Embroider(inkex.Effect):
             elements = []
 
             if element.get_style("fill"):
-                elements.append(Fill(node, self.options))
+                if element.get_boolean_param("auto_fill"):
+                    elements.append(AutoFill(node, self.options))
+                else:
+                    elements.append(Fill(node, self.options))
 
             if element.get_style("stroke"):
                 elements.append(Stroke(node, self.options))
