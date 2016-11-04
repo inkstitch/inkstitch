@@ -364,90 +364,90 @@ class Fill(EmbroideryElement):
 
         return runs
 
-    def to_patches(self):
-        rows_of_segments = self.intersect_region_with_grating()
-        groups_of_segments = self.pull_runs(rows_of_segments)
-
+    def section_to_patch(self, group_of_segments):
         # "east" is the name of the direction that is to the right along a row
         east = PyEmb.Point(1, 0).rotate(-self.angle)
 
         # print >> sys.stderr, len(groups_of_segments)
 
-        patches = []
-        for group_of_segments in groups_of_segments:
-            patch = Patch(color=self.color)
-            first_segment = True
-            swap = False
-            last_end = None
+        patch = Patch(color=self.color)
+        first_segment = True
+        swap = False
+        last_end = None
 
-            for segment in group_of_segments:
-                # We want our stitches to look like this:
-                #
-                # ---*-----------*-----------
-                # ------*-----------*--------
-                # ---------*-----------*-----
-                # ------------*-----------*--
-                # ---*-----------*-----------
-                #
-                # Each successive row of stitches will be staggered, with
-                # num_staggers rows before the pattern repeats.  A value of
-                # 4 gives a nice fill while hiding the needle holes.  The
-                # first row is offset 0%, the second 25%, the third 50%, and
-                # the fourth 75%.
-                #
-                # Actually, instead of just starting at an offset of 0, we
-                # can calculate a row's offset relative to the origin.  This
-                # way if we have two abutting fill regions, they'll perfectly
-                # tile with each other.  That's important because we often get
-                # abutting fill regions from pull_runs().
+        for segment in group_of_segments:
+            # We want our stitches to look like this:
+            #
+            # ---*-----------*-----------
+            # ------*-----------*--------
+            # ---------*-----------*-----
+            # ------------*-----------*--
+            # ---*-----------*-----------
+            #
+            # Each successive row of stitches will be staggered, with
+            # num_staggers rows before the pattern repeats.  A value of
+            # 4 gives a nice fill while hiding the needle holes.  The
+            # first row is offset 0%, the second 25%, the third 50%, and
+            # the fourth 75%.
+            #
+            # Actually, instead of just starting at an offset of 0, we
+            # can calculate a row's offset relative to the origin.  This
+            # way if we have two abutting fill regions, they'll perfectly
+            # tile with each other.  That's important because we often get
+            # abutting fill regions from pull_runs().
 
-                (beg, end) = segment
+            (beg, end) = segment
 
-                if (swap):
-                    (beg, end) = (end, beg)
+            if (swap):
+                (beg, end) = (end, beg)
 
-                beg = PyEmb.Point(*beg)
-                end = PyEmb.Point(*end)
+            beg = PyEmb.Point(*beg)
+            end = PyEmb.Point(*end)
 
-                row_direction = (end - beg).unit()
-                segment_length = (end - beg).length()
+            row_direction = (end - beg).unit()
+            segment_length = (end - beg).length()
 
-                # only stitch the first point if it's a reasonable distance away from the
-                # last stitch
-                if last_end is None or (beg - last_end).length() > 0.5 * self.options.pixels_per_mm:
-                    patch.add_stitch(beg)
+            # only stitch the first point if it's a reasonable distance away from the
+            # last stitch
+            if last_end is None or (beg - last_end).length() > 0.5 * self.options.pixels_per_mm:
+                patch.add_stitch(beg)
 
-                # Now, imagine the coordinate axes rotated by 'angle' degrees, such that
-                # the rows are parallel to the X axis.  We can find the coordinates in these
-                # axes of the beginning point in this way:
-                relative_beg = beg.rotate(self.angle)
+            # Now, imagine the coordinate axes rotated by 'angle' degrees, such that
+            # the rows are parallel to the X axis.  We can find the coordinates in these
+            # axes of the beginning point in this way:
+            relative_beg = beg.rotate(self.angle)
 
-                absolute_row_num = round(relative_beg.y / self.row_spacing)
-                row_stagger = absolute_row_num % self.staggers
-                row_stagger_offset = (float(row_stagger) / self.staggers) * self.max_stitch_length
+            absolute_row_num = round(relative_beg.y / self.row_spacing)
+            row_stagger = absolute_row_num % self.staggers
+            row_stagger_offset = (float(row_stagger) / self.staggers) * self.max_stitch_length
 
-                first_stitch_offset = (relative_beg.x - row_stagger_offset) % self.max_stitch_length
+            first_stitch_offset = (relative_beg.x - row_stagger_offset) % self.max_stitch_length
 
-                first_stitch = beg - east * first_stitch_offset
+            first_stitch = beg - east * first_stitch_offset
 
-                # we might have chosen our first stitch just outside this row, so move back in
-                if (first_stitch - beg) * row_direction < 0:
-                    first_stitch += row_direction * self.max_stitch_length
+            # we might have chosen our first stitch just outside this row, so move back in
+            if (first_stitch - beg) * row_direction < 0:
+                first_stitch += row_direction * self.max_stitch_length
 
-                offset = (first_stitch - beg).length()
+            offset = (first_stitch - beg).length()
 
-                while offset < segment_length:
-                    patch.add_stitch(beg + offset * row_direction)
-                    offset += self.max_stitch_length
+            while offset < segment_length:
+                patch.add_stitch(beg + offset * row_direction)
+                offset += self.max_stitch_length
 
-                if (end - patch.stitches[-1]).length() > 0.1 * self.options.pixels_per_mm:
-                    patch.add_stitch(end)
+            if (end - patch.stitches[-1]).length() > 0.1 * self.options.pixels_per_mm:
+                patch.add_stitch(end)
 
-                last_end = end
-                swap = not swap
+            last_end = end
+            swap = not swap
 
-            patches.append(patch)
-        return patches
+        return patch
+
+    def to_patches(self):
+        rows_of_segments = self.intersect_region_with_grating()
+        groups_of_segments = self.pull_runs(rows_of_segments)
+
+        return [self.section_to_patch(group) for group in groups_of_segments]
 
 
 class Stroke(EmbroideryElement):
