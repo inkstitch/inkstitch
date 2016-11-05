@@ -304,6 +304,19 @@ class Fill(EmbroideryElement):
 
         return rows
 
+    def make_quadrilateral(self, segment1, segment2):
+        return shgeo.Polygon((segment1[0], segment1[1], segment2[1], segment2[0], segment1[0]))
+
+    def is_same_run(self, segment1, segment2):
+        if shgeo.LineString(segment1).distance(shgeo.LineString(segment1)) > self.row_spacing * 1.1:
+            return False
+
+        quad = make_quadrilateral(segment1, segment2)
+        quad_area = quad.area
+        intersection_area = self.shape.intersection(quad).area
+
+        return (intersection_area / quad_area) >= 0.9
+
     def pull_runs(self, rows):
         # Given a list of rows, each containing a set of line segments,
         # break the area up into contiguous patches of line segments.
@@ -315,23 +328,6 @@ class Fill(EmbroideryElement):
         # we get to the bottom of the lower left leg, the next row will jump
         # over to midway up the lower right leg.  We want to stop there and
         # start a new patch.
-
-        # Segments more than this far apart are considered not to be part of
-        # the same run.
-        row_distance_cutoff = self.row_spacing * 1.1
-
-        def make_quadrilateral(segment1, segment2):
-            return shgeo.Polygon((segment1[0], segment1[1], segment2[1], segment2[0], segment1[0]))
-
-        def is_same_run(segment1, segment2):
-            if shgeo.LineString(segment1).distance(shgeo.LineString(segment1)) > row_distance_cutoff:
-                return False
-
-            quad = make_quadrilateral(segment1, segment2)
-            quad_area = quad.area
-            intersection_area = self.shape.intersection(quad).area
-
-            return (intersection_area / quad_area) >= 0.9
 
         # for row in rows:
         #    print >> sys.stderr, len(row)
@@ -349,7 +345,7 @@ class Fill(EmbroideryElement):
                 first, rest = row[0], row[1:]
 
                 # TODO: only accept actually adjacent rows here
-                if prev is not None and not is_same_run(prev, first):
+                if prev is not None and not self.is_same_run(prev, first):
                     break
 
                 run.append(first)
@@ -463,6 +459,15 @@ class AutoFill(Fill):
     @property
     def running_stitch_length(self):
         return self.get_float_param("running_stitch_length_mm")    
+
+    def is_same_run(self, segment1, segment2):
+        if shgeo.Point(segment1[0]).distance(shgeo.Point(segment2[0])) > self.max_stitch_length:
+            return False
+
+        if shgeo.Point(segment1[1]).distance(shgeo.Point(segment2[1])) > self.max_stitch_length:
+            return False
+
+        return True
 
     def get_corner_points(self, section):
         return section[0][0], section[0][-1], section[-1][0], section[-1][-1]
