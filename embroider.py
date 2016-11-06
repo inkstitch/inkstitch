@@ -236,7 +236,13 @@ class Fill(EmbroideryElement):
         # print >> sys.stderr, "polygon valid:", polygon.is_valid
         return polygon
 
-    def intersect_region_with_grating(self):
+    def intersect_region_with_grating(self, angle=None, row_spacing=None):
+        if angle is None:
+            angle = self.angle
+
+        if row_spacing is None:
+            row_spacing = self.row_spacing
+
         # the max line length I'll need to intersect the whole shape is the diagonal
         (minx, miny, maxx, maxy) = self.shape.bounds
         upper_left = PyEmb.Point(minx, miny)
@@ -247,7 +253,7 @@ class Fill(EmbroideryElement):
         # Now get a unit vector rotated to the requested angle.  I use -angle
         # because shapely rotates clockwise, but my geometry textbooks taught
         # me to consider angles as counter-clockwise from the X axis.
-        direction = PyEmb.Point(1, 0).rotate(-self.angle)
+        direction = PyEmb.Point(1, 0).rotate(-angle)
 
         # and get a normal vector
         normal = direction.rotate(math.pi / 2)
@@ -262,7 +268,7 @@ class Fill(EmbroideryElement):
         # angle degrees clockwise and ask for the new bounding box.  The max
         # and min y tell me how far to go.
 
-        _, start, _, end = affinity.rotate(self.shape, self.angle, origin='center', use_radians=True).bounds
+        _, start, _, end = affinity.rotate(self.shape, angle, origin='center', use_radians=True).bounds
 
         # convert start and end to be relative to center (simplifies things later)
         start -= center.y
@@ -271,7 +277,7 @@ class Fill(EmbroideryElement):
         # offset start slightly so that rows are always an even multiple of
         # row_spacing_px from the origin.  This makes it so that abutting
         # fill regions at the same angle and spacing always line up nicely.
-        start -= (start + normal * center) % self.row_spacing
+        start -= (start + normal * center) % row_spacing
 
         rows = []
 
@@ -288,7 +294,7 @@ class Fill(EmbroideryElement):
             else:
                 if res.is_empty or len(res.coords) == 1:
                     # ignore if we intersected at a single point or no points
-                    start += self.row_spacing
+                    start += row_spacing
                     continue
                 runs = [res.coords]
 
@@ -300,7 +306,7 @@ class Fill(EmbroideryElement):
 
             rows.append(runs)
 
-            start += self.row_spacing
+            start += row_spacing
 
         return rows
 
@@ -361,7 +367,16 @@ class Fill(EmbroideryElement):
 
         return runs
 
-    def section_to_patch(self, group_of_segments):
+    def section_to_patch(self, group_of_segments, angle=None, row_spacing=None, max_stitch_length=None):
+        if max_stitch_length is None:
+            max_stitch_length = self.max_stitch_length
+
+        if row_spacing is None:
+            row_spacing = self.row_spacing
+
+        if angle is None:
+            angle = self.angle
+
         # "east" is the name of the direction that is to the right along a row
         east = PyEmb.Point(1, 0).rotate(-self.angle)
 
@@ -412,25 +427,25 @@ class Fill(EmbroideryElement):
             # Now, imagine the coordinate axes rotated by 'angle' degrees, such that
             # the rows are parallel to the X axis.  We can find the coordinates in these
             # axes of the beginning point in this way:
-            relative_beg = beg.rotate(self.angle)
+            relative_beg = beg.rotate(angle)
 
-            absolute_row_num = round(relative_beg.y / self.row_spacing)
+            absolute_row_num = round(relative_beg.y / row_spacing)
             row_stagger = absolute_row_num % self.staggers
-            row_stagger_offset = (float(row_stagger) / self.staggers) * self.max_stitch_length
+            row_stagger_offset = (float(row_stagger) / self.staggers) * max_stitch_length
 
-            first_stitch_offset = (relative_beg.x - row_stagger_offset) % self.max_stitch_length
+            first_stitch_offset = (relative_beg.x - row_stagger_offset) % max_stitch_length
 
             first_stitch = beg - east * first_stitch_offset
 
             # we might have chosen our first stitch just outside this row, so move back in
             if (first_stitch - beg) * row_direction < 0:
-                first_stitch += row_direction * self.max_stitch_length
+                first_stitch += row_direction * max_stitch_length
 
             offset = (first_stitch - beg).length()
 
             while offset < segment_length:
                 patch.add_stitch(beg + offset * row_direction)
-                offset += self.max_stitch_length
+                offset += max_stitch_length
 
             if (end - patch.stitches[-1]).length() > 0.1 * self.options.pixels_per_mm:
                 patch.add_stitch(end)
@@ -460,7 +475,23 @@ class AutoFill(Fill):
 
     @property
     def running_stitch_length(self):
-        return self.get_float_param("running_stitch_length_mm")    
+        return self.get_float_param("running_stitch_length_mm")
+
+    @property
+    def underlay(self):
+        return self.get_boolean_param("underlay")
+
+    @property
+    def underlay_angle(self):
+        return math.radians(self.get_float_param("underlay_angle", self.angle + 90.0))
+
+    @property
+    def underlay_row_spacing(self):
+        return self.get_float_param("underlay_row_spacing", self.row_spacing * 3)
+
+    @property
+    def underlay_max_stitch_length(self):
+        return self.get_float_param("underlay_max_stitch_length", self.max_stitch_length)
 
     def is_same_run(self, segment1, segment2):
         if shgeo.Point(segment1[0]).distance(shgeo.Point(segment2[0])) > self.max_stitch_length:
@@ -524,29 +555,43 @@ class AutoFill(Fill):
         return min(sections_with_nearest_corner,
                    key=lambda(section, corner): abs(self.perimeter_distance(point, corner)))
 
-    def section_from_corner(self, section, start_corner):
+    def section_from_corner(self, section, start_corner, angle, row_spacing, max_stitch_length):
         if start_corner not in section[0]:
             section = list(reversed(section))
 
         if section[0][0] != start_corner:
             section = [list(reversed(row)) for row in section]
 
-        return self.section_to_patch(section)
+        return self.section_to_patch(section, angle, row_spacing, max_stitch_length)
 
-    def to_patches(self):
-        rows_of_segments = self.intersect_region_with_grating()
+    def auto_fill(self, angle, row_spacing, max_stitch_length, starting_point=None):
+        rows_of_segments = self.intersect_region_with_grating(angle, row_spacing)
         sections = self.pull_runs(rows_of_segments)
 
-        patches = []        
+        patches = []
+        last_stitch = starting_point
         while sections:
-            if patches:
-                last_stitch = patches[-1].stitches[-1]
+            if last_stitch:
                 section_index, start_corner = self.find_nearest_section(sections, last_stitch)
                 patches.append(self.connect_points(last_stitch, start_corner))
-                patches.append(self.section_from_corner(sections.pop(section_index), start_corner))
+                patches.append(self.section_from_corner(sections.pop(section_index), start_corner, angle, row_spacing, max_stitch_length))
             else:
-                patches.append(self.section_to_patch(sections.pop(0)))
+                patches.append(self.section_to_patch(sections.pop(0), angle, row_spacing, max_stitch_length))
 
+            last_stitch = patches[-1].stitches[-1]
+
+        return patches
+
+    def to_patches(self):
+        patches = []
+
+        underlay_end = None
+
+        if self.underlay:
+            patches.extend(self.auto_fill(self.underlay_angle, self.underlay_row_spacing, self.underlay_max_stitch_length))
+            underlay_end = patches[-1].stitches[-1]
+
+        patches.extend(self.auto_fill(self.angle, self.row_spacing, self.max_stitch_length, underlay_end))
 
         return patches
 
