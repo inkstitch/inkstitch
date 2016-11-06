@@ -311,7 +311,7 @@ class Fill(EmbroideryElement):
         if shgeo.LineString(segment1).distance(shgeo.LineString(segment1)) > self.row_spacing * 1.1:
             return False
 
-        quad = make_quadrilateral(segment1, segment2)
+        quad = self.make_quadrilateral(segment1, segment2)
         quad_area = quad.area
         intersection_area = self.shape.intersection(quad).area
 
@@ -448,13 +448,15 @@ class Fill(EmbroideryElement):
 
 
 class AutoFill(Fill):
+    def __init__(self, *args, **kwargs):
+        super(AutoFill, self).__init__(*args, **kwargs)
+
+        self.outline = self.shape.boundary[0]
+        self.outline_length = self.outline.length
+
     @property
     def flip(self):
         return False
-
-    @property
-    def outline(self):
-        return self.shape.boundary[0]
 
     @property
     def running_stitch_length(self):
@@ -469,51 +471,82 @@ class AutoFill(Fill):
 
         return True
 
+    def perimeter_distance(self, p1, p2):
+        # how far around the perimeter (and in what direction) do I need to go
+        # to get from p1 to p2?
+
+        p1_projection = self.outline.project(shgeo.Point(p1))
+        p2_projection = self.outline.project(shgeo.Point(p2))
+
+        distance = p2_projection - p1_projection
+
+        if abs(distance) > self.outline_length / 2.0:
+            # if we'd have to go more than halfway around, it's faster to go
+            # the other way
+            if distance < 0:
+                return distance + self.outline_length
+            elif distance > 0:
+                return distance - self.outline_length
+            else:
+                # this ought not happen, but just for completeness, return 0 if
+                # p1 and p0 are the same point
+                return 0
+        else:
+            return distance
+
+    def connect_points(self, p1, p2):
+        patch = Patch(color=self.color)
+
+        pos = self.outline.project(shgeo.Point(p1))
+        distance = self.perimeter_distance(p1, p2)
+        stitches = abs(int(distance / self.running_stitch_length))
+
+        direction = distance / abs(distance)
+        stitch = self.running_stitch_length * direction
+
+        for i in xrange(stitches):
+           pos = (pos + stitch) % self.outline_length
+           
+           patch.add_stitch(PyEmb.Point(*self.outline.interpolate(pos).coords[0]))
+
+        return patch
+
     def get_corner_points(self, section):
         return section[0][0], section[0][-1], section[-1][0], section[-1][-1]
 
-    def connect_points(self, p1, p2):
-        p1 = shgeo.Point(p1)
-        p2 = shgeo.Point(p2)
+    def nearest_corner(self, section, point):
+        return min(self.get_corner_points(section),
+                   key=lambda corner: abs(self.perimeter_distance(point, corner)))
 
-        patch = Patch(color=self.color)
+    def find_nearest_section(self, sections, point):
+        sections_with_nearest_corner = [(i, self.nearest_corner(section, point))
+                                    for i, section in enumerate(sections)]
+        return min(sections_with_nearest_corner,
+                   key=lambda(section, corner): abs(self.perimeter_distance(point, corner)))
 
-        outline = self.outline
-        outline_length = outline.length
-        start = outline.project(p1)
-        stitch_length = self.running_stitch_length
-        stitches = int(outline.length / stitch_length)
+    def section_from_corner(self, section, start_corner):
+        if start_corner not in section[0]:
+            section = list(reversed(section))
 
-        # TODO: tidy this code up, make pull_runs split more aggressively to
-        # completely avoid discontiguous sections, find the shorter direction
-        # around the shape to the destination
+        if section[0][0] != start_corner:
+            section = [list(reversed(row)) for row in section]
 
-        for i in xrange(stitches):
-            next_point = outline.interpolate((start + i * stitch_length) % outline_length)
-            patch.add_stitch(PyEmb.Point(next_point.x, next_point.y))
-
-            if next_point.distance(p2) <= stitch_length:
-                break
-
-        return patch
+        return self.section_to_patch(section)
 
     def to_patches(self):
         rows_of_segments = self.intersect_region_with_grating()
         sections = self.pull_runs(rows_of_segments)
-        # to do: perhaps travel to the sections in a more intelligent manner, by
-        # finding the next nearest corner point?
-        #corner_points = [self.get_corner_points(section) for section in sections]
 
-        print >> dbg, "autofill"
+        patches = []        
+        while sections:
+            if patches:
+                last_stitch = patches[-1].stitches[-1]
+                section_index, start_corner = self.find_nearest_section(sections, last_stitch)
+                patches.append(self.connect_points(last_stitch, start_corner))
+                patches.append(self.section_from_corner(sections.pop(section_index), start_corner))
+            else:
+                patches.append(self.section_to_patch(sections.pop(0)))
 
-        patches = []
-        last_section = None
-        for section in sections:
-            if last_section:
-                patches.append(self.connect_points(patches[-1].stitches[-1], section[0][0]))
-
-            patches.append(self.section_to_patch(section))
-            last_section = section
 
         return patches
 
