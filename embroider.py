@@ -486,15 +486,20 @@ class AutoFill(Fill):
 
     @property
     def fill_underlay_angle(self):
-        return math.radians(self.get_float_param("fill_underlay_angle", self.angle + 90.0))
+        underlay_angle = self.get_float_param("fill_underlay_angle")
+
+        if underlay_angle:
+            return math.radians(angle)
+        else:
+            return self.angle + math.pi / 2.0
 
     @property
     def fill_underlay_row_spacing(self):
-        return self.get_float_param("fill_underlay_row_spacing_mm", self.row_spacing * 3)
+        return self.get_float_param("fill_underlay_row_spacing_mm") or self.row_spacing * 3
 
     @property
     def fill_underlay_max_stitch_length(self):
-        return self.get_float_param("fill_underlay_max_stitch_length_mm", self.max_stitch_length)
+        return self.get_float_param("fill_underlay_max_stitch_length_mm" or self.max_stitch_length)
 
     def is_same_run(self, segment1, segment2):
         if shgeo.Point(segment1[0]).distance(shgeo.Point(segment2[0])) > self.max_stitch_length:
