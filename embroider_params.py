@@ -32,6 +32,10 @@ class EmbroiderParams(inkex.Effect):
                        "center_walk_underlay_stitch_length_mm",
                        "zigzag_underlay",
                        "zigzag_underlay_inset_mm",
+                       "fill_underlay",
+                       "fill_underlay_angle",
+                       "fill_underlay_row_spacing_mm",
+                       "fill_underlay_max_stitch_length_mm",
                       ]
 
         for param in self.params:

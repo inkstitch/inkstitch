@@ -7,6 +7,7 @@ import sys
 sys.path.append("/usr/share/inkscape/extensions")
 import os
 import inkex
+import simplestyle
 
 PIXELS_PER_MM = 10
 
@@ -40,6 +41,12 @@ class EmbroiderParams(inkex.Effect):
 
             if 'embroider_zigzag_underlay_spacing_mm' in node.attrib:
                 node.set('embroider_zigzag_underlay', 'yes')
+
+            style = simplestyle.parseStyle(node.get('style'))
+
+            if style.get('fill', 'none') != 'none' and \
+               'embroider_auto_fill' not in node.attrib:
+                    node.set('embroider_auto_fill', 'no')
 
 if __name__ == '__main__':
     e = EmbroiderParams()

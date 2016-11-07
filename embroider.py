@@ -478,20 +478,20 @@ class AutoFill(Fill):
         return self.get_float_param("running_stitch_length_mm")
 
     @property
-    def underlay(self):
-        return self.get_boolean_param("underlay")
+    def fill_underlay(self):
+        return self.get_boolean_param("fill_underlay")
 
     @property
-    def underlay_angle(self):
-        return math.radians(self.get_float_param("underlay_angle", self.angle + 90.0))
+    def fill_underlay_angle(self):
+        return math.radians(self.get_float_param("fill_underlay_angle", self.angle + 90.0))
 
     @property
-    def underlay_row_spacing(self):
-        return self.get_float_param("underlay_row_spacing", self.row_spacing * 3)
+    def fill_underlay_row_spacing(self):
+        return self.get_float_param("fill_underlay_row_spacing_mm", self.row_spacing * 3)
 
     @property
-    def underlay_max_stitch_length(self):
-        return self.get_float_param("underlay_max_stitch_length", self.max_stitch_length)
+    def fill_underlay_max_stitch_length(self):
+        return self.get_float_param("fill_underlay_max_stitch_length_mm", self.max_stitch_length)
 
     def is_same_run(self, segment1, segment2):
         if shgeo.Point(segment1[0]).distance(shgeo.Point(segment2[0])) > self.max_stitch_length:
@@ -590,8 +590,8 @@ class AutoFill(Fill):
         else:
             last_stitch = last_patch.stitches[-1]
 
-        if self.underlay:
-            patches.extend(self.auto_fill(self.underlay_angle, self.underlay_row_spacing, self.underlay_max_stitch_length, last_stitch))
+        if self.fill_underlay:
+            patches.extend(self.auto_fill(self.fill_underlay_angle, self.fill_underlay_row_spacing, self.fill_underlay_max_stitch_length, last_stitch))
             last_stitch = patches[-1].stitches[-1]
 
         patches.extend(self.auto_fill(self.angle, self.row_spacing, self.max_stitch_length, last_stitch))

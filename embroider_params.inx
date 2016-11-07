@@ -9,7 +9,7 @@
     <param name="row_spacing_mm" type="string" _gui-text="Row spacing (mm)"></param>
     <param name="max_stitch_length_mm" type="string" _gui-text="Maximum stitch length for fills (mm)"></param>
     <param name="repeats" type="string" _gui-text="Repeats (stroke only)"></param>
-    <param name="angle" type="string" _gui-text="Angle for lines in fills"></param>
+    <param name="angle" type="string" _gui-text="Angle for lines in fills (degrees)"></param>
     <param name="pull_compensation_mm" type="string" _gui-text="Pull compensation for satin column (mm)"></param>
     <param name="flip" type="string" _gui-text="Flip fill? (yes/no)"></param>
     <param name="satin_column" type="string" _gui-text="Satin Column? (yes/no)"></param>
@@ -22,6 +22,10 @@
     <param name="zigzag_spacing_mm" type="string" _gui-text="Zigzag underlay spacing (mm)"></param>
     <param name="zigzag_underlay_inset_mm" type="string" _gui-text="Inset for zigzag underlay (mm)"></param>
     <param name="stroke_first" type="string" _gui-text="Stitch stroke before fill? (yes/no)"></param>
+    <param name="fill_underlay" type="string" _gui-text="Underlay for fill stitch? (yes/no)"></param>
+    <param name="fill_underlay_angle" type="string" _gui-text="Angle for lines in fill underlay (degrees)"></param>
+    <param name="fill_underlay_row_spacing_mm" type="string" _gui-text="Row spacing for fill underlay (mm)"></param>
+    <param name="fill_underlay_max_stitch_length_mm" type="string" _gui-text="Maximum stitch length for fill underlay (mm)"></param>
     <effect>
         <object-type>all</object-type>
         <effects-menu>
