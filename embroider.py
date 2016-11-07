@@ -166,7 +166,7 @@ class EmbroideryElement(object):
     
         return flattened
 
-    def to_patches(self):
+    def to_patches(self, last_patch):
         raise NotImplementedError("%s must implement to_path()" % self.__class__.__name__)
 
     def fatal(self, message):
@@ -455,7 +455,7 @@ class Fill(EmbroideryElement):
 
         return patch
 
-    def to_patches(self):
+    def to_patches(self, last_patch):
         rows_of_segments = self.intersect_region_with_grating()
         groups_of_segments = self.pull_runs(rows_of_segments)
 
@@ -582,16 +582,19 @@ class AutoFill(Fill):
 
         return patches
 
-    def to_patches(self):
+    def to_patches(self, last_patch):
         patches = []
 
-        underlay_end = None
+        if last_patch is None:
+            last_stitch = None
+        else:
+            last_stitch = last_patch.stitches[-1]
 
         if self.underlay:
-            patches.extend(self.auto_fill(self.underlay_angle, self.underlay_row_spacing, self.underlay_max_stitch_length))
-            underlay_end = patches[-1].stitches[-1]
+            patches.extend(self.auto_fill(self.underlay_angle, self.underlay_row_spacing, self.underlay_max_stitch_length, last_stitch))
+            last_stitch = patches[-1].stitches[-1]
 
-        patches.extend(self.auto_fill(self.angle, self.row_spacing, self.max_stitch_length, underlay_end))
+        patches.extend(self.auto_fill(self.angle, self.row_spacing, self.max_stitch_length, last_stitch))
 
         return patches
 
@@ -682,7 +685,7 @@ class Stroke(EmbroideryElement):
 
         return patch
 
-    def to_patches(self):
+    def to_patches(self, last_patch):
         patches = []
 
         for path in self.paths:
@@ -1007,7 +1010,7 @@ class SatinColumn(EmbroideryElement):
 
         return patch
 
-    def to_patches(self):
+    def to_patches(self, last_patch):
         # Stitch a variable-width satin column, zig-zagging between two paths.
 
         # The algorithm will draw zigzags between each consecutive pair of
@@ -1195,7 +1198,7 @@ class Embroider(inkex.Effect):
             elements = []
 
             if element.get_style("fill"):
-                if element.get_boolean_param("auto_fill"):
+                if element.get_boolean_param("auto_fill", False):
                     elements.append(AutoFill(node, self.options))
                 else:
                     elements.append(Fill(node, self.options))
@@ -1275,7 +1278,15 @@ class Embroider(inkex.Effect):
         if self.options.hide_layers:
             self.hide_layers()
 
-        patches = chain.from_iterable(element.to_patches() for element in self.elements)
+        patches = []
+        for element in self.elements:
+            if patches:
+                last_patch = patches[-1]
+            else:
+                last_patch = None
+
+            patches.extend(element.to_patches(last_patch))
+
         stitches = patches_to_stitches(patches, self.options.collapse_length_mm * self.options.pixels_per_mm)
         emb = PyEmb.Embroidery(stitches, self.options.pixels_per_mm)
         emb.export(self.get_output_path(), self.options.output_format)
