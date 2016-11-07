@@ -59,7 +59,7 @@ class EmbroideryElement(object):
         value = self.node.get("embroider_" + param, "").strip()
 
         if not value:
-            value = getattr(self.options, param, None)
+            value = getattr(self.options, param, default)
 
         return value
 
@@ -586,6 +586,8 @@ class AutoFill(Fill):
         return patches
 
     def to_patches(self, last_patch):
+        print >> dbg, "autofill"
+
         patches = []
 
         if last_patch is None:
