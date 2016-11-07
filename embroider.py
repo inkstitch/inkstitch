@@ -1198,7 +1198,7 @@ class Embroider(inkex.Effect):
             elements = []
 
             if element.get_style("fill"):
-                if element.get_boolean_param("auto_fill", False):
+                if element.get_boolean_param("auto_fill", True):
                     elements.append(AutoFill(node, self.options))
                 else:
                     elements.append(Fill(node, self.options))
