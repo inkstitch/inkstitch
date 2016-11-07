@@ -12,6 +12,7 @@ import inkex
 
 
 class EmbroiderParams(inkex.Effect):
+
     def __init__(self, *args, **kwargs):
         inkex.Effect.__init__(self)
 
@@ -36,12 +37,12 @@ class EmbroiderParams(inkex.Effect):
                        "fill_underlay_angle",
                        "fill_underlay_row_spacing_mm",
                        "fill_underlay_max_stitch_length_mm",
-                      ]
+                       ]
 
         for param in self.params:
             self.OptionParser.add_option("--%s" % param, default="")
 
-    def effect(self):    
+    def effect(self):
         for node in self.selected.itervalues():
             for param in self.params:
                 value = getattr(self.options, param).strip()

@@ -66,6 +66,7 @@ class Point:
     def __len__(self):
         return 2
 
+
 class Stitch(Point):
 
     def __init__(self, x, y, color=None, jump_stitch=False):

@@ -48,7 +48,9 @@ SVG_PATH_TAG = inkex.addNS('path', 'svg')
 SVG_DEFS_TAG = inkex.addNS('defs', 'svg')
 SVG_GROUP_TAG = inkex.addNS('g', 'svg')
 
+
 class EmbroideryElement(object):
+
     def __init__(self, node, options):
         self.node = node
         self.options = options
@@ -60,28 +62,27 @@ class EmbroideryElement(object):
             value = getattr(self.options, param, None)
 
         return value
-        
+
     def get_boolean_param(self, param, default=None):
         value = self.get_param(param, default)
-    
+
         if isinstance(value, bool):
             return value
         else:
             return value and (value.lower() in ('yes', 'y', 'true', 't', '1'))
-        
-    def get_float_param(self, param, default=None):    
+
+    def get_float_param(self, param, default=None):
         try:
             value = float(self.get_param(param, default))
         except (TypeError, ValueError):
             return default
-    
+
         if param.endswith('_mm'):
-            #print >> dbg, "get_float_param", param, value, "*", self.options.pixels_per_mm
+            # print >> dbg, "get_float_param", param, value, "*", self.options.pixels_per_mm
             value = value * self.options.pixels_per_mm
 
         return value
 
-        
     def get_int_param(self, param, default=None):
         try:
             value = int(self.get_param(param, default))
@@ -92,7 +93,7 @@ class EmbroideryElement(object):
             value = int(value * self.options.pixels_per_mm)
 
         return value
-    
+
     def get_style(self, style_name):
         style = simplestyle.parseStyle(self.node.get("style"))
         if (style_name not in style):
@@ -101,15 +102,15 @@ class EmbroideryElement(object):
         if value == 'none':
             return None
         return value
-    
+
     def has_style(self, style_name):
         style = simplestyle.parseStyle(self.node.get("style"))
         return style_name in style
-    
+
     def parse_path(self):
         # A CSP is a  "cubic superpath".
-        # 
-        # A "path" is a sequence of strung-together bezier curves. 
+        #
+        # A "path" is a sequence of strung-together bezier curves.
         #
         # A "superpath" is a collection of paths that are all in one object.
         #
@@ -135,35 +136,35 @@ class EmbroideryElement(object):
         # Tuples all the way down.  Hasn't anyone heard of using classes?
 
         path = cubicsuperpath.parsePath(self.node.get("d"))
-    
+
         # print >> sys.stderr, pformat(path)
-    
+
         # start with the identity transform
         transform = [[1.0, 0.0, 0.0], [0.0, 1.0, 0.0]]
-    
+
         # combine this node's transform with all parent groups' transforms
         transform = simpletransform.composeParents(self.node, transform)
-    
+
         # apply the combined transform to this node's path
         simpletransform.applyTransformToPath(transform, path)
-    
-        return path    
+
+        return path
 
     def flatten(self, path):
         """approximate a path containing beziers with a series of points"""
-    
+
         path = deepcopy(path)
-    
+
         cspsubdiv(path, self.options.flat)
-    
+
         flattened = []
-    
+
         for comp in path:
             vertices = []
             for ctl in comp:
                 vertices.append((ctl[1][0], ctl[1][1]))
             flattened.append(vertices)
-    
+
         return flattened
 
     def to_patches(self, last_patch):
@@ -175,6 +176,7 @@ class EmbroideryElement(object):
 
 
 class Fill(EmbroideryElement):
+
     def __init__(self, *args, **kwargs):
         super(Fill, self).__init__(*args, **kwargs)
 
@@ -231,7 +233,7 @@ class Fill(EmbroideryElement):
         # biggest path.
         # TODO: actually figure out which things are holes and which are shells
         poly_ary.sort(key=lambda point_list: shgeo.Polygon(point_list).area, reverse=True)
-    
+
         polygon = shgeo.MultiPolygon([(poly_ary[0], poly_ary[1:])])
         # print >> sys.stderr, "polygon valid:", polygon.is_valid
         return polygon
@@ -463,6 +465,7 @@ class Fill(EmbroideryElement):
 
 
 class AutoFill(Fill):
+
     def __init__(self, *args, **kwargs):
         super(AutoFill, self).__init__(*args, **kwargs)
 
@@ -536,9 +539,9 @@ class AutoFill(Fill):
         stitch = self.running_stitch_length * direction
 
         for i in xrange(stitches):
-           pos = (pos + stitch) % self.outline_length
-           
-           patch.add_stitch(PyEmb.Point(*self.outline.interpolate(pos).coords[0]))
+            pos = (pos + stitch) % self.outline_length
+
+            patch.add_stitch(PyEmb.Point(*self.outline.interpolate(pos).coords[0]))
 
         return patch
 
@@ -551,7 +554,7 @@ class AutoFill(Fill):
 
     def find_nearest_section(self, sections, point):
         sections_with_nearest_corner = [(i, self.nearest_corner(section, point))
-                                    for i, section in enumerate(sections)]
+                                        for i, section in enumerate(sections)]
         return min(sections_with_nearest_corner,
                    key=lambda(section, corner): abs(self.perimeter_distance(point, corner)))
 
@@ -598,7 +601,9 @@ class AutoFill(Fill):
 
         return patches
 
+
 class Stroke(EmbroideryElement):
+
     @property
     def color(self):
         return self.get_style("stroke")
@@ -659,7 +664,7 @@ class Stroke(EmbroideryElement):
 
                 # vector pointing along segment
                 along = (p1 - p0).unit()
-                
+
                 # vector pointing to edge of stroke width
                 perp = along.rotate_left().mul(stroke_width * 0.5)
 
@@ -693,7 +698,7 @@ class Stroke(EmbroideryElement):
             if self.is_running_stitch():
                 patch = self.stroke_points(path, self.running_stitch_length, stroke_width=0.0)
             else:
-                patch = self.stroke_points(path, self.zigzag_spacing/2.0, stroke_width=self.width)
+                patch = self.stroke_points(path, self.zigzag_spacing / 2.0, stroke_width=self.width)
 
             patches.append(patch)
 
@@ -701,6 +706,7 @@ class Stroke(EmbroideryElement):
 
 
 class SatinColumn(EmbroideryElement):
+
     def __init__(self, *args, **kwargs):
         super(SatinColumn, self).__init__(*args, **kwargs)
 
@@ -842,7 +848,7 @@ class SatinColumn(EmbroideryElement):
         # we're currently on.  <start_pos> is where along that line
         # segment we are.  Return a new position and index.
 
-        #print >> dbg, "walk", start_pos, start_index, distance
+        # print >> dbg, "walk", start_pos, start_index, distance
 
         pos = start_pos
         index = start_index
@@ -939,12 +945,12 @@ class SatinColumn(EmbroideryElement):
 
         end1 = remainder_path1[-1]
         end2 = remainder_path2[-1]
-    
+
         if (end1 - pos1).length() > 0.3 * spacing:
             add_pair(pos1, pos2)
-    
+
         add_pair(end1, end2)
-    
+
         return points
 
     def do_contour_underlay(self):
@@ -1039,6 +1045,7 @@ class SatinColumn(EmbroideryElement):
 
 
 class Patch:
+
     def __init__(self, color=None, stitches=None):
         self.color = color
         self.stitches = stitches or []
@@ -1123,6 +1130,7 @@ def emit_inkscape(parent, stitches):
 
 
 class Embroider(inkex.Effect):
+
     def __init__(self, *args, **kwargs):
         inkex.Effect.__init__(self)
         self.OptionParser.add_option("-r", "--row_spacing_mm",
