@@ -501,6 +501,10 @@ class AutoFill(Fill):
     def fill_underlay_max_stitch_length(self):
         return self.get_float_param("fill_underlay_max_stitch_length_mm" or self.max_stitch_length)
 
+    def validate(self):
+        if len(self.shape.boundary) > 1:
+            self.fatal("auto-fill: object %s cannot be auto-filled because it has one or more holes.  Please disable auto-fill for this object or break it into separate objects without holes." % self.node.get('id'))
+
     def is_same_run(self, segment1, segment2):
         if shgeo.Point(segment1[0]).distance(shgeo.Point(segment2[0])) > self.max_stitch_length:
             return False
@@ -540,7 +544,7 @@ class AutoFill(Fill):
         distance = self.perimeter_distance(p1, p2)
         stitches = abs(int(distance / self.running_stitch_length))
 
-        direction = distance / abs(distance)
+        direction = math.copysign(1.0, distance)
         stitch = self.running_stitch_length * direction
 
         for i in xrange(stitches):
@@ -592,6 +596,7 @@ class AutoFill(Fill):
 
     def to_patches(self, last_patch):
         print >> dbg, "autofill"
+        self.validate()
 
         patches = []
 
