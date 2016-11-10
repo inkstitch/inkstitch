@@ -210,6 +210,21 @@ class Fill(EmbroideryElement):
     def paths(self):
         return self.flatten(self.parse_path())
 
+    def east(self, angle):
+        # "east" is the name of the direction that is to the right along a row
+        return PyEmb.Point(1, 0).rotate(-angle)
+
+    def north(self, angle):
+        return self.east(angle).rotate(math.pi / 2)
+
+    def adjust_stagger(self, stitch, angle, row_spacing, max_stitch_length):
+        row_num = round((stitch * self.north(angle)) / row_spacing)
+        row_stagger = row_num % self.staggers
+        stagger_offset = (float(row_stagger) / self.staggers) * max_stitch_length
+        offset = ((stitch * self.east(angle)) - stagger_offset) % max_stitch_length
+
+        return stitch - offset * self.east(angle)
+
     def get_shape(self):
         poly_ary = []
         for sub_path in self.paths:
@@ -379,9 +394,6 @@ class Fill(EmbroideryElement):
         if angle is None:
             angle = self.angle
 
-        # "east" is the name of the direction that is to the right along a row
-        east = PyEmb.Point(1, 0).rotate(-self.angle)
-
         # print >> sys.stderr, len(groups_of_segments)
 
         patch = Patch(color=self.color)
@@ -426,18 +438,7 @@ class Fill(EmbroideryElement):
             if last_end is None or (beg - last_end).length() > 0.5 * self.options.pixels_per_mm:
                 patch.add_stitch(beg)
 
-            # Now, imagine the coordinate axes rotated by 'angle' degrees, such that
-            # the rows are parallel to the X axis.  We can find the coordinates in these
-            # axes of the beginning point in this way:
-            relative_beg = beg.rotate(angle)
-
-            absolute_row_num = round(relative_beg.y / row_spacing)
-            row_stagger = absolute_row_num % self.staggers
-            row_stagger_offset = (float(row_stagger) / self.staggers) * max_stitch_length
-
-            first_stitch_offset = (relative_beg.x - row_stagger_offset) % max_stitch_length
-
-            first_stitch = beg - east * first_stitch_offset
+            first_stitch = self.adjust_stagger(beg, angle, row_spacing, max_stitch_length)
 
             # we might have chosen our first stitch just outside this row, so move back in
             if (first_stitch - beg) * row_direction < 0:
@@ -545,12 +546,24 @@ class AutoFill(Fill):
         stitches = abs(int(distance / self.running_stitch_length))
 
         direction = math.copysign(1.0, distance)
-        stitch = self.running_stitch_length * direction
+        one_stitch = self.running_stitch_length * direction
 
         for i in xrange(stitches):
-            pos = (pos + stitch) % self.outline_length
+            pos = (pos + one_stitch) % self.outline_length
 
-            patch.add_stitch(PyEmb.Point(*self.outline.interpolate(pos).coords[0]))
+            stitch = PyEmb.Point(*self.outline.interpolate(pos).coords[0])
+
+            # if we're moving along the fill direction, adjust the stitch to
+            # match the fill so it blends in
+            if patch.stitches:
+                if abs((stitch - patch.stitches[-1]) * self.north(self.angle)) < 0.01:
+                    new_stitch = self.adjust_stagger(stitch, self.angle, self.row_spacing, self.max_stitch_length)
+
+                    # don't push the point past the end of this section of the outline
+                    if self.outline.distance(shgeo.Point(new_stitch)) <= 0.01:
+                        stitch = new_stitch
+
+            patch.add_stitch(stitch)
 
         return patch
 
