@@ -34,18 +34,18 @@ class Point:
             # dot product
             return self.x * other.x + self.y * other.y
         elif isinstance(other, (int, float)):
-            return self.mul(other)
+            return Point(self.x * other, self.y * other)
         else:
             raise ValueError("cannot multiply Point by %s" % type(other))
 
     def __rmul__(self, other):
         if isinstance(other, (int, float)):
-            return self.mul(other)
+            return self.__mul__(other)
         else:
             raise ValueError("cannot multiply Point by %s" % type(other))
 
     def __repr__(self):
-        return "Pt(%s,%s)" % (self.x, self.y)
+        return "Point(%s,%s)" % (self.x, self.y)
 
     def length(self):
         return math.sqrt(math.pow(self.x, 2.0) + math.pow(self.y, 2.0))

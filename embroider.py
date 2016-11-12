@@ -311,8 +311,8 @@ class Fill(EmbroideryElement):
         rows = []
 
         while start < end:
-            p0 = center + normal.mul(start) + direction.mul(half_length)
-            p1 = center + normal.mul(start) - direction.mul(half_length)
+            p0 = center + normal * start + direction * half_length
+            p1 = center + normal * start - direction * half_length
             endpoints = [p0.as_tuple(), p1.as_tuple()]
             grating_line = shgeo.LineString(endpoints)
 
@@ -711,7 +711,7 @@ class Stroke(EmbroideryElement):
                 along = (p1 - p0).unit()
 
                 # vector pointing to edge of stroke width
-                perp = along.rotate_left().mul(stroke_width * 0.5)
+                perp = along.rotate_left() * (stroke_width * 0.5)
 
                 if stroke_width == 0.0 and last_segment_direction is not None:
                     if abs(1.0 - along * last_segment_direction) > 0.5:
