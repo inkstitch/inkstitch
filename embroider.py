@@ -40,6 +40,7 @@ import shapely.ops
 from pprint import pformat
 
 import PyEmb
+from PyEmb import cache
 
 dbg = open("/tmp/embroider-debug.txt", "w")
 PyEmb.dbg = dbg
@@ -55,6 +56,7 @@ class EmbroideryElement(object):
         self.node = node
         self.options = options
 
+    @cache
     def get_param(self, param, default):
         value = self.node.get("embroider_" + param, "").strip()
 
@@ -63,6 +65,7 @@ class EmbroideryElement(object):
 
         return value
 
+    @cache
     def get_boolean_param(self, param, default=None):
         value = self.get_param(param, default)
 
@@ -71,6 +74,7 @@ class EmbroideryElement(object):
         else:
             return value and (value.lower() in ('yes', 'y', 'true', 't', '1'))
 
+    @cache
     def get_float_param(self, param, default=None):
         try:
             value = float(self.get_param(param, default))
@@ -83,6 +87,7 @@ class EmbroideryElement(object):
 
         return value
 
+    @cache
     def get_int_param(self, param, default=None):
         try:
             value = int(self.get_param(param, default))
@@ -94,6 +99,7 @@ class EmbroideryElement(object):
 
         return value
 
+    @cache
     def get_style(self, style_name):
         style = simplestyle.parseStyle(self.node.get("style"))
         if (style_name not in style):
@@ -103,10 +109,12 @@ class EmbroideryElement(object):
             return None
         return value
 
+    @cache
     def has_style(self, style_name):
         style = simplestyle.parseStyle(self.node.get("style"))
         return style_name in style
 
+    @cache
     def parse_path(self):
         # A CSP is a  "cubic superpath".
         #
@@ -180,9 +188,8 @@ class Fill(EmbroideryElement):
     def __init__(self, *args, **kwargs):
         super(Fill, self).__init__(*args, **kwargs)
 
-        self.shape = self.get_shape()
-
     @property
+    @cache
     def angle(self):
         return math.radians(self.get_float_param('angle', 0))
 
@@ -207,25 +214,13 @@ class Fill(EmbroideryElement):
         return self.get_int_param("staggers", 4)
 
     @property
+    @cache
     def paths(self):
         return self.flatten(self.parse_path())
 
-    def east(self, angle):
-        # "east" is the name of the direction that is to the right along a row
-        return PyEmb.Point(1, 0).rotate(-angle)
-
-    def north(self, angle):
-        return self.east(angle).rotate(math.pi / 2)
-
-    def adjust_stagger(self, stitch, angle, row_spacing, max_stitch_length):
-        row_num = round((stitch * self.north(angle)) / row_spacing)
-        row_stagger = row_num % self.staggers
-        stagger_offset = (float(row_stagger) / self.staggers) * max_stitch_length
-        offset = ((stitch * self.east(angle)) - stagger_offset) % max_stitch_length
-
-        return stitch - offset * self.east(angle)
-
-    def get_shape(self):
+    @property
+    @cache
+    def shape(self):
         poly_ary = []
         for sub_path in self.paths:
             point_ary = []
@@ -252,6 +247,23 @@ class Fill(EmbroideryElement):
         polygon = shgeo.MultiPolygon([(poly_ary[0], poly_ary[1:])])
         # print >> sys.stderr, "polygon valid:", polygon.is_valid
         return polygon
+
+    @cache
+    def east(self, angle):
+        # "east" is the name of the direction that is to the right along a row
+        return PyEmb.Point(1, 0).rotate(-angle)
+
+    @cache
+    def north(self, angle):
+        return self.east(angle).rotate(math.pi / 2)
+
+    def adjust_stagger(self, stitch, angle, row_spacing, max_stitch_length):
+        row_num = round((stitch * self.north(angle)) / row_spacing)
+        row_stagger = row_num % self.staggers
+        stagger_offset = (float(row_stagger) / self.staggers) * max_stitch_length
+        offset = ((stitch * self.east(angle)) - stagger_offset) % max_stitch_length
+
+        return stitch - offset * self.east(angle)
 
     def intersect_region_with_grating(self, angle=None, row_spacing=None):
         if angle is None:
@@ -466,12 +478,15 @@ class Fill(EmbroideryElement):
 
 
 class AutoFill(Fill):
+    @property
+    @cache
+    def outline(self):
+        return self.shape.boundary[0]
 
-    def __init__(self, *args, **kwargs):
-        super(AutoFill, self).__init__(*args, **kwargs)
-
-        self.outline = self.shape.boundary[0]
-        self.outline_length = self.outline.length
+    @property
+    @cache
+    def outline_length(self):
+        return self.outline.length
 
     @property
     def flip(self):
@@ -486,6 +501,7 @@ class AutoFill(Fill):
         return self.get_boolean_param("fill_underlay")
 
     @property
+    @cache
     def fill_underlay_angle(self):
         underlay_angle = self.get_float_param("fill_underlay_angle")
 
@@ -495,10 +511,12 @@ class AutoFill(Fill):
             return self.angle + math.pi / 2.0
 
     @property
+    @cache
     def fill_underlay_row_spacing(self):
         return self.get_float_param("fill_underlay_row_spacing_mm") or self.row_spacing * 3
 
     @property
+    @cache
     def fill_underlay_max_stitch_length(self):
         return self.get_float_param("fill_underlay_max_stitch_length_mm" or self.max_stitch_length)
 
@@ -634,6 +652,7 @@ class Stroke(EmbroideryElement):
         return self.get_style("stroke")
 
     @property
+    @cache
     def width(self):
         stroke_width = self.get_style("stroke-width")
 
@@ -651,6 +670,7 @@ class Stroke(EmbroideryElement):
         return self.get_float_param("running_stitch_length_mm")
 
     @property
+    @cache
     def zigzag_spacing(self):
         return self.get_float_param("zigzag_spacing_mm")
 
