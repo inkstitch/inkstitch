@@ -767,7 +767,6 @@ class SatinColumn(EmbroideryElement):
     @property
     def zigzag_spacing(self):
         # peak-to-peak distance between zigzags
-        print >> dbg, "satin zigzag spacing", self.get_float_param("zigzag_spacing_mm")
         return self.get_float_param("zigzag_spacing_mm")
 
     @property
@@ -786,7 +785,7 @@ class SatinColumn(EmbroideryElement):
     @property
     def contour_underlay_stitch_length(self):
         # use "contour_underlay_stitch_length", or, if not set, default to "stitch_length"
-        return self.get_float_param("contour_underlay_stitch_length_mm", self.get_float_param("running_stitch_length_mm"))
+        return self.get_float_param("contour_underlay_stitch_length_mm") or self.get_float_param("running_stitch_length_mm")
 
     @property
     def contour_underlay_inset(self):
@@ -802,7 +801,7 @@ class SatinColumn(EmbroideryElement):
     @property
     def center_walk_underlay_stitch_length(self):
         # use "center_walk_underlay_stitch_length", or, if not set, default to "stitch_length"
-        return self.get_float_param("center_walk_underlay_stitch_length_mm", self.get_float_param("running_stitch_length_mm"))
+        return self.get_float_param("center_walk_underlay_stitch_length_mm") or self.get_float_param("running_stitch_length_mm")
 
     @property
     def zigzag_underlay(self):
@@ -822,7 +821,7 @@ class SatinColumn(EmbroideryElement):
         # doing both contour underlay and zigzag underlay, make sure the
         # points of the zigzag fall outside the contour underlay but inside
         # the edges of the satin column.
-        return self.get_float_param("zigzag_underlay_inset_mm", self.contour_underlay_inset / 2.0)
+        return self.get_float_param("zigzag_underlay_inset_mm") or self.contour_underlay_inset / 2.0
 
     def get_flattened_paths(self):
         # Given a pair of paths made up of bezier segments, flatten
