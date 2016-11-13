@@ -322,6 +322,11 @@ class Embroider(inkex.Effect):
             action="store", type="int",
             dest="max_backups", default=5,
             help="Max number of backups of output files to keep.")
+        self.OptionParser.add_option("--svg2emb",
+            action="store", type="choice",
+            choices=["true","false"],
+            dest="svg2emb", default="false",
+            help="Just generate embroidmodder2 CSV from existing paths.")
         self.patches = []
 
     def process_one_path(self, node, shpath, threadcolor, angle):
@@ -750,12 +755,13 @@ class Embroider(inkex.Effect):
         emb = PyEmb.Embroidery(stitches, pixels_per_millimeter)
         emb.export(self.get_output_path(), self.options.output_format)
 
-        new_layer = inkex.etree.SubElement(self.document.getroot(),
-                inkex.addNS('g', 'svg'), {})
-        new_layer.set('id', self.uniqueId("embroidery"))
-        new_layer.set(inkex.addNS('label', 'inkscape'), 'Embroidery')
-        new_layer.set(inkex.addNS('groupmode', 'inkscape'), 'layer')
-        emit_inkscape(new_layer, stitches, self.split_path_on_jumps)
+        if(self.options.svg2emb):
+            new_layer = inkex.etree.SubElement(self.document.getroot(),
+                    inkex.addNS('g', 'svg'), {})
+            new_layer.set('id', self.uniqueId("embroidery"))
+            new_layer.set(inkex.addNS('label', 'inkscape'), 'Embroidery')
+            new_layer.set(inkex.addNS('groupmode', 'inkscape'), 'layer')
+            emit_inkscape(new_layer, stitches, self.split_path_on_jumps)
 
         sys.stdout = old_stdout
 
@@ -792,14 +798,22 @@ class Embroider(inkex.Effect):
             path = [PyEmb.Point(x, y) for x, y in path]
             if (stroke_width <= STROKE_MIN or dashed):
                 #dbg.write("self.max_stitch_len_px = %s\n" % self.max_stitch_len_px)
-                patch = self.stroke_points(path, running_stitch_len_px, 0.0, repeats, threadcolor)
+                    patch = self.stroke_points(path, running_stitch_len_px, 0.0, repeats, threadcolor)
             else:
                 patch = self.stroke_points(path, zigzag_spacing_px*0.5, stroke_width, repeats, threadcolor)
             patches.extend(patch)
 
         return patches
 
+    def stroke_points_exact(self, emb_point_list, zigzag_spacing_px, stroke_width, repeats, threadcolor):
+        patch = Patch(color=threadcolor)
+        for p0 in emb_point_list:
+            patch.addStitch(p0)
+        return [patch]
+
     def stroke_points(self, emb_point_list, zigzag_spacing_px, stroke_width, repeats, threadcolor):
+        if(self.options.svg2emb):
+            return self.stroke_points_exact(emb_point_list, zigzag_spacing_px, stroke_width, repeats, threadcolor)
         patch = Patch(color=threadcolor)
         p0 = emb_point_list[0]
         rho = 0.0

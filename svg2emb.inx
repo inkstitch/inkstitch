@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <_name>svg2emb</_name>
+    <id>serg.svg2emb</id>
+    <dependency type="executable" location="extensions">embroider.py</dependency>
+<dependency type="executable" location="extensions">inkex.py</dependency>
+    <param name="svg2emb" type="boolean" _gui-text="Save to CSV"></param>
+    <param name="output_format" type="optiongroup" _gui-text="Output file format" appearance="minimal">
+        <_option value="melco">Melco</_option>
+        <_option value="csv">Embroidermodder 2 CSV</_option>
+        <_option value="gcode">Franklin G-Code</_option>
+    </param>
+    <param name="path" type="string" _gui-text="Directory"></param>
+    <effect>
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu _name="Embroidery"/>
+        </effects-menu>
+    </effect>
+    <script>
+        <command reldir="extensions" interpreter="python">embroider.py</command>
+    </script>
+</inkscape-extension>
