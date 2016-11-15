@@ -722,6 +722,7 @@ class Embroider(inkex.Effect):
         self.trim_len_px = self.options.trim_len_mm*pixels_per_millimeter
         self.hatching = self.options.hatch_filled_paths == "true"
         self.split_path_on_jumps = self.options.split_path_on_jumps == "true"
+        self.svg2emb = self.options.svg2emb == "true"
 
         self.svgpath = inkex.addNS('path', 'svg')
         self.svgdefs = inkex.addNS('defs', 'svg')
@@ -748,14 +749,14 @@ class Embroider(inkex.Effect):
             inkex.errormsg("Tip: use Path -> Object to Path to convert non-paths before embroidering.")
             return
 
-        if self.options.hide_layers:
+        if(self.options.hide_layers == "true"):
             self.hide_layers()
 
         stitches = patches_to_stitches(self.patch_list, self.collapse_len_px, self.trim_len_px)
         emb = PyEmb.Embroidery(stitches, pixels_per_millimeter)
         emb.export(self.get_output_path(), self.options.output_format)
 
-        if(self.options.svg2emb):
+        if(not self.svg2emb):
             new_layer = inkex.etree.SubElement(self.document.getroot(),
                     inkex.addNS('g', 'svg'), {})
             new_layer.set('id', self.uniqueId("embroidery"))
@@ -812,7 +813,7 @@ class Embroider(inkex.Effect):
         return [patch]
 
     def stroke_points(self, emb_point_list, zigzag_spacing_px, stroke_width, repeats, threadcolor):
-        if(self.options.svg2emb):
+        if(self.svg2emb):
             return self.stroke_points_exact(emb_point_list, zigzag_spacing_px, stroke_width, repeats, threadcolor)
         patch = Patch(color=threadcolor)
         p0 = emb_point_list[0]
