@@ -352,6 +352,7 @@ class Embroider(inkex.Effect):
             first_segment = True
             swap = False
             last_end = None
+            prevseg_end = None
 
             for segment in group_of_segments:
                 # We want our stitches to look like this:
@@ -378,7 +379,10 @@ class Embroider(inkex.Effect):
 
                 if (swap):
                     (beg,end)=(end,beg)
-
+                if (hatching and (prevseg_end is not None)):
+                    beg = prevseg_end
+                prevseg_end = end
+                
                 beg = PyEmb.Point(*beg)
                 end = PyEmb.Point(*end)
 
@@ -418,8 +422,8 @@ class Embroider(inkex.Effect):
 
                 last_end = end
 
-                if not hatching:
-                    swap = not swap
+                #if not hatching:
+                swap = not swap
 
             patches.append(patch)
         return patches
