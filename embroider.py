@@ -50,11 +50,51 @@ SVG_DEFS_TAG = inkex.addNS('defs', 'svg')
 SVG_GROUP_TAG = inkex.addNS('g', 'svg')
 
 
-class EmbroideryElement(object):
+class Param(object):
+    def __init__(self, name, description, unit=None, values=[], type=None, group=None, inverse=False, default=None):
+        self.name = name
+        self.description = description
+        self.unit = unit
+        self.values = values or [""]
+        self.type = type
+        self.group = group
+        self.inverse = inverse
+        self.default = default
 
-    def __init__(self, node, options):
+    def __repr__(self):
+        return "Param(%s)" % vars(self)
+
+# Decorate a member function or property with information about
+# the embroidery parameter it corresponds to
+def param(*args, **kwargs):
+    p = Param(*args, **kwargs)
+
+    def decorator(func):
+        func.param = p
+        return func
+
+    return decorator
+
+class EmbroideryElement(object):
+    def __init__(self, node, options=None):
         self.node = node
         self.options = options
+
+    @property
+    def id(self):
+        return self.node.get('id')
+
+    @classmethod
+    def get_params(cls):
+        params = []
+        for attr in dir(cls):
+            prop = getattr(cls, attr)
+            if isinstance(prop, property):
+                # The 'param' attribute is set by the 'param' decorator defined above.
+                if hasattr(prop.fget, 'param'):
+                    params.append(prop.fget.param)
+
+        return params
 
     @cache
     def get_param(self, param, default):
@@ -98,6 +138,9 @@ class EmbroideryElement(object):
             value = int(value * self.options.pixels_per_mm)
 
         return value
+
+    def set_param(self, name, value):
+        self.node.set("embroider_%s" % name, value)
 
     @cache
     def get_style(self, style_name):
@@ -184,11 +227,16 @@ class EmbroideryElement(object):
 
 
 class Fill(EmbroideryElement):
-
     def __init__(self, *args, **kwargs):
         super(Fill, self).__init__(*args, **kwargs)
 
     @property
+    @param('auto_fill', 'Manually routed fill stitching', type='toggle', inverse=True, default=True)
+    def auto_fill(self):
+        return self.get_boolean_param('auto_fill', True)
+
+    @property
+    @param('angle', 'Angle of lines of stitches', unit='deg', type='float')
     @cache
     def angle(self):
         return math.radians(self.get_float_param('angle', 0))
@@ -198,18 +246,22 @@ class Fill(EmbroideryElement):
         return self.get_style("fill")
 
     @property
+    @param('flip', 'Flip fill (start right-to-left)', type='boolean')
     def flip(self):
         return self.get_boolean_param("flip", False)
 
     @property
+    @param('row_spacing_mm', 'Spacing between rows', unit='mm', type='float')
     def row_spacing(self):
         return self.get_float_param("row_spacing_mm")
 
     @property
+    @param('max_stitch_length_mm', 'Maximum fill stitch length', unit='mm', type='float')
     def max_stitch_length(self):
         return self.get_float_param("max_stitch_length_mm")
 
     @property
+    @param('staggers', 'Stagger rows this many times before repeating', type='int')
     def staggers(self):
         return self.get_int_param("staggers", 4)
 
@@ -479,6 +531,11 @@ class Fill(EmbroideryElement):
 
 class AutoFill(Fill):
     @property
+    @param('auto_fill', 'Automatically routed fill stitching', type='toggle', default=True)
+    def auto_fill(self):
+        return self.get_boolean_param('auto_fill', True)
+
+    @property
     @cache
     def outline(self):
         return self.shape.boundary[0]
@@ -493,14 +550,17 @@ class AutoFill(Fill):
         return False
 
     @property
+    @param('running_stitch_length_mm', 'Running stitch length (traversal between sections)', unit='mm', type='float')
     def running_stitch_length(self):
         return self.get_float_param("running_stitch_length_mm")
 
     @property
+    @param('fill_underlay', 'Underlay', type='toggle', group='AutoFill Underlay')
     def fill_underlay(self):
         return self.get_boolean_param("fill_underlay")
 
     @property
+    @param('fill_underlay_angle', 'Fill angle (default: fill angle + 90 deg)', unit='deg', group='AutoFill Underlay', type='float')
     @cache
     def fill_underlay_angle(self):
         underlay_angle = self.get_float_param("fill_underlay_angle")
@@ -511,11 +571,13 @@ class AutoFill(Fill):
             return self.angle + math.pi / 2.0
 
     @property
+    @param('fill_underlay_row_spacing_mm', 'Row spacing (default: 3x fill row spacing)', unit='mm', group='AutoFill Underlay', type='float')
     @cache
     def fill_underlay_row_spacing(self):
         return self.get_float_param("fill_underlay_row_spacing_mm") or self.row_spacing * 3
 
     @property
+    @param('fill_underlay_max_stitch_length_mm', 'Max stitch length', unit='mm', group='AutoFill Underlay', type='float')
     @cache
     def fill_underlay_max_stitch_length(self):
         return self.get_float_param("fill_underlay_max_stitch_length_mm" or self.max_stitch_length)
@@ -607,7 +669,7 @@ class AutoFill(Fill):
 
         return self.section_to_patch(section, angle, row_spacing, max_stitch_length)
 
-    def auto_fill(self, angle, row_spacing, max_stitch_length, starting_point=None):
+    def do_auto_fill(self, angle, row_spacing, max_stitch_length, starting_point=None):
         rows_of_segments = self.intersect_region_with_grating(angle, row_spacing)
         sections = self.pull_runs(rows_of_segments)
 
@@ -637,15 +699,19 @@ class AutoFill(Fill):
             last_stitch = last_patch.stitches[-1]
 
         if self.fill_underlay:
-            patches.extend(self.auto_fill(self.fill_underlay_angle, self.fill_underlay_row_spacing, self.fill_underlay_max_stitch_length, last_stitch))
+            patches.extend(self.do_auto_fill(self.fill_underlay_angle, self.fill_underlay_row_spacing, self.fill_underlay_max_stitch_length, last_stitch))
             last_stitch = patches[-1].stitches[-1]
 
-        patches.extend(self.auto_fill(self.angle, self.row_spacing, self.max_stitch_length, last_stitch))
+        patches.extend(self.do_auto_fill(self.angle, self.row_spacing, self.max_stitch_length, last_stitch))
 
         return patches
 
 
 class Stroke(EmbroideryElement):
+    @property
+    @param('satin_column', 'Satin along paths', type='toggle', inverse=True)
+    def satin_column(self):
+        return self.get_boolean_param("satin_column")
 
     @property
     def color(self):
@@ -666,15 +732,18 @@ class Stroke(EmbroideryElement):
         return self.get_style("stroke-dasharray") is not None
 
     @property
+    @param('running_stitch_length_mm', 'Running stitch length', unit='mm', type='float')
     def running_stitch_length(self):
         return self.get_float_param("running_stitch_length_mm")
 
     @property
+    @param('zigzag_spacing_mm', 'Zig-zag spacing (peak-to-peak)', unit='mm', type='float')
     @cache
     def zigzag_spacing(self):
         return self.get_float_param("zigzag_spacing_mm")
 
     @property
+    @param('repeats', 'Repeats', type='int')
     def repeats(self):
         return self.get_int_param("repeats", 1)
 
@@ -751,25 +820,26 @@ class Stroke(EmbroideryElement):
 
 
 class SatinColumn(EmbroideryElement):
-
     def __init__(self, *args, **kwargs):
         super(SatinColumn, self).__init__(*args, **kwargs)
 
-        self.csp = self.parse_path()
-        self.flattened_beziers = self.get_flattened_paths()
-
-        # print >> dbg, "flattened beziers", self.flattened_beziers
+    @property
+    @param('satin_column', 'Custom satin column', type='toggle')
+    def satin_column(self):
+        return self.get_boolean_param("satin_column")
 
     @property
     def color(self):
         return self.get_style("stroke")
 
     @property
+    @param('zigzag_spacing_mm', 'Zig-zag spacing (peak-to-peak)', unit='mm', type='float')
     def zigzag_spacing(self):
         # peak-to-peak distance between zigzags
         return self.get_float_param("zigzag_spacing_mm")
 
     @property
+    @param('pull_compensation_mm', 'Pull compensation', unit='mm', type='float')
     def pull_compensation(self):
         # In satin stitch, the stitches have a tendency to pull together and
         # narrow the entire column.  We can compensate for this by stitching
@@ -777,42 +847,50 @@ class SatinColumn(EmbroideryElement):
         return self.get_float_param("pull_compensation_mm", 0)
 
     @property
+    @param('contour_underlay', 'Contour underlay', type='toggle', group='Contour Underlay')
     def contour_underlay(self):
         # "Contour underlay" is stitching just inside the rectangular shape
         # of the satin column; that is, up one side and down the other.
         return self.get_boolean_param("contour_underlay")
 
     @property
+    @param('contour_underlay_stitch_length_mm', 'Stitch length', unit='mm', group='Contour Underlay', type='float')
     def contour_underlay_stitch_length(self):
         # use "contour_underlay_stitch_length", or, if not set, default to "stitch_length"
         return self.get_float_param("contour_underlay_stitch_length_mm") or self.get_float_param("running_stitch_length_mm")
 
     @property
+    @param('contour_underlay_inset_mm', 'Contour underlay inset amount', unit='mm', group='Contour Underlay', type='float')
     def contour_underlay_inset(self):
         # how far inside the edge of the column to stitch the underlay
         return self.get_float_param("contour_underlay_inset_mm", 0.4)
 
     @property
+    @param('center_walk_underlay', 'Center-walk underlay', type='toggle', group='Center-Walk Underlay')
     def center_walk_underlay(self):
         # "Center walk underlay" is stitching down and back in the centerline
         # between the two sides of the satin column.
         return self.get_boolean_param("center_walk_underlay")
 
     @property
+    @param('center_walk_underlay_stitch_length_mm', 'Stitch length', unit='mm', group='Center-Walk Underlay', type='float')
     def center_walk_underlay_stitch_length(self):
         # use "center_walk_underlay_stitch_length", or, if not set, default to "stitch_length"
         return self.get_float_param("center_walk_underlay_stitch_length_mm") or self.get_float_param("running_stitch_length_mm")
 
     @property
+    @param('zigzag_underlay', 'Zig-zag underlay', type='toggle', group='Zig-zag Underlay')
     def zigzag_underlay(self):
         return self.get_boolean_param("zigzag_underlay")
 
     @property
+    @param('zigzag_underlay_spacing_mm', 'Zig-Zag spacing (peak-to-peak)', unit='mm', group='Zig-zag Underlay', type='float')
     def zigzag_underlay_spacing(self):
         # peak-to-peak distance between zigzags in zigzag underlay
         return self.get_float_param("zigzag_underlay_spacing_mm", 1)
 
     @property
+    @param('zigzag_underlay_inset', 'Inset amount (default: half of contour underlay inset)', unit='mm', group='Zig-zag Underlay', type='float')
     def zigzag_underlay_inset(self):
         # how far in from the edge of the satin the points in the zigzags
         # should be
@@ -823,7 +901,14 @@ class SatinColumn(EmbroideryElement):
         # the edges of the satin column.
         return self.get_float_param("zigzag_underlay_inset_mm") or self.contour_underlay_inset / 2.0
 
-    def get_flattened_paths(self):
+    @property
+    @cache
+    def csp(self):
+        return self.parse_path()
+
+    @property
+    @cache
+    def flattened_beziers(self):
         # Given a pair of paths made up of bezier segments, flatten
         # each individual bezier segment into line segments that approximate
         # the curves.  Retain the divisions between beziers -- we'll use those
@@ -1088,8 +1173,48 @@ class SatinColumn(EmbroideryElement):
         return patches
 
 
-class Patch:
+def detect_classes(node):
+    element = EmbroideryElement(node)
 
+    if element.get_boolean_param("satin_column"):
+        return [SatinColumn]
+    else:
+        classes = []
+
+        if element.get_style("fill"):
+            if element.get_boolean_param("auto_fill", True):
+                classes.append(AutoFill)
+            else:
+                classes.append(Fill)
+
+        if element.get_style("stroke"):
+            classes.append(Stroke)
+
+        if element.get_boolean_param("stroke_first", False):
+            classes.reverse()
+
+        return classes
+
+
+def descendants(node):
+    nodes = []
+    element = EmbroideryElement(node)
+
+    if element.has_style('display') and element.get_style('display') is None:
+        return []
+
+    if node.tag == SVG_DEFS_TAG:
+        return []
+
+    for child in node:
+        nodes.extend(descendants(child))
+
+    if node.tag == SVG_PATH_TAG:
+        nodes.append(node)
+
+    return nodes
+
+class Patch:
     def __init__(self, color=None, stitches=None):
         self.color = color
         self.stitches = stitches or []
@@ -1227,41 +1352,11 @@ class Embroider(inkex.Effect):
 
     def handle_node(self, node):
         print >> dbg, "handling node", node.get('id'), node.get('tag')
-
-        element = EmbroideryElement(node, self.options)
-
-        if element.has_style('display') and element.get_style('display') is None:
-            return
-
-        if node.tag == SVG_DEFS_TAG:
-            return
-
-        for child in node:
-            self.handle_node(child)
-
-        if node.tag != SVG_PATH_TAG:
-            return
-
-        # dbg.write("Node: %s\n"%str((id, etree.tostring(node, pretty_print=True))))
-
-        if element.get_boolean_param("satin_column"):
-            self.elements.append(SatinColumn(node, self.options))
-        else:
-            elements = []
-
-            if element.get_style("fill"):
-                if element.get_boolean_param("auto_fill", True):
-                    elements.append(AutoFill(node, self.options))
-                else:
-                    elements.append(Fill(node, self.options))
-
-            if element.get_style("stroke"):
-                elements.append(Stroke(node, self.options))
-
-            if element.get_boolean_param("stroke_first", False):
-                elements.reverse()
-
-            self.elements.extend(elements)
+        nodes = descendants(node)
+        for node in nodes:
+            classes = detect_classes(node)
+            print >> dbg, "classes:", classes
+            self.elements.extend(cls(node, self.options) for cls in classes)
 
     def get_output_path(self):
         svg_filename = self.document.getroot().get(inkex.addNS('docname', 'sodipodi'))
