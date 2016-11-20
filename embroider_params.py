@@ -275,9 +275,10 @@ class ParamsTab(ScrolledPanel):
                 if len(values) > 1:
                     input = wx.CheckBox(self, style=wx.CHK_3STATE)
                     input.Set3StateValue(wx.CHK_UNDETERMINED)
-                elif values:
+                else:
                     input = wx.CheckBox(self)
-                    input.SetValue(values[0])
+                    if values:
+                        input.SetValue(values[0])
 
                 input.Bind(wx.EVT_CHECKBOX, self.changed)
             elif len(param.values) > 1:
