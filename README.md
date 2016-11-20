@@ -55,10 +55,22 @@ Select the horizontal lines using the "Edit Paths by Nodes" tool.  Zoom in a bit
 
 Now look at the zig-zags.  These are the satin stitches.  Note that the corners look pretty ugly.  This is because satin stitches generated from a shape's stroke are pretty rudimentary and aren't implemented intelligently.  You can exert much greater control over satin stitching using a Satin Column, described later.
 
+The stitching preview you're looking at just now isn't intended to be permanent.  I usually immediately undo it (ctrl-Z) after I've looked at the stitches.  The actual work that inkscape-embroidery does is to output a design file.
+
 ### Stitching Out the Design
-Where'd the design go?  One of the parameters you were able to specify in the filter settings dialog was the output directory.  By default, the directory used is the place where you installed the extension's Python files.  I output mine to `~/Documents/embroidery/output`.
+Where'd the design file go?  One of the parameters you were able to specify in the filter settings dialog was the output directory.  By default, the directory used is the place where you installed the extension's Python files.  I output mine to `~/Documents/embroidery/output`.
 
 inkscape-embroidery will create a file named `something.csv`, where `something` is the name of your svg file (e.g. `something.svg`).  If `something.csv` already existed, it will be renamed to `something.csv.1`, and `something.csv.1` will be renamed to `something.csv.2`, etc, up to 5 backup copies.  When you've got the design the way you like it, save off a copy of `something.csv`.
 
 Next, convert it to your machine's format using `libembroidery-convert` (as described above).  Send it to your machine in whatever way one does that for your machine, and try stitching it out!
+
+### Ordering
+
+Copy your rectangle and paste it elsewhere on your canvas.  Deselect any shapes (**Edit -> Deselect**), re-run the extension, and look at the output.  You'll see that both regions have been stitched, and there will be a line connecting them.  That's a jump-stitch, where the machine will move a long distance between stitching the sections.
+
+If you're like me, your machine can't automatically cut the thread between stitching sections, so you'll need to minimize jump stitches as much as possible through careful planning of your stitch path.  If your machine *can* do thread cuts, congratulations!  But you'll need to modify inkscape-embroidery to allow you to specify a thread cut, because there's no way to do that right now.
+
+Use the Objects panel to view the stacking order of the objects in your SVG file.  Inkscape-embroidery will stitch them in their stacking order, from lowest to highest.  You can reorder them in the normal way in inkscape to affect the stitching order.
+
+You can also use the Reorder extension.  Hold shift and select the objects you'd like to reorder, one at a time, in the order you'd like them to end up in (lowest to highest).  Run **Embroidery -> Reorder**.  This extension will pull all of the selected objects out of wherever they were in the stacking order and insert them in order at the same place as the *first* object you selected.  This can save you a ton of time.
 
