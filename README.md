@@ -105,3 +105,22 @@ inkscape-embroidery will break the shape up into sections that it can embroider 
 This algorithm works great for simple shapes, convex or concave.  However, it doesn't work for shapes with holes, because the stitching could get "stuck" on the edge of a hole and be unable to reach any remaining section.  For this reason, AutoFill rejects regions with holes in them.
 
 So what do you do if your shape does have holes?  You have two choices: use manually-routed fill (described below), or break the shape up into one or more shapes without holes.
+
+Here's an example of converting a region with a hole into a region without:
+![breaking auto-fill regions with holes](images/autofill_with_holes.png)
+
+An SVG version is available in `images/autofill_hole_example.svg` for you to test out.
+
+Note the thin line drawn from the hole to the edge.  In fact, this is a very thin strip missing from the shape -- thinner than the spacing between the rows of stitches.  This allows the autofill system to travel into and out of the center of the shape if necessary to get from section to section.
+
+Note that I've drawn the gap at exactly the same angle as the fill.  When the autofill system sees that it is traveling in the same direction as the fill, **it places stitches correctly to match the fill pattern**.  This means that the gap will be virtually undetectable because the travel stitches will be hidden in the fill.  This may double- or triple-up one of the fill rows, but it's really hard to tell unless you look very closely.
+
+#### AutoFill parameters
+
+Using the **Params** extension, you can set these parameters:
+
+* **angle**: The angle of the rows of stitches, in degrees.  0 is horizontal, and the angle increases in a counter-clockwise direction.  Negative angles are allowed.
+* **row spacing**: distance between rows of stitches
+* **maximum stitch length**: the length of each stitch in a row.  "Max" is because a shorter stitch may be used at the start or end of a row.
+* **running stitch length**: length of stitches around the outline of the fill region used when moving from section to section
+* **staggers**: stitches are staggered so that neighboring rows of stitches don't all fall in the same column (which would create a distracting valley effect).  Setting this dictates how many rows apart the stitches will be before they fall in the same column position.
