@@ -4,6 +4,7 @@
 import os
 import sys
 import json
+import traceback
 from cStringIO import StringIO
 import wx
 from wx.lib.scrolledpanel import ScrolledPanel
@@ -170,7 +171,7 @@ class ParamsTab(ScrolledPanel):
 
         if self.toggle:
             checked = self.toggle_checkbox.IsChecked()
-            if self.toggle_checkbox in self.changed_inputs:
+            if self.toggle_checkbox in self.changed_inputs and not self.toggle.inverse:
                 values[self.toggle.name] = checked
 
             if not checked:
@@ -187,7 +188,7 @@ class ParamsTab(ScrolledPanel):
     def apply(self):
         values = self.get_values()
         for node in self.nodes:
-            print >> sys.stderr, node.id, values
+            #print >> sys.stderr, node.id, values
             for name, value in values.iteritems():
                 node.set_param(name, value)
 
@@ -442,7 +443,7 @@ class SettingsFrame(wx.Frame):
         for tab in self.tabs:
             self.notebook.AddPage(tab, tab.name)
         sizer_1.Add(self.notebook, 1, wx.EXPAND|wx.LEFT|wx.TOP|wx.RIGHT, 10)
-        sizer_2.Add(self.preset_chooser, 0, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 5)
+        sizer_2.Add(self.preset_chooser, 1, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 5)
         sizer_2.Add(self.load_preset_button, 0, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 5)
         sizer_2.Add(self.add_preset_button, 0, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 5)
         sizer_2.Add(self.overwrite_preset_button, 0, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 5)
@@ -498,14 +499,11 @@ class EmbroiderParams(inkex.Effect):
 
         if param.type in ('toggle', 'boolean'):
             getter = 'get_boolean_param'
-        elif param.type:
-            getter = 'get_%s_param' % param.type
+        else:
+            getter = 'get_param'
 
         values = filter(lambda item: item is not None, 
                         (getattr(node, getter)(param.name, param.default) for node in nodes))
-
-        if param.type in ('int', 'float'):
-            values = [str(value) for value in values]
 
         return values
 
@@ -547,6 +545,26 @@ class EmbroiderParams(inkex.Effect):
                         tab.pair(other_tab)
                         other_tab.pair(tab)
 
+        def tab_sort_key(tab):
+            parent = tab.parent_tab or tab
+
+            sort_key = (
+                        # For Stroke and SatinColumn, place the one that's
+                        # enabled first.  Place dependent tabs first too.
+                        parent.toggle and parent.toggle_checkbox.IsChecked(),
+
+                        # If multiple tabs are enabled, make sure dependent
+                        # tabs are grouped with the parent.
+                        parent,
+
+                        # Within parent/dependents, put the parent first.
+                        tab == parent
+                       )
+
+            return sort_key
+
+        tabs.sort(key=tab_sort_key, reverse=True)
+
         return tabs
 
 
@@ -556,18 +574,30 @@ class EmbroiderParams(inkex.Effect):
         frame.Show()
         app.MainLoop()
 
-# end of class MyFrame
-if __name__ == "__main__":
+
+def save_stderr():
     # GTK likes to spam stderr, which inkscape will show in a dialog.
     null = open('/dev/null', 'w')
-    stderr_dup = os.dup(sys.stderr.fileno())
+    sys.stderr_dup = os.dup(sys.stderr.fileno())
     os.dup2(null.fileno(), 2)
-    stderr_backup = sys.stderr
+    sys.stderr_backup = sys.stderr
     sys.stderr = StringIO()
 
-    e = EmbroiderParams()
-    e.affect()
 
-    os.dup2(stderr_dup, 2)
-    stderr_backup.write(sys.stderr.getvalue())
-    sys.stderr = stderr_backup
+def restore_stderr():
+    os.dup2(sys.stderr_dup, 2)
+    sys.stderr_backup.write(sys.stderr.getvalue())
+    sys.sys.stderr = stderr_backup
+
+
+# end of class MyFrame
+if __name__ == "__main__":
+    save_stderr()
+
+    try:
+        e = EmbroiderParams()
+        e.affect()
+    except:
+        traceback.print_exc()
+
+    restore_stderr()

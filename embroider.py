@@ -140,7 +140,7 @@ class EmbroideryElement(object):
         return value
 
     def set_param(self, name, value):
-        self.node.set("embroider_%s" % name, value)
+        self.node.set("embroider_%s" % name, str(value))
 
     @cache
     def get_style(self, style_name):
