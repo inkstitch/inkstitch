@@ -70,6 +70,10 @@ Copy your rectangle and paste it elsewhere on your canvas.  Deselect any shapes 
 
 If you're like me, your machine can't automatically cut the thread between stitching sections, so you'll need to minimize jump stitches as much as possible through careful planning of your stitch path.  If your machine *can* do thread cuts, congratulations!  But you'll need to modify inkscape-embroidery to allow you to specify a thread cut, because there's no way to do that right now.
 
+However, note that inkscape-embroidery pays attention to the colors you use for objects.  If you change colors from one object to the next, inkscape-embroidery will include a color-change instruction using the color you've set for the object.  My machine cuts the thread and waits for me to switch to the new thread color.
+
+#### Reordering
+
 Use the Objects panel to view the stacking order of the objects in your SVG file.  Inkscape-embroidery will stitch them in their stacking order, from lowest to highest.  You can reorder them in the normal way in inkscape to affect the stitching order.
 
 You can also use the Reorder extension.  Hold shift and select the objects you'd like to reorder, one at a time, in the order you'd like them to end up in (lowest to highest).  Run **Embroidery -> Reorder**.  This extension will pull all of the selected objects out of wherever they were in the stacking order and insert them in order at the same place as the *first* object you selected.  This can save you a ton of time.
@@ -91,3 +95,13 @@ I recommend avoiding dependence on the default settings specified in the **Embro
 **Params** is a bit weird, in that the dialog is produced by an entirely separate program (the extension) rather than Inkscape itself.  This is due to the way Inkscape structures extensions.  I wish inkscape-embroidery could have deeper integration into Inkscape's user interface, but it's currently not possible.  This is the price we pay for not having to write an entire vector graphics editor program :)
 
 Another issue is that Inkscape has a memory leak related to extensions.  The more times you run an extension, the more memory Inkscape uses and the slower it gets.  I periodically save my SVG file, close Inkscape, and restart it to work around this issue.  See above re: putting up with this kind of hassle so as not to have a to implement an entire vector graphics editor.  Hopefully they'll fix this bug soon.
+
+### AutoFill
+
+AutoFill is the default method for generating fill stitching.  To use it, create a closed path in Inskcape and add a fill color.
+
+inkscape-embroidery will break the shape up into sections that it can embroider at once using back-and-forth rows of stitches.  It then adds straight-stitching between sections until it's filled in the entire design.  The staggered pattern of stitches is continued seamlessly between sections, so the end result doesn't appear to have any breaks.  When moving from one section to the next, it generates running stitching along the outside edge of the shape.
+
+This algorithm works great for simple shapes, convex or concave.  However, it doesn't work for shapes with holes, because the stitching could get "stuck" on the edge of a hole and be unable to reach any remaining section.  For this reason, AutoFill rejects regions with holes in them.
+
+So what do you do if your shape does have holes?  You have two choices: use manually-routed fill (described below), or break the shape up into one or more shapes without holes.
