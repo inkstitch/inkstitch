@@ -74,3 +74,20 @@ Use the Objects panel to view the stacking order of the objects in your SVG file
 
 You can also use the Reorder extension.  Hold shift and select the objects you'd like to reorder, one at a time, in the order you'd like them to end up in (lowest to highest).  Run **Embroidery -> Reorder**.  This extension will pull all of the selected objects out of wherever they were in the stacking order and insert them in order at the same place as the *first* object you selected.  This can save you a ton of time.
 
+### Seeing the stitch plan for selected objects
+
+If you have one or more objects selected when you run the **Embroider** extension, only those objects will be embroidered.  This can be useful to help you fine-tune just one small section of your design.
+
+### Embroidery Parameters
+When you run **Embroider**, you'll have the option to specify a few parameters like stitch length, fill stitch row spacing, etc.  These are used as defaults for all objects in your design.  You can override these parameters and set many more using the **Embroidery -> Params** extension.
+
+This extension gives you an interface to control many aspects of the stitching of each object individually.  To use it, first select one or more objects.  Parameters will be applied to them all as a group.  If the selected objects already have parameters set, these settings will be pre-loaded into the interface.
+
+Parameters are stored in your SVG file as additional attributes on the XML objects.  You can view these attributes using Inkscape's built-in XML editor panel, but you shouldn't actually need to do this during normal usage.  Inkscape ignores attributes that it doesn't know, so these attributes will be saved right along with your SVG file.  Note that other SVG programs may *not* retain these attributes, so be careful!
+
+I recommend avoiding dependence on the default settings specified in the **Embroider** extension's settings window.  In fact, I bypass it entirely by binding a keystroke (ctrl+e) to "Embroider (no preferences)" in Inkscape's settings.  This way, I can quickly see the stitch plan just by pressing the keystroke.  I also bind a keystroke to **Params** so that I can quickly view and change settings for each object.
+
+### Sidenote on extensions
+**Params** is a bit weird, in that the dialog is produced by an entirely separate program (the extension) rather than Inkscape itself.  This is due to the way Inkscape structures extensions.  I wish inkscape-embroidery could have deeper integration into Inkscape's user interface, but it's currently not possible.  This is the price we pay for not having to write an entire vector graphics editor program :)
+
+Another issue is that Inkscape has a memory leak related to extensions.  The more times you run an extension, the more memory Inkscape uses and the slower it gets.  I periodically save my SVG file, close Inkscape, and restart it to work around this issue.  See above re: putting up with this kind of hassle so as not to have a to implement an entire vector graphics editor.  Hopefully they'll fix this bug soon.
