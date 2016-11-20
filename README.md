@@ -124,3 +124,11 @@ Using the **Params** extension, you can set these parameters:
 * **maximum stitch length**: the length of each stitch in a row.  "Max" is because a shorter stitch may be used at the start or end of a row.
 * **running stitch length**: length of stitches around the outline of the fill region used when moving from section to section
 * **staggers**: stitches are staggered so that neighboring rows of stitches don't all fall in the same column (which would create a distracting valley effect).  Setting this dictates how many rows apart the stitches will be before they fall in the same column position.
+
+#### AutoFill Underlay
+
+By default, AutoFill will cover the shape with one layer of stitches.  In almost all cases, this won't look any good.  The individual stitches will sink into the fabric (even if it's thin) and the fill will appear sparse.  The fabric may even stick up between rows.
+
+To solve this, you need underlay: an initial layer of stitches that hold up the final stitches.  Underlay for fill stitch it's usually comprised of fill stitching 90 degrees offset from the final fill (called "top stitching").  The row spacing should be much wider than in the top stitching.  The goal is to flatten out the fabric and give the top stitches "rails" to sit on.
+
+In **Params**, you'll see an underlay tab next to the AutoFill tab.  Enable it by checking the box.  The default settings should be good enough for most cases: 90 degrees offset and row spacing 3x the spacing of the top stitching.
