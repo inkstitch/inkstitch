@@ -6,5 +6,4 @@
    * set stitch plans to "noninteractive" so you can click through them to the paths
    * this will make it work more like a "real" embroidery program
    * separate 'export embroidery file' command
- * use a GUI dialog in params script to load existing settings, making it more like a real app
  * add option for connection to next patch (jump or running stitch)
