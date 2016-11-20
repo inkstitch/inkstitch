@@ -566,7 +566,7 @@ class AutoFill(Fill):
         underlay_angle = self.get_float_param("fill_underlay_angle")
 
         if underlay_angle:
-            return math.radians(angle)
+            return math.radians(underlay_angle)
         else:
             return self.angle + math.pi / 2.0
 
