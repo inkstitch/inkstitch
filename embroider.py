@@ -577,8 +577,8 @@ class Embroider(inkex.Effect):
                     if prev is not None and not is_same_run(prev, first):
                         break
 
-                    if prevrownum != len(row):
-                        break
+                    #if prevrownum != len(row):
+                    #    break
         
                     run.append(first)
                     prev = first
