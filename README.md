@@ -154,4 +154,6 @@ If an object consists of multiple paths, they will be stitched in order with a j
 
 ### Simple Satin
 
-A line without dashes will result in satin stitching.  The width of the satin will be dictated by the
+A line without dashes will result in satin stitching.  The width of the satin will be dictated by the stroke width.  (For historical reasons, a stroke width less than 0.5 pixels will result in running stitch instead).
+
+This is "simple satin": **Embroider** will plot zig-zags to the left and right of the line from start to end, but it won't do anything special around curves and corners.  Sharper curves and corners will result in sparse stitching around the outside of the curve and dense stitching around the inside.  This will 
