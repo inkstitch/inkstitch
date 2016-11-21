@@ -142,3 +142,16 @@ In manual fill, the extension will still break up the shape into sections, each 
 The **flip** option can help you with routing your stitch path.  When you enable **flip**, stitching goes from right-to-left instead of left-to-right.  Using **flip** and rotating 180 additional degrees (by adding or subtracting 180 from **angle**), you can cause fill stitching for a given shape to start from any of the four possible corners.
 
 
+### Running Stitch
+
+Running stitch can be created by setting a dashed stroke on a path.  Any kind of dashes will do the job, and the stroke width is irrelevant.   inkscape-embroidery will create stitches along the path using the stroke width you specify.
+
+In order to avoid rounding corners, ash extra stitch will be added at the point of any sharp corners.
+
+The **repeats** parameter says how many times time run down and back song the path.  An odd number of repeats means that the stitches will end at the end of the path, while an even number means that stitching will return to the start of the path.  The default is one repeat; that is, just traveling once from the start to the end of the path.
+
+If an object consists of multiple paths, they will be stitched in order with a jump between each.
+
+### Simple Satin
+
+A line without dashes will result in satin stitching.  The width of the satin will be dictated by the
