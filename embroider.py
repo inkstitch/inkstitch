@@ -309,6 +309,11 @@ class Embroider(inkex.Effect):
             choices=["true","false"],
             dest="split_path_on_jumps", default="false",
             help="Split SVG path on every jump stitch")
+        self.OptionParser.add_option("--fill_logic",
+            action="store", type="choice",
+            choices=["default", "serg_simple", "serg_reordered"],
+            dest="fill_logic", default="default",
+            help="Fill logic")
         self.OptionParser.add_option("-O", "--output_format",
             action="store", type="choice",
             choices=["melco", "csv", "gcode"],
@@ -337,9 +342,10 @@ class Embroider(inkex.Effect):
         row_spacing_px = get_float_param(node, "row_spacing", self.options.row_spacing_mm)*pixels_per_millimeter
         max_stitch_len_px = get_float_param(node, "max_stitch_length", self.options.max_stitch_len_mm)*pixels_per_millimeter
         num_staggers = get_int_param(node, "staggers", 4)
+        fill_logic = get_param(node, "fill_logic", self.options.fill_logic)
 
         rows_of_segments = self.intersect_region_with_grating(shpath, row_spacing_px, angle, flip)
-        groups_of_segments = self.pull_runs(rows_of_segments, shpath, row_spacing_px)
+        groups_of_segments = self.pull_runs(rows_of_segments, shpath, row_spacing_px, fill_logic)
  
         # "east" is the name of the direction that is to the right along a row
         east = PyEmb.Point(1, 0).rotate(angle)
@@ -500,7 +506,7 @@ class Embroider(inkex.Effect):
 
         return rows
 
-    def pull_runs(self, rows, shpath, row_spacing_px):
+    def serg_pull_runs(self, rows, shpath, row_spacing_px, fill_logic):
         # Given a list of rows, each containing a set of line segments,
         # break the area up into contiguous patches of line segments.
         #
@@ -593,57 +599,64 @@ class Embroider(inkex.Effect):
 
             prevrow = row
 
-        #let's try to reorder runs for no visible jumpstitches on the surface
-        orderedruns = []
-        cnt = 0
-        mintop = 0
-        direction = 'down'
-        mindist = 0
-        dist = 0
-        dist1 = 0
-        isadjacent = 0
-        while (len(runs)>1):
-            cnt = cnt+1
-            mincnt = len(runs)
-            minrun = runs[0]
-            mindist = 10000;
-            for run in runs:
-                top,bottom = neighbours_count(runs,run)
-                isadjacent = False
-                if  top == 0 or bottom == 0:
-                    if len(orderedruns) >0:
-                    #if direction == 'down' and len(orderedruns) > 0:
-                        dist = inter_distance(orderedruns[-1][-1],run[0])
-                    #elif direction == 'up' and len(orderedruns) > 0:
-                        dist1 = inter_distance(orderedruns[-1][-1],run[-1])
-                        if dist1 < dist:
-                            dist = dist1
-                    #print >> sys.stderr, "dist:", dist, "dist1:", dist1
+        if (fill_logic == "serg_reordered"):
 
-                    if ((top+bottom) < mincnt
-                        or (top+bottom==mincnt and mindist > dist)):
-                        minrun = run
-                        mincnt = top+bottom
-                        mintop = top
-                        mindist = dist
+            #let's try to reorder runs for no visible jumpstitches on the surface
+            orderedruns = []
+            cnt = 0
+            mintop = 0
+            direction = 'down'
+            mindist = 0
+            dist = 0
+            dist1 = 0
+            isadjacent = 0
+            while (len(runs)>1):
+                cnt = cnt+1
+                mincnt = len(runs)
+                minrun = runs[0]
+                mindist = 10000;
+                for run in runs:
+                    top,bottom = neighbours_count(runs,run)
+                    isadjacent = False
+                    if  top == 0 or bottom == 0:
                         if len(orderedruns) >0:
-                            isadjacent = isadjacent or is_same_run(orderedruns[-1][-1],run[0])
-                            isadjacent = isadjacent or is_same_run(orderedruns[-1][-1],run[-1])
-            runs.remove(minrun)
-            #if (mintop != 0 or (isadjacent and direction == 'up')):   #if needs to fill from bottom
-            #print >> sys.stderr, "mintop:", mintop
-            if (mintop != 0):   #if needs to fill from bottom
-                minrun.reverse()
-                direction = 'up'
-            else:
-                direction = 'down'
-            orderedruns.append(minrun)
-        if (direction == 'up'):   #if prelast was filled from bottom last will bee the same
-            runs[0].reverse()
-        orderedruns.append(runs[0])
+                        #if direction == 'down' and len(orderedruns) > 0:
+                            dist = inter_distance(orderedruns[-1][-1],run[0])
+                        #elif direction == 'up' and len(orderedruns) > 0:
+                            dist1 = inter_distance(orderedruns[-1][-1],run[-1])
+                            if dist1 < dist:
+                                dist = dist1
+                        #print >> sys.stderr, "dist:", dist, "dist1:", dist1
+
+                        if ((top+bottom) < mincnt
+                            or (top+bottom==mincnt and mindist > dist)):
+                            minrun = run
+                            mincnt = top+bottom
+                            mintop = top
+                            mindist = dist
+                            if len(orderedruns) >0:
+                                isadjacent = isadjacent or is_same_run(orderedruns[-1][-1],run[0])
+                                isadjacent = isadjacent or is_same_run(orderedruns[-1][-1],run[-1])
+                runs.remove(minrun)
+                #if (mintop != 0 or (isadjacent and direction == 'up')):   #if needs to fill from bottom
+                #print >> sys.stderr, "mintop:", mintop
+                if (mintop != 0):   #if needs to fill from bottom
+                    minrun.reverse()
+                    direction = 'up'
+                else:
+                    direction = 'down'
+                orderedruns.append(minrun)
+            if (direction == 'up'):   #if prelast was filled from bottom last will bee the same
+                runs[0].reverse()
+            orderedruns.append(runs[0])
+        else:
+            orderedruns = runs
 
         return orderedruns
 
+    def pull_runs(self, rows, shpath, row_spacing_px, fill_logic):
+        return self.serg_pull_runs(rows, shpath, row_spacing_px, fill_logic)
+        
     def handle_node(self, node):
         if simplestyle.parseStyle(node.get("style")).get('display') == "none":
             return

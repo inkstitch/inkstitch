@@ -14,6 +14,11 @@
     <param name="hatch_filled_paths" type="boolean" _gui-text="Hatch filled paths" description="If false, filled paths are filled using equally-spaced lines.  If true, filled paths are filled using hatching lines.">false</param>
     <param name="hide_layers" type="boolean" _gui-text="Hide other layers" description="Hide all other top-level layers when the embroidery layer is generated, in order to make stitching discernable.">true</param>
     <param name="split_path_on_jumps" type="boolean" _gui-text="Split SVG path on jumpStitch" description="If false SVG path generated as one continuous path. Splitting on trimStitches only. If true every jump or trim stitch breaks the path.">false</param>
+    <param name="fill_logic" type="optiongroup" _gui-text="Fill logic" appearance="minimal">
+        <_option value="default">default</_option>
+        <_option value="serg_simple">serg(simple)</_option>
+        <_option value="serg_reordered">serg(reordered)</_option>
+    </param>
     <param name="order" type="optiongroup" _gui-text="Stitch Order" appearance="minimal">
         <_option value="automatic">Automatic</_option>
         <_option value="layer">Preserve layer order only</_option>
