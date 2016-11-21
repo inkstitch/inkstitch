@@ -132,3 +132,13 @@ By default, AutoFill will cover the shape with one layer of stitches.  In almost
 To solve this, you need underlay: an initial layer of stitches that hold up the final stitches.  Underlay for fill stitch it's usually comprised of fill stitching 90 degrees offset from the final fill (called "top stitching").  The row spacing should be much wider than in the top stitching.  The goal is to flatten out the fabric and give the top stitches "rails" to sit on.
 
 In **Params**, you'll see an underlay tab next to the AutoFill tab.  Enable it by checking the box.  The default settings should be good enough for most cases: 90 degrees offset and row spacing 3x the spacing of the top stitching.
+
+### Manual Fill
+
+Manual Fill is the old mode from before I figured out how to implement automatic fill routing.  In some cases, AutoFill may not be an option, such as when the running stitches between sections are not acceptable for your design.  Usually, fill region edges are covered over by satin, but not always.
+
+In manual fill, the extension will still break up the shape into sections, each of which can be embroidered in one go.  Then these sections will be fill-stitched one at a time, jumping directly between sections.  You'll almost certainly want to break your shape up into smaller shapes and connect then using running stitches (described below).  It's a painstaking process, made moreso because you'll need to do it twice: once for the underlay and again for the top stitching.
+
+The **flip** option can help you with routing your stitch path.  When you enable **flip**, stitching goes from right-to-left instead of left-to-right.  Using **flip** and rotating 180 additional degrees (by adding or subtracting 180 from **angle**), you can cause fill stitching for a given shape to start from any of the four possible corners.
+
+
