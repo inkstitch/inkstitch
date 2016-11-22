@@ -156,4 +156,41 @@ If an object consists of multiple paths, they will be stitched in order with a j
 
 A line without dashes will result in satin stitching.  The width of the satin will be dictated by the stroke width.  (For historical reasons, a stroke width less than 0.5 pixels will result in running stitch instead).
 
-This is "simple satin": **Embroider** will plot zig-zags to the left and right of the line from start to end, but it won't do anything special around curves and corners.  Sharper curves and corners will result in sparse stitching around the outside of the curve and dense stitching around the inside.  This will 
+This is "simple satin": **Embroider** will plot zig-zags to the left and right of the line from start to end, but it won't do anything special around curves and corners.  Sharper curves and corners will result in sparse stitching around the outside of the curve and dense stitching around the i.  T
+
+This won't look good and may even poke holes in the insides of corners.  I avoid using plain satin entirely; it's just kept in for backward compatibility.  It'll probably work fine for straight lines.
+
+### Satin Column
+
+Satin Column mode gives you much greater control over how the satin is generated.  You define a satin column using a shape made of two mostly-parallel lines.  **Embroider** will draw zig-zags back and forth between the two lines.  You can vary the thickness of the column as you like.
+
+The two paths must have the same number of points.  This means that each path will be made up of an equal number of Bezier curves.  Each pair of points acts as a "checkpoint": **Embroider** will ensure that a "zag" ends up going from one point to the other.
+
+**Embroider** considers each pair of Bezier curves, one at a time.  It picks the longest if the two and determines how many zig-zags will be necessary to satisfy the **zig-zag spacing** setting.  This makes it so that the outside of a curve will never have sparse stitching like with simple satin.  
+
+However, this does mean that the inside of a curve will have a higher stitch density than you specified.  Be careful how you design sharp curves, because **stitching at too high a density may poke a hole in the fabric**!
+
+To avoid this issue, transition your stitching to go around the corner at an angle, like this:
+
+Some embroidery design programs solve this problem differently.  They modify the satin such that some stitches on the inside corner don't go all the way to the edge, to avoid having the make penetrate the fabric too many times in the same spot.  I haven't gotten around to implementing that yet.  Pull requests welcome!
+
+Satin Column supports these settings:
+
+* **zig-zag spacing**: the peak-to-peak distance between zig-zags.
+* **pull compensation**: Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape.  This setting expands each pair of needle penetrations outward from the center of the satin column.  You'll have to determine experimentally how much compensation you need for your combination of fabric, thread, and stabilizer.
+
+Satin Column also supports three kinds of underlay, of which you can use any or all simultaneously.  I use the terms defined in [this excellent article](http://www.mrxstitch.com/underlay-what-lies-beneath-machine-embroidery/) on satin column design.
+
+#### Center Walk Underlay
+
+This is a row of running stitch down the center of the column and back.  This may be all you need for thin satin columns.  You can also use it as a base for more elaborate underlay.
+
+#### Contour Underlay
+
+This is a row of running stitch up one side of the column and back down the other.  The rows are set in from the edge of the column by an amount you specify.  For small or medium width satin, this may serve well enough by itself.
+
+#### Zig-Zag Underlay
+
+This is essentially a lower-density satin stitch sewn to the end of the column and back to the start.  Added with contour underlay, you get the "German Underlay" mentioned in the article linked above.  For wide columns or challenging fabrics, you can use all three underlay types together.
+
+
