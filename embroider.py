@@ -966,7 +966,7 @@ class Embroider(inkex.Effect):
         zigzag_spacing_px = get_float_param(node, "zigzag_spacing", self.options.zigzag_spacing_mm)*pixels_per_millimeter
         pull_compensation_px = get_float_param(node, "pull_compensation", 0)
         underlay_inset = get_float_param(node, "satin_underlay_inset", 0)
-        underlay_stitch_len_px = get_float_param(node, "stitch_length", self.oprions.running_stitch_len_mm)*pixels_per_millimeter
+        underlay_stitch_len_px = get_float_param(node, "stitch_length", self.options.running_stitch_len_mm)*pixels_per_millimeter
         underlay = get_boolean_param(node, "satin_underlay", False)
         center_walk = get_boolean_param(node, "satin_center_walk", False)
         zigzag_underlay_spacing = get_float_param(node, "satin_zigzag_underlay_spacing", 0)
