@@ -1,20 +1,9 @@
- * BUG: really short rows get stitches outside bounds
  * pattern-based fill?
  * curved fill?
- * extension to split a fill region into sub-regions that can each be embroidered all in one go
- * extension to generate various kinds of underlay for selected paths
-   * center line
-   * edge walk
-   * sparse fill rotated 90 degrees
- * extension to generate connection between two patches
-   * user will probably adjust, but then the endpoints are in the right spots
- * setting for fill to tell it where to start (northeast, northwest, southeast, southwest)
  * keep stitch plan objects and just update the ones that change
    * use md5sum of <path> objects to see what's changed
    * keep stitch plans in a layer above everything else
    * set stitch plans to "noninteractive" so you can click through them to the paths
    * this will make it work more like a "real" embroidery program
- * use a GUI dialog in params script to load existing settings, making it more like a real app
- * separate 'export embroidery file' command
- * get rid of TSP entirely and make it completely human-driven
+   * separate 'export embroidery file' command
  * add option for connection to next patch (jump or running stitch)

@@ -10,6 +10,7 @@ import inkex
 
 
 class Reorder(inkex.Effect):
+
     def get_selected_in_order(self):
         selected = []
 
