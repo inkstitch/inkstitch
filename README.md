@@ -194,3 +194,54 @@ This is a row of running stitch up one side of the column and back down the othe
 This is essentially a lower-density satin stitch sewn to the end of the column and back to the start.  Added with contour underlay, you get the "German Underlay" mentioned in the article linked above.  For wide columns or challenging fabrics, you can use all three underlay types together.
 
 
+## Workflow
+
+Here's how I use inkscape-embroidery to design embroidery patterns.
+
+### Pixels Per Millimeter
+
+My embroidery machine (a Brother SE400) can handle patterns up to 10cm x 10cm (about 4in x 4in).  Most machine embroidery design advice articles I've read talk in terms of millimeters, so that's what I work in.
+
+My machine can (theoretically) position the needle with an accuracy of a tenth of a millimeter.  The Brother PES format cannot encode a position any mute precisely than this.  In practice, even if a machine had finer accuracy than this, the realities of sewing on real fabric, even with the best stabilizer, mean that you can't get any more accurate than this (and you shouldn't bother trying).
+
+I set the Inkscape's default document size to 1000 x 1000 pixels and set the "Pixels Per Millimeter" setting in **Embroider** to ten.  This means that every "pixel" in Inkscape is worth a tenth of a millimeter.  Practically speaking, there's no reason I couldn't choose to have one "pixel" equal one millimeter, because pixels don't really have much meaning in vector graphics.
+
+### Step 1: Sketch design or use an image
+
+First, I get an idea for what I want my finished product to look like.  If I'm basing my design off an existing picture or graphic, I load it into Inkscape in its own layer.  Some graphics are amenable to Inkscape's auto-tracing feature, especially if I simplify the image in GIMP first.
+
+After auto-tracing, I clean up the vector shapes, using "Simplify" and deleting nodes by hand when possible.  My goal is to use as few Bezier curves as reasonably possible to represent the image.
+
+If I need to trace an image by hand, I usually use the freehand drawing tool.  This tool creates paths with a lot of Bezier nodes, so again, I'll simplify the curves as much as possible.
+
+Working with an existing SVG image can save a ton of time, so consider using Google image search with the filter set to SVG.
+
+For text, choose a font carefully.  It's quite hard to make satin look good when it's 1mm wide our narrower.  Sans-serif fonts tend to be the easiest.  For text smaller than 4mm tall, you'll have a very difficult time making lowercase letters look good, so consider block-caps.  Cursive/script fonts can work well, but it's not going to be as easy as you think.  I find that I spend the most time on text by far.
+
+
+### Step 2: Plan stitch path and color changes
+
+At this point, you'll have a vector graphic representation of your image.  The next thing to do is to convert your vectors into the kind that **Embroider** understands and our then in the right order.
+
+When you're designing for embroidery machines that can't cut the thread mid-sew or switch colors automatically, you're going to want to optimize your stitch path to reduce or hide jump stitches and make minimal color changes.  I also try to avoid stitching over jump stitches when possible, because it's a total pain to trim them by hand when you do.
+
+The order of stitching also affects how the fabric pulls and pushes.  Each stitch will distort the fabric, and you'll need to take this into account and compensate accordingly.  Look for articles on machine embroidery distortion for more info on this.
+
+### Step 3: create the embroidery vectors
+
+I make heavy use of layers and groups at this point.  If I've traced an image, I'll leave it as the lowest layer and set it invisible in the Layers or Objects palette.  Any layer, group, or vector shape that is set invisible will be ignored by **Embroider**.
+
+I keep my initial traced vectors in their own layer and use them as a reference when designing embroidery vectors.  I copy and paste then as necessary into a higher layer and work with the copies.
+
+I use only AutoFill and Satin Columns in my designs.  I begin converting filled areas to AutoFill regions.  Each time I create an AutoFill shape, I set its parameters using **Params**.  Then I select it and run **Embroider**, which will cause it to show a stitch plan for just the selected object(s).
+
+I examine the resulting stitch plan using the node editor tool.  Each node is a single stitch; the needle will penetrate the fabric and interlock with the bobbin thread at this point.  Once I'm done examining the stitch plan, I Undo the **Embroider** operation to remove the stitch plan and make my vectors visible again.  Then I make any changes necessary, re-run **Embroider**, and repeat until it looks right.
+
+At this point, I save my SVG file.  If Inkscape is starting to become sluggish (due to the memory leak described above), I'll restart it before continuing.
+
+Next, I work on Satins.  Remember that a Satin Column is defined by two lines that run along the edges of the column.  It's usually a good idea to run satin along the outside border of a fill region.   Inkscape makes this easy.  I copy and paste the shape from the traced vectors, then disable Fill and enable Stroke.  I set the stroke width to my desired satin width.  Finally, I use the "Stroke to Path" option to convert just the stroke into its own path.
+
+At this point, it's necessary to cut the paths so that they aren't a continuous loop.  The cut will also tell **Embroider** where to start stitching from.  Add a point at the desired cut location by double-clicking on the path with the Node Editor tool active.  Cut at this point by selecting at and pressing shift+j.  Repeat for the second path.
+
+Now you've got an object made of two paths.  They need to be going on the same direction for Satin Column to work.  You can tell what direction the path goes in by enabling direction indicators in Inkscape's preferences.  To reverse one of the paths, select one of its points and choose "Reverse Path".  I bind this to ctrl+r in Inkscape's preferences.
+
