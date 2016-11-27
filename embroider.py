@@ -864,54 +864,141 @@ class SergFill(EmbroideryElement):
 
         return rows
 
+    def inter_distance(self, segment1, segment2):
+        return shgeo.LineString(segment1).distance(shgeo.LineString(segment2))
+
     def is_same_run(self, segment1, segment2):
-        if shgeo.LineString(segment1).distance(shgeo.LineString(segment2)) > self.row_spacing * 1.001:
-            return False
-        return True
+        if self.inter_distance(segment1, segment2) <= self.row_spacing * 1.001:
+            return True
+        return False
+
+    def adjacent_count(self, row, segment):
+        count = 0
+        if len(row):
+            for onesegment in row:
+                if self.is_same_run(onesegment,segment):
+                    count = count + 1
+        return count
+
+    def find_adjacent_run(self, runs, prevrow, segment):
+        for onesegment in prevrow:
+            if self.is_same_run(onesegment,segment):
+                for run in runs:
+                    if run[-1] == onesegment:
+                        return runs.index(run)
+        return -1 #something went wrong, we must crash here or smth else
+
+    def neighbours_count(self, runs, run):
+        top = 0
+        bottom = 0
+        for onerun in runs:
+            if (onerun == run):
+                continue
+            if self.is_same_run(run[0],onerun[-1]):
+                top = top + 1
+            if self.is_same_run(run[-1],onerun[0]):
+                bottom = bottom + 1
+        return top,bottom
 
     def pull_runs(self, rows):
-        # Given a list of rows, each containing a set of line segments,
-        # break the area up into contiguous patches of line segments.
-        #
-        # This is done by repeatedly pulling off the first line segment in
-        # each row and calling that a shape.  We have to be careful to make
-        # sure that the line segments are part of the same shape.  Consider
-        # the letter "H", with an embroidery angle of 45 degrees.  When
-        # we get to the bottom of the lower left leg, the next row will jump
-        # over to midway up the lower right leg.  We want to stop there and
-        # start a new patch.
-
-        # for row in rows:
-        #    print >> sys.stderr, len(row)
-
-        # print >>sys.stderr, "\n".join(str(len(row)) for row in rows)
-
+        #remake: splitting into runs
+        #each run should not be enclosed by any other one
+        #all runs can figure out their neighbours up and down 
+        #thus we can determine right sequence for jump stitches
+        #which connect runs to avoid going through already filled area
+        #Sequence detection algorithm:
+        #run can be filled starting from side where it has no neighbours (top or bottom)
+        #after being filled the run is eliminated from list
+        #Shape detection algorithm
+        #scan each segment of current row agains all previous row segments and 
+        #each segment of previous row against all segments of current row 
+        #if adjacent_count == 1: append this segment to shape
+        #if adjacent_count == 0: start new run
+        #if adjacent_count >1: start new run (obstacle detected)
+        #       (aka close corresponding shape from bottom)
+        #--------------------
+        #-------------------- segment from prevrow intersect couple of segments from
+        #------/^^^^^\------- next row. Obstacle begin detected. We split block here
+        #------|     |-------
+        #------|     |-------
+        #-------\   /--------
+        #--------\_/--------- segment from next row intersect couple of segments from
+        #-------------------- prev row. obstacle end detected. We split block here too.
+        #Jump stitch will go though the middle of common segments betwenn adjacent blocks
+        fill_logic = "serg_reordered"
         runs = []
-        count = 0
-        while (len(rows) > 0):
-            run = []
-            prev = None
+        prevrow = []
+        for row in rows:
+            for segment in row:
+                #print >>sys.stderr, "P", str(prevrow)
+                #print >>sys.stderr, "R", str(row)
+                obstacleedge = True
+                if self.adjacent_count(prevrow,segment) == 1:
+                    rindex = self.find_adjacent_run(runs,prevrow,segment)
+                    if self.adjacent_count(row,runs[rindex][-1]) == 1:
+                        runs[rindex].append(segment)
+                        obstacleedge = False
+                if(obstacleedge):
+                    run = []
+                    run.append(segment)
+                    runs.append(run)
 
-            for row_num in xrange(len(rows)):
-                row = rows[row_num]
-                first, rest = row[0], row[1:]
+            prevrow = row
 
-                # TODO: only accept actually adjacent rows here
-                if prev is not None and not self.is_same_run(prev, first):
-                    break
+        #let's try to reorder runs for no visible jumpstitches on the surface
+        if (fill_logic == "serg_reordered" or True):
+            orderedruns = []
+            cnt = 0
+            mintop = 0
+            direction = 'down'
+            mindist = 0
+            dist = 0
+            dist1 = 0
+            isadjacent = 0
+            while (len(runs)>1):
+                cnt = cnt+1
+                mincnt = len(runs)
+                minrun = runs[0]
+                mindist = 10000;
+                for run in runs:
+                    top,bottom = self.neighbours_count(runs,run)
+                    isadjacent = False
+                    if  top == 0 or bottom == 0:
+                        if len(orderedruns) >0:
+                        #if direction == 'down' and len(orderedruns) > 0:
+                            dist = self.inter_distance(orderedruns[-1][-1],run[0])
+                        #elif direction == 'up' and len(orderedruns) > 0:
+                            dist1 = self.inter_distance(orderedruns[-1][-1],run[-1])
+                            if dist1 < dist:
+                                dist = dist1
+                        #print >> sys.stderr, "dist:", dist, "dist1:", dist1
 
-                run.append(first)
-                prev = first
-
-                rows[row_num] = rest
-
-            # print >> sys.stderr, len(run)
-            runs.append(run)
-            rows = [row for row in rows if len(row) > 0]
-
-            count += 1
-
-        return runs
+                        if ((top+bottom) < mincnt
+                            or (top+bottom==mincnt and mindist > dist)):
+                            minrun = run
+                            mincnt = top+bottom
+                            mintop = top
+                            mindist = dist
+                            if len(orderedruns) >0:
+                                isadjacent = isadjacent or self.is_same_run(orderedruns[-1][-1],run[0])
+                                isadjacent = isadjacent or self.is_same_run(orderedruns[-1][-1],run[-1])
+                runs.remove(minrun)
+                #if (mintop != 0 or (isadjacent and direction == 'up')):   #if needs to fill from bottom
+                #print >> sys.stderr, "mintop:", mintop
+                if (mintop != 0):   #if needs to fill from bottom
+                    minrun.reverse()
+                    direction = 'up'
+                else:
+                    direction = 'down'
+                orderedruns.append(minrun)
+            if (direction == 'up'):   #if prelast was filled from bottom last will bee the same
+                runs[0].reverse()
+            orderedruns.append(runs[0])
+            
+            return orderedruns
+            
+        else:
+            return runs
 
     def section_to_patch(self, group_of_segments, angle=None, row_spacing=None, max_stitch_length=None):
         if max_stitch_length is None:
@@ -1472,7 +1559,7 @@ def detect_classes(node):
             if element.get_boolean_param("auto_fill", True):
                 classes.append(AutoFill)
             else:
-                classes.append(Fill)
+                classes.append(SergFill)
 
         if element.get_style("stroke"):
             classes.append(Stroke)
