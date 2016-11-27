@@ -391,18 +391,10 @@ class Fill(EmbroideryElement):
 
         return rows
 
-    def make_quadrilateral(self, segment1, segment2):
-        return shgeo.Polygon((segment1[0], segment1[1], segment2[1], segment2[0], segment1[0]))
-
     def is_same_run(self, segment1, segment2):
-        if shgeo.LineString(segment1).distance(shgeo.LineString(segment1)) > self.row_spacing * 1.1:
+        if shgeo.LineString(segment1).distance(shgeo.LineString(segment2)) > self.row_spacing * 1.001:
             return False
-
-        quad = self.make_quadrilateral(segment1, segment2)
-        quad_area = quad.area
-        intersection_area = self.shape.intersection(quad).area
-
-        return (intersection_area / quad_area) >= 0.9
+        return True
 
     def pull_runs(self, rows):
         # Given a list of rows, each containing a set of line segments,
@@ -499,7 +491,7 @@ class Fill(EmbroideryElement):
 
             # only stitch the first point if it's a reasonable distance away from the
             # last stitch
-            if last_end is None or (beg - last_end).length() > 0.5 * self.options.pixels_per_mm:
+            if last_end is None or (beg - last_end).length() > 0.1 * self.options.pixels_per_mm:
                 patch.add_stitch(beg)
 
             first_stitch = self.adjust_stagger(beg, angle, row_spacing, max_stitch_length)
