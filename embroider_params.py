@@ -10,7 +10,7 @@ import wx
 from wx.lib.scrolledpanel import ScrolledPanel
 from collections import defaultdict
 import inkex
-from embroider import Param, EmbroideryElement, Fill, AutoFill, Stroke, SatinColumn, descendants
+from embroider import Param, EmbroideryElement, Fill, AutoFill,SergFill, Stroke, SatinColumn, descendants
 from functools import partial
 from itertools import groupby
 
@@ -430,7 +430,7 @@ class SettingsFrame(wx.Frame):
 
     def __set_properties(self):
         # begin wxGlade: MyFrame.__set_properties
-        self.SetTitle("frame_1")
+        self.SetTitle("Embroidery Params")
         self.notebook.SetMinSize((800, 400))
         self.preset_chooser.SetSelection(-1)
         # end wxGlade
@@ -477,7 +477,8 @@ class EmbroiderParams(inkex.Effect):
         if element.get_style("fill"):
             classes.append(AutoFill)
             classes.append(Fill)
-        elif element.get_style("stroke"):
+            classes.append(SergFill)
+        if element.get_style("stroke"):
             classes.append(Stroke)
 
             if element.get_style("stroke-dasharray") is None:
