@@ -391,18 +391,10 @@ class Fill(EmbroideryElement):
 
         return rows
 
-    def make_quadrilateral(self, segment1, segment2):
-        return shgeo.Polygon((segment1[0], segment1[1], segment2[1], segment2[0], segment1[0]))
-
     def is_same_run(self, segment1, segment2):
-        if shgeo.LineString(segment1).distance(shgeo.LineString(segment1)) > self.row_spacing * 1.1:
+        if shgeo.LineString(segment1).distance(shgeo.LineString(segment2)) > self.row_spacing * 1.001:
             return False
-
-        quad = self.make_quadrilateral(segment1, segment2)
-        quad_area = quad.area
-        intersection_area = self.shape.intersection(quad).area
-
-        return (intersection_area / quad_area) >= 0.9
+        return True
 
     def pull_runs(self, rows):
         # Given a list of rows, each containing a set of line segments,
@@ -499,7 +491,7 @@ class Fill(EmbroideryElement):
 
             # only stitch the first point if it's a reasonable distance away from the
             # last stitch
-            if last_end is None or (beg - last_end).length() > 0.5 * self.options.pixels_per_mm:
+            if last_end is None or (beg - last_end).length() > 0.1 * self.options.pixels_per_mm:
                 patch.add_stitch(beg)
 
             first_stitch = self.adjust_stagger(beg, angle, row_spacing, max_stitch_length)
@@ -705,6 +697,395 @@ class AutoFill(Fill):
         patches.extend(self.do_auto_fill(self.angle, self.row_spacing, self.max_stitch_length, last_stitch))
 
         return patches
+
+
+class SergFill(EmbroideryElement):
+    def __init__(self, *args, **kwargs):
+        super(SergFill, self).__init__(*args, **kwargs)
+
+    @property
+    @param('auto_fill', 'Manually routed fill stitching', type='toggle', inverse=True, default=True)
+    def auto_fill(self):
+        return self.get_boolean_param('auto_fill', True)
+
+    @property
+    @param('angle', 'Angle of lines of stitches', unit='deg', type='float')
+    #@cache
+    def angle(self):
+        return math.radians(self.get_float_param('angle', 0))
+
+    @property
+    def color(self):
+        return self.get_style("fill")
+
+    @property
+    @param('flip', 'Flip fill (start right-to-left)', type='boolean')
+    def flip(self):
+        return self.get_boolean_param("flip", False)
+
+    @property
+    @param('row_spacing_mm', 'Spacing between rows', unit='mm', type='float')
+    def row_spacing(self):
+        return self.get_float_param("row_spacing_mm")
+
+    @property
+    @param('max_stitch_length_mm', 'Maximum fill stitch length', unit='mm', type='float')
+    def max_stitch_length(self):
+        return self.get_float_param("max_stitch_length_mm")
+
+    @property
+    @param('staggers', 'Stagger rows this many times before repeating', type='int')
+    def staggers(self):
+        return self.get_int_param("staggers", 4)
+
+    @property
+    #@cache
+    def paths(self):
+        return self.flatten(self.parse_path())
+
+    @property
+    #@cache
+    def shape(self):
+        poly_ary = []
+        for sub_path in self.paths:
+            point_ary = []
+            last_pt = None
+            for pt in sub_path:
+                if (last_pt is not None):
+                    vp = (pt[0] - last_pt[0], pt[1] - last_pt[1])
+                    dp = math.sqrt(math.pow(vp[0], 2.0) + math.pow(vp[1], 2.0))
+                    # dbg.write("dp %s\n" % dp)
+                    if (dp > 0.01):
+                        # I think too-close points confuse shapely.
+                        point_ary.append(pt)
+                        last_pt = pt
+                else:
+                    last_pt = pt
+            poly_ary.append(point_ary)
+
+        # shapely's idea of "holes" are to subtract everything in the second set
+        # from the first. So let's at least make sure the "first" thing is the
+        # biggest path.
+        # TODO: actually figure out which things are holes and which are shells
+        poly_ary.sort(key=lambda point_list: shgeo.Polygon(point_list).area, reverse=True)
+
+        polygon = shgeo.MultiPolygon([(poly_ary[0], poly_ary[1:])])
+        # print >> sys.stderr, "polygon valid:", polygon.is_valid
+        return polygon
+
+    #@cache
+    def east(self, angle):
+        # "east" is the name of the direction that is to the right along a row
+        return PyEmb.Point(1, 0).rotate(-angle)
+
+    #@cache
+    def north(self, angle):
+        return self.east(angle).rotate(math.pi / 2)
+
+    def adjust_stagger(self, stitch, angle, row_spacing, max_stitch_length):
+        row_num = round((stitch * self.north(angle)) / row_spacing)
+        row_stagger = row_num % self.staggers
+        stagger_offset = (float(row_stagger) / self.staggers) * max_stitch_length
+        offset = ((stitch * self.east(angle)) - stagger_offset) % max_stitch_length
+
+        return stitch - offset * self.east(angle)
+
+    def intersect_region_with_grating(self, angle=None, row_spacing=None):
+        if angle is None:
+            angle = self.angle
+
+        if row_spacing is None:
+            row_spacing = self.row_spacing
+
+        # the max line length I'll need to intersect the whole shape is the diagonal
+        (minx, miny, maxx, maxy) = self.shape.bounds
+        upper_left = PyEmb.Point(minx, miny)
+        lower_right = PyEmb.Point(maxx, maxy)
+        length = (upper_left - lower_right).length()
+        half_length = length / 2.0
+
+        # Now get a unit vector rotated to the requested angle.  I use -angle
+        # because shapely rotates clockwise, but my geometry textbooks taught
+        # me to consider angles as counter-clockwise from the X axis.
+        direction = PyEmb.Point(1, 0).rotate(-angle)
+
+        # and get a normal vector
+        normal = direction.rotate(math.pi / 2)
+
+        # I'll start from the center, move in the normal direction some amount,
+        # and then walk left and right half_length in each direction to create
+        # a line segment in the grating.
+        center = PyEmb.Point((minx + maxx) / 2.0, (miny + maxy) / 2.0)
+
+        # I need to figure out how far I need to go along the normal to get to
+        # the edge of the shape.  To do that, I'll rotate the bounding box
+        # angle degrees clockwise and ask for the new bounding box.  The max
+        # and min y tell me how far to go.
+
+        _, start, _, end = affinity.rotate(self.shape, angle, origin='center', use_radians=True).bounds
+
+        # convert start and end to be relative to center (simplifies things later)
+        start -= center.y
+        end -= center.y
+
+        # offset start slightly so that rows are always an even multiple of
+        # row_spacing_px from the origin.  This makes it so that abutting
+        # fill regions at the same angle and spacing always line up nicely.
+        start -= (start + normal * center) % row_spacing
+
+        rows = []
+
+        while start < end:
+            p0 = center + normal * start + direction * half_length
+            p1 = center + normal * start - direction * half_length
+            endpoints = [p0.as_tuple(), p1.as_tuple()]
+            grating_line = shgeo.LineString(endpoints)
+
+            res = grating_line.intersection(self.shape)
+
+            if (isinstance(res, shgeo.MultiLineString)):
+                runs = map(lambda line_string: line_string.coords, res.geoms)
+            else:
+                if res.is_empty or len(res.coords) == 1:
+                    # ignore if we intersected at a single point or no points
+                    start += row_spacing
+                    continue
+                runs = [res.coords]
+
+            runs.sort(key=lambda seg: (PyEmb.Point(*seg[0]) - upper_left).length())
+
+            if self.flip:
+                runs.reverse()
+                runs = map(lambda run: tuple(reversed(run)), runs)
+
+            rows.append(runs)
+
+            start += row_spacing
+
+        return rows
+
+    def inter_distance(self, segment1, segment2):
+        return shgeo.LineString(segment1).distance(shgeo.LineString(segment2))
+
+    def is_same_run(self, segment1, segment2):
+        if self.inter_distance(segment1, segment2) <= self.row_spacing * 1.001:
+            return True
+        return False
+
+    def adjacent_count(self, row, segment):
+        count = 0
+        if len(row):
+            for onesegment in row:
+                if self.is_same_run(onesegment,segment):
+                    count = count + 1
+        return count
+
+    def find_adjacent_run(self, runs, prevrow, segment):
+        for onesegment in prevrow:
+            if self.is_same_run(onesegment,segment):
+                for run in runs:
+                    if run[-1] == onesegment:
+                        return runs.index(run)
+        return -1 #something went wrong, we must crash here or smth else
+
+    def neighbours_count(self, runs, run):
+        top = 0
+        bottom = 0
+        for onerun in runs:
+            if (onerun == run):
+                continue
+            if self.is_same_run(run[0],onerun[-1]):
+                top = top + 1
+            if self.is_same_run(run[-1],onerun[0]):
+                bottom = bottom + 1
+        return top,bottom
+
+    def pull_runs(self, rows):
+        #remake: splitting into runs
+        #each run should not be enclosed by any other one
+        #all runs can figure out their neighbours up and down 
+        #thus we can determine right sequence for jump stitches
+        #which connect runs to avoid going through already filled area
+        #Sequence detection algorithm:
+        #run can be filled starting from side where it has no neighbours (top or bottom)
+        #after being filled the run is eliminated from list
+        #Shape detection algorithm
+        #scan each segment of current row agains all previous row segments and 
+        #each segment of previous row against all segments of current row 
+        #if adjacent_count == 1: append this segment to shape
+        #if adjacent_count == 0: start new run
+        #if adjacent_count >1: start new run (obstacle detected)
+        #       (aka close corresponding shape from bottom)
+        #--------------------
+        #-------------------- segment from prevrow intersect couple of segments from
+        #------/^^^^^\------- next row. Obstacle begin detected. We split block here
+        #------|     |-------
+        #------|     |-------
+        #-------\   /--------
+        #--------\_/--------- segment from next row intersect couple of segments from
+        #-------------------- prev row. obstacle end detected. We split block here too.
+        #Jump stitch will go though the middle of common segments betwenn adjacent blocks
+        fill_logic = "serg_reordered"
+        runs = []
+        prevrow = []
+        for row in rows:
+            for segment in row:
+                #print >>sys.stderr, "P", str(prevrow)
+                #print >>sys.stderr, "R", str(row)
+                obstacleedge = True
+                if self.adjacent_count(prevrow,segment) == 1:
+                    rindex = self.find_adjacent_run(runs,prevrow,segment)
+                    if self.adjacent_count(row,runs[rindex][-1]) == 1:
+                        runs[rindex].append(segment)
+                        obstacleedge = False
+                if(obstacleedge):
+                    run = []
+                    run.append(segment)
+                    runs.append(run)
+
+            prevrow = row
+
+        #let's try to reorder runs for no visible jumpstitches on the surface
+        if (fill_logic == "serg_reordered" or True):
+            orderedruns = []
+            cnt = 0
+            mintop = 0
+            direction = 'down'
+            mindist = 0
+            dist = 0
+            dist1 = 0
+            isadjacent = 0
+            while (len(runs)>1):
+                cnt = cnt+1
+                mincnt = len(runs)
+                minrun = runs[0]
+                mindist = 10000;
+                for run in runs:
+                    top,bottom = self.neighbours_count(runs,run)
+                    isadjacent = False
+                    if  top == 0 or bottom == 0:
+                        if len(orderedruns) >0:
+                        #if direction == 'down' and len(orderedruns) > 0:
+                            dist = self.inter_distance(orderedruns[-1][-1],run[0])
+                        #elif direction == 'up' and len(orderedruns) > 0:
+                            dist1 = self.inter_distance(orderedruns[-1][-1],run[-1])
+                            if dist1 < dist:
+                                dist = dist1
+                        #print >> sys.stderr, "dist:", dist, "dist1:", dist1
+
+                        if ((top+bottom) < mincnt
+                            or (top+bottom==mincnt and mindist > dist)):
+                            minrun = run
+                            mincnt = top+bottom
+                            mintop = top
+                            mindist = dist
+                            if len(orderedruns) >0:
+                                isadjacent = isadjacent or self.is_same_run(orderedruns[-1][-1],run[0])
+                                isadjacent = isadjacent or self.is_same_run(orderedruns[-1][-1],run[-1])
+                runs.remove(minrun)
+                #if (mintop != 0 or (isadjacent and direction == 'up')):   #if needs to fill from bottom
+                #print >> sys.stderr, "mintop:", mintop
+                if (mintop != 0):   #if needs to fill from bottom
+                    minrun.reverse()
+                    direction = 'up'
+                else:
+                    direction = 'down'
+                orderedruns.append(minrun)
+            if (direction == 'up'):   #if prelast was filled from bottom last will bee the same
+                runs[0].reverse()
+            orderedruns.append(runs[0])
+            
+            return orderedruns
+            
+        else:
+            return runs
+
+    def section_to_patch(self, group_of_segments, angle=None, row_spacing=None, max_stitch_length=None):
+        if max_stitch_length is None:
+            max_stitch_length = self.max_stitch_length
+
+        if row_spacing is None:
+            row_spacing = self.row_spacing
+
+        if angle is None:
+            angle = self.angle
+
+        # print >> sys.stderr, len(groups_of_segments)
+
+        patch = Patch(color=self.color)
+        first_segment = True
+        swap = False
+        last_end = None
+
+        for segment in group_of_segments:
+            # We want our stitches to look like this:
+            #
+            # ---*-----------*-----------
+            # ------*-----------*--------
+            # ---------*-----------*-----
+            # ------------*-----------*--
+            # ---*-----------*-----------
+            #
+            # Each successive row of stitches will be staggered, with
+            # num_staggers rows before the pattern repeats.  A value of
+            # 4 gives a nice fill while hiding the needle holes.  The
+            # first row is offset 0%, the second 25%, the third 50%, and
+            # the fourth 75%.
+            #
+            # Actually, instead of just starting at an offset of 0, we
+            # can calculate a row's offset relative to the origin.  This
+            # way if we have two abutting fill regions, they'll perfectly
+            # tile with each other.  That's important because we often get
+            # abutting fill regions from pull_runs().
+
+            (beg, end) = segment
+
+            if (swap):
+                (beg, end) = (end, beg)
+
+            beg = PyEmb.Point(*beg)
+            end = PyEmb.Point(*end)
+
+            row_direction = (end - beg).unit()
+            segment_length = (end - beg).length()
+
+            # only stitch the first point if it's a reasonable distance away from the
+            # last stitch
+            if last_end is None or (beg - last_end).length() > 0.1 * self.options.pixels_per_mm:
+                patch.add_stitch(beg)
+
+            first_stitch = self.adjust_stagger(beg, angle, row_spacing, max_stitch_length)
+
+            # we might have chosen our first stitch just outside this row, so move back in
+            if (first_stitch - beg) * row_direction < 0:
+                first_stitch += row_direction * max_stitch_length
+
+            offset = (first_stitch - beg).length()
+
+            while offset < segment_length:
+                patch.add_stitch(beg + offset * row_direction)
+                offset += max_stitch_length
+
+            if (end - patch.stitches[-1]).length() > 0.1 * self.options.pixels_per_mm:
+                patch.add_stitch(end)
+
+            last_end = end
+            swap = not swap
+
+        return patch
+
+    def to_patches(self, last_patch):
+        dbg.write("sergfill to_patches: %s\n" % time.time())
+        dbg.flush()
+
+        rows_of_segments = self.intersect_region_with_grating()
+        dbg.write("sergfill rows_of: %s\n" % time.time())
+        dbg.flush()
+        groups_of_segments = self.pull_runs(rows_of_segments)
+        dbg.write("sergfill groups_of: %s\n" % time.time())
+        dbg.flush()
+
+        return [self.section_to_patch(group) for group in groups_of_segments]
 
 
 class Stroke(EmbroideryElement):
@@ -1185,7 +1566,7 @@ def detect_classes(node):
             if element.get_boolean_param("auto_fill", True):
                 classes.append(AutoFill)
             else:
-                classes.append(Fill)
+                classes.append(SergFill)
 
         if element.get_style("stroke"):
             classes.append(Stroke)
@@ -1345,7 +1726,7 @@ class Embroider(inkex.Effect):
                                      dest="max_backups", default=5,
                                      help="Max number of backups of output files to keep.")
         self.OptionParser.add_option("-p", "--pixels_per_mm",
-                                     action="store", type="int",
+                                     action="store", type="float",
                                      dest="pixels_per_mm", default=10,
                                      help="Number of on-screen pixels per millimeter.")
         self.patches = []
@@ -1424,6 +1805,8 @@ class Embroider(inkex.Effect):
 
         if self.options.hide_layers:
             self.hide_layers()
+        dbg.write("finished hide layers: %s\n" % time.time())
+        dbg.flush()
 
         patches = []
         for element in self.elements:
@@ -1433,10 +1816,19 @@ class Embroider(inkex.Effect):
                 last_patch = None
 
             patches.extend(element.to_patches(last_patch))
+        dbg.write("finished patches: %s\n" % time.time())
+        dbg.flush()
 
         stitches = patches_to_stitches(patches, self.options.collapse_length_mm * self.options.pixels_per_mm)
+        dbg.write("finished stitches: %s\n" % time.time())
+        dbg.flush()
         emb = PyEmb.Embroidery(stitches, self.options.pixels_per_mm)
+        dbg.write("finished emb: %s\n" % time.time())
+        dbg.flush()
+
         emb.export(self.get_output_path(), self.options.output_format)
+        dbg.write("finished export: %s\n" % time.time())
+        dbg.flush()
 
         new_layer = inkex.etree.SubElement(self.document.getroot(), SVG_GROUP_TAG, {})
         new_layer.set('id', self.uniqueId("embroidery"))
@@ -1446,6 +1838,9 @@ class Embroider(inkex.Effect):
         emit_inkscape(new_layer, stitches)
 
         sys.stdout = old_stdout
+        dbg.write("finished output: %s\n" % time.time())
+        dbg.flush()
+
 
 if __name__ == '__main__':
     sys.setrecursionlimit(100000)
