@@ -1136,6 +1136,12 @@ class Stroke(EmbroideryElement):
         # stroke width <= 0.5 pixels is deprecated in favor of dashed lines
         return self.dashed or self.width <= 0.5
 
+    def stroke_points_exact(self, emb_point_list, zigzag_spacing, stroke_width):
+        patch = Patch(color=self.color)
+        for p0 in emb_point_list:
+            patch.add_stitch(p0)
+        return patch
+
     def stroke_points(self, emb_point_list, zigzag_spacing, stroke_width):
         patch = Patch(color=self.color)
         p0 = emb_point_list[0]
@@ -1190,7 +1196,9 @@ class Stroke(EmbroideryElement):
 
         for path in self.paths:
             path = [PyEmb.Point(x, y) for x, y in path]
-            if self.is_running_stitch():
+            if self.options.svg2emb == "true":
+                patch = self.stroke_points_exact(path, self.running_stitch_length, stroke_width=0.0)
+            elif self.is_running_stitch():
                 patch = self.stroke_points(path, self.running_stitch_length, stroke_width=0.0)
             else:
                 patch = self.stroke_points(path, self.zigzag_spacing / 2.0, stroke_width=self.width)
@@ -1703,6 +1711,20 @@ class Embroider(inkex.Effect):
                                      action="store", type="float",
                                      dest="collapse_length_mm", default=0.0,
                                      help="max collapse length (mm)")
+        self.OptionParser.add_option("-t", "--trim_len_mm",
+            action="store", type="float",
+            dest="trim_len_mm", default=20.0,
+            help="min trim length (mm)")
+        self.OptionParser.add_option("--split_path_on_jumps",
+            action="store", type="choice",
+            choices=["true","false"],
+            dest="split_path_on_jumps", default="false",
+            help="Split SVG path on every jump stitch")
+        self.OptionParser.add_option("-o", "--order",
+            action="store", type="choice",
+            choices=["automatic", "layer", "object"],
+            dest="order", default="automatic",
+            help="patch stitching order")
         self.OptionParser.add_option("-f", "--flatness",
                                      action="store", type="float",
                                      dest="flat", default=0.1,
@@ -1729,6 +1751,11 @@ class Embroider(inkex.Effect):
                                      action="store", type="float",
                                      dest="pixels_per_mm", default=10,
                                      help="Number of on-screen pixels per millimeter.")
+        self.OptionParser.add_option("--svg2emb",
+                                     action="store", type="choice",
+                                     choices=["true","false"],
+                                     dest="svg2emb", default="false",
+                                     help="Just generate embroidmodder2 CSV from existing paths.")
         self.patches = []
 
     def handle_node(self, node):
@@ -1830,12 +1857,12 @@ class Embroider(inkex.Effect):
         dbg.write("finished export: %s\n" % time.time())
         dbg.flush()
 
-        new_layer = inkex.etree.SubElement(self.document.getroot(), SVG_GROUP_TAG, {})
-        new_layer.set('id', self.uniqueId("embroidery"))
-        new_layer.set(inkex.addNS('label', 'inkscape'), 'Embroidery')
-        new_layer.set(inkex.addNS('groupmode', 'inkscape'), 'layer')
-
-        emit_inkscape(new_layer, stitches)
+        if self.options.svg2emb != "true":
+            new_layer = inkex.etree.SubElement(self.document.getroot(), SVG_GROUP_TAG, {})
+            new_layer.set('id', self.uniqueId("embroidery"))
+            new_layer.set(inkex.addNS('label', 'inkscape'), 'Embroidery')
+            new_layer.set(inkex.addNS('groupmode', 'inkscape'), 'layer')
+            emit_inkscape(new_layer, stitches)
 
         sys.stdout = old_stdout
         dbg.write("finished output: %s\n" % time.time())
