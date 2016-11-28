@@ -42,7 +42,7 @@ from pprint import pformat
 import PyEmb
 #from PyEmb import cache
 
-dbg = open("/tmp/embroider-debug.txt", "w")
+dbg = open("./embroider-debug.txt", "w")
 PyEmb.dbg = dbg
 
 SVG_PATH_TAG = inkex.addNS('path', 'svg')
@@ -1075,8 +1075,15 @@ class SergFill(EmbroideryElement):
         return patch
 
     def to_patches(self, last_patch):
+        dbg.write("sergfill to_patches: %s\n" % time.time())
+        dbg.flush()
+
         rows_of_segments = self.intersect_region_with_grating()
+        dbg.write("sergfill rows_of: %s\n" % time.time())
+        dbg.flush()
         groups_of_segments = self.pull_runs(rows_of_segments)
+        dbg.write("sergfill groups_of: %s\n" % time.time())
+        dbg.flush()
 
         return [self.section_to_patch(group) for group in groups_of_segments]
 
@@ -1798,6 +1805,8 @@ class Embroider(inkex.Effect):
 
         if self.options.hide_layers:
             self.hide_layers()
+        dbg.write("finished hide layers: %s\n" % time.time())
+        dbg.flush()
 
         patches = []
         for element in self.elements:
@@ -1807,10 +1816,19 @@ class Embroider(inkex.Effect):
                 last_patch = None
 
             patches.extend(element.to_patches(last_patch))
+        dbg.write("finished patches: %s\n" % time.time())
+        dbg.flush()
 
         stitches = patches_to_stitches(patches, self.options.collapse_length_mm * self.options.pixels_per_mm)
+        dbg.write("finished stitches: %s\n" % time.time())
+        dbg.flush()
         emb = PyEmb.Embroidery(stitches, self.options.pixels_per_mm)
+        dbg.write("finished emb: %s\n" % time.time())
+        dbg.flush()
+
         emb.export(self.get_output_path(), self.options.output_format)
+        dbg.write("finished export: %s\n" % time.time())
+        dbg.flush()
 
         new_layer = inkex.etree.SubElement(self.document.getroot(), SVG_GROUP_TAG, {})
         new_layer.set('id', self.uniqueId("embroidery"))
@@ -1820,6 +1838,9 @@ class Embroider(inkex.Effect):
         emit_inkscape(new_layer, stitches)
 
         sys.stdout = old_stdout
+        dbg.write("finished output: %s\n" % time.time())
+        dbg.flush()
+
 
 if __name__ == '__main__':
     sys.setrecursionlimit(100000)
