@@ -946,42 +946,39 @@ class SergFill(EmbroideryElement):
             prevrow = row
 
         #let's try to reorder runs for no visible jumpstitches on the surface
-        if (fill_logic == "serg_reordered" or True):
+        if (fill_logic == "serg_reordered"):
             orderedruns = []
-            cnt = 0
-            mintop = 0
             direction = 'down'
-            mindist = 0
-            dist = 0
-            dist1 = 0
-            isadjacent = 0
+            isadjacent = False
             while (len(runs)>1):
-                cnt = cnt+1
                 mincnt = len(runs)
                 minrun = runs[0]
-                mindist = 10000;
+                mindist = 1000;
+                mintop = 100
                 for run in runs:
                     top,bottom = self.neighbours_count(runs,run)
                     isadjacent = False
                     if  top == 0 or bottom == 0:
+                        dist = 0
                         if len(orderedruns) >0:
-                        #if direction == 'down' and len(orderedruns) > 0:
                             dist = self.inter_distance(orderedruns[-1][-1],run[0])
-                        #elif direction == 'up' and len(orderedruns) > 0:
                             dist1 = self.inter_distance(orderedruns[-1][-1],run[-1])
                             if dist1 < dist:
                                 dist = dist1
                         #print >> sys.stderr, "dist:", dist, "dist1:", dist1
+                            if direction == 'down':
+                                isadjacent = isadjacent or self.is_same_run(orderedruns[-1][-1],run[0])
+                            else:
+                                isadjacent = isadjacent or self.is_same_run(orderedruns[-1][-1],run[-1])
 
-                        if ((top+bottom) < mincnt
-                            or (top+bottom==mincnt and mindist > dist)):
+                        if ((top+bottom) < mincnt or
+                            (top+bottom) == mincnt and (mindist > dist)):
                             minrun = run
                             mincnt = top+bottom
                             mintop = top
                             mindist = dist
-                            if len(orderedruns) >0:
-                                isadjacent = isadjacent or self.is_same_run(orderedruns[-1][-1],run[0])
-                                isadjacent = isadjacent or self.is_same_run(orderedruns[-1][-1],run[-1])
+                            if isadjacent:
+                                mindist = -1
                 runs.remove(minrun)
                 #if (mintop != 0 or (isadjacent and direction == 'up')):   #if needs to fill from bottom
                 #print >> sys.stderr, "mintop:", mintop
@@ -1621,72 +1618,6 @@ class Patch:
         return Patch(self.color, self.stitches[::-1])
 
 
-def patches_to_stitches(patch_list, collapse_len_px=0):
-    stitches = []
-
-    last_stitch = None
-    last_color = None
-    for patch in patch_list:
-        jump_stitch = True
-        for stitch in patch.stitches:
-            if last_stitch and last_color == patch.color:
-                l = (stitch - last_stitch).length()
-                if l <= 0.1:
-                    # filter out duplicate successive stitches
-                    jump_stitch = False
-                    continue
-
-                if jump_stitch:
-                    # consider collapsing jump stitch, if it is pretty short
-                    if l < collapse_len_px:
-                        # dbg.write("... collapsed\n")
-                        jump_stitch = False
-
-            # dbg.write("stitch color %s\n" % patch.color)
-
-            newStitch = PyEmb.Stitch(stitch.x, stitch.y, patch.color, jump_stitch)
-            stitches.append(newStitch)
-
-            jump_stitch = False
-            last_stitch = stitch
-            last_color = patch.color
-
-    return stitches
-
-
-def stitches_to_paths(stitches):
-    paths = []
-    last_color = None
-    last_stitch = None
-    for stitch in stitches:
-        if stitch.jump_stitch:
-            if last_color == stitch.color:
-                paths.append([None, []])
-                if last_stitch is not None:
-                    paths[-1][1].append(['M', last_stitch.as_tuple()])
-                    paths[-1][1].append(['L', stitch.as_tuple()])
-            last_color = None
-        if stitch.color != last_color:
-            paths.append([stitch.color, []])
-        paths[-1][1].append(['L' if len(paths[-1][1]) > 0 else 'M', stitch.as_tuple()])
-        last_color = stitch.color
-        last_stitch = stitch
-    return paths
-
-
-def emit_inkscape(parent, stitches):
-    for color, path in stitches_to_paths(stitches):
-        # dbg.write('path: %s %s\n' % (color, repr(path)))
-        inkex.etree.SubElement(parent,
-                               inkex.addNS('path', 'svg'),
-                               {'style': simplestyle.formatStyle(
-                                   {'stroke': color if color is not None else '#000000',
-                                    'stroke-width': "0.4",
-                                    'fill': 'none'}),
-                                   'd': simplepath.formatPath(path),
-                                })
-
-
 class Embroider(inkex.Effect):
 
     def __init__(self, *args, **kwargs):
@@ -1712,19 +1643,14 @@ class Embroider(inkex.Effect):
                                      dest="collapse_length_mm", default=0.0,
                                      help="max collapse length (mm)")
         self.OptionParser.add_option("-t", "--trim_len_mm",
-            action="store", type="float",
-            dest="trim_len_mm", default=20.0,
-            help="min trim length (mm)")
+                                     action="store", type="float",
+                                     dest="trim_len_mm", default=20.0,
+                                     help="min trim length (mm)")
         self.OptionParser.add_option("--split_path_on_jumps",
-            action="store", type="choice",
-            choices=["true","false"],
-            dest="split_path_on_jumps", default="false",
-            help="Split SVG path on every jump stitch")
-        self.OptionParser.add_option("-o", "--order",
-            action="store", type="choice",
-            choices=["automatic", "layer", "object"],
-            dest="order", default="automatic",
-            help="patch stitching order")
+                                     action="store", type="choice",
+                                     choices=["true","false"],
+                                     dest="split_path_on_jumps", default="false",
+                                     help="Split SVG path on every jump stitch")
         self.OptionParser.add_option("-f", "--flatness",
                                      action="store", type="float",
                                      dest="flat", default=0.1,
@@ -1846,7 +1772,8 @@ class Embroider(inkex.Effect):
         dbg.write("finished patches: %s\n" % time.time())
         dbg.flush()
 
-        stitches = patches_to_stitches(patches, self.options.collapse_length_mm * self.options.pixels_per_mm)
+        stitches = self.patches_to_stitches(patches, self.options.collapse_length_mm * self.options.pixels_per_mm
+                , self.options.trim_len_mm * self.options.pixels_per_mm)
         dbg.write("finished stitches: %s\n" % time.time())
         dbg.flush()
         emb = PyEmb.Embroidery(stitches, self.options.pixels_per_mm)
@@ -1862,11 +1789,78 @@ class Embroider(inkex.Effect):
             new_layer.set('id', self.uniqueId("embroidery"))
             new_layer.set(inkex.addNS('label', 'inkscape'), 'Embroidery')
             new_layer.set(inkex.addNS('groupmode', 'inkscape'), 'layer')
-            emit_inkscape(new_layer, stitches)
+            self.emit_inkscape(new_layer, stitches)
 
         sys.stdout = old_stdout
         dbg.write("finished output: %s\n" % time.time())
         dbg.flush()
+
+    def patches_to_stitches(self, patch_list, collapse_len_px=0, trim_len_px=0):
+        stitches = []
+
+        last_stitch = None
+        last_color = None
+        for patch in patch_list:
+            jump_stitch = 'j'
+            for stitch in patch.stitches:
+                if last_stitch and last_color == patch.color:
+                    l = (stitch - last_stitch).length()
+                    if l <= 0.1:
+                        # filter out duplicate successive stitches
+                        jump_stitch = 's'
+                        continue
+
+                    if jump_stitch == 'j':
+                        # consider collapsing jump stitch, if it is pretty short
+                        if l < collapse_len_px:
+                            #dbg.write("... collapsed\n")
+                            jump_stitch = 's'
+                        if l >= trim_len_px and trim_len_px > 0:
+                            jump_stitch = 't'
+
+                # dbg.write("stitch color %s\n" % patch.color)
+
+                new_stitch = PyEmb.Stitch(stitch.x, stitch.y, patch.color, jump_stitch)
+                stitches.append(new_stitch)
+
+                jump_stitch = 's'
+                last_stitch = stitch
+                last_color = patch.color
+
+        return stitches
+
+
+    def stitches_to_paths(self, stitches):
+        paths = []
+        last_color = None
+        last_stitch = None
+        for stitch in stitches:
+            if stitch.jump_stitch=='t' or (stitch.jump_stitch=='j' and self.options.split_path_on_jumps=='true'):
+                if last_color == stitch.color:
+                    paths.append([None, []])
+                    if last_stitch is not None:
+                        paths[-1][1].append(['M', last_stitch.as_tuple()])
+                        paths[-1][1].append(['L', stitch.as_tuple()])
+                last_color = None
+            if stitch.color != last_color:
+                paths.append([stitch.color, []])
+            paths[-1][1].append(['L' if len(paths[-1][1]) > 0 else 'M', stitch.as_tuple()])
+            last_color = stitch.color
+            last_stitch = stitch
+        return paths
+
+
+    def emit_inkscape(self, parent, stitches):
+        for color, path in self.stitches_to_paths(stitches):
+            # dbg.write('path: %s %s\n' % (color, repr(path)))
+            inkex.etree.SubElement(parent,
+                                   inkex.addNS('path', 'svg'),
+                                   {'style': simplestyle.formatStyle(
+                                       {'stroke': color if color is not None else '#000000',
+                                        'stroke-width': "0.4",
+                                        'fill': 'none'}),
+                                       'd': simplepath.formatPath(path),
+                                    })
 
 
 if __name__ == '__main__':

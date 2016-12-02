@@ -77,7 +77,7 @@ class Point:
 
 class Stitch(Point):
 
-    def __init__(self, x, y, color=None, jump_stitch=False):
+    def __init__(self, x, y, color=None, jump_stitch='s'):
         Point.__init__(self, x, y)
         self.color = color
         self.jump_stitch = jump_stitch
