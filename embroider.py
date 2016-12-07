@@ -1819,7 +1819,7 @@ class Embroider(inkex.Effect):
 
                     if jump_stitch == 'j':
                         # consider collapsing jump stitch, if it is pretty short
-                        if l < collapse_len_px:
+                        if l < collapse_len_px or collapse_len_px == 0:
                             #dbg.write("... collapsed\n")
                             jump_stitch = 's'
                         if l >= trim_len_px and trim_len_px > 0:

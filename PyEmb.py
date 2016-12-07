@@ -208,8 +208,10 @@ class Embroidery:
                     int(stitch.color[1:3], 16),
                     int(stitch.color[3:5], 16),
                     int(stitch.color[5:7], 16))
-            if stitch.jump_stitch:
+            if stitch.jump_stitch=='j':
                 self.str += '"*","JUMP","%f","%f"\n' % (stitch.x, stitch.y)
+            if stitch.jump_stitch=='t':
+                self.str += '"*","TRIM","%f","%f"\n' % (stitch.x, stitch.y)
             self.str += '"*","STITCH","%f","%f"\n' % (stitch.x, stitch.y)
             lastStitch = stitch
         self.str += '"*","END","%f","%f"\n' % (lastStitch.x, lastStitch.y)
