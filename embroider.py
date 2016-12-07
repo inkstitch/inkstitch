@@ -868,6 +868,13 @@ class SergFill(EmbroideryElement):
         return shgeo.LineString(segment1).distance(shgeo.LineString(segment2))
 
     def is_same_run(self, segment1, segment2):
+        #if we have intersection due to hole with sharp corner and an angle fill
+        dist=shgeo.Point(segment1[0]).distance(shgeo.Point(segment1[1]))
+        dist1=shgeo.Point(segment1[0]).distance(shgeo.LineString(segment2))
+        dist2=shgeo.Point(segment1[1]).distance(shgeo.LineString(segment2))
+        if (dist1 > dist-self.row_spacing or dist2 > dist-self.row_spacing) and dist > self.row_spacing * 3:
+            return False
+
         if self.inter_distance(segment1, segment2) <= self.row_spacing * 1.001:
             return True
         return False
