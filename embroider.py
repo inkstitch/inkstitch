@@ -941,7 +941,7 @@ class SatinColumn(EmbroideryElement):
         node_id = self.node.get("id")
 
         if len(self.csp) != 2:
-            self.fatal("satin column: object %s invalid: expected exactly two sub-paths, but there are %s" % (node_id, len(csp)))
+            self.fatal("satin column: object %s invalid: expected exactly two sub-paths, but there are %s" % (node_id, len(self.csp)))
 
         if self.get_style("fill") is not None:
             self.fatal("satin column: object %s has a fill (but should not)" % node_id)
