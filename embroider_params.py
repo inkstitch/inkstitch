@@ -477,7 +477,8 @@ class EmbroiderParams(inkex.Effect):
         if element.get_style("fill"):
             classes.append(AutoFill)
             classes.append(Fill)
-        elif element.get_style("stroke"):
+
+        if element.get_style("stroke"):
             classes.append(Stroke)
 
             if element.get_style("stroke-dasharray") is None:
