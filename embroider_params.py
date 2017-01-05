@@ -271,14 +271,13 @@ class ParamsTab(ScrolledPanel):
 
             if param.type == 'boolean':
 
-                values = list(set(param.values))
-                if len(values) > 1:
+                if len(param.values) > 1:
                     input = wx.CheckBox(self, style=wx.CHK_3STATE)
                     input.Set3StateValue(wx.CHK_UNDETERMINED)
                 else:
                     input = wx.CheckBox(self)
-                    if values:
-                        input.SetValue(values[0])
+                    if param.values:
+                        input.SetValue(param.values[0])
 
                 input.Bind(wx.EVT_CHECKBOX, self.changed)
             elif len(param.values) > 1:
@@ -430,7 +429,7 @@ class SettingsFrame(wx.Frame):
 
     def __set_properties(self):
         # begin wxGlade: MyFrame.__set_properties
-        self.SetTitle("frame_1")
+        self.SetTitle("Embroidery Parameters")
         self.notebook.SetMinSize((800, 400))
         self.preset_chooser.SetSelection(-1)
         # end wxGlade
@@ -522,7 +521,7 @@ class EmbroiderParams(inkex.Effect):
             params = cls.get_params()
 
             for param in params:
-                param.values = self.get_values(param, nodes)
+                param.values = list(set(self.get_values(param, nodes)))
 
             parent_tab = None
             new_tabs = []
