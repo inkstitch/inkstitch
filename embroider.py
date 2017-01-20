@@ -785,14 +785,14 @@ class Stroke(EmbroideryElement):
                 if stroke_width == 0.0 and last_segment_direction is not None:
                     if abs(1.0 - along * last_segment_direction) > 0.5:
                         # if greater than 45 degree angle, stitch the corner
-                        rho = self.zigzag_spacing
+                        rho = zigzag_spacing
                         patch.add_stitch(p0)
 
                 # iteration variable: how far we are along segment
                 while (rho <= seg_len):
                     left_pt = p0 + along * rho + perp * side
                     patch.add_stitch(left_pt)
-                    rho += self.zigzag_spacing
+                    rho += zigzag_spacing
                     side = -side
 
                 p0 = p1
