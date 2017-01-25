@@ -1,0 +1,7 @@
+![amazon_checkmark_i.jpg](amazon_checkmark_i.jpg)
+![clinton_poker_league.jpg](clinton_poker_league.jpg)
+![firepants.jpg](firepants.jpg)
+![i_heart_vectors.jpg](i_heart_vectors.jpg)
+![README.md](README.md)
+![seven_deuce.jpg](seven_deuce.jpg)
+![SRE_Weekly.jpg](SRE_Weekly.jpg)
