@@ -1345,7 +1345,7 @@ class Embroider(inkex.Effect):
                                      dest="max_backups", default=5,
                                      help="Max number of backups of output files to keep.")
         self.OptionParser.add_option("-p", "--pixels_per_mm",
-                                     action="store", type="int",
+                                     action="store", type="float",
                                      dest="pixels_per_mm", default=10,
                                      help="Number of on-screen pixels per millimeter.")
         self.patches = []
