@@ -395,7 +395,7 @@ class Fill(EmbroideryElement):
         return shgeo.Polygon((segment1[0], segment1[1], segment2[1], segment2[0], segment1[0]))
 
     def is_same_run(self, segment1, segment2):
-        if shgeo.LineString(segment1).distance(shgeo.LineString(segment1)) > self.row_spacing * 1.1:
+        if shgeo.LineString(segment1).distance(shgeo.LineString(segment2)) > self.row_spacing * 1.1:
             return False
 
         quad = self.make_quadrilateral(segment1, segment2)
