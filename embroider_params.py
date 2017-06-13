@@ -331,6 +331,9 @@ class SettingsFrame(wx.Frame):
         self.cancel_button = wx.Button(self, wx.ID_ANY, "Cancel")
         self.cancel_button.Bind(wx.EVT_BUTTON, self.close)
 
+        self.use_last_button = wx.Button(self, wx.ID_ANY, "Use Last Settings")
+        self.use_last_button.Bind(wx.EVT_BUTTON, self.use_last)
+
         self.apply_button = wx.Button(self, wx.ID_ANY, "Apply and Quit")
         self.apply_button.Bind(wx.EVT_BUTTON, self.apply)
 
@@ -339,7 +342,9 @@ class SettingsFrame(wx.Frame):
         # end wxGlade
 
     def update_preset_list(self):
-        self.preset_chooser.SetItems(load_presets().keys())
+        preset_names = load_presets().keys()
+        preset_names = [preset for preset in preset_names if preset != "__LAST__"]
+        self.preset_chooser.SetItems(preset_names)
 
     def get_preset_name(self):
         preset_name = self.preset_chooser.GetValue().strip()
@@ -389,11 +394,8 @@ class SettingsFrame(wx.Frame):
     def overwrite_preset(self, event):
         self.add_preset(event, overwrite=True)
 
-    def load_preset(self, event):
-        preset_name = self.get_preset_name()
-        if not preset_name:
-            return
 
+    def _load_preset(self, preset_name):
         preset = self.check_and_load_preset(preset_name)         
         if not preset:
             return
@@ -401,7 +403,16 @@ class SettingsFrame(wx.Frame):
         for tab in self.tabs:
             tab.load_preset(preset)
 
+
+    def load_preset(self, event):
+        preset_name = self.get_preset_name()
+        if not preset_name:
+            return
+
+        self._load_preset(preset_name)
+
         event.Skip()
+
 
     def delete_preset(self, event):
         preset_name = self.get_preset_name()
@@ -422,7 +433,12 @@ class SettingsFrame(wx.Frame):
         for tab in self.tabs:
             tab.apply()
 
+        save_preset("__LAST__", self.get_preset_data())
         self.Close()
+
+    def use_last(self, event):
+        self._load_preset("__LAST__")
+        self.apply(event)
 
     def close(self, event):
         self.Close()
@@ -450,6 +466,7 @@ class SettingsFrame(wx.Frame):
         sizer_2.Add(self.delete_preset_button, 0, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 5)
         sizer_1.Add(sizer_2, 0, flag=wx.EXPAND|wx.ALL, border=10)
         sizer_3.Add(self.cancel_button, 0, wx.ALIGN_RIGHT|wx.RIGHT, 5)
+        sizer_3.Add(self.use_last_button, 0, wx.ALIGN_RIGHT|wx.RIGHT|wx.BOTTOM, 5)
         sizer_3.Add(self.apply_button, 0, wx.ALIGN_RIGHT|wx.RIGHT|wx.BOTTOM, 5)
         sizer_1.Add(sizer_3, 0, wx.ALIGN_RIGHT, 0)
         self.SetSizer(sizer_1)
