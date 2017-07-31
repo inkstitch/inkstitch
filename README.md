@@ -25,6 +25,12 @@ Make sure you have the `shapely` python module installed.  The `appdirs` python 
 apt-get install python-shapely python-appdirs
 ```
 
+On a MacOS/Sierra you'll also need `backports.functools_lru_cache`:
+
+```
+sudo pip install backports.functools_lru_cache
+```
+
 ### Extension installation
 1. Clone the extension source: `git clone https://github.com/lexelby/inkscape-embroidery`
 2. Install it as directed [here](https://inkscape.org/da/gallery/%3Dextension/)
