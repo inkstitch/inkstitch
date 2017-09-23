@@ -98,30 +98,10 @@ Another issue is that Inkscape has a memory leak related to extensions.  The mor
 
 ### AutoFill
 
-AutoFill is the default method for generating fill stitching.  To use it, create a closed path in Inskcape and add a fill color.
+AutoFill is the default method for generating fill stitching.  To use it, create a closed path in Inskcape and add a fill color.  This algorithm works for complex shapes with or without holes.
 
-inkscape-embroidery will break the shape up into sections that it can embroider at once using back-and-forth rows of stitches.  It then adds straight-stitching between sections until it's filled in the entire design.  The staggered pattern of stitches is continued seamlessly between sections, so the end result doesn't appear to have any breaks.  When moving from one section to the next, it generates running stitching along the outside edge of the shape.
+inkscape-embroidery will break the shape up into sections that it can embroider at once using back-and-forth rows of stitches.  It then adds straight-stitching between sections until it's filled in the entire design.  The staggered pattern of stitches is continued seamlessly between sections, so the end result doesn't appear to have any breaks.  When moving from one section to the next, it generates running stitching along the border of the shape.
 
-This algorithm works great for simple shapes, convex or concave.  However, it doesn't work for shapes with holes, because the stitching could get "stuck" on the edge of a hole and be unable to reach any remaining section.  For this reason, AutoFill rejects regions with holes in them.
-
-So what do you do if your shape does have holes?  You have two choices: use manually-routed fill (described below), or break the shape up into one or more shapes without holes.
-
-Here's an example of converting a region with a hole into a region without:
-![breaking auto-fill regions with holes](images/autofill_with_holes.png)
-
-An SVG version is available in `images/autofill_hole_example.svg` for you to test out.
-
-Note the thin line drawn from the hole to the edge.  In fact, this is a very thin strip missing from the shape -- thinner than the spacing between the rows of stitches.  This allows the autofill system to travel into and out of the center of the shape if necessary to get from section to section.
-
-Note that I've drawn the gap at exactly the same angle as the fill.  When the autofill system sees that it is traveling in the same direction as the fill, **it places stitches correctly to match the fill pattern**.  This means that the gap will be virtually undetectable because the travel stitches will be hidden in the fill.  This may double- or triple-up one of the fill rows, but it's really hard to tell unless you look very closely.
-
-To easily create a gap like this, follow these steps:
-
-1. Draw a line with the pencil tool that is parallel to your fill angle.  For an angle that's a multiple of 45 degrees, hold control while drawing the line to snap the angle.
-1. Make sure your line goes from outside the fill area to inside the hole. 
-1. Set the stroke width to 0.1 pixels.
-1. Path -> Stroke to Path
-1. Select the new path and your fill region together and do Path -> Difference (control-minus).
 
 #### AutoFill parameters
 
