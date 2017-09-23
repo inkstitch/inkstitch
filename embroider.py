@@ -289,7 +289,8 @@ class Fill(EmbroideryElement):
                         last_pt = pt
                 else:
                     last_pt = pt
-            poly_ary.append(point_ary)
+            if point_ary:
+                poly_ary.append(point_ary)
 
         # shapely's idea of "holes" are to subtract everything in the second set
         # from the first. So let's at least make sure the "first" thing is the
