@@ -1006,20 +1006,19 @@ class AutoFill(Fill):
 
 
     def to_patches(self, last_patch):
-        print >> dbg, "autofill", self.max_stitch_length, self.fill_underlay_max_stitch_length
-
         patches = []
 
         if last_patch is None:
-            last_stitch = None
+            starting_point = None
         else:
-            last_stitch = last_patch.stitches[-1]
+            nearest_point = self.outline.interpolate(self.outline.project(shgeo.Point(last_patch.stitches[-1])))
+            starting_point = PyEmb.Point(*nearest_point.coords[0])
 
         if self.fill_underlay:
-            patches.extend(self.do_auto_fill(self.fill_underlay_angle, self.fill_underlay_row_spacing, self.fill_underlay_max_stitch_length, last_stitch))
-            last_stitch = patches[-1].stitches[-1]
+            patches.extend(self.do_auto_fill(self.fill_underlay_angle, self.fill_underlay_row_spacing, self.fill_underlay_max_stitch_length, starting_point))
+            starting_point = patches[-1].stitches[-1]
 
-        patches.extend(self.do_auto_fill(self.angle, self.row_spacing, self.max_stitch_length, last_stitch))
+        patches.extend(self.do_auto_fill(self.angle, self.row_spacing, self.max_stitch_length, starting_point))
 
         return patches
 
