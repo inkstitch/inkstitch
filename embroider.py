@@ -24,7 +24,8 @@ import os
 import subprocess
 from copy import deepcopy
 import time
-from itertools import chain, izip
+from itertools import chain, izip, groupby
+from collections import deque
 import inkex
 import simplepath
 import simplestyle
@@ -37,6 +38,7 @@ import lxml.etree as etree
 import shapely.geometry as shgeo
 import shapely.affinity as affinity
 import shapely.ops
+import networkx
 from pprint import pformat
 
 import PyEmb
@@ -48,7 +50,6 @@ PyEmb.dbg = dbg
 SVG_PATH_TAG = inkex.addNS('path', 'svg')
 SVG_DEFS_TAG = inkex.addNS('defs', 'svg')
 SVG_GROUP_TAG = inkex.addNS('g', 'svg')
-
 
 class Param(object):
     def __init__(self, name, description, unit=None, values=[], type=None, group=None, inverse=False, default=None):
@@ -309,8 +310,11 @@ class Fill(EmbroideryElement):
     def north(self, angle):
         return self.east(angle).rotate(math.pi / 2)
 
+    def row_num(self, point, angle, row_spacing):
+        return round((point * self.north(angle)) / row_spacing)
+
     def adjust_stagger(self, stitch, angle, row_spacing, max_stitch_length):
-        row_num = round((stitch * self.north(angle)) / row_spacing)
+        row_num = self.row_num(stitch, angle, row_spacing)
         row_stagger = row_num % self.staggers
         stagger_offset = (float(row_stagger) / self.staggers) * max_stitch_length
         offset = ((stitch * self.east(angle)) - stagger_offset) % max_stitch_length
@@ -448,6 +452,55 @@ class Fill(EmbroideryElement):
 
         return runs
 
+    def stitch_row(self, patch, beg, end, angle, row_spacing, max_stitch_length):
+        # We want our stitches to look like this:
+        #
+        # ---*-----------*-----------
+        # ------*-----------*--------
+        # ---------*-----------*-----
+        # ------------*-----------*--
+        # ---*-----------*-----------
+        #
+        # Each successive row of stitches will be staggered, with
+        # num_staggers rows before the pattern repeats.  A value of
+        # 4 gives a nice fill while hiding the needle holes.  The
+        # first row is offset 0%, the second 25%, the third 50%, and
+        # the fourth 75%.
+        #
+        # Actually, instead of just starting at an offset of 0, we
+        # can calculate a row's offset relative to the origin.  This
+        # way if we have two abutting fill regions, they'll perfectly
+        # tile with each other.  That's important because we often get
+        # abutting fill regions from pull_runs().
+
+
+        beg = PyEmb.Point(*beg)
+        end = PyEmb.Point(*end)
+
+        row_direction = (end - beg).unit()
+        segment_length = (end - beg).length()
+
+        # only stitch the first point if it's a reasonable distance away from the
+        # last stitch
+        if not patch.stitches or (beg - patch.stitches[-1]).length() > 0.5 * self.options.pixels_per_mm:
+            patch.add_stitch(beg)
+
+        first_stitch = self.adjust_stagger(beg, angle, row_spacing, max_stitch_length)
+
+        # we might have chosen our first stitch just outside this row, so move back in
+        if (first_stitch - beg) * row_direction < 0:
+            first_stitch += row_direction * max_stitch_length
+
+        offset = (first_stitch - beg).length()
+
+        while offset < segment_length:
+            patch.add_stitch(beg + offset * row_direction)
+            offset += max_stitch_length
+
+        if (end - patch.stitches[-1]).length() > 0.1 * self.options.pixels_per_mm:
+            patch.add_stitch(end)
+
+
     def section_to_patch(self, group_of_segments, angle=None, row_spacing=None, max_stitch_length=None):
         if max_stitch_length is None:
             max_stitch_length = self.max_stitch_length
@@ -466,58 +519,13 @@ class Fill(EmbroideryElement):
         last_end = None
 
         for segment in group_of_segments:
-            # We want our stitches to look like this:
-            #
-            # ---*-----------*-----------
-            # ------*-----------*--------
-            # ---------*-----------*-----
-            # ------------*-----------*--
-            # ---*-----------*-----------
-            #
-            # Each successive row of stitches will be staggered, with
-            # num_staggers rows before the pattern repeats.  A value of
-            # 4 gives a nice fill while hiding the needle holes.  The
-            # first row is offset 0%, the second 25%, the third 50%, and
-            # the fourth 75%.
-            #
-            # Actually, instead of just starting at an offset of 0, we
-            # can calculate a row's offset relative to the origin.  This
-            # way if we have two abutting fill regions, they'll perfectly
-            # tile with each other.  That's important because we often get
-            # abutting fill regions from pull_runs().
-
             (beg, end) = segment
 
             if (swap):
                 (beg, end) = (end, beg)
 
-            beg = PyEmb.Point(*beg)
-            end = PyEmb.Point(*end)
+            self.stitch_row(patch, beg, end, angle, row_spacing, max_stitch_length)
 
-            row_direction = (end - beg).unit()
-            segment_length = (end - beg).length()
-
-            # only stitch the first point if it's a reasonable distance away from the
-            # last stitch
-            if last_end is None or (beg - last_end).length() > 0.5 * self.options.pixels_per_mm:
-                patch.add_stitch(beg)
-
-            first_stitch = self.adjust_stagger(beg, angle, row_spacing, max_stitch_length)
-
-            # we might have chosen our first stitch just outside this row, so move back in
-            if (first_stitch - beg) * row_direction < 0:
-                first_stitch += row_direction * max_stitch_length
-
-            offset = (first_stitch - beg).length()
-
-            while offset < segment_length:
-                patch.add_stitch(beg + offset * row_direction)
-                offset += max_stitch_length
-
-            if (end - patch.stitches[-1]).length() > 0.1 * self.options.pixels_per_mm:
-                patch.add_stitch(end)
-
-            last_end = end
             swap = not swap
 
         return patch
@@ -528,6 +536,9 @@ class Fill(EmbroideryElement):
 
         return [self.section_to_patch(group) for group in groups_of_segments]
 
+
+class MaxQueueLengthExceeded(Exception):
+    pass
 
 class AutoFill(Fill):
     @property
@@ -580,116 +591,421 @@ class AutoFill(Fill):
     @param('fill_underlay_max_stitch_length_mm', 'Max stitch length', unit='mm', group='AutoFill Underlay', type='float')
     @cache
     def fill_underlay_max_stitch_length(self):
-        return self.get_float_param("fill_underlay_max_stitch_length_mm" or self.max_stitch_length)
+        return self.get_float_param("fill_underlay_max_stitch_length_mm") or self.max_stitch_length
 
-    def validate(self):
-        if len(self.shape.boundary) > 1:
-            self.fatal("auto-fill: object %s cannot be auto-filled because it has one or more holes.  Please disable auto-fill for this object or break it into separate objects without holes." % self.node.get('id'))
+    def which_outline(self, coords):
+        """return the index of the outline on which the point resides
 
-    def is_same_run(self, segment1, segment2):
-        if shgeo.Point(segment1[0]).distance(shgeo.Point(segment2[0])) > self.max_stitch_length:
-            return False
+        Index 0 is the outer boundary of the fill region.  1+ are the
+        outlines of the holes.
+        """
 
-        if shgeo.Point(segment1[1]).distance(shgeo.Point(segment2[1])) > self.max_stitch_length:
-            return False
+        point = shgeo.Point(*coords)
 
-        return True
+        for i, outline in enumerate(self.shape.boundary):
+            # I'd use an intersection check, but floating point errors make it
+            # fail sometimes.
+            if outline.distance(point) < 0.00001:
+                return i
 
-    def perimeter_distance(self, p1, p2):
-        # how far around the perimeter (and in what direction) do I need to go
-        # to get from p1 to p2?
+    def project(self, coords, outline_index):
+        """project the point onto the specified outline
 
-        p1_projection = self.outline.project(shgeo.Point(p1))
-        p2_projection = self.outline.project(shgeo.Point(p2))
+        This returns the distance along the outline at which the point resides.
+        """
 
-        distance = p2_projection - p1_projection
+        return self.shape.boundary.project(shgeo.Point(*coords))
 
-        if abs(distance) > self.outline_length / 2.0:
-            # if we'd have to go more than halfway around, it's faster to go
-            # the other way
-            if distance < 0:
-                return distance + self.outline_length
-            elif distance > 0:
-                return distance - self.outline_length
+    def build_graph(self, segments, angle, row_spacing):
+        """build a graph representation of the grating segments
+
+        This function builds a specialized graph (as in graph theory) that will
+        help us determine a stitching path.  The idea comes from this paper:
+
+        http://www.sciencedirect.com/science/article/pii/S0925772100000158
+
+        The goal is to build a graph that we know must have an Eulerian Path.
+        An Eulerian Path is a path from edge to edge in the graph that visits
+        every edge exactly once and ends at the node it started at.  Algorithms
+        exist to build such a path, and we'll use Hierholzer's algorithm.
+
+        A graph must have an Eulerian Path if every node in the graph has an
+        even number of edges touching it.  Our goal here is to build a graph
+        that will have this property.
+
+        Based on the paper linked above, we'll build the graph as follows:
+
+          * nodes are the endpoints of the grating segments, where they meet
+            with the outer outline of the region the outlines of the interior
+            holes in the region.
+          * edges are:
+            * each section of the outer and inner outlines of the region,
+              between nodes
+            * double every other edge in the outer and inner hole outlines
+
+        Doubling up on some of the edges seems as if it will just mean we have
+        to stitch those spots twice.  This may be true, but it also ensures
+        that every node has 4 edges touching it, ensuring that a valid stitch
+        path must exist.
+        """
+
+        graph = networkx.MultiGraph()
+
+        # First, add the grating segments as edges.  We'll use the coordinates
+        # of the endpoints as nodes, which networkx will add automatically.
+        for segment in segments:
+            # networkx allows us to label nodes with arbitrary data.  We'll
+            # mark this one as a grating segment.
+            graph.add_edge(*segment, key="segment")
+
+        for node in graph.nodes():
+            outline_index = self.which_outline(node)
+            outline_projection = self.project(node, outline_index)
+
+            # Tag each node with its index and projection.
+            graph.add_node(node, index=outline_index, projection=outline_projection)
+
+        nodes = graph.nodes(data=True)
+        nodes.sort(key=lambda node: (node[1]['index'], node[1]['projection']))
+
+        for outline_index, nodes in groupby(nodes, key=lambda node: node[1]['index']):
+            nodes = [ node for node, data in nodes ]
+
+            # heuristic: change the order I visit the nodes in the outline if necessary.
+            # If the start and endpoints are in the same row, I can't tell which row
+            # I should treat it as being in.
+            while True:
+                row0 = self.row_num(PyEmb.Point(*nodes[0]), angle, row_spacing)
+                row1 = self.row_num(PyEmb.Point(*nodes[1]), angle, row_spacing)
+
+                if row0 == row1:
+                    nodes = nodes[1:] + [nodes[0]]
+                else:
+                    break
+
+            # heuristic: it's useful to try to keep the duplicated edges in the same rows.
+            # this prevents the BFS from having to search a ton of edges.
+            row_num = min(row0, row1)
+            if row_num % 2 == 0:
+                edge_set = 0
             else:
-                # this ought not happen, but just for completeness, return 0 if
-                # p1 and p0 are the same point
-                return 0
-        else:
-            return distance
+                edge_set = 1
 
-    def connect_points(self, p1, p2):
+            #print >> sys.stderr, outline_index, "es", edge_set, "rn", row_num, PyEmb.Point(*nodes[0]) * self.north(angle), PyEmb.Point(*nodes[1]) * self.north(angle)
+
+            # add an edge between each successive node
+            for i, (node1, node2) in enumerate(zip(nodes, nodes[1:] + [nodes[0]])):
+                graph.add_edge(node1, node2, key="outline")
+
+                # duplicate edges contained in every other row (exactly half
+                # will be duplicated)
+                row_num = min(self.row_num(PyEmb.Point(*node1), angle, row_spacing),
+                              self.row_num(PyEmb.Point(*node2), angle, row_spacing))
+
+                # duplicate every other edge around this outline
+                if i % 2 == edge_set:
+                    graph.add_edge(node1, node2, key="extra")
+
+
+        if not networkx.is_eulerian(graph):
+            raise Exception("something went wrong: graph is not eulerian")
+
+        return graph
+
+    def node_list_to_edge_list(self, node_list):
+        return zip(node_list[:-1], node_list[1:])
+
+    def bfs_for_loop(self, graph, starting_node, max_queue_length=2000):
+        to_search = deque()
+        to_search.appendleft(([starting_node], set(), 0))
+
+        while to_search:
+            if len(to_search) > max_queue_length:
+                raise MaxQueueLengthExceeded()
+
+            path, visited_edges, visited_segments = to_search.pop()
+            ending_node = path[-1]
+
+            # get a list of neighbors paired with the key of the edge I can follow to get there
+            neighbors = [
+                        (node, key)
+                            for node, adj in graph.adj[ending_node].iteritems()
+                            for key in adj
+                    ]
+
+            # heuristic: try grating segments first
+            neighbors.sort(key=lambda (dest, key): key == "segment", reverse=True)
+
+            for next_node, key in neighbors:
+                # skip if I've already followed this edge
+                edge = (tuple(sorted((ending_node, next_node))), key)
+                if edge in visited_edges:
+                    continue
+
+                new_path = path + [next_node]
+
+                if key == "segment":
+                    new_visited_segments = visited_segments + 1
+                else:
+                    new_visited_segments = visited_segments
+
+                if next_node == starting_node:
+                    # ignore trivial loops (down and back a doubled edge)
+                    if len(new_path) > 3:
+                        return self.node_list_to_edge_list(new_path), new_visited_segments
+
+                new_visited_edges = visited_edges.copy()
+                new_visited_edges.add(edge)
+
+                to_search.appendleft((new_path, new_visited_edges, new_visited_segments))
+
+    def find_loop(self, graph, starting_nodes):
+        """find a loop in the graph that is connected to the existing path
+
+        Start at a candidate node and search through edges to find a path
+        back to that node.  We'll use a breadth-first search (BFS) in order to
+        find the shortest available loop.
+
+        In most cases, the BFS should not need to search far to find a loop.
+        The queue should stay relatively short.
+
+        An added heuristic will be used: if the BFS queue's length becomes
+        too long, we'll abort and try a different starting point.  Due to
+        the way we've set up the graph, there's bound to be a better choice
+        somewhere else.
+        """
+
+        #loop = self.simple_loop(graph, starting_nodes[-2])
+
+        #if loop:
+        #    print >> sys.stderr, "simple_loop success"
+        #    starting_nodes.pop()
+        #    starting_nodes.pop()
+        #    return loop
+
+        loop = None
+        retry = []
+        max_queue_length = 2000
+
+        while not loop:
+            while not loop and starting_nodes:
+                starting_node = starting_nodes.pop()
+                #print >> sys.stderr, "find loop from", starting_node
+
+                try:
+                    # Note: if bfs_for_loop() returns None, no loop can be
+                    # constructed from the starting_node (because the
+                    # necessary edges have already been consumed).  In that
+                    # case we discard that node and try the next.
+                    loop = self.bfs_for_loop(graph, starting_node, max_queue_length)
+
+                    if not loop:
+                        print >> dbg, "failed on", starting_node
+                        dbg.flush()
+                except MaxQueueLengthExceeded:
+                    print >> dbg, "gave up on", starting_node
+                    dbg.flush()
+                    # We're giving up on this node for now.  We could try
+                    # this node again later, so add it to the bottm of the
+                    # stack.
+                    retry.append(starting_node)
+
+            # Darn, couldn't find a loop.  Try harder.
+            starting_nodes.extendleft(retry)
+            max_queue_length *= 2
+
+        starting_nodes.extendleft(retry)
+        return loop
+
+    def insert_loop(self, path, loop):
+        """insert a sub-loop into an existing path
+
+        The path will be a series of edges describing a path through the graph
+        that ends where it starts.  The loop will be similar, and its starting
+        point will be somewhere along the path.
+
+        Insert the loop into the path, resulting in a longer path.
+
+        Both the path and the loop will be a list of edges specified as a
+        start and end point.  The points will be specified in order, such
+        that they will look like this:
+
+        ((p1, p2), (p2, p3), (p3, p4) ... (pn, p1))
+
+        path will be modified in place.
+        """
+
+        loop_start = loop[0][0]
+
+        for i, (start, end) in enumerate(path):
+            if start == loop_start:
+                break
+
+        path[i:i] = loop
+
+    def find_stitch_path(self, graph, segments):
+        """find a path that visits every grating segment exactly once
+
+        Theoretically, we just need to find an Eulerian Path in the graph.
+        However, we don't actually care whether every single edge is visited.
+        The edges on the outline of the region are only there to help us get
+        from one grating segment to the next.
+
+        We'll build a "cycle" (a path that ends where it starts) using
+        Hierholzer's algorithm.  We'll stop once we've visited every grating
+        segment.
+
+        Hierholzer's algorithm says to select an arbitrary starting node at
+        each step.  In order to produce a reasonable stitch path, we'll select
+        the vertex carefully such that we get back-and-forth traversal like
+        mowing a lawn.
+
+        To do this, we'll use a simple heuristic: try to start from nodes in
+        the order of most-recently-visited first.
+        """
+
+        graph = graph.copy()
+        num_segments = len(segments)
+        segments_visited = 0
+        nodes_visited = deque()
+
+        # start with a simple loop: down one segment and then back along the
+        # outer border to the starting point.
+        path = [segments[0], list(reversed(segments[0]))]
+
+        graph.remove_edges_from(path)
+
+        segments_visited += 1
+        nodes_visited.extend(segments[0])
+
+        while segments_visited < num_segments:
+            result = self.find_loop(graph, nodes_visited)
+
+            if not result:
+                print >> sys.stderr, "Unexpected error filling region. Please send your SVG to lexelby@github."
+                break
+
+            loop, segments = result
+
+            print >> dbg, "found loop:", loop
+            dbg.flush()
+
+            segments_visited += segments
+            nodes_visited += [edge[0] for edge in loop]
+            graph.remove_edges_from(loop)
+
+            self.insert_loop(path, loop)
+
+            #if segments_visited >= 12:
+            #    break
+
+        return path
+
+    def collapse_sequential_outline_edges(self, graph, path):
+        """collapse sequential edges that fall on the same outline
+
+        When the path follows multiple edges along the outline of the region,
+        replace those edges with the starting and ending points.  We'll use
+        these to stitch along the outline later on.
+        """
+
+        start_of_run = None
+        new_path = []
+
+        for edge in path:
+            if graph.has_edge(*edge, key="segment"):
+                if start_of_run:
+                    # close off the last run
+                    new_path.append((start_of_run, edge[0]))
+                    start_of_run = None
+
+                new_path.append(edge)
+            else:
+                if not start_of_run:
+                    start_of_run = edge[0]
+
+        if start_of_run:
+            # if we were still in a run, close it off
+            new_path.append((start_of_run, edge[1]))
+
+        return new_path
+
+    def connect_points(self, patch, start, end):
+        outline_index = self.which_outline(start)
+        outline = self.shape.boundary[outline_index]
+
+        start = outline.project(shgeo.Point(*start))
+        end = outline.project(shgeo.Point(*end))
+
+        direction = math.copysign(1.0, end - start)
+
+        while (end - start) * direction > 0:
+            stitch = outline.interpolate(start)
+            patch.add_stitch(PyEmb.Point(stitch.x, stitch.y))
+
+            start += self.running_stitch_length * direction
+
+        stitch = outline.interpolate(end)
+        end = PyEmb.Point(stitch.x, stitch.y)
+        if (end - patch.stitches[-1]).length() > 0.1 * self.options.pixels_per_mm:
+            patch.add_stitch(end)
+
+    def path_to_patch(self, graph, path, angle, row_spacing, max_stitch_length):
+        path = self.collapse_sequential_outline_edges(graph, path)
+
         patch = Patch(color=self.color)
+        #patch.add_stitch(PyEmb.Point(*path[0][0]))
 
-        pos = self.outline.project(shgeo.Point(p1))
-        distance = self.perimeter_distance(p1, p2)
-        stitches = abs(int(distance / self.running_stitch_length))
+        #for edge in path:
+        #    patch.add_stitch(PyEmb.Point(*edge[1]))
 
-        direction = math.copysign(1.0, distance)
-        one_stitch = self.running_stitch_length * direction
-
-        for i in xrange(stitches):
-            pos = (pos + one_stitch) % self.outline_length
-
-            stitch = PyEmb.Point(*self.outline.interpolate(pos).coords[0])
-
-            # if we're moving along the fill direction, adjust the stitch to
-            # match the fill so it blends in
-            if patch.stitches:
-                if abs((stitch - patch.stitches[-1]) * self.north(self.angle)) < 0.01:
-                    new_stitch = self.adjust_stagger(stitch, self.angle, self.row_spacing, self.max_stitch_length)
-
-                    # don't push the point past the end of this section of the outline
-                    if self.outline.distance(shgeo.Point(new_stitch)) <= 0.01:
-                        stitch = new_stitch
-
-            patch.add_stitch(stitch)
+        for edge in path:
+            if graph.has_edge(*edge, key="segment"):
+                self.stitch_row(patch, edge[0], edge[1], angle, row_spacing, max_stitch_length)
+            else:
+                self.connect_points(patch, *edge)
 
         return patch
 
-    def get_corner_points(self, section):
-        return section[0][0], section[0][-1], section[-1][0], section[-1][-1]
-
-    def nearest_corner(self, section, point):
-        return min(self.get_corner_points(section),
-                   key=lambda corner: abs(self.perimeter_distance(point, corner)))
-
-    def find_nearest_section(self, sections, point):
-        sections_with_nearest_corner = [(i, self.nearest_corner(section, point))
-                                        for i, section in enumerate(sections)]
-        return min(sections_with_nearest_corner,
-                   key=lambda(section, corner): abs(self.perimeter_distance(point, corner)))
-
-    def section_from_corner(self, section, start_corner, angle, row_spacing, max_stitch_length):
-        if start_corner not in section[0]:
-            section = list(reversed(section))
-
-        if section[0][0] != start_corner:
-            section = [list(reversed(row)) for row in section]
-
-        return self.section_to_patch(section, angle, row_spacing, max_stitch_length)
-
-    def do_auto_fill(self, angle, row_spacing, max_stitch_length, starting_point=None):
-        rows_of_segments = self.intersect_region_with_grating(angle, row_spacing)
-        sections = self.pull_runs(rows_of_segments)
-
+    def visualize_graph(self, graph):
         patches = []
-        last_stitch = starting_point
-        while sections:
-            if last_stitch:
-                section_index, start_corner = self.find_nearest_section(sections, last_stitch)
-                patches.append(self.connect_points(last_stitch, start_corner))
-                patches.append(self.section_from_corner(sections.pop(section_index), start_corner, angle, row_spacing, max_stitch_length))
-            else:
-                patches.append(self.section_to_patch(sections.pop(0), angle, row_spacing, max_stitch_length))
 
-            last_stitch = patches[-1].stitches[-1]
+        graph = graph.copy()
+
+        for start, end, key in graph.edges_iter(keys=True):
+            if key == "extra":
+                patch = Patch(color="#FF0000")
+                patch.add_stitch(PyEmb.Point(*start))
+                patch.add_stitch(PyEmb.Point(*end))
+                patches.append(patch)
 
         return patches
 
+
+    def do_auto_fill(self, angle, row_spacing, max_stitch_length, starting_point=None):
+        patches = []
+
+        rows_of_segments = self.intersect_region_with_grating(angle, row_spacing)
+        segments = [segment for row in rows_of_segments for segment in row]
+
+        graph = self.build_graph(segments, angle, row_spacing)
+        path = self.find_stitch_path(graph, segments)
+
+        # snip off the last one because it just unnecessarily returns to the start
+        path.pop()
+
+        if starting_point:
+            patch = Patch(self.color)
+            self.connect_points(patch, starting_point, path[0][0])
+            patches.append(patch)
+
+        patches.append(self.path_to_patch(graph, path, angle, row_spacing, max_stitch_length))
+
+        return patches
+
+
     def to_patches(self, last_patch):
-        print >> dbg, "autofill"
-        self.validate()
+        print >> dbg, "autofill", self.max_stitch_length, self.fill_underlay_max_stitch_length
 
         patches = []
 
