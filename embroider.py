@@ -1225,6 +1225,39 @@ class SatinColumn(EmbroideryElement):
     @property
     @cache
     def flattened_beziers(self):
+        if len(self.csp) == 2:
+            return self.simple_flatten_beziers()
+        else:
+            return self.flatten_beziers_with_rungs()
+
+
+    def flatten_beziers_with_rungs(self):
+        input_paths = [self.flatten([path]) for path in self.csp]
+        input_paths = [shgeo.LineString(path[0]) for path in input_paths]
+        input_paths.sort(key=lambda path: path.length, reverse=True)
+
+        # Imagine a satin column as a curvy ladder.
+        # The two long paths are the "rails" of the ladder.  The remainder are
+        # the "rungs".
+        rails = input_paths[:2]
+        rungs = shgeo.MultiLineString(input_paths[2:])
+
+        result = []
+
+        for rail in rails:
+            # handle null intersections here?
+            linestrings = shapely.ops.split(rail, rungs)
+
+            if len(linestrings.geoms) < len(rungs) + 1:
+                raise Exception("Expected %d linestrings, got %d" % (len(rungs) + 1, len(linestrings.geoms)))
+
+            paths = [[PyEmb.Point(*coord) for coord in ls.coords] for ls in linestrings.geoms]
+            result.append(paths)
+
+        return zip(*result)
+
+
+    def simple_flatten_beziers(self):
         # Given a pair of paths made up of bezier segments, flatten
         # each individual bezier segment into line segments that approximate
         # the curves.  Retain the divisions between beziers -- we'll use those
@@ -1256,14 +1289,12 @@ class SatinColumn(EmbroideryElement):
 
         node_id = self.node.get("id")
 
-        if len(self.csp) != 2:
-            self.fatal("satin column: object %s invalid: expected exactly two sub-paths, but there are %s" % (node_id, len(self.csp)))
-
         if self.get_style("fill") is not None:
             self.fatal("satin column: object %s has a fill (but should not)" % node_id)
 
-        if len(self.csp[0]) != len(self.csp[1]):
-            self.fatal("satin column: object %s has two paths with an unequal number of points (%s and %s)" % (node_id, len(self.csp[0]), len(self.csp[1])))
+        if len(self.csp) == 2:
+            if len(self.csp[0]) != len(self.csp[1]):
+                self.fatal("satin column: object %s has two paths with an unequal number of points (%s and %s)" % (node_id, len(self.csp[0]), len(self.csp[1])))
 
     def offset_points(self, pos1, pos2, offset_px):
         # Expand or contract two points about their midpoint.  This is
