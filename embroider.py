@@ -1245,11 +1245,15 @@ class SatinColumn(EmbroideryElement):
         result = []
 
         for rail in rails:
+            if not rail.is_simple:
+                self.fatal("One or more rails crosses itself, and this is not allowed.  Please split into multiple satin columns.")
+
             # handle null intersections here?
             linestrings = shapely.ops.split(rail, rungs)
 
-            if len(linestrings.geoms) < len(rungs) + 1:
-                raise Exception("Expected %d linestrings, got %d" % (len(rungs) + 1, len(linestrings.geoms)))
+            if len(linestrings.geoms) < len(rungs.geoms) + 1:
+                print >> dbg, [str(rail) for rail in rails], [str(rung) for rung in rungs]
+                self.fatal("Expected %d linestrings, got %d" % (len(rungs.geoms) + 1, len(linestrings.geoms)))
 
             paths = [[PyEmb.Point(*coord) for coord in ls.coords] for ls in linestrings.geoms]
             result.append(paths)
