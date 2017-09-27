@@ -371,6 +371,7 @@ class SettingsFrame(wx.Frame):
         tabs = [current_tab]
         if current_tab.paired_tab:
             tabs.append(current_tab.paired_tab)
+            tabs.extend(current_tab.paired_tab.dependent_tabs)
         tabs.extend(current_tab.dependent_tabs)
 
         for tab in tabs:
