@@ -865,6 +865,7 @@ class AutoFill(Fill):
         the order of most-recently-visited first.
         """
 
+        original_graph = graph
         graph = graph.copy()
         num_segments = len(segments)
         segments_visited = 0
@@ -899,6 +900,11 @@ class AutoFill(Fill):
 
             #if segments_visited >= 12:
             #    break
+
+        # Now we have a loop that covers every grating segment.  It returns to
+        # where it started, which is unnecessary, so we'll snip the last bit off.
+        while original_graph.has_edge(*path[-1], key="outline"):
+            path.pop()
 
         return path
 
@@ -991,9 +997,6 @@ class AutoFill(Fill):
 
         graph = self.build_graph(segments, angle, row_spacing)
         path = self.find_stitch_path(graph, segments)
-
-        # snip off the last one because it just unnecessarily returns to the start
-        path.pop()
 
         if starting_point:
             patch = Patch(self.color)
