@@ -940,17 +940,28 @@ class AutoFill(Fill):
     def connect_points(self, patch, start, end):
         outline_index = self.which_outline(start)
         outline = self.shape.boundary[outline_index]
+        outline_length = outline.length
 
         start = outline.project(shgeo.Point(*start))
         end = outline.project(shgeo.Point(*end))
+        travel_distance = abs(end - start)
 
         direction = math.copysign(1.0, end - start)
 
-        while (end - start) * direction > 0:
+        print >> dbg, "connect_points:", start, end, outline_length, abs(end-start)>outline_length/2.0
+        if abs(end-start) > outline_length/2.0:
+            print >> dbg, "connect_points: flipping"
+            direction = -direction
+            travel_distance = outline_length - travel_distance
+
+        travelled = 0
+
+        while travelled < travel_distance:
             stitch = outline.interpolate(start)
             patch.add_stitch(PyEmb.Point(stitch.x, stitch.y))
 
             start += self.running_stitch_length * direction
+            travelled += self.running_stitch_length
 
         stitch = outline.interpolate(end)
         end = PyEmb.Point(stitch.x, stitch.y)
