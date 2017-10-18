@@ -903,8 +903,8 @@ class AutoFill(Fill):
 
         # Now we have a loop that covers every grating segment.  It returns to
         # where it started, which is unnecessary, so we'll snip the last bit off.
-        while original_graph.has_edge(*path[-1], key="outline"):
-            path.pop()
+        #while original_graph.has_edge(*path[-1], key="outline"):
+        #    path.pop()
 
         return path
 
@@ -937,34 +937,50 @@ class AutoFill(Fill):
 
         return new_path
 
+    def outline_distance(self, outline, p1, p2):
+        # how far around the outline (and in what direction) do I need to go
+        # to get from p1 to p2?
+
+        p1_projection = outline.project(shgeo.Point(p1))
+        p2_projection = outline.project(shgeo.Point(p2))
+
+        distance = p2_projection - p1_projection
+
+        if abs(distance) > self.outline_length / 2.0:
+            # if we'd have to go more than halfway around, it's faster to go
+            # the other way
+            if distance < 0:
+                return distance + self.outline_length
+            elif distance > 0:
+                return distance - self.outline_length
+            else:
+                # this ought not happen, but just for completeness, return 0 if
+                # p1 and p0 are the same point
+                return 0
+        else:
+            return distance
+
     def connect_points(self, patch, start, end):
         outline_index = self.which_outline(start)
         outline = self.shape.boundary[outline_index]
-        outline_length = outline.length
 
-        start = outline.project(shgeo.Point(*start))
-        end = outline.project(shgeo.Point(*end))
-        travel_distance = abs(end - start)
+        pos = outline.project(shgeo.Point(start))
+        distance = self.outline_distance(outline, start, end)
+        stitches = abs(int(distance / self.running_stitch_length))
 
-        direction = math.copysign(1.0, end - start)
+        direction = math.copysign(1.0, distance)
+        one_stitch = self.running_stitch_length * direction
 
-        print >> dbg, "connect_points:", start, end, outline_length, abs(end-start)>outline_length/2.0
-        if abs(end-start) > outline_length/2.0:
-            print >> dbg, "connect_points: flipping"
-            direction = -direction
-            travel_distance = outline_length - travel_distance
+        print >> dbg, "connect_points:", start, end, distance, stitches, direction
 
-        travelled = 0
+        patch.add_stitch(PyEmb.Point(*start))
 
-        while travelled < travel_distance:
-            stitch = outline.interpolate(start)
-            patch.add_stitch(PyEmb.Point(stitch.x, stitch.y))
+        for i in xrange(stitches):
+            pos = (pos + one_stitch) % self.outline_length
 
-            start += self.running_stitch_length * direction
-            travelled += self.running_stitch_length
+            patch.add_stitch(PyEmb.Point(*outline.interpolate(pos).coords[0]))
 
-        stitch = outline.interpolate(end)
-        end = PyEmb.Point(stitch.x, stitch.y)
+        end = PyEmb.Point(*end)
         if (end - patch.stitches[-1]).length() > 0.1 * self.options.pixels_per_mm:
             patch.add_stitch(end)
 
