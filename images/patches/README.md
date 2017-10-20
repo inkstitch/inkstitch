@@ -1,3 +1,5 @@
+![super_hero_patch.jpg](super_hero_patch.jpg)
+![orca_patch.jpg](orca_patch.jpg)
 ![amazon_checkmark_i.jpg](amazon_checkmark_i.jpg)
 ![clinton_poker_league.jpg](clinton_poker_league.jpg)
 ![firepants.jpg](firepants.jpg)
