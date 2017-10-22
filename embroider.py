@@ -48,8 +48,12 @@ dbg = open("/tmp/embroider-debug.txt", "w")
 PyEmb.dbg = dbg
 
 SVG_PATH_TAG = inkex.addNS('path', 'svg')
+SVG_POLYLINE_TAG = inkex.addNS('polyline', 'svg')
 SVG_DEFS_TAG = inkex.addNS('defs', 'svg')
 SVG_GROUP_TAG = inkex.addNS('g', 'svg')
+
+EMBROIDERABLE_TAGS = (SVG_PATH_TAG, SVG_POLYLINE_TAG)
+
 
 class Param(object):
     def __init__(self, name, description, unit=None, values=[], type=None, group=None, inverse=False, default=None):
@@ -158,6 +162,11 @@ class EmbroideryElement(object):
         style = simplestyle.parseStyle(self.node.get("style"))
         return style_name in style
 
+    @property
+    def path(self):
+        return cubicsuperpath.parsePath(self.node.get("d"))
+
+
     @cache
     def parse_path(self):
         # A CSP is a  "cubic superpath".
@@ -187,9 +196,7 @@ class EmbroideryElement(object):
         # In a path, each element in the 3-tuple is itself a tuple of (x, y).
         # Tuples all the way down.  Hasn't anyone heard of using classes?
 
-        path = cubicsuperpath.parsePath(self.node.get("d"))
-
-        # print >> sys.stderr, pformat(path)
+        path = self.path
 
         # start with the identity transform
         transform = [[1.0, 0.0, 0.0], [0.0, 1.0, 0.0]]
@@ -1554,27 +1561,98 @@ class SatinColumn(EmbroideryElement):
         return patches
 
 
+class Polyline(EmbroideryElement):
+    # Handle a <polyline> element, which is treated as a set of points to
+    # stitch exactly.
+    #
+    # <polyline> elements are pretty rare in SVG, from what I can tell.
+    # Anything you can do with a <polyline> can also be done with a <p>, and
+    # much more.
+    #
+    # Notably, EmbroiderModder2 uses <polyline> elements when converting from
+    # common machine embroidery file formats to SVG.  Handling those here lets
+    # users use File -> Import to pull in existing designs they may have
+    # obtained, for example purchased fonts.
+
+    @property
+    def points(self):
+       # example: "1,2 0,0 1.5,3 4,2"
+
+       points = self.node.get('points')
+       points = points.split(" ")
+       points = [[float(coord) for coord in point.split(",")] for point in points]
+
+       return points
+
+    @property
+    def path(self):
+        # A polyline is a series of connected line segments described by their
+        # points.  In order to make use of the existing logic for incorporating
+        # svg transforms that is in our superclass, we'll convert the polyline
+        # to a degenerate cubic superpath in which the bezier handles are on
+        # the segment endpoints.
+
+        path = [[[point[:], point[:], point[:]] for point in self.points]]
+
+        return path
+
+    @property
+    @cache
+    def csp(self):
+        csp = self.parse_path()
+
+        return csp
+
+    @property
+    def color(self):
+        # EmbroiderModder2 likes to use the `stroke` property directly instead
+        # of CSS.
+        return self.get_style("stroke") or self.node.get("stroke")
+
+    @property
+    def stitches(self):
+        # For a <polyline>, we'll stitch the points exactly as they exist in
+        # the SVG, with no stitch spacing interpolation, flattening, etc.
+
+        # See the comments in the parent class's parse_path method for a
+        # description of the CSP data structure.
+
+        stitches = [point for handle_before, point, handle_after in self.csp[0]]
+
+        return stitches
+
+    def to_patches(self, last_patch):
+        patch = Patch(color=self.color)
+
+        for stitch in self.stitches:
+            patch.add_stitch(PyEmb.Point(*stitch))
+
+        return [patch]
+
 def detect_classes(node):
-    element = EmbroideryElement(node)
-
-    if element.get_boolean_param("satin_column"):
-        return [SatinColumn]
+    if node.tag == SVG_POLYLINE_TAG:
+        return [Polyline]
     else:
-        classes = []
+        element = EmbroideryElement(node)
 
-        if element.get_style("fill"):
-            if element.get_boolean_param("auto_fill", True):
-                classes.append(AutoFill)
-            else:
-                classes.append(Fill)
+        if element.get_boolean_param("satin_column"):
+            return [SatinColumn]
+        else:
+            classes = []
 
-        if element.get_style("stroke"):
-            classes.append(Stroke)
+            if element.get_style("fill"):
+                if element.get_boolean_param("auto_fill", True):
+                    classes.append(AutoFill)
+                else:
+                    classes.append(Fill)
 
-        if element.get_boolean_param("stroke_first", False):
-            classes.reverse()
+            if element.get_style("stroke"):
+                classes.append(Stroke)
 
-        return classes
+            if element.get_boolean_param("stroke_first", False):
+                classes.reverse()
+
+            return classes
 
 
 def descendants(node):
@@ -1590,7 +1668,7 @@ def descendants(node):
     for child in node:
         nodes.extend(descendants(child))
 
-    if node.tag == SVG_PATH_TAG:
+    if node.tag in EMBROIDERABLE_TAGS:
         nodes.append(node)
 
     return nodes
@@ -1732,7 +1810,7 @@ class Embroider(inkex.Effect):
         self.patches = []
 
     def handle_node(self, node):
-        print >> dbg, "handling node", node.get('id'), node.get('tag')
+        print >> dbg, "handling node", node.get('id'), node.tag
         nodes = descendants(node)
         for node in nodes:
             classes = detect_classes(node)
