@@ -8,7 +8,7 @@ import inkex
 class EmbroiderySimulator(wx.Frame):
     def __init__(self, *args, **kwargs):
         stitch_file = kwargs.pop('stitch_file')
-        self.frame_period = kwargs.pop('frame_period', 10)
+        self.frame_period = kwargs.pop('frame_period', 80)
         self.stitches_per_frame = kwargs.pop('stitches_per_frame', 1)
 
         wx.Frame.__init__(self, *args, **kwargs)
