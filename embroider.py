@@ -1271,13 +1271,19 @@ class SatinColumn(EmbroideryElement):
     def flatten_beziers_with_rungs(self):
         input_paths = [self.flatten([path]) for path in self.csp]
         input_paths = [shgeo.LineString(path[0]) for path in input_paths]
-        input_paths.sort(key=lambda path: path.length, reverse=True)
+
+        paths = input_paths[:]
+        paths.sort(key=lambda path: path.length, reverse=True)
 
         # Imagine a satin column as a curvy ladder.
         # The two long paths are the "rails" of the ladder.  The remainder are
         # the "rungs".
         rails = input_paths[:2]
         rungs = shgeo.MultiLineString(input_paths[2:])
+
+        # The rails should stay in the order they were in the original CSP.
+        # (this lets the user control where the satin starts and ends)
+        rails.sort(key=lambda rail: input_paths.index(rail))
 
         result = []
 
