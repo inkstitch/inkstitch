@@ -608,13 +608,14 @@ class AutoFill(Fill):
         outlines of the holes.
         """
 
-        point = shgeo.Point(*coords)
+        # I'd use an intersection check, but floating point errors make it
+        # fail sometimes.
 
-        for i, outline in enumerate(self.shape.boundary):
-            # I'd use an intersection check, but floating point errors make it
-            # fail sometimes.
-            if outline.distance(point) < 0.00001:
-                return i
+        point = shgeo.Point(*coords)
+        outlines = list(enumerate(self.shape.boundary))
+        closest = min(outlines, key=lambda (index, outline): outline.distance(point))
+
+        return closest[0]
 
     def project(self, coords, outline_index):
         """project the point onto the specified outline
