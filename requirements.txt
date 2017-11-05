@@ -3,3 +3,4 @@ wxPython
 networkx
 shapely
 lxml
+appdirs
