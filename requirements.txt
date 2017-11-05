@@ -1,0 +1,5 @@
+backports.functools_lru_cache
+wxPython
+networkx
+shapely
+lxml
