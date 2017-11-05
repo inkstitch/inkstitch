@@ -19,16 +19,10 @@ First, install Inkscape if you don't have it.  I highly recommend the **developm
 I've had success running version `0.91.0+devel+14591+61`.  Installation instructions are [here](https://inkscape.org/da/release/trunk/).
 
 ### Python Dependencies
-Make sure you have the `shapely` python module installed.  The `appdirs` python module is also useful but is not required.  On Ubuntu:
+A few python modules are needed.  In some cases this extension uses features that aren't available in the versions of the modules pre-packaged in distributions, so I recommend installing them directly with pip:
 
 ```
-apt-get install python-shapely python-appdirs
-```
-
-On a MacOS/Sierra you'll also need `backports.functools_lru_cache`:
-
-```
-sudo pip install backports.functools_lru_cache
+pip install -r requirements.txt
 ```
 
 ### Extension installation
