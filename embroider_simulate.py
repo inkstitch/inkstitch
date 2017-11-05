@@ -2,7 +2,6 @@ import sys
 import os
 import numpy
 import wx
-from wx.lib.floatcanvas.FloatCanvas import FloatCanvas
 import inkex
 
 class EmbroiderySimulator(wx.Frame):
