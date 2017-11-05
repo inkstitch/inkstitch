@@ -1806,6 +1806,10 @@ class Embroider(inkex.Effect):
                                      action="store", type="string",
                                      dest="path", default=".",
                                      help="Directory in which to store output file")
+        self.OptionParser.add_option("-F", "--output-file",
+                                     action="store", type="string",
+                                     dest="output_file", default=".",
+                                     help="Output filename.")
         self.OptionParser.add_option("-b", "--max-backups",
                                      action="store", type="int",
                                      dest="max_backups", default=5,
@@ -1825,9 +1829,12 @@ class Embroider(inkex.Effect):
             self.elements.extend(cls(node, self.options) for cls in classes)
 
     def get_output_path(self):
-        svg_filename = self.document.getroot().get(inkex.addNS('docname', 'sodipodi'))
-        csv_filename = svg_filename.replace('.svg', '.csv')
-        output_path = os.path.join(self.options.path, csv_filename)
+        if self.options.output_file:
+            output_path = os.path.join(self.options.path, self.options.output_file)
+        else:
+            svg_filename = self.document.getroot().get(inkex.addNS('docname', 'sodipodi'), "embroidery.svg")
+            csv_filename = svg_filename.replace('.svg', '.csv')
+            output_path = os.path.join(self.options.path, csv_filename)
 
         def add_suffix(path, suffix):
             if suffix > 0:
