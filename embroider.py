@@ -1808,7 +1808,7 @@ class Embroider(inkex.Effect):
                                      help="Directory in which to store output file")
         self.OptionParser.add_option("-F", "--output-file",
                                      action="store", type="string",
-                                     dest="output_file", default=".",
+                                     dest="output_file",
                                      help="Output filename.")
         self.OptionParser.add_option("-b", "--max-backups",
                                      action="store", type="int",
