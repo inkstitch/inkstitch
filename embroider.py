@@ -674,7 +674,7 @@ class AutoFill(Fill):
             # Tag each node with its index and projection.
             graph.add_node(node, index=outline_index, projection=outline_projection)
 
-        nodes = graph.nodes(data=True)
+        nodes = list(graph.nodes(data=True)) # returns a list of tuples: [(node, {data}), (node, {data}) ...]
         nodes.sort(key=lambda node: (node[1]['index'], node[1]['projection']))
 
         for outline_index, nodes in groupby(nodes, key=lambda node: node[1]['index']):
@@ -1008,21 +1008,6 @@ class AutoFill(Fill):
                 self.connect_points(patch, *edge)
 
         return patch
-
-    def visualize_graph(self, graph):
-        patches = []
-
-        graph = graph.copy()
-
-        for start, end, key in graph.edges_iter(keys=True):
-            if key == "extra":
-                patch = Patch(color="#FF0000")
-                patch.add_stitch(PyEmb.Point(*start))
-                patch.add_stitch(PyEmb.Point(*end))
-                patches.append(patch)
-
-        return patches
-
 
     def do_auto_fill(self, angle, row_spacing, max_stitch_length, starting_point=None):
         patches = []
