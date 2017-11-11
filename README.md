@@ -14,9 +14,9 @@ Okay, not really.  I'm pretty terrible at GUIs, but I found this nifty inkscape 
 To use this tool, you're going to need to set it up.  It's an inkscape extension written as a Python file.  Once you get it working, you'll need to learn how to design vectors in the way that inkscape-embroidery expects, and then you can generate your design files.
 
 ### Inkscape
-First, install Inkscape if you don't have it.  I highly recommend the **development version**, which has a really key feature: the Objects panel.  This gives you a heirarchical list of objects in your SVG file, listed in their stacking order.  This is really important because the stacking order dictates the order that the shapes will be sewn in.
+First, install Inkscape if you don't have it.  I highly recommend version 0.92 or greater, which has a really key feature: the Objects panel.  This gives you a heirarchical list of objects in your SVG file, listed in their stacking order.  This is really important because the stacking order dictates the order that the shapes will be sewn in.
 
-I've had success running version `0.91.0+devel+14591+61`.  Installation instructions are [here](https://inkscape.org/da/release/trunk/).
+Versions 0.92.2 and higher let you bind a key to new commands, "stack up" and "stack down", which I assign to pageup and pagedown.  These let you arbitrarily reorder objects in the SVG file, which lets you directly manipulate which order they stitch in.  It works way better than the default "raise" and "lower" commands.
 
 ### Python Dependencies
 A few python modules are needed.  In some cases this extension uses features that aren't available in the versions of the modules pre-packaged in distributions, so I recommend installing them directly with pip:
@@ -76,7 +76,7 @@ However, note that inkscape-embroidery pays attention to the colors you use for 
 
 Use the Objects panel to view the stacking order of the objects in your SVG file.  Inkscape-embroidery will stitch them in their stacking order, from lowest to highest.  You can reorder them in the normal way in inkscape to affect the stitching order.
 
-You can also use the Reorder extension.  Hold shift and select the objects you'd like to reorder, one at a time, in the order you'd like them to end up in (lowest to highest).  Run **Embroidery -> Reorder**.  This extension will pull all of the selected objects out of wherever they were in the stacking order and insert them in order at the same place as the *first* object you selected.  This can save you a ton of time.
+You can also use the Reorder extension.  Hold shift and select the objects you'd like to reorder, one at a time, in the order you'd like them to end up in (lowest to highest).  Run **Embroidery -> Reorder**.  This extension will pull all of the selected objects out of wherever they were in the stacking order and insert them in order at the same place as the *first* object you selected.  This can save you a ton of time.  NOTE: this stopped working in more recent versions of inkscape, which no longer tell the extension what order you selected objects in.
 
 ### Seeing the stitch plan for selected objects
 
