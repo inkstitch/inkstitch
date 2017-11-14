@@ -1264,8 +1264,8 @@ class SatinColumn(EmbroideryElement):
         # Imagine a satin column as a curvy ladder.
         # The two long paths are the "rails" of the ladder.  The remainder are
         # the "rungs".
-        rails = input_paths[:2]
-        rungs = shgeo.MultiLineString(input_paths[2:])
+        rails = paths[:2]
+        rungs = shgeo.MultiLineString(paths[2:])
 
         # The rails should stay in the order they were in the original CSP.
         # (this lets the user control where the satin starts and ends)
