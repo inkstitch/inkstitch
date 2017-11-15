@@ -264,6 +264,10 @@ class Fill(EmbroideryElement):
         return self.get_float_param("row_spacing_mm")
 
     @property
+    def end_row_spacing(self):
+        return self.get_float_param("end_row_spacing_mm")
+
+    @property
     @param('max_stitch_length_mm', 'Maximum fill stitch length', unit='mm', type='float')
     def max_stitch_length(self):
         return self.get_float_param("max_stitch_length_mm")
@@ -329,12 +333,15 @@ class Fill(EmbroideryElement):
 
         return stitch - offset * self.east(angle)
 
-    def intersect_region_with_grating(self, angle=None, row_spacing=None):
+    def intersect_region_with_grating(self, angle=None, row_spacing=None, end_row_spacing=None):
         if angle is None:
             angle = self.angle
 
         if row_spacing is None:
             row_spacing = self.row_spacing
+
+        if end_row_spacing is None:
+            end_row_spacing = self.end_row_spacing
 
         # the max line length I'll need to intersect the whole shape is the diagonal
         (minx, miny, maxx, maxy) = self.shape.bounds
@@ -367,6 +374,10 @@ class Fill(EmbroideryElement):
         start -= center.y
         end -= center.y
 
+        height = abs(end - start)
+
+        print >> dbg, "grating:", start, end, height, row_spacing, end_row_spacing
+
         # offset start slightly so that rows are always an even multiple of
         # row_spacing_px from the origin.  This makes it so that abutting
         # fill regions at the same angle and spacing always line up nicely.
@@ -374,9 +385,11 @@ class Fill(EmbroideryElement):
 
         rows = []
 
-        while start < end:
-            p0 = center + normal * start + direction * half_length
-            p1 = center + normal * start - direction * half_length
+        current_row_y = start
+
+        while current_row_y < end:
+            p0 = center + normal * current_row_y + direction * half_length
+            p1 = center + normal * current_row_y - direction * half_length
             endpoints = [p0.as_tuple(), p1.as_tuple()]
             grating_line = shgeo.LineString(endpoints)
 
@@ -387,19 +400,23 @@ class Fill(EmbroideryElement):
             else:
                 if res.is_empty or len(res.coords) == 1:
                     # ignore if we intersected at a single point or no points
-                    start += row_spacing
-                    continue
-                runs = [res.coords]
+                    runs = []
+                else:
+                    runs = [res.coords]
 
-            runs.sort(key=lambda seg: (PyEmb.Point(*seg[0]) - upper_left).length())
+            if runs:
+                runs.sort(key=lambda seg: (PyEmb.Point(*seg[0]) - upper_left).length())
 
-            if self.flip:
-                runs.reverse()
-                runs = map(lambda run: tuple(reversed(run)), runs)
+                if self.flip:
+                    runs.reverse()
+                    runs = map(lambda run: tuple(reversed(run)), runs)
 
-            rows.append(runs)
+                rows.append(runs)
 
-            start += row_spacing
+            if end_row_spacing:
+                current_row_y += row_spacing + (end_row_spacing - row_spacing) * ((current_row_y - start) / height)
+            else:
+                current_row_y += row_spacing
 
         return rows
 
