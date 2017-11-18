@@ -1,13 +1,5 @@
 #!/usr/bin/python
 #
-# documentation: see included index.html
-# LICENSE:
-# Copyright 2010 by Jon Howell,
-# Originally licensed under <a href="http://www.gnu.org/licenses/quick-guide-gplv3.html">GPLv3</a>.
-# Copyright 2015 by Bas Wijnen <wijnen@debian.org>.
-# New parts are licensed under AGPL3 or later.
-# (Note that this means this work is licensed under the common part of those two: AGPL version 3.)
-#
 # Important resources:
 # lxml interface for walking SVG tree:
 # http://codespeak.net/lxml/tutorial.html#elementpath
