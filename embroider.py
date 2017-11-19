@@ -1724,37 +1724,38 @@ def patches_to_stitches(patch_list, collapse_len_px=0):
 
     return stitches
 
-
-def stitches_to_paths(stitches):
-    paths = []
+def stitches_to_polylines(stitches):
+    polylines = []
     last_color = None
     last_stitch = None
+
     for stitch in stitches:
-        if stitch.jump_stitch:
-            if last_color == stitch.color:
-                paths.append([None, []])
-                if last_stitch is not None:
-                    paths[-1][1].append(['M', last_stitch.as_tuple()])
-                    paths[-1][1].append(['L', stitch.as_tuple()])
-            last_color = None
-        if stitch.color != last_color:
-            paths.append([stitch.color, []])
-        paths[-1][1].append(['L' if len(paths[-1][1]) > 0 else 'M', stitch.as_tuple()])
+        #if stitch.jump_stitch:
+            #if last_color == stitch.color:
+            #   polylines.append([None, [last_stitch.as_tuple(), stitch.as_tuple()]])
+
+        #    last_color = None
+
+        if stitch.color != last_color or stitch.jump_stitch:
+            polylines.append([stitch.color, []])
+
+        polylines[-1][1].append(stitch.as_tuple())
+
         last_color = stitch.color
         last_stitch = stitch
-    return paths
 
+    return polylines
 
 def emit_inkscape(parent, stitches):
-    for color, path in stitches_to_paths(stitches):
-        # dbg.write('path: %s %s\n' % (color, repr(path)))
+    for color, polyline in stitches_to_polylines(stitches):
+        # dbg.write('polyline: %s %s\n' % (color, repr(polyline)))
         inkex.etree.SubElement(parent,
-                               inkex.addNS('path', 'svg'),
+                               inkex.addNS('polyline', 'svg'),
                                {'style': simplestyle.formatStyle(
                                    {'stroke': color if color is not None else '#000000',
                                     'stroke-width': "0.4",
                                     'fill': 'none'}),
-                                   'd': simplepath.formatPath(path),
+                                   'points': " ".join(",".join(str(coord) for coord in point) for point in polyline),
                                 })
 
 
