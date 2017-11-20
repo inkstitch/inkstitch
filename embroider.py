@@ -1238,7 +1238,7 @@ class SatinColumn(EmbroideryElement):
         return self.get_float_param("zigzag_underlay_spacing_mm", 1)
 
     @property
-    @param('zigzag_underlay_inset', 'Inset amount (default: half of contour underlay inset)', unit='mm', group='Zig-zag Underlay', type='float')
+    @param('zigzag_underlay_inset_mm', 'Inset amount (default: half of contour underlay inset)', unit='mm', group='Zig-zag Underlay', type='float')
     def zigzag_underlay_inset(self):
         # how far in from the edge of the satin the points in the zigzags
         # should be
