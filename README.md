@@ -10,7 +10,7 @@ Okay, not really.  I'm pretty terrible at GUIs, but I found this nifty inkscape 
 
 ## Quick Setup On Ubuntu (and derivative Linux distributions)
 
-Download the [extension's archive file](https://github.com/lexelby/inkscape-embroidery/archive/master.zip) and unpack the zip archive. Then, on a terminal, run the installation (and update) script by entering the command `sh install.sh`. The script will ask for your password to be able to install new software, remove any Inkscape snap packages that may be installed, and to update Inkscape to the current version. Restart Inkscape after the script has executed to see the changes take effect. You can also run the script again when you later want to update the extension (and Inkscape).
+Download the [extension's archive file](https://github.com/lexelby/inkscape-embroidery/archive/master.zip) and unpack the zip archive. Then, on a terminal, run the installation (and update) script from the archive's `bin` directory by first changing into that directory with `cd <path_to_the_archive>/inkscape-embroidery-master/bin` and then entering the command `sh install.sh`. The script will ask for your password to be able to install new software, remove any Inkscape snap packages that may be installed, and to update Inkscape to the current version. Restart Inkscape after the script has executed to see the changes take effect. You can also run the script again when you later want to update the extension (and Inkscape).
 
 Currently, the optional conversion program still needs to be installed manually, if desired.
 

@@ -51,6 +51,6 @@ mkdir -p $HOME/.config/inkscape/extensions
 # copy all *.py and *.inx files there
 cp *.py *.inx $HOME/.config/inkscape/extensions
 
-echo "Lexelby's embroidery extension and its dependencies have been installed,
-and your Inkscape version is now up to date.
+echo "The Inkscape embroidery extension (https://github.com/lexelby/inkscape-embroidery)
+and its dependencies have been installed, and your Inkscape version is now up to date.
 Any previously installed Inkscape snap packages have been removed."
