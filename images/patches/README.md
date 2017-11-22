@@ -1,4 +1,4 @@
-![soulstorm_brew_patch.jpg](soulstorm_brew_patch.jpg) ![soulstorm_brew_orig.jpg](soulstorm_brew_orig.jpg)
+[<img src="soulstorm_brew_patch.jpg" width="300">](soulstorm_brew_patch.jpg) ![soulstorm_brew_orig.jpg](soulstorm_brew_orig.jpg)
 ![super_hero_patch.jpg](super_hero_patch.jpg)
 ![orca_patch.jpg](orca_patch.jpg)
 ![amazon_checkmark_i.jpg](amazon_checkmark_i.jpg)
