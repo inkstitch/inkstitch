@@ -1736,7 +1736,7 @@ def stitches_to_polylines(stitches):
 
         #    last_color = None
 
-        if stitch.color != last_color or stitch.jump_stitch:
+        if stitch.color != last_color:
             polylines.append([stitch.color, []])
 
         polylines[-1][1].append(stitch.as_tuple())
