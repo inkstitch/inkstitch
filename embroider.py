@@ -11,6 +11,7 @@
 # http://www.achatina.de/sewing/main/TECHNICL.HTM
 
 import sys
+import traceback
 sys.path.append("/usr/share/inkscape/extensions")
 import os
 import subprocess
@@ -692,7 +693,7 @@ class AutoFill(Fill):
             # heuristic: change the order I visit the nodes in the outline if necessary.
             # If the start and endpoints are in the same row, I can't tell which row
             # I should treat it as being in.
-            while True:
+            for i in xrange(len(nodes)):
                 row0 = self.row_num(PyEmb.Point(*nodes[0]), angle, row_spacing)
                 row1 = self.row_num(PyEmb.Point(*nodes[1]), angle, row_spacing)
 
@@ -988,7 +989,8 @@ class AutoFill(Fill):
         direction = math.copysign(1.0, distance)
         one_stitch = self.running_stitch_length * direction
 
-        print >> dbg, "connect_points:", start, end, distance, stitches, direction
+        print >> dbg, "connect_points:", outline_index, start, end, distance, stitches, direction
+        dbg.flush()
 
         patch.add_stitch(PyEmb.Point(*start))
 
@@ -1000,6 +1002,9 @@ class AutoFill(Fill):
         end = PyEmb.Point(*end)
         if (end - patch.stitches[-1]).length() > 0.1 * self.options.pixels_per_mm:
             patch.add_stitch(end)
+
+        print >> dbg, "end connect_points"
+        dbg.flush()
 
     def path_to_patch(self, graph, path, angle, row_spacing, max_stitch_length):
         path = self.collapse_sequential_outline_edges(graph, path)
@@ -1021,6 +1026,9 @@ class AutoFill(Fill):
     def do_auto_fill(self, angle, row_spacing, max_stitch_length, starting_point=None):
         patches = []
 
+        print >> dbg, "start do_auto_fill"
+        dbg.flush()
+
         rows_of_segments = self.intersect_region_with_grating(angle, row_spacing)
         segments = [segment for row in rows_of_segments for segment in row]
 
@@ -1033,6 +1041,9 @@ class AutoFill(Fill):
             patches.append(patch)
 
         patches.append(self.path_to_patch(graph, path, angle, row_spacing, max_stitch_length))
+
+        print >> dbg, "end do_auto_fill"
+        dbg.flush()
 
         return patches
 
@@ -1051,6 +1062,9 @@ class AutoFill(Fill):
             starting_point = patches[-1].stitches[-1]
 
         patches.extend(self.do_auto_fill(self.angle, self.row_spacing, self.max_stitch_length, starting_point))
+
+        print >> dbg, "end AutoFill.to_patches"
+        dbg.flush()
 
         return patches
 
@@ -1918,7 +1932,14 @@ class Embroider(inkex.Effect):
 if __name__ == '__main__':
     sys.setrecursionlimit(100000)
     e = Embroider()
-    e.affect()
+
+    try:
+        e.affect()
+    except KeyboardInterrupt:
+        print >> dbg, "interrupted!"
+
+        print >> dbg, traceback.format_exc()
+
     dbg.flush()
 
 dbg.close()
