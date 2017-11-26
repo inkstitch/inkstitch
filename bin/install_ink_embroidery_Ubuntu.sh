@@ -24,6 +24,8 @@ cd /tmp
 # delete old snap Inkscape (we really don't want a snap!)
 sudo snap remove inkscape
 
+echo "Adding Inkscape stable apt-repository"
+
 # add stable-daily repository
 sudo add-apt-repository ppa:inkscape.dev/stable
 
@@ -31,7 +33,7 @@ sudo add-apt-repository ppa:inkscape.dev/stable
 sudo apt-get update
 
 # install everything we need
-sudo apt-get install inkscape pip unzip
+sudo apt-get install inkscape python-pip unzip dpkg-dev build-essential python2.7-dev libjpeg-dev libtiff-dev libsdl1.2-dev libgstreamer-plugins-base0.10-dev libgstreamer-plugins-base1.0-dev libnotify-dev freeglut3 freeglut3-dev libsm-dev libgtk2.0-dev libwebkitgtk-dev libgtk-3-dev libwebkitgtk-3.0-dev
 
 # download lexelby's embroidery extension
 wget https://github.com/lexelby/inkscape-embroidery/archive/master.zip
@@ -42,8 +44,11 @@ unzip master.zip -d /tmp
 # change into new directory
 cd inkscape-embroidery-master
 
+# upgrade pip
+pip install -U pip
+
 # install requirements (only with user privileges, not system-wide)
-pip install --user -r requirements.txt
+pip install --user --upgrade --force-reinstall --no-cache-dir -r requirements.txt
 
 # create extensions directory if doesn't exist yet
 mkdir -p $HOME/.config/inkscape/extensions
@@ -51,6 +56,8 @@ mkdir -p $HOME/.config/inkscape/extensions
 # copy all *.py and *.inx files there
 cp *.py *.inx $HOME/.config/inkscape/extensions
 
-echo "The Inkscape embroidery extension (https://github.com/lexelby/inkscape-embroidery)
-and its dependencies have been installed, and your Inkscape version is now up to date.
+echo "============================
+
+The Inkscape embroidery extension (https://github.com/lexelby/inkscape-embroidery) and its dependencies have been installed, and your Inkscape version is now up to date.
+
 Any previously installed Inkscape snap packages have been removed."
