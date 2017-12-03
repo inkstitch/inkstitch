@@ -33,7 +33,7 @@ sudo add-apt-repository ppa:inkscape.dev/stable
 sudo apt-get update
 
 # install everything we need
-sudo apt-get install inkscape python-pip unzip dpkg-dev build-essential python2.7-dev libjpeg-dev libtiff-dev libsdl1.2-dev libgstreamer-plugins-base0.10-dev libgstreamer-plugins-base1.0-dev libnotify-dev freeglut3 freeglut3-dev libsm-dev libgtk2.0-dev libwebkitgtk-dev libgtk-3-dev libwebkitgtk-3.0-dev
+sudo apt-get install inkscape python-pip unzip dpkg-dev build-essential python2.7-dev libjpeg-dev libtiff-dev libsdl1.2-dev libgstreamer-plugins-base0.10-dev libgstreamer-plugins-base1.0-dev libnotify-dev freeglut3 freeglut3-dev libsm-dev libgtk2.0-dev libwebkitgtk-dev libgtk-3-dev libwebkitgtk-3.0-dev python-wxgtk3.0
 
 # download lexelby's embroidery extension
 wget https://github.com/lexelby/inkscape-embroidery/archive/master.zip
