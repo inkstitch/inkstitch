@@ -8,8 +8,17 @@ So I wrote one.
 
 Okay, not really.  I'm pretty terrible at GUIs, but I found this nifty inkscape extension that was created and hacked on by a couple of other folks.  It was pretty rudimentary, but it got the job done, and more importantly, it was super hackable.  I hacked the hell out of it, and at this point **inkscape-embroidery is a viable entry-level machine embroidery design tool**.
 
+## "Quick" Setup On Ubuntu 16.04 (and derivative Linux distributions)
 
-## Setup
+Download the [extension's archive file](https://github.com/lexelby/inkscape-embroidery/archive/master.zip) and unpack the zip archive. Then, on a terminal, run the installation (and update) script from the archive's `bin` directory by first changing into that directory with `cd <path_to_the_archive>/inkscape-embroidery-master/bin` and then entering the command `sh install_ink_embroidery_Ubuntu.sh`. The script will ask for your password to be able to install new software, remove any Inkscape snap packages that may be installed, and to update Inkscape to the current version. Intermittently, it will require you to confirm a step by hitting Enter, or typing in 'y' or 'yes'. Restart Inkscape after the script has executed to see the changes take effect. You can also run the script again when you later want to update the extension (and Inkscape).
+
+To also install the optional conversion program, run `sh install_libembroidery-convert.sh` in the same directory. This script will also ask your password in order to be able to install the necessary dependencies.
+
+Not tested with Ubuntu versions other than 16.04. If you try it out, please let us know how it went.
+
+Continue reading in the "Usage" section.
+
+## Manual Setup
 
 To use this tool, you're going to need to set it up.  It's an inkscape extension written as a Python file.  Once you get it working, you'll need to learn how to design vectors in the way that inkscape-embroidery expects, and then you can generate your design files.
 
@@ -27,7 +36,7 @@ pip install -r requirements.txt
 
 ### Extension installation
 1. Clone the extension source: `git clone https://github.com/lexelby/inkscape-embroidery`
-2. Install it as directed [here](https://inkscape.org/da/gallery/%3Dextension/)
+2. Install it as directed [here](https://inkscape.org/en/gallery/%3Dextension/)
 
 I prefer to symbolically link into my git clone, which allows me to hack on the code.  Changes to the Python code take effect the next time the extension is run.  Changes to the extension description files (`*.inx`) take effect the next time Inkscape is restarted
 
