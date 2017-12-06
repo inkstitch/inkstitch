@@ -1,4 +1,7 @@
 # inkscape-embroidery: An Inkscape plugin for designing machine embroidery patterns
+
+**NEW December 6, 2017:** [video demo of how to use the extension](https://www.youtube.com/watch?v=qXntE1X1RIw)
+
 ## Introduction
 **Want to design embroidery pattern files (PES, DST, etc) using free, open source software?  Hate all the other options?  Try this one.**
 
