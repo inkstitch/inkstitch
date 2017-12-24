@@ -1,9 +1,20 @@
- * pattern-based fill?
- * curved fill?
+ * open a separate window in Params to preview the stitches for the object
+   * user can see immediately what effect a given param change will have
+   * this will really revolutionize the interface and make it far more approachable!
+ * pattern fill
+    * turns out this is a lot easier than I thought it was
+    * just like normal fill except the stitch locations in each row are chosen to make a pattern
+    * can do this by intersecting the pattern with the shape instead of just a generic grating
+ * curved fill
+   * use radial fill in inkscape to define center and starting angle
+   * the rows of stitches radiate out from a center point
+     * otherwise it's just like normal fill
+ * start/end points for fills
+   * rotation center might work for one of them, but what else can I use in inkscape's UI?
  * keep stitch plan objects and just update the ones that change
    * use md5sum of <path> objects to see what's changed
    * keep stitch plans in a layer above everything else
    * set stitch plans to "noninteractive" so you can click through them to the paths
    * this will make it work more like a "real" embroidery program
    * separate 'export embroidery file' command
- * add option for connection to next patch (jump or running stitch)
+ * add option for connection to next patch (jump, trim, or running stitch)
