@@ -118,7 +118,7 @@ class EmbroiderySimulator(wx.Frame):
 
     def go(self):
         self.current_stitch = 0
-        self.timer = wx.PyTimer(self.draw_one_stitch)
+        self.timer = wx.PyTimer(self.draw_one_frame)
         self.timer.Start(self.frame_period)
 
     def clear(self):
@@ -149,7 +149,7 @@ class EmbroiderySimulator(wx.Frame):
         dc = wx.ClientDC(self)
         dc.DrawBitmap(self.buffer, 0, 0)
 
-    def draw_one_stitch(self):
+    def draw_one_frame(self):
         for i in xrange(self.stitches_per_frame):
             try:
                 ((x1, y1), (x2, y2)), color = self.stitches[self.current_stitch]
