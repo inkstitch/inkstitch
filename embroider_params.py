@@ -281,7 +281,7 @@ class ParamsTab(ScrolledPanel):
 
                 input.Bind(wx.EVT_CHECKBOX, self.changed)
             elif len(param.values) > 1:
-                input = wx.ComboBox(self, wx.ID_ANY, choices=param.values, style=wx.CB_DROPDOWN | wx.CB_SORT)
+                input = wx.ComboBox(self, wx.ID_ANY, choices=sorted(param.values), style=wx.CB_DROPDOWN)
                 input.Bind(wx.EVT_COMBOBOX, self.changed)
                 input.Bind(wx.EVT_TEXT, self.changed)
             else:
@@ -313,7 +313,7 @@ class SettingsFrame(wx.Frame):
 
         self.presets_box = wx.StaticBox(self, wx.ID_ANY, label="Presets")
 
-        self.preset_chooser = wx.ComboBox(self, wx.ID_ANY, style=wx.CB_SORT)
+        self.preset_chooser = wx.ComboBox(self, wx.ID_ANY)
         self.update_preset_list()
 
         self.load_preset_button = wx.Button(self, wx.ID_ANY, "Load")
@@ -344,7 +344,7 @@ class SettingsFrame(wx.Frame):
     def update_preset_list(self):
         preset_names = load_presets().keys()
         preset_names = [preset for preset in preset_names if preset != "__LAST__"]
-        self.preset_chooser.SetItems(preset_names)
+        self.preset_chooser.SetItems(sorted(preset_names))
 
     def get_preset_name(self):
         preset_name = self.preset_chooser.GetValue().strip()
