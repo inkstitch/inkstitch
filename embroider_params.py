@@ -305,7 +305,7 @@ class SettingsFrame(wx.Frame):
     def __init__(self, *args, **kwargs):
         # begin wxGlade: MyFrame.__init__
         self.tabs_factory = kwargs.pop('tabs_factory', [])
-        wx.Frame.__init__(self, None, wx.ID_ANY, 
+        wx.Frame.__init__(self, None, wx.ID_ANY,
                           "Embroidery Params"
                           )
         self.notebook = wx.Notebook(self, wx.ID_ANY)
@@ -397,10 +397,10 @@ class SettingsFrame(wx.Frame):
 
 
     def _load_preset(self, preset_name):
-        preset = self.check_and_load_preset(preset_name)         
+        preset = self.check_and_load_preset(preset_name)
         if not preset:
             return
-        
+
         for tab in self.tabs:
             tab.load_preset(preset)
 
@@ -420,11 +420,11 @@ class SettingsFrame(wx.Frame):
         if not preset_name:
             return
 
-        preset = self.check_and_load_preset(preset_name)         
+        preset = self.check_and_load_preset(preset_name)
         if not preset:
             return
 
-        delete_preset(preset_name)        
+        delete_preset(preset_name)
         self.update_preset_list()
         self.preset_chooser.SetValue("")
 
@@ -521,7 +521,7 @@ class EmbroiderParams(inkex.Effect):
         else:
             getter = 'get_param'
 
-        values = filter(lambda item: item is not None, 
+        values = filter(lambda item: item is not None,
                         (getattr(node, getter)(param.name, param.default) for node in nodes))
 
         return values
