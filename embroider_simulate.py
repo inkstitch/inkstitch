@@ -3,6 +3,7 @@ import os
 import numpy
 import wx
 import inkex
+import simplestyle
 
 from embroider import patches_to_stitches, stitches_to_polylines
 
@@ -10,10 +11,12 @@ class EmbroiderySimulator(wx.Frame):
     def __init__(self, *args, **kwargs):
         stitch_file = kwargs.pop('stitch_file', None)
         patches = kwargs.pop('patches', None)
+        self.on_close_hook = kwargs.pop('on_close', None)
         self.frame_period = kwargs.pop('frame_period', 80)
         self.stitches_per_frame = kwargs.pop('stitches_per_frame', 1)
 
         wx.Frame.__init__(self, *args, **kwargs)
+
         self.panel = wx.Panel(self, wx.ID_ANY)
         self.panel.SetFocus()
 
@@ -30,15 +33,19 @@ class EmbroiderySimulator(wx.Frame):
         self.panel.Bind(wx.EVT_PAINT, self.on_paint)
         self.panel.Bind(wx.EVT_KEY_DOWN, self.on_key_down)
 
+        self.timer = None
+
         self.last_pos = None
+
+        self.Bind(wx.EVT_CLOSE, self.on_close)
 
     def load(self, stitch_file=None, patches=None):
         if stitch_file:
             self.segments = self._parse_stitch_file(stitch_file)
         elif patches:
-            self.segments = self._patches_to_stitches(patches)
+            self.segments = self._patches_to_segments(patches)
         else:
-            raise TypeError("EmbroiderySimulator requires a stitch_file or list of patches")
+            return
 
         self.width, self.height = self.get_dimensions()
 
@@ -76,18 +83,22 @@ class EmbroiderySimulator(wx.Frame):
 
         return string
 
-    def _patches_to_segments(patches):
+    def _patches_to_segments(self, patches):
         stitches = patches_to_stitches(patches)
 
         segments = []
 
         last_pos = None
         last_color = None
+        pen = None
 
         for stitch in stitches:
+            pos = (stitch.x, stitch.y)
+
             if stitch.color == last_color:
-                pos = (stitch.x, stitch.y)
-                segments.append(((last_pos, pos), stitch.color))
+                segments.append(((last_pos, pos), pen))
+            else:
+                pen = wx.Pen(simplestyle.parseColor(stitch.color))
 
             last_pos = pos
             last_color = stitch.color
@@ -138,8 +149,8 @@ class EmbroiderySimulator(wx.Frame):
         width = 0
         height = 0
 
-        for stitch in self.segments:
-            (start_x, start_y), (end_x, end_y) = stitch[0]
+        for segment in self.segments:
+            (start_x, start_y), (end_x, end_y) = segment[0]
 
             width = max(width, start_x, end_x)
             height = max(height, start_y, end_y)
@@ -153,8 +164,17 @@ class EmbroiderySimulator(wx.Frame):
         self.timer = wx.PyTimer(self.draw_one_frame)
         self.timer.Start(self.frame_period)
 
+    def on_close(self, event):
+        self.stop()
+
+        if self.on_close_hook:
+            self.on_close_hook()
+
+        self.Destroy()
+
     def stop(self):
-        self.timer.Stop()
+        if self.timer:
+            self.timer.Stop()
 
     def clear(self):
         self.dc.SetBackground(wx.Brush('white'))

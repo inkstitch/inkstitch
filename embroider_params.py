@@ -5,6 +5,7 @@ import os
 import sys
 import json
 import traceback
+from copy import copy
 from cStringIO import StringIO
 import wx
 from wx.lib.scrolledpanel import ScrolledPanel
@@ -13,7 +14,7 @@ import inkex
 from embroider import Param, EmbroideryElement, Fill, AutoFill, Stroke, SatinColumn, descendants
 from functools import partial
 from itertools import groupby
-
+from embroider_simulate import EmbroiderySimulator
 
 def presets_path():
     try:
@@ -128,8 +129,14 @@ class ParamsTab(ScrolledPanel):
     def set_parent_tab(self, tab):
         self.parent_tab = tab
 
+    def is_dependent_tab(self):
+        return self.parent_tab is not None
+
+    def enabled(self):
+        return self.toggle_checkbox.IsChecked()
+
     def update_toggle_state(self, event=None, notify_pair=True):
-        enable = self.toggle_checkbox.IsChecked()
+        enable = self.enabled()
         # print self.name, "update_toggle_state", enable
         for child in self.settings_grid.GetChildren():
             widget = child.GetWindow()
@@ -137,7 +144,7 @@ class ParamsTab(ScrolledPanel):
                 child.GetWindow().Enable(enable)
 
         if notify_pair and self.paired_tab:
-            self.paired_tab.pair_changed(self.toggle_checkbox.IsChecked())
+            self.paired_tab.pair_changed(enable)
 
         for tab in self.dependent_tabs:
             tab.dependent_enable(enable)
@@ -149,7 +156,7 @@ class ParamsTab(ScrolledPanel):
         # print self.name, "pair_changed", value
         new_value = not value
 
-        if self.toggle_checkbox.IsChecked() != new_value:
+        if self.enabled() != new_value:
             self.set_toggle_state(not value)
             self.toggle_checkbox.changed = True
             self.update_toggle_state(notify_pair=False)
@@ -170,7 +177,7 @@ class ParamsTab(ScrolledPanel):
         values = {}
 
         if self.toggle:
-            checked = self.toggle_checkbox.IsChecked()
+            checked = self.enabled()
             if self.toggle_checkbox in self.changed_inputs and not self.toggle.inverse:
                 values[self.toggle.name] = checked
 
@@ -192,9 +199,15 @@ class ParamsTab(ScrolledPanel):
             for name, value in values.iteritems():
                 node.set_param(name, value)
 
+    def on_change(self, callable):
+        self.on_change_hook = callable
+
     def changed(self, event):
         self.changed_inputs.add(event.GetEventObject())
         event.Skip()
+
+        if self.on_change_hook:
+            self.on_change_hook(self)
 
     def load_preset(self, preset):
         preset_data = preset.get(self.name, {})
@@ -311,6 +324,11 @@ class SettingsFrame(wx.Frame):
         self.notebook = wx.Notebook(self, wx.ID_ANY)
         self.tabs = self.tabs_factory(self.notebook)
 
+        for tab in self.tabs:
+            tab.on_change(self.params_changed)
+
+        self.simulate_window = None
+
         self.presets_box = wx.StaticBox(self, wx.ID_ANY, label="Presets")
 
         self.preset_chooser = wx.ComboBox(self, wx.ID_ANY)
@@ -340,6 +358,56 @@ class SettingsFrame(wx.Frame):
         self.__set_properties()
         self.__do_layout()
         # end wxGlade
+
+    def params_changed(self, tab):
+        patches = self.generate_patches()
+
+        if not patches:
+            return
+
+        if self.simulate_window:
+            self.simulate_window.stop()
+            self.simulate_window.load(patches=patches)
+        else:
+            my_rect = self.GetRect()
+            simulator_pos = my_rect.GetTopRight()
+            simulator_pos.x += 5
+
+            try:
+                self.simulate_window = EmbroiderySimulator(None, -1, "Embroidery Simulator", simulator_pos, size=(300, 300), patches=patches, on_close=self.simulate_window_closed)
+            except:
+                with open('/tmp/params_debug.log', 'a') as log:
+                    print >> log, traceback.format_exc()
+                    log.flush()
+
+            self.simulate_window.Show()
+            wx.CallLater(10, self.Raise)
+
+        wx.CallAfter(self.simulate_window.go)
+
+    def simulate_window_closed(self):
+        self.simulate_window = None
+
+    def generate_patches(self):
+        patches = []
+
+        for tab in self.tabs:
+            tab.apply()
+
+            try:
+                if tab.enabled() and not tab.is_dependent_tab():
+                    for node in tab.nodes:
+                        # Making a copy of the embroidery element is an easy
+                        # way to drop the cache in the @cache decorators used
+                        # for many params in embroider.py.
+
+                        patches.extend(copy(node).to_patches(None))
+            except:
+                # Ignore errors.  This can be things like incorrect paths for
+                # satins or division by zero caused by incorrect param values.
+                pass
+
+        return patches
 
     def update_preset_list(self):
         preset_names = load_presets().keys()
@@ -430,10 +498,12 @@ class SettingsFrame(wx.Frame):
 
         event.Skip()
 
-    def apply(self, event):
+    def _apply(self):
         for tab in self.tabs:
             tab.apply()
 
+    def apply(self, event):
+        self._apply()
         save_preset("__LAST__", self.get_preset_data())
         self.Close()
 
@@ -442,6 +512,10 @@ class SettingsFrame(wx.Frame):
         self.apply(event)
 
     def close(self, event):
+        if self.simulate_window:
+            self.simulate_window.stop()
+            self.simulate_window.Close()
+
         self.Close()
 
     def __set_properties(self):
