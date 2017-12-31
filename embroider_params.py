@@ -320,6 +320,7 @@ class SettingsFrame(wx.Frame):
     def __init__(self, *args, **kwargs):
         # begin wxGlade: MyFrame.__init__
         self.tabs_factory = kwargs.pop('tabs_factory', [])
+        self.cancel_hook = kwargs.pop('on_cancel', None)
         wx.Frame.__init__(self, None, wx.ID_ANY,
                           "Embroidery Params"
                           )
@@ -351,7 +352,8 @@ class SettingsFrame(wx.Frame):
         self.delete_preset_button.Bind(wx.EVT_BUTTON, self.delete_preset)
 
         self.cancel_button = wx.Button(self, wx.ID_ANY, "Cancel")
-        self.cancel_button.Bind(wx.EVT_BUTTON, self.close)
+        self.cancel_button.Bind(wx.EVT_BUTTON, self.cancel)
+        self.Bind(wx.EVT_CLOSE, self.cancel)
 
         self.use_last_button = wx.Button(self, wx.ID_ANY, "Use Last Settings")
         self.use_last_button.Bind(wx.EVT_BUTTON, self.use_last)
@@ -397,7 +399,7 @@ class SettingsFrame(wx.Frame):
             simulator_pos.x += 5
 
             try:
-                self.simulate_window = EmbroiderySimulator(None, -1, "Embroidery Simulator", simulator_pos, size=(300, 300), patches=patches, on_close=self.simulate_window_closed)
+                self.simulate_window = EmbroiderySimulator(None, -1, "Embroidery Simulator", simulator_pos, size=(300, 300), patches=patches, on_close=self.simulate_window_closed, stitches_per_frame=10)
             except:
                 with open('/tmp/params_debug.log', 'a') as log:
                     print >> log, traceback.format_exc()
@@ -534,18 +536,24 @@ class SettingsFrame(wx.Frame):
     def apply(self, event):
         self._apply()
         save_preset("__LAST__", self.get_preset_data())
-        self.Close()
+        self.close()
 
     def use_last(self, event):
         self._load_preset("__LAST__")
         self.apply(event)
 
-    def close(self, event):
+    def close(self):
         if self.simulate_window:
             self.simulate_window.stop()
             self.simulate_window.Close()
 
-        self.Close()
+        self.Destroy()
+
+    def cancel(self, event):
+        if self.cancel_hook:
+            self.cancel_hook()
+
+        self.close()
 
     def __set_properties(self):
         # begin wxGlade: MyFrame.__set_properties
@@ -579,6 +587,10 @@ class SettingsFrame(wx.Frame):
         # end wxGlade
 
 class EmbroiderParams(inkex.Effect):
+    def __init__(self, *args, **kwargs):
+        self.cancelled = False
+        inkex.Effect.__init__(self, *args, **kwargs)
+
     def get_nodes(self):
         if self.selected:
             nodes = []
@@ -690,11 +702,19 @@ class EmbroiderParams(inkex.Effect):
         return tabs
 
 
+    def cancel(self):
+        self.cancelled = True
+
     def effect(self):
         app = wx.App()
-        frame = SettingsFrame(tabs_factory=self.create_tabs)
+        frame = SettingsFrame(tabs_factory=self.create_tabs, on_cancel=self.cancel)
         frame.Show()
         app.MainLoop()
+
+        if self.cancelled:
+            # This prevents the superclass from outputting the SVG, because we
+            # may have modified the DOM.
+            sys.exit(0)
 
 
 def save_stderr():
@@ -719,6 +739,8 @@ if __name__ == "__main__":
     try:
         e = EmbroiderParams()
         e.affect()
+    except SystemExit:
+        raise
     except:
         traceback.print_exc()
 
