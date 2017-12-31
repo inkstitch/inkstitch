@@ -5,6 +5,8 @@ import os
 import sys
 import json
 import traceback
+import time
+from threading import Thread
 from copy import copy
 from cStringIO import StringIO
 import wx
@@ -15,6 +17,40 @@ from embroider import Param, EmbroideryElement, Fill, AutoFill, Stroke, SatinCol
 from functools import partial
 from itertools import groupby
 from embroider_simulate import EmbroiderySimulator
+
+class KillableThread(Thread):
+  """A subclass of threading.Thread, with a kill() method."""
+  def __init__(self, *args, **keywords):
+    Thread.__init__(self, *args, **keywords)
+    self.killed = False
+
+  def start(self):
+    """Start the thread."""
+    self.__run_backup = self.run
+    self.run = self.__run      # Force the Thread to install our trace.
+    Thread.start(self)
+
+  def __run(self):
+    """Hacked run function, which installs the trace."""
+    sys.settrace(self.globaltrace)
+    self.__run_backup()
+    self.run = self.__run_backup
+
+  def globaltrace(self, frame, why, arg):
+    if why == 'call':
+      return self.localtrace
+    else:
+      return None
+
+  def localtrace(self, frame, why, arg):
+    if self.killed:
+      if why == 'line':
+        raise SystemExit()
+    return self.localtrace
+
+  def kill(self):
+    self.killed = True
+
 
 def presets_path():
     try:
@@ -328,6 +364,8 @@ class SettingsFrame(wx.Frame):
             tab.on_change(self.params_changed)
 
         self.simulate_window = None
+        self.simulate_thread = None
+        self.thread_num = 0
 
         self.presets_box = wx.StaticBox(self, wx.ID_ANY, label="Presets")
 
@@ -360,11 +398,24 @@ class SettingsFrame(wx.Frame):
         # end wxGlade
 
     def params_changed(self, tab):
+        if self.simulate_window:
+            self.simulate_window.stop()
+            self.simulate_window.clear()
+
+        if self.simulate_thread and self.simulate_thread.is_alive():
+            self.simulate_thread.kill()
+
+        self.simulate_thread = KillableThread(target=self.update_patches, name="Simulate%d" % self.thread_num)
+        self.simulate_thread.start()
+        self.thread_num += 1
+
+    def update_patches(self):
         patches = self.generate_patches()
 
-        if not patches:
-            return
+        if patches:
+            wx.CallAfter(self.update_simulator, patches)
 
+    def update_simulator(self, patches):
         if self.simulate_window:
             self.simulate_window.stop()
             self.simulate_window.load(patches=patches)
@@ -402,6 +453,8 @@ class SettingsFrame(wx.Frame):
                         # for many params in embroider.py.
 
                         patches.extend(copy(node).to_patches(None))
+            except SystemExit:
+                raise
             except:
                 # Ignore errors.  This can be things like incorrect paths for
                 # satins or division by zero caused by incorrect param values.

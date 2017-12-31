@@ -179,6 +179,8 @@ class EmbroiderySimulator(wx.Frame):
     def clear(self):
         self.dc.SetBackground(wx.Brush('white'))
         self.dc.Clear()
+        self.last_pos = None
+        self.Refresh()
 
     def on_size(self, e):
         # ensure that the whole canvas is visible
