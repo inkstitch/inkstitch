@@ -6,7 +6,7 @@ import sys
 import json
 import traceback
 import time
-from threading import Thread
+from threading import Thread, Event
 from copy import copy
 from cStringIO import StringIO
 import wx
@@ -17,40 +17,6 @@ from embroider import Param, EmbroideryElement, Fill, AutoFill, Stroke, SatinCol
 from functools import partial
 from itertools import groupby
 from embroider_simulate import EmbroiderySimulator
-
-class KillableThread(Thread):
-  """A subclass of threading.Thread, with a kill() method."""
-  def __init__(self, *args, **keywords):
-    Thread.__init__(self, *args, **keywords)
-    self.killed = False
-
-  def start(self):
-    """Start the thread."""
-    self.__run_backup = self.run
-    self.run = self.__run      # Force the Thread to install our trace.
-    Thread.start(self)
-
-  def __run(self):
-    """Hacked run function, which installs the trace."""
-    sys.settrace(self.globaltrace)
-    self.__run_backup()
-    self.run = self.__run_backup
-
-  def globaltrace(self, frame, why, arg):
-    if why == 'call':
-      return self.localtrace
-    else:
-      return None
-
-  def localtrace(self, frame, why, arg):
-    if self.killed:
-      if why == 'line':
-        raise SystemExit()
-    return self.localtrace
-
-  def kill(self):
-    self.killed = True
-
 
 def presets_path():
     try:
@@ -365,7 +331,7 @@ class SettingsFrame(wx.Frame):
 
         self.simulate_window = None
         self.simulate_thread = None
-        self.thread_num = 0
+        self.simulate_refresh_needed = Event()
 
         self.presets_box = wx.StaticBox(self, wx.ID_ANY, label="Presets")
 
@@ -402,12 +368,18 @@ class SettingsFrame(wx.Frame):
             self.simulate_window.stop()
             self.simulate_window.clear()
 
-        if self.simulate_thread and self.simulate_thread.is_alive():
-            self.simulate_thread.kill()
+        if not self.simulate_thread or not self.simulate_thread.is_alive():
+            self.simulate_thread = Thread(target=self.simulate_worker)
+            self.simulate_thread.daemon = True
+            self.simulate_thread.start()
 
-        self.simulate_thread = KillableThread(target=self.update_patches, name="Simulate%d" % self.thread_num)
-        self.simulate_thread.start()
-        self.thread_num += 1
+        self.simulate_refresh_needed.set()
+
+    def simulate_worker(self):
+        while True:
+            self.simulate_refresh_needed.wait()
+            self.simulate_refresh_needed.clear()
+            self.update_patches()
 
     def update_patches(self):
         patches = self.generate_patches()
@@ -448,6 +420,10 @@ class SettingsFrame(wx.Frame):
             try:
                 if tab.enabled() and not tab.is_dependent_tab():
                     for node in tab.nodes:
+                        if self.simulate_refresh_needed.is_set():
+                            # cancel, we need to start over
+                            return []
+
                         # Making a copy of the embroidery element is an easy
                         # way to drop the cache in the @cache decorators used
                         # for many params in embroider.py.
