@@ -4,6 +4,7 @@ import numpy
 import wx
 import inkex
 import simplestyle
+import colorsys
 
 from embroider import patches_to_stitches, stitches_to_polylines
 
@@ -102,6 +103,24 @@ class EmbroiderySimulator(wx.Frame):
 
         return string
 
+    def color_to_pen(self, color):
+        # python colorsys module uses floats from 0 to 1.0
+        color = [value / 255.0 for value in color]
+
+        hls = list(colorsys.rgb_to_hls(*color))
+
+        # Our background is white.  If the color is too close to white, then
+        # it won't be visible.  Capping lightness should make colors visible
+        # without changing them too much.
+        hls[1] = min(hls[1], 0.85)
+
+        color = colorsys.hls_to_rgb(*hls)
+
+        # convert back to values in the range of 0-255
+        color = [value * 255 for value in color]
+
+        return wx.Pen(color)
+
     def _patches_to_segments(self, patches):
         stitches = patches_to_stitches(patches)
 
@@ -117,7 +136,7 @@ class EmbroiderySimulator(wx.Frame):
             if stitch.color == last_color:
                 segments.append(((last_pos, pos), pen))
             else:
-                pen = wx.Pen(simplestyle.parseColor(stitch.color))
+                pen = self.color_to_pen(simplestyle.parseColor(stitch.color))
 
             last_pos = pos
             last_color = stitch.color
@@ -132,7 +151,7 @@ class EmbroiderySimulator(wx.Frame):
         segments = []
 
         pos = (0, 0)
-        color = wx.Brush('black')
+        pen = wx.Brush('black')
         cut = True
 
         with open(stitch_file_path) as stitch_file:
@@ -144,7 +163,7 @@ class EmbroiderySimulator(wx.Frame):
 
                 if symbol == "$":
                     red, green, blue = fields[2:5]
-                    color = wx.Pen((int(red), int(green), int(blue)))
+                    color = color_to_pen((int(red), int(green), int(blue)))
                 elif symbol == "*":
                     if command == "COLOR":
                         # change color
@@ -157,7 +176,7 @@ class EmbroiderySimulator(wx.Frame):
                         new_pos = (int(float(x) * 10), int(float(y) * 10))
 
                         if not cut:
-                            segments.append(((pos, new_pos), color))
+                            segments.append(((pos, new_pos), pen))
 
                         cut = False
                         pos = new_pos
