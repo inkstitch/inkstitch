@@ -41,8 +41,10 @@ class EmbroiderySimulator(wx.Frame):
 
     def load(self, stitch_file=None, patches=None):
         if stitch_file:
+            self.mirror = True
             self.segments = self._parse_stitch_file(stitch_file)
         elif patches:
+            self.mirror = False
             self.segments = self._patches_to_segments(patches)
         else:
             return
@@ -210,8 +212,10 @@ class EmbroiderySimulator(wx.Frame):
         for i in xrange(self.stitches_per_frame):
             try:
                 ((x1, y1), (x2, y2)), color = self.segments[self.current_stitch]
-                y1 = self.height - y1
-                y2 = self.height - y2
+
+                if self.mirror:
+                    y1 = self.height - y1
+                    y2 = self.height - y2
 
                 self.canvas.SetPen(color)
                 self.canvas.DrawLines(((x1, y1), (x2, y2)))
