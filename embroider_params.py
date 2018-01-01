@@ -328,11 +328,13 @@ class SettingsFrame(wx.Frame):
         self.tabs = self.tabs_factory(self.notebook)
 
         for tab in self.tabs:
-            tab.on_change(self.params_changed)
+            tab.on_change(self.update_simulator)
 
         self.simulate_window = None
         self.simulate_thread = None
         self.simulate_refresh_needed = Event()
+
+        wx.CallLater(1000, self.update_simulator)
 
         self.presets_box = wx.StaticBox(self, wx.ID_ANY, label="Presets")
 
@@ -365,7 +367,7 @@ class SettingsFrame(wx.Frame):
         self.__do_layout()
         # end wxGlade
 
-    def params_changed(self, tab):
+    def update_simulator(self, tab=None):
         if self.simulate_window:
             self.simulate_window.stop()
             self.simulate_window.clear()
@@ -387,9 +389,9 @@ class SettingsFrame(wx.Frame):
         patches = self.generate_patches()
 
         if patches:
-            wx.CallAfter(self.update_simulator, patches)
+            wx.CallAfter(self.refresh_simulator, patches)
 
-    def update_simulator(self, patches):
+    def refresh_simulator(self, patches):
         if self.simulate_window:
             self.simulate_window.stop()
             self.simulate_window.load(patches=patches)
