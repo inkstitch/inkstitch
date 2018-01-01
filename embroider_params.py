@@ -403,9 +403,16 @@ class SettingsFrame(wx.Frame):
             try:
                 self.simulate_window = EmbroiderySimulator(None, -1, "Embroidery Simulator", simulator_pos, size=(300, 300), patches=patches, on_close=self.simulate_window_closed, target_duration=5)
             except:
-                with open('/tmp/params_debug.log', 'a') as log:
-                    print >> log, traceback.format_exc()
-                    log.flush()
+                error = traceback.format_exc()
+
+                try:
+                    # a window may have been created, so we need to destroy it
+                    # or the app will never exit
+                    wx.Window.FindWindowByName("Embroidery Simulator").Destroy()
+                except:
+                    pass
+
+                info_dialog(self, error, "Internal Error")
 
             self.simulate_window.Show()
             wx.CallLater(10, self.Raise)
@@ -731,7 +738,7 @@ def save_stderr():
 def restore_stderr():
     os.dup2(sys.stderr_dup, 2)
     sys.stderr_backup.write(sys.stderr.getvalue())
-    sys.sys.stderr = stderr_backup
+    sys.stderr = stderr_backup
 
 
 # end of class MyFrame
