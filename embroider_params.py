@@ -388,7 +388,7 @@ class SettingsFrame(wx.Frame):
     def update_patches(self):
         patches = self.generate_patches()
 
-        if patches:
+        if patches and not self.simulate_refresh_needed.is_set():
             wx.CallAfter(self.refresh_simulator, patches)
 
     def refresh_simulator(self, patches):
