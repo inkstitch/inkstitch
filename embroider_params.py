@@ -401,7 +401,7 @@ class SettingsFrame(wx.Frame):
             simulator_pos.x += 5
 
             try:
-                self.simulate_window = EmbroiderySimulator(None, -1, "Embroidery Simulator", simulator_pos, size=(300, 300), patches=patches, on_close=self.simulate_window_closed, stitches_per_frame=10)
+                self.simulate_window = EmbroiderySimulator(None, -1, "Embroidery Simulator", simulator_pos, size=(300, 300), patches=patches, on_close=self.simulate_window_closed, target_duration=5)
             except:
                 with open('/tmp/params_debug.log', 'a') as log:
                     print >> log, traceback.format_exc()

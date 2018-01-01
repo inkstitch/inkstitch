@@ -14,6 +14,7 @@ class EmbroiderySimulator(wx.Frame):
         self.on_close_hook = kwargs.pop('on_close', None)
         self.frame_period = kwargs.pop('frame_period', 80)
         self.stitches_per_frame = kwargs.pop('stitches_per_frame', 1)
+        self.target_duration = kwargs.pop('target_duration', None)
 
         wx.Frame.__init__(self, *args, **kwargs)
 
@@ -21,6 +22,9 @@ class EmbroiderySimulator(wx.Frame):
         self.panel.SetFocus()
 
         self.load(stitch_file, patches)
+
+        if self.target_duration:
+            self.adjust_speed(self.target_duration)
 
         self.buffer = wx.Bitmap(self.width, self.height)
         self.dc = wx.MemoryDC()
@@ -50,6 +54,14 @@ class EmbroiderySimulator(wx.Frame):
             return
 
         self.width, self.height = self.get_dimensions()
+
+    def adjust_speed(self, duration):
+        self.frame_period = 1000 * float(duration) / len(self.segments)
+        self.stitches_per_frame = 1
+
+        while self.frame_period < 1.0:
+            self.frame_period *= 2
+            self.stitches_per_frame *= 2
 
     def on_key_down(self, event):
         keycode = event.GetKeyCode()
