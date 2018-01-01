@@ -84,6 +84,10 @@ class EmbroiderySimulator(wx.Frame):
                 self.timer.Stop()
             else:
                 self.timer.Start(self.frame_period)
+        elif keycode == ord("R"):
+            self.stop()
+            self.clear()
+            self.go()
 
         self.frame_period = max(1, self.frame_period)
         self.stitches_per_frame = max(self.stitches_per_frame, 1)
@@ -208,7 +212,10 @@ class EmbroiderySimulator(wx.Frame):
         self.clear()
 
         self.current_stitch = 0
-        self.timer = wx.PyTimer(self.draw_one_frame)
+
+        if not self.timer:
+            self.timer = wx.PyTimer(self.draw_one_frame)
+
         self.timer.Start(self.frame_period)
 
     def on_close(self, event):
