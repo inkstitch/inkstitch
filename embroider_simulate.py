@@ -53,6 +53,7 @@ class EmbroiderySimulator(wx.Frame):
         else:
             return
 
+        self.trim_margins()
         self.width, self.height = self.get_dimensions()
 
     def adjust_speed(self, duration):
@@ -159,15 +160,48 @@ class EmbroiderySimulator(wx.Frame):
 
         return segments
 
+    def all_coordinates(self):
+        for segment in self.segments:
+            start, end = segment[0]
+
+            yield start
+            yield end
+
+    def trim_margins(self):
+        """remove any unnecessary whitespace around the design"""
+
+        min_x = sys.maxint
+        min_y = sys.maxint
+
+        for x, y in self.all_coordinates():
+            min_x = min(min_x, x)
+            min_y = min(min_y, y)
+
+
+        new_segments = []
+
+        for segment in self.segments:
+            (start, end), color = segment
+
+            new_segment = (
+                           (
+                            (start[0] - min_x, start[1] - min_y),
+                            (end[0] - min_x, end[1] - min_y),
+                           ),
+                           color
+                          )
+
+            new_segments.append(new_segment)
+
+        self.segments = new_segments
+
     def get_dimensions(self):
         width = 0
         height = 0
 
-        for segment in self.segments:
-            (start_x, start_y), (end_x, end_y) = segment[0]
-
-            width = max(width, start_x, end_x)
-            height = max(height, start_y, end_y)
+        for x, y in self.all_coordinates():
+            width = max(width, x)
+            height = max(height, y)
 
         return width, height
 
