@@ -121,7 +121,7 @@ class EmbroideryElement(object):
 
         if param.endswith('_mm'):
             # print >> dbg, "get_float_param", param, value, "*", self.options.pixels_per_mm
-            value = value * self.options.pixels_per_mm
+            value = value * getattr(self.options, "pixels_per_mm", 10)
 
         return value
 
@@ -133,7 +133,7 @@ class EmbroideryElement(object):
             return default
 
         if param.endswith('_mm'):
-            value = int(value * self.options.pixels_per_mm)
+            value = int(value * getattr(self.options, "pixels_per_mm", 10))
 
         return value
 
@@ -207,7 +207,7 @@ class EmbroideryElement(object):
 
         path = deepcopy(path)
 
-        cspsubdiv(path, self.options.flat)
+        cspsubdiv(path, getattr(self.options, "flat", 0.1))
 
         flattened = []
 
@@ -500,7 +500,7 @@ class Fill(EmbroideryElement):
 
         # only stitch the first point if it's a reasonable distance away from the
         # last stitch
-        if not patch.stitches or (beg - patch.stitches[-1]).length() > 0.5 * self.options.pixels_per_mm:
+        if not patch.stitches or (beg - patch.stitches[-1]).length() > 0.5 * getattr(self.options, "pixels_per_mm", 10):
             patch.add_stitch(beg)
 
         first_stitch = self.adjust_stagger(beg, angle, row_spacing, max_stitch_length)
@@ -515,7 +515,7 @@ class Fill(EmbroideryElement):
             patch.add_stitch(beg + offset * row_direction)
             offset += max_stitch_length
 
-        if (end - patch.stitches[-1]).length() > 0.1 * self.options.pixels_per_mm:
+        if (end - patch.stitches[-1]).length() > 0.1 * getattr(self.options, "pixels_per_mm", 10):
             patch.add_stitch(end)
 
 
@@ -1000,7 +1000,7 @@ class AutoFill(Fill):
             patch.add_stitch(PyEmb.Point(*outline.interpolate(pos).coords[0]))
 
         end = PyEmb.Point(*end)
-        if (end - patch.stitches[-1]).length() > 0.1 * self.options.pixels_per_mm:
+        if (end - patch.stitches[-1]).length() > 0.1 * getattr(self.options, "pixels_per_mm", 10):
             patch.add_stitch(end)
 
         print >> dbg, "end connect_points"
@@ -1941,5 +1941,3 @@ if __name__ == '__main__':
         print >> dbg, traceback.format_exc()
 
     dbg.flush()
-
-dbg.close()
