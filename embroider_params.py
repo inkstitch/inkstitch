@@ -424,28 +424,34 @@ class SettingsFrame(wx.Frame):
 
     def generate_patches(self):
         patches = []
+        nodes = []
 
         for tab in self.tabs:
             tab.apply()
 
-            try:
-                if tab.enabled() and not tab.is_dependent_tab():
-                    for node in tab.nodes:
-                        if self.simulate_refresh_needed.is_set():
-                            # cancel, we need to start over
-                            return []
+            if tab.enabled() and not tab.is_dependent_tab():
+                nodes.extend(tab.nodes)
 
-                        # Making a copy of the embroidery element is an easy
-                        # way to drop the cache in the @cache decorators used
-                        # for many params in embroider.py.
+        # sort nodes into the proper stacking order
+        nodes.sort(key=lambda node: node.order)
 
-                        patches.extend(copy(node).to_patches(None))
-            except SystemExit:
-                raise
-            except:
-                # Ignore errors.  This can be things like incorrect paths for
-                # satins or division by zero caused by incorrect param values.
-                pass
+        try:
+            for node in nodes:
+                if self.simulate_refresh_needed.is_set():
+                    # cancel; params were updated and we need to start over
+                    return []
+
+                # Making a copy of the embroidery element is an easy
+                # way to drop the cache in the @cache decorators used
+                # for many params in embroider.py.
+
+                patches.extend(copy(node).to_patches(None))
+        except SystemExit:
+            raise
+        except:
+            # Ignore errors.  This can be things like incorrect paths for
+            # satins or division by zero caused by incorrect param values.
+            pass
 
         return patches
 
@@ -631,9 +637,11 @@ class EmbroiderParams(inkex.Effect):
         nodes = self.get_nodes()
         nodes_by_class = defaultdict(list)
 
-        for node in self.get_nodes():
+        for z, node in enumerate(self.get_nodes()):
             for cls in self.embroidery_classes(node):
-                nodes_by_class[cls].append(node)
+                element = cls(node)
+                element.order = z
+                nodes_by_class[cls].append(element)
 
         return sorted(nodes_by_class.items(), key=lambda (cls, nodes): cls.__name__)
 
@@ -659,7 +667,6 @@ class EmbroiderParams(inkex.Effect):
     def create_tabs(self, parent):
         tabs = []
         for cls, nodes in self.get_nodes_by_class():
-            nodes = [cls(node) for node in nodes]
             params = cls.get_params()
 
             for param in params:

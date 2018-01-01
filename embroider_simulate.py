@@ -177,7 +177,6 @@ class EmbroiderySimulator(wx.Frame):
             min_x = min(min_x, x)
             min_y = min(min_y, y)
 
-
         new_segments = []
 
         for segment in self.segments:
