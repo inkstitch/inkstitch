@@ -21,9 +21,9 @@ from embroider_simulate import EmbroiderySimulator
 def presets_path():
     try:
         import appdirs
-        config_path = appdirs.user_config_dir('inkscape-embroidery')
+        config_path = appdirs.user_config_dir('inkstitch')
     except ImportError:
-        config_path = os.path.expanduser('~/.inkscape-embroidery')
+        config_path = os.path.expanduser('~/.inkstitch')
 
     if not os.path.exists(config_path):
         os.makedirs(config_path)
@@ -60,14 +60,14 @@ def delete_preset(name):
     save_presets(presets)
 
 
-def confirm_dialog(parent, question, caption = 'inkscape-embroidery'):
+def confirm_dialog(parent, question, caption = 'ink/stitch'):
     dlg = wx.MessageDialog(parent, question, caption, wx.YES_NO | wx.ICON_QUESTION)
     result = dlg.ShowModal() == wx.ID_YES
     dlg.Destroy()
     return result
 
 
-def info_dialog(parent, message, caption = 'inkscape-embroidery'):
+def info_dialog(parent, message, caption = 'ink/stitch'):
     dlg = wx.MessageDialog(parent, message, caption, wx.OK | wx.ICON_INFORMATION)
     dlg.ShowModal()
     dlg.Destroy()

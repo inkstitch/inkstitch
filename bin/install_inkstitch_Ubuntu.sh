@@ -1,20 +1,20 @@
-# This file is part of the Inkscape extension 'inkscape-embroidery', 
+# This file is part of the Inkscape extension 'ink/stitch', 
 # an extension for machine embroidery design using Inkscape.
 
 # Copyright (C) 2017 Maren Hachmann
 
-# inkscape-embroidery is free software: you can redistribute it and/or modify
+# ink/stitch is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
 # (at your option) any later version.
 
-# inkscape-embroidery is distributed in the hope that it will be useful,
+# ink/stitch is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
 
 # You should have received a copy of the GNU General Public License
-# along with inkscape-embroidery.  If not, see <http://www.gnu.org/licenses/>.
+# along with ink/stitch.  If not, see <http://www.gnu.org/licenses/>.
 
 #!/bin/bash
 
@@ -36,13 +36,13 @@ sudo apt-get update
 sudo apt-get install inkscape python-pip unzip python-wxgtk3.0
 
 # download lexelby's embroidery extension
-wget https://github.com/lexelby/inkscape-embroidery/archive/master.zip
+wget https://github.com/lexelby/inkstitch/archive/master.zip
 
 # unzip files
 unzip master.zip -d /tmp
 
 # change into new directory
-cd inkscape-embroidery-master
+cd inkstitch-master
 
 # upgrade pip
 pip install -U pip
@@ -58,6 +58,6 @@ cp *.py *.inx $HOME/.config/inkscape/extensions
 
 echo "============================
 
-The Inkscape embroidery extension (https://github.com/lexelby/inkscape-embroidery) and its dependencies have been installed, and your Inkscape version is now up to date.
+The Inkscape embroidery extension (https://github.com/lexelby/inkstitch) and its dependencies have been installed, and your Inkscape version is now up to date.
 
 Any previously installed Inkscape snap packages have been removed."

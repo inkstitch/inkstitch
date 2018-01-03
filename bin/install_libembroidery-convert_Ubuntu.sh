@@ -1,20 +1,20 @@
-# This file is part of the Inkscape extension 'inkscape-embroidery', 
+# This file is part of the Inkscape extension 'ink/stitch', 
 # an extension for machine embroidery design using Inkscape.
 
 # Copyright (C) 2017 Maren Hachmann
 
-# inkscape-embroidery is free software: you can redistribute it and/or modify
+# ink/stitch is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
 # (at your option) any later version.
 
-# inkscape-embroidery is distributed in the hope that it will be useful,
+# ink/stitch is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
 
 # You should have received a copy of the GNU General Public License
-# along with inkscape-embroidery.  If not, see <http://www.gnu.org/licenses/>.
+# along with ink/stitch.  If not, see <http://www.gnu.org/licenses/>.
 
 #!/bin/bash
 
