@@ -6,7 +6,7 @@ import inkex
 import simplestyle
 import colorsys
 
-from embroider import patches_to_stitches, stitches_to_polylines
+from embroider import patches_to_stitches, stitches_to_polylines, PIXELS_PER_MM
 
 class EmbroiderySimulator(wx.Frame):
     def __init__(self, *args, **kwargs):
@@ -173,7 +173,7 @@ class EmbroiderySimulator(wx.Frame):
                         # JUMP just means a long stitch, really.
 
                         x, y = fields[2:]
-                        new_pos = (int(float(x) * 10), int(float(y) * 10))
+                        new_pos = (int(float(x) * PIXELS_PER_MM), int(float(y) * PIXELS_PER_MM))
 
                         if not cut:
                             segments.append(((pos, new_pos), pen))
