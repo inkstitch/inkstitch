@@ -47,6 +47,8 @@ SVG_GROUP_TAG = inkex.addNS('g', 'svg')
 
 EMBROIDERABLE_TAGS = (SVG_PATH_TAG, SVG_POLYLINE_TAG)
 
+# modern versions of Inkscape use 96 pixels per inch as per the CSS standard
+PIXELS_PER_MM = 96 / 25.4
 
 class Param(object):
     def __init__(self, name, description, unit=None, values=[], type=None, group=None, inverse=False, default=None):
@@ -72,6 +74,91 @@ def param(*args, **kwargs):
         return func
 
     return decorator
+
+# cribbed from inkscape-silhouette
+def parse_length_with_units( str ):
+
+    '''
+    Parse an SVG value which may or may not have units attached
+    This version is greatly simplified in that it only allows: no units,
+    units of px, mm, and %.  Everything else, it returns None for.
+    There is a more general routine to consider in scour.py if more
+    generality is ever needed.
+    '''
+
+    u = 'px'
+    s = str.strip()
+    if s[-2:] == 'px':
+        s = s[:-2]
+    elif s[-2:] == 'mm':
+        u = 'mm'
+        s = s[:-2]
+    elif s[-2:] == 'pt':
+        u = 'pt'
+        s = s[:-2]
+    elif s[-2:] == 'pc':
+        u = 'pc'
+        s = s[:-2]
+    elif s[-2:] == 'cm':
+        u = 'cm'
+        s = s[:-2]
+    elif s[-2:] == 'in':
+        u = 'in'
+        s = s[:-2]
+    elif s[-1:] == '%':
+        u = '%'
+        s = s[:-1]
+    try:
+        v = float( s )
+    except:
+        raise ValueError("parseLengthWithUnits: unknown unit %s" % s)
+
+    return v, u
+
+
+def convert_length(length):
+    value, units = parse_length_with_units(length)
+
+    if not units or units == "px":
+        return value
+
+    if units == 'cm':
+       value *= 10
+       units == 'mm'
+
+    if units == 'mm':
+        value = value / 25.4
+        units = 'in'
+
+    if units == 'in':
+        # modern versions of Inkscape use CSS's 96 pixels per inch.  When you
+        # open an old document, inkscape will add a viewbox for you.
+        return value * 96
+
+    raise ValueError("Unknown unit: %s" % units)
+
+@cache
+def get_viewbox_transform(node):
+    # somewhat cribbed from inkscape-silhouette
+
+    doc_width = convert_length(node.get('width'))
+    doc_height = convert_length(node.get('height'))
+
+    viewbox = node.get('viewBox').strip().replace(',', ' ').split()
+
+    dx = -float(viewbox[0])
+    dy = -float(viewbox[1])
+    transform = simpletransform.parseTransform("translate(%f, %f)" % (dx, dy))
+
+    try:
+        sx = doc_width / float(viewbox[2])
+        sy = doc_height / float(viewbox[3])
+        scale_transform = simpletransform.parseTransform("scale(%f, %f)" % (sx, sy))
+        transform = simpletransform.composeTransform(transform, scale_transform)
+    except ZeroDivisionError:
+        pass
+
+    return transform
 
 class EmbroideryElement(object):
     def __init__(self, node, options=None):
@@ -121,7 +208,7 @@ class EmbroideryElement(object):
 
         if param.endswith('_mm'):
             # print >> dbg, "get_float_param", param, value, "*", self.options.pixels_per_mm
-            value = value * getattr(self.options, "pixels_per_mm", 10)
+            value = value * PIXELS_PER_MM
 
         return value
 
@@ -133,7 +220,7 @@ class EmbroideryElement(object):
             return default
 
         if param.endswith('_mm'):
-            value = int(value * getattr(self.options, "pixels_per_mm", 10))
+            value = int(value * PIXELS_PER_MM)
 
         return value
 
@@ -197,8 +284,13 @@ class EmbroideryElement(object):
         # combine this node's transform with all parent groups' transforms
         transform = simpletransform.composeParents(self.node, transform)
 
+        # add in the transform implied by the viewBox
+        viewbox_transform = get_viewbox_transform(self.node.getroottree().getroot())
+        transform = simpletransform.composeTransform(viewbox_transform, transform)
+
         # apply the combined transform to this node's path
         simpletransform.applyTransformToPath(transform, path)
+
 
         return path
 
@@ -500,7 +592,7 @@ class Fill(EmbroideryElement):
 
         # only stitch the first point if it's a reasonable distance away from the
         # last stitch
-        if not patch.stitches or (beg - patch.stitches[-1]).length() > 0.5 * getattr(self.options, "pixels_per_mm", 10):
+        if not patch.stitches or (beg - patch.stitches[-1]).length() > 0.5 * PIXELS_PER_MM:
             patch.add_stitch(beg)
 
         first_stitch = self.adjust_stagger(beg, angle, row_spacing, max_stitch_length)
@@ -515,7 +607,7 @@ class Fill(EmbroideryElement):
             patch.add_stitch(beg + offset * row_direction)
             offset += max_stitch_length
 
-        if (end - patch.stitches[-1]).length() > 0.1 * getattr(self.options, "pixels_per_mm", 10):
+        if (end - patch.stitches[-1]).length() > 0.1 * PIXELS_PER_MM:
             patch.add_stitch(end)
 
 
@@ -1000,7 +1092,7 @@ class AutoFill(Fill):
             patch.add_stitch(PyEmb.Point(*outline.interpolate(pos).coords[0]))
 
         end = PyEmb.Point(*end)
-        if (end - patch.stitches[-1]).length() > 0.1 * getattr(self.options, "pixels_per_mm", 10):
+        if (end - patch.stitches[-1]).length() > 0.1 * PIXELS_PER_MM:
             patch.add_stitch(end)
 
         print >> dbg, "end connect_points"
@@ -1761,6 +1853,12 @@ def stitches_to_polylines(stitches):
     return polylines
 
 def emit_inkscape(parent, stitches):
+    transform = get_viewbox_transform(parent.getroottree().getroot())
+
+    # we need to correct for the viewbox
+    transform = simpletransform.invertTransform(transform)
+    transform = simpletransform.formatTransform(transform)
+
     for color, polyline in stitches_to_polylines(stitches):
         # dbg.write('polyline: %s %s\n' % (color, repr(polyline)))
         inkex.etree.SubElement(parent,
@@ -1770,6 +1868,7 @@ def emit_inkscape(parent, stitches):
                                     'stroke-width': "0.4",
                                     'fill': 'none'}),
                                    'points': " ".join(",".join(str(coord) for coord in point) for point in polyline),
+                                'transform': transform
                                 })
 
 
@@ -1916,8 +2015,8 @@ class Embroider(inkex.Effect):
 
             patches.extend(element.to_patches(last_patch))
 
-        stitches = patches_to_stitches(patches, self.options.collapse_length_mm * self.options.pixels_per_mm)
-        emb = PyEmb.Embroidery(stitches, self.options.pixels_per_mm)
+        stitches = patches_to_stitches(patches, self.options.collapse_length_mm * PIXELS_PER_MM)
+        emb = PyEmb.Embroidery(stitches, PIXELS_PER_MM)
         emb.export(self.get_output_path(), self.options.output_format)
 
         new_layer = inkex.etree.SubElement(self.document.getroot(), SVG_GROUP_TAG, {})
