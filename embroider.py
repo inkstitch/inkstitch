@@ -207,7 +207,6 @@ class EmbroideryElement(object):
             return default
 
         if param.endswith('_mm'):
-            # print >> dbg, "get_float_param", param, value, "*", self.options.pixels_per_mm
             value = value * PIXELS_PER_MM
 
         return value
@@ -1922,10 +1921,6 @@ class Embroider(inkex.Effect):
                                      action="store", type="int",
                                      dest="max_backups", default=5,
                                      help="Max number of backups of output files to keep.")
-        self.OptionParser.add_option("-p", "--pixels_per_mm",
-                                     action="store", type="float",
-                                     dest="pixels_per_mm", default=10,
-                                     help="Number of on-screen pixels per millimeter.")
         self.patches = []
 
     def handle_node(self, node):
