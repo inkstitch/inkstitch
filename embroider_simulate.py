@@ -151,7 +151,7 @@ class EmbroiderySimulator(wx.Frame):
         segments = []
 
         pos = (0, 0)
-        pen = wx.Brush('black')
+        pen = wx.Pen('black')
         cut = True
 
         with open(stitch_file_path) as stitch_file:
@@ -163,7 +163,7 @@ class EmbroiderySimulator(wx.Frame):
 
                 if symbol == "$":
                     red, green, blue = fields[2:5]
-                    color = color_to_pen((int(red), int(green), int(blue)))
+                    color = self.color_to_pen((int(red), int(green), int(blue)))
                 elif symbol == "*":
                     if command == "COLOR":
                         # change color
