@@ -16,7 +16,7 @@ class EmbroiderySimulator(wx.Frame):
         self.frame_period = kwargs.pop('frame_period', 80)
         self.stitches_per_frame = kwargs.pop('stitches_per_frame', 1)
         self.target_duration = kwargs.pop('target_duration', None)
-        self.scale = 1
+        self.scale = 3
 
         wx.Frame.__init__(self, *args, **kwargs)
 
@@ -174,7 +174,7 @@ class EmbroiderySimulator(wx.Frame):
                         # JUMP just means a long stitch, really.
 
                         x, y = fields[2:]
-                        new_pos = (int(float(x) * PIXELS_PER_MM), int(float(y) * PIXELS_PER_MM))
+                        new_pos = (float(x) * PIXELS_PER_MM, float(y) * PIXELS_PER_MM)
 
                         if not cut:
                             segments.append(((pos, new_pos), pen))
