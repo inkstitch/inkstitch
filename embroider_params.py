@@ -745,7 +745,7 @@ def save_stderr():
 def restore_stderr():
     os.dup2(sys.stderr_dup, 2)
     sys.stderr_backup.write(sys.stderr.getvalue())
-    sys.stderr = stderr_backup
+    sys.stderr = sys.stderr_backup
 
 
 # end of class MyFrame
