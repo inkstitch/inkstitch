@@ -8,6 +8,12 @@ import colorsys
 
 from embroider import patches_to_stitches, stitches_to_polylines, PIXELS_PER_MM
 
+try:
+    xrange          # Python 2
+except NameError:
+    xrange = range  # Python 3
+
+
 class EmbroiderySimulator(wx.Frame):
     def __init__(self, *args, **kwargs):
         stitch_file = kwargs.pop('stitch_file', None)
