@@ -1,6 +1,7 @@
 # ink/stitch: An Inkscape extension for designing machine embroidery patterns
 
-* **NEW January 3, 2018:** Project renamed from `inkscape-embroidery` to **ink/stitch**
+* January 5, 2018: Default DPI changed to 96, to match Inkscape.
+* January 3, 2018: Project renamed from `inkscape-embroidery` to **ink/stitch**
 * **NEW January 1, 2018:** [video demo of the new live stitch preview feature](https://youtu.be/QY9NcLN3oJM)
 * **NEW December 6, 2017:** [video demo of how to use the extension](https://www.youtube.com/watch?v=qXntE1X1RIw)
 
@@ -206,7 +207,7 @@ My embroidery machine (a Brother SE400) can handle patterns up to 10cm x 10cm (a
 
 My machine can (theoretically) position the needle with an accuracy of a tenth of a millimeter.  The Brother PES format cannot encode a position any more precisely than this.  In practice, even if a machine had finer accuracy than this, the realities of sewing on real fabric, even with the best stabilizer, mean that you can't get any more accurate than this (and you shouldn't bother trying).
 
-I set the Inkscape's default document size to 1000 x 1000 pixels and set the "Pixels Per Millimeter" setting in **Embroider** to ten.  This means that every "pixel" in Inkscape is worth a tenth of a millimeter.  Practically speaking, there's no reason I couldn't choose to have one "pixel" equal one millimeter, because pixels don't really have much meaning in vector graphics.
+Previously, I used a nonstandard resolution of 10 pixels per millimeter, and this was hardcoded into ink/stitch.  Now, **ink/stitch respects Inkscape's default of 96dpi**.
 
 ### Step 1: Sketch design or use an image
 
