@@ -400,8 +400,19 @@ class SettingsFrame(wx.Frame):
             simulator_pos = my_rect.GetTopRight()
             simulator_pos.x += 5
 
+            screen_rect = wx.Display(0).ClientArea
+            max_width = screen_rect.GetWidth() - my_rect.GetWidth()
+            max_height = screen_rect.GetHeight()
+
             try:
-                self.simulate_window = EmbroiderySimulator(None, -1, "Embroidery Simulator", simulator_pos, size=(300, 300), patches=patches, on_close=self.simulate_window_closed, target_duration=5)
+                self.simulate_window = EmbroiderySimulator(None, -1, "Embroidery Simulator",
+                                                           simulator_pos,
+                                                           size=(300, 300),
+                                                           patches=patches,
+                                                           on_close=self.simulate_window_closed,
+                                                           target_duration=5,
+                                                           max_width=max_width,
+                                                           max_height=max_height)
             except:
                 error = traceback.format_exc()
 

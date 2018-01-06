@@ -16,7 +16,11 @@ class EmbroiderySimulator(wx.Frame):
         self.frame_period = kwargs.pop('frame_period', 80)
         self.stitches_per_frame = kwargs.pop('stitches_per_frame', 1)
         self.target_duration = kwargs.pop('target_duration', None)
-        self.scale = 3
+
+        screen_rect = wx.Display(0).ClientArea
+        self.max_width = kwargs.pop('max_width', screen_rect.GetWidth())
+        self.max_height = kwargs.pop('max_height', screen_rect.GetHeight())
+        self.scale = 1
 
         wx.Frame.__init__(self, *args, **kwargs)
 
@@ -56,7 +60,7 @@ class EmbroiderySimulator(wx.Frame):
             return
 
         self.trim_margins()
-        self.width, self.height = self.get_dimensions()
+        self.calculate_dimensions()
 
     def adjust_speed(self, duration):
         self.frame_period = 1000 * float(duration) / len(self.segments)
@@ -218,7 +222,7 @@ class EmbroiderySimulator(wx.Frame):
 
         self.segments = new_segments
 
-    def get_dimensions(self):
+    def calculate_dimensions(self):
         width = 0
         height = 0
 
@@ -226,7 +230,12 @@ class EmbroiderySimulator(wx.Frame):
             width = max(width, x)
             height = max(height, y)
 
-        return width, height
+        self.width = width
+        self.height = height
+        self.scale = min(float(self.max_width) / width, float(self.max_height) / height)
+
+        # make room for decorations and a bit of a margin
+        self.scale *= 0.95
 
     def go(self):
         self.clear()
