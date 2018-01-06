@@ -16,6 +16,7 @@ class EmbroiderySimulator(wx.Frame):
         self.frame_period = kwargs.pop('frame_period', 80)
         self.stitches_per_frame = kwargs.pop('stitches_per_frame', 1)
         self.target_duration = kwargs.pop('target_duration', None)
+        self.scale = 1
 
         wx.Frame.__init__(self, *args, **kwargs)
 
@@ -27,7 +28,7 @@ class EmbroiderySimulator(wx.Frame):
         if self.target_duration:
             self.adjust_speed(self.target_duration)
 
-        self.buffer = wx.Bitmap(self.width, self.height)
+        self.buffer = wx.Bitmap(self.width * self.scale, self.height * self.scale)
         self.dc = wx.MemoryDC()
         self.dc.SelectObject(self.buffer)
         self.canvas = wx.GraphicsContext.Create(self.dc)
@@ -163,7 +164,7 @@ class EmbroiderySimulator(wx.Frame):
 
                 if symbol == "$":
                     red, green, blue = fields[2:5]
-                    color = self.color_to_pen((int(red), int(green), int(blue)))
+                    pen = self.color_to_pen((int(red), int(green), int(blue)))
                 elif symbol == "*":
                     if command == "COLOR":
                         # change color
@@ -263,7 +264,7 @@ class EmbroiderySimulator(wx.Frame):
         decorations_width = window_width - client_width
         decorations_height = window_height - client_height
 
-        self.SetSize((self.width + decorations_width, self.height + decorations_height))
+        self.SetSize((self.width * self.scale + decorations_width, self.height * self.scale + decorations_height))
 
         e.Skip()
 
@@ -287,6 +288,11 @@ class EmbroiderySimulator(wx.Frame):
                 if self.mirror:
                     y1 = self.height - y1
                     y2 = self.height - y2
+
+                x1 = x1 * self.scale
+                y1 = y1 * self.scale
+                x2 = x2 * self.scale
+                y2 = y2 * self.scale
 
                 self.canvas.SetPen(color)
                 self.canvas.DrawLines(((x1, y1), (x2, y2)))
