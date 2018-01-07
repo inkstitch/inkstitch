@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 
+execfile('inkstitch_activate_venv.py')
+
 import os
 import sys
 import json

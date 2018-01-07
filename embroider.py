@@ -10,10 +10,11 @@
 # Embroidery file format documentation:
 # http://www.achatina.de/sewing/main/TECHNICL.HTM
 
+execfile('inkstitch_activate_venv.py')
+
 import sys
 import traceback
 sys.path.append("/usr/share/inkscape/extensions")
-import os
 import subprocess
 from copy import deepcopy
 import time
