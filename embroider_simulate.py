@@ -1,3 +1,5 @@
+execfile('inkstitch_activate_venv.py')
+
 import sys
 import os
 import numpy

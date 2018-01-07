@@ -3,6 +3,8 @@
 # Update embroidery parameters stored in XML attributes from old to new
 # format.
 
+execfile('inkstitch_activate_venv.py')
+
 import sys
 sys.path.append("/usr/share/inkscape/extensions")
 import os
