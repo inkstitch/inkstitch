@@ -4,3 +4,4 @@ networkx
 shapely
 lxml
 appdirs
+numpy
