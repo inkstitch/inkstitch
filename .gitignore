@@ -1,2 +1,7 @@
 .*.swp
 *.pyc
+*.spec
+*.zip
+*.tar.gz
+dist/
+build/
