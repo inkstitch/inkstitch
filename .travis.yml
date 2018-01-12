@@ -1,10 +1,12 @@
 language: python
 virtualenv:
+  # We need this for PyGObject.
   system_site_packages: true
 sudo: required
 addons:
   apt:
     packages:
+    # These dependencies are for wxPython:
     - dpkg-dev
     - build-essential
     - python2.7-dev
@@ -18,7 +20,13 @@ addons:
     - libsm-dev
     - libgtk-3-dev
     - libwebkitgtk-3.0-dev
+
+    # for shapely
     - libgeos-dev
+
+    # This is the same as the pypi module PyGObject.  We can't just do
+    # "pip install PyGObject" because it depends on a version of
+    # libgirepository1.0-dev that doesn't exist in Trusty.
     - python-gi
     - python-gi-cairo
 cache: pip
@@ -26,12 +34,22 @@ python:
 - 2.7
 install:
 - dpkg -S libgio
+
+# For some bizarre reason, this build has been failing due to the
+# key for the mongodb repo expiring.  Maybe Travis includes the
+# mongodb repo by default...?
 - sudo rm /etc/apt/sources.list.d/mongodb*.list
+
+# Need inkscape >=0.92 for inkex.py and friends
 - sudo add-apt-repository --yes ppa:inkscape.dev/stable
 - sudo apt-get update
-- sudo apt-get install inkscape python-gi
-- pip install -U pip
+- sudo apt-get install inkscape
+
+# We can't use the shapely wheel because it includes the geos
+# library but with a weird file name.  Details:
+# https://github.com/pyinstaller/pyinstaller/blob/61b1c75c2b0469b32d114298a63bf60b8d597e37/PyInstaller/hooks/hook-shapely.py#L34
 - pip install --no-binary shapely -r requirements.txt
+
 - pip install flake8
 - pip install pyinstaller
 before_script:
