@@ -1,7 +1,7 @@
 EXTENSIONS:=embroider embroider_params embroider_simulate embroider_update
 
 # This gets the branch name or the name of the tag
-VERSION:=$(git describe --tags --exact-match 2>&1 || git symbolic-ref -q --short HEAD)
+VERSION:=$(shell git describe --tags --exact-match > /dev/null 2>&1 || git symbolic-ref -q --short HEAD)
 
 TARBALL:=inkstitch-$(VERSION)-$(shell uname)-$(shell uname -m).tar.gz
 SITE_PACKAGES:=$(shell python -c "import os; print(os.path.dirname(os.__file__) + '/site-packages')")
