@@ -40,7 +40,7 @@ https://github.com/pyinstaller/pyinstaller/blob/61b1c75c2b0469b32d114298a63bf60b
 		\https://github.com/pyinstaller/pyinstaller/blob/61b1c75c2b0469b32d114298a63bf60b8d597e37/PyInstaller/hooks/hook-shapely.py#L34
 		`# Inkscape doesn't let us run native binaries as extensions(?!).  Instead we   ` \
 		`# add this stub script which executes the binaries that pyinstaller creates.   ` \https://github.com/pyinstaller/pyinstaller/blob/61b1c75c2b0469b32d114298a63bf60b8d597e37/PyInstaller/hooks/hook-shapely.py#L34
-        cp stub.py dist/$${extension}.py; \
+		cp stub.py dist/$${extension}.py; \
 	done;
 	cp *.inx dist
 	cd dist; tar zcf ../$(TARBALL) *
