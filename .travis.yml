@@ -18,8 +18,6 @@ cache: pip
 install:
   - |
     if [ -n "$BUILD" ]; then
-      dpkg -S libgio
-
       # For some bizarre reason, this build has been failing due to the
       # key for the mongodb repo expiring.  Maybe Travis includes the
       # mongodb repo by default...?
@@ -33,10 +31,13 @@ install:
       # for shapely
       sudo apt-get install libgeos-dev
 
+      # for wxPython
+      sudo apt-get install glib-networking
+
       # This is the same as the pypi module PyGObject.  We can't just do
       # "pip install PyGObject" because it depends on a version of
       # libgirepository1.0-dev that doesn't exist in Trusty.
-      apt-get install python-gi python-gi-cairo
+      sudo apt-get install python-gi python-gi-cairo
     
       # wxPython doen't publish linux wheels in pypi
       wget https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-14.04/wxPython-4.0.0b2-cp27-cp27mu-linux_x86_64.whl
