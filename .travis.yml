@@ -51,6 +51,7 @@ install:
       pip install flake8
     fi
 before_script:
+  - "echo LINT: $LINT BUILD: $BUILD"
 script:
   - |
     if [ -n "$LINT" ]; then
