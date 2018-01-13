@@ -82,5 +82,6 @@ deploy:
     target_commitish: $TRAVIS_BRANCH
     overwrite: true
     on:
+      all_branches: true
       condition: '$TRAVIS_BRANCH != "master"'
 
