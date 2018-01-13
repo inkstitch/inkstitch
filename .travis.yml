@@ -37,7 +37,7 @@ install:
       # This is the same as the pypi module PyGObject.  We can't just do
       # "pip install PyGObject" because it depends on a version of
       # libgirepository1.0-dev that doesn't exist in Trusty.
-      sudo apt-get install python-gi python-gi-cairo
+      sudo apt-get install python-gi python-gi-cairo libgirepository-gir2.0
     
       # wxPython doen't publish linux wheels in pypi
       wget https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-14.04/wxPython-4.0.0b2-cp27-cp27mu-linux_x86_64.whl
