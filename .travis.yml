@@ -2,7 +2,8 @@ language: python
 virtualenv:
   # We need this for PyGObject.
   system_site_packages: true
-jobs:
+matrix:
+  include:
   # always lint on every commit
   - python: 2.7
     env: LINT=true
