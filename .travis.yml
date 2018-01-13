@@ -14,49 +14,51 @@ jobs:
     if: tag IS present
 cache: pip
 install:
-- if [ -n "$BUILD" ]; then
-    dpkg -S libgio;
+  - |
+    if [ -n "$BUILD" ]; then
+      dpkg -S libgio
 
-    # For some bizarre reason, this build has been failing due to the
-    # key for the mongodb repo expiring.  Maybe Travis includes the
-    # mongodb repo by default...?
-    sudo rm /etc/apt/sources.list.d/mongodb*.list;
+      # For some bizarre reason, this build has been failing due to the
+      # key for the mongodb repo expiring.  Maybe Travis includes the
+      # mongodb repo by default...?
+      sudo rm /etc/apt/sources.list.d/mongodb*.list
 
-    # Need inkscape >=0.92 for inkex.py and friends
-    sudo add-apt-repository --yes ppa:inkscape.dev/stable;
-    sudo apt-get update;
-    sudo apt-get install inkscape;
+      # Need inkscape >=0.92 for inkex.py and friends
+      sudo add-apt-repository --yes ppa:inkscape.dev/stable
+      sudo apt-get update
+      sudo apt-get install inkscape
 
-    # for shapely
-    sudo apt-get install libgeos-dev
+      # for shapely
+      sudo apt-get install libgeos-dev
 
-    # This is the same as the pypi module PyGObject.  We can't just do
-    # "pip install PyGObject" because it depends on a version of
-    # libgirepository1.0-dev that doesn't exist in Trusty.
-    apt-get install python-gi python-gi-cairo
+      # This is the same as the pypi module PyGObject.  We can't just do
+      # "pip install PyGObject" because it depends on a version of
+      # libgirepository1.0-dev that doesn't exist in Trusty.
+      apt-get install python-gi python-gi-cairo
     
-    # wxPython doen't publish linux wheels in pypi
-    wget https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-14.04/wxPython-4.0.0b2-cp27-cp27mu-linux_x86_64.whl;
-    pip install wxPython-4.0.0b2-cp27-cp27mu-linux_x86_64.whl;
+      # wxPython doen't publish linux wheels in pypi
+      wget https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-14.04/wxPython-4.0.0b2-cp27-cp27mu-linux_x86_64.whl
+      pip install wxPython-4.0.0b2-cp27-cp27mu-linux_x86_64.whl
         
-    # We can't use the shapely wheel because it includes the geos
-    # library but with a weird file name.  Details:
-    # https://github.com/pyinstaller/pyinstaller/blob/61b1c75c2b0469b32d114298a63bf60b8d597e37/PyInstaller/hooks/hook-shapely.py#L34
-    pip install --no-binary shapely -r requirements.txt
+      # We can't use the shapely wheel because it includes the geos
+      # library but with a weird file name.  Details:
+      # https://github.com/pyinstaller/pyinstaller/blob/61b1c75c2b0469b32d114298a63bf60b8d597e37/PyInstaller/hooks/hook-shapely.py#L34
+      pip install --no-binary shapely -r requirements.txt
     
-    pip install pyinstaller
-  else
-    pip install flake8;
-  fi
+      pip install pyinstaller
+    else
+      pip install flake8
+    fi
 before_script:
 script:
-  - if [ -n "$LINT" ]; then
-      flake8 . --count --select=E901,E999,F821,F822,F823 --show-source --statistics;
-      flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics;
+  - |
+    if [ -n "$LINT" ]; then
+      flake8 . --count --select=E901,E999,F821,F822,F823 --show-source --statistics
+      flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     else if [ -n "$BUILD" ]; then
-      make dist;
+      make dist
     else
-      true;
+      true
     fi
 deploy:
   - provider: releases
