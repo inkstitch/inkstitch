@@ -57,6 +57,9 @@ install:
 
 - pip install flake8
 - pip install pyinstaller
+
+# github releases CLI
+- pip install release-me
 before_script:
 - flake8 . --count --select=E901,E999,F821,F822,F823 --show-source --statistics
 - flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
@@ -65,6 +68,9 @@ script:
 notifications:
   on_success: change
   on_failure: change
+before_deploy:
+  # clear the release for this branch so we can create a new one
+  - '[[ $TRAVIS_BRANCH != "master" ]] && releaseme delete -r lexelby/inkstitch -t devel-$TRAVIS_BRANCH; true'
 deploy:
   - provider: releases
     api_key:
