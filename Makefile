@@ -8,7 +8,7 @@ dist: distclean
 	for extension in $(EXTENSIONS); do \
         \
 		`# without this, it seems that pyinstaller can't find all of wxpython's shared libraries` \
-		LD_LIBRARY_PATH="$(SITE_PACKAGES)/wx" \
+		export LD_LIBRARY_PATH="$(SITE_PACKAGES)/wx"; \
 		pyinstaller \
 			\
 			`# pyinstaller misses these two` \
@@ -31,7 +31,7 @@ dist: distclean
 		\
 		`# By default, pyinstaller will treat each of ink/stitch's extensions           ` \
 		`# separately.  This means it packages a lot of the same shared libraries (like ` \
-        `# wxPython) multiple times.  Turns out that we can just copy the contents of   ` \
+		`# wxPython) multiple times.  Turns out that we can just copy the contents of   ` \
 		`# the directories pyinstaller creates into one and it works fine, eliminating  ` \
 		`# the duplication.  This significantly decreases the size of the inkstitch     ` \
 		`# tarball/zip.                                                                 ` \
