@@ -6,6 +6,7 @@ jobs:
   # always lint on every commit
   - python: 2.7
     env: LINT=true
+    sudo: false
 
   # only bother to build if we're going to deploy a release
   - python: 2.7
