@@ -1,7 +1,7 @@
 EXTENSIONS:=embroider embroider_params embroider_simulate embroider_update
 
 # This gets the branch name or the name of the tag
-VERSION:=$(shell git describe --tags --exact-match > /dev/null 2>&1 || git symbolic-ref -q --short HEAD)
+VERSION:=$(TRAVIS_TAG)
 OS:=$(shell uname)
 ARCH:=$(shell uname -m)
 
