@@ -64,6 +64,9 @@ script:
     else
       true
     fi
+notifications:
+  on_success: never
+  on_failure: never
 deploy:
   - provider: releases
     api_key:
