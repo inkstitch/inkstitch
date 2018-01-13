@@ -1,14 +1,14 @@
 EXTENSIONS:=embroider embroider_params embroider_simulate embroider_update
 VERSION:=$(shell git tag -l | grep ^v | tail -n 1)
 TARBALL:=inkstitch-$(VERSION)-$(shell uname)-$(shell uname -m).tar.gz
-WX_PATH:=$(shell python -c 'import wx; print wx.__path__[0]')
+SITE_PACKAGES:=$(shell python -c "import os; print(os.path.dirname(os.__file__) + '/site-packages')")
 
-dist: distcleanhttps://github.com/pyinstaller/pyinstaller/blob/61b1c75c2b0469b32d114298a63bf60b8d597e37/PyInstaller/hooks/hook-shapely.py#L34
+dist: distclean
 	mkdir -p dist/inkstitch/bin
 	for extension in $(EXTENSIONS); do \
         \
 		`# without this, it seems that pyinstaller can't find all of wxpython's shared libraries` \
-		LD_LIBRARY_PATH="$WX_PATH" \
+		LD_LIBRARY_PATH="$(SITE_PACKAGES)/wx" \
 		pyinstaller \
 			\
 			`# pyinstaller misses these two` \
