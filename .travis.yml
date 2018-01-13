@@ -68,9 +68,6 @@ script:
 notifications:
   on_success: change
   on_failure: change
-before_deploy:
-  # clear the release for this branch so we can create a new one
-  - '[[ $TRAVIS_BRANCH != "master" ]] && releaseme delete -r lexelby/inkstitch -t devel-$TRAVIS_BRANCH; true'
 deploy:
   - provider: releases
     api_key:
@@ -81,6 +78,7 @@ deploy:
     skip_cleanup: true
     on:
       tag: true
+      branch: master
       condition: "$TRAVIS_TAG =~ ^v[0-9]"
   - provider: releases
     api_key:
@@ -91,10 +89,7 @@ deploy:
     skip_cleanup: true
     prerelease: true
     name: "development build of branch $TRAVIS_BRANCH"
-    tag_name: "devel-$TRAVIS_BRANCH"
-    target_commitish: $TRAVIS_BRANCH
-    overwrite: true
     on:
+      tag: true
       all_branches: true
-      condition: '$TRAVIS_BRANCH != "master"'
-
+      condition: '$TRAVIS_TAG =~ ^v[0-9]+-pre'
