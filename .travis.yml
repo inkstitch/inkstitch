@@ -91,4 +91,4 @@ deploy:
     on:
       tag: true
       all_branches: true
-      condition: '! "$TRAVIS_TAG" =~ ^v[0-9.]+$'
+      condition: '"$TRAVIS_TAG" && ! "$TRAVIS_TAG" =~ ^v[0-9.]+$'
