@@ -13,7 +13,7 @@ matrix:
   - python: 2.7
     sudo: required
     env: BUILD=true
-    if: tag =~ ^v
+    if: tag is present
 cache: pip
 install:
   - |
@@ -91,4 +91,4 @@ deploy:
     on:
       tag: true
       all_branches: true
-      condition: "$TRAVIS_TAG =~ ^v[0-9.]+-pre"
+      condition: '! "$TRAVIS_TAG" =~ ^v[0-9.]+$'
