@@ -78,7 +78,7 @@ deploy:
     on:
       tags: true
       all_branches: true
-      condition: '$TRAVIS_TAG =~ ^v[0-9.]+$'
+      condition: '(-n $BUILD) && ($TRAVIS_TAG =~ ^v[0-9.]+$)'
   - provider: releases
     api_key:
       secure: pYORXHcn0hPcMIo6+brVE+wYce272H4COp1iXmPvBUz64MAX0Bdm5UX6cTAvzwNd9Hhi2nnWebaoS5AiPelbZgQoZJXsy4whrp7+ZrkQZkhGcqsSqXN6j5k5xdGeFX4k37T7eGkFyajTAdIWB3locHcikKN6N6PnyCPxGD/xuxiD1fJSVKGqBOptBYsqFtMddKy3aT0nmRG/2pMElq2Fcxozo+rR00j2/3npVoh2VTRt2L0S/DrX3zKT4vi2+AQ1MmKEAfF/YxCPybJGPe+wHz4egs0+PIJYb7pSZL8Ja81IS4v5cmmy/r2la815amyRyXwZXbJwBX8h9wPa7dwGStMvJdUidlqaXjKMsWba3QbD6YHOi0+UOFvWeubCDqXKhqxVAvZyCvXCx2WPlBfGWsJDHK/j2pU5Iul5Jz2Zsa3PLYA3UeGWVy081SZNuklNdccKGTokntFnR3pGM/jDN/JK7RkvuPM5qQqn3gludQnrdo/Kw0I77hAEDasgUyO8cweSfyqOXBN0dkbLjfBVRslRRRuC5fV9MIqFvLclaPfMlxsSTdDO4MGJRsF7VvFySBdh0xK7Rm+Vb9jYjCR3FV+b8TRsnY0eD2eFM+rmQt/OYdNIs6emVrTXCcAIzq4JoKZdFDIDDRsiztGSjIBB0+rSXmiUMtCiUo5GS/7zxGs=
@@ -91,4 +91,4 @@ deploy:
     on:
       tags: true
       all_branches: true
-      condition: '! ("$TRAVIS_TAG" =~ ^v[0-9.]+$)'
+      condition: '(-n $BUILD) && ! ("$TRAVIS_TAG" =~ ^v[0-9.]+$)'
