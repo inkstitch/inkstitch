@@ -14,19 +14,20 @@ So I wrote one.
 
 Okay, not really.  I'm pretty terrible at GUIs, but I found this nifty inkscape extension that was created and hacked on by a couple of other folks.  It was pretty rudimentary, but it got the job done, and more importantly, it was super hackable.  I hacked the hell out of it, and at this point **ink/stitch is a viable entry-level machine embroidery design tool**.
 
-## "Quick" Setup On Ubuntu 16.04 (and derivative Linux distributions)
+## Quick Setup On Ubuntu 14.04 or later (and derivative Linux distributions)
 
-Download the [extension's archive file](https://github.com/lexelby/inkstitch/archive/master.zip) and unpack the zip archive. Then, on a terminal, run the installation (and update) script from the archive's `bin` directory by first changing into that directory with `cd <path_to_the_archive>/inkstitch-master/bin` and then entering the command `sh install_ink_embroidery_Ubuntu.sh`. The script will ask for your password to be able to install new software, remove any Inkscape snap packages that may be installed, and to update Inkscape to the current version. Intermittently, it will require you to confirm a step by hitting Enter, or typing in 'y' or 'yes'. Restart Inkscape after the script has executed to see the changes take effect. You can also run the script again when you later want to update the extension (and Inkscape).
+Download the [latest release](https://github.com/lexelby/inkstitch/releases/latest), the `inkscape-*.tar.gz` file.  Decompress this archive directly into `~/.config/inkscape/extensions`, for example:
 
-To also install the optional conversion program, run `sh install_libembroidery-convert.sh` in the same directory. This script will also ask your password in order to be able to install the necessary dependencies.
+```
+$ cd ~/.config/inkscape/extensions
+$ tar zxf ~/Downloads/inkstitch-v1.0.0-Linux-x86_64.tar.gz
+```
 
-Not tested with Ubuntu versions other than 16.04. If you try it out, please let us know how it went.
+That's it!  All python libraries and external dependencies are bundled (using the excellent [pyinstaller](http://www.pyinstaller.org)), so you shouldn't need to set anything else up.  Just restart Inkscape and the extension should be ready to go.
 
 Continue reading in the "Usage" section.
 
 ## Manual Setup
-
-To use this tool, you're going to need to set it up.  It's an inkscape extension written as a Python file.  Once you get it working, you'll need to learn how to design vectors in the way that ink/stitch expects, and then you can generate your design files.
 
 ### Inkscape
 First, install Inkscape if you don't have it.  I highly recommend version 0.92 or greater, which has a really key feature: the Objects panel.  This gives you a heirarchical list of objects in your SVG file, listed in their stacking order.  This is really important because the stacking order dictates the order that the shapes will be sewn in.
