@@ -2011,8 +2011,7 @@ class Embroider(inkex.Effect):
             patches.extend(element.to_patches(last_patch))
 
         stitches = patches_to_stitches(patches, self.options.collapse_length_mm * PIXELS_PER_MM)
-        emb = PyEmb.Embroidery(stitches, PIXELS_PER_MM)
-        emb.export(self.get_output_path(), self.options.output_format)
+        PyEmb.write_embroidery_file(self.get_output_path(), stitches)
 
         new_layer = inkex.etree.SubElement(self.document.getroot(), SVG_GROUP_TAG, {})
         new_layer.set('id', self.uniqueId("embroidery"))

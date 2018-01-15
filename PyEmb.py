@@ -3,7 +3,10 @@
 
 import math
 import sys
-from copy import deepcopy
+sys.path.append('Embroidermodder/experimental/python/binding')
+import libembroidery
+
+PIXELS_PER_MM = 96 / 25.4
 
 try:
     from functools import lru_cache
@@ -76,9 +79,77 @@ class Point:
 
 
 class Stitch(Point):
-    def __init__(self, x, y, color=None, jump=False, stop=False):
+    def __init__(self, x, y, color=None, jump=False, stop=False, trim=False):
         self.x = x
         self.y = y
         self.color = color
         self.jump = jump
+        self.trim = trim
         self.stop = stop
+
+def make_thread(color):
+    # strip off the leading "#"
+    if color.startswith("#"):
+        color = color[1:]
+
+    thread = libembroidery.EmbThread()
+    thread.color = libembroidery.embColor_fromHexStr(color)
+
+    thread.description = color
+    thread.catalogNumber = ""
+
+    return thread
+
+def add_thread(pattern, thread):
+    """Add a thread to a pattern and return the thread's index"""
+
+    libembroidery.embPattern_addThread(pattern, thread)
+
+    return libembroidery.embThreadList_count(pattern.threadList) - 1
+
+def get_flags(stitch):
+    flags = 0
+
+    if stitch.jump:
+        flags |= libembroidery.JUMP
+
+    if stitch.trim:
+        flags |= libembroidery.TRIM
+
+    if stitch.stop:
+        flags |= libembroidery.STOP
+
+    return flags
+
+def write_embroidery_file(file_path, stitches):
+    pattern = libembroidery.embPattern_create()
+    threads = {}
+
+    last_color = None
+
+    for stitch in stitches:
+        if stitch.color != last_color:
+            if stitch.color not in threads:
+                thread = make_thread(stitch.color)
+                thread_index = add_thread(pattern, thread)
+                threads[stitch.color] = thread_index
+            else:
+                thread_index = threads[stitch.color]
+
+            libembroidery.embPattern_changeColor(pattern, thread_index)
+            last_color = stitch.color
+
+
+        flags = get_flags(stitch)
+
+        x = stitch.x / PIXELS_PER_MM
+        y = stitch.y / PIXELS_PER_MM
+
+        libembroidery.embPattern_addStitchAbs(pattern, x, y, flags, 0)
+
+        if flags & libembroidery.JUMP:
+            # I'm not sure this is right, but this is how the old version did it.
+            libembroidery.embPattern_addStitchAbs(pattern, x, y, flags & ~libembroidery.JUMP, 0)
+
+    libembroidery.embPattern_addStitchAbs(pattern, 0, 0, libembroidery.END, 0)
+    libembroidery.embPattern_write(pattern, file_path)

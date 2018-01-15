@@ -18,6 +18,9 @@ pyinstaller_args+="--hidden-import gi.repository.Gtk "
 # This lets pyinstaller see inkex.py, etc.
 pyinstaller_args+="-p /usr/share/inkscape/extensions "
 
+# for libembroidery
+pyinstaller_args+="-p Embroidermodder/experiments/python/binding "
+
 mkdir -p dist/inkstitch/bin
 for extension in "$@"; do
 	# without the LD_LIBRARY_PATH, it seems that pyinstaller can't find all of
