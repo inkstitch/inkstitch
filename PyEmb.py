@@ -142,14 +142,12 @@ def write_embroidery_file(file_path, stitches):
 
         flags = get_flags(stitch)
 
-        x = stitch.x / PIXELS_PER_MM
-        y = stitch.y / PIXELS_PER_MM
-
-        libembroidery.embPattern_addStitchAbs(pattern, x, y, flags, 0)
+        libembroidery.embPattern_addStitchAbs(pattern, stitch.x, -stitch.y, flags, 0)
 
         if flags & libembroidery.JUMP:
             # I'm not sure this is right, but this is how the old version did it.
-            libembroidery.embPattern_addStitchAbs(pattern, x, y, flags & ~libembroidery.JUMP, 0)
+            libembroidery.embPattern_addStitchAbs(pattern, stitch.x, -stitch.y, flags & ~libembroidery.JUMP, 0)
 
+    libembroidery.embPattern_scale(pattern, 1/PIXELS_PER_MM)
     libembroidery.embPattern_addStitchAbs(pattern, 0, 0, libembroidery.END, 0)
     libembroidery.embPattern_write(pattern, file_path)
