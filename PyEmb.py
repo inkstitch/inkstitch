@@ -76,12 +76,12 @@ class Point:
 
 
 class Stitch(Point):
-
-    def __init__(self, x, y, color=None, jump_stitch=False):
-        Point.__init__(self, x, y)
+    def __init__(self, x, y, color=None, jump=False, stop=False):
+        self.x = x
+        self.y = y
         self.color = color
-        self.jump_stitch = jump_stitch
-
+        self.jump = jump
+        self.stop = stop
 
 class Embroidery:
 
