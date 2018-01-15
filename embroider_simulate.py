@@ -185,6 +185,10 @@ class EmbroiderySimulator(wx.Frame):
                         x, y = fields[2:]
                         new_pos = (float(x) * PIXELS_PER_MM, float(y) * PIXELS_PER_MM)
 
+                        if not segments and new_pos == (0.0, 0.0):
+                            # libembroidery likes to throw an extra JUMP in at the start
+                            continue
+
                         if not cut:
                             segments.append(((pos, new_pos), pen))
 
