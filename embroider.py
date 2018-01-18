@@ -1939,10 +1939,9 @@ class Embroider(inkex.Effect):
                                      dest="hide_layers", default="true",
                                      help="Hide all other layers when the embroidery layer is generated")
         self.OptionParser.add_option("-O", "--output_format",
-                                     action="store", type="choice",
-                                     choices=["melco", "csv", "gcode"],
-                                     dest="output_format", default="melco",
-                                     help="File output format")
+                                     action="store", type="string",
+                                     dest="output_format", default="csv",
+                                     help="Output file extenstion (default: csv)")
         self.OptionParser.add_option("-P", "--path",
                                      action="store", type="string",
                                      dest="path", default=".",
@@ -1970,7 +1969,7 @@ class Embroider(inkex.Effect):
             output_path = os.path.join(self.options.path, self.options.output_file)
         else:
             svg_filename = self.document.getroot().get(inkex.addNS('docname', 'sodipodi'), "embroidery.svg")
-            csv_filename = svg_filename.replace('.svg', '.csv')
+            csv_filename = svg_filename.replace('.svg', '.%s' % self.options.output_format)
             output_path = os.path.join(self.options.path, csv_filename)
 
         def add_suffix(path, suffix):
