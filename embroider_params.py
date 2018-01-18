@@ -673,10 +673,13 @@ class EmbroiderParams(inkex.Effect):
         return values
 
     def group_params(self, params):
+        def by_group_and_sort_index(param):
+            return param.group, param.sort_index
+
         def by_group(param):
             return param.group
 
-        return groupby(sorted(params, key=by_group), by_group)
+        return groupby(sorted(params, key=by_group_and_sort_index), by_group)
 
     def create_tabs(self, parent):
         tabs = []

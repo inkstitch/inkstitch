@@ -313,12 +313,22 @@ class EmbroideryElement(object):
         return flattened
 
     @property
-    @param('trim_after', 'TRIM after', tooltip='Trim thread after this object (for supported machines and file formats)', type='boolean', default=True)
+    @param('trim_after',
+           'TRIM after',
+           tooltip='Trim thread after this object (for supported machines and file formats)',
+           type='boolean',
+           default=False,
+           sort_index=1000)
     def trim_after(self):
         return self.get_boolean_param('trim_after', True)
 
     @property
-    @param('stop_after', 'STOP after', tooltip='Add STOP instruction after this object (for supported machines and file formats)', type='boolean', default=True)
+    @param('stop_after',
+           'STOP after',
+           tooltip='Add STOP instruction after this object (for supported machines and file formats)',
+           type='boolean',
+           default=False,
+           sort_index=1000)
     def stop_after(self):
         return self.get_boolean_param('stop_after', True)
 
