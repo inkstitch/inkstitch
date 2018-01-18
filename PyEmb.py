@@ -2,8 +2,6 @@
 # http://www.achatina.de/sewing/main/TECHNICL.HTM
 
 import math
-import sys
-sys.path.append('Embroidermodder/experimental/python/binding')
 import libembroidery
 
 PIXELS_PER_MM = 96 / 25.4
