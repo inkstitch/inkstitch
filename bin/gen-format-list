@@ -13,7 +13,7 @@ while(curFormat):
     writerState = embFormat_writerState(curFormat)
 
     if writerState.strip() and embFormat_type(curFormat) != EMBFORMAT_OBJECTONLY:
-        print '<_option value="%s">%s(%s)</_option>' % (extension, description, extension.upper())
+        print '<_option value="%s">%s(%s)</_option>' % (extension[1:], description, extension.upper())
 
     curFormat = curFormat.next
 
