@@ -51,7 +51,7 @@ EMBROIDERABLE_TAGS = (SVG_PATH_TAG, SVG_POLYLINE_TAG)
 PIXELS_PER_MM = 96 / 25.4
 
 class Param(object):
-    def __init__(self, name, description, unit=None, values=[], type=None, group=None, inverse=False, default=None, tooltip=None, sort_index=0):
+    def __init__(self, name, description, unit=None, values=[], type=None, group=None, inverse=False, default=None, tooltip=None):
         self.name = name
         self.description = description
         self.unit = unit
@@ -61,7 +61,6 @@ class Param(object):
         self.inverse = inverse
         self.default = default
         self.tooltip = tooltip
-        self.sort_index = sort_index
 
     def __repr__(self):
         return "Param(%s)" % vars(self)
@@ -316,9 +315,9 @@ class EmbroideryElement(object):
     @param('trim_after',
            'TRIM after',
            tooltip='Trim thread after this object (for supported machines and file formats)',
+           group="Additional Settings",
            type='boolean',
-           default=False,
-           sort_index=1000)
+           default=False)
     def trim_after(self):
         return self.get_boolean_param('trim_after', True)
 
@@ -326,14 +325,23 @@ class EmbroideryElement(object):
     @param('stop_after',
            'STOP after',
            tooltip='Add STOP instruction after this object (for supported machines and file formats)',
+           group="Additional Settings",
            type='boolean',
-           default=False,
-           sort_index=1000)
+           default=False)
     def stop_after(self):
         return self.get_boolean_param('stop_after', True)
 
     def to_patches(self, last_patch):
-        raise NotImplementedError("%s must implement to_path()" % self.__class__.__name__)
+        raise NotImplementedError("%s must implement to_patches()" % self.__class__.__name__)
+
+    def embroider(self, last_patch):
+        patches = self.to_patches(last_patch)
+
+        for patch in patches:
+            patch.trim_after = self.trim_after
+            patch.stop_after = self.stop_after
+
+        return patches
 
     def fatal(self, message):
         print >> sys.stderr, "error:", message
@@ -1849,6 +1857,10 @@ def patches_to_stitches(patch_list, collapse_len_px=0):
             last_stitch = stitch
             last_color = patch.color
 
+        if stitches:
+            stitches[-1].trim = patch.trim_after
+            stitches[-1].stop = patch.stop_after
+
     return stitches
 
 def stitches_to_polylines(stitches):
@@ -2030,7 +2042,7 @@ class Embroider(inkex.Effect):
             else:
                 last_patch = None
 
-            patches.extend(element.to_patches(last_patch))
+            patches.extend(element.embroider(last_patch))
 
         stitches = patches_to_stitches(patches, self.options.collapse_length_mm * PIXELS_PER_MM)
         PyEmb.write_embroidery_file(self.get_output_path(), stitches)
