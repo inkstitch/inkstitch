@@ -282,7 +282,10 @@ class ParamsTab(ScrolledPanel):
             box.Add(self.toggle_checkbox, proportion=0, flag=wx.BOTTOM, border=10)
 
         for param in self.params:
-            self.settings_grid.Add(wx.StaticText(self, label=param.description), proportion=1, flag=wx.EXPAND|wx.RIGHT, border=40)
+            description = wx.StaticText(self, label=param.description)
+            description.SetToolTip(param.tooltip)
+
+            self.settings_grid.Add(description, proportion=1, flag=wx.EXPAND|wx.RIGHT, border=40)
 
             if param.type == 'boolean':
 
