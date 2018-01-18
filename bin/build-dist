@@ -19,7 +19,7 @@ pyinstaller_args+="--hidden-import gi.repository.Gtk "
 pyinstaller_args+="-p /usr/share/inkscape/extensions "
 
 # for libembroidery
-pyinstaller_args+="-p embroidermodder/experiments/python/binding "
+pyinstaller_args+="-p embroidermodder/experimental/python/binding "
 
 mkdir -p dist/inkstitch/bin
 for extension in "$@"; do
