@@ -35,7 +35,7 @@ install:
       sudo apt-get install glib-networking
 
       # for embroidermodder/libembroidery
-      sudo apt-get install git swig python-dev
+      sudo apt-get install swig python-dev
 
       # This is the same as the pypi module PyGObject.  We can't just do
       # "pip install PyGObject" because it depends on a version of
