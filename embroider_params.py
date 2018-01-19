@@ -107,7 +107,6 @@ class ParamsTab(ScrolledPanel):
             self.param_inputs[self.toggle.name] = self.toggle_checkbox
         else:
             self.toggle = None
-            self.toggle_checkbox = None
 
         self.settings_grid = wx.FlexGridSizer(rows=0, cols=3, hgap=10, vgap=10)
         self.settings_grid.AddGrowableCol(0, 1)
@@ -136,10 +135,7 @@ class ParamsTab(ScrolledPanel):
         return self.parent_tab is not None
 
     def enabled(self):
-        if self.toggle_checkbox:
-            return self.toggle_checkbox.IsChecked()
-        else:
-            return True
+        return self.toggle_checkbox.IsChecked()
 
     def update_toggle_state(self, event=None, notify_pair=True):
         enable = self.enabled()
@@ -677,10 +673,13 @@ class EmbroiderParams(inkex.Effect):
         return values
 
     def group_params(self, params):
+        def by_group_and_sort_index(param):
+            return param.group, param.sort_index
+
         def by_group(param):
             return param.group
 
-        return groupby(sorted(params, key=by_group), by_group)
+        return groupby(sorted(params, key=by_group_and_sort_index), by_group)
 
     def create_tabs(self, parent):
         tabs = []
@@ -709,7 +708,7 @@ class EmbroiderParams(inkex.Effect):
         for tab in tabs:
             if tab.toggle and tab.toggle.inverse:
                 for other_tab in tabs:
-                    if other_tab != tab and other_tab.toggle and other_tab.toggle.name == tab.toggle.name:
+                    if other_tab != tab and other_tab.toggle.name == tab.toggle.name:
                         tab.pair(other_tab)
                         other_tab.pair(tab)
 

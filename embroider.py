@@ -51,7 +51,7 @@ EMBROIDERABLE_TAGS = (SVG_PATH_TAG, SVG_POLYLINE_TAG)
 PIXELS_PER_MM = 96 / 25.4
 
 class Param(object):
-    def __init__(self, name, description, unit=None, values=[], type=None, group=None, inverse=False, default=None, tooltip=None):
+    def __init__(self, name, description, unit=None, values=[], type=None, group=None, inverse=False, default=None, tooltip=None, sort_index=0):
         self.name = name
         self.description = description
         self.unit = unit
@@ -61,6 +61,7 @@ class Param(object):
         self.inverse = inverse
         self.default = default
         self.tooltip = tooltip
+        self.sort_index = sort_index
 
     def __repr__(self):
         return "Param(%s)" % vars(self)
@@ -315,9 +316,9 @@ class EmbroideryElement(object):
     @param('trim_after',
            'TRIM after',
            tooltip='Trim thread after this object (for supported machines and file formats)',
-           group="Additional Settings",
            type='boolean',
-           default=False)
+           default=False,
+           sort_index=1000)
     def trim_after(self):
         return self.get_boolean_param('trim_after', True)
 
@@ -325,9 +326,9 @@ class EmbroideryElement(object):
     @param('stop_after',
            'STOP after',
            tooltip='Add STOP instruction after this object (for supported machines and file formats)',
-           group="Additional Settings",
            type='boolean',
-           default=False)
+           default=False,
+           sort_index=1000)
     def stop_after(self):
         return self.get_boolean_param('stop_after', True)
 
