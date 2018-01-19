@@ -1227,7 +1227,7 @@ class Stroke(EmbroideryElement):
         return self.get_float_param("zigzag_spacing_mm")
 
     @property
-    @param('repeats', 'Repeats', type='int')
+    @param('repeats', 'Repeats', type='int', default="1")
     def repeats(self):
         return self.get_int_param("repeats", 1)
 
