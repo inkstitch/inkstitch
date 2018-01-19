@@ -160,7 +160,6 @@ class ParamsTab(ScrolledPanel):
 
         if self.enabled() != new_value:
             self.set_toggle_state(not value)
-            self.toggle_checkbox.changed = True
             self.update_toggle_state(notify_pair=False)
 
     def dependent_enable(self, enable):
@@ -169,11 +168,11 @@ class ParamsTab(ScrolledPanel):
         else:
             self.set_toggle_state(False)
             self.toggle_checkbox.Disable()
-            self.toggle_checkbox.changed = True
             self.update_toggle_state()
 
     def set_toggle_state(self, value):
         self.toggle_checkbox.SetValue(value)
+        self.changed_inputs.add(self.toggle_checkbox)
 
     def get_values(self):
         values = {}
@@ -189,7 +188,7 @@ class ParamsTab(ScrolledPanel):
                 return values
 
         for name, input in self.param_inputs.iteritems():
-            if input in self.changed_inputs:
+            if input in self.changed_inputs and input != self.toggle_checkbox:
                 values[name] = input.GetValue()
 
         return values
@@ -197,7 +196,7 @@ class ParamsTab(ScrolledPanel):
     def apply(self):
         values = self.get_values()
         for node in self.nodes:
-            #print >> sys.stderr, node.id, values
+            # print >> sys.stderr, "apply: ", self.name, node.id, values
             for name, value in values.iteritems():
                 node.set_param(name, value)
 
