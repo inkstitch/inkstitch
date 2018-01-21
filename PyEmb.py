@@ -85,6 +85,9 @@ class Stitch(Point):
         self.trim = trim
         self.stop = stop
 
+    def __repr__(self):
+        return "Stitch(%s, %s, %s, %s, %s, %s)" % (self.x, self.y, self.color, "JUMP" if self.jump else "", "TRIM" if self.trim else "", "STOP" if self.stop else "")
+
 def make_thread(color):
     # strip off the leading "#"
     if color.startswith("#"):
@@ -137,15 +140,13 @@ def write_embroidery_file(file_path, stitches):
             libembroidery.embPattern_changeColor(pattern, thread_index)
             last_color = stitch.color
 
-
         flags = get_flags(stitch)
-
         libembroidery.embPattern_addStitchAbs(pattern, stitch.x, -stitch.y, flags, 0)
 
         if flags & libembroidery.JUMP:
             # I'm not sure this is right, but this is how the old version did it.
             libembroidery.embPattern_addStitchAbs(pattern, stitch.x, -stitch.y, flags & ~libembroidery.JUMP, 0)
 
+    libembroidery.embPattern_addStitchAbs(pattern, stitch.x, -stitch.y, libembroidery.END, 0)
     libembroidery.embPattern_scale(pattern, 1/PIXELS_PER_MM)
-    libembroidery.embPattern_addStitchAbs(pattern, 0, 0, libembroidery.END, 0)
     libembroidery.embPattern_write(pattern, file_path)
