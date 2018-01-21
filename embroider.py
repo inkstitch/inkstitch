@@ -320,7 +320,7 @@ class EmbroideryElement(object):
            default=False,
            sort_index=1000)
     def trim_after(self):
-        return self.get_boolean_param('trim_after', True)
+        return self.get_boolean_param('trim_after', False)
 
     @property
     @param('stop_after',
@@ -330,7 +330,7 @@ class EmbroideryElement(object):
            default=False,
            sort_index=1000)
     def stop_after(self):
-        return self.get_boolean_param('stop_after', True)
+        return self.get_boolean_param('stop_after', False)
 
     def to_patches(self, last_patch):
         raise NotImplementedError("%s must implement to_patches()" % self.__class__.__name__)
