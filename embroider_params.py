@@ -135,7 +135,10 @@ class ParamsTab(ScrolledPanel):
         return self.parent_tab is not None
 
     def enabled(self):
-        return self.toggle_checkbox.IsChecked()
+        if self.toggle_checkbox:
+            return self.toggle_checkbox.IsChecked()
+        else:
+            return True
 
     def update_toggle_state(self, event=None, notify_pair=True):
         enable = self.enabled()
@@ -171,8 +174,9 @@ class ParamsTab(ScrolledPanel):
             self.update_toggle_state()
 
     def set_toggle_state(self, value):
-        self.toggle_checkbox.SetValue(value)
-        self.changed_inputs.add(self.toggle_checkbox)
+        if self.toggle_checkbox:
+            self.toggle_checkbox.SetValue(value)
+            self.changed_inputs.add(self.toggle_checkbox)
 
     def get_values(self):
         values = {}
