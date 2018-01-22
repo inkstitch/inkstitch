@@ -338,9 +338,9 @@ class EmbroideryElement(object):
     def embroider(self, last_patch):
         patches = self.to_patches(last_patch)
 
-        for patch in patches:
-            patch.trim_after = self.trim_after
-            patch.stop_after = self.stop_after
+        if patches:
+            patches[-1].trim_after = self.trim_after
+            patches[-1].stop_after = self.stop_after
 
         return patches
 
