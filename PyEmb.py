@@ -136,9 +136,6 @@ def write_embroidery_file(file_path, stitches):
 
     for stitch in stitches:
         if stitch.color != last_color:
-            if last_color is not None:
-                stitch.stop = True
-
             if stitch.color not in threads:
                 thread = make_thread(stitch.color)
                 thread_index = add_thread(pattern, thread)
@@ -151,15 +148,6 @@ def write_embroidery_file(file_path, stitches):
 
         flags = get_flags(stitch)
         libembroidery.embPattern_addStitchAbs(pattern, stitch.x - min_x, stitch.y - min_y, flags, 0)
-
-        if flags & libembroidery.JUMP:
-            # In C, I'd do flags &= ~(libembroidery.JUMP|libembroidery.STOP).
-            # Python bitwise not (~) works on signed integers, which really
-            # isn't what we want.  This is effectively the same:
-            flags &= 0xFFFF - (libembroidery.JUMP|libembroidery.STOP)
-
-            # I'm not sure this is right, but the old version added a stitch after the jump.
-            libembroidery.embPattern_addStitchRel(pattern, 0, 0, flags, 0)
 
     libembroidery.embPattern_addStitchAbs(pattern, stitch.x - min_x, stitch.y - min_y, libembroidery.END, 0)
 

@@ -1793,6 +1793,7 @@ def detect_classes(node):
 
 
 def descendants(node):
+
     nodes = []
     element = EmbroideryElement(node)
 
@@ -1811,9 +1812,11 @@ def descendants(node):
     return nodes
 
 class Patch:
-    def __init__(self, color=None, stitches=None):
+    def __init__(self, color=None, stitches=None, trim_after=False, stop_after=False):
         self.color = color
         self.stitches = stitches or []
+        self.trim_after = trim_after
+        self.stop_after = stop_after
 
     def __add__(self, other):
         if isinstance(other, Patch):
@@ -1828,12 +1831,64 @@ class Patch:
         return Patch(self.color, self.stitches[::-1])
 
 
+def process_stop_after(stitches):
+    # The user wants the machine to pause after this patch.  This can
+    # be useful for applique and similar on multi-needle machines that
+    # normally would not stop between colors.
+    #
+    # On such machines, the user assigns needles to the colors in the
+    # design before starting stitching.  C01, C02, etc are normal
+    # needles, but C00 is special.  For a block of stitches assigned
+    # to C00, the machine will continue sewing with the last color it
+    # had and pause after it completes the C00 block.
+    #
+    # That means we need to introduce an artificial color change
+    # shortly before the current stitch so that the user can set that
+    # to C00.  We'll go back 3 stitches and do that:
+
+    if len(stitches) >= 3:
+        stitches[-3].stop = True
+
+    # and also add a color change on this stitch, completing the C00
+    # block:
+
+    stitches[-1].stop = True
+
+    # reference for the above: https://github.com/lexelby/inkstitch/pull/29#issuecomment-359175447
+
+
+def process_trim(stitches, next_stitch):
+    # DST (and maybe other formats?) has no actual TRIM instruction.
+    # Instead, 3 sequential JUMPs cause the machine to trim the thread.
+    #
+    # To support both DST and other formats, we'll add two JUMPs and
+    # a TRIM.  The TRIM will be converted to a JUMP by libembroidery
+    # if saving to DST, resulting in the 3-jump sequence.
+
+    delta = next_stitch - stitches[-1]
+    delta = delta * (1/4.0)
+
+    pos = stitches[-1]
+
+    for i in xrange(3):
+        pos += delta
+        stitches.append(PyEmb.Stitch(pos.x, pos.y, stitches[-1].color, jump=True))
+
+    # last one should be TRIM instead of JUMP
+    stitches[-1].jump = False
+    stitches[-1].trim = True
+
+
 def patches_to_stitches(patch_list, collapse_len_px=0):
     stitches = []
 
     last_stitch = None
     last_color = None
+    need_trim = False
     for patch in patch_list:
+        if not patch.stitches:
+            continue
+
         jump_stitch = True
         for stitch in patch.stitches:
             if last_stitch and last_color == patch.color:
@@ -1849,18 +1904,28 @@ def patches_to_stitches(patch_list, collapse_len_px=0):
                         # dbg.write("... collapsed\n")
                         jump_stitch = False
 
-            # dbg.write("stitch color %s\n" % patch.color)
+            if stitches and last_color and last_color != patch.color:
+                # add a color change
+                stitches.append(PyEmb.Stitch(last_stitch.x, last_stitch.y, last_color, stop=True))
 
-            newStitch = PyEmb.Stitch(stitch.x, stitch.y, patch.color, jump_stitch)
-            stitches.append(newStitch)
+            if need_trim:
+                process_trim(stitches, stitch)
+                need_trim = False
+
+            if jump_stitch:
+                stitches.append(PyEmb.Stitch(stitch.x, stitch.y, patch.color, jump=True))
+
+            stitches.append(PyEmb.Stitch(stitch.x, stitch.y, patch.color, jump=False))
 
             jump_stitch = False
             last_stitch = stitch
             last_color = patch.color
 
-        if stitches:
-            stitches[-1].trim = patch.trim_after
-            stitches[-1].stop = patch.stop_after
+        if patch.trim_after:
+            need_trim = True
+
+        if patch.stop_after:
+            process_stop_after(stitches)
 
     return stitches
 
