@@ -1861,8 +1861,8 @@ def process_trim(stitches, next_stitch):
     # DST (and maybe other formats?) has no actual TRIM instruction.
     # Instead, 3 sequential JUMPs cause the machine to trim the thread.
     #
-    # To support both DST and other formats, we'll add two JUMPs and
-    # a TRIM.  The TRIM will be converted to a JUMP by libembroidery
+    # To support both DST and other formats, we'll add a TRIM and two
+    # JUMPs.  The TRIM will be converted to a JUMP by libembroidery
     # if saving to DST, resulting in the 3-jump sequence.
 
     delta = next_stitch - stitches[-1]
@@ -1874,9 +1874,9 @@ def process_trim(stitches, next_stitch):
         pos += delta
         stitches.append(PyEmb.Stitch(pos.x, pos.y, stitches[-1].color, jump=True))
 
-    # last one should be TRIM instead of JUMP
-    stitches[-1].jump = False
-    stitches[-1].trim = True
+    # first one should be TRIM instead of JUMP
+    stitches[-3].jump = False
+    stitches[-3].trim = True
 
 
 def patches_to_stitches(patch_list, collapse_len_px=0):
@@ -1933,16 +1933,17 @@ def stitches_to_polylines(stitches):
     polylines = []
     last_color = None
     last_stitch = None
+    trimming = False
 
     for stitch in stitches:
-        #if stitch.jump_stitch:
-            #if last_color == stitch.color:
-            #   polylines.append([None, [last_stitch.as_tuple(), stitch.as_tuple()]])
-
-        #    last_color = None
-
-        if stitch.color != last_color:
+        if stitch.color != last_color or stitch.trim:
+            trimming = True
             polylines.append([stitch.color, []])
+
+        if trimming and (stitch.jump or stitch.trim):
+            continue
+
+        trimming = False
 
         polylines[-1][1].append(stitch.as_tuple())
 
