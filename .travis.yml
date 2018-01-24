@@ -13,7 +13,7 @@ matrix:
   - python: 2.7
     sudo: required
     env: BUILD=true
-    if: tag is present
+    if: tag =~ ^v[0-9.]+$ OR branch != master
 cache: pip
 install:
   - |
@@ -75,6 +75,9 @@ script:
 notifications:
   on_success: never
   on_failure: never
+before_deploy:
+  - git tag -f dev-build-${TRAVIS_BRANCH}
+  - git push -f https://${TRAVIS_REPO_SLUG%/*}:${GITHUB_API_KEY}@github.com/${TRAVIS_REPO_SLUG}.git dev-build-${TRAVIS_BRANCH}
 deploy:
   - provider: releases
     api_key:
@@ -95,8 +98,10 @@ deploy:
     file_glob: true
     skip_cleanup: true
     prerelease: true
-    name: "development build $TRAVIS_TAG"
+    overwrite: true
+    target_commitish: $TRAVIS_COMMIT
+    name: "development build of '$TRAVIS_BRANCH'"
+    body: Automatic development build of $TRAVIS_BRANCH ($TRAVIS_COMMIT) built on $(date +'%F %T %Z').
     on:
-      tags: true
       all_branches: true
-      condition: '(-n $BUILD) && ! ("$TRAVIS_TAG" =~ ^v[0-9.]+$)'
+      condition: '(-n $BUILD) && ! ("$TRAVIS_TAG" =~ ^v[0-9.]+$) && ! ("$TRAVIS_BRANCH" = master)'
