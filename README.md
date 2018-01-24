@@ -47,15 +47,6 @@ pip install -r requirements.txt
 
 I prefer to symbolically link into my git clone, which allows me to hack on the code.  Changes to the Python code take effect the next time the extension is run.  Changes to the extension description files (`*.inx`) take effect the next time Inkscape is restarted
 
-### Optional: conversion program
-The extension can output machine embroidery design files directly in Melco format.  I don't even know what that is, so I don't use it.  I prefer to use the **CSV output format** which can be consumed by another awesome open source project: [Embroidermodder2](https://github.com/Embroidermodder/Embroidermodder).  In theory, this project was going to be exactly what I wanted.  In practice, it never got funded on Kickstarter and it's largely incomplete.
-
-However, it contains a really awesome core library that knows pretty much every machine embroidery format and how to convert between them.  I use it to convert the CSV files that ink/stitch outputs into the PES files that my SE400 uses.
-
-Grab the source: `git clone https://github.com/Embroidermodder/Embroidermodder`.  Build just `libembroidery-convert` using the instructions in "3)" in the [Embroidermodder build docs](https://github.com/Embroidermodder/Embroidermodder/wiki/Compiling-parts-of-the-project). You can then use it like this: `./libembroidery-convert your-file.csv your-file.pes`.
-
-Since the CSV + libembroidery-convert method is the only method I use, it's the one I'll assume from here on.  I'm not even sure if the other output formats from ink/stitch still work (or ever worked).
-
 ## Usage
 ### Basic Usage
 First things first: I'm going to assume you know a few embroidery terms like "fill stitch" and "satin".  Look those up if you're mentally 404ing, then come back here.  I'm *not* going to assume you know some of the more advanced terms, because I had to learn all that when I started this project, so I might as well teach you too.
@@ -76,9 +67,7 @@ The stitching preview you're looking at just now isn't intended to be permanent.
 ### Stitching Out the Design
 Where'd the design file go?  One of the parameters you were able to specify in the filter settings dialog was the output directory.  By default, the directory used is the place where you installed the extension's Python files.  I output mine to `~/Documents/embroidery/output`.
 
-ink/stitch will create a file named `something.csv`, where `something` is the name of your svg file (e.g. `something.svg`).  If `something.csv` already existed, it will be renamed to `something.csv.1`, and `something.csv.1` will be renamed to `something.csv.2`, etc, up to 5 backup copies.  When you've got the design the way you like it, save off a copy of `something.csv`.
-
-Next, convert it to your machine's format using `libembroidery-convert` (as described above).  Send it to your machine in whatever way one does that for your machine, and try stitching it out!
+ink/stitch will create a file named `something.___`, where `something` is the name of your svg file (e.g. `something.svg`) and `___` is the proper extension for the output format you select.  If `something.___` already exists, it will be renamed to `something.___.1`, and `something.___.1` will be renamed to `something.___.2`, etc, up to 5 backup copies.  When you've got the design the way you like it, save off a copy of `something.___`.
 
 ### Ordering
 
@@ -278,15 +267,15 @@ To solve this, I created the *Reorder* extension.  To use it, hold down the shif
 
 You can also manually manipulate the underlying SVG XML structure by using Inkscape's XML Editor pane.  Its "Raise" and "Lower" buttons directly manipulate the order of XML tags in the SVG file and are not subject to the same limitations as PageUp and PageDown.  Note that the ordering of XML tags in the XML Editor tool is the _reverse_ of the order of objects in the Objects tool.
 
-### Step 4: Render to CSV
+### Step 4: Render to a file format supported by your machine
 
-Once I've got everything in the right order, I deselect all objects and run *Embroider* again.  This will embroider all visible objects in the document.  As described in the Setup section above, I render my embroidery file in CSV format and convert it with EmbroiderModder's `libembroidery-convert` utility.
+Once I've got everything in the right order, I deselect all objects and run *Embroider* again.  This will embroider all visible objects in the document.  In the extension settings, select a file format supported by your machine.  Most machines can support DST, and some Brother machines prefer PES.
 
-*Embroider* will create a file in the specified output directory named after your SVG file, but with the extension changed to `.csv`.  It will back up any existing file there, storing up to 5 old copies of each file.
+*Embroider* will create a file in the specified output directory named after your SVG file, but with the extension changed to `.DST`, `.PES`, or whatever format you selected.  It will back up any existing file there, storing up to 5 old copies of each file.
 
 ### Step 5: Convert to PES and upload
 
-My sewing machine uses the PES format, so I convert the CSV file into a .PES and send it over to my sewing machine.  My Brother SE400 acts like a (very small!) USB flash drive.  I use a [script](bin/embroider-remote) to do the CSV and upload steps all at once.
+Transfer the design to your machine in whatever manner is appropriate.  My machine exposes itself as a (tiny) USB thumb drive, so I can upload directly.
 
 ### Step 6: Test-sew
 
@@ -296,5 +285,5 @@ I sew out the design, watching the machine to make sure that there aren't any su
 
 ### Step 7+: iterate
 
-Then I go back and tweak my design.  Hopefully it only takes a few tries to get it how I want it.  Once I'm done, I copy the CSV file from my output directory, just to avoid accidentally overwriting it in the future.
+Then I go back and tweak my design.  Hopefully it only takes a few tries to get it how I want it.  Once I'm done, I copy the final embroidery file from my output directory, just to avoid accidentally overwriting it in the future.
 

@@ -2,8 +2,9 @@
 # http://www.achatina.de/sewing/main/TECHNICL.HTM
 
 import math
-import sys
-from copy import deepcopy
+import libembroidery
+
+PIXELS_PER_MM = 96 / 25.4
 
 try:
     from functools import lru_cache
@@ -76,267 +77,84 @@ class Point:
 
 
 class Stitch(Point):
-
-    def __init__(self, x, y, color=None, jump_stitch=False):
-        Point.__init__(self, x, y)
+    def __init__(self, x, y, color=None, jump=False, stop=False, trim=False):
+        self.x = x
+        self.y = y
         self.color = color
-        self.jump_stitch = jump_stitch
+        self.jump = jump
+        self.trim = trim
+        self.stop = stop
 
+    def __repr__(self):
+        return "Stitch(%s, %s, %s, %s, %s, %s)" % (self.x, self.y, self.color, "JUMP" if self.jump else "", "TRIM" if self.trim else "", "STOP" if self.stop else "")
 
-class Embroidery:
+def make_thread(color):
+    # strip off the leading "#"
+    if color.startswith("#"):
+        color = color[1:]
 
-    def __init__(self, stitches, pixels_per_millimeter=1):
-        self.stitches = deepcopy(stitches)
-        self.scale(1.0 / pixels_per_millimeter)
-        self.scale((1, -1))
-        self.translate_to_origin()
+    thread = libembroidery.EmbThread()
+    thread.color = libembroidery.embColor_fromHexStr(color)
 
-    def translate_to_origin(self):
-        if (len(self.stitches) == 0):
-            return
-        (maxx, maxy) = (self.stitches[0].x, self.stitches[0].y)
-        (minx, miny) = (self.stitches[0].x, self.stitches[0].y)
-        for p in self.stitches:
-            minx = min(minx, p.x)
-            miny = min(miny, p.y)
-            maxx = max(maxx, p.x)
-            maxy = max(maxy, p.y)
-        sx = maxx - minx
-        sy = maxy - miny
+    thread.description = color
+    thread.catalogNumber = ""
 
-        self.translate(-minx, -miny)
-        return (minx, miny)
+    return thread
 
-    def translate(self, dx, dy):
-        for p in self.stitches:
-            p.x += dx
-            p.y += dy
+def add_thread(pattern, thread):
+    """Add a thread to a pattern and return the thread's index"""
 
-    def scale(self, sc):
-        if not isinstance(sc, (tuple, list)):
-            sc = (sc, sc)
-        for p in self.stitches:
-            p.x *= sc[0]
-            p.y *= sc[1]
+    libembroidery.embPattern_addThread(pattern, thread)
 
-    def export_ksm(self):
-        str = ""
-        self.pos = Point(0, 0)
-        lastColor = None
-        for stitch in self.stitches:
-            if (lastColor is not None and stitch.color != lastColor):
-                mode_byte = 0x99
-                # dbg.write("Color change!\n")
+    return libembroidery.embThreadList_count(pattern.threadList) - 1
+
+def get_flags(stitch):
+    flags = 0
+
+    if stitch.jump:
+        flags |= libembroidery.JUMP
+
+    if stitch.trim:
+        flags |= libembroidery.TRIM
+
+    if stitch.stop:
+        flags |= libembroidery.STOP
+
+    return flags
+
+def write_embroidery_file(file_path, stitches):
+    # Embroidery machines don't care about our canvas size, so we relocate the
+    # design to the origin.  It might make sense to center it about the origin
+    # instead.
+    min_x = min(stitch.x for stitch in stitches)
+    min_y = min(stitch.y for stitch in stitches)
+
+    pattern = libembroidery.embPattern_create()
+    threads = {}
+
+    last_color = None
+
+    for stitch in stitches:
+        if stitch.color != last_color:
+            if stitch.color not in threads:
+                thread = make_thread(stitch.color)
+                thread_index = add_thread(pattern, thread)
+                threads[stitch.color] = thread_index
             else:
-                mode_byte = 0x80
-                # dbg.write("color still %s\n" % stitch.color)
-            lastColor = stitch.color
-            new_int = stitch.as_int()
-            old_int = self.pos.as_int()
-            delta = new_int - old_int
-            assert(abs(delta.x) <= 127)
-            assert(abs(delta.y) <= 127)
-            str += chr(abs(delta.y))
-            str += chr(abs(delta.x))
-            if (delta.y < 0):
-                mode_byte |= 0x20
-            if (delta.x < 0):
-                mode_byte |= 0x40
-            str += chr(mode_byte)
-            self.pos = stitch
-        return str
+                thread_index = threads[stitch.color]
 
-    def export_melco(self):
-        self.str = ""
-        self.pos = self.stitches[0]
-        # dbg.write("stitch count: %d\n" % len(self.stitches))
-        lastColor = None
-        numColors = 0x0
-        for stitch in self.stitches[1:]:
-            if (lastColor is not None and stitch.color != lastColor):
-                numColors += 1
-                # color change
-                self.str += chr(0x80)
-                self.str += chr(0x01)
-#                self.str += chr(numColors)
-#                self.str += chr(((numColors+0x80)>>8)&0xff)
-#                self.str += chr(((numColors+0x80)>>0)&0xff)
-            lastColor = stitch.color
-            new_int = stitch.as_int()
-            old_int = self.pos.as_int()
-            delta = new_int - old_int
+            libembroidery.embPattern_changeColor(pattern, thread_index)
+            last_color = stitch.color
 
-            def move(x, y):
-                if (x < 0):
-                    x = x + 256
-                self.str += chr(x)
-                if (y < 0):
-                    y = y + 256
-                self.str += chr(y)
+        flags = get_flags(stitch)
+        libembroidery.embPattern_addStitchAbs(pattern, stitch.x - min_x, stitch.y - min_y, flags, 0)
 
-            while (delta.x != 0 or delta.y != 0):
-                def clamp(v):
-                    if (v > 127):
-                        v = 127
-                    if (v < -127):
-                        v = -127
-                    return v
-                dx = clamp(delta.x)
-                dy = clamp(delta.y)
-                move(dx, dy)
-                delta.x -= dx
-                delta.y -= dy
+    libembroidery.embPattern_addStitchAbs(pattern, stitch.x - min_x, stitch.y - min_y, libembroidery.END, 0)
 
-            # dbg.write("Stitch: %s delta %s\n" % (stitch, delta))
-            self.pos = stitch
-        return self.str
+    # convert from pixels to millimeters
+    libembroidery.embPattern_scale(pattern, 1/PIXELS_PER_MM)
 
-    def export_csv(self):
-        self.str = ""
-        self.str += '"#","[THREAD_NUMBER]","[RED]","[GREEN]","[BLUE]","[DESCRIPTION]","[CATALOG_NUMBER]"\n'
-        self.str += '"#","[STITCH_TYPE]","[X]","[Y]"\n'
+    # SVG and embroidery disagree on the direction of the Y axis
+    libembroidery.embPattern_flipVertical(pattern)
 
-        lastStitch = None
-        colorIndex = 0
-        for stitch in self.stitches:
-            if lastStitch is not None and stitch.color != lastStitch.color:
-                self.str += '"*","COLOR","%f","%f"\n' % (lastStitch.x, lastStitch.y)
-            if lastStitch is None or stitch.color != lastStitch.color:
-                colorIndex += 1
-                self.str += '"$","%d","%d","%d","%d","(null)","(null)"\n' % (
-                    colorIndex,
-                    int(stitch.color[1:3], 16),
-                    int(stitch.color[3:5], 16),
-                    int(stitch.color[5:7], 16))
-            if stitch.jump_stitch:
-                self.str += '"*","JUMP","%f","%f"\n' % (stitch.x, stitch.y)
-            self.str += '"*","STITCH","%f","%f"\n' % (stitch.x, stitch.y)
-            lastStitch = stitch
-        self.str += '"*","END","%f","%f"\n' % (lastStitch.x, lastStitch.y)
-        return self.str
-
-    def export_gcode(self):
-        ret = []
-        lastColor = None
-        for stitch in self.stitches:
-            if stitch.color != lastColor:
-                ret.append('M0 ;MSG, Color change; prepare for %s\n' % stitch.color)
-            lastColor = stitch.color
-            ret.append('G1 X%f Y%f\n' % stitch.as_tuple())
-            ret.append('M0 ;MSG, EMBROIDER stitch\n')
-        return ''.join(ret)
-
-    def export(self, filename, format):
-        fp = open(filename, "wb")
-
-        if format == "melco":
-            fp.write(self.export_melco())
-        elif format == "csv":
-            fp.write(self.export_csv())
-        elif format == "gcode":
-            fp.write(self.export_gcode())
-        fp.close()
-
-
-class Test:
-
-    def __init__(self):
-        emb = Embroidery()
-        for x in range(0, 301, 30):
-            emb.addStitch(Point(x, 0))
-            emb.addStitch(Point(x, 15))
-            emb.addStitch(Point(x, 0))
-
-        for x in range(300, -1, -30):
-            emb.addStitch(Point(x, -12))
-            emb.addStitch(Point(x, -27))
-            emb.addStitch(Point(x, -12))
-
-        fp = open("test.exp", "wb")
-        fp.write(emb.export_melco())
-        fp.close()
-
-
-class Turtle:
-
-    def __init__(self):
-        self.emb = Embroidery()
-        self.pos = Point(0.0, 0.0)
-        self.dir = Point(1.0, 0.0)
-        self.emb.addStitch(self.pos)
-
-    def forward(self, dist):
-        self.pos = self.pos + self.dir.mul(dist)
-        self.emb.addStitch(self.pos)
-
-    def turn(self, degreesccw):
-        radcw = -degreesccw / 180.0 * 3.141592653589
-        self.dir = Point(
-            math.cos(radcw) * self.dir.x - math.sin(radcw) * self.dir.y,
-            math.sin(radcw) * self.dir.x + math.cos(radcw) * self.dir.y)
-
-    def right(self, degreesccw):
-        self.turn(degreesccw)
-
-    def left(self, degreesccw):
-        self.turn(-degreesccw)
-
-
-class Koch(Turtle):
-
-    def __init__(self, depth):
-        Turtle.__init__(self)
-
-        edgelen = 750.0
-        for i in range(3):
-            self.edge(depth, edgelen)
-            self.turn(120.0)
-
-        fp = open("koch%d.exp" % depth, "wb")
-        fp.write(self.emb.export_melco())
-        fp.close()
-
-    def edge(self, depth, dist):
-        if (depth == 0):
-            self.forward(dist)
-        else:
-            self.edge(depth - 1, dist / 3.0)
-            self.turn(-60.0)
-            self.edge(depth - 1, dist / 3.0)
-            self.turn(120.0)
-            self.edge(depth - 1, dist / 3.0)
-            self.turn(-60.0)
-            self.edge(depth - 1, dist / 3.0)
-
-
-class Hilbert(Turtle):
-
-    def __init__(self, level):
-        Turtle.__init__(self)
-
-        self.size = 10.0
-        self.hilbert(level, 90.0)
-
-        fp = open("hilbert%d.exp" % level, "wb")
-        fp.write(self.emb.export_melco())
-        fp.close()
-
-    # http://en.wikipedia.org/wiki/Hilbert_curve#Python
-    def hilbert(self, level, angle):
-        if (level == 0):
-            return
-        self.right(angle)
-        self.hilbert(level - 1, -angle)
-        self.forward(self.size)
-        self.left(angle)
-        self.hilbert(level - 1, angle)
-        self.forward(self.size)
-        self.hilbert(level - 1, angle)
-        self.left(angle)
-        self.forward(self.size)
-        self.hilbert(level - 1, -angle)
-        self.right(angle)
-
-if (__name__ == '__main__'):
-    # Koch(4)
-    Hilbert(6)
+    libembroidery.embPattern_write(pattern, file_path)

@@ -51,7 +51,7 @@ EMBROIDERABLE_TAGS = (SVG_PATH_TAG, SVG_POLYLINE_TAG)
 PIXELS_PER_MM = 96 / 25.4
 
 class Param(object):
-    def __init__(self, name, description, unit=None, values=[], type=None, group=None, inverse=False, default=None):
+    def __init__(self, name, description, unit=None, values=[], type=None, group=None, inverse=False, default=None, tooltip=None, sort_index=0):
         self.name = name
         self.description = description
         self.unit = unit
@@ -60,6 +60,8 @@ class Param(object):
         self.group = group
         self.inverse = inverse
         self.default = default
+        self.tooltip = tooltip
+        self.sort_index = sort_index
 
     def __repr__(self):
         return "Param(%s)" % vars(self)
@@ -310,8 +312,37 @@ class EmbroideryElement(object):
 
         return flattened
 
+    @property
+    @param('trim_after',
+           'TRIM after',
+           tooltip='Trim thread after this object (for supported machines and file formats)',
+           type='boolean',
+           default=False,
+           sort_index=1000)
+    def trim_after(self):
+        return self.get_boolean_param('trim_after', False)
+
+    @property
+    @param('stop_after',
+           'STOP after',
+           tooltip='Add STOP instruction after this object (for supported machines and file formats)',
+           type='boolean',
+           default=False,
+           sort_index=1000)
+    def stop_after(self):
+        return self.get_boolean_param('stop_after', False)
+
     def to_patches(self, last_patch):
-        raise NotImplementedError("%s must implement to_path()" % self.__class__.__name__)
+        raise NotImplementedError("%s must implement to_patches()" % self.__class__.__name__)
+
+    def embroider(self, last_patch):
+        patches = self.to_patches(last_patch)
+
+        if patches:
+            patches[-1].trim_after = self.trim_after
+            patches[-1].stop_after = self.stop_after
+
+        return patches
 
     def fatal(self, message):
         print >> sys.stderr, "error:", message
@@ -1196,7 +1227,7 @@ class Stroke(EmbroideryElement):
         return self.get_float_param("zigzag_spacing_mm")
 
     @property
-    @param('repeats', 'Repeats', type='int')
+    @param('repeats', 'Repeats', type='int', default="1")
     def repeats(self):
         return self.get_int_param("repeats", 1)
 
@@ -1762,6 +1793,7 @@ def detect_classes(node):
 
 
 def descendants(node):
+
     nodes = []
     element = EmbroideryElement(node)
 
@@ -1780,9 +1812,11 @@ def descendants(node):
     return nodes
 
 class Patch:
-    def __init__(self, color=None, stitches=None):
+    def __init__(self, color=None, stitches=None, trim_after=False, stop_after=False):
         self.color = color
         self.stitches = stitches or []
+        self.trim_after = trim_after
+        self.stop_after = stop_after
 
     def __add__(self, other):
         if isinstance(other, Patch):
@@ -1797,12 +1831,64 @@ class Patch:
         return Patch(self.color, self.stitches[::-1])
 
 
+def process_stop_after(stitches):
+    # The user wants the machine to pause after this patch.  This can
+    # be useful for applique and similar on multi-needle machines that
+    # normally would not stop between colors.
+    #
+    # On such machines, the user assigns needles to the colors in the
+    # design before starting stitching.  C01, C02, etc are normal
+    # needles, but C00 is special.  For a block of stitches assigned
+    # to C00, the machine will continue sewing with the last color it
+    # had and pause after it completes the C00 block.
+    #
+    # That means we need to introduce an artificial color change
+    # shortly before the current stitch so that the user can set that
+    # to C00.  We'll go back 3 stitches and do that:
+
+    if len(stitches) >= 3:
+        stitches[-3].stop = True
+
+    # and also add a color change on this stitch, completing the C00
+    # block:
+
+    stitches[-1].stop = True
+
+    # reference for the above: https://github.com/lexelby/inkstitch/pull/29#issuecomment-359175447
+
+
+def process_trim(stitches, next_stitch):
+    # DST (and maybe other formats?) has no actual TRIM instruction.
+    # Instead, 3 sequential JUMPs cause the machine to trim the thread.
+    #
+    # To support both DST and other formats, we'll add a TRIM and two
+    # JUMPs.  The TRIM will be converted to a JUMP by libembroidery
+    # if saving to DST, resulting in the 3-jump sequence.
+
+    delta = next_stitch - stitches[-1]
+    delta = delta * (1/4.0)
+
+    pos = stitches[-1]
+
+    for i in xrange(3):
+        pos += delta
+        stitches.append(PyEmb.Stitch(pos.x, pos.y, stitches[-1].color, jump=True))
+
+    # first one should be TRIM instead of JUMP
+    stitches[-3].jump = False
+    stitches[-3].trim = True
+
+
 def patches_to_stitches(patch_list, collapse_len_px=0):
     stitches = []
 
     last_stitch = None
     last_color = None
+    need_trim = False
     for patch in patch_list:
+        if not patch.stitches:
+            continue
+
         jump_stitch = True
         for stitch in patch.stitches:
             if last_stitch and last_color == patch.color:
@@ -1818,14 +1904,28 @@ def patches_to_stitches(patch_list, collapse_len_px=0):
                         # dbg.write("... collapsed\n")
                         jump_stitch = False
 
-            # dbg.write("stitch color %s\n" % patch.color)
+            if stitches and last_color and last_color != patch.color:
+                # add a color change
+                stitches.append(PyEmb.Stitch(last_stitch.x, last_stitch.y, last_color, stop=True))
 
-            newStitch = PyEmb.Stitch(stitch.x, stitch.y, patch.color, jump_stitch)
-            stitches.append(newStitch)
+            if need_trim:
+                process_trim(stitches, stitch)
+                need_trim = False
+
+            if jump_stitch:
+                stitches.append(PyEmb.Stitch(stitch.x, stitch.y, patch.color, jump=True))
+
+            stitches.append(PyEmb.Stitch(stitch.x, stitch.y, patch.color, jump=False))
 
             jump_stitch = False
             last_stitch = stitch
             last_color = patch.color
+
+        if patch.trim_after:
+            need_trim = True
+
+        if patch.stop_after:
+            process_stop_after(stitches)
 
     return stitches
 
@@ -1833,16 +1933,17 @@ def stitches_to_polylines(stitches):
     polylines = []
     last_color = None
     last_stitch = None
+    trimming = False
 
     for stitch in stitches:
-        #if stitch.jump_stitch:
-            #if last_color == stitch.color:
-            #   polylines.append([None, [last_stitch.as_tuple(), stitch.as_tuple()]])
-
-        #    last_color = None
-
-        if stitch.color != last_color:
+        if stitch.color != last_color or stitch.trim:
+            trimming = True
             polylines.append([stitch.color, []])
+
+        if trimming and (stitch.jump or stitch.trim):
+            continue
+
+        trimming = False
 
         polylines[-1][1].append(stitch.as_tuple())
 
@@ -1905,10 +2006,9 @@ class Embroider(inkex.Effect):
                                      dest="hide_layers", default="true",
                                      help="Hide all other layers when the embroidery layer is generated")
         self.OptionParser.add_option("-O", "--output_format",
-                                     action="store", type="choice",
-                                     choices=["melco", "csv", "gcode"],
-                                     dest="output_format", default="melco",
-                                     help="File output format")
+                                     action="store", type="string",
+                                     dest="output_format", default="csv",
+                                     help="Output file extenstion (default: csv)")
         self.OptionParser.add_option("-P", "--path",
                                      action="store", type="string",
                                      dest="path", default=".",
@@ -1936,7 +2036,7 @@ class Embroider(inkex.Effect):
             output_path = os.path.join(self.options.path, self.options.output_file)
         else:
             svg_filename = self.document.getroot().get(inkex.addNS('docname', 'sodipodi'), "embroidery.svg")
-            csv_filename = svg_filename.replace('.svg', '.csv')
+            csv_filename = svg_filename.replace('.svg', '.%s' % self.options.output_format)
             output_path = os.path.join(self.options.path, csv_filename)
 
         def add_suffix(path, suffix):
@@ -2008,11 +2108,10 @@ class Embroider(inkex.Effect):
             else:
                 last_patch = None
 
-            patches.extend(element.to_patches(last_patch))
+            patches.extend(element.embroider(last_patch))
 
         stitches = patches_to_stitches(patches, self.options.collapse_length_mm * PIXELS_PER_MM)
-        emb = PyEmb.Embroidery(stitches, PIXELS_PER_MM)
-        emb.export(self.get_output_path(), self.options.output_format)
+        PyEmb.write_embroidery_file(self.get_output_path(), stitches)
 
         new_layer = inkex.etree.SubElement(self.document.getroot(), SVG_GROUP_TAG, {})
         new_layer.set('id', self.uniqueId("embroidery"))

@@ -34,6 +34,9 @@ install:
       # for wxPython
       sudo apt-get install glib-networking
 
+      # for embroidermodder/libembroidery
+      sudo apt-get install swig python-dev
+
       # This is the same as the pypi module PyGObject.  We can't just do
       # "pip install PyGObject" because it depends on a version of
       # libgirepository1.0-dev that doesn't exist in Trusty.
@@ -60,6 +63,11 @@ script:
       flake8 . --count --select=E901,E999,F821,F822,F823 --show-source --statistics
       flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     elif [ -n "$BUILD" ]; then
+      (
+        cd embroidermodder/experimental
+        qmake swigpython.pro
+        make
+      )        
       make dist
     else
       true

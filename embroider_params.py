@@ -135,7 +135,10 @@ class ParamsTab(ScrolledPanel):
         return self.parent_tab is not None
 
     def enabled(self):
-        return self.toggle_checkbox.IsChecked()
+        if self.toggle_checkbox:
+            return self.toggle_checkbox.IsChecked()
+        else:
+            return True
 
     def update_toggle_state(self, event=None, notify_pair=True):
         enable = self.enabled()
@@ -160,7 +163,6 @@ class ParamsTab(ScrolledPanel):
 
         if self.enabled() != new_value:
             self.set_toggle_state(not value)
-            self.toggle_checkbox.changed = True
             self.update_toggle_state(notify_pair=False)
 
     def dependent_enable(self, enable):
@@ -169,11 +171,12 @@ class ParamsTab(ScrolledPanel):
         else:
             self.set_toggle_state(False)
             self.toggle_checkbox.Disable()
-            self.toggle_checkbox.changed = True
             self.update_toggle_state()
 
     def set_toggle_state(self, value):
-        self.toggle_checkbox.SetValue(value)
+        if self.toggle_checkbox:
+            self.toggle_checkbox.SetValue(value)
+            self.changed_inputs.add(self.toggle_checkbox)
 
     def get_values(self):
         values = {}
@@ -189,7 +192,7 @@ class ParamsTab(ScrolledPanel):
                 return values
 
         for name, input in self.param_inputs.iteritems():
-            if input in self.changed_inputs:
+            if input in self.changed_inputs and input != self.toggle_checkbox:
                 values[name] = input.GetValue()
 
         return values
@@ -197,7 +200,7 @@ class ParamsTab(ScrolledPanel):
     def apply(self):
         values = self.get_values()
         for node in self.nodes:
-            #print >> sys.stderr, node.id, values
+            # print >> sys.stderr, "apply: ", self.name, node.id, values
             for name, value in values.iteritems():
                 node.set_param(name, value)
 
@@ -282,7 +285,10 @@ class ParamsTab(ScrolledPanel):
             box.Add(self.toggle_checkbox, proportion=0, flag=wx.BOTTOM, border=10)
 
         for param in self.params:
-            self.settings_grid.Add(wx.StaticText(self, label=param.description), proportion=1, flag=wx.EXPAND|wx.RIGHT, border=40)
+            description = wx.StaticText(self, label=param.description)
+            description.SetToolTip(param.tooltip)
+
+            self.settings_grid.Add(description, proportion=1, flag=wx.EXPAND|wx.RIGHT, border=40)
 
             if param.type == 'boolean':
 
@@ -456,7 +462,7 @@ class SettingsFrame(wx.Frame):
                 # way to drop the cache in the @cache decorators used
                 # for many params in embroider.py.
 
-                patches.extend(copy(node).to_patches(None))
+                patches.extend(copy(node).embroider(None))
         except SystemExit:
             raise
         except:
@@ -670,10 +676,13 @@ class EmbroiderParams(inkex.Effect):
         return values
 
     def group_params(self, params):
+        def by_group_and_sort_index(param):
+            return param.group, param.sort_index
+
         def by_group(param):
             return param.group
 
-        return groupby(sorted(params, key=by_group), by_group)
+        return groupby(sorted(params, key=by_group_and_sort_index), by_group)
 
     def create_tabs(self, parent):
         tabs = []

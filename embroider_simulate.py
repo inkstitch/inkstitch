@@ -149,6 +149,7 @@ class EmbroiderySimulator(wx.Frame):
         return segments
 
     def _parse_stitch_file(self, stitch_file_path):
+        # "#", "comment"
         # "$","1","229","229","229","(null)","(null)"
         # "*","JUMP","1.595898","48.731899"
         # "*","STITCH","1.595898","48.731899"
@@ -161,6 +162,10 @@ class EmbroiderySimulator(wx.Frame):
 
         with open(stitch_file_path) as stitch_file:
             for line in stitch_file:
+                line = line.strip()
+                if not line:
+                    continue
+
                 fields = line.strip().split(",")
                 fields = [self._strip_quotes(field) for field in fields]
 
@@ -179,6 +184,10 @@ class EmbroiderySimulator(wx.Frame):
 
                         x, y = fields[2:]
                         new_pos = (float(x) * PIXELS_PER_MM, float(y) * PIXELS_PER_MM)
+
+                        if not segments and new_pos == (0.0, 0.0):
+                            # libembroidery likes to throw an extra JUMP in at the start
+                            continue
 
                         if not cut:
                             segments.append(((pos, new_pos), pen))
