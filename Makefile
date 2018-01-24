@@ -1,7 +1,7 @@
 EXTENSIONS:=embroider embroider_params embroider_simulate embroider_update
 
 # This gets the branch name or the name of the tag
-VERSION:=$(TRAVIS_TAG)
+VERSION:=$(TRAVIS_BRANCH)
 OS:=$(shell uname)
 ARCH:=$(shell uname -m)
 
