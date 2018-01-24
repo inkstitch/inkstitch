@@ -10,8 +10,5 @@ dist: distclean
 	cp *.inx dist
 	cd dist; tar zcf ../inkstitch-$(VERSION)-$(OS)-$(ARCH).tar.gz *
 
-	# This is only here for debugging the build.
-	tar zcf build.tar.gz build
-
 distclean:
 	rm -rf build dist *.spec *.tar.gz
