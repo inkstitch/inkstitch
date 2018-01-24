@@ -3,6 +3,12 @@ virtualenv:
   # We need this for PyGObject.
   system_site_packages: true
 matrix:
+  # only pass/fail the build based on the lint run, since the build takes
+  # a long time and its failure doesn't depend on the code anyway
+  fast_finish: true
+  allow_failures:
+    env: BUILD=true
+
   include:
   # always lint on every commit
   - python: 2.7
