@@ -14,6 +14,9 @@ matrix:
     sudo: required
     env: BUILD=true
     if: tag =~ ^v[0-9.]+$ OR branch != master
+branches:
+  except:
+    - /^dev-build-/
 cache: pip
 install:
   - |
