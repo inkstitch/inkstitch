@@ -83,14 +83,18 @@ install:
 
       wget https://www.python.org/ftp/python/2.7.14/python-2.7.14.msi --output-document=python.msi
       wget http://download.microsoft.com/download/1/1/1/1116b75a-9ec3-481a-a3c8-1777b5381140/vcredist_x86.exe
-      wget http://ftp.gnome.org/pub/GNOME/binaries/win32/pygtk/2.24/pygtk-all-in-one-2.24.2.win32-py2.7.msi --output-document=pygtk.msi
+      #wget http://ftp.gnome.org/pub/GNOME/binaries/win32/pygtk/2.24/pygtk-all-in-one-2.24.2.win32-py2.7.msi --output-document=pygtk.msi
+      wget https://ayera.dl.sourceforge.net/project/pygobjectwin32/pygi-aio-3.24.1_rev1-setup_049a323fe25432b10f7e9f543b74598d4be74a39.exe --output-document=pygi.exe
       wine vcredist_x86.exe /q
       wine msiexec /i python.msi /qn TARGETDIR=C:\\Python
-      wine msiexec /i pygtk.msi /qn 
+      #wine msiexec /i pygtk.msi /qn TARGETDIR=C:\\Python
+      #wine pygi.exe /qn
       wine c:\\Python\\python.exe c:\\Python\\scripts\\pip.exe install pyinstaller --upgrade
       wine c:\\Python\\python.exe c:\\Python\\scripts\\pip.exe install setuptools --upgrade
-      wine c:\\Python\\python.exe c:\\Python\\scripts\\pip.exe install https://download.lfd.uci.edu/pythonlibs/n1rrk3iq/Shapely-1.6.3-cp27-cp27m-win32.whl
+      wine c:\\Python\\python.exe c:\\Python\\scripts\\pip.exe install python-wheels/Shapely-1.6.3-cp27-cp27m-win32.whl
       wine c:\\Python\\python.exe c:\\Python\\scripts\\pip.exe install -r requirements.txt
+
+      #find $(winepath c:\\) -ls
 
       set +x
     elif [ -n "$LINT" ]; then
@@ -113,7 +117,11 @@ script:
     elif [ "$BUILD" = "windows" ]; then
       set -x
 
-      wine c:\\Python\\scripts\\pyinstaller.exe --onefile embroider.py
+      # work around some bug... pyinstaller? shapely? not sure.
+      cp $(winepath 'C:\Python\lib\site-packages\shapely\DLLs\geos_c.dll') $(winepath 'C:\Python\lib\site-packages\shapely\DLLs\geos.dll')
+
+      wine c:\\Python\\scripts\\pyinstaller.exe --onedir --hidden-import gi.repository.Gtk -p Z:\\usr\\share\\inkscape\\extensions --hidden-import wx --log-level DEBUG embroider.py
+      find $(winepath 'c:\') -ls > dist/file-list
       zip -r inkstitch-windows.zip dist
 
       set +x
