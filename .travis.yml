@@ -15,10 +15,13 @@ matrix:
     env: LINT=true
     sudo: false
 
-  # only bother to build if we're going to deploy a release
   - python: 2.7
     sudo: required
-    env: BUILD=true
+    env: BUILD=linux
+    if: tag =~ ^v[0-9.]+$ OR branch != master
+  - python: 2.7
+    sudo: required
+    env: BUILD=windows
     if: tag =~ ^v[0-9.]+$ OR branch != master
 branches:
   except:
@@ -26,7 +29,7 @@ branches:
 cache: pip
 install:
   - |
-    if [ -n "$BUILD" ]; then
+    if [ "$BUILD" = "linux" ]; then
       # For some bizarre reason, this build has been failing due to the
       # key for the mongodb repo expiring.  Maybe Travis includes the
       # mongodb repo by default...?
@@ -61,7 +64,36 @@ install:
       pip install --no-binary shapely -r requirements.txt
     
       pip install pyinstaller
-    else
+    elif [ "$BUILD" = "windows" ]; then
+      set -x
+
+      # Need inkscape >=0.92 for inkex.py and friends
+      sudo add-apt-repository --yes ppa:inkscape.dev/stable
+      sudo apt-get update
+      sudo apt-get install inkscape
+
+      sudo add-apt-repository ppa:ubuntu-wine/ppa -y
+      sudo apt-get update -qq
+      export DISPLAY=:99.0
+      sh -e /etc/init.d/xvfb start
+      sleep 3
+      sudo apt-get install -qq wine
+
+      export WINEDEBUG=-all
+
+      wget https://www.python.org/ftp/python/2.7.14/python-2.7.14.msi --output-document=python.msi
+      wget http://download.microsoft.com/download/1/1/1/1116b75a-9ec3-481a-a3c8-1777b5381140/vcredist_x86.exe
+      wget http://ftp.gnome.org/pub/GNOME/binaries/win32/pygtk/2.24/pygtk-all-in-one-2.24.2.win32-py2.7.msi --output-document=pygtk.msi
+      wine vcredist_x86.exe /q
+      wine msiexec /i python.msi /qn TARGETDIR=C:\\Python
+      wine msiexec /i pygtk.msi /qn 
+      wine c:\\Python\\python.exe c:\\Python\\scripts\\pip.exe install pyinstaller --upgrade
+      wine c:\\Python\\python.exe c:\\Python\\scripts\\pip.exe install setuptools --upgrade
+      wine c:\\Python\\python.exe c:\\Python\\scripts\\pip.exe install https://download.lfd.uci.edu/pythonlibs/n1rrk3iq/Shapely-1.6.3-cp27-cp27m-win32.whl
+      wine c:\\Python\\python.exe c:\\Python\\scripts\\pip.exe install -r requirements.txt
+
+      set +x
+    elif [ -n "$LINT" ]; then
       pip install flake8
     fi
 before_script:
@@ -71,13 +103,20 @@ script:
     if [ -n "$LINT" ]; then
       flake8 . --count --select=E901,E999,F821,F822,F823 --show-source --statistics --exclude=embroidermodder
       flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics --exclude=embroidermodder
-    elif [ -n "$BUILD" ]; then
+    elif [ "$BUILD" = "linux" ]; then
       (
         cd embroidermodder/experimental
         qmake swigpython.pro
         make
       )        
       make dist
+    elif [ "$BUILD" = "windows" ]; then
+      set -x
+
+      wine c:\\Python\\scripts\\pyinstaller.exe --onefile embroider.py
+      zip -r inkstitch-windows.zip dist
+
+      set +x
     else
       true
     fi
@@ -104,6 +143,7 @@ deploy:
       secure: pYORXHcn0hPcMIo6+brVE+wYce272H4COp1iXmPvBUz64MAX0Bdm5UX6cTAvzwNd9Hhi2nnWebaoS5AiPelbZgQoZJXsy4whrp7+ZrkQZkhGcqsSqXN6j5k5xdGeFX4k37T7eGkFyajTAdIWB3locHcikKN6N6PnyCPxGD/xuxiD1fJSVKGqBOptBYsqFtMddKy3aT0nmRG/2pMElq2Fcxozo+rR00j2/3npVoh2VTRt2L0S/DrX3zKT4vi2+AQ1MmKEAfF/YxCPybJGPe+wHz4egs0+PIJYb7pSZL8Ja81IS4v5cmmy/r2la815amyRyXwZXbJwBX8h9wPa7dwGStMvJdUidlqaXjKMsWba3QbD6YHOi0+UOFvWeubCDqXKhqxVAvZyCvXCx2WPlBfGWsJDHK/j2pU5Iul5Jz2Zsa3PLYA3UeGWVy081SZNuklNdccKGTokntFnR3pGM/jDN/JK7RkvuPM5qQqn3gludQnrdo/Kw0I77hAEDasgUyO8cweSfyqOXBN0dkbLjfBVRslRRRuC5fV9MIqFvLclaPfMlxsSTdDO4MGJRsF7VvFySBdh0xK7Rm+Vb9jYjCR3FV+b8TRsnY0eD2eFM+rmQt/OYdNIs6emVrTXCcAIzq4JoKZdFDIDDRsiztGSjIBB0+rSXmiUMtCiUo5GS/7zxGs=
     file:
       - '*.tar.gz'
+      - '*.zip'
     file_glob: true
     skip_cleanup: true
     prerelease: true
