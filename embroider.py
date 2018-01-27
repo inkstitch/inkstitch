@@ -35,47 +35,7 @@ import networkx
 from pprint import pformat
 
 import inkstitch
-from inkstitch import cache
-
-dbg = open("/tmp/embroider-debug.txt", "w")
-inkstitch.dbg = dbg
-
-SVG_PATH_TAG = inkex.addNS('path', 'svg')
-SVG_POLYLINE_TAG = inkex.addNS('polyline', 'svg')
-SVG_DEFS_TAG = inkex.addNS('defs', 'svg')
-SVG_GROUP_TAG = inkex.addNS('g', 'svg')
-
-EMBROIDERABLE_TAGS = (SVG_PATH_TAG, SVG_POLYLINE_TAG)
-
-# modern versions of Inkscape use 96 pixels per inch as per the CSS standard
-PIXELS_PER_MM = 96 / 25.4
-
-class Param(object):
-    def __init__(self, name, description, unit=None, values=[], type=None, group=None, inverse=False, default=None, tooltip=None, sort_index=0):
-        self.name = name
-        self.description = description
-        self.unit = unit
-        self.values = values or [""]
-        self.type = type
-        self.group = group
-        self.inverse = inverse
-        self.default = default
-        self.tooltip = tooltip
-        self.sort_index = sort_index
-
-    def __repr__(self):
-        return "Param(%s)" % vars(self)
-
-# Decorate a member function or property with information about
-# the embroidery parameter it corresponds to
-def param(*args, **kwargs):
-    p = Param(*args, **kwargs)
-
-    def decorator(func):
-        func.param = p
-        return func
-
-    return decorator
+from inkstitch import cache, dbg, param, EmbroideryElement, get_nodes, SVG_POLYLINE_TAG, SVG_GROUP_TAG, PIXELS_PER_MM
 
 # cribbed from inkscape-silhouette
 def parse_length_with_units( str ):
@@ -139,6 +99,7 @@ def convert_length(length):
 
     raise ValueError("Unknown unit: %s" % units)
 
+
 @cache
 def get_viewbox_transform(node):
     # somewhat cribbed from inkscape-silhouette
@@ -161,192 +122,6 @@ def get_viewbox_transform(node):
         pass
 
     return transform
-
-class EmbroideryElement(object):
-    def __init__(self, node, options=None):
-        self.node = node
-        self.options = options
-
-    @property
-    def id(self):
-        return self.node.get('id')
-
-    @classmethod
-    def get_params(cls):
-        params = []
-        for attr in dir(cls):
-            prop = getattr(cls, attr)
-            if isinstance(prop, property):
-                # The 'param' attribute is set by the 'param' decorator defined above.
-                if hasattr(prop.fget, 'param'):
-                    params.append(prop.fget.param)
-
-        return params
-
-    @cache
-    def get_param(self, param, default):
-        value = self.node.get("embroider_" + param, "").strip()
-
-        if not value:
-            value = getattr(self.options, param, default)
-
-        return value
-
-    @cache
-    def get_boolean_param(self, param, default=None):
-        value = self.get_param(param, default)
-
-        if isinstance(value, bool):
-            return value
-        else:
-            return value and (value.lower() in ('yes', 'y', 'true', 't', '1'))
-
-    @cache
-    def get_float_param(self, param, default=None):
-        try:
-            value = float(self.get_param(param, default))
-        except (TypeError, ValueError):
-            return default
-
-        if param.endswith('_mm'):
-            value = value * PIXELS_PER_MM
-
-        return value
-
-    @cache
-    def get_int_param(self, param, default=None):
-        try:
-            value = int(self.get_param(param, default))
-        except (TypeError, ValueError):
-            return default
-
-        if param.endswith('_mm'):
-            value = int(value * PIXELS_PER_MM)
-
-        return value
-
-    def set_param(self, name, value):
-        self.node.set("embroider_%s" % name, str(value))
-
-    @cache
-    def get_style(self, style_name):
-        style = simplestyle.parseStyle(self.node.get("style"))
-        if (style_name not in style):
-            return None
-        value = style[style_name]
-        if value == 'none':
-            return None
-        return value
-
-    @cache
-    def has_style(self, style_name):
-        style = simplestyle.parseStyle(self.node.get("style"))
-        return style_name in style
-
-    @property
-    def path(self):
-        return cubicsuperpath.parsePath(self.node.get("d"))
-
-
-    @cache
-    def parse_path(self):
-        # A CSP is a  "cubic superpath".
-        #
-        # A "path" is a sequence of strung-together bezier curves.
-        #
-        # A "superpath" is a collection of paths that are all in one object.
-        #
-        # The "cubic" bit in "cubic superpath" is because the bezier curves
-        # inkscape uses involve cubic polynomials.
-        #
-        # Each path is a collection of tuples, each of the form:
-        #
-        # (control_before, point, control_after)
-        #
-        # A bezier curve segment is defined by an endpoint, a control point,
-        # a second control point, and a final endpoint.  A path is a bunch of
-        # bezier curves strung together.  One could represent a path as a set
-        # of four-tuples, but there would be redundancy because the ending
-        # point of one bezier is the starting point of the next.  Instead, a
-        # path is a set of 3-tuples as shown above, and one must construct
-        # each bezier curve by taking the appropriate endpoints and control
-        # points.  Bleh. It should be noted that a straight segment is
-        # represented by having the control point on each end equal to that
-        # end's point.
-        #
-        # In a path, each element in the 3-tuple is itself a tuple of (x, y).
-        # Tuples all the way down.  Hasn't anyone heard of using classes?
-
-        path = self.path
-
-        # start with the identity transform
-        transform = [[1.0, 0.0, 0.0], [0.0, 1.0, 0.0]]
-
-        # combine this node's transform with all parent groups' transforms
-        transform = simpletransform.composeParents(self.node, transform)
-
-        # add in the transform implied by the viewBox
-        viewbox_transform = get_viewbox_transform(self.node.getroottree().getroot())
-        transform = simpletransform.composeTransform(viewbox_transform, transform)
-
-        # apply the combined transform to this node's path
-        simpletransform.applyTransformToPath(transform, path)
-
-
-        return path
-
-    def flatten(self, path):
-        """approximate a path containing beziers with a series of points"""
-
-        path = deepcopy(path)
-
-        cspsubdiv(path, getattr(self.options, "flat", 0.1))
-
-        flattened = []
-
-        for comp in path:
-            vertices = []
-            for ctl in comp:
-                vertices.append((ctl[1][0], ctl[1][1]))
-            flattened.append(vertices)
-
-        return flattened
-
-    @property
-    @param('trim_after',
-           'TRIM after',
-           tooltip='Trim thread after this object (for supported machines and file formats)',
-           type='boolean',
-           default=False,
-           sort_index=1000)
-    def trim_after(self):
-        return self.get_boolean_param('trim_after', False)
-
-    @property
-    @param('stop_after',
-           'STOP after',
-           tooltip='Add STOP instruction after this object (for supported machines and file formats)',
-           type='boolean',
-           default=False,
-           sort_index=1000)
-    def stop_after(self):
-        return self.get_boolean_param('stop_after', False)
-
-    def to_patches(self, last_patch):
-        raise NotImplementedError("%s must implement to_patches()" % self.__class__.__name__)
-
-    def embroider(self, last_patch):
-        patches = self.to_patches(last_patch)
-
-        if patches:
-            patches[-1].trim_after = self.trim_after
-            patches[-1].stop_after = self.stop_after
-
-        return patches
-
-    def fatal(self, message):
-        print >> sys.stderr, "error:", message
-        sys.exit(1)
 
 
 class Fill(EmbroideryElement):
@@ -1792,25 +1567,6 @@ def detect_classes(node):
             return classes
 
 
-def descendants(node):
-
-    nodes = []
-    element = EmbroideryElement(node)
-
-    if element.has_style('display') and element.get_style('display') is None:
-        return []
-
-    if node.tag == SVG_DEFS_TAG:
-        return []
-
-    for child in node:
-        nodes.extend(descendants(child))
-
-    if node.tag in EMBROIDERABLE_TAGS:
-        nodes.append(node)
-
-    return nodes
-
 class Patch:
     def __init__(self, color=None, stitches=None, trim_after=False, stop_after=False):
         self.color = color
@@ -2023,13 +1779,15 @@ class Embroider(inkex.Effect):
                                      help="Max number of backups of output files to keep.")
         self.patches = []
 
-    def handle_node(self, node):
-        print >> dbg, "handling node", node.get('id'), node.tag
-        nodes = descendants(node)
+    def get_elements(self):
+        elements = []
+        nodes = get_nodes(self)
+
         for node in nodes:
             classes = detect_classes(node)
-            print >> dbg, "classes:", classes
-            self.elements.extend(cls(node, self.options) for cls in classes)
+            elements.extend(cls(node, self.options) for cls in classes)
+
+        return elements
 
     def get_output_path(self):
         if self.options.output_file:
@@ -2073,22 +1831,7 @@ class Embroider(inkex.Effect):
 
         self.patch_list = []
 
-        print >> dbg, "starting nodes: %s\n" % time.time()
-        dbg.flush()
-
-        self.elements = []
-
-        if self.selected:
-            # be sure to visit selected nodes in the order they're stacked in
-            # the document
-            for node in self.document.getroot().iter():
-                if node.get("id") in self.selected:
-                    self.handle_node(node)
-        else:
-            self.handle_node(self.document.getroot())
-
-        print >> dbg, "finished nodes: %s" % time.time()
-        dbg.flush()
+        self.elements = self.get_elements()
 
         if not self.elements:
             if self.selected:
