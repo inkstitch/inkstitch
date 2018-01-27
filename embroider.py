@@ -34,11 +34,11 @@ import shapely.ops
 import networkx
 from pprint import pformat
 
-import PyEmb
-from PyEmb import cache
+import inkstitch
+from inkstitch import cache
 
 dbg = open("/tmp/embroider-debug.txt", "w")
-PyEmb.dbg = dbg
+inkstitch.dbg = dbg
 
 SVG_PATH_TAG = inkex.addNS('path', 'svg')
 SVG_POLYLINE_TAG = inkex.addNS('polyline', 'svg')
@@ -431,7 +431,7 @@ class Fill(EmbroideryElement):
     @cache
     def east(self, angle):
         # "east" is the name of the direction that is to the right along a row
-        return PyEmb.Point(1, 0).rotate(-angle)
+        return inkstitch.Point(1, 0).rotate(-angle)
 
     @cache
     def north(self, angle):
@@ -460,15 +460,15 @@ class Fill(EmbroideryElement):
 
         # the max line length I'll need to intersect the whole shape is the diagonal
         (minx, miny, maxx, maxy) = self.shape.bounds
-        upper_left = PyEmb.Point(minx, miny)
-        lower_right = PyEmb.Point(maxx, maxy)
+        upper_left = inkstitch.Point(minx, miny)
+        lower_right = inkstitch.Point(maxx, maxy)
         length = (upper_left - lower_right).length()
         half_length = length / 2.0
 
         # Now get a unit vector rotated to the requested angle.  I use -angle
         # because shapely rotates clockwise, but my geometry textbooks taught
         # me to consider angles as counter-clockwise from the X axis.
-        direction = PyEmb.Point(1, 0).rotate(-angle)
+        direction = inkstitch.Point(1, 0).rotate(-angle)
 
         # and get a normal vector
         normal = direction.rotate(math.pi / 2)
@@ -476,7 +476,7 @@ class Fill(EmbroideryElement):
         # I'll start from the center, move in the normal direction some amount,
         # and then walk left and right half_length in each direction to create
         # a line segment in the grating.
-        center = PyEmb.Point((minx + maxx) / 2.0, (miny + maxy) / 2.0)
+        center = inkstitch.Point((minx + maxx) / 2.0, (miny + maxy) / 2.0)
 
         # I need to figure out how far I need to go along the normal to get to
         # the edge of the shape.  To do that, I'll rotate the bounding box
@@ -520,7 +520,7 @@ class Fill(EmbroideryElement):
                     runs = [res.coords]
 
             if runs:
-                runs.sort(key=lambda seg: (PyEmb.Point(*seg[0]) - upper_left).length())
+                runs.sort(key=lambda seg: (inkstitch.Point(*seg[0]) - upper_left).length())
 
                 if self.flip:
                     runs.reverse()
@@ -614,8 +614,8 @@ class Fill(EmbroideryElement):
         # abutting fill regions from pull_runs().
 
 
-        beg = PyEmb.Point(*beg)
-        end = PyEmb.Point(*end)
+        beg = inkstitch.Point(*beg)
+        end = inkstitch.Point(*end)
 
         row_direction = (end - beg).unit()
         segment_length = (end - beg).length()
@@ -816,8 +816,8 @@ class AutoFill(Fill):
             # If the start and endpoints are in the same row, I can't tell which row
             # I should treat it as being in.
             for i in xrange(len(nodes)):
-                row0 = self.row_num(PyEmb.Point(*nodes[0]), angle, row_spacing)
-                row1 = self.row_num(PyEmb.Point(*nodes[1]), angle, row_spacing)
+                row0 = self.row_num(inkstitch.Point(*nodes[0]), angle, row_spacing)
+                row1 = self.row_num(inkstitch.Point(*nodes[1]), angle, row_spacing)
 
                 if row0 == row1:
                     nodes = nodes[1:] + [nodes[0]]
@@ -832,7 +832,7 @@ class AutoFill(Fill):
             else:
                 edge_set = 1
 
-            #print >> sys.stderr, outline_index, "es", edge_set, "rn", row_num, PyEmb.Point(*nodes[0]) * self.north(angle), PyEmb.Point(*nodes[1]) * self.north(angle)
+            #print >> sys.stderr, outline_index, "es", edge_set, "rn", row_num, inkstitch.Point(*nodes[0]) * self.north(angle), inkstitch.Point(*nodes[1]) * self.north(angle)
 
             # add an edge between each successive node
             for i, (node1, node2) in enumerate(zip(nodes, nodes[1:] + [nodes[0]])):
@@ -840,8 +840,8 @@ class AutoFill(Fill):
 
                 # duplicate edges contained in every other row (exactly half
                 # will be duplicated)
-                row_num = min(self.row_num(PyEmb.Point(*node1), angle, row_spacing),
-                              self.row_num(PyEmb.Point(*node2), angle, row_spacing))
+                row_num = min(self.row_num(inkstitch.Point(*node1), angle, row_spacing),
+                              self.row_num(inkstitch.Point(*node2), angle, row_spacing))
 
                 # duplicate every other edge around this outline
                 if i % 2 == edge_set:
@@ -1114,14 +1114,14 @@ class AutoFill(Fill):
         print >> dbg, "connect_points:", outline_index, start, end, distance, stitches, direction
         dbg.flush()
 
-        patch.add_stitch(PyEmb.Point(*start))
+        patch.add_stitch(inkstitch.Point(*start))
 
         for i in xrange(stitches):
             pos = (pos + one_stitch) % self.outline_length
 
-            patch.add_stitch(PyEmb.Point(*outline.interpolate(pos).coords[0]))
+            patch.add_stitch(inkstitch.Point(*outline.interpolate(pos).coords[0]))
 
-        end = PyEmb.Point(*end)
+        end = inkstitch.Point(*end)
         if (end - patch.stitches[-1]).length() > 0.1 * PIXELS_PER_MM:
             patch.add_stitch(end)
 
@@ -1132,10 +1132,10 @@ class AutoFill(Fill):
         path = self.collapse_sequential_outline_edges(graph, path)
 
         patch = Patch(color=self.color)
-        #patch.add_stitch(PyEmb.Point(*path[0][0]))
+        #patch.add_stitch(inkstitch.Point(*path[0][0]))
 
         #for edge in path:
-        #    patch.add_stitch(PyEmb.Point(*edge[1]))
+        #    patch.add_stitch(inkstitch.Point(*edge[1]))
 
         for edge in path:
             if graph.has_edge(*edge, key="segment"):
@@ -1177,7 +1177,7 @@ class AutoFill(Fill):
             starting_point = None
         else:
             nearest_point = self.outline.interpolate(self.outline.project(shgeo.Point(last_patch.stitches[-1])))
-            starting_point = PyEmb.Point(*nearest_point.coords[0])
+            starting_point = inkstitch.Point(*nearest_point.coords[0])
 
         if self.fill_underlay:
             patches.extend(self.do_auto_fill(self.fill_underlay_angle, self.fill_underlay_row_spacing, self.fill_underlay_max_stitch_length, starting_point))
@@ -1292,7 +1292,7 @@ class Stroke(EmbroideryElement):
         patches = []
 
         for path in self.paths:
-            path = [PyEmb.Point(x, y) for x, y in path]
+            path = [inkstitch.Point(x, y) for x, y in path]
             if self.is_running_stitch():
                 patch = self.stroke_points(path, self.running_stitch_length, stroke_width=0.0)
             else:
@@ -1429,7 +1429,7 @@ class SatinColumn(EmbroideryElement):
                 print >> dbg, [str(rail) for rail in rails], [str(rung) for rung in rungs]
                 self.fatal("Expected %d linestrings, got %d" % (len(rungs.geoms) + 1, len(linestrings.geoms)))
 
-            paths = [[PyEmb.Point(*coord) for coord in ls.coords] for ls in linestrings.geoms]
+            paths = [[inkstitch.Point(*coord) for coord in ls.coords] for ls in linestrings.geoms]
             result.append(paths)
 
         return zip(*result)
@@ -1453,7 +1453,7 @@ class SatinColumn(EmbroideryElement):
             # iterate over pairs of 3-tuples
             for prev, current in zip(path[:-1], path[1:]):
                 flattened_segment = self.flatten([[prev, current]])
-                flattened_segment = [PyEmb.Point(x, y) for x, y in flattened_segment[0]]
+                flattened_segment = [inkstitch.Point(x, y) for x, y in flattened_segment[0]]
                 flattened_path.append(flattened_segment)
 
             paths.append(flattened_path)
@@ -1762,7 +1762,7 @@ class Polyline(EmbroideryElement):
         patch = Patch(color=self.color)
 
         for stitch in self.stitches:
-            patch.add_stitch(PyEmb.Point(*stitch))
+            patch.add_stitch(inkstitch.Point(*stitch))
 
         return [patch]
 
@@ -1872,7 +1872,7 @@ def process_trim(stitches, next_stitch):
 
     for i in xrange(3):
         pos += delta
-        stitches.append(PyEmb.Stitch(pos.x, pos.y, stitches[-1].color, jump=True))
+        stitches.append(inkstitch.Stitch(pos.x, pos.y, stitches[-1].color, jump=True))
 
     # first one should be TRIM instead of JUMP
     stitches[-3].jump = False
@@ -1906,16 +1906,16 @@ def patches_to_stitches(patch_list, collapse_len_px=0):
 
             if stitches and last_color and last_color != patch.color:
                 # add a color change
-                stitches.append(PyEmb.Stitch(last_stitch.x, last_stitch.y, last_color, stop=True))
+                stitches.append(inkstitch.Stitch(last_stitch.x, last_stitch.y, last_color, stop=True))
 
             if need_trim:
                 process_trim(stitches, stitch)
                 need_trim = False
 
             if jump_stitch:
-                stitches.append(PyEmb.Stitch(stitch.x, stitch.y, patch.color, jump=True))
+                stitches.append(inkstitch.Stitch(stitch.x, stitch.y, patch.color, jump=True))
 
-            stitches.append(PyEmb.Stitch(stitch.x, stitch.y, patch.color, jump=False))
+            stitches.append(inkstitch.Stitch(stitch.x, stitch.y, patch.color, jump=False))
 
             jump_stitch = False
             last_stitch = stitch
@@ -2111,7 +2111,7 @@ class Embroider(inkex.Effect):
             patches.extend(element.embroider(last_patch))
 
         stitches = patches_to_stitches(patches, self.options.collapse_length_mm * PIXELS_PER_MM)
-        PyEmb.write_embroidery_file(self.get_output_path(), stitches)
+        inkstitch.write_embroidery_file(self.get_output_path(), stitches)
 
         new_layer = inkex.etree.SubElement(self.document.getroot(), SVG_GROUP_TAG, {})
         new_layer.set('id', self.uniqueId("embroidery"))
