@@ -1690,6 +1690,7 @@ class Embroider(inkex.Effect):
                                      action="store", type="int",
                                      dest="max_backups", default=5,
                                      help="Max number of backups of output files to keep.")
+        self.OptionParser.usage += "\n\nSeeing a 'no such option' message?  Please restart Inkscape to fix."
         self.patches = []
 
     def get_output_path(self):
