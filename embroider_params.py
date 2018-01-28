@@ -165,6 +165,9 @@ class ParamsTab(ScrolledPanel):
             self.set_toggle_state(not value)
             self.update_toggle_state(notify_pair=False)
 
+            if self.on_change_hook:
+                self.on_change_hook(self)
+
     def dependent_enable(self, enable):
         if enable:
             self.toggle_checkbox.Enable()
@@ -172,6 +175,9 @@ class ParamsTab(ScrolledPanel):
             self.set_toggle_state(False)
             self.toggle_checkbox.Disable()
             self.update_toggle_state()
+
+        if self.on_change_hook:
+            self.on_change_hook(self)
 
     def set_toggle_state(self, value):
         if self.toggle_checkbox:
