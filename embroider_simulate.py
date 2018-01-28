@@ -6,7 +6,8 @@ import inkex
 import simplestyle
 import colorsys
 
-from embroider import patches_to_stitches, stitches_to_polylines, PIXELS_PER_MM
+from inkstitch import PIXELS_PER_MM
+from embroider import patches_to_stitches, get_elements, elements_to_patches
 
 class EmbroiderySimulator(wx.Frame):
     def __init__(self, *args, **kwargs):
@@ -134,66 +135,30 @@ class EmbroiderySimulator(wx.Frame):
         last_pos = None
         last_color = None
         pen = None
+        trimming = False
 
         for stitch in stitches:
+            if stitch.trim:
+                trimming = True
+                last_pos = None
+                continue
+
+            if trimming:
+                if stitch.jump:
+                    continue
+                else:
+                    trimming = False
+
             pos = (stitch.x, stitch.y)
 
             if stitch.color == last_color:
-                segments.append(((last_pos, pos), pen))
+                if last_pos:
+                    segments.append(((last_pos, pos), pen))
             else:
                 pen = self.color_to_pen(simplestyle.parseColor(stitch.color))
 
             last_pos = pos
             last_color = stitch.color
-
-        return segments
-
-    def _parse_stitch_file(self, stitch_file_path):
-        # "#", "comment"
-        # "$","1","229","229","229","(null)","(null)"
-        # "*","JUMP","1.595898","48.731899"
-        # "*","STITCH","1.595898","48.731899"
-
-        segments = []
-
-        pos = (0, 0)
-        pen = wx.Pen('black')
-        cut = True
-
-        with open(stitch_file_path) as stitch_file:
-            for line in stitch_file:
-                line = line.strip()
-                if not line:
-                    continue
-
-                fields = line.strip().split(",")
-                fields = [self._strip_quotes(field) for field in fields]
-
-                symbol, command = fields[:2]
-
-                if symbol == "$":
-                    red, green, blue = fields[2:5]
-                    pen = self.color_to_pen((int(red), int(green), int(blue)))
-                elif symbol == "*":
-                    if command == "COLOR":
-                        # change color
-                        # The next command should be a JUMP, and we'll need to skip stitching.
-                        cut = True
-                    elif command == "JUMP" or command == "STITCH":
-                        # JUMP just means a long stitch, really.
-
-                        x, y = fields[2:]
-                        new_pos = (float(x) * PIXELS_PER_MM, float(y) * PIXELS_PER_MM)
-
-                        if not segments and new_pos == (0.0, 0.0):
-                            # libembroidery likes to throw an extra JUMP in at the start
-                            continue
-
-                        if not cut:
-                            segments.append(((pos, new_pos), pen))
-
-                        cut = False
-                        pos = new_pos
 
         return segments
 
@@ -330,19 +295,13 @@ class SimulateEffect(inkex.Effect):
                                      help="Directory in which to store output file")
 
     def effect(self):
+        patches = elements_to_patches(get_elements(self))
         app = wx.App()
-        frame = EmbroiderySimulator(None, -1, "Embroidery Simulation", wx.DefaultPosition, size=(1000, 1000), stitch_file=self.get_stitch_file())
+        frame = EmbroiderySimulator(None, -1, "Embroidery Simulation", wx.DefaultPosition, size=(1000, 1000), patches=patches)
         app.SetTopWindow(frame)
         frame.Show()
         wx.CallAfter(frame.go)
         app.MainLoop()
-
-    def get_stitch_file(self):
-        svg_filename = self.document.getroot().get(inkex.addNS('docname', 'sodipodi'))
-        csv_filename = svg_filename.replace('.svg', '.csv')
-        stitch_file = os.path.join(self.options.path, csv_filename)
-
-        return stitch_file
 
 
 if __name__ == "__main__":
