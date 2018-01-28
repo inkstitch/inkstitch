@@ -13,7 +13,8 @@ import wx
 from wx.lib.scrolledpanel import ScrolledPanel
 from collections import defaultdict
 import inkex
-from embroider import Param, EmbroideryElement, Fill, AutoFill, Stroke, SatinColumn, descendants
+from inkstitch import Param, EmbroideryElement, get_nodes
+from embroider import Fill, AutoFill, Stroke, SatinColumn
 from functools import partial
 from itertools import groupby
 from embroider_simulate import EmbroiderySimulator
@@ -307,7 +308,7 @@ class ParamsTab(ScrolledPanel):
                 input.Bind(wx.EVT_TEXT, self.changed)
             else:
                 value = param.values[0] if param.values else ""
-                input = wx.TextCtrl(self, wx.ID_ANY, value=value)
+                input = wx.TextCtrl(self, wx.ID_ANY, value=str(value))
                 input.Bind(wx.EVT_TEXT, self.changed)
 
             self.param_inputs[param.name] = input
@@ -328,7 +329,8 @@ class SettingsFrame(wx.Frame):
         self.tabs_factory = kwargs.pop('tabs_factory', [])
         self.cancel_hook = kwargs.pop('on_cancel', None)
         wx.Frame.__init__(self, None, wx.ID_ANY,
-                          "Embroidery Params"
+                          "Embroidery Params",
+                          pos=wx.Point(0,0)
                           )
         self.notebook = wx.Notebook(self, wx.ID_ANY)
         self.tabs = self.tabs_factory(self.notebook)
@@ -623,17 +625,6 @@ class EmbroiderParams(inkex.Effect):
         self.cancelled = False
         inkex.Effect.__init__(self, *args, **kwargs)
 
-    def get_nodes(self):
-        if self.selected:
-            nodes = []
-            for node in self.document.getroot().iter():
-                if node.get("id") in self.selected:
-                    nodes.extend(descendants(node))
-        else:
-            nodes = descendants(self.document.getroot())
-
-        return nodes
-
     def embroidery_classes(self, node):
         element = EmbroideryElement(node)
         classes = []
@@ -651,10 +642,10 @@ class EmbroiderParams(inkex.Effect):
         return classes
 
     def get_nodes_by_class(self):
-        nodes = self.get_nodes()
+        nodes = get_nodes(self)
         nodes_by_class = defaultdict(list)
 
-        for z, node in enumerate(self.get_nodes()):
+        for z, node in enumerate(nodes):
             for cls in self.embroidery_classes(node):
                 element = cls(node)
                 element.order = z
