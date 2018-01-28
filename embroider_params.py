@@ -308,7 +308,7 @@ class ParamsTab(ScrolledPanel):
                 input.Bind(wx.EVT_TEXT, self.changed)
             else:
                 value = param.values[0] if param.values else ""
-                input = wx.TextCtrl(self, wx.ID_ANY, value=value)
+                input = wx.TextCtrl(self, wx.ID_ANY, value=str(value))
                 input.Bind(wx.EVT_TEXT, self.changed)
 
             self.param_inputs[param.name] = input

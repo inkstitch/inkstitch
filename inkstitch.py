@@ -151,9 +151,8 @@ def param(*args, **kwargs):
 
 
 class EmbroideryElement(object):
-    def __init__(self, node, options=None):
+    def __init__(self, node):
         self.node = node
-        self.options = options
 
     @property
     def id(self):
@@ -175,10 +174,7 @@ class EmbroideryElement(object):
     def get_param(self, param, default):
         value = self.node.get("embroider_" + param, "").strip()
 
-        if not value:
-            value = getattr(self.options, param, default)
-
-        return value
+        return value or default
 
     @cache
     def get_boolean_param(self, param, default=None):
@@ -288,7 +284,7 @@ class EmbroideryElement(object):
 
         path = deepcopy(path)
 
-        cspsubdiv(path, getattr(self.options, "flat", 0.1))
+        cspsubdiv(path, 0.1)
 
         flattened = []
 
