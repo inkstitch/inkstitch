@@ -1727,6 +1727,28 @@ def emit_inkscape(parent, stitches):
                                 'transform': transform
                                 })
 
+def get_elements(effect):
+    elements = []
+    nodes = get_nodes(effect)
+
+    for node in nodes:
+        classes = detect_classes(node)
+        elements.extend(cls(node, effect.options) for cls in classes)
+
+    return elements
+
+
+def elements_to_patches(elements):
+    patches = []
+    for element in elements:
+        if patches:
+            last_patch = patches[-1]
+        else:
+            last_patch = None
+
+        patches.extend(element.embroider(last_patch))
+
+    return patches
 
 class Embroider(inkex.Effect):
 
@@ -1779,16 +1801,6 @@ class Embroider(inkex.Effect):
                                      help="Max number of backups of output files to keep.")
         self.patches = []
 
-    def get_elements(self):
-        elements = []
-        nodes = get_nodes(self)
-
-        for node in nodes:
-            classes = detect_classes(node)
-            elements.extend(cls(node, self.options) for cls in classes)
-
-        return elements
-
     def get_output_path(self):
         if self.options.output_file:
             output_path = os.path.join(self.options.path, self.options.output_file)
@@ -1831,7 +1843,7 @@ class Embroider(inkex.Effect):
 
         self.patch_list = []
 
-        self.elements = self.get_elements()
+        self.elements = get_elements(self)
 
         if not self.elements:
             if self.selected:
@@ -1844,15 +1856,7 @@ class Embroider(inkex.Effect):
         if self.options.hide_layers:
             self.hide_layers()
 
-        patches = []
-        for element in self.elements:
-            if patches:
-                last_patch = patches[-1]
-            else:
-                last_patch = None
-
-            patches.extend(element.embroider(last_patch))
-
+        patches = elements_to_patches(self.elements)
         stitches = patches_to_stitches(patches, self.options.collapse_length_mm * PIXELS_PER_MM)
         inkstitch.write_embroidery_file(self.get_output_path(), stitches)
 
