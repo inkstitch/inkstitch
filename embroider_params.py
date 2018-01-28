@@ -329,7 +329,8 @@ class SettingsFrame(wx.Frame):
         self.tabs_factory = kwargs.pop('tabs_factory', [])
         self.cancel_hook = kwargs.pop('on_cancel', None)
         wx.Frame.__init__(self, None, wx.ID_ANY,
-                          "Embroidery Params"
+                          "Embroidery Params",
+                          pos=wx.Point(0,0)
                           )
         self.notebook = wx.Notebook(self, wx.ID_ANY)
         self.tabs = self.tabs_factory(self.notebook)
