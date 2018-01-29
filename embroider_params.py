@@ -598,7 +598,7 @@ class SettingsFrame(wx.Frame):
     def __set_properties(self):
         # begin wxGlade: MyFrame.__set_properties
         self.SetTitle("Embroidery Parameters")
-        self.notebook.SetMinSize((800, 400))
+        self.notebook.SetMinSize((800, 600))
         self.preset_chooser.SetSelection(-1)
         # end wxGlade
 
