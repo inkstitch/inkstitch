@@ -668,7 +668,7 @@ class EmbroiderParams(inkex.Effect):
             getter = 'get_param'
 
         values = filter(lambda item: item is not None,
-                        (getattr(node, getter)(param.name, param.default) for node in nodes))
+                        (getattr(node, getter)(param.name, str(param.default)) for node in nodes))
 
         return values
 
