@@ -65,7 +65,7 @@ class Fill(EmbroideryElement):
     @property
     @param('row_spacing_mm', 'Spacing between rows', unit='mm', type='float', default=0.25)
     def row_spacing(self):
-        return self.get_float_param("row_spacing_mm", 0.25)
+        return max(self.get_float_param("row_spacing_mm", 0.25), 0.01)
 
     @property
     def end_row_spacing(self):
@@ -74,7 +74,7 @@ class Fill(EmbroideryElement):
     @property
     @param('max_stitch_length_mm', 'Maximum fill stitch length', unit='mm', type='float', default=3.0)
     def max_stitch_length(self):
-        return self.get_float_param("max_stitch_length_mm", 3.0)
+        return max(self.get_float_param("max_stitch_length_mm", 3.0), 0.01)
 
     @property
     @param('staggers', 'Stagger rows this many times before repeating', type='int', default=4)
@@ -392,7 +392,7 @@ class AutoFill(Fill):
     @property
     @param('running_stitch_length_mm', 'Running stitch length (traversal between sections)', unit='mm', type='float', default=1.5)
     def running_stitch_length(self):
-        return self.get_float_param("running_stitch_length_mm", 1.5)
+        return max(self.get_float_param("running_stitch_length_mm", 1.5), 0.01)
 
     @property
     @param('fill_underlay', 'Underlay', type='toggle', group='AutoFill Underlay', default=False)
@@ -907,13 +907,13 @@ class Stroke(EmbroideryElement):
     @property
     @param('running_stitch_length_mm', 'Running stitch length', unit='mm', type='float', default=1.5)
     def running_stitch_length(self):
-        return self.get_float_param("running_stitch_length_mm", 1.5)
+        return max(self.get_float_param("running_stitch_length_mm", 1.5), 0.01)
 
     @property
     @param('zigzag_spacing_mm', 'Zig-zag spacing (peak-to-peak)', unit='mm', type='float', default=0.4)
     @cache
     def zigzag_spacing(self):
-        return self.get_float_param("zigzag_spacing_mm", 0.4)
+        return max(self.get_float_param("zigzag_spacing_mm", 0.4), 0.01)
 
     @property
     @param('repeats', 'Repeats', type='int', default="1")
@@ -1009,7 +1009,7 @@ class SatinColumn(EmbroideryElement):
     @param('zigzag_spacing_mm', 'Zig-zag spacing (peak-to-peak)', unit='mm', type='float', default=0.4)
     def zigzag_spacing(self):
         # peak-to-peak distance between zigzags
-        return self.get_float_param("zigzag_spacing_mm", 0.4)
+        return max(self.get_float_param("zigzag_spacing_mm", 0.4), 0.01)
 
     @property
     @param('pull_compensation_mm', 'Pull compensation', unit='mm', type='float')
@@ -1029,7 +1029,7 @@ class SatinColumn(EmbroideryElement):
     @property
     @param('contour_underlay_stitch_length_mm', 'Stitch length', unit='mm', group='Contour Underlay', type='float', default=1.5)
     def contour_underlay_stitch_length(self):
-        return self.get_float_param("contour_underlay_stitch_length_mm", 1.5)
+        return max(self.get_float_param("contour_underlay_stitch_length_mm", 1.5), 0.01)
 
     @property
     @param('contour_underlay_inset_mm', 'Contour underlay inset amount', unit='mm', group='Contour Underlay', type='float', default=0.4)
@@ -1047,7 +1047,7 @@ class SatinColumn(EmbroideryElement):
     @property
     @param('center_walk_underlay_stitch_length_mm', 'Stitch length', unit='mm', group='Center-Walk Underlay', type='float', default=1.5)
     def center_walk_underlay_stitch_length(self):
-        return self.get_float_param("center_walk_underlay_stitch_length_mm", 1.5)
+        return max(self.get_float_param("center_walk_underlay_stitch_length_mm", 1.5), 0.01)
 
     @property
     @param('zigzag_underlay', 'Zig-zag underlay', type='toggle', group='Zig-zag Underlay')
@@ -1057,7 +1057,7 @@ class SatinColumn(EmbroideryElement):
     @property
     @param('zigzag_underlay_spacing_mm', 'Zig-Zag spacing (peak-to-peak)', unit='mm', group='Zig-zag Underlay', type='float', default=3)
     def zigzag_underlay_spacing(self):
-        return self.get_float_param("zigzag_underlay_spacing_mm", 3)
+        return max(self.get_float_param("zigzag_underlay_spacing_mm", 3), 0.01)
 
     @property
     @param('zigzag_underlay_inset_mm', 'Inset amount (default: half of contour underlay inset)', unit='mm', group='Zig-zag Underlay', type='float')
