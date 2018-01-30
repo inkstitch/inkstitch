@@ -18,6 +18,8 @@ class EmbroiderySimulator(wx.Frame):
         self.stitches_per_frame = kwargs.pop('stitches_per_frame', 1)
         self.target_duration = kwargs.pop('target_duration', None)
 
+        self.margin = 10
+
         screen_rect = wx.Display(0).ClientArea
         self.max_width = kwargs.pop('max_width', screen_rect.GetWidth())
         self.max_height = kwargs.pop('max_height', screen_rect.GetHeight())
@@ -33,7 +35,7 @@ class EmbroiderySimulator(wx.Frame):
         if self.target_duration:
             self.adjust_speed(self.target_duration)
 
-        self.buffer = wx.Bitmap(self.width * self.scale, self.height * self.scale)
+        self.buffer = wx.Bitmap(self.width * self.scale + self.margin * 2, self.height * self.scale + self.margin * 2)
         self.dc = wx.MemoryDC()
         self.dc.SelectObject(self.buffer)
         self.canvas = wx.GraphicsContext.Create(self.dc)
@@ -197,8 +199,10 @@ class EmbroiderySimulator(wx.Frame):
         self.segments = new_segments
 
     def calculate_dimensions(self):
-        width = 0
-        height = 0
+        # 0.01 avoids a division by zero below for designs with no width or
+        # height (e.g. a straight vertical or horizontal line)
+        width = 0.01
+        height = 0.01
 
         for x, y in self.all_coordinates():
             width = max(width, x)
@@ -208,7 +212,7 @@ class EmbroiderySimulator(wx.Frame):
         self.height = height
         self.scale = min(float(self.max_width) / width, float(self.max_height) / height)
 
-        # make room for decorations and a bit of a margin
+        # make room for decorations and the margin
         self.scale *= 0.95
 
     def go(self):
@@ -247,7 +251,8 @@ class EmbroiderySimulator(wx.Frame):
         decorations_width = window_width - client_width
         decorations_height = window_height - client_height
 
-        self.SetSize((self.width * self.scale + decorations_width, self.height * self.scale + decorations_height))
+        self.SetSize((self.width * self.scale + decorations_width + self.margin * 2,
+                      self.height * self.scale + decorations_height + self.margin * 2))
 
         e.Skip()
 
@@ -259,10 +264,6 @@ class EmbroiderySimulator(wx.Frame):
             dc.DrawLine(self.last_pos[0] - 10, self.last_pos[1],      self.last_pos[0] + 10, self.last_pos[1])
             dc.DrawLine(self.last_pos[0],      self.last_pos[1] - 10, self.last_pos[0],      self.last_pos[1] + 10)
 
-    def redraw(self):
-        dc = wx.ClientDC(self)
-        dc.DrawBitmap(self.buffer, 0, 0)
-
     def draw_one_frame(self):
         for i in xrange(self.stitches_per_frame):
             try:
@@ -272,10 +273,10 @@ class EmbroiderySimulator(wx.Frame):
                     y1 = self.height - y1
                     y2 = self.height - y2
 
-                x1 = x1 * self.scale
-                y1 = y1 * self.scale
-                x2 = x2 * self.scale
-                y2 = y2 * self.scale
+                x1 = x1 * self.scale + self.margin
+                y1 = y1 * self.scale + self.margin
+                x2 = x2 * self.scale + self.margin
+                y2 = y2 * self.scale + self.margin
 
                 self.canvas.SetPen(color)
                 self.canvas.DrawLines(((x1, y1), (x2, y2)))

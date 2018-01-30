@@ -335,8 +335,7 @@ class SettingsFrame(wx.Frame):
         self.tabs_factory = kwargs.pop('tabs_factory', [])
         self.cancel_hook = kwargs.pop('on_cancel', None)
         wx.Frame.__init__(self, None, wx.ID_ANY,
-                          "Embroidery Params",
-                          pos=wx.Point(0,0)
+                          "Embroidery Params"
                           )
         self.notebook = wx.Notebook(self, wx.ID_ANY)
         self.tabs = self.tabs_factory(self.notebook)
@@ -598,7 +597,7 @@ class SettingsFrame(wx.Frame):
     def __set_properties(self):
         # begin wxGlade: MyFrame.__set_properties
         self.SetTitle("Embroidery Parameters")
-        self.notebook.SetMinSize((800, 400))
+        self.notebook.SetMinSize((800, 600))
         self.preset_chooser.SetSelection(-1)
         # end wxGlade
 
@@ -668,7 +667,7 @@ class EmbroiderParams(inkex.Effect):
             getter = 'get_param'
 
         values = filter(lambda item: item is not None,
-                        (getattr(node, getter)(param.name, param.default) for node in nodes))
+                        (getattr(node, getter)(param.name, str(param.default)) for node in nodes))
 
         return values
 
