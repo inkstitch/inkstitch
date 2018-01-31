@@ -237,17 +237,22 @@ class ParamsTab(ScrolledPanel):
             preset[name] = input.GetValue()
 
     def update_description(self):
-        description = "These settings will be applied to %d object%s." % \
-            (len(self.nodes), "s" if len(self.nodes) != 1 else "")
+        if len(self.nodes) == 1:
+            description = _("These settings will be applied to 1 object.")
+        else:
+            description = _("These settings will be applied to %d objects.") % len(self.nodes)
 
         if any(len(param.values) > 1 for param in self.params):
-            description += "\n • Some settings had different values across objects.  Select a value from the dropdown or enter a new one."
+            description += "\n • " + _("Some settings had different values across objects.  Select a value from the dropdown or enter a new one.")
 
         if self.dependent_tabs:
-            description += "\n • Disabling this tab will disable the following %d tabs." % len(self.dependent_tabs)
+            if len(self.dependent_tabs) == 1:
+                description += "\n • " + _("Disabling this tab will disable the following %d tabs.") % len(self.dependent_tabs)
+            else:
+                description += "\n • " + _("Disabling this tab will disable the following tab.")
 
         if self.paired_tab:
-            description += "\n • Enabling this tab will disable %s and vice-versa." % self.paired_tab.name
+            description += "\n • " + _("Enabling this tab will disable %s and vice-versa.") % self.paired_tab.name
 
         self.description_text = description
 
@@ -277,7 +282,7 @@ class ParamsTab(ScrolledPanel):
         # just to add space around the settings
         box = wx.BoxSizer(wx.VERTICAL)
 
-        summary_box = wx.StaticBox(self, wx.ID_ANY, label="Inkscape objects")
+        summary_box = wx.StaticBox(self, wx.ID_ANY, label=_("Inkscape objects"))
         sizer = wx.StaticBoxSizer(summary_box, wx.HORIZONTAL)
 #        sizer = wx.BoxSizer(wx.HORIZONTAL)
         self.description = wx.StaticText(self, style=wx.TE_WORDWRAP)
@@ -335,7 +340,7 @@ class SettingsFrame(wx.Frame):
         self.tabs_factory = kwargs.pop('tabs_factory', [])
         self.cancel_hook = kwargs.pop('on_cancel', None)
         wx.Frame.__init__(self, None, wx.ID_ANY,
-                          "Embroidery Params"
+                          _("Embroidery Params")
                           )
         self.notebook = wx.Notebook(self, wx.ID_ANY)
         self.tabs = self.tabs_factory(self.notebook)
@@ -349,31 +354,31 @@ class SettingsFrame(wx.Frame):
 
         wx.CallLater(1000, self.update_simulator)
 
-        self.presets_box = wx.StaticBox(self, wx.ID_ANY, label="Presets")
+        self.presets_box = wx.StaticBox(self, wx.ID_ANY, label=_("Presets"))
 
         self.preset_chooser = wx.ComboBox(self, wx.ID_ANY)
         self.update_preset_list()
 
-        self.load_preset_button = wx.Button(self, wx.ID_ANY, "Load")
+        self.load_preset_button = wx.Button(self, wx.ID_ANY, _("Load"))
         self.load_preset_button.Bind(wx.EVT_BUTTON, self.load_preset)
 
-        self.add_preset_button = wx.Button(self, wx.ID_ANY, "Add")
+        self.add_preset_button = wx.Button(self, wx.ID_ANY, _("Add"))
         self.add_preset_button.Bind(wx.EVT_BUTTON, self.add_preset)
 
-        self.overwrite_preset_button = wx.Button(self, wx.ID_ANY, "Overwrite")
+        self.overwrite_preset_button = wx.Button(self, wx.ID_ANY, _("Overwrite"))
         self.overwrite_preset_button.Bind(wx.EVT_BUTTON, self.overwrite_preset)
 
-        self.delete_preset_button = wx.Button(self, wx.ID_ANY, "Delete")
+        self.delete_preset_button = wx.Button(self, wx.ID_ANY, _("Delete"))
         self.delete_preset_button.Bind(wx.EVT_BUTTON, self.delete_preset)
 
-        self.cancel_button = wx.Button(self, wx.ID_ANY, "Cancel")
+        self.cancel_button = wx.Button(self, wx.ID_ANY, _("Cancel"))
         self.cancel_button.Bind(wx.EVT_BUTTON, self.cancel)
         self.Bind(wx.EVT_CLOSE, self.cancel)
 
-        self.use_last_button = wx.Button(self, wx.ID_ANY, "Use Last Settings")
+        self.use_last_button = wx.Button(self, wx.ID_ANY, _("Use Last Settings"))
         self.use_last_button.Bind(wx.EVT_BUTTON, self.use_last)
 
-        self.apply_button = wx.Button(self, wx.ID_ANY, "Apply and Quit")
+        self.apply_button = wx.Button(self, wx.ID_ANY, _("Apply and Quit"))
         self.apply_button.Bind(wx.EVT_BUTTON, self.apply)
 
         self.__set_properties()
@@ -418,7 +423,7 @@ class SettingsFrame(wx.Frame):
             max_height = screen_rect.GetHeight()
 
             try:
-                self.simulate_window = EmbroiderySimulator(None, -1, "Embroidery Simulator",
+                self.simulate_window = EmbroiderySimulator(None, -1, _("Preview"),
                                                            simulator_pos,
                                                            size=(300, 300),
                                                            patches=patches,
@@ -432,11 +437,11 @@ class SettingsFrame(wx.Frame):
                 try:
                     # a window may have been created, so we need to destroy it
                     # or the app will never exit
-                    wx.Window.FindWindowByName("Embroidery Simulator").Destroy()
+                    wx.Window.FindWindowByName("Preview").Destroy()
                 except:
                     pass
 
-                info_dialog(self, error, "Internal Error")
+                info_dialog(self, error, _("Internal Error"))
 
             self.simulate_window.Show()
             wx.CallLater(10, self.Raise)
@@ -489,13 +494,13 @@ class SettingsFrame(wx.Frame):
         if preset_name:
             return preset_name
         else:
-            info_dialog(self, "Please enter or select a preset name first.", caption='Preset')
+            info_dialog(self, _("Please enter or select a preset name first."), caption=_('Preset'))
             return
 
     def check_and_load_preset(self, preset_name):
         preset = load_preset(preset_name)
         if not preset:
-            info_dialog(self, 'Preset "%s" not found.' % preset_name, caption='Preset')
+            info_dialog(self, _('Preset "%s" not found.') % preset_name, caption=_('Preset'))
 
         return preset
 
@@ -523,7 +528,7 @@ class SettingsFrame(wx.Frame):
             return
 
         if not overwrite and load_preset(preset_name):
-            info_dialog(self, 'Preset "%s" already exists.  Please use another name or press "Overwrite"' % preset_name, caption='Preset')
+            info_dialog(self, _('Preset "%s" already exists.  Please use another name or press "Overwrite"') % preset_name, caption=_('Preset'))
 
         save_preset(preset_name, self.get_preset_data())
         self.update_preset_list()
@@ -596,7 +601,6 @@ class SettingsFrame(wx.Frame):
 
     def __set_properties(self):
         # begin wxGlade: MyFrame.__set_properties
-        self.SetTitle("Embroidery Parameters")
         self.notebook.SetMinSize((800, 600))
         self.preset_chooser.SetSelection(-1)
         # end wxGlade
