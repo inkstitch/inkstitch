@@ -1160,7 +1160,8 @@ class SatinColumn(EmbroideryElement):
 
         if len(self.csp) == 2:
             if len(self.csp[0]) != len(self.csp[1]):
-                self.fatal(_("satin column: object %s has two paths with an unequal number of points (%s and %s)") % (node_id, len(self.csp[0]), len(self.csp[1])))
+                self.fatal(_("satin column: object %(id)s has two paths with an unequal number of points (%(length1)d and %(length2)d)") % \
+                             dict(id=node_id, length1=len(self.csp[0]), length2=len(self.csp[1])))
 
     def offset_points(self, pos1, pos2, offset_px):
         # Expand or contract two points about their midpoint.  This is
