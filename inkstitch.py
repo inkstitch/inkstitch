@@ -85,7 +85,7 @@ def parse_length_with_units( str ):
     try:
         v = float( s )
     except:
-        raise ValueError("parseLengthWithUnits: unknown unit %s" % s)
+        raise ValueError(_("parseLengthWithUnits: unknown unit %s") % s)
 
     return v, u
 
@@ -109,7 +109,7 @@ def convert_length(length):
         # open an old document, inkscape will add a viewbox for you.
         return value * 96
 
-    raise ValueError("Unknown unit: %s" % units)
+    raise ValueError(_("Unknown unit: %s") % units)
 
 
 @cache
@@ -312,8 +312,8 @@ class EmbroideryElement(object):
 
     @property
     @param('trim_after',
-           'TRIM after',
-           tooltip='Trim thread after this object (for supported machines and file formats)',
+           _('TRIM after'),
+           tooltip=_('Trim thread after this object (for supported machines and file formats)'),
            type='boolean',
            default=False,
            sort_index=1000)
@@ -322,8 +322,8 @@ class EmbroideryElement(object):
 
     @property
     @param('stop_after',
-           'STOP after',
-           tooltip='Add STOP instruction after this object (for supported machines and file formats)',
+           _('STOP after'),
+           tooltip=_('Add STOP instruction after this object (for supported machines and file formats)'),
            type='boolean',
            default=False,
            sort_index=1000)
