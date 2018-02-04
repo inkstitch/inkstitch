@@ -14,14 +14,11 @@ from wx.lib.scrolledpanel import ScrolledPanel
 from collections import defaultdict
 import inkex
 import inkstitch
-from inkstitch import Param, EmbroideryElement, get_nodes
+from inkstitch import _, Param, EmbroideryElement, get_nodes
 from embroider import Fill, AutoFill, Stroke, SatinColumn
 from functools import partial
 from itertools import groupby
 from embroider_simulate import EmbroiderySimulator
-
-
-inkstitch.localize()
 
 
 def presets_path():

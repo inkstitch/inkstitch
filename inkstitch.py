@@ -33,6 +33,8 @@ EMBROIDERABLE_TAGS = (SVG_PATH_TAG, SVG_POLYLINE_TAG)
 
 dbg = open("/tmp/embroider-debug.txt", "w")
 
+_ = lambda message: message
+
 # simplify use of lru_cache decorator
 def cache(*args, **kwargs):
     return lru_cache(maxsize=None)(*args, **kwargs)
@@ -47,7 +49,11 @@ def localize():
     locale_dir = os.path.join(locale_dir, 'locales')
 
     translation = gettext.translation("inkstitch", locale_dir, fallback=True)
-    translation.install()
+
+    global _
+    _ = translation.gettext
+
+localize()
 
 # cribbed from inkscape-silhouette
 def parse_length_with_units( str ):

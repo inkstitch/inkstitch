@@ -35,9 +35,7 @@ import networkx
 from pprint import pformat
 
 import inkstitch
-from inkstitch import cache, dbg, param, EmbroideryElement, get_nodes, SVG_POLYLINE_TAG, SVG_GROUP_TAG, PIXELS_PER_MM, get_viewbox_transform
-
-inkstitch.localize()
+from inkstitch import _, cache, dbg, param, EmbroideryElement, get_nodes, SVG_POLYLINE_TAG, SVG_GROUP_TAG, PIXELS_PER_MM, get_viewbox_transform
 
 class Fill(EmbroideryElement):
     def __init__(self, *args, **kwargs):

@@ -8,10 +8,7 @@ import colorsys
 
 import inkstitch
 from inkstitch import PIXELS_PER_MM
-from embroider import patches_to_stitches, get_elements, elements_to_patches
-
-
-inkstitch.localize()
+from embroider import _, patches_to_stitches, get_elements, elements_to_patches
 
 
 class EmbroiderySimulator(wx.Frame):
