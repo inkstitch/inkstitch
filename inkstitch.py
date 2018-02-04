@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 # http://www.achatina.de/sewing/main/TECHNICL.HTM
 
+import os
 import sys
+import gettext
 from copy import deepcopy
 import math
 import libembroidery
@@ -34,6 +36,18 @@ dbg = open("/tmp/embroider-debug.txt", "w")
 # simplify use of lru_cache decorator
 def cache(*args, **kwargs):
     return lru_cache(maxsize=None)(*args, **kwargs)
+
+def localize():
+    if getattr(sys, 'frozen', False):
+        # we are in a pyinstaller installation
+        locale_dir = sys._MEIPASS
+    else:
+        locale_dir = os.path.dirname(__file__)
+
+    locale_dir = os.path.join(locale_dir, 'locales')
+
+    translation = gettext.translation("inkstitch", locale_dir, fallback=True)
+    translation.install()
 
 # cribbed from inkscape-silhouette
 def parse_length_with_units( str ):

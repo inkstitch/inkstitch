@@ -6,8 +6,13 @@ import inkex
 import simplestyle
 import colorsys
 
+import inkstitch
 from inkstitch import PIXELS_PER_MM
 from embroider import patches_to_stitches, get_elements, elements_to_patches
+
+
+inkstitch.localize()
+
 
 class EmbroiderySimulator(wx.Frame):
     def __init__(self, *args, **kwargs):
