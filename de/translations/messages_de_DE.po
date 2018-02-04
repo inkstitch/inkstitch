@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-04 16:24-0500\n"
-"PO-Revision-Date: 2018-02-04 16:26-0500\n"
+"PO-Revision-Date: 2018-02-04 17:00-0500\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
@@ -18,11 +18,11 @@ msgstr ""
 
 #: embroider.py:45
 msgid "Manually routed fill stitching"
-msgstr ""
+msgstr "German translation of manually routed fill stitching"
 
 #: embroider.py:50
 msgid "Angle of lines of stitches"
-msgstr ""
+msgstr "german translation of Angle of lines of stitches"
 
 #: embroider.py:60
 msgid "Flip fill (start right-to-left)"
