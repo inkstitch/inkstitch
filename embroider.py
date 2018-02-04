@@ -396,7 +396,7 @@ class AutoFill(Fill):
         return max(self.get_float_param("running_stitch_length_mm", 1.5), 0.01)
 
     @property
-    @param('fill_underlay', _('Underlay'), type='toggle', group=_('AutoFill Underlay'_), default=False)
+    @param('fill_underlay', _('Underlay'), type='toggle', group=_('AutoFill Underlay'), default=False)
     def fill_underlay(self):
         return self.get_boolean_param("fill_underlay", default=False)
 
