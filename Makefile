@@ -12,3 +12,7 @@ dist: distclean
 
 distclean:
 	rm -rf build dist *.spec *.tar.gz
+
+messages.po: embroider*.py inkstitch.py
+	rm -f messages.po
+	xgettext embroider*.py inkstitch.py
