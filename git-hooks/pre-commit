@@ -1,0 +1,4 @@
+#!/bin/bash
+
+make messages.po | grep -v 'is up to date\.$'
+git add messages.po

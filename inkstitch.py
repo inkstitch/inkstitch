@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 # http://www.achatina.de/sewing/main/TECHNICL.HTM
 
+import os
 import sys
+import gettext
 from copy import deepcopy
 import math
 import libembroidery
@@ -31,9 +33,27 @@ EMBROIDERABLE_TAGS = (SVG_PATH_TAG, SVG_POLYLINE_TAG)
 
 dbg = open("/tmp/embroider-debug.txt", "w")
 
+_ = lambda message: message
+
 # simplify use of lru_cache decorator
 def cache(*args, **kwargs):
     return lru_cache(maxsize=None)(*args, **kwargs)
+
+def localize():
+    if getattr(sys, 'frozen', False):
+        # we are in a pyinstaller installation
+        locale_dir = sys._MEIPASS
+    else:
+        locale_dir = os.path.dirname(__file__)
+
+    locale_dir = os.path.join(locale_dir, 'locales')
+
+    translation = gettext.translation("inkstitch", locale_dir, fallback=True)
+
+    global _
+    _ = translation.gettext
+
+localize()
 
 # cribbed from inkscape-silhouette
 def parse_length_with_units( str ):
@@ -71,7 +91,7 @@ def parse_length_with_units( str ):
     try:
         v = float( s )
     except:
-        raise ValueError("parseLengthWithUnits: unknown unit %s" % s)
+        raise ValueError(_("parseLengthWithUnits: unknown unit %s") % s)
 
     return v, u
 
@@ -95,7 +115,7 @@ def convert_length(length):
         # open an old document, inkscape will add a viewbox for you.
         return value * 96
 
-    raise ValueError("Unknown unit: %s" % units)
+    raise ValueError(_("Unknown unit: %s") % units)
 
 
 @cache
@@ -298,8 +318,8 @@ class EmbroideryElement(object):
 
     @property
     @param('trim_after',
-           'TRIM after',
-           tooltip='Trim thread after this object (for supported machines and file formats)',
+           _('TRIM after'),
+           tooltip=_('Trim thread after this object (for supported machines and file formats)'),
            type='boolean',
            default=False,
            sort_index=1000)
@@ -308,8 +328,8 @@ class EmbroideryElement(object):
 
     @property
     @param('stop_after',
-           'STOP after',
-           tooltip='Add STOP instruction after this object (for supported machines and file formats)',
+           _('STOP after'),
+           tooltip=_('Add STOP instruction after this object (for supported machines and file formats)'),
            type='boolean',
            default=False,
            sort_index=1000)

@@ -6,8 +6,10 @@ import inkex
 import simplestyle
 import colorsys
 
+import inkstitch
 from inkstitch import PIXELS_PER_MM
-from embroider import patches_to_stitches, get_elements, elements_to_patches
+from embroider import _, patches_to_stitches, get_elements, elements_to_patches
+
 
 class EmbroiderySimulator(wx.Frame):
     def __init__(self, *args, **kwargs):
@@ -298,7 +300,7 @@ class SimulateEffect(inkex.Effect):
     def effect(self):
         patches = elements_to_patches(get_elements(self))
         app = wx.App()
-        frame = EmbroiderySimulator(None, -1, "Embroidery Simulation", wx.DefaultPosition, size=(1000, 1000), patches=patches)
+        frame = EmbroiderySimulator(None, -1, _("Embroidery Simulation"), wx.DefaultPosition, size=(1000, 1000), patches=patches)
         app.SetTopWindow(frame)
         frame.Show()
         wx.CallAfter(frame.go)

@@ -35,20 +35,19 @@ import networkx
 from pprint import pformat
 
 import inkstitch
-from inkstitch import cache, dbg, param, EmbroideryElement, get_nodes, SVG_POLYLINE_TAG, SVG_GROUP_TAG, PIXELS_PER_MM, get_viewbox_transform
-
+from inkstitch import _, cache, dbg, param, EmbroideryElement, get_nodes, SVG_POLYLINE_TAG, SVG_GROUP_TAG, PIXELS_PER_MM, get_viewbox_transform
 
 class Fill(EmbroideryElement):
     def __init__(self, *args, **kwargs):
         super(Fill, self).__init__(*args, **kwargs)
 
     @property
-    @param('auto_fill', 'Manually routed fill stitching', type='toggle', inverse=True, default=True)
+    @param('auto_fill', _('Manually routed fill stitching'), type='toggle', inverse=True, default=True)
     def auto_fill(self):
         return self.get_boolean_param('auto_fill', True)
 
     @property
-    @param('angle', 'Angle of lines of stitches', unit='deg', type='float', default=0)
+    @param('angle', _('Angle of lines of stitches'), unit='deg', type='float', default=0)
     @cache
     def angle(self):
         return math.radians(self.get_float_param('angle', 0))
@@ -58,12 +57,12 @@ class Fill(EmbroideryElement):
         return self.get_style("fill")
 
     @property
-    @param('flip', 'Flip fill (start right-to-left)', type='boolean', default=False)
+    @param('flip', _('Flip fill (start right-to-left)'), type='boolean', default=False)
     def flip(self):
         return self.get_boolean_param("flip", False)
 
     @property
-    @param('row_spacing_mm', 'Spacing between rows', unit='mm', type='float', default=0.25)
+    @param('row_spacing_mm', _('Spacing between rows'), unit='mm', type='float', default=0.25)
     def row_spacing(self):
         return max(self.get_float_param("row_spacing_mm", 0.25), 0.01)
 
@@ -72,12 +71,12 @@ class Fill(EmbroideryElement):
         return self.get_float_param("end_row_spacing_mm")
 
     @property
-    @param('max_stitch_length_mm', 'Maximum fill stitch length', unit='mm', type='float', default=3.0)
+    @param('max_stitch_length_mm', _('Maximum fill stitch length'), unit='mm', type='float', default=3.0)
     def max_stitch_length(self):
         return max(self.get_float_param("max_stitch_length_mm", 3.0), 0.01)
 
     @property
-    @param('staggers', 'Stagger rows this many times before repeating', type='int', default=4)
+    @param('staggers', _('Stagger rows this many times before repeating'), type='int', default=4)
     def staggers(self):
         return self.get_int_param("staggers", 4)
 
@@ -371,7 +370,7 @@ class MaxQueueLengthExceeded(Exception):
 
 class AutoFill(Fill):
     @property
-    @param('auto_fill', 'Automatically routed fill stitching', type='toggle', default=True)
+    @param('auto_fill', _('Automatically routed fill stitching'), type='toggle', default=True)
     def auto_fill(self):
         return self.get_boolean_param('auto_fill', True)
 
@@ -390,17 +389,17 @@ class AutoFill(Fill):
         return False
 
     @property
-    @param('running_stitch_length_mm', 'Running stitch length (traversal between sections)', unit='mm', type='float', default=1.5)
+    @param('running_stitch_length_mm', _('Running stitch length (traversal between sections)'), unit='mm', type='float', default=1.5)
     def running_stitch_length(self):
         return max(self.get_float_param("running_stitch_length_mm", 1.5), 0.01)
 
     @property
-    @param('fill_underlay', 'Underlay', type='toggle', group='AutoFill Underlay', default=False)
+    @param('fill_underlay', _('Underlay'), type='toggle', group=_('AutoFill Underlay'), default=False)
     def fill_underlay(self):
         return self.get_boolean_param("fill_underlay", default=False)
 
     @property
-    @param('fill_underlay_angle', 'Fill angle (default: fill angle + 90 deg)', unit='deg', group='AutoFill Underlay', type='float')
+    @param('fill_underlay_angle', _('Fill angle (default: fill angle + 90 deg)'), unit='deg', group=_('AutoFill Underlay'), type='float')
     @cache
     def fill_underlay_angle(self):
         underlay_angle = self.get_float_param("fill_underlay_angle")
@@ -411,13 +410,13 @@ class AutoFill(Fill):
             return self.angle + math.pi / 2.0
 
     @property
-    @param('fill_underlay_row_spacing_mm', 'Row spacing (default: 3x fill row spacing)', unit='mm', group='AutoFill Underlay', type='float')
+    @param('fill_underlay_row_spacing_mm', _('Row spacing (default: 3x fill row spacing)'), unit='mm', group=_('AutoFill Underlay'), type='float')
     @cache
     def fill_underlay_row_spacing(self):
         return self.get_float_param("fill_underlay_row_spacing_mm") or self.row_spacing * 3
 
     @property
-    @param('fill_underlay_max_stitch_length_mm', 'Max stitch length', unit='mm', group='AutoFill Underlay', type='float')
+    @param('fill_underlay_max_stitch_length_mm', _('Max stitch length'), unit='mm', group=_('AutoFill Underlay'), type='float')
     @cache
     def fill_underlay_max_stitch_length(self):
         return self.get_float_param("fill_underlay_max_stitch_length_mm") or self.max_stitch_length
@@ -538,7 +537,7 @@ class AutoFill(Fill):
 
 
         if not networkx.is_eulerian(graph):
-            raise Exception("something went wrong: graph is not eulerian")
+            raise Exception(_("Unable to autofill.  This most often happens because your shape is made up of multiple sections that aren't connected."))
 
         return graph
 
@@ -713,7 +712,7 @@ class AutoFill(Fill):
             result = self.find_loop(graph, nodes_visited)
 
             if not result:
-                print >> sys.stderr, "Unexpected error filling region. Please send your SVG to lexelby@github."
+                print >> sys.stderr, _("Unexpected error while generating fill stitches. Please send your SVG file to lexelby@github.")
                 break
 
             loop, segments = result
@@ -882,7 +881,7 @@ class AutoFill(Fill):
 
 class Stroke(EmbroideryElement):
     @property
-    @param('satin_column', 'Satin along paths', type='toggle', inverse=True)
+    @param('satin_column', _('Satin stitch along paths'), type='toggle', inverse=True)
     def satin_column(self):
         return self.get_boolean_param("satin_column")
 
@@ -905,18 +904,18 @@ class Stroke(EmbroideryElement):
         return self.get_style("stroke-dasharray") is not None
 
     @property
-    @param('running_stitch_length_mm', 'Running stitch length', unit='mm', type='float', default=1.5)
+    @param('running_stitch_length_mm', _('Running stitch length'), unit='mm', type='float', default=1.5)
     def running_stitch_length(self):
         return max(self.get_float_param("running_stitch_length_mm", 1.5), 0.01)
 
     @property
-    @param('zigzag_spacing_mm', 'Zig-zag spacing (peak-to-peak)', unit='mm', type='float', default=0.4)
+    @param('zigzag_spacing_mm', _('Zig-zag spacing (peak-to-peak)'), unit='mm', type='float', default=0.4)
     @cache
     def zigzag_spacing(self):
         return max(self.get_float_param("zigzag_spacing_mm", 0.4), 0.01)
 
     @property
-    @param('repeats', 'Repeats', type='int', default="1")
+    @param('repeats', _('Repeats'), type='int', default="1")
     def repeats(self):
         return self.get_int_param("repeats", 1)
 
@@ -997,7 +996,7 @@ class SatinColumn(EmbroideryElement):
         super(SatinColumn, self).__init__(*args, **kwargs)
 
     @property
-    @param('satin_column', 'Custom satin column', type='toggle')
+    @param('satin_column', _('Custom satin column'), type='toggle')
     def satin_column(self):
         return self.get_boolean_param("satin_column")
 
@@ -1006,13 +1005,13 @@ class SatinColumn(EmbroideryElement):
         return self.get_style("stroke")
 
     @property
-    @param('zigzag_spacing_mm', 'Zig-zag spacing (peak-to-peak)', unit='mm', type='float', default=0.4)
+    @param('zigzag_spacing_mm', _('Zig-zag spacing (peak-to-peak)'), unit='mm', type='float', default=0.4)
     def zigzag_spacing(self):
         # peak-to-peak distance between zigzags
         return max(self.get_float_param("zigzag_spacing_mm", 0.4), 0.01)
 
     @property
-    @param('pull_compensation_mm', 'Pull compensation', unit='mm', type='float')
+    @param('pull_compensation_mm', _('Pull compensation'), unit='mm', type='float')
     def pull_compensation(self):
         # In satin stitch, the stitches have a tendency to pull together and
         # narrow the entire column.  We can compensate for this by stitching
@@ -1020,47 +1019,47 @@ class SatinColumn(EmbroideryElement):
         return self.get_float_param("pull_compensation_mm", 0)
 
     @property
-    @param('contour_underlay', 'Contour underlay', type='toggle', group='Contour Underlay')
+    @param('contour_underlay', _('Contour underlay'), type='toggle', group=_('Contour Underlay'))
     def contour_underlay(self):
         # "Contour underlay" is stitching just inside the rectangular shape
         # of the satin column; that is, up one side and down the other.
         return self.get_boolean_param("contour_underlay")
 
     @property
-    @param('contour_underlay_stitch_length_mm', 'Stitch length', unit='mm', group='Contour Underlay', type='float', default=1.5)
+    @param('contour_underlay_stitch_length_mm', _('Stitch length'), unit='mm', group=_('Contour Underlay'), type='float', default=1.5)
     def contour_underlay_stitch_length(self):
         return max(self.get_float_param("contour_underlay_stitch_length_mm", 1.5), 0.01)
 
     @property
-    @param('contour_underlay_inset_mm', 'Contour underlay inset amount', unit='mm', group='Contour Underlay', type='float', default=0.4)
+    @param('contour_underlay_inset_mm', _('Contour underlay inset amount'), unit='mm', group=_('Contour Underlay'), type='float', default=0.4)
     def contour_underlay_inset(self):
         # how far inside the edge of the column to stitch the underlay
         return self.get_float_param("contour_underlay_inset_mm", 0.4)
 
     @property
-    @param('center_walk_underlay', 'Center-walk underlay', type='toggle', group='Center-Walk Underlay')
+    @param('center_walk_underlay', _('Center-walk underlay'), type='toggle', group=_('Center-Walk Underlay'))
     def center_walk_underlay(self):
         # "Center walk underlay" is stitching down and back in the centerline
         # between the two sides of the satin column.
         return self.get_boolean_param("center_walk_underlay")
 
     @property
-    @param('center_walk_underlay_stitch_length_mm', 'Stitch length', unit='mm', group='Center-Walk Underlay', type='float', default=1.5)
+    @param('center_walk_underlay_stitch_length_mm', _('Stitch length'), unit='mm', group=_('Center-Walk Underlay'), type='float', default=1.5)
     def center_walk_underlay_stitch_length(self):
         return max(self.get_float_param("center_walk_underlay_stitch_length_mm", 1.5), 0.01)
 
     @property
-    @param('zigzag_underlay', 'Zig-zag underlay', type='toggle', group='Zig-zag Underlay')
+    @param('zigzag_underlay', _('Zig-zag underlay'), type='toggle', group=_('Zig-zag Underlay'))
     def zigzag_underlay(self):
         return self.get_boolean_param("zigzag_underlay")
 
     @property
-    @param('zigzag_underlay_spacing_mm', 'Zig-Zag spacing (peak-to-peak)', unit='mm', group='Zig-zag Underlay', type='float', default=3)
+    @param('zigzag_underlay_spacing_mm', _('Zig-Zag spacing (peak-to-peak)'), unit='mm', group=_('Zig-zag Underlay'), type='float', default=3)
     def zigzag_underlay_spacing(self):
         return max(self.get_float_param("zigzag_underlay_spacing_mm", 3), 0.01)
 
     @property
-    @param('zigzag_underlay_inset_mm', 'Inset amount (default: half of contour underlay inset)', unit='mm', group='Zig-zag Underlay', type='float')
+    @param('zigzag_underlay_inset_mm', _('Inset amount (default: half of contour underlay inset)'), unit='mm', group=_('Zig-zag Underlay'), type='float')
     def zigzag_underlay_inset(self):
         # how far in from the edge of the satin the points in the zigzags
         # should be
@@ -1106,14 +1105,16 @@ class SatinColumn(EmbroideryElement):
 
         for rail in rails:
             if not rail.is_simple:
-                self.fatal("One or more rails crosses itself, and this is not allowed.  Please split into multiple satin columns.")
+                self.fatal(_("One or more rails crosses itself, and this is not allowed.  Please split into multiple satin columns."))
 
             # handle null intersections here?
             linestrings = shapely.ops.split(rail, rungs)
 
+            print >> dbg, "rails and rungs", [str(rail) for rail in rails], [str(rung) for rung in rungs]
             if len(linestrings.geoms) < len(rungs.geoms) + 1:
-                print >> dbg, [str(rail) for rail in rails], [str(rung) for rung in rungs]
-                self.fatal("Expected %d linestrings, got %d" % (len(rungs.geoms) + 1, len(linestrings.geoms)))
+                self.fatal(_("satin column: One or more of the rungs doesn't intersect both rails.") + "  " + _("Each rail should intersect both rungs once."))
+            elif len(linestrings.geoms) > len(rungs.geoms) + 1:
+                self.fatal(_("satin column: One or more of the rungs intersects the rails more than once.") + "  " + _("Each rail should intersect both rungs once."))
 
             paths = [[inkstitch.Point(*coord) for coord in ls.coords] for ls in linestrings.geoms]
             result.append(paths)
@@ -1154,11 +1155,12 @@ class SatinColumn(EmbroideryElement):
         node_id = self.node.get("id")
 
         if self.get_style("fill") is not None:
-            self.fatal("satin column: object %s has a fill (but should not)" % node_id)
+            self.fatal(_("satin column: object %s has a fill (but should not)") % node_id)
 
         if len(self.csp) == 2:
             if len(self.csp[0]) != len(self.csp[1]):
-                self.fatal("satin column: object %s has two paths with an unequal number of points (%s and %s)" % (node_id, len(self.csp[0]), len(self.csp[1])))
+                self.fatal(_("satin column: object %(id)s has two paths with an unequal number of points (%(length1)d and %(length2)d)") % \
+                             dict(id=node_id, length1=len(self.csp[0]), length2=len(self.csp[1])))
 
     def offset_points(self, pos1, pos2, offset_px):
         # Expand or contract two points about their midpoint.  This is
@@ -1690,7 +1692,7 @@ class Embroider(inkex.Effect):
                                      action="store", type="int",
                                      dest="max_backups", default=5,
                                      help="Max number of backups of output files to keep.")
-        self.OptionParser.usage += "\n\nSeeing a 'no such option' message?  Please restart Inkscape to fix."
+        self.OptionParser.usage += _("\n\nSeeing a 'no such option' message?  Please restart Inkscape to fix.")
 
     def get_output_path(self):
         if self.options.output_file:
@@ -1738,10 +1740,10 @@ class Embroider(inkex.Effect):
 
         if not self.elements:
             if self.selected:
-                inkex.errormsg("No embroiderable paths selected.")
+                inkex.errormsg(_("No embroiderable paths selected."))
             else:
-                inkex.errormsg("No embroiderable paths found in document.")
-            inkex.errormsg("Tip: use Path -> Object to Path to convert non-paths before embroidering.")
+                inkex.errormsg(_("No embroiderable paths found in document."))
+            inkex.errormsg(_("Tip: use Path -> Object to Path to convert non-paths before embroidering."))
             return
 
         if self.options.hide_layers:
@@ -1753,7 +1755,7 @@ class Embroider(inkex.Effect):
 
         new_layer = inkex.etree.SubElement(self.document.getroot(), SVG_GROUP_TAG, {})
         new_layer.set('id', self.uniqueId("embroidery"))
-        new_layer.set(inkex.addNS('label', 'inkscape'), 'Embroidery')
+        new_layer.set(inkex.addNS('label', 'inkscape'), _('Embroidery'))
         new_layer.set(inkex.addNS('groupmode', 'inkscape'), 'layer')
 
         emit_inkscape(new_layer, stitches)
