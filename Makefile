@@ -16,3 +16,14 @@ distclean:
 messages.po: embroider*.py inkstitch.py
 	rm -f messages.po
 	xgettext embroider*.py inkstitch.py
+
+.PHONY: locales
+locales:
+	# message files will look like this:
+	#   translations/messages-en_US.po
+	for po in translations/*.po; do \
+		lang=$${po%.po}; \
+		lang=$${lang#messages-}; \
+		mkdir -p locales/$$lang/LC_MESSAGES/; \
+		msgfmt $$po -o locales/$$lang/LC_MESSAGES/inkstitch.mo; \
+	done
