@@ -5,9 +5,10 @@ VERSION:=$(TRAVIS_BRANCH)
 OS:=$(shell uname)
 ARCH:=$(shell uname -m)
 
-dist: distclean
+dist: distclean locales
 	bin/build-dist $(EXTENSIONS)
 	cp *.inx dist
+	mv locales dist/bin
 	cd dist; tar zcf ../inkstitch-$(VERSION)-$(OS)-$(ARCH).tar.gz *
 
 distclean:
