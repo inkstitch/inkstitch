@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-04 16:24-0500\n"
-"PO-Revision-Date: 2018-02-04 22:39-0500\n"
+"PO-Revision-Date: 2018-02-05 20:03-0500\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
@@ -18,295 +18,295 @@ msgstr ""
 
 #: embroider.py:45
 msgid "Manually routed fill stitching"
-msgstr ""
+msgstr "Definir enchimento manualmente"
 
 #: embroider.py:50
 msgid "Angle of lines of stitches"
-msgstr ""
+msgstr "Ângulo das linhas de ponto"
 
 #: embroider.py:60
 msgid "Flip fill (start right-to-left)"
-msgstr ""
+msgstr "Inverter Enchimento (Direita-Para-Esquerda)"
 
 #: embroider.py:65
 msgid "Spacing between rows"
-msgstr ""
+msgstr "Espaçamento entre linhas"
 
 #: embroider.py:74
 msgid "Maximum fill stitch length"
-msgstr ""
+msgstr "Distância máxima entre pontos de enchimento"
 
 #: embroider.py:79
 msgid "Stagger rows this many times before repeating"
-msgstr ""
+msgstr "Numero de vezes a escalonar linhas antes de repetir"
 
 #: embroider.py:373
 msgid "Automatically routed fill stitching"
-msgstr ""
+msgstr "Definir enchimento automaticamente"
 
 #: embroider.py:392
 msgid "Running stitch length (traversal between sections)"
-msgstr ""
+msgstr "Distância de ponto corrido (Transversal entre secções)"
 
 #: embroider.py:397
 msgid "Underlay"
-msgstr ""
+msgstr "Sub-camada"
 
 #: embroider.py:397 embroider.py:402 embroider.py:413 embroider.py:419
 msgid "AutoFill Underlay"
-msgstr ""
+msgstr "Sub-camada automática"
 
 #: embroider.py:402
 msgid "Fill angle (default: fill angle + 90 deg)"
-msgstr ""
+msgstr "Ângulo de enchimento (Valor por omissão: ângulo de enchimento + 90º)"
 
 #: embroider.py:413
 msgid "Row spacing (default: 3x fill row spacing)"
-msgstr ""
+msgstr "Espaçamento entre linhas (Valor por omissão: 3* o espaçamento das linhas de enchimento)"
 
 #: embroider.py:419
 msgid "Max stitch length"
-msgstr ""
+msgstr "Distância máxima de ponto"
 
 #: embroider.py:540
 msgid "Unable to autofill.  This most often happens because your shape is made up of multiple sections that aren't connected."
-msgstr ""
+msgstr "Enchimento automático falhou. Verificar se a forma não é composta por múltiplas desconectadas."
 
 #: embroider.py:715
 msgid "Unexpected error while generating fill stitches. Please send your SVG file to lexelby@github."
-msgstr ""
+msgstr "Erro inesperado ao gerar pontos de enchimento. Por favor envie o seu SVG para lexelby@github."
 
 #: embroider.py:884
 msgid "Satin stitch along paths"
-msgstr ""
+msgstr "Matizar ao longo dos caminhos"
 
 #: embroider.py:907
 msgid "Running stitch length"
-msgstr ""
+msgstr "Distância de ponto corrido"
 
 #: embroider.py:912 embroider.py:1008
 msgid "Zig-zag spacing (peak-to-peak)"
-msgstr ""
+msgstr "Espaçamento Zig-zag (crista-a-crista)"
 
 #: embroider.py:918
 msgid "Repeats"
-msgstr ""
+msgstr "Repetições"
 
 #: embroider.py:999
 msgid "Custom satin column"
-msgstr ""
+msgstr "Coluna de matizado personalizado"
 
 #: embroider.py:1014
 msgid "Pull compensation"
-msgstr ""
+msgstr "Compensação de repuxado"
 
 #: embroider.py:1022
 msgid "Contour underlay"
-msgstr ""
+msgstr "Sub-camada de controno"
 
 #: embroider.py:1022 embroider.py:1029 embroider.py:1034
 msgid "Contour Underlay"
-msgstr ""
+msgstr "Sub-camada de controno"
 
 #: embroider.py:1029 embroider.py:1047
 msgid "Stitch length"
-msgstr ""
+msgstr "Distância de ponto"
 
 #: embroider.py:1034
 msgid "Contour underlay inset amount"
-msgstr ""
+msgstr "Offset interno da Sub-camada de contorno"
 
 #: embroider.py:1040
 msgid "Center-walk underlay"
-msgstr ""
+msgstr "Sub-camada com movimento central"
 
 #: embroider.py:1040 embroider.py:1047
 msgid "Center-Walk Underlay"
-msgstr ""
+msgstr "Sub-camada com movimento central"
 
 #: embroider.py:1052
 msgid "Zig-zag underlay"
-msgstr ""
+msgstr "Sub-camada em Zig-zag"
 
 #: embroider.py:1052 embroider.py:1057 embroider.py:1062
 msgid "Zig-zag Underlay"
-msgstr ""
+msgstr "Sub-camada em Zig-zag"
 
 #: embroider.py:1057
 msgid "Zig-Zag spacing (peak-to-peak)"
-msgstr ""
+msgstr "Espaçamento Zig-zag (crista-a-crista)"
 
 #: embroider.py:1062
 msgid "Inset amount (default: half of contour underlay inset)"
-msgstr ""
+msgstr "Quantidade de offset interior (valor por omissão: Metade do offset interior da sub-camada de contorno)"
 
 #: embroider.py:1108
 msgid "One or more rails crosses itself, and this is not allowed.  Please split into multiple satin columns."
-msgstr ""
+msgstr "Operação não permitida: Um ou mais caminhos intersectam-se a eles mesmos. Dividida o matiz em várias colunas."
 
 #: embroider.py:1115
 msgid "satin column: One or more of the rungs doesn't intersect both rails."
-msgstr ""
+msgstr "Coluna de matizado: Uma ou mais barras de direcção não intersectam ambos os caminhos."
 
 #: embroider.py:1115 embroider.py:1117
 msgid "Each rail should intersect both rungs once."
-msgstr ""
+msgstr "Cada caminho deve intersectar ambas as barras de direcção uma vez."
 
 #: embroider.py:1117
 msgid "satin column: One or more of the rungs intersects the rails more than once."
-msgstr ""
+msgstr "Coluna de matizado: Uma ou mais barras de direcção intersectam os caminhos mais do que uma vez."
 
 #: embroider.py:1158
 #, python-format
 msgid "satin column: object %s has a fill (but should not)"
-msgstr ""
+msgstr "Coluna de matizado: o objecto %s tem enchimento (mas não devia)"
 
 #: embroider.py:1162
 #, python-format
 msgid "satin column: object %(id)s has two paths with an unequal number of points (%(length1)d and %(length2)d)"
-msgstr ""
+msgstr "Coluna de matizado: o objecto %(id)s the dois caminhos com numero diferente de pontos (%(length1)d e %(length2)d)"
 
 #: embroider.py:1695
 msgid "\n\n"
 "Seeing a 'no such option' message?  Please restart Inkscape to fix."
-msgstr ""
+msgstr "Vê uma mensagem \"não existe tal opção\"? Por favor reiniciar o Inkscape."
 
 #: embroider.py:1743
 msgid "No embroiderable paths selected."
-msgstr ""
+msgstr "Nenhum caminho bordável seleccionado."
 
 #: embroider.py:1745
 msgid "No embroiderable paths found in document."
-msgstr ""
+msgstr "Nenhum caminho bordável encontrado no documento."
 
 #: embroider.py:1746
 msgid "Tip: use Path -> Object to Path to convert non-paths before embroidering."
-msgstr ""
+msgstr "Dica: Use opção -> Object to Path para converter objectos em caminhos antes de bordar."
 
 #: embroider.py:1758
 msgid "Embroidery"
-msgstr ""
+msgstr "Bordado"
 
 #: embroider_params.py:243
 msgid "These settings will be applied to 1 object."
-msgstr ""
+msgstr "Definições serão aplicadas a 1 objecto."
 
 #: embroider_params.py:245
 #, python-format
 msgid "These settings will be applied to %d objects."
-msgstr ""
+msgstr "Definições serão aplicadas a %d objectos."
 
 #: embroider_params.py:248
 msgid "Some settings had different values across objects.  Select a value from the dropdown or enter a new one."
-msgstr ""
+msgstr "Algumas definições com valores diferentes entre objectos.  Seleccione um valor da lista ou digite novo valor."
 
 #: embroider_params.py:252
 #, python-format
 msgid "Disabling this tab will disable the following %d tabs."
-msgstr ""
+msgstr "Desactivar esta aba desactivará as seguintes %d abas."
 
 #: embroider_params.py:254
 msgid "Disabling this tab will disable the following tab."
-msgstr ""
+msgstr "Desactivar esta aba desactivará a seguinte aba."
 
 #: embroider_params.py:257
 #, python-format
 msgid "Enabling this tab will disable %s and vice-versa."
-msgstr ""
+msgstr "Activar esta aba desactivará %s e vice-versa."
 
 #: embroider_params.py:287
 msgid "Inkscape objects"
-msgstr ""
+msgstr "Objectos do Inkscape"
 
 #: embroider_params.py:345
 msgid "Embroidery Params"
-msgstr ""
+msgstr "Parametros de Bordado"
 
 #: embroider_params.py:359
 msgid "Presets"
-msgstr ""
+msgstr "Pré-definições"
 
 #: embroider_params.py:364
 msgid "Load"
-msgstr ""
+msgstr "Carregar"
 
 #: embroider_params.py:367
 msgid "Add"
-msgstr ""
+msgstr "Adicionar"
 
 #: embroider_params.py:370
 msgid "Overwrite"
-msgstr ""
+msgstr "Substituir"
 
 #: embroider_params.py:373
 msgid "Delete"
-msgstr ""
+msgstr "Eleminar"
 
 #: embroider_params.py:376
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 #: embroider_params.py:380
 msgid "Use Last Settings"
-msgstr ""
+msgstr "Usar ultimas definições"
 
 #: embroider_params.py:383
 msgid "Apply and Quit"
-msgstr ""
+msgstr "Aplicar e Sair"
 
 #: embroider_params.py:428
 msgid "Preview"
-msgstr ""
+msgstr "Pré-visualização"
 
 #: embroider_params.py:446
 msgid "Internal Error"
-msgstr ""
+msgstr "Erro Interno"
 
 #: embroider_params.py:499
 msgid "Please enter or select a preset name first."
-msgstr ""
+msgstr "Seleccione ou insira uma pré-definição primeiro."
 
 #: embroider_params.py:499 embroider_params.py:505 embroider_params.py:533
 msgid "Preset"
-msgstr ""
+msgstr "Pré-definição"
 
 #: embroider_params.py:505
 #, python-format
 msgid "Preset \"%s\" not found."
-msgstr ""
+msgstr "Pré-definição \"%s\" não encontrada."
 
 #: embroider_params.py:533
 #, python-format
 msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
-msgstr ""
+msgstr "Pré-definição \"%s\" já existe. Use outro nome ou clique \"Substituir\""
 
 #: embroider_simulate.py:303
 msgid "Embroidery Simulation"
-msgstr ""
+msgstr "Simulação de Bordado"
 
 #: inkstitch.py:94
 #, python-format
 msgid "parseLengthWithUnits: unknown unit %s"
-msgstr ""
+msgstr "parseLengthWithUnits: Unidade desconhecida %s"
 
 #: inkstitch.py:118
 #, python-format
 msgid "Unknown unit: %s"
-msgstr ""
+msgstr "Unidade desconhecida: %s"
 
 #: inkstitch.py:321
 msgid "TRIM after"
-msgstr ""
+msgstr "Cortar a seguir \"TRIM\""
 
 #: inkstitch.py:322
 msgid "Trim thread after this object (for supported machines and file formats)"
-msgstr ""
+msgstr "Cortar fio depois deste objecto \"TRIM\" (Para maquinas e formatos de ficheiro que suportados)"
 
 #: inkstitch.py:331
 msgid "STOP after"
-msgstr ""
+msgstr "Parar a seguir \"STOP\""
 
 #: inkstitch.py:332
 msgid "Add STOP instruction after this object (for supported machines and file formats)"
-msgstr ""
+msgstr "Adiciona instrução de paragem \"STOP\" no final deste objecto (Para maquinas e formatos de ficheiro que suportados)"
 
