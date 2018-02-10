@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-04 16:24-0500\n"
-"PO-Revision-Date: 2018-02-05 20:03-0500\n"
+"PO-Revision-Date: 2018-02-09 20:06-0500\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
@@ -38,7 +38,7 @@ msgstr "Maximale Füll-Stichlänge"
 
 #: embroider.py:79
 msgid "Stagger rows this many times before repeating"
-msgstr ""
+msgstr "Wieviele Reihen bis sich das Muster wiederholt"
 
 #: embroider.py:373
 msgid "Automatically routed fill stitching"
@@ -62,15 +62,15 @@ msgstr "Füllwinkel (Standardwert: Füllwinkel + 90°)"
 
 #: embroider.py:413
 msgid "Row spacing (default: 3x fill row spacing)"
-msgstr "Zeilenabstand (Standard: 3 x Füll-Reihenabstand)"
+msgstr "Zeilenabstand (Standard: 3x Füll-Reihenabstand)"
 
 #: embroider.py:419
 msgid "Max stitch length"
-msgstr "Max. Stichlänge"
+msgstr "Maximale Stichlänge"
 
 #: embroider.py:540
 msgid "Unable to autofill.  This most often happens because your shape is made up of multiple sections that aren't connected."
-msgstr "Automatische Füllung nicht möglich.  Dies geschieht, weil Ihre Form aus mehreren Abschnitten besteht, die nicht verbunden sind."
+msgstr "Automatische Füllung nicht möglich.  Dies geschieht, weil Ihre Form aus mehreren und nicht verbundenen Abschnitten besteht."
 
 #: embroider.py:715
 msgid "Unexpected error while generating fill stitches. Please send your SVG file to lexelby@github."
@@ -102,11 +102,11 @@ msgstr "Zugausgleich"
 
 #: embroider.py:1022
 msgid "Contour underlay"
-msgstr "Umrissunterlage"
+msgstr "Konturunterlage"
 
 #: embroider.py:1022 embroider.py:1029 embroider.py:1034
 msgid "Contour Underlay"
-msgstr "Umrissunterlage"
+msgstr "Konturunterlage"
 
 #: embroider.py:1029 embroider.py:1047
 msgid "Stitch length"
@@ -114,7 +114,7 @@ msgstr "Stichlänge"
 
 #: embroider.py:1034
 msgid "Contour underlay inset amount"
-msgstr ""
+msgstr "Konturunterlageneinrückung"
 
 #: embroider.py:1040
 msgid "Center-walk underlay"
@@ -138,28 +138,28 @@ msgstr "Zick-Zack Abstand (Spitze zu Spitze)"
 
 #: embroider.py:1062
 msgid "Inset amount (default: half of contour underlay inset)"
-msgstr ""
+msgstr "Einrückungswert (Standard: Halbe Konturunterlageneinrückung)"
 
 #: embroider.py:1108
 msgid "One or more rails crosses itself, and this is not allowed.  Please split into multiple satin columns."
-msgstr ""
+msgstr "Eine oder mehrere Konturen überschneiden sich, dies ist nicht erlaubt. Bitte in mehrere Satinkolumnen aufteilen."
 
 #: embroider.py:1115
 msgid "satin column: One or more of the rungs doesn't intersect both rails."
-msgstr ""
+msgstr "Satinkolumne: Eine oder mehrere Verbindungen überschneiden nicht die Konturen."
 
 #: embroider.py:1115 embroider.py:1117
 msgid "Each rail should intersect both rungs once."
-msgstr ""
+msgstr "Jede Umrandung sollte die Querverbindung nur einmal kreuzen."
 
 #: embroider.py:1117
 msgid "satin column: One or more of the rungs intersects the rails more than once."
-msgstr ""
+msgstr "Satinkolumne: Eine oder mehrere Verbindungen überschneiden sich mehrmals."
 
 #: embroider.py:1158
 #, python-format
 msgid "satin column: object %s has a fill (but should not)"
-msgstr "Satinkolumne: Objekt %s hat eine Füllung (sollte es aber nicht)"
+msgstr "Satinkolumne: Objekt %s hat eine Füllung (sollte es aber nicht haben)"
 
 #: embroider.py:1162
 #, python-format
@@ -204,11 +204,11 @@ msgstr "Einige Einstellungen hatten unterschiedliche Werte der Objekte.  Bitte e
 #: embroider_params.py:252
 #, python-format
 msgid "Disabling this tab will disable the following %d tabs."
-msgstr "Deaktivieren dieser Registerkarte, deaktiviert die folgenden %d Registerkarten."
+msgstr "Deaktivierung dieser Registerkarte, deaktiviert die folgenden %d Registerkarten."
 
 #: embroider_params.py:254
 msgid "Disabling this tab will disable the following tab."
-msgstr "Deaktivieren dieser Registerkarte, deaktiviert die folgende Registerkarte."
+msgstr "Deaktivierung dieser Registerkarte, deaktiviert die folgende Registerkarte."
 
 #: embroider_params.py:257
 #, python-format
@@ -269,7 +269,7 @@ msgstr "Bitte geben Sie einen Namen ein, oder wählen Sie zuerst einen vordefini
 
 #: embroider_params.py:499 embroider_params.py:505 embroider_params.py:533
 msgid "Preset"
-msgstr "Einstellung"
+msgstr "Voreinstellung"
 
 #: embroider_params.py:505
 #, python-format
@@ -297,15 +297,15 @@ msgstr "Unbekannte Einheit: %s"
 
 #: inkstitch.py:321
 msgid "TRIM after"
-msgstr "Danach TRIM"
+msgstr "Danach TRIM Befehl"
 
 #: inkstitch.py:322
 msgid "Trim thread after this object (for supported machines and file formats)"
-msgstr "TRIM nach diesem Objekt einfügen (wenn dies von Maschine oder dem Format unterstützt wird)"
+msgstr "TRIM Befehl nach diesem Objekt einfügen (wenn dies von Maschine oder dem Format unterstützt wird)"
 
 #: inkstitch.py:331
 msgid "STOP after"
-msgstr "Danach STOP"
+msgstr "Danach STOP Befehl"
 
 #: inkstitch.py:332
 msgid "Add STOP instruction after this object (for supported machines and file formats)"
