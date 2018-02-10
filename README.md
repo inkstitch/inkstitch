@@ -1,5 +1,6 @@
 # ink/stitch: An Inkscape extension for designing machine embroidery patterns
 
+* February 5, 2018: Portuguese (pt_PT) translation added!  [Want to help translate?](LOCALIZATION.md)
 * January 5, 2018: Default DPI changed to 96, to match Inkscape.
 * January 3, 2018: Project renamed from `inkscape-embroidery` to **ink/stitch**
 * **NEW January 1, 2018:** [video demo of the new live stitch preview feature](https://youtu.be/QY9NcLN3oJM)
