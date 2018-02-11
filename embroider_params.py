@@ -697,7 +697,7 @@ class EmbroiderParams(inkex.Effect):
             parent_tab = None
             new_tabs = []
             for group, params in self.group_params(params):
-                tab = ParamsTab(parent, id=wx.ID_ANY, name=group or cls.__name__, params=list(params), nodes=nodes)
+                tab = ParamsTab(parent, id=wx.ID_ANY, name=group or cls.element_name, params=list(params), nodes=nodes)
                 new_tabs.append(tab)
 
                 if group is None:

@@ -38,6 +38,8 @@ import inkstitch
 from inkstitch import _, cache, dbg, param, EmbroideryElement, get_nodes, SVG_POLYLINE_TAG, SVG_GROUP_TAG, PIXELS_PER_MM, get_viewbox_transform
 
 class Fill(EmbroideryElement):
+    element_name = _("Fill")
+
     def __init__(self, *args, **kwargs):
         super(Fill, self).__init__(*args, **kwargs)
 
@@ -369,6 +371,8 @@ class MaxQueueLengthExceeded(Exception):
     pass
 
 class AutoFill(Fill):
+    element_name = _("Auto-Fill")
+
     @property
     @param('auto_fill', _('Automatically routed fill stitching'), type='toggle', default=True)
     def auto_fill(self):
@@ -880,6 +884,8 @@ class AutoFill(Fill):
 
 
 class Stroke(EmbroideryElement):
+    element_name = "Stroke"
+
     @property
     @param('satin_column', _('Satin stitch along paths'), type='toggle', inverse=True)
     def satin_column(self):
@@ -992,6 +998,8 @@ class Stroke(EmbroideryElement):
 
 
 class SatinColumn(EmbroideryElement):
+    element_name = _("Satin Column")
+
     def __init__(self, *args, **kwargs):
         super(SatinColumn, self).__init__(*args, **kwargs)
 
