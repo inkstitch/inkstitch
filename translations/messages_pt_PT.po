@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-04 16:24-0500\n"
-"PO-Revision-Date: 2018-02-05 20:03-0500\n"
+"PO-Revision-Date: 2018-02-10 19:44-0500\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
@@ -240,7 +240,7 @@ msgstr "Substituir"
 
 #: embroider_params.py:373
 msgid "Delete"
-msgstr "Eleminar"
+msgstr "Eliminar"
 
 #: embroider_params.py:376
 msgid "Cancel"
