@@ -504,26 +504,17 @@ def write_embroidery_file(file_path, stitches):
     min_y = min(stitch.y for stitch in stitches)
 
     pattern = libembroidery.embPattern_create()
-    threads = {}
-
     last_color = None
 
     for stitch in stitches:
         if stitch.color != last_color:
-            if stitch.color not in threads:
-                thread = make_thread(stitch.color)
-                thread_index = add_thread(pattern, thread)
-                threads[stitch.color] = thread_index
-            else:
-                thread_index = threads[stitch.color]
-
-            libembroidery.embPattern_changeColor(pattern, thread_index)
+            add_thread(pattern, make_thread(stitch.color))
             last_color = stitch.color
 
         flags = get_flags(stitch)
-        libembroidery.embPattern_addStitchAbs(pattern, stitch.x - min_x, stitch.y - min_y, flags, 0)
+        libembroidery.embPattern_addStitchAbs(pattern, stitch.x - min_x, stitch.y - min_y, flags, 1)
 
-    libembroidery.embPattern_addStitchAbs(pattern, stitch.x - min_x, stitch.y - min_y, libembroidery.END, 0)
+    libembroidery.embPattern_addStitchAbs(pattern, stitch.x - min_x, stitch.y - min_y, libembroidery.END, 1)
 
     # convert from pixels to millimeters
     libembroidery.embPattern_scale(pattern, 1/PIXELS_PER_MM)
