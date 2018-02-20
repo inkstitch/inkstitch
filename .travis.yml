@@ -70,6 +70,7 @@ install:
       # Need this for inkex.py and friends
       wget -q https://inkscape.org/en/gallery/item/11254/inkscape-0.92.2.tar.bz2
       tar jxf inkscape-0.92.2.tar.bz2
+      rm inkscape-0.92.2.tar.bz2
 
       sudo add-apt-repository ppa:ubuntu-wine/ppa -y
       sudo apt-get update -qq
@@ -80,8 +81,9 @@ install:
 
       export WINEDEBUG=-all
 
-      wget https://github.com/lexelby/inkstitch-build-objects/releases/download/v1.0.0/windows-libembroidery.tar.gz
+      wget -q https://github.com/lexelby/inkstitch-build-objects/releases/download/v1.0.0/windows-libembroidery.tar.gz
       tar zxf windows-libembroidery.tar.gz
+      rm windows-libembroidery.tar.gz
 
       wget -q http://download.microsoft.com/download/1/1/1/1116b75a-9ec3-481a-a3c8-1777b5381140/vcredist_x86.exe
       wine vcredist_x86.exe /q
