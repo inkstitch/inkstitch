@@ -2,7 +2,7 @@
 
 site_packages="$(python -c "import os; print(os.path.dirname(os.__file__) + '/site-packages')")"
 
-if [ "$TRAVIS_OS_NAME" = "linux" ]; then
+if [ "$TRAVIS_OS_NAME" = "linux" -a "$BUILD" != "windows" ]; then
     # pyinstaller misses these two
     pyinstaller_args+="--add-binary /usr/lib/x86_64-linux-gnu/gio/modules/libgiolibproxy.so:. "
     pyinstaller_args+="--add-binary  /usr/lib/x86_64-linux-gnu/libproxy.so.1:. "
