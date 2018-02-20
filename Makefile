@@ -10,7 +10,7 @@ dist: distclean locales
 	cp *.inx dist
 	mv locales dist/inkstitch/bin
 	if [ "$$BUILD" = "windows" ]; then \
-		cd dist; zip ../inkstitch-$(VERISON)-win32.zip *; \
+		cd dist; zip -r ../inkstitch-$(VERISON)-win32.zip *; \
 	else \
     	cd dist; tar zcf ../inkstitch-$(VERSION)-$(OS)-$(ARCH).tar.gz *; \
 	fi
