@@ -29,16 +29,17 @@ branches:
 cache: pip
 install:
   - |
+    if [ -n "$BUILD" ]; then
+      # Need this for inkex.py and friends
+      wget -q https://inkscape.org/en/gallery/item/11254/inkscape-0.92.2.tar.bz2
+      tar jxf inkscape-0.92.2.tar.bz2
+      rm inkscape-0.92.2.tar.bz2
+    fi
     if [ "$BUILD" = "linux" ]; then
       # For some bizarre reason, this build has been failing due to the
       # key for the mongodb repo expiring.  Maybe Travis includes the
       # mongodb repo by default...?
       sudo rm /etc/apt/sources.list.d/mongodb*.list
-
-      # Need inkscape >=0.92 for inkex.py and friends
-      sudo add-apt-repository --yes ppa:inkscape.dev/stable
-      sudo apt-get update
-      sudo apt-get install inkscape
 
       # for shapely
       sudo apt-get install libgeos-dev
@@ -66,11 +67,6 @@ install:
       pip install pyinstaller
     elif [ "$BUILD" = "windows" ]; then
       set -x
-
-      # Need this for inkex.py and friends
-      wget -q https://inkscape.org/en/gallery/item/11254/inkscape-0.92.2.tar.bz2
-      tar jxf inkscape-0.92.2.tar.bz2
-      rm inkscape-0.92.2.tar.bz2
 
       sudo add-apt-repository ppa:ubuntu-wine/ppa -y
       sudo apt-get update -qq
