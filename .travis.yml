@@ -116,16 +116,9 @@ script:
       )        
       make dist
     elif [ "$BUILD" = "windows" ]; then
-      set -x
-
       # work around some bug... pyinstaller? shapely? not sure.
       cp $(winepath 'C:\Python\lib\site-packages\shapely\DLLs\geos_c.dll') $(winepath 'C:\Python\lib\site-packages\shapely\DLLs\geos.dll')
-
-      wine c:\\Python\\scripts\\pyinstaller.exe --onedir --hidden-import gi.repository.Gtk -p Z:\\usr\\share\\inkscape\\extensions --hidden-import wx --log-level DEBUG embroider.py
-      find $(winepath 'c:\') -ls > dist/file-list
-      zip -r inkstitch-windows.zip dist
-
-      set +x
+      make dist
     else
       true
     fi
