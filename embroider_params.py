@@ -757,7 +757,7 @@ class EmbroiderParams(inkex.Effect):
 
 def save_stderr():
     # GTK likes to spam stderr, which inkscape will show in a dialog.
-    null = open('/dev/null', 'w')
+    null = open(os.devnull, 'w')
     sys.stderr_dup = os.dup(sys.stderr.fileno())
     os.dup2(null.fileno(), 2)
     sys.stderr_backup = sys.stderr

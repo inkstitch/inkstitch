@@ -31,7 +31,7 @@ SVG_GROUP_TAG = inkex.addNS('g', 'svg')
 
 EMBROIDERABLE_TAGS = (SVG_PATH_TAG, SVG_POLYLINE_TAG)
 
-dbg = open("/tmp/embroider-debug.txt", "w")
+dbg = open(os.devnull, "w")
 
 _ = lambda message: message
 
