@@ -104,6 +104,8 @@ install:
       brew install qt
       export PATH="/usr/local/opt/qt/bin:$PATH"
 
+      brew install gettext
+
       pip install -r requirements.txt
       pip install pyinstaller
 
