@@ -287,7 +287,7 @@ class ParamsTab(ScrolledPanel):
         summary_box = wx.StaticBox(self, wx.ID_ANY, label=_("Inkscape objects"))
         sizer = wx.StaticBoxSizer(summary_box, wx.HORIZONTAL)
 #        sizer = wx.BoxSizer(wx.HORIZONTAL)
-        self.description = wx.StaticText(self, style=wx.TE_WORDWRAP)
+        self.description = wx.StaticText(self)
         self.update_description()
         self.description.SetLabel(self.description_text)
         self.description_container = box
