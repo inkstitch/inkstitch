@@ -65,6 +65,8 @@ install:
     
       pip install pyinstaller
     elif [ "$BUILD" = "windows" ]; then
+      set -x
+
       # Need this for inkex.py and friends
       wget -q https://inkscape.org/en/gallery/item/11254/inkscape-0.92.2.tar.bz2
       tar jxf inkscape-0.92.2.tar.bz2
@@ -74,19 +76,25 @@ install:
       export DISPLAY=:99.0
       sh -e /etc/init.d/xvfb start
       sleep 3
-      sudo apt-get install -qq wine
+      sudo apt-get install -y wine
 
       export WINEDEBUG=-all
 
       wget https://github.com/lexelby/inkstitch-build-objects/releases/download/v1.0.0/windows-libembroidery.tar.gz
-      wget https://github.com/lexelby/inkstitch-build-objects/releases/download/v1.0.0/Shapely-1.6.3-cp27-cp27m-win32.whl
-      wget https://www.python.org/ftp/python/2.7.14/python-2.7.14.msi --output-document=python.msi
-      wget http://download.microsoft.com/download/1/1/1/1116b75a-9ec3-481a-a3c8-1777b5381140/vcredist_x86.exe
+      tar zxf windows-libembroidery.tar.gz
+
+      wget -q http://download.microsoft.com/download/1/1/1/1116b75a-9ec3-481a-a3c8-1777b5381140/vcredist_x86.exe
       wine vcredist_x86.exe /q
+
+      wget -q https://www.python.org/ftp/python/2.7.14/python-2.7.14.msi --output-document=python.msi
       wine msiexec /i python.msi /qn TARGETDIR=C:\\Python
+
       wine c:\\Python\\python.exe c:\\Python\\scripts\\pip.exe install pyinstaller --upgrade
       wine c:\\Python\\python.exe c:\\Python\\scripts\\pip.exe install setuptools --upgrade
+
+      wget -q https://github.com/lexelby/inkstitch-build-objects/releases/download/v1.0.0/Shapely-1.6.3-cp27-cp27m-win32.whl
       wine c:\\Python\\python.exe c:\\Python\\scripts\\pip.exe install Shapely-1.6.3-cp27-cp27m-win32.whl
+
       wine c:\\Python\\python.exe c:\\Python\\scripts\\pip.exe install -r requirements.txt
 
       set +x
