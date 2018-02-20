@@ -260,7 +260,7 @@ class EmbroiderySimulator(wx.Frame):
 
     def on_paint(self, e):
         dc = wx.PaintDC(self.panel)
-        dc.DrawBitmap(self.buffer, 0, 0)
+        dc.Blit(0, 0, self.buffer.GetWidth(), self.buffer.GetHeight(), self.dc, 0, 0)
 
         if self.last_pos:
             dc.DrawLine(self.last_pos[0] - 10, self.last_pos[1],      self.last_pos[0] + 10, self.last_pos[1])

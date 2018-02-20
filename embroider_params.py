@@ -287,7 +287,7 @@ class ParamsTab(ScrolledPanel):
         summary_box = wx.StaticBox(self, wx.ID_ANY, label=_("Inkscape objects"))
         sizer = wx.StaticBoxSizer(summary_box, wx.HORIZONTAL)
 #        sizer = wx.BoxSizer(wx.HORIZONTAL)
-        self.description = wx.StaticText(self, style=wx.TE_WORDWRAP)
+        self.description = wx.StaticText(self)
         self.update_description()
         self.description.SetLabel(self.description_text)
         self.description_container = box
@@ -757,7 +757,7 @@ class EmbroiderParams(inkex.Effect):
 
 def save_stderr():
     # GTK likes to spam stderr, which inkscape will show in a dialog.
-    null = open('/dev/null', 'w')
+    null = open(os.devnull, 'w')
     sys.stderr_dup = os.dup(sys.stderr.fileno())
     os.dup2(null.fileno(), 2)
     sys.stderr_backup = sys.stderr

@@ -9,7 +9,11 @@ dist: distclean locales
 	bin/build-dist $(EXTENSIONS)
 	cp *.inx dist
 	mv locales dist/inkstitch/bin
-	cd dist; tar zcf ../inkstitch-$(VERSION)-$(OS)-$(ARCH).tar.gz *
+	if [ "$$BUILD" = "windows" ]; then \
+		cd dist; zip -r ../inkstitch-$(VERSION)-win32.zip *; \
+	else \
+    	cd dist; tar zcf ../inkstitch-$(VERSION)-$(OS)-$(ARCH).tar.gz *; \
+	fi
 
 distclean:
 	rm -rf build dist *.spec *.tar.gz
