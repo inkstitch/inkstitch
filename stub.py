@@ -2,6 +2,7 @@
 
 import sys
 import os
+import subprocess
 
 # ink/stitch
 #
@@ -27,4 +28,4 @@ binary_path = os.path.join("inkstitch", "bin", binary_name)
 args = sys.argv[:]
 args[0] = binary_path
 
-os.execv(binary_path, args)
+subprocess.call(args)
