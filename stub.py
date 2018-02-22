@@ -32,6 +32,13 @@ args[0] = binary_path
 # extension output to Inkscape on Windows
 extension = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 stdout, stderr = extension.communicate()
-print stdout
-print >> sys.stderr, stderr
+
+stdout = stdout.strip()
+if stdout:
+    print stdout.strip(),
+
+stderr = stderr.strip()
+if stderr:
+    print >> sys.stderr, stderr.strip(),
+
 sys.exit(extension.returncode)
