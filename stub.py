@@ -30,4 +30,8 @@ args[0] = binary_path
 
 # os.execve works here for Linux, but only this seems to get the
 # extension output to Inkscape on Windows
-print subprocess.check_output(args)
+extension = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+stdout, stderr = extension.communicate()
+print stdout
+print >> sys.stderr, stderr
+sys.exit(extension.returncode)
