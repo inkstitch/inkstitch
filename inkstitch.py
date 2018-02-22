@@ -102,6 +102,14 @@ def convert_length(length):
     if not units or units == "px":
         return value
 
+    if units == 'pt':
+       value *= 72
+       units == 'in'
+
+    if units == 'pc':
+       value *= 6
+       units == 'in'
+
     if units == 'cm':
        value *= 10
        units == 'mm'
