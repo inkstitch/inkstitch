@@ -28,4 +28,6 @@ binary_path = os.path.join("inkstitch", "bin", binary_name)
 args = sys.argv[:]
 args[0] = binary_path
 
-subprocess.call(args)
+# os.execve works here for Linux, but only this seems to get the
+# extension output to Inkscape on Windows
+print subprocess.check_output(args)
