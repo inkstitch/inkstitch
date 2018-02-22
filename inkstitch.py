@@ -103,16 +103,16 @@ def convert_length(length):
         return value
 
     if units == 'pt':
-       value *= 72
-       units == 'in'
+       value /= 72
+       units = 'in'
 
     if units == 'pc':
-       value *= 6
-       units == 'in'
+       value /= 6
+       units = 'in'
 
     if units == 'cm':
        value *= 10
-       units == 'mm'
+       units = 'mm'
 
     if units == 'mm':
         value = value / 25.4
