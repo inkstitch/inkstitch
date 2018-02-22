@@ -74,7 +74,7 @@ ink/stitch will create a file named `something.___`, where `something` is the na
 
 Copy your rectangle and paste it elsewhere on your canvas.  Deselect any shapes (**Edit -> Deselect**), re-run the extension, and look at the output.  You'll see that both regions have been stitched, and there will be a line connecting them.  That's a jump-stitch, where the machine will move a long distance between stitching the sections.
 
-If you're like me, your machine can't automatically cut the thread between stitching sections, so you'll need to minimize jump stitches as much as possible through careful planning of your stitch path.  If your machine *can* do thread cuts, congratulations, since #29 is possible to add trim for each object on the params menu!
+If you're like me, your machine can't automatically cut the thread between stitching sections, so you'll need to minimize jump stitches as much as possible through careful planning of your stitch path.  If your machine *can* do thread cuts, congratulations, since [pull #29](https://github.com/lexelby/inkstitch/pull/29#) it is possible to add TRIM and STOP for each object on the params menu!
 
 However, note that ink/stitch pays attention to the colors you use for objects.  If you change colors from one object to the next, ink/stitch will include a color-change instruction using the color you've set for the object.  My machine cuts the thread and waits for me to switch to the new thread color.
 
