@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-04 16:24-0500\n"
-"PO-Revision-Date: 2018-02-04 22:39-0500\n"
+"POT-Creation-Date: 2018-02-21 21:46-0500\n"
+"PO-Revision-Date: 2018-02-22 23:11-0500\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Korean\n"
 "Language: ko_KR\n"
@@ -171,19 +171,19 @@ msgid "\n\n"
 "Seeing a 'no such option' message?  Please restart Inkscape to fix."
 msgstr ""
 
-#: embroider.py:1743
+#: embroider.py:1747
 msgid "No embroiderable paths selected."
 msgstr ""
 
-#: embroider.py:1745
+#: embroider.py:1749
 msgid "No embroiderable paths found in document."
 msgstr ""
 
-#: embroider.py:1746
+#: embroider.py:1750
 msgid "Tip: use Path -> Object to Path to convert non-paths before embroidering."
 msgstr ""
 
-#: embroider.py:1758
+#: embroider.py:1762
 msgid "Embroidery"
 msgstr ""
 
@@ -280,7 +280,7 @@ msgstr ""
 msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
 msgstr ""
 
-#: embroider_simulate.py:303
+#: embroider_simulate.py:306
 msgid "Embroidery Simulation"
 msgstr ""
 
