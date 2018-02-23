@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-04 16:24-0500\n"
-"PO-Revision-Date: 2018-02-10 19:44-0500\n"
+"POT-Creation-Date: 2018-02-21 21:46-0500\n"
+"PO-Revision-Date: 2018-02-22 23:11-0500\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
@@ -171,19 +171,19 @@ msgid "\n\n"
 "Seeing a 'no such option' message?  Please restart Inkscape to fix."
 msgstr "Vê uma mensagem \"não existe tal opção\"? Por favor reiniciar o Inkscape."
 
-#: embroider.py:1743
+#: embroider.py:1747
 msgid "No embroiderable paths selected."
 msgstr "Nenhum caminho bordável seleccionado."
 
-#: embroider.py:1745
+#: embroider.py:1749
 msgid "No embroiderable paths found in document."
 msgstr "Nenhum caminho bordável encontrado no documento."
 
-#: embroider.py:1746
+#: embroider.py:1750
 msgid "Tip: use Path -> Object to Path to convert non-paths before embroidering."
 msgstr "Dica: Use opção -> Object to Path para converter objectos em caminhos antes de bordar."
 
-#: embroider.py:1758
+#: embroider.py:1762
 msgid "Embroidery"
 msgstr "Bordado"
 
@@ -280,7 +280,7 @@ msgstr "Pré-definição \"%s\" não encontrada."
 msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
 msgstr "Pré-definição \"%s\" já existe. Use outro nome ou clique \"Substituir\""
 
-#: embroider_simulate.py:303
+#: embroider_simulate.py:306
 msgid "Embroidery Simulation"
 msgstr "Simulação de Bordado"
 
