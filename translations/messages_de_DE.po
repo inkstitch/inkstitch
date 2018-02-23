@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-04 16:24-0500\n"
-"PO-Revision-Date: 2018-02-09 20:06-0500\n"
+"POT-Creation-Date: 2018-02-21 21:46-0500\n"
+"PO-Revision-Date: 2018-02-22 23:11-0500\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
@@ -78,7 +78,7 @@ msgstr "Unerwarteter Fehler beim Generieren der Füllstiche. Bitte senden Sie di
 
 #: embroider.py:884
 msgid "Satin stitch along paths"
-msgstr "Satinstich entlang Pfade"
+msgstr "Satinstich entlang Pfad"
 
 #: embroider.py:907
 msgid "Running stitch length"
@@ -114,7 +114,7 @@ msgstr "Stichlänge"
 
 #: embroider.py:1034
 msgid "Contour underlay inset amount"
-msgstr "Konturunterlageneinrückung"
+msgstr "Einrückung"
 
 #: embroider.py:1040
 msgid "Center-walk underlay"
@@ -138,7 +138,7 @@ msgstr "Zick-Zack Abstand (Spitze zu Spitze)"
 
 #: embroider.py:1062
 msgid "Inset amount (default: half of contour underlay inset)"
-msgstr "Einrückungswert (Standard: Halbe Konturunterlageneinrückung)"
+msgstr "Einrückung (Standard: Halbe Einrückung der Konturunterlage)"
 
 #: embroider.py:1108
 msgid "One or more rails crosses itself, and this is not allowed.  Please split into multiple satin columns."
@@ -172,25 +172,25 @@ msgid "\n\n"
 msgstr "\n\n"
 "  Sehen Sie eine Meldung \"keine solche Option\"?  Zum beheben bitte Inkscape neu starten."
 
-#: embroider.py:1743
+#: embroider.py:1747
 msgid "No embroiderable paths selected."
 msgstr "Keine zu stickenden Pfade ausgewählt."
 
-#: embroider.py:1745
+#: embroider.py:1749
 msgid "No embroiderable paths found in document."
 msgstr "Keine zu stickenden Pfade im Dokument gefunden."
 
-#: embroider.py:1746
+#: embroider.py:1750
 msgid "Tip: use Path -> Object to Path to convert non-paths before embroidering."
 msgstr "Tipp: Verwende Pfad -> Objekt zu Pfad umwandeln, um nicht-Pfade vor dem Sticken zu konvertieren."
 
-#: embroider.py:1758
+#: embroider.py:1762
 msgid "Embroidery"
 msgstr "Stickerei"
 
 #: embroider_params.py:243
 msgid "These settings will be applied to 1 object."
-msgstr "Diese Einstellung wird auf 1 Objekt angewendet werden."
+msgstr "Diese Einstellung wird auf 1 Objekt angewendet."
 
 #: embroider_params.py:245
 #, python-format
@@ -253,7 +253,7 @@ msgstr "Letzte Einstellungen verwenden"
 
 #: embroider_params.py:383
 msgid "Apply and Quit"
-msgstr "Anwenden und beenden"
+msgstr "Anwenden und schließen"
 
 #: embroider_params.py:428
 msgid "Preview"
@@ -281,7 +281,7 @@ msgstr "Einstellung \"%s\" nicht gefunden."
 msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
 msgstr "Einstellung \"%s\" bereits vorhanden. Bitte verwenden Sie einen anderen Namen oder drücken Sie \"Überschreiben\""
 
-#: embroider_simulate.py:303
+#: embroider_simulate.py:306
 msgid "Embroidery Simulation"
 msgstr "Stick Simulation"
 
