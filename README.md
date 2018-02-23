@@ -1,10 +1,11 @@
 # ink/stitch: An Inkscape extension for designing machine embroidery patterns
 
+* February 22, 2018: **Windows support added!**
 * February 5, 2018: Portuguese (pt_PT) translation added!  [Want to help translate?](LOCALIZATION.md)
 * January 5, 2018: Default DPI changed to 96, to match Inkscape.
 * January 3, 2018: Project renamed from `inkscape-embroidery` to **ink/stitch**
-* **NEW January 1, 2018:** [video demo of the new live stitch preview feature](https://youtu.be/QY9NcLN3oJM)
-* **NEW December 6, 2017:** [video demo of how to use the extension](https://www.youtube.com/watch?v=qXntE1X1RIw)
+* January 1, 2018: [video demo of the new live stitch preview feature](https://youtu.be/QY9NcLN3oJM)
+* December 6, 2017: [video demo of how to use the extension](https://www.youtube.com/watch?v=qXntE1X1RIw)
 
 ## Introduction
 **Want to design embroidery pattern files (PES, DST, etc) using free, open source software?  Hate all the other options?  Try this one.**
@@ -15,9 +16,19 @@ So I wrote one.
 
 Okay, not really.  I'm pretty terrible at GUIs, but I found this nifty inkscape extension that was created and hacked on by a couple of other folks.  It was pretty rudimentary, but it got the job done, and more importantly, it was super hackable.  I hacked the hell out of it, and at this point **ink/stitch is a viable entry-level machine embroidery design tool**.
 
-## Quick Setup On Ubuntu 14.04 or later (and derivative Linux distributions)
+## Quick Setup On Ubuntu and Windows
 
-Download the [latest release](https://github.com/lexelby/inkstitch/releases/latest), the `inkscape-*.tar.gz` file.  Decompress this archive directly into `~/.config/inkscape/extensions`, for example:
+First, download the right release archive for your platform from the [latest release](https://github.com/lexelby/inkstitch/releases/latest).
+
+* **Linux**: `inkstitch-[VERSION]-Linux-x86_64.tar.gz`
+  * Currently supports most 64-bit Linux systems from the last couple of years.
+  * 32-bit support coming soon.
+* **Windows**: `inkstitch-[VERSION]-win32.zip`
+  * Supports 32-bit and 64-bit Windows
+
+In Inkscape, go to Preferences and look under System.  Next to "User Extensions" is a folder.  Decompress the archive you downloaded directly into this folder.
+
+For example, on Linux:
 
 ```
 $ cd ~/.config/inkscape/extensions
