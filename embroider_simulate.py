@@ -233,6 +233,9 @@ class EmbroiderySimulator(wx.Frame):
         if self.on_close_hook:
             self.on_close_hook()
 
+        # If we keep a reference here, wx crashes when the process exits.
+        self.canvas = None
+
         self.Destroy()
 
     def stop(self):

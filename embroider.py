@@ -1718,6 +1718,10 @@ class Embroider(inkex.Effect):
 
             if os.path.exists(source):
                 move_if_exists(path, suffix + 1)
+
+                if os.path.exists(dest):
+                    os.remove(dest)
+
                 os.rename(source, dest)
 
         move_if_exists(output_path)

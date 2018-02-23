@@ -32,7 +32,7 @@ pyinstaller_args+="-p inkscape-0.92.2/share/extensions "
 mkdir -p dist/inkstitch/bin
 for extension in "$@"; do
     if [ "$BUILD" = "windows" ]; then
-        wine c:\\Python\\scripts\\pyinstaller.exe --windowed $pyinstaller_args ${extension}.py
+        wine c:\\Python\\scripts\\pyinstaller.exe $pyinstaller_args ${extension}.py
     else
         # without the LD_LIBRARY_PATH, it seems that pyinstaller can't find all of
         # wxpython's shared libraries

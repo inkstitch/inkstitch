@@ -2,6 +2,7 @@
 
 import sys
 import os
+import subprocess
 
 # ink/stitch
 #
@@ -27,4 +28,17 @@ binary_path = os.path.join("inkstitch", "bin", binary_name)
 args = sys.argv[:]
 args[0] = binary_path
 
-os.execv(binary_path, args)
+# os.execve works here for Linux, but only this seems to get the
+# extension output to Inkscape on Windows
+extension = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+stdout, stderr = extension.communicate()
+
+stdout = stdout.strip()
+if stdout:
+    print stdout.strip(),
+
+stderr = stderr.strip()
+if stderr:
+    print >> sys.stderr, stderr.strip(),
+
+sys.exit(extension.returncode)
