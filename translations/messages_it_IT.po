@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-21 21:46-0500\n"
-"PO-Revision-Date: 2018-02-22 23:11-0500\n"
+"POT-Creation-Date: 2018-02-24 20:25-0500\n"
+"PO-Revision-Date: 2018-02-24 20:31-0500\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
@@ -16,174 +16,186 @@ msgstr ""
 "X-Crowdin-Language: it\n"
 "X-Crowdin-File: /master/messages.po\n"
 
-#: embroider.py:45
+#: embroider.py:41
+msgid "Fill"
+msgstr ""
+
+#: embroider.py:47
 msgid "Manually routed fill stitching"
 msgstr ""
 
-#: embroider.py:50
+#: embroider.py:52
 msgid "Angle of lines of stitches"
 msgstr ""
 
-#: embroider.py:60
+#: embroider.py:62
 msgid "Flip fill (start right-to-left)"
 msgstr ""
 
-#: embroider.py:65
+#: embroider.py:67
 msgid "Spacing between rows"
 msgstr ""
 
-#: embroider.py:74
+#: embroider.py:76
 msgid "Maximum fill stitch length"
 msgstr ""
 
-#: embroider.py:79
+#: embroider.py:81
 msgid "Stagger rows this many times before repeating"
 msgstr ""
 
-#: embroider.py:373
+#: embroider.py:374
+msgid "Auto-Fill"
+msgstr ""
+
+#: embroider.py:377
 msgid "Automatically routed fill stitching"
 msgstr ""
 
-#: embroider.py:392
+#: embroider.py:396
 msgid "Running stitch length (traversal between sections)"
 msgstr ""
 
-#: embroider.py:397
+#: embroider.py:401
 msgid "Underlay"
 msgstr ""
 
-#: embroider.py:397 embroider.py:402 embroider.py:413 embroider.py:419
+#: embroider.py:401 embroider.py:406 embroider.py:417 embroider.py:423
 msgid "AutoFill Underlay"
 msgstr ""
 
-#: embroider.py:402
+#: embroider.py:406
 msgid "Fill angle (default: fill angle + 90 deg)"
 msgstr ""
 
-#: embroider.py:413
+#: embroider.py:417
 msgid "Row spacing (default: 3x fill row spacing)"
 msgstr ""
 
-#: embroider.py:419
+#: embroider.py:423
 msgid "Max stitch length"
 msgstr ""
 
-#: embroider.py:540
+#: embroider.py:544
 msgid "Unable to autofill.  This most often happens because your shape is made up of multiple sections that aren't connected."
 msgstr ""
 
-#: embroider.py:715
+#: embroider.py:719
 msgid "Unexpected error while generating fill stitches. Please send your SVG file to lexelby@github."
 msgstr ""
 
-#: embroider.py:884
+#: embroider.py:890
 msgid "Satin stitch along paths"
 msgstr ""
 
-#: embroider.py:907
+#: embroider.py:913
 msgid "Running stitch length"
 msgstr ""
 
-#: embroider.py:912 embroider.py:1008
+#: embroider.py:918 embroider.py:1016
 msgid "Zig-zag spacing (peak-to-peak)"
 msgstr ""
 
-#: embroider.py:918
+#: embroider.py:924
 msgid "Repeats"
 msgstr ""
 
-#: embroider.py:999
+#: embroider.py:1001
+msgid "Satin Column"
+msgstr ""
+
+#: embroider.py:1007
 msgid "Custom satin column"
 msgstr ""
 
-#: embroider.py:1014
+#: embroider.py:1022
 msgid "Pull compensation"
 msgstr ""
 
-#: embroider.py:1022
+#: embroider.py:1030
 msgid "Contour underlay"
 msgstr ""
 
-#: embroider.py:1022 embroider.py:1029 embroider.py:1034
+#: embroider.py:1030 embroider.py:1037 embroider.py:1042
 msgid "Contour Underlay"
 msgstr ""
 
-#: embroider.py:1029 embroider.py:1047
+#: embroider.py:1037 embroider.py:1055
 msgid "Stitch length"
 msgstr ""
 
-#: embroider.py:1034
+#: embroider.py:1042
 msgid "Contour underlay inset amount"
 msgstr ""
 
-#: embroider.py:1040
+#: embroider.py:1048
 msgid "Center-walk underlay"
 msgstr ""
 
-#: embroider.py:1040 embroider.py:1047
+#: embroider.py:1048 embroider.py:1055
 msgid "Center-Walk Underlay"
 msgstr ""
 
-#: embroider.py:1052
+#: embroider.py:1060
 msgid "Zig-zag underlay"
 msgstr ""
 
-#: embroider.py:1052 embroider.py:1057 embroider.py:1062
+#: embroider.py:1060 embroider.py:1065 embroider.py:1070
 msgid "Zig-zag Underlay"
 msgstr ""
 
-#: embroider.py:1057
+#: embroider.py:1065
 msgid "Zig-Zag spacing (peak-to-peak)"
 msgstr ""
 
-#: embroider.py:1062
+#: embroider.py:1070
 msgid "Inset amount (default: half of contour underlay inset)"
 msgstr ""
 
-#: embroider.py:1108
+#: embroider.py:1116
 msgid "One or more rails crosses itself, and this is not allowed.  Please split into multiple satin columns."
 msgstr ""
 
-#: embroider.py:1115
+#: embroider.py:1123
 msgid "satin column: One or more of the rungs doesn't intersect both rails."
 msgstr ""
 
-#: embroider.py:1115 embroider.py:1117
+#: embroider.py:1123 embroider.py:1125
 msgid "Each rail should intersect both rungs once."
 msgstr ""
 
-#: embroider.py:1117
+#: embroider.py:1125
 msgid "satin column: One or more of the rungs intersects the rails more than once."
 msgstr ""
 
-#: embroider.py:1158
+#: embroider.py:1166
 #, python-format
 msgid "satin column: object %s has a fill (but should not)"
 msgstr ""
 
-#: embroider.py:1162
+#: embroider.py:1170
 #, python-format
 msgid "satin column: object %(id)s has two paths with an unequal number of points (%(length1)d and %(length2)d)"
 msgstr ""
 
-#: embroider.py:1695
+#: embroider.py:1703
 msgid "\n\n"
 "Seeing a 'no such option' message?  Please restart Inkscape to fix."
 msgstr ""
 
-#: embroider.py:1747
+#: embroider.py:1755
 msgid "No embroiderable paths selected."
 msgstr ""
 
-#: embroider.py:1749
+#: embroider.py:1757
 msgid "No embroiderable paths found in document."
 msgstr ""
 
-#: embroider.py:1750
+#: embroider.py:1758
 msgid "Tip: use Path -> Object to Path to convert non-paths before embroidering."
 msgstr ""
 
-#: embroider.py:1762
+#: embroider.py:1770
 msgid "Embroidery"
 msgstr ""
 
@@ -289,24 +301,24 @@ msgstr ""
 msgid "parseLengthWithUnits: unknown unit %s"
 msgstr ""
 
-#: inkstitch.py:118
+#: inkstitch.py:126
 #, python-format
 msgid "Unknown unit: %s"
 msgstr ""
 
-#: inkstitch.py:321
+#: inkstitch.py:329
 msgid "TRIM after"
 msgstr ""
 
-#: inkstitch.py:322
+#: inkstitch.py:330
 msgid "Trim thread after this object (for supported machines and file formats)"
 msgstr ""
 
-#: inkstitch.py:331
+#: inkstitch.py:339
 msgid "STOP after"
 msgstr ""
 
-#: inkstitch.py:332
+#: inkstitch.py:340
 msgid "Add STOP instruction after this object (for supported machines and file formats)"
 msgstr ""
 
