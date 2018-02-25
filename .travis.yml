@@ -80,7 +80,10 @@ install:
 
       # the 3 in pygobject3 signifies gtk3, not python3
       brew install pygobject3 gtk+3
-
+      
+      # we need msgfmt
+      brew install gettext
+      
       echo "FINDING IT"
       find /usr/local -name '*typelib*'
 
