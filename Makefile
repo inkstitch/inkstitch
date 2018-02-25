@@ -18,10 +18,11 @@ dist: distclean locales
 distclean:
 	rm -rf build dist *.spec *.tar.gz
 
-messages.po: embroider*.py inkstitch.py
+messages.po:
 	rm -f messages.po
-	xgettext embroider*.py inkstitch.py
+	xgettext --no-location --add-comments embroider*.py inkstitch.py
 
+.PHONY: messages.po
 .PHONY: locales
 locales:
 	# message files will look like this:
