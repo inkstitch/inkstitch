@@ -46,8 +46,8 @@ def running_stitch(points, stitch_length):
                     # next stitch needs to be stitch_length along this segment
                     distance = stitch_length
 
-        while distance < length:
-            output.append(segment_start + distance * direction)
+        while distance < segment_length:
+            output.append(segment_start + distance * segment_direction)
             distance += stitch_length
 
         # prepare for the next segment
