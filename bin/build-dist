@@ -46,7 +46,10 @@ for extension in "$@"; do
     if [ "$BUILD" = "windows" ]; then
         wine c:\\Python\\scripts\\pyinstaller.exe --windowed $pyinstaller_args ${extension}.py
     else
-        # without the LD_LIBRARY_PATH, it seems that pyinstaller can't find all of
+        
+        # We have to check if it finds LDLIBRARY_PATH with wxPython 4.0.1
+        
+	# without the LD_LIBRARY_PATH, it seems that pyinstaller can't find all of
         # wxpython's shared libraries
         LD_LIBRARY_PATH="${site_packages}/wx:embroidermodder/experimental/python/binding" pyinstaller $pyinstaller_args ${extension}.py;
     fi
