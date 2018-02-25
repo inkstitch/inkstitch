@@ -17,7 +17,7 @@ echo "END DEBUG"
 if [ "$TRAVIS_OS_NAME" = "linux" -a "$BUILD" != "windows" ]; then
     # pyinstaller misses these two
     pyinstaller_args+="--add-binary /usr/lib/x86_64-linux-gnu/gio/modules/libgiolibproxy.so:. "
-    pyinstaller_args+="--add-binary  /usr/lib/x86_64-linux-gnu/libproxy.so.1:. "
+    pyinstaller_args+="--add-binary /usr/lib/x86_64-linux-gnu/libproxy.so.1:. "
 fi
 
 # This one's tricky.  ink/stitch doesn't actually _use_ gi.repository.Gtk,
@@ -51,7 +51,8 @@ for extension in "$@"; do
         
 	# without the LD_LIBRARY_PATH, it seems that pyinstaller can't find all of
         # wxpython's shared libraries
-        LD_LIBRARY_PATH="${site_packages}/wx:embroidermodder/experimental/python/binding" pyinstaller $pyinstaller_args ${extension}.py;
+        # LD_LIBRARY_PATH="${site_packages}/wx:embroidermodder/experimental/python/binding" pyinstaller $pyinstaller_args ${extension}.py;
+	pyinstaller $pyinstaller_args ${extension}.py;
     fi
 
 	# By default, pyinstaller will treat each of ink/stitch's extensions
