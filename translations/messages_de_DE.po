@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-04 16:24-0500\n"
-"PO-Revision-Date: 2018-02-09 20:06-0500\n"
+"POT-Creation-Date: 2018-02-24 20:25-0500\n"
+"PO-Revision-Date: 2018-02-24 20:31-0500\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
@@ -16,181 +16,193 @@ msgstr ""
 "X-Crowdin-Language: de\n"
 "X-Crowdin-File: /master/messages.po\n"
 
-#: embroider.py:45
+#: embroider.py:41
+msgid "Fill"
+msgstr ""
+
+#: embroider.py:47
 msgid "Manually routed fill stitching"
 msgstr "Manuell geführte Füllstiche"
 
-#: embroider.py:50
+#: embroider.py:52
 msgid "Angle of lines of stitches"
 msgstr "Winkel der Stichlinien"
 
-#: embroider.py:60
+#: embroider.py:62
 msgid "Flip fill (start right-to-left)"
 msgstr "Rückwärtsfüllung (von rechts nach links)"
 
-#: embroider.py:65
+#: embroider.py:67
 msgid "Spacing between rows"
 msgstr "Zeilenabstand"
 
-#: embroider.py:74
+#: embroider.py:76
 msgid "Maximum fill stitch length"
 msgstr "Maximale Füll-Stichlänge"
 
-#: embroider.py:79
+#: embroider.py:81
 msgid "Stagger rows this many times before repeating"
 msgstr "Wieviele Reihen bis sich das Muster wiederholt"
 
-#: embroider.py:373
+#: embroider.py:374
+msgid "Auto-Fill"
+msgstr ""
+
+#: embroider.py:377
 msgid "Automatically routed fill stitching"
 msgstr "Automatisch geführte Füllstiche"
 
-#: embroider.py:392
+#: embroider.py:396
 msgid "Running stitch length (traversal between sections)"
 msgstr "Laufstichlänge (Durchlauf zwischen Sektionen)"
 
-#: embroider.py:397
+#: embroider.py:401
 msgid "Underlay"
 msgstr "Unterlage"
 
-#: embroider.py:397 embroider.py:402 embroider.py:413 embroider.py:419
+#: embroider.py:401 embroider.py:406 embroider.py:417 embroider.py:423
 msgid "AutoFill Underlay"
 msgstr "AutoFill-Unterlage"
 
-#: embroider.py:402
+#: embroider.py:406
 msgid "Fill angle (default: fill angle + 90 deg)"
 msgstr "Füllwinkel (Standardwert: Füllwinkel + 90°)"
 
-#: embroider.py:413
+#: embroider.py:417
 msgid "Row spacing (default: 3x fill row spacing)"
 msgstr "Zeilenabstand (Standard: 3x Füll-Reihenabstand)"
 
-#: embroider.py:419
+#: embroider.py:423
 msgid "Max stitch length"
 msgstr "Maximale Stichlänge"
 
-#: embroider.py:540
+#: embroider.py:544
 msgid "Unable to autofill.  This most often happens because your shape is made up of multiple sections that aren't connected."
 msgstr "Automatische Füllung nicht möglich.  Dies geschieht, weil Ihre Form aus mehreren und nicht verbundenen Abschnitten besteht."
 
-#: embroider.py:715
+#: embroider.py:719
 msgid "Unexpected error while generating fill stitches. Please send your SVG file to lexelby@github."
 msgstr "Unerwarteter Fehler beim Generieren der Füllstiche. Bitte senden Sie die SVG-Datei an lexelby@github."
 
-#: embroider.py:884
+#: embroider.py:890
 msgid "Satin stitch along paths"
-msgstr "Satinstich entlang Pfade"
+msgstr "Satinstich entlang Pfad"
 
-#: embroider.py:907
+#: embroider.py:913
 msgid "Running stitch length"
 msgstr "Laufstichlänge"
 
-#: embroider.py:912 embroider.py:1008
+#: embroider.py:918 embroider.py:1016
 msgid "Zig-zag spacing (peak-to-peak)"
 msgstr "Zick-Zack Abstand (Spitze zu Spitze)"
 
-#: embroider.py:918
+#: embroider.py:924
 msgid "Repeats"
 msgstr "Wiederholungen"
 
-#: embroider.py:999
+#: embroider.py:1001
+msgid "Satin Column"
+msgstr ""
+
+#: embroider.py:1007
 msgid "Custom satin column"
 msgstr "Benutzerdefinierte Satinkolumne"
 
-#: embroider.py:1014
+#: embroider.py:1022
 msgid "Pull compensation"
 msgstr "Zugausgleich"
 
-#: embroider.py:1022
+#: embroider.py:1030
 msgid "Contour underlay"
 msgstr "Konturunterlage"
 
-#: embroider.py:1022 embroider.py:1029 embroider.py:1034
+#: embroider.py:1030 embroider.py:1037 embroider.py:1042
 msgid "Contour Underlay"
 msgstr "Konturunterlage"
 
-#: embroider.py:1029 embroider.py:1047
+#: embroider.py:1037 embroider.py:1055
 msgid "Stitch length"
 msgstr "Stichlänge"
 
-#: embroider.py:1034
+#: embroider.py:1042
 msgid "Contour underlay inset amount"
-msgstr "Konturunterlageneinrückung"
+msgstr "Einrückung"
 
-#: embroider.py:1040
+#: embroider.py:1048
 msgid "Center-walk underlay"
 msgstr "Mittellinien Unterlage"
 
-#: embroider.py:1040 embroider.py:1047
+#: embroider.py:1048 embroider.py:1055
 msgid "Center-Walk Underlay"
 msgstr "Mittellinien Unterlage"
 
-#: embroider.py:1052
+#: embroider.py:1060
 msgid "Zig-zag underlay"
 msgstr "Zick-Zack Unterlage"
 
-#: embroider.py:1052 embroider.py:1057 embroider.py:1062
+#: embroider.py:1060 embroider.py:1065 embroider.py:1070
 msgid "Zig-zag Underlay"
 msgstr "Zick-Zack Unterlage"
 
-#: embroider.py:1057
+#: embroider.py:1065
 msgid "Zig-Zag spacing (peak-to-peak)"
 msgstr "Zick-Zack Abstand (Spitze zu Spitze)"
 
-#: embroider.py:1062
+#: embroider.py:1070
 msgid "Inset amount (default: half of contour underlay inset)"
-msgstr "Einrückungswert (Standard: Halbe Konturunterlageneinrückung)"
+msgstr "Einrückung (Standard: Halbe Einrückung der Konturunterlage)"
 
-#: embroider.py:1108
+#: embroider.py:1116
 msgid "One or more rails crosses itself, and this is not allowed.  Please split into multiple satin columns."
 msgstr "Eine oder mehrere Konturen überschneiden sich, dies ist nicht erlaubt. Bitte in mehrere Satinkolumnen aufteilen."
 
-#: embroider.py:1115
+#: embroider.py:1123
 msgid "satin column: One or more of the rungs doesn't intersect both rails."
 msgstr "Satinkolumne: Eine oder mehrere Verbindungen überschneiden nicht die Konturen."
 
-#: embroider.py:1115 embroider.py:1117
+#: embroider.py:1123 embroider.py:1125
 msgid "Each rail should intersect both rungs once."
 msgstr "Jede Umrandung sollte die Querverbindung nur einmal kreuzen."
 
-#: embroider.py:1117
+#: embroider.py:1125
 msgid "satin column: One or more of the rungs intersects the rails more than once."
 msgstr "Satinkolumne: Eine oder mehrere Verbindungen überschneiden sich mehrmals."
 
-#: embroider.py:1158
+#: embroider.py:1166
 #, python-format
 msgid "satin column: object %s has a fill (but should not)"
 msgstr "Satinkolumne: Objekt %s hat eine Füllung (sollte es aber nicht haben)"
 
-#: embroider.py:1162
+#: embroider.py:1170
 #, python-format
 msgid "satin column: object %(id)s has two paths with an unequal number of points (%(length1)d and %(length2)d)"
 msgstr "Satinkolumne: Objekt %(id)s enthält zwei Pfade mit einer ungleichen Anzahl von Knotenpunkten (%(length1)d und %(length2)d)"
 
-#: embroider.py:1695
+#: embroider.py:1703
 msgid "\n\n"
 "Seeing a 'no such option' message?  Please restart Inkscape to fix."
 msgstr "\n\n"
 "  Sehen Sie eine Meldung \"keine solche Option\"?  Zum beheben bitte Inkscape neu starten."
 
-#: embroider.py:1743
+#: embroider.py:1755
 msgid "No embroiderable paths selected."
 msgstr "Keine zu stickenden Pfade ausgewählt."
 
-#: embroider.py:1745
+#: embroider.py:1757
 msgid "No embroiderable paths found in document."
 msgstr "Keine zu stickenden Pfade im Dokument gefunden."
 
-#: embroider.py:1746
+#: embroider.py:1758
 msgid "Tip: use Path -> Object to Path to convert non-paths before embroidering."
 msgstr "Tipp: Verwende Pfad -> Objekt zu Pfad umwandeln, um nicht-Pfade vor dem Sticken zu konvertieren."
 
-#: embroider.py:1758
+#: embroider.py:1770
 msgid "Embroidery"
 msgstr "Stickerei"
 
 #: embroider_params.py:243
 msgid "These settings will be applied to 1 object."
-msgstr "Diese Einstellung wird auf 1 Objekt angewendet werden."
+msgstr "Diese Einstellung wird auf 1 Objekt angewendet."
 
 #: embroider_params.py:245
 #, python-format
@@ -253,7 +265,7 @@ msgstr "Letzte Einstellungen verwenden"
 
 #: embroider_params.py:383
 msgid "Apply and Quit"
-msgstr "Anwenden und beenden"
+msgstr "Anwenden und schließen"
 
 #: embroider_params.py:428
 msgid "Preview"
@@ -281,7 +293,7 @@ msgstr "Einstellung \"%s\" nicht gefunden."
 msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
 msgstr "Einstellung \"%s\" bereits vorhanden. Bitte verwenden Sie einen anderen Namen oder drücken Sie \"Überschreiben\""
 
-#: embroider_simulate.py:303
+#: embroider_simulate.py:306
 msgid "Embroidery Simulation"
 msgstr "Stick Simulation"
 
@@ -290,24 +302,24 @@ msgstr "Stick Simulation"
 msgid "parseLengthWithUnits: unknown unit %s"
 msgstr "AnalysiereLängeMitEinheiten: Unbekannte Einheit %s"
 
-#: inkstitch.py:118
+#: inkstitch.py:126
 #, python-format
 msgid "Unknown unit: %s"
 msgstr "Unbekannte Einheit: %s"
 
-#: inkstitch.py:321
+#: inkstitch.py:329
 msgid "TRIM after"
 msgstr "Danach TRIM Befehl"
 
-#: inkstitch.py:322
+#: inkstitch.py:330
 msgid "Trim thread after this object (for supported machines and file formats)"
 msgstr "TRIM Befehl nach diesem Objekt einfügen (wenn dies von Maschine oder dem Format unterstützt wird)"
 
-#: inkstitch.py:331
+#: inkstitch.py:339
 msgid "STOP after"
 msgstr "Danach STOP Befehl"
 
-#: inkstitch.py:332
+#: inkstitch.py:340
 msgid "Add STOP instruction after this object (for supported machines and file formats)"
 msgstr "STOP nach diesem Objekt einfügen (wenn dies von Maschine oder dem Format unterstützt wird)"
 
