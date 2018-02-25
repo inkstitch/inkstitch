@@ -109,8 +109,10 @@ install:
       brew install qt
       export PATH="/usr/local/opt/qt/bin:$PATH"
 
+      # no msgfmt found
       brew install gettext
-
+      brew link gettext
+            
       pip install -r requirements.txt
       pip install pyinstaller
 
