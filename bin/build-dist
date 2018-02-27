@@ -47,10 +47,6 @@ for extension in "$@"; do
         # We can't strip windows bins/libs !
         wine c:\\Python\\scripts\\pyinstaller.exe --windowed $pyinstaller_args ${extension}.py
     else
-    	if [ "$BUILD" = "osx" ] ; then
-	  # cp _libembroidery
-	  cp embroidermodder/experimental/python/binding/_libembroidery.so  dist/inkstitch/bin
-        fi
         # LD_LIBRARY_PATH is broken before 4.0.1 (wxpython)
         # LD_LIBRARY_PATH="${site_packages}/wx:embroidermodder/experimental/python/binding" pyinstaller $pyinstaller_args ${extension}.py;
 	pyinstaller --strip $pyinstaller_args ${extension}.py;
