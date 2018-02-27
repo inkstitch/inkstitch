@@ -1763,7 +1763,7 @@ class Embroider(inkex.Effect):
 
         patches = elements_to_patches(self.elements)
         stitches = patches_to_stitches(patches, self.options.collapse_length_mm * PIXELS_PER_MM)
-        inkstitch.write_embroidery_file(self.get_output_path(), stitches)
+        inkstitch.write_embroidery_file(self.get_output_path(), stitches, self.document.getroot())
 
         new_layer = inkex.etree.SubElement(self.document.getroot(), SVG_GROUP_TAG, {})
         new_layer.set('id', self.uniqueId("embroidery"))

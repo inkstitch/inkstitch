@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-24 20:25-0500\n"
+"POT-Creation-Date: 2018-02-26 19:33-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -312,29 +312,29 @@ msgstr ""
 msgid "Embroidery Simulation"
 msgstr ""
 
-#: inkstitch.py:94
+#: inkstitch.py:95
 #, python-format
 msgid "parseLengthWithUnits: unknown unit %s"
 msgstr ""
 
-#: inkstitch.py:126
+#: inkstitch.py:127
 #, python-format
 msgid "Unknown unit: %s"
 msgstr ""
 
-#: inkstitch.py:329
+#: inkstitch.py:335
 msgid "TRIM after"
 msgstr ""
 
-#: inkstitch.py:330
+#: inkstitch.py:336
 msgid "Trim thread after this object (for supported machines and file formats)"
 msgstr ""
 
-#: inkstitch.py:339
+#: inkstitch.py:345
 msgid "STOP after"
 msgstr ""
 
-#: inkstitch.py:340
+#: inkstitch.py:346
 msgid ""
 "Add STOP instruction after this object (for supported machines and file "
 "formats)"
