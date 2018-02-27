@@ -49,7 +49,13 @@ for extension in "$@"; do
     else
         # LD_LIBRARY_PATH is broken before 4.0.1 (wxpython)
         # LD_LIBRARY_PATH="${site_packages}/wx:embroidermodder/experimental/python/binding" pyinstaller $pyinstaller_args ${extension}.py;
-	pyinstaller --strip $pyinstaller_args ${extension}.py;
+	# pyinstaller --strip $pyinstaller_args ${extension}.py;
+        if [ "$BUILD" = "osx" ] ; then
+	  DYLD_LIBRARY_PATH="${site_packages}/wx:embroidermodder/experimental/python/binding"
+	  pyinstaller --strip $pyinstaller_args ${extension}.py;
+	else
+	  pyinstaller --strip $pyinstaller_args ${extension}.py;
+	fi
     fi
 	# By default, pyinstaller will treat each of ink/stitch's extensions
 	# separately.  This means it packages a lot of the same shared libraries (like
