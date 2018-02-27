@@ -52,7 +52,7 @@ for extension in "$@"; do
 	# without the LD_LIBRARY_PATH, it seems that pyinstaller can't find all of
         # wxpython's shared libraries
         # LD_LIBRARY_PATH="${site_packages}/wx:embroidermodder/experimental/python/binding" pyinstaller $pyinstaller_args ${extension}.py;
-	pyinstaller $pyinstaller_args ${extension}.py;
+	pyinstaller --strip $pyinstaller_args ${extension}.py;
     fi
 
 	# By default, pyinstaller will treat each of ink/stitch's extensions
