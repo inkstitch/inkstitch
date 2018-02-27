@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-24 20:25-0500\n"
-"PO-Revision-Date: 2018-02-24 20:31-0500\n"
+"POT-Creation-Date: 2018-02-24 20:39-0500\n"
+"PO-Revision-Date: 2018-02-26 19:52-0500\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
@@ -16,309 +16,235 @@ msgstr ""
 "X-Crowdin-Language: ru\n"
 "X-Crowdin-File: /master/messages.po\n"
 
-#: embroider.py:41
 msgid "Fill"
 msgstr ""
 
-#: embroider.py:47
 msgid "Manually routed fill stitching"
 msgstr ""
 
-#: embroider.py:52
 msgid "Angle of lines of stitches"
 msgstr ""
 
-#: embroider.py:62
 msgid "Flip fill (start right-to-left)"
 msgstr ""
 
-#: embroider.py:67
 msgid "Spacing between rows"
 msgstr ""
 
-#: embroider.py:76
 msgid "Maximum fill stitch length"
 msgstr ""
 
-#: embroider.py:81
 msgid "Stagger rows this many times before repeating"
 msgstr ""
 
-#: embroider.py:374
 msgid "Auto-Fill"
 msgstr ""
 
-#: embroider.py:377
 msgid "Automatically routed fill stitching"
 msgstr ""
 
-#: embroider.py:396
 msgid "Running stitch length (traversal between sections)"
 msgstr ""
 
-#: embroider.py:401
 msgid "Underlay"
 msgstr ""
 
-#: embroider.py:401 embroider.py:406 embroider.py:417 embroider.py:423
 msgid "AutoFill Underlay"
 msgstr ""
 
-#: embroider.py:406
 msgid "Fill angle (default: fill angle + 90 deg)"
 msgstr ""
 
-#: embroider.py:417
 msgid "Row spacing (default: 3x fill row spacing)"
 msgstr ""
 
-#: embroider.py:423
 msgid "Max stitch length"
 msgstr ""
 
-#: embroider.py:544
 msgid "Unable to autofill.  This most often happens because your shape is made up of multiple sections that aren't connected."
 msgstr ""
 
-#: embroider.py:719
 msgid "Unexpected error while generating fill stitches. Please send your SVG file to lexelby@github."
 msgstr ""
 
-#: embroider.py:890
 msgid "Satin stitch along paths"
 msgstr ""
 
-#: embroider.py:913
 msgid "Running stitch length"
 msgstr ""
 
-#: embroider.py:918 embroider.py:1016
 msgid "Zig-zag spacing (peak-to-peak)"
 msgstr ""
 
-#: embroider.py:924
 msgid "Repeats"
 msgstr ""
 
-#: embroider.py:1001
 msgid "Satin Column"
 msgstr ""
 
-#: embroider.py:1007
 msgid "Custom satin column"
 msgstr ""
 
-#: embroider.py:1022
 msgid "Pull compensation"
 msgstr ""
 
-#: embroider.py:1030
 msgid "Contour underlay"
 msgstr ""
 
-#: embroider.py:1030 embroider.py:1037 embroider.py:1042
 msgid "Contour Underlay"
 msgstr ""
 
-#: embroider.py:1037 embroider.py:1055
 msgid "Stitch length"
 msgstr ""
 
-#: embroider.py:1042
 msgid "Contour underlay inset amount"
 msgstr ""
 
-#: embroider.py:1048
 msgid "Center-walk underlay"
 msgstr ""
 
-#: embroider.py:1048 embroider.py:1055
 msgid "Center-Walk Underlay"
 msgstr ""
 
-#: embroider.py:1060
 msgid "Zig-zag underlay"
 msgstr ""
 
-#: embroider.py:1060 embroider.py:1065 embroider.py:1070
 msgid "Zig-zag Underlay"
 msgstr ""
 
-#: embroider.py:1065
 msgid "Zig-Zag spacing (peak-to-peak)"
 msgstr ""
 
-#: embroider.py:1070
 msgid "Inset amount (default: half of contour underlay inset)"
 msgstr ""
 
-#: embroider.py:1116
 msgid "One or more rails crosses itself, and this is not allowed.  Please split into multiple satin columns."
 msgstr ""
 
-#: embroider.py:1123
 msgid "satin column: One or more of the rungs doesn't intersect both rails."
 msgstr ""
 
-#: embroider.py:1123 embroider.py:1125
 msgid "Each rail should intersect both rungs once."
 msgstr ""
 
-#: embroider.py:1125
 msgid "satin column: One or more of the rungs intersects the rails more than once."
 msgstr ""
 
-#: embroider.py:1166
 #, python-format
 msgid "satin column: object %s has a fill (but should not)"
 msgstr ""
 
-#: embroider.py:1170
 #, python-format
 msgid "satin column: object %(id)s has two paths with an unequal number of points (%(length1)d and %(length2)d)"
 msgstr ""
 
-#: embroider.py:1703
 msgid "\n\n"
 "Seeing a 'no such option' message?  Please restart Inkscape to fix."
 msgstr ""
 
-#: embroider.py:1755
 msgid "No embroiderable paths selected."
 msgstr ""
 
-#: embroider.py:1757
 msgid "No embroiderable paths found in document."
 msgstr ""
 
-#: embroider.py:1758
 msgid "Tip: use Path -> Object to Path to convert non-paths before embroidering."
 msgstr ""
 
-#: embroider.py:1770
 msgid "Embroidery"
 msgstr ""
 
-#: embroider_params.py:243
 msgid "These settings will be applied to 1 object."
 msgstr ""
 
-#: embroider_params.py:245
 #, python-format
 msgid "These settings will be applied to %d objects."
 msgstr ""
 
-#: embroider_params.py:248
 msgid "Some settings had different values across objects.  Select a value from the dropdown or enter a new one."
 msgstr ""
 
-#: embroider_params.py:252
 #, python-format
 msgid "Disabling this tab will disable the following %d tabs."
 msgstr ""
 
-#: embroider_params.py:254
 msgid "Disabling this tab will disable the following tab."
 msgstr ""
 
-#: embroider_params.py:257
 #, python-format
 msgid "Enabling this tab will disable %s and vice-versa."
 msgstr ""
 
-#: embroider_params.py:287
 msgid "Inkscape objects"
 msgstr ""
 
-#: embroider_params.py:345
 msgid "Embroidery Params"
 msgstr ""
 
-#: embroider_params.py:359
 msgid "Presets"
 msgstr ""
 
-#: embroider_params.py:364
 msgid "Load"
 msgstr ""
 
-#: embroider_params.py:367
 msgid "Add"
 msgstr ""
 
-#: embroider_params.py:370
 msgid "Overwrite"
 msgstr ""
 
-#: embroider_params.py:373
 msgid "Delete"
 msgstr ""
 
-#: embroider_params.py:376
 msgid "Cancel"
 msgstr ""
 
-#: embroider_params.py:380
 msgid "Use Last Settings"
 msgstr ""
 
-#: embroider_params.py:383
 msgid "Apply and Quit"
 msgstr ""
 
-#: embroider_params.py:428
 msgid "Preview"
 msgstr ""
 
-#: embroider_params.py:446
 msgid "Internal Error"
 msgstr ""
 
-#: embroider_params.py:499
 msgid "Please enter or select a preset name first."
 msgstr ""
 
-#: embroider_params.py:499 embroider_params.py:505 embroider_params.py:533
 msgid "Preset"
 msgstr ""
 
-#: embroider_params.py:505
 #, python-format
 msgid "Preset \"%s\" not found."
 msgstr ""
 
-#: embroider_params.py:533
 #, python-format
 msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
 msgstr ""
 
-#: embroider_simulate.py:306
 msgid "Embroidery Simulation"
 msgstr ""
 
-#: inkstitch.py:94
 #, python-format
 msgid "parseLengthWithUnits: unknown unit %s"
 msgstr ""
 
-#: inkstitch.py:126
 #, python-format
 msgid "Unknown unit: %s"
 msgstr ""
 
-#: inkstitch.py:329
 msgid "TRIM after"
 msgstr ""
 
-#: inkstitch.py:330
 msgid "Trim thread after this object (for supported machines and file formats)"
 msgstr ""
 
-#: inkstitch.py:339
 msgid "STOP after"
 msgstr ""
 
-#: inkstitch.py:340
 msgid "Add STOP instruction after this object (for supported machines and file formats)"
 msgstr ""
 
