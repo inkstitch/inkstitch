@@ -23,6 +23,11 @@ matrix:
     sudo: required
     env: BUILD=windows
     if: tag =~ ^v[0-9.]+$ OR branch != master
+  - language: generic
+    os: osx
+    sudo: required
+    env: BUILD=osx
+    if: tag =~ ^v[0-9.]+$ OR branch != master
 branches:
   except:
     - /^dev-build-/
@@ -56,15 +61,58 @@ install:
       sudo apt-get install python-gi python-gi-cairo libgirepository1.0-dev
     
       # wxPython doen't publish linux wheels in pypi
-      wget https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-14.04/wxPython-4.0.0b2-cp27-cp27mu-linux_x86_64.whl
-      pip install wxPython-4.0.0b2-cp27-cp27mu-linux_x86_64.whl
+      wget -q https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-14.04/wxPython-4.0.1-cp27-cp27mu-linux_x86_64.whl
+      pip install wxPython-4.0.1-cp27-cp27mu-linux_x86_64.whl
         
       # We can't use the shapely wheel because it includes the geos
       # library but with a weird file name.  Details:
       # https://github.com/pyinstaller/pyinstaller/blob/61b1c75c2b0469b32d114298a63bf60b8d597e37/PyInstaller/hooks/hook-shapely.py#L34
       pip install --no-binary shapely -r requirements.txt
-    
+
       pip install pyinstaller
+    
+    elif [ "$TRAVIS_OS_NAME" = "osx" ]; then
+      brew update
+      brew outdated python || brew upgrade python
+
+      # brew told me to do this
+      mkdir -p /Users/travis/Library/Python/2.7/lib/python/site-packages
+
+      # the 3 in pygobject3 signifies gtk3, not python3
+      brew install pygobject3 gtk+3
+      
+      # we need msgfmt
+      brew install gettext
+      brew link gettext --force
+      
+      echo "FINDING IT"
+      find /usr/local -name '*typelib*'
+
+      export GI_TYPELIB_PATH=/usr/local/lib/girepository-1.0/
+
+      export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+
+      sudo pip install virtualenv
+      virtualenv --system-site-packages venv
+
+      # add in brew's site-packages
+      echo 'import site; site.addsitedir("/usr/local/lib/python2.7/site-packages")' >> venv/lib/python2.7/site-packages/homebrew.pth
+
+      # add in pygobject's site-packages
+      #echo 'import site; site.addsitedir("/usr/local/Cellar/pygobject/2.28.7_1/lib/python2.7/site-packages")' >> venv/lib/python2.7/site-packages/pygobject.pth
+
+      source venv/bin/activate
+
+      # for embroidermodder/libembroidery
+      brew install swig
+
+      # for qmake
+      brew install qt
+      export PATH="/usr/local/opt/qt/bin:$PATH"
+      
+      pip install -r requirements.txt
+      pip install pyinstaller
+
     elif [ "$BUILD" = "windows" ]; then
       set -x
 
@@ -106,7 +154,7 @@ script:
     if [ -n "$LINT" ]; then
       flake8 . --count --select=E901,E999,F821,F822,F823 --show-source --statistics --exclude=embroidermodder
       flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics --exclude=embroidermodder
-    elif [ "$BUILD" = "linux" ]; then
+    elif [ "$BUILD" = "linux" -o "$BUILD" = "osx" ]; then
       (
         cd embroidermodder/experimental
         qmake swigpython.pro

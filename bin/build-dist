@@ -1,11 +1,23 @@
 #!/bin/bash
 
+# for the cp line below
+shopt -s dotglob
+
 site_packages="$(python -c "import os; print(os.path.dirname(os.__file__) + '/site-packages')")"
+
+echo "DEBUG:"
+echo "site_packages: $site_packages"
+python -c "import sys; print ':'.join(sys.path)"
+which python
+echo "PYTHONPATH: $PYTHONPATH"
+python -c "import wx"
+python -c "from gi.repository import Gtk"
+echo "END DEBUG"
 
 if [ "$TRAVIS_OS_NAME" = "linux" -a "$BUILD" != "windows" ]; then
     # pyinstaller misses these two
     pyinstaller_args+="--add-binary /usr/lib/x86_64-linux-gnu/gio/modules/libgiolibproxy.so:. "
-    pyinstaller_args+="--add-binary  /usr/lib/x86_64-linux-gnu/libproxy.so.1:. "
+    pyinstaller_args+="--add-binary /usr/lib/x86_64-linux-gnu/libproxy.so.1:. "
 fi
 
 # This one's tricky.  ink/stitch doesn't actually _use_ gi.repository.Gtk,
@@ -34,9 +46,13 @@ for extension in "$@"; do
     if [ "$BUILD" = "windows" ]; then
         wine c:\\Python\\scripts\\pyinstaller.exe $pyinstaller_args ${extension}.py
     else
-        # without the LD_LIBRARY_PATH, it seems that pyinstaller can't find all of
+        
+        # We have to check if it finds LDLIBRARY_PATH with wxPython 4.0.1
+        
+	# without the LD_LIBRARY_PATH, it seems that pyinstaller can't find all of
         # wxpython's shared libraries
-        LD_LIBRARY_PATH="${site_packages}/wx" pyinstaller $pyinstaller_args ${extension}.py;
+        # LD_LIBRARY_PATH="${site_packages}/wx:embroidermodder/experimental/python/binding" pyinstaller $pyinstaller_args ${extension}.py;
+	pyinstaller --strip $pyinstaller_args ${extension}.py;
     fi
 
 	# By default, pyinstaller will treat each of ink/stitch's extensions
