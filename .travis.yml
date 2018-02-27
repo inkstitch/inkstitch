@@ -154,7 +154,7 @@ script:
     if [ -n "$LINT" ]; then
       flake8 . --count --select=E901,E999,F821,F822,F823 --show-source --statistics --exclude=embroidermodder
       flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics --exclude=embroidermodder
-    elif [ "$BUILD" = "linux" ] -o [ "$BUILD" = "osx" ] ; then
+    elif [ "$BUILD" = "linux" -o "$BUILD" = "osx" ] ; then
       (
         cd embroidermodder/experimental
         qmake swigpython.pro
