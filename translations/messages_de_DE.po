@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-24 20:25-0500\n"
-"PO-Revision-Date: 2018-02-25 09:42-0500\n"
+"PO-Revision-Date: 2018-02-25 09:51-0500\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
@@ -18,7 +18,7 @@ msgstr ""
 
 #: embroider.py:41
 msgid "Fill"
-msgstr ""
+msgstr "Füllung"
 
 #: embroider.py:47
 msgid "Manually routed fill stitching"
@@ -46,7 +46,7 @@ msgstr "Wieviele Reihen bis sich das Muster wiederholt"
 
 #: embroider.py:374
 msgid "Auto-Fill"
-msgstr ""
+msgstr "Auto-Füllung"
 
 #: embroider.py:377
 msgid "Automatically routed fill stitching"
