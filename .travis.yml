@@ -82,7 +82,7 @@ install:
       brew install pygobject3 gtk+3
       
       # we need msgfmt
-      brew install gettext
+      # brew install gettext
       brew link gettext --force
       
       echo "FINDING IT"
@@ -92,7 +92,8 @@ install:
 
       export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
-      sudo pip install virtualenv
+      #sudo pip install virtualenv
+      pip install virtualenv
       virtualenv --system-site-packages venv
 
       # add in brew's site-packages
