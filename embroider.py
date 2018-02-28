@@ -36,6 +36,8 @@ from pprint import pformat
 
 import inkstitch
 from inkstitch import _, cache, dbg, param, EmbroideryElement, get_nodes, SVG_POLYLINE_TAG, SVG_GROUP_TAG, PIXELS_PER_MM, get_viewbox_transform
+from inkstitch.stitches import running_stitch
+from inkstitch.utils import cut_path
 
 class Fill(EmbroideryElement):
     element_name = _("Fill")
@@ -934,7 +936,6 @@ class Stroke(EmbroideryElement):
         return self.dashed or self.width <= 0.5
 
     def stroke_points(self, emb_point_list, zigzag_spacing, stroke_width):
-        patch = Patch(color=self.color)
         p0 = emb_point_list[0]
         rho = 0.0
         side = 1
@@ -1556,7 +1557,62 @@ def process_trim(stitches, next_stitch):
     stitches[-3].trim = True
 
 
-def patches_to_stitches(patch_list, collapse_len_px=0):
+def add_tie(stitches, tie_path):
+    color = tie_path[0].color
+
+    tie_path = cut_path(tie_path, 0.6)
+    tie_stitches = running_stitch(tie_path, 0.3)
+    tie_stitches = [inkstitch.Stitch(*stitch, color=color) for stitch in tie_stitches]
+
+    stitches.extend(tie_stitches[1:])
+    stitches.extend(list(reversed(tie_stitches))[1:])
+
+
+def add_tie_off(stitches):
+    if not stitches:
+        return
+
+    add_tie(stitches, list(reversed(stitches)))
+
+
+def add_tie_in(stitches, upcoming_stitches):
+    if not upcoming_stitches:
+        return
+
+    add_tie(stitches, upcoming_stitches)
+
+
+def add_ties(original_stitches):
+    """Add tie-off before and after trims, jumps, and color changes."""
+
+    # we're going to copy most stitches over, adding tie in/off as needed
+    stitches = []
+
+    need_tie_in = True
+
+    for i, stitch in enumerate(original_stitches):
+        is_special = stitch.trim or stitch.jump or stitch.stop
+
+        if is_special and not need_tie_in:
+            add_tie_off(stitches)
+            stitches.append(stitch)
+            need_tie_in = True
+        elif need_tie_in and not is_special:
+            stitches.append(stitch)
+            add_tie_in(stitches, original_stitches[i:])
+            need_tie_in = False
+        else:
+            stitches.append(stitch)
+
+    # add tie-off at the end if we ended on a normal stitch
+    if not is_special:
+        add_tie_off(stitches)
+
+    # overwrite the stitch plan with our new one that contains ties
+    original_stitches[:] = stitches
+
+
+def patches_to_stitches(patch_list, collapse_len_px=3.0):
     stitches = []
 
     last_stitch = None
@@ -1603,6 +1659,8 @@ def patches_to_stitches(patch_list, collapse_len_px=0):
 
         if patch.stop_after:
             process_stop_after(stitches)
+
+    add_ties(stitches)
 
     return stitches
 
@@ -1677,7 +1735,7 @@ class Embroider(inkex.Effect):
         inkex.Effect.__init__(self)
         self.OptionParser.add_option("-c", "--collapse_len_mm",
                                      action="store", type="float",
-                                     dest="collapse_length_mm", default=0.0,
+                                     dest="collapse_length_mm", default=3.0,
                                      help="max collapse length (mm)")
         self.OptionParser.add_option("--hide_layers",
                                      action="store", type="choice",
