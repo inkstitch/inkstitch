@@ -20,7 +20,7 @@ distclean:
 
 messages.po:
 	rm -f messages.po
-	xgettext --no-location --add-comments embroider*.py inkstitch.py
+	xgettext --no-location --add-comments embroider*.py inkstitch/__init__.py
 
 .PHONY: messages.po
 .PHONY: locales
