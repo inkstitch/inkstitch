@@ -36,7 +36,7 @@ from pprint import pformat
 
 import inkstitch
 from inkstitch import _, cache, dbg, param, EmbroideryElement, get_nodes, SVG_POLYLINE_TAG, SVG_GROUP_TAG, PIXELS_PER_MM, get_viewbox_transform
-from inkstitch.stitches import running_stitch
+from inkstitch.stitches import running_stitch, auto_fill
 from inkstitch.utils import cut_path
 
 class Fill(EmbroideryElement):
@@ -424,25 +424,48 @@ class AutoFill(Fill):
     def fill_underlay_max_stitch_length(self):
         return self.get_float_param("fill_underlay_max_stitch_length_mm") or self.max_stitch_length
 
+    @property
+    @param('fill_underlay_inset_mm', _('Inset'), unit='mm', group=_('AutoFill Underlay'), type='float', default=0)
+    def fill_underlay_inset(self):
+        return self.get_float_param('fill_underlay_inset_mm', 0)
+
+    @property
+    def underlay_shape(self):
+        if self.fill_underlay_inset:
+            shape = self.shape.buffer(-self.fill_underlay_inset)
+            if not isinstance(shape, shgeo.MultiPolygon):
+                shape = shgeo.MultiPolygon([shape])
+            return shape
+        else:
+            return self.shape
+
     def to_patches(self, last_patch):
-        patches = []
+        stitches = []
 
         if last_patch is None:
             starting_point = None
         else:
-            nearest_point = self.outline.interpolate(self.outline.project(shgeo.Point(last_patch.stitches[-1])))
-            starting_point = inkstitch.Point(*nearest_point.coords[0])
+            starting_point = last_patch.stitches[-1]
 
         if self.fill_underlay:
-            patches.extend(self.do_auto_fill(self.fill_underlay_angle, self.fill_underlay_row_spacing, self.fill_underlay_max_stitch_length, starting_point))
-            starting_point = patches[-1].stitches[-1]
+            stitches.extend(auto_fill(self.underlay_shape,
+                                      self.fill_underlay_angle,
+                                      self.fill_underlay_row_spacing,
+                                      self.fill_underlay_max_stitch_length,
+                                      self.running_stitch_length,
+                                      self.staggers,
+                                      starting_point))
+            starting_point = stitches[-1]
 
-        patches.extend(self.do_auto_fill(self.angle, self.row_spacing, self.max_stitch_length, starting_point))
+        stitches.extend(auto_fill(self.shape,
+                                  self.angle,
+                                  self.row_spacing,
+                                  self.max_stitch_length,
+                                  self.running_stitch_length,
+                                  self.staggers,
+                                  starting_point))
 
-        print >> dbg, "end AutoFill.to_patches"
-        dbg.flush()
-
-        return patches
+        return [Patch(stitches=stitches, color=self.color)]
 
 
 class Stroke(EmbroideryElement):

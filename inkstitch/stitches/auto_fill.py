@@ -1,15 +1,18 @@
 from fill import intersect_region_with_grating, row_num, stitch_row
 from .. import _, PIXELS_PER_MM, Point as InkstitchPoint
+import sys
 import shapely
 import networkx
 import math
+from itertools import groupby
+from collections import deque
 
 
 class MaxQueueLengthExceeded(Exception):
     pass
 
 
-def auto_fill(shape, angle, row_spacing, max_stitch_length, running_stitch_length, starting_point=None):
+def auto_fill(shape, angle, row_spacing, max_stitch_length, running_stitch_length, staggers, starting_point=None):
     stitches = []
 
     rows_of_segments = intersect_region_with_grating(shape, angle, row_spacing)
@@ -19,9 +22,9 @@ def auto_fill(shape, angle, row_spacing, max_stitch_length, running_stitch_lengt
     path = find_stitch_path(graph, segments)
 
     if starting_point:
-        stitches.extend(connect_points(starting_point, path[0][0]))
+        stitches.extend(connect_points(shape, starting_point, path[0][0], running_stitch_length))
 
-    stitches.extend(path_to_stitches(graph, path, shape, angle, row_spacing, max_stitch_length, running_stitch_length))
+    stitches.extend(path_to_stitches(graph, path, shape, angle, row_spacing, max_stitch_length, running_stitch_length, staggers))
 
     return stitches
 
@@ -37,7 +40,7 @@ def which_outline(shape, coords):
     # fail sometimes.
 
     point = shapely.geometry.Point(*coords)
-    outlines = list(enumerate(shape.boundary))
+    outlines = enumerate(list(shape.boundary))
     closest = min(outlines, key=lambda (index, outline): outline.distance(point))
 
     return closest[0]
@@ -49,7 +52,7 @@ def project(shape, coords, outline_index):
     This returns the distance along the outline at which the point resides.
     """
 
-    outline = list(shape.boundary[outline_index])
+    outline = list(shape.boundary)[outline_index]
     return outline.project(shapely.geometry.Point(*coords))
 
 
@@ -122,8 +125,8 @@ def build_graph(shape, segments, angle, row_spacing):
 
         # heuristic: it's useful to try to keep the duplicated edges in the same rows.
         # this prevents the BFS from having to search a ton of edges.
-        row_num = min(row0, row1)
-        if row_num % 2 == 0:
+        min_row_num = min(row0, row1)
+        if min_row_num % 2 == 0:
             edge_set = 0
         else:
             edge_set = 1
@@ -133,11 +136,6 @@ def build_graph(shape, segments, angle, row_spacing):
         # add an edge between each successive node
         for i, (node1, node2) in enumerate(zip(nodes, nodes[1:] + [nodes[0]])):
             graph.add_edge(node1, node2, key="outline")
-
-            # duplicate edges contained in every other row (exactly half
-            # will be duplicated)
-            row_num = min(row_num(InkstitchPoint(*node1), angle, row_spacing),
-                          row_num(InkstitchPoint(*node2), angle, row_spacing))
 
             # duplicate every other edge around this outline
             if i % 2 == edge_set:
@@ -150,7 +148,7 @@ def build_graph(shape, segments, angle, row_spacing):
     return graph
 
 
-def node_list_to_edge_list(self, node_list):
+def node_list_to_edge_list(node_list):
     return zip(node_list[:-1], node_list[1:])
 
 
@@ -239,9 +237,9 @@ def find_loop(graph, starting_nodes):
                 # case we discard that node and try the next.
                 loop = bfs_for_loop(graph, starting_node, max_queue_length)
 
-                if not loop:
+                #if not loop:
                     #print >> dbg, "failed on", starting_node
-                    dbg.flush()
+                    #dbg.flush()
             except MaxQueueLengthExceeded:
                 #print >> dbg, "gave up on", starting_node
                 #dbg.flush()
@@ -418,10 +416,10 @@ def connect_points(shape, start, end, running_stitch_length):
     #print >> dbg, "connect_points:", outline_index, start, end, distance, stitches, direction
     #dbg.flush()
 
-    stitches = [InstitchPoint(*start)]
+    stitches = [InkstitchPoint(*start)]
 
     for i in xrange(num_stitches):
-        pos = (pos + one_stitch) % self.outline_length
+        pos = (pos + one_stitch) % outline.length
 
         stitches.append(InkstitchPoint(*outline.interpolate(pos).coords[0]))
 
@@ -435,15 +433,15 @@ def connect_points(shape, start, end, running_stitch_length):
     return stitches
 
 
-def path_to_patch(graph, path, shape, angle, row_spacing, max_stitch_length, running_stitch_length):
+def path_to_stitches(graph, path, shape, angle, row_spacing, max_stitch_length, running_stitch_length, staggers):
     path = collapse_sequential_outline_edges(graph, path)
 
     stitches = []
 
     for edge in path:
         if graph.has_edge(*edge, key="segment"):
-            self.stitch_row(patch, edge[0], edge[1], angle, row_spacing, max_stitch_length)
+            stitch_row(stitches, edge[0], edge[1], angle, row_spacing, max_stitch_length, staggers)
         else:
-            self.connect_points(patch, edge[0], edge[1], running_stitch_length)
+            stitches.extend(connect_points(shape, edge[0], edge[1], running_stitch_length))
 
     return stitches
