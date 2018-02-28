@@ -1,0 +1,267 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-27 23:14-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Fill"
+msgstr ""
+
+msgid "Manually routed fill stitching"
+msgstr ""
+
+msgid "Angle of lines of stitches"
+msgstr ""
+
+msgid "Flip fill (start right-to-left)"
+msgstr ""
+
+msgid "Spacing between rows"
+msgstr ""
+
+msgid "Maximum fill stitch length"
+msgstr ""
+
+msgid "Stagger rows this many times before repeating"
+msgstr ""
+
+msgid "Auto-Fill"
+msgstr ""
+
+msgid "Automatically routed fill stitching"
+msgstr ""
+
+msgid "Running stitch length (traversal between sections)"
+msgstr ""
+
+msgid "Underlay"
+msgstr ""
+
+msgid "AutoFill Underlay"
+msgstr ""
+
+msgid "Fill angle (default: fill angle + 90 deg)"
+msgstr ""
+
+msgid "Row spacing (default: 3x fill row spacing)"
+msgstr ""
+
+msgid "Max stitch length"
+msgstr ""
+
+msgid ""
+"Unable to autofill.  This most often happens because your shape is made up "
+"of multiple sections that aren't connected."
+msgstr ""
+
+msgid ""
+"Unexpected error while generating fill stitches. Please send your SVG file "
+"to lexelby@github."
+msgstr ""
+
+msgid "Satin stitch along paths"
+msgstr ""
+
+msgid "Running stitch length"
+msgstr ""
+
+msgid "Zig-zag spacing (peak-to-peak)"
+msgstr ""
+
+msgid "Repeats"
+msgstr ""
+
+msgid "Satin Column"
+msgstr ""
+
+msgid "Custom satin column"
+msgstr ""
+
+msgid "Pull compensation"
+msgstr ""
+
+msgid "Contour underlay"
+msgstr ""
+
+msgid "Contour Underlay"
+msgstr ""
+
+msgid "Stitch length"
+msgstr ""
+
+msgid "Contour underlay inset amount"
+msgstr ""
+
+msgid "Center-walk underlay"
+msgstr ""
+
+msgid "Center-Walk Underlay"
+msgstr ""
+
+msgid "Zig-zag underlay"
+msgstr ""
+
+msgid "Zig-zag Underlay"
+msgstr ""
+
+msgid "Zig-Zag spacing (peak-to-peak)"
+msgstr ""
+
+msgid "Inset amount (default: half of contour underlay inset)"
+msgstr ""
+
+msgid ""
+"One or more rails crosses itself, and this is not allowed.  Please split "
+"into multiple satin columns."
+msgstr ""
+
+msgid "satin column: One or more of the rungs doesn't intersect both rails."
+msgstr ""
+
+msgid "Each rail should intersect both rungs once."
+msgstr ""
+
+msgid ""
+"satin column: One or more of the rungs intersects the rails more than once."
+msgstr ""
+
+#, python-format
+msgid "satin column: object %s has a fill (but should not)"
+msgstr ""
+
+#, python-format
+msgid ""
+"satin column: object %(id)s has two paths with an unequal number of points "
+"(%(length1)d and %(length2)d)"
+msgstr ""
+
+msgid ""
+"\n"
+"\n"
+"Seeing a 'no such option' message?  Please restart Inkscape to fix."
+msgstr ""
+
+msgid "No embroiderable paths selected."
+msgstr ""
+
+msgid "No embroiderable paths found in document."
+msgstr ""
+
+msgid ""
+"Tip: use Path -> Object to Path to convert non-paths before embroidering."
+msgstr ""
+
+msgid "Embroidery"
+msgstr ""
+
+msgid "These settings will be applied to 1 object."
+msgstr ""
+
+#, python-format
+msgid "These settings will be applied to %d objects."
+msgstr ""
+
+msgid ""
+"Some settings had different values across objects.  Select a value from the "
+"dropdown or enter a new one."
+msgstr ""
+
+#, python-format
+msgid "Disabling this tab will disable the following %d tabs."
+msgstr ""
+
+msgid "Disabling this tab will disable the following tab."
+msgstr ""
+
+#, python-format
+msgid "Enabling this tab will disable %s and vice-versa."
+msgstr ""
+
+msgid "Inkscape objects"
+msgstr ""
+
+msgid "Embroidery Params"
+msgstr ""
+
+msgid "Presets"
+msgstr ""
+
+msgid "Load"
+msgstr ""
+
+msgid "Add"
+msgstr ""
+
+msgid "Overwrite"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Use Last Settings"
+msgstr ""
+
+msgid "Apply and Quit"
+msgstr ""
+
+msgid "Preview"
+msgstr ""
+
+msgid "Internal Error"
+msgstr ""
+
+msgid "Please enter or select a preset name first."
+msgstr ""
+
+msgid "Preset"
+msgstr ""
+
+#, python-format
+msgid "Preset \"%s\" not found."
+msgstr ""
+
+#, python-format
+msgid ""
+"Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
+msgstr ""
+
+msgid "Embroidery Simulation"
+msgstr ""
+
+#, python-format
+msgid "parseLengthWithUnits: unknown unit %s"
+msgstr ""
+
+#, python-format
+msgid "Unknown unit: %s"
+msgstr ""
+
+msgid "TRIM after"
+msgstr ""
+
+msgid "Trim thread after this object (for supported machines and file formats)"
+msgstr ""
+
+msgid "STOP after"
+msgstr ""
+
+msgid ""
+"Add STOP instruction after this object (for supported machines and file "
+"formats)"
+msgstr ""

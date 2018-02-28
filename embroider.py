@@ -936,6 +936,7 @@ class Stroke(EmbroideryElement):
         return self.dashed or self.width <= 0.5
 
     def stroke_points(self, emb_point_list, zigzag_spacing, stroke_width):
+        patch = Patch(color=self.color)
         p0 = emb_point_list[0]
         rho = 0.0
         side = 1
