@@ -1,0 +1,84 @@
+from .. import Point as InkstitchPoint
+import shapely
+
+
+row_num
+stitch_row
+
+def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing, flip=False):
+    # the max line length I'll need to intersect the whole shape is the diagonal
+    (minx, miny, maxx, maxy) = shape.bounds
+    upper_left = InkstitchPoint(minx, miny)
+    lower_right = InkstitchPoint(maxx, maxy)
+    length = (upper_left - lower_right).length()
+    half_length = length / 2.0
+
+    # Now get a unit vector rotated to the requested angle.  I use -angle
+    # because shapely rotates clockwise, but my geometry textbooks taught
+    # me to consider angles as counter-clockwise from the X axis.
+    direction = InkstitchPoint(1, 0).rotate(-angle)
+
+    # and get a normal vector
+    normal = direction.rotate(math.pi / 2)
+
+    # I'll start from the center, move in the normal direction some amount,
+    # and then walk left and right half_length in each direction to create
+    # a line segment in the grating.
+    center = InkstitchPoint((minx + maxx) / 2.0, (miny + maxy) / 2.0)
+
+    # I need to figure out how far I need to go along the normal to get to
+    # the edge of the shape.  To do that, I'll rotate the bounding box
+    # angle degrees clockwise and ask for the new bounding box.  The max
+    # and min y tell me how far to go.
+
+    _, start, _, end = shapely.affinity.rotate(shape, angle, origin='center', use_radians=True).bounds
+
+    # convert start and end to be relative to center (simplifies things later)
+    start -= center.y
+    end -= center.y
+
+    height = abs(end - start)
+
+    #print >> dbg, "grating:", start, end, height, row_spacing, end_row_spacing
+
+    # offset start slightly so that rows are always an even multiple of
+    # row_spacing_px from the origin.  This makes it so that abutting
+    # fill regions at the same angle and spacing always line up nicely.
+    start -= (start + normal * center) % row_spacing
+
+    rows = []
+
+    current_row_y = start
+
+    while current_row_y < end:
+        p0 = center + normal * current_row_y + direction * half_length
+        p1 = center + normal * current_row_y - direction * half_length
+        endpoints = [p0.as_tuple(), p1.as_tuple()]
+        grating_line = shapely.geometry.LineString(endpoints)
+
+        res = grating_line.intersection(shape)
+
+        if (isinstance(res, shapely.geometry.MultiLineString)):
+            runs = map(lambda line_string: line_string.coords, res.geoms)
+        else:
+            if res.is_empty or len(res.coords) == 1:
+                # ignore if we intersected at a single point or no points
+                runs = []
+            else:
+                runs = [res.coords]
+
+        if runs:
+            runs.sort(key=lambda seg: (InkstitchPoint(*seg[0]) - upper_left).length())
+
+            if flip:
+                runs.reverse()
+                runs = map(lambda run: tuple(reversed(run)), runs)
+
+            rows.append(runs)
+
+        if end_row_spacing:
+            current_row_y += row_spacing + (end_row_spacing - row_spacing) * ((current_row_y - start) / height)
+        else:
+            current_row_y += row_spacing
+
+    return rows
