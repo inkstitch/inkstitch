@@ -12,10 +12,10 @@ class MaxQueueLengthExceeded(Exception):
     pass
 
 
-def auto_fill(shape, angle, row_spacing, max_stitch_length, running_stitch_length, staggers, starting_point=None):
+def auto_fill(shape, angle, row_spacing, end_row_spacing, max_stitch_length, running_stitch_length, staggers, starting_point=None):
     stitches = []
 
-    rows_of_segments = intersect_region_with_grating(shape, angle, row_spacing)
+    rows_of_segments = intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing)
     segments = [segment for row in rows_of_segments for segment in row]
 
     graph = build_graph(shape, segments, angle, row_spacing)

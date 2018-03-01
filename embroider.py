@@ -36,7 +36,7 @@ from pprint import pformat
 
 import inkstitch
 from inkstitch import _, cache, dbg, param, EmbroideryElement, get_nodes, SVG_POLYLINE_TAG, SVG_GROUP_TAG, PIXELS_PER_MM, get_viewbox_transform
-from inkstitch.stitches import running_stitch, auto_fill
+from inkstitch.stitches import running_stitch, auto_fill, legacy_fill
 from inkstitch.utils import cut_path
 
 class Fill(EmbroideryElement):
@@ -120,253 +120,20 @@ class Fill(EmbroideryElement):
         # print >> sys.stderr, "polygon valid:", polygon.is_valid
         return polygon
 
-    @cache
-    def east(self, angle):
-        # "east" is the name of the direction that is to the right along a row
-        return inkstitch.Point(1, 0).rotate(-angle)
-
-    @cache
-    def north(self, angle):
-        return self.east(angle).rotate(math.pi / 2)
-
-    def row_num(self, point, angle, row_spacing):
-        return round((point * self.north(angle)) / row_spacing)
-
-    def adjust_stagger(self, stitch, angle, row_spacing, max_stitch_length):
-        row_num = self.row_num(stitch, angle, row_spacing)
-        row_stagger = row_num % self.staggers
-        stagger_offset = (float(row_stagger) / self.staggers) * max_stitch_length
-        offset = ((stitch * self.east(angle)) - stagger_offset) % max_stitch_length
-
-        return stitch - offset * self.east(angle)
-
-    def intersect_region_with_grating(self, angle=None, row_spacing=None, end_row_spacing=None):
-        if angle is None:
-            angle = self.angle
-
-        if row_spacing is None:
-            row_spacing = self.row_spacing
-
-        if end_row_spacing is None:
-            end_row_spacing = self.end_row_spacing
-
-        # the max line length I'll need to intersect the whole shape is the diagonal
-        (minx, miny, maxx, maxy) = self.shape.bounds
-        upper_left = inkstitch.Point(minx, miny)
-        lower_right = inkstitch.Point(maxx, maxy)
-        length = (upper_left - lower_right).length()
-        half_length = length / 2.0
-
-        # Now get a unit vector rotated to the requested angle.  I use -angle
-        # because shapely rotates clockwise, but my geometry textbooks taught
-        # me to consider angles as counter-clockwise from the X axis.
-        direction = inkstitch.Point(1, 0).rotate(-angle)
-
-        # and get a normal vector
-        normal = direction.rotate(math.pi / 2)
-
-        # I'll start from the center, move in the normal direction some amount,
-        # and then walk left and right half_length in each direction to create
-        # a line segment in the grating.
-        center = inkstitch.Point((minx + maxx) / 2.0, (miny + maxy) / 2.0)
-
-        # I need to figure out how far I need to go along the normal to get to
-        # the edge of the shape.  To do that, I'll rotate the bounding box
-        # angle degrees clockwise and ask for the new bounding box.  The max
-        # and min y tell me how far to go.
-
-        _, start, _, end = affinity.rotate(self.shape, angle, origin='center', use_radians=True).bounds
-
-        # convert start and end to be relative to center (simplifies things later)
-        start -= center.y
-        end -= center.y
-
-        height = abs(end - start)
-
-        print >> dbg, "grating:", start, end, height, row_spacing, end_row_spacing
-
-        # offset start slightly so that rows are always an even multiple of
-        # row_spacing_px from the origin.  This makes it so that abutting
-        # fill regions at the same angle and spacing always line up nicely.
-        start -= (start + normal * center) % row_spacing
-
-        rows = []
-
-        current_row_y = start
-
-        while current_row_y < end:
-            p0 = center + normal * current_row_y + direction * half_length
-            p1 = center + normal * current_row_y - direction * half_length
-            endpoints = [p0.as_tuple(), p1.as_tuple()]
-            grating_line = shgeo.LineString(endpoints)
-
-            res = grating_line.intersection(self.shape)
-
-            if (isinstance(res, shgeo.MultiLineString)):
-                runs = map(lambda line_string: line_string.coords, res.geoms)
-            else:
-                if res.is_empty or len(res.coords) == 1:
-                    # ignore if we intersected at a single point or no points
-                    runs = []
-                else:
-                    runs = [res.coords]
-
-            if runs:
-                runs.sort(key=lambda seg: (inkstitch.Point(*seg[0]) - upper_left).length())
-
-                if self.flip:
-                    runs.reverse()
-                    runs = map(lambda run: tuple(reversed(run)), runs)
-
-                rows.append(runs)
-
-            if end_row_spacing:
-                current_row_y += row_spacing + (end_row_spacing - row_spacing) * ((current_row_y - start) / height)
-            else:
-                current_row_y += row_spacing
-
-        return rows
-
-    def make_quadrilateral(self, segment1, segment2):
-        return shgeo.Polygon((segment1[0], segment1[1], segment2[1], segment2[0], segment1[0]))
-
-    def is_same_run(self, segment1, segment2):
-        if shgeo.LineString(segment1).distance(shgeo.LineString(segment2)) > self.row_spacing * 1.1:
-            return False
-
-        quad = self.make_quadrilateral(segment1, segment2)
-        quad_area = quad.area
-        intersection_area = self.shape.intersection(quad).area
-
-        return (intersection_area / quad_area) >= 0.9
-
-    def pull_runs(self, rows):
-        # Given a list of rows, each containing a set of line segments,
-        # break the area up into contiguous patches of line segments.
-        #
-        # This is done by repeatedly pulling off the first line segment in
-        # each row and calling that a shape.  We have to be careful to make
-        # sure that the line segments are part of the same shape.  Consider
-        # the letter "H", with an embroidery angle of 45 degrees.  When
-        # we get to the bottom of the lower left leg, the next row will jump
-        # over to midway up the lower right leg.  We want to stop there and
-        # start a new patch.
-
-        # for row in rows:
-        #    print >> sys.stderr, len(row)
-
-        # print >>sys.stderr, "\n".join(str(len(row)) for row in rows)
-
-        runs = []
-        count = 0
-        while (len(rows) > 0):
-            run = []
-            prev = None
-
-            for row_num in xrange(len(rows)):
-                row = rows[row_num]
-                first, rest = row[0], row[1:]
-
-                # TODO: only accept actually adjacent rows here
-                if prev is not None and not self.is_same_run(prev, first):
-                    break
-
-                run.append(first)
-                prev = first
-
-                rows[row_num] = rest
-
-            # print >> sys.stderr, len(run)
-            runs.append(run)
-            rows = [row for row in rows if len(row) > 0]
-
-            count += 1
-
-        return runs
-
-    def stitch_row(self, patch, beg, end, angle, row_spacing, max_stitch_length):
-        # We want our stitches to look like this:
-        #
-        # ---*-----------*-----------
-        # ------*-----------*--------
-        # ---------*-----------*-----
-        # ------------*-----------*--
-        # ---*-----------*-----------
-        #
-        # Each successive row of stitches will be staggered, with
-        # num_staggers rows before the pattern repeats.  A value of
-        # 4 gives a nice fill while hiding the needle holes.  The
-        # first row is offset 0%, the second 25%, the third 50%, and
-        # the fourth 75%.
-        #
-        # Actually, instead of just starting at an offset of 0, we
-        # can calculate a row's offset relative to the origin.  This
-        # way if we have two abutting fill regions, they'll perfectly
-        # tile with each other.  That's important because we often get
-        # abutting fill regions from pull_runs().
-
-
-        beg = inkstitch.Point(*beg)
-        end = inkstitch.Point(*end)
-
-        row_direction = (end - beg).unit()
-        segment_length = (end - beg).length()
-
-        # only stitch the first point if it's a reasonable distance away from the
-        # last stitch
-        if not patch.stitches or (beg - patch.stitches[-1]).length() > 0.5 * PIXELS_PER_MM:
-            patch.add_stitch(beg)
-
-        first_stitch = self.adjust_stagger(beg, angle, row_spacing, max_stitch_length)
-
-        # we might have chosen our first stitch just outside this row, so move back in
-        if (first_stitch - beg) * row_direction < 0:
-            first_stitch += row_direction * max_stitch_length
-
-        offset = (first_stitch - beg).length()
-
-        while offset < segment_length:
-            patch.add_stitch(beg + offset * row_direction)
-            offset += max_stitch_length
-
-        if (end - patch.stitches[-1]).length() > 0.1 * PIXELS_PER_MM:
-            patch.add_stitch(end)
-
-
-    def section_to_patch(self, group_of_segments, angle=None, row_spacing=None, max_stitch_length=None):
-        if max_stitch_length is None:
-            max_stitch_length = self.max_stitch_length
-
-        if row_spacing is None:
-            row_spacing = self.row_spacing
-
-        if angle is None:
-            angle = self.angle
-
-        # print >> sys.stderr, len(groups_of_segments)
-
-        patch = Patch(color=self.color)
-        first_segment = True
-        swap = False
-        last_end = None
-
-        for segment in group_of_segments:
-            (beg, end) = segment
-
-            if (swap):
-                (beg, end) = (end, beg)
-
-            self.stitch_row(patch, beg, end, angle, row_spacing, max_stitch_length)
-
-            swap = not swap
-
-        return patch
-
     def to_patches(self, last_patch):
-        rows_of_segments = self.intersect_region_with_grating()
-        groups_of_segments = self.pull_runs(rows_of_segments)
+        stitch_lists = legacy_fill(self.shape,
+                                   self.angle,
+                                   self.row_spacing,
+                                   self.end_row_spacing,
+                                   self.max_stitch_length,
+                                   self.flip,
+                                   self.staggers)
+        return [Patch(stitches=stitch_list, color=self.color) for stitch_list in stitch_lists]
 
-        return [self.section_to_patch(group) for group in groups_of_segments]
+        rows_of_segments = fill.intersect_region_with_grating(self.shape, self.angle, self.row_spacing, self.end_row_spacing, self.flip)
+        groups_of_segments = fill.pull_runs(rows_of_segments)
+
+        return [fill.section_to_patch(group) for group in groups_of_segments]
 
 
 class AutoFill(Fill):
@@ -451,6 +218,7 @@ class AutoFill(Fill):
             stitches.extend(auto_fill(self.underlay_shape,
                                       self.fill_underlay_angle,
                                       self.fill_underlay_row_spacing,
+                                      self.fill_underlay_row_spacing,
                                       self.fill_underlay_max_stitch_length,
                                       self.running_stitch_length,
                                       self.staggers,
@@ -460,6 +228,7 @@ class AutoFill(Fill):
         stitches.extend(auto_fill(self.shape,
                                   self.angle,
                                   self.row_spacing,
+                                  self.end_row_spacing,
                                   self.max_stitch_length,
                                   self.running_stitch_length,
                                   self.staggers,

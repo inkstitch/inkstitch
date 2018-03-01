@@ -1,6 +1,15 @@
 from .. import Point as InkstitchPoint, cache, PIXELS_PER_MM
 import shapely
 import math
+import sys
+
+
+def legacy_fill(shape, angle, row_spacing, end_row_spacing, max_stitch_length, flip, staggers):
+    rows_of_segments = intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing, flip)
+    groups_of_segments = pull_runs(rows_of_segments, shape, row_spacing)
+
+    return [section_to_stitches(group, angle, row_spacing, max_stitch_length, staggers)
+            for group in groups_of_segments]
 
 
 @cache
@@ -151,3 +160,85 @@ def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing=Non
             current_row_y += row_spacing
 
     return rows
+
+def section_to_stitches(group_of_segments, angle, row_spacing, max_stitch_length, staggers):
+    stitches = []
+    first_segment = True
+    swap = False
+    last_end = None
+
+    for segment in group_of_segments:
+        (beg, end) = segment
+
+        if (swap):
+            (beg, end) = (end, beg)
+
+        stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, staggers)
+
+        swap = not swap
+
+    return stitches
+
+
+def make_quadrilateral(segment1, segment2):
+    return shapely.geometry.Polygon((segment1[0], segment1[1], segment2[1], segment2[0], segment1[0]))
+
+
+def is_same_run(segment1, segment2, shape, row_spacing):
+    line1 = shapely.geometry.LineString(segment1)
+    line2 = shapely.geometry.LineString(segment2)
+
+    if line1.distance(line2) > row_spacing * 1.1:
+        return False
+
+    quad = make_quadrilateral(segment1, segment2)
+    quad_area = quad.area
+    intersection_area = shape.intersection(quad).area
+
+    return (intersection_area / quad_area) >= 0.9
+
+
+def pull_runs(rows, shape, row_spacing):
+    # Given a list of rows, each containing a set of line segments,
+    # break the area up into contiguous patches of line segments.
+    #
+    # This is done by repeatedly pulling off the first line segment in
+    # each row and calling that a shape.  We have to be careful to make
+    # sure that the line segments are part of the same shape.  Consider
+    # the letter "H", with an embroidery angle of 45 degrees.  When
+    # we get to the bottom of the lower left leg, the next row will jump
+    # over to midway up the lower right leg.  We want to stop there and
+    # start a new patch.
+
+    # for row in rows:
+    #    print >> sys.stderr, len(row)
+
+    # print >>sys.stderr, "\n".join(str(len(row)) for row in rows)
+
+    runs = []
+    count = 0
+    while (len(rows) > 0):
+        run = []
+        prev = None
+
+        for row_num in xrange(len(rows)):
+            row = rows[row_num]
+            first, rest = row[0], row[1:]
+
+            # TODO: only accept actually adjacent rows here
+            if prev is not None and not is_same_run(prev, first, shape, row_spacing):
+                break
+
+            run.append(first)
+            prev = first
+
+            rows[row_num] = rest
+
+        # print >> sys.stderr, len(run)
+        runs.append(run)
+        rows = [row for row in rows if len(row) > 0]
+
+        count += 1
+
+    return runs
+
