@@ -1,4 +1,14 @@
 #!/bin/bash
 
-make messages.po | grep -v 'is up to date\.$'
-git add messages.po
+make messages.po > /dev/null 2>&1
+
+# This monstrosity asks how many lines changed, but it ignores changes to the
+# "POT-Creation-Date" line.  In other words, if all that's changed is the
+# "POT-Creation-Date", don't bother adding messages.po
+lines_changed=$(git -c difftool.ignorepot.cmd='diff -u -I "POT-Creation-Date" "$LOCAL" "$REMOTE"' difftool -t ignorepot -y messages.po | wc -l)
+
+if [ "$lines_changed" = 0 ]; then
+    git checkout messages.po
+else
+    git add messages.po
+fi
