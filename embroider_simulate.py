@@ -5,10 +5,11 @@ import wx
 import inkex
 import simplestyle
 import colorsys
+from itertools import izip
 
 import inkstitch
 from inkstitch import PIXELS_PER_MM
-from embroider import _, patches_to_stitches, get_elements, elements_to_patches
+from embroider import _, patches_to_stitch_plan, color_block_to_polylines, get_elements, elements_to_patches
 
 
 class EmbroiderySimulator(wx.Frame):
@@ -114,6 +115,8 @@ class EmbroiderySimulator(wx.Frame):
         return string
 
     def color_to_pen(self, color):
+        color = simplestyle.parseColor(color)
+
         # python colorsys module uses floats from 0 to 1.0
         color = [value / 255.0 for value in color]
 
@@ -132,37 +135,24 @@ class EmbroiderySimulator(wx.Frame):
         return wx.Pen(color)
 
     def _patches_to_segments(self, patches):
-        stitches = patches_to_stitches(patches)
+        stitch_plan = patches_to_stitch_plan(patches)
 
         segments = []
 
-        last_pos = None
-        last_color = None
-        pen = None
-        trimming = False
+        for color_block in stitch_plan:
+            pen = self.color_to_pen(color_block.color)
 
-        for stitch in stitches:
-            if stitch.trim:
-                trimming = True
-                last_pos = None
-                continue
+            for polyline in color_block_to_polylines(color_block):
+                # The polyline is made up of a set of points denoting the
+                # vertices along the path.  We need to break this up into
+                # individual line segments to be drawn on the screen.
 
-            if trimming:
-                if stitch.jump:
+                # if there's only one point, there's nothing to do, so skip
+                if len(polyline) < 2:
                     continue
-                else:
-                    trimming = False
 
-            pos = (stitch.x, stitch.y)
-
-            if stitch.color == last_color:
-                if last_pos:
-                    segments.append(((last_pos, pos), pen))
-            else:
-                pen = self.color_to_pen(simplestyle.parseColor(stitch.color))
-
-            last_pos = pos
-            last_color = stitch.color
+                for start, end in izip(polyline[:-1], polyline[1:]):
+                    segments.append(((start, end), pen))
 
         return segments
 
