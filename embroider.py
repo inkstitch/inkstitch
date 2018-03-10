@@ -870,7 +870,7 @@ def color_block_to_polylines(color_block):
               if polylines[-1]:
                   polylines.append([])
 
-         if not stitch.jump:
+         if not stitch.jump and not stitch.stop:
               polylines[-1].append(stitch.as_tuple())
 
     return polylines
