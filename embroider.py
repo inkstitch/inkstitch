@@ -843,6 +843,7 @@ def detect_classes(node):
 
 
 class Patch:
+    # TODO: merge this with inkstitch.stitch_plan.ColorBlock
     def __init__(self, color=None, stitches=None, trim_after=False, stop_after=False):
         self.color = color
         self.stitches = stitches or []
