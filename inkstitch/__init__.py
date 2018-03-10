@@ -572,19 +572,25 @@ def get_origin(svg):
         return default
 
 
-def write_embroidery_file(file_path, stitches, svg):
+def write_embroidery_file(file_path, stitch_plan, svg):
     origin = get_origin(svg)
 
     pattern = libembroidery.embPattern_create()
-    last_color = None
 
-    for stitch in stitches:
-        if stitch.color != last_color:
-            add_thread(pattern, make_thread(stitch.color))
-            last_color = stitch.color
+    for color_block in stitch_plan:
+        add_thread(pattern, make_thread(color_block.color))
 
-        flags = get_flags(stitch)
-        libembroidery.embPattern_addStitchAbs(pattern, stitch.x - origin.x, stitch.y - origin.y, flags, 1)
+        for stitch in color_block:
+            if stitch.stop:
+                # The user specified "STOP after".  "STOP" is the same thing as
+                # a color change, and the user will assign a special color at
+                # the machine that tells it to pause after.  We need to add
+                # another copy of the same color here so that the stitches after
+                # the STOP are still the same color.
+                add_thread(pattern, make_thread(color_block.color))
+
+            flags = get_flags(stitch)
+            libembroidery.embPattern_addStitchAbs(pattern, stitch.x - origin.x, stitch.y - origin.y, flags, 1)
 
     libembroidery.embPattern_addStitchAbs(pattern, stitch.x - origin.x, stitch.y - origin.y, libembroidery.END, 1)
 

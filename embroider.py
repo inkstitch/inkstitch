@@ -37,7 +37,7 @@ from pprint import pformat
 import inkstitch
 from inkstitch import _, cache, dbg, param, EmbroideryElement, get_nodes, SVG_POLYLINE_TAG, SVG_GROUP_TAG, PIXELS_PER_MM, get_viewbox_transform
 from inkstitch.stitches import running_stitch, auto_fill, legacy_fill
-from inkstitch.utils import cut_path
+from inkstitch.stitch_plan import patches_to_stitch_plan
 
 class Fill(EmbroideryElement):
     element_name = _("Fill")
@@ -861,203 +861,38 @@ class Patch:
     def reverse(self):
         return Patch(self.color, self.stitches[::-1])
 
+def color_block_to_polylines(color_block):
+    polylines = [[]]
 
-def process_stop_after(stitches):
-    # The user wants the machine to pause after this patch.  This can
-    # be useful for applique and similar on multi-needle machines that
-    # normally would not stop between colors.
-    #
-    # On such machines, the user assigns needles to the colors in the
-    # design before starting stitching.  C01, C02, etc are normal
-    # needles, but C00 is special.  For a block of stitches assigned
-    # to C00, the machine will continue sewing with the last color it
-    # had and pause after it completes the C00 block.
-    #
-    # That means we need to introduce an artificial color change
-    # shortly before the current stitch so that the user can set that
-    # to C00.  We'll go back 3 stitches and do that:
+    for stitch in color_block:
+         if stitch.trim:
+              if polylines[-1]:
+                  polylines.append([])
 
-    if len(stitches) >= 3:
-        stitches[-3].stop = True
-
-    # and also add a color change on this stitch, completing the C00
-    # block:
-
-    stitches[-1].stop = True
-
-    # reference for the above: https://github.com/lexelby/inkstitch/pull/29#issuecomment-359175447
-
-
-def process_trim(stitches, next_stitch):
-    # DST (and maybe other formats?) has no actual TRIM instruction.
-    # Instead, 3 sequential JUMPs cause the machine to trim the thread.
-    #
-    # To support both DST and other formats, we'll add a TRIM and two
-    # JUMPs.  The TRIM will be converted to a JUMP by libembroidery
-    # if saving to DST, resulting in the 3-jump sequence.
-
-    delta = next_stitch - stitches[-1]
-    delta = delta * (1/4.0)
-
-    pos = stitches[-1]
-
-    for i in xrange(3):
-        pos += delta
-        stitches.append(inkstitch.Stitch(pos.x, pos.y, stitches[-1].color, jump=True))
-
-    # first one should be TRIM instead of JUMP
-    stitches[-3].jump = False
-    stitches[-3].trim = True
-
-
-def add_tie(stitches, tie_path):
-    color = tie_path[0].color
-
-    tie_path = cut_path(tie_path, 0.6)
-    tie_stitches = running_stitch(tie_path, 0.3)
-    tie_stitches = [inkstitch.Stitch(*stitch, color=color) for stitch in tie_stitches]
-
-    stitches.extend(tie_stitches[1:])
-    stitches.extend(list(reversed(tie_stitches))[1:])
-
-
-def add_tie_off(stitches):
-    if not stitches:
-        return
-
-    add_tie(stitches, list(reversed(stitches)))
-
-
-def add_tie_in(stitches, upcoming_stitches):
-    if not upcoming_stitches:
-        return
-
-    add_tie(stitches, upcoming_stitches)
-
-
-def add_ties(original_stitches):
-    """Add tie-off before and after trims, jumps, and color changes."""
-
-    # we're going to copy most stitches over, adding tie in/off as needed
-    stitches = []
-
-    need_tie_in = True
-
-    for i, stitch in enumerate(original_stitches):
-        is_special = stitch.trim or stitch.jump or stitch.stop
-
-        if is_special and not need_tie_in:
-            add_tie_off(stitches)
-            stitches.append(stitch)
-            need_tie_in = True
-        elif need_tie_in and not is_special:
-            stitches.append(stitch)
-            add_tie_in(stitches, original_stitches[i:])
-            need_tie_in = False
-        else:
-            stitches.append(stitch)
-
-    # add tie-off at the end if we ended on a normal stitch
-    if not is_special:
-        add_tie_off(stitches)
-
-    # overwrite the stitch plan with our new one that contains ties
-    original_stitches[:] = stitches
-
-
-def patches_to_stitches(patch_list, collapse_len_px=3.0):
-    stitches = []
-
-    last_stitch = None
-    last_color = None
-    need_trim = False
-    for patch in patch_list:
-        if not patch.stitches:
-            continue
-
-        jump_stitch = True
-        for stitch in patch.stitches:
-            if last_stitch and last_color == patch.color:
-                l = (stitch - last_stitch).length()
-                if l <= 0.1:
-                    # filter out duplicate successive stitches
-                    jump_stitch = False
-                    continue
-
-                if jump_stitch:
-                    # consider collapsing jump stitch, if it is pretty short
-                    if l < collapse_len_px:
-                        # dbg.write("... collapsed\n")
-                        jump_stitch = False
-
-            if stitches and last_color and last_color != patch.color:
-                # add a color change
-                stitches.append(inkstitch.Stitch(last_stitch.x, last_stitch.y, last_color, stop=True))
-
-            if need_trim:
-                process_trim(stitches, stitch)
-                need_trim = False
-
-            if jump_stitch:
-                stitches.append(inkstitch.Stitch(stitch.x, stitch.y, patch.color, jump=True))
-
-            stitches.append(inkstitch.Stitch(stitch.x, stitch.y, patch.color, jump=False))
-
-            jump_stitch = False
-            last_stitch = stitch
-            last_color = patch.color
-
-        if patch.trim_after:
-            need_trim = True
-
-        if patch.stop_after:
-            process_stop_after(stitches)
-
-    add_ties(stitches)
-
-    return stitches
-
-def stitches_to_polylines(stitches):
-    polylines = []
-    last_color = None
-    last_stitch = None
-    trimming = False
-
-    for stitch in stitches:
-        if stitch.color != last_color or stitch.trim:
-            trimming = True
-            polylines.append([stitch.color, []])
-
-        if trimming and (stitch.jump or stitch.trim):
-            continue
-
-        trimming = False
-
-        polylines[-1][1].append(stitch.as_tuple())
-
-        last_color = stitch.color
-        last_stitch = stitch
+         if not stitch.jump:
+              polylines[-1].append(stitch.as_tuple())
 
     return polylines
 
-def emit_inkscape(parent, stitches):
+def emit_inkscape(parent, stitch_plan):
     transform = get_viewbox_transform(parent.getroottree().getroot())
 
     # we need to correct for the viewbox
     transform = simpletransform.invertTransform(transform)
     transform = simpletransform.formatTransform(transform)
 
-    for color, polyline in stitches_to_polylines(stitches):
-        # dbg.write('polyline: %s %s\n' % (color, repr(polyline)))
-        inkex.etree.SubElement(parent,
-                               inkex.addNS('polyline', 'svg'),
-                               {'style': simplestyle.formatStyle(
-                                   {'stroke': color if color is not None else '#000000',
-                                    'stroke-width': "0.4",
-                                    'fill': 'none'}),
-                                   'points': " ".join(",".join(str(coord) for coord in point) for point in polyline),
-                                'transform': transform
-                                })
+    for color_block in stitch_plan:
+        for polyline in color_block_to_polylines(color_block):
+            color = color_block.color or '#000000'
+            inkex.etree.SubElement(parent,
+                                   inkex.addNS('polyline', 'svg'),
+                                   {'style': simplestyle.formatStyle(
+                                       {'stroke': color,
+                                        'stroke-width': "0.4",
+                                        'fill': 'none'}),
+                                       'points': " ".join(",".join(str(coord) for coord in point) for point in polyline),
+                                    'transform': transform
+                                   })
 
 def get_elements(effect):
     elements = []
@@ -1173,15 +1008,15 @@ class Embroider(inkex.Effect):
             self.hide_layers()
 
         patches = elements_to_patches(self.elements)
-        stitches = patches_to_stitches(patches, self.options.collapse_length_mm * PIXELS_PER_MM)
-        inkstitch.write_embroidery_file(self.get_output_path(), stitches, self.document.getroot())
+        stitch_plan = patches_to_stitch_plan(patches, self.options.collapse_length_mm * PIXELS_PER_MM)
+        inkstitch.write_embroidery_file(self.get_output_path(), stitch_plan, self.document.getroot())
 
         new_layer = inkex.etree.SubElement(self.document.getroot(), SVG_GROUP_TAG, {})
         new_layer.set('id', self.uniqueId("embroidery"))
         new_layer.set(inkex.addNS('label', 'inkscape'), _('Embroidery'))
         new_layer.set(inkex.addNS('groupmode', 'inkscape'), 'layer')
 
-        emit_inkscape(new_layer, stitches)
+        emit_inkscape(new_layer, stitch_plan)
 
         sys.stdout = old_stdout
 

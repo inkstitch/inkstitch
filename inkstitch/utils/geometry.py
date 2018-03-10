@@ -7,9 +7,10 @@ def cut(line, distance):
     This is an example in the Shapely documentation.
     """
     if distance <= 0.0 or distance >= line.length:
-        return [LineString(line)]
+        return [LineString(line), None]
     coords = list(line.coords)
     for i, p in enumerate(coords):
+        # TODO: I think this doesn't work if the path doubles back on itself
         pd = line.project(ShapelyPoint(p))
         if pd == distance:
             return [
