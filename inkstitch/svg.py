@@ -1,5 +1,5 @@
-from .. import get_viewbox_transform, cache
 import simpletransform, simplestyle, inkex
+from . import _, get_viewbox_transform, cache, SVG_GROUP_TAG, INKSCAPE_LABEL, INKSCAPE_GROUPMODE, SVG_POLYLINE_TAG
 
 def color_block_to_point_lists(color_block):
     point_lists = [[]]
@@ -32,7 +32,7 @@ def color_block_to_polylines(color_block, svg):
     for point_list in color_block_to_point_lists(color_block):
         color = color_block.color or '#000000'
         polylines.append(inkex.etree.Element(
-            inkex.addNS('polyline', 'svg'),
+            SVG_POLYLINE_TAG,
             {'style': simplestyle.formatStyle(
                 {'stroke': color,
                 'stroke-width': "0.4",
@@ -44,7 +44,25 @@ def color_block_to_polylines(color_block, svg):
     return polylines
 
 
-def render_stitch_plan(layer, stitch_plan):
-    svg = layer.getroottree().getroot()
-    for color_block in stitch_plan:
-        layer.extend(color_block_to_polylines(color_block, svg))
+def render_stitch_plan(svg, stitch_plan):
+    layer = svg.find(".//*[@id='__inkstitch_stitch_plan__']")
+    if layer is None:
+        layer = inkex.etree.Element(SVG_GROUP_TAG,
+                                    {'id': '__inkstitch_stitch_plan__',
+                                     INKSCAPE_LABEL: _('Stitch Plan'),
+                                     INKSCAPE_GROUPMODE: 'layer'})
+    else:
+        # delete old stitch plan
+        del layer[:]
+
+        # make sure the layer is visible
+        layer.set('style', 'display:inline')
+
+    for i, color_block in enumerate(stitch_plan):
+        group = inkex.etree.SubElement(layer,
+                                       SVG_GROUP_TAG,
+                                       {'id': '__color_block_%d__' % i,
+                                        INKSCAPE_LABEL: "color block %d" % (i + 1)})
+        group.extend(color_block_to_polylines(color_block, svg))
+
+    svg.append(layer)

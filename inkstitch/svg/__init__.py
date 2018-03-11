@@ -1,1 +1,0 @@
-from polylines import render_stitch_plan, color_block_to_polylines

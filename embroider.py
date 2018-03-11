@@ -979,13 +979,7 @@ class Embroider(inkex.Effect):
         patches = elements_to_patches(self.elements)
         stitch_plan = patches_to_stitch_plan(patches, self.options.collapse_length_mm * PIXELS_PER_MM)
         inkstitch.write_embroidery_file(self.get_output_path(), stitch_plan, self.document.getroot())
-
-        new_layer = inkex.etree.SubElement(self.document.getroot(), SVG_GROUP_TAG, {})
-        new_layer.set('id', self.uniqueId("embroidery"))
-        new_layer.set(inkex.addNS('label', 'inkscape'), _('Embroidery'))
-        new_layer.set(inkex.addNS('groupmode', 'inkscape'), 'layer')
-
-        render_stitch_plan(new_layer, stitch_plan)
+        render_stitch_plan(self.document.getroot(), stitch_plan)
 
         sys.stdout = old_stdout
 
