@@ -1,10 +1,10 @@
-from .. import Stitch, Point
+from .. import Stitch, Point, PIXELS_PER_MM
 from .stop import process_stop
 from .trim import process_trim
 from .ties import add_ties
 
 
-def patches_to_stitch_plan(patches, collapse_len=3.0):
+def patches_to_stitch_plan(patches, collapse_len=3.0 * PIXELS_PER_MM):
     stitch_plan = StitchPlan()
     color_block = stitch_plan.new_color_block()
 
