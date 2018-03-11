@@ -38,6 +38,7 @@ import inkstitch
 from inkstitch import _, cache, dbg, param, EmbroideryElement, get_nodes, SVG_POLYLINE_TAG, SVG_GROUP_TAG, PIXELS_PER_MM, get_viewbox_transform
 from inkstitch.stitches import running_stitch, auto_fill, legacy_fill
 from inkstitch.stitch_plan import patches_to_stitch_plan
+from inkstitch.svg import render_stitch_plan
 
 class Fill(EmbroideryElement):
     element_name = _("Fill")
@@ -862,39 +863,6 @@ class Patch:
     def reverse(self):
         return Patch(self.color, self.stitches[::-1])
 
-def color_block_to_polylines(color_block):
-    polylines = [[]]
-
-    for stitch in color_block:
-         if stitch.trim:
-              if polylines[-1]:
-                  polylines.append([])
-
-         if not stitch.jump and not stitch.stop:
-              polylines[-1].append(stitch.as_tuple())
-
-    return polylines
-
-def emit_inkscape(parent, stitch_plan):
-    transform = get_viewbox_transform(parent.getroottree().getroot())
-
-    # we need to correct for the viewbox
-    transform = simpletransform.invertTransform(transform)
-    transform = simpletransform.formatTransform(transform)
-
-    for color_block in stitch_plan:
-        for polyline in color_block_to_polylines(color_block):
-            color = color_block.color or '#000000'
-            inkex.etree.SubElement(parent,
-                                   inkex.addNS('polyline', 'svg'),
-                                   {'style': simplestyle.formatStyle(
-                                       {'stroke': color,
-                                        'stroke-width': "0.4",
-                                        'fill': 'none'}),
-                                       'points': " ".join(",".join(str(coord) for coord in point) for point in polyline),
-                                    'transform': transform
-                                   })
-
 def get_elements(effect):
     elements = []
     nodes = get_nodes(effect)
@@ -1017,7 +985,7 @@ class Embroider(inkex.Effect):
         new_layer.set(inkex.addNS('label', 'inkscape'), _('Embroidery'))
         new_layer.set(inkex.addNS('groupmode', 'inkscape'), 'layer')
 
-        emit_inkscape(new_layer, stitch_plan)
+        render_stitch_plan(new_layer, stitch_plan)
 
         sys.stdout = old_stdout
 

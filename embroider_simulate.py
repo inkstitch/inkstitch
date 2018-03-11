@@ -9,7 +9,8 @@ from itertools import izip
 
 import inkstitch
 from inkstitch import PIXELS_PER_MM
-from embroider import _, patches_to_stitch_plan, color_block_to_polylines, get_elements, elements_to_patches
+from embroider import _, patches_to_stitch_plan, get_elements, elements_to_patches
+from inkstitch.svg import color_block_to_point_lists
 
 
 class EmbroiderySimulator(wx.Frame):
@@ -142,16 +143,16 @@ class EmbroiderySimulator(wx.Frame):
         for color_block in stitch_plan:
             pen = self.color_to_pen(color_block.color)
 
-            for polyline in color_block_to_polylines(color_block):
+            for point_list in color_block_to_point_lists(color_block):
                 # The polyline is made up of a set of points denoting the
                 # vertices along the path.  We need to break this up into
                 # individual line segments to be drawn on the screen.
 
                 # if there's only one point, there's nothing to do, so skip
-                if len(polyline) < 2:
+                if len(point_list) < 2:
                     continue
 
-                for start, end in izip(polyline[:-1], polyline[1:]):
+                for start, end in izip(point_list[:-1], point_list[1:]):
                     segments.append(((start, end), pen))
 
         return segments
