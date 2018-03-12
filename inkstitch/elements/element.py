@@ -12,7 +12,8 @@ import cubicsuperpath
 from cspsubdiv import cspsubdiv
 
 class Patch:
-    # TODO: merge this with inkstitch.stitch_plan.ColorBlock
+    """A raw collection of stitches with attached instructions."""
+
     def __init__(self, color=None, stitches=None, trim_after=False, stop_after=False):
         self.color = color
         self.stitches = stitches or []

@@ -167,14 +167,10 @@ class Stitch(Point):
 
 
 def make_thread(color):
-    # strip off the leading "#"
-    if color.startswith("#"):
-        color = color[1:]
-
     thread = libembroidery.EmbThread()
-    thread.color = libembroidery.embColor_fromHexStr(color)
+    thread.color = libembroidery.embColor_make(*color.rgb)
 
-    thread.description = color
+    thread.description = color.name
     thread.catalogNumber = ""
 
     return thread

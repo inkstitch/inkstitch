@@ -3,9 +3,17 @@ from ..utils.geometry import Point
 from .stop import process_stop
 from .trim import process_trim
 from .ties import add_ties
+from ..threads import ThreadColor
 
 
 def patches_to_stitch_plan(patches, collapse_len=3.0 * PIXELS_PER_MM):
+    """Convert a collection of inkstitch.element.Patch objects to a StitchPlan.
+
+    * applies instructions embedded in the Patch such as trim_after and stop_after
+    * adds tie-ins and tie-offs
+    * adds jump-stitches between patches if necessary
+    """
+
     stitch_plan = StitchPlan()
     color_block = stitch_plan.new_color_block()
 
@@ -69,7 +77,7 @@ class ColorBlock(object):
     """Holds a set of stitches, all with the same thread color."""
 
     def __init__(self, color=None, stitches=None):
-        self._color = color
+        self.color = color
         self.stitches = stitches or []
 
     def __iter__(self):
@@ -84,8 +92,12 @@ class ColorBlock(object):
 
     @color.setter
     def color(self, value):
-        # TODO: this will use a ThreadColor object in the future
-        self._color = value
+        if isinstance(value, ThreadColor):
+            self._color = value
+        elif value is None:
+            self._color = None
+        else:
+            self._color = ThreadColor(value)
 
     @property
     def last_stitch(self):

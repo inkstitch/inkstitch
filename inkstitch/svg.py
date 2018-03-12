@@ -30,7 +30,7 @@ def get_correction_transform(svg):
 def color_block_to_polylines(color_block, svg):
     polylines = []
     for point_list in color_block_to_point_lists(color_block):
-        color = color_block.color or '#000000'
+        color = color_block.color.to_hex_str()
         polylines.append(inkex.etree.Element(
             SVG_POLYLINE_TAG,
             {'style': simplestyle.formatStyle(

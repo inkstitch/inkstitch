@@ -113,12 +113,7 @@ class EmbroiderySimulator(wx.Frame):
         return string
 
     def color_to_pen(self, color):
-        color = simplestyle.parseColor(color)
-
-        # python colorsys module uses floats from 0 to 1.0
-        color = [value / 255.0 for value in color]
-
-        hls = list(colorsys.rgb_to_hls(*color))
+        hls = list(colorsys.rgb_to_hls(*color.rgb_normalized))
 
         # Our background is white.  If the color is too close to white, then
         # it won't be visible.  Capping lightness should make colors visible
