@@ -1,4 +1,5 @@
-from .. import Stitch, Point, PIXELS_PER_MM
+from .. import Stitch, PIXELS_PER_MM
+from ..utils.geometry import Point
 from .stop import process_stop
 from .trim import process_trim
 from .ties import add_ties

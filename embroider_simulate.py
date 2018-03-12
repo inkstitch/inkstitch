@@ -8,15 +8,15 @@ import colorsys
 from itertools import izip
 
 import inkstitch
+from inkstitch.extensions import InkstitchExtension
 from inkstitch import PIXELS_PER_MM
-from embroider import _, patches_to_stitch_plan, get_elements, elements_to_patches
+from inkstitch.stitch_plan import patches_to_stitch_plan
 from inkstitch.svg import color_block_to_point_lists
 
 
 class EmbroiderySimulator(wx.Frame):
     def __init__(self, *args, **kwargs):
-        stitch_file = kwargs.pop('stitch_file', None)
-        patches = kwargs.pop('patches', None)
+        stitch_plan = kwargs.pop('stitch_plan', None)
         self.on_close_hook = kwargs.pop('on_close', None)
         self.frame_period = kwargs.pop('frame_period', 80)
         self.stitches_per_frame = kwargs.pop('stitches_per_frame', 1)
@@ -34,7 +34,7 @@ class EmbroiderySimulator(wx.Frame):
         self.panel = wx.Panel(self, wx.ID_ANY)
         self.panel.SetFocus()
 
-        self.load(stitch_file, patches)
+        self.load(stitch_plan)
 
         if self.target_duration:
             self.adjust_speed(self.target_duration)
@@ -56,13 +56,10 @@ class EmbroiderySimulator(wx.Frame):
 
         self.Bind(wx.EVT_CLOSE, self.on_close)
 
-    def load(self, stitch_file=None, patches=None):
-        if stitch_file:
-            self.mirror = True
-            self.segments = self._parse_stitch_file(stitch_file)
-        elif patches:
+    def load(self, stitch_plan=None):
+        if stitch_plan:
             self.mirror = False
-            self.segments = self._patches_to_segments(patches)
+            self.segments = self._stitch_plan_to_segments(stitch_plan)
         else:
             return
 
@@ -135,19 +132,13 @@ class EmbroiderySimulator(wx.Frame):
 
         return wx.Pen(color)
 
-    def _patches_to_segments(self, patches):
-        stitch_plan = patches_to_stitch_plan(patches)
-
+    def _stitch_plan_to_segments(self, stitch_plan):
         segments = []
 
         for color_block in stitch_plan:
             pen = self.color_to_pen(color_block.color)
 
             for point_list in color_block_to_point_lists(color_block):
-                # The polyline is made up of a set of points denoting the
-                # vertices along the path.  We need to break this up into
-                # individual line segments to be drawn on the screen.
-
                 # if there's only one point, there's nothing to do, so skip
                 if len(point_list) < 2:
                     continue
@@ -283,18 +274,22 @@ class EmbroiderySimulator(wx.Frame):
             except IndexError:
                 self.timer.Stop()
 
-class SimulateEffect(inkex.Effect):
+class SimulateEffect(InkstitchExtension):
     def __init__(self):
-        inkex.Effect.__init__(self)
+        InkstitchExtension.__init__(self)
         self.OptionParser.add_option("-P", "--path",
                                      action="store", type="string",
                                      dest="path", default=".",
                                      help="Directory in which to store output file")
 
     def effect(self):
-        patches = elements_to_patches(get_elements(self))
+        if not self.get_elements():
+            return
+
+        patches = self.elements_to_patches(self.elements)
+        stitch_plan = patches_to_stitch_plan(patches)
         app = wx.App()
-        frame = EmbroiderySimulator(None, -1, _("Embroidery Simulation"), wx.DefaultPosition, size=(1000, 1000), patches=patches)
+        frame = EmbroiderySimulator(None, -1, _("Embroidery Simulation"), wx.DefaultPosition, size=(1000, 1000), stitch_plan=stitch_plan)
         app.SetTopWindow(frame)
         frame.Show()
         wx.CallAfter(frame.go)

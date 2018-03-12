@@ -40,4 +40,7 @@ def add_ties(stitch_plan):
             else:
                 new_stitches.append(stitch)
 
+        if not need_tie_in:
+            add_tie_off(new_stitches)
+
         color_block.replace_stitches(new_stitches)

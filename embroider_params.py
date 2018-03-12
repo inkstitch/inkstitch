@@ -12,12 +12,13 @@ from cStringIO import StringIO
 import wx
 from wx.lib.scrolledpanel import ScrolledPanel
 from collections import defaultdict
-import inkex
 import inkstitch
-from inkstitch import _, Param, EmbroideryElement, get_nodes
-from embroider import Fill, AutoFill, Stroke, SatinColumn
 from functools import partial
 from itertools import groupby
+from inkstitch import _
+from inkstitch.extensions import InkstitchExtension
+from inkstitch.stitch_plan import patches_to_stitch_plan
+from inkstitch.elements import EmbroideryElement, Fill, AutoFill, Stroke, SatinColumn
 from embroider_simulate import EmbroiderySimulator
 
 
@@ -412,9 +413,10 @@ class SettingsFrame(wx.Frame):
             wx.CallAfter(self.refresh_simulator, patches)
 
     def refresh_simulator(self, patches):
+        stitch_plan = patches_to_stitch_plan(patches)
         if self.simulate_window:
             self.simulate_window.stop()
-            self.simulate_window.load(patches=patches)
+            self.simulate_window.load(stitch_plan=stitch_plan)
         else:
             my_rect = self.GetRect()
             simulator_pos = my_rect.GetTopRight()
@@ -428,7 +430,7 @@ class SettingsFrame(wx.Frame):
                 self.simulate_window = EmbroiderySimulator(None, -1, _("Preview"),
                                                            simulator_pos,
                                                            size=(300, 300),
-                                                           patches=patches,
+                                                           stitch_plan=stitch_plan,
                                                            on_close=self.simulate_window_closed,
                                                            target_duration=5,
                                                            max_width=max_width,
@@ -631,10 +633,10 @@ class SettingsFrame(wx.Frame):
         self.Layout()
         # end wxGlade
 
-class EmbroiderParams(inkex.Effect):
+class EmbroiderParams(InkstitchExtension):
     def __init__(self, *args, **kwargs):
         self.cancelled = False
-        inkex.Effect.__init__(self, *args, **kwargs)
+        InkstitchExtension.__init__(self, *args, **kwargs)
 
     def embroidery_classes(self, node):
         element = EmbroideryElement(node)
@@ -653,7 +655,7 @@ class EmbroiderParams(inkex.Effect):
         return classes
 
     def get_nodes_by_class(self):
-        nodes = get_nodes(self)
+        nodes = self.get_nodes()
         nodes_by_class = defaultdict(list)
 
         for z, node in enumerate(nodes):
