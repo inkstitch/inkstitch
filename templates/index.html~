@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include 'style.html' %}
+    <link rel="stylesheet" href="style.css" />
+    <title>InkStitch Print-Preview</title>
+</head>
+<body>
+    {% if view.overview %}
+    <div class="page print-overview" id="print-overview">{% include 'print_overview.html' %}</div>
+    {% endif %}
+    
+    {% if view.detailedview %}
+    {% for color_block in color_blocks %}
+    <div class="page print-detail">{% include 'print_detail.html' %}</div>
+    {% endfor %}
+    {% endif %}
+</body>
+</html>

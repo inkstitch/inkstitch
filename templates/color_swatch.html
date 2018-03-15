@@ -1,0 +1,33 @@
+<div class="colorSwatch">
+    <div class="swatchInfo">
+        <div class="colorName">
+            <span class="title">Color: </span>
+            <span class="description">{{ color_block.color.thred_name }}</span>
+        </div>
+        <div class="colorRgb">
+            <span class="title">rgb: </span>
+            <span class="description">{{ color_block.color.rgb }}</span>
+        </div>
+        <div class="swatchThread">
+            <span class="title">thread used: </span>
+            <span class="description">{{ color_block.color.thread_description }}</span>
+        </div>
+        <div class="swatchStitches">
+            <span class="title">nr. stitches: </span>
+            <span class="description">{{ color_block.num_stitches }}</span>
+        </div>
+        <div class="swatchStops">
+            <span class="title">nr. stops: </span>
+            <span class="description">{{ color_block.num_stops }}</span>
+        </div>
+        <div class="swatchTrims">
+            <span class="title">nr. trims: </span>
+            <span class="description">{{ color_block.num_trims }}</span>
+        </div>
+    </div>
+    <figure class="swatchBackground">
+      <svg width="200mm" height="40mm">
+        <rect width="200mm" height="40mm" style="fill:rgb{{ color_block.color.rgb }};" />
+      </svg>
+    </figure>
+</div>

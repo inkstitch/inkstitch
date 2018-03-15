@@ -9,6 +9,7 @@ dist: distclean locales
 	bin/build-dist $(EXTENSIONS)
 	cp *.inx dist
 	mv locales dist/inkstitch/bin
+	cp -a templates dist/inkstitch/bin/
 	if [ "$$BUILD" = "windows" ]; then \
 		cd dist; zip -r ../inkstitch-$(VERSION)-win32.zip *; \
 	else \

@@ -1,0 +1,44 @@
+        <header>
+            <figure class="brandlogo">
+                <img src="{{logo.src}}" alt="{{logo.title}}" title="{{logo.title}}">
+            </figure>
+            <div class="headline">
+            <div class="pageTitle">
+                <h1>{{job.title}}</h1>
+                {% if client is defined %}<p>CLIENT: {{client}}</p>{% endif %}
+            </div>
+            
+            <div class="currentDate">{{date|datetimeformat('%Y.%m.%d')}}</div>
+            </div>
+            <div class="jobDetails">
+                <div>
+                    <p><span>Total colors:</span><span>{{job.totalcolors}}</span></p>
+                    <p><span>Total nr stops:</span><span>{{job.totalstops}}</span></p>
+                    <p><span>Total nr trims:</span><span>{{job.totaltrims}}</span></p>
+                </div>
+                <div>
+                    <p><span>Design box size:</span><span>{{job.size}}</span></p>
+                    <p><span>Total stitch count:</span><span>{{job.stitchcount}}</span></p>
+                    <p><span>Total thread used:</span><span>{{job.totalthread}}</span></p>
+                </div>
+                <div>
+                    <p><span>Job estimated time:</span></p>
+                    <p><span>{{job.estimatedtime}}</span></p>
+                </div>
+            </div>
+        </header>
+        <main>
+            <figure class="inksimulation">
+                {{ svg_complete|safe }}
+                <figcaption>Scale {{ svgScale }}</figcaption>
+            </figure> 
+            
+            <div class="colorPalette">
+                {% for color_block in color_blocks %}
+                    {% include 'color_swatch.html' %}
+                {% endfor %}    
+            
+            </div>
+        </main>
+
+        {% include 'footer.html' %}

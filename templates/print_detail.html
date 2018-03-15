@@ -1,0 +1,41 @@
+        <header>
+            <figure class="brandlogo">
+                <img src="{{logo.src}}" alt="{{logo.title}}" title="{{logo.title}}">
+            </figure>
+            <div class="headline">
+            <div class="pageTitle">
+                <h1>{{job.title}}</h1>
+                {% if client is defined %}<p>CLIENT: {{client}}</p>{% endif %}
+            </div>
+            
+            <div class="currentDate">{{date|datetimeformat('%Y.%m.%d')}}</div>
+            </div>
+            <div class="jobDetails">
+                <div>
+                    <p><span>PO.NR:</span><span>{{color_block.color.po_nr}}</span></p>
+                    <p><span>COLOR:</span><span>{{color_block.color.thred_name}}</span></p>
+                </div>
+                <div>
+                    <p></p>
+                </div>
+                <div>
+                    <p><span>Job estimated time:</span></p>
+                    <p><span>{{color_block.estimatedtime}}</span></p>
+                </div>
+            </div>
+        </header>
+        <main>
+            <figure class="inksimulation">
+                {{color_block.svg_color|safe}}
+                <figcaption>Scale {{ svgScale }}</figcaption>
+            </figure> 
+            
+            <div class="colorPalette detailed">
+                {% include 'color_swatch.html' %}
+                <div class="signature" style="background: white;">
+                    <p>Client Signature</p>
+                </div>
+            </div>
+        </main>
+
+      {% include 'footer.html' %}

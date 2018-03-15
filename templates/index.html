@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include 'style.html' %}
+    <title>InkStitch Print-Preview</title>
+</head>
+<body>
+    {# we page_count inside the footer template #}
+    {% set page_count = [0] %}
+    
+    {% if view.overview %}
+        {% if page_count.append(page_count.pop() + 1) %}{% endif %}
+        <div class="page print-overview" id="print-overview">{% include 'print_overview.html' %}</div>
+    {% endif %}
+    
+    {% if view.detailedview %}
+        {% for color_block in color_blocks %}
+            {% if page_count.append(page_count.pop() + 1) %}{% endif %}
+            <div class="page print-detail">{% include 'print_detail.html' %}</div>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>
