@@ -4,6 +4,7 @@
 import sys
 import traceback
 import os
+import threading
 
 import inkex
 import inkstitch
@@ -14,22 +15,15 @@ from inkstitch.svg import render_stitch_plan
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from datetime import date
-import wx, wx.html2
+from cefpython3 import cefpython as cef
+import base64
 
-class PrintPreview(wx.Dialog):
-    def __init__(self, *args, **kwds):
-        wx.Dialog.__init__(self, *args, **kwds)
-        sizer = wx.BoxSizer(wx.VERTICAL)
-        self.browser = wx.html2.WebView.New(self)
-        self.browser.RegisterHandler(wx.html2.WebViewFSHandler('memory'))
-        #self.browser.Bind(wx.html2.EVT_WEBVIEW_LOADED, self.error)
-        sizer.Add(self.browser, 1, wx.EXPAND, 10)
-        self.SetSizer(sizer)
-        self.SetSize((1280, 800))
-        self.Bind(wx.EVT_CLOSE, self.on_close)
 
-    def on_close(self, event):
-        self.Destroy()
+def html_to_data_uri(html):
+    html = html.encode("utf-8", "replace")
+    b64 = base64.b64encode(html).decode("utf-8", "replace")
+    ret = "data:text/html;base64,{data}".format(data=b64)
+    return ret
 
 
 def datetimeformat(value, format='%Y/%m/%d'):
@@ -120,14 +114,12 @@ class Print(InkstitchExtension):
         sys.exit(0)
 
     def show_print_preview(self, html):
-        app = wx.App()
-        print_preview = PrintPreview(None, -1)
-        print_preview.browser.SetPage(html, "about:print")
-        print_preview.Show()
-        wx.CallLater(3000, print_preview.browser.Print)
-        app.SetTopWindow(print_preview)
-        app.MainLoop()
+        cef.Initialize()
 
+        self.browser = cef.CreateBrowserSync(url=html_to_data_uri(html), window_title='Ink/Stitch Print Preview')
+        threading.Timer(3.0, self.browser.Print).start()
+        cef.MessageLoop()
+        cef.Shutdown()
 
 if __name__ == '__main__':
     effect = Print()

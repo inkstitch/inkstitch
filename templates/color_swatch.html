@@ -1,4 +1,4 @@
-<div class="colorSwatch">
+<div class="colorSwatch" style="background: rgb{{ color_block.color.rgb }}">
     <div class="swatchInfo">
         <div class="colorName">
             <span class="title">Color: </span>
@@ -25,9 +25,12 @@
             <span class="description">{{ color_block.num_trims }}</span>
         </div>
     </div>
-    <figure class="swatchBackground">
+<!--    <figure class="swatchBackground">
       <svg width="200mm" height="40mm">
         <rect width="200mm" height="40mm" style="fill:rgb{{ color_block.color.rgb }};" />
-      </svg>
+   <text font-size="28px" y="25" x="30" fill="#ffffff" >
+   Some text
+   </text>
+      </svg> -->
     </figure>
 </div>

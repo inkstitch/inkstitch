@@ -1,4 +1,4 @@
-EXTENSIONS:=embroider embroider_params embroider_simulate embroider_update
+EXTENSIONS:=embroider embroider_params embroider_simulate embroider_update embroider_print
 
 # This gets the branch name or the name of the tag
 VERSION:=$(TRAVIS_BRANCH)
@@ -8,7 +8,8 @@ ARCH:=$(shell uname -m)
 dist: distclean locales
 	bin/build-dist $(EXTENSIONS)
 	cp *.inx dist
-	mv locales dist/inkstitch/bin
+	mkdir -p dist/inkstitch/bin/locales
+	cp -a locales/* dist/inkstitch/bin/locales
 	cp -a templates dist/inkstitch/bin/
 	if [ "$$BUILD" = "windows" ]; then \
 		cd dist; zip -r ../inkstitch-$(VERSION)-win32.zip *; \
