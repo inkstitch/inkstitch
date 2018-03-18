@@ -30,8 +30,16 @@ def datetimeformat(value, format='%Y/%m/%d'):
 
 def open_url(url):
     if getattr(sys, 'frozen', False):
+        # Avoid spurious output from xdg-open.  Not only will the user see
+        # anything on stderr, but any output on stdout will crash inkscape.
+        null = open(os.devnull, 'w')
+        old_stdout = os.dup(sys.stdout.fileno())
+        old_stderr = os.dup(sys.stderr.fileno())
+        os.dup2(null.fileno(), sys.stdout.fileno())
+        os.dup2(null.fileno(), sys.stderr.fileno())
+
         # PyInstaller sets LD_LIBRARY_PATH.  We need to temporarily clear it
-        # to avoid confusing exo-open, which webbrowser will run.
+        # to avoid confusing xdg-open, which webbrowser will run.
 
         # The following code is adapted from PyInstaller's documentation
         # http://pyinstaller.readthedocs.io/en/stable/runtime-information.html
@@ -49,6 +57,12 @@ def open_url(url):
         # restore the old environ
         os.environ.clear()
         os.environ.update(old_environ)
+
+        # restore file descriptors
+        os.dup2(old_stdout, sys.stdout.fileno())
+        os.dup2(old_stderr, sys.stderr.fileno())
+        os.close(old_stdout)
+        os.close(old_stderr)
     else:
         webbrowser.open(url)
 
