@@ -4,13 +4,6 @@
     {% include 'style.html' %}
     <title>InkStitch Print-Preview</title>
 </head>
-<script>
-var request = new XMLHttpRequest();
-request.open('GET', '/dostuff', false);  // `false` makes the request synchronous
-request.send(null);
-
-console.log(request.responseText);
-</script>
 <body>
     {# we page_count inside the footer template #}
     {% set page_count = [0] %}

@@ -20,7 +20,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 from datetime import date
 import base64
 
-from flask import Flask, request
+from flask import Flask, request, Response
 import webbrowser
 
 def datetimeformat(value, format='%Y/%m/%d'):
@@ -40,9 +40,14 @@ class PrintPreviewServer(Thread):
 
         @self.app.route('/')
         def index():
-            return self.html
+            response = Response(self.html)
 
-        @self.app.route('/shutdown', methods=['POST', 'GET'])
+            # Our server is single-threaded.  We don't want the browser to monopolize it.
+            response.headers['Connection'] = 'close'
+
+            return response
+
+        @self.app.route('/shutdown', methods=['POST'])
         def shutdown():
             request.environ.get('werkzeug.server.shutdown')()
             return 'Server shutting down...'
@@ -139,7 +144,7 @@ class Print(InkstitchExtension):
 
         html = template.render(
             view = {'overview': True, 'detailedview': True},
-            logo = {'src' : 'test.png', 'title' : 'LOGO'},
+            logo = {'src' : '', 'title' : 'LOGO'},
             date = date.today(),
             client = "The name of the long client name thing",
             job = {'title' : 'TITLE OF THE JOB LONG NAME THING', 'totalcolors' : '000', 'totalstops' : '000', 'totaltrims' : '000', 'size' : '0000 x 0000', 'stitchcount' : '000 000 000', 'totalthread' : '000 000 000', 'estimatedtime' : '00h00 @ 000mm/s'},
@@ -154,7 +159,9 @@ class Print(InkstitchExtension):
 
         time.sleep(1)
         webbrowser.open("http://%s:%s/" % (print_preview_server.host, print_preview_server.port))
+        print >> sys.stderr, "got here"
         print_preview_server.join()
+        print >> sys.stderr, "joined"
 
         # don't let inkex print the document out
         sys.exit(0)
