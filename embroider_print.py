@@ -23,8 +23,34 @@ import base64
 from flask import Flask, request, Response
 import webbrowser
 
+
 def datetimeformat(value, format='%Y/%m/%d'):
     return value.strftime(format)
+
+
+def open_url(url):
+    if getattr(sys, 'frozen', False):
+        # PyInstaller sets LD_LIBRARY_PATH.  We need to temporarily clear it
+        # to avoid confusing exo-open, which webbrowser will run.
+
+        # The following code is adapted from PyInstaller's documentation
+        # http://pyinstaller.readthedocs.io/en/stable/runtime-information.html
+
+        old_environ = dict(os.environ)  # make a copy of the environment
+        lp_key = 'LD_LIBRARY_PATH'  # for Linux and *BSD.
+        lp_orig = os.environ.get(lp_key + '_ORIG')  # pyinstaller >= 20160820 has this
+        if lp_orig is not None:
+            os.environ[lp_key] = lp_orig  # restore the original, unmodified value
+        else:
+            os.environ.pop(lp_key, None)  # last resort: remove the env var
+
+        webbrowser.open(url)
+
+        # restore the old environ
+        os.environ.clear()
+        os.environ.update(old_environ)
+    else:
+        webbrowser.open(url)
 
 
 class PrintPreviewServer(Thread):
@@ -158,7 +184,7 @@ class Print(InkstitchExtension):
         print_preview_server.start()
 
         time.sleep(1)
-        webbrowser.open("http://%s:%s/" % (print_preview_server.host, print_preview_server.port))
+        open_url("http://%s:%s/" % (print_preview_server.host, print_preview_server.port))
         print >> sys.stderr, "got here"
         print_preview_server.join()
         print >> sys.stderr, "joined"
