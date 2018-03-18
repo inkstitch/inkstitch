@@ -4,7 +4,10 @@
 import sys
 import traceback
 import os
-import threading
+from threading import Thread
+import socket
+import errno
+import time
 
 import inkex
 import inkstitch
@@ -15,19 +18,57 @@ from inkstitch.svg import render_stitch_plan
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from datetime import date
-from cefpython3 import cefpython as cef
 import base64
 
-
-def html_to_data_uri(html):
-    html = html.encode("utf-8", "replace")
-    b64 = base64.b64encode(html).decode("utf-8", "replace")
-    ret = "data:text/html;base64,{data}".format(data=b64)
-    return ret
-
+from flask import Flask, request
+import webbrowser
 
 def datetimeformat(value, format='%Y/%m/%d'):
     return value.strftime(format)
+
+
+class PrintPreviewServer(Thread):
+    def __init__(self, *args, **kwargs):
+        self.html = kwargs.pop('html')
+        Thread.__init__(self, *args, **kwargs)
+        self.daemon = True
+
+        self.__setup_app()
+
+    def __setup_app(self):
+        self.app = Flask(__name__)
+
+        @self.app.route('/')
+        def index():
+            return self.html
+
+        @self.app.route('/shutdown', methods=['POST', 'GET'])
+        def shutdown():
+            request.environ.get('werkzeug.server.shutdown')()
+            return 'Server shutting down...'
+
+        @self.app.route('/dostuff')
+        def dostuff():
+            print >> sys.stderr, "dostuff called"
+            return "do stuff!"
+
+    def run(self):
+        self.host = "127.0.0.1"
+        self.port = 5000
+
+        while True:
+            try:
+                self.app.run(self.host, self.port)
+            except socket.error, e:
+                if e.errno == errno.EADDRINUSE:
+                    self.port += 1
+                    continue
+                else:
+                    raise
+            else:
+                break
+
+
 
 class Print(InkstitchExtension):
     def build_environment(self):
@@ -108,7 +149,12 @@ class Print(InkstitchExtension):
             num_pages = '2',
         )
 
-        self.show_print_preview(html)
+        print_preview_server = PrintPreviewServer(html=html)
+        print_preview_server.start()
+
+        time.sleep(1)
+        webbrowser.open("http://%s:%s/" % (print_preview_server.host, print_preview_server.port))
+        print_preview_server.join()
 
         # don't let inkex print the document out
         sys.exit(0)

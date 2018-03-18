@@ -32,9 +32,6 @@ pyinstaller_args+="-p inkscape-0.92.2/share/extensions "
 # output useful debugging info that helps us trace library dependency issues
 pyinstaller_args+="--log-level DEBUG "
 
-# for cefpython3
-pyinstaller_args+="--additional-hooks-dir pyinstaller-hooks "
-
 mkdir -p dist/inkstitch/bin
 for extension in "$@"; do
     if [ "$BUILD" = "windows" ]; then
