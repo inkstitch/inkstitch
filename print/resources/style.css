@@ -157,13 +157,10 @@ figure.inksimulation {
   background: #fff;
   margin: 0 auto;
   white-space: wrap;
-  text-align: right;
+  text-align: center;
   outline: 1mm solid grey;
   position: relative;
   overflow: hidden;
-}
-
-figure.inksimulation svg {
 }
 
 figure.inksimulation figcaption {
@@ -181,7 +178,7 @@ figure.inksimulation figcaption {
   background: #fff;
   padding-top: 1.5mm;
   padding-bottom: 1.5mm;
-  margin: 0 auto;
+  margin: 2.5mm 0 0 0;
   white-space: wrap;
   text-align: right;
   overflow: hidden;
@@ -210,44 +207,27 @@ footer {
 }
 
 .colorSwatch {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 12pt;
+  color: black;
+  background: white;  
+  border: 0.5mm solid white;
   margin: 0px;
   padding: 0px;
-  color: rgb(255, 255, 255);
-  text-shadow: 1px 1px 1px gray;
-  font-family: "Barlow Condensed", sans-serif;
-  font-size: 8pt;
-  border: 0.5mm solid white;
-  flex-grow: 1;
   position: relative;
   overflow: hidden;
-}
-
-.swatchBackground {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding: 0;
-  z-index: 1;
+  flex-grow: 1;
 }
 
 .swatchInfo {
-  text-align: left;
-  min-width: 20mm;
-  height: 30mm;
-  margin-right: 5mm;
-  margin-left: 5mm;
-  margin-top: 5mm;
-  margin-bottom: 5mm;
-  position: relative;
-  z-index: 2;
+    text-align: left;
+    min-width: 20mm;
+    position: relative;
+    height: 100%;
 }
 
 .swatchInfo .title {
   font-weight: 800;
-}
-.swatchInfo, .swatchTrims, .swatchStops{
-  display:inline-block;
 }
 
 .signature {
@@ -270,7 +250,7 @@ footer p.num_pages {
 /* one item */
 .colorSwatch:first-child:nth-last-child(n+1),
 .colorSwatch:first-child:nth-last-child(n+1) ~ .colorSwatch {
-    font-size: 14pt;
+    font-size: 12pt;
     height: 100%;
 }
 
@@ -315,31 +295,16 @@ footer p.num_pages {
     height: calc(100% / 2);
 }
 
-.colorSwatch:first-child:nth-last-child(n+7) .swatchThread,
-.colorSwatch:first-child:nth-last-child(n+7) ~ .colorSwatch .swatchInfo .swatchThread {
-   display:none;
-}
-
-.colorSwatch:first-child:nth-last-child(n+7) .colorRgb,
-.colorSwatch:first-child:nth-last-child(n+7) ~ .colorSwatch .swatchInfo .colorRgb {
-   display:none;
-}
-
 /* nine items */
 .colorSwatch:first-child:nth-last-child(n+9),
 .colorSwatch:first-child:nth-last-child(n+9) ~ .colorSwatch {
     width: calc(100% / 5);
 }
 
-.colorSwatch:first-child:nth-last-child(n+9) .swatchInfo,
-.colorSwatch:first-child:nth-last-child(n+9) ~ .colorSwatch .swatchInfo {
-    margin-top: 2mm;
-}
-
 /* eleven items */
 .colorSwatch:first-child:nth-last-child(n+11),
 .colorSwatch:first-child:nth-last-child(n+11) ~ .colorSwatch {
-    width: 16.665%;
+    width: calc(100% / 6);
 }
 
 /* thirteen items */
@@ -349,22 +314,7 @@ footer p.num_pages {
     height: calc(100% / 3);
 }
 
-.colorSwatch:first-child:nth-last-child(n+13) .swatchInfo,
-.colorSwatch:first-child:nth-last-child(n+13) ~ .colorSwatch .swatchInfo {
-    margin-top: 2.5mm;
-}
-
-.colorSwatch:first-child:nth-last-child(n+13) .swatchStops,
-.colorSwatch:first-child:nth-last-child(n+13) ~ .colorSwatch .swatchInfo .swatchStops{
-   display:none;
-}
-
-.colorSwatch:first-child:nth-last-child(n+13) .swatchTrims,
-.colorSwatch:first-child:nth-last-child(n+13) ~ .colorSwatch .swatchInfo .swatchTrims{
-   display:none;
-}
-
-/*  sixteen items */
+/*  fourteen items */
 .colorSwatch:first-child:nth-last-child(n+14),
 .colorSwatch:first-child:nth-last-child(n+14) ~ .colorSwatch {
   width: calc(100% / 5); 
@@ -375,18 +325,19 @@ footer p.num_pages {
 .colorSwatch:first-child:nth-last-child(n+16) ~ .colorSwatch {
   width: calc(100% / 6);
 }
-.colorSwatch:first-child:nth-last-child(n+16) .swatchInfo,
-.colorSwatch:first-child:nth-last-child(n+16) ~ .colorSwatch .swatchInfo {
-  margin-top: 1mm;
-  margin-right: 1mm;
-  margin-left: 1mm;
-}
+
 /* nineteen items */
 .colorSwatch:first-child:nth-last-child(n+19),
 .colorSwatch:first-child:nth-last-child(n+19) ~ .colorSwatch {
   height: calc(100% / 4);
   width: calc(100% / 5);
 }
+  .colorSwatch:first-child:nth-last-child(n+19) .swatchInfo,
+  .colorSwatch:first-child:nth-last-child(n+19) ~ .colorSwatch .swatchInfo {
+    margin-left: -1mm;
+    margin-top: -1mm;
+    height: calc(100% + 1mm);
+  }
 
 /* twenty-one items */
 .colorSwatch:first-child:nth-last-child(n+21),
@@ -398,18 +349,12 @@ footer p.num_pages {
 .colorSwatch:first-child:nth-last-child(n+25),
 .colorSwatch:first-child:nth-last-child(n+25) ~ .colorSwatch {
   width: calc(100% / 7);
-  font-size: 7pt;
+  font-size: 6pt;
 }
 
 /* twenty-nine items */
 .colorSwatch:first-child:nth-last-child(n+29),
 .colorSwatch:first-child:nth-last-child(n+29) ~ .colorSwatch {
-  width: calc(100% / 9);
-}
-
-/* thirty-six items */
-.colorSwatch:first-child:nth-last-child(n+36),
-.colorSwatch:first-child:nth-last-child(n+36) ~ .colorSwatch {
   width: calc(100% / 9);
 }
 
@@ -420,7 +365,14 @@ footer p.num_pages {
 }
 
 /* fourty items */
-.colorSwatch:first-child:nth-last-child(n+40),
-.colorSwatch:first-child:nth-last-child(n+40) ~ .colorSwatch {
-  width: calc(100% / 12);
+  .colorSwatch:first-child:nth-last-child(n+40),
+  .colorSwatch:first-child:nth-last-child(n+40) ~ .colorSwatch {
+    width: calc(100% / 12);
+}
+  
+/* fourty-nine items */
+  .colorSwatch:first-child:nth-last-child(n+49),
+  .colorSwatch:first-child:nth-last-child(n+40) ~ .colorSwatch {
+    height: calc(100% / 5);
+    width: calc(100% / 12);
 }

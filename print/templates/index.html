@@ -8,11 +8,11 @@
 </head>
 <body>
     <div class="ui">
-      <button class="close">Close</button>
-      <button class="print">Print</button>
+      <button class="close">{{ _('Close') }}</button>
+      <button class="print">{{ _('Print') }}</button>
     </div>
 
-    {# we page_count inside the footer template #}
+    {# page_count will be used inside the footer template #}
     {% set page_count = [0] %}
     
     {% if view.overview %}
@@ -21,6 +21,7 @@
     {% endif %}
     
     {% if view.detailedview %}
+        {% set view = 'detailedview' %}
         {% for color_block in color_blocks %}
             {% if page_count.append(page_count.pop() + 1) %}{% endif %}
             <div class="page print-detail">{% include 'print_detail.html' %}</div>

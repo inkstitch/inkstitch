@@ -1,0 +1,11 @@
+<figure class="brandlogo">
+      <img src="{{ logo.src }}" alt="{{ logo.title }}" title="{{ logo.title }}">
+</figure>
+<div class="headline">
+  <div class="pageTitle">
+      <h1>{{job.title}}</h1>
+      {% if client is defined %}<p>{{ _('CLIENT') }}: {{ client }}</p>{% endif %}
+  </div>
+  
+  <div class="currentDate">{{ date|datetimeformat(_('%Y.%m.%d')) }}</div>
+</div>
