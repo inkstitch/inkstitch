@@ -8,6 +8,7 @@ from threading import Thread
 import socket
 import errno
 import time
+import logging
 
 import inkex
 import inkstitch
@@ -20,7 +21,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 from datetime import date
 import base64
 
-from flask import Flask, request, Response
+from flask import Flask, request, Response, send_from_directory
 import webbrowser
 
 
@@ -29,14 +30,15 @@ def datetimeformat(value, format='%Y/%m/%d'):
 
 
 def open_url(url):
+    # Avoid spurious output from xdg-open.  Not only will the user see
+    # anything on stderr, but any output on stdout will crash inkscape.
+    null = open(os.devnull, 'w')
+    old_stdout = os.dup(sys.stdout.fileno())
+    old_stderr = os.dup(sys.stderr.fileno())
+    os.dup2(null.fileno(), sys.stdout.fileno())
+    os.dup2(null.fileno(), sys.stderr.fileno())
+
     if getattr(sys, 'frozen', False):
-        # Avoid spurious output from xdg-open.  Not only will the user see
-        # anything on stderr, but any output on stdout will crash inkscape.
-        null = open(os.devnull, 'w')
-        old_stdout = os.dup(sys.stdout.fileno())
-        old_stderr = os.dup(sys.stderr.fileno())
-        os.dup2(null.fileno(), sys.stdout.fileno())
-        os.dup2(null.fileno(), sys.stderr.fileno())
 
         # PyInstaller sets LD_LIBRARY_PATH.  We need to temporarily clear it
         # to avoid confusing xdg-open, which webbrowser will run.
@@ -57,14 +59,14 @@ def open_url(url):
         # restore the old environ
         os.environ.clear()
         os.environ.update(old_environ)
-
-        # restore file descriptors
-        os.dup2(old_stdout, sys.stdout.fileno())
-        os.dup2(old_stderr, sys.stderr.fileno())
-        os.close(old_stdout)
-        os.close(old_stderr)
     else:
         webbrowser.open(url)
+
+    # restore file descriptors
+    os.dup2(old_stdout, sys.stdout.fileno())
+    os.dup2(old_stderr, sys.stderr.fileno())
+    os.close(old_stdout)
+    os.close(old_stderr)
 
 
 class PrintPreviewServer(Thread):
@@ -75,35 +77,41 @@ class PrintPreviewServer(Thread):
 
         self.__setup_app()
 
+    def __set_resources_path(self):
+        if getattr(sys, 'frozen', False):
+            self.resources_path = os.path.join(sys._MEIPASS, 'resources')
+        else:
+            self.resources_path = os.path.join(os.path.dirname(__file__), 'resources')
+
     def __setup_app(self):
+        self.__set_resources_path()
         self.app = Flask(__name__)
 
         @self.app.route('/')
         def index():
-            response = Response(self.html)
-
-            # Our server is single-threaded.  We don't want the browser to monopolize it.
-            response.headers['Connection'] = 'close'
-
-            return response
+            return self.html
 
         @self.app.route('/shutdown', methods=['POST'])
         def shutdown():
             request.environ.get('werkzeug.server.shutdown')()
             return 'Server shutting down...'
 
-        @self.app.route('/dostuff')
-        def dostuff():
-            print >> sys.stderr, "dostuff called"
-            return "do stuff!"
+        @self.app.route('/resources/<path:resource>', methods=['GET'])
+        def resources(resource):
+            return send_from_directory(self.resources_path, resource, cache_timeout=1)
+
+    def disable_logging(self):
+        logging.getLogger('werkzeug').setLevel(logging.ERROR)
 
     def run(self):
+        self.disable_logging()
+
         self.host = "127.0.0.1"
         self.port = 5000
 
         while True:
             try:
-                self.app.run(self.host, self.port)
+                self.app.run(self.host, self.port, threaded=True)
             except socket.error, e:
                 if e.errno == errno.EADDRINUSE:
                     self.port += 1
@@ -199,9 +207,7 @@ class Print(InkstitchExtension):
 
         time.sleep(1)
         open_url("http://%s:%s/" % (print_preview_server.host, print_preview_server.port))
-        print >> sys.stderr, "got here"
         print_preview_server.join()
-        print >> sys.stderr, "joined"
 
         # don't let inkex print the document out
         sys.exit(0)

@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    {% include 'style.html' %}
     <title>InkStitch Print-Preview</title>
+    <script src="resources/jquery-3.3.1.min.js"></script>
+    <script src="resources/inkstitch.js"></script>
+    <link rel="stylesheet" href="resources/style.css" />
 </head>
 <body>
+    <div class="ui">
+      <button class="close">Close</button>
+      <button class="print">Print</button>
+    </div>
+
     {# we page_count inside the footer template #}
     {% set page_count = [0] %}
     
