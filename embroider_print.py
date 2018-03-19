@@ -1,4 +1,4 @@
-#!/usr/bin/python
+i#!/usr/bin/python
 #
 
 import sys
@@ -199,7 +199,7 @@ class Print(InkstitchExtension):
             date = date.today(),
             client = "The name of the long client name thing",
             job = {'title' : 'TITLE OF THE JOB LONG NAME THING', 'totalcolors' : '000', 'totalstops' : '000', 'totaltrims' : '000', 'size' : '0000 x 0000', 'stitchcount' : '000 000 000', 'totalthread' : '000 000 000', 'estimatedtime' : '00h00 @ 000mm/s'},
-            svg_complete = overview_svg,
+            svg_overview = overview_svg,
             svg_scale = '1/1',
             color_blocks = stitch_plan.color_blocks,
             num_pages = '2',
