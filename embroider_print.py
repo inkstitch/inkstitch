@@ -1,4 +1,4 @@
-i#!/usr/bin/python
+#!/usr/bin/python
 #
 
 import sys
