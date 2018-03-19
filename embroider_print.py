@@ -79,9 +79,9 @@ class PrintPreviewServer(Thread):
 
     def __set_resources_path(self):
         if getattr(sys, 'frozen', False):
-            self.resources_path = os.path.join(sys._MEIPASS, 'resources')
+            self.resources_path = os.path.join(sys._MEIPASS, 'print', 'resources')
         else:
-            self.resources_path = os.path.join(os.path.dirname(__file__), 'resources')
+            self.resources_path = os.path.join(os.path.dirname(__file__), 'print', 'resources')
 
     def __setup_app(self):
         self.__set_resources_path()
@@ -126,9 +126,9 @@ class PrintPreviewServer(Thread):
 class Print(InkstitchExtension):
     def build_environment(self):
         if getattr( sys, 'frozen', False ) :
-            template_dir = os.path.join(sys._MEIPASS, "templates")
+            template_dir = os.path.join(sys._MEIPASS, "print", "templates")
         else:
-            template_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), "templates")
+            template_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), "print", "templates")
 
         env = Environment(
             loader = FileSystemLoader(template_dir),
