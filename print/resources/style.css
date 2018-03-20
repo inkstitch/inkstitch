@@ -47,6 +47,21 @@ div {
     box-sizing: border-box;
 }
 
+.ui {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgb(228, 228, 228);
+  background: rgba(200,200,200,.5);
+  height: 5em;
+  text-align: center;
+  z-index: 1;
+}
+
+button {
+  margin-top: 0.5em; 
+}
+
 .page {
   width: 210mm;
   height: 275mm;
