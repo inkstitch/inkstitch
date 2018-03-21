@@ -22,7 +22,7 @@ distclean:
 
 messages.po:
 	rm -f messages.po
-	xgettext --no-location --add-comments embroider*.py inkstitch/__init__.py
+	pybabel extract -o messages.po -F babel.conf --no-location --add-comments l10n --add-comments L10n --add-comments L10N -s .
 
 .PHONY: messages.po
 .PHONY: locales
