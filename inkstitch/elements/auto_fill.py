@@ -1,3 +1,4 @@
+import math
 from .. import _
 from .element import param, Patch
 from ..utils import cache
