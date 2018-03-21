@@ -41,6 +41,7 @@ body {
     font-size: 8pt;
     text-align: center;
     color: rgb(80,80,80);
+    margin: 0;
 }
 
 div {
@@ -48,18 +49,97 @@ div {
 }
 
 .ui {
+  z-index: 1;
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgb(228, 228, 228);
-  background: rgba(200,200,200,.5);
-  height: 5em;
+  padding: 1em;
   text-align: center;
-  z-index: 1;
+  background: rgb(255, 255, 255);
+  background: rgba(255,255,255, 0.7);
+  border-bottom: 1px solid rgb(188, 188, 188);
+  border-bottom: 1px solid rgba(129, 129, 129, 0.5);
+  box-shadow: 0 1px 1px 1px rgba(194, 191, 191, 0.5);
 }
 
-button {
-  margin-top: 0.5em; 
+.ui .header {
+  font-weight: bold;
+  font-size: 16pt;
+  float: left;
+  margin: 0.5em 0 0 1em;
+}
+
+.ui .buttons {
+  float: right;
+  margin-right: 50%;
+}
+
+.ui button {
+  margin: 0.5em;
+  background: white;
+  padding: 0.5em;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.ui button.close {
+  border: 1px solid rgb(197,5,5);
+  
+}
+
+.ui button.close:hover {
+  background: rgb(197,5,5);
+  color: white;
+  
+}
+
+.ui button.settings {
+  border: 1px solid rgb(243,204,35);
+}
+
+.ui button.settings:hover {
+  background: rgb(243,204,35);
+  color: white;
+}
+
+.ui button.print {
+  border: 1px solid rgb(50,132,50);
+}
+
+.ui button:hover {
+  background: rgb(50,132,50);
+  color: white;
+}
+
+#settings-ui {
+  display: none;
+  overflow: auto;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  width: 80%;
+  height: 80%;
+  margin: 0 auto;
+  background: rgb(255, 255, 255);
+  background: rgba(255,255,255, 0.9);
+  border-bottom: 1px solid rgb(188, 188, 188);
+  border-bottom: 1px solid rgba(129, 129, 129, 0.5);
+  box-shadow: 0 1px 1px 1px rgba(194, 191, 191, 0.5);
+}
+
+#close-settings {
+  position: absolute;
+  padding: 0.5em 1em;
+  right: 1em;
+  top: 1em;
+  margin: 0;
+  background: #c50505;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .page {

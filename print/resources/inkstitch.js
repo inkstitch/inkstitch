@@ -15,5 +15,14 @@ $(function() {
   $('button.print').click(function() {
     window.print();
   });
+  
+  $('button.settings').click(function(){
+    $('#settings-ui').show();
+  });
+
+  $("#close-settings").click(function(){
+      $("#settings-ui").hide();
+  }); 
+  
 });
 

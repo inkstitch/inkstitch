@@ -8,8 +8,17 @@
 </head>
 <body>
     <div class="ui">
-      <button class="close">{{ _('Close') }}</button>
-      <button class="print">{{ _('Print') }}</button>
+        <p class="header">{{ _('Ink/Stitch Preview') }}</p>
+        <div class="buttons">
+          <button class="print">{{ _('Print') }}</button>
+          <button class="settings">{{ _('Settings') }}</button>
+          <button class="close">{{ _('Close') }}</button>
+        </div>
+    </div>
+    
+    <div id="settings-ui">
+      <p id="close-settings">X</p>
+      <h1>{{ _('Settings') }}</h1>
     </div>
 
     {# page_count will be used inside the footer template #}
