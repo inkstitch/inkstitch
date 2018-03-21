@@ -34,6 +34,7 @@ EMBROIDERABLE_TAGS = (SVG_PATH_TAG, SVG_POLYLINE_TAG)
 
 dbg = open(os.devnull, "w")
 
+translation = None
 _ = lambda message: message
 
 
@@ -46,9 +47,9 @@ def localize():
 
     locale_dir = os.path.join(locale_dir, 'locales')
 
-    translation = gettext.translation("inkstitch", locale_dir, fallback=True)
+    global translation, _
 
-    global _
+    translation = gettext.translation("inkstitch", locale_dir, fallback=True)
     _ = translation.gettext
 
 localize()

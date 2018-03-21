@@ -20,7 +20,6 @@ from inkstitch.svg import render_stitch_plan
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from datetime import date
 import base64
-import gettext
 
 from flask import Flask, request, Response, send_from_directory
 import webbrowser
@@ -138,8 +137,7 @@ class Print(InkstitchExtension):
         )
 
         env.filters['datetimeformat'] = datetimeformat
-
-        env.install_gettext_translations(gettext)
+        env.install_gettext_translations(inkstitch.translation)
 
         return env
 
