@@ -195,12 +195,22 @@ class Print(InkstitchExtension):
             view = {'overview': True, 'detailedview': True},
             logo = {'src' : '', 'title' : 'LOGO'},
             date = date.today(),
-            client = "The name of the long client name thing",
-            job = {'title' : 'TITLE OF THE JOB LONG NAME THING', 'totalcolors' : '000', 'totalstops' : '000', 'totaltrims' : '000', 'size' : '0000 x 0000', 'stitchcount' : '000 000 000', 'totalthread' : '000 000 000', 'estimatedtime' : '00h00 @ 000mm/s'},
+            client = "",
+            job = {
+                    'title': 'Ink/Stitch Design',
+                    'num_colors': stitch_plan.num_colors,
+                    'num_color_blocks': len(stitch_plan),
+                    'num_stops': stitch_plan.num_stops,
+                    'num_trims': stitch_plan.num_trims,
+                    'dimensions': stitch_plan.dimensions_mm,
+                    'num_stitches': stitch_plan.num_stitches,
+                    'estimated_time': "", # TODO
+                    'estimated_thread': "", # TODO
+                  },
             svg_overview = overview_svg,
-            svg_scale = '1/1',
+            svg_scale = '100%',
             color_blocks = stitch_plan.color_blocks,
-            num_pages = '2',
+            num_pages = len(stitch_plan.color_blocks) + 1,
         )
 
         print_preview_server = PrintPreviewServer(html=html)

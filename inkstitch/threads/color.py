@@ -22,6 +22,9 @@ class ThreadColor(object):
         else:
             return self == ThreadColor(other)
 
+    def __hash__(self):
+        return hash(self.rgb)
+
     def __ne__(self, other):
         return not(self == other)
 

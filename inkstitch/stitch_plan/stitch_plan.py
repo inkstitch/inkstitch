@@ -72,6 +72,32 @@ class StitchPlan(object):
     def __iter__(self):
         return iter(self.color_blocks)
 
+    def __len__(self):
+        return len(self.color_blocks)
+
+    @property
+    def num_colors(self):
+        """Number of unique colors in the stitch plan."""
+        return len({block.color for block in self})
+
+    @property
+    def num_stops(self):
+        return sum(block.num_stops for block in self)
+
+    @property
+    def num_trims(self):
+        return sum(block.num_trims for block in self)
+
+    @property
+    def num_stitches(self):
+        return sum(block.num_stitches for block in self)
+
+    @property
+    def dimensions_mm(self):
+        # TODO: implement this.  Should do a bounding box calculation and
+        # convert to millimeters.
+        return ""
+
 
 class ColorBlock(object):
     """Holds a set of stitches, all with the same thread color."""
@@ -105,6 +131,26 @@ class ColorBlock(object):
             return self.stitches[-1]
         else:
             return None
+
+    @property
+    def num_stitches(self):
+        """Number of stitches in this color block."""
+        return len(self.stitches)
+
+    @property
+    def num_stops(self):
+        """Number of pauses in this color block."""
+
+        # Stops are encoded using two STOP stitches each.  See the comment in
+        # stop.py for an explanation.
+
+        return sum(1 for stitch in self if stitch.stop) / 2
+
+    @property
+    def num_trims(self):
+        """Number of trims in this color block."""
+
+        return sum(1 for stitch in self if stitch.trim)
 
     def filter_duplicate_stitches(self):
         if not self.stitches:

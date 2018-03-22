@@ -2,18 +2,19 @@
             {% include 'headline.html' %}
             <div class="jobDetails">
                 <div>
-                    <p><span>{{ _('Total colors') }}:</span><span>{{ job.totalcolors }}</span></p>
-                    <p><span>{{ _('Total nr stops') }}:</span><span>{{ job.totalstops }}</span></p>
-                    <p><span>{{ _('Total nr trims') }}:</span><span>{{ job.totaltrims }}</span></p>
+                    <p><span>{{ _('Unique Colors') }}:</span><span>{{ job.num_colors }}</span></p>
+                    <p><span>{{ _('Color Blocks') }}:</span><span>{{ job.num_color_blocks }}</span></p>
+                    <p><span>{{ _('Total nr stops') }}:</span><span>{{ job.num_stops }}</span></p>
+                    <p><span>{{ _('Total nr trims') }}:</span><span>{{ job.num_trims }}</span></p>
                 </div>
                 <div>
-                    <p><span>{{ _('Design box size') }}:</span><span>{{ job.size }}</span></p>
-                    <p><span>{{ _('Total stitch count') }}:</span><span>{{job.stitchcount }}</span></p>
-                    <p><span>{{ _('Total thread used') }}:</span><span>{{job.totalthread }}</span></p>
+                    <p><span>{{ _('Design box size') }}:</span><span>{{ job.dimensions }}</span></p>
+                    <p><span>{{ _('Total stitch count') }}:</span><span>{{job.num_stitches }}</span></p>
+                    <p><span>{{ _('Total thread used') }}:</span><span>{{job.estimated_thread }}</span></p>
                 </div>
                 <div>
                     <p><span>{{ _('Job estimated time') }}:</span></p>
-                    <p><span>{{ job.estimatedtime }}</span></p>
+                    <p><span>{{ job.estimated_time }}</span></p>
                 </div>
             </div>
         </header>

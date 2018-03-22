@@ -13,6 +13,35 @@
 }
 
 
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 700;
+  src: url(barlow-bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 800;
+  src: url(barlow-extra-bold.ttf) format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 700;
+  src: url(barlow-condensed-bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 800;
+  src: url(barlow-condensed-extra-bold.ttf) format('truetype');
+}
+
 @media screen {
     .page {
         margin-top: 20mm !important;
@@ -313,7 +342,10 @@ footer {
 }
 
 .colorSwatch {
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: "Barlow", sans-serif;
+
+  /* white text on dark colors doesn't print well unless it's bold */
+  font-weight: 700;
   font-size: 12pt;
   color: black;
   background: white;  
