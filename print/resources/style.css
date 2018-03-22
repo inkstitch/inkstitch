@@ -257,9 +257,15 @@ figure.inksimulation {
   margin: 0 auto;
   white-space: wrap;
   text-align: center;
+  line-height: 175mm;
   outline: 1mm solid grey;
   position: relative;
   overflow: hidden;
+}
+
+figure.inksimulation svg {
+  display: inline;
+  vertical-align: middle;
 }
 
 figure.inksimulation figcaption {
@@ -268,6 +274,7 @@ figure.inksimulation figcaption {
   right: 0;
   font-size: 12pt;
   font-weight: bold;
+  line-height: 12pt;
   margin: 2.5mm;
 }
 
