@@ -16,7 +16,7 @@
             {# We don't want to see stops and trims if we have more than 13 colorSwatches to show #}
             {% if view == 'detailedview' or (view != 'detailedview' and color_blocks|length < 13) %}
             <tspan dy="1.2em" x="10" class="swatchStops">{{ _('# stops') }}: {{ color_block.num_stops }}</tspan>
-            <tspan dy="1.2em" x="10" class="swatchTrims">{{ _('# trims') }}: {{ color_block.num_stops }}</tspan>
+            <tspan dy="1.2em" x="10" class="swatchTrims">{{ _('# trims') }}: {{ color_block.num_trims }}</tspan>
             {% endif %}
           </text>
       </svg>
