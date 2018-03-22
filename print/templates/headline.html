@@ -3,8 +3,10 @@
 </figure>
 <div class="headline">
   <div class="pageTitle">
-      <h1 contenteditable="true">{{job.title}}</h1>
-      {% if client is defined %}<p>{{ _('CLIENT') }}: <span contenteditable="true">{{ client or "__________" }}</span></p>{% endif %}
+      <h1><span class="jobtitle" contenteditable="true" placeholder="{{ _('Enter job title...') }}">{{ job.title }}</span></h1>
+      <p>{{ _('CLIENT') }}:&nbsp;
+        <span class="client" contenteditable="true" placeholder="{{ _('Enter client name...') }}">{{ client }}</span>
+      </p>
   </div>
   
   <div class="currentDate">{{ date|datetimeformat(_('%Y.%m.%d')) }}</div>

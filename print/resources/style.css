@@ -62,6 +62,10 @@
     #settings-ui {
       display: none !important;
     }
+    
+    [contenteditable="true"]:empty::before {
+      content: "" !important;
+    }
 }
 
 @page {
@@ -190,7 +194,6 @@ header {
   width: 202mm;
   height: 40mm;
   margin: 0;
-  white-space: wrap;
   text-align: right;
   display: flex;
       display: -webkit-flex;  /* old webkit */
@@ -226,6 +229,16 @@ div.headline h1 {
 
 div.headline p {
   font-size: 12pt;
+}
+
+[contenteditable=true]:empty::before{
+  content: attr(placeholder);
+  display: inline-block;
+}
+
+[contenteditable=true] {
+  width: 100mm;
+  display: inline-block;
 }
 
 div.jobDetails {
