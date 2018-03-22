@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-03-20 21:51-0400\n"
+"POT-Creation-Date: 2018-03-21 20:07-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -298,10 +298,16 @@ msgstr ""
 msgid "%Y.%m.%d"
 msgstr ""
 
-msgid "Close"
+msgid "Ink/Stitch Preview"
 msgstr ""
 
 msgid "Print"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "Close"
 msgstr ""
 
 msgid "PO.NR"

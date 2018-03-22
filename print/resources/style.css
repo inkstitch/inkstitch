@@ -29,6 +29,10 @@
     .ui {
       display: none;
     }
+
+    #settings-ui {
+      display: none !important;
+    }
 }
 
 @page {
