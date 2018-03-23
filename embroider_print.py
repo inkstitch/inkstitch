@@ -197,15 +197,15 @@ class Print(InkstitchExtension):
             date = date.today(),
             client = "",
             job = {
-                    'title': 'Ink/Stitch Design',
+                    'title': '',
                     'num_colors': stitch_plan.num_colors,
                     'num_color_blocks': len(stitch_plan),
                     'num_stops': stitch_plan.num_stops,
                     'num_trims': stitch_plan.num_trims,
                     'dimensions': stitch_plan.dimensions_mm,
                     'num_stitches': stitch_plan.num_stitches,
-                    'estimated_time': "", # TODO
-                    'estimated_thread': "", # TODO
+                    'estimated_time': '', # TODO
+                    'estimated_thread': '', # TODO
                   },
             svg_overview = overview_svg,
             svg_scale = '100%',

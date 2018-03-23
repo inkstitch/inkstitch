@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-03-21 22:09-0400\n"
+"POT-Creation-Date: 2018-03-22 21:02-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -291,7 +291,13 @@ msgstr ""
 msgid "Page"
 msgstr ""
 
+msgid "Enter job title..."
+msgstr ""
+
 msgid "CLIENT"
+msgstr ""
+
+msgid "Enter client name..."
 msgstr ""
 
 #, python-format

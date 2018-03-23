@@ -233,6 +233,8 @@ div.headline p {
 
 [contenteditable=true]:empty::before{
   content: attr(placeholder);
+  color: rgb(200, 200, 200);
+  font-weight: normal;
   display: inline-block;
 }
 
