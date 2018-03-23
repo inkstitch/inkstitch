@@ -37,5 +37,8 @@ $(function() {
     });
   });
   
+  // Prevent line breaks in contenteditable fields
+  $('[contenteditable="true"]').keypress(function(e){ return e.which != 13; });
+  
 });
 
