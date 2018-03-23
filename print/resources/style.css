@@ -66,6 +66,10 @@
     [contenteditable="true"]:empty::before {
       content: "" !important;
     }
+
+    #errors {
+      display: none !important;
+    }
 }
 
 @page {
@@ -396,6 +400,20 @@ footer p.num_pages {
   font-size: 12pt;
   font-weight: bold;
   margin-top: 0;
+}
+
+#errors.show {
+  display: block;
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  color: red;
+  font-family: "Barlow", sans-serif;
+  font-size: 12pt;
+}
+
+#errors {
+  display: none;
 }
 
 /* reference : http://jsfiddle.net/jrulle/btg63ezy/3/ */

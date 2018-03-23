@@ -1,9 +1,12 @@
+function ping() {
+  console.info("pinging");
+  $.get("/ping")
+   .done(function() { console.info("ping successful"); setTimeout(ping, 1000) })
+   .fail(function() { console.info("ping error"); $('#errors').attr('class', 'show') });
+}
+
 $(function() {
-  
-  // If the window is closed, we still want to be sure to shutdown the server
-  window.addEventListener('beforeunload', function() {
-    $.post('/shutdown', {})
-  });
+  setTimeout(ping, 1000);
 
   $('button.close').click(function() {
     $.post('/shutdown', {})

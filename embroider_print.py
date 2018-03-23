@@ -23,6 +23,7 @@ import base64
 
 from flask import Flask, request, Response, send_from_directory
 import webbrowser
+import requests
 
 
 def datetimeformat(value, format='%Y/%m/%d'):
@@ -74,6 +75,8 @@ class PrintPreviewServer(Thread):
         self.html = kwargs.pop('html')
         Thread.__init__(self, *args, **kwargs)
         self.daemon = True
+        self.last_request_time = None
+        self.shutting_down = False
 
         self.__setup_app()
 
@@ -87,18 +90,51 @@ class PrintPreviewServer(Thread):
         self.__set_resources_path()
         self.app = Flask(__name__)
 
+        @self.app.before_request
+        def request_started():
+            self.last_request_time = time.time()
+
+        @self.app.before_first_request
+        def start_watcher():
+            self.watcher_thread = Thread(target=self.watch)
+            self.watcher_thread.daemon = True
+            self.watcher_thread.start()
+
         @self.app.route('/')
         def index():
             return self.html
 
         @self.app.route('/shutdown', methods=['POST'])
         def shutdown():
+            self.shutting_down = True
             request.environ.get('werkzeug.server.shutdown')()
             return 'Server shutting down...'
 
         @self.app.route('/resources/<path:resource>', methods=['GET'])
         def resources(resource):
             return send_from_directory(self.resources_path, resource, cache_timeout=1)
+
+        @self.app.route('/ping')
+        def ping():
+            # Javascript is letting us know it's still there.  This resets self.last_request_time.
+            return "pong"
+
+    def watch(self):
+        try:
+            while True:
+                time.sleep(1)
+                if self.shutting_down:
+                    break
+
+                if self.last_request_time is not None and \
+                    (time.time() - self.last_request_time) > 4:
+                        # for whatever reason, shutting down only seems possible in
+                        # the context of a flask request, so we'll just make one
+                        r = requests.post("http://%s:%s/shutdown" % (self.host, self.port))
+                        break
+        except:
+            # seems like sometimes this thread blows up during shutdown
+            pass
 
     def disable_logging(self):
         logging.getLogger('werkzeug').setLevel(logging.ERROR)

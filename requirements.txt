@@ -7,3 +7,4 @@ appdirs
 numpy
 jinja2
 flask
+requests
