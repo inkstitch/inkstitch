@@ -40,5 +40,10 @@ $(function() {
   // Prevent line breaks in contenteditable fields
   $('[contenteditable="true"]').keypress(function(e){ return e.which != 13; });
   
+  // Printing Size
+  $('select#printing-size').change(function(){
+    $('.page').toggleClass('a4');
+  });
+  
 });
 

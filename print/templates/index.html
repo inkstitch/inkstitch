@@ -7,29 +7,14 @@
     <link rel="stylesheet" href="resources/style.css" />
 </head>
 <body>
-    <div class="ui">
-        <p class="header">{{ _('Ink/Stitch Print Preview') }}</p>
-        <div class="buttons">
-          <button class="print">{{ _('Print') }}</button>
-          <button class="settings">{{ _('Settings') }}</button>
-          <button class="close">{{ _('Close') }}</button>
-        </div>
-        <div id="errors">
-          {{ _('⚠ lost connection to Ink/Stitch') }}
-        </div>
-    </div>
-    
-    <div id="settings-ui">
-      <p id="close-settings">X</p>
-      <h1>{{ _('Settings') }}</h1>
-    </div>
+    {% include 'ui.html' %}
 
     {# page_count will be used inside the footer template #}
     {% set page_count = [0] %}
     
     {% if view.overview %}
         {% if page_count.append(page_count.pop() + 1) %}{% endif %}
-        <div class="page print-overview" id="print-overview">{% include 'print_overview.html' %}</div>
+        <div id="print-overview" class="page print-overview">{% include 'print_overview.html' %}</div>
     {% endif %}
     
     {% if view.detailedview %}

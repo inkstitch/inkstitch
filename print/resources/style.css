@@ -52,7 +52,7 @@
 @media print {
     .page {
         page-break-after: always;
-        float:none
+        margin: 0 !important;
     }
 
     .ui {
@@ -89,100 +89,6 @@ div {
     box-sizing: border-box;
 }
 
-.ui {
-  z-index: 1;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 1em;
-  text-align: center;
-  background: rgb(255, 255, 255);
-  background: rgba(255,255,255, 0.7);
-  border-bottom: 1px solid rgb(188, 188, 188);
-  border-bottom: 1px solid rgba(129, 129, 129, 0.5);
-  box-shadow: 0 1px 1px 1px rgba(194, 191, 191, 0.5);
-}
-
-.ui .header {
-  font-weight: bold;
-  font-size: 16pt;
-  float: left;
-  margin: 0.5em 0 0 1em;
-}
-
-.ui .buttons {
-  float: right;
-  margin-right: 50%;
-}
-
-.ui button {
-  margin: 0.5em;
-  background: white;
-  padding: 0.5em;
-  cursor: pointer;
-  -webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s;
-}
-
-.ui button.close {
-  border: 1px solid rgb(197,5,5);
-  
-}
-
-.ui button.close:hover {
-  background: rgb(197,5,5);
-  color: white;
-  
-}
-
-.ui button.settings {
-  border: 1px solid rgb(243,204,35);
-}
-
-.ui button.settings:hover {
-  background: rgb(243,204,35);
-  color: white;
-}
-
-.ui button.print {
-  border: 1px solid rgb(50,132,50);
-}
-
-.ui button:hover {
-  background: rgb(50,132,50);
-  color: white;
-}
-
-#settings-ui {
-  display: none;
-  overflow: auto;
-  position: fixed;
-  right: 0;
-  left: 0;
-  z-index: 2;
-  width: 80%;
-  height: 80%;
-  margin: 0 auto;
-  background: rgb(255, 255, 255);
-  background: rgba(255,255,255, 0.9);
-  border-bottom: 1px solid rgb(188, 188, 188);
-  border-bottom: 1px solid rgba(129, 129, 129, 0.5);
-  box-shadow: 0 1px 1px 1px rgba(194, 191, 191, 0.5);
-}
-
-#close-settings {
-  position: absolute;
-  padding: 0.5em 1em;
-  right: 1em;
-  top: 1em;
-  margin: 0;
-  background: #c50505;
-  color: #fff;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
 .page {
   width: 210mm;
   height: 275mm;
@@ -194,356 +100,501 @@ div {
   position: relative;
 }
 
-header {
-  width: 202mm;
-  height: 40mm;
-  margin: 0;
-  text-align: right;
-  display: flex;
-      display: -webkit-flex;  /* old webkit */
-      display: -ms-flexbox;   /* IE 10 */
-    flex-wrap: wrap;
-    flex-direction: column;
+.page:last-child {
+  margin-bottom: 10mm;
 }
 
-figure.brandlogo {
-  height: 30mm;
-  width: 30mm;
-  margin: 2.5mm;
-  border: 1px solid gray;
-}
-
-figure.brandlogo img {
-  max-width: 30mm;
-  max-height: 30mm;
-}
-
-
-div.headline {
-  display: flex;
-    display: -webkit-flex;  /* old webkit */
-    display: -ms-flexbox;   /* IE 10 */
-  width: calc(100% - 50mm);
-  height: 50%;
-}
-
-div.headline h1 {
-  font-size: 18pt;
-}
-
-div.headline p {
-  font-size: 12pt;
-}
-
-[contenteditable=true]:empty::before{
-  content: attr(placeholder);
-  color: rgb(200, 200, 200);
-  font-weight: normal;
-  display: inline-block;
-}
-
-[contenteditable=true] {
-  width: 100mm;
-  display: inline-block;
-}
-
-div.jobDetails {
-  display: flex;
-    display: -webkit-flex;  /* old webkit */
-    display: -ms-flexbox;   /* IE 10 */
-  width: calc(100% - 50mm);
-  height: 50%;
-  font-family: "Barlow Condensed", sans-serif;
-  font-size: 10pt;
-}
-
-div.jobDetails div {
-  flex-grow: 1;
-}
-
-div.jobDetails div:last-child {
-  font-size: 12pt;
-}
-
-div.jobDetails p {
-  margin: 0;
-}
-
-div.jobDetails p span:first-child {
-  font-weight: bold;
-  padding-right: 1mm; 
-}
-
-div.print-detail .jobDetails {
-  font-size: 12pt;
-}
-
-div.print-detail .jobDetails div:first-child {
-  text-align: left;
-}
-
-.pageTitle {
-  text-align: left;
-  flex-grow: 1;
-}
-
-.pageTitle h1,
-  .pageTitle p {
-  margin: 0;
-}
-
-.currentDate {
-  width: 30mm;
-  font-size: 12pt;
-  font-weight: bold;
-}
-
-figure.inksimulation {
-  width: 200mm;
-  height: 175mm;
-  background: #fff;
-  margin: 0 auto;
-  white-space: wrap;
-  text-align: center;
-  line-height: 175mm;
-  outline: 1mm solid grey;
-  position: relative;
-  overflow: hidden;
-}
-
-figure.inksimulation svg {
-  display: inline;
-  vertical-align: middle;
-}
-
-figure.inksimulation figcaption {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  font-size: 12pt;
-  font-weight: bold;
-  line-height: 12pt;
-  margin: 2.5mm;
-}
-
-.colorPalette {
-  width: 200mm;
-  height: 40mm;
-  background: #fff;
-  padding-top: 1.5mm;
-  padding-bottom: 1.5mm;
-  margin: 2.5mm 0 0 0;
-  white-space: wrap;
-  text-align: right;
-  overflow: hidden;
-  display: flex;
-      display: -webkit-flex;  /* old webkit */
-      display: -ms-flexbox;   /* IE 10 */
-    align-items: stretch;
-    flex-wrap: wrap;
-}
-
-.colorPalette.detailed > div {
-  width: 50%;
-  height: 100%;
-}
-
-footer {
-  width: 200mm;
-  height: 7mm;
-  background: #fff;
-  margin-left: auto;
-  margin-right: auto;
-  white-space: wrap;
-  text-align: center;
-  padding-top: 2mm;
-  
-}
-
-.colorSwatch {
-  font-family: "Barlow", sans-serif;
-
-  /* white text on dark colors doesn't print well unless it's bold */
-  font-weight: 700;
-  font-size: 12pt;
-  color: black;
-  background: white;  
-  border: 0.5mm solid white;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  overflow: hidden;
-  flex-grow: 1;
-}
-
-.swatchInfo {
-    text-align: left;
-    min-width: 20mm;
-    position: relative;
-    height: 100%;
-}
-
-.swatchInfo .title {
-  font-weight: 800;
-}
-
-.signature {
-  height: 100%;
-  border: 0.5mm solid rgb(80, 80, 80);
-  flex-grow: 1;
-  line-height: 60mm;
-  text-align: center;
-}
-
-footer p.num_pages {
-  float: right;
-  font-size: 12pt;
-  font-weight: bold;
-  margin-top: 0;
-}
-
-#errors.show {
-  display: block;
-  position: absolute;
-  right: 1em;
-  top: 1em;
-  color: red;
-  font-family: "Barlow", sans-serif;
-  font-size: 12pt;
-}
-
-#errors {
-  display: none;
-}
-
-/* reference : http://jsfiddle.net/jrulle/btg63ezy/3/ */
-
-/* one item */
-.colorSwatch:first-child:nth-last-child(n+1),
-.colorSwatch:first-child:nth-last-child(n+1) ~ .colorSwatch {
-    font-size: 12pt;
-    height: 100%;
-}
-
-/* two items */
-.colorSwatch:first-child:nth-last-child(n+2),
-.colorSwatch:first-child:nth-last-child(n+2) ~ .colorSwatch {
-    width: calc(100% / 2);
-}
-
-/* three items */
-.colorSwatch:first-child:nth-last-child(n+3),
-.colorSwatch:first-child:nth-last-child(n+3) ~ .colorSwatch {
-  font-size: 12pt;
-  width: calc(100% / 3);
-}
-
-/* four items */
-.colorSwatch:first-child:nth-last-child(n+4),
-.colorSwatch:first-child:nth-last-child(n+4) ~ .colorSwatch {
-    font-size: 10pt;
-    width: calc(100% / 4);
-}
-
-/* five items */
-.colorSwatch:first-child:nth-last-child(n+5),
-.colorSwatch:first-child:nth-last-child(n+5) ~ .colorSwatch {
-  font-size: 9pt;  
-  width: calc(100% / 5);
-}
-
-/* six items */
-.colorSwatch:first-child:nth-last-child(n+6),
-.colorSwatch:first-child:nth-last-child(n+6) ~ .colorSwatch {
-  font-size: 8pt;
-  width: calc(100% / 6);
-}
-
-/* seven items */
-.colorSwatch:first-child:nth-last-child(n+7),
-.colorSwatch:first-child:nth-last-child(n+7) ~ .colorSwatch {
-    width: calc(100% / 4);
-    height: calc(100% / 2);
-}
-
-/* nine items */
-.colorSwatch:first-child:nth-last-child(n+9),
-.colorSwatch:first-child:nth-last-child(n+9) ~ .colorSwatch {
-    width: calc(100% / 5);
-}
-
-/* eleven items */
-.colorSwatch:first-child:nth-last-child(n+11),
-.colorSwatch:first-child:nth-last-child(n+11) ~ .colorSwatch {
-    width: calc(100% / 6);
-}
-
-/* thirteen items */
-.colorSwatch:first-child:nth-last-child(n+13),
-.colorSwatch:first-child:nth-last-child(n+13) ~ .colorSwatch {
-    width: calc(100% / 5);
-    height: calc(100% / 3);
-}
-
-/*  fourteen items */
-.colorSwatch:first-child:nth-last-child(n+14),
-.colorSwatch:first-child:nth-last-child(n+14) ~ .colorSwatch {
-  width: calc(100% / 5); 
-}
-
-/*  sixteen items */
-.colorSwatch:first-child:nth-last-child(n+16),
-.colorSwatch:first-child:nth-last-child(n+16) ~ .colorSwatch {
-  width: calc(100% / 6);
-}
-
-/* nineteen items */
-.colorSwatch:first-child:nth-last-child(n+19),
-.colorSwatch:first-child:nth-last-child(n+19) ~ .colorSwatch {
-  height: calc(100% / 4);
-  width: calc(100% / 5);
-}
-  .colorSwatch:first-child:nth-last-child(n+19) .swatchInfo,
-  .colorSwatch:first-child:nth-last-child(n+19) ~ .colorSwatch .swatchInfo {
-    margin-left: -1mm;
-    margin-top: -1mm;
-    height: calc(100% + 1mm);
+/* Printing Size */
+  .page.a4 {
+    width: 205mm;
+    height: 292mm;
+    padding: 15mm;
   }
 
-/* twenty-one items */
-.colorSwatch:first-child:nth-last-child(n+21),
-.colorSwatch:first-child:nth-last-child(n+21) ~ .colorSwatch {
-  width: calc(100% / 6);
-}
+/* Settings */
 
-/* twenty-five items */
-.colorSwatch:first-child:nth-last-child(n+25),
-.colorSwatch:first-child:nth-last-child(n+25) ~ .colorSwatch {
-  width: calc(100% / 7);
-  font-size: 6pt;
-}
+  .ui {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1em;
+    text-align: center;
+    background: rgb(255, 255, 255);
+    background: rgba(255,255,255, 0.7);
+    border-bottom: 1px solid rgb(188, 188, 188);
+    border-bottom: 1px solid rgba(129, 129, 129, 0.5);
+    box-shadow: 0 1px 1px 1px rgba(194, 191, 191, 0.5);
+  }
 
-/* twenty-nine items */
-.colorSwatch:first-child:nth-last-child(n+29),
-.colorSwatch:first-child:nth-last-child(n+29) ~ .colorSwatch {
-  width: calc(100% / 9);
-}
+  .ui .header {
+    font-weight: bold;
+    font-size: 16pt;
+    float: left;
+    margin: 0.5em 0 0 1em;
+  }
 
-/* thirty-seven items */
-.colorSwatch:first-child:nth-last-child(n+37),
-.colorSwatch:first-child:nth-last-child(n+37) ~ .colorSwatch {
-  width: calc(100% / 10);
-}
+  .ui .buttons {
+    float: right;
+    margin-right: 50%;
+  }
 
-/* fourty items */
-  .colorSwatch:first-child:nth-last-child(n+40),
-  .colorSwatch:first-child:nth-last-child(n+40) ~ .colorSwatch {
-    width: calc(100% / 12);
-}
+  .ui button {
+    margin: 0.5em;
+    background: white;
+    padding: 0.5em;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+  }
+
+  .ui button.close {
+    border: 1px solid rgb(197,5,5);
+    
+  }
+
+  .ui button.close:hover {
+    background: rgb(197,5,5);
+    color: white;
+    
+  }
+
+  .ui button.settings {
+    border: 1px solid rgb(243,204,35);
+  }
+
+  .ui button.settings:hover {
+    background: rgb(243,204,35);
+    color: white;
+  }
+
+  .ui button.print {
+    border: 1px solid rgb(50,132,50);
+  }
+
+  .ui button:hover {
+    background: rgb(50,132,50);
+    color: white;
+  }
+
+  #settings-ui {
+    display: none;
+    overflow: auto;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    padding: 2mm 5mm;
+    background: rgb(255, 255, 255);
+    background: rgba(255,255,255, 0.9);
+    border-bottom: 1px solid rgb(188, 188, 188);
+    border-bottom: 1px solid rgba(129, 129, 129, 0.5);
+    box-shadow: 0 1px 1px 1px rgba(194, 191, 191, 0.5);
+  }
   
-/* fourty-nine items */
-  .colorSwatch:first-child:nth-last-child(n+49),
-  .colorSwatch:first-child:nth-last-child(n+40) ~ .colorSwatch {
-    height: calc(100% / 5);
-    width: calc(100% / 12);
-}
+  #settings-ui div {
+    text-align: left;
+    font-size: 12pt;
+  }
+
+  #close-settings {
+    position: absolute;
+    padding: 0.5em 1em;
+    right: 1em;
+    top: 1em;
+    margin: 0;
+    background: #c50505;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+/* Header */
+
+
+  header {
+    width: 100%;
+    height: 40mm;
+    margin: 0;
+    text-align: right;
+    display: flex;
+        display: -webkit-flex;  /* old webkit */
+        display: -ms-flexbox;   /* IE 10 */
+      flex-wrap: wrap;
+      flex-direction: column;
+  }
+
+  figure.brandlogo {
+    height: 30mm;
+    width: 30mm;
+    margin: 2.5mm;
+    border: 1px solid gray;
+  }
+
+  figure.brandlogo img {
+    max-width: 30mm;
+    max-height: 30mm;
+  }
+
+
+  div.headline {
+    display: flex;
+      display: -webkit-flex;  /* old webkit */
+      display: -ms-flexbox;   /* IE 10 */
+    width: calc(100% - 50mm);
+    height: 50%;
+  }
+
+  div.headline h1 {
+    font-size: 18pt;
+  }
+
+  div.headline p {
+    font-size: 12pt;
+  }
+
+  [contenteditable=true]:empty::before{
+    content: attr(placeholder);
+    color: rgb(200, 200, 200);
+    font-weight: normal;
+    display: inline-block;
+  }
+
+  [contenteditable=true] {
+    display: inline-block;
+  }
+
+  div.jobDetails {
+    display: flex;
+      display: -webkit-flex;  /* old webkit */
+      display: -ms-flexbox;   /* IE 10 */
+    width: calc(100% - 50mm);
+    height: 50%;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 10pt;
+  }
+
+  div.jobDetails > div {
+    flex-grow: 1;
+  }
+
+  div.jobDetails .table {
+    display: table;
+    width: 100%;
+  }
+
+  div.jobDetails > div:last-child {
+    font-size: 12pt;
+  }
+
+  div.jobDetails p {
+    margin: 0;
+    display: table-row;
+  }
+
+  div.jobDetails p span {
+    display: table-cell;
+  }
+
+  div.jobDetails p span:first-child {
+    font-weight: bold;
+    padding-right: 1mm; 
+  }
+
+  div.jobDetails p span:last-child {
+    text-align: left; 
+  }
+
+  div.jobDetails > div:last-child span {
+    text-align: right !important; 
+  }
+
+  div.print-detail .jobDetails {
+    font-size: 12pt;
+  }
+
+  div.print-detail .jobDetails > div:first-child {
+    text-align: left;
+  }
+
+  .pageTitle {
+    text-align: left;
+    flex-grow: 1;
+  }
+
+  .pageTitle h1,
+    .pageTitle p {
+    margin: 0;
+  }
+
+  .currentDate {
+    font-size: 12pt;
+    font-weight: bold;
+  }
+
+/* SVG Preview Image */
+
+  figure.inksimulation {
+    width: 100%;
+    height: 175mm;
+    background: #fff;
+    margin: 0 auto;
+    white-space: wrap;
+    text-align: center;
+    line-height: 175mm;
+    border: 1mm solid grey;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .overview figure.inksimulation {
+    height: 155mm;
+    line-height: 155mm;
+  }
+
+  figure.inksimulation svg {
+    display: inline;
+    vertical-align: middle;
+  }
+
+  figure.inksimulation figcaption {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 12pt;
+    font-weight: bold;
+    line-height: 12pt;
+    margin: 2.5mm;
+  }
+
+/* Color Swatches */
+
+  .colorPalette {
+    width: 100%;
+    height: 40mm;
+    background: #fff;
+    padding-top: 1.5mm;
+    padding-bottom: 1.5mm;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+        display: -webkit-flex;  /* old webkit */
+        display: -ms-flexbox;   /* IE 10 */
+      align-items: stretch;
+      flex-wrap: wrap;
+  }
+
+  .colorPalette.detailed > div {
+    width: 50%;
+    height: 100%;
+  }
+
+  .colorSwatch {
+    font-family: "Barlow", sans-serif;
+
+    /* white text on dark colors doesn't print well unless it's bold */
+    font-weight: 700;
+    font-size: 12pt;
+    color: black;
+    background: white;  
+    border: 0.5mm solid white;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    overflow: hidden;
+    flex-grow: 1;
+  }
+
+  .swatchInfo {
+      text-align: left;
+      min-width: 20mm;
+      position: relative;
+      height: 100%;
+  }
+
+  .swatchInfo .title {
+    font-weight: 800;
+  }
+
+  .signature {
+    height: 20mm;
+    border: 0.5mm solid rgb(80, 80, 80);
+    flex-grow: 1;
+    line-height: 30mm;
+    text-align: center;
+  }
+
+/* Footer */
+
+  footer {
+    width: 100%;
+    height: 7mm;
+    background: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    white-space: wrap;
+    text-align: center;
+    padding-top: 2mm;
+    
+  }
+
+  footer p.num_pages {
+    float: right;
+    font-size: 12pt;
+    font-weight: bold;
+    margin-top: 0;
+  }
+
+/* Messages */
+
+  #errors.show {
+    display: block;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    color: red;
+    font-family: "Barlow", sans-serif;
+    font-size: 12pt;
+  }
+
+  #errors {
+    display: none;
+  }
+
+
+/* Color Swatch Logic */
+/* reference : http://jsfiddle.net/jrulle/btg63ezy/3/ */
+
+  /* one item */
+  .colorSwatch:first-child:nth-last-child(n+1),
+  .colorSwatch:first-child:nth-last-child(n+1) ~ .colorSwatch {
+      font-size: 12pt;
+      height: 100%;
+  }
+
+  /* two items */
+  .colorSwatch:first-child:nth-last-child(n+2),
+  .colorSwatch:first-child:nth-last-child(n+2) ~ .colorSwatch {
+      width: calc(100% / 2);
+  }
+
+  /* three items */
+  .colorSwatch:first-child:nth-last-child(n+3),
+  .colorSwatch:first-child:nth-last-child(n+3) ~ .colorSwatch {
+    font-size: 12pt;
+    width: calc(100% / 3);
+  }
+
+  /* four items */
+  .colorSwatch:first-child:nth-last-child(n+4),
+  .colorSwatch:first-child:nth-last-child(n+4) ~ .colorSwatch {
+      font-size: 10pt;
+      width: calc(100% / 4);
+  }
+
+  /* five items */
+  .colorSwatch:first-child:nth-last-child(n+5),
+  .colorSwatch:first-child:nth-last-child(n+5) ~ .colorSwatch {
+    font-size: 9pt;  
+    width: calc(100% / 5);
+  }
+
+  /* six items */
+  .colorSwatch:first-child:nth-last-child(n+6),
+  .colorSwatch:first-child:nth-last-child(n+6) ~ .colorSwatch {
+    font-size: 8pt;
+    width: calc(100% / 6);
+  }
+
+  /* seven items */
+  .colorSwatch:first-child:nth-last-child(n+7),
+  .colorSwatch:first-child:nth-last-child(n+7) ~ .colorSwatch {
+      width: calc(100% / 4);
+      height: calc(100% / 2);
+  }
+
+  /* nine items */
+  .colorSwatch:first-child:nth-last-child(n+9),
+  .colorSwatch:first-child:nth-last-child(n+9) ~ .colorSwatch {
+      width: calc(100% / 5);
+  }
+
+  /* eleven items */
+  .colorSwatch:first-child:nth-last-child(n+11),
+  .colorSwatch:first-child:nth-last-child(n+11) ~ .colorSwatch {
+      width: calc(100% / 6);
+  }
+
+  /* thirteen items */
+  .colorSwatch:first-child:nth-last-child(n+13),
+  .colorSwatch:first-child:nth-last-child(n+13) ~ .colorSwatch {
+      width: calc(100% / 5);
+      height: calc(100% / 3);
+  }
+
+  /*  fourteen items */
+  .colorSwatch:first-child:nth-last-child(n+14),
+  .colorSwatch:first-child:nth-last-child(n+14) ~ .colorSwatch {
+    width: calc(100% / 5); 
+  }
+
+  /*  sixteen items */
+  .colorSwatch:first-child:nth-last-child(n+16),
+  .colorSwatch:first-child:nth-last-child(n+16) ~ .colorSwatch {
+    width: calc(100% / 6);
+  }
+
+  /* nineteen items */
+  .colorSwatch:first-child:nth-last-child(n+19),
+  .colorSwatch:first-child:nth-last-child(n+19) ~ .colorSwatch {
+    height: calc(100% / 4);
+    width: calc(100% / 5);
+  }
+    .colorSwatch:first-child:nth-last-child(n+19) .swatchInfo,
+    .colorSwatch:first-child:nth-last-child(n+19) ~ .colorSwatch .swatchInfo {
+      margin-left: -1mm;
+      margin-top: -1mm;
+      height: calc(100% + 1mm);
+    }
+
+  /* twenty-one items */
+  .colorSwatch:first-child:nth-last-child(n+21),
+  .colorSwatch:first-child:nth-last-child(n+21) ~ .colorSwatch {
+    width: calc(100% / 6);
+  }
+
+  /* twenty-five items */
+  .colorSwatch:first-child:nth-last-child(n+25),
+  .colorSwatch:first-child:nth-last-child(n+25) ~ .colorSwatch {
+    width: calc(100% / 7);
+    font-size: 6pt;
+  }
+
+  /* twenty-nine items */
+  .colorSwatch:first-child:nth-last-child(n+29),
+  .colorSwatch:first-child:nth-last-child(n+29) ~ .colorSwatch {
+    width: calc(100% / 9);
+  }
+
+  /* thirty-seven items */
+  .colorSwatch:first-child:nth-last-child(n+37),
+  .colorSwatch:first-child:nth-last-child(n+37) ~ .colorSwatch {
+    width: calc(100% / 10);
+  }
+
+  /* fourty items */
+    .colorSwatch:first-child:nth-last-child(n+40),
+    .colorSwatch:first-child:nth-last-child(n+40) ~ .colorSwatch {
+      width: calc(100% / 12);
+  }
+    
+  /* fourty-nine items */
+    .colorSwatch:first-child:nth-last-child(n+49),
+    .colorSwatch:first-child:nth-last-child(n+40) ~ .colorSwatch {
+      height: calc(100% / 5);
+      width: calc(100% / 12);
+  }

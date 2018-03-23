@@ -2,23 +2,29 @@
             {% include 'headline.html' %}
             <div class="jobDetails">
                 <div>
-                    <p><span>{{ _('Unique Colors') }}:</span><span>{{ job.num_colors }}</span></p>
-                    <p><span>{{ _('Color Blocks') }}:</span><span>{{ job.num_color_blocks }}</span></p>
-                    <p><span>{{ _('Total nr stops') }}:</span><span>{{ job.num_stops }}</span></p>
-                    <p><span>{{ _('Total nr trims') }}:</span><span>{{ job.num_trims }}</span></p>
+                    <div class="table">
+                        <p><span>{{ _('Unique Colors') }}:</span><span>{{ job.num_colors }}</span></p>
+                        <p><span>{{ _('Color Blocks') }}:</span><span>{{ job.num_color_blocks }}</span></p>
+                        <p><span>{{ _('Total nr stops') }}:</span><span>{{ job.num_stops }}</span></p>
+                        <p><span>{{ _('Total nr trims') }}:</span><span>{{ job.num_trims }}</span></p>
+                    </div>
                 </div>
                 <div>
-                    <p><span>{{ _('Design box size') }}:</span><span>{{ job.dimensions }}</span></p>
-                    <p><span>{{ _('Total stitch count') }}:</span><span>{{job.num_stitches }}</span></p>
-                    <p><span>{{ _('Total thread used') }}:</span><span>{{job.estimated_thread }}</span></p>
+                    <div class="table">
+                      <p><span>{{ _('Design box size') }}:</span><span>{{ job.dimensions }}</span></p>
+                      <p><span>{{ _('Total stitch count') }}:</span><span>{{job.num_stitches }}</span></p>
+                      <p><span>{{ _('Total thread used') }}:</span><span>{{job.estimated_thread }}</span></p>
+                    </div>
                 </div>
                 <div>
-                    <p><span>{{ _('Job estimated time') }}:</span></p>
-                    <p><span>{{ job.estimated_time }}</span></p>
+                    <div class="table">
+                      <p><span>{{ _('Job estimated time') }}:</span></p>
+                      <p><span>{{ job.estimated_time }}</span></p>
+                    </div>
                 </div>
             </div>
         </header>
-        <main>
+        <main class="overview">
             <figure class="inksimulation">
                 {{ svg_overview|safe }}
                 <figcaption>{{ _('Scale') }} {{ svg_scale }}</figcaption>
@@ -30,6 +36,7 @@
                 {% endfor %}    
             
             </div>
+            <div class="signature">{{ _('Client Signature') }}</div>
         </main>
 
         {% include 'footer.html' %}

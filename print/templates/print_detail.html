@@ -2,15 +2,16 @@
             {% include 'headline.html' %}
             <div class="jobDetails">
                 <div>
-                    <p><span>{{ _('PO.NR') }}:</span><span>{{color_block.color.po_nr}}</span></p>
-                    <p><span>{{ _('COLOR') }}:</span><span>{{color_block.color.thred_name}}</span></p>
+                    <div class="table">
+                      <p><span>{{ _('PO.NR') }}:</span><span>{{color_block.color.po_nr}}</span></p>
+                      <p><span>{{ _('COLOR') }}:</span><span>{{color_block.color.thred_name}}</span></p>
+                    </div>
                 </div>
                 <div>
-                    <p></p>
-                </div>
-                <div>
-                    <p><span>{{ _('Job estimated time') }}:</span></p>
-                    <p><span>{{ color_block.estimatedtime }}</span></p>
+                    <div class="table">
+                      <p><span>{{ _('Job estimated time') }}:</span></p>
+                      <p><span>{{ color_block.estimatedtime }}</span></p>
+                  </div>
                 </div>
             </div>
         </header>
@@ -22,9 +23,6 @@
             
             <div class="colorPalette detailed">
                 {% include 'color_swatch.html' %}
-                <div class="signature" style="background: white;">
-                    <p>{{ _('Client Signature') }}</p>
-                </div>
             </div>
         </main>
 

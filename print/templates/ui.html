@@ -1,0 +1,24 @@
+    <div class="ui">
+        <p class="header">{{ _('Ink/Stitch Print Preview') }}</p>
+        <div class="buttons">
+          <button class="print">{{ _('Print') }}</button>
+          <button class="settings">{{ _('Settings') }}</button>
+          <button class="close">{{ _('Close') }}</button>
+        </div>
+        <div id="errors">
+          {{ _('⚠ lost connection to Ink/Stitch') }}
+        </div>
+    </div>
+    
+    <div id="settings-ui">
+      <p id="close-settings">X</p>
+      <h1>{{ _('Settings') }}</h1>
+      <div>
+        <p>{{ _('Printing Size') }}: 
+          <select id="printing-size">
+            <option value="letter" selected="selected">Letter</option>
+            <option value="a4">A4</option>
+          </select>
+        </p>
+      </div>
+    </div>
