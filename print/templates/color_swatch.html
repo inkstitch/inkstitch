@@ -1,24 +1,48 @@
-  <div class="colorSwatch">
-    <div class="swatchInfo">
-       <svg width="100%" height="100%" class="colorSwatchSVG" xmlns="http://www.w3.org/2000/svg">
+  
+  {% if view != 'detailedview' %}
+  <div class="color-swatch">
+    <div class="swatch-info">
+       <svg width="100%" height="100%" class="color-swatch-svg" xmlns="http://www.w3.org/2000/svg">
         <rect fill="rgb{{ color_block.color.rgb }}" width="100%" height="100%" />
-        <text fill="rgb{{ color_block.color.font_color }}" x="2mm" y="2mm">
-            <tspan dy="1.2em" x="10" class="colorName">{{ _('Color') }}: {{ color_block.color.thread_name }}</tspan>
+        <text fill="rgb{{ color_block.color.font_color }}">
+            <tspan dy="1.2em" x="2mm" y="2mm" class="color-name">{{ _('Color') }}: {{ color_block.color.thread_name }}</tspan>
             {# We don't want to see rgb and thread_used if we have more than 7 colorSwatches to show #}
-            {% if view == 'detailedview' or (view != 'detailedview' and color_blocks|length < 7) %}
-            <tspan dy="1.2em" x="10" class="colorRgb">{{ _('rgb') }}: {{ color_block.color.rgb }}</tspan>        
-            <tspan dy="1.2em" x="10" class="swatchThread">{{ _('thread used') }}: {{ color_block.color.thread_description }}</tspan>
+            {% if color_blocks|length < 7 %}
+            <tspan dy="1.2em" x="2mm" class="color-rgb">{{ _('rgb') }}: {{ color_block.color.rgb }}</tspan>        
+            <tspan dy="1.2em" x="2mm" class="swatch-thread">{{ _('thread used') }}: {{ color_block.color.thread_description }}</tspan>
             {% endif %}
             {# We don't want to see num_stitch if we have more than 49 colorSwatches to show #}
-            {% if view == 'detailedview' or (view != 'detailedview' and color_blocks|length < 49) %}
-            <tspan dy="1.2em" x="10" class="swatchStitches">{{ _('# stitches') }}: {{ color_block.num_stitches }}</tspan>
+            {% if color_blocks|length < 49 %}
+            <tspan dy="1.2em" x="2mm" class="swatch-stitches">{{ _('# stitches') }}: {{ color_block.num_stitches }}</tspan>
             {% endif %}
             {# We don't want to see stops and trims if we have more than 13 colorSwatches to show #}
-            {% if view == 'detailedview' or (view != 'detailedview' and color_blocks|length < 13) %}
-            <tspan dy="1.2em" x="10" class="swatchStops">{{ _('# stops') }}: {{ color_block.num_stops }}</tspan>
-            <tspan dy="1.2em" x="10" class="swatchTrims">{{ _('# trims') }}: {{ color_block.num_trims }}</tspan>
+            {% if color_blocks|length < 13 %}
+            <tspan dy="1.2em" x="2mm" class="swatch-stops">{{ _('# stops') }}: {{ color_block.num_stops }}</tspan>
+            <tspan dy="1.2em" x="2mm" class="swatch-trims">{{ _('# trims') }}: {{ color_block.num_trims }}</tspan>
             {% endif %}
           </text>
       </svg>
     </div>
-</div>
+  </div>
+  
+  {% else %}
+  
+  <div class="color-swatch">
+    <div class="swatch-info">
+       <svg width="100%" height="100%" class="colorSwatchSVG" xmlns="http://www.w3.org/2000/svg">
+        <rect fill="rgb{{ color_block.color.rgb }}" width="40mm" height="100%" />
+       </svg>
+       <div class="color-info">
+        <div>    
+          <p><span class="color-name">{{ _('Color') }}:</span><span>{{ color_block.color.thread_name }}</span></p>
+          <p><span class="color-rgb">{{ _('rgb') }}:</span><span>{{ color_block.color.rgb }}</span></p>
+          <p><span class="swatch-thread">{{ _('thread used') }}:</span><span>{{ color_block.color.thread_description }}</span></p>
+          <p><span class="swatch-stitches">{{ _('# stitches') }}:</span><span>{{ color_block.num_stitches }}</span></p>
+          <p><span class="swatch-stops">{{ _('# stops') }}:</span><span>{{ color_block.num_stops }}</span></p>
+          <p><span class="swatch-trims">{{ _('# trims') }}:</span><span>{{ color_block.num_trims }}</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  {%endif %}
