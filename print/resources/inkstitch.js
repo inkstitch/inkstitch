@@ -1,8 +1,7 @@
 function ping() {
-  console.info("pinging");
   $.get("/ping")
-   .done(function() { console.info("ping successful"); setTimeout(ping, 1000) })
-   .fail(function() { console.info("ping error"); $('#errors').attr('class', 'show') });
+   .done(function() { setTimeout(ping, 1000) })
+   .fail(function() { $('#errors').attr('class', 'show') });
 }
 
 // set pagenumbers
@@ -27,9 +26,15 @@ $(function() {
   });
 
   $('button.print').click(function() {
-    window.print();
+    // printing halts all javascript activity, so we need to tell the backend
+    // not to shut down until we're done.
+    $.get("/printing/start")
+     .done(function() {
+        window.print();
+        $.get("/printing/end");
+     });
   });
-  
+
   $('button.settings').click(function(){
     $('#settings-ui').show();
   });

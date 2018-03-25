@@ -119,6 +119,18 @@ class PrintPreviewServer(Thread):
             # Javascript is letting us know it's still there.  This resets self.last_request_time.
             return "pong"
 
+        @self.app.route('/printing/start')
+        def printing_start():
+            # temporarily turn off the watcher while the print dialog is up,
+            # because javascript will be frozen
+            self.last_request_time = None
+            return "OK"
+
+        @self.app.route('/printing/end')
+        def printing_end():
+            # nothing to do here -- request_started() will restart the watcher
+            return "OK"
+
     def watch(self):
         try:
             while True:
