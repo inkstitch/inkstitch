@@ -8,28 +8,21 @@
 </head>
 <body>
     {% include 'ui.html' %}
-
-    {# page_count will be used inside the footer template #}
-    {% set page_count = [0] %}
     
 {# client overview #}    
-        {% if page_count.append(page_count.pop() + 1) %}{% endif %}
         <div class="page client-overview" style="display: {{ 'block' if view.client_overview else 'none' }}">{% include 'print_overview.html' %}</div>
         
 {# client detailedview #}    
         {% set printview = 'detailedview' %}
         {% for color_block in color_blocks %}
-            {% if page_count.append(page_count.pop() + 1) %}{% endif %}
             <div class="page client-detailedview" style="display: {{ 'block' if view.client_detailedview else 'none' }}">{% include 'print_detail.html' %}</div>
         {% endfor %}
 
 {# operator overview #}    
-        {% if page_count.append(page_count.pop() + 1) %}{% endif %}
         <div class="page operator-overview" style="display: {{ 'block' if view.operator_overview else 'none' }}">{% include 'operator_overview.html' %}</div>
     
 {# operator detailed view #}
     {% for color_block_part in color_blocks | batch(13) %}
-        {% if page_count.append(page_count.pop() + 1) %}{% endif %}
         {% set outer_loop = loop %}
         <div class="page operator-detailedview" style="display: {{ 'block' if view.operator_detailedview else 'none' }}">{% include 'operator_detailedview.html' %}</div>
     {% endfor %}
