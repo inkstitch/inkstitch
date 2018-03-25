@@ -50,6 +50,10 @@
 }
 
 @media print {
+    body {
+      bottom: 0 !important;
+    }
+
     .page {
         page-break-after: always;
         margin: 0 !important;
@@ -83,6 +87,7 @@ body {
     text-align: center;
     color: rgb(80,80,80);
     margin: 0;
+    margin-bottom: 5mm;
 }
 
 div {
@@ -98,10 +103,6 @@ div {
   vertical-align: text-bottom;
   overflow: hidden;
   position: relative;
-}
-
-.page:last-child {
-  margin-bottom: 10mm;
 }
 
 /* Printing Size */
@@ -312,11 +313,11 @@ div {
     text-align: right !important; 
   }
 
-  div.print-detail .job-details {
+  div.client-detailedview .job-details {
     font-size: 12pt;
   }
 
-  div.print-detail .job-details > div:first-child {
+  div.client-detailedview .job-details > div:first-child {
     text-align: left;
   }
 
@@ -350,7 +351,7 @@ div {
     overflow: hidden;
   }
   
-  .overview figure.inksimulation {
+  .client-overview-main figure.inksimulation {
     height: 155mm;
     line-height: 155mm;
   }
@@ -447,6 +448,87 @@ div {
     display: table-cell;
     padding-right: 5mm;
   }
+  
+/* Operator Detailed View */
+
+  .operator-detailedview header {
+    height: 25mm;
+  }
+  
+  .operator-detailedveiw figure.brandlogo{
+    height: 15mm;
+    width: 15mm;
+  }
+  
+  .operator-detailedveiw figure.brandlogo img {
+    max-width: 12.5mm;
+    max-height: 12.5mm;
+  }
+
+  .operator-detailedview main {
+    height: 230mm;
+  }
+
+  .operator-job-info {
+    display: table;
+    width: 100%;
+  }
+  
+  .operator-job-info div {
+    display: table-row;
+  }
+  
+  div.job-headline {
+    display: table-header-group;
+    font-size: 9pt;
+    font-weight: bold;
+  }
+  
+  div.job-headline p {
+    height: 1em;
+  }
+  
+  .operator-job-info p {
+    height: 15mm;
+    max-width: 15mm;
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgb(239,239,239);
+  }
+  
+  .operator-job-info span {
+    display: block;
+  }
+  
+  .operator-job-info span.color-index {
+     position: absolute;
+     top: 0;
+     left: 0;
+     line-height: 15mm;
+     width: 10mm;
+   }
+  
+  .operator-svg.operator-colorswatch {
+    width: 15mm;
+  }
+  
+  .operator-svg.operator-preview {
+    min-width: 15mm;
+    max-width: 20mm;
+    height: 15mm;
+  }
+  
+  .operator-svg svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    max-width: 30mm;
+    height: 100%;
+  }
+  
 
 /* Footer */
 

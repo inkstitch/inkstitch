@@ -1,0 +1,76 @@
+        <header>
+          {% include 'headline.html' %}
+        </header>
+        
+        <main>
+          <div class="operator-job-info">
+            <div class="job-headline">
+              <p class="operator-svg operator-colorswatch">{# svg color #}</p>
+              <p>{# svg preview #}</p>
+              <p>{{ _('Color') }}</p>
+              <p>{{ _('Thread Consumption') }}</p>
+              <p>{{ _('Stops and Trims') }}</p>
+              <p>{{ _('Estimated Time') }}</p>
+            </div>
+            {% if outer_loop.index == 1 %}
+            <div>
+              <p>
+                <span>##</span>
+              </p>
+              <p class="operator-svg operator-preview">
+                {{ svg_overview|safe }}
+              </p>
+              <p>
+                <span>{{ _('Unique Colors') }}: {{ job.num_colors }}</span>
+                <span>{{ _('Color Blocks') }}: {{ job.num_color_blocks }}</span>
+              </p>
+              <p>
+                <span>{{ _('Design box size') }}: {{ job.dimensions }}</span>
+                <span>{{ _('Total thread used') }}: {{job.estimated_thread }}</span>
+                <span>{{ _('Total stitch count') }}: {{job.num_stitches }}</span>
+              </p>
+              <p>
+                <span>{{ _('Total nr stops') }}: {{ job.num_stops }}</span>
+                <span>{{ _('Total nr trims') }}: {{ job.num_trims }}</span>
+              </p>
+              <p>
+                <span>{{ job.estimated_time }}</span>
+              </p>
+            </div>
+            {% endif %}
+            {% for color_block in color_block_part %}
+            
+            <div style="display: table-row;">
+              <p class="operator-svg operator-colorswatch">
+                <svg xmlns="http://www.w3.org/2000/svg">
+                  <rect fill="rgb{{ color_block.color.rgb }}" width="15mm" height="100%" />
+                </svg>
+                <span class="color-index" style="color: rgb{{ color_block.color.font_color }}">#{{ loop.index + outer_loop.index0 * 13 }}</span>
+              </p>
+              <p class="operator-svg operator-preview">
+                  {{ color_block.svg_preview|safe }}
+              </p>
+              <p>
+                <span>Thread Company Name</span>
+                <span>{{ color_block.color.thread_name }}</span>
+                <span>{{ color_block.color.rgb }}</span>
+              </p>
+              <p>
+                <span>{{ _('thread used') }}: {{ color_block.color.thread_description }}</span>
+                <span>{{ _('# stitches') }}: {{ color_block.num_stitches }}</span>
+              </p>
+              <p>
+                <span>{{ _('# stops') }}: {{ color_block.num_stops }}</span>
+                <span>{{ _('# trims') }}: {{ color_block.num_trims }}</span>
+              </p>
+              <p>
+                <span>{{ color_block.estimatedtime }}</span>
+              </p>
+            </div>
+          {% endfor %}
+          </div>
+        </main>
+        
+        {% include 'footer.html' %}
+        
+           

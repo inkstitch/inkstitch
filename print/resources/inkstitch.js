@@ -5,9 +5,20 @@ function ping() {
    .fail(function() { console.info("ping error"); $('#errors').attr('class', 'show') });
 }
 
+// set pagenumbers
+function setPageNumbers() {
+  var totalPageNum = $('body').find('.page:visible').length;
+  $('span.total-page-num').text(totalPageNum);
+  $( '.page:visible span.page-num' ).each(function( index ) {
+    $(this).text(index + 1);
+  });
+}
+
 $(function() {
   setTimeout(ping, 1000);
-
+  
+  setPageNumbers();
+  
   $('button.close').click(function() {
     $.post('/shutdown', {})
      .done(function(data) {
@@ -43,6 +54,12 @@ $(function() {
   // Printing Size
   $('select#printing-size').change(function(){
     $('.page').toggleClass('a4');
+  });
+  
+  //Checkbox
+  $(':checkbox').change(function() {
+    $('.' + this.id).toggle();
+    setPageNumbers();
   });
   
 });

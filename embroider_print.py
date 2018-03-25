@@ -228,7 +228,7 @@ class Print(InkstitchExtension):
         template = env.get_template('index.html')
 
         html = template.render(
-            view = {'overview': True, 'detailedview': True},
+            view = {'client_overview': True, 'client_detailedview': True, 'operator_overview': False, 'operator_detailedview': False},
             logo = {'src' : '', 'title' : 'LOGO'},
             date = date.today(),
             client = "",
@@ -246,7 +246,6 @@ class Print(InkstitchExtension):
             svg_overview = overview_svg,
             svg_scale = '100%',
             color_blocks = stitch_plan.color_blocks,
-            num_pages = len(stitch_plan.color_blocks) + 1,
         )
 
         print_preview_server = PrintPreviewServer(html=html)
