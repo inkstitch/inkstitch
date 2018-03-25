@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-03-22 21:48-0400\n"
+"POT-Creation-Date: 2018-03-24 20:17-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -304,21 +304,6 @@ msgstr ""
 msgid "%Y.%m.%d"
 msgstr ""
 
-msgid "Ink/Stitch Print Preview"
-msgstr ""
-
-msgid "Print"
-msgstr ""
-
-msgid "Settings"
-msgstr ""
-
-msgid "Close"
-msgstr ""
-
-msgid "⚠ lost connection to Ink/Stitch"
-msgstr ""
-
 msgid "PO.NR"
 msgstr ""
 
@@ -329,9 +314,6 @@ msgid "Job estimated time"
 msgstr ""
 
 msgid "Scale"
-msgstr ""
-
-msgid "Client Signature"
 msgstr ""
 
 msgid "Unique Colors"
@@ -353,5 +335,26 @@ msgid "Total stitch count"
 msgstr ""
 
 msgid "Total thread used"
+msgstr ""
+
+msgid "Client Signature"
+msgstr ""
+
+msgid "Ink/Stitch Print Preview"
+msgstr ""
+
+msgid "Print"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "⚠ lost connection to Ink/Stitch"
+msgstr ""
+
+msgid "Printing Size"
 msgstr ""
 
