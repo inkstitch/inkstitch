@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-28 20:27-0500\n"
-"PO-Revision-Date: 2018-03-01 19:41-0500\n"
+"PO-Revision-Date: 2018-03-26 16:26-0400\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
@@ -17,231 +17,231 @@ msgstr ""
 "X-Crowdin-File: /master/messages.po\n"
 
 msgid "Fill"
-msgstr ""
+msgstr "Remplir"
 
 msgid "Manually routed fill stitching"
 msgstr ""
 
 msgid "Angle of lines of stitches"
-msgstr ""
+msgstr "Angle des lignes de points"
 
 msgid "Flip fill (start right-to-left)"
 msgstr ""
 
 msgid "Spacing between rows"
-msgstr ""
+msgstr "Espacement entre les lignes"
 
 msgid "Maximum fill stitch length"
-msgstr ""
+msgstr "Longueur maximale du point de remplissage"
 
 msgid "Stagger rows this many times before repeating"
-msgstr ""
+msgstr "Décaler les rangs autant de fois avant de répéter"
 
 msgid "Auto-Fill"
-msgstr ""
+msgstr "Remplissage automatique"
 
 msgid "Automatically routed fill stitching"
 msgstr ""
 
 msgid "Running stitch length (traversal between sections)"
-msgstr ""
+msgstr "Longueur de point en cours (traversal entre les sections)"
 
 msgid "Underlay"
-msgstr ""
+msgstr "Sous-couche"
 
 msgid "AutoFill Underlay"
-msgstr ""
+msgstr "Sous-couche de remplissage automatique"
 
 msgid "Fill angle (default: fill angle + 90 deg)"
-msgstr ""
+msgstr "Angle de remplissage (par défaut: angle de remplissage + 90 degrés)"
 
 msgid "Row spacing (default: 3x fill row spacing)"
-msgstr ""
+msgstr "Espacement des lignes (par défaut: 3 fois l'espacement des lignes de remplissage)"
 
 msgid "Max stitch length"
-msgstr ""
+msgstr "longueur de point maximal\n"
 
 msgid "Inset"
 msgstr ""
 
 msgid "Satin stitch along paths"
-msgstr ""
+msgstr "Point en satin le long des chemins"
 
 msgid "Running stitch length"
-msgstr ""
+msgstr "Longueur de point en cours"
 
 msgid "Zig-zag spacing (peak-to-peak)"
-msgstr ""
+msgstr "Espacement Zig-Zag (crête à crête)"
 
 msgid "Repeats"
-msgstr ""
+msgstr "répétez"
 
 msgid "Satin Column"
 msgstr ""
 
 msgid "Custom satin column"
-msgstr ""
+msgstr "Colonne de satin personnalisée"
 
 msgid "Pull compensation"
 msgstr ""
 
 msgid "Contour underlay"
-msgstr ""
+msgstr "Sous-couche de contour"
 
 msgid "Contour Underlay"
-msgstr ""
+msgstr "Sous-couche de Contour"
 
 msgid "Stitch length"
-msgstr ""
+msgstr "Longueur de point"
 
 msgid "Contour underlay inset amount"
 msgstr ""
 
 msgid "Center-walk underlay"
-msgstr ""
+msgstr "Sous-couche de marche centrale"
 
 msgid "Center-Walk Underlay"
-msgstr ""
+msgstr "Sous-couche de Marche-centrale"
 
 msgid "Zig-zag underlay"
-msgstr ""
+msgstr "Sous-couche Zig-zag"
 
 msgid "Zig-zag Underlay"
-msgstr ""
+msgstr "Sous-couche Zig-zag"
 
 msgid "Zig-Zag spacing (peak-to-peak)"
-msgstr ""
+msgstr "Espacement Zig-Zag (crête à crête)"
 
 msgid "Inset amount (default: half of contour underlay inset)"
-msgstr ""
+msgstr "Montant de l'incrustation (par défaut: la moitié de l'incrustation de sous-couche de contour)"
 
 msgid "One or more rails crosses itself, and this is not allowed.  Please split into multiple satin columns."
-msgstr ""
+msgstr "Un ou plusieurs rails se croisent, ce qui n'est pas autorisé. S'il vous plaît diviser en plusieurs colonnes de satin."
 
 msgid "satin column: One or more of the rungs doesn't intersect both rails."
-msgstr ""
+msgstr "colonne satinée: un ou plusieurs des échelons ne croisent pas les deux rails."
 
 msgid "Each rail should intersect both rungs once."
-msgstr ""
+msgstr "Chaque rail devrait croiser les deux échelons une fois."
 
 msgid "satin column: One or more of the rungs intersects the rails more than once."
-msgstr ""
+msgstr "colonne satinée: Un ou plusieurs échelons croisent les rails plus d'une fois."
 
 #, python-format
 msgid "satin column: object %s has a fill (but should not)"
-msgstr ""
+msgstr "colonne de satin: objet %s a un remplissage (mais ne devrait pas)"
 
 #, python-format
 msgid "satin column: object %(id)s has two paths with an unequal number of points (%(length1)d and %(length2)d)"
-msgstr ""
+msgstr "colonne de satin: l'objet %(id)s a deux chemins avec un nombre de points différents (%(length1)d et %(length2)d)"
 
 msgid "\n\n"
 "Seeing a 'no such option' message?  Please restart Inkscape to fix."
-msgstr ""
+msgstr "Vous voyez un message 'aucune option' ? Veuillez redémarrer Inkscape pour corriger."
 
 msgid "No embroiderable paths selected."
-msgstr ""
+msgstr "Aucun chemin brodable sélectionné."
 
 msgid "No embroiderable paths found in document."
-msgstr ""
+msgstr "Aucun chemin brodable trouvé dans le document."
 
 msgid "Tip: use Path -> Object to Path to convert non-paths before embroidering."
-msgstr ""
+msgstr "Astuce: utilisez Path -> Object to Path pour convertir les non-chemins avant de broder."
 
 msgid "Embroidery"
-msgstr ""
+msgstr "Broderie"
 
 msgid "These settings will be applied to 1 object."
-msgstr ""
+msgstr "Ces paramètres seront appliqués à 1 objet."
 
 #, python-format
 msgid "These settings will be applied to %d objects."
-msgstr ""
+msgstr "Ces paramètres seront appliqués aux %d objets."
 
 msgid "Some settings had different values across objects.  Select a value from the dropdown or enter a new one."
-msgstr ""
+msgstr "Certains paramètres ont des valeurs différentes d'un objet à l'autre. Sélectionnez une valeur dans la liste déroulante ou entrez-en une nouvelle."
 
 #, python-format
 msgid "Disabling this tab will disable the following %d tabs."
-msgstr ""
+msgstr "La désactivation de cet onglet désactivera les onglets %d suivants."
 
 msgid "Disabling this tab will disable the following tab."
-msgstr ""
+msgstr "La désactivation de cet onglet désactivera l'onglet suivant."
 
 #, python-format
 msgid "Enabling this tab will disable %s and vice-versa."
-msgstr ""
+msgstr "Activer cet onglet désactivera %s et vice-versa."
 
 msgid "Inkscape objects"
-msgstr ""
+msgstr "Objets Inkscape"
 
 msgid "Embroidery Params"
-msgstr ""
+msgstr "Paramètres de broderie"
 
 msgid "Presets"
-msgstr ""
+msgstr "Présélection"
 
 msgid "Load"
-msgstr ""
+msgstr "Charger"
 
 msgid "Add"
-msgstr ""
+msgstr "Ajouter"
 
 msgid "Overwrite"
-msgstr ""
+msgstr "Écraser"
 
 msgid "Delete"
-msgstr ""
+msgstr "Effacer"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Quitter"
 
 msgid "Use Last Settings"
-msgstr ""
+msgstr "Utiliser les derniers paramètres"
 
 msgid "Apply and Quit"
-msgstr ""
+msgstr "Appliquer et Quitter"
 
 msgid "Preview"
-msgstr ""
+msgstr "Aperçu"
 
 msgid "Internal Error"
-msgstr ""
+msgstr "Erreur interne"
 
 msgid "Please enter or select a preset name first."
-msgstr ""
+msgstr "Veuillez entrer ou sélectionner un nom prédéfini en premier."
 
 msgid "Preset"
-msgstr ""
+msgstr "Préréglage"
 
 #, python-format
 msgid "Preset \"%s\" not found."
-msgstr ""
+msgstr "Le préréglage \"%s\" n'a pas été trouvé."
 
 #, python-format
 msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
-msgstr ""
+msgstr "Le préréglage \"%s\" existe déjà. Veuillez utiliser un autre nom ou appuyez sur \"Écraser\""
 
 msgid "Embroidery Simulation"
-msgstr ""
+msgstr "Simulation de broderie"
 
 #, python-format
 msgid "parseLengthWithUnits: unknown unit %s"
-msgstr ""
+msgstr "analyser Longueur avec Unités: unité inconnue %s"
 
 #, python-format
 msgid "Unknown unit: %s"
-msgstr ""
+msgstr "Unité inconnue: %s"
 
 msgid "TRIM after"
-msgstr ""
+msgstr "TRIM après"
 
 msgid "Trim thread after this object (for supported machines and file formats)"
-msgstr ""
+msgstr "Couper le fil après cet objet (pour les machines et les formats de fichiers supportés)"
 
 msgid "STOP after"
-msgstr ""
+msgstr "STOP après"
 
 msgid "Add STOP instruction after this object (for supported machines and file formats)"
-msgstr ""
+msgstr "Ajouter une instruction STOP après cet objet (pour les machines et les formats de fichiers supportés)"
 
