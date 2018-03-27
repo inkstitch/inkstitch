@@ -13,10 +13,45 @@ function setPageNumbers() {
   });
 }
 
+// set preview svg scale to fit into its box
+function scaleInksimulation() {
+  $('.inksimulation').each(function() {
+    var scale = Math.min(
+      $(this).width() / $(this).find('svg').width(),    
+      $(this).height() / $(this).find('svg').height()
+    );
+    
+    if(scale <= 1) {
+      $(this).find('svg').css({
+        transform: "translate(-50%, -50%) " + "scale(" + scale + ")"
+      });
+      $(this).find('figcaption span').text(parseInt(scale*100) + '%');
+    }
+  });
+}
+
 $(function() {
   setTimeout(ping, 1000);
-  
   setPageNumbers();
+  scaleInksimulation();
+  
+  /* Contendeditable Fields */
+  
+  // When we focus out from a contenteditable field, we want to
+  // set the same content to all fields with the same classname
+  document.querySelectorAll('[contenteditable="true"]').forEach(function(elem) {
+    elem.addEventListener('focusout', function() {
+        var content = $(this).html();
+        var style = $(this).attr('class');
+        $('.' + style).html(content);
+    });
+  });
+  
+  // Prevent line breaks in contenteditable fields
+  $('[contenteditable="true"]').keypress(function(e){ return e.which != 13; });
+  
+  
+  /* Settings Bar */
   
   $('button.close').click(function() {
     $.post('/shutdown', {})
@@ -43,20 +78,9 @@ $(function() {
       $('#settings-ui').hide();
   });
   
-  /* When we focus out from a contenteditable field, we want to
-     set the same content to all fields with the same classname */
-  document.querySelectorAll('[contenteditable="true"]').forEach(function(elem) {
-    elem.addEventListener('focusout', function() {
-        var content = $(this).html();
-        var style = $(this).attr('class');
-        $('.' + style).html(content);
-    });
-  });
+  /* Settings */
   
-  // Prevent line breaks in contenteditable fields
-  $('[contenteditable="true"]').keypress(function(e){ return e.which != 13; });
-  
-  // Printing Size
+  // Paper Size
   $('select#printing-size').change(function(){
     $('.page').toggleClass('a4');
   });
@@ -65,6 +89,7 @@ $(function() {
   $(':checkbox').change(function() {
     $('.' + this.id).toggle();
     setPageNumbers();
+    scaleInksimulation();
   });
   
 });

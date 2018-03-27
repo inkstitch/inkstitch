@@ -239,7 +239,18 @@ div {
     max-width: 30mm;
     max-height: 30mm;
   }
-
+  
+  .operator-detailedview figure.brandlogo {
+    height: 20mm;
+    width: 30mm;
+    margin: 0 2.5mm;
+    text-align: left;
+  }
+  
+  .operator-detailedview figure.brandlogo img {
+    max-width: 30mm;
+    max-height: 20mm;
+  }
 
   div.headline {
     display: flex;
@@ -343,9 +354,7 @@ div {
     height: 175mm;
     background: #fff;
     margin: 0 auto;
-    white-space: wrap;
     text-align: center;
-    line-height: 175mm;
     border: 1mm solid grey;
     position: relative;
     overflow: hidden;
@@ -353,12 +362,12 @@ div {
   
   .client-overview-main figure.inksimulation {
     height: 155mm;
-    line-height: 155mm;
   }
 
   figure.inksimulation svg {
-    display: inline;
-    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    left: 50%;
   }
 
   figure.inksimulation figcaption {

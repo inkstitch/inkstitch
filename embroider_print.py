@@ -240,7 +240,7 @@ class Print(InkstitchExtension):
         template = env.get_template('index.html')
 
         html = template.render(
-            view = {'client_overview': True, 'client_detailedview': True, 'operator_overview': False, 'operator_detailedview': False},
+            view = {'client_overview': False, 'client_detailedview': False, 'operator_overview': True, 'operator_detailedview': True},
             logo = {'src' : '', 'title' : 'LOGO'},
             date = date.today(),
             client = "",
