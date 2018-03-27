@@ -90,7 +90,7 @@ body {
     margin-bottom: 5mm;
 }
 
-div {
+* {
     box-sizing: border-box;
 }
 
