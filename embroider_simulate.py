@@ -113,19 +113,7 @@ class EmbroiderySimulator(wx.Frame):
         return string
 
     def color_to_pen(self, color):
-        hls = list(colorsys.rgb_to_hls(*color.rgb_normalized))
-
-        # Our background is white.  If the color is too close to white, then
-        # it won't be visible.  Capping lightness should make colors visible
-        # without changing them too much.
-        hls[1] = min(hls[1], 0.85)
-
-        color = colorsys.hls_to_rgb(*hls)
-
-        # convert back to values in the range of 0-255
-        color = [value * 255 for value in color]
-
-        return wx.Pen(color)
+        return wx.Pen(color.visible_on_white.rgb)
 
     def _stitch_plan_to_segments(self, stitch_plan):
         segments = []

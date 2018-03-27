@@ -3,7 +3,7 @@
   <div class="color-swatch">
     <div class="swatch-info">
        <svg width="100%" height="100%" class="color-swatch-svg" xmlns="http://www.w3.org/2000/svg">
-        <rect fill="rgb{{ color_block.color.rgb }}" width="100%" height="100%" />
+        <rect fill="rgb{{ color_block.color.rgb }}" stroke="rgb(192, 192, 192)" stroke-width="1px" width="100%" height="100%" />
         <text fill="rgb{{ color_block.color.font_color }}">
             <tspan dy="1.2em" x="2mm" y="2mm" class="color-name">{{ _('Color') }}: {{ color_block.color.thread_name }}</tspan>
             {# We don't want to see rgb and thread_used if we have more than 7 colorSwatches to show #}
@@ -30,7 +30,7 @@
   <div class="color-swatch">
     <div class="swatch-info">
        <svg width="100%" height="100%" class="colorSwatchSVG" xmlns="http://www.w3.org/2000/svg">
-        <rect fill="rgb{{ color_block.color.rgb }}" width="40mm" height="100%" />
+        <rect fill="rgb{{ color_block.color.rgb }}" stroke="rgb(192, 192, 192)" width="40mm" height="100%" />
        </svg>
        <div class="color-info">
         <div>    

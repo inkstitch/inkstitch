@@ -8,10 +8,12 @@ class ThreadColor(object):
     def __init__(self, color, name=None, description=None):
         if color is None:
             self.rgb = (0, 0, 0)
+        elif isinstance(color, (list, tuple)):
+            self.rgb = tuple(color)
         elif self.hex_str_re.match(color):
             self.rgb = simplestyle.parseColor(color)
         else:
-            self.rgb = tuple(color)
+            raise ValueError("Invalid color: " + repr(color))
 
         self.name = name
         self.description = description
@@ -48,3 +50,27 @@ class ThreadColor(object):
             return (1, 1, 1)
         else:
             return (254, 254, 254)
+
+    @property
+    def visible_on_white(self):
+        """A ThreadColor similar to this one but visible on white.
+
+        If the thread color is white, we don't want to try to draw white in the
+        simulation view or print white in the print-out.  Choose a color that's
+        as close as possible to the actual thread color but is still at least
+        somewhat visible on a white background.
+        """
+
+        hls = list(colorsys.rgb_to_hls(*self.rgb_normalized))
+
+        # Capping lightness should make the color visible without changing it
+        # too much.
+        if hls[1] > 0.85:
+            hls[1] = 0.85
+
+        color = colorsys.hls_to_rgb(*hls)
+
+        # convert back to values in the range of 0-255
+        color = tuple(value * 255 for value in color)
+
+        return ThreadColor(color, name=self.name, description=self.description)
