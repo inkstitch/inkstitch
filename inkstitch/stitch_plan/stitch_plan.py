@@ -51,7 +51,7 @@ def patches_to_stitch_plan(patches, collapse_len=3.0 * PIXELS_PER_MM):
             need_trim = True
 
         if patch.stop_after:
-            process_stop_after(color_block)
+            process_stop(color_block)
 
     add_ties(stitch_plan)
 
