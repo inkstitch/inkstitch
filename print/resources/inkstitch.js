@@ -20,13 +20,19 @@ function scaleInksimulation() {
       $(this).width() / $(this).find('svg').width(),    
       $(this).height() / $(this).find('svg').height()
     );
-    
+
+    // center the SVG
+    transform = "translate(-50%, -50%)";
+
     if(scale <= 1) {
-      $(this).find('svg').css({
-        transform: "translate(-50%, -50%) " + "scale(" + scale + ")"
-      });
-      $(this).find('figcaption span').text(parseInt(scale*100) + '%');
+      transform += " scale(" + scale + ")";
+      label = parseInt(scale*100) + '%';
+    } else {
+      label = "100%";
     }
+
+    $(this).find('svg').css({ transform: transform });
+    $(this).find('figcaption span').text(label);
   });
 }
 
