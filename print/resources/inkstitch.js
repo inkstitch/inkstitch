@@ -48,13 +48,22 @@ $(function() {
   document.querySelectorAll('[contenteditable="true"]').forEach(function(elem) {
     elem.addEventListener('focusout', function() {
         var content = $(this).html();
-        var style = $(this).attr('class');
-        $('.' + style).html(content);
+        var field_name = $(this).attr('data-field-name');
+        $('[data-field-name="' + field_name + '"]').html(content);
     });
   });
   
-  // Prevent line breaks in contenteditable fields
-  $('[contenteditable="true"]').keypress(function(e){ return e.which != 13; });
+  $('[contenteditable="true"]').keypress(function(e) {
+      if (e.which == 13) {
+          // pressing enter defocuses the element
+          this.blur();
+
+          // also suppress the enter keystroke to avoid adding a new line
+          return false;
+      } else {
+          return true;
+      }
+    });
   
   
   /* Settings Bar */

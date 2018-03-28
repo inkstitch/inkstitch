@@ -51,8 +51,7 @@
                   {{ color_block.svg_preview|safe }}
               </p>
               <p>
-                <span>Thread Company Name</span>
-                <span>{{ color_block.color.thread_name }}</span>
+                <span data-field-name="color-{{ color_block.color.hex_digits }}" contenteditable="true" data-placeholder="Enter thread name...">{{ color_block.color.thread_name }}</span>
                 <span>{{ color_block.color.rgb }}</span>
               </p>
               <p>

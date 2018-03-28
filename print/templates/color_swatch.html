@@ -5,10 +5,7 @@
        <svg width="100%" height="100%" class="color-swatch-svg" xmlns="http://www.w3.org/2000/svg">
         <rect fill="rgb{{ color_block.color.rgb }}" stroke="rgb(192, 192, 192)" stroke-width="1px" width="100%" height="100%" />
         <text fill="rgb{{ color_block.color.font_color }}">
-            {# We don't want to see empty color names #}
-            {% if color_block.color.thread_name %}
-            <tspan dy="1.2em" x="2mm" y="2mm" class="color-name">{{ _('Color') }}: {{ color_block.color.thread_name }}</tspan>
-            {% endif %}
+            <tspan dy="1.2em" x="2mm" y="2mm" class="color-name">{{ _('Color') }}: </tspan><tspan data-field-name="color-{{ color_block.color.hex_digits }}">{{ color_block.color.thread_name }}</tspan>
             {# If color name is not empty, we don't want to see rgb if we have more than 7 colorSwatches #}
             {% if color_blocks|length < 7 or not color_block.color.thread_name %}
             <tspan dy="1.2em" x="2mm" {{ '' if color_block.color.thread_name else 'y="2mm"' }} }} class="color-rgb">{{ _('rgb') }}: {{ color_block.color.rgb }}</tspan>
@@ -39,8 +36,8 @@
         <rect fill="rgb{{ color_block.color.rgb }}" stroke="rgb(192, 192, 192)" width="40mm" height="100%" />
        </svg>
        <div class="color-info">
-        <div>    
-          <p><span class="color-name">{{ _('Color') }}:</span><span>{{ color_block.color.thread_name }}</span></p>
+        <div>
+          <p><span class="color-name">{{ _('Color') }}:</span><span data-field-name="color-{{ color_block.color.hex_digits }}">{{ color_block.color.thread_name }}</span></p>
           <p><span class="color-rgb">{{ _('rgb') }}:</span><span>{{ color_block.color.rgb }}</span></p>
           <p><span class="swatch-thread">{{ _('thread used') }}:</span><span>{{ color_block.color.thread_description }}</span></p>
           <p><span class="swatch-stitches">{{ _('# stitches') }}:</span><span>{{ color_block.num_stitches }}</span></p>

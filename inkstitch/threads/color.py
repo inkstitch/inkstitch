@@ -34,7 +34,11 @@ class ThreadColor(object):
         return "ThreadColor" + repr(self.rgb)
 
     def to_hex_str(self):
-        return "#%02X%02X%02X" % self.rgb
+        return "#%s" % self.hex_digits
+
+    @property
+    def hex_digits(self):
+        return "%02X%02X%02X" % self.rgb
 
     @property
     def rgb_normalized(self):
