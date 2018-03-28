@@ -16,16 +16,6 @@ class Stroke(EmbroideryElement):
         return self.get_style("stroke")
 
     @property
-    @cache
-    def width(self):
-        stroke_width = self.get_style("stroke-width")
-
-        if stroke_width.endswith("px"):
-            stroke_width = stroke_width[:-2]
-
-        return float(stroke_width)
-
-    @property
     def dashed(self):
         return self.get_style("stroke-dasharray") is not None
 
@@ -51,7 +41,7 @@ class Stroke(EmbroideryElement):
 
     def is_running_stitch(self):
         # stroke width <= 0.5 pixels is deprecated in favor of dashed lines
-        return self.dashed or self.width <= 0.5
+        return self.dashed or self.stroke_width <= 0.5
 
     def stroke_points(self, emb_point_list, zigzag_spacing, stroke_width):
         # TODO: use inkstitch.stitches.running_stitch
@@ -112,7 +102,7 @@ class Stroke(EmbroideryElement):
             if self.is_running_stitch():
                 patch = self.stroke_points(path, self.running_stitch_length, stroke_width=0.0)
             else:
-                patch = self.stroke_points(path, self.zigzag_spacing / 2.0, stroke_width=self.width)
+                patch = self.stroke_points(path, self.zigzag_spacing / 2.0, stroke_width=self.stroke_width)
 
             patches.append(patch)
 

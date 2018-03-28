@@ -153,6 +153,12 @@ def get_viewbox_transform(node):
 
     return transform
 
+@cache
+def get_stroke_scale(node):
+    doc_width, doc_height = get_doc_size(node)
+    viewbox = node.get('viewBox').strip().replace(',', ' ').split()
+    return  doc_width / float(viewbox[2])
+
 
 class Stitch(Point):
     def __init__(self, x, y, color=None, jump=False, stop=False, trim=False):

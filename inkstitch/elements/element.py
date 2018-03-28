@@ -3,7 +3,7 @@ from copy import deepcopy
 
 from ..utils import cache
 from shapely import geometry as shgeo
-from .. import _, PIXELS_PER_MM, get_viewbox_transform
+from .. import _, PIXELS_PER_MM, get_viewbox_transform, get_stroke_scale, convert_length
 
 # inkscape-provided utilities
 import simpletransform
@@ -141,9 +141,20 @@ class EmbroideryElement(object):
         return style_name in style
 
     @property
+    @cache
+    def stroke_width(self):
+        width = self.get_style("stroke-width")
+
+        if width is None:
+            return 1.0
+
+        width = convert_length(width)
+
+        return width * get_stroke_scale(self.node.getroottree().getroot())
+
+    @property
     def path(self):
         return cubicsuperpath.parsePath(self.node.get("d"))
-
 
     @cache
     def parse_path(self):
