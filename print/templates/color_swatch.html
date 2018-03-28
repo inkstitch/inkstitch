@@ -6,9 +6,9 @@
         <rect fill="rgb{{ color_block.color.rgb }}" stroke="rgb(192, 192, 192)" stroke-width="1px" width="100%" height="100%" />
         <text fill="rgb{{ color_block.color.font_color }}">
             <tspan dy="1.2em" x="2mm" y="2mm" class="color-name">{{ _('Color') }}: </tspan><tspan data-field-name="color-{{ color_block.color.hex_digits }}">{{ color_block.color.thread_name }}</tspan>
-            {# If color name is not empty, we don't want to see rgb if we have more than 7 colorSwatches #}
-            {% if color_blocks|length < 7 or not color_block.color.thread_name %}
-            <tspan dy="1.2em" x="2mm" {{ '' if color_block.color.thread_name else 'y="2mm"' }} }} class="color-rgb">{{ _('rgb') }}: {{ color_block.color.rgb }}</tspan>
+            {# We don't want to see rgb if we have more than 7 colorSwatches #}
+            {% if color_blocks|length < 7 %}
+            <tspan dy="1.2em" x="2mm" class="color-rgb">{{ _('rgb') }}: {{ color_block.color.rgb }}</tspan>
             {% endif %}
             {# We don't want to see thread_used if we have more than 7 colorSwatches to show #}
             {% if color_blocks|length < 7 %}       
