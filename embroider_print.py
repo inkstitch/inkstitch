@@ -270,13 +270,6 @@ class Print(InkstitchExtension):
         # don't let inkex print the document out
         sys.exit(0)
 
-    def show_print_preview(self, html):
-        cef.Initialize()
-
-        self.browser = cef.CreateBrowserSync(url=html_to_data_uri(html), window_title='Ink/Stitch Print Preview')
-        threading.Timer(3.0, self.browser.Print).start()
-        cef.MessageLoop()
-        cef.Shutdown()
 
 if __name__ == '__main__':
     effect = Print()
