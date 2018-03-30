@@ -1,4 +1,4 @@
-from .. import _
+from .. import _, PIXELS_PER_MM
 from .element import param, EmbroideryElement, Patch
 from ..utils import cache
 from shapely import geometry as shgeo
@@ -34,7 +34,7 @@ class Fill(EmbroideryElement):
     @property
     @param('row_spacing_mm', _('Spacing between rows'), unit='mm', type='float', default=0.25)
     def row_spacing(self):
-        return max(self.get_float_param("row_spacing_mm", 0.25), 0.01)
+        return max(self.get_float_param("row_spacing_mm", 0.25), 0.1 * PIXELS_PER_MM)
 
     @property
     def end_row_spacing(self):
@@ -43,7 +43,7 @@ class Fill(EmbroideryElement):
     @property
     @param('max_stitch_length_mm', _('Maximum fill stitch length'), unit='mm', type='float', default=3.0)
     def max_stitch_length(self):
-        return max(self.get_float_param("max_stitch_length_mm", 3.0), 0.01)
+        return max(self.get_float_param("max_stitch_length_mm", 3.0), 0.1 * PIXELS_PER_MM)
 
     @property
     @param('staggers', _('Stagger rows this many times before repeating'), type='int', default=4)
