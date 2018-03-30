@@ -232,6 +232,12 @@ class Print(InkstitchExtension):
                 element.tag = element.tag[element.tag.index('}',1) + 1:]
 
     def effect(self):
+        # It doesn't really make sense to print just a couple of selected
+        # objects.  It's almost certain they meant to print the whole design.
+        # If they really wanted to print just a few objects, they could set
+        # the rest invisible temporarily.
+        self.selected = {}
+
         if not self.get_elements():
             return
 
