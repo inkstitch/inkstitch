@@ -17,6 +17,7 @@ from inkstitch import _, PIXELS_PER_MM, SVG_GROUP_TAG
 from inkstitch.extensions import InkstitchExtension
 from inkstitch.stitch_plan import patches_to_stitch_plan
 from inkstitch.svg import render_stitch_plan
+from inkstitch.utils import save_stderr, restore_stderr
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from datetime import date
@@ -32,13 +33,11 @@ def datetimeformat(value, format='%Y/%m/%d'):
 
 
 def open_url(url):
-    # Avoid spurious output from xdg-open.  Not only will the user see
-    # anything on stderr, but any output on stdout will crash inkscape.
+    # Avoid spurious output from xdg-open.  Any output on stdout will crash
+    # inkscape.
     null = open(os.devnull, 'w')
     old_stdout = os.dup(sys.stdout.fileno())
-    old_stderr = os.dup(sys.stderr.fileno())
     os.dup2(null.fileno(), sys.stdout.fileno())
-    os.dup2(null.fileno(), sys.stderr.fileno())
 
     if getattr(sys, 'frozen', False):
 
@@ -66,9 +65,7 @@ def open_url(url):
 
     # restore file descriptors
     os.dup2(old_stdout, sys.stdout.fileno())
-    os.dup2(old_stderr, sys.stderr.fileno())
     os.close(old_stdout)
-    os.close(old_stderr)
 
 
 class PrintPreviewServer(Thread):
@@ -318,5 +315,7 @@ class Print(InkstitchExtension):
 
 
 if __name__ == '__main__':
+    save_stderr()
     effect = Print()
     effect.affect()
+    restore_stderr()

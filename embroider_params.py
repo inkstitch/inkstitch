@@ -8,7 +8,6 @@ import traceback
 import time
 from threading import Thread, Event
 from copy import copy
-from cStringIO import StringIO
 import wx
 from wx.lib.scrolledpanel import ScrolledPanel
 from collections import defaultdict
@@ -19,6 +18,7 @@ from inkstitch import _
 from inkstitch.extensions import InkstitchExtension
 from inkstitch.stitch_plan import patches_to_stitch_plan
 from inkstitch.elements import EmbroideryElement, Fill, AutoFill, Stroke, SatinColumn
+from inkstitch.utils import save_stderr, restore_stderr
 from embroider_simulate import EmbroiderySimulator
 
 
@@ -755,21 +755,6 @@ class EmbroiderParams(InkstitchExtension):
             # This prevents the superclass from outputting the SVG, because we
             # may have modified the DOM.
             sys.exit(0)
-
-
-def save_stderr():
-    # GTK likes to spam stderr, which inkscape will show in a dialog.
-    null = open(os.devnull, 'w')
-    sys.stderr_dup = os.dup(sys.stderr.fileno())
-    os.dup2(null.fileno(), 2)
-    sys.stderr_backup = sys.stderr
-    sys.stderr = StringIO()
-
-
-def restore_stderr():
-    os.dup2(sys.stderr_dup, 2)
-    sys.stderr_backup.write(sys.stderr.getvalue())
-    sys.stderr = sys.stderr_backup
 
 
 # end of class MyFrame
