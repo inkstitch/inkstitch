@@ -103,7 +103,10 @@ class EmbroideryElement(object):
         try:
             value = float(self.get_param(param, default))
         except (TypeError, ValueError):
-            return default
+            value = default
+
+        if value is None:
+            return value
 
         if param.endswith('_mm'):
             value = value * PIXELS_PER_MM
