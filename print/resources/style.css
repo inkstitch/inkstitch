@@ -346,6 +346,16 @@ body {
     font-size: 12pt;
     font-weight: bold;
   }
+  
+  /* client dedailed view header */
+  .client-detailedview div.job-details p span:first-child {
+    width: 20mm; 
+  }
+  
+  .client-detailedview div.job-details p span:last-child {
+    max-width: 60mm; 
+  }
+  
 
 /* SVG Preview Image */
 

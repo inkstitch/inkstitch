@@ -15,6 +15,7 @@
 {# client detailedview #}    
         {% set printview = 'detailedview' %}
         {% for color_block in color_blocks %}
+            {% set outer_loop = loop %}
             <div class="page client-detailedview" style="display: {{ 'block' if view.client_detailedview else 'none' }}">{% include 'print_detail.html' %}</div>
         {% endfor %}
 

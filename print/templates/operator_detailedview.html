@@ -44,8 +44,10 @@
               <p class="operator-svg operator-colorswatch">
                 <svg xmlns="http://www.w3.org/2000/svg">
                   <rect fill="rgb{{ color_block.color.rgb }}" width="15mm" height="100%" />
+                  <text fill="rgb{{ color_block.color.font_color }}">
+                    <tspan x="4mm" y="7.5mm" class="color-index">#{{ loop.index + outer_loop.index0 * 13 }}</tspan>
+                  </text>
                 </svg>
-                <span class="color-index" style="color: rgb{{ color_block.color.font_color }}">#{{ loop.index + outer_loop.index0 * 13 }}</span>
               </p>
               <p class="operator-svg operator-preview">
                   {{ color_block.svg_preview|safe }}

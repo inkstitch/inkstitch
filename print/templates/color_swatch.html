@@ -37,7 +37,7 @@
        </svg>
        <div class="color-info">
         <div>
-          <p><span class="color-name">{{ _('Color') }}:</span><span data-field-name="color-{{ color_block.color.hex_digits }}">{{ color_block.color.thread_name }}</span></p>
+          <p><span class="color-name">{{ _('Color') }}:</span><span data-field-name="color-{{ color_block.color.hex_digits }}" contenteditable="true" data-placeholder="Enter thread name...">{{ color_block.color.thread_name }}</span></p>
           <p><span class="color-rgb">{{ _('rgb') }}:</span><span>{{ color_block.color.rgb }}</span></p>
           <p><span class="swatch-thread">{{ _('thread used') }}:</span><span>{{ color_block.color.thread_description }}</span></p>
           <p><span class="swatch-stitches">{{ _('# stitches') }}:</span><span>{{ color_block.num_stitches }}</span></p>
