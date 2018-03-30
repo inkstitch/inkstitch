@@ -9,6 +9,7 @@ import socket
 import errno
 import time
 import logging
+import wx
 
 import inkex
 import inkstitch
@@ -131,6 +132,11 @@ class PrintPreviewServer(Thread):
             # nothing to do here -- request_started() will restart the watcher
             return "OK"
 
+    def stop(self):
+        # for whatever reason, shutting down only seems possible in
+        # the context of a flask request, so we'll just make one
+        requests.post("http://%s:%s/shutdown" % (self.host, self.port))
+
     def watch(self):
         try:
             while True:
@@ -139,10 +145,8 @@ class PrintPreviewServer(Thread):
                     break
 
                 if self.last_request_time is not None and \
-                    (time.time() - self.last_request_time) > 4:
-                        # for whatever reason, shutting down only seems possible in
-                        # the context of a flask request, so we'll just make one
-                        r = requests.post("http://%s:%s/shutdown" % (self.host, self.port))
+                    (time.time() - self.last_request_time) > 3:
+                        self.stop()
                         break
         except:
             # seems like sometimes this thread blows up during shutdown
@@ -169,6 +173,38 @@ class PrintPreviewServer(Thread):
             else:
                 break
 
+
+class PrintInfoFrame(wx.Frame):
+    def __init__(self, *args, **kwargs):
+        self.print_server = kwargs.pop("print_server")
+        wx.Frame.__init__(self, *args, **kwargs)
+
+        panel = wx.Panel(self)
+        sizer = wx.BoxSizer(wx.VERTICAL)
+
+        text = wx.StaticText(panel, label=_("A print preview has been opened in your web browser.  This window will stay open in order to communicate with the JavaScript code running in your browser.\n\nThis window will close after you close the print preview in your browser, or you can close it manually if necessary."))
+        font = wx.Font(14, wx.DEFAULT, wx.NORMAL, wx.NORMAL)
+        text.SetFont(font)
+        sizer.Add(text, proportion=1, flag=wx.ALL|wx.EXPAND, border=20)
+
+        stop_button = wx.Button(panel, id=wx.ID_CLOSE)
+        stop_button.Bind(wx.EVT_BUTTON, self.close_button_clicked)
+        sizer.Add(stop_button, proportion=0, flag=wx.ALIGN_CENTER|wx.ALL, border=10)
+
+        panel.SetSizer(sizer)
+        panel.Layout()
+
+        self.timer = wx.PyTimer(self.__watcher)
+        self.timer.Start(250)
+
+    def close_button_clicked(self, event):
+        self.print_server.stop()
+
+    def __watcher(self):
+        if not self.print_server.is_alive():
+            self.timer.Stop()
+            self.timer = None
+            self.Destroy()
 
 
 class Print(InkstitchExtension):
@@ -260,12 +296,16 @@ class Print(InkstitchExtension):
             color_blocks = stitch_plan.color_blocks,
         )
 
-        print_preview_server = PrintPreviewServer(html=html)
-        print_preview_server.start()
+        print_server = PrintPreviewServer(html=html)
+        print_server.start()
 
         time.sleep(1)
-        open_url("http://%s:%s/" % (print_preview_server.host, print_preview_server.port))
-        print_preview_server.join()
+        open_url("http://%s:%s/" % (print_server.host, print_server.port))
+
+        app = wx.App()
+        info_frame = PrintInfoFrame(None, title=_("Ink/Stitch Print"), size=(450, 350), print_server=print_server)
+        info_frame.Show()
+        app.MainLoop()
 
         # don't let inkex print the document out
         sys.exit(0)
