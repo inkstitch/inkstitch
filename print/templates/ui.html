@@ -1,0 +1,33 @@
+    <div class="ui">
+        <p class="header">{{ _('Ink/Stitch Print Preview') }}</p>
+        <div class="buttons">
+          <button class="print">{{ _('Print') }}</button>
+          <button class="settings">{{ _('Settings') }}</button>
+          <button class="close">{{ _('Close') }}</button>
+        </div>
+        <div id="errors">
+          {{ _('⚠ lost connection to Ink/Stitch') }}
+        </div>
+    </div>
+    
+    <div id="settings-ui">
+      <p id="close-settings">X</p>
+      <h1>{{ _('Settings') }}</h1>
+      <div>
+        <p>{{ _('Printing Size') }}: 
+          <select id="printing-size">
+            <option value="letter" selected="selected">Letter</option>
+            <option value="a4">A4</option>
+          </select>
+        </p>
+      </div>
+      <div>
+       <fieldset>
+          <legend>{{ ('Print Layouts') }}:</legend>
+          <p><input type="checkbox" id="client-overview" {{ 'checked' if view.client_overview else '' }}><label for="client-overview">Client Overview</label></p>
+          <p><input type="checkbox" id="client-detailedview" {{ 'checked' if view.client_detailedview else '' }}><label for="client-detailedview">Client Detailed View</label></p>
+          <p><input type="checkbox" id="operator-overview" {{ 'checked' if view.operator_overview else '' }}><label for="operator-overview">Operator Overview</label></p>
+          <p><input type="checkbox" id="operator-detailedview" {{ 'checked' if view.operator_detailedview else '' }}><label for="operator-overview">Operator Detailed View</label></p>
+        </fieldset>
+      </div>
+    </div>

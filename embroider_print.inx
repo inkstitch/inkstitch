@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <_name>Update embroidery param names</_name>
-    <id>lexelby.embroider.update</id>
-    <dependency type="executable" location="extensions">embroider_update.py</dependency>
+    <_name>Print</_name>
+    <id>jonh.embroider.print</id>
+    <dependency type="executable" location="extensions">embroider_print.py</dependency>
     <dependency type="executable" location="extensions">inkex.py</dependency>
     <effect>
         <object-type>all</object-type>
@@ -11,6 +11,6 @@
         </effects-menu>
     </effect>
     <script>
-        <command reldir="extensions" interpreter="python">embroider_update.py</command>
+        <command reldir="extensions" interpreter="python">embroider_print.py</command>
     </script>
 </inkscape-extension>

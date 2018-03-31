@@ -1,4 +1,4 @@
-EXTENSIONS:=embroider embroider_params embroider_simulate embroider_update
+EXTENSIONS:=embroider embroider_params embroider_simulate embroider_print
 
 # This gets the branch name or the name of the tag
 VERSION:=$(TRAVIS_BRANCH)
@@ -8,7 +8,9 @@ ARCH:=$(shell uname -m)
 dist: distclean locales
 	bin/build-dist $(EXTENSIONS)
 	cp *.inx dist
-	mv locales dist/inkstitch/bin
+	mkdir -p dist/inkstitch/bin/locales
+	cp -a locales/* dist/inkstitch/bin/locales
+	cp -a print dist/inkstitch/bin/
 	if [ "$$BUILD" = "windows" ]; then \
 		cd dist; zip -r ../inkstitch-$(VERSION)-win32.zip *; \
 	else \
@@ -20,7 +22,7 @@ distclean:
 
 messages.po:
 	rm -f messages.po
-	xgettext --no-location --add-comments embroider*.py inkstitch/__init__.py
+	pybabel extract -o messages.po -F babel.conf --no-location --add-comments l10n --add-comments L10n --add-comments L10N -s .
 
 .PHONY: messages.po
 .PHONY: locales

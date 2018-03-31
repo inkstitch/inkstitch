@@ -29,6 +29,10 @@ def running_stitch(points, stitch_length):
     for segment_end in points[1:]:
         segment = segment_end - segment_start
         segment_length = segment.length()
+
+        if segment_length == 0:
+            continue
+
         segment_direction = segment.unit()
 
         # corner detection

@@ -5,3 +5,6 @@ shapely
 lxml
 appdirs
 numpy
+jinja2
+flask
+requests
