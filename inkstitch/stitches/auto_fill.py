@@ -416,7 +416,7 @@ def connect_points(shape, start, end, running_stitch_length):
     #print >> dbg, "connect_points:", outline_index, start, end, distance, stitches, direction
     #dbg.flush()
 
-    stitches = [InkstitchPoint(*start)]
+    stitches = [InkstitchPoint(*outline.interpolate(pos).coords[0])]
 
     for i in xrange(num_stitches):
         pos = (pos + one_stitch) % outline.length

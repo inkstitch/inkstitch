@@ -1,4 +1,5 @@
-from .. import Point as InkstitchPoint, cache, PIXELS_PER_MM
+from .. import PIXELS_PER_MM
+from ..utils import cache, Point as InkstitchPoint
 import shapely
 import math
 import sys

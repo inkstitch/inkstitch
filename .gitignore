@@ -1,4 +1,5 @@
-.*.swp
+*.swp
+*.kate-swp
 *.pyc
 *.spec
 *.zip

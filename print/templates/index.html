@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ink/Stitch Print Preview</title>
+    <script src="resources/jquery-3.3.1.min.js"></script>
+    <script src="resources/inkstitch.js"></script>
+    <link rel="stylesheet" href="resources/style.css" />
+</head>
+<body>
+    {% include 'ui.html' %}
+    
+{# client overview #}    
+        <div class="page client-overview" style="display: {{ 'block' if view.client_overview else 'none' }}">{% include 'print_overview.html' %}</div>
+        
+{# client detailedview #}    
+        {% set printview = 'detailedview' %}
+        {% for color_block in color_blocks %}
+            {% set outer_loop = loop %}
+            <div class="page client-detailedview" style="display: {{ 'block' if view.client_detailedview else 'none' }}">{% include 'print_detail.html' %}</div>
+        {% endfor %}
+
+{# operator overview #}    
+        <div class="page operator-overview" style="display: {{ 'block' if view.operator_overview else 'none' }}">{% include 'operator_overview.html' %}</div>
+    
+{# operator detailed view #}
+    {% for color_block_part in color_blocks | batch(13) %}
+        {% set outer_loop = loop %}
+        <div class="page operator-detailedview" style="display: {{ 'block' if view.operator_detailedview else 'none' }}">{% include 'operator_detailedview.html' %}</div>
+    {% endfor %}
+
+</body>
+</html>

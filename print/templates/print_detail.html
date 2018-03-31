@@ -1,0 +1,28 @@
+        <header>
+            {% include 'headline.html' %}
+            <div class="job-details">
+                <div>
+                    <div class="table">
+                      <p><span>{{ _('COLOR') }}:</span><span data-field-name="color-{{ color_block.color.hex_digits }}" contenteditable="true" data-placeholder="Enter thread name...">{{ color_block.color.thread_name }}</span></p>
+                    </div>
+                </div>
+                <div>
+                    <div class="table">
+                      <p><span>{{ _('Estimated time') }}:</span></p>
+                      <p><span>{{ color_block.estimatedtime }}</span></p>
+                  </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <figure class="inksimulation">
+                {{color_block.svg_preview|safe}}
+                <figcaption>{{ _('Scale') }} <span>{{ svg_scale }}</span></figcaption>
+            </figure> 
+            
+            <div class="color-palette detailed">
+                {% include 'color_swatch.html' %}
+            </div>
+        </main>
+
+      {% include 'footer.html' %}
