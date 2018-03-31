@@ -47,6 +47,17 @@
         margin-top: 20mm !important;
         outline: 1px dotted grey;
     }
+
+    .header-field::before {
+        content: attr(data-label);
+        padding-right: 0.5em;
+    }
+
+    [contenteditable=true]:empty::after{
+      content: attr(data-placeholder);
+      color: rgb(200, 200, 200);
+      font-weight: normal;
+    }
 }
 
 @media print {
@@ -67,12 +78,13 @@
       display: none !important;
     }
     
-    [contenteditable="true"]:empty::before {
-      content: "" !important;
-    }
-
     #errors {
       display: none !important;
+    }
+
+    .header-field:not(:empty)::before {
+        content: attr(data-label);
+        padding-right: 0.5em;
     }
 }
 
@@ -266,17 +278,6 @@ body {
 
   div.headline p {
     font-size: 12pt;
-  }
-
-  [contenteditable=true]:empty::before{
-    content: attr(data-placeholder);
-    color: rgb(200, 200, 200);
-    font-weight: normal;
-    display: inline-block;
-  }
-
-  [contenteditable=true] {
-    display: inline-block;
   }
 
   div.job-details {

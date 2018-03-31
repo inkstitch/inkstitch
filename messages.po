@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-03-29 21:05-0400\n"
+"POT-Creation-Date: 2018-03-30 20:26-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -312,6 +312,12 @@ msgstr ""
 msgid "Enter client name..."
 msgstr ""
 
+msgid "PURCHASE ORDER #:"
+msgstr ""
+
+msgid "Enter purchase order number..."
+msgstr ""
+
 #, python-format
 msgid "%Y.%m.%d"
 msgstr ""
@@ -352,10 +358,10 @@ msgstr ""
 msgid "Scale"
 msgstr ""
 
-msgid "PO.NR"
+msgid "COLOR"
 msgstr ""
 
-msgid "COLOR"
+msgid "Estimated time"
 msgstr ""
 
 msgid "Client Signature"
