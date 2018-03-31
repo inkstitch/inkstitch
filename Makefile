@@ -8,6 +8,7 @@ ARCH:=$(shell uname -m)
 dist: distclean locales
 	bin/build-dist $(EXTENSIONS)
 	cp *.inx dist
+	cp -a images/examples dist/inkstitch
 	mkdir -p dist/inkstitch/bin/locales
 	cp -a locales/* dist/inkstitch/bin/locales
 	cp -a print dist/inkstitch/bin/
