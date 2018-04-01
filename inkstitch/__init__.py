@@ -274,12 +274,13 @@ def write_embroidery_file(file_path, stitch_plan, svg):
         add_thread(pattern, make_thread(color_block.color))
 
         for stitch in color_block:
-            if stitch.stop:
-                # The user specified "STOP after".  "STOP" is the same thing as
-                # a color change, and the user will assign a special color at
-                # the machine that tells it to pause after.  We need to add
-                # another copy of the same color here so that the stitches after
-                # the STOP are still the same color.
+            if stitch.stop and stitch is not color_block.last_stitch:
+                # A STOP stitch that is not at the end of a color block
+                # occurs when the user specified "STOP after".  "STOP" is the
+                # same thing as a color change, and the user will assign a
+                # special color at the machine that tells it to pause after.
+                # We need to add another copy of the same color here so that
+                # the stitches after the STOP are still the same color.
                 add_thread(pattern, make_thread(color_block.color))
 
             flags = get_flags(stitch)
