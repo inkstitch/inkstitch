@@ -40,7 +40,8 @@ def color_block_to_paths(color_block, svg):
                 'stroke-width': "0.4",
                 'fill': 'none'}),
             'd': "M" + " ".join(" ".join(str(coord) for coord in point) for point in point_list),
-            'transform': get_correction_transform(svg)
+            'transform': get_correction_transform(svg),
+            'embroider_manual_stitch': 'true'
             }))
 
     return polylines
