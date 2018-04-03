@@ -1,157 +1,24 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-24 20:39-0500\n"
-"PO-Revision-Date: 2018-02-26 19:52-0500\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-03-30 20:26-0400\n"
+"PO-Revision-Date: 2018-03-30 20:40-0400\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Turkish\n"
-"Language: tr_TR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: inkstitch\n"
 "X-Crowdin-Language: tr\n"
 "X-Crowdin-File: /master/messages.po\n"
-
-msgid "Fill"
-msgstr ""
-
-msgid "Manually routed fill stitching"
-msgstr ""
-
-msgid "Angle of lines of stitches"
-msgstr ""
-
-msgid "Flip fill (start right-to-left)"
-msgstr ""
-
-msgid "Spacing between rows"
-msgstr ""
-
-msgid "Maximum fill stitch length"
-msgstr ""
-
-msgid "Stagger rows this many times before repeating"
-msgstr ""
-
-msgid "Auto-Fill"
-msgstr ""
-
-msgid "Automatically routed fill stitching"
-msgstr ""
-
-msgid "Running stitch length (traversal between sections)"
-msgstr ""
-
-msgid "Underlay"
-msgstr ""
-
-msgid "AutoFill Underlay"
-msgstr ""
-
-msgid "Fill angle (default: fill angle + 90 deg)"
-msgstr ""
-
-msgid "Row spacing (default: 3x fill row spacing)"
-msgstr ""
-
-msgid "Max stitch length"
-msgstr ""
-
-msgid "Unable to autofill.  This most often happens because your shape is made up of multiple sections that aren't connected."
-msgstr ""
-
-msgid "Unexpected error while generating fill stitches. Please send your SVG file to lexelby@github."
-msgstr ""
-
-msgid "Satin stitch along paths"
-msgstr ""
-
-msgid "Running stitch length"
-msgstr ""
-
-msgid "Zig-zag spacing (peak-to-peak)"
-msgstr ""
-
-msgid "Repeats"
-msgstr ""
-
-msgid "Satin Column"
-msgstr ""
-
-msgid "Custom satin column"
-msgstr ""
-
-msgid "Pull compensation"
-msgstr ""
-
-msgid "Contour underlay"
-msgstr ""
-
-msgid "Contour Underlay"
-msgstr ""
-
-msgid "Stitch length"
-msgstr ""
-
-msgid "Contour underlay inset amount"
-msgstr ""
-
-msgid "Center-walk underlay"
-msgstr ""
-
-msgid "Center-Walk Underlay"
-msgstr ""
-
-msgid "Zig-zag underlay"
-msgstr ""
-
-msgid "Zig-zag Underlay"
-msgstr ""
-
-msgid "Zig-Zag spacing (peak-to-peak)"
-msgstr ""
-
-msgid "Inset amount (default: half of contour underlay inset)"
-msgstr ""
-
-msgid "One or more rails crosses itself, and this is not allowed.  Please split into multiple satin columns."
-msgstr ""
-
-msgid "satin column: One or more of the rungs doesn't intersect both rails."
-msgstr ""
-
-msgid "Each rail should intersect both rungs once."
-msgstr ""
-
-msgid "satin column: One or more of the rungs intersects the rails more than once."
-msgstr ""
-
-#, python-format
-msgid "satin column: object %s has a fill (but should not)"
-msgstr ""
-
-#, python-format
-msgid "satin column: object %(id)s has two paths with an unequal number of points (%(length1)d and %(length2)d)"
-msgstr ""
+"Language: tr_TR\n"
 
 msgid "\n\n"
 "Seeing a 'no such option' message?  Please restart Inkscape to fix."
-msgstr ""
-
-msgid "No embroiderable paths selected."
-msgstr ""
-
-msgid "No embroiderable paths found in document."
-msgstr ""
-
-msgid "Tip: use Path -> Object to Path to convert non-paths before embroidering."
-msgstr ""
-
-msgid "Embroidery"
 msgstr ""
 
 msgid "These settings will be applied to 1 object."
@@ -225,6 +92,13 @@ msgstr ""
 msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
 msgstr ""
 
+msgid "A print preview has been opened in your web browser.  This window will stay open in order to communicate with the JavaScript code running in your browser.\n\n"
+"This window will close after you close the print preview in your browser, or you can close it manually if necessary."
+msgstr ""
+
+msgid "Ink/Stitch Print"
+msgstr ""
+
 msgid "Embroidery Simulation"
 msgstr ""
 
@@ -234,6 +108,45 @@ msgstr ""
 
 #, python-format
 msgid "Unknown unit: %s"
+msgstr ""
+
+msgid "No embroiderable paths selected."
+msgstr ""
+
+msgid "No embroiderable paths found in document."
+msgstr ""
+
+msgid "Tip: use Path -> Object to Path to convert non-paths before embroidering."
+msgstr ""
+
+msgid "Stitch Plan"
+msgstr ""
+
+msgid "Auto-Fill"
+msgstr ""
+
+msgid "Automatically routed fill stitching"
+msgstr ""
+
+msgid "Running stitch length (traversal between sections)"
+msgstr ""
+
+msgid "Underlay"
+msgstr ""
+
+msgid "AutoFill Underlay"
+msgstr ""
+
+msgid "Fill angle (default: fill angle + 90 deg)"
+msgstr ""
+
+msgid "Row spacing (default: 3x fill row spacing)"
+msgstr ""
+
+msgid "Max stitch length"
+msgstr ""
+
+msgid "Inset"
 msgstr ""
 
 msgid "TRIM after"
@@ -246,5 +159,206 @@ msgid "STOP after"
 msgstr ""
 
 msgid "Add STOP instruction after this object (for supported machines and file formats)"
+msgstr ""
+
+msgid "Fill"
+msgstr ""
+
+msgid "Manually routed fill stitching"
+msgstr ""
+
+msgid "Angle of lines of stitches"
+msgstr ""
+
+msgid "Flip fill (start right-to-left)"
+msgstr ""
+
+msgid "Spacing between rows"
+msgstr ""
+
+msgid "Maximum fill stitch length"
+msgstr ""
+
+msgid "Stagger rows this many times before repeating"
+msgstr ""
+
+msgid "Satin Column"
+msgstr ""
+
+msgid "Custom satin column"
+msgstr ""
+
+msgid "Zig-zag spacing (peak-to-peak)"
+msgstr ""
+
+msgid "Pull compensation"
+msgstr ""
+
+msgid "Contour underlay"
+msgstr ""
+
+msgid "Contour Underlay"
+msgstr ""
+
+msgid "Stitch length"
+msgstr ""
+
+msgid "Contour underlay inset amount"
+msgstr ""
+
+msgid "Center-walk underlay"
+msgstr ""
+
+msgid "Center-Walk Underlay"
+msgstr ""
+
+msgid "Zig-zag underlay"
+msgstr ""
+
+msgid "Zig-zag Underlay"
+msgstr ""
+
+msgid "Zig-Zag spacing (peak-to-peak)"
+msgstr ""
+
+msgid "Inset amount (default: half of contour underlay inset)"
+msgstr ""
+
+msgid "One or more rails crosses itself, and this is not allowed.  Please split into multiple satin columns."
+msgstr ""
+
+msgid "satin column: One or more of the rungs doesn't intersect both rails."
+msgstr ""
+
+msgid "Each rail should intersect both rungs once."
+msgstr ""
+
+msgid "satin column: One or more of the rungs intersects the rails more than once."
+msgstr ""
+
+#, python-format
+msgid "satin column: object %s has a fill (but should not)"
+msgstr ""
+
+#, python-format
+msgid "satin column: object %(id)s has two paths with an unequal number of points (%(length1)d and %(length2)d)"
+msgstr ""
+
+msgid "Satin stitch along paths"
+msgstr ""
+
+msgid "Running stitch length"
+msgstr ""
+
+msgid "Repeats"
+msgstr ""
+
+msgid "Unable to autofill.  This most often happens because your shape is made up of multiple sections that aren't connected."
+msgstr ""
+
+msgid "Unexpected error while generating fill stitches. Please send your SVG file to lexelby@github."
+msgstr ""
+
+msgid "Color"
+msgstr ""
+
+msgid "rgb"
+msgstr ""
+
+msgid "thread used"
+msgstr ""
+
+msgid "# stitches"
+msgstr ""
+
+msgid "# stops"
+msgstr ""
+
+msgid "# trims"
+msgstr ""
+
+msgid "Page"
+msgstr ""
+
+msgid "Enter job title..."
+msgstr ""
+
+msgid "CLIENT"
+msgstr ""
+
+msgid "Enter client name..."
+msgstr ""
+
+msgid "PURCHASE ORDER #:"
+msgstr ""
+
+msgid "Enter purchase order number..."
+msgstr ""
+
+#, python-format
+msgid "%Y.%m.%d"
+msgstr ""
+
+msgid "Thread Consumption"
+msgstr ""
+
+msgid "Stops and Trims"
+msgstr ""
+
+msgid "Estimated Time"
+msgstr ""
+
+msgid "Unique Colors"
+msgstr ""
+
+msgid "Color Blocks"
+msgstr ""
+
+msgid "Design box size"
+msgstr ""
+
+msgid "Total thread used"
+msgstr ""
+
+msgid "Total stitch count"
+msgstr ""
+
+msgid "Total nr stops"
+msgstr ""
+
+msgid "Total nr trims"
+msgstr ""
+
+msgid "Job estimated time"
+msgstr ""
+
+msgid "Scale"
+msgstr ""
+
+msgid "COLOR"
+msgstr ""
+
+msgid "Estimated time"
+msgstr ""
+
+msgid "Client Signature"
+msgstr ""
+
+msgid "Ink/Stitch Print Preview"
+msgstr ""
+
+msgid "Print"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "⚠ lost connection to Ink/Stitch"
+msgstr ""
+
+msgid "Printing Size"
 msgstr ""
 

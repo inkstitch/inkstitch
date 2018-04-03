@@ -1,250 +1,364 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-24 20:39-0500\n"
-"PO-Revision-Date: 2018-02-26 19:52-0500\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-03-30 20:26-0400\n"
+"PO-Revision-Date: 2018-03-30 20:40-0400\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: French\n"
-"Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: inkstitch\n"
 "X-Crowdin-Language: fr\n"
 "X-Crowdin-File: /master/messages.po\n"
+"Language: fr_FR\n"
 
-msgid "Fill"
+msgid "\n\n"
+"Seeing a 'no such option' message?  Please restart Inkscape to fix."
+msgstr "Vous voyez un message 'aucune option' ? Veuillez redémarrer Inkscape pour corriger."
+
+msgid "These settings will be applied to 1 object."
+msgstr "Ces paramètres seront appliqués à 1 objet."
+
+#, python-format
+msgid "These settings will be applied to %d objects."
+msgstr "Ces paramètres seront appliqués aux %d objets."
+
+msgid "Some settings had different values across objects.  Select a value from the dropdown or enter a new one."
+msgstr "Certains paramètres ont des valeurs différentes d'un objet à l'autre. Sélectionnez une valeur dans la liste déroulante ou entrez-en une nouvelle."
+
+#, python-format
+msgid "Disabling this tab will disable the following %d tabs."
+msgstr "La désactivation de cet onglet désactivera les onglets %d suivants."
+
+msgid "Disabling this tab will disable the following tab."
+msgstr "La désactivation de cet onglet désactivera l'onglet suivant."
+
+#, python-format
+msgid "Enabling this tab will disable %s and vice-versa."
+msgstr "Activer cet onglet désactivera %s et vice-versa."
+
+msgid "Inkscape objects"
+msgstr "Objets Inkscape"
+
+msgid "Embroidery Params"
+msgstr "Paramètres de broderie"
+
+msgid "Presets"
+msgstr "Présélection"
+
+msgid "Load"
+msgstr "Charger"
+
+msgid "Add"
+msgstr "Ajouter"
+
+msgid "Overwrite"
+msgstr "Écraser"
+
+msgid "Delete"
+msgstr "Effacer"
+
+msgid "Cancel"
+msgstr "Quitter"
+
+msgid "Use Last Settings"
+msgstr "Utiliser les derniers paramètres"
+
+msgid "Apply and Quit"
+msgstr "Appliquer et Quitter"
+
+msgid "Preview"
+msgstr "Aperçu"
+
+msgid "Internal Error"
+msgstr "Erreur interne"
+
+msgid "Please enter or select a preset name first."
+msgstr "Veuillez entrer ou sélectionner un nom prédéfini en premier."
+
+msgid "Preset"
+msgstr "Préréglage"
+
+#, python-format
+msgid "Preset \"%s\" not found."
+msgstr "Le préréglage \"%s\" n'a pas été trouvé."
+
+#, python-format
+msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
+msgstr "Le préréglage \"%s\" existe déjà. Veuillez utiliser un autre nom ou appuyez sur \"Écraser\""
+
+msgid "A print preview has been opened in your web browser.  This window will stay open in order to communicate with the JavaScript code running in your browser.\n\n"
+"This window will close after you close the print preview in your browser, or you can close it manually if necessary."
 msgstr ""
 
-msgid "Manually routed fill stitching"
+msgid "Ink/Stitch Print"
 msgstr ""
 
-msgid "Angle of lines of stitches"
-msgstr ""
+msgid "Embroidery Simulation"
+msgstr "Simulation de broderie"
 
-msgid "Flip fill (start right-to-left)"
-msgstr ""
+#, python-format
+msgid "parseLengthWithUnits: unknown unit %s"
+msgstr "analyser Longueur avec Unités: unité inconnue %s"
 
-msgid "Spacing between rows"
-msgstr ""
+#, python-format
+msgid "Unknown unit: %s"
+msgstr "Unité inconnue: %s"
 
-msgid "Maximum fill stitch length"
-msgstr ""
+msgid "No embroiderable paths selected."
+msgstr "Aucun chemin brodable sélectionné."
 
-msgid "Stagger rows this many times before repeating"
+msgid "No embroiderable paths found in document."
+msgstr "Aucun chemin brodable trouvé dans le document."
+
+msgid "Tip: use Path -> Object to Path to convert non-paths before embroidering."
+msgstr "Astuce: utilisez Path -> Object to Path pour convertir les non-chemins avant de broder."
+
+msgid "Stitch Plan"
 msgstr ""
 
 msgid "Auto-Fill"
-msgstr ""
+msgstr "Remplissage automatique"
 
 msgid "Automatically routed fill stitching"
 msgstr ""
 
 msgid "Running stitch length (traversal between sections)"
-msgstr ""
+msgstr "Longueur du point de fonctionnement (parcours entre les sections)"
 
 msgid "Underlay"
-msgstr ""
+msgstr "Sous-couche"
 
 msgid "AutoFill Underlay"
-msgstr ""
+msgstr "Sous-couche de remplissage automatique"
 
 msgid "Fill angle (default: fill angle + 90 deg)"
-msgstr ""
+msgstr "Angle de remplissage (par défaut : remplir l’angle + 90 deg)"
 
 msgid "Row spacing (default: 3x fill row spacing)"
-msgstr ""
+msgstr "Espacement des rangs (par défaut: 3 fois l'espacement des rangs de remplissage)"
 
 msgid "Max stitch length"
+msgstr "Longueur de point maximal"
+
+msgid "Inset"
 msgstr ""
 
-msgid "Unable to autofill.  This most often happens because your shape is made up of multiple sections that aren't connected."
+msgid "TRIM after"
+msgstr "TRIM après"
+
+msgid "Trim thread after this object (for supported machines and file formats)"
+msgstr "Couper le fil après cet objet (pour les machines et les formats de fichiers supportés)"
+
+msgid "STOP after"
+msgstr "STOP après"
+
+msgid "Add STOP instruction after this object (for supported machines and file formats)"
+msgstr "Ajouter une instruction STOP après cet objet (pour les machines et les formats de fichiers supportés)"
+
+msgid "Fill"
+msgstr "Remplir"
+
+msgid "Manually routed fill stitching"
 msgstr ""
 
-msgid "Unexpected error while generating fill stitches. Please send your SVG file to lexelby@github."
+msgid "Angle of lines of stitches"
+msgstr "Angle des lignes de points"
+
+msgid "Flip fill (start right-to-left)"
 msgstr ""
 
-msgid "Satin stitch along paths"
-msgstr ""
+msgid "Spacing between rows"
+msgstr "Espacement entre les lignes"
 
-msgid "Running stitch length"
-msgstr ""
+msgid "Maximum fill stitch length"
+msgstr "Longueur de point maximale de remplissage"
 
-msgid "Zig-zag spacing (peak-to-peak)"
-msgstr ""
-
-msgid "Repeats"
-msgstr ""
+msgid "Stagger rows this many times before repeating"
+msgstr "Décaler les lignes avant de répéter plusieurs fois"
 
 msgid "Satin Column"
 msgstr ""
 
 msgid "Custom satin column"
-msgstr ""
+msgstr "Colonne de satin personnalisée"
+
+msgid "Zig-zag spacing (peak-to-peak)"
+msgstr "Espacement Zig-Zag (crête à crête)"
 
 msgid "Pull compensation"
 msgstr ""
 
 msgid "Contour underlay"
-msgstr ""
+msgstr "Sous-couche de contour"
 
 msgid "Contour Underlay"
-msgstr ""
+msgstr "Sous-couche de Contour"
 
 msgid "Stitch length"
-msgstr ""
+msgstr "Longueur de point"
 
 msgid "Contour underlay inset amount"
 msgstr ""
 
 msgid "Center-walk underlay"
-msgstr ""
+msgstr "Sous-couche de marche centrale"
 
 msgid "Center-Walk Underlay"
-msgstr ""
+msgstr "Sous-couche de Marche-centrale"
 
 msgid "Zig-zag underlay"
-msgstr ""
+msgstr "Sous-couche Zig-zag"
 
 msgid "Zig-zag Underlay"
-msgstr ""
+msgstr "Sous-couche Zig-zag"
 
 msgid "Zig-Zag spacing (peak-to-peak)"
-msgstr ""
+msgstr "Espacement Zig-Zag (crête à crête)"
 
 msgid "Inset amount (default: half of contour underlay inset)"
-msgstr ""
+msgstr "Montant de l'incrustation (par défaut: la moitié de l'incrustation de sous-couche de contour)"
 
 msgid "One or more rails crosses itself, and this is not allowed.  Please split into multiple satin columns."
-msgstr ""
+msgstr "Un ou plusieurs rails se croisent, ce qui n'est pas autorisé. S'il vous plaît diviser en plusieurs colonnes de satin."
 
 msgid "satin column: One or more of the rungs doesn't intersect both rails."
-msgstr ""
+msgstr "colonne satinée: un ou plusieurs des échelons ne croisent pas les deux rails."
 
 msgid "Each rail should intersect both rungs once."
-msgstr ""
+msgstr "Chaque rail devrait croiser les deux échelons une fois."
 
 msgid "satin column: One or more of the rungs intersects the rails more than once."
-msgstr ""
+msgstr "colonne satinée: Un ou plusieurs échelons croisent les rails plus d'une fois."
 
 #, python-format
 msgid "satin column: object %s has a fill (but should not)"
-msgstr ""
+msgstr "colonne de satin: objet %s a un remplissage (mais ne devrait pas)"
 
 #, python-format
 msgid "satin column: object %(id)s has two paths with an unequal number of points (%(length1)d and %(length2)d)"
+msgstr "colonne de satin: l'objet %(id)s a deux chemins avec un nombre de points différents (%(length1)d et %(length2)d)"
+
+msgid "Satin stitch along paths"
+msgstr "Point de satin le long des rangs"
+
+msgid "Running stitch length"
+msgstr "Longueur de point en cours"
+
+msgid "Repeats"
+msgstr "répétez"
+
+msgid "Unable to autofill.  This most often happens because your shape is made up of multiple sections that aren't connected."
+msgstr "Impossible de remplir automatiquement. Cela arrive le plus souvent parce que votre forme est composée de plusieurs sections qui ne sont pas connectées."
+
+msgid "Unexpected error while generating fill stitches. Please send your SVG file to lexelby@github."
+msgstr "Erreur inattendue lors de la génération des points de remplissage. Veuillez envoyer votre fichier SVG à lexelby@github."
+
+msgid "Color"
 msgstr ""
 
-msgid "\n\n"
-"Seeing a 'no such option' message?  Please restart Inkscape to fix."
+msgid "rgb"
 msgstr ""
 
-msgid "No embroiderable paths selected."
+msgid "thread used"
 msgstr ""
 
-msgid "No embroiderable paths found in document."
+msgid "# stitches"
 msgstr ""
 
-msgid "Tip: use Path -> Object to Path to convert non-paths before embroidering."
+msgid "# stops"
 msgstr ""
 
-msgid "Embroidery"
+msgid "# trims"
 msgstr ""
 
-msgid "These settings will be applied to 1 object."
+msgid "Page"
 msgstr ""
 
-#, python-format
-msgid "These settings will be applied to %d objects."
+msgid "Enter job title..."
 msgstr ""
 
-msgid "Some settings had different values across objects.  Select a value from the dropdown or enter a new one."
+msgid "CLIENT"
 msgstr ""
 
-#, python-format
-msgid "Disabling this tab will disable the following %d tabs."
+msgid "Enter client name..."
 msgstr ""
 
-msgid "Disabling this tab will disable the following tab."
+msgid "PURCHASE ORDER #:"
 msgstr ""
 
-#, python-format
-msgid "Enabling this tab will disable %s and vice-versa."
-msgstr ""
-
-msgid "Inkscape objects"
-msgstr ""
-
-msgid "Embroidery Params"
-msgstr ""
-
-msgid "Presets"
-msgstr ""
-
-msgid "Load"
-msgstr ""
-
-msgid "Add"
-msgstr ""
-
-msgid "Overwrite"
-msgstr ""
-
-msgid "Delete"
-msgstr ""
-
-msgid "Cancel"
-msgstr ""
-
-msgid "Use Last Settings"
-msgstr ""
-
-msgid "Apply and Quit"
-msgstr ""
-
-msgid "Preview"
-msgstr ""
-
-msgid "Internal Error"
-msgstr ""
-
-msgid "Please enter or select a preset name first."
-msgstr ""
-
-msgid "Preset"
+msgid "Enter purchase order number..."
 msgstr ""
 
 #, python-format
-msgid "Preset \"%s\" not found."
+msgid "%Y.%m.%d"
 msgstr ""
 
-#, python-format
-msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
+msgid "Thread Consumption"
 msgstr ""
 
-msgid "Embroidery Simulation"
+msgid "Stops and Trims"
 msgstr ""
 
-#, python-format
-msgid "parseLengthWithUnits: unknown unit %s"
+msgid "Estimated Time"
 msgstr ""
 
-#, python-format
-msgid "Unknown unit: %s"
+msgid "Unique Colors"
 msgstr ""
 
-msgid "TRIM after"
+msgid "Color Blocks"
 msgstr ""
 
-msgid "Trim thread after this object (for supported machines and file formats)"
+msgid "Design box size"
 msgstr ""
 
-msgid "STOP after"
+msgid "Total thread used"
 msgstr ""
 
-msgid "Add STOP instruction after this object (for supported machines and file formats)"
+msgid "Total stitch count"
+msgstr ""
+
+msgid "Total nr stops"
+msgstr ""
+
+msgid "Total nr trims"
+msgstr ""
+
+msgid "Job estimated time"
+msgstr ""
+
+msgid "Scale"
+msgstr ""
+
+msgid "COLOR"
+msgstr ""
+
+msgid "Estimated time"
+msgstr ""
+
+msgid "Client Signature"
+msgstr ""
+
+msgid "Ink/Stitch Print Preview"
+msgstr ""
+
+msgid "Print"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "⚠ lost connection to Ink/Stitch"
+msgstr ""
+
+msgid "Printing Size"
 msgstr ""
 
