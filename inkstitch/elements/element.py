@@ -203,25 +203,18 @@ class EmbroideryElement(object):
         # apply the combined transform to this node's path
         simpletransform.applyTransformToPath(transform, path)
 
-
         return path
+
+    def strip_control_points(self, subpath):
+        return [point for control_before, point, control_after in subpath]
 
     def flatten(self, path):
         """approximate a path containing beziers with a series of points"""
 
         path = deepcopy(path)
-
         cspsubdiv(path, 0.1)
 
-        flattened = []
-
-        for comp in path:
-            vertices = []
-            for ctl in comp:
-                vertices.append((ctl[1][0], ctl[1][1]))
-            flattened.append(vertices)
-
-        return flattened
+        return [self.strip_control_points(subpath) for subpath in path]
 
     @property
     @param('trim_after',
