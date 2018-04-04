@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-03-30 20:26-0400\n"
-"PO-Revision-Date: 2018-03-30 20:40-0400\n"
+"PO-Revision-Date: 2018-04-04 17:08-0400\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -94,10 +94,10 @@ msgstr "Le préréglage \"%s\" existe déjà. Veuillez utiliser un autre nom ou 
 
 msgid "A print preview has been opened in your web browser.  This window will stay open in order to communicate with the JavaScript code running in your browser.\n\n"
 "This window will close after you close the print preview in your browser, or you can close it manually if necessary."
-msgstr ""
+msgstr "Un aperçu avant impression a été ouvert dans votre navigateur web.  Cette fenêtre reste ouverte pour communiquer avec le code JavaScript s’exécutant dans votre navigateur.  Cette fenêtre se fermera après avoir fermer l’aperçu avant impression dans le navigateur, vous pouvez la fermer manuellement si nécessaire."
 
 msgid "Ink/Stitch Print"
-msgstr ""
+msgstr "Imprimer Ink/Stitch"
 
 msgid "Embroidery Simulation"
 msgstr "Simulation de broderie"
@@ -126,7 +126,7 @@ msgid "Auto-Fill"
 msgstr "Remplissage automatique"
 
 msgid "Automatically routed fill stitching"
-msgstr ""
+msgstr "Remplir automatiquement la couture"
 
 msgid "Running stitch length (traversal between sections)"
 msgstr "Longueur du point de fonctionnement (parcours entre les sections)"
@@ -165,7 +165,7 @@ msgid "Fill"
 msgstr "Remplir"
 
 msgid "Manually routed fill stitching"
-msgstr ""
+msgstr "Remplir automatiquement la couture"
 
 msgid "Angle of lines of stitches"
 msgstr "Angle des lignes de points"
@@ -177,13 +177,13 @@ msgid "Spacing between rows"
 msgstr "Espacement entre les lignes"
 
 msgid "Maximum fill stitch length"
-msgstr "Longueur de point maximale de remplissage"
+msgstr "Longueur maximale du point de remplissage"
 
 msgid "Stagger rows this many times before repeating"
-msgstr "Décaler les lignes avant de répéter plusieurs fois"
+msgstr "Décaler les rangs autant de fois avant de répéter"
 
 msgid "Satin Column"
-msgstr ""
+msgstr "Colonne Satin"
 
 msgid "Custom satin column"
 msgstr "Colonne de satin personnalisée"
@@ -260,105 +260,105 @@ msgid "Unexpected error while generating fill stitches. Please send your SVG fil
 msgstr "Erreur inattendue lors de la génération des points de remplissage. Veuillez envoyer votre fichier SVG à lexelby@github."
 
 msgid "Color"
-msgstr ""
+msgstr "Couleur"
 
 msgid "rgb"
-msgstr ""
+msgstr "RGB"
 
 msgid "thread used"
-msgstr ""
+msgstr "fil utilisé"
 
 msgid "# stitches"
-msgstr ""
+msgstr "# points"
 
 msgid "# stops"
-msgstr ""
+msgstr "# stop"
 
 msgid "# trims"
-msgstr ""
+msgstr "# trims"
 
 msgid "Page"
-msgstr ""
+msgstr "Page"
 
 msgid "Enter job title..."
-msgstr ""
+msgstr "Entrez le titre du Job..."
 
 msgid "CLIENT"
-msgstr ""
+msgstr "CLIENT"
 
 msgid "Enter client name..."
-msgstr ""
+msgstr "Entrez le nom du client..."
 
 msgid "PURCHASE ORDER #:"
-msgstr ""
+msgstr "BON DE COMMANDE #:"
 
 msgid "Enter purchase order number..."
-msgstr ""
+msgstr "Entrez le numéro de commande..."
 
 #, python-format
 msgid "%Y.%m.%d"
-msgstr ""
+msgstr "%Y.%m.%d"
 
 msgid "Thread Consumption"
-msgstr ""
+msgstr "Consommation de fil"
 
 msgid "Stops and Trims"
 msgstr ""
 
 msgid "Estimated Time"
-msgstr ""
+msgstr "Durée estimée du Job"
 
 msgid "Unique Colors"
-msgstr ""
+msgstr "Couleurs uniques"
 
 msgid "Color Blocks"
-msgstr ""
+msgstr "Blocs de couleur"
 
 msgid "Design box size"
-msgstr ""
+msgstr "Taille de boîte de conception"
 
 msgid "Total thread used"
-msgstr ""
+msgstr "Total de fil utilisé"
 
 msgid "Total stitch count"
-msgstr ""
+msgstr "Nombre de points total"
 
 msgid "Total nr stops"
-msgstr ""
+msgstr "Total nr stop"
 
 msgid "Total nr trims"
-msgstr ""
+msgstr "Total nr stop"
 
 msgid "Job estimated time"
-msgstr ""
+msgstr "Durée estimée du Job"
 
 msgid "Scale"
-msgstr ""
+msgstr "Échelle"
 
 msgid "COLOR"
-msgstr ""
+msgstr "Couleur"
 
 msgid "Estimated time"
-msgstr ""
+msgstr "Durée estimée du Job"
 
 msgid "Client Signature"
-msgstr ""
+msgstr "Signature du client"
 
 msgid "Ink/Stitch Print Preview"
-msgstr ""
+msgstr "Aperçu avant impression"
 
 msgid "Print"
-msgstr ""
+msgstr "Imprimer"
 
 msgid "Settings"
-msgstr ""
+msgstr "Paramètres"
 
 msgid "Close"
-msgstr ""
+msgstr "Fermer"
 
 msgid "⚠ lost connection to Ink/Stitch"
-msgstr ""
+msgstr "Connexion perdu avec Ink/Stitch"
 
 msgid "Printing Size"
-msgstr ""
+msgstr "Taille d’impression"
 
