@@ -36,6 +36,7 @@ def patches_to_stitch_plan(patches, collapse_len=3.0 * PIXELS_PER_MM):
             if color_block.last_stitch:
                 if (patch.stitches[0] - color_block.last_stitch).length() > collapse_len:
                     color_block.add_stitch(patch.stitches[0].x, patch.stitches[0].y, jump=True)
+
         else:
             # add a color change
             color_block.add_stitch(color_block.last_stitch.x, color_block.last_stitch.y, stop=True)
@@ -159,10 +160,14 @@ class ColorBlock(object):
         stitches = [self.stitches[0]]
 
         for stitch in self.stitches[1:]:
-            l = (stitch - stitches[-1]).length()
-            if l <= 0.1:
-                # duplicate stitch, skip this one
-                continue
+            if stitches[-1].jump or stitch.stop or stitch.trim:
+                # Don't consider jumps, stops, or trims as candidates for filtering
+                pass
+            else:
+                l = (stitch - stitches[-1]).length()
+                if l <= 0.1:
+                    # duplicate stitch, skip this one
+                    continue
 
             stitches.append(stitch)
 
