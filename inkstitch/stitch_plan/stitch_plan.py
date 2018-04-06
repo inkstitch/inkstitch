@@ -97,10 +97,21 @@ class StitchPlan(object):
         return sum(block.num_stitches for block in self)
 
     @property
+    def dimensions(self):
+        color_block_bounding_boxes = [cb.bounding_box for cb in self]
+        minx = min(bb[0] for bb in color_block_bounding_boxes)
+        miny = min(bb[1] for bb in color_block_bounding_boxes)
+        maxx = max(bb[2] for bb in color_block_bounding_boxes)
+        maxy = max(bb[3] for bb in color_block_bounding_boxes)
+
+        import sys; print >> sys.stderr, color_block_bounding_boxes, minx, miny, maxx, maxy
+
+        return (maxx - minx, maxy - miny)
+
+    @property
     def dimensions_mm(self):
-        # TODO: implement this.  Should do a bounding box calculation and
-        # convert to millimeters.
-        return ""
+        dimensions = self.dimensions
+        return (dimensions[0] / PIXELS_PER_MM, dimensions[1] / PIXELS_PER_MM)
 
 
 class ColorBlock(object):
@@ -196,3 +207,12 @@ class ColorBlock(object):
 
     def replace_stitches(self, stitches):
         self.stitches = stitches
+
+    @property
+    def bounding_box(self):
+        minx = min(stitch.x for stitch in self)
+        miny = min(stitch.y for stitch in self)
+        maxx = max(stitch.x for stitch in self)
+        maxy = max(stitch.y for stitch in self)
+
+        return minx, miny, maxx, maxy
