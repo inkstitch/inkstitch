@@ -14,11 +14,12 @@ from cspsubdiv import cspsubdiv
 class Patch:
     """A raw collection of stitches with attached instructions."""
 
-    def __init__(self, color=None, stitches=None, trim_after=False, stop_after=False):
+    def __init__(self, color=None, stitches=None, trim_after=False, stop_after=False, stitch_as_is=False):
         self.color = color
         self.stitches = stitches or []
         self.trim_after = trim_after
         self.stop_after = stop_after
+        self.stitch_as_is = stitch_as_is
 
     def __add__(self, other):
         if isinstance(other, Patch):
