@@ -26,9 +26,9 @@ function scaleInksimulation() {
 
     if(scale <= 1) {
       transform += " scale(" + scale + ")";
-      label = parseInt(scale*100) + '%';
+      label = parseInt(scale*100);
     } else {
-      label = "100%";
+      label = "100";
     }
 
     $(this).find('svg').css({ transform: transform });
@@ -40,6 +40,47 @@ $(function() {
   setTimeout(ping, 1000);
   setPageNumbers();
   scaleInksimulation();
+  
+    /* Mousewheel scaling */
+  $('figure.inksimulation').on( 'DOMMouseScroll mousewheel', function ( event ) {
+    var transform = $(this).find('svg').css('transform').match(/-?[\d\.]+/g);
+    var scale = parseFloat(transform[0]);
+    if( scale > 0.01 && (event.originalEvent.detail > 0 || event.originalEvent.wheelDelta < 0)) {
+      // scroll down
+      scale -= 0.01;
+    } else {
+      //scroll up
+      scale += 0.01;
+    }
+    // set modified scale
+    transform[0] = scale;
+    transform[3] = scale;
+    $(this).find('svg').css({ transform: 'matrix(' + transform + ')' });
+    
+    // set scale caption text
+    $(this).find("span").text(parseInt(scale*100));
+
+    //prevent page fom scrolling
+    return false;
+  });
+  
+  /* Drag SVG */
+  $('figure.inksimulation').on('mousedown', function(e) {
+      $(this).data('p0', { x: e.pageX, y: e.pageY });
+      $(this).css({cursor: 'move'});
+  }).on('mouseup', function(e) {
+      var p0 = $(this).data('p0'),
+        p1 = { x: e.pageX, y: e.pageY },
+        d = Math.sqrt(Math.pow(p1.x - p0.x, 2) + Math.pow(p1.y - p0.y, 2));
+      if (d > 4) {
+        var transform = $(this).find('svg').css('transform').match(/-?[\d\.]+/g);
+        transform[4] = parseFloat(transform[4]) + parseFloat(p1.x-p0.x);
+        transform[5] = parseFloat(transform[5]) + parseFloat(p1.y-p0.y);
+        // set modified translate
+        $(this).find('svg').css({ transform: 'matrix(' + transform + ')' });
+        $(this).css({cursor: 'auto'});
+      }
+  })  
   
   /* Contendeditable Fields */
   
