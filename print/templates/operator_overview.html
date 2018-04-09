@@ -25,9 +25,13 @@
             </div>
         </header>
         <main>
-          <figure class="inksimulation operator" style="height: 210mm;">
+            <figure class="inksimulation operator" style="height: 210mm;">
                 {{ svg_overview|safe }}
-                <figcaption>{{ _('Scale') }} <span>{{ svg_scale }}</span>%</figcaption>
+                <figcaption>{{ _('Scale') }} <span data-field-name="svg-scale" contenteditable="true" data-placeholder="Enter scale...">{{ svg_scale }}</span>%</figcaption>
+                <div>
+                  <button class="svg-fit">Fit</button>
+                  <button class="svg-full">100%</button>
+                </div>
             </figure>
         </main>
         {% include 'footer.html' %}

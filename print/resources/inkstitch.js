@@ -13,55 +13,82 @@ function setPageNumbers() {
   });
 }
 
-// set preview svg scale to fit into its box
-function scaleInksimulation() {
-  $('.inksimulation').each(function() {
+// Scale SVG (fit || full size)
+function scaleSVG(element, scale = 'fit') {
+  
+  // always center svg
+  transform = "translate(-50%, -50%)";
+  
+  if(scale == 'fit') {
     var scale = Math.min(
-      $(this).width() / $(this).find('svg').width(),    
-      $(this).height() / $(this).find('svg').height()
+      element.width() / element.find('svg').width(),    
+      element.height() / element.find('svg').height()
     );
+    // Do not scale to more than 100%
+    scale = (scale <= 1) ? scale : 1;
+  }
+  
+  transform += " scale(" + scale + ")";
+  var label = parseInt(scale*100);
 
-    // center the SVG
-    transform = "translate(-50%, -50%)";
+  element.find('svg').css({ transform: transform });
+  element.find('figcaption span').text(label);
+}
 
-    if(scale <= 1) {
-      transform += " scale(" + scale + ")";
-      label = parseInt(scale*100);
-    } else {
-      label = "100";
-    }
+// set preview svg scale to fit into its box
+function scaleAllSvg(element = "") {
 
-    $(this).find('svg').css({ transform: transform });
-    $(this).find('figcaption span').text(label);
-  });
+  if(element == "") {
+    $('.inksimulation').each(function() {
+      scaleSVG($(this));
+    });
+  }
 }
 
 $(function() {
   setTimeout(ping, 1000);
   setPageNumbers();
-  scaleInksimulation();
+  scaleAllSvg();
   
-    /* Mousewheel scaling */
-  $('figure.inksimulation').on( 'DOMMouseScroll mousewheel', function ( event ) {
-    var transform = $(this).find('svg').css('transform').match(/-?[\d\.]+/g);
-    var scale = parseFloat(transform[0]);
-    if( scale > 0.01 && (event.originalEvent.detail > 0 || event.originalEvent.wheelDelta < 0)) {
+  /* SCALING AND MOVING SVG  */
+  
+  /* Mousewheel scaling */
+  $('figure.inksimulation').on( 'DOMMouseScroll mousewheel', function (e) {
+    
+    var svg       = $(this).find('svg');
+    var transform = svg.css('transform').match(/-?[\d\.]+/g);
+    var scale     = parseFloat(transform[0]);
+    
+    if( scale > 0.01 && (e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0)) {
       // scroll down
       scale -= 0.01;
     } else {
       //scroll up
       scale += 0.01;
     }
+    
     // set modified scale
     transform[0] = scale;
     transform[3] = scale;
-    $(this).find('svg').css({ transform: 'matrix(' + transform + ')' });
+    svg.css({ transform: 'matrix(' + transform + ')' });
     
     // set scale caption text
     $(this).find("span").text(parseInt(scale*100));
 
     //prevent page fom scrolling
     return false;
+  });
+  
+  /* Fit SVG */
+  $('button.svg-fit').click(function() {
+    var svgfigure = $(this).closest('figure');
+    scaleSVG(svgfigure, 'fit');
+  });
+  
+  /* Fit SVG */
+  $('button.svg-full').click(function() {
+    var svgfigure = $(this).closest('figure');
+    scaleSVG(svgfigure, '1');
   });
   
   /* Drag SVG */
@@ -88,9 +115,21 @@ $(function() {
   // set the same content to all fields with the same classname
   document.querySelectorAll('[contenteditable="true"]').forEach(function(elem) {
     elem.addEventListener('focusout', function() {
-        var content = $(this).html();
+        var content    = $(this).html();
         var field_name = $(this).attr('data-field-name');
         $('[data-field-name="' + field_name + '"]').html(content);
+        
+        /* change svg scale */
+        if(field_name == 'svg-scale') {
+          var scale     = parseInt(content);
+          var svg       = $(this).parent().siblings('svg');
+          var transform = svg.css('transform').match(/-?[\d\.]+/g);
+          
+          transform[0] = scale / 100;
+          transform[3] = scale / 100;
+          svg.css({ transform: 'matrix(' + transform + ')' });
+        }
+        
     });
   });
   
@@ -98,7 +137,6 @@ $(function() {
       if (e.which == 13) {
           // pressing enter defocuses the element
           this.blur();
-
           // also suppress the enter keystroke to avoid adding a new line
           return false;
       } else {
@@ -145,7 +183,7 @@ $(function() {
   $(':checkbox').change(function() {
     $('.' + this.id).toggle();
     setPageNumbers();
-    scaleInksimulation();
+    scaleAllSvg();
   });
   
 });
