@@ -7,7 +7,7 @@
     <input>
         <extension>.{{ format }}</extension>
         <mimetype>application/x-embroidery-{{ format }}</mimetype>
-        <_filetypename>{{ description }} (.{{ format }})</_filetypename>
+        <_filetypename>Ink/Stitch: {{ description }} (.{{ format }})</_filetypename>
         <_filetypetooltip>convert {{ format | upper }} file to Ink/Stitch manual-stitch paths</_filetypetooltip>
     </input>
     <script>
