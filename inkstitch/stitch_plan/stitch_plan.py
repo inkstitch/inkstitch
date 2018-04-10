@@ -104,8 +104,6 @@ class StitchPlan(object):
         maxx = max(bb[2] for bb in color_block_bounding_boxes)
         maxy = max(bb[3] for bb in color_block_bounding_boxes)
 
-        import sys; print >> sys.stderr, color_block_bounding_boxes, minx, miny, maxx, maxy
-
         return (maxx - minx, maxy - miny)
 
     @property
