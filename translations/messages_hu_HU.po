@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-03-30 20:26-0400\n"
-"PO-Revision-Date: 2018-03-30 20:41-0400\n"
+"POT-Creation-Date: 2018-04-02 22:11-0400\n"
+"PO-Revision-Date: 2018-04-09 20:21-0400\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Hungarian\n"
 "MIME-Version: 1.0\n"
@@ -251,6 +251,12 @@ msgid "Running stitch length"
 msgstr ""
 
 msgid "Repeats"
+msgstr ""
+
+msgid "Manual stitch placement"
+msgstr ""
+
+msgid "Stitch every node in the path.  Stitch length and zig-zag spacing are ignored."
 msgstr ""
 
 msgid "Unable to autofill.  This most often happens because your shape is made up of multiple sections that aren't connected."
