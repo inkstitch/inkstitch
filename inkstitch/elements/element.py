@@ -14,11 +14,12 @@ from cspsubdiv import cspsubdiv
 class Patch:
     """A raw collection of stitches with attached instructions."""
 
-    def __init__(self, color=None, stitches=None, trim_after=False, stop_after=False):
+    def __init__(self, color=None, stitches=None, trim_after=False, stop_after=False, stitch_as_is=False):
         self.color = color
         self.stitches = stitches or []
         self.trim_after = trim_after
         self.stop_after = stop_after
+        self.stitch_as_is = stitch_as_is
 
     def __add__(self, other):
         if isinstance(other, Patch):
@@ -203,25 +204,18 @@ class EmbroideryElement(object):
         # apply the combined transform to this node's path
         simpletransform.applyTransformToPath(transform, path)
 
-
         return path
+
+    def strip_control_points(self, subpath):
+        return [point for control_before, point, control_after in subpath]
 
     def flatten(self, path):
         """approximate a path containing beziers with a series of points"""
 
         path = deepcopy(path)
-
         cspsubdiv(path, 0.1)
 
-        flattened = []
-
-        for comp in path:
-            vertices = []
-            for ctl in comp:
-                vertices.append((ctl[1][0], ctl[1][1]))
-            flattened.append(vertices)
-
-        return flattened
+        return [self.strip_control_points(subpath) for subpath in path]
 
     @property
     @param('trim_after',

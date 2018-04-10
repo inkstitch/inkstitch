@@ -4,6 +4,11 @@ from .. import Stitch
 from copy import deepcopy
 
 def add_tie(stitches, tie_path):
+    if stitches[-1].no_ties:
+        # It's from a manual stitch block, so don't add tie stitches.  The user
+        # will add them if they want them.
+        return
+
     tie_path = cut_path(tie_path, 0.6)
     tie_stitches = running_stitch(tie_path, 0.3)
     tie_stitches = [Stitch(stitch.x, stitch.y) for stitch in tie_stitches]

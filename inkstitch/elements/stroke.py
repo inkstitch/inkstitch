@@ -37,7 +37,17 @@ class Stroke(EmbroideryElement):
 
     @property
     def paths(self):
-        return self.flatten(self.parse_path())
+        path = self.parse_path()
+
+        if self.manual_stitch_mode:
+            return [self.strip_control_points(subpath) for subpath in path]
+        else:
+            return self.flatten(path)
+
+    @property
+    @param('manual_stitch', _('Manual stitch placement'), tooltip=_("Stitch every node in the path.  Stitch length and zig-zag spacing are ignored."), type='boolean', default=False)
+    def manual_stitch_mode(self):
+        return self.get_boolean_param('manual_stitch')
 
     def is_running_stitch(self):
         # stroke width <= 0.5 pixels is deprecated in favor of dashed lines
@@ -99,7 +109,9 @@ class Stroke(EmbroideryElement):
 
         for path in self.paths:
             path = [Point(x, y) for x, y in path]
-            if self.is_running_stitch():
+            if self.manual_stitch_mode:
+                patch = Patch(color=self.color, stitches=path, stitch_as_is=True)
+            elif self.is_running_stitch():
                 patch = self.stroke_points(path, self.running_stitch_length, stroke_width=0.0)
             else:
                 patch = self.stroke_points(path, self.zigzag_spacing / 2.0, stroke_width=self.stroke_width)

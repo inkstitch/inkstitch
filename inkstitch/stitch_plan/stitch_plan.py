@@ -36,6 +36,7 @@ def patches_to_stitch_plan(patches, collapse_len=3.0 * PIXELS_PER_MM):
             if color_block.last_stitch:
                 if (patch.stitches[0] - color_block.last_stitch).length() > collapse_len:
                     color_block.add_stitch(patch.stitches[0].x, patch.stitches[0].y, jump=True)
+
         else:
             # add a color change
             color_block.add_stitch(color_block.last_stitch.x, color_block.last_stitch.y, stop=True)
@@ -43,7 +44,7 @@ def patches_to_stitch_plan(patches, collapse_len=3.0 * PIXELS_PER_MM):
             color_block.color = patch.color
 
         color_block.filter_duplicate_stitches()
-        color_block.add_stitches(patch.stitches)
+        color_block.add_stitches(patch.stitches, no_ties=patch.stitch_as_is)
 
         if patch.trim_after:
             # a trim needs to be followed by a jump to the next stitch, so
@@ -74,6 +75,9 @@ class StitchPlan(object):
 
     def __len__(self):
         return len(self.color_blocks)
+
+    def __repr__(self):
+        return "StitchPlan(%s)" % ", ".join(repr(cb) for cb in self.color_blocks)
 
     @property
     def num_colors(self):
@@ -108,6 +112,9 @@ class ColorBlock(object):
 
     def __iter__(self):
         return iter(self.stitches)
+
+    def __repr__(self):
+        return "ColorBlock(%s, %s)" % (self.color, self.stitches)
 
     def has_color(self):
         return self._color is not None
@@ -159,10 +166,14 @@ class ColorBlock(object):
         stitches = [self.stitches[0]]
 
         for stitch in self.stitches[1:]:
-            l = (stitch - stitches[-1]).length()
-            if l <= 0.1:
-                # duplicate stitch, skip this one
-                continue
+            if stitches[-1].jump or stitch.stop or stitch.trim:
+                # Don't consider jumps, stops, or trims as candidates for filtering
+                pass
+            else:
+                l = (stitch - stitches[-1]).length()
+                if l <= 0.1:
+                    # duplicate stitch, skip this one
+                    continue
 
             stitches.append(stitch)
 
@@ -172,16 +183,16 @@ class ColorBlock(object):
         if isinstance(args[0], Stitch):
             self.stitches.append(args[0])
         elif isinstance(args[0], Point):
-            self.stitches.append(Stitch(args[0].x, args[0].y))
+            self.stitches.append(Stitch(args[0].x, args[0].y, *args[1:], **kwargs))
         else:
             self.stitches.append(Stitch(*args, **kwargs))
 
-    def add_stitches(self, stitches):
+    def add_stitches(self, stitches, *args, **kwargs):
         for stitch in stitches:
             if isinstance(stitch, (Stitch, Point)):
-                self.add_stitch(stitch)
+                self.add_stitch(stitch, *args, **kwargs)
             else:
-                self.add_stitch(*stitch)
+                self.add_stitch(*(list(stitch) + args), **kwargs)
 
     def replace_stitches(self, stitches):
         self.stitches = stitches

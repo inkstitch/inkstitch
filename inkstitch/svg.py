@@ -1,5 +1,5 @@
 import simpletransform, simplestyle, inkex
-from . import _, get_viewbox_transform, cache, SVG_GROUP_TAG, INKSCAPE_LABEL, INKSCAPE_GROUPMODE, SVG_POLYLINE_TAG
+from . import _, get_viewbox_transform, cache, SVG_GROUP_TAG, INKSCAPE_LABEL, INKSCAPE_GROUPMODE, SVG_PATH_TAG
 
 def color_block_to_point_lists(color_block):
     point_lists = [[]]
@@ -27,18 +27,21 @@ def get_correction_transform(svg):
     return transform
 
 
-def color_block_to_polylines(color_block, svg):
+def color_block_to_paths(color_block, svg):
     polylines = []
+    # We could emit just a single path with one subpath per point list, but
+    # emitting multiple paths makes it easier for the user to manipulate them.
     for point_list in color_block_to_point_lists(color_block):
         color = color_block.color.visible_on_white.to_hex_str()
         polylines.append(inkex.etree.Element(
-            SVG_POLYLINE_TAG,
+            SVG_PATH_TAG,
             {'style': simplestyle.formatStyle(
                 {'stroke': color,
                 'stroke-width': "0.4",
                 'fill': 'none'}),
-            'points': " ".join(",".join(str(coord) for coord in point) for point in point_list),
-            'transform': get_correction_transform(svg)
+            'd': "M" + " ".join(" ".join(str(coord) for coord in point) for point in point_list),
+            'transform': get_correction_transform(svg),
+            'embroider_manual_stitch': 'true'
             }))
 
     return polylines
@@ -63,6 +66,6 @@ def render_stitch_plan(svg, stitch_plan):
                                        SVG_GROUP_TAG,
                                        {'id': '__color_block_%d__' % i,
                                         INKSCAPE_LABEL: "color block %d" % (i + 1)})
-        group.extend(color_block_to_polylines(color_block, svg))
+        group.extend(color_block_to_paths(color_block, svg))
 
     svg.append(layer)
