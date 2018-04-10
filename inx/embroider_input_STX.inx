@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <_name>STX file input</_name>
+    <id>org.inkstitch.input.stx</id>
+    <dependency type="executable" location="extensions">embroider_input.py</dependency>
+    <dependency type="executable" location="extensions">inkex.py</dependency>
+    <input>
+        <extension>.stx</extension>
+        <mimetype>application/x-embroidery-stx</mimetype>
+        <_filetypename>Ink/Stitch: Data Stitch Embroidery Format (.stx)</_filetypename>
+        <_filetypetooltip>convert STX file to Ink/Stitch manual-stitch paths</_filetypetooltip>
+    </input>
+    <script>
+        <command reldir="extensions" interpreter="python">embroider_input.py</command>
+    </script>
+</inkscape-extension>

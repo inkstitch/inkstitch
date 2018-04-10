@@ -37,7 +37,7 @@ def main():
     for format, description in libembroidery_input_formats():
         inx = template.render(format=format, description=description)
 
-        with open("embroider_input_%s.inx" % format.upper(), 'w') as inx_file:
+        with open("inx/embroider_input_%s.inx" % format.upper(), 'w') as inx_file:
             inx_file.write(inx)
 
 
