@@ -25,12 +25,13 @@
             </div>
         </header>
         <main class="client-overview-main">
-            <figure class="inksimulation">
+            <figure class="inksimulation" title="{{ _('Ctrl + Scroll to Zoom') }}">
                 {{ svg_overview|safe }}
-                <figcaption>{{ _('Scale') }} <span>{{ svg_scale }}</span>%</figcaption>
+                <figcaption>{{ _('Scale') }} <span data-field-name="svg-scale" contenteditable="true" data-placeholder="Enter scale...">{{ svg_transform }}</span>%</figcaption>
                 <div>
                   <button class="svg-fit">Fit</button>
                   <button class="svg-full">100%</button>
+                  <button class="svg-apply">Apply to all</button>
                 </div>
             </figure> 
             

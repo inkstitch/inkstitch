@@ -35,14 +35,23 @@ function scaleSVG(element, scale = 'fit') {
   element.find('figcaption span').text(label);
 }
 
-// set preview svg scale to fit into its box
-function scaleAllSvg(element = "") {
-
-  if(element == "") {
-    $('.inksimulation').each(function() {
-      scaleSVG($(this));
+// set preview svg scale to fit into its box if transform is not set
+function scaleAllSvg() {
+    $('.page').each(function() {
+      if( $(this).css('display') != 'none' ) {
+        if( $(this).find('.inksimulation svg').css('transform') == 'none') {
+          if( $(this).find('.inksimulation span').text() == '') {
+            scaleSVG($(this).find('.inksimulation'));
+          } 
+          else {
+            var transform = $(this).find('.inksimulation span').text();
+            var scale = transform.match(/-?[\d\.]+/g)[0];
+            $(this).find('.inksimulation svg').css({ transform: transform });
+            $(this).find('.inksimulation span').text(parseInt(scale*100));
+          }
+        }
+      }
     });
-  }
 }
 
 $(function() {
@@ -54,29 +63,31 @@ $(function() {
   
   /* Mousewheel scaling */
   $('figure.inksimulation').on( 'DOMMouseScroll mousewheel', function (e) {
+    if(event.ctrlKey == true) {
     
-    var svg       = $(this).find('svg');
-    var transform = svg.css('transform').match(/-?[\d\.]+/g);
-    var scale     = parseFloat(transform[0]);
-    
-    if( scale > 0.01 && (e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0)) {
-      // scroll down
-      scale -= 0.01;
-    } else {
-      //scroll up
-      scale += 0.01;
-    }
-    
-    // set modified scale
-    transform[0] = scale;
-    transform[3] = scale;
-    svg.css({ transform: 'matrix(' + transform + ')' });
-    
-    // set scale caption text
-    $(this).find("span").text(parseInt(scale*100));
+      var svg       = $(this).find('svg');
+      var transform = svg.css('transform').match(/-?[\d\.]+/g);
+      var scale     = parseFloat(transform[0]);
+      
+      if( scale > 0.01 && (e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0)) {
+        // scroll down
+        scale -= 0.01;
+      } else {
+        //scroll up
+        scale += 0.01;
+      }
+      
+      // set modified scale
+      transform[0] = scale;
+      transform[3] = scale;
+      svg.css({ transform: 'matrix(' + transform + ')' });
+      
+      // set scale caption text
+      $(this).find("span").text(parseInt(scale*100));
 
-    //prevent page fom scrolling
-    return false;
+      //prevent page fom scrolling
+      return false;
+    }
   });
   
   /* Fit SVG */
@@ -85,7 +96,7 @@ $(function() {
     scaleSVG(svgfigure, 'fit');
   });
   
-  /* Fit SVG */
+  /* Full Size SVG */
   $('button.svg-full').click(function() {
     var svgfigure = $(this).closest('figure');
     scaleSVG(svgfigure, '1');
@@ -96,6 +107,7 @@ $(function() {
       $(this).data('p0', { x: e.pageX, y: e.pageY });
       $(this).css({cursor: 'move'});
   }).on('mouseup', function(e) {
+      $(this).css({cursor: 'auto'});
       var p0 = $(this).data('p0'),
         p1 = { x: e.pageX, y: e.pageY },
         d = Math.sqrt(Math.pow(p1.x - p0.x, 2) + Math.pow(p1.y - p0.y, 2));
@@ -105,21 +117,27 @@ $(function() {
         transform[5] = parseFloat(transform[5]) + parseFloat(p1.y-p0.y);
         // set modified translate
         $(this).find('svg').css({ transform: 'matrix(' + transform + ')' });
-        $(this).css({cursor: 'auto'});
       }
-  })  
+  })
+  
+  /* Apply transforms to All */
+  $('button.svg-apply').click(function() {
+    var transform = $(this).parent().siblings('svg').css('transform');
+    var scale = transform.match(/-?[\d\.]+/g)[0];
+    $('.inksimulation').each(function() {
+      $(this).find('svg').css({ transform: transform });
+      $(this).find("span").text(parseInt(scale*100));
+      
+    })
+  });
   
   /* Contendeditable Fields */
   
-  // When we focus out from a contenteditable field, we want to
-  // set the same content to all fields with the same classname
   document.querySelectorAll('[contenteditable="true"]').forEach(function(elem) {
     elem.addEventListener('focusout', function() {
+        /* change svg scale */
         var content    = $(this).html();
         var field_name = $(this).attr('data-field-name');
-        $('[data-field-name="' + field_name + '"]').html(content);
-        
-        /* change svg scale */
         if(field_name == 'svg-scale') {
           var scale     = parseInt(content);
           var svg       = $(this).parent().siblings('svg');
@@ -129,7 +147,11 @@ $(function() {
           transform[3] = scale / 100;
           svg.css({ transform: 'matrix(' + transform + ')' });
         }
-        
+        /* When we focus out from a contenteditable field, we want to
+           set the same content to all fields with the same classname */
+        else {
+          $('[data-field-name="' + field_name + '"]').html(content);
+        }
     });
   });
   
