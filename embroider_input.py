@@ -1,8 +1,9 @@
 import sys
+import os
 from libembroidery import *
 from inkex import etree
 import inkex
-from inkstitch import PIXELS_PER_MM, _
+from inkstitch import PIXELS_PER_MM, INKSCAPE_LABEL, _
 from inkstitch.stitch_plan import StitchPlan
 from inkstitch.svg import render_stitch_plan
 
@@ -44,6 +45,11 @@ def main(embroidery_file):
                             "viewBox": "0 0 %s %s" % dimensions,
                         })
     render_stitch_plan(svg, stitch_plan)
+
+    # rename the Stitch Plan layer so that it doesn't get overwritten by Embroider
+    layer = svg.find(".//*[@id='__inkstitch_stitch_plan__']")
+    layer.set(INKSCAPE_LABEL, os.path.basename(embroidery_file))
+    layer.attrib.pop('id')
 
     print etree.tostring(svg)
 
