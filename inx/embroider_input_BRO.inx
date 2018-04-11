@@ -7,7 +7,7 @@
     <input>
         <extension>.bro</extension>
         <mimetype>application/x-embroidery-bro</mimetype>
-        <_filetypename>Ink/Stitch: Bits & Volts Embroidery Format (.bro)</_filetypename>
+        <_filetypename>Ink/Stitch: Bits &amp; Volts Embroidery Format (.bro)</_filetypename>
         <_filetypetooltip>convert BRO file to Ink/Stitch manual-stitch paths</_filetypetooltip>
     </input>
     <script>

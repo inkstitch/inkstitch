@@ -11,7 +11,7 @@ def build_environment():
 
     return Environment(
         loader = FileSystemLoader(template_dir),
-        autoescape = select_autoescape(['xml'])
+        autoescape = True
     )
 
 
