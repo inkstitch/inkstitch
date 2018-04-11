@@ -37,12 +37,12 @@ def main(embroidery_file):
                                    stop=stitch.flags & STOP,
                                    trim=stitch.flags & TRIM)
 
-    dimensions = stitch_plan.dimensions
+    extents = stitch_plan.extents
     svg = etree.Element("svg", nsmap=inkex.NSS, attrib=
                         {
-                            "width": "%s" % dimensions[0],
-                            "height": "%s" % dimensions[1],
-                            "viewBox": "0 0 %s %s" % dimensions,
+                            "width": str(extents[0] * 2),
+                            "height": str(extents[1] * 2),
+                            "viewBox": "0 0 %s %s" % (extents[0] * 2, extents[1] * 2),
                         })
     render_stitch_plan(svg, stitch_plan)
 
@@ -50,6 +50,10 @@ def main(embroidery_file):
     layer = svg.find(".//*[@id='__inkstitch_stitch_plan__']")
     layer.set(INKSCAPE_LABEL, os.path.basename(embroidery_file))
     layer.attrib.pop('id')
+
+    # Shift the design so that its origin is at the center of the canvas
+    # Note: this is NOT the same as centering the design in the canvas!
+    layer.set('transform', 'translate(%s,%s)' % (extents[0], extents[1]))
 
     print etree.tostring(svg)
 

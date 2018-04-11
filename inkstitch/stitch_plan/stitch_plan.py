@@ -97,14 +97,25 @@ class StitchPlan(object):
         return sum(block.num_stitches for block in self)
 
     @property
-    def dimensions(self):
+    def bounding_box(self):
         color_block_bounding_boxes = [cb.bounding_box for cb in self]
         minx = min(bb[0] for bb in color_block_bounding_boxes)
         miny = min(bb[1] for bb in color_block_bounding_boxes)
         maxx = max(bb[2] for bb in color_block_bounding_boxes)
         maxy = max(bb[3] for bb in color_block_bounding_boxes)
 
+        return minx, miny, maxx, maxy
+
+    @property
+    def dimensions(self):
+        minx, miny, maxx, maxy = self.bounding_box
         return (maxx - minx, maxy - miny)
+
+    @property
+    def extents(self):
+        minx, miny, maxx, maxy = self.bounding_box
+
+        return max(-minx, maxx), max(-miny, maxy)
 
     @property
     def dimensions_mm(self):
