@@ -28,12 +28,12 @@ def get_correction_transform(svg):
 
 
 def color_block_to_paths(color_block, svg):
-    polylines = []
+    paths = []
     # We could emit just a single path with one subpath per point list, but
     # emitting multiple paths makes it easier for the user to manipulate them.
     for point_list in color_block_to_point_lists(color_block):
         color = color_block.color.visible_on_white.to_hex_str()
-        polylines.append(inkex.etree.Element(
+        paths.append(inkex.etree.Element(
             SVG_PATH_TAG,
             {'style': simplestyle.formatStyle(
                 {'stroke': color,
@@ -41,10 +41,15 @@ def color_block_to_paths(color_block, svg):
                 'fill': 'none'}),
             'd': "M" + " ".join(" ".join(str(coord) for coord in point) for point in point_list),
             'transform': get_correction_transform(svg),
-            'embroider_manual_stitch': 'true'
+            'embroider_manual_stitch': 'true',
+            'embroider_trim_after': 'true',
             }))
 
-    return polylines
+    # no need to trim at the end of a thread color
+    if paths:
+        paths[-1].attrib.pop('embroider_trim_after')
+
+    return paths
 
 
 def render_stitch_plan(svg, stitch_plan):
