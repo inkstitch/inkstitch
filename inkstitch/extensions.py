@@ -101,3 +101,24 @@ class InkstitchExtension(inkex.Effect):
             patches.extend(element.embroider(last_patch))
 
         return patches
+
+    def parse(self):
+        """Override inkex.Effect to add Ink/Stitch xml namespace"""
+
+        # SVG parsers don't actually look for anything at this URL.  They just
+        # care that it's unique.  That defines a "namespace" of element and
+        # attribute names to disambiguate conflicts with element and
+        # attribute names other XML namespaces.
+        #
+        # Updating inkex.NSS here allows us to pass 'inkstitch' into
+        # inkex.addNS().
+        inkex.NSS.update('inkstitch', 'http://inkstitch.org/namespace')
+
+        # call the superclass's method first
+        inkex.Effect.parse(self)
+
+        # This is the only way I could find to add a namespace to an existing
+        # element tree at the top without getting ugly prefixes like "ns0".
+        inkex.etree.cleanup_namespaces(inkex.document,
+                                       top_nsmap=inkex.NSS,
+                                       keep_ns_prefixes=inkex.NSS.keys())
