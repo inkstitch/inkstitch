@@ -1,0 +1,69 @@
+# main links
+main:
+  - title: "About"
+    url: /about/
+  - title: "Documentation"
+    url: /docs/install/
+  - title: "Tutorials"
+    url: /tutorials/
+  - title: "Terms & Privacy Policy"
+    url: /terms/
+  
+# documentation links
+docs:
+  - title: Getting Started
+    children:
+      - title: "Install / Upgrade"
+        url: /docs/install/
+      - title: "Customize"
+        url: /docs/customize/
+      - title: "Workflow"
+        url: /docs/workflow/
+  - title: Interface
+    children:
+    - title: "Params"
+      url: /docs/params/
+    - title: "Simulate"
+      url: /docs/simulate/
+    - title: "Print"
+      url: /docs/print/
+    - title: "Import / Export"
+      url: /docs/import-export/
+  - title: "Stitch Library"
+    children:
+      - title: "Fill"
+        url: /docs/stitches/fill/
+      - title: "Satin"
+        url: /docs/stitches/satin/
+      - title: "Stroke"
+        url: /docs/stitches/stroke/
+  - title: Tips
+    children:
+      - title: "Fonts"
+        url: /docs/fonts/
+      - title: "Hidden Features"
+        url: /docs/features/
+      - title: "etc"
+  - title: Troubleshooting (Wiki?)
+    children:
+      - title: "F.A.Q."
+        url: "/docs/faq/"
+      - title: "Known Bugs"
+        url: "/docs/bugs/"
+  - title: Get involved
+    url: /docs/get-involved/
+    
+    
+tutorials:
+  - title: Ressources
+    children:
+    - title: "Ink/Stitch Example Files"
+      url: /tutorials/examples/
+  - title: Tutorials
+    children:
+    - title: "Ink/Stich Tutorials"
+      url: /tutorials/inkstitch-tutorials/
+    - title: "Machine Embroidery Tutorials"
+      url: /tutorials/embroidery-tutorials/
+  
+  

@@ -1,0 +1,140 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+
+
+
+/* typefaces */
+$sans-serif         : 'Barlow', sans-serif;
+$sans-serif-narrow  : 'Barlow', sans-serif;
+
+$global-font-family : $sans-serif;
+$header-font-family : $sans-serif-narrow;
+
+/* type scale */
+$type-size-1 : 1em;
+$type-size-2 : 1em;
+$type-size-3 : 1em;  
+$type-size-4 : 1em;
+$type-size-5 : 0.8em;
+$type-size-6 : 0.75em;   // ~12px
+$type-size-7 : 0.6875em; // ~11px
+$type-size-8 : 0.625em;  // ~10px
+
+/*$body-color: ;
+$background-color: ;
+$masthead-link-color: ; */
+$link-color:#ffb400;
+$text-color: #808080;
+
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+
+.page__content p, .page__content li, .page__content dl {
+  font-size: 0.8rem;
+}
+
+div.highlighter-rouge, figure.highlight {
+  font-size: .6rem;
+}
+
+/* Table of Contents */
+  .toc .nav__title {
+    background: #808080;
+  }
+  
+/* Sidebar */
+  .nav__list .nav__items .active {
+    /* background: #cccccc;
+    color: #808080;
+    width: 100%;
+    display: inline-block;
+    padding-left: 1em; */
+  }
+  
+/* Masthead */
+  .greedy-nav a.site-title {
+    margin-left: 1em;
+  }
+
+  .greedy-nav__toggle {
+      background: #cccccc;
+  }
+
+  .masthead__menu ul {
+    font-size: 0.8rem;
+  }
+
+  .greedy-nav .hidden-links li {
+      border: none;
+      border-bottom: 1px solid #f2f3f3;
+  }
+
+  .masthead__menu-item {
+      border: 1px solid #ffb400;
+      margin: 0.2em;
+  }
+
+  .masthead__menu-item:nth-child(2) {
+    border:1px solid rgb(50,132,50);
+  }
+
+  .masthead__menu-item:nth-child(3) {
+    border:1px solid rgb(197,5,5);
+  }
+
+  .masthead__menu-item:nth-child(4) {
+    border:1px solid #003399;
+  }
+
+  .masthead__menu-item:hover {
+      background: #ffb400;
+  }
+
+  .masthead__menu-item:nth-child(2):hover {
+    background: rgb(50,132,50);
+  }
+
+  .masthead__menu-item:nth-child(3):hover {
+    background: rgb(197,5,5);
+  }
+
+  .masthead__menu-item:nth-child(4):hover {
+    background: #003399;
+  }
+
+  .masthead__menu-item:hover a {
+    color: white;
+  }
+  
+  .greedy-nav a {
+    padding: 0.2rem 0;
+  }
+
+  .greedy-nav .visible-links a:before {
+    background: transparent;
+  }
+  
+/* Pagination */
+  .pagination--pager {
+    background: #003399;
+    color: white !important;
+    width: calc(50% - 1em);
+    margin: 0.5em;
+    padding: 0.5em;
+    border: 1px solid #cccccc;
+    border-radius: 0;
+  }
+  
+  .pagination--pager:nth-child(2) {
+    background: #ffb400;
+  }
+  
+  .pagination--pager.disabled {
+    background: #cccccc;
+  }
