@@ -9,6 +9,7 @@ import socket
 import errno
 import time
 import logging
+from copy import deepcopy
 import wx
 
 import inkex
@@ -23,7 +24,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 from datetime import date
 import base64
 
-from flask import Flask, request, Response, send_from_directory
+from flask import Flask, request, Response, send_from_directory, jsonify
 import webbrowser
 import requests
 
@@ -71,6 +72,7 @@ def open_url(url):
 class PrintPreviewServer(Thread):
     def __init__(self, *args, **kwargs):
         self.html = kwargs.pop('html')
+        self.metadata = kwargs.pop('metadata')
         Thread.__init__(self, *args, **kwargs)
         self.daemon = True
         self.last_request_time = None
@@ -128,6 +130,21 @@ class PrintPreviewServer(Thread):
         def printing_end():
             # nothing to do here -- request_started() will restart the watcher
             return "OK"
+
+        @self.app.route('/metadata/<field_name>/set', methods=['POST'])
+        def set_field(field_name):
+            self.metadata[field_name] = request.form['value']
+            return "OK"
+
+        @self.app.route('/metadata/<field_mame>', methods=['GET'])
+        def get_field(field_name):
+            return jsonify(self.metadata[field_name])
+
+        @self.app.route('/metadata', methods=['GET'])
+        def get_metadata():
+            # It's necessary to convert the metadata to a dict because json doesn't
+            # trust that a MutableMapping is dict-like :(
+            return jsonify(dict(self.metadata))
 
     def stop(self):
         # for whatever reason, shutting down only seems possible in
@@ -299,7 +316,11 @@ class Print(InkstitchExtension):
             color_blocks = stitch_plan.color_blocks,
         )
 
-        print_server = PrintPreviewServer(html=html)
+        # We've totally mucked with the SVG.  Restore it so that we can save
+        # metadata into it.
+        self.document = deepcopy(self.original_document)
+
+        print_server = PrintPreviewServer(html=html, metadata=self.get_inkstitch_metadata())
         print_server.start()
 
         time.sleep(1)
@@ -310,12 +331,9 @@ class Print(InkstitchExtension):
         info_frame.Show()
         app.MainLoop()
 
-        # don't let inkex print the document out
-        sys.exit(0)
-
 
 if __name__ == '__main__':
-    save_stderr()
+    #save_stderr()
     effect = Print()
     effect.affect()
-    restore_stderr()
+    #restore_stderr()

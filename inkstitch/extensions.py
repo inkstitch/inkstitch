@@ -1,6 +1,80 @@
 import inkex
+import re
+from collections import MutableMapping
 from .elements import AutoFill, Fill, Stroke, SatinColumn, Polyline, EmbroideryElement
 from . import SVG_POLYLINE_TAG, SVG_GROUP_TAG, SVG_DEFS_TAG, INKSCAPE_GROUPMODE, EMBROIDERABLE_TAGS, PIXELS_PER_MM
+from .utils import cache
+
+
+SVG_METADATA_TAG = inkex.addNS("metadata", "svg")
+
+
+def strip_namespace(tag):
+    """Remove xml namespace from a tag name.
+
+    >>> {http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd}namedview
+    <<< namedview
+    """
+
+    match = re.match('^\{[^}]+\}(.+)$', tag)
+
+    if match:
+        return match.group(1)
+    else:
+        return tag
+
+
+class InkStitchMetadata(MutableMapping):
+    """Helper class to get and set inkstitch-specific metadata attributes.
+
+    Operates on a document and acts like a dict.  Setting an item adds or
+    updates a metadata element in the document.  Getting an item retrieves
+    a metadata element's text contents or None if an element by that name
+    doesn't exist.
+    """
+
+    def __init__(self, document):
+        self.document = document
+        self.metadata = self._get_or_create_metadata()
+
+    def _get_or_create_metadata(self):
+        metadata = self.document.find(SVG_METADATA_TAG)
+
+        if metadata is None:
+            metadata = inkex.etree.SubElement(self.document, SVG_METADATA_TAG)
+
+        return metadata
+
+    # Because this class inherints from MutableMapping, all we have to do is
+    # implement these five methods and we get a full dict-like interface.
+
+    def __setitem__(self, name, value):
+        self[name].text = value
+
+    def __getitem__(self, name):
+        tag = inkex.addNS(name, "inkstitch")
+        item = self.metadata.find(tag)
+        if item is None:
+            item = inkex.etree.SubElement(self.metadata, tag)
+
+        return item.text
+
+    def __delitem__(self, name):
+        item = self[name]
+
+        if item:
+            self.metadata.remove(item)
+
+    def __iter__(self):
+        for child in self.metadata:
+            if child.prefix == "inkstitch":
+                yield strip_namespace(child.tag)
+
+    def __len__(self):
+        for i, item in enumerate(self):
+            pass
+
+        return i + 1
 
 
 class InkstitchExtension(inkex.Effect):
@@ -102,6 +176,9 @@ class InkstitchExtension(inkex.Effect):
 
         return patches
 
+    def get_inkstitch_metadata(self):
+        return InkStitchMetadata(self.document)
+
     def parse(self):
         """Override inkex.Effect to add Ink/Stitch xml namespace"""
 
@@ -112,13 +189,13 @@ class InkstitchExtension(inkex.Effect):
         #
         # Updating inkex.NSS here allows us to pass 'inkstitch' into
         # inkex.addNS().
-        inkex.NSS.update('inkstitch', 'http://inkstitch.org/namespace')
+        inkex.NSS['inkstitch'] = 'http://inkstitch.org/namespace'
 
         # call the superclass's method first
         inkex.Effect.parse(self)
 
         # This is the only way I could find to add a namespace to an existing
         # element tree at the top without getting ugly prefixes like "ns0".
-        inkex.etree.cleanup_namespaces(inkex.document,
+        inkex.etree.cleanup_namespaces(self.document,
                                        top_nsmap=inkex.NSS,
                                        keep_ns_prefixes=inkex.NSS.keys())

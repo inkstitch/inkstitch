@@ -40,19 +40,18 @@ $(function() {
   setTimeout(ping, 1000);
   setPageNumbers();
   scaleInksimulation();
-  
+
   /* Contendeditable Fields */
-  
+
   // When we focus out from a contenteditable field, we want to
   // set the same content to all fields with the same classname
-  document.querySelectorAll('[contenteditable="true"]').forEach(function(elem) {
-    elem.addEventListener('focusout', function() {
-        var content = $(this).html();
-        var field_name = $(this).attr('data-field-name');
-        $('[data-field-name="' + field_name + '"]').html(content);
-    });
+  $('[contenteditable="true"]').on('focusout', function() {
+    var content = $(this).html();
+    var field_name = $(this).attr('data-field-name');
+    $('[data-field-name="' + field_name + '"]').html(content);
+    $.post('/metadata/' + field_name + '/set', {value: content});
   });
-  
+
   $('[contenteditable="true"]').keypress(function(e) {
       if (e.which == 13) {
           // pressing enter defocuses the element
@@ -64,10 +63,10 @@ $(function() {
           return true;
       }
     });
-  
-  
+
+
   /* Settings Bar */
-  
+
   $('button.close').click(function() {
     $.post('/shutdown', {})
      .done(function(data) {
@@ -92,20 +91,20 @@ $(function() {
   $('#close-settings').click(function(){
       $('#settings-ui').hide();
   });
-  
+
   /* Settings */
-  
+
   // Paper Size
   $('select#printing-size').change(function(){
     $('.page').toggleClass('a4');
   });
-  
+
   //Checkbox
   $(':checkbox').change(function() {
     $('.' + this.id).toggle();
     setPageNumbers();
     scaleInksimulation();
   });
-  
+
 });
 
