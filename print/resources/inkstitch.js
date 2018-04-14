@@ -48,8 +48,15 @@ $(function() {
   $('[contenteditable="true"]').on('focusout', function() {
     var content = $(this).html();
     var field_name = $(this).attr('data-field-name');
-    $('[data-field-name="' + field_name + '"]').html(content);
+    $('[data-field-name="' + field_name + '"]').text(content);
     $.post('/metadata/' + field_name + '/set', {value: content});
+  });
+
+  // load up initial metadata values
+  $.getJSON('/metadata', function(metadata) {
+      $.each(metadata, function(field_name, value) {
+          $('[data-field-name="' + field_name + '"]').text(value);
+      });
   });
 
   $('[contenteditable="true"]').keypress(function(e) {
