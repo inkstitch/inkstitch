@@ -70,6 +70,10 @@ div.highlighter-rouge, figure.highlight {
     font-size: 0.8rem;
   }
 
+  button:focus {
+    outline: none;
+  }
+
   .greedy-nav .hidden-links li {
       border: none;
       border-bottom: 1px solid #f2f3f3;
