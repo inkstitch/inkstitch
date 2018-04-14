@@ -11,7 +11,7 @@ First, install Inkscape if you don’t have it. I highly recommend version 0.92 
 
 Versions 0.92.2 and higher let you bind a key to new commands, “stack up” and “stack down”, which I assign to pageup and pagedown. These let you arbitrarily reorder objects in the SVG file, which lets you directly manipulate which order they stitch in. It works way better than the default “raise” and “lower” commands.
 
-## Quick Setup On Ubuntu and Windows
+## Quick Setup On Linux and Windows
 First, download the right release archive for your platform from the [latest release](https://github.com/lexelby/inkstitch/releases/latest).
 
 * **Linux**: `inkstitch-[VERSION]-Linux-x86_64.tar.gz`
