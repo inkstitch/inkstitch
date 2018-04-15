@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <_name>COL file input</_name>
+    <id>org.inkstitch.input.col</id>
+    <dependency type="executable" location="extensions">embroider_input.py</dependency>
+    <dependency type="executable" location="extensions">inkex.py</dependency>
+    <input>
+        <extension>.col</extension>
+        <mimetype>application/x-embroidery-col</mimetype>
+        <_filetypename>Ink/Stitch: Embroidery Thread Color Format (.col)</_filetypename>
+        <_filetypetooltip>convert COL file to Ink/Stitch manual-stitch paths</_filetypetooltip>
+    </input>
+    <script>
+        <command reldir="extensions" interpreter="python">embroider_input.py</command>
+    </script>
+</inkscape-extension>
