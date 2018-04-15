@@ -52,6 +52,13 @@ docs:
         url: "/docs/bugs/"
   - title: Get involved
     url: /docs/get-involved/
+    children:
+      - title: "Bug Reports"
+      - title: "Documentation"
+      - title: "Localization"
+        url: /docs/help/localize/
+      - title: "Developing Ink/Stitch"
+    
     
     
 tutorials:

@@ -2,15 +2,7 @@
 title: "Ink/Stitch"
 layout: splash
 permalink: /
-header:
-  overlay_color: "#000"
-  overlay_filter: "0.5"
-  overlay_image: /assets/images/home.jpg
-  cta_label: "Download"
-  cta_url: "https://github.com/lexelby/inkstitch/releases/latest"
-excerpt: "An Inkscape extension for designing machine embroidery patterns<br><span style='color: red;'>!!! There is a lot to do here, if you have the skills the will and the time to contribute some documentation on inkStitch please tell us how you can help in this issue > [#121](https://github.com/lexelby/inkstitch/issues/121)</span>"
-intro: 
-  - excerpt: 'This is the main page. The design is not quiet finished. Images are example images of the minimal mistakes theme.'
+excerpt: "Ink/Stitch - an Inkscape extension for designing machine embroidery patterns."
 feature_row:
   - image_path: assets/images/unsplash-gallery-image-1-th.jpg
     alt: "Quick Setup"
@@ -33,7 +25,21 @@ feature_row:
     btn_label: "Read More"
     btn_class: "btn--primary"
 ---
+<!-- <div>
+  <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=lexelby&repo=inkstitch&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+  <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=lexelby&repo=inkstitch&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+</div> -->
 
-{% include feature_row id="intro" type="center" %}
+<h2 style="border-bottom: none;">Ink/Stitch</h2>
+<p>An Inkscape extension for designing machine embroidery patterns.</p>
+<p><button class="btn btn--primary btn--large">Download Ink/Stitch</button></p>
+
+<hr></hr>
 
 {% include feature_row %}
+
+<h2>News</h2>
+<ul>{% for post in site.posts offset: 0 limit: 10 %}<li>{{ post.date  | date: "%B %-d, %Y" }}: <a href="{{ post.url }}">{{ post.title }}</a></li>{% endfor %}</ul>
+<p><a href="{{ site.url }}/news/">Show more</a></p>
+
+

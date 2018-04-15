@@ -43,6 +43,15 @@ div.highlighter-rouge, figure.highlight {
   font-size: .6rem;
 }
 
+a:hover, a:active, .page__taxonomy-item:hover {
+  color: #ffd555;
+  text-decoration: none;
+}
+
+p a:visited {
+  color: #f74004;
+}
+
 /* Table of Contents */
   .toc .nav__title {
     background: #808080;
@@ -141,4 +150,9 @@ div.highlighter-rouge, figure.highlight {
   
   .pagination--pager.disabled {
     background: #cccccc;
+  }
+  
+/* Archive */
+  .archive__item-title {
+    overflow: inherit;
   }
