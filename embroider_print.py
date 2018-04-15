@@ -133,7 +133,7 @@ class PrintPreviewServer(Thread):
 
         @self.app.route('/metadata/<field_name>/set', methods=['POST'])
         def set_field(field_name):
-            self.metadata[field_name] = request.form['value']
+            self.metadata[field_name] = request.json['value']
             return "OK"
 
         @self.app.route('/metadata/<field_mame>', methods=['GET'])

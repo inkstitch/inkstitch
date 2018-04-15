@@ -24,10 +24,10 @@
       <div>
        <fieldset>
           <legend>{{ ('Print Layouts') }}:</legend>
-          <p><input type="checkbox" id="client-overview" {{ 'checked' if view.client_overview else '' }}><label for="client-overview">Client Overview</label></p>
-          <p><input type="checkbox" id="client-detailedview" {{ 'checked' if view.client_detailedview else '' }}><label for="client-detailedview">Client Detailed View</label></p>
-          <p><input type="checkbox" id="operator-overview" {{ 'checked' if view.operator_overview else '' }}><label for="operator-overview">Operator Overview</label></p>
-          <p><input type="checkbox" id="operator-detailedview" {{ 'checked' if view.operator_detailedview else '' }}><label for="operator-overview">Operator Detailed View</label></p>
+          <p><input type="checkbox" id="client-overview" data-field-name="client-overview" /><label for="client-overview">Client Overview</label></p>
+          <p><input type="checkbox" id="client-detailedview" data-field-name="client-detailedview" /><label for="client-detailedview">Client Detailed View</label></p>
+          <p><input type="checkbox" id="operator-overview" data-field-name="operator-overview" CHECKED /><label for="operator-overview">Operator Overview</label></p>
+          <p><input type="checkbox" id="operator-detailedview" data-field-name="operator-detailedview" CHECKED /><label for="operator-detailedview">Operator Detailed View</label></p>
         </fieldset>
       </div>
     </div>

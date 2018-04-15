@@ -1,5 +1,6 @@
 import inkex
 import re
+import json
 from collections import MutableMapping
 from .elements import AutoFill, Fill, Stroke, SatinColumn, Polyline, EmbroideryElement
 from . import SVG_POLYLINE_TAG, SVG_GROUP_TAG, SVG_DEFS_TAG, INKSCAPE_GROUPMODE, EMBROIDERABLE_TAGS, PIXELS_PER_MM
@@ -49,15 +50,23 @@ class InkStitchMetadata(MutableMapping):
     # implement these five methods and we get a full dict-like interface.
 
     def __setitem__(self, name, value):
-        self[name].text = value
+        self._find_item(name).text = json.dumps(value)
 
-    def __getitem__(self, name):
+    def _find_item(self, name):
         tag = inkex.addNS(name, "inkstitch")
         item = self.metadata.find(tag)
         if item is None:
             item = inkex.etree.SubElement(self.metadata, tag)
 
-        return item.text
+        return item
+
+    def __getitem__(self, name):
+        item = self._find_item(name)
+
+        try:
+            return json.loads(item.text)
+        except ValueError:
+            return None
 
     def __delitem__(self, name):
         item = self[name]
@@ -71,6 +80,7 @@ class InkStitchMetadata(MutableMapping):
                 yield strip_namespace(child.tag)
 
     def __len__(self):
+        i = 0
         for i, item in enumerate(self):
             pass
 

@@ -1,3 +1,12 @@
+$.postJSON = function(url, data, success=null) {
+    return $.ajax(url, {
+                        type: 'POST',
+                        data: JSON.stringify(data),
+                        contentType: 'application/json',
+                        success: success
+                       });
+};
+
 function ping() {
   $.get("/ping")
    .done(function() { setTimeout(ping, 1000) })
@@ -49,13 +58,22 @@ $(function() {
     var content = $(this).html();
     var field_name = $(this).attr('data-field-name');
     $('[data-field-name="' + field_name + '"]').text(content);
-    $.post('/metadata/' + field_name + '/set', {value: content});
+    $.postJSON('/metadata/' + field_name + '/set', {value: content});
   });
 
   // load up initial metadata values
   $.getJSON('/metadata', function(metadata) {
       $.each(metadata, function(field_name, value) {
-          $('[data-field-name="' + field_name + '"]').text(value);
+          $('[data-field-name="' + field_name + '"]').each(function(i, item) {
+              console.log(item);
+              if ($(item).is(':checkbox')) {
+                  console.log("is a checkbox");
+                  $(item).prop('checked', value).trigger('change');
+              } else {
+                  console.log("is not a checkbox");
+                  $(item).text(value);
+              }
+          });
       });
   });
 
@@ -108,9 +126,14 @@ $(function() {
 
   //Checkbox
   $(':checkbox').change(function() {
-    $('.' + this.id).toggle();
+    var checked = $(this).prop('checked');
+    var field_name = $(this).attr('data-field-name');
+
+    $('.' + field_name).toggle(checked);
     setPageNumbers();
     scaleInksimulation();
+
+    $.postJSON('/metadata/' + field_name + '/set', {value: checked});
   });
 
 });
