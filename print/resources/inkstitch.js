@@ -33,8 +33,6 @@ function scaleSVG(element, scale = 'fit') {
       element.width() / element.find('svg').width(),    
       element.height() / element.find('svg').height()
     );
-    // Do not scale to more than 100%
-    scale = (scale <= 1) ? scale : 1;
   }
   
   transform += " scale(" + scale + ")";
