@@ -115,21 +115,24 @@ $(function() {
   
   /* Drag SVG */
   $('figure.inksimulation').on('mousedown', function(e) {
-      $(this).data('p0', { x: e.pageX, y: e.pageY });
-      $(this).css({cursor: 'move'});
+    var p0 = { x: e.pageX, y: e.pageY };
+    var start_transform = $(this).find('svg').css('transform').match(/-?[\d\.]+/g);
+    var start_offset = { x: parseFloat(start_transform[4]), y: parseFloat(start_transform[5]) };
+
+    $(this).css({cursor: 'move'});
+    $(this).on('mousemove', function(e) {
+          var p1 = { x: e.pageX, y: e.pageY };
+          // set modified translate
+          var transform = $(this).find('svg').css('transform').match(/-?[\d\.]+/g);
+          transform[4] = start_offset.x + (p1.x - p0.x);
+          transform[5] = start_offset.y + (p1.y - p0.y);
+          $(this).find('svg').css({ transform: 'matrix(' + transform + ')' });
+      });
   }).on('mouseup', function(e) {
-      $(this).css({cursor: 'auto'});
-      var p0 = $(this).data('p0'),
-        p1 = { x: e.pageX, y: e.pageY },
-        d = Math.sqrt(Math.pow(p1.x - p0.x, 2) + Math.pow(p1.y - p0.y, 2));
-      if (d > 4) {
-        var transform = $(this).find('svg').css('transform').match(/-?[\d\.]+/g);
-        transform[4] = parseFloat(transform[4]) + parseFloat(p1.x-p0.x);
-        transform[5] = parseFloat(transform[5]) + parseFloat(p1.y-p0.y);
-        // set modified translate
-        $(this).find('svg').css({ transform: 'matrix(' + transform + ')' });
-      }
-  })
+    $(this).css({cursor: 'auto'});
+    $(this).data('p0', null);
+    $(this).off('mousemove');
+  });
   
   /* Apply transforms to All */
   $('button.svg-apply').click(function() {
