@@ -15,9 +15,14 @@
             </div>
         </header>
         <main>
-            <figure class="inksimulation">
+            <figure class="inksimulation" title="{{ _('Ctrl + Scroll to Zoom') }}">
                 {{color_block.svg_preview|safe}}
-                <figcaption>{{ _('Scale') }} <span>{{ svg_scale }}</span></figcaption>
+                <figcaption>{{ _('Scale') }} <span data-field-name="svg-scale" contenteditable="true" data-placeholder="Enter scale...">{{ svg_transform }}</span>%</figcaption>
+                <div>
+                  <button class="svg-fit">Fit</button>
+                  <button class="svg-full">100%</button>
+                  <button class="svg-apply">Apply to all</button>
+                </div>
             </figure> 
             
             <div class="color-palette detailed">
