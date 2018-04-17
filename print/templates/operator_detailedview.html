@@ -25,7 +25,7 @@
                 <span>{{ _('Color Blocks') }}: {{ job.num_color_blocks }}</span>
               </p>
               <p>
-                <span>{{ _('Design box size') }}: {{ job.dimensions }}</span>
+                <span>{{ _('Design box size') }}: {{ "%0.1fmm X %0.1fmm" | format(*job.dimensions) }}</span>
                 <span>{{ _('Total thread used') }}: {{job.estimated_thread }}</span>
                 <span>{{ _('Total stitch count') }}: {{job.num_stitches }}</span>
               </p>
