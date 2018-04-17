@@ -78,12 +78,14 @@ $(function() {
       var transform = svg.css('transform').match(/-?[\d\.]+/g);
       var scale     = parseFloat(transform[0]);
       
-      if( scale > 0.01 && (e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0)) {
-        // scroll down
-        scale -= 0.01;
+      if (e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) {
+        // scroll down = zoom out
+        scale *= 0.97;
+        if (scale < 0.01)
+            scale = 0.01;
       } else {
         //scroll up
-        scale += 0.01;
+        scale *= 1.03;
       }
       
       // set modified scale
