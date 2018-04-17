@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-02 22:11-0400\n"
+"POT-Creation-Date: 2018-04-16 20:17-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -391,5 +391,14 @@ msgid "⚠ lost connection to Ink/Stitch"
 msgstr ""
 
 msgid "Printing Size"
+msgstr ""
+
+msgid "Print Layouts"
+msgstr ""
+
+msgid "Includes all settings visible here and also the icon."
+msgstr ""
+
+msgid "Save as defaults"
 msgstr ""
 

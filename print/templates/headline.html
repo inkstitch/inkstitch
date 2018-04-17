@@ -1,5 +1,8 @@
 <figure class="brandlogo">
-      <img src="{{ logo.src or "resources/inkstitch-logo.svg" }}" alt="{{ logo.title }}" title="{{ logo.title }}">
+  <label for="logo-picker">
+    <img src="{{ logo.src or "resources/inkstitch-logo.svg" }}" alt="{{ logo.title }}" title="{{ logo.title }}" data-field-name="logo">
+    <input type=file id="logo-picker" />
+  </label>
 </figure>
 <div class="headline">
   <div class="pageTitle">

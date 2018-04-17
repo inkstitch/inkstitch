@@ -58,20 +58,22 @@ $(function() {
     var content = $(this).html();
     var field_name = $(this).attr('data-field-name');
     $('[data-field-name="' + field_name + '"]').text(content);
-    $.postJSON('/metadata/' + field_name + '/set', {value: content});
+    $.postJSON('/settings/' + field_name, {value: content});
   });
 
   // load up initial metadata values
-  $.getJSON('/metadata', function(metadata) {
-      $.each(metadata, function(field_name, value) {
+  $.getJSON('/settings', function(settings) {
+      $.each(settings, function(field_name, value) {
           $('[data-field-name="' + field_name + '"]').each(function(i, item) {
-              console.log(item);
-              if ($(item).is(':checkbox')) {
-                  console.log("is a checkbox");
-                  $(item).prop('checked', value).trigger('change');
+              var item = $(item);
+              if (item.is(':checkbox')) {
+                  item.prop('checked', value).trigger('change');
+              } else if (item.is('img')) {
+                  item.attr('src', value);
+              } else if (item.is('select')) {
+                  item.val(value).trigger('change');
               } else {
-                  console.log("is not a checkbox");
-                  $(item).text(value);
+                  item.text(value);
               }
           });
       });
@@ -121,7 +123,9 @@ $(function() {
 
   // Paper Size
   $('select#printing-size').change(function(){
-    $('.page').toggleClass('a4');
+    var size = $(this).find(':selected').val();
+    $('.page').toggleClass('a4', size == 'a4');
+    $.postJSON('/settings/paper-size', {value: size});
   });
 
   //Checkbox
@@ -133,8 +137,36 @@ $(function() {
     setPageNumbers();
     scaleInksimulation();
 
-    $.postJSON('/metadata/' + field_name + '/set', {value: checked});
+    $.postJSON('/settings/' + field_name, {value: checked});
   });
 
+  // Logo
+  $('#logo-picker').change(function(e) {
+      var file = e.originalEvent.srcElement.files[0];
+      var reader = new FileReader();
+      reader.onloadend = function() {
+          var data = reader.result;
+          $('figure.brandlogo img').attr('src', data);
+          $.postJSON('/settings/logo', {value: data});
+      };
+      reader.readAsDataURL(file);
+  });
+
+  // "save as defaults" button
+  $('#save-settings').click(function(e) {
+      var settings = {};
+      settings["client-overview"] = $("[data-field-name='client-overview']").is(':checked');
+      settings["client-detailedview"] = $("[data-field-name='client-detailedview']").is(':checked');
+      settings["operator-overview"] = $("[data-field-name='operator-overview']").is(':checked');
+      settings["operator-detailedview"] = $("[data-field-name='operator-detailedview']").is(':checked');
+      settings["paper-size"] = $('select#printing-size').find(':selected').val();
+
+      var logo = $("figure.brandlogo img").attr('src');
+      if (logo.startsWith("data:")) {
+          settings["logo"] = logo;
+      }
+
+      $.postJSON('/defaults', {'value': settings});
+  });
 });
 

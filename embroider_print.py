@@ -11,6 +11,8 @@ import time
 import logging
 from copy import deepcopy
 import wx
+import appdirs
+import json
 
 import inkex
 import inkstitch
@@ -31,6 +33,29 @@ import requests
 
 def datetimeformat(value, format='%Y/%m/%d'):
     return value.strftime(format)
+
+
+def defaults_path():
+    defaults_dir = appdirs.user_config_dir('inkstitch')
+
+    if not os.path.exists(defaults_dir):
+        os.makedirs(defaults_dir)
+
+    return os.path.join(defaults_dir, 'print_settings.json')
+
+
+def load_defaults():
+    try:
+        with open(defaults_path(), 'r') as defaults_file:
+            defaults = json.load(defaults_file)
+            return defaults
+    except:
+        return {}
+
+
+def save_defaults(defaults):
+    with open(defaults_path(), 'w') as defaults_file:
+        json.dump(defaults, defaults_file)
 
 
 def open_url(url):
@@ -131,20 +156,26 @@ class PrintPreviewServer(Thread):
             # nothing to do here -- request_started() will restart the watcher
             return "OK"
 
-        @self.app.route('/metadata/<field_name>/set', methods=['POST'])
+        @self.app.route('/settings/<field_name>', methods=['POST'])
         def set_field(field_name):
             self.metadata[field_name] = request.json['value']
             return "OK"
 
-        @self.app.route('/metadata/<field_mame>', methods=['GET'])
+        @self.app.route('/settings/<field_mame>', methods=['GET'])
         def get_field(field_name):
             return jsonify(self.metadata[field_name])
 
-        @self.app.route('/metadata', methods=['GET'])
-        def get_metadata():
-            # It's necessary to convert the metadata to a dict because json doesn't
-            # trust that a MutableMapping is dict-like :(
-            return jsonify(dict(self.metadata))
+        @self.app.route('/settings', methods=['GET'])
+        def get_settings():
+            settings = {}
+            settings.update(load_defaults())
+            settings.update(self.metadata)
+            return jsonify(settings)
+
+        @self.app.route('/defaults', methods=['POST'])
+        def set_defaults():
+            save_defaults(request.json['value'])
+            return "OK"
 
     def stop(self):
         # for whatever reason, shutting down only seems possible in

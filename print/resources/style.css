@@ -226,6 +226,10 @@ body {
     cursor: pointer;
   }
 
+  #settings-ui fieldset {
+    margin-bottom: 1em;
+  }
+
 /* Header */
 
 
@@ -247,11 +251,30 @@ body {
     margin: 2.5mm;
   }
 
+  figure.brandlogo label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 30mm;
+    text-align: center;
+  }
+
   figure.brandlogo img {
     max-width: 30mm;
     max-height: 30mm;
+    display: inline;
+    vertical-align: middle;
   }
-  
+
+  /* hide the actual file picker control, since we just want them to click the
+   * image instead
+   */
+  #logo-picker {
+    width: 0px;
+    height: 0px;
+    opacity: 0%;
+  }
+
   .operator-detailedview figure.brandlogo {
     height: 20mm;
     width: 30mm;
