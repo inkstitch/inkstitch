@@ -343,7 +343,6 @@ class Print(InkstitchExtension):
                     'estimated_thread': '', # TODO
                   },
             svg_overview = overview_svg,
-            svg_transform = '', # Format: matrix(0.2, 0, 0, 0.2, 0, 0)
             color_blocks = stitch_plan.color_blocks,
         )
 

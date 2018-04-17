@@ -39,24 +39,14 @@ function scaleSVG(element, scale = 'fit') {
   var label = parseInt(scale*100);
 
   element.find('svg').css({ transform: transform });
-  element.find('figcaption span').text(label);
+  element.find('.scale').text(label);
 }
 
 // set preview svg scale to fit into its box if transform is not set
 function scaleAllSvg() {
     $('.page').each(function() {
-      if( $(this).css('display') != 'none' ) {
-        if( $(this).find('.inksimulation svg').css('transform') == 'none') {
-          if( $(this).find('.inksimulation span').text() == '') {
-            scaleSVG($(this).find('.inksimulation'));
-          } 
-          else {
-            var transform = $(this).find('.inksimulation span').text();
-            var scale = transform.match(/-?[\d\.]+/g)[0];
-            $(this).find('.inksimulation svg').css({ transform: transform });
-            $(this).find('.inksimulation span').text(parseInt(scale*100));
-          }
-        }
+      if( $(this).find('.inksimulation svg').css('transform') == 'none') {
+        scaleSVG($(this).find('.inksimulation'), 'fit');
       }
     });
 }
@@ -64,7 +54,6 @@ function scaleAllSvg() {
 $(function() {
   setTimeout(ping, 1000);
   setPageNumbers();
-  scaleAllSvg();
   
   /* SCALING AND MOVING SVG  */
   
@@ -92,7 +81,7 @@ $(function() {
       svg.css({ transform: 'matrix(' + transform + ')' });
       
       // set scale caption text
-      $(this).find("span").text(parseInt(scale*100));
+      $(this).find(".scale").text(parseInt(scale*100));
 
       //prevent page fom scrolling
       return false;
@@ -138,7 +127,7 @@ $(function() {
     var scale = transform.match(/-?[\d\.]+/g)[0];
     $('.inksimulation').each(function() {
       $(this).find('svg').css({ transform: transform });
-      $(this).find("span").text(parseInt(scale*100));
+      $(this).find(".scale").text(parseInt(scale*100));
       
     })
   });
@@ -167,20 +156,22 @@ $(function() {
 
   // load up initial metadata values
   $.getJSON('/settings', function(settings) {
-      $.each(settings, function(field_name, value) {
-          $('[data-field-name="' + field_name + '"]').each(function(i, item) {
-              var item = $(item);
-              if (item.is(':checkbox')) {
-                  item.prop('checked', value).trigger('change');
-              } else if (item.is('img')) {
-                  item.attr('src', value);
-              } else if (item.is('select')) {
-                  item.val(value).trigger('change');
-              } else {
-                  item.text(value);
-              }
-          });
-      });
+    $.each(settings, function(field_name, value) {
+        $('[data-field-name="' + field_name + '"]').each(function(i, item) {
+            var item = $(item);
+            if (item.is(':checkbox')) {
+                item.prop('checked', value).trigger('change');
+            } else if (item.is('img')) {
+                item.attr('src', value);
+            } else if (item.is('select')) {
+                item.val(value).trigger('change');
+            } else {
+                item.text(value);
+            }
+        });
+    });
+    // wait until page size is set (if they've specified one) and then scale SVGs to fit
+    setTimeout(function() { scaleAllSvg() }, 500);
   });
 
   $('[contenteditable="true"]').keypress(function(e) {
@@ -229,6 +220,7 @@ $(function() {
   $('select#printing-size').change(function(){
     var size = $(this).find(':selected').val();
     $('.page').toggleClass('a4', size == 'a4');
+    console.log("" + Date.now() + "paper size changed");
     $.postJSON('/settings/paper-size', {value: size});
   });
 
@@ -239,7 +231,6 @@ $(function() {
 
     $('.' + field_name).toggle(checked);
     setPageNumbers();
-    scaleAllSvg();
 
     $.postJSON('/settings/' + field_name, {value: checked});
   });
