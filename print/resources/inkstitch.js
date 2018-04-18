@@ -51,6 +51,23 @@ function scaleAllSvg() {
     });
 }
 
+var saveTimerHandles = {};
+
+function setSVGTransform(figure, transform) {
+    var field_name = $(figure).data('field-name');
+    var scale = transform.match(/-?[\d\.]+/g)[0];
+    figure.find('svg').css({ transform: transform });
+    figure.find(".scale").text(parseInt(scale*100));
+
+    // avoid spamming updates
+    if (saveTimerHandles[field_name] != null)
+        clearTimeout(saveTimerHandles[field_name]);
+
+    saveTimerHandles[field_name] = setTimeout(function() {
+        $.postJSON('/settings/' + field_name, {value: transform});
+    }, 250);
+}
+
 $(function() {
   setTimeout(ping, 1000);
   setPageNumbers();
@@ -78,10 +95,8 @@ $(function() {
       // set modified scale
       transform[0] = scale;
       transform[3] = scale;
-      svg.css({ transform: 'matrix(' + transform + ')' });
-      
-      // set scale caption text
-      $(this).find(".scale").text(parseInt(scale*100));
+
+      setSVGTransform($(this), 'matrix(' + transform + ')');
 
       //prevent page fom scrolling
       return false;
@@ -113,22 +128,25 @@ $(function() {
           var transform = $(this).find('svg').css('transform').match(/-?[\d\.]+/g);
           transform[4] = start_offset.x + (p1.x - p0.x);
           transform[5] = start_offset.y + (p1.y - p0.y);
-          $(this).find('svg').css({ transform: 'matrix(' + transform + ')' });
+
+          // I'd ike to use setSVGTransform() here but this code runs many
+          // times per second and it's just too CPU-intensive.
+          $(this).find('svg').css({transform: 'matrix(' + transform + ')'});
       });
   }).on('mouseup', function(e) {
     $(this).css({cursor: 'auto'});
     $(this).data('p0', null);
     $(this).off('mousemove');
+
+    // set it using setSVGTransform() to ensure that it's saved to the server
+    setSVGTransform($(this), $(this).find('svg').css('transform'));
   });
   
   /* Apply transforms to All */
   $('button.svg-apply').click(function() {
     var transform = $(this).parent().siblings('svg').css('transform');
-    var scale = transform.match(/-?[\d\.]+/g)[0];
     $('.inksimulation').each(function() {
-      $(this).find('svg').css({ transform: transform });
-      $(this).find(".scale").text(parseInt(scale*100));
-      
+      setSVGTransform($(this), transform);
     })
   });
 
@@ -165,6 +183,8 @@ $(function() {
                 item.attr('src', value);
             } else if (item.is('select')) {
                 item.val(value).trigger('change');
+            } else if (item.is('figure.inksimulation')) {
+                setSVGTransform(item, value);
             } else {
                 item.text(value);
             }

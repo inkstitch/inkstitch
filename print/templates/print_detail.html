@@ -15,7 +15,7 @@
             </div>
         </header>
         <main>
-            <figure class="inksimulation" title="{{ _('Ctrl + Scroll to Zoom') }}">
+            <figure class="inksimulation" data-field-name="client-detail-transform-block{{ loop.index0 }}" title="{{ _('Ctrl + Scroll to Zoom') }}">
                 {{color_block.svg_preview|safe}}
                 <figcaption>{{ _('Scale') }} <span class="scale" data-field-name="svg-scale" contenteditable="true" data-placeholder=""></span>%</figcaption>
                 <div>
