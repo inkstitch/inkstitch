@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-16 21:03-0400\n"
+"POT-Creation-Date: 2018-04-18 16:29-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -336,7 +336,7 @@ msgstr ""
 msgid "Stops and Trims"
 msgstr ""
 
-msgid "Estimated Time"
+msgid "Notes"
 msgstr ""
 
 msgid "Unique Colors"
@@ -358,6 +358,9 @@ msgid "Total nr stops"
 msgstr ""
 
 msgid "Total nr trims"
+msgstr ""
+
+msgid "Enter operator notes..."
 msgstr ""
 
 msgid "Job estimated time"

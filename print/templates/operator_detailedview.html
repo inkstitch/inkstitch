@@ -10,7 +10,7 @@
               <p>{{ _('Color') }}</p>
               <p>{{ _('Thread Consumption') }}</p>
               <p>{{ _('Stops and Trims') }}</p>
-              <p>{{ _('Estimated Time') }}</p>
+              <p>{{ _('Notes') }}</p>
             </div>
             {% if outer_loop.index == 1 %}
             <div>
@@ -34,7 +34,7 @@
                 <span>{{ _('Total nr trims') }}: {{ job.num_trims }}</span>
               </p>
               <p>
-                <span>{{ job.estimated_time }}</span>
+                <span></span>
               </p>
             </div>
             {% endif %}
@@ -45,7 +45,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg">
                   <rect fill="rgb{{ color_block.color.rgb }}" width="15mm" height="100%" />
                   <text fill="rgb{{ color_block.color.font_color }}">
-                    <tspan x="4mm" y="7.5mm" class="color-index">#{{ loop.index + outer_loop.index0 * 13 }}</tspan>
+                    <tspan x="4mm" y="7.5mm" class="color-index">#{{ loop.index + outer_loop.index0 * 12 }}</tspan>
                   </text>
                 </svg>
               </p>
@@ -65,7 +65,7 @@
                 <span>{{ _('# trims') }}: {{ color_block.num_trims }}</span>
               </p>
               <p>
-                <span>{{ color_block.estimatedtime }}</span>
+                <span class="notes" contenteditable="true" data-field-name="operator-notes-block{{ loop.index0 + outer_loop.index0 * 12 }}" data-placeholder="{{ _("Enter operator notes...") }}"></span>
               </p>
             </div>
           {% endfor %}
