@@ -363,7 +363,18 @@ class Print(InkstitchExtension):
 
 
 if __name__ == '__main__':
-    #save_stderr()
-    effect = Print()
-    effect.affect()
-    #restore_stderr()
+    exception = None
+
+    save_stderr()
+    try:
+        effect = Print()
+        effect.affect()
+    except:
+        exception = traceback.format_exc()
+    restore_stderr()
+
+    if exception:
+        print >> sys.stderr, exception
+        sys.exit(1)
+    else:
+        sys.exit(0)
