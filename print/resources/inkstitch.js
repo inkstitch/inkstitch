@@ -72,7 +72,7 @@ $(function() {
   
   /* Mousewheel scaling */
   $('figure.inksimulation').on( 'DOMMouseScroll mousewheel', function (e) {
-    if(event.ctrlKey == true) {
+    if(e.ctrlKey == true) {
     
       var svg       = $(this).find('svg');
       var transform = svg.css('transform').match(/-?[\d\.]+/g);
