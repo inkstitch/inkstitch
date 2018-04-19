@@ -9,6 +9,7 @@ dist: distclean locales
 	bin/build-dist $(EXTENSIONS)
 	cp inx/*.inx dist
 	cp -a images/examples dist/inkstitch
+    cp -a palettes dist/inkstitch
 	mkdir -p dist/inkstitch/bin/locales
 	cp -a locales/* dist/inkstitch/bin/locales
 	cp -a print dist/inkstitch/bin/
