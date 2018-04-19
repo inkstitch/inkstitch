@@ -133,7 +133,7 @@ class PrintPreviewServer(Thread):
         def shutdown():
             self.shutting_down = True
             request.environ.get('werkzeug.server.shutdown')()
-            return 'Server shutting down...'
+            return _('Closing...') + '<br/><br/>' + _('It is safe to close this window now.')
 
         @self.app.route('/resources/<path:resource>', methods=['GET'])
         def resources(resource):

@@ -213,6 +213,18 @@ $(function() {
     $.post('/shutdown', {})
      .done(function(data) {
        window.close();
+
+       /* Chrome and Firefox both have a rule: scripts can only close windows
+        * that they opened.  Chrome seems to have an exception for windows that
+        * were opened by an outside program, so the above works fine.  Firefox
+        * steadfastly refuses to allow us to close the window, so we'll tell
+        * the user (in their language) that they can close it.
+        */
+       setTimeout(function() {
+           document.open();
+           document.write("<html><body>" + data + "</body></html>");
+           document.close();
+       }, 1000);
     });
   });
 
@@ -240,7 +252,6 @@ $(function() {
   $('select#printing-size').change(function(){
     var size = $(this).find(':selected').val();
     $('.page').toggleClass('a4', size == 'a4');
-    console.log("" + Date.now() + "paper size changed");
     $.postJSON('/settings/paper-size', {value: size});
   });
 
