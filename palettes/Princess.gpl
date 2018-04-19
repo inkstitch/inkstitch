@@ -1,0 +1,124 @@
+GIMP Palette
+Name: Ink/Stitch: Princess
+Columns: 4
+# RGB Value		                    Color Name Number
+255	255	255	                         White    1-1
+216	205	212	                          Grey    1-2
+230	 60	102	                          Pink    1-3
+109	132	 72	                     Lt. Olive    1-4
+255	210	 60	                        Yellow    1-5
+  0	  0	  0	                         Black    1-6
+ 94	140	176	                      Mid Blue    1-7
+255	  0	  3	                           Red    1-8
+ 41	122	 30	                         Green    1-9
+ 89	 23	 23	                         Brown   1-10
+232	221	192	                         Cream    2-1
+227	130	 70	                          Gold    2-2
+180	114	 83	                   Light Brown    2-3
+180	 45	 48	                        Orange    2-4
+161	 63	125	                        Purple    2-5
+106	112	115	                        Pewter    2-6
+  0	152	160	                          Cyan    2-7
+ 23	 50	142	                     Dark Blue    2-8
+ 60	 78	 44	                         Olive    2-9
+128	 36	 38	                      Burgundy   2-10
+237	228	216	                  Palest Ivory    3-1
+232	210	168	                 Palest Yellow    3-2
+230	198	182	                   Palest Fawn    3-3
+235	208	203	                  Palest Peach    3-4
+238	200	220	                   Palest Pink    3-5
+220	216	225	                   Palest Grey    3-6
+209	216	231	                   Palest Blue    3-7
+206	250	244	                   Palest Aqua    3-8
+155	182	133	                  Palest Green    3-9
+211	187	213	                  Palest Mauve   3-10
+182	200	225	                    Light Blue    4-1
+135	160	212	                   Powder Blue    4-2
+114	119	199	                      Sky Blue    4-3
+ 62	 95	151	                    Slate Blue    4-4
+ 85	 87	122	                    Storm Blue    4-5
+ 38	 42	 92	                         Denim    4-6
+ 10	 75	140	                   Petrel Blue    4-7
+ 17	 27	 94	                 Imperial Blue    4-8
+ 14	 34	114	                    Royal Blue    4-9
+ 18	 17	 59	                     Navy Blue   4-10
+230	120	 80	                        Copper    5-1
+215	107	 60	                  Golden Brown    5-2
+110	 40	 25	                           Tan    5-3
+116	 37	 20	                          Bark    5-4
+ 75	 27	 18	                      Dark Oak    5-5
+130	  0	  0	                        Russet    5-6
+ 80	 20	 18	                      Mahogany    5-7
+120	 84	 54	                      Mushroom    5-8
+ 91	 60	 17	                         Khaki    5-9
+ 68	  1	  0	                Dark Chocolate   5-10
+248	189	155	                  Light Salmon    6-1
+243	138	103	                        Salmon    6-2
+242	 82	 56	                     Tangerine    6-3
+230	145	120	                         Blush    6-4
+184	 90	 60	                        Bronze    6-5
+232	 41	 37	                       Scarlet    6-6
+202	 32	 23	                          Rust    6-7
+210	  4	 20	                       Carmine    6-8
+231	  0	 28	                          Ruby    6-9
+224	 47	 52	                   Antique Red   6-10
+144	214	130	                    Light Jade    7-1
+158	164	 70	                     Pistachio    7-2
+170	201	 60	                   Fresh Green    7-3
+ 75	148	 81	                          Sage    7-4
+ 64	 96	 64	                          Teal    7-5
+ 54	143	 52	                  Bright Green    7-6
+ 41	118	 66	                          Jade    7-7
+ 58	130	 60	                    Leaf Green    7-8
+ 30	145	 41	                       Emerald    7-9
+ 11	 96	 32	                    Dark Green   7-10
+245	192	200	                    Sugar Pink    8-1
+250	170	190	                    Petal Pink    8-2
+250	134	160	                     Rose Pink    8-3
+208	102	144	                  Passion Pink    8-4
+190	 52	 85	                    Dusky Rose    8-5
+241	105	133	                  Light Cerise    8-6
+239	 91	111	                    Dusky Pink    8-7
+220	  0	 74	                        Cerise    8-8
+255	  0	118	                       Fuschia    8-9
+149	 36	 80	                     Raspberry   8-10
+244	241	236	                      Platinum    9-1
+185	164	183	                    Silver Fox    9-2
+176	176	187	                    Sleet Grey    9-3
+116	121	146	                   Silver Blue    9-4
+150	140	142	                   Silver Moon    9-5
+138	125	102	                        Willow    9-6
+102	 83	102	                     Dark Grey    9-7
+ 86	 83	108	                         Steel    9-8
+ 75	 71	 80	                      Midnight    9-9
+ 36	 36	 54	                          Seal   9-10
+162	251	230	                  Pacific Mist   10-1
+184	231	202	                          Mint   10-2
+149	244	219	                          Aqua   10-3
+ 49	214	227	                         Capri   10-4
+ 70	140	145	                        Lagoon   10-5
+ 21	151	174	                    Kingfisher   10-6
+ 51	142	103	                          Lido   10-7
+ 40	111	 68	                Tropical Green   10-8
+ 34	 96	100	                 Deep Atlantic   10-9
+ 40	 67	 70	                  Ocean Depths  10-10
+255	210	220	                Delicate Mauve   11-1
+225	186	233	                    Pale Lilac   11-2
+159	107	156	                         Lilac   11-3
+196	102	168	                      Lavender   11-4
+151	 76	148	                        Violet   11-5
+189	 75	151	                      Clematis   11-6
+ 93	 59	123	               Imperial Purple   11-7
+142	 95	196	                      Amethyst   11-8
+129	 58	126	                   Deep Violet   11-9
+ 63	 53	102	                        Cassis  11-10
+254	246	196	                    Pale Lemon   12-1
+248	187	 85	                        Mimosa   12-2
+251	251	 66	                          Lime   12-3
+249	210	113	                      Daffodil   12-4
+215	155	 96	                     Sunkissed   12-5
+245	180	 34	                 Golden Lights   12-6
+255	124	 28	                        Soleil   12-7
+225	 72	 28	                  Golden Glory   12-8
+211	131	 71	                      Sunburst   12-9
+214	 92	 48	                      Marigold  12-10

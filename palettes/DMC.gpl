@@ -1,0 +1,462 @@
+GIMP Palette
+Name: Ink/Stitch: DMC
+Columns: 4
+# RGB Value		                    Color Name Number
+255	255	255	                         White  White
+233	233	212	                          Ecru   Ecru
+255	255	255	                         White   0000
+255	236	191	                          Ecru   0000
+148	 91	128	            Lavender Very Dark   0208
+206	148	186	                 Lavender Dark   0209
+236	207	225	               Lavender Medium   0210
+243	218	228	                Lavender Light   0211
+156	 41	 74	          Shell Pink Very Dark   0221
+219	128	115	              Shell Pink Light   0223
+255	199	176	         Shell Pink Very Light   0224
+255	240	228	       Shell Pink Ultra Very L   0225
+143	 57	 38	            Mahogany Very Dark   0300
+209	102	 84	               Mahogany Medium   0301
+188	  0	 97	          Christmas Red Medium   0304
+255	231	109	                         Lemon   0307
+214	 43	 91	                     Rose Dark   0309
+  0	  0	  0	                         Black   0310
+  0	 79	 97	              Navy Blue Medium   0311
+ 58	 84	103	               Navy Blue Light   0312
+163	 90	 91	       Antique Mauve Very Dark   0315
+220	141	141	          Antique Mauve Medium   0316
+167	139	136	                   Pewter Grey   0317
+197	198	190	              Steel Grey Light   0318
+ 85	 95	 82	     Pistachio Green Very Dark   0319
+138	153	120	        Pistachio Green Medium   0320
+231	 18	 97	                 Christmas Red   0321
+ 81	109	135	          Navy Blue Very Light   0322
+188	 22	 65	                Rose Very Dark   0326
+ 61	  0	103	                   Violet Dark   0327
+127	 84	130	         Blue Violet Very Dark   0333
+115	140	170	              Baby Blue Medium   0334
+219	 36	 79	                          Rose   0335
+ 36	 73	103	                     Navy Blue   0336
+162	121	164	            Blue Violet Medium   0340
+145	180	197	             Blue Violet Light   0341
+194	 36	 67	              Salmon Very Dark   0347
+220	 61	 91	                    Coral Dark   0349
+237	 69	 90	                  Coral Medium   0350
+255	128	135	                         Coral   0351
+255	157	144	                   Coral Light   0352
+255	196	184	                   Peach Flesh   0353
+189	 73	 47	              Terra Cotta Dark   0355
+226	114	 91	            Terra Cotta Medium   0356
+ 95	112	 91	          Pistachio Green Dark   0367
+181	206	162	         Pistachio Green Light   0368
+243	250	209	    Pistachio Green Very Light   0369
+184	138	 87	                Mustard Medium   0370
+196	155	100	                       Mustard   0371
+203	162	107	                 Mustard Light   0372
+157	 60	 39	                 Mahogany Dark   0400
+255	190	164	           Mahogany Very Light   0402
+194	101	 76	         Sportsman Flsh Very D   0407
+109	 95	 95	              Pewter Grey Dark   0413
+167	139	136	               Steel Grey Dark   0414
+221	221	218	                    Pearl Grey   0415
+140	 91	 43	          Hazel Nut Brown Dark   0420
+237	172	123	         Hazel Nut Brown Light   0422
+151	 84	 20	                  Brown Medium   0433
+178	103	 70	                   Brown Light   0434
+187	107	 57	              Brown Very Light   0435
+231	152	115	                           Tan   0436
+238	171	121	                     Tan Light   0437
+255	176	  0	                    Lemon Dark   0444
+255	255	190	                   Lemon Light   0445
+179	151	143	               Shell Grey Dark   0451
+210	185	175	             Shell Grey Medium   0452
+235	207	185	              Shell Grey Light   0453
+116	114	 92	                 Avocado Green   0469
+133	143	108	           Avocado Green Light   0470
+176	187	140	      Avocado Green Very Light   0471
+238	255	182	     Avocado Green Ultra Light   0472
+187	  0	 97	           Christmas Red Light   0498
+ 43	 57	 41	          Blue Green Very Dark   0500
+ 67	 85	 73	               Blue Green Dark   0501
+134	158	134	                    Blue Green   0502
+195	206	183	             Blue Green Medium   0503
+206	221	193	              Blue Green Light   0504
+ 16	127	135	              Wedgewood Medium   0517
+102	148	154	               Wedgewood Light   0518
+194	209	207	                      Sky Blue   0519
+ 55	 73	 18	               Fern Green Dark   0520
+159	169	142	                    Fern Green   0522
+172	183	142	              Fern Green Light   0523
+205	182	158	         Fern Green Very Light   0524
+ 85	 85	 89	           Ash Grey Very Light   0535
+239	214	188	  Beige Brown Ultra Very Light   0543
+109	 18	 97	             Violet Very Light   0550
+146	 85	130	                 Violet Medium   0552
+160	100	146	                        Violet   0553
+243	206	225	                  Violet Light   0554
+ 59	 96	 76	                Jade Very Dark   0561
+ 97	134	 97	                   Jade Medium   0562
+182	212	180	                    Jade Light   0563
+214	230	204	               Jade Very Light   0564
+  0	103	  0	               Moss Green Dark   0580
+151	152	 49	                    Moss Green   0581
+128	151	132	                     Turquoise   0597
+208	223	205	               Turquoise Light   0598
+208	 57	106	           Cranberry Very Dark   0600
+222	 57	105	                Cranberry Dark   0601
+231	 84	122	              Cranberry Medium   0602
+255	115	140	                     Cranberry   0603
+255	189	202	               Cranberry Light   0604
+255	207	214	          Cranberry Very Light   0605
+255	  0	  0	             Bright Orange Red   0606
+255	 91	  0	                 Bright Orange   0608
+151	104	 84	          Drab Brown Very Dark   0610
+158	109	 91	               Drab Brown Dark   0611
+203	152	103	             Drab Brown Medium   0612
+219	176	122	              Drab Brown Light   0613
+162	 77	 52	            Negro Flesh Medium   0632
+163	163	157	          Beige Grey Very Dark   0640
+174	176	170	               Beige Grey Dark   0642
+224	224	215	             Beige Grey Medium   0644
+113	113	113	         Beaver Grey Very Dark   0645
+121	121	121	              Beaver Grey Dark   0646
+190	190	185	            Beaver Grey Medium   0647
+202	202	202	             Beaver Grey Light   0648
+213	 39	 86	           Christmas Red Light   0666
+255	206	158	                Old Gold Light   0676
+255	231	182	           Old Gold Very Light   0677
+209	140	103	                 Old Gold Dark   0680
+  0	 91	  6	               Chirstmas Green   0699
+  0	 96	 47	        Christmas Green Bright   0700
+ 79	108	 69	         Christmas Green Light   0701
+ 79	121	 66	                   Kelly Green   0702
+121	144	 76	                    Chartreuse   0703
+165	164	103	             Chartreuse Bright   0704
+245	240	219	                         Cream   0712
+219	 55	121	                          Plum   0718
+200	 36	 43	             Orange Spice Dark   0720
+255	115	 97	           Orange Spice Medium   0721
+255	146	109	            Orange Spice Light   0722
+255	200	124	                         Topaz   0725
+255	224	128	                   Topaz Light   0726
+255	235	168	              Topaz Very Light   0727
+243	176	128	               Old Gold Medium   0729
+132	119	 17	         Olive Green Very Dark   0730
+123	119	 10	              Olive Green Dark   0731
+128	125	 21	                   Olive Green   0732
+158	158	  7	            Olive Green Medium   0733
+186	196	  5	             Olive Green Light   0734
+244	195	139	                Tan Very Light   0738
+244	233	202	          Tan Ultra Very Light   0739
+255	131	 19	                     Tangerine   0740
+255	142	  4	              Tangerine Medium   0741
+255	183	 85	               Tangerine Light   0742
+255	230	146	                 Yellow Medium   0743
+255	239	170	                   Yellow Pale   0744
+255	240	197	             Yellow Light Pale   0745
+246	234	219	                     Off White   0746
+240	247	239	           Sky Blue Very Light   0747
+251	227	209	             Peach Flesh Light   0754
+255	177	147	        Terra Cotta Very Light   0758
+249	160	146	                        Salmon   0760
+255	201	188	                  Salmon Light   0761
+232	232	229	         Pearl Grey Very Light   0762
+231	249	203	              Pine Green Light   0772
+247	246	248	          Baby Blue Very Light   0775
+255	177	174	                   Pink Medium   0776
+255	199	184	      Antique Mauve Very Light   0778
+181	 98	 46	         Topaz Ultra Very Dark   0780
+181	107	 56	               Topaz Very Dark   0781
+204	119	 66	                    Topaz Dark   0782
+225	146	 85	                  Topaz Medium   0783
+ 71	 55	 93	         Cornflower Blue VeryD   0791
+ 97	 97	128	          Cornflower Blue Dark   0792
+147	139	164	        Cornflower Blue Medium   0793
+187	208	218	         Cornflower Blue Light   0794
+ 30	 58	 95	               Royal Blue Dark   0796
+ 30	 66	 99	                    Royal Blue   0797
+103	115	141	                    Delft Dark   0798
+132	156	182	                  Delft Medium   0799
+233	238	233	                    Delft PALE   0800
+123	 71	 20	             Coffee Brown Dark   0801
+ 30	130	133	             Peacock Blue Dark   0806
+128	167	160	                  Peacock Blue   0807
+190	193	205	                         Delft   0809
+175	195	205	                    Blue Light   0813
+162	  0	 88	                   Garnet Dark   0814
+166	  0	 91	                 Garnet Medium   0815
+179	  0	 91	                        Garnet   0816
+219	 24	 85	           Coral Red Very Dark   0817
+255	234	235	                     Baby Pink   0818
+248	247	221	               Baby Pink Light   0819
+ 30	 54	 85	          Royal Blue Very Dark   0820
+242	234	219	              Beige Grey Light   0822
+  0	  0	 73	                Navy Blue Dark   0823
+ 71	 97	116	                Blue Very Dark   0824
+ 85	108	128	                     Blue Dark   0825
+115	138	153	                   Blue Medium   0826
+213	231	232	               Blue Very Light   0827
+237	247	238	         Blue Ultra Very Light   0828
+130	 90	  8	        Golden Olive Very Dark   0829
+136	 95	 18	             Golden Olive Dark   0830
+144	103	 18	           Golden Olive Medium   0831
+178	119	 55	                  Golden Olive   0832
+219	182	128	            Golden Olive Light   0833
+242	209	142	       Golden Olive Very Light   0834
+ 94	 56	 27	         Beige Brown Very Dark   0838
+109	 66	 39	              Beige Brown Dark   0839
+128	 85	 30	            Beige Brown Medium   0840
+188	134	107	             Beige Brown Light   0841
+219	194	164	        Beige Brown Very Light   0842
+107	103	102	       Beaver Brown Ultra Dark   0844
+153	 92	 48	     Hazel Nut Brown Very Dark   0868
+153	 92	 48	     Hazel Nut Brown Very Dark   0869
+ 79	 86	 76	    Pistachio Green Ultra Dark   0890
+241	 49	 84	                Carnation Dark   0891
+249	 90	 97	              Carnation Medium   0892
+243	149	157	               Carnation Light   0893
+255	194	191	          Carnation Very Light   0894
+ 89	 92	 78	        Hunter Green Very Dark   0895
+118	 55	 19	        Coffee Brown Very Dark   0898
+233	109	115	                   Rose Medium   0899
+206	 43	  0	             Burnt Orange Dark   0900
+138	 24	 77	              Granet Very Dark   0902
+ 78	 95	 57	        Parrot Green Very Dark   0904
+ 98	119	 57	             Parrot Green Dark   0905
+143	163	 89	           Parrot Green Medium   0906
+185	200	102	            Parrot Green Light   0907
+ 49	105	 85	       Emerald Green Very Dark   0909
+ 48	116	 91	            Emerald Green Dark   0910
+ 49	128	 97	          Emerald Green Medium   0911
+115	158	115	           Emerald Green Light   0912
+153	188	149	             Nile Green Medium   0913
+170	 24	 91	                     Plum Dark   0915
+171	 22	 95	                   Plum Medium   0917
+168	 68	 76	               Red Copper Dark   0918
+180	 75	 82	                    Red Copper   0919
+197	 94	 88	                 Copper Medium   0920
+206	103	 91	                        Copper   0921
+237	134	115	                  Copper Light   0922
+ 86	 99	100	          Grey Green Very Dark   0924
+ 96	116	115	              Grey Green Light   0926
+200	198	194	              Grey Green Light   0927
+225	224	216	         Grey Green Very Light   0928
+102	122	140	             Antique Blue Dark   0930
+124	135	145	           Antique Blue Medium   0931
+182	186	194	            Antique Blue Light   0932
+ 62	 59	 40	           Black Avocado Green   0934
+ 67	 63	 47	            Avocado Green Dark   0935
+ 69	 69	 49	          Avocado Green Very D   0936
+ 73	 86	 55	          Avocado Green Medium   0937
+ 99	 39	 16	       Coffee Brown Ultra Dark   0938
+  0	  0	 49	           Navy Blue Very Dark   0939
+  0	162	117	             Aquamarine Medium   0943
+255	206	164	                  Flesh Medium   0945
+244	 73	  0	           Burnt Orange Medium   0946
+255	 91	  0	                  Burnt Orange   0947
+255	243	231	        Peach Flesh Very Light   0948
+239	162	127	               Sportsman Flesh   0950
+255	229	188	                         Flesh   0951
+170	213	164	                    Nile Green   0954
+214	230	204	              Nile Green Light   0955
+255	109	115	                      Geranium   0956
+255	204	208	                Gernanium Pale   0957
+  0	160	130	                Sea Green Dark   0958
+171	206	177	              Sea Green Medium   0959
+243	108	123	               Dusty Rose Dark   0961
+253	134	141	             Dusty Rose Medium   0962
+255	233	233	       Dusty Rose Ultra Very L   0963
+208	224	210	               Sea Green Light   0964
+206	213	176	             Baby Green Medium   0966
+255	117	 24	                 Pumpkin Light   0970
+255	106	  0	                       Pumpkin   0971
+255	146	  0	                   Canary Dark   0972
+255	194	 67	                    Canary BRT   0973
+158	 67	 18	             Golden Brown Dark   0975
+246	141	 57	           Golden Brown Medium   0976
+255	164	 73	            Golden Brown Light   0977
+ 58	 82	 65	        Forest Green Very Dark   0986
+ 83	 97	 73	             Forest Green Dark   0987
+134	145	110	           Forest Green Medium   0988
+134	153	110	                  Forest Green   0989
+ 47	 91	 73	               Aquamarine Dark   0991
+146	183	165	                    Aquamarine   0992
+192	224	200	              Aquamarine Light   0993
+  0	123	134	            Electric Blue Dark   0995
+170	222	225	          Electric Blue Medium   0996
+123	119	 17	              Khaki Green Dark   3011
+181	170	 89	            Khaki Green Medium   3012
+204	196	129	             Khaki Green Light   3013
+115	 91	 93	          Brown Grey Very Dark   3021
+172	172	170	             Brown Grey Medium   3022
+198	190	173	              Brown Grey Light   3023
+210	208	205	         Brown Grey Very Light   3024
+ 84	 56	 23	         Mocha Brown Very Dark   3031
+188	156	120	            Mocha Brown Medium   3032
+239	219	190	        Mocha Brown Very Light   3033
+190	155	167	         Antique Violet Medium   3041
+225	205	200	          Antique Violet Light   3042
+216	151	105	             Yellow Beige Dark   3045
+229	193	139	           Yellow Beige Medium   3046
+255	236	211	            Yellow Beige Light   3047
+ 85	 73	  0	               Green Grey Dark   3051
+137	141	114	             Green Grey Medium   3052
+187	179	148	                    Green Grey   3053
+194	101	 76	                  Dessert Sand   3064
+233	233	223	        Beaver Grey Very Light   3072
+255	255	220	      Golden Yellow Very Light   3078
+202	226	229	               Baby Blue Light   3325
+255	157	150	                    Rose Light   3326
+188	 64	 85	                   Salmon Dark   3328
+255	123	103	                Apricot Medium   3340
+255	172	162	                       Apricot   3341
+ 97	100	 82	             Hunter Green Dark   3345
+120	134	107	                  Hunter Green   3346
+128	152	115	           Yellow Green Medium   3347
+225	249	190	            Yellow Green Light   3348
+201	 79	 91	         Dusty Rose Ultra Dark   3350
+255	214	209	              Dusty Rose Light   3354
+ 96	 95	 84	               Pine Green Dark   3362
+116	127	 96	             Pine Green Medium   3363
+161	167	135	                    Pine Green   3364
+ 83	 37	 16	                   Black Brown   3371
+231	 79	134	                    Plum Light   3607
+247	152	182	               Plum Very Light   3608
+255	214	229	              Plum Ultra Light   3609
+161	 53	 79	                    Mauve Dark   3685
+203	 78	 97	                         Mauve   3687
+250	151	144	                  Mauve Medium   3688
+255	213	216	                   Mauve Light   3689
+255	 85	 91	                    Melon Dark   3705
+255	128	109	                  Melon Medium   3706
+254	212	219	                   Melon Light   3708
+230	101	107	                 Salmon Medium   3712
+253	229	217	             Salmon Very Light   3713
+255	211	212	         Dusty Rose Very Light   3716
+184	 75	 77	               Shell Pink Dark   3721
+184	 89	 88	             Shell Pink Medium   3722
+195	118	123	            Antique Mauve Dark   3726
+255	199	196	           Antique Mauve Light   3727
+209	 93	103	          Dusty Rose Very Dark   3731
+255	154	148	                    Dusty Rose   3733
+156	125	133	           Antique Violet Dark   3740
+235	235	231	         Antique Violet Very L   3743
+149	102	162	              Blue Violet Dark   3746
+230	236	232	        Blue Violet Very Light   3747
+ 12	 91	108	        Antique Blue Very Dark   3750
+194	209	206	       Antique Blue Very Light   3752
+237	247	247	    Ant. Blue Ultra Very Light   3753
+158	176	206	                     Baby Blue   3755
+248	248	252	    Baby Blue Ultra Very Light   3756
+102	142	152	                     Wedgewood   3760
+227	234	230	                Sky Blue Light   3761
+ 24	128	134	        Peacock Blue Very Dark   3765
+ 24	101	111	            Peacock Blue Light   3766
+ 92	110	108	               Grey Green Dark   3768
+255	250	224	              Flesh Very Light   3770
+173	 83	 62	                   Negro Flesh   3772
+231	134	103	        Sportsman Flesh Medium   3773
+255	220	193	        Sportsman Flesh Very L   3774
+221	109	 91	                Mahogony Light   3776
+191	 64	 36	         Terra Cotta Very Dark   3777
+237	122	100	             Terra Cotta Light   3778
+255	177	152	       Ter. Cotta Ultra Very L   3779
+113	 71	 42	              Mocha Brown Dark   3781
+206	175	144	             Mocho Brown Light   3782
+139	109	115	               Brown Grey Dark   3787
+140	117	109	         Beige Grey Ultra Dark   3790
+ 81	 76	 83	         Pewter Grey Very Dark   3799
+255	 44	  0	               Dark Melon Very   3801
+  9	145	160	       Antique Mauve Very Dark   3802
+161	  0	 72	                    Mauve Dark   3803
+242	 24	121	            Cyclamen Pink Dark   3804
+255	 38	135	                 Cyclamen Pink   3805
+242	121	175	           Cyclamen Pink Light   3806
+119	 89	179	               Cornflower Bleu   3807
+  0	107	107	     Turquoise Ultra Very Dark   3808
+  0	153	153	           Turquoise Very Dark   3809
+  0	191	191	                Turquoise Dark   3810
+204	255	255	          Turquoise Very Light   3811
+ 83	166	130	            Seagreen Very Dark   3812
+195	217	207	              Bleu Green Light   3813
+ 70	140	110	                    Aquamarine   3814
+ 98	140	122	            Celadon Green Dark   3815
+143	191	171	                 Celadon Green   3816
+182	242	216	           Celadon Green Light   3817
+  0	107	 61	 Emarald Green Ultra Very Dark   3818
+206	244	  7	              Moss Green Light   3819
+255	242	128	                    Straw Dark   3820
+255	234	 51	                         Straw   3821
+255	242	128	                   Straw Light   3822
+255	250	204	             Pale Yellow Ultra   3823
+255	198	140	                 Apricot Light   3824
+255	211	166	                  Pale Pumpkin   3825
+191	120	 48	                  Golden Brown   3826
+255	204	128	             Pale Golden Brown   3827
+191	157	105	                Hazelnut Brown   3828
+204	163	102	            Old Gold Very Dark   3829
+179	 82	 18	                   Terra Cotta   3830
+230	  0	102	                Raspberry Dark   3831
+204	 51	119	              Raspberry Medium   3832
+255	140	191	               Raspberry Light   3833
+138	 69	138	                    Grape Dark   3834
+166	 83	166	                  Grape Medium   3835
+204	163	204	                   Grape Light   3836
+153	  0	153	           Lavender Ultra Dark   3837
+128	 96	191	            Lavender Bleu Dark   3838
+105	127	191	          Lavender Bleu Medium   3839
+207	212	230	           Lavender Bleu Light   3840
+220	229	250	                Pale Baby Bleu   3841
+  0	102	179	                 Wedgwood Dark   3842
+ 77	121	255	                 Electric Bleu   3843
+ 23	173	230	         Turquoise Dark Bright   3844
+ 46	179	230	       Turquoise Medium Bright   3845
+128	220	255	        Turquoise Light Bright   3846
+ 11	115	115	               Teal Green Dark   3847
+  0	153	153	             Teal Green Medium   3848
+110	173	172	              Teal Green Light   3849
+ 14	140	 86	             Green Dark Bright   3850
+104	199	160	            Green Light Bright   3851
+255	214	  0	               Straw Very Dark   3852
+255	165	 13	              Autumn Gold Dark   3853
+255	181	105	            Autumn Gold Medium   3854
+255	236	191	             Autumn Gold Light   3855
+255	226	191	     Mahogany Ultra Very Light   3856
+153	 77	  0	                 Rosewood Dark   3857
+166	 96	 25	               Rosewood Medium   3858
+217	141	 65	                Rosewood Light   3859
+166	122	 58	                         Cocoa   3860
+166	129	 91	                   Cocao Light   3861
+166	104	 41	              Mocha Beige Dark   3862
+191	134	 77	            Mocha Beige Medium   3863
+217	174	130	             Mocha Beige Light   3864
+255	255	242	                  Winter White   3865
+245	240	219	  Mocha Brown Ultra Very Light   3866
+138	 55	 59	           Raspberry Very Dark   0777
+242	188	197	         Dusty Rose Very Light   0151
+159	 56	 69	    Dusty Rose Ultra Very Dark   0150
+207	162	150	       Shell Pink Medium Light   0152
+222	188	217	             Violet Very Light   0153
+ 77	 46	 61	               Grape Very Dark   0154
+139	154	197	      Blue Violet Medium Light   0156
+144	139	195	       Blue Violet Medium Dark   0155
+171	194	222	    Cornflower Blue Very Light   0157
+ 70	 80	130	      Cornflower Blue Medium V   0158
+189	219	230	         Blue Ultra Very Light   0162
+ 44	 73	111	     Baby Blue Ultra Very Dark   0803
+ 65	130	 83	                          Jade   0505
+ 86	149	113	          Celadon Green Medium   0163
+159	204	141	             Forestgreen Light   0164
+218	216	120	         MOSS Green Very Light   0165
+191	187	 32	       Moss Green Medium Light   0166
+159	132	 71	         Yellowbeige Very Dark   0167
+236	191	 60	                         Topaz   0728
+243	200	182	            Apricot Very Light   0967
+232	181	143	  Terra Cotta Ultra Very Light   3771
+109	 87	 72	                    Cocoa Dark   0779
+255	255	255	                         White   0001
+167	180	205	               Gray Blue Light   0159
+130	144	174	              Gray Blue Medium   0160
+102	117	148	                     Gray Blue   0161
+180	195	193	             Pewter Very Light   0168
+139	154	148	                  Pewter Light   0169
+255	255	255	             Snow White(B5200)   5200

@@ -1,0 +1,184 @@
+GIMP Palette
+Name: Ink/Stitch: Brildor NY
+Columns: 4
+# RGB Value		                    Color Name Number
+255	255	255	                    Snow White   3005
+255	249	243	                    White Silk   3001
+235	228	214	                 Yellow / Gold   3087
+214	207	195	            Light Grey / Green   3085
+154	154	154	                   Medium Grey   3011
+121	121	121	          Beaver Grey  /  Dark   3012
+ 94	 94	 94	                   Medium Grey   3118
+132	123	106	                     Pine Bark   3062
+ 79	 77	 77	                     Dark Grey   3361
+ 58	 57	 57	                         Black   3239
+ 72	 62	 62	                  Black Chrome   3240
+117	 97	 86	                    Deep Taupe   3136
+145	119	122	                 Lasting Cocoa   3040
+ 87	 87	 91	                     Dark Grey   3041
+  5	 16	 29	                         Black   3241
+  3	 11	 22	                         Black   3009
+  0	  0	  0	                         Black   3000
+255	255	167	                   Pale Yellow   3067
+255	255	 93	                  Lemon Yellow   3135
+255	229	  0	                 Mimosa Yellow   3124
+245	190	 19	                          Gold   3125
+228	160	 23	                 Gold / Orange   3172
+194	117	  0	                        Almond   3025
+255	244	112	                 Pastel Yellow   3066
+249	219	 88	                     Star Gold   3270
+230	176	 64	                Mustard Yellow   3070
+140	 94	 24	              Desert Very Dark   3192
+165	128	  0	                  Autumn Green   3352
+229	214	 45	                    Pale Beige   3159
+207	128	 31	                   Pollen Gold   3225
+214	137	 53	                  Golden Earth   3173
+238	255	 77	                 Gold / Yellow   3023
+243	255	 36	                        Yellow   3223
+255	243	 36	                 Canary Yellow   3064
+255	226	 17	                  Yellow Finch   3068
+255	202	 10	                        Canary   3024
+255	154	  1	                     Honey Dew   3137
+255	119	  1	                       Pumpkin   3065
+190	 59	  1	                   Bright Rust   3021
+170	 29	  1	                    Med. Maple   3221
+155	  6	  0	                Cherrywood Red   3039
+133	  6	 15	                     Cranberry   3038
+105	 13	 21	                         Brown   3174
+ 46	  0	  9	                Dark Chocolate   3236
+ 70	  0	 25	                      Mahogany   3035
+ 84	  0	 21	                Dark Chocolate   3384
+104	  0	 24	                         Brown   3182
+122	  0	 21	                     Cranberry   3181
+184	  0	 18	                   Red Jubilee   3147
+178	  0	  0	                   Red Jubilee   3037
+214	 28	 16	                      Foxy Red   3378
+235	 44	 19	                       Scarlet   3078
+255	 76	 14	                       Pumpkin   3278
+255	 94	 18	                   Neon Orange   3178
+255	146	 56	                   Neon Orange   3155
+231	118	 50	                     Amberglow   3226
+185	 40	 21	            Light Orange / Red   3179
+181	  0	 28	           Medium Red / Orange   3184
+157	  0	 29	                      Dark Red   3081
+152	  0	 25	                      Dark Red   3281
+255	223	255	                         White   3115
+255	197	255	                    Pale Mauve   3116
+255	144	240	                     Mid Lilac   3321
+234	 95	206	                   Medium Pink   3309
+221	 10	111	                   Cheeky Pink   3109
+198	 20	 82	                     Dark Pink   3110
+166	  4	 55	                   Pomegranate   3383
+129	  9	 42	                     Tahoe Red   3183
+140	  0	 65	                     Cranberry   3310
+203	 18	 67	              Rose / Very Dark   3354
+223	 43	 90	           Carmine Rose Medium   3117
+254	125	170	                     Wild Pink   3108
+255	147	176	                 Pink Lemonade   3315
+255	153	145	     Antique Rose Medium Light   3016
+255	145	123	                    Coral Reef   3020
+241	192	153	                  Peach Pastel   3017
+255	203	162	                        Copper   3053
+255	189	164	                Cinnamon Light   3018
+255	162	151	            Blossem Pink Light   3019
+255	147	126	                    Coral Reef   3254
+255	201	255	                    Pale Mauve   3120
+255	171	239	                   Orchid Pink   3121
+150	 69	150	                        Violet   3080
+130	 49	 98	                        Cerise   3235
+ 86	 28	 94	                        Purple   3033
+ 51	 24	 56	            Dark Purple / Navy   3122
+ 57	 23	 87	                   Dark Purple   3112
+166	122	244	                        Purple   3311
+192	128	255	                  Russian Saga   3232
+130	 50	180	                      Amethyst   3032
+ 72	 39	102	                   Ultraviolet   3312
+ 71	 49	144	                   Deep Purple   3330
+ 47	 69	151	             Medium Royal Blue   3143
+174	203	240	                     Pale Blue   3074
+142	179	230	                      Sky Blue   3075
+ 57	 89	188	                   Medium Blue   3029
+ 46	 72	174	                    Jamie Blue   3133
+ 21	 43	111	                Dk. Royal Blue   3134
+  7	 11	 26	                         Black   3244
+ 11	 15	 79	                     Navy Blue   3166
+ 19	 33	118	                 Prussian Blue   3076
+ 43	 77	162	               Dark Royal Blue   3176
+ 10	 29	 78	                     Navy Blue   3042
+  8	 23	 59	                     Navy Blue   3242
+ 13	 17	 44	               Deep Arctic Sky   3243
+203	214	255	                   Pastal Blue   3153
+173	187	223	                     Lake Blue   3030
+ 37	 79	125	                     Lake Blue   3028
+ 31	 67	111	                     Navy Blue   3175
+  7	 14	 24	                         Black   3044
+153	211	245	                     Pale Blue   3092
+138	190	221	            Dark Seashell Blue   3027
+ 96	130	169	                    Slate Blue   3360
+ 29	 47	 71	                   Blue Velvet   3364
+ 15	 25	 33	                      Charcoal   3043
+ 74	151	128	                  Winter Green   3227
+ 35	 72	101	        Delft Bleu Medium Dark   3160
+  4	 43	139	                Brilliant Blue   3297
+  0	108	160	                 Pro Band Blue   3295
+  0	140	185	                  Blue Horizon   3095
+ 77	239	255	                         Capri   3093
+  0	 32	 40	                           Ivy   3162
+  0	 44	 52	                           Ivy   3161
+ 15	 53	 63	                     Dark Blue   3252
+ 32	145	177	                  Horizon Blue   3291
+ 68	180	197	                         Capri   3089
+161	242	255	                   Powder Blue   3292
+  0	118	 93	                   Alpine Teal   3246
+  4	 56	 46	                    Beau Geste   3185
+  7	 33	 23	                    Ocean Teal   3390
+  5	 40	 34	                           Ivy   3290
+  0	 45	 37	                           Ivy   3371
+ 13	 99	 60	                    Dark Green   3279
+ 70	210	150	                    Peppermint   3046
+162	247	171	                     Green Oak   3047
+ 37	 64	 37	                 Foliage Green   3392
+ 16	 37	 16	                    Ocean Teal   3303
+  6	 54	 24	               Dark Leaf Green   3370
+  0	 73	 25	                    Dark Green   3250
+  0	 90	 19	                    Dark Green   3079
+ 11	115	 22	                          Jade   3051
+  0	118	 51	                         Green   3247
+  7	 45	 29	                   Olive Green   3103
+ 60	132	 23	                         Green   3049
+ 53	112	 19	                         Green   3170
+ 89	149	 15	                        Meadow   3169
+169	213	 75	                Dark Green Oak   3104
+186	221	110	                      Tamarack   3100
+ 14	 32	 20	                    Ocean Teal   3393
+ 20	 40	 25	                   Olive Green   3394
+ 79	 95	 40	                Green / Yellow   3156
+103	124	 32	                        Meadow   3106
+192	203	 43	                   Dark yellow   3350
+223	249	117	                   Pale Yellow   3150
+189	182	 84	                 Misted Yellow   3105
+ 75	 78	 42	                    Mars Green   3306
+ 81	 82	 36	                   Calla Green   3157
+167	137	 73	          Light Green / Yellow   3338
+255	255	241	                   Light Beige   3003
+235	238	205	                  Light Yellow   3071
+240	230	179	                    Wax Yellow   3072
+233	211	164	                  Banana Crepe   3149
+193	140	108	                      Dk. Ecru   3142
+ 58	 34	 23	                    Dark Brown   3336
+ 97	 66	 37	                         Brown   3144
+175	140	103	                   Light Brown   3128
+214	205	146	                      Primedor   3060
+222	201	141	                      Primedor   3082
+255	231	152	                       Popcorn   3084
+252	216	129	                          Glow   3055
+124	 90	 45	               Chocolate Brown   3344
+255	205	135	                    Visor Gold   3127
+185	107	 44	                     New Penny   3126
+148	 81	 31	                         Brown   3056
+116	 62	 31	                    Dark Brown   3057
+ 85	 32	 21	                    Fudge Dark   3158
+ 68	 25	 16	                      Dark Oak   3058
+ 37	 20	 16	                         Black   3145
+ 20	 15	 13	                      Espresso   3129
+ 12	  7	  6	                      Espresso   3130

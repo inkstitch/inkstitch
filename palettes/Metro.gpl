@@ -1,0 +1,172 @@
+GIMP Palette
+Name: Ink/Stitch: Metro
+Columns: 4
+# RGB Value		                    Color Name Number
+240	186	212	                    Sugar Pink   1624
+237	171	194	                      Carnatio   1636
+232	122	163	                   Floral Pink   1637
+171	  3	 92	                    Ruby Glint   1643
+189	 56	 38	                     Dark Rust   1652
+207	 20	 43	                   Candy Apple   1654
+166	 15	 56	                      Atom Red   1658
+245	226	227	                        Oyster   1662
+250	171	176	                    Emily Pink   1664
+237	204	186	                       Chiffon   1667
+222	135	  3	                         Karat   1680
+217	 79	  0	                        Orange   1682
+222	 59	 33	                       Sunkist   1685
+237	235	135	                    Lemon Drop   1704
+245	232	 20	                      Daffodil   1706
+252	201	 23	                        Manila   1708
+247	181	 18	                        Orange   1709
+247	163	 10	                      Marigold   1710
+252	201	 24	                        Manila   1711
+247	163	 11	                      Marigold   1712
+  0	150	135	                        Parrot   1723
+  0	125	105	                 Shutter Green   1724
+207	232	156	                 Pistachio Nut   1742
+163	217	 99	                   Apple Green   1743
+ 97	191	 26	                  Medium Green   1744
+  0	115	 54	                         Green   1751
+  0	 99	 56	                    Dark Green   1754
+207	232	155	                 Pistachio Nut   1761
+163	217	100	                   Apple Green   1763
+107	143	  0	                  Meadow Green   1764
+ 77	 89	 13	                      Palmetto   1766
+209	227	227	         Sapphire Medium Light   1772
+191	209	214	              Ocean Bleu Light   1790
+115	181	224	                    Ultra Blue   1800
+181	222	227	                 Bleached Aqua   1802
+  0	110	199	                     Dark Blue   1804
+156	186	214	                      Cerulean   1815
+  0	 56	150	                     Flag Blue   1821
+  0	 48	130	                   Blue Ribbon   1823
+199	217	230	                    Cadet Blue   1838
+  0	176	171	                    Ocean Blue   1840
+  0	133	138	                   M. D. Green   1841
+  0	135	125	              Navajo Turquoise   1842
+179	199	227	                    Light Blue   1845
+199	230	227	                  Soothing Sea   1846
+179	199	226	                    Azure Blue   1859
+ 89	 23	138	                   Dark Purple   1865
+ 28	 20	117	                         Royal   1867
+130	 28	107	                    Grape Wine   2645
+140	 66	173	                     Iris Blue   1871
+181	145	214	                   Pale Purple   1875
+130	 28	108	                    Grape Wine   1885
+186	158	102	                       Parsnip   1924
+153	 79	 20	                          Date   1925
+ 84	 64	 31	                         Brown   1926
+237	194	130	                     Spun Silk   1942
+171	115	  5	                        Ginger   1945
+191	148	 13	                         Brass   1950
+215	217	228	               PALE Cloud Gray   1961
+140	143	145	             Steel Gray medium   1965
+122	122	120	                   Medium Grey   1966
+207	196	186	                    Moonstruck   1969
+150	135	125	                   Light Brown   1975
+189	 56	 39	                     Dark Rust   1980
+201	181	130	                  Antique Lace   1981
+ 64	 71	 20	                         Green   2007
+  0	 71	 48	                   Grass Green   2089
+173	219	227	                    Light Blue   2096
+ 51	 13	115	                   Purple Maze   2110
+194	 94	  3	                   Bright Rust   2124
+222	112	  8	                      Sunburst   2126
+107	 74	 28	                     Sand Dune   2142
+222	135	181	                   Azalea Pink   2153
+184	105	140	                 Medium Purple   2155
+184	 56	 71	                 Develish Pink   2161
+153	  0	112	                 Medium Purple   2170
+  0	163	224	                   Mid Windsor   2190
+ 54	 87	140	                 Imperial Blue   2193
+222	 31	130	                    Ruby Glint   2209
+107	 23	 59	                  Red Licorice   2295
+ 97	 33	 71	                 Medium Purple   2296
+232	235	 56	                   Pale Yellow   2324
+255	120	 77	                 Sunset Orange   2327
+  0	148	108	                    Peppermint   1722
+173	192	124	                 Lettuce Green   1774
+ 31	 43	 57	                    Ebony Blue   1825
+106	 50	128	                        Dahlia   1873
+203	177	138	                   Almond Buff   1903
+241	238	208	                      Eggshell   1907
+215	176	100	                          Gold   1947
+189	156	131	                    Warm Taupe   2255
+143	123	 95	                           Doe   2256
+171	204	217	                  Crystal Blue   1806
+209	228	212	                    Blue Glass   1860
+199	191	176	                     Gray Morn   1922
+135	120	130	                    Gray Ridge   1940
+199	191	175	                     Gray Morn   2154
+164	120	171	                     Afterglow   1863
+ 42	 79	 49	                    Dark Green   1948
+181	186	182	                  Heather Grey   1964
+ 55	 60	 53	                        Beluga   1998
+ 39	 49	 35	                Midnight Green   2088
+255	255	255	                    Snow White   1618
+  0	  0	  0	                         Black   1621
+169	221	118	                        Spruce   2259
+ 28	 34	 32	                        Caviar   1973
+ 93	 93	 40	                         Green   2003
+150	112	163	                      Hyacinth   2104
+126	168	192	                   Pale Purple   1799
+166	131	221	                      Lavender   1869
+255	143	126	                    Coral Reef   1669
+255	 90	 70	                         Coral   1670
+216	224	212	               Pale Pearl Gray   1619
+228	167	127	                        Bamboo   1914
+151	  1	 48	                   Cranberry 3   1656
+255	 91	107	                          Pink   2231
+ 89	 71	 28	                    Army Green   2241
+ 37	 69	 83	                     Dark Blue   2311
+  0	 60	 71	               Deep Slate Blue   2313
+  0	 69	 68	                         Green   2317
+254	 62	 22	                     Vermilion   2288
+175	126	 38	                      Palomino   2333
+ 71	 26	107	                   Dark Purple   2336
+169	221	119	                        Spruce   2337
+255	103	144	                     Dark Pink   2340
+ 49	 27	 39	                    Dark Brown   2341
+ 82	 56	 52	                      Dark Oak   2342
+205	  0	 64	              Rose / Very Dark   2357
+246	 91	139	                     Neon Pink   2360
+255	 96	127	                    Dusty Rose   2374
+138	  0	 83	                     Cranberry   2409
+225	114	116	                    Shell Pink   2444
+255	 91	108	                          Pink   2458
+255	143	127	                    Coral Reef   2461
+255	171	  0	                        Orange   2469
+246	 91	138	                     Neon Pink   2471
+255	103	143	                     Dark Pink   2472
+255	163	  0	                 Bright Orange   2478
+255	132	 66	                        Orange   2480
+255	 90	  0	                  Burnt Orange   2484
+244	229	179	                         Wheat   2486
+255	255	  0	                 Gold / Yellow   2487
+255	249	  0	                        Canary   2488
+228	167	128	                        Bamboo   2501
+255	231	  0	                        Canary   2505
+255	205	  0	                        Copper   2507
+150	125	 57	                 Foliage Green   2509
+125	 92	 57	                     Sand Dune   2510
+  0	147	109	                    Peppermint   2512
+168	221	118	                        Spruce   2513
+107	204	 92	                       DK Mint   2515
+  0	 32	 41	                           Ivy   2525
+ 78	 49	 31	                    Dark Brown   2581
+ 26	 39	 42	                Moonless Night   2371
+145	133	122	         Medium Green / Yellow   2747
+ 97	 93	 86	                  Black Chrome   2749
+209	175	129	                   Ashley Gold   2780
+ 38	 62	 82	                    Dark Denim   2797
+158	125	146	                    Very Grape   2814
+166	119	132	                  Light Purple   2821
+158	125	145	                    Very Grape   2834
+255	141	102	                 Apricot Light   2865
+ 70	 34	 63	               Deep Slate Gray   2901
+ 71	 26	108	                   Dark Purple   2931
+101	 81	 18	                     Sand Dune   2239
+162	144	104	                    Olive Drab   2254
+ 53	 59	 66	                         Black   2731
+157	125	146	                    Very Grape   2813

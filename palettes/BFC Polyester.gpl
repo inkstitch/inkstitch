@@ -1,0 +1,324 @@
+GIMP Palette
+Name: Ink/Stitch: BFC Polyester
+Columns: 4
+# RGB Value		                    Color Name Number
+247	247	247	                         White   2168
+240	240	240	                  Bright White   2169
+  0	  0	  0	                         Black   2170
+235	231	219	                 Antique White   2172
+237	201	212	              PALE Salmon Pink   2181
+252	187	209	                LT Salmon Pink   2182
+248	141	172	                MD Salmon Pink   2187
+230	207	217	                     PALE Pink   2189
+255	188	224	                       LT Pink   2193
+253	165	203	                          Pink   2198
+229	 86	109	                       MD Pink   2199
+237	114	170	                       DK Pink   2202
+235	225	255	                 PALE Pink Ice   2208
+234	 15	107	                     Pink Lady   2218
+196	 43	112	                        Fushia   2219
+216	 69	138	                     MD Fushia   2220
+215	 61	 99	                  LT Cranberry   2222
+165	 42	 70	                  MD Cranberry   2223
+166	 23	 85	                  DK Cranberry   2226
+225	140	190	                MD Bright Pink   2228
+209	161	212	                MD Desert Rose   2235
+168	 50	 97	                MD Bright Plum   2241
+133	 28	 86	                DK Bright Plum   2243
+181	 66	133	                     DK Fushia   2245
+102	 11	 41	                   DK Burgandy   2247
+238	209	202	                    PLST Peach   2250
+233	172	165	                      LT Peach   2253
+255	138	142	                      MD Peach   2256
+255	105	109	                      DK Peach   2260
+242	124	138	                DK Salmon Pink   2270
+253	152	180	             MD Pink Carnation   2271
+244	 71	 91	             DK Pink Carnation   2275
+168	 54	 81	                      Ruby Red   2278
+201	 80	 66	                   DK Red Rust   2283
+ 97	 37	 51	                 DKST Burgandy   2287
+214	 58	 50	                    Bright Red   2291
+184	 20	 42	                    Cherry Red   2295
+161	 25	 25	                     Satin Red   2297
+133	  0	  0	                  DK Satin Red   2303
+116	  5	 11	                DKST Satin Red   2306
+138	  9	 13	                      Red Wine   2307
+196	 72	107	                        Brandy   2315
+148	 55	 81	                   MD Burgandy   2317
+194	122	161	                   Desert Rose   2320
+199	 95	138	                     LT Fushia   2331
+ 74	  0	  0	                    Black Wine   2342
+247	247	183	                   PALE Yellow   2368
+247	241	153	                     LT Yellow   2371
+255	239	 11	                        Yellow   2376
+255	227	 87	              Buttered Popcorn   2379
+245	200	 95	                     Buttercup   2380
+233	202	  0	                 Bright Yellow   2385
+240	238	183	            PALE Mellow Yellow   2388
+250	233	160	           LT Buttered Popcorn   2390
+255	230	100	                Bright Popcorn   2403
+255	196	133	                LT Mock Orange   2410
+255	197	 61	                    LT Apricot   2411
+255	191	 71	                    MD Apricot   2412
+255	203	101	                       Apricot   2413
+247	182	 52	                    DK Apricot   2414
+230	145	 34	               MD Mock  Orange   2416
+255	146	 23	                  DKST Apricot   2426
+255	201	159	               PALE Peach Fuzz   2428
+255	183	151	                 MD Peach Fuzz   2430
+253	205	195	                      LT Melon   2433
+252	169	152	                         Melon   2435
+255	136	101	                      DK Melon   2437
+227	114	 20	                 Bright orange   2451
+210	 58	  0	                        Orange   2454
+255	121	 84	                 Sunset Orange   2455
+255	102	  0	                    Red Orange   2458
+205	 46	 14	                 DK Red Orange   2465
+250	206	195	                   PLST Salmon   2468
+255	200	191	                   PALE Salmon   2473
+186	 82	 47	                   Terra Cotta   2484
+220	210	189	                         Beige   2490
+189	147	138	                 LT Rose Taupe   2499
+201	129	 66	                LT Terra Cotta   2504
+232	216	202	                     PLST Mink   2508
+217	202	190	                       LT Mink   2509
+255	188	182	                     LT Salmon   2513
+255	175	139	                     MD Salmon   2514
+243	170	186	                       LT Rose   2515
+158	106	116	                   MD Ash Rose   2521
+173	117	128	                   LT Ash Rose   2545
+125	 56	 68	                   DK Ash Rose   2546
+219	191	170	                    PALE Cameo   2552
+233	213	186	                        Bisque   2553
+117	 37	 38	                      DK Brick   2567
+191	177	168	               PALE Mauve Gray   2572
+209	204	201	                     PALE Gray   2575
+124	 97	116	                      MD Mauve   2581
+107	 52	 58	                      Mahogany   2586
+109	 79	 69	                      Eggplant   2602
+ 64	 24	 24	                      DK Mauve   2606
+128	125	 95	                        Nutmeg   2611
+242	205	176	                  LT Sandstone   2630
+133	 82	 39	                      Chestnut   2642
+215	184	127	                     Warm Sand   2656
+209	162	 92	                  Mustard Gold   2657
+253	201	164	                     PALE Rust   2675
+236	216	183	                          Ecru   2689
+245	229	206	                     PALE Ecru   2690
+237	217	184	                       LT Ecru   2693
+202	140	103	                      DK Honey   2695
+246	214	167	                      LT Putty   2709
+189	 97	 20	                   Bright Rust   2721
+222	194	160	                      MD Putty   2729
+204	187	158	                          Hemp   2731
+120	 73	 63	                   MD Chestnut   2745
+ 99	 68	 54	                   DK Chestnut   2747
+173	157	132	                         Taupe   2748
+219	215	153	                     PALE Gold   2751
+168	129	 81	               DK Mustard Gold   2756
+169	115	 69	                       MD Rust   2758
+135	120	 96	                      DK Taupe   2759
+149	136	104	                      MD Taupe   2760
+140	104	 82	                    DKST Camel   2765
+191	151	115	                         Camel   2768
+166	120	 90	               LT Golden Brown   2772
+156	135	122	                   Golden Mink   2781
+ 84	 53	 41	                      DK Earth   2783
+ 38	 14	 14	                    DKST Earth   2784
+191	175	154	                     PALE Mink   2793
+106	 70	 46	                  Golden Brown   2802
+156	146	142	                          Mink   2808
+144	126	122	                       MD Mink   2809
+124	106	104	                       DK Mink   2817
+114	 99	 94	                     DKST Mink   2818
+ 82	 40	 42	             DKST Reddish Mink   2819
+ 71	 35	 37	               DK Reddish Mink   2821
+191	187	162	                         Wheat   2828
+240	226	175	                  Yellow wheat   2829
+255	203	130	                      LT Amber   2830
+255	201	121	                      MD Amber   2831
+255	201	 63	                  Golden Amber   2832
+222	167	 71	               DK Golden Amber   2833
+222	167	 57	                  Harvest Gold   2834
+221	194	 93	                LT Green Amber   2852
+132	 88	 59	                  Bronze Brown   2862
+245	221	 81	                    PALE Olive   2870
+181	163	 60	                      LT Olive   2873
+201	174	 87	                      MD Olive   2881
+127	107	 36	                      DK Olive   2899
+ 69	 57	 43	                   Loden Green   2906
+255	243	201	                     PLST Aloe   2911
+220	221	185	                     PALE Aloe   2913
+ 63	 44	 40	                       DK Moss   2924
+ 45	 44	 42	               DKST Green Gray   2926
+209	204	181	                     PALE Sage   2928
+161	149	123	                       LT Sage   2934
+ 99	 96	 63	               DK Yellow Green   2943
+ 70	 71	 52	                     DKST Sage   2945
+227	229	216	               Sage Tint White   2949
+118	141	115	                         Basil   2970
+139	142	140	                    Gray Basil   2972
+170	191	183	                LT Smoke Green   3008
+126	172	135	                MD Smoke Green   3009
+ 66	 97	 63	                DK Smoke Green   3013
+ 61	 91	 63	              DKST Smoke Green   3014
+ 61	 66	 24	               DKST Pine Green   3023
+240	254	238	              PLST Smoke green   3028
+183	207	180	              PALE Smoke Green   3032
+107	145	110	                     LT Spruce   3034
+ 40	 87	 32	                     MD Spruce   3035
+ 33	 71	 17	                     DK Spruce   3038
+162	212	178	                       LT Jade   3049
+ 90	158	144	                 MD Aqua Green   3050
+ 16	 74	 34	               DKST Aqua Green   3059
+101	212	203	                 LT Aqua Green   3060
+ 81	192	162	                       MD Jade   3069
+ 48	166	 72	                       DK Jade   3072
+ 38	158	130	                 DK Aqua Green   3075
+  8	 93	 34	                    DK Emerald   3080
+ 41	176	185	                   Bright Aqua   3082
+165	196	157	                       LT Moss   3092
+188	245	196	                     PALE Jade   3096
+ 17	124	 46	                    Pine Green   3105
+200	255	189	                     PLST Moss   3110
+127	147	 75	                          Moss   3113
+143	177	101	                       MD Moss   3116
+188	245	204	                     PALE Mint   3130
+168	219	183	                       LT Mint   3133
+ 94	125	 65	                     Spearmint   3136
+ 80	115	 60	              DKST Grass Green   3142
+ 35	 51	 25	                     DKST Moss   3145
+239	242	199	                     PLST Lime   3148
+202	245	137	             PALE Spring Green   3159
+155	219	 99	               MD Spring Green   3160
+126	204	  0	                  Spring Green   3161
+105	140	 71	               DK Spring Green   3166
+ 15	115	  0	             DKST Spring Green   3167
+155	165	 40	                       LT Lime   3174
+148	158	 46	                       MD Lime   3176
+173	186	 55	              PALE Grass Green   3178
+100	113	  5	                MD Grass Green   3185
+115	109	  0	                       Dk Lime   3186
+ 97	130	 62	                    Blue Green   3194
+146	224	130	                       MD Mint   3200
+102	203	101	                       DK Mint   3201
+ 40	141	 35	             MD Shamrock Green   3204
+ 23	118	 16	             DK Shamrock Green   3206
+122	161	 98	               MD Yellow Green   3211
+113	115	  0	                Md Loden Green   3218
+ 46	 52	 26	                DK Loden Green   3225
+128	143	 58	                LT Grass Green   3235
+ 91	102	 42	                Dk Grass Green   3238
+218	229	225	                   PLST Silver   3250
+119	138	117	                       MD Sage   3254
+ 55	230	195	                DKST Blue Gray   3263
+199	222	213	                PLST Sea Green   3295
+143	183	195	                Blue Sea Green   3299
+122	151	133	                  MD Sea Green   3321
+ 15	 29	 32	             DKST Blue Granite   3324
+106	119	127	                      MD Slate   3340
+ 77	 82	 88	                      DK Slate   3345
+226	226	228	             Silver Tint White   3368
+221	221	223	                    Gray Pearl   3369
+172	165	159	              PALE Mauve Pearl   3370
+214	214	224	               PALE Cloud Gray   3371
+129	131	128	                       LT Gray   3376
+ 95	102	118	             Blue Gray Granite   3379
+ 67	 82	 94	                    Steel Gray   3380
+155	146	147	                LT Pigeon Gray   3393
+ 41	 36	 30	                DK Pigeon Gray   3398
+207	206	204	                     PLST Gray   3408
+209	208	217	                        Silver   3409
+118	113	109	                MD Pigeon Gray   3412
+137	137	145	                       MD Gray   3413
+ 97	 82	 90	                       DK Gray   3415
+ 82	 79	 98	                     LT Pewter   3416
+ 99	101	122	                     MD Pewter   3417
+ 84	 86	101	                     DK Pewter   3418
+110	 97	125	                    Purple Ash   3421
+ 15	  8	 29	                 DKST Eggplant   3427
+233	243	254	                     PLST Blue   3429
+179	197	221	                     PALE Blue   3431
+128	159	188	                   Light Denim   3437
+ 70	159	175	               Light Turquoise   3468
+ 33	113	138	                     Turquoise   3471
+ 85	177	228	                    LT Peacock   3472
+ 36	125	157	                       Peacock   3474
+ 32	102	 89	                     Deep Lake   3479
+ 42	 77	 99	              Green Blue Storm   3486
+ 51	 86	121	                     DK Lagoon   3487
+ 58	 92	 75	                   DKST Lagoon   3507
+155	228	198	                     PALE Teal   3511
+140	229	201	                PALE Teal Blue   3513
+140	234	220	                       LT Teal   3514
+112	209	178	                       MD Teal   3520
+218	255	255	                     PALE Aqua   3531
+198	255	255	                       LT Aqua   3532
+ 42	143	130	                       DK Teal   3542
+ 29	 99	 90	                     DKST Teal   3545
+218	243	237	               Aqua Tint White   3550
+ 67	177	192	                   MD Turqoise   3559
+ 76	147	158	         LT Mediterranean Blue   3560
+ 28	149	132	                  Dk Turquoise   3563
+ 24	 30	 64	                          Navy   3587
+ 98	142	204	              Light Blue Aster   3597
+ 20	102	164	                 MD Blue Aster   3600
+ 53	 87	161	               DK Bright Aster   3601
+ 92	128	154	         MD Mediterranean Blue   3604
+ 45	 87	120	         DK Mediterranean Blue   3606
+ 37	130	196	                   French Blue   3620
+ 29	 53	115	                DK Marine Blue   3621
+174	212	255	                 LT Clear Blue   3636
+151	179	200	                     Dusk Blue   3639
+ 13	 46	100	                   Marine Blue   3645
+ 38	 42	 69	                     DKST Navy   3646
+165	201	253	                LT Bright Blue   3649
+ 55	119	197	                MD Bright Blue   3655
+  3	 33	168	                DK Bright Blue   3660
+217	235	255	               PALE Clear Blue   3668
+177	214	252	                      LT  Blue   3670
+144	175	232	               PALE Aster Blue   3674
+ 94	154	208	                 MD Clear Blue   3675
+ 84	122	193	                 DK Clear Blue   3679
+222	229	245	             Violet Tint White   3688
+185	202	246	             Light Blue Violet   3690
+110	139	209	                MD Blue Violet   3692
+ 99	109	180	                DK Blue Violet   3694
+ 32	 42	 89	                 DK Heliotrope   3704
+217	200	205	                 PALE Eggplant   3713
+147	129	145	                   MD Eggplant   3714
+135	122	152	                LT Purple Sage   3721
+102	 88	121	                MD Purple Sage   3722
+ 87	 77	 85	                DK Purple Sage   3727
+234	236	233	              Lilac Tint White   3728
+223	226	230	                  PALE Heather   3730
+219	216	255	                      LT Lilac   3731
+201	187	240	                      MD Lilac   3733
+180	180	214	                       Heather   3735
+139	122	202	                    MD Heather   3740
+224	236	250	               PLST Periwinkle   3749
+136	146	207	                 LT Periwinkle   3751
+117	113	172	                 DK Periwinkle   3752
+128	132	201	                 MD Periwinkle   3753
+ 48	 55	125	               DKST Periwinkle   3756
+ 76	 80	143	                    DK Heather   3758
+ 50	 37	109	                DK Blue Purple   3764
+214	186	205	                 PALE Lavender   3770
+208	198	227	                   LT Lavender   3772
+132	 95	164	                   MD Lavender   3777
+ 68	 40	117	                   Blue Purple   3778
+ 63	 14	 93	                    Red Purple   3783
+160	129	163	             LT African Violet   3793
+147	117	148	                African Violet   3794
+185	106	197	             MD African Violet   3796
+116	 56	153	             DK African Violet   3803
+ 86	 33	120	           DKST African Violet   3805
+255	195	243	                   PALE Orchid   3812
+208	107	170	                     MD Orchid   3821
+167	 73	161	                     DK Orchid   3822
+239	229	255	                   PLST Orchid   3828
+224	218	232	                    PLST Mauve   3830
+210	160	189	                     LT Orchid   3833
+247	178	222	                LT Pink Orchid   3834
+110	 59	130	                        Purple   3841
+ 74	  6	 74	                     DKST wine   3846

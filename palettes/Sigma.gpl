@@ -1,0 +1,154 @@
+GIMP Palette
+Name: Ink/Stitch: Sigma
+Columns: 4
+# RGB Value		                    Color Name Number
+255	255	255	                         White   ST10
+  0	  0	  0	                         Black   ST20
+237	255	 80	              Light Neon Green   ST21
+150	232	 69	                    Neon Green   ST32
+255	231	 86	             Light Neon Orange   ST33
+255	120	 36	               Med Neon Orange   ST43
+242	141	166	                     Neon Pink   ST46
+199	 12	 87	              Neon Orange Pink   ST47
+226	 45	 42	                        Silver  ST101
+184	184	184	                Silver Diamond  ST102
+136	145	134	                    Lava Stone  ST112
+115	127	127	                   Medium Grey  ST115
+ 86	 94	 90	                 Dark Platinum  ST116
+ 81	 82	 80	                      Charcoal  ST117
+120	118	104	                   Badger Grey  ST118
+237	 87	 47	                Pumpkin Orange  ST135
+ 46	165	156	                     Turquoise  ST138
+ 57	 98	118	                Dark Wedgewood  ST142
+155	 59	 64	                  Cardinal Red  ST213
+108	 62	 71	                        Maroon  ST216
+186	110	 77	                          Rust  ST253
+187	 61	 46	                   Medium Rust  ST255
+249	223	207	                  Natural Pink  ST301
+251	222	214	                     Baby Pink  ST303
+247	205	213	                    Piggy Pink  ST304
+242	175	180	                    Sweet Pink  ST305
+232	 65	140	                 Blushing Pink  ST307
+231	127	157	                          Pink  ST309
+240	111	140	                     Rose Pink  ST313
+  0	131	 64	                         Green  ST317
+223	153	182	                 Shocking Pink  ST321
+130	  0	 82	                          Ruby  ST325
+177	 65	 95	                        Garnet  ST333
+195	148	174	                  Light Purple  ST345
+168	110	145	                 Medium Purple  ST347
+105	 65	105	                    Dark Grape  ST348
+230	207	213	             Pastel Light Pink  ST376
+168	190	215	               Light Baby Blue  ST379
+160	191	215	                  Crystal Blue  ST380
+144	166	198	           Very Light Lavender  ST381
+143	175	198	                    Cornflower  ST382
+177	184	211	                      Lavender  ST383
+ 65	108	155	                         Denim  ST385
+125	119	175	                  Light Violet  ST386
+250	218	244	                    Misty Rose  ST387
+102	 64	144	                         Grape  ST390
+234	240	249	            Lt. Weathered Blue  ST402
+166	216	246	                     Baby Blue  ST403
+123	156	176	                 Med Baby Blue  ST404
+100	141	199	               Med Pastel Blue  ST406
+ 61	106	161	                Blue Raspberry  ST409
+ 45	 68	145	                Med Royal Blue  ST413
+ 20	 61	122	                    Ocean Blue  ST414
+ 17	 50	 99	                      Med Navy  ST415
+ 14	 31	 56	                     Dark Navy  ST423
+ 14	 31	 56	               Bright Sunshine  ST432
+  0	145	165	                          Teal  ST443
+  0	 91	 99	                     Deep Teal  ST448
+  0	 71	 77	                     Dark Teal  ST449
+229	177	 92	                      Old Gold  ST466
+213	191	155	                         Cream  ST501
+255	208	133	                   Pale Salmon  ST503
+246	176	142	                     Med Peach  ST505
+179	232	 81	                   Pink Salmon  ST506
+241	162	 54	                    Dark Peach  ST508
+110	 67	 55	                    Dark Brown  ST513
+216	 73	 62	                      Pale Red  ST527
+105	118	152	                    Heron Blue  ST541
+253	232	150	                   Pale Yellow  ST601
+237	229	 93	                 Pastel Yellow  ST602
+223	162	  0	                  Golden Puppy  ST609
+253	232	150	                     Buttercup  ST612
+206	178	 76	                 Treasure Gold  ST616
+173	149	 62	                      Old Gold  ST619
+254	249	234	                  Pale Apricot  ST627
+189	149	101	                           Tan  ST628
+253	247	108	                 Mellow Yellow  ST632
+237	239	  5	                         Lemon  ST633
+248	195	  0	                         Amber  ST646
+231	120	 23	                     Mandarina  ST649
+230	101	 53	                        Orange  ST650
+198	150	 50	                    Golden Rod  ST652
+152	153	109	                   Light Olive  ST653
+201	131	  0	                   Bright Gold  ST654
+  0	123	141	                    Blue-Green  ST688
+  0	 77	 61	                 Forrest Green  ST695
+  0	126	186	                 Midnight Blue  ST697
+207	  0	 64	                       Med Red  ST700
+ 40	 67	140	                      Med Blue  ST809
+208	180	120	                 Sweet Apricot  ST812
+229	190	108	                          Skin  ST818
+ 68	146	132	                          Jade  ST825
+207	207	207	                  Light Silver  ST829
+220	135	 94	                   Papaya Whip  ST831
+180	112	 93	                        Cooper  ST832
+155	 92	 75	                   Light Pecan  ST833
+169	 49	 33	                    Burnt Rust  ST838
+177	139	  0	                    Vegas Gold  ST842
+134	 70	 46	                     Med Brown  ST857
+ 97	 65	 37	                   Med Russett  ST859
+178	 92	 49	                    Med Copper  ST864
+128	106	 97	                Dark Driftwood  ST873
+ 99	 72	 49	                         Birch  ST878
+ 26	 12	  6	                Dark Chocolate  ST891
+150	213	200	                    Sky Blue 2  ST903
+180	220	216	                    Aquamarine  ST904
+175	125	 62	                  Golden Brown  ST905
+  0	163	160	                      Sea Blue  ST906
+  0	 64	 93	                      Deep Sea  ST913
+201	227	197	                   Pastel Mint  ST947
+ 85	175	120	                    True Green  ST949
+133	131	 37	                     Med Olive  ST951
+ 97	 96	 28	                         Olive  ST955
+112	145	136	                    Light Jade  ST961
+190	220	140	                   Smith Apple  ST984
+190	230	120	                    Light Lime  ST985
+118	200	 80	                   Grass Green  ST988
+ 70	110	100	                     Deep Teal  ST448
+ 53	105	 54	             Med Forrest Green  ST992
+ 75	 72	132	                   Deep Violet  S1031
+237	237	210	                 Light Natural  S1140
+243	216	168	                         Wheat  S1145
+200	190	150	                   Desert Sand  S1148
+ 36	 58	125	                 Egyptian Blue  S1163
+134	190	 78	                         Gecko  S1183
+142	 64	 68	                      Burgandy  S1241
+137	 52	128	                    Med Orchid  S1323
+140	109	170	                    Med Purple  S1324
+182	163	108	                 Very Old Gold  S1552
+ 46	159	118	                  Light Spruce  S1615
+152	193	115	                   Paris Green  S1619
+205	205	205	                    Timberwolf  S1707
+ 42	 55	126	                   Bright Blue  S2031
+  0	108	165	                Turquoise Blue  S2093
+131	 68	 85	                     Dark Wine  S2250
+208	164	 79	                         Beige  S2518
+237	146	  6	                          Gold  S2519
+237	239	  5	                    Med Orange  S3001
+192	122	 70	                   Dark Salmon  S3014
+180	 60	 60	                      Fire Red  S3015
+145	 95	 70	                  Saddle Brown  S3142
+255	197	  0	                    Yellow Sun  S4117
+166	138	104	                    Deep Taupe  S4371
+  0	164	217	                      Sky Blue  S4419
+ 11	127	133	                  Wild Peacock  S4627
+  0	 45	 31	                 Millard Green  S4735
+ 17	 38	 60	                     Dark Blue  S5552
+145	185	226	                   Powder Blue  S5554
+ 66	150	 72	                  Froggy Green  S5557
+135	140	140	                    Stone Grey  S8010

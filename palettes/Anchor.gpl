@@ -1,0 +1,427 @@
+GIMP Palette
+Name: Ink/Stitch: Anchor
+Columns: 4
+# RGB Value		                    Color Name Number
+255	255	255	                    Snow White      1
+255	255	255	                         White      2
+255	196	184	             Salmon Very Light      6
+255	198	140	                  Salmon Light      8
+255	157	144	           Salmon Medium Light      9
+255	128	135	                 Salmon Medium     10
+237	 69	 90	            Salmon Medium Dark     11
+219	 24	 85	                   Salmon Dark     13
+153	 92	 48	            Burgundy Very Dark     22
+255	234	235	         Carnation Ultra Light     23
+255	177	174	          Carnation Very Light     24
+255	211	212	               Carnation Light     25
+255	140	191	        Carnation Medium Light     26
+255	194	191	              Carnation Medium     27
+243	149	157	     Carmine Rose Medium Light     41
+204	 51	119	         Carnation Medium Dark     28
+230	  0	102	                Carnation Dark     29
+254	212	219	                   Blush Light     31
+255	128	109	                  Blush Medium     33
+255	 85	 91	                    Blush Dark     35
+255	157	150	            Blossem Pink Light     36
+219	 36	 79	             Blossem Pink Dark     38
+255	109	115	            Carmine Rose Light     40
+214	 43	 91	           Carmine Rose Medium     42
+166	  0	 91	      Carmine Rose Medium Dark     43
+162	  0	 88	             Carmine Rose Dark     45
+213	 39	 86	                   Crimson Red     46
+231	 18	 97	                   Carmine Red     47
+255	234	235	         China Rose Very Light     48
+255	213	216	              China Rose Light     49
+255	204	208	             China Rose Medium     50
+233	109	115	        China Rose Medium Dark     52
+255	109	115	               Rose Dark China     54
+255	189	202	             Beauty Rose Light     55
+222	 57	105	            Beauty Rose Medium     57
+201	 79	 91	                    China Rose     59
+250	151	144	                 Magenta Light     60
+255	115	140	                Magenta Medium     62
+231	 84	122	                  Magenta Dark     63
+201	 79	 91	        Rose Very Dark Antique     65
+250	151	144	               Raspberry Light     66
+203	 78	 97	        Raspberry Medium Light     68
+230	  0	102	           Raspberry Very Dark     72
+255	233	233	       Antique Rose Very Light     73
+255	214	209	            Antique Rose Light     74
+203	 78	 97	           Antique Rose Medium     76
+255	154	148	     Antique Rose Medium Light     75
+203	 78	 97	      Antique Rose Medium Dark     77
+171	 22	 95	             Antique Rose Dark     78
+255	214	229	                  Orchid Light     85
+247	152	182	           Orchid Medium Light     86
+231	 79	134	                 Orchid Medium     87
+219	 55	121	            Orchid Medium Dark     88
+171	 22	 95	                   Orchid Dark     89
+204	163	204	                    Plum Light     90
+160	100	146	                   Plum Medium     92
+171	 22	 95	                     Plum Dark     94
+255	214	229	             Violet Very Light     95
+247	152	182	                  Violet Light     96
+243	206	225	           Violet Medium Light     97
+160	100	146	                 Violet Medium     98
+146	 85	130	                        Violet     99
+ 61	  0	103	            Violet Medium Dark    100
+109	 18	 97	                   Violet Dark    101
+109	 18	 97	              Violet Very Dark    102
+243	218	228	               Very Light Plum    103
+236	207	225	                Lavender Light    108
+206	148	186	         Lavender Medium Light    109
+148	 91	128	               Lavender Medium    110
+145	180	197	                 Thistle Light    117
+162	121	164	                Thistle Medium    118
+127	 84	130	                  Thistle Dark    119
+230	236	232	               Bleuberry Light    120
+187	208	218	        Bleuberry Medium Light    121
+119	 89	179	              Medium Bleuberry    122
+ 71	 55	 93	                Bleuberry Dark    123
+  0	  0	 73	                        Indigo    127
+247	246	248	             Cobalt Bleu Light    128
+202	226	229	                   Cobalt Bleu    129
+190	193	205	      Cobalt Bleu Medium Light    130
+103	115	141	            Cobalt Bleu Medium    131
+ 30	 66	 99	       Cobalt Bleu Medium Dark    132
+ 30	 58	 95	              Cobalt Bleu Dark    133
+ 30	 54	 85	         Cobalt Bleu Very Dark    134
+132	156	182	               Wedgewood Light    136
+103	115	141	              Wedgewood Medium    137
+ 30	 66	 99	                Wedgewood Dark    139
+158	176	206	              Copen Bleu Light    140
+103	115	141	             Copen Bleu Medium    142
+ 30	 66	 99	               Copen Bleu Dark    143
+233	238	233	         Delft Bleu Very Light    144
+132	156	182	              Light Delft Bleu    145
+103	115	141	                    Delft Bleu    146
+ 30	 66	 99	       Delft Bleu Medium Light    147
+  0	 79	 97	             Delft Bleu Medium    148
+ 36	 73	103	        Delft Bleu Medium Dark    149
+ 36	 73	103	               Delft Bleu Dark    150
+  0	  0	 49	          Delft Bleu Very Dark    152
+240	247	239	           Sapphire Very Light    158
+213	231	232	         Sapphire Medium Light    160
+175	195	205	               Sapphire Medium    161
+ 16	127	135	          Sapphire Medium Dark    162
+ 71	 97	116	                 Sapphire Dark    164
+  0	102	179	                 Sapphire Dark    164
+ 24	101	111	          Surf Bleu Very Light    167
+128	167	160	               Surf Bleu Light    168
+ 30	130	133	              Surf Bleu Medium    169
+ 24	128	134	                Surf Bleu Dark    170
+187	208	218	              Ocean Bleu Light    175
+147	139	164	                    Ocean Bleu    176
+128	 96	191	             Ocean Bleu Medium    177
+ 71	 55	 93	               Ocean Bleu Dark    178
+208	224	210	               Sea Green Light    185
+171	206	177	        Sea Green Medium Light    186
+  0	160	130	              Sea Green Medium    187
+ 83	166	130	         Sea Green Medium Dark    188
+ 14	140	 86	                Sea Green Dark    189
+170	213	164	              Mint Green Light    203
+153	188	149	             Mint Green Medium    204
+ 49	128	 97	               Mint Green Dark    205
+214	230	204	                  Spruce Light    206
+182	212	180	           Spruce Medium Light    208
+115	158	115	                        Spruce    209
+ 97	134	 97	                 Spruce Medium    210
+ 59	 96	 76	                   Spruce Dark    212
+206	221	193	            Juniper Very Light    213
+181	206	162	                 Juniper Light    214
+138	153	120	          Juniper Medium Light    215
+ 97	134	 97	                Juniper Medium    216
+ 95	112	 91	           Juniper Medium Dark    217
+ 85	 95	 82	                  Juniper Dark    218
+ 79	 86	 76	                  Juniper Dark    218
+ 79	121	 66	                 Emerald Light    225
+ 79	121	 66	          Emerald Medium Light    226
+ 79	108	 69	                Emerald Medium    227
+  0	 96	 47	           Emerald Medium Dark    228
+ 48	116	 91	                  Emerald Dark    229
+235	207	185	               Rose Grey Light    231
+210	185	175	              Rose Grey Medium    232
+179	151	143	                     Rose Grey    233
+232	232	229	           Charcoal Grey Light    234
+167	139	136	          Charcoal Grey Medium    235
+ 81	 76	 83	                 Charcoal Grey    236
+121	144	 76	       Medium Spring Dark Grey    238
+ 79	121	 66	              Spring Grey Dark    239
+206	213	176	             Grass Green Light    240
+161	196	125	                   Grass Green    241
+151	183	110	      Grass Green Medium Light    242
+134	145	110	            Grass Green Medium    243
+ 83	 97	 73	       Grass Green Medium Dark    244
+ 83	 97	 73	              Grass Green Dark    245
+ 58	 82	 65	         Grass Green Very Dark    246
+240	255	200	       Parrot Green Very Light    253
+238	255	182	            Parrot Green Light    254
+185	200	102	     Parrot Green Medium Light    255
+143	163	 89	           Parrot Green Medium    256
+ 98	119	 57	      Parrot Green Medium Dark    257
+ 78	 95	 57	             Parrot Green Dark    258
+231	249	203	        Loden Green Very Light    259
+161	167	135	             Loden Green Light    260
+187	179	148	      Loden Green Medium Light    261
+137	141	114	            Loden Green Medium    262
+ 96	 95	 84	              Loden Green Dark    263
+234	249	194	            Avocado Very Light    264
+225	249	190	                 Avocado Light    265
+176	187	140	          Light Avocado Medium    266
+116	114	 92	                Avocado Medium    267
+ 73	 86	 55	           Avocado Medium Dark    268
+ 69	 69	 49	                  Avocado Dark    269
+248	247	221	                Soft Carnation    271
+113	113	113	               Stone Grey Dark    273
+225	224	216	               Bleu Mist Light    274
+246	234	219	            Citrus Ultra Light    275
+239	214	188	                         Pearl    276
+136	 95	 18	              Desert Very Dark    277
+206	244	  7	             Olive Green Light    278
+186	196	  5	      Olive Green Medium Light    279
+158	158	  7	            Olive Green Medium    280
+112	112	 20	              Olive Green Dark    281
+255	255	190	           Canary Yellow Light    288
+255	231	109	    Canary Yellow Medium Light    289
+255	176	  0	          Canary Yellow Medium    290
+255	176	  0	            Canary Yellow Dark    291
+255	255	220	            Jonquil Very Light    292
+255	235	168	                 Jonquil Light    293
+255	224	128	          Jonquil Medium Light    295
+255	194	 67	                Jonquil Medium    297
+255	146	  0	                  Jonquil Dark    298
+255	240	197	                  Citrus Light    300
+255	239	170	                        Citrus    301
+255	230	146	           Citrus Medium Light    302
+255	183	 85	                 Citrus Medium    303
+255	142	  4	                   Citrus Dark    304
+255	200	124	                   Topaz Light    305
+225	146	 85	            Topaz Medium Light    306
+255	242	128	            Topaz Medium Light    306
+204	119	 66	                  Topaz Medium    307
+181	107	 56	             Topaz Medium Dark    308
+181	 98	 46	                    Topaz Dark    309
+178	103	 70	               Topaz Very Dark    310
+255	204	128	          Tangerine Very Light    311
+255	181	105	               Tangerine Light    313
+255	142	  4	        Tangerine Medium Light    314
+255	106	  0	                Tangerine Dark    316
+255	146	109	                 Apricot Light    323
+200	 36	 43	                  Apricot Dark    326
+255	172	162	                   Melon Light    328
+255	123	103	                  Melon Medium    329
+255	 91	  0	             Melon Dark Medium    330
+244	 73	  0	                   Blaze Light    332
+206	 43	  0	            Blaze Medium Light    333
+255	  0	  0	                  Blaze Medium    334
+255	  0	  0	                    Blaze Dark    335
+255	172	162	             Terra Cotta Light    336
+237	122	100	      Terra Cotta Medium Light    337
+237	122	100	                   Terra Cotta    338
+197	 94	 88	            Terra Cotta Medium    339
+180	 75	 82	       Terra Cotta Medium Dark    340
+168	 68	 76	              Terra Cotta Dark    341
+243	218	228	                   Lilac Light    342
+194	209	206	                    Slate Bleu    343
+194	101	 76	                    Bark Light    347
+209	102	 84	                   Bark Medium    349
+157	 60	 39	              Bark Medium Dark    351
+143	 57	 38	                     Bark Dark    352
+158	 67	 18	                  Mocha Medium    355
+151	 84	 20	                    Mocha Dark    357
+151	 84	 20	                        Coffee    358
+123	 71	 20	                 Coffee Medium    359
+118	 55	 19	                   Coffee Dark    360
+244	195	139	                  Nutmeg Light    361
+238	171	121	           Nutmeg Medium Light    362
+191	157	105	                Dessert Medium    373
+140	 91	 43	           Dessert Medium Dark    374
+153	 92	 48	                  Dessert Dark    375
+217	174	130	                    Fawn Light    376
+166	129	 91	                   Fawn Medium    378
+128	 85	 30	                     Fawn Dark    379
+ 94	 56	 27	                         Fudge    380
+ 99	 39	 16	                  Fudge Medium    381
+ 83	 37	 16	                    Fudge Dark    382
+255	250	204	             Citrus Very Light    386
+255	236	191	                          Ecru    387
+219	194	164	                   Ecru Medium    388
+242	234	219	                   Linen Light    390
+239	219	190	                         Linen    391
+231	207	178	                  Linen Medium    392
+140	117	109	                    Linen Dark    393
+210	208	205	                    Grey Light    397
+221	221	218	                          Grey    398
+197	198	190	             Grey Medium Light    399
+167	139	136	                   Grey Medium    400
+ 85	 85	 89	                     Grey Dark    401
+  0	  0	  0	                         Black    403
+  0	123	134	            Electric Bleu Dark    410
+170	222	225	                 Electric Bleu    433
+ 85	 73	  0	                   Forest Dark    681
+ 43	 57	 41	                    Turf Green    683
+255	220	193	                   Flesh Light    778
+ 92	110	108	         Bleu Mist Medium Dark    779
+230	191	136	             Sierra Very Light    830
+219	176	122	                  Sierra Light    831
+203	152	103	                 Sierra Medium    832
+204	196	129	              Fern Green Light    842
+171	170	 89	                    Fern Green    843
+150	140	 40	             Fern Green Medium    844
+132	119	 17	        Fern Green Medium Dark    845
+123	119	 17	               Fern Green Dark    846
+233	233	223	          Bleu Mist Very Light    847
+200	198	194	                     Bleu Mist    848
+200	198	194	        Bleu Mist Medium Light    849
+ 96	116	115	              Bleu Mist Medium    850
+ 86	 99	100	                Bleu Mist Dark    851
+255	236	211	               Turf Very Light    852
+203	162	107	                    Turf Light    853
+196	155	100	             Turf Medium Light    854
+184	138	 87	                   Turf Medium    855
+184	138	 87	                     Turf Dark    856
+189	197	151	            Laurel Green Light    858
+172	183	142	                  Laurel Green    859
+159	169	142	     Laurel Green Medium Light    860
+ 67	 63	 47	           Laurel Green Medium    861
+ 55	 73	 18	             Laurel Green Dark    862
+255	177	147	                  Flesh Medium    868
+235	235	231	                Amethyst Light    869
+225	205	200	                      Amethyst    870
+190	155	167	         Amethyst Medium Light    871
+156	125	133	               Amethyst Medium    872
+156	125	133	                 Amethyst Dark    873
+242	209	142	                Saffron Medium    874
+182	242	216	                    Pine Light    875
+143	191	171	                          Pine    876
+ 98	140	122	                   Pine Medium    877
+ 67	 85	 73	              Pine Medium Dark    878
+ 43	 57	 41	                     Pine Dark    879
+255	229	188	                  Copper Light    880
+255	206	164	                        Copper    881
+194	101	 76	                 Copper Medium    883
+197	 94	 88	                   Copper Dark    884
+244	233	202	              Sand Stone Light    885
+255	231	182	                    Sand Stone    886
+229	193	139	       Sand Stone Medium Light    887
+216	151	105	             Sand Stone Medium    888
+151	104	 84	        Sand Stone Medium Dark    889
+243	176	128	                   Light Brass    890
+255	206	158	                         Brass    891
+219	128	115	              Rose Wine Medium    895
+184	 75	 77	                Rose Wine Dark    896
+156	 41	 74	           Rose Wine Very Dark    897
+158	109	 91	                        Sierra    898
+206	175	144	                   Tawny Light    899
+202	202	202	                  Pewter Light    900
+209	140	103	                  Brass Medium    901
+188	156	120	                  Tawny Medium    903
+113	 71	 42	                         Tawny    904
+100	 71	 42	                    Tawny Dark    905
+130	 90	  8	                    Brass Dark    906
+178	119	 55	                  Saffron Dark    907
+194	101	 76	             Flesh Medium Dark    914
+124	135	145	                   Denim Light    920
+124	135	145	                  Denim Medium    921
+102	122	140	                    Denim Dark    922
+  0	 91	  6	             Emerald Very Dark    923
+140	103	  0	         Olive Green Very Dark    924
+255	115	 97	           Tangerine Very Dark    925
+245	240	219	               Ecru Very Light    926
+227	234	230	                Larkspur Light    928
+239	214	188	               Fawn Very Light    933
+162	 77	 52	                Fawn Very Dark    936
+158	176	206	            Stormy Bleu Medium    939
+ 71	 97	116	       Stormy Bleu Medium Dark    940
+ 97	 97	128	         Stormy Bleu Very Dark    941
+244	195	139	                   Wheat Light    942
+237	172	123	                  Wheat Medium    943
+153	 92	 48	                    Wheat Dark    944
+242	209	142	                Harvest Medium    945
+219	176	122	                 Harvest Light    956
+255	199	184	               Wineberry Light    968
+219	128	115	              Wineberry Medium    969
+203	 78	 97	         Wineberry Medium Dark    970
+161	  0	 72	                Wineberry Dark    972
+237	247	238	                Sea Bleu Light    975
+194	209	206	         Sea Bleu Medium Light    976
+115	140	170	               Sea Bleu Medium    977
+ 81	109	135	          Sea Bleu Medium Dark    978
+ 58	 84	103	                 Sea Bleu Dark    979
+255	199	176	                     Rose Wine    893
+246	141	 57	           Antique Gold Medium   1001
+255	164	 73	            Antique Gold Light   1002
+206	103	 91	                     Amberglow   1003
+197	 94	 88	             Apricot Very Dark   1004
+179	  0	 91	             Cherry Red Medium   1005
+188	  0	 97	                    Cherry Red   1006
+173	 83	 62	                  Chicory Dark   1007
+231	134	103	                Chicory Medium   1008
+255	250	224	             Copper Very Light   1009
+255	229	188	           Cinnamon Very Light   1010
+255	243	231	              Flesh Very Light   1011
+251	227	209	                Chickory Light   1012
+237	122	100	                  Brick Medium   1013
+189	 73	 47	               Brick Very Dark   1014
+191	 64	 36	              Brick Ultra Dark   1015
+255	199	196	           Antique Mauve Light   1016
+220	141	141	          Antique Mauve Medium   1017
+195	118	123	            Antique Mauve Dark   1018
+163	 90	 91	       Antique Mauve Very Dark   1019
+253	229	217	              Peony Very Light   1020
+255	201	188	                   Peony Light   1021
+249	160	146	            Peony Medium Light   1022
+230	101	107	                         Peony   1023
+188	 64	 85	                  Peony Medium   1024
+194	 36	 67	             Peony Medium Dark   1025
+255	240	228	          Wineberry Very Light   1026
+184	 89	 88	         Rose Wine Medium Dark   1027
+161	 53	 79	         Raspberry Medium Dark   1028
+170	 24	 91	       Antique Rose Ultra Dark   1029
+149	102	162	           Thistle Medium Dark   1030
+237	247	247	      Antique Bleu Ultra Light   1031
+194	209	206	       Antique Bleu Very Light   1032
+182	186	194	            Antique Bleu Light   1033
+124	135	145	           Antique Bleu Medium   1034
+102	122	140	             Antique Bleu Dark   1035
+ 12	 91	108	        Antique Bleu Very Dark   1036
+248	248	252	           Sea Bleu Very Light   1037
+194	209	207	           Glacier Bleu Medium   1038
+102	148	154	      Glacier Bleu Medium Dark   1039
+190	190	185	                 Pewter Medium   1040
+107	103	102	          Stone Grey Very Dark   1041
+206	221	193	               Pine Very Light   1042
+243	250	209	        Grass Green Very Light   1043
+ 89	 92	 78	        Grass Green Ultra Dark   1044
+231	152	115	                   Toast Light   1045
+234	175	 15	                         Toast   1046
+255	190	164	                Cinnamon Light   1047
+221	109	 91	                  Red Cinnamon   1048
+209	102	 84	                      Cinnamon   1049
+113	 71	 42	              Mocha Brown Dark   1050
+204	255	255	              Teal Ultra Light   1060
+208	223	205	               Teal Very Light   1062
+128	151	132	                    Teal Light   1064
+  0	153	153	                   Teal Medium   1066
+  0	107	107	                          Teal   1068
+192	224	200	                    Jade Light   1070
+146	183	165	             Jade Medium Light   1072
+ 70	140	110	                   Jade Medium   1074
+ 47	 91	 73	                          Jade   1076
+219	194	164	                   Taupe Light   1080
+188	134	107	            Taupe Medium Light   1082
+128	 85	 30	                         Taupe   1084
+109	 66	 39	                    Taupe Dark   1086
+ 94	 56	 27	               Taupe Very Dark   1088
+ 77	121	255	          Electric Bleu Medium   1089
+128	220	255	           Electric Bleu Light   1090
+208	224	210	          Sea Green Very Light   1092
+255	207	214	        Beauty Rose Very Light   1094
+237	247	247	              Slate Bleu Light   1096
+255	 44	  0	             Crimson Red Light   1098
+239	162	127	            Flesh Medium Light   4146
+179	 82	 18	                    Brick Dark   5975
+172	172	170	                    Stone Grey   8581
+231	 18	 97	                 Christmas Red   9046
+237	247	238	                  Glacier Bleu   9159
+255	177	147	             Bleu Medium Light   9575

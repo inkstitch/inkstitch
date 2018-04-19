@@ -1,0 +1,111 @@
+GIMP Palette
+Name: Ink/Stitch: MTB - Embroidex
+Columns: 4
+# RGB Value		                    Color Name Number
+  0	  0	  0	                         Black   P101
+255	255	255	                         White   P102
+255	241	215	                     Off White   P110
+242	251	215	                          Sand   P115
+237	227	184	                      Lt Beige   P120
+198	174	157	                         Beige   P121
+196	187	157	                     SandStone   P122
+183	172	134	                   Beachcomber   P123
+214	194	158	               Dusky Goldenrod   P125
+191	172	106	              Twilight Harvest   P126
+120	 96	 63	                         Brown   P127
+226	197	126	                        Sienna   P130
+185	138	 68	                   Sienna Rose   P131
+163	104	 20	                  Sienna Brass   P135
+145	 87	 53	                   Light Cocoa   P140
+ 94	 52	 51	            Burnished Eggplant   P143
+ 72	 38	 38	                 Spanish Roast   P145
+248	244	211	                  Pearled Gold   P195
+242	236	182	                   Golden Sand   P196
+247	244	201	                Pearled bronze   P200
+253	236	168	                     Pale Gold   P201
+251	242	 89	                     Buttercup   P205
+249	233	 38	                   Bright gold   P206
+230	196	 77	                     Goldenrod   P207
+226	179	 14	                         Brass   P210
+248	194	114	                    Brass Rose   P211
+217	166	  3	                   Dusky Brass   P212
+218	 99	 12	                       Cayenne   P215
+221	121	 11	                      Cinnamon   P220
+162	 47	  3	                  Orange Glory   P221
+190	168	 12	                Antique Bronze   P224
+190	154	 12	                  Antique Gold   P225
+158	129	 10	                 Pickled Olive   P226
+205	243	167	                     Cool Mint   P300
+168	235	101	               California Lime   P305
+115	190	 12	                    Vivid Mint   P306
+194	218	112	                     Grey Moss   P307
+ 96	115	 30	                     Deep Moss   P308
+ 80	149	 38	                      New Pine   P310
+ 79	 91	 26	                 Lilypad Green   P312
+ 73	 96	 26	                      Palmetto   P313
+ 50	 66	 17	                    Black Pine   P314
+196	210	 87	                   Spring Fern   P315
+156	139	 41	                         Olive   P316
+135	120	 35	                       Parsley   P320
+ 98	104	 26	                   Golden Pine   P325
+225	249	204	           Frosted Wintergreen   P400
+172	199	116	                Pastoral Green   P401
+ 86	203	128	              Deep Wintergreen   P405
+108	173	 20	                  Parrot Green   P406
+ 51	 89	  9	                 Christmas Fir   P407
+209	250	230	                  Morning Cyan   P408
+131	194	233	                    Dusky Cyan   P409
+ 52	139	113	                 Mountain Lake   P410
+ 38	111	102	                  Lake Shadows   P411
+ 48	129	104	                   Lake Forest   P415
+ 22	 75	 69	                 Midnight Lake   P416
+225	247	244	                Winter Morning   P420
+208	240	253	            Pearled Coneflower   P421
+202	213	221	                   winter Haze   P422
+117	120	134	                  Russina Blue   P423
+104	107	119	                 Charcoal Blue   P424
+172	211	223	                Summer morning   P425
+ 48	105	122	                        Harbor   P426
+131	153	186	                    Cornflower   P427
+ 92	151	194	                  Dusky Harbor   P428
+ 39	 65	 92	               Harbor Twilight   P429
+ 46	 65	114	                    Royal Blue   P430
+ 69	 81	101	                   Suskty Navy   P431
+ 63	 60	 96	                     Deep Navy   P435
+253	232	236	                  Frosted Rose   P500
+250	190	191	                          Rose   P501
+252	216	216	                  Pearled Rose   P505
+247	155	197	                      Tea Rose   P506
+241	139	221	                    Vivid Rose   P507
+230	159	155	                   Salmon Rose   P510
+177	 37	151	                 Dusty Fuschia   P515
+193	 13	113	                    Light Rose   P520
+213	  0	  0	                   Paprika Red   P525
+155	  0	  0	                Cherrywood Red   P526
+126	 10	 65	                Dusty Burgundy   P530
+111	  9	 57	                      Burgandy   P531
+188	 14	 97	               Pearld Burgandy   P535
+ 86	  7	 65	                         Syrah   P540
+252	228	173	                        Blonde   P600
+254	218	188	                 Platinum Rose   P605
+253	201	166	                  Dusty Salmon   P606
+250	183	150	                Pearled Salmon   P607
+248	162	120	                        Salmon   P610
+255	128	128	                  Vivid Salmon   P612
+244	187	196	                   Light Mauve   P613
+184	161	169	                   Light Lilac   P695
+141	117	143	                 Antique Lilac   P696
+155	136	139	                  Silver Lilac   P697
+207	154	179	                         Lilac   P700
+150	102	168	                Twilight Lilac   P701
+125	 94	168	                        Lupine   P702
+132	 70	122	                   Deep Violet   P703
+ 99	 60	104	                Royal Eggplant   P704
+ 91	 67	124	               Twilight Lupine   P705
+220	220	219	                      Platinum   P800
+217	232	215	                        Quartz   P801
+198	187	185	                      Titanium   P802
+187	187	187	                 Blue Titanium   P803
+156	156	146	              Anitque Platinum   P805
+133	133	120	                      Hematite   P810
+ 87	 80	 79	                      Twilight   P815

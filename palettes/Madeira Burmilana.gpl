@@ -1,0 +1,125 @@
+GIMP Palette
+Name: Ink/Stitch: Madeira Burmilana
+Columns: 4
+# RGB Value		                    Color Name Number
+239	237	252	                   Aspen White   3601
+171	121	 43	                       Bullion   3625
+ 59	 84	103	                 Sea Bleu Dark   3642
+ 44	 48	 58	                         Black   3643
+137	171	153	               Surf Bleu Light   3645
+175	200	189	                    Sage Green   3646
+ 71	102	 94	                  Green Forest   3652
+190	171	156	                   Light Brown   3660
+202	199	196	                    Lunar Rock   3686
+120	191	183	                      Seafrost   3697
+ 25	 96	 80	                   Green Petal   3698
+ 56	 75	 64	                Mitchell Green   3699
+231	157	179	                   Medium Pink   3707
+208	116	160	                      Hot Pink   3709
+202	178	192	                    Light Pink   3711
+232	201	204	                         Grape   3715
+162	107	117	                Nostalgia Rose   3716
+ 72	 45	 54	                         Shark   3717
+229	198	150	                  Winter Wheat   3723
+246	186	 89	                        Mimosa   3724
+152	145	141	                       GS Gray   3735
+122	106	 94	                          Iron   3736
+ 92	 84	 75	                   Major Brown   3737
+240	122	118	                    Dark Peach   3752
+238	162	115	                       Chamois   3755
+192	115	 65	                        Copper   3756
+140	 31	 50	                    Dark Red S   3781
+146	 55	 91	                         Brown   3783
+  0	101	 95	                 Imperial Aqua   3785
+159	119	 61	                    Pale Brown   3791
+190	 36	 42	                    Red Orange   3800
+176	 30	 45	                     Red Berry   3802
+205	 86	 62	                   Dark Salmon   3803
+171	 54	 43	                  Orange / Red   3804
+123	 47	 48	                         Brown   3805
+133	 76	 53	                          Rust   3808
+  0	 85	139	                     Fire Blue   3810
+ 43	 55	 82	                     Dark Navy   3811
+ 32	 54	 51	                        Spruce   3820
+ 20	 68	 51	                         Green   3821
+ 65	 77	 56	                Mitchell Green   3822
+  0	124	102	                  Jungle Green   3823
+  0	108	 82	                     Green Bay   3825
+ 30	153	 79	                 Emerald Green   3826
+  0	121	 63	                  Green Forest   3827
+175	 84	102	                     Amber Red   3829
+ 53	 45	 45	                    Best Brown   3830
+ 77	 59	 49	                Egyptian Brown   3831
+ 98	 77	 61	                         Fungi   3832
+118	 83	122	                 Crushed Grape   3833
+123	 65	107	                      Dark Red   3834
+ 86	 96	100	                Bleu Mist Dark   3837
+ 67	 78	 84	                      Midnight   3838
+161	162	121	                    Sage Green   3839
+175	133	 96	                          Fawn   3840
+178	149	125	                       Natural   3841
+209	176	147	                     Light Tan   3842
+118	 77	 66	                    Dark Brown   3843
+171	121	104	                   Light Brown   3844
+209	191	170	                         Taupe   3845
+ 73	149	181	              Medium Teal Blue   3846
+ 87	 51	 51	                    Dark Sepia   3848
+255	169	 61	                 Gold / Orange   3850
+239	 99	 34	                         Hazel   3852
+249	198	 63	                        Yellow   3853
+229	215	117	                 Canary Yellow   3854
+187	117	 43	                         Toast   3855
+147	146	155	                     Pale Grey   3858
+236	155	161	                   Medium Pink   3860
+ 69	 64	110	                   Petrol Blue   3861
+127	 37	 56	                        Russet   3863
+ 97	 44	 56	                     Warm Wine   3864
+  0	108	120	                      Pro Teal   3871
+  0	 84	113	                       Peacock   3872
+  0	113	160	           Dark Turquoise Blue   3873
+ 98	186	185	                Blue Turquoise   3875
+  0	157	167	             Dark Blue / Green   3876
+149	133	163	                    Ocean Bleu   3880
+143	143	141	                       Griffin   3881
+ 48	 84	120	             Dark Blue / Green   3883
+ 88	133	159	                    Slate Blue   3884
+136	102	 79	                          Wine   3887
+227	197	173	                    Pale Peach   3888
+143	 93	 53	                     Chocolate   3889
+231	223	203	                    Turtledove   3890
+237	231	228	                        Oyster   3891
+ 41	 43	 44	                    Ruby Black   3892
+149	198	153	                       Hemlock   3893
+118	 56	 65	                         Sepia   3897
+129	127	 98	                          Aloe   3898
+209	202	166	                   Frost Green   3899
+163	 52	112	                 Medium Purple   3900
+102	 94	 58	                    Olive Drab   3903
+135	150	134	                          Weed   3904
+161	153	124	           Pale Green / Yellow   3905
+ 84	 79	 56	             Dark Green / Grey   3906
+109	166	 50	                Green / Yellow   3908
+133	169	188	                      Sky Blue   3909
+147	184	197	                 Thistle Light   3910
+162	181	198	                     Pale Blue   3911
+243	203	114	                   Pale Yellow   3912
+  0	128	156	                  Blue / Green   3915
+ 53	 56	 49	                     Dark Grey   3916
+236	184	189	                        Bisque   3919
+199	177	156	                     Sea Shell   3923
+126	154	102	                          Envy   3931
+178	106	155	                 Medium Purple   3935
+ 84	130	 77	                    Dark Green   3940
+ 67	115	 78	                       Fairway   3941
+132	142	187	                          Blue   3942
+ 95	 97	142	                    Royal Blue   3943
+156	171	193	                 Rockport Blue   3944
+102	121	157	                    Slate Blue   3945
+ 56	 78	118	                    Dusty Navy   3946
+227	213	153	                    Maize Silk   3964
+ 68	 48	 77	                    Blackberry   3977
+169	148	 58	                          Gold   3980
+203	 47	 81	              Dark Salmon Pink   3989
+141	 39	 70	                      Cabernet   3990
+ 29	167	149	                   Tender Teal   3996
+ 29	167	148	                   Tender Teal   3997

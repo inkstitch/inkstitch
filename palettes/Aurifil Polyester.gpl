@@ -1,0 +1,208 @@
+GIMP Palette
+Name: Ink/Stitch: Aurifil Polyester
+Columns: 4
+# RGB Value		                    Color Name Number
+  5	 20	 63	                     Navy Blue   5102
+ 12	  8	 84	                     Navy Blue   5120
+  5	 60	109	                    Salem Blue   5138
+178	226	225	                     Baby Blue   5156
+255	255	227	                   Ivory White   5202
+254	209	 93	                     Star Gold   5220
+253	210	190	                         Grape   5238
+242	  1	108	                       Fuschia   5256
+  6	 13	 60	                     Navy Blue   5104
+158	169	208	                Scalloped Blue   5122
+  9	 39	105	                    Royal Blue   5140
+  7	 75	136	                   Petrel Blue   5158
+255	255	186	                   Pale Yellow   5204
+254	196	 54	                        Yellow   5222
+254	158	 50	                        Orange   5240
+199	  1	 85	                      Dark Red   5258
+  6	 15	 61	                     Navy Blue   5106
+209	237	224	                    Light Blue   5124
+209	224	238	                   Pale Silver   5142
+  0	104	122	                  Mallard Blue   5160
+255	240	141	                       Mustard   5206
+254	112	 24	                   Fluo Orange   5224
+254	145	 27	                      Honeydew   5242
+250	146	154	                        Shrimp   5260
+ 12	 32	116	                    Royal Blue   5108
+ 62	181	201	              Medium Turquoise   5126
+  7	 55	112	                    Salem Blue   5144
+  0	128	141	                 Calypso Green   5162
+254	217	 94	                     Star Gold   5208
+254	227	227	                    Snow White   5226
+255	 79	  0	                       Paprika   5244
+249	103	110	                     Bitteroot   5262
+104	106	176	                     Baja Blue   5110
+ 75	107	175	                   Medium Blue   5128
+ 15	 58	104	                     Dark Blue   5146
+145	213	208	               Pale Aqua Green   5164
+254	186	 53	                    Scholastic   5210
+251	179	197	                      Carnatio   5228
+255	 89	  0	                       Paprika   5246
+223	 22	 43	                      Foxy Red   5264
+114	100	173	                  Light Purple   5112
+ 11	 25	102	                 Imperial Blue   5130
+  4	 42	 85	                   Blue Ribbon   5148
+  0	 71	 55	                     Evergreen   5166
+209	 84	  0	                        Orange   5212
+250	126	132	                    Shell Pink   5230
+102	 45	  0	                     Chocolate   5248
+164	 17	 40	                      Atom Red   5266
+186	216	233	                      Ice Blue   5114
+ 17	 12	121	                         Royal   5132
+  0	 76	 55	                    Dark Green   5150
+  0	 81	 56	                    Dark Green   5168
+254	232	178	                          Tusk   5214
+255	 89	  0	                       Paprika   5232
+250	159	184	                     Pale Pink   5250
+110	 28	 30	                           Tan   5268
+  1	 26	 51	                     Navy Blue   5116
+208	212	232	                   Palest Blue   5134
+  0	 87	 88	                     Dark Teal   5152
+  0	146	112	             Medium Jade Green   5170
+254	178	 67	                    Scholastic   5216
+251	103	 78	                         Coral   5234
+213	151	201	                    Light Pink   5252
+212	  0	 38	                           Red   5270
+ 11	 14	 88	                     Navy Blue   5118
+104	106	176	                     Baja Blue   5136
+ 71	180	148	                 Emerald Green   5154
+168	221	196	                   Brook Green   5172
+254	209	114	                      Daffodil   5218
+255	 19	  0	                           Red   5236
+227	  2	127	                       Crimson   5254
+204	  0	 46	                           Red   5272
+242	242	242	                         White   5302
+216	  2	127	                       Passion   5320
+136	 74	162	                  Laurie Lilac   5338
+166	111	180	                          Iris   5356
+  0	  0	  0	                         Black   5402
+249	137	160	                     Rose Pink   5420
+  0	 74	 42	                    Dark Green   5514
+ 19	155	137	                        Parrot   5532
+245	227	227	                        Oyster   5304
+127	 17	131	                   Dark Purple   5322
+ 47	  0	124	                   Purple Maze   5340
+ 59	  0	113	                   Purple Maze   5358
+ 32	 42	 14	                         Black   5404
+179	 15	 65	             Dark Red / Orange   5422
+ 58	 81	 10	                         Green   5516
+125	203	166	                    Mint Green   5534
+252	197	212	                 Memphis Belle   5306
+ 92	 17	 64	          French Raspberry Red   5324
+ 58	  0	111	                   Purple Maze   5342
+225	221	230	                   Palest Grey   5360
+ 61	 58	 23	                         Green   5406
+131	 24	 52	                        Maroon   5424
+ 24	 72	 29	                         Green   5518
+  0	 56	 34	                           Ivy   5536
+247	127	190	                  Fuchsia Pink   5308
+247	114	172	                   Floral Pink   5326
+177	166	208	                   Pale Purple   5344
+225	201	207	                    Steel Gray   5362
+207	161	105	                         Honey   5408
+145	211	168	                    Ocean Wave   5502
+127	131	  1	                 Crescent Moon   5520
+  0	 57	 40	                           Ivy   5538
+164	 17	121	                     New Berry   5310
+245	 92	172	                          Pink   5328
+114	 90	168	                 Lakers Purple   5346
+165	 90	 79	                     Mauvewood   5364
+251	169	154	                        Salmon   5410
+112	196	140	                   Sliced Lime   5504
+129	147	125	                     Green Bay   5522
+129	147	138	                    Pale Green   5540
+137	 12	 76	                     Cranberry   5312
+245	  1	 89	                Cherry Blossom   5330
+ 29	 10	 99	                 Imperial Blue   5348
+103	 18	 31	                         Brown   5366
+226	 74	100	                   Medium Pink   5412
+ 44	163	102	                  Gotcha Green   5506
+240	234	162	                    PaleYellow   5524
+111	156	 18	                  Meadow Green   5542
+238	205	229	                    Light Pink   5314
+248	 20	 66	                  Cardinal Red   5332
+229	190	221	                    Light Pink   5350
+176	129	170	                  Regal Orchid   5368
+181	 76	100	                  Baroque Rose   5414
+ 24	150	 76	                  Medium Green   5508
+  0	 81	 56	                    Dark Green   5526
+227	227	227	                   Silver Gray   5544
+220	100	176	                   Medium Pink   5316
+234	  0	 48	                          Ruby   5334
+206	149	200	                        Purple   5352
+225	201	227	                    Light Pink   5370
+123	 22	 29	                  Cherokee Red   5416
+  0	103	 62	                         Green   5510
+  0	104	 91	                  Green Forest   5528
+168	221	185	                   Brook Green   5546
+202	 44	146	                     Dark Pink   5318
+176	130	190	                        Purple   5336
+145	 95	172	                 Medium Purple   5354
+  0	  0	  0	                         Black   5372
+251	169	188	                    Petal Pink   5418
+  0	 88	 55	                   Latex Green   5512
+  0	126	111	                    Jade Green   5530
+ 90	130	 99	                     Sea Spray   5548
+171	194	172	                      Sea Foam   5550
+174	205	111	                   Light Green   5566
+255	255	  0	                 Gold / Yellow   5610
+240	240	240	                         White   5626
+123	 62	 41	                    Dark Brown   5642
+230	191	192	                   Pale Orange   5710
+239	240	240	                         White   5726
+208	197	191	                        Chrome   5742
+130	164	136	               Creme de Menthe   5552
+168	168	 16	                        Peapod   5568
+178	178	  0	                  Green / Gold   5612
+195	178	 99	                    Grapefruit   5628
+225	186	169	                 Pale / Orange   5644
+224	166	167	                   Pale Salmon   5712
+227	227	227	                   Silver Gray   5728
+185	175	170	                         Cloud   5744
+ 40	101	 75	                  Green Forest   5554
+144	152	 89	                   Olive Green   5570
+232	232	207	                   Pale Orange   5614
+135	111	 12	                 Desert Cactus   5630
+133	 60	 39	                         Brown   5646
+209	 92	  0	                        Orange   5714
+188	186	186	              Pale Grey / Pink   5730
+153	162	155	                       Jadeite   5746
+209	236	134	                   Pale Yellow   5556
+ 92	103	 29	                      Palmetto   5572
+231	209	154	         Light Yellow / Orange   5616
+145	119	  0	                 Crescent Moon   5632
+ 78	 28	 19	                      Dark Oak   5648
+168	 74	  9	           Old Dark Tex Orange   5716
+135	135	135	                   Medium Grey   5732
+  0	 33	 35	                           Ivy   5748
+ 54	146	 38	                  Bright Green   5558
+239	214	186	                          Ecru   5602
+178	146	  0	               Shimmering Gold   5618
+135	 71	  7	                     Chocolate   5634
+208	197	184	               Stainless Steel   5702
+239	214	202	                         Chalk   5718
+ 54	 54	 54	                     Dark Grey   5734
+ 47	126	 32	                         Green   5560
+226	188	127	                        Bamboo   5604
+145	145	129	                   Pale / Grey   5620
+226	208	197	                  Crystal Gray   5636
+185	175	164	                Ashes Of Roses   5704
+144	132	118	                         Fungi   5720
+158	158	158	                   Medium Grey   5736
+ 27	102	 72	                   Green Petal   5562
+225	186	144	                     Pink Sand   5606
+125	125	106	                Vertiver Green   5622
+254	227	197	                          Bone   5638
+167	150	141	                    Atmosphere   5706
+158	149	136	                    Light Sage   5722
+112	112	112	           Medium Grey / Green   5738
+214	222	157	                        Citron   5564
+255	255	125	                 Medium Yellow   5608
+ 12	 55	 39	                           Ivy   5624
+166	105	 77	                         Brown   5640
+145	136	115	                    Laurel Oak   5708
+177	162	151	                        String   5724
+ 13	 16	 17	                         Black   5740

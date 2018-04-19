@@ -1,0 +1,503 @@
+GIMP Palette
+Name: Ink/Stitch: Aurifil Royal
+Columns: 4
+# RGB Value		                    Color Name Number
+243	231	250	                         White   C001
+255	255	240	                   Light Beige   C003
+255	255	225	                  Yellow Beige   C004
+230	240	102	                    Green Gold   C005
+230	240	102	                    Green Gold   C006
+230	240	102	                    Green Gold   C007
+255	255	102	                  Lemon Yellow   C008
+255	240	204	                     Pale Gold   C009
+255	250	153	                          Gold   C010
+245	240	102	                   Darker Gold   C011
+255	230	 75	                      Mid Gold   C012
+255	245	  0	                   Orange Gold   C013
+255	250	153	                     Pale Gold   C015
+240	220	170	                  Creamy Beige   C016
+255	250	153	                          Gold   C017
+255	204	  0	                        Copper   C018
+255	204	  0	                        Copper   C020
+255	204	180	               Very Pale Peach   C021
+255	180	160	                    Pale Peach   C024
+240	153	130	                         Peach   C025
+255	153	 51	                        Carrot   C026
+255	153	 51	                        Carrot   C027
+255	153	 51	                        Carrot   C029
+255	102	  0	                        Orange   C030
+255	 51	  0	                    Tomato Red   C031
+255	 51	  0	                    Tomato Red   C032
+255	 51	  0	                    Tomato Red   C033
+255	  0	  0	                           Red   C037
+255	  0	 75	                      Deep Red   C038
+170	  0	 51	                      Rich Red   C040
+220	220	224	                    Light Grey   C041
+255	204	255	                    Pale Mauve   C042
+255	204	255	                    Pale Mauve   C044
+255	204	215	                    Mauve Pink   C046
+255	204	215	                    Mauve Pink   C048
+250	220	220	                          Pink   C049
+220	153	204	                    Dark Mauve   C050
+255	153	170	                     Plum Pink   C051
+255	160	204	                     Dark Pink   C052
+255	102	153	                   Bright Pink   C053
+215	  0	120	                     Dark Rose   C054
+255	  0	120	                      Hot Pink   C056
+204	  0	180	                          Plum   C058
+102	 25	 75	                   Dark Maroon   C060
+240	220	215	                Brownish Cream   C061
+230	204	190	                  Mushroom cap   C062
+220	200	160	                         Camel   C063
+245	204	175	                Brownish Cream   C064
+255	153	102	                     Tangerine   C065
+255	180	160	                         Peach   C066
+204	153	 51	                        Bronze   C067
+204	153	 51	                        Bronze   C068
+180	130	 75	                   Light brown   C069
+180	130	 75	                   Light brown   C070
+153	153	 51	                Brownish green   C071
+185	153	102	               Burnished brown   C072
+185	153	102	               Burnished brown   C073
+153	 51	 51	                     Red brown   C075
+153	 51	115	                        Maroon   C076
+153	 51	 51	                     Red brown   C077
+140	 95	 65	                         Brown   C078
+120	 60	 51	                 Reddish brown   C079
+102	 51	 51	               Very dark brown   C080
+235	204	215	                 Pale Lavender   C081
+204	140	204	                        Purple   C084
+230	190	220	                  Darker Lilac   C085
+204	153	186	                   Dusky Mauve   C086
+220	153	204	                    Dark Mauve   C087
+204	140	204	                        Purple   C088
+153	104	220	                     Jacaranda   C090
+125	  0	153	                        Purple   C094
+120	 51	153	                  Ultra Marine   C096
+ 51	  0	204	                   Marine Blue   C099
+102	  2	153	                     Aubergine   C100
+220	255	230	                Pale Turquoise   C101
+ 51	191	204	                   Medium Aqua   C102
+ 51	191	204	                   Medium Aqua   C103
+  0	185	204	                   Bright Aqua   C104
+  0	235	255	              Medium Turquoise   C106
+  0	235	255	              Medium Turquoise   C107
+175	255	245	               Light turquoise   C109
+ 65	153	175	              Medium Teal Blue   C110
+ 80	134	204	                   Medium Blue   C111
+ 65	153	175	              Medium Teal Blue   C112
+ 51	153	204	                     Teal Blue   C113
+ 51	102	153	                     Teal Blue   C114
+ 65	125	135	                Dark Sea Green   C119
+ 51	102	102	                Dark Sea Green   C120
+204	249	255	                Very Pale Blue   C121
+204	249	255	                Very Pale Blue   C123
+240	245	250	                   Silver Blue   C124
+240	250	255	                      Sky Blue   C125
+170	200	255	                   Medium Blue   C128
+170	200	255	                   Medium Blue   C129
+120	150	220	                   Medium Blue   C130
+102	102	204	                   Marine Blue   C131
+ 51	 51	200	                   Bright Blue   C132
+  0	  0	180	                   Bright Blue   C133
+  0	  0	180	                   Bright Blue   C134
+ 51	  0	160	                   Ultramarine   C135
+ 51	  0	204	                   Marine Blue   C136
+102	  2	153	                     Aubergine   C137
+ 50	100	170	                   Marine Blue   C138
+ 80	  0	120	                     Aubergine   C139
+  0	  0	 75	                     Dark navy   C140
+153	255	220	                   Light Green   C141
+160	204	180	              Light Teal Green   C142
+ 60	220	170	              Light teal Green   C143
+160	204	180	              Light teal Green   C144
+153	240	204	              Light teal Green   C145
+ 51	204	165	              Light teal Green   C146
+ 51	255	153	                    Mint Green   C147
+ 51	204	153	                         Green   C148
+220	255	240	                    Pale Green   C151
+ 30	151	 80	                 Emerald Green   C152
+ 51	204	153	              Light teal Green   C154
+ 60	175	120	                    Teal Green   C155
+  0	153	130	                       Emerald   C156
+ 51	153	153	                     Dark Aqua   C158
+ 51	120	102	              Dark Slate Green   C159
+204	255	204	                    Pale Green   C161
+220	255	204	               Very Pale Green   C162
+225	255	153	                    Pale Green   C163
+153	204	 51	                  Medium Green   C165
+130	191	 53	               Med Olive Green   C166
+ 51	204	 51	                  Medium Green   C167
+ 51	204	153	                         Green   C168
+ 51	153	120	                   Slate Green   C169
+ 51	153	120	                   Slate Green   C170
+204	204	150	             Light Khaki Green   C171
+153	153	 51	                Brownish Green   C172
+153	153	 51	                Med Leaf Green   C174
+ 80	110	 51	               Dark Leaf Green   C176
+  0	 60	 20	               Dark Leaf Green   C177
+140	160	190	                Med Leaf Green   C180
+220	220	224	             Light Silver Grey   C181
+204	210	204	             Light Silver Grey   C182
+204	204	210	               Med Silver Grey   C183
+204	204	210	               Med Silver Grey   C184
+225	204	180	                Pale Grey Gold   C185
+204	180	170	                Med Grey Brown   C186
+140	135	125	                     Dark Grey   C187
+190	190	195	                   Silver Grey   C189
+153	153	165	                     Dark Grey   C190
+153	153	153	                     Dark Grey   C191
+127	127	127	                     Dark Grey   C192
+140	140	150	                     Dark Grey   C193
+175	175	180	                     Dark Grey   C194
+ 85	 85	 85	                Very Dark Grey   C195
+ 75	 75	 75	                Very Dark Grey   C196
+  0	  0	 51	                     Dark Navy   C197
+ 85	 85	 85	                Very Dark Grey   C199
+  0	  0	  0	                         Black   C200
+245	235	204	              Light Grey Brown   C201
+240	225	195	                  Creamy Beige   C202
+255	240	204	                         Beige   C203
+245	240	230	              Light Grey Brown   C204
+200	175	140	                Med Grey Brown   C205
+ 20	190	160	                    Pale Brown   C206
+153	121	102	                  Medium Brown   C207
+225	230	140	             Light Khaki Green   C209
+230	204	110	                   Khaki Green   C210
+204	204	 51	                   Dark yellow   C211
+204	204	 51	                   Dark yellow   C212
+255	240	 51	                 Bright yellow   C214
+255	204	  0	                        Copper   C215
+255	170	 51	                        Orange   C216
+153	 51	 75	                      Burgundy   C219
+160	 51	102	                 Burgandy Rose   C220
+255	185	190	                     Pale Pink   C222
+255	154	154	                     Rose Pink   C223
+153	153	154	                   Medium Grey   C225
+210	170	210	                  Light Violet   C226
+ 75	 75	 75	                     Dark Grey   C232
+178	178	178	                   Silver Grey   C234
+140	140	150	                     Dark Grey   C235
+229	229	225	                     Pale Blue   C236
+  0	 51	153	                  Intense Blue   C244
+240	150	 70	                  Brown Orange   C249
+  0	  0	 75	                     Dark Navy   C264
+125	102	225	                   Marine Blue   C265
+153	153	153	                     Dark Grey   C267
+ 75	 75	 75	                Very Dark Grey   C269
+102	 51	  0	                    Dark brown   C270
+153	153	153	                     Dark Grey   C271
+ 85	 85	 85	                Very Dark Grey   C273
+150	190	230	                   Medium Blue   C275
+153	153	153	                     Dark Grey   C276
+ 80	 40	  0	               Very dark brown   C277
+ 85	 85	 85	                Very Dark Grey   C278
+102	153	255	                   Medium Blue   C280
+255	255	230	                         Beige   C282
+170	200	255	                   Medium Blue   C283
+255	165	125	                         Peach   C284
+102	172	153	                    Blue Green   C285
+  0	153	130	                       Emerald   C288
+255	204	130	                     Pale Gold   C289
+153	 51	 51	                     Red brown   C291
+120	 60	 51	                 Reddish brown   C294
+ 51	153	153	                     Dark Aqua   C313
+  0	  0	 51	                          Navy   C314
+255	255	240	                     Off White   C315
+255	255	102	                  Lemon Yellow   C316
+239	255	102	                    Green Gold   C317
+255	225	240	                     Pale Pink   C319
+255	178	150	                     Rose Pink   C320
+255	204	204	                   Salmon Pink   C322
+  0	  0	180	                   Bright Blue   C323
+ 60	175	120	                    Teal Green   C324
+170	120	 53	                         Brown   C325
+175	175	180	                     Dark Grey   C327
+255	255	225	                  Yellow Beige   C328
+255	245	  0	                   Orange Gold   C329
+235	204	245	                         Lilac   C330
+190	190	180	                    Light Grey   C331
+  0	 40	120	                   Bright Navy   C334
+  0	  0	102	                          Navy   C336
+153	255	240	                Pale Sea Green   C337
+ 51	102	153	                     Teal Blue   C339
+140	140	150	                     Dark Grey   C342
+255	  0	102	                      Rose Red   C343
+204	102	153	                    Mid Purple   C349
+ 75	  0	153	                  Ultra Marine   C350
+153	255	220	                   Light Green   C352
+240	140	 75	                    Rich Brown   C353
+178	178	178	                   Silver Grey   C354
+  0	 51	153	                  Intense Blue   C355
+ 51	102	  0	               Dark Leaf Green   C357
+ 51	204	 70	                  Medium Green   C358
+255	153	 51	                        Orange   C359
+204	204	210	               Med Silver Grey   C360
+178	178	185	                          Grey   C362
+153	 51	 75	                      Burgundy   C373
+153	204	 51	                  Medium Green   C374
+255	255	240	                   Light Beige   C376
+255	204	215	                    Mauve Pink   C377
+150	190	230	                   Medium Blue   C378
+250	220	220	                          Pink   C382
+255	180	160	                         Peach   C383
+255	215	165	                          Sand   C401
+153	 80	102	                        Maroon   C402
+220	220	224	                    Light Grey   C403
+255	190	102	                     Tangerine   C405
+255	185	190	                     Pale Pink   C406
+204	 51	  0	                          Rust   C407
+255	154	154	                     Rose Pink   C408
+153	  0	153	                        Purple   C409
+180	102	230	                        Purple   C410
+ 90	 60	  0	              Dark Olive Green   C411
+ 85	 85	 85	                Very Dark Grey   C412
+255	 51	  0	                    Tomato Red   C413
+ 80	 90	102	                    Steel blue   C414
+204	140	150	                     Plum Pink   C415
+ 51	153	120	                   Slate Green   C416
+180	130	 75	                   Light brown   C417
+153	153	154	                   Medium Grey   C418
+170	120	 53	                         Brown   C419
+ 30	151	 80	                 Emerald Green   C420
+152	153	102	                   Khaki Green   C421
+180	102	230	                        Purple   C422
+ 51	130	135	                     Dark Aqua   C423
+255	255	153	              Pale Khaki Green   C424
+130	191	 53	               Med Olive Green   C425
+255	204	153	                        Salmon   C426
+204	180	170	             Medium grey brown   C427
+ 51	255	153	                    Mint Green   C428
+ 51	204	 51	                  Medium Green   C429
+220	190	160	                    Pale Brown   C430
+204	150	140	                 Brownish pink   C431
+185	153	102	               Burnished brown   C432
+204	153	186	                   Dusky Mauve   C433
+127	127	127	                   Medium Grey   C434
+153	153	154	                   Medium Grey   C435
+255	 80	190	                     Deep Pink   C436
+255	180	130	                  Orange Peach   C437
+102	153	153	                     Sea Green   C438
+255	245	  0	                   Orange Gold   C439
+ 80	 40	  0	               Very dark brown   C440
+170	200	255	                   Medium Blue   C441
+ 50	100	170	                    MarineBlue   C442
+125	125	140	                   Medium Blue   C443
+ 51	 51	200	                   Bright Blue   C444
+120	153	190	                   Medium Blue   C445
+153	204	240	                     Pale Blue   C446
+ 65	153	175	              Medium Teal Blue   C447
+ 80	  0	120	                     Aubergine   C448
+ 51	120	102	              Dark Slate Green   C449
+160	 51	102	                 Burgundy Rose   C450
+210	170	210	                  Light Violet   C451
+153	104	220	                     Jacaranda   C452
+225	255	204	                    Pale Green   C453
+153	255	240	                Pale Sea Green   C454
+ 51	153	153	                     Sea Green   C455
+  0	190	204	              Medium Teal Blue   C456
+ 51	180	190	                     Sea Green   C457
+ 75	120	125	                     Sea Green   C458
+153	190	 51	               Med Olive Green   C459
+ 51	204	153	                         Green   C460
+  0	235	255	              Medium Turquoise   C461
+ 51	153	120	                   Slate Green   C462
+ 60	175	120	                    Teal Green   C463
+  0	102	  0	                  Dark Emerald   C464
+  0	102	  0	                  Dark Emerald   C465
+102	102	 51	              Dark Olive Green   C466
+175	170	255	                    Light Blue   C467
+ 51	102	102	                Dark Sea Green   C468
+ 51	102	  0	               Dark Leaf Green   C469
+165	153	 51	                Brownish Green   C470
+102	102	 51	              Dark Olive Green   C471
+  0	 73	 51	              Dark Olive Green   C472
+245	240	230	              Light Grey Brown   C473
+235	245	204	             Light Khaki Green   C474
+ 51	204	180	              Light teal Green   C475
+ 51	180	190	                     Sea Green   C476
+204	180	170	             Medium grey brown   C477
+185	153	102	               Burnished brown   C478
+185	153	 51	                    Rust Brown   C479
+140	 95	 65	                         Brown   C480
+204	204	204	                   Silver Grey   C481
+190	190	195	                   Silver Grey   C482
+204	204	185	              Light Grey Brown   C483
+ 61	 89	120	                     Dark Blue   C484
+  0	165	180	              Medium Teal Blue   C485
+ 51	153	120	                   Slate Green   C486
+255	  0	  0	                           Red   C487
+255	 51	153	                      Hot Pink   C488
+153	153	 51	                Med Leaf Green   C489
+153	  0	125	                   Dark Purple   C490
+255	240	220	                         Beige   C491
+178	178	185	                          Grey   C492
+127	127	127	                   Medium Grey   C494
+102	  0	102	                  Dark Fuschia   C495
+220	153	204	                    Dark Mauve   C496
+102	 25	 75	                   Dark Maroon   C497
+140	 95	 65	                         Brown   C498
+255	230	 75	                      Mid Gold   C501
+255	250	204	                         Cream   C502
+255	204	  0	                        Copper   C503
+204	204	 51	                   Dark yellow   C504
+255	  0	102	                      Rose Red   C505
+255	215	204	                 Pinkish Beige   C506
+204	153	186	                   Dusky Mauve   C507
+255	223	216	                Very Pale Pink   C508
+255	102	  0	                        Orange   C509
+255	  0	  0	                           Red   C510
+150	175	255	                   Medium Blue   C511
+ 80	  0	120	                     Aubergine   C512
+ 50	 90	102	                Dark Teal Blue   C513
+230	190	220	                  Darker Lilac   C514
+102	  0	102	          Aurifil Royal Purple   C515
+102	  0	102	          Aurifil Royal Purple   C516
+102	  2	153	                     Aubergine   C517
+  0	  0	102	                          Navy   C518
+102	  0	102	                        Purple   C519
+102	  0	102	                        Purple   C520
+ 51	102	153	                     Teal Blue   C521
+  0	185	204	                   Bright Aqua   C522
+ 53	170	130	                    Teal Green   C523
+153	204	 51	                  Medium Green   C524
+130	191	 53	               Med Olive Green   C525
+ 51	160	102	                  Medium Green   C526
+220	190	160	                    Pale Brown   C527
+185	153	102	               Burnished brown   C528
+204	140	150	                     Plum Pink   C529
+204	102	204	                        Purple   C530
+153	 51	 51	                     Red brown   C531
+153	102	 51	                         Brown   C532
+175	175	180	                     Dark Grey   C533
+ 80	102	125	                    Steel Blue   C534
+153	  0	204	                     Jacaranda   C535
+ 51	 51	200	                   Bright Blue   C536
+153	153	154	                   Medium Grey   C537
+240	220	215	                Brownish cream   C538
+175	170	255	                    Light Blue   C539
+220	220	224	             Light Silver Grey   C540
+204	180	170	             Medium grey brown   C541
+255	240	 51	                 Bright yellow   C542
+153	153	165	                     Dark Grey   C544
+  0	165	120	                 Emerald Green   C545
+  0	  0	 75	                     Dark navy   C546
+153	 51	 80	                 Medium maroom   C547
+153	 51	115	                        Maroon   C548
+150	190	230	                   Medium Blue   C549
+204	255	240	                Pale Turquoise   C550
+220	255	204	               Very Pale Green   C551
+180	130	 75	                   Light brown   C552
+240	140	 75	                    Rich Brown   C553
+ 80	 40	  0	               Very dark brown   C554
+178	178	185	                          Grey   C555
+140	140	150	                     Dark Grey   C556
+140	140	150	                     Dark Grey   C557
+ 75	 75	 75	                Very Dark Grey   C558
+175	 60	120	                     Deep Plum   C560
+  0	 60	 20	               Dark Leaf Green   C561
+  0	255	  0	                   Light Green   C638
+128	  0	128	                        Purple   C701
+255	  0	255	                          Pink   C702
+252	  3	 90	                     Dark Pink   C703
+254	207	240	                    Light Pink   C704
+174	  0	  0	                     Blood Red   C705
+128	  0	 64	                       Crimson   C706
+128	  0	 64	                   Crimson Red   C707
+128	  0	 64	                       Crimson   C708
+243	222	242	                    Light Pink   C709
+128	  0	  0	                        Purple   C710
+113	  0	 56	                        Purple   C711
+128	  0	 64	                        Purple   C712
+182	 10	 74	                       Sap Red   C713
+255	128	192	                          Pink   C714
+202	  0	  0	               Red Riding Hood   C715
+255	128	  0	                        Orange   C716
+223	  0	  0	                           Red   C717
+128	  0	 64	                        Purple   C718
+255	  0	  0	                           Red   C719
+255	157	111	                  Light Orange   C720
+255	184	149	                  Light Orange   C721
+255	128	  0	                        Orange   C722
+204	102	  0	                  Orange Brown   C723
+185	 92	  0	                         Earth   C724
+164	  0	  0	                     Red Brown   C725
+166	 83	  0	                   Light Brown   C726
+ 97	 48	 48	                    Dark Brown   C727
+ 83	 41	  0	                    Wood Brown   C728
+128	 64	 64	                         Brown   C729
+128	 64	  0	                         Brown   C730
+164	 82	  0	                   Light Brown   C731
+175	175	 97	                        Bronze   C732
+162	162	 81	                        Bronze   C733
+255	183	111	                  Orange Brown   C734
+255	128	 64	                        Orange   C735
+221	221	  0	                  Yellow Green   C736
+219	236	  9	                          Gold   C737
+242	242	  0	                          Gold   C738
+253	253	  0	                   Yellow Gold   C739
+255	255	174	                   Pale Yellow   C740
+230	230	  0	                   Flat Yellow   C741
+242	242	  0	                 Bright Yellow   C742
+235	245	 27	                          Gold   C743
+193	193	  0	                          Gold   C744
+255	255	185	                    White Gold   C745
+128	128	  0	                        Bronze   C746
+  0	 85	 43	                         Green   C747
+  0	 64	 64	                         Green   C748
+  0	255	  0	                    Lime Green   C749
+  0	128	  0	                    Deep Green   C750
+  0	157	  0	                         Green   C751
+  0	151	  0	                    Deep Green   C752
+  0	113	  0	                    Deep Green   C753
+151	255	151	                   Light Green   C754
+  0	 51	  0	                  Forest Green   C755
+ 64	128	128	                          Teel   C756
+ 50	101	101	                     Dark Teel   C757
+ 49	129	142	                    Teel Green   C758
+ 89	172	172	                          Teel   C759
+  0	164	164	                          Teel   C760
+ 50	 99	 99	                    Heavy Teel   C761
+ 64	128	128	                     Blue Teel   C762
+ 32	174	171	                    Ocean Blue   C763
+  4	124	244	                 Midnight Blue   C764
+128	128	255	                    Light Blue   C765
+  0	  0	160	                          Blue   C766
+ 37	  0	149	                    Slate Blue   C767
+ 47	 47	255	                     Baby Blue   C768
+ 81	 81	255	                      Sky Blue   C769
+ 15	177	255	                     Baby Blue   C770
+  0	  0	160	                   Purple Blue   C771
+ 94	  0	187	                  Light Purple   C772
+  0	  0	149	                   Dark Purple   C773
+  0	  0	 64	                    Black Blue   C774
+  0	  0	196	                          Blue   C775
+  0	  0	179	                   Blue Purple   C776
+  0	  0	160	                     Deep Blue   C777
+  0	  0	128	            Aurifil Royal Blue   C778
+  0	  0	113	                     Dark Blue   C779
+ 69	  0	138	                        Purple   C780
+  0	  0	 47	                 Midnight Blue   C781
+ 64	  0	 64	                       Crimson   C782
+188	116	203	                         Mauve   C783
+128	  0	128	                        Purple   C784
+100	  0	100	                   Deep Purple   C785
+ 64	  0	 64	                  Purple Brown   C786
+188	188	122	                   Light Brown   C787
+185	185	115	                           Tan   C788
+ 79	 39	  0	                         Brown   C790
+214	214	173	                           Tan   C791
+203	203	150	                   Goldern Tan   C792
+173	145	 58	                          Gold   C793
+ 44	 44	 44	                     Night Sky   C794
+185	185	185	                    Light Grey   C795
+114	114	114	                     Dark Grey   C796
+  0	  0	130	                   Silver Blue   C797
+ 97	 97	 97	                          Grey   C798
+192	192	192	                        Silver   C799
+255	255	  0	                          Gold  PG001
+223	223	  0	                   Gold Sliver  PG002
+192	192	192	                        Silver  PS001
+225	225	  0	                        Golden  AG001
+191	191	  0	                          Gold  AG002
+128	128	128	                        Silver  AS001
