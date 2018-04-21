@@ -21,6 +21,7 @@ from inkstitch.extensions import InkstitchExtension
 from inkstitch.stitch_plan import patches_to_stitch_plan
 from inkstitch.svg import render_stitch_plan
 from inkstitch.utils import save_stderr, restore_stderr
+from inkstitch.threads import ThreadCatalog
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from datetime import date
@@ -290,6 +291,7 @@ class Print(InkstitchExtension):
 
         patches = self.elements_to_patches(self.elements)
         stitch_plan = patches_to_stitch_plan(patches)
+        ThreadCatalog().match_and_apply_palette(stitch_plan)
         render_stitch_plan(self.document.getroot(), stitch_plan)
 
         self.strip_namespaces()
