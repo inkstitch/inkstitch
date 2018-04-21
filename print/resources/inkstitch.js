@@ -24,17 +24,17 @@ function setPageNumbers() {
 
 // Scale SVG (fit || full size)
 function scaleSVG(element, scale = 'fit') {
-  
+
   // always center svg
   transform = "translate(-50%, -50%)";
-  
+
   if(scale == 'fit') {
     var scale = Math.min(
-      element.width() / element.find('svg').width(),    
+      element.width() / element.find('svg').width(),
       element.height() / element.find('svg').height()
     );
   }
-  
+
   transform += " scale(" + scale + ")";
   var label = parseInt(scale*100);
 
@@ -71,17 +71,17 @@ function setSVGTransform(figure, transform) {
 $(function() {
   setTimeout(ping, 1000);
   setPageNumbers();
-  
+
   /* SCALING AND MOVING SVG  */
-  
+
   /* Mousewheel scaling */
   $('figure.inksimulation').on( 'DOMMouseScroll mousewheel', function (e) {
     if(e.ctrlKey == true) {
-    
+
       var svg       = $(this).find('svg');
       var transform = svg.css('transform').match(/-?[\d\.]+/g);
       var scale     = parseFloat(transform[0]);
-      
+
       if (e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) {
         // scroll down = zoom out
         scale *= 0.97;
@@ -91,7 +91,7 @@ $(function() {
         //scroll up
         scale *= 1.03;
       }
-      
+
       // set modified scale
       transform[0] = scale;
       transform[3] = scale;
@@ -102,19 +102,19 @@ $(function() {
       return false;
     }
   });
-  
+
   /* Fit SVG */
   $('button.svg-fit').click(function() {
     var svgfigure = $(this).closest('figure');
     scaleSVG(svgfigure, 'fit');
   });
-  
+
   /* Full Size SVG */
   $('button.svg-full').click(function() {
     var svgfigure = $(this).closest('figure');
     scaleSVG(svgfigure, '1');
   });
-  
+
   /* Drag SVG */
   $('figure.inksimulation').on('mousedown', function(e) {
     var p0 = { x: e.pageX, y: e.pageY };
@@ -141,7 +141,7 @@ $(function() {
     // set it using setSVGTransform() to ensure that it's saved to the server
     setSVGTransform($(this), $(this).find('svg').css('transform'));
   });
-  
+
   /* Apply transforms to All */
   $('button.svg-apply').click(function() {
     var transform = $(this).parent().siblings('svg').css('transform');
@@ -154,7 +154,7 @@ $(function() {
 
   $('[contenteditable="true"]').on('focusout', function() {
         /* change svg scale */
-    var content = $(this).html();
+    var content = $.trim($(this).text());
     var field_name = $(this).attr('data-field-name');
     if(field_name == 'svg-scale') {
       var scale     = parseInt(content);
@@ -295,4 +295,3 @@ $(function() {
       $.postJSON('/defaults', {'value': settings});
   });
 });
-

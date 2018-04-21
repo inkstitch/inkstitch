@@ -54,7 +54,7 @@ class _ThreadCatalog(Sequence):
             return
 
         for thread in threads:
-            nearest = palette.find_nearest(thread)
+            nearest = palette.nearest_color(thread)
 
             thread.name = nearest.name
             thread.number = nearest.number
