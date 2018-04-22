@@ -30,6 +30,11 @@ class _ThreadCatalog(Sequence):
     def __len__(self):
         return len(self.palettes)
 
+    def _num_exact_color_matches(self, palette, threads):
+        """Number of colors in stitch plan with an exact match in this palette."""
+
+        return sum(1 for thread in threads if thread in palette)
+
     def match_and_apply_palette(self, stitch_plan):
         """Figure out which color palette was used and set thread names.
 
@@ -41,16 +46,13 @@ class _ThreadCatalog(Sequence):
         """
 
         threads = [color_block.color for color_block in stitch_plan]
+        palettes_and_matches = [(palette, self._num_exact_color_matches(palette, threads))
+                                for palette in self]
+        palette, matches = max(palettes_and_matches, key=lambda item: item[1])
 
-        for palette in self:
-            num_matched = sum(1 for thread in threads if thread in palette)
-            if num_matched > (0.8 * len(threads)):
-                # Pick this one.
-                break
-        else:
-            # This block will only get run if we ran off the end of the loop
-            # without breaking.  No palette had enough colors that exactly
-            # matched, so just do nothing.
+        if matches < 0.8 * len(stitch_plan):
+            # if less than 80% of the colors are an exact match,
+            # don't use this palette
             return
 
         for thread in threads:
