@@ -178,11 +178,11 @@ $(function() {
         $('[data-field-name="' + field_name + '"]').each(function(i, item) {
             var item = $(item);
             if (item.is(':checkbox')) {
-                item.prop('checked', value).trigger('change');
+                item.prop('checked', value).trigger('initialize');
             } else if (item.is('img')) {
                 item.attr('src', value);
             } else if (item.is('select')) {
-                item.val(value).trigger('change');
+                item.val(value).trigger('initialize');
             } else if (item.is('figure.inksimulation')) {
                 setSVGTransform(item, value);
             } else {
@@ -249,10 +249,10 @@ $(function() {
   /* Settings */
 
   // Paper Size
-  $('select#printing-size').change(function(){
-    var size = $(this).find(':selected').val();
-    $('.page').toggleClass('a4', size == 'a4');
-    $.postJSON('/settings/paper-size', {value: size});
+  $('select#printing-size').on('change initialize', function(){
+    $('.page').toggleClass('a4', $(this).find(':selected').val() == 'a4');
+  }).on('change', function() {
+    $.postJSON('/settings/paper-size', {value: $(this).find(':selected').val()});
   });
 
   // Thread Palette
@@ -260,13 +260,26 @@ $(function() {
     $('.modal').show();
   }).on('update', function() {
     $(this).data('current-value', $(this).find(':selected').val());
-    console.log("selected: " + $(this).data('current-value'));
   }).trigger('update');
 
   $('#modal-yes').on('click', function(){
-    // do shit with the newly-selected palette...
     $("select#thread-palette").trigger("update");
     $('.modal').hide();
+    var body = {'name': $('select#thread-palette').find(':selected').val()};
+    $.postJSON('/palette', body, function() {
+      $.getJSON('/threads', function(threads) {
+        console.log("threads: " + JSON.stringify(threads));
+        $.each(threads, function(i, thread) {
+          console.log("doing: " + JSON.stringify(thread));
+          $('[data-field-name="color-' + thread.hex + '"]').text(thread.name);
+          var thread_description = thread.manufacturer;
+          if (thread.number) {
+            thread_description += " #" + thread.number;
+          }
+          $('[data-field-name="thread-' + thread.hex + '"]').text(thread_description);
+        });
+      });
+    });
   });
 
   $('#modal-no').on('click', function(){
@@ -276,14 +289,13 @@ $(function() {
   });
 
   //Checkbox
-  $(':checkbox').change(function() {
-    var checked = $(this).prop('checked');
+  $(':checkbox').on('change initialize', function() {
     var field_name = $(this).attr('data-field-name');
 
-    $('.' + field_name).toggle(checked);
+    $('.' + field_name).toggle($(this).prop('checked'));
     setPageNumbers();
-
-    $.postJSON('/settings/' + field_name, {value: checked});
+  }).on('change', function() {
+    $.postJSON('/settings/' + field_name, {value: $(this).prop('checked')});
   });
 
   // Logo

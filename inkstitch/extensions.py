@@ -75,11 +75,11 @@ class InkStitchMetadata(MutableMapping):
 
         try:
             return json.loads(item.text)
-        except ValueError:
+        except (ValueError, TypeError):
             return None
 
     def __delitem__(self, name):
-        item = self[name]
+        item = self._find_item(name)
 
         if item:
             self.metadata.remove(item)

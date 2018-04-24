@@ -38,8 +38,11 @@ class _ThreadCatalog(Sequence):
 
         return sum(1 for thread in threads if thread in palette)
 
-    def match_and_apply_palette(self, stitch_plan):
-        palette = self.match_palette(stitch_plan)
+    def match_and_apply_palette(self, stitch_plan, palette=None):
+        if palette is None:
+            palette = self.match_palette(stitch_plan)
+        else:
+            palette = self.get_palette_by_name(palette)
 
         if palette is not None:
             self.apply_palette(stitch_plan, palette)
@@ -75,6 +78,10 @@ class _ThreadCatalog(Sequence):
             color_block.color.number = nearest.number
             color_block.color.manufacturer = nearest.manufacturer
 
+    def get_palette_by_name(self, name):
+        for palette in self:
+            if palette.name == name:
+                return palette
 
 _catalog = None
 
