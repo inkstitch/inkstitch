@@ -214,9 +214,6 @@ body {
     border-bottom: 1px solid rgb(188, 188, 188);
     border-bottom: 1px solid rgba(129, 129, 129, 0.5);
     box-shadow: 0 1px 1px 1px rgba(194, 191, 191, 0.5);
-  }
-
-  #settings-ui div {
     text-align: left;
     font-size: 12pt;
   }
@@ -236,6 +233,33 @@ body {
 
   #settings-ui fieldset {
     margin-bottom: 1em;
+  }
+
+  #modal-background {
+    display: none;
+    z-index: 3;
+    position: fixed;
+    background: black;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  #modal-content {
+    display: none;
+    z-index: 4;
+    position: fixed;
+    width: 50%;
+    height: 25%%;
+    top: 200px;
+    left: 25%;
+    background: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(188, 188, 188);
+    box-shadow: 0 1px 1px 1px rgb(194, 191, 191);
+    text-align: center;
+    font-size: 16pt;
   }
 
 /* Header */

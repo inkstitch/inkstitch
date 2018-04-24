@@ -24,6 +24,9 @@ class _ThreadCatalog(Sequence):
         for palette_file in glob(os.path.join(path, '*.gpl')):
             self.palettes.append(ThreadPalette(palette_file))
 
+    def palette_names(self):
+        return list(sorted(palette.name for palette in self))
+
     def __getitem__(self, item):
         return self.palettes[item]
 
@@ -36,13 +39,20 @@ class _ThreadCatalog(Sequence):
         return sum(1 for thread in threads if thread in palette)
 
     def match_and_apply_palette(self, stitch_plan):
-        """Figure out which color palette was used and set thread names.
+        palette = self.match_palette(stitch_plan)
+
+        if palette is not None:
+            self.apply_palette(stitch_plan, palette)
+
+        return palette
+
+    def match_palette(self, stitch_plan):
+        """Figure out which color palette was used
 
         Scans the catalog of color palettes and chooses one that seems most
         likely to be the one that the user used.  A palette will only be
         chosen if more tha 80% of the thread colors in the stitch plan are
-        exact matches for threads in the palette.  All other threads will be
-        matched to the closest thread in the palette.
+        exact matches for threads in the palette.
         """
 
         threads = [color_block.color for color_block in stitch_plan]
@@ -53,14 +63,18 @@ class _ThreadCatalog(Sequence):
         if matches < 0.8 * len(stitch_plan):
             # if less than 80% of the colors are an exact match,
             # don't use this palette
-            return
+            return None
+        else:
+            return palette
 
-        for thread in threads:
-            nearest = palette.nearest_color(thread)
+    def apply_palette(self, stitch_plan, palette):
+        for color_block in stitch_plan:
+            nearest = palette.nearest_color(color_block.color)
 
-            thread.name = nearest.name
-            thread.number = nearest.number
-            thread.manufacturer = nearest.manufacturer
+            color_block.color.name = nearest.name
+            color_block.color.number = nearest.number
+            color_block.color.manufacturer = nearest.manufacturer
+
 
 _catalog = None
 

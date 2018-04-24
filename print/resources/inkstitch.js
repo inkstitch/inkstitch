@@ -154,7 +154,7 @@ $(function() {
 
   $('[contenteditable="true"]').on('focusout', function() {
         /* change svg scale */
-    var content = $.trim($(this).text());
+    var content = $(this).html();
     var field_name = $(this).attr('data-field-name');
     if(field_name == 'svg-scale') {
       var scale     = parseInt(content);
@@ -253,6 +253,26 @@ $(function() {
     var size = $(this).find(':selected').val();
     $('.page').toggleClass('a4', size == 'a4');
     $.postJSON('/settings/paper-size', {value: size});
+  });
+
+  // Thread Palette
+  $('select#thread-palette').change(function(){
+    $('.modal').show();
+  }).on('update', function() {
+    $(this).data('current-value', $(this).find(':selected').val());
+    console.log("selected: " + $(this).data('current-value'));
+  }).trigger('update');
+
+  $('#modal-yes').on('click', function(){
+    // do shit with the newly-selected palette...
+    $("select#thread-palette").trigger("update");
+    $('.modal').hide();
+  });
+
+  $('#modal-no').on('click', function(){
+    var select = $("select#thread-palette");
+    select.find('[value="' + select.data('current-value') + '"]').prop('selected', true);
+    $('.modal').hide();
   });
 
   //Checkbox

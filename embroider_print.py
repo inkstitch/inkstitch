@@ -291,7 +291,7 @@ class Print(InkstitchExtension):
 
         patches = self.elements_to_patches(self.elements)
         stitch_plan = patches_to_stitch_plan(patches)
-        ThreadCatalog().match_and_apply_palette(stitch_plan)
+        palette = ThreadCatalog().match_and_apply_palette(stitch_plan)
         render_stitch_plan(self.document.getroot(), stitch_plan)
 
         self.strip_namespaces()
@@ -346,6 +346,8 @@ class Print(InkstitchExtension):
                   },
             svg_overview = overview_svg,
             color_blocks = stitch_plan.color_blocks,
+            palettes = ThreadCatalog().palette_names(),
+            selected_palette = palette.name,
         )
 
         # We've totally mucked with the SVG.  Restore it so that we can save
