@@ -1,6 +1,7 @@
 import inkex
 import re
 import json
+from copy import deepcopy
 from collections import MutableMapping
 from .elements import AutoFill, Fill, Stroke, SatinColumn, Polyline, EmbroideryElement
 from . import SVG_POLYLINE_TAG, SVG_GROUP_TAG, SVG_DEFS_TAG, INKSCAPE_GROUPMODE, EMBROIDERABLE_TAGS, PIXELS_PER_MM
@@ -213,3 +214,4 @@ class InkstitchExtension(inkex.Effect):
         inkex.etree.cleanup_namespaces(self.document,
                                        top_nsmap=inkex.NSS,
                                        keep_ns_prefixes=inkex.NSS.keys())
+        self.original_document = deepcopy(self.document)
