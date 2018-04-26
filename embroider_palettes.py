@@ -5,6 +5,7 @@ import sys
 import traceback
 import os
 from os.path import realpath, dirname
+from glob import glob
 from threading import Thread
 import socket
 import errno
@@ -12,7 +13,6 @@ import time
 import logging
 import wx
 import inkex
-import shutil
 from inkstitch.utils import guess_inkscape_config_path
 
 
@@ -68,7 +68,7 @@ class InstallPalettesFrame(wx.Frame):
             self.install_palettes()
         except Exception, e:
             wx.MessageDialog(self,
-                             _('Thread palette installation failed: ' + str(e)),
+                             _('Thread palette installation failed') + ': \n' + traceback.format_exc(),
                              _('Installation Failed'),
                              wx.OK).ShowModal()
         else:
@@ -81,20 +81,30 @@ class InstallPalettesFrame(wx.Frame):
 
     def install_palettes(self):
         path = self.path_input.GetValue()
-
-        if not os.path.exists(path):
-            os.makedirs(path)
-
         palettes_dir = self.get_bundled_palettes_dir()
-
-        for palette_file in os.listdir(palettes_dir):
-            shutil.copy(os.path.join(palettes_dir, palette_file), path)
+        self.copy_files(glob(os.path.join(palettes_dir, "*")), path)
 
     def get_bundled_palettes_dir(self):
         if getattr(sys, 'frozen', None) is not None:
-            return os.path.join(sys._MEIPASS, 'palettes')
+            return realpath(os.path.join(sys._MEIPASS, '..', 'palettes'))
         else:
             return os.path.join(dirname(realpath(__file__)), 'palettes')
+
+    if (sys.platform == "win32"):
+        # If we try to just use shutil.copy it says the operation requires elevation.
+        def copy_files(self, files, dest):
+            import winutils
+
+            winutils.copy(files, dest)
+    else:
+        def copy_files(self, files, dest):
+            import shutil
+
+            if not os.path.exists(dest):
+                os.makedirs(dest)
+
+            for palette_file in files:
+                shutil.copy(palette_file, dest)
 
 class InstallPalettes(inkex.Effect):
     def effect(self):
