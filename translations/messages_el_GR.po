@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-02 22:11-0400\n"
-"PO-Revision-Date: 2018-04-09 20:21-0400\n"
+"POT-Creation-Date: 2018-04-28 13:36-0400\n"
+"PO-Revision-Date: 2018-04-28 13:51-0400\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Greek\n"
 "MIME-Version: 1.0\n"
@@ -90,6 +90,12 @@ msgstr ""
 
 #, python-format
 msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
+msgstr ""
+
+msgid "Closing..."
+msgstr ""
+
+msgid "It is safe to close this window now."
 msgstr ""
 
 msgid "A print preview has been opened in your web browser.  This window will stay open in order to communicate with the JavaScript code running in your browser.\n\n"
@@ -286,6 +292,9 @@ msgstr ""
 msgid "Page"
 msgstr ""
 
+msgid "Click to choose another logo"
+msgstr ""
+
 msgid "Enter job title..."
 msgstr ""
 
@@ -311,7 +320,7 @@ msgstr ""
 msgid "Stops and Trims"
 msgstr ""
 
-msgid "Estimated Time"
+msgid "Notes"
 msgstr ""
 
 msgid "Unique Colors"
@@ -335,10 +344,22 @@ msgstr ""
 msgid "Total nr trims"
 msgstr ""
 
+msgid "Enter operator notes..."
+msgstr ""
+
 msgid "Job estimated time"
 msgstr ""
 
+msgid "Ctrl + Scroll to Zoom"
+msgstr ""
+
 msgid "Scale"
+msgstr ""
+
+msgid "Fit"
+msgstr ""
+
+msgid "Apply to all"
 msgstr ""
 
 msgid "COLOR"
@@ -366,5 +387,14 @@ msgid "⚠ lost connection to Ink/Stitch"
 msgstr ""
 
 msgid "Printing Size"
+msgstr ""
+
+msgid "Print Layouts"
+msgstr ""
+
+msgid "Includes all settings visible here and also the icon."
+msgstr ""
+
+msgid "Save as defaults"
 msgstr ""
 
