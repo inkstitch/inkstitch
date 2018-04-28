@@ -3,6 +3,7 @@
     <img src="{{ logo.src or "resources/inkstitch-logo.svg" }}" alt="{{ logo.title }}" title="{{ logo.title }}" data-field-name="logo">
     <input type=file id="logo-picker" />
   </label>
+  <span class="logo-instructions">{{ _("Click to choose another logo") }}</span>
 </figure>
 <div class="headline">
   <div class="pageTitle">
@@ -10,6 +11,6 @@
       <p class="header-field" data-label="{{ _('CLIENT') }}:" contenteditable="true" data-placeholder="{{ _('Enter client name...') }}" data-field-name="client-name"></p>
       <p class="header-field" data-label="{{ _('PURCHASE ORDER #:') }}" contenteditable="true" data-placeholder="{{ _('Enter purchase order number...') }}" data-field-name="purchase-order"></p>
   </div>
-  
+
   <div class="currentDate">{{ date|datetimeformat(_('%Y.%m.%d')) }}</div>
 </div>
