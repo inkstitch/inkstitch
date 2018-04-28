@@ -9,7 +9,10 @@ import socket
 import errno
 import time
 import logging
+from copy import deepcopy
 import wx
+import appdirs
+import json
 
 import inkex
 import inkstitch
@@ -23,13 +26,36 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 from datetime import date
 import base64
 
-from flask import Flask, request, Response, send_from_directory
+from flask import Flask, request, Response, send_from_directory, jsonify
 import webbrowser
 import requests
 
 
 def datetimeformat(value, format='%Y/%m/%d'):
     return value.strftime(format)
+
+
+def defaults_path():
+    defaults_dir = appdirs.user_config_dir('inkstitch')
+
+    if not os.path.exists(defaults_dir):
+        os.makedirs(defaults_dir)
+
+    return os.path.join(defaults_dir, 'print_settings.json')
+
+
+def load_defaults():
+    try:
+        with open(defaults_path(), 'r') as defaults_file:
+            defaults = json.load(defaults_file)
+            return defaults
+    except:
+        return {}
+
+
+def save_defaults(defaults):
+    with open(defaults_path(), 'w') as defaults_file:
+        json.dump(defaults, defaults_file)
 
 
 def open_url(url):
@@ -71,6 +97,7 @@ def open_url(url):
 class PrintPreviewServer(Thread):
     def __init__(self, *args, **kwargs):
         self.html = kwargs.pop('html')
+        self.metadata = kwargs.pop('metadata')
         Thread.__init__(self, *args, **kwargs)
         self.daemon = True
         self.last_request_time = None
@@ -106,7 +133,7 @@ class PrintPreviewServer(Thread):
         def shutdown():
             self.shutting_down = True
             request.environ.get('werkzeug.server.shutdown')()
-            return 'Server shutting down...'
+            return _('Closing...') + '<br/><br/>' + _('It is safe to close this window now.')
 
         @self.app.route('/resources/<path:resource>', methods=['GET'])
         def resources(resource):
@@ -127,6 +154,27 @@ class PrintPreviewServer(Thread):
         @self.app.route('/printing/end')
         def printing_end():
             # nothing to do here -- request_started() will restart the watcher
+            return "OK"
+
+        @self.app.route('/settings/<field_name>', methods=['POST'])
+        def set_field(field_name):
+            self.metadata[field_name] = request.json['value']
+            return "OK"
+
+        @self.app.route('/settings/<field_mame>', methods=['GET'])
+        def get_field(field_name):
+            return jsonify(self.metadata[field_name])
+
+        @self.app.route('/settings', methods=['GET'])
+        def get_settings():
+            settings = {}
+            settings.update(load_defaults())
+            settings.update(self.metadata)
+            return jsonify(settings)
+
+        @self.app.route('/defaults', methods=['POST'])
+        def set_defaults():
+            save_defaults(request.json['value'])
             return "OK"
 
     def stop(self):
@@ -295,11 +343,14 @@ class Print(InkstitchExtension):
                     'estimated_thread': '', # TODO
                   },
             svg_overview = overview_svg,
-            svg_scale = '100%',
             color_blocks = stitch_plan.color_blocks,
         )
 
-        print_server = PrintPreviewServer(html=html)
+        # We've totally mucked with the SVG.  Restore it so that we can save
+        # metadata into it.
+        self.document = deepcopy(self.original_document)
+
+        print_server = PrintPreviewServer(html=html, metadata=self.get_inkstitch_metadata())
         print_server.start()
 
         time.sleep(1)
@@ -310,12 +361,20 @@ class Print(InkstitchExtension):
         info_frame.Show()
         app.MainLoop()
 
-        # don't let inkex print the document out
-        sys.exit(0)
-
 
 if __name__ == '__main__':
+    exception = None
+
     save_stderr()
-    effect = Print()
-    effect.affect()
+    try:
+        effect = Print()
+        effect.affect()
+    except:
+        exception = traceback.format_exc()
     restore_stderr()
+
+    if exception:
+        print >> sys.stderr, exception
+        sys.exit(1)
+    else:
+        sys.exit(0)

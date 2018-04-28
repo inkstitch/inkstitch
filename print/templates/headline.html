@@ -1,12 +1,16 @@
 <figure class="brandlogo">
-      <img src="{{ logo.src or "resources/inkstitch-logo.svg" }}" alt="{{ logo.title }}" title="{{ logo.title }}">
+  <label for="logo-picker">
+    <img src="{{ logo.src or "resources/inkstitch-logo.svg" }}" alt="{{ logo.title }}" title="{{ logo.title }}" data-field-name="logo">
+    <input type=file id="logo-picker" />
+  </label>
+  <span class="logo-instructions">{{ _("Click to choose another logo") }}</span>
 </figure>
 <div class="headline">
   <div class="pageTitle">
-      <h1><span class="jobtitle" contenteditable="true" data-placeholder="{{ _('Enter job title...') }}" data-field-name="job-title">{{ job.title }}</span></h1>
-      <p class="header-field" data-label="{{ _('CLIENT') }}:" contenteditable="true" data-placeholder="{{ _('Enter client name...') }}" data-field-name="client-name">{{ client }}</p>
-      <p class="header-field" data-label="{{ _('PURCHASE ORDER #:') }}" contenteditable="true" data-placeholder="{{ _('Enter purchase order number...') }}" data-field-name="purchase-order">{{ purchase_order }}</p>
+      <h1><span class="jobtitle" contenteditable="true" data-placeholder="{{ _('Enter job title...') }}" data-field-name="title"></span></h1>
+      <p class="header-field" data-label="{{ _('CLIENT') }}:" contenteditable="true" data-placeholder="{{ _('Enter client name...') }}" data-field-name="client-name"></p>
+      <p class="header-field" data-label="{{ _('PURCHASE ORDER #:') }}" contenteditable="true" data-placeholder="{{ _('Enter purchase order number...') }}" data-field-name="purchase-order"></p>
   </div>
-  
+
   <div class="currentDate">{{ date|datetimeformat(_('%Y.%m.%d')) }}</div>
 </div>

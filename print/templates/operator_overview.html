@@ -11,7 +11,7 @@
                 </div>
                 <div>
                     <div class="table">
-                      <p><span>{{ _('Design box size') }}:</span><span>{{ job.dimensions }}</span></p>
+                      <p><span>{{ _('Design box size') }}:</span><span>{{ "%0.1fmm X %0.1fmm" | format(*job.dimensions) }}</span></p>
                       <p><span>{{ _('Total stitch count') }}:</span><span>{{job.num_stitches }}</span></p>
                       <p><span>{{ _('Total thread used') }}:</span><span>{{job.estimated_thread }}</span></p>
                     </div>
@@ -25,9 +25,14 @@
             </div>
         </header>
         <main>
-          <figure class="inksimulation operator" style="height: 210mm;">
+            <figure class="inksimulation operator" data-field-name="operator-overview-transform" style="height: 210mm;" title="{{ _('Ctrl + Scroll to Zoom') }}">
                 {{ svg_overview|safe }}
-                <figcaption>{{ _('Scale') }} <span>{{ svg_scale }}</span></figcaption>
+                <figcaption>{{ _('Scale') }} <span class="scale" data-field-name="svg-scale" contenteditable="true" data-placeholder=""></span>%</figcaption>
+                <div>
+                  <button class="svg-fit">{{ _('Fit') }}</button>
+                  <button class="svg-full">100%</button>
+                  <button class="svg-apply">{{ _('Apply to all') }}</button>
+                </div>
             </figure>
         </main>
         {% include 'footer.html' %}

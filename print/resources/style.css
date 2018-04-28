@@ -70,6 +70,10 @@
         margin: 0 !important;
     }
 
+    figure.inksimulation div {
+      display: none;
+    }
+
     .ui {
       display: none;
     }
@@ -77,7 +81,7 @@
     #settings-ui {
       display: none !important;
     }
-    
+
     #errors {
       display: none !important;
     }
@@ -85,6 +89,10 @@
     .header-field:not(:empty)::before {
         content: attr(data-label);
         padding-right: 0.5em;
+    }
+
+    span.logo-instructions {
+      display: none;
     }
 }
 
@@ -109,7 +117,7 @@ body {
 .page {
   width: 210mm;
   height: 275mm;
-  padding: 5mm; 
+  padding: 5mm;
   background: #fff;
   margin: 0 auto;
   vertical-align: text-bottom;
@@ -163,13 +171,13 @@ body {
 
   .ui button.close {
     border: 1px solid rgb(197,5,5);
-    
+
   }
 
   .ui button.close:hover {
     background: rgb(197,5,5);
     color: white;
-    
+
   }
 
   .ui button.settings {
@@ -207,7 +215,7 @@ body {
     border-bottom: 1px solid rgba(129, 129, 129, 0.5);
     box-shadow: 0 1px 1px 1px rgba(194, 191, 191, 0.5);
   }
-  
+
   #settings-ui div {
     text-align: left;
     font-size: 12pt;
@@ -224,6 +232,10 @@ body {
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
+  }
+
+  #settings-ui fieldset {
+    margin-bottom: 1em;
   }
 
 /* Header */
@@ -247,18 +259,48 @@ body {
     margin: 2.5mm;
   }
 
+  figure.brandlogo label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 30mm;
+    text-align: center;
+  }
+
   figure.brandlogo img {
     max-width: 30mm;
     max-height: 30mm;
+    display: inline;
+    vertical-align: middle;
   }
-  
+
+  /* hide the actual file picker control, since we just want them to click the
+   * image instead
+   */
+  #logo-picker {
+    width: 0px;
+    height: 0px;
+    opacity: 0%;
+  }
+
+  .logo-instructions {
+    white-space: nowrap;
+
+    /* chrome ignores this :(
+    text-align: center;
+    */
+
+    font-size: 10px;
+    color: rgb(192, 192, 192);
+  }
+
   .operator-detailedview figure.brandlogo {
     height: 20mm;
     width: 30mm;
     margin: 0 2.5mm;
     text-align: left;
   }
-  
+
   .operator-detailedview figure.brandlogo img {
     max-width: 30mm;
     max-height: 20mm;
@@ -314,15 +356,15 @@ body {
 
   div.job-details p span:first-child {
     font-weight: bold;
-    padding-right: 1mm; 
+    padding-right: 1mm;
   }
 
   div.job-details p span:last-child {
-    text-align: left; 
+    text-align: left;
   }
 
   div.job-details > div:last-child span {
-    text-align: right !important; 
+    text-align: right !important;
   }
 
   div.client-detailedview .job-details {
@@ -347,16 +389,16 @@ body {
     font-size: 12pt;
     font-weight: bold;
   }
-  
+
   /* client dedailed view header */
   .client-detailedview div.job-details p span:first-child {
-    width: 20mm; 
+    width: 20mm;
   }
-  
+
   .client-detailedview div.job-details p span:last-child {
-    max-width: 60mm; 
+    max-width: 60mm;
   }
-  
+
 
 /* SVG Preview Image */
 
@@ -370,7 +412,7 @@ body {
     position: relative;
     overflow: hidden;
   }
-  
+
   .client-overview-main figure.inksimulation {
     height: 155mm;
   }
@@ -389,6 +431,24 @@ body {
     font-weight: bold;
     line-height: 12pt;
     margin: 2.5mm;
+    background: rgba(255, 255, 255, 0.73);
+    padding: 5px;
+  }
+
+  figure.inksimulation div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+  }
+
+  figure.inksimulation button {
+    border: none;
+    background: grey;
+    color: white;
   }
 
 /* Color Swatches */
@@ -415,7 +475,7 @@ body {
     font-weight: 700;
     font-size: 12pt;
     color: black;
-    background: white;  
+    background: white;
     border: 0.5mm solid white;
     margin: 0px;
     padding: 0px;
@@ -446,44 +506,44 @@ body {
     line-height: 30mm;
     text-align: center;
   }
-  
+
   /* detailedview color swatch */
-  
+
   .color-palette.detailed > div {
     height: 100%;
     position: relative;
   }
-  
+
   .color-palette.detailed .color-info {
     position: absolute;
     top: 2mm;
     left: 45mm;
   }
-  
+
   .color-palette.detailed .color-info > div {
     display: table;
   }
-  
+
   .color-palette.detailed .color-info p {
     display: table-row;
   }
-  
+
   .color-palette.detailed .color-info span {
     display: table-cell;
     padding-right: 5mm;
   }
-  
+
 /* Operator Detailed View */
 
   .operator-detailedview header {
     height: 25mm;
   }
-  
+
   .operator-detailedveiw figure.brandlogo{
     height: 15mm;
     width: 15mm;
   }
-  
+
   .operator-detailedveiw figure.brandlogo img {
     max-width: 12.5mm;
     max-height: 12.5mm;
@@ -497,21 +557,21 @@ body {
     display: table;
     width: 100%;
   }
-  
+
   .operator-job-info div {
     display: table-row;
   }
-  
+
   div.job-headline {
     display: table-header-group;
     font-size: 9pt;
     font-weight: bold;
   }
-  
+
   div.job-headline p {
     height: 1em;
   }
-  
+
   .operator-job-info p {
     height: 15mm;
     max-width: 15mm;
@@ -521,11 +581,11 @@ body {
     overflow: hidden;
     border: 1px solid rgb(239,239,239);
   }
-  
+
   .operator-job-info span {
     display: block;
   }
-  
+
   .operator-job-info span.color-index {
      position: absolute;
      top: 0;
@@ -533,17 +593,17 @@ body {
      line-height: 15mm;
      width: 10mm;
    }
-  
+
   .operator-svg.operator-colorswatch {
     width: 15mm;
   }
-  
+
   .operator-svg.operator-preview {
     min-width: 15mm;
     max-width: 20mm;
     height: 15mm;
   }
-  
+
   .operator-svg svg {
     position: absolute;
     top: 0;
@@ -552,7 +612,7 @@ body {
     max-width: 30mm;
     height: 100%;
   }
-  
+
 
 /* Footer */
 
@@ -565,7 +625,7 @@ body {
     white-space: wrap;
     text-align: center;
     padding-top: 2mm;
-    
+
   }
 
   footer p.num_pages {
@@ -625,7 +685,7 @@ body {
   /* five items */
   .color-swatch:first-child:nth-last-child(n+5),
   .color-swatch:first-child:nth-last-child(n+5) ~ .color-swatch {
-    font-size: 9pt;  
+    font-size: 9pt;
     width: calc(100% / 5);
   }
 
@@ -665,7 +725,7 @@ body {
   /*  fourteen items */
   .color-swatch:first-child:nth-last-child(n+14),
   .color-swatch:first-child:nth-last-child(n+14) ~ .color-swatch {
-    width: calc(100% / 5); 
+    width: calc(100% / 5);
   }
 
   /*  sixteen items */
@@ -717,7 +777,7 @@ body {
     .color-swatch:first-child:nth-last-child(n+40) ~ .color-swatch {
       width: calc(100% / 12);
   }
-    
+
   /* fourty-nine items */
     .color-swatch:first-child:nth-last-child(n+49),
     .color-swatch:first-child:nth-last-child(n+40) ~ .color-swatch {
