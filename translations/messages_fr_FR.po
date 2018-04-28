@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-02 22:11-0400\n"
-"PO-Revision-Date: 2018-04-09 20:20-0400\n"
+"POT-Creation-Date: 2018-04-28 13:36-0400\n"
+"PO-Revision-Date: 2018-04-28 13:51-0400\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -91,6 +91,12 @@ msgstr "Le préréglage \"%s\" n'a pas été trouvé."
 #, python-format
 msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
 msgstr "Le préréglage \"%s\" existe déjà. Veuillez utiliser un autre nom ou appuyez sur \"Écraser\""
+
+msgid "Closing..."
+msgstr ""
+
+msgid "It is safe to close this window now."
+msgstr ""
 
 msgid "A print preview has been opened in your web browser.  This window will stay open in order to communicate with the JavaScript code running in your browser.\n\n"
 "This window will close after you close the print preview in your browser, or you can close it manually if necessary."
@@ -286,6 +292,9 @@ msgstr "# trims"
 msgid "Page"
 msgstr "Page"
 
+msgid "Click to choose another logo"
+msgstr ""
+
 msgid "Enter job title..."
 msgstr "Entrez le titre du Job..."
 
@@ -311,8 +320,8 @@ msgstr "Consommation de fil"
 msgid "Stops and Trims"
 msgstr ""
 
-msgid "Estimated Time"
-msgstr "Durée estimée du Job"
+msgid "Notes"
+msgstr ""
 
 msgid "Unique Colors"
 msgstr "Couleurs uniques"
@@ -335,11 +344,23 @@ msgstr "Total nr stop"
 msgid "Total nr trims"
 msgstr "Total nr stop"
 
+msgid "Enter operator notes..."
+msgstr ""
+
 msgid "Job estimated time"
 msgstr "Durée estimée du Job"
 
+msgid "Ctrl + Scroll to Zoom"
+msgstr ""
+
 msgid "Scale"
 msgstr "Échelle"
+
+msgid "Fit"
+msgstr ""
+
+msgid "Apply to all"
+msgstr ""
 
 msgid "COLOR"
 msgstr "Couleur"
@@ -367,4 +388,13 @@ msgstr "Connexion perdu avec Ink/Stitch"
 
 msgid "Printing Size"
 msgstr "Taille d’impression"
+
+msgid "Print Layouts"
+msgstr ""
+
+msgid "Includes all settings visible here and also the icon."
+msgstr ""
+
+msgid "Save as defaults"
+msgstr ""
 
