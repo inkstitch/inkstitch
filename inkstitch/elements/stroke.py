@@ -1,6 +1,10 @@
+import sys
 from .. import _, Point
 from .element import param, EmbroideryElement, Patch
 from ..utils import cache
+
+
+warned_about_legacy_running_stitch = False
 
 
 class Stroke(EmbroideryElement):
@@ -50,8 +54,43 @@ class Stroke(EmbroideryElement):
         return self.get_boolean_param('manual_stitch')
 
     def is_running_stitch(self):
-        # stroke width <= 0.5 pixels is deprecated in favor of dashed lines
-        return self.dashed or self.stroke_width <= 0.5
+        # using stroke width <= 0.5 pixels to indicate running stitch is deprecated in favor of dashed lines
+
+        try:
+            stroke_width = float(self.get_style("stroke-width"))
+        except ValueError:
+            stroke_width = 1
+
+        if self.dashed:
+            return True
+        elif stroke_width <= 0.5 and self.get_float_param('running_stitch_length_mm', None) is not None:
+            # if they use a stroke width less than 0.5 AND they specifically set a running stitch
+            # length, then assume they intend to use the deprecated <= 0.5 method to set running
+            # stitch.
+            #
+            # Note that we use self.get_style("stroke_width") _not_ self.stroke_width above.  We
+            # explicitly want the stroke width in "user units" ("document units") -- that is, what
+            # the user sees in inkscape's stroke settings.
+            #
+            # Also note that we don't use self.running_stitch_length_mm above.  This is because we
+            # want to see if they set a running stitch length at all, and the property will apply
+            # a default value.
+            #
+            # Thsi is so tricky, and and intricate that's a major reason that we deprecated the
+            # 0.5 units rule.
+
+            # Warn them the first time.
+            global warned_about_legacy_running_stitch
+            if not warned_about_legacy_running_stitch:
+                warned_about_legacy_running_stitch = True
+                print >> sys.stderr, _("Legacy running stitch setting detected!\n\nIt looks like you're using a stroke " + \
+                    "smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set " + \
+                    "your stroke to be dashed to indicate running stitch.  Any kind of dash will work.")
+
+            # still allow the deprecated setting to work in order to support old files
+            return True
+        else:
+            return False
 
     def stroke_points(self, emb_point_list, zigzag_spacing, stroke_width):
         # TODO: use inkstitch.stitches.running_stitch
