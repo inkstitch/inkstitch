@@ -2,9 +2,9 @@
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
     <_name>Simulate</_name>
     <id>jonh.embroider.simulate</id>
-    <dependency type="executable" location="extensions">embroider_simulate.py</dependency>
+    <dependency type="executable" location="extensions">inkstitch.py</dependency>
     <dependency type="executable" location="extensions">inkex.py</dependency>
-    <param name="path" type="string" _gui-text="Directory where embroidery output is stored"></param>
+    <param name="extension" type="string" gui-hidden="true">simulate</param>
     <effect>
         <object-type>all</object-type>
         <effects-menu>
@@ -12,6 +12,6 @@
         </effects-menu>
     </effect>
     <script>
-        <command reldir="extensions" interpreter="python">embroider_simulate.py</command>
+        <command reldir="extensions" interpreter="python">inkstitch.py</command>
     </script>
 </inkscape-extension>

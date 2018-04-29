@@ -2,7 +2,7 @@
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
     <_name>Embroider</_name>
     <id>jonh.embroider</id>
-    <dependency type="executable" location="extensions">embroider.py</dependency>
+    <dependency type="executable" location="extensions">inkstitch.py</dependency>
     <dependency type="executable" location="extensions">inkex.py</dependency>
     <param name="collapse_len_mm" type="float" min="0.0" max="10.0" _gui-text="Collapse length (mm)"> _gui-description="Jump stitches smaller than this will be treated as normal stitches.">3.0</param>
     <param name="hide_layers" type="boolean" _gui-text="Hide other layers" description="Hide all other top-level layers when the embroidery layer is generated, in order to make stitching discernable.">true</param>
@@ -32,6 +32,7 @@
         <_option value="xxx">Singer Embroidery Format(.XXX)</_option>
     </param>
     <param name="path" type="string" _gui-text="Directory"></param>
+    <param name="extension" type="string" gui-hidden="true">embroider</param>
     <effect>
         <object-type>all</object-type>
         <effects-menu>
@@ -39,6 +40,6 @@
         </effects-menu>
     </effect>
     <script>
-        <command reldir="extensions" interpreter="python">embroider.py</command>
+        <command reldir="extensions" interpreter="python">inkstitch.py</command>
     </script>
 </inkscape-extension>

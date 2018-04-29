@@ -2,8 +2,9 @@
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
     <_name>Params</_name>
     <id>jonh.embroider.params</id>
-    <dependency type="executable" location="extensions">embroider_params.py</dependency>
+    <dependency type="executable" location="extensions">inkstitch.py</dependency>
     <dependency type="executable" location="extensions">inkex.py</dependency>
+    <param name="extension" type="string" gui-hidden="true">params</param>
     <effect>
         <object-type>all</object-type>
         <effects-menu>
@@ -11,6 +12,6 @@
         </effects-menu>
     </effect>
     <script>
-        <command reldir="extensions" interpreter="python">embroider_params.py</command>
+        <command reldir="extensions" interpreter="python">inkstitch.py</command>
     </script>
 </inkscape-extension>
