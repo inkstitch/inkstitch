@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-28 13:36-0400\n"
-"PO-Revision-Date: 2018-04-28 13:51-0400\n"
+"POT-Creation-Date: 2018-04-28 17:59-0400\n"
+"PO-Revision-Date: 2018-04-28 20:41-0400\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Czech\n"
 "MIME-Version: 1.0\n"
@@ -19,6 +19,36 @@ msgstr ""
 
 msgid "\n\n"
 "Seeing a 'no such option' message?  Please restart Inkscape to fix."
+msgstr ""
+
+msgid "Directory in which to install palettes:"
+msgstr ""
+
+msgid "Choose another directory..."
+msgstr ""
+
+msgid "Install"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Choose Inkscape palettes directory"
+msgstr ""
+
+msgid "Thread palette installation failed"
+msgstr ""
+
+msgid "Installation Failed"
+msgstr ""
+
+msgid "Thread palette files have been installed.  Please restart Inkscape to load the new palettes."
+msgstr ""
+
+msgid "Installation Completed"
+msgstr ""
+
+msgid "Ink/Stitch Thread Palette Installer"
 msgstr ""
 
 msgid "These settings will be applied to 1 object."
@@ -61,9 +91,6 @@ msgid "Overwrite"
 msgstr ""
 
 msgid "Delete"
-msgstr ""
-
-msgid "Cancel"
 msgstr ""
 
 msgid "Use Last Settings"
