@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-03-30 20:26-0400\n"
-"PO-Revision-Date: 2018-03-30 20:40-0400\n"
+"POT-Creation-Date: 2018-04-28 17:59-0400\n"
+"PO-Revision-Date: 2018-04-28 20:40-0400\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -19,6 +19,36 @@ msgstr ""
 
 msgid "\n\n"
 "Seeing a 'no such option' message?  Please restart Inkscape to fix."
+msgstr ""
+
+msgid "Directory in which to install palettes:"
+msgstr ""
+
+msgid "Choose another directory..."
+msgstr ""
+
+msgid "Install"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Choose Inkscape palettes directory"
+msgstr ""
+
+msgid "Thread palette installation failed"
+msgstr ""
+
+msgid "Installation Failed"
+msgstr ""
+
+msgid "Thread palette files have been installed.  Please restart Inkscape to load the new palettes."
+msgstr ""
+
+msgid "Installation Completed"
+msgstr ""
+
+msgid "Ink/Stitch Thread Palette Installer"
 msgstr ""
 
 msgid "These settings will be applied to 1 object."
@@ -63,9 +93,6 @@ msgstr ""
 msgid "Delete"
 msgstr ""
 
-msgid "Cancel"
-msgstr ""
-
 msgid "Use Last Settings"
 msgstr ""
 
@@ -90,6 +117,12 @@ msgstr ""
 
 #, python-format
 msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
+msgstr ""
+
+msgid "Closing..."
+msgstr ""
+
+msgid "It is safe to close this window now."
 msgstr ""
 
 msgid "A print preview has been opened in your web browser.  This window will stay open in order to communicate with the JavaScript code running in your browser.\n\n"
@@ -253,6 +286,12 @@ msgstr ""
 msgid "Repeats"
 msgstr ""
 
+msgid "Manual stitch placement"
+msgstr ""
+
+msgid "Stitch every node in the path.  Stitch length and zig-zag spacing are ignored."
+msgstr ""
+
 msgid "Unable to autofill.  This most often happens because your shape is made up of multiple sections that aren't connected."
 msgstr ""
 
@@ -280,6 +319,9 @@ msgstr ""
 msgid "Page"
 msgstr ""
 
+msgid "Click to choose another logo"
+msgstr ""
+
 msgid "Enter job title..."
 msgstr ""
 
@@ -305,7 +347,7 @@ msgstr ""
 msgid "Stops and Trims"
 msgstr ""
 
-msgid "Estimated Time"
+msgid "Notes"
 msgstr ""
 
 msgid "Unique Colors"
@@ -329,10 +371,22 @@ msgstr ""
 msgid "Total nr trims"
 msgstr ""
 
+msgid "Enter operator notes..."
+msgstr ""
+
 msgid "Job estimated time"
 msgstr ""
 
+msgid "Ctrl + Scroll to Zoom"
+msgstr ""
+
 msgid "Scale"
+msgstr ""
+
+msgid "Fit"
+msgstr ""
+
+msgid "Apply to all"
 msgstr ""
 
 msgid "COLOR"
@@ -360,5 +414,14 @@ msgid "⚠ lost connection to Ink/Stitch"
 msgstr ""
 
 msgid "Printing Size"
+msgstr ""
+
+msgid "Print Layouts"
+msgstr ""
+
+msgid "Includes all settings visible here and also the icon."
+msgstr ""
+
+msgid "Save as defaults"
 msgstr ""
 

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-03-30 20:26-0400\n"
-"PO-Revision-Date: 2018-03-30 20:40-0400\n"
+"POT-Creation-Date: 2018-04-28 17:59-0400\n"
+"PO-Revision-Date: 2018-04-28 20:41-0400\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -20,6 +20,36 @@ msgstr ""
 msgid "\n\n"
 "Seeing a 'no such option' message?  Please restart Inkscape to fix."
 msgstr "Vous voyez un message 'aucune option' ? Veuillez redémarrer Inkscape pour corriger."
+
+msgid "Directory in which to install palettes:"
+msgstr ""
+
+msgid "Choose another directory..."
+msgstr ""
+
+msgid "Install"
+msgstr ""
+
+msgid "Cancel"
+msgstr "Quitter"
+
+msgid "Choose Inkscape palettes directory"
+msgstr ""
+
+msgid "Thread palette installation failed"
+msgstr ""
+
+msgid "Installation Failed"
+msgstr ""
+
+msgid "Thread palette files have been installed.  Please restart Inkscape to load the new palettes."
+msgstr ""
+
+msgid "Installation Completed"
+msgstr ""
+
+msgid "Ink/Stitch Thread Palette Installer"
+msgstr ""
 
 msgid "These settings will be applied to 1 object."
 msgstr "Ces paramètres seront appliqués à 1 objet."
@@ -63,9 +93,6 @@ msgstr "Écraser"
 msgid "Delete"
 msgstr "Effacer"
 
-msgid "Cancel"
-msgstr "Quitter"
-
 msgid "Use Last Settings"
 msgstr "Utiliser les derniers paramètres"
 
@@ -92,12 +119,18 @@ msgstr "Le préréglage \"%s\" n'a pas été trouvé."
 msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
 msgstr "Le préréglage \"%s\" existe déjà. Veuillez utiliser un autre nom ou appuyez sur \"Écraser\""
 
-msgid "A print preview has been opened in your web browser.  This window will stay open in order to communicate with the JavaScript code running in your browser.\n\n"
-"This window will close after you close the print preview in your browser, or you can close it manually if necessary."
+msgid "Closing..."
 msgstr ""
 
-msgid "Ink/Stitch Print"
+msgid "It is safe to close this window now."
 msgstr ""
+
+msgid "A print preview has been opened in your web browser.  This window will stay open in order to communicate with the JavaScript code running in your browser.\n\n"
+"This window will close after you close the print preview in your browser, or you can close it manually if necessary."
+msgstr "Un aperçu avant impression a été ouvert dans votre navigateur web.  Cette fenêtre reste ouverte pour communiquer avec le code JavaScript s’exécutant dans votre navigateur.  Cette fenêtre se fermera après avoir fermer l’aperçu avant impression dans le navigateur, vous pouvez la fermer manuellement si nécessaire."
+
+msgid "Ink/Stitch Print"
+msgstr "Imprimer Ink/Stitch"
 
 msgid "Embroidery Simulation"
 msgstr "Simulation de broderie"
@@ -126,7 +159,7 @@ msgid "Auto-Fill"
 msgstr "Remplissage automatique"
 
 msgid "Automatically routed fill stitching"
-msgstr ""
+msgstr "Remplir automatiquement la couture"
 
 msgid "Running stitch length (traversal between sections)"
 msgstr "Longueur du point de fonctionnement (parcours entre les sections)"
@@ -138,7 +171,7 @@ msgid "AutoFill Underlay"
 msgstr "Sous-couche de remplissage automatique"
 
 msgid "Fill angle (default: fill angle + 90 deg)"
-msgstr "Angle de remplissage (par défaut : remplir l’angle + 90 deg)"
+msgstr "Angle de remplissage (par défaut: angle de remplissage + 90 degrés)"
 
 msgid "Row spacing (default: 3x fill row spacing)"
 msgstr "Espacement des rangs (par défaut: 3 fois l'espacement des rangs de remplissage)"
@@ -165,7 +198,7 @@ msgid "Fill"
 msgstr "Remplir"
 
 msgid "Manually routed fill stitching"
-msgstr ""
+msgstr "Remplir automatiquement la couture"
 
 msgid "Angle of lines of stitches"
 msgstr "Angle des lignes de points"
@@ -177,13 +210,13 @@ msgid "Spacing between rows"
 msgstr "Espacement entre les lignes"
 
 msgid "Maximum fill stitch length"
-msgstr "Longueur de point maximale de remplissage"
+msgstr "Longueur maximale du point de remplissage"
 
 msgid "Stagger rows this many times before repeating"
-msgstr "Décaler les lignes avant de répéter plusieurs fois"
+msgstr "Décaler les rangs autant de fois avant de répéter"
 
 msgid "Satin Column"
-msgstr ""
+msgstr "Colonne Satin"
 
 msgid "Custom satin column"
 msgstr "Colonne de satin personnalisée"
@@ -245,13 +278,19 @@ msgid "satin column: object %(id)s has two paths with an unequal number of point
 msgstr "colonne de satin: l'objet %(id)s a deux chemins avec un nombre de points différents (%(length1)d et %(length2)d)"
 
 msgid "Satin stitch along paths"
-msgstr "Point de satin le long des rangs"
+msgstr "Point en satin le long des chemins"
 
 msgid "Running stitch length"
-msgstr "Longueur de point en cours"
+msgstr "Longueur de point courant"
 
 msgid "Repeats"
-msgstr "répétez"
+msgstr "Répéter"
+
+msgid "Manual stitch placement"
+msgstr ""
+
+msgid "Stitch every node in the path.  Stitch length and zig-zag spacing are ignored."
+msgstr ""
 
 msgid "Unable to autofill.  This most often happens because your shape is made up of multiple sections that aren't connected."
 msgstr "Impossible de remplir automatiquement. Cela arrive le plus souvent parce que votre forme est composée de plusieurs sections qui ne sont pas connectées."
@@ -260,105 +299,129 @@ msgid "Unexpected error while generating fill stitches. Please send your SVG fil
 msgstr "Erreur inattendue lors de la génération des points de remplissage. Veuillez envoyer votre fichier SVG à lexelby@github."
 
 msgid "Color"
-msgstr ""
+msgstr "Couleur"
 
 msgid "rgb"
-msgstr ""
+msgstr "RGB"
 
 msgid "thread used"
-msgstr ""
+msgstr "fil utilisé"
 
 msgid "# stitches"
-msgstr ""
+msgstr "# points"
 
 msgid "# stops"
-msgstr ""
+msgstr "# stop"
 
 msgid "# trims"
-msgstr ""
+msgstr "# trims"
 
 msgid "Page"
+msgstr "Page"
+
+msgid "Click to choose another logo"
 msgstr ""
 
 msgid "Enter job title..."
-msgstr ""
+msgstr "Entrez le titre du Job..."
 
 msgid "CLIENT"
-msgstr ""
+msgstr "CLIENT"
 
 msgid "Enter client name..."
-msgstr ""
+msgstr "Entrez le nom du client..."
 
 msgid "PURCHASE ORDER #:"
-msgstr ""
+msgstr "BON DE COMMANDE #:"
 
 msgid "Enter purchase order number..."
-msgstr ""
+msgstr "Entrez le numéro de commande..."
 
 #, python-format
 msgid "%Y.%m.%d"
-msgstr ""
+msgstr "%Y.%m.%d"
 
 msgid "Thread Consumption"
-msgstr ""
+msgstr "Consommation de fil"
 
 msgid "Stops and Trims"
 msgstr ""
 
-msgid "Estimated Time"
+msgid "Notes"
 msgstr ""
 
 msgid "Unique Colors"
-msgstr ""
+msgstr "Couleurs uniques"
 
 msgid "Color Blocks"
-msgstr ""
+msgstr "Blocs de couleur"
 
 msgid "Design box size"
-msgstr ""
+msgstr "Taille de boîte de conception"
 
 msgid "Total thread used"
-msgstr ""
+msgstr "Total de fil utilisé"
 
 msgid "Total stitch count"
-msgstr ""
+msgstr "Nombre de points total"
 
 msgid "Total nr stops"
-msgstr ""
+msgstr "Total nr stop"
 
 msgid "Total nr trims"
+msgstr "Total nr stop"
+
+msgid "Enter operator notes..."
 msgstr ""
 
 msgid "Job estimated time"
+msgstr "Durée estimée du Job"
+
+msgid "Ctrl + Scroll to Zoom"
 msgstr ""
 
 msgid "Scale"
+msgstr "Échelle"
+
+msgid "Fit"
+msgstr ""
+
+msgid "Apply to all"
 msgstr ""
 
 msgid "COLOR"
-msgstr ""
+msgstr "Couleur"
 
 msgid "Estimated time"
-msgstr ""
+msgstr "Durée estimée du Job"
 
 msgid "Client Signature"
-msgstr ""
+msgstr "Signature du client"
 
 msgid "Ink/Stitch Print Preview"
-msgstr ""
+msgstr "Aperçu avant impression"
 
 msgid "Print"
-msgstr ""
+msgstr "Imprimer"
 
 msgid "Settings"
-msgstr ""
+msgstr "Paramètres"
 
 msgid "Close"
-msgstr ""
+msgstr "Fermer"
 
 msgid "⚠ lost connection to Ink/Stitch"
-msgstr ""
+msgstr "Connexion perdu avec Ink/Stitch"
 
 msgid "Printing Size"
+msgstr "Taille d’impression"
+
+msgid "Print Layouts"
+msgstr ""
+
+msgid "Includes all settings visible here and also the icon."
+msgstr ""
+
+msgid "Save as defaults"
 msgstr ""
 
