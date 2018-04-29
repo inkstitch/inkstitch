@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-29 21:29-0400\n"
+"POT-Creation-Date: 2018-04-29 21:45-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -154,15 +154,6 @@ msgstr ""
 
 #, python-format
 msgid "Unknown unit: %s"
-msgstr ""
-
-msgid "No embroiderable paths selected."
-msgstr ""
-
-msgid "No embroiderable paths found in document."
-msgstr ""
-
-msgid "Tip: use Path -> Object to Path to convert non-paths before embroidering."
 msgstr ""
 
 msgid "Stitch Plan"
@@ -321,6 +312,15 @@ msgid ""
 "It looks like you're using a stroke smaller than 0.5 units to indicate a "
 "running stitch, which is deprecated.  Instead, please set your stroke to "
 "be dashed to indicate running stitch.  Any kind of dash will work."
+msgstr ""
+
+msgid "No embroiderable paths selected."
+msgstr ""
+
+msgid "No embroiderable paths found in document."
+msgstr ""
+
+msgid "Tip: use Path -> Object to Path to convert non-paths before embroidering."
 msgstr ""
 
 msgid ""
