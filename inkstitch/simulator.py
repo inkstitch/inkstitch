@@ -1,11 +1,11 @@
+import sys
 import numpy
 import wx
 import colorsys
 from itertools import izip
 
-from .base import InkstitchExtension
-from .. import PIXELS_PER_MM
-from ..svg import color_block_to_point_lists
+from . import PIXELS_PER_MM
+from .svg import color_block_to_point_lists
 
 
 class EmbroiderySimulator(wx.Frame):

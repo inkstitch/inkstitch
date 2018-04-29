@@ -1,3 +1,5 @@
+# -*- coding: UTF-8 -*-
+
 import os
 import sys
 import json
@@ -630,7 +632,7 @@ class SettingsFrame(wx.Frame):
         self.Layout()
         # end wxGlade
 
-class EmbroiderParams(InkstitchExtension):
+class Params(InkstitchExtension):
     def __init__(self, *args, **kwargs):
         self.cancelled = False
         InkstitchExtension.__init__(self, *args, **kwargs)

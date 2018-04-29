@@ -1,3 +1,5 @@
+import wx
+
 from .base import InkstitchExtension
 from ..simulator import EmbroiderySimulator
 from ..stitch_plan import patches_to_stitch_plan

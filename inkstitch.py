@@ -5,15 +5,11 @@ from inkstitch.utils import save_stderr, restore_stderr
 from inkstitch import extensions
 
 
-def get_extension():
-    parser = ArgumentParser()
-    parser.add_argument("--extension")
-    args, extras = parser.parse_known_args()
+parser = ArgumentParser()
+parser.add_argument("--extension")
+my_args, remaining_args = parser.parse_known_args()
 
-    return args.extension
-
-
-extension_name = get_extension()
+extension_name = my_args.extension
 extension_class = getattr(extensions, extension_name.capitalize())
 extension = extension_class()
 
@@ -21,7 +17,7 @@ exception = None
 
 save_stderr()
 try:
-    extension.affect()
+    extension.affect(args=remaining_args)
 except (SystemExit, KeyboardInterrupt):
     raise
 except Exception:
