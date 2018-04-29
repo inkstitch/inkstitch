@@ -14,7 +14,7 @@ class _ThreadCatalog(Sequence):
 
     def get_palettes_path(self):
         if getattr(sys, 'frozen', None) is not None:
-            path = sys._MEIPASS
+            path = os.path.join(sys._MEIPASS, "..")
         else:
             path = dirname(dirname(dirname(realpath(__file__))))
 
