@@ -29,6 +29,7 @@ branches:
 cache: pip
 install:
   - |
+    set -e
     if [ -n "$BUILD" ]; then
       # Need this for inkex.py and friends
       wget -q https://inkscape.org/en/gallery/item/11254/inkscape-0.92.2.tar.bz2
@@ -39,7 +40,7 @@ install:
       # For some bizarre reason, this build has been failing due to the
       # key for the mongodb repo expiring.  Maybe Travis includes the
       # mongodb repo by default...?
-      sudo rm /etc/apt/sources.list.d/mongodb*.list
+      sudo rm -f /etc/apt/sources.list.d/mongodb*.list
 
       # for shapely
       sudo apt-get install libgeos-dev
@@ -73,7 +74,7 @@ install:
       export DISPLAY=:99.0
       sh -e /etc/init.d/xvfb start
       sleep 3
-      sudo apt-get install -y wine
+      sudo apt-get -q install -y wine
 
       export WINEDEBUG=-all
 
@@ -103,8 +104,9 @@ before_script:
   - "echo LINT: $LINT BUILD: $BUILD"
 script:
   - |
+    set -e
     if [ -n "$LINT" ]; then
-      flake8 . --count --select=E901,E999,F821,F822,F823 --show-source --statistics --exclude=embroidermodder
+      flake8 . --count --exit-zero --select=E901,E999,F821,F822,F823 --show-source --statistics --exclude=embroidermodder
       flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics --exclude=embroidermodder
     elif [ "$BUILD" = "linux" ]; then
       (

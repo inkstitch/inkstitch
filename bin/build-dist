@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 site_packages="$(python -c "import os; print(os.path.dirname(os.__file__) + '/site-packages')")"
 
 if [ "$TRAVIS_OS_NAME" = "linux" -a "$BUILD" != "windows" ]; then

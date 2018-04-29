@@ -1,0 +1,198 @@
+GIMP Palette
+Name: Ink/Stitch: RAL
+Columns: 4
+# RGB Value		                    Color Name Number
+214	199	148	                   Green Beige   1000
+217	186	140	                         Beige   1001
+214	176	117	                   Sand Yellow   1002
+252	163	 41	                 Signal Yellow   1003
+227	150	 36	                 Golden Yellow   1004
+201	135	 33	                  Honey Yellow   1005
+224	130	 31	                  Maize Yellow   1006
+227	122	 31	               Daffodil Yellow   1007
+173	122	 79	                   Brown Beige   1011
+227	184	 56	                  Lemon Yellow   1012
+255	245	227	                  Oyster White   1013
+240	214	171	                         Ivory   1014
+252	235	204	                   Light Ivory   1015
+255	245	 66	                 Sulfur Yellow   1016
+255	171	 89	                Saffron Yellow   1017
+255	214	 77	                   Zinc Yellow   1018
+163	140	122	                    Grey Beige   1019
+156	143	 97	                  Olive Yellow   1020
+252	189	 31	                   Rape Yellow   1021
+252	184	 33	                Traffic Yellow   1023
+181	140	 79	                  Ochre Yellow   1024
+255	255	 10	               Luminous Yellow   1026
+153	117	 33	                         Curry   1027
+255	140	 26	                  Melon Yellow   1028
+227	163	 41	                  Broom Yellow   1032
+255	148	 54	                 Dahlia Yellow   1033
+247	153	 92	                 Pastel Yellow   1034
+224	 94	 31	                 Yellow Orange   2000
+186	 46	 33	                    Red Orange   2001
+204	 36	 28	                     Vermilion   2002
+255	 99	 54	                 Pastel Orange   2003
+242	 59	 28	                   Pure Orange   2004
+252	 28	 20	               Luminous Orange   2005
+255	117	 33	        Luminous Bright Orange   2007
+250	 79	 41	             Bright Red Orange   2008
+235	 59	 28	                Traffic Orange   2009
+212	 69	 41	                 Signal Orange   2010
+237	 92	 41	                   Deep Orange   2011
+222	 82	 71	                 Salmon Orange   2012
+171	 31	 28	                     Flame Red   3000
+163	 23	 26	                    Signal Red   3001
+163	 26	 26	                   Carmine Red   3002
+138	 18	 20	                      Ruby Red   3003
+105	 15	 20	                    Purple Red   3004
+ 79	 18	 26	                      Wine Red   3005
+ 46	 18	 26	                     Black Red   3007
+ 94	 33	 33	                     Oxide Red   3009
+120	 20	 23	                     Brown Red   3011
+204	130	115	                     Beige Red   3012
+150	 31	 28	                    Tomato Red   3013
+217	102	117	                  Antique Pink   3014
+232	156	181	                    Light Pink   3015
+166	 36	 38	                     Coral Red   3016
+209	 54	 84	                          Rose   3017
+207	 41	 66	                Strawberry Red   3018
+199	 23	 18	                   Traffic Red   3020
+217	 89	 79	                   Salmon Pink   3022
+252	 10	 28	                  Luminous Red   3024
+252	 20	 20	           Luminous Bright Red   3026
+181	 18	 51	                 Raspberry Red   3027
+166	 28	 46	                    Orient Red   3031
+130	 64	128	                     Red Lilac   4001
+143	 38	 64	                    Red Violet   4002
+201	 56	140	                Heather Violet   4003
+ 92	  8	 43	                 Claret Violet   4004
+ 99	 61	156	                    Blue Lilac   4005
+145	 15	102	                Traffic Purple   4006
+ 56	 10	 46	                 Purple Violet   4007
+125	 31	122	                 Signal Violet   4008
+158	115	148	                 Pastel Violet   4009
+191	 23	115	                   Telemagenta   4010
+ 23	 51	107	                   Violet Blue   5000
+ 10	 51	 84	                    Green Blue   5001
+  0	 15	117	              Ultramarine Blue   5002
+  0	 23	 69	                 Sapphire Blue   5003
+  3	 13	 31	                    Black Blue   5004
+  0	 46	122	                   Signal Blue   5005
+ 38	 79	135	                 Brillant Blue   5007
+ 26	 41	 56	                     Gray Blue   5008
+ 23	 69	112	                    Azure Blue   5009
+  0	 43	112	                  Gentian Blue   5010
+  3	 20	 46	                    Steel Blue   5011
+ 41	115	184	                    Light Blue   5012
+  0	 18	 69	                   Cobalt Blue   5013
+ 77	105	153	                   Pigeon Blue   5014
+ 23	 97	171	                      Sky Blue   5015
+  0	 59	128	                  Traffic Blue   5017
+ 56	148	130	                Turquoise Blue   5018
+ 10	 66	120	                    Capri Blue   5019
+  5	 51	 51	                    Ocean Blue   5020
+ 26	122	 99	                    Water Blue   5021
+  0	  8	 79	                    Night Blue   5022
+ 46	 82	143	                  Distant Blue   5023
+ 87	140	181	                   Pastel Blue   5024
+ 51	120	 84	                  Patina Green   6000
+ 38	102	 41	                 Emerald Green   6001
+ 38	 87	 33	                    Leaf Green   6002
+ 61	 69	 46	                   Olive Green   6003
+ 13	 59	 46	                    Blue Green   6004
+ 10	 56	 31	                    Moss Green   6005
+ 41	 43	 36	                    Grey Olive   6006
+ 28	 38	 23	                  Bottle Green   6007
+ 33	 33	 26	                   Brown Green   6008
+ 23	 41	 28	                     Fir Green   6009
+ 54	105	 38	                   Grass Green   6010
+ 94	125	 79	                  Reseda Green   6011
+ 31	 46	 43	                   Black Green   6012
+117	115	 79	                    Reed Green   6013
+ 51	 48	 38	                  Yellow Olive   6014
+ 41	 43	 38	                   Black Olive   6015
+ 15	112	 51	               Turquoise Green   6016
+ 64	130	 54	                  Yellow Green   6017
+ 79	168	 51	                     May Green   6018
+191	227	186	                  Pastel Green   6019
+ 38	 56	 41	                  Chrome Green   6020
+133	166	122	                    Pale Green   6021
+ 43	 38	 28	                    Olive Drab   6022
+ 36	145	 64	                 Traffic Green   6024
+ 74	110	 51	                    Fern Green   6025
+ 10	 92	 51	                    Opal Green   6026
+125	204	189	                   Light Green   6027
+ 38	 74	 51	                    Pine Green   6028
+ 18	120	 38	                    Mint Green   6029
+ 41	138	 64	                  Signal Green   6032
+ 66	140	120	                Mint Turquoise   6033
+125	189	181	              Pastel Turquoise   6034
+115	133	145	                 Squirrel Grey   7000
+135	148	166	                   Silver Grey   7001
+122	117	 97	                    Olive Grey   7002
+112	112	 97	                     Moss Grey   7003
+156	156	166	                   Signal Grey   7004
+ 97	105	105	                    Mouse Grey   7005
+107	 97	 87	                    Beige Grey   7006
+105	 84	 56	                    Khaki Grey   7008
+ 77	 82	 74	                    Green Grey   7009
+ 74	 79	 74	                Tarpaulin Grey   7010
+ 64	 74	 84	                     Iron Grey   7011
+ 74	 84	 89	                   Basalt Grey   7012
+ 71	 66	 56	                    Brown Grey   7013
+ 61	 66	 82	                    Slate Grey   7015
+ 38	 46	 56	               Anthracite Grey   7016
+ 26	 33	 41	                    Black Grey   7021
+ 61	 61	 59	                    Umbra Grey   7022
+122	125	117	                 Concrete Grey   7023
+ 48	 56	 69	                 Graphite Grey   7024
+ 38	 51	 56	                  Granite Grey   7026
+145	143	135	                    Stone Grey   7030
+ 77	 92	107	                     Blue Grey   7031
+189	186	171	                   Pebble Grey   7032
+122	130	117	                   Cement Grey   7033
+143	135	112	                   Yellow Grey   7034
+212	217	219	                    Light Grey   7035
+158	150	156	                 Platinum Grey   7036
+122	125	128	                    Dusty Grey   7037
+186	189	186	                    Agate Grey   7038
+ 97	 94	 89	                   Quartz Grey   7039
+158	163	176	                   Window Grey   7040
+143	150	153	                Verkehrsgrau A   7042
+ 64	 69	 69	                Verkehrsgrau B   7043
+194	191	184	                     Silk Grey   7044
+143	148	158	                    Telegrau 1   7045
+120	130	140	                    Telegrau 2   7046
+217	214	219	                    Telegrau 4   7047
+125	 92	 56	                   Green Brown   8000
+145	 82	 46	                   Ocher Brown   8001
+110	 59	 48	                  Signal Brown   8002
+115	 59	 36	                    Clay Brown   8003
+133	 56	 43	                  Copper Brown   8004
+ 94	 51	 31	                    Fawn Brown   8007
+ 99	 61	 36	                   Olive Brown   8008
+ 71	 38	 28	                     Nut Brown   8011
+ 84	 31	 31	                     Red Brown   8012
+ 56	 38	 28	                   Sepia Brown   8014
+ 77	 31	 28	                Chestnut Brown   8015
+ 61	 31	 28	                Mahogany Brown   8016
+ 46	 28	 28	               Chocolate Brown   8017
+ 43	 38	 41	                    Grey Brown   8019
+ 13	  8	 13	                   Black Brown   8022
+156	 69	 41	                  Orange Brown   8023
+110	 64	 48	                   Beige Brown   8024
+102	 74	 61	                    Pale Brown   8025
+ 64	 46	 33	                   Terra Brown   8028
+255	252	240	                         Cream   9001
+240	237	230	                    Grey White   9002
+255	255	255	                  Signal White   9003
+ 28	 28	 33	                  Signal Black   9004
+  3	  5	 10	                     Jet Black   9005
+166	171	181	               White Aluminium   9006
+125	122	120	                Grey Aluminium   9007
+250	255	255	                    Pure White   9010
+ 13	 18	 26	                Graphite Black   9011
+252	255	255	                 Traffic White   9016
+ 20	 23	 28	                 Traffic Black   9017
+219	227	222	                 Papyrus White   9018

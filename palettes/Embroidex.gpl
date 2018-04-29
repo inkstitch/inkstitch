@@ -1,0 +1,262 @@
+GIMP Palette
+Name: Ink/Stitch: Embroidex
+Columns: 4
+# RGB Value		                    Color Name Number
+144	 86	 50	                   Warm Toffee   2161
+107	 73	 58	                   Peach Spice   2286
+170	 92	 55	             Pumpkin Pie Spice   2175
+ 95	 73	 60	                  Dusky Salmon   2160
+ 88	 61	 49	                    Rosy Brick   2052
+175	 91	 62	                   Rusty Brick   2181
+ 93	 65	 50	               Metallic Copper   2024
+105	 68	 43	              Uncertain Orange   2053
+105	 68	 44	                Orange Sunrise   2048
+130	 66	 50	                   Wild Salmon   2007
+203	 89	 63	                   Orange Glow   2176
+136	 71	 51	               Orange Sherbert   2047
+145	 76	 50	                Dayglow Orange   2153
+244	116	 53	                       Pumpkin   2051
+233	125	 73	                   Pumpkin Ice   2865
+131	 97	 68	                   Salmon Rush   2173
+106	 80	 49	               Shades of Melon   2050
+131	106	 53	                  Apricot Dawn   2006
+148	104	 52	                Orange Delight   2157
+133	104	 54	                    Cantaloupe   2022
+146	103	 39	                  Apricot Glow   2156
+210	139	 83	              Meskmelon Orange   2049
+176	116	114	                     Dawn Pink   2033
+101	 98	102	                    Rosy Beige   2032
+111	 98	 94	               Chocolate Cream   2122
+197	128	107	               Tangerine Peach   2046
+116	 95	 86	                     Rose Gold   2821
+221	159	120	                  Antique Rose   2404
+140	124	115	             Dainty Pink Brush   2178
+118	120	112	                    Rose Beige   2171
+120	124	111	                   Beige Blush   2117
+115	124	103	                    Warm Beige   2158
+130	163	 96	                 Spring Yellow   2018
+143	153	 96	                 Pineapple Ice   2155
+146	145	 68	                Pale Tangerine   2020
+122	130	 68	                 Lemon Sherbet   2005
+199	166	 98	                     Lemon Ice   2017
+208	175	 91	                  Hint of Gold   2019
+170	140	 82	                  Butterscotch   2025
+106	107	 58	                   Dk. Avacodo   2106
+163	125	 80	                  Butter Taffy   2125
+219	153	 68	                  Sunrise Gold   2021
+247	144	 75	              Bright Persimmon   2403
+211	157	137	                     Pale Rose   2164
+196	160	144	                   Warm Almond   2172
+213	174	155	                Chocolate Milk   2120
+178	154	138	                        Sphinx   2137
+160	144	126	                  Creamy Beige   2119
+174	148	116	                Desert Morning   2274
+171	140	109	                 Apricot Blush   1914
+180	139	101	                    Summer Tan   2174
+174	134	 88	              Daybreak Apricot   2014
+150	115	 72	                     Gold Wire   2128
+120	 91	 56	                  Bright Penny   2278
+147	108	 89	                         Mauve   2163
+131	108	 75	                     Rosy Ecru   2121
+139	112	 92	                  Cafe au Lait   2075
+ 98	 78	 47	                   Dark Bronze   2030
+103	 84	 52	                  Antique Gold   2028
+117	 93	 76	                    Pale Mauve   2295
+114	 87	 60	                   Light Brown   2132
+127	 97	 60	                  Copper Penny   2289
+124	 80	 54	                   Pecan Brown   2291
+136	 85	 52	               Metallic Bronze   2029
+ 80	 57	 38	                    Aztec Gold   2124
+139	 79	100	                          Plum   2040
+104	 52	 74	                          Wine   2058
+ 85	 42	 72	                   Dark Claret   2059
+108	 73	120	                    Dark Lilac   2083
+ 85	 53	 89	                  Royal Purple   2084
+ 52	 41	 62	               No Doubt Purple   2210
+ 98	 69	 73	                    Pale Grape   2815
+ 67	 41	 51	                     Dark Plum   2085
+ 94	 58	 62	                 Amethyst Pink   2060
+ 96	 30	 33	                      Burgundy   2056
+ 78	 31	 38	                 Rich Burgundy   2055
+ 69	 35	 45	                Dusky Burgandy   2057
+ 81	 47	 55	                 Fudge Delight   2186
+121	 62	 55	                    Dusty Pink   2037
+147	 78	 63	              Desert Sandstone   2131
+149	 68	 44	                  Bright Penny   2180
+115	 66	 49	                   Copper Wire   2126
+125	 56	 41	                  Walnut Brown   2290
+127	 68	 55	                 Brick Sparkle   2127
+100	 70	 56	                  Silver Brown   2130
+ 92	 54	 48	                   Cocoa Brown   2280
+137	108	124	                      Mulberry   2294
+136	114	140	                 Concord Grape   2080
+139	 88	134	                 Bright Purple   2081
+165	117	178	               Purple Twilight   2082
+173	137	155	                  French Lilac   2079
+164	136	168	                      Lavender   2078
+167	146	179	                    Lilac Gray   2077
+153	143	196	                 Lavender Mist   2202
+ 86	 82	119	                  Purple Cloud   2208
+ 64	 53	 69	                  Purple Smoke   2086
+ 70	 58	 82	                        Indigo   2305
+ 90	 79	 95	                  Plum Delight   2931
+120	108	121	                Twilight Lilac   2203
+143	135	153	                    Ghost Gray   2205
+170	172	187	              Summer Rainstorm   2143
+153	155	180	                     Blue Gray   2063
+128	141	180	                    Dusky Blue   2065
+129	157	180	                    Summer Sky   2189
+ 82	 63	 54	                    Old Pewter   2145
+ 83	 62	 49	             Traditional Brown   2134
+ 79	 49	 43	                    Rich Brown   2283
+ 71	 42	 37	                    Dark Brown   2133
+168	210	125	                   Elfin Green   2241
+168	197	140	                    Lime Green   2003
+165	207	155	           Spring Garden Green   2245
+155	186	157	                  Powder Green   2236
+147	159	141	            Dark Seafoam Green   2225
+137	173	185	                     True Aqua   2090
+131	166	171	               Pistachio Green   2223
+105	169	159	                True Turquoise   2096
+ 95	148	127	                     Real Teal   2214
+108	132	129	                     Pale Aqua   2089
+ 80	170	141	              Bright Turquoise   2104
+ 76	142	144	               Standalone Teal   2217
+ 44	 90	 98	                   Bright Teal   2220
+ 52	 92	121	                 Metallic Teal   2221
+ 60	 95	117	                Blue Assertion   2232
+ 71	 96	131	                    Dark Topaz   2312
+ 71	 96	130	                Brilliant Blue   2231
+ 73	141	173	               Dark Aquamarine   2233
+102	130	176	               Bright Sky Blue   2066
+114	137	177	              Blue Bonnet Blue   2190
+152	170	203	                   Dapple Gray   2207
+135	132	112	                  Light Pewter   2249
+122	123	 88	                  Covert Green   2300
+130	126	101	                  Spanish Moss   2261
+ 77	 75	 67	               Charcoal Shadow   2147
+ 77	 92	 97	                   Smokey Teal   2198
+ 74	101	124	                   Stormy Teal   2215
+ 71	 78	 92	                     Dark Gray   2296
+ 43	 59	 70	                     Dark Teal   2200
+ 64	 78	 88	             Stormy Cloud Blue   2062
+ 62	 65	 81	                Twilight Night   2206
+ 52	 55	 73	                 Bold Amethyst   2209
+ 58	 61	 78	                     Blueberry   2088
+ 51	 69	110	                     Navy Blue   2071
+ 37	 60	119	                 Twilight Blue   2067
+ 45	 58	 89	               Little Boy Blue   2196
+ 42	 56	 85	                 Sapphire Blue   2069
+ 32	 51	 85	                   Blue Willow   2199
+ 43	 58	 95	                 Wild Larkspur   2194
+ 58	 71	104	                Charcoal Night   2201
+ 36	 28	 44	                      Eggplant   2901
+ 41	 47	 68	                India Ink Blue   2070
+128	122	 96	                  Lichen Green   2264
+138	143	113	                    Gray Green   2111
+146	160	101	               Dark Moss Green   2246
+138	186	 88	                  Spring Green   2101
+169	184	 81	                    Neon Green   2001
+161	184	107	                    Mint Green   2002
+125	166	104	            Bright Grass Green   2015
+125	150	 81	                    Leaf Green   2100
+ 97	104	 73	              Fresh Mint Green   2260
+ 83	121	 58	             Herb Garden Green   2242
+ 96	117	 85	                     Pea Green   2099
+ 94	158	 96	           Sunlit Meadow Green   2110
+ 87	144	 96	                   Irish Green   2240
+103	171	109	                   Kelly Green   2102
+114	172	 95	                   Grass Green   2004
+ 65	 70	 64	              Deep Water Green   2114
+ 80	 85	111	                    Slate Blue   2092
+ 85	 98	130	                    Silver Sky   2191
+ 62	 81	132	                    Royal Blue   2068
+ 69	 89	156	              Faded Denim Blue   2197
+ 40	 66	 85	            Stained Glass Blue   2230
+ 63	 75	 97	                    Cadet Blue   2087
+154	147	137	                        Icicle   2297
+151	143	143	                   Silver Blue   2146
+150	138	141	                  Platinum Ice   2299
+149	143	148	                       GS Gray   2141
+113	115	117	               Sea Spray Green   2061
+120	118	116	                         Smoke   2276
+143	129	125	                        Cinder   2138
+155	148	137	                    Light Sage   2136
+151	150	138	                   Smoky Green   2098
+120	122	115	                      Mint Ice   2188
+143	146	138	                     Pale Moss   2298
+173	174	154	                 Glacier Green   2224
+154	154	126	                 Silver Patina   2265
+171	176	124	                Hint of Celery   2154
+135	152	110	                  Forest Green   2234
+132	164	115	                    Pale Green   2238
+144	171	132	                    Moss Green   2235
+ 52	100	 94	                Dark Turquoise   2097
+ 74	137	116	                   Holly Green   2244
+ 66	126	102	                Shamrock Green   2103
+ 69	108	 92	              Leprechaun Green   2109
+ 68	 76	 69	               Brilliant Green   2106
+168	152	137	                   Stark White   2271
+192	178	167	          First Snowfall White   2149
+178	166	160	         Heirloom Rose / Beige   2140
+184	173	164	            Foggy Morning Blue   2187
+194	176	173	                   Adobe Brick   2255
+187	152	141	                  Golden Sands   2170
+163	144	130	                     Woodsmoke   2293
+179	154	129	                  White Shadow   2115
+200	175	139	                   Cloud White   2272
+204	183	139	                    White Gold   2259
+201	197	147	                   Sandy Shore   2118
+199	192	135	                  Rich Vanilla   2016
+170	160	116	              Sun Washed White   2116
+ 81	 88	 81	                     Oak Green   2250
+ 62	 75	 64	             Dark Forest Green   2105
+ 65	 68	 58	                   Dark Pewter   2252
+ 51	 56	 52	                     Ash Green   2251
+ 58	 61	 50	                  Hunter Green   2405
+ 42	 54	 44	          Shadowy Forest Green   2108
+ 35	 47	 51	            Black Forest Green   2268
+ 35	 39	 54	             Midnight Sky Blue   2072
+ 98	 87	 82	               Battleship Gray   2144
+107	 94	 82	            Mountain Waterfall   2277
+110	 93	 61	                   Green Smoke   2113
+120	100	 73	                          Teak   2129
+128	111	 90	                   Beige Smoke   2123
+120	106	 92	                  Medium Taupe   2292
+ 78	 59	 48	                   Medium Gray   2302
+ 67	 62	 53	                    Dark Taupe   2281
+ 76	 68	 63	                    Dark Brown   2135
+ 60	 54	 62	                 Stormy Waters   2148
+ 49	 53	 65	                  Paving Stone   2304
+ 52	 51	 54	                 Inky Midnight   2074
+ 67	 56	 57	                  Black Walnut   2285
+ 67	 56	 56	                 Genuine Brown   2212
+ 47	 34	 29	                  Coffee Brown   2284
+ 51	 45	 43	                    Dull Black   2306
+ 35	 35	 33	                 Dark Charcoal   2150
+127	 54	 47	                 Old Brick Red   2182
+173	 51	 56	            Pink With Attitude   2183
+191	 57	 54	                 Raspberry Ice   2319
+209	 61	 52	            Strawberry Delight   2406
+194	 81	 81	                     Dark Rose   2168
+118	 82	 92	                    Dusty Rose   2834
+145	 69	 82	                       Crimson   2042
+148	 61	106	                Bright Magenta   2041
+182	117	152	               Blueberry Cream   2204
+191	 53	 77	                  Dark Crimson   2044
+169	 64	 77	                          Ruby   2043
+173	 70	102	         Peppermint Stick Pink   2167
+172	 57	 90	                 Cranberry Red   2184
+195	 83	107	             Strawberry Frappe   2269
+196	 94	 90	               Candy Apple Red   2185
+219	 87	 95	              Bright Rose Pink   2010
+212	113	114	               Candy Cane Pink   2166
+207	110	111	           Cherry Blossom Pink   2034
+246	149	157	                 Heirloom Pink   2009
+232	177	174	               Breath of Lilac   2076
+247	155	139	                   Bright Pink   2038
+246	148	140	                  Rose Delight   2179
+247	148	138	                Baby Doll Pink   2036
+226	139	134	             Cotton Candy Pink   2165
+233	139	139	                   Honest Pink   2035
+196	174	171	                Shadow on Snow   2142

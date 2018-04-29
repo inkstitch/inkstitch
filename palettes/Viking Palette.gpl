@@ -1,0 +1,33 @@
+GIMP Palette
+Name: Ink/Stitch: Viking Palette
+Columns: 4
+# RGB Value		                    Color Name Number
+  0	  0	  0	                         Black      1
+  0	  0	255	                          Blue      2
+  0	255	  0	                   Light Green      3
+255	  0	  0	                           Red      4
+255	  0	255	                        Purple      5
+255	255	  0	                        Yellow      6
+132	130	132	                          Gray      7
+  0	130	255	                    Light Blue      8
+  0	255	132	                         Green      9
+255	130	  0	                        Orange     10
+255	162	181	                          Pink     11
+198	 65	  0	                         Brown     12
+255	255	255	                         White     13
+  0	  0	132	                     Dark Blue     14
+  0	130	  0	                    Dark Green     15
+165	  0	  0	                      Dark Red     16
+255	121	123	                     Light Red     17
+132	  0	132	                   Dark Purple     18
+255	130	255	                  Light Purple     19
+198	195	  0	                   Dark Yellow     20
+255	255	165	                  Light Yellow     21
+ 66	 65	 66	                     Dark Gray     22
+198	195	198	                    Light Gray     23
+231	 65	  0	                   Dark Orange     24
+255	174	 66	                  Light Orange     25
+255	 89	123	                     Dark Pink     26
+255	211	214	                    Light Pink     27
+132	 32	  0	                    Dark Brown     28
+231	 97	 33	                   Light Brown     29

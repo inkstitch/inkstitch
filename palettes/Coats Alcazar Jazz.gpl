@@ -1,0 +1,308 @@
+GIMP Palette
+Name: Ink/Stitch: Coats Alcazar Jazz
+Columns: 4
+# RGB Value		                    Color Name Number
+230	232	255	                         White   0001
+236	230	 89	                  Light Yellow   0002
+239	218	 23	                        Yellow   0003
+241	215	  0	                        Yellow   0005
+242	175	 30	                  Light Orange   0012
+217	169	 49	                  Light Orange   0013
+196	156	 48	                  Brown / Gold   0014
+190	138	 16	                Orange / Brown   0015
+170	115	 23	                 Brown / Olive   0016
+157	114	 73	                         Brown   0017
+133	127	 53	           Dark Green / Yellow   0020
+233	233	232	                         White   0022
+170	141	 84	                 Medium Yellow   0025
+226	222	218	            Light Orange / Red   0026
+168	140	102	                    Pale Brown   0027
+160	 88	  7	                Orange / Brown   0031
+233	235	227	                  Light Yellow   0101
+241	218	151	                  Light Yellow   0104
+235	223	129	            Pale Yellow / Gold   0105
+241	143	  0	                 Medium Orange   0109
+242	139	  0	                 Medium Orange   0120
+241	124	  0	                        Orange   0122
+104	 89	 35	           Dark Green / Yellow   0129
+205	147	 66	           Pale Orange / Brown   0131
+200	131	 49	         Medium Orange / Brown   0132
+244	196	 71	                   Yellow Gold   0134
+245	190	 34	                 Medium Orange   0135
+208	170	 46	                 Medium Yellow   0136
+224	208	190	                  Light Orange   0137
+156	115	 44	                  Medium Brown   0138
+175	100	  0	                Orange / Brown   0141
+228	207	151	         Light Yellow / Orange   0150
+232	197	187	                   Pale Orange   0203
+243	173	154	                   Pale Orange   0205
+239	143	120	                 Medium Orange   0206
+233	 96	  5	                        Orange   0208
+173	 43	 22	            Light Orange / Red   0209
+235	147	150	                  Light Orange   0212
+219	 49	  0	                  Orange / Red   0215
+223	185	167	                   Pale Orange   0218
+170	 76	 40	                         Brown   0219
+223	 87	  0	                        Orange   0220
+225	176	178	                   Medium Pink   0221
+241	137	 53	                 Medium Orange   0222
+201	159	120	            Light Red / Orange   0225
+214	 86	110	                   Medium Pink   0227
+ 91	 29	 40	                    Dark Brown   0231
+224	183	161	                   Pale Orange   0242
+187	133	 92	             Pale Red / Orange   0245
+128	 75	 40	                         Brown   0250
+239	186	144	                  Light Orange   0252
+237	 87	  0	                        Orange   0260
+188	 93	 61	                         Brown   0262
+161	 76	 66	             Dark Red / Orange   0265
+110	 51	 54	                    Dark Brown   0271
+189	  0	 26	           Medium Red / Orange   0300
+161	  0	 43	             Dark Red / Orange   0303
+217	131	146	                   Medium Pink   0306
+169	  0	 73	                           Red   0307
+128	 39	 61	                         Brown   0311
+231	194	222	                    Light Pink   0316
+185	 87	120	                     Dark Pink   0317
+185	221	189	          Light Green / Yellow   0318
+140	 44	 77	                         Brown   0319
+140	 54	 87	                         Brown   0322
+160	  0	 37	                      Dark Red   0323
+135	 68	 80	                    Dark Brown   0326
+213	 62	 98	                           Red   0327
+115	 62	 86	                   Dark Purple   0329
+112	 30	 81	                   Dark Purple   0330
+208	 83	158	                   Medium Pink   0331
+227	155	198	                    Light Pink   0335
+188	 99	150	                   Medium Pink   0337
+ 98	 46	 77	                   Dark Purple   0338
+190	 92	144	                   Medium Pink   0339
+173	  0	 58	                      Dark Red   0343
+168	  0	 36	                           Red   0344
+143	  0	 49	                      Dark Red   0345
+ 73	 33	 60	                   Dark Purple   0346
+123	 16	 53	                   Dark Purple   0347
+100	 31	 52	                         Brown   0349
+ 89	 32	 55	                   Dark Purple   0350
+236	207	222	                    Light Pink   0355
+215	 96	143	                     Dark Pink   0358
+199	 23	 94	                           Red   0361
+140	  0	 50	                           Red   0363
+227	162	190	                    Light Pink   0364
+214	109	135	                   Medium Pink   0365
+220	101	 98	             Dark Red / Orange   0367
+197	  0	 48	                           Red   0372
+188	  0	 89	                      Dark Red   0373
+157	  0	 93	                      Dark Red   0377
+ 68	 35	 44	                   Dark Purple   0380
+184	  0	 93	                     Dark Pink   0383
+166	124	138	                  Light Purple   0406
+161	154	125	           Pale Green / Yellow   0410
+115	 99	 93	                  Medium Brown   0412
+ 83	 69	 66	                    Dark Brown   0414
+132	100	 73	                  Medium Brown   0416
+ 95	 61	 55	                    Dark Brown   0418
+148	127	100	          Light Green / Yellow   0419
+171	151	125	                   Light Brown   0420
+157	145	132	                   Light Brown   0421
+209	208	203	                   Light Green   0423
+193	182	168	                   Light Brown   0426
+134	129	119	                     Dark Grey   0427
+211	205	166	          Light Green / Yellow   0430
+191	165	137	                   Pale Orange   0432
+ 91	 64	 60	                    Dark Brown   0441
+203	192	191	                  Light Purple   0442
+ 69	 50	 48	                         Black   0443
+142	121	121	                  Medium Brown   0445
+120	118	100	         Medium Green / Yellow   0446
+187	172	154	                   Light Brown   0449
+161	138	129	                   Light Brown   0450
+194	171	149	                   Pale Orange   0457
+110	 82	 58	                         Brown   0460
+102	 65	 40	                         Brown   0461
+ 75	 52	 45	                    Dark Brown   0462
+ 62	 48	 51	                         Black   0463
+ 74	 36	 37	                    Dark Brown   0466
+ 58	 33	 40	                    Dark Brown   0467
+230	198	199	                   Medium Pink   0471
+212	205	195	            Light Grey / Green   0473
+200	180	163	                   Light Brown   0474
+143	102	 52	         Medium Orange / Brown   0477
+ 84	 57	 45	                    Dark Brown   0481
+154	129	113	                    Pale Brown   0484
+142	114	 96	                    Pale Brown   0486
+112	 82	 60	                  Medium Brown   0487
+ 59	 64	 33	                         Green   0488
+233	232	191	                  Light Yellow   0489
+190	206	189	                   Light Green   0503
+119	162	142	             Pale Green / Blue   0505
+  0	 83	 61	                    Dark Green   0510
+ 35	 77	 48	                    Dark Green   0512
+  0	134	 66	                         Green   0519
+ 34	 63	 47	                    Dark Green   0520
+154	217	224	            Light Blue / Green   0521
+ 30	178	167	           Medium Blue / Green   0523
+  0	172	171	           Medium Green / Blue   0524
+102	199	202	            Light Blue / Green   0525
+  0	138	111	           Medium Green / Blue   0528
+  0	140	125	           Medium Green / Blue   0529
+  0	 93	 77	                         Green   0530
+  0	 96	 93	             Dark Green / Blue   0531
+ 96	162	153	           Medium Green / Blue   0536
+ 27	 71	 63	             Dark Green / Blue   0538
+181	192	159	           Dark Green / Yellow   0540
+160	195	149	                   Light Green   0542
+157	215	210	            Light Green / Blue   0543
+ 94	195	159	                  Medium Green   0551
+101	115	 84	           Medium Blue / Green   0552
+  0	107	 49	                         Green   0555
+  0	137	 77	                         Green   0557
+  0	119	 68	                         Green   0558
+120	180	 57	                Green / Yellow   0560
+ 47	 59	 41	                    Dark Green   0563
+138	140	122	                     Pale Grey   0564
+ 75	170	130	                         Green   0569
+ 60	121	 72	                    Dark Green   0570
+ 19	 84	 44	                         Green   0573
+ 32	143	107	                  Medium Green   0574
+  0	109	 62	                         Green   0580
+ 18	139	125	                  Green / Blue   0582
+129	133	 68	         Medium Green / Yellow   0585
+ 45	 82	 63	                    Dark Green   0586
+106	114	 55	           Dark Green / Yellow   0589
+ 28	 50	 47	             Dark Blue / Green   0590
+ 53	137	 74	                    Dark Green   0598
+ 34	 59	 76	                     Dark Blue   0601
+119	138	178	                   Medium Blue   0602
+ 83	105	164	                 Medium Purple   0603
+ 42	 58	117	                     Dark Blue   0605
+148	213	230	            Light Blue / Green   0610
+136	183	202	             Pale Blue / Green   0611
+  0	147	194	                  Blue / Green   0613
+ 78	166	216	                    Light Blue   0614
+  0	103	173	                   Medium Blue   0615
+  0	121	185	                   Medium Blue   0616
+ 70	115	175	                   Medium Blue   0621
+ 46	 13	151	           Medium Green / Blue   0623
+  0	101	112	           Medium Green / Blue   0624
+  0	 90	 99	           Dark Green / Yellow   0625
+  0	 53	137	                          Blue   0626
+ 32	 57	136	                    Royal Blue   0629
+  0	117	140	                  Blue / Green   0630
+ 45	 62	149	                     Dark Blue   0631
+159	194	226	                     Pale Blue   0634
+150	178	207	                    Light Blue   0635
+114	152	193	                   Pale Purple   0636
+162	202	231	                     Pale Blue   0638
+110	162	218	                   Medium Blue   0639
+  0	 72	144	                          Blue   0642
+ 37	 56	117	                     Dark Blue   0643
+ 29	 49	127	                    Royal Blue   0645
+ 41	 40	 91	                   Dark Purple   0646
+179	196	220	                    Light Blue   0647
+ 59	105	142	                   Medium Blue   0649
+118	149	208	                 Medium Purple   0651
+ 66	108	180	                 Medium Purple   0652
+ 83	115	163	                 Medium Purple   0653
+ 26	 69	125	                          Blue   0655
+ 95	136	201	                   Medium Blue   0658
+  9	 97	181	                          Blue   0659
+ 67	105	181	                 Medium Purple   0661
+ 35	 93	138	                   Medium Blue   0662
+ 51	 61	 92	              Dark Grey / Blue   0665
+  0	159	205	           Medium Blue / Green   0667
+ 85	120	139	           Medium Blue / Green   0669
+ 45	 91	106	             Dark Blue / Green   0670
+ 19	 81	116	                     Dark Blue   0672
+ 38	 42	 67	                   Dark Purple   0673
+ 32	 52	 47	                    Dark Green   0674
+ 39	 36	109	                        Purple   0675
+159	172	213	                  Light Purple   0677
+ 12	 47	 92	                          Blue   0678
+ 86	 98	153	                   Medium Blue   0680
+ 30	 77	138	                     Dark Blue   0682
+ 82	186	208	           Medium Blue / Green   0684
+ 24	 63	 98	                     Dark Blue   0689
+ 43	 38	 54	                     Dark Grey   0700
+ 37	 36	 64	                   Dark Purple   0701
+ 45	 39	 57	                   Dark Purple   0702
+ 33	 34	 44	                         Black   0703
+ 38	 35	109	                        Purple   0801
+207	165	204	                    Light Pink   0804
+185	126	186	                        Purple   0805
+192	149	201	                        Purple   0807
+ 87	 33	 98	                        Purple   0817
+ 84	 49	 92	                   Dark Purple   0818
+146	123	186	                   Pale Purple   0822
+112	 68	146	                        Purple   0824
+101	 55	132	                        Purple   0826
+ 81	 41	113	                        Purple   0827
+153	164	206	                  Light Purple   0842
+117	137	189	                 Medium Purple   0843
+165	161	211	                  Light Purple   0845
+ 77	 87	164	                 Medium Purple   0847
+112	100	163	                 Medium Purple   0851
+ 54	 33	 96	                        Purple   0852
+161	 83	149	                 Medium Purple   0853
+ 78	 97	171	                    Light Blue   0856
+  9	 51	128	                   Dark Purple   0862
+ 78	 56	133	                        Purple   0863
+ 33	 33	 37	                         Black   0900
+146	152	161	                     Pale Grey   0902
+116	127	142	              Pale Grey / Blue   0903
+ 80	 90	 98	              Dark Grey / Blue   0904
+ 79	 94	123	              Dark Grey / Blue   0909
+160	165	174	                   Medium Grey   0910
+121	121	120	                   Medium Grey   0916
+145	175	200	                     Pale Blue   0917
+106	111	128	                          Grey   0918
+116	121	133	                   Medium Grey   0919
+ 76	 89	126	                   Grey / Blue   0924
+ 81	 84	 48	                Green / Yellow   0925
+102	103	 97	                   Medium Grey   0928
+163	165	157	                     Pale Grey   0930
+137	137	136	                   Medium Grey   0931
+ 64	 59	 58	                         Black   0935
+165	173	183	                   Medium Grey   0939
+ 87	 85	 99	                     Dark Grey   0940
+130	147	130	                    Pale Green   0941
+147	153	167	                   Medium Grey   0942
+ 58	 57	 64	                         Black   0943
+ 82	 87	 98	                     Dark Grey   0945
+193	197	211	                  Light Purple   0946
+173	173	189	                  Light Purple   0947
+120	119	139	            Medium Grey / Blue   0951
+ 99	 91	112	              Dark Grey / Blue   0952
+125	127	141	                          Grey   0967
+ 94	109	132	              Dark Grey / Blue   0968
+  0	 84	161	                          Blue   1015
+180	  3	 57	             Dark Red / Orange   1016
+ 66	 56	136	                        Purple   1020
+ 44	 48	127	                        Purple   1022
+232	221	171	         Light Yellow / Orange   1026
+204	 88	102	           Medium Orange / Red   1028
+128	 83	 44	                         Brown   1033
+ 37	 57	 92	                     Dark Blue   1036
+237	126	108	                 Medium Orange   1037
+ 18	 56	 70	                     Dark Blue   1039
+ 45	 49	 71	                   Dark Purple   1042
+156	  0	111	                 Medium Purple   1047
+200	173	112	                  Light Orange   1062
+186	  0	 39	                           Red   1066
+  0	135	177	                  Blue / Green   1068
+141	137	137	                   Medium Grey   1071
+135	111	 78	                  Medium Brown   1072
+130	 95	 86	                  Medium Brown   1073
+ 96	 37	 70	                 Medium Purple   1076
+  0	109	 92	                    Dark Green   1078
+  0	103	 99	             Dark Blue / Green   1079
+181	137	 46	                Orange / Brown   1080
+  0	124	121	            Light Green / Blue   1081
+107	 24	109	                   Dark Purple   1082
+ 59	 32	 85	                   Dark Purple   1084
+199	134	141	                    Light Pink   1087
+ 60	115	105	             Dark Green / Blue   1088
+122	 12	 42	                           Red   1089
+ 45	 30	 95	            Dark Purple / Navy   1090
+ 10	 52	127	                    Royal Blue   1098
+ 46	 76	 69	             Dark Green / Blue   1391

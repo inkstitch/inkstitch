@@ -1,0 +1,403 @@
+GIMP Palette
+Name: Ink/Stitch: Coats Sylko
+Columns: 4
+# RGB Value		                    Color Name Number
+236	240	255	                         White  B1003
+233	238	242	                   Pale Silver  B1008
+230	234	178	                 Bright Yellow  B1156
+242	233	158	                    PaleYellow  B1171
+218	239	168	              Dark Olive Green  B1178
+231	239	112	                   Pale Yellow  B1181
+237	233	127	                 Medium Yellow  B1182
+224	233	128	                   Pale Yellow  B1183
+225	255	159	              Dark Olive Green  B1190
+222	228	 91	                   Pale Yellow  B1195
+200	255	 78	          Fluo Yellow /  Green  B1197
+213	231	 44	                    Dark Green  B1198
+210	228	 67	                    Dark Green  B1199
+231	211	 47	                    Pale Beige  B1214
+236	236	 44	                   Pale Yellow  B1234
+245	220	  0	                 Gold / Yellow  B1237
+253	251	  0	                 Gold / Yellow  B1238
+239	231	  0	                 Gold / Yellow  B1239
+232	255	 69	                 Gold / Yellow  B1220
+232	195	 50	                   Fluo Yellow  B1222
+232	202	112	                   Pale Yellow  B1233
+237	215	144	                   Pale Yellow  B1235
+241	215	102	                         Cream  B1236
+227	218	  0	                   Fluo Orange  B1240
+231	183	 65	                Mustard Yellow  B1256
+245	193	  0	                   Fluo Yellow  B1261
+230	168	 45	                 Gold / Yellow  B1265
+231	185	 34	                Mustard Yellow  B1269
+233	157	 15	                 Gold / Orange  B1270
+230	157	  0	            Dark Gold / Orange  B1271
+239	161	  0	            Dark Gold / Orange  B1273
+230	176	  0	            Dark Gold / Yellow  B1282
+235	187	  0	           Fluo Yellow / Green  B1284
+241	190	  0	                    Dark Green  B1286
+255	212	  0	                 Medium Yellow  B1290
+255	188	  0	                   Fluo Orange  B1293
+237	188	134	                         Peach  B1328
+237	220	179	                 Medium Yellow  B1339
+234	210	178	                    Pale Peach  B1345
+240	216	151	                   Pale Yellow  B1360
+222	192	124	                     Pale Gold  B1371
+242	191	132	                         Peach  B1394
+205	153	 51	                          Gold  B1413
+189	139	 33	                          Gold  B1415
+200	134	 41	                 Gold / Orange  B1418
+204	151	  0	                         Cream  B1431
+230	183	 70	                 Yellow / Gold  B1423
+232	160	 47	                 Gold / Orange  B1432
+198	160	 31	                          Gold  B1435
+180	163	  0	                  Green / Gold  B1439
+175	146	 47	                  Green / Gold  B1464
+238	242	255	                         White  B1719
+244	132	106	                   Salmon Pink  B2120
+255	 71	 92	                     Fluo Pink  B2129
+217	181	150	                    Pale Peach  B2140
+255	141	 64	                        Orange  B2146
+250	221	207	                     Pale Pink  B2153
+240	162	146	                   Salmon Pink  B2158
+235	183	153	                         Peach  B2159
+238	210	191	                  Cream / Pink  B2160
+197	 36	 32	                           Red  B2224
+225	 66	 37	                        Orange  B2225
+218	 81	 40	                        Orange  B2244
+212	 53	 18	                           Red  B2245
+220	 92	 76	              Dark Salmon Pink  B2246
+255	 65	 72	                     Fluo Pink  B2252
+209	 85	 85	              Dark Salmon Pink  B2256
+207	 63	 77	              Dark Salmon Pink  B2275
+150	 78	 47	                  Medium Brown  B2285
+214	 60	 90	                     Dark Pink  B2291
+160	101	 46	                     Tan Brown  B2292
+156	 94	 63	                  Medium Brown  B2298
+253	 51	 99	                     Fluo Pink  B2299
+193	116	 68	                        Copper  B2310
+188	138	 97	                          Fawn  B2316
+175	132	 97	                          Fawn  B2328
+136	 86	 60	                    Dark Brown  B2330
+144	104	 76	                  Medium Brown  B2351
+181	127	 51	                          Gold  B2358
+168	140	 82	                          Gold  B2367
+171	105	 28	                     Tan Brown  B2375
+250	113	 17	                   Fluo Orange  B2428
+226	 79	  0	                        Orange  B2431
+255	 72	 32	                   Fluo Orange  B2450
+220	 92	 58	                        Orange  B2452
+217	 88	 44	                 Medium Orange  B2458
+202	 90	 41	                          Rust  B2463
+214	105	 58	               Copper / Orange  B2464
+232	145	  0	                   Dark Yellow  B2470
+220	109	  0	                 Gold / Orange  B2485
+232	158	 81	                     Pale Gold  B2488
+255	107	 32	                   Fluo Orange  B2494
+234	241	243	                         Ivory  B2704
+229	235	236	                         Ivory  B2707
+239	145	168	                   Medium Pink  B3105
+255	123	165	                   Medium Pink  B3114
+242	176	203	                     Pale Pink  B3135
+241	168	173	                     Pale Pink  B3137
+242	183	171	              Pale Salmon Pink  B3146
+219	172	164	                   Pale Salmon  B3154
+235	153	181	                   Medium Pink  B3160
+214	111	142	                     Dark Pink  B3163
+208	163	172	                     Pale Pink  B3164
+235	187	207	                     Pale Pink  B3167
+238	148	193	                   Medium Pink  B3168
+239	216	221	                     Pale Pink  B3170
+244	187	212	                     Pale Pink  B3174
+243	199	229	                     Pale Pink  B3178
+135	 99	109	                  Pink / Brown  B3319
+171	 87	116	                    Dusky Pink  B3364
+131	 35	 68	                        Maroon  B3375
+134	 31	 71	                        Maroon  B3377
+239	 79	127	                     Fluo Pink  B3432
+222	 75	113	                   Medium Pink  B3435
+193	 67	 92	                    Dusky Pink  B3439
+255	 37	105	                Dark Fluo Pink  B3440
+194	 30	 84	                     Dark Pink  B3456
+185	  0	 74	                     Dark Pink  B3483
+208	  0	 95	                     Dark Pink  B3487
+213	 39	 93	                     Dark Pink  B3488
+157	 45	127	                   Dark Purple  B3610
+196	  0	105	                     Dark Pink  B3632
+203	 39	118	                     Dark Pink  B3645
+226	105	157	                   Medium Pink  B3650
+255	111	163	              Fluo Medium Pink  B3654
+213	 72	141	                     Dark Pink  B3660
+204	 59	134	                     Dark Pink  B3670
+217	 82	150	                   Medium Pink  B3671
+210	 88	157	                   Medium Pink  B3672
+197	 87	157	                   Medium Pink  B3674
+120	 44	128	                        Purple  B3684
+183	  0	108	                     Dark Pink  B3690
+166	 45	111	                     Dark Pink  B3698
+144	  0	 48	                      Dark Red  B3796
+159	  0	 32	                      Dark Red  B3831
+170	  0	 41	                 Dark Rust Red  B3845
+211	 70	 78	                   Dark Salmon  B3869
+193	 26	 51	                    Medium Red  B3872
+186	  0	 36	                    Medium Red  B3884
+175	  0	 41	                 Dark Rust Red  B3891
+180	  0	 40	                    Medium Red  B3898
+171	  0	 38	                      Dark Red  B3928
+ 95	 31	 40	                   Dark Maroon  B3949
+101	 31	 55	                   Dark Maroon  B3951
+103	 28	 64	                   Dark Maroon  B3955
+127	  6	 45	                   Dark Maroon  B3960
+111	 30	 50	                   Dark Maroon  B3976
+122	 45	 55	                   Pale Maroon  B3979
+133	 22	 57	                        Maroon  B3989
+150	 32	 46	               Medium Rust Red  B3992
+156	151	214	                         Lilac  B4117
+136	126	160	                    Dark Lilac  B4143
+169	162	210	                         Lilac  B4144
+208	193	218	                    Pale Lilac  B4155
+ 82	 52	143	                   Dark Violet  B4306
+103	 75	157	                 Medium Purple  B4315
+129	 68	174	                 Medium Purple  B4322
+105	 92	180	                        Violet  B4326
+171	144	187	                    Dark Lilac  B4341
+157	 89	163	                 Medium Purple  B4347
+150	 92	175	                 Medium Purple  B4355
+197	170	210	                         Lilac  B4357
+126	 28	111	                   Dark Purple  B4367
+129	 49	142	                   Dark Purple  B4369
+ 99	  0	110	                   Dark Purple  B4370
+121	 57	130	                   Dark Purple  B4374
+233	182	223	                     Pale Pink  B4398
+238	167	209	                   Medium Pink  B4399
+ 44	 55	135	               Dark Royal Blue  B4640
+ 61	 39	133	               Dark Royal Blue  B4646
+ 74	 39	143	                   Dark Violet  B4651
+ 47	 66	145	             Medium Royal Blue  B4653
+ 87	 33	139	                   Dark Purple  B4654
+126	125	200	                        Violet  B4686
+126	146	194	                   Medium Blue  B4687
+103	109	184	                        Violet  B4688
+ 87	 52	 72	                   Dark Maroon  B4910
+ 99	 52	 89	                   Dark Maroon  B4916
+101	 62	104	                   Dark Purple  B4918
+ 66	 50	 84	                     Dark Navy  B4942
+ 91	 34	121	                   Dark Purple  B4955
+ 46	 42	 89	                     Dark Navy  B4972
+140	197	 88	                  Medium Green  B5037
+  0	 86	 62	                    Dark Green  B5126
+  0	121	 68	                  Medium Green  B5129
+  0	115	105	               Dark Aqua Green  B5148
+ 95	202	155	                    Pale Green  B5151
+154	226	203	               Pale Mint Green  B5163
+  0	127	110	                    Jade Green  B5170
+ 31	125	108	                    Jade Green  B5185
+  0	 96	 86	                    Dark Green  B5193
+  0	140	137	                    Jade Green  B5206
+ 29	 77	 67	                    Dark Green  B5209
+  0	 96	 62	                    Dark Green  B5219
+  0	102	 74	                    Dark Green  B5226
+  0	123	 83	                  Medium Green  B5231
+  0	 78	 52	                    Dark Green  B5232
+  4	 87	 65	                    Dark Green  B5235
+  0	 97	 57	                    Dark Green  B5236
+  0	 88	 51	                    Dark Green  B5237
+ 47	 90	 57	                          Lime  B5238
+  0	139	 83	                  Medium Green  B5241
+ 52	167	120	                     Pale Jade  B5242
+132	204	155	                    Mint Green  B5245
+ 29	146	 73	                  Medium Green  B5248
+168	207	186	                     Pale Jade  B5249
+  0	135	 81	                  Medium Green  B5250
+171	208	179	               Pale Mint Green  B5251
+  0	141	112	             Medium Jade Green  B5281
+119	110	 36	                   Olive Green  B5310
+127	125	 61	                   Olive Green  B5316
+172	188	 78	                          Lime  B5318
+183	206	  0	                    Dark Green  B5320
+100	128	 57	                  Bright Green  B5343
+102	125	 45	                          Lime  B5348
+158	174	132	                   Olive Green  B5351
+166	183	 47	                          Lime  B5359
+168	203	100	                          Lime  B5364
+181	226	123	                          Lime  B5372
+123	186	 27	                  Medium Green  B5373
+150	153	 83	                   Olive Green  B5374
+124	172	104	                  Bright Green  B5377
+116	217	 74	                  Bright Green  B5382
+116	187	 61	                  Medium Green  B5384
+ 65	116	 53	           Medium Grey / Green  B5387
+ 76	166	100	                  Medium Green  B5391
+ 82	174	 95	                  Medium Green  B5395
+ 76	100	 77	                   Kahki Green  B5526
+135	142	123	                    Dark Green  B5542
+ 79	 73	 43	              Dark Olive Green  B5751
+ 59	 67	 45	           Pale Yellow / Green  B5752
+ 71	 74	 51	             Dark Bottle Green  B5757
+ 89	 97	 44	                    Pale Green  B5764
+ 94	 76	 37	              Dark Olive Green  B5771
+117	105	 44	                   Olive Green  B5772
+100	 96	 44	                   Olive Green  B5773
+ 78	 64	 45	                    Dark Brown  B5917
+ 39	 64	 68	                    Dark Green  B5929
+ 57	 66	 54	                     Fluo Lime  B5939
+ 47	 71	 51	         Medium Yellow / Green  B5962
+ 57	 91	 79	               Dark Jade Green  B5989
+ 44	 72	 56	         Bright Green / Yellow  B5992
+ 61	163	172	                Turquoise Blue  B6109
+139	205	212	                Pale Turquoise  B6124
+ 21	157	168	           Dark Turquoise Blue  B6136
+146	205	204	               Pale Aqua Green  B6153
+170	226	214	                    Pale Green  B6155
+ 85	180	165	                    Aqua Green  B6160
+ 82	137	187	                   Medium Blue  B6317
+ 65	171	196	              Medium Turquoise  B6323
+153	197	226	                     Pale Blue  B6325
+ 66	168	199	         Medium Turquoise Blue  B6327
+120	192	217	                     Pale blue  B6335
+ 36	148	185	           Dark Turquoise Blue  B6350
+ 88	176	215	                   Medium Blue  B6360
+ 49	153	186	          Medium Turqoise Blue  B6362
+114	190	231	                   Medium Blue  B6365
+172	199	208	                     Pale Blue  B6380
+125	196	217	                Pale Turquoise  B6383
+ 99	140	151	            Medium Blue / Grey  B6399
+ 31	 79	 83	             Dark Bottle Green  B6612
+ 64	125	134	               Dark Aqua Green  B6628
+133	203	177	                    Pale Green  B6661
+  0	117	134	           Dark Turquoise Blue  B6663
+  0	117	130	               Dark Aqua Green  B6665
+  0	120	155	           Dark Turquoise Blue  B6666
+  0	127	147	               Dark Aqua Green  B6698
+ 50	114	150	                   Petrol Blue  B6910
+ 81	161	208	                   Medium Blue  B6938
+  0	 96	161	                     Dark Blue  B6940
+ 62	163	215	                   Medium blue  B6947
+  0	 92	129	                     Dark Blue  B6972
+ 34	 84	117	                     Dark Blue  B6975
+ 23	123	184	                   Medium Blue  B6977
+  0	113	149	                   Medium Blue  B6981
+ 48	 73	107	                     Dark Navy  B6984
+ 74	109	136	                   Petrol Blue  B6998
+  0	135	172	         Medium Turquoise Blue  B6999
+102	119	160	          Medium Blue / Purple  B7404
+167	186	211	                     Pale Blue  B7224
+155	163	200	                    Pale Lilac  B7235
+130	168	224	                   Medium Blue  B7406
+158	182	226	                     Pale Blue  B7414
+137	156	184	            Medium Blue / Grey  B7411
+179	195	234	                    Pale Lilac  B7263
+174	198	229	                     Pale Blue  B7408
+153	182	223	            Medium Blue / Grey  B7267
+179	201	236	                     Pale Blue  B7412
+137	160	207	                   Medium Blue  B7416
+165	187	229	                     Pale Blue  B7407
+ 78	118	196	                    Royal Blue  B7403
+ 35	 84	173	               Dark Royal Blue  B7402
+ 34	 71	145	               Dark Royal Blue  B7400
+ 41	 46	125	               Dark Royal Blue  B7323
+103	122	176	                   Medium Blue  B7348
+ 67	 76	155	                        Purple  B7387
+ 36	 87	150	               Dark Royal Blue  B7390
+ 42	 58	130	               Dark Royal Blue  B7401
+ 42	 75	161	               Dark Royal Blue  B7405
+ 30	 87	166	                    Royal Blue  B7409
+ 56	102	180	                   Medium Blue  B7410
+ 55	 80	168	               Dark Royal Blue  B7413
+ 33	 53	124	               Dark Royal Blue  B7415
+ 54	 55	106	                Dark Navy Blue  B7422
+ 40	 54	 97	                     Navy Blue  B7439
+ 42	 51	 89	                     Navy Blue  B7440
+ 42	 50	 94	                     Navy Blue  B7442
+ 21	 67	127	                    Royal Blue  B7444
+ 67	111	173	                   Medium Blue  B7484
+ 59	109	164	                   Medium Blue  B7491
+ 50	 50	 75	                     Dark Navy  B7520
+ 77	 90	126	                   Petrol Blue  B7526
+ 91	123	156	                   Medium Blue  B7536
+ 40	 62	 95	                     Dark Navy  B7578
+ 42	 59	 92	                     Dark Navy  B7877
+ 49	 59	 83	                     Dark Navy  B7878
+ 45	 55	 83	                     Dark Navy  B7896
+ 36	 39	 57	                     Dark Navy  B7897
+ 45	 50	 73	                     Dark Navy  B7898
+ 57	 44	 60	                   Dark Maroon  B7899
+ 77	 80	114	                   Petrol Blue  B7905
+ 56	 59	 87	                     Dark Navy  B7926
+ 41	 46	 82	                     Dark Navy  B7972
+ 43	 46	 65	                     Dark Navy  B7983
+199	186	172	                  Medium Beige  B8105
+236	224	209	                 Yellow / Gold  B8129
+216	206	184	                         Cream  B8134
+195	186	172	                         Beige  B8141
+231	233	215	                    Pale Beige  B8143
+230	218	201	                    Pale Beige  B8146
+208	201	175	                    Pale Beige  B8175
+216	210	184	                         Cream  B8180
+228	225	214	                 Medium Yellow  B8183
+234	231	216	                         Ivory  B8257
+168	165	104	         Medium Green / Yellow  B8309
+176	156	110	                  Gold / Beige  B8314
+223	197	168	                    Pale Peach  B8350
+210	186	156	                         Beige  B8365
+185	160	123	                  Gold / Brown  B8367
+160	156	144	                  Green / Grey  B8371
+147	139	124	                          Fawn  B8373
+164	138	123	                          Fawn  B8376
+162	139	141	                   Light Brown  B8378
+161	139	118	                   Light Brown  B8393
+145	136	 86	            Medium Olive Green  B8394
+124	 98	 89	                  Medium Brown  B8619
+144	124	105	                    Dark Beige  B8621
+102	 82	 71	                     Dark Fawn  B8651
+ 80	 64	 66	                     Dark Grey  B8653
+174	 67	 48	          Dark Orange /  Brown  B8710
+109	 55	 45	                   Dark Brown   B8715
+124	 82	 84	                  Brown / Pink  B8723
+116	 83	 70	                  Medium Brown  B8724
+145	 61	 62	                 Dark Rust Red  B8725
+162	 98	 96	              Dark Salmon Pink  B8740
+115	 66	 49	                    Dark Brown  B8759
+123	 73	 46	                         Brown  B8768
+106	 66	 43	                    Dark Brown  B8780
+ 83	 51	 48	                    Dark Brown  B8792
+ 79	 44	 34	                    Dark Brown  B8915
+ 60	 51	 52	                     Dark Grey  B8921
+ 63	 53	 57	                     Dark Grey  B8932
+ 75	 48	 50	                   Dark Maroon  B8935
+165	125	 59	                 Gold / Yellow  B8974
+220	190	155	                    Pale Peach  B8977
+190	196	207	                   Pale Silver  B9119
+183	188	192	                   Medium Grey  B9120
+201	204	205	                 Medium Silver  B9123
+152	154	157	                     Dark Grey  B9126
+212	207	214	              Pale Grey / Pink  B9130
+178	181	192	                   Medium Grey  B9143
+158	159	167	                   Medium Grey  B9148
+176	181	190	            Medium Grey / Blue  B9160
+159	169	172	                    Light Grey  B9162
+204	201	199	                   Pale Silver  B9163
+204	218	228	                   Pale Silver  B9169
+209	226	233	                   Pale Silver  B9172
+196	194	194	                     Pale Grey  B9180
+160	154	154	                   Medium Grey  B9182
+194	197	193	                     Pale Grey  B9190
+125	115	116	                     Dark Grey  B9342
+193	184	186	              Pale Grey / Pink  B9344
+165	172	188	                   Medium Grey  B9355
+161	162	159	                   Medium Grey  B9365
+171	179	194	                     Pale Grey  B9369
+151	149	150	                     Dark Grey  B9379
+120	125	144	                      Dark Gey  B9509
+139	134	145	                     Dark Grey  B9532
+ 80	 75	 78	                     Dark Grey  B9558
+103	104	110	                     Dark Grey  B9595
+125	126	120	                  Green / Grey  B9596
+119	116	118	                     Dark Grey  B9608
+140	133	137	                   Medium Grey  B9632
+ 83	 79	 82	                     Dark Grey  B9636
+ 63	 66	 76	                     Dark Navy  B9901
+ 59	 61	 68	                     Dark grey  B9912
+ 42	 46	 51	                     Dark Grey  B9914
+ 78	 85	 99	                   Petrol Blue  B9946
+ 39	 41	 44	                     Dark Grey  B9953

@@ -8,3 +8,5 @@ numpy
 jinja2
 flask
 requests
+pywinutils; sys.platform == 'win32'
+pywin32; sys.platform == 'win32'

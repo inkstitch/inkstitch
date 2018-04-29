@@ -1,0 +1,525 @@
+GIMP Palette
+Name: Ink/Stitch: Emmel
+Columns: 4
+# RGB Value		                    Color Name Number
+239	236	217	                Eggshell White ML1001
+246	216	208	                  Whisper Pink ML1002
+245	199	199	                  Crystal Pink ML1003
+242	176	178	                    Sweet Pink ML1004
+254	159	155	                 Flamingo Pink ML1005
+234	105	110	                    Dusty Rose ML1006
+235	 95	 96	                Country Rose 2 ML1007
+247	200	194	                   Light Coral ML1008
+238	183	176	                    Peach Skin ML1009
+241	169	170	                     Pale Pink ML1010
+238	151	159	                   Medium Pink ML1011
+250	108	120	                         Brick ML1012
+254	 86	119	                     Dark Pink ML1013
+232	 69	100	                   Medium Pink ML1014
+228	 64	 99	                          Pink ML1015
+220	 30	 74	                        Cerise ML1016
+252	221	193	                         Peach ML1017
+255	179	181	                       Corsage ML1018
+240	122	122	                    Dark Peach ML1019
+219	104	121	                  Antique Pink ML1020
+249	186	171	                    Flesh Pink ML1021
+252	145	148	                        Azalea ML1022
+254	 94	102	                       Begonia ML1023
+246	 45	 61	                     Fluo Pink ML1024
+229	  9	 21	               Fire Engine Red ML1025
+255	209	219	                Delicate Mauve ML1026
+252	170	192	                    Petal Pink ML1028
+236	 99	143	                       Begonia ML1029
+242	 78	128	                     Fluo Pink ML1030
+235	 61	114	                        Azalea ML1031
+218	 27	 58	                         N / A ML1032
+242	186	197	                   Light Mauve ML1033
+226	162	188	                    Light Pink ML1034
+217	163	197	                        Orchid ML1035
+195	116	161	                   Desert Rose ML1036
+177	 72	128	                     DK Fushia ML1037
+197	 48	103	                     Dark Pink ML1038
+190	 43	 97	                    Ruby Glint ML1039
+241	151	176	                   Medium Pink ML1040
+253	121	160	                   Medium Pink ML1041
+222	 88	125	              Cranberry medium ML1042
+205	 69	119	                  Pink Rapture ML1043
+190	 58	 97	                     Dark Pink ML1044
+176	 40	 80	               Candy Apple Red ML1045
+ 83	 25	 11	                    Dark Brown ML1046
+206	153	145	                 Brownish pink ML1047
+161	 95	 99	                    Marsh Rose ML1048
+138	 53	 56	           Raspberry Very Dark ML1049
+117	 50	 57	                          Wine ML1050
+255	238	219	                         Beige ML1051
+255	219	193	                   Flesh Light ML1052
+254	188	164	                Cinnamon Light ML1053
+255	166	152	                Champagne Pink ML1054
+247	126	109	                  Blush Medium ML1055
+244	 64	 67	                     Fluo Pink ML1056
+222	 58	 69	                   Desert Rose ML1057
+221	 46	 51	                     Fiery Red ML1058
+207	 43	 41	              Christmas Red BR ML1059
+182	 47	 53	                        Orange ML1060
+ 88	  2	  5	                   TH Burgundy ML1061
+255	102	114	                     Bitteroot ML1062
+251	 77	 68	                           Red ML1063
+229	 41	 55	                     Persimmon ML1064
+228	 32	 34	                      Ruby Red ML1065
+203	 27	 29	                     Wild Fire ML1066
+209	 19	 19	                       Carmine ML1067
+221	 30	 25	               Fire Engine Red ML1068
+185	 35	 47	                      Warm Red ML1069
+157	 32	 40	                      Cabernet ML1070
+139	 29	 38	                         Brick ML1071
+103	 24	 29	                         Brown ML1072
+131	 35	 36	                   Formula One ML1073
+154	 34	 35	                    Aurora Red ML1074
+ 73	 42	 40	                   Deep Walnut ML1075
+246	233	217	                  Bridal Blush ML1076
+255	229	214	                     Rosewater ML1077
+253	236	192	                          Ecru ML1078
+253	187	139	                          Pooh ML1079
+255	145	 89	               Summer Splendor ML1080
+254	127	 60	                        Orange ML1081
+254	102	 55	                         Bijol ML1082
+252	 81	 37	            Fluorescent Orange ML1083
+255	 69	 40	                     Fluo Pink ML1084
+250	 54	 40	                       Paprika ML1085
+253	 72	 45	                     Fluo Pink ML1086
+255	 70	 50	                     Fluo Pink ML1087
+253	 52	 42	                       Paprika ML1088
+255	238	224	                   Light Coral ML1089
+254	177	171	          Carnation Very Light ML1090
+255	123	108	                  Blush Medium ML1091
+252	 59	 69	                     Fluo Pink ML1092
+234	203	198	                   Medium Pink ML1093
+244	194	195	                    Pink Glaze ML1094
+218	158	160	                      Hyacinth ML1095
+202	119	127	                    Deep Mocha ML1096
+207	 83	 93	                    China Rose ML1097
+228	148	157	                      Sea Pink ML1098
+202	 54	 68	                Strawberry Red ML1099
+163	 43	 52	                     Red Berry ML1100
+254	216	213	                  Pink Dogwood ML1101
+254	198	185	                   Peony Light ML1102
+238	147	144	                  Light Orange ML1103
+198	 97	101	                   Coral Flame ML1104
+184	 70	 78	                 Chrysanthemum ML1105
+201	 89	101	           Medium Orange / Red ML1106
+168	 56	 55	          Dark Orange /  Brown ML1107
+255	240	215	                      Eggshell ML1108
+244	212	191	                  Cream / Pink ML1109
+208	146	135	              Brandied Apricot ML1110
+189	114	108	                  K. A. Bronze ML1111
+147	 64	 74	                    Dark Brown ML1112
+243	219	209	                         Chalk ML1113
+237	196	190	                     Pink Mist ML1114
+237	193	184	                   Pale Orange ML1115
+222	165	172	                   Pale Salmon ML1116
+206	124	138	                  Festive Pink ML1117
+181	 95	104	                  Baroque Rose ML1118
+167	 80	 86	               Scalloped Coral ML1119
+233	181	185	                        Bisque ML1120
+236	156	165	                   Medium Pink ML1121
+208	107	123	                      Med Plum ML1122
+184	 93	110	                    Red Violet ML1123
+184	 88	102	                     Berry Red ML1124
+148	 60	 84	                 Medium maroom ML1125
+195	213	171	                          Mint ML1126
+162	186	134	                  Palest Green ML1127
+155	211	172	                       LT Jade ML1128
+114	158	131	               Creme de Menthe ML1129
+ 61	103	 63	                    Green Dust ML1130
+ 42	 78	 66	                  Harbor Green ML1131
+222	255	239	                    Pale Green ML1132
+192	255	247	                    Pale Green ML1133
+166	239	220	                 Island Waters ML1134
+ 99	233	222	                       Seafoam ML1135
+107	229	216	                       Seafoam ML1136
+ 68	222	213	            Light Blue / Green ML1137
+ 27	122	 90	                          Jade ML1138
+ 98	229	187	              Light teal Green ML1139
+125	209	194	                 Tropical Wave ML1140
+ 55	204	211	                    Lilac Silk ML1141
+ 61	176	181	                   Bright Aqua ML1142
+ 61	215	225	                         Capri ML1143
+ 80	204	194	                    Aquamarine ML1144
+ 59	164	196	                  Horizon Blue ML1145
+241	232	157	                    PaleYellow ML1146
+208	214	142	                         Lemon ML1147
+177	188	120	                          Nile ML1148
+135	135	 73	                          Cone ML1149
+105	105	 55	                   Dk. Avacodo ML1150
+206	211	170	                     Palm Leaf ML1151
+225	255	224	                  Pastel Green ML1152
+166	190	156	                   Sprucestone ML1153
+104	189	130	                  Zephyr Green ML1154
+ 82	146	111	          Celadon Green Medium ML1155
+ 66	126	 92	                     Evergreen ML1156
+228	244	199	        Loden Green Very Light ML1157
+195	203	126	           Avocado Green Light ML1158
+152	170	 96	                    Leaf Green ML1159
+ 80	115	 85	                     Elm Green ML1160
+ 73	122	 92	               Blue Green-dark ML1161
+ 41	 79	 51	                    Dark Green ML1162
+ 35	 70	 38	                  Wreath Green ML1163
+228	255	202	                    Pale Green ML1164
+215	255	220	                  Pastel Green ML1165
+183	250	197	                Slightly Green ML1166
+154	206	158	             Medium Mint Green ML1167
+ 78	164	 91	                 Vibrant Green ML1168
+ 60	128	 69	                    Leaf Green ML1169
+167	163	 90	                        Bronze ML1170
+154	152	 75	                  French Toast ML1171
+111	118	 64	                     Lt. Olive ML1172
+ 53	 63	 26	                 Special Green ML1173
+ 50	 63	 19	                    Black Pine ML1174
+ 44	 59	 36	                  Bronze Green ML1175
+235	246	190	            Avocado Very Light ML1176
+227	246	180	              Dark Olive Green ML1177
+143	216	134	                    Light Jade ML1178
+126	168	 92	           Forest Green medium ML1179
+ 71	133	 66	                    Dark Green ML1180
+ 45	138	 58	                  Signal Green ML1181
+ 18	138	 64	                         Kelly ML1182
+237	255	232	                   Silver Grey ML1183
+236	255	166	              Dark Olive Green ML1184
+164	198	114	                Pastoral Green ML1185
+140	194	100	                          Lime ML1186
+ 60	119	 35	                         Green ML1187
+ 97	127	 63	                     Spearmint ML1188
+ 71	 98	 47	                Green / Yellow ML1189
+226	216	 92	                        Aurora ML1190
+173	153	 54	         Medium Green / Yellow ML1191
+173	158	 63	                  Golden Olive ML1192
+107	 92	 33	           Dark Green / Yellow ML1193
+176	170	 94	                       Seaweed ML1194
+130	119	 63	                      Seafrost ML1195
+102	111	 48	         Medium Palmetto Green ML1196
+128	 95	  2	                   Earthen Tan ML1197
+198	192	130	                  Rich Vanilla ML1198
+ 87	 98	 55	                    Pale Green ML1199
+ 71	 76	 18	                    Dark Olive ML1200
+239	254	249	                 Shallow Green ML1201
+210	254	253	              Teal Ultra Light ML1202
+180	243	235	                      Sky Blue ML1203
+140	222	210	                      Seafrost ML1204
+244	255	250	                 Silver Tinsel ML1205
+226	255	253	                    Light Blue ML1206
+194	213	209	                   Pastel Blue ML1207
+161	193	192	                     Snow Blue ML1208
+ 24	 44	 81	                     Blueprint ML1209
+ 39	 76	 85	             Dark Bottle Green ML1210
+ 54	 72	 92	             Dark Blue / Green ML1211
+244	254	243	             Pale Yellow-Green ML1212
+214	242	254	                      Ice Blue ML1213
+183	226	245	                      Sun Blue ML1214
+ 27	 95	116	                 Deep Sea Blue ML1215
+ 60	120	174	                        Laguna ML1216
+ 52	 69	115	                     Navy Blue ML1217
+ 48	 53	 82	                   Blue Shadow ML1218
+ 45	 49	 61	                          Navy ML1219
+ 45	 62	 72	                     Dark Teal ML1220
+183	198	175	                     Palm Leaf ML1221
+166	185	165	                Carousel Green ML1222
+168	191	163	                      Sea Foam ML1223
+ 66	 99	 82	                   Kahki Green ML1224
+ 50	 80	 68	                           Fir ML1225
+242	254	242	             Pale Yellow-Green ML1226
+243	254	246	                Sea Bleu Light ML1227
+238	255	249	                 Shallow Green ML1228
+226	238	234	                    Misty Mint ML1229
+199	232	239	                     Pale Blue ML1230
+133	181	204	             Pale Blue / Green ML1231
+ 77	121	158	                  Peacock Blue ML1232
+ 42	 82	117	                          Blue ML1233
+ 31	 58	103	                     Dark Blue ML1234
+ 24	 42	 80	                Deep Turquoise ML1235
+180	240	230	                      Sky Blue ML1236
+149	213	197	               Pale Aqua Green ML1237
+ 30	124	124	            Light Green / Blue ML1238
+ 22	125	132	          Sapphire Medium Dark ML1239
+142	255	245	                Pale Sea Green ML1240
+189	229	231	                 Bleached Aqua ML1241
+ 85	153	176	                   Wonder Blue ML1242
+215	255	254	                     PALE Aqua ML1243
+255	254	252	                         White ML1244
+208	255	239	                Pale Turquoise ML1245
+ 93	224	210	                       Seafoam ML1246
+ 65	190	194	                       Willow2 ML1247
+ 61	142	136	                  Exotic Green ML1248
+184	254	255	                   Pillow Blue ML1249
+167	255	254	                          Aqua ML1250
+233	244	240	              Slate Bleu Light ML1251
+212	245	245	                  Cameron Blue ML1252
+167	225	239	                     Baby Blue ML1253
+166	217	244	                     Baby Blue ML1254
+112	183	227	                    Ultra Blue ML1255
+ 44	 85	173	               Dark Royal Blue ML1256
+ 40	 67	154	                     Fire Blue ML1257
+ 34	 58	148	                 Imperial Blue ML1258
+199	255	252	                       LT Aqua ML1259
+218	253	255	                    Light Blue ML1260
+176	254	255	                          Aqua ML1261
+128	247	255	                   Powder Blue ML1262
+ 90	228	255	                     Turquoise ML1263
+ 59	194	241	       Turquoise Medium Bright ML1264
+ 58	196	235	           Medium Blue / Green ML1265
+ 71	167	215	                    Light Blue ML1266
+ 69	148	189	                     Surfs' Up ML1267
+244	250	246	                     Pale Blue ML1268
+172	203	231	                    Winter Sky ML1269
+ 94	130	164	                    Slate Blue ML1270
+ 42	 64	103	                     Dark Navy ML1271
+ 17	 24	 43	                 Midnight Blue ML1272
+ 66	 47	 79	                    Blackberry ML1273
+ 72	178	240	                    LT Peacock ML1274
+ 68	138	210	                  Dolphin Blue ML1275
+249	244	242	                         White ML1276
+254	236	196	                     Med. Ecru ML1277
+177	183	149	              Brown Gray Light ML1278
+133	142	125	                  Boffin Green ML1279
+ 98	 95	 80	              Loden Green Dark ML1280
+ 67	 68	 60	                         Hedge ML1281
+ 63	 64	 56	                  Black Chrome ML1282
+252	255	228	                    Cream Silk ML1283
+255	255	225	                  Yellow Beige ML1284
+218	218	192	                         Cream ML1285
+157	122	 90	                   Tawny Birch ML1286
+141	124	 96	                      Espresso ML1287
+252	254	249	                   Iced Silver ML1288
+190	198	177	                         Putty ML1289
+195	197	194	                     Pale Grey ML1290
+ 84	 86	 85	                Very Dark Grey ML1291
+ 43	 53	 52	             Dark Green / Blue ML1292
+251	238	229	          Wineberry Very Light ML1293
+227	198	166	                         Straw ML1294
+193	165	141	                    Iced Mocha ML1295
+157	137	112	                          Sand ML1296
+ 94	 70	 57	                  Dusky Salmon ML1297
+194	183	155	          Light Green / Yellow ML1298
+121	123	110	                   Beige Blush ML1299
+248	239	232	                    Star White ML1300
+245	247	233	                     Off White ML1301
+237	238	224	                 Summer Shower ML1302
+240	242	228	                       Maize 4 ML1303
+193	195	181	          Light Green / Yellow ML1304
+202	203	197	                        Chrome ML1305
+127	126	121	                     Moon Mist ML1306
+101	100	 95	                      Twilight ML1307
+ 70	 72	 71	                    Grey Suede ML1308
+ 35	 35	 35	                         Black ML1309
+234	238	223	                 Summer Shower ML1310
+155	175	173	               Soft Steel Blue ML1311
+154	173	169	                        Quarry ML1312
+ 96	116	125	                   Blue Mirage ML1313
+ 71	 90	 88	                 Heritage Blue ML1314
+ 57	 66	 65	                Dk. Night Blue ML1315
+200	205	198	                     Dawn Blue ML1316
+215	209	187	                    Bone White ML1317
+223	227	212	               Sage Tint White ML1318
+190	194	180	                     Palm Leaf ML1319
+135	148	128	                          Weed ML1320
+183	208	202	                     Blue Foam ML1321
+154	184	186	                     Snow Blue ML1322
+114	145	150	                  Country Gray ML1323
+ 70	107	113	           Medium Green / Blue ML1324
+ 45	 79	 80	             Dark Bottle Green ML1325
+253	231	145	                       Wheat 2 ML1326
+255	227	113	                    Snapdragon ML1327
+255	217	108	                    Snapdragon ML1328
+190	123	 52	                   Autumn Leaf ML1329
+155	 89	 39	                  Medium Brown ML1330
+169	 86	 42	                Light Cinnamon ML1331
+255	255	217	                   Ivory White ML1332
+255	241	164	                  Light Butter ML1333
+255	255	190	           Canary Yellow Light ML1334
+255	238	134	                   Pale Yellow ML1335
+255	216	 85	                   Warm Yellow ML1336
+252	186	 64	                    Cantaloupe ML1337
+255	192	 79	                    Scholastic ML1338
+255	255	207	                    Pale Lemon ML1339
+255	244	174	                   Pale Yellow ML1340
+229	186	133	                          Glow ML1341
+255	183	 80	                        Mimosa ML1342
+254	134	 47	                         Mango ML1343
+255	101	 47	                     Red Berry ML1344
+255	246	151	                 Light Mustard ML1345
+209	188	121	                     Moon Rock ML1346
+196	164	 77	               Old Gold medium ML1347
+215	176	 83	                       Mustard ML1348
+141	 90	 35	                  Medium Brown ML1349
+ 91	 65	 30	                         Brown ML1350
+233	235	188	            Yellow Beige Light ML1351
+244	244	190	                 Mellow Yellow ML1352
+255	253	189	           Canary Yellow Light ML1353
+249	244	153	                       Mustard ML1354
+255	254	141	                  Meilee Green ML1355
+255	247	130	                   Straw Light ML1356
+255	234	 81	              Hawaiian Sunrise ML1357
+252	200	 64	                        Yellow ML1358
+244	233	167	                         Maize ML1359
+230	204	119	                Old Gold Light ML1360
+219	193	118	                        Jojoba ML1361
+210	159	 67	              Black Eyed Susie ML1362
+157	102	 35	                  Golden Grain ML1363
+255	255	224	                  Yellow Beige ML1364
+240	254	255	                    Misty Mint ML1365
+240	253	145	               Coronation Gold ML1366
+233	252	124	                    Applegreen ML1367
+234	252	118	                   Pale Yellow ML1368
+246	255	140	                  Meilee Green ML1370
+235	255	106	                    Green Gold ML1371
+195	255	139	                Brilliant Lime ML1372
+227	255	142	                    Applegreen ML1373
+236	255	140	                    Applegreen ML1374
+239	255	123	                 Medium Yellow ML1375
+207	175	180	                    Rose Beige ML1376
+193	141	177	                Lt. Red Violet ML1377
+190	154	182	                      Carnatio ML1378
+128	101	136	                   Light Grape ML1379
+ 97	 48	 95	                        Purple ML1380
+ 89	 46	 72	                   Dark Claret ML1381
+255	255	245	                      Eggshell ML1382
+232	237	240	                    Pearl Grey ML1383
+182	178	192	                          Grey ML1384
+195	219	229	                    Cadet Blue ML1385
+128	128	130	               Polished Pewter ML1386
+ 77	 85	 98	                   Petrol Blue ML1387
+ 50	 56	 70	                 Graphite Grey ML1388
+173	170	179	                     Dark Grey ML1389
+157	154	171	                    Steel Gray ML1390
+147	144	173	                   Light Grape ML1391
+141	137	150	                     Dark Grey ML1392
+101	 91	126	                    Lilac Mist ML1393
+ 64	 55	108	                   Petrol Blue ML1394
+229	202	195	                  Palest Peach ML1395
+220	184	186	                 Antique Mauve ML1396
+157	108	114	                   MD Ash Rose ML1397
+ 99	 74	 77	                    Pale Grape ML1398
+ 93	 59	 75	                 Medium Purple ML1399
+ 44	 30	 30	                    Black Wine ML1400
+170	188	192	                Celestial Blue ML1401
+ 85	112	119	                  Gobelin Blue ML1402
+ 42	 66	 92	               Harbor Twilight ML1403
+ 41	 50	 67	                         Black ML1404
+225	201	214	                     Rose Pink ML1405
+212	156	183	                         Lilac ML1406
+114	 57	108	                      Dark Red ML1407
+ 65	 23	 59	               Deep Slate Gray ML1408
+ 98	 90	101	                   Plum Kitten ML1409
+ 57	 47	 81	                       Concord ML1410
+ 39	 35	 58	                     Aubergine ML1411
+ 33	 39	 71	                Blueberry Blue ML1412
+221	187	185	                 Antique Mauve ML1413
+227	186	192	                        Orchid ML1415
+180	156	178	                    Silver Fox ML1416
+143	103	140	                   Purple Haze MLL1417
+ 67	 58	113	                   Dark Purple ML1418
+ 78	 29	 74	                  Royal Purple ML1419
+ 52	 28	 42	                    Dark Brown ML1420
+162	150	164	                      Wisteria ML1422
+214	209	213	                   Saturn Grey ML1423
+107	 38	 69	              Brushed Burgundy ML1424
+101	 48	 54	                     Warm Wine ML1425
+157	143	179	                   Light Lilac ML1426
+107	101	135	               Twilight Purple ML1427
+ 99	 98	142	                    Royal Blue ML1428
+ 75	 74	105	                   Petrol Blue ML1429
+ 63	 57	103	                        Cassis ML1430
+ 54	 56	 79	              Dark Grey / Blue ML1431
+ 45	 48	 79	                     Blueberry ML1432
+231	236	240	                   Pale Silver ML1433
+191	188	197	                   Silver Grey ML1434
+152	165	184	                 Rockport Blue ML1435
+ 96	100	127	                Velvet Morning ML1436
+ 60	 79	112	                           Ash ML1437
+237	244	236	                    Angel Blue ML1338
+226	227	221	                    White Sand ML1439
+137	141	144	             Steel Gray medium ML1440
+106	117	113	                    Dk Granite ML1441
+ 86	 91	 95	                     Dark Gray ML1442
+244	210	182	                       Opaline ML1443
+230	195	173	                 Light Apricot ML1444
+200	164	138	                     Rugby Tan ML1445
+164	101	 92	                    Red Maroon ML1446
+125	 80	 59	                    Dark Brown ML1447
+125	 74	 57	                    Dark Brown ML1448
+199	249	240	                    Light Aqua ML1449
+203	207	192	                   Almost Aqua ML1450
+246	193	162	                         Tawny ML1451
+235	165	140	                        Salmon ML1452
+200	138	113	                      Dk. Ecru ML1453
+242	122	105	                 Medium Orange ML1454
+166	 58	 45	                  Orange / Red ML1455
+169	 56	 40	                  Orange / Red ML1456
+244	157	 88	                 Medium Orange ML1457
+198	112	 55	                          Date ML1458
+102	 46	 29	                           Tan ML1459
+ 91	 49	 33	                    Dark Brown ML1460
+237	206	149	                      Old Gold ML1461
+194	162	103	                       Parsnip ML1462
+185	161	115	                    Med. Taupe ML1463
+190	  0	  0	                   Radiant Red ML1464
+151	114	 72	                     Gold Wire ML1465
+241	244	225	                     Sandstone ML1466
+255	255	237	                   Ivory White ML1467
+255	246	207	                         Cream ML1468
+232	202	150	                      Dark Tan ML1469
+216	189	134	                        Cocoon ML1470
+176	129	 83	                          Gold ML1471
+128	 72	 37	                         Brown ML1472
+116	 65	 38	                    Dark Brown ML1473
+ 75	 41	 32	                    Dark Brown ML1474
+ 51	 42	 37	                    Best Brown ML1475
+255	201	137	                      Sunburst ML1476
+222	180	130	          Golden Olive / Light ML1477
+220	164	113	                  French Beige ML1478
+183	137	104	                     Oak Heart ML1479
+146	109	 83	                  Medium Brown ML1480
+150	 97	 66	                  Medium Brown ML1481
+255	221	167	                         Linen ML1482
+249	168	103	            Orange Spice Light ML1483
+246	175	121	                         Peach ML1484
+239	117	 52	                        Canary ML1485
+196	 60	 34	              Brick Ultra Dark ML1486
+250	233	203	                   Light Ivory ML1487
+190	175	142	                         Taupe ML1488
+182	148	121	                       Natural ML1489
+154	  0	  0	                        Auburn ML1490
+ 87	 67	 42	                         Brown ML1491
+255	237	195	                          Ecru ML1492
+229	164	126	                        Bamboo ML1493
+175	 71	 32	                        Russet ML1494
+168	105	 70	                         Brown ML1495
+140	 65	 36	                     Amberglow ML1496
+154	 62	 47	             Indian Paintbrush ML1497
+202	157	124	            Light Red / Orange ML1498
+184	 97	 69	                         Brown ML1499
+116	 57	 43	                          Twig ML1500
+255	255	253	                         White ML1501
+255	254	251	                         White ML1502
+254	255	245	                      Eggshell ML1503
+255	255	255	                    Snow White ML1504
+255	255	254	                         White ML1505
+254	255	255	                    Snow White ML1506
+255	254	255	                         White ML1507
+231	216	183	                     Seedpearl ML1508
+219	195	161	                    Pale Peach ML1509
+165	144	113	                        Tannin ML1510
+114	105	 72	                 Desert Cactus ML1511
+152	136	103	                    Dark Beige ML1512
+189	160	100	                       Parsnip ML1513
+132	112	 77	                        Ermine ML1514
+132	104	 65	         Medium Orange / Brown ML1515
+141	121	 88	                      Espresso ML1516
+ 76	 57	 42	             Traditional Brown ML1517
+255	255	229	                         Beige ML1518
+255	255	211	             Citrus Very Light ML1519
+255	238	198	                     Med. Ecru ML1520
+225	184	138	                     Sheepskin ML1521
+255	255	242	                  Winter White ML1522
+255	237	171	                     Pale Gold ML1523
+202	182	155	                    Ash Blonde ML1524
+ 13	 14	  9	                      Espresso ML1525

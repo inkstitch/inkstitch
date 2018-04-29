@@ -1,0 +1,65 @@
+GIMP Palette
+Name: Ink/Stitch: Brother Country
+Columns: 4
+# RGB Value		                    Color Name Number
+  0	  0	  0	                         Black    100
+240	240	240	                         White    000
+231	  2	104	                           Red    149
+253	 86	110	                          Pink    155
+204	 40	 56	                     Deep Rose    024
+252	141	175	                    Flesh Pink    152
+160	  7	 78	                  Dark Fuchsia    126
+255	 66	  9	                     Vermilion    148
+229	  0	 51	                       Carmine    158
+ 69	  4	 81	                  Royal Purple    636
+103	  0	112	                       Magenta    625
+241	159	188	                   Salmon Pink    122
+233	 76	100	                     Amber Red    212
+254	254	123	                  Lemon Yellow    342
+251	251	 32	                        Yellow    043
+251	233	106	                  Harvest Gold    334
+250	182	  0	                        Orange    335
+250	173	 78	                       Pumpkin    322
+250	183	  0	                     Tangerine    336
+255	239	168	                   Cream Brown    331
+255	235	132	                  Cream Yellow    370
+228	152	 59	                         Khaki    242
+242	153	 14	                     Deep Gold    354
+238	204	 12	                         Brass    404
+252	219	161	                         Linen    025
+ 29	 24	  3	                    Dark Brown    717
+254	 71	 12	                 Reddish Brown    264
+184	116	 50	                    Clay Brown    224
+240	213	179	                         Beige    012
+172	154	 97	                     Warm Gray    706
+186	163	  8	                  Russet Brown    414
+104	 36	  8	                   Light Brown    255
+116	198	177	                      Seacrest    505
+200	220	200	                    Mint Green    461
+119	196	135	                    Leaf Green    463
+ 13	 42	  7	                   Olive Green    476
+176	207	120	                    Dark Olive    473
+120	199	159	                    Teal Green    483
+  0	 81	 39	                 Emerald Green    485
+  0	 48	 30	                    Deep Green    467
+203	233	162	                   Fresh Green    442
+182	221	 17	                    Lime Green    444
+ 81	137	 33	                    Moss Green    446
+  0	 99	144	                          Blue    586
+ 10	 89	163	                   Ultramarine    575
+213	236	235	                    Light Blue    150
+177	226	223	                      Sky Blue    512
+  8	 90	111	                 Electric Blue    564
+  5	 96	 96	                  Peacock Blue    057
+  6	 41	 52	                 Prussian Blue    588
+ 85	127	186	              Corn Flower Blue    015
+243	111	177	                   Light Lilac    133
+196	160	207	                         Lilac    623
+180	128	196	                        Violet    624
+105	 21	136	                        Purple    635
+146	133	195	                      Lavender    604
+156	190	219	               Wistaria Violet    003
+168	171	173	                        Pewter    745
+ 16	 20	 12	                     Dark Gray    747
+224	202	198	                        Silver    020
+110	100	 82	                          Gray    734

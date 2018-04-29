@@ -1,0 +1,418 @@
+GIMP Palette
+Name: Ink/Stitch: Isalon Polyester
+Columns: 4
+# RGB Value		                    Color Name Number
+247	240	232	                    Star White   0005
+250	237	222	                      Gardenia   0010
+245	232	217	                  Bridal Blush   0015
+237	232	222	                    Lily White   0017
+242	237	181	                 Tender Yellow   0250
+245	237	128	                     Limelight   0300
+232	219	 82	                        Aurora   0320
+245	224	 59	                     Buttercup   0600
+232	219	 82	                        Aurora   0500
+245	224	 59	                     Buttercup   0605
+235	212	 64	                         Maize   0603
+240	219	105	                  Yellow Cream   0304
+237	204	 82	               Primrose Yellow   0620
+237	204	 82	               Primrose Yellow   0602
+235	212	 64	                         Maize   0608
+235	212	 64	                         Maize   0311
+235	235	199	                  Sylvan Green   0460
+245	230	168	                French Vanilla   0520
+240	219	105	                  Yellow Cream   0523
+247	222	115	                    Snapdragon   0713
+232	196	115	                      Cornsilk   0507
+245	230	168	                French Vanilla   0360
+237	204	 82	               Primrose Yellow   0502
+250	194	 69	                      Daffodil   0503
+247	201	102	                   Sunset Gold   0801
+232	196	115	                      Cornsilk   0711
+247	186	 84	                  Amber Yellow   0701
+224	181	 79	                   Yolk Yellow   0704
+235	176	 77	                         Amber   0705
+237	186	 97	                  Golden Cream   0810
+227	204	145	                         Straw   0742
+217	194	125	                        Jojoba   0741
+222	181	102	                         Ochre   0514
+204	153	 89	                      Oak Buff   0821
+219	168	117	                          Clay   0632
+240	227	184	                      Rutabaga   0660
+227	204	128	                  Dusky Citron   0640
+237	186	 97	                  Golden Cream   0714
+219	163	 64	                  Artisan Gold   0802
+252	143	 79	                     Tangerine   0912
+252	171	 71	                      Marigold   0911
+240	196	 79	                        Mimosa   0902
+250	201	161	                  Almond Cream   1350
+247	140	 97	                         Melon   1103
+235	120	 92	                         Coral   1330
+217	122	 51	                     Amberglow   1305
+245	214	181	                          Nude   1570
+250	194	148	                    Beach Sand   1040
+235	153	 92	                     Muskmelon   1105
+227	135	 84	                  Dusty Orange   1303
+230	112	 61	                    Coral Rose   1307
+232	112	 74	                      Flamingo   1302
+217	194	148	                      Marzipan   0981
+217	194	148	                      Marzipan   0950
+242	194	140	                 Apricot Cream   1030
+252	143	 79	                     Tangerine   1200
+235	153	 92	                     Muskmelon   1110
+240	140	 79	                 Autumn Sunset   1102
+212	125	 89	                     Carnelian   1321
+209	135	 87	                    Coral Gold   1221
+209	130	102	                  Tawny Orange   1332
+179	 99	 89	                   Dusty Cedar   1335
+173	 92	 74	                       Redwood   1334
+247	161	140	                   Peach Amber   1849
+214	 94	 84	                Deep Sea Coral   1510
+186	 79	 79	                     Cranberry   1702
+184	 71	 77	                 Chrysanthemum   1704
+186	 79	 79	                     Cranberry   1800
+184	 71	 77	                 Chrysanthemum   1706
+168	 79	 79	                   Garnet Rose   1902
+168	 79	 79	                   Garnet Rose   2102
+143	 69	 74	                     Earth Red   2100
+143	 71	 84	                      Dry Rose   1912
+125	 79	 84	                 Crushed Berry   2323
+143	 71	 84	                      Dry Rose   1724
+143	 71	 84	                      Dry Rose   2103
+143	 69	 74	                     Earth Red   1911
+184	 71	 77	                 Chrysanthemum   2101
+199	 77	 89	                    Claret Red   1900
+143	 71	 84	                      Dry Rose   2012
+158	 84	 74	                       Marsala   2011
+133	 74	 69	                       Pompeii   2132
+130	 77	 74	                    Roan Rouge   2113
+140	 89	 94	              Renaissance Rose   2222
+240	212	179	                          Dawn   0961
+224	207	176	                  Creme Brulee   1571
+217	181	153	                Toasted Almond   1260
+194	140	122	                   Cameo Brown   1451
+186	133	122	                      Ash Rose   1842
+133	 84	 99	                     Tulipwood   2224
+140	 89	 94	              Renaissance Rose   2114
+230	150	135	                Lobster Bisque   1540
+232	204	176	                     Cream Tan   1560
+245	224	207	                           Dew   1460
+235	219	209	              Paster Parchment   2165
+227	179	176	                   Coral Blush   2340
+227	153	161	                      Sea Pink   2152
+173	107	117	                  Heather Rose   2231
+133	 84	 99	                     Tulipwood   2333
+115	 89	 92	                         Flint   2326
+196	163	171	                     Red Lilac   2762
+166	117	117	                Nostalgia Rose   2164
+133	 84	 99	                     Tulipwood   2322
+125	 84	102	                Berry Conserve   2325
+115	 89	 92	                         Flint   2336
+255	212	214	                Blushing Bride   1961
+237	204	201	                    Chalk Pink   2250
+245	191	194	                Almond Blossom   2155
+247	191	194	                   Orchid Pink   2350
+237	133	148	                 Morning Glory   1941
+209	 74	 99	                   Honeysuckle   2130
+168	 77	 87	                   Holly Berry   1920
+209	 74	 99	                   Honeysuckle   2120
+235	122	135	                     Bubblegum   1930
+240	194	199	                     Pink Mist   2555
+237	181	199	                  Lilac Sachet   2550
+209	120	140	                  Chateau Rose   2220
+199	 77	 89	                    Claret Red   2303
+186	 66	 94	                       Carmine   2301
+166	 89	102	                     Rose Wine   2211
+240	222	212	                    Mauve Morn   2360
+230	204	201	                    Pale Lilac   2363
+237	181	199	                  Lilac Sachet   2560
+242	122	150	                Pink Carnation   2520
+204	 79	110	                   Pink Flambe   2305
+166	 84	120	                  Meadow Mauve   2723
+227	199	209	                    Lilac Snow   2740
+214	171	201	                Orchid Bouquet   2731
+196	125	171	                        Violet   2732
+125	 77	120	                 Bright Violet   2704
+125	 84	102	                Berry Conserve   2633
+135	 97	120	                Chinese Violet   2700
+171	138	166	                  Regal Orchid   2830
+194	176	199	                  Orchid Petal   2940
+189	171	204	                      Lavender   3030
+143	115	166	                Paisley Purple   3213
+112	 87	110	                Grayish Purple   2702
+191	176	204	                  Pastel Lilac   3152
+189	171	204	                      Lavender   3140
+110	 97	148	                 Corsican Blue   3120
+102	 82	135	                  Ultra Violet   3122
+191	184	209	                Purple Heather   3450
+166	153	173	                      Wisteria   3241
+117	105	120	                   Purple Sage   2864
+105	 89	110	                  Mulled Grape   2954
+112	 92	110	                 Montana Grape   2733
+110	 99	117	                         Cadet   2953
+143	138	176	                Persian Violet   3230
+102	117	171	                     Wedgewood   3320
+ 71	 74	115	                  Skipper Blue   3102
+ 87	 97	125	                 Coastal Fjord   3353
+143	156	191	               Lavender Lustre   3420
+143	156	191	               Lavender Lustre   3430
+148	156	201	                    Easter Egg   3351
+120	135	194	                 Persian Jewel   3321
+ 87	 89	135	               Purple Mountain   3302
+ 87	 89	135	               Purple Mountain   3524
+102	107	171	                     Baja Blue   3512
+ 94	117	158	                       Riviera   3600
+163	184	209	                   Powder Blue   3640
+115	138	179	                        Allure   3410
+102	117	171	                     Wedgewood   3611
+ 97	 97	163	                  Violet Storm   3543
+ 97	 97	163	                  Violet Storm   3300
+ 87	 97	125	                 Coastal Fjord   3323
+110	 99	117	                         Cadet   3645
+ 79	 84	102	              Nightshadow Blue   3363
+ 89	 84	 87	                        Rabbit   3755
+189	199	201	                   Ballad Blue   3845
+156	184	212	                      Cerulean   3530
+105	135	179	              Silver Lake Blue   3631
+ 92	135	199	                        Marina   3713
+ 69	112	163	                      Blueball   3311
+ 82	102	148	                    Dutch Blue   3734
+122	153	184	                     Dusk Blue   3841
+179	189	196	                Celestial Blue   3951
+143	176	191	                 Forget-Me-Not   3742
+125	143	163	                   Faded Denim   3952
+ 82	102	148	                    Dutch Blue   3411
+ 87	 97	125	                 Coastal Fjord   3736
+ 79	 84	102	              Nightshadow Blue   3346
+ 79	 84	102	              Nightshadow Blue   3554
+ 79	 84	102	              Nightshadow Blue   3364
+102	 92	 92	                   Plum Kitten   3574
+179	189	196	                Celestial Blue   3750
+143	176	191	                 Forget-Me-Not   3851
+ 84	110	138	                 Captains Blue   3833
+ 79	 84	102	              Nightshadow Blue   4055
+ 94	 84	 74	                   Major Brown   3775
+222	222	217	                   Barely Blue   3571
+209	212	214	                 Illusion Blue   3650
+186	201	209	                     Baby Blue   3761
+163	184	212	                     Blue Bell   3820
+ 79	138	194	                    Azure Blue   3715
+115	138	179	                        Allure   3810
+ 87	120	166	                 Parisian Blue   3621
+ 79	 99	130	                Moonlight Blue   3743
+105	107	120	                Folkstone Gray   3444
+186	201	209	                     Baby Blue   3840
+148	199	214	                 Moderate Blue   3721
+120	163	214	               Little Boy Blue   3720
+ 69	112	163	                      Bluebell   3801
+ 84	 92	163	                   Amparo Blue   3510
+209	212	214	                 Illusion Blue   3860
+173	207	212	                     Blue Glow   3961
+171	204	217	                  Crystal Blue   4130
+125	176	201	                      Air Blue   3910
+112	176	207	                   Blue Grotto   3903
+ 51	140	194	                        Blithe   3901
+ 51	140	194	                        Blithe   3905
+204	224	217	                    Blue Glass   4040
+148	199	214	                 Moderate Blue   4120
+ 99	191	212	               Bachelor Button   4112
+ 79	173	196	                    River Blue   4123
+ 64	166	191	                  Horizon Blue   4102
+ 64	125	143	                      Larkspur   4126
+ 64	125	143	                      Larkspur   4200
+ 97	135	156	                       Niagara   4000
+ 84	 99	120	                    China Blue   4143
+222	222	217	                   Barely Blue   5040
+209	212	214	                 Illusion Blue   4250
+176	209	212	                    Light Blue   4740
+110	184	176	                     Pool Blue   4310
+ 89	158	163	                     Porcelain   4710
+ 89	158	163	                     Porcelain   4520
+ 20	122	140	                   Pagoda Blue   4502
+ 74	125	112	                      Deep Sea   4822
+ 46	156	161	                        Baltic   4712
+ 69	166	153	                   Bright Aqua   5110
+ 64	158	130	                  Marine Green   5122
+ 84	133	 97	              Deep Grass Green   5100
+230	232	217	                           Ice   4860
+201	209	189	                   Almost Aqua   5060
+105	153	130	                      Feldspar   5542
+ 99	117	115	                       Trooper   5665
+ 87	 99	 97	                  Balsam Green   5365
+ 87	 99	 97	                  Balsam Green   5575
+ 99	115	125	                   Blue Mirage   4844
+199	222	209	                     Opal Blue   4850
+212	219	209	                  Sprout Green   4160
+156	166	163	                        Quarry   4462
+117	138	148	                    Cadet Gray   4463
+ 99	117	115	                       Trooper   4776
+ 92	105	107	                  Gobelin Blue   5255
+ 87	 99	 97	                  Balsam Green   5374
+107	112	107	                   Sedona Sage   5755
+140	153	140	                  Green Milieu   5663
+148	163	150	                       Jadeite   5552
+145	143	128	                    Rock Ridge   0674
+148	135	120	                     Moon Rock   0274
+168	153	140	                    Atmosphere   0555
+186	173	158	                  Feather Gray   0873
+207	217	173	                 Seafoam Green   5650
+161	196	120	                     Jade Lime   5840
+181	209	130	                     Sap Green   5830
+115	186	 97	                     Bud Green   5600
+ 84	168	 89	                 Vibrant Green   5511
+ 87	186	 97	                  Poison Green   5502
+ 51	158	 92	                   Kelly Green   5503
+ 61	163	117	                    Ming Green   5522
+ 61	163	117	                    Ming Green   5505
+ 61	163	117	                    Ming Green   5515
+ 84	133	 97	              Deep Grass Green   5422
+ 79	110	105	               Sagebrush Green   5536
+ 84	 97	 89	                   Dark Forest   5336
+163	201	 92	             Bright Lime Green   5912
+196	217	 99	                     Wild Lime   6021
+194	207	148	                    Lily Green   6051
+161	196	120	                     Jade Lime   5610
+120	168	105	                     Green Tea   5531
+ 94	143	 79	                Fluorite Green   5513
+ 74	105	 84	                        Myrtle   5326
+ 74	105	 84	                        Myrtle   5335
+194	207	173	                      Seacrest   6061
+179	191	130	                          Nile   5822
+153	173	 99	                    Leaf Green   5832
+115	150	 99	                    Jade Green   5722
+ 89	117	 99	                      Dark Ivy   5643
+102	115	102	                 Laurel Wreath   5746
+ 84	 97	 89	                   Dark Forest   5865
+ 87	 99	 97	                  Balsam Green   5576
+ 99	107	 79	                   Loden Green   5735
+128	153	 71	                 Spinach Green   6043
+125	145	 94	                         Epsom   5833
+ 94	128	 89	                   English Ivy   5933
+ 84	 97	 89	                   Dark Forest   5765
+ 79	 99	 87	                    Duck Green   5554
+128	145	125	                     Green Bay   5743
+204	199	158	                    Green Haze   6071
+168	166	125	                    Sage Green   0453
+148	135	107	                     Coriander   0454
+125	110	 94	                        Walnut   0265
+125	117	 92	                  Covert Green   0544
+115	110	107	                 Charcoal Gray   0464
+214	201	 92	                        Acacia   0221
+199	186	125	                    Dried Moss   0313
+199	186	125	                    Dried Moss   0352
+138	138	 97	                           Boa   6133
+ 97	 97	 97	                        Pewter   0366
+112	107	 94	                   Bungee Cord   0356
+ 97	 92	 89	                Dark Gull Gray   5776
+107	112	107	                   Sedona Sage   5876
+ 92	 92	 89	                      Gunmetal   5866
+125	120	102	                Vertiver Green   0266
+145	143	128	                    Rock Ridge   0128
+224	230	207	                    Water Lily   0370
+214	199	171	                      Wood Ash   0372
+194	171	133	                Candied Ginger   0652
+148	128	 82	                Antique Bronze   0726
+196	176	135	                     Drab Gray   0552
+209	186	130	                        Cocoon   0532
+232	217	191	                     Seedpearl   1370
+222	209	166	              Light Chartreuse   0571
+224	179	130	                   Desert Mist   0740
+173	140	 92	                Apple Cinnamon   0941
+227	153	 92	                   Apricot Tan   0913
+227	191	135	                   Desert Dust   0851
+209	161	122	                         Toast   0921
+191	158	115	                           Tan   1133
+184	143	110	                      Macaroon   1132
+168	122	 97	                  Mocha Mousse   1032
+140	 97	 87	                        Cognac   0933
+140	 97	 87	                        Cognac   1244
+143	 94	 77	                        Russet   1326
+140	 97	 87	                        Cognac   1342
+184	122	 87	                       Sunburn   1115
+186	158	130	                        Nouget   1123
+176	143	112	                       Praline   1142
+130	 92	 82	                        Nutmeg   1354
+125	 92	 89	                    Rose Taupe   1746
+135	120	105	                     Pine Bark   1054
+148	120	110	                        Antler   1243
+153	128	110	                   Ginger Snap   0953
+181	163	133	                         Nomad   1061
+148	120	110	                        Antler   1453
+138	112	112	                Twilight Mauve   1844
+235	237	224	                 Summer Shower   0003
+237	232	222	                    Lily White   0190
+227	219	196	               White Asparagus   0780
+222	214	194	                    Bone White   1071
+209	199	179	                       Oatmeal   0872
+201	191	171	                        Peyote   0861
+247	237	219	                 Whisper White   1171
+214	194	166	                 Shifting Sand   0581
+186	158	130	                        Nouget   0934
+179	150	125	                       Natural   0853
+166	143	115	                   Chanterelle   0753
+133	120	102	                        Fossil   0945
+ 89	 84	 87	                        Rabbit   1566
+102	 89	 89	                       Sparrow   1164
+184	184	166	                    Agate Gray   0573
+196	191	171	                      Overcast   0172
+179	171	148	                   Spray Green   1062
+168	153	138	                   Cobblestone   0973
+166	153	140	                          Goat   0874
+138	130	122	                  Steeple Gray   1374
+120	 94	 87	                    Deep Taupe   0576
+227	219	196	               White Asparagus   0870
+214	207	181	                           Fog   1270
+199	191	176	                     Gray Morn   0170
+153	145	122	                   Seneca Rock   0763
+143	130	115	                         Fungi   0864
+120	107	 97	                          Iron   1573
+102	 92	 92	                   Plum Kitten   1186
+115	110	107	                 Charcoal Gray   0575
+143	130	125	                        Cinder   0776
+143	130	125	                        Cinder   0732
+102	 89	 89	                       Sparrow   1366
+181	181	179	                    Storm Gray   0123
+204	209	201	                     Dawn Blue   0150
+217	222	212	                   Zephyr Blue   4070
+209	209	199	                     Foggy Dew   3570
+201	196	181	                    Moonstruck   0174
+201	196	181	                    Moonstruck   0160
+140	138	135	                     Wild Dove   0153
+138	133	133	                    Frost Gray   0140
+107	102	107	                     Excalibur   2776
+125	110	 94	                        Walnut   0134
+212	219	209	                  Sprout Green   4071
+173	184	186	                    Pearl Blue   4072
+138	158	161	                         Arona   3853
+207	201	196	                  Glacier Gray   0145
+171	173	166	                     Blue Gray   0109
+133	138	135	                      Monument   4074
+ 89	 84	 87	                        Rabbit   4175
+105	107	107	                    Steel Gray   3265
+138	133	133	                    Frost Gray   0112
+171	163	161	                     Gull Gray   2673
+204	209	201	                     Dawn Blue   4171
+189	199	189	                         Smoke   3971
+181	181	179	                    Storm Gray   0142
+143	145	140	                       Griffin   4362
+156	166	163	                        Quarry   0156
+156	166	163	                        Quarry   0131
+171	163	161	                     Gull Gray   1972
+143	145	140	                       Griffin   0129
+128	128	122	                     Moon Mist   2564
+ 99	 99	 99	                    Castlerock   2775
+110	 99	102	                         Shark   3475
+214	217	209	                    Blue Blush   3760
+189	199	189	                         Smoke   0163
+156	158	153	                     Limestone   3974
+179	181	176	                      Highrise   0106
+145	138	135	                          Gull   3274
+133	138	135	                      Monument   3263
+143	158	171	                       Chicory   3452
+102	 92	 92	                   Plum Kitten   3666
+102	 92	 92	                   Plum Kitten   3476
+  0	  0	  0	                         Black   0020
+135	204	181	               Pale Aqua Green   5500
+252	158	156	                 Flamingo Pink   1306
+242	143	120	                   Burnt Coral   1501
+250	171	186	                    Prism Pink   1940
+235	122	135	                     Bubblegum   1950

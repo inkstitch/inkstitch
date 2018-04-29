@@ -1,0 +1,346 @@
+GIMP Palette
+Name: Ink/Stitch: Wonderfil Rayon
+Columns: 4
+# RGB Value		                    Color Name Number
+248	232	232	                    Light Pink   1101
+248	219	223	                     Soft Pink   1102
+253	160	171	              Strawberry Cream   1103
+254	134	161	                     Pink Mist   1104
+238	103	136	                      Med Rose   1105
+220	 65	 97	                    Pansy Pink   1106
+218	144	146	                    Dusty Rose   1107
+184	 87	 94	                     Dark Rose   1108
+164	 74	 84	                   Bright Rose   1109
+148	 56	 67	                     Deep Rose   1110
+255	194	199	                  Soft Fuschia   1111
+211	142	161	                 Light Fuschia   1112
+151	251	189	                      Ice Pink   1113
+234	 49	116	                      Hot Pink   1114
+218	 80	132	                     Wild Pink   1115
+179	 39	131	                     Deep Pink   1116
+159	  7	 96	                  Dark Fuschia   1117
+230	180	201	                    Soft Mauve   1118
+229	151	199	                   Light Mauve   1119
+197	106	147	                     Med Mauve   1120
+207	102	164	                    Deep Mauve   1121
+161	 26	128	                  Deep Passion   1122
+128	  1	 88	                Light Burgundy   1123
+110	  0	 69	                 Dark Burgundy   1124
+239	232	220	                   Light Peach   1125
+253	208	179	                     Opal Mist   1126
+250	159	141	                    Flesh Pink   1127
+219	 94	100	                  Bashful Pink   1128
+184	 89	 64	                     Rust Pink   1129
+246	 62	 92	                    Watermelon   1130
+219	178	165	                    Soft Mocha   1131
+209	143	146	                     Med Mocha   1132
+197	118	121	                    Deep Mocha   1133
+255	204	176	                     Pink Snow   1134
+249	161	121	                    Sugar Plum   1135
+247	135	105	                 Charmed Peach   1136
+255	133	100	               Light Tangerine   1137
+254	132	 78	                Soft Tangerine   1138
+255	122	 57	              Medium Tangerine   1139
+241	103	 15	                Dark Tangerine   1140
+251	 68	 12	                Deep Tangerine   1141
+253	207	185	                   Light Coral   1142
+241	179	166	                    Soft Coral   1143
+155	129	129	                  Bright Coral   1144
+224	 98	 64	                    Dark Coral   1145
+197	 37	 16	                    Bright Red   1146
+194	 17	 42	                     Satin Red   1147
+192	  2	 60	                      Deep Red   1148
+110	 20	 55	                  Plush Velvet   1149
+ 79	 17	 38	                Evening Brandy   1150
+241	207	208	                    Silky Pink   1151
+240	169	184	                  Cotton Candy   1152
+250	187	178	                  Angora Rayon   1153
+249	121	128	                  Pink Currant   1154
+246	119	144	                Carnation Pink   1155
+226	160	178	                     Soft Plum   1156
+198	108	130	                      Med Plum   1157
+108	  2	 64	                     Dark Plum   1158
+216	 19	 19	                      Foxy Red   1159
+212	  7	 26	                     Poppy Red   1160
+254	229	228	                  Crystal Pink   1161
+255	203	203	                  Pink Crystal   1162
+253	178	185	                     Rose Wine   1163
+254	119	126	                   Light Punch   1164
+213	 83	 83	                  Medium Punch   1165
+203	 57	 57	                    Dark Punch   1166
+168	 16	 29	                 Christmas Red   1167
+181	  5	 88	                  Wild Fuschia   1168
+210	 28	 25	                   Scarlet Red   1169
+198	 23	 40	                       Sangria   1170
+139	  6	 28	                   Divine Wine   1171
+213	 99	123	                   Barely Rose   1172
+253	247	240	                         Pearl   1173
+252	230	216	                     Milky Way   1174
+247	179	146	                       Apricot   1175
+250	157	101	                  Light Orange   1176
+250	123	 52	                 Medium Orange   1177
+236	 64	  8	                   Deep Orange   1178
+221	  2	  2	                   Dark Orange   1179
+216	  0	107	                       Fuschia   1180
+236	149	163	                  Classic Wine   1181
+184	  9	 42	                   Calypso Red   1182
+194	 82	102	                     Berry Red   1183
+193	  8	 43	                  Midnight Red   1184
+253	254	226	                    Cream Silk   2101
+254	239	178	                    Snow Pearl   2102
+255	204	124	                  Light Yellow   2103
+253	190	 91	                 Medium Yellow   2104
+255	176	 63	                  Golden Honey   2105
+255	154	 56	                      Honeydew   2106
+255	140	 56	                         Mango   2107
+255	121	 41	                       Pumpkin   2108
+244	241	200	                       Vanilla   2109
+252	249	179	                   Light Lemon   2110
+252	248	164	                     Pineapple   2111
+252	238	 94	                      Sunburst   2112
+255	227	129	                  Medium Lemon   2113
+248	202	 78	                    Dark Lemon   2114
+246	186	 64	                    Deep Lemon   2115
+247	234	 74	              Hawaiian Sunrise   2116
+255	218	 44	                 Canary Yellow   2117
+255	196	 38	                        Sunset   2118
+201	172	 70	                    Light Gold   2119
+207	178	 75	                   Medium Gold   2120
+202	146	 37	                     Dark Gold   2121
+207	140	 61	                Burnished Gold   2122
+203	128	 62	           Dark Burnished Gold   2123
+176	149	 54	                  Light Ginger   2124
+167	138	 48	                 Medium Ginger   2125
+167	130	 50	                   Dark Ginger   2126
+234	169	 82	                  Light Copper   2127
+190	119	 34	                        Copper   2128
+253	250	217	                    Pure Pearl   2129
+254	250	200	                   Soft Butter   2130
+252	240	159	                  Light Butter   2131
+255	224	101	                 Medium Butter   2132
+254	202	 62	                 Bright Yellow   2133
+253	193	 30	                   Deep Yellow   2134
+255	177	  9	                   Dark Yellow   2135
+247	246	227	               Peach and Cream   2136
+255	252	222	                 Antique Linen   2137
+252	233	205	                         Flesh   2138
+255	225	174	                Sheer Sunlight   2139
+252	201	128	                  Medium Peach   2140
+245	161	 54	                    Dark Peach   2141
+245	156	 51	                 Orange Sorbet   2142
+238	248	250	                     Soft Blue   3101
+215	221	223	                    Light Blue   3102
+165	191	194	                   Medium Blue   3103
+167	203	229	                 Seashell Blue   3104
+132	165	202	                      Chambray   3105
+151	175	201	                   Light Denim   3106
+ 78	 95	138	                  Medium Denim   3107
+112	138	199	                    Paris Blue   3108
+ 69	100	151	                   Indigo Blue   3109
+104	136	177	                     Blue Jazz   3110
+ 45	 70	124	                    Dark Denim   3111
+158	176	176	               Soft Steel Blue   3112
+154	189	189	                     Snow Blue   3113
+118	136	124	             Medium Steel Blue   3114
+103	120	136	                 Stirling Blue   3115
+ 89	105	121	               Dark Steel Blue   3116
+ 73	 99	 94	                    Metal Blue   3117
+111	118	182	              Light Royal Blue   3118
+ 52	 59	147	             Medium Royal Blue   3119
+ 52	 30	126	               Dark Royal Blue   3120
+136	120	191	              Light Periwinkle   3121
+ 94	 93	125	               Dark Periwinkle   3122
+ 65	 82	136	                    Royal Blue   3123
+ 25	 12	 86	                     Navy Blue   3124
+ 18	  8	 65	                 Midnight Navy   3125
+103	178	199	               Soft Ocean Blue   3126
+ 83	181	211	              Light Ocean Blue   3127
+ 38	149	196	             Medium Ocean Blue   3128
+  1	110	166	             Bright Ocean Blue   3129
+148	219	217	                   Light Frost   3130
+101	206	221	                  Medium Frost   3131
+  6	138	181	                    Aquamarine   3132
+115	156	161	               Light Lake Blue   3133
+ 82	146	164	                     Lake Blue   3134
+ 36	 96	128	                 Imperial Blue   3135
+ 34	 95	120	            Dark Imperial Blue   3136
+241	246	240	                     Pale Blue   3137
+227	240	227	                Light Sky Blue   3138
+202	239	226	                      Sky Blue   3139
+182	243	242	            Light Pacific Blue   3140
+ 93	207	219	                  Pacific Blue   3141
+ 99	184	197	             Dark Pacific Blue   3142
+  3	133	176	           Bright Pacific Blue   3143
+224	231	232	                      Ice Blue   3144
+194	206	212	               Medium Ice Blue   3145
+176	197	217	                 Dark Ice Blue   3146
+127	151	167	                    Slate Blue   3147
+ 85	100	133	             Medium Slate Blue   3148
+ 78	102	139	               Dark Slate Blue   3149
+ 29	 30	 25	                 Midnight Blue   3150
+202	198	130	               Light Pistachio   4101
+156	156	  2	              Medium Pistachio   4102
+143	137	  7	                Dark Pistachio   4103
+249	255	248	                   Pale Celery   4104
+238	252	226	                  Light Celery   4105
+212	240	190	                Pale Oak Green   4106
+205	249	184	               Light Oak Green   4107
+165	221	120	                  Pale Emerald   4108
+ 55	193	 48	                Bright Emerald   4109
+112	207	 60	                Medium Emerald   4110
+ 77	114	 65	              Pale Kelly Green   4111
+ 59	171	 94	                   Kelly Green   4112
+ 55	 89	 28	              Dark Kelly Green   4113
+179	187	147	                    Moss Green   4114
+ 94	109	 48	           Dark Palmetto Green   4115
+137	148	 67	                Palmetto Green   4116
+106	112	 48	         Medium Palmetto Green   4117
+ 97	 91	 45	               Alligator Green   4118
+ 81	 90	 29	                 Lilypad Green   4119
+204	197	 83	                  Spring Green   4120
+150	137	 53	                         Brass   4121
+134	131	 46	                        Bronze   4122
+149	181	 50	            Bright Olive Green   4123
+ 94	129	 39	            Medium Olive Green   4124
+ 54	101	 41	              Dark Olive Green   4125
+182	218	164	               Soft Mint Green   4126
+181	227	189	              Light Mint Green   4127
+150	202	152	             Medium Mint Green   4128
+ 14	180	 92	             Bright Mint Green   4129
+ 27	 76	 51	               Dark Mint Green   4130
+ 36	100	 48	                Soft Evergreen   4131
+ 96	131	 77	              Medium Evergreen   4132
+ 77	130	 97	                     Evergreen   4133
+ 31	 60	 38	                Dark Evergreen   4134
+200	255	244	                    Light Aqua   4135
+167	226	217	                     Soft Aqua   4136
+109	212	196	                   Medium Aqua   4137
+ 33	173	155	                          Aqua   4138
+ 24	172	139	                     Dark Aqua   4139
+  6	137	120	                   Bright Aqua   4140
+  6	113	120	                     Turquoise   4141
+230	245	243	                    Misty Mint   4142
+199	225	222	                     Baby Blue   4143
+170	195	189	                  Exotic Green   4144
+196	216	116	             Pale Meadow Green   4145
+140	167	 62	                  Meadow Green   4146
+152	175	 86	                   Bright Moss   4147
+134	134	 48	                     Dark Moss   4148
+174	190	 86	                Pale Green Oak   4149
+195	220	130	                     Green Oak   4150
+163	204	 72	                Dark Green Oak   4151
+134	197	 88	              Bright Green Oak   4152
+ 82	165	 71	                   Medium Lime   4153
+ 14	150	 57	                    Lime Green   4154
+ 78	115	 61	                   Swamp Green   4155
+ 47	 89	 42	                  Safari Green   4156
+ 48	 81	 53	                    Dark Green   4157
+ 53	 88	 62	                    Deep Green   4158
+253	246	240	                    Candleglow   5101
+255	230	241	                        Orchid   5102
+203	170	191	                    Satin Wine   5103
+210	185	219	                    Soft Tulip   5104
+223	189	236	                   Light Tulip   5105
+186	140	199	                  Medium Tulip   5106
+163	134	177	                    Dark Tulip   5107
+116	 87	150	                  Bright Tulip   5108
+132	 85	143	                      Mulberry   5109
+104	 40	118	               Bright Mulberry   5110
+126	 81	116	                      Amethyst   5111
+ 94	 40	116	                   Dark Purple   5112
+222	217	247	                    Pale Grape   5113
+144	139	171	                   Light Grape   5114
+159	140	172	                         Grape   5115
+ 85	134	121	                  Bright Grape   5116
+ 79	 38	 61	                 Dark Amethyst   5117
+126	 98	182	                   Light Mauve   5118
+ 48	 52	 91	                    Dark Mauve   5119
+102	 66	110	                   Bright Plum   5120
+224	210	200	                          Grey   6101
+232	235	238	                    Pearl Grey   6102
+202	199	212	                   Cinder Grey   6103
+195	205	193	                   Pebble Grey   6104
+170	170	158	                    Stone Grey   6105
+149	141	126	                    Smoke Grey   6106
+100	105	 94	                      Charcoal   6107
+181	180	184	            Pale Sterling Grey   6108
+116	114	127	                 Sterling Grey   6109
+161	157	150	                 Twilight Grey   6110
+ 76	 73	 91	            Dark Twilight Grey   6111
+ 47	 45	 36	                Midnight Metal   6112
+ 22	 25	 42	                 Midnight Blue   6113
+244	237	209	                   Cream Wheat   6114
+209	202	163	                     Spun Gold   6115
+157	157	121	                    Grey Khaki   6116
+114	114	 64	                        Earth    6117
+240	224	170	                           Tan   6118
+209	188	131	                    Medium Tan   6119
+161	143	 66	                      Dark Tan   6120
+ 79	 82	 28	                    Dark Khaki   6121
+248	247	240	                  Pure Diamond   6122
+249	229	210	                   Barely Pink   6123
+243	233	199	                   Sheer Ivory   6124
+234	211	191	                   Soft Demure   6125
+221	168	148	                        Demure   6126
+220	186	128	                  Butterscotch   6127
+117	 86	 37	                       Caramel   6128
+253	245	229	                  Frosty White   6129
+253	255	250	                   Iced Silver   6130
+255	248	243	                    White Silk   6131
+227	214	191	                    Siver Sand   6132
+241	203	154	                    Skin Light   6133
+194	180	150	                         Taupe   6134
+136	120	 79	                    Sage Green   6135
+242	223	186	                   Sheer Beige   7101
+245	231	206	                     Nude Gold   7102
+213	192	173	                    Iced Mocha   7103
+220	181	196	                   Golden Sand   7104
+195	158	 80	                   Brown Sugar   7105
+180	150	107	                   Brown Toast   7106
+127	100	 68	                      Cinnamon   7107
+154	113	 42	                         Cedar   7108
+143	 98	 33	                        Coffee   7109
+108	 75	 39	                         Mocha   7110
+ 94	 58	 19	                        Toffee   7111
+ 80	 40	 10	                    Blackberry   7112
+255	219	183	                   Peach Tulip   7113
+255	152	165	              Butterfly Orange   7114
+224	145	 97	                    Light Rust   7115
+202	118	 43	                   Golden Rust   7116
+162	 83	 30	                     Dark Rust   7117
+154	 62	  6	                   Bright Rust   7118
+246	222	222	                   Pale Salmon   7119
+186	147	134	                        Salmon   7120
+154	103	100	                   Dark Salmon   7121
+113	 61	 19	            Light Copper Brown   7122
+103	 40	 15	             Dark Copper Brown   7123
+ 48	 34	 28	                   Coffee Bean   7124
+ 24	 17	 14	                      Espresso   7125
+248	255	249	                 Silver Tinsel   7126
+235	250	233	                   Silver Grey   7127
+214	228	213	                       Granite   7128
+162	178	161	                   Steel Glaze   7129
+134	142	134	                   Dark Silver   7130
+ 93	 91	 65	                       Parsley   7131
+ 72	 76	 73	                    Grey Suede   7132
+149	140	149	                  Natural Plum   7133
+ 90	 76	 82	              Natural Burgundy   7134
+ 48	 41	 77	                      Sapphire   7135
+ 33	 44	 71	                   Blue Velvet   7136
+221	191	155	                    Soft Beige   7137
+199	152	 91	                  Medium Beige   7138
+237	192	111	                  Golden Honey   7139
+208	161	 78	                  Medium Honey   7140
+128	123	129	               Light Blue Grey   7141
+103	118	133	              Medium Blue Grey   7142
+  8	 29	 56	                Dark Blue Grey   7143
+ 99	118	144	                   Silver Blue   7144
+ 29	 97	189	                    Smurf Blue   7145
+ 21	 47	182	               Dark Smurf Blue   7146
+  0	 49	 86	                Dark Blue Aqua   7147
+ 17	 29	 66	                 Midnight Navy   7148
+255	255	255	                         White   8101
+242	235	222	                    Soft White   8102
+246	241	230	                     Off White   8103
+251	247	241	                 Antique White   8104
+  0	  0	  0	                         Black   9000

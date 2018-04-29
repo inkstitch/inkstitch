@@ -1,0 +1,156 @@
+GIMP Palette
+Name: Ink/Stitch: Mettler Embroidery
+Columns: 4
+# RGB Value		                    Color Name Number
+250	248	246	                         White    002
+  0	  0	  0	                         Black    003
+252	249	239	                 Natural White    703
+252	249	232	                     Off White    704
+252	241	211	                      Eggshell    781
+241	215	170	                      Seashell    844
+210	176	145	                     Light Tan    628
+180	133	104	                         Toast    629
+173	124	100	                   Light Brown    636
+148	 82	 61	                           Tan    511
+128	 63	 46	                   Light Cocoa    839
+110	 49	 35	                         Brown    711
+ 81	 37	 37	                         Camel    786
+ 57	 26	 29	                         Cocoa    712
+ 37	 15	 24	                    Dark Brown    618
+  3	  7	 28	                         Black    745
+113	 70	 61	                   Amber Beige    753
+116	 87	 58	                   Light Brown    698
+190	161	131	                     Light Tan    692
+203	186	157	                          Ecru    820
+244	224	166	                          Glow    520
+228	186	120	                      New Gold    515
+210	145	 79	                         Topaz    517
+186	113	 60	                        Coffee    658
+229	122	 28	                           Nut    507
+178	 67	 44	                          Date    528
+141	 34	 17	                   Coffee Bean    728
+251	136	108	                       Apricot    592
+251	151	138	                         Coral    591
+252	187	134	                         Coral    914
+253	222	174	                        Bisque    605
+254	245	218	                   Light Cream    512
+250	248	171	                         Lemon    502
+255	247	156	                 Light Mustard    961
+250	253	128	                     Star Gold    922
+255	212	 19	                        Nectar    827
+254	163	 54	                     Goldenrod    828
+254	153	 48	                        Orange    505
+255	235	 50	                        Yellow    500
+255	240	 43	                     Sunflower    522
+247	244	 61	                        Yellow    501
+242	249	 78	                      Daffodil    911
+254	207	 37	                        Nectar    767
+211	132	 63	                      Splinter    830
+216	 95	 29	                    Scholastic    829
+181	 76	 44	                    Scholastic    809
+181	 13	 19	                   Red Jubilee    534
+175	 40	 47	                          Rust    822
+229	 67	 57	                  Light Bronze    902
+255	 76	 11	                       Pumpkin    953
+255	 66	 11	                     Orangeade    594
+252	 34	 44	                      Hazy Red    913
+233	 11	 51	                         Red      739
+191	  1	 55	                  Carolina Red    600
+254	237	222	                   Light Coral    645
+251	169	156	                Champagne Pink    802
+252	200	180	                      Flamingo    800
+251	162	155	                    Light Rust    646
+248	 78	103	                        Azalea    596
+169	  2	 68	                          Wine    769
+ 87	  4	 57	                   Dark Maroon    738
+ 54	  0	 37	                    Dark Brown    771
+ 52	  0	 15	                Dark Chocolate    607
+111	  5	 57	                   Dark Maroon    601
+172	  1	 52	                   Dark Maroon    838
+226	  1	 49	                        Maroon    837
+246	 28	 89	                      Foxy Red    835
+250	 27	 61	                      Foxy Red    821
+248	 83	117	                         Blush    806
+248	114	139	                        Shrimp    921
+250	164	193	                          Pink    610
+252	212	222	                        Bisque    647
+247	127	177	                     Pink Mist    803
+246	 94	161	                          Rose    805
+245	 74	147	                    Tuxedo Red    923
+244	 67	144	                          Wine    612
+175	 13	 97	                   Red Jubilee    960
+129	 13	131	                        Cachet    958
+ 57	  2	125	                     Raspberry    583
+  5	 14	 49	                 Midnight Navy    916
+  0	  0	  0	                         Black    559
+204	233	116	                   Flite Green    893
+192	227	 82	                   Flite Green    903
+141	203	 66	                   Light Green    900
+100	185	 75	                   Apple Green    952
+136	202	 91	                   Light Green    546
+105	125	 43	                    Green Dust    547
+ 91	 92	 49	                    Olive Drab    717
+ 79	 71	 66	                    Dark Brown    706
+ 20	 21	 22	                      Charcoal    759
+ 28	 28	 39	                 Midnight Navy    707
+ 62	 67	 74	                         Metal    696
+ 86	 86	 85	                         Metal    657
+ 89	 89	 82	                        Cinder    623
+ 71	 71	 68	                         Metal    859
+ 63	 61	 60	                      Charcoal    700
+ 48	 43	 40	                      Twilight    685
+116	113	 93	                     Palm Leaf    651
+140	136	134	                     Palm Leaf    724
+146	140	144	                        Cinder    640
+153	153	145	                    Dover Gray    725
+217	213	202	                     Ash White    713
+239	194	223	                        Bisque    575
+184	 62	156	                         Tulip    959
+177	 71	160	                         Tulip    611
+113	 58	152	                        Cachet    650
+ 49	 23	 96	                   Violet Blue    581
+ 32	  1	 59	                     Navy Blue    582
+199	232	171	                    Pale Green    536
+141	207	131	                    Pale Green    544
+ 32	154	 80	                 Light Emerald    795
+ 27	122	 55	                  Fleece Green    847
+ 57	 90	 46	                    Dark Green    678
+ 45	 96	 49	                  Green Gables    549
+ 93	115	 41	                    Green Dust    540
+103	189	108	                  Green Gables    895
+100	188	114	                    Pale Green    899
+  2	142	 91	                  Fleece Green    849
+118	199	156	                   Green Pearl    548
+ 53	113	 91	                         Olive    539
+  4	 78	 81	                  Harbor Green    850
+  2	131	107	                    Pine Green    553
+ 78	181	136	                  Harbor Green    554
+ 88	185	141	                   Green Pearl    889
+169	221	188	                    Pale Green    561
+222	242	224	                 Natural White    668
+219	237	233	                    True White    749
+194	227	230	                    Light Blue    787
+161	208	203	                    Light Blue    669
+110	123	116	                          Teal    681
+  5	 58	 80	                  Deep Windsor    690
+  5	 43	 63	                          Navy    864
+  2	 28	 35	                           Ivy    543
+ 26	 37	 24	                         Black    894
+ 57	 90	 46	                    Dark Green    714
+179	211	221	                      Sky Blue    962
+161	175	191	                   Winter Blue    736
+119	165	205	                     Baby Blue    788
+111	147	196	                     Baby Blue    672
+ 95	138	191	                 Oriental Blue    498
+ 87	142	188	                   Tropic Blue    901
+ 52	140	164	                         Misty    890
+ 24	100	142	                         Misty    814
+  4	144	190	                  Blue Horizon    892
+  9	113	176	                   Baltic Blue    888
+ 18	 74	158	                   Lannen Blue    790
+ 20	 56	150	                 Imperial Blue    885
+ 13	 40	126	                    Blue Suede    833
+ 12	 47	125	                   Blue Ribbon    675
+  4	 16	 41	                 Midnight Navy    792
+ 14	 39	 74	                 Midnight Navy    688
+ 52	 58	 93	                    Slate Blue    684

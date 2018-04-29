@@ -1,0 +1,388 @@
+GIMP Palette
+Name: Ink/Stitch: Simthread Rayon
+Columns: 4
+# RGB Value		                    Color Name Number
+254	254	254	                    Snow White  S1001
+255	254	252	                         White  S1002
+254	253	252	                    Lamp Light  S1003
+ 16	 16	 18	                      Charcoal  S1004
+251	241	247	                         Blush  S1005
+251	217	240	                 Fantasia Pink  S1006
+249	193	236	                     Pale Pink  S1007
+247	165	224	                   Orchid Pink  S1008
+248	236	235	                    Light Pink  S1009
+251	236	226	          Wineberry Very Light  S1010
+250	231	233	         Carnation Ultra Light  S1011
+248	136	210	                   Floral Pink  S1012
+248	134	208	                   Floral Pink  S1013
+248	 75	173	                          Pink  S1014
+248	 95	192	                       Passion  S1015
+210	  9	105	                    Strawberry  S1016
+245	 47	167	                       Crimson  S1017
+245	 21	 98	                      Rose Red  S1018
+221	  4	 80	                   Salmon Dark  S1019
+249	178	203	                          Pink  S1020
+248	120	160	                Bubblegum Pink  S1021
+247	 21	 51	                  Cardinal Red  S1022
+251	 13	 38	                  Cardinal Red  S1023
+251	  4	 27	                  Luminous Red  S1024
+245	  4	 27	                       Scarlet  S1025
+209	 12	 57	                      Rosewood  S1026
+216	 12	 45	                      Foxy Red  S1027
+221	 14	 70	                        Cerise  S1028
+252	253	245	                      Eggshell  S1029
+253	251	241	                 Natural White  S1030
+252	250	247	                         White  S1031
+250	 98	 76	                         Coral  S1032
+250	229	207	                         Beige  S1033
+250	229	209	                   Barely Pink  S1034
+250	161	128	                    Peach Pink  S1035
+248	188	 84	                        Mimosa  S1036
+251	142	 25	                      Honeydew  S1037
+250	122	 15	                        Soleil  S1038
+248	107	 34	                        Orange  S1039
+249	124	 55	                 Medium Orange  S1040
+251	 26	 18	               Luminous Orange  S1041
+254	254	245	                      Eggshell  S1042
+253	253	236	                   Ivory White  S1043
+252	251	212	                   Light Maize  S1044
+252	250	229	                         Cream  S1045
+250	240	143	                  Easter Dress  S1046
+249	231	 52	                 Canary Yellow  S1047
+252	231	 39	                 Canary Yellow  S1048
+253	231	 39	                         Straw  S1049
+252	251	132	                 Medium Yellow  S1050
+252	250	 96	                  Lemon Yellow  S1051
+249	251	 57	                          Lime  S1052
+254	254	240	                   Light Beige  S1053
+253	251	175	                   Cream Brown  S1054
+251	252	134	                  Meilee Green  S1055
+252	253	112	                   Lemon Fluff  S1056
+250	251	125	                 Medium Yellow  S1057
+251	251	 74	                          Lime  S1058
+250	222	 60	                           Sun  S1059
+252	213	 55	                        Yellow  S1060
+250	197	 44	                        Sunset  S1061
+233	250	231	                   Silver Grey  S1062
+136	235	169	                          Mint  S1063
+  9	199	182	                    Peppermint  S1064
+  6	163	163	                          Teel  S1065
+128	238	241	                       clWhite  S1066
+106	243	247	                       clWhite  S1067
+212	250	248	                     PALE Aqua  S1068
+125	245	247	                    Alaska Sky  S1069
+  4	202	206	                    Lilac Silk  S1070
+  6	179	176	                    Ocean Blue  S1071
+234	251	250	                    Misty Mint  S1072
+200	248	234	                Pale Turquoise  S1073
+ 71	221	180	              Light teal Green  S1074
+  7	125	 90	                   Irish Green  S1075
+195	238	144	                    Green Dust  S1076
+102	214	100	                       DK Mint  S1077
+ 51	184	 50	                         Kelly  S1078
+213	244	150	              Dark Olive Green  S1079
+168	240	154	                   Light Green  S1080
+ 53	190	 68	                 Harvest Green  S1081
+  7	 63	 71	                   Swamp Green  S1082
+  6	181	 88	             Bright Mint Green  S1083
+191	223	139	                 Lettuce Green  S1084
+182	213	 91	                   Spring Fern  S1085
+143	185	 79	                          Lime  S1086
+139	167	 75	         Medium Green / Yellow  S1087
+231	234	163	                   Young Wheat  S1088
+150	163	 81	                     Pistachio  S1089
+138	180	168	             Jade Medium Light  S1090
+ 48	 78	 71	             Dark Green / Blue  S1091
+ 37	 71	221	                    Smurf Blue  S1092
+192	218	236	                      Ice Blue  S1093
+169	214	241	                     Baby Blue  S1094
+111	181	231	                     Reef Blue  S1095
+ 19	107	229	                  Dolphin Blue  S1096
+189	218	245	                      Ice Blue  S1097
+145	200	237	                     Pale Blue  S1098
+ 94	142	221	              Light Blue Aster  S1099
+ 71	129	219	                         Azure  S1100
+189	226	248	                    Cadet Blue  S1101
+155	183	239	                     Pale Blue  S1102
+139	184	234	                      Sky Blue  S1103
+ 76	123	237	          Electric Bleu Medium  S1104
+ 45	 60	181	                    Royal Blue  S1105
+ 42	 76	206	                    Smurf Blue  S1106
+ 23	 39	179	               Dark Smurf Blue  S1107
+ 28	 33	173	                DK Bright Blue  S1108
+ 29	 36	125	                      Dark Ink  S1109
+ 17	 24	 63	                          Navy  S1110
+ 18	 22	 51	                 Midnight Blue  S1111
+105	141	199	               Med. Periwinkle  S1112
+109	207	225	               Basic Turquoise  S1113
+211	229	238	              Med. Pastel Blue  S1114
+126	169	228	                   Medium Blue  S1115
+ 80	113	172	               Delft Blue dark  S1116
+ 49	 95	173	                    Magic Blue  S1117
+117	207	213	                     Turquoise  S1118
+ 22	183	203	                   Bright Aqua  S1119
+  7	147	169	               Dark Aqua Green  S1120
+ 64	164	192	                  Horizon Blue  S1121
+ 12	 95	146	                    Blue Aster  S1122
+166	239	247	                   Venice Blue  S1123
+ 80	227	240	                         Capri  S1124
+ 20	208	241	                     Turquoise  S1125
+116	206	217	                     Turquoise  S1126
+ 19	235	246	              Medium Turquoise  S1127
+233	221	246	                   PLST Orchid  S1128
+217	205	246	                      LT Lilac  S1129
+104	 48	173	                   Violet Blue  S1130
+ 76	 28	103	                 Purple Accent  S1131
+ 72	 33	157	                    Bright Sky  S1132
+ 49	 27	124	               Dark Royal Blue  S1133
+242	173	225	                   Azalea Pink  S1134
+186	 91	192	                      Amethyst  S1135
+154	 65	163	                          Plum  S1136
+243	231	249	                         White  S1137
+233	169	230	                          Pink  S1138
+197	142	216	                  Medium Tulip  S1139
+118	 48	146	                   Deep Purple  S1140
+112	 30	141	                        Violet  S1141
+242	107	211	                       clWhite  S1142
+230	 60	186	                       Crimson  S1143
+224	 31	154	                    Ruby Glint  S1144
+124	 49	170	                 Medium Purple  S1145
+246	213	246	                Arden Lavender  S1146
+248	168	237	                   Orchid Pink  S1147
+215	 76	193	                    Deep Mauve  S1148
+180	 60	161	                         Tulip  S1149
+223	163	220	                          Pink  S1150
+254	241	235	                         Shell  S1151
+254	250	240	                 Natural White  S1152
+253	254	248	                   Iced Silver  S1153
+249	254	200	                   Flite Green  S1154
+249	213	135	                         Blond  S1155
+242	246	211	                 Grass Green 4  S1156
+255	219	138	                          Glow  S1157
+255	246	208	                         Cream  S1158
+238	209	167	                         Ivory  S1159
+176	175	121	                    Sage Green  S1160
+255	245	222	                   Light Cream  S1161
+254	228	183	                   Shrimp Pink  S1162
+249	209	156	                        Impala  S1163
+251	226	166	                        Blonde  S1164
+242	165	 90	                     Pale Gold  S1165
+250	236	202	                     Pale Gold  S1166
+243	153	 81	                     Sunflower  S1167
+223	162	 76	                          Gold  S1168
+255	253	245	                      Eggshell  S1169
+255	252	210	             Citrus Very Light  S1170
+247	247	175	                   Light Lemon  S1171
+237	236	215	                          Ecru  S1172
+201	147	109	                      Dk. Ecru  S1173
+242	161	 80	                     Pale Gold  S1174
+137	 74	 51	                   Dirty Penny  S1175
+255	246	185	                   Pale Yellow  S1176
+255	251	196	                 Pastel Yellow  S1177
+245	225	112	                  Yellow Cream  S1178
+234	174	 42	                        Yellow  S1179
+255	234	 74	              Hawaiian Sunrise  S1180
+253	231	130	                       clWhite  S1181
+248	249	139	                  Meilee Green  S1182
+253	249	164	                     Pineapple  S1183
+250	229	 86	                   Soft Yellow  S1184
+251	242	 51	                        Yellow  S1185
+240	230	221	                  Palest Ivory  S1186
+242	237	233	                 Natural White  S1187
+250	247	254	                   Silver Blue  S1188
+219	193	181	                    Peach Whip  S1189
+134	100	 93	                  Medium Brown  S1190
+254	246	250	                         Blush  S1191
+209	217	215	                 Illusion Blue  S1192
+184	183	188	            Pale Sterling Grey  S1193
+228	193	183	                   Pale Orange  S1194
+237	227	174	                    PaleYellow  S1195
+177	165	 86	          Khaki Green / Medium  S1196
+231	179	 93	                  Golden Cream  S1197
+141	 77	 51	                   Dirty Penny  S1198
+171	 82	 35	                Light Cinnamon  S1199
+217	103	 68	                    Dark Coral  S1200
+222	 83	 63	                        Orange  S1201
+222	172	113	                  Sierra Light  S1202
+252	252	255	           Sea Bleu Very Light  S1203
+247	248	232	                     Off White  S1204
+253	253	245	                      Eggshell  S1205
+163	142	146	                   Light Brown  S1206
+182	179	146	                      Old Lace  S1207
+245	246	238	                  Palest Ivory  S1208
+184	185	173	                      Skylight  S1209
+148	135	158	                    Ocean Bleu  S1210
+ 27	213	187	                     Turquoise  S1211
+243	248	 84	                      Daffodil  S1212
+143	157	 54	                       MD Lime  S1213
+ 21	 44	124	                      Provence  S1214
+ 32	 33	 41	                    Mysterioso  S1215
+251	 65	188	                     Deep Pink  S1216
+150	 10	 36	                  Baked Cherry  S1217
+249	 15	115	                       Fuschia  S1218
+138	 24	103	                Traffic Purple  S1219
+251	251	199	                    Pale Lemon  S1220
+202	218	160	                   Flite Green  S1221
+124	186	145	                    Mint Green  S1222
+ 90	149	 87	                   Holly Green  S1223
+ 32	179	150	                     Bluestone  S1224
+ 12	165	 82	                   Light Kelly  S1225
+  5	150	103	                      Shamrock  S1226
+ 71	121	227	                         Azure  S1227
+ 79	 88	200	                   Marine Blue  S1228
+ 65	109	228	                  Dolphin Blue  S1229
+ 36	 25	120	                  Purple Twist  S1230
+252	241	251	                 Siberian Iris  S1231
+224	230	246	             Violet Tint White  S1232
+187	172	245	                   Cristy Blue  S1233
+249	 11	 94	                     Dark Pink  S1234
+235	250	 95	                    Green Gold  S1235
+  6	216	181	                DKST Blue Gray  S1236
+ 25	123	 94	                          Jade  S1237
+ 49	 82	 79	                 Enchanted Sea  S1238
+229	229	124	                       clWhite  S1239
+190	170	 81	            Golden Olive Light  S1240
+ 12	196	243	                       Peacock  S1241
+ 16	129	225	             Medium Royal Blue  S1242
+132	100	227	                   Marine Blue  S1243
+186	133	209	                       Heather  S1244
+119	 82	175	              Medium Bleuberry  S1245
+111	 61	175	                    Blue Lilac  S1246
+250	255	216	            Jonquil Very Light  S1247
+252	247	150	                          Gold  S1248
+247	232	113	                  Harvest Gold  S1249
+255	242	255	                 Siberian Iris  S1250
+252	107	184	                   Floral Pink  S1251
+251	 33	123	                      Hot Pink  S1252
+255	227	252	                         White  S1253
+255	 51	182	                     Deep Pink  S1254
+243	 10	 76	             Blossem Pink Dark  S1255
+255	  6	115	                       Fuschia  S1256
+  9	207	245	                     Turquoise  S1257
+ 10	229	244	              Medium Turquoise  S1258
+252	212	128	                          Glow  S1259
+247	158	 24	              Tangerine medium  S1260
+254	249	225	                   Ivory White  S1261
+245	246	 75	                         Lemon  S1262
+167	202	254	                LT Bright Blue  S1263
+ 30	124	250	                   Bright Blue  S1264
+ 26	 33	208	                       clWhite  S1265
+ 24	 75	123	                    Royal Blue  S1266
+ 70	 82	149	                        Purple  S1267
+ 30	 30	 54	                   Dark Purple  S1268
+235	187	201	                         Shell  S1269
+245	170	205	                     Pale Pink  S1270
+232	166	204	                   Medium Pink  S1271
+232	120	173	                   Floral Pink  S1272
+228	122	162	                   Floral Pink  S1273
+243	 83	 93	                     Fluo Pink  S1274
+189	 47	 62	                      Burgundy  S1275
+203	 62	132	                     Dark Pink  S1276
+200	 70	115	                  Pink Rapture  S1277
+203	 39	 96	                       Fuchsia  S1278
+151	 29	 65	                        Brandy  S1279
+140	 25	 61	                  Perfect Ruby  S1280
+170	 42	108	                     Dark Pink  S1281
+191	 80	 63	                     Emberglow  S1282
+168	 75	 69	                   Terra Cotta  S1283
+189	 23	 85	                     Dark Pink  S1284
+154	 68	 95	                      Burgundy  S1285
+153	 38	105	                      Dark Red  S1286
+134	 58	 97	                 Medium Purple  S1287
+143	 43	 71	                      Cabernet  S1288
+120	 21	 36	                  Cherokee Red  S1289
+111	 24	 20	                     Brown Red  S1290
+225	160	120	                        Bamboo  S1291
+176	140	114	                   Tawny Birch  S1292
+192	126	104	                   Canyon Clay  S1293
+123	 54	 40	                    Dark Brown  S1294
+ 96	 36	 46	                   Deep Claret  S1295
+105	 54	 37	                  Ginger Bread  S1296
+123	 64	 50	                      Mushroom  S1297
+121	 39	 48	                      Red Rust  S1298
+124	 64	 36	                    Dark Brown  S1299
+112	 65	 28	            Light Copper Brown  S1300
+ 92	 57	 25	                         Fudge  S1301
+ 86	 54	 31	               Taupe Very Dark  S1302
+ 98	 53	 25	                       Redwood  S1303
+105	 59	 43	                    Dark Brown  S1304
+ 87	 35	 24	                    Fudge Dark  S1305
+ 98	 42	 33	                           Tan  S1306
+ 76	 43	 27	                     Chocolate  S1307
+ 58	 44	 43	                 Deep Mahogany  S1308
+ 72	 43	 37	                    Dark Brown  S1309
+212	224	239	                Pale Baby Blue  S1310
+196	213	231	                    Cadet Blue  S1311
+141	160	178	               Lt. Smokey Blue  S1312
+ 57	 83	118	                     Dark Blue  S1313
+ 34	 68	 93	                    Dragon Fly  S1314
+ 56	 72	108	                           Ash  S1315
+ 65	 82	114	                    Dusty Navy  S1316
+ 77	 90	112	                     True Blue  S1317
+ 67	 80	108	                           Ash  S1318
+ 96	 36	 47	                   Deep Claret  S1319
+105	 54	 38	                  Ginger Bread  S1320
+121	112	117	                    Storm Gray  S1321
+119	107	117	                   Purple Sage  S1322
+ 83	 79	 94	                     Graystone  S1323
+ 64	 45	 51	                         Shark  S1324
+ 58	 45	 45	                 Deep Mahogany  S1325
+233	206	235	                    Light Pink  S1326
+219	181	209	                Delicate Mauve  S1327
+226	154	215	                     Mid Lilac  S1328
+205	113	185	                   Medium Pink  S1329
+136	107	187	                         Mauve  S1330
+154	 90	201	                      Amethyst  S1331
+176	 70	175	                     DK Orchid  S1332
+120	  9	 85	                   Dark Purple  S1333
+164	147	202	                  Violet Tulip  S1334
+ 76	 39	117	                 Purple Accent  S1335
+ 89	 24	 77	                    Sugar Beet  S1336
+ 88	 12	 74	                    Sugar Beet  S1337
+214	250	 77	          Fluo Yellow /  Green  S1338
+186	252	 25	             Olive Green Light  S1339
+ 81	255	131	                         Green  S1340
+ 11	188	 38	                         Kelly  S1341
+194	208	191	                   Light Green  S1342
+128	128	103	                          Aloe  S1343
+144	115	 99	                       Coconut  S1344
+181	192	123	                          Nile  S1345
+126	142	 43	                   Swamp Green  S1346
+118	135	 39	                      Seagrass  S1347
+ 96	126	 49	          Avocado Green medium  S1348
+ 86	 91	 28	           Dark Green / Yellow  S1349
+ 68	 68	 32	                       Avocado  S1350
+ 46	 91	 53	                   Olive Green  S1351
+  3	 90	200	                 Colonial Blue  S1352
+ 31	 52	185	               Dark Smurf Blue  S1353
+249	232	186	                    Almond Oil  S1354
+252	238	 19	                        Yellow  S1355
+182	175	191	                       Thistle  S1356
+249	211	241	                     Pale Pink  S1357
+246	144	192	                   Medium Pink  S1358
+246	 88	157	                          Rose  S1359
+192	  8	  5	                     Red Berry  S1360
+151	  1	  5	                   Terra Cotta  S1361
+188	 53	 18	                   Firecracker  S1362
+157	142	151	                   Light Brown  S1363
+ 81	255	130	                         Green  S1364
+141	115	114	                Twilight Mauve  S1365
+ 86	 96	108	                          Grey  S1366
+ 54	 51	 61	                    Coal Black  S1367
+163	111	233	                     Jacaranda  S1368
+ 92	 43	106	                   Dark Purple  S1369
+  6	 25	134	                   Empire Blue  S1370
+184	 21	 35	                      Foxy Red  S1371
+195	108	177	                   Medium Pink  S1372
+198	135	166	                   Smoky Grape  S1373
+127	 44	 76	                          Wine  S1374
+143	162	 40	                       MD Lime  S1375
+243	224	165	                          Glow  S1376
+144	120	 67	                    Pale Brown  S1377
+242	202	161	                   Coast Point  S1378
+ 87	 36	 32	                         Henna  S1379
+182	116	 73	                    Raw Sienna  S1380
+226	199	 70	                        Mimosa  S1381
+179	178	192	                          Grey  S1382
+ 11	191	243	       Turquoise Medium Bright  S1383
+251	246	189	                 Mellow Yellow  S1384

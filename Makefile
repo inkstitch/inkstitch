@@ -1,4 +1,4 @@
-EXTENSIONS:=embroider embroider_params embroider_simulate embroider_print embroider_input
+EXTENSIONS:=embroider embroider_params embroider_simulate embroider_print embroider_input embroider_palettes
 
 # This gets the branch name or the name of the tag
 VERSION:=$(TRAVIS_BRANCH)
@@ -9,6 +9,7 @@ dist: distclean locales
 	bin/build-dist $(EXTENSIONS)
 	cp inx/*.inx dist
 	cp -a images/examples dist/inkstitch
+	cp -a palettes dist/inkstitch
 	mkdir -p dist/inkstitch/bin/locales
 	cp -a locales/* dist/inkstitch/bin/locales
 	cp -a print dist/inkstitch/bin/
