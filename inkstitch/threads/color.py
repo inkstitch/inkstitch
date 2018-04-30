@@ -2,10 +2,11 @@ import simplestyle
 import re
 import colorsys
 
+
 class ThreadColor(object):
     hex_str_re = re.compile('#([0-9a-z]{3}|[0-9a-z]{6})', re.I)
 
-    def __init__(self, color, name=None, description=None):
+    def __init__(self, color, name=None, number=None, manufacturer=None):
         if color is None:
             self.rgb = (0, 0, 0)
         elif isinstance(color, (list, tuple)):
@@ -16,7 +17,8 @@ class ThreadColor(object):
             raise ValueError("Invalid color: " + repr(color))
 
         self.name = name
-        self.description = description
+        self.number = number
+        self.manufacturer = manufacturer
 
     def __eq__(self, other):
         if isinstance(other, ThreadColor):
@@ -77,4 +79,4 @@ class ThreadColor(object):
         # convert back to values in the range of 0-255
         color = tuple(value * 255 for value in color)
 
-        return ThreadColor(color, name=self.name, description=self.description)
+        return ThreadColor(color, name=self.name, number=self.number, manufacturer=self.manufacturer)

@@ -21,6 +21,7 @@ from inkstitch.extensions import InkstitchExtension
 from inkstitch.stitch_plan import patches_to_stitch_plan
 from inkstitch.svg import render_stitch_plan
 from inkstitch.utils import save_stderr, restore_stderr
+from inkstitch.threads import ThreadCatalog
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from datetime import date
@@ -98,6 +99,7 @@ class PrintPreviewServer(Thread):
     def __init__(self, *args, **kwargs):
         self.html = kwargs.pop('html')
         self.metadata = kwargs.pop('metadata')
+        self.stitch_plan = kwargs.pop('stitch_plan')
         Thread.__init__(self, *args, **kwargs)
         self.daemon = True
         self.last_request_time = None
@@ -176,6 +178,35 @@ class PrintPreviewServer(Thread):
         def set_defaults():
             save_defaults(request.json['value'])
             return "OK"
+
+        @self.app.route('/palette', methods=['POST'])
+        def set_palette():
+            name = request.json['name']
+            catalog = ThreadCatalog()
+            palette = catalog.get_palette_by_name(name)
+            catalog.apply_palette(self.stitch_plan, palette)
+
+            # clear any saved color or thread names
+            for field in self.metadata:
+                if field.startswith('color-') or field.startswith('thread-'):
+                    del self.metadata[field]
+
+            self.metadata['thread-palette'] = name
+
+            return "OK"
+
+        @self.app.route('/threads', methods=['GET'])
+        def get_threads():
+            threads = []
+            for color_block in self.stitch_plan:
+                threads.append({
+                                'hex': color_block.color.hex_digits,
+                                'name': color_block.color.name,
+                                'manufacturer': color_block.color.manufacturer,
+                                'number': color_block.color.number,
+                             })
+
+            return jsonify(threads)
 
     def stop(self):
         # for whatever reason, shutting down only seems possible in
@@ -290,6 +321,7 @@ class Print(InkstitchExtension):
 
         patches = self.elements_to_patches(self.elements)
         stitch_plan = patches_to_stitch_plan(patches)
+        palette = ThreadCatalog().match_and_apply_palette(stitch_plan, self.get_inkstitch_metadata()['thread-palette'])
         render_stitch_plan(self.document.getroot(), stitch_plan)
 
         self.strip_namespaces()
@@ -344,13 +376,15 @@ class Print(InkstitchExtension):
                   },
             svg_overview = overview_svg,
             color_blocks = stitch_plan.color_blocks,
+            palettes = ThreadCatalog().palette_names(),
+            selected_palette = palette.name,
         )
 
         # We've totally mucked with the SVG.  Restore it so that we can save
         # metadata into it.
         self.document = deepcopy(self.original_document)
 
-        print_server = PrintPreviewServer(html=html, metadata=self.get_inkstitch_metadata())
+        print_server = PrintPreviewServer(html=html, metadata=self.get_inkstitch_metadata(), stitch_plan=stitch_plan)
         print_server.start()
 
         time.sleep(1)

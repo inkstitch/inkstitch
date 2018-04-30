@@ -55,7 +55,12 @@ class InkStitchMetadata(MutableMapping):
     # implement these five methods and we get a full dict-like interface.
 
     def __setitem__(self, name, value):
-        self._find_item(name).text = json.dumps(value)
+        item = self._find_item(name)
+
+        if value:
+            item.text = json.dumps(value)
+        else:
+            item.getparent().remove(item)
 
     def _find_item(self, name):
         tag = inkex.addNS(name, "inkstitch")
@@ -70,11 +75,11 @@ class InkStitchMetadata(MutableMapping):
 
         try:
             return json.loads(item.text)
-        except ValueError:
+        except (ValueError, TypeError):
             return None
 
     def __delitem__(self, name):
-        item = self[name]
+        item = self._find_item(name)
 
         if item:
             self.metadata.remove(item)
