@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-04-29 21:29-0400\n"
-"PO-Revision-Date: 2018-04-30 12:21-0400\n"
+"PO-Revision-Date: 2018-04-30 12:31-0400\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -25,7 +25,7 @@ msgid "Directory in which to install palettes:"
 msgstr "Pasta na qual instalar 'palettes':"
 
 msgid "Choose another directory..."
-msgstr "Escolha outro directório..."
+msgstr "Escolha outra pasta..."
 
 msgid "Install"
 msgstr "Instalar"
@@ -195,7 +195,7 @@ msgid "Add STOP instruction after this object (for supported machines and file f
 msgstr "Adiciona instrução de paragem \"STOP\" no final deste objecto (Para maquinas e formatos de ficheiro que suportados)"
 
 msgid "Fill"
-msgstr ""
+msgstr "Preenchimento"
 
 msgid "Manually routed fill stitching"
 msgstr "Definir enchimento manualmente"
@@ -303,7 +303,7 @@ msgid "Unexpected error while generating fill stitches. Please send your SVG fil
 msgstr "Erro inesperado ao gerar pontos de enchimento. Por favor envie o seu SVG para lexelby@github."
 
 msgid "Color"
-msgstr "Côr"
+msgstr "Cor"
 
 msgid "rgb"
 msgstr "rgb"
@@ -333,13 +333,13 @@ msgid "CLIENT"
 msgstr "CLIENTE"
 
 msgid "Enter client name..."
-msgstr ""
+msgstr "Escreva o nome do cliente..."
 
 msgid "PURCHASE ORDER #:"
-msgstr ""
+msgstr "NÚMERO DE ENCOMENDA #:"
 
 msgid "Enter purchase order number..."
-msgstr ""
+msgstr "Escreva o número de encomenda..."
 
 #, python-format
 msgid "%Y.%m.%d"
@@ -352,22 +352,22 @@ msgid "Stops and Trims"
 msgstr ""
 
 msgid "Notes"
-msgstr ""
+msgstr "Notas"
 
 msgid "Unique Colors"
-msgstr ""
+msgstr "Cores únicas"
 
 msgid "Color Blocks"
-msgstr ""
+msgstr "Blocos de cor"
 
 msgid "Design box size"
 msgstr ""
 
 msgid "Total thread used"
-msgstr ""
+msgstr "Quantidade total de fio usada"
 
 msgid "Total stitch count"
-msgstr ""
+msgstr "Número total de pontos"
 
 msgid "Total nr stops"
 msgstr ""
@@ -376,28 +376,28 @@ msgid "Total nr trims"
 msgstr ""
 
 msgid "thread used"
-msgstr ""
+msgstr "fio usado"
 
 msgid "Enter operator notes..."
-msgstr ""
+msgstr "Escreva notas do operador..."
 
 msgid "Job estimated time"
-msgstr ""
+msgstr "Tempo estimado do trabalho"
 
 msgid "Ctrl + Scroll to Zoom"
-msgstr ""
+msgstr "Ctrl + Scroll para Zoom"
 
 msgid "Scale"
-msgstr ""
+msgstr "Escala"
 
 msgid "Fit"
-msgstr ""
+msgstr "Ajustar"
 
 msgid "Apply to all"
-msgstr ""
+msgstr "Aplicar a todos"
 
 msgid "COLOR"
-msgstr ""
+msgstr "COR"
 
 msgid "Estimated time"
 msgstr ""
@@ -409,13 +409,13 @@ msgid "Ink/Stitch Print Preview"
 msgstr ""
 
 msgid "Print"
-msgstr ""
+msgstr "Imprimir"
 
 msgid "Settings"
-msgstr ""
+msgstr "Parâmetros"
 
 msgid "Close"
-msgstr ""
+msgstr "Fechar"
 
 msgid "⚠ lost connection to Ink/Stitch"
 msgstr ""
