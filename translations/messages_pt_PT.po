@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-04-29 21:29-0400\n"
-"PO-Revision-Date: 2018-04-30 12:10-0400\n"
+"PO-Revision-Date: 2018-04-30 12:21-0400\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -34,19 +34,19 @@ msgid "Cancel"
 msgstr "Cancelar"
 
 msgid "Choose Inkscape palettes directory"
-msgstr ""
+msgstr "Escolha o directório de 'palette's do Inkscape"
 
 msgid "Thread palette installation failed"
 msgstr ""
 
 msgid "Installation Failed"
-msgstr ""
+msgstr "Instalação falhou"
 
 msgid "Thread palette files have been installed.  Please restart Inkscape to load the new palettes."
 msgstr ""
 
 msgid "Installation Completed"
-msgstr ""
+msgstr "Instalação concluída"
 
 msgid "Ink/Stitch Thread Palette Installer"
 msgstr ""
@@ -120,10 +120,10 @@ msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwri
 msgstr "Pré-definição \"%s\" já existe. Use outro nome ou clique \"Substituir\""
 
 msgid "Closing..."
-msgstr ""
+msgstr "A fechar..."
 
 msgid "It is safe to close this window now."
-msgstr ""
+msgstr "É agora seguro fechar esta janela."
 
 msgid "A print preview has been opened in your web browser.  This window will stay open in order to communicate with the JavaScript code running in your browser.\n\n"
 "This window will close after you close the print preview in your browser, or you can close it manually if necessary."
@@ -153,10 +153,10 @@ msgid "Tip: use Path -> Object to Path to convert non-paths before embroidering.
 msgstr "Dica: Use opção -> Object to Path para converter objectos em caminhos antes de bordar."
 
 msgid "Stitch Plan"
-msgstr ""
+msgstr "Plano de pontos/bordado"
 
 msgid "Auto-Fill"
-msgstr ""
+msgstr "Auto-preenchimento"
 
 msgid "Automatically routed fill stitching"
 msgstr "Definir enchimento automaticamente"
@@ -216,7 +216,7 @@ msgid "Stagger rows this many times before repeating"
 msgstr "Numero de vezes a escalonar linhas antes de repetir"
 
 msgid "Satin Column"
-msgstr ""
+msgstr "Coluna de matizado"
 
 msgid "Custom satin column"
 msgstr "Coluna de matizado personalizado"
@@ -287,7 +287,7 @@ msgid "Repeats"
 msgstr "Repetições"
 
 msgid "Manual stitch placement"
-msgstr ""
+msgstr "Colocação manual de pontos"
 
 msgid "Stitch every node in the path.  Stitch length and zig-zag spacing are ignored."
 msgstr ""
@@ -303,34 +303,34 @@ msgid "Unexpected error while generating fill stitches. Please send your SVG fil
 msgstr "Erro inesperado ao gerar pontos de enchimento. Por favor envie o seu SVG para lexelby@github."
 
 msgid "Color"
-msgstr ""
+msgstr "Côr"
 
 msgid "rgb"
-msgstr ""
+msgstr "rgb"
 
 msgid "thread"
-msgstr ""
+msgstr "fio"
 
 msgid "# stitches"
-msgstr ""
+msgstr "# pontos"
 
 msgid "# stops"
-msgstr ""
+msgstr "# paragens"
 
 msgid "# trims"
 msgstr ""
 
 msgid "Page"
-msgstr ""
+msgstr "Página"
 
 msgid "Click to choose another logo"
-msgstr ""
+msgstr "Clique para escolher outro logotipo"
 
 msgid "Enter job title..."
-msgstr ""
+msgstr "Escreva o nome do trabalho..."
 
 msgid "CLIENT"
-msgstr ""
+msgstr "CLIENTE"
 
 msgid "Enter client name..."
 msgstr ""
@@ -346,7 +346,7 @@ msgid "%Y.%m.%d"
 msgstr ""
 
 msgid "Thread Consumption"
-msgstr ""
+msgstr "Consumo de fio"
 
 msgid "Stops and Trims"
 msgstr ""
