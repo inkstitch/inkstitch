@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-28 20:42-0400\n"
-"PO-Revision-Date: 2018-04-28 20:51-0400\n"
+"POT-Creation-Date: 2018-04-29 21:29-0400\n"
+"PO-Revision-Date: 2018-04-29 21:31-0400\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Polish\n"
 "MIME-Version: 1.0\n"
@@ -308,7 +308,7 @@ msgstr ""
 msgid "rgb"
 msgstr ""
 
-msgid "thread used"
+msgid "thread"
 msgstr ""
 
 msgid "# stitches"
@@ -375,6 +375,9 @@ msgstr ""
 msgid "Total nr trims"
 msgstr ""
 
+msgid "thread used"
+msgstr ""
+
 msgid "Enter operator notes..."
 msgstr ""
 
@@ -417,15 +420,33 @@ msgstr ""
 msgid "⚠ lost connection to Ink/Stitch"
 msgstr ""
 
+msgid "Page Setup"
+msgstr ""
+
 msgid "Printing Size"
 msgstr ""
 
 msgid "Print Layouts"
 msgstr ""
 
-msgid "Includes all settings visible here and also the icon."
+msgid "Includes these Page Setup settings and also the icon."
 msgstr ""
 
 msgid "Save as defaults"
+msgstr ""
+
+msgid "Design"
+msgstr ""
+
+msgid "Thread Palette"
+msgstr ""
+
+msgid "Changing the thread palette will cause thread names and catalog numbers to be recalculated based on the new palette.  Any changes you have made to color or thread names will be lost.  Are you sure?"
+msgstr ""
+
+msgid "Yes"
+msgstr ""
+
+msgid "No"
 msgstr ""
 
