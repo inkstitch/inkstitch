@@ -1,8 +1,8 @@
 import sys
 import traceback
 from argparse import ArgumentParser
-from inkstitch.utils import save_stderr, restore_stderr
-from inkstitch import extensions
+from lib.utils import save_stderr, restore_stderr
+from lib import extensions
 
 
 parser = ArgumentParser()

@@ -7,8 +7,8 @@ import gettext
 from copy import deepcopy
 import math
 import libembroidery
-from inkstitch.utils import cache
-from inkstitch.utils.geometry import Point
+from .utils import cache
+from .utils.geometry import Point
 
 import inkex
 import simplepath
