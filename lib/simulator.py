@@ -4,8 +4,7 @@ import wx
 import colorsys
 from itertools import izip
 
-from . import PIXELS_PER_MM
-from .svg import color_block_to_point_lists
+from .svg import PIXELS_PER_MM, color_block_to_point_lists
 
 
 class EmbroiderySimulator(wx.Frame):

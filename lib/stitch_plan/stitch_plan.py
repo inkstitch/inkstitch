@@ -1,8 +1,9 @@
-from .. import Stitch, PIXELS_PER_MM
-from ..utils.geometry import Point
+from .stitch import Stitch
 from .stop import process_stop
 from .trim import process_trim
 from .ties import add_ties
+from ..svg import PIXELS_PER_MM
+from ..utils.geometry import Point
 from ..threads import ThreadColor
 
 

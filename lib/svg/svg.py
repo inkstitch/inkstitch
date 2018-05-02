@@ -1,5 +1,10 @@
 import simpletransform, simplestyle, inkex
-from . import _, get_viewbox_transform, cache, SVG_GROUP_TAG, INKSCAPE_LABEL, INKSCAPE_GROUPMODE, SVG_PATH_TAG
+
+from .units import get_viewbox_transform
+from .tags import SVG_GROUP_TAG, INKSCAPE_LABEL, INKSCAPE_GROUPMODE, SVG_PATH_TAG
+from ..i18n import _
+from ..utils import cache
+
 
 def color_block_to_point_lists(color_block):
     point_lists = [[]]

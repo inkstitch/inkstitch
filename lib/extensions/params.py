@@ -13,8 +13,8 @@ from collections import defaultdict
 from functools import partial
 from itertools import groupby
 
-from .. import _
 from .base import InkstitchExtension
+from ..i18n import _
 from ..stitch_plan import patches_to_stitch_plan
 from ..elements import EmbroideryElement, Fill, AutoFill, Stroke, SatinColumn
 from ..utils import save_stderr, restore_stderr

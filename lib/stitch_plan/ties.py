@@ -1,7 +1,9 @@
+from copy import deepcopy
+
+from .stitch import Stitch
 from ..utils import cut_path
 from ..stitches import running_stitch
-from .. import Stitch
-from copy import deepcopy
+
 
 def add_tie(stitches, tie_path):
     if stitches[-1].no_ties:

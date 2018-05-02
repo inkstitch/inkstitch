@@ -1,17 +1,19 @@
 import os
 from os.path import realpath, dirname, join as path_join
 import sys
+from inkex import etree
+import inkex
 
 # help python find libembroidery when running in a local repo clone
 if getattr(sys, 'frozen', None) is None:
     sys.path.append(realpath(path_join(dirname(__file__), '..', '..')))
 
 from libembroidery import *
-from inkex import etree
-import inkex
-from .. import PIXELS_PER_MM, INKSCAPE_LABEL, _
+
+from ..svg import PIXELS_PER_MM, render_stitch_plan
+from ..svg.tags import INKSCAPE_LABEL
+from ..i18n import _
 from ..stitch_plan import StitchPlan
-from ..svg import render_stitch_plan
 
 
 class Input(object):

@@ -1,7 +1,8 @@
 import sys
-from .. import _, Point
+
 from .element import param, EmbroideryElement, Patch
-from ..utils import cache
+from ..i18n import _
+from ..utils import cache, Point
 
 
 warned_about_legacy_running_stitch = False

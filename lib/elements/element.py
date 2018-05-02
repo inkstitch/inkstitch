@@ -1,15 +1,17 @@
 import sys
 from copy import deepcopy
-
-from ..utils import cache
 from shapely import geometry as shgeo
-from .. import _, PIXELS_PER_MM, get_viewbox_transform, get_stroke_scale, convert_length
+
+from ..i18n import _
+from ..utils import cache
+from ..svg import PIXELS_PER_MM, get_viewbox_transform, convert_length, get_doc_size
 
 # inkscape-provided utilities
 import simpletransform
 import simplestyle
 import cubicsuperpath
 from cspsubdiv import cspsubdiv
+
 
 class Patch:
     """A raw collection of stitches with attached instructions."""
@@ -146,6 +148,15 @@ class EmbroideryElement(object):
 
     @property
     @cache
+    def stroke_scale(self):
+        svg = self.node.getroottree().getroot()
+        doc_width, doc_height = get_doc_size(svg)
+        viewbox = svg.get('viewBox', '0 0 %s %s' % (doc_width, doc_height))
+        viewbox = viewbox.strip().replace(',', ' ').split()
+        return  doc_width / float(viewbox[2])
+
+    @property
+    @cache
     def stroke_width(self):
         width = self.get_style("stroke-width")
 
@@ -153,8 +164,7 @@ class EmbroideryElement(object):
             return 1.0
 
         width = convert_length(width)
-
-        return width * get_stroke_scale(self.node.getroottree().getroot())
+        return width * self.stroke_scale
 
     @property
     def path(self):

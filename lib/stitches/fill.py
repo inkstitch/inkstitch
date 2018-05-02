@@ -1,8 +1,9 @@
-from .. import PIXELS_PER_MM
-from ..utils import cache, Point as InkstitchPoint
 import shapely
 import math
 import sys
+
+from ..svg import PIXELS_PER_MM
+from ..utils import cache, Point as InkstitchPoint
 
 
 def legacy_fill(shape, angle, row_spacing, end_row_spacing, max_stitch_length, flip, staggers):
@@ -242,4 +243,3 @@ def pull_runs(rows, shape, row_spacing):
         count += 1
 
     return runs
-

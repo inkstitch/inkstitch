@@ -3,7 +3,9 @@ from os.path import dirname, realpath
 import sys
 from glob import glob
 from collections import Sequence
+
 from .palette import ThreadPalette
+
 
 class _ThreadCatalog(Sequence):
     """Holds a set of ThreadPalettes."""

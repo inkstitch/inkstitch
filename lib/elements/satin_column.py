@@ -1,9 +1,9 @@
 from itertools import chain, izip
-
-from .. import _, Point
-from .element import param, EmbroideryElement, Patch
-from ..utils import cache
 from shapely import geometry as shgeo, ops as shops
+
+from .element import param, EmbroideryElement, Patch
+from ..i18n import _
+from ..utils import cache, Point
 
 
 class SatinColumn(EmbroideryElement):

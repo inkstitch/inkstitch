@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-29 21:45-0400\n"
+"POT-Creation-Date: 2018-05-01 21:21-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,17 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.3\n"
-
-#, python-format
-msgid "parseLengthWithUnits: unknown unit %s"
-msgstr ""
-
-#, python-format
-msgid "Unknown unit: %s"
-msgstr ""
-
-msgid "Stitch Plan"
-msgstr ""
 
 msgid "Auto-Fill"
 msgstr ""
@@ -331,6 +320,17 @@ msgstr ""
 msgid ""
 "Unexpected error while generating fill stitches. Please send your SVG "
 "file to lexelby@github."
+msgstr ""
+
+msgid "Stitch Plan"
+msgstr ""
+
+#, python-format
+msgid "parseLengthWithUnits: unknown unit %s"
+msgstr ""
+
+#, python-format
+msgid "Unknown unit: %s"
 msgstr ""
 
 msgid "Color"

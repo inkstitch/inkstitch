@@ -1,10 +1,10 @@
 import math
-from .. import _
-from .element import param, Patch
-from ..utils import cache
-from .fill import Fill
 from shapely import geometry as shgeo
+from ..i18n import _
+from ..utils import cache
 from ..stitches import auto_fill
+from .element import param, Patch
+from .fill import Fill
 
 
 class AutoFill(Fill):

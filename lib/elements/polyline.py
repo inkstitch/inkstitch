@@ -1,5 +1,6 @@
-from .. import _, Point
 from .element import param, EmbroideryElement, Patch
+from ..i18n import _
+from ..utils.geometry import Point
 from ..utils import cache
 
 

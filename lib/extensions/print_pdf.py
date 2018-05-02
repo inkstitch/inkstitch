@@ -10,21 +10,20 @@ from copy import deepcopy
 import wx
 import appdirs
 import json
-
 import inkex
-from .. import _, PIXELS_PER_MM, SVG_GROUP_TAG, translation as inkstitch_translation
-from .base import InkstitchExtension
-from ..stitch_plan import patches_to_stitch_plan
-from ..svg import render_stitch_plan
-from ..threads import ThreadCatalog
-
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from datetime import date
 import base64
-
 from flask import Flask, request, Response, send_from_directory, jsonify
 import webbrowser
 import requests
+
+from .base import InkstitchExtension
+from ..i18n import _, translation as inkstitch_translation
+from ..svg import PIXELS_PER_MM, render_stitch_plan
+from ..svg.tags import SVG_GROUP_TAG
+from ..stitch_plan import patches_to_stitch_plan
+from ..threads import ThreadCatalog
 
 
 def datetimeformat(value, format='%Y/%m/%d'):

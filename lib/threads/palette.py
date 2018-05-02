@@ -1,8 +1,9 @@
 from collections import Set
-from .color import ThreadColor
 from colormath.color_objects import sRGBColor, LabColor
 from colormath.color_conversions import convert_color
 from colormath.color_diff import delta_e_cie1994
+
+from .color import ThreadColor
 
 
 def compare_thread_colors(color1, color2):

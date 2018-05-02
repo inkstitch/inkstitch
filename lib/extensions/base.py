@@ -3,8 +3,9 @@ import re
 import json
 from copy import deepcopy
 from collections import MutableMapping
+
+from ..svg.tags import *
 from ..elements import AutoFill, Fill, Stroke, SatinColumn, Polyline, EmbroideryElement
-from .. import SVG_POLYLINE_TAG, SVG_GROUP_TAG, SVG_DEFS_TAG, INKSCAPE_GROUPMODE, EMBROIDERABLE_TAGS, PIXELS_PER_MM
 from ..utils import cache
 
 

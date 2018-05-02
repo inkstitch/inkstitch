@@ -10,6 +10,7 @@ import time
 import logging
 import wx
 import inkex
+
 from ..utils import guess_inkscape_config_path
 
 

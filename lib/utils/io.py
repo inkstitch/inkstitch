@@ -2,6 +2,7 @@ import os
 import sys
 from cStringIO import StringIO
 
+
 def save_stderr():
     # GTK likes to spam stderr, which inkscape will show in a dialog.
     null = open(os.devnull, 'w')

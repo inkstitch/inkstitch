@@ -1,11 +1,14 @@
-from fill import intersect_region_with_grating, row_num, stitch_row
-from .. import _, PIXELS_PER_MM, Point as InkstitchPoint
 import sys
 import shapely
 import networkx
 import math
 from itertools import groupby
 from collections import deque
+
+from .fill import intersect_region_with_grating, row_num, stitch_row
+from ..i18n import _
+from ..svg import PIXELS_PER_MM
+from ..utils.geometry import Point as InkstitchPoint
 
 
 class MaxQueueLengthExceeded(Exception):

@@ -1,9 +1,12 @@
-from .. import _, PIXELS_PER_MM
-from .element import param, EmbroideryElement, Patch
-from ..utils import cache
 from shapely import geometry as shgeo
 import math
+
+from .element import param, EmbroideryElement, Patch
+from ..i18n import _
+from ..svg import PIXELS_PER_MM
+from ..utils import cache
 from ..stitches import running_stitch, auto_fill, legacy_fill
+
 
 class Fill(EmbroideryElement):
     element_name = _("Fill")
