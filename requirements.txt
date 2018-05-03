@@ -6,8 +6,11 @@ lxml
 appdirs
 numpy
 jinja2
-flask
 requests
+colormath
+
+# We're not ready for flask 1.0 yet.  Logging changed, among othe things.
+flask==0.*
+
 pywinutils; sys.platform == 'win32'
 pywin32; sys.platform == 'win32'
-colormath
