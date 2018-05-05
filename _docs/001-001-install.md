@@ -49,3 +49,5 @@ I prefer to symbolically link into my git clone, which allows me to hack on the 
 ## Upgrade
 
 Simply replace the files in the extension folder with the newer version.
+
+**Hint:** Use [RSS-Feed](https://github.com/lexelby/inkstitch/releases.atom) to keep track of new releases.
