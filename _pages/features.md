@@ -25,6 +25,5 @@ BRO, COL, CSD, CSV, DAT, DSB, DST, DSZ, EDR, EMD, EXP, EXY, FXY, GT, HUS, INB, I
 
 * Lettering
 * Gradient Fill (already realised as a [hidden feature](https://inkstitch.org/docs/features/))
-* Patterned Fill
 * Pattern Fill
 * Realistic Rendering
