@@ -42,7 +42,7 @@
               <option value="" selected>None</option>
             {% endif %}
             {% for palette in palettes %}
-              <option value="{{ palette }}" {{ "selected" if palette == selected_palette else "" }}>{{ palette }}</option>
+              <option value="{{ palette }}" {{ "selected" if palette == selected_palette.name else "" }}>{{ palette }}</option>
             {% endfor %}
           </select>
         </p>

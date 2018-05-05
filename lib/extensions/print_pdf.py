@@ -371,7 +371,7 @@ class Print(InkstitchExtension):
             svg_overview = overview_svg,
             color_blocks = stitch_plan.color_blocks,
             palettes = ThreadCatalog().palette_names(),
-            selected_palette = palette.name,
+            selected_palette = palette,
         )
 
         # We've totally mucked with the SVG.  Restore it so that we can save
