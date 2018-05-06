@@ -7,23 +7,52 @@ last_modified_at: 2018-05-05
 
 ## Ink/Stitch Features
 
-* Cross Platform (Windows and Linux)
-* Import and Export many Formats
-* Prepare the Design with Inkscape (SVG)
-* Supported Stitches: manual stitch, running stitch, fill stitch, satin stitch
+* Digitize machine embroidery designs using Inkscape (SVG)
+* Supported Stitches: 
+  * fill stitch
+    * automatically fill arbitrary shapes with stitches
+    * adjust the stitch length, row spacing, and row angle
+    * underlay
+  * satin stitch
+    * custom-design your satin column with varying width
+    * mix and match 3 kinds of underlay
+      * center-walk
+      * contour
+      * zig-zag
+  * running stitch
+  * manual stitch
+    * plot each stitch exactly where you want it
+* Cross Platform (Windows and Linux &mdash; Mac testers needed!)
+  * all code libraries built in, no need to install anything else!
+* User interface translated to several languages ([translation help appreciated](https://crowdin.com/project/inkstitch)!)
+* Import and Export many popular machine embroiddery formats
 * Add Trims and Stops
 * Edit Stitch Order
-* Set Custom Origins
-* Simulate Preview
-* Print Templates
+* Set custom origin point as (0, 0) in the design file
+* Animated stitch-out preview
+  * including live-preview as you adjust settings like row spacing underlay, etc.
+* Print to PDF
+  * embroidery machine operator layout with color blocks, thread names, stitch counts, and custom notes
+  * client-oriented layout designed for you to send to your customer
+  * highly customizable through your web browser
+* Thread manufacturer palettes (over 60 manufacturers included)
+  * automated installation of Inkscape palettes for use in your designs
+  * thread names and catalog numbers included in PDF printouts
 
 ### Supported File Formats:
 
-BRO, COL, CSD, CSV, DAT, DSB, DST, DSZ, EDR, EMD, EXP, EXY, FXY, GT, HUS, INB, INF, JEF, KSM, MAX, MIT, NEW, OFM, PCD, PCM, PCQ, PCS, PEC, PES, PHB, PHC, PLT, RGB, SEW, SHV, SST, STX, T01, T09, TAP, THR, U00, VIP, VP3, XXX, ZSK
+DST, XXX, PES, U00, EXP, VP3, BRO, COL, CSD, DAT, DSB, DSZ, EDR, EMD,  EXY, FXY, GT, HUS, INB, INF, JEF, KSM, MAX, MIT, NEW, OFM, PCD, PCM, PCQ, PCS, PEC, PHB, PHC, PLT, RGB, SEW, SHV, SST, STX, T01, T09, TAP, THR,  VIP, ZSK
 
-## Future Features
+## Roadmap
+
+Here are features we're hoping to add, though not necessarily in this order:
 
 * Lettering
-* Gradient Fill (already realised as a [hidden feature](https://inkstitch.org/docs/features/))
+* Gradient Fill (already realised as a [hidden feature](https://github.com/lexelby/inkstitch/pull/108#issuecomment-369444197))
 * Pattern Fill
 * Realistic Rendering
+* Mac support (testers and build engineers needed!)
+* 32-bit Linux support (build engineers needed!)
+* bean stitch
+* "E" stitch
+
