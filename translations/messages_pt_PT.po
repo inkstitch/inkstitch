@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-28 17:59-0400\n"
-"PO-Revision-Date: 2018-04-28 20:40-0400\n"
+"POT-Creation-Date: 2018-04-29 21:29-0400\n"
+"PO-Revision-Date: 2018-04-30 12:31-0400\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -22,31 +22,31 @@ msgid "\n\n"
 msgstr "Vê uma mensagem \"não existe tal opção\"? Por favor reiniciar o Inkscape."
 
 msgid "Directory in which to install palettes:"
-msgstr ""
+msgstr "Pasta na qual instalar 'palettes':"
 
 msgid "Choose another directory..."
-msgstr ""
+msgstr "Escolha outra pasta..."
 
 msgid "Install"
-msgstr ""
+msgstr "Instalar"
 
 msgid "Cancel"
 msgstr "Cancelar"
 
 msgid "Choose Inkscape palettes directory"
-msgstr ""
+msgstr "Escolha o directório de 'palette's do Inkscape"
 
 msgid "Thread palette installation failed"
 msgstr ""
 
 msgid "Installation Failed"
-msgstr ""
+msgstr "Instalação falhou"
 
 msgid "Thread palette files have been installed.  Please restart Inkscape to load the new palettes."
 msgstr ""
 
 msgid "Installation Completed"
-msgstr ""
+msgstr "Instalação concluída"
 
 msgid "Ink/Stitch Thread Palette Installer"
 msgstr ""
@@ -120,10 +120,10 @@ msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwri
 msgstr "Pré-definição \"%s\" já existe. Use outro nome ou clique \"Substituir\""
 
 msgid "Closing..."
-msgstr ""
+msgstr "A fechar..."
 
 msgid "It is safe to close this window now."
-msgstr ""
+msgstr "É agora seguro fechar esta janela."
 
 msgid "A print preview has been opened in your web browser.  This window will stay open in order to communicate with the JavaScript code running in your browser.\n\n"
 "This window will close after you close the print preview in your browser, or you can close it manually if necessary."
@@ -153,10 +153,10 @@ msgid "Tip: use Path -> Object to Path to convert non-paths before embroidering.
 msgstr "Dica: Use opção -> Object to Path para converter objectos em caminhos antes de bordar."
 
 msgid "Stitch Plan"
-msgstr ""
+msgstr "Plano de pontos/bordado"
 
 msgid "Auto-Fill"
-msgstr ""
+msgstr "Auto-preenchimento"
 
 msgid "Automatically routed fill stitching"
 msgstr "Definir enchimento automaticamente"
@@ -195,7 +195,7 @@ msgid "Add STOP instruction after this object (for supported machines and file f
 msgstr "Adiciona instrução de paragem \"STOP\" no final deste objecto (Para maquinas e formatos de ficheiro que suportados)"
 
 msgid "Fill"
-msgstr ""
+msgstr "Preenchimento"
 
 msgid "Manually routed fill stitching"
 msgstr "Definir enchimento manualmente"
@@ -216,7 +216,7 @@ msgid "Stagger rows this many times before repeating"
 msgstr "Numero de vezes a escalonar linhas antes de repetir"
 
 msgid "Satin Column"
-msgstr ""
+msgstr "Coluna de matizado"
 
 msgid "Custom satin column"
 msgstr "Coluna de matizado personalizado"
@@ -287,9 +287,13 @@ msgid "Repeats"
 msgstr "Repetições"
 
 msgid "Manual stitch placement"
-msgstr ""
+msgstr "Colocação manual de pontos"
 
 msgid "Stitch every node in the path.  Stitch length and zig-zag spacing are ignored."
+msgstr ""
+
+msgid "Legacy running stitch setting detected!\n\n"
+"It looks like you're using a stroke smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set your stroke to be dashed to indicate running stitch.  Any kind of dash will work."
 msgstr ""
 
 msgid "Unable to autofill.  This most often happens because your shape is made up of multiple sections that aren't connected."
@@ -299,71 +303,71 @@ msgid "Unexpected error while generating fill stitches. Please send your SVG fil
 msgstr "Erro inesperado ao gerar pontos de enchimento. Por favor envie o seu SVG para lexelby@github."
 
 msgid "Color"
-msgstr ""
+msgstr "Cor"
 
 msgid "rgb"
-msgstr ""
+msgstr "rgb"
 
-msgid "thread used"
-msgstr ""
+msgid "thread"
+msgstr "fio"
 
 msgid "# stitches"
-msgstr ""
+msgstr "# pontos"
 
 msgid "# stops"
-msgstr ""
+msgstr "# paragens"
 
 msgid "# trims"
 msgstr ""
 
 msgid "Page"
-msgstr ""
+msgstr "Página"
 
 msgid "Click to choose another logo"
-msgstr ""
+msgstr "Clique para escolher outro logotipo"
 
 msgid "Enter job title..."
-msgstr ""
+msgstr "Escreva o nome do trabalho..."
 
 msgid "CLIENT"
-msgstr ""
+msgstr "CLIENTE"
 
 msgid "Enter client name..."
-msgstr ""
+msgstr "Escreva o nome do cliente..."
 
 msgid "PURCHASE ORDER #:"
-msgstr ""
+msgstr "NÚMERO DE ENCOMENDA #:"
 
 msgid "Enter purchase order number..."
-msgstr ""
+msgstr "Escreva o número de encomenda..."
 
 #, python-format
 msgid "%Y.%m.%d"
 msgstr ""
 
 msgid "Thread Consumption"
-msgstr ""
+msgstr "Consumo de fio"
 
 msgid "Stops and Trims"
 msgstr ""
 
 msgid "Notes"
-msgstr ""
+msgstr "Notas"
 
 msgid "Unique Colors"
-msgstr ""
+msgstr "Cores únicas"
 
 msgid "Color Blocks"
-msgstr ""
+msgstr "Blocos de cor"
 
 msgid "Design box size"
 msgstr ""
 
 msgid "Total thread used"
-msgstr ""
+msgstr "Quantidade total de fio usada"
 
 msgid "Total stitch count"
-msgstr ""
+msgstr "Número total de pontos"
 
 msgid "Total nr stops"
 msgstr ""
@@ -371,26 +375,29 @@ msgstr ""
 msgid "Total nr trims"
 msgstr ""
 
+msgid "thread used"
+msgstr "fio usado"
+
 msgid "Enter operator notes..."
-msgstr ""
+msgstr "Escreva notas do operador..."
 
 msgid "Job estimated time"
-msgstr ""
+msgstr "Tempo estimado do trabalho"
 
 msgid "Ctrl + Scroll to Zoom"
-msgstr ""
+msgstr "Ctrl + Scroll para Zoom"
 
 msgid "Scale"
-msgstr ""
+msgstr "Escala"
 
 msgid "Fit"
-msgstr ""
+msgstr "Ajustar"
 
 msgid "Apply to all"
-msgstr ""
+msgstr "Aplicar a todos"
 
 msgid "COLOR"
-msgstr ""
+msgstr "COR"
 
 msgid "Estimated time"
 msgstr ""
@@ -402,15 +409,18 @@ msgid "Ink/Stitch Print Preview"
 msgstr ""
 
 msgid "Print"
-msgstr ""
+msgstr "Imprimir"
 
 msgid "Settings"
-msgstr ""
+msgstr "Parâmetros"
 
 msgid "Close"
-msgstr ""
+msgstr "Fechar"
 
 msgid "⚠ lost connection to Ink/Stitch"
+msgstr ""
+
+msgid "Page Setup"
 msgstr ""
 
 msgid "Printing Size"
@@ -419,9 +429,24 @@ msgstr ""
 msgid "Print Layouts"
 msgstr ""
 
-msgid "Includes all settings visible here and also the icon."
+msgid "Includes these Page Setup settings and also the icon."
 msgstr ""
 
 msgid "Save as defaults"
+msgstr ""
+
+msgid "Design"
+msgstr ""
+
+msgid "Thread Palette"
+msgstr ""
+
+msgid "Changing the thread palette will cause thread names and catalog numbers to be recalculated based on the new palette.  Any changes you have made to color or thread names will be lost.  Are you sure?"
+msgstr ""
+
+msgid "Yes"
+msgstr ""
+
+msgid "No"
 msgstr ""
 

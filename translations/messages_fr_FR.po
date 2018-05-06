@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-28 17:59-0400\n"
-"PO-Revision-Date: 2018-04-28 20:41-0400\n"
+"POT-Creation-Date: 2018-04-29 21:29-0400\n"
+"PO-Revision-Date: 2018-05-05 21:28-0400\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -284,12 +284,16 @@ msgid "Running stitch length"
 msgstr "Longueur de point courant"
 
 msgid "Repeats"
-msgstr "Répéter"
+msgstr "répétez"
 
 msgid "Manual stitch placement"
 msgstr ""
 
 msgid "Stitch every node in the path.  Stitch length and zig-zag spacing are ignored."
+msgstr ""
+
+msgid "Legacy running stitch setting detected!\n\n"
+"It looks like you're using a stroke smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set your stroke to be dashed to indicate running stitch.  Any kind of dash will work."
 msgstr ""
 
 msgid "Unable to autofill.  This most often happens because your shape is made up of multiple sections that aren't connected."
@@ -304,8 +308,8 @@ msgstr "Couleur"
 msgid "rgb"
 msgstr "RGB"
 
-msgid "thread used"
-msgstr "fil utilisé"
+msgid "thread"
+msgstr ""
 
 msgid "# stitches"
 msgstr "# points"
@@ -371,6 +375,9 @@ msgstr "Total nr stop"
 msgid "Total nr trims"
 msgstr "Total nr stop"
 
+msgid "thread used"
+msgstr "fil utilisé"
+
 msgid "Enter operator notes..."
 msgstr ""
 
@@ -411,7 +418,10 @@ msgid "Close"
 msgstr "Fermer"
 
 msgid "⚠ lost connection to Ink/Stitch"
-msgstr "Connexion perdu avec Ink/Stitch"
+msgstr "⚠ Connexion perdu avec Ink/Stitch"
+
+msgid "Page Setup"
+msgstr ""
 
 msgid "Printing Size"
 msgstr "Taille d’impression"
@@ -419,9 +429,24 @@ msgstr "Taille d’impression"
 msgid "Print Layouts"
 msgstr ""
 
-msgid "Includes all settings visible here and also the icon."
+msgid "Includes these Page Setup settings and also the icon."
 msgstr ""
 
 msgid "Save as defaults"
+msgstr ""
+
+msgid "Design"
+msgstr ""
+
+msgid "Thread Palette"
+msgstr ""
+
+msgid "Changing the thread palette will cause thread names and catalog numbers to be recalculated based on the new palette.  Any changes you have made to color or thread names will be lost.  Are you sure?"
+msgstr ""
+
+msgid "Yes"
+msgstr ""
+
+msgid "No"
 msgstr ""
 
