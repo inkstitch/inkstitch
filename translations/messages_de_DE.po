@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-04-29 21:29-0400\n"
-"PO-Revision-Date: 2018-04-29 21:31-0400\n"
+"PO-Revision-Date: 2018-05-06 03:50-0400\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -23,31 +23,31 @@ msgstr "\n\n"
 "  Sehen Sie eine Meldung \"keine solche Option\"?  Zum beheben bitte Inkscape neu starten."
 
 msgid "Directory in which to install palettes:"
-msgstr ""
+msgstr "Installationsverzeichnis für Farbpaletten:"
 
 msgid "Choose another directory..."
-msgstr ""
+msgstr "Anderes Verzeichnis wählen..."
 
 msgid "Install"
-msgstr ""
+msgstr "Installieren"
 
 msgid "Cancel"
 msgstr "Abbrechen"
 
 msgid "Choose Inkscape palettes directory"
-msgstr ""
+msgstr "Wähle Inkscape Farbpaletten-Verzeichnis"
 
 msgid "Thread palette installation failed"
-msgstr ""
+msgstr "Installation der Garnpaletten fehlgeschlagen"
 
 msgid "Installation Failed"
-msgstr ""
+msgstr "Installation fehlgeschlagen"
 
 msgid "Thread palette files have been installed.  Please restart Inkscape to load the new palettes."
-msgstr ""
+msgstr "Die Garnpaletten wurden erfolgreich installiert. Inkscape muss jetzt neu gestartet werden, um sie zu laden."
 
 msgid "Installation Completed"
-msgstr ""
+msgstr "Installation abgeschlossen"
 
 msgid "Ink/Stitch Thread Palette Installer"
 msgstr ""
@@ -121,14 +121,15 @@ msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwri
 msgstr "Einstellung \"%s\" bereits vorhanden. Bitte verwenden Sie einen anderen Namen oder drücken Sie \"Überschreiben\""
 
 msgid "Closing..."
-msgstr ""
+msgstr "Schließen..."
 
 msgid "It is safe to close this window now."
-msgstr ""
+msgstr "Es ist jetzt sicher, das Fenster zu schließen."
 
 msgid "A print preview has been opened in your web browser.  This window will stay open in order to communicate with the JavaScript code running in your browser.\n\n"
 "This window will close after you close the print preview in your browser, or you can close it manually if necessary."
-msgstr ""
+msgstr "Eine Druckvorschau wurde im Webbrowser geöffnet. Dieses Fenster dient zur Sicherstellung der Kommunikation zwischen Inkscape und dem Browser.\n\n"
+"Dieses Fenster schließt automatisch, wenn die Druckvorschau geschlossen wird. Es kann auch manuell beendet werden, falls nötig."
 
 msgid "Ink/Stitch Print"
 msgstr ""
