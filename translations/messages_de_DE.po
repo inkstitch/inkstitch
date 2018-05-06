@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-04-29 21:29-0400\n"
-"PO-Revision-Date: 2018-05-06 04:00-0400\n"
+"PO-Revision-Date: 2018-05-06 04:10-0400\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -50,7 +50,7 @@ msgid "Installation Completed"
 msgstr "Installation abgeschlossen"
 
 msgid "Ink/Stitch Thread Palette Installer"
-msgstr ""
+msgstr "Ink/Stitch Garnpaletten Installer"
 
 msgid "These settings will be applied to 1 object."
 msgstr "Diese Einstellung wird auf 1 Objekt angewendet."
@@ -182,7 +182,7 @@ msgid "Max stitch length"
 msgstr "Maximale Stichlänge"
 
 msgid "Inset"
-msgstr ""
+msgstr "Einzug"
 
 msgid "TRIM after"
 msgstr "Danach TRIM Befehl"
@@ -296,7 +296,8 @@ msgstr "Stickt jeden Punkt des Pfades. Laufstichlänge und Zick-Zack-Abstand wer
 
 msgid "Legacy running stitch setting detected!\n\n"
 "It looks like you're using a stroke smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set your stroke to be dashed to indicate running stitch.  Any kind of dash will work."
-msgstr ""
+msgstr "Veraltete Laufstich-Einstellung erkannt!\n\n"
+"Es sieht so aus, als ob für einen Laufstich eine Linie verwendet wurde, die schmaler als 0.5 Einheiten ist. Diese Methode ist veraltet. Bitte eine gestrichelte Linie für diesen Zweck benutzen. Die genaue Linienart spielt dabei keine Rolle, Hauptsache es ist keine durchgehende Linie."
 
 msgid "Unable to autofill.  This most often happens because your shape is made up of multiple sections that aren't connected."
 msgstr "Automatische Füllung nicht möglich.  Dies geschieht, weil Ihre Form aus mehreren und nicht verbundenen Abschnitten besteht."
@@ -432,23 +433,23 @@ msgid "Print Layouts"
 msgstr "Druck-Layouts"
 
 msgid "Includes these Page Setup settings and also the icon."
-msgstr ""
+msgstr "Dies umfasst die Dokumenteinstellungen und das Logo."
 
 msgid "Save as defaults"
-msgstr ""
+msgstr "Als Standardeinstellung speichern"
 
 msgid "Design"
-msgstr ""
+msgstr "Design"
 
 msgid "Thread Palette"
-msgstr ""
+msgstr "Garnpalette"
 
 msgid "Changing the thread palette will cause thread names and catalog numbers to be recalculated based on the new palette.  Any changes you have made to color or thread names will be lost.  Are you sure?"
-msgstr ""
+msgstr "Bei einer Änderung der Garnpalette  werden die Garnnamen und Bestellnummern neu berechnet. Vorherige Änderungen gehen dabei verloren. Soll die Aktion ausgeführt werden?"
 
 msgid "Yes"
-msgstr ""
+msgstr "Ja"
 
 msgid "No"
-msgstr ""
+msgstr "Nein"
 
