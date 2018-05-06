@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-04-29 21:29-0400\n"
-"PO-Revision-Date: 2018-05-06 03:50-0400\n"
+"PO-Revision-Date: 2018-05-06 04:00-0400\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -132,7 +132,7 @@ msgstr "Eine Druckvorschau wurde im Webbrowser geöffnet. Dieses Fenster dient z
 "Dieses Fenster schließt automatisch, wenn die Druckvorschau geschlossen wird. Es kann auch manuell beendet werden, falls nötig."
 
 msgid "Ink/Stitch Print"
-msgstr ""
+msgstr "Ink/Stitch Drucken"
 
 msgid "Embroidery Simulation"
 msgstr "Stick Simulation"
@@ -289,10 +289,10 @@ msgid "Repeats"
 msgstr "Wiederholungen"
 
 msgid "Manual stitch placement"
-msgstr ""
+msgstr "Manuelle Stichpositionierung"
 
 msgid "Stitch every node in the path.  Stitch length and zig-zag spacing are ignored."
-msgstr ""
+msgstr "Stickt jeden Punkt des Pfades. Laufstichlänge und Zick-Zack-Abstand werden ignoriert."
 
 msgid "Legacy running stitch setting detected!\n\n"
 "It looks like you're using a stroke smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set your stroke to be dashed to indicate running stitch.  Any kind of dash will work."
@@ -305,16 +305,16 @@ msgid "Unexpected error while generating fill stitches. Please send your SVG fil
 msgstr "Unerwarteter Fehler beim Generieren der Füllstiche. Bitte senden Sie die SVG-Datei an lexelby@github."
 
 msgid "Color"
-msgstr ""
+msgstr "Farbe"
 
 msgid "rgb"
-msgstr ""
+msgstr "RGB"
 
 msgid "thread"
-msgstr ""
+msgstr "Garn"
 
 msgid "# stitches"
-msgstr ""
+msgstr "# Stiche"
 
 msgid "# stops"
 msgstr ""
@@ -323,53 +323,53 @@ msgid "# trims"
 msgstr ""
 
 msgid "Page"
-msgstr ""
+msgstr "Seite"
 
 msgid "Click to choose another logo"
-msgstr ""
+msgstr "Klicken, um ein anderes Logo zu wählen"
 
 msgid "Enter job title..."
-msgstr ""
+msgstr "Titel eingeben..."
 
 msgid "CLIENT"
-msgstr ""
+msgstr "KUNDE"
 
 msgid "Enter client name..."
-msgstr ""
+msgstr "Name des Kunden eingeben..."
 
 msgid "PURCHASE ORDER #:"
-msgstr ""
+msgstr "AUFTRAGSNUMMER #:"
 
 msgid "Enter purchase order number..."
-msgstr ""
+msgstr "Auftragsnummer eingeben..."
 
 #, python-format
 msgid "%Y.%m.%d"
-msgstr ""
+msgstr "%d.%m.%Y"
 
 msgid "Thread Consumption"
-msgstr ""
+msgstr "Garnverbrauch"
 
 msgid "Stops and Trims"
 msgstr ""
 
 msgid "Notes"
-msgstr ""
+msgstr "Notizen"
 
 msgid "Unique Colors"
-msgstr ""
+msgstr "Farben"
 
 msgid "Color Blocks"
-msgstr ""
+msgstr "Farbwechsel"
 
 msgid "Design box size"
-msgstr ""
+msgstr "Maße"
 
 msgid "Total thread used"
-msgstr ""
+msgstr "Garnverbrauch gesamt"
 
 msgid "Total stitch count"
-msgstr ""
+msgstr "Gesamtstichanzahl"
 
 msgid "Total nr stops"
 msgstr ""
@@ -378,58 +378,58 @@ msgid "Total nr trims"
 msgstr ""
 
 msgid "thread used"
-msgstr ""
+msgstr "Garnverbrauch"
 
 msgid "Enter operator notes..."
-msgstr ""
+msgstr "Bedienungshinweise eingeben..."
 
 msgid "Job estimated time"
-msgstr ""
+msgstr "Voraussichtliche Dauer"
 
 msgid "Ctrl + Scroll to Zoom"
-msgstr ""
+msgstr "Strg + Scrollen zum Zoomen"
 
 msgid "Scale"
-msgstr ""
+msgstr "Maßstab"
 
 msgid "Fit"
-msgstr ""
+msgstr "An Fenstergröße anpassen"
 
 msgid "Apply to all"
-msgstr ""
+msgstr "Auf alle übertragen"
 
 msgid "COLOR"
-msgstr ""
+msgstr "FARBE"
 
 msgid "Estimated time"
-msgstr ""
+msgstr "Voraussichtliche Dauer"
 
 msgid "Client Signature"
-msgstr ""
+msgstr "Unterschrift Kunde"
 
 msgid "Ink/Stitch Print Preview"
-msgstr ""
+msgstr "Ink/Stitch Druckvorschau"
 
 msgid "Print"
-msgstr ""
+msgstr "Drucken"
 
 msgid "Settings"
-msgstr ""
+msgstr "Einstellungen"
 
 msgid "Close"
-msgstr ""
+msgstr "Schließen"
 
 msgid "⚠ lost connection to Ink/Stitch"
-msgstr ""
+msgstr "⚠ Verbindung zu Ink/Stich verloren"
 
 msgid "Page Setup"
-msgstr ""
+msgstr "Dokumenteinstellungen"
 
 msgid "Printing Size"
-msgstr ""
+msgstr "Papierformat"
 
 msgid "Print Layouts"
-msgstr ""
+msgstr "Druck-Layouts"
 
 msgid "Includes these Page Setup settings and also the icon."
 msgstr ""
