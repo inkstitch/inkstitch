@@ -46,10 +46,12 @@ docs:
       - title: "etc"
   - title: Troubleshooting (Wiki?)
     children:
+      - title: "Get help"
+        url: /docs/get-help/
       - title: "F.A.Q."
-        url: "/docs/faq/"
+        url: /docs/faq/
       - title: "Known Bugs"
-        url: "/docs/bugs/"
+        url: /docs/bugs/
   - title: Get involved
     url: /docs/get-involved/
     children:
