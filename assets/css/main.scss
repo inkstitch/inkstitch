@@ -28,7 +28,7 @@ $type-size-8 : 0.625em;  // ~10px
 $background-color: ;
 $masthead-link-color: ; */
 $link-color:#ffb400;
-$text-color: #808080;
+$text-color: #000;
 
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
