@@ -1,14 +1,47 @@
 # main links
 main:
-  - title: "About"
-    url: /about/
+  - title: "Features"
+    url: /features/
   - title: "Documentation"
     url: /docs/install/
   - title: "Tutorials"
     url: /tutorials/
-  - title: "Terms & Privacy Policy"
-    url: /terms/
-  
+  - title: "Get Help"
+    url: /docs/get-help/
+    
+# index + specific pages which have the sidebar option in the header
+pages:
+  - title: "Features"
+    url: /features/
+    children:
+      - title: "Basic Ink/Stitch Capabilities"
+        url: /features/
+  - title: "Documentation"
+    url: /docs/install/
+    children:
+      - title: "Installation"
+        url: /docs/install/
+      - title: "Workflow"
+        url: /docs/install/
+      - title: "Get Help"
+        url: /docs/get-help/
+  - title: "Tutorials"
+    url: /tutorials/
+    children:
+      - title: "Artwork Galleries"
+        url: /tutorials/examples/
+      - title: "Sample Files"
+        url: /tutorials/examples/
+      - title: "Special Techniques"
+        url: /tutorials/
+      - title: "Knowledge Base"
+        url: /tutorials/
+  - title: "News"
+    url: /news/
+    children:
+      - title: "Get Information on Updates and New Features"
+        url: /news/
+
 # documentation links
 docs:
   - title: Getting Started
@@ -63,13 +96,16 @@ docs:
         url: /docs/help/localize/
       - title: "Developing Ink/Stitch"
     
-    
 # tutorial links
 tutorials:
+  - title: Inspiration
+    children:
+      - title: "@lexelby Sample Patches"
+        url: /tutorials/inspiration/lexelby
   - title: Ressources
     children:
-    - title: "Ink/Stitch Example Files"
-      url: /tutorials/examples/
+    - title: "Sample Files"
+      url: /tutorials/ressources/samples/
   - title: Tutorials
     children:
     - title: "Ink/Stich Tutorials"

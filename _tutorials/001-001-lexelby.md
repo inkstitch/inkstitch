@@ -1,8 +1,9 @@
 ---
 title: "Test Files and Examples"
-permalink: /tutorials/examples/
+permalink: /tutorials/inspiration/lexelby
 excerpt: ""
 last_modified_at: 2018-05-05
+read_time: false
     
 lexelby-patches-gallery:
   - url: /assets/images/tutorials/examples/lexelby_patches/soulstorm_brew_patch.jpg
@@ -33,7 +34,6 @@ lexelby-patches-gallery:
     image_path: /assets/images/tutorials/examples/lexelby_patches/super_hero_patch-th.jpg
     alt: "super hero patch"
     title: "Super Hero Patch"
-  
 ---
 
 ## @lexelby Sample Patches made with Ink/Stitch ##

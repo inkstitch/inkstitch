@@ -99,10 +99,10 @@ analytics:
 author:
   name             : "Ink/Stitch Community"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Collaboration Project."
+  bio              : ""
   location         : "Somewhere"
   email            :
-  uri              :
+  uri              : "https://github.com/lexelby/inkstitch"
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
   codepen          :
@@ -110,7 +110,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           :
+  github           : 
   gitlab           :
   google_plus      :
   keybase          :

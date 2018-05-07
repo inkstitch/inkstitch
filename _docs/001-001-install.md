@@ -7,7 +7,7 @@ toc: true
 ---
 
 ## Inkscape
-First, install Inkscape if you don’t have it. I highly recommend version 0.92 or greater, which has a really key feature: the Objects panel. This gives you a heirarchical list of objects in your SVG file, listed in their stacking order. This is really important because the stacking order dictates the order that the shapes will be sewn in.
+First, install [Inkscape](https://inkscape.org/) if you don’t have it. I highly recommend version 0.92 or greater, which has a really key feature: the Objects panel. This gives you a heirarchical list of objects in your SVG file, listed in their stacking order. This is really important because the stacking order dictates the order that the shapes will be sewn in.
 
 Versions 0.92.2 and higher let you bind a key to new commands, “stack up” and “stack down”, which I assign to pageup and pagedown. These let you arbitrarily reorder objects in the SVG file, which lets you directly manipulate which order they stitch in. It works way better than the default “raise” and “lower” commands.
 

@@ -27,7 +27,7 @@ $type-size-8 : 0.625em;  // ~10px
 /*$body-color: ;
 $background-color: ;
 $masthead-link-color: ; */
-$link-color:#ffb400;
+$link-color: #003399;
 $text-color: #000;
 
 
@@ -81,6 +81,10 @@ p a:visited {
 
   button:focus {
     outline: none;
+  }
+  
+  .btn--primary:hover {
+    background: #003399;
   }
 
   .greedy-nav .hidden-links li {

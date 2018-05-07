@@ -3,6 +3,8 @@ title: "Ink/Stitch Features"
 permalink: /features/
 excerpt: "Ink/Stitch features"
 last_modified_at: 2018-05-05
+sidebar:
+  nav: pages
 ---
 
 ## Ink/Stitch Features
