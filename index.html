@@ -1,9 +1,7 @@
 ---
 title: "Ink/Stitch"
-layout: single
+layout: splash
 permalink: /
-sidebar:
-  nav: "pages"
 feature_row:
   - image_path: /assets/images/unsplash-gallery-image-1-th.jpg
     alt: "Features"
@@ -26,10 +24,18 @@ feature_row:
     btn_label: "Read More"
     btn_class: "btn--primary"
 ---
+<!-- <div>
+  <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=lexelby&repo=inkstitch&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+  <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=lexelby&repo=inkstitch&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+</div> -->
 
-<p class="notice">Want to design embroidery pattern files (PES, DST, etc) using free, open source software?  Hate all the other options?  Try this one.</p>
+<p>An Inkscape extension for designing machine embroidery patterns.</p>
 
-<!-- {% include feature_row %} -->
+<p><a href="https://github.com/lexelby/inkstitch/releases/latest" class="btn btn--primary btn--large">Download Ink/Stitch</a></p>
+
+{% include feature_row %}
+
+<!-- <p class="notice"><strong>Want to design embroidery pattern files (PES, DST, etc) using free, open source software?  Hate all the other options?  Try this one.</strong></p>
 
 <p>I received a really wonderful christmas gift for a geeky programmer hacker: an <a href="http://www.brother-usa.com/homesewing/ModelDetail.aspx?ProductID=SE400">embroidery machine</a>. It's pretty much a CNC thread-bot... I just had to figure out how to design programs for it.  The problem is, <strong>all free embroidery design software seemed to be terrible</strong>, especially when you add in the requirement of being able to run in Linux, my OS of choice.</p>
 
@@ -37,10 +43,9 @@ feature_row:
 
 <p>Okay, not really.  I'm pretty terrible at GUIs, but I found this nifty inkscape extension that was created and hacked on by a couple of other folks.  It was pretty rudimentary, but it got the job done, and more importantly, it was super hackable.  I hacked the hell out of it, and at this point <strong>ink/stitch is a viable entry-level machine embroidery design tool</strong>.</p>
 
-<p><a href="https://github.com/lexelby/inkstitch/releases/latest" class="btn btn--primary">Download Ink/Stitch</a></p>
+<p><a href="https://github.com/lexelby/inkstitch/releases/latest" class="btn btn--primary">Download Ink/Stitch</a></p> -->
 
 <h2>News</h2>
 <ul>{% for post in site.posts offset: 0 limit: 10 %}<li>{{ post.date  | date: "%B %-d, %Y" }}: <a href="{{ post.url }}">{{ post.title }}</a></li>{% endfor %}</ul>
 <p><a href="{{ site.url }}/news/">Show more</a></p>
-
 
