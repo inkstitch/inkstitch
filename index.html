@@ -47,5 +47,5 @@ feature_row:
 
 <h2>News</h2>
 <ul>{% for post in site.posts offset: 0 limit: 10 %}<li>{{ post.date  | date: "%B %-d, %Y" }}: <a href="{{ post.url }}">{{ post.title }}</a></li>{% endfor %}</ul>
-<p><a href="{{ site.url }}/news/">Show more</a></p>
+<p><a href="{{ site.url }}/news/" class="btn btn--primary">Read more</a></p>
 
