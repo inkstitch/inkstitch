@@ -300,7 +300,7 @@ $(function() {
 
   // Logo
   $('#logo-picker').change(function(e) {
-      var file = e.originalEvent.srcElement.files[0];
+      var file = e.originalEvent.currentTarget.files[0];
       var reader = new FileReader();
       reader.onloadend = function() {
           var data = reader.result;
