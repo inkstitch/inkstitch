@@ -9,7 +9,6 @@ tutorial-type:
   - Video
 stitch-type: 
 techniques:
-  - Puff
 field-of-use: 
 user-level: Professional
 ---
