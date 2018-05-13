@@ -174,11 +174,11 @@ p a:visited {
 #tutorial-list .tutorial-orderby input:checked + label + section { display: block; width: 100%; }
 
 .tutorial__group { display: table; border-collapse: separate; border-spacing: 0 1em; width: 100%; }
-.tutorial__group h3 span { border-bottom: 1px solid #f2f3f3; }
+.tutorial__group h3 { height: 1.5em }
+.tutorial__group h3 span { position: absolute; display: inline-block; width: 100%; border-bottom: 1px solid #f2f3f3; }
 .tutorial__item-teaser img { max-width: 50px; }
 .tutorial__item, .tutorial__group h3 { display: table-row; }
 .tutorial__group h3 > span, .tutorial__item > h4, .tutorial__item > div, .tutorial__item > p { display: table-cell; vertical-align: top; padding-right: 1em; }
-
 
 
 
