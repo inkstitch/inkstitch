@@ -16,7 +16,7 @@
 
 <div class="tutorial__group">
 {% for value in values %}
-  {% unless include.value %} <h3><span>{{ value }}</span><span></span><span> </span><span> </span></h3>{% endunless %}
+  {% unless include.value %} <h3><span>{{ value }}</span></h3>{% endunless %}
   {% assign items_grouped = site.tutorial | where_exp: 'item', 'item[key] contains value' %}
   {% for f in items_grouped %}
   <div class="tutorial__item">
