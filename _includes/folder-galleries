@@ -1,0 +1,29 @@
+{% if include.path %}
+  {% assign imgpath = "/assets/images/galleries/" | append: include.path %}
+{% else %}
+  {% assign imgpath = '/assets/images/galleries/' %}
+{% endif %}
+
+<figure class="third">
+
+{% assign image_list = site.static_files | where_exp:"item", "item.path contains imgpath" %}
+
+  {% for image in image_list %}
+    {% unless image.path contains '-th.' %}
+      {% assign small_img = imgpath | append: image.basename | append: '-th' | append: image.extname %}
+      {% assign small_image_exists = image_list | where_exp: "item" , "item.path contains small_img" | size %}
+      {% if small_image_exists == 0 %}
+        {% assign small_img = image.path %}
+      {% endif %}
+        <a href="{{ image.path | relative_url }}" title="{{ image.basename | replace: "_", " " }}">
+          <img src="{{ small_img }}" alt="{{ image.path | replace: '/assets/images/tutorials/galleries/' }}" alt="{{ image.basename | replace: "_", " "}}" stlye="height: 100px !important;  width: auto !important;">
+        </a>
+    {% endunless %}
+  {% endfor %}
+  {% if include.caption %}
+    <figcaption>{{ include.caption | markdownify | remove: "<p>" | remove: "</p>" }}</figcaption>
+  {% endif %}
+</figure>
+
+ {% if image.path contains imgpath and image.path contains "-th" %}
+ {% endif %}

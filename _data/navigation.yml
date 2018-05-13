@@ -29,9 +29,9 @@ pages:
     url: /tutorials/
     children:
       - title: "Artwork Galleries"
-        url: /tutorials/examples/
+        url: /tutorials/inspiration/lexelby/
       - title: "Sample Files"
-        url: /tutorials/examples/
+        url: /tutorials/ressources/samples/
       - title: "Special Techniques"
         url: /tutorials/
       - title: "Knowledge Base"
@@ -100,7 +100,7 @@ docs:
 tutorials:
   - title: Inspiration
     children:
-      - title: "@lexelby Sample Patches"
+      - title: "@lexelby Patches"
         url: /tutorials/inspiration/lexelby
   - title: Ressources
     children:
