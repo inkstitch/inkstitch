@@ -25,12 +25,12 @@ user-level:
 
 ## Ink/Stitch Logo 1 Color
 
-![1 Color](/assets/images/tutorials/samples/InkStitch 1 Color.svg)
+![1 Color](/assets/images/tutorials/samples/InkStitch 1 Color.svg){: .img-invert }
 
 [Download](/assets/images/tutorials/samples/InkStitch 1 Color.svg)
 
 ## Ink/Stitch Logo 1 Color Top Left Origin
 
-![1 Color](/assets/images/tutorials/samples/InkStitch 1 Color Top Left Origin.svg)
+![1 Color](/assets/images/tutorials/samples/InkStitch 1 Color Top Left Origin.svg){: .img-invert }
 
 [Download](/assets/images/tutorials/samples/InkStitch 1 Color Top Left Origin.svg)
