@@ -71,7 +71,7 @@ categories: news-category
 
 ##### Galleries
 
-Adding galleries has become really simple: upload files into a new folder within `/assets/images/galleries/'.
+Adding galleries has become really simple: upload files into a new folder within `/assets/images/galleries/`.
 Then add: `{% include folder-galleries path="new-folder-name/" %}` where ever you want to display a gallery containing 'new-folder-name's content.
 
 ##### Categorising tutorials
