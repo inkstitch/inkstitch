@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-29 21:29-0400\n"
-"PO-Revision-Date: 2018-05-05 21:28-0400\n"
+"POT-Creation-Date: 2018-05-01 21:21-0400\n"
+"PO-Revision-Date: 2018-05-19 14:51-0400\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -16,144 +16,6 @@ msgstr ""
 "X-Crowdin-Language: fr\n"
 "X-Crowdin-File: /master/messages.po\n"
 "Language: fr_FR\n"
-
-msgid "\n\n"
-"Seeing a 'no such option' message?  Please restart Inkscape to fix."
-msgstr "Vous voyez un message 'aucune option' ? Veuillez redémarrer Inkscape pour corriger."
-
-msgid "Directory in which to install palettes:"
-msgstr ""
-
-msgid "Choose another directory..."
-msgstr ""
-
-msgid "Install"
-msgstr ""
-
-msgid "Cancel"
-msgstr "Quitter"
-
-msgid "Choose Inkscape palettes directory"
-msgstr ""
-
-msgid "Thread palette installation failed"
-msgstr ""
-
-msgid "Installation Failed"
-msgstr ""
-
-msgid "Thread palette files have been installed.  Please restart Inkscape to load the new palettes."
-msgstr ""
-
-msgid "Installation Completed"
-msgstr ""
-
-msgid "Ink/Stitch Thread Palette Installer"
-msgstr ""
-
-msgid "These settings will be applied to 1 object."
-msgstr "Ces paramètres seront appliqués à 1 objet."
-
-#, python-format
-msgid "These settings will be applied to %d objects."
-msgstr "Ces paramètres seront appliqués aux %d objets."
-
-msgid "Some settings had different values across objects.  Select a value from the dropdown or enter a new one."
-msgstr "Certains paramètres ont des valeurs différentes d'un objet à l'autre. Sélectionnez une valeur dans la liste déroulante ou entrez-en une nouvelle."
-
-#, python-format
-msgid "Disabling this tab will disable the following %d tabs."
-msgstr "La désactivation de cet onglet désactivera les onglets %d suivants."
-
-msgid "Disabling this tab will disable the following tab."
-msgstr "La désactivation de cet onglet désactivera l'onglet suivant."
-
-#, python-format
-msgid "Enabling this tab will disable %s and vice-versa."
-msgstr "Activer cet onglet désactivera %s et vice-versa."
-
-msgid "Inkscape objects"
-msgstr "Objets Inkscape"
-
-msgid "Embroidery Params"
-msgstr "Paramètres de broderie"
-
-msgid "Presets"
-msgstr "Présélection"
-
-msgid "Load"
-msgstr "Charger"
-
-msgid "Add"
-msgstr "Ajouter"
-
-msgid "Overwrite"
-msgstr "Écraser"
-
-msgid "Delete"
-msgstr "Effacer"
-
-msgid "Use Last Settings"
-msgstr "Utiliser les derniers paramètres"
-
-msgid "Apply and Quit"
-msgstr "Appliquer et Quitter"
-
-msgid "Preview"
-msgstr "Aperçu"
-
-msgid "Internal Error"
-msgstr "Erreur interne"
-
-msgid "Please enter or select a preset name first."
-msgstr "Veuillez entrer ou sélectionner un nom prédéfini en premier."
-
-msgid "Preset"
-msgstr "Préréglage"
-
-#, python-format
-msgid "Preset \"%s\" not found."
-msgstr "Le préréglage \"%s\" n'a pas été trouvé."
-
-#, python-format
-msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
-msgstr "Le préréglage \"%s\" existe déjà. Veuillez utiliser un autre nom ou appuyez sur \"Écraser\""
-
-msgid "Closing..."
-msgstr ""
-
-msgid "It is safe to close this window now."
-msgstr ""
-
-msgid "A print preview has been opened in your web browser.  This window will stay open in order to communicate with the JavaScript code running in your browser.\n\n"
-"This window will close after you close the print preview in your browser, or you can close it manually if necessary."
-msgstr "Un aperçu avant impression a été ouvert dans votre navigateur web.  Cette fenêtre reste ouverte pour communiquer avec le code JavaScript s’exécutant dans votre navigateur.  Cette fenêtre se fermera après avoir fermer l’aperçu avant impression dans le navigateur, vous pouvez la fermer manuellement si nécessaire."
-
-msgid "Ink/Stitch Print"
-msgstr "Imprimer Ink/Stitch"
-
-msgid "Embroidery Simulation"
-msgstr "Simulation de broderie"
-
-#, python-format
-msgid "parseLengthWithUnits: unknown unit %s"
-msgstr "analyser Longueur avec Unités: unité inconnue %s"
-
-#, python-format
-msgid "Unknown unit: %s"
-msgstr "Unité inconnue: %s"
-
-msgid "No embroiderable paths selected."
-msgstr "Aucun chemin brodable sélectionné."
-
-msgid "No embroiderable paths found in document."
-msgstr "Aucun chemin brodable trouvé dans le document."
-
-msgid "Tip: use Path -> Object to Path to convert non-paths before embroidering."
-msgstr "Astuce: utilisez Path -> Object to Path pour convertir les non-chemins avant de broder."
-
-msgid "Stitch Plan"
-msgstr ""
 
 msgid "Auto-Fill"
 msgstr "Remplissage automatique"
@@ -296,11 +158,149 @@ msgid "Legacy running stitch setting detected!\n\n"
 "It looks like you're using a stroke smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set your stroke to be dashed to indicate running stitch.  Any kind of dash will work."
 msgstr ""
 
+msgid "No embroiderable paths selected."
+msgstr "Aucun chemin brodable sélectionné."
+
+msgid "No embroiderable paths found in document."
+msgstr "Aucun chemin brodable trouvé dans le document."
+
+msgid "Tip: use Path -> Object to Path to convert non-paths before embroidering."
+msgstr "Astuce: utilisez Path -> Object to Path pour convertir les non-chemins avant de broder."
+
+msgid "\n\n"
+"Seeing a 'no such option' message?  Please restart Inkscape to fix."
+msgstr "Vous voyez un message 'aucune option' ? Veuillez redémarrer Inkscape pour corriger."
+
+msgid "Directory in which to install palettes:"
+msgstr ""
+
+msgid "Choose another directory..."
+msgstr ""
+
+msgid "Install"
+msgstr ""
+
+msgid "Cancel"
+msgstr "Quitter"
+
+msgid "Choose Inkscape palettes directory"
+msgstr ""
+
+msgid "Thread palette installation failed"
+msgstr ""
+
+msgid "Installation Failed"
+msgstr ""
+
+msgid "Thread palette files have been installed.  Please restart Inkscape to load the new palettes."
+msgstr ""
+
+msgid "Installation Completed"
+msgstr ""
+
+msgid "Ink/Stitch Thread Palette Installer"
+msgstr ""
+
+msgid "These settings will be applied to 1 object."
+msgstr "Ces paramètres seront appliqués à 1 objet."
+
+#, python-format
+msgid "These settings will be applied to %d objects."
+msgstr "Ces paramètres seront appliqués aux %d objets."
+
+msgid "Some settings had different values across objects.  Select a value from the dropdown or enter a new one."
+msgstr "Certains paramètres ont des valeurs différentes d'un objet à l'autre. Sélectionnez une valeur dans la liste déroulante ou entrez-en une nouvelle."
+
+#, python-format
+msgid "Disabling this tab will disable the following %d tabs."
+msgstr "La désactivation de cet onglet désactivera les onglets %d suivants."
+
+msgid "Disabling this tab will disable the following tab."
+msgstr "La désactivation de cet onglet désactivera l'onglet suivant."
+
+#, python-format
+msgid "Enabling this tab will disable %s and vice-versa."
+msgstr "Activer cet onglet désactivera %s et vice-versa."
+
+msgid "Inkscape objects"
+msgstr "Objets Inkscape"
+
+msgid "Embroidery Params"
+msgstr "Paramètres de broderie"
+
+msgid "Presets"
+msgstr "Présélection"
+
+msgid "Load"
+msgstr "Charger"
+
+msgid "Add"
+msgstr "Ajouter"
+
+msgid "Overwrite"
+msgstr "Écraser"
+
+msgid "Delete"
+msgstr "Effacer"
+
+msgid "Use Last Settings"
+msgstr "Utiliser les derniers paramètres"
+
+msgid "Apply and Quit"
+msgstr "Appliquer et Quitter"
+
+msgid "Preview"
+msgstr "Aperçu"
+
+msgid "Internal Error"
+msgstr "Erreur interne"
+
+msgid "Please enter or select a preset name first."
+msgstr "Veuillez entrer ou sélectionner un nom prédéfini en premier."
+
+msgid "Preset"
+msgstr "Préréglage"
+
+#, python-format
+msgid "Preset \"%s\" not found."
+msgstr "Le préréglage \"%s\" n'a pas été trouvé."
+
+#, python-format
+msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
+msgstr "Le préréglage \"%s\" existe déjà. Veuillez utiliser un autre nom ou appuyez sur \"Écraser\""
+
+msgid "Closing..."
+msgstr ""
+
+msgid "It is safe to close this window now."
+msgstr ""
+
+msgid "A print preview has been opened in your web browser.  This window will stay open in order to communicate with the JavaScript code running in your browser.\n\n"
+"This window will close after you close the print preview in your browser, or you can close it manually if necessary."
+msgstr "Un aperçu avant impression a été ouvert dans votre navigateur web.  Cette fenêtre reste ouverte pour communiquer avec le code JavaScript s’exécutant dans votre navigateur.  Cette fenêtre se fermera après avoir fermer l’aperçu avant impression dans le navigateur, vous pouvez la fermer manuellement si nécessaire."
+
+msgid "Ink/Stitch Print"
+msgstr "Imprimer Ink/Stitch"
+
+msgid "Embroidery Simulation"
+msgstr "Simulation de broderie"
+
 msgid "Unable to autofill.  This most often happens because your shape is made up of multiple sections that aren't connected."
 msgstr "Impossible de remplir automatiquement. Cela arrive le plus souvent parce que votre forme est composée de plusieurs sections qui ne sont pas connectées."
 
 msgid "Unexpected error while generating fill stitches. Please send your SVG file to lexelby@github."
 msgstr "Erreur inattendue lors de la génération des points de remplissage. Veuillez envoyer votre fichier SVG à lexelby@github."
+
+msgid "Stitch Plan"
+msgstr ""
+
+#, python-format
+msgid "parseLengthWithUnits: unknown unit %s"
+msgstr "analyser Longueur avec Unités: unité inconnue %s"
+
+#, python-format
+msgid "Unknown unit: %s"
+msgstr "Unité inconnue: %s"
 
 msgid "Color"
 msgstr "Couleur"
