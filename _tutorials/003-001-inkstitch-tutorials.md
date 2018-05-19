@@ -1,6 +1,6 @@
 ---
 title: "Ink/Stitch Tutorials"
-permalink: /tutorials/inkstitch-tutorials/
+permalink: /tutorials/
 excerpt: ""
 last_modified_at: 2018-05-14
 read_time: false

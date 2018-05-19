@@ -107,10 +107,11 @@ tutorials:
     - title: "Sample Files"
       url: /tutorials/ressources/samples/
   - title: Tutorials
+    url: /tutorials/
     children:
-    - title: "Ink/Stich Tutorials"
-      url: /tutorials/inkstitch-tutorials/
-    - title: "Machine Embroidery Tutorials"
-      url: /tutorials/embroidery-tutorials/
+    - title: "Ink/Stitch Tutorials"
+      url: /tutorials/
+    - title: "Video Tutorials"
+      url: /tutorials/video/
   
   
