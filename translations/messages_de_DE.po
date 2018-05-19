@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-29 21:29-0400\n"
-"PO-Revision-Date: 2018-05-06 04:10-0400\n"
+"POT-Creation-Date: 2018-05-01 21:21-0400\n"
+"PO-Revision-Date: 2018-05-19 14:51-0400\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -16,146 +16,6 @@ msgstr ""
 "X-Crowdin-Language: de\n"
 "X-Crowdin-File: /master/messages.po\n"
 "Language: de_DE\n"
-
-msgid "\n\n"
-"Seeing a 'no such option' message?  Please restart Inkscape to fix."
-msgstr "\n\n"
-"  Sehen Sie eine Meldung \"keine solche Option\"?  Zum beheben bitte Inkscape neu starten."
-
-msgid "Directory in which to install palettes:"
-msgstr "Installationsverzeichnis für Farbpaletten:"
-
-msgid "Choose another directory..."
-msgstr "Anderes Verzeichnis wählen..."
-
-msgid "Install"
-msgstr "Installieren"
-
-msgid "Cancel"
-msgstr "Abbrechen"
-
-msgid "Choose Inkscape palettes directory"
-msgstr "Wähle Inkscape Farbpaletten-Verzeichnis"
-
-msgid "Thread palette installation failed"
-msgstr "Installation der Garnpaletten fehlgeschlagen"
-
-msgid "Installation Failed"
-msgstr "Installation fehlgeschlagen"
-
-msgid "Thread palette files have been installed.  Please restart Inkscape to load the new palettes."
-msgstr "Die Garnpaletten wurden erfolgreich installiert. Inkscape muss jetzt neu gestartet werden, um sie zu laden."
-
-msgid "Installation Completed"
-msgstr "Installation abgeschlossen"
-
-msgid "Ink/Stitch Thread Palette Installer"
-msgstr "Ink/Stitch Garnpaletten Installer"
-
-msgid "These settings will be applied to 1 object."
-msgstr "Diese Einstellung wird auf 1 Objekt angewendet."
-
-#, python-format
-msgid "These settings will be applied to %d objects."
-msgstr "Diese Einstellungen werden auf %d Objekte angewendet."
-
-msgid "Some settings had different values across objects.  Select a value from the dropdown or enter a new one."
-msgstr "Einige Einstellungen hatten unterschiedliche Werte der Objekte.  Bitte einen Wert aus der Liste auswählen oder einen neuen Namen eingeben."
-
-#, python-format
-msgid "Disabling this tab will disable the following %d tabs."
-msgstr "Deaktivierung dieser Registerkarte, deaktiviert die folgenden %d Registerkarten."
-
-msgid "Disabling this tab will disable the following tab."
-msgstr "Deaktivierung dieser Registerkarte, deaktiviert die folgende Registerkarte."
-
-#, python-format
-msgid "Enabling this tab will disable %s and vice-versa."
-msgstr "Aktivierung dieser Registerkarte deaktiviert %s und umgekehrt."
-
-msgid "Inkscape objects"
-msgstr "Inkscape Objekte"
-
-msgid "Embroidery Params"
-msgstr "Stickparameter"
-
-msgid "Presets"
-msgstr "Voreinstellungen"
-
-msgid "Load"
-msgstr "Öffnen"
-
-msgid "Add"
-msgstr "Hinzufügen"
-
-msgid "Overwrite"
-msgstr "Überschreiben"
-
-msgid "Delete"
-msgstr "Löschen"
-
-msgid "Use Last Settings"
-msgstr "Letzte Einstellungen verwenden"
-
-msgid "Apply and Quit"
-msgstr "Anwenden und schließen"
-
-msgid "Preview"
-msgstr "Vorschau"
-
-msgid "Internal Error"
-msgstr "Interner Fehler"
-
-msgid "Please enter or select a preset name first."
-msgstr "Bitte geben Sie einen Namen ein, oder wählen Sie zuerst einen vordefinierten Namen aus."
-
-msgid "Preset"
-msgstr "Voreinstellung"
-
-#, python-format
-msgid "Preset \"%s\" not found."
-msgstr "Einstellung \"%s\" nicht gefunden."
-
-#, python-format
-msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
-msgstr "Einstellung \"%s\" bereits vorhanden. Bitte verwenden Sie einen anderen Namen oder drücken Sie \"Überschreiben\""
-
-msgid "Closing..."
-msgstr "Schließen..."
-
-msgid "It is safe to close this window now."
-msgstr "Es ist jetzt sicher, das Fenster zu schließen."
-
-msgid "A print preview has been opened in your web browser.  This window will stay open in order to communicate with the JavaScript code running in your browser.\n\n"
-"This window will close after you close the print preview in your browser, or you can close it manually if necessary."
-msgstr "Eine Druckvorschau wurde im Webbrowser geöffnet. Dieses Fenster dient zur Sicherstellung der Kommunikation zwischen Inkscape und dem Browser.\n\n"
-"Dieses Fenster schließt automatisch, wenn die Druckvorschau geschlossen wird. Es kann auch manuell beendet werden, falls nötig."
-
-msgid "Ink/Stitch Print"
-msgstr "Ink/Stitch Drucken"
-
-msgid "Embroidery Simulation"
-msgstr "Stick Simulation"
-
-#, python-format
-msgid "parseLengthWithUnits: unknown unit %s"
-msgstr "AnalysiereLängeMitEinheiten: Unbekannte Einheit %s"
-
-#, python-format
-msgid "Unknown unit: %s"
-msgstr "Unbekannte Einheit: %s"
-
-msgid "No embroiderable paths selected."
-msgstr "Keine zu stickenden Pfade ausgewählt."
-
-msgid "No embroiderable paths found in document."
-msgstr "Keine zu stickenden Pfade im Dokument gefunden."
-
-msgid "Tip: use Path -> Object to Path to convert non-paths before embroidering."
-msgstr "Tipp: Verwende Pfad -> Objekt zu Pfad umwandeln, um nicht-Pfade vor dem Sticken zu konvertieren."
-
-msgid "Stitch Plan"
-msgstr ""
 
 msgid "Auto-Fill"
 msgstr "Auto-Füllung"
@@ -299,11 +159,151 @@ msgid "Legacy running stitch setting detected!\n\n"
 msgstr "Veraltete Laufstich-Einstellung erkannt!\n\n"
 "Es sieht so aus, als ob für einen Laufstich eine Linie verwendet wurde, die schmaler als 0.5 Einheiten ist. Diese Methode ist veraltet. Bitte eine gestrichelte Linie für diesen Zweck benutzen. Die genaue Linienart spielt dabei keine Rolle, Hauptsache es ist keine durchgehende Linie."
 
+msgid "No embroiderable paths selected."
+msgstr "Keine zu stickenden Pfade ausgewählt."
+
+msgid "No embroiderable paths found in document."
+msgstr "Keine zu stickenden Pfade im Dokument gefunden."
+
+msgid "Tip: use Path -> Object to Path to convert non-paths before embroidering."
+msgstr "Tipp: Verwende Pfad -> Objekt zu Pfad umwandeln, um nicht-Pfade vor dem Sticken zu konvertieren."
+
+msgid "\n\n"
+"Seeing a 'no such option' message?  Please restart Inkscape to fix."
+msgstr "\n\n"
+"  Sehen Sie eine Meldung \"keine solche Option\"?  Zum beheben bitte Inkscape neu starten."
+
+msgid "Directory in which to install palettes:"
+msgstr "Installationsverzeichnis für Farbpaletten:"
+
+msgid "Choose another directory..."
+msgstr "Anderes Verzeichnis wählen..."
+
+msgid "Install"
+msgstr "Installieren"
+
+msgid "Cancel"
+msgstr "Abbrechen"
+
+msgid "Choose Inkscape palettes directory"
+msgstr "Wähle Inkscape Farbpaletten-Verzeichnis"
+
+msgid "Thread palette installation failed"
+msgstr "Installation der Garnpaletten fehlgeschlagen"
+
+msgid "Installation Failed"
+msgstr "Installation fehlgeschlagen"
+
+msgid "Thread palette files have been installed.  Please restart Inkscape to load the new palettes."
+msgstr "Die Garnpaletten wurden erfolgreich installiert. Inkscape muss jetzt neu gestartet werden, um sie zu laden."
+
+msgid "Installation Completed"
+msgstr "Installation abgeschlossen"
+
+msgid "Ink/Stitch Thread Palette Installer"
+msgstr "Ink/Stitch Garnpaletten Installer"
+
+msgid "These settings will be applied to 1 object."
+msgstr "Diese Einstellung wird auf 1 Objekt angewendet."
+
+#, python-format
+msgid "These settings will be applied to %d objects."
+msgstr "Diese Einstellungen werden auf %d Objekte angewendet."
+
+msgid "Some settings had different values across objects.  Select a value from the dropdown or enter a new one."
+msgstr "Einige Einstellungen hatten unterschiedliche Werte der Objekte.  Bitte einen Wert aus der Liste auswählen oder einen neuen Namen eingeben."
+
+#, python-format
+msgid "Disabling this tab will disable the following %d tabs."
+msgstr "Deaktivierung dieser Registerkarte, deaktiviert die folgenden %d Registerkarten."
+
+msgid "Disabling this tab will disable the following tab."
+msgstr "Deaktivierung dieser Registerkarte, deaktiviert die folgende Registerkarte."
+
+#, python-format
+msgid "Enabling this tab will disable %s and vice-versa."
+msgstr "Aktivierung dieser Registerkarte deaktiviert %s und umgekehrt."
+
+msgid "Inkscape objects"
+msgstr "Inkscape Objekte"
+
+msgid "Embroidery Params"
+msgstr "Stickparameter"
+
+msgid "Presets"
+msgstr "Voreinstellungen"
+
+msgid "Load"
+msgstr "Öffnen"
+
+msgid "Add"
+msgstr "Hinzufügen"
+
+msgid "Overwrite"
+msgstr "Überschreiben"
+
+msgid "Delete"
+msgstr "Löschen"
+
+msgid "Use Last Settings"
+msgstr "Letzte Einstellungen verwenden"
+
+msgid "Apply and Quit"
+msgstr "Anwenden und schließen"
+
+msgid "Preview"
+msgstr "Vorschau"
+
+msgid "Internal Error"
+msgstr "Interner Fehler"
+
+msgid "Please enter or select a preset name first."
+msgstr "Bitte geben Sie einen Namen ein, oder wählen Sie zuerst einen vordefinierten Namen aus."
+
+msgid "Preset"
+msgstr "Voreinstellung"
+
+#, python-format
+msgid "Preset \"%s\" not found."
+msgstr "Einstellung \"%s\" nicht gefunden."
+
+#, python-format
+msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
+msgstr "Einstellung \"%s\" bereits vorhanden. Bitte verwenden Sie einen anderen Namen oder drücken Sie \"Überschreiben\""
+
+msgid "Closing..."
+msgstr "Schließen..."
+
+msgid "It is safe to close this window now."
+msgstr "Es ist jetzt sicher, das Fenster zu schließen."
+
+msgid "A print preview has been opened in your web browser.  This window will stay open in order to communicate with the JavaScript code running in your browser.\n\n"
+"This window will close after you close the print preview in your browser, or you can close it manually if necessary."
+msgstr "Eine Druckvorschau wurde im Webbrowser geöffnet. Dieses Fenster dient zur Sicherstellung der Kommunikation zwischen Inkscape und dem Browser.\n\n"
+"Dieses Fenster schließt automatisch, wenn die Druckvorschau geschlossen wird. Es kann auch manuell beendet werden, falls nötig."
+
+msgid "Ink/Stitch Print"
+msgstr "Ink/Stitch Drucken"
+
+msgid "Embroidery Simulation"
+msgstr "Stick Simulation"
+
 msgid "Unable to autofill.  This most often happens because your shape is made up of multiple sections that aren't connected."
 msgstr "Automatische Füllung nicht möglich.  Dies geschieht, weil Ihre Form aus mehreren und nicht verbundenen Abschnitten besteht."
 
 msgid "Unexpected error while generating fill stitches. Please send your SVG file to lexelby@github."
 msgstr "Unerwarteter Fehler beim Generieren der Füllstiche. Bitte senden Sie die SVG-Datei an lexelby@github."
+
+msgid "Stitch Plan"
+msgstr ""
+
+#, python-format
+msgid "parseLengthWithUnits: unknown unit %s"
+msgstr "AnalysiereLängeMitEinheiten: Unbekannte Einheit %s"
+
+#, python-format
+msgid "Unknown unit: %s"
+msgstr "Unbekannte Einheit: %s"
 
 msgid "Color"
 msgstr "Farbe"
