@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <_name>{{ format | upper }} file input</_name>
-    <id>org.inkstitch.input.{{ format }}</id>
+    <_name>TAP file input</_name>
+    <id>org.inkstitch.input.tap</id>
     <dependency type="executable" location="extensions">inkstitch.py</dependency>
     <dependency type="executable" location="extensions">inkex.py</dependency>
     <input>
-        <extension>.{{ format }}</extension>
-        <mimetype>application/x-embroidery-{{ format }}</mimetype>
-        <_filetypename>Ink/Stitch: {{ description }} (.{{ format }})</_filetypename>
-        <_filetypetooltip>convert {{ format | upper }} file to Ink/Stitch manual-stitch paths</_filetypetooltip>
+        <extension>.tap</extension>
+        <mimetype>application/x-embroidery-tap</mimetype>
+        <_filetypename>Ink/Stitch: Happy Embroidery Format (.tap)</_filetypename>
+        <_filetypetooltip>convert TAP file to Ink/Stitch manual-stitch paths</_filetypetooltip>
     </input>
     <param name="extension" type="string" gui-hidden="true">input</param>
     <script>
         <command reldir="extensions" interpreter="python">inkstitch.py</command>
     </script>
 </inkscape-extension>
-

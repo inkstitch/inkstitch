@@ -1,4 +1,4 @@
-EXTENSIONS:=embroider embroider_params embroider_simulate embroider_print embroider_input embroider_palettes
+EXTENSIONS:=inkstitch
 
 # This gets the branch name or the name of the tag
 VERSION:=$(TRAVIS_BRANCH)

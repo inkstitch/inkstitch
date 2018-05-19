@@ -34,26 +34,23 @@ pyinstaller_args+="-p inkscape-0.92.2/share/extensions "
 # output useful debugging info that helps us trace library dependency issues
 pyinstaller_args+="--log-level DEBUG "
 
-mkdir -p dist/inkstitch/bin
-for extension in "$@"; do
-    if [ "$BUILD" = "windows" ]; then
-        wine c:\\Python\\scripts\\pyinstaller.exe $pyinstaller_args ${extension}.py
-    else
-        # without the LD_LIBRARY_PATH, it seems that pyinstaller can't find all of
-        # wxpython's shared libraries
-        LD_LIBRARY_PATH="${site_packages}/wx" pyinstaller $pyinstaller_args ${extension}.py;
-    fi
+if [ "$BUILD" = "windows" ]; then
+    wine c:\\Python\\scripts\\pyinstaller.exe $pyinstaller_args inkstitch.py
+else
+    # without the LD_LIBRARY_PATH, it seems that pyinstaller can't find all of
+    # wxpython's shared libraries
+    LD_LIBRARY_PATH="${site_packages}/wx" pyinstaller $pyinstaller_args --strip inkstitch.py;
+fi
 
-	# By default, pyinstaller will treat each of ink/stitch's extensions
-	# separately.  This means it packages a lot of the same shared libraries (like
-	# wxPython) multiple times.  Turns out that we can just copy the contents of
-	# the directories pyinstaller creates into one and it works fine, eliminating
-	# the duplication.  This significantly decreases the size of the inkstitch
-	# tarball/zip.
-	cp -a dist/${extension}/* dist/inkstitch/bin
-	rm -rf dist/${extension}
+# pyinstaller put a whole mess of libraries under dist/inkstitch.  We'd like
+# to put some more user-accessible stuff like examples and palettes in
+# folders under inkstitch/ (see ../Makefile) so let's move the pyinstaller
+# stuff into its own dir.
+shopt -s dotglob
+mkdir dist/bin
+mv dist/inkstitch/* dist/bin
+mv dist/bin dist/inkstitch
 
-	# Inkscape doesn't let us run native binaries as extensions(?!).  Instead we
-	# add this stub script which executes the binaries that pyinstaller creates.
-	cp stub.py dist/${extension}.py
-done
+# Inkscape doesn't let us run native binaries as extensions(?!).  Instead we
+# add this stub script which executes the binary that pyinstaller creates.
+cp stub.py dist/inkstitch.py
