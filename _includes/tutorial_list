@@ -1,9 +1,8 @@
 {% assign key = include.key %}
 {% assign values = '' | split: ',' %}
-
 {% if include.value %}
   {% assign values = values | push: include.value %}
-{% else %}
+{% elsif include.key %}
   {% for i in site.tutorial %}
     {% assign tutorial_values = i[key] %}
     {% for value in tutorial_values %}
@@ -12,13 +11,31 @@
       {% endunless %}
     {% endfor %}
   {% endfor %}
+{% else %}
+  {% assign values = values | push: 'a-z' %}
 {% endif %}
 
 <div class="tutorial__group">
 {% for value in values %}
-  {% unless include.value %} <h3><span>{{ value }}</span></h3>{% endunless %}
-  {% assign items_grouped = site.tutorial | where_exp: 'item', 'item[key] contains value' %}
+  {% unless include.value or value=='a-z'  %} <h3><span>{{ value }}</span></h3>{% endunless %}
+  
+  {% unless include.key %}
+    {% assign items_grouped = site.tutorial | sort: 'title' %}
+  {% else %}
+    {% assign items_grouped = site.tutorial | where_exp: 'item', 'item[key] contains value' | sort: 'title' %}
+  {% endunless %}
+  
   {% for f in items_grouped %}
+  
+    {% comment %}Display first letters of the title if alpabetical order{% endcomment %}
+    {% unless include.key %}
+      {% assign letter = f.title | split: '' | first %}
+      {% if letter != old_letter %}
+      <h3><span>{{ letter }}</span></h3>
+      {% endif %}
+      {% assign old_letter = f.title | split: '' | first %}
+    {% endunless %}
+    
   <div class="tutorial__item">
     <div class="tutorial__item-teaser">
     {% if f.image %}
