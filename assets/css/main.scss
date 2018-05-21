@@ -58,6 +58,20 @@ p a:visited {
   }
   
 /* Sidebar */
+  /* sticky = not sticky */
+  @media (min-width: 64em) {
+    .sidebar.sticky {
+      position: relative;
+      overflow: auto;
+      height: auto;
+      top: 0;
+    }
+  }
+  
+  .nav__sub-title {
+    padding: 0;
+  }
+  
   .nav__list .nav__items .active {
     /* background: #cccccc;
     color: #808080;
