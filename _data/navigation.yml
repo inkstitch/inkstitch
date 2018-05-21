@@ -101,7 +101,7 @@ tutorials:
   - title: Inspiration
     children:
       - title: "@lexelby Patches"
-        url: /tutorials/inspiration/lexelby
+        url: /tutorials/inspiration/lexelby/
   - title: Ressources
     children:
     - title: "Sample Files"
