@@ -35,12 +35,9 @@ Shortcut Keys | Effect
 
 ## Default page size
 
-If you decided to use Ink/Stitch more frequently for your embroidery work, you might get tired of setting up the whole scene over and over again. In this case you are ready to create a template for your basic embroidery setup. Once you organised everything as desired, simply save your file in your `~/.config/inkscape/templates` folder. You can now access it by `File > New from template`.
+## Setting up origin with guides
 
-## Grids
-## Setting origin with guides
-
-Setting up origins is especially useful for people that have full access to the entire sewing field that their machine is capable of regardless of what hoop they use.
+Setting up origins (0, 0) is especially useful for people that have full access to the entire sewing field that their machine is capable of regardless of what hoop they use.
 
 To setup origins Ink/Stitch uses guidelines:
   * Create two guidelines by draging them from the rulers onto the canvas (one horizontal, one vertical).
@@ -54,3 +51,10 @@ You can also create a template containing guides and a canvas the right size for
 [Video tutorial]({{ '/tutorials/custom-origins/' | relative_url }})
 
 ## Enabling path outlines & direction
+
+Knowing path directions is important working with Ink/Stitch. For this reason we recommend to enable the checkboxes **Always show outline** and **Show path direction on outlines** in `Edit > Preferences > Tools > Node`.
+
+## Working with templates
+
+If you decided to use Ink/Stitch more frequently for your embroidery work, you might get tired of setting up the whole scene over and over again. In this case you are ready to create a template for your basic embroidery setup. Once you organised everything as desired, simply save your file in your `~/.config/inkscape/templates` folder. You can now access it by `File > New from template`.
+
