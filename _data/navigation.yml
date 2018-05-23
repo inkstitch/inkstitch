@@ -106,6 +106,8 @@ tutorials:
     children:
     - title: "Sample Files"
       url: /tutorials/ressources/samples/
+    - title: "Templates"
+      url: /tutorials/ressources/templates/
   - title: Tutorials
     url: /tutorials/
     children:

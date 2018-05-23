@@ -2,13 +2,13 @@
 title: "Customize Ink/Stitch"
 permalink: /docs/customize/
 excerpt: ""
-last_modified_at: 2018-04-14
+last_modified_at: 2018-04-23
 toc: true
 ---
 
-## Shortcut keys
+## Shortcut Keys
 
-Ink/Stitch is even more fun, if you assign shortcut keys. Go to: `Edit > Preferences > Interface > Keyboard Shortcuts` and enter your desired shortcut keys. [More information](http://wiki.inkscape.org/wiki/index.php/Customizing_Inkscape)
+You can speed up your work with Ink/Stitch, if you assign shortcut keys. Go to: `Edit > Preferences > Interface > Keyboard Shortcuts` and enter your desired key combinations. [More information](http://wiki.inkscape.org/wiki/index.php/Customizing_Inkscape)
 
 The following list was provided by lexelby:
 
@@ -23,7 +23,7 @@ Shortcut&nbsp;Keys | Effect
 
 
 
-### Simulation
+### Simulation Shortcut Keys
 Ink/Stitch simulation already comes with shortcut keys included:
 
 Shortcut Keys | Effect
@@ -33,9 +33,13 @@ Shortcut Keys | Effect
 **r** | restart animation
 **q** | close
 
-## Default page size
+## Grids
 
-## Setting up origin with guides
+To align your vector-shapes properly, you might want to make use of the grid functionality of Inkscape. Go to `View` and enable `Page Grid`. In `Snap Controls Bar` make sure `Snap to grids` is enabled. It is also possible to adjust spacing and origin of your grids in `File >  Document Properties > Grids`.
+
+![Grids](https://user-images.githubusercontent.com/11083514/40359052-414d3554-5db9-11e8-8b49-3be75c5e9732.png)
+
+## Setting up Origin with Guides
 
 Setting up origins (0, 0) is especially useful for people that have full access to the entire sewing field that their machine is capable of regardless of what hoop they use.
 
@@ -46,15 +50,30 @@ To setup origins Ink/Stitch uses guidelines:
 
 If no guides are found, the origin is at the center in the SVG.
   
-You can also create a template containing guides and a canvas the right size for your machine, and put it in your `~/.config/inkscape/templates`.
+**Info:** You can also create a [template]((/docs/customize/#working-with-templates)) containing guides and a canvas the right size for your machine.
+{: .notice--info }
 
 [Video tutorial]({{ '/tutorials/custom-origins/' | relative_url }})
 
-## Enabling path outlines & direction
+## Enabling Path Outlines & Direction
 
-Knowing path directions is important working with Ink/Stitch. For this reason we recommend to enable the checkboxes **Always show outline** and **Show path direction on outlines** in `Edit > Preferences > Tools > Node`.
+Knowing path directions is important working with Ink/Stitch. Therefore we recommend to enable the checkboxes **Show path direction on outlines** and **Show temporary outline for selected paths** in `Edit > Preferences > Tools > Node`.
 
-## Working with templates
+Make sure that also **Show path outline** is enabled in `Tool Controls Bar` as you can see in the image below.
 
-If you decided to use Ink/Stitch more frequently for your embroidery work, you might get tired of setting up the whole scene over and over again. In this case you are ready to create a template for your basic embroidery setup. Once you organised everything as desired, simply save your file in your `~/.config/inkscape/templates` folder. You can now access it by `File > New from template`.
+[![Path outlines & directions](https://user-images.githubusercontent.com/11083514/40360721-f294ef0a-5dbe-11e8-9d4d-98f469ff1fba.png)](https://user-images.githubusercontent.com/11083514/40360721-f294ef0a-5dbe-11e8-9d4d-98f469ff1fba.png)
+
+## Working with Templates
+
+If you decided to use Ink/Stitch more frequently for your embroidery work, you might get tired of setting up the whole scene over and over again. In this case you are ready to create a template for your basic embroidery setup. Once you organised everything as desired, simply save your file in your templates folder. You can now access it by `File > New from template`.
+
+Operating system|Template Folder
+---|---
+Linux|`~/.config/inkscape/templates`
+Windows|`C:\Users%USERNAME%\AppData\Roaming\inkscape\templates`
+
+You should confirm the user folder in your inkscape preferences see the [FAQ](/docs/faq/#i-have-downloaded-and-unzipped-the-latest-release-where-do-i-put-it).
+
+**Info:** Get [predefined templates](/tutorials/ressources/templates/) from our tutorial section.
+{: .notice--info }
 

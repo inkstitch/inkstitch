@@ -7,7 +7,6 @@ image: "/assets/images/tutorials/samples/Applique Color Change.svg"
 
 tutorial-type:
   - Sample File
-  - Text
 stitch-type: 
   - Running Stitch
   - Fill Stitch
