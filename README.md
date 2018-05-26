@@ -48,7 +48,7 @@ Every page should start with something like this:
 title: "Some Title"
 permalink: /unique/permalink
 excerpt: "Small description what the document is about"
-last_modified_at: yyyy-mm-dd # f.e. 2018-05-05
+last_modified_at: yyyy-mm-dd # e.g. 2018-05-05
 toc: true # set to false or delete if you don't wish to display a table of contents
 ---
 ```
