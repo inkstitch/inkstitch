@@ -39,8 +39,9 @@ $text-color: #000;
   font-size: 0.8rem;
 }
 
-div.highlighter-rouge, figure.highlight {
+.highlighter-rouge, figure.highlight {
   font-size: .6rem;
+  background: #efefef;
 }
 
 a:hover, a:active, .page__taxonomy-item:hover {

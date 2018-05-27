@@ -17,7 +17,7 @@ This gives you a heirarchical list of objects in your SVG file, listed in their 
 Versions 0.92.2 and higher let you [bind a key](/docs/customize/#shortcut-keys) to new commands, “stack up” and “stack down”, which you can assign to pageup and pagedown. These let you arbitrarily reorder objects in the SVG file, which lets you directly manipulate which order they stitch in. It works way better than the default “raise” and “lower” commands.
 {: .notice--info }
 
-## Quick Setup On Linux and Windows
+## Quick Setup
 
 ### 1. Download
 Download the right release archive for your platform from the [latest release](https://github.com/lexelby/inkstitch/releases/latest).
@@ -33,17 +33,17 @@ macOS|Sorry, there is no macOS-Version yet. If you are willing to [test](https:/
  * Decompress the the Ink/Stitch archive directly into this folder and restart Inkscape.
  * You will then find Ink/Stitch under `Extensions > Embroidery`.
 
-#### For example, on Linux:
+#### For example on Linux:
 
 ```
 $ cd ~/.config/inkscape/extensions
 $ tar zxf ~/Downloads/inkstitch-v1.0.0-Linux-x86_64.tar.gz
 ```
 
-#### For example, on Windows
+#### For example on Windows
 
-* Unhide the AppData directory (go to `c:\users\__your_home__\`, e.g. `c:\users\janet`
-* Unzip in `c:\users\__you__\AppData\Roaming\inkscape\extensions`
+* Unhide the AppData directory (go to `C:\Users\%USERNAME%\`, e.g. `C:\Users\Janet`
+* Unzip in `C:\Users\%USERNAME%\AppData\Roaming\inkscape\extensions`
 
 ## Upgrade
 

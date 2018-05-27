@@ -70,7 +70,7 @@ If you decided to use Ink/Stitch more frequently for your embroidery work, you m
 Operating system|Template Folder
 ---|---
 Linux|`~/.config/inkscape/templates`
-Windows|`C:\Users%USERNAME%\AppData\Roaming\inkscape\templates`
+Windows|`C:\Users\%USERNAME%\AppData\Roaming\inkscape\templates`
 
 You should confirm the user folder in your inkscape preferences see the [FAQ](/docs/faq/#i-have-downloaded-and-unzipped-the-latest-release-where-do-i-put-it).
 
