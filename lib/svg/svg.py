@@ -11,23 +11,23 @@ from ..utils import cache, Point
 #  _______
 # (_______)
 #
-# It's 0.4mm high, which is the approximate thickness of common machine embroidery threads.
+# It's 0.32mm high, which is the approximate thickness of common machine embroidery threads.
 
-# 1.52 pixels = 0.4mm
-stitch_height = 1.52
+# 1.216 pixels = 0.32mm
+stitch_height = 1.216
 
 # This vector path starts at the origin and contains a placeholder (%s) for the stitch length.
-stitch_path = "M0,0c0.386,0,0.417,0.378,0.428,0.759c0.012,0.382,-0.048,0.754,-0.428,0.759h-%sc-0.357,-0.003,-0.399,-0.376,-0.413,-0.759c-0.014,-0.382,0.067,-0.759,0.413,-0.759z"
+stitch_path = "M0,0c0.386,0,0.417,0.302,0.428,0.607c0.012,0.306,-0.048,0.603,-0.428,0.607h-%sc-0.357,-0.002,-0.399,-0.3,-0.413,-0.607c-0.014,-0.305,0.067,-0.607,0.413,-0.607z"
 
 # This filter makes the above stitch path look like a real stitch with lighting.
 realistic_filter = """
     <filter
        style="color-interpolation-filters:sRGB"
        id="realistic-stitch-filter"
-       x="-0.40000001"
-       width="1.8"
-       y="-0.40000001"
-       height="1.8">
+       x="-0.1"
+       width="1.2"
+       y="-0.1"
+       height="1.2">
       <feGaussianBlur
          stdDeviation="1.5"
          id="feGaussianBlur1542-6"
@@ -68,7 +68,7 @@ realistic_filter = """
          id="feSpecularLighting1973"
          result="result2"
          specularConstant="0.70899999"
-         surfaceScale="33.81000137">
+         surfaceScale="30">
         <fePointLight
            id="fePointLight1975"
            z="10" />
@@ -108,15 +108,13 @@ def realistic_stitch(start, end):
     # create the path by filling in the length in the template
     path = simplepath.parsePath(stitch_path % stitch_length)
 
-    simplepath.scalePath(path, 1, 0.8)
-
     # rotate the path to match the stitch
     rotation_center_x = -stitch_length / 2.0
     rotation_center_y = stitch_height / 2.0
     simplepath.rotatePath(path, stitch_angle, cx=rotation_center_x, cy=rotation_center_y)
 
     # move the path to the location of the stitch
-    simplepath.translatePath(path, stitch_center.x, stitch_center.y)
+    simplepath.translatePath(path, stitch_center.x - rotation_center_x, stitch_center.y - rotation_center_y)
 
     return simplepath.formatPath(path)
 
