@@ -10,7 +10,7 @@ toc: true
 
 You can speed up your work with Ink/Stitch, if you assign shortcut keys. Go to: `Edit > Preferences > Interface > Keyboard Shortcuts` and enter your desired key combinations. [More information](http://wiki.inkscape.org/wiki/index.php/Customizing_Inkscape)
 
-The following list was provided by lexelby:
+The following list was suggested by lexelby:
 
 Shortcut&nbsp;Keys | Effect
 -------- | --------
