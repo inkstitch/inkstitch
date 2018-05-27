@@ -119,7 +119,7 @@ class PrintPreviewServer(Thread):
         def start_watcher():
             self.watcher_thread = Thread(target=self.watch)
             self.watcher_thread.daemon = True
-            self.watcher_thread.start()
+            #self.watcher_thread.start()
 
         @self.app.route('/')
         def index():
