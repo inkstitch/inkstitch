@@ -23,7 +23,7 @@ Transform **all objects** you want to stitch to paths:
 * `Path -> Object to Path` or `Ctrl+Alt+C`.<br>
 
 **Info:** Objects that are not of "path" type, are ignored by InkStitch.
-{: .notice--info }
+{: .notice--warning }
 
 ### Step 3 - Parametrize SVG Path for Embroidery
 
@@ -56,5 +56,10 @@ The stitching preview you're looking at just now isn't intended to be permanent.
 ### Step 6 - Stitching Out the Design
 Where'd the design file go? One of the parameters you were able to specify in the filter settings dialog was the output directory. By default, the directory used is the place where you installed the extension's Python files.
 
-Ink/Stich will create a file named `something.___`, where `something` is the name of your svg file (e.g. `something.svg`) and `___` is the proper extension for the output format you select. If `something.___` already exists, it will be renamed to `something.___.1`, and `something.___.1` will be renamed to `something.___.2`, etc, up to 5 backup copies. When you've got the design the way you like it, save off a copy of `something.___` and feed your machine.
+Ink/Stich will create a file named `something.___`, where `something` is the name of your svg file (e.g. `something.svg`) and `___` is the proper extension for the output format you select. If `something.___` already exists, it will be renamed to `something.___.1`, and `something.___.1` will be renamed to `something.___.2`, etc, up to 5 backup copies.
 
+   <span style="color: #3f51b5;">↳ something.___</span><br />
+   <span style="color: #ff9800;">↳ something.___</span>, <span style="color: #3f51b5;">something.___.1</span><br />
+   <span style="color: #f44336;">↳ something.___</span>, <span style="color: #ff9800;">something.___.1</span>, <span style="color: #3f51b5;">something.___.2</span>
+   
+When you've got the design the way you like it, save off a copy of <span style="color: #f44336;">`something.___`</span> and feed your machine.

@@ -5,14 +5,40 @@
 @charset "utf-8";
 
 
-
-
 /* typefaces */
+
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url(barlow_condensed.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  src: url(barlow.ttf) format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 700;
+  src: url(barlow-bold.ttf) format('truetype');
+}
+
 $sans-serif         : 'Barlow', sans-serif;
-$sans-serif-narrow  : 'Barlow', sans-serif;
+$sans-serif-narrow  : 'Barlow Condensed', sans-serif;
 
 $global-font-family : $sans-serif;
 $header-font-family : $sans-serif-narrow;
+
+tt, code, kbd, samp, pre {
+  font-family: Barlow Condensed, monospace;
+  font-size: 0.6rem;
+}
 
 /* type scale */
 $type-size-1 : 1em;
@@ -42,6 +68,10 @@ $text-color: #000;
 .highlighter-rouge, figure.highlight {
   font-size: .6rem;
   background: #efefef;
+}
+
+.notice--info code {
+    background-color: #d7e2e1;
 }
 
 a:hover, a:active, .page__taxonomy-item:hover {
