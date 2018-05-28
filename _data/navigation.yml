@@ -50,6 +50,8 @@ docs:
         url: /docs/install/
       - title: "Customize"
         url: /docs/customize/
+      - title: "Basic Usage"
+        url: /docs/basic-usage/
       - title: "Workflow"
         url: /docs/workflow/
   - title: Interface
