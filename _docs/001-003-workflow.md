@@ -46,7 +46,7 @@ To create an embroidery file for the whole design:
 
 ### Step 5 - Inspect in Inkscape
 
-The circle you made will disappear and be replaced with some stripes and zig-zags. Ink/Stitch has hidden all of your layers and created a new one called `Stitch Plan`, in which it has palced a visual representation of the stitch plan it created. It has interpreted your shape as two instructions: Fill and Stroke. Fill is implemented using fill stitching, and Stroke is implemented by running satin stitching along the outline.
+The circle you made will disappear and be replaced with some stripes and zig-zags. Ink/Stitch has hidden all of your layers and created a new one called `Stitch Plan`, in which it has placed a visual representation of the stitch plan it created. It has interpreted your shape as two instructions: Fill and Stroke. Fill is implemented using fill stitching, and Stroke is implemented by running satin stitching along the outline.
 
 Select the horizontal lines using the `Edit Paths by Nodes` tool. Zoom in a bit and you'll see that the lines are actually made up of lots of points. Each point represents one stitch - one needle penetration and interlocking of the top thread with the bobbin thread. Notice how the points all line up nicely in diagonals. This will give the fill stitching a nice, orderly visual appearance.
 
