@@ -59,9 +59,19 @@ def patches_to_stitch_plan(patches, collapse_len=3.0 * PIXELS_PER_MM):
         if patch.stop_after:
             process_stop(color_block)
 
+    add_jumps(stitch_plan)
     add_ties(stitch_plan)
 
     return stitch_plan
+
+
+def add_jumps(stitch_plan):
+    """Add a JUMP stitch at the start of each color block."""
+
+    for color_block in stitch_plan:
+        stitch = color_block.stitches[0].copy()
+        stitch.jump = True
+        color_block.stitches.insert(0, stitch)
 
 
 class StitchPlan(object):
