@@ -23,15 +23,15 @@ def patches_to_stitch_plan(patches, collapse_len=3.0 * PIXELS_PER_MM):
         if not patch.stitches:
             continue
 
-        if need_trim:
-            process_trim(color_block, patch.stitches[0])
-            need_trim = False
-
         if not color_block.has_color():
             # set the color for the first color block
             color_block.color = patch.color
 
         if color_block.color == patch.color:
+            if need_trim:
+                process_trim(color_block, patch.stitches[0])
+                need_trim = False
+
             # add a jump stitch between patches if the distance is more
             # than the collapse length
             if color_block.last_stitch:
