@@ -34,7 +34,9 @@ def add_ties(stitch_plan):
         need_tie_in = True
         new_stitches = []
         for i, stitch in enumerate(color_block.stitches):
-            is_special = stitch.trim or stitch.jump or stitch.stop
+            # Tie before and after TRIMs, JUMPs, and color changes, but ignore
+            # the fake color change introduced by a "STOP after" (see stop.py).
+            is_special = stitch.trim or stitch.jump or (stitch.color_change and not stitch.stop)
 
             if is_special and not need_tie_in:
                 add_tie_off(new_stitches)

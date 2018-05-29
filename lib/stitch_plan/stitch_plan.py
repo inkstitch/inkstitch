@@ -23,15 +23,15 @@ def patches_to_stitch_plan(patches, collapse_len=3.0 * PIXELS_PER_MM):
         if not patch.stitches:
             continue
 
-        if need_trim:
-            process_trim(color_block, patch.stitches[0])
-            need_trim = False
-
         if not color_block.has_color():
             # set the color for the first color block
             color_block.color = patch.color
 
         if color_block.color == patch.color:
+            if need_trim:
+                process_trim(color_block, patch.stitches[0])
+                need_trim = False
+
             # add a jump stitch between patches if the distance is more
             # than the collapse length
             if color_block.last_stitch:
@@ -39,8 +39,12 @@ def patches_to_stitch_plan(patches, collapse_len=3.0 * PIXELS_PER_MM):
                     color_block.add_stitch(patch.stitches[0].x, patch.stitches[0].y, jump=True)
 
         else:
-            # add a color change
-            color_block.add_stitch(color_block.last_stitch.x, color_block.last_stitch.y, stop=True)
+            # add a color change (only if we didn't just do a "STOP after")
+            if not color_block.last_stitch.color_change:
+                stitch = color_block.last_stitch.copy()
+                stitch.color_change = True
+                color_block.add_stitch(stitch)
+
             color_block = stitch_plan.new_color_block()
             color_block.color = patch.color
 
@@ -55,9 +59,19 @@ def patches_to_stitch_plan(patches, collapse_len=3.0 * PIXELS_PER_MM):
         if patch.stop_after:
             process_stop(color_block)
 
+    add_jumps(stitch_plan)
     add_ties(stitch_plan)
 
     return stitch_plan
+
+
+def add_jumps(stitch_plan):
+    """Add a JUMP stitch at the start of each color block."""
+
+    for color_block in stitch_plan:
+        stitch = color_block.stitches[0].copy()
+        stitch.jump = True
+        color_block.stitches.insert(0, stitch)
 
 
 class StitchPlan(object):

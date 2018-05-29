@@ -15,7 +15,7 @@ def color_block_to_point_lists(color_block):
                   point_lists.append([])
                   continue
 
-         if not stitch.jump and not stitch.stop:
+         if not stitch.jump and not stitch.color_change:
               point_lists[-1].append(stitch.as_tuple())
 
     return point_lists

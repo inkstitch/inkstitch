@@ -16,7 +16,7 @@ def running_stitch(points, stitch_length):
     if len(points) < 2:
         return []
 
-    output = [points[0]]
+    output = []
     segment_start = points[0]
     last_segment_direction = None
 
@@ -59,8 +59,8 @@ def running_stitch(points, stitch_length):
         last_segment_direction = segment_direction
         distance -= segment_length
 
-    # stitch the last point unless we're already almos there
-    if (segment_start - points[-1]).length() > 0.1:
+    # stitch the last point unless we're already almost there
+    if (segment_start - output[-1]).length() > 0.1:
         output.append(segment_start)
 
     return output
