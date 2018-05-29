@@ -44,7 +44,7 @@ class Input(object):
             if not stitch.flags & END:
                 color_block.add_stitch(stitch.xx * PIXELS_PER_MM, stitch.yy * PIXELS_PER_MM,
                                        jump=stitch.flags & JUMP,
-                                       stop=stitch.flags & STOP,
+                                       color_change=stitch.flags & STOP,
                                        trim=stitch.flags & TRIM)
 
         extents = stitch_plan.extents

@@ -39,10 +39,10 @@ def patches_to_stitch_plan(patches, collapse_len=3.0 * PIXELS_PER_MM):
                     color_block.add_stitch(patch.stitches[0].x, patch.stitches[0].y, jump=True)
 
         else:
-            # add a color change (only if the last stitch wasn't a "STOP after")
-            if not color_block.last_stitch.stop:
+            # add a color change (only if we didn't just do a "STOP after")
+            if not color_block.last_stitch.color_change:
                 stitch = color_block.last_stitch.copy()
-                stitch.stop = True
+                stitch.color_change = True
                 color_block.add_stitch(stitch)
 
             color_block = stitch_plan.new_color_block()
