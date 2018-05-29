@@ -7,15 +7,19 @@ toc: true
 ---
 ### Step 1: Sketch design or use an image
 
-First, I get an idea for what I want my finished product to look like. If I'm basing my design off an existing picture or graphic, I load it into Inkscape in its own layer. Some graphics are amenable to Inkscape's auto-tracing feature, especially if I simplify the image in GIMP first.
+When basing a design off an existing picture or graphic, load it into Inkscape in its own layer. Some graphics are amenable to Inkscape's [auto-tracing feature](https://inkscape.org/en/doc/tutorials/tracing/tutorial-tracing.html), especially if you simplify the image in a graphic editor first (e.g. with [GIMP](https://www.gimp.org/)).
 
-After auto-tracing, I clean up the vector shapes, using "Simplify" and deleting nodes by hand when possible. My goal is to use as few Bezier curves as reasonably possible to represent the image.
+**Tipp:** If you have Linux and need to vectorize a stroke, you could make use of an other Inkscape plugin, which aims to do [centerline tracing](https://github.com/fablabnbg/inkscape-centerline-trace). For embroidery purposes it might only apply to simple shapes.
+{: .notice--info }
 
-If I need to trace an image by hand, I usually use the freehand drawing tool. This tool creates paths with a lot of Bezier nodes, so again, I'll simplify the curves as much as possible.
+After tracing, clean up the vector shapes, using `Path > Simplify` (`Ctrl+L`) and deleting nodes by hand when possible. The goal is to use as few Bezier curves as reasonably possible to represent the image.
+
+When the image is needed to be traced by hand, use the freehand drawing tool. This tool creates paths with a lot of Bezier nodes, so again, simplify the curves as much as possible.
 
 Working with an existing SVG image can save a ton of time, so consider using Google image search with the filter set to SVG.
 
-For text, choose a font carefully. It's quite hard to make satin look good when it's 1mm wide or narrower. Sans-serif fonts tend to be the easiest. For text smaller than 4mm tall, you'll have a very difficult time making lowercase letters look good, so consider block-caps. Cursive/script fonts can work well, but it's not going to be as easy as you think. I find that I spend the most time on text by far.
+**Tipp:** For text, choose a font carefully. It's quite hard to make satin look good when it's 1mm wide or narrower. Sans-serif fonts tend to be the easiest. For text smaller than 4mm tall, you'll have a very difficult time making lowercase letters look good, so consider block-caps. Cursive/script fonts can work well, but it's not going to be as easy as you think.
+{: .notice--info }
 
 
 ### Step 2: Plan stitch path and color changes
