@@ -17,11 +17,18 @@ def process_stop(color_block):
     """
 
     if len(color_block.stitches) >= 3:
-        color_block.stitches[-3].stop = True
+        # make a copy of the stitch and turn it into a STOP code
+        stitch = color_block.stitches[-3].copy()
+        stitch.stop = True
+
+        # insert it after the stitch
+        color_block.stitches.insert(-2, stitch)
 
     # and also add a color change on this stitch, completing the C00
     # block:
 
-    color_block.stitches[-1].stop = True
+    stitch = color_block.stitches[-1].copy()
+    stitch.stop = True
+    color_block.add_stitch(stitch)
 
     # reference for the above: https://github.com/lexelby/inkstitch/pull/29#issuecomment-359175447
