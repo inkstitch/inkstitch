@@ -17,7 +17,7 @@ from ..utils import cache, Point
 stitch_height = 1.216
 
 # This vector path starts at the origin and contains a placeholder (%s) for the stitch length.
-stitch_path = "M0,0c0.386,0,0.417,0.302,0.428,0.607c0.012,0.306,-0.048,0.603,-0.428,0.607h-%sc-0.357,-0.002,-0.399,-0.3,-0.413,-0.607c-0.014,-0.305,0.067,-0.607,0.413,-0.607z"
+stitch_path = "M0,0c0.4,0,0.4,0.3,0.4,0.6c0,0.3,-0.1,0.6,-0.4,0.6v0.2,-0.2h-%sc-0.4,0,-0.4,-0.3,-0.4,-0.6c0,-0.3,0.1,-0.6,0.4,-0.6v-0.2,0.2z"
 
 # This filter makes the above stitch path look like a real stitch with lighting.
 realistic_filter = """
