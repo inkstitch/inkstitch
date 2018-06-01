@@ -21,16 +21,16 @@ user-level:
 
 ![Multi Color](/assets/images/tutorials/samples/InkStitch Multi Color.svg)
 
-[Download](/assets/images/tutorials/samples/InkStitch Multi Color.svg)
+[Download](/assets/images/tutorials/samples/InkStitch Multi Color.svg){: download="InkStich-Multi-Color" }
 
 ## Ink/Stitch Logo 1 Color
 
 ![1 Color](/assets/images/tutorials/samples/InkStitch 1 Color.svg){: .img-invert }
 
-[Download](/assets/images/tutorials/samples/InkStitch 1 Color.svg)
+[Download](/assets/images/tutorials/samples/InkStitch 1 Color.svg){: download="InkStitch-1-Color" }
 
 ## Ink/Stitch Logo 1 Color Top Left Origin
 
 ![1 Color](/assets/images/tutorials/samples/InkStitch 1 Color Top Left Origin.svg){: .img-invert }
 
-[Download](/assets/images/tutorials/samples/InkStitch 1 Color Top Left Origin.svg)
+[Download](/assets/images/tutorials/samples/InkStitch 1 Color Top Left Origin.svg){: download="InkStitch-1-Color-Top-Left-Origin" }

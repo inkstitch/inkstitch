@@ -48,9 +48,10 @@ Once you've created all vectors and test-embroidered them individually, it's tim
 
 Ink/Stitch will stitch objects in exactly the order they appear in your SVG document, from lowest to highest in stacking order. If the distance between two objects is long, Ink/Stitch will add a jump-stitch between them automatically. It uses the color of the object to determine thread color, so changes in color from one object to the next will result in a thread-change instruction being added to the embroidery output file.
 
-Inkscape gives you the ability to raise and lower objects in the stacking order using the PageUp and PageDown keys. To get better control over the stacking order, you might want to set these keybinding to "Stack Up" and "Stack Down". [More Information](/docs/customize/#shortcut-keys)
+**Tipp:** Inkscape gives you the ability to "raise" and "lower" objects in the stacking order using the PageUp and PageDown keys. The new functions "Stack Up" and "Stack Down" will give you much better control over the stacking order. So we recommend to rather bind PageUp and Page Down to them. [More Information](/docs/customize/#shortcut-keys)
+{: .notice--info }
 
-**Info:**You can also manually manipulate the underlying SVG XML structure by using Inkscape's XML Editor pane (`CTRL-SHIFT-X`). Its "Raise" and "Lower" buttons directly manipulate the order of XML tags in the SVG file and are not subject to the same limitations as the original PageUp and PageDown. Note that the ordering of XML tags in the XML Editor tool is the _reverse_ of the order of objects in the Objects tool.
+**Info:** You can also manually manipulate the underlying SVG XML structure by using Inkscape's XML Editor pane (`CTRL-SHIFT-X`). Its "Raise" and "Lower" buttons directly manipulate the order of XML tags in the SVG file and are not subject to the same limitations as the original PageUp and PageDown. Note that the ordering of XML tags in the XML Editor tool is the _reverse_ of the order of objects in the Objects tool.
 {: .notice--info }
 
 ### Step 5: Render to a file format supported by your machine
@@ -59,9 +60,14 @@ Once you've got everything in the right order, deselect all objects and run *Emb
 
 *Embroider* will create a file in the specified output directory named after your SVG file, but with the extension changed to `.DST`, `.PES`, or whatever format you selected. It will back up any existing file there, storing up to 5 old copies of each file.
 
-### Step 6: Convert to PES and upload
+### Step 6: Output
 
-Transfer the design to your machine in whatever manner is appropriate.
+You can either create a stitch file for a selection of objects or for all path objects. To create an embroidery file for the whole design:
+
+* Click into some empty space (in order to deselect)
+* Run `Extensions > Embroidery > Embroider...`
+* Select the right file format for your machine
+* Type a directory name where you want to save your output files. E.g. `C:\Users\%USERNAME%\Documents` on Windows. Ink/Stitch will remember this information.
 
 ### Step 7: Test-sew
 
