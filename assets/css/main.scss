@@ -83,6 +83,10 @@ p a:visited {
   color: #f74004;
 }
 
+table tr td:first-child {
+  width: 25%;
+}
+
 /* Table of Contents */
   .toc .nav__title {
     background: #808080;
