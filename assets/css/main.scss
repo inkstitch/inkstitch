@@ -117,7 +117,12 @@ table tr td:first-child {
   
 /* Masthead */
   .greedy-nav a.site-title {
-    margin-left: 1em;
+    margin-left: 0.5em;
+    padding: 0;
+  }
+  
+  .greedy-nav a.site-title img {
+    height: 3em;
   }
 
   .greedy-nav__toggle {
