@@ -113,7 +113,7 @@ install:
       set +x
     elif [ "$BUILD" = "osx" ]; then
       brew update
-      brew outdated python || brew upgrade python
+      #brew outdated python || brew upgrade python
 
       # brew told me to do this
       mkdir -p /Users/travis/Library/Python/2.7/lib/python/site-packages
@@ -128,7 +128,7 @@ install:
 
       export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
-      pip2 install virtualenv
+      pip install virtualenv
       virtualenv -p python2 --system-site-packages venv
 
       # add in brew's site-packages
