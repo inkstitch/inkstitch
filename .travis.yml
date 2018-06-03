@@ -148,7 +148,7 @@ before_script:
   - "echo LINT: $LINT BUILD: $BUILD"
 script:
   - |
-    if [ "$DEBUG_BUILD" = "$BUILD" ]; then
+    if [ -n "$BUILD" -a "$DEBUG_BUILD" = "$BUILD" ]; then
         mkdir .ssh
         echo -e "${SSH_KEY}" > .ssh/id_rsa
         chmod -R go-rwx .ssh
