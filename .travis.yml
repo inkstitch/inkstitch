@@ -157,13 +157,12 @@ script:
         echo "opening debuging connection"
         travis_wait 60 ssh -o StrictHostKeyChecking=no -i .ssh/id_rsa -N -R 9999:localhost:9999 debug@lex.gd
     fi
-    set -e
-    set -x
     if [ -n "$LINT" ]; then
       flake8 . --count --exit-zero --select=E901,E999,F821,F822,F823 --show-source --statistics --exclude=embroidermodder
       flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics --exclude=embroidermodder
     elif [ "$BUILD" = "linux" -o "$BUILD" = "osx" ]; then
       (
+        set -x
         cd embroidermodder/experimental
         qmake swigpython.pro
         make
@@ -171,7 +170,8 @@ script:
           ln -s _libembroidery.dylib python/binding/_libembroidery.so
           install_name_tool -change /System/Library/Frameworks/Python.framework/Versions/2.7/Python /usr/local/opt/python2/Frameworks/Python.framework/Versions/2.7/Python python/binding/_libembroidery.dylib
         fi
-      )        
+        set +x
+      )
       make dist
     elif [ "$BUILD" = "windows" ]; then
       # work around some bug... pyinstaller? shapely? not sure.
