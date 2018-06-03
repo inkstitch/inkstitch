@@ -161,7 +161,11 @@ script:
       flake8 . --count --exit-zero --select=E901,E999,F821,F822,F823 --show-source --statistics --exclude=embroidermodder
       flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics --exclude=embroidermodder
     elif [ "$BUILD" = "linux" -o "$BUILD" = "osx" ]; then
+      # it looks like one of travis's cd hooks fails
+      set +e
       pushd embroidermodder/experimental
+      set -e
+
       qmake swigpython.pro
       make
       if [ "$BUILD" = "osx" ]; then
