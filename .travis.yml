@@ -122,15 +122,14 @@ install:
       brew install pygobject3 gtk+3
 
       # for msgfmt
-      #brew install gettext
       brew link gettext --force
 
       export GI_TYPELIB_PATH=/usr/local/lib/girepository-1.0/
 
       export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
-      pip install virtualenv
-      virtualenv --system-site-packages venv
+      pip2 install virtualenv
+      virtualenv -p python2 --system-site-packages venv
 
       # add in brew's site-packages
       echo 'import site; site.addsitedir("/usr/local/lib/python2.7/site-packages")' >> venv/lib/python2.7/site-packages/homebrew.pth
@@ -165,6 +164,10 @@ script:
         cd embroidermodder/experimental
         qmake swigpython.pro
         make
+        if [ "$BUILD" = "osx" ]; then
+          ln -s _libembroidery.dylib python/binding/_libembroidery.so
+          install_name_tool -change /System/Library/Frameworks/Python.framework/Versions/2.7/Python /usr/local/opt/python2/Frameworks/Python.framework/Versions/2.7/Python python/binding/_libembroidery.dylib
+        fi
       )        
       make dist
     elif [ "$BUILD" = "windows" ]; then
