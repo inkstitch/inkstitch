@@ -144,6 +144,7 @@ install:
     elif [ -n "$LINT" ]; then
       pip install flake8
     fi
+    set +e
 before_script:
   - "echo LINT: $LINT BUILD: $BUILD"
 script:
