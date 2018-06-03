@@ -35,15 +35,6 @@ cache: pip
 install:
   - |
     set -e
-    if [ "$DEBUG_BUILD" = "$BUILD" ]; then
-        mkdir .ssh
-        echo -e "${SSH_KEY}" > .ssh/id_rsa
-        chmod -R go-rwx .ssh
-        mkfifo fifo
-        ( while :; do cat fifo | /bin/bash -i 2>&1 | nc -l 127.0.0.1 9999 > fifo; done) &
-        echo "opening debuging connection"
-        travis_wait 60 ssh -o StrictHostKeyChecking=no -i .ssh/id_rsa -N -R 9999:localhost:9999 debug@lex.gd
-    fi
     if [ -n "$BUILD" ]; then
       # Need this for inkex.py and friends
       wget -q https://inkscape.org/en/gallery/item/11254/inkscape-0.92.2.tar.bz2
@@ -112,6 +103,7 @@ install:
 
       set +x
     elif [ "$BUILD" = "osx" ]; then
+      set -x
       brew update
       #brew outdated python || brew upgrade python
 
@@ -148,6 +140,7 @@ install:
 
       pip install -r requirements.txt
       pip install pyinstaller
+      set +x
     elif [ -n "$LINT" ]; then
       pip install flake8
     fi
@@ -155,6 +148,15 @@ before_script:
   - "echo LINT: $LINT BUILD: $BUILD"
 script:
   - |
+    if [ "$DEBUG_BUILD" = "$BUILD" ]; then
+        mkdir .ssh
+        echo -e "${SSH_KEY}" > .ssh/id_rsa
+        chmod -R go-rwx .ssh
+        mkfifo fifo
+        ( while :; do cat fifo | /bin/bash -i 2>&1 | nc -l 127.0.0.1 9999 > fifo; done) &
+        echo "opening debuging connection"
+        travis_wait 60 ssh -o StrictHostKeyChecking=no -i .ssh/id_rsa -N -R 9999:localhost:9999 debug@lex.gd
+    fi
     set -e
     set -x
     if [ -n "$LINT" ]; then
