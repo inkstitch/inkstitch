@@ -31,10 +31,10 @@ user-level: Beginner
 
 ![Applique Color Change](/assets/images/tutorials/samples/Applique Color Change.svg)
 
-[Download](/assets/images/tutorials/samples/Applique Color Change.svg){: download="Applique-Color-Change" }
+[Download](/assets/images/tutorials/samples/Applique Color Change.svg){: download="Applique-Color-Change.svg" }
 
 ## Applique Stop (by Evan West)
 
 ![Applique Stop](/assets/images/tutorials/samples/Applique Stop.svg)
 
-[Download](/assets/images/tutorials/samples/Applique Stop.svg){: download="Applique-Stop" }
+[Download](/assets/images/tutorials/samples/Applique Stop.svg){: download="Applique-Stop.svg" }

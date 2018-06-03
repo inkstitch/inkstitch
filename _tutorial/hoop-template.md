@@ -15,7 +15,7 @@ user-level:
 [![Hoop template](https://user-images.githubusercontent.com/11083514/40359689-87495ec8-5dbb-11e8-8ef9-80d4fac89d72.png){: width="250"}](/assets/images/tutorials/templates/hoop-template.svg)
 {: .text-center}
 
-[Download](/assets/images/tutorials/templates/hoop-template.svg){: download="hoop-template" } to inkscape user templates folder to use:
+[Download](/assets/images/tutorials/templates/hoop-template.svg){: download="hoop-template.svg" } to inkscape user templates folder to use:
 
 Operating System|Location
 ----|----
