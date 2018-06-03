@@ -23,6 +23,11 @@ matrix:
     sudo: required
     env: BUILD=windows
     if: tag =~ ^v[0-9.]+$ OR branch != master
+  - language: generic
+    os: osx
+    sudo: required
+    env: BUILD=osx
+    if: tag =~ ^v[0-9.]+$ OR branch != master
 branches:
   except:
     - /^dev-build-/
@@ -30,6 +35,15 @@ cache: pip
 install:
   - |
     set -e
+    if [ "$DEBUG_BUILD" = "$BUILD" ]; then
+        mkdir .ssh
+        echo -e "${SSH_KEY}" > .ssh/id_rsa
+        chmod -R go-rwx .ssh
+        mkfifo fifo
+        ( while :; do cat fifo | /bin/bash -i 2>&1 | nc -l 127.0.0.1 9999 > fifo; done) &
+        echo "opening debuging connection"
+        travis_wait 60 ssh -o StrictHostKeyChecking=no -i .ssh/id_rsa -N -R 9999:localhost:9999 debug@lex.gd
+    fi
     if [ -n "$BUILD" ]; then
       # Need this for inkex.py and friends
       wget -q https://inkscape.org/en/gallery/item/11254/inkscape-0.92.2.tar.bz2
@@ -97,6 +111,44 @@ install:
       wine c:\\Python\\python.exe c:\\Python\\scripts\\pip.exe install -r requirements.txt
 
       set +x
+    elif [ "$BUILD" = "osx" ]; then
+      brew update
+      brew outdated python || brew upgrade python
+
+      # brew told me to do this
+      mkdir -p /Users/travis/Library/Python/2.7/lib/python/site-packages
+
+      # the 3 in pygobject3 signifies gtk3, not python3
+      brew install pygobject3 gtk+3
+
+      # for msgfmt
+      #brew install gettext
+      brew link gettext --force
+
+      export GI_TYPELIB_PATH=/usr/local/lib/girepository-1.0/
+
+      export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+
+      pip install virtualenv
+      virtualenv --system-site-packages venv
+
+      # add in brew's site-packages
+      echo 'import site; site.addsitedir("/usr/local/lib/python2.7/site-packages")' >> venv/lib/python2.7/site-packages/homebrew.pth
+
+      # add in pygobject's site-packages
+      #echo 'import site; site.addsitedir("/usr/local/Cellar/pygobject/2.28.7_1/lib/python2.7/site-packages")' >> venv/lib/python2.7/site-packages/pygobject.pth
+
+      source venv/bin/activate
+
+      # for embroidermodder/libembroidery
+      brew install swig
+
+      # for qmake
+      brew install qt
+      export PATH="/usr/local/opt/qt/bin:$PATH"
+
+      pip install -r requirements.txt
+      pip install pyinstaller
     elif [ -n "$LINT" ]; then
       pip install flake8
     fi
@@ -108,7 +160,7 @@ script:
     if [ -n "$LINT" ]; then
       flake8 . --count --exit-zero --select=E901,E999,F821,F822,F823 --show-source --statistics --exclude=embroidermodder
       flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics --exclude=embroidermodder
-    elif [ "$BUILD" = "linux" ]; then
+    elif [ "$BUILD" = "linux" -o "$BUILD" = "osx" ]; then
       (
         cd embroidermodder/experimental
         qmake swigpython.pro
