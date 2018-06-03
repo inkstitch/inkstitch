@@ -144,7 +144,6 @@ install:
     elif [ -n "$LINT" ]; then
       pip install flake8
     fi
-    set +e
 before_script:
   - "echo LINT: $LINT BUILD: $BUILD"
 script:
@@ -162,18 +161,16 @@ script:
       flake8 . --count --exit-zero --select=E901,E999,F821,F822,F823 --show-source --statistics --exclude=embroidermodder
       flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics --exclude=embroidermodder
     elif [ "$BUILD" = "linux" -o "$BUILD" = "osx" ]; then
-      (
-        set -x
-        cd embroidermodder/experimental
-        qmake swigpython.pro
-        make
-        if [ "$BUILD" = "osx" ]; then
-          ln -s _libembroidery.dylib python/binding/_libembroidery.so
-          install_name_tool -change /System/Library/Frameworks/Python.framework/Versions/2.7/Python /usr/local/opt/python2/Frameworks/Python.framework/Versions/2.7/Python python/binding/_libembroidery.dylib
-        fi
-        set +x
-      )
+      pushd embroidermodder/experimental
+      qmake swigpython.pro
+      make
+      if [ "$BUILD" = "osx" ]; then
+        ln -s _libembroidery.dylib python/binding/_libembroidery.so
+        install_name_tool -change /System/Library/Frameworks/Python.framework/Versions/2.7/Python /usr/local/opt/python2/Frameworks/Python.framework/Versions/2.7/Python python/binding/_libembroidery.dylib
+      fi
+      set +x
       make dist
+      popd
     elif [ "$BUILD" = "windows" ]; then
       # work around some bug... pyinstaller? shapely? not sure.
       cp $(winepath 'C:\Python\lib\site-packages\shapely\DLLs\geos_c.dll') $(winepath 'C:\Python\lib\site-packages\shapely\DLLs\geos.dll')
