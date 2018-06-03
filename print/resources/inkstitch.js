@@ -295,6 +295,7 @@ $(function() {
     $('.' + field_name).toggle($(this).prop('checked'));
     setPageNumbers();
   }).on('change', function() {
+    var field_name = $(this).attr('data-field-name');
     $.postJSON('/settings/' + field_name, {value: $(this).prop('checked')});
   });
 
