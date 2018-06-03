@@ -66,12 +66,12 @@ docs:
       url: /docs/import-export/
   - title: "Stitch Library"
     children:
-      - title: "Fill"
-        url: /docs/stitches/fill/
-      - title: "Satin"
-        url: /docs/stitches/satin/
       - title: "Stroke"
         url: /docs/stitches/stroke/
+      - title: "Satin"
+        url: /docs/stitches/satin/
+      - title: "Fill"
+        url: /docs/stitches/fill/
   - title: Tips
     children:
       - title: "Fonts"
