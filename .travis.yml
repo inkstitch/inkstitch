@@ -161,20 +161,22 @@ script:
       flake8 . --count --exit-zero --select=E901,E999,F821,F822,F823 --show-source --statistics --exclude=embroidermodder
       flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics --exclude=embroidermodder
     elif [ "$BUILD" = "linux" -o "$BUILD" = "osx" ]; then
-      # it looks like one of travis's cd hooks fails
-      set +e
+      # something in travis's machinery breaks on OSX
+      [ "$BUILD" = "osx" ] && set +e
+
       pushd embroidermodder/experimental
-      set -e
 
       qmake swigpython.pro
       make
+
       if [ "$BUILD" = "osx" ]; then
         ln -s _libembroidery.dylib python/binding/_libembroidery.so
         install_name_tool -change /System/Library/Frameworks/Python.framework/Versions/2.7/Python /usr/local/opt/python2/Frameworks/Python.framework/Versions/2.7/Python python/binding/_libembroidery.dylib
       fi
-      set +x
-      make dist
+
       popd
+
+      make dist
     elif [ "$BUILD" = "windows" ]; then
       # work around some bug... pyinstaller? shapely? not sure.
       cp $(winepath 'C:\Python\lib\site-packages\shapely\DLLs\geos_c.dll') $(winepath 'C:\Python\lib\site-packages\shapely\DLLs\geos.dll')
