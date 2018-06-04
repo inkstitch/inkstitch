@@ -2,7 +2,7 @@
 title: "Install Ink/Stitch"
 permalink: /docs/install/
 excerpt: "How to quickly install Ink/Stitch."
-last_modified_at: 2018-04-14
+last_modified_at: 2018-06-04
 toc: true
 ---
 
@@ -26,7 +26,7 @@ OS|File name|32&#8209;bit|64&#8209;bit
 ---|---|---|---
 Linux|`inkstitch-[VERSION]-Linux-x86_64.tar.gz`|☒|☑
 Windows|`inkstitch-[VERSION]-win32.zip`|☑|☑
-macOS|Sorry, there is no macOS-Version yet. If you are willing to [test](https://github.com/lexelby/inkstitch/releases/tag/dev-build-mac-build) or help building it, contact us by creating a [GitHub&nbsp;Issue](https://github.com/lexelby/inkstitch/pull/54).|☒|☒
+macOS|Sorry, there is no macOS-Version yet. If you are willing to [test](https://github.com/lexelby/inkstitch/releases/tag/dev-build-lexelby-mac-build-mk2) or help building it, contact us through [GitHub](https://github.com/lexelby/inkstitch/pull/181).|☒|☒
 
 ### 2. Install
  * In Inkscape, go to `Edit > Preferences > System` and check where your `User Extensions` folder is.
