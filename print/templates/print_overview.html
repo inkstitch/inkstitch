@@ -32,14 +32,18 @@
                   <button class="svg-fit">Fit</button>
                   <button class="svg-full">100%</button>
                   <button class="svg-apply">Apply to all</button>
+                  <button class="svg-realistic">
+                    <input type="checkbox" id="realistic-client-overview" data-field-name="overview" class="realistic" />
+                    <label for="realistic-client-overview" class="realistic">Realistic</label>
+                  </button>
                 </div>
-            </figure> 
-            
+            </figure>
+
             <div class="color-palette">
                 {% for color_block in color_blocks %}
                     {% include 'color_swatch.html' %}
-                {% endfor %}    
-            
+                {% endfor %}
+
             </div>
             <div class="signature">{{ _('Client Signature') }}</div>
         </main>

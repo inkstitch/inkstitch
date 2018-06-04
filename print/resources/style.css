@@ -473,6 +473,28 @@ body {
     border: none;
     background: grey;
     color: white;
+    display: inline-block;
+    font-size: 16px;
+    font-family: "Barlow", sans-serif;
+    padding-left: 3px;
+    padding-right: 3px;
+    margin: 0px 1px 0px 1px;
+  }
+
+  input.realistic {
+    position: absolute;
+    transform: scale(0.7);
+    margin-left: 2px;
+  }
+
+  label.realistic {
+    margin-left: 20px;
+  }
+
+  /* prevents Chrome from sending a double event for the checkbox
+     and the containing <button> */
+  .realistic {
+    pointer-events: none;
   }
 
 /* Color Swatches */

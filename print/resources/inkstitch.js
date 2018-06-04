@@ -7,6 +7,9 @@ $.postJSON = function(url, data, success=null) {
                        });
 };
 
+var realistic_rendering = {};
+var normal_rendering = {};
+
 function ping() {
   $.get("/ping")
    .done(function() { setTimeout(ping, 1000) })
@@ -142,6 +145,11 @@ $(function() {
     setSVGTransform($(this), $(this).find('svg').css('transform'));
   });
 
+  // ignore mouse events on the buttons (Fill, 100%, Apply to All)
+  $('figure.inksimulation div').on('mousedown mouseup', function(e) {
+    e.stopPropagation();
+  });
+
   /* Apply transforms to All */
   $('button.svg-apply').click(function() {
     var transform = $(this).parent().siblings('svg').css('transform');
@@ -190,6 +198,12 @@ $(function() {
             }
         });
     });
+
+    $.getJSON('/realistic', function(realistic_data) {
+      // realistic_rendering is global
+      realistic_rendering = realistic_data;
+    });
+
     // wait until page size is set (if they've specified one) and then scale SVGs to fit
     setTimeout(function() { scaleAllSvg() }, 500);
   });
@@ -288,8 +302,8 @@ $(function() {
     $('.modal').hide();
   });
 
-  //Checkbox
-  $(':checkbox').on('change initialize', function() {
+  // View selection checkboxes
+  $(':checkbox.view').on('change initialize', function() {
     var field_name = $(this).attr('data-field-name');
 
     $('.' + field_name).toggle($(this).prop('checked'));
@@ -297,6 +311,42 @@ $(function() {
   }).on('change', function() {
     var field_name = $(this).attr('data-field-name');
     $.postJSON('/settings/' + field_name, {value: $(this).prop('checked')});
+  });
+
+  // Realistic rendering checkboxes
+  $(':checkbox.realistic').on('change', function(e) {
+    console.log("realistic rendering checkbox");
+
+    var item = $(this).data('field-name');
+    var figure = $(this).closest('figure');
+    var svg = figure.find('svg');
+    var transform = svg.css('transform');
+    var checked = $(this).prop('checked');
+
+    console.log("" + item + " " + transform);
+
+    // do this later to allow this event handler to return now,
+    // which will cause the checkbox to be checked or unchecked
+    // immediately even if SVG rendering takes awhile
+    setTimeout(function() {
+      if (checked) {
+        if (!(item in normal_rendering)) {
+          normal_rendering[item] = svg[0].outerHTML;
+        }
+        svg[0].outerHTML = realistic_rendering[item];
+      } else {
+        svg[0].outerHTML = normal_rendering[item];
+      }
+      // can't use the svg variable here because setting outerHTML created a new tag
+      figure.find('svg').css({transform: transform});
+    }, 100);
+
+    e.stopPropagation();
+    return true;
+  });
+
+  $('button.svg-realistic').click(function(e){
+    $(this).find('input').click();
   });
 
   // Logo
