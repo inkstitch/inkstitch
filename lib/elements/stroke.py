@@ -97,6 +97,11 @@ class Stroke(EmbroideryElement):
         # TODO: use inkstitch.stitches.running_stitch
 
         patch = Patch(color=self.color)
+
+        # can't stitch a single point
+        if len(emb_point_list) < 2:
+            return patch
+
         p0 = emb_point_list[0]
         rho = 0.0
         side = 1
@@ -156,6 +161,7 @@ class Stroke(EmbroideryElement):
             else:
                 patch = self.stroke_points(path, self.zigzag_spacing / 2.0, stroke_width=self.stroke_width)
 
-            patches.append(patch)
+            if patch:
+                patches.append(patch)
 
         return patches
