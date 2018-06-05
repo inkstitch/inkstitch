@@ -3,7 +3,7 @@ title: "Get help"
 permalink: /docs/get-help/
 excerpt: ""
 last_modified_at: 2018-06-05
-toc: true
+toc: false
 ---
 
 Need help with Ink/Stitch or having a feature request?

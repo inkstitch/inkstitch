@@ -79,7 +79,7 @@ docs:
       - title: "Hidden Features"
         url: /docs/features/
       - title: "etc"
-  - title: Troubleshooting (Wiki?)
+  - title: Troubleshooting
     children:
       - title: "Get help"
         url: /docs/get-help/
@@ -97,6 +97,7 @@ docs:
       - title: "Localization"
         url: /docs/help/localize/
       - title: "Developing Ink/Stitch"
+        url: /docs/help/develope/
     
 # tutorial links
 tutorials:
