@@ -3,7 +3,7 @@ import sys
 from .element import param, EmbroideryElement, Patch
 from ..i18n import _
 from ..utils import cache, Point
-
+from ..stitches import running_stitch
 
 warned_about_legacy_running_stitch = False
 
@@ -93,61 +93,50 @@ class Stroke(EmbroideryElement):
         else:
             return False
 
-    def stroke_points(self, emb_point_list, zigzag_spacing, stroke_width):
-        # TODO: use inkstitch.stitches.running_stitch
+    def simple_satin(self, path, zigzag_spacing, stroke_width):
+        "zig-zag along the path at the specified spacing and wdith"
 
-        patch = Patch(color=self.color)
+        # `self.zigzag_spacing` is the length for a zig and a zag
+        # together (a V shape).  Start with running stitch at half
+        # that length:
+        patch = self.running_stitch(path, zigzag_spacing / 2.0)
 
-        # can't stitch a single point
-        if len(emb_point_list) < 2:
-            return patch
+        # Now move the points left and right.  Consider each pair
+        # of points in turn, and move perpendicular to them,
+        # alternating left and right.
 
-        p0 = emb_point_list[0]
-        rho = 0.0
-        side = 1
-        last_segment_direction = None
+        offset = stroke_width / 2.0
 
-        for repeat in xrange(self.repeats):
-            if repeat % 2 == 0:
-                order = range(1, len(emb_point_list))
-            else:
-                order = range(-2, -len(emb_point_list) - 1, -1)
+        for i in xrange(len(patch) - 1):
+            start = patch.stitches[i]
+            end = patch.stitches[i + 1]
+            segment_direction = (end - start).unit()
+            zigzag_direction = segment_direction.rotate_left()
 
-            for segi in order:
-                p1 = emb_point_list[segi]
+            if i % 2 == 1:
+                zigzag_direction *= -1
 
-                # how far we have to go along segment
-                seg_len = (p1 - p0).length()
-                if (seg_len == 0):
-                    continue
-
-                # vector pointing along segment
-                along = (p1 - p0).unit()
-
-                # vector pointing to edge of stroke width
-                perp = along.rotate_left() * (stroke_width * 0.5)
-
-                if stroke_width == 0.0 and last_segment_direction is not None:
-                    if abs(1.0 - along * last_segment_direction) > 0.5:
-                        # if greater than 45 degree angle, stitch the corner
-                        rho = zigzag_spacing
-                        patch.add_stitch(p0)
-
-                # iteration variable: how far we are along segment
-                while (rho <= seg_len):
-                    left_pt = p0 + along * rho + perp * side
-                    patch.add_stitch(left_pt)
-                    rho += zigzag_spacing
-                    side = -side
-
-                p0 = p1
-                last_segment_direction = along
-                rho -= seg_len
-
-            if (p0 - patch.stitches[-1]).length() > 0.1:
-                patch.add_stitch(p0)
+            patch.stitches[i] += zigzag_direction * offset
 
         return patch
+
+    def running_stitch(self, path, stitch_length):
+        repeated_path = []
+
+        # go back and forth along the path as specified by self.repeats
+        for i in xrange(self.repeats):
+            if i % 2 == 1:
+                # reverse every other pass
+                this_path = path[::-1]
+            else:
+                this_path = path[:]
+
+            repeated_path.extend(this_path)
+
+        stitches = running_stitch(repeated_path, stitch_length)
+
+        return Patch(self.color, stitches)
+
 
     def to_patches(self, last_patch):
         patches = []
@@ -157,9 +146,9 @@ class Stroke(EmbroideryElement):
             if self.manual_stitch_mode:
                 patch = Patch(color=self.color, stitches=path, stitch_as_is=True)
             elif self.is_running_stitch():
-                patch = self.stroke_points(path, self.running_stitch_length, stroke_width=0.0)
+                patch = self.running_stitch(path, self.running_stitch_length)
             else:
-                patch = self.stroke_points(path, self.zigzag_spacing / 2.0, stroke_width=self.stroke_width)
+                patch = self.simple_satin(path, self.zigzag_spacing, self.stroke_width)
 
             if patch:
                 patches.append(patch)
