@@ -7,5 +7,9 @@ toc: false
 ---
 
 Need help with Ink/Stitch or having a feature request?
-Don't hesitate and [file an issue on github](https://github.com/lexelby/inkstitch/issues).
-We will do our best to give you best possible answers!!
+
+Don't hesitate and [file an issue on GitHub](https://github.com/lexelby/inkstitch/issues). We will do our best to to help you resolve your issue.
+
+Also have look at these existing issues:
+* [Reported Bugs](https://github.com/lexelby/inkstitch/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
+* [Feature Requests](https://github.com/lexelby/inkstitch/issues?q=is%3Aissue+is%3Aopen+label%3A%22feature+request%22)

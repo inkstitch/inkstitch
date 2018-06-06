@@ -78,7 +78,8 @@ docs:
         url: /docs/fonts/
       - title: "Hidden Features"
         url: /docs/features/
-      - title: "etc"
+      - title: Inkscape Tips
+        url: /docs/inkscape-tips
   - title: Troubleshooting
     children:
       - title: "Get help"
