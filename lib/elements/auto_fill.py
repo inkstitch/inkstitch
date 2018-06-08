@@ -63,19 +63,42 @@ class AutoFill(Fill):
         return self.get_float_param("fill_underlay_max_stitch_length_mm") or self.max_stitch_length
 
     @property
-    @param('fill_underlay_inset_mm', _('Inset'), unit='mm', group=_('AutoFill Underlay'), type='float', default=0)
+    @param('fill_underlay_inset_mm',
+           _('Inset'),
+           tooltip='Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill.',
+           unit='mm',
+           group=_('AutoFill Underlay'),
+           type='float',
+           default=0)
     def fill_underlay_inset(self):
         return self.get_float_param('fill_underlay_inset_mm', 0)
 
     @property
-    def underlay_shape(self):
-        if self.fill_underlay_inset:
-            shape = self.shape.buffer(-self.fill_underlay_inset)
+    @param('expand_mm',
+           _('Expand'),
+           tooltip='Expand the shape before fill stitching, to compensate for gaps between shapes.',
+           unit='mm',
+           type='float',
+           default=0)
+    def expand(self):
+        return self.get_float_param('expand_mm', 0)
+
+    def shrink_or_grow_shape(self, amount):
+        if amount:
+            shape = self.shape.buffer(amount)
             if not isinstance(shape, shgeo.MultiPolygon):
                 shape = shgeo.MultiPolygon([shape])
             return shape
         else:
             return self.shape
+
+    @property
+    def underlay_shape(self):
+        return self.shrink_or_grow_shape(-self.fill_underlay_inset)
+
+    @property
+    def fill_shape(self):
+        return self.shrink_or_grow_shape(self.expand)
 
     def to_patches(self, last_patch):
         stitches = []
@@ -96,7 +119,7 @@ class AutoFill(Fill):
                                       starting_point))
             starting_point = stitches[-1]
 
-        stitches.extend(auto_fill(self.shape,
+        stitches.extend(auto_fill(self.fill_shape,
                                   self.angle,
                                   self.row_spacing,
                                   self.end_row_spacing,
