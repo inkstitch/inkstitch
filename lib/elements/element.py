@@ -29,12 +29,15 @@ class Patch:
         else:
             raise TypeError("Patch can only be added to another Patch")
 
+    def __len__(self):
+        # This method allows `len(patch)` and `if patch:
+        return len(self.stitches)
+
     def add_stitch(self, stitch):
         self.stitches.append(stitch)
 
     def reverse(self):
         return Patch(self.color, self.stitches[::-1])
-
 
 
 class Param(object):
