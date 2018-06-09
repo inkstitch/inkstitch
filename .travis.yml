@@ -171,7 +171,7 @@ script:
 
       if [ "$BUILD" = "osx" ]; then
         ln -s _libembroidery.dylib python/binding/_libembroidery.so
-        install_name_tool -change /System/Library/Frameworks/Python.framework/Versions/2.7/Python /usr/local/opt/python2/Frameworks/Python.framework/Versions/2.7/Python python/binding/_libembroidery.dylib
+        install_name_tool -change /System/Library/Frameworks/Python.framework/Versions/2.7/Python /usr/local/Cellar/python@2/2.7.15/Frameworks/Python.framework/Versions/2.7/Python python/binding/_libembroidery.dylib
       fi
 
       popd
