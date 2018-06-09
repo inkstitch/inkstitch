@@ -8,6 +8,7 @@ $.postJSON = function(url, data, success=null) {
 };
 
 var realistic_rendering = {};
+var realistic_cache = {};
 var normal_rendering = {};
 
 function ping() {
@@ -199,10 +200,21 @@ $(function() {
         });
     });
 
-    $.getJSON('/realistic', function(realistic_data) {
+//    $.getJSON('/realistic', function(realistic_data) {
       // realistic_rendering is global
-      realistic_rendering = realistic_data;
-    });
+      /*
+      $.each(realistic_data, function(name, xml) {
+        var image = new Image();
+        console.log("doing " + name);
+        image.onload = function() {
+          console.log("setting " + name + " = " + image);
+          realistic_rendering[name] = image;
+        }
+        image.src = 'data:image/svg+xml,' + xml;
+      })
+      */
+//      realistic_rendering = realistic_data;
+//    });
 
     // wait until page size is set (if they've specified one) and then scale SVGs to fit
     setTimeout(function() { scaleAllSvg() }, 500);
@@ -325,6 +337,12 @@ $(function() {
 
     console.log("" + item + " " + transform);
 
+    function finalize(svg_content) {
+      svg[0].outerHTML = svg_content;
+      // can't use the svg variable here because setting outerHTML created a new tag
+      figure.find('svg').css({transform: transform});
+    }
+
     // do this later to allow this event handler to return now,
     // which will cause the checkbox to be checked or unchecked
     // immediately even if SVG rendering takes awhile
@@ -333,12 +351,39 @@ $(function() {
         if (!(item in normal_rendering)) {
           normal_rendering[item] = svg[0].outerHTML;
         }
-        svg[0].outerHTML = realistic_rendering[item];
+
+        if (!(item in realistic_cache)) {
+          // pre-render the realistic SVG to a raster image to spare the poor browser
+          var image = document.createElement('img');
+          image.onload = function() {
+            console.log("rendering!");
+            var canvas = document.createElement('canvas');
+
+            // maybe make DPI configurable?  for now, use 600
+            canvas.width = image.width / 96 * 600;
+            canvas.height = image.height / 96 * 600;
+
+            var ctx = canvas.getContext('2d');
+
+            // rendering slows down the browser enough that we can miss sending
+            // pings, so tell the server side to wait for us
+            $.get("/printing/start")
+             .done(function() {
+               ctx.drawImage(image, 0, 0, image.width, image.height, 0, 0, canvas.width, canvas.height);
+               realistic_cache[item] = '<svg width=' + image.width + ' height=' + image.height + ' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">' +
+                               '<image x=0 y=0 width=' + image.width + ' height=' + image.height + ' xlink:href="' + canvas.toDataURL() + '" />' +
+                               '</svg>';
+               finalize(realistic_cache[item]);
+               $.get("/printing/end");
+             });
+          };
+          image.src = '/realistic/' + item;
+        } else {
+          finalize(realistic_cache[item]);
+        }
       } else {
-        svg[0].outerHTML = normal_rendering[item];
+        finalize(normal_rendering[item]);
       }
-      // can't use the svg variable here because setting outerHTML created a new tag
-      figure.find('svg').css({transform: transform});
     }, 100);
 
     e.stopPropagation();

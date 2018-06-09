@@ -204,12 +204,13 @@ class PrintPreviewServer(Thread):
 
             return jsonify(threads)
 
-        @self.app.route('/realistic', methods=['GET'])
-        def get_realistic():
-            realistic = { 'overview': self.realistic_overview_svg }
-            for i, svg in enumerate(self.realistic_color_block_svgs):
-                realistic["block%d" % i] = svg
-            return jsonify(realistic)
+        @self.app.route('/realistic/block<int:index>', methods=['GET'])
+        def get_realistic_block(index):
+            return Response(self.realistic_color_block_svgs[index], mimetype='image/svg+xml')
+
+        @self.app.route('/realistic/overview', methods=['GET'])
+        def get_realistic_overview():
+            return Response(self.realistic_overview_svg, mimetype='image/svg+xml')
 
     def stop(self):
         # for whatever reason, shutting down only seems possible in
