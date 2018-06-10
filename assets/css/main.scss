@@ -83,6 +83,10 @@ p a:visited {
   color: #f74004;
 }
 
+a:focus, button:focus {
+  outline: none;
+}
+
 table tr td:first-child {
   width: 25%;
 }

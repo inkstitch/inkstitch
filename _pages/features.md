@@ -2,13 +2,10 @@
 title: "Ink/Stitch Features"
 permalink: /features/
 excerpt: "Ink/Stitch features"
-last_modified_at: 2018-05-05
+last_modified_at: 2018-06-10
 sidebar:
   nav: pages
 ---
-
-## Ink/Stitch Features
-
 * Digitize machine embroidery designs using Inkscape (SVG)
 * Supported Stitches: 
   * fill stitch
@@ -54,7 +51,6 @@ Here are features we're hoping to add, though not necessarily in this order:
 * Lettering
 * Gradient Fill (already realised as a [hidden feature](https://github.com/lexelby/inkstitch/pull/108#issuecomment-369444197))
 * Pattern Fill
-* Realistic Rendering
 * Mac support (testers and build engineers needed!)
 * 32-bit Linux support (build engineers needed!)
 * bean stitch
