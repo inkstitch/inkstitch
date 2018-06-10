@@ -22,9 +22,12 @@
                   <button class="svg-fit">Fit</button>
                   <button class="svg-full">100%</button>
                   <button class="svg-apply">Apply to all</button>
+                  <button class="svg-realistic">
+                    <input type="checkbox" id="realistic-color-block-{{ loop.index0 }}" data-field-name="block{{ loop.index0 }}" class="realistic" />
+                    <label for="realistic-color-block-{{ loop.index0 }}" class="realistic">Realistic</label>
+                  </button>
                 </div>
-            </figure> 
-            
+            </figure>
             <div class="color-palette detailed">
                 {% include 'color_swatch.html' %}
             </div>

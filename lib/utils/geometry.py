@@ -71,6 +71,12 @@ class Point:
         else:
             raise ValueError("cannot multiply Point by %s" % type(other))
 
+    def __div__(self, other):
+        if isinstance(other, (int, float)):
+            return self * (1.0 / other)
+        else:
+            raise ValueErorr("cannot divide Point by %s" % type(other))
+
     def __repr__(self):
         return "Point(%s,%s)" % (self.x, self.y)
 

@@ -80,3 +80,18 @@ class ThreadColor(object):
         color = tuple(value * 255 for value in color)
 
         return ThreadColor(color, name=self.name, number=self.number, manufacturer=self.manufacturer)
+
+    @property
+    def darker(self):
+        hls = list(colorsys.rgb_to_hls(*self.rgb_normalized))
+
+        # Capping lightness should make the color visible without changing it
+        # too much.
+        hls[1] *= 0.75
+
+        color = colorsys.hls_to_rgb(*hls)
+
+        # convert back to values in the range of 0-255
+        color = tuple(value * 255 for value in color)
+
+        return ThreadColor(color, name=self.name, number=self.number, manufacturer=self.manufacturer)

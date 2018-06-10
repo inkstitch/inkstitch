@@ -63,10 +63,10 @@ class InkStitchMetadata(MutableMapping):
         else:
             item.getparent().remove(item)
 
-    def _find_item(self, name):
+    def _find_item(self, name, create=True):
         tag = inkex.addNS(name, "inkstitch")
         item = self.metadata.find(tag)
-        if item is None:
+        if item is None and create:
             item = inkex.etree.SubElement(self.metadata, tag)
 
         return item
@@ -80,9 +80,9 @@ class InkStitchMetadata(MutableMapping):
             return None
 
     def __delitem__(self, name):
-        item = self._find_item(name)
+        item = self._find_item(name, create=False)
 
-        if item:
+        if item is not None:
             self.metadata.remove(item)
 
     def __iter__(self):
