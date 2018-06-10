@@ -75,11 +75,24 @@ def convert_length(length):
 
     raise ValueError(_("Unknown unit: %s") % units)
 
+@cache
+def get_viewbox(svg):
+    return svg.get('viewBox').strip().replace(',', ' ').split()
+
 
 @cache
 def get_doc_size(svg):
-    doc_width = convert_length(svg.get('width'))
-    doc_height = convert_length(svg.get('height'))
+    width = svg.get('width')
+    height = svg.get('height')
+
+    if width is None or height is None:
+        # fall back to the dimensions from the viewBox
+        viewbox = get_viewbox(svg)
+        width = viewbox[2]
+        height = viewbox[3]
+
+    doc_width = convert_length(width)
+    doc_height = convert_length(height)
 
     return doc_width, doc_height
 
@@ -88,7 +101,7 @@ def get_viewbox_transform(node):
     # somewhat cribbed from inkscape-silhouette
     doc_width, doc_height = get_doc_size(node)
 
-    viewbox = node.get('viewBox').strip().replace(',', ' ').split()
+    viewbox = get_viewbox(node)
 
     dx = -float(viewbox[0])
     dy = -float(viewbox[1])
