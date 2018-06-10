@@ -57,10 +57,7 @@ class Stroke(EmbroideryElement):
     def is_running_stitch(self):
         # using stroke width <= 0.5 pixels to indicate running stitch is deprecated in favor of dashed lines
 
-        try:
-            stroke_width = float(self.get_style("stroke-width"))
-        except ValueError:
-            stroke_width = 1
+        stroke_width = float(self.get_style("stroke-width", 1))
 
         if self.dashed:
             return True
