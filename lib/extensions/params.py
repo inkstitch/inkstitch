@@ -354,6 +354,9 @@ class SettingsFrame(wx.Frame):
         self.simulate_thread = None
         self.simulate_refresh_needed = Event()
 
+        # used when closing to avoid having the window reopen at the last second
+        self.disable_simulate_window = False
+
         wx.CallLater(1000, self.update_simulator)
 
         self.presets_box = wx.StaticBox(self, wx.ID_ANY, label=_("Presets"))
@@ -391,6 +394,9 @@ class SettingsFrame(wx.Frame):
         if self.simulate_window:
             self.simulate_window.stop()
             self.simulate_window.clear()
+
+        if self.disable_simulate_window:
+            return
 
         if not self.simulate_thread or not self.simulate_thread.is_alive():
             self.simulate_thread = Thread(target=self.simulate_worker)
@@ -586,6 +592,7 @@ class SettingsFrame(wx.Frame):
         self.close()
 
     def use_last(self, event):
+        self.disable_simulate_window = True
         self._load_preset("__LAST__")
         self.apply(event)
 
