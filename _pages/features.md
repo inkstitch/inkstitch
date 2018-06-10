@@ -34,6 +34,8 @@ sidebar:
 * Animated stitch-out preview
   * including live-preview as you adjust settings like row spacing underlay, etc.
 * Print to PDF
+  * realistic rendering
+    * line-drawing mode available as well
   * embroidery machine operator layout with color blocks, thread names, stitch counts, and custom notes
   * client-oriented layout designed for you to send to your customer
   * highly customizable through your web browser
