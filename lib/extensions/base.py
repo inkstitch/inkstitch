@@ -158,7 +158,7 @@ class InkstitchExtension(inkex.Effect):
             else:
                 classes = []
 
-                if element.get_style("fill"):
+                if element.get_style("fill", "black"):
                     if element.get_boolean_param("auto_fill", True):
                         classes.append(AutoFill)
                     else:
