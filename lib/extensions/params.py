@@ -639,6 +639,9 @@ class SettingsFrame(wx.Frame):
         self.Layout()
         # end wxGlade
 
+class NoValidObjects(Exception):
+    pass
+
 class Params(InkstitchExtension):
     def __init__(self, *args, **kwargs):
         self.cancelled = False
@@ -696,6 +699,11 @@ class Params(InkstitchExtension):
 
     def create_tabs(self, parent):
         tabs = []
+        nodes_by_class = self.get_nodes_by_class()
+
+        if not nodes_by_class:
+            raise NoValidObjects()
+
         for cls, nodes in self.get_nodes_by_class():
             params = cls.get_params()
 
@@ -752,12 +760,15 @@ class Params(InkstitchExtension):
         self.cancelled = True
 
     def effect(self):
-        app = wx.App()
-        frame = SettingsFrame(tabs_factory=self.create_tabs, on_cancel=self.cancel)
-        frame.Show()
-        app.MainLoop()
+        try:
+            app = wx.App()
+            frame = SettingsFrame(tabs_factory=self.create_tabs, on_cancel=self.cancel)
+            frame.Show()
+            app.MainLoop()
 
-        if self.cancelled:
-            # This prevents the superclass from outputting the SVG, because we
-            # may have modified the DOM.
-            sys.exit(0)
+            if self.cancelled:
+                # This prevents the superclass from outputting the SVG, because we
+                # may have modified the DOM.
+                sys.exit(0)
+        except NoValidObjects:
+            self.no_elements_error()
