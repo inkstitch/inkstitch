@@ -64,7 +64,7 @@ class Zip(InkstitchExtension):
 
         with ZipFile(temp_file.name, "w") as zip_file:
             for file in files:
-                zip_file.write(file)
+                zip_file.write(file, os.path.basename(file))
 
         # inkscape will read the file contents from stdout and copy
         # to the destination file that the user chose
