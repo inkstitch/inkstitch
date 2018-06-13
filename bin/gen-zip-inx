@@ -1,0 +1,44 @@
+#!/usr/bin/env python
+
+import sys, os
+from os.path import dirname
+from libembroidery import *
+from jinja2 import Environment, FileSystemLoader, select_autoescape
+
+
+def build_environment():
+    template_dir = os.path.join(dirname(dirname(os.path.realpath(__file__))), "templates")
+
+    return Environment(
+        loader = FileSystemLoader(template_dir),
+        autoescape = True
+    )
+
+
+def libembroidery_output_formats():
+    formatList = embFormatList_create()
+    curFormat = formatList
+    while(curFormat):
+        extension = embFormat_extension(curFormat)
+        description = embFormat_description(curFormat)
+        writer_state = embFormat_writerState(curFormat)
+
+        if writer_state.strip() and embFormat_type(curFormat) != EMBFORMAT_OBJECTONLY:
+            # extension includes the dot, so we'll remove it
+            yield extension[1:], description
+
+        curFormat = curFormat.next
+
+
+def main():
+    env = build_environment()
+    template = env.get_template('embroider_zip_output.inx')
+
+    inx = template.render(formats=libembroidery_output_formats())
+
+    with open("inx/inkstitch_output_ZIP.inx", 'w') as inx_file:
+        inx_file.write(inx)
+
+
+if __name__ == "__main__":
+    sys.exit(main())
