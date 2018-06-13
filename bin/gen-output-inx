@@ -15,15 +15,15 @@ def build_environment():
     )
 
 
-def libembroidery_input_formats():
+def libembroidery_output_formats():
     formatList = embFormatList_create()
     curFormat = formatList
     while(curFormat):
         extension = embFormat_extension(curFormat)
         description = embFormat_description(curFormat)
-        reader_state = embFormat_readerState(curFormat)
+        writer_state = embFormat_writerState(curFormat)
 
-        if reader_state.strip() and embFormat_type(curFormat) != EMBFORMAT_OBJECTONLY:
+        if writer_state.strip() and embFormat_type(curFormat) != EMBFORMAT_OBJECTONLY:
             # extension includes the dot, so we'll remove it
             yield extension[1:], description
 
@@ -32,12 +32,12 @@ def libembroidery_input_formats():
 
 def main():
     env = build_environment()
-    template = env.get_template('embroider_input.inx')
+    template = env.get_template('embroider_output.inx')
 
-    for format, description in libembroidery_input_formats():
+    for format, description in libembroidery_output_formats():
         inx = template.render(format=format, description=description)
 
-        with open("inx/inkstitch_input_%s.inx" % format.upper(), 'w') as inx_file:
+        with open("inx/inkstitch_output_%s.inx" % format.upper(), 'w') as inx_file:
             inx_file.write(inx)
 
 
