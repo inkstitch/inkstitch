@@ -44,8 +44,7 @@ class Embroider(InkstitchExtension):
         if self.options.output_file:
             output_path = os.path.join(self.options.path, self.options.output_file)
         else:
-            svg_filename = self.document.getroot().get(inkex.addNS('docname', 'sodipodi'), "embroidery.svg")
-            csv_filename = svg_filename.replace('.svg', '.%s' % self.options.output_format)
+            csv_filename = '%s.%s' % (self.get_base_file_name(), self.options.output_format)
             output_path = os.path.join(self.options.path, csv_filename)
 
         def add_suffix(path, suffix):
