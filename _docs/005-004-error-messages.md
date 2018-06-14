@@ -48,11 +48,11 @@ No embroiderable paths found in document.<br />Tip: use Path -> Object to Path t
 
 Error Message|Description
 ---|---
-One or more rails crosses itself, and this is not allowed.<br />Please split into multiple satin columns.|
+One or more rails crosses itself, and this is not allowed.<br />Please split into multiple satin columns.|With *Node Edit Tool* select a node at the position where you want to split your path. Click on `Break path at selected nodes` within the *Tool Controls Bar*.<br /><br />![Split Path](/assets/images/docs/split-path.jpg)<br />Hit `Ctrl+Shift+K` to seperate all pieces. Recombine with selected rails and rungs with `Ctrl+K`. Then apply param settings to both seperated satin columns. 
 satin column: One or more of the rungs doesn't intersect both rails.|
 Each rail should intersect both rungs once.|
 satin column: One or more of the rungs intersects the rails more than once.|
-satin column: object %s has a fill (but should not)|Remove the fill color from the object.
+satin column: object %s has a fill (but should not)|Remove the fill color from the object:<br />`Object > Fill and Stroke...` The dialog will appear on the right side. Click the x within the fill tab.
 satin column: object %(id)s has two paths with an unequal number of points (%(length1)d and %(length2)d)|Getting this message, you should consider to use the advantages of the [rung method](/docs/stitches/satin/#rung-method), which allows an unequal amount of nodes. Otherwise check on every node if there are dublications and count all nodes on each path.
 
 ## Stroke
@@ -65,7 +65,7 @@ Legacy running stitch setting detected!<br />It looks like you're using a stroke
 
 Error Message|Description
 ---|---
-Unable to autofill.<br />This most often happens because your shape is made up of multiple sections that aren't connected.|[Fills](/docs/stitches/fill/) should be assigned to closed paths with a fill color.
+Unable to autofill.<br />This most often happens because your shape is made up of multiple sections that aren't connected.|[Fills](/docs/stitches/fill/) should be assigned to closed paths with a fill color, but there seems to be at least two gaps in your shape.<br />To find out where your path is not connected, select one node with the node edit tool and hit `Ctrl+A`. It will select all connected nodes and gaps become obvious where the selection ends.
 Unexpected error while generating fill stitches. Please send your SVG file to lexelby@github.|This error message indicates that you discovered an unkown bug. Please report back to us and help Ink/Stitch to improve.
 
 ## Print
