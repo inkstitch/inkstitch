@@ -11,6 +11,7 @@ from ..i18n import _
 from ..output import write_embroidery_file
 from ..stitch_plan import patches_to_stitch_plan
 from ..svg import render_stitch_plan, PIXELS_PER_MM
+from ..utils.io import save_stdout
 
 
 class Zip(InkstitchExtension):
@@ -48,11 +49,18 @@ class Zip(InkstitchExtension):
 
         files = []
 
+        # libembroidery likes to debug log things to stdout.  No way to disable it.
+        save_stdout()
         for format in self.formats:
             if getattr(self.options, format):
                 output_file = os.path.join(path, "%s.%s" % (base_file_name, format))
                 write_embroidery_file(output_file, stitch_plan, self.document.getroot())
                 files.append(output_file)
+
+        # I'd love to do restore_stderr() here, but if I do, libembroidery's
+        # stuff still prints out and corrupts the zip!  That's because it uses
+        # C's buffered stdout, so it hasn't actually written anything to the
+        # real standard output yet.
 
         if not files:
             self.errormsg(_("No embroidery file formats selected."))
@@ -69,7 +77,7 @@ class Zip(InkstitchExtension):
         # inkscape will read the file contents from stdout and copy
         # to the destination file that the user chose
         with open(temp_file.name) as output_file:
-            sys.stdout.write(output_file.read())
+            sys.real_stdout.write(output_file.read())
 
         os.remove(temp_file.name)
         for file in files:

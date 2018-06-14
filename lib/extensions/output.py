@@ -35,12 +35,14 @@ class Output(InkstitchExtension):
         # in windows, failure to close here will keep the file locked
         temp_file.close()
 
+        # libembroidery likes to debug log things to stdout.  No way to disable it.
+        save_stdout()
         write_embroidery_file(temp_file.name, stitch_plan, self.document.getroot())
 
         # inkscape will read the file contents from stdout and copy
         # to the destination file that the user chose
         with open(temp_file.name) as output_file:
-            sys.stdout.write(output_file.read())
+            sys.real_stdout.write(output_file.read())
 
         # clean up the temp file
         os.remove(temp_file.name)
