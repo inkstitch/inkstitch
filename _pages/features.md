@@ -24,7 +24,7 @@ sidebar:
 * Cross Platform (Windows and Linux &mdash; Mac testers needed!)
   * all code libraries built in, no need to install anything else!
 * User interface translated to several languages ([translation help appreciated](https://crowdin.com/project/inkstitch)!)
-* Import and Export many popular machine embroiddery formats
+* Import and Export many popular machine embroidery formats
 * Add Trims and Stops
 * Edit Stitch Order
 * Set custom origin point as (0, 0) in the design file
