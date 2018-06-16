@@ -28,7 +28,7 @@ Error Message|Description
 ---|---
 Some settings had different values across objects.  Select a value from the dropdown or enter a new one.|
 Preset "%s" not found.|Preset with the given name is not existent. View a list of all available presets by clicking on the arrow beside the input field.
-Preset "%s" already exists.<br />Please use another name or press "Overwrite"|You cannot `Add` presets with existent names. If you want to keep the old preset seetings change the name, otherwise use `Overwrite`.
+Preset "%s" already exists.<br />Please use another name or press "Overwrite"|You cannot `Add` presets with existent names. If you want to keep the old preset settings, change the name - otherwise use `Overwrite`.
 No embroiderable paths selected.<br />Tip: use Path -> Object to Path to convert non-paths before embroidering.|Ink/Stitch will ignore every non-path object. Converting your shape to a path will solve the problem.
 No embroiderable paths found in document.<br />Tip: use Path -> Object to Path to convert non-paths before embroidering.|Ink/Stitch will ignore every non-path object. Converting your shape to a path will solve the problem.
 

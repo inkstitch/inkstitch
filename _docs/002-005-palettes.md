@@ -7,7 +7,7 @@ last_modified_at: 2018-06-16
 ## Install thread manufacturer color palettes
 
 * Go to `Extensions > Embroidery > Install thread manufacturer color palettes`
-* Choose a path where you want to your palettes. If you are not sure, use the default settings and click `Install`
+* Choose a path where you want to install your palettes. If you are not sure, use the default settings and click `Install`
 * Restart Inkscape
 
 ## Using Color Palettes
