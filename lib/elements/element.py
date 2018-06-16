@@ -135,10 +135,10 @@ class EmbroideryElement(object):
         self.node.set("embroider_%s" % name, str(value))
 
     @cache
-    def get_style(self, style_name):
+    def get_style(self, style_name, default=None):
         style = simplestyle.parseStyle(self.node.get("style"))
         if (style_name not in style):
-            return None
+            return default
         value = style[style_name]
         if value == 'none':
             return None
@@ -161,7 +161,7 @@ class EmbroideryElement(object):
     @property
     @cache
     def stroke_width(self):
-        width = self.get_style("stroke-width")
+        width = self.get_style("stroke-width", "1")
 
         if width is None:
             return 1.0

@@ -97,6 +97,8 @@ class SatinColumn(EmbroideryElement):
     def flattened_beziers(self):
         if len(self.csp) == 2:
             return self.simple_flatten_beziers()
+        elif len(self.csp) < 2:
+            self.fatal(_("satin column: %(id)s: at least two subpaths required (%(num)d found)") % dict(num=len(self.csp), id=self.node.get('id')))
         else:
             return self.flatten_beziers_with_rungs()
 

@@ -111,7 +111,7 @@ class InkstitchExtension(inkex.Effect):
                 inkex.errormsg(_("No embroiderable paths selected."))
             else:
                 inkex.errormsg(_("No embroiderable paths found in document."))
-            inkex.errormsg(_("Tip: use Path -> Object to Path to convert non-paths before embroidering."))
+            inkex.errormsg(_("Tip: use Path -> Object to Path to convert non-paths."))
 
     def descendants(self, node):
         nodes = []
@@ -158,7 +158,7 @@ class InkstitchExtension(inkex.Effect):
             else:
                 classes = []
 
-                if element.get_style("fill"):
+                if element.get_style("fill", "black"):
                     if element.get_boolean_param("auto_fill", True):
                         classes.append(AutoFill)
                     else:

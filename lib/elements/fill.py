@@ -27,7 +27,8 @@ class Fill(EmbroideryElement):
 
     @property
     def color(self):
-        return self.get_style("fill")
+        # SVG spec says the default fill is black
+        return self.get_style("fill", "#000000")
 
     @property
     @param('flip', _('Flip fill (start right-to-left)'), type='boolean', default=False)
