@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-06-01 20:34-0400\n"
-"PO-Revision-Date: 2018-06-07 20:21-0400\n"
+"POT-Creation-Date: 2018-06-12 20:18-0400\n"
+"PO-Revision-Date: 2018-06-15 21:51-0400\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -122,6 +122,10 @@ msgstr "Zick-Zack Abstand (Spitze zu Spitze)"
 msgid "Inset amount (default: half of contour underlay inset)"
 msgstr "Einrückung (Standard: Halbe Einrückung der Konturunterlage)"
 
+#, python-format
+msgid "satin column: %(id)s: at least two subpaths required (%(num)d found)"
+msgstr ""
+
 msgid "One or more rails crosses itself, and this is not allowed.  Please split into multiple satin columns."
 msgstr "Eine oder mehrere Konturen überschneiden sich, dies ist nicht erlaubt. Bitte in mehrere Satinkolumnen aufteilen."
 
@@ -168,8 +172,8 @@ msgstr "Keine zu stickenden Pfade ausgewählt."
 msgid "No embroiderable paths found in document."
 msgstr "Keine zu stickenden Pfade im Dokument gefunden."
 
-msgid "Tip: use Path -> Object to Path to convert non-paths before embroidering."
-msgstr "Tipp: Verwende Pfad -> Objekt zu Pfad umwandeln, um nicht-Pfade vor dem Sticken zu konvertieren."
+msgid "Tip: use Path -> Object to Path to convert non-paths."
+msgstr ""
 
 msgid "\n\n"
 "Seeing a 'no such option' message?  Please restart Inkscape to fix."
