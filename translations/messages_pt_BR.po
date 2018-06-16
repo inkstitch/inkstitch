@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-06-01 20:34-0400\n"
-"PO-Revision-Date: 2018-06-07 20:21-0400\n"
+"POT-Creation-Date: 2018-06-12 20:18-0400\n"
+"PO-Revision-Date: 2018-06-15 21:51-0400\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Portuguese, Brazilian\n"
 "MIME-Version: 1.0\n"
@@ -122,6 +122,10 @@ msgstr ""
 msgid "Inset amount (default: half of contour underlay inset)"
 msgstr ""
 
+#, python-format
+msgid "satin column: %(id)s: at least two subpaths required (%(num)d found)"
+msgstr ""
+
 msgid "One or more rails crosses itself, and this is not allowed.  Please split into multiple satin columns."
 msgstr ""
 
@@ -167,7 +171,7 @@ msgstr ""
 msgid "No embroiderable paths found in document."
 msgstr ""
 
-msgid "Tip: use Path -> Object to Path to convert non-paths before embroidering."
+msgid "Tip: use Path -> Object to Path to convert non-paths."
 msgstr ""
 
 msgid "\n\n"
