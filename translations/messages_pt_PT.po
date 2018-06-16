@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-06-01 20:34-0400\n"
-"PO-Revision-Date: 2018-06-07 20:21-0400\n"
+"POT-Creation-Date: 2018-06-12 20:18-0400\n"
+"PO-Revision-Date: 2018-06-15 21:51-0400\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -122,6 +122,10 @@ msgstr "Espaçamento Zig-zag (crista-a-crista)"
 msgid "Inset amount (default: half of contour underlay inset)"
 msgstr "Quantidade de offset interior (valor por omissão: Metade do offset interior da sub-camada de contorno)"
 
+#, python-format
+msgid "satin column: %(id)s: at least two subpaths required (%(num)d found)"
+msgstr ""
+
 msgid "One or more rails crosses itself, and this is not allowed.  Please split into multiple satin columns."
 msgstr "Operação não permitida: Um ou mais caminhos intersectam-se a eles mesmos. Dividida o matiz em várias colunas."
 
@@ -167,8 +171,8 @@ msgstr "Nenhum caminho bordável seleccionado."
 msgid "No embroiderable paths found in document."
 msgstr "Nenhum caminho bordável encontrado no documento."
 
-msgid "Tip: use Path -> Object to Path to convert non-paths before embroidering."
-msgstr "Dica: Use opção -> Object to Path para converter objectos em caminhos antes de bordar."
+msgid "Tip: use Path -> Object to Path to convert non-paths."
+msgstr ""
 
 msgid "\n\n"
 "Seeing a 'no such option' message?  Please restart Inkscape to fix."
