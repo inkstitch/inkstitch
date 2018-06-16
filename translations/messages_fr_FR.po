@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-06-12 20:18-0400\n"
-"PO-Revision-Date: 2018-06-16 13:40-0400\n"
+"PO-Revision-Date: 2018-06-16 13:50-0400\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -45,7 +45,7 @@ msgid "Inset"
 msgstr "Incrustation"
 
 msgid "Expand"
-msgstr ""
+msgstr "Elargir"
 
 msgid "TRIM after"
 msgstr "TRIM après"
@@ -124,7 +124,7 @@ msgstr "Montant de l'incrustation (par défaut: la moitié de l'incrustation de 
 
 #, python-format
 msgid "satin column: %(id)s: at least two subpaths required (%(num)d found)"
-msgstr ""
+msgstr "colonne satinée : %(id)s: au moins deux sous-tracés requis (%(num)d trouvés)"
 
 msgid "One or more rails crosses itself, and this is not allowed.  Please split into multiple satin columns."
 msgstr "Un ou plusieurs rails se croisent, ce qui n'est pas autorisé. S'il vous plaît diviser en plusieurs colonnes de satin."
@@ -156,14 +156,14 @@ msgid "Repeats"
 msgstr "répétez"
 
 msgid "Manual stitch placement"
-msgstr ""
+msgstr "Placement manuel de points"
 
 msgid "Stitch every node in the path.  Stitch length and zig-zag spacing are ignored."
-msgstr ""
+msgstr "Broder chaque nœud dans le tracé.  La longueur de points et l’espacement du zig-zag sont ignorés."
 
 msgid "Legacy running stitch setting detected!\n\n"
 "It looks like you're using a stroke smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set your stroke to be dashed to indicate running stitch.  Any kind of dash will work."
-msgstr ""
+msgstr "Détection d'une définition obsolète de point droit !  Il semble que vous utilisez une largeur inférieure à 0,5 unités pour indiquer un point droit, qui est obsolète.  Au lieu de cela, veuillez configurer votre tracé avec des pointillés.  N’importe quel genre de trait fonctionne."
 
 msgid "No embroiderable paths selected."
 msgstr "Aucun chemin brodable sélectionné."
