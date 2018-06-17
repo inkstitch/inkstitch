@@ -9,7 +9,7 @@ from ..i18n import _
 from ..output import write_embroidery_file
 from ..stitch_plan import patches_to_stitch_plan
 from ..svg import render_stitch_plan, PIXELS_PER_MM
-
+from ..utils.io import save_stdout
 
 class Output(InkstitchExtension):
     def __init__(self, *args, **kwargs):
