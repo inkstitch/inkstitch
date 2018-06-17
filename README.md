@@ -1,4 +1,4 @@
-# Ink/Stitch: An Inkscape extension for designing machine embroidery patterns
+# Ink/Stitch: An open source machine embroidery design platform based on Inkscape
 
 Want to design embroidery pattern files (PES, DST, etc) using **free, open source software?**
 
