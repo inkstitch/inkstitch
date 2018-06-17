@@ -15,13 +15,13 @@ BRO, COL, CSD, DAT, DSB, DST, DSZ, EDR, EMD, EXP, EXY, FXY, GT, HUS, INB, INF, J
 
 Open an embroidery file as you would open any SVG file in Inkscape: `File > Open...` > choose your file and click `Open`.
 
-It will open your file with in [Manual Stitch Mode](/docs/stitches/stroke/#manual-stitch-mode). You can edit individual points and finetune your design. Once your are satisfied, save the file as described below.
+It will open your file in [Manual Stitch Mode](/docs/stitches/stroke/#manual-stitch-mode). You can edit individual points and finetune your design. Once your are satisfied, save the file as described below.
 
 ## Export Embroidery Files
 
 To export your designs run `Extensions > Embroidery > Embroider...`.
 
-![Embroider...](/assets/images/docs/embroider.jpg)
+![Embroider...](/assets/images/docs/embroider.jpg){: width="450" }
 
 Settings|Description
 ---|---

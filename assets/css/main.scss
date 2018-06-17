@@ -235,6 +235,7 @@ table tr td:first-child {
 #tutorial-list .tutorial-orderby section { display: none; }
 #tutorial-list .tutorial-orderby input:checked + label + section { display: block; width: 100%; }
 
+.tutorial__wrapper { overflow-x:auto; }
 .tutorial__group { display: table; border-collapse: separate; border-spacing: 0 1em; width: 100%; }
 .tutorial__group h3 { height: 1.5em }
 .tutorial__group h3 span { position: absolute; display: inline-block; width: 100%; border-bottom: 1px solid #f2f3f3; }

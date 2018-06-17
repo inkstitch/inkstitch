@@ -50,7 +50,7 @@ The circle you made will disappear and be replaced with some stripes and zig-zag
 
 Select the horizontal lines using the `Edit Paths by Nodes` tool. Zoom in a bit and you'll see that the lines are actually made up of lots of points. Each point represents one stitch - one needle penetration and interlocking of the top thread with the bobbin thread. Notice how the points all line up nicely in diagonals. This will give the fill stitching a nice, orderly visual appearance.
 
-Now look at the zig-zags. These are the satin stitches. Note that the corners look pretty ugly. This is because satin stitches generated from a shape's stroke are pretty rudimentary and aren't implemented intelligently. *You can exert much greater control over satin stitching using a [**Satin Column**](/docs/stitches/satin/).
+Now look at the zig-zags. These are the satin stitches. Note that the corners look pretty ugly. This is because satin stitches generated from a shape's stroke are pretty rudimentary and aren't implemented intelligently. *You can exert much greater control over satin stitching using a [**Satin Column**](/docs/stitches/satin/)*.
 
 ![Stitch Plan](https://edutechwiki.unige.ch/mediawiki/images/thumb/6/6a/Inkstitch-stitch-plan.png/800px-Inkstitch-stitch-plan.png)
 

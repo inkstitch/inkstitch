@@ -15,6 +15,7 @@
   {% assign values = values | push: 'a-z' %}
 {% endif %}
 
+<div class="tutorial__wrapper">
 <div class="tutorial__group">
 {% for value in values %}
   {% unless include.value or value=='a-z'  %} <h3><span>{{ value }}</span></h3>{% endunless %}
@@ -47,18 +48,22 @@
         {% endif %}
       alt="{% if f.alt %}{{ f.alt }}{% endif %}">
     {% endif %}
-    </div>
-    {% if f.title %}<h4 class="archive__item-title">{{ f.title }}</h4>{% endif %}
+    </div><!-- /tutorial item-teaser -->
+    <div class="tutorial__description-wrapper">
+    {% if f.url contains "://" %}{% capture f_url %}{{ f.url }}{% endcapture %}{% else %}{% capture f_url %}{{ f.url | relative_url }}{% endcapture %}{% endif %}
+    {% if f.title %}<h4 class="archive__item-title"><a href="{{ f_url }}">{{ f.title }}</a></h4>{% endif %}
     {% if f.excerpt %}
       <div class="archive__item-excerpt">
         {{ f.excerpt | markdownify }}
       </div>
     {% endif %}
+    </div><!-- /tutorial description-wrapper -->
     {% if f.url %}
       {% if f.url contains "://" %}{% capture f_url %}{{ f.url }}{% endcapture %}{% else %}{% capture f_url %}{{ f.url | relative_url }}{% endcapture %}{% endif %}
       <p><a href="{{ f_url }}" class="btn btn--primary">{{ f.btn_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a></p>
     {% endif %}
-  </div>
+  </div><!-- /tutorial item -->
   {% endfor %}
 {% endfor %}
-</div>
+</div><!-- /tutorial group -->
+</div><!-- /tutorial wrapper -->
