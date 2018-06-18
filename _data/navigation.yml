@@ -109,7 +109,7 @@ tutorials:
   - title: Inspiration
     children:
       - title: "Artwork Gallery"
-        url: /tutorials/inspiration/lexelby/
+        url: /tutorials/inspiration/
   - title: Ressources
     children:
     - title: "Sample Files"
