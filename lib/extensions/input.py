@@ -14,6 +14,7 @@ from ..svg import PIXELS_PER_MM, render_stitch_plan
 from ..svg.tags import INKSCAPE_LABEL
 from ..i18n import _
 from ..stitch_plan import StitchPlan
+from ..utils.io import save_stdout
 
 
 class Input(object):
@@ -25,6 +26,9 @@ class Input(object):
 
 
     def affect(self, args):
+        # libembroidery likes to dump a bunch of debugging stuff to stdout
+        save_stdout()
+
         embroidery_file = args[0]
         pattern = embPattern_create()
         embPattern_read(pattern, embroidery_file)
@@ -65,4 +69,4 @@ class Input(object):
         # Note: this is NOT the same as centering the design in the canvas!
         layer.set('transform', 'translate(%s,%s)' % (extents[0], extents[1]))
 
-        print etree.tostring(svg)
+        print >> sys.real_stdout, etree.tostring(svg)

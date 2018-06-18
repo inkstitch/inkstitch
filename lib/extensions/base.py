@@ -200,6 +200,15 @@ class InkstitchExtension(inkex.Effect):
     def get_inkstitch_metadata(self):
         return InkStitchMetadata(self.document)
 
+    def get_base_file_name(self):
+        svg_filename = self.document.getroot().get(inkex.addNS('docname', 'sodipodi'), "embroidery.svg")
+
+        if svg_filename.endswith('.svg'):
+            svg_filename = svg_filename[:-4]
+
+        return svg_filename
+
+
     def parse(self):
         """Override inkex.Effect to add Ink/Stitch xml namespace"""
 
