@@ -1,3 +1,5 @@
+<img align=left src="images/examples/inkstitch_logo_realistic.png">
+
 # Ink/Stitch: An open source machine embroidery design platform based on Inkscape
 
 Want to design embroidery pattern files (PES, DST, and many more) using **free, open source software?**
