@@ -1,3 +1,6 @@
+<a href="images/examples/inkstitch_logo_design.png"><img align=right src="images/examples/inkstitch_logo_design_thumbnail.png"></a>
+<br/>
+<br/>
 <a href="images/examples/inkstitch_logo_realistic.png"><img align=right src="images/examples/inkstitch_logo_realistic_thumbnail.png"></a>
 
 # Ink/Stitch: An open source machine embroidery design platform based on Inkscape
