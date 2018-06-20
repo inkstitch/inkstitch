@@ -237,7 +237,7 @@ $(function() {
 
   $('button.close').click(function() {
     $.post('/shutdown', {})
-     .done(function(data) {
+     .always(function(data) {
        window.close();
 
        /* Chrome and Firefox both have a rule: scripts can only close windows
