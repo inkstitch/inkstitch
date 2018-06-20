@@ -304,7 +304,7 @@ body {
   #logo-picker {
     width: 0px;
     height: 0px;
-    opacity: 0%;
+    opacity: 0;
   }
 
   .logo-instructions {
