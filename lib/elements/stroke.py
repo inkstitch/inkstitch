@@ -4,6 +4,7 @@ from .element import param, EmbroideryElement, Patch
 from ..i18n import _
 from ..utils import cache, Point
 from ..stitches import running_stitch
+from ..svg import parse_length_with_units
 
 warned_about_legacy_running_stitch = False
 
@@ -57,7 +58,7 @@ class Stroke(EmbroideryElement):
     def is_running_stitch(self):
         # using stroke width <= 0.5 pixels to indicate running stitch is deprecated in favor of dashed lines
 
-        stroke_width = float(self.get_style("stroke-width", 1))
+        stroke_width, units = parse_length_with_units(self.get_style("stroke-width", "1"))
 
         if self.dashed:
             return True
