@@ -200,22 +200,6 @@ $(function() {
         });
     });
 
-//    $.getJSON('/realistic', function(realistic_data) {
-      // realistic_rendering is global
-      /*
-      $.each(realistic_data, function(name, xml) {
-        var image = new Image();
-        console.log("doing " + name);
-        image.onload = function() {
-          console.log("setting " + name + " = " + image);
-          realistic_rendering[name] = image;
-        }
-        image.src = 'data:image/svg+xml,' + xml;
-      })
-      */
-//      realistic_rendering = realistic_data;
-//    });
-
     // wait until page size is set (if they've specified one) and then scale SVGs to fit
     setTimeout(function() { scaleAllSvg() }, 500);
   });
@@ -237,7 +221,7 @@ $(function() {
 
   $('button.close').click(function() {
     $.post('/shutdown', {})
-     .done(function(data) {
+     .always(function(data) {
        window.close();
 
        /* Chrome and Firefox both have a rule: scripts can only close windows
