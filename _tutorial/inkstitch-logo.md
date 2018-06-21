@@ -1,9 +1,10 @@
 ---
-permalink: /tutorials/inkstitch-logo/
+permalink: /tutorials/ressources/inkstitch-logo/
 title: "Ink/Stitch Logo"
-last_modified_at: 2018-05-16
-excerpt: Inkstitch Logo
-image: /assets/images/tutorials/samples/InkStitch Multi Color.svg
+last_modified_at: 2018-06-21
+excerpt: Inkstitch Logo & Branding Guide
+toc: true
+image: /assets/images/tutorials/logo/InkStitch_Multi_Color.svg
 
 
 tutorial-type:
@@ -15,22 +16,38 @@ stitch-type:
 techniques:
 field-of-use:
 user-level: 
+
+
+official_logo:
+  - image_path: /assets/images/tutorials/logo/inkstitch_colour_logo.svg
+    alt: "placeholder image 1"
+    excerpt: "[Ink/Stitch Colour Logo](/assets/images/tutorials/logo/inkstitch_colour_logo.svg)"
+  - image_path: /assets/images/tutorials/logo/inkstitch_official_logo.svg
+    alt: "placeholder image 1"
+    excerpt: "[Ink/Stitch Official Logo](/assets/images/tutorials/logo/inkstitch_official_logo.svg)"
+    
+digitized-logo:
+  - image_path: /assets/images/tutorials/logo/InkStitch_Multi_Color.svg
+    alt: "placeholder image 1"
+    excerpt: "[InkStitch Multi Color](/assets/images/tutorials/logo/InkStitch_Multi_Color.svg)"
+  - image_path: /assets/images/tutorials/logo/InkStitch_1_Color.svg
+    alt: "placeholder image 1"
+    excerpt: "[InkStitch 1 Color](/assets/images/tutorials/logo/InkStitch_1_Color.svg)"
+  - image_path: /assets/images/tutorials/logo/InkStitch_1_Color_Top_Left_Origin.svg
+    alt: "placeholder image 1"
+    excerpt: "[InkStitch 1 Color Top Left Origin](/assets/images/tutorials/logo/InkStitch_1_Color_Top_Left_Origin.svg)"
 ---
+## Ink/Stitch Logo
 
-## Ink/Stitch Logo Multi Color
+{% include feature_row id="official_logo" %}
 
-![Multi Color](/assets/images/tutorials/samples/InkStitch Multi Color.svg)
+## Digitized Ink/Stitch Logo
 
-[Download](/assets/images/tutorials/samples/InkStitch Multi Color.svg){: download="InkStich-Multi-Color.svg" }
+{% include feature_row id="digitized-logo" %}
 
-## Ink/Stitch Logo 1 Color
+## Ink/Stitch Branding Quickguide
 
-![1 Color](/assets/images/tutorials/samples/InkStitch 1 Color.svg){: .img-invert }
+![1 Color](/assets/images/tutorials/logo/inkstitch_branding_quickguide.svg)
 
-[Download](/assets/images/tutorials/samples/InkStitch 1 Color.svg){: download="InkStitch-1-Color.svg" }
+[Download](/assets/images/tutorials/logo/inkstitch_branding_quickguide.svg){: download="inkstitch_branding_quickguide.svg" }
 
-## Ink/Stitch Logo 1 Color Top Left Origin
-
-![1 Color](/assets/images/tutorials/samples/InkStitch 1 Color Top Left Origin.svg){: .img-invert }
-
-[Download](/assets/images/tutorials/samples/InkStitch 1 Color Top Left Origin.svg){: download="InkStitch-1-Color-Top-Left-Origin.svg" }

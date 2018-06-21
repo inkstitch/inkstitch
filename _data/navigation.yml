@@ -112,6 +112,8 @@ tutorials:
         url: /tutorials/inspiration/
   - title: Ressources
     children:
+    - title: "Branding Guide"
+      url: /tutorials/ressources/inkstitch-logo/
     - title: "Sample Files"
       url: /tutorials/ressources/samples/
     - title: "Templates"
