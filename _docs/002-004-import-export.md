@@ -3,6 +3,7 @@ title: "Import and Export Files"
 permalink: /docs/import-export/
 excerpt: ""
 last_modified_at: 2018-06-23
+toc: true
 ---
 
 Ink/Stitch supports many embroidery formats. It can import and export files to the formats listed below.
@@ -19,6 +20,17 @@ It will open your file in [Manual Stitch Mode](/docs/stitches/stroke/#manual-sti
 
 ## Export Embroidery Files
 
+### Method 1
+
+Ink/Stitch version 1.10.0 introduced the possibility to export files directly through Inkscapes `File > Save as...` (`Ctrl + Shift + S`) dialog.
+
+Select a file format that your embroidery machine can read and `Save` the file in your desired output directory.
+
+![File Format Field](/assets/images/docs/export-selection-field.jpg)
+
+For later changes make sure that you keep an SVG version of your design as well.
+
+### Method 2 (Display Stitch Plan)
 To export your designs run `Extensions > Embroidery > Embroider...`.
 
 ![Embroider...](/assets/images/docs/embroider.jpg){: width="450" }
@@ -39,8 +51,6 @@ Directory|Type your directory path, where you would like to save your file. By d
 {: .notice--info }
 
 Go to `File > Save as...` and click on the little arrow on the file format selection field to open a list of available file formats.
-
-![File Format Field](/assets/images/docs/export-selection-field.jpg)
 
 Navigate to your desired output folder and choose the Ink/Stitch ZIP file format. Click `Save`. You then will be asked which file formats you wish to be included.
 
