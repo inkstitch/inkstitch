@@ -4,21 +4,7 @@ permalink: /about/
 excerpt: ""
 last_modified_at: 2018-06-23
 ---
-Want to design embroidery pattern files (PES, DST, and many more) using **free, open source software?**
-
-![Ink/Stitch Logo](https://user-images.githubusercontent.com/11083514/41197881-e862e07a-6c62-11e8-89d6-32915e52bece.png)
-
-Ink/Stitch aims to be a full-fledged embroidery digitizing platform based entirely on free, open source software.  Our goal is to be approachable for hobbyists while also providing the power needed by professional digitizers.
-
-Want to learn more?
-
-* Check out our list of [features](/features/)
-* [Quick Install](/docs/install/) on Linux and Windows (Mac support in the works!)
-* See some [photos](/tutorials/inspiration/) showing what Ink/Stitch can do
-* Watch some [videos](/tutorials/video/) of Ink/Stitch in action
-* ...and lots more on our [website](/)
-
-# Background and Philosophy
+## Background and Philosophy
 
 _by @lexelby, an Ink/Stitch programmer_
 
