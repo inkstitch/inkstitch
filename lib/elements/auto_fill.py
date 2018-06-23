@@ -111,10 +111,17 @@ class AutoFill(Fill):
         else:
             return None
 
+    def get_ending_point(self):
+        if self.get_command('fill_end'):
+            return self.get_command('fill_end').target_point
+        else:
+            return None
+
     def to_patches(self, last_patch):
         stitches = []
 
         starting_point = self.get_starting_point(last_patch)
+        ending_point = self.get_ending_point()
 
         if self.fill_underlay:
             stitches.extend(auto_fill(self.underlay_shape,
@@ -134,6 +141,7 @@ class AutoFill(Fill):
                                   self.max_stitch_length,
                                   self.running_stitch_length,
                                   self.staggers,
-                                  starting_point))
+                                  starting_point,
+                                  ending_point))
 
         return [Patch(stitches=stitches, color=self.color)]
