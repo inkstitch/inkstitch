@@ -15,17 +15,17 @@ class MaxQueueLengthExceeded(Exception):
     pass
 
 
-def auto_fill(shape, angle, row_spacing, end_row_spacing, max_stitch_length, running_stitch_length, staggers, starting_point=None):
+def auto_fill(shape, angle, row_spacing, end_row_spacing, max_stitch_length, running_stitch_length, staggers, starting_point, ending_point=None):
     stitches = []
 
     rows_of_segments = intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing)
     segments = [segment for row in rows_of_segments for segment in row]
 
     graph = build_graph(shape, segments, angle, row_spacing)
-    path = find_stitch_path(graph, segments)
+    path = find_stitch_path(graph, segments, starting_point, ending_point)
 
-    if starting_point:
-        stitches.extend(connect_points(shape, starting_point, path[0][0], running_stitch_length))
+#    if starting_point:
+#        stitches.extend(connect_points(shape, starting_point, path[0][0], running_stitch_length))
 
     stitches.extend(path_to_stitches(graph, path, shape, angle, row_spacing, max_stitch_length, running_stitch_length, staggers))
 
@@ -272,7 +272,7 @@ def insert_loop(path, loop):
     start and end point.  The points will be specified in order, such
     that they will look like this:
 
-    ((p1, p2), (p2, p3), (p3, p4) ... (pn, p1))
+    ((p1, p2), (p2, p3), (p3, p4), ...)
 
     path will be modified in place.
     """
@@ -282,11 +282,55 @@ def insert_loop(path, loop):
     for i, (start, end) in enumerate(path):
         if start == loop_start:
             break
+    else:
+        # if we didn't find the start of the loop in the list at all, it must
+        # be the endpoint of the last segment
+        i += 1
 
     path[i:i] = loop
 
+def nearest_node_on_outline(graph, point, outline_index=0):
+    point = shapely.geometry.Point(*point)
+    outline_nodes = [node for node, data in graph.nodes(data=True) if data['index'] == outline_index]
+    nearest = min(outline_nodes, key=lambda node: shapely.geometry.Point(*node).distance(point))
 
-def find_stitch_path(graph, segments):
+    return nearest
+
+def get_outline_nodes(graph, outline_index=0):
+    outline_nodes = [(node, data['projection']) \
+                     for node, data \
+                     in graph.nodes(data=True) \
+                     if data['index'] == outline_index]
+    outline_nodes.sort(key=lambda (node, projection): projection)
+    outline_nodes = [node for node, data in outline_nodes]
+
+    return outline_nodes
+
+def find_initial_path(graph, starting_point, ending_point=None):
+    starting_node = nearest_node_on_outline(graph, starting_point)
+
+    if ending_point is None:
+        # If they didn't give an ending point, pick either neighboring node
+        # along the outline -- doesn't matter which.  This effectively means
+        # we end where we started.
+        neighbors = [n for n, keys in graph.adj[starting_node].iteritems() if 'outline' in keys]
+        return [(starting_node, neighbors[0])]
+    else:
+        ending_node = nearest_node_on_outline(graph, ending_point)
+        outline_nodes = get_outline_nodes(graph)
+
+        # Multiply the outline_nodes list by 2 (duplicate it) because
+        # the ending_node may occur first.
+        outline_nodes *= 2
+        start_index = outline_nodes.index(starting_node)
+        end_index = outline_nodes.index(ending_node, start_index)
+        path = outline_nodes[start_index:end_index + 1]
+
+        # we have a series of sequential points, but we need to
+        # turn it into an edge list
+        return node_list_to_edge_list(path)
+
+def find_stitch_path(graph, segments, starting_point=None, ending_point=None):
     """find a path that visits every grating segment exactly once
 
     Theoretically, we just need to find an Eulerian Path in the graph.
@@ -313,14 +357,20 @@ def find_stitch_path(graph, segments):
     segments_visited = 0
     nodes_visited = deque()
 
-    # start with a simple loop: down one segment and then back along the
-    # outer border to the starting point.
-    path = [segments[0], list(reversed(segments[0]))]
+    if starting_point is None:
+        starting_point = segments[0][0]
+    path = find_initial_path(graph, starting_point, ending_point)
 
-    graph.remove_edges_from(path)
+    # We're starting with a path and _not_ removing the edges of that path from
+    # the graph.  This means we're implicitly adding those edges to the graph.
+    # That means that the starting and ending point (and only those two) will
+    # now have odd degree.  That means that there must exist an Eulerian
+    # Path that starts and ends at those two nodes.
 
-    segments_visited += 1
-    nodes_visited.extend(segments[0])
+    nodes_visited.append(path[0][0])
+    #print >> sys.stderr, "starting path:", path
+
+    #return path
 
     while segments_visited < num_segments:
         result = find_loop(graph, nodes_visited)
@@ -331,14 +381,18 @@ def find_stitch_path(graph, segments):
 
         loop, segments = result
 
-        #print >> dbg, "found loop:", loop
+        #print >> sys.stderr, "found loop:", loop
         #dbg.flush()
 
         segments_visited += segments
-        nodes_visited += [edge[0] for edge in loop]
+        nodes_visited.extend(edge[0] for edge in loop)
         graph.remove_edges_from(loop)
 
         insert_loop(path, loop)
+
+        #print >> sys.stderr, "loop made, nodes_visited:", nodes_visited
+
+        #print >> sys.stderr, "path:", path
 
         #if segments_visited >= 12:
         #    break
