@@ -2,7 +2,6 @@
 title: "Ink/Stitch Tutorials"
 permalink: /tutorials/
 excerpt: ""
-last_modified_at: 2018-05-14
 read_time: false
 classes: wide
 ---

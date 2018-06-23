@@ -2,7 +2,7 @@
 title: "Import and Export Files"
 permalink: /docs/import-export/
 excerpt: ""
-last_modified_at: 2018-06-10
+last_modified_at: 2018-06-23
 ---
 
 Ink/Stitch supports many embroidery formats. It can import and export files to the formats listed below.
@@ -32,3 +32,18 @@ Directory|Type your directory path, where you would like to save your file. By d
 
 **Info:** For file format conversion Ink/Stitch uses *libembroidery* from the [Embroidermodder](https://github.com/Embroidermodder/Embroidermodder) project.
 {: .notice--info }
+
+## Batch Export
+
+**Info:** Since Ink/Stitch version 1.10.0 it is possible to export to multiple file formats at once.
+{: .notice--info }
+
+Go to `File > Save as...` and click on the little arrow on the file format selection field to open a list of available file formats.
+
+![File Format Field](/assets/images/docs/export-selection-field.jpg)
+
+Navigate to your desired output folder and choose the Ink/Stitch ZIP file format. Click `Save`. You then will be asked which file formats you wish to be included.
+
+![Batch Export](/assets/images/docs/export-batch.jpg)
+
+
