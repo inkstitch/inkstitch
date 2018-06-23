@@ -55,7 +55,7 @@
   <defs
      id="defs8377">
     <symbol
-       id="inkstitch_end">
+       id="inkstitch_fill_end">
       <title
          id="title9427">Fill stitch starting point</title>
       <circle
@@ -72,7 +72,7 @@
          style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.60622311;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:4.81866985, 4.81866985;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke" />
     </symbol>
     <symbol
-       id="inkstitch_start">
+       id="inkstitch_fill_start">
       <title
          id="title9432">Fill stitch ending point</title>
       <circle
@@ -110,14 +110,14 @@
      inkscape:groupmode="layer"
      inkscape:label="Layer 1">
     <use
-       xlink:href="#inkstitch_end"
+       xlink:href="#inkstitch_fill_end"
        id="use18860"
        x="0"
        y="0"
        width="100%"
        height="100%" />
     <use
-       xlink:href="#inkstitch_start"
+       xlink:href="#inkstitch_fill_start"
        id="use18871"
        x="0"
        y="0"
