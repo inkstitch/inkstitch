@@ -210,6 +210,22 @@ class EmbroideryElement(object):
     def commands(self):
         return find_commands(self.node)
 
+    @cache
+    def get_commands(self, command):
+        return [c for c in self.commands if c.command == command]
+
+    @cache
+    def get_command(self, command):
+        commands = self.get_commands(command)
+
+        if len(commands) == 1:
+            return commands[0]
+        elif len(commands) > 1:
+            raise ValueError(_("%(id)s has more than one command of type '%(command)s' linked to it") %
+                                dict(id=self.node.get(id), command=command))
+        else:
+            return None
+
     def strip_control_points(self, subpath):
         return [point for control_before, point, control_after in subpath]
 
