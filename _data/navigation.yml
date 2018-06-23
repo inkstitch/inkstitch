@@ -29,7 +29,7 @@ pages:
     url: /tutorials/
     children:
       - title: "Artwork Galleries"
-        url: /tutorials/inspiration/lexelby/
+        url: /tutorials/inspiration/
       - title: "Sample Files"
         url: /tutorials/ressources/samples/
       - title: "Templates"

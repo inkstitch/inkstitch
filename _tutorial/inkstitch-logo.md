@@ -23,7 +23,7 @@ user-level:
 <div class="feature__wrapper">
   <div class="feature__item">
     <div class="archive__item-teaser">
-      <img src="/assets/images/tutorials/logo/inkstitch_colour_logo.svg" alt="placeholder image 1">
+      <img src="/assets/images/tutorials/logo/inkstitch_colour_logo.svg" alt="Ink/Stitch Colour Logo">
     </div>
     <div class="archive__item-body">
       <div class="archive__item-excerpt">
@@ -33,7 +33,7 @@ user-level:
   </div>
   <div class="feature__item">
     <div class="archive__item-teaser">
-      <img src="/assets/images/tutorials/logo/inkstitch_official_logo.svg" alt="placeholder image 1">
+      <img src="/assets/images/tutorials/logo/inkstitch_official_logo.svg" alt="Ink/Stitch Official Logo">
     </div>
     <div class="archive__item-body">
       <div class="archive__item-excerpt">
@@ -48,31 +48,31 @@ user-level:
 <div class="feature__wrapper">
   <div class="feature__item">
     <div class="archive__item-teaser">
-      <img src="/assets/images/tutorials/logo/InkStitch_Multi_Color.svg" alt="InkStitch Multi Color">
+      <img src="/assets/images/tutorials/logo/InkStitch_Multi_Color.svg" alt="Ink/Stitch Multi Color">
     </div>
     <div class="archive__item-body">
       <div class="archive__item-excerpt">
-        <p><a href="/assets/images/tutorials/logo/InkStitch_Multi_Color.svg">InkStitch Multi Color</a></p>
+        <p><a href="/assets/images/tutorials/logo/InkStitch_Multi_Color.svg">Ink/Stitch Multi Color</a></p>
       </div>
     </div>
   </div>
   <div class="feature__item">
     <div class="archive__item-teaser">
-      <img src="/assets/images/tutorials/logo/InkStitch_1_Color.svg" alt="InkStitch 1 Color">
+      <img src="/assets/images/tutorials/logo/InkStitch_1_Color.svg" alt="Ink/Stitch 1 Color">
     </div>
     <div class="archive__item-body">
       <div class="archive__item-excerpt">
-        <p><a href="/assets/images/tutorials/logo/InkStitch_1_Color.svg">InkStitch 1 Color</a></p>
+        <p><a href="/assets/images/tutorials/logo/InkStitch_1_Color.svg">Ink/Stitch 1 Color</a></p>
       </div>
     </div>
   </div>
   <div class="feature__item">
     <div class="archive__item-teaser">
-      <img src="/assets/images/tutorials/logo/InkStitch_1_Color_Top_Left_Origin.svg" alt="InkStitch 1 Color Top Left Origin">
+      <img src="/assets/images/tutorials/logo/InkStitch_1_Color_Top_Left_Origin.svg" alt="Ink/Stitch 1 Color Top Left Origin">
     </div>
     <div class="archive__item-body">
       <div class="archive__item-excerpt">
-        <p><a href="/assets/images/tutorials/logo/InkStitch_1_Color_Top_Left_Origin.svg">InkStitch 1 Color Top Left Origin</a></p>
+        <p><a href="/assets/images/tutorials/logo/InkStitch_1_Color_Top_Left_Origin.svg">Ink/Stitch 1 Color Top Left Origin</a></p>
       </div>
     </div>
   </div>
