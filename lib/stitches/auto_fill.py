@@ -47,8 +47,10 @@ def auto_fill(shape, angle, row_spacing, end_row_spacing, max_stitch_length, run
     graph = build_graph(shape, segments, angle, row_spacing)
     path = find_stitch_path(graph, segments, starting_point, ending_point)
 
-#    if starting_point:
-#        stitches.extend(connect_points(shape, starting_point, path[0][0], running_stitch_length))
+    if ending_point is None:
+        # The end of the path travels around the outline back to the start.
+        # This isn't necessary, so remove it.
+        trim_end(path)
 
     stitches.extend(path_to_stitches(graph, path, shape, angle, row_spacing, max_stitch_length, running_stitch_length, staggers))
 
@@ -516,6 +518,9 @@ def connect_points(shape, start, end, running_stitch_length):
 
     return stitches
 
+def trim_end(path):
+    while path and path[-1].is_outline():
+        path.pop()
 
 def path_to_stitches(graph, path, shape, angle, row_spacing, max_stitch_length, running_stitch_length, staggers):
     path = collapse_sequential_outline_edges(graph, path)
