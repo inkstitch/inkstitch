@@ -1,3 +1,5 @@
+# -*- coding: UTF-8 -*-
+
 import sys
 import traceback
 import os
@@ -14,26 +16,34 @@ import inkex
 from ..utils import guess_inkscape_config_path
 
 
-class InstallPalettesFrame(wx.Frame):
+class InstallerFrame(wx.Frame):
     def __init__(self, *args, **kwargs):
         wx.Frame.__init__(self, *args, **kwargs)
 
-        default_path = os.path.join(guess_inkscape_config_path(), "palettes")
+        default_path = guess_inkscape_config_path()
 
         panel = wx.Panel(self)
         sizer = wx.BoxSizer(wx.VERTICAL)
 
-        text = wx.StaticText(panel, label=_("Directory in which to install palettes:"))
+        text_sizer = wx.BoxSizer(wx.HORIZONTAL)
+
+        text = _('Ink/Stitch can install files ("add-ons") that make it easier to use Inkscape to create machine embroidery designs.  These add-ons will be installed:') + \
+                 "\n\n   • " + _("thread manufacturer color palettes") + \
+                 "\n   • " + _("Ink/Stitch visual commands (Object -> Symbols...)") + \
+                 "\n\n" +  _("Directory in which to install add-ons:")
+
+        static_text = wx.StaticText(panel, label=text)
         font = wx.Font(12, wx.DEFAULT, wx.NORMAL, wx.NORMAL)
-        text.SetFont(font)
-        sizer.Add(text, proportion=0, flag=wx.ALL|wx.EXPAND, border=10)
+        static_text.SetFont(font)
+        text_sizer.Add(static_text, proportion=0, flag=wx.ALL|wx.EXPAND, border=10)
+        sizer.Add(text_sizer, proportion=3, flag=wx.ALL|wx.EXPAND, border=0)
 
         path_sizer = wx.BoxSizer(wx.HORIZONTAL)
         self.path_input = wx.TextCtrl(panel, wx.ID_ANY, value=default_path)
-        path_sizer.Add(self.path_input, proportion=3, flag=wx.RIGHT|wx.EXPAND, border=20)
+        path_sizer.Add(self.path_input, proportion=3, flag=wx.RIGHT, border=20)
         chooser_button = wx.Button(panel, wx.ID_OPEN, _('Choose another directory...'))
-        path_sizer.Add(chooser_button, proportion=1, flag=wx.EXPAND)
-        sizer.Add(path_sizer, proportion=0, flag=wx.ALL|wx.EXPAND, border=10)
+        path_sizer.Add(chooser_button, proportion=1, flag=0)
+        sizer.Add(path_sizer, proportion=1, flag=wx.ALL|wx.ALIGN_BOTTOM, border=10)
 
         buttons_sizer = wx.BoxSizer(wx.HORIZONTAL)
         install_button = wx.Button(panel, wx.ID_ANY, _("Install"))
@@ -41,12 +51,12 @@ class InstallPalettesFrame(wx.Frame):
         buttons_sizer.Add(install_button, proportion=0, flag=wx.ALIGN_RIGHT|wx.ALL, border=5)
         cancel_button = wx.Button(panel, wx.ID_CANCEL, _("Cancel"))
         buttons_sizer.Add(cancel_button, proportion=0, flag=wx.ALIGN_RIGHT|wx.ALL, border=5)
-        sizer.Add(buttons_sizer, proportion=0, flag=wx.ALIGN_RIGHT)
+        sizer.Add(buttons_sizer, proportion=1, flag=wx.ALIGN_RIGHT|wx.ALIGN_BOTTOM)
 
-        outer_sizer = wx.BoxSizer(wx.HORIZONTAL)
-        outer_sizer.Add(sizer, proportion=0, flag=wx.ALIGN_CENTER_VERTICAL)
+        #outer_sizer = wx.BoxSizer(wx.HORIZONTAL)
+        #outer_sizer.Add(sizer, proportion=0, flag=wx.ALIGN_CENTER_VERTICAL)
 
-        panel.SetSizer(outer_sizer)
+        panel.SetSizer(sizer)
         panel.Layout()
 
         chooser_button.Bind(wx.EVT_BUTTON, self.chooser_button_clicked)
@@ -57,36 +67,37 @@ class InstallPalettesFrame(wx.Frame):
         self.Destroy()
 
     def chooser_button_clicked(self, event):
-        dialog = wx.DirDialog(self, _("Choose Inkscape palettes directory"))
+        dialog = wx.DirDialog(self, _("Choose Inkscape directory"))
         if dialog.ShowModal() != wx.ID_CANCEL:
             self.path_input.SetValue(dialog.GetPath())
 
     def install_button_clicked(self, event):
         try:
-            self.install_palettes()
+            self.install_addons('palettes')
+            self.install_addons('symbols')
         except Exception, e:
             wx.MessageDialog(self,
-                             _('Thread palette installation failed') + ': \n' + traceback.format_exc(),
+                             _('Inkscape add-on installation failed') + ': \n' + traceback.format_exc(),
                              _('Installation Failed'),
                              wx.OK).ShowModal()
         else:
             wx.MessageDialog(self,
-                             _('Thread palette files have been installed.  Please restart Inkscape to load the new palettes.'),
+                             _('Inkscape add-on files have been installed.  Please restart Inkscape to load the new add-ons.'),
                              _('Installation Completed'),
                              wx.OK).ShowModal()
 
         self.Destroy()
 
-    def install_palettes(self):
-        path = self.path_input.GetValue()
-        palettes_dir = self.get_bundled_palettes_dir()
-        self.copy_files(glob(os.path.join(palettes_dir, "*")), path)
+    def install_addons(self, type):
+        path = os.path.join(self.path_input.GetValue(), type)
+        src_dir = self.get_bundled_dir(type)
+        self.copy_files(glob(os.path.join(src_dir, "*")), path)
 
-    def get_bundled_palettes_dir(self):
+    def get_bundled_dir(self, name):
         if getattr(sys, 'frozen', None) is not None:
-            return realpath(os.path.join(sys._MEIPASS, '..', 'palettes'))
+            return realpath(os.path.join(sys._MEIPASS, '..', name))
         else:
-            return os.path.join(dirname(realpath(__file__)), 'palettes')
+            return realpath(os.path.join(dirname(realpath(__file__)), '..', '..', name))
 
     if (sys.platform == "win32"):
         # If we try to just use shutil.copy it says the operation requires elevation.
@@ -104,9 +115,9 @@ class InstallPalettesFrame(wx.Frame):
             for palette_file in files:
                 shutil.copy(palette_file, dest)
 
-class Palettes(inkex.Effect):
+class Install(inkex.Effect):
     def effect(self):
         app = wx.App()
-        installer_frame = InstallPalettesFrame(None, title=_("Ink/Stitch Thread Palette Installer"), size=(450, 200))
+        installer_frame = InstallerFrame(None, title=_("Ink/Stitch Add-ons Installer"), size=(550, 350))
         installer_frame.Show()
         app.MainLoop()
