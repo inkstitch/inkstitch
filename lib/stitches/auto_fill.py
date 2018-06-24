@@ -47,11 +47,6 @@ def auto_fill(shape, angle, row_spacing, end_row_spacing, max_stitch_length, run
     graph = build_graph(shape, segments, angle, row_spacing)
     path = find_stitch_path(graph, segments, starting_point, ending_point)
 
-    if ending_point is None:
-        # The end of the path travels around the outline back to the start.
-        # This isn't necessary, so remove it.
-        trim_end(path)
-
     stitches.extend(path_to_stitches(graph, path, shape, angle, row_spacing, max_stitch_length, running_stitch_length, staggers))
 
     return stitches
@@ -159,8 +154,6 @@ def build_graph(shape, segments, angle, row_spacing):
         else:
             edge_set = 1
 
-        #print >> sys.stderr, outline_index, "es", edge_set, "rn", row_num, inkstitch.Point(*nodes[0]) * self.north(angle), inkstitch.Point(*nodes[1]) * self.north(angle)
-
         # add an edge between each successive node
         for i, (node1, node2) in enumerate(zip(nodes, nodes[1:] + [nodes[0]])):
             graph.add_edge(node1, node2, key="outline")
@@ -242,14 +235,6 @@ def find_loop(graph, starting_nodes):
     somewhere else.
     """
 
-    #loop = self.simple_loop(graph, starting_nodes[-2])
-
-    #if loop:
-    #    print >> sys.stderr, "simple_loop success"
-    #    starting_nodes.pop()
-    #    starting_nodes.pop()
-    #    return loop
-
     loop = None
     retry = []
     max_queue_length = 2000
@@ -257,7 +242,6 @@ def find_loop(graph, starting_nodes):
     while not loop:
         while not loop and starting_nodes:
             starting_node = starting_nodes.pop()
-            #print >> sys.stderr, "find loop from", starting_node
 
             try:
                 # Note: if bfs_for_loop() returns None, no loop can be
@@ -266,12 +250,7 @@ def find_loop(graph, starting_nodes):
                 # case we discard that node and try the next.
                 loop = bfs_for_loop(graph, starting_node, max_queue_length)
 
-                #if not loop:
-                    #print >> dbg, "failed on", starting_node
-                    #dbg.flush()
             except MaxQueueLengthExceeded:
-                #print >> dbg, "gave up on", starting_node
-                #dbg.flush()
                 # We're giving up on this node for now.  We could try
                 # this node again later, so add it to the bottm of the
                 # stack.
@@ -337,8 +316,8 @@ def find_initial_path(graph, starting_point, ending_point=None):
 
     if ending_point is None:
         # If they didn't give an ending point, pick either neighboring node
-        # along the outline -- doesn't matter which.  This effectively means
-        # we end where we started.
+        # along the outline -- doesn't matter which.  We do this because
+        # the algorithm requires we start with _some_ path.
         neighbors = [n for n, keys in graph.adj[starting_node].iteritems() if 'outline' in keys]
         return [PathEdge((starting_node, neighbors[0]), "initial")]
     else:
@@ -368,13 +347,14 @@ def find_stitch_path(graph, segments, starting_point=None, ending_point=None):
     The edges on the outline of the region are only there to help us get
     from one grating segment to the next.
 
-    We'll build a "cycle" (a path that ends where it starts) using
-    Hierholzer's algorithm.  We'll stop once we've visited every grating
-    segment.
+    We'll build a Eulerian Path using Hierholzer's algorithm.  A true
+    Eulerian Path would visit every single edge (including all the extras
+    we inserted in build_graph()),but we'll stop short once we've visited
+    every grating segment since that's all we really care about.
 
     Hierholzer's algorithm says to select an arbitrary starting node at
     each step.  In order to produce a reasonable stitch path, we'll select
-    the vertex carefully such that we get back-and-forth traversal like
+    the starting node carefully such that we get back-and-forth traversal like
     mowing a lawn.
 
     To do this, we'll use a simple heuristic: try to start from nodes in
@@ -389,19 +369,21 @@ def find_stitch_path(graph, segments, starting_point=None, ending_point=None):
 
     if starting_point is None:
         starting_point = segments[0][0]
+
     path = find_initial_path(graph, starting_point, ending_point)
 
-    # We're starting with a path and _not_ removing the edges of that path from
-    # the graph.  This means we're implicitly adding those edges to the graph.
-    # That means that the starting and ending point (and only those two) will
-    # now have odd degree.  That means that there must exist an Eulerian
-    # Path that starts and ends at those two nodes.
+    # Our graph is Eulerian: every node has an even degree.  An Eulerian graph
+    # must have an Eulerian Circuit which visits every edge and ends where it
+    # starts.
+    #
+    # However, we're starting with a path and _not_ removing the edges of that
+    # path from the graph.  By doing this, we're implicitly adding those edges
+    # to the graph, after which the starting and ending point (and only those
+    # two) will now have odd degree.  A graph that's Eulerian except for two
+    # nodes must have an Eulerian Path that starts and ends at those two nodes.
+    # That's how we force the starting and ending point.
 
     nodes_visited.append(path[0][0])
-    #print >> sys.stderr, "nodes_visited", nodes_visited
-    #print >> sys.stderr, "starting path:", path
-
-    #return path
 
     while segments_visited < num_segments:
         loop = find_loop(graph, nodes_visited)
@@ -410,26 +392,17 @@ def find_stitch_path(graph, segments, starting_point=None, ending_point=None):
             print >> sys.stderr, _("Unexpected error while generating fill stitches. Please send your SVG file to lexelby@github.")
             break
 
-        #print >> sys.stderr, "found loop:", loop
-        #dbg.flush()
-
         segments_visited += sum(1 for edge in loop if edge.is_segment())
         nodes_visited.extend(edge[0] for edge in loop)
         graph.remove_edges_from(loop)
 
         insert_loop(path, loop)
 
-        #print >> sys.stderr, "loop made, nodes_visited:", nodes_visited
-
-        #print >> sys.stderr, "path:", path
-
-        #if segments_visited >= 12:
-        #    break
-
-    # Now we have a loop that covers every grating segment.  It returns to
-    # where it started, which is unnecessary, so we'll snip the last bit off.
-    #while original_graph.has_edge(*path[-1], key="outline"):
-    #    path.pop()
+    if ending_point is None:
+        # If they didn't specify an ending point, then the end of the path travels
+        # around the outline back to the start (see find_initial_path()). This
+        # isn't necessary, so remove it.
+        trim_end(path)
 
     return path
 
@@ -499,9 +472,6 @@ def connect_points(shape, start, end, running_stitch_length):
     direction = math.copysign(1.0, distance)
     one_stitch = running_stitch_length * direction
 
-    #print >> dbg, "connect_points:", outline_index, start, end, distance, stitches, direction
-    #dbg.flush()
-
     stitches = [InkstitchPoint(*outline.interpolate(pos).coords[0])]
 
     for i in xrange(num_stitches):
@@ -512,9 +482,6 @@ def connect_points(shape, start, end, running_stitch_length):
     end = InkstitchPoint(*end)
     if (end - stitches[-1]).length() > 0.1 * PIXELS_PER_MM:
         stitches.append(end)
-
-    #print >> dbg, "end connect_points"
-    #dbg.flush()
 
     return stitches
 
