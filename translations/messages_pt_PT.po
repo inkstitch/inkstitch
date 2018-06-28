@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-29 21:29-0400\n"
-"PO-Revision-Date: 2018-04-30 12:31-0400\n"
+"POT-Creation-Date: 2018-06-16 22:33-0400\n"
+"PO-Revision-Date: 2018-06-17 21:40-0400\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -16,6 +16,163 @@ msgstr ""
 "X-Crowdin-Language: pt-PT\n"
 "X-Crowdin-File: /master/messages.po\n"
 "Language: pt_PT\n"
+
+msgid "Auto-Fill"
+msgstr "Auto-preenchimento"
+
+msgid "Automatically routed fill stitching"
+msgstr "Definir enchimento automaticamente"
+
+msgid "Running stitch length (traversal between sections)"
+msgstr "Distância de ponto corrido (Transversal entre secções)"
+
+msgid "Underlay"
+msgstr "Sub-camada"
+
+msgid "AutoFill Underlay"
+msgstr "Sub-camada automática"
+
+msgid "Fill angle (default: fill angle + 90 deg)"
+msgstr "Ângulo de enchimento (Valor por omissão: ângulo de enchimento + 90º)"
+
+msgid "Row spacing (default: 3x fill row spacing)"
+msgstr "Espaçamento entre linhas (Valor por omissão: 3* o espaçamento das linhas de enchimento)"
+
+msgid "Max stitch length"
+msgstr "Distância máxima de ponto"
+
+msgid "Inset"
+msgstr ""
+
+msgid "Expand"
+msgstr ""
+
+msgid "TRIM after"
+msgstr "Cortar a seguir \"TRIM\""
+
+msgid "Trim thread after this object (for supported machines and file formats)"
+msgstr "Cortar fio depois deste objecto \"TRIM\" (Para maquinas e formatos de ficheiro que suportados)"
+
+msgid "STOP after"
+msgstr "Parar a seguir \"STOP\""
+
+msgid "Add STOP instruction after this object (for supported machines and file formats)"
+msgstr "Adiciona instrução de paragem \"STOP\" no final deste objecto (Para maquinas e formatos de ficheiro que suportados)"
+
+msgid "Fill"
+msgstr "Preenchimento"
+
+msgid "Manually routed fill stitching"
+msgstr "Definir enchimento manualmente"
+
+msgid "Angle of lines of stitches"
+msgstr "Ângulo das linhas de ponto"
+
+msgid "Flip fill (start right-to-left)"
+msgstr "Inverter Enchimento (Direita-Para-Esquerda)"
+
+msgid "Spacing between rows"
+msgstr "Espaçamento entre linhas"
+
+msgid "Maximum fill stitch length"
+msgstr "Distância máxima entre pontos de enchimento"
+
+msgid "Stagger rows this many times before repeating"
+msgstr "Numero de vezes a escalonar linhas antes de repetir"
+
+msgid "Satin Column"
+msgstr "Coluna de matizado"
+
+msgid "Custom satin column"
+msgstr "Coluna de matizado personalizado"
+
+msgid "Zig-zag spacing (peak-to-peak)"
+msgstr "Espaçamento Zig-zag (crista-a-crista)"
+
+msgid "Pull compensation"
+msgstr "Compensação de repuxado"
+
+msgid "Contour underlay"
+msgstr "Sub-camada de controno"
+
+msgid "Contour Underlay"
+msgstr "Sub-camada de controno"
+
+msgid "Stitch length"
+msgstr "Distância de ponto"
+
+msgid "Contour underlay inset amount"
+msgstr "Offset interno da Sub-camada de contorno"
+
+msgid "Center-walk underlay"
+msgstr "Sub-camada com movimento central"
+
+msgid "Center-Walk Underlay"
+msgstr "Sub-camada com movimento central"
+
+msgid "Zig-zag underlay"
+msgstr "Sub-camada em Zig-zag"
+
+msgid "Zig-zag Underlay"
+msgstr "Sub-camada em Zig-zag"
+
+msgid "Zig-Zag spacing (peak-to-peak)"
+msgstr "Espaçamento Zig-zag (crista-a-crista)"
+
+msgid "Inset amount (default: half of contour underlay inset)"
+msgstr "Quantidade de offset interior (valor por omissão: Metade do offset interior da sub-camada de contorno)"
+
+#, python-format
+msgid "satin column: %(id)s: at least two subpaths required (%(num)d found)"
+msgstr ""
+
+msgid "One or more rails crosses itself, and this is not allowed.  Please split into multiple satin columns."
+msgstr "Operação não permitida: Um ou mais caminhos intersectam-se a eles mesmos. Dividida o matiz em várias colunas."
+
+msgid "satin column: One or more of the rungs doesn't intersect both rails."
+msgstr "Coluna de matizado: Uma ou mais barras de direcção não intersectam ambos os caminhos."
+
+msgid "Each rail should intersect both rungs once."
+msgstr "Cada caminho deve intersectar ambas as barras de direcção uma vez."
+
+msgid "satin column: One or more of the rungs intersects the rails more than once."
+msgstr "Coluna de matizado: Uma ou mais barras de direcção intersectam os caminhos mais do que uma vez."
+
+#, python-format
+msgid "satin column: object %s has a fill (but should not)"
+msgstr "Coluna de matizado: o objecto %s tem enchimento (mas não devia)"
+
+#, python-format
+msgid "satin column: object %(id)s has two paths with an unequal number of points (%(length1)d and %(length2)d)"
+msgstr "Coluna de matizado: o objecto %(id)s the dois caminhos com numero diferente de pontos (%(length1)d e %(length2)d)"
+
+msgid "Satin stitch along paths"
+msgstr "Matizar ao longo dos caminhos"
+
+msgid "Running stitch length"
+msgstr "Distância de ponto corrido"
+
+msgid "Repeats"
+msgstr "Repetições"
+
+msgid "Manual stitch placement"
+msgstr "Colocação manual de pontos"
+
+msgid "Stitch every node in the path.  Stitch length and zig-zag spacing are ignored."
+msgstr ""
+
+msgid "Legacy running stitch setting detected!\n\n"
+"It looks like you're using a stroke smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set your stroke to be dashed to indicate running stitch.  Any kind of dash will work."
+msgstr ""
+
+msgid "No embroiderable paths selected."
+msgstr "Nenhum caminho bordável seleccionado."
+
+msgid "No embroiderable paths found in document."
+msgstr "Nenhum caminho bordável encontrado no documento."
+
+msgid "Tip: use Path -> Object to Path to convert non-paths."
+msgstr ""
 
 msgid "\n\n"
 "Seeing a 'no such option' message?  Please restart Inkscape to fix."
@@ -135,165 +292,7 @@ msgstr ""
 msgid "Embroidery Simulation"
 msgstr "Simulação de Bordado"
 
-#, python-format
-msgid "parseLengthWithUnits: unknown unit %s"
-msgstr "parseLengthWithUnits: Unidade desconhecida %s"
-
-#, python-format
-msgid "Unknown unit: %s"
-msgstr "Unidade desconhecida: %s"
-
-msgid "No embroiderable paths selected."
-msgstr "Nenhum caminho bordável seleccionado."
-
-msgid "No embroiderable paths found in document."
-msgstr "Nenhum caminho bordável encontrado no documento."
-
-msgid "Tip: use Path -> Object to Path to convert non-paths before embroidering."
-msgstr "Dica: Use opção -> Object to Path para converter objectos em caminhos antes de bordar."
-
-msgid "Stitch Plan"
-msgstr "Plano de pontos/bordado"
-
-msgid "Auto-Fill"
-msgstr "Auto-preenchimento"
-
-msgid "Automatically routed fill stitching"
-msgstr "Definir enchimento automaticamente"
-
-msgid "Running stitch length (traversal between sections)"
-msgstr "Distância de ponto corrido (Transversal entre secções)"
-
-msgid "Underlay"
-msgstr "Sub-camada"
-
-msgid "AutoFill Underlay"
-msgstr "Sub-camada automática"
-
-msgid "Fill angle (default: fill angle + 90 deg)"
-msgstr "Ângulo de enchimento (Valor por omissão: ângulo de enchimento + 90º)"
-
-msgid "Row spacing (default: 3x fill row spacing)"
-msgstr "Espaçamento entre linhas (Valor por omissão: 3* o espaçamento das linhas de enchimento)"
-
-msgid "Max stitch length"
-msgstr "Distância máxima de ponto"
-
-msgid "Inset"
-msgstr ""
-
-msgid "TRIM after"
-msgstr "Cortar a seguir \"TRIM\""
-
-msgid "Trim thread after this object (for supported machines and file formats)"
-msgstr "Cortar fio depois deste objecto \"TRIM\" (Para maquinas e formatos de ficheiro que suportados)"
-
-msgid "STOP after"
-msgstr "Parar a seguir \"STOP\""
-
-msgid "Add STOP instruction after this object (for supported machines and file formats)"
-msgstr "Adiciona instrução de paragem \"STOP\" no final deste objecto (Para maquinas e formatos de ficheiro que suportados)"
-
-msgid "Fill"
-msgstr "Preenchimento"
-
-msgid "Manually routed fill stitching"
-msgstr "Definir enchimento manualmente"
-
-msgid "Angle of lines of stitches"
-msgstr "Ângulo das linhas de ponto"
-
-msgid "Flip fill (start right-to-left)"
-msgstr "Inverter Enchimento (Direita-Para-Esquerda)"
-
-msgid "Spacing between rows"
-msgstr "Espaçamento entre linhas"
-
-msgid "Maximum fill stitch length"
-msgstr "Distância máxima entre pontos de enchimento"
-
-msgid "Stagger rows this many times before repeating"
-msgstr "Numero de vezes a escalonar linhas antes de repetir"
-
-msgid "Satin Column"
-msgstr "Coluna de matizado"
-
-msgid "Custom satin column"
-msgstr "Coluna de matizado personalizado"
-
-msgid "Zig-zag spacing (peak-to-peak)"
-msgstr "Espaçamento Zig-zag (crista-a-crista)"
-
-msgid "Pull compensation"
-msgstr "Compensação de repuxado"
-
-msgid "Contour underlay"
-msgstr "Sub-camada de controno"
-
-msgid "Contour Underlay"
-msgstr "Sub-camada de controno"
-
-msgid "Stitch length"
-msgstr "Distância de ponto"
-
-msgid "Contour underlay inset amount"
-msgstr "Offset interno da Sub-camada de contorno"
-
-msgid "Center-walk underlay"
-msgstr "Sub-camada com movimento central"
-
-msgid "Center-Walk Underlay"
-msgstr "Sub-camada com movimento central"
-
-msgid "Zig-zag underlay"
-msgstr "Sub-camada em Zig-zag"
-
-msgid "Zig-zag Underlay"
-msgstr "Sub-camada em Zig-zag"
-
-msgid "Zig-Zag spacing (peak-to-peak)"
-msgstr "Espaçamento Zig-zag (crista-a-crista)"
-
-msgid "Inset amount (default: half of contour underlay inset)"
-msgstr "Quantidade de offset interior (valor por omissão: Metade do offset interior da sub-camada de contorno)"
-
-msgid "One or more rails crosses itself, and this is not allowed.  Please split into multiple satin columns."
-msgstr "Operação não permitida: Um ou mais caminhos intersectam-se a eles mesmos. Dividida o matiz em várias colunas."
-
-msgid "satin column: One or more of the rungs doesn't intersect both rails."
-msgstr "Coluna de matizado: Uma ou mais barras de direcção não intersectam ambos os caminhos."
-
-msgid "Each rail should intersect both rungs once."
-msgstr "Cada caminho deve intersectar ambas as barras de direcção uma vez."
-
-msgid "satin column: One or more of the rungs intersects the rails more than once."
-msgstr "Coluna de matizado: Uma ou mais barras de direcção intersectam os caminhos mais do que uma vez."
-
-#, python-format
-msgid "satin column: object %s has a fill (but should not)"
-msgstr "Coluna de matizado: o objecto %s tem enchimento (mas não devia)"
-
-#, python-format
-msgid "satin column: object %(id)s has two paths with an unequal number of points (%(length1)d and %(length2)d)"
-msgstr "Coluna de matizado: o objecto %(id)s the dois caminhos com numero diferente de pontos (%(length1)d e %(length2)d)"
-
-msgid "Satin stitch along paths"
-msgstr "Matizar ao longo dos caminhos"
-
-msgid "Running stitch length"
-msgstr "Distância de ponto corrido"
-
-msgid "Repeats"
-msgstr "Repetições"
-
-msgid "Manual stitch placement"
-msgstr "Colocação manual de pontos"
-
-msgid "Stitch every node in the path.  Stitch length and zig-zag spacing are ignored."
-msgstr ""
-
-msgid "Legacy running stitch setting detected!\n\n"
-"It looks like you're using a stroke smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set your stroke to be dashed to indicate running stitch.  Any kind of dash will work."
+msgid "No embroidery file formats selected."
 msgstr ""
 
 msgid "Unable to autofill.  This most often happens because your shape is made up of multiple sections that aren't connected."
@@ -301,6 +300,17 @@ msgstr "Enchimento automático falhou. Verificar se a forma não é composta por
 
 msgid "Unexpected error while generating fill stitches. Please send your SVG file to lexelby@github."
 msgstr "Erro inesperado ao gerar pontos de enchimento. Por favor envie o seu SVG para lexelby@github."
+
+msgid "Stitch Plan"
+msgstr "Plano de pontos/bordado"
+
+#, python-format
+msgid "parseLengthWithUnits: unknown unit %s"
+msgstr "parseLengthWithUnits: Unidade desconhecida %s"
+
+#, python-format
+msgid "Unknown unit: %s"
+msgstr "Unidade desconhecida: %s"
 
 msgid "Color"
 msgstr "Cor"
