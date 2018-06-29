@@ -20,7 +20,7 @@ class InstallerFrame(wx.Frame):
     def __init__(self, *args, **kwargs):
         wx.Frame.__init__(self, *args, **kwargs)
 
-        default_path = guess_inkscape_config_path()
+        self.path = guess_inkscape_config_path()
 
         panel = wx.Panel(self)
         sizer = wx.BoxSizer(wx.VERTICAL)
@@ -29,21 +29,13 @@ class InstallerFrame(wx.Frame):
 
         text = _('Ink/Stitch can install files ("add-ons") that make it easier to use Inkscape to create machine embroidery designs.  These add-ons will be installed:') + \
                  "\n\n   • " + _("thread manufacturer color palettes") + \
-                 "\n   • " + _("Ink/Stitch visual commands (Object -> Symbols...)") + \
-                 "\n\n" +  _("Directory in which to install add-ons:")
+                 "\n   • " + _("Ink/Stitch visual commands (Object -> Symbols...)")
 
         static_text = wx.StaticText(panel, label=text)
         font = wx.Font(12, wx.DEFAULT, wx.NORMAL, wx.NORMAL)
         static_text.SetFont(font)
         text_sizer.Add(static_text, proportion=0, flag=wx.ALL|wx.EXPAND, border=10)
         sizer.Add(text_sizer, proportion=3, flag=wx.ALL|wx.EXPAND, border=0)
-
-        path_sizer = wx.BoxSizer(wx.HORIZONTAL)
-        self.path_input = wx.TextCtrl(panel, wx.ID_ANY, value=default_path)
-        path_sizer.Add(self.path_input, proportion=3, flag=wx.RIGHT, border=20)
-        chooser_button = wx.Button(panel, wx.ID_OPEN, _('Choose another directory...'))
-        path_sizer.Add(chooser_button, proportion=1, flag=0)
-        sizer.Add(path_sizer, proportion=1, flag=wx.ALL|wx.ALIGN_BOTTOM, border=10)
 
         buttons_sizer = wx.BoxSizer(wx.HORIZONTAL)
         install_button = wx.Button(panel, wx.ID_ANY, _("Install"))
@@ -53,13 +45,9 @@ class InstallerFrame(wx.Frame):
         buttons_sizer.Add(cancel_button, proportion=0, flag=wx.ALIGN_RIGHT|wx.ALL, border=5)
         sizer.Add(buttons_sizer, proportion=1, flag=wx.ALIGN_RIGHT|wx.ALIGN_BOTTOM)
 
-        #outer_sizer = wx.BoxSizer(wx.HORIZONTAL)
-        #outer_sizer.Add(sizer, proportion=0, flag=wx.ALIGN_CENTER_VERTICAL)
-
         panel.SetSizer(sizer)
         panel.Layout()
 
-        chooser_button.Bind(wx.EVT_BUTTON, self.chooser_button_clicked)
         cancel_button.Bind(wx.EVT_BUTTON, self.cancel_button_clicked)
         install_button.Bind(wx.EVT_BUTTON, self.install_button_clicked)
 
@@ -89,7 +77,7 @@ class InstallerFrame(wx.Frame):
         self.Destroy()
 
     def install_addons(self, type):
-        path = os.path.join(self.path_input.GetValue(), type)
+        path = os.path.join(self.path, type)
         src_dir = self.get_bundled_dir(type)
         self.copy_files(glob(os.path.join(src_dir, "*")), path)
 
@@ -118,6 +106,6 @@ class InstallerFrame(wx.Frame):
 class Install(inkex.Effect):
     def effect(self):
         app = wx.App()
-        installer_frame = InstallerFrame(None, title=_("Ink/Stitch Add-ons Installer"), size=(550, 350))
+        installer_frame = InstallerFrame(None, title=_("Ink/Stitch Add-ons Installer"), size=(550, 250))
         installer_frame.Show()
         app.MainLoop()

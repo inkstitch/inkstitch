@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-06-24 15:55-0400\n"
+"POT-Creation-Date: 2018-06-28 20:32-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -208,12 +208,6 @@ msgid "thread manufacturer color palettes"
 msgstr ""
 
 msgid "Ink/Stitch visual commands (Object -> Symbols...)"
-msgstr ""
-
-msgid "Directory in which to install add-ons:"
-msgstr ""
-
-msgid "Choose another directory..."
 msgstr ""
 
 msgid "Install"
