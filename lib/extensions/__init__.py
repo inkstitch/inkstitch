@@ -6,3 +6,4 @@ from simulate import Simulate
 from input import Input
 from output import Output
 from zip import Zip
+from flip import Flip
