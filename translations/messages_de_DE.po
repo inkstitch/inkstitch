@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-06-16 22:33-0400\n"
-"PO-Revision-Date: 2018-06-17 21:40-0400\n"
+"POT-Creation-Date: 2018-06-28 20:32-0400\n"
+"PO-Revision-Date: 2018-06-30 01:31\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -45,6 +45,10 @@ msgid "Inset"
 msgstr "Einzug"
 
 msgid "Expand"
+msgstr ""
+
+#, python-format
+msgid "%(id)s has more than one command of type '%(command)s' linked to it"
 msgstr ""
 
 msgid "TRIM after"
@@ -180,11 +184,14 @@ msgid "\n\n"
 msgstr "\n\n"
 "  Sehen Sie eine Meldung \"keine solche Option\"?  Zum beheben bitte Inkscape neu starten."
 
-msgid "Directory in which to install palettes:"
-msgstr "Installationsverzeichnis für Farbpaletten:"
+msgid "Ink/Stitch can install files (\"add-ons\") that make it easier to use Inkscape to create machine embroidery designs.  These add-ons will be installed:"
+msgstr ""
 
-msgid "Choose another directory..."
-msgstr "Anderes Verzeichnis wählen..."
+msgid "thread manufacturer color palettes"
+msgstr ""
+
+msgid "Ink/Stitch visual commands (Object -> Symbols...)"
+msgstr ""
 
 msgid "Install"
 msgstr "Installieren"
@@ -192,23 +199,23 @@ msgstr "Installieren"
 msgid "Cancel"
 msgstr "Abbrechen"
 
-msgid "Choose Inkscape palettes directory"
-msgstr "Wähle Inkscape Farbpaletten-Verzeichnis"
+msgid "Choose Inkscape directory"
+msgstr ""
 
-msgid "Thread palette installation failed"
-msgstr "Installation der Garnpaletten fehlgeschlagen"
+msgid "Inkscape add-on installation failed"
+msgstr ""
 
 msgid "Installation Failed"
 msgstr "Installation fehlgeschlagen"
 
-msgid "Thread palette files have been installed.  Please restart Inkscape to load the new palettes."
-msgstr "Die Garnpaletten wurden erfolgreich installiert. Inkscape muss jetzt neu gestartet werden, um sie zu laden."
+msgid "Inkscape add-on files have been installed.  Please restart Inkscape to load the new add-ons."
+msgstr ""
 
 msgid "Installation Completed"
 msgstr "Installation abgeschlossen"
 
-msgid "Ink/Stitch Thread Palette Installer"
-msgstr "Ink/Stitch Garnpaletten Installer"
+msgid "Ink/Stitch Add-ons Installer"
+msgstr ""
 
 msgid "These settings will be applied to 1 object."
 msgstr "Diese Einstellung wird auf 1 Objekt angewendet."
