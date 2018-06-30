@@ -41,9 +41,9 @@ tt, code, kbd, samp, pre {
 }
 
 /* type scale */
-$type-size-1 : 1em;
-$type-size-2 : 1em;
-$type-size-3 : 1em;  
+$type-size-1 : 1.3em;
+$type-size-2 : 1.2em;
+$type-size-3 : 1.1em;  
 $type-size-4 : 1em;
 $type-size-5 : 0.8em;
 $type-size-6 : 0.75em;   // ~12px
@@ -60,6 +60,15 @@ $text-color: #000;
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
+.page__title {
+  border-bottom: 5px solid #ccc;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+}
+
+.page__content h2 {
+  border-bottom: 1px solid #ccc;
+}
 
 .page__content p, .page__content li, .page__content dl {
   font-size: 0.8rem;
@@ -124,6 +133,11 @@ table tr td:first-child {
   }
   
 /* Masthead */
+  .masthead {
+    box-shadow: 1px 1px 5px #ccc;
+    border-bottom: 1px solid #ccc;
+  }
+
   .greedy-nav a.site-title {
     margin-left: 0.5em;
     padding: 0;

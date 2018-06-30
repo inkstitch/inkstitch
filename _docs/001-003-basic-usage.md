@@ -10,7 +10,7 @@ Try the following steps in order to test the extension and to learn about basic 
 **Tipp:** If you are new to Inkscape, have a look at their [Basic Tutorial](https://inkscape.org/en/doc/tutorials/basic/tutorial-basic.html) first.
 {: .notice--info }
 
-### Step 1 - Draw an Object
+## Step 1 - Draw an Object
 
 Create an object, e.g. a circle and make sure it has both a stroke and a fill.
 
@@ -19,7 +19,7 @@ Create an object, e.g. a circle and make sure it has both a stroke and a fill.
 
 ![Fill and Stroke](https://edutechwiki.unige.ch/mediawiki/images/thumb/8/86/SVG-yellow-circle-stroke-fill.png/300px-SVG-yellow-circle-stroke-fill.png)
 
-### Step 2 - Convert to Path
+## Step 2 - Convert to Path
 Transform **all objects** you want to stitch to paths:
 
 * Select all objects (`Ctrl+A`)
@@ -28,13 +28,13 @@ Transform **all objects** you want to stitch to paths:
 **Info:** Objects that are not of "path" type, are ignored by InkStitch.
 {: .notice--warning }
 
-### Step 3 - Parametrize SVG Path for Embroidery
+## Step 3 - Parametrize SVG Path for Embroidery
 
 * Select at least one object.
 * Open `Extensions -> Embroider -> Params` and play with them.
 * For now, just accept the defaults or close without saving.
 
-### Step 4 - Create the Embroidery File
+## Step 4 - Create the Embroidery File
 
 You can either create a stitch file for a selection of objects or for all path objects.
 To create an embroidery file for the whole design:
@@ -44,7 +44,7 @@ To create an embroidery file for the whole design:
 * Select the right file format for your machine
 * Type a directory name where you want to save your output files. E.g. `C:\Users\%USERNAME%\Documents` on Windows. Ink/Stitch will remember this information.
 
-### Step 5 - Inspect in Inkscape
+## Step 5 - Inspect in Inkscape
 
 The circle you made will disappear and be replaced with some stripes and zig-zags. Ink/Stitch has hidden all of your layers and created a new one called `Stitch Plan`, in which it has placed a visual representation of the stitch plan it created. It has interpreted your shape as two instructions: Fill and Stroke. Fill is implemented using fill stitching, and Stroke is implemented by running satin stitching along the outline.
 
@@ -56,7 +56,7 @@ Now look at the zig-zags. These are the satin stitches. Note that the corners lo
 
 The stitching preview you're looking at just now isn't intended to be permanent. Immediately undo it with `Ctrl-Z` after you've looked at the stitches. The actual work that does, is to output a design file.
 
-### Step 6 - Stitching Out the Design
+## Step 6 - Stitching Out the Design
 Where'd the design file go? One of the parameters you were able to specify in the filter settings dialog was the output directory. By default, the directory used is the place where you installed the extension's Python files.
 
 Ink/Stich will create a file named `something.___`, where `something` is the name of your svg file (e.g. `something.svg`) and `___` is the proper extension for the output format you select. If `something.___` already exists, it will be renamed to `something.___.1`, and `something.___.1` will be renamed to `something.___.2`, etc, up to 5 backup copies.
