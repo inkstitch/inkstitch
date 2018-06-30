@@ -19,6 +19,7 @@ from ..stitch_plan import patches_to_stitch_plan
 from ..elements import EmbroideryElement, Fill, AutoFill, Stroke, SatinColumn
 from ..utils import save_stderr, restore_stderr
 from ..simulator import EmbroiderySimulator
+from ..commands import is_command
 
 
 def presets_path():
@@ -655,7 +656,7 @@ class Params(InkstitchExtension):
             classes.append(AutoFill)
             classes.append(Fill)
 
-        if element.get_style("stroke"):
+        if element.get_style("stroke") and not is_command(node):
             classes.append(Stroke)
 
             if element.get_style("stroke-dasharray") is None:

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <_name>Install thread manufacturer color palettes</_name>
-    <id>org.inkstitch.palettes</id>
+    <_name>Install add-ons for Inkscape</_name>
+    <id>org.inkstitch.install</id>
     <dependency type="executable" location="extensions">inkstitch.py</dependency>
     <dependency type="executable" location="extensions">inkex.py</dependency>
-    <param name="extension" type="string" gui-hidden="true">palettes</param>
+    <param name="extension" type="string" gui-hidden="true">install</param>
     <effect>
         <object-type>all</object-type>
         <effects-menu>

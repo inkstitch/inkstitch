@@ -4,7 +4,8 @@ from shapely import geometry as shgeo
 
 from ..i18n import _
 from ..utils import cache
-from ..svg import PIXELS_PER_MM, get_viewbox_transform, convert_length, get_doc_size
+from ..svg import PIXELS_PER_MM, convert_length, get_doc_size, apply_transforms
+from ..commands import find_commands
 
 # inkscape-provided utilities
 import simpletransform
@@ -171,10 +172,6 @@ class EmbroideryElement(object):
 
     @property
     def path(self):
-        return cubicsuperpath.parsePath(self.node.get("d"))
-
-    @cache
-    def parse_path(self):
         # A CSP is a  "cubic superpath".
         #
         # A "path" is a sequence of strung-together bezier curves.
@@ -202,22 +199,32 @@ class EmbroideryElement(object):
         # In a path, each element in the 3-tuple is itself a tuple of (x, y).
         # Tuples all the way down.  Hasn't anyone heard of using classes?
 
-        path = self.path
+        return cubicsuperpath.parsePath(self.node.get("d"))
 
-        # start with the identity transform
-        transform = [[1.0, 0.0, 0.0], [0.0, 1.0, 0.0]]
+    @cache
+    def parse_path(self):
+        return apply_transforms(self.path, self.node)
 
-        # combine this node's transform with all parent groups' transforms
-        transform = simpletransform.composeParents(self.node, transform)
+    @property
+    @cache
+    def commands(self):
+        return find_commands(self.node)
 
-        # add in the transform implied by the viewBox
-        viewbox_transform = get_viewbox_transform(self.node.getroottree().getroot())
-        transform = simpletransform.composeTransform(viewbox_transform, transform)
+    @cache
+    def get_commands(self, command):
+        return [c for c in self.commands if c.command == command]
 
-        # apply the combined transform to this node's path
-        simpletransform.applyTransformToPath(transform, path)
+    @cache
+    def get_command(self, command):
+        commands = self.get_commands(command)
 
-        return path
+        if len(commands) == 1:
+            return commands[0]
+        elif len(commands) > 1:
+            raise ValueError(_("%(id)s has more than one command of type '%(command)s' linked to it") %
+                                dict(id=self.node.get(id), command=command))
+        else:
+            return None
 
     def strip_control_points(self, subpath):
         return [point for control_before, point, control_after in subpath]

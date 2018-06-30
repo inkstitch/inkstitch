@@ -100,13 +100,28 @@ class AutoFill(Fill):
     def fill_shape(self):
         return self.shrink_or_grow_shape(self.expand)
 
+    def get_starting_point(self, last_patch):
+        # If there is a "fill_start" Command, then use that; otherwise pick
+        # the point closest to the end of the last patch.
+
+        if self.get_command('fill_start'):
+            return self.get_command('fill_start').target_point
+        elif last_patch:
+            return last_patch.stitches[-1]
+        else:
+            return None
+
+    def get_ending_point(self):
+        if self.get_command('fill_end'):
+            return self.get_command('fill_end').target_point
+        else:
+            return None
+
     def to_patches(self, last_patch):
         stitches = []
 
-        if last_patch is None:
-            starting_point = None
-        else:
-            starting_point = last_patch.stitches[-1]
+        starting_point = self.get_starting_point(last_patch)
+        ending_point = self.get_ending_point()
 
         if self.fill_underlay:
             stitches.extend(auto_fill(self.underlay_shape,
@@ -126,6 +141,7 @@ class AutoFill(Fill):
                                   self.max_stitch_length,
                                   self.running_stitch_length,
                                   self.staggers,
-                                  starting_point))
+                                  starting_point,
+                                  ending_point))
 
         return [Patch(stitches=stitches, color=self.color)]

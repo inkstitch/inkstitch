@@ -7,6 +7,7 @@ from collections import MutableMapping
 from ..svg.tags import *
 from ..elements import AutoFill, Fill, Stroke, SatinColumn, Polyline, EmbroideryElement
 from ..utils import cache
+from ..commands import is_command
 
 
 SVG_METADATA_TAG = inkex.addNS("metadata", "svg")
@@ -165,7 +166,8 @@ class InkstitchExtension(inkex.Effect):
                         classes.append(Fill)
 
                 if element.get_style("stroke"):
-                    classes.append(Stroke)
+                    if not is_command(element.node):
+                        classes.append(Stroke)
 
                 if element.get_boolean_param("stroke_first", False):
                     classes.reverse()

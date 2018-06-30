@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="100mm"
+   height="100mm"
+   viewBox="0 0 377.95276 377.95276"
+   id="svg8375"
+   version="1.1"
+   inkscape:version="0.92.3 (unknown)"
+   sodipodi:docname="inkstitch.svg">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2"
+     inkscape:cx="64.500275"
+     inkscape:cy="322.07765"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     units="mm"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
+     inkscape:window-maximized="1"
+     inkscape:measure-start="128.23,226.536"
+     inkscape:measure-end="114.217,226.536"
+     inkscape:snap-global="false"
+     showguides="false">
+    <inkscape:grid
+       empspacing="2"
+       opacity="0.1254902"
+       color="#f03fff"
+       spacingy="18.897638"
+       spacingx="18.897638"
+       units="mm"
+       id="grid5001"
+       type="xygrid" />
+  </sodipodi:namedview>
+  <title
+     id="title9425">Ink/Stitch Commands</title>
+  <defs
+     id="defs8377">
+    <symbol
+       id="inkstitch_fill_end">
+      <title
+         id="title9427">Fill stitch starting point</title>
+      <circle
+         inkscape:label="outline"
+         style="opacity:1;vector-effect:none;fill:#fafafa;fill-opacity:1;fill-rule:evenodd;stroke:#003399;stroke-width:1.06501234;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.19503705, 3.19503705;stroke-dashoffset:0;stroke-opacity:1"
+         id="circle13166"
+         cx="47.235394"
+         cy="105.91732"
+         r="9.2465534" />
+      <path
+         inkscape:connector-curvature="0"
+         id="rect5371-2"
+         d="m 42.691395,101.26765 h 9.140878 v 9.14087 h -9.140878 z"
+         style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.60622311;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:4.81866985, 4.81866985;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke" />
+    </symbol>
+    <symbol
+       id="inkstitch_fill_start">
+      <title
+         id="title9432">Fill stitch ending point</title>
+      <circle
+         inkscape:label="outline"
+         style="opacity:1;vector-effect:none;fill:#fafafa;fill-opacity:1;fill-rule:evenodd;stroke:#003399;stroke-width:1.06501234;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.19503705, 3.19503705;stroke-dashoffset:0;stroke-opacity:1"
+         id="circle13166-6"
+         cx="85.223907"
+         cy="106.13256"
+         r="9.2465534" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4183"
+         d="m 91.796747,106.13612 -10.4514,6.03412 v -12.06823 z"
+         inkscape:transform-center-y="3.0183984e-06"
+         inkscape:transform-center-x="-1.7419043"
+         style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.74180555;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </symbol>
+  </defs>
+  <metadata
+     id="metadata8380">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     style="display:inline"
+     transform="translate(0,-58.409503)"
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <use
+       xlink:href="#inkstitch_fill_end"
+       id="use18860"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       xlink:href="#inkstitch_fill_start"
+       id="use18871"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+  </g>
+</svg>

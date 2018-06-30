@@ -1,5 +1,5 @@
 from embroider import Embroider
-from palettes import Palettes
+from install import Install
 from params import Params
 from print_pdf import Print
 from simulate import Simulate
