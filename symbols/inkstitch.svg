@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2"
-     inkscape:cx="64.500275"
-     inkscape:cy="322.07765"
+     inkscape:zoom="4"
+     inkscape:cx="127.82066"
+     inkscape:cy="323.33371"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -90,6 +90,48 @@
          inkscape:transform-center-x="-1.7419043"
          style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.74180555;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     </symbol>
+    <symbol
+       id="inkstitch_stop">
+      <title
+         id="title13328">Stop the machine after sewing this object (for applique, etc)</title>
+      <circle
+         r="9.2465534"
+         cy="105.91732"
+         cx="47.235394"
+         id="circle13330"
+         style="opacity:1;vector-effect:none;fill:#fafafa;fill-opacity:1;fill-rule:evenodd;stroke:#003399;stroke-width:1.06501234;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.19503705, 3.19503705;stroke-dashoffset:0;stroke-opacity:1"
+         inkscape:label="outline" />
+      <path
+         style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.60622311;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:4.81866985, 4.81866985;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+         d="m 44.066395,101.26765 h 2.515878 v 9.14087 h -2.515878 z"
+         id="path13332"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         style="display:inline;opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.60622311;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:4.81866985, 4.81866985;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+         d="m 48.066393,101.26765 h 2.51588 v 9.14087 h -2.51588 z"
+         id="path13333"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccc"
+         inkscape:label="path13332-7" />
+    </symbol>
+    <symbol
+       id="inkstitch_trim">
+      <title
+         id="title9282">Trim the thread after sewing this object.</title>
+      <circle
+         inkscape:label="outline"
+         style="opacity:1;vector-effect:none;fill:#fafafa;fill-opacity:1;fill-rule:evenodd;stroke:#003399;stroke-width:1.06501234;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.19503705, 3.19503705;stroke-dashoffset:0;stroke-opacity:1"
+         id="circle13405"
+         cx="161.5739"
+         cy="106.8505"
+         r="9.2465534" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path13416"
+         d="m 158.75,101.36067 c -1.30575,0 -2.375,1.06924 -2.375,2.375 0,1.30575 1.06925,2.375 2.375,2.375 0.58687,0 1.11944,-0.22369 1.53516,-0.58007 l 0.61718,1.62109 -2.29882,6.01758 c 0.98655,-0.12511 1.23728,-0.26171 1.67382,-0.97461 l 1.33008,-3.18945 1.23633,3.25 c 0.23227,0.77906 0.84315,0.79218 1.57813,1.07226 l -2.05469,-6.14258 0.73047,-1.75 c 0.42849,0.41682 1.01136,0.67578 1.65234,0.67578 1.30575,0 2.375,-1.06925 2.375,-2.375 0,-1.30576 -1.06925,-2.375 -2.375,-2.375 -1.06233,0 -1.95701,0.71265 -2.25781,1.67969 l -0.0117,-0.0156 -0.80274,2.10156 -0.59179,-1.76562 c -0.18242,-1.12808 -1.15865,-2 -2.33594,-2 z m 0,1 c 0.76531,0 1.375,0.60968 1.375,1.375 0,0.76531 -0.60969,1.375 -1.375,1.375 -0.76531,0 -1.375,-0.60969 -1.375,-1.375 0,-0.76532 0.60969,-1.375 1.375,-1.375 z m 6,0 c 0.76531,0 1.375,0.60968 1.375,1.375 0,0.76531 -0.60969,1.375 -1.375,1.375 -0.76531,0 -1.375,-0.60969 -1.375,-1.375 0,-0.76532 0.60969,-1.375 1.375,-1.375 z"
+         style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#050505;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.99999994;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+    </symbol>
   </defs>
   <metadata
      id="metadata8380">
@@ -119,6 +161,30 @@
     <use
        xlink:href="#inkstitch_fill_start"
        id="use18871"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       style="display:inline"
+       xlink:href="#inkstitch_fill_end"
+       id="use18860-3"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(6.4739226e-8,-1.7570438e-6)" />
+    <use
+       xlink:href="#inkstitch_stop"
+       id="use13373"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(77.922507,0.57962514)" />
+    <use
+       xlink:href="#inkstitch_trim"
+       id="use13489"
        x="0"
        y="0"
        width="100%"
