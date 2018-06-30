@@ -215,6 +215,10 @@ class EmbroideryElement(object):
         return [c for c in self.commands if c.command == command]
 
     @cache
+    def has_command(self, command):
+        return len(self.get_commands(command)) > 0
+
+    @cache
     def get_command(self, command):
         commands = self.get_commands(command)
 
