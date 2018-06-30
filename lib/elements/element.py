@@ -268,8 +268,8 @@ class EmbroideryElement(object):
         patches = self.to_patches(last_patch)
 
         if patches:
-            patches[-1].trim_after = self.trim_after
-            patches[-1].stop_after = self.stop_after
+            patches[-1].trim_after = self.has_command("trim") or self.trim_after
+            patches[-1].stop_after = self.has_command("stop") or self.stop_after
 
         return patches
 
