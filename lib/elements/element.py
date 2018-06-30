@@ -242,22 +242,10 @@ class EmbroideryElement(object):
         return [self.strip_control_points(subpath) for subpath in path]
 
     @property
-    @param('trim_after',
-           _('TRIM after'),
-           tooltip=_('Trim thread after this object (for supported machines and file formats)'),
-           type='boolean',
-           default=False,
-           sort_index=1000)
     def trim_after(self):
         return self.get_boolean_param('trim_after', False)
 
     @property
-    @param('stop_after',
-           _('STOP after'),
-           tooltip=_('Add STOP instruction after this object (for supported machines and file formats)'),
-           type='boolean',
-           default=False,
-           sort_index=1000)
     def stop_after(self):
         return self.get_boolean_param('stop_after', False)
 
