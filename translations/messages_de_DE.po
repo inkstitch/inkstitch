@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-06-28 20:32-0400\n"
-"PO-Revision-Date: 2018-07-01 15:51\n"
+"PO-Revision-Date: 2018-07-01 16:10\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -286,7 +286,7 @@ msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwri
 msgstr "Einstellung \"%s\" bereits vorhanden. Bitte verwenden Sie einen anderen Namen oder drücken Sie \"Überschreiben\""
 
 msgid "Closing..."
-msgstr "Schließen..."
+msgstr "Beende..."
 
 msgid "It is safe to close this window now."
 msgstr "Es ist jetzt sicher, das Fenster zu schließen."
