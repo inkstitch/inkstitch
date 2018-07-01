@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-06-28 20:32-0400\n"
-"PO-Revision-Date: 2018-07-01 14:50\n"
+"PO-Revision-Date: 2018-07-01 15:02\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -128,7 +128,7 @@ msgstr "Einrückung (Standard: Halbe Einrückung der Konturunterlage)"
 
 #, python-format
 msgid "satin column: %(id)s: at least two subpaths required (%(num)d found)"
-msgstr "Satinkolumne: %(id)s: es werden minimum zwei Pfade benötigt (%(num)d gefunden)"
+msgstr "Satinkolumne: %(id)s: es werden mindestens zwei Pfade benötigt (%(num)d gefunden)"
 
 msgid "One or more rails crosses itself, and this is not allowed.  Please split into multiple satin columns."
 msgstr "Eine oder mehrere Konturen überschneiden sich, dies ist nicht erlaubt. Bitte in mehrere Satinkolumnen aufteilen."
@@ -390,10 +390,10 @@ msgid "Total stitch count"
 msgstr "Gesamtstichanzahl"
 
 msgid "Total nr stops"
-msgstr ""
+msgstr "Gesamtanzahl Stops"
 
 msgid "Total nr trims"
-msgstr ""
+msgstr "Gesamtanzahl Trims"
 
 msgid "thread used"
 msgstr "Garnverbrauch"
