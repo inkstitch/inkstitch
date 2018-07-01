@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-06-28 20:32-0400\n"
-"PO-Revision-Date: 2018-07-01 14:40\n"
+"PO-Revision-Date: 2018-07-01 14:50\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -128,7 +128,7 @@ msgstr "Einrückung (Standard: Halbe Einrückung der Konturunterlage)"
 
 #, python-format
 msgid "satin column: %(id)s: at least two subpaths required (%(num)d found)"
-msgstr "Satinkolumne: %(id)s: at least two subpaths required (%(num)d found)"
+msgstr "Satinkolumne: %(id)s: es werden minimum zwei Pfade benötigt (%(num)d gefunden)"
 
 msgid "One or more rails crosses itself, and this is not allowed.  Please split into multiple satin columns."
 msgstr "Eine oder mehrere Konturen überschneiden sich, dies ist nicht erlaubt. Bitte in mehrere Satinkolumnen aufteilen."
@@ -185,7 +185,7 @@ msgstr "\n\n"
 "  Sehen Sie eine Meldung \"keine solche Option\"?  Zum beheben bitte Inkscape neu starten."
 
 msgid "Ink/Stitch can install files (\"add-ons\") that make it easier to use Inkscape to create machine embroidery designs.  These add-ons will be installed:"
-msgstr "Ink/Stitch kann Dateien (\"Erweiterungen\") installieren, die die Verwendung von Inkscape zum Erstellen von Maschinenstickdateien erleichtern. Diese Erweiterungen werden installiert:"
+msgstr "Ink/Stitch kann Dateien (\"Erweiterungen\") installieren, um das Erstellen von Maschinenstickdateien unter Inkscape zu erleichtern. Diese Erweiterungen werden installiert:"
 
 msgid "thread manufacturer color palettes"
 msgstr "Garnhersteller-Farbpaletten"
