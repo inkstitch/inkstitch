@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-06-28 20:32-0400\n"
-"PO-Revision-Date: 2018-07-01 15:11\n"
+"PO-Revision-Date: 2018-07-01 15:51\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -312,7 +312,7 @@ msgid "Unexpected error while generating fill stitches. Please send your SVG fil
 msgstr "Unerwarteter Fehler beim Generieren der Füllstiche. Bitte senden Sie die SVG-Datei an lexelby@github."
 
 msgid "Stitch Plan"
-msgstr ""
+msgstr "Stich-Plan"
 
 #, python-format
 msgid "parseLengthWithUnits: unknown unit %s"
@@ -390,10 +390,10 @@ msgid "Total stitch count"
 msgstr "Gesamtstichanzahl"
 
 msgid "Total nr stops"
-msgstr "Gesamtanzahl Stops"
+msgstr "Gesamtzahl Stops"
 
 msgid "Total nr trims"
-msgstr "Gesamtanzahl Trims"
+msgstr "Gesamtzahl Trims"
 
 msgid "thread used"
 msgstr "Garnverbrauch"
