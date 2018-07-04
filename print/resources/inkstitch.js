@@ -323,6 +323,8 @@ $(function() {
     });
     // set page break positions
     break_opd(thumbnail_size);
+    // update page numbers
+    setPageNumbers();
   });
 
   // Thread Palette
