@@ -75,11 +75,13 @@ function scaleSVG(element, scale = 'fit') {
   element.find('.scale').text(label);
 }
 
-// set preview svg scale to fit into its box if transform is not set
+// set preview svg scale to fit into its box if display block and transform is not set
 function scaleAllSvg() {
     $('.page').each(function() {
-      if( $(this).find('.inksimulation svg').css('transform') == 'none') {
-        scaleSVG($(this).find('.inksimulation'), 'fit');
+      if( $(this).css('display') == 'block' ) {
+        if( $(this).find('.inksimulation svg').css('transform') == 'none') {
+          scaleSVG($(this).find('.inksimulation'), 'fit');
+        }
       }
     });
 }
@@ -365,6 +367,7 @@ $(function() {
   }).on('change', function() {
     var field_name = $(this).attr('data-field-name');
     $.postJSON('/settings/' + field_name, {value: $(this).prop('checked')});
+    scaleAllSvg();
   });
 
   // Realistic rendering checkboxes

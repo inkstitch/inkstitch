@@ -42,65 +42,6 @@
   src: url(barlow-condensed-extra-bold.ttf) format('truetype');
 }
 
-@media screen {
-    .page {
-        margin-top: 20mm !important;
-        outline: 1px dotted grey;
-    }
-
-    .header-field::before {
-        content: attr(data-label);
-        padding-right: 0.5em;
-    }
-
-    [contenteditable=true]:empty::after{
-      content: attr(data-placeholder);
-      color: rgb(200, 200, 200);
-      font-weight: normal;
-    }
-}
-
-@media print {
-    body {
-      margin-bottom: 0 !important;
-    }
-
-    .page {
-        page-break-after: always;
-        margin: 0 !important;
-    }
-
-    figure.inksimulation div {
-      display: none;
-    }
-
-    .ui {
-      display: none;
-    }
-
-    #settings-ui {
-      display: none !important;
-    }
-
-    #errors {
-      display: none !important;
-    }
-
-    .header-field:not(:empty)::before {
-        content: attr(data-label);
-        padding-right: 0.5em;
-    }
-
-    span.logo-instructions {
-      display: none;
-    }
-}
-
-@page {
-    size: auto;   /* auto is the initial value */
-    margin: 0;
-}
-
 body {
     font-family: "Barlow", sans-serif;
     font-size: 8pt;
@@ -325,13 +266,13 @@ body {
   }
 
   .logo-instructions {
-    margin-top: -20mm;
     display: block;
     text-align: center;
     font-size: 10px;
     color: rgb(117, 117, 117);
     background: rgba(255,255,255, 0.8);
     position: absolute;
+    bottom: 3mm;
   }
 
   .operator-detailedview figure.brandlogo {
@@ -661,8 +602,7 @@ body {
   }
 
   .operator-svg.operator-preview {
-    min-width: 15mm;
-    max-width: 20mm;
+    width: 15mm;
     height: 15mm;
   }
 
@@ -670,8 +610,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: auto;
-    max-width: 30mm;
+    right: 0;
+    width: 100%;
     height: 100%;
   }
 
@@ -846,3 +786,62 @@ body {
       height: calc(100% / 5);
       width: calc(100% / 12);
   }
+  
+  @media screen {
+    .page {
+        margin-top: 20mm !important;
+        outline: 1px dotted grey;
+    }
+
+    .header-field::before {
+        content: attr(data-label);
+        padding-right: 0.5em;
+    }
+
+    [contenteditable=true]:empty::after{
+      content: attr(data-placeholder);
+      color: rgb(200, 200, 200);
+      font-weight: normal;
+    }
+}
+
+@media print {
+    body {
+      margin-bottom: 0 !important;
+    }
+
+    .page {
+        page-break-after: always;
+        margin: 0 !important;
+    }
+
+    figure.inksimulation div {
+      display: none;
+    }
+
+    .ui {
+      display: none;
+    }
+
+    #settings-ui {
+      display: none !important;
+    }
+
+    #errors {
+      display: none !important;
+    }
+
+    .header-field:not(:empty)::before {
+        content: attr(data-label);
+        padding-right: 0.5em;
+    }
+
+    span.logo-instructions {
+      display: none;
+    }
+}
+
+@page {
+    size: auto;   /* auto is the initial value */
+    margin: 0;
+}
