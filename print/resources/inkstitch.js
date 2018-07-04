@@ -17,6 +17,35 @@ function ping() {
    .fail(function() { $('#errors').attr('class', 'show') });
 }
 
+//function to chunk opd view into pieces 
+  // source: https://stackoverflow.com/questions/3366529/wrap-every-3-divs-in-a-div
+$.fn.chunk = function(size) {
+  var arr = [];
+  for (var i = 0; i < this.length; i += size) {
+    arr.push(this.slice(i, i + size));
+  }
+  return this.pushStack(arr, "chunk", size);
+}
+
+// break operator detailed (opd) view into pages
+function break_opd(thumbnail_size = $('#operator-detailedview-thumbnail-size').val() ) {
+  // remove old settings
+  $( "div.page.operator-detailedview header" ).remove();
+  $( "div.page.operator-detailedview footer" ).remove();
+  $('div.page.operator-detailedview .opd_color_block').parentsUntil('div.page.operator-detailedview > *').addBack().unwrap();
+  // adjust to new settings
+  var break_point = Math.floor(220 / thumbnail_size);
+  var header = $('#opd-info header').prop('outerHTML');
+  var footer = $('#opd-info footer').prop('outerHTML');
+  var job_headline = $('#opd-info .job-headline').prop('outerHTML');
+  var opd_visibility = ($('#operator-detailedview').is(':checked')) ? 'block' :'none';
+  var paper_size = $('#printing-size').val();
+  $('.opd_color_block').chunk(break_point).wrap('<div class="page operator-detailedview ' + paper_size + '" style="display:'+ opd_visibility +'"><main class="operator-detailedview"><div class="operator-job-info"></div></main></div>');
+  $('div.operator-detailedview').prepend(header);
+  $('.operator-job-info').prepend(job_headline);
+  $('div.operator-detailedview').append(footer);
+}
+
 // set pagenumbers
 function setPageNumbers() {
   var totalPageNum = $('body').find('.page:visible').length;
@@ -74,6 +103,7 @@ function setSVGTransform(figure, transform) {
 
 $(function() {
   setTimeout(ping, 1000);
+  break_opd();
   setPageNumbers();
 
   /* SCALING AND MOVING SVG  */
@@ -263,6 +293,34 @@ $(function() {
     $('.page').toggleClass('a4', $(this).find(':selected').val() == 'a4');
   }).on('change', function() {
     $.postJSON('/settings/paper-size', {value: $(this).find(':selected').val()});
+  });
+  
+  // Operator detailed view: thumbnail size setting
+  $(document).on('input', '#operator-detailedview-thumbnail-size', function() {
+    var thumbnail_size_mm = $(this).val()  + 'mm';
+    $('#display-thumbnail-size').html( thumbnail_size_mm );
+  });
+   
+  // Operator detailed view: thumbnail size setting action
+  $('#operator-detailedview-thumbnail-size').change(function() {
+    // remove old setup
+    $( "div.page.operator-detailedview header" ).remove();
+    $( "div.page.operator-detailedview footer" ).remove();
+    $( "div.page.operator-detailedview .job-headline" ).remove();
+    $('div.page.operator-detailedview .opd_color_block').parentsUntil('div.page.operator-detailedview').addBack().unwrap();
+    // set thumbnail size
+    var thumbnail_size = $(this).val();
+    var thumbnail_size_mm = thumbnail_size  + 'mm';
+    $('.operator-svg.operator-preview').css({
+        'width': thumbnail_size_mm, 
+        'height': thumbnail_size_mm,
+        'max-width': thumbnail_size_mm
+    });
+    $('.operator-svg svg').css({
+        'max-width': thumbnail_size_mm
+    });
+    // set page break positions
+    break_opd(thumbnail_size);
   });
 
   // Thread Palette

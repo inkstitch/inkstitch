@@ -27,16 +27,7 @@
         <main class="client-overview-main">
             <figure class="inksimulation" data-field-name="client-overview-transform" title="{{ _('Ctrl + Scroll to Zoom') }}">
                 {{ svg_overview|safe }}
-                <figcaption>{{ _('Scale') }} <span class="scale" data-field-name="svg-scale" contenteditable="true" data-placeholder=""></span>%</figcaption>
-                <div>
-                  <button class="svg-fit">Fit</button>
-                  <button class="svg-full">100%</button>
-                  <button class="svg-apply">Apply to all</button>
-                  <button class="svg-realistic">
-                    <input type="checkbox" id="realistic-client-overview" data-field-name="overview" class="realistic" />
-                    <label for="realistic-client-overview" class="realistic">Realistic</label>
-                  </button>
-                </div>
+                {% include 'ui_svg_action_buttons.html' %}
             </figure>
 
             <div class="color-palette">
