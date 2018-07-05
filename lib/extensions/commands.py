@@ -142,5 +142,11 @@ class Commands(InkstitchExtension):
         for command in commands:
             self.ensure_symbol(command)
 
+        # Each object (node) in the SVG may correspond to multiple Elements of different
+        # types (e.g. stroke + fill).  We only want to process each one once.
+        seen_nodes = set()
+
         for element in self.elements:
-            self.add_command(element, commands)
+            if element.node not in seen_nodes:
+                self.add_command(element, commands)
+                seen_nodes.add(element.node)
