@@ -12,6 +12,7 @@ INKSCAPE_LABEL = inkex.addNS('label', 'inkscape')
 INKSCAPE_GROUPMODE = inkex.addNS('groupmode', 'inkscape')
 CONNECTION_START = inkex.addNS('connection-start', 'inkscape')
 CONNECTION_END = inkex.addNS('connection-end', 'inkscape')
+CONNECTOR_TYPE = inkex.addNS('connector-type', 'inkscape')
 XLINK_HREF = inkex.addNS('href', 'xlink')
 
 EMBROIDERABLE_TAGS = (SVG_PATH_TAG, SVG_POLYLINE_TAG)
