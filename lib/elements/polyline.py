@@ -1,3 +1,5 @@
+from shapely import geometry as shgeo
+
 from .element import param, EmbroideryElement, Patch
 from ..i18n import _
 from ..utils.geometry import Point
@@ -26,6 +28,11 @@ class Polyline(EmbroideryElement):
        points = [[float(coord) for coord in point.split(",")] for point in points]
 
        return points
+
+    @property
+    @cache
+    def shape(self):
+        return shgeo.LineString(self.points)
 
     @property
     def path(self):
