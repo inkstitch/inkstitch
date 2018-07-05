@@ -13,7 +13,7 @@ import logging
 import wx
 import inkex
 
-from ..utils import guess_inkscape_config_path
+from ..utils import guess_inkscape_config_path, get_bundled_dir
 
 
 class InstallerFrame(wx.Frame):
@@ -78,14 +78,8 @@ class InstallerFrame(wx.Frame):
 
     def install_addons(self, type):
         path = os.path.join(self.path, type)
-        src_dir = self.get_bundled_dir(type)
+        src_dir = get_bundled_dir(type)
         self.copy_files(glob(os.path.join(src_dir, "*")), path)
-
-    def get_bundled_dir(self, name):
-        if getattr(sys, 'frozen', None) is not None:
-            return realpath(os.path.join(sys._MEIPASS, '..', name))
-        else:
-            return realpath(os.path.join(dirname(realpath(__file__)), '..', '..', name))
 
     if (sys.platform == "win32"):
         # If we try to just use shutil.copy it says the operation requires elevation.
