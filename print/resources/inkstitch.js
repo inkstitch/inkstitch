@@ -27,12 +27,23 @@ $.fn.chunk = function(size) {
   return this.pushStack(arr, "chunk", size);
 }
 
-// break operator detailed (opd) view into pages
-function break_opd(thumbnail_size = $('#operator-detailedview-thumbnail-size').val() ) {
+// build operator detailed view (opd)
+function buildOpd(thumbnail_size = $('#operator-detailedview-thumbnail-size').val() ) {
+  var thumbnail_size_mm = thumbnail_size  + 'mm';
   // remove old settings
   $( "div.page.operator-detailedview header" ).remove();
   $( "div.page.operator-detailedview footer" ).remove();
-  $('div.page.operator-detailedview .opd_color_block').parentsUntil('div.page.operator-detailedview > *').addBack().unwrap();
+  $( "div.page.operator-detailedview .job-headline" ).remove();
+  $('div.page.operator-detailedview .opd_color_block').parentsUntil('div.page.operator-detailedview').addBack().unwrap();
+  // set thumbnail size
+  $('.operator-svg.operator-preview').css({
+      'width': thumbnail_size_mm, 
+      'height': thumbnail_size_mm,
+      'max-width': thumbnail_size_mm
+  });
+  $('.operator-svg svg').css({
+      'max-width': thumbnail_size_mm
+  });
   // adjust to new settings
   var break_point = Math.floor(220 / thumbnail_size);
   var header = $('#opd-info header').prop('outerHTML');
@@ -44,6 +55,8 @@ function break_opd(thumbnail_size = $('#operator-detailedview-thumbnail-size').v
   $('div.operator-detailedview').prepend(header);
   $('.operator-job-info').prepend(job_headline);
   $('div.operator-detailedview').append(footer);
+  // update page numbers
+  setPageNumbers();
 }
 
 // set pagenumbers
@@ -105,7 +118,7 @@ function setSVGTransform(figure, transform) {
 
 $(function() {
   setTimeout(ping, 1000);
-  break_opd();
+  buildOpd();
   setPageNumbers();
 
   /* SCALING AND MOVING SVG  */
@@ -224,6 +237,10 @@ $(function() {
                 item.attr('src', value);
             } else if (item.is('select')) {
                 item.val(value).trigger('initialize');
+            } else if (item.is('input[type=range]')) {
+                item.val(value).trigger('initialize');
+                $('#display-thumbnail-size').html(value + 'mm');
+                buildOpd(value);
             } else if (item.is('figure.inksimulation')) {
                 setSVGTransform(item, value);
             } else {
@@ -305,26 +322,12 @@ $(function() {
    
   // Operator detailed view: thumbnail size setting action
   $('#operator-detailedview-thumbnail-size').change(function() {
-    // remove old setup
-    $( "div.page.operator-detailedview header" ).remove();
-    $( "div.page.operator-detailedview footer" ).remove();
-    $( "div.page.operator-detailedview .job-headline" ).remove();
-    $('div.page.operator-detailedview .opd_color_block').parentsUntil('div.page.operator-detailedview').addBack().unwrap();
     // set thumbnail size
     var thumbnail_size = $(this).val();
-    var thumbnail_size_mm = thumbnail_size  + 'mm';
-    $('.operator-svg.operator-preview').css({
-        'width': thumbnail_size_mm, 
-        'height': thumbnail_size_mm,
-        'max-width': thumbnail_size_mm
-    });
-    $('.operator-svg svg').css({
-        'max-width': thumbnail_size_mm
-    });
     // set page break positions
-    break_opd(thumbnail_size);
-    // update page numbers
-    setPageNumbers();
+    buildOpd(thumbnail_size);
+    
+    $.postJSON('/settings/operator-detailedview-thumbnail-size', {value: thumbnail_size});
   });
 
   // Thread Palette
@@ -365,11 +368,11 @@ $(function() {
     var field_name = $(this).attr('data-field-name');
 
     $('.' + field_name).toggle($(this).prop('checked'));
+    scaleAllSvg();
     setPageNumbers();
   }).on('change', function() {
     var field_name = $(this).attr('data-field-name');
     $.postJSON('/settings/' + field_name, {value: $(this).prop('checked')});
-    scaleAllSvg();
   });
 
   // Realistic rendering checkboxes
@@ -460,6 +463,7 @@ $(function() {
       settings["client-detailedview"] = $("[data-field-name='client-detailedview']").is(':checked');
       settings["operator-overview"] = $("[data-field-name='operator-overview']").is(':checked');
       settings["operator-detailedview"] = $("[data-field-name='operator-detailedview']").is(':checked');
+      settings["operator-detailedview-thumbnail-size"] = $("[data-field-name='operator-detailedview-thumbnail-size']").val();
       settings["paper-size"] = $('select#printing-size').find(':selected').val();
 
       var logo = $("figure.brandlogo img").attr('src');
