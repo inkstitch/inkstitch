@@ -77,9 +77,6 @@ def find_commands(node):
         try:
             commands.append(Command(connector))
         except ValueError:
-            import sys
-            import traceback
-            print >> sys.stderr, "not a Command:", connector.get('id'), traceback.format_exc()
             # Parsing the connector failed, meaning it's not actually an Ink/Stitch command.
             pass
 
