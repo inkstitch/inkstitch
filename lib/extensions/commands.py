@@ -87,8 +87,26 @@ class Commands(InkstitchExtension):
         outline = element.shape.buffer(30).exterior
         return outline.interpolate(index / float(total), normalized=True)
 
+    def remove_legacy_param(self, element, command):
+        if command == "trim" or command == "stop":
+            # If they had the old "TRIM after" or "STOP after" attributes set,
+            # automatically delete them.  THe new commands will do the same
+            # thing.
+            #
+            # If we didn't delete these here, then things would get confusing.
+            # If the user were to delete a "trim" symbol added by this extension
+            # but the "embroider_trim_after" attribute is still set, then the
+            # trim would keep happening.
+
+            attribute = "embroider_%s_after" % command
+
+            if attribute in element.node.attrib:
+                del element.node.attrib[attribute]
+
     def add_command(self, element, commands):
         for i, command in enumerate(commands):
+            self.remove_legacy_param(element, command)
+
             pos = self.get_command_pos(element, i, len(commands))
 
             symbol = inkex.etree.SubElement(element.node.getparent(), SVG_USE_TAG,
@@ -125,4 +143,4 @@ class Commands(InkstitchExtension):
             self.ensure_symbol(command)
 
         for element in self.elements:
-                self.add_command(element, commands)
+            self.add_command(element, commands)
