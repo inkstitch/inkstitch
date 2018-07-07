@@ -1,4 +1,4 @@
-    <div id="opd-info" style="display:none;">
+    <div id="opd-info" style="display: none; height: 220mm; width: 175mm;">
         <header>
           {% include 'headline.html' %}
         </header>
@@ -13,8 +13,8 @@
         </div>
     </div>
 
-        <div class="opd-summary opd_color_block">
-          <p>
+        <div class="opd-summary opd-color-block">
+          <p class="operator-svg operator-colorswatch">
             <span>##</span>
           </p>
           <p class="operator-svg operator-preview">
@@ -42,12 +42,12 @@
         {% for color_block in color_blocks %}
 
 
-          <div class="opd_color_block" style="display: table-row;">
+          <div class="opd-color-block">
             <p class="operator-svg operator-colorswatch">
               <svg xmlns="http://www.w3.org/2000/svg">
                 <rect fill="rgb{{ color_block.color.rgb }}" width="15mm" height="100%" />
                 <text fill="rgb{{ color_block.color.font_color }}">
-                  <tspan x="4mm" y="7.5mm" class="color-index">#{{ loop.index }}</tspan>
+                  <tspan x="2mm" y="5mm" class="color-index">#{{ loop.index }}</tspan>
                 </text>
               </svg>
             </p>

@@ -29,29 +29,66 @@ $.fn.chunk = function(size) {
 
 // build operator detailed view (opd)
 function buildOpd(thumbnail_size = $('#operator-detailedview-thumbnail-size').val() ) {
+
+  var thumbnail_size    = parseInt(thumbnail_size);
   var thumbnail_size_mm = thumbnail_size  + 'mm';
+  
+  var thumbnail_layout  = (thumbnail_size >= 60) ? 'medium' : 'small';
+  
   // remove old settings
   $( "div.page.operator-detailedview header" ).remove();
   $( "div.page.operator-detailedview footer" ).remove();
   $( "div.page.operator-detailedview .job-headline" ).remove();
-  $('div.page.operator-detailedview .opd_color_block').parentsUntil('div.page.operator-detailedview').addBack().unwrap();
+  $('div.page.operator-detailedview .opd-color-block').parentsUntil('div.page.operator-detailedview').addBack().unwrap();
+  $('.opd-color-block').removeClass('medium large');
+  $('.opd-color-block').removeAttr('style');
+  
   // set thumbnail size
   $('.operator-svg.operator-preview').css({
       'width': thumbnail_size_mm, 
       'height': thumbnail_size_mm,
       'max-width': thumbnail_size_mm
   });
-  $('.operator-svg svg').css({
-      'max-width': thumbnail_size_mm
-  });
+  
+  // calculate number of blocks per page
+  var num_blocks_per_page = 1;
+  if(thumbnail_layout == 'medium') {
+    $('.opd-color-block').addClass('medium');
+    // set width to be able to calculate the height
+    $('.opd-color-block').css({ 'width': thumbnail_size_mm });
+    // calculate max height -> source: https://stackoverflow.com/questions/6060992/element-with-the-max-height-from-a-set-of-elements
+    var color_box_height = Math.max.apply(null, $('.opd-color-block').map(function () { return $(this).height(); }).get());
+    var container_height = $('#opd-info').height();
+    var num_rows = Math.floor(container_height / color_box_height);
+    var num_columns = Math.floor(175 / thumbnail_size);
+    // if only two blocks fit into one row, use 50% of the space for each of them
+    if(num_columns == 2) { $('.opd-color-block').css({ 'width': 'calc(50% - 2mm)' }); }
+    // set equal height for all color blocks
+    $('.opd-color-block').css({ 'height': color_box_height });
+    // set number of color blocks per page for medium thumbnails
+    num_blocks_per_page = num_columns * num_rows;
+    // use layout for large thumbnails if only 2 or less color blocks fit on one page
+    if(num_blocks_per_page <= 2) { 
+      $('.opd-color-block').removeClass('medium').removeAttr('style').addClass('large');
+      thumbnail_layout = 'large';
+      // set number of color blocks per page for large thumbnails
+      num_blocks_per_page = 2;
+    }
+  } else {
+    // set number of color blocks per page for small thumbnails
+    num_blocks_per_page = Math.floor(220 / thumbnail_size);
+  }
+  // set number of color blocks per page to 1 if it defaults to zero
+    // this should never happen, but we want to avoid the browser to crash 
+  num_blocks_per_page = (num_blocks_per_page <= 0) ? '1' : num_blocks_per_page;
+  
   // adjust to new settings
-  var break_point = Math.floor(220 / thumbnail_size);
   var header = $('#opd-info header').prop('outerHTML');
   var footer = $('#opd-info footer').prop('outerHTML');
   var job_headline = $('#opd-info .job-headline').prop('outerHTML');
   var opd_visibility = ($('#operator-detailedview').is(':checked')) ? 'block' :'none';
   var paper_size = $('#printing-size').val();
-  $('.opd_color_block').chunk(break_point).wrap('<div class="page operator-detailedview ' + paper_size + '" style="display:'+ opd_visibility +'"><main class="operator-detailedview"><div class="operator-job-info"></div></main></div>');
+  $('.opd-color-block').chunk(num_blocks_per_page).wrap('<div class="page operator-detailedview ' + paper_size + ' ' + thumbnail_layout +'" style="display:'+ opd_visibility +'"><main class="operator-detailedview"><div class="operator-job-info"></div></main></div>');
   $('div.operator-detailedview').prepend(header);
   $('.operator-job-info').prepend(job_headline);
   $('div.operator-detailedview').append(footer);
@@ -118,9 +155,6 @@ function setSVGTransform(figure, transform) {
 
 $(function() {
   setTimeout(ping, 1000);
-  buildOpd();
-  setPageNumbers();
-
   /* SCALING AND MOVING SVG  */
 
   /* Mousewheel scaling */
@@ -240,7 +274,6 @@ $(function() {
             } else if (item.is('input[type=range]')) {
                 item.val(value).trigger('initialize');
                 $('#display-thumbnail-size').html(value + 'mm');
-                buildOpd(value);
             } else if (item.is('figure.inksimulation')) {
                 setSVGTransform(item, value);
             } else {
@@ -249,8 +282,11 @@ $(function() {
         });
     });
 
-    // wait until page size is set (if they've specified one) and then scale SVGs to fit
-    setTimeout(function() { scaleAllSvg() }, 500);
+    // wait until page size is set (if they've specified one) and then scale SVGs to fit and build operator detailed view
+    setTimeout(function() { 
+      scaleAllSvg();
+      buildOpd();
+    }, 500);
   });
 
   $('[contenteditable="true"]').keypress(function(e) {
