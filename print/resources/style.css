@@ -664,8 +664,12 @@ body {
     margin: 0 auto;
   }
   
+  .opd-color-block.medium p:last-child {
+    margin-bottom: 1mm;
+  }
+  
   .opd-color-block.medium .operator-preview {
-    margin: 0 auto;
+    margin: 1mm auto 0 auto;
   }
   
   /* opd large thumbnails */
