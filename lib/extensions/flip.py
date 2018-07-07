@@ -1,19 +1,25 @@
 import sys
 import inkex
 import cubicsuperpath
+from shapely import geometry as shgeo
 
 from .base import InkstitchExtension
 from ..i18n import _
 from ..elements import SatinColumn
 
 class Flip(InkstitchExtension):
+    def subpath_to_linestring(self, subpath):
+        return shgeo.LineString()
+
     def flip(self, satin):
-        csp = cubicsuperpath.parsePath(satin.node.get("d"))
+        csp = satin.path
 
         if len(csp) > 1:
+            flattened = satin.flatten(csp)
+
             # find the rails (the two longest paths) and swap them
             indices = range(len(csp))
-            indices.sort(key=lambda i: len(csp[i]), reverse=True)
+            indices.sort(key=lambda i: shgeo.LineString(flattened[i]).length, reverse=True)
 
             first = indices[0]
             second = indices[1]
