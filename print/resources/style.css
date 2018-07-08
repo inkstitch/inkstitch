@@ -441,13 +441,9 @@ body {
   }
 
   input.realistic {
-    position: absolute;
     transform: scale(0.7);
-    margin-left: 2px;
-  }
-
-  label.realistic {
-    margin-left: 20px;
+    margin: 0;
+    vertical-align: bottom;
   }
 
   /* prevents Chrome from sending a double event for the checkbox
@@ -639,7 +635,8 @@ body {
     margin: 0;
     width: 10mm;
     height: 10mm;
-    border: 1px solid rgb(239,239,239);
+    border-right: 0.5mm solid rgb(239,239,239);
+    border-bottom: 0.5mm solid rgb(239,239,239);
   }
   
   .opd-color-block.medium .operator-colorswatch svg,
@@ -670,6 +667,22 @@ body {
   
   .opd-color-block.medium .operator-preview {
     margin: 1mm auto 0 auto;
+  }
+  
+  .opd-color-block.medium.opd-summary .operator-colorswatch {
+    display: none;
+  }
+  
+  .opd-color-block.medium span::before {
+    content: ' \00B7 ';
+    line-height: 0;
+    display: inline-block;
+    margin: 0 1mm;
+    vertical-align: super;
+  }
+  
+  .opd-color-block.medium span:first-child::before {
+    content: '';
   }
   
   /* opd large thumbnails */
