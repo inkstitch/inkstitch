@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-06-16 22:33-0400\n"
-"PO-Revision-Date: 2018-06-17 21:40-0400\n"
+"POT-Creation-Date: 2018-06-28 20:32-0400\n"
+"PO-Revision-Date: 2018-07-04 07:03\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -45,7 +45,11 @@ msgid "Inset"
 msgstr "Einzug"
 
 msgid "Expand"
-msgstr ""
+msgstr "Erweitern"
+
+#, python-format
+msgid "%(id)s has more than one command of type '%(command)s' linked to it"
+msgstr "%(id)s beinhaltet mehr als einen Befehl vom Typ '%(command)s'"
 
 msgid "TRIM after"
 msgstr "Danach TRIM Befehl"
@@ -124,7 +128,7 @@ msgstr "Einrückung (Standard: Halbe Einrückung der Konturunterlage)"
 
 #, python-format
 msgid "satin column: %(id)s: at least two subpaths required (%(num)d found)"
-msgstr ""
+msgstr "Satinkolumne: %(id)s: es werden mindestens zwei Pfade benötigt (%(num)d gefunden)"
 
 msgid "One or more rails crosses itself, and this is not allowed.  Please split into multiple satin columns."
 msgstr "Eine oder mehrere Konturen überschneiden sich, dies ist nicht erlaubt. Bitte in mehrere Satinkolumnen aufteilen."
@@ -173,18 +177,21 @@ msgid "No embroiderable paths found in document."
 msgstr "Keine zu stickenden Pfade im Dokument gefunden."
 
 msgid "Tip: use Path -> Object to Path to convert non-paths."
-msgstr ""
+msgstr "Tipp: Verwende Pfad -> Objekt zu Pfad umwandeln, um nicht-Pfade vor dem Sticken zu konvertieren."
 
 msgid "\n\n"
 "Seeing a 'no such option' message?  Please restart Inkscape to fix."
 msgstr "\n\n"
 "  Sehen Sie eine Meldung \"keine solche Option\"?  Zum beheben bitte Inkscape neu starten."
 
-msgid "Directory in which to install palettes:"
-msgstr "Installationsverzeichnis für Farbpaletten:"
+msgid "Ink/Stitch can install files (\"add-ons\") that make it easier to use Inkscape to create machine embroidery designs.  These add-ons will be installed:"
+msgstr "Ink/Stitch kann Dateien (\"Erweiterungen\") installieren, um das Erstellen von Maschinenstickdateien unter Inkscape zu erleichtern. Diese Erweiterungen werden installiert:"
 
-msgid "Choose another directory..."
-msgstr "Anderes Verzeichnis wählen..."
+msgid "thread manufacturer color palettes"
+msgstr "Garnhersteller-Farbpaletten"
+
+msgid "Ink/Stitch visual commands (Object -> Symbols...)"
+msgstr "Ink/Stitch visuelle Befehle (Objekt -> Symbole ...)"
 
 msgid "Install"
 msgstr "Installieren"
@@ -192,23 +199,23 @@ msgstr "Installieren"
 msgid "Cancel"
 msgstr "Abbrechen"
 
-msgid "Choose Inkscape palettes directory"
-msgstr "Wähle Inkscape Farbpaletten-Verzeichnis"
+msgid "Choose Inkscape directory"
+msgstr "Inkscape-Verzeichnis auswählen"
 
-msgid "Thread palette installation failed"
-msgstr "Installation der Garnpaletten fehlgeschlagen"
+msgid "Inkscape add-on installation failed"
+msgstr "Installation der Inkscape Erweiterung gescheitert"
 
 msgid "Installation Failed"
 msgstr "Installation fehlgeschlagen"
 
-msgid "Thread palette files have been installed.  Please restart Inkscape to load the new palettes."
-msgstr "Die Garnpaletten wurden erfolgreich installiert. Inkscape muss jetzt neu gestartet werden, um sie zu laden."
+msgid "Inkscape add-on files have been installed.  Please restart Inkscape to load the new add-ons."
+msgstr "Inkscape Add-ons wurden installiert.  Bitte starten Sie Inkscape erneut um die neuen Add-ons zu laden."
 
 msgid "Installation Completed"
 msgstr "Installation abgeschlossen"
 
-msgid "Ink/Stitch Thread Palette Installer"
-msgstr "Ink/Stitch Garnpaletten Installer"
+msgid "Ink/Stitch Add-ons Installer"
+msgstr "Ink/Stitch Add-ons Installer"
 
 msgid "These settings will be applied to 1 object."
 msgstr "Diese Einstellung wird auf 1 Objekt angewendet."
@@ -279,7 +286,7 @@ msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwri
 msgstr "Einstellung \"%s\" bereits vorhanden. Bitte verwenden Sie einen anderen Namen oder drücken Sie \"Überschreiben\""
 
 msgid "Closing..."
-msgstr "Schließen..."
+msgstr "Beende..."
 
 msgid "It is safe to close this window now."
 msgstr "Es ist jetzt sicher, das Fenster zu schließen."
@@ -296,7 +303,7 @@ msgid "Embroidery Simulation"
 msgstr "Stick Simulation"
 
 msgid "No embroidery file formats selected."
-msgstr ""
+msgstr "Keine Stick-Dateiformate ausgewählt."
 
 msgid "Unable to autofill.  This most often happens because your shape is made up of multiple sections that aren't connected."
 msgstr "Automatische Füllung nicht möglich.  Dies geschieht, weil Ihre Form aus mehreren und nicht verbundenen Abschnitten besteht."
@@ -305,7 +312,7 @@ msgid "Unexpected error while generating fill stitches. Please send your SVG fil
 msgstr "Unerwarteter Fehler beim Generieren der Füllstiche. Bitte senden Sie die SVG-Datei an lexelby@github."
 
 msgid "Stitch Plan"
-msgstr ""
+msgstr "Stich-Plan"
 
 #, python-format
 msgid "parseLengthWithUnits: unknown unit %s"
@@ -328,10 +335,10 @@ msgid "# stitches"
 msgstr "# Stiche"
 
 msgid "# stops"
-msgstr ""
+msgstr "# Stops"
 
 msgid "# trims"
-msgstr ""
+msgstr "# Trims"
 
 msgid "Page"
 msgstr "Seite"
@@ -362,7 +369,7 @@ msgid "Thread Consumption"
 msgstr "Garnverbrauch"
 
 msgid "Stops and Trims"
-msgstr ""
+msgstr "Stops und Trims"
 
 msgid "Notes"
 msgstr "Notizen"
@@ -374,7 +381,7 @@ msgid "Color Blocks"
 msgstr "Farbwechsel"
 
 msgid "Design box size"
-msgstr "Maße"
+msgstr "Design Boxgröße"
 
 msgid "Total thread used"
 msgstr "Garnverbrauch gesamt"
@@ -383,16 +390,16 @@ msgid "Total stitch count"
 msgstr "Gesamtstichanzahl"
 
 msgid "Total nr stops"
-msgstr ""
+msgstr "Stops gesamt"
 
 msgid "Total nr trims"
-msgstr ""
+msgstr "Gesamtzahl Trims"
 
 msgid "thread used"
 msgstr "Garnverbrauch"
 
 msgid "Enter operator notes..."
-msgstr "Bedienungshinweise eingeben..."
+msgstr "Bedienhinweise eingeben..."
 
 msgid "Job estimated time"
 msgstr "Voraussichtliche Dauer"
@@ -407,7 +414,7 @@ msgid "Fit"
 msgstr "An Fenstergröße anpassen"
 
 msgid "Apply to all"
-msgstr "Auf alle übertragen"
+msgstr "Auf alle anwenden"
 
 msgid "COLOR"
 msgstr "FARBE"

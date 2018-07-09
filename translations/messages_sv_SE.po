@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-06-16 22:33-0400\n"
-"PO-Revision-Date: 2018-06-17 21:40-0400\n"
+"POT-Creation-Date: 2018-06-28 20:32-0400\n"
+"PO-Revision-Date: 2018-06-30 01:30\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Swedish\n"
 "MIME-Version: 1.0\n"
@@ -45,6 +45,10 @@ msgid "Inset"
 msgstr ""
 
 msgid "Expand"
+msgstr ""
+
+#, python-format
+msgid "%(id)s has more than one command of type '%(command)s' linked to it"
 msgstr ""
 
 msgid "TRIM after"
@@ -178,10 +182,13 @@ msgid "\n\n"
 "Seeing a 'no such option' message?  Please restart Inkscape to fix."
 msgstr ""
 
-msgid "Directory in which to install palettes:"
+msgid "Ink/Stitch can install files (\"add-ons\") that make it easier to use Inkscape to create machine embroidery designs.  These add-ons will be installed:"
 msgstr ""
 
-msgid "Choose another directory..."
+msgid "thread manufacturer color palettes"
+msgstr ""
+
+msgid "Ink/Stitch visual commands (Object -> Symbols...)"
 msgstr ""
 
 msgid "Install"
@@ -190,22 +197,22 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-msgid "Choose Inkscape palettes directory"
+msgid "Choose Inkscape directory"
 msgstr ""
 
-msgid "Thread palette installation failed"
+msgid "Inkscape add-on installation failed"
 msgstr ""
 
 msgid "Installation Failed"
 msgstr ""
 
-msgid "Thread palette files have been installed.  Please restart Inkscape to load the new palettes."
+msgid "Inkscape add-on files have been installed.  Please restart Inkscape to load the new add-ons."
 msgstr ""
 
 msgid "Installation Completed"
 msgstr ""
 
-msgid "Ink/Stitch Thread Palette Installer"
+msgid "Ink/Stitch Add-ons Installer"
 msgstr ""
 
 msgid "These settings will be applied to 1 object."
