@@ -32,9 +32,9 @@ install:
     set -e
     if [ -n "$BUILD" ]; then
       # Need this for inkex.py and friends
-      wget -q https://inkscape.org/en/gallery/item/11254/inkscape-0.92.2.tar.bz2
-      tar jxf inkscape-0.92.2.tar.bz2
-      rm inkscape-0.92.2.tar.bz2
+      wget -q https://inkscape.org/en/gallery/item/12187/inkscape-0.92.3.tar.bz2
+      tar jxf inkscape-0.92.3.tar.bz2
+      rm inkscape-0.92.3.tar.bz2
     fi
     if [ "$BUILD" = "linux" ]; then
       # For some bizarre reason, this build has been failing due to the
@@ -57,8 +57,8 @@ install:
       sudo apt-get install python-gi python-gi-cairo libgirepository1.0-dev
     
       # wxPython doen't publish linux wheels in pypi
-      wget -q https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-14.04/wxPython-4.0.0b2-cp27-cp27mu-linux_x86_64.whl
-      pip install wxPython-4.0.0b2-cp27-cp27mu-linux_x86_64.whl
+      wget -q https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-14.04/wxPython-4.0.3-cp27-cp27mu-linux_x86_64.whl
+      pip install wxPython-4.0.3-cp27-cp27mu-linux_x86_64.whl
         
       # We can't use the shapely wheel because it includes the geos
       # library but with a weird file name.  Details:
