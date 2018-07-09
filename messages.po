@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-06-30 13:02-0400\n"
+"POT-Creation-Date: 2018-07-10 19:54-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -441,15 +441,6 @@ msgstr ""
 msgid "Ctrl + Scroll to Zoom"
 msgstr ""
 
-msgid "Scale"
-msgstr ""
-
-msgid "Fit"
-msgstr ""
-
-msgid "Apply to all"
-msgstr ""
-
 msgid "COLOR"
 msgstr ""
 
@@ -505,5 +496,14 @@ msgid "Yes"
 msgstr ""
 
 msgid "No"
+msgstr ""
+
+msgid "Scale"
+msgstr ""
+
+msgid "Fit"
+msgstr ""
+
+msgid "Apply to all"
 msgstr ""
 
