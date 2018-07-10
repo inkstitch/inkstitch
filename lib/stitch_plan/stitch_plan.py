@@ -183,10 +183,7 @@ class ColorBlock(object):
     def num_stops(self):
         """Number of pauses in this color block."""
 
-        # Stops are encoded using two STOP stitches each.  See the comment in
-        # stop.py for an explanation.
-
-        return sum(1 for stitch in self if stitch.stop) / 2
+        return sum(1 for stitch in self if stitch.stop)
 
     @property
     def num_trims(self):
