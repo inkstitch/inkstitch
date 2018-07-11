@@ -4,6 +4,7 @@ import inkex
 import simpletransform
 import cubicsuperpath
 from copy import deepcopy
+from random import random
 from shapely import geometry as shgeo
 
 from .base import InkstitchExtension
@@ -84,8 +85,16 @@ class Commands(InkstitchExtension):
 
     def get_command_pos(self, element, index, total):
         # Put command symbols 30 pixels out from the shape, spaced evenly around it.
+
+        # get a line running 30 pixels out from the shape
         outline = element.shape.buffer(30).exterior
-        return outline.interpolate(index / float(total), normalized=True)
+
+        # pick this item's spot arond the outline and perturb it a bit to avoid
+        # stacking up commands if they run the extension multiple times
+        position = index / float(total)
+        position += random() * 0.1
+
+        return outline.interpolate(position, normalized=True)
 
     def remove_legacy_param(self, element, command):
         if command == "trim" or command == "stop":
