@@ -343,6 +343,15 @@ $(function() {
 
   /* Settings */
 
+  // Settings Tabs
+  $('#tabs button').click(function() {
+    var active_fieldset_position = $(this).index() +1;
+    $('#settings-ui #fieldsets-ui > fieldset').css({'display': 'none'});
+    $('#settings-ui #fieldsets-ui > fieldset:nth-child('+active_fieldset_position+')').css({'display': 'block'});
+    $('#tabs .tab.active').removeClass("active");
+    $(this).addClass("active");
+  });
+
   // Paper Size
   $('select#printing-size').on('change initialize', function(){
     $('.page').toggleClass('a4', $(this).find(':selected').val() == 'a4');

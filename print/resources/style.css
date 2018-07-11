@@ -188,9 +188,67 @@ body {
     border-radius: 5px;
     cursor: pointer;
   }
+  
+  #settings-ui #tabs {
+    margin-left: 20px;
+    z-index: 1;
+  }
+  
+  #settings-ui button {
+    background: transparent;
+    border: 1px solid #413232;
+    padding: 5px;
+  }
+  
+  #settings-ui button.active {
+    border-bottom: 1px solid white;
+  }
+  
+  #settings-ui #ui-design {
+    display: none;
+  }
+  
+  #settings-ui > #fieldsets-ui > fieldset > legend {
+    display: none;
+  }
 
   #settings-ui fieldset {
+    margin-top: -1px;
     margin-bottom: 1em;
+    border: 1px solid rgb(80,80,80);
+    z-index: 2;
+  }
+  
+  #settings-ui div {
+    position: relative;
+  }
+  
+  #settings-ui select {
+    margin-left: 1em;
+    height: 35px;
+    padding: 0px 10px;
+    font-size: 16px;
+    background-color: transparent;
+    border: 1px solid rgb(80,80,80);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  
+  #settings-ui select::-ms-expand {
+    display: none;
+  }
+  
+  
+  #settings-ui .select-container::after {
+    content: '▾';
+    height: 33px;
+    padding: 0 5px;
+    border: 1px solid rgb(80,80,80);
+    line-height: 33px;
+    display: inline-block;
+    margin-left: -23px;
+    pointer-events: none;
   }
 
   #modal-background {
