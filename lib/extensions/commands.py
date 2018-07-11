@@ -73,7 +73,7 @@ class Commands(InkstitchExtension):
             {
                 "id": self.uniqueId("connector"),
                 "d": "M %s,%s %s,%s" % (start_pos[0], start_pos[1], end_pos.x, end_pos.y),
-                "style": "stroke:#000000;stroke-width:1px;fill:none;",
+                "style": "stroke:#000000;stroke-width:1px;stroke-opacity:0.5;fill:none;",
                 "transform": self.get_correction_transform(symbol),
                 CONNECTION_START: "#%s" % symbol.get('id'),
                 CONNECTION_END: "#%s" % element.node.get('id'),
