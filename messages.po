@@ -178,6 +178,12 @@ msgstr ""
 msgid "Tip: use Path -> Object to Path to convert non-paths."
 msgstr ""
 
+msgid "Please select one or more objects to which to attach commands."
+msgstr ""
+
+msgid "Please choose one or more commands to attach."
+msgstr ""
+
 msgid ""
 "\n"
 "\n"
