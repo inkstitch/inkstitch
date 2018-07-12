@@ -5,6 +5,7 @@
     <script src="resources/jquery-3.3.1.min.js"></script>
     <script src="resources/inkstitch.js"></script>
     <link rel="stylesheet" href="resources/style.css" />
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
 </head>
 <body>
     {% include 'ui.html' %}
@@ -23,10 +24,7 @@
         <div class="page operator-overview" style="display: {{ 'block' if view.operator_overview else 'none' }}">{% include 'operator_overview.html' %}</div>
     
 {# operator detailed view #}
-    {% for color_block_part in color_blocks | batch(12) %}
-        {% set outer_loop = loop %}
-        <div class="page operator-detailedview" style="display: {{ 'block' if view.operator_detailedview else 'none' }}">{% include 'operator_detailedview.html' %}</div>
-    {% endfor %}
+        {% include 'operator_detailedview.html' %}
 
 </body>
 </html>

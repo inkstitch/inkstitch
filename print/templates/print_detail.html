@@ -17,16 +17,7 @@
         <main>
             <figure class="inksimulation" data-field-name="client-detail-transform-block{{ loop.index0 }}" title="{{ _('Ctrl + Scroll to Zoom') }}">
                 {{color_block.svg_preview|safe}}
-                <figcaption>{{ _('Scale') }} <span class="scale" data-field-name="svg-scale" contenteditable="true" data-placeholder=""></span>%</figcaption>
-                <div>
-                  <button class="svg-fit">Fit</button>
-                  <button class="svg-full">100%</button>
-                  <button class="svg-apply">Apply to all</button>
-                  <button class="svg-realistic">
-                    <input type="checkbox" id="realistic-color-block-{{ loop.index0 }}" data-field-name="block{{ loop.index0 }}" class="realistic" />
-                    <label for="realistic-color-block-{{ loop.index0 }}" class="realistic">Realistic</label>
-                  </button>
-                </div>
+                {% include 'ui_svg_action_buttons.html' %}
             </figure>
             <div class="color-palette detailed">
                 {% include 'color_swatch.html' %}

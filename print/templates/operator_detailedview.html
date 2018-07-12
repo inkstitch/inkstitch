@@ -1,76 +1,76 @@
+    <div id="opd-info" style="display: none; height: 220mm; width: 175mm;">
         <header>
           {% include 'headline.html' %}
         </header>
-
-        <main>
-          <div class="operator-job-info">
-            <div class="job-headline">
-              <p class="operator-svg operator-colorswatch">{# svg color #}</p>
-              <p>{# svg preview #}</p>
-              <p>{{ _('Color') }}</p>
-              <p>{{ _('Thread Consumption') }}</p>
-              <p>{{ _('Stops and Trims') }}</p>
-              <p>{{ _('Notes') }}</p>
-            </div>
-            {% if outer_loop.index == 1 %}
-            <div>
-              <p>
-                <span>##</span>
-              </p>
-              <p class="operator-svg operator-preview">
-                {{ svg_overview|safe }}
-              </p>
-              <p>
-                <span>{{ _('Unique Colors') }}: {{ job.num_colors }}</span>
-                <span>{{ _('Color Blocks') }}: {{ job.num_color_blocks }}</span>
-              </p>
-              <p>
-                <span>{{ _('Design box size') }}: {{ "%0.1fmm X %0.1fmm" | format(*job.dimensions) }}</span>
-                <span>{{ _('Total thread used') }}: {{job.estimated_thread }}</span>
-                <span>{{ _('Total stitch count') }}: {{job.num_stitches }}</span>
-              </p>
-              <p>
-                <span>{{ _('Total nr stops') }}: {{ job.num_stops }}</span>
-                <span>{{ _('Total nr trims') }}: {{ job.num_trims }}</span>
-              </p>
-              <p>
-                <span></span>
-              </p>
-            </div>
-            {% endif %}
-            {% for color_block in color_block_part %}
-
-            <div style="display: table-row;">
-              <p class="operator-svg operator-colorswatch">
-                <svg xmlns="http://www.w3.org/2000/svg">
-                  <rect fill="rgb{{ color_block.color.rgb }}" width="15mm" height="100%" />
-                  <text fill="rgb{{ color_block.color.font_color }}">
-                    <tspan x="4mm" y="7.5mm" class="color-index">#{{ loop.index + outer_loop.index0 * 12 }}</tspan>
-                  </text>
-                </svg>
-              </p>
-              <p class="operator-svg operator-preview">
-                  {{ color_block.svg_preview|safe }}
-              </p>
-              <p>
-                <span data-field-name="color-{{ color_block.color.hex_digits }}" contenteditable="true" data-placeholder="Enter thread name...">{{ color_block.color.name }}</span>
-                <span>{{ color_block.color.rgb }}</span>
-                <span data-field-name="thread-{{ color_block.color.hex_digits }}" contenteditable="true">{{ color_block.color.manufacturer }} {{ "#" + color_block.color.number if color_block.color.number }}</span>
-              </p>
-              <p>
-                <span>{{ _('thread used') }}:</span>
-                <span>{{ _('# stitches') }}: {{ color_block.num_stitches }}</span>
-              </p>
-              <p>
-                <span>{{ _('# stops') }}: {{ color_block.num_stops }}</span>
-                <span>{{ _('# trims') }}: {{ color_block.num_trims }}</span>
-              </p>
-              <p>
-                <span class="notes" contenteditable="true" data-field-name="operator-notes-block{{ loop.index0 + outer_loop.index0 * 12 }}" data-placeholder="{{ _("Enter operator notes...") }}"></span>
-              </p>
-            </div>
-          {% endfor %}
-          </div>
-        </main>
-
         {% include 'footer.html' %}
+        <div class="job-headline">
+          <p class="operator-svg operator-colorswatch">{# svg color #}</p>
+          <p>{# svg preview #}</p>
+          <p>{{ _('Color') }}</p>
+          <p>{{ _('Thread Consumption') }}</p>
+          <p>{{ _('Stops and Trims') }}</p>
+          <p>{{ _('Notes') }}</p>
+        </div>
+    </div>
+
+        <div class="opd-summary opd-color-block">
+          <p class="operator-svg operator-colorswatch">
+            <span>##</span>
+          </p>
+          <p class="operator-svg operator-preview">
+            {{ svg_overview|safe }}
+          </p>
+          <p>
+            <span>{{ _('Unique Colors') }}: {{ job.num_colors }}</span>
+            <span>{{ _('Color Blocks') }}: {{ job.num_color_blocks }}</span>
+          </p>
+          <p>
+            <span>{{ _('Design box size') }}: {{ "%0.1fmm X %0.1fmm" | format(*job.dimensions) }}</span>
+            <span>{{ _('Total thread used') }}: {{job.estimated_thread }}</span>
+            <span>{{ _('Total stitch count') }}: {{job.num_stitches }}</span>
+          </p>
+          <p>
+            <span>{{ _('Total nr stops') }}: {{ job.num_stops }}</span>
+            <span>{{ _('Total nr trims') }}: {{ job.num_trims }}</span>
+          </p>
+          <p>
+            <span></span>
+          </p>
+        </div>
+  
+
+        {% for color_block in color_blocks %}
+
+
+          <div class="opd-color-block">
+            <p class="operator-svg operator-colorswatch">
+              <svg xmlns="http://www.w3.org/2000/svg">
+                <rect fill="rgb{{ color_block.color.rgb }}" width="15mm" height="100%" />
+                <text fill="rgb{{ color_block.color.font_color }}">
+                  <tspan x="2mm" y="5mm" class="color-index">#{{ loop.index }}</tspan>
+                </text>
+              </svg>
+            </p>
+            <p class="operator-svg operator-preview">
+                {{ color_block.svg_preview|safe }}
+            </p>
+            <p>
+              <span data-field-name="color-{{ color_block.color.hex_digits }}" contenteditable="true" data-placeholder="Enter thread name...">{{ color_block.color.name }}</span>
+              <span>{{ color_block.color.rgb }}</span>
+              <span data-field-name="thread-{{ color_block.color.hex_digits }}" contenteditable="true">{{ color_block.color.manufacturer }} {{ "#" + color_block.color.number if color_block.color.number }}</span>
+            </p>
+            <p>
+              <span>{{ _('thread used') }}:</span>
+              <span>{{ _('# stitches') }}: {{ color_block.num_stitches }}</span>
+            </p>
+            <p>
+              <span>{{ _('# stops') }}: {{ color_block.num_stops }}</span>
+              <span>{{ _('# trims') }}: {{ color_block.num_trims }}</span>
+            </p>
+            <p>
+              <span class="notes" contenteditable="true" data-field-name="operator-notes-block{{ loop.index }}" data-placeholder="{{ _("Enter operator notes...") }}"></span>
+            </p>
+          </div>
+        {% endfor %}
+
+

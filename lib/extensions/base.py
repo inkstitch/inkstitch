@@ -58,11 +58,7 @@ class InkStitchMetadata(MutableMapping):
 
     def __setitem__(self, name, value):
         item = self._find_item(name)
-
-        if value:
-            item.text = json.dumps(value)
-        else:
-            item.getparent().remove(item)
+        item.text = json.dumps(value)
 
     def _find_item(self, name, create=True):
         tag = inkex.addNS(name, "inkstitch")

@@ -27,16 +27,7 @@
         <main>
             <figure class="inksimulation operator" data-field-name="operator-overview-transform" style="height: 210mm;" title="{{ _('Ctrl + Scroll to Zoom') }}">
                 {{ svg_overview|safe }}
-                <figcaption>{{ _('Scale') }} <span class="scale" data-field-name="svg-scale" contenteditable="true" data-placeholder=""></span>%</figcaption>
-                <div>
-                  <button class="svg-fit">{{ _('Fit') }}</button>
-                  <button class="svg-full">100%</button>
-                  <button class="svg-apply">{{ _('Apply to all') }}</button>
-                  <button class="svg-realistic">
-                    <input type="checkbox" id="realistic-operator-overview" data-field-name="overview" class="realistic" />
-                    <label for="realistic-operator-overview" class="realistic">Realistic</label>
-                  </button>
-                </div>
+                {% include 'ui_svg_action_buttons.html' %}
             </figure>
         </main>
         {% include 'footer.html' %}
