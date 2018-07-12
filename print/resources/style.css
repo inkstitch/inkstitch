@@ -223,10 +223,15 @@ body {
     position: relative;
   }
   
+  #settings-ui .select-container {
+    position: relative;
+    display: inline-block;
+  }
+  
   #settings-ui select {
     margin-left: 1em;
     height: 35px;
-    padding: 0px 10px;
+    padding: 0px 25px 0 5px;
     font-size: 16px;
     background-color: transparent;
     border: 1px solid rgb(80,80,80);
@@ -239,15 +244,14 @@ body {
     display: none;
   }
   
-  
   #settings-ui .select-container::after {
     content: '▾';
-    height: 33px;
+    position: absolute;
+    right: 0;
+    top: 0;
     padding: 0 5px;
-    border: 1px solid rgb(80,80,80);
-    line-height: 33px;
-    display: inline-block;
-    margin-left: -23px;
+    border-left: 1px solid rgb(80,80,80);
+    line-height: 35px;
     pointer-events: none;
   }
 
