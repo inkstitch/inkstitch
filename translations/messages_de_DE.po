@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-06-30 13:02-0400\n"
-"PO-Revision-Date: 2018-07-11 15:58\n"
+"POT-Creation-Date: 2018-07-10 19:54-0400\n"
+"PO-Revision-Date: 2018-07-12 19:21\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -410,15 +410,6 @@ msgstr "Voraussichtliche Dauer"
 msgid "Ctrl + Scroll to Zoom"
 msgstr "Strg + Scrollen zum Zoomen"
 
-msgid "Scale"
-msgstr "Maßstab"
-
-msgid "Fit"
-msgstr "An Fenstergröße anpassen"
-
-msgid "Apply to all"
-msgstr "Auf alle anwenden"
-
 msgid "COLOR"
 msgstr "FARBE"
 
@@ -472,4 +463,13 @@ msgstr "Ja"
 
 msgid "No"
 msgstr "Nein"
+
+msgid "Scale"
+msgstr "Maßstab"
+
+msgid "Fit"
+msgstr "An Fenstergröße anpassen"
+
+msgid "Apply to all"
+msgstr "Auf alle anwenden"
 
