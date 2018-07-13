@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-07-10 19:54-0400\n"
+"POT-Creation-Date: 2018-07-12 20:04-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -468,10 +468,28 @@ msgstr ""
 msgid "Page Setup"
 msgstr ""
 
+msgid "Design"
+msgstr ""
+
 msgid "Printing Size"
 msgstr ""
 
 msgid "Print Layouts"
+msgstr ""
+
+msgid "Client Overview"
+msgstr ""
+
+msgid "Client Detailed View"
+msgstr ""
+
+msgid "Operator Overview"
+msgstr ""
+
+msgid "Operator Detailed View"
+msgstr ""
+
+msgid "Thumbnail size"
 msgstr ""
 
 msgid "Includes these Page Setup settings and also the icon."
@@ -480,10 +498,10 @@ msgstr ""
 msgid "Save as defaults"
 msgstr ""
 
-msgid "Design"
+msgid "Thread Palette"
 msgstr ""
 
-msgid "Thread Palette"
+msgid "None"
 msgstr ""
 
 msgid ""
@@ -505,5 +523,8 @@ msgid "Fit"
 msgstr ""
 
 msgid "Apply to all"
+msgstr ""
+
+msgid "Realistic"
 msgstr ""
 
