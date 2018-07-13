@@ -49,7 +49,7 @@ DST, XXX, PES, U00, EXP, VP3, BRO, COL, CSD, DAT, DSB, DSZ, EDR, EMD,  EXY, FXY,
 Here are features we're hoping to add, though not necessarily in this order:
 
 * Lettering
-* Gradient Fill (already realised as a [hidden feature](https://github.com/lexelby/inkstitch/pull/108#issuecomment-369444197))
+* Gradient Fill (already realised as a [hidden feature](https://github.com/inkstitch/inkstitch/pull/108#issuecomment-369444197))
 * Pattern Fill
 * Mac support (testers and build engineers needed!)
 * 32-bit Linux support (build engineers needed!)

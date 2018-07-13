@@ -7,4 +7,4 @@ toc: false
 ---
 Are you familiar with python?
 
-[Get in touch](https://github.com/lexelby/inkstitch/issues) if you want to help writing code for Ink/Stitch!
+[Get in touch](https://github.com/inkstitch/inkstitch/issues) if you want to help writing code for Ink/Stitch!

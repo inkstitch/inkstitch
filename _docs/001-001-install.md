@@ -20,13 +20,13 @@ Versions 0.92.2 and higher let you [bind a key](/docs/customize/#shortcut-keys) 
 ## Quick Setup
 
 ### 1. Download
-Download the right release archive for your platform from the [latest release](https://github.com/lexelby/inkstitch/releases/latest).
+Download the right release archive for your platform from the [latest release](https://github.com/inkstitch/inkstitch/releases/latest).
 
 OS|File name|32&#8209;bit|64&#8209;bit
 ---|---|---|---
 Linux|`inkstitch-[VERSION]-Linux-x86_64.tar.gz`|☒|☑
 Windows|`inkstitch-[VERSION]-win32.zip`|☑|☑
-macOS|Sorry, there is no macOS-Version yet. If you are willing to [test](https://github.com/lexelby/inkstitch/releases/tag/dev-build-lexelby-mac-build-mk2) or help building it, contact us through [GitHub](https://github.com/lexelby/inkstitch/pull/181).|☒|☒
+macOS|Sorry, there is no macOS-Version yet. If you are willing to [test](https://github.com/inkstitch/inkstitch/releases/tag/dev-build-lexelby-mac-build-mk2) or help building it, contact us through [GitHub](https://github.com/inkstitch/inkstitch/pull/181).|☒|☒
 
 ### 2. Install
  * In Inkscape, go to `Edit > Preferences > System` and check where your `User Extensions` folder is.
@@ -52,7 +52,7 @@ $ tar zxf ~/Downloads/inkstitch-v1.0.0-Linux-x86_64.tar.gz
  * Then, proceed as above.
 
 **Tipp:** Subscribe to a news feed channel to keep track on Ink/Stitch Updates:<br>
- <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [GitHub Feed on new Releases](https://github.com/lexelby/inkstitch/releases.atom)<br>
+ <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [GitHub Feed on new Releases](https://github.com/inkstitch/inkstitch/releases.atom)<br>
  <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [Ink/Stitch News](/feed.xml)<br>
 {: .notice--info }
 
@@ -68,7 +68,7 @@ pip install -r requirements.txt
 ```
 
 ### Extension Installation
-1. Clone the extension source: `git clone https://github.com/lexelby/inkstitch`
+1. Clone the extension source: `git clone https://github.com/inkstitch/inkstitch`
 2. Install it as directed [here](https://inkscape.org/en/gallery/%3Dextension/)
 
 **Tipp:** Symbolically link into your git clone, which allows you to hack on the code. Changes to the Python code take effect the next time the extension is run.  Changes to the extension description files (`*.inx`) take effect the next time Inkscape is restarted.

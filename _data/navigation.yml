@@ -60,6 +60,8 @@ docs:
       url: /docs/params/
     - title: "Simulate"
       url: /docs/simulate/
+    - title: "Flip Satin Columns"
+      url: /docs/flip-satin-columns/
     - title: Install Add-Ons
       url: /docs/addons/
     - title: "Print"

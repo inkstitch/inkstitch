@@ -22,7 +22,7 @@ name                     : "<a href='https://github.com/lexelby'>lexelby</a>"
 description              : "An Inkscape extension for designing machine embroidery patterns."
 url                      : "http://inkstitch.org"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "lexelby/inkstitch/" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "inkstitch/inkstitch/" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -100,9 +100,9 @@ author:
   name             : "Ink/Stitch Community"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : ""
-  location         : "Somewhere"
+  location         : "Worldwide"
   email            :
-  uri              : "https://github.com/lexelby/inkstitch"
+  uri              : "https://github.com/inkstitch/"
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
   codepen          :
