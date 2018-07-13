@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-07-10 19:54-0400\n"
-"PO-Revision-Date: 2018-07-12 19:21\n"
+"POT-Creation-Date: 2018-07-12 20:04-0400\n"
+"PO-Revision-Date: 2018-07-13 00:11\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -437,11 +437,29 @@ msgstr "⚠ Verbindung zu Ink/Stich verloren"
 msgid "Page Setup"
 msgstr "Dokumenteinstellungen"
 
+msgid "Design"
+msgstr "Design"
+
 msgid "Printing Size"
 msgstr "Papierformat"
 
 msgid "Print Layouts"
 msgstr "Druck-Layouts"
+
+msgid "Client Overview"
+msgstr ""
+
+msgid "Client Detailed View"
+msgstr ""
+
+msgid "Operator Overview"
+msgstr ""
+
+msgid "Operator Detailed View"
+msgstr ""
+
+msgid "Thumbnail size"
+msgstr ""
 
 msgid "Includes these Page Setup settings and also the icon."
 msgstr "Dies umfasst die Dokumenteinstellungen und das Logo."
@@ -449,11 +467,11 @@ msgstr "Dies umfasst die Dokumenteinstellungen und das Logo."
 msgid "Save as defaults"
 msgstr "Als Standardeinstellung speichern"
 
-msgid "Design"
-msgstr "Design"
-
 msgid "Thread Palette"
 msgstr "Garnpalette"
+
+msgid "None"
+msgstr ""
 
 msgid "Changing the thread palette will cause thread names and catalog numbers to be recalculated based on the new palette.  Any changes you have made to color or thread names will be lost.  Are you sure?"
 msgstr "Bei einer Änderung der Garnpalette  werden die Garnnamen und Bestellnummern neu berechnet. Vorherige Änderungen gehen dabei verloren. Soll die Aktion ausgeführt werden?"
@@ -472,4 +490,7 @@ msgstr "An Fenstergröße anpassen"
 
 msgid "Apply to all"
 msgstr "Auf alle anwenden"
+
+msgid "Realistic"
+msgstr ""
 
