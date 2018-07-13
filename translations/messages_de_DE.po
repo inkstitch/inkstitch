@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-07-12 20:04-0400\n"
-"PO-Revision-Date: 2018-07-13 16:51\n"
+"PO-Revision-Date: 2018-07-13 17:01\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -459,7 +459,7 @@ msgid "Operator Detailed View"
 msgstr "Layout für Anwender: detaillierte Ansicht"
 
 msgid "Thumbnail size"
-msgstr ""
+msgstr "Vorschaubildgröße"
 
 msgid "Includes these Page Setup settings and also the icon."
 msgstr "Dies umfasst die Dokumenteinstellungen und das Logo."
@@ -471,7 +471,7 @@ msgid "Thread Palette"
 msgstr "Garnpalette"
 
 msgid "None"
-msgstr ""
+msgstr "Keine"
 
 msgid "Changing the thread palette will cause thread names and catalog numbers to be recalculated based on the new palette.  Any changes you have made to color or thread names will be lost.  Are you sure?"
 msgstr "Bei einer Änderung der Garnpalette  werden die Garnnamen und Bestellnummern neu berechnet. Vorherige Änderungen gehen dabei verloren. Soll die Aktion ausgeführt werden?"
@@ -492,5 +492,5 @@ msgid "Apply to all"
 msgstr "Auf alle anwenden"
 
 msgid "Realistic"
-msgstr ""
+msgstr "Realistische Vorschau"
 
