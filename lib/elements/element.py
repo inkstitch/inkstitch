@@ -206,6 +206,10 @@ class EmbroideryElement(object):
         return apply_transforms(self.path, self.node)
 
     @property
+    def shape(self):
+        raise NotImplementedError("INTERNAL ERROR: %s must implement shape()", self.__class__)
+
+    @property
     @cache
     def commands(self):
         return find_commands(self.node)
@@ -213,6 +217,10 @@ class EmbroideryElement(object):
     @cache
     def get_commands(self, command):
         return [c for c in self.commands if c.command == command]
+
+    @cache
+    def has_command(self, command):
+        return len(self.get_commands(command)) > 0
 
     @cache
     def get_command(self, command):
@@ -238,22 +246,10 @@ class EmbroideryElement(object):
         return [self.strip_control_points(subpath) for subpath in path]
 
     @property
-    @param('trim_after',
-           _('TRIM after'),
-           tooltip=_('Trim thread after this object (for supported machines and file formats)'),
-           type='boolean',
-           default=False,
-           sort_index=1000)
     def trim_after(self):
         return self.get_boolean_param('trim_after', False)
 
     @property
-    @param('stop_after',
-           _('STOP after'),
-           tooltip=_('Add STOP instruction after this object (for supported machines and file formats)'),
-           type='boolean',
-           default=False,
-           sort_index=1000)
     def stop_after(self):
         return self.get_boolean_param('stop_after', False)
 
@@ -264,8 +260,8 @@ class EmbroideryElement(object):
         patches = self.to_patches(last_patch)
 
         if patches:
-            patches[-1].trim_after = self.trim_after
-            patches[-1].stop_after = self.stop_after
+            patches[-1].trim_after = self.has_command("trim") or self.trim_after
+            patches[-1].stop_after = self.has_command("stop") or self.stop_after
 
         return patches
 

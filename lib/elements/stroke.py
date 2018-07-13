@@ -1,4 +1,5 @@
 import sys
+import shapely.geometry
 
 from .element import param, EmbroideryElement, Patch
 from ..i18n import _
@@ -49,6 +50,12 @@ class Stroke(EmbroideryElement):
             return [self.strip_control_points(subpath) for subpath in path]
         else:
             return self.flatten(path)
+
+    @property
+    @cache
+    def shape(self):
+        line_strings = [shapely.geometry.LineString(path) for path in self.paths]
+        return shapely.geometry.MultiLineString(line_strings)
 
     @property
     @param('manual_stitch', _('Manual stitch placement'), tooltip=_("Stitch every node in the path.  Stitch length and zig-zag spacing are ignored."), type='boolean', default=False)

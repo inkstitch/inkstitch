@@ -7,3 +7,4 @@ from input import Input
 from output import Output
 from zip import Zip
 from flip import Flip
+from commands import Commands

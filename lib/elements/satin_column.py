@@ -89,6 +89,17 @@ class SatinColumn(EmbroideryElement):
 
     @property
     @cache
+    def shape(self):
+        # This isn't used for satins at all, but other parts of the code
+        # may need to know the general shape of a satin column.
+
+        flattened = self.flatten(self.parse_path())
+        line_strings = [shgeo.LineString(path) for path in flattened]
+
+        return shgeo.MultiLineString(line_strings)
+
+    @property
+    @cache
     def csp(self):
         return self.parse_path()
 
