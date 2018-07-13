@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-07-10 19:54-0400\n"
-"PO-Revision-Date: 2018-07-12 19:21\n"
+"POT-Creation-Date: 2018-07-12 20:04-0400\n"
+"PO-Revision-Date: 2018-07-13 00:10\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Afrikaans\n"
 "MIME-Version: 1.0\n"
@@ -434,10 +434,28 @@ msgstr ""
 msgid "Page Setup"
 msgstr ""
 
+msgid "Design"
+msgstr ""
+
 msgid "Printing Size"
 msgstr ""
 
 msgid "Print Layouts"
+msgstr ""
+
+msgid "Client Overview"
+msgstr ""
+
+msgid "Client Detailed View"
+msgstr ""
+
+msgid "Operator Overview"
+msgstr ""
+
+msgid "Operator Detailed View"
+msgstr ""
+
+msgid "Thumbnail size"
 msgstr ""
 
 msgid "Includes these Page Setup settings and also the icon."
@@ -446,10 +464,10 @@ msgstr ""
 msgid "Save as defaults"
 msgstr ""
 
-msgid "Design"
+msgid "Thread Palette"
 msgstr ""
 
-msgid "Thread Palette"
+msgid "None"
 msgstr ""
 
 msgid "Changing the thread palette will cause thread names and catalog numbers to be recalculated based on the new palette.  Any changes you have made to color or thread names will be lost.  Are you sure?"
@@ -468,5 +486,8 @@ msgid "Fit"
 msgstr ""
 
 msgid "Apply to all"
+msgstr ""
+
+msgid "Realistic"
 msgstr ""
 
