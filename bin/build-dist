@@ -19,14 +19,8 @@ fi
 # above!
 pyinstaller_args+="--hidden-import gi.repository.Gtk "
 
-# mac and windows build seem to miss wx and libembroidery import
-pyinstaller_args+="--hidden-import wx --hidden-import libembroidery "
-
-if [ -d windows-libembroidery ]; then
-    pyinstaller_args+="-p windows-libembroidery "
-else
-    pyinstaller_args+="-p embroidermodder/experimental/python/binding "
-fi
+# mac and windows build seem to miss wx import
+pyinstaller_args+="--hidden-import wx"
 
 # This lets pyinstaller see inkex.py, etc.
 pyinstaller_args+="-p inkscape-0.92.3/share/extensions "

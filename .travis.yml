@@ -48,23 +48,20 @@ install:
       # for wxPython
       sudo apt-get install glib-networking
 
-      # for embroidermodder/libembroidery
-      sudo apt-get install swig python-dev
-
       # This is the same as the pypi module PyGObject.  We can't just do
       # "pip install PyGObject" because it depends on a version of
       # libgirepository1.0-dev that doesn't exist in Trusty.
       sudo apt-get install python-gi python-gi-cairo libgirepository1.0-dev
-    
+
       # wxPython doen't publish linux wheels in pypi
       wget -q https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-14.04/wxPython-4.0.3-cp27-cp27mu-linux_x86_64.whl
       pip install wxPython-4.0.3-cp27-cp27mu-linux_x86_64.whl
-        
+
       # We can't use the shapely wheel because it includes the geos
       # library but with a weird file name.  Details:
       # https://github.com/pyinstaller/pyinstaller/blob/61b1c75c2b0469b32d114298a63bf60b8d597e37/PyInstaller/hooks/hook-shapely.py#L34
       pip install --no-binary shapely -r requirements.txt
-    
+
       pip install pyinstaller
     elif [ "$BUILD" = "windows" ]; then
       set -x
@@ -77,10 +74,6 @@ install:
       sudo apt-get -q install -y wine
 
       export WINEDEBUG=-all
-
-      wget -q https://github.com/lexelby/inkstitch-build-objects/releases/download/v1.1.0/windows-libembroidery.tar.gz
-      tar zxf windows-libembroidery.tar.gz
-      rm windows-libembroidery.tar.gz
 
       wget -q http://download.microsoft.com/download/1/1/1/1116b75a-9ec3-481a-a3c8-1777b5381140/vcredist_x86.exe
       wine vcredist_x86.exe /q
@@ -109,11 +102,6 @@ script:
       flake8 . --count --exit-zero --select=E901,E999,F821,F822,F823 --show-source --statistics --exclude=embroidermodder
       flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics --exclude=embroidermodder
     elif [ "$BUILD" = "linux" ]; then
-      (
-        cd embroidermodder/experimental
-        qmake swigpython.pro
-        make
-      )        
       make dist
     elif [ "$BUILD" = "windows" ]; then
       # work around some bug... pyinstaller? shapely? not sure.
