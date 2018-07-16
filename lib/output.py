@@ -111,7 +111,11 @@ def write_embroidery_file(file_path, stitch_plan, svg):
 
                     # convert from pixels to millimeters
                     # also multiply by 10 to get tenths of a millimeter as required by pyembroidery
-                    "scale": (scale, scale)
+                    "scale": (scale, scale),
+
+                    # This forces a jump at the start of the design and after each trim,
+                    # even if we're close enough not to need one.
+                    "full_jump": True,
                 }
 
     pyembroidery.write(pattern, file_path, settings)

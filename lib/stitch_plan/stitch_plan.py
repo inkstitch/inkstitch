@@ -16,62 +16,38 @@ def patches_to_stitch_plan(patches, collapse_len=3.0 * PIXELS_PER_MM):
     """
 
     stitch_plan = StitchPlan()
-    color_block = stitch_plan.new_color_block()
 
-    need_trim = False
+    if not patches:
+        return stitch_plan
+
+    color_block = stitch_plan.new_color_block(color=patches[0].color)
+
     for patch in patches:
         if not patch.stitches:
             continue
 
-        if not color_block.has_color():
-            # set the color for the first color block
-            color_block.color = patch.color
-
-        if color_block.color == patch.color:
-            if need_trim:
-                process_trim(color_block, patch.stitches[0])
-                need_trim = False
-
-            # add a jump stitch between patches if the distance is more
-            # than the collapse length
-            if color_block.last_stitch:
-                if (patch.stitches[0] - color_block.last_stitch).length() > collapse_len:
-                    color_block.add_stitch(patch.stitches[0].x, patch.stitches[0].y, jump=True)
-
-        else:
+        if color_block.color != patch.color or color_block.stop_after:
             # add a color change (only if we didn't just do a "STOP after")
-            if not color_block.last_stitch.color_change:
-                stitch = color_block.last_stitch.copy()
-                stitch.color_change = True
-                color_block.add_stitch(stitch)
+            if not color_block.stop_after:
+                color_block.add_stitch(color_change=True)
 
-            color_block = stitch_plan.new_color_block()
-            color_block.color = patch.color
+            color_block = stitch_plan.new_color_block(color=patch.color)
 
         color_block.filter_duplicate_stitches()
         color_block.add_stitches(patch.stitches, no_ties=patch.stitch_as_is)
 
         if patch.trim_after:
-            # a trim needs to be followed by a jump to the next stitch, so
-            # we'll process it when we start the next patch
-            need_trim = True
+            color_block.add_stitch(trim=True)
 
         if patch.stop_after:
-            process_stop(color_block)
+            process_stop(stitch_plan)
 
-    add_jumps(stitch_plan)
+            # process_stop() may have split the block into two
+            color_block = stitch_plan.last_color_block
+
     add_ties(stitch_plan)
 
     return stitch_plan
-
-
-def add_jumps(stitch_plan):
-    """Add a JUMP stitch at the start of each color block."""
-
-    for color_block in stitch_plan:
-        stitch = color_block.stitches[0].copy()
-        stitch.jump = True
-        color_block.stitches.insert(0, stitch)
 
 
 class StitchPlan(object):
@@ -84,6 +60,9 @@ class StitchPlan(object):
         color_block = ColorBlock(*args, **kwargs)
         self.color_blocks.append(color_block)
         return color_block
+
+    def add_color_block(self, color_block):
+        self.color_blocks.append(color_block)
 
     def __iter__(self):
         return iter(self.color_blocks)
@@ -98,6 +77,10 @@ class StitchPlan(object):
     def num_colors(self):
         """Number of unique colors in the stitch plan."""
         return len({block.color for block in self})
+
+    @property
+    def num_color_blocks(self):
+        return len(self.color_blocks)
 
     @property
     def num_stops(self):
@@ -137,6 +120,13 @@ class StitchPlan(object):
         dimensions = self.dimensions
         return (dimensions[0] / PIXELS_PER_MM, dimensions[1] / PIXELS_PER_MM)
 
+    @property
+    def last_color_block(self):
+        if self.color_blocks:
+            return self.color_blocks[-1]
+        else:
+            return None
+
 
 class ColorBlock(object):
     """Holds a set of stitches, all with the same thread color."""
@@ -147,6 +137,9 @@ class ColorBlock(object):
 
     def __iter__(self):
         return iter(self.stitches)
+
+    def __len__(self):
+        return len(self.stitches)
 
     def __repr__(self):
         return "ColorBlock(%s, %s)" % (self.color, self.stitches)
@@ -191,6 +184,13 @@ class ColorBlock(object):
 
         return sum(1 for stitch in self if stitch.trim)
 
+    @property
+    def stop_after(self):
+        if self.last_stitch is not None:
+            return self.last_stitch.stop
+        else:
+            return False
+
     def filter_duplicate_stitches(self):
         if not self.stitches:
             return
@@ -212,11 +212,21 @@ class ColorBlock(object):
         self.stitches = stitches
 
     def add_stitch(self, *args, **kwargs):
+        if not args:
+            # They're adding a command, e.g. `color_block.add_stitch(stop=True)``.
+            # Use the position from the last stitch.
+            if self.last_stitch:
+                args = (self.last_stitch.x, self.last_stitch.y)
+            else:
+                raise ValueError("internal error: can't add a command to an empty stitch block")
+
         if isinstance(args[0], Stitch):
             self.stitches.append(args[0])
         elif isinstance(args[0], Point):
             self.stitches.append(Stitch(args[0].x, args[0].y, *args[1:], **kwargs))
         else:
+            if not args and self.last_stitch:
+                args = (self.last_stitch.x, self.last_stitch.y)
             self.stitches.append(Stitch(*args, **kwargs))
 
     def add_stitches(self, stitches, *args, **kwargs):
@@ -237,3 +247,11 @@ class ColorBlock(object):
         maxy = max(stitch.y for stitch in self)
 
         return minx, miny, maxx, maxy
+
+    def split_at(self, index):
+        """Split this color block into two at the specified stitch index"""
+
+        new_color_block = ColorBlock(self.color, self.stitches[index:])
+        del self.stitches[index:]
+
+        return new_color_block

@@ -30,15 +30,16 @@ def add_tie_in(stitches, upcoming_stitches):
 def add_ties(stitch_plan):
     """Add tie-off before and after trims, jumps, and color changes."""
 
+    need_tie_in = True
     for color_block in stitch_plan:
-        need_tie_in = True
         new_stitches = []
         for i, stitch in enumerate(color_block.stitches):
-            # Tie before and after TRIMs, JUMPs, and color changes, but ignore
-            # the fake color change introduced by a "STOP after" (see stop.py).
-            is_special = stitch.trim or stitch.jump or (stitch.color_change and not stitch.stop)
+            is_special = stitch.trim or stitch.jump or stitch.color_change or stitch.stop
 
-            if is_special and not need_tie_in:
+            # see stop.py for an explanation of the fake color change
+            is_fake = stitch.fake_color_change
+
+            if is_special and not is_fake and not need_tie_in:
                 add_tie_off(new_stitches)
                 new_stitches.append(stitch)
                 need_tie_in = True
@@ -49,7 +50,8 @@ def add_ties(stitch_plan):
             else:
                 new_stitches.append(stitch)
 
-        if not need_tie_in:
-            add_tie_off(new_stitches)
-
         color_block.replace_stitches(new_stitches)
+
+    if not need_tie_in:
+        # tie off at the end if we haven't already
+        add_tie_off(color_block.stitches)
