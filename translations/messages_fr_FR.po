@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-07-12 20:13-0400\n"
-"PO-Revision-Date: 2018-07-16 10:11\n"
+"PO-Revision-Date: 2018-07-16 10:21\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -204,13 +204,13 @@ msgid "Installation Failed"
 msgstr "Echec de l’installation"
 
 msgid "Inkscape add-on files have been installed.  Please restart Inkscape to load the new add-ons."
-msgstr ""
+msgstr "Des fichiers d'extensions Inkscape ont été installés.  S’il vous plaît, redémarrez Inkscape pour charger ces nouveaux modules."
 
 msgid "Installation Completed"
-msgstr ""
+msgstr "Installation terminée"
 
 msgid "Ink/Stitch Add-ons Installer"
-msgstr ""
+msgstr "Ink/Stitch installeur d'extensions"
 
 msgid "These settings will be applied to 1 object."
 msgstr "Ces paramètres seront appliqués à 1 objet."
@@ -281,10 +281,10 @@ msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwri
 msgstr "Le préréglage \"%s\" existe déjà. Veuillez utiliser un autre nom ou appuyez sur \"Écraser\""
 
 msgid "Closing..."
-msgstr ""
+msgstr "Fermeture..."
 
 msgid "It is safe to close this window now."
-msgstr ""
+msgstr "Il est sûr de fermer cette fenêtre maintenant."
 
 msgid "A print preview has been opened in your web browser.  This window will stay open in order to communicate with the JavaScript code running in your browser.\n\n"
 "This window will close after you close the print preview in your browser, or you can close it manually if necessary."
@@ -297,7 +297,7 @@ msgid "Embroidery Simulation"
 msgstr "Simulation de broderie"
 
 msgid "No embroidery file formats selected."
-msgstr ""
+msgstr "Aucun format de fichier broderie sélectionné."
 
 msgid "Unable to autofill.  This most often happens because your shape is made up of multiple sections that aren't connected."
 msgstr "Impossible de remplir automatiquement. Cela arrive le plus souvent parce que votre forme est composée de plusieurs sections qui ne sont pas connectées."
@@ -306,7 +306,7 @@ msgid "Unexpected error while generating fill stitches. Please send your SVG fil
 msgstr "Erreur inattendue lors de la génération des points de remplissage. Veuillez envoyer votre fichier SVG à lexelby@github."
 
 msgid "Stitch Plan"
-msgstr ""
+msgstr "Plan de broderie"
 
 #, python-format
 msgid "parseLengthWithUnits: unknown unit %s"
@@ -323,7 +323,7 @@ msgid "rgb"
 msgstr "RGB"
 
 msgid "thread"
-msgstr ""
+msgstr "fil"
 
 msgid "# stitches"
 msgstr "# points"
@@ -338,7 +338,7 @@ msgid "Page"
 msgstr "Page"
 
 msgid "Click to choose another logo"
-msgstr ""
+msgstr "Cliquez pour choisir un autre logo"
 
 msgid "Enter job title..."
 msgstr "Entrez le titre du Job..."
