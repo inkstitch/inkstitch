@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-07-12 20:13-0400\n"
-"PO-Revision-Date: 2018-07-16 10:21\n"
+"PO-Revision-Date: 2018-07-16 10:31\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -363,10 +363,10 @@ msgid "Thread Consumption"
 msgstr "Consommation de fil"
 
 msgid "Stops and Trims"
-msgstr ""
+msgstr "Arrêts et coupes"
 
 msgid "Notes"
-msgstr ""
+msgstr "Notes"
 
 msgid "Unique Colors"
 msgstr "Couleurs uniques"
@@ -393,13 +393,13 @@ msgid "thread used"
 msgstr "fil utilisé"
 
 msgid "Enter operator notes..."
-msgstr ""
+msgstr "Entrez des notes d'utilisation..."
 
 msgid "Job estimated time"
 msgstr "Durée estimée du Job"
 
 msgid "Ctrl + Scroll to Zoom"
-msgstr ""
+msgstr "Ctrl + Scroll (molette) pour zoomer"
 
 msgid "COLOR"
 msgstr "Couleur"
@@ -426,7 +426,7 @@ msgid "⚠ lost connection to Ink/Stitch"
 msgstr "⚠ Connexion perdu avec Ink/Stitch"
 
 msgid "Page Setup"
-msgstr ""
+msgstr "Mise en page"
 
 msgid "Design"
 msgstr ""
