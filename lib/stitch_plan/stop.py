@@ -1,4 +1,7 @@
+from copy import copy
+
 from ..svg import PIXELS_PER_MM
+
 
 def process_stop(stitch_plan):
     """Handle the "stop after" checkbox.
@@ -34,33 +37,35 @@ def process_stop(stitch_plan):
     it in half.
     """
 
-    if not stitch_plan.last_color_block or len(stitch_plan.last_color_block) < 2:
+    color_block = stitch_plan.last_color_block
+
+    if not color_block or len(color_block) < 2:
         return
 
-    last_stitch = stitch_plan.last_color_block.last_stitch
-    stitch_plan.last_color_block.add_stitch(last_stitch.x, last_stitch.y, stop=True)
+    last_stitch = color_block.last_stitch
+    color_block.add_stitch(stop=True)
 
     if len(stitch_plan) > 1:
         # if this isn't the first stop in this color, then we're done
         if stitch_plan.color_blocks[-2].stop_after and \
-            stitch_plan.color_blocks[-2].color == stitch_plan.last_color_block.color:
+            stitch_plan.color_blocks[-2].color == color_block.color:
                 return
 
     # We need to split this color block.  Pick the last TRIM or
     # the last long stitch (probably between distant patches).
 
-    for i in xrange(len(stitch_plan.last_color_block) - 2, -1, -1):
-        stitch = stitch_plan.last_color_block.stitches[i]
+    for i in xrange(len(color_block) - 2, -1, -1):
+        stitch = color_block.stitches[i]
 
         if stitch.trim:
             # ignore the trim right before the stop we just added
-            if i < len(stitch_plan.last_color_block) - 2:
+            if i < len(color_block) - 2:
                 # split after the trim
                 i = i + 1
                 break
 
         if i > 0:
-            next_stitch = stitch_plan.last_color_block.stitches[i + 1]
+            next_stitch = color_block.stitches[i + 1]
 
             if (stitch - next_stitch).length() > 20 * PIXELS_PER_MM:
                 break
@@ -68,8 +73,16 @@ def process_stop(stitch_plan):
     if i == 0:
         # Darn, we didn't find a TRIM or long stitch.  Just chop the
         # block in half.
-        i = len(stitch_plan.last_color_block) / 2
+        i = len(color_block) / 2
 
-    new_color_block = stitch_plan.last_color_block.split_at(i)
-    stitch_plan.last_color_block.add_stitch(color_change=True, fake_color_change=True)
+    new_color_block = color_block.split_at(i)
+
+    # If we're splitting in the middle of a run of stitches, we don't
+    # want a gap to appear in the preview and the PDF printout, so
+    # add an extra stitch to bridge the gap.  Technically this will
+    # result in a double needle penetration but it's no big deal.
+    if not color_block.last_stitch.trim:
+        color_block.add_stitch(copy(new_color_block.stitches[0]))
+
+    color_block.add_stitch(color_change=True, fake_color_change=True)
     stitch_plan.add_color_block(new_color_block)
