@@ -65,6 +65,9 @@ class Point:
         else:
             raise ValueError("cannot multiply Point by %s" % type(other))
 
+    def __neg__(self):
+        return self * -1
+
     def __rmul__(self, other):
         if isinstance(other, (int, float)):
             return self.__mul__(other)

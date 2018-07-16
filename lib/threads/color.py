@@ -39,6 +39,15 @@ class ThreadColor(object):
         return "#%s" % self.hex_digits
 
     @property
+    def pyembroidery_thread(self):
+        return {
+            "name": self.name,
+            "id": self.number,
+            "manufacturer": self.manufacturer,
+            "rgb": int(self.hex_digits, 16),
+        }
+
+    @property
     def hex_digits(self):
         return "%02X%02X%02X" % self.rgb
 
