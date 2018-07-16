@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-07-12 20:13-0400\n"
-"PO-Revision-Date: 2018-07-14 00:01\n"
+"PO-Revision-Date: 2018-07-16 09:51\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -49,7 +49,7 @@ msgstr "Elargir"
 
 #, python-format
 msgid "%(id)s has more than one command of type '%(command)s' linked to it"
-msgstr ""
+msgstr "Plus d’une commande de type «%(command)s» est liée à %(id)s"
 
 msgid "Fill"
 msgstr "Remplir"
