@@ -1,3 +1,5 @@
+from copy import copy
+
 from .stitch import Stitch
 from .stop import process_stop
 from .trim import process_trim
@@ -253,5 +255,12 @@ class ColorBlock(object):
 
         new_color_block = ColorBlock(self.color, self.stitches[index:])
         del self.stitches[index:]
+
+        # If we're splitting in the middle of a run of stitches, we don't
+        # want a gap to appear in the preview and the PDF printout, so
+        # add an extra stitch to bridge the gap.  Technically this will
+        # result in a double needle penetration but it's no big deal.
+        if not self.last_stitch.trim:
+            self.add_stitch(copy(new_color_block.stitches[0]))
 
         return new_color_block
