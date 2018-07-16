@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-07-12 20:13-0400\n"
-"PO-Revision-Date: 2018-07-16 10:01\n"
+"PO-Revision-Date: 2018-07-16 10:11\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -180,28 +180,28 @@ msgid "Please select one or more satin columns to flip."
 msgstr "Veuillez sélectionner une ou plusieurs colonnes satin pour retourner."
 
 msgid "Ink/Stitch can install files (\"add-ons\") that make it easier to use Inkscape to create machine embroidery designs.  These add-ons will be installed:"
-msgstr ""
+msgstr "Ink/Stitch peut installer des fichiers (« modules ») qui permettent de créer plus facilement des motifs de broderie machine.  Ces extensions seront installés :"
 
 msgid "thread manufacturer color palettes"
-msgstr ""
+msgstr "palettes de couleurs de fabricants de fil"
 
 msgid "Ink/Stitch visual commands (Object -> Symbols...)"
-msgstr ""
+msgstr "Commandes Ink/Stitch visuelles (Objet-> symboles...)"
 
 msgid "Install"
-msgstr ""
+msgstr "Installer"
 
 msgid "Cancel"
 msgstr "Quitter"
 
 msgid "Choose Inkscape directory"
-msgstr ""
+msgstr "Choisir le dossier d’Inkscape"
 
 msgid "Inkscape add-on installation failed"
-msgstr ""
+msgstr "échec d'installation du module Inkscape"
 
 msgid "Installation Failed"
-msgstr ""
+msgstr "Echec de l’installation"
 
 msgid "Inkscape add-on files have been installed.  Please restart Inkscape to load the new add-ons."
 msgstr ""
