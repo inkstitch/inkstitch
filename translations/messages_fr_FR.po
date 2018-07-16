@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-07-12 20:13-0400\n"
-"PO-Revision-Date: 2018-07-16 10:31\n"
+"PO-Revision-Date: 2018-07-16 10:41\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -180,7 +180,7 @@ msgid "Please select one or more satin columns to flip."
 msgstr "Veuillez sélectionner une ou plusieurs colonnes satin pour retourner."
 
 msgid "Ink/Stitch can install files (\"add-ons\") that make it easier to use Inkscape to create machine embroidery designs.  These add-ons will be installed:"
-msgstr "Ink/Stitch peut installer des fichiers (« modules ») qui permettent de créer plus facilement des motifs de broderie machine.  Ces extensions seront installés :"
+msgstr "Ink/Stitch peut installer des fichiers (« extensions ») qui permettent de créer plus facilement des motifs de broderie machine.  Ces extensions seront installés :"
 
 msgid "thread manufacturer color palettes"
 msgstr "palettes de couleurs de fabricants de fil"
@@ -198,13 +198,13 @@ msgid "Choose Inkscape directory"
 msgstr "Choisir le dossier d’Inkscape"
 
 msgid "Inkscape add-on installation failed"
-msgstr "échec d'installation du module Inkscape"
+msgstr "échec d'installation de l'extension Inkscape"
 
 msgid "Installation Failed"
 msgstr "Echec de l’installation"
 
 msgid "Inkscape add-on files have been installed.  Please restart Inkscape to load the new add-ons."
-msgstr "Des fichiers d'extensions Inkscape ont été installés.  S’il vous plaît, redémarrez Inkscape pour charger ces nouveaux modules."
+msgstr "Des fichiers d'extensions Inkscape ont été installés.  S’il vous plaît, redémarrez Inkscape pour charger ces nouvelles extensions."
 
 msgid "Installation Completed"
 msgstr "Installation terminée"
@@ -429,59 +429,59 @@ msgid "Page Setup"
 msgstr "Mise en page"
 
 msgid "Design"
-msgstr ""
+msgstr "Conception"
 
 msgid "Printing Size"
 msgstr "Taille d’impression"
 
 msgid "Print Layouts"
-msgstr ""
+msgstr "Mises en page d’impression"
 
 msgid "Client Overview"
-msgstr ""
+msgstr "Vue d’ensemble du client"
 
 msgid "Client Detailed View"
-msgstr ""
+msgstr "Vue détaillée de client"
 
 msgid "Operator Overview"
-msgstr ""
+msgstr "Vue d’ensemble de l’exécution"
 
 msgid "Operator Detailed View"
-msgstr ""
+msgstr "Vue détaillée de l'exécution"
 
 msgid "Thumbnail size"
-msgstr ""
+msgstr "Taille de la miniature"
 
 msgid "Includes these Page Setup settings and also the icon."
-msgstr ""
+msgstr "Comprend ces paramètres de mise en page et l’icône."
 
 msgid "Save as defaults"
-msgstr ""
+msgstr "Enregistrer comme valeurs par défaut"
 
 msgid "Thread Palette"
-msgstr ""
+msgstr "Palette de fil"
 
 msgid "None"
-msgstr ""
+msgstr "Aucun"
 
 msgid "Changing the thread palette will cause thread names and catalog numbers to be recalculated based on the new palette.  Any changes you have made to color or thread names will be lost.  Are you sure?"
-msgstr ""
+msgstr "Changer la palette de fil recalculera les noms de fils et les numéros de catalogue, basé sur la nouvelle palette.  Toutes les modifications apportées aux couleurs ou noms de fils seront perdues.  Êtes-vous sûr/e ?"
 
 msgid "Yes"
-msgstr ""
+msgstr "Oui"
 
 msgid "No"
-msgstr ""
+msgstr "Non"
 
 msgid "Scale"
 msgstr "Échelle"
 
 msgid "Fit"
-msgstr ""
+msgstr "Ajuster"
 
 msgid "Apply to all"
-msgstr ""
+msgstr "Appliquer à tous"
 
 msgid "Realistic"
-msgstr ""
+msgstr "Réaliste"
 
