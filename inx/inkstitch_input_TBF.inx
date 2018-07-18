@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <_name>PHB file input</_name>
-    <id>org.inkstitch.input.phb</id>
+    <_name>TBF file input</_name>
+    <id>org.inkstitch.input.tbf</id>
     <dependency type="executable" location="extensions">inkstitch.py</dependency>
     <dependency type="executable" location="extensions">inkex.py</dependency>
     <input>
-        <extension>.phb</extension>
-        <mimetype>application/x-embroidery-phb</mimetype>
-        <_filetypename>Ink/Stitch: Brother Embroidery Format (.phb)</_filetypename>
-        <_filetypetooltip>convert PHB file to Ink/Stitch manual-stitch paths</_filetypetooltip>
+        <extension>.tbf</extension>
+        <mimetype>application/x-embroidery-tbf</mimetype>
+        <_filetypename>Ink/Stitch: Tajima Embroidery Format (.tbf)</_filetypename>
+        <_filetypetooltip>convert TBF file to Ink/Stitch manual-stitch paths</_filetypetooltip>
     </input>
     <param name="extension" type="string" gui-hidden="true">input</param>
     <script>

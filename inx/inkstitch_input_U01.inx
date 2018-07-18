@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <_name>CSV file input</_name>
-    <id>org.inkstitch.input.csv</id>
+    <_name>U01 file input</_name>
+    <id>org.inkstitch.input.u01</id>
     <dependency type="executable" location="extensions">inkstitch.py</dependency>
     <dependency type="executable" location="extensions">inkex.py</dependency>
     <input>
-        <extension>.csv</extension>
-        <mimetype>application/x-embroidery-csv</mimetype>
-        <_filetypename>Ink/Stitch: Comma Separated Values Format (.csv)</_filetypename>
-        <_filetypetooltip>convert CSV file to Ink/Stitch manual-stitch paths</_filetypetooltip>
+        <extension>.u01</extension>
+        <mimetype>application/x-embroidery-u01</mimetype>
+        <_filetypename>Ink/Stitch: Barudan Embroidery Format (.u01)</_filetypename>
+        <_filetypetooltip>convert U01 file to Ink/Stitch manual-stitch paths</_filetypetooltip>
     </input>
     <param name="extension" type="string" gui-hidden="true">input</param>
     <script>

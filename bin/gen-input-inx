@@ -2,7 +2,7 @@
 
 import sys, os
 from os.path import dirname
-from libembroidery import *
+import pyembroidery
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 
@@ -15,30 +15,21 @@ def build_environment():
     )
 
 
-def libembroidery_input_formats():
-    formatList = embFormatList_create()
-    curFormat = formatList
-    while(curFormat):
-        extension = embFormat_extension(curFormat)
-        description = embFormat_description(curFormat)
-        reader_state = embFormat_readerState(curFormat)
-
-        if reader_state.strip() and embFormat_type(curFormat) != EMBFORMAT_OBJECTONLY:
-            # extension includes the dot, so we'll remove it
-            yield extension[1:], description
-
-        curFormat = curFormat.next
+def pyembroidery_input_formats():
+    for format in pyembroidery.supported_formats():
+        if 'reader' in format and format['category'] == 'embroidery':
+            yield format['extension'], format['description']
 
 
 def main():
     env = build_environment()
     template = env.get_template('embroider_input.inx')
 
-    for format, description in libembroidery_input_formats():
+    for format, description in pyembroidery_input_formats():
         inx = template.render(format=format, description=description)
 
         with open("inx/inkstitch_input_%s.inx" % format.upper(), 'w') as inx_file:
-            inx_file.write(inx)
+            print >> inx_file, inx
 
 
 if __name__ == "__main__":
