@@ -29,20 +29,17 @@ class Output(InkstitchExtension):
         patches = self.elements_to_patches(self.elements)
         stitch_plan = patches_to_stitch_plan(patches, self.options.collapse_length_mm * PIXELS_PER_MM)
 
-        # libembroidery wants to write to an actual file rather than stdout
         temp_file = tempfile.NamedTemporaryFile(suffix=".%s" % self.options.file_extension, delete=False)
 
         # in windows, failure to close here will keep the file locked
         temp_file.close()
 
-        # libembroidery likes to debug log things to stdout.  No way to disable it.
-        save_stdout()
         write_embroidery_file(temp_file.name, stitch_plan, self.document.getroot())
 
         # inkscape will read the file contents from stdout and copy
         # to the destination file that the user chose
         with open(temp_file.name) as output_file:
-            sys.real_stdout.write(output_file.read())
+            sys.stdout.write(output_file.read())
 
         # clean up the temp file
         os.remove(temp_file.name)
