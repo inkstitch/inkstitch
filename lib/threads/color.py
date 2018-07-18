@@ -1,7 +1,7 @@
 import simplestyle
 import re
 import colorsys
-
+from pyembroidery.EmbThread import EmbThread
 
 class ThreadColor(object):
     hex_str_re = re.compile('#([0-9a-z]{3}|[0-9a-z]{6})', re.I)
@@ -9,6 +9,12 @@ class ThreadColor(object):
     def __init__(self, color, name=None, number=None, manufacturer=None):
         if color is None:
             self.rgb = (0, 0, 0)
+        elif isinstance(color, EmbThread):
+            self.name = color.description
+            self.number = color.catalog_number
+            self.manufacturer = color.brand
+            self.rgb = (color.get_red(), color.get_green(), color.get_blue())
+            return
         elif isinstance(color, (list, tuple)):
             self.rgb = tuple(color)
         elif self.hex_str_re.match(color):

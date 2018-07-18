@@ -7,13 +7,6 @@ from .utils import Point
 from .svg import PIXELS_PER_MM, get_doc_size, get_viewbox_transform
 
 
-def add_thread(pattern, thread):
-    """Add a thread to a pattern and return the thread's index"""
-
-    libembroidery.embPattern_addThread(pattern, thread)
-
-    return libembroidery.embThreadList_count(pattern.threadList) - 1
-
 def get_command(stitch):
     if stitch.jump:
         return pyembroidery.JUMP
