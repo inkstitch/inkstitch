@@ -3,11 +3,6 @@ from os.path import realpath, dirname, join as path_join
 import sys
 from inkex import etree
 import inkex
-
-# help python find libembroidery when running in a local repo clone
-if getattr(sys, 'frozen', None) is None:
-    sys.path.append(realpath(path_join(dirname(__file__), '..', '..')))
-
 import pyembroidery
 
 from ..svg import PIXELS_PER_MM, render_stitch_plan
