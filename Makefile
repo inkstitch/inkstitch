@@ -25,7 +25,7 @@ distclean:
 
 messages.po:
 	rm -f messages.po
-	pybabel extract -o messages.po -F babel.conf --no-location --add-comments l10n --add-comments L10n --add-comments L10N -s .
+	pybabel extract -o messages.po -F babel.conf --add-location=full --add-comments=l10n,L10n,L10N --sort-by-file --strip-comments .
 
 .PHONY: messages.po
 .PHONY: locales
