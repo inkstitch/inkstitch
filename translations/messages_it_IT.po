@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-07-12 20:13-0400\n"
-"PO-Revision-Date: 2018-07-14 00:01\n"
+"PO-Revision-Date: 2018-07-20 18:40\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
@@ -18,16 +18,16 @@ msgstr ""
 "Language: it_IT\n"
 
 msgid "Auto-Fill"
-msgstr ""
+msgstr "Riempimento automatico"
 
 msgid "Automatically routed fill stitching"
-msgstr ""
+msgstr "Riempimento impunture indirizzato automaticamente"
 
 msgid "Running stitch length (traversal between sections)"
-msgstr ""
+msgstr "Lunghezza ounto imbastitura (attraversamento tra sezioni)"
 
 msgid "Underlay"
-msgstr ""
+msgstr "Sottostrato"
 
 msgid "AutoFill Underlay"
 msgstr ""
@@ -39,23 +39,23 @@ msgid "Row spacing (default: 3x fill row spacing)"
 msgstr ""
 
 msgid "Max stitch length"
-msgstr ""
+msgstr "Lunghezza massima punto"
 
 msgid "Inset"
 msgstr ""
 
 msgid "Expand"
-msgstr ""
+msgstr "Espandi"
 
 #, python-format
 msgid "%(id)s has more than one command of type '%(command)s' linked to it"
-msgstr ""
+msgstr "%(id)s ha più di un comando del tipo '%(command)s collegato ad esso"
 
 msgid "Fill"
-msgstr ""
+msgstr "Riempi"
 
 msgid "Manually routed fill stitching"
-msgstr ""
+msgstr "Riempimento impunture indirizzato manualmente"
 
 msgid "Angle of lines of stitches"
 msgstr ""
