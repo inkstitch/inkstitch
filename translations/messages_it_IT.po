@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-07-12 20:13-0400\n"
-"PO-Revision-Date: 2018-07-20 18:40\n"
+"PO-Revision-Date: 2018-07-20 18:51\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
@@ -30,19 +30,19 @@ msgid "Underlay"
 msgstr "Sottostrato"
 
 msgid "AutoFill Underlay"
-msgstr ""
+msgstr "Riempi automaticamente il sottostrato"
 
 msgid "Fill angle (default: fill angle + 90 deg)"
-msgstr ""
+msgstr "Riempi angolo (default: riempimento angolo + 90 gradi)"
 
 msgid "Row spacing (default: 3x fill row spacing)"
-msgstr ""
+msgstr "Spaziatura riga (default: 3x spaziatura riga)"
 
 msgid "Max stitch length"
 msgstr "Lunghezza massima punto"
 
 msgid "Inset"
-msgstr ""
+msgstr "Intarsio"
 
 msgid "Expand"
 msgstr "Espandi"
