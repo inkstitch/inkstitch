@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-07-12 20:13-0400\n"
-"PO-Revision-Date: 2018-07-20 18:51\n"
+"PO-Revision-Date: 2018-07-20 22:00\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
@@ -58,22 +58,22 @@ msgid "Manually routed fill stitching"
 msgstr "Riempimento impunture indirizzato manualmente"
 
 msgid "Angle of lines of stitches"
-msgstr ""
+msgstr "Angolo delle linee dei punti"
 
 msgid "Flip fill (start right-to-left)"
-msgstr ""
+msgstr "Capovolgi il riempimento (parti da destra a sinistra)"
 
 msgid "Spacing between rows"
-msgstr ""
+msgstr "Spaziatura tra le righe"
 
 msgid "Maximum fill stitch length"
-msgstr ""
+msgstr "Lunghezza massima del punto di riempimento"
 
 msgid "Stagger rows this many times before repeating"
-msgstr ""
+msgstr "Scorri le file questo tanto di volte prima di ripetere"
 
 msgid "Satin Column"
-msgstr ""
+msgstr "Colonna in raso"
 
 msgid "Custom satin column"
 msgstr ""
