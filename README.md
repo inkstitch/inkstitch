@@ -24,6 +24,7 @@ We are using the [Minimal Mistakes Theme](https://mmistakes.github.io/minimal-mi
 * `_docs` documentation
 * `_tutorials` tutorial main pages
 * `_tutorial` specific tutorials
+* `_developers` developers documentation
 * `_pages` static pages such as about, terms or sitemap
 * `assets` media files (images) and website styling (css)
 * `_data/navigation.yml` data for every navigation found in the website

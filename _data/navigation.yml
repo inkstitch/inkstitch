@@ -8,14 +8,13 @@ main:
     url: /tutorials/
   - title: "Get Help"
     url: /docs/get-help/
+  - title: "Get Involved"
+    url: /developers/introduction/
     
 # index + specific pages which have the sidebar option in the header
 pages:
   - title: "Features"
     url: /features/
-    children:
-      - title: "Basic Ink/Stitch Capabilities"
-        url: /features/
   - title: "Documentation"
     url: /docs/install/
     children:
@@ -36,11 +35,10 @@ pages:
         url: /tutorials/ressources/templates/
       - title: "Tutorials"
         url: /tutorials/
+  - title: "Get involved"
+    url: /developers/introduction/
   - title: "News"
     url: /news/
-    children:
-      - title: "Get Information on Updates and New Features"
-        url: /news/
 
 # documentation links
 docs:
@@ -128,4 +126,19 @@ tutorials:
     - title: "Video Tutorials"
       url: /tutorials/video/
   
-  
+# developers links
+developers:
+  - title: Get involved
+    url: /developers/introduction/
+  - title: Ink/Stitch
+    url: /developers/inkstitch/
+    children:
+    - title: Manual Setup
+      url: /developers/inkstitch/manual-setup/
+  - title: Documentation
+    url: /developers/documentation/
+  - title: Localization
+    url: /developers/localize/
+  - title: "Bug Reports"
+    url: /developers/report-bugs/
+      

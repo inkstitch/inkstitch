@@ -264,6 +264,9 @@ collections:
   tutorial:
     output: true
     permalink: /:collection/:path/
+  developers:
+    output: true
+    permalink: /:colleciton/:path/
 
 
 # Defaults
@@ -326,5 +329,17 @@ defaults:
       comments: false
       sidebar:
         nav: "tutorials"
+  # _developers
+  - scope:
+      path: ""
+      type: developers
+    values:
+      layout: single
+      read_time: false
+      author_profile: false
+      share: false
+      comments: false
+      sidebar:
+        nav: "developers"
 
 
