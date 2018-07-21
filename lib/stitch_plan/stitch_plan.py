@@ -1,6 +1,4 @@
 from .stitch import Stitch
-from .stop import process_stop
-from .trim import process_trim
 from .ties import add_ties
 from ..svg import PIXELS_PER_MM
 from ..utils.geometry import Point
@@ -26,26 +24,29 @@ def patches_to_stitch_plan(patches, collapse_len=3.0 * PIXELS_PER_MM):
         if not patch.stitches:
             continue
 
-        if color_block.color != patch.color or color_block.stop_after:
-            # add a color change (only if we didn't just do a "STOP after")
-            if not color_block.stop_after:
+        if color_block.color != patch.color:
+            if len(color_block) == 0:
+                # We just processed a stop, which created a new color block.
+                # We'll just claim this new block as ours:
+                color_block.color = patch.color
+            else:
+                # end the previous block with a color change
                 color_block.add_stitch(color_change=True)
 
-            color_block = stitch_plan.new_color_block(color=patch.color)
+                # make a new block of our color
+                color_block = stitch_plan.new_color_block(color=patch.color)
 
-        color_block.filter_duplicate_stitches()
         color_block.add_stitches(patch.stitches, no_ties=patch.stitch_as_is)
 
         if patch.trim_after:
             color_block.add_stitch(trim=True)
 
         if patch.stop_after:
-            process_stop(stitch_plan)
+            color_block.add_stitch(stop=True)
+            color_block = stitch_plan.new_color_block(color_block.color)
 
-            # process_stop() may have split the block into two
-            color_block = stitch_plan.last_color_block
-
-    add_ties(stitch_plan)
+    stitch_plan.filter_duplicate_stitches()
+    stitch_plan.add_ties()
 
     return stitch_plan
 
@@ -63,6 +64,14 @@ class StitchPlan(object):
 
     def add_color_block(self, color_block):
         self.color_blocks.append(color_block)
+
+    def filter_duplicate_stitches(self):
+        for color_block in self:
+            color_block.filter_duplicate_stitches()
+
+    def add_ties(self):
+        # see ties.py
+        add_ties(self)
 
     def __iter__(self):
         return iter(self.color_blocks)
@@ -198,12 +207,12 @@ class ColorBlock(object):
         stitches = [self.stitches[0]]
 
         for stitch in self.stitches[1:]:
-            if stitches[-1].jump or stitch.stop or stitch.trim:
-                # Don't consider jumps, stops, or trims as candidates for filtering
+            if stitches[-1].jump or stitch.stop or stitch.trim or stitch.color_change:
+                # Don't consider jumps, stops, color changes, or trims as candidates for filtering
                 pass
             else:
                 l = (stitch - stitches[-1]).length()
-                if l <= 0.1:
+                if l <= 0.1 * PIXELS_PER_MM:
                     # duplicate stitch, skip this one
                     continue
 
@@ -247,11 +256,3 @@ class ColorBlock(object):
         maxy = max(stitch.y for stitch in self)
 
         return minx, miny, maxx, maxy
-
-    def split_at(self, index):
-        """Split this color block into two at the specified stitch index"""
-
-        new_color_block = ColorBlock(self.color, self.stitches[index:])
-        del self.stitches[index:]
-
-        return new_color_block
