@@ -2,7 +2,7 @@
 title: "Install Ink/Stitch"
 permalink: /docs/install/
 excerpt: "How to quickly install Ink/Stitch."
-last_modified_at: 2018-06-04
+last_modified_at: 2018-07-21
 toc: true
 ---
 
@@ -60,16 +60,6 @@ $ tar zxf ~/Downloads/inkstitch-v1.0.0-Linux-x86_64.tar.gz
 
 ## Manual Setup
 
-### Python Dependencies
-A few python modules are needed.  In some cases this extension uses features that aren't available in the versions of the modules pre-packaged in distributions, so I recommend installing them directly with pip:
+It is possible to install Ink/Stitch manually. It is not recommended though - unless you want to help developing the extension.
+In this case, please have a look at the [developer documentation](http://localhost:4000/developers/inkstitch/manual-setup/) section.
 
-```
-pip install -r requirements.txt
-```
-
-### Extension Installation
-1. Clone the extension source: `git clone https://github.com/inkstitch/inkstitch`
-2. Install it as directed [here](https://inkscape.org/en/gallery/%3Dextension/)
-
-**Tipp:** Symbolically link into your git clone, which allows you to hack on the code. Changes to the Python code take effect the next time the extension is run.  Changes to the extension description files (`*.inx`) take effect the next time Inkscape is restarted.
-{: .notice--info }

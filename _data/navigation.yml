@@ -92,17 +92,8 @@ docs:
         url: /docs/bugs/
       - title: Error Messages
         url: /docs/error-messages/
-  - title: Get involved
-    url: /docs/get-involved/
-    children:
-      - title: "Bug Reports"
-        url: /docs/report-bugs/
-      - title: "Documentation"
-        url: /docs/get-involved/documentation/
-      - title: "Localization"
-        url: /docs/help/localize/
-      - title: "Developing Ink/Stitch"
-        url: /docs/help/develope/
+      - title: "Missing Translation"
+        url: /docs/localization/
     
 # tutorial links
 tutorials:

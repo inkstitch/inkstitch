@@ -17,4 +17,4 @@ Ink/Stitch and pyembroidery are written in [Python](https://www.python.org/) 2.<
 Print PDF, which will be displayed in your operating systems default browser, uses web languages such as HTML5, CSS and JQuery. It is build with the help of the [Jinja Template Framework](http://jinja.pocoo.org/).
 
 ## Developers Documentation
-* [Manual Setup](/developers/inkstitch/manul-setup/)
+* [Manual Setup](/developers/inkstitch/manual-setup/)
