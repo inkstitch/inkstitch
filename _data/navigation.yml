@@ -88,8 +88,6 @@ docs:
         url: /docs/get-help/
       - title: "F.A.Q."
         url: /docs/faq/
-      - title: "Known Bugs"
-        url: /docs/bugs/
       - title: Error Messages
         url: /docs/error-messages/
       - title: "Missing Translation"
