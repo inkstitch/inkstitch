@@ -2,8 +2,10 @@
 title: "Manual Setup"
 permalink: /developers/inkstitch/manual-setup/
 last_modified_at: 2018-07-21
-toc: true
+toc: false
 ---
+A manual setup will allow you to edit the code while running the extension.
+
 1. Clone the extension source
 
    ```
