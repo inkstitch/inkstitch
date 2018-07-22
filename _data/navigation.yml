@@ -124,6 +124,8 @@ developers:
     children:
     - title: Manual Setup
       url: /developers/inkstitch/manual-setup/
+    - title: Python Modules
+      url: /developers/inkstitch/python-modules/
   - title: Documentation
     url: /developers/documentation/
   - title: Localization

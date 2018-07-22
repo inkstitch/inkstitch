@@ -18,3 +18,4 @@ Print PDF, which will be displayed in your operating systems default browser, us
 
 ## Developers Documentation
 * [Manual Setup](/developers/inkstitch/manual-setup/)
+* [Python Modules](/developers/inkstitch/python-modules/)
