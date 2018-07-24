@@ -45,6 +45,10 @@ def patches_to_stitch_plan(patches, collapse_len=3.0 * PIXELS_PER_MM):
             color_block.add_stitch(stop=True)
             color_block = stitch_plan.new_color_block(color_block.color)
 
+    if len(color_block) == 0:
+        # last block ended in a stop, so now we have an empty block
+        del stitch_plan.color_blocks[-1]
+
     stitch_plan.filter_duplicate_stitches()
     stitch_plan.add_ties()
 
