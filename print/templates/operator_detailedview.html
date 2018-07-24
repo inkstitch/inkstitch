@@ -30,17 +30,15 @@
             <span>{{ _('Total stitch count') }}: {{job.num_stitches }}</span>
           </p>
           <p>
-            <span>{{ _('Total nr stops') }}: {{ job.num_stops }}</span>
-            <span>{{ _('Total nr trims') }}: {{ job.num_trims }}</span>
+            <span>{{ _('Total stops') }}: {{ job.num_stops }}</span>
+            <span>{{ _('Total trims') }}: {{ job.num_trims }}</span>
           </p>
           <p>
             <span></span>
           </p>
         </div>
-  
 
         {% for color_block in color_blocks %}
-
 
           <div class="opd-color-block">
             <p class="operator-svg operator-colorswatch">
@@ -64,13 +62,11 @@
               <span>{{ _('# stitches') }}: {{ color_block.num_stitches }}</span>
             </p>
             <p>
-              <span>{{ _('# stops') }}: {{ color_block.num_stops }}</span>
-              <span>{{ _('# trims') }}: {{ color_block.num_trims }}</span>
+              <span>{{ _('trims') }}: {{ color_block.num_trims }}</span>
+              <span>{{ _('stop after?') }}: {{ _("yes") if color_block.stop_after else _("no") }}</span>
             </p>
             <p>
               <span class="notes" contenteditable="true" data-field-name="operator-notes-block{{ loop.index }}" data-placeholder="{{ _("Enter operator notes...") }}"></span>
             </p>
           </div>
         {% endfor %}
-
-

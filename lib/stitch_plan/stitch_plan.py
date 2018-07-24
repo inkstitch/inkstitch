@@ -97,7 +97,7 @@ class StitchPlan(object):
 
     @property
     def num_stops(self):
-        return sum(block.num_stops for block in self)
+        return sum(1 for block in self if block.stop_after)
 
     @property
     def num_trims(self):
@@ -184,12 +184,6 @@ class ColorBlock(object):
     def num_stitches(self):
         """Number of stitches in this color block."""
         return len(self.stitches)
-
-    @property
-    def num_stops(self):
-        """Number of pauses in this color block."""
-
-        return sum(1 for stitch in self if stitch.stop)
 
     @property
     def num_trims(self):
