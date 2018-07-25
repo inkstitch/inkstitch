@@ -16,7 +16,7 @@ from ..svg import get_node_transform
 
 
 class Commands(InkstitchExtension):
-    COMMANDS = ["fill_start", "fill_end", "stop", "trim"]
+    COMMANDS = ["fill_start", "fill_end", "stop", "trim", "ignore"]
 
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)

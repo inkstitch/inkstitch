@@ -8,6 +8,7 @@
     <param name="fill_end" type="boolean" _gui-text="Fill ending position">false</param>
     <param name="stop" type="boolean" _gui-text="Stop after sewing this object">false</param>
     <param name="trim" type="boolean" _gui-text="Trim thread after sewing this object">false</param>
+    <param name="ignore" type="boolean" _gui-text="Ignore this object (do not stitch)">false</param>
     <param name="extension" type="string" gui-hidden="true">commands</param>
     <effect>
         <object-type>all</object-type>
