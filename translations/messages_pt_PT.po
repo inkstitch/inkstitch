@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-07-24 20:19-0400\n"
-"PO-Revision-Date: 2018-07-25 00:21\n"
+"POT-Creation-Date: 2018-07-25 21:18-0400\n"
+"PO-Revision-Date: 2018-07-26 01:31\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -390,7 +390,7 @@ msgstr ""
 msgid "Embroidery Simulation"
 msgstr "Simulação de Bordado"
 
-#: lib/extensions/zip.py:66
+#: lib/extensions/zip.py:52
 msgid "No embroidery file formats selected."
 msgstr ""
 
@@ -402,7 +402,7 @@ msgstr "Enchimento automático falhou. Verificar se a forma não é composta por
 msgid "Unexpected error while generating fill stitches. Please send your SVG file to lexelby@github."
 msgstr "Erro inesperado ao gerar pontos de enchimento. Por favor envie o seu SVG para lexelby@github."
 
-#: lib/svg/svg.py:87
+#: lib/svg/svg.py:90
 msgid "Stitch Plan"
 msgstr "Plano de pontos/bordado"
 
@@ -430,18 +430,27 @@ msgid "thread"
 msgstr "fio"
 
 #: print/templates/color_swatch.html:19 print/templates/color_swatch.html:43
-#: print/templates/operator_detailedview.html:64
+#: print/templates/operator_detailedview.html:62
 msgid "# stitches"
 msgstr "# pontos"
 
 #: print/templates/color_swatch.html:23 print/templates/color_swatch.html:44
-#: print/templates/operator_detailedview.html:67
-msgid "# stops"
-msgstr "# paragens"
+msgid "# trims"
+msgstr ""
 
 #: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
-#: print/templates/operator_detailedview.html:68
-msgid "# trims"
+#: print/templates/operator_detailedview.html:66
+msgid "stop after?"
+msgstr ""
+
+#: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
+#: print/templates/operator_detailedview.html:66
+msgid "yes"
+msgstr ""
+
+#: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
+#: print/templates/operator_detailedview.html:66
+msgid "no"
 msgstr ""
 
 #: print/templates/footer.html:2
@@ -522,20 +531,24 @@ msgstr "Número total de pontos"
 #: print/templates/operator_detailedview.html:33
 #: print/templates/operator_overview.html:8
 #: print/templates/print_overview.html:8
-msgid "Total nr stops"
+msgid "Total stops"
 msgstr ""
 
 #: print/templates/operator_detailedview.html:34
 #: print/templates/operator_overview.html:9
 #: print/templates/print_overview.html:9
-msgid "Total nr trims"
+msgid "Total trims"
 msgstr ""
 
-#: print/templates/operator_detailedview.html:63
+#: print/templates/operator_detailedview.html:61
 msgid "thread used"
 msgstr "fio usado"
 
-#: print/templates/operator_detailedview.html:71
+#: print/templates/operator_detailedview.html:65
+msgid "trims"
+msgstr ""
+
+#: print/templates/operator_detailedview.html:69
 msgid "Enter operator notes..."
 msgstr "Escreva notas do operador..."
 
