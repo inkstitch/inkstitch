@@ -99,7 +99,7 @@ tutorials:
     children:
       - title: "Artwork Gallery"
         url: /tutorials/inspiration/
-  - title: Ressources
+  - title: Resources
     children:
     - title: "Branding Guide"
       url: /tutorials/ressources/branding-guide/
