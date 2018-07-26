@@ -13,7 +13,7 @@ Ink/Stitch supports many embroidery formats. It can import and export files to t
 ### Writing
 DST, EXP, JEF, PEC, PES, VP3
 
-#### Reading
+### Reading
 100, 10o, BRO, DSB, DST, DSZ, EMD, EXP, INB, JEF, KSM, PEC, PES, SEW, SHV, STX, TAP, TBF, u01, VP3, XXX
 
 ## Import Embroidery Files
@@ -46,7 +46,7 @@ Hide other layers|Wether or not hide your original design layers while presentin
 Output File Format|Choose a file format that your embroidery machine can read
 Directory|Type your directory path, where you would like to save your file. By default, the directory used is the place where you installed the extension's Python files.
 
-**Info:** For file format conversion Ink/Stitch uses *libembroidery* from the [Embroidermodder](https://github.com/Embroidermodder/Embroidermodder) project.
+**Info:** For file format conversion Ink/Stitch uses [*pyembroidery*](https://github.com/inkstitch/pyembroidery).
 {: .notice--info }
 
 ## Batch Export
