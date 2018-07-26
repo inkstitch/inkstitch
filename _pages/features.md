@@ -40,9 +40,13 @@ sidebar:
   * automated installation of Inkscape palettes for use in your designs
   * thread names and catalog numbers included in PDF printouts
 
-### Supported File Formats:
+## Supported File Formats
 
-DST, XXX, PES, U00, EXP, VP3, BRO, COL, CSD, DAT, DSB, DSZ, EDR, EMD,  EXY, FXY, GT, HUS, INB, INF, JEF, KSM, MAX, MIT, NEW, OFM, PCD, PCM, PCQ, PCS, PEC, PHB, PHC, PLT, RGB, SEW, SHV, SST, STX, T01, T09, TAP, THR,  VIP, ZSK
+### Writing
+PEC, PES, EXP, DST, JEF, VP3
+
+### Reading
+PEC, PES, EXP, DST, JEF, VP3, XXX, SEW, u01, SHV, 10o, 100, BRO, DSB, DSZ, EMD, INB, TBF, KSM, TAP, STX
 
 ## Roadmap
 

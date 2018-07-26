@@ -1,6 +1,6 @@
 ---
 title: "Ink/Stitch Logo & Branding Guide"
-permalink: /tutorials/ressources/branding-guide/
+permalink: /tutorials/resources/branding-guide/
 excerpt: ""
 read_time: false
 ---

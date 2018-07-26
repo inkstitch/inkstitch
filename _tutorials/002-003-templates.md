@@ -1,6 +1,6 @@
 ---
 title: "Templates"
-permalink: /tutorials/ressources/templates/
+permalink: /tutorials/resources/templates/
 excerpt: ""
 read_time: false
 

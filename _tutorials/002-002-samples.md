@@ -1,6 +1,6 @@
 ---
 title: "Sample Files"
-permalink: /tutorials/ressources/samples/
+permalink: /tutorials/resources/samples/
 excerpt: ""
 read_time: false
 

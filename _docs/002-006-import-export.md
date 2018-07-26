@@ -10,7 +10,11 @@ Ink/Stitch supports many embroidery formats. It can import and export files to t
 
 ## Supported File Formats (A - Z):
 
-BRO, COL, CSD, DAT, DSB, DST, DSZ, EDR, EMD, EXP, EXY, FXY, GT, HUS, INB, INF, JEF, KSM, MAX, MIT, NEW, OFM, PCD, PCM, PCQ, PCS, PEC, PES, PHB, PHC, PLT, RGB, SEW, SHV, SST, STX, T01, T09, TAP, THR, U00, VIP, VP3, XXX, ZSK
+### Writing
+DST, EXP, JEF, PEC, PES, VP3
+
+#### Reading
+100, 10o, BRO, DSB, DST, DSZ, EMD, EXP, INB, JEF, KSM, PEC, PES, SEW, SHV, STX, TAP, TBF, u01, VP3, XXX
 
 ## Import Embroidery Files
 

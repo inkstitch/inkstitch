@@ -74,6 +74,6 @@ Windows|`C:\Users\%USERNAME%\AppData\Roaming\inkscape\templates`
 
 You should confirm the user folder in your inkscape preferences see the [FAQ](/docs/faq/#i-have-downloaded-and-unzipped-the-latest-release-where-do-i-put-it).
 
-**Tipp:** Get [predefined templates](/tutorials/ressources/templates/) from our tutorial section.
+**Tipp:** Get [predefined templates](/tutorials/resources/templates/) from our tutorial section.
 {: .notice--info }
 

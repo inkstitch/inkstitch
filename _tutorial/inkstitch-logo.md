@@ -1,5 +1,5 @@
 ---
-permalink: /tutorials/ressources/inkstitch-logo/
+permalink: /tutorials/resources/inkstitch-logo/
 title: "Ink/Stitch Logo & Branding Guide"
 last_modified_at: 2018-06-21
 excerpt: "Ink/Stitch logo as SVG file, digitized version and branding guide."

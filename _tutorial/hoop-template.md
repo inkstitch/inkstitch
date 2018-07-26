@@ -1,5 +1,5 @@
 ---
-permalink: /tutorials/ressources/hoop-template/
+permalink: /tutorials/resources/hoop-template/
 title: Hoop Template
 last_modified_at: 2018-05-23
 excerpt: "Template for multiple hoop sizes"
