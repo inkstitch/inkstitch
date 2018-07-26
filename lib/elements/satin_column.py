@@ -89,6 +89,17 @@ class SatinColumn(EmbroideryElement):
 
     @property
     @cache
+    def shape(self):
+        # This isn't used for satins at all, but other parts of the code
+        # may need to know the general shape of a satin column.
+
+        flattened = self.flatten(self.parse_path())
+        line_strings = [shgeo.LineString(path) for path in flattened]
+
+        return shgeo.MultiLineString(line_strings)
+
+    @property
+    @cache
     def csp(self):
         return self.parse_path()
 
@@ -97,6 +108,8 @@ class SatinColumn(EmbroideryElement):
     def flattened_beziers(self):
         if len(self.csp) == 2:
             return self.simple_flatten_beziers()
+        elif len(self.csp) < 2:
+            self.fatal(_("satin column: %(id)s: at least two subpaths required (%(num)d found)") % dict(num=len(self.csp), id=self.node.get('id')))
         else:
             return self.flatten_beziers_with_rungs()
 

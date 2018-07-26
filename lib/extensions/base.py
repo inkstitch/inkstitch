@@ -7,6 +7,7 @@ from collections import MutableMapping
 from ..svg.tags import *
 from ..elements import AutoFill, Fill, Stroke, SatinColumn, Polyline, EmbroideryElement
 from ..utils import cache
+from ..commands import is_command
 
 
 SVG_METADATA_TAG = inkex.addNS("metadata", "svg")
@@ -57,16 +58,12 @@ class InkStitchMetadata(MutableMapping):
 
     def __setitem__(self, name, value):
         item = self._find_item(name)
+        item.text = json.dumps(value)
 
-        if value:
-            item.text = json.dumps(value)
-        else:
-            item.getparent().remove(item)
-
-    def _find_item(self, name):
+    def _find_item(self, name, create=True):
         tag = inkex.addNS(name, "inkstitch")
         item = self.metadata.find(tag)
-        if item is None:
+        if item is None and create:
             item = inkex.etree.SubElement(self.metadata, tag)
 
         return item
@@ -80,9 +77,9 @@ class InkStitchMetadata(MutableMapping):
             return None
 
     def __delitem__(self, name):
-        item = self._find_item(name)
+        item = self._find_item(name, create=False)
 
-        if item:
+        if item is not None:
             self.metadata.remove(item)
 
     def __iter__(self):
@@ -111,7 +108,7 @@ class InkstitchExtension(inkex.Effect):
                 inkex.errormsg(_("No embroiderable paths selected."))
             else:
                 inkex.errormsg(_("No embroiderable paths found in document."))
-            inkex.errormsg(_("Tip: use Path -> Object to Path to convert non-paths before embroidering."))
+            inkex.errormsg(_("Tip: use Path -> Object to Path to convert non-paths."))
 
     def descendants(self, node):
         nodes = []
@@ -158,14 +155,15 @@ class InkstitchExtension(inkex.Effect):
             else:
                 classes = []
 
-                if element.get_style("fill"):
+                if element.get_style("fill", "black"):
                     if element.get_boolean_param("auto_fill", True):
                         classes.append(AutoFill)
                     else:
                         classes.append(Fill)
 
                 if element.get_style("stroke"):
-                    classes.append(Stroke)
+                    if not is_command(element.node):
+                        classes.append(Stroke)
 
                 if element.get_boolean_param("stroke_first", False):
                     classes.reverse()
@@ -199,6 +197,15 @@ class InkstitchExtension(inkex.Effect):
 
     def get_inkstitch_metadata(self):
         return InkStitchMetadata(self.document)
+
+    def get_base_file_name(self):
+        svg_filename = self.document.getroot().get(inkex.addNS('docname', 'sodipodi'), "embroidery.svg")
+
+        if svg_filename.endswith('.svg'):
+            svg_filename = svg_filename[:-4]
+
+        return svg_filename
+
 
     def parse(self):
         """Override inkex.Effect to add Ink/Stitch xml namespace"""

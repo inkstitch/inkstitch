@@ -4,7 +4,8 @@ from shapely import geometry as shgeo
 
 from ..i18n import _
 from ..utils import cache
-from ..svg import PIXELS_PER_MM, get_viewbox_transform, convert_length, get_doc_size
+from ..svg import PIXELS_PER_MM, convert_length, get_doc_size, apply_transforms
+from ..commands import find_commands
 
 # inkscape-provided utilities
 import simpletransform
@@ -29,12 +30,15 @@ class Patch:
         else:
             raise TypeError("Patch can only be added to another Patch")
 
+    def __len__(self):
+        # This method allows `len(patch)` and `if patch:
+        return len(self.stitches)
+
     def add_stitch(self, stitch):
         self.stitches.append(stitch)
 
     def reverse(self):
         return Patch(self.color, self.stitches[::-1])
-
 
 
 class Param(object):
@@ -132,10 +136,10 @@ class EmbroideryElement(object):
         self.node.set("embroider_%s" % name, str(value))
 
     @cache
-    def get_style(self, style_name):
+    def get_style(self, style_name, default=None):
         style = simplestyle.parseStyle(self.node.get("style"))
         if (style_name not in style):
-            return None
+            return default
         value = style[style_name]
         if value == 'none':
             return None
@@ -158,7 +162,7 @@ class EmbroideryElement(object):
     @property
     @cache
     def stroke_width(self):
-        width = self.get_style("stroke-width")
+        width = self.get_style("stroke-width", "1")
 
         if width is None:
             return 1.0
@@ -168,10 +172,6 @@ class EmbroideryElement(object):
 
     @property
     def path(self):
-        return cubicsuperpath.parsePath(self.node.get("d"))
-
-    @cache
-    def parse_path(self):
         # A CSP is a  "cubic superpath".
         #
         # A "path" is a sequence of strung-together bezier curves.
@@ -199,22 +199,40 @@ class EmbroideryElement(object):
         # In a path, each element in the 3-tuple is itself a tuple of (x, y).
         # Tuples all the way down.  Hasn't anyone heard of using classes?
 
-        path = self.path
+        return cubicsuperpath.parsePath(self.node.get("d"))
 
-        # start with the identity transform
-        transform = [[1.0, 0.0, 0.0], [0.0, 1.0, 0.0]]
+    @cache
+    def parse_path(self):
+        return apply_transforms(self.path, self.node)
 
-        # combine this node's transform with all parent groups' transforms
-        transform = simpletransform.composeParents(self.node, transform)
+    @property
+    def shape(self):
+        raise NotImplementedError("INTERNAL ERROR: %s must implement shape()", self.__class__)
 
-        # add in the transform implied by the viewBox
-        viewbox_transform = get_viewbox_transform(self.node.getroottree().getroot())
-        transform = simpletransform.composeTransform(viewbox_transform, transform)
+    @property
+    @cache
+    def commands(self):
+        return find_commands(self.node)
 
-        # apply the combined transform to this node's path
-        simpletransform.applyTransformToPath(transform, path)
+    @cache
+    def get_commands(self, command):
+        return [c for c in self.commands if c.command == command]
 
-        return path
+    @cache
+    def has_command(self, command):
+        return len(self.get_commands(command)) > 0
+
+    @cache
+    def get_command(self, command):
+        commands = self.get_commands(command)
+
+        if len(commands) == 1:
+            return commands[0]
+        elif len(commands) > 1:
+            raise ValueError(_("%(id)s has more than one command of type '%(command)s' linked to it") %
+                                dict(id=self.node.get(id), command=command))
+        else:
+            return None
 
     def strip_control_points(self, subpath):
         return [point for control_before, point, control_after in subpath]
@@ -228,22 +246,10 @@ class EmbroideryElement(object):
         return [self.strip_control_points(subpath) for subpath in path]
 
     @property
-    @param('trim_after',
-           _('TRIM after'),
-           tooltip=_('Trim thread after this object (for supported machines and file formats)'),
-           type='boolean',
-           default=False,
-           sort_index=1000)
     def trim_after(self):
         return self.get_boolean_param('trim_after', False)
 
     @property
-    @param('stop_after',
-           _('STOP after'),
-           tooltip=_('Add STOP instruction after this object (for supported machines and file formats)'),
-           type='boolean',
-           default=False,
-           sort_index=1000)
     def stop_after(self):
         return self.get_boolean_param('stop_after', False)
 
@@ -254,8 +260,8 @@ class EmbroideryElement(object):
         patches = self.to_patches(last_patch)
 
         if patches:
-            patches[-1].trim_after = self.trim_after
-            patches[-1].stop_after = self.stop_after
+            patches[-1].trim_after = self.has_command("trim") or self.trim_after
+            patches[-1].stop_after = self.has_command("stop") or self.stop_after
 
         return patches
 

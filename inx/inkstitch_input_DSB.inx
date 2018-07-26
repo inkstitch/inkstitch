@@ -7,7 +7,7 @@
     <input>
         <extension>.dsb</extension>
         <mimetype>application/x-embroidery-dsb</mimetype>
-        <_filetypename>Ink/Stitch: Barudan Embroidery Format (.dsb)</_filetypename>
+        <_filetypename>Ink/Stitch: Tajima(Barudan) Embroidery Format (.dsb)</_filetypename>
         <_filetypetooltip>convert DSB file to Ink/Stitch manual-stitch paths</_filetypetooltip>
     </input>
     <param name="extension" type="string" gui-hidden="true">input</param>

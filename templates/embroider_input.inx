@@ -15,4 +15,3 @@
         <command reldir="extensions" interpreter="python">inkstitch.py</command>
     </script>
 </inkscape-extension>
-

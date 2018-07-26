@@ -19,6 +19,7 @@ from ..stitch_plan import patches_to_stitch_plan
 from ..elements import EmbroideryElement, Fill, AutoFill, Stroke, SatinColumn
 from ..utils import save_stderr, restore_stderr
 from ..simulator import EmbroiderySimulator
+from ..commands import is_command
 
 
 def presets_path():
@@ -354,6 +355,9 @@ class SettingsFrame(wx.Frame):
         self.simulate_thread = None
         self.simulate_refresh_needed = Event()
 
+        # used when closing to avoid having the window reopen at the last second
+        self.disable_simulate_window = False
+
         wx.CallLater(1000, self.update_simulator)
 
         self.presets_box = wx.StaticBox(self, wx.ID_ANY, label=_("Presets"))
@@ -391,6 +395,9 @@ class SettingsFrame(wx.Frame):
         if self.simulate_window:
             self.simulate_window.stop()
             self.simulate_window.clear()
+
+        if self.disable_simulate_window:
+            return
 
         if not self.simulate_thread or not self.simulate_thread.is_alive():
             self.simulate_thread = Thread(target=self.simulate_worker)
@@ -586,6 +593,7 @@ class SettingsFrame(wx.Frame):
         self.close()
 
     def use_last(self, event):
+        self.disable_simulate_window = True
         self._load_preset("__LAST__")
         self.apply(event)
 
@@ -632,6 +640,9 @@ class SettingsFrame(wx.Frame):
         self.Layout()
         # end wxGlade
 
+class NoValidObjects(Exception):
+    pass
+
 class Params(InkstitchExtension):
     def __init__(self, *args, **kwargs):
         self.cancelled = False
@@ -645,7 +656,7 @@ class Params(InkstitchExtension):
             classes.append(AutoFill)
             classes.append(Fill)
 
-        if element.get_style("stroke"):
+        if element.get_style("stroke") and not is_command(node):
             classes.append(Stroke)
 
             if element.get_style("stroke-dasharray") is None:
@@ -689,6 +700,11 @@ class Params(InkstitchExtension):
 
     def create_tabs(self, parent):
         tabs = []
+        nodes_by_class = self.get_nodes_by_class()
+
+        if not nodes_by_class:
+            raise NoValidObjects()
+
         for cls, nodes in self.get_nodes_by_class():
             params = cls.get_params()
 
@@ -745,12 +761,15 @@ class Params(InkstitchExtension):
         self.cancelled = True
 
     def effect(self):
-        app = wx.App()
-        frame = SettingsFrame(tabs_factory=self.create_tabs, on_cancel=self.cancel)
-        frame.Show()
-        app.MainLoop()
+        try:
+            app = wx.App()
+            frame = SettingsFrame(tabs_factory=self.create_tabs, on_cancel=self.cancel)
+            frame.Show()
+            app.MainLoop()
 
-        if self.cancelled:
-            # This prevents the superclass from outputting the SVG, because we
-            # may have modified the DOM.
-            sys.exit(0)
+            if self.cancelled:
+                # This prevents the superclass from outputting the SVG, because we
+                # may have modified the DOM.
+                sys.exit(0)
+        except NoValidObjects:
+            self.no_elements_error()

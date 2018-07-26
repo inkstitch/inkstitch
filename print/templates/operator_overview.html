@@ -5,8 +5,8 @@
                     <div class="table">
                         <p><span>{{ _('Unique Colors') }}:</span><span>{{ job.num_colors }}</span></p>
                         <p><span>{{ _('Color Blocks') }}:</span><span>{{ job.num_color_blocks }}</span></p>
-                        <p><span>{{ _('Total nr stops') }}:</span><span>{{ job.num_stops }}</span></p>
-                        <p><span>{{ _('Total nr trims') }}:</span><span>{{ job.num_trims }}</span></p>
+                        <p><span>{{ _('Total stops') }}:</span><span>{{ job.num_stops }}</span></p>
+                        <p><span>{{ _('Total trims') }}:</span><span>{{ job.num_trims }}</span></p>
                     </div>
                 </div>
                 <div>
@@ -27,12 +27,7 @@
         <main>
             <figure class="inksimulation operator" data-field-name="operator-overview-transform" style="height: 210mm;" title="{{ _('Ctrl + Scroll to Zoom') }}">
                 {{ svg_overview|safe }}
-                <figcaption>{{ _('Scale') }} <span class="scale" data-field-name="svg-scale" contenteditable="true" data-placeholder=""></span>%</figcaption>
-                <div>
-                  <button class="svg-fit">{{ _('Fit') }}</button>
-                  <button class="svg-full">100%</button>
-                  <button class="svg-apply">{{ _('Apply to all') }}</button>
-                </div>
+                {% include 'ui_svg_action_buttons.html' %}
             </figure>
         </main>
         {% include 'footer.html' %}

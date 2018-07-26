@@ -37,9 +37,9 @@ install:
     set -e
     if [ -n "$BUILD" ]; then
       # Need this for inkex.py and friends
-      wget -q https://inkscape.org/en/gallery/item/11254/inkscape-0.92.2.tar.bz2
-      tar jxf inkscape-0.92.2.tar.bz2
-      rm inkscape-0.92.2.tar.bz2
+      wget -q https://inkscape.org/en/gallery/item/12187/inkscape-0.92.3.tar.bz2
+      tar jxf inkscape-0.92.3.tar.bz2
+      rm inkscape-0.92.3.tar.bz2
     fi
     if [ "$BUILD" = "linux" ]; then
       # For some bizarre reason, this build has been failing due to the
@@ -53,23 +53,20 @@ install:
       # for wxPython
       sudo apt-get install glib-networking
 
-      # for embroidermodder/libembroidery
-      sudo apt-get install swig python-dev
-
       # This is the same as the pypi module PyGObject.  We can't just do
       # "pip install PyGObject" because it depends on a version of
       # libgirepository1.0-dev that doesn't exist in Trusty.
       sudo apt-get install python-gi python-gi-cairo libgirepository1.0-dev
-    
+
       # wxPython doen't publish linux wheels in pypi
-      wget -q https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-14.04/wxPython-4.0.0b2-cp27-cp27mu-linux_x86_64.whl
-      pip install wxPython-4.0.0b2-cp27-cp27mu-linux_x86_64.whl
-        
+      wget -q https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-14.04/wxPython-4.0.3-cp27-cp27mu-linux_x86_64.whl
+      pip install wxPython-4.0.3-cp27-cp27mu-linux_x86_64.whl
+
       # We can't use the shapely wheel because it includes the geos
       # library but with a weird file name.  Details:
       # https://github.com/pyinstaller/pyinstaller/blob/61b1c75c2b0469b32d114298a63bf60b8d597e37/PyInstaller/hooks/hook-shapely.py#L34
       pip install --no-binary shapely -r requirements.txt
-    
+
       pip install pyinstaller
     elif [ "$BUILD" = "windows" ]; then
       set -x
@@ -82,10 +79,6 @@ install:
       sudo apt-get -q install -y wine
 
       export WINEDEBUG=-all
-
-      wget -q https://github.com/lexelby/inkstitch-build-objects/releases/download/v1.1.0/windows-libembroidery.tar.gz
-      tar zxf windows-libembroidery.tar.gz
-      rm windows-libembroidery.tar.gz
 
       wget -q http://download.microsoft.com/download/1/1/1/1116b75a-9ec3-481a-a3c8-1777b5381140/vcredist_x86.exe
       wine vcredist_x86.exe /q
@@ -161,21 +154,6 @@ script:
       flake8 . --count --exit-zero --select=E901,E999,F821,F822,F823 --show-source --statistics --exclude=embroidermodder
       flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics --exclude=embroidermodder
     elif [ "$BUILD" = "linux" -o "$BUILD" = "osx" ]; then
-      # something in travis's machinery breaks on OSX
-      [ "$BUILD" = "osx" ] && set +e
-
-      pushd embroidermodder/experimental
-
-      qmake swigpython.pro
-      make
-
-      if [ "$BUILD" = "osx" ]; then
-        ln -s _libembroidery.dylib python/binding/_libembroidery.so
-        install_name_tool -change /System/Library/Frameworks/Python.framework/Versions/2.7/Python /usr/local/Cellar/python@2/2.7.15/Frameworks/Python.framework/Versions/2.7/Python python/binding/_libembroidery.dylib
-      fi
-
-      popd
-
       make dist
     elif [ "$BUILD" = "windows" ]; then
       # work around some bug... pyinstaller? shapely? not sure.

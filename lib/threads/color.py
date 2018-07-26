@@ -1,7 +1,7 @@
 import simplestyle
 import re
 import colorsys
-
+from pyembroidery.EmbThread import EmbThread
 
 class ThreadColor(object):
     hex_str_re = re.compile('#([0-9a-z]{3}|[0-9a-z]{6})', re.I)
@@ -9,6 +9,12 @@ class ThreadColor(object):
     def __init__(self, color, name=None, number=None, manufacturer=None):
         if color is None:
             self.rgb = (0, 0, 0)
+        elif isinstance(color, EmbThread):
+            self.name = color.description
+            self.number = color.catalog_number
+            self.manufacturer = color.brand
+            self.rgb = (color.get_red(), color.get_green(), color.get_blue())
+            return
         elif isinstance(color, (list, tuple)):
             self.rgb = tuple(color)
         elif self.hex_str_re.match(color):
@@ -37,6 +43,15 @@ class ThreadColor(object):
 
     def to_hex_str(self):
         return "#%s" % self.hex_digits
+
+    @property
+    def pyembroidery_thread(self):
+        return {
+            "name": self.name,
+            "id": self.number,
+            "manufacturer": self.manufacturer,
+            "rgb": int(self.hex_digits, 16),
+        }
 
     @property
     def hex_digits(self):
@@ -73,6 +88,21 @@ class ThreadColor(object):
         # too much.
         if hls[1] > 0.85:
             hls[1] = 0.85
+
+        color = colorsys.hls_to_rgb(*hls)
+
+        # convert back to values in the range of 0-255
+        color = tuple(value * 255 for value in color)
+
+        return ThreadColor(color, name=self.name, number=self.number, manufacturer=self.manufacturer)
+
+    @property
+    def darker(self):
+        hls = list(colorsys.rgb_to_hls(*self.rgb_normalized))
+
+        # Capping lightness should make the color visible without changing it
+        # too much.
+        hls[1] *= 0.75
 
         color = colorsys.hls_to_rgb(*hls)
 

@@ -1,19 +1,14 @@
 #!/usr/bin/env python
 
 import sys
+import pyembroidery
 
-sys.path.append('embroidermodder/experimental/python/binding')
-from libembroidery import *
+formats = [format for format in pyembroidery.supported_formats() if 'writer' in format]
+formats.sort(key=lambda format: (format['category'] != 'embroidery', format['extension']))
 
-formatList = embFormatList_create()
-curFormat = formatList
-while(curFormat):
-    extension = embFormat_extension(curFormat)
-    description = embFormat_description(curFormat)
-    writerState = embFormat_writerState(curFormat)
+for format in formats:
+    tag = ""
+    if format['category'] != 'embroidery':
+        tag = " [DEBUG]"
 
-    if writerState.strip() and embFormat_type(curFormat) != EMBFORMAT_OBJECTONLY:
-        print '<_option value="%s">%s(%s)</_option>' % (extension[1:], description, extension.upper())
-
-    curFormat = curFormat.next
-
+    print '<_option value="%s">%s(%s)%s</_option>' % (format['extension'], format['description'], format['extension'].upper(), tag)

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-29 21:29-0400\n"
-"PO-Revision-Date: 2018-05-05 21:28-0400\n"
+"POT-Creation-Date: 2018-06-28 20:32-0400\n"
+"PO-Revision-Date: 2018-06-30 01:31\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -17,14 +17,178 @@ msgstr ""
 "X-Crowdin-File: /master/messages.po\n"
 "Language: fr_FR\n"
 
+msgid "Auto-Fill"
+msgstr "Remplissage automatique"
+
+msgid "Automatically routed fill stitching"
+msgstr "Remplir automatiquement la couture"
+
+msgid "Running stitch length (traversal between sections)"
+msgstr "Longueur du point de fonctionnement (parcours entre les sections)"
+
+msgid "Underlay"
+msgstr "Sous-couche"
+
+msgid "AutoFill Underlay"
+msgstr "Sous-couche de remplissage automatique"
+
+msgid "Fill angle (default: fill angle + 90 deg)"
+msgstr "Angle de remplissage (par défaut: angle de remplissage + 90 degrés)"
+
+msgid "Row spacing (default: 3x fill row spacing)"
+msgstr "Espacement des rangs (par défaut: 3 fois l'espacement des rangs de remplissage)"
+
+msgid "Max stitch length"
+msgstr "Longueur de point maximal"
+
+msgid "Inset"
+msgstr "Incrustation"
+
+msgid "Expand"
+msgstr "Elargir"
+
+#, python-format
+msgid "%(id)s has more than one command of type '%(command)s' linked to it"
+msgstr ""
+
+msgid "TRIM after"
+msgstr "TRIM après"
+
+msgid "Trim thread after this object (for supported machines and file formats)"
+msgstr "Couper le fil après cet objet (pour les machines et les formats de fichiers supportés)"
+
+msgid "STOP after"
+msgstr "STOP après"
+
+msgid "Add STOP instruction after this object (for supported machines and file formats)"
+msgstr "Ajouter une instruction STOP après cet objet (pour les machines et les formats de fichiers supportés)"
+
+msgid "Fill"
+msgstr "Remplir"
+
+msgid "Manually routed fill stitching"
+msgstr "Remplir automatiquement la couture"
+
+msgid "Angle of lines of stitches"
+msgstr "Angle des lignes de points"
+
+msgid "Flip fill (start right-to-left)"
+msgstr "Invertir remplissage (début droite vers la gauche)"
+
+msgid "Spacing between rows"
+msgstr "Espacement entre les lignes"
+
+msgid "Maximum fill stitch length"
+msgstr "Longueur maximale du point de remplissage"
+
+msgid "Stagger rows this many times before repeating"
+msgstr "Décaler les rangs autant de fois avant de répéter"
+
+msgid "Satin Column"
+msgstr "Colonne Satin"
+
+msgid "Custom satin column"
+msgstr "Colonne de satin personnalisée"
+
+msgid "Zig-zag spacing (peak-to-peak)"
+msgstr "Espacement Zig-Zag (crête à crête)"
+
+msgid "Pull compensation"
+msgstr "Compensation d'étirement"
+
+msgid "Contour underlay"
+msgstr "Sous-couche de contour"
+
+msgid "Contour Underlay"
+msgstr "Sous-couche de Contour"
+
+msgid "Stitch length"
+msgstr "Longueur de point"
+
+msgid "Contour underlay inset amount"
+msgstr "Montant de l'incrustation de la sous-couche de contour"
+
+msgid "Center-walk underlay"
+msgstr "Sous-couche de marche centrale"
+
+msgid "Center-Walk Underlay"
+msgstr "Sous-couche de Marche-centrale"
+
+msgid "Zig-zag underlay"
+msgstr "Sous-couche Zig-zag"
+
+msgid "Zig-zag Underlay"
+msgstr "Sous-couche Zig-zag"
+
+msgid "Zig-Zag spacing (peak-to-peak)"
+msgstr "Espacement Zig-Zag (crête à crête)"
+
+msgid "Inset amount (default: half of contour underlay inset)"
+msgstr "Montant de l'incrustation (par défaut: la moitié de l'incrustation de sous-couche de contour)"
+
+#, python-format
+msgid "satin column: %(id)s: at least two subpaths required (%(num)d found)"
+msgstr "colonne satinée : %(id)s: au moins deux sous-tracés requis (%(num)d trouvés)"
+
+msgid "One or more rails crosses itself, and this is not allowed.  Please split into multiple satin columns."
+msgstr "Un ou plusieurs rails se croisent, ce qui n'est pas autorisé. S'il vous plaît diviser en plusieurs colonnes de satin."
+
+msgid "satin column: One or more of the rungs doesn't intersect both rails."
+msgstr "colonne satinée: un ou plusieurs des échelons ne croisent pas les deux rails."
+
+msgid "Each rail should intersect both rungs once."
+msgstr "Chaque rail devrait croiser les deux échelons une fois."
+
+msgid "satin column: One or more of the rungs intersects the rails more than once."
+msgstr "colonne satinée: Un ou plusieurs échelons croisent les rails plus d'une fois."
+
+#, python-format
+msgid "satin column: object %s has a fill (but should not)"
+msgstr "colonne de satin: objet %s a un remplissage (mais ne devrait pas)"
+
+#, python-format
+msgid "satin column: object %(id)s has two paths with an unequal number of points (%(length1)d and %(length2)d)"
+msgstr "colonne de satin: l'objet %(id)s a deux chemins avec un nombre de points différents (%(length1)d et %(length2)d)"
+
+msgid "Satin stitch along paths"
+msgstr "Point en satin le long des chemins"
+
+msgid "Running stitch length"
+msgstr "Longueur de point courant"
+
+msgid "Repeats"
+msgstr "répétez"
+
+msgid "Manual stitch placement"
+msgstr "Placement manuel de points"
+
+msgid "Stitch every node in the path.  Stitch length and zig-zag spacing are ignored."
+msgstr "Broder chaque nœud dans le tracé.  La longueur de points et l’espacement du zig-zag sont ignorés."
+
+msgid "Legacy running stitch setting detected!\n\n"
+"It looks like you're using a stroke smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set your stroke to be dashed to indicate running stitch.  Any kind of dash will work."
+msgstr "Détection d'une définition obsolète de point droit !  Il semble que vous utilisez une largeur inférieure à 0,5 unités pour indiquer un point droit, qui est obsolète.  Au lieu de cela, veuillez configurer votre tracé avec des pointillés.  N’importe quel genre de trait fonctionne."
+
+msgid "No embroiderable paths selected."
+msgstr "Aucun chemin brodable sélectionné."
+
+msgid "No embroiderable paths found in document."
+msgstr "Aucun chemin brodable trouvé dans le document."
+
+msgid "Tip: use Path -> Object to Path to convert non-paths."
+msgstr ""
+
 msgid "\n\n"
 "Seeing a 'no such option' message?  Please restart Inkscape to fix."
 msgstr "Vous voyez un message 'aucune option' ? Veuillez redémarrer Inkscape pour corriger."
 
-msgid "Directory in which to install palettes:"
+msgid "Ink/Stitch can install files (\"add-ons\") that make it easier to use Inkscape to create machine embroidery designs.  These add-ons will be installed:"
 msgstr ""
 
-msgid "Choose another directory..."
+msgid "thread manufacturer color palettes"
+msgstr ""
+
+msgid "Ink/Stitch visual commands (Object -> Symbols...)"
 msgstr ""
 
 msgid "Install"
@@ -33,22 +197,22 @@ msgstr ""
 msgid "Cancel"
 msgstr "Quitter"
 
-msgid "Choose Inkscape palettes directory"
+msgid "Choose Inkscape directory"
 msgstr ""
 
-msgid "Thread palette installation failed"
+msgid "Inkscape add-on installation failed"
 msgstr ""
 
 msgid "Installation Failed"
 msgstr ""
 
-msgid "Thread palette files have been installed.  Please restart Inkscape to load the new palettes."
+msgid "Inkscape add-on files have been installed.  Please restart Inkscape to load the new add-ons."
 msgstr ""
 
 msgid "Installation Completed"
 msgstr ""
 
-msgid "Ink/Stitch Thread Palette Installer"
+msgid "Ink/Stitch Add-ons Installer"
 msgstr ""
 
 msgid "These settings will be applied to 1 object."
@@ -135,165 +299,7 @@ msgstr "Imprimer Ink/Stitch"
 msgid "Embroidery Simulation"
 msgstr "Simulation de broderie"
 
-#, python-format
-msgid "parseLengthWithUnits: unknown unit %s"
-msgstr "analyser Longueur avec Unités: unité inconnue %s"
-
-#, python-format
-msgid "Unknown unit: %s"
-msgstr "Unité inconnue: %s"
-
-msgid "No embroiderable paths selected."
-msgstr "Aucun chemin brodable sélectionné."
-
-msgid "No embroiderable paths found in document."
-msgstr "Aucun chemin brodable trouvé dans le document."
-
-msgid "Tip: use Path -> Object to Path to convert non-paths before embroidering."
-msgstr "Astuce: utilisez Path -> Object to Path pour convertir les non-chemins avant de broder."
-
-msgid "Stitch Plan"
-msgstr ""
-
-msgid "Auto-Fill"
-msgstr "Remplissage automatique"
-
-msgid "Automatically routed fill stitching"
-msgstr "Remplir automatiquement la couture"
-
-msgid "Running stitch length (traversal between sections)"
-msgstr "Longueur du point de fonctionnement (parcours entre les sections)"
-
-msgid "Underlay"
-msgstr "Sous-couche"
-
-msgid "AutoFill Underlay"
-msgstr "Sous-couche de remplissage automatique"
-
-msgid "Fill angle (default: fill angle + 90 deg)"
-msgstr "Angle de remplissage (par défaut: angle de remplissage + 90 degrés)"
-
-msgid "Row spacing (default: 3x fill row spacing)"
-msgstr "Espacement des rangs (par défaut: 3 fois l'espacement des rangs de remplissage)"
-
-msgid "Max stitch length"
-msgstr "Longueur de point maximal"
-
-msgid "Inset"
-msgstr ""
-
-msgid "TRIM after"
-msgstr "TRIM après"
-
-msgid "Trim thread after this object (for supported machines and file formats)"
-msgstr "Couper le fil après cet objet (pour les machines et les formats de fichiers supportés)"
-
-msgid "STOP after"
-msgstr "STOP après"
-
-msgid "Add STOP instruction after this object (for supported machines and file formats)"
-msgstr "Ajouter une instruction STOP après cet objet (pour les machines et les formats de fichiers supportés)"
-
-msgid "Fill"
-msgstr "Remplir"
-
-msgid "Manually routed fill stitching"
-msgstr "Remplir automatiquement la couture"
-
-msgid "Angle of lines of stitches"
-msgstr "Angle des lignes de points"
-
-msgid "Flip fill (start right-to-left)"
-msgstr ""
-
-msgid "Spacing between rows"
-msgstr "Espacement entre les lignes"
-
-msgid "Maximum fill stitch length"
-msgstr "Longueur maximale du point de remplissage"
-
-msgid "Stagger rows this many times before repeating"
-msgstr "Décaler les rangs autant de fois avant de répéter"
-
-msgid "Satin Column"
-msgstr "Colonne Satin"
-
-msgid "Custom satin column"
-msgstr "Colonne de satin personnalisée"
-
-msgid "Zig-zag spacing (peak-to-peak)"
-msgstr "Espacement Zig-Zag (crête à crête)"
-
-msgid "Pull compensation"
-msgstr ""
-
-msgid "Contour underlay"
-msgstr "Sous-couche de contour"
-
-msgid "Contour Underlay"
-msgstr "Sous-couche de Contour"
-
-msgid "Stitch length"
-msgstr "Longueur de point"
-
-msgid "Contour underlay inset amount"
-msgstr ""
-
-msgid "Center-walk underlay"
-msgstr "Sous-couche de marche centrale"
-
-msgid "Center-Walk Underlay"
-msgstr "Sous-couche de Marche-centrale"
-
-msgid "Zig-zag underlay"
-msgstr "Sous-couche Zig-zag"
-
-msgid "Zig-zag Underlay"
-msgstr "Sous-couche Zig-zag"
-
-msgid "Zig-Zag spacing (peak-to-peak)"
-msgstr "Espacement Zig-Zag (crête à crête)"
-
-msgid "Inset amount (default: half of contour underlay inset)"
-msgstr "Montant de l'incrustation (par défaut: la moitié de l'incrustation de sous-couche de contour)"
-
-msgid "One or more rails crosses itself, and this is not allowed.  Please split into multiple satin columns."
-msgstr "Un ou plusieurs rails se croisent, ce qui n'est pas autorisé. S'il vous plaît diviser en plusieurs colonnes de satin."
-
-msgid "satin column: One or more of the rungs doesn't intersect both rails."
-msgstr "colonne satinée: un ou plusieurs des échelons ne croisent pas les deux rails."
-
-msgid "Each rail should intersect both rungs once."
-msgstr "Chaque rail devrait croiser les deux échelons une fois."
-
-msgid "satin column: One or more of the rungs intersects the rails more than once."
-msgstr "colonne satinée: Un ou plusieurs échelons croisent les rails plus d'une fois."
-
-#, python-format
-msgid "satin column: object %s has a fill (but should not)"
-msgstr "colonne de satin: objet %s a un remplissage (mais ne devrait pas)"
-
-#, python-format
-msgid "satin column: object %(id)s has two paths with an unequal number of points (%(length1)d and %(length2)d)"
-msgstr "colonne de satin: l'objet %(id)s a deux chemins avec un nombre de points différents (%(length1)d et %(length2)d)"
-
-msgid "Satin stitch along paths"
-msgstr "Point en satin le long des chemins"
-
-msgid "Running stitch length"
-msgstr "Longueur de point courant"
-
-msgid "Repeats"
-msgstr "répétez"
-
-msgid "Manual stitch placement"
-msgstr ""
-
-msgid "Stitch every node in the path.  Stitch length and zig-zag spacing are ignored."
-msgstr ""
-
-msgid "Legacy running stitch setting detected!\n\n"
-"It looks like you're using a stroke smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set your stroke to be dashed to indicate running stitch.  Any kind of dash will work."
+msgid "No embroidery file formats selected."
 msgstr ""
 
 msgid "Unable to autofill.  This most often happens because your shape is made up of multiple sections that aren't connected."
@@ -301,6 +307,17 @@ msgstr "Impossible de remplir automatiquement. Cela arrive le plus souvent parce
 
 msgid "Unexpected error while generating fill stitches. Please send your SVG file to lexelby@github."
 msgstr "Erreur inattendue lors de la génération des points de remplissage. Veuillez envoyer votre fichier SVG à lexelby@github."
+
+msgid "Stitch Plan"
+msgstr ""
+
+#, python-format
+msgid "parseLengthWithUnits: unknown unit %s"
+msgstr "analyser Longueur avec Unités: unité inconnue %s"
+
+#, python-format
+msgid "Unknown unit: %s"
+msgstr "Unité inconnue: %s"
 
 msgid "Color"
 msgstr "Couleur"

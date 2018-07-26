@@ -63,27 +63,65 @@ class AutoFill(Fill):
         return self.get_float_param("fill_underlay_max_stitch_length_mm") or self.max_stitch_length
 
     @property
-    @param('fill_underlay_inset_mm', _('Inset'), unit='mm', group=_('AutoFill Underlay'), type='float', default=0)
+    @param('fill_underlay_inset_mm',
+           _('Inset'),
+           tooltip='Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill.',
+           unit='mm',
+           group=_('AutoFill Underlay'),
+           type='float',
+           default=0)
     def fill_underlay_inset(self):
         return self.get_float_param('fill_underlay_inset_mm', 0)
 
     @property
-    def underlay_shape(self):
-        if self.fill_underlay_inset:
-            shape = self.shape.buffer(-self.fill_underlay_inset)
+    @param('expand_mm',
+           _('Expand'),
+           tooltip='Expand the shape before fill stitching, to compensate for gaps between shapes.',
+           unit='mm',
+           type='float',
+           default=0)
+    def expand(self):
+        return self.get_float_param('expand_mm', 0)
+
+    def shrink_or_grow_shape(self, amount):
+        if amount:
+            shape = self.shape.buffer(amount)
             if not isinstance(shape, shgeo.MultiPolygon):
                 shape = shgeo.MultiPolygon([shape])
             return shape
         else:
             return self.shape
 
+    @property
+    def underlay_shape(self):
+        return self.shrink_or_grow_shape(-self.fill_underlay_inset)
+
+    @property
+    def fill_shape(self):
+        return self.shrink_or_grow_shape(self.expand)
+
+    def get_starting_point(self, last_patch):
+        # If there is a "fill_start" Command, then use that; otherwise pick
+        # the point closest to the end of the last patch.
+
+        if self.get_command('fill_start'):
+            return self.get_command('fill_start').target_point
+        elif last_patch:
+            return last_patch.stitches[-1]
+        else:
+            return None
+
+    def get_ending_point(self):
+        if self.get_command('fill_end'):
+            return self.get_command('fill_end').target_point
+        else:
+            return None
+
     def to_patches(self, last_patch):
         stitches = []
 
-        if last_patch is None:
-            starting_point = None
-        else:
-            starting_point = last_patch.stitches[-1]
+        starting_point = self.get_starting_point(last_patch)
+        ending_point = self.get_ending_point()
 
         if self.fill_underlay:
             stitches.extend(auto_fill(self.underlay_shape,
@@ -96,13 +134,14 @@ class AutoFill(Fill):
                                       starting_point))
             starting_point = stitches[-1]
 
-        stitches.extend(auto_fill(self.shape,
+        stitches.extend(auto_fill(self.fill_shape,
                                   self.angle,
                                   self.row_spacing,
                                   self.end_row_spacing,
                                   self.max_stitch_length,
                                   self.running_stitch_length,
                                   self.staggers,
-                                  starting_point))
+                                  starting_point,
+                                  ending_point))
 
         return [Patch(stitches=stitches, color=self.color)]

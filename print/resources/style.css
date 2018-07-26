@@ -42,65 +42,6 @@
   src: url(barlow-condensed-extra-bold.ttf) format('truetype');
 }
 
-@media screen {
-    .page {
-        margin-top: 20mm !important;
-        outline: 1px dotted grey;
-    }
-
-    .header-field::before {
-        content: attr(data-label);
-        padding-right: 0.5em;
-    }
-
-    [contenteditable=true]:empty::after{
-      content: attr(data-placeholder);
-      color: rgb(200, 200, 200);
-      font-weight: normal;
-    }
-}
-
-@media print {
-    body {
-      margin-bottom: 0 !important;
-    }
-
-    .page {
-        page-break-after: always;
-        margin: 0 !important;
-    }
-
-    figure.inksimulation div {
-      display: none;
-    }
-
-    .ui {
-      display: none;
-    }
-
-    #settings-ui {
-      display: none !important;
-    }
-
-    #errors {
-      display: none !important;
-    }
-
-    .header-field:not(:empty)::before {
-        content: attr(data-label);
-        padding-right: 0.5em;
-    }
-
-    span.logo-instructions {
-      display: none;
-    }
-}
-
-@page {
-    size: auto;   /* auto is the initial value */
-    margin: 0;
-}
-
 body {
     font-family: "Barlow", sans-serif;
     font-size: 8pt;
@@ -131,7 +72,24 @@ body {
     height: 292mm;
     padding: 15mm;
   }
+  
+  .page.client-overview.a4 header, .page.operator-overview.a4 header {
+    height: 50mm;
+    flex-direction: row;
+  }
+  
+  .page.client-overview.a4 div.job-details, .page.operator-overview.a4 div.job-details {
+    width: 100%;
+  }
 
+  .page.client-overview.a4 .client-overview-main figure.inksimulation {
+    height: 150mm;
+  }
+  
+  .page.client-overview.a4 figure.brandlogo, .page.operator-overview.a4 figure.brandlogo {
+    margin: -6mm 2.5mm;
+  }
+  
 /* Settings */
 
   .ui {
@@ -230,9 +188,71 @@ body {
     border-radius: 5px;
     cursor: pointer;
   }
+  
+  #settings-ui #tabs {
+    margin-left: 20px;
+    z-index: 1;
+  }
+  
+  #settings-ui button {
+    background: transparent;
+    border: 1px solid #413232;
+    padding: 5px;
+  }
+  
+  #settings-ui button.active {
+    border-bottom: 1px solid white;
+  }
+  
+  #settings-ui #ui-design {
+    display: none;
+  }
+  
+  #settings-ui > #fieldsets-ui > fieldset > legend {
+    display: none;
+  }
 
   #settings-ui fieldset {
+    margin-top: -1px;
     margin-bottom: 1em;
+    border: 1px solid rgb(80,80,80);
+    z-index: 2;
+  }
+  
+  #settings-ui div {
+    position: relative;
+  }
+  
+  #settings-ui .select-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  #settings-ui select {
+    margin-left: 1em;
+    height: 35px;
+    padding: 0px 25px 0 5px;
+    font-size: 16px;
+    background-color: transparent;
+    border: 1px solid rgb(80,80,80);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  
+  #settings-ui select::-ms-expand {
+    display: none;
+  }
+  
+  #settings-ui .select-container::after {
+    content: '▾';
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0 5px;
+    border-left: 1px solid rgb(80,80,80);
+    line-height: 35px;
+    pointer-events: none;
   }
 
   #modal-background {
@@ -287,8 +307,8 @@ body {
     display: block;
     width: 100%;
     height: 100%;
-    line-height: 30mm;
     text-align: center;
+    position: relative;
   }
 
   figure.brandlogo img {
@@ -304,18 +324,19 @@ body {
   #logo-picker {
     width: 0px;
     height: 0px;
-    opacity: 0%;
+    opacity: 0;
   }
 
   .logo-instructions {
-    white-space: nowrap;
-
-    /* chrome ignores this :(
+    display: block;
     text-align: center;
-    */
-
+    font-weight: bold;
     font-size: 10px;
-    color: rgb(192, 192, 192);
+    color: rgb(117, 117, 117);
+    background: rgba(255,255,255, 0.8);
+    position: absolute;
+    bottom: 3mm;
+    cursor: pointer;
   }
 
   .operator-detailedview figure.brandlogo {
@@ -473,6 +494,24 @@ body {
     border: none;
     background: grey;
     color: white;
+    display: inline-block;
+    font-size: 16px;
+    font-family: "Barlow", sans-serif;
+    padding-left: 3px;
+    padding-right: 3px;
+    margin: 0px 1px 0px 1px;
+  }
+
+  input.realistic {
+    transform: scale(0.7);
+    margin: 0;
+    vertical-align: bottom;
+  }
+
+  /* prevents Chrome from sending a double event for the checkbox
+     and the containing <button> */
+  .realistic {
+    pointer-events: none;
   }
 
 /* Color Swatches */
@@ -577,26 +616,26 @@ body {
     height: 230mm;
   }
 
-  .operator-job-info {
+  .operator-detailedview.small .operator-job-info {
     display: table;
     width: 100%;
   }
 
-  .operator-job-info div {
+  .operator-detailedview.small .operator-job-info div {
     display: table-row;
   }
 
-  div.job-headline {
+  .operator-detailedview.small div.job-headline {
     display: table-header-group;
     font-size: 9pt;
     font-weight: bold;
   }
 
-  div.job-headline p {
+  .operator-detailedview.small div.job-headline p {
     height: 1em;
   }
 
-  .operator-job-info p {
+  .operator-detailedview.small .operator-job-info p {
     height: 15mm;
     max-width: 15mm;
     display: table-cell;
@@ -606,11 +645,11 @@ body {
     border: 1px solid rgb(239,239,239);
   }
 
-  .operator-job-info span {
+  .operator-detailedview.small .operator-job-info span {
     display: block;
   }
 
-  .operator-job-info span.color-index {
+  .operator-detailedview.small .operator-job-info span.color-index {
      position: absolute;
      top: 0;
      left: 0;
@@ -618,25 +657,126 @@ body {
      width: 10mm;
    }
 
-  .operator-svg.operator-colorswatch {
-    width: 15mm;
+  .operator-detailedview.small .operator-svg.operator-colorswatch {
+    width: 10mm;
   }
 
-  .operator-svg.operator-preview {
-    min-width: 15mm;
-    max-width: 20mm;
+  .operator-detailedview.small .operator-svg.operator-preview {
+    width: 15mm;
     height: 15mm;
   }
 
-  .operator-svg svg {
+  .operator-detailedview.small .operator-svg svg {
     position: absolute;
     top: 0;
     left: 0;
-    width: auto;
-    max-width: 30mm;
+    right: 0;
+    width: 100%;
     height: 100%;
   }
+  
+  /* opd medium/large thumbnails */
+  
+  .operator-detailedview.medium div.job-headline,
+  .operator-detailedview.large div.job-headline {
+    display: none;
+  }
+  
+  .opd-color-block.medium,
+  .opd-color-block.large {
+    overflow: hidden;
+    position: relative;
+    border: 0.5mm solid rgb(239,239,239);
+  }
+  
+  .opd-color-block.medium .operator-colorswatch,
+  .opd-color-block.large .operator-colorswatch {
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 10mm;
+    height: 10mm;
+    border-right: 0.5mm solid rgb(239,239,239);
+    border-bottom: 0.5mm solid rgb(239,239,239);
+  }
+  
+  .opd-color-block.medium .operator-colorswatch svg,
+  .opd-color-block.medium .opd-summary p:first-child span,
+  .opd-color-block.medium .operator-preview svg,
+  .opd-color-block.large .operator-colorswatch svg,
+  .opd-color-block.large .opd-summary p:first-child span,
+  .opd-color-block.large .operator-preview svg {
+    height: 100%;
+    width: 100%;
+  }
+  
+  /* opd medium thumbnails */
+  
+  .opd-color-block.medium {
+    display: inline-block;
+    float: left;
+    margin: 1mm;
+  }
+  
+  .opd-color-block.medium p {
+    margin: 0 auto;
+  }
+  
+  .opd-color-block.medium p:last-child {
+    margin-bottom: 1mm;
+  }
+  
+  .opd-color-block.medium .operator-preview {
+    margin: 1mm auto 0 auto;
+  }
+  
+  .opd-color-block.medium.opd-summary .operator-colorswatch {
+    display: none;
+  }
+  
+  .opd-color-block.medium span::before {
+    content: ' \00B7 ';
+    line-height: 0;
+    display: inline-block;
+    margin: 0 1mm;
+    vertical-align: super;
+  }
+  
+  .opd-color-block.medium span:first-child::before {
+    content: '';
+  }
+  
+  /* opd large thumbnails */
+  
+  .opd-color-block.large {
+    display: block;
+    margin: 5mm 0;
+  }
+  
+  .opd-color-block.large:first-child {
+    margin-top: 0;
+  }
 
+  .opd-color-block.large .operator-preview {
+    margin: 0;
+  }
+  
+  .opd-color-block.large .operator-preview {
+    float: left;
+  }
+  
+  .opd-color-block.large p {
+    text-align: left;
+  }
+  
+  .opd-color-block.large p:nth-child(3) {
+    margin-top: 5mm;
+  }
+  
+  .opd-color-block.large span {
+    display: block;
+  }
 
 /* Footer */
 
@@ -808,3 +948,62 @@ body {
       height: calc(100% / 5);
       width: calc(100% / 12);
   }
+  
+@media screen {
+  .page {
+      margin-top: 20mm !important;
+      outline: 1px dotted grey;
+  }
+
+  .header-field::before {
+      content: attr(data-label);
+      padding-right: 0.5em;
+  }
+
+  [contenteditable=true]:empty::after{
+    content: attr(data-placeholder);
+    color: rgb(200, 200, 200);
+    font-weight: normal;
+  }
+}
+
+@media print {
+    body {
+      margin-bottom: 0 !important;
+    }
+
+    .page {
+        page-break-after: always;
+        margin: 0 !important;
+    }
+
+    figure.inksimulation div {
+      display: none;
+    }
+
+    .ui {
+      display: none;
+    }
+
+    #settings-ui {
+      display: none !important;
+    }
+
+    #errors {
+      display: none !important;
+    }
+
+    .header-field:not(:empty)::before {
+        content: attr(data-label);
+        padding-right: 0.5em;
+    }
+
+    span.logo-instructions {
+      display: none;
+    }
+}
+
+@page {
+    size: auto;   /* auto is the initial value */
+    margin: 0;
+}

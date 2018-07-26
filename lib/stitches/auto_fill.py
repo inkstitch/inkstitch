@@ -2,7 +2,7 @@ import sys
 import shapely
 import networkx
 import math
-from itertools import groupby
+from itertools import groupby, izip
 from collections import deque
 
 from .fill import intersect_region_with_grating, row_num, stitch_row
@@ -14,18 +14,38 @@ from ..utils.geometry import Point as InkstitchPoint
 class MaxQueueLengthExceeded(Exception):
     pass
 
+class PathEdge(object):
+    OUTLINE_KEYS = ("outline", "extra", "initial")
+    SEGMENT_KEY = "segment"
 
-def auto_fill(shape, angle, row_spacing, end_row_spacing, max_stitch_length, running_stitch_length, staggers, starting_point=None):
+    def __init__(self, nodes, key):
+        self.nodes = nodes
+        self._sorted_nodes = tuple(sorted(self.nodes))
+        self.key = key
+
+    def __getitem__(self, item):
+        return self.nodes[item]
+
+    def __hash__(self):
+        return hash((self._sorted_nodes, self.key))
+
+    def __eq__(self, other):
+        return self._sorted_nodes == other._sorted_nodes and self.key == other.key
+
+    def is_outline(self):
+        return self.key in self.OUTLINE_KEYS
+
+    def is_segment(self):
+        return self.key == self.SEGMENT_KEY
+
+def auto_fill(shape, angle, row_spacing, end_row_spacing, max_stitch_length, running_stitch_length, staggers, starting_point, ending_point=None):
     stitches = []
 
     rows_of_segments = intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing)
     segments = [segment for row in rows_of_segments for segment in row]
 
     graph = build_graph(shape, segments, angle, row_spacing)
-    path = find_stitch_path(graph, segments)
-
-    if starting_point:
-        stitches.extend(connect_points(shape, starting_point, path[0][0], running_stitch_length))
+    path = find_stitch_path(graph, segments, starting_point, ending_point)
 
     stitches.extend(path_to_stitches(graph, path, shape, angle, row_spacing, max_stitch_length, running_stitch_length, staggers))
 
@@ -134,8 +154,6 @@ def build_graph(shape, segments, angle, row_spacing):
         else:
             edge_set = 1
 
-        #print >> sys.stderr, outline_index, "es", edge_set, "rn", row_num, inkstitch.Point(*nodes[0]) * self.north(angle), inkstitch.Point(*nodes[1]) * self.north(angle)
-
         # add an edge between each successive node
         for i, (node1, node2) in enumerate(zip(nodes, nodes[1:] + [nodes[0]])):
             graph.add_edge(node1, node2, key="outline")
@@ -157,14 +175,20 @@ def node_list_to_edge_list(node_list):
 
 def bfs_for_loop(graph, starting_node, max_queue_length=2000):
     to_search = deque()
-    to_search.appendleft(([starting_node], set(), 0))
+    to_search.append((None, set()))
 
     while to_search:
         if len(to_search) > max_queue_length:
             raise MaxQueueLengthExceeded()
 
-        path, visited_edges, visited_segments = to_search.pop()
-        ending_node = path[-1]
+        path, visited_edges = to_search.pop()
+
+        if path is None:
+            # This is the very first time through the loop, so initialize.
+            path = []
+            ending_node = starting_node
+        else:
+            ending_node = path[-1][-1]
 
         # get a list of neighbors paired with the key of the edge I can follow to get there
         neighbors = [
@@ -178,26 +202,21 @@ def bfs_for_loop(graph, starting_node, max_queue_length=2000):
 
         for next_node, key in neighbors:
             # skip if I've already followed this edge
-            edge = (tuple(sorted((ending_node, next_node))), key)
+            edge = PathEdge((ending_node, next_node), key)
             if edge in visited_edges:
                 continue
 
-            new_path = path + [next_node]
-
-            if key == "segment":
-                new_visited_segments = visited_segments + 1
-            else:
-                new_visited_segments = visited_segments
+            new_path = path + [edge]
 
             if next_node == starting_node:
                 # ignore trivial loops (down and back a doubled edge)
                 if len(new_path) > 3:
-                    return node_list_to_edge_list(new_path), new_visited_segments
+                    return new_path
 
             new_visited_edges = visited_edges.copy()
             new_visited_edges.add(edge)
 
-            to_search.appendleft((new_path, new_visited_edges, new_visited_segments))
+            to_search.appendleft((new_path, new_visited_edges))
 
 
 def find_loop(graph, starting_nodes):
@@ -216,14 +235,6 @@ def find_loop(graph, starting_nodes):
     somewhere else.
     """
 
-    #loop = self.simple_loop(graph, starting_nodes[-2])
-
-    #if loop:
-    #    print >> sys.stderr, "simple_loop success"
-    #    starting_nodes.pop()
-    #    starting_nodes.pop()
-    #    return loop
-
     loop = None
     retry = []
     max_queue_length = 2000
@@ -231,7 +242,6 @@ def find_loop(graph, starting_nodes):
     while not loop:
         while not loop and starting_nodes:
             starting_node = starting_nodes.pop()
-            #print >> sys.stderr, "find loop from", starting_node
 
             try:
                 # Note: if bfs_for_loop() returns None, no loop can be
@@ -240,12 +250,7 @@ def find_loop(graph, starting_nodes):
                 # case we discard that node and try the next.
                 loop = bfs_for_loop(graph, starting_node, max_queue_length)
 
-                #if not loop:
-                    #print >> dbg, "failed on", starting_node
-                    #dbg.flush()
             except MaxQueueLengthExceeded:
-                #print >> dbg, "gave up on", starting_node
-                #dbg.flush()
                 # We're giving up on this node for now.  We could try
                 # this node again later, so add it to the bottm of the
                 # stack.
@@ -272,7 +277,7 @@ def insert_loop(path, loop):
     start and end point.  The points will be specified in order, such
     that they will look like this:
 
-    ((p1, p2), (p2, p3), (p3, p4) ... (pn, p1))
+    ((p1, p2), (p2, p3), (p3, p4), ...)
 
     path will be modified in place.
     """
@@ -282,11 +287,59 @@ def insert_loop(path, loop):
     for i, (start, end) in enumerate(path):
         if start == loop_start:
             break
+    else:
+        # if we didn't find the start of the loop in the list at all, it must
+        # be the endpoint of the last segment
+        i += 1
 
     path[i:i] = loop
 
+def nearest_node_on_outline(graph, point, outline_index=0):
+    point = shapely.geometry.Point(*point)
+    outline_nodes = [node for node, data in graph.nodes(data=True) if data['index'] == outline_index]
+    nearest = min(outline_nodes, key=lambda node: shapely.geometry.Point(*node).distance(point))
 
-def find_stitch_path(graph, segments):
+    return nearest
+
+def get_outline_nodes(graph, outline_index=0):
+    outline_nodes = [(node, data['projection']) \
+                     for node, data \
+                     in graph.nodes(data=True) \
+                     if data['index'] == outline_index]
+    outline_nodes.sort(key=lambda (node, projection): projection)
+    outline_nodes = [node for node, data in outline_nodes]
+
+    return outline_nodes
+
+def find_initial_path(graph, starting_point, ending_point=None):
+    starting_node = nearest_node_on_outline(graph, starting_point)
+
+    if ending_point is None:
+        # If they didn't give an ending point, pick either neighboring node
+        # along the outline -- doesn't matter which.  We do this because
+        # the algorithm requires we start with _some_ path.
+        neighbors = [n for n, keys in graph.adj[starting_node].iteritems() if 'outline' in keys]
+        return [PathEdge((starting_node, neighbors[0]), "initial")]
+    else:
+        ending_node = nearest_node_on_outline(graph, ending_point)
+        outline_nodes = get_outline_nodes(graph)
+
+        # Multiply the outline_nodes list by 2 (duplicate it) because
+        # the ending_node may occur first.
+        outline_nodes *= 2
+        start_index = outline_nodes.index(starting_node)
+        end_index = outline_nodes.index(ending_node, start_index)
+        nodes = outline_nodes[start_index:end_index + 1]
+
+        # we have a series of sequential points, but we need to
+        # turn it into an edge list
+        path = []
+        for start, end in izip(nodes[:-1], nodes[1:]):
+            path.append(PathEdge((start, end), "initial"))
+
+        return path
+
+def find_stitch_path(graph, segments, starting_point=None, ending_point=None):
     """find a path that visits every grating segment exactly once
 
     Theoretically, we just need to find an Eulerian Path in the graph.
@@ -294,13 +347,14 @@ def find_stitch_path(graph, segments):
     The edges on the outline of the region are only there to help us get
     from one grating segment to the next.
 
-    We'll build a "cycle" (a path that ends where it starts) using
-    Hierholzer's algorithm.  We'll stop once we've visited every grating
-    segment.
+    We'll build a Eulerian Path using Hierholzer's algorithm.  A true
+    Eulerian Path would visit every single edge (including all the extras
+    we inserted in build_graph()),but we'll stop short once we've visited
+    every grating segment since that's all we really care about.
 
     Hierholzer's algorithm says to select an arbitrary starting node at
     each step.  In order to produce a reasonable stitch path, we'll select
-    the vertex carefully such that we get back-and-forth traversal like
+    the starting node carefully such that we get back-and-forth traversal like
     mowing a lawn.
 
     To do this, we'll use a simple heuristic: try to start from nodes in
@@ -313,40 +367,42 @@ def find_stitch_path(graph, segments):
     segments_visited = 0
     nodes_visited = deque()
 
-    # start with a simple loop: down one segment and then back along the
-    # outer border to the starting point.
-    path = [segments[0], list(reversed(segments[0]))]
+    if starting_point is None:
+        starting_point = segments[0][0]
 
-    graph.remove_edges_from(path)
+    path = find_initial_path(graph, starting_point, ending_point)
 
-    segments_visited += 1
-    nodes_visited.extend(segments[0])
+    # Our graph is Eulerian: every node has an even degree.  An Eulerian graph
+    # must have an Eulerian Circuit which visits every edge and ends where it
+    # starts.
+    #
+    # However, we're starting with a path and _not_ removing the edges of that
+    # path from the graph.  By doing this, we're implicitly adding those edges
+    # to the graph, after which the starting and ending point (and only those
+    # two) will now have odd degree.  A graph that's Eulerian except for two
+    # nodes must have an Eulerian Path that starts and ends at those two nodes.
+    # That's how we force the starting and ending point.
+
+    nodes_visited.append(path[0][0])
 
     while segments_visited < num_segments:
-        result = find_loop(graph, nodes_visited)
+        loop = find_loop(graph, nodes_visited)
 
-        if not result:
+        if not loop:
             print >> sys.stderr, _("Unexpected error while generating fill stitches. Please send your SVG file to lexelby@github.")
             break
 
-        loop, segments = result
-
-        #print >> dbg, "found loop:", loop
-        #dbg.flush()
-
-        segments_visited += segments
-        nodes_visited += [edge[0] for edge in loop]
+        segments_visited += sum(1 for edge in loop if edge.is_segment())
+        nodes_visited.extend(edge[0] for edge in loop)
         graph.remove_edges_from(loop)
 
         insert_loop(path, loop)
 
-        #if segments_visited >= 12:
-        #    break
-
-    # Now we have a loop that covers every grating segment.  It returns to
-    # where it started, which is unnecessary, so we'll snip the last bit off.
-    #while original_graph.has_edge(*path[-1], key="outline"):
-    #    path.pop()
+    if ending_point is None:
+        # If they didn't specify an ending point, then the end of the path travels
+        # around the outline back to the start (see find_initial_path()). This
+        # isn't necessary, so remove it.
+        trim_end(path)
 
     return path
 
@@ -363,10 +419,10 @@ def collapse_sequential_outline_edges(graph, path):
     new_path = []
 
     for edge in path:
-        if graph.has_edge(*edge, key="segment"):
+        if edge.is_segment():
             if start_of_run:
                 # close off the last run
-                new_path.append((start_of_run, edge[0]))
+                new_path.append(PathEdge((start_of_run, edge[0]), "collapsed"))
                 start_of_run = None
 
             new_path.append(edge)
@@ -376,7 +432,7 @@ def collapse_sequential_outline_edges(graph, path):
 
     if start_of_run:
         # if we were still in a run, close it off
-        new_path.append((start_of_run, edge[1]))
+        new_path.append(PathEdge((start_of_run, edge[1]), "collapsed"))
 
     return new_path
 
@@ -416,9 +472,6 @@ def connect_points(shape, start, end, running_stitch_length):
     direction = math.copysign(1.0, distance)
     one_stitch = running_stitch_length * direction
 
-    #print >> dbg, "connect_points:", outline_index, start, end, distance, stitches, direction
-    #dbg.flush()
-
     stitches = [InkstitchPoint(*outline.interpolate(pos).coords[0])]
 
     for i in xrange(num_stitches):
@@ -430,11 +483,11 @@ def connect_points(shape, start, end, running_stitch_length):
     if (end - stitches[-1]).length() > 0.1 * PIXELS_PER_MM:
         stitches.append(end)
 
-    #print >> dbg, "end connect_points"
-    #dbg.flush()
-
     return stitches
 
+def trim_end(path):
+    while path and path[-1].is_outline():
+        path.pop()
 
 def path_to_stitches(graph, path, shape, angle, row_spacing, max_stitch_length, running_stitch_length, staggers):
     path = collapse_sequential_outline_edges(graph, path)
@@ -442,7 +495,7 @@ def path_to_stitches(graph, path, shape, angle, row_spacing, max_stitch_length, 
     stitches = []
 
     for edge in path:
-        if graph.has_edge(*edge, key="segment"):
+        if edge.is_segment():
             stitch_row(stitches, edge[0], edge[1], angle, row_spacing, max_stitch_length, staggers)
         else:
             stitches.extend(connect_points(shape, edge[0], edge[1], running_stitch_length))

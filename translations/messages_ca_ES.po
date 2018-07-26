@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-29 21:29-0400\n"
-"PO-Revision-Date: 2018-04-29 21:31-0400\n"
+"POT-Creation-Date: 2018-06-28 20:32-0400\n"
+"PO-Revision-Date: 2018-06-30 01:31\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Catalan\n"
 "MIME-Version: 1.0\n"
@@ -17,14 +17,178 @@ msgstr ""
 "X-Crowdin-File: /master/messages.po\n"
 "Language: ca_ES\n"
 
+msgid "Auto-Fill"
+msgstr ""
+
+msgid "Automatically routed fill stitching"
+msgstr ""
+
+msgid "Running stitch length (traversal between sections)"
+msgstr ""
+
+msgid "Underlay"
+msgstr ""
+
+msgid "AutoFill Underlay"
+msgstr ""
+
+msgid "Fill angle (default: fill angle + 90 deg)"
+msgstr ""
+
+msgid "Row spacing (default: 3x fill row spacing)"
+msgstr ""
+
+msgid "Max stitch length"
+msgstr ""
+
+msgid "Inset"
+msgstr ""
+
+msgid "Expand"
+msgstr ""
+
+#, python-format
+msgid "%(id)s has more than one command of type '%(command)s' linked to it"
+msgstr ""
+
+msgid "TRIM after"
+msgstr ""
+
+msgid "Trim thread after this object (for supported machines and file formats)"
+msgstr ""
+
+msgid "STOP after"
+msgstr ""
+
+msgid "Add STOP instruction after this object (for supported machines and file formats)"
+msgstr ""
+
+msgid "Fill"
+msgstr ""
+
+msgid "Manually routed fill stitching"
+msgstr ""
+
+msgid "Angle of lines of stitches"
+msgstr ""
+
+msgid "Flip fill (start right-to-left)"
+msgstr ""
+
+msgid "Spacing between rows"
+msgstr ""
+
+msgid "Maximum fill stitch length"
+msgstr ""
+
+msgid "Stagger rows this many times before repeating"
+msgstr ""
+
+msgid "Satin Column"
+msgstr ""
+
+msgid "Custom satin column"
+msgstr ""
+
+msgid "Zig-zag spacing (peak-to-peak)"
+msgstr ""
+
+msgid "Pull compensation"
+msgstr ""
+
+msgid "Contour underlay"
+msgstr ""
+
+msgid "Contour Underlay"
+msgstr ""
+
+msgid "Stitch length"
+msgstr ""
+
+msgid "Contour underlay inset amount"
+msgstr ""
+
+msgid "Center-walk underlay"
+msgstr ""
+
+msgid "Center-Walk Underlay"
+msgstr ""
+
+msgid "Zig-zag underlay"
+msgstr ""
+
+msgid "Zig-zag Underlay"
+msgstr ""
+
+msgid "Zig-Zag spacing (peak-to-peak)"
+msgstr ""
+
+msgid "Inset amount (default: half of contour underlay inset)"
+msgstr ""
+
+#, python-format
+msgid "satin column: %(id)s: at least two subpaths required (%(num)d found)"
+msgstr ""
+
+msgid "One or more rails crosses itself, and this is not allowed.  Please split into multiple satin columns."
+msgstr ""
+
+msgid "satin column: One or more of the rungs doesn't intersect both rails."
+msgstr ""
+
+msgid "Each rail should intersect both rungs once."
+msgstr ""
+
+msgid "satin column: One or more of the rungs intersects the rails more than once."
+msgstr ""
+
+#, python-format
+msgid "satin column: object %s has a fill (but should not)"
+msgstr ""
+
+#, python-format
+msgid "satin column: object %(id)s has two paths with an unequal number of points (%(length1)d and %(length2)d)"
+msgstr ""
+
+msgid "Satin stitch along paths"
+msgstr ""
+
+msgid "Running stitch length"
+msgstr ""
+
+msgid "Repeats"
+msgstr ""
+
+msgid "Manual stitch placement"
+msgstr ""
+
+msgid "Stitch every node in the path.  Stitch length and zig-zag spacing are ignored."
+msgstr ""
+
+msgid "Legacy running stitch setting detected!\n\n"
+"It looks like you're using a stroke smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set your stroke to be dashed to indicate running stitch.  Any kind of dash will work."
+msgstr ""
+
+msgid "No embroiderable paths selected."
+msgstr ""
+
+msgid "No embroiderable paths found in document."
+msgstr ""
+
+msgid "Tip: use Path -> Object to Path to convert non-paths."
+msgstr ""
+
 msgid "\n\n"
 "Seeing a 'no such option' message?  Please restart Inkscape to fix."
 msgstr ""
 
-msgid "Directory in which to install palettes:"
+msgid "Ink/Stitch can install files (\"add-ons\") that make it easier to use Inkscape to create machine embroidery designs.  These add-ons will be installed:"
 msgstr ""
 
-msgid "Choose another directory..."
+msgid "thread manufacturer color palettes"
+msgstr ""
+
+msgid "Ink/Stitch visual commands (Object -> Symbols...)"
 msgstr ""
 
 msgid "Install"
@@ -33,22 +197,22 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-msgid "Choose Inkscape palettes directory"
+msgid "Choose Inkscape directory"
 msgstr ""
 
-msgid "Thread palette installation failed"
+msgid "Inkscape add-on installation failed"
 msgstr ""
 
 msgid "Installation Failed"
 msgstr ""
 
-msgid "Thread palette files have been installed.  Please restart Inkscape to load the new palettes."
+msgid "Inkscape add-on files have been installed.  Please restart Inkscape to load the new add-ons."
 msgstr ""
 
 msgid "Installation Completed"
 msgstr ""
 
-msgid "Ink/Stitch Thread Palette Installer"
+msgid "Ink/Stitch Add-ons Installer"
 msgstr ""
 
 msgid "These settings will be applied to 1 object."
@@ -135,171 +299,24 @@ msgstr ""
 msgid "Embroidery Simulation"
 msgstr ""
 
-#, python-format
-msgid "parseLengthWithUnits: unknown unit %s"
-msgstr ""
-
-#, python-format
-msgid "Unknown unit: %s"
-msgstr ""
-
-msgid "No embroiderable paths selected."
-msgstr ""
-
-msgid "No embroiderable paths found in document."
-msgstr ""
-
-msgid "Tip: use Path -> Object to Path to convert non-paths before embroidering."
-msgstr ""
-
-msgid "Stitch Plan"
-msgstr ""
-
-msgid "Auto-Fill"
-msgstr ""
-
-msgid "Automatically routed fill stitching"
-msgstr ""
-
-msgid "Running stitch length (traversal between sections)"
-msgstr ""
-
-msgid "Underlay"
-msgstr ""
-
-msgid "AutoFill Underlay"
-msgstr ""
-
-msgid "Fill angle (default: fill angle + 90 deg)"
-msgstr ""
-
-msgid "Row spacing (default: 3x fill row spacing)"
-msgstr ""
-
-msgid "Max stitch length"
-msgstr ""
-
-msgid "Inset"
-msgstr ""
-
-msgid "TRIM after"
-msgstr ""
-
-msgid "Trim thread after this object (for supported machines and file formats)"
-msgstr ""
-
-msgid "STOP after"
-msgstr ""
-
-msgid "Add STOP instruction after this object (for supported machines and file formats)"
-msgstr ""
-
-msgid "Fill"
-msgstr ""
-
-msgid "Manually routed fill stitching"
-msgstr ""
-
-msgid "Angle of lines of stitches"
-msgstr ""
-
-msgid "Flip fill (start right-to-left)"
-msgstr ""
-
-msgid "Spacing between rows"
-msgstr ""
-
-msgid "Maximum fill stitch length"
-msgstr ""
-
-msgid "Stagger rows this many times before repeating"
-msgstr ""
-
-msgid "Satin Column"
-msgstr ""
-
-msgid "Custom satin column"
-msgstr ""
-
-msgid "Zig-zag spacing (peak-to-peak)"
-msgstr ""
-
-msgid "Pull compensation"
-msgstr ""
-
-msgid "Contour underlay"
-msgstr ""
-
-msgid "Contour Underlay"
-msgstr ""
-
-msgid "Stitch length"
-msgstr ""
-
-msgid "Contour underlay inset amount"
-msgstr ""
-
-msgid "Center-walk underlay"
-msgstr ""
-
-msgid "Center-Walk Underlay"
-msgstr ""
-
-msgid "Zig-zag underlay"
-msgstr ""
-
-msgid "Zig-zag Underlay"
-msgstr ""
-
-msgid "Zig-Zag spacing (peak-to-peak)"
-msgstr ""
-
-msgid "Inset amount (default: half of contour underlay inset)"
-msgstr ""
-
-msgid "One or more rails crosses itself, and this is not allowed.  Please split into multiple satin columns."
-msgstr ""
-
-msgid "satin column: One or more of the rungs doesn't intersect both rails."
-msgstr ""
-
-msgid "Each rail should intersect both rungs once."
-msgstr ""
-
-msgid "satin column: One or more of the rungs intersects the rails more than once."
-msgstr ""
-
-#, python-format
-msgid "satin column: object %s has a fill (but should not)"
-msgstr ""
-
-#, python-format
-msgid "satin column: object %(id)s has two paths with an unequal number of points (%(length1)d and %(length2)d)"
-msgstr ""
-
-msgid "Satin stitch along paths"
-msgstr ""
-
-msgid "Running stitch length"
-msgstr ""
-
-msgid "Repeats"
-msgstr ""
-
-msgid "Manual stitch placement"
-msgstr ""
-
-msgid "Stitch every node in the path.  Stitch length and zig-zag spacing are ignored."
-msgstr ""
-
-msgid "Legacy running stitch setting detected!\n\n"
-"It looks like you're using a stroke smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set your stroke to be dashed to indicate running stitch.  Any kind of dash will work."
+msgid "No embroidery file formats selected."
 msgstr ""
 
 msgid "Unable to autofill.  This most often happens because your shape is made up of multiple sections that aren't connected."
 msgstr ""
 
 msgid "Unexpected error while generating fill stitches. Please send your SVG file to lexelby@github."
+msgstr ""
+
+msgid "Stitch Plan"
+msgstr ""
+
+#, python-format
+msgid "parseLengthWithUnits: unknown unit %s"
+msgstr ""
+
+#, python-format
+msgid "Unknown unit: %s"
 msgstr ""
 
 msgid "Color"

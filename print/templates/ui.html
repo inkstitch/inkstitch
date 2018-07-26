@@ -13,41 +13,51 @@
     <div id="settings-ui">
       <p id="close-settings">X</p>
       <h1>{{ _('Settings') }}</h1>
-      <fieldset>
-        <legend>{{ _('Page Setup') }}</legend>
-        <div>
-          <p>{{ _('Printing Size') }}:
-            <select id="printing-size" data-field-name="paper-size">
-              <option value="letter" selected="selected">Letter</option>
-              <option value="a4">A4</option>
+      
+      <div id="tabs">
+        <button class="tab active">{{ _('Page Setup') }}</button>
+        <button class="tab">{{ _('Design') }}</button>
+      </div>
+      <div id="fieldsets-ui">
+        <fieldset id="ui-page-setup">
+          <legend>{{ _('Page Setup') }}</legend>
+          <div>
+            <p class="select-container">
+              <label for="printing-size">{{ _('Printing Size') }}:</label>
+                <select id="printing-size" data-field-name="paper-size">
+                  <option value="letter" selected="selected">Letter</option>
+                  <option value="a4">A4</option>
+                </select>
+            </p>
+          </div>
+          <div>
+           <fieldset>
+              <legend>{{ _('Print Layouts') }}</legend>
+              <p><input type="checkbox" class="view" id="client-overview" data-field-name="client-overview" /><label for="client-overview">{{ _('Client Overview') }}</label></p>
+              <p><input type="checkbox" class="view" id="client-detailedview" data-field-name="client-detailedview" /><label for="client-detailedview">{{ _('Client Detailed View') }}</label></p>
+              <p><input type="checkbox" class="view" id="operator-overview" data-field-name="operator-overview" CHECKED /><label for="operator-overview">{{ _('Operator Overview') }}</label></p>
+              <p><input type="checkbox" class="view" id="operator-detailedview" data-field-name="operator-detailedview" CHECKED /><label for="operator-detailedview">{{ _('Operator Detailed View') }}</label></p>
+              <p style="text-indent: 1.5em;">{{ _('Thumbnail size') }}: <input type="range" min="15" max="110" value="15" step="5" id="operator-detailedview-thumbnail-size" data-field-name="operator-detailedview-thumbnail-size" style="vertical-align: middle;"> <span id="display-thumbnail-size">15mm</span>
+               </p>
+            </fieldset>
+            <button id="save-settings" title="{{ _("Includes these Page Setup settings and also the icon.") }}">{{ _("Save as defaults") }}</button>
+          </div>
+        </fieldset>
+        <fieldset id="ui-design">
+          <legend>{{ _('Design') }}</legend>
+          <p class="select-container"><label for="thread-palette">{{ _('Thread Palette') }}:</label>
+            <select id="thread-palette" data-field-name="thread-palette">
+              {% if selected_palette is none %}
+                <option value="" selected>{{ _('None') }}</option>
+              {% endif %}
+              {% for palette in palettes %}
+                <option value="{{ palette }}" {{ "selected" if palette == selected_palette.name else "" }}>{{ palette }}</option>
+              {% endfor %}
             </select>
           </p>
-        </div>
-        <div>
-         <fieldset>
-            <legend>{{ _('Print Layouts') }}</legend>
-            <p><input type="checkbox" id="client-overview" data-field-name="client-overview" /><label for="client-overview">Client Overview</label></p>
-            <p><input type="checkbox" id="client-detailedview" data-field-name="client-detailedview" /><label for="client-detailedview">Client Detailed View</label></p>
-            <p><input type="checkbox" id="operator-overview" data-field-name="operator-overview" CHECKED /><label for="operator-overview">Operator Overview</label></p>
-            <p><input type="checkbox" id="operator-detailedview" data-field-name="operator-detailedview" CHECKED /><label for="operator-detailedview">Operator Detailed View</label></p>
-          </fieldset>
-          <button id="save-settings" title="{{ _("Includes these Page Setup settings and also the icon.") }}">{{ _("Save as defaults") }}</button>
-        </div>
-      </fieldset>
-      <fieldset>
-        <legend>{{ _('Design') }}</legend>
-        <p>{{ _('Thread Palette') }}:
-          <select id="thread-palette" data-field-name="thread-palette">
-            {% if selected_palette is none %}
-              <option value="" selected>None</option>
-            {% endif %}
-            {% for palette in palettes %}
-              <option value="{{ palette }}" {{ "selected" if palette == selected_palette.name else "" }}>{{ palette }}</option>
-            {% endfor %}
-          </select>
-        </p>
-      </fieldset>
-    </div>
+        </fieldset>
+      </div><!-- END FIELDSETS-UI -->
+    </div><!-- END SETTINGS-UI-->
 
     <div id="modal-background" class="modal"></div>
     <div id="modal-content" class="modal">
