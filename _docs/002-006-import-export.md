@@ -16,6 +16,9 @@ DST, EXP, JEF, PEC, PES, VP3
 ### Reading
 100, 10o, BRO, DSB, DST, DSZ, EMD, EXP, INB, JEF, KSM, PEC, PES, SEW, SHV, STX, TAP, TBF, u01, VP3, XXX
 
+**Info:** Detailed information about embroidery file formats is available in the [EduTechWiki](http://edutechwiki.unige.ch/en/Embroidery_format).
+{: .notice--info }
+
 ## Import Embroidery Files
 
 Open an embroidery file as you would open any SVG file in Inkscape: `File > Open...` > choose your file and click `Open`.
