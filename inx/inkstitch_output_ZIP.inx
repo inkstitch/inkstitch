@@ -12,47 +12,17 @@
         <dataloss>true</dataloss>
     </output>
 
-    <param name="format-col" type="boolean" _gui-text=".COL: Embroidery Thread Color Format">false</param>
-
-    <param name="format-csv" type="boolean" _gui-text=".CSV: Comma Separated Values Format">false</param>
-
-    <param name="format-dst" type="boolean" _gui-text=".DST: Tajima Embroidery Format">false</param>
-
-    <param name="format-edr" type="boolean" _gui-text=".EDR: Embird Embroidery Format">false</param>
-
-    <param name="format-exp" type="boolean" _gui-text=".EXP: Melco Embroidery Format">false</param>
-
-    <param name="format-hus" type="boolean" _gui-text=".HUS: Husqvarna Viking Embroidery Format">false</param>
-
-    <param name="format-inf" type="boolean" _gui-text=".INF: Embroidery Color Format">false</param>
-
-    <param name="format-jef" type="boolean" _gui-text=".JEF: Janome Embroidery Format">false</param>
-
-    <param name="format-ksm" type="boolean" _gui-text=".KSM: Pfaff Embroidery Format">false</param>
-
-    <param name="format-max" type="boolean" _gui-text=".MAX: Pfaff Embroidery Format">false</param>
-
-    <param name="format-pcd" type="boolean" _gui-text=".PCD: Pfaff Embroidery Format">false</param>
-
-    <param name="format-pcq" type="boolean" _gui-text=".PCQ: Pfaff Embroidery Format">false</param>
-
-    <param name="format-pcs" type="boolean" _gui-text=".PCS: Pfaff Embroidery Format">false</param>
-
     <param name="format-pec" type="boolean" _gui-text=".PEC: Brother Embroidery Format">false</param>
 
     <param name="format-pes" type="boolean" _gui-text=".PES: Brother Embroidery Format">false</param>
 
-    <param name="format-plt" type="boolean" _gui-text=".PLT: AutoCAD Plot Drawing Format">false</param>
+    <param name="format-exp" type="boolean" _gui-text=".EXP: Melco Embroidery Format">false</param>
 
-    <param name="format-rgb" type="boolean" _gui-text=".RGB: RGB Embroidery Format">false</param>
+    <param name="format-dst" type="boolean" _gui-text=".DST: Tajima Embroidery Format">false</param>
 
-    <param name="format-thr" type="boolean" _gui-text=".THR: ThredWorks Embroidery Format">false</param>
-
-    <param name="format-txt" type="boolean" _gui-text=".TXT: Text File">false</param>
+    <param name="format-jef" type="boolean" _gui-text=".JEF: Janome Embroidery Format">false</param>
 
     <param name="format-vp3" type="boolean" _gui-text=".VP3: Pfaff Embroidery Format">false</param>
-
-    <param name="format-xxx" type="boolean" _gui-text=".XXX: Singer Embroidery Format">false</param>
 
     <param name="extension" type="string" gui-hidden="true">zip</param>
     <script>

@@ -20,8 +20,8 @@
             {% endif %}
             {# We don't want to see stops and trims if we have more than 13 colorSwatches to show #}
             {% if color_blocks|length < 13 %}
-            <tspan dy="1.2em" x="2mm" class="swatch-stops">{{ _('# stops') }}: {{ color_block.num_stops }}</tspan>
             <tspan dy="1.2em" x="2mm" class="swatch-trims">{{ _('# trims') }}: {{ color_block.num_trims }}</tspan>
+            <tspan dy="1.2em" x="2mm" class="swatch-stops">{{ _('stop after?') }}: {{ _("yes") if color_block.stop_after else _("no") }}</tspan>
             {% endif %}
           </text>
       </svg>
@@ -41,8 +41,8 @@
           <p><span class="color-rgb">{{ _('rgb') }}:</span><span>{{ color_block.color.rgb }}</span></p>
           <p><span class="swatch-thread">{{ _('thread') }}:</span><span data-field-name="thread-{{ color_block.color.hex_digits }}" contenteditable="true">{{ color_block.color.manufacturer }} {{ "#" + color_block.color.number if color_block.color.number }}</span></p>
           <p><span class="swatch-stitches">{{ _('# stitches') }}:</span><span>{{ color_block.num_stitches }}</span></p>
-          <p><span class="swatch-stops">{{ _('# stops') }}:</span><span>{{ color_block.num_stops }}</span></p>
           <p><span class="swatch-trims">{{ _('# trims') }}:</span><span>{{ color_block.num_trims }}</span></p>
+          <p><span class="swatch-stops">{{ _('stop after?') }}:</span><span>{{ _("yes") if color_block.stop_after else _("no") }}</span></p>
         </div>
       </div>
     </div>

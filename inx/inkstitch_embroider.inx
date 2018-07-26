@@ -7,29 +7,14 @@
     <param name="collapse_len_mm" type="float" min="0.0" max="10.0" _gui-text="Collapse length (mm)"> _gui-description="Jump stitches smaller than this will be treated as normal stitches.">3.0</param>
     <param name="hide_layers" type="boolean" _gui-text="Hide other layers" description="Hide all other top-level layers when the embroidery layer is generated, in order to make stitching discernable.">true</param>
     <param name="output_format" type="optiongroup" _gui-text="Output file format" appearance="minimal">
-        <_option value="csv">Comma Separated Values Format(.CSV)</_option>
-        <_option value="col">Embroidery Thread Color Format(.COL)</_option>
-        <_option value="dst">Tajima Embroidery Format(.DST)</_option>
-        <_option value="edr">Embird Embroidery Format(.EDR)</_option>
-        <_option value="exp">Melco Embroidery Format(.EXP)</_option>
-        <_option value="hus">Husqvarna Viking Embroidery Format(.HUS)</_option>
-        <_option value="inf">Embroidery Color Format(.INF)</_option>
-        <_option value="jef">Janome Embroidery Format(.JEF)</_option>
-        <_option value="ksm">Pfaff Embroidery Format(.KSM)</_option>
-        <_option value="max">Pfaff Embroidery Format(.MAX)</_option>
-        <_option value="pcd">Pfaff Embroidery Format(.PCD)</_option>
-        <_option value="pcq">Pfaff Embroidery Format(.PCQ)</_option>
-        <_option value="pcs">Pfaff Embroidery Format(.PCS)</_option>
-        <_option value="pec">Brother Embroidery Format(.PEC)</_option>
-        <_option value="pes">Brother Embroidery Format(.PES)</_option>
-        <_option value="plt">AutoCAD Plot Drawing Format(.PLT)</_option>
-        <_option value="rgb">RGB Embroidery Format(.RGB)</_option>
-        <_option value="sew">Janome Embroidery Format(.SEW)</_option>
-        <_option value="tap">Happy Embroidery Format(.TAP)</_option>
-        <_option value="thr">ThredWorks Embroidery Format(.THR)</_option>
-        <_option value="txt">Text File(.TXT)</_option>
-        <_option value="vp3">Pfaff Embroidery Format(.VP3)</_option>
-        <_option value="xxx">Singer Embroidery Format(.XXX)</_option>
+        <_option value="dst">Tajima Embroidery Format(DST)</_option>
+        <_option value="exp">Melco Embroidery Format(EXP)</_option>
+        <_option value="jef">Janome Embroidery Format(JEF)</_option>
+        <_option value="pec">Brother Embroidery Format(PEC)</_option>
+        <_option value="pes">Brother Embroidery Format(PES)</_option>
+        <_option value="vp3">Pfaff Embroidery Format(VP3)</_option>
+        <_option value="csv">Comma-separated values(CSV) [DEBUG]</_option>
+        <_option value="svg">Scalable Vector Graphics(SVG) [DEBUG]</_option>
     </param>
     <param name="path" type="string" _gui-text="Directory"></param>
     <param name="extension" type="string" gui-hidden="true">embroider</param>

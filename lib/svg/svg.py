@@ -37,6 +37,9 @@ def color_block_to_realistic_stitches(color_block, svg):
     paths = []
 
     for point_list in color_block_to_point_lists(color_block):
+        if not point_list:
+            continue
+
         color = color_block.color.visible_on_white.darker.to_hex_str()
         start = point_list[0]
         for point in point_list[1:]:

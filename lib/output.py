@@ -1,4 +1,4 @@
-import libembroidery
+import pyembroidery
 import inkex
 import simpletransform
 import shapely.geometry as shgeo
@@ -7,36 +7,17 @@ from .utils import Point
 from .svg import PIXELS_PER_MM, get_doc_size, get_viewbox_transform
 
 
-def make_thread(color):
-    thread = libembroidery.EmbThread()
-    thread.color = libembroidery.embColor_make(*color.rgb)
-
-    thread.description = color.name
-    thread.catalogNumber = ""
-
-    return thread
-
-def add_thread(pattern, thread):
-    """Add a thread to a pattern and return the thread's index"""
-
-    libembroidery.embPattern_addThread(pattern, thread)
-
-    return libembroidery.embThreadList_count(pattern.threadList) - 1
-
-def get_flags(stitch):
-    flags = 0
-
+def get_command(stitch):
     if stitch.jump:
-        flags |= libembroidery.JUMP
-
-    if stitch.trim:
-        flags |= libembroidery.TRIM
-
-    if stitch.color_change:
-        flags |= libembroidery.STOP
-
-    return flags
-
+        return pyembroidery.JUMP
+    elif stitch.trim:
+        return pyembroidery.TRIM
+    elif stitch.color_change:
+        return pyembroidery.COLOR_CHANGE
+    elif stitch.stop:
+        return pyembroidery.STOP
+    else:
+        return pyembroidery.NEEDLE_AT
 
 def _string_to_floats(string):
     floats = string.split(',')
@@ -102,27 +83,32 @@ def get_origin(svg):
 def write_embroidery_file(file_path, stitch_plan, svg):
     origin = get_origin(svg)
 
-    pattern = libembroidery.embPattern_create()
+    pattern = pyembroidery.EmbPattern()
 
     for color_block in stitch_plan:
-        add_thread(pattern, make_thread(color_block.color))
+        pattern.add_thread(color_block.color.pyembroidery_thread)
 
         for stitch in color_block:
-            if stitch.stop:
-                # This is the start of the extra color block added by the
-                # "STOP after" handler (see stitch_plan/stop.py).  Assign it
-                # the same color.
-                add_thread(pattern, make_thread(color_block.color))
+            command = get_command(stitch)
+            pattern.add_stitch_absolute(command, stitch.x, stitch.y)
 
-            flags = get_flags(stitch)
-            libembroidery.embPattern_addStitchAbs(pattern, stitch.x - origin.x, stitch.y - origin.y, flags, 1)
-
-    libembroidery.embPattern_addStitchAbs(pattern, stitch.x - origin.x, stitch.y - origin.y, libembroidery.END, 1)
+    pattern.add_stitch_absolute(pyembroidery.END, stitch.x, stitch.y)
 
     # convert from pixels to millimeters
-    libembroidery.embPattern_scale(pattern, 1/PIXELS_PER_MM)
+    # also multiply by 10 to get tenths of a millimeter as required by pyembroidery
+    scale = 10 / PIXELS_PER_MM
 
-    # SVG and embroidery disagree on the direction of the Y axis
-    libembroidery.embPattern_flipVertical(pattern)
+    settings =  {
+                    # correct for the origin
+                    "translate": -origin,
 
-    libembroidery.embPattern_write(pattern, file_path)
+                    # convert from pixels to millimeters
+                    # also multiply by 10 to get tenths of a millimeter as required by pyembroidery
+                    "scale": (scale, scale),
+
+                    # This forces a jump at the start of the design and after each trim,
+                    # even if we're close enough not to need one.
+                    "full_jump": True,
+                }
+
+    pyembroidery.write(pattern, file_path, settings)

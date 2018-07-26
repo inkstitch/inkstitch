@@ -7,7 +7,3 @@
 dist/
 build/
 locales/
-
-# For development, I symlink into my clone, so I have to have a copy of libembroidery.
-libembroidery.py
-_libembroidery.so

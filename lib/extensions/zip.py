@@ -4,7 +4,7 @@ import os
 import inkex
 import tempfile
 from zipfile import ZipFile
-from libembroidery import *
+import pyembroidery
 
 from .base import InkstitchExtension
 from ..i18n import _
@@ -24,18 +24,11 @@ class Zip(InkstitchExtension):
 
         # it's kind of obnoxious that I have to do this...
         self.formats = []
-        formatList = embFormatList_create()
-        curFormat = formatList
-        while(curFormat):
-            # extension includes the dot, so we'll remove it
-            extension = embFormat_extension(curFormat)[1:]
-            description = embFormat_description(curFormat)
-            writer_state = embFormat_writerState(curFormat)
-
-            if writer_state.strip() and embFormat_type(curFormat) != EMBFORMAT_OBJECTONLY:
+        for format in pyembroidery.supported_formats():
+            if 'writer' in format and format['category'] == 'embroidery':
+                extension = format['extension']
                 self.OptionParser.add_option('--format-%s' % extension, type="inkbool", dest=extension)
                 self.formats.append(extension)
-            curFormat = curFormat.next
 
     def effect(self):
         if not self.get_elements():
@@ -49,18 +42,11 @@ class Zip(InkstitchExtension):
 
         files = []
 
-        # libembroidery likes to debug log things to stdout.  No way to disable it.
-        save_stdout()
         for format in self.formats:
             if getattr(self.options, format):
                 output_file = os.path.join(path, "%s.%s" % (base_file_name, format))
                 write_embroidery_file(output_file, stitch_plan, self.document.getroot())
                 files.append(output_file)
-
-        # I'd love to do restore_stderr() here, but if I do, libembroidery's
-        # stuff still prints out and corrupts the zip!  That's because it uses
-        # C's buffered stdout, so it hasn't actually written anything to the
-        # real standard output yet.
 
         if not files:
             self.errormsg(_("No embroidery file formats selected."))
@@ -77,7 +63,7 @@ class Zip(InkstitchExtension):
         # inkscape will read the file contents from stdout and copy
         # to the destination file that the user chose
         with open(temp_file.name) as output_file:
-            sys.real_stdout.write(output_file.read())
+            sys.stdout.write(output_file.read())
 
         os.remove(temp_file.name)
         for file in files:
