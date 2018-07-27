@@ -26,6 +26,13 @@ class EmbroiderySimulator(wx.Frame):
 
         self.panel = wx.Panel(self, wx.ID_ANY)
         self.panel.SetFocus()
+                
+        tooltip = _('Simulation Controls') + '\n'
+        tooltip += _('+\tor\tarrow up\tSpeed up') + '\n'
+        tooltip += _('-\tor\tarrow down\tSlow down') + '\n'
+        tooltip += _('r\t\t\t\t\tRestart animation') + '\n'
+        tooltip += _('q\t\t\t\t\tClose')
+        self.SetToolTip(tooltip)
 
         self.load(stitch_plan)
 
