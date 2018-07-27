@@ -2,7 +2,7 @@
 title: "Simulate"
 permalink: /docs/simulate/
 excerpt: ""
-last_modified_at: 2018-06-01
+last_modified_at: 2018-07-27
 toc: false
 ---
 
@@ -17,4 +17,5 @@ Shortcut Keys | Effect
 **↑** | speed up
 **↓** | slow down
 **r** | restart animation
+**p** | pause animation
 **q** | close

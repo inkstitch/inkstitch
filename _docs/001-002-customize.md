@@ -2,7 +2,7 @@
 title: "Customize Ink/Stitch"
 permalink: /docs/customize/
 excerpt: ""
-last_modified_at: 2018-04-23
+last_modified_at: 2018-07-27
 toc: true
 ---
 
@@ -31,6 +31,7 @@ Shortcut Keys | Effect
 **↑** | speed up
 **↓** | slow down
 **r** | restart animation
+**p** | pause animation
 **q** | close
 
 ## Grids
