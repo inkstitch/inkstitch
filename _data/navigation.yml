@@ -126,6 +126,8 @@ developers:
       url: /developers/inkstitch/manual-setup/
     - title: Python Modules
       url: /developers/inkstitch/python-modules/
+    - title: Namespace
+      url: /developers/inkstitch/namespace/
   - title: Documentation
     url: /developers/documentation/
   - title: Localization
