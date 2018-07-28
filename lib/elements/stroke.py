@@ -4,7 +4,7 @@ import shapely.geometry
 from .element import param, EmbroideryElement, Patch
 from ..i18n import _
 from ..utils import cache, Point
-from ..stitches import running_stitch
+from ..stitches import running_stitch, bean_stitch
 from ..svg import parse_length_with_units
 
 warned_about_legacy_running_stitch = False
@@ -27,18 +27,28 @@ class Stroke(EmbroideryElement):
         return self.get_style("stroke-dasharray") is not None
 
     @property
-    @param('running_stitch_length_mm', _('Running stitch length'), unit='mm', type='float', default=1.5)
+    @param('running_stitch_length_mm', _('Running stitch length'), unit='mm', type='float', default=1.5, sort_index=3)
     def running_stitch_length(self):
         return max(self.get_float_param("running_stitch_length_mm", 1.5), 0.01)
 
     @property
-    @param('zigzag_spacing_mm', _('Zig-zag spacing (peak-to-peak)'), unit='mm', type='float', default=0.4)
+    @param('bean_stitch_repeats',
+           _('Bean stitch number of repeats'),
+           tooltip=_('Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.  Only applies to running stitch.'),
+           type='int',
+           default=0,
+           sort_index=2)
+    def bean_stitch_repeats(self):
+        return self.get_int_param("bean_stitch_repeats", 0)
+
+    @property
+    @param('zigzag_spacing_mm', _('Zig-zag spacing (peak-to-peak)'), unit='mm', type='float', default=0.4, sort_index=3)
     @cache
     def zigzag_spacing(self):
         return max(self.get_float_param("zigzag_spacing_mm", 0.4), 0.01)
 
     @property
-    @param('repeats', _('Repeats'), type='int', default="1")
+    @param('repeats', _('Repeats'), type='int', default="1", sort_index=1)
     def repeats(self):
         return self.get_int_param("repeats", 1)
 
@@ -58,7 +68,7 @@ class Stroke(EmbroideryElement):
         return shapely.geometry.MultiLineString(line_strings)
 
     @property
-    @param('manual_stitch', _('Manual stitch placement'), tooltip=_("Stitch every node in the path.  Stitch length and zig-zag spacing are ignored."), type='boolean', default=False)
+    @param('manual_stitch', _('Manual stitch placement'), tooltip=_("Stitch every node in the path.  Stitch length and zig-zag spacing are ignored."), type='boolean', default=False, sort_index=0)
     def manual_stitch_mode(self):
         return self.get_boolean_param('manual_stitch')
 
@@ -139,6 +149,7 @@ class Stroke(EmbroideryElement):
             repeated_path.extend(this_path)
 
         stitches = running_stitch(repeated_path, stitch_length)
+        stitches = bean_stitch(stitches, self.bean_stitch_repeats)
 
         return Patch(self.color, stitches)
 
