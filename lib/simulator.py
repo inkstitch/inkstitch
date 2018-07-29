@@ -19,7 +19,7 @@ class EmbroiderySimulator(wx.Frame):
 
         screen_rect = wx.Display(0).ClientArea
         self.max_width = kwargs.pop('max_width', screen_rect.GetWidth())
-        self.max_height = kwargs.pop('max_height', screen_rect.GetHeight() - 100)
+        self.max_height = kwargs.pop('max_height', screen_rect.GetHeight())
         self.scale = 1
 
         wx.Frame.__init__(self, *args, **kwargs)
@@ -38,7 +38,7 @@ class EmbroiderySimulator(wx.Frame):
         self.sizer = wx.BoxSizer(wx.VERTICAL)
         self.button_sizer = wx.BoxSizer(wx.HORIZONTAL)
 
-        self.button_label = ["Speed up", "Slow down", "Pause", "Restart", "Quit"]
+        self.button_label = [_("Speed up"), _("Slow down"), _("Pause"), _("Restart"), _("Quit")]
         self.buttons = []
         for i in range(0, len(self.button_label)):
             self.buttons.append(wx.Button(self, -1, self.button_label[i]))
@@ -195,7 +195,7 @@ class EmbroiderySimulator(wx.Frame):
 
         self.width = width
         self.height = height
-        self.scale = min(float(self.max_width) / width, float(self.max_height) / height)
+        self.scale = min(float(self.max_width) / width, float(self.max_height - 80) / height)
 
         # make room for decorations and the margin
         self.scale *= 0.95
@@ -239,8 +239,13 @@ class EmbroiderySimulator(wx.Frame):
         decorations_width = window_width - client_width
         decorations_height = window_height - client_height + 40
 
-        self.SetSize((self.width * self.scale + decorations_width + self.margin * 2,
-                      self.height * self.scale + decorations_height + self.margin * 2))
+        setsize_window_width = self.width * self.scale + decorations_width + self.margin * 2
+        setsize_window_height = (self.height) * self.scale + decorations_height + self.margin * 2
+
+        if setsize_window_width < 600:
+            setsize_window_width = 600
+
+        self.SetSize(( setsize_window_width, setsize_window_height))
 
         e.Skip()
 
