@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-07-25 21:18-0400\n"
-"PO-Revision-Date: 2018-07-29 12:51\n"
+"PO-Revision-Date: 2018-07-29 16:20\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -529,19 +529,19 @@ msgstr "Garnverbrauch gesamt"
 #: print/templates/operator_overview.html:15
 #: print/templates/print_overview.html:15
 msgid "Total stitch count"
-msgstr "Gesamtstichanzahl"
+msgstr "Stiche gesamt"
 
 #: print/templates/operator_detailedview.html:33
 #: print/templates/operator_overview.html:8
 #: print/templates/print_overview.html:8
 msgid "Total stops"
-msgstr "Stops insgesamt"
+msgstr "Stops gesamt"
 
 #: print/templates/operator_detailedview.html:34
 #: print/templates/operator_overview.html:9
 #: print/templates/print_overview.html:9
 msgid "Total trims"
-msgstr "Trims insgesamt"
+msgstr "Trims gesamt"
 
 #: print/templates/operator_detailedview.html:61
 msgid "thread used"
