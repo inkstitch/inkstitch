@@ -149,7 +149,6 @@ class Stroke(EmbroideryElement):
             repeated_path.extend(this_path)
 
         stitches = running_stitch(repeated_path, stitch_length)
-        stitches = bean_stitch(stitches, self.bean_stitch_repeats)
 
         return Patch(self.color, stitches)
 
@@ -163,6 +162,10 @@ class Stroke(EmbroideryElement):
                 patch = Patch(color=self.color, stitches=path, stitch_as_is=True)
             elif self.is_running_stitch():
                 patch = self.running_stitch(path, self.running_stitch_length)
+
+                if self.bean_stitch_repeats > 0:
+                    patch.stitches = bean_stitch(patch.stitches, self.bean_stitch_repeats)
+
             else:
                 patch = self.simple_satin(path, self.zigzag_spacing, self.stroke_width)
 
