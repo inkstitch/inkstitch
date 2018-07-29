@@ -195,7 +195,7 @@ class EmbroiderySimulator(wx.Frame):
 
         self.width = width
         self.height = height
-        self.scale = min(float(self.max_width) / width, float(self.max_height - 80) / height)
+        self.scale = min(float(self.max_width) / width, float(self.max_height - 60) / height)
 
         # make room for decorations and the margin
         self.scale *= 0.95
