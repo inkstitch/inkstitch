@@ -51,7 +51,7 @@ To setup origins Ink/Stitch uses guidelines:
 
 If no guides are found, the origin is at the center in the SVG.
   
-**Tipp:** You can also create a [template]((/docs/customize/#working-with-templates)) containing guides and a canvas the right size for your machine.
+**Tip:** You can also create a [template]((/docs/customize/#working-with-templates)) containing guides and a canvas the right size for your machine.
 {: .notice--info }
 
 [Video tutorial]({{ '/tutorials/custom-origins/' | relative_url }})
@@ -75,6 +75,6 @@ Windows|`C:\Users\%USERNAME%\AppData\Roaming\inkscape\templates`
 
 You should confirm the user folder in your inkscape preferences see the [FAQ](/docs/faq/#i-have-downloaded-and-unzipped-the-latest-release-where-do-i-put-it).
 
-**Tipp:** Get [predefined templates](/tutorials/resources/templates/) from our tutorial section.
+**Tip:** Get [predefined templates](/tutorials/resources/templates/) from our tutorial section.
 {: .notice--info }
 

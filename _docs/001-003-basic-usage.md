@@ -7,7 +7,7 @@ toc: true
 ---
 Try the following steps in order to test the extension and to learn about basic functionality.
 
-**Tipp:** If you are new to Inkscape, have a look at their [Basic Tutorial](https://inkscape.org/en/doc/tutorials/basic/tutorial-basic.html) first.
+**Tip:** If you are new to Inkscape, have a look at their [Basic Tutorial](https://inkscape.org/en/doc/tutorials/basic/tutorial-basic.html) first.
 {: .notice--info }
 
 ## Step 1 - Draw an Object

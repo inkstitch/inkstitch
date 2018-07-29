@@ -51,7 +51,7 @@ $ tar zxf ~/Downloads/inkstitch-v1.0.0-Linux-x86_64.tar.gz
    Go to the extension directory and remove each inkstitch* file.
  * Then, proceed as above.
 
-**Tipp:** Subscribe to a news feed channel to keep track on Ink/Stitch Updates:<br>
+**Tip:** Subscribe to a news feed channel to keep track on Ink/Stitch Updates:<br>
  <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [GitHub Feed on new Releases](https://github.com/inkstitch/inkstitch/releases.atom)<br>
  <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [Ink/Stitch News](/feed.xml)<br>
 {: .notice--info }
