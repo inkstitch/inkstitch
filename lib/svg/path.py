@@ -23,3 +23,20 @@ def get_node_transform(node):
     transform = simpletransform.composeTransform(viewbox_transform, transform)
 
     return transform
+
+def get_correction_transform(node):
+    """Get a transform to apply to new siblings of this SVG node"""
+
+    # if we want to place our new nodes in the same group/layer as this node,
+    # then we'll need to factor in the effects of any transforms set on
+    # the parents of this node.
+
+    # we can ignore the transform on the node itself since it won't apply
+    # to the objects we add
+    transform = get_node_transform(node.getparent())
+
+    # now invert it, so that we can position our objects in absolute
+    # coordinates
+    transform = simpletransform.invertTransform(transform)
+
+    return simpletransform.formatTransform(transform)
