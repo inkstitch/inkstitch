@@ -15,8 +15,10 @@ def get_node_transform(node):
     # start with the identity transform
     transform = [[1.0, 0.0, 0.0], [0.0, 1.0, 0.0]]
 
-    # combine this node's transform with all parent groups' transforms
-    transform = simpletransform.composeParents(node, transform)
+    # this if is because sometimes inkscape likes to create paths outside of a layer?!
+    if node.getparent() is not None:
+        # combine this node's transform with all parent groups' transforms
+        transform = simpletransform.composeParents(node, transform)
 
     # add in the transform implied by the viewBox
     viewbox_transform = get_viewbox_transform(node.getroottree().getroot())

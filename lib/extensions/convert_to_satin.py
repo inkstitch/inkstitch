@@ -1,6 +1,10 @@
 import inkex
 from shapely import geometry as shgeo
 from itertools import chain
+import numpy
+from numpy import diff, sign, setdiff1d
+from scipy.signal import argrelmin
+import math
 
 from .base import InkstitchExtension
 from ..svg.tags import SVG_PATH_TAG
@@ -62,42 +66,73 @@ class ConvertToSatin(InkstitchExtension):
 
         return (left_rail, right_rail), rungs
 
+    def get_scores(self, path):
+        scores = numpy.zeros(101, numpy.int32)
+        path_length = path.length
+
+        prev_point = None
+        prev_direction = None
+        length_so_far = 0
+        for point in path.coords:
+            point = Point(*point)
+
+            if prev_point is None:
+                prev_point = point
+                continue
+
+            direction = (point - prev_point).unit()
+
+            if prev_direction is not None:
+                cos_angle_between = prev_direction * direction
+                angle = abs(math.degrees(math.acos(cos_angle_between)))
+
+                scores[int(round(length_so_far / path_length * 100.0))] += angle ** 2
+
+            length_so_far += (point - prev_point).length()
+            prev_direction = direction
+            prev_point = point
+
+        return scores
+
+    def local_minima(self, array):
+        # from: https://stackoverflow.com/a/9667121/4249120
+        # finds spots where the curvature (second derivative) is > 0
+        return (diff(sign(diff(array))) > 0).nonzero()[0] + 1
+
     def generate_rungs(self, path, stroke_width):
+        scores = self.get_scores(path)
+        scores = numpy.convolve(scores, [1, 2, 4, 8, 16, 8, 4, 2, 1], mode='same')
+        rung_locations = self.local_minima(scores)
+        rung_locations = setdiff1d(rung_locations, [0, 100])
+
+        if len(rung_locations) == 0:
+            rung_locations = [50]
+
         rungs = []
+        last_rung_center = None
 
-        # approximately 1cm between rungs, and we don't want them at the very start or end
-        num_rungs = int(path.length / PIXELS_PER_MM / 10) - 1
-
-        if num_rungs < 1 or num_rungs == 2:
-            # avoid 2 rungs because it can be ambiguous (which are the rails and which are the
-            # rungs?)
-            num_rungs += 1
-
-        distance_between_rungs = path.length / (num_rungs + 1)
-
-        for i in xrange(num_rungs):
-            rung_center = path.interpolate((i + 1) * distance_between_rungs)
+        for location in rung_locations:
+            location = location / 100.0
+            rung_center = path.interpolate(location, normalized=True)
             rung_center = Point(rung_center.x, rung_center.y)
 
-            # TODO: use bezierslopeatt or whatever
-            # we need to calculate the normal at this point so grab another point just a little
-            # further down the path, effectively grabbing a small segment of the path
-            segment_end = path.interpolate((i + 1) * distance_between_rungs + 0.1)
-            segment_end = Point(segment_end.x, segment_end.y)
+            if last_rung_center is not None and \
+               (rung_center - last_rung_center).length() < 2 * PIXELS_PER_MM:
+                    continue
+            else:
+                last_rung_center = rung_center
 
-            tangent = segment_end - rung_center
-            normal = tangent.unit().rotate_left()
+            tangent_end = path.interpolate(location + 0.001, normalized=True)
+            tangent_end = Point(tangent_end.x, tangent_end.y)
+            tangent = (tangent_end - rung_center).unit()
+            normal = tangent.rotate_left()
             offset = normal * stroke_width * 0.75
 
             rung_start = rung_center + offset
             rung_end = rung_center - offset
-
             rungs.append((rung_start.as_tuple(), rung_end.as_tuple()))
 
         return rungs
-        import sys
-        print >> sys.stderr, rails, rungs
-
 
 
     def satin_to_svg_node(self, rails, rungs, correction_transform):
