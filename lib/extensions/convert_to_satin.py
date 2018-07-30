@@ -5,6 +5,7 @@ import numpy
 from numpy import diff, sign, setdiff1d
 from scipy.signal import argrelmin
 import math
+from copy import deepcopy
 
 from .base import InkstitchExtension
 from ..svg.tags import SVG_PATH_TAG
@@ -39,6 +40,11 @@ class ConvertToSatin(InkstitchExtension):
                     rails, rungs = self.path_to_satin(path, element.stroke_width)
                 except ValueError:
                     inkex.errormsg(_("Cannot convert %s to a satin column because it intersects itself.  Try breaking it up into multiple paths.") % element.node.get('id'))
+
+                    # revert any changes we've made
+                    self.document = deepcopy(self.original_document)
+
+                    return
 
                 parent.insert(index, self.satin_to_svg_node(rails, rungs, correction_transform))
 
