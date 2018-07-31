@@ -4,7 +4,7 @@
     <id>jonh.embroider</id>
     <dependency type="executable" location="extensions">inkstitch.py</dependency>
     <dependency type="executable" location="extensions">inkex.py</dependency>
-    <param name="collapse_len_mm" type="float" min="0.0" max="10.0" _gui-text="Collapse length (mm)"> _gui-description="Jump stitches smaller than this will be treated as normal stitches.">3.0</param>
+    <param name="collapse_len_mm" type="float" min="0.0" max="10.0" _gui-text="Collapse length (mm)" _gui-description="Jump stitches smaller than this will be treated as normal stitches.">3.0</param>
     <param name="hide_layers" type="boolean" _gui-text="Hide other layers" description="Hide all other top-level layers when the embroidery layer is generated, in order to make stitching discernable.">true</param>
     <param name="output_format" type="optiongroup" _gui-text="Output file format" appearance="minimal">
         <_option value="dst">Tajima Embroidery Format (DST)</_option>
