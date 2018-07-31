@@ -1,6 +1,6 @@
 import inkex
 from shapely import geometry as shgeo
-from itertools import chain
+from itertools import chain, groupby
 import numpy
 from numpy import diff, sign, setdiff1d
 from scipy.signal import argrelmin
@@ -12,6 +12,10 @@ from ..svg.tags import SVG_PATH_TAG
 from ..svg import get_correction_transform, PIXELS_PER_MM
 from ..elements import Stroke
 from ..utils import Point
+
+
+class SelfIntersectionError(Exception):
+    pass
 
 
 class ConvertToSatin(InkstitchExtension):
@@ -37,9 +41,17 @@ class ConvertToSatin(InkstitchExtension):
             style_args = self.join_style_args(element)
 
             for path in element.paths:
+                path = self.remove_duplicate_points(path)
+
+                if len(path) < 2:
+                    # ignore paths with just one point -- they're not visible to the user anyway
+                    continue
+
+                self.fix_loop(path)
+
                 try:
                     rails, rungs = self.path_to_satin(path, element.stroke_width, style_args)
-                except ValueError:
+                except SelfIntersectionError:
                     inkex.errormsg(_("Cannot convert %s to a satin column because it intersects itself.  Try breaking it up into multiple paths.") % element.node.get('id'))
 
                     # revert any changes we've made
@@ -50,6 +62,24 @@ class ConvertToSatin(InkstitchExtension):
                 parent.insert(index, self.satin_to_svg_node(rails, rungs, correction_transform))
 
             parent.remove(element.node)
+
+    def fix_loop(self, path):
+        if path[0] == path[-1]:
+            # Looping paths seem to confuse shapely's parallel_offset().  It loses track
+            # of where the start and endpoint is, even if the user explicitly breaks the
+            # path.  I suspect this is because parallel_offset() uses buffer() under the
+            # hood.
+            #
+            # To work around this we'll introduce a tiny gap by nudging the starting point
+            # toward the next point slightly.
+            start = Point(*path[0])
+            next = Point(*path[1])
+            direction = (next - start).unit()
+            start += 0.01 * direction
+            path[0] = start.as_tuple()
+
+    def remove_duplicate_points(self, path):
+        return [point for point, repeats in groupby(path)]
 
     def join_style_args(self, element):
         """Convert svg line join style to shapely parallel offset arguments."""
@@ -84,7 +114,7 @@ class ConvertToSatin(InkstitchExtension):
                 # path intersects itself, when taking its stroke width into consideration.  See
                 # the last example for parallel_offset() in the Shapely documentation:
                 #   https://shapely.readthedocs.io/en/latest/manual.html#object.parallel_offset
-                raise ValueError()
+                raise SelfIntersectionError()
 
         # for whatever reason, shapely returns a right-side offset's coordinates in reverse
         left_rail = list(left_rail.coords)
