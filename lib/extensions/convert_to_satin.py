@@ -34,10 +34,11 @@ class ConvertToSatin(InkstitchExtension):
             parent = element.node.getparent()
             index = parent.index(element.node)
             correction_transform = get_correction_transform(element.node)
+            style_args = self.join_style_args(element)
 
             for path in element.paths:
                 try:
-                    rails, rungs = self.path_to_satin(path, element.stroke_width)
+                    rails, rungs = self.path_to_satin(path, element.stroke_width, style_args)
                 except ValueError:
                     inkex.errormsg(_("Cannot convert %s to a satin column because it intersects itself.  Try breaking it up into multiple paths.") % element.node.get('id'))
 
@@ -50,11 +51,32 @@ class ConvertToSatin(InkstitchExtension):
 
             parent.remove(element.node)
 
-    def path_to_satin(self, path, stroke_width):
+    def join_style_args(self, element):
+        """Convert svg line join style to shapely parallel offset arguments."""
+
+        args = {
+                    'join_style': shgeo.JOIN_STYLE.round
+        }
+
+        element_join_style = element.get_style('stroke-linejoin')
+
+        if element_join_style is not None:
+            if element_join_style == "miter":
+                args['join_style'] = shgeo.JOIN_STYLE.mitre
+
+                # 4 is the default per SVG spec
+                miter_limit = float(element.get_style('stroke-miterlimit', 4))
+                args['mitre_limit'] = miter_limit
+            elif element_join_style == "bevel":
+                args['join_style'] = shgeo.JOIN_STYLE.bevel
+
+        return args
+
+    def path_to_satin(self, path, stroke_width, style_args):
         path = shgeo.LineString(path)
 
-        left_rail = path.parallel_offset(stroke_width / 2.0, 'left')
-        right_rail = path.parallel_offset(stroke_width / 2.0, 'right')
+        left_rail = path.parallel_offset(stroke_width / 2.0, 'left', **style_args)
+        right_rail = path.parallel_offset(stroke_width / 2.0, 'right', **style_args)
 
         if not isinstance(left_rail, shgeo.LineString) or \
            not isinstance(right_rail, shgeo.LineString):

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-07-30 16:40-0400\n"
+"POT-Creation-Date: 2018-07-31 08:40-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -248,7 +248,7 @@ msgstr ""
 msgid "Only simple lines may be converted to satin columns."
 msgstr ""
 
-#: lib/extensions/convert_to_satin.py:42
+#: lib/extensions/convert_to_satin.py:43
 #, python-format
 msgid ""
 "Cannot convert %s to a satin column because it intersects itself.  Try "
