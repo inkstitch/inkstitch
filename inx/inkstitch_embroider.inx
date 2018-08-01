@@ -16,7 +16,7 @@
         <_option value="csv">Comma-separated values (CSV) [DEBUG]</_option>
         <_option value="svg">Scalable Vector Graphics (SVG) [DEBUG]</_option>
     </param>
-    <param name="path" type="string" _gui-text="Directory" _gui-description="Leave empty for saving the output in Inkscape's extension directory."></param>
+    <param name="path" type="string" _gui-text="Directory" _gui-description="Leave empty to save the output in Inkscape's extension directory."></param>
     <param name="extension" type="string" gui-hidden="true">embroider</param>
     <effect>
         <object-type>all</object-type>
