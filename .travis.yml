@@ -111,25 +111,11 @@ install:
 
       export GI_TYPELIB_PATH=/usr/local/lib/girepository-1.0/
 
-      export PATH="/usr/local/opt/python/libexec/bin:$PATH"
-
       pip install virtualenv
       virtualenv -p python2 --system-site-packages venv
 
-      # add in brew's site-packages
-      echo 'import site; site.addsitedir("/usr/local/lib/python2.7/site-packages")' >> venv/lib/python2.7/site-packages/homebrew.pth
-
-      # add in pygobject's site-packages
-      #echo 'import site; site.addsitedir("/usr/local/Cellar/pygobject/2.28.7_1/lib/python2.7/site-packages")' >> venv/lib/python2.7/site-packages/pygobject.pth
-
+      # activate virtual environment
       source venv/bin/activate
-
-      # for embroidermodder/libembroidery
-      brew install swig
-
-      # for qmake
-      brew install qt
-      export PATH="/usr/local/opt/qt/bin:$PATH"
 
       pip install -r requirements.txt
       pip install pyinstaller
