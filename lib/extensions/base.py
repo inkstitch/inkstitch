@@ -114,7 +114,7 @@ class InkstitchExtension(inkex.Effect):
         nodes = []
         element = EmbroideryElement(node)
 
-        if element.has_command('ignore'):
+        if element.has_command('ignore_object'):
             return []
 
         if element.has_style('display') and element.get_style('display') is None:
