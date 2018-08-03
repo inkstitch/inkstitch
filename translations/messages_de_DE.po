@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-08-02 20:06-0400\n"
-"PO-Revision-Date: 2018-08-03 07:42\n"
+"PO-Revision-Date: 2018-08-03 07:51\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -403,7 +403,7 @@ msgstr "Beschleunigen"
 
 #: lib/simulator.py:34
 msgid "Press + or arrow up to speed up"
-msgstr "Drücke + oder Pfeil hoch zur Beschleunigung"
+msgstr "Drücke + oder Pfeil nach oben zur Beschleunigung"
 
 #: lib/simulator.py:35
 msgid "Slow down"
@@ -411,7 +411,7 @@ msgstr "Verlangsamen"
 
 #: lib/simulator.py:35
 msgid "Press - or arrow down to slow down"
-msgstr "Drücke - oder Pfeil unten zur Verlangsamung"
+msgstr "Drücke - oder Pfeil nach unten zur Verlangsamung"
 
 #: lib/simulator.py:36
 msgid "Pause"
@@ -435,7 +435,7 @@ msgstr "Beenden"
 
 #: lib/simulator.py:38
 msgid "Press Q to close the simulation window"
-msgstr "Drücken Sie Q um das Simulationsfenster zu schließen"
+msgstr "Drücken Sie Q um das Simulationsfenster zu beenden"
 
 #: lib/stitches/auto_fill.py:167
 msgid "Unable to autofill.  This most often happens because your shape is made up of multiple sections that aren't connected."
