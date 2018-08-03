@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-08-02 20:06-0400\n"
-"PO-Revision-Date: 2018-08-03 00:11\n"
+"PO-Revision-Date: 2018-08-03 07:42\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -399,43 +399,43 @@ msgstr "Keine Stick-Dateiformate ausgewählt."
 
 #: lib/simulator.py:34
 msgid "Speed up"
-msgstr ""
+msgstr "Beschleunigen"
 
 #: lib/simulator.py:34
 msgid "Press + or arrow up to speed up"
-msgstr ""
+msgstr "Drücke + oder Pfeil hoch zur Beschleunigung"
 
 #: lib/simulator.py:35
 msgid "Slow down"
-msgstr ""
+msgstr "Verlangsamen"
 
 #: lib/simulator.py:35
 msgid "Press - or arrow down to slow down"
-msgstr ""
+msgstr "Drücke - oder Pfeil unten zur Verlangsamung"
 
 #: lib/simulator.py:36
 msgid "Pause"
-msgstr ""
+msgstr "Pause"
 
 #: lib/simulator.py:36
 msgid "Press P to pause the animation"
-msgstr ""
+msgstr "Drücken Sie P um die Animation zu pausieren"
 
 #: lib/simulator.py:37
 msgid "Restart"
-msgstr ""
+msgstr "Neustart"
 
 #: lib/simulator.py:37
 msgid "Press R to restart the animation"
-msgstr ""
+msgstr "Drücken Sie R um die Animation erneut zu starten"
 
 #: lib/simulator.py:38
 msgid "Quit"
-msgstr ""
+msgstr "Beenden"
 
 #: lib/simulator.py:38
 msgid "Press Q to close the simulation window"
-msgstr ""
+msgstr "Drücken Sie Q um das Simulationsfenster zu schließen"
 
 #: lib/stitches/auto_fill.py:167
 msgid "Unable to autofill.  This most often happens because your shape is made up of multiple sections that aren't connected."
