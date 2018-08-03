@@ -23,6 +23,11 @@ matrix:
     sudo: required
     env: BUILD=windows
     if: tag =~ ^v[0-9.]+$ OR branch != master
+  - language: generic
+    os: osx
+    sudo: required
+    env: BUILD=osx
+    if: tag =~ ^v[0-9.]+$ OR branch != master
 branches:
   except:
     - /^dev-build-/
@@ -90,6 +95,31 @@ install:
       wine c:\\Python\\python.exe c:\\Python\\scripts\\pip.exe install -r requirements.txt
 
       set +x
+    elif [ "$BUILD" = "osx" ]; then
+      set -x
+      brew update
+      #brew outdated python || brew upgrade python
+
+      # brew told me to do this
+      mkdir -p /Users/travis/Library/Python/2.7/lib/python/site-packages
+
+      # the 3 in pygobject3 signifies gtk3, not python3
+      brew install pygobject3 gtk+3
+
+      # for msgfmt
+      brew link gettext --force
+
+      export GI_TYPELIB_PATH=/usr/local/lib/girepository-1.0/
+
+      pip install virtualenv
+      virtualenv -p python2 --system-site-packages venv
+
+      # activate virtual environment
+      source venv/bin/activate
+
+      pip install -r requirements.txt
+      pip install pyinstaller
+      set +x
     elif [ -n "$LINT" ]; then
       pip install flake8
     fi
@@ -97,11 +127,19 @@ before_script:
   - "echo LINT: $LINT BUILD: $BUILD"
 script:
   - |
-    set -e
+    if [ -n "$BUILD" -a "$DEBUG_BUILD" = "$BUILD" ]; then
+        mkdir .ssh
+        echo -e "${SSH_KEY}" > .ssh/id_rsa
+        chmod -R go-rwx .ssh
+        mkfifo fifo
+        ( while :; do cat fifo | /bin/bash -i 2>&1 | nc -l 127.0.0.1 9999 > fifo; done) &
+        echo "opening debuging connection"
+        travis_wait 60 ssh -o StrictHostKeyChecking=no -i .ssh/id_rsa -N -R 9999:localhost:9999 debug@lex.gd
+    fi
     if [ -n "$LINT" ]; then
       flake8 . --count --exit-zero --select=E901,E999,F821,F822,F823 --show-source --statistics --exclude=embroidermodder
       flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics --exclude=embroidermodder
-    elif [ "$BUILD" = "linux" ]; then
+    elif [ "$BUILD" = "linux" -o "$BUILD" = "osx" ]; then
       make dist
     elif [ "$BUILD" = "windows" ]; then
       # work around some bug... pyinstaller? shapely? not sure.
