@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-07-25 21:18-0400\n"
-"PO-Revision-Date: 2018-07-26 01:31\n"
+"POT-Creation-Date: 2018-08-02 20:06-0400\n"
+"PO-Revision-Date: 2018-08-03 00:11\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: English\n"
 "MIME-Version: 1.0\n"
@@ -392,6 +392,46 @@ msgstr ""
 
 #: lib/extensions/zip.py:52
 msgid "No embroidery file formats selected."
+msgstr ""
+
+#: lib/simulator.py:34
+msgid "Speed up"
+msgstr ""
+
+#: lib/simulator.py:34
+msgid "Press + or arrow up to speed up"
+msgstr ""
+
+#: lib/simulator.py:35
+msgid "Slow down"
+msgstr ""
+
+#: lib/simulator.py:35
+msgid "Press - or arrow down to slow down"
+msgstr ""
+
+#: lib/simulator.py:36
+msgid "Pause"
+msgstr ""
+
+#: lib/simulator.py:36
+msgid "Press P to pause the animation"
+msgstr ""
+
+#: lib/simulator.py:37
+msgid "Restart"
+msgstr ""
+
+#: lib/simulator.py:37
+msgid "Press R to restart the animation"
+msgstr ""
+
+#: lib/simulator.py:38
+msgid "Quit"
+msgstr ""
+
+#: lib/simulator.py:38
+msgid "Press Q to close the simulation window"
 msgstr ""
 
 #: lib/stitches/auto_fill.py:167
