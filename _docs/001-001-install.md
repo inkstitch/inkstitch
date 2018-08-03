@@ -26,14 +26,14 @@ OS|File name|32&#8209;bit|64&#8209;bit
 ---|---|---|---
 Linux|`inkstitch-[VERSION]-Linux-x86_64.tar.gz`|☒|☑
 Windows|`inkstitch-[VERSION]-win32.zip`|☑|☑
-macOS|Sorry, there is no macOS-Version yet. If you are willing to [test](https://github.com/inkstitch/inkstitch/releases/tag/dev-build-lexelby-mac-build-mk2) or help building it, contact us through [GitHub](https://github.com/inkstitch/inkstitch/pull/181).|☒|☒
+macOS|`inkstitch-[VERSION]-osx-x86_64.tar.gz`|☒|☑
 
 ### 2. Install
  * In Inkscape, go to `Edit > Preferences > System` and check where your `User Extensions` folder is.
  * Decompress the the Ink/Stitch archive directly into this folder and restart Inkscape.
  * You will then find Ink/Stitch under `Extensions > Embroidery`.
 
-#### For example on Linux:
+#### For example on Linux and macOS:
 
 ```
 $ cd ~/.config/inkscape/extensions
