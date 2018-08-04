@@ -37,13 +37,12 @@ class Output(InkstitchExtension):
         write_embroidery_file(temp_file.name, stitch_plan, self.document.getroot())
 
         if sys.platform == "win32":
-            print >> sys.stderr, "setting stdout to binary mode"
             import msvcrt
             msvcrt.setmode(sys.stdout.fileno(), os.O_BINARY)
 
         # inkscape will read the file contents from stdout and copy
         # to the destination file that the user chose
-        with open(temp_file.name) as output_file:
+        with open(temp_file.name, "rb") as output_file:
             sys.stdout.write(output_file.read())
             sys.stdout.flush()
 
