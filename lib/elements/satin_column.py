@@ -28,13 +28,13 @@ class SatinColumn(EmbroideryElement):
         return self.get_style("stroke")
 
     @property
-    @param('zigzag_spacing_mm', _('Zig-zag spacing (peak-to-peak)'), unit='mm', type='float', default=0.4)
+    @param('zigzag_spacing_mm', _('Zig-zag spacing (peak-to-peak)'), tooltip=_('Peak-to-peak distance between zig-zags.'), unit='mm', type='float', default=0.4)
     def zigzag_spacing(self):
         # peak-to-peak distance between zigzags
         return max(self.get_float_param("zigzag_spacing_mm", 0.4), 0.01)
 
     @property
-    @param('pull_compensation_mm', _('Pull compensation'), unit='mm', type='float', default=0)
+    @param('pull_compensation_mm', _('Pull compensation'), tooltip=_('Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape.  This setting expands each pair of needle penetrations outward from the center of the satin column.'), unit='mm', type='float', default=0)
     def pull_compensation(self):
         # In satin stitch, the stitches have a tendency to pull together and
         # narrow the entire column.  We can compensate for this by stitching
@@ -54,7 +54,7 @@ class SatinColumn(EmbroideryElement):
         return max(self.get_float_param("contour_underlay_stitch_length_mm", 1.5), 0.01)
 
     @property
-    @param('contour_underlay_inset_mm', _('Contour underlay inset amount'), unit='mm', group=_('Contour Underlay'), type='float', default=0.4)
+    @param('contour_underlay_inset_mm', _('Contour underlay inset amount'), tooltip=_('Shrink the outline, to prevent the underlay from showing around the outside of the satin column.'), unit='mm', group=_('Contour Underlay'), type='float', default=0.4)
     def contour_underlay_inset(self):
         # how far inside the edge of the column to stitch the underlay
         return self.get_float_param("contour_underlay_inset_mm", 0.4)
@@ -67,7 +67,7 @@ class SatinColumn(EmbroideryElement):
         return self.get_boolean_param("center_walk_underlay")
 
     @property
-    @param('center_walk_underlay_stitch_length_mm', _('Stitch length'), unit='mm', group=_('Center-Walk Underlay'), type='float', default=1.5)
+    @param('center_walk_underlay_stitch_length_mm', _('Stitch length'), tooltip=_('Length of each stitch.'), unit='mm', group=_('Center-Walk Underlay'), type='float', default=1.5)
     def center_walk_underlay_stitch_length(self):
         return max(self.get_float_param("center_walk_underlay_stitch_length_mm", 1.5), 0.01)
 
@@ -77,12 +77,12 @@ class SatinColumn(EmbroideryElement):
         return self.get_boolean_param("zigzag_underlay")
 
     @property
-    @param('zigzag_underlay_spacing_mm', _('Zig-Zag spacing (peak-to-peak)'), unit='mm', group=_('Zig-zag Underlay'), type='float', default=3)
+    @param('zigzag_underlay_spacing_mm', _('Zig-Zag spacing (peak-to-peak)'), tooltip=_('Distance between peaks of the zig-zags.'), unit='mm', group=_('Zig-zag Underlay'), type='float', default=3)
     def zigzag_underlay_spacing(self):
         return max(self.get_float_param("zigzag_underlay_spacing_mm", 3), 0.01)
 
     @property
-    @param('zigzag_underlay_inset_mm', _('Inset amount (default: half of contour underlay inset)'), unit='mm', group=_('Zig-zag Underlay'), type='float', default="")
+    @param('zigzag_underlay_inset_mm', _('Inset amount'), tooltip=_('default: half of contour underlay inset'), unit='mm', group=_('Zig-zag Underlay'), type='float', default="")
     def zigzag_underlay_inset(self):
         # how far in from the edge of the satin the points in the zigzags
         # should be

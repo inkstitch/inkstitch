@@ -30,7 +30,7 @@ class AutoFill(Fill):
         return False
 
     @property
-    @param('running_stitch_length_mm', _('Running stitch length (traversal between sections)'), unit='mm', type='float', default=1.5)
+    @param('running_stitch_length_mm', _('Running stitch length (traversal between sections)'), tooltip=_('Length of stitches around the outline of the fill region used when moving from section to section.'), unit='mm', type='float', default=1.5)
     def running_stitch_length(self):
         return max(self.get_float_param("running_stitch_length_mm", 1.5), 0.01)
 
@@ -40,7 +40,7 @@ class AutoFill(Fill):
         return self.get_boolean_param("fill_underlay", default=False)
 
     @property
-    @param('fill_underlay_angle', _('Fill angle (default: fill angle + 90 deg)'), unit='deg', group=_('AutoFill Underlay'), type='float')
+    @param('fill_underlay_angle', _('Fill angle'), tooltip=_('default: fill angle + 90 deg'), unit='deg', group=_('AutoFill Underlay'), type='float')
     @cache
     def fill_underlay_angle(self):
         underlay_angle = self.get_float_param("fill_underlay_angle")
@@ -51,13 +51,13 @@ class AutoFill(Fill):
             return self.angle + math.pi / 2.0
 
     @property
-    @param('fill_underlay_row_spacing_mm', _('Row spacing (default: 3x fill row spacing)'), unit='mm', group=_('AutoFill Underlay'), type='float')
+    @param('fill_underlay_row_spacing_mm', _('Row spacing'), tooltip=_('default: 3x fill row spacing'), unit='mm', group=_('AutoFill Underlay'), type='float')
     @cache
     def fill_underlay_row_spacing(self):
         return self.get_float_param("fill_underlay_row_spacing_mm") or self.row_spacing * 3
 
     @property
-    @param('fill_underlay_max_stitch_length_mm', _('Max stitch length'), unit='mm', group=_('AutoFill Underlay'), type='float')
+    @param('fill_underlay_max_stitch_length_mm', _('Max stitch length'), tooltip=_('default: equals to fill max stitch length'), unit='mm', group=_('AutoFill Underlay'), type='float')
     @cache
     def fill_underlay_max_stitch_length(self):
         return self.get_float_param("fill_underlay_max_stitch_length_mm") or self.max_stitch_length
@@ -65,7 +65,7 @@ class AutoFill(Fill):
     @property
     @param('fill_underlay_inset_mm',
            _('Inset'),
-           tooltip='Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill.',
+           tooltip=_('Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill.'),
            unit='mm',
            group=_('AutoFill Underlay'),
            type='float',
@@ -76,7 +76,7 @@ class AutoFill(Fill):
     @property
     @param('expand_mm',
            _('Expand'),
-           tooltip='Expand the shape before fill stitching, to compensate for gaps between shapes.',
+           tooltip=_('Expand the shape before fill stitching, to compensate for gaps between shapes.'),
            unit='mm',
            type='float',
            default=0)
