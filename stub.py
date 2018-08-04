@@ -33,6 +33,10 @@ args[0] = binary_path
 extension = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 stdout, stderr = extension.communicate()
 
+if sys.platform == "win32":
+    import msvcrt
+    msvcrt.setmode(sys.stdout.fileno(), os.O_BINARY)
+
 stdout = stdout.strip()
 if stdout:
     print stdout.strip(),
