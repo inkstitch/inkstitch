@@ -59,6 +59,12 @@ class EmbroiderySimulator(wx.Frame):
 
         self.clear()
 
+        # check if simulator is called by params
+        self.simulate_params = False
+        initial_frame_size = self.GetSize()
+        if initial_frame_size == (300, 300):
+            self.simulate_params = True
+
         self.Bind(wx.EVT_SIZE, self.on_size)
         self.panel.Bind(wx.EVT_PAINT, self.on_paint)
         self.panel.Bind(wx.EVT_KEY_DOWN, self.on_key_down)
@@ -248,7 +254,7 @@ class EmbroiderySimulator(wx.Frame):
         self.SetSize(( setsize_window_width, setsize_window_height))
 
         # center the simulation on screen if not called by params
-        if not wx.Window.FindWindowByName("Embroidery Params"):
+        if not self.simulate_params:
             self.Centre()
 
         e.Skip()
