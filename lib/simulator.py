@@ -241,10 +241,15 @@ class EmbroiderySimulator(wx.Frame):
         setsize_window_width = self.width * self.scale + decorations_width + self.margin * 2
         setsize_window_height = (self.height) * self.scale + decorations_height + self.margin * 2
 
+        # set minimum width (force space for control buttons)
         if setsize_window_width < 600:
             setsize_window_width = 600
 
         self.SetSize(( setsize_window_width, setsize_window_height))
+
+        # center the simulation on screen if not called by params
+        if not wx.Window.FindWindowByName("Embroidery Params"):
+            self.Centre()
 
         e.Skip()
 

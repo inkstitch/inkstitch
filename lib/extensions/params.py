@@ -764,6 +764,9 @@ class Params(InkstitchExtension):
         try:
             app = wx.App()
             frame = SettingsFrame(tabs_factory=self.create_tabs, on_cancel=self.cancel)
+            display_size = wx.ClientDisplayRect()
+            frame_size = frame.GetSize()
+            frame.SetPosition((display_size[0], display_size[3] / 2 - frame_size[1] / 2))
             frame.Show()
             app.MainLoop()
 
