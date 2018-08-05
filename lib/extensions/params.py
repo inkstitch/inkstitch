@@ -765,6 +765,9 @@ class Params(InkstitchExtension):
             app = wx.App()
             frame = SettingsFrame(tabs_factory=self.create_tabs, on_cancel=self.cancel)
 
+            # set an ID to recognize it later (within the simulator)
+            wx.Window.SetId(frame, 9876)
+
             # position left, center
             display_size = wx.ClientDisplayRect()
             frame_size = frame.GetSize()
