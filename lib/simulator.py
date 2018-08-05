@@ -26,7 +26,6 @@ class EmbroiderySimulator(wx.Frame):
         wx.Frame.__init__(self, *args, **kwargs)
 
         self.panel = wx.Panel(self, wx.ID_ANY)
-        self.panel.SetFocus()
 
         self.sizer = wx.BoxSizer(wx.VERTICAL)
         self.button_sizer = wx.BoxSizer(wx.HORIZONTAL)
@@ -61,14 +60,16 @@ class EmbroiderySimulator(wx.Frame):
         self.clear()
 
         self.Bind(wx.EVT_SIZE, self.on_size)
+        self.Bind(wx.EVT_CLOSE, self.on_close)
         self.panel.Bind(wx.EVT_PAINT, self.on_paint)
-        self.panel.Bind(wx.EVT_CHAR, self.on_key_down)
+        self.panel.Bind(wx.EVT_SET_FOCUS, self.panel_on_focus)
+        self.buttons[0].Bind(wx.EVT_CHAR, self.on_key_down)
+
+        self.buttons[0].SetFocus()
 
         self.timer = None
 
         self.last_pos = None
-
-        self.Bind(wx.EVT_CLOSE, self.on_close)
 
     def load(self, stitch_plan=None):
         if stitch_plan:
@@ -93,7 +94,7 @@ class EmbroiderySimulator(wx.Frame):
             keycode = event.GetKeyCode()
         else:
             keycode = event.GetEventObject().GetLabelText()
-            self.panel.SetFocus()
+            self.buttons[0].SetFocus()
 
         if keycode == ord("+") or keycode == ord("=") or keycode == wx.WXK_UP or keycode == "Speed up":
             if self.frame_period == 1:
@@ -123,6 +124,10 @@ class EmbroiderySimulator(wx.Frame):
         if self.timer.IsRunning():
             self.timer.Stop()
             self.timer.Start(self.frame_period)
+
+    def panel_on_focus(self, evt):
+        """ Make sure button1 keeps focus because hotkeys are bound to it """
+        self.buttons[0].SetFocus()
 
     def _strip_quotes(self, string):
         if string.startswith('"') and string.endswith('"'):
