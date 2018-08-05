@@ -61,7 +61,7 @@ class EmbroiderySimulator(wx.Frame):
 
         self.Bind(wx.EVT_SIZE, self.on_size)
         self.panel.Bind(wx.EVT_PAINT, self.on_paint)
-        self.panel.Bind(wx.EVT_KEY_DOWN, self.on_key_down)
+        self.panel.Bind(wx.EVT_CHAR, self.on_key_down)
 
         self.timer = None
 
