@@ -62,7 +62,7 @@ class EmbroiderySimulator(wx.Frame):
 
         self.Bind(wx.EVT_SIZE, self.on_size)
         self.panel.Bind(wx.EVT_PAINT, self.on_paint)
-        self.panel.Bind(wx.EVT_KEY_DOWN, self.on_key_down)
+        self.panel.Bind(wx.EVT_CHAR, self.on_key_down)
 
         self.timer = None
 
@@ -105,14 +105,14 @@ class EmbroiderySimulator(wx.Frame):
                 self.frame_period *= 2
             else:
                 self.stitches_per_frame /= 2
-        elif keycode == ord("Q") or keycode == "Quit":
+        elif keycode == ord("q") or keycode == "Quit":
             self.Close()
-        elif keycode == ord("P") or keycode == "Pause":
+        elif keycode == ord("p") or keycode == "Pause":
             if self.timer.IsRunning():
                 self.timer.Stop()
             else:
                 self.timer.Start(self.frame_period)
-        elif keycode == ord("R") or keycode == "Restart":
+        elif keycode == ord("r") or keycode == "Restart":
             self.stop()
             self.clear()
             self.go()
