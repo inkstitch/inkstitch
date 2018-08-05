@@ -14,6 +14,7 @@ class EmbroiderySimulator(wx.Frame):
         self.frame_period = kwargs.pop('frame_period', 80)
         self.stitches_per_frame = kwargs.pop('stitches_per_frame', 1)
         self.target_duration = kwargs.pop('target_duration', None)
+        self.style = kwargs.pop('style', wx.WANTS_CHARS)
 
         self.margin = 10
 
