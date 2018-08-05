@@ -96,24 +96,24 @@ class EmbroiderySimulator(wx.Frame):
             keycode = event.GetEventObject().GetLabelText()
             self.buttons[0].SetFocus()
 
-        if keycode == ord("+") or keycode == ord("=") or keycode == wx.WXK_UP or keycode == "Speed up":
+        if keycode == ord("+") or keycode == ord("=") or keycode == wx.WXK_UP or keycode == _("Speed up"):
             if self.frame_period == 1:
                 self.stitches_per_frame *= 2
             else:
                 self.frame_period = self.frame_period / 2
-        elif keycode == ord("-") or keycode == ord("_") or keycode == wx.WXK_DOWN or keycode == "Slow down":
+        elif keycode == ord("-") or keycode == ord("_") or keycode == wx.WXK_DOWN or keycode == _("Slow down"):
             if self.stitches_per_frame == 1:
                 self.frame_period *= 2
             else:
                 self.stitches_per_frame /= 2
-        elif keycode == ord("q") or keycode == "Quit":
+        elif keycode == ord("q") or keycode == _("Quit"):
             self.Close()
-        elif keycode == ord("p") or keycode == "Pause":
+        elif keycode == ord("p") or keycode == _("Pause"):
             if self.timer.IsRunning():
                 self.timer.Stop()
             else:
                 self.timer.Start(self.frame_period)
-        elif keycode == ord("r") or keycode == "Restart":
+        elif keycode == ord("r") or keycode == _("Restart"):
             self.stop()
             self.clear()
             self.go()
@@ -254,7 +254,7 @@ class EmbroiderySimulator(wx.Frame):
         self.SetSize(( setsize_window_width, setsize_window_height))
 
         # center the simulation on screen if not called by params
-        if not wx.Window.FindWindowById(9876):
+        if not wx.Window.FindWindowByName(_("Embroidery Params")):
             self.Centre()
 
         e.Skip()
