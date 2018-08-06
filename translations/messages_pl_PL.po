@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-05 20:24-0400\n"
-"PO-Revision-Date: 2018-08-06 00:32\n"
+"POT-Creation-Date: 2018-08-05 20:33-0400\n"
+"PO-Revision-Date: 2018-08-06 00:41\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Polish\n"
 "MIME-Version: 1.0\n"
@@ -100,83 +100,87 @@ msgstr ""
 msgid "Custom satin column"
 msgstr ""
 
-#: lib/elements/satin_column.py:25 lib/elements/stroke.py:45
+#: lib/elements/satin_column.py:22
+msgid "\"E\" stitch"
+msgstr ""
+
+#: lib/elements/satin_column.py:31 lib/elements/stroke.py:45
 msgid "Zig-zag spacing (peak-to-peak)"
 msgstr ""
 
-#: lib/elements/satin_column.py:31
+#: lib/elements/satin_column.py:37
 msgid "Pull compensation"
 msgstr ""
 
-#: lib/elements/satin_column.py:39
+#: lib/elements/satin_column.py:45
 msgid "Contour underlay"
 msgstr ""
 
-#: lib/elements/satin_column.py:39 lib/elements/satin_column.py:46
-#: lib/elements/satin_column.py:51
+#: lib/elements/satin_column.py:45 lib/elements/satin_column.py:52
+#: lib/elements/satin_column.py:57
 msgid "Contour Underlay"
 msgstr ""
 
-#: lib/elements/satin_column.py:46 lib/elements/satin_column.py:64
+#: lib/elements/satin_column.py:52 lib/elements/satin_column.py:70
 msgid "Stitch length"
 msgstr ""
 
-#: lib/elements/satin_column.py:51
+#: lib/elements/satin_column.py:57
 msgid "Contour underlay inset amount"
 msgstr ""
 
-#: lib/elements/satin_column.py:57
+#: lib/elements/satin_column.py:63
 msgid "Center-walk underlay"
 msgstr ""
 
-#: lib/elements/satin_column.py:57 lib/elements/satin_column.py:64
+#: lib/elements/satin_column.py:63 lib/elements/satin_column.py:70
 msgid "Center-Walk Underlay"
 msgstr ""
 
-#: lib/elements/satin_column.py:69
+#: lib/elements/satin_column.py:75
 msgid "Zig-zag underlay"
 msgstr ""
 
-#: lib/elements/satin_column.py:69 lib/elements/satin_column.py:74
-#: lib/elements/satin_column.py:79
+#: lib/elements/satin_column.py:75 lib/elements/satin_column.py:80
+#: lib/elements/satin_column.py:85
 msgid "Zig-zag Underlay"
 msgstr ""
 
-#: lib/elements/satin_column.py:74
+#: lib/elements/satin_column.py:80
 msgid "Zig-Zag spacing (peak-to-peak)"
 msgstr ""
 
-#: lib/elements/satin_column.py:79
+#: lib/elements/satin_column.py:85
 msgid "Inset amount (default: half of contour underlay inset)"
 msgstr ""
 
-#: lib/elements/satin_column.py:112
+#: lib/elements/satin_column.py:118
 #, python-format
 msgid "satin column: %(id)s: at least two subpaths required (%(num)d found)"
 msgstr ""
 
-#: lib/elements/satin_column.py:138
+#: lib/elements/satin_column.py:144
 msgid "One or more rails crosses itself, and this is not allowed.  Please split into multiple satin columns."
 msgstr ""
 
-#: lib/elements/satin_column.py:145
+#: lib/elements/satin_column.py:151
 msgid "satin column: One or more of the rungs doesn't intersect both rails."
 msgstr ""
 
-#: lib/elements/satin_column.py:145 lib/elements/satin_column.py:147
+#: lib/elements/satin_column.py:151 lib/elements/satin_column.py:153
 msgid "Each rail should intersect both rungs once."
 msgstr ""
 
-#: lib/elements/satin_column.py:147
+#: lib/elements/satin_column.py:153
 msgid "satin column: One or more of the rungs intersects the rails more than once."
 msgstr ""
 
-#: lib/elements/satin_column.py:188
+#: lib/elements/satin_column.py:194
 #, python-format
 msgid "satin column: object %s has a fill (but should not)"
 msgstr ""
 
-#: lib/elements/satin_column.py:192
+#: lib/elements/satin_column.py:198
 #, python-format
 msgid "satin column: object %(id)s has two paths with an unequal number of points (%(length1)d and %(length2)d)"
 msgstr ""
@@ -226,12 +230,27 @@ msgstr ""
 msgid "Tip: use Path -> Object to Path to convert non-paths."
 msgstr ""
 
-#: lib/extensions/commands.py:140
+#: lib/extensions/commands.py:125
 msgid "Please select one or more objects to which to attach commands."
 msgstr ""
 
-#: lib/extensions/commands.py:148
+#: lib/extensions/commands.py:133
 msgid "Please choose one or more commands to attach."
+msgstr ""
+
+#: lib/extensions/convert_to_satin.py:29
+msgid "Please select at least one line to convert to a satin column."
+msgstr ""
+
+#. : Convert To Satin extension, user selected one or more objects that were
+#. not lines.
+#: lib/extensions/convert_to_satin.py:34
+msgid "Only simple lines may be converted to satin columns."
+msgstr ""
+
+#: lib/extensions/convert_to_satin.py:55
+#, python-format
+msgid "Cannot convert %s to a satin column because it intersects itself.  Try breaking it up into multiple paths."
 msgstr ""
 
 #: lib/extensions/embroider.py:41
