@@ -17,6 +17,12 @@ class SatinColumn(EmbroideryElement):
     def satin_column(self):
         return self.get_boolean_param("satin_column")
 
+    # I18N: "E" stitch is so named because it looks like the letter E.
+    @property
+    @param('e_stitch', _('"E" stitch'), type='boolean', default='false')
+    def e_stitch(self):
+        return self.get_boolean_param("e_stitch")
+
     @property
     def color(self):
         return self.get_style("stroke")
@@ -28,7 +34,7 @@ class SatinColumn(EmbroideryElement):
         return max(self.get_float_param("zigzag_spacing_mm", 0.4), 0.01)
 
     @property
-    @param('pull_compensation_mm', _('Pull compensation'), unit='mm', type='float')
+    @param('pull_compensation_mm', _('Pull compensation'), unit='mm', type='float', default=0)
     def pull_compensation(self):
         # In satin stitch, the stitches have a tendency to pull together and
         # narrow the entire column.  We can compensate for this by stitching
@@ -76,7 +82,7 @@ class SatinColumn(EmbroideryElement):
         return max(self.get_float_param("zigzag_underlay_spacing_mm", 3), 0.01)
 
     @property
-    @param('zigzag_underlay_inset_mm', _('Inset amount (default: half of contour underlay inset)'), unit='mm', group=_('Zig-zag Underlay'), type='float')
+    @param('zigzag_underlay_inset_mm', _('Inset amount (default: half of contour underlay inset)'), unit='mm', group=_('Zig-zag Underlay'), type='float', default="")
     def zigzag_underlay_inset(self):
         # how far in from the edge of the satin the points in the zigzags
         # should be
@@ -388,6 +394,28 @@ class SatinColumn(EmbroideryElement):
 
         return patch
 
+    def do_e_stitch(self):
+        # e stitch: do a pattern that looks like the letter "E".  It looks like
+        # this:
+        #
+        # _|_|_|_|_|_|_|_|_|_|_|_|
+
+        # print >> dbg, "satin", self.zigzag_spacing, self.pull_compensation
+
+        patch = Patch(color=self.color)
+
+        sides = self.walk_paths(self.zigzag_spacing, self.pull_compensation)
+
+        # "left" and "right" here are kind of arbitrary designations meaning
+        # a point from the first and second rail repectively
+        for left, right in izip(*sides):
+            patch.add_stitch(left)
+            patch.add_stitch(right)
+            patch.add_stitch(left)
+
+        return patch
+
+
     def to_patches(self, last_patch):
         # Stitch a variable-width satin column, zig-zagging between two paths.
 
@@ -411,6 +439,9 @@ class SatinColumn(EmbroideryElement):
             # zigzags sit on the contour walk underlay like rail ties on rails.
             patches.append(self.do_zigzag_underlay())
 
-        patches.append(self.do_satin())
+        if self.e_stitch:
+            patches.append(self.do_e_stitch())
+        else:
+            patches.append(self.do_satin())
 
         return patches
