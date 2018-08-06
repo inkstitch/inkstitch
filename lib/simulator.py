@@ -27,6 +27,26 @@ class EmbroiderySimulator(wx.Frame):
         self.panel = wx.Panel(self, wx.ID_ANY)
         self.panel.SetFocus()
 
+        self.sizer = wx.BoxSizer(wx.VERTICAL)
+        self.button_sizer = wx.BoxSizer(wx.HORIZONTAL)
+
+        self.button_label = (
+            [_("Speed up"),_('Press + or arrow up to speed up')],
+            [_("Slow down"),_('Press - or arrow down to slow down')],
+            [_("Pause"),_("Press P to pause the animation")],
+            [_("Restart"),_("Press R to restart the animation")],
+            [_("Quit"),_("Press Q to close the simulation window")])
+        self.buttons = []
+        for i in range(0, len(self.button_label)):
+            self.buttons.append(wx.Button(self, -1, self.button_label[i][0]))
+            self.button_sizer.Add(self.buttons[i], 1, wx.EXPAND)
+            self.buttons[i].Bind(wx.EVT_BUTTON, self.on_key_down)
+            self.buttons[i].SetToolTip(self.button_label[i][1])
+
+        self.sizer.Add(self.panel, 1, wx.EXPAND)
+        self.sizer.Add(self.button_sizer, 0, wx.EXPAND)
+        self.SetSizer(self.sizer)
+
         self.load(stitch_plan)
 
         if self.target_duration:
@@ -68,26 +88,30 @@ class EmbroiderySimulator(wx.Frame):
             self.stitches_per_frame *= 2
 
     def on_key_down(self, event):
-        keycode = event.GetKeyCode()
+        if hasattr(event, 'GetKeyCode'):
+            keycode = event.GetKeyCode()
+        else:
+            keycode = event.GetEventObject().GetLabelText()
+            self.panel.SetFocus()
 
-        if keycode == ord("+") or keycode == ord("=") or keycode == wx.WXK_UP:
+        if keycode == ord("+") or keycode == ord("=") or keycode == wx.WXK_UP or keycode == "Speed up":
             if self.frame_period == 1:
                 self.stitches_per_frame *= 2
             else:
                 self.frame_period = self.frame_period / 2
-        elif keycode == ord("-") or keycode == ord("_") or keycode == wx.WXK_DOWN:
+        elif keycode == ord("-") or keycode == ord("_") or keycode == wx.WXK_DOWN or keycode == "Slow down":
             if self.stitches_per_frame == 1:
                 self.frame_period *= 2
             else:
                 self.stitches_per_frame /= 2
-        elif keycode == ord("Q"):
+        elif keycode == ord("Q") or keycode == "Quit":
             self.Close()
-        elif keycode == ord('P'):
+        elif keycode == ord("P") or keycode == "Pause":
             if self.timer.IsRunning():
                 self.timer.Stop()
             else:
                 self.timer.Start(self.frame_period)
-        elif keycode == ord("R"):
+        elif keycode == ord("R") or keycode == "Restart":
             self.stop()
             self.clear()
             self.go()
@@ -170,7 +194,7 @@ class EmbroiderySimulator(wx.Frame):
 
         self.width = width
         self.height = height
-        self.scale = min(float(self.max_width) / width, float(self.max_height) / height)
+        self.scale = min(float(self.max_width) / width, float(self.max_height - 60) / height)
 
         # make room for decorations and the margin
         self.scale *= 0.95
@@ -212,10 +236,15 @@ class EmbroiderySimulator(wx.Frame):
         client_width, client_height = self.GetClientSize()
 
         decorations_width = window_width - client_width
-        decorations_height = window_height - client_height
+        decorations_height = window_height - client_height + 40
 
-        self.SetSize((self.width * self.scale + decorations_width + self.margin * 2,
-                      self.height * self.scale + decorations_height + self.margin * 2))
+        setsize_window_width = self.width * self.scale + decorations_width + self.margin * 2
+        setsize_window_height = (self.height) * self.scale + decorations_height + self.margin * 2
+
+        if setsize_window_width < 600:
+            setsize_window_width = 600
+
+        self.SetSize(( setsize_window_width, setsize_window_height))
 
         e.Skip()
 
