@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-02 20:06-0400\n"
-"PO-Revision-Date: 2018-08-03 00:11\n"
+"POT-Creation-Date: 2018-08-05 20:24-0400\n"
+"PO-Revision-Date: 2018-08-06 00:32\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -100,7 +100,7 @@ msgstr "Coluna de matizado"
 msgid "Custom satin column"
 msgstr "Coluna de matizado personalizado"
 
-#: lib/elements/satin_column.py:25 lib/elements/stroke.py:35
+#: lib/elements/satin_column.py:25 lib/elements/stroke.py:45
 msgid "Zig-zag spacing (peak-to-peak)"
 msgstr "Espaçamento Zig-zag (crista-a-crista)"
 
@@ -189,19 +189,27 @@ msgstr "Matizar ao longo dos caminhos"
 msgid "Running stitch length"
 msgstr "Distância de ponto corrido"
 
-#: lib/elements/stroke.py:41
+#: lib/elements/stroke.py:36
+msgid "Bean stitch number of repeats"
+msgstr ""
+
+#: lib/elements/stroke.py:37
+msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.  Only applies to running stitch."
+msgstr ""
+
+#: lib/elements/stroke.py:51
 msgid "Repeats"
 msgstr "Repetições"
 
-#: lib/elements/stroke.py:61
+#: lib/elements/stroke.py:71
 msgid "Manual stitch placement"
 msgstr "Colocação manual de pontos"
 
-#: lib/elements/stroke.py:61
+#: lib/elements/stroke.py:71
 msgid "Stitch every node in the path.  Stitch length and zig-zag spacing are ignored."
 msgstr ""
 
-#: lib/elements/stroke.py:92
+#: lib/elements/stroke.py:102
 msgid "Legacy running stitch setting detected!\n\n"
 "It looks like you're using a stroke smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set your stroke to be dashed to indicate running stitch.  Any kind of dash will work."
 msgstr ""
