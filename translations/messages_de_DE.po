@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-08-05 20:33-0400\n"
-"PO-Revision-Date: 2018-08-06 00:41\n"
+"PO-Revision-Date: 2018-08-06 14:29\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -102,7 +102,7 @@ msgstr "Benutzerdefinierte Satinkolumne"
 
 #: lib/elements/satin_column.py:22
 msgid "\"E\" stitch"
-msgstr ""
+msgstr "\"E\" Stich"
 
 #: lib/elements/satin_column.py:31 lib/elements/stroke.py:45
 msgid "Zig-zag spacing (peak-to-peak)"
