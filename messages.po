@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-07-27 21:10-0400\n"
+"POT-Creation-Date: 2018-08-05 20:31-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -104,7 +104,7 @@ msgstr ""
 msgid "\"E\" stitch"
 msgstr ""
 
-#: lib/elements/satin_column.py:31 lib/elements/stroke.py:35
+#: lib/elements/satin_column.py:31 lib/elements/stroke.py:45
 msgid "Zig-zag spacing (peak-to-peak)"
 msgstr ""
 
@@ -199,21 +199,32 @@ msgstr ""
 msgid "Running stitch length"
 msgstr ""
 
-#: lib/elements/stroke.py:41
+#: lib/elements/stroke.py:36
+msgid "Bean stitch number of repeats"
+msgstr ""
+
+#: lib/elements/stroke.py:37
+msgid ""
+"Backtrack each stitch this many times.  A value of 1 would triple each "
+"stitch (forward, back, forward).  A value of 2 would quintuple each "
+"stitch, etc.  Only applies to running stitch."
+msgstr ""
+
+#: lib/elements/stroke.py:51
 msgid "Repeats"
 msgstr ""
 
-#: lib/elements/stroke.py:61
+#: lib/elements/stroke.py:71
 msgid "Manual stitch placement"
 msgstr ""
 
-#: lib/elements/stroke.py:61
+#: lib/elements/stroke.py:71
 msgid ""
 "Stitch every node in the path.  Stitch length and zig-zag spacing are "
 "ignored."
 msgstr ""
 
-#: lib/elements/stroke.py:92
+#: lib/elements/stroke.py:102
 msgid ""
 "Legacy running stitch setting detected!\n"
 "\n"
@@ -424,6 +435,46 @@ msgstr ""
 
 #: lib/extensions/zip.py:52
 msgid "No embroidery file formats selected."
+msgstr ""
+
+#: lib/simulator.py:34
+msgid "Speed up"
+msgstr ""
+
+#: lib/simulator.py:34
+msgid "Press + or arrow up to speed up"
+msgstr ""
+
+#: lib/simulator.py:35
+msgid "Slow down"
+msgstr ""
+
+#: lib/simulator.py:35
+msgid "Press - or arrow down to slow down"
+msgstr ""
+
+#: lib/simulator.py:36
+msgid "Pause"
+msgstr ""
+
+#: lib/simulator.py:36
+msgid "Press P to pause the animation"
+msgstr ""
+
+#: lib/simulator.py:37
+msgid "Restart"
+msgstr ""
+
+#: lib/simulator.py:37
+msgid "Press R to restart the animation"
+msgstr ""
+
+#: lib/simulator.py:38
+msgid "Quit"
+msgstr ""
+
+#: lib/simulator.py:38
+msgid "Press Q to close the simulation window"
 msgstr ""
 
 #: lib/stitches/auto_fill.py:167

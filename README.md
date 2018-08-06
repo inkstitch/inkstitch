@@ -10,7 +10,7 @@ Want to learn more?
 
 * Check out our list of [features](https://inkstitch.org/features/)
 * [Quick Install](https://inkstitch.org/docs/install/) on Linux and Windows (Mac support in the works!)
-* See some [photos](https://inkstitch.org/tutorials/inspiration/lexelby/) showing what Ink/Stitch can do
+* See some [photos](https://inkstitch.org/tutorials/inspiration/) showing what Ink/Stitch can do
 * Watch some [videos](https://inkstitch.org/tutorials/video/) of Ink/Stitch in action
 * ...and lots more on our [website](https://inkstitch.org)
 

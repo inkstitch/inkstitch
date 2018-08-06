@@ -2,7 +2,7 @@ EXTENSIONS:=inkstitch
 
 # This gets the branch name or the name of the tag
 VERSION:=$(TRAVIS_BRANCH)
-OS:=$(shell uname)
+OS:=$(TRAVIS_OS_NAME)
 ARCH:=$(shell uname -m)
 
 dist: distclean locales
@@ -17,7 +17,7 @@ dist: distclean locales
 	if [ "$$BUILD" = "windows" ]; then \
 		cd dist; zip -r ../inkstitch-$(VERSION)-win32.zip *; \
 	else \
-    	cd dist; tar zcf ../inkstitch-$(VERSION)-$(OS)-$(ARCH).tar.gz *; \
+		cd dist; tar zcf ../inkstitch-$(VERSION)-$(OS)-$(ARCH).tar.gz *; \
 	fi
 
 distclean:
