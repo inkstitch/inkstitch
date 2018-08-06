@@ -10,11 +10,11 @@ from .svg import PIXELS_PER_MM, color_block_to_point_lists
 class EmbroiderySimulator(wx.Frame):
     def __init__(self, *args, **kwargs):
         stitch_plan = kwargs.pop('stitch_plan', None)
+        self.center_window = kwargs.pop('center_window', True)
         self.on_close_hook = kwargs.pop('on_close', None)
         self.frame_period = kwargs.pop('frame_period', 80)
         self.stitches_per_frame = kwargs.pop('stitches_per_frame', 1)
         self.target_duration = kwargs.pop('target_duration', None)
-        self.style = kwargs.pop('style', wx.WANTS_CHARS)
 
         self.margin = 10
 
@@ -255,7 +255,7 @@ class EmbroiderySimulator(wx.Frame):
         self.SetSize(( setsize_window_width, setsize_window_height))
 
         # center the simulation on screen if not called by params
-        if not wx.Window.FindWindowById(9876):
+        if self.center_window == True:
             self.Centre()
 
         e.Skip()

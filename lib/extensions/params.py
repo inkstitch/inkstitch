@@ -436,6 +436,7 @@ class SettingsFrame(wx.Frame):
                 self.simulate_window = EmbroiderySimulator(None, -1, _("Preview"),
                                                            simulator_pos,
                                                            size=(300, 300),
+                                                           center_window=False,
                                                            stitch_plan=stitch_plan,
                                                            on_close=self.simulate_window_closed,
                                                            target_duration=5,
@@ -764,9 +765,6 @@ class Params(InkstitchExtension):
         try:
             app = wx.App()
             frame = SettingsFrame(tabs_factory=self.create_tabs, on_cancel=self.cancel)
-
-            # set an ID to recognize it later (within the simulator)
-            wx.Window.SetId(frame, 9876)
 
             # position left, center
             display_size = wx.ClientDisplayRect()
