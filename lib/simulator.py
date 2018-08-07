@@ -61,11 +61,13 @@ class EmbroiderySimulator(wx.Frame):
 
         shortcut_keys = [
             (wx.ACCEL_NORMAL, ord('+'), 'animation_speed_up'),
+            (wx.ACCEL_NORMAL, ord('='), 'animation_speed_up'),
             (wx.ACCEL_NORMAL, wx.WXK_ADD, 'animation_speed_up'),
             (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_ADD, 'animation_speed_up'),
             (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_UP, 'animation_speed_up'),
             (wx.ACCEL_NORMAL, wx.WXK_UP, 'animation_speed_up'),
             (wx.ACCEL_NORMAL, ord('-'), 'animation_slow_down'),
+            (wx.ACCEL_NORMAL, ord('_'), 'animation_slow_down'),
             (wx.ACCEL_NORMAL, wx.WXK_SUBTRACT, 'animation_slow_down'),
             (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_SUBTRACT, 'animation_slow_down'),
             (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_DOWN, 'animation_slow_down'),
