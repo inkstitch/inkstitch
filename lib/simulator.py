@@ -27,6 +27,8 @@ class EmbroiderySimulator(wx.Frame):
 
         self.panel = wx.Panel(self, wx.ID_ANY)
 
+        self.panel.SetDoubleBuffered(True)
+
         self.sizer = wx.BoxSizer(wx.VERTICAL)
         self.button_sizer = wx.BoxSizer(wx.HORIZONTAL)
 
