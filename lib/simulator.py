@@ -62,10 +62,10 @@ class EmbroiderySimulator(wx.Frame):
         self.clear()
 
         self.font = wx.Font(9, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL)
-        self.stitch_counter = wx.StaticText(self, label=_("Stitch #") + '1 / ' + str(len(self.segments)), pos=(30, 10))
-        self.stitch_counter.SetFont(self.font)
-        self.stitch_counter.SetForegroundColour('red')
-        self.stitch_counter.SetBackgroundColour('white')
+        self.panel.stitch_counter = wx.StaticText(self, label=_("Stitch #") + '1 / ' + str(len(self.segments)), pos=(30, 10))
+        self.panel.stitch_counter.SetFont(self.font)
+        self.panel.stitch_counter.SetForegroundColour('red')
+        self.panel.stitch_counter.SetBackgroundColour('white')
 
         shortcut_keys = [
             (wx.ACCEL_NORMAL, ord('+'), 'animation_speed_up'),
@@ -143,7 +143,7 @@ class EmbroiderySimulator(wx.Frame):
             else:
                 self.timer.Start(self.frame_period)
         elif keycode == "animation_restart":
-            self.stitch_counter.SetLabel(_("Stitch # ") + '1 / ' + str(len(self.segments) + 1))
+            self.panel.stitch_counter.SetLabel(_("Stitch # ") + '1 / ' + str(len(self.segments) + 1))
             self.stop()
             self.clear()
             self.go()
@@ -319,7 +319,7 @@ class EmbroiderySimulator(wx.Frame):
                 self.current_stitch += 1
                 self.last_pos = (x2, y2)
 
-                self.stitch_counter.SetLabel(_("Stitch # ") + str(self.current_stitch + 1) + ' / ' + str(len(self.segments) + 1))
+                self.panel.stitch_counter.SetLabel(_("Stitch # ") + str(self.current_stitch + 1) + ' / ' + str(len(self.segments) + 1))
 
             except IndexError:
                 self.timer.Stop()
