@@ -30,12 +30,6 @@ class EmbroiderySimulator(wx.Frame):
         self.sizer = wx.BoxSizer(wx.VERTICAL)
         self.button_sizer = wx.BoxSizer(wx.HORIZONTAL)
 
-        self.font = wx.Font(9, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL)
-        self.stitch_counter = wx.StaticText(self, label="", pos=(10, 10))
-        self.stitch_counter.SetFont(self.font)
-        self.stitch_counter.SetForegroundColour('red')
-        #self.stitch_counter.SetBackgroundColour('white')
-
         self.button_label = (
             [_("Speed up"),_('Press + or arrow up to speed up'), 'animation_speed_up'],
             [_("Slow down"),_('Press - or arrow down to slow down'), 'animation_slow_down'],
@@ -64,6 +58,11 @@ class EmbroiderySimulator(wx.Frame):
         self.canvas = wx.GraphicsContext.Create(self.dc)
 
         self.clear()
+
+        self.font = wx.Font(9, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL)
+        self.stitch_counter = wx.StaticText(self, label=_("Stitch #") + '1 / ' + str(len(self.segments)), pos=(30, 10))
+        self.stitch_counter.SetFont(self.font)
+        self.stitch_counter.SetForegroundColour('red')
 
         shortcut_keys = [
             (wx.ACCEL_NORMAL, ord('+'), 'animation_speed_up'),
@@ -140,6 +139,7 @@ class EmbroiderySimulator(wx.Frame):
             else:
                 self.timer.Start(self.frame_period)
         elif keycode == "animation_restart":
+            self.stitch_counter.SetLabel(_("Stitch # ") + '1 / ' + str(len(self.segments) + 1))
             self.stop()
             self.clear()
             self.go()
@@ -315,8 +315,7 @@ class EmbroiderySimulator(wx.Frame):
                 self.current_stitch += 1
                 self.last_pos = (x2, y2)
 
-                # TODO: 1 stitch missing?!? Where would it be?
-                self.stitch_counter.SetLabel(_("Stitch # ") + str(self.current_stitch) + ' / ' + str(len(self.segments)))
+                self.stitch_counter.SetLabel(_("Stitch # ") + str(self.current_stitch + 1) + ' / ' + str(len(self.segments) + 1))
 
             except IndexError:
                 self.timer.Stop()
