@@ -16,7 +16,7 @@ class EmbroiderySimulator(wx.Frame):
         self.stitches_per_frame = kwargs.pop('stitches_per_frame', 1)
         self.target_duration = kwargs.pop('target_duration', None)
 
-        self.margin = 10
+        self.margin = 30
 
         screen_rect = wx.Display(0).ClientArea
         self.max_width = kwargs.pop('max_width', screen_rect.GetWidth())
@@ -29,6 +29,12 @@ class EmbroiderySimulator(wx.Frame):
 
         self.sizer = wx.BoxSizer(wx.VERTICAL)
         self.button_sizer = wx.BoxSizer(wx.HORIZONTAL)
+
+        self.font = wx.Font(9, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL)
+        self.stitch_counter = wx.StaticText(self, label="", pos=(10, 10))
+        self.stitch_counter.SetFont(self.font)
+        self.stitch_counter.SetForegroundColour('red')
+        #self.stitch_counter.SetBackgroundColour('white')
 
         self.button_label = (
             [_("Speed up"),_('Press + or arrow up to speed up'), 'animation_speed_up'],
@@ -216,7 +222,7 @@ class EmbroiderySimulator(wx.Frame):
 
         self.width = width
         self.height = height
-        self.scale = min(float(self.max_width) / width, float(self.max_height - 60) / height)
+        self.scale = min(float(self.max_width - self.margin * 2) / width, float(self.max_height - self.margin * 2 - 40) / height)
 
         # make room for decorations and the margin
         self.scale *= 0.95
@@ -305,6 +311,8 @@ class EmbroiderySimulator(wx.Frame):
                 self.canvas.SetPen(color)
                 self.canvas.DrawLines(((x1, y1), (x2, y2)))
                 self.Refresh()
+
+                self.stitch_counter.SetLabel(_("Stitch # ") + str(self.current_stitch) + ' / ' + str(len(self.segments)-1))
 
                 self.current_stitch += 1
                 self.last_pos = (x2, y2)
