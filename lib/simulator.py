@@ -63,10 +63,12 @@ class EmbroiderySimulator(wx.Frame):
         self.stitch_counter = wx.StaticText(self, label=_("Stitch #") + '1 / ' + str(len(self.segments)), pos=(30, 10))
         self.stitch_counter.SetFont(self.font)
         self.stitch_counter.SetForegroundColour('red')
+        self.stitch_counter.SetBackgroundColour('white')
 
         shortcut_keys = [
             (wx.ACCEL_NORMAL, ord('+'), 'animation_speed_up'),
             (wx.ACCEL_NORMAL, ord('='), 'animation_speed_up'),
+            (wx.ACCEL_SHIFT,  ord('='), 'animation_speed_up'),
             (wx.ACCEL_NORMAL, wx.WXK_ADD, 'animation_speed_up'),
             (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_ADD, 'animation_speed_up'),
             (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_UP, 'animation_speed_up'),
