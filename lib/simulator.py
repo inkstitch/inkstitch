@@ -312,9 +312,11 @@ class EmbroiderySimulator(wx.Frame):
                 self.canvas.DrawLines(((x1, y1), (x2, y2)))
                 self.Refresh()
 
-                self.stitch_counter.SetLabel(_("Stitch # ") + str(self.current_stitch) + ' / ' + str(len(self.segments)-1))
-
                 self.current_stitch += 1
                 self.last_pos = (x2, y2)
+
+                # TODO: 1 stitch missing?!? Where would it be?
+                self.stitch_counter.SetLabel(_("Stitch # ") + str(self.current_stitch) + ' / ' + str(len(self.segments)))
+
             except IndexError:
                 self.timer.Stop()
