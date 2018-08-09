@@ -286,7 +286,7 @@ class EmbroiderySimulator(wx.Frame):
         self.SetSize(( setsize_window_width, setsize_window_height))
 
         # center the simulation on screen if not called by params
-        # else center horizontally
+        # else center vertically
         if self.x_position == None:
             self.Centre()
         else:
