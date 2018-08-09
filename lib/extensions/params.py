@@ -766,8 +766,11 @@ class Params(InkstitchExtension):
             app = wx.App()
             frame = SettingsFrame(tabs_factory=self.create_tabs, on_cancel=self.cancel)
 
+            current_screen = wx.Display.GetFromPoint(wx.GetMousePosition())
+            display = wx.Display(current_screen)
+
             # position left, center
-            display_size = wx.ClientDisplayRect()
+            display_size = display.GetClientArea()
             frame_size = frame.GetSize()
             frame.SetPosition((display_size[0], display_size[3] / 2 - frame_size[1] / 2))
 
