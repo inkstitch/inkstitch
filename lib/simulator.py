@@ -10,7 +10,7 @@ from .svg import PIXELS_PER_MM, color_block_to_point_lists
 class EmbroiderySimulator(wx.Frame):
     def __init__(self, *args, **kwargs):
         stitch_plan = kwargs.pop('stitch_plan', None)
-        self.center_window = kwargs.pop('center_window', True)
+        self.x_position = kwargs.pop('x_position', None)
         self.on_close_hook = kwargs.pop('on_close', None)
         self.frame_period = kwargs.pop('frame_period', 80)
         self.stitches_per_frame = kwargs.pop('stitches_per_frame', 1)
@@ -33,17 +33,17 @@ class EmbroiderySimulator(wx.Frame):
         self.button_sizer = wx.BoxSizer(wx.HORIZONTAL)
 
         self.button_label = (
-            [_("Speed up"),_('Press + or arrow up to speed up'), 'animation_speed_up'],
-            [_("Slow down"),_('Press - or arrow down to slow down'), 'animation_slow_down'],
-            [_("Pause"),_("Press P to pause the animation"), 'animation_pause'],
-            [_("Restart"),_("Press R to restart the animation"), 'animation_restart'],
-            [_("Quit"),_("Press Q to close the simulation window"), 'animation_quit'])
+            [_("Speed up"), _('Press + or arrow up to speed up'), 'animation_speed_up'],
+            [_("Slow down"), _('Press - or arrow down to slow down'), 'animation_slow_down'],
+            [_("Pause"), _("Press P to pause the animation"), 'animation_pause'],
+            [_("Restart"), _("Press R to restart the animation"), 'animation_restart'],
+            [_("Quit"), _("Press Q to close the simulation window"), 'animation_quit'])
         self.buttons = []
         for i in range(0, len(self.button_label)):
             self.buttons.append(wx.Button(self, -1, self.button_label[i][0]))
             self.button_sizer.Add(self.buttons[i], 1, wx.EXPAND)
             self.buttons[i].SetToolTip(self.button_label[i][1])
-            self.buttons[i].Bind(wx.EVT_BUTTON, lambda evt, keycode=self.button_label[i][2]: self.on_key_down(evt, keycode))
+            self.buttons[i].Bind(wx.EVT_BUTTON, lambda evt, keycode=self.button_label[i][2]: self.do_action(evt, keycode))
 
         self.sizer.Add(self.panel, 1, wx.EXPAND)
         self.sizer.Add(self.button_sizer, 0, wx.EXPAND)
@@ -61,11 +61,7 @@ class EmbroiderySimulator(wx.Frame):
 
         self.clear()
 
-        self.font = wx.Font(9, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL)
-        self.panel.stitch_counter = wx.StaticText(self, label=_("Stitch #") + '1 / ' + str(len(self.segments)), pos=(30, 10))
-        self.panel.stitch_counter.SetFont(self.font)
-        self.panel.stitch_counter.SetForegroundColour('red')
-        self.panel.stitch_counter.SetBackgroundColour('white')
+        self.set_stitch_counter(1)
 
         shortcut_keys = [
             (wx.ACCEL_NORMAL, ord('+'), 'animation_speed_up'),
@@ -91,7 +87,7 @@ class EmbroiderySimulator(wx.Frame):
             eventId = wx.NewId()
             accel_entries.append( (shortcut_key[0], shortcut_key[1], eventId) )
 
-            self.Bind(wx.EVT_MENU, lambda evt, keycode=shortcut_key[2]: self.on_key_down(evt, keycode), id=eventId)
+            self.Bind(wx.EVT_MENU, lambda evt, keycode=shortcut_key[2]: self.do_action(evt, keycode), id=eventId)
 
         accel_table = wx.AcceleratorTable(accel_entries)
         self.SetAcceleratorTable(accel_table)
@@ -124,7 +120,7 @@ class EmbroiderySimulator(wx.Frame):
             self.frame_period *= 2
             self.stitches_per_frame *= 2
 
-    def on_key_down(self, event, keycode):
+    def do_action(self, event, keycode):
         if keycode == "animation_speed_up":
             if self.frame_period == 1:
                 self.stitches_per_frame *= 2
@@ -143,7 +139,7 @@ class EmbroiderySimulator(wx.Frame):
             else:
                 self.timer.Start(self.frame_period)
         elif keycode == "animation_restart":
-            self.panel.stitch_counter.SetLabel(_("Stitch # ") + '1 / ' + str(len(self.segments) + 1))
+            self.set_stitch_counter(1)
             self.stop()
             self.clear()
             self.go()
@@ -154,6 +150,16 @@ class EmbroiderySimulator(wx.Frame):
         if self.timer.IsRunning():
             self.timer.Stop()
             self.timer.Start(self.frame_period)
+
+    def set_stitch_counter(self, current_stitch):
+        if hasattr(self.panel, 'stitch_counter'):
+            self.panel.stitch_counter.SetLabel(_("Stitch # ") + str(current_stitch) + ' / ' + str(len(self.segments) + 1))
+        else:
+            self.font = wx.Font(9, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL)
+            self.panel.stitch_counter = wx.StaticText(self, label=_("Stitch #") + '1 / ' + str(len(self.segments)), pos=(30, 10))
+            self.panel.stitch_counter.SetFont(self.font)
+            self.panel.stitch_counter.SetForegroundColour('red')
+            self.panel.stitch_counter.SetBackgroundColour('white')
 
     def _strip_quotes(self, string):
         if string.startswith('"') and string.endswith('"'):
@@ -281,12 +287,12 @@ class EmbroiderySimulator(wx.Frame):
 
         # center the simulation on screen if not called by params
         # else center horizontally
-        if self.center_window == True:
+        if self.x_position == None:
             self.Centre()
         else:
             current_pos = self.GetPosition()
             display_height = wx.ClientDisplayRect()
-            self.SetPosition((current_pos[0], display_height[3] / 2 - setsize_window_height / 2))
+            self.SetPosition((self.x_position, display_height[3] / 2 - setsize_window_height / 2))
 
         e.Skip()
 
@@ -319,7 +325,7 @@ class EmbroiderySimulator(wx.Frame):
                 self.current_stitch += 1
                 self.last_pos = (x2, y2)
 
-                self.panel.stitch_counter.SetLabel(_("Stitch # ") + str(self.current_stitch + 1) + ' / ' + str(len(self.segments) + 1))
+                self.set_stitch_counter(self.current_stitch + 1)
 
             except IndexError:
                 self.timer.Stop()

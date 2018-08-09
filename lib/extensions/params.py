@@ -436,7 +436,7 @@ class SettingsFrame(wx.Frame):
                 self.simulate_window = EmbroiderySimulator(None, -1, _("Preview"),
                                                            simulator_pos,
                                                            size=(300, 300),
-                                                           center_window=False,
+                                                           x_position=simulator_pos.x,
                                                            stitch_plan=stitch_plan,
                                                            on_close=self.simulate_window_closed,
                                                            target_duration=5,
