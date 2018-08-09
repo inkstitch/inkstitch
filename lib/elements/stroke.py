@@ -27,7 +27,13 @@ class Stroke(EmbroideryElement):
         return self.get_style("stroke-dasharray") is not None
 
     @property
-    @param('running_stitch_length_mm', _('Running stitch length'), unit='mm', type='float', default=1.5, sort_index=3)
+    @param('running_stitch_length_mm',
+            _('Running stitch length'),
+            tooltip=_('Length of stitches in running stitch mode.'),
+            unit='mm',
+            type='float',
+            default=1.5,
+            sort_index=3)
     def running_stitch_length(self):
         return max(self.get_float_param("running_stitch_length_mm", 1.5), 0.01)
 
@@ -42,13 +48,24 @@ class Stroke(EmbroideryElement):
         return self.get_int_param("bean_stitch_repeats", 0)
 
     @property
-    @param('zigzag_spacing_mm', _('Zig-zag spacing (peak-to-peak)'), unit='mm', type='float', default=0.4, sort_index=3)
+    @param('zigzag_spacing_mm',
+            _('Zig-zag spacing (peak-to-peak)'),
+            tooltip=_('Length of stitches in zig-zag mode.'),
+            unit='mm',
+            type='float',
+            default=0.4,
+            sort_index=3)
     @cache
     def zigzag_spacing(self):
         return max(self.get_float_param("zigzag_spacing_mm", 0.4), 0.01)
 
     @property
-    @param('repeats', _('Repeats'), type='int', default="1", sort_index=1)
+    @param('repeats',
+            _('Repeats'),
+            tooltip=_('Defines how many times to run down and back along the path.'),
+            type='int',
+            default="1",
+            sort_index=1)
     def repeats(self):
         return self.get_int_param("repeats", 1)
 
@@ -68,7 +85,12 @@ class Stroke(EmbroideryElement):
         return shapely.geometry.MultiLineString(line_strings)
 
     @property
-    @param('manual_stitch', _('Manual stitch placement'), tooltip=_("Stitch every node in the path.  Stitch length and zig-zag spacing are ignored."), type='boolean', default=False, sort_index=0)
+    @param('manual_stitch',
+            _('Manual stitch placement'),
+            tooltip=_("Stitch every node in the path.  Stitch length and zig-zag spacing are ignored."),
+            type='boolean',
+            default=False,
+            sort_index=0)
     def manual_stitch_mode(self):
         return self.get_boolean_param('manual_stitch')
 
