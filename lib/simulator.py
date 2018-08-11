@@ -18,10 +18,14 @@ class EmbroiderySimulator(wx.Frame):
 
         self.margin = 30
 
-        screen_rect = wx.Display(0).ClientArea
-        self.max_width = kwargs.pop('max_width', screen_rect.GetWidth())
-        self.max_height = kwargs.pop('max_height', screen_rect.GetHeight())
+        screen_rect = self.get_current_screen_rect()
+        self.max_width = kwargs.pop('max_width', screen_rect[2])
+        self.max_height = kwargs.pop('max_height', screen_rect[3])
         self.scale = 1
+
+        self.min_width = 600
+        if self.max_width < self.min_width:
+            self.max_width = self.min_width
 
         wx.Frame.__init__(self, *args, **kwargs)
 
@@ -100,6 +104,12 @@ class EmbroiderySimulator(wx.Frame):
         self.timer = None
 
         self.last_pos = None
+
+    def get_current_screen_rect(self):
+        current_screen = wx.Display.GetFromPoint(wx.GetMousePosition())
+        display = wx.Display(current_screen)
+        screen_rect = display.GetClientArea()
+        return screen_rect
 
     def load(self, stitch_plan=None):
         if stitch_plan:
@@ -283,8 +293,8 @@ class EmbroiderySimulator(wx.Frame):
         setsize_window_height = (self.height) * self.scale + decorations_height + self.margin * 2
 
         # set minimum width (force space for control buttons)
-        if setsize_window_width < 600:
-            setsize_window_width = 600
+        if setsize_window_width < self.min_width:
+            setsize_window_width = self.min_width
 
         self.SetSize(( setsize_window_width, setsize_window_height))
 
@@ -293,9 +303,8 @@ class EmbroiderySimulator(wx.Frame):
         if self.x_position == None:
             self.Centre()
         else:
-            current_pos = self.GetPosition()
-            display_height = wx.ClientDisplayRect()
-            self.SetPosition((self.x_position, display_height[3] / 2 - setsize_window_height / 2))
+            display_rect = self.get_current_screen_rect()
+            self.SetPosition((self.x_position, display_rect[3] / 2 - setsize_window_height / 2))
 
         e.Skip()
 
