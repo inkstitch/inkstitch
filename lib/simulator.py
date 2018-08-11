@@ -33,17 +33,17 @@ class EmbroiderySimulator(wx.Frame):
         self.button_sizer = wx.BoxSizer(wx.HORIZONTAL)
 
         self.button_label = (
-            [_("Speed up"), _('Press + or arrow up to speed up'), 'animation_speed_up'],
-            [_("Slow down"), _('Press - or arrow down to slow down'), 'animation_slow_down'],
-            [_("Pause"), _("Press P to pause the animation"), 'animation_pause'],
-            [_("Restart"), _("Press R to restart the animation"), 'animation_restart'],
-            [_("Quit"), _("Press Q to close the simulation window"), 'animation_quit'])
+            [_("Speed up"), _('Press + or arrow up to speed up'), self.animation_speed_up],
+            [_("Slow down"), _('Press - or arrow down to slow down'), self.animation_slow_down],
+            [_("Pause"), _("Press P to pause the animation"), self.animation_pause],
+            [_("Restart"), _("Press R to restart the animation"), self.animation_restart],
+            [_("Quit"), _("Press Q to close the simulation window"), self.animation_quit])
         self.buttons = []
         for i in range(0, len(self.button_label)):
             self.buttons.append(wx.Button(self, -1, self.button_label[i][0]))
             self.button_sizer.Add(self.buttons[i], 1, wx.EXPAND)
             self.buttons[i].SetToolTip(self.button_label[i][1])
-            self.buttons[i].Bind(wx.EVT_BUTTON, lambda evt, keycode=self.button_label[i][2]: self.do_action(evt, keycode))
+            self.buttons[i].Bind(wx.EVT_BUTTON, self.button_label[i][2])
 
         self.sizer.Add(self.panel, 1, wx.EXPAND)
         self.sizer.Add(self.button_sizer, 0, wx.EXPAND)
@@ -64,30 +64,29 @@ class EmbroiderySimulator(wx.Frame):
         self.set_stitch_counter(1)
 
         shortcut_keys = [
-            (wx.ACCEL_NORMAL, ord('+'), 'animation_speed_up'),
-            (wx.ACCEL_NORMAL, ord('='), 'animation_speed_up'),
-            (wx.ACCEL_SHIFT,  ord('='), 'animation_speed_up'),
-            (wx.ACCEL_NORMAL, wx.WXK_ADD, 'animation_speed_up'),
-            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_ADD, 'animation_speed_up'),
-            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_UP, 'animation_speed_up'),
-            (wx.ACCEL_NORMAL, wx.WXK_UP, 'animation_speed_up'),
-            (wx.ACCEL_NORMAL, ord('-'), 'animation_slow_down'),
-            (wx.ACCEL_NORMAL, ord('_'), 'animation_slow_down'),
-            (wx.ACCEL_NORMAL, wx.WXK_SUBTRACT, 'animation_slow_down'),
-            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_SUBTRACT, 'animation_slow_down'),
-            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_DOWN, 'animation_slow_down'),
-            (wx.ACCEL_NORMAL, wx.WXK_DOWN, 'animation_slow_down'),
-            (wx.ACCEL_NORMAL, ord('r'), 'animation_restart'),
-            (wx.ACCEL_NORMAL, ord('p'), 'animation_pause'),
-            (wx.ACCEL_NORMAL, ord('q'), 'animation_quit')]
+            (wx.ACCEL_NORMAL, ord('+'), self.animation_speed_up),
+            (wx.ACCEL_NORMAL, ord('='), self.animation_speed_up),
+            (wx.ACCEL_SHIFT,  ord('='), self.animation_speed_up),
+            (wx.ACCEL_NORMAL, wx.WXK_ADD, self.animation_speed_up),
+            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_ADD, self.animation_speed_up),
+            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_UP, self.animation_speed_up),
+            (wx.ACCEL_NORMAL, wx.WXK_UP, self.animation_speed_up),
+            (wx.ACCEL_NORMAL, ord('-'), self.animation_slow_down),
+            (wx.ACCEL_NORMAL, ord('_'), self.animation_slow_down),
+            (wx.ACCEL_NORMAL, wx.WXK_SUBTRACT, self.animation_slow_down),
+            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_SUBTRACT, self.animation_slow_down),
+            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_DOWN, self.animation_slow_down),
+            (wx.ACCEL_NORMAL, wx.WXK_DOWN, self.animation_slow_down),
+            (wx.ACCEL_NORMAL, ord('r'), self.animation_restart),
+            (wx.ACCEL_NORMAL, ord('p'), self.animation_pause),
+            (wx.ACCEL_NORMAL, ord('q'), self.animation_quit)]
 
         accel_entries = []
 
         for shortcut_key in shortcut_keys:
             eventId = wx.NewId()
-            accel_entries.append( (shortcut_key[0], shortcut_key[1], eventId) )
-
-            self.Bind(wx.EVT_MENU, lambda evt, keycode=shortcut_key[2]: self.do_action(evt, keycode), id=eventId)
+            accel_entries.append((shortcut_key[0], shortcut_key[1], eventId))
+            self.Bind(wx.EVT_MENU, shortcut_key[2], id=eventId)
 
         accel_table = wx.AcceleratorTable(accel_entries)
         self.SetAcceleratorTable(accel_table)
@@ -120,33 +119,37 @@ class EmbroiderySimulator(wx.Frame):
             self.frame_period *= 2
             self.stitches_per_frame *= 2
 
-    def do_action(self, event, keycode):
-        if keycode == "animation_speed_up":
-            if self.frame_period == 1:
-                self.stitches_per_frame *= 2
-            else:
-                self.frame_period = self.frame_period / 2
-        elif keycode == "animation_slow_down":
-            if self.stitches_per_frame == 1:
-                self.frame_period *= 2
-            else:
-                self.stitches_per_frame /= 2
-        elif keycode == "animation_quit":
-            self.Close()
-        elif keycode == "animation_pause":
-            if self.timer.IsRunning():
-                self.timer.Stop()
-            else:
-                self.timer.Start(self.frame_period)
-        elif keycode == "animation_restart":
-            self.set_stitch_counter(1)
-            self.stop()
-            self.clear()
-            self.go()
+    def animation_speed_up(self, event):
+        if self.frame_period == 1:
+            self.stitches_per_frame *= 2
+        else:
+            self.frame_period = self.frame_period / 2
+        self.animation_update_timer()
 
+    def animation_slow_down(self, event):
+        if self.stitches_per_frame == 1:
+            self.frame_period *= 2
+        else:
+            self.stitches_per_frame /= 2
+        self.animation_update_timer()
+
+    def animation_restart(self, event):
+        self.stop()
+        self.clear()
+        self.go()
+
+    def animation_pause(self, event):
+        if self.timer.IsRunning():
+            self.timer.Stop()
+        else:
+            self.timer.Start(self.frame_period)
+
+    def animation_quit(self, event):
+        self.Close()
+
+    def animation_update_timer(self):
         self.frame_period = max(1, self.frame_period)
         self.stitches_per_frame = max(self.stitches_per_frame, 1)
-
         if self.timer.IsRunning():
             self.timer.Stop()
             self.timer.Start(self.frame_period)
