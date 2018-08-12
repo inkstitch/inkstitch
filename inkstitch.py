@@ -10,7 +10,11 @@ parser.add_argument("--extension")
 my_args, remaining_args = parser.parse_known_args()
 
 extension_name = my_args.extension
-extension_class = getattr(extensions, extension_name.capitalize())
+
+# example: foo_bar_baz -> FooBarBaz
+extension_class_name = extension_name.title().replace("_", "")
+
+extension_class = getattr(extensions, extension_class_name)
 extension = extension_class()
 
 exception = None

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-06-28 20:32-0400\n"
-"PO-Revision-Date: 2018-06-30 01:31\n"
+"POT-Creation-Date: 2018-08-05 20:24-0400\n"
+"PO-Revision-Date: 2018-08-06 00:32\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Finnish\n"
 "MIME-Version: 1.0\n"
@@ -17,453 +17,708 @@ msgstr ""
 "X-Crowdin-File: /master/messages.po\n"
 "Language: fi_FI\n"
 
+#: lib/elements/auto_fill.py:11
 msgid "Auto-Fill"
 msgstr ""
 
+#: lib/elements/auto_fill.py:14
 msgid "Automatically routed fill stitching"
 msgstr ""
 
+#: lib/elements/auto_fill.py:33
 msgid "Running stitch length (traversal between sections)"
 msgstr ""
 
+#: lib/elements/auto_fill.py:38
 msgid "Underlay"
 msgstr ""
 
+#: lib/elements/auto_fill.py:38 lib/elements/auto_fill.py:43
+#: lib/elements/auto_fill.py:54 lib/elements/auto_fill.py:60
+#: lib/elements/auto_fill.py:70
 msgid "AutoFill Underlay"
 msgstr ""
 
+#: lib/elements/auto_fill.py:43
 msgid "Fill angle (default: fill angle + 90 deg)"
 msgstr ""
 
+#: lib/elements/auto_fill.py:54
 msgid "Row spacing (default: 3x fill row spacing)"
 msgstr ""
 
+#: lib/elements/auto_fill.py:60
 msgid "Max stitch length"
 msgstr ""
 
+#: lib/elements/auto_fill.py:67
 msgid "Inset"
 msgstr ""
 
+#: lib/elements/auto_fill.py:78
 msgid "Expand"
 msgstr ""
 
+#: lib/elements/element.py:232
 #, python-format
 msgid "%(id)s has more than one command of type '%(command)s' linked to it"
 msgstr ""
 
-msgid "TRIM after"
-msgstr ""
-
-msgid "Trim thread after this object (for supported machines and file formats)"
-msgstr ""
-
-msgid "STOP after"
-msgstr ""
-
-msgid "Add STOP instruction after this object (for supported machines and file formats)"
-msgstr ""
-
+#: lib/elements/fill.py:12
 msgid "Fill"
 msgstr ""
 
+#: lib/elements/fill.py:18
 msgid "Manually routed fill stitching"
 msgstr ""
 
+#: lib/elements/fill.py:23
 msgid "Angle of lines of stitches"
 msgstr ""
 
+#: lib/elements/fill.py:34
 msgid "Flip fill (start right-to-left)"
 msgstr ""
 
+#: lib/elements/fill.py:39
 msgid "Spacing between rows"
 msgstr ""
 
+#: lib/elements/fill.py:48
 msgid "Maximum fill stitch length"
 msgstr ""
 
+#: lib/elements/fill.py:53
 msgid "Stagger rows this many times before repeating"
 msgstr ""
 
+#: lib/elements/satin_column.py:10
 msgid "Satin Column"
 msgstr ""
 
+#: lib/elements/satin_column.py:16
 msgid "Custom satin column"
 msgstr ""
 
+#: lib/elements/satin_column.py:25 lib/elements/stroke.py:45
 msgid "Zig-zag spacing (peak-to-peak)"
 msgstr ""
 
+#: lib/elements/satin_column.py:31
 msgid "Pull compensation"
 msgstr ""
 
+#: lib/elements/satin_column.py:39
 msgid "Contour underlay"
 msgstr ""
 
+#: lib/elements/satin_column.py:39 lib/elements/satin_column.py:46
+#: lib/elements/satin_column.py:51
 msgid "Contour Underlay"
 msgstr ""
 
+#: lib/elements/satin_column.py:46 lib/elements/satin_column.py:64
 msgid "Stitch length"
 msgstr ""
 
+#: lib/elements/satin_column.py:51
 msgid "Contour underlay inset amount"
 msgstr ""
 
+#: lib/elements/satin_column.py:57
 msgid "Center-walk underlay"
 msgstr ""
 
+#: lib/elements/satin_column.py:57 lib/elements/satin_column.py:64
 msgid "Center-Walk Underlay"
 msgstr ""
 
+#: lib/elements/satin_column.py:69
 msgid "Zig-zag underlay"
 msgstr ""
 
+#: lib/elements/satin_column.py:69 lib/elements/satin_column.py:74
+#: lib/elements/satin_column.py:79
 msgid "Zig-zag Underlay"
 msgstr ""
 
+#: lib/elements/satin_column.py:74
 msgid "Zig-Zag spacing (peak-to-peak)"
 msgstr ""
 
+#: lib/elements/satin_column.py:79
 msgid "Inset amount (default: half of contour underlay inset)"
 msgstr ""
 
+#: lib/elements/satin_column.py:112
 #, python-format
 msgid "satin column: %(id)s: at least two subpaths required (%(num)d found)"
 msgstr ""
 
+#: lib/elements/satin_column.py:138
 msgid "One or more rails crosses itself, and this is not allowed.  Please split into multiple satin columns."
 msgstr ""
 
+#: lib/elements/satin_column.py:145
 msgid "satin column: One or more of the rungs doesn't intersect both rails."
 msgstr ""
 
+#: lib/elements/satin_column.py:145 lib/elements/satin_column.py:147
 msgid "Each rail should intersect both rungs once."
 msgstr ""
 
+#: lib/elements/satin_column.py:147
 msgid "satin column: One or more of the rungs intersects the rails more than once."
 msgstr ""
 
+#: lib/elements/satin_column.py:188
 #, python-format
 msgid "satin column: object %s has a fill (but should not)"
 msgstr ""
 
+#: lib/elements/satin_column.py:192
 #, python-format
 msgid "satin column: object %(id)s has two paths with an unequal number of points (%(length1)d and %(length2)d)"
 msgstr ""
 
+#: lib/elements/stroke.py:17
 msgid "Satin stitch along paths"
 msgstr ""
 
+#: lib/elements/stroke.py:30
 msgid "Running stitch length"
 msgstr ""
 
+#: lib/elements/stroke.py:36
+msgid "Bean stitch number of repeats"
+msgstr ""
+
+#: lib/elements/stroke.py:37
+msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.  Only applies to running stitch."
+msgstr ""
+
+#: lib/elements/stroke.py:51
 msgid "Repeats"
 msgstr ""
 
+#: lib/elements/stroke.py:71
 msgid "Manual stitch placement"
 msgstr ""
 
+#: lib/elements/stroke.py:71
 msgid "Stitch every node in the path.  Stitch length and zig-zag spacing are ignored."
 msgstr ""
 
+#: lib/elements/stroke.py:102
 msgid "Legacy running stitch setting detected!\n\n"
 "It looks like you're using a stroke smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set your stroke to be dashed to indicate running stitch.  Any kind of dash will work."
 msgstr ""
 
+#: lib/extensions/base.py:108
 msgid "No embroiderable paths selected."
 msgstr ""
 
+#: lib/extensions/base.py:110
 msgid "No embroiderable paths found in document."
 msgstr ""
 
+#: lib/extensions/base.py:111
 msgid "Tip: use Path -> Object to Path to convert non-paths."
 msgstr ""
 
+#: lib/extensions/commands.py:140
+msgid "Please select one or more objects to which to attach commands."
+msgstr ""
+
+#: lib/extensions/commands.py:148
+msgid "Please choose one or more commands to attach."
+msgstr ""
+
+#: lib/extensions/embroider.py:41
 msgid "\n\n"
 "Seeing a 'no such option' message?  Please restart Inkscape to fix."
 msgstr ""
 
+#: lib/extensions/flip.py:35
+msgid "Please select one or more satin columns to flip."
+msgstr ""
+
+#: lib/extensions/install.py:30
 msgid "Ink/Stitch can install files (\"add-ons\") that make it easier to use Inkscape to create machine embroidery designs.  These add-ons will be installed:"
 msgstr ""
 
+#: lib/extensions/install.py:31
 msgid "thread manufacturer color palettes"
 msgstr ""
 
+#: lib/extensions/install.py:32
 msgid "Ink/Stitch visual commands (Object -> Symbols...)"
 msgstr ""
 
+#: lib/extensions/install.py:41
 msgid "Install"
 msgstr ""
 
+#: lib/extensions/install.py:44 lib/extensions/params.py:380
 msgid "Cancel"
 msgstr ""
 
+#: lib/extensions/install.py:58
 msgid "Choose Inkscape directory"
 msgstr ""
 
+#: lib/extensions/install.py:68
 msgid "Inkscape add-on installation failed"
 msgstr ""
 
+#: lib/extensions/install.py:69
 msgid "Installation Failed"
 msgstr ""
 
+#: lib/extensions/install.py:73
 msgid "Inkscape add-on files have been installed.  Please restart Inkscape to load the new add-ons."
 msgstr ""
 
+#: lib/extensions/install.py:74
 msgid "Installation Completed"
 msgstr ""
 
+#: lib/extensions/install.py:103
 msgid "Ink/Stitch Add-ons Installer"
 msgstr ""
 
+#: lib/extensions/params.py:244
 msgid "These settings will be applied to 1 object."
 msgstr ""
 
+#: lib/extensions/params.py:246
 #, python-format
 msgid "These settings will be applied to %d objects."
 msgstr ""
 
+#: lib/extensions/params.py:249
 msgid "Some settings had different values across objects.  Select a value from the dropdown or enter a new one."
 msgstr ""
 
+#: lib/extensions/params.py:253
 #, python-format
 msgid "Disabling this tab will disable the following %d tabs."
 msgstr ""
 
+#: lib/extensions/params.py:255
 msgid "Disabling this tab will disable the following tab."
 msgstr ""
 
+#: lib/extensions/params.py:258
 #, python-format
 msgid "Enabling this tab will disable %s and vice-versa."
 msgstr ""
 
+#: lib/extensions/params.py:288
 msgid "Inkscape objects"
 msgstr ""
 
+#: lib/extensions/params.py:346
 msgid "Embroidery Params"
 msgstr ""
 
+#: lib/extensions/params.py:363
 msgid "Presets"
 msgstr ""
 
+#: lib/extensions/params.py:368
 msgid "Load"
 msgstr ""
 
+#: lib/extensions/params.py:371
 msgid "Add"
 msgstr ""
 
+#: lib/extensions/params.py:374
 msgid "Overwrite"
 msgstr ""
 
+#: lib/extensions/params.py:377
 msgid "Delete"
 msgstr ""
 
+#: lib/extensions/params.py:384
 msgid "Use Last Settings"
 msgstr ""
 
+#: lib/extensions/params.py:387
 msgid "Apply and Quit"
 msgstr ""
 
+#: lib/extensions/params.py:436
 msgid "Preview"
 msgstr ""
 
+#: lib/extensions/params.py:454
 msgid "Internal Error"
 msgstr ""
 
+#: lib/extensions/params.py:507
 msgid "Please enter or select a preset name first."
 msgstr ""
 
+#: lib/extensions/params.py:507 lib/extensions/params.py:513
+#: lib/extensions/params.py:541
 msgid "Preset"
 msgstr ""
 
+#: lib/extensions/params.py:513
 #, python-format
 msgid "Preset \"%s\" not found."
 msgstr ""
 
+#: lib/extensions/params.py:541
 #, python-format
 msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
 msgstr ""
 
+#: lib/extensions/print_pdf.py:134
 msgid "Closing..."
 msgstr ""
 
+#: lib/extensions/print_pdf.py:134
 msgid "It is safe to close this window now."
 msgstr ""
 
+#: lib/extensions/print_pdf.py:265
 msgid "A print preview has been opened in your web browser.  This window will stay open in order to communicate with the JavaScript code running in your browser.\n\n"
 "This window will close after you close the print preview in your browser, or you can close it manually if necessary."
 msgstr ""
 
+#: lib/extensions/print_pdf.py:411
 msgid "Ink/Stitch Print"
 msgstr ""
 
+#: lib/extensions/simulate.py:24
 msgid "Embroidery Simulation"
 msgstr ""
 
+#: lib/extensions/zip.py:52
 msgid "No embroidery file formats selected."
 msgstr ""
 
+#: lib/simulator.py:34
+msgid "Speed up"
+msgstr ""
+
+#: lib/simulator.py:34
+msgid "Press + or arrow up to speed up"
+msgstr ""
+
+#: lib/simulator.py:35
+msgid "Slow down"
+msgstr ""
+
+#: lib/simulator.py:35
+msgid "Press - or arrow down to slow down"
+msgstr ""
+
+#: lib/simulator.py:36
+msgid "Pause"
+msgstr ""
+
+#: lib/simulator.py:36
+msgid "Press P to pause the animation"
+msgstr ""
+
+#: lib/simulator.py:37
+msgid "Restart"
+msgstr ""
+
+#: lib/simulator.py:37
+msgid "Press R to restart the animation"
+msgstr ""
+
+#: lib/simulator.py:38
+msgid "Quit"
+msgstr ""
+
+#: lib/simulator.py:38
+msgid "Press Q to close the simulation window"
+msgstr ""
+
+#: lib/stitches/auto_fill.py:167
 msgid "Unable to autofill.  This most often happens because your shape is made up of multiple sections that aren't connected."
 msgstr ""
 
+#: lib/stitches/auto_fill.py:392
 msgid "Unexpected error while generating fill stitches. Please send your SVG file to lexelby@github."
 msgstr ""
 
+#: lib/svg/svg.py:90
 msgid "Stitch Plan"
 msgstr ""
 
+#: lib/svg/units.py:44
 #, python-format
 msgid "parseLengthWithUnits: unknown unit %s"
 msgstr ""
 
+#: lib/svg/units.py:76
 #, python-format
 msgid "Unknown unit: %s"
 msgstr ""
 
+#: print/templates/color_swatch.html:8 print/templates/color_swatch.html:40
+#: print/templates/operator_detailedview.html:9
 msgid "Color"
 msgstr ""
 
+#: print/templates/color_swatch.html:11 print/templates/color_swatch.html:41
 msgid "rgb"
 msgstr ""
 
+#: print/templates/color_swatch.html:15 print/templates/color_swatch.html:42
 msgid "thread"
 msgstr ""
 
+#: print/templates/color_swatch.html:19 print/templates/color_swatch.html:43
+#: print/templates/operator_detailedview.html:62
 msgid "# stitches"
 msgstr ""
 
-msgid "# stops"
-msgstr ""
-
+#: print/templates/color_swatch.html:23 print/templates/color_swatch.html:44
 msgid "# trims"
 msgstr ""
 
+#: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
+#: print/templates/operator_detailedview.html:66
+msgid "stop after?"
+msgstr ""
+
+#: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
+#: print/templates/operator_detailedview.html:66
+msgid "yes"
+msgstr ""
+
+#: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
+#: print/templates/operator_detailedview.html:66
+msgid "no"
+msgstr ""
+
+#: print/templates/footer.html:2
 msgid "Page"
 msgstr ""
 
+#: print/templates/headline.html:5
 msgid "Click to choose another logo"
 msgstr ""
 
+#: print/templates/headline.html:10
 msgid "Enter job title..."
 msgstr ""
 
+#: print/templates/headline.html:11
 msgid "CLIENT"
 msgstr ""
 
+#: print/templates/headline.html:11
 msgid "Enter client name..."
 msgstr ""
 
+#: print/templates/headline.html:12
 msgid "PURCHASE ORDER #:"
 msgstr ""
 
+#: print/templates/headline.html:12
 msgid "Enter purchase order number..."
 msgstr ""
 
+#: print/templates/headline.html:15
 #, python-format
 msgid "%Y.%m.%d"
 msgstr ""
 
+#: print/templates/operator_detailedview.html:10
 msgid "Thread Consumption"
 msgstr ""
 
+#: print/templates/operator_detailedview.html:11
 msgid "Stops and Trims"
 msgstr ""
 
+#: print/templates/operator_detailedview.html:12
 msgid "Notes"
 msgstr ""
 
+#: print/templates/operator_detailedview.html:24
+#: print/templates/operator_overview.html:6
+#: print/templates/print_overview.html:6
 msgid "Unique Colors"
 msgstr ""
 
+#: print/templates/operator_detailedview.html:25
+#: print/templates/operator_overview.html:7
+#: print/templates/print_overview.html:7
 msgid "Color Blocks"
 msgstr ""
 
+#: print/templates/operator_detailedview.html:28
+#: print/templates/operator_overview.html:14
+#: print/templates/print_overview.html:14
 msgid "Design box size"
 msgstr ""
 
+#: print/templates/operator_detailedview.html:29
+#: print/templates/operator_overview.html:16
+#: print/templates/print_overview.html:16
 msgid "Total thread used"
 msgstr ""
 
+#: print/templates/operator_detailedview.html:30
+#: print/templates/operator_overview.html:15
+#: print/templates/print_overview.html:15
 msgid "Total stitch count"
 msgstr ""
 
-msgid "Total nr stops"
+#: print/templates/operator_detailedview.html:33
+#: print/templates/operator_overview.html:8
+#: print/templates/print_overview.html:8
+msgid "Total stops"
 msgstr ""
 
-msgid "Total nr trims"
+#: print/templates/operator_detailedview.html:34
+#: print/templates/operator_overview.html:9
+#: print/templates/print_overview.html:9
+msgid "Total trims"
 msgstr ""
 
+#: print/templates/operator_detailedview.html:61
 msgid "thread used"
 msgstr ""
 
+#: print/templates/operator_detailedview.html:65
+msgid "trims"
+msgstr ""
+
+#: print/templates/operator_detailedview.html:69
 msgid "Enter operator notes..."
 msgstr ""
 
+#: print/templates/operator_overview.html:21
+#: print/templates/print_overview.html:21
 msgid "Job estimated time"
 msgstr ""
 
+#: print/templates/operator_overview.html:28
+#: print/templates/print_detail.html:18 print/templates/print_overview.html:28
 msgid "Ctrl + Scroll to Zoom"
 msgstr ""
 
-msgid "Scale"
-msgstr ""
-
-msgid "Fit"
-msgstr ""
-
-msgid "Apply to all"
-msgstr ""
-
+#: print/templates/print_detail.html:6
 msgid "COLOR"
 msgstr ""
 
+#: print/templates/print_detail.html:11
 msgid "Estimated time"
 msgstr ""
 
+#: print/templates/print_overview.html:39
 msgid "Client Signature"
 msgstr ""
 
+#: print/templates/ui.html:2
 msgid "Ink/Stitch Print Preview"
 msgstr ""
 
+#: print/templates/ui.html:4
 msgid "Print"
 msgstr ""
 
+#: print/templates/ui.html:5 print/templates/ui.html:15
 msgid "Settings"
 msgstr ""
 
+#: print/templates/ui.html:6
 msgid "Close"
 msgstr ""
 
+#: print/templates/ui.html:9
 msgid "⚠ lost connection to Ink/Stitch"
 msgstr ""
 
+#: print/templates/ui.html:18 print/templates/ui.html:23
 msgid "Page Setup"
 msgstr ""
 
-msgid "Printing Size"
-msgstr ""
-
-msgid "Print Layouts"
-msgstr ""
-
-msgid "Includes these Page Setup settings and also the icon."
-msgstr ""
-
-msgid "Save as defaults"
-msgstr ""
-
+#: print/templates/ui.html:19 print/templates/ui.html:47
 msgid "Design"
 msgstr ""
 
+#: print/templates/ui.html:26
+msgid "Printing Size"
+msgstr ""
+
+#: print/templates/ui.html:35
+msgid "Print Layouts"
+msgstr ""
+
+#: print/templates/ui.html:36
+msgid "Client Overview"
+msgstr ""
+
+#: print/templates/ui.html:37
+msgid "Client Detailed View"
+msgstr ""
+
+#: print/templates/ui.html:38
+msgid "Operator Overview"
+msgstr ""
+
+#: print/templates/ui.html:39
+msgid "Operator Detailed View"
+msgstr ""
+
+#: print/templates/ui.html:40
+msgid "Thumbnail size"
+msgstr ""
+
+#: print/templates/ui.html:43
+msgid "Includes these Page Setup settings and also the icon."
+msgstr ""
+
+#: print/templates/ui.html:43
+msgid "Save as defaults"
+msgstr ""
+
+#: print/templates/ui.html:48
 msgid "Thread Palette"
 msgstr ""
 
+#: print/templates/ui.html:51
+msgid "None"
+msgstr ""
+
+#: print/templates/ui.html:65
 msgid "Changing the thread palette will cause thread names and catalog numbers to be recalculated based on the new palette.  Any changes you have made to color or thread names will be lost.  Are you sure?"
 msgstr ""
 
+#: print/templates/ui.html:68
 msgid "Yes"
 msgstr ""
 
+#: print/templates/ui.html:69
 msgid "No"
+msgstr ""
+
+#: print/templates/ui_svg_action_buttons.html:1
+msgid "Scale"
+msgstr ""
+
+#: print/templates/ui_svg_action_buttons.html:3
+msgid "Fit"
+msgstr ""
+
+#: print/templates/ui_svg_action_buttons.html:5
+msgid "Apply to all"
+msgstr ""
+
+#: print/templates/ui_svg_action_buttons.html:8
+msgid "Realistic"
 msgstr ""
 
