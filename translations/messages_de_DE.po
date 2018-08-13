@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-08-11 22:57-0400\n"
-"PO-Revision-Date: 2018-08-13 08:40\n"
+"PO-Revision-Date: 2018-08-13 08:52\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -271,7 +271,7 @@ msgstr "Bean stitch Anzahl der Wiederholungen"
 
 #: lib/elements/stroke.py:43
 msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.  Only applies to running stitch."
-msgstr ""
+msgstr "Jeden Stich vervielfachen. Ein Wert von 1 würde jeden Stich verdreifachen (vorwärts, rückwärts, vorwärts). Ein Wert von 2 würde jeden Stich fünffach ausführen. Gilt nur für den Laufstich."
 
 #: lib/elements/stroke.py:53
 msgid "Length of stitches in zig-zag mode."
