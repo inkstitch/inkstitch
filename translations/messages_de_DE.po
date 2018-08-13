@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-08-11 22:57-0400\n"
-"PO-Revision-Date: 2018-08-13 08:31\n"
+"PO-Revision-Date: 2018-08-13 08:40\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -267,7 +267,7 @@ msgstr "Länge der Stiche im Laufstich-Modus."
 
 #: lib/elements/stroke.py:42
 msgid "Bean stitch number of repeats"
-msgstr ""
+msgstr "Bean stitch Anzahl der Wiederholungen"
 
 #: lib/elements/stroke.py:43
 msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.  Only applies to running stitch."
@@ -283,7 +283,7 @@ msgstr "Wiederholungen"
 
 #: lib/elements/stroke.py:65
 msgid "Defines how many times to run down and back along the path."
-msgstr ""
+msgstr "Definiert, wie oft am Pfad herunter und zurück gelaufen wird."
 
 #: lib/elements/stroke.py:89
 msgid "Manual stitch placement"
@@ -321,7 +321,7 @@ msgstr "Bitte wählen Sie einen oder mehrere Befehle um diese zu verknüpfen."
 
 #: lib/extensions/convert_to_satin.py:28
 msgid "Please select at least one line to convert to a satin column."
-msgstr ""
+msgstr "Bitte wähle mindestens eine Zeile aus, die in eine Satinkolumne konvertiert werden soll."
 
 #. : Convert To Satin extension, user selected one or more objects that were
 #. not lines.
