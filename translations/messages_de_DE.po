@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-08-11 22:57-0400\n"
-"PO-Revision-Date: 2018-08-13 07:52\n"
+"PO-Revision-Date: 2018-08-13 08:01\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -49,7 +49,7 @@ msgstr "Füllwinkel"
 
 #: lib/elements/auto_fill.py:50
 msgid "default: fill angle + 90 deg"
-msgstr ""
+msgstr "Standard: Füllwinkel + 90°"
 
 #: lib/elements/auto_fill.py:65
 msgid "Row spacing"
@@ -263,7 +263,7 @@ msgstr "Laufstichlänge"
 
 #: lib/elements/stroke.py:32
 msgid "Length of stitches in running stitch mode."
-msgstr ""
+msgstr "Länge der Stiche im Laufstich-Modus."
 
 #: lib/elements/stroke.py:42
 msgid "Bean stitch number of repeats"
@@ -275,7 +275,7 @@ msgstr ""
 
 #: lib/elements/stroke.py:53
 msgid "Length of stitches in zig-zag mode."
-msgstr ""
+msgstr "Stichlänge im Zick-Zack Modus."
 
 #: lib/elements/stroke.py:64
 msgid "Repeats"
