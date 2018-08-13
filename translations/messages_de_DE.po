@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-08-11 22:57-0400\n"
-"PO-Revision-Date: 2018-08-13 08:52\n"
+"PO-Revision-Date: 2018-08-13 09:02\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -53,11 +53,11 @@ msgstr "Standard: Füllwinkel + 90°"
 
 #: lib/elements/auto_fill.py:65
 msgid "Row spacing"
-msgstr "Zeilenabstand"
+msgstr "Reihenabstand"
 
 #: lib/elements/auto_fill.py:66
 msgid "default: 3x fill row spacing"
-msgstr ""
+msgstr "Standard: 3x Füllreihenabstand"
 
 #: lib/elements/auto_fill.py:76
 msgid "Max stitch length"
@@ -118,7 +118,7 @@ msgstr "Die Flip-Option kann Ihnen bei der Reihenfolge des Stichpfads helfen. We
 
 #: lib/elements/fill.py:54
 msgid "Spacing between rows"
-msgstr "Zeilenabstand"
+msgstr "Reihenabstand"
 
 #: lib/elements/fill.py:55
 msgid "Distance between rows of stitches."
@@ -166,7 +166,7 @@ msgstr "Zugausgleich"
 
 #: lib/elements/satin_column.py:44
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape.  This setting expands each pair of needle penetrations outward from the center of the satin column."
-msgstr "Satinstiche ziehen den Stoff zusammen, was zu einer schmaleren Kolumne führt, als Sie in Inkscape zeichnen. Diese Einstellung erweitert jedes Nadeleinstichpaar von der Mitte der Satinkolumne nach außen."
+msgstr "Satinstiche ziehen den Stoff zusammen, was zu einer schmaleren Kolumne führt, als Sie in Inkscape zeichnen. Diese Einstellung erweitert jedes Stichpaar von der Mitte der Satinkolumne nach außen."
 
 #: lib/elements/satin_column.py:55
 msgid "Contour underlay"
