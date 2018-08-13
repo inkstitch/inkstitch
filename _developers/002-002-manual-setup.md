@@ -29,14 +29,6 @@ A manual setup will allow you to edit the code while running the extension.
     ln -s inkstitch/inkstitch.py
     ```
 
-4. This step will be no longer necessary with one of the next releases of Ink/Stitch: [#234](https://github.com/inkstitch/inkstitch/pull/234), but for now:
-
-    in the Embroidermodder-master/experimental directory execute:
-    ```
-    qmake swigpython.pro && make
-    ```
-    Copy `python/bindings/*libembroidery*` to the Ink/Stitch directory.
-
 4. Run Inkscape.
 
 

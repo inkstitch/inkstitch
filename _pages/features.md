@@ -18,7 +18,9 @@ sidebar:
       * center-walk
       * contour
       * zig-zag
+  * e stitch
   * running stitch
+  * bean stitch
   * manual stitch
     * plot each stitch exactly where you want it
 * Cross Platform
