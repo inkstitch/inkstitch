@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-08-11 22:57-0400\n"
-"PO-Revision-Date: 2018-08-12 03:11\n"
+"PO-Revision-Date: 2018-08-13 07:52\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -45,7 +45,7 @@ msgstr "AutoFill-Unterlage"
 
 #: lib/elements/auto_fill.py:49
 msgid "Fill angle"
-msgstr ""
+msgstr "Füllwinkel"
 
 #: lib/elements/auto_fill.py:50
 msgid "default: fill angle + 90 deg"
@@ -53,7 +53,7 @@ msgstr ""
 
 #: lib/elements/auto_fill.py:65
 msgid "Row spacing"
-msgstr ""
+msgstr "Zeilenabstand"
 
 #: lib/elements/auto_fill.py:66
 msgid "default: 3x fill row spacing"
@@ -122,7 +122,7 @@ msgstr "Zeilenabstand"
 
 #: lib/elements/fill.py:55
 msgid "Distance between rows of stitches."
-msgstr ""
+msgstr "Abstand zwischen den Stichreihen."
 
 #: lib/elements/fill.py:68
 msgid "Maximum fill stitch length"
@@ -216,11 +216,11 @@ msgstr ""
 
 #: lib/elements/satin_column.py:108
 msgid "Inset amount"
-msgstr ""
+msgstr "Einrückung"
 
 #: lib/elements/satin_column.py:109
 msgid "default: half of contour underlay inset"
-msgstr ""
+msgstr "Standard: Halbe Einrückung der Konturunterlage"
 
 #: lib/elements/satin_column.py:146
 #, python-format
