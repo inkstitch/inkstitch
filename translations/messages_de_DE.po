@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-08-11 22:57-0400\n"
-"PO-Revision-Date: 2018-08-13 08:11\n"
+"PO-Revision-Date: 2018-08-13 08:31\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -73,7 +73,7 @@ msgstr "Einzug"
 
 #: lib/elements/auto_fill.py:87
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
-msgstr ""
+msgstr "Schrumpfen Sie die Form vor der Unterlage, um zu verhindern, dass die Unterlage um die Außenseite der Füllung herum sichtbar wird."
 
 #: lib/elements/auto_fill.py:97
 msgid "Expand"
@@ -81,7 +81,7 @@ msgstr "Erweitern"
 
 #: lib/elements/auto_fill.py:98
 msgid "Expand the shape before fill stitching, to compensate for gaps between shapes."
-msgstr ""
+msgstr "Erweitern Sie die Form vor dem Füllstich, um Lücken zwischen den Formen auszugleichen."
 
 #: lib/elements/element.py:232
 #, python-format
@@ -98,7 +98,7 @@ msgstr "Manuell geführte Füllstiche"
 
 #: lib/elements/fill.py:20
 msgid "AutoFill is the default method for generating fill stitching."
-msgstr ""
+msgstr "AutoFill ist die Standardmethode zum Erstellen von Füllstichen."
 
 #: lib/elements/fill.py:29
 msgid "Angle of lines of stitches"
@@ -106,7 +106,7 @@ msgstr "Winkel der Stichlinien"
 
 #: lib/elements/fill.py:30
 msgid "The angle increases in a counter-clockwise direction.  0 is horizontal.  Negative angles are allowed."
-msgstr ""
+msgstr "Der Winkel nimmt gegen den Uhrzeigersinn zu. 0 ist horizontal. Negative Winkel sind erlaubt."
 
 #: lib/elements/fill.py:45
 msgid "Flip fill (start right-to-left)"
@@ -114,7 +114,7 @@ msgstr "Rückwärtsfüllung (von rechts nach links)"
 
 #: lib/elements/fill.py:46
 msgid "The flip option can help you with routing your stitch path.  When you enable flip, stitching goes from right-to-left instead of left-to-right."
-msgstr ""
+msgstr "Die Flip-Option kann Ihnen bei der Reihenfolge des Stichpfads helfen. Wenn Umdrehen aktiviert wird, wird das Sticken von rechts nach links anstatt von links nach rechts ausgeführt."
 
 #: lib/elements/fill.py:54
 msgid "Spacing between rows"
@@ -130,7 +130,7 @@ msgstr "Maximale Füll-Stichlänge"
 
 #: lib/elements/fill.py:69
 msgid "The length of each stitch in a row.  Shorter stitch may be used at the start or end of a row."
-msgstr ""
+msgstr "Die Stichlänge in einer Reihe. Ein kürzerer Stich kann am Anfang oder am Ende einer Reihe verwendet werden."
 
 #: lib/elements/fill.py:78
 msgid "Stagger rows this many times before repeating"
@@ -138,7 +138,7 @@ msgstr "Wieviele Reihen bis sich das Muster wiederholt"
 
 #: lib/elements/fill.py:79
 msgid "Setting this dictates how many rows apart the stitches will be before they fall in the same column position."
-msgstr ""
+msgstr "Die Einstellung bestimmt, wie viele Reihen die Stiche voneinander entfernt sind, bevor sie in die gleiche Kolumne münden."
 
 #: lib/elements/satin_column.py:10
 msgid "Satin Column"
@@ -158,7 +158,7 @@ msgstr "Zick-Zack Abstand (Spitze zu Spitze)"
 
 #: lib/elements/satin_column.py:33
 msgid "Peak-to-peak distance between zig-zags."
-msgstr ""
+msgstr "Spitze-zu-Spitze-Abstand zwischen Zick-Zacks."
 
 #: lib/elements/satin_column.py:43
 msgid "Pull compensation"
@@ -166,7 +166,7 @@ msgstr "Zugausgleich"
 
 #: lib/elements/satin_column.py:44
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape.  This setting expands each pair of needle penetrations outward from the center of the satin column."
-msgstr ""
+msgstr "Satinstiche ziehen den Stoff zusammen, was zu einer schmaleren Kolumne führt, als Sie in Inkscape zeichnen. Diese Einstellung erweitert jedes Nadeleinstichpaar von der Mitte der Satinkolumne nach außen."
 
 #: lib/elements/satin_column.py:55
 msgid "Contour underlay"
@@ -187,7 +187,7 @@ msgstr "Einrückung"
 
 #: lib/elements/satin_column.py:69
 msgid "Shrink the outline, to prevent the underlay from showing around the outside of the satin column."
-msgstr ""
+msgstr "Schrumpfen Sie den Umriss, um zu verhindern, dass die Unterlage an der Außenseite der Satinkolumne sichtbar wird."
 
 #: lib/elements/satin_column.py:79
 msgid "Center-walk underlay"
@@ -212,7 +212,7 @@ msgstr "Zick-Zack Abstand (Spitze zu Spitze)"
 
 #: lib/elements/satin_column.py:98
 msgid "Distance between peaks of the zig-zags."
-msgstr ""
+msgstr "Abstand zwischen den Spitzen der Zick-Zacks."
 
 #: lib/elements/satin_column.py:108
 msgid "Inset amount"
@@ -327,12 +327,12 @@ msgstr ""
 #. not lines.
 #: lib/extensions/convert_to_satin.py:33
 msgid "Only simple lines may be converted to satin columns."
-msgstr ""
+msgstr "Nur einfache Linien können in Satinkolumnen konvertiert werden."
 
 #: lib/extensions/convert_to_satin.py:54
 #, python-format
 msgid "Cannot convert %s to a satin column because it intersects itself.  Try breaking it up into multiple paths."
-msgstr ""
+msgstr "%s kann nicht in eine Satinkolumne konvertiert werden, da sie sich selbst berührt. Versuche es in mehrere Pfade aufzuteilen."
 
 #: lib/extensions/embroider.py:41
 msgid "\n\n"
