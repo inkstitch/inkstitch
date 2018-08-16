@@ -43,6 +43,10 @@ except:
     print >> sys.stderr, traceback.format_exc()
     sys.exit(1)
 
+if sys.platform == "win32":
+    import msvcrt
+    msvcrt.setmode(sys.stdout.fileno(), os.O_BINARY)
+
 stdout = stdout.strip()
 if stdout:
     print stdout.strip(),
