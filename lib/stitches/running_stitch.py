@@ -1,3 +1,6 @@
+from copy import copy
+
+
 """ Utility functions to produce running stitches. """
 
 
@@ -64,3 +67,29 @@ def running_stitch(points, stitch_length):
         output.append(segment_start)
 
     return output
+
+
+def bean_stitch(stitches, repeats):
+    """Generate bean stitch from a set of stitches.
+
+    "Bean" stitch is made by backtracking each stitch to make it heaver.  A
+    simple bean stitch would be two stitches forward, one stitch back, two
+    stitches forward, etc.  This would result in each stitch being tripled.
+
+    We'll say that the above counts as 1 repeat.  Backtracking each stitch
+    repeatedly will result in a heavier bean stitch.  There will always be
+    an odd number of threads piled up for each stitch.
+    """
+
+    if len(stitches) < 2:
+        return stitches
+
+    new_stitches = [stitches[0]]
+
+    for stitch in stitches:
+        new_stitches.append(stitch)
+
+        for i in xrange(repeats):
+            new_stitches.extend(copy(new_stitches[-2:]))
+
+    return new_stitches

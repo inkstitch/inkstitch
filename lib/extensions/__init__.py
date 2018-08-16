@@ -8,3 +8,4 @@ from output import Output
 from zip import Zip
 from flip import Flip
 from commands import Commands
+from convert_to_satin import ConvertToSatin
