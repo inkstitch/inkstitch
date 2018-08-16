@@ -3,7 +3,6 @@ from shapely import geometry as shgeo
 from itertools import chain, groupby
 import numpy
 from numpy import diff, sign, setdiff1d
-from scipy.signal import argrelmin
 import math
 from copy import deepcopy
 
