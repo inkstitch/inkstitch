@@ -12,7 +12,7 @@ from ..i18n import _
 from ..elements import SatinColumn
 from ..utils import get_bundled_dir, cache
 from ..svg.tags import SVG_DEFS_TAG, SVG_GROUP_TAG, SVG_USE_TAG, SVG_PATH_TAG, INKSCAPE_GROUPMODE, XLINK_HREF, CONNECTION_START, CONNECTION_END, CONNECTOR_TYPE
-from ..svg import get_node_transform
+from ..svg import get_correction_transform
 
 
 class Commands(InkstitchExtension):
@@ -48,21 +48,6 @@ class Commands(InkstitchExtension):
         if self.defs.find(path) is None:
             self.defs.append(deepcopy(self.symbol_defs.find(path)))
 
-    def get_correction_transform(self, node):
-        # if we want to place our new nodes in the same group as this node,
-        # then we'll need to factor in the effects of any transforms set on
-        # the parents of this node.
-
-        # we can ignore the transform on the node itself since it won't apply
-        # to the objects we add
-        transform = get_node_transform(node.getparent())
-
-        # now invert it, so that we can position our objects in absolute
-        # coordinates
-        transform = simpletransform.invertTransform(transform)
-
-        return simpletransform.formatTransform(transform)
-
     def add_connector(self, symbol, element):
         # I'd like it if I could position the connector endpoint nicely but inkscape just
         # moves it to the element's center immediately after the extension runs.
@@ -74,7 +59,7 @@ class Commands(InkstitchExtension):
                 "id": self.uniqueId("connector"),
                 "d": "M %s,%s %s,%s" % (start_pos[0], start_pos[1], end_pos.x, end_pos.y),
                 "style": "stroke:#000000;stroke-width:1px;stroke-opacity:0.5;fill:none;",
-                "transform": self.get_correction_transform(symbol),
+                "transform": get_correction_transform(symbol),
                 CONNECTION_START: "#%s" % symbol.get('id'),
                 CONNECTION_END: "#%s" % element.node.get('id'),
                 CONNECTOR_TYPE: "polyline",
@@ -126,7 +111,7 @@ class Commands(InkstitchExtension):
                     "width": "100%",
                     "x": str(pos.x),
                     "y": str(pos.y),
-                    "transform": self.get_correction_transform(element.node)
+                    "transform": get_correction_transform(element.node)
                 }
             )
 

@@ -424,7 +424,7 @@ class SettingsFrame(wx.Frame):
             self.simulate_window.stop()
             self.simulate_window.load(stitch_plan=stitch_plan)
         else:
-            my_rect = self.GetRect()
+            my_rect = self.GetScreenRect()
             simulator_pos = my_rect.GetTopRight()
             simulator_pos.x += 5
 
