@@ -1,4 +1,4 @@
-pyembroidery2
+./pyembroidery
 backports.functools_lru_cache
 wxPython
 networkx
