@@ -7,5 +7,6 @@ from input import Input
 from output import Output
 from zip import Zip
 from flip import Flip
-from commands import Commands
+from object_commands import ObjectCommands
+from layer_commands import LayerCommands
 from convert_to_satin import ConvertToSatin

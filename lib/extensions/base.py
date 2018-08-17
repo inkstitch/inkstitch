@@ -7,7 +7,7 @@ from collections import MutableMapping
 from ..svg.tags import *
 from ..elements import AutoFill, Fill, Stroke, SatinColumn, Polyline, EmbroideryElement
 from ..utils import cache
-from ..commands import is_command
+from ..commands import is_command, layer_commands
 
 
 SVG_METADATA_TAG = inkex.addNS("metadata", "svg")
@@ -110,12 +110,16 @@ class InkstitchExtension(inkex.Effect):
                 inkex.errormsg(_("No embroiderable paths found in document."))
             inkex.errormsg(_("Tip: use Path -> Object to Path to convert non-paths."))
 
-    def descendants(self, node):
+    def descendants(self, node, selected=False):
         nodes = []
         element = EmbroideryElement(node)
 
         if element.has_command('ignore_object'):
             return []
+
+        if node.tag == SVG_GROUP_TAG and node.get(INKSCAPE_GROUPMODE) == "layer":
+            if layer_commands(node, "ignore_layer"):
+                return []
 
         if element.has_style('display') and element.get_style('display') is None:
             return []
@@ -123,29 +127,23 @@ class InkstitchExtension(inkex.Effect):
         if node.tag == SVG_DEFS_TAG:
             return []
 
-        for child in node:
-            nodes.extend(self.descendants(child))
+        if self.selected:
+            if node.get("id") in self.selected:
+                selected = True
+        else:
+            # if the user didn't select anything that means we process everything
+            selected = True
 
-        if node.tag in EMBROIDERABLE_TAGS:
+        for child in node:
+            nodes.extend(self.descendants(child, selected))
+
+        if selected and node.tag in EMBROIDERABLE_TAGS:
             nodes.append(node)
 
         return nodes
 
     def get_nodes(self):
-        """Get all XML nodes, or just those selected
-
-        effect is an instance of a subclass of inkex.Effect.
-        """
-
-        if self.selected:
-            nodes = []
-            for node in self.document.getroot().iter():
-                if node.get("id") in self.selected:
-                    nodes.extend(self.descendants(node))
-        else:
-            nodes = self.descendants(self.document.getroot())
-
-        return nodes
+        return self.descendants(self.document.getroot())
 
     def detect_classes(self, node):
         if node.tag == SVG_POLYLINE_TAG:

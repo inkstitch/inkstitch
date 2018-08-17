@@ -75,7 +75,7 @@ class Command(BaseCommand):
 class StandaloneCommand(BaseCommand):
     def __init__(self, use):
         self.node = use
-        self.svg = self.use.getroottree().getroot()
+        self.svg = self.node.getroottree().getroot()
 
         self.parse_command()
 
@@ -113,7 +113,7 @@ def layer_commands(layer, command):
 
     for standalone_command in standalone_commands(layer.getroottree().getroot()):
         if standalone_command.command == command:
-            if layer in command.iterancestors():
+            if layer in standalone_command.node.iterancestors():
                 commands.append(command)
 
     return commands
@@ -122,7 +122,7 @@ def standalone_commands(svg):
     """Find all unconnected command symbols in the SVG."""
 
     xpath = ".//svg:use[starts-with(@xlink:href, '#inkstitch_')]"
-    symbols = svg.xpath(xpath, namespace=inkex.NSS)
+    symbols = svg.xpath(xpath, namespaces=inkex.NSS)
 
     commands = []
     for symbol in symbols:
