@@ -424,18 +424,22 @@ class SettingsFrame(wx.Frame):
             self.simulate_window.stop()
             self.simulate_window.load(stitch_plan=stitch_plan)
         else:
-            my_rect = self.GetScreenRect()
-            simulator_pos = my_rect.GetTopRight()
+            params_rect = self.GetScreenRect()
+            simulator_pos = params_rect.GetTopRight()
             simulator_pos.x += 5
 
-            screen_rect = wx.Display(0).ClientArea
-            max_width = screen_rect.GetWidth() - my_rect.GetWidth()
+            current_screen = wx.Display.GetFromPoint(wx.GetMousePosition())
+            display = wx.Display(current_screen)
+            screen_rect = display.GetClientArea()
+
+            max_width = screen_rect.GetWidth() - params_rect.GetWidth()
             max_height = screen_rect.GetHeight()
 
             try:
                 self.simulate_window = EmbroiderySimulator(None, -1, _("Preview"),
                                                            simulator_pos,
                                                            size=(300, 300),
+                                                           x_position=simulator_pos.x,
                                                            stitch_plan=stitch_plan,
                                                            on_close=self.simulate_window_closed,
                                                            target_duration=5,
@@ -764,6 +768,14 @@ class Params(InkstitchExtension):
         try:
             app = wx.App()
             frame = SettingsFrame(tabs_factory=self.create_tabs, on_cancel=self.cancel)
+
+            # position left, center
+            current_screen = wx.Display.GetFromPoint(wx.GetMousePosition())
+            display = wx.Display(current_screen)
+            display_size = display.GetClientArea()
+            frame_size = frame.GetSize()
+            frame.SetPosition((display_size[0], display_size[3] / 2 - frame_size[1] / 2))
+
             frame.Show()
             app.MainLoop()
 
