@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-17 15:47-0400\n"
+"POT-Creation-Date: 2018-08-17 16:07-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -152,6 +152,13 @@ msgstr ""
 msgid ""
 "Setting this dictates how many rows apart the stitches will be before "
 "they fall in the same column position."
+msgstr ""
+
+#: lib/elements/fill.py:112
+#, python-format
+msgid ""
+"shape %s is so small that it cannot be filled with stitches.  Please make"
+" it bigger or delete it."
 msgstr ""
 
 #: lib/elements/satin_column.py:10
@@ -601,13 +608,13 @@ msgstr ""
 msgid "Stitch #"
 msgstr ""
 
-#: lib/stitches/auto_fill.py:167
+#: lib/stitches/auto_fill.py:168
 msgid ""
 "Unable to autofill.  This most often happens because your shape is made "
 "up of multiple sections that aren't connected."
 msgstr ""
 
-#: lib/stitches/auto_fill.py:392
+#: lib/stitches/auto_fill.py:393
 msgid ""
 "Unexpected error while generating fill stitches. Please send your SVG "
 "file to lexelby@github."
