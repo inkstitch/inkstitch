@@ -467,10 +467,10 @@ def connect_points(shape, start, end, running_stitch_length, row_spacing):
     # connections from one row to the next.
     #
     # This seems to do a good job of avoiding going outside the shape in
-    # most cases.  1.5 is chosen as approximately the length of the
+    # most cases.  1.4 is chosen as approximately the length of the
     # stitch connecting two rows if the side of the shape is at a 45
     # degree angle to the rows of stitches (sqrt(2)).
-    if abs(end_projection - start_projection) < row_spacing * 1.5:
+    if abs(end_projection - start_projection) < row_spacing * 1.4:
         return [InkstitchPoint(end.x, end.y)]
 
     # The outline path has a "natural" starting point.  Think of this as
