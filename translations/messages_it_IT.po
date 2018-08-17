@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-17 16:07-0400\n"
-"PO-Revision-Date: 2018-08-17 20:21\n"
+"POT-Creation-Date: 2018-08-17 16:19-0400\n"
+"PO-Revision-Date: 2018-08-17 20:31\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
@@ -315,14 +315,6 @@ msgstr ""
 msgid "Tip: use Path -> Object to Path to convert non-paths."
 msgstr ""
 
-#: lib/extensions/commands.py:125
-msgid "Please select one or more objects to which to attach commands."
-msgstr ""
-
-#: lib/extensions/commands.py:133
-msgid "Please choose one or more commands to attach."
-msgstr ""
-
 #: lib/extensions/convert_to_satin.py:28
 msgid "Please select at least one line to convert to a satin column."
 msgstr ""
@@ -389,6 +381,18 @@ msgstr ""
 
 #: lib/extensions/install.py:103
 msgid "Ink/Stitch Add-ons Installer"
+msgstr ""
+
+#: lib/extensions/layer_commands.py:28
+msgid "Please choose one or more commands to add."
+msgstr ""
+
+#: lib/extensions/object_commands.py:93
+msgid "Please select one or more objects to which to attach commands."
+msgstr ""
+
+#: lib/extensions/object_commands.py:101
+msgid "Please choose one or more commands to attach."
 msgstr ""
 
 #: lib/extensions/params.py:244
