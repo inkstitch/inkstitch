@@ -3,6 +3,7 @@
 import sys
 import os
 import subprocess
+import traceback
 
 # ink/stitch
 #
@@ -30,8 +31,21 @@ args[0] = binary_path
 
 # os.execve works here for Linux, but only this seems to get the
 # extension output to Inkscape on Windows
-extension = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-stdout, stderr = extension.communicate()
+try:
+    extension = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    stdout, stderr = extension.communicate()
+except:
+    print >> sys.stderr, "Unexpected error launching Ink/Stitch."
+    print >> sys.stderr, "If you're having trouble, please file an issue here, including the text below: https://github.com/inkstitch/inkstitch/issues\n"
+    print >> sys.stderr, "Tried to launch:", binary_path
+    print >> sys.stderr, "Arguments:", args
+    print >> sys.stderr, "Debugging information:\n"
+    print >> sys.stderr, traceback.format_exc()
+    sys.exit(1)
+
+if sys.platform == "win32":
+    import msvcrt
+    msvcrt.setmode(sys.stdout.fileno(), os.O_BINARY)
 
 stdout = stdout.strip()
 if stdout:

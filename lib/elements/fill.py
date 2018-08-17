@@ -105,8 +105,11 @@ class Fill(EmbroideryElement):
                         last_pt = pt
                 else:
                     last_pt = pt
-            if point_ary:
+            if len(point_ary) > 2:
                 poly_ary.append(point_ary)
+
+        if not poly_ary:
+            self.fatal(_("shape %s is so small that it cannot be filled with stitches.  Please make it bigger or delete it.") % self.node.get('id'))
 
         # shapely's idea of "holes" are to subtract everything in the second set
         # from the first. So let's at least make sure the "first" thing is the

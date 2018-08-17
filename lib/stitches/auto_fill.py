@@ -6,9 +6,10 @@ from itertools import groupby, izip
 from collections import deque
 
 from .fill import intersect_region_with_grating, row_num, stitch_row
+from .running_stitch import running_stitch
 from ..i18n import _
 from ..svg import PIXELS_PER_MM
-from ..utils.geometry import Point as InkstitchPoint
+from ..utils.geometry import Point as InkstitchPoint, cut
 
 
 class MaxQueueLengthExceeded(Exception):
@@ -437,57 +438,85 @@ def collapse_sequential_outline_edges(graph, path):
     return new_path
 
 
-def outline_distance(outline, p1, p2):
-    # how far around the outline (and in what direction) do I need to go
-    # to get from p1 to p2?
+def connect_points(shape, start, end, running_stitch_length, row_spacing):
+    """Create stitches to get from one point on an outline of the shape to another.
 
-    p1_projection = outline.project(shapely.geometry.Point(p1))
-    p2_projection = outline.project(shapely.geometry.Point(p2))
+    An outline is essentially a loop (a path of points that ends where it starts).
+    Given point A and B on that loop, we want to take the shortest path from one
+    to the other.  Due to the way our path-finding algorithm above works, it may
+    have had to take the long way around the shape to get from A to B, but we'd
+    rather ignore that and just get there the short way.
+    """
 
-    distance = p2_projection - p1_projection
-
-    if abs(distance) > outline.length / 2.0:
-        # if we'd have to go more than halfway around, it's faster to go
-        # the other way
-        if distance < 0:
-            return distance + outline.length
-        elif distance > 0:
-            return distance - outline.length
-        else:
-            # this ought not happen, but just for completeness, return 0 if
-            # p1 and p0 are the same point
-            return 0
-    else:
-        return distance
-
-
-def connect_points(shape, start, end, running_stitch_length):
+    # We may be on the outer boundary or on on of the hole boundaries.
     outline_index = which_outline(shape, start)
     outline = shape.boundary[outline_index]
 
-    pos = outline.project(shapely.geometry.Point(start))
-    distance = outline_distance(outline, start, end)
-    num_stitches = abs(int(distance / running_stitch_length))
+    # First, figure out the start and end position along the outline.  The
+    # projection gives us the distance travelled down the outline to get to
+    # that point.
+    start = shapely.geometry.Point(start)
+    start_projection = outline.project(start)
+    end = shapely.geometry.Point(end)
+    end_projection = outline.project(end)
 
-    direction = math.copysign(1.0, distance)
-    one_stitch = running_stitch_length * direction
+    # If the points are pretty close, just jump there.  There's a slight
+    # risk that we're going to sew outside the shape here.  The way to
+    # avoid that is to use running_stitch() even for these really short
+    # connections, but that would be really slow for all of the
+    # connections from one row to the next.
+    #
+    # This seems to do a good job of avoiding going outside the shape in
+    # most cases.  1.4 is chosen as approximately the length of the
+    # stitch connecting two rows if the side of the shape is at a 45
+    # degree angle to the rows of stitches (sqrt(2)).
+    if abs(end_projection - start_projection) < row_spacing * 1.4:
+        return [InkstitchPoint(end.x, end.y)]
 
-    stitches = [InkstitchPoint(*outline.interpolate(pos).coords[0])]
+    # The outline path has a "natural" starting point.  Think of this as
+    # 0 or 12 on an analog clock.
 
-    for i in xrange(num_stitches):
-        pos = (pos + one_stitch) % outline.length
+    # Cut the outline into two paths at the starting point.  The first
+    # section will go from 12 o'clock to the starting point.  The second
+    # section will go from the starting point all the way around and end
+    # up at 12 again.
+    result = cut(outline, start_projection)
 
-        stitches.append(InkstitchPoint(*outline.interpolate(pos).coords[0]))
+    # result will be None if our starting point happens to already be at
+    # 12 o'clock.
+    if result is not None and result[1] is not None:
+        before, after = result
 
-    end = InkstitchPoint(*end)
-    if (end - stitches[-1]).length() > 0.1 * PIXELS_PER_MM:
-        stitches.append(end)
+        # Make a new outline, starting from the starting point.  This is
+        # like rotating the clock so that now our starting point is
+        # at 12 o'clock.
+        outline = shapely.geometry.LineString(list(after.coords) + list(before.coords))
 
-    return stitches
+    # Now figure out where our ending point is on the newly-rotated clock.
+    end_projection = outline.project(end)
+
+    # Cut the new path at the ending point.  before and after now represent
+    # two ways to get from the starting point to the ending point.  One
+    # will most likely be longer than the other.
+    before, after = cut(outline, end_projection)
+
+    if before.length <= after.length:
+        points = list(before.coords)
+    else:
+        # after goes from the ending point to the starting point, so reverse
+        # it to get from start to end.
+        points = list(reversed(after.coords))
+
+    # Now do running stitch along the path we've found.  running_stitch() will
+    # avoid cutting sharp corners.
+    path = [InkstitchPoint(*p) for p in points]
+    return running_stitch(path, running_stitch_length)
+
 
 def trim_end(path):
     while path and path[-1].is_outline():
         path.pop()
+
 
 def path_to_stitches(graph, path, shape, angle, row_spacing, max_stitch_length, running_stitch_length, staggers):
     path = collapse_sequential_outline_edges(graph, path)
@@ -498,6 +527,6 @@ def path_to_stitches(graph, path, shape, angle, row_spacing, max_stitch_length, 
         if edge.is_segment():
             stitch_row(stitches, edge[0], edge[1], angle, row_spacing, max_stitch_length, staggers)
         else:
-            stitches.extend(connect_points(shape, edge[0], edge[1], running_stitch_length))
+            stitches.extend(connect_points(shape, edge[0], edge[1], running_stitch_length, row_spacing))
 
     return stitches

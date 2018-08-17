@@ -17,11 +17,16 @@ class Simulate(InkstitchExtension):
     def effect(self):
         if not self.get_elements():
             return
-
         patches = self.elements_to_patches(self.elements)
         stitch_plan = patches_to_stitch_plan(patches)
         app = wx.App()
-        frame = EmbroiderySimulator(None, -1, _("Embroidery Simulation"), wx.DefaultPosition, size=(1000, 1000), stitch_plan=stitch_plan)
+        current_screen = wx.Display.GetFromPoint(wx.GetMousePosition())
+        display = wx.Display(current_screen)
+        screen_rect = display.GetClientArea()
+
+        simulator_pos = (screen_rect[0], screen_rect[1])
+
+        frame = EmbroiderySimulator(None, -1, _("Embroidery Simulation"), pos=simulator_pos, size=(1000, 1000), stitch_plan=stitch_plan)
         app.SetTopWindow(frame)
         frame.Show()
         wx.CallAfter(frame.go)

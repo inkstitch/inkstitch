@@ -9,20 +9,21 @@ def cut(line, distance):
     """
     if distance <= 0.0 or distance >= line.length:
         return [LineString(line), None]
-    coords = list(line.coords)
-    for i, p in enumerate(coords):
-        # TODO: I think this doesn't work if the path doubles back on itself
-        pd = line.project(ShapelyPoint(p))
-        if pd == distance:
+    coords = list(ShapelyPoint(p) for p in line.coords)
+    traveled = 0
+    last_point = coords[0]
+    for i, p in enumerate(coords[1:], 1):
+        traveled += p.distance(last_point)
+        last_point = p
+        if traveled == distance:
             return [
                 LineString(coords[:i+1]),
                 LineString(coords[i:])]
-        if pd > distance:
+        if traveled > distance:
             cp = line.interpolate(distance)
             return [
                 LineString(coords[:i] + [(cp.x, cp.y)]),
                 LineString([(cp.x, cp.y)] + coords[i:])]
-
 
 def cut_path(points, length):
     """Return a subsection of at the start of the path that is length units long.
