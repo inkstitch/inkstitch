@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-11 22:57-0400\n"
-"PO-Revision-Date: 2018-08-13 09:02\n"
+"POT-Creation-Date: 2018-08-17 15:47-0400\n"
+"PO-Revision-Date: 2018-08-17 20:11\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -451,29 +451,29 @@ msgstr "Letzte Einstellungen verwenden"
 msgid "Apply and Quit"
 msgstr "Anwenden und schließen"
 
-#: lib/extensions/params.py:436
+#: lib/extensions/params.py:439
 msgid "Preview"
 msgstr "Vorschau"
 
-#: lib/extensions/params.py:454
+#: lib/extensions/params.py:458
 msgid "Internal Error"
 msgstr "Interner Fehler"
 
-#: lib/extensions/params.py:507
+#: lib/extensions/params.py:511
 msgid "Please enter or select a preset name first."
 msgstr "Bitte geben Sie einen Namen ein, oder wählen Sie zuerst einen vordefinierten Namen aus."
 
-#: lib/extensions/params.py:507 lib/extensions/params.py:513
-#: lib/extensions/params.py:541
+#: lib/extensions/params.py:511 lib/extensions/params.py:517
+#: lib/extensions/params.py:545
 msgid "Preset"
 msgstr "Voreinstellung"
 
-#: lib/extensions/params.py:513
+#: lib/extensions/params.py:517
 #, python-format
 msgid "Preset \"%s\" not found."
 msgstr "Einstellung \"%s\" nicht gefunden."
 
-#: lib/extensions/params.py:541
+#: lib/extensions/params.py:545
 #, python-format
 msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
 msgstr "Einstellung \"%s\" bereits vorhanden. Bitte verwenden Sie einen anderen Namen oder drücken Sie \"Überschreiben\""
@@ -496,7 +496,7 @@ msgstr "Eine Druckvorschau wurde im Webbrowser geöffnet. Dieses Fenster dient z
 msgid "Ink/Stitch Print"
 msgstr "Ink/Stitch Drucken"
 
-#: lib/extensions/simulate.py:24
+#: lib/extensions/simulate.py:29
 msgid "Embroidery Simulation"
 msgstr "Stick Simulation"
 
@@ -504,45 +504,53 @@ msgstr "Stick Simulation"
 msgid "No embroidery file formats selected."
 msgstr "Keine Stick-Dateiformate ausgewählt."
 
-#: lib/simulator.py:34
+#: lib/simulator.py:40
 msgid "Speed up"
 msgstr "Beschleunigen"
 
-#: lib/simulator.py:34
+#: lib/simulator.py:40
 msgid "Press + or arrow up to speed up"
 msgstr "Drücke + oder Pfeil nach oben zur Beschleunigung"
 
-#: lib/simulator.py:35
+#: lib/simulator.py:41
 msgid "Slow down"
 msgstr "Verlangsamen"
 
-#: lib/simulator.py:35
+#: lib/simulator.py:41
 msgid "Press - or arrow down to slow down"
 msgstr "Drücke - oder Pfeil nach unten zur Verlangsamung"
 
-#: lib/simulator.py:36
+#: lib/simulator.py:42
 msgid "Pause"
 msgstr "Pause"
 
-#: lib/simulator.py:36
+#: lib/simulator.py:42
 msgid "Press P to pause the animation"
 msgstr "Drücken Sie P um die Animation zu pausieren"
 
-#: lib/simulator.py:37
+#: lib/simulator.py:43
 msgid "Restart"
 msgstr "Neustart"
 
-#: lib/simulator.py:37
+#: lib/simulator.py:43
 msgid "Press R to restart the animation"
 msgstr "Drücken Sie R um die Animation erneut zu starten"
 
-#: lib/simulator.py:38
+#: lib/simulator.py:44
 msgid "Quit"
 msgstr "Beenden"
 
-#: lib/simulator.py:38
+#: lib/simulator.py:44
 msgid "Press Q to close the simulation window"
 msgstr "Drücken Sie Q um das Simulationsfenster zu beenden"
+
+#: lib/simulator.py:169
+msgid "Stitch # "
+msgstr ""
+
+#: lib/simulator.py:172
+msgid "Stitch #"
+msgstr ""
 
 #: lib/stitches/auto_fill.py:167
 msgid "Unable to autofill.  This most often happens because your shape is made up of multiple sections that aren't connected."
