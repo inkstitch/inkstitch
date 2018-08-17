@@ -1,7 +1,7 @@
 EXTENSIONS:=inkstitch
 
 # This gets the branch name or the name of the tag
-VERSION:=$(TRAVIS_BRANCH)
+VERSION:=$(subst /,-,$(TRAVIS_BRANCH))
 OS:=$(TRAVIS_OS_NAME)
 ARCH:=$(shell uname -m)
 

@@ -154,8 +154,8 @@ notifications:
 before_deploy:
   - |
     if [[ !("$TRAVIS_TAG" =~ ^v[0-9.]+$) ]]; then
-      git tag -f dev-build-${TRAVIS_BRANCH}
-      git push -f https://${TRAVIS_REPO_SLUG%/*}:${GITHUB_API_KEY}@github.com/${TRAVIS_REPO_SLUG}.git dev-build-${TRAVIS_BRANCH}
+      git tag -f dev-build-${TRAVIS_BRANCH//\//-}
+      git push -f https://${TRAVIS_REPO_SLUG%/*}:${GITHUB_API_KEY}@github.com/${TRAVIS_REPO_SLUG}.git dev-build-${TRAVIS_BRANCH//\//-}
     fi
 deploy:
   - provider: releases
