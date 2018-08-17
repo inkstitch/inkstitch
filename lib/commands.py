@@ -9,24 +9,35 @@ class CommandParseError(Exception):
     pass
 
 
-def get_node_by_url(svg, url):
-    # url will be #path12345.  Find the object at the other end.
+class BaseCommand(object):
+    def parse_symbol(self):
+        if self.symbol.tag != SVG_SYMBOL_TAG:
+            raise CommandParseError("use points to non-symbol")
 
-    if url is None:
-        raise CommandParseError("url is None")
+        self.command = self.symbol.get('id')
 
-    if not url.startswith('#'):
-        raise CommandParseError("invalid connection url: %s" % url)
+        if self.command.startswith('inkstitch_'):
+            self.command = self.command[10:]
+        else:
+            raise CommandParseError("symbol is not an Ink/Stitch command")
 
-    id = url[1:]
+    def get_node_by_url(self,url):
+        # url will be #path12345.  Find the corresponding object.
+        if url is None:
+            raise CommandParseError("url is None")
 
-    try:
-        return svg.xpath(".//*[@id='%s']" % id)[0]
-    except (IndexError, AttributeError):
-        raise CommandParseError("could not find node by url %s" % id)
+        if not url.startswith('#'):
+            raise CommandParseError("invalid connection url: %s" % url)
+
+        id = url[1:]
+
+        try:
+            return self.svg.xpath(".//*[@id='%s']" % id)[0]
+        except (IndexError, AttributeError):
+            raise CommandParseError("could not find node by url %s" % id)
 
 
-class Command(object):
+class Command(BaseCommand):
     def __init__(self, connector):
         self.connector = connector
         self.svg = self.connector.getroottree().getroot()
@@ -41,8 +52,8 @@ class Command(object):
         path = self.parse_connector_path()
 
         neighbors = [
-            (get_node_by_url(self.svg, self.connector.get(CONNECTION_START)), path[0][0][1]),
-            (get_node_by_url(self.svg, self.connector.get(CONNECTION_END)), path[0][-1][1])
+            (self.get_node_by_url(self.connector.get(CONNECTION_START)), path[0][0][1]),
+            (self.get_node_by_url(self.connector.get(CONNECTION_END)), path[0][-1][1])
         ]
 
         if neighbors[0][0].tag != SVG_USE_TAG:
@@ -51,17 +62,8 @@ class Command(object):
         if neighbors[0][0].tag != SVG_USE_TAG:
             raise CommandParseError("connector does not point to a use tag")
 
-        self.symbol = self.get_node_by_url(self.svg, neighbors[0][0].get(XLINK_HREF))
-
-        if self.symbol.tag != SVG_SYMBOL_TAG:
-            raise CommandParseError("use points to non-symbol")
-
-        self.command = self.symbol.get('id')
-
-        if self.command.startswith('inkstitch_'):
-            self.command = self.command[10:]
-        else:
-            raise CommandParseError("symbol is not an Ink/Stitch command")
+        self.symbol = self.get_node_by_url(neighbors[0][0].get(XLINK_HREF))
+        self.parse_symbol()
 
         self.target = neighbors[1][0]
         self.target_point = neighbors[1][1]
@@ -69,15 +71,21 @@ class Command(object):
     def __repr__(self):
         return "Command('%s', %s)" % (self.command, self.target_point)
 
-class StandaloneCommand(object):
-    def __init__(self, symbol):
-        self.symbol = symbol
-        self.svg = self.connector.getroottree().getroot()
+
+class StandaloneCommand(BaseCommand):
+    def __init__(self, use):
+        self.node = use
+        self.svg = self.use.getroottree().getroot()
 
         self.parse_command()
 
     def parse_command(self):
-        pass
+        self.symbol = self.get_node_by_url(self.node.get(XLINK_HREF))
+
+        if self.symbol.tag != SVG_SYMBOL_TAG:
+            raise CommandParseError("use points to non-symbol")
+
+        self.parse_symbol()
 
 
 def find_commands(node):
@@ -92,7 +100,7 @@ def find_commands(node):
     for connector in connectors:
         try:
             commands.append(Command(connector))
-        except ValueError:
+        except CommandParseError:
             # Parsing the connector failed, meaning it's not actually an Ink/Stitch command.
             pass
 
@@ -100,9 +108,17 @@ def find_commands(node):
 
 def layer_commands(layer, command):
     """Find standalone (unconnected) command symbols in this layer."""
-    pass
 
-def global_commands(svg):
+    commands = []
+
+    for standalone_command in standalone_commands(layer.getroottree().getroot()):
+        if standalone_command.command == command:
+            if layer in command.iterancestors():
+                commands.append(command)
+
+    return commands
+
+def standalone_commands(svg):
     """Find all unconnected command symbols in the SVG."""
 
     xpath = ".//svg:use[starts-with(@xlink:href, '#inkstitch_')]"
