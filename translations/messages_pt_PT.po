@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-11 22:57-0400\n"
-"PO-Revision-Date: 2018-08-12 03:10\n"
+"POT-Creation-Date: 2018-08-17 15:47-0400\n"
+"PO-Revision-Date: 2018-08-17 20:11\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -449,29 +449,29 @@ msgstr "Usar ultimas definições"
 msgid "Apply and Quit"
 msgstr "Aplicar e Sair"
 
-#: lib/extensions/params.py:436
+#: lib/extensions/params.py:439
 msgid "Preview"
 msgstr "Pré-visualização"
 
-#: lib/extensions/params.py:454
+#: lib/extensions/params.py:458
 msgid "Internal Error"
 msgstr "Erro Interno"
 
-#: lib/extensions/params.py:507
+#: lib/extensions/params.py:511
 msgid "Please enter or select a preset name first."
 msgstr "Seleccione ou insira uma pré-definição primeiro."
 
-#: lib/extensions/params.py:507 lib/extensions/params.py:513
-#: lib/extensions/params.py:541
+#: lib/extensions/params.py:511 lib/extensions/params.py:517
+#: lib/extensions/params.py:545
 msgid "Preset"
 msgstr "Pré-definição"
 
-#: lib/extensions/params.py:513
+#: lib/extensions/params.py:517
 #, python-format
 msgid "Preset \"%s\" not found."
 msgstr "Pré-definição \"%s\" não encontrada."
 
-#: lib/extensions/params.py:541
+#: lib/extensions/params.py:545
 #, python-format
 msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
 msgstr "Pré-definição \"%s\" já existe. Use outro nome ou clique \"Substituir\""
@@ -493,7 +493,7 @@ msgstr ""
 msgid "Ink/Stitch Print"
 msgstr ""
 
-#: lib/extensions/simulate.py:24
+#: lib/extensions/simulate.py:29
 msgid "Embroidery Simulation"
 msgstr "Simulação de Bordado"
 
@@ -501,44 +501,52 @@ msgstr "Simulação de Bordado"
 msgid "No embroidery file formats selected."
 msgstr ""
 
-#: lib/simulator.py:34
+#: lib/simulator.py:40
 msgid "Speed up"
 msgstr ""
 
-#: lib/simulator.py:34
+#: lib/simulator.py:40
 msgid "Press + or arrow up to speed up"
 msgstr ""
 
-#: lib/simulator.py:35
+#: lib/simulator.py:41
 msgid "Slow down"
 msgstr ""
 
-#: lib/simulator.py:35
+#: lib/simulator.py:41
 msgid "Press - or arrow down to slow down"
 msgstr ""
 
-#: lib/simulator.py:36
+#: lib/simulator.py:42
 msgid "Pause"
 msgstr ""
 
-#: lib/simulator.py:36
+#: lib/simulator.py:42
 msgid "Press P to pause the animation"
 msgstr ""
 
-#: lib/simulator.py:37
+#: lib/simulator.py:43
 msgid "Restart"
 msgstr ""
 
-#: lib/simulator.py:37
+#: lib/simulator.py:43
 msgid "Press R to restart the animation"
 msgstr ""
 
-#: lib/simulator.py:38
+#: lib/simulator.py:44
 msgid "Quit"
 msgstr ""
 
-#: lib/simulator.py:38
+#: lib/simulator.py:44
 msgid "Press Q to close the simulation window"
+msgstr ""
+
+#: lib/simulator.py:169
+msgid "Stitch # "
+msgstr ""
+
+#: lib/simulator.py:172
+msgid "Stitch #"
 msgstr ""
 
 #: lib/stitches/auto_fill.py:167
