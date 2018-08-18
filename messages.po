@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-17 16:19-0400\n"
+"POT-Creation-Date: 2018-08-17 22:45-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,36 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.3\n"
+
+#. : command attached to an object
+#: lib/commands.py:11
+msgid "Fill stitch starting position"
+msgstr ""
+
+#. : command attached to an object
+#: lib/commands.py:14
+msgid "Fill stitch ending position"
+msgstr ""
+
+#. : command attached to an object
+#: lib/commands.py:17
+msgid "Stop (pause machine) after sewing this object"
+msgstr ""
+
+#. : command attached to an object
+#: lib/commands.py:20
+msgid "Trim thread after sewing this object"
+msgstr ""
+
+#. : command attached to an object
+#: lib/commands.py:23
+msgid "Ignore this object (do not stitch)"
+msgstr ""
+
+#. : command that affects entire layer
+#: lib/commands.py:26
+msgid "Ignore layer (do not stitch any objects in this layer)"
+msgstr ""
 
 #: lib/elements/auto_fill.py:11
 msgid "Auto-Fill"
@@ -432,11 +462,25 @@ msgstr ""
 msgid "Please choose one or more commands to add."
 msgstr ""
 
-#: lib/extensions/object_commands.py:93
+#. : the name of the line that connects a command to the object it applies to
+#: lib/extensions/object_commands.py:36
+msgid "connector"
+msgstr ""
+
+#: lib/extensions/object_commands.py:80
+msgid "Ink/Stitch Command"
+msgstr ""
+
+#. : the name of a command symbol (example: scissors icon for trim command)
+#: lib/extensions/object_commands.py:95
+msgid "command marker"
+msgstr ""
+
+#: lib/extensions/object_commands.py:106
 msgid "Please select one or more objects to which to attach commands."
 msgstr ""
 
-#: lib/extensions/object_commands.py:101
+#: lib/extensions/object_commands.py:114
 msgid "Please choose one or more commands to attach."
 msgstr ""
 
