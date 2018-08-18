@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-08-17 16:19-0400\n"
-"PO-Revision-Date: 2018-08-18 09:41\n"
+"PO-Revision-Date: 2018-08-18 09:51\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -555,11 +555,11 @@ msgstr "Drücken Sie Q um das Simulationsfenster zu beenden"
 
 #: lib/simulator.py:169
 msgid "Stitch # "
-msgstr ""
+msgstr "Stiche # "
 
 #: lib/simulator.py:172
 msgid "Stitch #"
-msgstr ""
+msgstr "Stiche #"
 
 #: lib/stitches/auto_fill.py:168
 msgid "Unable to autofill.  This most often happens because your shape is made up of multiple sections that aren't connected."
