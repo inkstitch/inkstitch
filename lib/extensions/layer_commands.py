@@ -3,13 +3,14 @@ import sys
 import inkex
 
 from .commands import CommandsExtension
+from ..commands import LAYER_COMMANDS, get_command_description
 from ..i18n import _
-from ..svg.tags import SVG_USE_TAG, XLINK_HREF
+from ..svg.tags import *
 from ..svg import get_correction_transform
 
 
 class LayerCommands(CommandsExtension):
-    COMMANDS = ["ignore_layer"]
+    COMMANDS = LAYER_COMMANDS
 
     def ensure_current_layer(self):
         # if no layer is selected, inkex defaults to the root, which isn't
@@ -37,6 +38,7 @@ class LayerCommands(CommandsExtension):
             node = inkex.etree.SubElement(self.current_layer, SVG_USE_TAG,
                 {
                     "id": self.uniqueId("use"),
+                    INKSCAPE_LABEL: _("Ink/Stitch Command") + ": %s" % get_command_description(command),
                     XLINK_HREF: "#inkstitch_%s" % command,
                     "height": "100%",
                     "width": "100%",
