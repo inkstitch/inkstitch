@@ -2,9 +2,9 @@
 
 # Ink/Stitch: Eine Open-Source Stickdesign Software die auf Inkscape basiert
 
-Möchten Sie Stickmusterdateien (PES, DST und viele mehr) mit einer **kostenlosen, Open-Source-Software entwerfen?**
+Möchten Sie Stickmusterdateien (PES, DST und viele mehr) mit einer **kostenlosen, Open-Source-Software** entwerfen?
 
-Ink/Stitch soll eine vollwertige Stickdigitalisierungssoftware werden, die vollständig auf freier Open-Source-Software basiert. Unser Ziel ist es für Hobbyisten und gleichzeitig für professionellen Digitalisierern die benötigten Werkzeuge bereitzustellen.
+Ink/Stitch soll eine vollwertige Stickdigitalisierungssoftware werden, die vollständig auf freier Open-Source-Software basiert. Unser Ziel ist es sowohl für Hobbyisten als auch für professionelle Digitalisierer die benötigten Werkzeuge bereitzustellen.
 
 Willst du mehr erfahren?
 
@@ -18,11 +18,11 @@ Willst du mehr erfahren?
 
 _by @lexelby, ein Ink/Stitch Programmierer_
 
-Ich erhielt ein wirklich wunderbares Weihnachtsgeschenk für einen Programmierer: eine [Stickmaschine](http://www.brother-usa.com/homesewing/ModelDetail.aspx?ProductID=SE400). Es ähnelt so ziemlich einer CNC-Maschine ... Ich musste einfach herausfinden wie man Programme dafür erstellt. Das Problem daran ist, **alle kostenlosen Stickdesign-Software Varianten** haben ein Defizit, vor allem wenn die Anforderung ist unter Linux meinem Betriebssystem der Wahl zu laufen.
+Ich erhielt ein wirklich wunderbares Weihnachtsgeschenk für einen Programmierer: eine [Stickmaschine](http://www.brother-usa.com/homesewing/ModelDetail.aspx?ProductID=SE400). Es ähnelt so ziemlich einer CNC-Maschine ... Ich musste einfach herausfinden wie man Programme dafür erstellt. Das Problem daran ist, **alle kostenlosen Stickdesign-Software Varianten** haben ein Defizit, vor allem wenn die Anforderung ist unter Linux, meinem Betriebssystem der Wahl, zu laufen.
 
-Ich fing an, auf [inkscape-embroidery](http://www.jonh.net/~jonh/inkscape-embroidery/) zu programmieren.
-Es hatte einige der grundlegenden Funktionen die ich benötigte und ich sah eine Menge Potenzial. Ich mag die Idee, einen vorhandenen, ultrastarken SVG-Editor wie [inkscape](https://inkscape.org) als Basis für eine Stickdesign-Software zu verwenden.
+Ich fing an [inkscape-embroidery](http://www.jonh.net/~jonh/inkscape-embroidery/) zu modifizieren.
+Es hatte einige der grundlegenden Funktionen die ich benötigte und ich sah eine Menge Potenzial. Ich mag die Idee, einen vorhandenen, ultrastarken SVG-Editor wie [Inkscape](https://inkscape.org) als Basis für eine Stickdesign-Software zu verwenden.
 
-Von dort ging es los. Ich fügte fortwährend Funktionen hinzu, so wie ich sie brauchte, und zu diesem Zeitpunkt bleibt nur noch sehr wenig von dem ursprünglichen Code übrig.
+Von dort ging es los. Ich fügte fortwährend Funktionen hinzu, so wie ich sie brauchte und zu diesem Zeitpunkt ist nur noch sehr wenig von dem ursprünglichen Code übrig.
 
-Das Ziel von Ink/Stitch ist es, eine leistungsfähige Digitalisierungssoftware für Stickereien für jedermann **völlig kostenlos** zur Verfügung zu stellen. Ich möchte das Gebiet des Stickdesigns erschließen und es auch für diejenigen zugänglich machen, die nicht Hunderte oder Tausende für eine Software ausgeben können oder wollen. Und ich möchte Leute wie mich, die es lieben Programierung mit Kunst zu verbinden, eine offene, erweiterbare und zugängliche Software geben, auf der man selbst aktiv sein kann.
+Das Ziel von Ink/Stitch ist es, eine leistungsfähige Digitalisierungssoftware für Stickereien für jedermann **völlig kostenlos** zur Verfügung zu stellen. Ich möchte das Gebiet des Stickdesigns öffnen und es auch für diejenigen zugänglich machen, die nicht Hunderte oder Tausende für eine Software ausgeben können oder wollen. Und ich möchte Leuten wie mir, die es lieben Programierung mit Kunst zu verbinden, eine offene, erweiterbare und zugängliche Software geben, auf der man selbst aktiv sein kann.
