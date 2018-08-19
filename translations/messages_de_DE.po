@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-08-17 16:19-0400\n"
-"PO-Revision-Date: 2018-08-18 09:51\n"
+"PO-Revision-Date: 2018-08-19 12:21\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -143,7 +143,7 @@ msgstr "Die Einstellung bestimmt, wie viele Reihen die Stiche voneinander entfer
 #: lib/elements/fill.py:112
 #, python-format
 msgid "shape %s is so small that it cannot be filled with stitches.  Please make it bigger or delete it."
-msgstr "Die Form %s ist zu klein, dass sie nicht mit Stichen gefüllt werden kann. Bitte vergrößern oder löschen."
+msgstr "Die Form %s ist zu klein, dass sie nicht mit Stichen gefüllt werden kann. Bitte vergrößere oder lösche diese."
 
 #: lib/elements/satin_column.py:10
 msgid "Satin Column"
