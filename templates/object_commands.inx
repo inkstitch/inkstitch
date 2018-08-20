@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <_name>Attach Commands</_name>
+    <name>{% trans %}Attach Commands{% endtrans %}</name>
     <id>org.inkstitch.commands</id>
     <dependency type="executable" location="extensions">inkstitch.py</dependency>
     <dependency type="executable" location="extensions">inkex.py</dependency>
-    <param name="fill_start" type="boolean" _gui-text="Fill stitch starting position">false</param>
-    <param name="fill_end" type="boolean" _gui-text="Fill stitch ending position">false</param>
-    <param name="stop" type="boolean" _gui-text="Stop after sewing this object">false</param>
-    <param name="trim" type="boolean" _gui-text="Trim thread after sewing this object">false</param>
-    <param name="ignore_object" type="boolean" _gui-text="Ignore this object (do not stitch)">false</param>
-    <param name="extension" type="string" gui-hidden="true">object_commands</param>
+    {% for command, description in object_commands %}
+    <param name="{{ object }}" type="boolean" gui-text="{{ _(description ) }}">false</param>
+    {% endfor %}
     <effect>
         <object-type>all</object-type>
         <effects-menu>
-            <submenu _name="Embroidery" />
+            <submenu name="Ink/Stitch" />
         </effects-menu>
     </effect>
     <script>

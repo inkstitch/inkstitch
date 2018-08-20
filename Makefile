@@ -32,7 +32,7 @@ inx:
 messages.po:
 	rm -f messages.po
 	bin/pyembroidery-gettext > pyembroidery-format-descriptions.py
-	pybabel extract -o messages.po -F babel.conf --add-location=full --add-comments=l10n,L10n,L10N --sort-by-file --strip-comments .
+	pybabel extract -o messages.po -F babel.conf --add-location=full --add-comments=l10n,L10n,L10N --sort-by-file --strip-comments -k N_ .
 	rm pyembroidery-format-descriptions.py
 
 .PHONY: locales

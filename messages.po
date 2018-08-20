@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-20 15:17-0400\n"
+"POT-Creation-Date: 2018-08-20 15:49-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,32 +17,32 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.3\n"
 
-#. : command attached to an object
+#. command attached to an object
 #: lib/commands.py:11
 msgid "Fill stitch starting position"
 msgstr ""
 
-#. : command attached to an object
+#. command attached to an object
 #: lib/commands.py:14
 msgid "Fill stitch ending position"
 msgstr ""
 
-#. : command attached to an object
+#. command attached to an object
 #: lib/commands.py:17
 msgid "Stop (pause machine) after sewing this object"
 msgstr ""
 
-#. : command attached to an object
+#. command attached to an object
 #: lib/commands.py:20
 msgid "Trim thread after sewing this object"
 msgstr ""
 
-#. : command attached to an object
+#. command attached to an object
 #: lib/commands.py:23
 msgid "Ignore this object (do not stitch)"
 msgstr ""
 
-#. : command that affects entire layer
+#. command that affects entire layer
 #: lib/commands.py:26
 msgid "Ignore layer (do not stitch any objects in this layer)"
 msgstr ""

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <_name>embroidery ZIP file output</_name>
+    <name>embroidery ZIP file output</name>
     <id>org.inkstitch.output.zip</id>
     <dependency type="executable" location="extensions">inkstitch.py</dependency>
     <dependency type="executable" location="extensions">inkex.py</dependency>
     <output>
         <extension>.zip</extension>
         <mimetype>application/zip</mimetype>
-        <_filetypename>Ink/Stitch: ZIP export multiple formats (.zip)</_filetypename>
-        <_filetypetooltip>Create a ZIP with multiple embroidery file formats using Ink/Stitch</_filetypetooltip>
+        <_filetypename>{{ _("Ink/Stitch: ZIP export multiple formats (.zip)") }}"</_filetypename>
+        <_filetypetooltip>{{ _("Create a ZIP with multiple embroidery file formats using Ink/Stitch") }}</_filetypetooltip>
         <dataloss>true</dataloss>
     </output>
     {% for format, description in formats %}
-    <param name="format-{{ format }}" type="boolean" _gui-text=".{{ format | upper }}: {{ description }}">false</param>
+    <param name="format-{{ format }}" type="boolean" gui-text=".{{ format | upper }}: {{ _(description) }}">false</param>
     {% endfor %}
     <param name="extension" type="string" gui-hidden="true">zip</param>
     <script>

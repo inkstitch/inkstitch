@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <_name>Embroider</_name>
-    <id>jonh.embroider</id>
+    <name>{% trans %}Embroider{% endtrans %}</name>
+    <id>org.inkstitch.embroider</id>
     <dependency type="executable" location="extensions">inkstitch.py</dependency>
     <dependency type="executable" location="extensions">inkex.py</dependency>
-    <param name="collapse_len_mm" type="float" min="0.0" max="10.0" _gui-text="Collapse length (mm)" _gui-description="Jump stitches smaller than this will be treated as normal stitches.">3.0</param>
-    <param name="hide_layers" type="boolean" _gui-text="Hide other layers" _gui-description="Hide all other top-level layers when the embroidery layer is generated, in order to make stitching discernable.">true</param>
-    <param name="output_format" type="optiongroup" _gui-text="Output file format" appearance="minimal">
+    <param name="collapse_len_mm" type="float" min="0.0" max="10.0" gui-text="{% trans %}Collapse length (mm){% endtrans %}" gui-description="{% trans %}Jump stitches smaller than this will be treated as normal stitches.{% endtrans %}">3.0</param>
+    <param name="hide_layers" type="boolean" gui-text="{% trans %}Hide other layers{% endtrans %}" gui-description="{% trans %}Hide all other top-level layers when the embroidery layer is generated, in order to make stitching discernible.{% endtrans %}">true</param>
+    <param name="output_format" type="optiongroup" gui-text="{% trans %}Output file format{% endtrans %}" appearance="minimal">
         {% for format, description in formats %}
-        <_option value="{{ format }}">{{ description }} ({{ format | upper }})</_option>
+        <_option value="{{ format }}">{{ _(description) }} ({{ format | upper }})</_option>
         {% endfor %}
         {% for format, description in debug_formats %}
-        <_option value="{{ format }}">{{ description }} ({{ format | upper }}) [DEBUG]</_option>
+        <_option value="{{ format }}">{{ _(description) }} ({{ format | upper }}) [{{ _("DEBUG") }}]</_option>
         {% endfor %}
     </param>
-    <param name="path" type="string" _gui-text="Directory" _gui-description="Leave empty to save the output in Inkscape's extension directory."></param>
+    <param name="path" type="string" gui-text="{% trans %}Directory{% endtrans %}" gui-description="{% trans %}Leave empty to save the output in Inkscape's extension directory.{% endtrans %}"></param>
     <param name="extension" type="string" gui-hidden="true">embroider</param>
     <effect>
         <object-type>all</object-type>
         <effects-menu>
-            <submenu _name="Embroidery"/>
+            <submenu name="Ink/Stitch"/>
         </effects-menu>
     </effect>
     <script>
