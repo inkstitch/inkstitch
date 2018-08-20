@@ -23,11 +23,16 @@ dist: distclean locales
 distclean:
 	rm -rf build dist *.spec *.tar.gz
 
+.PHONY: inx
+inx:
+	mkdir -p inx
+	bin/generate-inx-files
+
+.PHONY: messages.po
 messages.po:
 	rm -f messages.po
 	pybabel extract -o messages.po -F babel.conf --add-location=full --add-comments=l10n,L10n,L10N --sort-by-file --strip-comments .
 
-.PHONY: messages.po
 .PHONY: locales
 locales:
 	# message files will look like this:
