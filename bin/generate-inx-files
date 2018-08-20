@@ -4,7 +4,14 @@ import sys
 import os
 from os.path import dirname
 
-sys.path.append(os.path.join(dirname(dirname(__file__))))
+# add inkstitch libs to python path
+parent_dir = os.path.join(dirname(dirname(__file__)))
+sys.path.append(parent_dir)
+
+# try find add inkex.py et al. as well
+sys.path.append(os.path.join(parent_dir, "inkscape", "share", "extensions"))
+sys.path.append(os.path.join("/usr/share/inkscape/extensions"))
+
 from lib.inx import generate_inx_files
 
 generate_inx_files()
