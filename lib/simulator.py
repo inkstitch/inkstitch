@@ -37,11 +37,8 @@ class EmbroiderySimulator(wx.Frame):
         self.panel = wx.Panel(self, wx.ID_ANY)
         self.panel.SetBackgroundStyle(wx.BG_STYLE_PAINT)
 
-        self.stitch_slider = wx.Slider(self, value=1, minValue=1, maxValue=len(self.lines),
-            style = wx.SL_HORIZONTAL|wx.SL_LABELS)
-
         self.slider_sizer = wx.BoxSizer(wx.HORIZONTAL)
-        self.slider_sizer.Add(self.stitch_slider, 1, wx.EXPAND)
+        self.set_slider()
 
         self.button_sizer = wx.StdDialogButtonSizer()
         self.button_label = (
@@ -122,6 +119,11 @@ class EmbroiderySimulator(wx.Frame):
         self.timer = None
 
         self.last_pos = None
+
+    def set_slider(self):
+        self.stitch_slider = wx.Slider(self, value=1, minValue=1, maxValue=len(self.lines),
+            style = wx.SL_HORIZONTAL|wx.SL_LABELS)
+        self.slider_sizer.Add(self.stitch_slider, 1, wx.EXPAND)
 
     def get_current_screen_rect(self):
         current_screen = wx.Display.GetFromPoint(wx.GetMousePosition())
@@ -361,7 +363,7 @@ class EmbroiderySimulator(wx.Frame):
         dc.DrawLine(self.last_pos_x,      self.last_pos_y - 10, self.last_pos_x,      self.last_pos_y + 10)
 
     def iterate_frames(self):
-        self.current_frame += 1 * self.animation_direction
+        self.current_frame += self.stitches_per_frame * self.animation_direction
         self.set_stitch_counter(self.current_frame)
         self.set_stitch_slider(self.current_frame)
 

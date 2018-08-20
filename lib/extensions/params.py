@@ -287,7 +287,6 @@ class ParamsTab(ScrolledPanel):
 
         summary_box = wx.StaticBox(self, wx.ID_ANY, label=_("Inkscape objects"))
         sizer = wx.StaticBoxSizer(summary_box, wx.HORIZONTAL)
-#        sizer = wx.BoxSizer(wx.HORIZONTAL)
         self.description = wx.StaticText(self)
         self.update_description()
         self.description.SetLabel(self.description_text)
@@ -423,6 +422,12 @@ class SettingsFrame(wx.Frame):
         if self.simulate_window:
             self.simulate_window.stop()
             self.simulate_window.load(stitch_plan=stitch_plan)
+
+            children = self.simulate_window.GetChildren()
+            for child in children:
+                if isinstance(child, wx.Slider):
+                    child.Destroy()
+                    self.simulate_window.set_slider()
         else:
             params_rect = self.GetScreenRect()
             simulator_pos = params_rect.GetTopRight()
