@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-17 23:02-0400\n"
+"POT-Creation-Date: 2018-08-19 22:14-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -369,15 +369,15 @@ msgid ""
 "be dashed to indicate running stitch.  Any kind of dash will work."
 msgstr ""
 
-#: lib/extensions/base.py:108
+#: lib/extensions/base.py:113
 msgid "No embroiderable paths selected."
 msgstr ""
 
-#: lib/extensions/base.py:110
+#: lib/extensions/base.py:115
 msgid "No embroiderable paths found in document."
 msgstr ""
 
-#: lib/extensions/base.py:111
+#: lib/extensions/base.py:116
 msgid "Tip: use Path -> Object to Path to convert non-paths."
 msgstr ""
 
