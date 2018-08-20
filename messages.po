@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-19 22:14-0400\n"
+"POT-Creation-Date: 2018-08-20 15:17-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -941,5 +941,164 @@ msgstr ""
 
 #: print/templates/ui_svg_action_buttons.html:8
 msgid "Realistic"
+msgstr ""
+
+#. description for pyembroidery file format: pec
+#. description for pyembroidery file format: pes
+#. description for pyembroidery file format: phb
+#. description for pyembroidery file format: phc
+#: pyembroidery-format-descriptions.py:2 pyembroidery-format-descriptions.py:4
+#: pyembroidery-format-descriptions.py:56
+#: pyembroidery-format-descriptions.py:58
+msgid "Brother Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: exp
+#: pyembroidery-format-descriptions.py:6
+msgid "Melco Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: dst
+#. description for pyembroidery file format: tbf
+#: pyembroidery-format-descriptions.py:8 pyembroidery-format-descriptions.py:48
+msgid "Tajima Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: jef
+#. description for pyembroidery file format: sew
+#. description for pyembroidery file format: jpx
+#: pyembroidery-format-descriptions.py:10
+#: pyembroidery-format-descriptions.py:20
+#: pyembroidery-format-descriptions.py:74
+msgid "Janome Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: vp3
+#. description for pyembroidery file format: ksm
+#. description for pyembroidery file format: max
+#. description for pyembroidery file format: pcd
+#. description for pyembroidery file format: pcq
+#. description for pyembroidery file format: pcm
+#. description for pyembroidery file format: pcs
+#: pyembroidery-format-descriptions.py:12
+#: pyembroidery-format-descriptions.py:50
+#: pyembroidery-format-descriptions.py:62
+#: pyembroidery-format-descriptions.py:66
+#: pyembroidery-format-descriptions.py:68
+#: pyembroidery-format-descriptions.py:70
+#: pyembroidery-format-descriptions.py:72
+msgid "Pfaff Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: svg
+#: pyembroidery-format-descriptions.py:14
+msgid "Scalable Vector Graphics"
+msgstr ""
+
+#. description for pyembroidery file format: csv
+#: pyembroidery-format-descriptions.py:16
+msgid "Comma-separated values"
+msgstr ""
+
+#. description for pyembroidery file format: xxx
+#: pyembroidery-format-descriptions.py:18
+msgid "Singer Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: u01
+#: pyembroidery-format-descriptions.py:22
+msgid "Barudan Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: shv
+#: pyembroidery-format-descriptions.py:24
+msgid "Husqvarna Viking Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: 10o
+#. description for pyembroidery file format: 100
+#: pyembroidery-format-descriptions.py:26
+#: pyembroidery-format-descriptions.py:28
+msgid "Toyota Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: bro
+#: pyembroidery-format-descriptions.py:30
+msgid "Bits & Volts Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: dat
+#: pyembroidery-format-descriptions.py:32
+msgid "Sunstar or Barudan Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: dsb
+#: pyembroidery-format-descriptions.py:34
+msgid "Tajima(Barudan) Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: dsz
+#: pyembroidery-format-descriptions.py:36
+msgid "ZSK USA Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: emd
+#: pyembroidery-format-descriptions.py:38
+msgid "Elna Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: exy
+#: pyembroidery-format-descriptions.py:40
+msgid "Eltac Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: fxy
+#: pyembroidery-format-descriptions.py:42
+msgid "Fortron Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: gt
+#: pyembroidery-format-descriptions.py:44
+msgid "Gold Thread Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: inb
+#: pyembroidery-format-descriptions.py:46
+msgid "Inbro Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: tap
+#: pyembroidery-format-descriptions.py:52
+msgid "Happy Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: stx
+#: pyembroidery-format-descriptions.py:54
+msgid "Data Stitch Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: new
+#: pyembroidery-format-descriptions.py:60
+msgid "Ameco Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: mit
+#: pyembroidery-format-descriptions.py:64
+msgid "Mitsubishi Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: stc
+#: pyembroidery-format-descriptions.py:76
+msgid "Gunold Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: zxy
+#: pyembroidery-format-descriptions.py:78
+msgid "ZSK TC Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: pmv
+#: pyembroidery-format-descriptions.py:80
+msgid "Brother Stitch Format"
 msgstr ""
 
