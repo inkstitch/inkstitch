@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-17 16:19-0400\n"
-"PO-Revision-Date: 2018-08-17 20:31\n"
+"POT-Creation-Date: 2018-08-20 20:42-0400\n"
+"PO-Revision-Date: 2018-08-21 01:32\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Vietnamese\n"
 "MIME-Version: 1.0\n"
@@ -16,6 +16,36 @@ msgstr ""
 "X-Crowdin-Language: vi\n"
 "X-Crowdin-File: /master/messages.po\n"
 "Language: vi_VN\n"
+
+#. command attached to an object
+#: lib/commands.py:11
+msgid "Fill stitch starting position"
+msgstr ""
+
+#. command attached to an object
+#: lib/commands.py:14
+msgid "Fill stitch ending position"
+msgstr ""
+
+#. command attached to an object
+#: lib/commands.py:17
+msgid "Stop (pause machine) after sewing this object"
+msgstr ""
+
+#. command attached to an object
+#: lib/commands.py:20
+msgid "Trim thread after sewing this object"
+msgstr ""
+
+#. command attached to an object
+#: lib/commands.py:23
+msgid "Ignore this object (do not stitch)"
+msgstr ""
+
+#. command that affects entire layer
+#: lib/commands.py:26
+msgid "Ignore layer (do not stitch any objects in this layer)"
+msgstr ""
 
 #: lib/elements/auto_fill.py:11
 msgid "Auto-Fill"
@@ -303,15 +333,15 @@ msgid "Legacy running stitch setting detected!\n\n"
 "It looks like you're using a stroke smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set your stroke to be dashed to indicate running stitch.  Any kind of dash will work."
 msgstr ""
 
-#: lib/extensions/base.py:108
+#: lib/extensions/base.py:113
 msgid "No embroiderable paths selected."
 msgstr ""
 
-#: lib/extensions/base.py:110
+#: lib/extensions/base.py:115
 msgid "No embroiderable paths found in document."
 msgstr ""
 
-#: lib/extensions/base.py:111
+#: lib/extensions/base.py:116
 msgid "Tip: use Path -> Object to Path to convert non-paths."
 msgstr ""
 
@@ -383,15 +413,29 @@ msgstr ""
 msgid "Ink/Stitch Add-ons Installer"
 msgstr ""
 
-#: lib/extensions/layer_commands.py:28
+#: lib/extensions/layer_commands.py:29
 msgid "Please choose one or more commands to add."
 msgstr ""
 
-#: lib/extensions/object_commands.py:93
+#: lib/extensions/layer_commands.py:41 lib/extensions/object_commands.py:80
+msgid "Ink/Stitch Command"
+msgstr ""
+
+#. : the name of the line that connects a command to the object it applies to
+#: lib/extensions/object_commands.py:36
+msgid "connector"
+msgstr ""
+
+#. : the name of a command symbol (example: scissors icon for trim command)
+#: lib/extensions/object_commands.py:95
+msgid "command marker"
+msgstr ""
+
+#: lib/extensions/object_commands.py:106
 msgid "Please select one or more objects to which to attach commands."
 msgstr ""
 
-#: lib/extensions/object_commands.py:101
+#: lib/extensions/object_commands.py:114
 msgid "Please choose one or more commands to attach."
 msgstr ""
 
@@ -508,6 +552,13 @@ msgstr ""
 
 #: lib/extensions/zip.py:52
 msgid "No embroidery file formats selected."
+msgstr ""
+
+#. If you translate this string, that will tell Ink/Stitch to
+#. generate menu items for this language in Inkscape's "Extensions"
+#. menu.
+#: lib/inx/utils.py:43
+msgid "Generate INX files"
 msgstr ""
 
 #: lib/simulator.py:40
@@ -742,7 +793,7 @@ msgstr ""
 msgid "Ink/Stitch Print Preview"
 msgstr ""
 
-#: print/templates/ui.html:4
+#: print/templates/ui.html:4 templates/print.inx:3
 msgid "Print"
 msgstr ""
 
@@ -836,5 +887,257 @@ msgstr ""
 
 #: print/templates/ui_svg_action_buttons.html:8
 msgid "Realistic"
+msgstr ""
+
+#. description for pyembroidery file format: pec
+#. description for pyembroidery file format: pes
+#. description for pyembroidery file format: phb
+#. description for pyembroidery file format: phc
+#: pyembroidery-format-descriptions.py:2 pyembroidery-format-descriptions.py:4
+#: pyembroidery-format-descriptions.py:56
+#: pyembroidery-format-descriptions.py:58
+msgid "Brother Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: exp
+#: pyembroidery-format-descriptions.py:6
+msgid "Melco Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: dst
+#. description for pyembroidery file format: tbf
+#: pyembroidery-format-descriptions.py:8 pyembroidery-format-descriptions.py:48
+msgid "Tajima Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: jef
+#. description for pyembroidery file format: sew
+#. description for pyembroidery file format: jpx
+#: pyembroidery-format-descriptions.py:10
+#: pyembroidery-format-descriptions.py:20
+#: pyembroidery-format-descriptions.py:74
+msgid "Janome Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: vp3
+#. description for pyembroidery file format: ksm
+#. description for pyembroidery file format: max
+#. description for pyembroidery file format: pcd
+#. description for pyembroidery file format: pcq
+#. description for pyembroidery file format: pcm
+#. description for pyembroidery file format: pcs
+#: pyembroidery-format-descriptions.py:12
+#: pyembroidery-format-descriptions.py:50
+#: pyembroidery-format-descriptions.py:62
+#: pyembroidery-format-descriptions.py:66
+#: pyembroidery-format-descriptions.py:68
+#: pyembroidery-format-descriptions.py:70
+#: pyembroidery-format-descriptions.py:72
+msgid "Pfaff Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: svg
+#: pyembroidery-format-descriptions.py:14
+msgid "Scalable Vector Graphics"
+msgstr ""
+
+#. description for pyembroidery file format: csv
+#: pyembroidery-format-descriptions.py:16
+msgid "Comma-separated values"
+msgstr ""
+
+#. description for pyembroidery file format: xxx
+#: pyembroidery-format-descriptions.py:18
+msgid "Singer Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: u01
+#: pyembroidery-format-descriptions.py:22
+msgid "Barudan Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: shv
+#: pyembroidery-format-descriptions.py:24
+msgid "Husqvarna Viking Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: 10o
+#. description for pyembroidery file format: 100
+#: pyembroidery-format-descriptions.py:26
+#: pyembroidery-format-descriptions.py:28
+msgid "Toyota Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: bro
+#: pyembroidery-format-descriptions.py:30
+msgid "Bits & Volts Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: dat
+#: pyembroidery-format-descriptions.py:32
+msgid "Sunstar or Barudan Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: dsb
+#: pyembroidery-format-descriptions.py:34
+msgid "Tajima(Barudan) Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: dsz
+#: pyembroidery-format-descriptions.py:36
+msgid "ZSK USA Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: emd
+#: pyembroidery-format-descriptions.py:38
+msgid "Elna Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: exy
+#: pyembroidery-format-descriptions.py:40
+msgid "Eltac Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: fxy
+#: pyembroidery-format-descriptions.py:42
+msgid "Fortron Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: gt
+#: pyembroidery-format-descriptions.py:44
+msgid "Gold Thread Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: inb
+#: pyembroidery-format-descriptions.py:46
+msgid "Inbro Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: tap
+#: pyembroidery-format-descriptions.py:52
+msgid "Happy Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: stx
+#: pyembroidery-format-descriptions.py:54
+msgid "Data Stitch Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: new
+#: pyembroidery-format-descriptions.py:60
+msgid "Ameco Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: mit
+#: pyembroidery-format-descriptions.py:64
+msgid "Mitsubishi Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: stc
+#: pyembroidery-format-descriptions.py:76
+msgid "Gunold Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: zxy
+#: pyembroidery-format-descriptions.py:78
+msgid "ZSK TC Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: pmv
+#: pyembroidery-format-descriptions.py:80
+msgid "Brother Stitch Format"
+msgstr ""
+
+#: templates/convert_to_satin.inx:3
+msgid "Convert Line to Satin"
+msgstr ""
+
+#: templates/convert_to_satin.inx:12 templates/embroider.inx:23
+#: templates/flip.inx:12 templates/install.inx:12
+#: templates/layer_commands.inx:16 templates/object_commands.inx:14
+#: templates/params.inx:12 templates/print.inx:12 templates/simulate.inx:12
+msgid "English"
+msgstr ""
+
+#: templates/embroider.inx:3
+msgid "Embroider"
+msgstr ""
+
+#: templates/embroider.inx:7
+msgid "Collapse length (mm)"
+msgstr ""
+
+#: templates/embroider.inx:7
+msgid "Jump stitches smaller than this will be treated as normal stitches."
+msgstr ""
+
+#: templates/embroider.inx:8
+msgid "Hide other layers"
+msgstr ""
+
+#: templates/embroider.inx:8
+msgid "Hide all other top-level layers when the embroidery layer is generated, in order to make stitching discernible."
+msgstr ""
+
+#: templates/embroider.inx:9
+msgid "Output file format"
+msgstr ""
+
+#: templates/embroider.inx:14
+msgid "DEBUG"
+msgstr ""
+
+#: templates/embroider.inx:17
+msgid "Directory"
+msgstr ""
+
+#: templates/embroider.inx:17
+msgid "Leave empty to save the output in Inkscape's extension directory."
+msgstr ""
+
+#: templates/flip.inx:3
+msgid "Flip Satin Columns"
+msgstr ""
+
+#: templates/input.inx:11
+#, python-format
+msgid "convert %(file_extension)s file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: templates/install.inx:3
+msgid "Install add-ons for Inkscape"
+msgstr ""
+
+#: templates/layer_commands.inx:3
+msgid "Add Layer Commands"
+msgstr ""
+
+#: templates/layer_commands.inx:7
+msgid "Commands will be added to the currently-selected layer."
+msgstr ""
+
+#: templates/object_commands.inx:3
+msgid "Attach Commands"
+msgstr ""
+
+#: templates/output.inx:11
+#, python-format
+msgid "Save design in %(file_extension)s format using Ink/Stitch"
+msgstr ""
+
+#: templates/params.inx:3
+msgid "Params"
+msgstr ""
+
+#: templates/simulate.inx:3
+msgid "Simulate"
+msgstr ""
+
+#: templates/zip.inx:10
+msgid "Ink/Stitch: ZIP export multiple formats (.zip)"
+msgstr ""
+
+#: templates/zip.inx:11
+msgid "Create a ZIP with multiple embroidery file formats using Ink/Stitch"
 msgstr ""
 
