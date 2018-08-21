@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-20 15:49-0400\n"
+"POT-Creation-Date: 2018-08-20 20:42-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -608,6 +608,13 @@ msgstr ""
 msgid "No embroidery file formats selected."
 msgstr ""
 
+#. If you translate this string, that will tell Ink/Stitch to
+#. generate menu items for this language in Inkscape's "Extensions"
+#. menu.
+#: lib/inx/utils.py:43
+msgid "Generate INX files"
+msgstr ""
+
 #: lib/simulator.py:40
 msgid "Speed up"
 msgstr ""
@@ -844,7 +851,7 @@ msgstr ""
 msgid "Ink/Stitch Print Preview"
 msgstr ""
 
-#: print/templates/ui.html:4
+#: print/templates/ui.html:4 templates/print.inx:3
 msgid "Print"
 msgstr ""
 
@@ -1100,5 +1107,100 @@ msgstr ""
 #. description for pyembroidery file format: pmv
 #: pyembroidery-format-descriptions.py:80
 msgid "Brother Stitch Format"
+msgstr ""
+
+#: templates/convert_to_satin.inx:3
+msgid "Convert Line to Satin"
+msgstr ""
+
+#: templates/convert_to_satin.inx:12 templates/embroider.inx:23
+#: templates/flip.inx:12 templates/install.inx:12
+#: templates/layer_commands.inx:16 templates/object_commands.inx:14
+#: templates/params.inx:12 templates/print.inx:12 templates/simulate.inx:12
+msgid "English"
+msgstr ""
+
+#: templates/embroider.inx:3
+msgid "Embroider"
+msgstr ""
+
+#: templates/embroider.inx:7
+msgid "Collapse length (mm)"
+msgstr ""
+
+#: templates/embroider.inx:7
+msgid "Jump stitches smaller than this will be treated as normal stitches."
+msgstr ""
+
+#: templates/embroider.inx:8
+msgid "Hide other layers"
+msgstr ""
+
+#: templates/embroider.inx:8
+msgid ""
+"Hide all other top-level layers when the embroidery layer is generated, "
+"in order to make stitching discernible."
+msgstr ""
+
+#: templates/embroider.inx:9
+msgid "Output file format"
+msgstr ""
+
+#: templates/embroider.inx:14
+msgid "DEBUG"
+msgstr ""
+
+#: templates/embroider.inx:17
+msgid "Directory"
+msgstr ""
+
+#: templates/embroider.inx:17
+msgid "Leave empty to save the output in Inkscape's extension directory."
+msgstr ""
+
+#: templates/flip.inx:3
+msgid "Flip Satin Columns"
+msgstr ""
+
+#: templates/input.inx:11
+#, python-format
+msgid "convert %(file_extension)s file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: templates/install.inx:3
+msgid "Install add-ons for Inkscape"
+msgstr ""
+
+#: templates/layer_commands.inx:3
+msgid "Add Layer Commands"
+msgstr ""
+
+#: templates/layer_commands.inx:7
+msgid "Commands will be added to the currently-selected layer."
+msgstr ""
+
+#: templates/object_commands.inx:3
+msgid "Attach Commands"
+msgstr ""
+
+#: templates/output.inx:11
+#, python-format
+msgid "Save design in %(file_extension)s format using Ink/Stitch"
+msgstr ""
+
+#: templates/params.inx:3
+msgid "Params"
+msgstr ""
+
+#: templates/simulate.inx:3
+msgid "Simulate"
+msgstr ""
+
+#: templates/zip.inx:10
+msgid "Ink/Stitch: ZIP export multiple formats (.zip)"
+msgstr ""
+
+#: templates/zip.inx:11
+msgid "Create a ZIP with multiple embroidery file formats using Ink/Stitch"
 msgstr ""
 

@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <name>{% trans %}Attach Commands{% endtrans %}</name>
-    <id>org.inkstitch.commands</id>
+    <name>{% trans %}Attach Commands{% endtrans %}</_name>
+    <id>org.inkstitch.commands.{{ locale }}</id>
     <dependency type="executable" location="extensions">inkstitch.py</dependency>
     <dependency type="executable" location="extensions">inkex.py</dependency>
     {% for command, description in object_commands %}
-    <param name="{{ object }}" type="boolean" gui-text="{{ _(description ) }}">false</param>
+    <param name="{{ object }}" type="boolean" _gui-text="{{ _(description ) }}">false</param>
     {% endfor %}
     <effect>
         <object-type>all</object-type>
-        <effects-menu>
-            <submenu name="Ink/Stitch" />
-        </effects-menu>
+        <submenu name="Ink/Stitch">
+            <submenu name="Ink/Stitch">
+                <submenu name="{% trans %}English{% endtrans %}" />
+            </submenu>
+        </submenu>
     </effect>
     <script>
         <command reldir="extensions" interpreter="python">inkstitch.py</command>

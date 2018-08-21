@@ -24,7 +24,7 @@ distclean:
 	rm -rf build dist *.spec *.tar.gz
 
 .PHONY: inx
-inx:
+inx: locales
 	mkdir -p inx
 	bin/generate-inx-files
 
