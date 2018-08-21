@@ -24,7 +24,7 @@ class EmbroiderySimulator(wx.Frame):
         self.max_height = kwargs.pop('max_height', screen_rect[3])
         self.scale = 1
 
-        self.min_width = 800
+        self.min_width = 600
         if self.max_width < self.min_width:
             self.max_width = self.min_width
 
@@ -42,13 +42,14 @@ class EmbroiderySimulator(wx.Frame):
 
         self.button_sizer = wx.StdDialogButtonSizer()
         self.button_label = (
-            [_("Speed up"), _('Press + or arrow up to speed up'), self.animation_speed_up],
-            [_("Slow down"), _('Press - or arrow down to slow down'), self.animation_slow_down],
-            [_("Backwards"), _('Backwards'), self.animation_backwards],
-            [_("Forwards"), _('Forwards'), self.animation_forwards],
-            [_("Pause"), _("Press P to pause the animation"), self.animation_pause],
-            [_("Restart"), _("Press R to restart the animation"), self.animation_restart],
-            [_("Quit"), _("Press Q to close the simulation window"), self.animation_quit])
+            [u"\u2BC7", _('Play backwards (arrow left)'), self.animation_backwards],
+            [u"\u2BC8", _('Play forwards (arrow right)'), self.animation_forwards],
+            [u"\u2BC5", _('Speed up (arrow up)'), self.animation_speed_up],
+            [u"\u2BC6", _('Slow down (arrow down)'), self.animation_slow_down],
+            [u"\u23F8", _("Pause (P)"), self.animation_pause],
+            [u"\u2B8C", _("Restart (R)"), self.animation_restart],
+            [u"\u2BBF", _("Close (Q)"), self.animation_quit])
+
         self.buttons = []
         for i in range(0, len(self.button_label)):
             self.buttons.append(wx.Button(self, -1, self.button_label[i][0]))
@@ -73,7 +74,7 @@ class EmbroiderySimulator(wx.Frame):
 
         self.clear()
 
-        self.current_frame = 1
+        self.current_frame = 0
         self.set_stitch_counter(0)
         self.animation_direction = 1
 
@@ -171,7 +172,7 @@ class EmbroiderySimulator(wx.Frame):
         if self.timer.IsRunning():
             self.timer.Stop()
         else:
-            self.timer.Start(self.frame_period)
+            self.timer.StartOnce(self.frame_period)
 
     def animation_quit(self, event):
         self.Close()
@@ -182,17 +183,17 @@ class EmbroiderySimulator(wx.Frame):
         self.set_stitch_counter(self.current_frame)
         if self.timer.IsRunning():
             self.timer.Stop()
-            self.timer.Start(self.frame_period)
+            self.timer.StartOnce(self.frame_period)
 
     def animation_backwards(self, event):
         self.animation_direction = -1
-        if self.current_frame > 0:
-            self.timer.Start(self.frame_period)
+        if self.current_frame > 1:
+            self.timer.StartOnce(self.frame_period)
 
     def animation_forwards(self, event):
         self.animation_direction = 1
-        if self.current_frame <= len(self.lines):
-            self.timer.Start(self.frame_period)
+        if self.current_frame < len(self.lines):
+            self.timer.StartOnce(self.frame_period)
 
     def set_stitch_counter(self, current_frame):
         if hasattr(self.panel, 'stitch_counter'):
@@ -294,12 +295,12 @@ class EmbroiderySimulator(wx.Frame):
     def go(self):
         self.clear()
 
-        self.current_frame = 1
+        self.current_frame = 0
 
         if not self.timer:
             self.timer = wx.PyTimer(self.iterate_frames)
 
-        self.timer.Start(self.frame_period)
+        self.timer.StartOnce(self.frame_period)
 
     def on_close(self, event):
         self.stop()
@@ -364,13 +365,21 @@ class EmbroiderySimulator(wx.Frame):
 
     def iterate_frames(self):
         self.current_frame += self.stitches_per_frame * self.animation_direction
+
+        if self.current_frame <= len(self.lines) and self.current_frame >= 1:
+            self.draw_one_frame()
+            self.timer.StartOnce(self.frame_period)
+        elif self.current_frame > len(self.lines):
+            self.current_frame = len(self.lines)
+            self.draw_one_frame()
+        elif self.current_frame < 1:
+            self.current_frame = 1
+            self.draw_one_frame()
+        else:
+            self.timer.Stop()
+
         self.set_stitch_counter(self.current_frame)
         self.set_stitch_slider(self.current_frame)
-
-        self.draw_one_frame()
-
-        if self.current_frame >= len(self.lines) or self.current_frame <= 1:
-            self.timer.Stop()
 
     def draw_one_frame(self):
         self.clear()
