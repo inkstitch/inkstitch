@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <_name>Params</_name>
-    <id>jonh.embroider.params</id>
+    <name>{% trans %}Attach Commands{% endtrans %}</name>
+    <id>org.inkstitch.commands.{{ locale }}</id>
     <dependency type="executable" location="extensions">inkstitch.py</dependency>
     <dependency type="executable" location="extensions">inkex.py</dependency>
-    <param name="extension" type="string" gui-hidden="true">params</param>
+    {% for command, description in object_commands %}
+    <param name="{{ object }}" type="boolean" _gui-text="{{ _(description ) }}">false</param>
+    {% endfor %}
     <effect>
         <object-type>all</object-type>
-        <effects-menu>
-            <submenu _name="Embroidery"/>
-        </effects-menu>
+        <submenu name="Ink/Stitch">
+            <submenu name="Ink/Stitch">
+                <submenu name="{% trans %}English{% endtrans %}" />
+            </submenu>
+        </submenu>
     </effect>
     <script>
         <command reldir="extensions" interpreter="python">inkstitch.py</command>

@@ -3,13 +3,42 @@ import cubicsuperpath
 
 from .svg import apply_transforms
 from .svg.tags import SVG_USE_TAG, SVG_SYMBOL_TAG, CONNECTION_START, CONNECTION_END, XLINK_HREF
+from .utils import cache
+from .i18n import _, N_
 
+COMMANDS = {
+    # L10N command attached to an object
+    "fill_start": N_("Fill stitch starting position"),
+
+    # L10N command attached to an object
+    "fill_end": N_("Fill stitch ending position"),
+
+    # L10N command attached to an object
+    "stop": N_("Stop (pause machine) after sewing this object"),
+
+    # L10N command attached to an object
+    "trim": N_("Trim thread after sewing this object"),
+
+    # L10N command attached to an object
+    "ignore_object": N_("Ignore this object (do not stitch)"),
+
+    # L10N command that affects entire layer
+    "ignore_layer": N_("Ignore layer (do not stitch any objects in this layer)")
+}
+
+OBJECT_COMMANDS = [ "fill_start", "fill_end", "stop", "trim", "ignore_object" ]
+LAYER_COMMANDS = [ "ignore_layer" ]
 
 class CommandParseError(Exception):
     pass
 
 
 class BaseCommand(object):
+    @property
+    @cache
+    def description(self):
+        return get_command_description(self.command)
+
     def parse_symbol(self):
         if self.symbol.tag != SVG_SYMBOL_TAG:
             raise CommandParseError("use points to non-symbol")
@@ -86,6 +115,9 @@ class StandaloneCommand(BaseCommand):
             raise CommandParseError("use points to non-symbol")
 
         self.parse_symbol()
+
+def get_command_description(command):
+    return _(COMMANDS[command])
 
 
 def find_commands(node):

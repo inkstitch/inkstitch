@@ -29,7 +29,7 @@ if [ "$TRAVIS_OS_NAME" = "osx" ]; then
 fi
 
 # This lets pyinstaller see inkex.py, etc.
-pyinstaller_args+="-p inkscape-0.92.3/share/extensions "
+pyinstaller_args+="-p inkscape/share/extensions "
 
 # output useful debugging info that helps us trace library dependency issues
 pyinstaller_args+="--log-level DEBUG "

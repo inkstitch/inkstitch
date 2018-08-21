@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <_name>VP3 file output</_name>
-    <id>org.inkstitch.output.vp3</id>
+    <name>{{ format | upper }} file output</name>
+    <id>org.inkstitch.output.{{ format }}.{{ locale }}</id>
     <dependency type="executable" location="extensions">inkstitch.py</dependency>
     <dependency type="executable" location="extensions">inkex.py</dependency>
     <output>
-        <extension>.vp3</extension>
-        <mimetype>application/x-embroidery-vp3</mimetype>
-        <_filetypename>Ink/Stitch: Pfaff Embroidery Format (.vp3)</_filetypename>
-        <_filetypetooltip>Save design in VP3 format using Ink/Stitch</_filetypetooltip>
+        <extension>.{{ format }}</extension>
+        <mimetype>application/x-embroidery-{{ format }}</mimetype>
+        <_filetypename>Ink/Stitch: {{ _(description) }} (.{{ format }})</_filetypename>
+        <_filetypetooltip>{{ _("Save design in %(file_extension)s format using Ink/Stitch") % dict(file_extension=format.upper()) }}</_filetypetooltip>
         <dataloss>true</dataloss>
     </output>
     <param name="extension" type="string" gui-hidden="true">output</param>
-    <param name="format" type="string" gui-hidden="true">vp3</param>
+    <param name="format" type="string" gui-hidden="true">{{ format }}</param>
     <script>
         <command reldir="extensions" interpreter="python">inkstitch.py</command>
     </script>

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <_name>Add Layer Commands</_name>
-    <id>org.inkstitch.layer_commands</id>
+    <name>{% trans %}Print{% endtrans %}</name>
+    <id>org.inkstitch.print.{{ locale }}</id>
     <dependency type="executable" location="extensions">inkstitch.py</dependency>
     <dependency type="executable" location="extensions">inkex.py</dependency>
-    <param name="description" type="description">Commands will be added to the currently-selected layer.</param>
-    <param name="ignore_layer" type="boolean" _gui-text="Ignore layer (do not stitch any objects in this layer)">false</param>
-    <param name="extension" type="string" gui-hidden="true">layer_commands</param>
+    <param name="extension" type="string" gui-hidden="true">print</param>
     <effect>
         <object-type>all</object-type>
         <effects-menu>
-            <submenu _name="Embroidery" />
+            <submenu name="Ink/Stitch">
+                <submenu name="{% trans %}English{% endtrans %}" />
+            </submenu>
         </effects-menu>
     </effect>
     <script>

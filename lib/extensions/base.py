@@ -3,6 +3,7 @@ import re
 import json
 from copy import deepcopy
 from collections import MutableMapping
+from stringcase import snakecase
 
 from ..svg.tags import *
 from ..elements import AutoFill, Fill, Stroke, SatinColumn, Polyline, EmbroideryElement
@@ -97,6 +98,10 @@ class InkStitchMetadata(MutableMapping):
 
 class InkstitchExtension(inkex.Effect):
     """Base class for Inkstitch extensions.  Not intended for direct use."""
+
+    @classmethod
+    def name(cls):
+        return snakecase(cls.__name__)
 
     def hide_all_layers(self):
         for g in self.document.getroot().findall(SVG_GROUP_TAG):
