@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-08-20 20:42-0400\n"
-"PO-Revision-Date: 2018-08-21 01:32\n"
+"PO-Revision-Date: 2018-08-21 20:20\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Czech\n"
 "MIME-Version: 1.0\n"
@@ -559,7 +559,7 @@ msgstr ""
 #. menu.
 #: lib/inx/utils.py:43
 msgid "Generate INX files"
-msgstr ""
+msgstr "INX translation test"
 
 #: lib/simulator.py:40
 msgid "Speed up"
@@ -897,18 +897,18 @@ msgstr ""
 #: pyembroidery-format-descriptions.py:56
 #: pyembroidery-format-descriptions.py:58
 msgid "Brother Embroidery Format"
-msgstr ""
+msgstr "Brother Embroidery Format (translation test)"
 
 #. description for pyembroidery file format: exp
 #: pyembroidery-format-descriptions.py:6
 msgid "Melco Embroidery Format"
-msgstr ""
+msgstr "Melco Embroidery Format (translation test)"
 
 #. description for pyembroidery file format: dst
 #. description for pyembroidery file format: tbf
 #: pyembroidery-format-descriptions.py:8 pyembroidery-format-descriptions.py:48
 msgid "Tajima Embroidery Format"
-msgstr ""
+msgstr "Tajima Embroidery Format (translation test)"
 
 #. description for pyembroidery file format: jef
 #. description for pyembroidery file format: sew
@@ -917,7 +917,7 @@ msgstr ""
 #: pyembroidery-format-descriptions.py:20
 #: pyembroidery-format-descriptions.py:74
 msgid "Janome Embroidery Format"
-msgstr ""
+msgstr "Janome Embroidery Format (translation test)"
 
 #. description for pyembroidery file format: vp3
 #. description for pyembroidery file format: ksm
@@ -981,7 +981,7 @@ msgstr ""
 #. description for pyembroidery file format: dsb
 #: pyembroidery-format-descriptions.py:34
 msgid "Tajima(Barudan) Embroidery Format"
-msgstr ""
+msgstr "Tajima(Barudan) Embroidery Format (translation test)"
 
 #. description for pyembroidery file format: dsz
 #: pyembroidery-format-descriptions.py:36
@@ -1057,7 +1057,7 @@ msgstr ""
 #: templates/layer_commands.inx:16 templates/object_commands.inx:14
 #: templates/params.inx:12 templates/print.inx:12 templates/simulate.inx:12
 msgid "English"
-msgstr ""
+msgstr "Translation test (czech)"
 
 #: templates/embroider.inx:3
 msgid "Embroider"
@@ -1073,7 +1073,7 @@ msgstr ""
 
 #: templates/embroider.inx:8
 msgid "Hide other layers"
-msgstr ""
+msgstr "Hide other layers (translation test)"
 
 #: templates/embroider.inx:8
 msgid "Hide all other top-level layers when the embroidery layer is generated, in order to make stitching discernible."
@@ -1089,7 +1089,7 @@ msgstr ""
 
 #: templates/embroider.inx:17
 msgid "Directory"
-msgstr ""
+msgstr "Directory (translation test)"
 
 #: templates/embroider.inx:17
 msgid "Leave empty to save the output in Inkscape's extension directory."
