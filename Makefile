@@ -5,7 +5,7 @@ VERSION:=$(subst /,-,$(TRAVIS_BRANCH))
 OS:=$(TRAVIS_OS_NAME)
 ARCH:=$(shell uname -m)
 
-dist: distclean locales
+dist: distclean locales inx
 	bin/build-dist $(EXTENSIONS)
 	cp inx/*.inx dist
 	cp -a images/examples dist/inkstitch
