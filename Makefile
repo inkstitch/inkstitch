@@ -26,7 +26,11 @@ distclean:
 .PHONY: inx
 inx: locales
 	mkdir -p inx
-	bin/generate-inx-files
+	if [ "$$BUILD" = "windows" ]; then \
+	    wine c:\\Python\\python.exe bin/generate-inx-files; \
+	else \
+	    bin/generate-inx-files; \
+	fi
 
 .PHONY: messages.po
 messages.po:
