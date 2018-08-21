@@ -45,7 +45,7 @@ install:
       # Need this for inkex.py and friends
       wget -q https://inkscape.org/en/gallery/item/12187/inkscape-0.92.3.tar.bz2
       mkdir inkscape
-      (cd inkscape; tar jxf --strip-components=1 inkscape-0.92.3.tar.bz2)
+      (cd inkscape; tar --strip-components=1 -jxf ../inkscape-0.92.3.tar.bz2)
       rm inkscape-0.92.3.tar.bz2
     fi
     if [ "$BUILD" = "linux" ]; then
