@@ -14,20 +14,26 @@ matrix:
   - python: 2.7
     env: LINT=true
     sudo: false
+    if: type != cron
 
   - python: 2.7
     sudo: required
     env: BUILD=linux
-    if: tag =~ ^v[0-9.]+$ OR branch != master
+    if: type != cron AND (tag =~ ^v[0-9.]+$ OR branch != master)
   - python: 2.7
     sudo: required
     env: BUILD=windows
-    if: tag =~ ^v[0-9.]+$ OR branch != master
+    if: type != cron AND (tag =~ ^v[0-9.]+$ OR branch != master)
   - language: generic
     os: osx
     sudo: required
     env: BUILD=osx
-    if: tag =~ ^v[0-9.]+$ OR branch != master
+    if: type != cron AND (tag =~ ^v[0-9.]+$ OR branch != master)
+
+  - language: java
+    sudo: false
+    env: CROWDIN=true
+    if: type = cron
 branches:
   except:
     - /^dev-build-/
@@ -146,6 +152,21 @@ script:
       # work around some bug... pyinstaller? shapely? not sure.
       cp $(winepath 'C:\Python\lib\site-packages\shapely\DLLs\geos_c.dll') $(winepath 'C:\Python\lib\site-packages\shapely\DLLs\geos.dll')
       make dist
+    elif [ -n "$CROWDIN" ]; then
+      git config --global user.email "inkstitch-crowdin@lex.gd"
+      git config --global user.name "Ink/Stitch Crowdin integration"
+
+      wget https://crowdin.com/downloads/crowdin-cli.jar
+      java -jar crowdin-cli.jar pull -b master
+
+      # Try to only commit if translations changed.  Crowdin will update all
+      # files when a new translation string is added but we don't need to
+      # commit those until folks actually translate the new strings.
+      if git diff translations | grep -qE '^[-+]msgstr ".+"$'; then
+        git add translations
+        git commit -m "new translations from Crowdin"
+        git push https://${TRAVIS_REPO_SLUG%/*}:${GITHUB_API_KEY}@github.com/${TRAVIS_REPO_SLUG}.git master
+      fi
     else
       true
     fi
