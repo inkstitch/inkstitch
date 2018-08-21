@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <name>{% trans %}Params{% endtrans %}</_name>
+    <name>{% trans %}Params{% endtrans %}</name>
     <id>org.inkstitch.params.{{ locale }}</id>
     <dependency type="executable" location="extensions">inkstitch.py</dependency>
     <dependency type="executable" location="extensions">inkex.py</dependency>

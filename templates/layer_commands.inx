@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <name>{% trans %}Add Layer Commands{% endtrans %}</_name>
+    <name>{% trans %}Add Layer Commands{% endtrans %}</name>
     <id>org.inkstitch.layer_commands.{{ locale }}</id>
     <dependency type="executable" location="extensions">inkstitch.py</dependency>
     <dependency type="executable" location="extensions">inkex.py</dependency>
