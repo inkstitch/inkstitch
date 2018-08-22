@@ -64,8 +64,6 @@ class EmbroiderySimulator(wx.Frame):
         self.sizer.Add(self.button_sizer, 0, wx.EXPAND)
         self.SetSizer(self.sizer)
 
-        self.calculate_dimensions()
-
         if self.target_duration:
             self.adjust_speed(self.target_duration)
 
@@ -139,6 +137,7 @@ class EmbroiderySimulator(wx.Frame):
             self.mirror = False
             self.stitch_plan_to_lines(stitch_plan)
             self.move_to_top_left()
+            self.calculate_dimensions()
             return
 
     def adjust_speed(self, duration):
@@ -273,11 +272,7 @@ class EmbroiderySimulator(wx.Frame):
         self.width = width
         self.height = height
 
-        button_width, button_height = self.buttons[0].GetSize()
-        slider_width, slider_height = self.stitch_slider.GetSize()
-        self.controls_height = button_height + slider_height
-
-        self.scale = min(float(self.max_width - self.margin * 2) / width, float(self.max_height - self.margin * 2 - self.controls_height) / height)
+        self.scale = min(float(self.max_width - self.margin * 2) / width, float(self.max_height - self.margin * 2) / height)
 
         # make room for decorations and the margin
         self.scale *= 0.95
@@ -328,7 +323,7 @@ class EmbroiderySimulator(wx.Frame):
         client_width, client_height = self.GetClientSize()
 
         decorations_width = window_width - client_width
-        decorations_height = window_height - client_height + self.controls_height
+        decorations_height = window_height - client_height
 
         setsize_window_width = self.width * self.scale + decorations_width + self.margin * 2
         setsize_window_height = self.height * self.scale + decorations_height + self.margin * 2
