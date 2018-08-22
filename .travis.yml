@@ -155,6 +155,7 @@ script:
     elif [ -n "$CROWDIN" ]; then
       git config --global user.email "inkstitch-crowdin@lex.gd"
       git config --global user.name "Ink/Stitch Crowdin integration"
+      git checkout master
 
       wget https://downloads.crowdin.com/cli/v2/crowdin-cli.zip
       unzip -j crowdin-cli.zip
