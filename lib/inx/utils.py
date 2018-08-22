@@ -28,7 +28,7 @@ def build_environment():
 def write_inx_file(name, contents):
     inx_file_name = "inkstitch_%s_%s.inx" % (name, current_locale)
     with open(os.path.join(inx_path, inx_file_name), 'w') as inx_file:
-        print >> inx_file.encode("utf-8"), contents
+        print >> inx_file, contents.encode("utf-8")
 
 def iterate_inx_locales():
     global current_translation, current_locale
