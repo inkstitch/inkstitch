@@ -13,10 +13,11 @@ template_path = os.path.join(_top_path, "templates")
 current_translation = default_translation
 current_locale = "en_US"
 
+
 def build_environment():
     env = Environment(
-        loader = FileSystemLoader(template_path),
-        autoescape = True,
+        loader=FileSystemLoader(template_path),
+        autoescape=True,
         extensions=['jinja2.ext.i18n']
     )
 
@@ -25,10 +26,12 @@ def build_environment():
 
     return env
 
+
 def write_inx_file(name, contents):
     inx_file_name = "inkstitch_%s_%s.inx" % (name, current_locale)
     with open(os.path.join(inx_path, inx_file_name), 'w') as inx_file:
         print >> inx_file, contents
+
 
 def iterate_inx_locales():
     global current_translation, current_locale

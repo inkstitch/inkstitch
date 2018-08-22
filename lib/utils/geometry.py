@@ -17,13 +17,14 @@ def cut(line, distance):
         last_point = p
         if traveled == distance:
             return [
-                LineString(coords[:i+1]),
+                LineString(coords[:i + 1]),
                 LineString(coords[i:])]
         if traveled > distance:
             cp = line.interpolate(distance)
             return [
                 LineString(coords[:i] + [(cp.x, cp.y)]),
                 LineString([(cp.x, cp.y)] + coords[i:])]
+
 
 def cut_path(points, length):
     """Return a subsection of at the start of the path that is length units long.

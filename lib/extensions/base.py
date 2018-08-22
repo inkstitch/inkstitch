@@ -109,11 +109,11 @@ class InkstitchExtension(inkex.Effect):
                 g.set("style", "display:none")
 
     def no_elements_error(self):
-            if self.selected:
-                inkex.errormsg(_("No embroiderable paths selected."))
-            else:
-                inkex.errormsg(_("No embroiderable paths found in document."))
-            inkex.errormsg(_("Tip: use Path -> Object to Path to convert non-paths."))
+        if self.selected:
+            inkex.errormsg(_("No embroiderable paths selected."))
+        else:
+            inkex.errormsg(_("No embroiderable paths found in document."))
+        inkex.errormsg(_("Tip: use Path -> Object to Path to convert non-paths."))
 
     def descendants(self, node, selected=False):
         nodes = []
@@ -176,7 +176,6 @@ class InkstitchExtension(inkex.Effect):
 
                 return classes
 
-
     def get_elements(self):
         self.elements = []
         for node in self.get_nodes():
@@ -211,7 +210,6 @@ class InkstitchExtension(inkex.Effect):
             svg_filename = svg_filename[:-4]
 
         return svg_filename
-
 
     def parse(self):
         """Override inkex.Effect to add Ink/Stitch xml namespace"""

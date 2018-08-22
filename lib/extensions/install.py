@@ -28,22 +28,21 @@ class InstallerFrame(wx.Frame):
         text_sizer = wx.BoxSizer(wx.HORIZONTAL)
 
         text = _('Ink/Stitch can install files ("add-ons") that make it easier to use Inkscape to create machine embroidery designs.  These add-ons will be installed:') + \
-                 "\n\n   • " + _("thread manufacturer color palettes") + \
-                 "\n   • " + _("Ink/Stitch visual commands (Object -> Symbols...)")
+            "\n\n   • " + _("thread manufacturer color palettes") + "\n   • " + _("Ink/Stitch visual commands (Object -> Symbols...)")
 
         static_text = wx.StaticText(panel, label=text)
         font = wx.Font(12, wx.DEFAULT, wx.NORMAL, wx.NORMAL)
         static_text.SetFont(font)
-        text_sizer.Add(static_text, proportion=0, flag=wx.ALL|wx.EXPAND, border=10)
-        sizer.Add(text_sizer, proportion=3, flag=wx.ALL|wx.EXPAND, border=0)
+        text_sizer.Add(static_text, proportion=0, flag=wx.ALL | wx.EXPAND, border=10)
+        sizer.Add(text_sizer, proportion=3, flag=wx.ALL | wx.EXPAND, border=0)
 
         buttons_sizer = wx.BoxSizer(wx.HORIZONTAL)
         install_button = wx.Button(panel, wx.ID_ANY, _("Install"))
         install_button.SetBitmap(wx.ArtProvider.GetBitmap(wx.ART_TICK_MARK))
-        buttons_sizer.Add(install_button, proportion=0, flag=wx.ALIGN_RIGHT|wx.ALL, border=5)
+        buttons_sizer.Add(install_button, proportion=0, flag=wx.ALIGN_RIGHT | wx.ALL, border=5)
         cancel_button = wx.Button(panel, wx.ID_CANCEL, _("Cancel"))
-        buttons_sizer.Add(cancel_button, proportion=0, flag=wx.ALIGN_RIGHT|wx.ALL, border=5)
-        sizer.Add(buttons_sizer, proportion=1, flag=wx.ALIGN_RIGHT|wx.ALIGN_BOTTOM)
+        buttons_sizer.Add(cancel_button, proportion=0, flag=wx.ALIGN_RIGHT | wx.ALL, border=5)
+        sizer.Add(buttons_sizer, proportion=1, flag=wx.ALIGN_RIGHT | wx.ALIGN_BOTTOM)
 
         panel.SetSizer(sizer)
         panel.Layout()
@@ -63,7 +62,7 @@ class InstallerFrame(wx.Frame):
         try:
             self.install_addons('palettes')
             self.install_addons('symbols')
-        except Exception, e:
+        except Exception as e:
             wx.MessageDialog(self,
                              _('Inkscape add-on installation failed') + ': \n' + traceback.format_exc(),
                              _('Installation Failed'),
@@ -96,6 +95,7 @@ class InstallerFrame(wx.Frame):
 
             for palette_file in files:
                 shutil.copy(palette_file, dest)
+
 
 class Install(inkex.Effect):
     def effect(self):

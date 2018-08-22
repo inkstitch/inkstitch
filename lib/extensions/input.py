@@ -28,12 +28,11 @@ class Input(object):
                                        trim=(command == pyembroidery.TRIM))
 
         extents = stitch_plan.extents
-        svg = etree.Element("svg", nsmap=inkex.NSS, attrib=
-                            {
-                                "width": str(extents[0] * 2),
-                                "height": str(extents[1] * 2),
-                                "viewBox": "0 0 %s %s" % (extents[0] * 2, extents[1] * 2),
-                            })
+        svg = etree.Element("svg", nsmap=inkex.NSS, attrib={
+            "width": str(extents[0] * 2),
+            "height": str(extents[1] * 2),
+            "viewBox": "0 0 %s %s" % (extents[0] * 2, extents[1] * 2),
+        })
         render_stitch_plan(svg, stitch_plan)
 
         # rename the Stitch Plan layer so that it doesn't get overwritten by Embroider

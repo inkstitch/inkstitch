@@ -19,6 +19,8 @@ def restore_stderr():
 
 # It's probably possible to generalize this code, but when I tried,
 # the result was incredibly unreadable.
+
+
 def save_stdout():
     null = open(os.devnull, 'w')
     sys.stdout_dup = os.dup(sys.stdout.fileno())

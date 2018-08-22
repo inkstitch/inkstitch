@@ -37,6 +37,7 @@ def adjust_stagger(stitch, angle, row_spacing, max_stitch_length, staggers):
 
     return stitch - offset * east(angle)
 
+
 def stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, staggers):
     # We want our stitches to look like this:
     #
@@ -162,6 +163,7 @@ def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing=Non
             current_row_y += row_spacing
 
     return rows
+
 
 def section_to_stitches(group_of_segments, angle, row_spacing, max_stitch_length, staggers):
     stitches = []

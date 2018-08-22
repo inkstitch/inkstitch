@@ -19,4 +19,4 @@ for item in locals().values():
     if inspect.isclass(item) and \
        issubclass(item, InkstitchExtension) and \
        item is not InkstitchExtension:
-            extensions.append(item)
+        extensions.append(item)

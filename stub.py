@@ -34,7 +34,7 @@ args[0] = binary_path
 try:
     extension = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     stdout, stderr = extension.communicate()
-except:
+except BaseException:
     print >> sys.stderr, "Unexpected error launching Ink/Stitch."
     print >> sys.stderr, "If you're having trouble, please file an issue here, including the text below: https://github.com/inkstitch/inkstitch/issues\n"
     print >> sys.stderr, "Tried to launch:", binary_path

@@ -6,8 +6,9 @@ from ..utils import cache
 PIXELS_PER_MM = 96 / 25.4
 
 # cribbed from inkscape-silhouette
-def parse_length_with_units( str ):
 
+
+def parse_length_with_units(str):
     '''
     Parse an SVG value which may or may not have units attached
     This version is greatly simplified in that it only allows: no units,
@@ -39,8 +40,8 @@ def parse_length_with_units( str ):
         u = '%'
         s = s[:-1]
     try:
-        v = float( s )
-    except:
+        v = float(s)
+    except BaseException:
         raise ValueError(_("parseLengthWithUnits: unknown unit %s") % s)
 
     return v, u
@@ -53,16 +54,16 @@ def convert_length(length):
         return value
 
     if units == 'pt':
-       value /= 72
-       units = 'in'
+        value /= 72
+        units = 'in'
 
     if units == 'pc':
-       value /= 6
-       units = 'in'
+        value /= 6
+        units = 'in'
 
     if units == 'cm':
-       value *= 10
-       units = 'mm'
+        value *= 10
+        units = 'mm'
 
     if units == 'mm':
         value = value / 25.4
@@ -74,6 +75,7 @@ def convert_length(length):
         return value * 96
 
     raise ValueError(_("Unknown unit: %s") % units)
+
 
 @cache
 def get_viewbox(svg):
@@ -95,6 +97,7 @@ def get_doc_size(svg):
     doc_height = convert_length(height)
 
     return doc_width, doc_height
+
 
 @cache
 def get_viewbox_transform(node):

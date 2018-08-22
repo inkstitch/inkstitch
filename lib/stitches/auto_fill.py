@@ -15,6 +15,7 @@ from ..utils.geometry import Point as InkstitchPoint, cut
 class MaxQueueLengthExceeded(Exception):
     pass
 
+
 class PathEdge(object):
     OUTLINE_KEYS = ("outline", "extra", "initial")
     SEGMENT_KEY = "segment"
@@ -38,6 +39,7 @@ class PathEdge(object):
 
     def is_segment(self):
         return self.key == self.SEGMENT_KEY
+
 
 def auto_fill(shape, angle, row_spacing, end_row_spacing, max_stitch_length, running_stitch_length, staggers, starting_point, ending_point=None):
     stitches = []
@@ -65,7 +67,7 @@ def which_outline(shape, coords):
 
     point = shapely.geometry.Point(*coords)
     outlines = enumerate(list(shape.boundary))
-    closest = min(outlines, key=lambda (index, outline): outline.distance(point))
+    closest = min(outlines, key=lambda index_outline: index_outline[1].distance(point))
 
     return closest[0]
 
@@ -129,11 +131,11 @@ def build_graph(shape, segments, angle, row_spacing):
         # Tag each node with its index and projection.
         graph.add_node(node, index=outline_index, projection=outline_projection)
 
-    nodes = list(graph.nodes(data=True)) # returns a list of tuples: [(node, {data}), (node, {data}) ...]
+    nodes = list(graph.nodes(data=True))  # returns a list of tuples: [(node, {data}), (node, {data}) ...]
     nodes.sort(key=lambda node: (node[1]['index'], node[1]['projection']))
 
     for outline_index, nodes in groupby(nodes, key=lambda node: node[1]['index']):
-        nodes = [ node for node, data in nodes ]
+        nodes = [node for node, data in nodes]
 
         # heuristic: change the order I visit the nodes in the outline if necessary.
         # If the start and endpoints are in the same row, I can't tell which row
@@ -162,7 +164,6 @@ def build_graph(shape, segments, angle, row_spacing):
             # duplicate every other edge around this outline
             if i % 2 == edge_set:
                 graph.add_edge(node1, node2, key="extra")
-
 
     if not networkx.is_eulerian(graph):
         raise Exception(_("Unable to autofill.  This most often happens because your shape is made up of multiple sections that aren't connected."))
@@ -193,13 +194,13 @@ def bfs_for_loop(graph, starting_node, max_queue_length=2000):
 
         # get a list of neighbors paired with the key of the edge I can follow to get there
         neighbors = [
-                    (node, key)
-                        for node, adj in graph.adj[ending_node].iteritems()
-                        for key in adj
-                ]
+            (node, key)
+            for node, adj in graph.adj[ending_node].iteritems()
+            for key in adj
+        ]
 
         # heuristic: try grating segments first
-        neighbors.sort(key=lambda (dest, key): key == "segment", reverse=True)
+        neighbors.sort(key=lambda dest_key: dest_key[1] == "segment", reverse=True)
 
         for next_node, key in neighbors:
             # skip if I've already followed this edge
@@ -295,6 +296,7 @@ def insert_loop(path, loop):
 
     path[i:i] = loop
 
+
 def nearest_node_on_outline(graph, point, outline_index=0):
     point = shapely.geometry.Point(*point)
     outline_nodes = [node for node, data in graph.nodes(data=True) if data['index'] == outline_index]
@@ -302,15 +304,17 @@ def nearest_node_on_outline(graph, point, outline_index=0):
 
     return nearest
 
+
 def get_outline_nodes(graph, outline_index=0):
-    outline_nodes = [(node, data['projection']) \
-                     for node, data \
-                     in graph.nodes(data=True) \
+    outline_nodes = [(node, data['projection'])
+                     for node, data
+                     in graph.nodes(data=True)
                      if data['index'] == outline_index]
-    outline_nodes.sort(key=lambda (node, projection): projection)
+    outline_nodes.sort(key=lambda node_projection: node_projection[1])
     outline_nodes = [node for node, data in outline_nodes]
 
     return outline_nodes
+
 
 def find_initial_path(graph, starting_point, ending_point=None):
     starting_node = nearest_node_on_outline(graph, starting_point)
@@ -339,6 +343,7 @@ def find_initial_path(graph, starting_point, ending_point=None):
             path.append(PathEdge((start, end), "initial"))
 
         return path
+
 
 def find_stitch_path(graph, segments, starting_point=None, ending_point=None):
     """find a path that visits every grating segment exactly once

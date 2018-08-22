@@ -102,6 +102,7 @@ realistic_filter = """
     </filter>
 """
 
+
 def realistic_stitch(start, end):
     """Generate a stitch vector path given a start and end point."""
 

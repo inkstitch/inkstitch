@@ -7,6 +7,7 @@ from .base import InkstitchExtension
 from ..i18n import _
 from ..elements import SatinColumn
 
+
 class Flip(InkstitchExtension):
     def subpath_to_linestring(self, subpath):
         return shgeo.LineString()

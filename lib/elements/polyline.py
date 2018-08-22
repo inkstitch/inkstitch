@@ -21,13 +21,13 @@ class Polyline(EmbroideryElement):
 
     @property
     def points(self):
-       # example: "1,2 0,0 1.5,3 4,2"
+        # example: "1,2 0,0 1.5,3 4,2"
 
-       points = self.node.get('points')
-       points = points.split(" ")
-       points = [[float(coord) for coord in point.split(",")] for point in points]
+        points = self.node.get('points')
+        points = points.split(" ")
+        points = [[float(coord) for coord in point.split(",")] for point in points]
 
-       return points
+        return points
 
     @property
     @cache
