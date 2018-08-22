@@ -428,6 +428,9 @@ class SettingsFrame(wx.Frame):
                 if isinstance(child, wx.Slider):
                     child.Destroy()
                     self.simulate_window.set_slider()
+
+            self.simulate_window.Layout()
+            self.simulate_window.Refresh()
         else:
             params_rect = self.GetScreenRect()
             simulator_pos = params_rect.GetTopRight()
