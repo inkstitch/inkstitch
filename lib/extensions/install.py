@@ -3,17 +3,12 @@
 import sys
 import traceback
 import os
-from os.path import realpath, dirname
 from glob import glob
-from threading import Thread
-import socket
-import errno
-import time
-import logging
 import wx
 import inkex
 
 from ..utils import guess_inkscape_config_path, get_bundled_dir
+from ..i18n import _
 
 
 class InstallerFrame(wx.Frame):
@@ -64,7 +59,7 @@ class InstallerFrame(wx.Frame):
         try:
             self.install_addons('palettes')
             self.install_addons('symbols')
-        except Exception as e:
+        except Exception:
             wx.MessageDialog(self,
                              _('Inkscape add-on installation failed') + ': \n' + traceback.format_exc(),
                              _('Installation Failed'),

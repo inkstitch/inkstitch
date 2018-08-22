@@ -1,16 +1,10 @@
-import os
-import sys
 import inkex
-import simpletransform
-import cubicsuperpath
 from random import random
-from shapely import geometry as shgeo
 
 from .commands import CommandsExtension
 from ..commands import OBJECT_COMMANDS, get_command_description
 from ..i18n import _
-from ..elements import SatinColumn
-from ..svg.tags import *
+from ..svg.tags import SVG_PATH_TAG, CONNECTION_START, CONNECTION_END, CONNECTOR_TYPE, INKSCAPE_LABEL, SVG_GROUP_TAG, SVG_USE_TAG, XLINK_HREF
 from ..svg import get_correction_transform
 
 

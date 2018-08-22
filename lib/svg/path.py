@@ -1,5 +1,4 @@
 import simpletransform
-import cubicsuperpath
 
 from .units import get_viewbox_transform
 

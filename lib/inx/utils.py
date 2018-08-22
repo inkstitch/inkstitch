@@ -3,7 +3,7 @@ import gettext
 from os.path import dirname
 from jinja2 import Environment, FileSystemLoader
 
-from ..i18n import translation as default_translation, locale_dir, _, N_
+from ..i18n import translation as default_translation, locale_dir, N_
 
 
 _top_path = dirname(dirname(dirname(os.path.realpath(__file__))))

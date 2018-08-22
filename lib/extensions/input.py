@@ -1,15 +1,11 @@
 import os
-from os.path import realpath, dirname, join as path_join
-import sys
 from inkex import etree
 import inkex
 import pyembroidery
 
 from ..svg import PIXELS_PER_MM, render_stitch_plan
 from ..svg.tags import INKSCAPE_LABEL
-from ..i18n import _
-from ..stitch_plan import StitchPlan, ColorBlock
-from ..utils.io import save_stdout
+from ..stitch_plan import StitchPlan
 
 
 class Input(object):

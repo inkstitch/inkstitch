@@ -1,4 +1,3 @@
-import sys
 import inkex
 import cubicsuperpath
 from shapely import geometry as shgeo

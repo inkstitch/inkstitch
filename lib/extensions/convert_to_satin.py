@@ -11,6 +11,7 @@ from ..svg.tags import SVG_PATH_TAG
 from ..svg import get_correction_transform, PIXELS_PER_MM
 from ..elements import Stroke
 from ..utils import Point
+from ..i18n import _
 
 
 class SelfIntersectionError(Exception):

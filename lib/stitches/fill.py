@@ -1,6 +1,5 @@
 import shapely
 import math
-import sys
 
 from ..svg import PIXELS_PER_MM
 from ..utils import cache, Point as InkstitchPoint
@@ -167,9 +166,7 @@ def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing=Non
 
 def section_to_stitches(group_of_segments, angle, row_spacing, max_stitch_length, staggers):
     stitches = []
-    first_segment = True
     swap = False
-    last_end = None
 
     for segment in group_of_segments:
         (beg, end) = segment
@@ -240,7 +237,7 @@ def pull_runs(rows, shape, row_spacing):
 
         # print >> sys.stderr, len(run)
         runs.append(run)
-        rows = [row for row in rows if len(row) > 0]
+        rows = [r for r in rows if len(r) > 0]
 
         count += 1
 

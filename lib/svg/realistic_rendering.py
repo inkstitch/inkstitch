@@ -2,7 +2,7 @@ import simplepath
 import math
 
 from .units import PIXELS_PER_MM
-from ..utils import cache, Point
+from ..utils import Point
 
 # The stitch vector path looks like this:
 #  _______

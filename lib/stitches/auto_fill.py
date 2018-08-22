@@ -1,14 +1,12 @@
 import sys
 import shapely
 import networkx
-import math
 from itertools import groupby, izip
 from collections import deque
 
 from .fill import intersect_region_with_grating, row_num, stitch_row
 from .running_stitch import running_stitch
 from ..i18n import _
-from ..svg import PIXELS_PER_MM
 from ..utils.geometry import Point as InkstitchPoint, cut
 
 
@@ -367,7 +365,6 @@ def find_stitch_path(graph, segments, starting_point=None, ending_point=None):
     the order of most-recently-visited first.
     """
 
-    original_graph = graph
     graph = graph.copy()
     num_segments = len(segments)
     segments_visited = 0

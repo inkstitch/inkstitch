@@ -1,7 +1,6 @@
 from shapely import geometry as shgeo
 
-from .element import param, EmbroideryElement, Patch
-from ..i18n import _
+from .element import EmbroideryElement, Patch
 from ..utils.geometry import Point
 from ..utils import cache
 

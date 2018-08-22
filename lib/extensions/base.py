@@ -5,10 +5,10 @@ from copy import deepcopy
 from collections import MutableMapping
 from stringcase import snakecase
 
-from ..svg.tags import *
+from ..svg.tags import SVG_GROUP_TAG, INKSCAPE_GROUPMODE, SVG_DEFS_TAG, EMBROIDERABLE_TAGS, SVG_POLYLINE_TAG
 from ..elements import AutoFill, Fill, Stroke, SatinColumn, Polyline, EmbroideryElement
-from ..utils import cache
 from ..commands import is_command, layer_commands
+from ..i18n import _
 
 
 SVG_METADATA_TAG = inkex.addNS("metadata", "svg")

@@ -1,5 +1,4 @@
 import sys
-import traceback
 import os
 from threading import Thread
 import socket
@@ -13,15 +12,14 @@ import json
 import inkex
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from datetime import date
-import base64
 from flask import Flask, request, Response, send_from_directory, jsonify
 import webbrowser
 import requests
 
 from .base import InkstitchExtension
 from ..i18n import _, translation as inkstitch_translation
-from ..svg import PIXELS_PER_MM, render_stitch_plan
-from ..svg.tags import SVG_GROUP_TAG, INKSCAPE_GROUPMODE
+from ..svg import render_stitch_plan
+from ..svg.tags import INKSCAPE_GROUPMODE
 from ..stitch_plan import patches_to_stitch_plan
 from ..threads import ThreadCatalog
 

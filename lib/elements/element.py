@@ -1,6 +1,5 @@
 import sys
 from copy import deepcopy
-from shapely import geometry as shgeo
 
 from ..i18n import _
 from ..utils import cache
@@ -8,7 +7,6 @@ from ..svg import PIXELS_PER_MM, convert_length, get_doc_size, apply_transforms
 from ..commands import find_commands
 
 # inkscape-provided utilities
-import simpletransform
 import simplestyle
 import cubicsuperpath
 from cspsubdiv import cspsubdiv

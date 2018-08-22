@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-21 20:50-0400\n"
+"POT-Creation-Date: 2018-08-21 21:43-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -119,7 +119,7 @@ msgid ""
 "shapes."
 msgstr ""
 
-#: lib/elements/element.py:232
+#: lib/elements/element.py:230
 #, python-format
 msgid "%(id)s has more than one command of type '%(command)s' linked to it"
 msgstr ""
@@ -381,106 +381,106 @@ msgstr ""
 msgid "Tip: use Path -> Object to Path to convert non-paths."
 msgstr ""
 
-#: lib/extensions/convert_to_satin.py:28
+#: lib/extensions/convert_to_satin.py:29
 msgid "Please select at least one line to convert to a satin column."
 msgstr ""
 
 #. : Convert To Satin extension, user selected one or more objects that were
 #. not lines.
-#: lib/extensions/convert_to_satin.py:33
+#: lib/extensions/convert_to_satin.py:34
 msgid "Only simple lines may be converted to satin columns."
 msgstr ""
 
-#: lib/extensions/convert_to_satin.py:55
+#: lib/extensions/convert_to_satin.py:56
 #, python-format
 msgid ""
 "Cannot convert %s to a satin column because it intersects itself.  Try "
 "breaking it up into multiple paths."
 msgstr ""
 
-#: lib/extensions/embroider.py:41
+#: lib/extensions/embroider.py:38
 msgid ""
 "\n"
 "\n"
 "Seeing a 'no such option' message?  Please restart Inkscape to fix."
 msgstr ""
 
-#: lib/extensions/flip.py:36
+#: lib/extensions/flip.py:35
 msgid "Please select one or more satin columns to flip."
 msgstr ""
 
-#: lib/extensions/install.py:30
+#: lib/extensions/install.py:25
 msgid ""
 "Ink/Stitch can install files (\"add-ons\") that make it easier to use "
 "Inkscape to create machine embroidery designs.  These add-ons will be "
 "installed:"
 msgstr ""
 
-#: lib/extensions/install.py:32
+#: lib/extensions/install.py:27
 msgid "thread manufacturer color palettes"
 msgstr ""
 
-#: lib/extensions/install.py:33
+#: lib/extensions/install.py:28
 msgid "Ink/Stitch visual commands (Object -> Symbols...)"
 msgstr ""
 
-#: lib/extensions/install.py:42
+#: lib/extensions/install.py:37
 msgid "Install"
 msgstr ""
 
-#: lib/extensions/install.py:45 lib/extensions/params.py:380
+#: lib/extensions/install.py:40 lib/extensions/params.py:380
 msgid "Cancel"
 msgstr ""
 
-#: lib/extensions/install.py:59
+#: lib/extensions/install.py:54
 msgid "Choose Inkscape directory"
 msgstr ""
 
-#: lib/extensions/install.py:69
+#: lib/extensions/install.py:64
 msgid "Inkscape add-on installation failed"
 msgstr ""
 
-#: lib/extensions/install.py:70
+#: lib/extensions/install.py:65
 msgid "Installation Failed"
 msgstr ""
 
-#: lib/extensions/install.py:74
+#: lib/extensions/install.py:69
 msgid ""
 "Inkscape add-on files have been installed.  Please restart Inkscape to "
 "load the new add-ons."
 msgstr ""
 
-#: lib/extensions/install.py:75
+#: lib/extensions/install.py:70
 msgid "Installation Completed"
 msgstr ""
 
-#: lib/extensions/install.py:105
+#: lib/extensions/install.py:100
 msgid "Ink/Stitch Add-ons Installer"
 msgstr ""
 
-#: lib/extensions/layer_commands.py:29
+#: lib/extensions/layer_commands.py:27
 msgid "Please choose one or more commands to add."
 msgstr ""
 
-#: lib/extensions/layer_commands.py:41 lib/extensions/object_commands.py:80
+#: lib/extensions/layer_commands.py:39 lib/extensions/object_commands.py:74
 msgid "Ink/Stitch Command"
 msgstr ""
 
 #. : the name of the line that connects a command to the object it applies to
-#: lib/extensions/object_commands.py:36
+#: lib/extensions/object_commands.py:30
 msgid "connector"
 msgstr ""
 
 #. : the name of a command symbol (example: scissors icon for trim command)
-#: lib/extensions/object_commands.py:95
+#: lib/extensions/object_commands.py:89
 msgid "command marker"
 msgstr ""
 
-#: lib/extensions/object_commands.py:106
+#: lib/extensions/object_commands.py:100
 msgid "Please select one or more objects to which to attach commands."
 msgstr ""
 
-#: lib/extensions/object_commands.py:114
+#: lib/extensions/object_commands.py:108
 msgid "Please choose one or more commands to attach."
 msgstr ""
 
@@ -578,15 +578,15 @@ msgid ""
 "\"Overwrite\""
 msgstr ""
 
-#: lib/extensions/print_pdf.py:134
+#: lib/extensions/print_pdf.py:132
 msgid "Closing..."
 msgstr ""
 
-#: lib/extensions/print_pdf.py:134
+#: lib/extensions/print_pdf.py:132
 msgid "It is safe to close this window now."
 msgstr ""
 
-#: lib/extensions/print_pdf.py:265
+#: lib/extensions/print_pdf.py:263
 msgid ""
 "A print preview has been opened in your web browser.  This window will "
 "stay open in order to communicate with the JavaScript code running in "
@@ -596,7 +596,7 @@ msgid ""
 " or you can close it manually if necessary."
 msgstr ""
 
-#: lib/extensions/print_pdf.py:414
+#: lib/extensions/print_pdf.py:412
 msgid "Ink/Stitch Print"
 msgstr ""
 
@@ -604,7 +604,7 @@ msgstr ""
 msgid "Embroidery Simulation"
 msgstr ""
 
-#: lib/extensions/zip.py:52
+#: lib/extensions/zip.py:49
 msgid "No embroidery file formats selected."
 msgstr ""
 
@@ -663,13 +663,13 @@ msgstr ""
 msgid "Stitch #"
 msgstr ""
 
-#: lib/stitches/auto_fill.py:169
+#: lib/stitches/auto_fill.py:167
 msgid ""
 "Unable to autofill.  This most often happens because your shape is made "
 "up of multiple sections that aren't connected."
 msgstr ""
 
-#: lib/stitches/auto_fill.py:398
+#: lib/stitches/auto_fill.py:395
 msgid ""
 "Unexpected error while generating fill stitches. Please send your SVG "
 "file to lexelby@github."
@@ -679,12 +679,12 @@ msgstr ""
 msgid "Stitch Plan"
 msgstr ""
 
-#: lib/svg/units.py:45
+#: lib/svg/units.py:46
 #, python-format
 msgid "parseLengthWithUnits: unknown unit %s"
 msgstr ""
 
-#: lib/svg/units.py:77
+#: lib/svg/units.py:78
 #, python-format
 msgid "Unknown unit: %s"
 msgstr ""

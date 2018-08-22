@@ -1,9 +1,7 @@
-import os
-
 from .inputs import generate_input_inx_files
 from .outputs import generate_output_inx_files
 from .extensions import generate_extension_inx_files
-from .utils import iterate_inx_locales, inx_path
+from .utils import iterate_inx_locales
 
 
 def generate_inx_files():
