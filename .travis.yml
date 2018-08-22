@@ -156,7 +156,8 @@ script:
       git config --global user.email "inkstitch-crowdin@lex.gd"
       git config --global user.name "Ink/Stitch Crowdin integration"
 
-      wget https://crowdin.com/downloads/crowdin-cli.jar
+      wget https://downloads.crowdin.com/cli/v2/crowdin-cli.zip
+      unzip -j crowdin-cli.zip
       java -jar crowdin-cli.jar pull -b master
 
       # Try to only commit if translations changed.  Crowdin will update all
