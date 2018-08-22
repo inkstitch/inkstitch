@@ -107,7 +107,7 @@ class PrintPreviewServer(Thread):
         else:
             self.resources_path = os.path.realpath(os.path.join(os.path.dirname(__file__), '..', '..', 'print', 'resources'))
 
-    def __setup_app(self):
+    def __setup_app(self):  # noqa: C901
         self.__set_resources_path()
         self.app = Flask(__name__)
 
