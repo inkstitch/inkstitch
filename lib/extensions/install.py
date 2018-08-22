@@ -27,8 +27,10 @@ class InstallerFrame(wx.Frame):
 
         text_sizer = wx.BoxSizer(wx.HORIZONTAL)
 
-        text = _('Ink/Stitch can install files ("add-ons") that make it easier to use Inkscape to create machine embroidery designs.  These add-ons will be installed:') + \
-            "\n\n   • " + _("thread manufacturer color palettes") + "\n   • " + _("Ink/Stitch visual commands (Object -> Symbols...)")
+        text = (_('Ink/Stitch can install files ("add-ons") that make it easier to use Inkscape to create machine embroidery designs.  '
+                  'These add-ons will be installed:') +
+                "\n\n   • " + _("thread manufacturer color palettes") +
+                "\n   • " + _("Ink/Stitch visual commands (Object -> Symbols...)"))
 
         static_text = wx.StaticText(panel, label=text)
         font = wx.Font(12, wx.DEFAULT, wx.NORMAL, wx.NORMAL)

@@ -209,8 +209,8 @@ class ColorBlock(object):
                 # Don't consider jumps, stops, color changes, or trims as candidates for filtering
                 pass
             else:
-                l = (stitch - stitches[-1]).length()
-                if l <= 0.1 * PIXELS_PER_MM:
+                length = (stitch - stitches[-1]).length()
+                if length <= 0.1 * PIXELS_PER_MM:
                     # duplicate stitch, skip this one
                     continue
 

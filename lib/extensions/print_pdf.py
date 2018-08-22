@@ -262,7 +262,10 @@ class PrintInfoFrame(wx.Frame):
         panel = wx.Panel(self)
         sizer = wx.BoxSizer(wx.VERTICAL)
 
-        text = wx.StaticText(panel, label=_("A print preview has been opened in your web browser.  This window will stay open in order to communicate with the JavaScript code running in your browser.\n\nThis window will close after you close the print preview in your browser, or you can close it manually if necessary."))
+        message = _("A print preview has been opened in your web browser.  "
+                    "This window will stay open in order to communicate with the JavaScript code running in your browser.\n\n"
+                    "This window will close after you close the print preview in your browser, or you can close it manually if necessary.")
+        text = wx.StaticText(panel, label=message)
         font = wx.Font(14, wx.DEFAULT, wx.NORMAL, wx.NORMAL)
         text.SetFont(font)
         sizer.Add(text, proportion=1, flag=wx.ALL | wx.EXPAND, border=20)

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-21 20:32-0400\n"
+"POT-Creation-Date: 2018-08-21 20:50-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -156,35 +156,35 @@ msgid ""
 "enable flip, stitching goes from right-to-left instead of left-to-right."
 msgstr ""
 
-#: lib/elements/fill.py:55
+#: lib/elements/fill.py:56
 msgid "Spacing between rows"
 msgstr ""
 
-#: lib/elements/fill.py:56
+#: lib/elements/fill.py:57
 msgid "Distance between rows of stitches."
 msgstr ""
 
-#: lib/elements/fill.py:69
+#: lib/elements/fill.py:70
 msgid "Maximum fill stitch length"
 msgstr ""
 
-#: lib/elements/fill.py:70
+#: lib/elements/fill.py:71
 msgid ""
 "The length of each stitch in a row.  Shorter stitch may be used at the "
 "start or end of a row."
 msgstr ""
 
-#: lib/elements/fill.py:79
+#: lib/elements/fill.py:80
 msgid "Stagger rows this many times before repeating"
 msgstr ""
 
-#: lib/elements/fill.py:80
+#: lib/elements/fill.py:81
 msgid ""
 "Setting this dictates how many rows apart the stitches will be before "
 "they fall in the same column position."
 msgstr ""
 
-#: lib/elements/fill.py:113
+#: lib/elements/fill.py:114
 #, python-format
 msgid ""
 "shape %s is so small that it cannot be filled with stitches.  Please make"
@@ -203,7 +203,7 @@ msgstr ""
 msgid "\"E\" stitch"
 msgstr ""
 
-#: lib/elements/satin_column.py:32 lib/elements/stroke.py:53
+#: lib/elements/satin_column.py:32 lib/elements/stroke.py:55
 msgid "Zig-zag spacing (peak-to-peak)"
 msgstr ""
 
@@ -222,93 +222,93 @@ msgid ""
 "penetrations outward from the center of the satin column."
 msgstr ""
 
-#: lib/elements/satin_column.py:56
+#: lib/elements/satin_column.py:57
 msgid "Contour underlay"
 msgstr ""
 
-#: lib/elements/satin_column.py:56 lib/elements/satin_column.py:63
-#: lib/elements/satin_column.py:72
+#: lib/elements/satin_column.py:57 lib/elements/satin_column.py:64
+#: lib/elements/satin_column.py:73
 msgid "Contour Underlay"
 msgstr ""
 
-#: lib/elements/satin_column.py:63 lib/elements/satin_column.py:87
+#: lib/elements/satin_column.py:64 lib/elements/satin_column.py:88
 msgid "Stitch length"
 msgstr ""
 
-#: lib/elements/satin_column.py:69
+#: lib/elements/satin_column.py:70
 msgid "Contour underlay inset amount"
 msgstr ""
 
-#: lib/elements/satin_column.py:70
+#: lib/elements/satin_column.py:71
 msgid ""
 "Shrink the outline, to prevent the underlay from showing around the "
 "outside of the satin column."
 msgstr ""
 
-#: lib/elements/satin_column.py:80
+#: lib/elements/satin_column.py:81
 msgid "Center-walk underlay"
 msgstr ""
 
-#: lib/elements/satin_column.py:80 lib/elements/satin_column.py:87
+#: lib/elements/satin_column.py:81 lib/elements/satin_column.py:88
 msgid "Center-Walk Underlay"
 msgstr ""
 
-#: lib/elements/satin_column.py:92
+#: lib/elements/satin_column.py:93
 msgid "Zig-zag underlay"
 msgstr ""
 
-#: lib/elements/satin_column.py:92 lib/elements/satin_column.py:101
-#: lib/elements/satin_column.py:112
+#: lib/elements/satin_column.py:93 lib/elements/satin_column.py:102
+#: lib/elements/satin_column.py:113
 msgid "Zig-zag Underlay"
 msgstr ""
 
-#: lib/elements/satin_column.py:98
+#: lib/elements/satin_column.py:99
 msgid "Zig-Zag spacing (peak-to-peak)"
 msgstr ""
 
-#: lib/elements/satin_column.py:99
+#: lib/elements/satin_column.py:100
 msgid "Distance between peaks of the zig-zags."
 msgstr ""
 
-#: lib/elements/satin_column.py:109
+#: lib/elements/satin_column.py:110
 msgid "Inset amount"
 msgstr ""
 
-#: lib/elements/satin_column.py:110
+#: lib/elements/satin_column.py:111
 msgid "default: half of contour underlay inset"
 msgstr ""
 
-#: lib/elements/satin_column.py:147
+#: lib/elements/satin_column.py:148
 #, python-format
 msgid "satin column: %(id)s: at least two subpaths required (%(num)d found)"
 msgstr ""
 
-#: lib/elements/satin_column.py:172
+#: lib/elements/satin_column.py:173
 msgid ""
 "One or more rails crosses itself, and this is not allowed.  Please split "
 "into multiple satin columns."
 msgstr ""
 
-#: lib/elements/satin_column.py:179
+#: lib/elements/satin_column.py:180
 msgid "satin column: One or more of the rungs doesn't intersect both rails."
 msgstr ""
 
-#: lib/elements/satin_column.py:180 lib/elements/satin_column.py:183
+#: lib/elements/satin_column.py:181 lib/elements/satin_column.py:184
 msgid "Each rail should intersect both rungs once."
 msgstr ""
 
-#: lib/elements/satin_column.py:182
+#: lib/elements/satin_column.py:183
 msgid ""
 "satin column: One or more of the rungs intersects the rails more than "
 "once."
 msgstr ""
 
-#: lib/elements/satin_column.py:223
+#: lib/elements/satin_column.py:224
 #, python-format
 msgid "satin column: object %s has a fill (but should not)"
 msgstr ""
 
-#: lib/elements/satin_column.py:227
+#: lib/elements/satin_column.py:228
 #, python-format
 msgid ""
 "satin column: object %(id)s has two paths with an unequal number of "
@@ -338,29 +338,29 @@ msgid ""
 "stitch, etc.  Only applies to running stitch."
 msgstr ""
 
-#: lib/elements/stroke.py:54
+#: lib/elements/stroke.py:56
 msgid "Length of stitches in zig-zag mode."
 msgstr ""
 
-#: lib/elements/stroke.py:65
+#: lib/elements/stroke.py:67
 msgid "Repeats"
 msgstr ""
 
-#: lib/elements/stroke.py:66
+#: lib/elements/stroke.py:68
 msgid "Defines how many times to run down and back along the path."
 msgstr ""
 
-#: lib/elements/stroke.py:90
+#: lib/elements/stroke.py:92
 msgid "Manual stitch placement"
 msgstr ""
 
-#: lib/elements/stroke.py:91
+#: lib/elements/stroke.py:93
 msgid ""
 "Stitch every node in the path.  Stitch length and zig-zag spacing are "
 "ignored."
 msgstr ""
 
-#: lib/elements/stroke.py:125
+#: lib/elements/stroke.py:127
 msgid ""
 "Legacy running stitch setting detected!\n"
 "\n"
@@ -416,45 +416,45 @@ msgid ""
 "installed:"
 msgstr ""
 
-#: lib/extensions/install.py:31
+#: lib/extensions/install.py:32
 msgid "thread manufacturer color palettes"
 msgstr ""
 
-#: lib/extensions/install.py:31
+#: lib/extensions/install.py:33
 msgid "Ink/Stitch visual commands (Object -> Symbols...)"
 msgstr ""
 
-#: lib/extensions/install.py:40
+#: lib/extensions/install.py:42
 msgid "Install"
 msgstr ""
 
-#: lib/extensions/install.py:43 lib/extensions/params.py:380
+#: lib/extensions/install.py:45 lib/extensions/params.py:380
 msgid "Cancel"
 msgstr ""
 
-#: lib/extensions/install.py:57
+#: lib/extensions/install.py:59
 msgid "Choose Inkscape directory"
 msgstr ""
 
-#: lib/extensions/install.py:67
+#: lib/extensions/install.py:69
 msgid "Inkscape add-on installation failed"
 msgstr ""
 
-#: lib/extensions/install.py:68
+#: lib/extensions/install.py:70
 msgid "Installation Failed"
 msgstr ""
 
-#: lib/extensions/install.py:72
+#: lib/extensions/install.py:74
 msgid ""
 "Inkscape add-on files have been installed.  Please restart Inkscape to "
 "load the new add-ons."
 msgstr ""
 
-#: lib/extensions/install.py:73
+#: lib/extensions/install.py:75
 msgid "Installation Completed"
 msgstr ""
 
-#: lib/extensions/install.py:103
+#: lib/extensions/install.py:105
 msgid "Ink/Stitch Add-ons Installer"
 msgstr ""
 
@@ -596,7 +596,7 @@ msgid ""
 " or you can close it manually if necessary."
 msgstr ""
 
-#: lib/extensions/print_pdf.py:411
+#: lib/extensions/print_pdf.py:414
 msgid "Ink/Stitch Print"
 msgstr ""
 

@@ -44,7 +44,8 @@ class Fill(EmbroideryElement):
     @param(
         'flip',
         _('Flip fill (start right-to-left)'),
-        tooltip=_('The flip option can help you with routing your stitch path.  When you enable flip, stitching goes from right-to-left instead of left-to-right.'),
+        tooltip=_('The flip option can help you with routing your stitch path.  '
+                  'When you enable flip, stitching goes from right-to-left instead of left-to-right.'),
         type='boolean',
         default=False)
     def flip(self):

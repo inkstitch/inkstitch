@@ -42,7 +42,8 @@ class SatinColumn(EmbroideryElement):
     @param(
         'pull_compensation_mm',
         _('Pull compensation'),
-        tooltip=_('Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape.  This setting expands each pair of needle penetrations outward from the center of the satin column.'),
+        tooltip=_('Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape.  '
+                  'This setting expands each pair of needle penetrations outward from the center of the satin column.'),
         unit='mm',
         type='float',
         default=0)
@@ -174,7 +175,7 @@ class SatinColumn(EmbroideryElement):
             # handle null intersections here?
             linestrings = shops.split(rail, rungs)
 
-            #print >> dbg, "rails and rungs", [str(rail) for rail in rails], [str(rung) for rung in rungs]
+            # print >> dbg, "rails and rungs", [str(rail) for rail in rails], [str(rung) for rung in rungs]
             if len(linestrings.geoms) < len(rungs.geoms) + 1:
                 self.fatal(_("satin column: One or more of the rungs doesn't intersect both rails.") +
                            "  " + _("Each rail should intersect both rungs once."))

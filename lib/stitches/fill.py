@@ -120,7 +120,7 @@ def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing=Non
 
     height = abs(end - start)
 
-    #print >> dbg, "grating:", start, end, height, row_spacing, end_row_spacing
+    # print >> dbg, "grating:", start, end, height, row_spacing, end_row_spacing
 
     # offset start slightly so that rows are always an even multiple of
     # row_spacing_px from the origin.  This makes it so that abutting
