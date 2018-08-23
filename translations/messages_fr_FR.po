@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-08-20 20:42-0400\n"
-"PO-Revision-Date: 2018-08-22 13:54\n"
+"PO-Revision-Date: 2018-08-23 13:55\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -20,32 +20,32 @@ msgstr ""
 #. command attached to an object
 #: lib/commands.py:11
 msgid "Fill stitch starting position"
-msgstr "Position de départ du remplissage"
+msgstr ""
 
 #. command attached to an object
 #: lib/commands.py:14
 msgid "Fill stitch ending position"
-msgstr "Position de fin de remplissage"
+msgstr ""
 
 #. command attached to an object
 #: lib/commands.py:17
 msgid "Stop (pause machine) after sewing this object"
-msgstr "Stop (pause machine) après avoir brodé cet objet"
+msgstr ""
 
 #. command attached to an object
 #: lib/commands.py:20
 msgid "Trim thread after sewing this object"
-msgstr "Couper le fil après avoir brodé cet objet"
+msgstr ""
 
 #. command attached to an object
 #: lib/commands.py:23
 msgid "Ignore this object (do not stitch)"
-msgstr "Ignorer cet objet (ne pas le broder)"
+msgstr ""
 
 #. command that affects entire layer
 #: lib/commands.py:26
 msgid "Ignore layer (do not stitch any objects in this layer)"
-msgstr "Ignorer le calque (broder aucun objet dans cette couche)"
+msgstr ""
 
 #: lib/elements/auto_fill.py:11
 msgid "Auto-Fill"
@@ -61,7 +61,7 @@ msgstr "Longueur du point de fonctionnement (parcours entre les sections)"
 
 #: lib/elements/auto_fill.py:35
 msgid "Length of stitches around the outline of the fill region used when moving from section to section."
-msgstr "Longueur de points autour du contour de la région de remplissage lors du déplacement de section à section."
+msgstr ""
 
 #: lib/elements/auto_fill.py:43
 msgid "Underlay"
@@ -75,19 +75,19 @@ msgstr "Sous-couche de remplissage automatique"
 
 #: lib/elements/auto_fill.py:49
 msgid "Fill angle"
-msgstr "Angle de remplissage"
+msgstr ""
 
 #: lib/elements/auto_fill.py:50
 msgid "default: fill angle + 90 deg"
-msgstr "défaut : Angle de remplissage + 90 deg"
+msgstr ""
 
 #: lib/elements/auto_fill.py:65
 msgid "Row spacing"
-msgstr "Espacement entre rangs (lignes)"
+msgstr ""
 
 #: lib/elements/auto_fill.py:66
 msgid "default: 3x fill row spacing"
-msgstr "défaut: 3x espacement entre les rangs"
+msgstr ""
 
 #: lib/elements/auto_fill.py:76
 msgid "Max stitch length"
@@ -567,7 +567,7 @@ msgstr ""
 
 #: lib/simulator.py:40
 msgid "Press + or arrow up to speed up"
-msgstr "Pour accélérer: Pressez + ou ↑ (flèche vers le haut)"
+msgstr ""
 
 #: lib/simulator.py:41
 msgid "Slow down"
@@ -575,7 +575,7 @@ msgstr ""
 
 #: lib/simulator.py:41
 msgid "Press - or arrow down to slow down"
-msgstr "Presser - ou flèche vers le bas pour ralentir"
+msgstr ""
 
 #: lib/simulator.py:42
 msgid "Pause"

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-08-20 20:42-0400\n"
-"PO-Revision-Date: 2018-08-22 13:54\n"
+"PO-Revision-Date: 2018-08-23 13:55\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Polish\n"
 "MIME-Version: 1.0\n"
@@ -670,36 +670,36 @@ msgstr ""
 
 #: print/templates/footer.html:2
 msgid "Page"
-msgstr "Strona"
+msgstr ""
 
 #: print/templates/headline.html:5
 msgid "Click to choose another logo"
-msgstr "Kliknij, aby wybrać inne logo"
+msgstr ""
 
 #: print/templates/headline.html:10
 msgid "Enter job title..."
-msgstr "Wpisz nazwę zadania..."
+msgstr ""
 
 #: print/templates/headline.html:11
 msgid "CLIENT"
-msgstr "KLIENT"
+msgstr ""
 
 #: print/templates/headline.html:11
 msgid "Enter client name..."
-msgstr "Wpisz nazwę klienta..."
+msgstr ""
 
 #: print/templates/headline.html:12
 msgid "PURCHASE ORDER #:"
-msgstr "NUMER ZAMÓWIENIA #:"
+msgstr ""
 
 #: print/templates/headline.html:12
 msgid "Enter purchase order number..."
-msgstr "Wpisz numer zamówienia..."
+msgstr ""
 
 #: print/templates/headline.html:15
 #, python-format
 msgid "%Y.%m.%d"
-msgstr "%R.%m.%d"
+msgstr ""
 
 #: print/templates/operator_detailedview.html:10
 msgid "Thread Consumption"
@@ -879,15 +879,15 @@ msgstr ""
 
 #: print/templates/ui_svg_action_buttons.html:3
 msgid "Fit"
-msgstr "Dopasuj"
+msgstr ""
 
 #: print/templates/ui_svg_action_buttons.html:5
 msgid "Apply to all"
-msgstr "Przypisz wszystkim"
+msgstr ""
 
 #: print/templates/ui_svg_action_buttons.html:8
 msgid "Realistic"
-msgstr "Realistycznie"
+msgstr ""
 
 #. description for pyembroidery file format: pec
 #. description for pyembroidery file format: pes

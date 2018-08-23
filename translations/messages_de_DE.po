@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-08-20 20:42-0400\n"
-"PO-Revision-Date: 2018-08-22 13:54\n"
+"PO-Revision-Date: 2018-08-23 13:55\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -20,32 +20,32 @@ msgstr ""
 #. command attached to an object
 #: lib/commands.py:11
 msgid "Fill stitch starting position"
-msgstr "Füllstich Startposition"
+msgstr ""
 
 #. command attached to an object
 #: lib/commands.py:14
 msgid "Fill stitch ending position"
-msgstr "Füllstich Endposition"
+msgstr ""
 
 #. command attached to an object
 #: lib/commands.py:17
 msgid "Stop (pause machine) after sewing this object"
-msgstr "Stoppen (Pause) nach dem Nähen diesem Objekts"
+msgstr ""
 
 #. command attached to an object
 #: lib/commands.py:20
 msgid "Trim thread after sewing this object"
-msgstr "Faden abschneiden nach diesem Objekt"
+msgstr ""
 
 #. command attached to an object
 #: lib/commands.py:23
 msgid "Ignore this object (do not stitch)"
-msgstr "Ignoriere dieses Objekt (nicht nähen)"
+msgstr ""
 
 #. command that affects entire layer
 #: lib/commands.py:26
 msgid "Ignore layer (do not stitch any objects in this layer)"
-msgstr "Ebene ignorieren (keine Objekte in dieser Ebene nähen)"
+msgstr ""
 
 #: lib/elements/auto_fill.py:11
 msgid "Auto-Fill"
@@ -421,7 +421,7 @@ msgstr "Bitte wählen Sie einen oder mehrere Befehle um diese zu verknüpfen."
 
 #: lib/extensions/layer_commands.py:41 lib/extensions/object_commands.py:80
 msgid "Ink/Stitch Command"
-msgstr "Ink/Stitch Befehl"
+msgstr ""
 
 #. : the name of the line that connects a command to the object it applies to
 #: lib/extensions/object_commands.py:36
@@ -562,7 +562,7 @@ msgstr "Keine Stick-Dateiformate ausgewählt."
 #. menu.
 #: lib/inx/utils.py:43
 msgid "Generate INX files"
-msgstr "Erzeuge INX Dateien"
+msgstr ""
 
 #: lib/simulator.py:40
 msgid "Speed up"
@@ -942,12 +942,12 @@ msgstr "Pfaff Stickformat"
 #. description for pyembroidery file format: svg
 #: pyembroidery-format-descriptions.py:14
 msgid "Scalable Vector Graphics"
-msgstr "Skalierbare Vektorgrafik"
+msgstr ""
 
 #. description for pyembroidery file format: csv
 #: pyembroidery-format-descriptions.py:16
 msgid "Comma-separated values"
-msgstr "Durch Komma getrennte Werte"
+msgstr ""
 
 #. description for pyembroidery file format: xxx
 #: pyembroidery-format-descriptions.py:18
@@ -1049,7 +1049,7 @@ msgstr "ZSK TC Stickformat"
 #. description for pyembroidery file format: pmv
 #: pyembroidery-format-descriptions.py:80
 msgid "Brother Stitch Format"
-msgstr "Brother Stichformat"
+msgstr ""
 
 #: templates/convert_to_satin.inx:3
 msgid "Convert Line to Satin"
@@ -1060,11 +1060,11 @@ msgstr "Konvertierung der Linie zu Satinstich"
 #: templates/layer_commands.inx:16 templates/object_commands.inx:14
 #: templates/params.inx:12 templates/print.inx:12 templates/simulate.inx:12
 msgid "English"
-msgstr "Englisch"
+msgstr ""
 
 #: templates/embroider.inx:3
 msgid "Embroider"
-msgstr "Sticken"
+msgstr ""
 
 #: templates/embroider.inx:7
 msgid "Collapse length (mm)"
@@ -1072,11 +1072,11 @@ msgstr ""
 
 #: templates/embroider.inx:7
 msgid "Jump stitches smaller than this will be treated as normal stitches."
-msgstr "Sprungstiche, die kleiner sind, werden als normale Stiche behandelt."
+msgstr ""
 
 #: templates/embroider.inx:8
 msgid "Hide other layers"
-msgstr "Andere Ebenen ausblenden"
+msgstr ""
 
 #: templates/embroider.inx:8
 msgid "Hide all other top-level layers when the embroidery layer is generated, in order to make stitching discernible."
@@ -1084,15 +1084,15 @@ msgstr "Verberge alle anderen Ebenen, wenn die Stickebene erstellt wird, um die 
 
 #: templates/embroider.inx:9
 msgid "Output file format"
-msgstr "Ausgabeformat"
+msgstr ""
 
 #: templates/embroider.inx:14
 msgid "DEBUG"
-msgstr "DEBUG"
+msgstr ""
 
 #: templates/embroider.inx:17
 msgid "Directory"
-msgstr "Verzeichnis"
+msgstr ""
 
 #: templates/embroider.inx:17
 msgid "Leave empty to save the output in Inkscape's extension directory."
@@ -1117,28 +1117,28 @@ msgstr "Ebenenbefehle hinzufügen"
 
 #: templates/layer_commands.inx:7
 msgid "Commands will be added to the currently-selected layer."
-msgstr "Befehle werden zur aktuell ausgewählten Ebene hinzugefügt."
+msgstr ""
 
 #: templates/object_commands.inx:3
 msgid "Attach Commands"
-msgstr "Befehle anhängen"
+msgstr ""
 
 #: templates/output.inx:11
 #, python-format
 msgid "Save design in %(file_extension)s format using Ink/Stitch"
-msgstr "Speichern des Designs ins %(file_extension)s Format mit Ink/Stitch"
+msgstr ""
 
 #: templates/params.inx:3
 msgid "Params"
-msgstr "Parameter"
+msgstr ""
 
 #: templates/simulate.inx:3
 msgid "Simulate"
-msgstr "Simulation"
+msgstr ""
 
 #: templates/zip.inx:10
 msgid "Ink/Stitch: ZIP export multiple formats (.zip)"
-msgstr "Ink/Stitch: Export in mehrere Formate (.zip)"
+msgstr ""
 
 #: templates/zip.inx:11
 msgid "Create a ZIP with multiple embroidery file formats using Ink/Stitch"

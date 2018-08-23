@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-08-20 20:42-0400\n"
-"PO-Revision-Date: 2018-08-22 13:54\n"
+"PO-Revision-Date: 2018-08-23 13:55\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -387,7 +387,7 @@ msgstr ""
 
 #: lib/extensions/install.py:44 lib/extensions/params.py:380
 msgid "Cancel"
-msgstr "Отмена"
+msgstr ""
 
 #: lib/extensions/install.py:58
 msgid "Choose Inkscape directory"
@@ -492,7 +492,7 @@ msgstr ""
 
 #: lib/extensions/params.py:377
 msgid "Delete"
-msgstr "Удалить"
+msgstr ""
 
 #: lib/extensions/params.py:384
 msgid "Use Last Settings"
