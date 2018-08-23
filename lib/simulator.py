@@ -24,7 +24,7 @@ class EmbroiderySimulator(wx.Frame):
         self.max_height = kwargs.pop('max_height', screen_rect[3])
         self.scale = 1
 
-        self.min_width = 800
+        self.min_width = 600
         if self.max_width < self.min_width:
             self.max_width = self.min_width
 
@@ -42,10 +42,10 @@ class EmbroiderySimulator(wx.Frame):
 
         self.button_sizer = wx.StdDialogButtonSizer()
         self.button_label = (
-            [_("Reverse"), _('Play reverse (arrow left)'), self.animation_backwards],
-            [_("Forward"), _('Play forward (arrow right)'), self.animation_forwards],
-            [_("Speed up"), _('Speed up (+ or arrow up)'), self.animation_speed_up],
-            [_("Slow down"), _('Slow down (- or arrow down)'), self.animation_slow_down],
+            [_("<<"), _('Speed / Play reverse (arrow left)'), self.animation_reverse],
+            [_(">>"), _('Speed / Play forward (arrow right)'), self.animation_forward],
+            #[_("Speed up"), _('Speed up (+ or arrow up)'), self.animation_speed_up],
+            #[_("Slow down"), _('Slow down (- or arrow down)'), self.animation_slow_down],
             [_("Pause"), _("Pause (P)"), self.animation_pause],
             [_("Restart"), _("Restart (R)"), self.animation_restart],
             [_("Quit"), _("Close (Q)"), self.animation_quit])
@@ -64,6 +64,8 @@ class EmbroiderySimulator(wx.Frame):
         self.sizer.Add(self.button_sizer, 0, wx.EXPAND)
         self.SetSizer(self.sizer)
 
+        self.calculate_dimensions()
+
         if self.target_duration:
             self.adjust_speed(self.target_duration)
 
@@ -75,8 +77,9 @@ class EmbroiderySimulator(wx.Frame):
         self.clear()
 
         self.current_frame = 0
-        self.set_stitch_counter(0)
         self.animation_direction = 1
+        self.speed_info = self.calculate_speed_level()
+        self.set_stitch_counter(0)
 
         shortcut_keys = [
             (wx.ACCEL_NORMAL, ord('+'), self.animation_speed_up),
@@ -92,10 +95,10 @@ class EmbroiderySimulator(wx.Frame):
             (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_SUBTRACT, self.animation_slow_down),
             (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_DOWN, self.animation_slow_down),
             (wx.ACCEL_NORMAL, wx.WXK_DOWN, self.animation_slow_down),
-            (wx.ACCEL_NORMAL, wx.WXK_RIGHT, self.animation_forwards),
-            (wx.ACCEL_NORMAL, wx.WXK_LEFT, self.animation_backwards),
-            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_RIGHT, self.animation_forwards),
-            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_LEFT, self.animation_backwards),
+            (wx.ACCEL_NORMAL, wx.WXK_RIGHT, self.animation_forward),
+            (wx.ACCEL_NORMAL, wx.WXK_LEFT, self.animation_reverse),
+            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_RIGHT, self.animation_forward),
+            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_LEFT, self.animation_reverse),
             (wx.ACCEL_NORMAL, ord('r'), self.animation_restart),
             (wx.ACCEL_NORMAL, ord('p'), self.animation_pause),
             (wx.ACCEL_NORMAL, ord('q'), self.animation_quit)]
@@ -121,11 +124,6 @@ class EmbroiderySimulator(wx.Frame):
 
         self.last_pos = None
 
-    def set_slider(self):
-        self.stitch_slider = wx.Slider(self, value=1, minValue=1, maxValue=len(self.lines),
-            style = wx.SL_HORIZONTAL|wx.SL_LABELS)
-        self.slider_sizer.Add(self.stitch_slider, 1, wx.EXPAND)
-
     def get_current_screen_rect(self):
         current_screen = wx.Display.GetFromPoint(wx.GetMousePosition())
         display = wx.Display(current_screen)
@@ -137,7 +135,6 @@ class EmbroiderySimulator(wx.Frame):
             self.mirror = False
             self.stitch_plan_to_lines(stitch_plan)
             self.move_to_top_left()
-            self.calculate_dimensions()
             return
 
     def adjust_speed(self, duration):
@@ -148,18 +145,44 @@ class EmbroiderySimulator(wx.Frame):
             self.frame_period *= 2
             self.stitches_per_frame *= 2
 
-    def animation_speed_up(self, event):
-        if self.frame_period == 1:
-            self.stitches_per_frame *= 2
+    def animation_forward(self, event):
+        if self.current_frame == 1:
+            self.animation_direction = 1
+            self.timer.StartOnce(self.frame_period)
+        elif self.animation_direction == -1 and self.frame_period > 1280:
+            self.animation_direction = 1
+            self.set_speed_info(self.calculate_speed_level())
+        elif self.animation_direction == 1:
+            self.animation_speed_up('speed_up')
         else:
-            self.frame_period = self.frame_period / 2
+            self.animation_slow_down('slow_down')
+
+    def animation_reverse(self, event):
+        if self.current_frame == len(self.lines):
+            self.animation_direction = -1
+            self.timer.StartOnce(self.frame_period)
+        elif self.animation_direction == 1 and self.frame_period > 1280:
+            self.animation_direction = -1
+            self.set_speed_info(self.calculate_speed_level())
+        elif self.animation_direction == -1:
+            self.animation_speed_up('speed_up')
+        else:
+            self.animation_slow_down('slow_down')
+
+    def animation_speed_up(self, event):
+        if self.stitches_per_frame <= 2560:
+            if self.frame_period == 1:
+                self.stitches_per_frame *= 2
+            else:
+                self.frame_period = self.frame_period / 2
         self.animation_update_timer()
 
     def animation_slow_down(self, event):
-        if self.stitches_per_frame == 1:
-            self.frame_period *= 2
-        else:
-            self.stitches_per_frame /= 2
+        if self.frame_period <= 2560:
+            if self.stitches_per_frame == 1:
+                self.frame_period *= 2
+            else:
+                self.stitches_per_frame /= 2
         self.animation_update_timer()
 
     def animation_restart(self, event):
@@ -180,24 +203,36 @@ class EmbroiderySimulator(wx.Frame):
     def animation_update_timer(self):
         self.frame_period = max(1, self.frame_period)
         self.stitches_per_frame = max(self.stitches_per_frame, 1)
+        self.speed_info = self.calculate_speed_level()
         self.set_stitch_counter(self.current_frame)
         if self.timer.IsRunning():
             self.timer.Stop()
             self.timer.StartOnce(self.frame_period)
 
-    def animation_backwards(self, event):
-        self.animation_direction = -1
-        if self.current_frame > 1:
-            self.timer.StartOnce(self.frame_period)
-
-    def animation_forwards(self, event):
-        self.animation_direction = 1
-        if self.current_frame < len(self.lines):
-            self.timer.StartOnce(self.frame_period)
+    def calculate_speed_level(self):
+        count = 0
+        speed = self.frame_period
+        speed_plus = 1
+        animation_direction = '>>' if self.animation_direction == 1 else '<<'
+        while speed <= 2560:
+            speed = speed * 2
+            count += 1
+        while speed_plus < self.stitches_per_frame:
+            speed_plus = speed_plus * 2
+            count += 1
+        return animation_direction + ' x' + str(count)
 
     def set_stitch_counter(self, current_frame):
         self.dc.SetTextForeground('red')
-        self.dc.DrawText(_("Stitch # ") + str(current_frame) + ' / ' + str(len(self.lines)), 30, 10)
+        stitch_counter_text = _("Stitch # ") + str(current_frame) + ' / ' + str(len(self.lines))
+        self.dc.DrawText(stitch_counter_text, 30, 5)
+        self.set_speed_info(self.speed_info)
+
+    def set_speed_info(self, speed_info):
+        self.speed_info = speed_info
+        #counter_width, counter_height= self.dc.GetTextExtent(speed_info)
+        self.dc.SetTextForeground('blue')
+        self.dc.DrawText(_("Speed ") + str(speed_info), 220, 5)
 
     def on_slider(self, event):
         self.panel.SetFocus()
@@ -205,6 +240,11 @@ class EmbroiderySimulator(wx.Frame):
         obj = event.GetEventObject()
         self.current_frame = obj.GetValue()
         self.animation_update_timer()
+
+    def set_slider(self):
+        self.stitch_slider = wx.Slider(self, value=1, minValue=1, maxValue=len(self.lines),
+            style=wx.SL_HORIZONTAL | wx.SL_LABELS)
+        self.slider_sizer.Add(self.stitch_slider, 1, wx.EXPAND)
 
     def set_stitch_slider(self, val):
         self.stitch_slider.SetValue(val)
@@ -272,7 +312,11 @@ class EmbroiderySimulator(wx.Frame):
         self.width = width
         self.height = height
 
-        self.scale = min(float(self.max_width - self.margin * 2) / width, float(self.max_height - self.margin * 2) / height)
+        button_width, button_height = self.buttons[0].GetSize()
+        slider_width, slider_height = self.stitch_slider.GetSize()
+        self.controls_height = button_height + slider_height
+
+        self.scale = min(float(self.max_width - self.margin * 2) / width, float(self.max_height - self.margin * 2 - self.controls_height) / height)
 
         # make room for decorations and the margin
         self.scale *= 0.95
@@ -326,7 +370,7 @@ class EmbroiderySimulator(wx.Frame):
         decorations_height = window_height - client_height
 
         setsize_window_width = self.width * self.scale + decorations_width + self.margin * 2
-        setsize_window_height = self.height * self.scale + decorations_height + self.margin * 2
+        setsize_window_height = self.height * self.scale + decorations_height +  self.controls_height + self.margin * 2
 
         # set minimum width (force space for control buttons)
         if setsize_window_width < self.min_width:
@@ -361,8 +405,14 @@ class EmbroiderySimulator(wx.Frame):
         self.current_frame += self.stitches_per_frame * self.animation_direction
 
         if self.current_frame <= len(self.lines) and self.current_frame >= 1:
+            #Calculate time_to_next_frame
+            start = time.time()
             self.draw_one_frame()
-            self.timer.StartOnce(self.frame_period)
+            duration = time.time() - start
+            duration_ms = int(duration * 1000)
+            time_to_next_frame = self.frame_period - duration_ms
+            time_to_next_frame = max(1, time_to_next_frame)
+            self.timer.StartOnce(time_to_next_frame)
         elif self.current_frame > len(self.lines):
             self.current_frame = len(self.lines)
             self.draw_one_frame()
@@ -379,14 +429,3 @@ class EmbroiderySimulator(wx.Frame):
         self.clear()
         self.visible_lines = self.lines[:self.current_frame]
         self.dc.DrawLineList(self.visible_lines, self.pens[:self.current_frame])
-
-    '''
-    Calculate time_to_next_frame
-    start = time.time()
-    self.draw_one_frame()
-    duration = time.time() - start
-    duration_ms = int(duration * 1000)
-    time_to_next_frame = self.frame_period - duration_ms
-    time_to_next_frame = max(0.01, time_to_next_frame)
-    self.timer.StartOnce(time_to_next_frame)
-    '''

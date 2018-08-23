@@ -422,6 +422,7 @@ class SettingsFrame(wx.Frame):
         if self.simulate_window:
             self.simulate_window.stop()
             self.simulate_window.load(stitch_plan=stitch_plan)
+            self.simulate_window.calculate_dimensions()
 
             children = self.simulate_window.GetChildren()
             for child in children:
