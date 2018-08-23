@@ -200,9 +200,9 @@
     </symbol>
     <symbol
        style="display:inline"
-       id="inkstitch_frame_out">
+       id="inkstitch_stop_position">
       <title
-         id="inkstitch_title9427-6">Frame out (move rame out to allow operator to trim applique)</title>
+         id="inkstitch_title9427-6">Jump destination for Stop commands (a.k.a. "Frame Out position").</title>
       <path
          inkscape:connector-curvature="0"
          style="opacity:1;vector-effect:none;fill:#fafafa;fill-opacity:1;fill-rule:evenodd;stroke:#003399;stroke-width:1.06500006;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.19500017, 3.19500017;stroke-dashoffset:0;stroke-opacity:1"
