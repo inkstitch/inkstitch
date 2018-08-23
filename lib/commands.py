@@ -1,9 +1,9 @@
 import inkex
 import cubicsuperpath
 
-from .svg import apply_transforms
+from .svg import apply_transforms, get_node_transform
 from .svg.tags import SVG_USE_TAG, SVG_SYMBOL_TAG, CONNECTION_START, CONNECTION_END, XLINK_HREF
-from .utils import cache
+from .utils import cache, Point
 from .i18n import _, N_
 
 COMMANDS = {
@@ -116,6 +116,15 @@ class StandaloneCommand(BaseCommand):
             raise CommandParseError("use points to non-symbol")
 
         self.parse_symbol()
+
+    @property
+    @cache
+    def point(self):
+        pos = [float(self.node.get("x", 0)), float(self.node.get("y", 0))]
+        transform = get_node_transform(self.node)
+        simpletransform.applyTransformToPoint(transform, pos)
+
+        return Point(*pos)
 
 
 def get_command_description(command):
