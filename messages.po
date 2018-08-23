@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-24 20:54-0400\n"
+"POT-Creation-Date: 2018-08-24 20:56-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,38 +18,92 @@ msgstr ""
 "Generated-By: Babel 2.5.3\n"
 
 #. command attached to an object
-#: lib/commands.py:12
+#: lib/commands.py:13
+msgid "fill_start"
+msgstr ""
+
+#: lib/commands.py:13
 msgid "Fill stitch starting position"
 msgstr ""
 
 #. command attached to an object
-#: lib/commands.py:15
+#: lib/commands.py:16
+msgid "fill_end"
+msgstr ""
+
+#: lib/commands.py:16
 msgid "Fill stitch ending position"
 msgstr ""
 
 #. command attached to an object
-#: lib/commands.py:18
+#: lib/commands.py:19
+msgid "stop"
+msgstr ""
+
+#: lib/commands.py:19
 msgid "Stop (pause machine) after sewing this object"
 msgstr ""
 
 #. command attached to an object
-#: lib/commands.py:21
+#: lib/commands.py:22
+msgid "trim"
+msgstr ""
+
+#: lib/commands.py:22
 msgid "Trim thread after sewing this object"
 msgstr ""
 
 #. command attached to an object
-#: lib/commands.py:24
+#: lib/commands.py:25
+msgid "ignore_object"
+msgstr ""
+
+#: lib/commands.py:25
 msgid "Ignore this object (do not stitch)"
 msgstr ""
 
 #. command that affects a layer
-#: lib/commands.py:27
+#: lib/commands.py:28
+msgid "ignore_layer"
+msgstr ""
+
+#: lib/commands.py:28
 msgid "Ignore layer (do not stitch any objects in this layer)"
 msgstr ""
 
 #. command that affects entire document
-#: lib/commands.py:30
+#: lib/commands.py:31
+msgid "origin"
+msgstr ""
+
+#: lib/commands.py:31
 msgid "Origin for exported embroidery files"
+msgstr ""
+
+#. command that affects entire document
+#: lib/commands.py:34
+msgid "stop_point"
+msgstr ""
+
+#: lib/commands.py:34
+msgid "Jump destination for Stop commands (a.k.a. \"Frame Out position\")."
+msgstr ""
+
+#: lib/commands.py:188
+#, python-format
+msgid ""
+"Error: there is more than one %(command)s command in the document, but "
+"there can only be one.  Please remove all but one."
+msgstr ""
+
+#. This is a continuation of the previous error message, letting the user know
+#. what command we're talking about since we don't normally expose the actual
+#. command name to them.  Contents of %(description)s are in a separate
+#. translation
+#. string.
+#: lib/commands.py:195
+#, python-format
+msgid "%(command)s: %(description)s"
 msgstr ""
 
 #: lib/elements/auto_fill.py:11

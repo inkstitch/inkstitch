@@ -1,3 +1,4 @@
+import sys
 import inkex
 import cubicsuperpath
 import simpletransform
@@ -9,25 +10,28 @@ from .i18n import _, N_
 
 COMMANDS = {
     # L10N command attached to an object
-    "fill_start": N_("Fill stitch starting position"),
+    N_("fill_start"): N_("Fill stitch starting position"),
 
     # L10N command attached to an object
-    "fill_end": N_("Fill stitch ending position"),
+    N_("fill_end"): N_("Fill stitch ending position"),
 
     # L10N command attached to an object
-    "stop": N_("Stop (pause machine) after sewing this object"),
+    N_("stop"): N_("Stop (pause machine) after sewing this object"),
 
     # L10N command attached to an object
-    "trim": N_("Trim thread after sewing this object"),
+    N_("trim"): N_("Trim thread after sewing this object"),
 
     # L10N command attached to an object
-    "ignore_object": N_("Ignore this object (do not stitch)"),
+    N_("ignore_object"): N_("Ignore this object (do not stitch)"),
 
     # L10N command that affects a layer
-    "ignore_layer": N_("Ignore layer (do not stitch any objects in this layer)"),
+    N_("ignore_layer"): N_("Ignore layer (do not stitch any objects in this layer)"),
 
     # L10N command that affects entire document
-    "origin": N_("Origin for exported embroidery files"),
+    N_("origin"): N_("Origin for exported embroidery files"),
+
+    # L10N command that affects entire document
+    N_("stop_point"): N_("Jump destination for Stop commands (a.k.a. \"Frame Out position\")."),
 }
 
 OBJECT_COMMANDS = ["fill_start", "fill_end", "stop", "trim", "ignore_object"]
@@ -132,7 +136,7 @@ class StandaloneCommand(BaseCommand):
 
 
 def get_command_description(command):
-    return _(COMMANDS[command])
+    return COMMANDS[command]
 
 
 def find_commands(node):
@@ -168,6 +172,31 @@ def global_commands(svg, command):
     for standalone_command in _standalone_commands(svg):
         if standalone_command.command == command:
             yield standalone_command
+
+@cache
+def global_command(svg, command):
+    """Find a single command of the specified type.
+
+    If more than one is found, print an error and exit.
+    """
+
+    commands = list(global_commands(svg, command))
+
+    if len(commands) == 1:
+        return commands[0]
+    elif len(commands) > 1:
+        print >> sys.stderr, _("Error: there is more than one %(command)s command in the document, but there can only be one.  "
+                               "Please remove all but one.") % dict(command=command)
+
+        # L10N This is a continuation of the previous error message, letting the user know
+        # what command we're talking about since we don't normally expose the actual
+        # command name to them.  Contents of %(description)s are in a separate translation
+        # string.
+        print >> sys.stderr, _("%(command)s: %(description)s") % dict(command=command, description=_(get_command_description(command)))
+
+        sys.exit(1)
+    else:
+        return None
 
 
 def _standalone_commands(svg):

@@ -5,7 +5,7 @@ import shapely.geometry as shgeo
 
 from .utils import Point
 from .svg import PIXELS_PER_MM, get_doc_size, get_viewbox_transform
-from .commands import global_commands
+from .commands import global_command
 
 
 def get_command(stitch):
@@ -27,12 +27,10 @@ def _string_to_floats(string):
 
 
 def get_origin(svg):
-    origin_commands = list(global_commands(svg, "origin"))
+    origin_command = global_command(svg, "origin")
 
-    if origin_commands:
-        origin = origin_commands[0].point
-
-        return origin
+    if origin_command:
+        return origin_command.point
     else:
         # default: center of the canvas
 
@@ -49,6 +47,12 @@ def get_origin(svg):
         return default
 
 
+def jump_to_stop_point(pattern, svg):
+    stop_position = global_command(svg, "stop_position")
+    if stop_position:
+        pattern.add_stitch_absolute(pyembroidery.JUMP, stop_position.point.x, stop_position.point.y)
+
+
 def write_embroidery_file(file_path, stitch_plan, svg):
     origin = get_origin(svg)
 
@@ -58,6 +62,8 @@ def write_embroidery_file(file_path, stitch_plan, svg):
         pattern.add_thread(color_block.color.pyembroidery_thread)
 
         for stitch in color_block:
+            if stitch.stop:
+                jump_to_stop_point(pattern, svg)
             command = get_command(stitch)
             pattern.add_stitch_absolute(command, stitch.x, stitch.y)
 
