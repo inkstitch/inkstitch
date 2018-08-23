@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-24 20:45-0400\n"
+"POT-Creation-Date: 2018-08-24 20:54-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,33 +18,38 @@ msgstr ""
 "Generated-By: Babel 2.5.3\n"
 
 #. command attached to an object
-#: lib/commands.py:11
+#: lib/commands.py:12
 msgid "Fill stitch starting position"
 msgstr ""
 
 #. command attached to an object
-#: lib/commands.py:14
+#: lib/commands.py:15
 msgid "Fill stitch ending position"
 msgstr ""
 
 #. command attached to an object
-#: lib/commands.py:17
+#: lib/commands.py:18
 msgid "Stop (pause machine) after sewing this object"
 msgstr ""
 
 #. command attached to an object
-#: lib/commands.py:20
+#: lib/commands.py:21
 msgid "Trim thread after sewing this object"
 msgstr ""
 
 #. command attached to an object
-#: lib/commands.py:23
+#: lib/commands.py:24
 msgid "Ignore this object (do not stitch)"
 msgstr ""
 
-#. command that affects entire layer
-#: lib/commands.py:26
+#. command that affects a layer
+#: lib/commands.py:27
 msgid "Ignore layer (do not stitch any objects in this layer)"
+msgstr ""
+
+#. command that affects entire document
+#: lib/commands.py:30
+msgid "Origin for exported embroidery files"
 msgstr ""
 
 #: lib/elements/auto_fill.py:11

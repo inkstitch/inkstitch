@@ -5,6 +5,7 @@ import shapely.geometry as shgeo
 
 from .utils import Point
 from .svg import PIXELS_PER_MM, get_doc_size, get_viewbox_transform
+from .commands import global_commands
 
 
 def get_command(stitch):
@@ -26,57 +27,25 @@ def _string_to_floats(string):
 
 
 def get_origin(svg):
-    # The user can specify the embroidery origin by defining two guides
-    # named "embroidery origin" that intersect.
+    origin_commands = list(global_commands(svg, "origin"))
 
-    namedview = svg.find(inkex.addNS('namedview', 'sodipodi'))
-    all_guides = namedview.findall(inkex.addNS('guide', 'sodipodi'))
-    label_attribute = inkex.addNS('label', 'inkscape')
-    guides = [guide for guide in all_guides
-              if guide.get(label_attribute, "").startswith("embroidery origin")]
+    if origin_commands:
+        origin = origin_commands[0].point
 
-    # document size used below
-    doc_size = list(get_doc_size(svg))
-
-    # convert the size from viewbox-relative to real-world pixels
-    viewbox_transform = get_viewbox_transform(svg)
-    simpletransform.applyTransformToPoint(simpletransform.invertTransform(viewbox_transform), doc_size)
-
-    default = [doc_size[0] / 2.0, doc_size[1] / 2.0]
-    simpletransform.applyTransformToPoint(viewbox_transform, default)
-    default = Point(*default)
-
-    if len(guides) < 2:
-        return default
-
-    # Find out where the guides intersect.  Only pay attention to the first two.
-    guides = guides[:2]
-
-    lines = []
-    for guide in guides:
-        # inkscape's Y axis is reversed from SVG's, and the guide is in inkscape coordinates
-        position = Point(*_string_to_floats(guide.get('position')))
-        position.y = doc_size[1] - position.y
-
-        # This one baffles me.  I think inkscape might have gotten the order of
-        # their vector wrong?
-        parts = _string_to_floats(guide.get('orientation'))
-        direction = Point(parts[1], parts[0])
-
-        # We have a theoretically infinite line defined by a point on the line
-        # and a vector direction.  Shapely can only deal in concrete line
-        # segments, so we'll pick points really far in either direction on the
-        # line and call it good enough.
-        lines.append(shgeo.LineString((position + 100000 * direction, position - 100000 * direction)))
-
-    intersection = lines[0].intersection(lines[1])
-
-    if isinstance(intersection, shgeo.Point):
-        origin = [intersection.x, intersection.y]
-        simpletransform.applyTransformToPoint(viewbox_transform, origin)
-        return Point(*origin)
+        return origin
     else:
-        # Either the two guides are the same line, or they're parallel.
+        # default: center of the canvas
+
+        doc_size = list(get_doc_size(svg))
+
+        # convert the size from viewbox-relative to real-world pixels
+        viewbox_transform = get_viewbox_transform(svg)
+        simpletransform.applyTransformToPoint(simpletransform.invertTransform(viewbox_transform), doc_size)
+
+        default = [doc_size[0] / 2.0, doc_size[1] / 2.0]
+        simpletransform.applyTransformToPoint(viewbox_transform, default)
+        default = Point(*default)
+
         return default
 
 

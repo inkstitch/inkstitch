@@ -1,5 +1,6 @@
 import inkex
 import cubicsuperpath
+import simpletransform
 
 from .svg import apply_transforms, get_node_transform
 from .svg.tags import SVG_USE_TAG, SVG_SYMBOL_TAG, CONNECTION_START, CONNECTION_END, XLINK_HREF
@@ -22,8 +23,11 @@ COMMANDS = {
     # L10N command attached to an object
     "ignore_object": N_("Ignore this object (do not stitch)"),
 
-    # L10N command that affects entire layer
-    "ignore_layer": N_("Ignore layer (do not stitch any objects in this layer)")
+    # L10N command that affects a layer
+    "ignore_layer": N_("Ignore layer (do not stitch any objects in this layer)"),
+
+    # L10N command that affects entire document
+    "origin": N_("Origin for exported embroidery files"),
 }
 
 OBJECT_COMMANDS = ["fill_start", "fill_end", "stop", "trim", "ignore_object"]
@@ -153,30 +157,30 @@ def find_commands(node):
 def layer_commands(layer, command):
     """Find standalone (unconnected) command symbols in this layer."""
 
-    commands = []
+    for global_command in global_commands(layer.getroottree().getroot(), command):
+        if layer in global_command.node.iterancestors():
+            yield global_command
 
-    for standalone_command in standalone_commands(layer.getroottree().getroot()):
+
+def global_commands(svg, command):
+    """Find standalone (unconnected) command symbols anywhere in the document."""
+
+    for standalone_command in _standalone_commands(svg):
         if standalone_command.command == command:
-            if layer in standalone_command.node.iterancestors():
-                commands.append(command)
-
-    return commands
+            yield standalone_command
 
 
-def standalone_commands(svg):
+def _standalone_commands(svg):
     """Find all unconnected command symbols in the SVG."""
 
     xpath = ".//svg:use[starts-with(@xlink:href, '#inkstitch_')]"
     symbols = svg.xpath(xpath, namespaces=inkex.NSS)
 
-    commands = []
     for symbol in symbols:
         try:
-            commands.append(StandaloneCommand(symbol))
+            yield StandaloneCommand(symbol)
         except CommandParseError:
             pass
-
-    return commands
 
 
 def is_command(node):
