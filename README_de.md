@@ -16,7 +16,7 @@ Willst du mehr erfahren?
 
 # Hintergrund und Philosophie
 
-_by @lexelby, ein Ink/Stitch Programmierer_
+_by @lexelby, ein Ink/Stitch Programmierer (translated by @kaalleen & @AkiraNorthstar)_
 
 Ich erhielt ein wirklich wunderbares Weihnachtsgeschenk für einen Programmierer: eine [Stickmaschine](http://www.brother-usa.com/homesewing/ModelDetail.aspx?ProductID=SE400). Es ähnelt so ziemlich einer CNC-Maschine ... Ich musste einfach herausfinden wie man Programme dafür erstellt. Das Problem daran ist, **alle kostenlosen Stickdesign-Software Varianten** haben ein Defizit, vor allem wenn die Anforderung ist unter Linux, meinem Betriebssystem der Wahl, zu laufen.
 
