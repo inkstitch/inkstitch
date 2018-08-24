@@ -89,7 +89,7 @@ msgstr ""
 msgid "Jump destination for Stop commands (a.k.a. \"Frame Out position\")."
 msgstr ""
 
-#: lib/commands.py:188
+#: lib/commands.py:189
 #, python-format
 msgid ""
 "Error: there is more than one %(command)s command in the document, but "
@@ -101,7 +101,7 @@ msgstr ""
 #. command name to them.  Contents of %(description)s are in a separate
 #. translation
 #. string.
-#: lib/commands.py:195
+#: lib/commands.py:196
 #, python-format
 msgid "%(command)s: %(description)s"
 msgstr ""

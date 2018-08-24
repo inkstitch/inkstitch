@@ -173,6 +173,7 @@ def global_commands(svg, command):
         if standalone_command.command == command:
             yield standalone_command
 
+
 @cache
 def global_command(svg, command):
     """Find a single command of the specified type.

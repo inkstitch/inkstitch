@@ -1,7 +1,5 @@
 import pyembroidery
-import inkex
 import simpletransform
-import shapely.geometry as shgeo
 
 from .utils import Point
 from .svg import PIXELS_PER_MM, get_doc_size, get_viewbox_transform
