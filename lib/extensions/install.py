@@ -14,6 +14,7 @@ import wx
 import inkex
 
 from ..utils import guess_inkscape_config_path, get_bundled_dir
+from ..i18n import _
 
 
 class InstallerFrame(wx.Frame):

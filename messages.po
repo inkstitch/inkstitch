@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-23 20:56-0400\n"
+"POT-Creation-Date: 2018-08-23 21:24-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -409,52 +409,52 @@ msgstr ""
 msgid "Please select one or more satin columns to flip."
 msgstr ""
 
-#: lib/extensions/install.py:30
+#: lib/extensions/install.py:31
 msgid ""
 "Ink/Stitch can install files (\"add-ons\") that make it easier to use "
 "Inkscape to create machine embroidery designs.  These add-ons will be "
 "installed:"
 msgstr ""
 
-#: lib/extensions/install.py:31
+#: lib/extensions/install.py:32
 msgid "thread manufacturer color palettes"
 msgstr ""
 
-#: lib/extensions/install.py:32
+#: lib/extensions/install.py:33
 msgid "Ink/Stitch visual commands (Object -> Symbols...)"
 msgstr ""
 
-#: lib/extensions/install.py:41
+#: lib/extensions/install.py:42
 msgid "Install"
 msgstr ""
 
-#: lib/extensions/install.py:44 lib/extensions/params.py:380
+#: lib/extensions/install.py:45 lib/extensions/params.py:380
 msgid "Cancel"
 msgstr ""
 
-#: lib/extensions/install.py:58
+#: lib/extensions/install.py:59
 msgid "Choose Inkscape directory"
 msgstr ""
 
-#: lib/extensions/install.py:68
+#: lib/extensions/install.py:69
 msgid "Inkscape add-on installation failed"
 msgstr ""
 
-#: lib/extensions/install.py:69
+#: lib/extensions/install.py:70
 msgid "Installation Failed"
 msgstr ""
 
-#: lib/extensions/install.py:73
+#: lib/extensions/install.py:74
 msgid ""
 "Inkscape add-on files have been installed.  Please restart Inkscape to "
 "load the new add-ons."
 msgstr ""
 
-#: lib/extensions/install.py:74
+#: lib/extensions/install.py:75
 msgid "Installation Completed"
 msgstr ""
 
-#: lib/extensions/install.py:107
+#: lib/extensions/install.py:108
 msgid "Ink/Stitch Add-ons Installer"
 msgstr ""
 
