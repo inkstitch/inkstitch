@@ -5,15 +5,16 @@
     <dependency type="executable" location="extensions">inkstitch.py</dependency>
     <dependency type="executable" location="extensions">inkex.py</dependency>
     {% for command, description in object_commands %}
-    <param name="{{ object }}" type="boolean" _gui-text="{{ _(description ) }}">false</param>
+    <param name="{{ command }}" type="boolean" _gui-text="{{ _(description ) }}">false</param>
     {% endfor %}
+    <param name="extension" type="string" gui-hidden="true">object_commands</param>
     <effect>
         <object-type>all</object-type>
-        <submenu name="Ink/Stitch">
+        <effects-menu>
             <submenu name="Ink/Stitch">
                 <submenu name="{% trans %}English{% endtrans %}" />
             </submenu>
-        </submenu>
+        </effects-menu>
     </effect>
     <script>
         <command reldir="extensions" interpreter="python">inkstitch.py</command>
