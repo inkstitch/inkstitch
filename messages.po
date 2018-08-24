@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-22 14:16-0400\n"
+"POT-Creation-Date: 2018-08-23 20:56-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1118,7 +1118,7 @@ msgstr ""
 #. translation.
 #: templates/convert_to_satin.inx:12 templates/embroider.inx:24
 #: templates/flip.inx:12 templates/install.inx:12
-#: templates/layer_commands.inx:16 templates/object_commands.inx:14
+#: templates/layer_commands.inx:16 templates/object_commands.inx:15
 #: templates/params.inx:12 templates/print.inx:12 templates/simulate.inx:12
 msgid "English"
 msgstr ""
