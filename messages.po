@@ -82,14 +82,14 @@ msgstr ""
 
 #. command that affects entire document
 #: lib/commands.py:34
-msgid "stop_point"
+msgid "stop_position"
 msgstr ""
 
 #: lib/commands.py:34
 msgid "Jump destination for Stop commands (a.k.a. \"Frame Out position\")."
 msgstr ""
 
-#: lib/commands.py:189
+#: lib/commands.py:190
 #, python-format
 msgid ""
 "Error: there is more than one %(command)s command in the document, but "
@@ -101,7 +101,7 @@ msgstr ""
 #. command name to them.  Contents of %(description)s are in a separate
 #. translation
 #. string.
-#: lib/commands.py:196
+#: lib/commands.py:197
 #, python-format
 msgid "%(command)s: %(description)s"
 msgstr ""
@@ -1176,9 +1176,10 @@ msgstr ""
 #. to your language's word for its language, e.g. "Español" for the spanish
 #. translation.
 #: templates/convert_to_satin.inx:12 templates/embroider.inx:24
-#: templates/flip.inx:12 templates/install.inx:12
-#: templates/layer_commands.inx:16 templates/object_commands.inx:15
-#: templates/params.inx:12 templates/print.inx:12 templates/simulate.inx:12
+#: templates/flip.inx:12 templates/global_commands.inx:16
+#: templates/install.inx:12 templates/layer_commands.inx:16
+#: templates/object_commands.inx:15 templates/params.inx:12
+#: templates/print.inx:12 templates/simulate.inx:12
 msgid "English"
 msgstr ""
 
@@ -1224,6 +1225,20 @@ msgstr ""
 msgid "Flip Satin Columns"
 msgstr ""
 
+#: templates/global_commands.inx:3
+msgid "Add Commands"
+msgstr ""
+
+#: templates/global_commands.inx:7
+msgid "These commands affect the entire embroidery design."
+msgstr ""
+
+#. Inkscape submenu under Extensions -> Ink/Stitch
+#: templates/global_commands.inx:18 templates/layer_commands.inx:17
+#: templates/object_commands.inx:16
+msgid "Commands"
+msgstr ""
+
 #: templates/input.inx:11
 #, python-format
 msgid "convert %(file_extension)s file to Ink/Stitch manual-stitch paths"
@@ -1242,7 +1257,7 @@ msgid "Commands will be added to the currently-selected layer."
 msgstr ""
 
 #: templates/object_commands.inx:3
-msgid "Attach Commands"
+msgid "Attach Commands to Selected Objects"
 msgstr ""
 
 #: templates/output.inx:11

@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <name>{% trans %}Attach Commands to Selected Objects{% endtrans %}</name>
-    <id>org.inkstitch.commands.{{ locale }}</id>
+    <name>{% trans %}Add Commands{% endtrans %}</name>
+    <id>org.inkstitch.global_commands.{{ locale }}</id>
     <dependency type="executable" location="extensions">inkstitch.py</dependency>
     <dependency type="executable" location="extensions">inkex.py</dependency>
-    {% for command, description in object_commands %}
-    <param name="{{ command }}" type="boolean" _gui-text="{{ _(description ) }}">false</param>
+    <param name="description" type="description">{% trans %}These commands affect the entire embroidery design.{% endtrans %}</param>
+    {% for command, description in global_commands %}
+    <param name="{{ command }}" type="boolean" _gui-text="{{ _(description) }}">false</param>
     {% endfor %}
-    <param name="extension" type="string" gui-hidden="true">object_commands</param>
+    <param name="extension" type="string" gui-hidden="true">global_commands</param>
     <effect>
         <object-type>all</object-type>
         <effects-menu>
             <submenu name="Ink/Stitch">
                 <submenu name="{% trans %}English{% endtrans %}">
+                    {# L10N Inkscape submenu under Extensions -> Ink/Stitch #}
                     <submenu name="{% trans %}Commands{% endtrans %}" />
                 </submenu>
             </submenu>

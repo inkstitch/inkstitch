@@ -3,7 +3,7 @@ import pyembroidery
 from .utils import build_environment, write_inx_file
 from .outputs import pyembroidery_output_formats
 from ..extensions import extensions, Input, Output
-from ..commands import LAYER_COMMANDS, OBJECT_COMMANDS, COMMANDS
+from ..commands import LAYER_COMMANDS, OBJECT_COMMANDS, GLOBAL_COMMANDS, COMMANDS
 
 
 def layer_commands():
@@ -11,6 +11,10 @@ def layer_commands():
     # want to call _() on the description inside the actual template so that
     # we use the translation language selected in build_environment().
     return [(command, COMMANDS[command]) for command in LAYER_COMMANDS]
+
+
+def global_commands():
+    return [(command, COMMANDS[command]) for command in GLOBAL_COMMANDS]
 
 
 def object_commands():
@@ -35,4 +39,5 @@ def generate_extension_inx_files():
         write_inx_file(name, template.render(formats=pyembroidery_output_formats(),
                                              debug_formats=pyembroidery_debug_formats(),
                                              layer_commands=layer_commands(),
-                                             object_commands=object_commands()))
+                                             object_commands=object_commands(),
+                                             global_commands=global_commands()))

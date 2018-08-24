@@ -31,11 +31,12 @@ COMMANDS = {
     N_("origin"): N_("Origin for exported embroidery files"),
 
     # L10N command that affects entire document
-    N_("stop_point"): N_("Jump destination for Stop commands (a.k.a. \"Frame Out position\")."),
+    N_("stop_position"): N_("Jump destination for Stop commands (a.k.a. \"Frame Out position\")."),
 }
 
 OBJECT_COMMANDS = ["fill_start", "fill_end", "stop", "trim", "ignore_object"]
 LAYER_COMMANDS = ["ignore_layer"]
+GLOBAL_COMMANDS = ["origin", "stop_position"]
 
 
 class CommandParseError(Exception):
