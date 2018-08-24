@@ -56,4 +56,4 @@ locales:
 
 .PHONY: style
 style:
-	flake8 . --count --max-complexity=10 --max-line-length=150 --statistics --exclude=pyembroidery,__init__.py
+	flake8 . --count --max-complexity=10 --max-line-length=150 --statistics --exclude=pyembroidery,__init__.py,simulator.py,params.py
