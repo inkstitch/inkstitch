@@ -14,6 +14,7 @@ import wx
 import inkex
 
 from ..utils import guess_inkscape_config_path, get_bundled_dir
+from ..i18n import _
 
 
 class InstallerFrame(wx.Frame):
@@ -98,6 +99,10 @@ class InstallerFrame(wx.Frame):
                 shutil.copy(palette_file, dest)
 
 class Install(inkex.Effect):
+    @classmethod
+    def name(cls):
+        return "install"
+
     def effect(self):
         app = wx.App()
         installer_frame = InstallerFrame(None, title=_("Ink/Stitch Add-ons Installer"), size=(550, 250))
