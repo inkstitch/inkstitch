@@ -123,7 +123,7 @@ class InkstitchExtension(inkex.Effect):
             return []
 
         if node.tag == SVG_GROUP_TAG and node.get(INKSCAPE_GROUPMODE) == "layer":
-            if layer_commands(node, "ignore_layer"):
+            if len(list(layer_commands(node, "ignore_layer"))):
                 return []
 
         if element.has_style('display') and element.get_style('display') is None:

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-24 20:45-0400\n"
+"POT-Creation-Date: 2018-08-24 20:56-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,33 +18,92 @@ msgstr ""
 "Generated-By: Babel 2.5.3\n"
 
 #. command attached to an object
-#: lib/commands.py:11
+#: lib/commands.py:13
+msgid "fill_start"
+msgstr ""
+
+#: lib/commands.py:13
 msgid "Fill stitch starting position"
 msgstr ""
 
 #. command attached to an object
-#: lib/commands.py:14
+#: lib/commands.py:16
+msgid "fill_end"
+msgstr ""
+
+#: lib/commands.py:16
 msgid "Fill stitch ending position"
 msgstr ""
 
 #. command attached to an object
-#: lib/commands.py:17
+#: lib/commands.py:19
+msgid "stop"
+msgstr ""
+
+#: lib/commands.py:19
 msgid "Stop (pause machine) after sewing this object"
 msgstr ""
 
 #. command attached to an object
-#: lib/commands.py:20
+#: lib/commands.py:22
+msgid "trim"
+msgstr ""
+
+#: lib/commands.py:22
 msgid "Trim thread after sewing this object"
 msgstr ""
 
 #. command attached to an object
-#: lib/commands.py:23
+#: lib/commands.py:25
+msgid "ignore_object"
+msgstr ""
+
+#: lib/commands.py:25
 msgid "Ignore this object (do not stitch)"
 msgstr ""
 
-#. command that affects entire layer
-#: lib/commands.py:26
+#. command that affects a layer
+#: lib/commands.py:28
+msgid "ignore_layer"
+msgstr ""
+
+#: lib/commands.py:28
 msgid "Ignore layer (do not stitch any objects in this layer)"
+msgstr ""
+
+#. command that affects entire document
+#: lib/commands.py:31
+msgid "origin"
+msgstr ""
+
+#: lib/commands.py:31
+msgid "Origin for exported embroidery files"
+msgstr ""
+
+#. command that affects entire document
+#: lib/commands.py:34
+msgid "stop_position"
+msgstr ""
+
+#: lib/commands.py:34
+msgid "Jump destination for Stop commands (a.k.a. \"Frame Out position\")."
+msgstr ""
+
+#: lib/commands.py:190
+#, python-format
+msgid ""
+"Error: there is more than one %(command)s command in the document, but "
+"there can only be one.  Please remove all but one."
+msgstr ""
+
+#. This is a continuation of the previous error message, letting the user know
+#. what command we're talking about since we don't normally expose the actual
+#. command name to them.  Contents of %(description)s are in a separate
+#. translation
+#. string.
+#: lib/commands.py:197
+#, python-format
+msgid "%(command)s: %(description)s"
 msgstr ""
 
 #: lib/elements/auto_fill.py:11
@@ -1117,9 +1176,10 @@ msgstr ""
 #. to your language's word for its language, e.g. "Español" for the spanish
 #. translation.
 #: templates/convert_to_satin.inx:12 templates/embroider.inx:24
-#: templates/flip.inx:12 templates/install.inx:12
-#: templates/layer_commands.inx:16 templates/object_commands.inx:15
-#: templates/params.inx:12 templates/print.inx:12 templates/simulate.inx:12
+#: templates/flip.inx:12 templates/global_commands.inx:16
+#: templates/install.inx:12 templates/layer_commands.inx:16
+#: templates/object_commands.inx:15 templates/params.inx:12
+#: templates/print.inx:12 templates/simulate.inx:12
 msgid "English"
 msgstr ""
 
@@ -1165,6 +1225,20 @@ msgstr ""
 msgid "Flip Satin Columns"
 msgstr ""
 
+#: templates/global_commands.inx:3
+msgid "Add Commands"
+msgstr ""
+
+#: templates/global_commands.inx:7
+msgid "These commands affect the entire embroidery design."
+msgstr ""
+
+#. Inkscape submenu under Extensions -> Ink/Stitch
+#: templates/global_commands.inx:18 templates/layer_commands.inx:17
+#: templates/object_commands.inx:16
+msgid "Commands"
+msgstr ""
+
 #: templates/input.inx:11
 #, python-format
 msgid "convert %(file_extension)s file to Ink/Stitch manual-stitch paths"
@@ -1183,7 +1257,7 @@ msgid "Commands will be added to the currently-selected layer."
 msgstr ""
 
 #: templates/object_commands.inx:3
-msgid "Attach Commands"
+msgid "Attach Commands to Selected Objects"
 msgstr ""
 
 #: templates/output.inx:11

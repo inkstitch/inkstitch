@@ -13,7 +13,9 @@
         <object-type>all</object-type>
         <effects-menu>
             <submenu name="Ink/Stitch">
-                <submenu name="{% trans %}English{% endtrans %}" />
+                <submenu name="{% trans %}English{% endtrans %}">
+                    <submenu name="{% trans %}Commands{% endtrans %}" />
+                </submenu>
             </submenu>
         </effects-menu>
     </effect>
