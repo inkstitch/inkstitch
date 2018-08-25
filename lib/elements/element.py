@@ -1,6 +1,5 @@
 import sys
 from copy import deepcopy
-from shapely import geometry as shgeo
 
 from ..i18n import _
 from ..utils import cache
@@ -8,7 +7,6 @@ from ..svg import PIXELS_PER_MM, convert_length, get_doc_size, apply_transforms
 from ..commands import find_commands
 
 # inkscape-provided utilities
-import simpletransform
 import simplestyle
 import cubicsuperpath
 from cspsubdiv import cspsubdiv
@@ -157,7 +155,7 @@ class EmbroideryElement(object):
         doc_width, doc_height = get_doc_size(svg)
         viewbox = svg.get('viewBox', '0 0 %s %s' % (doc_width, doc_height))
         viewbox = viewbox.strip().replace(',', ' ').split()
-        return  doc_width / float(viewbox[2])
+        return doc_width / float(viewbox[2])
 
     @property
     @cache
@@ -230,7 +228,7 @@ class EmbroideryElement(object):
             return commands[0]
         elif len(commands) > 1:
             raise ValueError(_("%(id)s has more than one command of type '%(command)s' linked to it") %
-                                dict(id=self.node.get(id), command=command))
+                             dict(id=self.node.get(id), command=command))
         else:
             return None
 

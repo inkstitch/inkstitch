@@ -28,44 +28,47 @@ class Stroke(EmbroideryElement):
 
     @property
     @param('running_stitch_length_mm',
-            _('Running stitch length'),
-            tooltip=_('Length of stitches in running stitch mode.'),
-            unit='mm',
-            type='float',
-            default=1.5,
-            sort_index=3)
+           _('Running stitch length'),
+           tooltip=_('Length of stitches in running stitch mode.'),
+           unit='mm',
+           type='float',
+           default=1.5,
+           sort_index=3)
     def running_stitch_length(self):
         return max(self.get_float_param("running_stitch_length_mm", 1.5), 0.01)
 
     @property
-    @param('bean_stitch_repeats',
-           _('Bean stitch number of repeats'),
-           tooltip=_('Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.  Only applies to running stitch.'),
-           type='int',
-           default=0,
-           sort_index=2)
+    @param(
+        'bean_stitch_repeats',
+        _('Bean stitch number of repeats'),
+        tooltip=_('Backtrack each stitch this many times.  '
+                  'A value of 1 would triple each stitch (forward, back, forward).  '
+                  'A value of 2 would quintuple each stitch, etc.  Only applies to running stitch.'),
+        type='int',
+        default=0,
+        sort_index=2)
     def bean_stitch_repeats(self):
         return self.get_int_param("bean_stitch_repeats", 0)
 
     @property
     @param('zigzag_spacing_mm',
-            _('Zig-zag spacing (peak-to-peak)'),
-            tooltip=_('Length of stitches in zig-zag mode.'),
-            unit='mm',
-            type='float',
-            default=0.4,
-            sort_index=3)
+           _('Zig-zag spacing (peak-to-peak)'),
+           tooltip=_('Length of stitches in zig-zag mode.'),
+           unit='mm',
+           type='float',
+           default=0.4,
+           sort_index=3)
     @cache
     def zigzag_spacing(self):
         return max(self.get_float_param("zigzag_spacing_mm", 0.4), 0.01)
 
     @property
     @param('repeats',
-            _('Repeats'),
-            tooltip=_('Defines how many times to run down and back along the path.'),
-            type='int',
-            default="1",
-            sort_index=1)
+           _('Repeats'),
+           tooltip=_('Defines how many times to run down and back along the path.'),
+           type='int',
+           default="1",
+           sort_index=1)
     def repeats(self):
         return self.get_int_param("repeats", 1)
 
@@ -86,11 +89,11 @@ class Stroke(EmbroideryElement):
 
     @property
     @param('manual_stitch',
-            _('Manual stitch placement'),
-            tooltip=_("Stitch every node in the path.  Stitch length and zig-zag spacing are ignored."),
-            type='boolean',
-            default=False,
-            sort_index=0)
+           _('Manual stitch placement'),
+           tooltip=_("Stitch every node in the path.  Stitch length and zig-zag spacing are ignored."),
+           type='boolean',
+           default=False,
+           sort_index=0)
     def manual_stitch_mode(self):
         return self.get_boolean_param('manual_stitch')
 
@@ -121,9 +124,9 @@ class Stroke(EmbroideryElement):
             global warned_about_legacy_running_stitch
             if not warned_about_legacy_running_stitch:
                 warned_about_legacy_running_stitch = True
-                print >> sys.stderr, _("Legacy running stitch setting detected!\n\nIt looks like you're using a stroke " + \
-                    "smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set " + \
-                    "your stroke to be dashed to indicate running stitch.  Any kind of dash will work.")
+                print >> sys.stderr, _("Legacy running stitch setting detected!\n\nIt looks like you're using a stroke " +
+                                       "smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set " +
+                                       "your stroke to be dashed to indicate running stitch.  Any kind of dash will work.")
 
             # still allow the deprecated setting to work in order to support old files
             return True
@@ -173,7 +176,6 @@ class Stroke(EmbroideryElement):
         stitches = running_stitch(repeated_path, stitch_length)
 
         return Patch(self.color, stitches)
-
 
     def to_patches(self, last_patch):
         patches = []

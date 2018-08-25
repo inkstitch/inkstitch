@@ -1,5 +1,4 @@
 import sys
-import traceback
 import os
 from threading import Thread
 import socket
@@ -13,15 +12,14 @@ import json
 import inkex
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from datetime import date
-import base64
 from flask import Flask, request, Response, send_from_directory, jsonify
 import webbrowser
 import requests
 
 from .base import InkstitchExtension
 from ..i18n import _, translation as inkstitch_translation
-from ..svg import PIXELS_PER_MM, render_stitch_plan
-from ..svg.tags import SVG_GROUP_TAG, INKSCAPE_GROUPMODE
+from ..svg import render_stitch_plan
+from ..svg.tags import INKSCAPE_GROUPMODE
 from ..stitch_plan import patches_to_stitch_plan
 from ..threads import ThreadCatalog
 
@@ -44,7 +42,7 @@ def load_defaults():
         with open(defaults_path(), 'r') as defaults_file:
             defaults = json.load(defaults_file)
             return defaults
-    except:
+    except BaseException:
         return {}
 
 
@@ -109,7 +107,7 @@ class PrintPreviewServer(Thread):
         else:
             self.resources_path = os.path.realpath(os.path.join(os.path.dirname(__file__), '..', '..', 'print', 'resources'))
 
-    def __setup_app(self):
+    def __setup_app(self):  # noqa: C901
         self.__set_resources_path()
         self.app = Flask(__name__)
 
@@ -196,11 +194,11 @@ class PrintPreviewServer(Thread):
             threads = []
             for color_block in self.stitch_plan:
                 threads.append({
-                                'hex': color_block.color.hex_digits,
-                                'name': color_block.color.name,
-                                'manufacturer': color_block.color.manufacturer,
-                                'number': color_block.color.number,
-                             })
+                    'hex': color_block.color.hex_digits,
+                    'name': color_block.color.name,
+                    'manufacturer': color_block.color.manufacturer,
+                    'number': color_block.color.number,
+                })
 
             return jsonify(threads)
 
@@ -225,10 +223,10 @@ class PrintPreviewServer(Thread):
                     break
 
                 if self.last_request_time is not None and \
-                    (time.time() - self.last_request_time) > 3:
-                        self.stop()
-                        break
-        except:
+                        (time.time() - self.last_request_time) > 3:
+                    self.stop()
+                    break
+        except BaseException:
             # seems like sometimes this thread blows up during shutdown
             pass
 
@@ -244,7 +242,7 @@ class PrintPreviewServer(Thread):
         while True:
             try:
                 self.app.run(self.host, self.port, threaded=True)
-            except socket.error, e:
+            except socket.error as e:
                 if e.errno == errno.EADDRINUSE:
                     self.port += 1
                     continue
@@ -262,14 +260,17 @@ class PrintInfoFrame(wx.Frame):
         panel = wx.Panel(self)
         sizer = wx.BoxSizer(wx.VERTICAL)
 
-        text = wx.StaticText(panel, label=_("A print preview has been opened in your web browser.  This window will stay open in order to communicate with the JavaScript code running in your browser.\n\nThis window will close after you close the print preview in your browser, or you can close it manually if necessary."))
+        message = _("A print preview has been opened in your web browser.  "
+                    "This window will stay open in order to communicate with the JavaScript code running in your browser.\n\n"
+                    "This window will close after you close the print preview in your browser, or you can close it manually if necessary.")
+        text = wx.StaticText(panel, label=message)
         font = wx.Font(14, wx.DEFAULT, wx.NORMAL, wx.NORMAL)
         text.SetFont(font)
-        sizer.Add(text, proportion=1, flag=wx.ALL|wx.EXPAND, border=20)
+        sizer.Add(text, proportion=1, flag=wx.ALL | wx.EXPAND, border=20)
 
         stop_button = wx.Button(panel, id=wx.ID_CLOSE)
         stop_button.Bind(wx.EVT_BUTTON, self.close_button_clicked)
-        sizer.Add(stop_button, proportion=0, flag=wx.ALIGN_CENTER|wx.ALL, border=10)
+        sizer.Add(stop_button, proportion=0, flag=wx.ALIGN_CENTER | wx.ALL, border=10)
 
         panel.SetSizer(sizer)
         panel.Layout()
@@ -289,13 +290,13 @@ class PrintInfoFrame(wx.Frame):
 
 class Print(InkstitchExtension):
     def build_environment(self):
-        if getattr( sys, 'frozen', False ) :
+        if getattr(sys, 'frozen', False):
             template_dir = os.path.join(sys._MEIPASS, "print", "templates")
         else:
             template_dir = os.path.realpath(os.path.join(os.path.dirname(__file__), "..", "..", "print", "templates"))
 
         env = Environment(
-            loader = FileSystemLoader(template_dir),
+            loader=FileSystemLoader(template_dir),
             autoescape=select_autoescape(['html', 'xml']),
             extensions=['jinja2.ext.i18n']
         )
@@ -308,8 +309,8 @@ class Print(InkstitchExtension):
     def strip_namespaces(self, svg):
         # namespace prefixes seem to trip up HTML, so get rid of them
         for element in svg.iter():
-            if element.tag[0]=='{':
-                element.tag = element.tag[element.tag.index('}',1) + 1:]
+            if element.tag[0] == '{':
+                element.tag = element.tag[element.tag.index('}', 1) + 1:]
 
     def render_svgs(self, stitch_plan, realistic=False):
         svg = deepcopy(self.document).getroot()
@@ -352,25 +353,25 @@ class Print(InkstitchExtension):
         template = env.get_template('index.html')
 
         return template.render(
-            view = {'client_overview': False, 'client_detailedview': False, 'operator_overview': True, 'operator_detailedview': True},
-            logo = {'src' : '', 'title' : 'LOGO'},
-            date = date.today(),
-            client = "",
-            job = {
-                    'title': '',
-                    'num_colors': stitch_plan.num_colors,
-                    'num_color_blocks': len(stitch_plan),
-                    'num_stops': stitch_plan.num_stops,
-                    'num_trims': stitch_plan.num_trims,
-                    'dimensions': stitch_plan.dimensions_mm,
-                    'num_stitches': stitch_plan.num_stitches,
-                    'estimated_time': '', # TODO
-                    'estimated_thread': '', # TODO
-                  },
-            svg_overview = overview_svg,
-            color_blocks = stitch_plan.color_blocks,
-            palettes = ThreadCatalog().palette_names(),
-            selected_palette = selected_palette,
+            view={'client_overview': False, 'client_detailedview': False, 'operator_overview': True, 'operator_detailedview': True},
+            logo={'src': '', 'title': 'LOGO'},
+            date=date.today(),
+            client="",
+            job={
+                'title': '',
+                'num_colors': stitch_plan.num_colors,
+                'num_color_blocks': len(stitch_plan),
+                'num_stops': stitch_plan.num_stops,
+                'num_trims': stitch_plan.num_trims,
+                'dimensions': stitch_plan.dimensions_mm,
+                'num_stitches': stitch_plan.num_stitches,
+                'estimated_time': '',  # TODO
+                'estimated_thread': '',  # TODO
+            },
+            svg_overview=overview_svg,
+            color_blocks=stitch_plan.color_blocks,
+            palettes=ThreadCatalog().palette_names(),
+            selected_palette=selected_palette,
         )
 
     def effect(self):
@@ -396,12 +397,12 @@ class Print(InkstitchExtension):
         html = self.render_html(stitch_plan, overview_svg, palette)
 
         print_server = PrintPreviewServer(
-                        html=html,
-                        metadata=self.get_inkstitch_metadata(),
-                        stitch_plan=stitch_plan,
-                        realistic_overview_svg=realistic_overview_svg,
-                        realistic_color_block_svgs=realistic_color_block_svgs
-                       )
+            html=html,
+            metadata=self.get_inkstitch_metadata(),
+            stitch_plan=stitch_plan,
+            realistic_overview_svg=realistic_overview_svg,
+            realistic_color_block_svgs=realistic_color_block_svgs
+        )
         print_server.start()
 
         time.sleep(1)

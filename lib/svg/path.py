@@ -1,7 +1,7 @@
 import simpletransform
-import cubicsuperpath
 
 from .units import get_viewbox_transform
+
 
 def apply_transforms(path, node):
     transform = get_node_transform(node)
@@ -10,6 +10,7 @@ def apply_transforms(path, node):
     simpletransform.applyTransformToPath(transform, path)
 
     return path
+
 
 def get_node_transform(node):
     # start with the identity transform
@@ -25,6 +26,7 @@ def get_node_transform(node):
     transform = simpletransform.composeTransform(viewbox_transform, transform)
 
     return transform
+
 
 def get_correction_transform(node, child=False):
     """Get a transform to apply to new siblings or children of this SVG node"""

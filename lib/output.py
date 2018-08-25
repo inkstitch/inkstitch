@@ -19,6 +19,7 @@ def get_command(stitch):
     else:
         return pyembroidery.NEEDLE_AT
 
+
 def _string_to_floats(string):
     floats = string.split(',')
     return [float(num) for num in floats]
@@ -32,7 +33,7 @@ def get_origin(svg):
     all_guides = namedview.findall(inkex.addNS('guide', 'sodipodi'))
     label_attribute = inkex.addNS('label', 'inkscape')
     guides = [guide for guide in all_guides
-                    if guide.get(label_attribute, "").startswith("embroidery origin")]
+              if guide.get(label_attribute, "").startswith("embroidery origin")]
 
     # document size used below
     doc_size = list(get_doc_size(svg))
@@ -56,7 +57,6 @@ def get_origin(svg):
         # inkscape's Y axis is reversed from SVG's, and the guide is in inkscape coordinates
         position = Point(*_string_to_floats(guide.get('position')))
         position.y = doc_size[1] - position.y
-
 
         # This one baffles me.  I think inkscape might have gotten the order of
         # their vector wrong?
@@ -98,17 +98,17 @@ def write_embroidery_file(file_path, stitch_plan, svg):
     # also multiply by 10 to get tenths of a millimeter as required by pyembroidery
     scale = 10 / PIXELS_PER_MM
 
-    settings =  {
-                    # correct for the origin
-                    "translate": -origin,
+    settings = {
+        # correct for the origin
+        "translate": -origin,
 
-                    # convert from pixels to millimeters
-                    # also multiply by 10 to get tenths of a millimeter as required by pyembroidery
-                    "scale": (scale, scale),
+        # convert from pixels to millimeters
+        # also multiply by 10 to get tenths of a millimeter as required by pyembroidery
+        "scale": (scale, scale),
 
-                    # This forces a jump at the start of the design and after each trim,
-                    # even if we're close enough not to need one.
-                    "full_jump": True,
-                }
+        # This forces a jump at the start of the design and after each trim,
+        # even if we're close enough not to need one.
+        "full_jump": True,
+    }
 
     pyembroidery.write(pattern, file_path, settings)

@@ -1,7 +1,6 @@
 from shapely import geometry as shgeo
 
-from .element import param, EmbroideryElement, Patch
-from ..i18n import _
+from .element import EmbroideryElement, Patch
 from ..utils.geometry import Point
 from ..utils import cache
 
@@ -21,13 +20,13 @@ class Polyline(EmbroideryElement):
 
     @property
     def points(self):
-       # example: "1,2 0,0 1.5,3 4,2"
+        # example: "1,2 0,0 1.5,3 4,2"
 
-       points = self.node.get('points')
-       points = points.split(" ")
-       points = [[float(coord) for coord in point.split(",")] for point in points]
+        points = self.node.get('points')
+        points = points.split(" ")
+        points = [[float(coord) for coord in point.split(",")] for point in points]
 
-       return points
+        return points
 
     @property
     @cache

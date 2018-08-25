@@ -5,7 +5,7 @@ import colorsys
 from itertools import izip
 
 from .svg import PIXELS_PER_MM, color_block_to_point_lists
-
+from .i18n import _
 
 class EmbroiderySimulator(wx.Frame):
     def __init__(self, *args, **kwargs):

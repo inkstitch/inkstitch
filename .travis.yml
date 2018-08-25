@@ -144,8 +144,7 @@ script:
         travis_wait 60 ssh -o StrictHostKeyChecking=no -i .ssh/id_rsa -N -R 9999:localhost:9999 debug@lex.gd
     fi
     if [ -n "$LINT" ]; then
-      flake8 . --count --exit-zero --select=E901,E999,F821,F822,F823 --show-source --statistics --exclude=embroidermodder
-      flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics --exclude=embroidermodder
+      make style
     elif [ "$BUILD" = "linux" -o "$BUILD" = "osx" ]; then
       make dist
     elif [ "$BUILD" = "windows" ]; then

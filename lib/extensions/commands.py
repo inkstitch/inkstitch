@@ -1,5 +1,4 @@
 import os
-import sys
 import inkex
 from copy import deepcopy
 

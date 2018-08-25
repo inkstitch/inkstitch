@@ -26,8 +26,9 @@ COMMANDS = {
     "ignore_layer": N_("Ignore layer (do not stitch any objects in this layer)")
 }
 
-OBJECT_COMMANDS = [ "fill_start", "fill_end", "stop", "trim", "ignore_object" ]
-LAYER_COMMANDS = [ "ignore_layer" ]
+OBJECT_COMMANDS = ["fill_start", "fill_end", "stop", "trim", "ignore_object"]
+LAYER_COMMANDS = ["ignore_layer"]
+
 
 class CommandParseError(Exception):
     pass
@@ -50,7 +51,7 @@ class BaseCommand(object):
         else:
             raise CommandParseError("symbol is not an Ink/Stitch command")
 
-    def get_node_by_url(self,url):
+    def get_node_by_url(self, url):
         # url will be #path12345.  Find the corresponding object.
         if url is None:
             raise CommandParseError("url is None")
@@ -116,6 +117,7 @@ class StandaloneCommand(BaseCommand):
 
         self.parse_symbol()
 
+
 def get_command_description(command):
     return _(COMMANDS[command])
 
@@ -138,6 +140,7 @@ def find_commands(node):
 
     return commands
 
+
 def layer_commands(layer, command):
     """Find standalone (unconnected) command symbols in this layer."""
 
@@ -149,6 +152,7 @@ def layer_commands(layer, command):
                 commands.append(command)
 
     return commands
+
 
 def standalone_commands(svg):
     """Find all unconnected command symbols in the SVG."""
@@ -164,6 +168,7 @@ def standalone_commands(svg):
             pass
 
     return commands
+
 
 def is_command(node):
     return CONNECTION_START in node.attrib or CONNECTION_END in node.attrib

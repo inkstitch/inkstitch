@@ -1,16 +1,10 @@
-import os
-import sys
 import inkex
-import simpletransform
-import cubicsuperpath
 from random import random
-from shapely import geometry as shgeo
 
 from .commands import CommandsExtension
 from ..commands import OBJECT_COMMANDS, get_command_description
 from ..i18n import _
-from ..elements import SatinColumn
-from ..svg.tags import *
+from ..svg.tags import SVG_PATH_TAG, CONNECTION_START, CONNECTION_END, CONNECTOR_TYPE, INKSCAPE_LABEL, SVG_GROUP_TAG, SVG_USE_TAG, XLINK_HREF
 from ..svg import get_correction_transform
 
 
@@ -24,18 +18,18 @@ class ObjectCommands(CommandsExtension):
         end_pos = element.shape.centroid
 
         path = inkex.etree.Element(SVG_PATH_TAG,
-            {
-                "id": self.uniqueId("connector"),
-                "d": "M %s,%s %s,%s" % (start_pos[0], start_pos[1], end_pos.x, end_pos.y),
-                "style": "stroke:#000000;stroke-width:1px;stroke-opacity:0.5;fill:none;",
-                CONNECTION_START: "#%s" % symbol.get('id'),
-                CONNECTION_END: "#%s" % element.node.get('id'),
-                CONNECTOR_TYPE: "polyline",
+                                   {
+                                       "id": self.uniqueId("connector"),
+                                       "d": "M %s,%s %s,%s" % (start_pos[0], start_pos[1], end_pos.x, end_pos.y),
+                                       "style": "stroke:#000000;stroke-width:1px;stroke-opacity:0.5;fill:none;",
+                                       CONNECTION_START: "#%s" % symbol.get('id'),
+                                       CONNECTION_END: "#%s" % element.node.get('id'),
+                                       CONNECTOR_TYPE: "polyline",
 
-                # l10n: the name of the line that connects a command to the object it applies to
-                INKSCAPE_LABEL: _("connector")
-            }
-        )
+                                       # l10n: the name of the line that connects a command to the object it applies to
+                                       INKSCAPE_LABEL: _("connector")
+                                   }
+                                   )
 
         symbol.getparent().insert(0, path)
 
@@ -75,26 +69,26 @@ class ObjectCommands(CommandsExtension):
             pos = self.get_command_pos(element, i, len(commands))
 
             group = inkex.etree.SubElement(element.node.getparent(), SVG_GROUP_TAG,
-                {
-                    "id": self.uniqueId("group"),
-                    INKSCAPE_LABEL: _("Ink/Stitch Command") + ": %s" % get_command_description(command),
-                    "transform": get_correction_transform(element.node)
-                }
+                                           {
+                "id": self.uniqueId("group"),
+                INKSCAPE_LABEL: _("Ink/Stitch Command") + ": %s" % get_command_description(command),
+                "transform": get_correction_transform(element.node)
+            }
             )
 
             symbol = inkex.etree.SubElement(group, SVG_USE_TAG,
-                {
-                    "id": self.uniqueId("use"),
-                    XLINK_HREF: "#inkstitch_%s" % command,
-                    "height": "100%",
-                    "width": "100%",
-                    "x": str(pos.x),
-                    "y": str(pos.y),
+                                            {
+                                                "id": self.uniqueId("use"),
+                                                XLINK_HREF: "#inkstitch_%s" % command,
+                                                "height": "100%",
+                                                "width": "100%",
+                                                "x": str(pos.x),
+                                                "y": str(pos.y),
 
-                    # l10n: the name of a command symbol (example: scissors icon for trim command)
-                    INKSCAPE_LABEL: _("command marker"),
-                }
-            )
+                                                # l10n: the name of a command symbol (example: scissors icon for trim command)
+                                                INKSCAPE_LABEL: _("command marker"),
+                                            }
+                                            )
 
             self.add_connector(symbol, element)
 
