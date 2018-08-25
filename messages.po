@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-24 21:20-0400\n"
+"POT-Creation-Date: 2018-08-24 21:25-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -509,25 +509,25 @@ msgstr ""
 msgid "Choose Inkscape directory"
 msgstr ""
 
-#: lib/extensions/install.py:64
+#: lib/extensions/install.py:71
 msgid "Inkscape add-on installation failed"
 msgstr ""
 
-#: lib/extensions/install.py:65
+#: lib/extensions/install.py:72
 msgid "Installation Failed"
 msgstr ""
 
-#: lib/extensions/install.py:69
+#: lib/extensions/install.py:76
 msgid ""
 "Inkscape add-on files have been installed.  Please restart Inkscape to "
 "load the new add-ons."
 msgstr ""
 
-#: lib/extensions/install.py:70
+#: lib/extensions/install.py:77
 msgid "Installation Completed"
 msgstr ""
 
-#: lib/extensions/install.py:104
+#: lib/extensions/install.py:111
 msgid "Ink/Stitch Add-ons Installer"
 msgstr ""
 
