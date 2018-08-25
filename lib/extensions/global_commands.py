@@ -1,5 +1,3 @@
-import inkex
-
 from .layer_commands import LayerCommands
 from ..commands import GLOBAL_COMMANDS
 
