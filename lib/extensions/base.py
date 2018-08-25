@@ -3,11 +3,12 @@ import re
 import json
 from copy import deepcopy
 from collections import MutableMapping
+from stringcase import snakecase
 
-from ..svg.tags import *
+from ..svg.tags import SVG_GROUP_TAG, INKSCAPE_GROUPMODE, SVG_DEFS_TAG, EMBROIDERABLE_TAGS, SVG_POLYLINE_TAG
 from ..elements import AutoFill, Fill, Stroke, SatinColumn, Polyline, EmbroideryElement
-from ..utils import cache
 from ..commands import is_command, layer_commands
+from ..i18n import _
 
 
 SVG_METADATA_TAG = inkex.addNS("metadata", "svg")
@@ -98,17 +99,21 @@ class InkStitchMetadata(MutableMapping):
 class InkstitchExtension(inkex.Effect):
     """Base class for Inkstitch extensions.  Not intended for direct use."""
 
+    @classmethod
+    def name(cls):
+        return snakecase(cls.__name__)
+
     def hide_all_layers(self):
         for g in self.document.getroot().findall(SVG_GROUP_TAG):
             if g.get(INKSCAPE_GROUPMODE) == "layer":
                 g.set("style", "display:none")
 
     def no_elements_error(self):
-            if self.selected:
-                inkex.errormsg(_("No embroiderable paths selected."))
-            else:
-                inkex.errormsg(_("No embroiderable paths found in document."))
-            inkex.errormsg(_("Tip: use Path -> Object to Path to convert non-paths."))
+        if self.selected:
+            inkex.errormsg(_("No embroiderable paths selected."))
+        else:
+            inkex.errormsg(_("No embroiderable paths found in document."))
+        inkex.errormsg(_("Tip: use Path -> Object to Path to convert non-paths."))
 
     def descendants(self, node, selected=False):
         nodes = []
@@ -118,7 +123,7 @@ class InkstitchExtension(inkex.Effect):
             return []
 
         if node.tag == SVG_GROUP_TAG and node.get(INKSCAPE_GROUPMODE) == "layer":
-            if layer_commands(node, "ignore_layer"):
+            if len(list(layer_commands(node, "ignore_layer"))):
                 return []
 
         if element.has_style('display') and element.get_style('display') is None:
@@ -171,7 +176,6 @@ class InkstitchExtension(inkex.Effect):
 
                 return classes
 
-
     def get_elements(self):
         self.elements = []
         for node in self.get_nodes():
@@ -206,7 +210,6 @@ class InkstitchExtension(inkex.Effect):
             svg_filename = svg_filename[:-4]
 
         return svg_filename
-
 
     def parse(self):
         """Override inkex.Effect to add Ink/Stitch xml namespace"""

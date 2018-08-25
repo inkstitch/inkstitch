@@ -1,7 +1,4 @@
-import sys
-import traceback
 import os
-import inkex
 
 from .base import InkstitchExtension
 from ..i18n import _

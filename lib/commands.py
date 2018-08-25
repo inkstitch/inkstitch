@@ -1,8 +1,42 @@
+import sys
 import inkex
 import cubicsuperpath
+import simpletransform
 
-from .svg import apply_transforms
+from .svg import apply_transforms, get_node_transform
 from .svg.tags import SVG_USE_TAG, SVG_SYMBOL_TAG, CONNECTION_START, CONNECTION_END, XLINK_HREF
+from .utils import cache, Point
+from .i18n import _, N_
+
+COMMANDS = {
+    # L10N command attached to an object
+    N_("fill_start"): N_("Fill stitch starting position"),
+
+    # L10N command attached to an object
+    N_("fill_end"): N_("Fill stitch ending position"),
+
+    # L10N command attached to an object
+    N_("stop"): N_("Stop (pause machine) after sewing this object"),
+
+    # L10N command attached to an object
+    N_("trim"): N_("Trim thread after sewing this object"),
+
+    # L10N command attached to an object
+    N_("ignore_object"): N_("Ignore this object (do not stitch)"),
+
+    # L10N command that affects a layer
+    N_("ignore_layer"): N_("Ignore layer (do not stitch any objects in this layer)"),
+
+    # L10N command that affects entire document
+    N_("origin"): N_("Origin for exported embroidery files"),
+
+    # L10N command that affects entire document
+    N_("stop_position"): N_("Jump destination for Stop commands (a.k.a. \"Frame Out position\")."),
+}
+
+OBJECT_COMMANDS = ["fill_start", "fill_end", "stop", "trim", "ignore_object"]
+LAYER_COMMANDS = ["ignore_layer"]
+GLOBAL_COMMANDS = ["origin", "stop_position"]
 
 
 class CommandParseError(Exception):
@@ -10,6 +44,11 @@ class CommandParseError(Exception):
 
 
 class BaseCommand(object):
+    @property
+    @cache
+    def description(self):
+        return get_command_description(self.command)
+
     def parse_symbol(self):
         if self.symbol.tag != SVG_SYMBOL_TAG:
             raise CommandParseError("use points to non-symbol")
@@ -21,7 +60,7 @@ class BaseCommand(object):
         else:
             raise CommandParseError("symbol is not an Ink/Stitch command")
 
-    def get_node_by_url(self,url):
+    def get_node_by_url(self, url):
         # url will be #path12345.  Find the corresponding object.
         if url is None:
             raise CommandParseError("url is None")
@@ -87,6 +126,19 @@ class StandaloneCommand(BaseCommand):
 
         self.parse_symbol()
 
+    @property
+    @cache
+    def point(self):
+        pos = [float(self.node.get("x", 0)), float(self.node.get("y", 0))]
+        transform = get_node_transform(self.node)
+        simpletransform.applyTransformToPoint(transform, pos)
+
+        return Point(*pos)
+
+
+def get_command_description(command):
+    return COMMANDS[command]
+
 
 def find_commands(node):
     """Find the symbols this node is connected to and return them as Commands"""
@@ -106,32 +158,61 @@ def find_commands(node):
 
     return commands
 
+
 def layer_commands(layer, command):
     """Find standalone (unconnected) command symbols in this layer."""
 
-    commands = []
+    for global_command in global_commands(layer.getroottree().getroot(), command):
+        if layer in global_command.node.iterancestors():
+            yield global_command
 
-    for standalone_command in standalone_commands(layer.getroottree().getroot()):
+
+def global_commands(svg, command):
+    """Find standalone (unconnected) command symbols anywhere in the document."""
+
+    for standalone_command in _standalone_commands(svg):
         if standalone_command.command == command:
-            if layer in standalone_command.node.iterancestors():
-                commands.append(command)
+            yield standalone_command
 
-    return commands
 
-def standalone_commands(svg):
+@cache
+def global_command(svg, command):
+    """Find a single command of the specified type.
+
+    If more than one is found, print an error and exit.
+    """
+
+    commands = list(global_commands(svg, command))
+
+    if len(commands) == 1:
+        return commands[0]
+    elif len(commands) > 1:
+        print >> sys.stderr, _("Error: there is more than one %(command)s command in the document, but there can only be one.  "
+                               "Please remove all but one.") % dict(command=command)
+
+        # L10N This is a continuation of the previous error message, letting the user know
+        # what command we're talking about since we don't normally expose the actual
+        # command name to them.  Contents of %(description)s are in a separate translation
+        # string.
+        print >> sys.stderr, _("%(command)s: %(description)s") % dict(command=command, description=_(get_command_description(command)))
+
+        sys.exit(1)
+    else:
+        return None
+
+
+def _standalone_commands(svg):
     """Find all unconnected command symbols in the SVG."""
 
     xpath = ".//svg:use[starts-with(@xlink:href, '#inkstitch_')]"
     symbols = svg.xpath(xpath, namespaces=inkex.NSS)
 
-    commands = []
     for symbol in symbols:
         try:
-            commands.append(StandaloneCommand(symbol))
+            yield StandaloneCommand(symbol)
         except CommandParseError:
             pass
 
-    return commands
 
 def is_command(node):
     return CONNECTION_START in node.attrib or CONNECTION_END in node.attrib

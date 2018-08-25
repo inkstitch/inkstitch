@@ -4,7 +4,7 @@ import time
 from itertools import izip
 
 from .svg import color_block_to_point_lists
-
+from .i18n import _
 
 class EmbroiderySimulator(wx.Frame):
     def __init__(self, *args, **kwargs):

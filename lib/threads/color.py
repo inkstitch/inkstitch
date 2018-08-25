@@ -3,6 +3,7 @@ import re
 import colorsys
 from pyembroidery.EmbThread import EmbThread
 
+
 class ThreadColor(object):
     hex_str_re = re.compile('#([0-9a-z]{3}|[0-9a-z]{6})', re.I)
 

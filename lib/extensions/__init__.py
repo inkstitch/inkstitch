@@ -9,4 +9,19 @@ from zip import Zip
 from flip import Flip
 from object_commands import ObjectCommands
 from layer_commands import LayerCommands
+from global_commands import GlobalCommands
 from convert_to_satin import ConvertToSatin
+
+__all__ = extensions = [Embroider,
+                        Install,
+                        Params,
+                        Print,
+                        Simulate,
+                        Input,
+                        Output,
+                        Zip,
+                        Flip,
+                        ObjectCommands,
+                        LayerCommands,
+                        GlobalCommands,
+                        ConvertToSatin]

@@ -1,15 +1,11 @@
 import os
-from os.path import realpath, dirname, join as path_join
-import sys
 from inkex import etree
 import inkex
 import pyembroidery
 
 from ..svg import PIXELS_PER_MM, render_stitch_plan
 from ..svg.tags import INKSCAPE_LABEL
-from ..i18n import _
-from ..stitch_plan import StitchPlan, ColorBlock
-from ..utils.io import save_stdout
+from ..stitch_plan import StitchPlan
 
 
 class Input(object):
@@ -28,12 +24,11 @@ class Input(object):
                                        trim=(command == pyembroidery.TRIM))
 
         extents = stitch_plan.extents
-        svg = etree.Element("svg", nsmap=inkex.NSS, attrib=
-                            {
-                                "width": str(extents[0] * 2),
-                                "height": str(extents[1] * 2),
-                                "viewBox": "0 0 %s %s" % (extents[0] * 2, extents[1] * 2),
-                            })
+        svg = etree.Element("svg", nsmap=inkex.NSS, attrib={
+            "width": str(extents[0] * 2),
+            "height": str(extents[1] * 2),
+            "viewBox": "0 0 %s %s" % (extents[0] * 2, extents[1] * 2),
+        })
         render_stitch_plan(svg, stitch_plan)
 
         # rename the Stitch Plan layer so that it doesn't get overwritten by Embroider

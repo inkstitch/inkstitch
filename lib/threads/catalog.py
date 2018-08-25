@@ -85,7 +85,9 @@ class _ThreadCatalog(Sequence):
             if palette.name == name:
                 return palette
 
+
 _catalog = None
+
 
 def ThreadCatalog():
     """Singleton _ThreadCatalog factory"""

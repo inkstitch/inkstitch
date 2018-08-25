@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-11 22:57-0400\n"
-"PO-Revision-Date: 2018-08-12 03:11\n"
+"POT-Creation-Date: 2018-08-24 20:56-0400\n"
+"PO-Revision-Date: 2018-08-25 13:55\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -16,6 +16,93 @@ msgstr ""
 "X-Crowdin-Language: fr\n"
 "X-Crowdin-File: /master/messages.po\n"
 "Language: fr_FR\n"
+
+#. command attached to an object
+#: lib/commands.py:13
+msgid "fill_start"
+msgstr ""
+
+#: lib/commands.py:13
+msgid "Fill stitch starting position"
+msgstr ""
+
+#. command attached to an object
+#: lib/commands.py:16
+msgid "fill_end"
+msgstr ""
+
+#: lib/commands.py:16
+msgid "Fill stitch ending position"
+msgstr ""
+
+#. command attached to an object
+#: lib/commands.py:19
+msgid "stop"
+msgstr ""
+
+#: lib/commands.py:19
+msgid "Stop (pause machine) after sewing this object"
+msgstr ""
+
+#. command attached to an object
+#: lib/commands.py:22
+msgid "trim"
+msgstr ""
+
+#: lib/commands.py:22
+msgid "Trim thread after sewing this object"
+msgstr ""
+
+#. command attached to an object
+#: lib/commands.py:25
+msgid "ignore_object"
+msgstr ""
+
+#: lib/commands.py:25
+msgid "Ignore this object (do not stitch)"
+msgstr ""
+
+#. command that affects a layer
+#: lib/commands.py:28
+msgid "ignore_layer"
+msgstr ""
+
+#: lib/commands.py:28
+msgid "Ignore layer (do not stitch any objects in this layer)"
+msgstr ""
+
+#. command that affects entire document
+#: lib/commands.py:31
+msgid "origin"
+msgstr ""
+
+#: lib/commands.py:31
+msgid "Origin for exported embroidery files"
+msgstr ""
+
+#. command that affects entire document
+#: lib/commands.py:34
+msgid "stop_position"
+msgstr ""
+
+#: lib/commands.py:34
+msgid "Jump destination for Stop commands (a.k.a. \"Frame Out position\")."
+msgstr ""
+
+#: lib/commands.py:190
+#, python-format
+msgid "Error: there is more than one %(command)s command in the document, but there can only be one.  Please remove all but one."
+msgstr ""
+
+#. This is a continuation of the previous error message, letting the user know
+#. what command we're talking about since we don't normally expose the actual
+#. command name to them.  Contents of %(description)s are in a separate
+#. translation
+#. string.
+#: lib/commands.py:197
+#, python-format
+msgid "%(command)s: %(description)s"
+msgstr ""
 
 #: lib/elements/auto_fill.py:11
 msgid "Auto-Fill"
@@ -83,7 +170,7 @@ msgstr "Elargir"
 msgid "Expand the shape before fill stitching, to compensate for gaps between shapes."
 msgstr ""
 
-#: lib/elements/element.py:232
+#: lib/elements/element.py:230
 #, python-format
 msgid "%(id)s has more than one command of type '%(command)s' linked to it"
 msgstr "Plus d’une commande de type «%(command)s» est liée à %(id)s"
@@ -108,36 +195,41 @@ msgstr "Angle des lignes de points"
 msgid "The angle increases in a counter-clockwise direction.  0 is horizontal.  Negative angles are allowed."
 msgstr ""
 
-#: lib/elements/fill.py:45
+#: lib/elements/fill.py:46
 msgid "Flip fill (start right-to-left)"
 msgstr "Invertir remplissage (début droite vers la gauche)"
 
-#: lib/elements/fill.py:46
+#: lib/elements/fill.py:47
 msgid "The flip option can help you with routing your stitch path.  When you enable flip, stitching goes from right-to-left instead of left-to-right."
 msgstr ""
 
-#: lib/elements/fill.py:54
+#: lib/elements/fill.py:56
 msgid "Spacing between rows"
 msgstr "Espacement entre les lignes"
 
-#: lib/elements/fill.py:55
+#: lib/elements/fill.py:57
 msgid "Distance between rows of stitches."
 msgstr ""
 
-#: lib/elements/fill.py:68
+#: lib/elements/fill.py:70
 msgid "Maximum fill stitch length"
 msgstr "Longueur maximale du point de remplissage"
 
-#: lib/elements/fill.py:69
+#: lib/elements/fill.py:71
 msgid "The length of each stitch in a row.  Shorter stitch may be used at the start or end of a row."
 msgstr ""
 
-#: lib/elements/fill.py:78
+#: lib/elements/fill.py:80
 msgid "Stagger rows this many times before repeating"
 msgstr "Décaler les rangs autant de fois avant de répéter"
 
-#: lib/elements/fill.py:79
+#: lib/elements/fill.py:81
 msgid "Setting this dictates how many rows apart the stitches will be before they fall in the same column position."
+msgstr ""
+
+#: lib/elements/fill.py:114
+#, python-format
+msgid "shape %s is so small that it cannot be filled with stitches.  Please make it bigger or delete it."
 msgstr ""
 
 #: lib/elements/satin_column.py:10
@@ -152,7 +244,7 @@ msgstr "Colonne de satin personnalisée"
 msgid "\"E\" stitch"
 msgstr ""
 
-#: lib/elements/satin_column.py:32 lib/elements/stroke.py:52
+#: lib/elements/satin_column.py:32 lib/elements/stroke.py:55
 msgid "Zig-zag spacing (peak-to-peak)"
 msgstr "Espacement Zig-Zag (crête à crête)"
 
@@ -160,95 +252,95 @@ msgstr "Espacement Zig-Zag (crête à crête)"
 msgid "Peak-to-peak distance between zig-zags."
 msgstr ""
 
-#: lib/elements/satin_column.py:43
+#: lib/elements/satin_column.py:44
 msgid "Pull compensation"
 msgstr "Compensation d'étirement"
 
-#: lib/elements/satin_column.py:44
+#: lib/elements/satin_column.py:45
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape.  This setting expands each pair of needle penetrations outward from the center of the satin column."
 msgstr ""
 
-#: lib/elements/satin_column.py:55
+#: lib/elements/satin_column.py:57
 msgid "Contour underlay"
 msgstr "Sous-couche de contour"
 
-#: lib/elements/satin_column.py:55 lib/elements/satin_column.py:62
-#: lib/elements/satin_column.py:71
+#: lib/elements/satin_column.py:57 lib/elements/satin_column.py:64
+#: lib/elements/satin_column.py:73
 msgid "Contour Underlay"
 msgstr "Sous-couche de Contour"
 
-#: lib/elements/satin_column.py:62 lib/elements/satin_column.py:86
+#: lib/elements/satin_column.py:64 lib/elements/satin_column.py:88
 msgid "Stitch length"
 msgstr "Longueur de point"
 
-#: lib/elements/satin_column.py:68
+#: lib/elements/satin_column.py:70
 msgid "Contour underlay inset amount"
 msgstr "Montant de l'incrustation de la sous-couche de contour"
 
-#: lib/elements/satin_column.py:69
+#: lib/elements/satin_column.py:71
 msgid "Shrink the outline, to prevent the underlay from showing around the outside of the satin column."
 msgstr ""
 
-#: lib/elements/satin_column.py:79
+#: lib/elements/satin_column.py:81
 msgid "Center-walk underlay"
 msgstr "Sous-couche de marche centrale"
 
-#: lib/elements/satin_column.py:79 lib/elements/satin_column.py:86
+#: lib/elements/satin_column.py:81 lib/elements/satin_column.py:88
 msgid "Center-Walk Underlay"
 msgstr "Sous-couche de Marche-centrale"
 
-#: lib/elements/satin_column.py:91
+#: lib/elements/satin_column.py:93
 msgid "Zig-zag underlay"
 msgstr "Sous-couche Zig-zag"
 
-#: lib/elements/satin_column.py:91 lib/elements/satin_column.py:100
-#: lib/elements/satin_column.py:111
+#: lib/elements/satin_column.py:93 lib/elements/satin_column.py:102
+#: lib/elements/satin_column.py:113
 msgid "Zig-zag Underlay"
 msgstr "Sous-couche Zig-zag"
 
-#: lib/elements/satin_column.py:97
+#: lib/elements/satin_column.py:99
 msgid "Zig-Zag spacing (peak-to-peak)"
 msgstr "Espacement Zig-Zag (crête à crête)"
 
-#: lib/elements/satin_column.py:98
+#: lib/elements/satin_column.py:100
 msgid "Distance between peaks of the zig-zags."
 msgstr ""
 
-#: lib/elements/satin_column.py:108
+#: lib/elements/satin_column.py:110
 msgid "Inset amount"
 msgstr ""
 
-#: lib/elements/satin_column.py:109
+#: lib/elements/satin_column.py:111
 msgid "default: half of contour underlay inset"
 msgstr ""
 
-#: lib/elements/satin_column.py:146
+#: lib/elements/satin_column.py:148
 #, python-format
 msgid "satin column: %(id)s: at least two subpaths required (%(num)d found)"
 msgstr "colonne satinée : %(id)s: au moins deux sous-tracés requis (%(num)d trouvés)"
 
-#: lib/elements/satin_column.py:172
+#: lib/elements/satin_column.py:173
 msgid "One or more rails crosses itself, and this is not allowed.  Please split into multiple satin columns."
 msgstr "Un ou plusieurs rails se croisent, ce qui n'est pas autorisé. S'il vous plaît diviser en plusieurs colonnes de satin."
 
-#: lib/elements/satin_column.py:179
+#: lib/elements/satin_column.py:180
 msgid "satin column: One or more of the rungs doesn't intersect both rails."
 msgstr "colonne satinée: un ou plusieurs des échelons ne croisent pas les deux rails."
 
-#: lib/elements/satin_column.py:179 lib/elements/satin_column.py:181
+#: lib/elements/satin_column.py:181 lib/elements/satin_column.py:184
 msgid "Each rail should intersect both rungs once."
 msgstr "Chaque rail devrait croiser les deux échelons une fois."
 
-#: lib/elements/satin_column.py:181
+#: lib/elements/satin_column.py:183
 msgid "satin column: One or more of the rungs intersects the rails more than once."
 msgstr "colonne satinée: Un ou plusieurs échelons croisent les rails plus d'une fois."
 
-#: lib/elements/satin_column.py:222
+#: lib/elements/satin_column.py:224
 #, python-format
 msgid "satin column: object %s has a fill (but should not)"
 msgstr "colonne de satin: objet %s a un remplissage (mais ne devrait pas)"
 
-#: lib/elements/satin_column.py:226
+#: lib/elements/satin_column.py:228
 #, python-format
 msgid "satin column: object %(id)s has two paths with an unequal number of points (%(length1)d and %(length2)d)"
 msgstr "colonne de satin: l'objet %(id)s a deux chemins avec un nombre de points différents (%(length1)d et %(length2)d)"
@@ -265,75 +357,67 @@ msgstr "Longueur de point courant"
 msgid "Length of stitches in running stitch mode."
 msgstr ""
 
-#: lib/elements/stroke.py:42
+#: lib/elements/stroke.py:43
 msgid "Bean stitch number of repeats"
 msgstr ""
 
-#: lib/elements/stroke.py:43
+#: lib/elements/stroke.py:44
 msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.  Only applies to running stitch."
 msgstr ""
 
-#: lib/elements/stroke.py:53
+#: lib/elements/stroke.py:56
 msgid "Length of stitches in zig-zag mode."
 msgstr ""
 
-#: lib/elements/stroke.py:64
+#: lib/elements/stroke.py:67
 msgid "Repeats"
 msgstr "répétez"
 
-#: lib/elements/stroke.py:65
+#: lib/elements/stroke.py:68
 msgid "Defines how many times to run down and back along the path."
 msgstr ""
 
-#: lib/elements/stroke.py:89
+#: lib/elements/stroke.py:92
 msgid "Manual stitch placement"
 msgstr "Placement manuel de points"
 
-#: lib/elements/stroke.py:90
+#: lib/elements/stroke.py:93
 msgid "Stitch every node in the path.  Stitch length and zig-zag spacing are ignored."
 msgstr "Broder chaque nœud dans le tracé.  La longueur de points et l’espacement du zig-zag sont ignorés."
 
-#: lib/elements/stroke.py:124
+#: lib/elements/stroke.py:127
 msgid "Legacy running stitch setting detected!\n\n"
 "It looks like you're using a stroke smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set your stroke to be dashed to indicate running stitch.  Any kind of dash will work."
 msgstr "Détection d'une définition obsolète de point droit !  Il semble que vous utilisez une largeur inférieure à 0,5 unités pour indiquer un point droit, qui est obsolète.  Au lieu de cela, veuillez configurer votre tracé avec des pointillés.  N’importe quel genre de trait fonctionne."
 
-#: lib/extensions/base.py:108
+#: lib/extensions/base.py:113
 msgid "No embroiderable paths selected."
 msgstr "Aucun chemin brodable sélectionné."
 
-#: lib/extensions/base.py:110
+#: lib/extensions/base.py:115
 msgid "No embroiderable paths found in document."
 msgstr "Aucun chemin brodable trouvé dans le document."
 
-#: lib/extensions/base.py:111
+#: lib/extensions/base.py:116
 msgid "Tip: use Path -> Object to Path to convert non-paths."
 msgstr "Astuce: utilisez Chemin -> Objet en chemin pour convertir les non-chemins."
 
-#: lib/extensions/commands.py:125
-msgid "Please select one or more objects to which to attach commands."
-msgstr "Veuillez sélectionner un ou plusieurs objets pour y attacher des commandes."
-
-#: lib/extensions/commands.py:133
-msgid "Please choose one or more commands to attach."
-msgstr "Veuillez choisir une ou plusieurs commandes à attacher."
-
-#: lib/extensions/convert_to_satin.py:28
+#: lib/extensions/convert_to_satin.py:29
 msgid "Please select at least one line to convert to a satin column."
 msgstr ""
 
 #. : Convert To Satin extension, user selected one or more objects that were
 #. not lines.
-#: lib/extensions/convert_to_satin.py:33
+#: lib/extensions/convert_to_satin.py:34
 msgid "Only simple lines may be converted to satin columns."
 msgstr ""
 
-#: lib/extensions/convert_to_satin.py:54
+#: lib/extensions/convert_to_satin.py:56
 #, python-format
 msgid "Cannot convert %s to a satin column because it intersects itself.  Try breaking it up into multiple paths."
 msgstr ""
 
-#: lib/extensions/embroider.py:41
+#: lib/extensions/embroider.py:38
 msgid "\n\n"
 "Seeing a 'no such option' message?  Please restart Inkscape to fix."
 msgstr "Vous voyez un message 'aucune option' ? Veuillez redémarrer Inkscape pour corriger."
@@ -342,49 +426,75 @@ msgstr "Vous voyez un message 'aucune option' ? Veuillez redémarrer Inkscape po
 msgid "Please select one or more satin columns to flip."
 msgstr "Veuillez sélectionner une ou plusieurs colonnes satin pour retourner."
 
-#: lib/extensions/install.py:30
+#: lib/extensions/install.py:25
 msgid "Ink/Stitch can install files (\"add-ons\") that make it easier to use Inkscape to create machine embroidery designs.  These add-ons will be installed:"
 msgstr "Ink/Stitch peut installer des fichiers (« extensions ») qui permettent de créer plus facilement des motifs de broderie machine.  Ces extensions seront installés :"
 
-#: lib/extensions/install.py:31
+#: lib/extensions/install.py:27
 msgid "thread manufacturer color palettes"
 msgstr "palettes de couleurs de fabricants de fil"
 
-#: lib/extensions/install.py:32
+#: lib/extensions/install.py:28
 msgid "Ink/Stitch visual commands (Object -> Symbols...)"
 msgstr "Commandes Ink/Stitch visuelles (Objet-> symboles...)"
 
-#: lib/extensions/install.py:41
+#: lib/extensions/install.py:37
 msgid "Install"
 msgstr "Installer"
 
-#: lib/extensions/install.py:44 lib/extensions/params.py:380
+#: lib/extensions/install.py:40 lib/extensions/params.py:380
 msgid "Cancel"
 msgstr "Quitter"
 
-#: lib/extensions/install.py:58
+#: lib/extensions/install.py:54
 msgid "Choose Inkscape directory"
 msgstr "Choisir le dossier d’Inkscape"
 
-#: lib/extensions/install.py:68
+#: lib/extensions/install.py:64
 msgid "Inkscape add-on installation failed"
 msgstr "échec d'installation de l'extension Inkscape"
 
-#: lib/extensions/install.py:69
+#: lib/extensions/install.py:65
 msgid "Installation Failed"
 msgstr "Echec de l’installation"
 
-#: lib/extensions/install.py:73
+#: lib/extensions/install.py:69
 msgid "Inkscape add-on files have been installed.  Please restart Inkscape to load the new add-ons."
 msgstr "Des fichiers d'extensions Inkscape ont été installés.  S’il vous plaît, redémarrez Inkscape pour charger ces nouvelles extensions."
 
-#: lib/extensions/install.py:74
+#: lib/extensions/install.py:70
 msgid "Installation Completed"
 msgstr "Installation terminée"
 
-#: lib/extensions/install.py:103
+#: lib/extensions/install.py:104
 msgid "Ink/Stitch Add-ons Installer"
 msgstr "Ink/Stitch installeur d'extensions"
+
+#: lib/extensions/layer_commands.py:27
+msgid "Please choose one or more commands to add."
+msgstr ""
+
+#: lib/extensions/layer_commands.py:39 lib/extensions/object_commands.py:74
+msgid "Ink/Stitch Command"
+msgstr ""
+
+#. : the name of the line that connects a command to the object it applies to
+#: lib/extensions/object_commands.py:30
+msgid "connector"
+msgstr ""
+
+#. : the name of a command symbol (example: scissors icon for trim command)
+#: lib/extensions/object_commands.py:89
+msgid "command marker"
+msgstr ""
+
+#: lib/extensions/object_commands.py:100
+msgid "Please select one or more objects to which to attach commands."
+msgstr "Veuillez sélectionner un ou plusieurs objets pour y attacher des commandes."
+
+#: lib/extensions/object_commands.py:108
+msgid "Please choose one or more commands to attach."
+msgstr "Veuillez choisir une ou plusieurs commandes à attacher."
 
 #: lib/extensions/params.py:244
 msgid "These settings will be applied to 1 object."
@@ -449,116 +559,131 @@ msgstr "Utiliser les derniers paramètres"
 msgid "Apply and Quit"
 msgstr "Appliquer et Quitter"
 
-#: lib/extensions/params.py:436
+#: lib/extensions/params.py:439
 msgid "Preview"
 msgstr "Aperçu"
 
-#: lib/extensions/params.py:454
+#: lib/extensions/params.py:458
 msgid "Internal Error"
 msgstr "Erreur interne"
 
-#: lib/extensions/params.py:507
+#: lib/extensions/params.py:511
 msgid "Please enter or select a preset name first."
 msgstr "Veuillez entrer ou sélectionner un nom prédéfini en premier."
 
-#: lib/extensions/params.py:507 lib/extensions/params.py:513
-#: lib/extensions/params.py:541
+#: lib/extensions/params.py:511 lib/extensions/params.py:517
+#: lib/extensions/params.py:545
 msgid "Preset"
 msgstr "Préréglage"
 
-#: lib/extensions/params.py:513
+#: lib/extensions/params.py:517
 #, python-format
 msgid "Preset \"%s\" not found."
 msgstr "Le préréglage \"%s\" n'a pas été trouvé."
 
-#: lib/extensions/params.py:541
+#: lib/extensions/params.py:545
 #, python-format
 msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
 msgstr "Le préréglage \"%s\" existe déjà. Veuillez utiliser un autre nom ou appuyez sur \"Écraser\""
 
-#: lib/extensions/print_pdf.py:134
+#: lib/extensions/print_pdf.py:132
 msgid "Closing..."
 msgstr "Fermeture..."
 
-#: lib/extensions/print_pdf.py:134
+#: lib/extensions/print_pdf.py:132
 msgid "It is safe to close this window now."
 msgstr "Il est sûr de fermer cette fenêtre maintenant."
 
-#: lib/extensions/print_pdf.py:265
+#: lib/extensions/print_pdf.py:263
 msgid "A print preview has been opened in your web browser.  This window will stay open in order to communicate with the JavaScript code running in your browser.\n\n"
 "This window will close after you close the print preview in your browser, or you can close it manually if necessary."
 msgstr "Un aperçu avant impression a été ouvert dans votre navigateur web.  Cette fenêtre reste ouverte pour communiquer avec le code JavaScript s’exécutant dans votre navigateur.  Cette fenêtre se fermera après avoir fermer l’aperçu avant impression dans le navigateur, vous pouvez la fermer manuellement si nécessaire."
 
-#: lib/extensions/print_pdf.py:411
+#: lib/extensions/print_pdf.py:412
 msgid "Ink/Stitch Print"
 msgstr "Imprimer Ink/Stitch"
 
-#: lib/extensions/simulate.py:24
+#: lib/extensions/simulate.py:29
 msgid "Embroidery Simulation"
 msgstr "Simulation de broderie"
 
-#: lib/extensions/zip.py:52
+#: lib/extensions/zip.py:49
 msgid "No embroidery file formats selected."
 msgstr "Aucun format de fichier broderie sélectionné."
 
-#: lib/simulator.py:34
+#. If you translate this string, that will tell Ink/Stitch to
+#. generate menu items for this language in Inkscape's "Extensions"
+#. menu.
+#: lib/inx/utils.py:46
+msgid "Generate INX files"
+msgstr ""
+
+#: lib/simulator.py:40
 msgid "Speed up"
 msgstr ""
 
-#: lib/simulator.py:34
+#: lib/simulator.py:40
 msgid "Press + or arrow up to speed up"
 msgstr ""
 
-#: lib/simulator.py:35
+#: lib/simulator.py:41
 msgid "Slow down"
 msgstr ""
 
-#: lib/simulator.py:35
+#: lib/simulator.py:41
 msgid "Press - or arrow down to slow down"
 msgstr ""
 
-#: lib/simulator.py:36
+#: lib/simulator.py:42
 msgid "Pause"
 msgstr ""
 
-#: lib/simulator.py:36
+#: lib/simulator.py:42
 msgid "Press P to pause the animation"
 msgstr ""
 
-#: lib/simulator.py:37
+#: lib/simulator.py:43
 msgid "Restart"
 msgstr ""
 
-#: lib/simulator.py:37
+#: lib/simulator.py:43
 msgid "Press R to restart the animation"
 msgstr ""
 
-#: lib/simulator.py:38
+#: lib/simulator.py:44
 msgid "Quit"
 msgstr ""
 
-#: lib/simulator.py:38
+#: lib/simulator.py:44
 msgid "Press Q to close the simulation window"
+msgstr ""
+
+#: lib/simulator.py:169
+msgid "Stitch # "
+msgstr ""
+
+#: lib/simulator.py:172
+msgid "Stitch #"
 msgstr ""
 
 #: lib/stitches/auto_fill.py:167
 msgid "Unable to autofill.  This most often happens because your shape is made up of multiple sections that aren't connected."
 msgstr "Impossible de remplir automatiquement. Cela arrive le plus souvent parce que votre forme est composée de plusieurs sections qui ne sont pas connectées."
 
-#: lib/stitches/auto_fill.py:392
+#: lib/stitches/auto_fill.py:395
 msgid "Unexpected error while generating fill stitches. Please send your SVG file to lexelby@github."
 msgstr "Erreur inattendue lors de la génération des points de remplissage. Veuillez envoyer votre fichier SVG à lexelby@github."
 
-#: lib/svg/svg.py:90
+#: lib/svg/svg.py:94
 msgid "Stitch Plan"
 msgstr "Plan de broderie"
 
-#: lib/svg/units.py:44
+#: lib/svg/units.py:46
 #, python-format
 msgid "parseLengthWithUnits: unknown unit %s"
 msgstr "analyser Longueur avec Unités: unité inconnue %s"
 
-#: lib/svg/units.py:76
+#: lib/svg/units.py:78
 #, python-format
 msgid "Unknown unit: %s"
 msgstr "Unité inconnue: %s"
@@ -725,7 +850,7 @@ msgstr "Signature du client"
 msgid "Ink/Stitch Print Preview"
 msgstr "Aperçu avant impression"
 
-#: print/templates/ui.html:4
+#: print/templates/ui.html:4 templates/print.inx:3
 msgid "Print"
 msgstr "Imprimer"
 
@@ -820,4 +945,274 @@ msgstr "Appliquer à tous"
 #: print/templates/ui_svg_action_buttons.html:8
 msgid "Realistic"
 msgstr "Réaliste"
+
+#. description for pyembroidery file format: pec
+#. description for pyembroidery file format: pes
+#. description for pyembroidery file format: phb
+#. description for pyembroidery file format: phc
+#: pyembroidery-format-descriptions.py:2 pyembroidery-format-descriptions.py:4
+#: pyembroidery-format-descriptions.py:56
+#: pyembroidery-format-descriptions.py:58
+msgid "Brother Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: exp
+#: pyembroidery-format-descriptions.py:6
+msgid "Melco Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: dst
+#. description for pyembroidery file format: tbf
+#: pyembroidery-format-descriptions.py:8 pyembroidery-format-descriptions.py:48
+msgid "Tajima Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: jef
+#. description for pyembroidery file format: sew
+#. description for pyembroidery file format: jpx
+#: pyembroidery-format-descriptions.py:10
+#: pyembroidery-format-descriptions.py:20
+#: pyembroidery-format-descriptions.py:74
+msgid "Janome Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: vp3
+#. description for pyembroidery file format: ksm
+#. description for pyembroidery file format: max
+#. description for pyembroidery file format: pcd
+#. description for pyembroidery file format: pcq
+#. description for pyembroidery file format: pcm
+#. description for pyembroidery file format: pcs
+#: pyembroidery-format-descriptions.py:12
+#: pyembroidery-format-descriptions.py:50
+#: pyembroidery-format-descriptions.py:62
+#: pyembroidery-format-descriptions.py:66
+#: pyembroidery-format-descriptions.py:68
+#: pyembroidery-format-descriptions.py:70
+#: pyembroidery-format-descriptions.py:72
+msgid "Pfaff Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: svg
+#: pyembroidery-format-descriptions.py:14
+msgid "Scalable Vector Graphics"
+msgstr ""
+
+#. description for pyembroidery file format: csv
+#: pyembroidery-format-descriptions.py:16
+msgid "Comma-separated values"
+msgstr ""
+
+#. description for pyembroidery file format: xxx
+#: pyembroidery-format-descriptions.py:18
+msgid "Singer Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: u01
+#: pyembroidery-format-descriptions.py:22
+msgid "Barudan Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: shv
+#: pyembroidery-format-descriptions.py:24
+msgid "Husqvarna Viking Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: 10o
+#. description for pyembroidery file format: 100
+#: pyembroidery-format-descriptions.py:26
+#: pyembroidery-format-descriptions.py:28
+msgid "Toyota Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: bro
+#: pyembroidery-format-descriptions.py:30
+msgid "Bits & Volts Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: dat
+#: pyembroidery-format-descriptions.py:32
+msgid "Sunstar or Barudan Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: dsb
+#: pyembroidery-format-descriptions.py:34
+msgid "Tajima(Barudan) Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: dsz
+#: pyembroidery-format-descriptions.py:36
+msgid "ZSK USA Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: emd
+#: pyembroidery-format-descriptions.py:38
+msgid "Elna Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: exy
+#: pyembroidery-format-descriptions.py:40
+msgid "Eltac Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: fxy
+#: pyembroidery-format-descriptions.py:42
+msgid "Fortron Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: gt
+#: pyembroidery-format-descriptions.py:44
+msgid "Gold Thread Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: inb
+#: pyembroidery-format-descriptions.py:46
+msgid "Inbro Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: tap
+#: pyembroidery-format-descriptions.py:52
+msgid "Happy Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: stx
+#: pyembroidery-format-descriptions.py:54
+msgid "Data Stitch Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: new
+#: pyembroidery-format-descriptions.py:60
+msgid "Ameco Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: mit
+#: pyembroidery-format-descriptions.py:64
+msgid "Mitsubishi Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: stc
+#: pyembroidery-format-descriptions.py:76
+msgid "Gunold Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: zxy
+#: pyembroidery-format-descriptions.py:78
+msgid "ZSK TC Embroidery Format"
+msgstr ""
+
+#. description for pyembroidery file format: pmv
+#: pyembroidery-format-descriptions.py:80
+msgid "Brother Stitch Format"
+msgstr ""
+
+#: templates/convert_to_satin.inx:3
+msgid "Convert Line to Satin"
+msgstr ""
+
+#. This is used for the submenu under Extensions -> Ink/Stitch.  Translate this
+#. to your language's word for its language, e.g. "Español" for the spanish
+#. translation.
+#: templates/convert_to_satin.inx:12 templates/embroider.inx:24
+#: templates/flip.inx:12 templates/global_commands.inx:16
+#: templates/install.inx:12 templates/layer_commands.inx:16
+#: templates/object_commands.inx:15 templates/params.inx:12
+#: templates/print.inx:12 templates/simulate.inx:12
+msgid "English"
+msgstr ""
+
+#: templates/embroider.inx:3
+msgid "Embroider"
+msgstr ""
+
+#: templates/embroider.inx:7
+msgid "Collapse length (mm)"
+msgstr ""
+
+#: templates/embroider.inx:7
+msgid "Jump stitches smaller than this will be treated as normal stitches."
+msgstr ""
+
+#: templates/embroider.inx:8
+msgid "Hide other layers"
+msgstr ""
+
+#: templates/embroider.inx:8
+msgid "Hide all other top-level layers when the embroidery layer is generated, in order to make stitching discernible."
+msgstr ""
+
+#: templates/embroider.inx:9
+msgid "Output file format"
+msgstr ""
+
+#: templates/embroider.inx:14
+msgid "DEBUG"
+msgstr ""
+
+#: templates/embroider.inx:17
+msgid "Directory"
+msgstr ""
+
+#: templates/embroider.inx:17
+msgid "Leave empty to save the output in Inkscape's extension directory."
+msgstr ""
+
+#: templates/flip.inx:3
+msgid "Flip Satin Columns"
+msgstr ""
+
+#: templates/global_commands.inx:3
+msgid "Add Commands"
+msgstr ""
+
+#: templates/global_commands.inx:7
+msgid "These commands affect the entire embroidery design."
+msgstr ""
+
+#. Inkscape submenu under Extensions -> Ink/Stitch
+#: templates/global_commands.inx:18 templates/layer_commands.inx:17
+#: templates/object_commands.inx:16
+msgid "Commands"
+msgstr ""
+
+#: templates/input.inx:11
+#, python-format
+msgid "convert %(file_extension)s file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: templates/install.inx:3
+msgid "Install add-ons for Inkscape"
+msgstr ""
+
+#: templates/layer_commands.inx:3
+msgid "Add Layer Commands"
+msgstr ""
+
+#: templates/layer_commands.inx:7
+msgid "Commands will be added to the currently-selected layer."
+msgstr ""
+
+#: templates/object_commands.inx:3
+msgid "Attach Commands to Selected Objects"
+msgstr ""
+
+#: templates/output.inx:11
+#, python-format
+msgid "Save design in %(file_extension)s format using Ink/Stitch"
+msgstr ""
+
+#: templates/params.inx:3
+msgid "Params"
+msgstr ""
+
+#: templates/simulate.inx:3
+msgid "Simulate"
+msgstr ""
+
+#: templates/zip.inx:10
+msgid "Ink/Stitch: ZIP export multiple formats (.zip)"
+msgstr ""
+
+#: templates/zip.inx:11
+msgid "Create a ZIP with multiple embroidery file formats using Ink/Stitch"
+msgstr ""
 

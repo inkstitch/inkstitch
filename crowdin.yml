@@ -1,3 +1,5 @@
+project_identifier: inkstitch
+api_key_env: CROWDIN_API_KEY
 files:
   - source: messages.po
     translation: /translations/messages_%locale_with_underscore%.po

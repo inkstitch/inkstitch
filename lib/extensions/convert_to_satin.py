@@ -11,6 +11,7 @@ from ..svg.tags import SVG_PATH_TAG
 from ..svg import get_correction_transform, PIXELS_PER_MM
 from ..elements import Stroke
 from ..utils import Point
+from ..i18n import _
 
 
 class SelfIntersectionError(Exception):
@@ -51,7 +52,9 @@ class ConvertToSatin(InkstitchExtension):
                 try:
                     rails, rungs = self.path_to_satin(path, element.stroke_width, style_args)
                 except SelfIntersectionError:
-                    inkex.errormsg(_("Cannot convert %s to a satin column because it intersects itself.  Try breaking it up into multiple paths.") % element.node.get('id'))
+                    inkex.errormsg(
+                        _("Cannot convert %s to a satin column because it intersects itself.  Try breaking it up into multiple paths.") %
+                        element.node.get('id'))
 
                     # revert any changes we've made
                     self.document = deepcopy(self.original_document)
@@ -84,7 +87,7 @@ class ConvertToSatin(InkstitchExtension):
         """Convert svg line join style to shapely parallel offset arguments."""
 
         args = {
-                    'join_style': shgeo.JOIN_STYLE.round
+            'join_style': shgeo.JOIN_STYLE.round
         }
 
         element_join_style = element.get_style('stroke-linejoin')
@@ -113,7 +116,7 @@ class ConvertToSatin(InkstitchExtension):
                 # path intersects itself, when taking its stroke width into consideration.  See
                 # the last example for parallel_offset() in the Shapely documentation:
                 #   https://shapely.readthedocs.io/en/latest/manual.html#object.parallel_offset
-                raise SelfIntersectionError()
+            raise SelfIntersectionError()
 
         # for whatever reason, shapely returns a right-side offset's coordinates in reverse
         left_rail = list(left_rail.coords)
@@ -244,7 +247,7 @@ class ConvertToSatin(InkstitchExtension):
             # millimeters before this one.
             if last_rung_center is not None and \
                (rung_center - last_rung_center).length() < 2 * PIXELS_PER_MM:
-                    continue
+                continue
             else:
                 last_rung_center = rung_center
 
@@ -269,7 +272,6 @@ class ConvertToSatin(InkstitchExtension):
 
         return rungs
 
-
     def satin_to_svg_node(self, rails, rungs, correction_transform):
         d = ""
         for path in chain(rails, rungs):
@@ -279,11 +281,11 @@ class ConvertToSatin(InkstitchExtension):
             d += " "
 
         return inkex.etree.Element(SVG_PATH_TAG,
-            {
-                "id": self.uniqueId("path"),
-                "style": "stroke:#000000;stroke-width:1px;fill:none",
-                "transform": correction_transform,
-                "d": d,
-                "embroider_satin_column": "true",
-            }
-        )
+                                   {
+                                       "id": self.uniqueId("path"),
+                                       "style": "stroke:#000000;stroke-width:1px;fill:none",
+                                       "transform": correction_transform,
+                                       "d": d,
+                                       "embroider_satin_column": "true",
+                                   }
+                                   )

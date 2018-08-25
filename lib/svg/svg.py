@@ -1,4 +1,6 @@
-import simpletransform, simplestyle, inkex
+import simpletransform
+import simplestyle
+import inkex
 
 from .units import get_viewbox_transform
 from .tags import SVG_GROUP_TAG, INKSCAPE_LABEL, INKSCAPE_GROUPMODE, SVG_PATH_TAG, SVG_DEFS_TAG
@@ -11,13 +13,13 @@ def color_block_to_point_lists(color_block):
     point_lists = [[]]
 
     for stitch in color_block:
-         if stitch.trim:
-              if point_lists[-1]:
-                  point_lists.append([])
-                  continue
+        if stitch.trim:
+            if point_lists[-1]:
+                point_lists.append([])
+                continue
 
-         if not stitch.jump and not stitch.color_change:
-              point_lists[-1].append(stitch.as_tuple())
+        if not stitch.jump and not stitch.color_change:
+            point_lists[-1].append(stitch.as_tuple())
 
     return point_lists
 
@@ -51,12 +53,13 @@ def color_block_to_realistic_stitches(color_block, svg):
                         'stroke': 'none',
                         'filter': 'url(#realistic-stitch-filter)'
                     }),
-                'd': realistic_stitch(start, point),
-                'transform': get_correction_transform(svg)
-                }))
+                 'd': realistic_stitch(start, point),
+                 'transform': get_correction_transform(svg)
+                 }))
             start = point
 
     return paths
+
 
 def color_block_to_paths(color_block, svg):
     paths = []
@@ -68,19 +71,20 @@ def color_block_to_paths(color_block, svg):
             SVG_PATH_TAG,
             {'style': simplestyle.formatStyle(
                 {'stroke': color,
-                'stroke-width': "0.4",
-                'fill': 'none'}),
-            'd': "M" + " ".join(" ".join(str(coord) for coord in point) for point in point_list),
-            'transform': get_correction_transform(svg),
-            'embroider_manual_stitch': 'true',
-            'embroider_trim_after': 'true',
-            }))
+                 'stroke-width': "0.4",
+                 'fill': 'none'}),
+             'd': "M" + " ".join(" ".join(str(coord) for coord in point) for point in point_list),
+             'transform': get_correction_transform(svg),
+             'embroider_manual_stitch': 'true',
+             'embroider_trim_after': 'true',
+             }))
 
     # no need to trim at the end of a thread color
     if paths:
         paths[-1].attrib.pop('embroider_trim_after')
 
     return paths
+
 
 def render_stitch_plan(svg, stitch_plan, realistic=False):
     layer = svg.find(".//*[@id='__inkstitch_stitch_plan__']")

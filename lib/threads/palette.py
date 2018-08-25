@@ -41,8 +41,11 @@ class ThreadPalette(Set):
             if self.name.lower().startswith('name: ink/stitch: '):
                 self.name = self.name[18:]
 
-            columns_line = palette.readline()
-            headers_line = palette.readline()
+            # number of columns
+            palette.readline()
+
+            # headers
+            palette.readline()
 
             for line in palette:
                 fields = line.split("\t", 3)
