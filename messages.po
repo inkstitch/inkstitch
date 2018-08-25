@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-24 21:25-0400\n"
+"POT-Creation-Date: 2018-08-24 21:44-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -686,6 +686,13 @@ msgstr ""
 #. menu.
 #: lib/inx/utils.py:46
 msgid "Generate INX files"
+msgstr ""
+
+#. low-level file error.  %(error)s is (hopefully?) translated by
+#. the user's system automatically.
+#: lib/output.py:92
+#, python-format
+msgid "Error writing to %(path)s: %(error)s"
 msgstr ""
 
 #: lib/simulator.py:40
