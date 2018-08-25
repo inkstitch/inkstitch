@@ -11,11 +11,11 @@
     <param name="extension" type="string" gui-hidden="true">layer_commands</param>
     <effect>
         <object-type>all</object-type>
-        <submenu name="Ink/Stitch">
+        <effects-menu>
             <submenu name="Ink/Stitch">
                 <submenu name="{% trans %}English{% endtrans %}" />
             </submenu>
-        </submenu>
+        </effects-menu>
     </effect>
     <script>
         <command reldir="extensions" interpreter="python">inkstitch.py</command>
