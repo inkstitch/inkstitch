@@ -39,7 +39,7 @@ class Embroider(InkstitchExtension):
 
     def get_output_path(self):
         if self.options.output_file:
-            output_path = os.path.join(self.options.path, self.options.output_file)
+            output_path = os.path.join(os.path.expanduser(os.path.expandvars(self.options.path)), self.options.output_file)
         else:
             csv_filename = '%s.%s' % (self.get_base_file_name(), self.options.output_format)
             output_path = os.path.join(self.options.path, csv_filename)
