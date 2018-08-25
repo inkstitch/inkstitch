@@ -40,15 +40,17 @@ class EmbroiderySimulator(wx.Frame):
 
         self.button_sizer = wx.StdDialogButtonSizer()
         self.button_label = (
-            [_("<<"),
-             _('Speed | Play reverse (arrow left)'),
-                self.animation_reverse],
-            [_(">>"),
-             _('Speed | Play forward (arrow right)'),
-                self.animation_forward],
-            [_("Pause"), _("Pause (P)"), self.animation_pause],
-            [_("Restart"), _("Restart (R)"), self.animation_restart],
-            [_("Quit"), _("Close (Q)"), self.animation_quit])
+            # Switch direction button (currently not in use - would this be better?)
+            #[_('>>'), _('Switch direction | Play reverse (arrow left) | Play forward (arrow right)'), self.animation_switch_direction],
+            [_('<<'), _('Play reverse (arrow left)'), self.animation_reverse],
+            [_('-'), _('Play one frame backward (+)'), self.animation_one_frame_back],
+            [_('+'), _('Play one frame forward (+)'), self.animation_one_frame_forward],
+            [_('>>'), _('Play forward (arrow right)'), self.animation_forward],
+            [_('^'), _('Speed up (arrow up)'), self.animation_speed_up],
+            [_('v'), _('Slow down (arrow down)'), self.animation_slow_down],
+            [_('Pause'), _('Pause (P)'), self.animation_pause],
+            [_('Restart'), _('Restart (R)'), self.animation_restart],
+            [_('Quit'), _('Close (Q)'), self.animation_quit])
 
         self.buttons = []
         for i in range(0, len(self.button_label)):
@@ -80,29 +82,30 @@ class EmbroiderySimulator(wx.Frame):
 
         self.current_frame = 0
         self.animation_direction = 1
-        self.speed_info = self.calculate_speed_level()
         self.set_stitch_counter(0)
 
         shortcut_keys = [
-            (wx.ACCEL_NORMAL, ord('+'), self.animation_speed_up),
-            (wx.ACCEL_NORMAL, ord('='), self.animation_speed_up),
-            (wx.ACCEL_SHIFT, ord('='), self.animation_speed_up),
-            (wx.ACCEL_NORMAL, wx.WXK_ADD, self.animation_speed_up),
-            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_ADD, self.animation_speed_up),
-            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_UP, self.animation_speed_up),
-            (wx.ACCEL_NORMAL, wx.WXK_UP, self.animation_speed_up),
-            (wx.ACCEL_NORMAL, ord('-'), self.animation_slow_down),
-            (wx.ACCEL_NORMAL, ord('_'), self.animation_slow_down),
-            (wx.ACCEL_NORMAL, wx.WXK_SUBTRACT, self.animation_slow_down),
-            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_SUBTRACT, self.animation_slow_down),
-            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_DOWN, self.animation_slow_down),
-            (wx.ACCEL_NORMAL, wx.WXK_DOWN, self.animation_slow_down),
             (wx.ACCEL_NORMAL, wx.WXK_RIGHT, self.animation_forward),
-            (wx.ACCEL_NORMAL, wx.WXK_LEFT, self.animation_reverse),
             (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_RIGHT, self.animation_forward),
+            (wx.ACCEL_NORMAL, wx.WXK_LEFT, self.animation_reverse),
             (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_LEFT, self.animation_reverse),
+            (wx.ACCEL_NORMAL, wx.WXK_UP, self.animation_speed_up),
+            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_UP, self.animation_speed_up),
+            (wx.ACCEL_NORMAL, wx.WXK_DOWN, self.animation_slow_down),
+            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_DOWN, self.animation_slow_down),
+            (wx.ACCEL_NORMAL, ord('+'), self.animation_one_frame_forward),
+            (wx.ACCEL_NORMAL, ord('='), self.animation_one_frame_forward),
+            (wx.ACCEL_SHIFT, ord('='), self.animation_one_frame_forward),
+            (wx.ACCEL_NORMAL, wx.WXK_ADD, self.animation_one_frame_forward),
+            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_ADD, self.animation_one_frame_forward),
+            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_UP, self.animation_one_frame_forward),
+            (wx.ACCEL_NORMAL, ord('-'), self.animation_one_frame_back),
+            (wx.ACCEL_NORMAL, ord('_'), self.animation_one_frame_back),
+            (wx.ACCEL_NORMAL, wx.WXK_SUBTRACT, self.animation_one_frame_back),
+            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_SUBTRACT, self.animation_one_frame_back),
             (wx.ACCEL_NORMAL, ord('r'), self.animation_restart),
             (wx.ACCEL_NORMAL, ord('p'), self.animation_pause),
+            (wx.ACCEL_NORMAL, wx.WXK_SPACE, self.animation_pause),
             (wx.ACCEL_NORMAL, ord('q'), self.animation_quit)]
 
         accel_entries = []
@@ -139,14 +142,6 @@ class EmbroiderySimulator(wx.Frame):
             self.move_to_top_left()
             return
 
-    def reset_speed(self):
-        if self.target_duration:
-            self.adjust_speed(self, self.target_duration)
-        else:
-            self.stitches_per_frame = 1
-            self.frame_period = 80
-        self.set_speed_info(self.calculate_speed_level())
-
     def adjust_speed(self, duration):
         self.frame_period = 1000 * float(duration) / len(self.lines)
         self.stitches_per_frame = 1
@@ -155,31 +150,42 @@ class EmbroiderySimulator(wx.Frame):
             self.frame_period *= 2
             self.stitches_per_frame *= 2
 
-    def animation_forward(self, event):
-        if self.current_frame == 1:
-            self.animation_direction = 1
-            self.reset_speed()
-            self.timer.StartOnce(self.frame_period)
-        elif self.animation_direction == -1 and self.frame_period > 1280:
-            self.animation_direction = 1
-            self.set_speed_info(self.calculate_speed_level())
-        elif self.animation_direction == 1:
-            self.animation_speed_up('speed_up')
+    # Switch direction button (currently not in use - would this be better?)
+    def animation_switch_direction(self, event):
+        direction_button = event.GetEventObject()
+        lbl = direction_button.GetLabel()
+        if self.animation_direction == 1:
+            self.animation_reverse('backward')
+            direction_button.SetLabel('<<')
         else:
-            self.animation_slow_down('slow_down')
+            self.animation_forward('forward')
+            direction_button.SetLabel('>>')
+
+    def animation_forward(self, event):
+        self.animation_direction = 1
+        if not self.timer.IsRunning():
+            self.timer.StartOnce(self.frame_period)
 
     def animation_reverse(self, event):
-        if self.current_frame == len(self.lines):
-            self.animation_direction = -1
-            self.reset_speed()
+        self.animation_direction = -1
+        if not self.timer.IsRunning():
             self.timer.StartOnce(self.frame_period)
-        elif self.animation_direction == 1 and self.frame_period > 1280:
-            self.animation_direction = -1
-            self.set_speed_info(self.calculate_speed_level())
-        elif self.animation_direction == -1:
-            self.animation_speed_up('speed_up')
-        else:
-            self.animation_slow_down('slow_down')
+
+    def animation_one_frame_forward(self, event):
+        if self.current_frame < len(self.lines):
+            self.timer.Stop()
+            self.current_frame = self.current_frame + 1
+            self.draw_one_frame()
+            self.set_stitch_counter(self.current_frame)
+            self.set_stitch_slider(self.current_frame)
+
+    def animation_one_frame_back(self, event):
+        if self.current_frame > 1:
+            self.timer.Stop()
+            self.current_frame = self.current_frame - 1
+            self.draw_one_frame()
+            self.set_stitch_counter(self.current_frame)
+            self.set_stitch_slider(self.current_frame)
 
     def animation_speed_up(self, event):
         if self.stitches_per_frame <= 1280:
@@ -215,36 +221,16 @@ class EmbroiderySimulator(wx.Frame):
     def animation_update_timer(self):
         self.frame_period = max(1, self.frame_period)
         self.stitches_per_frame = max(self.stitches_per_frame, 1)
-        self.speed_info = self.calculate_speed_level()
         self.set_stitch_counter(self.current_frame)
         if self.timer.IsRunning():
             self.timer.Stop()
             self.timer.StartOnce(self.frame_period)
-
-    def calculate_speed_level(self):
-        count = 0
-        speed = self.frame_period
-        speed_plus = 1
-        animation_direction = '>>' if self.animation_direction == 1 else '<<'
-        while speed <= 2560:
-            speed = speed * 2
-            count += 1
-        while speed_plus < self.stitches_per_frame:
-            speed_plus = speed_plus * 2
-            count += 1
-        return animation_direction + ' x' + str(count)
 
     def set_stitch_counter(self, current_frame):
         self.dc.SetTextForeground('red')
         stitch_counter_text = _("Stitch # ") + \
             str(current_frame) + ' / ' + str(len(self.lines))
         self.dc.DrawText(stitch_counter_text, 30, 5)
-        self.set_speed_info(self.speed_info)
-
-    def set_speed_info(self, speed_info):
-        self.speed_info = speed_info
-        self.dc.SetTextForeground('blue')
-        self.dc.DrawText(_("Speed ") + str(speed_info), 210, 5)
 
     def on_slider(self, event):
         self.panel.SetFocus()
