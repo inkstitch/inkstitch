@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-24 20:56-0400\n"
+"POT-Creation-Date: 2018-08-24 21:20-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -178,9 +178,23 @@ msgid ""
 "shapes."
 msgstr ""
 
-#: lib/elements/element.py:230
+#: lib/elements/element.py:202
+#, python-format
+msgid ""
+"Object %(id)s has an empty 'd' attribute.  Please delete this object from"
+" your document."
+msgstr ""
+
+#: lib/elements/element.py:234
 #, python-format
 msgid "%(id)s has more than one command of type '%(command)s' linked to it"
+msgstr ""
+
+#. used when showing an error message to the user such as "satin column: One or
+#. more of the rungs doesn't
+#. intersect both rails."
+#: lib/elements/element.py:273
+msgid "error:"
 msgstr ""
 
 #: lib/elements/fill.py:12

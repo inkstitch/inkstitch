@@ -197,7 +197,11 @@ class EmbroideryElement(object):
         # In a path, each element in the 3-tuple is itself a tuple of (x, y).
         # Tuples all the way down.  Hasn't anyone heard of using classes?
 
-        return cubicsuperpath.parsePath(self.node.get("d"))
+        d = self.node.get("d", "")
+        if not d:
+            self.fatal(_("Object %(id)s has an empty 'd' attribute.  Please delete this object from your document.") % dict(id=self.node.get("id")))
+
+        return cubicsuperpath.parsePath(d)
 
     @cache
     def parse_path(self):
@@ -264,5 +268,7 @@ class EmbroideryElement(object):
         return patches
 
     def fatal(self, message):
-        print >> sys.stderr, "error:", message
+        # L10N used when showing an error message to the user such as "satin column: One or more of the rungs doesn't
+        # intersect both rails."
+        print >> sys.stderr, _("error:"), message
         sys.exit(1)
