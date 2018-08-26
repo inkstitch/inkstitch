@@ -35,7 +35,7 @@ class ControlPanel(wx.Panel):
         self.slider = wx.Slider(self, -1, value=1, minValue=1, maxValue=self.num_stitches,
                                 style=wx.SL_HORIZONTAL | wx.SL_LABELS)
         self.slider.Bind(wx.EVT_SLIDER, self.on_slider)
-        self.stitchBox = IntCtrl(self, -1, value=0, min=0, max=self.num_stitches, limited=True, allow_none=False)
+        self.stitchBox = IntCtrl(self, -1, value=1, min=0, max=self.num_stitches, limited=True, allow_none=False)
         self.stitchBox.Bind(wx.EVT_TEXT, self.on_stitch_box)
         self.speedST = wx.StaticText(self, -1, label='', style=wx.ALIGN_CENTER)
 
@@ -67,16 +67,16 @@ class ControlPanel(wx.Panel):
             (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_UP, self.animation_speed_up),
             (wx.ACCEL_NORMAL, wx.WXK_DOWN, self.animation_slow_down),
             (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_DOWN, self.animation_slow_down),
-            (wx.ACCEL_NORMAL, ord('+'), self.animation_one_frame_forward),
-            (wx.ACCEL_NORMAL, ord('='), self.animation_one_frame_forward),
-            (wx.ACCEL_SHIFT, ord('='), self.animation_one_frame_forward),
-            (wx.ACCEL_NORMAL, wx.WXK_ADD, self.animation_one_frame_forward),
-            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_ADD, self.animation_one_frame_forward),
-            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_UP, self.animation_one_frame_forward),
-            (wx.ACCEL_NORMAL, ord('-'), self.animation_one_frame_backward),
-            (wx.ACCEL_NORMAL, ord('_'), self.animation_one_frame_backward),
-            (wx.ACCEL_NORMAL, wx.WXK_SUBTRACT, self.animation_one_frame_backward),
-            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_SUBTRACT, self.animation_one_frame_backward),
+            (wx.ACCEL_NORMAL, ord('+'), self.animation_one_stitch_forward),
+            (wx.ACCEL_NORMAL, ord('='), self.animation_one_stitch_forward),
+            (wx.ACCEL_SHIFT, ord('='), self.animation_one_stitch_forward),
+            (wx.ACCEL_NORMAL, wx.WXK_ADD, self.animation_one_stitch_forward),
+            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_ADD, self.animation_one_stitch_forward),
+            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_UP, self.animation_one_stitch_forward),
+            (wx.ACCEL_NORMAL, ord('-'), self.animation_one_stitch_backward),
+            (wx.ACCEL_NORMAL, ord('_'), self.animation_one_stitch_backward),
+            (wx.ACCEL_NORMAL, wx.WXK_SUBTRACT, self.animation_one_stitch_backward),
+            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_SUBTRACT, self.animation_one_stitch_backward),
             (wx.ACCEL_NORMAL, ord('r'), self.animation_restart),
             (wx.ACCEL_NORMAL, ord('p'), self.on_pause_start_button),
             (wx.ACCEL_NORMAL, wx.WXK_SPACE, self.on_pause_start_button),
@@ -92,6 +92,7 @@ class ControlPanel(wx.Panel):
         accel_table = wx.AcceleratorTable(accel_entries)
         self.SetAcceleratorTable(accel_table)
 
+        self.current_stitch = 1
         self.set_speed(16)
 
         self.SetFocus()
@@ -124,8 +125,10 @@ class ControlPanel(wx.Panel):
         self.drawing_panel.set_current_stitch(stitch)
 
     def on_current_stitch(self, stitch):
-        self.slider.SetValue(stitch)
-        self.stitchBox.SetValue(stitch)
+        if self.current_stitch != stitch:
+            self.current_stitch = stitch
+            self.slider.SetValue(stitch)
+            self.stitchBox.SetValue(stitch)
 
     def set_stitch_label(self, stitch):
         self.st1.SetLabel("Stitch # %d/%d" % (stitch, self.num_stitches))
@@ -158,11 +161,11 @@ class ControlPanel(wx.Panel):
         else:
             self.animation_start()
 
-    def animation_one_frame_forward(self, event):
-        pass
+    def animation_one_stitch_forward(self, event):
+        self.drawing_panel.one_stitch_forward()
 
-    def animation_one_frame_backward(self, event):
-        pass
+    def animation_one_stitch_backward(self, event):
+        self.drawing_panel.one_stitch_backward()
 
     def animation_quit(self, event):
         self.parent.quit()
@@ -231,7 +234,6 @@ class DrawingPanel(wx.Panel):
         elif self.direction == 1 and self.current_stitch < self.num_stitches:
             self.go()
 
-
     def animate(self):
         if not self.animating:
             return
@@ -246,15 +248,7 @@ class DrawingPanel(wx.Panel):
 
         #print >> sys.stderr, time.time(), "animate", self.current_stitch, stitch_increment, self.last_frame_duration, frame_time
 
-        self.current_stitch += self.direction * stitch_increment
-        self.clamp_current_stitch()
-        self.stop_if_at_end()
-
-        if self.control_panel:
-            self.control_panel.on_current_stitch(self.current_stitch)
-
-        self.Refresh()
-
+        self.set_current_stitch(self.current_stitch + self.direction * stitch_increment)
         wx.CallLater(int(1000 * frame_time), self.animate)
 
     def OnPaint(self, e):
@@ -352,6 +346,9 @@ class DrawingPanel(wx.Panel):
         self.stop_if_at_end()
         self.Refresh()
 
+        if self.control_panel:
+            self.control_panel.on_current_stitch(self.current_stitch)
+
     def restart(self):
         if self.direction == 1:
             self.current_stitch = 0
@@ -359,6 +356,12 @@ class DrawingPanel(wx.Panel):
             self.current_stitch = self.num_stitches
 
         self.go()
+
+    def one_stitch_forward(self):
+        self.set_current_stitch(self.current_stitch + 1)
+
+    def one_stitch_backward(self):
+        self.set_current_stitch(self.current_stitch - 1)
 
 
 class SimulatorPanel(wx.Panel):
