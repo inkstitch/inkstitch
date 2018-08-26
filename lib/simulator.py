@@ -1,5 +1,6 @@
 import sys
 import wx
+from wx.lib.intctrl import IntCtrl
 import time
 from itertools import izip
 
@@ -16,6 +17,8 @@ class ControlPanel(wx.Panel):
         kwargs['style'] = wx.BORDER_SUNKEN
         wx.Panel.__init__(self, parent, *args, **kwargs)
 
+        self.num_stitches = self.stitch_plan.num_stitches
+
         # Widgets
         self.btnMinus = wx.Button(self, -1, label='-')
         self.btnMinus.Bind(wx.EVT_BUTTON, self.OnSpeedMinus)
@@ -26,29 +29,32 @@ class ControlPanel(wx.Panel):
         self.pauseBtn = wx.Button(self, -1, label='Pause')
         self.pauseBtn.Bind(wx.EVT_BUTTON, self.OnPauseStart)
         self.restartBtn = wx.Button(self, -1, label='Restart')
+        self.restartBtn.Bind(wx.EVT_BUTTON, self.on_restart)
         self.quitBtn = wx.Button(self, -1, label='Quit')
         self.quitBtn.Bind(wx.EVT_BUTTON, self.on_quit)
-        self.slider = wx.Slider(self, -1, value=1, minValue=1, maxValue=1000,
+        self.slider = wx.Slider(self, -1, value=1, minValue=1, maxValue=self.num_stitches,
                                 style=wx.SL_HORIZONTAL | wx.SL_LABELS)
-        self.st1 = wx.StaticText(self, -1, label='Stitch # 1234/56789', style=wx.ALIGN_CENTER)
-        self.st1.SetForegroundColour('#FF0000')
+        self.slider.Bind(wx.EVT_SLIDER, self.on_slider)
+        self.stitchBox = IntCtrl(self, -1, value=0, min=0, max=self.num_stitches, limited=True, allow_none=False)
+        self.stitchBox.Bind(wx.EVT_TEXT, self.on_stitch_box)
         self.speedST = wx.StaticText(self, -1, label='', style=wx.ALIGN_CENTER)
-        self.speedST.SetForegroundColour('#0000FF')
 
         # Layout
         self.vbSizer = vbSizer = wx.BoxSizer(wx.VERTICAL)
-        self.hbSizer = hbSizer = wx.BoxSizer(wx.HORIZONTAL)
-        vbSizer.Add(self.slider, 1, wx.EXPAND | wx.ALL, 3)
-        hbSizer.Add(self.st1, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 2)
-        hbSizer.AddStretchSpacer(prop=1)
-        hbSizer.Add(self.speedST, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 2)
-        hbSizer.Add(self.btnMinus, 0, wx.ALL, 2)
-        hbSizer.Add(self.btnPlus, 0, wx.ALL, 2)
-        hbSizer.Add(self.direction, 0, wx.EXPAND | wx.ALL, 2)
-        hbSizer.Add(self.pauseBtn, 0, wx.EXPAND | wx.ALL, 2)
-        hbSizer.Add(self.restartBtn, 0, wx.EXPAND | wx.ALL, 2)
-        hbSizer.Add(self.quitBtn, 0, wx.EXPAND | wx.ALL, 2)
-        vbSizer.Add(hbSizer, 0, wx.EXPAND | wx.ALL, 3)
+        self.hbSizer1 = hbSizer1 = wx.BoxSizer(wx.HORIZONTAL)
+        self.hbSizer2 = hbSizer2 = wx.BoxSizer(wx.HORIZONTAL)
+        hbSizer1.Add(self.slider, 1, wx.EXPAND | wx.ALL, 3)
+        hbSizer1.Add(self.stitchBox, 0, wx.ALL | wx.ALIGN_CENTER_VERTICAL, 2)
+        vbSizer.Add(hbSizer1, 1, wx.EXPAND | wx.ALL, 3)
+        hbSizer2.Add(self.speedST, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 2)
+        hbSizer2.AddStretchSpacer(prop=1)
+        hbSizer2.Add(self.btnMinus, 0, wx.ALL, 2)
+        hbSizer2.Add(self.btnPlus, 0, wx.ALL, 2)
+        hbSizer2.Add(self.direction, 0, wx.EXPAND | wx.ALL, 2)
+        hbSizer2.Add(self.pauseBtn, 0, wx.EXPAND | wx.ALL, 2)
+        hbSizer2.Add(self.restartBtn, 0, wx.EXPAND | wx.ALL, 2)
+        hbSizer2.Add(self.quitBtn, 0, wx.EXPAND | wx.ALL, 2)
+        vbSizer.Add(hbSizer2, 0, wx.EXPAND | wx.ALL, 3)
         self.SetSizer(vbSizer)
 
         self.set_speed(16)
@@ -70,10 +76,27 @@ class ControlPanel(wx.Panel):
             self.drawing_panel.forward()
 
     def set_speed(self, speed):
-        self.speed = max(speed, 1)
+        self.speed = int(max(speed, 1))
         self.drawing_panel.set_speed(self.speed)
-        self.speedST.SetLabel('Speed x%s' % self.speed)
-        self.hbSizer.Layout()
+        self.speedST.SetLabel('Speed: %s stitches/sec' % self.speed)
+        self.hbSizer2.Layout()
+
+    def on_slider(self, event):
+        stitch = event.GetEventObject().GetValue()
+        self.stitchBox.SetValue(stitch)
+        self.drawing_panel.set_current_stitch(stitch)
+
+    def set_current_stitch(self, stitch):
+        self.slider.SetValue(stitch)
+        self.stitchBox.SetValue(stitch)
+
+    def set_stitch_label(self, stitch):
+        self.st1.SetLabel("Stitch # %d/%d" % (stitch, self.num_stitches))
+
+    def on_stitch_box(self, event):
+        stitch = self.stitchBox.GetValue()
+        self.slider.SetValue(stitch)
+        self.drawing_panel.set_current_stitch(stitch)
 
     def OnSpeedMinus(self, event):
         """"""
@@ -96,6 +119,9 @@ class ControlPanel(wx.Panel):
 
     def on_quit(self, event):
         self.parent.quit()
+
+    def on_restart(self, event):
+        self.drawing_panel.restart()
 
 class DrawingPanel(wx.Panel):
     """"""
@@ -126,6 +152,7 @@ class DrawingPanel(wx.Panel):
         self.last_frame_duration = 0
         self.direction = 1
         self.current_stitch = 0
+        self.control_panel = None
 
         # desired simulation speed in stitches per second
         self.speed = 10
@@ -135,6 +162,28 @@ class DrawingPanel(wx.Panel):
         self.load(self.stitch_plan)
 
         self.Bind(wx.EVT_PAINT, self.OnPaint)
+
+    def set_control_panel(self, control_panel):
+        self.control_panel = control_panel
+
+    def clamp_current_stitch(self):
+        if self.current_stitch < 0:
+            self.current_stitch = 0
+        elif self.current_stitch > self.num_stitches:
+            self.current_stitch = self.num_stitches
+
+    def stop_if_at_end(self):
+        if self.direction == -1 and self.current_stitch == 0:
+            self.stop()
+        elif self.direction == 1 and self.current_stitch == self.num_stitches:
+            self.stop()
+
+    def start_if_not_at_end(self):
+        if self.direction == -1 and self.current_stitch > 0:
+            self.go()
+        elif self.direction == 1 and self.current_stitch < self.num_stitches:
+            self.go()
+
 
     def animate(self):
         if not self.animating:
@@ -151,13 +200,11 @@ class DrawingPanel(wx.Panel):
         #print >> sys.stderr, time.time(), "animate", self.current_stitch, stitch_increment, self.last_frame_duration, frame_time
 
         self.current_stitch += self.direction * stitch_increment
+        self.clamp_current_stitch()
+        self.stop_if_at_end()
 
-        if self.direction == -1 and self.current_stitch < 0:
-            self.current_stitch = 0
-            self.stop()
-        elif self.direction == 1 and self.current_stitch >= self.num_stitches:
-            self.current_stitch = self.num_stitches
-            self.stop()
+        if self.control_panel:
+            self.control_panel.set_current_stitch(self.current_stitch)
 
         self.Refresh()
 
@@ -246,13 +293,25 @@ class DrawingPanel(wx.Panel):
 
     def forward(self):
         self.direction = 1
-        if self.current_stitch < self.num_stitches:
-            self.go()
+        self.start_if_not_at_end()
 
     def reverse(self):
         self.direction = -1
-        if self.current_stitch > 0:
-            self.go()
+        self.start_if_not_at_end()
+
+    def set_current_stitch(self, stitch):
+        self.current_stitch = stitch
+        self.clamp_current_stitch()
+        self.stop_if_at_end()
+        self.Refresh()
+
+    def restart(self):
+        if self.direction == 1:
+            self.current_stitch = 0
+        elif self.direction == -1:
+            self.current_stitch = self.num_stitches
+
+        self.go()
 
 
 class SimulatorPanel(wx.Panel):
@@ -266,6 +325,7 @@ class SimulatorPanel(wx.Panel):
 
         self.dp = DrawingPanel(self, stitch_plan=stitch_plan)
         self.cp = ControlPanel(self, stitch_plan=stitch_plan, drawing_panel=self.dp)
+        self.dp.set_control_panel(self.cp)
 
         vbSizer = wx.BoxSizer(wx.VERTICAL)
         vbSizer.Add(self.dp, 1, wx.EXPAND | wx.ALL, 2)
