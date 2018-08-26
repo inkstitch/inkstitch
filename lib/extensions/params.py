@@ -421,16 +421,7 @@ class SettingsFrame(wx.Frame):
         stitch_plan = patches_to_stitch_plan(patches)
         if self.simulate_window:
             self.simulate_window.stop()
-            self.simulate_window.load(stitch_plan=stitch_plan)
-            self.simulate_window.calculate_dimensions()
-
-            children = self.simulate_window.GetChildren()
-            for child in children:
-                if isinstance(child, wx.Slider):
-                    child.Destroy()
-                    self.simulate_window.set_slider()
-
-            self.simulate_window.Layout()
+            self.simulate_window.load(stitch_plan)
         else:
             params_rect = self.GetScreenRect()
             simulator_pos = params_rect.GetTopRight()

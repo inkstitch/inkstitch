@@ -12,14 +12,16 @@ class ControlPanel(wx.Panel):
     def __init__(self, parent, *args, **kwargs):
         """"""
         self.parent = parent
-        self.drawing_panel = kwargs.pop('drawing_panel')
         self.stitch_plan = kwargs.pop('stitch_plan')
-        stitches_per_second = kwargs.pop('stitches_per_second')
-        target_duration = kwargs.pop('target_duration')
+        self.target_stitches_per_second = kwargs.pop('stitches_per_second')
+        self.target_duration = kwargs.pop('target_duration')
         kwargs['style'] = wx.BORDER_SUNKEN
         wx.Panel.__init__(self, parent, *args, **kwargs)
 
-        self.num_stitches = self.stitch_plan.num_stitches
+        self.drawing_panel = None
+        self.num_stitches = 1
+        self.current_stitch = 0
+        self.speed = 1
 
         # Widgets
         self.btnMinus = wx.Button(self, -1, label='-')
@@ -34,7 +36,7 @@ class ControlPanel(wx.Panel):
         self.restartBtn.Bind(wx.EVT_BUTTON, self.animation_restart)
         self.quitBtn = wx.Button(self, -1, label='Quit')
         self.quitBtn.Bind(wx.EVT_BUTTON, self.animation_quit)
-        self.slider = wx.Slider(self, -1, value=1, minValue=1, maxValue=self.num_stitches,
+        self.slider = wx.Slider(self, -1, value=0, minValue=0, maxValue=self.num_stitches,
                                 style=wx.SL_HORIZONTAL | wx.SL_LABELS)
         self.slider.Bind(wx.EVT_SLIDER, self.on_slider)
         self.stitchBox = IntCtrl(self, -1, value=1, min=0, max=self.num_stitches, limited=True, allow_none=False)
@@ -93,18 +95,23 @@ class ControlPanel(wx.Panel):
 
         accel_table = wx.AcceleratorTable(accel_entries)
         self.SetAcceleratorTable(accel_table)
-
-        self.current_stitch = 1
-
-        self.choose_speed(stitches_per_second, target_duration)
-
         self.SetFocus()
 
-    def choose_speed(self, stitches_per_second, target_duration):
-        if target_duration:
-            self.set_speed(int(self.num_stitches / float(target_duration)))
+    def set_drawing_panel(self, drawing_panel):
+        self.drawing_panel = drawing_panel
+        self.drawing_panel.set_speed(self.speed)
+
+    def set_num_stitches(self, num_stitches):
+        self.num_stitches = num_stitches
+        self.stitchBox.SetMax(num_stitches)
+        self.slider.SetMax(num_stitches)
+        self.choose_speed()
+
+    def choose_speed(self):
+        if self.target_duration:
+            self.set_speed(int(self.num_stitches / float(self.target_duration)))
         else:
-            self.set_speed(stitches_per_second)
+            self.set_speed(self.target_stitches_per_second)
 
     def animation_forward(self, event=None):
         self.direction.SetLabel(">>")
@@ -124,14 +131,18 @@ class ControlPanel(wx.Panel):
 
     def set_speed(self, speed):
         self.speed = int(max(speed, 1))
-        self.drawing_panel.set_speed(self.speed)
         self.speedST.SetLabel('Speed: %s stitches/sec' % self.speed)
         self.hbSizer2.Layout()
+
+        if self.drawing_panel:
+            self.drawing_panel.set_speed(self.speed)
 
     def on_slider(self, event):
         stitch = event.GetEventObject().GetValue()
         self.stitchBox.SetValue(stitch)
-        self.drawing_panel.set_current_stitch(stitch)
+
+        if self.drawing_panel:
+            self.drawing_panel.set_current_stitch(stitch)
 
     def on_current_stitch(self, stitch):
         if self.current_stitch != stitch:
@@ -145,7 +156,9 @@ class ControlPanel(wx.Panel):
     def on_stitch_box(self, event):
         stitch = self.stitchBox.GetValue()
         self.slider.SetValue(stitch)
-        self.drawing_panel.set_current_stitch(stitch)
+
+        if self.drawing_panel:
+            self.drawing_panel.set_current_stitch(stitch)
 
     def animation_slow_down(self, event):
         """"""
@@ -157,11 +170,15 @@ class ControlPanel(wx.Panel):
 
     def animation_pause(self, event=None):
         self.drawing_panel.stop()
-        self.pauseBtn.SetLabel('Start')
 
     def animation_start(self, event=None):
         self.drawing_panel.go()
+
+    def on_start(self):
         self.pauseBtn.SetLabel('Pause')
+
+    def on_stop(self):
+        self.pauseBtn.SetLabel('Start')
 
     def on_pause_start_button(self, event):
         """"""
@@ -200,6 +217,7 @@ class DrawingPanel(wx.Panel):
     def __init__(self, *args, **kwargs):
         """"""
         self.stitch_plan = kwargs.pop('stitch_plan')
+        self.control_panel = kwargs.pop('control_panel')
         kwargs['style'] = wx.BORDER_SUNKEN
         wx.Panel.__init__(self, *args, **kwargs)
 
@@ -211,19 +229,15 @@ class DrawingPanel(wx.Panel):
         self.last_frame_duration = 0
         self.direction = 1
         self.current_stitch = 0
-        self.control_panel = None
 
         # desired simulation speed in stitches per second
-        self.speed = 10
+        self.speed = 16
 
         self.black_pen = self.create_pen((0, 0, 0))
 
         self.load(self.stitch_plan)
 
         self.Bind(wx.EVT_PAINT, self.OnPaint)
-
-    def set_control_panel(self, control_panel):
-        self.control_panel = control_panel
 
     def clamp_current_stitch(self):
         if self.current_stitch < 0:
@@ -294,21 +308,29 @@ class DrawingPanel(wx.Panel):
             canvas.DrawLines(((x - crosshair_radius, y), (x + crosshair_radius, y)))
             canvas.DrawLines(((x, y - crosshair_radius), (x, y + crosshair_radius)))
 
+    def clear(self):
+        dc = wx.ClientDC(self)
+        dc.Clear()
 
-    def load(self, stitch_plan=None):
-        if stitch_plan:
-            self.num_stitches = stitch_plan.num_stitches
-            self.parse_stitch_plan(stitch_plan)
-            self.move_to_top_left()
-            return
+    def load(self, stitch_plan):
+        self.last_frame_duration = 0
+        self.direction = 1
+        self.num_stitches = stitch_plan.num_stitches
+        self.control_panel.set_num_stitches(self.num_stitches)
+        self.parse_stitch_plan(stitch_plan)
+        self.move_to_top_left()
+        self.set_current_stitch(0)
+        self.go()
 
     def stop(self):
         self.animating = False
+        self.control_panel.on_stop()
 
     def go(self):
         if not self.animating:
             self.animating = True
             self.animate()
+            self.control_panel.on_start()
 
     def create_pen(self, rgb):
         return wx.Pen(rgb, width=int(0.4 * self.PIXEL_DENSITY))
@@ -352,11 +374,9 @@ class DrawingPanel(wx.Panel):
     def set_current_stitch(self, stitch):
         self.current_stitch = stitch
         self.clamp_current_stitch()
+        self.control_panel.on_current_stitch(self.current_stitch)
         self.stop_if_at_end()
         self.Refresh()
-
-        if self.control_panel:
-            self.control_panel.on_current_stitch(self.current_stitch)
 
     def restart(self):
         if self.direction == 1:
@@ -384,26 +404,32 @@ class SimulatorPanel(wx.Panel):
         kwargs['style'] = wx.BORDER_SUNKEN
         wx.Panel.__init__(self, parent, *args, **kwargs)
 
-        self.dp = DrawingPanel(self, stitch_plan=stitch_plan)
         self.cp = ControlPanel(self,
                                stitch_plan=stitch_plan,
-                               drawing_panel=self.dp,
                                stitches_per_second=stitches_per_second,
                                target_duration=target_duration)
-        self.dp.set_control_panel(self.cp)
+        self.dp = DrawingPanel(self, stitch_plan=stitch_plan, control_panel=self.cp)
+        self.cp.set_drawing_panel(self.dp)
 
         vbSizer = wx.BoxSizer(wx.VERTICAL)
         vbSizer.Add(self.dp, 1, wx.EXPAND | wx.ALL, 2)
         vbSizer.Add(self.cp, 0, wx.EXPAND | wx.ALL, 2)
         self.SetSizer(vbSizer)
 
-        self.dp.go()
-
     def quit(self):
         self.parent.quit()
 
+    def go(self):
+        self.dp.go()
+
     def stop(self):
         self.dp.stop()
+
+    def load(self, stitch_plan):
+        self.dp.load(stitch_plan)
+
+    def clear(self):
+        self.dp.clear()
 
 
 class EmbroiderySimulator(wx.Frame):
@@ -435,7 +461,16 @@ class EmbroiderySimulator(wx.Frame):
         self.Destroy()
 
     def go(self):
-        pass
+        self.simulator_panel.go()
+
+    def stop(self):
+        self.simulator_panel.stop()
+
+    def load(self, stitch_plan):
+        self.simulator_panel.load(stitch_plan)
+
+    def clear(self):
+        self.simulator_panel.clear()
 
 
 class OldEmbroiderySimulator(wx.Frame):
