@@ -25,11 +25,12 @@ class Simulate(InkstitchExtension):
         screen_rect = display.GetClientArea()
 
         simulator_pos = (screen_rect[0], screen_rect[1])
-        width = screen_rect[2]
-        height = screen_rect[3]
+
+        # subtract 1 because otherwise the window becomes maximized on Linux
+        width = screen_rect[2] - 1
+        height = screen_rect[3] - 1
 
         frame = EmbroiderySimulator(None, -1, _("Embroidery Simulation"), pos=simulator_pos, size=(width, height), stitch_plan=stitch_plan)
         app.SetTopWindow(frame)
         frame.Show()
-        wx.CallAfter(frame.go)
         app.MainLoop()

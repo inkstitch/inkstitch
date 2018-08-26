@@ -229,15 +229,19 @@ class DrawingPanel(wx.Panel):
         self.last_frame_duration = 0
         self.direction = 1
         self.current_stitch = 0
+        self.black_pen = self.create_pen((0, 0, 0))
+        self.width = 0
+        self.height = 0
+        self.loaded = False
 
         # desired simulation speed in stitches per second
         self.speed = 16
 
-        self.black_pen = self.create_pen((0, 0, 0))
-
-        self.load(self.stitch_plan)
-
         self.Bind(wx.EVT_PAINT, self.OnPaint)
+        self.Bind(wx.EVT_SIZE, self.choose_zoom_and_pan)
+
+        # wait for layouts so that panel size is set
+        wx.CallLater(50, self.load, self.stitch_plan)
 
     def clamp_current_stitch(self):
         if self.current_stitch < 0:
@@ -275,11 +279,16 @@ class DrawingPanel(wx.Panel):
         wx.CallLater(int(1000 * frame_time), self.animate)
 
     def OnPaint(self, e):
+        if not self.loaded:
+            return
+
         dc = wx.PaintDC(self)
         canvas = wx.GraphicsContext.Create(dc)
 
         transform = canvas.GetTransform()
-        transform.Scale(2.0 / self.PIXEL_DENSITY, 2.0 / self.PIXEL_DENSITY)
+        transform.Translate(*self.pan)
+        transform.Scale(self.zoom / self.PIXEL_DENSITY, self.zoom / self.PIXEL_DENSITY)
+        #transform.Translate(self.pan[0] * self.PIXEL_DENSITY, self.pan[1] * self.PIXEL_DENSITY)
         canvas.SetTransform(transform)
 
         stitch = 0
@@ -303,7 +312,7 @@ class DrawingPanel(wx.Panel):
         if last_stitch:
             x = last_stitch[0]
             y = last_stitch[1]
-            crosshair_radius = 4 * self.PIXEL_DENSITY
+            crosshair_radius = 10 / self.zoom * self.PIXEL_DENSITY
             canvas.SetPen(self.black_pen)
             canvas.DrawLines(((x - crosshair_radius, y), (x + crosshair_radius, y)))
             canvas.DrawLines(((x, y - crosshair_radius), (x, y + crosshair_radius)))
@@ -317,16 +326,39 @@ class DrawingPanel(wx.Panel):
         self.direction = 1
         self.num_stitches = stitch_plan.num_stitches
         self.control_panel.set_num_stitches(self.num_stitches)
+        self.minx, self.miny, self.maxx, self.maxy = stitch_plan.bounding_box
+        self.width = self.maxx - self.minx
+        self.height = self.maxy - self.miny
         self.parse_stitch_plan(stitch_plan)
-        self.move_to_top_left()
+        self.choose_zoom_and_pan()
         self.set_current_stitch(0)
+        self.loaded = True
         self.go()
+
+    def choose_zoom_and_pan(self, event=None):
+        # ignore if called before we load the stitch plan
+        if not self.width or not self.height:
+            return
+
+        panel_width, panel_height = self.GetClientSize()
+
+        # add some padding to make stitches at the edge more visible
+        width_ratio = panel_width / float(self.width + 10)
+        height_ratio = panel_height / float(self.height + 10)
+        self.zoom = min(width_ratio, height_ratio)
+
+        # center the design
+        self.pan = ((panel_width - self.zoom * self.width) / 2.0,
+                    (panel_height - self.zoom * self.height) / 2.0)
 
     def stop(self):
         self.animating = False
         self.control_panel.on_stop()
 
     def go(self):
+        if not self.loaded:
+            return
+
         if not self.animating:
             self.animating = True
             self.animate()
@@ -347,18 +379,15 @@ class DrawingPanel(wx.Panel):
 
             for point_list in color_block_to_point_lists(color_block):
                 self.pens.append(pen)
-                self.stitch_blocks.append(point_list)
 
-    def move_to_top_left(self):
-        """remove any unnecessary whitespace around the design"""
+                points = []
+                for x, y in point_list:
+                    # trim any whitespace on the left and top and scale to the
+                    # pixel density
+                    points.append((self.PIXEL_DENSITY * (x - self.minx),
+                                   self.PIXEL_DENSITY * (y - self.miny)))
 
-        minx, miny, maxx, maxy = self.stitch_plan.bounding_box
-
-        for block in self.stitch_blocks:
-            stitches = []
-            for stitch in block:
-                stitches.append((self.PIXEL_DENSITY * (stitch[0] - minx), self.PIXEL_DENSITY * (stitch[1] - miny)))
-            block[:] = stitches
+                self.stitch_blocks.append(points)
 
     def set_speed(self, speed):
         self.speed = speed
