@@ -21,17 +21,17 @@ class ControlPanel(wx.Panel):
 
         # Widgets
         self.btnMinus = wx.Button(self, -1, label='-')
-        self.btnMinus.Bind(wx.EVT_BUTTON, self.OnSpeedMinus)
+        self.btnMinus.Bind(wx.EVT_BUTTON, self.animation_slow_down)
         self.btnPlus = wx.Button(self, -1, label='+')
-        self.btnPlus.Bind(wx.EVT_BUTTON, self.OnSpeedPlus)
+        self.btnPlus.Bind(wx.EVT_BUTTON, self.animation_speed_up)
         self.direction = wx.Button(self, -1, label='>>')
-        self.direction.Bind(wx.EVT_BUTTON, self.OnDirection)
+        self.direction.Bind(wx.EVT_BUTTON, self.on_direction_button)
         self.pauseBtn = wx.Button(self, -1, label='Pause')
-        self.pauseBtn.Bind(wx.EVT_BUTTON, self.OnPauseStart)
+        self.pauseBtn.Bind(wx.EVT_BUTTON, self.on_pause_start_button)
         self.restartBtn = wx.Button(self, -1, label='Restart')
-        self.restartBtn.Bind(wx.EVT_BUTTON, self.on_restart)
+        self.restartBtn.Bind(wx.EVT_BUTTON, self.animation_restart)
         self.quitBtn = wx.Button(self, -1, label='Quit')
-        self.quitBtn.Bind(wx.EVT_BUTTON, self.on_quit)
+        self.quitBtn.Bind(wx.EVT_BUTTON, self.animation_quit)
         self.slider = wx.Slider(self, -1, value=1, minValue=1, maxValue=self.num_stitches,
                                 style=wx.SL_HORIZONTAL | wx.SL_LABELS)
         self.slider.Bind(wx.EVT_SLIDER, self.on_slider)
@@ -57,23 +57,60 @@ class ControlPanel(wx.Panel):
         vbSizer.Add(hbSizer2, 0, wx.EXPAND | wx.ALL, 3)
         self.SetSizer(vbSizer)
 
+        # Keyboard Shortcuts
+        shortcut_keys = [
+            (wx.ACCEL_NORMAL, wx.WXK_RIGHT, self.animation_forward),
+            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_RIGHT, self.animation_forward),
+            (wx.ACCEL_NORMAL, wx.WXK_LEFT, self.animation_reverse),
+            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_LEFT, self.animation_reverse),
+            (wx.ACCEL_NORMAL, wx.WXK_UP, self.animation_speed_up),
+            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_UP, self.animation_speed_up),
+            (wx.ACCEL_NORMAL, wx.WXK_DOWN, self.animation_slow_down),
+            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_DOWN, self.animation_slow_down),
+            (wx.ACCEL_NORMAL, ord('+'), self.animation_one_frame_forward),
+            (wx.ACCEL_NORMAL, ord('='), self.animation_one_frame_forward),
+            (wx.ACCEL_SHIFT, ord('='), self.animation_one_frame_forward),
+            (wx.ACCEL_NORMAL, wx.WXK_ADD, self.animation_one_frame_forward),
+            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_ADD, self.animation_one_frame_forward),
+            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_UP, self.animation_one_frame_forward),
+            (wx.ACCEL_NORMAL, ord('-'), self.animation_one_frame_backward),
+            (wx.ACCEL_NORMAL, ord('_'), self.animation_one_frame_backward),
+            (wx.ACCEL_NORMAL, wx.WXK_SUBTRACT, self.animation_one_frame_backward),
+            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_SUBTRACT, self.animation_one_frame_backward),
+            (wx.ACCEL_NORMAL, ord('r'), self.animation_restart),
+            (wx.ACCEL_NORMAL, ord('p'), self.on_pause_start_button),
+            (wx.ACCEL_NORMAL, wx.WXK_SPACE, self.on_pause_start_button),
+            (wx.ACCEL_NORMAL, ord('q'), self.animation_quit)]
+
+        accel_entries = []
+
+        for shortcut_key in shortcut_keys:
+            eventId = wx.NewId()
+            accel_entries.append((shortcut_key[0], shortcut_key[1], eventId))
+            self.Bind(wx.EVT_MENU, shortcut_key[2], id=eventId)
+
+        accel_table = wx.AcceleratorTable(accel_entries)
+        self.SetAcceleratorTable(accel_table)
+
         self.set_speed(16)
 
-    def OnDirection(self, event):
-        """
-        Handles the ``wx.EVT_BUTTON`` event.
+        self.SetFocus()
 
-        :param `event`: A `wx.CommandEvent` to be processed.
-        :type `event`: `wx.CommandEvent`
-        """
+    def animation_forward(self, event=None):
+        self.direction.SetLabel(">>")
+        self.drawing_panel.forward()
+
+    def animation_reverse(self, event=None):
+        self.direction.SetLabel("<<")
+        self.drawing_panel.reverse()
+
+    def on_direction_button(self, event):
         evtObj = event.GetEventObject()
         lbl = evtObj.GetLabel()
         if lbl == '>>':
-            evtObj.SetLabel('<<')
-            self.drawing_panel.reverse()
+            self.animation_reverse()
         else:
-            evtObj.SetLabel('>>')
-            self.drawing_panel.forward()
+            self.animation_forward()
 
     def set_speed(self, speed):
         self.speed = int(max(speed, 1))
@@ -86,7 +123,7 @@ class ControlPanel(wx.Panel):
         self.stitchBox.SetValue(stitch)
         self.drawing_panel.set_current_stitch(stitch)
 
-    def set_current_stitch(self, stitch):
+    def on_current_stitch(self, stitch):
         self.slider.SetValue(stitch)
         self.stitchBox.SetValue(stitch)
 
@@ -98,29 +135,39 @@ class ControlPanel(wx.Panel):
         self.slider.SetValue(stitch)
         self.drawing_panel.set_current_stitch(stitch)
 
-    def OnSpeedMinus(self, event):
+    def animation_slow_down(self, event):
         """"""
         self.set_speed(self.speed / 2.0)
 
-    def OnSpeedPlus(self, event):
+    def animation_speed_up(self, event):
         """"""
         self.set_speed(self.speed * 2.0)
 
-    def OnPauseStart(self, event):
-        """"""
-        evtObj = event.GetEventObject()
-        lbl = evtObj.GetLabel()
-        if lbl == 'Pause':
-            self.drawing_panel.stop()
-            evtObj.SetLabel('Start')
-        else:
-            self.drawing_panel.go()
-            evtObj.SetLabel('Pause')
+    def animation_pause(self, event=None):
+        self.drawing_panel.stop()
+        self.pauseBtn.SetLabel('Start')
 
-    def on_quit(self, event):
+    def animation_start(self, event=None):
+        self.drawing_panel.go()
+        self.pauseBtn.SetLabel('Pause')
+
+    def on_pause_start_button(self, event):
+        """"""
+        if self.pauseBtn.GetLabel() == 'Pause':
+            self.animation_pause()
+        else:
+            self.animation_start()
+
+    def animation_one_frame_forward(self, event):
+        pass
+
+    def animation_one_frame_backward(self, event):
+        pass
+
+    def animation_quit(self, event):
         self.parent.quit()
 
-    def on_restart(self, event):
+    def animation_restart(self, event):
         self.drawing_panel.restart()
 
 class DrawingPanel(wx.Panel):
@@ -204,7 +251,7 @@ class DrawingPanel(wx.Panel):
         self.stop_if_at_end()
 
         if self.control_panel:
-            self.control_panel.set_current_stitch(self.current_stitch)
+            self.control_panel.on_current_stitch(self.current_stitch)
 
         self.Refresh()
 
