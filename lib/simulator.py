@@ -208,7 +208,7 @@ class DrawingPanel(wx.Panel):
 
         self.Refresh()
 
-        wx.CallLater(int(1000 * max(0.001, frame_time - self.last_frame_duration)), self.animate)
+        wx.CallLater(int(1000 * frame_time), self.animate)
 
     def OnPaint(self, e):
         dc = wx.PaintDC(self)
