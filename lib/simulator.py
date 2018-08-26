@@ -229,7 +229,7 @@ class DrawingPanel(wx.Panel):
         self.last_frame_duration = 0
         self.direction = 1
         self.current_stitch = 0
-        self.black_pen = self.create_pen((0, 0, 0))
+        self.black_pen = wx.Pen((128, 128, 128))
         self.width = 0
         self.height = 0
         self.loaded = False
@@ -312,7 +312,9 @@ class DrawingPanel(wx.Panel):
         if last_stitch:
             x = last_stitch[0]
             y = last_stitch[1]
-            crosshair_radius = 10 / self.zoom * self.PIXEL_DENSITY
+            x, y = transform.TransformPoint(float(x), float(y))
+            canvas.SetTransform(canvas.CreateMatrix())
+            crosshair_radius = 10
             canvas.SetPen(self.black_pen)
             canvas.DrawLines(((x - crosshair_radius, y), (x + crosshair_radius, y)))
             canvas.DrawLines(((x, y - crosshair_radius), (x, y + crosshair_radius)))
@@ -364,11 +366,8 @@ class DrawingPanel(wx.Panel):
             self.animate()
             self.control_panel.on_start()
 
-    def create_pen(self, rgb):
-        return wx.Pen(rgb, width=int(0.4 * self.PIXEL_DENSITY))
-
     def color_to_pen(self, color):
-        return self.create_pen(color.visible_on_white.rgb)
+        return wx.Pen(color.visible_on_white.rgb, width=int(0.4 * self.PIXEL_DENSITY))
 
     def parse_stitch_plan(self, stitch_plan):
         self.pens = []
