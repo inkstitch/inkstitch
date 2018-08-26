@@ -14,6 +14,8 @@ class ControlPanel(wx.Panel):
         self.parent = parent
         self.drawing_panel = kwargs.pop('drawing_panel')
         self.stitch_plan = kwargs.pop('stitch_plan')
+        stitches_per_second = kwargs.pop('stitches_per_second')
+        target_duration = kwargs.pop('target_duration')
         kwargs['style'] = wx.BORDER_SUNKEN
         wx.Panel.__init__(self, parent, *args, **kwargs)
 
@@ -93,9 +95,16 @@ class ControlPanel(wx.Panel):
         self.SetAcceleratorTable(accel_table)
 
         self.current_stitch = 1
-        self.set_speed(16)
+
+        self.choose_speed(stitches_per_second, target_duration)
 
         self.SetFocus()
+
+    def choose_speed(self, stitches_per_second, target_duration):
+        if target_duration:
+            self.set_speed(int(self.num_stitches / float(target_duration)))
+        else:
+            self.set_speed(stitches_per_second)
 
     def animation_forward(self, event=None):
         self.direction.SetLabel(">>")
@@ -370,11 +379,17 @@ class SimulatorPanel(wx.Panel):
         """"""
         self.parent = parent
         stitch_plan = kwargs.pop('stitch_plan')
+        target_duration = kwargs.pop('target_duration')
+        stitches_per_second = kwargs.pop('stitches_per_second')
         kwargs['style'] = wx.BORDER_SUNKEN
         wx.Panel.__init__(self, parent, *args, **kwargs)
 
         self.dp = DrawingPanel(self, stitch_plan=stitch_plan)
-        self.cp = ControlPanel(self, stitch_plan=stitch_plan, drawing_panel=self.dp)
+        self.cp = ControlPanel(self,
+                               stitch_plan=stitch_plan,
+                               drawing_panel=self.dp,
+                               stitches_per_second=stitches_per_second,
+                               target_duration=target_duration)
         self.dp.set_control_panel(self.cp)
 
         vbSizer = wx.BoxSizer(wx.VERTICAL)
@@ -393,20 +408,19 @@ class SimulatorPanel(wx.Panel):
 
 class EmbroiderySimulator(wx.Frame):
     def __init__(self, *args, **kwargs):
-        stitch_plan = kwargs.pop('stitch_plan', None)
-        self.x_position = kwargs.pop('x_position', None)
         self.on_close_hook = kwargs.pop('on_close', None)
-        self.frame_period = kwargs.pop('frame_period', 80)
-        self.stitches_per_frame = kwargs.pop('stitches_per_frame', 1)
-        self.target_duration = kwargs.pop('target_duration', None)
-        self.max_height = kwargs.pop('max_height', None)
-        self.max_width = kwargs.pop('max_width', None)
+        stitch_plan = kwargs.pop('stitch_plan', None)
+        stitches_per_second = kwargs.pop('stitches_per_second', 16)
+        target_duration = kwargs.pop('target_duration', None)
         wx.Frame.__init__(self, *args, **kwargs)
 
         # self.status_bar = self.CreateStatusBar()
         # self.status_bar.SetStatusText(text)
 
-        self.simulator_panel = SimulatorPanel(self, stitch_plan=stitch_plan)
+        self.simulator_panel = SimulatorPanel(self,
+                                              stitch_plan=stitch_plan,
+                                              target_duration=target_duration,
+                                              stitches_per_second=stitches_per_second)
         self.Bind(wx.EVT_CLOSE, self.on_close)
 
     def quit(self):

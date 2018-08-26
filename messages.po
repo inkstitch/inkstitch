@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-26 14:43-0400\n"
+"POT-Creation-Date: 2018-08-26 15:02-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -612,25 +612,25 @@ msgstr ""
 msgid "Preview"
 msgstr ""
 
-#: lib/extensions/params.py:466
+#: lib/extensions/params.py:463
 msgid "Internal Error"
 msgstr ""
 
-#: lib/extensions/params.py:519
+#: lib/extensions/params.py:516
 msgid "Please enter or select a preset name first."
 msgstr ""
 
-#: lib/extensions/params.py:519 lib/extensions/params.py:525
-#: lib/extensions/params.py:553
+#: lib/extensions/params.py:516 lib/extensions/params.py:522
+#: lib/extensions/params.py:550
 msgid "Preset"
 msgstr ""
 
-#: lib/extensions/params.py:525
+#: lib/extensions/params.py:522
 #, python-format
 msgid "Preset \"%s\" not found."
 msgstr ""
 
-#: lib/extensions/params.py:553
+#: lib/extensions/params.py:550
 #, python-format
 msgid ""
 "Preset \"%s\" already exists.  Please use another name or press "
@@ -659,7 +659,7 @@ msgstr ""
 msgid "Ink/Stitch Print"
 msgstr ""
 
-#: lib/extensions/simulate.py:29
+#: lib/extensions/simulate.py:31
 msgid "Embroidery Simulation"
 msgstr ""
 
@@ -674,79 +674,79 @@ msgstr ""
 msgid "Generate INX files"
 msgstr ""
 
-#: lib/simulator.py:463
+#: lib/simulator.py:477
 msgid "<<"
 msgstr ""
 
-#: lib/simulator.py:463
+#: lib/simulator.py:477
 msgid "Play reverse (arrow left)"
 msgstr ""
 
-#: lib/simulator.py:464
+#: lib/simulator.py:478
 msgid "-"
 msgstr ""
 
-#: lib/simulator.py:464
+#: lib/simulator.py:478
 msgid "Play one frame backward (+)"
 msgstr ""
 
-#: lib/simulator.py:465
+#: lib/simulator.py:479
 msgid "+"
 msgstr ""
 
-#: lib/simulator.py:465
+#: lib/simulator.py:479
 msgid "Play one frame forward (+)"
 msgstr ""
 
-#: lib/simulator.py:466
+#: lib/simulator.py:480
 msgid ">>"
 msgstr ""
 
-#: lib/simulator.py:466
+#: lib/simulator.py:480
 msgid "Play forward (arrow right)"
 msgstr ""
 
-#: lib/simulator.py:467
+#: lib/simulator.py:481
 msgid "^"
 msgstr ""
 
-#: lib/simulator.py:467
+#: lib/simulator.py:481
 msgid "Speed up (arrow up)"
 msgstr ""
 
-#: lib/simulator.py:468
+#: lib/simulator.py:482
 msgid "v"
 msgstr ""
 
-#: lib/simulator.py:468
+#: lib/simulator.py:482
 msgid "Slow down (arrow down)"
 msgstr ""
 
-#: lib/simulator.py:469
+#: lib/simulator.py:483
 msgid "Pause"
 msgstr ""
 
-#: lib/simulator.py:469
+#: lib/simulator.py:483
 msgid "Pause (P)"
 msgstr ""
 
-#: lib/simulator.py:470
+#: lib/simulator.py:484
 msgid "Restart"
 msgstr ""
 
-#: lib/simulator.py:470
+#: lib/simulator.py:484
 msgid "Restart (R)"
 msgstr ""
 
-#: lib/simulator.py:471
+#: lib/simulator.py:485
 msgid "Quit"
 msgstr ""
 
-#: lib/simulator.py:471
+#: lib/simulator.py:485
 msgid "Close (Q)"
 msgstr ""
 
-#: lib/simulator.py:649
+#: lib/simulator.py:663
 msgid "Stitch # "
 msgstr ""
 
