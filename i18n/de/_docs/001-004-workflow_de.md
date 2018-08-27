@@ -66,7 +66,7 @@ Es kann entweder eine Stickdatei für eine Auswahl von Objekten oder für alle O
 * Klicke in einen leeren Bereich (um die Auswahl aufzuheben)
 * Wähle `Erweiterungen -> Ink/Stitch -> Sticken ...`
 * Wähle das richtige Dateiformat für die Maschine
-* Gebe einen Verzeichnisnamen ein, in dem die Ausgabedateien gespeichern werden sollen. Z.B. `C:\Benutzer\%BENUTZERNAME%\Dokumente' unter Windows. Ink/Stitch wird sich an diese Information erinnern.
+* Gebe einen Verzeichnisnamen ein, in dem die Ausgabedateien gespeichern werden sollen. Z.B. `C:\Benutzer\%BENUTZERNAME%\Dokumente` unter Windows. Ink/Stitch wird sich an diese Information erinnern.
 
 ## Schritt 7: Sticktest
 
