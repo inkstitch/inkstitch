@@ -239,6 +239,8 @@ class DrawingPanel(wx.Panel):
 
         self.Bind(wx.EVT_PAINT, self.OnPaint)
         self.Bind(wx.EVT_SIZE, self.choose_zoom_and_pan)
+        self.Bind(wx.EVT_LEFT_DOWN, self.on_left_mouse_button_down)
+        self.Bind(wx.EVT_MOUSEWHEEL, self.on_mouse_wheel)
 
         # wait for layouts so that panel size is set
         wx.CallLater(50, self.load, self.stitch_plan)
@@ -419,6 +421,72 @@ class DrawingPanel(wx.Panel):
 
     def one_stitch_backward(self):
         self.set_current_stitch(self.current_stitch - 1)
+
+    def on_left_mouse_button_down(self, event):
+        self.CaptureMouse()
+        self.drag_start = event.GetPosition()
+        self.drag_original_pan = self.pan
+        self.Bind(wx.EVT_MOTION, self.on_drag)
+        self.Bind(wx.EVT_MOUSE_CAPTURE_LOST, self.on_drag_end)
+        self.Bind(wx.EVT_LEFT_UP, self.on_drag_end)
+
+    def on_drag(self, event):
+        if self.HasCapture() and event.Dragging():
+            delta = event.GetPosition()
+            offset = (delta[0] - self.drag_start[0], delta[1] - self.drag_start[1])
+            self.pan = (self.drag_original_pan[0] + offset[0], self.drag_original_pan[1] + offset[1])
+            self.Refresh()
+
+    def on_drag_end(self, event):
+        if self.HasCapture():
+            self.ReleaseMouse()
+
+        self.Unbind(wx.EVT_MOTION)
+        self.Unbind(wx.EVT_MOUSE_CAPTURE_LOST)
+        self.Unbind(wx.EVT_LEFT_UP)
+
+    def on_mouse_wheel(self, event):
+        if event.GetWheelRotation() > 0:
+            zoom_delta = 1.03
+        else:
+            zoom_delta = 0.97
+
+        # If we just change the zoom, the design will appear to move on the
+        # screen.  We have to adjust the pan to compensate.  We want to keep
+        # the part of the design under the mouse pointer in the same spot
+        # after we zoom, so that we appar to be zooming centered on the
+        # mouse pointer.
+
+        # This will create a matrix that takes a point in the design and
+        # converts it to screen coordinates:
+        matrix = wx.AffineMatrix2D()
+        matrix.Translate(*self.pan)
+        matrix.Scale(self.zoom, self.zoom)
+
+        # First, figure out where the mouse pointer is in the coordinate system
+        # of the design:
+        pos = event.GetPosition()
+        inverse_matrix = wx.AffineMatrix2D()
+        inverse_matrix.Set(*matrix.Get())
+        inverse_matrix.Invert()
+        pos = inverse_matrix.TransformPoint(*pos)
+
+        # Next, see how that point changes position on screen before and after
+        # we apply the zoom change:
+        x_old, y_old = matrix.TransformPoint(*pos)
+        matrix.Scale(zoom_delta, zoom_delta)
+        x_new, y_new = matrix.TransformPoint(*pos)
+        x_delta = x_new - x_old
+        y_delta = y_new - y_old
+
+        # Finally, compensate for that change in position:
+        self.pan = (self.pan[0] - x_delta, self.pan[1] - y_delta)
+
+
+        self.zoom *= zoom_delta
+
+
+        self.Refresh()
 
 
 class SimulatorPanel(wx.Panel):
