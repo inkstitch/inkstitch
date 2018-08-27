@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-08-24 20:56-0400\n"
-"PO-Revision-Date: 2018-08-26 13:55\n"
+"PO-Revision-Date: 2018-08-27 13:55\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -201,7 +201,7 @@ msgstr "Rückwärtsfüllung (von rechts nach links)"
 
 #: lib/elements/fill.py:47
 msgid "The flip option can help you with routing your stitch path.  When you enable flip, stitching goes from right-to-left instead of left-to-right."
-msgstr "Die Flip-Option kann Ihnen bei der Reihenfolge des Stichpfads helfen. Wenn Umdrehen aktiviert wird, wird das Sticken von rechts nach links anstatt von links nach rechts ausgeführt."
+msgstr "Die Umkehr-Option kann bei der Reihenfolge des Stichpfads helfen. Wenn Umdrehen aktiviert wird, wird das Sticken von rechts nach links anstatt von links nach rechts ausgeführt."
 
 #: lib/elements/fill.py:56
 msgid "Spacing between rows"
@@ -213,7 +213,7 @@ msgstr "Abstand zwischen den Stichreihen."
 
 #: lib/elements/fill.py:70
 msgid "Maximum fill stitch length"
-msgstr "Maximale Füll-Stichlänge"
+msgstr "Maximale Füllstichlänge"
 
 #: lib/elements/fill.py:71
 msgid "The length of each stitch in a row.  Shorter stitch may be used at the start or end of a row."
@@ -1213,7 +1213,7 @@ msgstr "Simulation"
 
 #: templates/zip.inx:10
 msgid "Ink/Stitch: ZIP export multiple formats (.zip)"
-msgstr "Ink/Stitch: Export in mehrere Formate (.zip)"
+msgstr "Ink/Stitch: Export von mehreren Formaten (.zip)"
 
 #: templates/zip.inx:11
 msgid "Create a ZIP with multiple embroidery file formats using Ink/Stitch"
