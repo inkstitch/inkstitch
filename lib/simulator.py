@@ -44,11 +44,11 @@ class ControlPanel(wx.Panel):
         self.btnForwardStitch.Bind(wx.EVT_BUTTON, self.animation_one_stitch_forward)
         self.direction = wx.Button(self, -1, label='>>')
         self.direction.Bind(wx.EVT_BUTTON, self.on_direction_button)
-        self.pauseBtn = wx.Button(self, -1, label='Pause')
+        self.pauseBtn = wx.Button(self, -1, label=_('Pause'))
         self.pauseBtn.Bind(wx.EVT_BUTTON, self.on_pause_start_button)
-        self.restartBtn = wx.Button(self, -1, label='Restart')
+        self.restartBtn = wx.Button(self, -1, label=_('Restart'))
         self.restartBtn.Bind(wx.EVT_BUTTON, self.animation_restart)
-        self.quitBtn = wx.Button(self, -1, label='Quit')
+        self.quitBtn = wx.Button(self, -1, label=_('Quit'))
         self.quitBtn.Bind(wx.EVT_BUTTON, self.animation_quit)
         self.slider = wx.Slider(self, -1, value=1, minValue=1, maxValue=self.num_stitches,
                                 style=wx.SL_HORIZONTAL | wx.SL_LABELS)
@@ -150,7 +150,7 @@ class ControlPanel(wx.Panel):
 
     def set_speed(self, speed):
         self.speed = int(max(speed, 1))
-        self.speedST.SetLabel('Speed: %s stitches/sec' % self.speed)
+        self.speedST.SetLabel(_('Speed: %d stitches/sec') % self.speed)
         self.hbSizer2.Layout()
 
         if self.drawing_panel:
@@ -169,9 +169,6 @@ class ControlPanel(wx.Panel):
             self.slider.SetValue(stitch)
             self.stitchBox.SetValue(stitch)
             self.commandST.SetLabel(COMMAND_NAMES[command])
-
-    def set_stitch_label(self, stitch):
-        self.st1.SetLabel("Stitch # %d/%d" % (stitch, self.num_stitches))
 
     def on_stitch_box(self, event):
         stitch = self.stitchBox.GetValue()
@@ -195,14 +192,14 @@ class ControlPanel(wx.Panel):
         self.drawing_panel.go()
 
     def on_start(self):
-        self.pauseBtn.SetLabel('Pause')
+        self.pauseBtn.SetLabel(_('Pause'))
 
     def on_stop(self):
-        self.pauseBtn.SetLabel('Start')
+        self.pauseBtn.SetLabel(_('Start'))
 
     def on_pause_start_button(self, event):
         """"""
-        if self.pauseBtn.GetLabel() == 'Pause':
+        if self.pauseBtn.GetLabel() == _('Pause'):
             self.animation_pause()
         else:
             self.animation_start()
