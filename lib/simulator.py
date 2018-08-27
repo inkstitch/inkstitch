@@ -50,10 +50,10 @@ class ControlPanel(wx.Panel):
         self.restartBtn.Bind(wx.EVT_BUTTON, self.animation_restart)
         self.quitBtn = wx.Button(self, -1, label=_('Quit'))
         self.quitBtn.Bind(wx.EVT_BUTTON, self.animation_quit)
-        self.slider = wx.Slider(self, -1, value=1, minValue=1, maxValue=self.num_stitches,
+        self.slider = wx.Slider(self, -1, value=1, minValue=1, maxValue=2,
                                 style=wx.SL_HORIZONTAL | wx.SL_LABELS)
         self.slider.Bind(wx.EVT_SLIDER, self.on_slider)
-        self.stitchBox = IntCtrl(self, -1, value=1, min=1, max=self.num_stitches, limited=True, allow_none=False)
+        self.stitchBox = IntCtrl(self, -1, value=1, min=1, max=2, limited=True, allow_none=False)
         self.stitchBox.Bind(wx.EVT_TEXT, self.on_stitch_box)
         self.speedST = wx.StaticText(self, -1, label='', style=wx.ALIGN_CENTER)
         self.commandST = wx.StaticText(self, -1, label='', style=wx.ALIGN_CENTER)
@@ -121,6 +121,9 @@ class ControlPanel(wx.Panel):
         self.drawing_panel.set_speed(self.speed)
 
     def set_num_stitches(self, num_stitches):
+        if num_stitches < 2:
+            # otherwise the slider and intctrl get mad
+            num_stitches = 2
         self.num_stitches = num_stitches
         self.stitchBox.SetMax(num_stitches)
         self.slider.SetMax(num_stitches)
