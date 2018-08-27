@@ -74,6 +74,6 @@ Es gibt immer Möglichkeiten für Verbesserungen! Um das Design zu testen, berei
 
 Nähe das Design und beobachte die Maschine um sicherzustellen, dass es keine Überraschungen gibt. Achte auf Lücken, die darauf hinweisen dass der Stoff verzerrt wurde. Beobachte auch Bereiche, in denen sich die Stiche zu sehr aufstauen und die Maschine Probleme damit hat, was darauf hinweist, dass die Stichdichte zu hoch ist.
 
-## Step 8+: Optimierung
+## Schritt 8+: Optimierung
 
 Optimiere das Design. Eventuell sind einige Versuche nötig, um das zu bekommen, wie es gewünscht wurde. Wenn es fertig ist, kopiere die endgültige Stickdatei aus dem Ausgabeverzeichnis, um zu verhindern, dass diese versehentlich zu einem andern Zeitpunkt überschrieben wird.
