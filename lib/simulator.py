@@ -7,6 +7,16 @@ from itertools import izip
 from .svg import color_block_to_point_lists, PIXELS_PER_MM
 from .i18n import _
 
+# L10N command label at bottom of simulator window
+COMMAND_NAMES = [_("STITCH"), _("JUMP"), _("TRIM"), _("STOP"), _("COLOR CHANGE")]
+
+STITCH = 0
+JUMP = 1
+TRIM = 2
+STOP = 3
+COLOR_CHANGE = 4
+
+
 class ControlPanel(wx.Panel):
     """"""
     def __init__(self, parent, *args, **kwargs):
@@ -20,7 +30,7 @@ class ControlPanel(wx.Panel):
 
         self.drawing_panel = None
         self.num_stitches = 1
-        self.current_stitch = 0
+        self.current_stitch = 1
         self.speed = 1
 
         # Widgets
@@ -36,12 +46,13 @@ class ControlPanel(wx.Panel):
         self.restartBtn.Bind(wx.EVT_BUTTON, self.animation_restart)
         self.quitBtn = wx.Button(self, -1, label='Quit')
         self.quitBtn.Bind(wx.EVT_BUTTON, self.animation_quit)
-        self.slider = wx.Slider(self, -1, value=0, minValue=0, maxValue=self.num_stitches,
+        self.slider = wx.Slider(self, -1, value=1, minValue=1, maxValue=self.num_stitches,
                                 style=wx.SL_HORIZONTAL | wx.SL_LABELS)
         self.slider.Bind(wx.EVT_SLIDER, self.on_slider)
-        self.stitchBox = IntCtrl(self, -1, value=1, min=0, max=self.num_stitches, limited=True, allow_none=False)
+        self.stitchBox = IntCtrl(self, -1, value=1, min=1, max=self.num_stitches, limited=True, allow_none=False)
         self.stitchBox.Bind(wx.EVT_TEXT, self.on_stitch_box)
         self.speedST = wx.StaticText(self, -1, label='', style=wx.ALIGN_CENTER)
+        self.commandST = wx.StaticText(self, -1, label='', style=wx.ALIGN_CENTER)
 
         # Layout
         self.vbSizer = vbSizer = wx.BoxSizer(wx.VERTICAL)
@@ -51,6 +62,8 @@ class ControlPanel(wx.Panel):
         hbSizer1.Add(self.stitchBox, 0, wx.ALL | wx.ALIGN_CENTER_VERTICAL, 2)
         vbSizer.Add(hbSizer1, 1, wx.EXPAND | wx.ALL, 3)
         hbSizer2.Add(self.speedST, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 2)
+        hbSizer2.AddStretchSpacer(prop=1)
+        hbSizer2.Add(self.commandST, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 2)
         hbSizer2.AddStretchSpacer(prop=1)
         hbSizer2.Add(self.btnMinus, 0, wx.ALL, 2)
         hbSizer2.Add(self.btnPlus, 0, wx.ALL, 2)
@@ -144,11 +157,12 @@ class ControlPanel(wx.Panel):
         if self.drawing_panel:
             self.drawing_panel.set_current_stitch(stitch)
 
-    def on_current_stitch(self, stitch):
+    def on_current_stitch(self, stitch, command):
         if self.current_stitch != stitch:
             self.current_stitch = stitch
             self.slider.SetValue(stitch)
             self.stitchBox.SetValue(stitch)
+            self.commandST.SetLabel(COMMAND_NAMES[command])
 
     def set_stitch_label(self, stitch):
         self.st1.SetLabel("Stitch # %d/%d" % (stitch, self.num_stitches))
@@ -246,19 +260,19 @@ class DrawingPanel(wx.Panel):
         wx.CallLater(50, self.load, self.stitch_plan)
 
     def clamp_current_stitch(self):
-        if self.current_stitch < 0:
-            self.current_stitch = 0
+        if self.current_stitch < 1:
+            self.current_stitch = 1
         elif self.current_stitch > self.num_stitches:
             self.current_stitch = self.num_stitches
 
     def stop_if_at_end(self):
-        if self.direction == -1 and self.current_stitch == 0:
+        if self.direction == -1 and self.current_stitch == 1:
             self.stop()
         elif self.direction == 1 and self.current_stitch == self.num_stitches:
             self.stop()
 
     def start_if_not_at_end(self):
-        if self.direction == -1 and self.current_stitch > 0:
+        if self.direction == -1 and self.current_stitch > 1:
             self.go()
         elif self.direction == 1 and self.current_stitch < self.num_stitches:
             self.go()
@@ -307,7 +321,7 @@ class DrawingPanel(wx.Panel):
                 stitches = stitches[:self.current_stitch - stitch]
                 if len(stitches) > 1:
                     canvas.DrawLines(stitches)
-                    last_stitch = stitches[-1]
+                last_stitch = stitches[-1]
                 break
         self.last_frame_duration = time.time() - start
 
@@ -326,8 +340,9 @@ class DrawingPanel(wx.Panel):
         dc.Clear()
 
     def load(self, stitch_plan):
-        self.last_frame_duration = 0
+        self.current_stitch = 1
         self.direction = 1
+        self.last_frame_duration = 0
         self.num_stitches = stitch_plan.num_stitches
         self.control_panel.set_num_stitches(self.num_stitches)
         self.minx, self.miny, self.maxx, self.maxy = stitch_plan.bounding_box
@@ -378,20 +393,38 @@ class DrawingPanel(wx.Panel):
         self.pens = []
         self.stitch_blocks = []
 
+        # There is no 0th stitch, so add a place-holder.
+        self.commands = [None]
+
         for color_block in stitch_plan:
             pen = self.color_to_pen(color_block.color)
+            stitch_block = []
 
-            for point_list in color_block_to_point_lists(color_block):
+            for stitch in color_block:
+                # trim any whitespace on the left and top and scale to the
+                # pixel density
+                stitch_block.append((self.PIXEL_DENSITY * (stitch.x - self.minx),
+                                     self.PIXEL_DENSITY * (stitch.y - self.miny)))
+
+                if stitch.trim:
+                    self.commands.append(TRIM)
+                elif stitch.jump:
+                    self.commands.append(JUMP)
+                elif stitch.stop:
+                    self.commands.append(STOP)
+                elif stitch.color_change:
+                    self.commands.append(COLOR_CHANGE)
+                else:
+                    self.commands.append(STITCH)
+
+                if stitch.trim or stitch.stop or stitch.color_change:
+                    self.pens.append(pen)
+                    self.stitch_blocks.append(stitch_block)
+                    stitch_block = []
+
+            if stitch_block:
                 self.pens.append(pen)
-
-                points = []
-                for x, y in point_list:
-                    # trim any whitespace on the left and top and scale to the
-                    # pixel density
-                    points.append((self.PIXEL_DENSITY * (x - self.minx),
-                                   self.PIXEL_DENSITY * (y - self.miny)))
-
-                self.stitch_blocks.append(points)
+                self.stitch_blocks.append(stitch_block)
 
     def set_speed(self, speed):
         self.speed = speed
@@ -407,13 +440,13 @@ class DrawingPanel(wx.Panel):
     def set_current_stitch(self, stitch):
         self.current_stitch = stitch
         self.clamp_current_stitch()
-        self.control_panel.on_current_stitch(self.current_stitch)
+        self.control_panel.on_current_stitch(self.current_stitch, self.commands[self.current_stitch])
         self.stop_if_at_end()
         self.Refresh()
 
     def restart(self):
         if self.direction == 1:
-            self.current_stitch = 0
+            self.current_stitch = 1
         elif self.direction == -1:
             self.current_stitch = self.num_stitches
 
