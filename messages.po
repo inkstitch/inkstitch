@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-27 16:15-0400\n"
+"POT-Creation-Date: 2018-08-27 16:43-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -608,29 +608,29 @@ msgstr ""
 msgid "Apply and Quit"
 msgstr ""
 
-#: lib/extensions/params.py:438
+#: lib/extensions/params.py:439
 msgid "Preview"
 msgstr ""
 
-#: lib/extensions/params.py:454
+#: lib/extensions/params.py:455
 msgid "Internal Error"
 msgstr ""
 
-#: lib/extensions/params.py:507
+#: lib/extensions/params.py:508
 msgid "Please enter or select a preset name first."
 msgstr ""
 
-#: lib/extensions/params.py:507 lib/extensions/params.py:513
-#: lib/extensions/params.py:541
+#: lib/extensions/params.py:508 lib/extensions/params.py:514
+#: lib/extensions/params.py:542
 msgid "Preset"
 msgstr ""
 
-#: lib/extensions/params.py:513
+#: lib/extensions/params.py:514
 #, python-format
 msgid "Preset \"%s\" not found."
 msgstr ""
 
-#: lib/extensions/params.py:541
+#: lib/extensions/params.py:542
 #, python-format
 msgid ""
 "Preset \"%s\" already exists.  Please use another name or press "

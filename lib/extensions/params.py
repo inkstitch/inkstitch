@@ -430,6 +430,7 @@ class SettingsFrame(wx.Frame):
             current_screen = wx.Display.GetFromPoint(wx.GetMousePosition())
             display = wx.Display(current_screen)
             screen_rect = display.GetClientArea()
+            simulator_pos.y = screen_rect.GetTop()
 
             width = screen_rect.GetWidth() - params_rect.GetWidth()
             height = screen_rect.GetHeight()
