@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-26 23:34-0400\n"
+"POT-Creation-Date: 2018-08-26 23:50-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -674,79 +674,79 @@ msgstr ""
 msgid "Generate INX files"
 msgstr ""
 
-#: lib/simulator.py:608
+#: lib/simulator.py:611
 msgid "<<"
 msgstr ""
 
-#: lib/simulator.py:608
+#: lib/simulator.py:611
 msgid "Play reverse (arrow left)"
 msgstr ""
 
-#: lib/simulator.py:609
+#: lib/simulator.py:612
 msgid "-"
 msgstr ""
 
-#: lib/simulator.py:609
+#: lib/simulator.py:612
 msgid "Play one frame backward (+)"
 msgstr ""
 
-#: lib/simulator.py:610
+#: lib/simulator.py:613
 msgid "+"
 msgstr ""
 
-#: lib/simulator.py:610
+#: lib/simulator.py:613
 msgid "Play one frame forward (+)"
 msgstr ""
 
-#: lib/simulator.py:611
+#: lib/simulator.py:614
 msgid ">>"
 msgstr ""
 
-#: lib/simulator.py:611
+#: lib/simulator.py:614
 msgid "Play forward (arrow right)"
 msgstr ""
 
-#: lib/simulator.py:612
+#: lib/simulator.py:615
 msgid "^"
 msgstr ""
 
-#: lib/simulator.py:612
+#: lib/simulator.py:615
 msgid "Speed up (arrow up)"
 msgstr ""
 
-#: lib/simulator.py:613
+#: lib/simulator.py:616
 msgid "v"
 msgstr ""
 
-#: lib/simulator.py:613
+#: lib/simulator.py:616
 msgid "Slow down (arrow down)"
 msgstr ""
 
-#: lib/simulator.py:614
+#: lib/simulator.py:617
 msgid "Pause"
 msgstr ""
 
-#: lib/simulator.py:614
+#: lib/simulator.py:617
 msgid "Pause (P)"
 msgstr ""
 
-#: lib/simulator.py:615
+#: lib/simulator.py:618
 msgid "Restart"
 msgstr ""
 
-#: lib/simulator.py:615
+#: lib/simulator.py:618
 msgid "Restart (R)"
 msgstr ""
 
-#: lib/simulator.py:616
+#: lib/simulator.py:619
 msgid "Quit"
 msgstr ""
 
-#: lib/simulator.py:616
+#: lib/simulator.py:619
 msgid "Close (Q)"
 msgstr ""
 
-#: lib/simulator.py:794
+#: lib/simulator.py:797
 msgid "Stitch # "
 msgstr ""
 

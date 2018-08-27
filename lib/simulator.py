@@ -4,7 +4,7 @@ from wx.lib.intctrl import IntCtrl
 import time
 from itertools import izip
 
-from .svg import color_block_to_point_lists
+from .svg import color_block_to_point_lists, PIXELS_PER_MM
 from .i18n import _
 
 class ControlPanel(wx.Panel):
@@ -369,7 +369,10 @@ class DrawingPanel(wx.Panel):
             self.control_panel.on_start()
 
     def color_to_pen(self, color):
-        return wx.Pen(color.visible_on_white.rgb, width=int(0.4 * self.PIXEL_DENSITY))
+        # We draw the thread with a thickness of 0.1mm.  Real thread has a
+        # thickness of ~0.4mm, but if we did that, we wouldn't be able to
+        # see the individual stitches.
+        return wx.Pen(color.visible_on_white.rgb, width=int(0.1 * PIXELS_PER_MM * self.PIXEL_DENSITY))
 
     def parse_stitch_plan(self, stitch_plan):
         self.pens = []
