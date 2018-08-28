@@ -82,6 +82,9 @@ class InstallerFrame(wx.Frame):
         def copy_files(self, files, dest):
             import winutils
 
+            if not os.path.exists(dest):
+                os.makedirs(dest)
+
             winutils.copy(files, dest)
     else:
         def copy_files(self, files, dest):
