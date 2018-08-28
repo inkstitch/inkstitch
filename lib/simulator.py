@@ -42,7 +42,7 @@ class ControlPanel(wx.Panel):
         self.btnBackwardStitch.Bind(wx.EVT_BUTTON, self.animation_one_stitch_backward)
         self.btnForwardStitch = wx.Button(self, -1, label='|>')
         self.btnForwardStitch.Bind(wx.EVT_BUTTON, self.animation_one_stitch_forward)
-        self.direction = wx.Button(self, -1, label='>>')
+        self.direction = wx.Button(self, -1, label='<<')
         self.direction.Bind(wx.EVT_BUTTON, self.on_direction_button)
         self.pauseBtn = wx.Button(self, -1, label=_('Pause'))
         self.pauseBtn.Bind(wx.EVT_BUTTON, self.on_pause_start_button)
@@ -147,9 +147,9 @@ class ControlPanel(wx.Panel):
         evtObj = event.GetEventObject()
         lbl = evtObj.GetLabel()
         if lbl == '>>':
-            self.animation_reverse()
-        else:
             self.animation_forward()
+        else:
+            self.animation_reverse()
 
     def set_speed(self, speed):
         self.speed = int(max(speed, 1))
