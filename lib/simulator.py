@@ -32,6 +32,7 @@ class ControlPanel(wx.Panel):
         self.num_stitches = 1
         self.current_stitch = 1
         self.speed = 1
+        self.direction = 1
 
         # Widgets
         self.btnMinus = wx.Button(self, -1, label='-')
@@ -42,8 +43,8 @@ class ControlPanel(wx.Panel):
         self.btnBackwardStitch.Bind(wx.EVT_BUTTON, self.animation_one_stitch_backward)
         self.btnForwardStitch = wx.Button(self, -1, label='|>')
         self.btnForwardStitch.Bind(wx.EVT_BUTTON, self.animation_one_stitch_forward)
-        self.direction = wx.Button(self, -1, label='<<')
-        self.direction.Bind(wx.EVT_BUTTON, self.on_direction_button)
+        self.directionBtn = wx.Button(self, -1, label='<<')
+        self.directionBtn.Bind(wx.EVT_BUTTON, self.on_direction_button)
         self.pauseBtn = wx.Button(self, -1, label=_('Pause'))
         self.pauseBtn.Bind(wx.EVT_BUTTON, self.on_pause_start_button)
         self.restartBtn = wx.Button(self, -1, label=_('Restart'))
@@ -73,7 +74,7 @@ class ControlPanel(wx.Panel):
         hbSizer2.Add(self.btnPlus, 0, wx.ALL, 2)
         hbSizer2.Add(self.btnBackwardStitch, 0, wx.ALL, 2)
         hbSizer2.Add(self.btnForwardStitch, 0, wx.ALL, 2)
-        hbSizer2.Add(self.direction, 0, wx.EXPAND | wx.ALL, 2)
+        hbSizer2.Add(self.directionBtn, 0, wx.EXPAND | wx.ALL, 2)
         hbSizer2.Add(self.pauseBtn, 0, wx.EXPAND | wx.ALL, 2)
         hbSizer2.Add(self.restartBtn, 0, wx.EXPAND | wx.ALL, 2)
         hbSizer2.Add(self.quitBtn, 0, wx.EXPAND | wx.ALL, 2)
@@ -136,28 +137,36 @@ class ControlPanel(wx.Panel):
             self.set_speed(self.target_stitches_per_second)
 
     def animation_forward(self, event=None):
-        self.direction.SetLabel(">>")
+        self.directionBtn.SetLabel("<<")
         self.drawing_panel.forward()
+        self.direction = 1
+        self.update_speed_text()
 
     def animation_reverse(self, event=None):
-        self.direction.SetLabel("<<")
+        self.directionBtn.SetLabel(">>")
         self.drawing_panel.reverse()
+        self.direction = -1
+        self.update_speed_text()
 
     def on_direction_button(self, event):
         evtObj = event.GetEventObject()
         lbl = evtObj.GetLabel()
-        if lbl == '>>':
+        if self.direction == 1:
             self.animation_forward()
         else:
             self.animation_reverse()
 
     def set_speed(self, speed):
         self.speed = int(max(speed, 1))
-        self.speedST.SetLabel(_('Speed: %d stitches/sec') % self.speed)
-        self.hbSizer2.Layout()
+        self.update_speed_text()
 
         if self.drawing_panel:
             self.drawing_panel.set_speed(self.speed)
+
+    def update_speed_text(self):
+        self.speedST.SetLabel(_('Speed: %d stitches/sec') % (self.speed * self.direction))
+        self.hbSizer2.Layout()
+
 
     def on_slider(self, event):
         stitch = event.GetEventObject().GetValue()

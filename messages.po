@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-27 16:43-0400\n"
+"POT-Creation-Date: 2018-08-27 21:56-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -695,24 +695,24 @@ msgstr ""
 msgid "COLOR CHANGE"
 msgstr ""
 
-#: lib/simulator.py:47 lib/simulator.py:198 lib/simulator.py:205
+#: lib/simulator.py:48 lib/simulator.py:207 lib/simulator.py:214
 msgid "Pause"
 msgstr ""
 
-#: lib/simulator.py:49
+#: lib/simulator.py:50
 msgid "Restart"
 msgstr ""
 
-#: lib/simulator.py:51
+#: lib/simulator.py:52
 msgid "Quit"
 msgstr ""
 
-#: lib/simulator.py:156
+#: lib/simulator.py:167
 #, python-format
 msgid "Speed: %d stitches/sec"
 msgstr ""
 
-#: lib/simulator.py:201
+#: lib/simulator.py:210
 msgid "Start"
 msgstr ""
 
