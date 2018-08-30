@@ -3,7 +3,7 @@ from shapely import geometry as shgeo, ops as shops
 
 from .element import param, EmbroideryElement, Patch
 from ..i18n import _
-from ..utils import cache, Point
+from ..utils import cache, Point, cut
 
 
 class SatinColumn(EmbroideryElement):
@@ -408,6 +408,34 @@ class SatinColumn(EmbroideryElement):
 
         return points
 
+    def split(self, split_point):
+        """Split a satin into two satins at the specified point
+
+        split_point is a point on one of the rails, not at one of the ends.
+        Finds corresponding point on the other rail (taking into account the
+        rungs) and breaks the rails at these points.
+
+        Returns two new SatinColumn instances: the part before and the part
+        after the split point.  All parameters are copied over to the new
+        SatinColumn instances.
+        """
+
+        split_point = Point(*split_point)
+        patch = self.do_satin()
+        index_of_closest_stitch = min(range(len(patch)), key=lambda index: split_point.distance(patch.stitches[index]))
+
+        if index_of_closest_stitch % 2 == 0:
+            # split point is on the first rail
+            cut_points = (patch.stitches[index_of_closest_stitch],
+                          patch.stitches[index_of_closest_stitch + 1])
+        else:
+            # split point is on the second rail
+            cut_points = (patch.stitches[index_of_closest_stitch - 1],
+                          patch.stitches[index_of_closest_stitch])
+
+
+
+
     def do_contour_underlay(self):
         # "contour walk" underlay: do stitches up one side and down the
         # other.
@@ -457,7 +485,7 @@ class SatinColumn(EmbroideryElement):
         # zigzag looks like this to make the satin stitches look perpendicular
         # to the column:
         #
-        # /|/|/|/|/|/|/|/|
+        # |/|/|/|/|/|/|/|/|
 
         # print >> dbg, "satin", self.zigzag_spacing, self.pull_compensation
 
