@@ -438,7 +438,7 @@ msgid "\n\n"
 "Seeing a 'no such option' message?  Please restart Inkscape to fix."
 msgstr ""
 
-#: lib/extensions/flip.py:35
+#: lib/extensions/flip.py:25
 msgid "Please select one or more satin columns to flip."
 msgstr ""
 
