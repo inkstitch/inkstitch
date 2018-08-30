@@ -141,33 +141,80 @@ class SatinColumn(EmbroideryElement):
 
     @property
     @cache
-    def flattened_beziers(self):
-        if len(self.csp) == 2:
-            return self.simple_flatten_beziers()
-        elif len(self.csp) < 2:
-            self.fatal(_("satin column: %(id)s: at least two subpaths required (%(num)d found)") % dict(num=len(self.csp), id=self.node.get('id')))
-        else:
-            return self.flatten_beziers_with_rungs()
+    def rails(self):
+        """The rails in order, as LineStrings"""
+        return [subpath for i, subpath in enumerate(self.csp) if i in self.rail_indices]
 
-    def flatten_beziers_with_rungs(self):
-        input_paths = [self.flatten([path]) for path in self.csp]
-        input_paths = [shgeo.LineString(path[0]) for path in input_paths]
+    @property
+    @cache
+    def rungs(self):
+        """The rungs, as LineStrings"""
+        return [subpath for i, subpath in enumerate(self.csp) if i not in self.rail_indices]
 
-        paths = input_paths[:]
-        paths.sort(key=lambda path: path.length, reverse=True)
+    @property
+    @cache
+    def rail_indices(self):
+        paths = [self.flatten([path]) for path in self.csp]
+        paths = [shgeo.LineString(path[0]) for path in paths]
+        num_paths = len(paths)
 
         # Imagine a satin column as a curvy ladder.
         # The two long paths are the "rails" of the ladder.  The remainder are
         # the "rungs".
-        rails = paths[:2]
-        rungs = shgeo.MultiLineString(paths[2:])
+        #
+        # The subpaths in this SVG path may be in arbitrary order, so we need
+        # to figure out which are the rails and which are the rungs.
+        #
+        # Rungs are the paths that intersect with exactly 2 other paths.
+        # Rails are everything else.
 
-        # The rails should stay in the order they were in the original CSP.
-        # (this lets the user control where the satin starts and ends)
-        rails.sort(key=lambda rail: input_paths.index(rail))
+        if num_paths <= 2:
+            # old-style satin column with no rungs
+            return range(num_paths)
+
+        # This takes advantage of the fact that sum() counts True as 1
+        intersection_counts = [sum(paths[i].intersects(paths[j]) for j in xrange(i, num_paths))
+                               for i in xrange(num_paths)]
+        paths_not_intersecting_two = [i for i in xrange(num_paths) if intersection_counts[i] != 2]
+        num_not_intersecting_two = len(paths_not_intersecting_two)
+
+        rail_indices = []
+        if num_not_intersecting_two == 2:
+            # Great, we have two unambiguous rails.
+            return paths_not_intersecting_two
+        else:
+            # This is one of two situations:
+            #
+            # 1. There are two rails and two rungs, and it looks like a
+            # hash symbol (#).  Unfortunately for us, this is an ambiguous situation
+            # and we'll have to take a guess as to which are the rails and
+            # which are the rungs.  We'll guess that the rails are the longest
+            # ones.
+            #
+            # or,
+            #
+            # 2. The paths don't look like a ladder at all, but some other
+            # kind of weird thing.  Maybe one of the rungs crosses a rail more
+            # than once.  Treat it like the previous case and we'll sort out
+            # the intersection issues later.
+            indices_by_length = sorted(range(num_paths), key=lambda index: paths[index].length, reverse=True)
+            return indices_by_length[:2]
+
+    @property
+    @cache
+    def flattened_beziers(self):
+        if self.rungs:
+            return self.flatten_beziers_with_rungs()
+        elif len(self.csp) < 2:
+            self.fatal(_("satin column: %(id)s: at least two subpaths required (%(num)d found)") % dict(num=len(self.csp), id=self.node.get('id')))
+        else:
+            return self.simple_flatten_beziers()
+
+    def flatten_beziers_with_rungs(self):
+        rails = [shgeo.LineString(self.flatten_subpath(rail)) for rail in self.rails]
+        rungs = shgeo.MultiLineString([shgeo.LineString(self.flatten_subpath(rung)) for rung in self.rungs])
 
         result = []
-
         for rail in rails:
             if not rail.is_simple:
                 self.fatal(_("One or more rails crosses itself, and this is not allowed.  Please split into multiple satin columns."))
@@ -196,7 +243,7 @@ class SatinColumn(EmbroideryElement):
 
         paths = []
 
-        for path in self.csp:
+        for path in self.rails:
             # See the documentation in the parent class for parse_path() for a
             # description of the format of the CSP.  Each bezier is constructed
             # using two neighboring 3-tuples in the list.
@@ -223,10 +270,10 @@ class SatinColumn(EmbroideryElement):
         if self.get_style("fill") is not None:
             self.fatal(_("satin column: object %s has a fill (but should not)") % node_id)
 
-        if len(self.csp) == 2:
-            if len(self.csp[0]) != len(self.csp[1]):
+        if not self.rungs:
+            if len(self.rails[0]) != len(self.rails[1]):
                 self.fatal(_("satin column: object %(id)s has two paths with an unequal number of points (%(length1)d and %(length2)d)") %
-                           dict(id=node_id, length1=len(self.csp[0]), length2=len(self.csp[1])))
+                           dict(id=node_id, length1=len(self.rails[0]), length2=len(self.rails[1])))
 
     def offset_points(self, pos1, pos2, offset_px):
         # Expand or contract two points about their midpoint.  This is
