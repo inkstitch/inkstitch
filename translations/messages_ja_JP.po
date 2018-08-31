@@ -329,33 +329,33 @@ msgstr ""
 msgid "default: half of contour underlay inset"
 msgstr ""
 
-#: lib/elements/satin_column.py:244
+#: lib/elements/satin_column.py:249
 #, python-format
 msgid "satin column: %(id)s: at least two subpaths required (%(num)d found)"
 msgstr ""
 
-#: lib/elements/satin_column.py:252
+#: lib/elements/satin_column.py:257
 msgid "One or more rails crosses itself, and this is not allowed.  Please split into multiple satin columns."
 msgstr ""
 
-#: lib/elements/satin_column.py:259
+#: lib/elements/satin_column.py:264
 msgid "satin column: One or more of the rungs doesn't intersect both rails."
 msgstr ""
 
-#: lib/elements/satin_column.py:260 lib/elements/satin_column.py:263
+#: lib/elements/satin_column.py:265 lib/elements/satin_column.py:268
 msgid "Each rail should intersect both rungs once."
 msgstr ""
 
-#: lib/elements/satin_column.py:262
+#: lib/elements/satin_column.py:267
 msgid "satin column: One or more of the rungs intersects the rails more than once."
 msgstr ""
 
-#: lib/elements/satin_column.py:278
+#: lib/elements/satin_column.py:283
 #, python-format
 msgid "satin column: object %s has a fill (but should not)"
 msgstr ""
 
-#: lib/elements/satin_column.py:282
+#: lib/elements/satin_column.py:287
 #, python-format
 msgid "satin column: object %(id)s has two paths with an unequal number of points (%(length1)d and %(length2)d)"
 msgstr ""

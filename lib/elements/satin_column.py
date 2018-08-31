@@ -251,8 +251,11 @@ class SatinColumn(EmbroideryElement):
             if not rail.is_simple:
                 self.fatal(_("One or more rails crosses itself, and this is not allowed.  Please split into multiple satin columns."))
 
-            # handle null intersections here?
-            linestrings = shops.split(rail, rungs)
+            if len(rungs.geoms) > 0:
+                # handle null intersections here?
+                linestrings = shops.split(rail, rungs)
+            else:
+                linestrings = shgeo.MultiLineString((rail,))
 
             # print >> dbg, "rails and rungs", [str(rail) for rail in rails], [str(rung) for rung in rungs]
             if len(linestrings.geoms) < len(rungs.geoms) + 1:
