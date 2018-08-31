@@ -248,115 +248,114 @@ msgstr ""
 msgid "shape is not valid.  This can happen if the border crosses over itself."
 msgstr ""
 
-#: lib/elements/satin_column.py:10
 msgid "Satin Column"
 msgstr ""
 
-#: lib/elements/satin_column.py:16
+#: lib/elements/satin_column.py:19
 msgid "Custom satin column"
 msgstr ""
 
-#: lib/elements/satin_column.py:22
+#: lib/elements/satin_column.py:25
 msgid "\"E\" stitch"
 msgstr ""
 
-#: lib/elements/satin_column.py:32 lib/elements/stroke.py:55
+#: lib/elements/satin_column.py:35 lib/elements/stroke.py:55
 msgid "Zig-zag spacing (peak-to-peak)"
 msgstr ""
 
-#: lib/elements/satin_column.py:33
+#: lib/elements/satin_column.py:36
 msgid "Peak-to-peak distance between zig-zags."
 msgstr ""
 
-#: lib/elements/satin_column.py:44
+#: lib/elements/satin_column.py:47
 msgid "Pull compensation"
 msgstr ""
 
-#: lib/elements/satin_column.py:45
+#: lib/elements/satin_column.py:48
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape.  This setting expands each pair of needle penetrations outward from the center of the satin column."
 msgstr ""
 
-#: lib/elements/satin_column.py:57
+#: lib/elements/satin_column.py:60
 msgid "Contour underlay"
 msgstr ""
 
-#: lib/elements/satin_column.py:57 lib/elements/satin_column.py:64
-#: lib/elements/satin_column.py:73
+#: lib/elements/satin_column.py:60 lib/elements/satin_column.py:67
+#: lib/elements/satin_column.py:76
 msgid "Contour Underlay"
 msgstr ""
 
-#: lib/elements/satin_column.py:64 lib/elements/satin_column.py:88
+#: lib/elements/satin_column.py:67 lib/elements/satin_column.py:91
 msgid "Stitch length"
 msgstr ""
 
-#: lib/elements/satin_column.py:70
+#: lib/elements/satin_column.py:73
 msgid "Contour underlay inset amount"
 msgstr ""
 
-#: lib/elements/satin_column.py:71
+#: lib/elements/satin_column.py:74
 msgid "Shrink the outline, to prevent the underlay from showing around the outside of the satin column."
 msgstr ""
 
-#: lib/elements/satin_column.py:81
+#: lib/elements/satin_column.py:84
 msgid "Center-walk underlay"
 msgstr ""
 
-#: lib/elements/satin_column.py:81 lib/elements/satin_column.py:88
+#: lib/elements/satin_column.py:84 lib/elements/satin_column.py:91
 msgid "Center-Walk Underlay"
 msgstr ""
 
-#: lib/elements/satin_column.py:93
+#: lib/elements/satin_column.py:96
 msgid "Zig-zag underlay"
 msgstr ""
 
-#: lib/elements/satin_column.py:93 lib/elements/satin_column.py:102
-#: lib/elements/satin_column.py:113
+#: lib/elements/satin_column.py:96 lib/elements/satin_column.py:105
+#: lib/elements/satin_column.py:116
 msgid "Zig-zag Underlay"
 msgstr ""
 
-#: lib/elements/satin_column.py:99
+#: lib/elements/satin_column.py:102
 msgid "Zig-Zag spacing (peak-to-peak)"
 msgstr ""
 
-#: lib/elements/satin_column.py:100
+#: lib/elements/satin_column.py:103
 msgid "Distance between peaks of the zig-zags."
 msgstr ""
 
-#: lib/elements/satin_column.py:110
+#: lib/elements/satin_column.py:113
 msgid "Inset amount"
 msgstr ""
 
-#: lib/elements/satin_column.py:111
+#: lib/elements/satin_column.py:114
 msgid "default: half of contour underlay inset"
 msgstr ""
 
-#: lib/elements/satin_column.py:209
+#: lib/elements/satin_column.py:244
 #, python-format
 msgid "satin column: %(id)s: at least two subpaths required (%(num)d found)"
 msgstr ""
 
-#: lib/elements/satin_column.py:220
+#: lib/elements/satin_column.py:252
 msgid "One or more rails crosses itself, and this is not allowed.  Please split into multiple satin columns."
 msgstr ""
 
-#: lib/elements/satin_column.py:227
+#: lib/elements/satin_column.py:259
 msgid "satin column: One or more of the rungs doesn't intersect both rails."
 msgstr ""
 
-#: lib/elements/satin_column.py:228 lib/elements/satin_column.py:231
+#: lib/elements/satin_column.py:260 lib/elements/satin_column.py:263
 msgid "Each rail should intersect both rungs once."
 msgstr ""
 
-#: lib/elements/satin_column.py:230
+#: lib/elements/satin_column.py:262
 msgid "satin column: One or more of the rungs intersects the rails more than once."
 msgstr ""
 
-#: lib/elements/satin_column.py:271
+#: lib/elements/satin_column.py:278
 #, python-format
 msgid "satin column: object %s has a fill (but should not)"
 msgstr ""
 
-#: lib/elements/satin_column.py:275
+#: lib/elements/satin_column.py:282
 #, python-format
 msgid "satin column: object %(id)s has two paths with an unequal number of points (%(length1)d and %(length2)d)"
 msgstr ""
@@ -404,6 +403,10 @@ msgstr ""
 #: lib/elements/stroke.py:127
 msgid "Legacy running stitch setting detected!\n\n"
 "It looks like you're using a stroke smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set your stroke to be dashed to indicate running stitch.  Any kind of dash will work."
+msgstr ""
+
+#: lib/extensions/auto_satin.py:14
+msgid "Please select one or more satin columns to operate on."
 msgstr ""
 
 #: lib/extensions/base.py:113
@@ -1162,19 +1165,23 @@ msgstr ""
 msgid "Brother Stitch Format"
 msgstr ""
 
-#: templates/convert_to_satin.inx:3
-msgid "Convert Line to Satin"
+#: templates/auto_satin.inx:3
+msgid "Auto Satin"
 msgstr ""
 
 #. This is used for the submenu under Extensions -> Ink/Stitch.  Translate this
 #. to your language's word for its language, e.g. "Español" for the spanish
 #. translation.
-#: templates/convert_to_satin.inx:12 templates/embroider.inx:24
-#: templates/flip.inx:12 templates/global_commands.inx:16
-#: templates/install.inx:12 templates/layer_commands.inx:16
-#: templates/object_commands.inx:15 templates/params.inx:12
-#: templates/print.inx:12 templates/simulate.inx:12
+#: templates/auto_satin.inx:12 templates/convert_to_satin.inx:12
+#: templates/embroider.inx:24 templates/flip.inx:12
+#: templates/global_commands.inx:16 templates/install.inx:12
+#: templates/layer_commands.inx:16 templates/object_commands.inx:15
+#: templates/params.inx:12 templates/print.inx:12 templates/simulate.inx:12
 msgid "English"
+msgstr ""
+
+#: templates/convert_to_satin.inx:3
+msgid "Convert Line to Satin"
 msgstr ""
 
 #: templates/embroider.inx:3
