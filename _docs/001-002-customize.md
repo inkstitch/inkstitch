@@ -14,12 +14,12 @@ The following list was suggested by lexelby:
 
 Shortcut&nbsp;Keys | Effect
 -------- | --------
-**ctrl-shift-O** | Objects panel (Object menu -> Objects)
-**ctrl-shift-P** | Params extension, without inkscape's extension preferences dialog
-**ctrl-shift-L** | Simulate (mnemonic: Live simulation)
-**ctrl-shift-E** | Embroider extension, without inkscape's extension preferences dialog
-**PageUp** and **PageDown** | "Stack Up" and "Stack Down", a new feature in inkscape 0.92.2 that allows you to move an object up or down in the stacking order. You get more control than the old "Raise" and "Lower" commands that can only reorder objects if they overlap. Stack Up and Stack Down give me precise control over the order that objects stitch in. Very useful in combination with the Objects panel.
-**Ctrl-R** | Reverse the direction of a path. For satins and running stitch, this lets me change which direction the stitches go in. I use this with the Inkscape preference in the Node tool settings, "Show path direction on outlines". If you select just one vertex using the node editor and press Ctrl+R, inkscape will reverse just one path in an object. This lets me make sure that both rails in a satin point the same direction.
+<key>ctrl</key>+<key>shift</key>+<key>O</key> | Objects panel (Object menu -> Objects)
+<key>ctrl</key>+<key>shift</key>+<key>P</key> | Params extension, without inkscape's extension preferences dialog
+<key>ctrl</key>+<key>shift</key>+<key>L</key> | Simulate (mnemonic: Live simulation)
+<key>ctrl</key>+<key>shift</key>+<key>E</key> | Embroider extension, without inkscape's extension preferences dialog
+<key>PageUp</key> and <key>PageDown</key> | "Stack Up" and "Stack Down", a new feature in inkscape 0.92.2 that allows you to move an object up or down in the stacking order. You get more control than the old "Raise" and "Lower" commands that can only reorder objects if they overlap. Stack Up and Stack Down give me precise control over the order that objects stitch in. Very useful in combination with the Objects panel.
+<key>ctrl</key>+<key>R</key> | Reverse the direction of a path. For satins and running stitch, this lets me change which direction the stitches go in. I use this with the Inkscape preference in the Node tool settings, "Show path direction on outlines". If you select just one vertex using the node editor and press Ctrl+R, inkscape will reverse just one path in an object. This lets me make sure that both rails in a satin point the same direction.
 
 
 
@@ -28,11 +28,11 @@ Ink/Stitch simulation already comes with shortcut keys included:
 
 Shortcut Keys | Effect
 -------- | --------
-**↑** | speed up
-**↓** | slow down
-**r** | restart animation
-**p** | pause animation
-**q** | close
+<key>↑</key> | speed up
+<key>↓</key> | slow down
+<key>r</key> | restart animation
+<key>p</key> | pause animation
+<key>q</key> | close
 
 ## Grids
 
