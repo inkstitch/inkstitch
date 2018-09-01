@@ -243,9 +243,7 @@ class ParamsTab(ScrolledPanel):
         self.update_toggle_state()
 
     def save_preset(self, storage):
-        preset = storage[self.name] = {}
-        for name, input in self.param_inputs.iteritems():
-            preset[name] = input.GetValue()
+        storage[self.name] = self.get_values()
 
     def update_description(self):
         if len(self.nodes) == 1:
