@@ -8,12 +8,12 @@ toc: true
 
 ## Tastenkürzel
 
-Die Arbeit mit Ink/Stitch und Inkscape kann erheblich beschleunigt werden, wenn Tastenkombinationen zugewiesen werden. Unter: <key>Bearbeiten > Einstellungen > Benutzeroberfläche > Tastenkürzel</key> können die gewünschten Tastenkombinationen eingetragen werden. [Inkscape anpassen (en)](http://wiki.inkscape.org/wiki/index.php/Customizing_Inkscape)
+Die Arbeit mit Ink/Stitch und Inkscape kann erheblich beschleunigt werden, wenn Tastenkombinationen zugewiesen werden. Unter: <key>Bearbeiten \> Einstellungen \> Benutzeroberfläche \> Tastenkürzel</key> können die gewünschten Tastenkombinationen eingetragen werden. [Inkscape anpassen (en)](http://wiki.inkscape.org/wiki/index.php/Customizing_Inkscape)
 
 Die folgende Liste wurde von @lexelby vorgeschlagen:
 
-Tastenkürzel | Effekt
------------- | ------
+Tastenkürzel      | Effekt
+----------------- | ------
 <key>Strg</key>+<key>Umschalt</key>+<key>O</key> | Objektübersicht (Objekt -> Objekte...)
 <key>Strg</key>+<key>Umschalt</key>+<key>P</key> | Erweiterungen -> Parameter (ohne Einstellungen)
 <key>Strg</key>+<key>Umschalt</key>+<key>L</key> | Erweiterungen -> Simulierung (Live Simulation)
