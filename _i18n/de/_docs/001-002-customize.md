@@ -14,7 +14,7 @@ Die folgende Liste wurde von @lexelby vorgeschlagen:
 
 Tastenkürzel        | Effekt
 ------------------- | --------
-**strg+umschalt+O** | Objektübersicht (Objekt -> Objekte...)
+<key>Strg</key>+<key>Umschalt</key>+<key>O</key> | Objektübersicht (Objekt -> Objekte...)
 **strg+umschalt+P** | Erweiterungen -> Parameter (ohne Einstellungen)
 **strg+umschalt+L** | Erweiterungen -> Simulierung (Live Simulation)
 **strg+umschalt+E** | Erweiterungen -> Sticken (ohne Einstellungen)
