@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-09-01 16:26-0400\n"
+"POT-Creation-Date: 2018-09-01 19:54-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -107,7 +107,7 @@ msgid "%(command)s: %(description)s"
 msgstr ""
 
 #: lib/elements/auto_fill.py:11
-msgid "Auto-Fill"
+msgid "AutoFill"
 msgstr ""
 
 #: lib/elements/auto_fill.py:14
@@ -501,7 +501,7 @@ msgstr ""
 msgid "Install"
 msgstr ""
 
-#: lib/extensions/install.py:40 lib/extensions/params.py:411
+#: lib/extensions/install.py:40 lib/extensions/params.py:409
 msgid "Cancel"
 msgstr ""
 
@@ -557,104 +557,104 @@ msgstr ""
 msgid "Please choose one or more commands to attach."
 msgstr ""
 
-#: lib/extensions/params.py:252
+#: lib/extensions/params.py:250
 msgid "These settings will be applied to 1 object."
 msgstr ""
 
-#: lib/extensions/params.py:254
+#: lib/extensions/params.py:252
 #, python-format
 msgid "These settings will be applied to %d objects."
 msgstr ""
 
-#: lib/extensions/params.py:257
+#: lib/extensions/params.py:255
 msgid ""
 "Some settings had different values across objects.  Select a value from "
 "the dropdown or enter a new one."
 msgstr ""
 
-#: lib/extensions/params.py:261
+#: lib/extensions/params.py:259
 #, python-format
 msgid "Disabling this tab will disable the following %d tabs."
 msgstr ""
 
-#: lib/extensions/params.py:263
+#: lib/extensions/params.py:261
 msgid "Disabling this tab will disable the following tab."
 msgstr ""
 
-#: lib/extensions/params.py:266
+#: lib/extensions/params.py:264
 #, python-format
 msgid "Enabling this tab will disable %s and vice-versa."
 msgstr ""
 
-#: lib/extensions/params.py:296
+#: lib/extensions/params.py:294
 msgid "Inkscape objects"
 msgstr ""
 
-#: lib/extensions/params.py:354
+#: lib/extensions/params.py:352
 msgid ""
 "Click to force this parameter to be saved when you click \"Apply and "
 "Quit\""
 msgstr ""
 
-#: lib/extensions/params.py:362
+#: lib/extensions/params.py:360
 msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr ""
 
-#: lib/extensions/params.py:377
+#: lib/extensions/params.py:375
 msgid "Embroidery Params"
 msgstr ""
 
-#: lib/extensions/params.py:394
+#: lib/extensions/params.py:392
 msgid "Presets"
 msgstr ""
 
-#: lib/extensions/params.py:399
+#: lib/extensions/params.py:397
 msgid "Load"
 msgstr ""
 
-#: lib/extensions/params.py:402
+#: lib/extensions/params.py:400
 msgid "Add"
 msgstr ""
 
-#: lib/extensions/params.py:405
+#: lib/extensions/params.py:403
 msgid "Overwrite"
 msgstr ""
 
-#: lib/extensions/params.py:408
+#: lib/extensions/params.py:406
 msgid "Delete"
 msgstr ""
 
-#: lib/extensions/params.py:415
+#: lib/extensions/params.py:413
 msgid "Use Last Settings"
 msgstr ""
 
-#: lib/extensions/params.py:418
+#: lib/extensions/params.py:416
 msgid "Apply and Quit"
 msgstr ""
 
-#: lib/extensions/params.py:470
+#: lib/extensions/params.py:468
 msgid "Preview"
 msgstr ""
 
-#: lib/extensions/params.py:489
+#: lib/extensions/params.py:487
 msgid "Internal Error"
 msgstr ""
 
-#: lib/extensions/params.py:542
+#: lib/extensions/params.py:540
 msgid "Please enter or select a preset name first."
 msgstr ""
 
-#: lib/extensions/params.py:542 lib/extensions/params.py:548
-#: lib/extensions/params.py:576
+#: lib/extensions/params.py:540 lib/extensions/params.py:546
+#: lib/extensions/params.py:574
 msgid "Preset"
 msgstr ""
 
-#: lib/extensions/params.py:548
+#: lib/extensions/params.py:546
 #, python-format
 msgid "Preset \"%s\" not found."
 msgstr ""
 
-#: lib/extensions/params.py:576
+#: lib/extensions/params.py:574
 #, python-format
 msgid ""
 "Preset \"%s\" already exists.  Please use another name or press "

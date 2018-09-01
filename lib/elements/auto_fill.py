@@ -8,7 +8,7 @@ from .fill import Fill
 
 
 class AutoFill(Fill):
-    element_name = _("Auto-Fill")
+    element_name = _("AutoFill")
 
     @property
     @param('auto_fill', _('Automatically routed fill stitching'), type='toggle', default=True)
