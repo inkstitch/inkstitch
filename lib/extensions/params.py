@@ -329,7 +329,7 @@ class ParamsTab(ScrolledPanel):
 
                 input.Bind(wx.EVT_CHECKBOX, self.changed)
             elif len(param.values) > 1:
-                input = wx.ComboBox(self, wx.ID_ANY, choices=sorted(param.values), style=wx.CB_DROPDOWN)
+                input = wx.ComboBox(self, wx.ID_ANY, choices=sorted(str(value) for value in param.values), style=wx.CB_DROPDOWN)
                 input.Bind(wx.EVT_COMBOBOX, self.changed)
                 input.Bind(wx.EVT_TEXT, self.changed)
             else:
@@ -720,7 +720,7 @@ class Params(InkstitchExtension):
             getter = 'get_param'
 
         values = filter(lambda item: item is not None,
-                        (getattr(node, getter)(param.name, str(param.default)) for node in nodes))
+                        (getattr(node, getter)(param.name, param.default) for node in nodes))
 
         return values
 
