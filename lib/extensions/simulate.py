@@ -1,5 +1,4 @@
 from .base import InkstitchExtension
-from ..i18n import _
 from ..simulator import show_simulator
 from ..stitch_plan import patches_to_stitch_plan
 
