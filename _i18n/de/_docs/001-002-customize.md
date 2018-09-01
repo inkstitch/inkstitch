@@ -8,16 +8,16 @@ toc: true
 
 ## Tastenkürzel
 
-Die Arbeit mit Ink/Stitch und Inkscape kann erheblich beschleunigt werden, wenn Tastenkombinationen zugewiesen werden. Unter: `Bearbeiten -> Einstellungen -> Benutzeroberfläche -> Tastenkürzel` können die gewünschten Tastenkombinationen eingetragen werden. [Inkscape anpassen (en)](http://wiki.inkscape.org/wiki/index.php/Customizing_Inkscape)
+Die Arbeit mit Ink/Stitch und Inkscape kann erheblich beschleunigt werden, wenn Tastenkombinationen zugewiesen werden. Unter: <key>Bearbeiten > Einstellungen > Benutzeroberfläche > Tastenkürzel</key> können die gewünschten Tastenkombinationen eingetragen werden. [Inkscape anpassen (en)](http://wiki.inkscape.org/wiki/index.php/Customizing_Inkscape)
 
 Die folgende Liste wurde von @lexelby vorgeschlagen:
 
-Tastenkürzel         | Effekt
--------------------- | --------
-<key>Strg</key>+<key>Umschalt</key>+<key>O</key>     | Objektübersicht (Objekt -> Objekte...)
-<key>Strg</key>+<key>Umschalt</key>+<key>P</key>     | Erweiterungen -> Parameter (ohne Einstellungen)
-<key>Strg</key>+<key>Umschalt</key>+<key>L</key>     | Erweiterungen -> Simulierung (Live Simulation)
-<key>Strg</key>+<key>Umschalt</key>+<key>E</key>     | Erweiterungen -> Sticken (ohne Einstellungen)
+Tastenkürzel | Effekt
+------------ | ------
+<key>Strg</key>+<key>Umschalt</key>+<key>O</key> | Objektübersicht (Objekt -> Objekte...)
+<key>Strg</key>+<key>Umschalt</key>+<key>P</key> | Erweiterungen -> Parameter (ohne Einstellungen)
+<key>Strg</key>+<key>Umschalt</key>+<key>L</key> | Erweiterungen -> Simulierung (Live Simulation)
+<key>Strg</key>+<key>Umschalt</key>+<key>E</key> | Erweiterungen -> Sticken (ohne Einstellungen)
 <key>Strg</key>+<key>Umschalt</key>+<key>Bild↑</key> | Auswahl -> Objekt anheben (ab Inkscape Version 0.92.2)
 <key>Strg</key>+<key>Umschalt</key>+<key>Bild↓</key> | Auswahl -> Objekt absenken (ab Inkscape Version 0.92.2) Objekt anheben und Objekt absenken ist seit Inkscape 0.92.2 in einer verbesserten Art möglich. Damit kann ein Objekt in der Reihenfolge nach oben oder unten verschoben werden. Dadurch hat man eine bessere Kontrolle als mit den alten Befehlen, die Objekte nur neu anordnen konnten, wenn sie sich überlappten. Objekt anheben und Objekt absenken ermöglicht eine präzisere Kontrolle über die Objektreihenfolge. Sehr nützlich in Kombination mit dem Objektfenster.
 <key>Strg</key>+<key>R</key> | Auswahl -> Richtung umkehren. Umkehr der Pfadrichtung. Bei Plattstich (Satinstich) und Laufstich kann die Stichrichtung geändert werden. Ich verwende dies mit der Einstellung "Inkscape" in den Einstellungen des Knoten-Tools "Pfadrichtung auf Konturen anzeigen". Wenn Sie mit dem Knoteneditor nur einen Stützpunkt auswählen und Strg+R drücken, kehrt Inkscape nur einen Pfad in einem Objekt um. Dadurch kann ich sicherstellen, dass beide Schienen in einem Satin in die gleiche Richtung zeigen.
