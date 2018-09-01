@@ -39,7 +39,7 @@ Tastenkürzel | Effekt
 
 Um Vektoren richtig auszurichten, sollte die Rasterfunktion von Inkscape verwendet werden. Gehe zu `Ansicht` und aktiviere das `Seiten Gitter`. Stelle in `Einrasten-Kontrollleiste` sicher, dass `Am Gitter einrasten` aktiviert ist. Es ist auch möglich, den Abstand und den Ursprung der Gitter unter `Datei > Dokumenteinstellungen > Gitter` anzupassen.
 
-![Grids](https://user-images.githubusercontent.com/11083514/40359052-414d3554-5db9-11e8-8b49-3be75c5e9732.png)
+![Gitter](../_images/grids_de.png)
 
 ## Konfiguration des Urprungs mit Gittern
 
