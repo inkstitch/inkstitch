@@ -1,0 +1,137 @@
+# main links
+main:
+  - title: "Features"
+    url: /features/
+  - title: "Dokumentation"
+    url: /de/docs/install/
+  - title: "Tutorials"
+    url: /de/tutorials/
+  - title: "Hilfe"
+    url: /de/docs/get-help/
+  - title: "Mitmachen"
+    url: /de/developers/introduction/
+    
+# index + specific pages which have the sidebar option in the header
+pages:
+  - title: "Features"
+    url: /de/features/
+  - title: "Dokumentation"
+    url: /de/docs/install/
+    children:
+      - title: "Installation"
+        url: /de/docs/install/
+      - title: "Arbeitsablauf"
+        url: /de/docs/workflow/
+      - title: "Hilfe"
+        url: /de/docs/get-help/
+  - title: "Tutorials"
+    url: /de/tutorials/
+    children:
+      - title: "Bildergallerie"
+        url: /de/tutorials/inspiration/
+      - title: "Beispieldateien"
+        url: /de/tutorials/resources/samples/
+      - title: "Templates"
+        url: /de/tutorials/resources/templates/
+      - title: "Tutorials"
+        url: /de/tutorials/
+  - title: "Bring dich ein"
+    url: /de/developers/introduction/
+  - title: "Neuigkeiten"
+    url: /de/news/
+
+# documentation links
+docs:
+  - title: Erste Schritte
+    children:
+      - title: "Installation / Aktualisierung"
+        url: /de/docs/install/
+      - title: "Personalisierung"
+        url: /de/docs/customize/
+      - title: Grundfunktionen
+        url: /de/docs/basic-usage/
+      - title: Arbeitsablauf
+        url: /de/docs/workflow/
+  - title: Benutzeroberfläche
+    children:
+    - title: Parameter
+      url: /de/docs/params/
+    - title: Simulation
+      url: /de/docs/simulate/
+    - title: "Satinkolumne umkehren"
+      url: /de/docs/flip-satin-columns/
+    - title: Add-Ons installieren
+      url: /de/docs/addons/
+    - title: Drucken
+      url: /de/docs/print/
+    - title: Importieren / Exportieren
+      url: /de/docs/import-export/
+  - title: Stich-Bibliothek
+    children:
+      - title: Linien
+        url: /de/docs/stitches/stroke/
+      - title: Satin
+        url: /de/docs/stitches/satin/
+      - title: Füllstitche
+        url: /de/docs/stitches/fill/
+  - title: Tips
+    children:
+      - title: "Fonts"
+        url: /de/docs/fonts/
+      - title: "Hidden Features"
+        url: /de/docs/features/
+      - title: Inkscape Tips
+        url: /de/docs/inkscape-tips/
+  - title: Fehlerbehebung
+    children:
+      - title: "Hilfe"
+        url: /de/docs/get-help/
+      - title: "F.A.Q."
+        url: /de/docs/faq/
+      - title: Fehlermeldungen
+        url: /de/docs/error-messages/
+      - title: "Übersetzungen"
+        url: /de/docs/localization/
+    
+# tutorial links
+tutorials:
+  - title: Inspiration
+    children:
+      - title: "Artwork Gallery"
+        url: /tutorials/inspiration/
+  - title: Resources
+    children:
+    - title: "Branding Guide"
+      url: /de/tutorials/resources/branding-guide/
+    - title: "Sample Files"
+      url: /de/tutorials/resources/samples/
+    - title: "Templates"
+      url: /de/tutorials/resources/templates/
+  - title: Tutorials
+    url: /de/tutorials/
+    children:
+    - title: "Tutorials A - Z"
+      url: /de/tutorials/
+    - title: "Video Tutorials"
+      url: /de/tutorials/video/
+  
+# developers links
+developers:
+  - title: Get involved
+    url: /de/developers/introduction/
+  - title: Ink/Stitch
+    url: /de/developers/inkstitch/
+    children:
+    - title: Manualle Installation
+      url: /de/developers/inkstitch/manual-setup/
+    - title: Python Module
+      url: /de/developers/inkstitch/python-modules/
+    - title: Namespace
+      url: /de/developers/inkstitch/namespace/
+  - title: Dokumentation
+    url: /de/developers/documentation/
+  - title: Localization
+    url: /de/developers/localize/
+  - title: "Bug Reports"
+    url: /de/developers/report-bugs/
+      

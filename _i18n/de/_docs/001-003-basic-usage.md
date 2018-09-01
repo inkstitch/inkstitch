@@ -1,6 +1,6 @@
 ---
 title: "Grundfunktionen"
-permalink: /docs/basic-usage/
+permalink: /de/docs/basic-usage/
 excerpt: ""
 last_modified_at: 2018-08-26
 toc: true

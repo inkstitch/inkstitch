@@ -1,6 +1,6 @@
 ---
 title: "Satinkolumne umkehren"
-permalink: /docs/flip-satin-columns/
+permalink: /de/docs/flip-satin-columns/
 excerpt: ""
 last_modified_at: 2018-08-26
 toc: false

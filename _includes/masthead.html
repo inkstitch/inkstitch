@@ -4,7 +4,9 @@
       <nav id="site-nav" class="greedy-nav">
         <a class="site-title" href="{{ '/' | relative_url }}"><img src="/assets/images/inkstitch-logo.svg" title="Ink/Stitch" alt="Ink/Stitch"></a>
         <ul class="visible-links">
-          {% for link in site.data.navigation.main %}
+          {% capture  nav_file %}navigation_{{ page.lang }}{% endcapture %}
+          {% assign navigation = site.data[nav_file] %}
+          {% for link in navigation.main %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}
             {% else %}
@@ -23,7 +25,7 @@
         </button>
         {% endif %}
         <button class="greedy-nav__toggle hidden" type="button">
-          <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle Menu" }}</span>
+          <span class="visually-hidden">{{ site.data.ui-text[page.lang].menu_label | default: "Toggle Menu" }}</span>
           <div class="navicon"></div>
         </button>
         <ul class="hidden-links hidden"></ul>

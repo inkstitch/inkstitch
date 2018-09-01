@@ -1,6 +1,6 @@
 ---
 title: "Installation von Ink/Stitch"
-permalink: /docs/install/
+permalink: /de/docs/install/
 excerpt: "Wie wird Ink/Stitch installiert."
 last_modified_at: 2018-08-26
 toc: true
@@ -15,7 +15,7 @@ Das ist alles! Alle Python-Bibliotheken und externen Abhängigkeiten sind schon 
 **Info:** Inkscape in der Version 0.92 oder höher hat eine wirklich wichtige Funktion: *Objekte*.<br>
 Dies zeigt eine hierarchische Liste von Objekten in der SVG-Datei an, die in ihrer Stapelfolge aufgeführt sind. Dies ist sehr wichtig, da die Auflistung die Reihenfolge bestimmt, in der die Formen gestickt werden.<br><br>
 Inkscape Versionen 0.92.2 und höher lassen [Kurzbefehle](/docs/customize/#shortcut-keys) zu, "nach oben" und "nach unten", denen Pfeil-Oben und Pfeil-Unten zugwiesen werden können. Dadurch ist es moglich, Objekte in der SVG-Datei beliebig neu zu ordnen, wodurch man direkt die Reihenfolge ändern kann. Es funktioniert viel einfacher als die Standardbefehle "nach oben" und "nach unten".
-{: .notice - info}
+{: .notice--info}
 
 ## Schnelleinrichtung
 

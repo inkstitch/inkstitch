@@ -1,6 +1,6 @@
 ---
 title: "Anpassung von Ink/Stitch"
-permalink: /docs/customize/
+permalink: /de/docs/customize/
 excerpt: ""
 last_modified_at: 2018-08-26
 toc: true

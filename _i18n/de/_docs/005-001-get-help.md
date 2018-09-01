@@ -1,6 +1,6 @@
 ---
 title: "Get help"
-permalink: /docs/get-help/
+permalink: /de/docs/get-help/
 excerpt: ""
 last_modified_at: 2018-07-21
 toc: false

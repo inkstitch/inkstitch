@@ -1,6 +1,6 @@
 ---
 title: "Simulation"
-permalink: /docs/simulate/
+permalink: /de/docs/simulate/
 excerpt: ""
 last_modified_at: 2018-08-26
 toc: false

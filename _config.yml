@@ -267,7 +267,9 @@ collections:
   developers:
     output: true
     permalink: /:colleciton/:path/
-
+  i18n:
+    output: true
+    permalink: /:collection/:path/
 
 # Defaults
 defaults:
@@ -276,6 +278,7 @@ defaults:
       path: ""
       type: posts
     values:
+      lang: en
       layout: single
       author_profile: false
       read_time: true
@@ -289,6 +292,7 @@ defaults:
       path: ""
       type: pages
     values:
+      lang: en
       layout: single
       author_profile: false
       sidebar: 
@@ -298,7 +302,22 @@ defaults:
       path: ""
       type: docs
     values:
+      lang: en
       layout: single
+      lang: en
+      read_time: false
+      author_profile: false
+      share: false
+      comments: false
+      sidebar:
+        nav: "docs"
+  # de/_docs
+  - scope:
+      path: ""
+      type: i18n
+    values:
+      layout: single
+      lang: de
       read_time: false
       author_profile: false
       share: false
@@ -310,6 +329,7 @@ defaults:
       path: ""
       type: tutorials
     values:
+      lang: en
       layout: single
       read_time: true
       author_profile: false
@@ -322,6 +342,7 @@ defaults:
       path: ""
       type: tutorial
     values:
+      lang: en
       layout: single
       read_time: true
       author_profile: false
@@ -334,6 +355,7 @@ defaults:
       path: ""
       type: developers
     values:
+      lang: en
       layout: single
       read_time: false
       author_profile: false

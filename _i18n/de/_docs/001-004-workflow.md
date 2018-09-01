@@ -1,6 +1,6 @@
 ---
 title: "Arbeitsablauf"
-permalink: /docs/workflow/
+permalink: /de/docs/workflow/
 excerpt: ""
 last_modified_at: 2018-08-26
 toc: true

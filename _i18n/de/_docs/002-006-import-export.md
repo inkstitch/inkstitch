@@ -1,6 +1,6 @@
 ---
 title: "Import und Export von Dateien"
-permalink: /docs/import-export/
+permalink: /de/docs/import-export/
 excerpt: ""
 last_modified_at: 2018-06-23
 toc: true

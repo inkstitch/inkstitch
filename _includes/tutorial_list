@@ -61,7 +61,7 @@
     </div><!-- /tutorial description-wrapper -->
     {% if f.url %}
       {% if f.url contains "://" %}{% capture f_url %}{{ f.url }}{% endcapture %}{% else %}{% capture f_url %}{{ f.url | relative_url }}{% endcapture %}{% endif %}
-      <p><a href="{{ f_url }}" class="btn btn--primary">{{ f.btn_label | default: "Read More" }}</a></p>
+      <p><a href="{{ f_url }}" class="btn btn--primary">{{ f.btn_label | default: site.data.ui-text[site.locale].more_label }}</a></p>
     {% endif %}
   </div><!-- /tutorial item -->
   {% endfor %}
