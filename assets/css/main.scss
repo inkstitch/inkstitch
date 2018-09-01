@@ -40,6 +40,10 @@ tt, code, kbd, samp, pre {
   font-size: 0.6rem;
 }
 
+nobr {
+  white-space: nowrap;
+}
+
 key {
   border: 1px solid #b6b6b6;
   padding: 0 0.3em;
