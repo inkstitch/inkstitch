@@ -4,8 +4,9 @@ from wx.lib.intctrl import IntCtrl
 import time
 from itertools import izip
 
-from .svg import color_block_to_point_lists, PIXELS_PER_MM
+from .svg import PIXELS_PER_MM
 from .i18n import _
+from .stitch_plan import stitch_plan_from_file
 
 # L10N command label at bottom of simulator window
 COMMAND_NAMES = [_("STITCH"), _("JUMP"), _("TRIM"), _("STOP"), _("COLOR CHANGE")]
@@ -330,7 +331,8 @@ class DrawingPanel(wx.Panel):
             canvas.SetPen(pen)
             if stitch + len(stitches) < self.current_stitch:
                 stitch += len(stitches)
-                canvas.DrawLines(stitches)
+                if len(stitches) > 1:
+                    canvas.DrawLines(stitches)
                 last_stitch = stitches[-1]
             else:
                 stitches = stitches[:self.current_stitch - stitch]
@@ -615,3 +617,25 @@ class EmbroiderySimulator(wx.Frame):
 
     def clear(self):
         self.simulator_panel.clear()
+
+def show_simulator(stitch_plan):
+    app = wx.App()
+    current_screen = wx.Display.GetFromPoint(wx.GetMousePosition())
+    display = wx.Display(current_screen)
+    screen_rect = display.GetClientArea()
+
+    simulator_pos = (screen_rect[0], screen_rect[1])
+
+    # subtract 1 because otherwise the window becomes maximized on Linux
+    width = screen_rect[2] - 1
+    height = screen_rect[3] - 1
+
+    frame = EmbroiderySimulator(None, -1, _("Embroidery Simulation"), pos=simulator_pos, size=(width, height), stitch_plan=stitch_plan)
+    app.SetTopWindow(frame)
+    frame.Show()
+    app.MainLoop()
+
+
+if __name__ == "__main__":
+    stitch_plan = stitch_plan_from_file(sys.argv[1])
+    show_simulator(stitch_plan)

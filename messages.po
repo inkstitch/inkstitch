@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-27 21:56-0400\n"
+"POT-Creation-Date: 2018-09-01 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -659,10 +659,6 @@ msgstr ""
 msgid "Ink/Stitch Print"
 msgstr ""
 
-#: lib/extensions/simulate.py:33
-msgid "Embroidery Simulation"
-msgstr ""
-
 #: lib/extensions/zip.py:49
 msgid "No embroidery file formats selected."
 msgstr ""
@@ -675,45 +671,49 @@ msgid "Generate INX files"
 msgstr ""
 
 #. command label at bottom of simulator window
-#: lib/simulator.py:11
+#: lib/simulator.py:12
 msgid "STITCH"
 msgstr ""
 
-#: lib/simulator.py:11
+#: lib/simulator.py:12
 msgid "JUMP"
 msgstr ""
 
-#: lib/simulator.py:11
+#: lib/simulator.py:12
 msgid "TRIM"
 msgstr ""
 
-#: lib/simulator.py:11
+#: lib/simulator.py:12
 msgid "STOP"
 msgstr ""
 
-#: lib/simulator.py:11
+#: lib/simulator.py:12
 msgid "COLOR CHANGE"
 msgstr ""
 
-#: lib/simulator.py:48 lib/simulator.py:207 lib/simulator.py:214
+#: lib/simulator.py:49 lib/simulator.py:208 lib/simulator.py:215
 msgid "Pause"
 msgstr ""
 
-#: lib/simulator.py:50
+#: lib/simulator.py:51
 msgid "Restart"
 msgstr ""
 
-#: lib/simulator.py:52
+#: lib/simulator.py:53
 msgid "Quit"
 msgstr ""
 
-#: lib/simulator.py:167
+#: lib/simulator.py:168
 #, python-format
 msgid "Speed: %d stitches/sec"
 msgstr ""
 
-#: lib/simulator.py:210
+#: lib/simulator.py:211
 msgid "Start"
+msgstr ""
+
+#: lib/simulator.py:633
+msgid "Embroidery Simulation"
 msgstr ""
 
 #: lib/stitches/auto_fill.py:167
