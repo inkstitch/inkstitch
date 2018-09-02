@@ -120,7 +120,10 @@ class Fill(EmbroideryElement):
         poly_ary.sort(key=lambda point_list: shgeo.Polygon(point_list).area, reverse=True)
 
         polygon = shgeo.MultiPolygon([(poly_ary[0], poly_ary[1:])])
-        # print >> sys.stderr, "polygon valid:", polygon.is_valid
+
+        if not polygon.is_valid:
+            self.fatal(_("shape is not valid.  This can happen if the border crosses over itself."))
+
         return polygon
 
     def to_patches(self, last_patch):
