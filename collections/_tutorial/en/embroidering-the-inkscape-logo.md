@@ -1,6 +1,7 @@
 ---
 title: Embroidering The Inkscape Logo
 permalink: /tutorials/lex-neva-video-tutorial-1/
+language: en
 last_modified_at: 2018-05-11
 excerpt: This is a screencast showing how the inkscape-embroidery extension is used to create an embroidery design.
 image: https://media.inkscape.org/media/resources/file/Inkscape_Logo_Standard_square.svg

@@ -1,8 +1,8 @@
 ---
-title: Monogram Frame
-permalink: /tutorials/monogram/
+title: Monogram
+permalink: /de/tutorials/monogram/
 last_modified_at: 2018-08-06
-language: en
+language: de
 excerpt: "Monogram Frame Example"
 image: "/assets/images/tutorials/samples/Monogram Frame Example.svg"
 

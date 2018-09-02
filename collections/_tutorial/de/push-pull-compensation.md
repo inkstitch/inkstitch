@@ -1,8 +1,8 @@
 ---
-title: Push/Pull Compensation
-permalink: /tutorials/push-pull-compensation/
+title: Zugausgleich
+permalink: /de/tutorials/push-pull-compensation/
 last_modified_at: 2018-05-30
-language: en
+language: de
 excerpt: Push/Pull Compensation
 image: /assets/images/tutorials/embroidery/push-pull-effect.svg
 

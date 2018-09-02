@@ -1,8 +1,8 @@
 ---
-permalink: /tutorials/fringe/
-title: Fringe
-language: en
+title: Fransen
+permalink: /de/tutorials/fringe/
 last_modified_at: 2018-05-11
+language: de
 excerpt: "Fringe example file"
 image: "/assets/images/tutorials/samples/Fringe Example.svg"
 

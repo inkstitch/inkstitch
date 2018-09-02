@@ -1,9 +1,9 @@
 ---
-title: Applique
-permalink: /tutorials/applique/
+permalink: /de/tutorials/applique/
+title: Applikation
 last_modified_at: 2018-05-11
-language: en
 excerpt: "Applique example file"
+language: de
 image: "/assets/images/tutorials/samples/Applique Color Change.svg"
 
 tutorial-type:
@@ -17,6 +17,7 @@ techniques:
 field-of-use:
 user-level: Beginner
 ---
+{{ page.lang }}
 ## Steps
 
 1. Digitize placement and tackdown stitches as different colors, in order to force a stop on your machine.
