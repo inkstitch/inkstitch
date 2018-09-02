@@ -1,7 +1,27 @@
-  <li id="language_switcher"><a href=""><span class="nav__sub-title">{{ site.data.ui-text[page.lang].choose_language | default: "Choose your language" }}</span></a>
+{% assign lang_array = '' | split: ',' %}
+{% for lang in site.languages %}
+  {%if page.lang != lang[0] %}
+    {% capture page_lang %}/{{ page.lang }}{% endcapture %}
+    {% capture page_url %}{{ page.url | replace_first: page_lang, '' }} {% endcapture %}
+    {% if lang[0] == blank %}
+      {%- assign new_url = page_url -%}
+    {% else %}
+      {% capture new_url %}/{{ lang[0] }}{{page_url}}{% endcapture %}
+    {% endif %}
+    {% assign new_url = new_url | strip %}
+    {% if new_url == page.url %}
+    {% else %}
+      {% capture lang_sub_array %}{{new_url}}|{{lang[1]}}{% endcapture %}
+      {% assign lang_sub_array = lang_sub_array | split: '|' %}
+      {% assign lang_array = lang_array | push: lang_sub_array %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+  <li id="language_switcher"><span class="nav__sub-title">{{ site.data.ui-text[page.lang].choose_language | default: "Choose your language" }}</span>
     <ul>
-    {% for lang in site.languages %}
-      <li><a href="{{ baseurl | absolute_url }}/{{ lang[0] }}">{{ lang[1] }}</a></li>
+    {% for l in lang_array %}
+      <li><a href="{{ l[0] }}">{{ l[1] }}</a></li>
     {% endfor %}
     </ul>
   </li>

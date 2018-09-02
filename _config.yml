@@ -289,12 +289,15 @@ defaults:
   - scope:
       path: ""
     values:
+      lang: en
       layout: single
       author_profile: false
       read_time: false
       comments: false
       share: false
       related: false
+      sidebar:
+        nav: "pages"
   # _posts
   - scope:
       type: posts

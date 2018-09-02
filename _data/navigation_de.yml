@@ -97,13 +97,13 @@ docs:
 tutorials:
   - title: Inspiration
     children:
-      - title: "Artwork Gallery"
-        url: /tutorials/inspiration/
-  - title: Resources
+      - title: "Bildergallerie"
+        url: /de/tutorials/inspiration/
+  - title: Ressourcen
     children:
-    - title: "Branding Guide"
+    - title: Ink/Stitch Logo
       url: /de/tutorials/resources/branding-guide/
-    - title: "Sample Files"
+    - title: "Beispieldateien"
       url: /de/tutorials/resources/samples/
     - title: "Templates"
       url: /de/tutorials/resources/templates/
@@ -117,7 +117,7 @@ tutorials:
   
 # developers links
 developers:
-  - title: Get involved
+  - title: Mitmachen
     url: /de/developers/introduction/
   - title: Ink/Stitch
     url: /de/developers/inkstitch/
@@ -130,8 +130,8 @@ developers:
       url: /de/developers/inkstitch/namespace/
   - title: Dokumentation
     url: /de/developers/documentation/
-  - title: Localization
+  - title: Lokalisation
     url: /de/developers/localize/
-  - title: "Bug Reports"
+  - title: Fehler melden
     url: /de/developers/report-bugs/
       
