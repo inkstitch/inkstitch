@@ -6,10 +6,13 @@ toc: false
 ---
 A manual setup will allow you to edit the code while running the extension.
 
-1. Clone the extension source
+1. Clone the extension source and update submodule pyembroidery
 
    ```
    git clone https://github.com/inkstitch/inkstitch
+   cd inkstitch
+   git submodule init
+   git submodule update
    ```
 2. Python Dependencies
 
