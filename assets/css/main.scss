@@ -49,7 +49,8 @@ key {
   padding: 0 0.3em;
   margin: 0.1em 0.3em;
   border-radius: 5px;
-  background: radial-gradient(#f2f3f3, #eaeaea);
+  background: #f2f3f3;
+  background: radial-gradient(#f2f3f3 60%, #cecece);
   display: inline-block;
   min-width: 2em;
   text-align: center;
@@ -147,6 +148,10 @@ table tr td:first-child {
     width: 100%;
     display: inline-block;
     padding-left: 1em; */
+  }
+  
+  #language_switcher {
+    margin-top: 2.5em;
   }
   
 /* Masthead */

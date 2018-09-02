@@ -3,6 +3,7 @@ title: "Ink/Stitch"
 permalink: /
 sidebar:
   nav: "pages"
+lang: en
 ---
 <p>An open source machine embroidery design platform based on Inkscape.</p>
 
@@ -13,5 +14,6 @@ sidebar:
 <p><a href="https://github.com/inkstitch/inkstitch/releases/latest" class="btn btn--primary btn--large">Download Ink/Stitch</a></p>
 
 <h2>News</h2>
-<ul>{% for post in site.posts offset: 0 limit: 10 %}<li>{{ post.date  | date: "%B %-d, %Y" }}: <a href="{{ post.url }}">{{ post.title }}</a></li>{% endfor %}</ul>
-<p><a href="{{ site.url }}/news/" class="btn btn--primary">Read more</a></p>
+{% assign posts = site.posts | where: "lang", "en"  %}
+<ul>{% for post in posts offset: 0 limit: 10 %}<li>{{ post.date  | date: "%B %-d, %Y" }}: <a href="{{ post.url }}">{{ post.title }}</a></li>{% endfor %}</ul>
+<p><a href="{{ site.url }}/news/" class="btn btn--primary">{{ site.data.ui-text[page.lang].more_label | default: "Read more" }}</a></p>

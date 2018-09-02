@@ -43,6 +43,7 @@ en: &DEFAULT_EN
   search_placeholder_text    : "Enter your search term..."
   results_found              : "Result(s) found"
   back_to_top                : "Back to top"
+  choose_language            : "Choose your language"
 en-US:
   <<: *DEFAULT_EN
 en-CA:
@@ -92,6 +93,7 @@ es: &DEFAULT_ES
   comment_success_msg        : "Gracias por su comentario!, Este se visualizará en el sitio una vez haya sido aprobado"
   comment_error_msg          : "Lo sentimos, ha ocurrido un error al enviar su comentario. Por favor asegurese que todos los campos han sido diligenciados e intente de nuevo"
   loading_label              : "Cargando..."
+  choose_language            : "Choose your language"
 es-ES:
   <<: *DEFAULT_ES
 es-CO:
@@ -138,6 +140,7 @@ fr: &DEFAULT_FR
   comment_success_msg        : "Merci pour votre commentaire, il sera visible sur le site une fois approuvé."
   comment_error_msg          : "Désolé, une erreur est survenue lors de la soumission. Vérifiez que les champs obligatoires ont été remplis et réessayez."
   loading_label              : "Chargement..."
+  choose_language            : "Choose your language"
 fr-FR:
   <<: *DEFAULT_FR
 fr-BE:
@@ -185,6 +188,7 @@ tr: &DEFAULT_TR
   comment_success_msg        : "Yorumunuz için teşekkürler! Yorumunuz onaylandıktan sonra sitede gösterilecektir."
   comment_error_msg          : "Maalesef bir hata oluştu. Lütfen zorunlu olan tüm alanları doldurduğunuzdan emin olun ve sonrasında tekrar deneyin."
   loading_label              : "Yükleniyor..."
+  choose_language            : "Choose your language"
 tr-TR:
   <<: *DEFAULT_TR
 
@@ -228,6 +232,7 @@ pt: &DEFAULT_PT
   comment_success_msg        : "Obrigado pelo seu comentário! Será visível no site logo que aprovado."
   comment_error_msg          : "Lamento, ocorreu um erro na sua submissão. Por favor verifique se todos os campos obrigatórios estão corretamente preenchidos e tente novamente."
   loading_label              : "A carregar..."
+  choose_language            : "Choose your language"
 pt-PT:
   <<: *DEFAULT_PT
 # Brazilian Portuguese
@@ -269,6 +274,7 @@ pt-BR:
   comment_success_msg        : "Obrigado pelo seu comentário! Ele aparecerá no site assim que for aprovado."
   comment_error_msg          : "Desculpe, ocorreu um erro no envio. Por favor verifique se todos os campos obrigatórios foram preenchidos e tente novamente."
   loading_label              : "Carregando..."
+  choose_language            : "Choose your language"
 
 # Italian
 # -------
@@ -310,6 +316,7 @@ it: &DEFAULT_IT
   comment_success_msg        : "Grazie per il tuo commento! Verrà visualizzato nel sito una volta che sarà approvato."
   comment_error_msg          : "C'è stato un errore con il tuo invio. Assicurati che tutti i campi richiesti siano stati completati e riprova."
   loading_label              : "Caricamento..."
+  choose_language            : "Choose your language"
 it-IT:
   <<: *DEFAULT_IT
 
@@ -353,6 +360,7 @@ zh: &DEFAULT_ZH_HANS
   comment_success_msg        : "感谢您的评论！被批准后它会立即在此站点展示。"
   comment_error_msg          : "很抱歉，您的提交存在错误。请确保所有必填字段都已填写正确，然后再试一次。"
   loading_label              : "正在加载..."
+  choose_language            : "Choose your language"
 zh-CN:
   <<: *DEFAULT_ZH_HANS
 zh-SG:
@@ -396,6 +404,7 @@ zh-TW: &DEFAULT_ZH_HANT
   comment_success_msg        : "感謝您的留言！ 審核後將會顯示在站上。"
   comment_error_msg          : "抱歉，部份資料輸入有問題。請確認資料填寫正確後再試一次。"
   loading_label              : "載入中..."
+  choose_language            : "Choose your language"
 zh-HK:
   <<: *DEFAULT_ZH_HANT
 
@@ -441,6 +450,7 @@ de: &DEFAULT_DE
   loading_label              : "Lade..."
   search_placeholder_text    : "Suchbegriff eingeben..."
   results_found              : "Ergebnis(se) gefunden"
+  choose_language            : "Wähle deine Sprache"
 de-DE:
   <<: *DEFAULT_DE
 de-AT:
@@ -494,6 +504,7 @@ ne: &DEFAULT_NE
   comment_success_msg        : "तपाईंको टिप्पणीको लागि धन्यवाद! एक पटक यो अनुमोदन गरेपछी यो साइटमा देखाउनेछ।"
   comment_error_msg          : "माफ गर्नुहोस्, तपाईंको टिप्पणी त्रुटि थियो।सबै आवश्यक जानकारीहरु पूरा गरिएको छ भने निश्चित गर्नुहोस् र फेरि प्रयास गर्नुहोस्।"
   loading_label              : "लोड हुँदैछ ..."
+  choose_language            : "Choose your language"
 ne-NP:
   <<: *DEFAULT_NE
 
@@ -537,6 +548,7 @@ ko: &DEFAULT_KO
   comment_success_msg        : "감사합니다! 댓글이 머지된 후 확인하실 수 있습니다."
   comment_error_msg          : "댓글 등록에 문제가 있습니다. 필요 필드를 작성했는지 확인하고 다시 시도하세요."
   loading_label              : "로딩중..."
+  choose_language            : "Choose your language"
 ko-KR:
   <<: *DEFAULT_KO
 
@@ -582,6 +594,7 @@ ru: &DEFAULT_RU
   loading_label              : "Отправка..."
   search_placeholder_text    : "Введите поисковый запрос..."
   results_found              : "Найдено"
+  choose_language            : "Choose your language"
 ru-RU:
   <<: *DEFAULT_RU
 
@@ -625,6 +638,7 @@ lt: &DEFAULT_LT
   comment_success_msg        : "Ačiū už komentarą! Jis bus parodytas kai bus patvirtintas."
   comment_error_msg          : "Atleiskite, įvyko netikėta klaida įrašant komentarą. Pasitikrinkite ar užpildėte visus būtinus laukus ir pamėginkite dar kartą."
   loading_label              : "Kraunama..."
+  choose_language            : "Choose your language"
 lt-LT:
   <<: *DEFAULT_LT
 
@@ -670,6 +684,7 @@ gr: &DEFAULT_GR
   loading_label              : "Φόρτωση..."
   search_placeholder_text    : "Εισάγετε όρο αναζήτησης..."
   results_found              : "Αποτελέσματα"
+  choose_language            : "Choose your language"
 gr-GR:
   <<: *DEFAULT_GR
 
@@ -713,6 +728,7 @@ sv: &DEFAULT_SV
   comment_success_msg        : "Tack för din kommentar! Den kommer att visas på sidan så fort den har godkännts."
   comment_error_msg          : "Tyvärr det har blivit något fel i en av fälten, se till att du fyller i alla rutor och försök igen."
   loading_label              : "Laddar..."
+  choose_language            : "Choose your language"
 sv-SE:
   <<: *DEFAULT_SV
 sv-FI:
@@ -758,6 +774,7 @@ nl: &DEFAULT_NL
   comment_success_msg        : "Bedankt voor uw reactie! Het zal op de site worden weergegeven zodra het is goedgekeurd."
   comment_error_msg          : "Sorry, er is een fout opgetreden bij uw inzending. Zorg ervoor dat alle vereiste velden zijn voltooid en probeer het opnieuw."
   loading_label              : "Laden..."
+  choose_language            : "Choose your language"
 nl-BE:
   <<: *DEFAULT_NL
 nl-NL:
@@ -803,6 +820,7 @@ id: &DEFAULT_ID
   comment_success_msg        : "Terimakasih atas komentar Anda! Komentar ini akan tampil setelah disetujui."
   comment_error_msg          : "Maaf, ada kesalahan pada submisi Anda. Pastikan seluruh kolom sudah dilengkapi dan coba kembali."
   loading_label              : "Sedang meload..."
+  choose_language            : "Choose your language"
 id-ID:
   <<: *DEFAULT_ID
 
@@ -846,6 +864,7 @@ vi: &DEFAULT_VI
   comment_success_msg        : "Cảm ơn bạn đã bình luận! Bình luận sẽ xuất hiện sau khi được duyệt."
   comment_error_msg          : "Rất tiếc, có lỗi trong việc gửi bình luận. Hãy đảm bảo toàn bộ các phần bắt buộc đã được điền đầy đủ và thử lại."
   loading_label              : "Đang tải..."
+  choose_language            : "Choose your language"
 vi-VN:
   <<: *DEFAULT_VI
 
@@ -892,6 +911,7 @@ da: &DEFAULT_DA
   search_placeholder_text    : "Hvad leder du efter..."
   results_found              : "Resultat(er) fundet"
   back_to_top                : "Tilbage til toppen"
+  choose_language            : "Choose your language"
 da-DK:
   <<: *DEFAULT_DA
 
@@ -935,6 +955,7 @@ pl: &DEFAULT_PL
   comment_success_msg        : "Dziękuję za Twój komentarz! Zostanie dodany po akceptacji."
   comment_error_msg          : "Niestety wystąpił błąd. Proszę upewnij się, że wszystkie wymagane pola zostały wypełnione i spróbuj ponownie."
   loading_label              : "Trwa ładowanie strony..."
+  choose_language            : "Choose your language"
 pl-PL:
   <<: *DEFAULT_PL
 
@@ -980,6 +1001,7 @@ ja: &DEFAULT_JA
   loading_label              : "読み込み中..."
   search_placeholder_text    : "検索キーワードを入力してください..."
   results_found              : "件"
+  choose_language            : "Choose your language"
 ja-JP:
   <<: *DEFAULT_JA
 

@@ -103,11 +103,11 @@ user-level: Beginner
 ---
 ```
 
-These categories then can be used to list tutorials with a specific keyword, e.g. `{% include tutorial_list key="stitch-type" value="Fill Stitch" %}` would display a list of all tutorial files which have fill stitch specified in their header.
+These categories then can be used to list tutorials with a specific keyword, e.g. `{% include tutorials/tutorial_list key="stitch-type" value="Fill Stitch" %}` would display a list of all tutorial files which have fill stitch specified in their header.
 
 They can also be used to display a full list of categories. In this case categories need to be specified by every call of tutorial lists. Example:
 ```
 {% assign tutorial_cats = 'Tutorial Type*Stitch Type*Techniques*Field Of Use*User Level' | split: '*' %}
-{% include display_tutorials tutorial_cats=tutorial_cats %}
+{% include tutorials/display_tutorials tutorial_cats=tutorial_cats %}
 ```
 

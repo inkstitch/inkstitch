@@ -1,0 +1,24 @@
+{% assign tutorial_keys = include.tutorial_cats %}
+
+<div id="tutorial-list">
+<article class="tutorial-orderby">
+  <label>Order tutorials by</label>
+  
+  {% comment %}Display all Tutorials ordered by name{% endcomment %}
+  <input id="orderby--name" type="radio" name="tutorial-orderby" checked="checked">
+  <label for="orderby--name" >A - Z</label>
+  <section id="orderby-name" style="order: 999">
+    {% include tutorials/tutorial_list %}
+  </section>
+  
+{% comment %}Display Tutorial-Categories{% endcomment %}
+{% for term in tutorial_keys %}
+  {% assign term_slugified = term | slugify %}
+  <input id="orderby--{{ term_slugified }}" type="radio" name="tutorial-orderby">
+  <label for="orderby--{{ term_slugified }}" >{{ term }}</label>
+  <section id="orderby-{{ term_slugified }}" style="order: 999">
+    {% include tutorials/tutorial_list key=term_slugified %}
+  </section>
+{% endfor %}
+</article>
+</div>

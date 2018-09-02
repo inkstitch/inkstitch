@@ -1,0 +1,7 @@
+  <li id="language_switcher"><a href=""><span class="nav__sub-title">{{ site.data.ui-text[page.lang].choose_language | default: "Choose your language" }}</span></a>
+    <ul>
+    {% for lang in site.languages %}
+      <li><a href="{{ baseurl | absolute_url }}/{{ lang[0] }}">{{ lang[1] }}</a></li>
+    {% endfor %}
+    </ul>
+  </li>

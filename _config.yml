@@ -94,7 +94,6 @@ analytics:
   google:
     tracking_id          :
 
-
 # Site Author
 author:
   name             : "Ink/Stitch Community"
@@ -127,7 +126,6 @@ author:
   weibo            :
   xing             :
   youtube          : # "https://youtube.com/c/MichaelRoseDesign"
-
 
 # Reading Files
 include:
@@ -252,7 +250,21 @@ compress_html:
   ignore:
     envs: development
     
-    
+# Languages
+
+languages:
+  - 
+    - 
+    - English
+  - 
+    - de
+    - Deutsch
+
+# Directories
+collections_dir: collections
+layouts_dir: _jekyll/_layouts
+includes_dir: _jekyll/_includes
+
 # Collections
 collections:
   docs:
@@ -267,101 +279,130 @@ collections:
   developers:
     output: true
     permalink: /:colleciton/:path/
-  i18n:
-    output: true
-    permalink: /:collection/:path/
-
+    
 # Defaults
 defaults:
-  # _posts
+  # default
   - scope:
       path: ""
-      type: posts
     values:
-      lang: en
       layout: single
       author_profile: false
-      read_time: true
+      read_time: false
       comments: false
+      share: false
+      related: false
+  # _posts
+  - scope:
+      type: posts
+    values:
       share: true
+      read_time: true
       related: true
       sidebar: 
         nav: "pages"
+    # en
+  - scope:
+      path: "_posts/en"
+    values:
+      lang: en
+    # de
+  - scope:
+      path: "_posts/de"
+    values:
+      lang: de
   # _pages
   - scope:
-      path: ""
       type: pages
     values:
-      lang: en
-      layout: single
-      author_profile: false
       sidebar: 
         nav: "pages"
+    # en
+  - scope:
+      path: "_pages/en"
+    values:
+      lang: en
+    # de
+  - scope:
+      path: "_pages/de"
+    values:
+      lang: de
   # _docs
   - scope:
-      path: ""
       type: docs
     values:
-      lang: en
-      layout: single
-      lang: en
-      read_time: false
-      author_profile: false
-      share: false
-      comments: false
       sidebar:
         nav: "docs"
-  # de/_docs
+    # en
   - scope:
-      path: ""
-      type: i18n
+      path: "_docs/en"
     values:
-      layout: single
+      lang: en
+    # de
+  - scope:
+      path: "_docs/de"
+    values:
       lang: de
-      read_time: false
-      author_profile: false
-      share: false
-      comments: false
-      sidebar:
-        nav: "docs"
   # _tutorials
   - scope:
-      path: ""
       type: tutorials
     values:
-      lang: en
-      layout: single
-      read_time: true
-      author_profile: false
-      share: false
-      comments: false
       sidebar:
         nav: "tutorials"
+    # en
+  - scope:
+      path: "_tutorials/en"
+    values:
+      lang: en
+    # de
+  - scope:
+      path: "_tutorials/de"
+    values:
+      lang: de
   # _tutorial
   - scope: 
-      path: ""
       type: tutorial
     values:
-      lang: en
-      layout: single
       read_time: true
-      author_profile: false
-      share: false
-      comments: false
       sidebar:
         nav: "tutorials"
-  # _developers
-  - scope:
-      path: ""
-      type: developers
+    # en
+  - scope: 
+      path: "_tutorial/en"
     values:
       lang: en
-      layout: single
-      read_time: false
-      author_profile: false
-      share: false
-      comments: false
+    # de
+  - scope: 
+      path: "_tutorial/de"
+    values:
+      lang: de
+  # _developers
+  - scope:
+      type: developers
+    values:
       sidebar:
         nav: "developers"
+    #en
+  - scope:
+      path: "_developers/en"
+    values:
+      lang: en
+    # de
+  - scope:
+      path: "_developers/de"
+    values:
+      lang: de
+      
+          
+# It'd be nice to have "lang" set through wildcard, using * for directories:
+# https://jekyllrb.com/docs/configuration/front-matter-defaults/
+# this doesn't seem to work
+# e.g.:
+#  - scope:
+#      path: "*/de"
+#    values:
+#      lang: de  
+
+  
 
 
