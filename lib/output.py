@@ -1,6 +1,8 @@
+import sys
 import pyembroidery
 import simpletransform
 
+from .i18n import _
 from .utils import Point
 from .svg import PIXELS_PER_MM, get_doc_size, get_viewbox_transform
 from .commands import global_command
