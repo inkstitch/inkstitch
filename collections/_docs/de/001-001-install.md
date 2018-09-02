@@ -14,7 +14,7 @@ Das ist alles! Alle Python-Bibliotheken und externen Abhängigkeiten sind schon 
 
 **Info:** Inkscape in der Version 0.92 oder höher hat eine wirklich wichtige Funktion: *Objekte*.<br>
 Dies zeigt eine hierarchische Liste von Objekten in der SVG-Datei an, die in ihrer Stapelfolge aufgeführt sind. Dies ist sehr wichtig, da die Auflistung die Reihenfolge bestimmt, in der die Formen gestickt werden.<br><br>
-Inkscape Versionen 0.92.2 und höher lassen [Kurzbefehle](/docs/customize/#shortcut-keys) zu, "nach oben" und "nach unten", denen Pfeil-Oben und Pfeil-Unten zugwiesen werden können. Dadurch ist es moglich, Objekte in der SVG-Datei beliebig neu zu ordnen, wodurch man direkt die Reihenfolge ändern kann. Es funktioniert viel einfacher als die Standardbefehle "nach oben" und "nach unten".
+Inkscape Versionen 0.92.2 und höher lassen [Kurzbefehle](/de/docs/customize/#tastenkürzel) zu, "nach oben" und "nach unten", denen Pfeil-Oben und Pfeil-Unten zugwiesen werden können. Dadurch ist es moglich, Objekte in der SVG-Datei beliebig neu zu ordnen, wodurch man direkt die Reihenfolge ändern kann. Es funktioniert viel einfacher als die Standardbefehle "nach oben" und "nach unten".
 {: .notice--info}
 
 ## Schnelleinrichtung
@@ -29,9 +29,9 @@ Windows | `inkstit- [VERSION] -win32.zip` | ☑ | ☑
 macOS | `inkstich- [VERSION] -osx-x86_64.tar.gz` | ☒ | ☑
 
 ### 2. Installation
- * In Inkscape gehe zu `Bearbeiten -> Einstellungen -> System` und prüfe, wo sich der Ordner "Benutzererweiterungen" befindet.
+ * In Inkscape gehe zu `Bearbeiten > Einstellungen > System` und prüfe, wo sich der Ordner "Benutzererweiterungen" befindet.
  * Entpackt wird das Ink/Stitch-Archiv direkt in diesen Ordner und danach starte Inkscape neu.
- * Ink/Stitch befindet sich nun unter `Erweiterungen -> Ink/Stitch`.
+ * Ink/Stitch befindet sich nun unter `Erweiterungen > Ink/Stitch`.
 
 #### Beispiel unter Linux und macOS:
 
@@ -61,4 +61,4 @@ $ tar zxf ~/Downloads/inkstich-v1.0.0-Linux-x86_64.tar.gz
 ## Manuelle Installation
 
 Es ist auch möglich Ink/Stitch manuell zu installieren. Es wird jedoch nicht empfohlen - es sei denn, man möchte bei der Entwicklung der Erweiterung helfen.
-In diesem Fall lies den Abschnitt [Manuelle Installation](/developers/inkstich/manual-setup/).
+In diesem Fall lies den Abschnitt [Manuelle Installation](/de/developers/manual-setup/).
