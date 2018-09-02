@@ -61,4 +61,4 @@ $ tar zxf ~/Downloads/inkstich-v1.0.0-Linux-x86_64.tar.gz
 ## Manuelle Installation
 
 Es ist auch möglich Ink/Stitch manuell zu installieren. Es wird jedoch nicht empfohlen - es sei denn, man möchte bei der Entwicklung der Erweiterung helfen.
-In diesem Fall lies den Abschnitt [Manuelle Installation](/de/developers/manual-setup/).
+In diesem Fall lies den Abschnitt [Manuelle Installation](/de/developers/inkstitch/manual-setup/).
