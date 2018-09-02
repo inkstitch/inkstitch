@@ -2,7 +2,7 @@
 title: "Puff"
 permalink: /tutorials/puff/
 last_modified_at: 2018-05-11
-language: en
+language: de
 excerpt: Puff example file
 image: /assets/images/tutorials/samples/PuffRegular.svg
 

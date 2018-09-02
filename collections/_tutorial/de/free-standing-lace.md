@@ -1,9 +1,9 @@
 ---
-permalink: /tutorials/fsl/
-title: Free Standing Lace - Butterfly
-language: en
+title: Free Standing Lace - Schmetterling
+permalink: de/tutorials/fsl/
 last_modified_at: 2018-08-06
-excerpt: Free Standing Lace - Butterfly
+language: de
+excerpt: Free Standing Lace - Schmetterling
 image: "/assets/images/tutorials/samples/Bfly FSL.svg"
 
 tutorial-type:

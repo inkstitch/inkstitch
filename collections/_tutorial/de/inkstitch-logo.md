@@ -1,8 +1,8 @@
 ---
+permalink: /de/tutorials/resources/inkstitch-logo/
 title: "Ink/Stitch Logo & Branding Guide"
-permalink: /tutorials/resources/inkstitch-logo/
 last_modified_at: 2018-06-21
-language: en
+language: de
 excerpt: "Ink/Stitch logo as SVG file, digitized version and branding guide."
 toc: true
 image: /assets/images/tutorials/logo/InkStitch_Multi_Color.svg

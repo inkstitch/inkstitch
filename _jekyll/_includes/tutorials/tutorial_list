@@ -21,9 +21,9 @@
   {% unless include.value or value=='a-z'  %} <h3><span>{{ value }}</span></h3>{% endunless %}
   
   {% unless include.key %}
-    {% assign items_grouped = site.tutorial | sort: 'title' %}
+    {% assign items_grouped = site.tutorial | where: "language", page.lang | sort: 'title' %}
   {% else %}
-    {% assign items_grouped = site.tutorial | where_exp: 'item', 'item[key] contains value' | sort: 'title' %}
+    {% assign items_grouped = site.tutorial | where: "language", page.lang | where_exp: 'item', 'item[key] contains value' | sort: 'title' %}
   {% endunless %}
   
   {% for f in items_grouped %}
@@ -61,7 +61,7 @@
     </div><!-- /tutorial description-wrapper -->
     {% if f.url %}
       {% if f.url contains "://" %}{% capture f_url %}{{ f.url }}{% endcapture %}{% else %}{% capture f_url %}{{ f.url | relative_url }}{% endcapture %}{% endif %}
-      <p><a href="{{ f_url }}" class="btn btn--primary">{{ f.btn_label | default: site.data.ui-text[site.locale].more_label }}</a></p>
+      <p><a href="{{ f_url }}" class="btn btn--primary">{{ f.btn_label | default: site.data.ui-text[page.lang].more_label }}</a></p>
     {% endif %}
   </div><!-- /tutorial item -->
   {% endfor %}
