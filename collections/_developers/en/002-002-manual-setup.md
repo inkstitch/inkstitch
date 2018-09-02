@@ -1,6 +1,6 @@
 ---
 title: "Manual Setup"
-permalink: /en/developers/inkstitch/manual-setup/
+permalink: /developers/inkstitch/manual-setup/
 last_modified_at: 2018-07-21
 toc: false
 ---
