@@ -3,6 +3,9 @@ EXTENSIONS:=inkstitch
 # This gets the branch name or the name of the tag
 VERSION:=$(subst /,-,$(TRAVIS_BRANCH))
 OS:=$(TRAVIS_OS_NAME)
+ifneq ($(TRAVIS_OSX_IMAGE),)
+OS:= $(OS)-$(TRAVIS_OSX_IMAGE)
+endif
 ARCH:=$(shell uname -m)
 
 dist: distclean locales inx
