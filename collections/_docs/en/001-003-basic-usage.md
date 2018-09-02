@@ -23,7 +23,7 @@ Create an object, e.g. a circle and make sure it has both a stroke and a fill.
 Transform **all objects** you want to stitch to paths:
 
 * Select all objects (`Ctrl+A`)
-* `Path -> Object to Path` or `Ctrl+Alt+C`.<br>
+* `Path > Object to Path` or `Ctrl+Alt+C`.<br>
 
 **Info:** Objects that are not of "path" type, are ignored by InkStitch.
 {: .notice--warning }
@@ -31,7 +31,7 @@ Transform **all objects** you want to stitch to paths:
 ## Step 3 - Parametrize SVG Path for Embroidery
 
 * Select at least one object.
-* Open `Extensions -> Embroider -> Params` and play with them.
+* Open `Extensions > Ink/Stitch > Params` and play with them.
 * For now, just accept the defaults or close without saving.
 
 ## Step 4 - Create the Embroidery File

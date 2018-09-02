@@ -31,7 +31,7 @@ macOS|`inkstitch-[VERSION]-osx-x86_64.tar.gz`|☒|☑
 ### 2. Install
  * In Inkscape, go to `Edit > Preferences > System` and check where your `User Extensions` folder is.
  * Decompress the the Ink/Stitch archive directly into this folder and restart Inkscape.
- * You will then find Ink/Stitch under `Extensions > Embroidery`.
+ * You will then find Ink/Stitch under `Extensions > Ink/Stitch`.
 
 #### For example on Linux and macOS:
 
