@@ -1,6 +1,6 @@
 ---
 title: "Developing Ink/Stitch"
-permalink: /developers/inkstitch/
+permalink: /en/developers/inkstitch/
 last_modified_at: 2018-07-21
 toc: true
 ---
