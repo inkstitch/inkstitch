@@ -279,6 +279,9 @@ collections:
   developers:
     output: true
     permalink: /:colleciton/:path/
+  posts:
+    output: true
+    permalink: /:path
     
 # Defaults
 defaults:
