@@ -20,9 +20,11 @@ Tastenkürzel | Effekt
 <nobr><key>Strg</key>+<key>Umschalt</key>+<key>E</key></nobr> | Erweiterungen > Sticken (ohne Einstellungen)
 <nobr><key>Strg</key>+<key>Umschalt</key>+<key>Bild↑</key></nobr> | Auswahl > Objekt anheben (ab Inkscape Version 0.92.2)*
 <nobr><key>Strg</key>+<key>Umschalt</key>+<key>Bild↓</key></nobr> | Auswahl > Objekt absenken (ab Inkscape Version 0.92.2)*
-<nobr><key>Strg</key>+<key>R</key></nobr> | Auswahl > Richtung umkehren.<br>Umkehr der Pfadrichtung. Bei Plattstich (Satinstich) und Laufstich kann die Stichrichtung geändert werden. Ich verwende dies mit der Einstellung "Inkscape" in den Einstellungen des Knoten-Tools "Pfadrichtung auf Konturen anzeigen". Wenn Sie mit dem Knoteneditor nur einen Stützpunkt auswählen und Strg+R drücken, kehrt Inkscape nur einen Pfad in einem Objekt um. Dadurch kann ich sicherstellen, dass beide Schienen in einem Satin in die gleiche Richtung zeigen.
+<nobr><key>Strg</key>+<key>R</key></nobr> | Auswahl > Richtung umkehren**
 
 *Objekt anheben und Objekt absenken ist seit Inkscape 0.92.2 in einer verbesserten Art möglich. Damit kann ein Objekt in der Reihenfolge nach oben oder unten verschoben werden. Dadurch hat man eine bessere Kontrolle als mit den alten Befehlen, die Objekte nur neu anordnen konnten, wenn sie sich überlappten. Objekt anheben und Objekt absenken ermöglicht eine präzisere Kontrolle über die Objektreihenfolge. Sehr nützlich in Kombination mit dem Objektfenster.
+
+**Umkehr der Pfadrichtung. Bei Plattstich (Satinstich) und Laufstich kann die Stichrichtung geändert werden. Verwende dies mit der Inkscape-Einstellung und den Einstellung des Knoten-Tools `Pfadrichtung auf Konturen anzeigen`. Wenn man mit dem Knoteneditor nur ein Stützpunkt auswählt und Strg+R drückt, kehrt Inkscape nur einen Pfad in einem Objekt um. Dadurch wird sichergestellt, dass beide Ränder in einer Satinkolumne in die gleiche Richtung zeigen.
 
 ### Tastenkürzel der Simulation
 Die Ink/Stitch-Simulation enthält bereits folgende Tastenkombinationen:
