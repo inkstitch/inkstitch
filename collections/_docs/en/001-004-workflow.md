@@ -36,9 +36,9 @@ We recommend to make heavy use of layers and groups at this point. If you've tra
 
 Keep your initial traced vectors in their own layer and use them as a reference when designing embroidery vectors. Copy and paste then as necessary into a higher layer and work with the copies.
 
-Set parameters using `Extensions > Embroidery >Params`. To learn about the stitch types and how to apply them, have a look at the [Params](/docs/params/) section of this documentation. Each time you change parameter values, you'll be able to see the simulated result in a preview window. Once you are satisfied with the result, click `Apply and close` to save the values into your SVG-file.
+Set parameters using `Extensions > Ink/Stitch > English > Params`. To learn about the stitch types and how to apply them, have a look at the [Params](/docs/params/) section of this documentation. Each time you change parameter values, you'll be able to see the simulated result in a preview window. Once you are satisfied with the result, click `Apply and close` to save the values into your SVG-file.
 
-For a detailed inspection of the result, select a vector path and run `Extensions > Embroidery > Embroider...`, which will cause it to show a stitch plan for just the selected object(s). Examine the resulting stitch plan using the node editor tool. Each vertex is a single stitch; the needle will penetrate the fabric and interlock with the bobbin thread at this point. Once done examining the stitch plan, undo the Embroider operation (`Ctrl+Z`) to remove the stitch plan and make your vectors visible again.
+For a detailed inspection of the result, select a vector path and run `Extensions > Ink/Stitch > English > Embroider...`, which will cause it to show a stitch plan for just the selected object(s). Examine the resulting stitch plan using the node editor tool. Each vertex is a single stitch; the needle will penetrate the fabric and interlock with the bobbin thread at this point. Once done examining the stitch plan, undo the Embroider operation (`Ctrl+Z`) to remove the stitch plan and make your vectors visible again.
 
 At this point, save your SVG file. If Inkscape is starting to become sluggish (due to an Inkscape memory leak), restart it before continuing.
 
@@ -65,7 +65,7 @@ Once you've got everything in the right order, deselect all objects and run *Emb
 You can either create a stitch file for a selection of objects or for all path objects. To create an embroidery file for the whole design:
 
 * Click into some empty space (in order to deselect)
-* Run `Extensions > Embroidery > Embroider...`
+* Run `Extensions > Ink/Stitch > English > Embroider...`
 * Select the right file format for your machine
 * Type a directory name where you want to save your output files. E.g. `C:\Users\%USERNAME%\Documents` on Windows. Ink/Stitch will remember this information.
 

@@ -38,7 +38,7 @@ Select a file format that your embroidery machine can read and `Save` the file i
 For later changes make sure that you keep an SVG version of your design as well.
 
 ### Method 2 (Display Stitch Plan)
-To export your designs run `Extensions > Embroidery > Embroider...`.
+To export your designs run `Extensions > Ink/Stitch > English > Embroider...`.
 
 ![Embroider...](/assets/images/docs/en/embroider.jpg){: width="450" }
 

@@ -40,7 +40,7 @@ You can either create a stitch file for a selection of objects or for all path o
 To create an embroidery file for the whole design:
 
 * Click into some empty space (in order to deselect)
-* Run `Extensions > Embroidery > Embroider...`
+* Run `Extensions > Ink/Stitch > English > Embroider...`
 * Select the right file format for your machine
 * Type a directory name where you want to save your output files. E.g. `C:\Users\%USERNAME%\Documents` on Windows. Ink/Stitch will remember this information.
 

@@ -10,7 +10,7 @@ This is a little tool to help you to plan your stitch path precisely.
 **How does it work**
 
 * Select one or more satin column(s)
-* Run `Extensions > Embroidery > Flip Satin Columns`
+* Run `Extensions > Ink/Stitch > English > Flip Satin Columns`
 
 
 **What does it do**
