@@ -270,5 +270,5 @@ class EmbroideryElement(object):
     def fatal(self, message):
         # L10N used when showing an error message to the user such as "satin column: One or more of the rungs doesn't
         # intersect both rails."
-        print >> sys.stderr, _("error:"), message
+        print >> sys.stderr, self.node.get("id") + ":", _("error:"), message
         sys.exit(1)
