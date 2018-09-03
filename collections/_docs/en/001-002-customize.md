@@ -40,22 +40,6 @@ To align your vector-shapes properly, you might want to make use of the grid fun
 
 ![Grids](https://user-images.githubusercontent.com/11083514/40359052-414d3554-5db9-11e8-8b49-3be75c5e9732.png)
 
-## Setting up Origin with Guides
-
-Setting up origins (0, 0) is especially useful for people that have full access to the entire sewing field that their machine is capable of regardless of what hoop they use.
-
-To setup origins Ink/Stitch uses guidelines:
-  * Create two guidelines by draging them from the rulers onto the canvas (one horizontal, one vertical).
-  * Dobble click on the guides and label them: `embroidery origin`. You can add more text if you like, but the label needs to start with this text.
-  * The location of the little circle on the guide is unimportant. The angles of the guides don't matter, either. All that matters is where they intersect. That intersection point is the embroidery origin.
-
-If no guides are found, the origin is at the center in the SVG.
-  
-**Tip:** You can also create a [template]((/docs/customize/#working-with-templates)) containing guides and a canvas the right size for your machine.
-{: .notice--info }
-
-[Video tutorial]({{ '/tutorials/custom-origins/' | relative_url }})
-
 ## Enabling Path Outlines & Direction
 
 Knowing path directions is important working with Ink/Stitch. Therefore we recommend to enable the checkboxes **Show path direction on outlines** and **Show temporary outline for selected paths** in `Edit > Preferences > Tools > Node`.

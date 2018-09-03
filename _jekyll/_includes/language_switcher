@@ -1,18 +1,17 @@
 {% assign lang_array = '' | split: ',' %}
 {% for lang in site.languages %}
   {%if page.lang != lang[0] %}
-    {% capture page_lang %}/{{ page.lang }}{% endcapture %}
-    {% capture page_url %}{{ page.url | replace_first: page_lang, '' }} {% endcapture %}
+    {% assign page_lang = page.lang | prepend: '/' %}
+    {% assign page_url = page.url | replace_first: page_lang, '' %}
     {% if lang[0] == blank %}
       {%- assign new_url = page_url -%}
     {% else %}
-      {% capture new_url %}/{{ lang[0] }}{{page_url}}{% endcapture %}
+      {% assign new_url = '/' | append: lang[0] | append: page_url %}
     {% endif %}
     {% assign new_url = new_url | strip %}
-    {% if new_url == page.url %}
-    {% else %}
-      {% capture lang_sub_array %}{{new_url}}|{{lang[1]}}{% endcapture %}
-      {% assign lang_sub_array = lang_sub_array | split: '|' %}
+    {% if new_url != page.url %}
+      {% assign lang_sub = new_url | append: '|' | append: lang[1] %}
+      {% assign lang_sub_array = lang_sub | split: '|' %}
       {% assign lang_array = lang_array | push: lang_sub_array %}
     {% endif %}
   {% endif %}
