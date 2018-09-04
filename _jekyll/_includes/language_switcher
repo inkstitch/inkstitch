@@ -1,15 +1,29 @@
+{% assign links = '' | split: ',' %}
+{% for collection in site.collections %}
+    {% for post in collection.docs %}
+        {% assign links = links | push: post.permalink %}
+    {% endfor %}
+{% endfor %}
+
+{% for post in site.pages %}
+    {% assign links = links | push: post.permalink %}
+{% endfor %}
+
+{% for post in site.posts %}
+    {% assign links = links | push: post.url %}
+{% endfor %}
+
 {% assign lang_array = '' | split: ',' %}
 {% for lang in site.languages %}
   {%if page.lang != lang[0] %}
     {% assign page_lang = page.lang | prepend: '/' %}
     {% assign page_url = page.url | replace_first: page_lang, '' %}
     {% if lang[0] == blank %}
-      {%- assign new_url = page_url -%}
+      {% assign new_url = page_url %}
     {% else %}
       {% assign new_url = '/' | append: lang[0] | append: page_url %}
     {% endif %}
-    {% assign new_url = new_url | strip %}
-    {% if new_url != page.url %}
+    {% if new_url != page.url and links contains new_url %}
       {% assign lang_sub = new_url | append: '|' | append: lang[1] %}
       {% assign lang_sub_array = lang_sub | split: '|' %}
       {% assign lang_array = lang_array | push: lang_sub_array %}
@@ -17,6 +31,7 @@
   {% endif %}
 {% endfor %}
 
+{% if lang_array != blank %}
   <li id="language_switcher"><span class="nav__sub-title">{{ site.data.ui-text[page.lang].choose_language | default: "Choose your language" }}</span>
     <ul>
     {% for l in lang_array %}
@@ -24,3 +39,4 @@
     {% endfor %}
     </ul>
   </li>
+{%  endif %}
