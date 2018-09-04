@@ -302,6 +302,7 @@ defaults:
   - scope:
       type: posts
     values:
+      is_post: true
       share: true
       read_time: true
       related: true
