@@ -9,7 +9,6 @@ numpy
 jinja2
 requests
 colormath
-stringcase
 
 # We're not ready for flask 1.0 yet.  Logging changed, among othe things.
 flask==0.*

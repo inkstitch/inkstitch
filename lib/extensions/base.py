@@ -3,7 +3,6 @@ import re
 import json
 from copy import deepcopy
 from collections import MutableMapping
-from stringcase import snakecase
 
 from ..svg.tags import SVG_GROUP_TAG, INKSCAPE_GROUPMODE, SVG_DEFS_TAG, EMBROIDERABLE_TAGS, SVG_POLYLINE_TAG
 from ..elements import AutoFill, Fill, Stroke, SatinColumn, Polyline, EmbroideryElement
@@ -101,7 +100,8 @@ class InkstitchExtension(inkex.Effect):
 
     @classmethod
     def name(cls):
-        return snakecase(cls.__name__)
+        # convert ClassName to class_name
+        return re.sub(r"(?<=[a-z])([A-Z])", r"_\1", cls.__name__).lower()
 
     def hide_all_layers(self):
         for g in self.document.getroot().findall(SVG_GROUP_TAG):
