@@ -72,14 +72,11 @@ install:
       # conda info -a
 
       # Create environment wit additional packages
-      PIP_PACKAGES="./pyembroidery backports.functools_lru_cache networkx shapely lxml appdirs numpy jinja2 requests colormath flask==0.* pyinstaller"
+      PIP_PACKAGES="backports.functools_lru_cache networkx shapely lxml appdirs numpy jinja2 requests colormath flask==0.* pyinstaller"
       conda create -q -n institch-env python=$TRAVIS_PYTHON_VERSION $PIP_PACKAGES
       # activate environment
       source activate inkstitch-env
       
-      # for shapely
-      # sudo apt-get install libgeos-dev
-
       # for wxPython
       sudo apt-get install glib-networking
 
@@ -98,7 +95,10 @@ install:
       # pip install --no-binary shapely -r requirements.txt
 
       # pip install pyinstaller
-      
+
+      # pyembroidery
+      pip install ./pyembroidery
+
     elif [ "$BUILD" = "windows" ]; then
       set -x
 
