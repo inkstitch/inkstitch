@@ -120,7 +120,8 @@ install:
 
       wine miniconda.exe /InstallationType=AllUsers /RegisterPython=1 /S /D=C:\Miniconda2
       #wine where conda
-      wine C:\Miniconda2\Scripts\conda.exe
+      wine C:\\Miniconda2\\Scripts\\conda.exe
+      wine conda.exe list
 
       #wget -q http://download.microsoft.com/download/1/1/1/1116b75a-9ec3-481a-a3c8-1777b5381140/vcredist_x86.exe
       #wine vcredist_x86.exe /q
