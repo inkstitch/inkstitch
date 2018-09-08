@@ -55,9 +55,30 @@ install:
       sudo rm -f /etc/apt/sources.list.d/mongodb*.list
 
       # miniconda / coda-forge
+      if [[ "$TRAVIS_PYTHON_VERSION" == "2.7" ]]; then
+          wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -O miniconda.sh;
+      else
+          wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
+      fi
+      bash miniconda.sh -b -p $HOME/miniconda
+      export PATH="$HOME/miniconda/bin:$PATH"
+      hash -r
+      conda config --set always_yes yes --set changeps1 no
+      # add channel conda-forge (colormath...)
+      conda config --add channels conda-forge
+      conda update -q conda
+      
+      # Useful for debugging any issues with conda
+      # conda info -a
 
+      # Create environment wit additional packages
+      PIP_PACKAGES="./pyembroidery backports.functools_lru_cache networkx shapely lxml appdirs numpy jinja2 requests colormath flask==0.* pyinstaller"
+      conda create -q -n institch-env python=$TRAVIS_PYTHON_VERSION $PIP_PACKAGES
+      # activate environment
+      source activate inkstitch-env
+      
       # for shapely
-      sudo apt-get install libgeos-dev
+      # sudo apt-get install libgeos-dev
 
       # for wxPython
       sudo apt-get install glib-networking
@@ -65,7 +86,7 @@ install:
       # This is the same as the pypi module PyGObject.  We can't just do
       # "pip install PyGObject" because it depends on a version of
       # libgirepository1.0-dev that doesn't exist in Trusty.
-      sudo apt-get install python-gi python-gi-cairo libgirepository1.0-dev
+      # sudo apt-get install python-gi python-gi-cairo libgirepository1.0-dev
 
       # wxPython doen't publish linux wheels in pypi
       wget -q https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-14.04/wxPython-4.0.3-cp27-cp27mu-linux_x86_64.whl
