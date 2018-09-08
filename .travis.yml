@@ -73,7 +73,7 @@ install:
 
       # Create environment wit additional packages
       PIP_PACKAGES="backports.functools_lru_cache networkx shapely lxml appdirs numpy jinja2 requests colormath flask==0.* pyinstaller"
-      conda create -q -n institch-env python=$TRAVIS_PYTHON_VERSION $PIP_PACKAGES
+      conda create -q -n inkstitch-env python=$TRAVIS_PYTHON_VERSION $PIP_PACKAGES
       # activate environment
       source activate inkstitch-env
       
