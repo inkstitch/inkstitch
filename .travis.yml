@@ -122,8 +122,11 @@ install:
 
       set
 
-      wget -q http://download.microsoft.com/download/1/1/1/1116b75a-9ec3-481a-a3c8-1777b5381140/vcredist_x86.exe
-      wine vcredist_x86.exe /q
+      wine conda --help
+      wine conda /?
+
+      #wget -q http://download.microsoft.com/download/1/1/1/1116b75a-9ec3-481a-a3c8-1777b5381140/vcredist_x86.exe
+      #wine vcredist_x86.exe /q
 
       #wget -q https://www.python.org/ftp/python/2.7.15/python-2.7.15.msi --output-document=python.msi
       #wine msiexec /i python.msi /qn TARGETDIR=C:\\Python
