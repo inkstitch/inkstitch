@@ -90,6 +90,8 @@ install:
       pip install --upgrade pip
       pip --version
       
+      pip install ./pyembroidery
+      
       # wxPython doen't publish linux wheels in pypi
       wget -q https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-14.04/wxPython-4.0.3-cp27-cp27mu-linux_x86_64.whl
       pip install wxPython-4.0.3-cp27-cp27mu-linux_x86_64.whl
