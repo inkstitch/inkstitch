@@ -54,8 +54,28 @@ install:
       # mongodb repo by default...?
       sudo rm -f /etc/apt/sources.list.d/mongodb*.list
 
+      # miniconda
+      if [[ "$TRAVIS_PYTHON_VERSION" == "2.7" ]]; then
+          wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -O miniconda.sh;
+      else
+          wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
+      fi
+      bash miniconda.sh -b -p $HOME/miniconda
+      export PATH="$HOME/miniconda/bin:$PATH"
+      hash -r
+      conda config --set always_yes yes --set changeps1 no
+      conda update -q conda
+      # Useful for debugging any issues with conda
+      conda info -a
+      
+      # Create and use environment
+      PIP_PACKAGES="backports.functools_lru_cache networkx shapely lxml appdirs numpy jinja2 requests colormath flask==0.* pyinstaller"
+      conda create -q -n inkstitch-environment python=$TRAVIS_PYTHON_VERSION $PIP_PACKAGES
+      conda-env list
+      source activate inkstitch-environment
+      
       # for shapely
-      sudo apt-get install libgeos-dev
+      # sudo apt-get install libgeos-dev
 
       # for wxPython
       sudo apt-get install glib-networking
@@ -72,9 +92,9 @@ install:
       # We can't use the shapely wheel because it includes the geos
       # library but with a weird file name.  Details:
       # https://github.com/pyinstaller/pyinstaller/blob/61b1c75c2b0469b32d114298a63bf60b8d597e37/PyInstaller/hooks/hook-shapely.py#L34
-      pip install --no-binary shapely -r requirements.txt
+      # pip install --no-binary shapely -r requirements.txt
 
-      pip install pyinstaller
+      # pip install pyinstaller
     elif [ "$BUILD" = "windows" ]; then
       set -x
 
