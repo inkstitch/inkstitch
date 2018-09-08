@@ -120,7 +120,7 @@ install:
 
       wine miniconda.exe /InstallationType=AllUsers /RegisterPython=1 /S /D=%UserProfile%\Miniconda2
 
-      set
+      wine set
 
       wine conda --help
       wine conda /?
