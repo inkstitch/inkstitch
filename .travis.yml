@@ -120,19 +120,21 @@ install:
 
       wine miniconda.exe /InstallationType=AllUsers /RegisterPython=1 /S /D=%UserProfile%\Miniconda2
 
+      set
+
       wget -q http://download.microsoft.com/download/1/1/1/1116b75a-9ec3-481a-a3c8-1777b5381140/vcredist_x86.exe
       wine vcredist_x86.exe /q
 
-      wget -q https://www.python.org/ftp/python/2.7.15/python-2.7.15.msi --output-document=python.msi
-      wine msiexec /i python.msi /qn TARGETDIR=C:\\Python
+      #wget -q https://www.python.org/ftp/python/2.7.15/python-2.7.15.msi --output-document=python.msi
+      #wine msiexec /i python.msi /qn TARGETDIR=C:\\Python
 
-      wine c:\\Python\\python.exe c:\\Python\\scripts\\pip.exe install pyinstaller --upgrade
-      wine c:\\Python\\python.exe c:\\Python\\scripts\\pip.exe install setuptools --upgrade
+      #wine c:\\Python\\python.exe c:\\Python\\scripts\\pip.exe install pyinstaller --upgrade
+      #wine c:\\Python\\python.exe c:\\Python\\scripts\\pip.exe install setuptools --upgrade
 
-      wget -q https://github.com/lexelby/inkstitch-build-objects/releases/download/v1.0.0/Shapely-1.6.3-cp27-cp27m-win32.whl
-      wine c:\\Python\\python.exe c:\\Python\\scripts\\pip.exe install Shapely-1.6.3-cp27-cp27m-win32.whl
+      #wget -q https://github.com/lexelby/inkstitch-build-objects/releases/download/v1.0.0/Shapely-1.6.3-cp27-cp27m-win32.whl
+      #wine c:\\Python\\python.exe c:\\Python\\scripts\\pip.exe install Shapely-1.6.3-cp27-cp27m-win32.whl
 
-      wine c:\\Python\\python.exe c:\\Python\\scripts\\pip.exe install -r requirements.txt
+      #wine c:\\Python\\python.exe c:\\Python\\scripts\\pip.exe install -r requirements.txt
 
       set +x
     elif [ "$BUILD" = "osx" ]; then
