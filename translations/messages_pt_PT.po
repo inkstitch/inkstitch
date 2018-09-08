@@ -420,7 +420,8 @@ msgstr ""
 #: lib/extensions/embroider.py:38
 msgid "\n\n"
 "Seeing a 'no such option' message?  Please restart Inkscape to fix."
-msgstr "Vê uma mensagem \"não existe tal opção\"? Por favor reiniciar o Inkscape."
+msgstr "\n\n"
+"Vê uma mensagem \"não existe tal opção\"? Por favor reiniciar o Inkscape."
 
 #: lib/extensions/flip.py:35
 msgid "Please select one or more satin columns to flip."
