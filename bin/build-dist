@@ -7,7 +7,7 @@ site_packages="$(python -c "import os; print(os.path.dirname(os.__file__) + '/si
 if [ "$TRAVIS_OS_NAME" = "linux" -a "$BUILD" != "windows" ]; then
     # pyinstaller misses these two
     pyinstaller_args+="--add-binary /usr/lib/x86_64-linux-gnu/gio/modules/libgiolibproxy.so:. "
-    pyinstaller_args+="--add-binary  /usr/lib/x86_64-linux-gnu/libproxy.so.1:. "
+    pyinstaller_args+="--add-binary /usr/lib/x86_64-linux-gnu/libproxy.so.1:. "
 fi
 
 # This one's tricky.  ink/stitch doesn't actually _use_ gi.repository.Gtk,
@@ -20,7 +20,9 @@ fi
 pyinstaller_args+="--hidden-import gi.repository.Gtk "
 
 # mac and windows build seem to miss wx import
-pyinstaller_args+="--hidden-import wx "
+if [ "$TRAVIS_OS_NAME" = "osx" ] || [ "$BUILD" = "windows" ]; then
+    pyinstaller_args+="--hidden-import wx "
+fi
 
 # We need to use the precompiled bootloader linked with graphical Mac OS X
 # libraries if we develop a GUI application for Mac:
@@ -39,7 +41,7 @@ if [ "$BUILD" = "windows" ]; then
 else
     # without the LD_LIBRARY_PATH, it seems that pyinstaller can't find all of
     # wxpython's shared libraries
-    LD_LIBRARY_PATH="${site_packages}/wx" pyinstaller $pyinstaller_args --strip inkstitch.py;
+    LD_LIBRARY_PATH="${site_packages}/wx" pyinstaller $pyinstaller_args --strip inkstitch.py
 fi
 
 # pyinstaller put a whole mess of libraries under dist/inkstitch.  We'd like

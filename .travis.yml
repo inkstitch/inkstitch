@@ -65,6 +65,7 @@ install:
       hash -r
       conda config --set always_yes yes --set changeps1 no
       conda update -q conda
+      conda config --add channels conda-forge
       # Useful for debugging any issues with conda
       conda info -a
       
@@ -85,6 +86,12 @@ install:
       # libgirepository1.0-dev that doesn't exist in Trusty.
       sudo apt-get install python-gi python-gi-cairo libgirepository1.0-dev
 
+      # pip latest
+      pip install --upgrade pip
+      pip --version
+      
+      pip install ./pyembroidery
+      
       # wxPython doen't publish linux wheels in pypi
       wget -q https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-14.04/wxPython-4.0.3-cp27-cp27mu-linux_x86_64.whl
       pip install wxPython-4.0.3-cp27-cp27mu-linux_x86_64.whl
@@ -94,7 +101,6 @@ install:
       # https://github.com/pyinstaller/pyinstaller/blob/61b1c75c2b0469b32d114298a63bf60b8d597e37/PyInstaller/hooks/hook-shapely.py#L34
       # pip install --no-binary shapely -r requirements.txt
 
-      # pip install pyinstaller
     elif [ "$BUILD" = "windows" ]; then
       set -x
 
@@ -110,7 +116,7 @@ install:
       wget -q http://download.microsoft.com/download/1/1/1/1116b75a-9ec3-481a-a3c8-1777b5381140/vcredist_x86.exe
       wine vcredist_x86.exe /q
 
-      wget -q https://www.python.org/ftp/python/2.7.14/python-2.7.14.msi --output-document=python.msi
+      wget -q https://www.python.org/ftp/python/2.7.15/python-2.7.15.msi --output-document=python.msi
       wine msiexec /i python.msi /qn TARGETDIR=C:\\Python
 
       wine c:\\Python\\python.exe c:\\Python\\scripts\\pip.exe install pyinstaller --upgrade
@@ -138,6 +144,9 @@ install:
 
       export GI_TYPELIB_PATH=/usr/local/lib/girepository-1.0/
 
+      # pip latest
+      pip install --upgrade pip
+      pip --version
       pip install virtualenv
       virtualenv -p python2 --system-site-packages venv
 
@@ -146,6 +155,7 @@ install:
 
       pip install -r requirements.txt
       pip install pyinstaller
+
       set +x
     elif [ -n "$LINT" ]; then
       pip install flake8
