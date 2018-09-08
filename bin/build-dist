@@ -7,6 +7,7 @@ site_packages="$(python -c "import os; print(os.path.dirname(os.__file__) + '/si
 if [ "$TRAVIS_OS_NAME" = "linux" -a "$BUILD" != "windows" ]; then
     # pyinstaller misses these two
     # add LIB_PROXY_GIO and LIB_PROXY for all linux platforms
+    echo "$(which find)"
     LIB_PROXY_GIO="$(find /usr/lib[0-9]*/ -type f -name 'libgiolibproxy.so')"
     LIB_PROXY="$(find /usr/lib[0-9]*/ -type f -name 'libproxy.so*')"
     pyinstaller_args+="--add-binary ${LIB_PROXY_GIO}:. "
