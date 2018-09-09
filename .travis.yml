@@ -123,11 +123,11 @@ install:
       # miniconda setup
       wine miniconda.exe /InstallationType=AllUsers /RegisterPython=1 /S /D=C:\\Miniconda2
       # miniconda settings
-      wine C:\\Miniconda2\\Scripts\\conda.exe config --set always_yes yes --set changeps1 no
+      wine "C:\Miniconda2\Scripts\conda.exe" "config" "--set" "always_yes" "yes" "--set" "changeps1" "no" "--system"
       
       # add channel conda-forge (colormath...)
-      C:\\Miniconda2\\Scripts\\conda.exe config --add channels conda-forge
-      C:\\Miniconda2\\Scripts\\conda.exe update -q conda
+      wine "C:\Miniconda2\Scripts\conda.exe" "config" "--add" "channels" "conda-forge"
+      wine "C:\Miniconda2\Scripts\conda.exe" "update" "-q" "conda"
 
       #wine c:\\Python\\python.exe c:\\Python\\scripts\\pip.exe install pyinstaller --upgrade
       #wine c:\\Python\\python.exe c:\\Python\\scripts\\pip.exe install setuptools --upgrade
