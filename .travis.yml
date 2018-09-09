@@ -111,23 +111,23 @@ install:
 
       export WINEDEBUG=-all
 
+      wget -q http://download.microsoft.com/download/1/1/1/1116b75a-9ec3-481a-a3c8-1777b5381140/vcredist_x86.exe
+      wine vcredist_x86.exe /q
+
       # miniconda / coda-forge
       if [[ "$TRAVIS_PYTHON_VERSION" == "2.7" ]]; then
           wget -q https://repo.continuum.io/miniconda/Miniconda2-latest-Windows-x86.exe -O miniconda.exe;
       else
           wget -q https://repo.continuum.io/miniconda/Miniconda3-latest-Windows-x86.exe -O miniconda.exe;
       fi
-
-      wine miniconda.exe /InstallationType=AllUsers /RegisterPython=1 /S /D=C:\Miniconda2
-      #wine where conda
-      wine C:\\ProgramData\\Miniconda2\\Scripts\\conda.exe
-      wine conda.exe list
-
-      #wget -q http://download.microsoft.com/download/1/1/1/1116b75a-9ec3-481a-a3c8-1777b5381140/vcredist_x86.exe
-      #wine vcredist_x86.exe /q
-
-      #wget -q https://www.python.org/ftp/python/2.7.15/python-2.7.15.msi --output-document=python.msi
-      #wine msiexec /i python.msi /qn TARGETDIR=C:\\Python
+      # miniconda setup
+      wine miniconda.exe /InstallationType=AllUsers /RegisterPython=1 /S /D=C:\\Miniconda2
+      # miniconda settings
+      wine C:\\Miniconda2\\Scripts\\conda.exe config --set always_yes yes --set changeps1 no
+      
+      # add channel conda-forge (colormath...)
+      C:\\Miniconda2\\Scripts\\conda.exe config --add channels conda-forge
+      C:\\Miniconda2\\Scripts\\conda.exe update -q conda
 
       #wine c:\\Python\\python.exe c:\\Python\\scripts\\pip.exe install pyinstaller --upgrade
       #wine c:\\Python\\python.exe c:\\Python\\scripts\\pip.exe install setuptools --upgrade
