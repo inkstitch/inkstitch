@@ -17,7 +17,7 @@ from .base import InkstitchExtension
 from ..i18n import _
 from ..stitch_plan import patches_to_stitch_plan
 from ..elements import EmbroideryElement, Fill, AutoFill, Stroke, SatinColumn
-from ..utils import save_stderr, restore_stderr, get_bundled_dir
+from ..utils import save_stderr, restore_stderr, get_resource_dir
 from ..simulator import EmbroiderySimulator
 from ..commands import is_command
 
@@ -118,7 +118,7 @@ class ParamsTab(ScrolledPanel):
         self.settings_grid.AddGrowableCol(1, 2)
         self.settings_grid.SetFlexibleDirection(wx.HORIZONTAL)
 
-        self.pencil_icon = wx.Image(os.path.join(get_bundled_dir("icons"), "pencil_20x20.png")).ConvertToBitmap()
+        self.pencil_icon = wx.Image(os.path.join(get_resource_dir("icons"), "pencil_20x20.png")).ConvertToBitmap()
 
         self.__set_properties()
         self.__do_layout()
