@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-09-12 20:31-0400\n"
+"POT-Creation-Date: 2018-09-12 20:51-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -505,7 +505,7 @@ msgstr ""
 msgid "Install"
 msgstr ""
 
-#: lib/extensions/install.py:40 lib/extensions/params.py:409
+#: lib/extensions/install.py:40 lib/extensions/params.py:408
 msgid "Cancel"
 msgstr ""
 
@@ -594,45 +594,45 @@ msgstr ""
 msgid "Inkscape objects"
 msgstr ""
 
-#: lib/extensions/params.py:352
+#: lib/extensions/params.py:351
 msgid ""
 "Click to force this parameter to be saved when you click \"Apply and "
 "Quit\""
 msgstr ""
 
-#: lib/extensions/params.py:360
+#: lib/extensions/params.py:359
 msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr ""
 
-#: lib/extensions/params.py:375
+#: lib/extensions/params.py:374
 msgid "Embroidery Params"
 msgstr ""
 
-#: lib/extensions/params.py:392
+#: lib/extensions/params.py:391
 msgid "Presets"
 msgstr ""
 
-#: lib/extensions/params.py:397
+#: lib/extensions/params.py:396
 msgid "Load"
 msgstr ""
 
-#: lib/extensions/params.py:400
+#: lib/extensions/params.py:399
 msgid "Add"
 msgstr ""
 
-#: lib/extensions/params.py:403
+#: lib/extensions/params.py:402
 msgid "Overwrite"
 msgstr ""
 
-#: lib/extensions/params.py:406
+#: lib/extensions/params.py:405
 msgid "Delete"
 msgstr ""
 
-#: lib/extensions/params.py:413
+#: lib/extensions/params.py:412
 msgid "Use Last Settings"
 msgstr ""
 
-#: lib/extensions/params.py:416
+#: lib/extensions/params.py:415
 msgid "Apply and Quit"
 msgstr ""
 
@@ -640,25 +640,25 @@ msgstr ""
 msgid "Preview"
 msgstr ""
 
-#: lib/extensions/params.py:487
+#: lib/extensions/params.py:484
 msgid "Internal Error"
 msgstr ""
 
-#: lib/extensions/params.py:540
+#: lib/extensions/params.py:537
 msgid "Please enter or select a preset name first."
 msgstr ""
 
-#: lib/extensions/params.py:540 lib/extensions/params.py:546
-#: lib/extensions/params.py:574
+#: lib/extensions/params.py:537 lib/extensions/params.py:543
+#: lib/extensions/params.py:571
 msgid "Preset"
 msgstr ""
 
-#: lib/extensions/params.py:546
+#: lib/extensions/params.py:543
 #, python-format
 msgid "Preset \"%s\" not found."
 msgstr ""
 
-#: lib/extensions/params.py:574
+#: lib/extensions/params.py:571
 #, python-format
 msgid ""
 "Preset \"%s\" already exists.  Please use another name or press "
@@ -687,10 +687,6 @@ msgstr ""
 msgid "Ink/Stitch Print"
 msgstr ""
 
-#: lib/extensions/simulate.py:29
-msgid "Embroidery Simulation"
-msgstr ""
-
 #: lib/extensions/zip.py:49
 msgid "No embroidery file formats selected."
 msgstr ""
@@ -704,57 +700,55 @@ msgstr ""
 
 #. low-level file error.  %(error)s is (hopefully?) translated by
 #. the user's system automatically.
-#: lib/output.py:94
+#: lib/output.py:102
 #, python-format
 msgid "Error writing to %(path)s: %(error)s"
 msgstr ""
 
-#: lib/simulator.py:40
-msgid "Speed up"
+#. command label at bottom of simulator window
+#: lib/simulator.py:12
+msgid "STITCH"
 msgstr ""
 
-#: lib/simulator.py:40
-msgid "Press + or arrow up to speed up"
+#: lib/simulator.py:12
+msgid "JUMP"
 msgstr ""
 
-#: lib/simulator.py:41
-msgid "Slow down"
+#: lib/simulator.py:12
+msgid "TRIM"
 msgstr ""
 
-#: lib/simulator.py:41
-msgid "Press - or arrow down to slow down"
+#: lib/simulator.py:12
+msgid "STOP"
 msgstr ""
 
-#: lib/simulator.py:42
+#: lib/simulator.py:12
+msgid "COLOR CHANGE"
+msgstr ""
+
+#: lib/simulator.py:49 lib/simulator.py:208 lib/simulator.py:215
 msgid "Pause"
 msgstr ""
 
-#: lib/simulator.py:42
-msgid "Press P to pause the animation"
-msgstr ""
-
-#: lib/simulator.py:43
+#: lib/simulator.py:51
 msgid "Restart"
 msgstr ""
 
-#: lib/simulator.py:43
-msgid "Press R to restart the animation"
-msgstr ""
-
-#: lib/simulator.py:44
+#: lib/simulator.py:53
 msgid "Quit"
 msgstr ""
 
-#: lib/simulator.py:44
-msgid "Press Q to close the simulation window"
+#: lib/simulator.py:168
+#, python-format
+msgid "Speed: %d stitches/sec"
 msgstr ""
 
-#: lib/simulator.py:169
-msgid "Stitch # "
+#: lib/simulator.py:211
+msgid "Start"
 msgstr ""
 
-#: lib/simulator.py:172
-msgid "Stitch #"
+#: lib/simulator.py:633
+msgid "Embroidery Simulation"
 msgstr ""
 
 #: lib/stitches/auto_fill.py:167

@@ -293,7 +293,6 @@ class ParamsTab(ScrolledPanel):
 
         summary_box = wx.StaticBox(self, wx.ID_ANY, label=_("Inkscape objects"))
         sizer = wx.StaticBoxSizer(summary_box, wx.HORIZONTAL)
-#        sizer = wx.BoxSizer(wx.HORIZONTAL)
         self.description = wx.StaticText(self)
         self.update_description()
         self.description.SetLabel(self.description_text)
@@ -451,7 +450,7 @@ class SettingsFrame(wx.Frame):
         stitch_plan = patches_to_stitch_plan(patches)
         if self.simulate_window:
             self.simulate_window.stop()
-            self.simulate_window.load(stitch_plan=stitch_plan)
+            self.simulate_window.load(stitch_plan)
         else:
             params_rect = self.GetScreenRect()
             simulator_pos = params_rect.GetTopRight()
@@ -460,20 +459,18 @@ class SettingsFrame(wx.Frame):
             current_screen = wx.Display.GetFromPoint(wx.GetMousePosition())
             display = wx.Display(current_screen)
             screen_rect = display.GetClientArea()
+            simulator_pos.y = screen_rect.GetTop()
 
-            max_width = screen_rect.GetWidth() - params_rect.GetWidth()
-            max_height = screen_rect.GetHeight()
+            width = screen_rect.GetWidth() - params_rect.GetWidth()
+            height = screen_rect.GetHeight()
 
             try:
                 self.simulate_window = EmbroiderySimulator(None, -1, _("Preview"),
                                                            simulator_pos,
-                                                           size=(300, 300),
-                                                           x_position=simulator_pos.x,
+                                                           size=(width, height),
                                                            stitch_plan=stitch_plan,
                                                            on_close=self.simulate_window_closed,
-                                                           target_duration=5,
-                                                           max_width=max_width,
-                                                           max_height=max_height)
+                                                           target_duration=5)
             except:
                 error = traceback.format_exc()
 
