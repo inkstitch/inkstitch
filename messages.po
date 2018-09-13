@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-09-01 20:11-0400\n"
+"POT-Creation-Date: 2018-09-12 20:31-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -531,7 +531,7 @@ msgstr ""
 msgid "Installation Completed"
 msgstr ""
 
-#: lib/extensions/install.py:111
+#: lib/extensions/install.py:114
 msgid "Ink/Stitch Add-ons Installer"
 msgstr ""
 
