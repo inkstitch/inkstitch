@@ -56,6 +56,13 @@ class InstallerFrame(wx.Frame):
             self.path_input.SetValue(dialog.GetPath())
 
     def install_button_clicked(self, event):
+        if sys.platform == "win32":
+            # On windows, the default icon shows as a broken image.  No idea
+            # why.  Workaround: don't show an icon.
+            style = wx.ICON_NONE
+        else:
+            style = 0
+
         try:
             self.install_addons('palettes')
             self.install_addons('symbols')
@@ -63,12 +70,12 @@ class InstallerFrame(wx.Frame):
             wx.MessageDialog(self,
                              _('Inkscape add-on installation failed') + ': \n' + traceback.format_exc(),
                              _('Installation Failed'),
-                             wx.OK).ShowModal()
+                             wx.OK | style).ShowModal()
         else:
             wx.MessageDialog(self,
                              _('Inkscape add-on files have been installed.  Please restart Inkscape to load the new add-ons.'),
                              _('Installation Completed'),
-                             wx.OK).ShowModal()
+                             wx.OK | style).ShowModal()
 
         self.Destroy()
 

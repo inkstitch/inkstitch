@@ -17,7 +17,7 @@ from .base import InkstitchExtension
 from ..i18n import _
 from ..stitch_plan import patches_to_stitch_plan
 from ..elements import EmbroideryElement, Fill, AutoFill, Stroke, SatinColumn
-from ..utils import save_stderr, restore_stderr
+from ..utils import save_stderr, restore_stderr, get_resource_dir
 from ..simulator import EmbroiderySimulator
 from ..commands import is_command
 
@@ -112,9 +112,13 @@ class ParamsTab(ScrolledPanel):
         else:
             self.toggle = None
 
-        self.settings_grid = wx.FlexGridSizer(rows=0, cols=3, hgap=10, vgap=10)
-        self.settings_grid.AddGrowableCol(0, 1)
+        self.param_change_indicators = {}
+
+        self.settings_grid = wx.FlexGridSizer(rows=0, cols=4, hgap=10, vgap=15)
+        self.settings_grid.AddGrowableCol(1, 2)
         self.settings_grid.SetFlexibleDirection(wx.HORIZONTAL)
+
+        self.pencil_icon = wx.Image(os.path.join(get_resource_dir("icons"), "pencil_20x20.png")).ConvertToBitmap()
 
         self.__set_properties()
         self.__do_layout()
@@ -218,7 +222,11 @@ class ParamsTab(ScrolledPanel):
         self.on_change_hook = callable
 
     def changed(self, event):
-        self.changed_inputs.add(event.GetEventObject())
+        input = event.GetEventObject()
+        self.changed_inputs.add(input)
+
+        param = self.inputs_to_params[input]
+        self.enable_change_indicator(param)
         event.Skip()
 
         if self.on_change_hook:
@@ -235,9 +243,7 @@ class ParamsTab(ScrolledPanel):
         self.update_toggle_state()
 
     def save_preset(self, storage):
-        preset = storage[self.name] = {}
-        for name, input in self.param_inputs.iteritems():
-            preset[name] = input.GetValue()
+        storage[self.name] = self.get_values()
 
     def update_description(self):
         if len(self.nodes) == 1:
@@ -296,13 +302,17 @@ class ParamsTab(ScrolledPanel):
         box.Add(sizer, proportion=0, flag=wx.ALL, border=5)
 
         if self.toggle:
-            box.Add(self.toggle_checkbox, proportion=0, flag=wx.BOTTOM, border=10)
+            toggle_sizer = wx.BoxSizer(wx.HORIZONTAL)
+            toggle_sizer.Add(self.create_change_indicator(self.toggle.name), proportion = 0, flag=wx.ALIGN_CENTER_VERTICAL|wx.RIGHT, border=5)
+            toggle_sizer.Add(self.toggle_checkbox, proportion=0, flag=wx.ALIGN_CENTER_VERTICAL)
+            box.Add(toggle_sizer, proportion=0, flag=wx.BOTTOM, border=10)
 
         for param in self.params:
+            self.settings_grid.Add(self.create_change_indicator(param.name), proportion=0, flag=wx.ALIGN_CENTER_VERTICAL)
+
             description = wx.StaticText(self, label=param.description)
             description.SetToolTip(param.tooltip)
-
-            self.settings_grid.Add(description, proportion=1, flag=wx.EXPAND|wx.RIGHT, border=40)
+            self.settings_grid.Add(description, proportion=1, flag=wx.EXPAND|wx.RIGHT|wx.ALIGN_CENTER_VERTICAL|wx.TOP, border=5)
 
             if param.type == 'boolean':
 
@@ -316,7 +326,7 @@ class ParamsTab(ScrolledPanel):
 
                 input.Bind(wx.EVT_CHECKBOX, self.changed)
             elif len(param.values) > 1:
-                input = wx.ComboBox(self, wx.ID_ANY, choices=sorted(param.values), style=wx.CB_DROPDOWN)
+                input = wx.ComboBox(self, wx.ID_ANY, choices=sorted(str(value) for value in param.values), style=wx.CB_DROPDOWN)
                 input.Bind(wx.EVT_COMBOBOX, self.changed)
                 input.Bind(wx.EVT_TEXT, self.changed)
             else:
@@ -326,13 +336,32 @@ class ParamsTab(ScrolledPanel):
 
             self.param_inputs[param.name] = input
 
-            self.settings_grid.Add(input, proportion=1, flag=wx.ALIGN_CENTER_VERTICAL)
+            self.settings_grid.Add(input, proportion=1, flag=wx.ALIGN_CENTER_VERTICAL|wx.EXPAND|wx.LEFT, border=40)
             self.settings_grid.Add(wx.StaticText(self, label=param.unit or ""), proportion=1, flag=wx.ALIGN_CENTER_VERTICAL)
+
+        self.inputs_to_params = {v: k for k, v in self.param_inputs.iteritems()}
 
         box.Add(self.settings_grid, proportion=1, flag=wx.ALL, border=10)
         self.SetSizer(box)
 
         self.Layout()
+
+    def create_change_indicator(self, param):
+        indicator = wx.Button(self, style=wx.BORDER_NONE | wx.BU_NOTEXT, size=(28, 28))
+        indicator.SetToolTip(_('Click to force this parameter to be saved when you click "Apply and Quit"'))
+        indicator.Bind(wx.EVT_BUTTON, lambda event: self.enable_change_indicator(param))
+
+        self.param_change_indicators[param] = indicator
+        return indicator
+
+    def enable_change_indicator(self, param):
+        self.param_change_indicators[param].SetBitmapLabel(self.pencil_icon)
+        self.param_change_indicators[param].SetToolTip(_('This parameter will be saved when you click "Apply and Quit"'))
+
+        self.changed_inputs.add(self.param_inputs[param])
+
+        if self.on_change_hook():
+            self.on_change_hook(self)
 
 # end of class SatinPane
 
@@ -686,7 +715,7 @@ class Params(InkstitchExtension):
             getter = 'get_param'
 
         values = filter(lambda item: item is not None,
-                        (getattr(node, getter)(param.name, str(param.default)) for node in nodes))
+                        (getattr(node, getter)(param.name, param.default) for node in nodes))
 
         return values
 

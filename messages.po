@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-09-12 20:30-0400\n"
+"POT-Creation-Date: 2018-09-12 20:51-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -107,7 +107,7 @@ msgid "%(command)s: %(description)s"
 msgstr ""
 
 #: lib/elements/auto_fill.py:11
-msgid "Auto-Fill"
+msgid "AutoFill"
 msgstr ""
 
 #: lib/elements/auto_fill.py:14
@@ -178,9 +178,23 @@ msgid ""
 "shapes."
 msgstr ""
 
-#: lib/elements/element.py:230
+#: lib/elements/element.py:202
+#, python-format
+msgid ""
+"Object %(id)s has an empty 'd' attribute.  Please delete this object from"
+" your document."
+msgstr ""
+
+#: lib/elements/element.py:234
 #, python-format
 msgid "%(id)s has more than one command of type '%(command)s' linked to it"
+msgstr ""
+
+#. used when showing an error message to the user such as "satin column: One or
+#. more of the rungs doesn't
+#. intersect both rails."
+#: lib/elements/element.py:273
+msgid "error:"
 msgstr ""
 
 #: lib/elements/fill.py:12
@@ -248,6 +262,10 @@ msgstr ""
 msgid ""
 "shape %s is so small that it cannot be filled with stitches.  Please make"
 " it bigger or delete it."
+msgstr ""
+
+#: lib/elements/fill.py:125
+msgid "shape is not valid.  This can happen if the border crosses over itself."
 msgstr ""
 
 #: lib/elements/satin_column.py:10
@@ -487,7 +505,7 @@ msgstr ""
 msgid "Install"
 msgstr ""
 
-#: lib/extensions/install.py:40 lib/extensions/params.py:379
+#: lib/extensions/install.py:40 lib/extensions/params.py:408
 msgid "Cancel"
 msgstr ""
 
@@ -495,25 +513,25 @@ msgstr ""
 msgid "Choose Inkscape directory"
 msgstr ""
 
-#: lib/extensions/install.py:64
+#: lib/extensions/install.py:71
 msgid "Inkscape add-on installation failed"
 msgstr ""
 
-#: lib/extensions/install.py:65
+#: lib/extensions/install.py:72
 msgid "Installation Failed"
 msgstr ""
 
-#: lib/extensions/install.py:69
+#: lib/extensions/install.py:76
 msgid ""
 "Inkscape add-on files have been installed.  Please restart Inkscape to "
 "load the new add-ons."
 msgstr ""
 
-#: lib/extensions/install.py:70
+#: lib/extensions/install.py:77
 msgid "Installation Completed"
 msgstr ""
 
-#: lib/extensions/install.py:107
+#: lib/extensions/install.py:114
 msgid "Ink/Stitch Add-ons Installer"
 msgstr ""
 
@@ -543,94 +561,104 @@ msgstr ""
 msgid "Please choose one or more commands to attach."
 msgstr ""
 
-#: lib/extensions/params.py:244
+#: lib/extensions/params.py:250
 msgid "These settings will be applied to 1 object."
 msgstr ""
 
-#: lib/extensions/params.py:246
+#: lib/extensions/params.py:252
 #, python-format
 msgid "These settings will be applied to %d objects."
 msgstr ""
 
-#: lib/extensions/params.py:249
+#: lib/extensions/params.py:255
 msgid ""
 "Some settings had different values across objects.  Select a value from "
 "the dropdown or enter a new one."
 msgstr ""
 
-#: lib/extensions/params.py:253
+#: lib/extensions/params.py:259
 #, python-format
 msgid "Disabling this tab will disable the following %d tabs."
 msgstr ""
 
-#: lib/extensions/params.py:255
+#: lib/extensions/params.py:261
 msgid "Disabling this tab will disable the following tab."
 msgstr ""
 
-#: lib/extensions/params.py:258
+#: lib/extensions/params.py:264
 #, python-format
 msgid "Enabling this tab will disable %s and vice-versa."
 msgstr ""
 
-#: lib/extensions/params.py:288
+#: lib/extensions/params.py:294
 msgid "Inkscape objects"
 msgstr ""
 
-#: lib/extensions/params.py:345
+#: lib/extensions/params.py:351
+msgid ""
+"Click to force this parameter to be saved when you click \"Apply and "
+"Quit\""
+msgstr ""
+
+#: lib/extensions/params.py:359
+msgid "This parameter will be saved when you click \"Apply and Quit\""
+msgstr ""
+
+#: lib/extensions/params.py:374
 msgid "Embroidery Params"
 msgstr ""
 
-#: lib/extensions/params.py:362
+#: lib/extensions/params.py:391
 msgid "Presets"
 msgstr ""
 
-#: lib/extensions/params.py:367
+#: lib/extensions/params.py:396
 msgid "Load"
 msgstr ""
 
-#: lib/extensions/params.py:370
+#: lib/extensions/params.py:399
 msgid "Add"
 msgstr ""
 
-#: lib/extensions/params.py:373
+#: lib/extensions/params.py:402
 msgid "Overwrite"
 msgstr ""
 
-#: lib/extensions/params.py:376
+#: lib/extensions/params.py:405
 msgid "Delete"
 msgstr ""
 
-#: lib/extensions/params.py:383
+#: lib/extensions/params.py:412
 msgid "Use Last Settings"
 msgstr ""
 
-#: lib/extensions/params.py:386
+#: lib/extensions/params.py:415
 msgid "Apply and Quit"
 msgstr ""
 
-#: lib/extensions/params.py:439
+#: lib/extensions/params.py:468
 msgid "Preview"
 msgstr ""
 
-#: lib/extensions/params.py:455
+#: lib/extensions/params.py:484
 msgid "Internal Error"
 msgstr ""
 
-#: lib/extensions/params.py:508
+#: lib/extensions/params.py:537
 msgid "Please enter or select a preset name first."
 msgstr ""
 
-#: lib/extensions/params.py:508 lib/extensions/params.py:514
-#: lib/extensions/params.py:542
+#: lib/extensions/params.py:537 lib/extensions/params.py:543
+#: lib/extensions/params.py:571
 msgid "Preset"
 msgstr ""
 
-#: lib/extensions/params.py:514
+#: lib/extensions/params.py:543
 #, python-format
 msgid "Preset \"%s\" not found."
 msgstr ""
 
-#: lib/extensions/params.py:542
+#: lib/extensions/params.py:571
 #, python-format
 msgid ""
 "Preset \"%s\" already exists.  Please use another name or press "
@@ -668,6 +696,13 @@ msgstr ""
 #. menu.
 #: lib/inx/utils.py:46
 msgid "Generate INX files"
+msgstr ""
+
+#. low-level file error.  %(error)s is (hopefully?) translated by
+#. the user's system automatically.
+#: lib/output.py:102
+#, python-format
+msgid "Error writing to %(path)s: %(error)s"
 msgstr ""
 
 #. command label at bottom of simulator window
