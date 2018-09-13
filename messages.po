@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-28 15:20-0400\n"
+"POT-Creation-Date: 2018-09-12 20:30-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -487,7 +487,7 @@ msgstr ""
 msgid "Install"
 msgstr ""
 
-#: lib/extensions/install.py:40 lib/extensions/params.py:380
+#: lib/extensions/install.py:40 lib/extensions/params.py:379
 msgid "Cancel"
 msgstr ""
 
@@ -576,35 +576,35 @@ msgstr ""
 msgid "Inkscape objects"
 msgstr ""
 
-#: lib/extensions/params.py:346
+#: lib/extensions/params.py:345
 msgid "Embroidery Params"
 msgstr ""
 
-#: lib/extensions/params.py:363
+#: lib/extensions/params.py:362
 msgid "Presets"
 msgstr ""
 
-#: lib/extensions/params.py:368
+#: lib/extensions/params.py:367
 msgid "Load"
 msgstr ""
 
-#: lib/extensions/params.py:371
+#: lib/extensions/params.py:370
 msgid "Add"
 msgstr ""
 
-#: lib/extensions/params.py:374
+#: lib/extensions/params.py:373
 msgid "Overwrite"
 msgstr ""
 
-#: lib/extensions/params.py:377
+#: lib/extensions/params.py:376
 msgid "Delete"
 msgstr ""
 
-#: lib/extensions/params.py:384
+#: lib/extensions/params.py:383
 msgid "Use Last Settings"
 msgstr ""
 
-#: lib/extensions/params.py:387
+#: lib/extensions/params.py:386
 msgid "Apply and Quit"
 msgstr ""
 
@@ -612,25 +612,25 @@ msgstr ""
 msgid "Preview"
 msgstr ""
 
-#: lib/extensions/params.py:458
+#: lib/extensions/params.py:455
 msgid "Internal Error"
 msgstr ""
 
-#: lib/extensions/params.py:511
+#: lib/extensions/params.py:508
 msgid "Please enter or select a preset name first."
 msgstr ""
 
-#: lib/extensions/params.py:511 lib/extensions/params.py:517
-#: lib/extensions/params.py:545
+#: lib/extensions/params.py:508 lib/extensions/params.py:514
+#: lib/extensions/params.py:542
 msgid "Preset"
 msgstr ""
 
-#: lib/extensions/params.py:517
+#: lib/extensions/params.py:514
 #, python-format
 msgid "Preset \"%s\" not found."
 msgstr ""
 
-#: lib/extensions/params.py:545
+#: lib/extensions/params.py:542
 #, python-format
 msgid ""
 "Preset \"%s\" already exists.  Please use another name or press "
@@ -659,10 +659,6 @@ msgstr ""
 msgid "Ink/Stitch Print"
 msgstr ""
 
-#: lib/extensions/simulate.py:29
-msgid "Embroidery Simulation"
-msgstr ""
-
 #: lib/extensions/zip.py:49
 msgid "No embroidery file formats selected."
 msgstr ""
@@ -674,52 +670,50 @@ msgstr ""
 msgid "Generate INX files"
 msgstr ""
 
-#: lib/simulator.py:40
-msgid "Speed up"
+#. command label at bottom of simulator window
+#: lib/simulator.py:12
+msgid "STITCH"
 msgstr ""
 
-#: lib/simulator.py:40
-msgid "Press + or arrow up to speed up"
+#: lib/simulator.py:12
+msgid "JUMP"
 msgstr ""
 
-#: lib/simulator.py:41
-msgid "Slow down"
+#: lib/simulator.py:12
+msgid "TRIM"
 msgstr ""
 
-#: lib/simulator.py:41
-msgid "Press - or arrow down to slow down"
+#: lib/simulator.py:12
+msgid "STOP"
 msgstr ""
 
-#: lib/simulator.py:42
+#: lib/simulator.py:12
+msgid "COLOR CHANGE"
+msgstr ""
+
+#: lib/simulator.py:49 lib/simulator.py:208 lib/simulator.py:215
 msgid "Pause"
 msgstr ""
 
-#: lib/simulator.py:42
-msgid "Press P to pause the animation"
-msgstr ""
-
-#: lib/simulator.py:43
+#: lib/simulator.py:51
 msgid "Restart"
 msgstr ""
 
-#: lib/simulator.py:43
-msgid "Press R to restart the animation"
-msgstr ""
-
-#: lib/simulator.py:44
+#: lib/simulator.py:53
 msgid "Quit"
 msgstr ""
 
-#: lib/simulator.py:44
-msgid "Press Q to close the simulation window"
+#: lib/simulator.py:168
+#, python-format
+msgid "Speed: %d stitches/sec"
 msgstr ""
 
-#: lib/simulator.py:169
-msgid "Stitch # "
+#: lib/simulator.py:211
+msgid "Start"
 msgstr ""
 
-#: lib/simulator.py:172
-msgid "Stitch #"
+#: lib/simulator.py:633
+msgid "Embroidery Simulation"
 msgstr ""
 
 #: lib/stitches/auto_fill.py:167
