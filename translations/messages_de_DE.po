@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-08-24 20:56-0400\n"
-"PO-Revision-Date: 2018-08-25 13:55\n"
+"PO-Revision-Date: 2018-09-08 14:03\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -168,7 +168,7 @@ msgstr "Erweitern"
 
 #: lib/elements/auto_fill.py:98
 msgid "Expand the shape before fill stitching, to compensate for gaps between shapes."
-msgstr "Erweitern Sie die Form vor dem Füllstich, um Lücken zwischen den Formen auszugleichen."
+msgstr "Erweitern der Form vor dem Füllstich, um Lücken zwischen den Formen auszugleichen."
 
 #: lib/elements/element.py:230
 #, python-format
@@ -201,7 +201,7 @@ msgstr "Rückwärtsfüllung (von rechts nach links)"
 
 #: lib/elements/fill.py:47
 msgid "The flip option can help you with routing your stitch path.  When you enable flip, stitching goes from right-to-left instead of left-to-right."
-msgstr "Die Flip-Option kann Ihnen bei der Reihenfolge des Stichpfads helfen. Wenn Umdrehen aktiviert wird, wird das Sticken von rechts nach links anstatt von links nach rechts ausgeführt."
+msgstr "Die Umkehr-Option kann bei der Reihenfolge des Stichpfads helfen. Wenn Umdrehen aktiviert wird, wird das Sticken von rechts nach links anstatt von links nach rechts ausgeführt."
 
 #: lib/elements/fill.py:56
 msgid "Spacing between rows"
@@ -213,7 +213,7 @@ msgstr "Abstand zwischen den Stichreihen."
 
 #: lib/elements/fill.py:70
 msgid "Maximum fill stitch length"
-msgstr "Maximale Füll-Stichlänge"
+msgstr "Maximale Füllstichlänge"
 
 #: lib/elements/fill.py:71
 msgid "The length of each stitch in a row.  Shorter stitch may be used at the start or end of a row."
@@ -221,11 +221,11 @@ msgstr "Die Stichlänge in einer Reihe. Ein kürzerer Stich kann am Anfang oder 
 
 #: lib/elements/fill.py:80
 msgid "Stagger rows this many times before repeating"
-msgstr "Wieviele Reihen bis sich das Muster wiederholt"
+msgstr "Reihenanzahl bis sich das Muster wiederholt"
 
 #: lib/elements/fill.py:81
 msgid "Setting this dictates how many rows apart the stitches will be before they fall in the same column position."
-msgstr "Die Einstellung bestimmt, wie viele Reihen die Stiche voneinander entfernt sind, bevor sie in die gleiche Kolumne münden."
+msgstr "Die Einstellung bestimmt, wie viele Reihen die Stiche voneinander entfernt sind, bevor sie in die gleiche Kolumneposition münden."
 
 #: lib/elements/fill.py:114
 #, python-format
@@ -1110,7 +1110,7 @@ msgstr "Brother Stichformat"
 
 #: templates/convert_to_satin.inx:3
 msgid "Convert Line to Satin"
-msgstr "Konvertierung der Linie zu Satinstich"
+msgstr "Konvertierung Linie zu Satinstich"
 
 #. This is used for the submenu under Extensions -> Ink/Stitch.  Translate this
 #. to your language's word for its language, e.g. "Español" for the spanish
@@ -1213,7 +1213,7 @@ msgstr "Simulation"
 
 #: templates/zip.inx:10
 msgid "Ink/Stitch: ZIP export multiple formats (.zip)"
-msgstr "Ink/Stitch: Export in mehrere Formate (.zip)"
+msgstr "Ink/Stitch: Export von mehreren Formaten (.zip)"
 
 #: templates/zip.inx:11
 msgid "Create a ZIP with multiple embroidery file formats using Ink/Stitch"
