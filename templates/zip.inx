@@ -7,7 +7,7 @@
     <output>
         <extension>.zip</extension>
         <mimetype>application/zip</mimetype>
-        <_filetypename>{{ _("Ink/Stitch: ZIP export multiple formats (.zip)") }}"</_filetypename>
+        <_filetypename>{{ _("Ink/Stitch: ZIP export multiple formats (.zip)") }}</_filetypename>
         <_filetypetooltip>{{ _("Create a ZIP with multiple embroidery file formats using Ink/Stitch") }}</_filetypetooltip>
         <dataloss>true</dataloss>
     </output>
