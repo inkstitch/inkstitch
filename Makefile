@@ -39,6 +39,10 @@ messages.po:
 	pybabel extract -o messages.po -F babel.conf --add-location=full --add-comments=l10n,L10n,L10N --sort-by-file --strip-comments -k N_ .
 	rm pyembroidery-format-descriptions.py
 
+.PHONY: clean
+clean:
+	rm -f messages.po pyembroidery-format-descriptions.py
+
 .PHONY: locales
 locales:
 	# message files will look like this:
