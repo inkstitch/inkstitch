@@ -1,4 +1,4 @@
-import sys
+import inkex
 
 from .base import InkstitchExtension
 from ..i18n import _

@@ -213,7 +213,6 @@ class SatinColumn(EmbroideryElement):
         paths_not_intersecting_two = [i for i in xrange(num_paths) if intersection_counts[i] != 2]
         num_not_intersecting_two = len(paths_not_intersecting_two)
 
-        rail_indices = []
         if num_not_intersecting_two == 2:
             # Great, we have two unambiguous rails.
             return paths_not_intersecting_two

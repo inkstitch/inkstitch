@@ -1,6 +1,5 @@
 import inkex
 import cubicsuperpath
-from shapely import geometry as shgeo
 
 from .base import InkstitchExtension
 from ..i18n import _
