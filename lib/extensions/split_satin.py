@@ -27,3 +27,4 @@ class SplitSatin(InkstitchExtension):
                 parent.remove(satin.node)
                 for new_satin in new_satins:
                     parent.insert(index, new_satin.node)
+                    index += 1
