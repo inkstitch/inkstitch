@@ -20,6 +20,7 @@ COLOR_CHANGE = 4
 
 class ControlPanel(wx.Panel):
     """"""
+
     def __init__(self, parent, *args, **kwargs):
         """"""
         self.parent = parent
@@ -150,8 +151,6 @@ class ControlPanel(wx.Panel):
         self.update_speed_text()
 
     def on_direction_button(self, event):
-        evtObj = event.GetEventObject()
-        lbl = evtObj.GetLabel()
         if self.direction == 1:
             self.animation_forward()
         else:
@@ -167,7 +166,6 @@ class ControlPanel(wx.Panel):
     def update_speed_text(self):
         self.speedST.SetLabel(_('Speed: %d stitches/sec') % (self.speed * self.direction))
         self.hbSizer2.Layout()
-
 
     def on_slider(self, event):
         stitch = event.GetEventObject().GetValue()
@@ -228,6 +226,7 @@ class ControlPanel(wx.Panel):
 
     def animation_restart(self, event):
         self.drawing_panel.restart()
+
 
 class DrawingPanel(wx.Panel):
     """"""
@@ -305,8 +304,6 @@ class DrawingPanel(wx.Panel):
 
         stitch_increment = int(self.speed * frame_time)
 
-        #print >> sys.stderr, time.time(), "animate", self.current_stitch, stitch_increment, self.last_frame_duration, frame_time
-
         self.set_current_stitch(self.current_stitch + self.direction * stitch_increment)
         wx.CallLater(int(1000 * frame_time), self.animate)
 
@@ -320,7 +317,6 @@ class DrawingPanel(wx.Panel):
         transform = canvas.GetTransform()
         transform.Translate(*self.pan)
         transform.Scale(self.zoom / self.PIXEL_DENSITY, self.zoom / self.PIXEL_DENSITY)
-        #transform.Translate(self.pan[0] * self.PIXEL_DENSITY, self.pan[1] * self.PIXEL_DENSITY)
         canvas.SetTransform(transform)
 
         stitch = 0
@@ -535,15 +531,14 @@ class DrawingPanel(wx.Panel):
         # Finally, compensate for that change in position:
         self.pan = (self.pan[0] - x_delta, self.pan[1] - y_delta)
 
-
         self.zoom *= zoom_delta
-
 
         self.Refresh()
 
 
 class SimulatorPanel(wx.Panel):
     """"""
+
     def __init__(self, parent, *args, **kwargs):
         """"""
         self.parent = parent
@@ -617,6 +612,7 @@ class EmbroiderySimulator(wx.Frame):
 
     def clear(self):
         self.simulator_panel.clear()
+
 
 def show_simulator(stitch_plan):
     app = wx.App()

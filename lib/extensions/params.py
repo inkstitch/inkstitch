@@ -4,20 +4,18 @@ import os
 import sys
 import json
 import traceback
-import time
 from threading import Thread, Event
 from copy import copy
 import wx
 from wx.lib.scrolledpanel import ScrolledPanel
 from collections import defaultdict
-from functools import partial
 from itertools import groupby
 
 from .base import InkstitchExtension
 from ..i18n import _
 from ..stitch_plan import patches_to_stitch_plan
 from ..elements import EmbroideryElement, Fill, AutoFill, Stroke, SatinColumn
-from ..utils import save_stderr, restore_stderr, get_resource_dir
+from ..utils import get_resource_dir
 from ..simulator import EmbroiderySimulator
 from ..commands import is_command
 
@@ -39,7 +37,7 @@ def load_presets():
         with open(presets_path(), 'r') as presets:
             presets = json.load(presets)
             return presets
-    except:
+    except IOError:
         return {}
 
 
@@ -64,14 +62,14 @@ def delete_preset(name):
     save_presets(presets)
 
 
-def confirm_dialog(parent, question, caption = 'ink/stitch'):
+def confirm_dialog(parent, question, caption='ink/stitch'):
     dlg = wx.MessageDialog(parent, question, caption, wx.YES_NO | wx.ICON_QUESTION)
     result = dlg.ShowModal() == wx.ID_YES
     dlg.Destroy()
     return result
 
 
-def info_dialog(parent, message, caption = 'ink/stitch'):
+def info_dialog(parent, message, caption='ink/stitch'):
     dlg = wx.MessageDialog(parent, message, caption, wx.OK | wx.ICON_INFORMATION)
     dlg.ShowModal()
     dlg.Destroy()
@@ -298,12 +296,12 @@ class ParamsTab(ScrolledPanel):
         self.description.SetLabel(self.description_text)
         self.description_container = box
         self.Bind(wx.EVT_SIZE, self.resized)
-        sizer.Add(self.description, proportion=0, flag=wx.EXPAND|wx.ALL, border=5)
+        sizer.Add(self.description, proportion=0, flag=wx.EXPAND | wx.ALL, border=5)
         box.Add(sizer, proportion=0, flag=wx.ALL, border=5)
 
         if self.toggle:
             toggle_sizer = wx.BoxSizer(wx.HORIZONTAL)
-            toggle_sizer.Add(self.create_change_indicator(self.toggle.name), proportion = 0, flag=wx.ALIGN_CENTER_VERTICAL|wx.RIGHT, border=5)
+            toggle_sizer.Add(self.create_change_indicator(self.toggle.name), proportion=0, flag=wx.ALIGN_CENTER_VERTICAL | wx.RIGHT, border=5)
             toggle_sizer.Add(self.toggle_checkbox, proportion=0, flag=wx.ALIGN_CENTER_VERTICAL)
             box.Add(toggle_sizer, proportion=0, flag=wx.BOTTOM, border=10)
 
@@ -312,7 +310,7 @@ class ParamsTab(ScrolledPanel):
 
             description = wx.StaticText(self, label=param.description)
             description.SetToolTip(param.tooltip)
-            self.settings_grid.Add(description, proportion=1, flag=wx.EXPAND|wx.RIGHT|wx.ALIGN_CENTER_VERTICAL|wx.TOP, border=5)
+            self.settings_grid.Add(description, proportion=1, flag=wx.EXPAND | wx.RIGHT | wx.ALIGN_CENTER_VERTICAL | wx.TOP, border=5)
 
             if param.type == 'boolean':
 
@@ -336,7 +334,7 @@ class ParamsTab(ScrolledPanel):
 
             self.param_inputs[param.name] = input
 
-            self.settings_grid.Add(input, proportion=1, flag=wx.ALIGN_CENTER_VERTICAL|wx.EXPAND|wx.LEFT, border=40)
+            self.settings_grid.Add(input, proportion=1, flag=wx.ALIGN_CENTER_VERTICAL | wx.EXPAND | wx.LEFT, border=40)
             self.settings_grid.Add(wx.StaticText(self, label=param.unit or ""), proportion=1, flag=wx.ALIGN_CENTER_VERTICAL)
 
         self.inputs_to_params = {v: k for k, v in self.param_inputs.iteritems()}
@@ -364,6 +362,7 @@ class ParamsTab(ScrolledPanel):
             self.on_change_hook(self)
 
 # end of class SatinPane
+
 
 class SettingsFrame(wx.Frame):
     def __init__(self, *args, **kwargs):
@@ -471,14 +470,14 @@ class SettingsFrame(wx.Frame):
                                                            stitch_plan=stitch_plan,
                                                            on_close=self.simulate_window_closed,
                                                            target_duration=5)
-            except:
+            except Exception:
                 error = traceback.format_exc()
 
                 try:
                     # a window may have been created, so we need to destroy it
                     # or the app will never exit
-                    wx.Window.FindWindowByName("Preview").Destroy()
-                except:
+                    wx.Window.FindWindowByName(_("Preview")).Destroy()
+                except Exception:
                     pass
 
                 info_dialog(self, error, _("Internal Error"))
@@ -517,7 +516,7 @@ class SettingsFrame(wx.Frame):
                 patches.extend(copy(node).embroider(None))
         except SystemExit:
             raise
-        except:
+        except Exception:
             # Ignore errors.  This can be things like incorrect paths for
             # satins or division by zero caused by incorrect param values.
             pass
@@ -578,7 +577,6 @@ class SettingsFrame(wx.Frame):
     def overwrite_preset(self, event):
         self.add_preset(event, overwrite=True)
 
-
     def _load_preset(self, preset_name):
         preset = self.check_and_load_preset(preset_name)
         if not preset:
@@ -586,7 +584,6 @@ class SettingsFrame(wx.Frame):
 
         for tab in self.tabs:
             tab.load_preset(preset)
-
 
     def load_preset(self, event):
         preset_name = self.get_preset_name()
@@ -596,7 +593,6 @@ class SettingsFrame(wx.Frame):
         self._load_preset(preset_name)
 
         event.Skip()
-
 
     def delete_preset(self, event):
         preset_name = self.get_preset_name()
@@ -649,29 +645,31 @@ class SettingsFrame(wx.Frame):
     def __do_layout(self):
         # begin wxGlade: MyFrame.__do_layout
         sizer_1 = wx.BoxSizer(wx.VERTICAL)
-        #self.sizer_3_staticbox.Lower()
+        # self.sizer_3_staticbox.Lower()
         sizer_2 = wx.StaticBoxSizer(self.presets_box, wx.HORIZONTAL)
         sizer_3 = wx.BoxSizer(wx.HORIZONTAL)
         for tab in self.tabs:
             self.notebook.AddPage(tab, tab.name)
-        sizer_1.Add(self.notebook, 1, wx.EXPAND|wx.LEFT|wx.TOP|wx.RIGHT, 10)
-        sizer_2.Add(self.preset_chooser, 1, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 5)
-        sizer_2.Add(self.load_preset_button, 0, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 5)
-        sizer_2.Add(self.add_preset_button, 0, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 5)
-        sizer_2.Add(self.overwrite_preset_button, 0, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 5)
-        sizer_2.Add(self.delete_preset_button, 0, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 5)
-        sizer_1.Add(sizer_2, 0, flag=wx.EXPAND|wx.ALL, border=10)
-        sizer_3.Add(self.cancel_button, 0, wx.ALIGN_RIGHT|wx.RIGHT, 5)
-        sizer_3.Add(self.use_last_button, 0, wx.ALIGN_RIGHT|wx.RIGHT|wx.BOTTOM, 5)
-        sizer_3.Add(self.apply_button, 0, wx.ALIGN_RIGHT|wx.RIGHT|wx.BOTTOM, 5)
+        sizer_1.Add(self.notebook, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
+        sizer_2.Add(self.preset_chooser, 1, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 5)
+        sizer_2.Add(self.load_preset_button, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 5)
+        sizer_2.Add(self.add_preset_button, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 5)
+        sizer_2.Add(self.overwrite_preset_button, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 5)
+        sizer_2.Add(self.delete_preset_button, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 5)
+        sizer_1.Add(sizer_2, 0, flag=wx.EXPAND | wx.ALL, border=10)
+        sizer_3.Add(self.cancel_button, 0, wx.ALIGN_RIGHT | wx.RIGHT, 5)
+        sizer_3.Add(self.use_last_button, 0, wx.ALIGN_RIGHT | wx.RIGHT | wx.BOTTOM, 5)
+        sizer_3.Add(self.apply_button, 0, wx.ALIGN_RIGHT | wx.RIGHT | wx.BOTTOM, 5)
         sizer_1.Add(sizer_3, 0, wx.ALIGN_RIGHT, 0)
         self.SetSizer(sizer_1)
         sizer_1.Fit(self)
         self.Layout()
         # end wxGlade
 
+
 class NoValidObjects(Exception):
     pass
+
 
 class Params(InkstitchExtension):
     def __init__(self, *args, **kwargs):
@@ -728,6 +726,41 @@ class Params(InkstitchExtension):
 
         return groupby(sorted(params, key=by_group_and_sort_index), by_group)
 
+    def sort_tabs(self, tabs):
+        def tab_sort_key(tab):
+            parent = tab.parent_tab or tab
+
+            sort_key = (
+                # For Stroke and SatinColumn, place the one that's
+                # enabled first.  Place dependent tabs first too.
+                parent.toggle and parent.toggle_checkbox.IsChecked(),
+
+                # If multiple tabs are enabled, make sure dependent
+                # tabs are grouped with the parent.
+                parent,
+
+                # Within parent/dependents, put the parent first.
+                tab == parent
+            )
+
+            return sort_key
+
+        tabs.sort(key=tab_sort_key, reverse=True)
+
+    def pair_tabs(self, tabs):
+        for tab in tabs:
+            if tab.toggle and tab.toggle.inverse:
+                for other_tab in tabs:
+                    if other_tab != tab and other_tab.toggle.name == tab.toggle.name:
+                        tab.pair(other_tab)
+                        other_tab.pair(tab)
+
+    def assign_parents(self, tabs, parent_tab):
+        for tab in tabs:
+            if tab != parent_tab:
+                parent_tab.add_dependent_tab(tab)
+                tab.set_parent_tab(parent_tab)
+
     def create_tabs(self, parent):
         tabs = []
         nodes_by_class = self.get_nodes_by_class()
@@ -744,48 +777,20 @@ class Params(InkstitchExtension):
             parent_tab = None
             new_tabs = []
             for group, params in self.group_params(params):
-                tab = ParamsTab(parent, id=wx.ID_ANY, name=group or cls.element_name, params=list(params), nodes=nodes)
+                tab_name = group or cls.element_name
+                tab = ParamsTab(parent, id=wx.ID_ANY, name=tab_name, params=list(params), nodes=nodes)
                 new_tabs.append(tab)
 
                 if group is None:
                     parent_tab = tab
 
-            for tab in new_tabs:
-                if tab != parent_tab:
-                    parent_tab.add_dependent_tab(tab)
-                    tab.set_parent_tab(parent_tab)
-
+            self.assign_parents(new_tabs, parent_tab)
             tabs.extend(new_tabs)
 
-        for tab in tabs:
-            if tab.toggle and tab.toggle.inverse:
-                for other_tab in tabs:
-                    if other_tab != tab and other_tab.toggle.name == tab.toggle.name:
-                        tab.pair(other_tab)
-                        other_tab.pair(tab)
-
-        def tab_sort_key(tab):
-            parent = tab.parent_tab or tab
-
-            sort_key = (
-                        # For Stroke and SatinColumn, place the one that's
-                        # enabled first.  Place dependent tabs first too.
-                        parent.toggle and parent.toggle_checkbox.IsChecked(),
-
-                        # If multiple tabs are enabled, make sure dependent
-                        # tabs are grouped with the parent.
-                        parent,
-
-                        # Within parent/dependents, put the parent first.
-                        tab == parent
-                       )
-
-            return sort_key
-
-        tabs.sort(key=tab_sort_key, reverse=True)
+        self.pair_tabs(tabs)
+        self.sort_tabs(tabs)
 
         return tabs
-
 
     def cancel(self):
         self.cancelled = True
