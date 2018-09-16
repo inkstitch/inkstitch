@@ -47,10 +47,7 @@ def add_ties(stitch_plan):
         for i, stitch in enumerate(color_block.stitches):
             is_special = stitch.trim or stitch.jump or stitch.color_change or stitch.stop
 
-            # see stop.py for an explanation of the fake color change
-            is_fake = stitch.fake_color_change
-
-            if is_special and not is_fake and not need_tie_in:
+            if is_special and not need_tie_in:
                 add_tie_off(new_stitches)
                 new_stitches.append(stitch)
                 need_tie_in = True
