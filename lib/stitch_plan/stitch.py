@@ -2,7 +2,7 @@ from ..utils.geometry import Point
 
 
 class Stitch(Point):
-    def __init__(self, x, y, color=None, jump=False, stop=False, trim=False, color_change=False, fake_color_change=False, no_ties=False):
+    def __init__(self, x, y=None, color=None, jump=False, stop=False, trim=False, color_change=False, fake_color_change=False, no_ties=False):
         self.x = x
         self.y = y
         self.color = color
@@ -12,6 +12,12 @@ class Stitch(Point):
         self.color_change = color_change
         self.fake_color_change = fake_color_change
         self.no_ties = no_ties
+
+        # Allow creating a Stitch from a Point
+        if isinstance(x, Point):
+            point = x
+            self.x = point.x
+            self.y = point.y
 
     def __repr__(self):
         return "Stitch(%s, %s, %s, %s, %s, %s, %s, %s%s)" % (self.x,
