@@ -80,7 +80,10 @@ def convert_length(length):
 
 @cache
 def get_viewbox(svg):
-    return svg.get('viewBox').strip().replace(',', ' ').split()
+    viewbox = svg.get('viewBox')
+    if viewbox is None:
+        viewbox = "0 0 0 0"
+    return viewbox.strip().replace(',', ' ').split()
 
 
 @cache
