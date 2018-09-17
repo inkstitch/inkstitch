@@ -93,7 +93,7 @@ class ControlPanel(wx.Panel):
         hbSizer2.Add(self.restartBtn, 0, wx.EXPAND | wx.ALL, 2)
         hbSizer2.Add(self.quitBtn, 0, wx.EXPAND | wx.ALL, 2)
         vbSizer.Add(hbSizer2, 0, wx.EXPAND | wx.ALL, 3)
-        self.SetSizer(vbSizer)
+        self.SetSizerAndFit(vbSizer)
 
         # Keyboard Shortcuts
         shortcut_keys = [
@@ -291,6 +291,9 @@ class DrawingPanel(wx.Panel):
         kwargs['style'] = wx.BORDER_SUNKEN
         wx.Panel.__init__(self, *args, **kwargs)
 
+        # Drawing panel can really be any size, but without this wxpython likes
+        # to allow the status bar and control panel to get squished.
+        self.SetMinSize((100, 100))
         self.SetBackgroundColour('#FFFFFF')
         self.SetDoubleBuffered(True)
 
@@ -599,7 +602,7 @@ class SimulatorPanel(wx.Panel):
         vbSizer = wx.BoxSizer(wx.VERTICAL)
         vbSizer.Add(self.dp, 1, wx.EXPAND | wx.ALL, 2)
         vbSizer.Add(self.cp, 0, wx.EXPAND | wx.ALL, 2)
-        self.SetSizer(vbSizer)
+        self.SetSizerAndFit(vbSizer)
 
     def quit(self):
         self.parent.quit()
@@ -623,16 +626,26 @@ class EmbroiderySimulator(wx.Frame):
         stitch_plan = kwargs.pop('stitch_plan', None)
         stitches_per_second = kwargs.pop('stitches_per_second', 16)
         target_duration = kwargs.pop('target_duration', None)
+        size = kwargs.get('size', (0, 0))
         wx.Frame.__init__(self, *args, **kwargs)
         self.statusbar = self.CreateStatusBar(3)
         self.statusbar.SetStatusWidths([200, 150, -1])
 
+        sizer = wx.BoxSizer(wx.HORIZONTAL)
         self.simulator_panel = SimulatorPanel(self,
                                               stitch_plan=stitch_plan,
                                               target_duration=target_duration,
                                               stitches_per_second=stitches_per_second)
+        sizer.Add(self.simulator_panel, 1, wx.EXPAND)
+
+        # self.SetSizerAndFit() sets the minimum size so that the buttons don't
+        # get squished.  But it then also shrinks the window down to that size.
+        self.SetSizerAndFit(sizer)
+
+        # Therefore we have to reapply the size that the caller asked for.
+        self.SetSize(size)
+
         self.Bind(wx.EVT_CLOSE, self.on_close)
-        self.SetSizeHints(700, 400, -1, -1, -1, -1)
 
     def quit(self):
         self.Close()
