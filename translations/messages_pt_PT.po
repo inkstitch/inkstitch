@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-24 20:56-0400\n"
-"PO-Revision-Date: 2018-09-08 14:03\n"
+"POT-Creation-Date: 2018-09-18 00:46+0000\n"
+"PO-Revision-Date: 2018-09-18 01:11\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Generated-By: Babel 2.6.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: inkstitch\n"
@@ -105,8 +105,8 @@ msgid "%(command)s: %(description)s"
 msgstr ""
 
 #: lib/elements/auto_fill.py:11
-msgid "Auto-Fill"
-msgstr "Auto-preenchimento"
+msgid "AutoFill"
+msgstr ""
 
 #: lib/elements/auto_fill.py:14
 msgid "Automatically routed fill stitching"
@@ -170,9 +170,21 @@ msgstr ""
 msgid "Expand the shape before fill stitching, to compensate for gaps between shapes."
 msgstr ""
 
-#: lib/elements/element.py:230
+#: lib/elements/element.py:202
+#, python-format
+msgid "Object %(id)s has an empty 'd' attribute.  Please delete this object from your document."
+msgstr ""
+
+#: lib/elements/element.py:234
 #, python-format
 msgid "%(id)s has more than one command of type '%(command)s' linked to it"
+msgstr ""
+
+#. used when showing an error message to the user such as "satin column: One or
+#. more of the rungs doesn't
+#. intersect both rails."
+#: lib/elements/element.py:273
+msgid "error:"
 msgstr ""
 
 #: lib/elements/fill.py:12
@@ -230,6 +242,10 @@ msgstr ""
 #: lib/elements/fill.py:114
 #, python-format
 msgid "shape %s is so small that it cannot be filled with stitches.  Please make it bigger or delete it."
+msgstr ""
+
+#: lib/elements/fill.py:125
+msgid "shape is not valid.  This can happen if the border crosses over itself."
 msgstr ""
 
 #: lib/elements/satin_column.py:10
@@ -443,7 +459,7 @@ msgstr ""
 msgid "Install"
 msgstr "Instalar"
 
-#: lib/extensions/install.py:40 lib/extensions/params.py:380
+#: lib/extensions/install.py:40 lib/extensions/params.py:408
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -451,23 +467,23 @@ msgstr "Cancelar"
 msgid "Choose Inkscape directory"
 msgstr ""
 
-#: lib/extensions/install.py:64
+#: lib/extensions/install.py:71
 msgid "Inkscape add-on installation failed"
 msgstr ""
 
-#: lib/extensions/install.py:65
+#: lib/extensions/install.py:72
 msgid "Installation Failed"
 msgstr "Instalação falhou"
 
-#: lib/extensions/install.py:69
+#: lib/extensions/install.py:76
 msgid "Inkscape add-on files have been installed.  Please restart Inkscape to load the new add-ons."
 msgstr ""
 
-#: lib/extensions/install.py:70
+#: lib/extensions/install.py:77
 msgid "Installation Completed"
 msgstr "Instalação concluída"
 
-#: lib/extensions/install.py:104
+#: lib/extensions/install.py:114
 msgid "Ink/Stitch Add-ons Installer"
 msgstr ""
 
@@ -497,92 +513,100 @@ msgstr ""
 msgid "Please choose one or more commands to attach."
 msgstr ""
 
-#: lib/extensions/params.py:244
+#: lib/extensions/params.py:250
 msgid "These settings will be applied to 1 object."
 msgstr "Definições serão aplicadas a 1 objecto."
 
-#: lib/extensions/params.py:246
+#: lib/extensions/params.py:252
 #, python-format
 msgid "These settings will be applied to %d objects."
 msgstr "Definições serão aplicadas a %d objectos."
 
-#: lib/extensions/params.py:249
+#: lib/extensions/params.py:255
 msgid "Some settings had different values across objects.  Select a value from the dropdown or enter a new one."
 msgstr "Algumas definições com valores diferentes entre objectos.  Seleccione um valor da lista ou digite novo valor."
 
-#: lib/extensions/params.py:253
+#: lib/extensions/params.py:259
 #, python-format
 msgid "Disabling this tab will disable the following %d tabs."
 msgstr "Desactivar esta aba desactivará as seguintes %d abas."
 
-#: lib/extensions/params.py:255
+#: lib/extensions/params.py:261
 msgid "Disabling this tab will disable the following tab."
 msgstr "Desactivar esta aba desactivará a seguinte aba."
 
-#: lib/extensions/params.py:258
+#: lib/extensions/params.py:264
 #, python-format
 msgid "Enabling this tab will disable %s and vice-versa."
 msgstr "Activar esta aba desactivará %s e vice-versa."
 
-#: lib/extensions/params.py:288
+#: lib/extensions/params.py:294
 msgid "Inkscape objects"
 msgstr "Objectos do Inkscape"
 
-#: lib/extensions/params.py:346
+#: lib/extensions/params.py:351
+msgid "Click to force this parameter to be saved when you click \"Apply and Quit\""
+msgstr ""
+
+#: lib/extensions/params.py:359
+msgid "This parameter will be saved when you click \"Apply and Quit\""
+msgstr ""
+
+#: lib/extensions/params.py:374
 msgid "Embroidery Params"
 msgstr "Parametros de Bordado"
 
-#: lib/extensions/params.py:363
+#: lib/extensions/params.py:391
 msgid "Presets"
 msgstr "Pré-definições"
 
-#: lib/extensions/params.py:368
+#: lib/extensions/params.py:396
 msgid "Load"
 msgstr "Carregar"
 
-#: lib/extensions/params.py:371
+#: lib/extensions/params.py:399
 msgid "Add"
 msgstr "Adicionar"
 
-#: lib/extensions/params.py:374
+#: lib/extensions/params.py:402
 msgid "Overwrite"
 msgstr "Substituir"
 
-#: lib/extensions/params.py:377
+#: lib/extensions/params.py:405
 msgid "Delete"
 msgstr "Eliminar"
 
-#: lib/extensions/params.py:384
+#: lib/extensions/params.py:412
 msgid "Use Last Settings"
 msgstr "Usar ultimas definições"
 
-#: lib/extensions/params.py:387
+#: lib/extensions/params.py:415
 msgid "Apply and Quit"
 msgstr "Aplicar e Sair"
 
-#: lib/extensions/params.py:439
+#: lib/extensions/params.py:468
 msgid "Preview"
 msgstr "Pré-visualização"
 
-#: lib/extensions/params.py:458
+#: lib/extensions/params.py:484
 msgid "Internal Error"
 msgstr "Erro Interno"
 
-#: lib/extensions/params.py:511
+#: lib/extensions/params.py:537
 msgid "Please enter or select a preset name first."
 msgstr "Seleccione ou insira uma pré-definição primeiro."
 
-#: lib/extensions/params.py:511 lib/extensions/params.py:517
-#: lib/extensions/params.py:545
+#: lib/extensions/params.py:537 lib/extensions/params.py:543
+#: lib/extensions/params.py:571
 msgid "Preset"
 msgstr "Pré-definição"
 
-#: lib/extensions/params.py:517
+#: lib/extensions/params.py:543
 #, python-format
 msgid "Preset \"%s\" not found."
 msgstr "Pré-definição \"%s\" não encontrada."
 
-#: lib/extensions/params.py:545
+#: lib/extensions/params.py:571
 #, python-format
 msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
 msgstr "Pré-definição \"%s\" já existe. Use outro nome ou clique \"Substituir\""
@@ -604,10 +628,6 @@ msgstr ""
 msgid "Ink/Stitch Print"
 msgstr ""
 
-#: lib/extensions/simulate.py:29
-msgid "Embroidery Simulation"
-msgstr "Simulação de Bordado"
-
 #: lib/extensions/zip.py:49
 msgid "No embroidery file formats selected."
 msgstr ""
@@ -619,53 +639,58 @@ msgstr ""
 msgid "Generate INX files"
 msgstr ""
 
-#: lib/simulator.py:40
-msgid "Speed up"
+#. low-level file error.  %(error)s is (hopefully?) translated by
+#. the user's system automatically.
+#: lib/output.py:102
+#, python-format
+msgid "Error writing to %(path)s: %(error)s"
 msgstr ""
 
-#: lib/simulator.py:40
-msgid "Press + or arrow up to speed up"
+#. command label at bottom of simulator window
+#: lib/simulator.py:12
+msgid "STITCH"
 msgstr ""
 
-#: lib/simulator.py:41
-msgid "Slow down"
+#: lib/simulator.py:12
+msgid "JUMP"
 msgstr ""
 
-#: lib/simulator.py:41
-msgid "Press - or arrow down to slow down"
+#: lib/simulator.py:12
+msgid "TRIM"
 msgstr ""
 
-#: lib/simulator.py:42
+#: lib/simulator.py:12
+msgid "STOP"
+msgstr ""
+
+#: lib/simulator.py:12
+msgid "COLOR CHANGE"
+msgstr ""
+
+#: lib/simulator.py:49 lib/simulator.py:208 lib/simulator.py:215
 msgid "Pause"
 msgstr ""
 
-#: lib/simulator.py:42
-msgid "Press P to pause the animation"
-msgstr ""
-
-#: lib/simulator.py:43
+#: lib/simulator.py:51
 msgid "Restart"
 msgstr ""
 
-#: lib/simulator.py:43
-msgid "Press R to restart the animation"
-msgstr ""
-
-#: lib/simulator.py:44
+#: lib/simulator.py:53
 msgid "Quit"
 msgstr ""
 
-#: lib/simulator.py:44
-msgid "Press Q to close the simulation window"
+#: lib/simulator.py:168
+#, python-format
+msgid "Speed: %d stitches/sec"
 msgstr ""
 
-#: lib/simulator.py:169
-msgid "Stitch # "
+#: lib/simulator.py:211
+msgid "Start"
 msgstr ""
 
-#: lib/simulator.py:172
-msgid "Stitch #"
-msgstr ""
+#: lib/simulator.py:633
+msgid "Embroidery Simulation"
+msgstr "Simulação de Bordado"
 
 #: lib/stitches/auto_fill.py:167
 msgid "Unable to autofill.  This most often happens because your shape is made up of multiple sections that aren't connected."
