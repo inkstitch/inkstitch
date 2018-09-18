@@ -30,7 +30,7 @@ matrix:
     env: BUILD=osx
     if: type != cron AND (tag =~ ^v[0-9.]+$ OR branch != master)
 
-  - language: generic
+  - language: python
     sudo: false
     env: CROWDIN=true
     if: type = cron
