@@ -159,7 +159,7 @@ script:
       wget https://downloads.crowdin.com/cli/v2/crowdin-cli.zip
       unzip -j crowdin-cli.zip
 
-      pip install ./pyembroidery
+      pip install pybabel ./pyembroidery
       make messages.po
       java -jar crowdin-cli.jar upload -b master
       make clean
