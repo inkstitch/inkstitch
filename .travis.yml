@@ -162,7 +162,6 @@ script:
       pip install flask==0.* jinja2 Babel ./pyembroidery
       make messages.po
       java -jar crowdin-cli.jar upload -b master
-      make clean
 
       java -jar crowdin-cli.jar pull -b master
       # Try to only commit if translations changed.  Crowdin will update all
