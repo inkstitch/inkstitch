@@ -30,7 +30,7 @@ matrix:
     env: BUILD=osx
     if: type != cron AND (tag =~ ^v[0-9.]+$ OR branch != master)
 
-  - language: java
+  - language: generic
     sudo: false
     env: CROWDIN=true
     if: type = cron
@@ -159,6 +159,7 @@ script:
       wget https://downloads.crowdin.com/cli/v2/crowdin-cli.zip
       unzip -j crowdin-cli.zip
 
+      pip install ./pyembroidery
       make messages.po
       java -jar crowdin-cli.jar upload -b master
       make clean
