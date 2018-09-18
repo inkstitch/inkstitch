@@ -41,36 +41,28 @@ class ControlPanel(wx.Panel):
         # Widgets
         self.btnMinus = wx.Button(self, -1, label='-')
         self.btnMinus.Bind(wx.EVT_BUTTON, self.animation_slow_down)
-        self.btnMinus.Bind(wx.EVT_ENTER_WINDOW, self.animation_slow_down_info)
-        self.btnMinus.Bind(wx.EVT_LEAVE_WINDOW, self.remove_statusbar_info)
+        self.btnMinus.SetToolTip(_('Slow down (arrow down)'))
         self.btnPlus = wx.Button(self, -1, label='+')
         self.btnPlus.Bind(wx.EVT_BUTTON, self.animation_speed_up)
-        self.btnPlus.Bind(wx.EVT_ENTER_WINDOW, self.animation_speed_up_info)
-        self.btnPlus.Bind(wx.EVT_LEAVE_WINDOW, self.remove_statusbar_info)
+        self.btnPlus.SetToolTip(_('Speed up (arrow up)'))
         self.btnBackwardStitch = wx.Button(self, -1, label='<|')
         self.btnBackwardStitch.Bind(wx.EVT_BUTTON, self.animation_one_stitch_backward)
-        self.btnBackwardStitch.Bind(wx.EVT_ENTER_WINDOW, self.animation_one_stitch_backward_info)
-        self.btnBackwardStitch.Bind(wx.EVT_LEAVE_WINDOW, self.remove_statusbar_info)
+        self.btnBackwardStitch.SetToolTip(_('Go on step backward (-)'))
         self.btnForwardStitch = wx.Button(self, -1, label='|>')
         self.btnForwardStitch.Bind(wx.EVT_BUTTON, self.animation_one_stitch_forward)
-        self.btnForwardStitch.Bind(wx.EVT_ENTER_WINDOW, self.animation_one_stitch_forward_info)
-        self.btnForwardStitch.Bind(wx.EVT_LEAVE_WINDOW, self.remove_statusbar_info)
+        self.btnForwardStitch.SetToolTip(_('Go on step forward (+)'))
         self.directionBtn = wx.Button(self, -1, label='<<')
         self.directionBtn.Bind(wx.EVT_BUTTON, self.on_direction_button)
-        self.directionBtn.Bind(wx.EVT_ENTER_WINDOW, self.animation_direction_info)
-        self.directionBtn.Bind(wx.EVT_LEAVE_WINDOW, self.remove_statusbar_info)
+        self.directionBtn.SetToolTip(_('Switch direction (arrow left | arrow right)'))
         self.pauseBtn = wx.Button(self, -1, label=_('Pause'))
         self.pauseBtn.Bind(wx.EVT_BUTTON, self.on_pause_start_button)
-        self.pauseBtn.Bind(wx.EVT_ENTER_WINDOW, self.animation_pause_info)
-        self.pauseBtn.Bind(wx.EVT_LEAVE_WINDOW, self.remove_statusbar_info)
+        self.pauseBtn.SetToolTip(_('Pause (P)'))
         self.restartBtn = wx.Button(self, -1, label=_('Restart'))
         self.restartBtn.Bind(wx.EVT_BUTTON, self.animation_restart)
-        self.restartBtn.Bind(wx.EVT_ENTER_WINDOW, self.animation_restart_info)
-        self.restartBtn.Bind(wx.EVT_LEAVE_WINDOW, self.remove_statusbar_info)
+        self.restartBtn.SetToolTip(_('Restart (R)'))
         self.quitBtn = wx.Button(self, -1, label=_('Quit'))
         self.quitBtn.Bind(wx.EVT_BUTTON, self.animation_quit)
-        self.quitBtn.Bind(wx.EVT_ENTER_WINDOW, self.animation_quit_info)
-        self.quitBtn.Bind(wx.EVT_LEAVE_WINDOW, self.remove_statusbar_info)
+        self.quitBtn.SetToolTip(_('Quit (Q)'))
         self.slider = wx.Slider(self, -1, value=1, minValue=1, maxValue=2,
                                 style=wx.SL_HORIZONTAL | wx.SL_LABELS)
         self.slider.Bind(wx.EVT_SLIDER, self.on_slider)
@@ -149,33 +141,6 @@ class ControlPanel(wx.Panel):
             self.set_speed(int(self.num_stitches / float(self.target_duration)))
         else:
             self.set_speed(self.target_stitches_per_second)
-
-    def animation_slow_down_info(self, event):
-        self.statusbar.SetStatusText(_('Press arrow down to slow down.'), 2)
-
-    def animation_speed_up_info(self, event):
-        self.statusbar.SetStatusText(_('Press arrow up to speed up.'), 2)
-
-    def animation_one_stitch_backward_info(self, event):
-        self.statusbar.SetStatusText(_('Press minus (-) to go one stitch backward.'), 2)
-
-    def animation_one_stitch_forward_info(self, event):
-        self.statusbar.SetStatusText(_('Press plus (+) to go one stitch forward.'), 2)
-
-    def animation_direction_info(self, event):
-        self.statusbar.SetStatusText(_('Use arrow left or arrow right to change the direction.'), 2)
-
-    def animation_pause_info(self, event):
-        self.statusbar.SetStatusText(_('Press P to pause the animation.'), 2)
-
-    def animation_restart_info(self, event):
-        self.statusbar.SetStatusText(_('Press R to restart the animation'), 2)
-
-    def animation_quit_info(self, event):
-        self.statusbar.SetStatusText(_('Press Q to close the simulator window.'), 2)
-
-    def remove_statusbar_info(self, event):
-        self.statusbar.SetStatusText('', 2)
 
     def animation_forward(self, event=None):
         self.directionBtn.SetLabel("<<")
@@ -628,8 +593,8 @@ class EmbroiderySimulator(wx.Frame):
         target_duration = kwargs.pop('target_duration', None)
         size = kwargs.get('size', (0, 0))
         wx.Frame.__init__(self, *args, **kwargs)
-        self.statusbar = self.CreateStatusBar(3)
-        self.statusbar.SetStatusWidths([200, 150, -1])
+        self.statusbar = self.CreateStatusBar(2)
+        self.statusbar.SetStatusWidths([250, -1])
 
         sizer = wx.BoxSizer(wx.HORIZONTAL)
         self.simulator_panel = SimulatorPanel(self,
