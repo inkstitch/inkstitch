@@ -44,7 +44,7 @@ def iterate_inx_locales():
         # generate menu items for this language in Inkscape's "Extensions"
         # menu.
         magic_string = N_("Generate INX files")
-        translated_magic_string = translation.gettext(magic_string)
+        translated_magic_string = translation.ugettext(magic_string)
 
         if translated_magic_string != magic_string or locale == "en_US":
             current_translation = translation
