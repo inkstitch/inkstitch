@@ -252,16 +252,16 @@ class ParamsTab(ScrolledPanel):
             description = _("These settings will be applied to %d objects.") % len(self.nodes)
 
         if any(len(param.values) > 1 for param in self.params):
-            description += "\n • " + _("Some settings had different values across objects.  Select a value from the dropdown or enter a new one.")
+            description += u"\n • " + _("Some settings had different values across objects.  Select a value from the dropdown or enter a new one.")
 
         if self.dependent_tabs:
             if len(self.dependent_tabs) == 1:
-                description += "\n • " + _("Disabling this tab will disable the following %d tabs.") % len(self.dependent_tabs)
+                description += u"\n • " + _("Disabling this tab will disable the following %d tabs.") % len(self.dependent_tabs)
             else:
-                description += "\n • " + _("Disabling this tab will disable the following tab.")
+                description += u"\n • " + _("Disabling this tab will disable the following tab.")
 
         if self.paired_tab:
-            description += "\n • " + _("Enabling this tab will disable %s and vice-versa.") % self.paired_tab.name
+            description += u"\n • " + _("Enabling this tab will disable %s and vice-versa.") % self.paired_tab.name
 
         self.description_text = description
 
