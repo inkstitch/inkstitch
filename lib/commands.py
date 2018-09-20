@@ -25,7 +25,7 @@ COMMANDS = {
     N_("ignore_object"): N_("Ignore this object (do not stitch)"),
 
     # L10N command attached to an object
-    N_("satin_split_point"): N_("Satin split point (use with Split Satin Column)"),
+    N_("satin_cut_point"): N_("Satin cut point (use with Cut Satin Column)"),
 
 
     # L10N command that affects a layer
@@ -38,7 +38,7 @@ COMMANDS = {
     N_("stop_position"): N_("Jump destination for Stop commands (a.k.a. \"Frame Out position\")."),
 }
 
-OBJECT_COMMANDS = ["fill_start", "fill_end", "stop", "trim", "ignore_object", "satin_split_point"]
+OBJECT_COMMANDS = ["fill_start", "fill_end", "stop", "trim", "ignore_object", "satin_cut_point"]
 LAYER_COMMANDS = ["ignore_layer"]
 GLOBAL_COMMANDS = ["origin", "stop_position"]
 

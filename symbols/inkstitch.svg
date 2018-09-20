@@ -234,10 +234,10 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.23560667px;line-height:100%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;text-anchor:middle;display:inline;opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.18200287;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke" />
     </symbol>
     <symbol
-       id="inkstitch_satin_split_point"
+       id="inkstitch_satin_cut_point"
        style="display:inline">
       <title
-         id="inkstitch_title9427-675">Satin Column split point</title>
+         id="inkstitch_title9427-675">Satin Column cut point</title>
       <path
          id="inkstitch_circle13166-3"
          d="m 9.220113,0.07922893 c -1.9e-6,5.10672897 -4.1398241,9.24654997 -9.24655297,9.24654997 -5.10672933,0 -9.24655213,-4.139821 -9.24655403,-9.24654997 1e-7,-2.45233803 0.9741879,-4.80423503 2.7082531,-6.53830103 1.7340653,-1.734065 4.0859624,-2.708252 6.53830093,-2.708252 5.10673007,0 9.24655277,4.139823 9.24655297,9.24655303 0,0 0,0 0,0"
@@ -349,7 +349,7 @@
        id="use27375"
        xlink:href="#inkstitch_origin" />
     <use
-       xlink:href="#inkstitch_satin_split_point"
+       xlink:href="#inkstitch_satin_cut_point"
        id="use24520"
        x="0"
        y="0"

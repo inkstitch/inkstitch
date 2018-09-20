@@ -5,18 +5,18 @@ from ..i18n import _
 from ..elements import SatinColumn
 
 
-class SplitSatin(InkstitchExtension):
+class CutSatin(InkstitchExtension):
     def effect(self):
         if not self.get_elements():
             return
 
         if not self.selected:
-            inkex.errormsg(_("Please select one or more satin columns to split."))
+            inkex.errormsg(_("Please select one or more satin columns to cut."))
             return
 
         for satin in self.elements:
             if isinstance(satin, SatinColumn):
-                command = satin.get_command("satin_split_point")
+                command = satin.get_command("satin_cut_point")
                 split_point = command.target_point
                 command.symbol.getparent().remove(command.symbol)
                 command.connector.getparent().remove(command.connector)

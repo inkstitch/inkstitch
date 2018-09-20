@@ -11,7 +11,7 @@ from object_commands import ObjectCommands
 from layer_commands import LayerCommands
 from global_commands import GlobalCommands
 from convert_to_satin import ConvertToSatin
-from split_satin import SplitSatin
+from cut_satin import CutSatin
 
 __all__ = extensions = [Embroider,
                         Install,
@@ -26,4 +26,4 @@ __all__ = extensions = [Embroider,
                         LayerCommands,
                         GlobalCommands,
                         ConvertToSatin,
-                        SplitSatin]
+                        CutSatin]
