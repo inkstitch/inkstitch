@@ -30,7 +30,7 @@ def localize(languages=None):
     global translation, _
 
     translation = gettext.translation("inkstitch", locale_dir, fallback=True)
-    _ = translation.gettext
+    _ = translation.ugettext
 
 
 _set_locale_dir()
