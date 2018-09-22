@@ -20,6 +20,7 @@ COLOR_CHANGE = 4
 
 class ControlPanel(wx.Panel):
     """"""
+
     def __init__(self, parent, *args, **kwargs):
         """"""
         self.parent = parent
@@ -28,6 +29,8 @@ class ControlPanel(wx.Panel):
         self.target_duration = kwargs.pop('target_duration')
         kwargs['style'] = wx.BORDER_SUNKEN
         wx.Panel.__init__(self, parent, *args, **kwargs)
+
+        self.statusbar = self.GetTopLevelParent().statusbar
 
         self.drawing_panel = None
         self.num_stitches = 1
@@ -38,27 +41,33 @@ class ControlPanel(wx.Panel):
         # Widgets
         self.btnMinus = wx.Button(self, -1, label='-')
         self.btnMinus.Bind(wx.EVT_BUTTON, self.animation_slow_down)
+        self.btnMinus.SetToolTip(_('Slow down (arrow down)'))
         self.btnPlus = wx.Button(self, -1, label='+')
         self.btnPlus.Bind(wx.EVT_BUTTON, self.animation_speed_up)
+        self.btnPlus.SetToolTip(_('Speed up (arrow up)'))
         self.btnBackwardStitch = wx.Button(self, -1, label='<|')
         self.btnBackwardStitch.Bind(wx.EVT_BUTTON, self.animation_one_stitch_backward)
+        self.btnBackwardStitch.SetToolTip(_('Go on step backward (-)'))
         self.btnForwardStitch = wx.Button(self, -1, label='|>')
         self.btnForwardStitch.Bind(wx.EVT_BUTTON, self.animation_one_stitch_forward)
+        self.btnForwardStitch.SetToolTip(_('Go on step forward (+)'))
         self.directionBtn = wx.Button(self, -1, label='<<')
         self.directionBtn.Bind(wx.EVT_BUTTON, self.on_direction_button)
+        self.directionBtn.SetToolTip(_('Switch direction (arrow left | arrow right)'))
         self.pauseBtn = wx.Button(self, -1, label=_('Pause'))
         self.pauseBtn.Bind(wx.EVT_BUTTON, self.on_pause_start_button)
+        self.pauseBtn.SetToolTip(_('Pause (P)'))
         self.restartBtn = wx.Button(self, -1, label=_('Restart'))
         self.restartBtn.Bind(wx.EVT_BUTTON, self.animation_restart)
+        self.restartBtn.SetToolTip(_('Restart (R)'))
         self.quitBtn = wx.Button(self, -1, label=_('Quit'))
         self.quitBtn.Bind(wx.EVT_BUTTON, self.animation_quit)
+        self.quitBtn.SetToolTip(_('Quit (Q)'))
         self.slider = wx.Slider(self, -1, value=1, minValue=1, maxValue=2,
                                 style=wx.SL_HORIZONTAL | wx.SL_LABELS)
         self.slider.Bind(wx.EVT_SLIDER, self.on_slider)
         self.stitchBox = IntCtrl(self, -1, value=1, min=1, max=2, limited=True, allow_none=False)
         self.stitchBox.Bind(wx.EVT_TEXT, self.on_stitch_box)
-        self.speedST = wx.StaticText(self, -1, label='', style=wx.ALIGN_CENTER)
-        self.commandST = wx.StaticText(self, -1, label='', style=wx.ALIGN_CENTER)
 
         # Layout
         self.vbSizer = vbSizer = wx.BoxSizer(wx.VERTICAL)
@@ -67,20 +76,16 @@ class ControlPanel(wx.Panel):
         hbSizer1.Add(self.slider, 1, wx.EXPAND | wx.ALL, 3)
         hbSizer1.Add(self.stitchBox, 0, wx.ALL | wx.ALIGN_CENTER_VERTICAL, 2)
         vbSizer.Add(hbSizer1, 1, wx.EXPAND | wx.ALL, 3)
-        hbSizer2.Add(self.speedST, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 2)
-        hbSizer2.AddStretchSpacer(prop=1)
-        hbSizer2.Add(self.commandST, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 2)
-        hbSizer2.AddStretchSpacer(prop=1)
-        hbSizer2.Add(self.btnMinus, 0, wx.ALL, 2)
-        hbSizer2.Add(self.btnPlus, 0, wx.ALL, 2)
-        hbSizer2.Add(self.btnBackwardStitch, 0, wx.ALL, 2)
-        hbSizer2.Add(self.btnForwardStitch, 0, wx.ALL, 2)
+        hbSizer2.Add(self.btnMinus, 0, wx.EXPAND | wx.ALL, 2)
+        hbSizer2.Add(self.btnPlus, 0, wx.EXPAND | wx.ALL, 2)
+        hbSizer2.Add(self.btnBackwardStitch, 0, wx.EXPAND | wx.ALL, 2)
+        hbSizer2.Add(self.btnForwardStitch, 0, wx.EXPAND | wx.ALL, 2)
         hbSizer2.Add(self.directionBtn, 0, wx.EXPAND | wx.ALL, 2)
         hbSizer2.Add(self.pauseBtn, 0, wx.EXPAND | wx.ALL, 2)
         hbSizer2.Add(self.restartBtn, 0, wx.EXPAND | wx.ALL, 2)
         hbSizer2.Add(self.quitBtn, 0, wx.EXPAND | wx.ALL, 2)
         vbSizer.Add(hbSizer2, 0, wx.EXPAND | wx.ALL, 3)
-        self.SetSizer(vbSizer)
+        self.SetSizerAndFit(vbSizer)
 
         # Keyboard Shortcuts
         shortcut_keys = [
@@ -150,12 +155,10 @@ class ControlPanel(wx.Panel):
         self.update_speed_text()
 
     def on_direction_button(self, event):
-        evtObj = event.GetEventObject()
-        lbl = evtObj.GetLabel()
         if self.direction == 1:
-            self.animation_forward()
-        else:
             self.animation_reverse()
+        else:
+            self.animation_forward()
 
     def set_speed(self, speed):
         self.speed = int(max(speed, 1))
@@ -165,9 +168,8 @@ class ControlPanel(wx.Panel):
             self.drawing_panel.set_speed(self.speed)
 
     def update_speed_text(self):
-        self.speedST.SetLabel(_('Speed: %d stitches/sec') % (self.speed * self.direction))
+        self.statusbar.SetStatusText(_('Speed: %d stitches/sec') % (self.speed * self.direction), 0)
         self.hbSizer2.Layout()
-
 
     def on_slider(self, event):
         stitch = event.GetEventObject().GetValue()
@@ -181,7 +183,7 @@ class ControlPanel(wx.Panel):
             self.current_stitch = stitch
             self.slider.SetValue(stitch)
             self.stitchBox.SetValue(stitch)
-            self.commandST.SetLabel(COMMAND_NAMES[command])
+            self.statusbar.SetStatusText(COMMAND_NAMES[command], 1)
 
     def on_stitch_box(self, event):
         stitch = self.stitchBox.GetValue()
@@ -218,9 +220,11 @@ class ControlPanel(wx.Panel):
             self.animation_start()
 
     def animation_one_stitch_forward(self, event):
+        self.animation_pause()
         self.drawing_panel.one_stitch_forward()
 
     def animation_one_stitch_backward(self, event):
+        self.animation_pause()
         self.drawing_panel.one_stitch_backward()
 
     def animation_quit(self, event):
@@ -228,6 +232,7 @@ class ControlPanel(wx.Panel):
 
     def animation_restart(self, event):
         self.drawing_panel.restart()
+
 
 class DrawingPanel(wx.Panel):
     """"""
@@ -251,6 +256,9 @@ class DrawingPanel(wx.Panel):
         kwargs['style'] = wx.BORDER_SUNKEN
         wx.Panel.__init__(self, *args, **kwargs)
 
+        # Drawing panel can really be any size, but without this wxpython likes
+        # to allow the status bar and control panel to get squished.
+        self.SetMinSize((100, 100))
         self.SetBackgroundColour('#FFFFFF')
         self.SetDoubleBuffered(True)
 
@@ -305,8 +313,6 @@ class DrawingPanel(wx.Panel):
 
         stitch_increment = int(self.speed * frame_time)
 
-        #print >> sys.stderr, time.time(), "animate", self.current_stitch, stitch_increment, self.last_frame_duration, frame_time
-
         self.set_current_stitch(self.current_stitch + self.direction * stitch_increment)
         wx.CallLater(int(1000 * frame_time), self.animate)
 
@@ -320,7 +326,6 @@ class DrawingPanel(wx.Panel):
         transform = canvas.GetTransform()
         transform.Translate(*self.pan)
         transform.Scale(self.zoom / self.PIXEL_DENSITY, self.zoom / self.PIXEL_DENSITY)
-        #transform.Translate(self.pan[0] * self.PIXEL_DENSITY, self.pan[1] * self.PIXEL_DENSITY)
         canvas.SetTransform(transform)
 
         stitch = 0
@@ -535,15 +540,14 @@ class DrawingPanel(wx.Panel):
         # Finally, compensate for that change in position:
         self.pan = (self.pan[0] - x_delta, self.pan[1] - y_delta)
 
-
         self.zoom *= zoom_delta
-
 
         self.Refresh()
 
 
 class SimulatorPanel(wx.Panel):
     """"""
+
     def __init__(self, parent, *args, **kwargs):
         """"""
         self.parent = parent
@@ -563,7 +567,7 @@ class SimulatorPanel(wx.Panel):
         vbSizer = wx.BoxSizer(wx.VERTICAL)
         vbSizer.Add(self.dp, 1, wx.EXPAND | wx.ALL, 2)
         vbSizer.Add(self.cp, 0, wx.EXPAND | wx.ALL, 2)
-        self.SetSizer(vbSizer)
+        self.SetSizerAndFit(vbSizer)
 
     def quit(self):
         self.parent.quit()
@@ -587,12 +591,25 @@ class EmbroiderySimulator(wx.Frame):
         stitch_plan = kwargs.pop('stitch_plan', None)
         stitches_per_second = kwargs.pop('stitches_per_second', 16)
         target_duration = kwargs.pop('target_duration', None)
+        size = kwargs.get('size', (0, 0))
         wx.Frame.__init__(self, *args, **kwargs)
+        self.statusbar = self.CreateStatusBar(2)
+        self.statusbar.SetStatusWidths([250, -1])
 
+        sizer = wx.BoxSizer(wx.HORIZONTAL)
         self.simulator_panel = SimulatorPanel(self,
                                               stitch_plan=stitch_plan,
                                               target_duration=target_duration,
                                               stitches_per_second=stitches_per_second)
+        sizer.Add(self.simulator_panel, 1, wx.EXPAND)
+
+        # self.SetSizerAndFit() sets the minimum size so that the buttons don't
+        # get squished.  But it then also shrinks the window down to that size.
+        self.SetSizerAndFit(sizer)
+
+        # Therefore we have to reapply the size that the caller asked for.
+        self.SetSize(size)
+
         self.Bind(wx.EVT_CLOSE, self.on_close)
 
     def quit(self):
@@ -617,6 +634,7 @@ class EmbroiderySimulator(wx.Frame):
 
     def clear(self):
         self.simulator_panel.clear()
+
 
 def show_simulator(stitch_plan):
     app = wx.App()
