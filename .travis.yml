@@ -93,8 +93,8 @@ install:
       wget -q https://www.python.org/ftp/python/2.7.14/python-2.7.14.msi --output-document=python.msi
       wine msiexec /i python.msi /qn TARGETDIR=C:\\Python
 
-      wine c:\\Python\\python.exe c:\\Python\\scripts\\pip.exe install pyinstaller --upgrade
-      wine c:\\Python\\python.exe c:\\Python\\scripts\\pip.exe install setuptools --upgrade
+      wine c:\\Python\\python.exe c:\\Python\\scripts\\pip.exe install --upgrade pyinstaller==3.3.1
+      wine c:\\Python\\python.exe c:\\Python\\scripts\\pip.exe install --upgrade setuptools
 
       wget -q https://github.com/lexelby/inkstitch-build-objects/releases/download/v1.0.0/Shapely-1.6.3-cp27-cp27m-win32.whl
       wine c:\\Python\\python.exe c:\\Python\\scripts\\pip.exe install Shapely-1.6.3-cp27-cp27m-win32.whl
@@ -125,7 +125,7 @@ install:
       source venv/bin/activate
 
       pip install -r requirements.txt
-      pip install pyinstaller
+      pip install pyinstaller==3.3.1
       set +x
     elif [ -n "$LINT" ]; then
       pip install flake8
