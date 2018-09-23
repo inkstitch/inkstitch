@@ -1,6 +1,6 @@
 from itertools import chain, izip
 from copy import deepcopy
-from shapely import geometry as shgeo, ops as shops, affinity as shaffinity
+from shapely import geometry as shgeo, affinity as shaffinity
 import cubicsuperpath
 
 from .element import param, EmbroideryElement, Patch
@@ -177,11 +177,11 @@ class SatinColumn(EmbroideryElement):
         rungs = []
         for start, end in izip(*rung_endpoints):
             # expand them a bit to ensure they intersect
-            start, end = self.offset_points(Point(*start), Point(*end), 1.1)
+            #start, end = self.offset_points(Point(*start), Point(*end), 1.1)
 
             # make it look like a CSP
-            start = start.as_tuple()
-            end = end.as_tuple()
+            #start = start.as_tuple()
+            #end = end.as_tuple()
             rungs.append([[start, start, start], [end, end, end]])
 
         return rungs
@@ -252,7 +252,7 @@ class SatinColumn(EmbroideryElement):
 
             if len(rungs.geoms) > 0:
                 # handle null intersections here?
-                linestrings = shops.split(rail, rungs)
+                linestrings = rail.difference(rungs)
             else:
                 linestrings = shgeo.MultiLineString((rail,))
 
