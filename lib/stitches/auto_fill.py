@@ -485,9 +485,9 @@ def connect_points(shape, start, end, running_stitch_length, row_spacing):
     # up at 12 again.
     result = cut(outline, start_projection)
 
-    # result will be None if our starting point happens to already be at
+    # result[0] will be None if our starting point happens to already be at
     # 12 o'clock.
-    if result is not None and result[1] is not None:
+    if result[0] is not None:
         before, after = result
 
         # Make a new outline, starting from the starting point.  This is
