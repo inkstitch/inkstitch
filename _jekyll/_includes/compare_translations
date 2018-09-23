@@ -1,0 +1,84 @@
+{%- assign page_lang = '/en' -%}
+{% for lang in site.languages %}
+  {% if lang[0] != blank %}
+
+### {{ lang[1] }} 
+
+  {% for collection in site.collections %}
+  {% assign label = collection.label %}
+
+#### {{ label | capitalize }}
+
+    {%- assign pages = collection.docs | where: "lang", "en" -%}
+    {%- for post in pages -%}
+        {%- if label == 'posts' -%}
+          {%- assign page_url = post.url | replace_first: page_lang, '' -%}
+          {%- assign new_url = '/' | append: lang[0] | append: page_url -%}
+          {%- assign lang_page = collection.docs | where: "url", new_url | where_exp: "item", "item.lang != 'en'" | where_exp: "item", "item.date < post.date" -%}
+          {%- if lang_page == blank -%}
+              {%- assign missing_lang = collection.docs | where: "url", new_url -%}
+              {% if missing_lang == blank %}
+- New: {{ post.date | date: '%Y-%m-%-d' }} - [{{ post.title }}]({{ post.url }})
+              {% endif %}
+          {%- endif -%}
+        {%- else -%}
+          {%- assign page_url = post.permalink | replace_first: page_lang, '' -%}
+          {%- assign new_url = '/' | append: lang[0] | append: page_url -%}
+          {%- assign lang_page = collection.docs | where: "permalink", new_url | where_exp: "item", "item.lang != 'en'" | where_exp: "item", "item.last_modified_at < post.last_modified_at" -%}
+          {%- if lang_page == blank -%}
+              {%- assign missing_lang = collection.docs | where: "url", new_url -%}
+              {% if missing_lang == blank %}
+- New: {{ post.date | date: '%Y-%m-%-d' }} - [{{ post.title }}]({{ post.url }})
+              {% endif %}
+          {%- endif -%}
+        {%- endif -%}
+
+        {% for please_update in lang_page %}
+          {% if label == 'posts' %}
+            {%- assign permalink = please_update.url -%}
+            {%- assign post_permalink = post.url -%}
+            {%- assign modified_at = please_update.date -%}
+            {%- assign post_modified_at = post.date -%}
+          {% else %}
+            {%- assign permalink = please_update.permalink -%}
+            {%- assign post_permalink = post.permalink -%}
+            {%- assign modified_at = please_update.last_modified_at -%}
+            {%- assign post_modified_at = post.last_modified_at -%}
+          {% endif %}
+
+- {{ please_update.path }}
+
+  |---|---|
+  |{{ modified_at | date: "%Y-%m-%-d" }}|[{{ please_update.title }}]({{ permalink }})|
+  |{{ post_modified_at | date: "%Y-%m-%-d" }}|[{{ post.title }}]({{ post_permalink }})|
+
+        {% endfor %}
+      {%- endfor -%}
+  {% endfor %}  
+
+#### Pages
+
+  {% assign pages = site.pages | where: "lang", "en" |  where_exp: "item", "item.last_modified_at != blank" %}
+  {% for post in pages %}
+    {%- assign page_url = post.permalink | replace_first: page_lang, '' -%}
+    {%- assign new_url = '/' | append: lang[0] | append: page_url -%}
+    {%- assign lang_page = site.pages | where: "permalink", new_url | where_exp: "item", "item.lang != 'en'" | where_exp: "item", "item.last_modified_at < post.last_modified_at" -%} 
+    {% for please_update in lang_page %}
+
+- {{ please_update.path }}
+
+  |---|---|
+  |{{ please_update.last_modified_at }}|[{{ please_update.title }}]({{ please_update.permalink }})|
+  |{{ post.last_modified_at }}|[{{ post.title }}]({{ post.permalink }})|
+
+    {% endfor %}
+    {%- if lang_page == blank -%}
+        {%- assign missing_lang = site.pages | where: "url", new_url -%}
+        {% if missing_lang == blank %}
+- New: {{ post.date | date: '%Y-%m-%-d' }} - [{{ post.title }}]({{ post.url }})
+        {% endif %}
+    {%- endif -%}
+  {% endfor %}
+
+  {% endif %}
+{% endfor %}

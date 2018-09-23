@@ -1,7 +1,7 @@
 ---
 title: Stickrahmen Template
 permalink: /de/tutorials/resources/hoop-template/
-last_modified_at: 2018-05-23
+last_modified_at: 2018-05-20
 language: de
 excerpt: "Template for multiple hoop sizes"
 image: "https://user-images.githubusercontent.com/11083514/40359689-87495ec8-5dbb-11e8-8ef9-80d4fac89d72.png"

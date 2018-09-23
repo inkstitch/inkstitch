@@ -15,7 +15,6 @@ A list of all the posts and pages found on the site. For you robots out there is
 
 {% for collection in site.collections  %}
     {% unless collection.output == false or collection.label == "posts" %}
-{{  collection.blubb }}
       {% capture label %}{{ collection.label }}{% endcapture %}
       {% if label != written_label %}
 <h1 style="border-bottom: 1px solid gray; margin-top: 1.5em;">{{ label }}</h1>

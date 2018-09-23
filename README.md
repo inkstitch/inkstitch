@@ -20,14 +20,14 @@ We are using the [Minimal Mistakes Theme](https://mmistakes.github.io/minimal-mi
 
 ### Basic File Structure
 
-* `_posts` news
-* `_docs` documentation
-* `_tutorials` tutorial main pages
-* `_tutorial` specific tutorials
-* `_developers` developers documentation
-* `_pages` static pages such as about, terms or sitemap
-* `assets` media files (images) and website styling (css)
-* `_data/navigation.yml` data for every navigation found in the website
+* `_collections/_posts/language` news
+* `_collections/_docs/language` documentation
+* `_collections/_tutorials/language` tutorial main pages
+* `_collections/_tutorial/language` specific tutorials
+* `_collections/_developers/language` developers documentation
+* `_pages/language` static pages such as about, terms or sitemap
+* `assets/language` media files (images) and website styling (css)
+* `_data/navigation_language.yml` data for every navigation found in the website
 
 ### Changing Existing Files
 Change the content as you wish. Style your text with [markdown](https://help.github.com/articles/basic-writing-and-formatting-syntax/), which is also used with github issues, etc.

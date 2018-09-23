@@ -24,6 +24,8 @@ Shortcut Keys | Effect
 **r** | restart animation
 **q** | close
 
+It is also possible to zoom and pan the simulation with the mouse.
+
 ## Run Simulator Independently
 
 Run the simulator by itself on any supported embroidery file:

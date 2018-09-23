@@ -1,7 +1,7 @@
 ---
 title: "Developing Ink/Stitch"
 permalink: /de/developers/inkstitch/
-last_modified_at: 2018-07-21
+last_modified_at: 2018-07-20
 toc: true
 ---
 ## Ink/Stitch Organization

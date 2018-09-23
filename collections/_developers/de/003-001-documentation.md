@@ -2,7 +2,7 @@
 title: "Documentation"
 permalink: /de/developers/documentation/
 excerpt: ""
-last_modified_at: 2018-07-21
+last_modified_at: 2018-07-20
 ---
 We want to describe every possible function with text, images and/or videos. Also provide instructions about the installation process and give an overview of the best workflow. Additionally we want to provide sample files which other users can make use of. It also would be nice to get some example images of embroidered designs to prove what Ink/Stitch is able to do.
 

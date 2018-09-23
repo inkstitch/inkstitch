@@ -2,7 +2,7 @@
 title: "Report Bugs "
 permalink: /de/developers/report-bugs/
 excerpt: ""
-last_modified_at: 2018-06-05
+last_modified_at: 2018-06-01
 ---
 
 **Having Issues with Ink/Stitch?**

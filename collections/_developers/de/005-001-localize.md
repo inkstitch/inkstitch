@@ -2,7 +2,7 @@
 title: "Ink/Stitch Localization"
 permalink: /de/developers/localize/
 excerpt: ""
-last_modified_at: 2018-04-14
+last_modified_at: 2018-04-10
 toc: false
 ---
 The goal of the Ink/Stitch project is to put free, high-quality embroidery design tools in the hands of folks that might normally not have access to such tools.  To further that goal, we seek to support as many languages and locales as possible.

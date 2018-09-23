@@ -3,7 +3,7 @@ title: "Ink/Stitch Localization"
 permalink: /developers/localize/
 excerpt: ""
 last_modified_at: 2018-04-14
-toc: false
+toc: true
 ---
 The goal of the Ink/Stitch project is to put free, high-quality embroidery design tools in the hands of folks that might normally not have access to such tools.  To further that goal, we seek to support as many languages and locales as possible.
 
@@ -24,3 +24,11 @@ Approved contributors can accept your translations, which causes them to be subm
 When new code is added to ink/stitch, user-facing text can change and new messages can be added.  CrowdIn picks these changes up automatically and makes the new messages available to translators.
 
 When CrowdIn creates a pull request, our [Travis-CI](http://travis-ci.org) integration (also generously provided for free!) picks up the new translations and builds a new version of Ink/Stitch as a development release.  Once Travis-CI finishes building, the new version is posted to our releases page [here](https://github.com/inkstitch/inkstitch/releases/tag/dev-build-l10n), and you can install it and make sure everything looks right before we merge.
+
+## Localize Ink/Stitch Website
+
+This website is multilingual. When you are willing to translate the documentation please ask for directions on [GitHub](https://github.com/inkstitch/inkstitch/issues).
+
+If your native language is already translated, you might want to have a look at the list below. The list contains pages which are not translated yet or will need an update.
+
+{% include compare_translations %}

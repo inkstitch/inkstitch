@@ -1,7 +1,7 @@
 ---
 title: "Get Involved"
 permalink: /de/developers/introduction/
-last_modified_at: 2018-07-21
+last_modified_at: 2018-07-20
 toc: false
 ---
 This section will provide information for developers, translators and documenters.

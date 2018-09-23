@@ -1,6 +1,6 @@
 ---
 title: Das Inkscape Logo sticken
-permalink: /tutorials/lex-neva-video-tutorial-1/
+permalink: /de/tutorials/lex-neva-video-tutorial-1/
 last_modified_at: 2018-05-11
 language: de
 excerpt: Das ist ein Screencast wie man die Ink/Stitch nutzen kann, um ein Stickdesign zu erstellen.
