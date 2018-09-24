@@ -2,11 +2,12 @@ from itertools import chain, izip
 from copy import deepcopy
 from shapely import geometry as shgeo, affinity as shaffinity
 import cubicsuperpath
+from cspsubdiv import cspsubdiv
 
 from .element import param, EmbroideryElement, Patch
 from ..i18n import _
 from ..utils import cache, Point, cut
-from ..svg import line_strings_to_csp, get_correction_transform
+from ..svg import line_strings_to_csp, point_lists_to_csp
 
 
 class SatinColumn(EmbroideryElement):
@@ -321,12 +322,30 @@ class SatinColumn(EmbroideryElement):
                 self.fatal(_("satin column: object %(id)s has two paths with an unequal number of points (%(length1)d and %(length2)d)") %
                            dict(id=node_id, length1=len(self.rails[0]), length2=len(self.rails[1])))
 
+    def reverse(self):
+        """Return a new SatinColumn like this one but in the opposite direction.
+
+        The path will be flattened and the new satin will contain a new XML
+        node that is not yet in the SVG.
+        """
+        # flatten the path because you can't just reverse a CSP subpath's elements (I think)
+        flattened = self.flatten(self.csp)
+
+        for rail_index in self.rail_indices:
+            flattened[rail_index].reverse()
+
+        return self._csp_to_satin(point_lists_to_csp(flattened))
+
+
     def split(self, split_point):
         """Split a satin into two satins at the specified point
 
         split_point is a point on or near one of the rails, not at one of the
         ends. Finds corresponding point on the other rail (taking into account
         the rungs) and breaks the rails at these points.
+
+        split_point can also be a noramlized projection of a distance along the
+        satin, in the range 0.0 to 1.0.
 
         Returns two new SatinColumn instances: the part before and the part
         after the split point.  All parameters are copied over to the new
@@ -337,7 +356,7 @@ class SatinColumn(EmbroideryElement):
         path_lists = self._cut_rails(cut_points)
         self._assign_rungs_to_split_rails(path_lists)
         self._add_rungs_if_necessary(path_lists)
-        return self._path_lists_to_satins(path_lists)
+        return [self._path_list_to_satins(path_list) for path_list in path_lists]
 
     def _find_cut_points(self, split_point):
         """Find the points on each satin corresponding to the split point.
@@ -347,13 +366,21 @@ class SatinColumn(EmbroideryElement):
         for that rail.  A corresponding cut point will be chosen on the other
         rail, taking into account the satin's rungs to choose a matching point.
 
+        split_point can instead be a number in [0.0, 1.0] indicating a
+        a fractional distance down the satin to cut at.
+
         Returns: a list of two Point objects corresponding to the selected
           cut points.
         """
 
-        split_point = Point(*split_point)
         patch = self.do_satin()
-        index_of_closest_stitch = min(range(len(patch)), key=lambda index: split_point.distance(patch.stitches[index]))
+
+        if isinstance(split_point, float):
+            index_of_closest_stitch = int(len(patch) * split_point)
+        else:
+            split_point = Point(*split_point)
+            index_of_closest_stitch = min(range(len(patch)), key=lambda index: split_point.distance(patch.stitches[index]))
+
 
         if index_of_closest_stitch % 2 == 0:
             # split point is on the first rail
@@ -402,10 +429,6 @@ class SatinColumn(EmbroideryElement):
         the satins will have no rungs.  Add one to make it stitch properly.
         """
 
-        # no need to add rungs if there weren't any in the first place
-        if not self.rungs:
-            return
-
         for path_list in path_lists:
             if len(path_list) == 2:
                 # If a path has no rungs, it may be invalid.  Add a rung at the start.
@@ -418,18 +441,26 @@ class SatinColumn(EmbroideryElement):
 
                 path_list.append(rung)
 
-    def _path_lists_to_satins(self, path_lists):
-        transform = get_correction_transform(self.node)
-        satins = []
-        for path_list in path_lists:
-            node = deepcopy(self.node)
-            csp = line_strings_to_csp(path_list)
-            d = cubicsuperpath.formatPath(csp)
-            node.set("d", d)
-            node.set("transform", transform)
-            satins.append(SatinColumn(node))
+    def _path_list_to_satins(self, path_list):
+        return self._csp_to_satin(line_strings_to_csp(path_list))
 
-        return satins
+    def _csp_to_satin(self, csp):
+        node = deepcopy(self.node)
+        d = cubicsuperpath.formatPath(csp)
+        node.set("d", d)
+
+        # we've already applied the transform, so get rid of it
+        if node.get("transform"):
+            del node.attrib["transform"]
+
+        return SatinColumn(node)
+
+    @property
+    @cache
+    def center_line(self):
+        # similar technique to do_center_walk()
+        center_walk, _ = self.walk_paths(self.zigzag_spacing, -100000)
+        return shgeo.LineString(center_walk)
 
     def offset_points(self, pos1, pos2, offset_px):
         # Expand or contract two points about their midpoint.  This is

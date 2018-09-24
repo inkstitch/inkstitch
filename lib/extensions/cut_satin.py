@@ -3,6 +3,7 @@ import inkex
 from .base import InkstitchExtension
 from ..i18n import _
 from ..elements import SatinColumn
+from ..svg import get_correction_transform
 
 
 class CutSatin(InkstitchExtension):
@@ -29,9 +30,11 @@ class CutSatin(InkstitchExtension):
                 command.connector.getparent().remove(command.connector)
 
                 new_satins = satin.split(split_point)
+                transform = get_correction_transform(satin.node)
                 parent = satin.node.getparent()
                 index = parent.index(satin.node)
                 parent.remove(satin.node)
                 for new_satin in new_satins:
+                    new_satin.node.set('transform', transform)
                     parent.insert(index, new_satin.node)
                     index += 1

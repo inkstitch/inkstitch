@@ -12,6 +12,7 @@ from layer_commands import LayerCommands
 from global_commands import GlobalCommands
 from convert_to_satin import ConvertToSatin
 from cut_satin import CutSatin
+from auto_satin import AutoSatin
 
 __all__ = extensions = [Embroider,
                         Install,
@@ -26,4 +27,5 @@ __all__ = extensions = [Embroider,
                         LayerCommands,
                         GlobalCommands,
                         ConvertToSatin,
-                        CutSatin]
+                        CutSatin,
+                        AutoSatin]

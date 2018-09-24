@@ -2,11 +2,14 @@ from shapely.geometry import LineString, Point as ShapelyPoint
 import math
 
 
-def cut(line, distance):
+def cut(line, distance, normalized=False):
     """ Cuts a LineString in two at a distance from its starting point.
 
     This is an example in the Shapely documentation.
     """
+    if normalized:
+        distance *= line.length
+
     if distance <= 0.0:
         return [None, line]
     elif distance >= line.length:
