@@ -1,0 +1,22 @@
+./pyembroidery
+backports.functools_lru_cache
+wxPython==4.0.3
+networkx
+shapely
+lxml
+appdirs
+numpy
+jinja2
+requests
+colormath
+stringcase
+
+# We're not ready for flask 1.0 yet.  Logging changed, among othe things.
+# we need mininum 0.12.4 (vulnerability alert <=0.12.3)
+flask==0.12.4
+
+# pyinstaller can also be here 
+pyinstaller==3.3.1
+
+pywinutils; sys.platform == 'win32'
+pywin32; sys.platform == 'win32'
