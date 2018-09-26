@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-09-18 00:46+0000\n"
-"PO-Revision-Date: 2018-09-19 01:12\n"
+"POT-Creation-Date: 2018-09-23 01:12+0000\n"
+"PO-Revision-Date: 2018-09-26 01:14\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Vietnamese\n"
 "MIME-Version: 1.0\n"
@@ -666,28 +666,60 @@ msgstr ""
 msgid "COLOR CHANGE"
 msgstr ""
 
-#: lib/simulator.py:49 lib/simulator.py:208 lib/simulator.py:215
-msgid "Pause"
+#: lib/simulator.py:44
+msgid "Slow down (arrow down)"
 msgstr ""
 
-#: lib/simulator.py:51
-msgid "Restart"
+#: lib/simulator.py:47
+msgid "Speed up (arrow up)"
+msgstr ""
+
+#: lib/simulator.py:50
+msgid "Go on step backward (-)"
 msgstr ""
 
 #: lib/simulator.py:53
+msgid "Go on step forward (+)"
+msgstr ""
+
+#: lib/simulator.py:56
+msgid "Switch direction (arrow left | arrow right)"
+msgstr ""
+
+#: lib/simulator.py:57 lib/simulator.py:210 lib/simulator.py:217
+msgid "Pause"
+msgstr ""
+
+#: lib/simulator.py:59
+msgid "Pause (P)"
+msgstr ""
+
+#: lib/simulator.py:60
+msgid "Restart"
+msgstr ""
+
+#: lib/simulator.py:62
+msgid "Restart (R)"
+msgstr ""
+
+#: lib/simulator.py:63
 msgid "Quit"
 msgstr ""
 
-#: lib/simulator.py:168
+#: lib/simulator.py:65
+msgid "Quit (Q)"
+msgstr ""
+
+#: lib/simulator.py:171
 #, python-format
 msgid "Speed: %d stitches/sec"
 msgstr ""
 
-#: lib/simulator.py:211
+#: lib/simulator.py:213
 msgid "Start"
 msgstr ""
 
-#: lib/simulator.py:633
+#: lib/simulator.py:651
 msgid "Embroidery Simulation"
 msgstr ""
 
