@@ -10,7 +10,7 @@ from ..svg.tags import SVG_GROUP_TAG
 
 
 class AutoSatin(CommandsExtension):
-    COMMANDS = []
+    COMMANDS = ["trim"]
 
     def get_starting_point(self):
         return self.get_point("fill_start")
@@ -61,7 +61,7 @@ class AutoSatin(CommandsExtension):
             element.node.set("id", self.uniqueId("autosatin"))
             group.append(element.node)
 
-        if trim_indices:
+        if self.options.trim and trim_indices:
             self.ensure_symbol("trim")
             for i in trim_indices:
                 self.add_commands(new_elements[i], ["trim"])
