@@ -336,6 +336,15 @@ class SatinColumn(EmbroideryElement):
 
         return self._csp_to_satin(point_lists_to_csp(flattened))
 
+    def apply_transform(self):
+        """Return a new SatinColumn like this one but with transforms applied.
+
+        This node's and all ancestor nodes' transforms will be applied.  The
+        new SatinColumn's node will not be in the SVG document.
+        """
+
+        return self._csp_to_satin(self.csp)
+
 
     def split(self, split_point):
         """Split a satin into two satins at the specified point

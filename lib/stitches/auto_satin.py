@@ -66,6 +66,8 @@ class SatinSegment(object):
         if self.reverse:
             satin = satin.reverse()
 
+        satin = satin.apply_transform()
+
         return satin
 
     to_element = to_satin
