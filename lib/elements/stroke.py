@@ -4,7 +4,7 @@ import shapely.geometry
 from .element import param, EmbroideryElement, Patch
 from ..i18n import _
 from ..utils import cache, Point
-from ..stitches import running_stitch, bean_stitch
+from ..stitches.running_stitch import running_stitch, bean_stitch
 from ..svg import parse_length_with_units
 
 warned_about_legacy_running_stitch = False

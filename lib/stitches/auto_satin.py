@@ -9,7 +9,7 @@ import inkex
 import cubicsuperpath
 import simplestyle
 
-from ..elements import SatinColumn
+from ..elements import SatinColumn, Stroke
 from ..utils import Point as InkstitchPoint, cut, cache, flatten
 from ..svg import PIXELS_PER_MM, line_strings_to_csp
 from ..svg.tags import SVG_PATH_TAG
@@ -68,10 +68,7 @@ class SatinSegment(object):
 
         return satin
 
-    def to_node(self):
-        satin = self.to_satin()
-
-        return satin.node
+    to_element = to_satin
 
     def to_running_stitch(self):
         return RunningStitch(self.center_line, self.satin.node.get('style'))
@@ -170,6 +167,11 @@ class JumpStitch(object):
         self.start = start
         self.end = end
 
+    @property
+    @cache
+    def length(self):
+        return self.start.distance(self.end)
+
 
 class RunningStitch(object):
     """Running stitch along a path."""
@@ -178,7 +180,7 @@ class RunningStitch(object):
         self.path = path
         self.style = style
 
-    def to_node(self):
+    def to_element(self):
         node = inkex.etree.Element(SVG_PATH_TAG)
         node.set("d", cubicsuperpath.formatPath(line_strings_to_csp([self.path])))
 
@@ -188,7 +190,7 @@ class RunningStitch(object):
 
         node.set("style", style)
 
-        return node
+        return Stroke(node)
 
 def auto_satin(satins, starting_point=None, ending_point=None):
     """Find an optimal order to stitch a list of SatinColumns.
@@ -227,7 +229,7 @@ def auto_satin(satins, starting_point=None, ending_point=None):
     path = find_path(graph, starting_node, ending_node)
     operations = path_to_operations(graph, path)
     operations = collapse_sequential_segments(operations)
-    return operations_to_nodes(operations)
+    return operations_to_elements_and_trims(operations)
 
 
 def build_graph(satins):
@@ -414,7 +416,7 @@ def path_to_operations(graph, path):
                 satin_segment = satin_segment.reversed()
             operations.append(satin_segment)
         else:
-            operations.append(JumpStitch(start, end))
+            operations.append(JumpStitch(graph.nodes[start]['point'], graph.nodes[end]['point']))
 
     # find_path() will have duplicated some of the edges in the graph.  We don't
     # want to sew the same satin twice.  If a satin section appears twice in the
@@ -450,15 +452,26 @@ def collapse_sequential_segments(old_operations):
     return new_operations
 
 
-def operations_to_nodes(operations):
-    """Convert a list of operations to SVG XML nodes."""
+def operations_to_elements_and_trims(operations):
+    """Convert a list of operations to Elements and locations of trims.
 
-    nodes = []
+    Returns:
+        (nodes, trims)
+
+        element -- a list of Element instances
+        trims -- indices of nodes after which the thread should be trimmed
+    """
+
+    elements = []
+    trims = []
 
     for operation in operations:
         # Ignore JumpStitch opertions.  Jump stitches in Ink/Stitch are
         # implied and added by Embroider if needed.
         if isinstance(operation, (SatinSegment, RunningStitch)):
-            nodes.append(operation.to_node())
+            elements.append(operation.to_element())
+        elif isinstance(operation, (JumpStitch)):
+            if elements and operation.length > PIXELS_PER_MM:
+                trims.append(len(elements) - 1)
 
-    return nodes
+    return elements, trims

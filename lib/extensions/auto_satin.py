@@ -1,15 +1,17 @@
 import inkex
 import sys
 
-from .base import InkstitchExtension
+from .commands import CommandsExtension
 from ..i18n import _
 from ..elements import SatinColumn
-from ..stitches import auto_satin
+from ..stitches.auto_satin import auto_satin
 from ..svg import get_correction_transform
 from ..svg.tags import SVG_GROUP_TAG
 
 
-class AutoSatin(InkstitchExtension):
+class AutoSatin(CommandsExtension):
+    COMMANDS = []
+
     def get_starting_point(self):
         return self.get_point("fill_start")
 
@@ -50,11 +52,16 @@ class AutoSatin(InkstitchExtension):
         # The ordering is careful here.  Some of the original satins may have
         # been used unmodified.  That's why we remove all of the original
         # satins _first_ before adding new_nodes back into the SVG.
-        new_nodes = auto_satin(self.elements, self.get_starting_point(), self.get_ending_point())
+        new_elements, trim_indices = auto_satin(self.elements, self.get_starting_point(), self.get_ending_point())
 
         for element in self.elements:
             element.node.getparent().remove(element.node)
 
-        for node in new_nodes:
-            node.set("id", self.uniqueId("autosatin"))
-            group.append(node)
+        for element in new_elements:
+            element.node.set("id", self.uniqueId("autosatin"))
+            group.append(element.node)
+
+        if trim_indices:
+            self.ensure_symbol("trim")
+            for i in trim_indices:
+                self.add_commands(new_elements[i], ["trim"])
