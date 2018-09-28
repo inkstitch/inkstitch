@@ -253,6 +253,8 @@ class SatinColumn(EmbroideryElement):
                     # segment
                     break
 
+        return intersections
+
     @property
     @cache
     def flattened_sections(self):
@@ -383,7 +385,7 @@ class SatinColumn(EmbroideryElement):
 
         rungs = [shgeo.LineString(self.flatten_subpath(rung)) for rung in self.rungs]
         for path_list in split_rails:
-            path_list.extend(rung for rung in rungs if path_list[0].intersects(rung))
+            path_list.extend(rung for rung in rungs if path_list[0].intersects(rung) and path_list[1].intersects(rung))
 
     def _add_rungs_if_necessary(self, path_lists):
         """Add an additional rung to each new satin if it ended up with none.
