@@ -2,7 +2,6 @@ from itertools import chain, izip
 from copy import deepcopy
 from shapely import geometry as shgeo, affinity as shaffinity
 import cubicsuperpath
-from cspsubdiv import cspsubdiv
 
 from .element import param, EmbroideryElement, Patch
 from ..i18n import _
@@ -351,7 +350,6 @@ class SatinColumn(EmbroideryElement):
 
         return self._csp_to_satin(self.csp)
 
-
     def split(self, split_point):
         """Split a satin into two satins at the specified point
 
@@ -395,7 +393,6 @@ class SatinColumn(EmbroideryElement):
         else:
             split_point = Point(*split_point)
             index_of_closest_stitch = min(range(len(patch)), key=lambda index: split_point.distance(patch.stitches[index]))
-
 
         if index_of_closest_stitch % 2 == 0:
             # split point is on the first rail

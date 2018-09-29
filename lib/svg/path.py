@@ -52,6 +52,7 @@ def get_correction_transform(node, child=False):
 def line_strings_to_csp(line_strings):
     return point_lists_to_csp(ls.coords for ls in line_strings)
 
+
 def point_lists_to_csp(point_lists):
     csp = []
 

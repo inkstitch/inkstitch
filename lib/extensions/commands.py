@@ -6,9 +6,10 @@ from random import random
 
 from .base import InkstitchExtension
 from ..utils import get_bundled_dir, cache
-from ..commands import OBJECT_COMMANDS, get_command_description
+from ..commands import get_command_description
 from ..i18n import _
-from ..svg.tags import SVG_DEFS_TAG, SVG_PATH_TAG, CONNECTION_START, CONNECTION_END, CONNECTOR_TYPE, INKSCAPE_LABEL, SVG_GROUP_TAG, SVG_USE_TAG, XLINK_HREF
+from ..svg.tags import SVG_DEFS_TAG, SVG_PATH_TAG, CONNECTION_START, CONNECTION_END, \
+                       CONNECTOR_TYPE, INKSCAPE_LABEL, SVG_GROUP_TAG, SVG_USE_TAG, XLINK_HREF
 from ..svg import get_correction_transform
 
 

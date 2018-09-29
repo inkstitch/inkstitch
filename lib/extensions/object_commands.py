@@ -1,11 +1,8 @@
 import inkex
-from random import random
 
 from .commands import CommandsExtension
-from ..commands import OBJECT_COMMANDS, get_command_description
+from ..commands import OBJECT_COMMANDS
 from ..i18n import _
-from ..svg.tags import SVG_PATH_TAG, CONNECTION_START, CONNECTION_END, CONNECTOR_TYPE, INKSCAPE_LABEL, SVG_GROUP_TAG, SVG_USE_TAG, XLINK_HREF
-from ..svg import get_correction_transform
 
 
 class ObjectCommands(CommandsExtension):

@@ -1,16 +1,14 @@
 import math
-import sys
 import networkx as nx
 from shapely import geometry as shgeo
-from shapely.ops import nearest_points
 from shapely.geometry import Point as ShapelyPoint
-from itertools import combinations, groupby
+from itertools import groupby
 import inkex
 import cubicsuperpath
 import simplestyle
 
-from ..elements import SatinColumn, Stroke
-from ..utils import Point as InkstitchPoint, cut, cache, flatten
+from ..elements import Stroke
+from ..utils import Point as InkstitchPoint, cut, cache
 from ..svg import PIXELS_PER_MM, line_strings_to_csp
 from ..svg.tags import SVG_PATH_TAG
 
@@ -193,6 +191,7 @@ class RunningStitch(object):
 
         return Stroke(node)
 
+
 def auto_satin(satins, starting_point=None, ending_point=None):
     """Find an optimal order to stitch a list of SatinColumns.
 
@@ -251,6 +250,7 @@ def build_graph(satins):
 
     return graph
 
+
 def get_starting_and_ending_nodes(graph, starting_point, ending_point):
     """Find or choose the starting and ending graph nodes.
 
@@ -279,14 +279,17 @@ def get_starting_and_ending_nodes(graph, starting_point, ending_point):
 
     return nodes
 
+
 def get_nearest_node(graph, point):
     point = shgeo.Point(*point)
     return min(graph.nodes, key=lambda node: graph.nodes[node]['point'].distance(point))
+
 
 def get_extreme_node(graph, extreme_function):
     """Get the node with minimal or maximal X value."""
 
     return extreme_function(graph.nodes, key=lambda node: graph.nodes[node]['point'].x)
+
 
 def add_jumps(graph):
     """Add jump stitches between satins as necessary.
@@ -303,6 +306,7 @@ def add_jumps(graph):
     for jump in nx.k_edge_augmentation(graph, 1, avail=list(possible_jumps(graph))):
         graph.add_edge(*jump)
 
+
 def possible_jumps(graph):
     """All possible jump stitches in the graph with their lengths.
 
@@ -317,6 +321,7 @@ def possible_jumps(graph):
         start_point = graph.nodes[start]['point']
         end_point = graph.nodes[end]['point']
         yield (start, end, start_point.distance(end_point))
+
 
 def find_path(graph, starting_node, ending_node):
     """Find a path through the graph that sews every satin."""
@@ -372,6 +377,7 @@ def find_path(graph, starting_node, ending_node):
 
     return final_path
 
+
 def reversed_path(path):
     """Generator for a version of the path travelling in the opposite direction.
 
@@ -384,15 +390,13 @@ def reversed_path(path):
     for node1, node2 in reversed(path):
         yield (node2, node1)
 
+
 def path_to_operations(graph, path):
     """Convert an edge path to a list of SatinSegment and JumpStitch instances."""
 
     operations = []
 
-    last_end = None
-
     for start, end in path:
-        #print >> sys.stderr, start, end, graph[start][end]
         satin_segment = graph[start][end].get('satin_segment')
         if satin_segment:
             start_point = graph.nodes[start]['point']
@@ -416,6 +420,7 @@ def path_to_operations(graph, path):
                 seen.add(item)
 
     return operations
+
 
 def collapse_sequential_segments(old_operations):
     new_operations = []
