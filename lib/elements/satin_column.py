@@ -1,9 +1,12 @@
 from itertools import chain, izip
-from shapely import geometry as shgeo, ops as shops
+from copy import deepcopy
+from shapely import geometry as shgeo, affinity as shaffinity
+import cubicsuperpath
 
 from .element import param, EmbroideryElement, Patch
 from ..i18n import _
-from ..utils import cache, Point
+from ..utils import cache, Point, cut
+from ..svg import line_strings_to_csp, get_correction_transform
 
 
 class SatinColumn(EmbroideryElement):
@@ -141,77 +144,167 @@ class SatinColumn(EmbroideryElement):
 
     @property
     @cache
-    def flattened_beziers(self):
+    def rails(self):
+        """The rails in order, as LineStrings"""
+        return [subpath for i, subpath in enumerate(self.csp) if i in self.rail_indices]
+
+    @property
+    @cache
+    def rungs(self):
+        """The rungs, as LineStrings.
+
+        If there are no rungs, then this is an old-style satin column.  The
+        rails are expected to have the same number of path nodes.  The path
+        nodes, taken in sequential pairs, act in the same way as rungs would.
+        """
         if len(self.csp) == 2:
-            return self.simple_flatten_beziers()
-        elif len(self.csp) < 2:
-            self.fatal(_("satin column: %(id)s: at least two subpaths required (%(num)d found)") % dict(num=len(self.csp), id=self.node.get('id')))
+            # It's an old-style satin column.  To make things easier we'll
+            # actually create the implied rungs.
+            return self._synthesize_rungs()
         else:
-            return self.flatten_beziers_with_rungs()
+            return [subpath for i, subpath in enumerate(self.csp) if i not in self.rail_indices]
 
-    def flatten_beziers_with_rungs(self):
-        input_paths = [self.flatten([path]) for path in self.csp]
-        input_paths = [shgeo.LineString(path[0]) for path in input_paths]
+    def _synthesize_rungs(self):
+        rung_endpoints = []
+        for rail in self.rails:
+            points = self.strip_control_points(rail)
 
-        paths = input_paths[:]
-        paths.sort(key=lambda path: path.length, reverse=True)
+            # ignore the start and end
+            points = points[1:-1]
+
+            rung_endpoints.append(points)
+
+        rungs = []
+        for start, end in izip(*rung_endpoints):
+            # Expand the points just a bit to ensure that shapely thinks they
+            # intersect with the rails even with floating point inaccuracy.
+            start = Point(*start)
+            end = Point(*end)
+            start, end = self.offset_points(start, end, 0.01)
+            start = list(start)
+            end = list(end)
+
+            rungs.append([[start, start, start], [end, end, end]])
+
+        return rungs
+
+    @property
+    @cache
+    def rail_indices(self):
+        paths = [self.flatten_subpath(subpath) for subpath in self.csp]
+        paths = [shgeo.LineString(path) for path in paths]
+        num_paths = len(paths)
 
         # Imagine a satin column as a curvy ladder.
         # The two long paths are the "rails" of the ladder.  The remainder are
         # the "rungs".
-        rails = paths[:2]
-        rungs = shgeo.MultiLineString(paths[2:])
+        #
+        # The subpaths in this SVG path may be in arbitrary order, so we need
+        # to figure out which are the rails and which are the rungs.
+        #
+        # Rungs are the paths that intersect with exactly 2 other paths.
+        # Rails are everything else.
 
-        # The rails should stay in the order they were in the original CSP.
-        # (this lets the user control where the satin starts and ends)
-        rails.sort(key=lambda rail: input_paths.index(rail))
+        if num_paths <= 2:
+            # old-style satin column with no rungs
+            return range(num_paths)
 
-        result = []
+        # This takes advantage of the fact that sum() counts True as 1
+        intersection_counts = [sum(paths[i].intersects(paths[j]) for j in xrange(num_paths) if i != j)
+                               for i in xrange(num_paths)]
+        paths_not_intersecting_two = [i for i in xrange(num_paths) if intersection_counts[i] != 2]
+        num_not_intersecting_two = len(paths_not_intersecting_two)
+
+        if num_not_intersecting_two == 2:
+            # Great, we have two unambiguous rails.
+            return paths_not_intersecting_two
+        else:
+            # This is one of two situations:
+            #
+            # 1. There are two rails and two rungs, and it looks like a
+            # hash symbol (#).  Unfortunately for us, this is an ambiguous situation
+            # and we'll have to take a guess as to which are the rails and
+            # which are the rungs.  We'll guess that the rails are the longest
+            # ones.
+            #
+            # or,
+            #
+            # 2. The paths don't look like a ladder at all, but some other
+            # kind of weird thing.  Maybe one of the rungs crosses a rail more
+            # than once.  Treat it like the previous case and we'll sort out
+            # the intersection issues later.
+            indices_by_length = sorted(range(num_paths), key=lambda index: paths[index].length, reverse=True)
+            return indices_by_length[:2]
+
+    def _cut_rail(self, rail, rung):
+        intersections = 0
+
+        for segment_index, rail_segment in enumerate(rail[:]):
+            if rail_segment is None:
+                continue
+
+            intersection = rail_segment.intersection(rung)
+
+            if not intersection.is_empty:
+                if isinstance(intersection, shgeo.MultiLineString):
+                    intersections += len(intersection)
+                    break
+                else:
+                    intersections += 1
+
+                cut_result = cut(rail_segment, rail_segment.project(intersection))
+                rail[segment_index:segment_index + 1] = cut_result
+
+                if cut_result[1] is None:
+                    # if we were exactly at the end of one of the existing rail segments,
+                    # stop here or we'll get a spurious second intersection on the next
+                    # segment
+                    break
+
+        return intersections
+
+    @property
+    @cache
+    def flattened_sections(self):
+        """Flatten the rails, cut with the rungs, and return the sections in pairs."""
+
+        if len(self.csp) < 2:
+            self.fatal(_("satin column: %(id)s: at least two subpaths required (%(num)d found)") % dict(num=len(self.csp), id=self.node.get('id')))
+
+        rails = [[shgeo.LineString(self.flatten_subpath(rail))] for rail in self.rails]
+        rungs = [shgeo.LineString(self.flatten_subpath(rung)) for rung in self.rungs]
+
+        for rung in rungs:
+            for rail_index, rail in enumerate(rails):
+                intersections = self._cut_rail(rail, rung)
+
+                if intersections == 0:
+                    self.fatal(_("satin column: One or more of the rungs doesn't intersect both rails.") +
+                               "  " + _("Each rail should intersect both rungs once."))
+                elif intersections > 1:
+                    self.fatal(_("satin column: One or more of the rungs intersects the rails more than once.") +
+                               "  " + _("Each rail should intersect both rungs once."))
 
         for rail in rails:
-            if not rail.is_simple:
-                self.fatal(_("One or more rails crosses itself, and this is not allowed.  Please split into multiple satin columns."))
+            for i in xrange(len(rail)):
+                if rail[i] is not None:
+                    rail[i] = [Point(*coord) for coord in rail[i].coords]
 
-            # handle null intersections here?
-            linestrings = shops.split(rail, rungs)
+        # Clean out empty segments.  Consider an old-style satin like this:
+        #
+        #  |   |
+        #  *   *---*
+        #  |       |
+        #  |       |
+        #
+        # The stars indicate where the bezier endpoints lay.  On the left, there's a
+        # zero-length bezier at the star.  The user's goal here is to ignore the
+        # horizontal section of the right rail.
 
-            # print >> dbg, "rails and rungs", [str(rail) for rail in rails], [str(rung) for rung in rungs]
-            if len(linestrings.geoms) < len(rungs.geoms) + 1:
-                self.fatal(_("satin column: One or more of the rungs doesn't intersect both rails.") +
-                           "  " + _("Each rail should intersect both rungs once."))
-            elif len(linestrings.geoms) > len(rungs.geoms) + 1:
-                self.fatal(_("satin column: One or more of the rungs intersects the rails more than once.") +
-                           "  " + _("Each rail should intersect both rungs once."))
+        sections = zip(*rails)
+        sections = [s for s in sections if s[0] is not None and s[1] is not None]
 
-            paths = [[Point(*coord) for coord in ls.coords] for ls in linestrings.geoms]
-            result.append(paths)
-
-        return zip(*result)
-
-    def simple_flatten_beziers(self):
-        # Given a pair of paths made up of bezier segments, flatten
-        # each individual bezier segment into line segments that approximate
-        # the curves.  Retain the divisions between beziers -- we'll use those
-        # later.
-
-        paths = []
-
-        for path in self.csp:
-            # See the documentation in the parent class for parse_path() for a
-            # description of the format of the CSP.  Each bezier is constructed
-            # using two neighboring 3-tuples in the list.
-
-            flattened_path = []
-
-            # iterate over pairs of 3-tuples
-            for prev, current in zip(path[:-1], path[1:]):
-                flattened_segment = self.flatten([[prev, current]])
-                flattened_segment = [Point(x, y) for x, y in flattened_segment[0]]
-                flattened_path.append(flattened_segment)
-
-            paths.append(flattened_path)
-
-        return zip(*paths)
+        return sections
 
     def validate_satin_column(self):
         # The node should have exactly two paths with no fill.  Each
@@ -223,10 +316,120 @@ class SatinColumn(EmbroideryElement):
         if self.get_style("fill") is not None:
             self.fatal(_("satin column: object %s has a fill (but should not)") % node_id)
 
-        if len(self.csp) == 2:
-            if len(self.csp[0]) != len(self.csp[1]):
+        if not self.rungs:
+            if len(self.rails[0]) != len(self.rails[1]):
                 self.fatal(_("satin column: object %(id)s has two paths with an unequal number of points (%(length1)d and %(length2)d)") %
-                           dict(id=node_id, length1=len(self.csp[0]), length2=len(self.csp[1])))
+                           dict(id=node_id, length1=len(self.rails[0]), length2=len(self.rails[1])))
+
+    def split(self, split_point):
+        """Split a satin into two satins at the specified point
+
+        split_point is a point on or near one of the rails, not at one of the
+        ends. Finds corresponding point on the other rail (taking into account
+        the rungs) and breaks the rails at these points.
+
+        Returns two new SatinColumn instances: the part before and the part
+        after the split point.  All parameters are copied over to the new
+        SatinColumn instances.
+        """
+
+        cut_points = self._find_cut_points(split_point)
+        path_lists = self._cut_rails(cut_points)
+        self._assign_rungs_to_split_rails(path_lists)
+        self._add_rungs_if_necessary(path_lists)
+        return self._path_lists_to_satins(path_lists)
+
+    def _find_cut_points(self, split_point):
+        """Find the points on each satin corresponding to the split point.
+
+        split_point is a point that is near but not necessarily touching one
+        of the rails.  It is projected onto that rail to obtain the cut point
+        for that rail.  A corresponding cut point will be chosen on the other
+        rail, taking into account the satin's rungs to choose a matching point.
+
+        Returns: a list of two Point objects corresponding to the selected
+          cut points.
+        """
+
+        split_point = Point(*split_point)
+        patch = self.do_satin()
+        index_of_closest_stitch = min(range(len(patch)), key=lambda index: split_point.distance(patch.stitches[index]))
+
+        if index_of_closest_stitch % 2 == 0:
+            # split point is on the first rail
+            return (patch.stitches[index_of_closest_stitch],
+                    patch.stitches[index_of_closest_stitch + 1])
+        else:
+            # split point is on the second rail
+            return (patch.stitches[index_of_closest_stitch - 1],
+                    patch.stitches[index_of_closest_stitch])
+
+    def _cut_rails(self, cut_points):
+        """Cut the rails of this satin at the specified points.
+
+        cut_points is a list of two elements, corresponding to the cut points
+        for each rail in order.
+
+        Returns: A list of two elements, corresponding two the two new sets of
+          rails.  Each element is a list of two rails of type LineString.
+      """
+
+        rails = [shgeo.LineString(self.flatten_subpath(rail)) for rail in self.rails]
+
+        path_lists = [[], []]
+
+        for i, rail in enumerate(rails):
+            before, after = cut(rail, rail.project(shgeo.Point(cut_points[i])))
+            path_lists[0].append(before)
+            path_lists[1].append(after)
+
+        return path_lists
+
+    def _assign_rungs_to_split_rails(self, split_rails):
+        """Add this satin's rungs to the new satins.
+
+        Each rung is appended to the correct one of the two new satin columns.
+        """
+
+        rungs = [shgeo.LineString(self.flatten_subpath(rung)) for rung in self.rungs]
+        for path_list in split_rails:
+            path_list.extend(rung for rung in rungs if path_list[0].intersects(rung) and path_list[1].intersects(rung))
+
+    def _add_rungs_if_necessary(self, path_lists):
+        """Add an additional rung to each new satin if it ended up with none.
+
+        If the split point is between the end and the last rung, then one of
+        the satins will have no rungs.  Add one to make it stitch properly.
+        """
+
+        # no need to add rungs if there weren't any in the first place
+        if not self.rungs:
+            return
+
+        for path_list in path_lists:
+            if len(path_list) == 2:
+                # If a path has no rungs, it may be invalid.  Add a rung at the start.
+                rung_start = path_list[0].interpolate(0.1)
+                rung_end = path_list[1].interpolate(0.1)
+                rung = shgeo.LineString((rung_start, rung_end))
+
+                # make it a bit bigger so that it definitely intersects
+                rung = shaffinity.scale(rung, 1.1, 1.1)
+
+                path_list.append(rung)
+
+    def _path_lists_to_satins(self, path_lists):
+        transform = get_correction_transform(self.node)
+        satins = []
+        for path_list in path_lists:
+            node = deepcopy(self.node)
+            csp = line_strings_to_csp(path_list)
+            d = cubicsuperpath.formatPath(csp)
+            node.set("d", d)
+            node.set("transform", transform)
+            satins.append(SatinColumn(node))
+
+        return satins
 
     def offset_points(self, pos1, pos2, offset_px):
         # Expand or contract two points about their midpoint.  This is
@@ -300,7 +503,7 @@ class SatinColumn(EmbroideryElement):
         remainder_path1 = []
         remainder_path2 = []
 
-        for segment1, segment2 in self.flattened_beziers:
+        for segment1, segment2 in self.flattened_sections:
             subpath1 = remainder_path1 + segment1
             subpath2 = remainder_path2 + segment2
 
@@ -410,7 +613,7 @@ class SatinColumn(EmbroideryElement):
         # zigzag looks like this to make the satin stitches look perpendicular
         # to the column:
         #
-        # /|/|/|/|/|/|/|/|
+        # |/|/|/|/|/|/|/|/|
 
         # print >> dbg, "satin", self.zigzag_spacing, self.pull_compensation
 

@@ -47,3 +47,16 @@ def get_correction_transform(node, child=False):
     transform = simpletransform.invertTransform(transform)
 
     return simpletransform.formatTransform(transform)
+
+
+def line_strings_to_csp(line_strings):
+    csp = []
+
+    for ls in line_strings:
+        subpath = []
+        for point in ls.coords:
+            # create a straight line as a degenerate bezier
+            subpath.append((point, point, point))
+        csp.append(subpath)
+
+    return csp

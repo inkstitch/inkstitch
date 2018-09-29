@@ -7,8 +7,11 @@ def cut(line, distance):
 
     This is an example in the Shapely documentation.
     """
-    if distance <= 0.0 or distance >= line.length:
-        return [LineString(line), None]
+    if distance <= 0.0:
+        return [None, line]
+    elif distance >= line.length:
+        return [line, None]
+
     coords = list(ShapelyPoint(p) for p in line.coords)
     traveled = 0
     last_point = coords[0]
@@ -87,6 +90,9 @@ class Point:
 
     def length(self):
         return math.sqrt(math.pow(self.x, 2.0) + math.pow(self.y, 2.0))
+
+    def distance(self, other):
+        return (other - self).length()
 
     def unit(self):
         return self.mul(1.0 / self.length())
