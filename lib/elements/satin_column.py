@@ -176,6 +176,14 @@ class SatinColumn(EmbroideryElement):
 
         rungs = []
         for start, end in izip(*rung_endpoints):
+            # Expand the points just a bit to ensure that shapely thinks they
+            # intersect with the rails even with floating point inaccuracy.
+            start = Point(*start)
+            end = Point(*end)
+            start, end = self.offset_points(start, end, 0.01)
+            start = list(start)
+            end = list(end)
+
             rungs.append([[start, start, start], [end, end, end]])
 
         return rungs

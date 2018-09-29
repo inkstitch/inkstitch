@@ -105,6 +105,8 @@ class Command(BaseCommand):
         if neighbors[0][0].tag != SVG_USE_TAG:
             raise CommandParseError("connector does not point to a use tag")
 
+        self.use = neighbors[0][0]
+
         self.symbol = self.get_node_by_url(neighbors[0][0].get(XLINK_HREF))
         self.parse_symbol()
 

@@ -25,7 +25,7 @@ class CutSatin(InkstitchExtension):
                                   'Please use the "Attach commands" extension and attach the "Satin Column cut point" command first.'))
 
                 split_point = command.target_point
-                command.symbol.getparent().remove(command.symbol)
+                command.use.getparent().remove(command.use)
                 command.connector.getparent().remove(command.connector)
 
                 new_satins = satin.split(split_point)
