@@ -1,26 +1,37 @@
 from copy import deepcopy
 
 from .stitch import Stitch
-from ..utils import cut_path
-from ..stitches import running_stitch
+from ..svg import PIXELS_PER_MM
 
 
 def add_tie(stitches, tie_path):
-    if stitches[-1].no_ties:
+    if len(tie_path) < 2 or stitches[0].no_ties:
         # It's from a manual stitch block, so don't add tie stitches.  The user
         # will add them if they want them.
         return
 
-    tie_path = cut_path(tie_path, 0.6)
-    tie_stitches = running_stitch(tie_path, 0.3)
-    tie_stitches = [Stitch(stitch.x, stitch.y) for stitch in tie_stitches]
+    to_previous = tie_path[1] - tie_path[0]
+    length = to_previous.length()
+    if length > 0.5 * PIXELS_PER_MM:
+        # Travel back one stitch, stopping halfway there.
+        # Then go forward one stitch, stopping halfway between
+        # again.
 
-    stitches.extend(deepcopy(tie_stitches[1:]))
-    stitches.extend(deepcopy(list(reversed(tie_stitches))[1:]))
+        # but travel at most 1.5mm
+        length = min(length, 1.5 * PIXELS_PER_MM)
+
+        direction = to_previous.unit()
+        for delta in (0.5, 1.0, 0.5, 0):
+            stitches.append(Stitch(tie_path[0] + delta * length * direction))
+    else:
+        # Too short to travel part of the way to the previous stitch; ust go
+        # back and forth to it a couple times.
+        for i in (1, 0, 1, 0):
+            stitches.append(deepcopy(tie_path[i]))
 
 
 def add_tie_off(stitches):
-    add_tie(stitches, list(reversed(stitches)))
+    add_tie(stitches, stitches[-1:-3:-1])
 
 
 def add_tie_in(stitches, upcoming_stitches):
@@ -36,10 +47,7 @@ def add_ties(stitch_plan):
         for i, stitch in enumerate(color_block.stitches):
             is_special = stitch.trim or stitch.jump or stitch.color_change or stitch.stop
 
-            # see stop.py for an explanation of the fake color change
-            is_fake = stitch.fake_color_change
-
-            if is_special and not is_fake and not need_tie_in:
+            if is_special and not need_tie_in:
                 add_tie_off(new_stitches)
                 new_stitches.append(stitch)
                 need_tie_in = True
