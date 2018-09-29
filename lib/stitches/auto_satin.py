@@ -75,7 +75,6 @@ class SatinSegment(object):
     def to_running_stitch(self):
         return RunningStitch(self.center_line, self.satin.node.get('style'))
 
-
     def break_up(self, segment_size):
         """Break this SatinSegment up into SatinSegments of the specified size."""
 
@@ -252,23 +251,6 @@ def build_graph(satins):
 
     return graph
 
-def add_starting_and_ending_points(graph, starting_point, ending_point):
-    for point, label in ((starting_point, "start"), (ending_point, "end")):
-        if point is not None:
-            point = shgeo.Point(point)
-            point_label = str(point)
-
-            if not graph.has_node(point_label):
-                graph.add_node(point_label, point=point, label=label)
-
-                nearest_point = min(graph.nodes, key=lambda node: point.distance(node))
-                graph.add_edge(point, nearest_point)
-
-    # We'll also add a temporary edge between the start and end.  We'll remove
-    # it later to get a path going from start to end.
-    if starting_point and ending_point:
-        graph.add_edge(str(starting_point), str(ending_point))
-
 def get_starting_and_ending_nodes(graph, starting_point, ending_point):
     """Find or choose the starting and ending graph nodes.
 
@@ -286,7 +268,7 @@ def get_starting_and_ending_nodes(graph, starting_point, ending_point):
     nodes = []
 
     if starting_point is not None:
-        nodes.append(get_nearest_node(graph, ending_point))
+        nodes.append(get_nearest_node(graph, starting_point))
     else:
         nodes.append(get_extreme_node(graph, min))
 

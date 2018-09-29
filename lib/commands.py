@@ -16,6 +16,12 @@ COMMANDS = {
     N_("fill_end"): N_("Fill stitch ending position"),
 
     # L10N command attached to an object
+    N_("satin_start"): N_("Auto-route satin stitch starting position"),
+
+    # L10N command attached to an object
+    N_("satin_end"): N_("Auto-route satin stitch ending position"),
+
+    # L10N command attached to an object
     N_("stop"): N_("Stop (pause machine) after sewing this object"),
 
     # L10N command attached to an object
@@ -38,7 +44,7 @@ COMMANDS = {
     N_("stop_position"): N_("Jump destination for Stop commands (a.k.a. \"Frame Out position\")."),
 }
 
-OBJECT_COMMANDS = ["fill_start", "fill_end", "stop", "trim", "ignore_object", "satin_cut_point"]
+OBJECT_COMMANDS = ["fill_start", "fill_end", "satin_start", "satin_end", "stop", "trim", "ignore_object", "satin_cut_point"]
 LAYER_COMMANDS = ["ignore_layer"]
 GLOBAL_COMMANDS = ["origin", "stop_position"]
 

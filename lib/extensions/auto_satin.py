@@ -13,10 +13,10 @@ class AutoSatin(CommandsExtension):
     COMMANDS = ["trim"]
 
     def get_starting_point(self):
-        return self.get_point("fill_start")
+        return self.get_point("satin_start")
 
     def get_ending_point(self):
-        return self.get_point("fill_end")
+        return self.get_point("satin_end")
 
     def get_point(self, command_type):
         command = None
@@ -25,7 +25,7 @@ class AutoSatin(CommandsExtension):
             if command is not None and this_command:
                 inkex.errormsg(_("Please ensure that at most one start and end command is attached to the selected satin columns."))
                 sys.exit(0)
-            else:
+            elif this_command:
                 command = this_command
 
         if command is not None:
@@ -52,9 +52,14 @@ class AutoSatin(CommandsExtension):
         # The ordering is careful here.  Some of the original satins may have
         # been used unmodified.  That's why we remove all of the original
         # satins _first_ before adding new_nodes back into the SVG.
-        new_elements, trim_indices = auto_satin(self.elements, self.get_starting_point(), self.get_ending_point())
+        starting_point = self.get_starting_point()
+        ending_point = self.get_ending_point()
+        new_elements, trim_indices = auto_satin(self.elements, starting_point, ending_point)
 
         for element in self.elements:
+            for command in element.commands:
+                command.connector.getparent().remove(command.connector)
+                command.use.getparent().remove(command.use)
             element.node.getparent().remove(element.node)
 
         for element in new_elements:

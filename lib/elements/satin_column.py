@@ -329,12 +329,18 @@ class SatinColumn(EmbroideryElement):
         node that is not yet in the SVG.
         """
         # flatten the path because you can't just reverse a CSP subpath's elements (I think)
-        flattened = self.flatten(self.csp)
+        point_lists = []
 
-        for rail_index in self.rail_indices:
-            flattened[rail_index].reverse()
+        for rail in self.rails:
+            point_lists.append(list(reversed(self.flatten_subpath(rail))))
 
-        return self._csp_to_satin(point_lists_to_csp(flattened))
+        # reverse the order of the rails because we're sewing in the opposite direction
+        point_lists.reverse()
+
+        for rung in self.rungs:
+            point_lists.append(self.flatten_subpath(rung))
+
+        return self._csp_to_satin(point_lists_to_csp(point_lists))
 
     def apply_transform(self):
         """Return a new SatinColumn like this one but with transforms applied.
