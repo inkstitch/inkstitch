@@ -31,21 +31,22 @@ extension_class_name = extension_name.title().replace("_", "")
 extension_class = getattr(extensions, extension_class_name)
 extension = extension_class()
 
-exception = None
+if hasattr(sys, 'gettrace') and sys.gettrace():
+    extension.affect(args=remaining_args)
+else:
+    save_stderr()
+    exception = None
+    try:
+        extension.affect(args=remaining_args)
+    except (SystemExit, KeyboardInterrupt):
+        raise
+    except Exception:
+        exception = traceback.format_exc()
+    finally:
+        restore_stderr()
 
-# save_stderr()
-# try:
-#     extension.affect(args=remaining_args)
-# except (SystemExit, KeyboardInterrupt):
-#     raise
-# except Exception:
-#     exception = traceback.format_exc()
-# finally:
-#     restore_stderr()
-#
-# if exception:
-#     print >> sys.stderr, exception
-#     sys.exit(1)
-# else:
-#     sys.exit(0)
-extension.affect(args=remaining_args)
+    if exception:
+        print >> sys.stderr, exception
+        sys.exit(1)
+    else:
+        sys.exit(0)
