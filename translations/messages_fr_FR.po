@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-09-23 01:12+0000\n"
-"PO-Revision-Date: 2018-09-26 01:14\n"
+"POT-Creation-Date: 2018-09-30 01:16+0000\n"
+"PO-Revision-Date: 2018-09-30 01:16\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -62,34 +62,43 @@ msgstr "ignorer_objet"
 msgid "Ignore this object (do not stitch)"
 msgstr "Ignorer cet objet (ne pas le broder)"
 
-#. command that affects a layer
+#. command attached to an object
 #: lib/commands.py:28
+msgid "satin_cut_point"
+msgstr ""
+
+#: lib/commands.py:28
+msgid "Satin cut point (use with Cut Satin Column)"
+msgstr ""
+
+#. command that affects a layer
+#: lib/commands.py:32
 msgid "ignore_layer"
 msgstr "ignorer_calque"
 
-#: lib/commands.py:28
+#: lib/commands.py:32
 msgid "Ignore layer (do not stitch any objects in this layer)"
 msgstr "Ignorer le calque (broder aucun objet dans cette couche)"
 
 #. command that affects entire document
-#: lib/commands.py:31
+#: lib/commands.py:35
 msgid "origin"
 msgstr "origine"
 
-#: lib/commands.py:31
+#: lib/commands.py:35
 msgid "Origin for exported embroidery files"
 msgstr "Origine des fichiers broderie exportés"
 
 #. command that affects entire document
-#: lib/commands.py:34
+#: lib/commands.py:38
 msgid "stop_position"
 msgstr "position_stop"
 
-#: lib/commands.py:34
+#: lib/commands.py:38
 msgid "Jump destination for Stop commands (a.k.a. \"Frame Out position\")."
 msgstr "Destination de saut pour les commandes stop (\"position en dehors du cadre\")."
 
-#: lib/commands.py:190
+#: lib/commands.py:196
 #, python-format
 msgid "Error: there is more than one %(command)s command in the document, but there can only be one.  Please remove all but one."
 msgstr "Erreur : il y a plus d’une commande de %(command)s dans le document, mais il ne peut être un.  S’il vous plaît supprimer tous sauf un."
@@ -99,7 +108,7 @@ msgstr "Erreur : il y a plus d’une commande de %(command)s dans le document, 
 #. command name to them.  Contents of %(description)s are in a separate
 #. translation
 #. string.
-#: lib/commands.py:197
+#: lib/commands.py:203
 #, python-format
 msgid "%(command)s: %(description)s"
 msgstr "%(command)s: %(description)s"
@@ -183,7 +192,7 @@ msgstr "Plus d’une commande de type «%(command)s» est liée à %(id)s"
 #. used when showing an error message to the user such as "satin column: One or
 #. more of the rungs doesn't
 #. intersect both rails."
-#: lib/elements/element.py:273
+#: lib/elements/element.py:279
 msgid "error:"
 msgstr "erreur :"
 
@@ -248,115 +257,111 @@ msgstr "la forme %s est si petite qu’elle ne peut pas être remplie avec des p
 msgid "shape is not valid.  This can happen if the border crosses over itself."
 msgstr "la forme n’est pas valide.  Cela peut arriver si la  bordure se croise."
 
-#: lib/elements/satin_column.py:10
+#: lib/elements/satin_column.py:13
 msgid "Satin Column"
 msgstr "Colonne Satin"
 
-#: lib/elements/satin_column.py:16
+#: lib/elements/satin_column.py:19
 msgid "Custom satin column"
 msgstr "Colonne de satin personnalisée"
 
-#: lib/elements/satin_column.py:22
+#: lib/elements/satin_column.py:25
 msgid "\"E\" stitch"
 msgstr "Point « E »"
 
-#: lib/elements/satin_column.py:32 lib/elements/stroke.py:55
+#: lib/elements/satin_column.py:35 lib/elements/stroke.py:55
 msgid "Zig-zag spacing (peak-to-peak)"
 msgstr "Espacement Zig-Zag (crête à crête)"
 
-#: lib/elements/satin_column.py:33
+#: lib/elements/satin_column.py:36
 msgid "Peak-to-peak distance between zig-zags."
 msgstr "Distance crête à crête entre zig-zags."
 
-#: lib/elements/satin_column.py:44
+#: lib/elements/satin_column.py:47
 msgid "Pull compensation"
 msgstr "Compensation d'étirement"
 
-#: lib/elements/satin_column.py:45
+#: lib/elements/satin_column.py:48
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape.  This setting expands each pair of needle penetrations outward from the center of the satin column."
 msgstr "Les points satin serrent le tissu, ce qui entraîne une colonne plus étroite que celle que vous dessinez dans Inkscape.  Ce paramètre étend le points depuis le centre vers l’extérieur de la colonne satinée."
 
-#: lib/elements/satin_column.py:57
+#: lib/elements/satin_column.py:60
 msgid "Contour underlay"
 msgstr "Sous-couche de contour"
 
-#: lib/elements/satin_column.py:57 lib/elements/satin_column.py:64
-#: lib/elements/satin_column.py:73
+#: lib/elements/satin_column.py:60 lib/elements/satin_column.py:67
+#: lib/elements/satin_column.py:76
 msgid "Contour Underlay"
 msgstr "Sous-couche de Contour"
 
-#: lib/elements/satin_column.py:64 lib/elements/satin_column.py:88
+#: lib/elements/satin_column.py:67 lib/elements/satin_column.py:91
 msgid "Stitch length"
 msgstr "Longueur de point"
 
-#: lib/elements/satin_column.py:70
+#: lib/elements/satin_column.py:73
 msgid "Contour underlay inset amount"
 msgstr "Montant de l'incrustation de la sous-couche de contour"
 
-#: lib/elements/satin_column.py:71
+#: lib/elements/satin_column.py:74
 msgid "Shrink the outline, to prevent the underlay from showing around the outside of the satin column."
 msgstr "Rétrécir le contour, pour empêcher que la sous-couche se montre autour de la colonne satinée."
 
-#: lib/elements/satin_column.py:81
+#: lib/elements/satin_column.py:84
 msgid "Center-walk underlay"
 msgstr "Sous-couche de marche centrale"
 
-#: lib/elements/satin_column.py:81 lib/elements/satin_column.py:88
+#: lib/elements/satin_column.py:84 lib/elements/satin_column.py:91
 msgid "Center-Walk Underlay"
 msgstr "Sous-couche de Marche-centrale"
 
-#: lib/elements/satin_column.py:93
+#: lib/elements/satin_column.py:96
 msgid "Zig-zag underlay"
 msgstr "Sous-couche Zig-zag"
 
-#: lib/elements/satin_column.py:93 lib/elements/satin_column.py:102
-#: lib/elements/satin_column.py:113
+#: lib/elements/satin_column.py:96 lib/elements/satin_column.py:105
+#: lib/elements/satin_column.py:116
 msgid "Zig-zag Underlay"
 msgstr "Sous-couche Zig-zag"
 
-#: lib/elements/satin_column.py:99
+#: lib/elements/satin_column.py:102
 msgid "Zig-Zag spacing (peak-to-peak)"
 msgstr "Espacement Zig-Zag (crête à crête)"
 
-#: lib/elements/satin_column.py:100
+#: lib/elements/satin_column.py:103
 msgid "Distance between peaks of the zig-zags."
 msgstr "Distance entre les crêtes des zig-zags."
 
-#: lib/elements/satin_column.py:110
+#: lib/elements/satin_column.py:113
 msgid "Inset amount"
 msgstr "Montant de l’incrustation"
 
-#: lib/elements/satin_column.py:111
+#: lib/elements/satin_column.py:114
 msgid "default: half of contour underlay inset"
 msgstr "par défaut: la moitié de l'incrustation du contour de la sous-couche"
 
-#: lib/elements/satin_column.py:148
+#: lib/elements/satin_column.py:272
 #, python-format
 msgid "satin column: %(id)s: at least two subpaths required (%(num)d found)"
 msgstr "colonne satinée : %(id)s: au moins deux sous-tracés requis (%(num)d trouvés)"
 
-#: lib/elements/satin_column.py:173
-msgid "One or more rails crosses itself, and this is not allowed.  Please split into multiple satin columns."
-msgstr "Un ou plusieurs rails se croisent, ce qui n'est pas autorisé. S'il vous plaît diviser en plusieurs colonnes de satin."
-
-#: lib/elements/satin_column.py:180
+#: lib/elements/satin_column.py:282
 msgid "satin column: One or more of the rungs doesn't intersect both rails."
 msgstr "colonne satinée: un ou plusieurs des échelons ne croisent pas les deux rails."
 
-#: lib/elements/satin_column.py:181 lib/elements/satin_column.py:184
+#: lib/elements/satin_column.py:283 lib/elements/satin_column.py:286
 msgid "Each rail should intersect both rungs once."
 msgstr "Chaque rail devrait croiser les deux échelons une fois."
 
-#: lib/elements/satin_column.py:183
+#: lib/elements/satin_column.py:285
 msgid "satin column: One or more of the rungs intersects the rails more than once."
 msgstr "colonne satinée: Un ou plusieurs échelons croisent les rails plus d'une fois."
 
-#: lib/elements/satin_column.py:224
+#: lib/elements/satin_column.py:317
 #, python-format
 msgid "satin column: object %s has a fill (but should not)"
 msgstr "colonne de satin: objet %s a un remplissage (mais ne devrait pas)"
 
-#: lib/elements/satin_column.py:228
+#: lib/elements/satin_column.py:321
 #, python-format
 msgid "satin column: object %(id)s has two paths with an unequal number of points (%(length1)d and %(length2)d)"
 msgstr "colonne de satin: l'objet %(id)s a deux chemins avec un nombre de points différents (%(length1)d et %(length2)d)"
@@ -433,13 +438,23 @@ msgstr "Seulement les lignes simples peuvent être converties en colonnes satin�
 msgid "Cannot convert %s to a satin column because it intersects itself.  Try breaking it up into multiple paths."
 msgstr "Impossible de convertir %s à une colonne satinée, car elle se croise elle-même.  Essayez de la séparer en plusieurs chemins."
 
+#: lib/extensions/cut_satin.py:14
+msgid "Please select one or more satin columns to cut."
+msgstr ""
+
+#. will have the satin's id prepended, like this:
+#. path12345: error: this satin column does not ...
+#: lib/extensions/cut_satin.py:24
+msgid "this satin column does not have a \"satin column cut point\" command attached to it. Please use the \"Attach commands\" extension and attach the \"Satin Column cut point\" command first."
+msgstr ""
+
 #: lib/extensions/embroider.py:38
 msgid "\n\n"
 "Seeing a 'no such option' message?  Please restart Inkscape to fix."
 msgstr "\n\n"
 "Vous voyez un message 'aucune option' ? Veuillez redémarrer Inkscape pour corriger."
 
-#: lib/extensions/flip.py:35
+#: lib/extensions/flip.py:24
 msgid "Please select one or more satin columns to flip."
 msgstr "Veuillez sélectionner une ou plusieurs colonnes satin pour retourner."
 
@@ -459,7 +474,7 @@ msgstr "Commandes Ink/Stitch visuelles (Objet-> symboles...)"
 msgid "Install"
 msgstr "Installer"
 
-#: lib/extensions/install.py:40 lib/extensions/params.py:408
+#: lib/extensions/install.py:40 lib/extensions/params.py:407
 msgid "Cancel"
 msgstr "Quitter"
 
@@ -513,100 +528,100 @@ msgstr "Veuillez sélectionner un ou plusieurs objets pour y attacher des comman
 msgid "Please choose one or more commands to attach."
 msgstr "Veuillez choisir une ou plusieurs commandes à attacher."
 
-#: lib/extensions/params.py:250
+#: lib/extensions/params.py:248
 msgid "These settings will be applied to 1 object."
 msgstr "Ces paramètres seront appliqués à 1 objet."
 
-#: lib/extensions/params.py:252
+#: lib/extensions/params.py:250
 #, python-format
 msgid "These settings will be applied to %d objects."
 msgstr "Ces paramètres seront appliqués aux %d objets."
 
-#: lib/extensions/params.py:255
+#: lib/extensions/params.py:253
 msgid "Some settings had different values across objects.  Select a value from the dropdown or enter a new one."
 msgstr "Certains paramètres ont des valeurs différentes d'un objet à l'autre. Sélectionnez une valeur dans la liste déroulante ou entrez-en une nouvelle."
 
-#: lib/extensions/params.py:259
+#: lib/extensions/params.py:257
 #, python-format
 msgid "Disabling this tab will disable the following %d tabs."
 msgstr "La désactivation de cet onglet désactivera les onglets %d suivants."
 
-#: lib/extensions/params.py:261
+#: lib/extensions/params.py:259
 msgid "Disabling this tab will disable the following tab."
 msgstr "La désactivation de cet onglet désactivera l'onglet suivant."
 
-#: lib/extensions/params.py:264
+#: lib/extensions/params.py:262
 #, python-format
 msgid "Enabling this tab will disable %s and vice-versa."
 msgstr "Activer cet onglet désactivera %s et vice-versa."
 
-#: lib/extensions/params.py:294
+#: lib/extensions/params.py:292
 msgid "Inkscape objects"
 msgstr "Objets Inkscape"
 
-#: lib/extensions/params.py:351
+#: lib/extensions/params.py:349
 msgid "Click to force this parameter to be saved when you click \"Apply and Quit\""
 msgstr "Cliquez pour forcer l’enregistrement de ce paramètre lorsque vous cliquez sur « Appliquer et quitter »"
 
-#: lib/extensions/params.py:359
+#: lib/extensions/params.py:357
 msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr "Ce paramètre sera enregistré lorsque vous cliquez sur « Appliquer et quitter »"
 
-#: lib/extensions/params.py:374
+#: lib/extensions/params.py:373
 msgid "Embroidery Params"
 msgstr "Paramètres de broderie"
 
-#: lib/extensions/params.py:391
+#: lib/extensions/params.py:390
 msgid "Presets"
 msgstr "Présélection"
 
-#: lib/extensions/params.py:396
+#: lib/extensions/params.py:395
 msgid "Load"
 msgstr "Charger"
 
-#: lib/extensions/params.py:399
+#: lib/extensions/params.py:398
 msgid "Add"
 msgstr "Ajouter"
 
-#: lib/extensions/params.py:402
+#: lib/extensions/params.py:401
 msgid "Overwrite"
 msgstr "Écraser"
 
-#: lib/extensions/params.py:405
+#: lib/extensions/params.py:404
 msgid "Delete"
 msgstr "Effacer"
 
-#: lib/extensions/params.py:412
+#: lib/extensions/params.py:411
 msgid "Use Last Settings"
 msgstr "Utiliser les derniers paramètres"
 
-#: lib/extensions/params.py:415
+#: lib/extensions/params.py:414
 msgid "Apply and Quit"
 msgstr "Appliquer et Quitter"
 
-#: lib/extensions/params.py:468
+#: lib/extensions/params.py:467 lib/extensions/params.py:479
 msgid "Preview"
 msgstr "Aperçu"
 
-#: lib/extensions/params.py:484
+#: lib/extensions/params.py:483
 msgid "Internal Error"
 msgstr "Erreur interne"
 
-#: lib/extensions/params.py:537
+#: lib/extensions/params.py:536
 msgid "Please enter or select a preset name first."
 msgstr "Veuillez entrer ou sélectionner un nom prédéfini en premier."
 
-#: lib/extensions/params.py:537 lib/extensions/params.py:543
-#: lib/extensions/params.py:571
+#: lib/extensions/params.py:536 lib/extensions/params.py:542
+#: lib/extensions/params.py:570
 msgid "Preset"
 msgstr "Préréglage"
 
-#: lib/extensions/params.py:543
+#: lib/extensions/params.py:542
 #, python-format
 msgid "Preset \"%s\" not found."
 msgstr "Le préréglage \"%s\" n'a pas été trouvé."
 
-#: lib/extensions/params.py:571
+#: lib/extensions/params.py:570
 #, python-format
 msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
 msgstr "Le préréglage \"%s\" existe déjà. Veuillez utiliser un autre nom ou appuyez sur \"Écraser\""
@@ -1170,13 +1185,17 @@ msgstr "Convertir ligne en satin"
 #. This is used for the submenu under Extensions -> Ink/Stitch.  Translate this
 #. to your language's word for its language, e.g. "Español" for the spanish
 #. translation.
-#: templates/convert_to_satin.inx:12 templates/embroider.inx:24
-#: templates/flip.inx:12 templates/global_commands.inx:16
-#: templates/install.inx:12 templates/layer_commands.inx:16
-#: templates/object_commands.inx:15 templates/params.inx:12
-#: templates/print.inx:12 templates/simulate.inx:12
+#: templates/convert_to_satin.inx:12 templates/cut_satin.inx:12
+#: templates/embroider.inx:24 templates/flip.inx:12
+#: templates/global_commands.inx:16 templates/install.inx:12
+#: templates/layer_commands.inx:16 templates/object_commands.inx:15
+#: templates/params.inx:12 templates/print.inx:12 templates/simulate.inx:12
 msgid "English"
 msgstr "Français"
+
+#: templates/cut_satin.inx:3
+msgid "Cut Satin Column"
+msgstr ""
 
 #: templates/embroider.inx:3
 msgid "Embroider"
