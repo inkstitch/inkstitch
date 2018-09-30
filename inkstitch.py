@@ -1,10 +1,22 @@
 import os
 import sys
+import logging
 import traceback
+from cStringIO import StringIO
 from argparse import ArgumentParser
 
 from lib import extensions
 from lib.utils import save_stderr, restore_stderr
+
+
+logger = logging.getLogger('shapely.geos')
+logger.setLevel(logging.DEBUG)
+shapely_errors = StringIO()
+ch = logging.StreamHandler(shapely_errors)
+ch.setLevel(logging.DEBUG)
+formatter = logging.Formatter('%(name)s - %(levelname)s - %(message)s')
+ch.setFormatter(formatter)
+logger.addHandler(ch)
 
 
 parser = ArgumentParser()
@@ -44,6 +56,9 @@ else:
         exception = traceback.format_exc()
     finally:
         restore_stderr()
+
+        if shapely_errors.tell():
+            print >> sys.stderr, shapely_errors.getvalue()
 
     if exception:
         print >> sys.stderr, exception
