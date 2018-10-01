@@ -39,15 +39,18 @@ class AutoSatin(CommandsExtension):
             inkex.errormsg(_("Please select one or more satin columns to cut."))
             return
 
-        parent = self.elements[0].node.getparent()
         for element in self.elements:
             if not isinstance(element, SatinColumn):
                 inkex.errormsg(_("Please only select satin columns."))
                 return
 
-        group = inkex.etree.SubElement(parent, SVG_GROUP_TAG, {
+        first = self.elements[0].node
+        parent = first.getparent()
+        insert_index = parent.index(first)
+        group = inkex.etree.Element(SVG_GROUP_TAG, {
             "transform": get_correction_transform(parent, child=True)
         })
+        parent.insert(insert_index, group)
 
         # The ordering is careful here.  Some of the original satins may have
         # been used unmodified.  That's why we remove all of the original
