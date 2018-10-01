@@ -50,6 +50,13 @@ def cut_path(points, length):
     return [Point(*point) for point in subpath.coords]
 
 
+def collapse_duplicate_point(geometry):
+    if hasattr(geometry, 'geoms'):
+        if geometry.area < 0.01:
+            return geometry.representative_point()
+
+    return geometry
+
 class Point:
     def __init__(self, x, y):
         self.x = x

@@ -5,7 +5,7 @@ import cubicsuperpath
 
 from .element import param, EmbroideryElement, Patch
 from ..i18n import _
-from ..utils import cache, Point, cut
+from ..utils import cache, Point, cut, collapse_duplicate_point
 from ..svg import line_strings_to_csp, point_lists_to_csp
 
 
@@ -245,10 +245,18 @@ class SatinColumn(EmbroideryElement):
 
             intersection = rail_segment.intersection(rung)
 
+            # If there are duplicate points in a rung-less satin, then
+            # intersection will be a GeometryCollection of multiple copies
+            # of the same point.  This reduces it that to a single point.
+            intersection = collapse_duplicate_point(intersection)
+
+
             if not intersection.is_empty:
                 if isinstance(intersection, shgeo.MultiLineString):
                     intersections += len(intersection)
                     break
+                elif not isinstance(intersection, shgeo.Point):
+                    self.fatal("intersection is a: %s %s" % (intersection, intersection.geoms) )
                 else:
                     intersections += 1
 
