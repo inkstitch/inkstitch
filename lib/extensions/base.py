@@ -211,8 +211,20 @@ class InkstitchExtension(inkex.Effect):
 
         return svg_filename
 
+    def uniqueId(self, prefix, make_new_id=True):
+        """Override inkex.Effect.uniqueId with a nicer naming scheme."""
+        i = 1
+        while True:
+            new_id = "%s%d" % (prefix, i)
+            if new_id not in self.doc_ids:
+                break
+            i += 1
+        self.doc_ids[new_id] = 1
+
+        return new_id
+
     def parse(self):
-        """Override inkex.Effect to add Ink/Stitch xml namespace"""
+        """Override inkex.Effect.parse to add Ink/Stitch xml namespace"""
 
         # SVG parsers don't actually look for anything at this URL.  They just
         # care that it's unique.  That defines a "namespace" of element and
