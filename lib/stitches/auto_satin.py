@@ -2,7 +2,7 @@ import math
 import networkx as nx
 from shapely import geometry as shgeo
 from shapely.geometry import Point as ShapelyPoint
-from itertools import groupby
+from itertools import chain
 import inkex
 import cubicsuperpath
 import simplestyle
@@ -119,6 +119,9 @@ class SatinSegment(object):
     def is_sequential(self, other):
         """Check if a satin segment immediately follows this one on the same satin."""
 
+        if not isinstance(other, SatinSegment):
+            return False
+
         if self.satin is not other.satin:
             return False
 
@@ -166,6 +169,10 @@ class JumpStitch(object):
         self.start = start
         self.end = end
 
+    def is_sequential(self, other):
+        # Don't bother joining jump stitches.
+        return False
+
     @property
     @cache
     def length(self):
@@ -190,6 +197,16 @@ class RunningStitch(object):
         node.set("style", style)
 
         return Stroke(node)
+
+    def is_sequential(self, other):
+        if not isinstance(other, RunningStitch):
+            return False
+
+        return self.path.distance(other.path) < 0.5
+
+    def __add__(self, other):
+        new_path = shgeo.LineString(chain(self.path.coords, other.path.coords))
+        return RunningStitch(new_path, self.style)
 
 
 def auto_satin(satins, starting_point=None, ending_point=None):
@@ -423,20 +440,14 @@ def path_to_operations(graph, path):
 
 
 def collapse_sequential_segments(old_operations):
-    new_operations = []
+    old_operations = iter(old_operations)
+    new_operations = [next(old_operations)]
 
-    for operation_type, operations in groupby(old_operations, key=type):
-        if operation_type is SatinSegment:
-            current_segment = operations.next()
-            for segment in operations:
-                if current_segment.is_sequential(segment):
-                    current_segment += segment
-                else:
-                    new_operations.append(current_segment)
-                    current_segment = segment
-            new_operations.append(current_segment)
+    for operation in old_operations:
+        if new_operations[-1].is_sequential(operation):
+            new_operations[-1] += operation
         else:
-            new_operations.extend(operations)
+            new_operations.append(operation)
 
     return new_operations
 
