@@ -394,22 +394,23 @@ class SatinColumn(EmbroideryElement):
           cut points.
         """
 
-        patch = self.do_satin()
+        # like in do_satin()
+        points = list(chain.from_iterable(izip(*self.walk_paths(self.zigzag_spacing, 0))))
 
         if isinstance(split_point, float):
-            index_of_closest_stitch = int(len(patch) * split_point)
+            index_of_closest_stitch = int(round(len(points) * split_point))
         else:
             split_point = Point(*split_point)
-            index_of_closest_stitch = min(range(len(patch)), key=lambda index: split_point.distance(patch.stitches[index]))
+            index_of_closest_stitch = min(range(len(points)), key=lambda index: split_point.distance(points[index]))
 
         if index_of_closest_stitch % 2 == 0:
             # split point is on the first rail
-            return (patch.stitches[index_of_closest_stitch],
-                    patch.stitches[index_of_closest_stitch + 1])
+            return (points[index_of_closest_stitch],
+                    points[index_of_closest_stitch + 1])
         else:
             # split point is on the second rail
-            return (patch.stitches[index_of_closest_stitch - 1],
-                    patch.stitches[index_of_closest_stitch])
+            return (points[index_of_closest_stitch - 1],
+                    points[index_of_closest_stitch])
 
     def _cut_rails(self, cut_points):
         """Cut the rails of this satin at the specified points.
@@ -419,7 +420,7 @@ class SatinColumn(EmbroideryElement):
 
         Returns: A list of two elements, corresponding two the two new sets of
           rails.  Each element is a list of two rails of type LineString.
-      """
+        """
 
         rails = [shgeo.LineString(self.flatten_subpath(rail)) for rail in self.rails]
 
