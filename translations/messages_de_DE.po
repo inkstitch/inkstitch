@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-09-30 01:16+0000\n"
-"PO-Revision-Date: 2018-09-30 01:17\n"
+"PO-Revision-Date: 2018-10-02 01:18\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -115,7 +115,7 @@ msgstr ""
 
 #: lib/elements/auto_fill.py:11
 msgid "AutoFill"
-msgstr ""
+msgstr "AutoFüllung"
 
 #: lib/elements/auto_fill.py:14
 msgid "Automatically routed fill stitching"
@@ -182,7 +182,7 @@ msgstr "Erweitern der Form vor dem Füllstich, um Lücken zwischen den Formen au
 #: lib/elements/element.py:202
 #, python-format
 msgid "Object %(id)s has an empty 'd' attribute.  Please delete this object from your document."
-msgstr ""
+msgstr "Objekt %(id)s hat ein leeres Attribut 'd'. Bitte lösche dieses Objekt aus dem Dokument."
 
 #: lib/elements/element.py:234
 #, python-format
@@ -194,7 +194,7 @@ msgstr "%(id)s beinhaltet mehr als einen Befehl vom Typ '%(command)s'"
 #. intersect both rails."
 #: lib/elements/element.py:279
 msgid "error:"
-msgstr ""
+msgstr "Fehler:"
 
 #: lib/elements/fill.py:12
 msgid "Fill"
@@ -255,7 +255,7 @@ msgstr "Die Form %s ist zu klein, dass sie nicht mit Stichen gefüllt werden kan
 
 #: lib/elements/fill.py:125
 msgid "shape is not valid.  This can happen if the border crosses over itself."
-msgstr ""
+msgstr "Form ist nicht gültig.  Dies kann passieren, wenn die Grenze, sich selbst überkreuzt."
 
 #: lib/elements/satin_column.py:13
 msgid "Satin Column"
@@ -441,13 +441,13 @@ msgstr "%s kann nicht in eine Satinkolumne konvertiert werden, da sie sich selbs
 
 #: lib/extensions/cut_satin.py:14
 msgid "Please select one or more satin columns to cut."
-msgstr ""
+msgstr "Bitte wähle eine oder mehrere Satinkolumnen zum schneiden aus."
 
 #. will have the satin's id prepended, like this:
 #. path12345: error: this satin column does not ...
 #: lib/extensions/cut_satin.py:24
 msgid "this satin column does not have a \"satin column cut point\" command attached to it. Please use the \"Attach commands\" extension and attach the \"Satin Column cut point\" command first."
-msgstr ""
+msgstr "Diese Satinkolumne hat keinen \"Satinkolumnen schneiden\" -Befehl. Bitte verwende die Erweiterung \"Befehle hinzufügen\" und füge zuerst den Befehl \"Satinkolumne schneiden\" hinzu."
 
 #: lib/extensions/embroider.py:38
 msgid "\n\n"
@@ -562,11 +562,11 @@ msgstr "Inkscape Objekte"
 
 #: lib/extensions/params.py:349
 msgid "Click to force this parameter to be saved when you click \"Apply and Quit\""
-msgstr ""
+msgstr "Klicke hier, um zu erzwingen, dass dieser Parameter gespeichert wird, wenn man auf \"Übernehmen und Beenden\" klickt"
 
 #: lib/extensions/params.py:357
 msgid "This parameter will be saved when you click \"Apply and Quit\""
-msgstr ""
+msgstr "Dieser Parameter wird gespeichert, wenn man auf \"Übernehmen und beenden\" klickt"
 
 #: lib/extensions/params.py:373
 msgid "Embroidery Params"
@@ -661,48 +661,48 @@ msgstr "Erzeuge INX Dateien"
 #: lib/output.py:102
 #, python-format
 msgid "Error writing to %(path)s: %(error)s"
-msgstr ""
+msgstr "Fehler beim Schreiben in %(path)s: %(error)s"
 
 #. command label at bottom of simulator window
 #: lib/simulator.py:12
 msgid "STITCH"
-msgstr ""
+msgstr "STICH"
 
 #: lib/simulator.py:12
 msgid "JUMP"
-msgstr ""
+msgstr "SPRUNG"
 
 #: lib/simulator.py:12
 msgid "TRIM"
-msgstr ""
+msgstr "SCHNEIDEN"
 
 #: lib/simulator.py:12
 msgid "STOP"
-msgstr ""
+msgstr "STOP"
 
 #: lib/simulator.py:12
 msgid "COLOR CHANGE"
-msgstr ""
+msgstr "FARBWECHSEL"
 
 #: lib/simulator.py:44
 msgid "Slow down (arrow down)"
-msgstr ""
+msgstr "Langsamer (Pfeil Runter)"
 
 #: lib/simulator.py:47
 msgid "Speed up (arrow up)"
-msgstr ""
+msgstr "Schneller (Pfeil Hoch)"
 
 #: lib/simulator.py:50
 msgid "Go on step backward (-)"
-msgstr ""
+msgstr "Schritt rückwärts (-)"
 
 #: lib/simulator.py:53
 msgid "Go on step forward (+)"
-msgstr ""
+msgstr "Schritt vorwärts (+)"
 
 #: lib/simulator.py:56
 msgid "Switch direction (arrow left | arrow right)"
-msgstr ""
+msgstr "Richtung wechseln (Pfeil Links | Pfeil Rechts)"
 
 #: lib/simulator.py:57 lib/simulator.py:210 lib/simulator.py:217
 msgid "Pause"
@@ -710,7 +710,7 @@ msgstr "Pause"
 
 #: lib/simulator.py:59
 msgid "Pause (P)"
-msgstr ""
+msgstr "Pause (P)"
 
 #: lib/simulator.py:60
 msgid "Restart"
@@ -718,7 +718,7 @@ msgstr "Neustart"
 
 #: lib/simulator.py:62
 msgid "Restart (R)"
-msgstr ""
+msgstr "Neustart (R)"
 
 #: lib/simulator.py:63
 msgid "Quit"
@@ -726,16 +726,16 @@ msgstr "Beenden"
 
 #: lib/simulator.py:65
 msgid "Quit (Q)"
-msgstr ""
+msgstr "Beenden (Q)"
 
 #: lib/simulator.py:171
 #, python-format
 msgid "Speed: %d stitches/sec"
-msgstr ""
+msgstr "Geschwindigkeit: %d Stiche/Sek"
 
 #: lib/simulator.py:213
 msgid "Start"
-msgstr ""
+msgstr "Start"
 
 #: lib/simulator.py:651
 msgid "Embroidery Simulation"
@@ -1197,7 +1197,7 @@ msgstr "Deutsch"
 
 #: templates/cut_satin.inx:3
 msgid "Cut Satin Column"
-msgstr ""
+msgstr "Satinkolumne schneiden"
 
 #: templates/embroider.inx:3
 msgid "Embroider"
@@ -1241,17 +1241,17 @@ msgstr "Satinkolumne umkehren"
 
 #: templates/global_commands.inx:3
 msgid "Add Commands"
-msgstr ""
+msgstr "Befehle hinzufügen"
 
 #: templates/global_commands.inx:7
 msgid "These commands affect the entire embroidery design."
-msgstr ""
+msgstr "Diese Befehle wirken sich auf das gesamte Stickdesign aus."
 
 #. Inkscape submenu under Extensions -> Ink/Stitch
 #: templates/global_commands.inx:18 templates/layer_commands.inx:17
 #: templates/object_commands.inx:16
 msgid "Commands"
-msgstr ""
+msgstr "Befehle"
 
 #: templates/input.inx:11
 #, python-format
@@ -1272,7 +1272,7 @@ msgstr "Befehle werden zur aktuell ausgewählten Ebene hinzugefügt."
 
 #: templates/object_commands.inx:3
 msgid "Attach Commands to Selected Objects"
-msgstr ""
+msgstr "Befehle mit gewählten Objekten verknüpfen"
 
 #: templates/output.inx:11
 #, python-format
