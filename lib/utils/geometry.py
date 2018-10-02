@@ -57,6 +57,7 @@ def collapse_duplicate_point(geometry):
 
     return geometry
 
+
 class Point:
     def __init__(self, x, y):
         self.x = x

@@ -356,7 +356,7 @@ def add_jumps(graph, satins, preserve_order):
         # a weight, which we'll set as the length of the jump stitch.  The
         # algorithm will minimize the total length of jump stitches added.
         for jump in nx.k_edge_augmentation(graph, 1, avail=list(possible_jumps(graph))):
-            graph.add_edge(*jump)
+            graph.add_edge(*jump, jump=True)
 
 
 def possible_jumps(graph):

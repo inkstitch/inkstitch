@@ -250,13 +250,12 @@ class SatinColumn(EmbroideryElement):
             # of the same point.  This reduces it that to a single point.
             intersection = collapse_duplicate_point(intersection)
 
-
             if not intersection.is_empty:
                 if isinstance(intersection, shgeo.MultiLineString):
                     intersections += len(intersection)
                     break
                 elif not isinstance(intersection, shgeo.Point):
-                    self.fatal("intersection is a: %s %s" % (intersection, intersection.geoms) )
+                    self.fatal("intersection is a: %s %s" % (intersection, intersection.geoms))
                 else:
                     intersections += 1
 
