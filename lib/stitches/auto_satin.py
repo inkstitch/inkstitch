@@ -209,7 +209,7 @@ class RunningStitch(object):
         return RunningStitch(new_path, self.style)
 
 
-def auto_satin(satins, starting_point=None, ending_point=None):
+def auto_satin(satins, preserve_order=False, starting_point=None, ending_point=None):
     """Find an optimal order to stitch a list of SatinColumns.
 
     Add running stitch and jump stitches as necessary to construct a stitch
@@ -240,17 +240,20 @@ def auto_satin(satins, starting_point=None, ending_point=None):
       other.
     """
 
-    graph = build_graph(satins)
-    add_jumps(graph)
-    starting_node, ending_node = get_starting_and_ending_nodes(graph, starting_point, ending_point)
+    graph = build_graph(satins, preserve_order)
+    add_jumps(graph, satins, preserve_order)
+    starting_node, ending_node = get_starting_and_ending_nodes(graph, satins, preserve_order, starting_point, ending_point)
     path = find_path(graph, starting_node, ending_node)
     operations = path_to_operations(graph, path)
     operations = collapse_sequential_segments(operations)
     return operations_to_elements_and_trims(operations)
 
 
-def build_graph(satins):
-    graph = nx.Graph()
+def build_graph(satins, preserve_order=False):
+    if preserve_order:
+        graph = nx.DiGraph()
+    else:
+        graph = nx.Graph()
 
     # Take each satin and dice it up into pieces 1mm long.  This allows many
     # possible spots for jump-stitches between satins.  NetworkX will find the
@@ -263,12 +266,18 @@ def build_graph(satins):
             # can't be used as nodes directly.
             graph.add_node(str(segment.start_point), point=segment.start_point)
             graph.add_node(str(segment.end_point), point=segment.end_point)
-            graph.add_edge(str(segment.start_point), str(segment.end_point), satin_segment=segment)
+            graph.add_edge(str(segment.start_point), str(segment.end_point), satin_segment=segment, satin=satin)
+
+            if preserve_order:
+                # The graph is a directed graph, but we want to allow travel in
+                # any direction in a satin, so we add the edge in the opposite
+                # direction too.
+                graph.add_edge(str(segment.end_point), str(segment.start_point), satin_segment=segment, satin=satin)
 
     return graph
 
 
-def get_starting_and_ending_nodes(graph, starting_point, ending_point):
+def get_starting_and_ending_nodes(graph, satins, preserve_order, starting_point, ending_point):
     """Find or choose the starting and ending graph nodes.
 
     If points were passed, we'll find the nearest graph nodes.  Since we split
@@ -284,44 +293,70 @@ def get_starting_and_ending_nodes(graph, starting_point, ending_point):
 
     nodes = []
 
-    if starting_point is not None:
-        nodes.append(get_nearest_node(graph, starting_point))
-    else:
-        nodes.append(get_extreme_node(graph, min))
-
-    if ending_point is not None:
-        nodes.append(get_nearest_node(graph, ending_point))
-    else:
-        nodes.append(get_extreme_node(graph, max))
+    nodes.append(find_node(graph, starting_point, min, preserve_order, satins[0]))
+    nodes.append(find_node(graph, ending_point, max, preserve_order, satins[-1]))
 
     return nodes
 
 
-def get_nearest_node(graph, point):
-    point = shgeo.Point(*point)
-    return min(graph.nodes, key=lambda node: graph.nodes[node]['point'].distance(point))
+def find_node(graph, point, extreme_function, constrain_to_satin=False, satin=None):
+    if constrain_to_satin:
+        nodes = get_nodes_on_satin(graph, satin)
+    else:
+        nodes = graph.nodes()
+
+    if point is None:
+        return extreme_function(nodes, key=lambda node: graph.nodes[node]['point'].x)
+    else:
+        point = shgeo.Point(*point)
+        return min(nodes, key=lambda node: graph.nodes[node]['point'].distance(point))
 
 
-def get_extreme_node(graph, extreme_function):
-    """Get the node with minimal or maximal X value."""
+def get_nodes_on_satin(graph, satin):
+    nodes = set()
 
-    return extreme_function(graph.nodes, key=lambda node: graph.nodes[node]['point'].x)
+    for start_node, end_node, edge_satin in graph.edges(data='satin'):
+        if edge_satin is satin:
+            nodes.add(start_node)
+            nodes.add(end_node)
+
+    return nodes
 
 
-def add_jumps(graph):
+def add_jumps(graph, satins, preserve_order):
     """Add jump stitches between satins as necessary.
 
     Jump stitches are added to ensure that all satins can be reached.  Only the
     minimal number and length of jumps necessary will be added.
     """
 
-    # networkx makes this super-easy!  k_edge_agumentation tells us what edges
-    # we need to add to ensure that the graph is fully connected.  We give it a
-    # set of possible edges that it can consider adding (avail).  Each edge has
-    # a weight, which we'll set as the length of the jump stitch.  The
-    # algorithm will minimize the total length of jump stitches added.
-    for jump in nx.k_edge_augmentation(graph, 1, avail=list(possible_jumps(graph))):
-        graph.add_edge(*jump)
+    if preserve_order:
+        # For each sequential pair of satins, find the shortest possible jump
+        # stitch between them and add it.  The directions of these new edges
+        # will enforce stitching the satins in order.
+
+        for satin1, satin2 in zip(satins[:-1], satins[1:]):
+            potential_edges = []
+
+            nodes1 = get_nodes_on_satin(graph, satin1)
+            nodes2 = get_nodes_on_satin(graph, satin2)
+
+            for node1 in nodes1:
+                for node2 in nodes2:
+                    point1 = graph.nodes[node1]['point']
+                    point2 = graph.nodes[node2]['point']
+                    potential_edges.append((point1, point2))
+
+            edge = min(potential_edges, key=lambda (p1, p2): p1.distance(p2))
+            graph.add_edge(str(edge[0]), str(edge[1]), jump=True)
+    else:
+        # networkx makes this super-easy!  k_edge_agumentation tells us what edges
+        # we need to add to ensure that the graph is fully connected.  We give it a
+        # set of possible edges that it can consider adding (avail).  Each edge has
+        # a weight, which we'll set as the length of the jump stitch.  The
+        # algorithm will minimize the total length of jump stitches added.
+        for jump in nx.k_edge_augmentation(graph, 1, avail=list(possible_jumps(graph))):
+            graph.add_edge(*jump)
 
 
 def possible_jumps(graph):
@@ -352,12 +387,18 @@ def find_path(graph, starting_node, ending_node):
     # hits a dead-end, as it back-tracks, we also add the seen edges _again_.
     # Repeat until there are no more edges left in the graph.
     #
-    # Duplicating the edges allows us to set up "underpathing".  As we stitch
-    # down each branch, we'll do running stitch.  Then when we come back up,
-    # we'll do satin stitch, covering the previous running stitch.
-
-    graph = graph.copy()
+    # Visiting the edges again on the way back allows us to set up
+    # "underpathing".  As we stitch down each branch, we'll do running stitch.
+    # Then when we come back up, we'll do satin stitch, covering the previous
+    # running stitch.
     path = nx.shortest_path(graph, starting_node, ending_node)
+
+    # Copy the graph so that we can remove the edges as we visit them.
+    # This also converts the directed graph into an undirected graph in the
+    # case that "preserve_order" is set.  This way we avoid going back and
+    # forth on each satin twice due to the satin edges being in the graph
+    # twice (forward and reverse).
+    graph = nx.Graph(graph)
     graph.remove_edges_from(zip(path[:-1], path[1:]))
 
     final_path = []
@@ -410,6 +451,8 @@ def reversed_path(path):
 
 def path_to_operations(graph, path):
     """Convert an edge path to a list of SatinSegment and JumpStitch instances."""
+
+    graph = nx.Graph(graph)
 
     operations = []
 

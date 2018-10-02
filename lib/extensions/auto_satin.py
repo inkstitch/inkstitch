@@ -12,6 +12,11 @@ from ..svg.tags import SVG_GROUP_TAG
 class AutoSatin(CommandsExtension):
     COMMANDS = ["trim"]
 
+    def __init__(self, *args, **kwargs):
+        CommandsExtension.__init__(self, *args, **kwargs)
+
+        self.OptionParser.add_option("-p", "--preserve_order", dest="preserve_order", type="inkbool", default=False)
+
     def get_starting_point(self):
         return self.get_point("satin_start")
 
@@ -36,7 +41,8 @@ class AutoSatin(CommandsExtension):
             return
 
         if not self.selected:
-            inkex.errormsg(_("Please select one or more satin columns to cut."))
+            # L10N auto-route satin columns extension
+            inkex.errormsg(_("Please select one or more satin columns."))
             return
 
         for element in self.elements:
@@ -57,7 +63,8 @@ class AutoSatin(CommandsExtension):
         # satins _first_ before adding new_nodes back into the SVG.
         starting_point = self.get_starting_point()
         ending_point = self.get_ending_point()
-        new_elements, trim_indices = auto_satin(self.elements, starting_point, ending_point)
+
+        new_elements, trim_indices = auto_satin(self.elements, self.options.preserve_order, starting_point, ending_point)
 
         for element in self.elements:
             for command in element.commands:
