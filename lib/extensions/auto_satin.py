@@ -6,7 +6,7 @@ from ..i18n import _
 from ..elements import SatinColumn
 from ..stitches.auto_satin import auto_satin
 from ..svg import get_correction_transform
-from ..svg.tags import SVG_GROUP_TAG
+from ..svg.tags import SVG_GROUP_TAG, INKSCAPE_LABEL
 
 
 class AutoSatin(CommandsExtension):
@@ -37,6 +37,19 @@ class AutoSatin(CommandsExtension):
             return command.target_point
 
     def effect(self):
+        self.check_selection()
+        group = self.create_group()
+        new_elements, trim_indices = self.auto_satin()
+
+        # The ordering is careful here.  Some of the original satins may have
+        # been used unmodified.  That's why we remove all of the original
+        # satins _first_ before adding new_elements back into the SVG.
+        self.remove_original_satins()
+        self.add_elements(group, new_elements)
+
+        self.add_trims(new_elements)
+
+    def check_selection(self):
         if not self.get_elements():
             return
 
@@ -50,6 +63,7 @@ class AutoSatin(CommandsExtension):
                 inkex.errormsg(_("Please only select satin columns."))
                 return
 
+    def create_group(self):
         first = self.elements[0].node
         parent = first.getparent()
         insert_index = parent.index(first)
@@ -58,24 +72,36 @@ class AutoSatin(CommandsExtension):
         })
         parent.insert(insert_index, group)
 
-        # The ordering is careful here.  Some of the original satins may have
-        # been used unmodified.  That's why we remove all of the original
-        # satins _first_ before adding new_nodes back into the SVG.
+        return group
+
+    def auto_satin(self):
         starting_point = self.get_starting_point()
         ending_point = self.get_ending_point()
+        return auto_satin(self.elements, self.options.preserve_order, starting_point, ending_point)
 
-        new_elements, trim_indices = auto_satin(self.elements, self.options.preserve_order, starting_point, ending_point)
-
+    def remove_original_satins(self):
         for element in self.elements:
             for command in element.commands:
                 command.connector.getparent().remove(command.connector)
                 command.use.getparent().remove(command.use)
             element.node.getparent().remove(element.node)
 
-        for element in new_elements:
-            element.node.set("id", self.uniqueId("autosatin"))
+    def add_elements(self, group, new_elements):
+        for i, element in enumerate(new_elements):
+            if isinstance(element, SatinColumn):
+                element.node.set("id", self.uniqueId("autosatin"))
+
+                # L10N Label for a satin column created by Auto-Route Satin Columns extension
+                element.node.set(INKSCAPE_LABEL, _("AutoSatin %d") % (i + 1))
+            else:
+                element.node.set("id", self.uniqueId("autosatinrun"))
+
+                # L10N Label for running stitch (underpathing) created by Auto-Route Satin Columns extension
+                element.node.set(INKSCAPE_LABEL, _("AutoSatin Running Stitch %d") % (i + 1))
+
             group.append(element.node)
 
+    def add_trims(self, new_elements):
         if self.options.trim and trim_indices:
             self.ensure_symbol("trim")
             for i in trim_indices:
