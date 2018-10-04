@@ -1,38 +1,40 @@
-{% assign links = '' | split: ',' %}
-{% for collection in site.collections %}
-    {% for post in collection.docs %}
-        {% assign links = links | push: post.permalink %}
-    {% endfor %}
-{% endfor %}
-
-{% for post in site.pages %}
-    {% assign links = links | push: post.permalink %}
-{% endfor %}
-
-{% for post in site.posts %}
-    {% assign links = links | push: post.url %}
-{% endfor %}
-
 {% assign lang_array = '' | split: ',' %}
 {% for lang in site.languages %}
-  {%if page.lang != lang[0] %}
 
-    {% assign page_lang = page.lang | prepend: '/' %}
-    {% assign page_url = page.url | replace_first: page_lang, '' %}
+  {% if lang[0] == blank %}
+    {% assign current_lang = 'en' %}
+  {% else %}
+    {% assign current_lang = lang[0] %}
+  {% endif %}
 
-    {% if lang[0] == blank and page.is_post == true %}
-      {% assign new_url = '/en' | append: lang[0] | append: page_url %}      
-    {% elsif lang[0] == blank %}
-      {% assign new_url = page_url %}
+  {% if page.lang != current_lang %}
+	  {% assign page_lang = page.lang | prepend: '/' | append: '/' %}
+
+    {%- comment -%} Post {%- endcomment -%}
+    {% if page.is_post == true %}
+		  {% assign new_lang = current_lang | prepend: '/' | append: '/' %}
+		  {% assign new_url = page.url | replace_first: page_lang, new_lang %}
+		  {%- assign lang_page = site.posts | where: "url", new_url -%}
+
+    {%- comment -%} Pages and Collections {%- endcomment -%}
     {% else %}
-      {% assign new_url = '/' | append: lang[0] | append: page_url %}
+			{% assign new_url = page.url | replace: page_lang, '' | prepend: lang[0] | prepend: '/' | replace: '//', '/' %}
+			{%- assign lang_page = site.pages | where: "url", new_url -%}
+			{% if lang_page == blank %}
+				{% for collection in site.collections %}
+          {%- assign lang_page = collection.docs | where: "permalink", new_url -%}
+					{% if lang_page != blank %}
+						{% break %}
+					{% endif %}
+				{% endfor %}
+			{% endif %}
     {% endif %}
 
-    {% if new_url != page.url and links contains new_url %}
-      {% assign lang_sub = new_url | append: '|' | append: lang[1] %}
-      {% assign lang_sub_array = lang_sub | split: '|' %}
-      {% assign lang_array = lang_array | push: lang_sub_array %}
-    {% endif %}
+		{% if lang_page != blank %}
+	    {% assign lang_sub = new_url | append: '|' | append: lang[1] %}
+	    {% assign lang_sub_array = lang_sub | split: '|' %}
+	    {% assign lang_array = lang_array | push: lang_sub_array %}
+	  {% endif %}
 
   {% endif %}
 {% endfor %}
