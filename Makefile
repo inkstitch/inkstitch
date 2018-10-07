@@ -21,7 +21,7 @@ dist: distclean locales inx
 	fi
 
 distclean:
-	rm -rf build dist *.spec *.tar.gz
+	rm -rf build dist inx locales *.spec *.tar.gz *.zip
 
 .PHONY: inx
 inx: locales
