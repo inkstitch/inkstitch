@@ -47,7 +47,7 @@ class AutoSatin(CommandsExtension):
         self.remove_original_satins()
         self.add_elements(group, new_elements)
 
-        self.add_trims(new_elements)
+        self.add_trims(new_elements, trim_indices)
 
     def check_selection(self):
         if not self.get_elements():
@@ -101,7 +101,7 @@ class AutoSatin(CommandsExtension):
 
             group.append(element.node)
 
-    def add_trims(self, new_elements):
+    def add_trims(self, new_elements, trim_indices):
         if self.options.trim and trim_indices:
             self.ensure_symbol("trim")
             for i in trim_indices:
