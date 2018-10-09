@@ -11,7 +11,9 @@
         <object-type>all</object-type>
         <effects-menu>
             <submenu name="Ink/Stitch">
-                <submenu name="{% trans %}English{% endtrans %}" />
+                <submenu name="{% trans %}English{% endtrans %}">
+                    <submenu name="{% trans %}Satin Tools{% endtrans %}" />
+                </submenu>
             </submenu>
         </effects-menu>
     </effect>
