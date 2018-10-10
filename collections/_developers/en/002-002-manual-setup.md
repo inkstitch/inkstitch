@@ -23,7 +23,16 @@ A manual setup will allow you to edit the code while running the extension.
 
     **Info:** You might need to remove wxPython and [install](https://wiki.wxpython.org/How%20to%20install%20wxPython) a platform specific package (e.g. Debian uses `python-wxgtk3.0`).
     {: .notice--info }
-3. Symbolically link into the Inkscape extensions directory
+
+3. Prepare INX files
+
+    ```
+    for po in translations/*.po; do lang=${po%.*}; lang=${lang#*_}; mkdir -p locales/$lang/LC_MESSAGES; msgfmt $po -o locales/$lang/LC_MESSAGES/inkstitch.mo; done;
+    mkdir inx
+    bin/generate-inx-files
+    ```
+
+4. Symbolically link into the Inkscape extensions directory
 
     ```
     cd ~/.config/inkscape/extensions
@@ -32,7 +41,7 @@ A manual setup will allow you to edit the code while running the extension.
     ln -s inkstitch/inkstitch.py
     ```
 
-4. Run Inkscape.
+5. Run Inkscape.
 
 
 **Info:** Changes to the Python code take effect the next time the extension is run. Changes to the extension description files (*.inx) take effect the next time Inkscape is restarted.
