@@ -1,6 +1,6 @@
-{% capture  nav_file %}navigation_{{ page.lang }}{% endcapture %}
-{% assign navigation = site.data[nav_file] %}
-{% assign navigation = navigation[include.nav] %}
+{%- capture  nav_file -%}navigation_{{ page.lang }}{%- endcapture -%}
+{%- assign navigation = site.data[nav_file] -%}
+{%- assign navigation = navigation[include.nav] -%}
 
 <nav class="nav__list">
   {% if page.sidebar.title %}<h3 class="nav__title" style="padding-left: 0;">{{ page.sidebar.title }}</h3>{% endif %}

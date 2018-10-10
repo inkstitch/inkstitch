@@ -1,26 +1,28 @@
+{%- if page.lang == 'en' or page.lang == blank -%}
+  {%- assign lang = "" -%}
+  {%- assign navlang = "en" -%}
+{%- else -%}
+  {%- assign navlang = page.lang -%}
+  {%- capture lang -%}{{ page.lang }}/{%- endcapture -%}
+{%- endif -%}
+{%- capture nav_file -%}navigation_{{ navlang }}{%- endcapture -%}
+{%- assign navigation = site.data[nav_file] -%}
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        {% if page.lang == 'en' or page.lang == blank %}
-              {% assign lang = "" %}
-            {% else %}
-              {% capture lang %}{{ page.lang }}/{% endcapture %}
-            {% endif %}
         <a class="site-title" href="{{ '/' | relative_url }}{{ lang }}"><img src="/assets/images/inkstitch-logo.svg" title="Ink/Stitch" alt="Ink/Stitch"></a>
         <ul class="visible-links">
-          {% capture  nav_file %}navigation_{{ page.lang }}{% endcapture %}
-          {% assign navigation = site.data[nav_file] %}
-          {% for link in navigation.main %}
-            {% if link.url contains 'http' %}
-              {% assign domain = '' %}
-            {% else %}
-              {% assign domain = site.url | append: site.baseurl %}
-            {% endif %}
+          {%- for link in navigation.main -%}
+            {%- if link.url contains '://' -%}
+              {%- assign url = link.url -%}
+            {%- else -%}
+              {%- assign url = link.url | relative_url -%}
+            {%- endif -%}
             <li class="masthead__menu-item">
-              <a href="{{ domain }}{{ link.url }}" {% if link.description %}title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+               <a href="{{ url }}" {% if link.description %}title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
             </li>
-          {% endfor %}
+          {%- endfor -%}
         </ul>
         {% if site.search == true %}
         <button class="search__toggle" type="button">
