@@ -2,7 +2,7 @@
 title: "Workflow"
 permalink: /docs/workflow/
 excerpt: ""
-last_modified_at: 2018-06-01
+last_modified_at: 2018-10-13
 toc: true
 ---
 ## Step 1: Sketch Design or Use an Image
@@ -68,6 +68,9 @@ You can either create a stitch file for a selection of objects or for all path o
 * Run `Extensions > Ink/Stitch > English > Embroider...`
 * Select the right file format for your machine
 * Type a directory name where you want to save your output files. E.g. `C:\Users\%USERNAME%\Documents` on Windows. Ink/Stitch will remember this information.
+
+**Info:** With newer versions of Ink/Stitch it is also possible to output your design through `File > Save As...`. You can also export to multiple formats at once.
+{: .notice--info }
 
 ## Step 7: Test-sew
 

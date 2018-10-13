@@ -1,49 +1,26 @@
 ---
-title: "Install Add-Ons for Inkscape"
-permalink: /docs/addons/
+title: "Visual Commands"
+permalink: /docs/commands/
 excerpt: ""
-last_modified_at: 2018-06-30
+last_modified_at: 2018-10-11
 toc: true
 ---
-Ink/Stitch can install files ("add-ons") that make it easier to use Inkscape to create machine embroidery designs.
+## Installation
 
-**Add-ons to be installed**
-* [thread manufacturer color palettes](/docs/addons/#thread-manufacturer-color-palettes)
-* [Ink/Stitch visual commands (Objects -> Symbols ...)](/docs/addons/#visual-commands)
+[Install Commands](/docs/addons/) before usage.
 
-**Install**
-* Go to `Extensions > Ink/Stitch > English > Install add-ons for Inkscape`
-* Click `Install`
-* Restart Inkscape
+## Attach visual commands via extension
 
-**Manual Install**
-* *Palettes*: Copy extension files from `inkstitch > palettes` folder to your Inkscape palettes folder. E.g. in Linux: `~/.config/inkscape/palettes`.
-* *Visual Commands*:Copy extension files from `inkstitch > symbols` folder to your Inkscape symbols folder. E.g. in Linux: `~/.config/inkscape/symbols`.
-
-## Thread Manufacturer Color Palettes
-
-Inkscape palettes are found on the bottom to the right of the color swatches.
-
-![Inkscape Color Palettes](/assets/images/docs/palettes-location.png)
-
-Click on the little arrow to open a list of installed palettes and choose the manufacturer color palette depending on the thread you are willing to use.
-
-The choice will also take effect on the thread names to appear in the print preview.
-
-## Visual commands
-
-### Attach visual commands via extension
-
-It is best practice to add these commands via the commands extensions:
+It is best practice to add commands through extensions:
 
 * Select one ore more objects
 * Run `Extensions > Ink/Stitch > English > Commands > Attach commands ...`
 * Enable desired commands and apply
-* Auto-Fill: Move starting and ending points. The connector's endpoint nearest to the fill object is the point at which stitching will start or end.
+* Start/Stop/Cut commands: The connector's endpoint nearest to the object is the point at which the effect will be performed.
 
 In `Extensions > Ink/Stitch > English > Commands` you will find three options: add commands, add layer commands and attach commands.
 
-#### Add Commands ...
+### Add Commands ...
 
 These commands effect the entire embroidery design.
 
@@ -57,7 +34,7 @@ These commands will be added to the currently selected layer.
 
 ![ignore layer symbol](/assets/images/docs/visual-commands-ignore-layer.jpg) Ignore layer
 
-#### Attach Commands ...
+#### Attach Commands to Selected Objects ...
 
 These commands will be attached to the currently selected objects.
 
@@ -71,6 +48,12 @@ These commands will be attached to the currently selected objects.
 
 ![ignore symbol](/assets/images/docs/visual-commands-ignore.jpg) Ignore object
 
+![satin cut point symbol](/assets/images/docs/visual-commands-satin-cut-point.jpg) [Satin cut point](/docs/commands/#-satin-cut-point) (use with "Cut Satin Column")
+
+![auto route satin starting position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-start.jpg) Auto-route satin stitch starting position
+
+![auto route satin starting position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-end.jpg) Auto-route satin stitch ending position
+
 **Info:**
 Starting and ending point currently apply only to fill-stitch objects, while trim and stop commands take effect on any connected object.
 {: .notice--info }
@@ -82,6 +65,7 @@ Starting and ending point currently apply only to fill-stitch objects, while tri
 * Drag a marker out onto your canvas (doesn't matter where).
 * Use the Flow-Chart Tool ("create diagram connectors" `Ctrl+F2`) to draw a connection between the marker and the fill object to which it should apply. This will add a connector path.
 * Moving the marker will change the connector's position to match. You can also move the endpoints of the connector manually. The connector's endpoint nearest to the fill object is the point at which stitching will start or end.
+
   <div style="position: relative; padding-bottom: 50%; height: 0;">
     <iframe src="/assets/video/docs/visual-commands.m4v" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
   </div>
@@ -89,6 +73,7 @@ Starting and ending point currently apply only to fill-stitch objects, while tri
   [Download Sample File](/assets/images/docs/visual-commands-fill-stitch.svg){: download="visual-commands-fill-stitch.svg" title="Download Sample File"}
 
 ## Visual commands reference
+
 ### ![stop symbol](/assets/images/docs/visual-commands-stop.jpg) Stop
 Commercial embroidery machines that have multiple needles normally proceed from one color to the next without pausing in between. Sometimes you *want* a pause (e.g. to trim applique fabric), so "STOP after" adds an extra color change which can be assigned to a special stop instruction using the machine's user interface (e.g. C00 on Barudan machines). Common uses for this would be to apply puff foam after doing regular embroidery.  Applying applique fabric and/or even wanting to slow down the machine at a certain spot for certain types of embroidery without having to babysit the machine.
 
@@ -100,4 +85,7 @@ The embroidery machine jumps to this point before every Stop command.  This allo
 
 ### ![origin](/assets/images/docs/visual-commands-origin.jpg) Origin
 Specifies the origin (0,0) point for embroidery files. Setting up origins is especially useful for people that have full access to the entire sewing field that their machine is capable of regardless of what hoop they use.
+
+### ![satin cut point symbol](/assets/images/docs/visual-commands-satin-cut-point.jpg) Satin cut point
+Split a Satin Column at the point specified by this command. After attaching run "[Cut Satin Column](/docs/satin-tools/#cut-satin-column)". 
 

@@ -25,24 +25,27 @@ Transform **all objects** you want to stitch to paths:
 * Select all objects (`Ctrl+A`)
 * `Path > Object to Path` or `Ctrl+Alt+C`.<br>
 
-**Info:** Objects that are not of "path" type, are ignored by InkStitch.
+**Info:** Objects that are not of "path" type, are ignored by Ink/Stitch.
 {: .notice--warning }
 
 ## Step 3 - Parametrize SVG Path for Embroidery
 
 * Select at least one object.
-* Open `Extensions > Ink/Stitch > Params` and play with them.
+* Open `Extensions > Ink/Stitch > English > Params` and play with them.
 * For now, just accept the defaults or close without saving.
 
 ## Step 4 - Create the Embroidery File
 
 You can either create a stitch file for a selection of objects or for all path objects.
-To create an embroidery file for the whole design:
 
-* Click into some empty space (in order to deselect)
+Create an embroidery file for the whole design:
+
+* Click into some empty space (in order to deselect) or select the objects that you want to output
 * Run `Extensions > Ink/Stitch > English > Embroider...`
 * Select the right file format for your machine
-* Type a directory name where you want to save your output files. E.g. `C:\Users\%USERNAME%\Documents` on Windows. Ink/Stitch will remember this information.
+* Type a directory name where you want to save your output files.
+  E.g. `C:\Users\%USERNAME%\Documents` on Windows.
+  Ink/Stitch will remember this information.
 
 ## Step 5 - Inspect in Inkscape
 

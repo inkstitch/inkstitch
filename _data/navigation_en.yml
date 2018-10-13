@@ -56,24 +56,34 @@ docs:
     children:
     - title: "Params"
       url: /docs/params/
-    - title: "Simulate"
-      url: /docs/simulate/
-    - title: "Flip Satin Columns"
-      url: /docs/flip-satin-columns/
     - title: Install Add-Ons
       url: /docs/addons/
+    - title: "Commands"
+      url: /docs/commands/
+    - title: "Satin Tools"
+      url: /docs/satin-tools/
+    - title: "Simulate"
+      url: /docs/simulate/
     - title: "Print"
       url: /docs/print/
     - title: "Import / Export"
       url: /docs/import-export/
   - title: "Stitch Library"
     children:
-      - title: "Stroke"
-        url: /docs/stitches/stroke/
-      - title: "Satin"
-        url: /docs/stitches/satin/
-      - title: "Fill"
-        url: /docs/stitches/fill/
+      - title: "Manual Stitch"
+        url: /docs/stitches/manual-stitch/
+      - title: "Running Stitch"
+        url: /docs/stitches/running-stitch/
+      - title: "Bean Stitch"
+        url: /docs/stitches/bean-stitch/
+      - title: "Zig-Zag (Simple Satin)"
+        url: /docs/stitches/zigzag-stitch/
+      - title: "Satin Column"
+        url: /docs/stitches/satin-column/
+      - title: "E-Stitch"
+        url: /docs/stitches/e-stitch/
+      - title: "Fill Stitch"
+        url: /docs/stitches/fill-stitch/
   - title: Tips
     children:
       - title: "Fonts"
@@ -128,6 +138,8 @@ developers:
       url: /developers/inkstitch/python-modules/
     - title: Namespace
       url: /developers/inkstitch/namespace/
+  - title: Pyembroidery
+    url: /developers/pyembroidery
   - title: Documentation
     url: /developers/documentation/
   - title: Localization

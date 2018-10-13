@@ -86,6 +86,7 @@ $text-color: #000;
 
 .page__content h2 {
   border-bottom: 1px solid #ccc;
+  clear: both;
 }
 
 .page__content p, .page__content li, .page__content dl {
@@ -95,6 +96,10 @@ $text-color: #000;
 .highlighter-rouge, figure.highlight {
   font-size: .6rem;
   background: #efefef;
+}
+
+.page__content .align-left {
+    margin-bottom: 1em;
 }
 
 .notice--info code {

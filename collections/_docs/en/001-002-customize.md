@@ -2,13 +2,15 @@
 title: "Customize Ink/Stitch"
 permalink: /docs/customize/
 excerpt: ""
-last_modified_at: 2018-07-27
+last_modified_at: 2018-10-13
 toc: true
 ---
 
 ## Shortcut Keys
 
-You can speed up your work with Ink/Stitch, if you assign shortcut keys. Go to: `Edit > Preferences > Interface > Keyboard Shortcuts` and enter your desired key combinations. [More information](http://wiki.inkscape.org/wiki/index.php/Customizing_Inkscape)
+You can speed up your work with Ink/Stitch, if you assign shortcut keys.
+
+Go to: `Edit > Preferences > Interface > Keyboard Shortcuts` and enter your desired key combinations. [More information](http://wiki.inkscape.org/wiki/index.php/Customizing_Inkscape)
 
 The following list was suggested by lexelby:
 
@@ -24,15 +26,8 @@ Shortcut&nbsp;Keys | Effect
 
 
 ### Simulation Shortcut Keys
-Ink/Stitch simulation already comes with shortcut keys included:
 
-Shortcut Keys | Effect
--------- | --------
-<key>↑</key> | speed up
-<key>↓</key> | slow down
-<key>r</key> | restart animation
-<key>p</key> | pause animation
-<key>q</key> | close
+Ink/Stitch [simulation](/docs/simulation) already comes with shortcut keys included.
 
 ## Grids
 

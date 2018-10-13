@@ -7,22 +7,6 @@ sidebar:
   nav: pages
 ---
 * Digitize machine embroidery designs using Inkscape (SVG)
-* Supported Stitches: 
-  * fill stitch
-    * automatically fill arbitrary shapes with stitches
-    * adjust the stitch length, row spacing, and row angle
-    * underlay
-  * satin stitch
-    * custom-design your satin column with varying width
-    * mix and match 3 kinds of underlay
-      * center-walk
-      * contour
-      * zig-zag
-  * e stitch
-  * running stitch
-  * bean stitch
-  * manual stitch
-    * plot each stitch exactly where you want it
 * Cross Platform
   * all code libraries built in, no need to install anything else!
 * User interface translated to several languages ([translation help appreciated](https://crowdin.com/project/inkstitch)!)
@@ -42,13 +26,35 @@ sidebar:
   * automated installation of Inkscape palettes for use in your designs
   * thread names and catalog numbers included in PDF printouts
 
+## Supported Stitch Types
+
+### Fill Stitch
+* automatically fill arbitrary shapes with stitches
+* adjust the stitch length, row spacing, and row angle
+* underlay
+
+### Satin Stitch
+* custom-design your satin column with varying width
+* mix and match 3 kinds of underlay
+  * center-walk
+  * contour
+  * zig-zag
+
+* e stitch
+
+### Stroke Type Stitches
+* running stitch
+* bean stitch
+* manual stitch
+  * each stitch exactly where you want it
+
 ## Supported File Formats
 
 ### Writing
-PEC, PES, EXP, DST, JEF, VP3
+CSV, **DST**, **EXP**, **JEF**, PEC, **PES**, SVG, U01, **VP3**
 
 ### Reading
-PEC, PES, EXP, DST, JEF, VP3, XXX, SEW, u01, SHV, 10o, 100, BRO, DSB, DSZ, EMD, INB, TBF, KSM, TAP, STX
+100, 10o, BRO, DAT, DSB, **DST**, DSZ, EMD, **EXP**, EXY, FXY, GT, INB, **JEF**, JPX, KSM, MAX, MIT, NEW, PCD, PCM, PCQ, PCS, PEC, **PES**, PHB, PHC, SEW, SHV, STC, STX, TAP, TBF, U01, **VP3**, XXX, ZXY
 
 ## Roadmap
 

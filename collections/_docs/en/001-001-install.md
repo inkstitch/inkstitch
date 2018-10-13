@@ -2,13 +2,14 @@
 title: "Install Ink/Stitch"
 permalink: /docs/install/
 excerpt: "How to quickly install Ink/Stitch."
-last_modified_at: 2018-07-21
+last_modified_at: 2018-10-13
 toc: true
 ---
 
 ## Requirements
 
 * [Inkscape](https://inkscape.org/) Version 0.92.2 or higher
+* Modern Browser for the Print Preview
 
 That's it!  All python libraries and external dependencies are bundled (using the excellent [pyinstaller](http://www.pyinstaller.org)), so you shouldn't need to set anything else up.
 
@@ -33,22 +34,22 @@ macOS|`inkstitch-[VERSION]-osx-x86_64.tar.gz`|☒|☑
  * Decompress the the Ink/Stitch archive directly into this folder and restart Inkscape.
  * You will then find Ink/Stitch under `Extensions > Ink/Stitch`.
 
-#### For example on Linux and macOS:
+#### Linux and macOS:
 
-```
-$ cd ~/.config/inkscape/extensions
-$ tar zxf ~/Downloads/inkstitch-v1.0.0-Linux-x86_64.tar.gz
-```
+ ```
+ $ cd ~/.config/inkscape/extensions
+ $ tar zxf ~/Downloads/inkstitch-v1.0.0-Linux-x86_64.tar.gz
+ ```
 
-#### For example on Windows
+#### Windows
 
-* Unhide the AppData directory (go to `C:\Users\%USERNAME%\`, e.g. `C:\Users\Janet`
-* Unzip in `C:\Users\%USERNAME%\AppData\Roaming\inkscape\extensions`
+ * Unhide the AppData directory (go to `C:\Users\%USERNAME%\`, e.g. `C:\Users\Janet`
+ * Unzip in `C:\Users\%USERNAME%\AppData\Roaming\inkscape\extensions`
 
 ## Upgrade
 
  * You may have to delete the old extension files first:<br>
-   Go to the extension directory and remove each inkstitch* file.
+   Go to the extension directory and remove each inkstitch* file and folder.
  * Then, proceed as above.
 
 **Tip:** Subscribe to a news feed channel to keep track on Ink/Stitch Updates:<br>
