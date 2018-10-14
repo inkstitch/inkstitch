@@ -5,7 +5,7 @@ excerpt: ""
 last_modified_at: 2018-10-14
 read_time: false
 ---
-## 1050 Era Sewing Machine Turns Into an Embroidery Machine Running on G-Code
+## 1950 Era Sewing Machine Turns Into an Embroidery Machine Running on G-Code
 
 ![Tikka 1](https://user-images.githubusercontent.com/44113605/46914037-a5e89400-cfa0-11e8-9286-4497371cca56.jpg)
 
