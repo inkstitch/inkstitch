@@ -109,6 +109,8 @@ tutorials:
     children:
       - title: "Artwork Gallery"
         url: /tutorials/inspiration/
+      - title: "Self Made Embroidery Machine"
+        url: /tutorials/embroidery-machine/
   - title: Resources
     children:
     - title: "Branding Guide"

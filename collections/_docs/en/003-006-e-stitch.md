@@ -17,7 +17,8 @@ Prepare your path exactly as you would with a [Satin Column](/docs/stitches/sati
 
 ![Params Satin Column.jpg](/assets/images/docs/en/params-e-stitch.jpg)
 
-If the points are facing the wrong way, just use the ["flip satin column rails"](/docs/satin-tools/#flip-satin-column-rails) extension.
+**Tip:** If the points are facing the wrong way, just use the ["flip satin column rails"](/docs/satin-tools/#flip-satin-column-rails) extension.
+{: .notice--info }
 
 ## Sample Files Including E-Stitch
 {% include tutorials/tutorial_list key="stitch-type" value="E-Stitch" %}
