@@ -37,7 +37,9 @@ class AutoSatin(CommandsExtension):
             return command.target_point
 
     def effect(self):
-        self.check_selection()
+        if not self.check_selection():
+            return
+
         group = self.create_group()
         new_elements, trim_indices = self.auto_satin()
 
@@ -56,12 +58,14 @@ class AutoSatin(CommandsExtension):
         if not self.selected:
             # L10N auto-route satin columns extension
             inkex.errormsg(_("Please select one or more satin columns."))
-            return
+            return False
 
         for element in self.elements:
             if not isinstance(element, SatinColumn):
                 inkex.errormsg(_("Please only select satin columns."))
-                return
+                return False
+
+        return True
 
     def create_group(self):
         first = self.elements[0].node
