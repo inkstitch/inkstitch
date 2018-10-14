@@ -443,15 +443,22 @@ class SatinColumn(EmbroideryElement):
             path_list.extend(rung for rung in rungs if path_list[0].intersects(rung) and path_list[1].intersects(rung))
 
     def _add_rungs_if_necessary(self, path_lists):
-        """Add an additional rung to each new satin if it ended up with none.
+        """Add an additional rung to each new satin if needed.
 
-        If the split point is between the end and the last rung, then one of
-        the satins will have no rungs.  Add one to make it stitch properly.
+        Case #1: If the split point is between the end and the last rung, then
+        one of the satins will have no rungs.  It will be treated as an old-style
+        satin, but it may not have an equal number of points in each rail.  Adding
+        a rung will make it stitch properly.
+
+        Case #2: If one of the satins ends up with exactly two rungs, it's
+        ambiguous which of the subpaths are rails and which are rungs.  Adding
+        another rung disambiguates this case.  See rail_indices() above for more
+        information.
         """
 
         for path_list in path_lists:
-            if len(path_list) == 2:
-                # If a path has no rungs, it may be invalid.  Add a rung at the start.
+            if len(path_list) in (2, 4):
+                # Add the rung just after the start of the satin.
                 rung_start = path_list[0].interpolate(0.1)
                 rung_end = path_list[1].interpolate(0.1)
                 rung = shgeo.LineString((rung_start, rung_end))
