@@ -9,7 +9,8 @@ toc: true
 
 **Example:**
 * Create a path with the help of the bezier curves tool (`B`)
-* Use the satin tools "Convert Line to Satin" and "Auto-Route Satin" to turn it into nicely routed satin columns
+* Use [Params](/docs/params/#satin-params) to set an underlay and specific stitch settings
+* Use the satin tools [Convert Line to Satin](/docs/satin-tools/#convert-line-to-satin) and [Auto-Route Satin](http://localhost:4000/docs/satin-tools/#auto-route-satin-columns) to turn it into nicely routed satin columns
 
 [![Convert Line to Satin](/assets/images/docs/en/satin-tools-convert-line.svg)](/assets/images/docs/en/satin-tools-convert-line.svg){: title="Download SVG File" download="satin-column.svg" }
 
@@ -60,7 +61,7 @@ Split a satin column at a specified point. The split happens at a stitch boundar
 
 ## Flip Satin Column Rails
 
-This is a little tool to help you to plan your stitch path precisely.
+This is a little tool to help you to plan your stitch path precisely. E.g. flip satin columns to shorten connections between two sections.
 
 A satin column which originally starts on the left rail and ends on the right, will start on the right rail and end on the left.
 
@@ -70,10 +71,4 @@ A satin column which originally starts on the left rail and ends on the right, w
 
 * Select one or more satin column(s)
 * Run `Extensions > Ink/Stitch > English > Satin Tools > Flip Satin Columns`
-
-**Example**
-
-Flip satin columns to shorten connections between two sections.
-
-![Flip Satin Columns](/assets/images/docs/en/flip-satin-columns-02.jpg)
 

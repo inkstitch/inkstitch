@@ -19,7 +19,6 @@ You define a satin column using a shape made of **two mostly-parallel lines**. I
 
 ### Node Method
 [![Satin Column Boat](/assets/images/docs/satin-column.jpg){: width="200x"}](/assets/images/docs/satin-column.svg){: title="Download SVG File" .align-left download="satin-column.svg" }
-
 Depending on the complexity of your design, this method might be time consuming, because the two paths must have the **same number of points**. This means that each path will be made up of an equal number of Bezier curves. Each pair of points acts as a "checkpoint": Ink/Stitch will ensure that a "zag" ends up going from one point to the other.
 
 ### Rung Method
@@ -56,20 +55,11 @@ The rung method will give you more control over the way the satin column is rend
 
 ## Params
 
-Running `Extensions > Ink/Stitch > English > Params` will give you the possibility to fine-tune your Satin Column or to use underlay.
-For more information read through the [Satin Params](/docs/params/#satin-params) section.
+Running `Extensions > Ink/Stitch > English > Params` will give you the possibility to fine-tune your satin column and to use underlay.
 
-### Underlay
-Satin Column also supports three kinds of underlay, of which you can use any or all simultaneously. Read [this excellent article](https://www.mrxstitch.com/underlay/) on Satin Column design.
+For detailed information read through the [Satin Params](/docs/params/#satin-params) section.
 
-#### Center Walk Underlay
-This is a row of running stitch down the center of the column and back. This may be all you need for thin satin columns. You can also use it as a base for more elaborate underlay.
-
-#### Contour Underlay
-This is a row of running stitch up one side of the column and back down the other. The rows are set in from the edge of the column by an amount you specify. For small or medium width satin, this may serve well enough by itself.
-
-#### ZigZag Underlay
-This is essentially a lower-density satin stitch sewn to the end of the column and back to the start. Added with contour underlay, you get the "German Underlay" mentioned in the article linked above. For wide columns or challenging fabrics, you can use all three underlay types together.
+Read also [this excellent article](https://www.mrxstitch.com/underlay/) on satin column design.
 
 ## Satin Tools
 
