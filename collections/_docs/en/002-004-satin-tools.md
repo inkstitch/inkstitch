@@ -9,8 +9,9 @@ toc: true
 
 **Example:**
 * Create a path with the help of the bezier curves tool (`B`)
-* Use [Params](/docs/params/#satin-params) to set an underlay and specific stitch settings
-* Use the satin tools [Convert Line to Satin](/docs/satin-tools/#convert-line-to-satin) and [Auto-Route Satin](http://localhost:4000/docs/satin-tools/#auto-route-satin-columns) to turn it into nicely routed satin columns
+* Run [Convert Line to Satin](/docs/satin-tools/#convert-line-to-satin)
+* Use the [Params dialog](/docs/params/#satin-params) to set an underlay
+* Run [Auto-Route Satin](http://localhost:4000/docs/satin-tools/#auto-route-satin-columns) to recieve nicely routed satin columns
 
 [![Convert Line to Satin](/assets/images/docs/en/satin-tools-convert-line.svg)](/assets/images/docs/en/satin-tools-convert-line.svg){: title="Download SVG File" download="satin-column.svg" }
 
