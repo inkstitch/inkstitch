@@ -2,7 +2,7 @@
 title: "Satin Tools"
 permalink: /docs/satin-tools/
 excerpt: ""
-last_modified_at: 2018-07-13
+last_modified_at: 2018-07-15
 toc: true
 ---
 `Extensions > Ink/Stitch > English > Satin Tools` include a number of useful helpers, making it easy to work with [satin columns](/docs/stitches/satin-column/).
@@ -27,7 +27,7 @@ This tool will replace your satins with a new set of satin columns in logical st
 2. Run `Extensions > Ink/Stitch > English > Satin Tools > Auto-Route Satin Columns...`
 3. Enable desired options and click apply
 
-**Tip:** By default, it will choose the left-most extreme as the starting point and the right-most extreme as the ending point (even if these occur partway through a satin such as the left edge of a letter "o"). You can override this by attaching the **"Auto-route satin stitch starting/ending position" commands**.
+**Tip:** By default, it will choose the left-most extreme as the starting point and the right-most extreme as the ending point (even if these occur partway through a satin such as the left edge of a letter "o"). You can override this by attaching the ["Auto-route satin stitch starting/ending position" commands](/docs/commands/).
 {: .notice--info }
 
 ### Options

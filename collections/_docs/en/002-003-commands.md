@@ -59,6 +59,7 @@ Starting and ending point currently apply only to fill-stitch objects, while tri
 {: .notice--info }
 
 ### Attach visual commands manually
+
 * Go to `Object > Symbols` or hit `Shift+Ctrl+Y` to access the markers through the symbols dialog.
 * Select "Ink/Stitch Commands" as the symbol set.
 ![Symbol Set](/assets/images/docs/en/visual-commands-symbol-set.jpg)
@@ -75,17 +76,29 @@ Starting and ending point currently apply only to fill-stitch objects, while tri
 ## Visual commands reference
 
 ### ![stop symbol](/assets/images/docs/visual-commands-stop.jpg) Stop
+
 Commercial embroidery machines that have multiple needles normally proceed from one color to the next without pausing in between. Sometimes you *want* a pause (e.g. to trim applique fabric), so "STOP after" adds an extra color change which can be assigned to a special stop instruction using the machine's user interface (e.g. C00 on Barudan machines). Common uses for this would be to apply puff foam after doing regular embroidery.  Applying applique fabric and/or even wanting to slow down the machine at a certain spot for certain types of embroidery without having to babysit the machine.
 
 ### ![trim symbol](/assets/images/docs/visual-commands-trim.jpg) Trim
+
 "Trim after" tells the embroidery machine to cut the thread after the assigned object has been stitched.  Not all home machines support the trim function within a color block.  Mainly used to prevent long jump stitched between embroidery objects and to avoid post embroidery trimming by the operator.
 
 ### ![stop position](/assets/images/docs/visual-commands-stop-position.jpg) Stop position
+
 The embroidery machine jumps to this point before every Stop command.  This allows for pushing the embroidery frame out toward the user to make applique steps easier.
 
 ### ![origin](/assets/images/docs/visual-commands-origin.jpg) Origin
+
 Specifies the origin (0,0) point for embroidery files. Setting up origins is especially useful for people that have full access to the entire sewing field that their machine is capable of regardless of what hoop they use.
 
 ### ![satin cut point symbol](/assets/images/docs/visual-commands-satin-cut-point.jpg) Satin cut point
-Split a Satin Column at the point specified by this command. After attaching run "[Cut Satin Column](/docs/satin-tools/#cut-satin-column)". 
 
+Split a Satin Column at the point specified by this command. After attaching run "[Cut Satin Column](/docs/satin-tools/#cut-satin-column)".
+
+### ![starting point symbol](/assets/images/docs/visual-commands-start.jpg)  ![auto route satin starting position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-start.jpg) Starting Position
+
+Defines the starting point of an fill stitch area (1) or satin auto route column (2).
+
+### ![ending point symbol](/assets/images/docs/visual-commands-end.jpg) ![auto route satin starting position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-end.jpg) Ending Position
+
+Defines the ending point of an fill stitch area (1) or satin auto route column (2).
