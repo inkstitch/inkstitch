@@ -36,9 +36,9 @@ function buildOpd(thumbnail_size = $('#operator-detailedview-thumbnail-size').va
   var thumbnail_layout  = (thumbnail_size >= 60) ? 'medium' : 'small';
   
   // remove old settings
-  $( "div.page.operator-detailedview header" ).remove();
-  $( "div.page.operator-detailedview footer" ).remove();
-  $( "div.page.operator-detailedview .job-headline" ).remove();
+  $('div.page.operator-detailedview header').remove();
+  $('div.page.operator-detailedview footer').remove();
+  $('div.page.operator-detailedview .job-headline').remove();
   $('div.page.operator-detailedview .opd-color-block').parentsUntil('div.page.operator-detailedview').addBack().unwrap();
   $('.opd-color-block').removeClass('medium large');
   $('.opd-color-block').removeAttr('style');
@@ -242,7 +242,7 @@ $(function() {
 
   $('[contenteditable="true"]').on('focusout', function() {
         /* change svg scale */
-    var content = $(this).html();
+    var content = $(this).text();
     var field_name = $(this).attr('data-field-name');
     if(field_name == 'svg-scale') {
       var scale     = parseInt(content);
@@ -255,7 +255,7 @@ $(function() {
     } else {
       /* When we focus out from a contenteditable field, we want to
        * set the same content to all fields with the same classname */
-      $('[data-field-name="' + field_name + '"]').html(content);
+      $('[data-field-name="' + field_name + '"]').text(content);
       $.postJSON('/settings/' + field_name, {value: content});
     }
   });
