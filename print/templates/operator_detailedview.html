@@ -53,7 +53,7 @@
                 {{ color_block.svg_preview|safe }}
             </p>
             <p>
-              <span data-field-name="color-{{ color_block.color.hex_digits }}" contenteditable="true" data-placeholder="Enter thread name...">{{ color_block.color.name }}</span>
+              <span data-field-name="color-{{ color_block.color.hex_digits }}" contenteditable="true" data-placeholder="{{ _("Enter thread name...") }}">{{ color_block.color.name }}</span>
               <span>{{ color_block.color.rgb }}</span>
               <span data-field-name="thread-{{ color_block.color.hex_digits }}" contenteditable="true">{{ color_block.color.manufacturer }} {{ "#" + color_block.color.number if color_block.color.number }}</span>
             </p>
