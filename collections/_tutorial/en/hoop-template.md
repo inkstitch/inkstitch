@@ -25,7 +25,7 @@ Linux|`~/.config/inkscape/templates`
 
 Go to `File -> New From Template` to start a new file based on the template.
 
-You should confirm the user folder in your inkscape preferences. See the [FAQ](http://localhost:4000/docs/faq/#i-have-downloaded-and-unzipped-the-latest-release-where-do-i-put-it)
+You should confirm the user folder in your inkscape preferences. See the [FAQ](/docs/faq/#i-have-downloaded-and-unzipped-the-latest-release-where-do-i-put-it)
 
 **Note:** If you wish to use it as the default template rename file to `default.svg`.
 {: .notice--info}

@@ -18,16 +18,19 @@ You define a satin column using a shape made of **two mostly-parallel lines**. I
 * Then select your satin column and run params through `Extensions > Ink/Stitch > English > Params` or a [custom shortcut key](/docs/customize/).
 
 ### Node Method
+
 [![Satin Column Boat](/assets/images/docs/satin-column.jpg){: width="200x"}](/assets/images/docs/satin-column.svg){: title="Download SVG File" .align-left download="satin-column.svg" }
 Depending on the complexity of your design, this method might be time consuming, because the two paths must have the **same number of points**. This means that each path will be made up of an equal number of Bezier curves. Each pair of points acts as a "checkpoint": Ink/Stitch will ensure that a "zag" ends up going from one point to the other.
 
 ### Rung Method
 
+[![Satin Column chefshat](/assets/images/docs/satin-column-rungs-example.jpg){: width="200x"}](/assets/images/docs/satin-column-rungs.svg){: title="Download SVG File" .align-left download="satin-column-rungs.svg" }
 The rung method will give you more control over the way the satin column is rendered. Good positioning of points on each of the two lines helps getting the stitch directions right. However, there are situations where you need to add direction lines ("rungs") for satin columns:
 
 * Some tricky corner areas
 * Complicated drawings where moving points is both difficult and time consuming
 * Special situations where you want the stitch directions to be weird
+{: style="clear: both;" }
 
 **Auto generated Satin Columns**
 * Add a contour to a path object (with no filling).
