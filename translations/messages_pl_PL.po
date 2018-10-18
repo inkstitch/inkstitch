@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-09-30 01:16+0000\n"
-"PO-Revision-Date: 2018-10-02 01:18\n"
+"POT-Creation-Date: 2018-10-18 01:26+0000\n"
+"PO-Revision-Date: 2018-10-18 01:26\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Polish\n"
 "MIME-Version: 1.0\n"
@@ -882,6 +882,10 @@ msgstr ""
 #: print/templates/operator_overview.html:9
 #: print/templates/print_overview.html:9
 msgid "Total trims"
+msgstr ""
+
+#: print/templates/operator_detailedview.html:56
+msgid "Enter thread name..."
 msgstr ""
 
 #: print/templates/operator_detailedview.html:61

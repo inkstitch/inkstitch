@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-09-30 01:16+0000\n"
-"PO-Revision-Date: 2018-10-02 01:18\n"
+"POT-Creation-Date: 2018-10-18 01:26+0000\n"
+"PO-Revision-Date: 2018-10-18 01:26\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -65,11 +65,11 @@ msgstr "Ignorer cet objet (ne pas le broder)"
 #. command attached to an object
 #: lib/commands.py:28
 msgid "satin_cut_point"
-msgstr ""
+msgstr "point de coupe satin"
 
 #: lib/commands.py:28
 msgid "Satin cut point (use with Cut Satin Column)"
-msgstr ""
+msgstr "Point de coupe (à utiliser avec scinder colonne satin)"
 
 #. command that affects a layer
 #: lib/commands.py:32
@@ -440,13 +440,13 @@ msgstr "Impossible de convertir %s à une colonne satinée, car elle se croise e
 
 #: lib/extensions/cut_satin.py:14
 msgid "Please select one or more satin columns to cut."
-msgstr ""
+msgstr "Veuillez sélectionner une ou plusieurs colonnes satin à scinder."
 
 #. will have the satin's id prepended, like this:
 #. path12345: error: this satin column does not ...
 #: lib/extensions/cut_satin.py:24
 msgid "this satin column does not have a \"satin column cut point\" command attached to it. Please use the \"Attach commands\" extension and attach the \"Satin Column cut point\" command first."
-msgstr ""
+msgstr "cette colonne satinée n’a pas de commande « point de coupe satin » attachée à elle. SVP, utilisez l’extension « ajouter des commandes » et attachez d’abord la commande « point de coupe satin »."
 
 #: lib/extensions/embroider.py:38
 msgid "\n\n"
@@ -885,6 +885,10 @@ msgstr "Total nr stop"
 msgid "Total trims"
 msgstr "Total nr coupure"
 
+#: print/templates/operator_detailedview.html:56
+msgid "Enter thread name..."
+msgstr ""
+
 #: print/templates/operator_detailedview.html:61
 msgid "thread used"
 msgstr "fil utilisé"
@@ -1195,7 +1199,7 @@ msgstr "Français"
 
 #: templates/cut_satin.inx:3
 msgid "Cut Satin Column"
-msgstr ""
+msgstr "Scinder colonne satin"
 
 #: templates/embroider.inx:3
 msgid "Embroider"
