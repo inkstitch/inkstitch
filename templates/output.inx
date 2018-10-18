@@ -13,6 +13,8 @@
     </output>
     <param name="extension" type="string" gui-hidden="true">output</param>
     <param name="format" type="string" gui-hidden="true">{{ format }}</param>
+    {% set params = "output_params_" + format + ".xml" %}
+    {% include params ignore missing %}
     <script>
         <command reldir="extensions" interpreter="python">inkstitch.py</command>
     </script>

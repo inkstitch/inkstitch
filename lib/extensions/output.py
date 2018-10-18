@@ -1,37 +1,59 @@
-import sys
 import os
+import sys
 import tempfile
 
-from .base import InkstitchExtension
 from ..output import write_embroidery_file
 from ..stitch_plan import patches_to_stitch_plan
-from ..svg import PIXELS_PER_MM
+from .base import InkstitchExtension
 
 
 class Output(InkstitchExtension):
     def __init__(self, *args, **kwargs):
-        InkstitchExtension.__init__(self)
-        self.OptionParser.add_option("-c", "--collapse_len_mm",
-                                     action="store", type="float",
-                                     dest="collapse_length_mm", default=3.0,
-                                     help="max collapse length (mm)")
-        self.OptionParser.add_option("-f", "--format",
-                                     dest="file_extension",
-                                     help="file extension to output (example: DST)")
+        InkstitchExtension.__init__(self, *args, **kwargs)
+
+    def getoptions(self, args=sys.argv[1:]):
+        # inkex's option parsing can't handle arbitrary command line arguments
+        # that may be passed for a given output format, so we'll just parse the
+        # args ourselves. :P
+        self.settings = {}
+        extra_args = []
+        for arg in args:
+            if arg.startswith('--') and not arg.startswith('--id='):
+                name, value = arg[2:].split('=')
+
+                try:
+                    value = float(value)
+                except ValueError:
+                    try:
+                        value = {
+                            "true": True,
+                            "false": False
+                        }[value]
+                    except (KeyError):
+                        pass
+
+                self.settings[name] = value
+            else:
+                extra_args.append(arg)
+
+        self.file_extension = self.settings.pop('format')
+        del sys.argv[1:]
+
+        InkstitchExtension.getoptions(self, extra_args)
 
     def effect(self):
         if not self.get_elements():
             return
 
         patches = self.elements_to_patches(self.elements)
-        stitch_plan = patches_to_stitch_plan(patches, self.options.collapse_length_mm * PIXELS_PER_MM)
+        stitch_plan = patches_to_stitch_plan(patches)
 
-        temp_file = tempfile.NamedTemporaryFile(suffix=".%s" % self.options.file_extension, delete=False)
+        temp_file = tempfile.NamedTemporaryFile(suffix=".%s" % self.file_extension, delete=False)
 
         # in windows, failure to close here will keep the file locked
         temp_file.close()
 
-        write_embroidery_file(temp_file.name, stitch_plan, self.document.getroot())
+        write_embroidery_file(temp_file.name, stitch_plan, self.document.getroot(), self.settings)
 
         if sys.platform == "win32":
             import msvcrt
