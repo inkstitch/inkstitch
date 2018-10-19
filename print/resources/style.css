@@ -198,13 +198,14 @@ body {
     background: transparent;
     border: 1px solid #413232;
     padding: 5px;
+    cursor: pointer;
   }
   
   #settings-ui button.active {
     border-bottom: 1px solid white;
   }
   
-  #settings-ui #ui-design {
+  #settings-ui .ui-tab {
     display: none;
   }
   
@@ -735,7 +736,7 @@ body {
     display: none;
   }
   
-  .opd-color-block.medium span::before {
+  .opd-color-block.medium p > span::before {
     content: ' \00B7 ';
     line-height: 0;
     display: inline-block;

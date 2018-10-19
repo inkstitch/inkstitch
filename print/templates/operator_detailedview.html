@@ -22,16 +22,17 @@
           </p>
           <p>
             <span>{{ _('Unique Colors') }}: {{ job.num_colors }}</span>
-            <span>{{ _('Color Blocks') }}: {{ job.num_color_blocks }}</span>
+            <span class="num-color-blocks">{{ _('Color Blocks') }}: {{ job.num_color_blocks }}</span>
           </p>
           <p>
             <span>{{ _('Design box size') }}: {{ "%0.1fmm X %0.1fmm" | format(*job.dimensions) }}</span>
-            <span>{{ _('Total thread used') }}: {{job.estimated_thread }}</span>
-            <span>{{ _('Total stitch count') }}: {{job.num_stitches }}</span>
+            <!-- <span>{{ _('Total thread used') }}: {{job.estimated_thread }}</span> -->
+            <span class="total-num-stitches">{{ _('Total stitch count') }}: {{job.num_stitches }}</span>
+            <span>{{ ('estimated time') }}: <span class="total-estimated-time"></span></span>
           </p>
           <p>
-            <span>{{ _('Total stops') }}: {{ job.num_stops }}</span>
-            <span>{{ _('Total trims') }}: {{ job.num_trims }}</span>
+            <span class="total-stops">{{ _('Total stops') }}: {{ job.num_stops }}</span>
+            <span class="total-trims">{{ _('Total trims') }}: {{ job.num_trims }}</span>
           </p>
           <p>
             <span></span>
@@ -53,20 +54,22 @@
                 {{ color_block.svg_preview|safe }}
             </p>
             <p>
-              <span data-field-name="color-{{ color_block.color.hex_digits }}" contenteditable="true" data-placeholder="{{ _("Enter thread name...") }}">{{ color_block.color.name }}</span>
+              <span data-field-name="color-{{ color_block.color.hex_digits }}" contenteditable="true" data-placeholder="{{ _('Enter thread name...') }}">{{ color_block.color.name }}</span>
               <span>{{ color_block.color.rgb }}</span>
               <span data-field-name="thread-{{ color_block.color.hex_digits }}" contenteditable="true">{{ color_block.color.manufacturer }} {{ "#" + color_block.color.number if color_block.color.number }}</span>
             </p>
             <p>
-              <span>{{ _('thread used') }}:</span>
-              <span>{{ _('# stitches') }}: {{ color_block.num_stitches }}</span>
+              <!-- <span>{{ _('thread used') }}:</span> -->
+              <span class="num-stitches">{{ _('# stitches') }}: {{ color_block.num_stitches }}</span>
+              <span>{{ _('estimated time') }}: <span class="estimated-time"></span></span>
             </p>
             <p>
-              <span>{{ _('trims') }}: {{ color_block.num_trims }}</span>
+              <span class="num-trims">{{ _('trims') }}: {{ color_block.num_trims }}</span>
               <span>{{ _('stop after?') }}: {{ _("yes") if color_block.stop_after else _("no") }}</span>
+              <input type="hidden" class="num-stops" value="{{ '1' if color_block.stop_after else '0' }}" />
             </p>
             <p>
-              <span class="notes" contenteditable="true" data-field-name="operator-notes-block{{ loop.index }}" data-placeholder="{{ _("Enter operator notes...") }}"></span>
+              <span class="notes" contenteditable="true" data-field-name="operator-notes-block{{ loop.index }}" data-placeholder="{{ _('Enter operator notes...') }}"></span>
             </p>
           </div>
         {% endfor %}

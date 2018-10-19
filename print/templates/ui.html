@@ -16,6 +16,7 @@
       
       <div id="tabs">
         <button class="tab active">{{ _('Page Setup') }}</button>
+        <button class="tab">{{ _('Estimated Time') }}</button>
         <button class="tab">{{ _('Design') }}</button>
       </div>
       <div id="fieldsets-ui">
@@ -40,10 +41,37 @@
               <p style="text-indent: 1.5em;">{{ _('Thumbnail size') }}: <input type="range" min="15" max="110" value="15" step="5" id="operator-detailedview-thumbnail-size" data-field-name="operator-detailedview-thumbnail-size" style="vertical-align: middle;"> <span id="display-thumbnail-size">15mm</span>
                </p>
             </fieldset>
-            <button id="save-settings" title="{{ _("Includes these Page Setup settings and also the icon.") }}">{{ _("Save as defaults") }}</button>
+            <button class="save-settings" title="{{ _("Includes these Page Setup, estimated time settings and also the icon.") }}">{{ _("Save as defaults") }}</button>
           </div>
         </fieldset>
-        <fieldset id="ui-design">
+        <fieldset id="ui-time" class="ui-tab">
+          <legend>{{ _('Estimated Time') }}</legend>
+          <fieldset>
+            <legend>{{ _('Machine Settings') }}</legend>
+            <p>
+              <input class="view" type="number" id="machine-speed" data-field-name="machine-speed" min="0" value="1000" title="{{ _('Average Machine Speed') }}" /> 
+              <label for="machine-speed">{{ _('stitches per minute ') }}</label>
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>{{ _('Time Factors') }}</legend>
+            <p>
+                <input class="view" type="number" id="time-additional" data-field-name="time-additional" min="0" value="0" /> 
+                <label for="time-additional" title="{{ _('Includes average time for preparing the machine, thread breaks and/or bobbin changes, etc.') }}">{{ _('seconds to add to total time*') }}</label>
+            </p>
+            <p>
+              <input class="view" type="number" id="time-color-change" data-field-name="time-color-change" min="0" value="10" /> 
+              <label for="time-color-change">{{ _('seconds needed for a color change') }}</label></p>
+            <p>
+              <input class="view" type="number" id="time-trims" data-field-name="time-trims" min="0" value="10" /> 
+              <label for="time-trims">{{ _('seconds needed for trim') }}</label></p>
+            <p>
+              <input class="view" type="number" id="time-stops" data-field-name="time-stops" min="0" value="0" /> 
+              <label for="time-stops" title="{{ _('The time of a color change is already calculated for each stop. This time value adds on top of the color change.') }}">{{ _('seconds needed for stop*') }}</label></p>
+          </fieldset>
+          <button class="save-settings" title="{{ _("Includes these Page Setup, estimated time settings and also the icon.") }}">{{ _("Save as defaults") }}</button>
+        </fieldset>
+        <fieldset id="ui-design" class="ui-tab">
           <legend>{{ _('Design') }}</legend>
           <p class="select-container"><label for="thread-palette">{{ _('Thread Palette') }}:</label>
             <select id="thread-palette" data-field-name="thread-palette">

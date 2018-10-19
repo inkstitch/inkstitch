@@ -100,9 +100,48 @@ function buildOpd(thumbnail_size = $('#operator-detailedview-thumbnail-size').va
 function setPageNumbers() {
   var totalPageNum = $('body').find('.page:visible').length;
   $('span.total-page-num').text(totalPageNum);
-  $( '.page:visible span.page-num' ).each(function( index ) {
+  $('.page:visible span.page-num').each(function( index ) {
     $(this).text(index + 1);
   });
+}
+
+// Calculate estimated time
+function setEstimatedTime() {
+  var speed = Math.floor($('#machine-speed').val() / 60); // convert to seconds
+  speed = (speed <= 0) ? 1 : speed;
+  var timeStop = ($('#time-stops').val() == '') ? 0 : parseInt($('#time-stops').val());
+  var timeTrim = ($('#time-trims').val() == '') ? 0 : parseInt($('#time-trims').val());
+  var addToTotal = ($('#time-additional').val() == '') ? 0 : parseInt($('#time-additional').val());
+  var timeColorChange = ($('#time-color-change').val() == '') ? 0 : parseInt($('#time-color-change').val());
+
+  $('.estimated-time').each(function(index, item) {
+      var selector = $(this);
+      var stitchCount = parseInt($( selector ).closest('p').find('.num-stitches').text().match(/\d+/));
+      var numTrims = parseInt($( selector ).closest('div').find('p input.num-stops').val());
+      var numStops = parseInt($( selector ).closest('div').find('p span.num-trims').text().match(/\d+/));
+      var numColorChange = ((index == ($('.estimated-time').length - 1))) ? 0 : 1; // this adds a color change except for the last color block
+      var estimatedTime = stitchCount/speed + (timeTrim * numTrims) + (timeStop * numStops) + (timeColorChange * numColorChange);
+      writeEstimatedTime( selector, estimatedTime );
+  });
+
+  var stitchCount = parseInt($('.total-num-stitches').first().text().match(/\d+/));
+  var numTrims = parseInt($('.total-trims').first().text().match(/\d+/));
+  var numStops = parseInt($('.total-stops').first().text().match(/\d+/));
+  var numColorBlocks = parseInt($('.num-color-blocks').first().text().match(/\d+/))-1; // the last color-block is not a color change
+  var selector = '.total-estimated-time';
+  var estimatedTime = stitchCount/speed + (timeTrim * numTrims) + (timeStop * numStops) + (timeColorChange * numColorBlocks) + addToTotal;
+  writeEstimatedTime( selector, estimatedTime );
+}
+
+function attachLeadingZero(n) {
+    return (n < 10) ? ("0" + n) : n;
+}
+
+function writeEstimatedTime( selector, estimatedTime ) {
+  var hours = attachLeadingZero(Math.floor(estimatedTime / 3600));
+  var minutes = attachLeadingZero(Math.floor((estimatedTime - (hours*3600)) / 60));
+  var seconds = attachLeadingZero(Math.floor(estimatedTime % 60));
+  $(selector).text( hours + ':' + minutes + ':' + seconds );
 }
 
 // Scale SVG (fit || full size)
@@ -127,30 +166,30 @@ function scaleSVG(element, scale = 'fit') {
 
 // set preview svg scale to fit into its box if display block and transform is not set
 function scaleAllSvg() {
-    $('.page').each(function() {
-      if( $(this).css('display') == 'block' ) {
-        if( $(this).find('.inksimulation svg').css('transform') == 'none') {
-          scaleSVG($(this).find('.inksimulation'), 'fit');
-        }
+  $('.page').each(function() {
+    if( $(this).css('display') == 'block' ) {
+      if( $(this).find('.inksimulation svg').css('transform') == 'none') {
+        scaleSVG($(this).find('.inksimulation'), 'fit');
       }
-    });
+    }
+  });
 }
 
 var saveTimerHandles = {};
 
 function setSVGTransform(figure, transform) {
-    var field_name = $(figure).data('field-name');
-    var scale = transform.match(/-?[\d\.]+/g)[0];
-    figure.find('svg').css({ transform: transform });
-    figure.find(".scale").text(parseInt(scale*100));
+  var field_name = $(figure).data('field-name');
+  var scale = transform.match(/-?[\d\.]+/g)[0];
+  figure.find('svg').css({ transform: transform });
+  figure.find(".scale").text(parseInt(scale*100));
 
-    // avoid spamming updates
-    if (saveTimerHandles[field_name] != null)
-        clearTimeout(saveTimerHandles[field_name]);
+  // avoid spamming updates
+  if (saveTimerHandles[field_name] != null)
+    clearTimeout(saveTimerHandles[field_name]);
 
-    saveTimerHandles[field_name] = setTimeout(function() {
-        $.postJSON('/settings/' + field_name, {value: transform});
-    }, 250);
+  saveTimerHandles[field_name] = setTimeout(function() {
+      $.postJSON('/settings/' + field_name, {value: transform});
+  }, 250);
 }
 
 $(function() {
@@ -206,16 +245,16 @@ $(function() {
 
     $(this).css({cursor: 'move'});
     $(this).on('mousemove', function(e) {
-          var p1 = { x: e.pageX, y: e.pageY };
-          // set modified translate
-          var transform = $(this).find('svg').css('transform').match(/-?[\d\.]+/g);
-          transform[4] = start_offset.x + (p1.x - p0.x);
-          transform[5] = start_offset.y + (p1.y - p0.y);
+      var p1 = { x: e.pageX, y: e.pageY };
+      // set modified translate
+      var transform = $(this).find('svg').css('transform').match(/-?[\d\.]+/g);
+      transform[4] = start_offset.x + (p1.x - p0.x);
+      transform[5] = start_offset.y + (p1.y - p0.y);
 
-          // I'd ike to use setSVGTransform() here but this code runs many
-          // times per second and it's just too CPU-intensive.
-          $(this).find('svg').css({transform: 'matrix(' + transform + ')'});
-      });
+      // I'd ike to use setSVGTransform() here but this code runs many
+      // times per second and it's just too CPU-intensive.
+      $(this).find('svg').css({transform: 'matrix(' + transform + ')'});
+    });
   }).on('mouseup', function(e) {
     $(this).css({cursor: 'auto'});
     $(this).data('p0', null);
@@ -263,23 +302,25 @@ $(function() {
   // load up initial metadata values
   $.getJSON('/settings', function(settings) {
     $.each(settings, function(field_name, value) {
-        $('[data-field-name="' + field_name + '"]').each(function(i, item) {
-            var item = $(item);
-            if (item.is(':checkbox')) {
-                item.prop('checked', value).trigger('initialize');
-            } else if (item.is('img')) {
-                item.attr('src', value);
-            } else if (item.is('select')) {
-                item.val(value).trigger('initialize');
-            } else if (item.is('input[type=range]')) {
-                item.val(value).trigger('initialize');
-                $('#display-thumbnail-size').html(value + 'mm');
-            } else if (item.is('figure.inksimulation')) {
-                setSVGTransform(item, value);
-            } else {
-                item.text(value);
-            }
-        });
+      $('[data-field-name="' + field_name + '"]').each(function(i, item) {
+        var item = $(item);
+        if (item.is(':checkbox')) {
+            item.prop('checked', value).trigger('initialize');
+        } else if (item.is('img')) {
+            item.attr('src', value);
+        } else if (item.is('select')) {
+            item.val(value).trigger('initialize');
+        } else if (item.is('input[type=range]')) {
+            item.val(value).trigger('initialize');
+            $('#display-thumbnail-size').text(value + 'mm');
+        } else if (item.is('input[type=number]')) {
+            item.val(value).trigger('initialize');
+        } else if (item.is('figure.inksimulation')) {
+            setSVGTransform(item, value);
+        } else {
+            item.text(value);
+        }
+      });
     });
 
     // wait until page size is set (if they've specified one) and then scale SVGs to fit and build operator detailed view
@@ -290,17 +331,15 @@ $(function() {
   });
 
   $('[contenteditable="true"]').keypress(function(e) {
-      if (e.which == 13) {
-          // pressing enter defocuses the element
-          this.blur();
-
-          // also suppress the enter keystroke to avoid adding a new line
-          return false;
-      } else {
-          return true;
-      }
-    });
-
+    if (e.which == 13) {
+      // pressing enter defocuses the element
+      this.blur();
+      // also suppress the enter keystroke to avoid adding a new line
+      return false;
+    } else {
+      return true;
+    }
+  });
 
   /* Settings Bar */
 
@@ -362,9 +401,9 @@ $(function() {
   // Operator detailed view: thumbnail size setting
   $(document).on('input', '#operator-detailedview-thumbnail-size', function() {
     var thumbnail_size_mm = $(this).val()  + 'mm';
-    $('#display-thumbnail-size').html( thumbnail_size_mm );
+    $('#display-thumbnail-size').text( thumbnail_size_mm );
   });
-   
+
   // Operator detailed view: thumbnail size setting action
   $('#operator-detailedview-thumbnail-size').change(function() {
     // set thumbnail size
@@ -418,6 +457,14 @@ $(function() {
   }).on('change', function() {
     var field_name = $(this).attr('data-field-name');
     $.postJSON('/settings/' + field_name, {value: $(this).prop('checked')});
+  });
+
+  // Machine Speed
+  $('#machine-speed, #time-additional, #time-color-change, #time-trims, #time-stops').on('input initialize', function() {
+    setEstimatedTime();
+  }).on('change', function() {
+    var field_name = $(this).attr('data-field-name');
+    $.postJSON('/settings/' + field_name, {value: $(this).val()});
   });
 
   // Realistic rendering checkboxes
@@ -485,37 +532,47 @@ $(function() {
     return true;
   });
 
+  setTimeout(function() {
+    setEstimatedTime();
+  }, 100);
+
   $('button.svg-realistic').click(function(e){
     $(this).find('input').click();
   });
 
   // Logo
   $('#logo-picker').change(function(e) {
-      var file = e.originalEvent.currentTarget.files[0];
-      var reader = new FileReader();
-      reader.onloadend = function() {
-          var data = reader.result;
-          $('figure.brandlogo img').attr('src', data);
-          $.postJSON('/settings/logo', {value: data});
-      };
-      reader.readAsDataURL(file);
+    var file = e.originalEvent.currentTarget.files[0];
+    var reader = new FileReader();
+    reader.onloadend = function() {
+      var data = reader.result;
+      $('figure.brandlogo img').attr('src', data);
+      $.postJSON('/settings/logo', {value: data});
+    };
+    reader.readAsDataURL(file);
   });
 
   // "save as defaults" button
-  $('#save-settings').click(function(e) {
-      var settings = {};
-      settings["client-overview"] = $("[data-field-name='client-overview']").is(':checked');
-      settings["client-detailedview"] = $("[data-field-name='client-detailedview']").is(':checked');
-      settings["operator-overview"] = $("[data-field-name='operator-overview']").is(':checked');
-      settings["operator-detailedview"] = $("[data-field-name='operator-detailedview']").is(':checked');
-      settings["operator-detailedview-thumbnail-size"] = $("[data-field-name='operator-detailedview-thumbnail-size']").val();
-      settings["paper-size"] = $('select#printing-size').find(':selected').val();
+  $('button.save-settings').click(function(e) {
+    var settings = {};
+    settings["client-overview"] = $("[data-field-name='client-overview']").is(':checked');
+    settings["client-detailedview"] = $("[data-field-name='client-detailedview']").is(':checked');
+    settings["operator-overview"] = $("[data-field-name='operator-overview']").is(':checked');
+    settings["operator-detailedview"] = $("[data-field-name='operator-detailedview']").is(':checked');
+    settings["operator-detailedview-thumbnail-size"] = $("[data-field-name='operator-detailedview-thumbnail-size']").val();
+    settings["paper-size"] = $('select#printing-size').find(':selected').val();
 
-      var logo = $("figure.brandlogo img").attr('src');
-      if (logo.startsWith("data:")) {
-          settings["logo"] = logo;
-      }
+    var logo = $("figure.brandlogo img").attr('src');
+    if (logo.startsWith("data:")) {
+        settings["logo"] = logo;
+    }
 
-      $.postJSON('/defaults', {'value': settings});
+    settings["machine-speed"] = $("[data-field-name='machine-speed']").val();
+    settings["time-additional"] = $("[data-field-name='time-additional']").val();
+    settings["time-color-change"] = $("[data-field-name='time-color-change']").val(); 
+    settings["time-trims"] = $("[data-field-name='time-trims']").val();
+    settings["time-stops"] = $("[data-field-name='time-stops']").val(); 
+
+    $.postJSON('/defaults', {'value': settings});
   });
 });
