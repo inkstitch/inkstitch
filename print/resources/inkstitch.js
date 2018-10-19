@@ -109,27 +109,23 @@ function setPageNumbers() {
 function setEstimatedTime() {
   var speed = Math.floor($('#machine-speed').val() / 60); // convert to seconds
   speed = (speed <= 0) ? 1 : speed;
-  var timeStop = ($('#time-stops').val() == '') ? 0 : parseInt($('#time-stops').val());
   var timeTrim = ($('#time-trims').val() == '') ? 0 : parseInt($('#time-trims').val());
   var addToTotal = ($('#time-additional').val() == '') ? 0 : parseInt($('#time-additional').val());
   var timeColorChange = ($('#time-color-change').val() == '') ? 0 : parseInt($('#time-color-change').val());
-
   $('.estimated-time').each(function(index, item) {
       var selector = $(this);
-      var stitchCount = parseInt($( selector ).closest('p').find('.num-stitches').text().match(/\d+/));
-      var numTrims = parseInt($( selector ).closest('div').find('p input.num-stops').val());
-      var numStops = parseInt($( selector ).closest('div').find('p span.num-trims').text().match(/\d+/));
+      var stitchCount = parseInt($(selector).closest('p').find('.num-stitches').text().match(/\d+/));
+      var numTrims = parseInt($( selector ).closest('div').find('p span.num-trims').text().match(/\d+/));
       var numColorChange = ((index == ($('.estimated-time').length - 1))) ? 0 : 1; // this adds a color change except for the last color block
-      var estimatedTime = stitchCount/speed + (timeTrim * numTrims) + (timeStop * numStops) + (timeColorChange * numColorChange);
+      var estimatedTime = stitchCount/speed + (timeTrim * numTrims) + (timeColorChange * numColorChange);
       writeEstimatedTime( selector, estimatedTime );
   });
 
   var stitchCount = parseInt($('.total-num-stitches').first().text().match(/\d+/));
   var numTrims = parseInt($('.total-trims').first().text().match(/\d+/));
-  var numStops = parseInt($('.total-stops').first().text().match(/\d+/));
   var numColorBlocks = parseInt($('.num-color-blocks').first().text().match(/\d+/))-1; // the last color-block is not a color change
   var selector = '.total-estimated-time';
-  var estimatedTime = stitchCount/speed + (timeTrim * numTrims) + (timeStop * numStops) + (timeColorChange * numColorBlocks) + addToTotal;
+  var estimatedTime = stitchCount/speed + (timeTrim * numTrims) + (timeColorChange * numColorBlocks) + addToTotal;
   writeEstimatedTime( selector, estimatedTime );
 }
 
@@ -460,7 +456,7 @@ $(function() {
   });
 
   // Machine Speed
-  $('#machine-speed, #time-additional, #time-color-change, #time-trims, #time-stops').on('input initialize', function() {
+  $('#machine-speed, #time-additional, #time-color-change, #time-trims').on('input initialize', function() {
     setEstimatedTime();
   }).on('change', function() {
     var field_name = $(this).attr('data-field-name');
@@ -571,7 +567,6 @@ $(function() {
     settings["time-additional"] = $("[data-field-name='time-additional']").val();
     settings["time-color-change"] = $("[data-field-name='time-color-change']").val(); 
     settings["time-trims"] = $("[data-field-name='time-trims']").val();
-    settings["time-stops"] = $("[data-field-name='time-stops']").val(); 
 
     $.postJSON('/defaults', {'value': settings});
   });
