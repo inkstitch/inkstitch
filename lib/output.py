@@ -53,7 +53,7 @@ def jump_to_stop_point(pattern, svg):
         pattern.add_stitch_absolute(pyembroidery.JUMP, stop_position.point.x, stop_position.point.y)
 
 
-def write_embroidery_file(file_path, stitch_plan, svg):
+def write_embroidery_file(file_path, stitch_plan, svg, settings={}):
     origin = get_origin(svg)
 
     pattern = pyembroidery.EmbPattern()
@@ -73,7 +73,7 @@ def write_embroidery_file(file_path, stitch_plan, svg):
     # also multiply by 10 to get tenths of a millimeter as required by pyembroidery
     scale = 10 / PIXELS_PER_MM
 
-    settings = {
+    settings.update({
         # correct for the origin
         "translate": -origin,
 
@@ -84,7 +84,7 @@ def write_embroidery_file(file_path, stitch_plan, svg):
         # This forces a jump at the start of the design and after each trim,
         # even if we're close enough not to need one.
         "full_jump": True,
-    }
+    })
 
     if file_path.endswith('.csv'):
         # Special treatment for CSV: instruct pyembroidery not to do any post-
