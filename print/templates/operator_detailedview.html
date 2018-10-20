@@ -28,7 +28,7 @@
             <span>{{ _('Design box size') }}: {{ "%0.1fmm X %0.1fmm" | format(*job.dimensions) }}</span>
             <!-- <span>{{ _('Total thread used') }}: {{job.estimated_thread }}</span> -->
             <span class="total-num-stitches">{{ _('Total stitch count') }}: {{job.num_stitches }}</span>
-            <span>{{ ('estimated time') }}: <span class="total-estimated-time"></span></span>
+            <span class="time-opd">{{ ('estimated time') }}: <span class="total-estimated-time"></span></span>
           </p>
           <p>
             <span class="total-stops">{{ _('Total stops') }}: {{ job.num_stops }}</span>
@@ -61,7 +61,7 @@
             <p>
               <!-- <span>{{ _('thread used') }}:</span> -->
               <span class="num-stitches">{{ _('# stitches') }}: {{ color_block.num_stitches }}</span>
-              <span>{{ _('estimated time') }}: <span class="estimated-time"></span></span>
+              <span class="time-opd">{{ _('estimated time') }}: <span class="estimated-time"></span></span>
             </p>
             <p>
               <span class="num-trims">{{ _('trims') }}: {{ color_block.num_trims }}</span>

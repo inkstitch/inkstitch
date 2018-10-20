@@ -112,11 +112,23 @@ function setEstimatedTime() {
   var timeTrim = ($('#time-trims').val() == '') ? 0 : parseInt($('#time-trims').val());
   var addToTotal = ($('#time-additional').val() == '') ? 0 : parseInt($('#time-additional').val());
   var timeColorChange = ($('#time-color-change').val() == '') ? 0 : parseInt($('#time-color-change').val());
+
+  // operator detailed view
   $('.estimated-time').each(function(index, item) {
       var selector = $(this);
       var stitchCount = parseInt($(selector).closest('p').find('.num-stitches').text().match(/\d+/));
       var numTrims = parseInt($( selector ).closest('div').find('p span.num-trims').text().match(/\d+/));
       var numColorChange = ((index == ($('.estimated-time').length - 1))) ? 0 : 1; // this adds a color change except for the last color block
+      var estimatedTime = stitchCount/speed + (timeTrim * numTrims) + (timeColorChange * numColorChange);
+      writeEstimatedTime( selector, estimatedTime );
+  });
+  
+  // client detailed view
+  $('.cld-estimated-time').each(function(index, item) {
+      var selector = $(this);
+      var stitchCount = parseInt($(selector).closest('div.page').find('main .detailed .color-info span.num-stitches').text().match(/\d+/));
+      var numTrims = parseInt($( selector ).closest('div.page').find('main .detailed .color-info span.num-trims').text().match(/\d+/));
+      var numColorChange = ((index == ($('.cld-estimated-time').length - 1))) ? 0 : 1; // this adds a color change except for the last color block
       var estimatedTime = stitchCount/speed + (timeTrim * numTrims) + (timeColorChange * numColorChange);
       writeEstimatedTime( selector, estimatedTime );
   });
@@ -446,7 +458,6 @@ $(function() {
   // View selection checkboxes
   $(':checkbox.view').on('change initialize', function() {
     var field_name = $(this).attr('data-field-name');
-
     $('.' + field_name).toggle($(this).prop('checked'));
     scaleAllSvg();
     setPageNumbers();
@@ -455,12 +466,21 @@ $(function() {
     $.postJSON('/settings/' + field_name, {value: $(this).prop('checked')});
   });
 
-  // Machine Speed
+  // Estimated Time
   $('#machine-speed, #time-additional, #time-color-change, #time-trims').on('input initialize', function() {
     setEstimatedTime();
   }).on('change', function() {
     var field_name = $(this).attr('data-field-name');
     $.postJSON('/settings/' + field_name, {value: $(this).val()});
+  });
+
+  // Display Estimated Time checkboxes
+  $(':checkbox.time-display').on('input initialize', function() {
+    var field_name = $(this).attr('data-field-name');
+    $('.' + field_name).toggle($(this).prop('checked'));
+  }).on('change', function() {
+    var field_name = $(this).attr('data-field-name');
+    $.postJSON('/settings/' + field_name, {value: $(this).prop('checked')});
   });
 
   // Realistic rendering checkboxes
@@ -567,6 +587,11 @@ $(function() {
     settings["time-additional"] = $("[data-field-name='time-additional']").val();
     settings["time-color-change"] = $("[data-field-name='time-color-change']").val(); 
     settings["time-trims"] = $("[data-field-name='time-trims']").val();
+
+    settings["time-clo"] = $("[data-field-name='time-clo']").val();
+    settings["time-cld"] = $("[data-field-name='time-cld']").val();
+    settings["time-opo"] = $("[data-field-name='time-opo']").val();
+    settings["time-opd"] = $("[data-field-name='time-opd']").val();
 
     $.postJSON('/defaults', {'value': settings});
   });

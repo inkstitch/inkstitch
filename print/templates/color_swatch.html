@@ -40,8 +40,8 @@
           <p><span class="color-name">{{ _('Color') }}:</span><span data-field-name="color-{{ color_block.color.hex_digits }}" contenteditable="true" data-placeholder="{{ _('Enter thread name...') }}">{{ color_block.color.name }}</span></p>
           <p><span class="color-rgb">{{ _('rgb') }}:</span><span>{{ color_block.color.rgb }}</span></p>
           <p><span class="swatch-thread">{{ _('thread') }}:</span><span data-field-name="thread-{{ color_block.color.hex_digits }}" contenteditable="true">{{ color_block.color.manufacturer }} {{ "#" + color_block.color.number if color_block.color.number }}</span></p>
-          <p><span class="swatch-stitches">{{ _('# stitches') }}:</span><span>{{ color_block.num_stitches }}</span></p>
-          <p><span class="swatch-trims">{{ _('# trims') }}:</span><span>{{ color_block.num_trims }}</span></p>
+          <p><span class="swatch-stitches">{{ _('# stitches') }}:</span><span class="num-stitches">{{ color_block.num_stitches }}</span></p>
+          <p><span class="swatch-trims">{{ _('# trims') }}:</span><span class="num-trims">{{ color_block.num_trims }}</span></p>
           <p><span class="swatch-stops">{{ _('stop after?') }}:</span><span>{{ _("yes") if color_block.stop_after else _("no") }}</span></p>
         </div>
       </div>

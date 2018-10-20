@@ -358,10 +358,11 @@ body {
       display: -ms-flexbox;   /* IE 10 */
     width: calc(100% - 50mm);
     height: 50%;
+    flex-grow: 1;
   }
 
   div.headline h1 {
-    font-size: 18pt;
+    font-size: 16pt;
   }
 
   div.headline p {
@@ -376,6 +377,14 @@ body {
     height: 50%;
     font-family: "Barlow Condensed", sans-serif;
     font-size: 10pt;
+  }
+
+  .client-detailedview div.job-details {
+    padding-top: 6mm;
+  }
+
+  .operator-overview div.job-details, .client-overview div.job-details {
+    padding-top: 2mm;
   }
 
   div.job-details > div {
