@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-10-18 01:26+0000\n"
-"PO-Revision-Date: 2018-10-18 01:27\n"
+"POT-Creation-Date: 2018-10-21 01:35+0000\n"
+"PO-Revision-Date: 2018-10-23 01:30\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Chinese Traditional\n"
 "MIME-Version: 1.0\n"
@@ -1181,6 +1181,11 @@ msgstr ""
 msgid "Brother Stitch Format"
 msgstr ""
 
+#. description for pyembroidery file format: txt
+#: pyembroidery-format-descriptions.py:82
+msgid "G-code Format"
+msgstr ""
+
 #: templates/convert_to_satin.inx:3
 msgid "Convert Line to Satin"
 msgstr ""
@@ -1278,6 +1283,18 @@ msgstr ""
 #: templates/output.inx:11
 #, python-format
 msgid "Save design in %(file_extension)s format using Ink/Stitch"
+msgstr ""
+
+#: templates/output_params_txt.xml:2
+msgid "Negate x coordinates"
+msgstr ""
+
+#: templates/output_params_txt.xml:3
+msgid "Negate y coordinates"
+msgstr ""
+
+#: templates/output_params_txt.xml:4
+msgid "increment z coordinate by this amount per stitch"
 msgstr ""
 
 #: templates/params.inx:3

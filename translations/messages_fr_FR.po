@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-10-18 01:26+0000\n"
-"PO-Revision-Date: 2018-10-18 01:26\n"
+"POT-Creation-Date: 2018-10-21 01:35+0000\n"
+"PO-Revision-Date: 2018-10-23 01:29\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -887,7 +887,7 @@ msgstr "Total nr coupure"
 
 #: print/templates/operator_detailedview.html:56
 msgid "Enter thread name..."
-msgstr ""
+msgstr "Entrez le nom du fil..."
 
 #: print/templates/operator_detailedview.html:61
 msgid "thread used"
@@ -1182,6 +1182,11 @@ msgstr "Format de broderie ZSK TC"
 msgid "Brother Stitch Format"
 msgstr "Format de broderie Brother"
 
+#. description for pyembroidery file format: txt
+#: pyembroidery-format-descriptions.py:82
+msgid "G-code Format"
+msgstr "Format G-code"
+
 #: templates/convert_to_satin.inx:3
 msgid "Convert Line to Satin"
 msgstr "Convertir ligne en satin"
@@ -1280,6 +1285,18 @@ msgstr "Attacher des commandes à des objets sélectionnés"
 #, python-format
 msgid "Save design in %(file_extension)s format using Ink/Stitch"
 msgstr "Enregistrer la création au format %(file_extension)s à l’aide d’Ink/Stitch"
+
+#: templates/output_params_txt.xml:2
+msgid "Negate x coordinates"
+msgstr "Négativer coordonnés x"
+
+#: templates/output_params_txt.xml:3
+msgid "Negate y coordinates"
+msgstr "Négativer coordonnés y"
+
+#: templates/output_params_txt.xml:4
+msgid "increment z coordinate by this amount per stitch"
+msgstr "augmenter coordonné z par ce montant par point"
 
 #: templates/params.inx:3
 msgid "Params"
