@@ -1,12 +1,13 @@
-import inkex
 import sys
 
-from .commands import CommandsExtension
-from ..i18n import _
+import inkex
+
 from ..elements import SatinColumn
+from ..i18n import _
 from ..stitches.auto_satin import auto_satin
 from ..svg import get_correction_transform
 from ..svg.tags import SVG_GROUP_TAG, INKSCAPE_LABEL
+from .commands import CommandsExtension
 
 
 class AutoSatin(CommandsExtension):
@@ -59,11 +60,6 @@ class AutoSatin(CommandsExtension):
             # L10N auto-route satin columns extension
             inkex.errormsg(_("Please select one or more satin columns."))
             return False
-
-        for element in self.elements:
-            if not isinstance(element, SatinColumn):
-                inkex.errormsg(_("Please only select satin columns."))
-                return False
 
         return True
 

@@ -1,16 +1,18 @@
+from itertools import chain
 import math
-import networkx as nx
+
+import cubicsuperpath
+import inkex
 from shapely import geometry as shgeo
 from shapely.geometry import Point as ShapelyPoint
-from itertools import chain
-import inkex
-import cubicsuperpath
 import simplestyle
 
+import networkx as nx
+
 from ..elements import Stroke
-from ..utils import Point as InkstitchPoint, cut, cache
 from ..svg import PIXELS_PER_MM, line_strings_to_csp
 from ..svg.tags import SVG_PATH_TAG
+from ..utils import Point as InkstitchPoint, cut, cache
 
 
 class SatinSegment(object):
@@ -59,7 +61,8 @@ class SatinSegment(object):
             before, satin = satin.split(self.start)
 
         if self.end < 1.0:
-            satin, after = satin.split((self.end - self.start) / (1.0 - self.start))
+            satin, after = satin.split(
+                (self.end - self.start) / (1.0 - self.start))
 
         if self.reverse:
             satin = satin.reverse()
@@ -80,7 +83,8 @@ class SatinSegment(object):
         segments = []
         satin = self.to_satin()
         for i in xrange(num_segments):
-            segments.append(SatinSegment(satin, float(i) / num_segments, float(i + 1) / num_segments, self.reverse))
+            segments.append(SatinSegment(satin, float(
+                i) / num_segments, float(i + 1) / num_segments, self.reverse))
 
         if self.reverse:
             segments.reverse()
@@ -99,7 +103,8 @@ class SatinSegment(object):
             before, center_line = cut(center_line, self.start, normalized=True)
 
         if self.end > 0.0:
-            center_line, after = cut(center_line, (self.end - self.start) / (1.0 - self.start), normalized=True)
+            center_line, after = cut(
+                center_line, (self.end - self.start) / (1.0 - self.start), normalized=True)
 
         if self.reverse:
             center_line = shgeo.LineString(reversed(center_line.coords))
@@ -182,13 +187,21 @@ class JumpStitch(object):
 class RunningStitch(object):
     """Running stitch along a path."""
 
-    def __init__(self, path, style):
-        self.path = path
+    def __init__(self, path_or_stroke, style=""):
+        if isinstance(path_or_stroke, Stroke):
+            # Technically a Stroke object's underlying path could hve multiple
+            # subpaths.  We don't have a particularly good way of dealing with
+            # that so we'll just use the first one.
+            self.path = path_or_stroke.shape.geoms[0]
+        else:
+            self.path = path_or_stroke
+
         self.style = style
 
     def to_element(self):
         node = inkex.etree.Element(SVG_PATH_TAG)
-        node.set("d", cubicsuperpath.formatPath(line_strings_to_csp([self.path])))
+        node.set("d", cubicsuperpath.formatPath(
+            line_strings_to_csp([self.path])))
 
         style = simplestyle.parseStyle(self.style)
         style['stroke-dasharray'] = "0.5,0.5"
@@ -197,6 +210,21 @@ class RunningStitch(object):
         node.set("style", style)
 
         return Stroke(node)
+
+    @property
+    @cache
+    def start_point(self):
+        return self.path.interpolate(0.0, normalized=True)
+
+    @property
+    @cache
+    def end_point(self):
+        return self.path.interpolate(1.0, normalized=True)
+
+    @property
+    @cache
+    def reversed(self):
+        return RunningStitch(shgeo.LineString(reversed(self.path.coords)), self.style)
 
     def is_sequential(self, other):
         if not isinstance(other, RunningStitch):
@@ -209,7 +237,7 @@ class RunningStitch(object):
         return RunningStitch(new_path, self.style)
 
 
-def auto_satin(satins, preserve_order=False, starting_point=None, ending_point=None):
+def auto_satin(elements, preserve_order=False, starting_point=None, ending_point=None):
     """Find an optimal order to stitch a list of SatinColumns.
 
     Add running stitch and jump stitches as necessary to construct a stitch
@@ -235,21 +263,30 @@ def auto_satin(satins, preserve_order=False, starting_point=None, ending_point=N
     fall on satin columns in the list.  If they don't, the nearest
     point on a satin column in the list will be used.
 
+    If preserve_order is True, then the algorithm is constrained to keep the
+    satins in the same order they were in the original list.  It will only split
+    them and add running stitch as necessary to achieve an optimal stitch path.
+
+    Elements should be primarily made up of SatinColumn instances.  Some Stroke
+    instances (that are running stitch) can be included to indicate how to travel
+    between two SatinColumns.  This works best when preserve_order is True.
+
     Returns: a list of SVG path nodes making up the selected stitch order.
       Jumps between objects are implied if they are not right next to each
       other.
     """
 
-    graph = build_graph(satins, preserve_order)
-    add_jumps(graph, satins, preserve_order)
-    starting_node, ending_node = get_starting_and_ending_nodes(graph, satins, preserve_order, starting_point, ending_point)
+    graph = build_graph(elements, preserve_order)
+    add_jumps(graph, elements, preserve_order)
+    starting_node, ending_node = get_starting_and_ending_nodes(
+        graph, elements, preserve_order, starting_point, ending_point)
     path = find_path(graph, starting_node, ending_node)
     operations = path_to_operations(graph, path)
     operations = collapse_sequential_segments(operations)
     return operations_to_elements_and_trims(operations)
 
 
-def build_graph(satins, preserve_order=False):
+def build_graph(elements, preserve_order=False):
     if preserve_order:
         graph = nx.DiGraph()
     else:
@@ -259,25 +296,33 @@ def build_graph(satins, preserve_order=False):
     # possible spots for jump-stitches between satins.  NetworkX will find the
     # best spots for us.
 
-    for satin in satins:
-        whole_satin = SatinSegment(satin)
-        for segment in whole_satin.break_up(PIXELS_PER_MM):
+    for element in elements:
+        segments = []
+        if isinstance(element, Stroke):
+            segments.append(RunningStitch(element, element.node.get("style", "")))
+        else:
+            whole_satin = SatinSegment(element)
+            segments = whole_satin.break_up(PIXELS_PER_MM)
+
+        for segment in segments:
             # This is necessary because shapely points aren't hashable and thus
             # can't be used as nodes directly.
             graph.add_node(str(segment.start_point), point=segment.start_point)
             graph.add_node(str(segment.end_point), point=segment.end_point)
-            graph.add_edge(str(segment.start_point), str(segment.end_point), satin_segment=segment, satin=satin)
+            graph.add_edge(str(segment.start_point), str(
+                segment.end_point), segment=segment, element=element)
 
             if preserve_order:
                 # The graph is a directed graph, but we want to allow travel in
                 # any direction in a satin, so we add the edge in the opposite
                 # direction too.
-                graph.add_edge(str(segment.end_point), str(segment.start_point), satin_segment=segment, satin=satin)
+                graph.add_edge(str(segment.end_point), str(
+                    segment.start_point), segment=segment, element=element)
 
     return graph
 
 
-def get_starting_and_ending_nodes(graph, satins, preserve_order, starting_point, ending_point):
+def get_starting_and_ending_nodes(graph, elements, preserve_order, starting_point, ending_point):
     """Find or choose the starting and ending graph nodes.
 
     If points were passed, we'll find the nearest graph nodes.  Since we split
@@ -293,15 +338,17 @@ def get_starting_and_ending_nodes(graph, satins, preserve_order, starting_point,
 
     nodes = []
 
-    nodes.append(find_node(graph, starting_point, min, preserve_order, satins[0]))
-    nodes.append(find_node(graph, ending_point, max, preserve_order, satins[-1]))
+    nodes.append(find_node(graph, starting_point,
+                           min, preserve_order, elements[0]))
+    nodes.append(find_node(graph, ending_point,
+                           max, preserve_order, elements[-1]))
 
     return nodes
 
 
 def find_node(graph, point, extreme_function, constrain_to_satin=False, satin=None):
     if constrain_to_satin:
-        nodes = get_nodes_on_satin(graph, satin)
+        nodes = get_nodes_on_element(graph, satin)
     else:
         nodes = graph.nodes()
 
@@ -312,34 +359,34 @@ def find_node(graph, point, extreme_function, constrain_to_satin=False, satin=No
         return min(nodes, key=lambda node: graph.nodes[node]['point'].distance(point))
 
 
-def get_nodes_on_satin(graph, satin):
+def get_nodes_on_element(graph, element):
     nodes = set()
 
-    for start_node, end_node, edge_satin in graph.edges(data='satin'):
-        if edge_satin is satin:
+    for start_node, end_node, element_for_edge in graph.edges(data='element'):
+        if element_for_edge is element:
             nodes.add(start_node)
             nodes.add(end_node)
 
     return nodes
 
 
-def add_jumps(graph, satins, preserve_order):
-    """Add jump stitches between satins as necessary.
+def add_jumps(graph, elements, preserve_order):
+    """Add jump stitches between elements as necessary.
 
-    Jump stitches are added to ensure that all satins can be reached.  Only the
+    Jump stitches are added to ensure that all elements can be reached.  Only the
     minimal number and length of jumps necessary will be added.
     """
 
     if preserve_order:
-        # For each sequential pair of satins, find the shortest possible jump
+        # For each sequential pair of elements, find the shortest possible jump
         # stitch between them and add it.  The directions of these new edges
         # will enforce stitching the satins in order.
 
-        for satin1, satin2 in zip(satins[:-1], satins[1:]):
+        for element1, element2 in zip(elements[:-1], elements[1:]):
             potential_edges = []
 
-            nodes1 = get_nodes_on_satin(graph, satin1)
-            nodes2 = get_nodes_on_satin(graph, satin2)
+            nodes1 = get_nodes_on_element(graph, element1)
+            nodes2 = get_nodes_on_element(graph, element2)
 
             for node1 in nodes1:
                 for node2 in nodes2:
@@ -457,12 +504,12 @@ def path_to_operations(graph, path):
     operations = []
 
     for start, end in path:
-        satin_segment = graph[start][end].get('satin_segment')
-        if satin_segment:
+        segment = graph[start][end].get('segment')
+        if segment:
             start_point = graph.nodes[start]['point']
-            if satin_segment.start_point != start_point:
-                satin_segment = satin_segment.reversed()
-            operations.append(satin_segment)
+            if segment.start_point != start_point:
+                segment = segment.reversed()
+            operations.append(segment)
         else:
             operations.append(JumpStitch(graph.nodes[start]['point'], graph.nodes[end]['point']))
 
