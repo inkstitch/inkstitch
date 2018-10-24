@@ -5,7 +5,7 @@ from ..svg import PIXELS_PER_MM
 
 
 def add_tie(stitches, tie_path):
-    if len(tie_path) < 2 or stitches[0].no_ties:
+    if len(tie_path) < 2 or tie_path[0].no_ties:
         # It's from a manual stitch block, so don't add tie stitches.  The user
         # will add them if they want them.
         return
