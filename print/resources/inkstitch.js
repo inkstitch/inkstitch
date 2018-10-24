@@ -118,8 +118,7 @@ function setEstimatedTime() {
       var selector = $(this);
       var stitchCount = parseInt($(selector).closest('p').find('.num-stitches').text().match(/\d+/));
       var numTrims = parseInt($( selector ).closest('div').find('p span.num-trims').text().match(/\d+/));
-      var numColorChange = ((index == ($('.estimated-time').length - 1))) ? 0 : 1; // this adds a color change except for the last color block
-      var estimatedTime = stitchCount/speed + (timeTrim * numTrims) + (timeColorChange * numColorChange);
+      var estimatedTime = stitchCount/speed + (timeTrim * numTrims);
       writeEstimatedTime( selector, estimatedTime );
   });
   
@@ -128,8 +127,7 @@ function setEstimatedTime() {
       var selector = $(this);
       var stitchCount = parseInt($(selector).closest('div.page').find('main .detailed .color-info span.num-stitches').text().match(/\d+/));
       var numTrims = parseInt($( selector ).closest('div.page').find('main .detailed .color-info span.num-trims').text().match(/\d+/));
-      var numColorChange = ((index == ($('.cld-estimated-time').length - 1))) ? 0 : 1; // this adds a color change except for the last color block
-      var estimatedTime = stitchCount/speed + (timeTrim * numTrims) + (timeColorChange * numColorChange);
+      var estimatedTime = stitchCount/speed + (timeTrim * numTrims);
       writeEstimatedTime( selector, estimatedTime );
   });
 
