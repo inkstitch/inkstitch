@@ -564,4 +564,4 @@ def operations_to_elements_and_trims(operations):
             if elements and operation.length > PIXELS_PER_MM:
                 trims.append(len(elements) - 1)
 
-    return elements, trims
+    return elements, list(set(trims))
