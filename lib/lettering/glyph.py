@@ -1,10 +1,10 @@
-import cubicsuperpath
-import simpletransform
 from copy import copy
 
+import cubicsuperpath
+import simpletransform
+
 from ..svg import apply_transforms, get_guides
-from ..svg.tags import INKSCAPE_LABEL
-from ..utils import cache
+from ..svg.tags import SVG_GROUP_TAG, SVG_PATH_TAG
 
 
 class Glyph(object):
@@ -16,40 +16,49 @@ class Glyph(object):
 
     Properties:
       width -- total width of this glyph including all component satins
-      nodes -- SVG path nodes of the component satins in this character
+      node  -- svg:g XML node containing the component satins in this character
     """
 
-    def __init__(self, nodes):
+    def __init__(self, group):
         """Create a Glyph.
 
         The nodes will be copied out of their parent SVG document (with nested
         transforms applied).  The original nodes will be unmodified.
 
         Arguments:
-          nodes -- an iterable of XML nodes
+          group -- an svg:g XML node containing all the paths that make up
+            this Glyph.  Nested groups are allowed.
         """
-        self.nodes = []
 
-        self._process_nodes(nodes)
+        self._process_baseline(group.getroottree().getroot())
+        self.node = self._process_group(group)
         self._process_bbox()
         self._move_to_origin()
 
-    def _process_nodes(self, nodes):
-        self.baseline = None
+    def _process_group(self, group):
+        new_group = copy(group)
+        new_group.attrib.pop('transform', None)
 
-        for node in nodes:
-            if self.baseline is None:
-                self._process_baseline(node.getroottree().getroot())
+        for node in group:
+            if node.tag == SVG_GROUP_TAG:
+                new_group.append(self._process_group(node))
+            else:
+                node_copy = copy(node)
 
-            node_copy = copy(node)
-            path = cubicsuperpath.parsePath(node.get(d))
-            apply_transforms(path, node)
+                if "d" in node.attrib:
+                    # Convert the path to absolute coordinates, incorporating all
+                    # nested transforms.
+                    path = cubicsuperpath.parsePath(node.get("d"))
+                    apply_transforms(path, node)
+                    node_copy.set("d", cubicsuperpath.formatPath(path))
 
-            node_copy.set("d", cubicsuperpath.formatPath(path))
-            if 'transform' in node_copy.attrib:
-                del node_copy.attrib['transform']
+                # Delete transforms from paths and groups, since we applied
+                # them to the paths already.
+                node_copy.attrib.pop('transform', None)
 
-            self.nodes.append(node_copy)
+                new_group.append(node_copy)
+
+        return new_group
 
     def _process_baseline(self, svg):
         for guide in get_guides(svg):
@@ -61,7 +70,7 @@ class Glyph(object):
             self.baseline = 0
 
     def _process_bbox(self):
-        left, right, top, bottom = simpletransform.computeBBox(self.nodes)
+        left, right, top, bottom = simpletransform.computeBBox(self.node.iterdescendants())
 
         self.width = right - left
         self._min_x = left
@@ -71,6 +80,6 @@ class Glyph(object):
         translate_y = -self.baseline
         transform = "translate(%s, %s)" % (translate_x, translate_y)
 
-        for node in self.nodes:
+        for node in self.node.iter(SVG_PATH_TAG):
             node.set('transform', transform)
             simpletransform.fuseTransform(node)
