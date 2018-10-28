@@ -1,6 +1,9 @@
+import simpletransform
+
+from ..utils import string_to_floats, Point, cache
 from .tags import SODIPODI_NAMEDVIEW, SODIPODI_GUIDE, INKSCAPE_LABEL
 from .units import get_doc_size, get_viewbox_transform
-from ..utils import string_to_floats, Point, cache
+
 
 class InkscapeGuide(object):
     def __init__(self, node):
@@ -15,7 +18,7 @@ class InkscapeGuide(object):
         doc_size = list(get_doc_size(self.svg))
 
         # convert the size from viewbox-relative to real-world pixels
-        viewbox_transform = get_viewbox_transform(svg)
+        viewbox_transform = get_viewbox_transform(self.svg)
         simpletransform.applyTransformToPoint(simpletransform.invertTransform(viewbox_transform), doc_size)
 
         self.position = Point(*string_to_floats(self.node.get('position')))
@@ -27,6 +30,7 @@ class InkscapeGuide(object):
         # their vector wrong?
         parts = string_to_floats(self.node.get('orientation'))
         self.direction = Point(parts[1], parts[0])
+
 
 @cache
 def get_guides(svg):

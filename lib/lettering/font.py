@@ -1,3 +1,5 @@
+# -*- coding: UTF-8 -*-
+
 from copy import deepcopy
 import json
 import os
@@ -7,9 +9,14 @@ from ..utils import Point
 from .font_variant import FontVariant
 
 
-def font_metadata(name, default=None):
+def font_metadata(name, default=None, multiplier=None):
     def getter(self):
-        return self.metadata.get(name, default)
+        value = self.metadata.get(name, default)
+
+        if multiplier is not None:
+            value *= multiplier
+
+        return value
 
     return property(getter)
 
@@ -44,7 +51,7 @@ class Font(object):
     def _load_license(self):
         try:
             with open(os.path.join(self.path, "LICENSE")) as license_file:
-                self.license = json.load(license_file)
+                self.license = license_file.read()
         except IOError:
             self.license = None
 
@@ -58,28 +65,55 @@ class Font(object):
                 # we'll deal with missing variants when we apply lettering
                 pass
 
-    name = font_metadata('name')
+    name = font_metadata('name', '')
+    description = font_metadata('description', '')
     default_variant = font_metadata('default_variant', FontVariant.LEFT_TO_RIGHT)
     default_glyph = font_metadata('defalt_glyph', u"�")
-    kerning = font_metadata('kerning', 2 * PIXELS_PER_MM)
-    leading = font_metadata('leading', 5 * PIXELS_PER_MM)
+    letter_spacing = font_metadata('letter_spacing', 1.5, multiplier=PIXELS_PER_MM)
+    leading = font_metadata('leading', 5, multiplier=PIXELS_PER_MM)
+    word_spacing = font_metadata('word_spacing', 3, multiplier=PIXELS_PER_MM)
+    kerning_pairs = font_metadata('kerning_pairs', {})
 
     def render_text(self, text, variant=None):
-        glyph_set = self.variants.get(variant, self.default_variant)
+        glyph_set = self.variants.get(variant, self.variants[self.default_variant])
 
         nodes = []
         position = Point(0, 0)
+        last_character = None
         for line in text.splitlines():
             line = line.strip()
             for character in line:
-                glyph = glyph_set[character]
-                node = deepcopy(glyph.node)
-                transform = "translate(%s, %s)" % position.as_tuple()
-                glyph.set('transform', transform)
-                nodes.append(node)
-                position.x += self.kerning
+                if character == " ":
+                    position.x += self.word_spacing
+                    last_character = None
+                else:
+                    glyph = glyph_set[character] or glyph_set[self.default_glyph]
 
+                    if glyph is not None:
+                        node = deepcopy(glyph.node)
+
+                        if last_character is not None:
+                            position.x += self.letter_spacing + self.kerning_pairs.get(last_character + character, 0) * PIXELS_PER_MM
+
+                        transform = "translate(%s, %s)" % position.as_tuple()
+                        node.set('transform', transform)
+                        nodes.append(node)
+                        position.x += glyph.width
+
+                    last_character = character
+
+            last_character = None
             position.y += self.leading
             position.x = 0
 
         return nodes
+
+    def _get_kerning(self, character1, character2):
+        if character1 is None:
+            return self.kerning
+
+        pair = character1 + character2
+        if pair in self.kerning_pairs:
+            return self.kerning_pairs[pair] * PIXELS_PER_MM
+        else:
+            return self.kerning

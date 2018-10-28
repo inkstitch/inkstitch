@@ -109,6 +109,16 @@ class InkstitchExtension(inkex.Effect):
             if g.get(INKSCAPE_GROUPMODE) == "layer":
                 g.set("style", "display:none")
 
+    def ensure_current_layer(self):
+        # if no layer is selected, inkex defaults to the root, which isn't
+        # particularly useful
+        if self.current_layer is self.document.getroot():
+            try:
+                self.current_layer = self.document.xpath(".//svg:g[@inkscape:groupmode='layer']", namespaces=inkex.NSS)[0]
+            except IndexError:
+                # No layers at all??  Fine, we'll stick with the default.
+                pass
+
     def no_elements_error(self):
         if self.selected:
             inkex.errormsg(_("No embroiderable paths selected."))

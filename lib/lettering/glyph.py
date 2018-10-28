@@ -38,6 +38,7 @@ class Glyph(object):
     def _process_group(self, group):
         new_group = copy(group)
         new_group.attrib.pop('transform', None)
+        del new_group[:]  # delete references to the original group's children
 
         for node in group:
             if node.tag == SVG_GROUP_TAG:
@@ -63,11 +64,11 @@ class Glyph(object):
     def _process_baseline(self, svg):
         for guide in get_guides(svg):
             if guide.label == "baseline":
-                self.baseline = guide.position.y
+                self._baseline = guide.position.y
                 break
         else:
             # no baseline guide found, assume 0 for lack of anything better to use...
-            self.baseline = 0
+            self._baseline = 0
 
     def _process_bbox(self):
         left, right, top, bottom = simpletransform.computeBBox(self.node.iterdescendants())
@@ -76,8 +77,8 @@ class Glyph(object):
         self._min_x = left
 
     def _move_to_origin(self):
-        translate_x = -self.min_x
-        translate_y = -self.baseline
+        translate_x = -self._min_x
+        translate_y = -self._baseline
         transform = "translate(%s, %s)" % (translate_x, translate_y)
 
         for node in self.node.iter(SVG_PATH_TAG):

@@ -1,24 +1,14 @@
 import inkex
 
-from .commands import CommandsExtension
 from ..commands import LAYER_COMMANDS, get_command_description
 from ..i18n import _
-from ..svg.tags import SVG_USE_TAG, INKSCAPE_LABEL, XLINK_HREF
 from ..svg import get_correction_transform
+from ..svg.tags import SVG_USE_TAG, INKSCAPE_LABEL, XLINK_HREF
+from .commands import CommandsExtension
 
 
 class LayerCommands(CommandsExtension):
     COMMANDS = LAYER_COMMANDS
-
-    def ensure_current_layer(self):
-        # if no layer is selected, inkex defaults to the root, which isn't
-        # particularly useful
-        if self.current_layer is self.document.getroot():
-            try:
-                self.current_layer = self.document.xpath(".//svg:g[@inkscape:groupmode='layer']", namespaces=inkex.NSS)[0]
-            except IndexError:
-                # No layers at all??  Fine, we'll stick with the default.
-                pass
 
     def effect(self):
         commands = [command for command in self.COMMANDS if getattr(self.options, command)]

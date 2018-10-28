@@ -1,8 +1,8 @@
 # -*- coding: UTF-8 -*-
 
 import os
-
 import inkex
+import simplestyle
 
 from ..svg.tags import INKSCAPE_GROUPMODE, INKSCAPE_LABEL
 from .glyph import Glyph
@@ -36,21 +36,32 @@ class FontVariant(object):
         self.variant = variant
         self.default_glyph = default_glyph
         self.glyphs = {}
-        self._load_glyphs(font_path, variant)
+        self._load_glyphs()
 
     def _load_glyphs(self):
-        svg_path = os.path.join(self.font_path, u"%s.svg" % self.variant)
+        svg_path = os.path.join(self.path, u"%s.svg" % self.variant)
         svg = inkex.etree.parse(svg_path)
 
         glyph_layers = svg.xpath(".//svg:g[starts-with(@inkscape:label, 'GlyphLayer-')]", namespaces=inkex.NSS)
         for layer in glyph_layers:
-            # We'll repurpose the layer as a container group labelled with the
-            # glyph.
-            del layer.attrib[INKSCAPE_GROUPMODE]
+            self._clean_group(layer)
             layer.attrib[INKSCAPE_LABEL] = layer.attrib[INKSCAPE_LABEL].replace("GlyphLayer-", "", 1)
-
             glyph_name = layer.attrib[INKSCAPE_LABEL]
-            self.glyphs[glyph_name] = Glyph([layer])
+            self.glyphs[glyph_name] = Glyph(layer)
+
+    def _clean_group(self, group):
+        # We'll repurpose the layer as a container group labelled with the
+        # glyph.
+        del group.attrib[INKSCAPE_GROUPMODE]
+
+        style_text = group.get('style')
+
+        if style_text:
+            # The layer may be marked invisible, so we'll clear the 'display'
+            # style.
+            style = simplestyle.parseStyle(group.get('style'))
+            style.pop('display')
+            group.set('style', simplestyle.formatStyle(style))
 
     def __getitem__(self, character):
         if character in self.glyphs:

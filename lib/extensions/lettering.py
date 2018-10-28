@@ -15,4 +15,5 @@ class Lettering(InkstitchExtension):
     def effect(self):
         font_path = os.path.join(get_resource_dir("fonts"), "small_font")
         font = Font(font_path)
+        self.ensure_current_layer()
         self.current_layer.extend(font.render_text(self.options.text))

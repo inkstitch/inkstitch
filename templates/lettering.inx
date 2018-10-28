@@ -4,7 +4,7 @@
     <id>org.inkstitch.lettering.{{ locale }}</id>
     <dependency type="executable" location="extensions">inkstitch.py</dependency>
     <dependency type="executable" location="extensions">inkex.py</dependency>
-    <param name="collapse_len_mm" type="string" _gui-text="{% trans %}Text{% endtrans %}"></param>
+    <param name="text" type="string" _gui-text="{% trans %}Text{% endtrans %}"></param>
     <param name="extension" type="string" gui-hidden="true">lettering</param>
     <effect>
         <object-type>all</object-type>
