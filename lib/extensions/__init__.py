@@ -1,18 +1,20 @@
+from auto_satin import AutoSatin
+from convert_to_satin import ConvertToSatin
+from cut_satin import CutSatin
 from embroider import Embroider
+from flip import Flip
+from global_commands import GlobalCommands
+from input import Input
 from install import Install
+from layer_commands import LayerCommands
+from lettering import Lettering
+from object_commands import ObjectCommands
+from output import Output
 from params import Params
 from print_pdf import Print
 from simulate import Simulate
-from input import Input
-from output import Output
 from zip import Zip
-from flip import Flip
-from object_commands import ObjectCommands
-from layer_commands import LayerCommands
-from global_commands import GlobalCommands
-from convert_to_satin import ConvertToSatin
-from cut_satin import CutSatin
-from auto_satin import AutoSatin
+
 
 __all__ = extensions = [Embroider,
                         Install,
@@ -28,4 +30,5 @@ __all__ = extensions = [Embroider,
                         GlobalCommands,
                         ConvertToSatin,
                         CutSatin,
-                        AutoSatin]
+                        AutoSatin,
+                        Lettering]

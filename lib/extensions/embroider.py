@@ -1,15 +1,15 @@
 import os
 
-from .base import InkstitchExtension
 from ..i18n import _
 from ..output import write_embroidery_file
 from ..stitch_plan import patches_to_stitch_plan
 from ..svg import render_stitch_plan, PIXELS_PER_MM
+from .base import InkstitchExtension
 
 
 class Embroider(InkstitchExtension):
     def __init__(self, *args, **kwargs):
-        InkstitchExtension.__init__(self)
+        InkstitchExtension.__init__(self, *args, **kwargs)
         self.OptionParser.add_option("-c", "--collapse_len_mm",
                                      action="store", type="float",
                                      dest="collapse_length_mm", default=3.0,
