@@ -11,6 +11,7 @@ dist: distclean locales inx
 	cp -a images/examples dist/inkstitch
 	cp -a palettes dist/inkstitch
 	cp -a symbols dist/inkstitch
+    cp -a fonts dist/inkstitch
 	cp -a icons dist/inkstitch/bin
 	cp -a locales dist/inkstitch/bin
 	cp -a print dist/inkstitch/bin
