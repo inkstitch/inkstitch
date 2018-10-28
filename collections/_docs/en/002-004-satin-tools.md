@@ -13,7 +13,7 @@ toc: true
 * Use the [Params dialog](/docs/params/#satin-params) to set an underlay
 * Run [Auto-Route Satin](/docs/satin-tools/#auto-route-satin-columns) to recieve nicely routed satin columns
 
-[![Convert Line to Satin](/assets/images/docs/en/satin-tools-convert-line.svg)](/assets/images/docs/en/satin-tools-convert-line.svg){: title="Download SVG File" download="satin-column.svg" }
+[![Convert Line to Satin](/assets/images/docs/en/satin-tools.svg)](/assets/images/docs/en/satin-tools.svg){: title="Download SVG File" download="satin-tools.svg" }
 
 **Tip:** For faster access [set shortcuts](/docs/customize/) on specific satin tools.
 {: .notice--info}

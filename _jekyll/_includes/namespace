@@ -35,7 +35,8 @@ See the [namespace github discussion](https://github.com/inkstitch/inkstitch/iss
 |embroider_angle                                    | float    | angle |
 |embroider_flip                                     | boolean  | flip start (right to left) |
 |embroider_max_stitch_length_mm                     | float    | max. stitch length in mm |
-|embroider_row_spacing_mm                           | float    | stitch length in mm |
+|embroider_row_spacing_mm                           | float    | spacing between rows in mm |
+|embroider_end_row_spacing_mm                       | float    | used for [color blending](/docs/features/#color-blending) |
 |embroider_staggers                                 | float    | stagger this many times before repeating |
 |**Stroke**|
 |**↳ Stroke: Running Stitch**|

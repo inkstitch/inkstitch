@@ -263,6 +263,15 @@ table tr td:first-child {
   .archive__item-title {
     overflow: inherit;
   }
+
+.logo__gallery .archive__item-teaser img {
+    height: 100px;
+}
+
+.logo__gallery .archive__item-body {
+    text-align: center;
+}
+
   
 /* Tutorials */
 #tutorial-list, .tutorial-orderby section { border-top: 1px solid #f2f3f3; padding-top: 5px; }

@@ -21,7 +21,7 @@ user-level:
 ---
 ## Ink/Stitch Logo
 
-<div class="feature__wrapper">
+<div class="feature__wrapper logo__gallery">
   <div class="feature__item">
     <div class="archive__item-teaser">
       <img src="/assets/images/tutorials/logo/inkstitch_colour_logo.svg" alt="Ink/Stitch official colour logo">
@@ -46,7 +46,7 @@ user-level:
 
 ## Digitized Ink/Stitch Logo
 
-<div class="feature__wrapper">
+<div class="feature__wrapper logo__gallery">
   <div class="feature__item">
     <div class="archive__item-teaser">
       <img src="/assets/images/tutorials/logo/InkStitch_Multi_Color.svg" alt="Ink/Stitch multi color">
@@ -74,6 +74,26 @@ user-level:
     <div class="archive__item-body">
       <div class="archive__item-excerpt">
         <p><a href="/assets/images/tutorials/logo/InkStitch_1_Color_Top_Left_Origin.svg">Ink/Stitch 1 color top left origin</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="feature__item">
+    <div class="archive__item-teaser">
+      <img src="/assets/images/tutorials/logo/InkStitch_Logo_QR_Code_Patch.svg" alt="Ink/Stitch multi color">
+    </div>
+    <div class="archive__item-body">
+      <div class="archive__item-excerpt">
+        <p><a href="/assets/images/tutorials/logo/logo/InkStitch_Logo_QR_Code_Patch.svg">Ink/Stitch QR Code</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="feature__item">
+    <div class="archive__item-teaser">
+      <img src="/assets/images/tutorials/logo/Logo_Hat_Embroidery.svg" alt="Ink/Stitch Hat">
+    </div>
+    <div class="archive__item-body">
+      <div class="archive__item-excerpt">
+        <p><a href="/assets/images/tutorials/logo/Logo_Hat_Embroidery.svg">Ink/Stitch Hat</a></p>
       </div>
     </div>
   </div>
