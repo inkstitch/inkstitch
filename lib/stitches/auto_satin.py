@@ -221,7 +221,6 @@ class RunningStitch(object):
     def end_point(self):
         return self.path.interpolate(1.0, normalized=True)
 
-    @property
     @cache
     def reversed(self):
         return RunningStitch(shgeo.LineString(reversed(self.path.coords)), self.style)
