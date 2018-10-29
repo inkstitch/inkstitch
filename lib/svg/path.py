@@ -1,3 +1,4 @@
+import inkex
 import simpletransform
 
 from .units import get_viewbox_transform
@@ -12,6 +13,19 @@ def apply_transforms(path, node):
     return path
 
 
+def compose_parent_transforms(node, mat):
+    # This is adapted from Inkscape's simpletransform.py's composeParents()
+    # function.  That one can't handle nodes that are detached from a DOM.
+
+    trans = node.get('transform')
+    if trans:
+        mat = simpletransform.composeTransform(simpletransform.parseTransform(trans), mat)
+    if node.getparent() is not None:
+        if node.getparent().tag == inkex.addNS('g', 'svg'):
+            mat = compose_parent_transforms(node.getparent(), mat)
+    return mat
+
+
 def get_node_transform(node):
     # start with the identity transform
     transform = [[1.0, 0.0, 0.0], [0.0, 1.0, 0.0]]
@@ -19,7 +33,7 @@ def get_node_transform(node):
     # this if is because sometimes inkscape likes to create paths outside of a layer?!
     if node.getparent() is not None:
         # combine this node's transform with all parent groups' transforms
-        transform = simpletransform.composeParents(node, transform)
+        transform = compose_parent_transforms(node, transform)
 
     # add in the transform implied by the viewBox
     viewbox_transform = get_viewbox_transform(node.getroottree().getroot())

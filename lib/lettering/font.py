@@ -4,8 +4,13 @@ from copy import deepcopy
 import json
 import os
 
+import inkex
+
+from ..elements import nodes_to_elements
+from ..stitches.auto_satin import auto_satin
 from ..svg import PIXELS_PER_MM
-from ..utils import Point
+from ..svg.tags import SVG_GROUP_TAG, SVG_PATH_TAG, INKSCAPE_LABEL
+from ..utils import Point, flatten
 from .font_variant import FontVariant
 
 
@@ -73,15 +78,19 @@ class Font(object):
     leading = font_metadata('leading', 5, multiplier=PIXELS_PER_MM)
     word_spacing = font_metadata('word_spacing', 3, multiplier=PIXELS_PER_MM)
     kerning_pairs = font_metadata('kerning_pairs', {})
+    auto_satin = font_metadata('auto_satin', True)
 
     def render_text(self, text, variant=None):
         glyph_set = self.variants.get(variant, self.variants[self.default_variant])
 
-        nodes = []
+        lines = []
         position = Point(0, 0)
         last_character = None
         for line in text.splitlines():
             line = line.strip()
+            current_line = inkex.etree.Element(SVG_GROUP_TAG, {
+                INKSCAPE_LABEL: line
+            })
             for character in line:
                 if character == " ":
                     position.x += self.word_spacing
@@ -97,16 +106,24 @@ class Font(object):
 
                         transform = "translate(%s, %s)" % position.as_tuple()
                         node.set('transform', transform)
-                        nodes.append(node)
+                        current_line.append(node)
                         position.x += glyph.width
 
                     last_character = character
+
+            current_line = nodes_to_elements(current_line.iterdescendants())
+
+            if self.auto_satin:
+                elements, trim_indices = auto_satin(current_line)
+                current_line[:] = elements
+
+            lines.append(current_line)
 
             last_character = None
             position.y += self.leading
             position.x = 0
 
-        return nodes
+        return lines
 
     def _get_kerning(self, character1, character2):
         if character1 is None:

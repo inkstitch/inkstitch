@@ -6,10 +6,10 @@ import re
 import inkex
 from stringcase import snakecase
 
-from ..commands import is_command, layer_commands
-from ..elements import AutoFill, Fill, Stroke, SatinColumn, Polyline, EmbroideryElement
+from ..commands import layer_commands
+from ..elements import EmbroideryElement, nodes_to_elements
 from ..i18n import _
-from ..svg.tags import SVG_GROUP_TAG, INKSCAPE_GROUPMODE, SVG_DEFS_TAG, EMBROIDERABLE_TAGS, SVG_POLYLINE_TAG
+from ..svg.tags import SVG_GROUP_TAG, INKSCAPE_GROUPMODE, SVG_DEFS_TAG, EMBROIDERABLE_TAGS
 
 
 SVG_METADATA_TAG = inkex.addNS("metadata", "svg")
@@ -161,38 +161,8 @@ class InkstitchExtension(inkex.Effect):
     def get_nodes(self):
         return self.descendants(self.document.getroot())
 
-    def detect_classes(self, node):
-        if node.tag == SVG_POLYLINE_TAG:
-            return [Polyline]
-        else:
-            element = EmbroideryElement(node)
-
-            if element.get_boolean_param("satin_column"):
-                return [SatinColumn]
-            else:
-                classes = []
-
-                if element.get_style("fill", "black"):
-                    if element.get_boolean_param("auto_fill", True):
-                        classes.append(AutoFill)
-                    else:
-                        classes.append(Fill)
-
-                if element.get_style("stroke"):
-                    if not is_command(element.node):
-                        classes.append(Stroke)
-
-                if element.get_boolean_param("stroke_first", False):
-                    classes.reverse()
-
-                return classes
-
     def get_elements(self):
-        self.elements = []
-        for node in self.get_nodes():
-            classes = self.detect_classes(node)
-            self.elements.extend(cls(node) for cls in classes)
-
+        self.elements = nodes_to_elements(self.get_nodes())
         if self.elements:
             return True
         else:
