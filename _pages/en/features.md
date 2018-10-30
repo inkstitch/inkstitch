@@ -64,6 +64,5 @@ Here are features we're hoping to add, though not necessarily in this order:
 * Gradient Fill (already realised as a [hidden feature](https://github.com/inkstitch/inkstitch/pull/108#issuecomment-369444197))
 * Pattern Fill
 * 32-bit Linux support (build engineers needed!)
-* bean stitch
-* "E" stitch
+
 
