@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 
-from copy import deepcopy
+from copy import copy, deepcopy
 import json
 import os
 
@@ -10,7 +10,7 @@ from ..elements import nodes_to_elements
 from ..stitches.auto_satin import auto_satin
 from ..svg import PIXELS_PER_MM
 from ..svg.tags import SVG_GROUP_TAG, SVG_PATH_TAG, INKSCAPE_LABEL
-from ..utils import Point, flatten
+from ..utils import Point
 from .font_variant import FontVariant
 
 
@@ -85,52 +85,82 @@ class Font(object):
 
         lines = []
         position = Point(0, 0)
-        last_character = None
         for line in text.splitlines():
             line = line.strip()
-            current_line = inkex.etree.Element(SVG_GROUP_TAG, {
-                INKSCAPE_LABEL: line
-            })
-            for character in line:
-                if character == " ":
-                    position.x += self.word_spacing
-                    last_character = None
-                else:
-                    glyph = glyph_set[character] or glyph_set[self.default_glyph]
+            lines.append(self._render_line(line, position, glyph_set))
 
-                    if glyph is not None:
-                        node = deepcopy(glyph.node)
-
-                        if last_character is not None:
-                            position.x += self.letter_spacing + self.kerning_pairs.get(last_character + character, 0) * PIXELS_PER_MM
-
-                        transform = "translate(%s, %s)" % position.as_tuple()
-                        node.set('transform', transform)
-                        current_line.append(node)
-                        position.x += glyph.width
-
-                    last_character = character
-
-            current_line = nodes_to_elements(current_line.iterdescendants())
-
-            if self.auto_satin:
-                elements, trim_indices = auto_satin(current_line)
-                current_line[:] = elements
-
-            lines.append(current_line)
-
-            last_character = None
-            position.y += self.leading
             position.x = 0
+            position.y += self.leading
 
         return lines
 
-    def _get_kerning(self, character1, character2):
-        if character1 is None:
-            return self.kerning
+    def _render_line(self, line, position, glyph_set):
+        """Render a line of text.
 
-        pair = character1 + character2
-        if pair in self.kerning_pairs:
-            return self.kerning_pairs[pair] * PIXELS_PER_MM
-        else:
-            return self.kerning
+        An SVG XML node tree will be returned, with an svg:g at its root.  If
+        the font metadata requests it, Auto-Satin will be applied.
+
+        Parameters:
+            line -- the line of text to render.
+            position -- Current position.  Will be updated to point to the spot
+                        immediately after the last character.
+            glyph_set -- a FontVariant instance.
+        """
+        group = inkex.etree.Element(SVG_GROUP_TAG, {
+            INKSCAPE_LABEL: line
+        })
+
+        last_character = None
+        for character in line:
+            if character == " ":
+                position.x += self.word_spacing
+                last_character = None
+            else:
+                glyph = glyph_set[character] or glyph_set[self.default_glyph]
+
+                if glyph is not None:
+                    node = self._render_glyph(glyph, position, character, last_character)
+                    group.append(node)
+
+                last_character = character
+
+        if self.auto_satin:
+            self._apply_auto_satin(group)
+
+        return group
+
+    def _render_glyph(self, glyph, position, character, last_character):
+        """Render a single glyph.
+
+        An SVG XML node tree will be returned, with an svg:g at its root.
+
+        Parameters:
+            glyph -- a Glyph instance
+            position -- Current position.  Will be updated based on the width
+                        of this character and the letter spacing.
+            character -- the current Unicode character.
+            last_character -- the previous character in the line, or None if
+                              we're at the start of the line or a word.
+        """
+
+        node = deepcopy(glyph.node)
+
+        if last_character is not None:
+            position.x += self.letter_spacing + self.kerning_pairs.get(last_character + character, 0) * PIXELS_PER_MM
+
+        transform = "translate(%s, %s)" % position.as_tuple()
+        node.set('transform', transform)
+        position.x += glyph.width
+
+        return node
+
+    def _apply_auto_satin(self, group):
+        """Apply Auto-Satin to an SVG XML node tree with an svg:g at its root.
+
+        The group's contents will be replaced with the results of the auto-
+        satin operation.  Any nested svg:g elements will be removed.
+        """
+
+        elements = nodes_to_elements(group.iterdescendants(SVG_PATH_TAG))
+        elements, trim_indices = auto_satin(elements)
+        group[:] = [e.node for e in elements]
