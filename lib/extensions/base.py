@@ -1,14 +1,15 @@
-import inkex
-import re
-import json
-from copy import deepcopy
 from collections import MutableMapping
+from copy import deepcopy
+import json
+import re
+
+import inkex
 from stringcase import snakecase
 
-from ..svg.tags import SVG_GROUP_TAG, INKSCAPE_GROUPMODE, SVG_DEFS_TAG, EMBROIDERABLE_TAGS, SVG_POLYLINE_TAG
-from ..elements import AutoFill, Fill, Stroke, SatinColumn, Polyline, EmbroideryElement
 from ..commands import is_command, layer_commands
+from ..elements import AutoFill, Fill, Stroke, SatinColumn, Polyline, EmbroideryElement
 from ..i18n import _
+from ..svg.tags import SVG_GROUP_TAG, INKSCAPE_GROUPMODE, SVG_DEFS_TAG, EMBROIDERABLE_TAGS, SVG_POLYLINE_TAG
 
 
 SVG_METADATA_TAG = inkex.addNS("metadata", "svg")
@@ -21,7 +22,7 @@ def strip_namespace(tag):
     <<< namedview
     """
 
-    match = re.match('^\{[^}]+\}(.+)$', tag)
+    match = re.match(r'^\{[^}]+\}(.+)$', tag)
 
     if match:
         return match.group(1)
@@ -211,8 +212,20 @@ class InkstitchExtension(inkex.Effect):
 
         return svg_filename
 
+    def uniqueId(self, prefix, make_new_id=True):
+        """Override inkex.Effect.uniqueId with a nicer naming scheme."""
+        i = 1
+        while True:
+            new_id = "%s%d" % (prefix, i)
+            if new_id not in self.doc_ids:
+                break
+            i += 1
+        self.doc_ids[new_id] = 1
+
+        return new_id
+
     def parse(self):
-        """Override inkex.Effect to add Ink/Stitch xml namespace"""
+        """Override inkex.Effect.parse to add Ink/Stitch xml namespace"""
 
         # SVG parsers don't actually look for anything at this URL.  They just
         # care that it's unique.  That defines a "namespace" of element and

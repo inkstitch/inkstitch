@@ -50,13 +50,19 @@ def get_correction_transform(node, child=False):
 
 
 def line_strings_to_csp(line_strings):
+    return point_lists_to_csp(ls.coords for ls in line_strings)
+
+
+def point_lists_to_csp(point_lists):
     csp = []
 
-    for ls in line_strings:
+    for point_list in point_lists:
         subpath = []
-        for point in ls.coords:
+        for point in point_list:
+            # cubicsuperpath is very particular that these must be lists, not tuples
+            point = list(point)
             # create a straight line as a degenerate bezier
-            subpath.append((point, point, point))
+            subpath.append([point, point, point])
         csp.append(subpath)
 
     return csp

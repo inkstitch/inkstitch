@@ -35,12 +35,12 @@ class LayerCommands(CommandsExtension):
 
             inkex.etree.SubElement(self.current_layer, SVG_USE_TAG,
                                    {
-                                      "id": self.uniqueId("use"),
-                                      INKSCAPE_LABEL: _("Ink/Stitch Command") + ": %s" % get_command_description(command),
-                                      XLINK_HREF: "#inkstitch_%s" % command,
-                                      "height": "100%",
-                                      "width": "100%",
-                                      "x": str(i * 20),
-                                      "y": "-10",
-                                      "transform": correction_transform
+                                       "id": self.uniqueId("use"),
+                                       INKSCAPE_LABEL: _("Ink/Stitch Command") + ": %s" % get_command_description(command),
+                                       XLINK_HREF: "#inkstitch_%s" % command,
+                                       "height": "100%",
+                                       "width": "100%",
+                                       "x": str(i * 20),
+                                       "y": "-10",
+                                       "transform": correction_transform
                                    })

@@ -1,10 +1,22 @@
 import os
 import sys
+import logging
 import traceback
+from cStringIO import StringIO
 from argparse import ArgumentParser
 
 from lib import extensions
 from lib.utils import save_stderr, restore_stderr
+
+
+logger = logging.getLogger('shapely.geos')
+logger.setLevel(logging.DEBUG)
+shapely_errors = StringIO()
+ch = logging.StreamHandler(shapely_errors)
+ch.setLevel(logging.DEBUG)
+formatter = logging.Formatter('%(name)s - %(levelname)s - %(message)s')
+ch.setFormatter(formatter)
+logger.addHandler(ch)
 
 
 parser = ArgumentParser()
@@ -31,20 +43,25 @@ extension_class_name = extension_name.title().replace("_", "")
 extension_class = getattr(extensions, extension_class_name)
 extension = extension_class()
 
-exception = None
-
-save_stderr()
-try:
+if hasattr(sys, 'gettrace') and sys.gettrace():
     extension.affect(args=remaining_args)
-except (SystemExit, KeyboardInterrupt):
-    raise
-except Exception:
-    exception = traceback.format_exc()
-finally:
-    restore_stderr()
-
-if exception:
-    print >> sys.stderr, exception
-    sys.exit(1)
 else:
-    sys.exit(0)
+    save_stderr()
+    exception = None
+    try:
+        extension.affect(args=remaining_args)
+    except (SystemExit, KeyboardInterrupt):
+        raise
+    except Exception:
+        exception = traceback.format_exc()
+    finally:
+        restore_stderr()
+
+        if shapely_errors.tell():
+            print >> sys.stderr, shapely_errors.getvalue()
+
+    if exception:
+        print >> sys.stderr, exception
+        sys.exit(1)
+    else:
+        sys.exit(0)

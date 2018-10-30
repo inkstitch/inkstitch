@@ -2,11 +2,14 @@ from shapely.geometry import LineString, Point as ShapelyPoint
 import math
 
 
-def cut(line, distance):
+def cut(line, distance, normalized=False):
     """ Cuts a LineString in two at a distance from its starting point.
 
     This is an example in the Shapely documentation.
     """
+    if normalized:
+        distance *= line.length
+
     if distance <= 0.0:
         return [None, line]
     elif distance >= line.length:
@@ -45,6 +48,14 @@ def cut_path(points, length):
     subpath, rest = cut(path, length)
 
     return [Point(*point) for point in subpath.coords]
+
+
+def collapse_duplicate_point(geometry):
+    if hasattr(geometry, 'geoms'):
+        if geometry.area < 0.01:
+            return geometry.representative_point()
+
+    return geometry
 
 
 class Point:
