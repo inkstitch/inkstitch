@@ -2,7 +2,7 @@
 title: "Ink/Stitch Features"
 permalink: /features/
 excerpt: "Ink/Stitch features"
-last_modified_at: 2018-06-10
+last_modified_at: 2018-10-29
 sidebar:
   nav: pages
 ---
