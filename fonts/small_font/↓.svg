@@ -15,7 +15,7 @@
    id="svg8375"
    version="1.1"
    inkscape:version="0.92.3 (unknown)"
-   sodipodi:docname="small_font.svg">
+   sodipodi:docname="↓.svg">
   <sodipodi:namedview
      inkscape:snap-global="false"
      id="base"
@@ -24,11 +24,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="44.8"
-     inkscape:cx="16.674264"
+     inkscape:zoom="22.4"
+     inkscape:cx="11.953282"
      inkscape:cy="14.334539"
      inkscape:document-units="px"
-     inkscape:current-layer="g17173"
+     inkscape:current-layer="layer5"
      showgrid="false"
      units="px"
      inkscape:window-width="1366"
@@ -2598,5 +2598,20 @@
        d="M 23.158687,4.3183179 11.247686,26.957795 M 20.532687,4.3183179 8.6216891,26.957795"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="GlyphLayer-�"
+     style="display:none">
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.37795275;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path1"
+       embroider_satin_column="true"
+       d="m 14.773481,8.5147102 h 0.789182 4.754671 V 22.524457 H 9.8106215 V 8.5147102 h 4.9628595 m 0,-2.4944882 h 0.789182 7.249159 V 25.018945 H 7.3161333 V 6.020222 h 7.4573477 m 3.700266,2.7708704 V 5.649138 m 1.219965,15.411788 h 3.394492 m -11.621622,0.839909 v 3.741732 M 10.181706,10.372833 H 6.8819148 M 10.16466,21.00333 6.8185297,21.0349 m 11.7114563,0.66291 v 3.756505 m 1.199556,-15.02602 h 3.377697 M 11.332649,8.9762007 V 5.7247722"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccccccccccccccccccccccccc"
+       embroider_center_walk_underlay="True"
+       embroider_center_walk_underlay_stitch_length_mm="0.90" />
   </g>
 </svg>

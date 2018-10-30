@@ -5,6 +5,7 @@
   "letter_spacing": 1.5,
   "word_spacing": 4.5,
   "auto_satin": true,
+  "default_glyph": "�",
   "kerning_pairs": {
     "wo": -0.3
   }
