@@ -74,7 +74,7 @@ class SatinSegment(object):
     to_element = to_satin
 
     def to_running_stitch(self):
-        return RunningStitch(self.center_line, self.satin.node.get('style'))
+        return RunningStitch(self.center_line, self.satin)
 
     def break_up(self, segment_size):
         """Break this SatinSegment up into SatinSegments of the specified size."""
@@ -187,16 +187,22 @@ class JumpStitch(object):
 class RunningStitch(object):
     """Running stitch along a path."""
 
-    def __init__(self, path_or_stroke, style=""):
+    def __init__(self, path_or_stroke, original_element=None):
         if isinstance(path_or_stroke, Stroke):
-            # Technically a Stroke object's underlying path could hve multiple
+            # Technically a Stroke object's underlying path could have multiple
             # subpaths.  We don't have a particularly good way of dealing with
             # that so we'll just use the first one.
             self.path = path_or_stroke.shape.geoms[0]
+            original_element = path_or_stroke
         else:
             self.path = path_or_stroke
 
-        self.style = style
+        self.original_element = original_element
+        self.style = original_element.node.get('style', '')
+        self.running_stitch_length = \
+            original_element.node.get('embroider_running_stitch_length_mm', '') or \
+            original_element.node.get('embroider_center_walk_underlay_stitch_length_mm', '') or \
+            original_element.node.get('embroider_contour_underlay_stitch_length_mm', '')
 
     def to_element(self):
         node = inkex.etree.Element(SVG_PATH_TAG)
@@ -206,8 +212,9 @@ class RunningStitch(object):
         style = simplestyle.parseStyle(self.style)
         style['stroke-dasharray'] = "0.5,0.5"
         style = simplestyle.formatStyle(style)
-
         node.set("style", style)
+
+        node.set("embroider_running_stitch_length_mm", self.running_stitch_length)
 
         return Stroke(node)
 
@@ -233,7 +240,7 @@ class RunningStitch(object):
 
     def __add__(self, other):
         new_path = shgeo.LineString(chain(self.path.coords, other.path.coords))
-        return RunningStitch(new_path, self.style)
+        return RunningStitch(new_path, self.original_element)
 
 
 def auto_satin(elements, preserve_order=False, starting_point=None, ending_point=None):
@@ -298,7 +305,7 @@ def build_graph(elements, preserve_order=False):
     for element in elements:
         segments = []
         if isinstance(element, Stroke):
-            segments.append(RunningStitch(element, element.node.get("style", "")))
+            segments.append(RunningStitch(element))
         else:
             whole_satin = SatinSegment(element)
             segments = whole_satin.break_up(PIXELS_PER_MM)
