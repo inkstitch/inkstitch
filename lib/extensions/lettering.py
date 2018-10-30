@@ -18,6 +18,6 @@ class Lettering(CommandsExtension):
         font = Font(font_path)
         self.ensure_current_layer()
 
-        lines = font.render_text(self.options.text)
+        lines = font.render_text(self.options.text.decode('utf-8'))
 
         self.current_layer.extend(lines)
