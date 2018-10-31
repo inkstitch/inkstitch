@@ -2,7 +2,7 @@
 title: "Ink/Stitch Features"
 permalink: /features/
 excerpt: "Ink/Stitch features"
-last_modified_at: 2018-10-29
+last_modified_at: 2018-10-31
 sidebar:
   nav: pages
 ---
@@ -51,10 +51,10 @@ sidebar:
 ## Supported File Formats
 
 ### Writing
-CSV, **DST**, **EXP**, **JEF**, PEC, **PES**, SVG, U01, **VP3**
+CSV, **DST**, **EXP**, **JEF**, PEC, **PES**, SVG, TXT (G-CODE), U01, **VP3**
 
 ### Reading
-100, 10o, BRO, DAT, DSB, **DST**, DSZ, EMD, **EXP**, EXY, FXY, GT, INB, **JEF**, JPX, KSM, MAX, MIT, NEW, PCD, PCM, PCQ, PCS, PEC, **PES**, PHB, PHC, SEW, SHV, STC, STX, TAP, TBF, U01, **VP3**, XXX, ZXY
+100, 10o, BRO, DAT, DSB, **DST**, DSZ, EMD, **EXP**, EXY, FXY, GT, INB, **JEF**, JPX, KSM, MAX, MIT, NEW, PCD, PCM, PCQ, PCS, PEC, **PES**, PHB, PHC, SEW, SHV, STC, STX, TAP, TBF, TXT (G-CODE), U01, **VP3**, XXX, ZXY
 
 ## Roadmap
 
@@ -64,5 +64,4 @@ Here are features we're hoping to add, though not necessarily in this order:
 * Gradient Fill (already realised as a [hidden feature](https://github.com/inkstitch/inkstitch/pull/108#issuecomment-369444197))
 * Pattern Fill
 * 32-bit Linux support (build engineers needed!)
-
 
