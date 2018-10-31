@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-10-21 01:35+0000\n"
-"PO-Revision-Date: 2018-10-23 01:29\n"
+"POT-Creation-Date: 2018-10-31 01:35+0000\n"
+"PO-Revision-Date: 2018-10-31 01:35\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Afrikaans\n"
 "MIME-Version: 1.0\n"
@@ -37,68 +37,86 @@ msgstr ""
 
 #. command attached to an object
 #: lib/commands.py:19
-msgid "stop"
+msgid "satin_start"
 msgstr ""
 
 #: lib/commands.py:19
+msgid "Auto-route satin stitch starting position"
+msgstr ""
+
+#. command attached to an object
+#: lib/commands.py:22
+msgid "satin_end"
+msgstr ""
+
+#: lib/commands.py:22
+msgid "Auto-route satin stitch ending position"
+msgstr ""
+
+#. command attached to an object
+#: lib/commands.py:25
+msgid "stop"
+msgstr ""
+
+#: lib/commands.py:25
 msgid "Stop (pause machine) after sewing this object"
 msgstr ""
 
 #. command attached to an object
-#: lib/commands.py:22
+#: lib/commands.py:28
 msgid "trim"
 msgstr ""
 
-#: lib/commands.py:22
+#: lib/commands.py:28
 msgid "Trim thread after sewing this object"
 msgstr ""
 
 #. command attached to an object
-#: lib/commands.py:25
+#: lib/commands.py:31
 msgid "ignore_object"
 msgstr ""
 
-#: lib/commands.py:25
+#: lib/commands.py:31
 msgid "Ignore this object (do not stitch)"
 msgstr ""
 
 #. command attached to an object
-#: lib/commands.py:28
+#: lib/commands.py:34
 msgid "satin_cut_point"
 msgstr ""
 
-#: lib/commands.py:28
+#: lib/commands.py:34
 msgid "Satin cut point (use with Cut Satin Column)"
 msgstr ""
 
 #. command that affects a layer
-#: lib/commands.py:32
+#: lib/commands.py:38
 msgid "ignore_layer"
 msgstr ""
 
-#: lib/commands.py:32
+#: lib/commands.py:38
 msgid "Ignore layer (do not stitch any objects in this layer)"
 msgstr ""
 
 #. command that affects entire document
-#: lib/commands.py:35
+#: lib/commands.py:41
 msgid "origin"
 msgstr ""
 
-#: lib/commands.py:35
+#: lib/commands.py:41
 msgid "Origin for exported embroidery files"
 msgstr ""
 
 #. command that affects entire document
-#: lib/commands.py:38
+#: lib/commands.py:44
 msgid "stop_position"
 msgstr ""
 
-#: lib/commands.py:38
+#: lib/commands.py:44
 msgid "Jump destination for Stop commands (a.k.a. \"Frame Out position\")."
 msgstr ""
 
-#: lib/commands.py:196
+#: lib/commands.py:202
 #, python-format
 msgid "Error: there is more than one %(command)s command in the document, but there can only be one.  Please remove all but one."
 msgstr ""
@@ -108,7 +126,7 @@ msgstr ""
 #. command name to them.  Contents of %(description)s are in a separate
 #. translation
 #. string.
-#: lib/commands.py:203
+#: lib/commands.py:209
 #, python-format
 msgid "%(command)s: %(description)s"
 msgstr ""
@@ -339,29 +357,29 @@ msgstr ""
 msgid "default: half of contour underlay inset"
 msgstr ""
 
-#: lib/elements/satin_column.py:272
+#: lib/elements/satin_column.py:279
 #, python-format
 msgid "satin column: %(id)s: at least two subpaths required (%(num)d found)"
 msgstr ""
 
-#: lib/elements/satin_column.py:282
+#: lib/elements/satin_column.py:289
 msgid "satin column: One or more of the rungs doesn't intersect both rails."
 msgstr ""
 
-#: lib/elements/satin_column.py:283 lib/elements/satin_column.py:286
+#: lib/elements/satin_column.py:290 lib/elements/satin_column.py:293
 msgid "Each rail should intersect both rungs once."
 msgstr ""
 
-#: lib/elements/satin_column.py:285
+#: lib/elements/satin_column.py:292
 msgid "satin column: One or more of the rungs intersects the rails more than once."
 msgstr ""
 
-#: lib/elements/satin_column.py:317
+#: lib/elements/satin_column.py:324
 #, python-format
 msgid "satin column: object %s has a fill (but should not)"
 msgstr ""
 
-#: lib/elements/satin_column.py:321
+#: lib/elements/satin_column.py:328
 #, python-format
 msgid "satin column: object %(id)s has two paths with an unequal number of points (%(length1)d and %(length2)d)"
 msgstr ""
@@ -411,16 +429,52 @@ msgid "Legacy running stitch setting detected!\n\n"
 "It looks like you're using a stroke smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set your stroke to be dashed to indicate running stitch.  Any kind of dash will work."
 msgstr ""
 
-#: lib/extensions/base.py:113
+#: lib/extensions/auto_satin.py:32
+msgid "Please ensure that at most one start and end command is attached to the selected satin columns."
+msgstr ""
+
+#. auto-route satin columns extension
+#: lib/extensions/auto_satin.py:61
+msgid "Please select one or more satin columns."
+msgstr ""
+
+#. Label for a satin column created by Auto-Route Satin Columns extension
+#: lib/extensions/auto_satin.py:95
+#, python-format
+msgid "AutoSatin %d"
+msgstr ""
+
+#. Label for running stitch (underpathing) created by Auto-Route Satin Columns
+#. extension
+#: lib/extensions/auto_satin.py:100
+#, python-format
+msgid "AutoSatin Running Stitch %d"
+msgstr ""
+
+#: lib/extensions/base.py:114
 msgid "No embroiderable paths selected."
 msgstr ""
 
-#: lib/extensions/base.py:115
+#: lib/extensions/base.py:116
 msgid "No embroiderable paths found in document."
 msgstr ""
 
-#: lib/extensions/base.py:116
+#: lib/extensions/base.py:117
 msgid "Tip: use Path -> Object to Path to convert non-paths."
+msgstr ""
+
+#. : the name of the line that connects a command to the object it applies to
+#: lib/extensions/commands.py:65
+msgid "connector"
+msgstr ""
+
+#: lib/extensions/commands.py:109 lib/extensions/layer_commands.py:39
+msgid "Ink/Stitch Command"
+msgstr ""
+
+#. : the name of a command symbol (example: scissors icon for trim command)
+#: lib/extensions/commands.py:124
+msgid "command marker"
 msgstr ""
 
 #: lib/extensions/convert_to_satin.py:29
@@ -438,13 +492,13 @@ msgstr ""
 msgid "Cannot convert %s to a satin column because it intersects itself.  Try breaking it up into multiple paths."
 msgstr ""
 
-#: lib/extensions/cut_satin.py:14
+#: lib/extensions/cut_satin.py:15
 msgid "Please select one or more satin columns to cut."
 msgstr ""
 
 #. will have the satin's id prepended, like this:
 #. path12345: error: this satin column does not ...
-#: lib/extensions/cut_satin.py:24
+#: lib/extensions/cut_satin.py:25
 msgid "this satin column does not have a \"satin column cut point\" command attached to it. Please use the \"Attach commands\" extension and attach the \"Satin Column cut point\" command first."
 msgstr ""
 
@@ -505,25 +559,11 @@ msgstr ""
 msgid "Please choose one or more commands to add."
 msgstr ""
 
-#: lib/extensions/layer_commands.py:39 lib/extensions/object_commands.py:74
-msgid "Ink/Stitch Command"
-msgstr ""
-
-#. : the name of the line that connects a command to the object it applies to
-#: lib/extensions/object_commands.py:30
-msgid "connector"
-msgstr ""
-
-#. : the name of a command symbol (example: scissors icon for trim command)
-#: lib/extensions/object_commands.py:89
-msgid "command marker"
-msgstr ""
-
-#: lib/extensions/object_commands.py:100
+#: lib/extensions/object_commands.py:16
 msgid "Please select one or more objects to which to attach commands."
 msgstr ""
 
-#: lib/extensions/object_commands.py:108
+#: lib/extensions/object_commands.py:24
 msgid "Please choose one or more commands to attach."
 msgstr ""
 
@@ -774,7 +814,7 @@ msgid "thread"
 msgstr ""
 
 #: print/templates/color_swatch.html:19 print/templates/color_swatch.html:43
-#: print/templates/operator_detailedview.html:62
+#: print/templates/operator_detailedview.html:63
 msgid "# stitches"
 msgstr ""
 
@@ -783,18 +823,24 @@ msgid "# trims"
 msgstr ""
 
 #: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
-#: print/templates/operator_detailedview.html:66
+#: print/templates/operator_detailedview.html:68
 msgid "stop after?"
 msgstr ""
 
 #: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
-#: print/templates/operator_detailedview.html:66
+#: print/templates/operator_detailedview.html:68
 msgid "yes"
 msgstr ""
 
 #: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
-#: print/templates/operator_detailedview.html:66
+#: print/templates/operator_detailedview.html:68
 msgid "no"
+msgstr ""
+
+#: print/templates/color_swatch.html:40
+#: print/templates/operator_detailedview.html:57
+#: print/templates/print_detail.html:6
+msgid "Enter thread name..."
 msgstr ""
 
 #: print/templates/footer.html:2
@@ -827,7 +873,7 @@ msgstr ""
 
 #: print/templates/headline.html:15
 #, python-format
-msgid "%Y.%m.%d"
+msgid "%m/%d/%Y"
 msgstr ""
 
 #: print/templates/operator_detailedview.html:10
@@ -872,31 +918,31 @@ msgstr ""
 msgid "Total stitch count"
 msgstr ""
 
-#: print/templates/operator_detailedview.html:33
+#: print/templates/operator_detailedview.html:34
 #: print/templates/operator_overview.html:8
 #: print/templates/print_overview.html:8
 msgid "Total stops"
 msgstr ""
 
-#: print/templates/operator_detailedview.html:34
+#: print/templates/operator_detailedview.html:35
 #: print/templates/operator_overview.html:9
 #: print/templates/print_overview.html:9
 msgid "Total trims"
 msgstr ""
 
-#: print/templates/operator_detailedview.html:56
-msgid "Enter thread name..."
-msgstr ""
-
-#: print/templates/operator_detailedview.html:61
+#: print/templates/operator_detailedview.html:62
 msgid "thread used"
 msgstr ""
 
-#: print/templates/operator_detailedview.html:65
+#: print/templates/operator_detailedview.html:64
+msgid "estimated time"
+msgstr ""
+
+#: print/templates/operator_detailedview.html:67
 msgid "trims"
 msgstr ""
 
-#: print/templates/operator_detailedview.html:69
+#: print/templates/operator_detailedview.html:72
 msgid "Enter operator notes..."
 msgstr ""
 
@@ -942,67 +988,111 @@ msgstr ""
 msgid "⚠ lost connection to Ink/Stitch"
 msgstr ""
 
-#: print/templates/ui.html:18 print/templates/ui.html:23
+#: print/templates/ui.html:18 print/templates/ui.html:24
 msgid "Page Setup"
 msgstr ""
 
-#: print/templates/ui.html:19 print/templates/ui.html:47
+#: print/templates/ui.html:19 print/templates/ui.html:48
+msgid "Estimated Time"
+msgstr ""
+
+#: print/templates/ui.html:20 print/templates/ui.html:81
 msgid "Design"
 msgstr ""
 
-#: print/templates/ui.html:26
+#: print/templates/ui.html:27
 msgid "Printing Size"
 msgstr ""
 
-#: print/templates/ui.html:35
+#: print/templates/ui.html:36
 msgid "Print Layouts"
 msgstr ""
 
-#: print/templates/ui.html:36
+#: print/templates/ui.html:37 print/templates/ui.html:72
 msgid "Client Overview"
 msgstr ""
 
-#: print/templates/ui.html:37
+#: print/templates/ui.html:38 print/templates/ui.html:73
 msgid "Client Detailed View"
 msgstr ""
 
-#: print/templates/ui.html:38
+#: print/templates/ui.html:39 print/templates/ui.html:74
 msgid "Operator Overview"
 msgstr ""
 
-#: print/templates/ui.html:39
+#: print/templates/ui.html:40 print/templates/ui.html:75
 msgid "Operator Detailed View"
 msgstr ""
 
-#: print/templates/ui.html:40
+#: print/templates/ui.html:41
 msgid "Thumbnail size"
 msgstr ""
 
-#: print/templates/ui.html:43
-msgid "Includes these Page Setup settings and also the icon."
+#: print/templates/ui.html:44 print/templates/ui.html:78
+msgid "Includes these Page Setup, estimated time settings and also the icon."
 msgstr ""
 
-#: print/templates/ui.html:43
+#: print/templates/ui.html:44 print/templates/ui.html:78
 msgid "Save as defaults"
 msgstr ""
 
-#: print/templates/ui.html:48
+#: print/templates/ui.html:50
+msgid "Machine Settings"
+msgstr ""
+
+#: print/templates/ui.html:52
+msgid "Average Machine Speed"
+msgstr ""
+
+#: print/templates/ui.html:53
+msgid "stitches per minute "
+msgstr ""
+
+#: print/templates/ui.html:57
+msgid "Time Factors"
+msgstr ""
+
+#: print/templates/ui.html:60
+msgid "Includes average time for preparing the machine, thread breaks and/or bobbin changes, etc."
+msgstr ""
+
+#: print/templates/ui.html:60
+msgid "seconds to add to total time*"
+msgstr ""
+
+#: print/templates/ui.html:64
+msgid "This will be added to the total time."
+msgstr ""
+
+#: print/templates/ui.html:64
+msgid "seconds needed for a color change*"
+msgstr ""
+
+#: print/templates/ui.html:67
+msgid "seconds needed for trim"
+msgstr ""
+
+#: print/templates/ui.html:70
+msgid "Display Time On"
+msgstr ""
+
+#: print/templates/ui.html:82
 msgid "Thread Palette"
 msgstr ""
 
-#: print/templates/ui.html:51
+#: print/templates/ui.html:85
 msgid "None"
 msgstr ""
 
-#: print/templates/ui.html:65
+#: print/templates/ui.html:99
 msgid "Changing the thread palette will cause thread names and catalog numbers to be recalculated based on the new palette.  Any changes you have made to color or thread names will be lost.  Are you sure?"
 msgstr ""
 
-#: print/templates/ui.html:68
+#: print/templates/ui.html:102
 msgid "Yes"
 msgstr ""
 
-#: print/templates/ui.html:69
+#: print/templates/ui.html:103
 msgid "No"
 msgstr ""
 
@@ -1186,19 +1276,36 @@ msgstr ""
 msgid "G-code Format"
 msgstr ""
 
-#: templates/convert_to_satin.inx:3
-msgid "Convert Line to Satin"
+#: templates/auto_satin.inx:3
+msgid "Auto-Route Satin Columns"
+msgstr ""
+
+#: templates/auto_satin.inx:7
+msgid "Trim jump stitches"
+msgstr ""
+
+#: templates/auto_satin.inx:8
+msgid "Preserve order of satin columns"
 msgstr ""
 
 #. This is used for the submenu under Extensions -> Ink/Stitch.  Translate this
 #. to your language's word for its language, e.g. "Español" for the spanish
 #. translation.
-#: templates/convert_to_satin.inx:12 templates/cut_satin.inx:12
-#: templates/embroider.inx:24 templates/flip.inx:12
+#: templates/auto_satin.inx:14 templates/convert_to_satin.inx:12
+#: templates/cut_satin.inx:12 templates/embroider.inx:24 templates/flip.inx:12
 #: templates/global_commands.inx:16 templates/install.inx:12
 #: templates/layer_commands.inx:16 templates/object_commands.inx:15
 #: templates/params.inx:12 templates/print.inx:12 templates/simulate.inx:12
 msgid "English"
+msgstr ""
+
+#: templates/auto_satin.inx:15 templates/convert_to_satin.inx:13
+#: templates/cut_satin.inx:13 templates/flip.inx:13
+msgid "Satin Tools"
+msgstr ""
+
+#: templates/convert_to_satin.inx:3
+msgid "Convert Line to Satin"
 msgstr ""
 
 #: templates/cut_satin.inx:3
@@ -1242,7 +1349,7 @@ msgid "Leave empty to save the output in Inkscape's extension directory."
 msgstr ""
 
 #: templates/flip.inx:3
-msgid "Flip Satin Columns"
+msgid "Flip Satin Column Rails"
 msgstr ""
 
 #: templates/global_commands.inx:3
