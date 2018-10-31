@@ -198,13 +198,14 @@ body {
     background: transparent;
     border: 1px solid #413232;
     padding: 5px;
+    cursor: pointer;
   }
   
   #settings-ui button.active {
     border-bottom: 1px solid white;
   }
   
-  #settings-ui #ui-design {
+  #settings-ui .ui-tab {
     display: none;
   }
   
@@ -357,10 +358,11 @@ body {
       display: -ms-flexbox;   /* IE 10 */
     width: calc(100% - 50mm);
     height: 50%;
+    flex-grow: 1;
   }
 
   div.headline h1 {
-    font-size: 18pt;
+    font-size: 16pt;
   }
 
   div.headline p {
@@ -375,6 +377,14 @@ body {
     height: 50%;
     font-family: "Barlow Condensed", sans-serif;
     font-size: 10pt;
+  }
+
+  .client-detailedview div.job-details {
+    padding-top: 6mm;
+  }
+
+  .operator-overview div.job-details, .client-overview div.job-details {
+    padding-top: 2mm;
   }
 
   div.job-details > div {
@@ -735,7 +745,7 @@ body {
     display: none;
   }
   
-  .opd-color-block.medium span::before {
+  .opd-color-block.medium p > span::before {
     content: ' \00B7 ';
     line-height: 0;
     display: inline-block;

@@ -13,13 +13,13 @@
                     <div class="table">
                       <p><span>{{ _('Design box size') }}:</span><span>{{ "%0.1fmm X %0.1fmm" | format(*job.dimensions) }}</span></p>
                       <p><span>{{ _('Total stitch count') }}:</span><span>{{job.num_stitches }}</span></p>
-                      <p><span>{{ _('Total thread used') }}:</span><span>{{job.estimated_thread }}</span></p>
+                      <p><span>{{ _('Total thread used') }}:</span><span>{{job.total_thread_used }}</span></p>
                     </div>
                 </div>
                 <div>
-                    <div class="table">
+                    <div class="table time-opo">
                       <p><span>{{ _('Job estimated time') }}:</span></p>
-                      <p><span>{{ job.estimated_time }}</span></p>
+                      <p><span class="total-estimated-time"></span></p>
                     </div>
                 </div>
             </div>

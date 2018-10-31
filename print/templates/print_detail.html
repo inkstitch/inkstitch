@@ -3,13 +3,13 @@
             <div class="job-details">
                 <div>
                     <div class="table">
-                      <p><span>{{ _('COLOR') }}:</span><span data-field-name="color-{{ color_block.color.hex_digits }}" contenteditable="true" data-placeholder="Enter thread name...">{{ color_block.color.thread_name }}</span></p>
+                      <p><span>{{ _('COLOR') }}:</span><span data-field-name="color-{{ color_block.color.hex_digits }}" contenteditable="true" data-placeholder="{{ _('Enter thread name...') }}">{{ color_block.color.thread_name }}</span></p>
                     </div>
                 </div>
                 <div>
-                    <div class="table">
+                    <div class="table time-cld">
                       <p><span>{{ _('Estimated time') }}:</span></p>
-                      <p><span>{{ color_block.estimatedtime }}</span></p>
+                      <p><span class="cld-estimated-time"></span></p>
                   </div>
                 </div>
             </div>
