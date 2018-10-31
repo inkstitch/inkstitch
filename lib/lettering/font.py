@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 
-from copy import copy, deepcopy
+from copy import deepcopy
 import json
 import os
 
