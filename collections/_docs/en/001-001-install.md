@@ -2,7 +2,7 @@
 title: "Install Ink/Stitch"
 permalink: /docs/install/
 excerpt: "How to quickly install Ink/Stitch."
-last_modified_at: 2018-10-13
+last_modified_at: 2018-10-31
 toc: true
 ---
 
@@ -28,6 +28,9 @@ OS|File name|32&#8209;bit|64&#8209;bit
 Linux|`inkstitch-[VERSION]-Linux-x86_64.tar.gz`|☒|☑
 Windows|`inkstitch-[VERSION]-win32.zip`|☑|☑
 macOS|`inkstitch-[VERSION]-osx-x86_64.tar.gz`|☒|☑
+
+**Info:** The MacOS version currently works only with High Sierra (10.13).
+{: .notice--warning }
 
 ### 2. Install
  * In Inkscape, go to `Edit > Preferences > System` and check where your `User Extensions` folder is.
