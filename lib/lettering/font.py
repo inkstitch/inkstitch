@@ -7,6 +7,7 @@ import os
 import inkex
 
 from ..elements import nodes_to_elements
+from ..i18n import _
 from ..stitches.auto_satin import auto_satin
 from ..svg import PIXELS_PER_MM
 from ..svg.tags import SVG_GROUP_TAG, SVG_PATH_TAG, INKSCAPE_LABEL
@@ -80,19 +81,38 @@ class Font(object):
     kerning_pairs = font_metadata('kerning_pairs', {})
     auto_satin = font_metadata('auto_satin', True)
 
-    def render_text(self, text, variant=None):
-        glyph_set = self.variants.get(variant, self.variants[self.default_variant])
+    def render_text(self, text, variant=None, back_and_forth=True):
+        if variant is None:
+            variant = self.default_variant
 
-        lines = []
+        if back_and_forth:
+            glyph_sets = [self.get_variant(variant), self.get_variant(FontVariant.reversed_variant(variant))]
+        else:
+            glyph_sets = [self.get_variant(variant)] * 2
+
+        line_group = inkex.etree.Element(SVG_GROUP_TAG, {
+            INKSCAPE_LABEL: _("Ink/Stitch Text")
+        })
         position = Point(0, 0)
-        for line in text.splitlines():
+        for i, line in enumerate(text.splitlines()):
+            glyph_set = glyph_sets[i % 2]
             line = line.strip()
-            lines.append(self._render_line(line, position, glyph_set))
+
+            letter_group = self._render_line(line, position, glyph_set)
+            if glyph_set.variant == FontVariant.RIGHT_TO_LEFT:
+                letter_group[:] = reversed(letter_group)
+            line_group.append(letter_group)
 
             position.x = 0
             position.y += self.leading
 
-        return lines
+        if self.auto_satin:
+            self._apply_auto_satin(line_group)
+
+        return line_group
+
+    def get_variant(self, variant):
+        return self.variants.get(variant, self.variants[self.default_variant])
 
     def _render_line(self, line, position, glyph_set):
         """Render a line of text.
@@ -105,6 +125,9 @@ class Font(object):
             position -- Current position.  Will be updated to point to the spot
                         immediately after the last character.
             glyph_set -- a FontVariant instance.
+
+        Returns:
+            An svg:g element containing the rendered text.
         """
         group = inkex.etree.Element(SVG_GROUP_TAG, {
             INKSCAPE_LABEL: line
@@ -123,9 +146,6 @@ class Font(object):
                     group.append(node)
 
                 last_character = character
-
-        if self.auto_satin:
-            self._apply_auto_satin(group)
 
         return group
 
@@ -162,5 +182,5 @@ class Font(object):
         """
 
         elements = nodes_to_elements(group.iterdescendants(SVG_PATH_TAG))
-        elements, trim_indices = auto_satin(elements)
+        elements, trim_indices = auto_satin(elements, preserve_order=True)
         group[:] = [e.node for e in elements]

@@ -31,6 +31,19 @@ class FontVariant(object):
     BOTTOM_TO_TOP = u"↑"
     VARIANT_TYPES = (LEFT_TO_RIGHT, RIGHT_TO_LEFT, TOP_TO_BOTTOM, BOTTOM_TO_TOP)
 
+    @classmethod
+    def reversed_variant(cls, variant):
+        if variant == cls.LEFT_TO_RIGHT:
+            return cls.RIGHT_TO_LEFT
+        elif variant == cls.RIGHT_TO_LEFT:
+            return cls.LEFT_TO_RIGHT
+        elif variant == cls.TOP_TO_BOTTOM:
+            return cls.BOTTOM_TO_TOP
+        elif variant == cls.BOTTOM_TO_TOP:
+            return cls.TOP_TO_BOTTOM
+        else:
+            return None
+
     def __init__(self, font_path, variant, default_glyph=None):
         self.path = font_path
         self.variant = variant
