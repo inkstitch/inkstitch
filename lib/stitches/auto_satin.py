@@ -9,8 +9,8 @@ import simplestyle
 
 import networkx as nx
 
-from ..elements import Stroke
-from ..svg import PIXELS_PER_MM, line_strings_to_csp
+from ..elements import Stroke, SatinColumn
+from ..svg import PIXELS_PER_MM, line_strings_to_csp, get_correction_transform
 from ..svg.tags import SVG_PATH_TAG
 from ..utils import Point as InkstitchPoint, cut, cache
 
@@ -69,6 +69,9 @@ class SatinSegment(object):
 
         satin = satin.apply_transform()
 
+        # keep track of where it was the SVG DOM for use in restore_original_groups()
+        satin.original_parent_node = self.satin.node.getparent()
+
         return satin
 
     to_element = to_satin
@@ -81,9 +84,8 @@ class SatinSegment(object):
 
         num_segments = int(math.ceil(self.center_line.length / segment_size))
         segments = []
-        satin = self.to_satin()
         for i in xrange(num_segments):
-            segments.append(SatinSegment(satin, float(
+            segments.append(SatinSegment(self.satin, float(
                 i) / num_segments, float(i + 1) / num_segments, self.reverse))
 
         if self.reverse:
@@ -213,10 +215,14 @@ class RunningStitch(object):
         style['stroke-dasharray'] = "0.5,0.5"
         style = simplestyle.formatStyle(style)
         node.set("style", style)
-
         node.set("embroider_running_stitch_length_mm", self.running_stitch_length)
 
-        return Stroke(node)
+        stroke = Stroke(node)
+
+        # keep track of where it was the SVG DOM for use in restore_original_groups()
+        stroke.original_parent_node = self.original_element.node.getparent()
+
+        return stroke
 
     @property
     @cache
@@ -277,6 +283,11 @@ def auto_satin(elements, preserve_order=False, starting_point=None, ending_point
     instances (that are running stitch) can be included to indicate how to travel
     between two SatinColumns.  This works best when preserve_order is True.
 
+    If preserve_order is True, then the elements and any newly-created elements
+    will be in the same position in the SVG DOM.  If preserve_order is False, then
+    the elements will be removed from the SVG DOM and it's up to the caller to
+    decide where to put the returned SVG path nodes.
+
     Returns: a list of SVG path nodes making up the selected stitch order.
       Jumps between objects are implied if they are not right next to each
       other.
@@ -289,7 +300,13 @@ def auto_satin(elements, preserve_order=False, starting_point=None, ending_point
     path = find_path(graph, starting_node, ending_node)
     operations = path_to_operations(graph, path)
     operations = collapse_sequential_segments(operations)
-    return operations_to_elements_and_trims(operations)
+    new_elements, trims = operations_to_elements_and_trims(operations)
+    remove_original_elements(elements)
+
+    if preserve_order:
+        restore_original_groups(new_elements)
+
+    return new_elements, trims
 
 
 def build_graph(elements, preserve_order=False):
@@ -306,7 +323,7 @@ def build_graph(elements, preserve_order=False):
         segments = []
         if isinstance(element, Stroke):
             segments.append(RunningStitch(element))
-        else:
+        elif isinstance(element, SatinColumn):
             whole_satin = SatinSegment(element)
             segments = whole_satin.break_up(PIXELS_PER_MM)
 
@@ -562,7 +579,7 @@ def operations_to_elements_and_trims(operations):
     trims = []
 
     for operation in operations:
-        # Ignore JumpStitch opertions.  Jump stitches in Ink/Stitch are
+        # Ignore JumpStitch operations.  Jump stitches in Ink/Stitch are
         # implied and added by Embroider if needed.
         if isinstance(operation, (SatinSegment, RunningStitch)):
             elements.append(operation.to_element())
@@ -571,3 +588,31 @@ def operations_to_elements_and_trims(operations):
                 trims.append(len(elements) - 1)
 
     return elements, list(set(trims))
+
+
+def remove_original_elements(elements):
+    for element in elements:
+        for command in element.commands:
+            remove_from_parent(command.connector)
+            remove_from_parent(command.use)
+        remove_from_parent(element.node)
+
+
+def remove_from_parent(node):
+    if node.getparent() is not None:
+        node.getparent().remove(node)
+
+
+def restore_original_groups(elements):
+    """Ensure that all elements are contained in the original SVG group elements.
+
+    When preserve_order is True, no SatinColumn or Stroke elements will be
+    reordered in the XML tree.  This makes it possible to preserve original SVG
+    group membership.  We'll ensure that each newly-created Element is added
+    to the group that contained the original SatinColumn that spawned it.
+    """
+
+    for element in elements:
+        if element.original_parent_node is not None:
+            element.original_parent_node.append(element.node)
+            element.node.set('transform', get_correction_transform(element.original_parent_node, child=True))

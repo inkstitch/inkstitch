@@ -182,5 +182,4 @@ class Font(object):
         """
 
         elements = nodes_to_elements(group.iterdescendants(SVG_PATH_TAG))
-        elements, trim_indices = auto_satin(elements, preserve_order=True)
-        group[:] = [e.node for e in elements]
+        auto_satin(elements, preserve_order=True)

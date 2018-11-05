@@ -41,14 +41,15 @@ class AutoSatin(CommandsExtension):
         if not self.check_selection():
             return
 
-        group = self.create_group()
-        new_elements, trim_indices = self.auto_satin()
-
-        # The ordering is careful here.  Some of the original satins may have
-        # been used unmodified.  That's why we remove all of the original
-        # satins _first_ before adding new_elements back into the SVG.
-        self.remove_original_satins()
-        self.add_elements(group, new_elements)
+        if self.options.preserve_order:
+            # when preservering order, auto_satin() takes care of putting the
+            # newly-created elements into the existing group nodes in the SVG
+            # DOM
+            new_elements, trim_indices = self.auto_satin()
+        else:
+            group = self.create_group()
+            new_elements, trim_indices = self.auto_satin()
+            self.add_elements(group, new_elements)
 
         self.add_trims(new_elements, trim_indices)
 
@@ -78,13 +79,6 @@ class AutoSatin(CommandsExtension):
         starting_point = self.get_starting_point()
         ending_point = self.get_ending_point()
         return auto_satin(self.elements, self.options.preserve_order, starting_point, ending_point)
-
-    def remove_original_satins(self):
-        for element in self.elements:
-            for command in element.commands:
-                command.connector.getparent().remove(command.connector)
-                command.use.getparent().remove(command.use)
-            element.node.getparent().remove(element.node)
 
     def add_elements(self, group, new_elements):
         for i, element in enumerate(new_elements):
