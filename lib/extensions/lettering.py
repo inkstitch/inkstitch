@@ -1,5 +1,6 @@
 import os
 
+from ..i18n import _
 from ..lettering import Font
 from ..svg.tags import SVG_PATH_TAG, SVG_GROUP_TAG, INKSCAPE_LABEL
 from ..utils import get_resource_dir
