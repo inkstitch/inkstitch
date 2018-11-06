@@ -1,4 +1,4 @@
-from itertools import chain
+from itertools import chain, izip
 import math
 
 import cubicsuperpath
@@ -25,7 +25,7 @@ class SatinSegment(object):
         reverse -- if True, reverse the direction of the satin
     """
 
-    def __init__(self, satin, start=0.0, end=1.0, reverse=False):
+    def __init__(self, satin, start=0.0, end=1.0, reverse=False, original_satin=None):
         """Initialize a SatinEdge.
 
         Arguments:
@@ -38,6 +38,7 @@ class SatinSegment(object):
         """
 
         self.satin = satin
+        self.original_satin = original_satin or self.satin
         self.reverse = reverse
 
         # start and end are stored as normalized projections
@@ -69,15 +70,12 @@ class SatinSegment(object):
 
         satin = satin.apply_transform()
 
-        # keep track of where it was the SVG DOM for use in restore_original_groups()
-        satin.original_parent_node = self.satin.node.getparent()
-
         return satin
 
     to_element = to_satin
 
     def to_running_stitch(self):
-        return RunningStitch(self.center_line, self.satin)
+        return RunningStitch(self.center_line, self.original_satin)
 
     def break_up(self, segment_size):
         """Break this SatinSegment up into SatinSegments of the specified size."""
@@ -85,8 +83,11 @@ class SatinSegment(object):
         num_segments = int(math.ceil(self.center_line.length / segment_size))
         segments = []
         for i in xrange(num_segments):
-            segments.append(SatinSegment(self.satin, float(
-                i) / num_segments, float(i + 1) / num_segments, self.reverse))
+            segments.append(SatinSegment(self.satin,
+                                         float(i) / num_segments,
+                                         float(i + 1) / num_segments,
+                                         self.reverse,
+                                         self.original_satin))
 
         if self.reverse:
             segments.reverse()
@@ -122,6 +123,10 @@ class SatinSegment(object):
     @cache
     def end_point(self):
         return self.satin.center_line.interpolate(self.end, normalized=True)
+
+    @property
+    def original_node(self):
+        return self.original_satin.node
 
     def is_sequential(self, other):
         """Check if a satin segment immediately follows this one on the same satin."""
@@ -219,9 +224,6 @@ class RunningStitch(object):
 
         stroke = Stroke(node)
 
-        # keep track of where it was the SVG DOM for use in restore_original_groups()
-        stroke.original_parent_node = self.original_element.node.getparent()
-
         return stroke
 
     @property
@@ -234,12 +236,19 @@ class RunningStitch(object):
     def end_point(self):
         return self.path.interpolate(1.0, normalized=True)
 
+    @property
+    def original_node(self):
+        return self.original_element.node
+
     @cache
     def reversed(self):
         return RunningStitch(shgeo.LineString(reversed(self.path.coords)), self.style)
 
     def is_sequential(self, other):
         if not isinstance(other, RunningStitch):
+            return False
+
+        if self.original_element is not other.original_element:
             return False
 
         return self.path.distance(other.path) < 0.5
@@ -300,11 +309,11 @@ def auto_satin(elements, preserve_order=False, starting_point=None, ending_point
     path = find_path(graph, starting_node, ending_node)
     operations = path_to_operations(graph, path)
     operations = collapse_sequential_segments(operations)
-    new_elements, trims = operations_to_elements_and_trims(operations)
+    new_elements, trims, original_parents = operations_to_elements_and_trims(operations, preserve_order)
     remove_original_elements(elements)
 
     if preserve_order:
-        restore_original_groups(new_elements)
+        preserve_original_groups(new_elements, original_parents)
 
     return new_elements, trims
 
@@ -565,29 +574,32 @@ def collapse_sequential_segments(old_operations):
     return new_operations
 
 
-def operations_to_elements_and_trims(operations):
+def operations_to_elements_and_trims(operations, preserve_order):
     """Convert a list of operations to Elements and locations of trims.
 
     Returns:
-        (nodes, trims)
+        (elements, trims, original_parents)
 
-        element -- a list of Element instances
+        elements -- a list of Element instances
         trims -- indices of nodes after which the thread should be trimmed
+        original_parents -- a parallel list of the original SVG parent nodes that spawned each element
     """
 
     elements = []
     trims = []
+    original_parent_nodes = []
 
     for operation in operations:
         # Ignore JumpStitch operations.  Jump stitches in Ink/Stitch are
         # implied and added by Embroider if needed.
         if isinstance(operation, (SatinSegment, RunningStitch)):
             elements.append(operation.to_element())
+            original_parent_nodes.append(operation.original_node.getparent())
         elif isinstance(operation, (JumpStitch)):
             if elements and operation.length > PIXELS_PER_MM:
                 trims.append(len(elements) - 1)
 
-    return elements, list(set(trims))
+    return elements, list(set(trims)), original_parent_nodes
 
 
 def remove_original_elements(elements):
@@ -603,7 +615,7 @@ def remove_from_parent(node):
         node.getparent().remove(node)
 
 
-def restore_original_groups(elements):
+def preserve_original_groups(elements, original_parent_nodes):
     """Ensure that all elements are contained in the original SVG group elements.
 
     When preserve_order is True, no SatinColumn or Stroke elements will be
@@ -612,7 +624,7 @@ def restore_original_groups(elements):
     to the group that contained the original SatinColumn that spawned it.
     """
 
-    for element in elements:
-        if element.original_parent_node is not None:
-            element.original_parent_node.append(element.node)
-            element.node.set('transform', get_correction_transform(element.original_parent_node, child=True))
+    for element, parent in izip(elements, original_parent_nodes):
+        if parent is not None:
+            parent.append(element.node)
+            element.node.set('transform', get_correction_transform(parent, child=True))
