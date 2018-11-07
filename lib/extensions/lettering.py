@@ -3,7 +3,7 @@ import os
 from ..i18n import _
 from ..lettering import Font
 from ..svg.tags import SVG_PATH_TAG, SVG_GROUP_TAG, INKSCAPE_LABEL
-from ..utils import get_resource_dir
+from ..utils import get_bundled_dir
 from .commands import CommandsExtension
 
 
@@ -16,7 +16,7 @@ class Lettering(CommandsExtension):
         self.OptionParser.add_option("-t", "--text")
 
     def effect(self):
-        font_path = os.path.join(get_resource_dir("fonts"), "small_font")
+        font_path = os.path.join(get_bundled_dir("fonts"), "small_font")
         font = Font(font_path)
         self.ensure_current_layer()
 
