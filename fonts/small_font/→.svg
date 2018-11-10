@@ -25,10 +25,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="31.678384"
-     inkscape:cx="13.93904"
+     inkscape:cx="7.2625631"
      inkscape:cy="15.104226"
      inkscape:document-units="px"
-     inkscape:current-layer="g20430"
+     inkscape:current-layer="svg8375"
      showgrid="false"
      units="px"
      inkscape:window-width="1366"
@@ -161,7 +161,8 @@
   <g
      inkscape:label="GlyphLayer-Ä"
      style="display:none"
-     id="g20453">
+     id="g20453"
+     inkscape:groupmode="layer">
     <path
        embroider_center_walk_underlay_stitch_length_mm="1.2"
        d="m 10.341398,20.538671 c 0,0 8.748998,0 8.748998,0 m -7.956,-2.73257 c 0,0 7.137001,0 7.137001,0"
@@ -724,7 +725,8 @@
   <g
      inkscape:label="GlyphLayer-Ö"
      style="display:none"
-     id="g20490">
+     id="g20490"
+     inkscape:groupmode="layer">
     <path
        inkscape:connector-curvature="0"
        d="m 20.52515,15.56902 c 0,2.444 -0.559,4.37666 -1.677,5.798 -1.10933,1.42133 -2.61733,2.132 -4.524,2.132 -1.90666,0 -3.42333,-0.71067 -4.55,-2.132 -1.118,-1.42134 -1.677,-3.354 -1.677,-5.798 0,-2.45267 0.559,-4.38967 1.677,-5.811 1.12667,-1.42134 2.64334,-2.132 4.55,-2.132 1.90667,0 3.41467,0.71066 4.524,2.132 1.118,1.42133 1.677,3.35833 1.677,5.811 m 2.769,0 c 0,3.05933 -0.81467,5.50333 -2.444,7.332 -1.62933,1.82 -3.80466,2.73 -6.526,2.73 -2.73,0 -4.914,-0.91 -6.552,-2.73 -1.62933,-1.82 -2.44399,-4.264 -2.44399,-7.332 0,-3.068 0.81466,-5.512 2.44399,-7.332 1.638,-1.82867 3.822,-2.743 6.552,-2.743 2.72134,0 4.89667,0.91433 6.526,2.743 1.62933,1.82 2.444,4.264 2.444,7.332"
@@ -956,7 +958,8 @@
   <g
      inkscape:label="GlyphLayer-Ü"
      style="display:none"
-     id="g20565">
+     id="g20565"
+     inkscape:groupmode="layer">
     <path
        sodipodi:nodetypes="cscscsccscscsc"
        inkscape:connector-curvature="0"
@@ -1253,7 +1256,8 @@
   <g
      inkscape:label="GlyphLayer-ä"
      style="display:none"
-     id="g20362">
+     id="g20362"
+     inkscape:groupmode="layer">
     <path
        inkscape:connector-curvature="0"
        embroider_zigzag_underlay="False"
@@ -1723,7 +1727,8 @@
   <g
      inkscape:label="GlyphLayer-ö"
      style="display:none"
-     id="g20411">
+     id="g20411"
+     inkscape:groupmode="layer">
     <path
        inkscape:connector-curvature="0"
        id="path20409"
@@ -1873,7 +1878,8 @@
   <g
      id="g23221"
      style="display:none"
-     inkscape:label="GlyphLayer-ß">
+     inkscape:label="GlyphLayer-ß"
+     inkscape:groupmode="layer">
     <path
        embroider_center_walk_underlay_stitch_length_mm="1.1"
        embroider_center_walk_underlay="True"
@@ -1956,7 +1962,8 @@
   <g
      inkscape:label="GlyphLayer-ü"
      style="display:none"
-     id="g20430">
+     id="g20430"
+     inkscape:groupmode="layer">
     <path
        id="path49890-2-3"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.66666412px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
