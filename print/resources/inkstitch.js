@@ -433,7 +433,14 @@ $(function() {
   });
 
   function updateFooter() {
-    $('.footer-info').html($('#footer-info-text').html());
+    var editMode = getEditMode();
+    var footerText = '';
+    if (editMode) {
+      footerText = $('#footer-info-text' ).text();
+    } else {
+      footerText = $('#footer-info-text').html();
+    }
+    $('.footer-info').html(footerText);
     var content = $('.footer-info').html();
     $.postJSON('/settings/footer-info', {value: content});
   }
@@ -441,9 +448,10 @@ $(function() {
   function formatText(selection, value) {
     var htmlMode = getEditMode();
     if(!htmlMode) {
-      document.execCommand(selection, false, value);
-      $('#footer-info-text').focus();
-      updateFooter();
+      if(window.getSelection().toString()){
+        document.execCommand(selection, false, value);
+        updateFooter();
+      }
     }
   }
 
@@ -466,14 +474,14 @@ $(function() {
   $('#tb-reset').click(function() {
     var htmlMode = getEditMode();
     if(htmlMode) {
-      $('#footer-info-text').text('<div>{{ _("Proudly generated with") }} <a href="http://inkstitch.org/" target="_blank">Ink/Stitch</a></div>');
+      $('#footer-info-text').text('<div>Proudly generated with <a href="http://inkstitch.org/" target="_blank">Ink/Stitch</a></div>');
     } else {
-      $('#footer-info-text').html('<div>{{ _("Proudly generated with") }} <a href="http://inkstitch.org/" target="_blank">Ink/Stitch</a></div>');
+      $('#footer-info-text').html('<div>Proudly generated with <a href="http://inkstitch.org/" target="_blank">Ink/Stitch</a></div>');
     }
   });
 
   $('#tb-hyperlink').click(function() {
-    document.execCommand('createlink', false, 'tempurl');
+    formatText('createlink', 'tempurl');
     $('#footer-url').css('display', 'block');
   });
 
@@ -493,7 +501,7 @@ $(function() {
   });
 
   $('#tb-mail').click(function() {
-    document.execCommand('createlink', false, 'tempurl');
+    formatText('createlink', 'tempurl');
     $('#footer-email').css('display', 'block');
   });
 
