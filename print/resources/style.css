@@ -256,6 +256,78 @@ body {
     pointer-events: none;
   }
 
+  .logo-ui {
+    float: left;
+  }
+
+  .brandlogo-ui {
+    width: auto !important;
+  }
+
+  .logo-legend {
+    display: inline !important;
+    position: relative;
+    line-height: 30mm;
+    padding: 5px;
+    border: 1px solid #413232;
+    margin-left: 1em;
+    cursor: pointer;
+  }
+
+  #edit-footer {
+    position: relative;
+  }
+
+  #footer-info-text {
+    width: 100%;
+    min-height: 5em;
+    border: 1px solid darkgrey;
+    padding: 12px;
+    overflow-y: scroll;
+    background: white;
+  }
+
+  #tool-bar .tb-button {
+    border: 1px solid darkgrey;
+    border-bottom: none;
+    margin-bottom: -0.2em;
+    cursor: pointer;
+  }
+
+  #tool-bar .tb-button:disabled {
+    background: #eaeaea;
+    color: white;
+    cursor: auto;
+  }
+
+  #edit-mode {
+    display: inline;
+  }
+
+  #edit-mode label { cursor: pointer; }
+
+  div#footer-url, div#footer-email {
+    display: none;
+    position: absolute;
+    background: white;
+    border: 1px solid black;
+    padding: 5mm;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+
+  .notice--warning {
+    padding: 1em;
+    font-size: 0.75em;
+    text-indent: initial;
+    border: 1px solid #d0d0d0;
+  }
+
+  .ff-serif {
+    font-family: serif;
+  }
+
   #modal-background {
     display: none;
     z-index: 3;
@@ -322,10 +394,9 @@ body {
   /* hide the actual file picker control, since we just want them to click the
    * image instead
    */
-  #logo-picker {
-    width: 0px;
-    height: 0px;
-    opacity: 0;
+  .logo-picker {
+    visibility: hidden;
+    position: absolute;
   }
 
   .logo-instructions {
@@ -510,6 +581,7 @@ body {
     padding-left: 3px;
     padding-right: 3px;
     margin: 0px 1px 0px 1px;
+    cursor: pointer;
   }
 
   input.realistic {
@@ -522,6 +594,15 @@ body {
      and the containing <button> */
   .realistic {
     pointer-events: none;
+  }
+
+  figure.inksimulation div {
+    display: none;
+  }
+
+  /* Display svg buttons only with svg hover */
+  figure.inksimulation:hover > div {
+    display: block;
   }
 
 /* Color Swatches */
@@ -799,6 +880,7 @@ body {
     white-space: wrap;
     text-align: center;
     padding-top: 2mm;
+    position: relative;
 
   }
 
@@ -807,6 +889,25 @@ body {
     font-size: 12pt;
     font-weight: bold;
     margin-top: 0;
+  }
+
+  .edit-footer-link {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    line-height: 15mm;
+    background: #ffffffbf;
+    font-size: x-large;
+    cursor: pointer;
+    height: 15mm;
+    border: 1px dashed #cccbcb;
+  }
+
+  footer:hover > .edit-footer-link {
+    display: block;
   }
 
 /* Messages */
@@ -987,29 +1088,17 @@ body {
         margin: 0 !important;
     }
 
-    figure.inksimulation div {
+    figure.inksimulation div,
+    .ui,
+    #settings-ui,
+    #errors,
+    span.logo-instructions {
       display: none;
-    }
-
-    .ui {
-      display: none;
-    }
-
-    #settings-ui {
-      display: none !important;
-    }
-
-    #errors {
-      display: none !important;
     }
 
     .header-field:not(:empty)::before {
         content: attr(data-label);
         padding-right: 0.5em;
-    }
-
-    span.logo-instructions {
-      display: none;
     }
 }
 
