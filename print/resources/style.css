@@ -199,6 +199,12 @@ body {
     border: 1px solid #413232;
     padding: 5px;
     cursor: pointer;
+    background: white;
+    color: black;
+  }
+
+  #settings-ui button.tab {
+    background: transparent;
   }
   
   #settings-ui button.active {
@@ -264,12 +270,17 @@ body {
     width: auto !important;
   }
 
+  .brandlogo-ui img {
+    background: white;
+  }
+
   .logo-legend {
     display: inline !important;
     position: relative;
     line-height: 30mm;
     padding: 5px;
     border: 1px solid #413232;
+    background: white;
     margin-left: 1em;
     cursor: pointer;
   }
@@ -292,6 +303,9 @@ body {
     border-bottom: none;
     margin-bottom: -0.2em;
     cursor: pointer;
+    color: #413232;
+    height: 2.2em;
+    vertical-align: top;
   }
 
   #tool-bar .tb-button:disabled {
@@ -302,9 +316,49 @@ body {
 
   #edit-mode {
     display: inline;
+    position: relative;
+    border: 1px solid darkgray;
+    padding: 0 5px 10px 0;
+    vertical-align: top;
   }
 
-  #edit-mode label { cursor: pointer; }
+  #edit-mode input {
+      visibility: hidden;
+  }
+
+  #edit-mode label {
+    cursor: pointer;
+    vertical-align: middle;
+    background: white;
+    color: #413232;
+  }
+
+  #edit-mode label:after {
+    opacity: 0.1;
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 5px;
+    background: transparent;
+    top: 6px;
+    left: 7px;
+    border: 3px solid black;
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg);
+  }
+
+  #edit-mode label:hover::after {
+      opacity: 0.5;
+  }
+
+  #edit-mode input[type=checkbox]:checked + label:after {
+      opacity: 1;
+  }
+
+  #edit-mode span {
+    margin-left: 1em;
+  }
 
   div#footer-url, div#footer-email {
     display: none;
@@ -322,6 +376,7 @@ body {
     font-size: 0.75em;
     text-indent: initial;
     border: 1px solid #d0d0d0;
+    background: white;
   }
 
   .ff-serif {
