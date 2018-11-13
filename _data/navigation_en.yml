@@ -35,6 +35,8 @@ pages:
         url: /tutorials/resources/templates/
       - title: "Tutorials"
         url: /tutorials/
+      - title: "DIY Embroidery Machine"
+        url: /tutorials/embroidery-machine/
   - title: "Get involved"
     url: /developers/introduction/
   - title: "News"

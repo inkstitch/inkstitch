@@ -127,6 +127,10 @@ table tr td:first-child {
   width: 50%;
 }
 
+.table-grid th, .table-grid td {
+  border: 1px solid #b6b6b6;
+}
+
 /* Table of Contents */
   .toc .nav__title {
     background: #808080;
@@ -297,3 +301,7 @@ table tr td:first-child {
 
 /* Image Manipulation */
 .img-invert { filter: invert(1); }
+
+.img-fix-height {
+  height: 300px;
+}
