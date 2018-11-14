@@ -360,7 +360,7 @@ body {
     margin-left: 1em;
   }
 
-  div#footer-url, div#footer-email {
+  div#footer-url, div#footer-email, div#footer-reset {
     display: none;
     position: absolute;
     background: white;
@@ -369,6 +369,12 @@ body {
     top: 0;
     left: 0;
     z-index: 10;
+  }
+
+  div#footer-info-original {
+    visibility: hidden;
+    width: 0;
+    height: 0;
   }
 
   .notice--warning {

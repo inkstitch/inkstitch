@@ -16,7 +16,7 @@
       
       <div id="tabs">
         <button class="tab active">{{ _('Page Setup') }}</button>
-        <button class="tab" id="operator-tab">{{ _('Operator') }}</button>
+        <button class="tab" id="branding-tab">{{ _('Branding') }}</button>
         <button class="tab">{{ _('Estimated Time') }}</button>
         <button class="tab">{{ _('Design') }}</button>
       </div>
@@ -45,7 +45,7 @@
         <button class="save-settings" title="{{ _("Includes these Page Setup, estimated time settings and also the icon.") }}">{{ _("Save as defaults") }}</button>
       </fieldset>
 
-      <fieldset id="ui-operator" class="ui-tab">
+      <fieldset id="ui-branding" class="ui-tab">
         <fieldset>
           <legend>{{ _('Logo') }}</legend>
           <figure class="brandlogo brandlogo-ui">
@@ -75,8 +75,14 @@
               <p>{{ _("Enter E-Mail") }}: <input type="text" id="footer-mail" name="footer-mail" value="@" /></p>
               <p><button id="mail-ok">{{ _("OK") }}</button> <button id="mail-cancel">{{ _("Cancel") }}</button></p>
             </div>
+            <div id="footer-info-original">{{ _("Proudly generated with") }} <a href="http://inkstitch.org/" target="_blank">Ink/Stitch</a></div>
+            <div id="footer-reset">
+              <p>{{ _("This will reset your custom text to the default.") }}</p>
+              <p>{{ _("All changes will be lost.") }}</p>
+              <p><button id="reset-ok">{{ _("OK") }}</button> <button id="reset-cancel">{{ _("Cancel") }}</button></p>
+            </div>
           </div>
-          <div id="footer-info-text" contenteditable="true"><div>{{ _('Proudly generated with') }} <a href="http://inkstitch.org/" target="_blank">Ink/Stitch</a></div></div>
+          <div id="footer-info-text" contenteditable="true"><div>{{ _("Proudly generated with") }} <a href="http://inkstitch.org/" target="_blank">Ink/Stitch</a></div></div>
           <p class="notice--warning"><b>Note</b>: If you are using Firefox, use visible URLs. Links will not be printed to PDF with this browser.</p>
         </fieldset>
         <button class="save-settings" title="{{ _('Includes these Page Setup, estimated time settings and also the icon.') }}">{{ _("Save as defaults") }}</button>
@@ -113,7 +119,7 @@
             <p><input type="checkbox" class="time-display" id="time-opd" data-field-name="time-opd" CHECKED /><label for="time-opd">{{ _('Operator Detailed View') }}</label></p>
           </p>
         </fieldset>
-        <button class="save-settings" title="{{ _("Includes these Page Setup, estimated time settings and also the icon.") }}">{{ _("Save as defaults") }}</button>
+        <button class="save-settings" title="{{ _('Includes page setup, estimated time and also the branding.') }}">{{ _("Save as defaults") }}</button>
       </fieldset>
 
       <fieldset id="ui-design" class="ui-tab">

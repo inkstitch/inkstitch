@@ -471,15 +471,6 @@ $(function() {
     formatText('removeFormat');
   });
 
-  $('#tb-reset').click(function() {
-    var htmlMode = getEditMode();
-    if(htmlMode) {
-      $('#footer-info-text').text('<div>Proudly generated with <a href="http://inkstitch.org/" target="_blank">Ink/Stitch</a></div>');
-    } else {
-      $('#footer-info-text').html('<div>Proudly generated with <a href="http://inkstitch.org/" target="_blank">Ink/Stitch</a></div>');
-    }
-  });
-
   $('#tb-hyperlink').click(function() {
     formatText('createlink', 'tempurl');
     $('#footer-url').css('display', 'block');
@@ -520,9 +511,28 @@ $(function() {
     updateFooter();
   });
 
+  $('#tb-reset').click(function() {
+    $('#footer-reset').css('display', 'block');
+  });
+
+  $('#reset-ok').click(function() {
+    var htmlMode = getEditMode();
+    if(!htmlMode) {
+      $('#footer-info-text').html($('#footer-info-original').html());
+    } else {
+      $('#footer-info-text').text($('#footer-info-original').html());
+    }
+    $('#footer-reset').css('display', 'none');
+    updateFooter();
+  });
+
+  $('#reset-cancel').click(function() {
+    $('#footer-reset').css('display', 'none');
+  });
+
   $('body').on("click", ".edit-footer-link", function() {
     $("button.settings").trigger("click");
-    $("#operator-tab").trigger("click");
+    $("#branding-tab").trigger("click");
   });
 
 
