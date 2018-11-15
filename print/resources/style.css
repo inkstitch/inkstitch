@@ -199,6 +199,12 @@ body {
     border: 1px solid #413232;
     padding: 5px;
     cursor: pointer;
+    background: white;
+    color: black;
+  }
+
+  #settings-ui button.tab {
+    background: transparent;
   }
   
   #settings-ui button.active {
@@ -254,6 +260,133 @@ body {
     border-left: 1px solid rgb(80,80,80);
     line-height: 35px;
     pointer-events: none;
+  }
+
+  .logo-ui {
+    float: left;
+  }
+
+  .brandlogo-ui {
+    width: auto !important;
+  }
+
+  .brandlogo-ui img {
+    background: white;
+  }
+
+  .logo-legend {
+    display: inline !important;
+    position: relative;
+    line-height: 30mm;
+    padding: 5px;
+    border: 1px solid #413232;
+    background: white;
+    margin-left: 1em;
+    cursor: pointer;
+  }
+
+  #edit-footer {
+    position: relative;
+  }
+
+  #footer-info-text {
+    width: 100%;
+    min-height: 5em;
+    border: 1px solid darkgrey;
+    padding: 12px;
+    overflow-y: scroll;
+    background: white;
+  }
+
+  #tool-bar .tb-button {
+    border: 1px solid darkgrey;
+    border-bottom: none;
+    margin-bottom: -0.2em;
+    cursor: pointer;
+    color: #413232;
+    height: 2.2em;
+    vertical-align: top;
+  }
+
+  #tool-bar .tb-button:disabled {
+    background: #eaeaea;
+    color: white;
+    cursor: auto;
+  }
+
+  #edit-mode {
+    display: inline;
+    position: relative;
+    border: 1px solid darkgray;
+    padding: 0 5px 10px 0;
+    vertical-align: top;
+  }
+
+  #edit-mode input {
+      visibility: hidden;
+  }
+
+  #edit-mode label {
+    cursor: pointer;
+    vertical-align: middle;
+    background: white;
+    color: #413232;
+  }
+
+  #edit-mode label:after {
+    opacity: 0.1;
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 5px;
+    background: transparent;
+    top: 6px;
+    left: 7px;
+    border: 3px solid black;
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg);
+  }
+
+  #edit-mode label:hover::after {
+      opacity: 0.5;
+  }
+
+  #edit-mode input[type=checkbox]:checked + label:after {
+      opacity: 1;
+  }
+
+  #edit-mode span {
+    margin-left: 1em;
+  }
+
+  div#footer-url, div#footer-email, div#footer-reset {
+    display: none;
+    position: absolute;
+    background: white;
+    border: 1px solid black;
+    padding: 5mm;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+
+  div#footer-info-original {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+
+  .notice--warning {
+    padding: 1em;
+    font-size: 0.75em;
+    text-indent: initial;
+    border: 1px solid #d0d0d0;
+    background: white;
+  }
+
+  .ff-serif {
+    font-family: serif;
   }
 
   #modal-background {
@@ -322,10 +455,9 @@ body {
   /* hide the actual file picker control, since we just want them to click the
    * image instead
    */
-  #logo-picker {
-    width: 0px;
-    height: 0px;
-    opacity: 0;
+  .logo-picker {
+    visibility: hidden;
+    position: absolute;
   }
 
   .logo-instructions {
@@ -510,6 +642,7 @@ body {
     padding-left: 3px;
     padding-right: 3px;
     margin: 0px 1px 0px 1px;
+    cursor: pointer;
   }
 
   input.realistic {
@@ -522,6 +655,15 @@ body {
      and the containing <button> */
   .realistic {
     pointer-events: none;
+  }
+
+  figure.inksimulation div {
+    display: none;
+  }
+
+  /* Display svg buttons only with svg hover */
+  figure.inksimulation:hover > div {
+    display: block;
   }
 
 /* Color Swatches */
@@ -799,6 +941,7 @@ body {
     white-space: wrap;
     text-align: center;
     padding-top: 2mm;
+    position: relative;
 
   }
 
@@ -807,6 +950,25 @@ body {
     font-size: 12pt;
     font-weight: bold;
     margin-top: 0;
+  }
+
+  .edit-footer-link {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    line-height: 15mm;
+    background: #ffffffbf;
+    font-size: x-large;
+    cursor: pointer;
+    height: 15mm;
+    border: 1px dashed #cccbcb;
+  }
+
+  footer:hover > .edit-footer-link {
+    display: block;
   }
 
 /* Messages */
@@ -987,29 +1149,17 @@ body {
         margin: 0 !important;
     }
 
-    figure.inksimulation div {
+    figure.inksimulation div,
+    .ui,
+    #settings-ui,
+    #errors,
+    span.logo-instructions {
       display: none;
-    }
-
-    .ui {
-      display: none;
-    }
-
-    #settings-ui {
-      display: none !important;
-    }
-
-    #errors {
-      display: none !important;
     }
 
     .header-field:not(:empty)::before {
         content: attr(data-label);
         padding-right: 0.5em;
-    }
-
-    span.logo-instructions {
-      display: none;
     }
 }
 
