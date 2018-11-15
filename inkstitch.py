@@ -19,6 +19,16 @@ ch.setFormatter(formatter)
 logger.addHandler(ch)
 
 
+logger = logging.getLogger('shapely.geos')
+logger.setLevel(logging.DEBUG)
+shapely_errors = StringIO()
+ch = logging.StreamHandler(shapely_errors)
+ch.setLevel(logging.DEBUG)
+formatter = logging.Formatter('%(name)s - %(levelname)s - %(message)s')
+ch.setFormatter(formatter)
+logger.addHandler(ch)
+
+
 parser = ArgumentParser()
 parser.add_argument("--extension")
 my_args, remaining_args = parser.parse_known_args()

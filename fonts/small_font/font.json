@@ -1,0 +1,12 @@
+{
+  "name": "Ink/Stitch Small Font",
+  "description": "A font suited for small characters.  The capital em is 0.2 inches wide.",
+  "leading": 8,
+  "letter_spacing": 1.5,
+  "word_spacing": 4.5,
+  "auto_satin": true,
+  "default_glyph": "�",
+  "kerning_pairs": {
+    "wo": -0.3
+  }
+}

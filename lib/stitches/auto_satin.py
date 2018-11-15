@@ -1,4 +1,4 @@
-from itertools import chain
+from itertools import chain, izip
 import math
 
 import cubicsuperpath
@@ -9,8 +9,8 @@ import simplestyle
 
 import networkx as nx
 
-from ..elements import Stroke
-from ..svg import PIXELS_PER_MM, line_strings_to_csp
+from ..elements import Stroke, SatinColumn
+from ..svg import PIXELS_PER_MM, line_strings_to_csp, get_correction_transform
 from ..svg.tags import SVG_PATH_TAG
 from ..utils import Point as InkstitchPoint, cut, cache
 
@@ -25,7 +25,7 @@ class SatinSegment(object):
         reverse -- if True, reverse the direction of the satin
     """
 
-    def __init__(self, satin, start=0.0, end=1.0, reverse=False):
+    def __init__(self, satin, start=0.0, end=1.0, reverse=False, original_satin=None):
         """Initialize a SatinEdge.
 
         Arguments:
@@ -38,6 +38,7 @@ class SatinSegment(object):
         """
 
         self.satin = satin
+        self.original_satin = original_satin or self.satin
         self.reverse = reverse
 
         # start and end are stored as normalized projections
@@ -74,17 +75,19 @@ class SatinSegment(object):
     to_element = to_satin
 
     def to_running_stitch(self):
-        return RunningStitch(self.center_line, self.satin)
+        return RunningStitch(self.center_line, self.original_satin)
 
     def break_up(self, segment_size):
         """Break this SatinSegment up into SatinSegments of the specified size."""
 
         num_segments = int(math.ceil(self.center_line.length / segment_size))
         segments = []
-        satin = self.to_satin()
         for i in xrange(num_segments):
-            segments.append(SatinSegment(satin, float(
-                i) / num_segments, float(i + 1) / num_segments, self.reverse))
+            segments.append(SatinSegment(self.satin,
+                                         float(i) / num_segments,
+                                         float(i + 1) / num_segments,
+                                         self.reverse,
+                                         self.original_satin))
 
         if self.reverse:
             segments.reverse()
@@ -120,6 +123,10 @@ class SatinSegment(object):
     @cache
     def end_point(self):
         return self.satin.center_line.interpolate(self.end, normalized=True)
+
+    @property
+    def original_node(self):
+        return self.original_satin.node
 
     def is_sequential(self, other):
         """Check if a satin segment immediately follows this one on the same satin."""
@@ -213,10 +220,11 @@ class RunningStitch(object):
         style['stroke-dasharray'] = "0.5,0.5"
         style = simplestyle.formatStyle(style)
         node.set("style", style)
-
         node.set("embroider_running_stitch_length_mm", self.running_stitch_length)
 
-        return Stroke(node)
+        stroke = Stroke(node)
+
+        return stroke
 
     @property
     @cache
@@ -228,12 +236,19 @@ class RunningStitch(object):
     def end_point(self):
         return self.path.interpolate(1.0, normalized=True)
 
+    @property
+    def original_node(self):
+        return self.original_element.node
+
     @cache
     def reversed(self):
         return RunningStitch(shgeo.LineString(reversed(self.path.coords)), self.style)
 
     def is_sequential(self, other):
         if not isinstance(other, RunningStitch):
+            return False
+
+        if self.original_element is not other.original_element:
             return False
 
         return self.path.distance(other.path) < 0.5
@@ -277,6 +292,11 @@ def auto_satin(elements, preserve_order=False, starting_point=None, ending_point
     instances (that are running stitch) can be included to indicate how to travel
     between two SatinColumns.  This works best when preserve_order is True.
 
+    If preserve_order is True, then the elements and any newly-created elements
+    will be in the same position in the SVG DOM.  If preserve_order is False, then
+    the elements will be removed from the SVG DOM and it's up to the caller to
+    decide where to put the returned SVG path nodes.
+
     Returns: a list of SVG path nodes making up the selected stitch order.
       Jumps between objects are implied if they are not right next to each
       other.
@@ -289,7 +309,13 @@ def auto_satin(elements, preserve_order=False, starting_point=None, ending_point
     path = find_path(graph, starting_node, ending_node)
     operations = path_to_operations(graph, path)
     operations = collapse_sequential_segments(operations)
-    return operations_to_elements_and_trims(operations)
+    new_elements, trims, original_parents = operations_to_elements_and_trims(operations, preserve_order)
+    remove_original_elements(elements)
+
+    if preserve_order:
+        preserve_original_groups(new_elements, original_parents)
+
+    return new_elements, trims
 
 
 def build_graph(elements, preserve_order=False):
@@ -306,7 +332,7 @@ def build_graph(elements, preserve_order=False):
         segments = []
         if isinstance(element, Stroke):
             segments.append(RunningStitch(element))
-        else:
+        elif isinstance(element, SatinColumn):
             whole_satin = SatinSegment(element)
             segments = whole_satin.break_up(PIXELS_PER_MM)
 
@@ -548,26 +574,57 @@ def collapse_sequential_segments(old_operations):
     return new_operations
 
 
-def operations_to_elements_and_trims(operations):
+def operations_to_elements_and_trims(operations, preserve_order):
     """Convert a list of operations to Elements and locations of trims.
 
     Returns:
-        (nodes, trims)
+        (elements, trims, original_parents)
 
-        element -- a list of Element instances
+        elements -- a list of Element instances
         trims -- indices of nodes after which the thread should be trimmed
+        original_parents -- a parallel list of the original SVG parent nodes that spawned each element
     """
 
     elements = []
     trims = []
+    original_parent_nodes = []
 
     for operation in operations:
-        # Ignore JumpStitch opertions.  Jump stitches in Ink/Stitch are
+        # Ignore JumpStitch operations.  Jump stitches in Ink/Stitch are
         # implied and added by Embroider if needed.
         if isinstance(operation, (SatinSegment, RunningStitch)):
             elements.append(operation.to_element())
+            original_parent_nodes.append(operation.original_node.getparent())
         elif isinstance(operation, (JumpStitch)):
             if elements and operation.length > PIXELS_PER_MM:
                 trims.append(len(elements) - 1)
 
-    return elements, list(set(trims))
+    return elements, list(set(trims)), original_parent_nodes
+
+
+def remove_original_elements(elements):
+    for element in elements:
+        for command in element.commands:
+            remove_from_parent(command.connector)
+            remove_from_parent(command.use)
+        remove_from_parent(element.node)
+
+
+def remove_from_parent(node):
+    if node.getparent() is not None:
+        node.getparent().remove(node)
+
+
+def preserve_original_groups(elements, original_parent_nodes):
+    """Ensure that all elements are contained in the original SVG group elements.
+
+    When preserve_order is True, no SatinColumn or Stroke elements will be
+    reordered in the XML tree.  This makes it possible to preserve original SVG
+    group membership.  We'll ensure that each newly-created Element is added
+    to the group that contained the original SatinColumn that spawned it.
+    """
+
+    for element, parent in izip(elements, original_parent_nodes):
+        if parent is not None:
+            parent.append(element.node)
+            element.node.set('transform', get_correction_transform(parent, child=True))
