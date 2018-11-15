@@ -23,14 +23,26 @@ gallery:
     url: https://user-images.githubusercontent.com/44113605/47873925-215c9900-de1b-11e8-9f2e-0598991a7ad3.JPG
   - image_path: https://user-images.githubusercontent.com/44113605/47873966-3a654a00-de1b-11e8-83f1-0ac88ce6abd0.JPG
     url: https://user-images.githubusercontent.com/44113605/47873966-3a654a00-de1b-11e8-83f1-0ac88ce6abd0.JPG
+  - image_path: https://user-images.githubusercontent.com/44113605/48496977-e8b9b800-e83b-11e8-9fd0-f0489b396af2.jpg
+    url: https://user-images.githubusercontent.com/44113605/48496977-e8b9b800-e83b-11e8-9fd0-f0489b396af2.jpg 
 ---
 A project by jameskolme.
 
-## Video
+## Introduction
 
 {% include video id="0lERsPc5gEk" provider="youtube" %}
 
-## Images
+So, what is what and how does it work?
+
+Sewing machine part is any old or new sewing machine. Only change for original is stepper motor with synchronised pulley system (chain/belt drive) and more embroidery friendly presser foot. It is recommended to use older sewing machine, way more convenient to mount stepper motor to cast iron and prises are relatively cheap.
+
+XY movement consists mainly 3D printed parts, 12 pcs and similar parts known from self build 3D printers. Both axes use GT2 belts, nema17 steppers and both directions are fully scalable.
+
+Synchronous movement comes from Arduino powered GRBL G-code interpreter, it is mouthful, but basically machine moves using G-code send to Arduino. It is not that complicated and it is only carrier like any other one when going from system to another one.
+
+Now we have movement and code, but how to make nice shapes and export to G-code. It is nothing to do with medieval sorcery, it is a matter of downloading [Inkscape](https://inkscape.org/) and extension called [Inkstitch](https://inkstitch.org/)
+
+Help and examples how to use Inkstitch extension can be found address above. End result should be really close to hobby level embroidery machines, just slower speed. After all, embroidery machine is nothing more than overgrown sewing machine.
 
 {% include gallery %}
 
@@ -70,16 +82,21 @@ Thin oil or gun oil, make sure sewing machine is oiled well, but don't over do i
 
 ### The build
 
-Building embroidery machine is relative simple procedure, just download 3D models to print and buy few screws counted on BOM. This is really simple for those that have already build their own 3D printer, this is actually simpler and at the same time includes a lot of same parts.
+Building embroidery machine is relative simple procedure, just [download 3D models](https://www.thingiverse.com/thing:3216283) to print and buy few screws counted on BOM. This is really simple for those that have already build their own 3D printer, this is actually simpler and at the same time includes a lot of same parts.
 
 Building instructions are mostly on 4 videos:
 
 1. Y sled assembly
-2. Y axis assembly
-3. X axis assembly
-4. Some GRBL basics to get starting
+{% include video id="xwg58aGayUg" provider="youtube" %}
 
-(Videos will be added soon)
+2. Y axis assembly
+{% include video id="vyq9lXJMjMY" provider="youtube" %}
+
+3. X axis assembly
+{% include video id="WVesFFnXXIc" provider="youtube" %}
+
+4. Some GRBL basics to get starting
+{% include video id="TxORG9BvSzI" provider="youtube" %}
 
 Videos should cover mostly everything mechanical, there is small BOM text, but it is not that complete. Important note would be to not over tight, there are plenty of screws to not have to over tight, because printed parts are fragile!
 
@@ -181,6 +198,10 @@ I will update motor or double the voltage. Sprocket I have used are self made fr
 so dimensions from them will not help anybody else. I would greatly recommend driving stepper
 with closed loop operation. If stalled, it will recover and should be possible to drive faster and
 reliable.
+
+### Locations of 3D printed parts
+
+![3D pritned parts location](https://user-images.githubusercontent.com/44113605/48500507-b01ddc80-e843-11e8-8962-9f9dade44f44.jpg)
 
 ## Discussion
 
