@@ -86,16 +86,16 @@ Building embroidery machine is relative simple procedure, just [download 3D mode
 
 Building instructions are mostly on 4 videos:
 
-1. Y sled assembly
+**Part 1:** Y sled assembly
 {% include video id="xwg58aGayUg" provider="youtube" %}
 
-2. Y axis assembly
+**Part 2:** Y axis assembly
 {% include video id="vyq9lXJMjMY" provider="youtube" %}
 
-3. X axis assembly
+**Part 3:** X axis assembly
 {% include video id="WVesFFnXXIc" provider="youtube" %}
 
-4. Some GRBL basics to get starting
+**Part 4:** Some GRBL basics to get starting
 {% include video id="TxORG9BvSzI" provider="youtube" %}
 
 Videos should cover mostly everything mechanical, there is small BOM text, but it is not that complete. Important note would be to not over tight, there are plenty of screws to not have to over tight, because printed parts are fragile!
