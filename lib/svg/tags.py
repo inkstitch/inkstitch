@@ -16,5 +16,6 @@ CONNECTOR_TYPE = inkex.addNS('connector-type', 'inkscape')
 XLINK_HREF = inkex.addNS('href', 'xlink')
 SODIPODI_NAMEDVIEW = inkex.addNS('namedview', 'sodipodi')
 SODIPODI_GUIDE = inkex.addNS('guide', 'sodipodi')
+INKSTITCH_TEXT = inkex.addNS('text', 'inkstitch')
 
 EMBROIDERABLE_TAGS = (SVG_PATH_TAG, SVG_POLYLINE_TAG)
