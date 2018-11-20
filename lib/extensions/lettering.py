@@ -1,8 +1,5 @@
 # -*- coding: UTF-8 -*-
 
-from collections import defaultdict
-from copy import copy
-from itertools import groupby
 import json
 import os
 import sys
@@ -11,18 +8,14 @@ import traceback
 import inkex
 
 import wx
-from wx.lib.scrolledpanel import ScrolledPanel
 
-from ..commands import is_command
-from ..elements import EmbroideryElement, Fill, AutoFill, Stroke, SatinColumn, nodes_to_elements
+from ..elements import nodes_to_elements
 from ..i18n import _
 from ..lettering import Font
 from ..simulator import EmbroiderySimulator
 from ..stitch_plan import patches_to_stitch_plan
 from ..svg.tags import SVG_PATH_TAG, SVG_GROUP_TAG, INKSCAPE_LABEL, INKSTITCH_TEXT
 from ..utils import get_bundled_dir
-from ..utils import get_resource_dir
-from .base import InkstitchExtension
 from .commands import CommandsExtension
 
 
