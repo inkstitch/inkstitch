@@ -415,7 +415,12 @@ class Lettering(CommandsExtension):
             groups = set()
 
             for node in self.selected.itervalues():
-                groups.extend(node.iterancestors(SVG_GROUP_TAG))
+                if node.tag == SVG_GROUP_TAG and INKSTITCH_TEXT in node.attrib:
+                    groups.add(node)
+
+                for group in node.iterancestors(SVG_GROUP_TAG):
+                    if INKSTITCH_TEXT in group.attrib:
+                        groups.add(group)
 
             if len(groups) > 1:
                 inkex.errormsg(_("Please select only one block of text."))

@@ -1,5 +1,8 @@
 import inkex
 
+# This is used below and added to the document in ../extensions/base.py.
+inkex.NSS['inkstitch'] = 'http://inkstitch.org/namespace'
+
 
 SVG_PATH_TAG = inkex.addNS('path', 'svg')
 SVG_POLYLINE_TAG = inkex.addNS('polyline', 'svg')
