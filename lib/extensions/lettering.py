@@ -1,12 +1,13 @@
 # -*- coding: UTF-8 -*-
 
+from base64 import b64encode, b64decode
 import json
 import os
 import sys
 from threading import Thread, Event
 import traceback
-import inkex
 
+import inkex
 import wx
 
 from ..elements import nodes_to_elements
@@ -137,11 +138,25 @@ class LetteringFrame(wx.Frame):
 
     @property
     def text(self):
-        return self.group.get(INKSTITCH_TEXT, u'')
+        try:
+            if INKSTITCH_TEXT in self.group.attrib:
+                return b64decode(self.group.get(INKSTITCH_TEXT)).decode('UTF-8')
+        except TypeError:
+            pass
+
+        return u''
 
     @text.setter
     def text(self, value):
-        self.group.set(INKSTITCH_TEXT, value)
+        # We base64 encode the string before storign it in an XML attribute.
+        # In theory, lxml should properly html-encode the string, using HTML
+        # entities like &#10; as necessary.  However, we've found that Inkscape
+        # incorrectly interpolates the HTML entities upon reading the
+        # extension's output, rather than leaving them as is.
+        #
+        # Details:
+        #   https://bugs.launchpad.net/inkscape/+bug/1804346
+        self.group.set(INKSTITCH_TEXT, b64encode(value.encode("UTF-8")))
 
     def text_changed(self, event):
         self.text = self.text_editor.GetValue()
