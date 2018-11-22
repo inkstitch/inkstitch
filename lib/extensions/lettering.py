@@ -191,6 +191,10 @@ class LetteringFrame(wx.Frame):
 
     def refresh_simulator(self, patches):
         stitch_plan = patches_to_stitch_plan(patches)
+
+        if self.disable_simulate_window:
+            return
+
         if self.simulate_window:
             self.simulate_window.stop()
             self.simulate_window.load(stitch_plan)
@@ -355,10 +359,11 @@ class LetteringFrame(wx.Frame):
         event.Skip()
 
     def apply(self, event):
-        # TODO: should wait to ensure simulator thread is done
         self.close()
+        self.generate_patches()
 
     def close(self):
+        self.disable_simulate_window = True
         if self.simulate_window:
             self.simulate_window.stop()
             self.simulate_window.Close()
