@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-10-31 01:35+0000\n"
-"PO-Revision-Date: 2018-10-31 01:35\n"
+"POT-Creation-Date: 2018-11-16 01:42+0000\n"
+"PO-Revision-Date: 2018-11-23 01:47\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -434,32 +434,32 @@ msgid "Please ensure that at most one start and end command is attached to the s
 msgstr ""
 
 #. auto-route satin columns extension
-#: lib/extensions/auto_satin.py:61
+#: lib/extensions/auto_satin.py:62
 msgid "Please select one or more satin columns."
 msgstr ""
 
 #. Label for a satin column created by Auto-Route Satin Columns extension
-#: lib/extensions/auto_satin.py:95
+#: lib/extensions/auto_satin.py:89
 #, python-format
 msgid "AutoSatin %d"
 msgstr ""
 
 #. Label for running stitch (underpathing) created by Auto-Route Satin Columns
 #. extension
-#: lib/extensions/auto_satin.py:100
+#: lib/extensions/auto_satin.py:94
 #, python-format
 msgid "AutoSatin Running Stitch %d"
 msgstr ""
 
-#: lib/extensions/base.py:114
+#: lib/extensions/base.py:124
 msgid "No embroiderable paths selected."
 msgstr "Nenhum caminho bordável seleccionado."
 
-#: lib/extensions/base.py:116
+#: lib/extensions/base.py:126
 msgid "No embroiderable paths found in document."
 msgstr "Nenhum caminho bordável encontrado no documento."
 
-#: lib/extensions/base.py:117
+#: lib/extensions/base.py:127
 msgid "Tip: use Path -> Object to Path to convert non-paths."
 msgstr ""
 
@@ -468,7 +468,7 @@ msgstr ""
 msgid "connector"
 msgstr ""
 
-#: lib/extensions/commands.py:109 lib/extensions/layer_commands.py:39
+#: lib/extensions/commands.py:109 lib/extensions/layer_commands.py:29
 msgid "Ink/Stitch Command"
 msgstr ""
 
@@ -529,6 +529,8 @@ msgid "Install"
 msgstr "Instalar"
 
 #: lib/extensions/install.py:40 lib/extensions/params.py:407
+#: print/templates/ui.html:72 print/templates/ui.html:76
+#: print/templates/ui.html:82
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -556,8 +558,14 @@ msgstr "Instalação concluída"
 msgid "Ink/Stitch Add-ons Installer"
 msgstr ""
 
-#: lib/extensions/layer_commands.py:27
+#: lib/extensions/layer_commands.py:17
 msgid "Please choose one or more commands to add."
+msgstr ""
+
+#. Label for an object created by the Lettering extension
+#: lib/extensions/lettering.py:34
+#, python-format
+msgid "Lettering %d"
 msgstr ""
 
 #: lib/extensions/object_commands.py:16
@@ -692,6 +700,10 @@ msgstr ""
 #. menu.
 #: lib/inx/utils.py:46
 msgid "Generate INX files"
+msgstr ""
+
+#: lib/lettering/font.py:94
+msgid "Ink/Stitch Text"
 msgstr ""
 
 #. low-level file error.  %(error)s is (hopefully?) translated by
@@ -848,6 +860,11 @@ msgstr ""
 msgid "Page"
 msgstr "Página"
 
+#: print/templates/footer.html:3 print/templates/ui.html:78
+#: print/templates/ui.html:85
+msgid "Proudly generated with"
+msgstr ""
+
 #: print/templates/headline.html:5
 msgid "Click to choose another logo"
 msgstr "Clique para escolher outro logotipo"
@@ -989,111 +1006,149 @@ msgstr "Fechar"
 msgid "⚠ lost connection to Ink/Stitch"
 msgstr ""
 
-#: print/templates/ui.html:18 print/templates/ui.html:24
+#: print/templates/ui.html:18 print/templates/ui.html:28
 msgid "Page Setup"
 msgstr ""
 
-#: print/templates/ui.html:19 print/templates/ui.html:48
+#: print/templates/ui.html:19
+msgid "Branding"
+msgstr ""
+
+#: print/templates/ui.html:20 print/templates/ui.html:92
 msgid "Estimated Time"
 msgstr ""
 
-#: print/templates/ui.html:20 print/templates/ui.html:81
+#: print/templates/ui.html:21 print/templates/ui.html:126
 msgid "Design"
 msgstr ""
 
-#: print/templates/ui.html:27
+#: print/templates/ui.html:30
 msgid "Printing Size"
 msgstr ""
 
-#: print/templates/ui.html:36
+#: print/templates/ui.html:38
 msgid "Print Layouts"
 msgstr ""
 
-#: print/templates/ui.html:37 print/templates/ui.html:72
+#: print/templates/ui.html:39 print/templates/ui.html:116
 msgid "Client Overview"
 msgstr ""
 
-#: print/templates/ui.html:38 print/templates/ui.html:73
+#: print/templates/ui.html:40 print/templates/ui.html:117
 msgid "Client Detailed View"
 msgstr ""
 
-#: print/templates/ui.html:39 print/templates/ui.html:74
+#: print/templates/ui.html:41 print/templates/ui.html:118
 msgid "Operator Overview"
 msgstr ""
 
-#: print/templates/ui.html:40 print/templates/ui.html:75
+#: print/templates/ui.html:42 print/templates/ui.html:119
 msgid "Operator Detailed View"
 msgstr ""
 
-#: print/templates/ui.html:41
+#: print/templates/ui.html:43
 msgid "Thumbnail size"
 msgstr ""
 
-#: print/templates/ui.html:44 print/templates/ui.html:78
+#: print/templates/ui.html:45 print/templates/ui.html:88
 msgid "Includes these Page Setup, estimated time settings and also the icon."
 msgstr ""
 
-#: print/templates/ui.html:44 print/templates/ui.html:78
+#: print/templates/ui.html:45 print/templates/ui.html:88
+#: print/templates/ui.html:122
 msgid "Save as defaults"
 msgstr ""
 
 #: print/templates/ui.html:50
+msgid "Logo"
+msgstr ""
+
+#: print/templates/ui.html:60
+msgid "Footer: Operator contact information"
+msgstr ""
+
+#: print/templates/ui.html:71
+msgid "Enter URL"
+msgstr ""
+
+#: print/templates/ui.html:72 print/templates/ui.html:76
+#: print/templates/ui.html:82
+msgid "OK"
+msgstr ""
+
+#: print/templates/ui.html:75
+msgid "Enter E-Mail"
+msgstr ""
+
+#: print/templates/ui.html:80
+msgid "This will reset your custom text to the default."
+msgstr ""
+
+#: print/templates/ui.html:81
+msgid "All changes will be lost."
+msgstr ""
+
+#: print/templates/ui.html:94
 msgid "Machine Settings"
 msgstr ""
 
-#: print/templates/ui.html:52
+#: print/templates/ui.html:96
 msgid "Average Machine Speed"
 msgstr ""
 
-#: print/templates/ui.html:53
+#: print/templates/ui.html:97
 msgid "stitches per minute "
 msgstr ""
 
-#: print/templates/ui.html:57
+#: print/templates/ui.html:101
 msgid "Time Factors"
 msgstr ""
 
-#: print/templates/ui.html:60
+#: print/templates/ui.html:104
 msgid "Includes average time for preparing the machine, thread breaks and/or bobbin changes, etc."
 msgstr ""
 
-#: print/templates/ui.html:60
+#: print/templates/ui.html:104
 msgid "seconds to add to total time*"
 msgstr ""
 
-#: print/templates/ui.html:64
+#: print/templates/ui.html:108
 msgid "This will be added to the total time."
 msgstr ""
 
-#: print/templates/ui.html:64
+#: print/templates/ui.html:108
 msgid "seconds needed for a color change*"
 msgstr ""
 
-#: print/templates/ui.html:67
+#: print/templates/ui.html:111
 msgid "seconds needed for trim"
 msgstr ""
 
-#: print/templates/ui.html:70
+#: print/templates/ui.html:114
 msgid "Display Time On"
 msgstr ""
 
-#: print/templates/ui.html:82
+#: print/templates/ui.html:122
+msgid "Includes page setup, estimated time and also the branding."
+msgstr ""
+
+#: print/templates/ui.html:127
 msgid "Thread Palette"
 msgstr ""
 
-#: print/templates/ui.html:85
+#: print/templates/ui.html:130
 msgid "None"
 msgstr ""
 
-#: print/templates/ui.html:99
+#: print/templates/ui.html:146
 msgid "Changing the thread palette will cause thread names and catalog numbers to be recalculated based on the new palette.  Any changes you have made to color or thread names will be lost.  Are you sure?"
 msgstr ""
 
-#: print/templates/ui.html:102
+#: print/templates/ui.html:149
 msgid "Yes"
 msgstr ""
 
-#: print/templates/ui.html:103
+#: print/templates/ui.html:150
 msgid "No"
 msgstr ""
 
@@ -1295,8 +1350,9 @@ msgstr ""
 #: templates/auto_satin.inx:14 templates/convert_to_satin.inx:12
 #: templates/cut_satin.inx:12 templates/embroider.inx:24 templates/flip.inx:12
 #: templates/global_commands.inx:16 templates/install.inx:12
-#: templates/layer_commands.inx:16 templates/object_commands.inx:15
-#: templates/params.inx:12 templates/print.inx:12 templates/simulate.inx:12
+#: templates/layer_commands.inx:16 templates/lettering.inx:14
+#: templates/object_commands.inx:15 templates/params.inx:12
+#: templates/print.inx:12 templates/simulate.inx:12
 msgid "English"
 msgstr ""
 
@@ -1382,6 +1438,14 @@ msgstr ""
 
 #: templates/layer_commands.inx:7
 msgid "Commands will be added to the currently-selected layer."
+msgstr ""
+
+#: templates/lettering.inx:3
+msgid "Lettering"
+msgstr ""
+
+#: templates/lettering.inx:7
+msgid "Text"
 msgstr ""
 
 #: templates/object_commands.inx:3

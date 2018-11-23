@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-10-31 01:35+0000\n"
-"PO-Revision-Date: 2018-10-31 01:35\n"
+"POT-Creation-Date: 2018-11-16 01:42+0000\n"
+"PO-Revision-Date: 2018-11-23 01:47\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 #. command attached to an object
 #: lib/commands.py:13
 msgid "fill_start"
-msgstr ""
+msgstr "fill_start"
 
 #: lib/commands.py:13
 msgid "Fill stitch starting position"
@@ -29,7 +29,7 @@ msgstr "Füllstich Startposition"
 #. command attached to an object
 #: lib/commands.py:16
 msgid "fill_end"
-msgstr ""
+msgstr "fill_end"
 
 #: lib/commands.py:16
 msgid "Fill stitch ending position"
@@ -38,25 +38,25 @@ msgstr "Füllstich Endposition"
 #. command attached to an object
 #: lib/commands.py:19
 msgid "satin_start"
-msgstr ""
+msgstr "satin_start"
 
 #: lib/commands.py:19
 msgid "Auto-route satin stitch starting position"
-msgstr ""
+msgstr "Startposition für automatisch geführte Satinkolumne"
 
 #. command attached to an object
 #: lib/commands.py:22
 msgid "satin_end"
-msgstr ""
+msgstr "satin_end"
 
 #: lib/commands.py:22
 msgid "Auto-route satin stitch ending position"
-msgstr ""
+msgstr "Endposition für automatisch geführte Satinkolumne"
 
 #. command attached to an object
 #: lib/commands.py:25
 msgid "stop"
-msgstr ""
+msgstr "stop"
 
 #: lib/commands.py:25
 msgid "Stop (pause machine) after sewing this object"
@@ -65,7 +65,7 @@ msgstr "Stoppen (Pause) nach dem Nähen diesem Objekts"
 #. command attached to an object
 #: lib/commands.py:28
 msgid "trim"
-msgstr ""
+msgstr "trim"
 
 #: lib/commands.py:28
 msgid "Trim thread after sewing this object"
@@ -74,7 +74,7 @@ msgstr "Faden abschneiden nach diesem Objekt"
 #. command attached to an object
 #: lib/commands.py:31
 msgid "ignore_object"
-msgstr ""
+msgstr "ignore_object"
 
 #: lib/commands.py:31
 msgid "Ignore this object (do not stitch)"
@@ -83,16 +83,16 @@ msgstr "Ignoriere dieses Objekt (nicht nähen)"
 #. command attached to an object
 #: lib/commands.py:34
 msgid "satin_cut_point"
-msgstr ""
+msgstr "satin_cut_point"
 
 #: lib/commands.py:34
 msgid "Satin cut point (use with Cut Satin Column)"
-msgstr ""
+msgstr "Satin Schnittpunkt (mit \"Satinkolumne schneiden\" benutzen)"
 
 #. command that affects a layer
 #: lib/commands.py:38
 msgid "ignore_layer"
-msgstr ""
+msgstr "ignore_layer"
 
 #: lib/commands.py:38
 msgid "Ignore layer (do not stitch any objects in this layer)"
@@ -101,25 +101,25 @@ msgstr "Ebene ignorieren (keine Objekte in dieser Ebene nähen)"
 #. command that affects entire document
 #: lib/commands.py:41
 msgid "origin"
-msgstr ""
+msgstr "origin"
 
 #: lib/commands.py:41
 msgid "Origin for exported embroidery files"
-msgstr ""
+msgstr "Nullpunkt für exportierte Stickdateien"
 
 #. command that affects entire document
 #: lib/commands.py:44
 msgid "stop_position"
-msgstr ""
+msgstr "stop_position"
 
 #: lib/commands.py:44
 msgid "Jump destination for Stop commands (a.k.a. \"Frame Out position\")."
-msgstr ""
+msgstr "Rahmenposition nach Stop-Befehlen."
 
 #: lib/commands.py:202
 #, python-format
 msgid "Error: there is more than one %(command)s command in the document, but there can only be one.  Please remove all but one."
-msgstr ""
+msgstr "Fehler: Es gibt mehr als einen %(command)s-Befehl in dem Dokument, aber es darf nur einen geben. Bitte alle bis auf einen entfernen."
 
 #. This is a continuation of the previous error message, letting the user know
 #. what command we're talking about since we don't normally expose the actual
@@ -129,7 +129,7 @@ msgstr ""
 #: lib/commands.py:209
 #, python-format
 msgid "%(command)s: %(description)s"
-msgstr ""
+msgstr "%(command)s: %(description)s"
 
 #: lib/elements/auto_fill.py:11
 msgid "AutoFill"
@@ -432,35 +432,35 @@ msgstr "Veraltete Laufstich-Einstellung erkannt!\n\n"
 
 #: lib/extensions/auto_satin.py:32
 msgid "Please ensure that at most one start and end command is attached to the selected satin columns."
-msgstr ""
+msgstr "Bitte sicherstellen, dass höchstens ein Start- und End-Befehl mit den ausgewählten Satinkolumnen verknüpft ist."
 
 #. auto-route satin columns extension
-#: lib/extensions/auto_satin.py:61
+#: lib/extensions/auto_satin.py:62
 msgid "Please select one or more satin columns."
-msgstr ""
+msgstr "Bitte eine oder mehrere Satinkolumnen auswählen."
 
 #. Label for a satin column created by Auto-Route Satin Columns extension
-#: lib/extensions/auto_satin.py:95
+#: lib/extensions/auto_satin.py:89
 #, python-format
 msgid "AutoSatin %d"
-msgstr ""
+msgstr "AutoSatin %d"
 
 #. Label for running stitch (underpathing) created by Auto-Route Satin Columns
 #. extension
-#: lib/extensions/auto_satin.py:100
+#: lib/extensions/auto_satin.py:94
 #, python-format
 msgid "AutoSatin Running Stitch %d"
-msgstr ""
+msgstr "AutoSatin Laufstich %d"
 
-#: lib/extensions/base.py:114
+#: lib/extensions/base.py:124
 msgid "No embroiderable paths selected."
 msgstr "Keine zu stickenden Pfade ausgewählt."
 
-#: lib/extensions/base.py:116
+#: lib/extensions/base.py:126
 msgid "No embroiderable paths found in document."
 msgstr "Keine zu stickenden Pfade im Dokument gefunden."
 
-#: lib/extensions/base.py:117
+#: lib/extensions/base.py:127
 msgid "Tip: use Path -> Object to Path to convert non-paths."
 msgstr "Tipp: Verwende Pfad -> Objekt zu Pfad umwandeln, um nicht-Pfade vor dem Sticken zu konvertieren."
 
@@ -469,7 +469,7 @@ msgstr "Tipp: Verwende Pfad -> Objekt zu Pfad umwandeln, um nicht-Pfade vor dem 
 msgid "connector"
 msgstr "Verknüpfung"
 
-#: lib/extensions/commands.py:109 lib/extensions/layer_commands.py:39
+#: lib/extensions/commands.py:109 lib/extensions/layer_commands.py:29
 msgid "Ink/Stitch Command"
 msgstr "Ink/Stitch Befehl"
 
@@ -530,6 +530,8 @@ msgid "Install"
 msgstr "Installieren"
 
 #: lib/extensions/install.py:40 lib/extensions/params.py:407
+#: print/templates/ui.html:72 print/templates/ui.html:76
+#: print/templates/ui.html:82
 msgid "Cancel"
 msgstr "Abbrechen"
 
@@ -557,9 +559,15 @@ msgstr "Installation abgeschlossen"
 msgid "Ink/Stitch Add-ons Installer"
 msgstr "Ink/Stitch Add-ons Installer"
 
-#: lib/extensions/layer_commands.py:27
+#: lib/extensions/layer_commands.py:17
 msgid "Please choose one or more commands to add."
 msgstr "Bitte wählen Sie einen oder mehrere Befehle um diese zu verknüpfen."
+
+#. Label for an object created by the Lettering extension
+#: lib/extensions/lettering.py:34
+#, python-format
+msgid "Lettering %d"
+msgstr "Beschriftung %d"
 
 #: lib/extensions/object_commands.py:16
 msgid "Please select one or more objects to which to attach commands."
@@ -695,6 +703,10 @@ msgstr "Keine Stick-Dateiformate ausgewählt."
 #: lib/inx/utils.py:46
 msgid "Generate INX files"
 msgstr "Erzeuge INX Dateien"
+
+#: lib/lettering/font.py:94
+msgid "Ink/Stitch Text"
+msgstr "Ink/Stitch Text"
 
 #. low-level file error.  %(error)s is (hopefully?) translated by
 #. the user's system automatically.
@@ -844,11 +856,16 @@ msgstr "nein"
 #: print/templates/operator_detailedview.html:57
 #: print/templates/print_detail.html:6
 msgid "Enter thread name..."
-msgstr ""
+msgstr "Garnbezeichnung eingeben..."
 
 #: print/templates/footer.html:2
 msgid "Page"
 msgstr "Seite"
+
+#: print/templates/footer.html:3 print/templates/ui.html:78
+#: print/templates/ui.html:85
+msgid "Proudly generated with"
+msgstr "Erstellt mit"
 
 #: print/templates/headline.html:5
 msgid "Click to choose another logo"
@@ -877,7 +894,7 @@ msgstr "Auftragsnummer eingeben..."
 #: print/templates/headline.html:15
 #, python-format
 msgid "%m/%d/%Y"
-msgstr ""
+msgstr "%d.%m.%Y"
 
 #: print/templates/operator_detailedview.html:10
 msgid "Thread Consumption"
@@ -939,7 +956,7 @@ msgstr "Garnverbrauch"
 
 #: print/templates/operator_detailedview.html:64
 msgid "estimated time"
-msgstr ""
+msgstr "voraussichtliche Dauer"
 
 #: print/templates/operator_detailedview.html:67
 msgid "trims"
@@ -991,111 +1008,149 @@ msgstr "Schließen"
 msgid "⚠ lost connection to Ink/Stitch"
 msgstr "⚠ Verbindung zu Ink/Stich verloren"
 
-#: print/templates/ui.html:18 print/templates/ui.html:24
+#: print/templates/ui.html:18 print/templates/ui.html:28
 msgid "Page Setup"
 msgstr "Dokumenteinstellungen"
 
-#: print/templates/ui.html:19 print/templates/ui.html:48
-msgid "Estimated Time"
-msgstr ""
+#: print/templates/ui.html:19
+msgid "Branding"
+msgstr "Branding"
 
-#: print/templates/ui.html:20 print/templates/ui.html:81
+#: print/templates/ui.html:20 print/templates/ui.html:92
+msgid "Estimated Time"
+msgstr "Voraussichtliche Dauer"
+
+#: print/templates/ui.html:21 print/templates/ui.html:126
 msgid "Design"
 msgstr "Design"
 
-#: print/templates/ui.html:27
+#: print/templates/ui.html:30
 msgid "Printing Size"
 msgstr "Papierformat"
 
-#: print/templates/ui.html:36
+#: print/templates/ui.html:38
 msgid "Print Layouts"
 msgstr "Druck-Layouts"
 
-#: print/templates/ui.html:37 print/templates/ui.html:72
+#: print/templates/ui.html:39 print/templates/ui.html:116
 msgid "Client Overview"
 msgstr "Kundenlayout: Übersicht"
 
-#: print/templates/ui.html:38 print/templates/ui.html:73
+#: print/templates/ui.html:40 print/templates/ui.html:117
 msgid "Client Detailed View"
 msgstr "Kundenlayout: Detailansicht"
 
-#: print/templates/ui.html:39 print/templates/ui.html:74
+#: print/templates/ui.html:41 print/templates/ui.html:118
 msgid "Operator Overview"
 msgstr "Ausführungslayout: Übersicht"
 
-#: print/templates/ui.html:40 print/templates/ui.html:75
+#: print/templates/ui.html:42 print/templates/ui.html:119
 msgid "Operator Detailed View"
 msgstr "Ausführungslayout: Detailansicht"
 
-#: print/templates/ui.html:41
+#: print/templates/ui.html:43
 msgid "Thumbnail size"
 msgstr "Vorschaugröße"
 
-#: print/templates/ui.html:44 print/templates/ui.html:78
+#: print/templates/ui.html:45 print/templates/ui.html:88
 msgid "Includes these Page Setup, estimated time settings and also the icon."
-msgstr ""
+msgstr "Dies umfasst die Einstellungen zum Dokument, zur Berechnung der voraussichtlichen Dauer und das Logo."
 
-#: print/templates/ui.html:44 print/templates/ui.html:78
+#: print/templates/ui.html:45 print/templates/ui.html:88
+#: print/templates/ui.html:122
 msgid "Save as defaults"
 msgstr "Als Standardeinstellung speichern"
 
 #: print/templates/ui.html:50
-msgid "Machine Settings"
-msgstr ""
-
-#: print/templates/ui.html:52
-msgid "Average Machine Speed"
-msgstr ""
-
-#: print/templates/ui.html:53
-msgid "stitches per minute "
-msgstr ""
-
-#: print/templates/ui.html:57
-msgid "Time Factors"
-msgstr ""
+msgid "Logo"
+msgstr "Logo"
 
 #: print/templates/ui.html:60
-msgid "Includes average time for preparing the machine, thread breaks and/or bobbin changes, etc."
-msgstr ""
+msgid "Footer: Operator contact information"
+msgstr "Fußzeile: Kontaktinformationen des Bedieners"
 
-#: print/templates/ui.html:60
-msgid "seconds to add to total time*"
-msgstr ""
+#: print/templates/ui.html:71
+msgid "Enter URL"
+msgstr "URL eingeben"
 
-#: print/templates/ui.html:64
-msgid "This will be added to the total time."
-msgstr ""
-
-#: print/templates/ui.html:64
-msgid "seconds needed for a color change*"
-msgstr ""
-
-#: print/templates/ui.html:67
-msgid "seconds needed for trim"
-msgstr ""
-
-#: print/templates/ui.html:70
-msgid "Display Time On"
-msgstr ""
-
+#: print/templates/ui.html:72 print/templates/ui.html:76
 #: print/templates/ui.html:82
+msgid "OK"
+msgstr "OK"
+
+#: print/templates/ui.html:75
+msgid "Enter E-Mail"
+msgstr "E-Mail eingeben"
+
+#: print/templates/ui.html:80
+msgid "This will reset your custom text to the default."
+msgstr "Dadurch wird Ihr benutzerdefinierter Text auf den Standard zurückgesetzt."
+
+#: print/templates/ui.html:81
+msgid "All changes will be lost."
+msgstr "Alle Änderungen gehen verloren."
+
+#: print/templates/ui.html:94
+msgid "Machine Settings"
+msgstr "Angaben zur Stickmaschine"
+
+#: print/templates/ui.html:96
+msgid "Average Machine Speed"
+msgstr "Durchschnittliche Geschwindigkeit"
+
+#: print/templates/ui.html:97
+msgid "stitches per minute "
+msgstr "Stiche pro Minute "
+
+#: print/templates/ui.html:101
+msgid "Time Factors"
+msgstr "Zeitfaktoren"
+
+#: print/templates/ui.html:104
+msgid "Includes average time for preparing the machine, thread breaks and/or bobbin changes, etc."
+msgstr "Umfasst die durchschnittliche Zeit für die Vorbereitung der Maschine, Fadenbruch und/oder das Wechseln der Spule, etc."
+
+#: print/templates/ui.html:104
+msgid "seconds to add to total time*"
+msgstr "Sekunden die der berechneten Gesamtdauer hinzugefügt werden*"
+
+#: print/templates/ui.html:108
+msgid "This will be added to the total time."
+msgstr "Dies wird auf die Gesamtdauer angerechnet."
+
+#: print/templates/ui.html:108
+msgid "seconds needed for a color change*"
+msgstr "Sekunden für den Farbwechsel*"
+
+#: print/templates/ui.html:111
+msgid "seconds needed for trim"
+msgstr "Sekunden die beim Trim-Befehl benötigt werden"
+
+#: print/templates/ui.html:114
+msgid "Display Time On"
+msgstr "Zeige Dauer in"
+
+#: print/templates/ui.html:122
+msgid "Includes page setup, estimated time and also the branding."
+msgstr "Enthält Seiteneinrichtung, geschätzte Zeit und auch das Branding."
+
+#: print/templates/ui.html:127
 msgid "Thread Palette"
 msgstr "Garnpalette"
 
-#: print/templates/ui.html:85
+#: print/templates/ui.html:130
 msgid "None"
 msgstr "Keine"
 
-#: print/templates/ui.html:99
+#: print/templates/ui.html:146
 msgid "Changing the thread palette will cause thread names and catalog numbers to be recalculated based on the new palette.  Any changes you have made to color or thread names will be lost.  Are you sure?"
 msgstr "Bei einer Änderung der Garnpalette  werden die Garnnamen und Bestellnummern neu berechnet. Vorherige Änderungen gehen dabei verloren. Soll die Aktion ausgeführt werden?"
 
-#: print/templates/ui.html:102
+#: print/templates/ui.html:149
 msgid "Yes"
 msgstr "Ja"
 
-#: print/templates/ui.html:103
+#: print/templates/ui.html:150
 msgid "No"
 msgstr "Nein"
 
@@ -1277,19 +1332,19 @@ msgstr "Brother Stichformat"
 #. description for pyembroidery file format: txt
 #: pyembroidery-format-descriptions.py:82
 msgid "G-code Format"
-msgstr ""
+msgstr "G-Code Format"
 
 #: templates/auto_satin.inx:3
 msgid "Auto-Route Satin Columns"
-msgstr ""
+msgstr "Automatisch geführte Satinkolumnen"
 
 #: templates/auto_satin.inx:7
 msgid "Trim jump stitches"
-msgstr ""
+msgstr "Schneide Faden bei Sprungstichen"
 
 #: templates/auto_satin.inx:8
 msgid "Preserve order of satin columns"
-msgstr ""
+msgstr "Behalte Reihenfolge der Satinkolumnen bei"
 
 #. This is used for the submenu under Extensions -> Ink/Stitch.  Translate this
 #. to your language's word for its language, e.g. "Español" for the spanish
@@ -1297,15 +1352,16 @@ msgstr ""
 #: templates/auto_satin.inx:14 templates/convert_to_satin.inx:12
 #: templates/cut_satin.inx:12 templates/embroider.inx:24 templates/flip.inx:12
 #: templates/global_commands.inx:16 templates/install.inx:12
-#: templates/layer_commands.inx:16 templates/object_commands.inx:15
-#: templates/params.inx:12 templates/print.inx:12 templates/simulate.inx:12
+#: templates/layer_commands.inx:16 templates/lettering.inx:14
+#: templates/object_commands.inx:15 templates/params.inx:12
+#: templates/print.inx:12 templates/simulate.inx:12
 msgid "English"
 msgstr "Deutsch"
 
 #: templates/auto_satin.inx:15 templates/convert_to_satin.inx:13
 #: templates/cut_satin.inx:13 templates/flip.inx:13
 msgid "Satin Tools"
-msgstr ""
+msgstr "Satin Werkzeuge"
 
 #: templates/convert_to_satin.inx:3
 msgid "Convert Line to Satin"
@@ -1353,7 +1409,7 @@ msgstr "Leer lassen, um die Ausgabe im Erweiterungsverzeichnis von Inkscape zu s
 
 #: templates/flip.inx:3
 msgid "Flip Satin Column Rails"
-msgstr ""
+msgstr "Konturen der Satinkolumne umkehren"
 
 #: templates/global_commands.inx:3
 msgid "Add Commands"
@@ -1386,6 +1442,14 @@ msgstr "Ebenenbefehle hinzufügen"
 msgid "Commands will be added to the currently-selected layer."
 msgstr "Befehle werden zur aktuell ausgewählten Ebene hinzugefügt."
 
+#: templates/lettering.inx:3
+msgid "Lettering"
+msgstr "Beschriftung"
+
+#: templates/lettering.inx:7
+msgid "Text"
+msgstr "Text"
+
 #: templates/object_commands.inx:3
 msgid "Attach Commands to Selected Objects"
 msgstr "Befehle mit gewählten Objekten verknüpfen"
@@ -1397,15 +1461,15 @@ msgstr "Speichern des Designs ins %(file_extension)s Format mit Ink/Stitch"
 
 #: templates/output_params_txt.xml:2
 msgid "Negate x coordinates"
-msgstr ""
+msgstr "X-Koordinaten negieren"
 
 #: templates/output_params_txt.xml:3
 msgid "Negate y coordinates"
-msgstr ""
+msgstr "Y-Koordinaten negieren"
 
 #: templates/output_params_txt.xml:4
 msgid "increment z coordinate by this amount per stitch"
-msgstr ""
+msgstr "Erhöhe z-Koordinate um diesen Wert pro Stich"
 
 #: templates/params.inx:3
 msgid "Params"
