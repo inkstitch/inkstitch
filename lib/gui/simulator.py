@@ -1,12 +1,14 @@
+from itertools import izip
 import sys
+import time
+
 import wx
 from wx.lib.intctrl import IntCtrl
-import time
-from itertools import izip
 
-from .svg import PIXELS_PER_MM
-from .i18n import _
-from .stitch_plan import stitch_plan_from_file
+from ..i18n import _
+from ..stitch_plan import stitch_plan_from_file
+from ..svg import PIXELS_PER_MM
+
 
 # L10N command label at bottom of simulator window
 COMMAND_NAMES = [_("STITCH"), _("JUMP"), _("TRIM"), _("STOP"), _("COLOR CHANGE")]

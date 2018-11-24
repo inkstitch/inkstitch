@@ -11,68 +11,13 @@ import inkex
 import wx
 
 from ..elements import nodes_to_elements
+from ..gui import EmbroiderySimulator, PresetsPanel
 from ..i18n import _
 from ..lettering import Font
-from ..simulator import EmbroiderySimulator
 from ..stitch_plan import patches_to_stitch_plan
 from ..svg.tags import SVG_PATH_TAG, SVG_GROUP_TAG, INKSCAPE_LABEL, INKSTITCH_TEXT
 from ..utils import get_bundled_dir
 from .commands import CommandsExtension
-
-
-def presets_path():
-    try:
-        import appdirs
-        config_path = appdirs.user_config_dir('inkstitch')
-    except ImportError:
-        config_path = os.path.expanduser('~/.inkstitch')
-
-    if not os.path.exists(config_path):
-        os.makedirs(config_path)
-    return os.path.join(config_path, 'lettering_presets.json')
-
-
-def load_presets():
-    try:
-        with open(presets_path(), 'r') as presets:
-            presets = json.load(presets)
-            return presets
-    except IOError:
-        return {}
-
-
-def save_presets(presets):
-    with open(presets_path(), 'w') as presets_file:
-        json.dump(presets, presets_file)
-
-
-def load_preset(name):
-    return load_presets().get(name)
-
-
-def save_preset(name, data):
-    presets = load_presets()
-    presets[name] = data
-    save_presets(presets)
-
-
-def delete_preset(name):
-    presets = load_presets()
-    presets.pop(name, None)
-    save_presets(presets)
-
-
-def confirm_dialog(parent, question, caption='ink/stitch'):
-    dlg = wx.MessageDialog(parent, question, caption, wx.YES_NO | wx.ICON_QUESTION)
-    result = dlg.ShowModal() == wx.ID_YES
-    dlg.Destroy()
-    return result
-
-
-def info_dialog(parent, message, caption='ink/stitch'):
-    dlg = wx.MessageDialog(parent, message, caption, wx.OK | wx.ICON_INFORMATION)
-    dlg.ShowModal()
-    dlg.Destroy()
 
 
 class LetteringFrame(wx.Frame):
@@ -110,23 +55,7 @@ class LetteringFrame(wx.Frame):
         self.Bind(wx.EVT_TEXT, self.text_changed)
 
         # presets
-        self.presets_box = wx.StaticBox(self, wx.ID_ANY, label=_("Presets"))
-
-        self.preset_chooser = wx.ComboBox(self, wx.ID_ANY)
-        self.update_preset_list()
-        self.preset_chooser.SetSelection(-1)
-
-        self.load_preset_button = wx.Button(self, wx.ID_ANY, _("Load"))
-        self.load_preset_button.Bind(wx.EVT_BUTTON, self.load_preset)
-
-        self.add_preset_button = wx.Button(self, wx.ID_ANY, _("Add"))
-        self.add_preset_button.Bind(wx.EVT_BUTTON, self.add_preset)
-
-        self.overwrite_preset_button = wx.Button(self, wx.ID_ANY, _("Overwrite"))
-        self.overwrite_preset_button.Bind(wx.EVT_BUTTON, self.overwrite_preset)
-
-        self.delete_preset_button = wx.Button(self, wx.ID_ANY, _("Delete"))
-        self.delete_preset_button.Bind(wx.EVT_BUTTON, self.delete_preset)
+        self.presets_panel = PresetsPanel(self)
 
         self.cancel_button = wx.Button(self, wx.ID_ANY, _("Cancel"))
         self.cancel_button.Bind(wx.EVT_BUTTON, self.cancel)
@@ -219,7 +148,7 @@ class LetteringFrame(wx.Frame):
                                                            size=(width, height),
                                                            stitch_plan=stitch_plan,
                                                            on_close=self.simulate_window_closed,
-                                                           target_duration=5)
+                                                           target_duration=1)
             except Exception:
                 error = traceback.format_exc()
 
@@ -390,13 +319,7 @@ class LetteringFrame(wx.Frame):
         text_editor_sizer.Add(self.text_editor, 1, wx.EXPAND | wx.LEFT | wx.RIGHT | wx.BOTTOM, 10)
         outer_sizer.Add(text_editor_sizer, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
 
-        presets_sizer = wx.StaticBoxSizer(self.presets_box, wx.HORIZONTAL)
-        presets_sizer.Add(self.preset_chooser, 1, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 10)
-        presets_sizer.Add(self.load_preset_button, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 10)
-        presets_sizer.Add(self.add_preset_button, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 10)
-        presets_sizer.Add(self.overwrite_preset_button, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 10)
-        presets_sizer.Add(self.delete_preset_button, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 10)
-        outer_sizer.Add(presets_sizer, 0, wx.EXPAND | wx.EXPAND | wx.ALL, 10)
+        outer_sizer.Add(self.presets_panel, 0, wx.EXPAND | wx.EXPAND | wx.ALL, 10)
 
         buttons_sizer = wx.BoxSizer(wx.HORIZONTAL)
         buttons_sizer.Add(self.cancel_button, 0, wx.ALIGN_RIGHT | wx.RIGHT, 10)
