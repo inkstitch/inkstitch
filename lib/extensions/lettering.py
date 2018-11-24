@@ -97,6 +97,8 @@ class LetteringFrame(wx.Frame):
         self.options_box = wx.StaticBox(self, wx.ID_ANY, label=_("Options"))
 
         self.back_and_forth_checkbox = wx.CheckBox(self, label=_("Stitch lines of text back and forth"))
+        self.back_and_forth_checkbox.SetValue(True)
+        self.Bind(wx.EVT_CHECKBOX, self.update_simulator)
 
         # text editor
         self.text_editor_box = wx.StaticBox(self, wx.ID_ANY, label=_("Text"))
@@ -162,7 +164,7 @@ class LetteringFrame(wx.Frame):
         self.text = self.text_editor.GetValue()
         self.update_simulator()
 
-    def update_simulator(self):
+    def update_simulator(self, event=None):
         if self.simulate_window:
             self.simulate_window.stop()
             self.simulate_window.clear()
@@ -245,7 +247,7 @@ class LetteringFrame(wx.Frame):
         font = Font(font_path)
 
         try:
-            lines = font.render_text(self.text)
+            lines = font.render_text(self.text, back_and_forth=self.back_and_forth_checkbox.GetValue())
             self.group[:] = lines
             elements = nodes_to_elements(self.group.iterdescendants(SVG_PATH_TAG))
 
