@@ -455,7 +455,7 @@ class SettingsFrame(wx.Frame):
         return patches
 
     def get_preset_data(self):
-        # called by self.presets_chooser
+        # called by self.presets_panel
 
         preset = {}
 
@@ -475,7 +475,7 @@ class SettingsFrame(wx.Frame):
         return preset
 
     def apply_preset_data(self, preset_data):
-        # called by self.presets_chooser
+        # called by self.presets_panel
 
         for tab in self.tabs:
             tab.load_preset(preset_data)

@@ -11,7 +11,7 @@ import inkex
 import wx
 
 from ..elements import nodes_to_elements
-from ..gui import EmbroiderySimulator, PresetsPanel
+from ..gui import EmbroiderySimulator, PresetsPanel, info_dialog
 from ..i18n import _
 from ..lettering import Font
 from ..stitch_plan import patches_to_stitch_plan
@@ -203,91 +203,18 @@ class LetteringFrame(wx.Frame):
     def update_font_list(self):
         pass
 
-    def update_preset_list(self):
-        preset_names = load_presets().keys()
-        preset_names = [preset for preset in preset_names if preset != "__LAST__"]
-        self.preset_chooser.SetItems(sorted(preset_names))
-
-    def get_preset_name(self):
-        preset_name = self.preset_chooser.GetValue().strip()
-        if preset_name:
-            return preset_name
-        else:
-            info_dialog(self, _("Please enter or select a preset name first."), caption=_('Preset'))
-            return
-
-    def check_and_load_preset(self, preset_name):
-        preset = load_preset(preset_name)
-        if not preset:
-            info_dialog(self, _('Preset "%s" not found.') % preset_name, caption=_('Preset'))
-
-        return preset
-
     def get_preset_data(self):
+        # called by self.presets_panel
         preset = {}
-
-        current_tab = self.tabs[self.notebook.GetSelection()]
-        while current_tab.parent_tab:
-            current_tab = current_tab.parent_tab
-
-        tabs = [current_tab]
-        if current_tab.paired_tab:
-            tabs.append(current_tab.paired_tab)
-            tabs.extend(current_tab.paired_tab.dependent_tabs)
-        tabs.extend(current_tab.dependent_tabs)
-
-        for tab in tabs:
-            tab.save_preset(preset)
-
         return preset
 
-    def add_preset(self, event, overwrite=False):
-        preset_name = self.get_preset_name()
-        if not preset_name:
-            return
+    def apply_preset_data(self):
+        # called by self.presets_panel
+        return
 
-        if not overwrite and load_preset(preset_name):
-            info_dialog(self, _('Preset "%s" already exists.  Please use another name or press "Overwrite"') % preset_name, caption=_('Preset'))
-
-        save_preset(preset_name, self.get_preset_data())
-        self.update_preset_list()
-
-        event.Skip()
-
-    def overwrite_preset(self, event):
-        self.add_preset(event, overwrite=True)
-
-    def _load_preset(self, preset_name):
-        preset = self.check_and_load_preset(preset_name)
-        if not preset:
-            return
-
-        for tab in self.tabs:
-            tab.load_preset(preset)
-
-    def load_preset(self, event):
-        preset_name = self.get_preset_name()
-        if not preset_name:
-            return
-
-        self._load_preset(preset_name)
-
-        event.Skip()
-
-    def delete_preset(self, event):
-        preset_name = self.get_preset_name()
-        if not preset_name:
-            return
-
-        preset = self.check_and_load_preset(preset_name)
-        if not preset:
-            return
-
-        delete_preset(preset_name)
-        self.update_preset_list()
-        self.preset_chooser.SetValue("")
-
-        event.Skip()
+    def get_preset_suite_name(self):
+        # called by self.presets_panel
+        return "lettering"
 
     def apply(self, event):
         self.close()
