@@ -5,7 +5,6 @@ from copy import copy
 from itertools import groupby
 import os
 import sys
-from threading import Thread, Event
 import traceback
 
 import wx
@@ -13,7 +12,7 @@ from wx.lib.scrolledpanel import ScrolledPanel
 
 from ..commands import is_command
 from ..elements import EmbroideryElement, Fill, AutoFill, Stroke, SatinColumn
-from ..gui import EmbroiderySimulator, PresetsPanel, info_dialog
+from ..gui import EmbroiderySimulator, PresetsPanel, info_dialog, SimulatorPreview
 from ..i18n import _
 from ..stitch_plan import patches_to_stitch_plan
 from ..utils import get_resource_dir
@@ -303,7 +302,7 @@ class ParamsTab(ScrolledPanel):
 
         self.changed_inputs.add(self.param_inputs[param])
 
-        if self.on_change_hook():
+        if self.on_change_hook:
             self.on_change_hook(self)
 
 # end of class SatinPane
@@ -321,17 +320,9 @@ class SettingsFrame(wx.Frame):
         self.tabs = self.tabs_factory(self.notebook)
 
         for tab in self.tabs:
-            tab.on_change(self.update_simulator)
+            tab.on_change(self.update_preview)
 
-        self.simulate_window = None
-        self.simulate_thread = None
-        self.simulate_refresh_needed = Event()
-
-        # used when closing to avoid having the window reopen at the last second
-        self.disable_simulate_window = False
-
-        wx.CallLater(1000, self.update_simulator)
-
+        self.preview = SimulatorPreview(self)
         self.presets_panel = PresetsPanel(self)
 
         self.cancel_button = wx.Button(self, wx.ID_ANY, _("Cancel"))
@@ -349,79 +340,12 @@ class SettingsFrame(wx.Frame):
         self.__do_layout()
         # end wxGlade
 
-    def update_simulator(self, tab=None):
-        if self.simulate_window:
-            self.simulate_window.stop()
-            self.simulate_window.clear()
+    def update_preview(self, tab):
+        self.preview.update()
 
-        if self.disable_simulate_window:
-            return
+    def generate_patches(self, abort_early):
+        # called by self.preview
 
-        if not self.simulate_thread or not self.simulate_thread.is_alive():
-            self.simulate_thread = Thread(target=self.simulate_worker)
-            self.simulate_thread.daemon = True
-            self.simulate_thread.start()
-
-        self.simulate_refresh_needed.set()
-
-    def simulate_worker(self):
-        while True:
-            self.simulate_refresh_needed.wait()
-            self.simulate_refresh_needed.clear()
-            self.update_patches()
-
-    def update_patches(self):
-        patches = self.generate_patches()
-
-        if patches and not self.simulate_refresh_needed.is_set():
-            wx.CallAfter(self.refresh_simulator, patches)
-
-    def refresh_simulator(self, patches):
-        stitch_plan = patches_to_stitch_plan(patches)
-        if self.simulate_window:
-            self.simulate_window.stop()
-            self.simulate_window.load(stitch_plan)
-        else:
-            params_rect = self.GetScreenRect()
-            simulator_pos = params_rect.GetTopRight()
-            simulator_pos.x += 5
-
-            current_screen = wx.Display.GetFromPoint(wx.GetMousePosition())
-            display = wx.Display(current_screen)
-            screen_rect = display.GetClientArea()
-            simulator_pos.y = screen_rect.GetTop()
-
-            width = screen_rect.GetWidth() - params_rect.GetWidth()
-            height = screen_rect.GetHeight()
-
-            try:
-                self.simulate_window = EmbroiderySimulator(None, -1, _("Preview"),
-                                                           simulator_pos,
-                                                           size=(width, height),
-                                                           stitch_plan=stitch_plan,
-                                                           on_close=self.simulate_window_closed,
-                                                           target_duration=5)
-            except Exception:
-                error = traceback.format_exc()
-
-                try:
-                    # a window may have been created, so we need to destroy it
-                    # or the app will never exit
-                    wx.Window.FindWindowByName(_("Preview")).Destroy()
-                except Exception:
-                    pass
-
-                info_dialog(self, error, _("Internal Error"))
-
-            self.simulate_window.Show()
-            wx.CallLater(10, self.Raise)
-
-        wx.CallAfter(self.simulate_window.go)
-
-    def simulate_window_closed(self):
-        self.simulate_window = None
-
-    def generate_patches(self):
         patches = []
         nodes = []
 
@@ -436,7 +360,7 @@ class SettingsFrame(wx.Frame):
 
         try:
             for node in nodes:
-                if self.simulate_refresh_needed.is_set():
+                if abort_early.is_set():
                     # cancel; params were updated and we need to start over
                     return []
 
@@ -480,6 +404,8 @@ class SettingsFrame(wx.Frame):
         for tab in self.tabs:
             tab.load_preset(preset_data)
 
+        self.preview.update()
+
     def _apply(self):
         for tab in self.tabs:
             tab.apply()
@@ -490,15 +416,12 @@ class SettingsFrame(wx.Frame):
         self.close()
 
     def use_last(self, event):
-        self.disable_simulate_window = True
+        self.preview.disable()
         self.presets_panel.load_preset("__LAST__")
         self.apply(event)
 
     def close(self):
-        if self.simulate_window:
-            self.simulate_window.stop()
-            self.simulate_window.Close()
-
+        self.preview.close()
         self.Destroy()
 
     def cancel(self, event):
