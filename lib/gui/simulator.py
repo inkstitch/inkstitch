@@ -662,6 +662,7 @@ class SimulatorPreview(Thread):
                 value will be ignored in this case.
         """
         self.parent = parent
+        self.target_duration = kwargs.pop('target_duration', 5)
         super(SimulatorPreview, self).__init__(*args, **kwargs)
         self.daemon = True
 
@@ -730,7 +731,7 @@ class SimulatorPreview(Thread):
                                                            size=(width, height),
                                                            stitch_plan=stitch_plan,
                                                            on_close=self.simulate_window_closed,
-                                                           target_duration=5)
+                                                           target_duration=self.target_duration)
             except Exception:
                 error = traceback.format_exc()
 
@@ -752,6 +753,7 @@ class SimulatorPreview(Thread):
         self.simulate_window = None
 
     def close(self):
+        self.disable()
         if self.simulate_window:
             self.simulate_window.stop()
             self.simulate_window.Close()

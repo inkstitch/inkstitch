@@ -11,7 +11,7 @@ import inkex
 import wx
 
 from ..elements import nodes_to_elements
-from ..gui import EmbroiderySimulator, PresetsPanel, info_dialog
+from ..gui import EmbroiderySimulator, PresetsPanel, info_dialog, SimulatorPreview
 from ..i18n import _
 from ..lettering import Font
 from ..stitch_plan import patches_to_stitch_plan
@@ -29,21 +29,15 @@ class LetteringFrame(wx.Frame):
                           _("Ink/Stitch Lettering")
                           )
 
-        self.simulate_window = None
-        self.simulate_thread = None
-        self.simulate_refresh_needed = Event()
-
-        # used when closing to avoid having the window reopen at the last second
-        self.disable_simulate_window = False
-
-        wx.CallLater(1000, self.update_simulator)
+        self.preview = SimulatorPreview(self, target_duration=1)
+        self.presets_panel = PresetsPanel(self)
 
         # options
         self.options_box = wx.StaticBox(self, wx.ID_ANY, label=_("Options"))
 
         self.back_and_forth_checkbox = wx.CheckBox(self, label=_("Stitch lines of text back and forth"))
         self.back_and_forth_checkbox.SetValue(True)
-        self.Bind(wx.EVT_CHECKBOX, self.update_simulator)
+        self.Bind(wx.EVT_CHECKBOX, self.update_preview)
 
         # text editor
         self.text_editor_box = wx.StaticBox(self, wx.ID_ANY, label=_("Text"))
@@ -53,9 +47,6 @@ class LetteringFrame(wx.Frame):
 
         self.text_editor = wx.TextCtrl(self, style=wx.TE_MULTILINE | wx.TE_DONTWRAP, value=self.text)
         self.Bind(wx.EVT_TEXT, self.text_changed)
-
-        # presets
-        self.presets_panel = PresetsPanel(self)
 
         self.cancel_button = wx.Button(self, wx.ID_ANY, _("Cancel"))
         self.cancel_button.Bind(wx.EVT_BUTTON, self.cancel)
@@ -91,85 +82,12 @@ class LetteringFrame(wx.Frame):
 
     def text_changed(self, event):
         self.text = self.text_editor.GetValue()
-        self.update_simulator()
+        self.preview.update()
 
-    def update_simulator(self, event=None):
-        if self.simulate_window:
-            self.simulate_window.stop()
-            self.simulate_window.clear()
+    def update_preview(self, event):
+        self.preview.update()
 
-        if self.disable_simulate_window:
-            return
-
-        if not self.simulate_thread or not self.simulate_thread.is_alive():
-            self.simulate_thread = Thread(target=self.simulate_worker)
-            self.simulate_thread.daemon = True
-            self.simulate_thread.start()
-
-        self.simulate_refresh_needed.set()
-
-    def simulate_worker(self):
-        while True:
-            self.simulate_refresh_needed.wait()
-            self.simulate_refresh_needed.clear()
-            self.update_patches()
-
-    def update_patches(self):
-        patches = self.generate_patches()
-
-        if patches and not self.simulate_refresh_needed.is_set():
-            wx.CallAfter(self.refresh_simulator, patches)
-
-    def refresh_simulator(self, patches):
-        stitch_plan = patches_to_stitch_plan(patches)
-
-        if self.disable_simulate_window:
-            return
-
-        if self.simulate_window:
-            self.simulate_window.stop()
-            self.simulate_window.load(stitch_plan)
-        else:
-            params_rect = self.GetScreenRect()
-            simulator_pos = params_rect.GetTopRight()
-            simulator_pos.x += 5
-
-            current_screen = wx.Display.GetFromPoint(wx.GetMousePosition())
-            display = wx.Display(current_screen)
-            screen_rect = display.GetClientArea()
-            simulator_pos.y = screen_rect.GetTop()
-
-            width = screen_rect.GetWidth() - params_rect.GetWidth()
-            height = screen_rect.GetHeight()
-
-            try:
-                self.simulate_window = EmbroiderySimulator(None, -1, _("Preview"),
-                                                           simulator_pos,
-                                                           size=(width, height),
-                                                           stitch_plan=stitch_plan,
-                                                           on_close=self.simulate_window_closed,
-                                                           target_duration=1)
-            except Exception:
-                error = traceback.format_exc()
-
-                try:
-                    # a window may have been created, so we need to destroy it
-                    # or the app will never exit
-                    wx.Window.FindWindowByName(_("Preview")).Destroy()
-                except Exception:
-                    pass
-
-                info_dialog(self, error, _("Internal Error"))
-
-            self.simulate_window.Show()
-            wx.CallLater(10, self.Raise)
-
-        wx.CallAfter(self.simulate_window.go)
-
-    def simulate_window_closed(self):
-        self.simulate_window = None
-
-    def generate_patches(self):
+    def generate_patches(self, abort_early):
         patches = []
 
         font_path = os.path.join(get_bundled_dir("fonts"), "small_font")
@@ -181,13 +99,9 @@ class LetteringFrame(wx.Frame):
             elements = nodes_to_elements(self.group.iterdescendants(SVG_PATH_TAG))
 
             for element in elements:
-                if self.simulate_refresh_needed.is_set():
-                    # cancel; params were updated and we need to start over
+                if abort_early.is_set():
+                    # cancel; settings were updated and we need to start over
                     return []
-
-                # Making a copy of the embroidery element is an easy
-                # way to drop the cache in the @cache decorators used
-                # for many params in embroider.py.
 
                 patches.extend(element.embroider(None))
         except SystemExit:
@@ -217,15 +131,12 @@ class LetteringFrame(wx.Frame):
         return "lettering"
 
     def apply(self, event):
-        self.close()
+        self.preview.disable()
         self.generate_patches()
+        self.close()
 
     def close(self):
-        self.disable_simulate_window = True
-        if self.simulate_window:
-            self.simulate_window.stop()
-            self.simulate_window.Close()
-
+        self.preview.close()
         self.Destroy()
 
     def cancel(self, event):
