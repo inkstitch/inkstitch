@@ -1,6 +1,7 @@
 # -*- coding: UTF-8 -*-
 
 from base64 import b64encode, b64decode
+import json
 import os
 import sys
 
@@ -11,8 +12,8 @@ from ..elements import nodes_to_elements
 from ..gui import PresetsPanel, SimulatorPreview
 from ..i18n import _
 from ..lettering import Font
-from ..svg.tags import SVG_PATH_TAG, SVG_GROUP_TAG, INKSCAPE_LABEL, INKSTITCH_TEXT
-from ..utils import get_bundled_dir
+from ..svg.tags import SVG_PATH_TAG, SVG_GROUP_TAG, INKSCAPE_LABEL, INKSTITCH_LETTERING
+from ..utils import get_bundled_dir, DotDict
 from .commands import CommandsExtension
 
 
@@ -28,12 +29,14 @@ class LetteringFrame(wx.Frame):
         self.preview = SimulatorPreview(self, target_duration=1)
         self.presets_panel = PresetsPanel(self)
 
+        self.load_settings()
+
         # options
         self.options_box = wx.StaticBox(self, wx.ID_ANY, label=_("Options"))
 
         self.back_and_forth_checkbox = wx.CheckBox(self, label=_("Stitch lines of text back and forth"))
-        self.back_and_forth_checkbox.SetValue(True)
-        self.Bind(wx.EVT_CHECKBOX, self.update_preview)
+        self.back_and_forth_checkbox.SetValue(self.settings.back_and_forth)
+        self.Bind(wx.EVT_CHECKBOX, lambda event: self.on_change("back_and_forth", event))
 
         # text editor
         self.text_editor_box = wx.StaticBox(self, wx.ID_ANY, label=_("Text"))
@@ -41,8 +44,8 @@ class LetteringFrame(wx.Frame):
         self.font_chooser = wx.ComboBox(self, wx.ID_ANY)
         self.update_font_list()
 
-        self.text_editor = wx.TextCtrl(self, style=wx.TE_MULTILINE | wx.TE_DONTWRAP, value=self.text)
-        self.Bind(wx.EVT_TEXT, self.text_changed)
+        self.text_editor = wx.TextCtrl(self, style=wx.TE_MULTILINE | wx.TE_DONTWRAP, value=self.settings.text)
+        self.Bind(wx.EVT_TEXT, lambda event: self.on_change("text", event))
 
         self.cancel_button = wx.Button(self, wx.ID_ANY, _("Cancel"))
         self.cancel_button.Bind(wx.EVT_BUTTON, self.cancel)
@@ -54,19 +57,22 @@ class LetteringFrame(wx.Frame):
         self.__do_layout()
         # end wxGlade
 
-    @property
-    def text(self):
+    def load_settings(self):
         try:
-            if INKSTITCH_TEXT in self.group.attrib:
-                return b64decode(self.group.get(INKSTITCH_TEXT)).decode('UTF-8')
-        except TypeError:
+            if INKSTITCH_LETTERING in self.group.attrib:
+                self.settings = DotDict(json.loads(b64decode(self.group.get(INKSTITCH_LETTERING))))
+                return
+        except (TypeError, ValueError):
             pass
 
-        return u''
+        self.settings = DotDict({
+            "text": u"",
+            "back_and_forth": True,
+            "font": "small_font"
+        })
 
-    @text.setter
-    def text(self, value):
-        # We base64 encode the string before storign it in an XML attribute.
+    def save_settings(self):
+        # We base64 encode the string before storing it in an XML attribute.
         # In theory, lxml should properly html-encode the string, using HTML
         # entities like &#10; as necessary.  However, we've found that Inkscape
         # incorrectly interpolates the HTML entities upon reading the
@@ -74,28 +80,25 @@ class LetteringFrame(wx.Frame):
         #
         # Details:
         #   https://bugs.launchpad.net/inkscape/+bug/1804346
-        self.group.set(INKSTITCH_TEXT, b64encode(value.encode("UTF-8")))
+        self.group.set(INKSTITCH_LETTERING, b64encode(json.dumps(self.settings)))
 
-    def text_changed(self, event):
-        self.text = self.text_editor.GetValue()
+    def on_change(self, attribute, event):
+        self.settings[attribute] = event.GetEventObject().GetValue()
         self.preview.update()
 
-    def update_preview(self, event):
-        self.preview.update()
-
-    def generate_patches(self, abort_early):
+    def generate_patches(self, abort_early=None):
         patches = []
 
-        font_path = os.path.join(get_bundled_dir("fonts"), "small_font")
+        font_path = os.path.join(get_bundled_dir("fonts"), self.settings.font)
         font = Font(font_path)
 
         try:
-            lines = font.render_text(self.text, back_and_forth=self.back_and_forth_checkbox.GetValue())
+            lines = font.render_text(self.settings.text, back_and_forth=self.settings.back_and_forth)
             self.group[:] = lines
             elements = nodes_to_elements(self.group.iterdescendants(SVG_PATH_TAG))
 
             for element in elements:
-                if abort_early.is_set():
+                if abort_early and abort_early.is_set():
                     # cancel; settings were updated and we need to start over
                     return []
 
@@ -129,6 +132,7 @@ class LetteringFrame(wx.Frame):
     def apply(self, event):
         self.preview.disable()
         self.generate_patches()
+        self.save_settings()
         self.close()
 
     def close(self):
@@ -187,11 +191,11 @@ class Lettering(CommandsExtension):
             groups = set()
 
             for node in self.selected.itervalues():
-                if node.tag == SVG_GROUP_TAG and INKSTITCH_TEXT in node.attrib:
+                if node.tag == SVG_GROUP_TAG and INKSTITCH_LETTERING in node.attrib:
                     groups.add(node)
 
                 for group in node.iterancestors(SVG_GROUP_TAG):
-                    if INKSTITCH_TEXT in group.attrib:
+                    if INKSTITCH_LETTERING in group.attrib:
                         groups.add(group)
 
             if len(groups) > 1:
