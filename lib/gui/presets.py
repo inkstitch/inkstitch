@@ -4,6 +4,7 @@ import re
 
 import wx
 
+from ..i18n import _
 from ..utils import cache
 from .dialogs import info_dialog
 

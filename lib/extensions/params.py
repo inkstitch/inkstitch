@@ -5,16 +5,14 @@ from copy import copy
 from itertools import groupby
 import os
 import sys
-import traceback
 
 import wx
 from wx.lib.scrolledpanel import ScrolledPanel
 
 from ..commands import is_command
 from ..elements import EmbroideryElement, Fill, AutoFill, Stroke, SatinColumn
-from ..gui import EmbroiderySimulator, PresetsPanel, info_dialog, SimulatorPreview
+from ..gui import PresetsPanel, SimulatorPreview
 from ..i18n import _
-from ..stitch_plan import patches_to_stitch_plan
 from ..utils import get_resource_dir
 from .base import InkstitchExtension
 

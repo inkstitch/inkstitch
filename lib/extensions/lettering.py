@@ -1,20 +1,16 @@
 # -*- coding: UTF-8 -*-
 
 from base64 import b64encode, b64decode
-import json
 import os
 import sys
-from threading import Thread, Event
-import traceback
 
 import inkex
 import wx
 
 from ..elements import nodes_to_elements
-from ..gui import EmbroiderySimulator, PresetsPanel, info_dialog, SimulatorPreview
+from ..gui import PresetsPanel, SimulatorPreview
 from ..i18n import _
 from ..lettering import Font
-from ..stitch_plan import patches_to_stitch_plan
 from ..svg.tags import SVG_PATH_TAG, SVG_GROUP_TAG, INKSCAPE_LABEL, INKSTITCH_TEXT
 from ..utils import get_bundled_dir
 from .commands import CommandsExtension
