@@ -680,15 +680,16 @@ class Params(InkstitchExtension):
         element = EmbroideryElement(node)
         classes = []
 
-        if element.get_style("fill"):
-            classes.append(AutoFill)
-            classes.append(Fill)
+        if not is_command(node):
+            if element.get_style("fill", "black") != "none":
+                classes.append(AutoFill)
+                classes.append(Fill)
 
-        if element.get_style("stroke") and not is_command(node):
-            classes.append(Stroke)
+            if element.get_style("stroke") is not None:
+                classes.append(Stroke)
 
-            if element.get_style("stroke-dasharray") is None:
-                classes.append(SatinColumn)
+                if element.get_style("stroke-dasharray") is None:
+                    classes.append(SatinColumn)
 
         return classes
 
