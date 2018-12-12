@@ -21,6 +21,9 @@ def color_block_to_point_lists(color_block):
         if not stitch.jump and not stitch.color_change:
             point_lists[-1].append(stitch.as_tuple())
 
+    # filter out empty point lists
+    point_lists = [p for p in point_lists if p]
+
     return point_lists
 
 
