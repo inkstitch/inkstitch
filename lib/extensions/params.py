@@ -1,23 +1,24 @@
 # -*- coding: UTF-8 -*-
 
+from collections import defaultdict
+from copy import copy
+from itertools import groupby
+import json
 import os
 import sys
-import json
-import traceback
 from threading import Thread, Event
-from copy import copy
+import traceback
+
 import wx
 from wx.lib.scrolledpanel import ScrolledPanel
-from collections import defaultdict
-from itertools import groupby
 
-from .base import InkstitchExtension
-from ..i18n import _
-from ..stitch_plan import patches_to_stitch_plan
-from ..elements import EmbroideryElement, Fill, AutoFill, Stroke, SatinColumn
-from ..utils import get_resource_dir
-from ..simulator import EmbroiderySimulator
 from ..commands import is_command
+from ..elements import EmbroideryElement, Fill, AutoFill, Stroke, SatinColumn
+from ..i18n import _
+from ..simulator import EmbroiderySimulator
+from ..stitch_plan import patches_to_stitch_plan
+from ..utils import get_resource_dir
+from .base import InkstitchExtension
 
 
 def presets_path():
