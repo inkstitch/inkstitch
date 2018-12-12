@@ -1,12 +1,12 @@
-import simpletransform
-import simplestyle
 import inkex
+import simplestyle
+import simpletransform
 
-from .units import get_viewbox_transform
-from .tags import SVG_GROUP_TAG, INKSCAPE_LABEL, INKSCAPE_GROUPMODE, SVG_PATH_TAG, SVG_DEFS_TAG
-from .realistic_rendering import realistic_stitch, realistic_filter
 from ..i18n import _
 from ..utils import cache
+from .realistic_rendering import realistic_stitch, realistic_filter
+from .tags import SVG_GROUP_TAG, INKSCAPE_LABEL, INKSCAPE_GROUPMODE, SVG_PATH_TAG, SVG_DEFS_TAG
+from .units import get_viewbox_transform
 
 
 def color_block_to_point_lists(color_block):
