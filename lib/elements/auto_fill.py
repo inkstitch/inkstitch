@@ -1,8 +1,10 @@
 import math
+
 from shapely import geometry as shgeo
+
 from ..i18n import _
-from ..utils import cache
 from ..stitches import auto_fill
+from ..utils import cache
 from .element import param, Patch
 from .fill import Fill
 
@@ -93,6 +95,18 @@ class AutoFill(Fill):
         return self.get_float_param('fill_underlay_inset_mm', 0)
 
     @property
+    @param(
+        'fill_underlay_skip_last',
+        _('Skip last stitch in each row'),
+        tooltip=_('The last stitch in each row is quite close to the first stitch in the next row.  '
+                  'Skipping it decreases stitch count and density.'),
+        group=_('AutoFill Underlay'),
+        type='boolean',
+        default=False)
+    def fill_underlay_skip_last(self):
+        return self.get_boolean_param("fill_underlay_skip_last", False)
+
+    @property
     @param('expand_mm',
            _('Expand'),
            tooltip=_('Expand the shape before fill stitching, to compensate for gaps between shapes.'),
@@ -150,6 +164,7 @@ class AutoFill(Fill):
                                       self.fill_underlay_max_stitch_length,
                                       self.running_stitch_length,
                                       self.staggers,
+                                      self.fill_underlay_skip_last,
                                       starting_point))
             starting_point = stitches[-1]
 
@@ -160,6 +175,7 @@ class AutoFill(Fill):
                                   self.max_stitch_length,
                                   self.running_stitch_length,
                                   self.staggers,
+                                  self.skip_last,
                                   starting_point,
                                   ending_point))
 

@@ -1,13 +1,14 @@
-import sys
-import shapely
-import networkx
-from itertools import groupby, izip
 from collections import deque
+from itertools import groupby, izip
+import sys
 
-from .fill import intersect_region_with_grating, row_num, stitch_row
-from .running_stitch import running_stitch
+import networkx
+import shapely
+
 from ..i18n import _
 from ..utils.geometry import Point as InkstitchPoint, cut
+from .fill import intersect_region_with_grating, row_num, stitch_row
+from .running_stitch import running_stitch
 
 
 class MaxQueueLengthExceeded(Exception):
@@ -39,7 +40,7 @@ class PathEdge(object):
         return self.key == self.SEGMENT_KEY
 
 
-def auto_fill(shape, angle, row_spacing, end_row_spacing, max_stitch_length, running_stitch_length, staggers, starting_point, ending_point=None):
+def auto_fill(shape, angle, row_spacing, end_row_spacing, max_stitch_length, running_stitch_length, staggers, skip_last, starting_point, ending_point=None):
     stitches = []
 
     rows_of_segments = intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing)
@@ -48,7 +49,7 @@ def auto_fill(shape, angle, row_spacing, end_row_spacing, max_stitch_length, run
     graph = build_graph(shape, segments, angle, row_spacing)
     path = find_stitch_path(graph, segments, starting_point, ending_point)
 
-    stitches.extend(path_to_stitches(graph, path, shape, angle, row_spacing, max_stitch_length, running_stitch_length, staggers))
+    stitches.extend(path_to_stitches(graph, path, shape, angle, row_spacing, max_stitch_length, running_stitch_length, staggers, skip_last))
 
     return stitches
 
@@ -513,7 +514,10 @@ def connect_points(shape, start, end, running_stitch_length, row_spacing):
     # Now do running stitch along the path we've found.  running_stitch() will
     # avoid cutting sharp corners.
     path = [InkstitchPoint(*p) for p in points]
-    return running_stitch(path, running_stitch_length)
+    stitches = running_stitch(path, running_stitch_length)
+
+    # The row of stitches already stitched the first point, so skip it.
+    return stitches[1:]
 
 
 def trim_end(path):
@@ -521,14 +525,14 @@ def trim_end(path):
         path.pop()
 
 
-def path_to_stitches(graph, path, shape, angle, row_spacing, max_stitch_length, running_stitch_length, staggers):
+def path_to_stitches(graph, path, shape, angle, row_spacing, max_stitch_length, running_stitch_length, staggers, skip_last):
     path = collapse_sequential_outline_edges(graph, path)
 
     stitches = []
 
     for edge in path:
         if edge.is_segment():
-            stitch_row(stitches, edge[0], edge[1], angle, row_spacing, max_stitch_length, staggers)
+            stitch_row(stitches, edge[0], edge[1], angle, row_spacing, max_stitch_length, staggers, skip_last)
         else:
             stitches.extend(connect_points(shape, edge[0], edge[1], running_stitch_length, row_spacing))
 
