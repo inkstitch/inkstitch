@@ -40,7 +40,16 @@ class PathEdge(object):
         return self.key == self.SEGMENT_KEY
 
 
-def auto_fill(shape, angle, row_spacing, end_row_spacing, max_stitch_length, running_stitch_length, staggers, skip_last, starting_point, ending_point=None):
+def auto_fill(shape,
+              angle,
+              row_spacing,
+              end_row_spacing,
+              max_stitch_length,
+              running_stitch_length,
+              staggers,
+              skip_last,
+              starting_point,
+              ending_point=None):
     stitches = []
 
     rows_of_segments = intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing)
