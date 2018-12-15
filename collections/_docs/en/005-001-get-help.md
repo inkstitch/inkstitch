@@ -2,7 +2,7 @@
 title: "Get help"
 permalink: /docs/get-help/
 excerpt: ""
-last_modified_at: 2018-10-17
+last_modified_at: 2018-12-15
 toc: false
 ---
 
@@ -15,5 +15,6 @@ If you enctounter a new bug, it would be very helpful, if you would add a new Is
 Also have look at these existing issues:
 
 * [FAQ](/docs/faq)
+* [Error Messages](/docs/error-messages)
 * [Reported Bugs](https://github.com/inkstitch/inkstitch/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
 * [Feature Requests](https://github.com/inkstitch/inkstitch/issues?q=is%3Aissue+is%3Aopen+label%3A%22feature+request%22)
