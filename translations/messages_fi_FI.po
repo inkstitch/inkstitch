@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-11-16 01:42+0000\n"
-"PO-Revision-Date: 2018-11-23 01:47\n"
+"POT-Creation-Date: 2018-12-16 02:00+0000\n"
+"PO-Revision-Date: 2018-12-16 02:00\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Finnish\n"
 "MIME-Version: 1.0\n"
@@ -527,9 +527,9 @@ msgstr ""
 msgid "Install"
 msgstr ""
 
-#: lib/extensions/install.py:40 lib/extensions/params.py:407
-#: print/templates/ui.html:72 print/templates/ui.html:76
-#: print/templates/ui.html:82
+#: lib/extensions/install.py:40 lib/extensions/lettering.py:50
+#: lib/extensions/params.py:326 print/templates/ui.html:72
+#: print/templates/ui.html:76 print/templates/ui.html:82
 msgid "Cancel"
 msgstr ""
 
@@ -561,10 +561,32 @@ msgstr ""
 msgid "Please choose one or more commands to add."
 msgstr ""
 
-#. Label for an object created by the Lettering extension
-#: lib/extensions/lettering.py:34
-#, python-format
-msgid "Lettering %d"
+#: lib/extensions/lettering.py:26 lib/extensions/lettering.py:213
+msgid "Ink/Stitch Lettering"
+msgstr ""
+
+#: lib/extensions/lettering.py:35
+msgid "Options"
+msgstr ""
+
+#: lib/extensions/lettering.py:37
+msgid "Stitch lines of text back and forth"
+msgstr ""
+
+#: lib/extensions/lettering.py:42
+msgid "Text"
+msgstr ""
+
+#: lib/extensions/lettering.py:54 lib/extensions/params.py:333
+msgid "Apply and Quit"
+msgstr ""
+
+#: lib/extensions/lettering.py:202
+msgid "Please select only one block of text."
+msgstr ""
+
+#: lib/extensions/lettering.py:205
+msgid "You've selected objects that were not created by the Lettering extension.  Please clear your selection or select different objects before running Lettering again."
 msgstr ""
 
 #: lib/extensions/object_commands.py:16
@@ -575,102 +597,51 @@ msgstr ""
 msgid "Please choose one or more commands to attach."
 msgstr ""
 
-#: lib/extensions/params.py:248
+#: lib/extensions/params.py:190
 msgid "These settings will be applied to 1 object."
 msgstr ""
 
-#: lib/extensions/params.py:250
+#: lib/extensions/params.py:192
 #, python-format
 msgid "These settings will be applied to %d objects."
 msgstr ""
 
-#: lib/extensions/params.py:253
+#: lib/extensions/params.py:195
 msgid "Some settings had different values across objects.  Select a value from the dropdown or enter a new one."
 msgstr ""
 
-#: lib/extensions/params.py:257
+#: lib/extensions/params.py:199
 #, python-format
 msgid "Disabling this tab will disable the following %d tabs."
 msgstr ""
 
-#: lib/extensions/params.py:259
+#: lib/extensions/params.py:201
 msgid "Disabling this tab will disable the following tab."
 msgstr ""
 
-#: lib/extensions/params.py:262
+#: lib/extensions/params.py:204
 #, python-format
 msgid "Enabling this tab will disable %s and vice-versa."
 msgstr ""
 
-#: lib/extensions/params.py:292
+#: lib/extensions/params.py:234
 msgid "Inkscape objects"
 msgstr ""
 
-#: lib/extensions/params.py:349
+#: lib/extensions/params.py:291
 msgid "Click to force this parameter to be saved when you click \"Apply and Quit\""
 msgstr ""
 
-#: lib/extensions/params.py:357
+#: lib/extensions/params.py:299
 msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr ""
 
-#: lib/extensions/params.py:373
+#: lib/extensions/params.py:315
 msgid "Embroidery Params"
 msgstr ""
 
-#: lib/extensions/params.py:390
-msgid "Presets"
-msgstr ""
-
-#: lib/extensions/params.py:395
-msgid "Load"
-msgstr ""
-
-#: lib/extensions/params.py:398
-msgid "Add"
-msgstr ""
-
-#: lib/extensions/params.py:401
-msgid "Overwrite"
-msgstr ""
-
-#: lib/extensions/params.py:404
-msgid "Delete"
-msgstr ""
-
-#: lib/extensions/params.py:411
+#: lib/extensions/params.py:330
 msgid "Use Last Settings"
-msgstr ""
-
-#: lib/extensions/params.py:414
-msgid "Apply and Quit"
-msgstr ""
-
-#: lib/extensions/params.py:467 lib/extensions/params.py:479
-msgid "Preview"
-msgstr ""
-
-#: lib/extensions/params.py:483
-msgid "Internal Error"
-msgstr ""
-
-#: lib/extensions/params.py:536
-msgid "Please enter or select a preset name first."
-msgstr ""
-
-#: lib/extensions/params.py:536 lib/extensions/params.py:542
-#: lib/extensions/params.py:570
-msgid "Preset"
-msgstr ""
-
-#: lib/extensions/params.py:542
-#, python-format
-msgid "Preset \"%s\" not found."
-msgstr ""
-
-#: lib/extensions/params.py:570
-#, python-format
-msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
 msgstr ""
 
 #: lib/extensions/print_pdf.py:132
@@ -694,6 +665,130 @@ msgstr ""
 msgid "No embroidery file formats selected."
 msgstr ""
 
+#: lib/gui/presets.py:47
+msgid "Presets"
+msgstr ""
+
+#: lib/gui/presets.py:53
+msgid "Load"
+msgstr ""
+
+#: lib/gui/presets.py:56
+msgid "Add"
+msgstr ""
+
+#: lib/gui/presets.py:59
+msgid "Overwrite"
+msgstr ""
+
+#: lib/gui/presets.py:62
+msgid "Delete"
+msgstr ""
+
+#: lib/gui/presets.py:120
+msgid "Please enter or select a preset name first."
+msgstr ""
+
+#: lib/gui/presets.py:120 lib/gui/presets.py:126 lib/gui/presets.py:142
+msgid "Preset"
+msgstr ""
+
+#: lib/gui/presets.py:126
+#, python-format
+msgid "Preset \"%s\" not found."
+msgstr ""
+
+#: lib/gui/presets.py:142
+#, python-format
+msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
+msgstr ""
+
+#. command label at bottom of simulator window
+#: lib/gui/simulator.py:20
+msgid "STITCH"
+msgstr ""
+
+#: lib/gui/simulator.py:20
+msgid "JUMP"
+msgstr ""
+
+#: lib/gui/simulator.py:20
+msgid "TRIM"
+msgstr ""
+
+#: lib/gui/simulator.py:20
+msgid "STOP"
+msgstr ""
+
+#: lib/gui/simulator.py:20
+msgid "COLOR CHANGE"
+msgstr ""
+
+#: lib/gui/simulator.py:52
+msgid "Slow down (arrow down)"
+msgstr ""
+
+#: lib/gui/simulator.py:55
+msgid "Speed up (arrow up)"
+msgstr ""
+
+#: lib/gui/simulator.py:58
+msgid "Go on step backward (-)"
+msgstr ""
+
+#: lib/gui/simulator.py:61
+msgid "Go on step forward (+)"
+msgstr ""
+
+#: lib/gui/simulator.py:64
+msgid "Switch direction (arrow left | arrow right)"
+msgstr ""
+
+#: lib/gui/simulator.py:65 lib/gui/simulator.py:218 lib/gui/simulator.py:225
+msgid "Pause"
+msgstr ""
+
+#: lib/gui/simulator.py:67
+msgid "Pause (P)"
+msgstr ""
+
+#: lib/gui/simulator.py:68
+msgid "Restart"
+msgstr ""
+
+#: lib/gui/simulator.py:70
+msgid "Restart (R)"
+msgstr ""
+
+#: lib/gui/simulator.py:71
+msgid "Quit"
+msgstr ""
+
+#: lib/gui/simulator.py:73
+msgid "Quit (Q)"
+msgstr ""
+
+#: lib/gui/simulator.py:179
+#, python-format
+msgid "Speed: %d stitches/sec"
+msgstr ""
+
+#: lib/gui/simulator.py:221
+msgid "Start"
+msgstr ""
+
+#: lib/gui/simulator.py:729 lib/gui/simulator.py:741
+msgid "Preview"
+msgstr ""
+
+#: lib/gui/simulator.py:745
+msgid "Internal Error"
+msgstr ""
+
+#: lib/gui/simulator.py:774
+msgid "Embroidery Simulation"
+msgstr ""
+
 #. If you translate this string, that will tell Ink/Stitch to
 #. generate menu items for this language in Inkscape's "Extensions"
 #. menu.
@@ -710,84 +805,6 @@ msgstr ""
 #: lib/output.py:102
 #, python-format
 msgid "Error writing to %(path)s: %(error)s"
-msgstr ""
-
-#. command label at bottom of simulator window
-#: lib/simulator.py:12
-msgid "STITCH"
-msgstr ""
-
-#: lib/simulator.py:12
-msgid "JUMP"
-msgstr ""
-
-#: lib/simulator.py:12
-msgid "TRIM"
-msgstr ""
-
-#: lib/simulator.py:12
-msgid "STOP"
-msgstr ""
-
-#: lib/simulator.py:12
-msgid "COLOR CHANGE"
-msgstr ""
-
-#: lib/simulator.py:44
-msgid "Slow down (arrow down)"
-msgstr ""
-
-#: lib/simulator.py:47
-msgid "Speed up (arrow up)"
-msgstr ""
-
-#: lib/simulator.py:50
-msgid "Go on step backward (-)"
-msgstr ""
-
-#: lib/simulator.py:53
-msgid "Go on step forward (+)"
-msgstr ""
-
-#: lib/simulator.py:56
-msgid "Switch direction (arrow left | arrow right)"
-msgstr ""
-
-#: lib/simulator.py:57 lib/simulator.py:210 lib/simulator.py:217
-msgid "Pause"
-msgstr ""
-
-#: lib/simulator.py:59
-msgid "Pause (P)"
-msgstr ""
-
-#: lib/simulator.py:60
-msgid "Restart"
-msgstr ""
-
-#: lib/simulator.py:62
-msgid "Restart (R)"
-msgstr ""
-
-#: lib/simulator.py:63
-msgid "Quit"
-msgstr ""
-
-#: lib/simulator.py:65
-msgid "Quit (Q)"
-msgstr ""
-
-#: lib/simulator.py:171
-#, python-format
-msgid "Speed: %d stitches/sec"
-msgstr ""
-
-#: lib/simulator.py:213
-msgid "Start"
-msgstr ""
-
-#: lib/simulator.py:651
-msgid "Embroidery Simulation"
 msgstr ""
 
 #: lib/stitches/auto_fill.py:167
@@ -1349,7 +1366,7 @@ msgstr ""
 #: templates/auto_satin.inx:14 templates/convert_to_satin.inx:12
 #: templates/cut_satin.inx:12 templates/embroider.inx:24 templates/flip.inx:12
 #: templates/global_commands.inx:16 templates/install.inx:12
-#: templates/layer_commands.inx:16 templates/lettering.inx:14
+#: templates/layer_commands.inx:16 templates/lettering.inx:13
 #: templates/object_commands.inx:15 templates/params.inx:12
 #: templates/print.inx:12 templates/simulate.inx:12
 msgid "English"
@@ -1441,10 +1458,6 @@ msgstr ""
 
 #: templates/lettering.inx:3
 msgid "Lettering"
-msgstr ""
-
-#: templates/lettering.inx:7
-msgid "Text"
 msgstr ""
 
 #: templates/object_commands.inx:3
