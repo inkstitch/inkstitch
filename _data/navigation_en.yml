@@ -64,6 +64,8 @@ docs:
       url: /docs/commands/
     - title: "Satin Tools"
       url: /docs/satin-tools/
+    - title: "Lettering"
+      url: /docs/lettering/
     - title: "Simulate"
       url: /docs/simulate/
     - title: "Print"
