@@ -1,12 +1,20 @@
+from itertools import izip
 import sys
+from threading import Thread, Event
+import time
+import traceback
+
 import wx
 from wx.lib.intctrl import IntCtrl
-import time
-from itertools import izip
 
-from .svg import PIXELS_PER_MM
-from .i18n import _
-from .stitch_plan import stitch_plan_from_file
+from ..i18n import _
+from ..stitch_plan import stitch_plan_from_file, patches_to_stitch_plan
+
+from ..svg import PIXELS_PER_MM
+
+
+from .dialogs import info_dialog
+
 
 # L10N command label at bottom of simulator window
 COMMAND_NAMES = [_("STITCH"), _("JUMP"), _("TRIM"), _("STOP"), _("COLOR CHANGE")]
@@ -634,6 +642,121 @@ class EmbroiderySimulator(wx.Frame):
 
     def clear(self):
         self.simulator_panel.clear()
+
+
+class SimulatorPreview(Thread):
+    """Manages a preview simulation and a background thread for generating patches."""
+
+    def __init__(self, parent, *args, **kwargs):
+        """Construct a SimulatorPreview.
+
+        The parent is expected to be a wx.Window and also implement the following methods:
+
+            def generate_patches(self, abort_event):
+                Produce an list of Patch instances.  This method will be
+                invoked in a background thread and it is expected that it may
+                take awhile.
+
+                If possible, this method should periodically check
+                abort_event.is_set(), and if True, stop early.  The return
+                value will be ignored in this case.
+        """
+        self.parent = parent
+        self.target_duration = kwargs.pop('target_duration', 5)
+        super(SimulatorPreview, self).__init__(*args, **kwargs)
+        self.daemon = True
+
+        self.simulate_window = None
+        self.refresh_needed = Event()
+
+        # used when closing to avoid having the window reopen at the last second
+        self._disabled = False
+
+        wx.CallLater(1000, self.update)
+
+    def disable(self):
+        self._disabled = True
+
+    def update(self):
+        """Request an update of the simulator preview with freshly-generated patches."""
+
+        if self.simulate_window:
+            self.simulate_window.stop()
+            self.simulate_window.clear()
+
+        if self._disabled:
+            return
+
+        if not self.is_alive():
+            self.start()
+
+        self.refresh_needed.set()
+
+    def run(self):
+        while True:
+            self.refresh_needed.wait()
+            self.refresh_needed.clear()
+            self.update_patches()
+
+    def update_patches(self):
+        patches = self.parent.generate_patches(self.refresh_needed)
+
+        if patches and not self.refresh_needed.is_set():
+            stitch_plan = patches_to_stitch_plan(patches)
+
+            # GUI stuff needs to happen in the main thread, so we ask the main
+            # thread to call refresh_simulator().
+            wx.CallAfter(self.refresh_simulator, patches, stitch_plan)
+
+    def refresh_simulator(self, patches, stitch_plan):
+        if self.simulate_window:
+            self.simulate_window.stop()
+            self.simulate_window.load(stitch_plan)
+        else:
+            params_rect = self.parent.GetScreenRect()
+            simulator_pos = params_rect.GetTopRight()
+            simulator_pos.x += 5
+
+            current_screen = wx.Display.GetFromPoint(wx.GetMousePosition())
+            display = wx.Display(current_screen)
+            screen_rect = display.GetClientArea()
+            simulator_pos.y = screen_rect.GetTop()
+
+            width = screen_rect.GetWidth() - params_rect.GetWidth()
+            height = screen_rect.GetHeight()
+
+            try:
+                self.simulate_window = EmbroiderySimulator(None, -1, _("Preview"),
+                                                           simulator_pos,
+                                                           size=(width, height),
+                                                           stitch_plan=stitch_plan,
+                                                           on_close=self.simulate_window_closed,
+                                                           target_duration=self.target_duration)
+            except Exception:
+                error = traceback.format_exc()
+
+                try:
+                    # a window may have been created, so we need to destroy it
+                    # or the app will never exit
+                    wx.Window.FindWindowByName(_("Preview")).Destroy()
+                except Exception:
+                    pass
+
+                info_dialog(self, error, _("Internal Error"))
+
+            self.simulate_window.Show()
+            wx.CallLater(10, self.parent.Raise)
+
+        wx.CallAfter(self.simulate_window.go)
+
+    def simulate_window_closed(self):
+        self.simulate_window = None
+
+    def close(self):
+        self.disable()
+        if self.simulate_window:
+            self.simulate_window.stop()
+            self.simulate_window.Close()
 
 
 def show_simulator(stitch_plan):

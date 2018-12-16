@@ -1,78 +1,20 @@
 # -*- coding: UTF-8 -*-
 
+from collections import defaultdict
+from copy import copy
+from itertools import groupby
 import os
 import sys
-import json
-import traceback
-from threading import Thread, Event
-from copy import copy
+
 import wx
 from wx.lib.scrolledpanel import ScrolledPanel
-from collections import defaultdict
-from itertools import groupby
 
-from .base import InkstitchExtension
-from ..i18n import _
-from ..stitch_plan import patches_to_stitch_plan
-from ..elements import EmbroideryElement, Fill, AutoFill, Stroke, SatinColumn
-from ..utils import get_resource_dir
-from ..simulator import EmbroiderySimulator
 from ..commands import is_command
-
-
-def presets_path():
-    try:
-        import appdirs
-        config_path = appdirs.user_config_dir('inkstitch')
-    except ImportError:
-        config_path = os.path.expanduser('~/.inkstitch')
-
-    if not os.path.exists(config_path):
-        os.makedirs(config_path)
-    return os.path.join(config_path, 'presets.json')
-
-
-def load_presets():
-    try:
-        with open(presets_path(), 'r') as presets:
-            presets = json.load(presets)
-            return presets
-    except IOError:
-        return {}
-
-
-def save_presets(presets):
-    with open(presets_path(), 'w') as presets_file:
-        json.dump(presets, presets_file)
-
-
-def load_preset(name):
-    return load_presets().get(name)
-
-
-def save_preset(name, data):
-    presets = load_presets()
-    presets[name] = data
-    save_presets(presets)
-
-
-def delete_preset(name):
-    presets = load_presets()
-    presets.pop(name, None)
-    save_presets(presets)
-
-
-def confirm_dialog(parent, question, caption='ink/stitch'):
-    dlg = wx.MessageDialog(parent, question, caption, wx.YES_NO | wx.ICON_QUESTION)
-    result = dlg.ShowModal() == wx.ID_YES
-    dlg.Destroy()
-    return result
-
-
-def info_dialog(parent, message, caption='ink/stitch'):
-    dlg = wx.MessageDialog(parent, message, caption, wx.OK | wx.ICON_INFORMATION)
-    dlg.ShowModal()
-    dlg.Destroy()
+from ..elements import EmbroideryElement, Fill, AutoFill, Stroke, SatinColumn
+from ..gui import PresetsPanel, SimulatorPreview
+from ..i18n import _
+from ..utils import get_resource_dir
+from .base import InkstitchExtension
 
 
 class ParamsTab(ScrolledPanel):
@@ -358,7 +300,7 @@ class ParamsTab(ScrolledPanel):
 
         self.changed_inputs.add(self.param_inputs[param])
 
-        if self.on_change_hook():
+        if self.on_change_hook:
             self.on_change_hook(self)
 
 # end of class SatinPane
@@ -376,33 +318,10 @@ class SettingsFrame(wx.Frame):
         self.tabs = self.tabs_factory(self.notebook)
 
         for tab in self.tabs:
-            tab.on_change(self.update_simulator)
+            tab.on_change(self.update_preview)
 
-        self.simulate_window = None
-        self.simulate_thread = None
-        self.simulate_refresh_needed = Event()
-
-        # used when closing to avoid having the window reopen at the last second
-        self.disable_simulate_window = False
-
-        wx.CallLater(1000, self.update_simulator)
-
-        self.presets_box = wx.StaticBox(self, wx.ID_ANY, label=_("Presets"))
-
-        self.preset_chooser = wx.ComboBox(self, wx.ID_ANY)
-        self.update_preset_list()
-
-        self.load_preset_button = wx.Button(self, wx.ID_ANY, _("Load"))
-        self.load_preset_button.Bind(wx.EVT_BUTTON, self.load_preset)
-
-        self.add_preset_button = wx.Button(self, wx.ID_ANY, _("Add"))
-        self.add_preset_button.Bind(wx.EVT_BUTTON, self.add_preset)
-
-        self.overwrite_preset_button = wx.Button(self, wx.ID_ANY, _("Overwrite"))
-        self.overwrite_preset_button.Bind(wx.EVT_BUTTON, self.overwrite_preset)
-
-        self.delete_preset_button = wx.Button(self, wx.ID_ANY, _("Delete"))
-        self.delete_preset_button.Bind(wx.EVT_BUTTON, self.delete_preset)
+        self.preview = SimulatorPreview(self)
+        self.presets_panel = PresetsPanel(self)
 
         self.cancel_button = wx.Button(self, wx.ID_ANY, _("Cancel"))
         self.cancel_button.Bind(wx.EVT_BUTTON, self.cancel)
@@ -414,83 +333,17 @@ class SettingsFrame(wx.Frame):
         self.apply_button = wx.Button(self, wx.ID_ANY, _("Apply and Quit"))
         self.apply_button.Bind(wx.EVT_BUTTON, self.apply)
 
-        self.__set_properties()
+        self.notebook.SetMinSize((800, 600))
+
         self.__do_layout()
         # end wxGlade
 
-    def update_simulator(self, tab=None):
-        if self.simulate_window:
-            self.simulate_window.stop()
-            self.simulate_window.clear()
+    def update_preview(self, tab):
+        self.preview.update()
 
-        if self.disable_simulate_window:
-            return
+    def generate_patches(self, abort_early):
+        # called by self.preview
 
-        if not self.simulate_thread or not self.simulate_thread.is_alive():
-            self.simulate_thread = Thread(target=self.simulate_worker)
-            self.simulate_thread.daemon = True
-            self.simulate_thread.start()
-
-        self.simulate_refresh_needed.set()
-
-    def simulate_worker(self):
-        while True:
-            self.simulate_refresh_needed.wait()
-            self.simulate_refresh_needed.clear()
-            self.update_patches()
-
-    def update_patches(self):
-        patches = self.generate_patches()
-
-        if patches and not self.simulate_refresh_needed.is_set():
-            wx.CallAfter(self.refresh_simulator, patches)
-
-    def refresh_simulator(self, patches):
-        stitch_plan = patches_to_stitch_plan(patches)
-        if self.simulate_window:
-            self.simulate_window.stop()
-            self.simulate_window.load(stitch_plan)
-        else:
-            params_rect = self.GetScreenRect()
-            simulator_pos = params_rect.GetTopRight()
-            simulator_pos.x += 5
-
-            current_screen = wx.Display.GetFromPoint(wx.GetMousePosition())
-            display = wx.Display(current_screen)
-            screen_rect = display.GetClientArea()
-            simulator_pos.y = screen_rect.GetTop()
-
-            width = screen_rect.GetWidth() - params_rect.GetWidth()
-            height = screen_rect.GetHeight()
-
-            try:
-                self.simulate_window = EmbroiderySimulator(None, -1, _("Preview"),
-                                                           simulator_pos,
-                                                           size=(width, height),
-                                                           stitch_plan=stitch_plan,
-                                                           on_close=self.simulate_window_closed,
-                                                           target_duration=5)
-            except Exception:
-                error = traceback.format_exc()
-
-                try:
-                    # a window may have been created, so we need to destroy it
-                    # or the app will never exit
-                    wx.Window.FindWindowByName(_("Preview")).Destroy()
-                except Exception:
-                    pass
-
-                info_dialog(self, error, _("Internal Error"))
-
-            self.simulate_window.Show()
-            wx.CallLater(10, self.Raise)
-
-        wx.CallAfter(self.simulate_window.go)
-
-    def simulate_window_closed(self):
-        self.simulate_window = None
-
-    def generate_patches(self):
         patches = []
         nodes = []
 
@@ -505,7 +358,7 @@ class SettingsFrame(wx.Frame):
 
         try:
             for node in nodes:
-                if self.simulate_refresh_needed.is_set():
+                if abort_early.is_set():
                     # cancel; params were updated and we need to start over
                     return []
 
@@ -523,27 +376,9 @@ class SettingsFrame(wx.Frame):
 
         return patches
 
-    def update_preset_list(self):
-        preset_names = load_presets().keys()
-        preset_names = [preset for preset in preset_names if preset != "__LAST__"]
-        self.preset_chooser.SetItems(sorted(preset_names))
-
-    def get_preset_name(self):
-        preset_name = self.preset_chooser.GetValue().strip()
-        if preset_name:
-            return preset_name
-        else:
-            info_dialog(self, _("Please enter or select a preset name first."), caption=_('Preset'))
-            return
-
-    def check_and_load_preset(self, preset_name):
-        preset = load_preset(preset_name)
-        if not preset:
-            info_dialog(self, _('Preset "%s" not found.') % preset_name, caption=_('Preset'))
-
-        return preset
-
     def get_preset_data(self):
+        # called by self.presets_panel
+
         preset = {}
 
         current_tab = self.tabs[self.notebook.GetSelection()]
@@ -561,53 +396,13 @@ class SettingsFrame(wx.Frame):
 
         return preset
 
-    def add_preset(self, event, overwrite=False):
-        preset_name = self.get_preset_name()
-        if not preset_name:
-            return
-
-        if not overwrite and load_preset(preset_name):
-            info_dialog(self, _('Preset "%s" already exists.  Please use another name or press "Overwrite"') % preset_name, caption=_('Preset'))
-
-        save_preset(preset_name, self.get_preset_data())
-        self.update_preset_list()
-
-        event.Skip()
-
-    def overwrite_preset(self, event):
-        self.add_preset(event, overwrite=True)
-
-    def _load_preset(self, preset_name):
-        preset = self.check_and_load_preset(preset_name)
-        if not preset:
-            return
+    def apply_preset_data(self, preset_data):
+        # called by self.presets_panel
 
         for tab in self.tabs:
-            tab.load_preset(preset)
+            tab.load_preset(preset_data)
 
-    def load_preset(self, event):
-        preset_name = self.get_preset_name()
-        if not preset_name:
-            return
-
-        self._load_preset(preset_name)
-
-        event.Skip()
-
-    def delete_preset(self, event):
-        preset_name = self.get_preset_name()
-        if not preset_name:
-            return
-
-        preset = self.check_and_load_preset(preset_name)
-        if not preset:
-            return
-
-        delete_preset(preset_name)
-        self.update_preset_list()
-        self.preset_chooser.SetValue("")
-
-        event.Skip()
+        self.preview.update()
 
     def _apply(self):
         for tab in self.tabs:
@@ -615,19 +410,16 @@ class SettingsFrame(wx.Frame):
 
     def apply(self, event):
         self._apply()
-        save_preset("__LAST__", self.get_preset_data())
+        self.presets_panel.store_preset("__LAST__", self.get_preset_data())
         self.close()
 
     def use_last(self, event):
-        self.disable_simulate_window = True
-        self._load_preset("__LAST__")
+        self.preview.disable()
+        self.presets_panel.load_preset("__LAST__")
         self.apply(event)
 
     def close(self):
-        if self.simulate_window:
-            self.simulate_window.stop()
-            self.simulate_window.Close()
-
+        self.preview.close()
         self.Destroy()
 
     def cancel(self, event):
@@ -636,27 +428,15 @@ class SettingsFrame(wx.Frame):
 
         self.close()
 
-    def __set_properties(self):
-        # begin wxGlade: MyFrame.__set_properties
-        self.notebook.SetMinSize((800, 600))
-        self.preset_chooser.SetSelection(-1)
-        # end wxGlade
-
     def __do_layout(self):
         # begin wxGlade: MyFrame.__do_layout
         sizer_1 = wx.BoxSizer(wx.VERTICAL)
         # self.sizer_3_staticbox.Lower()
-        sizer_2 = wx.StaticBoxSizer(self.presets_box, wx.HORIZONTAL)
         sizer_3 = wx.BoxSizer(wx.HORIZONTAL)
         for tab in self.tabs:
             self.notebook.AddPage(tab, tab.name)
         sizer_1.Add(self.notebook, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
-        sizer_2.Add(self.preset_chooser, 1, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 5)
-        sizer_2.Add(self.load_preset_button, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 5)
-        sizer_2.Add(self.add_preset_button, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 5)
-        sizer_2.Add(self.overwrite_preset_button, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 5)
-        sizer_2.Add(self.delete_preset_button, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 5)
-        sizer_1.Add(sizer_2, 0, flag=wx.EXPAND | wx.ALL, border=10)
+        sizer_1.Add(self.presets_panel, 0, flag=wx.EXPAND | wx.ALL, border=10)
         sizer_3.Add(self.cancel_button, 0, wx.ALIGN_RIGHT | wx.RIGHT, 5)
         sizer_3.Add(self.use_last_button, 0, wx.ALIGN_RIGHT | wx.RIGHT | wx.BOTTOM, 5)
         sizer_3.Add(self.apply_button, 0, wx.ALIGN_RIGHT | wx.RIGHT | wx.BOTTOM, 5)

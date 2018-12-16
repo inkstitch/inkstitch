@@ -106,7 +106,7 @@ class Font(object):
             position.x = 0
             position.y += self.leading
 
-        if self.auto_satin:
+        if self.auto_satin and len(line_group) > 0:
             self._apply_auto_satin(line_group)
 
         return line_group
