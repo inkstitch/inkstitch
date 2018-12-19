@@ -1,6 +1,6 @@
-from .base import InkstitchExtension
-from ..simulator import show_simulator
+from ..gui import show_simulator
 from ..stitch_plan import patches_to_stitch_plan
+from .base import InkstitchExtension
 
 
 class Simulate(InkstitchExtension):

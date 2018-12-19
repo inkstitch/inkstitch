@@ -1,5 +1,8 @@
 import inkex
 
+# This is used below and added to the document in ../extensions/base.py.
+inkex.NSS['inkstitch'] = 'http://inkstitch.org/namespace'
+
 
 SVG_PATH_TAG = inkex.addNS('path', 'svg')
 SVG_POLYLINE_TAG = inkex.addNS('polyline', 'svg')
@@ -16,5 +19,6 @@ CONNECTOR_TYPE = inkex.addNS('connector-type', 'inkscape')
 XLINK_HREF = inkex.addNS('href', 'xlink')
 SODIPODI_NAMEDVIEW = inkex.addNS('namedview', 'sodipodi')
 SODIPODI_GUIDE = inkex.addNS('guide', 'sodipodi')
+INKSTITCH_LETTERING = inkex.addNS('lettering', 'inkstitch')
 
 EMBROIDERABLE_TAGS = (SVG_PATH_TAG, SVG_POLYLINE_TAG)
