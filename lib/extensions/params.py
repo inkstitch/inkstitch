@@ -462,7 +462,7 @@ class Params(InkstitchExtension):
         classes = []
 
         if not is_command(node):
-            if element.get_style("fill", "black") != "none":
+            if element.get_style("fill", "black") is not None:
                 classes.append(AutoFill)
                 classes.append(Fill)
 
