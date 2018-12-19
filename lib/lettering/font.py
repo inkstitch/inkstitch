@@ -81,7 +81,7 @@ class Font(object):
     kerning_pairs = font_metadata('kerning_pairs', {})
     auto_satin = font_metadata('auto_satin', True)
 
-    def render_text(self, text, variant=None, back_and_forth=True):
+    def render_text(self, text, variant=None, back_and_forth=True, trim=False):
         if variant is None:
             variant = self.default_variant
 

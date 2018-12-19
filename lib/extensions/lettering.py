@@ -38,6 +38,10 @@ class LetteringFrame(wx.Frame):
         self.back_and_forth_checkbox.SetValue(self.settings.back_and_forth)
         self.Bind(wx.EVT_CHECKBOX, lambda event: self.on_change("back_and_forth", event))
 
+        self.trim_checkbox = wx.CheckBox(self, label=_("Add trims"))
+        self.trim_checkbox.SetValue(bool(self.settings.trim))
+        self.Bind(wx.EVT_CHECKBOX, lambda event: self.on_change("trim", event))
+
         # text editor
         self.text_editor_box = wx.StaticBox(self, wx.ID_ANY, label=_("Text"))
 
@@ -86,15 +90,16 @@ class LetteringFrame(wx.Frame):
         self.settings[attribute] = event.GetEventObject().GetValue()
         self.preview.update()
 
+    def update_lettering(self):
+        font_path = os.path.join(get_bundled_dir("fonts"), self.settings.font)
+        font = Font(font_path)
+        self.group[:] = font.render_text(self.settings.text, back_and_forth=self.settings.back_and_forth, trim=self.settings.trim)
+
     def generate_patches(self, abort_early=None):
         patches = []
 
-        font_path = os.path.join(get_bundled_dir("fonts"), self.settings.font)
-        font = Font(font_path)
-
         try:
-            lines = font.render_text(self.settings.text, back_and_forth=self.settings.back_and_forth)
-            self.group[:] = lines
+            self.update_lettering()
             elements = nodes_to_elements(self.group.iterdescendants(SVG_PATH_TAG))
 
             for element in elements:
@@ -131,7 +136,7 @@ class LetteringFrame(wx.Frame):
 
     def apply(self, event):
         self.preview.disable()
-        self.generate_patches()
+        self.update_lettering()
         self.save_settings()
         self.close()
 
