@@ -1,12 +1,13 @@
-from itertools import chain, izip
 from copy import deepcopy
-from shapely import geometry as shgeo, affinity as shaffinity
-import cubicsuperpath
+from itertools import chain, izip
 
-from .element import param, EmbroideryElement, Patch
+import cubicsuperpath
+from shapely import geometry as shgeo, affinity as shaffinity
+
 from ..i18n import _
-from ..utils import cache, Point, cut, collapse_duplicate_point
 from ..svg import line_strings_to_csp, point_lists_to_csp
+from ..utils import cache, Point, cut, collapse_duplicate_point
+from .element import param, EmbroideryElement, Patch
 
 
 class SatinColumn(EmbroideryElement):
@@ -255,7 +256,7 @@ class SatinColumn(EmbroideryElement):
                     intersections += len(intersection)
                     break
                 elif not isinstance(intersection, shgeo.Point):
-                    self.fatal("intersection is a: %s %s" % (intersection, intersection.geoms))
+                    self.fatal("INTERNAL ERROR: intersection is: %s %s" % (intersection, getattr(intersection, 'geoms', None)))
                 else:
                     intersections += 1
 
