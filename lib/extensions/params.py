@@ -3,7 +3,6 @@
 from collections import defaultdict
 from copy import copy
 from itertools import groupby
-import json
 import os
 import sys
 
@@ -13,7 +12,6 @@ from wx.lib.scrolledpanel import ScrolledPanel
 
 from ..commands import is_command
 from ..elements import EmbroideryElement, Fill, AutoFill, Stroke, SatinColumn
-from ..simulator import EmbroiderySimulator
 from ..gui import PresetsPanel, SimulatorPreview
 from ..i18n import _
 from ..utils import get_resource_dir
