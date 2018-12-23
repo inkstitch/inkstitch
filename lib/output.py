@@ -1,11 +1,12 @@
-import sys
 import pyembroidery
+import sys
+
 import simpletransform
 
-from .i18n import _
-from .utils import Point
-from .svg import PIXELS_PER_MM, get_doc_size, get_viewbox_transform
 from .commands import global_command
+from .i18n import _
+from .svg import PIXELS_PER_MM, get_doc_size, get_viewbox_transform
+from .utils import Point
 
 
 def get_command(stitch):
@@ -99,5 +100,5 @@ def write_embroidery_file(file_path, stitch_plan, svg, settings={}):
     except IOError as e:
         # L10N low-level file error.  %(error)s is (hopefully?) translated by
         # the user's system automatically.
-        print >> sys.stderr, _("Error writing to %(path)s: %(error)s") % dict(path=file_path, error=e.message)
+        print >> sys.stderr, _("Error writing to %(path)s: %(error)s") % dict(path=file_path, error=e.strerror)
         sys.exit(1)
