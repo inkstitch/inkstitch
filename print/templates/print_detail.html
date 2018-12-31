@@ -16,7 +16,7 @@
         </header>
         <main>
             <figure class="inksimulation" data-field-name="client-detail-transform-block{{ loop.index0 }}" title="{{ _('Ctrl + Scroll to Zoom') }}">
-                {{color_block.svg_preview|safe}}
+                {{color_block.svg_preview|replace("<li>", "")|replace("</li>", "")|safe}}
                 {% include 'ui_svg_action_buttons.html' %}
             </figure>
             <div class="color-palette detailed">

@@ -18,7 +18,9 @@
             <span>##</span>
           </p>
           <p class="operator-svg operator-preview">
-            {{ svg_overview|safe }}
+            <svg>
+            {{ svg_overview|replace("<li>", "")|replace("</li>", "")|safe }}
+            </svg>
           </p>
           <p>
             <span>{{ _('Unique Colors') }}: {{ job.num_colors }}</span>
@@ -51,7 +53,7 @@
               </svg>
             </p>
             <p class="operator-svg operator-preview">
-                {{ color_block.svg_preview|safe }}
+                {{ color_block.svg_preview|replace("<li>", "")|replace("</li>", "")|safe }}
             </p>
             <p>
               <span data-field-name="color-{{ color_block.color.hex_digits }}" contenteditable="true" data-placeholder="{{ _('Enter thread name...') }}">{{ color_block.color.name }}</span>
