@@ -5,6 +5,7 @@ import simpletransform
 
 from .commands import global_command
 from .i18n import _
+from .stitch_plan import Stitch
 from .svg import PIXELS_PER_MM, get_doc_size, get_viewbox_transform
 from .utils import Point
 
@@ -58,6 +59,7 @@ def write_embroidery_file(file_path, stitch_plan, svg, settings={}):
     origin = get_origin(svg)
 
     pattern = pyembroidery.EmbPattern()
+    stitch = Stitch(0, 0)
 
     for color_block in stitch_plan:
         pattern.add_thread(color_block.color.pyembroidery_thread)

@@ -385,8 +385,8 @@ class DrawingPanel(wx.Panel):
         self.go()
 
     def choose_zoom_and_pan(self, event=None):
-        # ignore if called before we load the stitch plan
-        if not self.width and not self.height:
+        # ignore if EVT_SIZE fired before we load the stitch plan
+        if not self.width and not self.height and event is not None:
             return
 
         panel_width, panel_height = self.GetClientSize()
