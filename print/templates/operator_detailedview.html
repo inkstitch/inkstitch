@@ -18,9 +18,7 @@
             <span>##</span>
           </p>
           <p class="operator-svg operator-preview">
-            <svg>
             {{ svg_overview|replace("<li>", "")|replace("</li>", "")|safe }}
-            </svg>
           </p>
           <p>
             <span>{{ _('Unique Colors') }}: {{ job.num_colors }}</span>
