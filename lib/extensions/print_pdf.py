@@ -365,7 +365,6 @@ class Print(InkstitchExtension):
                 'num_trims': stitch_plan.num_trims,
                 'dimensions': stitch_plan.dimensions_mm,
                 'num_stitches': stitch_plan.num_stitches,
-                'estimated_time': '',  # TODO
                 'estimated_thread': '',  # TODO
             },
             svg_overview=overview_svg,
