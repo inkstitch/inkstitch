@@ -23,7 +23,7 @@ def running_stitch(points, stitch_length):
     segment_start = points[0]
     last_segment_direction = None
 
-    # This tracks the distance we've travelled along the current segment so
+    # This tracks the distance we've traveled along the current segment so
     # far.  Each time we make a stitch, we add the stitch_length to this
     # value.  If we fall off the end of the current segment, we carry over
     # the remainder to the next segment.
@@ -62,8 +62,12 @@ def running_stitch(points, stitch_length):
         last_segment_direction = segment_direction
         distance -= segment_length
 
+    # stitch a single point if the path has a length of zero
+    if not output:
+        output.append(segment_start)
+
     # stitch the last point unless we're already almost there
-    if (segment_start - output[-1]).length() > 0.1:
+    if (segment_start - output[-1]).length() > 0.1 or len(output) == 0:
         output.append(segment_start)
 
     return output
