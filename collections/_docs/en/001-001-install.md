@@ -29,7 +29,7 @@ Linux|`inkstitch-[VERSION]-Linux-x86_64.tar.gz`|☒|☑
 Windows|`inkstitch-[VERSION]-win32.zip`|☑|☑
 macOS|`inkstitch-[VERSION]-osx-x86_64.tar.gz`|☒|☑
 
-**Info:** The MacOS version currently works only with High Sierra (10.13).
+**Info:** Ink/Stitch for macOS currently works only with High Sierra (10.13) and higher.
 {: .notice--warning }
 
 ### 2. Install
