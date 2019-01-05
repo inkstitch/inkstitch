@@ -327,14 +327,16 @@ def get_outline_nodes(graph, outline_index=0):
 def find_initial_path(graph, starting_point, ending_point=None):
     starting_node = nearest_node_on_outline(graph, starting_point)
 
-    if ending_point is None:
+    if ending_point is not None:
+        ending_node = nearest_node_on_outline(graph, ending_point)
+
+    if ending_point is None or starting_node is ending_node:
         # If they didn't give an ending point, pick either neighboring node
         # along the outline -- doesn't matter which.  We do this because
         # the algorithm requires we start with _some_ path.
         neighbors = [n for n, keys in graph.adj[starting_node].iteritems() if 'outline' in keys]
         return [PathEdge((starting_node, neighbors[0]), "initial")]
     else:
-        ending_node = nearest_node_on_outline(graph, ending_point)
         outline_nodes = get_outline_nodes(graph)
 
         # Multiply the outline_nodes list by 2 (duplicate it) because
