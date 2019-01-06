@@ -46,7 +46,7 @@ macOS|`inkstitch-[VERSION]-osx-x86_64.tar.gz`|☒|☑
 
 #### Windows
 
- * Unhide the AppData directory (go to `C:\Users\%USERNAME%\`, e.g. `C:\Users\Janet`
+ * Unhide the AppData directory (go to `C:\Users\%USERNAME%\`, e.g. `C:\Users\Janet`)
  * Unzip in `C:\Users\%USERNAME%\AppData\Roaming\inkscape\extensions`
 
 ## Upgrade
