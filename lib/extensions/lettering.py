@@ -12,6 +12,7 @@ from ..elements import nodes_to_elements
 from ..gui import PresetsPanel, SimulatorPreview
 from ..i18n import _
 from ..lettering import Font
+from ..svg import get_correction_transform
 from ..svg.tags import SVG_PATH_TAG, SVG_GROUP_TAG, INKSCAPE_LABEL, INKSTITCH_LETTERING
 from ..utils import get_bundled_dir, DotDict
 from .commands import CommandsExtension
@@ -215,7 +216,8 @@ class Lettering(CommandsExtension):
         else:
             self.ensure_current_layer()
             return inkex.etree.SubElement(self.current_layer, SVG_GROUP_TAG, {
-                INKSCAPE_LABEL: _("Ink/Stitch Lettering")
+                INKSCAPE_LABEL: _("Ink/Stitch Lettering"),
+                "transform": get_correction_transform(self.current_layer, child=True)
             })
 
     def effect(self):
