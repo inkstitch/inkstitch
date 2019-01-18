@@ -25,10 +25,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="31.678384"
-     inkscape:cx="7.2625631"
+     inkscape:cx="0.58608617"
      inkscape:cy="15.104226"
      inkscape:document-units="px"
-     inkscape:current-layer="svg8375"
+     inkscape:current-layer="g16861"
      showgrid="false"
      units="px"
      inkscape:window-width="1366"
@@ -1015,9 +1015,9 @@
        embroider_pull_compensation_mm="0.2"
        embroider_satin_column="True"
        embroider_zigzag_spacing_mm="0.4"
-       d="m 16.45786,25.15192 7.397,-19.12489 m -9.68698,18.88708 v -2.23042 l 0.79498,-0.59977 6.16201,-16.05689 m -4.14473,8.31684 h 4.55781"
+       d="m 6.07086,6.02703 7.41001,19.12489 M 8.81386,6.02703 l 6.149,16.05689 0.70812,0.69675 v 2.23042 M 8.39788,14.2469 h 4.50932"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.66666412px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="path37800" />
+       id="path7425" />
     <path
        sodipodi:nodetypes="cccccccc"
        inkscape:connector-curvature="0"
@@ -1028,9 +1028,9 @@
        embroider_pull_compensation_mm="0.2"
        embroider_satin_column="True"
        embroider_zigzag_spacing_mm="0.4"
-       d="m 6.07086,6.02703 7.41001,19.12489 M 8.81386,6.02703 l 6.149,16.05689 0.70812,0.69675 v 2.23042 M 8.39788,14.2469 h 4.50932"
+       d="m 16.45786,25.15192 7.397,-19.12489 m -9.68698,18.88708 v -2.23042 l 0.79498,-0.59977 6.16201,-16.05689 m -4.14473,8.31684 h 4.55781"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.66666412px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="path7425" />
+       id="path37800" />
   </g>
   <g
      id="g17062"
