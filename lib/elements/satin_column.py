@@ -717,22 +717,22 @@ class SatinColumn(EmbroideryElement):
         # First, verify that we have valid paths.
         self.validate_satin_column()
 
-        patches = []
+        patch = Patch(color=self.color)
 
         if self.center_walk_underlay:
-            patches.append(self.do_center_walk())
+            patch += self.do_center_walk()
 
         if self.contour_underlay:
-            patches.append(self.do_contour_underlay())
+            patch += self.do_contour_underlay()
 
         if self.zigzag_underlay:
             # zigzag underlay comes after contour walk underlay, so that the
             # zigzags sit on the contour walk underlay like rail ties on rails.
-            patches.append(self.do_zigzag_underlay())
+            patch += self.do_zigzag_underlay()
 
         if self.e_stitch:
-            patches.append(self.do_e_stitch())
+            patch += self.do_e_stitch()
         else:
-            patches.append(self.do_satin())
+            patch += self.do_satin()
 
-        return patches
+        return [patch]
