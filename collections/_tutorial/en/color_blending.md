@@ -4,7 +4,7 @@ permalink: /tutorials/color-blending/
 last_modified_at: 2018-10-28
 language: en
 excerpt: "Color Blending Methods"
-image: "/assets/images/tutorials/samples/True Blend.svg"
+image: "/assets/images/tutorials/samples/True_Blend.svg"
 
 tutorial-type:
   - Sample File

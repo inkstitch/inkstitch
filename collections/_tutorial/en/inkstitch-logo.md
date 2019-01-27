@@ -83,7 +83,7 @@ user-level:
     </div>
     <div class="archive__item-body">
       <div class="archive__item-excerpt">
-        <p><a href="/assets/images/tutorials/logo/InkStitch_Logo_QR_Code_Patch.svg">Ink/Stitch QR Code</a></p>
+        <p><a href="/assets/images/tutorials/logo/logo/InkStitch_Logo_QR_Code_Patch.svg">Ink/Stitch QR Code</a></p>
       </div>
     </div>
   </div>
