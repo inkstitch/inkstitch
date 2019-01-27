@@ -242,7 +242,7 @@ class RunningStitch(object):
 
     @cache
     def reversed(self):
-        return RunningStitch(shgeo.LineString(reversed(self.path.coords)), self.style)
+        return RunningStitch(shgeo.LineString(reversed(self.path.coords)), self.original_element)
 
     def is_sequential(self, other):
         if not isinstance(other, RunningStitch):
