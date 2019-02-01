@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-12-16 02:00+0000\n"
-"PO-Revision-Date: 2018-12-16 02:00\n"
+"POT-Creation-Date: 2019-01-02 02:08+0000\n"
+"PO-Revision-Date: 2019-02-01 02:26\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -38,20 +38,20 @@ msgstr "Position de fin de remplissage"
 #. command attached to an object
 #: lib/commands.py:19
 msgid "satin_start"
-msgstr ""
+msgstr "début_satin"
 
 #: lib/commands.py:19
 msgid "Auto-route satin stitch starting position"
-msgstr ""
+msgstr "Position de départ pour points satins autogénérés"
 
 #. command attached to an object
 #: lib/commands.py:22
 msgid "satin_end"
-msgstr ""
+msgstr "fin_satin"
 
 #: lib/commands.py:22
 msgid "Auto-route satin stitch ending position"
-msgstr ""
+msgstr "Position de fin pour points satins auto-générés"
 
 #. command attached to an object
 #: lib/commands.py:25
@@ -133,11 +133,11 @@ msgstr "%(command)s: %(description)s"
 
 #: lib/elements/auto_fill.py:11
 msgid "AutoFill"
-msgstr "Remplissage auto"
+msgstr "Auto-remplissage"
 
 #: lib/elements/auto_fill.py:14
 msgid "Automatically routed fill stitching"
-msgstr "Remplir automatiquement avec des points de broderie"
+msgstr "Auto-remplissage avec des points de broderie"
 
 #: lib/elements/auto_fill.py:34
 msgid "Running stitch length (traversal between sections)"
@@ -431,25 +431,25 @@ msgstr "Détection d'une définition obsolète de point droit !  Il semble que 
 
 #: lib/extensions/auto_satin.py:32
 msgid "Please ensure that at most one start and end command is attached to the selected satin columns."
-msgstr ""
+msgstr "Veuillez vous assurer qu’au plus une seule commande début et fin soit attachée aux colonnes de satin sélectionnées."
 
 #. auto-route satin columns extension
 #: lib/extensions/auto_satin.py:62
 msgid "Please select one or more satin columns."
-msgstr ""
+msgstr "Veuillez sélection une ou plusieurs colonnes satin."
 
 #. Label for a satin column created by Auto-Route Satin Columns extension
 #: lib/extensions/auto_satin.py:89
 #, python-format
 msgid "AutoSatin %d"
-msgstr ""
+msgstr "Auto-remplissage satin %d"
 
 #. Label for running stitch (underpathing) created by Auto-Route Satin Columns
 #. extension
 #: lib/extensions/auto_satin.py:94
 #, python-format
 msgid "AutoSatin Running Stitch %d"
-msgstr ""
+msgstr "Points droits pour auto-remplissage satin %d"
 
 #: lib/extensions/base.py:124
 msgid "No embroiderable paths selected."
@@ -564,19 +564,19 @@ msgstr "Veuillez choisir une ou plusieurs commandes à ajouter."
 
 #: lib/extensions/lettering.py:26 lib/extensions/lettering.py:213
 msgid "Ink/Stitch Lettering"
-msgstr ""
+msgstr "Lettrage Ink/Stitch"
 
 #: lib/extensions/lettering.py:35
 msgid "Options"
-msgstr ""
+msgstr "Options"
 
 #: lib/extensions/lettering.py:37
 msgid "Stitch lines of text back and forth"
-msgstr ""
+msgstr "Points droits du texte arrière et avant"
 
 #: lib/extensions/lettering.py:42
 msgid "Text"
-msgstr ""
+msgstr "Texte"
 
 #: lib/extensions/lettering.py:54 lib/extensions/params.py:333
 msgid "Apply and Quit"
@@ -584,11 +584,11 @@ msgstr "Appliquer et Quitter"
 
 #: lib/extensions/lettering.py:202
 msgid "Please select only one block of text."
-msgstr ""
+msgstr "Veuillez ne sélectionner qu’un seul bloc de texte."
 
 #: lib/extensions/lettering.py:205
 msgid "You've selected objects that were not created by the Lettering extension.  Please clear your selection or select different objects before running Lettering again."
-msgstr ""
+msgstr "Vous avez sélectionné des objets qui ne sont pas créées par l’extension de lettrage.  SVP, effacez votre sélection ou sélectionnez des objets différents avant d’exécuter le lettrage à nouveau."
 
 #: lib/extensions/object_commands.py:16
 msgid "Please select one or more objects to which to attach commands."
@@ -658,7 +658,7 @@ msgid "A print preview has been opened in your web browser.  This window will st
 "This window will close after you close the print preview in your browser, or you can close it manually if necessary."
 msgstr "Un aperçu avant impression a été ouvert dans votre navigateur web.  Cette fenêtre reste ouverte pour communiquer avec le code JavaScript s’exécutant dans votre navigateur.  Cette fenêtre se fermera après avoir fermer l’aperçu avant impression dans le navigateur, vous pouvez la fermer manuellement si nécessaire."
 
-#: lib/extensions/print_pdf.py:412
+#: lib/extensions/print_pdf.py:411
 msgid "Ink/Stitch Print"
 msgstr "Imprimer Ink/Stitch"
 
@@ -799,7 +799,7 @@ msgstr "Générer les fichiers INX"
 
 #: lib/lettering/font.py:94
 msgid "Ink/Stitch Text"
-msgstr ""
+msgstr "Texte Ink/Stitch"
 
 #. low-level file error.  %(error)s is (hopefully?) translated by
 #. the user's system automatically.
@@ -810,7 +810,7 @@ msgstr "Erreur d’écriture pour %(path)s: %(error)s"
 
 #: lib/stitches/auto_fill.py:167
 msgid "Unable to autofill.  This most often happens because your shape is made up of multiple sections that aren't connected."
-msgstr "Impossible de remplir automatiquement. Cela arrive le plus souvent parce que votre forme est composée de plusieurs sections qui ne sont pas connectées."
+msgstr "Impossible de remplir automatiquement. Cela arrive le plus souvent lorsque votre forme est composée de plusieurs sections qui ne sont pas connectées."
 
 #: lib/stitches/auto_fill.py:395
 msgid "Unexpected error while generating fill stitches. Please send your SVG file to lexelby@github."
@@ -880,7 +880,7 @@ msgstr "Page"
 #: print/templates/footer.html:3 print/templates/ui.html:78
 #: print/templates/ui.html:85
 msgid "Proudly generated with"
-msgstr ""
+msgstr "Fièrement généré avec"
 
 #: print/templates/headline.html:5
 msgid "Click to choose another logo"
@@ -909,7 +909,7 @@ msgstr "Entrez le numéro de commande..."
 #: print/templates/headline.html:15
 #, python-format
 msgid "%m/%d/%Y"
-msgstr ""
+msgstr "%m/%d/%Y"
 
 #: print/templates/operator_detailedview.html:10
 msgid "Thread Consumption"
@@ -971,7 +971,7 @@ msgstr "fil utilisé"
 
 #: print/templates/operator_detailedview.html:64
 msgid "estimated time"
-msgstr ""
+msgstr "durée estimée"
 
 #: print/templates/operator_detailedview.html:67
 msgid "trims"
@@ -1029,11 +1029,11 @@ msgstr "Mise en page"
 
 #: print/templates/ui.html:19
 msgid "Branding"
-msgstr ""
+msgstr "Image de marque"
 
 #: print/templates/ui.html:20 print/templates/ui.html:92
 msgid "Estimated Time"
-msgstr ""
+msgstr "Durée estimée"
 
 #: print/templates/ui.html:21 print/templates/ui.html:126
 msgid "Design"
@@ -1069,7 +1069,7 @@ msgstr "Taille de la miniature"
 
 #: print/templates/ui.html:45 print/templates/ui.html:88
 msgid "Includes these Page Setup, estimated time settings and also the icon."
-msgstr ""
+msgstr "Comprend ces paramètres de mise en page, le réglage de l'heure et l’icône."
 
 #: print/templates/ui.html:45 print/templates/ui.html:88
 #: print/templates/ui.html:122
@@ -1078,76 +1078,76 @@ msgstr "Enregistrer comme valeurs par défaut"
 
 #: print/templates/ui.html:50
 msgid "Logo"
-msgstr ""
+msgstr "Logo"
 
 #: print/templates/ui.html:60
 msgid "Footer: Operator contact information"
-msgstr ""
+msgstr "Pied de page : Coordonnées de l'opérateur"
 
 #: print/templates/ui.html:71
 msgid "Enter URL"
-msgstr ""
+msgstr "Entrez l’URL"
 
 #: print/templates/ui.html:72 print/templates/ui.html:76
 #: print/templates/ui.html:82
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: print/templates/ui.html:75
 msgid "Enter E-Mail"
-msgstr ""
+msgstr "Entrez votre adresse E-Mail"
 
 #: print/templates/ui.html:80
 msgid "This will reset your custom text to the default."
-msgstr ""
+msgstr "Cela réinitialisera votre texte personnalisé au défaut."
 
 #: print/templates/ui.html:81
 msgid "All changes will be lost."
-msgstr ""
+msgstr "Toutes les modifications seront perdues."
 
 #: print/templates/ui.html:94
 msgid "Machine Settings"
-msgstr ""
+msgstr "Réglages de la machine"
 
 #: print/templates/ui.html:96
 msgid "Average Machine Speed"
-msgstr ""
+msgstr "Vitesse moyenne de la machine"
 
 #: print/templates/ui.html:97
 msgid "stitches per minute "
-msgstr ""
+msgstr "Points par minute "
 
 #: print/templates/ui.html:101
 msgid "Time Factors"
-msgstr ""
+msgstr "Facteurs de temps"
 
 #: print/templates/ui.html:104
 msgid "Includes average time for preparing the machine, thread breaks and/or bobbin changes, etc."
-msgstr ""
+msgstr "Comprend le temps moyen de préparation de la machine, coupures de fils et/ou changement de canette, etc."
 
 #: print/templates/ui.html:104
 msgid "seconds to add to total time*"
-msgstr ""
+msgstr "secondes à ajouter à la durée totale *"
 
 #: print/templates/ui.html:108
 msgid "This will be added to the total time."
-msgstr ""
+msgstr "Cela s’ajoutera à la durée totale."
 
 #: print/templates/ui.html:108
 msgid "seconds needed for a color change*"
-msgstr ""
+msgstr "secondes nécessaires pour un changement de couleur *"
 
 #: print/templates/ui.html:111
 msgid "seconds needed for trim"
-msgstr ""
+msgstr "secondes nécessaires pour une coupe de fil"
 
 #: print/templates/ui.html:114
 msgid "Display Time On"
-msgstr ""
+msgstr "Affichage de l’heure sur"
 
 #: print/templates/ui.html:122
 msgid "Includes page setup, estimated time and also the branding."
-msgstr ""
+msgstr "Comprend la mise en page, temps estimé et aussi l’image de marque."
 
 #: print/templates/ui.html:127
 msgid "Thread Palette"
@@ -1351,15 +1351,15 @@ msgstr "Format G-code"
 
 #: templates/auto_satin.inx:3
 msgid "Auto-Route Satin Columns"
-msgstr ""
+msgstr "Remplissage automatique de colonnes satin"
 
 #: templates/auto_satin.inx:7
 msgid "Trim jump stitches"
-msgstr ""
+msgstr "Couper après des sauts"
 
 #: templates/auto_satin.inx:8
 msgid "Preserve order of satin columns"
-msgstr ""
+msgstr "Préserver l’ordre des colonnes satin"
 
 #. This is used for the submenu under Extensions -> Ink/Stitch.  Translate this
 #. to your language's word for its language, e.g. "Español" for the spanish
@@ -1376,7 +1376,7 @@ msgstr "Français"
 #: templates/auto_satin.inx:15 templates/convert_to_satin.inx:13
 #: templates/cut_satin.inx:13 templates/flip.inx:13
 msgid "Satin Tools"
-msgstr ""
+msgstr "Outils de satin"
 
 #: templates/convert_to_satin.inx:3
 msgid "Convert Line to Satin"
@@ -1424,7 +1424,7 @@ msgstr "Laissez vide pour enregistrer la sortie dans le dossier d’Inkscape."
 
 #: templates/flip.inx:3
 msgid "Flip Satin Column Rails"
-msgstr ""
+msgstr "Invertir les rails satin"
 
 #: templates/global_commands.inx:3
 msgid "Add Commands"
@@ -1459,7 +1459,7 @@ msgstr "Les commandes s’ajouteront au calque sélectionné."
 
 #: templates/lettering.inx:3
 msgid "Lettering"
-msgstr ""
+msgstr "Lettrage"
 
 #: templates/object_commands.inx:3
 msgid "Attach Commands to Selected Objects"

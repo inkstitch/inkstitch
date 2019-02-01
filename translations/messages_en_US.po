@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-12-16 02:00+0000\n"
-"PO-Revision-Date: 2018-12-16 02:00\n"
+"POT-Creation-Date: 2019-01-02 02:08+0000\n"
+"PO-Revision-Date: 2019-02-01 02:27\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: English\n"
 "MIME-Version: 1.0\n"
@@ -657,7 +657,7 @@ msgid "A print preview has been opened in your web browser.  This window will st
 "This window will close after you close the print preview in your browser, or you can close it manually if necessary."
 msgstr ""
 
-#: lib/extensions/print_pdf.py:412
+#: lib/extensions/print_pdf.py:411
 msgid "Ink/Stitch Print"
 msgstr ""
 
