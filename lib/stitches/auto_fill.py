@@ -178,14 +178,19 @@ def build_graph(shape, segments, angle, row_spacing, max_stitch_length):
             if i % 2 == edge_set:
                 graph.add_edge(node1, node2, key="extra")
 
+    check_graph(graph, shape, max_stitch_length)
+
+    return graph
+
+
+def check_graph(graph, shape, max_stitch_length):
     if networkx.is_empty(graph) or not networkx.is_eulerian(graph):
         if shape.area < max_stitch_length ** 2:
             raise InvalidPath(_("This shape is so small that it cannot be filled with rows of stitches.  "
                                 "It would probably look best as a satin column or running stitch."))
         else:
-            raise InvalidPath(_("Cannot parse shape.  This most often happens because your shape is made up of multiple sections that aren't connected."))
-
-    return graph
+            raise InvalidPath(_("Cannot parse shape.  "
+                                "This most often happens because your shape is made up of multiple sections that aren't connected."))
 
 
 def node_list_to_edge_list(node_list):

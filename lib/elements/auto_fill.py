@@ -189,8 +189,9 @@ class AutoFill(Fill):
             message = ""
             message += _("Error during autofill!  This means that there is a problem with Ink/Stitch.")
             message += "\n\n"
-            message += _("If you'd like to help us make Ink/Stitch better, please paste this whole message into a new issue at: https://github.com/inkstitch/inkstitch/issues/new")
-            message += "\n\n"
+            # L10N this message is followed by a URL: https://github.com/inkstitch/inkstitch/issues/new
+            message += _("If you'd like to help us make Ink/Stitch better, please paste this whole message into a new issue at: ")
+            message += "https://github.com/inkstitch/inkstitch/issues/new\n\n"
             message += traceback.format_exc()
 
             self.fatal(message)
