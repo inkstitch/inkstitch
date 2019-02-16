@@ -5,13 +5,18 @@ import sys
 import networkx
 import shapely
 
+from ..exceptions import InkstitchException
 from ..i18n import _
 from ..utils.geometry import Point as InkstitchPoint, cut
 from .fill import intersect_region_with_grating, row_num, stitch_row
 from .running_stitch import running_stitch
 
 
-class MaxQueueLengthExceeded(Exception):
+class MaxQueueLengthExceeded(InkstitchException):
+    pass
+
+
+class InvalidPath(InkstitchException):
     pass
 
 
@@ -55,7 +60,7 @@ def auto_fill(shape,
     rows_of_segments = intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing)
     segments = [segment for row in rows_of_segments for segment in row]
 
-    graph = build_graph(shape, segments, angle, row_spacing)
+    graph = build_graph(shape, segments, angle, row_spacing, max_stitch_length)
     path = find_stitch_path(graph, segments, starting_point, ending_point)
 
     stitches.extend(path_to_stitches(graph, path, shape, angle, row_spacing, max_stitch_length, running_stitch_length, staggers, skip_last))
@@ -90,7 +95,7 @@ def project(shape, coords, outline_index):
     return outline.project(shapely.geometry.Point(*coords))
 
 
-def build_graph(shape, segments, angle, row_spacing):
+def build_graph(shape, segments, angle, row_spacing, max_stitch_length):
     """build a graph representation of the grating segments
 
     This function builds a specialized graph (as in graph theory) that will
@@ -173,8 +178,12 @@ def build_graph(shape, segments, angle, row_spacing):
             if i % 2 == edge_set:
                 graph.add_edge(node1, node2, key="extra")
 
-    if not networkx.is_eulerian(graph):
-        raise Exception(_("Unable to autofill.  This most often happens because your shape is made up of multiple sections that aren't connected."))
+    if networkx.is_empty(graph) or not networkx.is_eulerian(graph):
+        if shape.area < max_stitch_length ** 2:
+            raise InvalidPath(_("This shape is so small that it cannot be filled with rows of stitches.  "
+                                "It would probably look best as a satin column or running stitch."))
+        else:
+            raise InvalidPath(_("Cannot parse shape.  This most often happens because your shape is made up of multiple sections that aren't connected."))
 
     return graph
 
