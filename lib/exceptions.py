@@ -1,0 +1,2 @@
+class InkstitchException(Exception):
+    pass

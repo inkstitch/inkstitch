@@ -1,12 +1,13 @@
-from itertools import chain, izip
 from copy import deepcopy
-from shapely import geometry as shgeo, affinity as shaffinity
-import cubicsuperpath
+from itertools import chain, izip
 
-from .element import param, EmbroideryElement, Patch
+import cubicsuperpath
+from shapely import geometry as shgeo, affinity as shaffinity
+
 from ..i18n import _
-from ..utils import cache, Point, cut, collapse_duplicate_point
 from ..svg import line_strings_to_csp, point_lists_to_csp
+from ..utils import cache, Point, cut, collapse_duplicate_point
+from .element import param, EmbroideryElement, Patch
 
 
 class SatinColumn(EmbroideryElement):
@@ -255,7 +256,7 @@ class SatinColumn(EmbroideryElement):
                     intersections += len(intersection)
                     break
                 elif not isinstance(intersection, shgeo.Point):
-                    self.fatal("intersection is a: %s %s" % (intersection, intersection.geoms))
+                    self.fatal("INTERNAL ERROR: intersection is: %s %s" % (intersection, getattr(intersection, 'geoms', None)))
                 else:
                     intersections += 1
 
@@ -716,22 +717,22 @@ class SatinColumn(EmbroideryElement):
         # First, verify that we have valid paths.
         self.validate_satin_column()
 
-        patches = []
+        patch = Patch(color=self.color)
 
         if self.center_walk_underlay:
-            patches.append(self.do_center_walk())
+            patch += self.do_center_walk()
 
         if self.contour_underlay:
-            patches.append(self.do_contour_underlay())
+            patch += self.do_contour_underlay()
 
         if self.zigzag_underlay:
             # zigzag underlay comes after contour walk underlay, so that the
             # zigzags sit on the contour walk underlay like rail ties on rails.
-            patches.append(self.do_zigzag_underlay())
+            patch += self.do_zigzag_underlay()
 
         if self.e_stitch:
-            patches.append(self.do_e_stitch())
+            patch += self.do_e_stitch()
         else:
-            patches.append(self.do_satin())
+            patch += self.do_satin()
 
-        return patches
+        return [patch]

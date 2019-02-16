@@ -1,11 +1,12 @@
-from shapely import geometry as shgeo
 import math
 
-from .element import param, EmbroideryElement, Patch
+from shapely import geometry as shgeo
+
 from ..i18n import _
+from ..stitches import legacy_fill
 from ..svg import PIXELS_PER_MM
 from ..utils import cache
-from ..stitches import legacy_fill
+from .element import param, EmbroideryElement, Patch
 
 
 class Fill(EmbroideryElement):
@@ -39,6 +40,17 @@ class Fill(EmbroideryElement):
     def color(self):
         # SVG spec says the default fill is black
         return self.get_style("fill", "#000000")
+
+    @property
+    @param(
+        'skip_last',
+        _('Skip last stitch in each row'),
+        tooltip=_('The last stitch in each row is quite close to the first stitch in the next row.  '
+                  'Skipping it decreases stitch count and density.'),
+        type='boolean',
+        default=False)
+    def skip_last(self):
+        return self.get_boolean_param("skip_last", False)
 
     @property
     @param(
@@ -133,5 +145,6 @@ class Fill(EmbroideryElement):
                                    self.end_row_spacing,
                                    self.max_stitch_length,
                                    self.flip,
-                                   self.staggers)
+                                   self.staggers,
+                                   self.skip_last)
         return [Patch(stitches=stitch_list, color=self.color) for stitch_list in stitch_lists]

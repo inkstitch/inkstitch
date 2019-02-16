@@ -1,17 +1,18 @@
-import inkex
-from shapely import geometry as shgeo
-from itertools import chain, groupby
-import numpy
-from numpy import diff, sign, setdiff1d
-import math
 from copy import deepcopy
+from itertools import chain, groupby
+import math
 
-from .base import InkstitchExtension
-from ..svg.tags import SVG_PATH_TAG
-from ..svg import get_correction_transform, PIXELS_PER_MM
+import inkex
+from numpy import diff, sign, setdiff1d
+import numpy
+from shapely import geometry as shgeo
+
 from ..elements import Stroke
-from ..utils import Point
 from ..i18n import _
+from ..svg import get_correction_transform, PIXELS_PER_MM
+from ..svg.tags import SVG_PATH_TAG
+from ..utils import Point
+from .base import InkstitchExtension
 
 
 class SelfIntersectionError(Exception):
@@ -112,10 +113,10 @@ class ConvertToSatin(InkstitchExtension):
 
         if not isinstance(left_rail, shgeo.LineString) or \
            not isinstance(right_rail, shgeo.LineString):
-                # If the parallel offsets come out as anything but a LineString, that means the
-                # path intersects itself, when taking its stroke width into consideration.  See
-                # the last example for parallel_offset() in the Shapely documentation:
-                #   https://shapely.readthedocs.io/en/latest/manual.html#object.parallel_offset
+            # If the parallel offsets come out as anything but a LineString, that means the
+            # path intersects itself, when taking its stroke width into consideration.  See
+            # the last example for parallel_offset() in the Shapely documentation:
+            #   https://shapely.readthedocs.io/en/latest/manual.html#object.parallel_offset
             raise SelfIntersectionError()
 
         # for whatever reason, shapely returns a right-side offset's coordinates in reverse

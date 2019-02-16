@@ -1,8 +1,12 @@
 import math
+import traceback
+
 from shapely import geometry as shgeo
+
+from ..exceptions import InkstitchException
 from ..i18n import _
-from ..utils import cache
 from ..stitches import auto_fill
+from ..utils import cache
 from .element import param, Patch
 from .fill import Fill
 
@@ -93,6 +97,18 @@ class AutoFill(Fill):
         return self.get_float_param('fill_underlay_inset_mm', 0)
 
     @property
+    @param(
+        'fill_underlay_skip_last',
+        _('Skip last stitch in each row'),
+        tooltip=_('The last stitch in each row is quite close to the first stitch in the next row.  '
+                  'Skipping it decreases stitch count and density.'),
+        group=_('AutoFill Underlay'),
+        type='boolean',
+        default=False)
+    def fill_underlay_skip_last(self):
+        return self.get_boolean_param("fill_underlay_skip_last", False)
+
+    @property
     @param('expand_mm',
            _('Expand'),
            tooltip=_('Expand the shape before fill stitching, to compensate for gaps between shapes.'),
@@ -142,25 +158,42 @@ class AutoFill(Fill):
         starting_point = self.get_starting_point(last_patch)
         ending_point = self.get_ending_point()
 
-        if self.fill_underlay:
-            stitches.extend(auto_fill(self.underlay_shape,
-                                      self.fill_underlay_angle,
-                                      self.fill_underlay_row_spacing,
-                                      self.fill_underlay_row_spacing,
-                                      self.fill_underlay_max_stitch_length,
+        try:
+            if self.fill_underlay:
+                stitches.extend(auto_fill(self.underlay_shape,
+                                          self.fill_underlay_angle,
+                                          self.fill_underlay_row_spacing,
+                                          self.fill_underlay_row_spacing,
+                                          self.fill_underlay_max_stitch_length,
+                                          self.running_stitch_length,
+                                          self.staggers,
+                                          self.fill_underlay_skip_last,
+                                          starting_point))
+                starting_point = stitches[-1]
+
+            stitches.extend(auto_fill(self.fill_shape,
+                                      self.angle,
+                                      self.row_spacing,
+                                      self.end_row_spacing,
+                                      self.max_stitch_length,
                                       self.running_stitch_length,
                                       self.staggers,
-                                      starting_point))
-            starting_point = stitches[-1]
+                                      self.skip_last,
+                                      starting_point,
+                                      ending_point))
+        except InkstitchException, exc:
+            # for one of our exceptions, just print the message
+            self.fatal(_("Unable to autofill: ") + str(exc))
+        except Exception, exc:
+            # for an uncaught exception, give a little more info so that they can create a bug report
+            message = ""
+            message += _("Error during autofill!  This means that there is a problem with Ink/Stitch.")
+            message += "\n\n"
+            # L10N this message is followed by a URL: https://github.com/inkstitch/inkstitch/issues/new
+            message += _("If you'd like to help us make Ink/Stitch better, please paste this whole message into a new issue at: ")
+            message += "https://github.com/inkstitch/inkstitch/issues/new\n\n"
+            message += traceback.format_exc()
 
-        stitches.extend(auto_fill(self.fill_shape,
-                                  self.angle,
-                                  self.row_spacing,
-                                  self.end_row_spacing,
-                                  self.max_stitch_length,
-                                  self.running_stitch_length,
-                                  self.staggers,
-                                  starting_point,
-                                  ending_point))
+            self.fatal(message)
 
         return [Patch(stitches=stitches, color=self.color)]

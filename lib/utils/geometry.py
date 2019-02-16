@@ -1,5 +1,6 @@
-from shapely.geometry import LineString, Point as ShapelyPoint
 import math
+
+from shapely.geometry import LineString, Point as ShapelyPoint
 
 
 def cut(line, distance, normalized=False):
@@ -51,9 +52,8 @@ def cut_path(points, length):
 
 
 def collapse_duplicate_point(geometry):
-    if hasattr(geometry, 'geoms'):
-        if geometry.area < 0.01:
-            return geometry.representative_point()
+    if geometry.area < 0.01:
+        return geometry.representative_point()
 
     return geometry
 

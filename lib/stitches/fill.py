@@ -1,15 +1,16 @@
-import shapely
 import math
+
+import shapely
 
 from ..svg import PIXELS_PER_MM
 from ..utils import cache, Point as InkstitchPoint
 
 
-def legacy_fill(shape, angle, row_spacing, end_row_spacing, max_stitch_length, flip, staggers):
+def legacy_fill(shape, angle, row_spacing, end_row_spacing, max_stitch_length, flip, staggers, skip_last):
     rows_of_segments = intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing, flip)
     groups_of_segments = pull_runs(rows_of_segments, shape, row_spacing)
 
-    return [section_to_stitches(group, angle, row_spacing, max_stitch_length, staggers)
+    return [section_to_stitches(group, angle, row_spacing, max_stitch_length, staggers, skip_last)
             for group in groups_of_segments]
 
 
@@ -37,7 +38,7 @@ def adjust_stagger(stitch, angle, row_spacing, max_stitch_length, staggers):
     return stitch - offset * east(angle)
 
 
-def stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, staggers):
+def stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, staggers, skip_last=False):
     # We want our stitches to look like this:
     #
     # ---*-----------*-----------
@@ -81,7 +82,7 @@ def stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, stagge
         stitches.append(beg + offset * row_direction)
         offset += max_stitch_length
 
-    if (end - stitches[-1]).length() > 0.1 * PIXELS_PER_MM:
+    if (end - stitches[-1]).length() > 0.1 * PIXELS_PER_MM and not skip_last:
         stitches.append(end)
 
 
@@ -164,7 +165,7 @@ def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing=Non
     return rows
 
 
-def section_to_stitches(group_of_segments, angle, row_spacing, max_stitch_length, staggers):
+def section_to_stitches(group_of_segments, angle, row_spacing, max_stitch_length, staggers, skip_last):
     stitches = []
     swap = False
 
@@ -174,7 +175,7 @@ def section_to_stitches(group_of_segments, angle, row_spacing, max_stitch_length
         if (swap):
             (beg, end) = (end, beg)
 
-        stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, staggers)
+        stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, staggers, skip_last)
 
         swap = not swap
 

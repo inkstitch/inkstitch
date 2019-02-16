@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 
-import sys
 import os
 import subprocess
+import sys
 import traceback
+
 
 # ink/stitch
 #
@@ -15,7 +16,6 @@ import traceback
 # This Python script exists only to execute the actual extension binary.  It
 # can be copied to, e.g., "embroider_params.py", in which case it will look
 # for a binary at inkstitch/bin/embroider_params.
-
 script_name = os.path.basename(__file__)
 
 if script_name.endswith('.py'):
@@ -48,12 +48,12 @@ if sys.platform == "win32":
     import msvcrt
     msvcrt.setmode(sys.stdout.fileno(), os.O_BINARY)
 
-stdout = stdout.strip()
-if stdout:
-    print stdout.strip(),
+sys.stdout.write(stdout)
+sys.stdout.flush()
 
 stderr = stderr.strip()
 if stderr:
-    print >> sys.stderr, stderr.strip(),
+    sys.stderr.write(stderr.strip())
+    sys.stderr.flush()
 
 sys.exit(extension.returncode)
