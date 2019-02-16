@@ -1,15 +1,15 @@
-import sys
 from copy import deepcopy
+import sys
 
-from ..i18n import _
-from ..utils import cache
-from ..svg import PIXELS_PER_MM, convert_length, get_doc_size, apply_transforms
-from ..commands import find_commands
-
-# inkscape-provided utilities
-import simplestyle
-import cubicsuperpath
 from cspsubdiv import cspsubdiv
+import cubicsuperpath
+import simplestyle
+
+from ..commands import find_commands
+from ..i18n import _
+from ..svg import PIXELS_PER_MM, convert_length, get_doc_size, apply_transforms
+from ..svg.tags import INKSCAPE_LABEL
+from ..utils import cache
 
 
 class Patch:
@@ -274,7 +274,14 @@ class EmbroideryElement(object):
         return patches
 
     def fatal(self, message):
-        # L10N used when showing an error message to the user such as "satin column: One or more of the rungs doesn't
-        # intersect both rails."
-        print >> sys.stderr, self.node.get("id") + ":", _("error:"), message.encode("UTF-8")
+        label = self.node.get(INKSCAPE_LABEL)
+        id = self.node.get("id")
+        if label:
+            name = "%s (%s)" % (label, id)
+        else:
+            name = id
+
+        # L10N used when showing an error message to the user such as
+        # "Some Path (path1234): error: satin column: One or more of the rungs doesn't intersect both rails."
+        print >> sys.stderr, "%s: %s %s" % (name, _("error:"), message.encode("UTF-8"))
         sys.exit(1)
