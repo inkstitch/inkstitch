@@ -2,6 +2,7 @@ import sys
 
 import inkex
 
+from ..commands import add_commands
 from ..elements import SatinColumn
 from ..i18n import _
 from ..stitches.auto_satin import auto_satin
@@ -97,6 +98,5 @@ class AutoSatin(CommandsExtension):
 
     def add_trims(self, new_elements, trim_indices):
         if self.options.trim and trim_indices:
-            self.ensure_symbol("trim")
             for i in trim_indices:
-                self.add_commands(new_elements[i], ["trim"])
+                add_commands(new_elements[i], ["trim"])
