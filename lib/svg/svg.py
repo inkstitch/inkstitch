@@ -1,3 +1,5 @@
+from inkex import etree
+
 from ..utils import cache
 
 
@@ -6,7 +8,8 @@ def get_document(node):
     return node.getroottree().getroot()
 
 
-def generate_unique_id(document, prefix="path"):
+def generate_unique_id(document_or_element, prefix="path"):
+    document = get_document(document_or_element)
     doc_ids = {node.get('id') for node in document.iterdescendants() if 'id' in node.attrib}
 
     i = 1
