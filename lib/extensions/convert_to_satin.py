@@ -272,6 +272,10 @@ class ConvertToSatin(InkstitchExtension):
             rungs.append((rung_start.as_tuple(), rung_end.as_tuple()))
 
         return rungs
+    
+    def color(self):
+	    color = self.elements[0].get_style('stroke', '#000000')
+	    return color
 
     def satin_to_svg_node(self, rails, rungs, correction_transform):
         d = ""
@@ -284,7 +288,7 @@ class ConvertToSatin(InkstitchExtension):
         return inkex.etree.Element(SVG_PATH_TAG,
                                    {
                                        "id": self.uniqueId("path"),
-                                       "style": "stroke:#000000;stroke-width:1px;fill:none",
+                                       "style": "stroke:" + self.color() + ";stroke-width:1px;fill:none",
                                        "transform": correction_transform,
                                        "d": d,
                                        "embroider_satin_column": "true",
