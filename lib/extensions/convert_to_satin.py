@@ -272,7 +272,7 @@ class ConvertToSatin(InkstitchExtension):
             rungs.append((rung_start.as_tuple(), rung_end.as_tuple()))
 
         return rungs
-    
+
     def path_style(self):
         color = self.elements[0].get_style('stroke', '#000000')
         return "stroke:%s;stroke-width:1px;fill:none" % (color)
