@@ -2,10 +2,10 @@
 title: "Basic Usage"
 permalink: /docs/basic-usage/
 excerpt: ""
-last_modified_at: 2018-04-28
+last_modified_at: 2019-03-03
 toc: true
 ---
-Try the following steps in order to test the extension and to learn about basic functionality.
+Try the following steps in order to test the extension and to learn the basic functionality.
 
 **Tip:** If you are new to Inkscape, have a look at their [Basic Tutorial](https://inkscape.org/en/doc/tutorials/basic/tutorial-basic.html) first.
 {: .notice--info }
@@ -34,11 +34,9 @@ Transform **all objects** you want to stitch to paths:
 * Open `Extensions > Ink/Stitch > English > Params` and play with them.
 * For now, just accept the defaults or close without saving.
 
-## Step 4 - Create the Embroidery File
+## Step 4 - Inspect in Inkscape
 
-You can either create a stitch file for a selection of objects or for all path objects.
-
-Create an embroidery file for the whole design:
+Use the [Simulator](/docs/simulate) or the [Print PDF](/docs/print) extension. Or render the **stitch plan** as follows:
 
 * Click into some empty space (in order to deselect) or select the objects that you want to output
 * Run `Extensions > Ink/Stitch > English > Embroider...`
@@ -47,7 +45,16 @@ Create an embroidery file for the whole design:
   E.g. `C:\Users\%USERNAME%\Documents` on Windows.
   Ink/Stitch will remember this information.
 
-## Step 5 - Inspect in Inkscape
+By default, the directory used is the place where you installed the extension's Python files.
+
+Ink/Stich will create a file named `something.___`, where `something` is the name of your svg file (e.g. `something.svg`) and `___` is the proper extension for the output format you select. If `something.___` already exists, it will be renamed to `something.___.1`, and `something.___.1` will be renamed to `something.___.2`, etc, up to 5 backup copies.
+
+   <span style="color: #3f51b5;">↳ something.___</span><br />
+   <span style="color: #ff9800;">↳ something.___</span>, <span style="color: #3f51b5;">something.___.1</span><br />
+   <span style="color: #f44336;">↳ something.___</span>, <span style="color: #ff9800;">something.___.1</span>, <span style="color: #3f51b5;">something.___.2</span>
+
+**Info:** In future versions this extension will be renamed to *`Show Stitch Plan`* and will not save an embroidery file anymore.
+{: .notice--info}
 
 The circle you made will disappear and be replaced with some stripes and zig-zags. Ink/Stitch has hidden all of your layers and created a new one called `Stitch Plan`, in which it has placed a visual representation of the stitch plan it created. It has interpreted your shape as two instructions: Fill and Stroke. Fill is implemented using fill stitching, and Stroke is implemented by running satin stitching along the outline.
 
@@ -59,13 +66,14 @@ Now look at the zig-zags. These are the satin stitches. Note that the corners lo
 
 The stitching preview you're looking at just now isn't intended to be permanent. Immediately undo it with `Ctrl-Z` after you've looked at the stitches. The actual work that does, is to output a design file.
 
-## Step 6 - Stitching Out the Design
-Where'd the design file go? One of the parameters you were able to specify in the filter settings dialog was the output directory. By default, the directory used is the place where you installed the extension's Python files.
+## Step 5 - Create the Embroidery File
 
-Ink/Stich will create a file named `something.___`, where `something` is the name of your svg file (e.g. `something.svg`) and `___` is the proper extension for the output format you select. If `something.___` already exists, it will be renamed to `something.___.1`, and `something.___.1` will be renamed to `something.___.2`, etc, up to 5 backup copies.
+* Run `File > Save as...`
+* Navigate to the folder where you would like to save the file
+* Choose the correct file format for your machine
+* Click `Save`
+* Copy the file to your machine
 
-   <span style="color: #3f51b5;">↳ something.___</span><br />
-   <span style="color: #ff9800;">↳ something.___</span>, <span style="color: #3f51b5;">something.___.1</span><br />
-   <span style="color: #f44336;">↳ something.___</span>, <span style="color: #ff9800;">something.___.1</span>, <span style="color: #3f51b5;">something.___.2</span>
-   
-When you've got the design the way you like it, save off a copy of <span style="color: #f44336;">`something.___`</span> and feed your machine.
+**Tipp:** Make sure to save the file as an SVG file as well. Then you will always be able to modify it easily.
+{: .notice--info}
+
