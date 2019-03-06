@@ -34,7 +34,7 @@ Transform **all objects** you want to stitch to paths:
 * Open `Extensions > Ink/Stitch > English > Params` and play with them.
 * For now, just accept the defaults or close without saving.
 
-## Step 4 - Inspect in Inkscape
+## Step 4 - Inspect in Inkscape (optional)
 
 Use the [Simulator](/docs/simulate) or the [Print PDF](/docs/print) extension. Or render the **stitch plan** as follows:
 
