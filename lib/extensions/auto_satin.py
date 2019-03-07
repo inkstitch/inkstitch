@@ -2,12 +2,8 @@ import sys
 
 import inkex
 
-from ..commands import add_commands
-from ..elements import SatinColumn
 from ..i18n import _
 from ..stitches.auto_satin import auto_satin
-from ..svg import get_correction_transform
-from ..svg.tags import SVG_GROUP_TAG, INKSCAPE_LABEL
 from .commands import CommandsExtension
 
 

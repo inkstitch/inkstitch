@@ -254,7 +254,12 @@ def symbol_defs():
 
 @cache
 def get_defs(document):
-    return document.find(SVG_DEFS_TAG)
+    defs = document.find(SVG_DEFS_TAG)
+
+    if defs is None:
+        defs = inkex.etree.SubElement(document, SVG_DEFS_TAG)
+
+    return defs
 
 
 def ensure_symbol(document, command):

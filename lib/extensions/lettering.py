@@ -37,11 +37,11 @@ class LetteringFrame(wx.Frame):
 
         self.back_and_forth_checkbox = wx.CheckBox(self, label=_("Stitch lines of text back and forth"))
         self.back_and_forth_checkbox.SetValue(self.settings.back_and_forth)
-        self.Bind(wx.EVT_CHECKBOX, lambda event: self.on_change("back_and_forth", event))
+        self.back_and_forth_checkbox.Bind(wx.EVT_CHECKBOX, lambda event: self.on_change("back_and_forth", event))
 
         self.trim_checkbox = wx.CheckBox(self, label=_("Add trims"))
         self.trim_checkbox.SetValue(bool(self.settings.trim))
-        self.Bind(wx.EVT_CHECKBOX, lambda event: self.on_change("trim", event))
+        self.trim_checkbox.Bind(wx.EVT_CHECKBOX, lambda event: self.on_change("trim", event))
 
         # text editor
         self.text_editor_box = wx.StaticBox(self, wx.ID_ANY, label=_("Text"))
@@ -94,7 +94,8 @@ class LetteringFrame(wx.Frame):
     def update_lettering(self):
         font_path = os.path.join(get_bundled_dir("fonts"), self.settings.font)
         font = Font(font_path)
-        self.group[:] = font.render_text(self.settings.text, back_and_forth=self.settings.back_and_forth, trim=self.settings.trim)
+        del self.group[:]
+        font.render_text(self.settings.text, self.group, back_and_forth=self.settings.back_and_forth, trim=self.settings.trim)
 
     def generate_patches(self, abort_early=None):
         patches = []
@@ -155,7 +156,8 @@ class LetteringFrame(wx.Frame):
         outer_sizer = wx.BoxSizer(wx.VERTICAL)
 
         options_sizer = wx.StaticBoxSizer(self.options_box, wx.VERTICAL)
-        options_sizer.Add(self.back_and_forth_checkbox, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT | wx.BOTTOM, 10)
+        options_sizer.Add(self.back_and_forth_checkbox, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 5)
+        options_sizer.Add(self.trim_checkbox, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT | wx.BOTTOM, 5)
         outer_sizer.Add(options_sizer, 0, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
 
         text_editor_sizer = wx.StaticBoxSizer(self.text_editor_box, wx.VERTICAL)

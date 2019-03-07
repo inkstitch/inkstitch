@@ -81,7 +81,9 @@ class Font(object):
     kerning_pairs = font_metadata('kerning_pairs', {})
     auto_satin = font_metadata('auto_satin', True)
 
-    def render_text(self, text, variant=None, back_and_forth=True, trim=False):
+    def render_text(self, text, destination_group, variant=None, back_and_forth=True, trim=False):
+        """Render text into an SVG group element."""
+
         if variant is None:
             variant = self.default_variant
 
@@ -90,9 +92,6 @@ class Font(object):
         else:
             glyph_sets = [self.get_variant(variant)] * 2
 
-        line_group = inkex.etree.Element(SVG_GROUP_TAG, {
-            INKSCAPE_LABEL: _("Ink/Stitch Text")
-        })
         position = Point(0, 0)
         for i, line in enumerate(text.splitlines()):
             glyph_set = glyph_sets[i % 2]
@@ -101,15 +100,15 @@ class Font(object):
             letter_group = self._render_line(line, position, glyph_set)
             if glyph_set.variant == FontVariant.RIGHT_TO_LEFT:
                 letter_group[:] = reversed(letter_group)
-            line_group.append(letter_group)
+            destination_group.append(letter_group)
 
             position.x = 0
             position.y += self.leading
 
-        if self.auto_satin and len(line_group) > 0:
-            self._apply_auto_satin(line_group)
+        if self.auto_satin and len(destination_group) > 0:
+            self._apply_auto_satin(destination_group, trim)
 
-        return line_group
+        return destination_group
 
     def get_variant(self, variant):
         return self.variants.get(variant, self.variants[self.default_variant])
@@ -174,7 +173,7 @@ class Font(object):
 
         return node
 
-    def _apply_auto_satin(self, group):
+    def _apply_auto_satin(self, group, trim):
         """Apply Auto-Satin to an SVG XML node tree with an svg:g at its root.
 
         The group's contents will be replaced with the results of the auto-
@@ -182,4 +181,4 @@ class Font(object):
         """
 
         elements = nodes_to_elements(group.iterdescendants(SVG_PATH_TAG))
-        auto_satin(elements, preserve_order=True)
+        auto_satin(elements, preserve_order=True, trim=trim)
