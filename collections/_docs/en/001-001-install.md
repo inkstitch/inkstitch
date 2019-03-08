@@ -34,7 +34,10 @@ macOS|inkstitch-[VERSION]-osx-x86_64.tar.gz|☒|☑
 
 ### 2. Install
  * In Inkscape, go to `Edit > Preferences > System` and check where your `User Extensions` folder is.
- * Decompress the the Ink/Stitch archive directly into this folder and restart Inkscape.
+ * Decompress the the Ink/Stitch archive directly into this folder.<br />
+   In this folder the file structure should look similiar to this:
+   ![File Structure](/assets/images/docs/en/file_structure.png)
+ * Restart Inkscape.
  * You will then find Ink/Stitch under `Extensions > Ink/Stitch`.
 
 #### Linux and macOS:
