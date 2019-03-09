@@ -728,4 +728,8 @@ def add_trims(elements, trim_indices):
 
         new_elements.append(element)
 
+    # trim at the end, too
+    if i not in trim_indices:
+        add_commands(element, ["trim"])
+
     return new_elements
