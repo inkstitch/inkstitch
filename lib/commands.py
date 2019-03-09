@@ -5,6 +5,7 @@ import sys
 
 import cubicsuperpath
 import inkex
+from shapely import geometry as shgeo
 import simpletransform
 
 from .i18n import _, N_
@@ -325,10 +326,15 @@ def get_command_pos(element, index, total):
     # get a line running 30 pixels out from the shape
     outline = element.shape.buffer(30).exterior
 
-    # pick this item's spot arond the outline and perturb it a bit to avoid
-    # stacking up commands if they run the extension multiple times
+    # find the top center point on the outline and start there
+    top_center = shgeo.Point(outline.centroid.x, outline.bounds[1])
+    start_position = outline.project(top_center, normalized=True)
+
+    # pick this item's spot around the outline and perturb it a bit to avoid
+    # stacking up commands if they add commands multiple times
     position = index / float(total)
-    position += random() * 0.1
+    position += random() * 0.05
+    position += start_position
 
     return outline.interpolate(position, normalized=True)
 
