@@ -9,7 +9,11 @@ def get_document(node):
 
 
 def generate_unique_id(document_or_element, prefix="path"):
-    document = get_document(document_or_element)
+    if isinstance(document_or_element, etree._ElementTree):
+        document = document_or_element.getroot()
+    else:
+        document = get_document(document_or_element)
+
     doc_ids = {node.get('id') for node in document.iterdescendants() if 'id' in node.attrib}
 
     i = 1
