@@ -613,7 +613,7 @@ def operations_to_elements_and_trims(operations, preserve_order):
             elements.append(operation.to_element())
             original_parent_nodes.append(operation.original_node.getparent())
         elif isinstance(operation, (JumpStitch)):
-            if elements and operation.length > PIXELS_PER_MM:
+            if elements and operation.length > 0.75 * PIXELS_PER_MM:
                 trims.append(len(elements) - 1)
 
     return elements, list(set(trims)), original_parent_nodes
