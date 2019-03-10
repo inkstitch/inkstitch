@@ -1,4 +1,5 @@
 import math
+import sys
 import traceback
 
 from shapely import geometry as shgeo
@@ -185,6 +186,10 @@ class AutoFill(Fill):
             # for one of our exceptions, just print the message
             self.fatal(_("Unable to autofill: ") + str(exc))
         except Exception, exc:
+            if hasattr(sys, 'gettrace') and sys.gettrace():
+                # if we're debugging, let the exception bubble up
+                raise
+
             # for an uncaught exception, give a little more info so that they can create a bug report
             message = ""
             message += _("Error during autofill!  This means that there is a problem with Ink/Stitch.")
