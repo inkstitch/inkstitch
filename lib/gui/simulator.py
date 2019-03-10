@@ -211,6 +211,7 @@ class ControlPanel(wx.Panel):
 
         if stitch is None:
             stitch = 1
+            self.stitchBox.SetValue(1)
 
         self.slider.SetValue(stitch)
 
