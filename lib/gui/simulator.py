@@ -210,7 +210,7 @@ class ControlPanel(wx.Panel):
         self.parent.SetFocus()
 
         if stitch is None:
-            event.Skip()
+            stitch = 1
 
         self.slider.SetValue(stitch)
 
