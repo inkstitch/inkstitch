@@ -74,8 +74,12 @@ class ControlPanel(wx.Panel):
         self.slider = wx.Slider(self, -1, value=1, minValue=1, maxValue=2,
                                 style=wx.SL_HORIZONTAL | wx.SL_LABELS)
         self.slider.Bind(wx.EVT_SLIDER, self.on_slider)
-        self.stitchBox = IntCtrl(self, -1, value=1, min=1, max=2, limited=True, allow_none=False)
-        self.stitchBox.Bind(wx.EVT_TEXT, self.on_stitch_box)
+        self.stitchBox = IntCtrl(self, -1, value=1, min=1, max=2, limited=True, allow_none=True, style=wx.TE_PROCESS_ENTER)
+        self.stitchBox.Bind(wx.EVT_LEFT_DOWN, self.on_stitch_box_focus)
+        self.stitchBox.Bind(wx.EVT_SET_FOCUS, self.on_stitch_box_focus)
+        self.stitchBox.Bind(wx.EVT_TEXT_ENTER, self.on_stitch_box_focusout)
+        self.stitchBox.Bind(wx.EVT_KILL_FOCUS, self.on_stitch_box_focusout)
+        self.Bind(wx.EVT_LEFT_DOWN, self.on_stitch_box_focusout)
 
         # Layout
         self.vbSizer = vbSizer = wx.BoxSizer(wx.VERTICAL)
@@ -120,15 +124,15 @@ class ControlPanel(wx.Panel):
             (wx.ACCEL_NORMAL, wx.WXK_SPACE, self.on_pause_start_button),
             (wx.ACCEL_NORMAL, ord('q'), self.animation_quit)]
 
-        accel_entries = []
+        self.accel_entries = []
 
         for shortcut_key in shortcut_keys:
             eventId = wx.NewId()
-            accel_entries.append((shortcut_key[0], shortcut_key[1], eventId))
+            self.accel_entries.append((shortcut_key[0], shortcut_key[1], eventId))
             self.Bind(wx.EVT_MENU, shortcut_key[2], id=eventId)
 
-        accel_table = wx.AcceleratorTable(accel_entries)
-        self.SetAcceleratorTable(accel_table)
+        self.accel_table = wx.AcceleratorTable(self.accel_entries)
+        self.SetAcceleratorTable(self.accel_table)
         self.SetFocus()
 
     def set_drawing_panel(self, drawing_panel):
@@ -186,6 +190,8 @@ class ControlPanel(wx.Panel):
         if self.drawing_panel:
             self.drawing_panel.set_current_stitch(stitch)
 
+        self.parent.SetFocus()
+
     def on_current_stitch(self, stitch, command):
         if self.current_stitch != stitch:
             self.current_stitch = stitch
@@ -193,8 +199,19 @@ class ControlPanel(wx.Panel):
             self.stitchBox.SetValue(stitch)
             self.statusbar.SetStatusText(COMMAND_NAMES[command], 1)
 
-    def on_stitch_box(self, event):
+    def on_stitch_box_focus(self, event):
+        self.animation_pause()
+        self.SetAcceleratorTable(wx.AcceleratorTable([]))
+        event.Skip()
+
+    def on_stitch_box_focusout(self, event):
+        self.SetAcceleratorTable(self.accel_table)
         stitch = self.stitchBox.GetValue()
+        self.parent.SetFocus()
+
+        if stitch is None:
+            event.Skip()
+
         self.slider.SetValue(stitch)
 
         if self.drawing_panel:
@@ -629,6 +646,7 @@ class EmbroiderySimulator(wx.Frame):
         if self.on_close_hook:
             self.on_close_hook()
 
+        self.SetFocus()
         self.Destroy()
 
     def go(self):
