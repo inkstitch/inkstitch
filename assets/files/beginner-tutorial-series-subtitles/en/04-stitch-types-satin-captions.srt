@@ -1,0 +1,360 @@
+1
+00:00:06,260 --> 00:00:09,860
+Welcome to the Ink/Stitch beginner tutorial series.
+
+2
+00:00:09,860 --> 00:00:16,200
+In this part we are going to have a closer look which stitch types Ink/Stitch is able to perform.
+
+3
+00:00:16,200 --> 00:00:22,520
+We will not explain the stitch types in general, but only how to create them in Ink/Stitch.
+
+4
+00:00:22,700 --> 00:00:30,400
+Ink/Stitch stitch types can be roughly divided into three sections: stroke, satin and fill.
+
+5
+00:00:31,080 --> 00:00:36,800
+Here is a complete list, so you can quickly navigate to the stitch type you are interested in.
+
+6
+00:00:37,400 --> 00:00:41,200
+This is the tutorial about satin columns.
+
+7
+00:00:41,600 --> 00:00:47,580
+Satin stitch is mostly used for borders, letters or small fill areas.
+
+8
+00:00:47,860 --> 00:00:55,940
+Ink/Stitch will draw zig-zags back and forth between two lines, while you can vary the thickness of the column as you like.
+
+9
+00:00:57,800 --> 00:01:01,120
+There are various methods to create satin columns.
+
+10
+00:01:01,120 --> 00:01:09,860
+We will first show you the very basic and manual way, before we simplify the process with the help from satin tools.
+
+11
+00:01:11,720 --> 00:01:14,240
+So let's create two paths
+
+12
+00:01:23,700 --> 00:01:28,760
+and combine them with 'Path > Combine' or 'Ctrl + K'.
+
+13
+00:01:29,800 --> 00:01:32,720
+Next we open the params dialogue
+
+14
+00:01:35,340 --> 00:01:40,840
+and switch to the "satin column" tab, where we enable "Custom satin column".
+
+15
+00:01:41,560 --> 00:01:45,660
+In our example the simulator shows not what we expected.
+
+16
+00:01:45,740 --> 00:01:50,720
+This is what you get, when path directions aren't the same on both sides of the rails.
+
+17
+00:01:51,200 --> 00:01:55,920
+Activate the node tool by pressing "N" and select your satin column.
+
+18
+00:01:56,020 --> 00:02:02,600
+If you followed our customize tutorial you will see red sparks indicating the path direction.
+
+19
+00:02:03,360 --> 00:02:12,140
+Select one node of one path and run "Path > Reverse" or use your custom shortcut key to reverse the path.
+
+20
+00:02:17,280 --> 00:02:22,500
+If you run params again you will now see the correct satin column being animated.
+
+21
+00:02:30,460 --> 00:02:33,580
+You can influence the angle with help of the nodes.
+
+22
+00:02:44,140 --> 00:02:48,900
+But always keep in mind, that on both rails we need the same amount of nodes.
+
+23
+00:02:48,900 --> 00:02:52,780
+Otherwise you will receive an error message like this.
+
+24
+00:02:53,880 --> 00:02:58,560
+This is easy to achieve in a simple path like this.
+
+25
+00:02:58,560 --> 00:03:04,720
+But what if you have a more complex shape and you really don't feel like counting nodes all day.
+
+26
+00:03:05,220 --> 00:03:09,900
+Well, Ink/Stitch has a solution for this. The "rung"-method.
+
+27
+00:03:14,100 --> 00:03:20,240
+With the  satin column selected activate the pencil tool by pressing "P".
+
+28
+00:03:20,240 --> 00:03:21,254
+Hold "shift" while you draw the rung.
+
+29
+00:03:24,600 --> 00:03:27,920
+Rungs have to cross both rails once.
+
+30
+00:03:27,920 --> 00:03:34,940
+These rungs will give Ink/Stitch all the information about the stitch angle and no counting of nodes is needed.
+
+31
+00:03:40,860 --> 00:03:48,840
+If you want the satin column to be a line of equal width, there is a very fast method to create a satin column.
+
+32
+00:03:48,840 --> 00:03:50,840
+Create a path.
+
+33
+00:03:50,840 --> 00:03:55,660
+Make sure it is not a closed path, but has a start and an end.
+
+34
+00:03:56,420 --> 00:04:01,220
+Set the stroke width to whatever you like your satin column to be.
+
+35
+00:04:09,340 --> 00:04:16,280
+Then run "Extensions > Ink/Stitch > English > Satin Tools > Convert Line to Satin Column".
+
+36
+00:04:16,680 --> 00:04:18,680
+And that's it.
+
+37
+00:04:22,360 --> 00:04:26,020
+Sometimes you will need to break up your path into pieces.
+
+38
+00:04:26,540 --> 00:04:34,640
+This can be done manually, but if you want to keep your settings you can use a specific satin tool: "Cut Satin Column".
+
+39
+00:04:35,260 --> 00:04:38,480
+To break up your column manually, select two nodes,
+
+40
+00:04:40,600 --> 00:04:43,580
+one on each rail and click on
+
+41
+00:04:44,660 --> 00:04:47,400
+"Break path at selected nodes".
+
+42
+00:04:48,220 --> 00:04:56,640
+Now you have to seperate the paths by hitting "Ctrl + Shift + K" and recombine your sub-paths with "Ctrl + K".
+
+43
+00:05:06,300 --> 00:05:09,600
+Using the satin tools will require two steps.
+
+44
+00:05:09,600 --> 00:05:18,760
+First select your satin column and run "Extensions > Ink/Stitch > English > Commands > Attach commands to selected objects..."
+
+45
+00:05:18,760 --> 00:05:22,980
+and enable "Satin cut point" before you click on "Apply".
+
+46
+00:05:24,580 --> 00:05:29,340
+Move the symbol to the exact point where you want the satin column to split up.
+
+47
+00:05:30,120 --> 00:05:33,220
+It will split where the connector touches the rail.
+
+48
+00:05:37,060 --> 00:05:43,400
+Then run "Extensions > Ink/Stitch > English > Satin Tools > Cut Satin Column".
+
+49
+00:05:48,500 --> 00:05:55,020
+Please note, that in params you already need the satin column to be enabled for this to work.
+
+50
+00:06:09,480 --> 00:06:15,440
+"Flip Satin Column Rails" is a tool to help you plan your stitch path precisely.
+
+51
+00:06:15,440 --> 00:06:25,160
+A satin column which originally starts on the left rail and ends on the right, will start on the right rail and end on the left.
+
+52
+00:06:25,820 --> 00:06:30,980
+This might shorten connections between the previous and next stitch object.
+
+53
+00:06:34,880 --> 00:06:44,800
+Select the satin column and run "Extensions > Ink/Stitch > English > Satin Tools > Flip Satin Columns"
+
+54
+00:07:05,140 --> 00:07:10,800
+Planing the order and connections of stitch objects can be very time consuming.
+
+55
+00:07:11,240 --> 00:07:16,560
+Therefore Ink/Stitch comes with a tool that will take away a lot of this work.
+
+56
+00:07:17,120 --> 00:07:22,860
+"Auto-Route Satin Columns" will order your satin columns in logical stitching order.
+
+57
+00:07:24,240 --> 00:07:29,180
+It will create under-pathing and jump-stitches as necessary.
+
+58
+00:07:29,560 --> 00:07:35,040
+Single satin columns might also be split up to avoid jump stitches.
+
+59
+00:07:39,740 --> 00:07:46,920
+Resulting satins will retain all of the parameters you had set on the original satins.
+
+60
+00:07:47,340 --> 00:07:52,460
+Select satin columns with all parameters set (underlay, etc.).
+
+61
+00:07:52,840 --> 00:07:59,460
+Run "Extensions > Ink/Stitch > English > Satin Tools > Auto-Route Satin Columns..."
+
+62
+00:07:59,600 --> 00:08:03,060
+Enable desired options and click apply.
+
+63
+00:08:25,340 --> 00:08:31,020
+You can even define a start and an end point for your ordered satin columns by
+
+64
+00:08:31,060 --> 00:08:37,620
+attaching "Auto-route satin stitch starting" and "ending position" commands.
+
+65
+00:08:56,400 --> 00:09:03,060
+If this went too fast for you, you might be interested into the visual commands tutorial.
+
+66
+00:09:12,040 --> 00:09:18,340
+Let's have a closer look into the params dialogue and what it offers for satin columns.
+
+67
+00:09:18,340 --> 00:09:21,380
+"Custom satin column" has to be enabled.
+
+68
+00:09:21,940 --> 00:09:28,420
+Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape.
+
+69
+00:09:29,020 --> 00:09:33,400
+With the "Pull compensation" setting you can expand the satin column.
+
+70
+00:09:33,400 --> 00:09:40,640
+You’ll have to experiment how much compensation you need for your combination of fabric, thread, and stabilizer.
+
+71
+00:09:41,140 --> 00:09:45,940
+Zig-zag spacing will define the density of your satin column.
+
+72
+00:09:45,940 --> 00:09:49,420
+Well, now we talked much about the satin column itself.
+
+73
+00:09:49,420 --> 00:09:53,680
+But a very important part is still missing, which is the underlay.
+
+74
+00:09:54,120 --> 00:09:57,360
+Ink/Stitch supports three kinds of underlay.
+
+75
+00:09:57,800 --> 00:10:04,160
+For wide columns or challenging fabrics, you can even use all three underlay types together.
+
+76
+00:10:09,280 --> 00:10:15,840
+This is a row of running stitch down the center of the column and back.
+
+77
+00:10:16,160 --> 00:10:20,140
+This may be all you need for thin satin columns.
+
+78
+00:10:20,580 --> 00:10:25,100
+You can also use it as a base for more elaborate underlay.
+
+79
+00:10:29,260 --> 00:10:36,760
+This is a row of running stitch up one side of the column and back down the other.
+
+80
+00:10:36,980 --> 00:10:44,080
+The rows are set in from the edge of the column by the amount you specify.
+
+81
+00:10:44,480 --> 00:10:50,680
+For small or medium width satin, this may serve well enough by itself.
+
+82
+00:10:56,320 --> 00:11:05,280
+This is essentially a lower-density satin stitch sewn to the end of the column and back to the start.
+
+83
+00:11:11,640 --> 00:11:18,460
+The biggest purpose for E-stitch is a simple but strong cover stitch for applique items.
+
+84
+00:11:18,460 --> 00:11:23,220
+Mainly for baby cloths as their skin tends to be more sensitive.
+
+85
+00:11:26,480 --> 00:11:30,120
+E-stitch is created just as a satin column.
+
+86
+00:11:38,280 --> 00:11:44,740
+But in the params dialogue enable the E-stitch option and increase the zig-zag spacing.
+
+87
+00:11:44,740 --> 00:11:47,740
+Underlay is not needed for this stitch type.
+
+88
+00:11:48,360 --> 00:11:55,620
+If the points are facing the wrong way, just use the “flip satin column rails” tool as described before.
+
+89
+00:11:58,200 --> 00:12:03,360
+We hope you enjoyed this tutorial and got an overview about satin stitch types.
+
+90
+00:12:03,360 --> 00:12:09,060
+You might also want to watch our videos about stroke type stitches and fill stitches.
+

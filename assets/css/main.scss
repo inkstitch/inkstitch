@@ -44,6 +44,10 @@ nobr {
   white-space: nowrap;
 }
 
+hr {
+    border-top: 1px solid #ccc !important;
+}
+
 key {
   border: 1px solid #b6b6b6;
   padding: 0 0.3em;
@@ -129,6 +133,14 @@ table tr td:first-child {
 
 .table-grid th, .table-grid td {
   border: 1px solid #b6b6b6;
+}
+
+.table-full-width tr td:first-child {
+    width: auto;
+}
+
+.table-full-width tr td:nth-child(2) {
+    width: 100%;
 }
 
 /* Table of Contents */

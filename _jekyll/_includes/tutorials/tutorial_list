@@ -21,7 +21,7 @@
   {% unless include.value or value=='a-z'  %} <h3><span>{{ value }}</span></h3>{% endunless %}
   
   {% unless include.key %}
-    {% assign items_grouped = site.tutorial | where: "language", page.lang | sort: 'title' %}
+    {% assign items_grouped = site.tutorial | where: "language", page.lang | where_exp:"include", "include.exclude-from-tutorial-list != true" | sort: 'title' %}
   {% else %}
     {% assign items_grouped = site.tutorial | where: "language", page.lang | where_exp: 'item', 'item[key] contains value' | sort: 'title' %}
   {% endunless %}

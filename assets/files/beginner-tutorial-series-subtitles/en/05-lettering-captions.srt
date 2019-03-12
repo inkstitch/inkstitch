@@ -1,0 +1,52 @@
+1
+00:00:05,480 --> 00:00:09,080
+Welcome to the Ink/Stitch beginner tutorial series.
+
+2
+00:00:10,600 --> 00:00:13,920
+In this part we are going to look into the lettering tool.
+
+3
+00:00:14,300 --> 00:00:22,920
+In Ink/Stitch it is possible to write a multiline text, which will automatically be converted into an embroidery font.
+
+4
+00:00:24,040 --> 00:00:27,660
+Run "Extensions > Ink/Stitch > English > Lettering"
+
+5
+00:00:28,380 --> 00:00:35,340
+Being in a very early state the tool can handle only one font. This will change in a future release.
+
+6
+00:00:35,340 --> 00:00:37,340
+Now enter your text.
+
+7
+00:00:40,100 --> 00:00:43,500
+You will see the simulator updating as you write.
+
+8
+00:00:45,820 --> 00:00:53,540
+With multiline text you might want Ink/Stitch to start stitching from the right in uneven line numbers.
+
+9
+00:00:53,540 --> 00:00:58,960
+Enable the option “Stitch lines of text back and forth” for this matter.
+
+10
+00:00:59,300 --> 00:01:01,620
+Click on "Apply and Quit"
+
+11
+00:01:02,160 --> 00:01:05,940
+Ink/Stitch will insert all paths necessary for your text.
+
+12
+00:01:05,940 --> 00:01:11,480
+You can modify it if you like or save it directly as an embroidery file.
+
+13
+00:01:17,060 --> 00:01:20,800
+We hope you enjoyed the tutorial and the lettering tool.
+
