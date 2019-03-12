@@ -44,7 +44,7 @@ At this point, save your SVG file. If Inkscape is starting to become sluggish (d
 
 ## Step 4: Ordering
 
-Once you've created all vectors and test-embroidered them individually, it's time to put everything in the right order. This is where the Objects tool Inkscape comes in useful. Optimize your order to minimize color changes and reduce or hide jump-stitches.
+Once you've created all vectors and test-embroidered them individually, it's time to put everything in the right order. This is where the Inkscapes Objects tool (`Objects > Objects ...`) comes in useful. Optimize your order to minimize color changes and reduce or hide jump-stitches.
 
 Ink/Stitch will stitch objects in exactly the order they appear in your SVG document, from lowest to highest in stacking order. If the distance between two objects is long, Ink/Stitch will add a jump-stitch between them automatically. It uses the color of the object to determine thread color, so changes in color from one object to the next will result in a thread-change instruction being added to the embroidery output file.
 
