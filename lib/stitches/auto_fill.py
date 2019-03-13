@@ -392,48 +392,62 @@ def find_stitch_path(graph, segments, starting_point=None, ending_point=None):
     """
 
     graph = graph.copy()
-    num_segments = len(segments)
-    segments_visited = 0
-    nodes_visited = deque()
 
     if starting_point is None:
         starting_point = segments[0][0]
 
-    path = find_initial_path(graph, starting_point, ending_point)
-
-    # Our graph is Eulerian: every node has an even degree.  An Eulerian graph
-    # must have an Eulerian Circuit which visits every edge and ends where it
-    # starts.
-    #
-    # However, we're starting with a path and _not_ removing the edges of that
-    # path from the graph.  By doing this, we're implicitly adding those edges
-    # to the graph, after which the starting and ending point (and only those
-    # two) will now have odd degree.  A graph that's Eulerian except for two
-    # nodes must have an Eulerian Path that starts and ends at those two nodes.
-    # That's how we force the starting and ending point.
-
-    nodes_visited.append(path[0][0])
-
-    while segments_visited < num_segments:
-        loop = find_loop(graph, nodes_visited)
-
-        if not loop:
-            print >> sys.stderr, _("Unexpected error while generating fill stitches. Please send your SVG file to lexelby@github.")
-            break
-
-        segments_visited += sum(1 for edge in loop if edge.is_segment())
-        nodes_visited.extend(edge[0] for edge in loop)
-        graph.remove_edges_from(loop)
-
-        insert_loop(path, loop)
+    starting_node = nearest_node_on_outline(graph, starting_point)
 
     if ending_point is None:
-        # If they didn't specify an ending point, then the end of the path travels
-        # around the outline back to the start (see find_initial_path()). This
-        # isn't necessary, so remove it.
-        trim_end(path)
+        ending_node = starting_node
+    else:
+        ending_node = nearest_node_on_outline(graph, ending_point)
+
+    # The algorithm below is adapted from networkx.eulerian_circuit().
+    path = []
+    vertex_stack = [(ending_node, None)]
+    last_vertex = None
+    last_key = None
+
+    while vertex_stack:
+        current_vertex, current_key = vertex_stack[-1]
+        if graph.degree(current_vertex) == 0:
+            if last_vertex is not None:
+                path.append(PathEdge((last_vertex, current_vertex), last_key))
+            last_vertex, last_key = current_vertex, current_key
+            vertex_stack.pop()
+        else:
+            ignore, next_vertex, next_key = pick_edge(graph.edges(current_vertex, keys=True))
+            vertex_stack.append((next_vertex, next_key))
+            graph.remove_edge(current_vertex, next_vertex, next_key)
+
+    # The above has the excellent property that it tends to do travel stitches
+    # before the rows in that area, so we can hide the travel stitches under
+    # the rows.
+    #
+    # The only downside is that the path is a loop starting and ending at the
+    # ending node.  We need to start at the starting node, so we'll just
+    # start off by traveling to the ending node.
+    #
+    # Note, it's quite possible that part of this PathEdge will be eliminated by
+    # collapse_sequential_outline_edges().
+
+    if starting_node is not ending_node:
+        path.insert(0, PathEdge((starting_node, ending_node), key="initial"))
 
     return path
+
+
+def pick_edge(edges):
+    """Pick the next edge to traverse in the pathfinding algorithm"""
+
+    # Prefer a segment if one is available.  This has the effect of
+    # creating long sections of back-and-forth row traversal.
+    for source, node, key in edges:
+        if key == 'segment':
+            return source, node, key
+
+    return list(edges)[0]
 
 
 def collapse_sequential_outline_edges(graph, path):
