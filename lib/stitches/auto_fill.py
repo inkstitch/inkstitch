@@ -3,7 +3,7 @@ from itertools import groupby, izip
 import sys
 
 import networkx
-import shapely
+from shapely import geometry as shgeo
 
 from ..exceptions import InkstitchException
 from ..i18n import _
@@ -78,7 +78,7 @@ def which_outline(shape, coords):
     # I'd use an intersection check, but floating point errors make it
     # fail sometimes.
 
-    point = shapely.geometry.Point(*coords)
+    point = shgeo.Point(*coords)
     outlines = enumerate(list(shape.boundary))
     closest = min(outlines, key=lambda index_outline: index_outline[1].distance(point))
 
@@ -92,7 +92,7 @@ def project(shape, coords, outline_index):
     """
 
     outline = list(shape.boundary)[outline_index]
-    return outline.project(shapely.geometry.Point(*coords))
+    return outline.project(shgeo.Point(*coords))
 
 
 def build_graph(shape, segments, angle, row_spacing, max_stitch_length):
@@ -320,9 +320,9 @@ def insert_loop(path, loop):
 
 
 def nearest_node_on_outline(graph, point, outline_index=0):
-    point = shapely.geometry.Point(*point)
+    point = shgeo.Point(*point)
     outline_nodes = [node for node, data in graph.nodes(data=True) if data['index'] == outline_index]
-    nearest = min(outline_nodes, key=lambda node: shapely.geometry.Point(*node).distance(point))
+    nearest = min(outline_nodes, key=lambda node: shgeo.Point(*node).distance(point))
 
     return nearest
 
@@ -483,9 +483,9 @@ def connect_points(shape, start, end, running_stitch_length, row_spacing):
     # First, figure out the start and end position along the outline.  The
     # projection gives us the distance travelled down the outline to get to
     # that point.
-    start = shapely.geometry.Point(start)
+    start = shgeo.Point(start)
     start_projection = outline.project(start)
-    end = shapely.geometry.Point(end)
+    end = shgeo.Point(end)
     end_projection = outline.project(end)
 
     # If the points are pretty close, just jump there.  There's a slight
@@ -519,7 +519,7 @@ def connect_points(shape, start, end, running_stitch_length, row_spacing):
         # Make a new outline, starting from the starting point.  This is
         # like rotating the clock so that now our starting point is
         # at 12 o'clock.
-        outline = shapely.geometry.LineString(list(after.coords) + list(before.coords))
+        outline = shgeo.LineString(list(after.coords) + list(before.coords))
 
     # Now figure out where our ending point is on the newly-rotated clock.
     end_projection = outline.project(end)
