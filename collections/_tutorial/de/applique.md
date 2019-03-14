@@ -17,7 +17,6 @@ techniques:
 field-of-use:
 user-level: Beginner
 ---
-{{ page.lang }}
 ## Steps
 
 1. Digitize placement and tackdown stitches as different colors, in order to force a stop on your machine.

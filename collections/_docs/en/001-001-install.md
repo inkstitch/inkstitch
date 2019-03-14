@@ -2,7 +2,7 @@
 title: "Install Ink/Stitch"
 permalink: /docs/install/
 excerpt: "How to quickly install Ink/Stitch."
-last_modified_at: 2018-10-31
+last_modified_at: 2019-03-14
 toc: true
 ---
 
@@ -34,11 +34,18 @@ macOS|inkstitch-[VERSION]-osx-x86_64.tar.gz|☒|☑
 
 ### 2. Install
  * In Inkscape, go to `Edit > Preferences > System` and check where your `User Extensions` folder is.
- * Decompress the Ink/Stitch archive directly into this folder.<br />
-   In this folder the file structure should look similiar to this:
+ * Decompress the Ink/Stitch archive **directly** into this folder.<br />
+   In this folder the file structure should look similiar to this (just a lot more files):
    ![File Structure](/assets/images/docs/en/file_structure.png)
  * Restart Inkscape.
  * You will then find Ink/Stitch under `Extensions > Ink/Stitch`.
+
+**Info:** We also provide videos for the installation process on our <i class="fab fa-youtube"></i> [YouTube channel](https://www.youtube.com/channel/UCJCDCFuT_xQoI55e10HRiRw).<br />
+Watch the video for
+<i class="fab fa-linux"></i> [Linux](https://www.youtube.com/watch?v=Dkb5UvsZUNg&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=2),
+<i class="fab fa-apple"></i> [macOS](https://www.youtube.com/watch?v=gmOVLNh9cu8&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=3) or
+<i class="fab fa-windows"></i> [Windows](https://www.youtube.com/watch?v=U5htzWZSjA8&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=4).
+{: .notice--info }
 
 #### Linux and macOS:
 
@@ -54,16 +61,16 @@ macOS|inkstitch-[VERSION]-osx-x86_64.tar.gz|☒|☑
 
 ## Upgrade
 
- * You may have to delete the old extension files first:<br>
+ * You may have to delete the old extension files first:<br />
    Go to the extension directory and remove each inkstitch* file and folder.
  * Then, proceed as above.
 
-**Tip:** Subscribe to a news feed channel to keep track on Ink/Stitch Updates:<br>
+**Tip:** Subscribe to a news feed channel to keep track on Ink/Stitch Updates:<br />
  <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [GitHub Feed on new Releases](https://github.com/inkstitch/inkstitch/releases.atom)<br>
- <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [Ink/Stitch News](/feed.xml)<br>
+ <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [Ink/Stitch News](/feed.xml)<br />
 {: .notice--info }
 
-<p class="notice--info" style="margin-top: -3.5em !important;">Or watch the project on GitHub:<br><iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=inkstitch&repo=inkstitch&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe></p>
+<p class="notice--info" style="margin-top: -3.5em !important;">Or watch the project on GitHub:<br /><iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=inkstitch&repo=inkstitch&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe></p>
 
 ## Manual Setup
 

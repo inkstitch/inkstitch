@@ -14,6 +14,16 @@ user-level: Beginner
 
 toc: true
 ---
+This video series is meant to introduce new users to Ink/Stitch. It briefly goes from the installation process to all functions available in the open source embroidery platform.
+
+Knowing the [Inkscape basics](https://inkscape.org/learn/) will be helpful. Feel free to experiment and also use functions that are coming to us through Inkscape.
+
+If you are not a native english speaker, then you might find it interesting that each video has subtitles. On this page you can even download them. If you like, help us by translating the subtitles into your language.
+
+Videos are hosted in a [YouTube playlist](https://www.youtube.com/playlist?list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP).
+
+We wish you a good start with Ink/Stitch!
+
 ## 01 Introduction
 {% include video id="PTcSRuCA1Aw" provider="youtube" %}
 

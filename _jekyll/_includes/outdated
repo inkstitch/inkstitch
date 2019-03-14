@@ -1,0 +1,28 @@
+{%- if page.lang != 'en' -%}
+    {%- assign page_lang= page.lang | prepend: '/' | append: '/' -%}
+    {%- if page.is_post == true -%}
+      {%- assign en_url = page.url | replace_first: page_lang, '/en/' -%}
+      {%- assign en_page = site.posts | where: "url", en_url | where_exp: "item", "item.last_modified_at > page.last_modified_at" -%}
+      {%- assign en_page_exist = site.posts | where: "url", en_url -%}
+    {%- else -%}
+	    {%- assign en_url = page.url | replace: page_lang, '/' -%}
+	    {%- assign en_page = site.pages | where: "url", en_url | where_exp: "item", "item.last_modified_at > page.last_modified_at" -%}
+        {%- assign en_page_exist = site.pages | where: "url", en_url -%}
+	    {%- if en_page_exist == blank -%}
+		    {%- for collection in site.collections -%}
+                {%- assign en_page = collection.docs | where: "permalink", en_url | where_exp: "item", "item.last_modified_at > page.last_modified_at" -%}
+                {%- assign en_page_exist = collection.docs | where: "permalink", en_url -%}
+			    {%- if en_page_exist != blank -%}
+				    {%- break -%}
+			    {%- endif -%}
+		    {%- endfor -%}
+	    {%- endif -%}
+    {%- endif -%}
+    {%- if en_page != blank -%}
+        <p class="notice--warning"><b>⚠</b> This page might be outdated. Consider to have a look at the <a href="{{en_url}}">englisch original</a>.</p>
+    {%- else -%}
+        {%- if en_page_exist == blank -%}
+            <p class="notice--warning"><b>⚠</b> This page might be outdated. Consider to have a look at the <a href="/">englisch section</a>.</p>
+        {%- endif -%}
+    {%- endif -%}
+{%- endif -%}
