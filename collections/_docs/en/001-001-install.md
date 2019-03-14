@@ -21,7 +21,7 @@ Versions 0.92.2 and higher let you [bind a key](/docs/customize/#shortcut-keys) 
 ## Quick Setup
 
 ### 1. Download
-Download the right release archive for your platform from the [latest release](https://github.com/inkstitch/inkstitch/releases/latest).
+Download the release archive for your platform from [latest release](https://github.com/inkstitch/inkstitch/releases/latest).
 
 OS|File name|32&#8209;bit|64&#8209;bit
 ---|---|---|---
@@ -63,7 +63,7 @@ macOS|inkstitch-[VERSION]-osx-x86_64.tar.gz|☒|☑
  <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [Ink/Stitch News](/feed.xml)<br>
 {: .notice--info }
 
-<p class="notice--info" style="margin-top: -3.5em !important;">Or watch the project on GitHub:<br><iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=lexelby&repo=inkstitch&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe></p>
+<p class="notice--info" style="margin-top: -3.5em !important;">Or watch the project on GitHub:<br><iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=inkstitch&repo=inkstitch&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe></p>
 
 ## Manual Setup
 
