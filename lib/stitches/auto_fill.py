@@ -52,13 +52,11 @@ def auto_fill(shape,
               starting_point,
               ending_point=None):
 
-    rows_of_segments = intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing)
-    segments = [segment for row in rows_of_segments for segment in row]
-    graph = build_graph(shape, segments)
+    graph = build_graph(shape, angle, row_spacing, end_row_spacing)
     check_graph(graph, shape, max_stitch_length)
-    path = find_stitch_path(graph, segments, starting_point, ending_point)
+    path = find_stitch_path(graph, starting_point, ending_point)
 
-    return path_to_stitches(path, shape, angle, row_spacing, max_stitch_length, running_stitch_length, staggers, skip_last)
+    return path_to_stitches(path, graph, shape, angle, row_spacing, max_stitch_length, running_stitch_length, staggers, skip_last)
 
 
 def which_outline(shape, coords):
@@ -88,7 +86,7 @@ def project(shape, coords, outline_index):
     return outline.project(shgeo.Point(*coords))
 
 
-def build_graph(shape, segments):
+def build_graph(shape, angle, row_spacing, end_row_spacing):
     """build a graph representation of the grating segments
 
     This function builds a specialized graph (as in graph theory) that will
@@ -120,6 +118,10 @@ def build_graph(shape, segments):
     that every node has 4 edges touching it, ensuring that a valid stitch
     path must exist.
     """
+
+    # Convert the shape into a set of parallel line segments.
+    rows_of_segments = intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing)
+    segments = [segment for row in rows_of_segments for segment in row]
 
     graph = networkx.MultiGraph()
 
@@ -172,7 +174,7 @@ def nearest_node_on_outline(graph, point, outline_index=0):
     return nearest
 
 
-def find_stitch_path(graph, segments, starting_point=None, ending_point=None):
+def find_stitch_path(graph, starting_point=None, ending_point=None):
     """find a path that visits every grating segment exactly once
 
     Theoretically, we just need to find an Eulerian Path in the graph.
@@ -197,7 +199,7 @@ def find_stitch_path(graph, segments, starting_point=None, ending_point=None):
     graph = graph.copy()
 
     if starting_point is None:
-        starting_point = segments[0][0]
+        starting_point = graph.nodes.keys()[0]
 
     starting_node = nearest_node_on_outline(graph, starting_point)
 
@@ -283,7 +285,7 @@ def collapse_sequential_outline_edges(path):
     return new_path
 
 
-def connect_points(shape, start, end, running_stitch_length, row_spacing):
+def connect_points(graph, shape, start, end, running_stitch_length, row_spacing):
     """Create stitches to get from one point on an outline of the shape to another.
 
     An outline is essentially a loop (a path of points that ends where it starts).
@@ -294,16 +296,16 @@ def connect_points(shape, start, end, running_stitch_length, row_spacing):
     """
 
     # We may be on the outer boundary or on on of the hole boundaries.
-    outline_index = which_outline(shape, start)
+    outline_index = graph.nodes[start]['index']
     outline = shape.boundary[outline_index]
 
     # First, figure out the start and end position along the outline.  The
     # projection gives us the distance travelled down the outline to get to
     # that point.
+    start_projection = graph.nodes[start]['projection']
     start = shgeo.Point(start)
-    start_projection = outline.project(start)
+    end_projection = graph.nodes[end]['projection']
     end = shgeo.Point(end)
-    end_projection = outline.project(end)
 
     # If the points are pretty close, just jump there.  There's a slight
     # risk that we're going to sew outside the shape here.  The way to
@@ -362,7 +364,7 @@ def connect_points(shape, start, end, running_stitch_length, row_spacing):
     return stitches[1:]
 
 
-def path_to_stitches(path, shape, angle, row_spacing, max_stitch_length, running_stitch_length, staggers, skip_last):
+def path_to_stitches(path, graph, shape, angle, row_spacing, max_stitch_length, running_stitch_length, staggers, skip_last):
     path = collapse_sequential_outline_edges(path)
 
     stitches = []
@@ -371,6 +373,6 @@ def path_to_stitches(path, shape, angle, row_spacing, max_stitch_length, running
         if edge.is_segment():
             stitch_row(stitches, edge[0], edge[1], angle, row_spacing, max_stitch_length, staggers, skip_last)
         else:
-            stitches.extend(connect_points(shape, edge[0], edge[1], running_stitch_length, row_spacing))
+            stitches.extend(connect_points(graph, shape, edge[0], edge[1], running_stitch_length, row_spacing))
 
     return stitches
