@@ -2,7 +2,7 @@
 title: "Simulate"
 permalink: /docs/simulate/
 excerpt: ""
-last_modified_at: 2018-09-16
+last_modified_at: 2019-03-15
 toc: true
 ---
 
@@ -14,17 +14,17 @@ Then  run `Extensions > Ink/Stitch > English > Simulate` and enjoy.
 
 Shortcut Keys | Effect
 -------- | --------
-**→** | play forward
-**←** | play backward
-**↑** | speed up
-**↓** | slow down
-**+** | one frame forward
-**-** | one frame backward
-**p** | pause animation
-**r** | restart animation
-**q** | close
+<key>→</key> | play forward
+<key>←</key> | play backward
+<key>↑</key> | speed up
+<key>↓</key> | slow down
+<key>+</key> | one frame forward
+<key>-</key> | one frame backward
+<key>p</key> | pause animation
+<key>r</key> | restart animation
+<key>q</key> | close
 
-It is also possible to zoom and pan the simulation with the mouse.
+It is also possible to **zoom** and **pan** the simulation with the mouse.
 
 ## Run Simulator Independently
 

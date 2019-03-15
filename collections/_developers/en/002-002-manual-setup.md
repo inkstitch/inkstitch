@@ -16,7 +16,7 @@ A manual setup will allow you to edit the code while running the extension.
    ```
 2. Python Dependencies
 
-    A few python modules are needed. In some cases this extension uses features that aren’t available in the versions of the modules pre-packaged in distributions, so I recommend installing them directly with pip:
+    A few python modules are needed. In some cases this extension uses features that aren’t available in the versions of the modules pre-packaged in distributions, so we recommend installing them directly with pip:
     ```
     pip install -r requirements.txt
     ```

@@ -1,12 +1,12 @@
 ---
-title: "Manual Setup"
+title: "Manualle Installation"
 permalink: /de/developers/inkstitch/manual-setup/
-last_modified_at: 2018-07-20
+last_modified_at: 2019-03-15
 toc: false
 ---
-A manual setup will allow you to edit the code while running the extension.
+Eine manuelle Installation ermöglicht es am Quellcode zu arbeiten, während du Ink/Stitch benutzt.
 
-1. Clone the extension source and update submodule pyembroidery
+1. Klone die Erweiterung und aktualisiere das Submodul pyembroidery
 
    ```
    git clone https://github.com/inkstitch/inkstitch
@@ -14,16 +14,26 @@ A manual setup will allow you to edit the code while running the extension.
    git submodule init
    git submodule update
    ```
-2. Python Dependencies
+2. Python Abhängigkeiten
 
-    A few python modules are needed. In some cases this extension uses features that aren’t available in the versions of the modules pre-packaged in distributions, so I recommend installing them directly with pip:
+    Es werden ein paar Python Module gebraucht. In einigen Fällen benutzt Ink/Stitch Funktionen, die nicht automatisch durch die Distributionen mit Python mitgeliefert werden.
+    Deshalb empfehlen wir sie mit pip zu installieren:
     ```
     pip install -r requirements.txt
     ```
 
-    **Info:** You might need to remove wxPython and [install](https://wiki.wxpython.org/How%20to%20install%20wxPython) a platform specific package (e.g. Debian uses `python-wxgtk3.0`).
+    **Info:** Evtl. musst du auf einigen Plattformen wxPython entfernen und ein platform-spezifisches Paket [installieren](https://wiki.wxpython.org/How%20to%20install%20wxPython) (z.B. nutzt Debian `python-wxgtk3.0`).
     {: .notice--info }
-3. Symbolically link into the Inkscape extensions directory
+
+3. INX-Dateien vorbereiten
+
+    ```
+    for po in translations/*.po; do lang=${po%.*}; lang=${lang#*_}; mkdir -p locales/$lang/LC_MESSAGES; msgfmt $po -o locales/$lang/LC_MESSAGES/inkstitch.mo; done;
+    mkdir inx
+    bin/generate-inx-files
+    ```
+
+4. Symbolische Links in den Inkscape extensions-Order setzen
 
     ```
     cd ~/.config/inkscape/extensions
@@ -32,8 +42,7 @@ A manual setup will allow you to edit the code while running the extension.
     ln -s inkstitch/inkstitch.py
     ```
 
-4. Run Inkscape.
+5. Inkscape starten
 
-
-**Info:** Changes to the Python code take effect the next time the extension is run. Changes to the extension description files (*.inx) take effect the next time Inkscape is restarted.
+**Info:** Änderungen am Python-Code werden wirksam, sobald die Erweiterung das nächste Mal gestartet wird. Änderungen an den INX-Dateien zeigen sich erst, nachdem Inkscape neu gestartet wurde.
 {: .notice--info }

@@ -99,6 +99,8 @@ tutorials:
     children:
       - title: "Bildergallerie"
         url: /de/tutorials/inspiration/
+      - title: "DIY Embroidery Machine"
+        url: /de/tutorials/embroidery-machine/
   - title: Ressourcen
     children:
     - title: Ink/Stitch Logo
@@ -128,6 +130,8 @@ developers:
       url: /de/developers/inkstitch/python-modules/
     - title: Namespace
       url: /de/developers/inkstitch/namespace/
+  - title: Pyembroidery
+    url: /de/developers/pyembroidery
   - title: Dokumentation
     url: /de/developers/documentation/
   - title: Lokalisation

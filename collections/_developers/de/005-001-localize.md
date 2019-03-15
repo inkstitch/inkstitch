@@ -2,25 +2,34 @@
 title: "Ink/Stitch Localization"
 permalink: /de/developers/localize/
 excerpt: ""
-last_modified_at: 2018-04-10
-toc: false
+last_modified_at: 2019-03-15
+toc: true
 ---
-The goal of the Ink/Stitch project is to put free, high-quality embroidery design tools in the hands of folks that might normally not have access to such tools.  To further that goal, we seek to support as many languages and locales as possible.
+Das Ziel des Ink/Stitch-Projektes ist es, hochwertige Werkzeuge zur Erstellung von Stick-Designs in die Hände von Menschen zu geben, die sonst keinen Zugriff auf solche Werkzeuge hätte.
+Um dieses Ziel noch zu erweitern, versuchen wir so viele Sprachen wir möglich zu unterstützen.
 
-Ink/Stitch supports displaying text in the user's preferred language in the Params dialog and in error messages displayed by the Embroider extension.  Future work will add translations for the extension settings window (displayed by Inkscape) and project documentation (such as this file).
+Ink/Stitch unterstützt die Darstellung von Text in der bevorzugten Sprache des Nutzers. Dies betrifft beispielsweise die Stick-Parameter-Einstellungen oder Fehlermeldungen die von der Stick-Erweiterung angezeigt werden. Übersetzungen werden außerdem für die Dokumentation (wie z.B. diese Datei) benötigt.
 
-## Help wanted!
+## Hilfe gesucht!
 
-Want to help translate?  We'd really appreciate your contributions!  Ink/Stitch uses a the collaborative translation platform <a href="http://crowdin.com">CrowdIn</a> to facilitate community translations.  Through their generous open source program, we're able to use their platform free of charge, and we greatly appreciate their support.
+Willst du bei den Übersetzungen helfen?  Wir würden deinen Beitrag wirklich sehr begrüßen!  Ink/Stitch benutzt die kollaborative Übersetzungsplatfrom [CrowdIn](http://crowdin.com) um die gemeinschaftliche Übersetzungsarbeit zu erleichtern.  Durch deren tolles Open Source Programm, ist es uns möglich, die Platform umsonst zu nutzen, was wir wirklich sehr wertschätzen.
 
-To start translating, visit our <a href="https://crowdin.com/project/inkstitch">project page on CrowdIn</a>.  It's easy to sign in using your GitHub account.  Pick a language and start suggesting translations!
+Um mit dem Übersetzen zu beginnen, besuche unsere [Projektseite bei CrowdIn](https://crowdin.com/project/inkstitch).  Du kannst dich einfach mit deinem GitHub-Account einloggen.  Wähle eine Sprache und beginne Übersetzungen vorzuschlagen!
 
-Approved contributors can accept your translations, which causes them to be submitted to this GitHub repository as a pull request.  If you'd like to become an approver, please ping [**@lexelby**](https://github.com/lexelby) or another approved contributor, or email **inkstitch-l10n** at **lex** dot **gd**.
+Bestätigte Teammitglieder können deine Übersetzung dann akzeptieren, womit sie dann in das Ink/Stitch GitHub repository übernommen werden.  Wenn du gerne vorhandene Übersetzungen bestätigen willst, wende dich an [**@lexelby**](https://github.com/lexelby) oder einen anderes Teammitglied. Alternativ kannst du auch eine E-Mail and **inkstitch-l10n** at **lex** dot **gd** mit deinem Anliegen schicken.
 
-**Please note that our [code of conduct](CODE_OF_CONDUCT.md) also covers contributions and interactions on our CrowdIn page.**
+**Bitte beachte, dass unsere [Verhaltensregeln](CODE_OF_CONDUCT.md) auch für Interaktionen auf unserer CrowdIn Seite gelten.**
 
-## Continuous Translation
+## Andauernde Übersetzungen
 
-When new code is added to ink/stitch, user-facing text can change and new messages can be added.  CrowdIn picks these changes up automatically and makes the new messages available to translators.
+Wenn neuer Code zu Ink/Stitch hinzugefügt wird, kann es sein, dass sich der Text in der Benutzeroberfläche ändert. CrowdIn bemerkt diese Veränderungen automatisch und stellt diese für Übersetzer zur Verfügung.
 
-When CrowdIn creates a pull request, our [Travis-CI](http://travis-ci.org) integration (also generously provided for free!) picks up the new translations and builds a new version of Ink/Stitch as a development release.  Once Travis-CI finishes building, the new version is posted to our releases page [here](https://github.com/inkstitch/inkstitch/releases/tag/dev-build-l10n), and you can install it and make sure everything looks right before we merge.
+Wenn CrowdIn ein Update über ein sogenannten Pull Request an das GitHub repository schickt, generiert unsere [Travis-CI)](http://travis-ci.org)-Integration, welche uns ebenfalls kostenlos zur Verfügung steht, ein "Developement Release". Ist dieses fertig gestellt, erscheint es auf GitHub unter [Releases](https://github.com/inkstitch/inkstitch/releases/tag/dev-build-l10n) und du kannst es installieren und testen, ob alles richtig ist, bevor wir es in die offizielle Version übernehmen.
+
+## Übersetze die Ink/Stitch Webseite
+
+Diese Webseite ist mehrsprachig. Wenn du gewillt bist, die Dokumentation zu übersetzen, wende dich an uns auf [GitHub](https://github.com/inkstitch/inkstitch/issues).
+
+Wenn deine Muttersprache bereits eine Übersetzung hat, schau dir die untenstehende Liste an. Diese Liste beinhaltet Seiten die entweder noch nicht übersetzt sind - oder aktualisiert werden müssen.
+
+{% include compare_translations %}

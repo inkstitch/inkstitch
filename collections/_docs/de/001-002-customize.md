@@ -2,7 +2,7 @@
 title: "Anpassung von Ink/Stitch"
 permalink: /de/docs/customize/
 excerpt: ""
-last_modified_at: 2018-08-26
+last_modified_at: 2019-03-15
 toc: true
 ---
 
@@ -22,42 +22,21 @@ Tastenkürzel | Effekt
 <nobr><key>Strg</key>+<key>Umschalt</key>+<key>Bild↓</key></nobr> | Auswahl > Objekt absenken (ab Inkscape Version 0.92.2)*
 <nobr><key>Strg</key>+<key>R</key></nobr> | Auswahl > Richtung umkehren**
 
-*Objekt anheben und Objekt absenken ist seit Inkscape 0.92.2 in einer verbesserten Art möglich. Damit kann ein Objekt in der Reihenfolge nach oben oder unten verschoben werden. Dadurch hat man eine bessere Kontrolle als mit den alten Befehlen, die Objekte nur neu anordnen konnten, wenn sie sich überlappten. Objekt anheben und Objekt absenken ermöglicht eine präzisere Kontrolle über die Objektreihenfolge. Sehr nützlich in Kombination mit dem Objektfenster.
+*Die Funktionen "Objekt anheben" und "Objekt absenken" gibt es seit der Inkscape Version 0.92.2. Sie ermöglichen es die Objektreihenfolge zu manipulieren, auch wenn sich die Objekte sich nicht überlappen. Das ist sehr nützlich in Kombination mit dem Objektfenster (`Objekte > Objekte ...`). Die Objektreihenfolge gibt an, in welcher Reihenfolge die Elemente gestickt werden (von unten nach oben).
+{: style="font-size: 70%" }
 
 **Umkehr der Pfadrichtung. Bei Plattstich (Satinstich) und Laufstich kann die Stichrichtung geändert werden. Verwende dies mit der Inkscape-Einstellung und den Einstellung des Knoten-Tools `Pfadrichtung auf Konturen anzeigen`. Wenn man mit dem Knoteneditor nur ein Stützpunkt auswählt und Strg+R drückt, kehrt Inkscape nur einen Pfad in einem Objekt um. Dadurch wird sichergestellt, dass beide Ränder in einer Satinkolumne in die gleiche Richtung zeigen.
+{: style="font-size: 70%" }
 
-### Tastenkürzel der Simulation
-Die Ink/Stitch-Simulation enthält bereits folgende Tastenkombinationen:
+### Simulator Tastenkürzel
 
-Tastenkürzel | Effekt
------------- | --------
-<key>↑</key> | Schneller
-<key>↓</key> | Langsamer
-<key>r</key> | Neustart der Animation
-<key>p</key> | Pause der Animation
-<key>q</key> | Beenden
+Der Ink/Stitch [Simulator](/de/docs/simulate/) hat bereits vordefinierte Tastenkürzel.
 
 ## Gitter
 
 Um Vektoren richtig auszurichten, sollte die Rasterfunktion von Inkscape verwendet werden. Gehe zu `Ansicht` und aktiviere das `Seiten Gitter`. Stelle in `Einrasten-Kontrollleiste` sicher, dass `Am Gitter einrasten` aktiviert ist. Es ist auch möglich, den Abstand und den Ursprung der Gitter unter `Datei > Dokumenteinstellungen > Gitter` anzupassen.
 
 ![Gitter](https://user-images.githubusercontent.com/11083514/40359052-414d3554-5db9-11e8-8b49-3be75c5e9732.png)
-
-## Konfiguration des Urprungs mit Gittern
-
-Die Einrichtung vom Ursprung (0,0) ist besonders nützlich für Personen, die vollen Zugriff auf den gesamten Stickbereich haben, zu dem die Maschine fähig ist, unabhängig davon, welcher Rahmen verwendet wird.
-
-Einrichtung:
-  * Erstelle zwei Hilfslinien, indem man auf den Linealen den Zeiger auf die Arbeitsfläche zieht (eine horizontale, eine vertikale).
-  * Doppelklick auf die Hilfslinien und beschrifte diese mit: `embroidery origin`. Es kann mehr Text hinzugefügt werden, aber er muss mit `embroidery origin` beginnen.
-  * Die Position des kleinen Kreises auf der Hilfslinie sowie der Winkel sind nicht wichtig. Es kommt nur darauf an, wo sie sich kreuzen. Dieser Schnittpunkt ist der Stickursprung.
-
-Wenn keine Hilfslinien gefunden werden, ist der Ursprung in der SVG-Datei im Mittelpunkt.
-  
-**Tip:** Es kann auch eine [Vorlage]((/docs/customize/#working-with-templates)) mit Hilfslinien und einem passenden Arbeitsbereich für die Stickmaschine erstellt werden.
-{: .notice--info }
-
-[Videoanleitung]({{ '/tutorials/custom-origins/' | relative_url }})
 
 ## Aktivierung von Pfadkonturen & Pfadrichtungen
 
@@ -75,8 +54,8 @@ Betriebssystem | Vorlagenverzeichnis
 Linux   | `~/.config/inkscape/templates`
 Windows | `C:\Users\%USERNAME%\AppData\Roaming\inkscape\templates`
 
-Es sollte das Benutzerverzeichnis für Erweiterungen in den Inkscape Einstellungen überprüft werden. [Mehr dazu](/docs/faq/#i-have-downloaded-and-unzipped-the-latest-release-where-do-i-put-it).
+Es sollte das Benutzerverzeichnis für Erweiterungen in den Inkscape Einstellungen überprüft werden. [Mehr dazu](/de/docs/faq/#ich-habe-die-aktuelle-version-heruntergeladen-und-entpackt-was-soll-ich-jetzt-machen).
 
-**Tip:** Hier gibt es [Fertige Vorlagen](/tutorials/resources/templates/).
+**Tip:** Hier gibt es [Vorlagen](/de/tutorials/resources/templates/) die du nutzen kannst.
 {: .notice--info }
 
