@@ -1,3 +1,5 @@
+# -*- coding: UTF-8 -*-
+
 from itertools import groupby, chain
 import math
 
@@ -74,7 +76,7 @@ def which_outline(shape, coords):
 
     point = shgeo.Point(*coords)
     outlines = enumerate(list(shape.boundary))
-    closest = min(outlines, key=lambda index_outline: index_outline[1].distance(point))
+    closest = min(outlines, key=lambda (index, outline): outline.distance(point))
 
     return closest[0]
 
@@ -135,6 +137,8 @@ def build_graph(shape, angle, row_spacing, end_row_spacing):
         # mark this one as a grating segment.
         graph.add_edge(*segment, key="segment")
 
+    tag_nodes_with_outline_and_projection(graph, shape, graph.nodes())
+
     for node in graph.nodes():
         outline_index = which_outline(shape, node)
         outline_projection = project(shape, node, outline_index)
@@ -142,54 +146,101 @@ def build_graph(shape, angle, row_spacing, end_row_spacing):
         # Tag each node with its index and projection.
         graph.add_node(node, index=outline_index, projection=outline_projection)
 
-    nodes = list(graph.nodes(data=True))  # returns a list of tuples: [(node, {data}), (node, {data}) ...]
-    nodes.sort(key=lambda node: (node[1]['index'], node[1]['projection']))
+    add_edges_between_outline_nodes(graph, key="outline")
 
-    for outline_index, nodes in groupby(nodes, key=lambda node: node[1]['index']):
-        nodes = [node for node, data in nodes]
-
-        # add an edge between each successive node
-        for i, (node1, node2) in enumerate(zip(nodes, nodes[1:] + [nodes[0]])):
-            graph.add_edge(node1, node2, key="outline")
-
+    for node1, node2, key, data in graph.edges(keys=True, data=True):
+        if key == "outline":
             # duplicate every other edge
-            if i % 2 == 0:
+            if data['index'] % 2 == 0:
                 graph.add_edge(node1, node2, key="extra")
 
     return graph
 
 
-def build_travel_graph(top_stitch_graph, shape, top_stitch_angle, underpath):
-    graph = networkx.Graph()
-    graph.add_nodes_from(top_stitch_graph.nodes(data=True))
+def tag_nodes_with_outline_and_projection(graph, shape, nodes):
+    for node in nodes:
+        outline_index = which_outline(shape, node)
+        outline_projection = project(shape, node, outline_index)
 
-    if underpath:
-        # need to concatenate all the rows
-        grating1 = shgeo.MultiLineString(list(chain(*intersect_region_with_grating(shape, top_stitch_angle + math.pi / 4, 2 * PIXELS_PER_MM))))
-        grating2 = shgeo.MultiLineString(list(chain(*intersect_region_with_grating(shape, top_stitch_angle - math.pi / 4, 2 * PIXELS_PER_MM))))
+        graph.add_node(node, outline=outline_index, projection=outline_projection)
 
-        endpoints = [coord for mls in (grating1, grating2)
-                     for ls in mls
-                     for coord in ls.coords]
 
-        for node in endpoints:
-            outline_index = which_outline(shape, node)
-            outline_projection = project(shape, node, outline_index)
+def add_edges_between_outline_nodes(graph, key=None):
+    """Add edges around the outlines of the graph, connecting sequential nodes.
 
-            # Tag each node with its index and projection.
-            graph.add_node(node, index=outline_index, projection=outline_projection)
+    This function assumes that all nodes in the graph are on the outline of the
+    shape.  It figures out which nodes are next to each other on the shape and
+    connects them in the graph with an edge.
+
+    Edges are tagged with their outline number and their position on that
+    outline.
+    """
 
     nodes = list(graph.nodes(data=True))  # returns a list of tuples: [(node, {data}), (node, {data}) ...]
-    nodes.sort(key=lambda node: (node[1]['index'], node[1]['projection']))
+    nodes.sort(key=lambda node: (node[1]['outline'], node[1]['projection']))
 
-    for outline_index, nodes in groupby(nodes, key=lambda node: node[1]['index']):
+    for outline_index, nodes in groupby(nodes, key=lambda node: node[1]['outline']):
         nodes = [node for node, data in nodes]
 
         # add an edge between each successive node
-        for node1, node2 in zip(nodes, nodes[1:] + [nodes[0]]):
-            p1 = InkstitchPoint(*node1)
-            p2 = InkstitchPoint(*node2)
-            graph.add_edge(node1, node2, weight=3 * p1.distance(p2))
+        for i, (node1, node2) in enumerate(zip(nodes, nodes[1:] + [nodes[0]])):
+            data = dict(outline=outline_index, index=i)
+            if key:
+                graph.add_edge(node1, node2, key=key, **data)
+            else:
+                graph.add_edge(node1, node2, **data)
+
+
+def build_travel_graph(top_stitch_graph, shape, top_stitch_angle, underpath):
+    """Build a graph for travel stitches.
+
+    This graph will be used to find a stitch path between two spots on the
+    outline of the shape.
+
+    If underpath is False, we'll just be traveling
+    around the outline of the shape, so the graph will only contain outline
+    edges.
+
+    If underpath is True, we'll also allow travel inside the shape.  We'll
+    fill the shape with a cross-hatched grid of lines 2mm apart, at ±45
+    degrees from the fill stitch angle.  This will ensure that travel stitches
+    won't be visible and won't disrupt the fill stitch.
+
+    When underpathing, we "encourage" the travel() function to travel inside
+    the shape rather than on the boundary.  We do this by weighting the
+    boundary edges extra so that they're more "expensive" in the shortest path
+    calculation.
+    """
+
+    graph = networkx.Graph()
+
+    # Add all the nodes from the main graph.  This will be all of the endpoints
+    # of the rows of stitches.  Every node will be on the outline of the shape.
+    # They'll all already have their `outline` and `projection` tags set.
+    graph.add_nodes_from(top_stitch_graph.nodes(data=True))
+
+    if underpath:
+        # These two MultiLineStrings will make up the cross-hatched grid.
+        grating1 = shgeo.MultiLineString(list(chain(*intersect_region_with_grating(shape, top_stitch_angle + math.pi / 4, 2 * PIXELS_PER_MM))))
+        grating2 = shgeo.MultiLineString(list(chain(*intersect_region_with_grating(shape, top_stitch_angle - math.pi / 4, 2 * PIXELS_PER_MM))))
+
+        # We'll add the endpoints of the crosshatch grating lines too  These
+        # will all be on the outline of the shape.  This will ensure that a
+        # path traveling inside the shape can reach its target on the outline,
+        # which will be one of the points added above.
+        endpoints = [coord for mls in (grating1, grating2)
+                     for ls in mls
+                     for coord in ls.coords]
+        tag_nodes_with_outline_and_projection(graph, shape, endpoints)
+
+    add_edges_between_outline_nodes(graph)
+    for start, end in graph.edges:
+        p1 = InkstitchPoint(*start)
+        p2 = InkstitchPoint(*end)
+
+        # Set the weight equal to triple the edge length, to encourage travel()
+        # to avoid them when underpathing is enabled.
+        graph.add_edge(start, end, weight=3 * p1.distance(p2))
 
     if underpath:
         interior_edges = grating1.symmetric_difference(grating2)
@@ -213,7 +264,7 @@ def check_graph(graph, shape, max_stitch_length):
 
 def nearest_node_on_outline(graph, point, outline_index=0):
     point = shgeo.Point(*point)
-    outline_nodes = [node for node, data in graph.nodes(data=True) if data['index'] == outline_index]
+    outline_nodes = [node for node, data in graph.nodes(data=True) if data['outline'] == outline_index]
     nearest = min(outline_nodes, key=lambda node: shgeo.Point(*node).distance(point))
 
     return nearest
