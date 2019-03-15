@@ -9,7 +9,7 @@ from shapely import geometry as shgeo
 from ..exceptions import InkstitchException
 from ..i18n import _
 from ..svg import PIXELS_PER_MM
-from ..utils.geometry import Point as InkstitchPoint, cut
+from ..utils.geometry import Point as InkstitchPoint
 from .fill import intersect_region_with_grating, stitch_row
 from .running_stitch import running_stitch
 
@@ -55,11 +55,11 @@ def auto_fill(shape,
               ending_point=None,
               underpath=True):
 
-    graph = build_graph(shape, angle, row_spacing, end_row_spacing)
-    check_graph(graph, shape, max_stitch_length)
-    travel_graph = build_travel_graph(graph, shape, angle, underpath)
-    path = find_stitch_path(graph, starting_point, ending_point)
-    result = path_to_stitches(path, graph, travel_graph, shape, angle, row_spacing, max_stitch_length, running_stitch_length, staggers, skip_last)
+    fill_stitch_graph = build_fill_stitch_graph(shape, angle, row_spacing, end_row_spacing)
+    check_graph(fill_stitch_graph, shape, max_stitch_length)
+    travel_graph = build_travel_graph(fill_stitch_graph, shape, angle, underpath)
+    path = find_stitch_path(fill_stitch_graph, starting_point, ending_point)
+    result = path_to_stitches(path, travel_graph, angle, row_spacing, max_stitch_length, running_stitch_length, staggers, skip_last)
 
     return result
 
@@ -75,10 +75,11 @@ def which_outline(shape, coords):
     # fail sometimes.
 
     point = shgeo.Point(*coords)
-    outlines = enumerate(list(shape.boundary))
-    closest = min(outlines, key=lambda (index, outline): outline.distance(point))
+    outlines = list(shape.boundary)
+    outline_indices = range(len(outlines))
+    closest = min(outline_indices, key=lambda index: outlines[index].distance(point))
 
-    return closest[0]
+    return closest
 
 
 def project(shape, coords, outline_index):
@@ -91,7 +92,7 @@ def project(shape, coords, outline_index):
     return outline.project(shgeo.Point(*coords))
 
 
-def build_graph(shape, angle, row_spacing, end_row_spacing):
+def build_fill_stitch_graph(shape, angle, row_spacing, end_row_spacing):
     """build a graph representation of the grating segments
 
     This function builds a specialized graph (as in graph theory) that will
@@ -191,7 +192,7 @@ def add_edges_between_outline_nodes(graph, key=None):
                 graph.add_edge(node1, node2, **data)
 
 
-def build_travel_graph(top_stitch_graph, shape, top_stitch_angle, underpath):
+def build_travel_graph(fill_stitch_graph, shape, fill_stitch_angle, underpath):
     """Build a graph for travel stitches.
 
     This graph will be used to find a stitch path between two spots on the
@@ -217,12 +218,12 @@ def build_travel_graph(top_stitch_graph, shape, top_stitch_angle, underpath):
     # Add all the nodes from the main graph.  This will be all of the endpoints
     # of the rows of stitches.  Every node will be on the outline of the shape.
     # They'll all already have their `outline` and `projection` tags set.
-    graph.add_nodes_from(top_stitch_graph.nodes(data=True))
+    graph.add_nodes_from(fill_stitch_graph.nodes(data=True))
 
     if underpath:
         # These two MultiLineStrings will make up the cross-hatched grid.
-        grating1 = shgeo.MultiLineString(list(chain(*intersect_region_with_grating(shape, top_stitch_angle + math.pi / 4, 2 * PIXELS_PER_MM))))
-        grating2 = shgeo.MultiLineString(list(chain(*intersect_region_with_grating(shape, top_stitch_angle - math.pi / 4, 2 * PIXELS_PER_MM))))
+        grating1 = shgeo.MultiLineString(list(chain(*intersect_region_with_grating(shape, fill_stitch_angle + math.pi / 4, 2 * PIXELS_PER_MM))))
+        grating2 = shgeo.MultiLineString(list(chain(*intersect_region_with_grating(shape, fill_stitch_angle - math.pi / 4, 2 * PIXELS_PER_MM))))
 
         # We'll add the endpoints of the crosshatch grating lines too  These
         # will all be on the outline of the shape.  This will ensure that a
@@ -381,7 +382,7 @@ def collapse_sequential_outline_edges(path):
     return new_path
 
 
-def travel(graph, travel_graph, shape, start, end, running_stitch_length, row_spacing):
+def travel(travel_graph, start, end, running_stitch_length):
     """Create stitches to get from one point on an outline of the shape to another."""
 
     path = networkx.shortest_path(travel_graph, start, end, weight='weight')
@@ -392,7 +393,7 @@ def travel(graph, travel_graph, shape, start, end, running_stitch_length, row_sp
     return stitches[1:]
 
 
-def path_to_stitches(path, graph, travel_graph, shape, angle, row_spacing, max_stitch_length, running_stitch_length, staggers, skip_last):
+def path_to_stitches(path, travel_graph, angle, row_spacing, max_stitch_length, running_stitch_length, staggers, skip_last):
     path = collapse_sequential_outline_edges(path)
 
     stitches = []
@@ -401,6 +402,6 @@ def path_to_stitches(path, graph, travel_graph, shape, angle, row_spacing, max_s
         if edge.is_segment():
             stitch_row(stitches, edge[0], edge[1], angle, row_spacing, max_stitch_length, staggers, skip_last)
         else:
-            stitches.extend(travel(graph, travel_graph, shape, edge[0], edge[1], running_stitch_length, row_spacing))
+            stitches.extend(travel(travel_graph, edge[0], edge[1], running_stitch_length))
 
     return stitches
