@@ -140,7 +140,7 @@ def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing=Non
         res = grating_line.intersection(shape)
 
         if (isinstance(res, shapely.geometry.MultiLineString)):
-            runs = map(lambda line_string: line_string.coords, res.geoms)
+            runs = [line_string.coords for line_string in res.geoms]
         else:
             if res.is_empty or len(res.coords) == 1:
                 # ignore if we intersected at a single point or no points
@@ -153,7 +153,7 @@ def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing=Non
 
             if flip:
                 runs.reverse()
-                runs = map(lambda run: tuple(reversed(run)), runs)
+                runs = [tuple(reversed(run)) for run in runs]
 
             rows.append(runs)
 
