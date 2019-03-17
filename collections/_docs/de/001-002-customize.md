@@ -8,7 +8,7 @@ toc: true
 
 ## Tastenkürzel
 
-Die Arbeit mit Ink/Stitch und Inkscape kann erheblich beschleunigt werden, wenn Tastenkombinationen zugewiesen werden. Unter: `Bearbeiten > Einstellungen > Benutzeroberfläche > Tastenkürzel` können die gewünschten Tastenkombinationen eingetragen werden. [Inkscape anpassen (en)](http://wiki.inkscape.org/wiki/index.php/Customizing_Inkscape)
+Tastenkürzel können die Arbeitsgeschwindigkeit erhebliche steigern. In Inkscape gibt es die Möglichkeit u.a. auch für Plugins Tastenkombinationen festzulegen. Die Bearbeitung der Kürzel ist im Menü unter `Bearbeiten > Einstellungen > Benutzeroberfläche > Tastenkürzel` möglich. [Inkscape anpassen (en)](http://wiki.inkscape.org/wiki/index.php/Customizing_Inkscape)
 
 Die folgende Liste wurde von @lexelby vorgeschlagen:
 
@@ -34,27 +34,28 @@ Der Ink/Stitch [Simulator](/de/docs/simulate/) hat bereits vordefinierte Tastenk
 
 ## Gitter
 
-Um Vektoren richtig auszurichten, sollte die Rasterfunktion von Inkscape verwendet werden. Gehe zu `Ansicht` und aktiviere das `Seiten Gitter`. Stelle in `Einrasten-Kontrollleiste` sicher, dass `Am Gitter einrasten` aktiviert ist. Es ist auch möglich, den Abstand und den Ursprung der Gitter unter `Datei > Dokumenteinstellungen > Gitter` anzupassen.
+Um Vektoren richtig auszurichten, kann die Rasterfunktion von Inkscape verwendet werden. Gehe zu `Ansicht` und aktiviere das `Seitengitter`. Stelle in der `Einrasten-Kontrollleiste` sicher, dass `Am Gitter einrasten` aktiviert ist. Es ist auch möglich, den Abstand und den Ursprung der Gitter unter `Datei > Dokumenteinstellungen > Gitter` anzupassen.
 
 ![Gitter](https://user-images.githubusercontent.com/11083514/40359052-414d3554-5db9-11e8-8b49-3be75c5e9732.png)
 
-## Aktivierung von Pfadkonturen & Pfadrichtungen
+## Pfadkonturen & Pfadrichtungen
 
-Die Kenntnis über die Pfadrichtungen sind wichtig, um mit Ink/Stich arbeiten zu können. Wir empfehlen daher, die Kontrollkästchen **Umriss zeigen** und **Zeige temporär Umrandung für ausgewählte Pfade** unter `Bearbeiten > Einstellungen > Werkzeuge > Knoten` zu aktivieren.
+Bei der Arbeit mit Ink/Stitch ist es wichtig, erkennen zu können, in welche Richtung ein Pfad verläuft. Wir empfehlen daher, die Kontrollkästchen `Umriss zeigen` und `Zeige temporär Umrandung für ausgewählte Pfade` unter `Bearbeiten > Einstellungen > Werkzeuge > Knoten` zu aktivieren.
 
-Stelle sicher, dass auch **Zeige Entwurfspfad** in der Werkzeugleiste wie in der folgenden Abbildung zu sehen ist, aktiviert ist.
+Damit die Pfadrichtungen auch wirklich angezeigt werden, aktiviere außerdem die Option `Zeige Entwurfspfad` in der Werkzeugleiste. In der Abbildung kannst du sehen, wo du die Option findest.
+
 [![Path outlines & directions](https://user-images.githubusercontent.com/11083514/40360721-f294ef0a-5dbe-11e8-9d4d-98f469ff1fba.png)](https://user-images.githubusercontent.com/11083514/40360721-f294ef0a-5dbe-11e8-9d4d-98f469ff1fba.png)
 
-## Arbeiten mit Vorlagen
+## Vorlagen
 
-Wenn man Ink/Stitch häufiger verwendet, möchte man nicht die gleichen arbeiten immer und immer wiederholen. In diesem Fall kann eine Vorlage für die grundlegende Stickkonfiguration erstellt werden. Nachdem alles nach Wunsch organisiert wurde, speichere die Datei einfach in dem Vorlagenverzeichnis. Nun kann mit `Datei > Neu aus Vorlage` darauf zugegriffen werden.
+Wenn man Ink/Stitch häufiger verwendet, möchte man nicht die gleichen Arbeitsschritte immer und immer wieder wiederholen. In diesem Fall kann eine Vorlage für die grundlegende Stickkonfiguration erstellt werden. Nachdem alles nach Wunsch eingerichtet wurde, speichere die Datei einfach in dem Vorlagenverzeichnis. Nun kann mit `Datei > Neu aus Vorlage` darauf zugegriffen werden.
 
 Betriebssystem | Vorlagenverzeichnis
 ---|---
 Linux   | `~/.config/inkscape/templates`
 Windows | `C:\Users\%USERNAME%\AppData\Roaming\inkscape\templates`
 
-Es sollte das Benutzerverzeichnis für Erweiterungen in den Inkscape Einstellungen überprüft werden. [Mehr dazu](/de/docs/faq/#ich-habe-die-aktuelle-version-heruntergeladen-und-entpackt-was-soll-ich-jetzt-machen).
+Das Benutzerverzeichnis für Erweiterungen kann in den Inkscape Einstellungen überprüft werden. [Mehr dazu](/de/docs/faq/#ich-habe-die-aktuelle-version-heruntergeladen-und-entpackt-was-soll-ich-jetzt-machen).
 
 **Tip:** Hier gibt es [Vorlagen](/de/tutorials/resources/templates/) die du nutzen kannst.
 {: .notice--info }

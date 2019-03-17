@@ -23,11 +23,11 @@ In manual stitch mode Ink/Stitch will use each node of a path as a needle penetr
 
 It will not add tie-in or tie-off stitches automatically, so be aware of creating them within the path.
 
-### Corner Nodes
+### Make Nodes Corner
 
 Each node of a path represents a needle penetration point. It will not go along curves.
 
-![Manual Stitch Path](/assets/images/docs/en/manual-stitch-path.jpg)
+![Manual Stitch Placement](/assets/images/docs/manual-stitch-placement.png)
 
 A clean representation of your manual stitch path can be achieved as follows:
 1. Select all nodes (`F2` then `Ctrl`+`A`)

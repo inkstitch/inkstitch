@@ -2,7 +2,7 @@
 title: "Import und Export von Dateien"
 permalink: /de/docs/import-export/
 excerpt: ""
-last_modified_at: 2018-06-23
+last_modified_at: 2019-03-16
 toc: true
 ---
 
@@ -11,10 +11,10 @@ Ink/Stitch unterstützt viele Stickformate. Es kann Dateien in die unten aufgef�
 ## Unterstützte Formate (A - Z):
 
 ### Schreiben
-DST, EXP, JEF, PEC, PES, VP3
+CSV, **DST**, **EXP**, **JEF**, PEC, **PES**, SVG, TXT (G-CODE), U01, **VP3**
 
 ### Lesen
-100, 10o, BRO, DSB, DST, DSZ, EMD, EXP, INB, JEF, KSM, PEC, PES, SEW, SHV, STX, TAP, TBF, u01, VP3, XXX
+100, 10o, BRO, DAT, DSB, **DST**, DSZ, EMD, **EXP**, EXY, FXY, GT, INB, **JEF**, JPX, KSM, MAX, MIT, NEW, PCD, PCM, PCQ, PCS, PEC, **PES**, PHB, PHC, SEW, SHV, STC, STX, TAP, TBF, TXT (G-CODE), U01, **VP3**, XXX, ZXY
 
 **Info:** Detaillierte Informationen zu Stickdateiformaten gibt es hier [EduTechWiki](http://edutechwiki.unige.ch/en/Embroidery_format).
 {: .notice--info }

@@ -7,7 +7,7 @@ toc: true
 ---
 Probiere die folgenden Schritte aus, um die Erweiterung zu testen und die Grundfunktionen kennenzulernen.
 
-**Tipp:** Wenn noch nicht mit Inkscape gearbeitet wurde, dann sieh zuerst die [Einführung (en)](https://inkscape.org/en/doc/tutorials/basic/tutorial-basic.html) an.
+**Tipp:** Wenn noch nicht mit Inkscape gearbeitet wurde, dann sieh zuerst deren [Einführung](https://inkscape.org/de/doc/tutorials/basic/tutorial-basic.html) an.
 {: .notice--info }
 
 ## Schritt 1 - Objekt zeichnen

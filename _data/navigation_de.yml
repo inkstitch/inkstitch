@@ -56,24 +56,36 @@ docs:
     children:
     - title: Parameter
       url: /de/docs/params/
-    - title: Simulation
-      url: /de/docs/simulate/
-    - title: "Satinkolumne umkehren"
-      url: /de/docs/flip-satin-columns/
     - title: Add-Ons installieren
       url: /de/docs/addons/
+    - title: "Befehle"
+      url: /de/docs/commands/
+    - title: Satin Werkzeuge
+      url: /de/docs/satin-tools/
+    - title: Lettering
+      url: /de/docs/lettering/
+    - title: Simulation
+      url: /de/docs/simulate/
     - title: Drucken
       url: /de/docs/print/
     - title: Importieren / Exportieren
       url: /de/docs/import-export/
   - title: Stich-Bibliothek
     children:
-      - title: Linien
-        url: /de/docs/stitches/stroke/
-      - title: Satin
-        url: /de/docs/stitches/satin/
-      - title: Füllstitche
-        url: /de/docs/stitches/fill/
+      - title: "Manueller Stich"
+        url: /de/docs/stitches/manual-stitch/
+      - title: "Laufstich"
+        url: /de/docs/stitches/running-stitch/
+      - title: "Bohnen-Stich"
+        url: /de/docs/stitches/bean-stitch/
+      - title: "Zick-Zack-Stich"
+        url: /de/docs/stitches/zigzag-stitch/
+      - title: "Satinkolumne"
+        url: /de/docs/stitches/satin-column/
+      - title: "E-Stich"
+        url: /de/docs/stitches/e-stitch/
+      - title: "Füllstich"
+        url: /de/docs/stitches/fill-stitch/
   - title: Tips
     children:
       - title: "Fonts"

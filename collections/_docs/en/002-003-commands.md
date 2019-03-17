@@ -50,13 +50,9 @@ These commands will be attached to the currently selected objects.
 
 ![satin cut point symbol](/assets/images/docs/visual-commands-satin-cut-point.jpg) [Satin cut point](/docs/commands/#-satin-cut-point) (use with "Cut Satin Column")
 
-![auto route satin starting position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-start.jpg) Auto-route satin stitch starting position
+![auto route satin starting position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-start.jpg) Auto-route satin stitch [starting position](#--startingending-position-for-auto-route-satin)
 
-![auto route satin starting position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-end.jpg) Auto-route satin stitch ending position
-
-**Info:**
-Starting and ending point currently apply only to fill-stitch objects, while trim and stop commands take effect on any connected object.
-{: .notice--info }
+![auto route satin starting position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-end.jpg) Auto-route satin stitch [ending position](#--startingending-position-for-auto-route-satin)
 
 ### Attach visual commands manually
 
@@ -97,7 +93,7 @@ Defines the (1) starting or (2) ending point of an fill stitch area.
 
 ###  ![auto route satin starting position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-start.jpg) ![auto route satin ending position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-end.jpg) Starting/Ending Position for Auto Route Satin
 
-Defines the (1) starting or (2) ending point for satin auto route column.
+Defines the (1) starting or (2) ending point for satin auto route column. Run "[Auto-route Satin Column...](/docs/satin-tools/#auto-route-satin-columns)" afterwards.
 
 ### ![satin cut point symbol](/assets/images/docs/visual-commands-satin-cut-point.jpg) Satin cut point
 
