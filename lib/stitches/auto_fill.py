@@ -5,6 +5,7 @@ import math
 
 import networkx
 from shapely import geometry as shgeo
+from shapely.strtree import STRtree
 
 from ..exceptions import InkstitchException
 from ..i18n import _
@@ -248,16 +249,22 @@ def build_travel_graph(fill_stitch_graph, shape, fill_stitch_angle, underpath):
         segments = []
         for start, end, key, data in fill_stitch_graph.edges(keys=True, data=True):
             if key == 'segment':
-                segments.append((shgeo.LineString((start, end)), data))
+                segments.append(shgeo.LineString((start, end)))
+
+        # The shapely documentation is pretty unclear on this.  An STRtree
+        # allows for building a set of shapes and then efficiently testing
+        # the set for intersection.  This allows us to do blazing-fast
+        # queries of which line segments overlap each underpath edge.
+        rtree = STRtree(segments)
 
         interior_edges = grating1.symmetric_difference(grating2)
         for ls in interior_edges.geoms:
             p1, p2 = [InkstitchPoint(*coord) for coord in ls.coords]
             edge = (p1.as_tuple(), p2.as_tuple())
 
-            for segment, data in segments:
-                if ls.crosses(segment):
-                    data['underpath_edges'].append(edge)
+            for segment in rtree.query(ls):
+                start, end = segment.coords
+                fill_stitch_graph[start][end]['segment']['underpath_edges'].append(edge)
 
             graph.add_edge(*edge, weight=p1.distance(p2))
 
