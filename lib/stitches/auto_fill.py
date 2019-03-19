@@ -59,7 +59,8 @@ def auto_fill(shape,
     check_graph(fill_stitch_graph, shape, max_stitch_length)
     travel_graph = build_travel_graph(fill_stitch_graph, shape, angle, underpath)
     path = find_stitch_path(fill_stitch_graph, starting_point, ending_point)
-    result = path_to_stitches(path, travel_graph, angle, row_spacing, max_stitch_length, running_stitch_length, staggers, skip_last)
+    result = path_to_stitches(path, travel_graph, fill_stitch_graph, angle, row_spacing,
+                              max_stitch_length, running_stitch_length, staggers, skip_last)
 
     return result
 
@@ -136,7 +137,7 @@ def build_fill_stitch_graph(shape, angle, row_spacing, end_row_spacing):
     for segment in segments:
         # networkx allows us to label nodes with arbitrary data.  We'll
         # mark this one as a grating segment.
-        graph.add_edge(*segment, key="segment")
+        graph.add_edge(*segment, key="segment", underpath_edges=[])
 
     tag_nodes_with_outline_and_projection(graph, shape, graph.nodes())
 
@@ -244,11 +245,21 @@ def build_travel_graph(fill_stitch_graph, shape, fill_stitch_angle, underpath):
         graph.add_edge(start, end, weight=3 * p1.distance(p2))
 
     if underpath:
+        segments = []
+        for start, end, key, data in fill_stitch_graph.edges(keys=True, data=True):
+            if key == 'segment':
+                segments.append((shgeo.LineString((start, end)), data))
+
         interior_edges = grating1.symmetric_difference(grating2)
         for ls in interior_edges.geoms:
             p1, p2 = [InkstitchPoint(*coord) for coord in ls.coords]
+            edge = (p1.as_tuple(), p2.as_tuple())
 
-            graph.add_edge(p1.as_tuple(), p2.as_tuple(), weight=p1.distance(p2))
+            for segment, data in segments:
+                if ls.crosses(segment):
+                    data['underpath_edges'].append(edge)
+
+            graph.add_edge(*edge, weight=p1.distance(p2))
 
     return graph
 
@@ -393,7 +404,7 @@ def travel(travel_graph, start, end, running_stitch_length):
     return stitches[1:]
 
 
-def path_to_stitches(path, travel_graph, angle, row_spacing, max_stitch_length, running_stitch_length, staggers, skip_last):
+def path_to_stitches(path, travel_graph, fill_stitch_graph, angle, row_spacing, max_stitch_length, running_stitch_length, staggers, skip_last):
     path = collapse_sequential_outline_edges(path)
 
     stitches = []
@@ -401,6 +412,7 @@ def path_to_stitches(path, travel_graph, angle, row_spacing, max_stitch_length, 
     for edge in path:
         if edge.is_segment():
             stitch_row(stitches, edge[0], edge[1], angle, row_spacing, max_stitch_length, staggers, skip_last)
+            travel_graph.remove_edges_from(fill_stitch_graph[edge[0]][edge[1]]['segment'].get('underpath_edges', []))
         else:
             stitches.extend(travel(travel_graph, edge[0], edge[1], running_stitch_length))
 
