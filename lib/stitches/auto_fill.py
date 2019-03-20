@@ -400,15 +400,27 @@ def collapse_sequential_outline_edges(path):
     return new_path
 
 
-def travel(travel_graph, start, end, running_stitch_length):
+def travel(travel_graph, start, end, running_stitch_length, skip_last):
     """Create stitches to get from one point on an outline of the shape to another."""
 
     path = networkx.shortest_path(travel_graph, start, end, weight='weight')
     path = [InkstitchPoint(*p) for p in path]
     stitches = running_stitch(path, running_stitch_length)
 
-    # The row of stitches already stitched the first point, so skip it.
-    return stitches[1:]
+    # The path's first stitch will start at the end of a row of stitches.  We
+    # don't want to double that last stitch, so we'd like to skip it.
+    if skip_last and len(path) > 2:
+        # However, we don't want to skip it if we've had to do any actual
+        # travel in the interior of the shape.  The reason is that we can
+        # potentially cut a corner and stitch outside the shape.
+        #
+        # If the path is longer than two nodes, then it is not a simple
+        # transition from one row to the next, so we'll keep the stitch.
+        return stitches
+    else:
+        # Just a normal transition from one row to the next, so skip the first
+        # stitch.
+        return stitches[1:]
 
 
 def path_to_stitches(path, travel_graph, fill_stitch_graph, angle, row_spacing, max_stitch_length, running_stitch_length, staggers, skip_last):
@@ -421,6 +433,6 @@ def path_to_stitches(path, travel_graph, fill_stitch_graph, angle, row_spacing, 
             stitch_row(stitches, edge[0], edge[1], angle, row_spacing, max_stitch_length, staggers, skip_last)
             travel_graph.remove_edges_from(fill_stitch_graph[edge[0]][edge[1]]['segment'].get('underpath_edges', []))
         else:
-            stitches.extend(travel(travel_graph, edge[0], edge[1], running_stitch_length))
+            stitches.extend(travel(travel_graph, edge[0], edge[1], running_stitch_length, skip_last))
 
     return stitches
