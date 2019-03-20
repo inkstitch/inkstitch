@@ -281,10 +281,9 @@ def check_graph(graph, shape, max_stitch_length):
                                 "This most often happens because your shape is made up of multiple sections that aren't connected."))
 
 
-def nearest_node_on_outline(graph, point, outline_index=0):
+def nearest_node_on_outline(graph, point):
     point = shgeo.Point(*point)
-    outline_nodes = [node for node, data in graph.nodes(data=True) if data['outline'] == outline_index]
-    nearest = min(outline_nodes, key=lambda node: shgeo.Point(*node).distance(point))
+    nearest = min(graph.nodes, key=lambda node: shgeo.Point(*node).distance(point))
 
     return nearest
 
