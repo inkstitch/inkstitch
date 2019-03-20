@@ -59,7 +59,7 @@ def auto_fill(shape,
     fill_stitch_graph = build_fill_stitch_graph(shape, angle, row_spacing, end_row_spacing)
     check_graph(fill_stitch_graph, shape, max_stitch_length)
     travel_graph = build_travel_graph(fill_stitch_graph, shape, angle, underpath)
-    path = find_stitch_path(fill_stitch_graph, starting_point, ending_point)
+    path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point)
     result = path_to_stitches(path, travel_graph, fill_stitch_graph, angle, row_spacing,
                               max_stitch_length, running_stitch_length, staggers, skip_last)
 
@@ -281,14 +281,14 @@ def check_graph(graph, shape, max_stitch_length):
                                 "This most often happens because your shape is made up of multiple sections that aren't connected."))
 
 
-def nearest_node_on_outline(graph, point):
+def nearest_node(graph, point):
     point = shgeo.Point(*point)
     nearest = min(graph.nodes, key=lambda node: shgeo.Point(*node).distance(point))
 
     return nearest
 
 
-def find_stitch_path(graph, starting_point=None, ending_point=None):
+def find_stitch_path(graph, travel_graph, starting_point=None, ending_point=None):
     """find a path that visits every grating segment exactly once
 
     Theoretically, we just need to find an Eulerian Path in the graph.
@@ -315,12 +315,13 @@ def find_stitch_path(graph, starting_point=None, ending_point=None):
     if starting_point is None:
         starting_point = graph.nodes.keys()[0]
 
-    starting_node = nearest_node_on_outline(graph, starting_point)
+    starting_node = nearest_node(graph, starting_point)
 
     if ending_point is None:
+        ending_point = starting_point
         ending_node = starting_node
     else:
-        ending_node = nearest_node_on_outline(graph, ending_point)
+        ending_node = nearest_node(graph, ending_point)
 
     # The algorithm below is adapted from networkx.eulerian_circuit().
     path = []
@@ -353,6 +354,14 @@ def find_stitch_path(graph, starting_point=None, ending_point=None):
 
     if starting_node is not ending_node:
         path.insert(0, PathEdge((starting_node, ending_node), key="initial"))
+
+    real_start = nearest_node(travel_graph, starting_point)
+    if real_start != starting_node:
+        path.insert(0, PathEdge((real_start, starting_node), key="outline"))
+
+    real_end = nearest_node(travel_graph, ending_point)
+    if real_end != ending_node:
+        path.append(PathEdge((ending_node, real_end), key="outline"))
 
     return path
 
