@@ -149,7 +149,7 @@ def build_fill_stitch_graph(shape, angle, row_spacing, end_row_spacing):
         # Tag each node with its index and projection.
         graph.add_node(node, index=outline_index, projection=outline_projection)
 
-    add_edges_between_outline_nodes(graph, key="outline")
+    add_edges_between_outline_nodes(graph)
 
     for node1, node2, key, data in graph.edges(keys=True, data=True):
         if key == "outline":
@@ -168,7 +168,7 @@ def tag_nodes_with_outline_and_projection(graph, shape, nodes):
         graph.add_node(node, outline=outline_index, projection=outline_projection)
 
 
-def add_edges_between_outline_nodes(graph, key=None):
+def add_edges_between_outline_nodes(graph):
     """Add edges around the outlines of the graph, connecting sequential nodes.
 
     This function assumes that all nodes in the graph are on the outline of the
@@ -188,10 +188,7 @@ def add_edges_between_outline_nodes(graph, key=None):
         # add an edge between each successive node
         for i, (node1, node2) in enumerate(zip(nodes, nodes[1:] + [nodes[0]])):
             data = dict(outline=outline_index, index=i)
-            if key:
-                graph.add_edge(node1, node2, key=key, **data)
-            else:
-                graph.add_edge(node1, node2, **data)
+            graph.add_edge(node1, node2, key="outline", **data)
 
 
 def build_travel_graph(fill_stitch_graph, shape, fill_stitch_angle, underpath):
@@ -215,7 +212,7 @@ def build_travel_graph(fill_stitch_graph, shape, fill_stitch_angle, underpath):
     calculation.
     """
 
-    graph = networkx.Graph()
+    graph = networkx.MultiGraph()
 
     # Add all the nodes from the main graph.  This will be all of the endpoints
     # of the rows of stitches.  Every node will be on the outline of the shape.
@@ -237,13 +234,13 @@ def build_travel_graph(fill_stitch_graph, shape, fill_stitch_angle, underpath):
         tag_nodes_with_outline_and_projection(graph, shape, endpoints)
 
     add_edges_between_outline_nodes(graph)
-    for start, end in graph.edges:
+    for start, end, key in graph.edges:
         p1 = InkstitchPoint(*start)
         p2 = InkstitchPoint(*end)
 
         # Set the weight equal to triple the edge length, to encourage travel()
         # to avoid them when underpathing is enabled.
-        graph.add_edge(start, end, weight=3 * p1.distance(p2))
+        graph[start][end][key]["weight"] = 3 * p1.distance(p2)
 
     if underpath:
         segments = []
@@ -260,7 +257,7 @@ def build_travel_graph(fill_stitch_graph, shape, fill_stitch_angle, underpath):
         interior_edges = grating1.symmetric_difference(grating2)
         for ls in interior_edges.geoms:
             p1, p2 = [InkstitchPoint(*coord) for coord in ls.coords]
-            edge = (p1.as_tuple(), p2.as_tuple())
+            edge = (p1.as_tuple(), p2.as_tuple(), 'travel')
 
             for segment in rtree.query(ls):
                 start, end = segment.coords
