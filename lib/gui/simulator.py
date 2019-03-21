@@ -699,7 +699,14 @@ class SimulatorPreview(Thread):
             self.update_patches()
 
     def update_patches(self):
-        patches = self.parent.generate_patches(self.refresh_needed)
+        try:
+            patches = self.parent.generate_patches(self.refresh_needed)
+        except:
+            # If something goes wrong when rendering patches, it's not great,
+            # but we don't really want the simulator thread to crash.  Instead,
+            # just swallow the exception and abort.  It'll show up when they
+            # try to actually embroider the shape.
+            return
 
         if patches and not self.refresh_needed.is_set():
             stitch_plan = patches_to_stitch_plan(patches)
