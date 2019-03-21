@@ -283,9 +283,9 @@ def check_graph(graph, shape, max_stitch_length):
                                 "This most often happens because your shape is made up of multiple sections that aren't connected."))
 
 
-def nearest_node(graph, point):
+def nearest_node(nodes, point, attr=None):
     point = shgeo.Point(*point)
-    nearest = min(graph.nodes, key=lambda node: shgeo.Point(*node).distance(point))
+    nearest = min(nodes, key=lambda node: shgeo.Point(*node).distance(point))
 
     return nearest
 
@@ -363,7 +363,13 @@ def find_stitch_path(graph, travel_graph, starting_point=None, ending_point=None
     real_start = nearest_node(travel_graph, starting_point)
     path.insert(0, PathEdge((real_start, starting_node), key="outline"))
 
-    real_end = nearest_node(travel_graph, ending_point)
+    # We're willing to start inside the shape, since we'll just cover the
+    # stitches.  We have to end on the outline of the shape.  This is mostly
+    # relevant in the case that the user specifies an underlay with an inset
+    # value, because the starting point (and possibly ending point) can be
+    # inside the shape.
+    outline_nodes = [node for node, outline in travel_graph.nodes(data="outline") if outline is not None]
+    real_end = nearest_node(outline_nodes, ending_point)
     path.append(PathEdge((ending_node, real_end), key="outline"))
 
     return path
