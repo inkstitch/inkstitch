@@ -360,13 +360,14 @@ def find_stitch_path(graph, travel_graph, starting_point=None, ending_point=None
     if starting_node is not ending_node:
         path.insert(0, PathEdge((starting_node, ending_node), key="initial"))
 
+    # If the starting and/or ending point falls far away from the end of a row
+    # of stitches (like can happen at the top of a square), then we need to
+    # add travel stitch to that point.
     real_start = nearest_node(travel_graph, starting_point)
-    if real_start != starting_node:
-        path.insert(0, PathEdge((real_start, starting_node), key="outline"))
+    path.insert(0, PathEdge((real_start, starting_node), key="outline"))
 
     real_end = nearest_node(travel_graph, ending_point)
-    if real_end != ending_node:
-        path.append(PathEdge((ending_node, real_end), key="outline"))
+    path.append(PathEdge((ending_node, real_end), key="outline"))
 
     return path
 
