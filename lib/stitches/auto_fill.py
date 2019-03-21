@@ -442,6 +442,10 @@ def path_to_stitches(path, travel_graph, fill_stitch_graph, angle, row_spacing, 
 
     stitches = []
 
+    # If the very first stitch is travel, we'll omit it in travel(), so add it here.
+    if not path[0].is_segment():
+        stitches.append(InkstitchPoint(*path[0].nodes[0]))
+
     for edge in path:
         if edge.is_segment():
             stitch_row(stitches, edge[0], edge[1], angle, row_spacing, max_stitch_length, staggers, skip_last)
