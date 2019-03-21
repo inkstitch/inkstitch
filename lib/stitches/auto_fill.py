@@ -268,6 +268,11 @@ def build_travel_graph(fill_stitch_graph, shape, fill_stitch_angle, underpath):
 
             graph.add_edge(*edge, weight=p1.distance(p2))
 
+        # otherwise we sometimes get exceptions like this:
+        # Exception AttributeError: "'NoneType' object has no attribute 'GEOSSTRtree_destroy'" in
+        #   <bound method STRtree.__del__ of <shapely.strtree.STRtree instance at 0x0D2BFD50>> ignored
+        del rtree
+
     return graph
 
 
