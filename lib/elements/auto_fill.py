@@ -131,13 +131,15 @@ class AutoFill(Fill):
         return self.get_boolean_param('underpath', True)
 
     @property
-    @param('underlay_underpath',
-           _('Underpath'),
-           tooltip=_('Travel inside the shape when moving from section to section.  Underpath '
-                     'stitches avoid traveling in the direction of the row angle so that they '
-                     'are not visible.  This gives them a jagged appearance.'),
-           type='boolean',
-           default=False)
+    @param(
+        'underlay_underpath',
+        _('Underpath'),
+        tooltip=_('Travel inside the shape when moving from section to section.  Underpath '
+                  'stitches avoid traveling in the direction of the row angle so that they '
+                  'are not visible.  This gives them a jagged appearance.'),
+        group=_('AutoFill Underlay'),
+        type='boolean',
+        default=False)
     def underlay_underpath(self):
         return self.get_boolean_param('underpath', False)
 
