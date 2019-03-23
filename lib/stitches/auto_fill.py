@@ -238,9 +238,9 @@ def build_travel_graph(fill_stitch_graph, shape, fill_stitch_angle, underpath):
         p1 = InkstitchPoint(*start)
         p2 = InkstitchPoint(*end)
 
-        # Set the weight equal to triple the edge length, to encourage travel()
+        # Set the weight equal to 5x the edge length, to encourage travel()
         # to avoid them when underpathing is enabled.
-        graph[start][end][key]["weight"] = 3 * p1.distance(p2)
+        graph[start][end][key]["weight"] = 5 * p1.distance(p2)
 
     if underpath:
         segments = []
@@ -263,7 +263,16 @@ def build_travel_graph(fill_stitch_graph, shape, fill_stitch_angle, underpath):
                 start, end = segment.coords
                 fill_stitch_graph[start][end]['segment']['underpath_edges'].append(edge)
 
-            graph.add_edge(*edge, weight=p1.distance(p2))
+            # The weight of a travel edge is the length of the line segment.
+            weight = p1.distance(p2)
+
+            # Give a bonus to edges that are far from the outline of the shape.
+            # This includes the outer outline and the outlines of the holes.
+            # The result is that travel stitching will tend to hug the center
+            # of the shape.
+            weight /= ls.distance(shape.boundary) + 0.1
+
+            graph.add_edge(*edge, weight=weight)
 
         # otherwise we sometimes get exceptions like this:
         # Exception AttributeError: "'NoneType' object has no attribute 'GEOSSTRtree_destroy'" in
