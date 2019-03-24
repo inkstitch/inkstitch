@@ -238,9 +238,9 @@ def build_travel_graph(fill_stitch_graph, shape, fill_stitch_angle, underpath):
         p1 = InkstitchPoint(*start)
         p2 = InkstitchPoint(*end)
 
-        # Set the weight equal to 5x the edge length, to encourage travel()
+        # Set the weight equal to 10x the edge length, to encourage travel()
         # to avoid them when underpathing is enabled.
-        graph[start][end][key]["weight"] = 5 * p1.distance(p2)
+        graph[start][end][key]["weight"] = 10 * p1.distance(p2)
 
     if underpath:
         segments = []
