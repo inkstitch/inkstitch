@@ -701,7 +701,7 @@ class SimulatorPreview(Thread):
     def update_patches(self):
         try:
             patches = self.parent.generate_patches(self.refresh_needed)
-        except:
+        except:  # noqa: E722
             # If something goes wrong when rendering patches, it's not great,
             # but we don't really want the simulator thread to crash.  Instead,
             # just swallow the exception and abort.  It'll show up when they
