@@ -25,7 +25,7 @@
             </div>
         </header>
         <main>
-            <figure class="inksimulation operator" data-field-name="operator-overview-transform" style="height: 210mm;" title="{{ _('Ctrl + Scroll to Zoom') }}">
+            <figure class="inksimulation operator" data-field-name="operator-overview-transform" title="{{ _('Ctrl + Scroll to Zoom') }}">
                 {{ svg_overview|replace("<li>", "")|replace("</li>", "")|safe }}
                 {% include 'ui_svg_action_buttons.html' %}
             </figure>

@@ -9,22 +9,23 @@
 </head>
 <body>
     {% include 'ui.html' %}
-    
 {# client overview #}    
-        <div class="page client-overview" style="display: {{ 'block' if view.client_overview else 'none' }}">{% include 'print_overview.html' %}</div>
+    <div class="page client-overview" style="display: {{ 'block' if view.client_overview else 'none' }}">{% include 'print_overview.html' %}</div>
         
 {# client detailedview #}    
-        {% set printview = 'detailedview' %}
-        {% for color_block in color_blocks %}
-            {% set outer_loop = loop %}
-            <div class="page client-detailedview" style="display: {{ 'block' if view.client_detailedview else 'none' }}">{% include 'print_detail.html' %}</div>
-        {% endfor %}
+    {% set printview = 'detailedview' %}
+    {% for color_block in color_blocks %}
+        {% set outer_loop = loop %}
+        <div class="page client-detailedview" style="display: {{ 'block' if view.client_detailedview else 'none' }}">{% include 'print_detail.html' %}</div>
+    {% endfor %}
 
 {# operator overview #}    
-        <div class="page operator-overview" style="display: {{ 'block' if view.operator_overview else 'none' }}">{% include 'operator_overview.html' %}</div>
+    <div class="page operator-overview" style="display: {{ 'block' if view.operator_overview else 'none' }}">{% include 'operator_overview.html' %}</div>
     
 {# operator detailed view #}
-        {% include 'operator_detailedview.html' %}
+    {% include 'operator_detailedview.html' %}
 
+{# custom pages #}
+    <div class="page custom-page" style="display: {{ 'block' if view.custom_page else 'none' }}">{% include 'custom-page.html' %}</div>
 </body>
 </html>

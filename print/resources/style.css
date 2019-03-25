@@ -66,30 +66,6 @@ body {
   position: relative;
 }
 
-/* Printing Size */
-  .page.a4 {
-    width: 205mm;
-    height: 292mm;
-    padding: 15mm;
-  }
-  
-  .page.client-overview.a4 header, .page.operator-overview.a4 header {
-    height: 50mm;
-    flex-direction: row;
-  }
-  
-  .page.client-overview.a4 div.job-details, .page.operator-overview.a4 div.job-details {
-    width: 100%;
-  }
-
-  .page.client-overview.a4 .client-overview-main figure.inksimulation {
-    height: 150mm;
-  }
-  
-  .page.client-overview.a4 figure.brandlogo, .page.operator-overview.a4 figure.brandlogo {
-    margin: -6mm 2.5mm;
-  }
-  
 /* Settings */
 
   .ui {
@@ -289,7 +265,7 @@ body {
     position: relative;
   }
 
-  #footer-info-text {
+  .info-text {
     width: 100%;
     min-height: 5em;
     border: 1px solid darkgrey;
@@ -298,23 +274,25 @@ body {
     background: white;
   }
 
-  #tool-bar .tb-button {
-    border: 1px solid darkgrey;
+  .tb-button {
+    border: 1px solid darkgrey !important;
     border-bottom: none;
     margin-bottom: -0.2em;
-    cursor: pointer;
-    color: #413232;
     height: 2.2em;
     vertical-align: top;
+    padding: 5px;
+    cursor: pointer;
+    background: white;
+    color: black;
   }
 
-  #tool-bar .tb-button:disabled {
-    background: #eaeaea;
-    color: white;
-    cursor: auto;
+  .tb-button:disabled {
+    background: #eaeaea !important;
+    color: white !important;
+    cursor: auto !important;
   }
 
-  #edit-mode {
+  .edit-mode {
     display: inline;
     position: relative;
     border: 1px solid darkgray;
@@ -322,18 +300,18 @@ body {
     vertical-align: top;
   }
 
-  #edit-mode input {
+  .edit-mode input {
       visibility: hidden;
   }
 
-  #edit-mode label {
+  .edit-mode label {
     cursor: pointer;
     vertical-align: middle;
     background: white;
     color: #413232;
   }
 
-  #edit-mode label:after {
+  .edit-mode label:after {
     opacity: 0.1;
     content: '';
     position: absolute;
@@ -348,21 +326,21 @@ body {
     transform: rotate(-45deg);
   }
 
-  #edit-mode label:hover::after {
+  .edit-mode label:hover::after {
       opacity: 0.5;
   }
 
-  #edit-mode input[type=checkbox]:checked + label:after {
+  .edit-mode input[type=checkbox]:checked + label:after {
       opacity: 1;
   }
 
-  #edit-mode span {
+  .edit-mode span {
     margin-left: 1em;
   }
 
-  div#footer-url, div#footer-email, div#footer-reset {
+  div.tb-popup {
     display: none;
-    position: absolute;
+    position: absolute !important;
     background: white;
     border: 1px solid black;
     padding: 5mm;
@@ -371,7 +349,7 @@ body {
     z-index: 10;
   }
 
-  div#footer-info-original {
+  div.original-info {
     visibility: hidden;
     width: 0;
     height: 0;
@@ -418,7 +396,6 @@ body {
 
 /* Header */
 
-
   header {
     width: 100%;
     height: 40mm;
@@ -434,13 +411,11 @@ body {
   figure.brandlogo {
     height: 30mm;
     width: 30mm;
-    margin: 2.5mm;
+    margin: 0 4mm 0 0;
   }
 
   figure.brandlogo label {
     display: block;
-    width: 100%;
-    height: 100%;
     text-align: center;
     position: relative;
   }
@@ -472,13 +447,6 @@ body {
     cursor: pointer;
   }
 
-  .operator-detailedview figure.brandlogo {
-    height: 20mm;
-    width: 30mm;
-    margin: 0 2.5mm;
-    text-align: left;
-  }
-
   .operator-detailedview figure.brandlogo img {
     max-width: 30mm;
     max-height: 20mm;
@@ -488,7 +456,7 @@ body {
     display: flex;
       display: -webkit-flex;  /* old webkit */
       display: -ms-flexbox;   /* IE 10 */
-    width: calc(100% - 50mm);
+    width: calc(100% - 40mm);
     height: 50%;
     flex-grow: 1;
   }
@@ -513,6 +481,10 @@ body {
 
   .client-detailedview div.job-details {
     padding-top: 6mm;
+  }
+
+  .operator-overview figure.inksimulation {
+    height: 210mm;
   }
 
   .operator-overview div.job-details, .client-overview div.job-details {
@@ -987,6 +959,23 @@ body {
     display: none;
   }
 
+/* Custom information sheet */
+  .custom-page header {
+    height: 30mm;
+  }
+
+  .custom-page main {
+    height: 230mm
+  }
+  #custom-page-tool-bar {
+    margin-bottom: 0.5em;
+  }
+
+  #custom-page-content {
+    height: 200mm;
+    overflow-y: hidden;
+    text-align: left;
+  }
 
 /* Color Swatch Logic */
 /* reference : http://jsfiddle.net/jrulle/btg63ezy/3/ */
@@ -1120,7 +1109,33 @@ body {
       height: calc(100% / 5);
       width: calc(100% / 12);
   }
-  
+
+
+/* Print Size A4 */
+
+  .page.a4 {
+    width: 210mm;
+    height: 296mm;
+    padding: 15mm;
+  }
+
+  .page.client-overview.a4 header, .page.operator-overview.a4 header {
+    height: 50mm;
+    flex-direction: row;
+  }
+
+  .page.client-overview.a4 div.job-details, .page.operator-overview.a4 div.job-details {
+    width: 100%;
+  }
+
+  .page.client-overview.a4 .client-overview-main figure.inksimulation {
+    height: 150mm;
+  }
+
+  .page.client-overview.a4 figure.brandlogo, .page.operator-overview.a4 figure.brandlogo {
+    margin: 0 4mm -2mm 0;
+  }
+
 @media screen {
   .page {
       margin-top: 20mm !important;
@@ -1153,8 +1168,11 @@ body {
     .ui,
     #settings-ui,
     #errors,
-    span.logo-instructions {
-      display: none;
+    span.logo-instructions,
+    #custom-page-tool-bar,
+    #custom-page-content,
+    .notice--warning {
+      display: none !important;
     }
 
     .header-field:not(:empty)::before {
