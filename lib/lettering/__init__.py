@@ -1,1 +1,1 @@
-from font import Font
+from font import Font, FontError

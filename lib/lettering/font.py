@@ -7,12 +7,17 @@ import os
 import inkex
 
 from ..elements import nodes_to_elements
+from ..exceptions import InkstitchException
 from ..i18n import _
 from ..stitches.auto_satin import auto_satin
 from ..svg import PIXELS_PER_MM
 from ..svg.tags import SVG_GROUP_TAG, SVG_PATH_TAG, INKSCAPE_LABEL
 from ..utils import Point
 from .font_variant import FontVariant
+
+
+class FontError(InkstitchException):
+    pass
 
 
 def font_metadata(name, default=None, multiplier=None):
@@ -47,6 +52,9 @@ class Font(object):
         self._load_license()
         self._load_variants()
 
+        if self.variants.get(self.default_variant) is None:
+            raise FontError("font not found or has no default variant")
+
     def _load_metadata(self):
         try:
             with open(os.path.join(self.path, "font.json")) as metadata_file:
@@ -80,6 +88,10 @@ class Font(object):
     word_spacing = font_metadata('word_spacing', 3, multiplier=PIXELS_PER_MM)
     kerning_pairs = font_metadata('kerning_pairs', {})
     auto_satin = font_metadata('auto_satin', True)
+
+    @property
+    def id(self):
+        return os.path.basename(self.path)
 
     def render_text(self, text, destination_group, variant=None, back_and_forth=True, trim=False):
         """Render text into an SVG group element."""

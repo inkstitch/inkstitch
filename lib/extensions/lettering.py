@@ -5,20 +5,23 @@ import json
 import os
 import sys
 
+import appdirs
 import inkex
 import wx
 
 from ..elements import nodes_to_elements
-from ..gui import PresetsPanel, SimulatorPreview
+from ..gui import PresetsPanel, SimulatorPreview, info_dialog
 from ..i18n import _
-from ..lettering import Font
+from ..lettering import Font, FontError
 from ..svg import get_correction_transform
 from ..svg.tags import SVG_PATH_TAG, SVG_GROUP_TAG, INKSCAPE_LABEL, INKSTITCH_LETTERING
-from ..utils import get_bundled_dir, DotDict
+from ..utils import get_bundled_dir, DotDict, cache
 from .commands import CommandsExtension
 
 
 class LetteringFrame(wx.Frame):
+    DEFAULT_FONT = "small_font"
+
     def __init__(self, *args, **kwargs):
         # begin wxGlade: MyFrame.__init__
         self.group = kwargs.pop('group')
@@ -46,8 +49,9 @@ class LetteringFrame(wx.Frame):
         # text editor
         self.text_editor_box = wx.StaticBox(self, wx.ID_ANY, label=_("Text"))
 
-        self.font_chooser = wx.ComboBox(self, wx.ID_ANY)
+        self.font_chooser = wx.ComboBox(self, wx.ID_ANY, style=wx.CB_READONLY)
         self.update_font_list()
+        self.set_initial_font(self.settings.font)
 
         self.text_editor = wx.TextCtrl(self, style=wx.TE_MULTILINE | wx.TE_DONTWRAP, value=self.settings.text)
         self.Bind(wx.EVT_TEXT, lambda event: self.on_change("text", event))
@@ -73,7 +77,7 @@ class LetteringFrame(wx.Frame):
         self.settings = DotDict({
             "text": u"",
             "back_and_forth": True,
-            "font": "small_font"
+            "font": None
         })
 
     def save_settings(self):
@@ -87,13 +91,61 @@ class LetteringFrame(wx.Frame):
         #   https://bugs.launchpad.net/inkscape/+bug/1804346
         self.group.set(INKSTITCH_LETTERING, b64encode(json.dumps(self.settings)))
 
+    def update_font_list(self):
+        font_paths = {
+            get_bundled_dir("fonts"),
+            os.path.expanduser("~/.inkstitch/fonts"),
+            os.path.join(appdirs.user_config_dir('inkstitch'), 'fonts'),
+        }
+
+        self.fonts = {}
+        self.fonts_by_id = {}
+
+        for font_path in font_paths:
+            try:
+                font_dirs = os.listdir(font_path)
+            except OSError:
+                continue
+
+            try:
+                for font_dir in font_dirs:
+                    font = Font(os.path.join(font_path, font_dir))
+                    self.fonts[font.name] = font
+                    self.fonts_by_id[font.id] = font
+            except FontError:
+                pass
+
+        self.font_chooser.SetItems(sorted(self.fonts))
+
+        if len(self.fonts) == 0:
+            info_dialog(self, _("Unable to find any fonts!  Please try reinstalling Ink/Stitch."))
+            self.cancel()
+
+    def set_initial_font(self, font_id):
+        if font_id is not None:
+            if font_id not in self.fonts_by_id:
+                info_dialog(self, _(
+                    '''This text was created using the font "%s", but Ink/Stitch can't find that font.  A default font will be substituted.''') % font_id)
+
+        try:
+            self.font_chooser.SetValue(self.fonts_by_id[font_id].name)
+        except KeyError:
+            self.font_chooser.SetValue(self.default_font.name)
+
+    @property
+    @cache
+    def default_font(self):
+        try:
+            return self.fonts[self.DEFAULT_FONT]
+        except KeyError:
+            return self.fonts.values()[0]
+
     def on_change(self, attribute, event):
         self.settings[attribute] = event.GetEventObject().GetValue()
         self.preview.update()
 
     def update_lettering(self):
-        font_path = os.path.join(get_bundled_dir("fonts"), self.settings.font)
-        font = Font(font_path)
+        font = self.fonts_by_id.get(self.settings.font, self.default_font)
         del self.group[:]
         font.render_text(self.settings.text, self.group, back_and_forth=self.settings.back_and_forth, trim=self.settings.trim)
 
@@ -119,9 +171,6 @@ class LetteringFrame(wx.Frame):
             pass
 
         return patches
-
-    def update_font_list(self):
-        pass
 
     def get_preset_data(self):
         # called by self.presets_panel
