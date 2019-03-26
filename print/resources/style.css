@@ -876,6 +876,11 @@ body {
   .opd-color-block.large {
     display: block;
     margin: 5mm 0;
+    font-size: 14pt;
+  }
+
+  .opd-color-block.large .operator-colorswatch {
+    font-size: 8pt;
   }
   
   .opd-color-block.large:first-child {
