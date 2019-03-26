@@ -1,0 +1,40 @@
+        <header>
+          {% include 'headline.html' %}
+        </header>
+        <main>
+            <fieldset id="edit-custom-page">
+              <div id="custom-page-tool-bar" class="tool-bar">
+                <button id="custom-page-bold" class="tb-button tb-bold ff-serif edit-only" title="Bold"><b>B</b></button>
+                <button id="custom-page-italic" class="tb-button tb-italic ff-serif edit-only" title="Italic"><i>I</i></button>
+                <button id="custom-page-underline" class="tb-button tb-underline ff-serif edit-only" title="Underline"><u>U</u></button>
+                <button id="custom-page-remove" class="tb-button tb-remove ff-serif edit-only" title="Remove formatting">
+                    <u style="vertical-align: super; font-size: 60%;">A</u>
+                    <span style="vertical-align: sub; font-size: 80%;">A</span>
+                </button>
+                <button id="custom-page-hyperlink" class="tb-button tb-hyperlink edit-only" title="Hyperlink">☍</button>
+                <button id="custom-page-mail" class="tb-button tb-mail edit-only" title="E-Mail">✉</button>
+                <button id="custom-page-reset" class="tb-button tb-reset" title="Reset text">↺</button>
+                <p id="custom-page-edit-mode" class="edit-mode">
+                    <input type="checkbox" id="custom-page-switch-mode" class="switch-mode" name="custom-page-switch-mode" /> 
+                    <label for="custom-page-switch-mode">{{ ('Show HTML') }}</label>
+                </p>
+                <div id="custom-page-url" class="tb-popup url-window">
+                  <p>{{ _("Enter URL") }}: <input type="text" id="custom-page-link" class="user-url" name="custom-page-link" value="https://" /></p>
+                  <p><button id="custom-page-url-ok" class="url-ok">{{ _("OK") }}</button> <button id="custom-page-url-cancel" class="url-cancel">{{ _("Cancel") }}</button></p>
+                </div>
+                <div id="custom-page-email" class="tb-popup mail-window">
+                  <p>{{ _("Enter E-Mail") }}: <input type="text" id="custom-page-mail" class="user-mail" name="custom-page-mail" value="@" /></p>
+                  <p><button id="custom-page-mail-ok" class="mail-ok">{{ _("OK") }}</button> <button id="custom-page-mail-cancel" class="mail-cancel">{{ _("Cancel") }}</button></p>
+                </div>
+                <div id="custom-page-info-original" class="original-info"><b>{{ _("Custom Information Sheet") }}</b></div>
+                <div id="custom-page-reset" class="tb-popup reset-window">
+                  <p>{{ _("This will reset your custom text to the default.") }}</p>
+                  <p>{{ _("All changes will be lost.") }}</p>
+                  <p><button id="custom-page-reset-ok" class="reset-ok">{{ _("OK") }}</button> <button id="custom-page-reset-cancel" class="reset-cancel">{{ _("Cancel") }}</button></p>
+                </div>
+              </div>
+              <div id="custom-page-content" class="info-text" contenteditable="true" data-field-name="custom-page-content">{{ _("Custom Information Sheet") }}</div>
+              <p class="notice--warning"><b>Note</b>: If you are using Firefox, use visible URLs. Links will not be printed to PDF with this browser.</p>
+            </fieldset>
+        </main>
+        {% include 'footer.html' %}
