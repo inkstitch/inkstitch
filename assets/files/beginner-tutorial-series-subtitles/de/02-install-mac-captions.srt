@@ -1,0 +1,136 @@
+1
+00:00:00,000 --> 00:00:09,040
+Willkommen zur den Ink/Stitch Anfänger-Tutorials.
+
+2
+00:00:10,640 --> 00:00:14,560
+In diesem Teil werden wir Ink/Stitch auf deinem Computer installieren.
+
+3
+00:00:15,840 --> 00:00:19,680
+Obwohl der Installationsprozess auf den verschiedenen Betriebssystemen recht ähnlich ist,
+
+4
+00:00:20,400 --> 00:00:23,520
+wirst du wahrscheinlich das Video für dein System bevorzugen.
+
+5
+00:00:24,640 --> 00:00:27,760
+Du findest du Tutorials für Windows und Linux in der Beschreibung unten.
+
+6
+00:00:27,760 --> 00:00:31,440
+Dieses Video ist für macOS-Nutzer.
+
+7
+00:00:33,840 --> 00:00:35,840
+Fangen wir mit den Anforderungen an.
+
+8
+00:00:37,120 --> 00:00:39,600
+Ink/Stitch ist ein Inkscape-Plugin.
+
+9
+00:00:39,760 --> 00:00:42,560
+Das bedeutet, dass Inkscape auf jeden Fall installiert sein muss.
+
+10
+00:00:44,300 --> 00:00:52,120
+Jede Version sollte funktionieren, aber wir empfehlen zumindest die Version 0.92.2 zu installieren,
+
+11
+00:00:52,120 --> 00:00:59,060
+weil sie neue Funktionen mit sich bringt, die ganz essentiell für die Kontrolle über Stickreihenfolge sind.
+
+12
+00:01:01,080 --> 00:01:05,900
+Du kannst Inkscape kostenlos über die Webseite https://inkscape.org herunterladen.
+
+13
+00:01:07,760 --> 00:01:14,220
+Ink/Stitch benutzt einen Web-Browser um eine Druckversion anzuzeigen. Es gibt Layouts für Anwender und Kunden.
+
+14
+00:01:14,280 --> 00:01:21,040
+Die Druckfunktion ist auch deshalb besonders nützlich, weil sie optional auch eine realistische Vorschau anzeigen kann.
+
+15
+00:01:21,900 --> 00:01:27,660
+Um diese Funktion nutzen zu können, wird ein HTML5-fähiger Browser benötigt,
+
+16
+00:01:28,320 --> 00:01:33,100
+da du aber gerade dieses Video schaust, hast du diese Vorraussetzung höchstwahrscheinlich schon erfüllt.
+
+17
+00:01:33,880 --> 00:01:38,560
+Alle anderen Abhängigkeiten werden direkt durch Ink/Stitch bereitgestellt.
+
+18
+00:01:38,560 --> 00:01:40,960
+Das macht die Installation relativ leicht.
+
+19
+00:01:41,880 --> 00:01:47,340
+Um die neueste Ink/Stitch Version für dein Betriebssystem herunterzuladen, besuche die Webseite https://inkstitch.org
+
+20
+00:01:48,000 --> 00:01:55,280
+Klicke auf "Download Ink/Stitch" und speichere das Archiv mit "osx_64" im Dateinamen.
+
+21
+00:02:02,400 --> 00:02:13,680
+In Inkscape gehe zu 'Bearbeiten > Einstellungen > System' und prüfe, wo deine Erweiterungen gespeichert werden.
+
+22
+00:02:21,120 --> 00:02:25,280
+Entpacke das Ink/Stitch-Archiv direkt in diesen Ordner.
+
+23
+00:03:13,040 --> 00:03:18,000
+Das ist schon alles. Ink/Stitch ist bereits vollständig installiert.
+
+24
+00:03:22,080 --> 00:03:25,280
+Jetzt müssen wir prüfen, ob Ink/Stitch auch wirklich funktioniert.
+
+25
+00:03:25,440 --> 00:03:26,800
+Starte Inkscape neu.
+
+26
+00:03:27,760 --> 00:03:31,440
+Du findest die Erweiterung unter 'Erweiterungen > Ink/Stitch'
+
+27
+00:03:32,640 --> 00:03:34,640
+Zeichne eine Form
+
+28
+00:03:36,720 --> 00:03:38,720
+und konvertiere sie in einen Pfad.
+
+29
+00:03:40,560 --> 00:03:44,720
+Mit dem ausgewählten Pfad öffne den 'Parameter'-Dialog von Ink/Stitch.
+
+30
+00:03:44,720 --> 00:03:52,960
+Neben dem Parameter-Fenster erscheint eine Simulation, die sich automatisch aktualisiert, wenn die Werte geändert werden.
+
+31
+00:03:56,240 --> 00:04:00,400
+Wir hoffen dir hat das Tutorial gefallen und Ink/Stitch ist erfolgreich auf deinem Computer installiert.
+
+32
+00:04:00,400 --> 00:04:02,400
+ 
+
+33
+00:04:02,400 --> 00:04:09,440
+Solltest du während des Installationsprozesses auf Probleme stoßen, kontaktiere uns über GitHub (Link in der Beschreibung).
+
+34
+00:04:10,400 --> 00:04:14,640
+Dann können wir dir helfen, Stitckmotive mit Ink/Stitch zu erstellen.
+

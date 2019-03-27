@@ -1,0 +1,139 @@
+1
+00:00:05,780 --> 00:00:09,380
+Willkommen zur den Ink/Stitch Anfänger-Tutorials.
+
+2
+00:00:09,380 --> 00:00:15,600
+In diesem Teil werden wir uns anschauen, welche Sticharten Ink/Stitch zur Verfügung stellt.
+
+3
+00:00:15,600 --> 00:00:21,900
+Wir werden die Sticharten nicht an sich erläutern, aber wie sie in Ink/Stitch angewendet werden.
+
+4
+00:00:21,900 --> 00:00:29,720
+Ink/Stitch-Sticharten können grob in drei Gruppen eingeteilt werden: Linien, Satin- und Füllstich.
+
+5
+00:00:30,440 --> 00:00:36,060
+Hier ist eine komplette Liste, dann kannst du schnell zu der Stichart springen, für die du dich gerade interessierst.
+
+6
+00:00:37,200 --> 00:00:40,940
+Dieses Tutorial behandelt Füllstiche.
+
+7
+00:00:41,640 --> 00:00:45,560
+Füllstiche werden benutzt, um große Bereiche mit einer Farbe zu füllen.
+
+8
+00:00:46,000 --> 00:00:50,840
+Ink/Stitch biete zwei Arten von Füllstichen an: (Manuelle) Füllung und Auto-Füllung.
+
+9
+00:00:51,240 --> 00:00:54,480
+Manuelle Füllung werden wir in diesem Tutorial überspringen.
+
+10
+00:00:55,160 --> 00:00:59,380
+Falls es dich genauer interessiert, kannst du einen Blick auf unsere Homepage werfen.
+
+11
+00:00:59,820 --> 00:01:03,540
+Auto-Füllung ist die Standardmethode um Füllstiche zu generieren.
+
+12
+00:01:03,800 --> 00:01:05,940
+Erstelle einen Pfad mit einer Füllfarbe.
+
+13
+00:01:18,340 --> 00:01:23,820
+Die Formen können Löcher enthalten, sollten aber nicht aus mehreren, unabhängigen Teilen bestehen.
+
+14
+00:01:23,820 --> 00:01:31,700
+Solltest du eine Form wie die auf der rechten Seite benötigen, trenne sie mit Hilfe der Tastenkombination "Strg + Umstelltaste + K".
+
+15
+00:01:40,800 --> 00:01:46,220
+Öffne das Parameter-Fenster und aktiviere die Option "Automatisch geführte Füllstiche".
+
+16
+00:01:46,540 --> 00:01:53,000
+Setze "Winkel der Stichlinien" auf den gewünschten Wert, wobei 0 horizontal bedeutet. Negative Werte sind zulässig.
+
+17
+00:01:54,660 --> 00:02:02,120
+"Erweitern" dient zur Kompensation des Zug-Effektes und hilft Lücken zwischen den Teilbereichen des Motivs zu vermeiden.
+
+18
+00:02:02,120 --> 00:02:09,640
+Definiere die "Maximale Füllstichlänge" (Stiche können am Beginn oder Ende einer Reihe kürzer ausfallen),
+
+19
+00:02:10,420 --> 00:02:15,060
+"Reihenabstand" und "Laufstichlänge".
+
+20
+00:02:16,260 --> 00:02:22,300
+Mit "Skip last stitch in each row" (in jeder Reihe den letzten Stich auslassen) kannst du eine Menge Stiche sparen.
+
+21
+00:02:22,600 --> 00:02:27,060
+Der letzte Stich in jeder Reihe ist recht nah zu dem ersten Stich der nächsten Reihe.
+
+22
+00:02:27,060 --> 00:02:30,520
+Diesen zu überspringen wird die Stichanzahl und -dichte verringern.
+
+23
+00:02:30,860 --> 00:02:33,700
+Beeinflusse das Stickbild mit der letzten Einstellung: hier definierst du,
+
+24
+00:02:33,780 --> 00:02:39,480
+wie viele Reihen voneinander entfernt die Stiche in die gleiche Spaltenposition fallen.
+
+25
+00:02:43,600 --> 00:02:47,020
+Füllstich-Bereiche brauchen eine Unterlage.
+
+26
+00:02:47,320 --> 00:02:51,400
+Wechsel in den "AutoFill-Unterage"-Reiter und aktiviere "Unterlage".
+
+27
+00:02:51,560 --> 00:02:54,780
+Hier findest du die Einstellung "Füllwinkel".
+
+28
+00:02:54,780 --> 00:02:59,620
+Standardmäßig ist der Winkel gegenüber dem Füllstich um +90 Grad verschoben.
+
+29
+00:02:59,620 --> 00:03:05,480
+Mit "Einzug" kannst du verhindern, dass die Unterlage unter dem Füllstich hervorlugt.
+
+30
+00:03:05,480 --> 00:03:13,040
+"Maximale Stichlänge" und "Reihenabstand" haben in der Standardeinstellung den 3-fachen Wert der oberen Schicht.
+
+31
+00:03:19,040 --> 00:03:24,160
+In Stickdateien willst du genau planen, wo das Sticken beginnt und wo es endet.
+
+32
+00:03:24,200 --> 00:03:29,320
+Du kannst Start- und Endpunkt in Ink/Stitch mit sogenannten "visuellen Befehlen" kontrollieren.
+
+33
+00:03:39,160 --> 00:03:44,440
+Sollte die Demonstration hier zu schnell sein, kannst du dir auch das Video "visuelle Befehle" anschauen.
+
+34
+00:03:48,460 --> 00:03:50,460
+Wir hoffen, die hat das Tutorial gefallen.
+
+35
+00:03:50,900 --> 00:03:56,460
+Vielleicht willst du ja auch noch die Videos über linienartige Sticharten oder Satin-Kolumnen anschauen.

@@ -1,0 +1,117 @@
+1
+00:00:06,000 --> 00:00:09,000
+Willkommen zur den Ink/Stitch Anfänger-Tutorials.
+
+2
+00:00:09,200 --> 00:00:15,200
+Ink/Stitch ist eine auf Inkscape basierende Open-Source Plattform für das Erstellen von Stickdateien.
+
+3
+00:00:15,440 --> 00:00:22,940
+Unser Ziel ist es sowohl für Hobbyisten verfügbar zu sein, als die nötigen Funktionen für professionelle Designer zu liefern.
+
+4
+00:00:23,240 --> 00:00:28,340
+In diesem Tutorial werden wir alle wichtigen Funktionen von Ink/Stitch besprechen.
+
+5
+00:00:28,680 --> 00:00:33,580
+Für jedes Tutorial wird die Ink/Stitch Version zum Zeitpunkt der Aufnahme angezeigt.
+
+6
+00:00:34,060 --> 00:00:40,820
+Solltest du eine andere Ink/Stitch Version nutzen, kann es sein, dass es Unterschiede bei der Oberfläche und Funktionalität gibt.
+
+7
+00:00:41,400 --> 00:00:49,240
+In diesem Fall, würde es uns über eine kurze Info auf unserer GitHub-Seite freuen. Dann können wir das Video entsprechend erneuern.
+
+8
+00:00:49,600 --> 00:00:52,980
+Auch, wenn die Erklärungen zu schnell oder
+Also if things are going too fast or are not
+
+9
+00:00:53,080 --> 00:00:55,260
+aus welchem Grund auch immer, nicht verständlich sind,
+understandable for whatever reason,
+
+10
+00:00:55,460 --> 00:00:57,200
+kontaktiere uns über GitHub -
+
+11
+00:00:57,440 --> 00:01:04,140
+denn nur so können wir das Video verbessern, wenn wir es an eine neue Ink/Stitch Verision anpassen.
+
+12
+00:01:04,580 --> 00:01:07,300
+Wir werden versuchen, die Videos aktuell zu halten.
+
+13
+00:01:07,300 --> 00:01:09,220
+das ist nicht immer eine einfache Aufgabe.
+
+14
+00:01:09,220 --> 00:01:12,460
+Denn Ink/Stitch ist ein sehr aktives Projekt.
+
+15
+00:01:12,740 --> 00:01:18,200
+Das heißt aber auch, dass Videos von diesem Kanal verschwinden, da es nicht möglich ist
+
+16
+00:01:18,820 --> 00:01:21,420
+die gleiche URL bei einer Aktualisierung beizubehalten.
+
+17
+00:01:21,740 --> 00:01:27,520
+Deshalb empfehlen wir nicht zu einem speziellen Video, sondern die gesamte Playlist zu verlinken.
+
+18
+00:01:28,000 --> 00:01:34,620
+Die Videos versuchen nicht, das Digitalisieren selbst zu erklären. Dafür gibt es viel bessere Quellen als diese.
+
+19
+00:01:35,200 --> 00:01:40,140
+Diese Videos sollen erklären, wie man mit Ink/Stitch Stickdateien erstellen kann.
+
+20
+00:01:41,020 --> 00:01:45,420
+Wenn du mit Inkscape noch nicht vertraut bist, macht es Sinn, sich zuerst mit deren Grundlagen zu beschäftigen.
+
+21
+00:01:45,800 --> 00:01:49,020
+In diesen Tutorials benutzen wir häufig Tastenkürzel.
+
+22
+00:01:49,020 --> 00:01:54,660
+In der unteren, rechten Ecke kannst du in den meisten Videos eine Tastaturanzeige sehen.
+
+23
+00:01:54,920 --> 00:02:00,780
+Manche der Tastenkürzel sind individuell gesetzt. Wie das geht erklären wir im "Customize"-Tutorial.
+
+24
+00:02:01,610 --> 00:02:09,309
+Tastenkürzel die in diesem Video nicht erwähnt sind, sind Standardkürzel von Inkscape und können ohne Anpassung genutzt werden.
+
+25
+00:02:10,459 --> 00:02:15,549
+Wann immer du Fragen oder Anmerkungen hast, freuen wir uns über eine Nachricht auf GitHub.
+
+26
+00:02:16,190 --> 00:02:21,969
+Auf unserer Webseite haben wir eine Seite eingerichtet, auf der wir deine mit Ink/Stitch erstellten Motive veröffentlichen können.
+
+27
+00:02:22,640 --> 00:02:25,900
+Wir sind neugierig zu sehen, was du mit Ink/Stitch machen wirst.
+
+28
+00:02:26,220 --> 00:02:28,220
+Wir wünschen viel Spaß mit dieser Tutorial-Serie
+
+29
+00:02:28,620 --> 00:02:33,060
+und hoffen, dass Ink/Stitch es dir einfach machen wird, deine Kreativität in Stickmustern auszudrücken.

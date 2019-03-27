@@ -1,0 +1,159 @@
+1
+00:00:05,300 --> 00:00:09,360
+Willkommen zur den Ink/Stitch Anfänger-Tutorials.
+
+2
+00:00:09,580 --> 00:00:15,640
+In diesem Teil werden wir uns anschauen, welche Sticharten Ink/Stitch zur Verfügung stellt.
+
+3
+00:00:15,940 --> 00:00:21,640
+Wir werden die Sticharten nicht an sich erläutern, aber wie sie in Ink/Stitch angewendet werden.
+
+4
+00:00:22,260 --> 00:00:30,100
+Ink/Stitch-Sticharten können grob in drei Gruppen eingeteilt werden: Linien, Satin- und Füllstich.
+
+5
+00:00:30,580 --> 00:00:36,300
+Hier ist eine komplette Liste, dann kannst du schnell zu der Stichart springen, für die du dich gerade interessierst.
+
+6
+00:00:37,060 --> 00:00:40,400
+Dieses Tutorial beschäftigt sich mit den linienartigen Sticharten.
+
+7
+00:00:40,940 --> 00:00:48,140
+Linienartige Sticharten können benutzt werden für: Umrandungen, Strichkunst-Stickereien oder um dem Motiv Details hinzuzufügen.
+
+8
+00:00:53,400 --> 00:00:56,160
+Zick-Zack Stiche sind einfach zu erstellen.
+
+9
+00:00:56,720 --> 00:01:03,360
+Wir empfehlen allerdings, sie nur für gerade Linien einzusetzen, um Ecken herum bilden sie kein schönes Stichbild.
+
+10
+00:01:05,280 --> 00:01:09,320
+In diesen Fällen wäre es besser, Satin-Kolumnen zu nutzen.
+
+11
+00:01:09,760 --> 00:01:12,880
+Schauen wir uns an, wie sie gemacht werden.
+
+12
+00:01:13,620 --> 00:01:18,280
+Tippe "B" um das Beziér-Kurven-Werkzeug zu aktivieren und zeichne einen einfachen Pfad.
+
+13
+00:01:22,700 --> 00:01:29,340
+Öffne das "Füllung und Kontur"-Fenster und vergrößere die Breite im Reiter "Muster und Kontur".
+
+14
+00:01:29,340 --> 00:01:33,160
+Dies wird die Höhe der Zick-Zack-Linie definieren.
+
+15
+00:01:33,860 --> 00:01:40,580
+Öffne 'Erweiterungen > Ink/Stitch > Deutsch > Parameter'.
+
+16
+00:01:42,160 --> 00:01:47,140
+"Satinstich entlang Pfad" muss im Reiter "Stroke" aktiviert sein.
+
+17
+00:01:48,000 --> 00:01:51,380
+Setzte den Zick-Zack-Abstand auf den gewünschten Wert.
+
+18
+00:01:55,800 --> 00:01:58,920
+Du kannst auch den Wert für Wiederholungen ändern.
+
+19
+00:01:58,920 --> 00:02:04,200
+Alle anderen Einstellungen haben keinerlei Wirkung auf diese Stichart.
+
+20
+00:02:10,280 --> 00:02:13,460
+Laufstiche werden auf recht ähnliche Weise erstellt.
+
+21
+00:02:26,100 --> 00:02:30,800
+Aber dieses Mal musst du die Strichlinien-Art im Reiter "Muster der Kontur" auf eine gestrichelte Linie setzen.
+
+22
+00:02:31,260 --> 00:02:35,940
+Jede gestrichelte (oder gepunktete) Linie erfüllt diesen Zweck. Die Strichbreite spielt keine Rolle.
+
+23
+00:02:36,580 --> 00:02:39,580
+Erstelle einen Pfad und öffne das Parameter-Fenster.
+
+24
+00:02:53,640 --> 00:02:57,720
+"Satinstich entlang Pfad" muss im Reiter "Stroke" aktiviert sein.
+
+25
+00:02:57,720 --> 00:03:01,360
+Einstellungen können für "Laufstichlänge"
+
+26
+00:03:04,620 --> 00:03:06,620
+und "Wiederholungen" gesetzt werden.
+
+27
+00:03:16,960 --> 00:03:22,180
+Bean-Stich (Bohnenstich) generiert eine kräftigere Linie durch Wiederholungen der einzelnen Laufstiche.
+
+28
+00:03:30,520 --> 00:03:33,860
+Es funktioniert fast genauso wie Laufstiche,
+
+29
+00:03:52,000 --> 00:03:56,340
+aber zusätzliche muss "Bean stich Anzahl der Wiederholungen" eingestellt werden.
+
+30
+00:03:56,340 --> 00:04:03,120
+Ein Wert von 1 verdreifacht den Stich. Er geht vorwärts, rückwärts und wieder vorwärts.
+
+31
+00:04:03,120 --> 00:04:07,580
+Ein Wert von 2 verfünffacht den Stich.
+
+32
+00:04:21,720 --> 00:04:30,660
+Im manuellen Stichmodus nutzt Ink/Stitch jeden Knoten eines Pfades als einen Nadeleinstichpunkt.
+
+33
+00:04:30,660 --> 00:04:35,540
+Erstelle einen Pfad. Strichlinien-Art und Breite haben keine Bedeutung.
+
+34
+00:04:43,700 --> 00:04:51,780
+Wir empfehlen alle Knoten des entsprechenden Pfades als Ecken zu definieren, da im manuellen Stichmodus Beziér-Kurven nicht beachtet werden.
+
+35
+00:04:54,280 --> 00:04:56,280
+Öffne "Parameter"
+
+36
+00:05:02,040 --> 00:05:04,520
+und aktiviere die Option "Manuelle Stichpositionierung".
+
+37
+00:05:04,520 --> 00:05:08,680
+Alle anderen Einstellungen haben keinerlei Effekt im manuellen Stichmodus.
+
+38
+00:05:08,680 --> 00:05:17,380
+Vergiss nicht, den Beginn und das Ende entsprechend durch manuell gesetze Knoten zu vernähen.
+
+39
+00:05:17,820 --> 00:05:25,560
+Wir hoffen, dass dir das Tutorial gefallen hat und du eine kleine Übersicht über die linienartigen Sticharten in Ink/Stitch erhalten konntest.
+
+40
+00:05:26,060 --> 00:05:31,440
+Vielleicht interessieren dich ja auch noch die Videos über Satinkolumnen und Füllstiche.

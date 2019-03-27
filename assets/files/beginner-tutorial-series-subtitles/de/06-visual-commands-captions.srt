@@ -1,0 +1,160 @@
+1
+00:00:05,820 --> 00:00:09,420
+Willkommen zur den Ink/Stitch Anfänger-Tutorials.
+
+2
+00:00:10,200 --> 00:00:13,760
+In diesem Tutorial sprechen wir über "visuelle Befehle".
+
+3
+00:00:14,160 --> 00:00:21,740
+Visuelle Befehle werden benutzt, um Ink/Stitch zusätzliche Informationen darüber zu geben, wie das Design gestickt werden soll.
+
+4
+00:00:24,840 --> 00:00:32,940
+Bevor du visuelle Befehle aber benutzen kannst, müssen die entsprechenden Symbole über "Installiere Erweiterungen für Inkscape" erreichbar gemacht werden.
+
+5
+00:00:37,300 --> 00:00:40,180
+Es gibt drei Arten von Befehlen:
+
+6
+00:00:40,440 --> 00:00:43,240
+Befehle, die das gesamte Design betreffen
+
+7
+00:00:43,580 --> 00:00:45,860
+Befehle, die die ausgewählte Ebene betreffen
+
+8
+00:00:46,160 --> 00:00:49,160
+Befehle, die sich auf ausgewählte Objekte auswirken
+
+9
+00:00:52,680 --> 00:01:00,820
+"Erweiterungen > Ink/Stitch > Deutsch > Befehle > Befehle hinzufügen..." bietet zwei Optionen.
+
+10
+00:01:01,220 --> 00:01:07,940
+"Rahmenposition nach Stopp-Befehlen" definiert wohin die Machine springt, wenn ein Stopp-Befehl erreicht wird.
+
+11
+00:01:08,240 --> 00:01:14,740
+Das erlaubt dem Nutzer den Stickrahmen nach vorne zu bewegen, um z.B. Applikationsschritte zu erleichtern.
+
+12
+00:01:19,920 --> 00:01:24,360
+Nullpunkt für exportierte Stickdateien.
+
+13
+00:01:24,780 --> 00:01:35,760
+Den Nullpunkt festzulegen ist besondern für diejenigen hilfreich, die, unabhängig vom benutzen Stickrahmen, vollen Zugriff auf das gesamte Stickfeld der Maschine haben.
+
+14
+00:01:42,500 --> 00:01:46,120
+"Ebenenbehele hinzufügen..." hat nur eine Option:
+
+15
+00:01:46,120 --> 00:01:52,160
+"Ebene ignorieren" kann benutzt werden, um eine gesamte Ebene während der Umwandlung in eine Stickdatei zu ignorieren.
+
+16
+00:01:52,660 --> 00:02:03,760
+Das kann nützlich sein, wenn zusätzliche Informationen abgespeichert werden sollen, z.B. Tutorial Anweisungen - oder auch, wenn du temporär einen Teil des Motivs auslassen willst.
+
+17
+00:02:09,300 --> 00:02:14,920
+"Befehle mit gewählten Objekten verknüpfen":
+
+18
+00:02:15,300 --> 00:02:19,820
+Für Füllstiche können Start- und Endposition festgelegt werden.
+
+19
+00:02:19,820 --> 00:02:25,860
+Wähle ein Füll-Objekt aus und aktiviere "Füllstich Startposition" und "Füllstich Endposition".
+
+20
+00:02:25,860 --> 00:02:29,860
+Klicke auf "Anwenden" und bewege die Symbole an die gewünschte Stelle.
+
+21
+00:02:33,640 --> 00:02:38,920
+Der Effekt wird dort ausgeführt, wo der Zeiger die Außenlinie der Form berührt.
+
+22
+00:03:42,720 --> 00:03:48,280
+Genauso wir für Füllstiche, kann auch für automatisch geführte Satinkolumnen eine Start- und Endposition definiert werden.
+
+23
+00:03:48,280 --> 00:03:54,100
+Wähle die erste Satinkolumne aus und füge den Befehl "Startposition für automatisch geführte Satinkolumne" hinzu.
+
+24
+00:03:56,760 --> 00:04:01,840
+Wähle die letzt Satinkolumne aus und füge den Befehl "Endposition für automatisch geführte Satinkolumne" hinzu.
+
+25
+00:04:10,460 --> 00:04:12,460
+Bewege das Symbol an die richtige Stelle
+
+26
+00:04:32,760 --> 00:04:38,960
+und benutze das Werkzeug "Erweiterungen > Ink/Stitch > Deutsch > Satin Werkzeuge > Automatisch geführte Satinkolumnen...".
+
+27
+00:05:13,860 --> 00:05:17,660
+Satinkolumnen können geteilt werden.
+
+28
+00:05:17,660 --> 00:05:25,080
+Das ist hilfreich, wenn du eine Satinkolumne teilen willst, aber bereits gesetzte Einstellungen beibehalten werden sollen.
+
+29
+00:05:25,080 --> 00:05:29,580
+Wähle eine Satinkolumne und füge den "Satinkolumne schneiden"-Befehl hinzu.
+
+30
+00:05:29,940 --> 00:05:36,200
+Bewege das Symbol an die richtige Stelle und führte "Erweiterungen > Ink/Stitch > Deutsch > Satin Werkzeuge > Satinkolumne schneiden" aus.
+
+31
+00:05:36,640 --> 00:05:41,040
+Das scheidet die Satinkolumne an der vordefinierten Stelle.
+
+32
+00:05:57,640 --> 00:06:01,020
+Der "Faden abschneiden nach diesem Objekt"-Befehl kann zu jedem Stickobjekt hinzugefügt werden.
+
+33
+00:06:01,400 --> 00:06:06,000
+Er führt dazu, dass die Maschine den Faden schneiden, nachdem das Objekt fertig gestickt wurde.
+
+34
+00:06:55,940 --> 00:07:04,080
+Der "Stoppen", bzw. "Pause"-Befehl führt dazu, dass sich die Maschine in die Position bewegt, die zuvor durch den "Rahmenposition nach Stopp-Befehlen"-Befehl definierte wurde.
+
+35
+00:07:04,080 --> 00:07:08,340
+Und ist deshalb besonders nützlich für Applikationsmuster.
+
+36
+00:07:08,380 --> 00:07:11,440
+Auch dieser Befehl kann jedem Objekt angehängt werden.
+
+37
+00:07:28,980 --> 00:07:33,000
+Objekte mit dem "Ignorieren"-Befehl werden nicht gestickt.
+
+38
+00:07:50,900 --> 00:07:57,180
+Es kann allerdings vorkommen, dass manche Maschinen nicht alle Befehle befolgen, z.B. den "Faden abschneide"-Befehl.
+
+39
+00:07:57,180 --> 00:08:01,340
+Nicht jede Maschine ist fähig diese Anweisungen durchzuführen.
+
+40
+00:08:01,340 --> 00:08:08,140
+Wir hoffen, dass dieses Tutorial nützlich war und dir hilft, das Stickergebnis besser zu kontrollieren.
+

@@ -1,0 +1,212 @@
+1
+00:00:06,460 --> 00:00:10,060
+Willkommen zur den Ink/Stitch Anfänger-Tutorials.
+
+2
+00:00:11,040 --> 00:00:14,880
+In diesem Teil beschäftigen wir uns mit dem Ink/Stitch Arbeitsablauf.
+
+3
+00:00:15,200 --> 00:00:20,760
+Es beinhaltet die folgenden Schritte, ohne sich zu sehr an die genaue Reihenfolge zu klammern.
+
+4
+00:00:20,760 --> 00:00:24,760
+Einige der benutzen Tastenkürzel sind individuell gesetzt.
+
+5
+00:00:24,760 --> 00:00:28,200
+In unserem "customize" Video erklären wir, wie man das macht.
+
+6
+00:00:28,200 --> 00:00:31,360
+Der erste Schritt umfasst immer das erstellen eines Vektor-Bildes.
+
+7
+00:00:31,360 --> 00:00:40,040
+Du kannst bereits existierende Bilder nutzen. Es ist auch möglich Bilder automatisch nachzuzeichnen mit 'Pfad > Bitmap nachzeichnen'.
+
+8
+00:00:40,040 --> 00:00:44,720
+Für eine kurze Demonstration erstellen wir das Bild selbst.
+
+9
+00:00:44,720 --> 00:00:49,940
+Um Linien zu erstellen, nutze das Freihand-Werkzeug, welches mit 'P' aufgerufen werden kann
+
+10
+00:00:49,940 --> 00:00:52,620
+- oder das Beziér-Werkzeug ('B').
+
+11
+00:01:22,800 --> 00:01:26,300
+Du kannst auch Formen wie z.B. das Viereck oder den Kreis benutzen.
+
+12
+00:01:26,300 --> 00:01:33,000
+Sie müssen anschließend zu einem Pfad konvertiert werden: 'Strg + Umstelltaste + C' oder mit dem entsprechenden Symbol (sichtbar im Knotenwerkzeug-Modus).
+
+13
+00:02:17,520 --> 00:02:23,540
+Geschlossene Bereiche können auch mit dem Füll-Werkzeug gefüllt werden. Das Kürzel hierfür ist 'U'.
+
+14
+00:02:25,480 --> 00:02:29,500
+Wenn du die Addons installiert hast, nutze die Farbpaletten.
+
+15
+00:02:29,940 --> 00:02:35,440
+Füllfarben können mit einem einfachen Klick gesetzt werden. Linienfarben werden mit 'Umstelltaste + Klick' umgestellt.
+
+16
+00:03:28,980 --> 00:03:36,960
+Jetzt, wo das Bild fertig ist, speichere eine Kopie in eine andere Ebene und blende sie aus (diesen Schritt haben wir hier übersprungen).
+
+17
+00:03:37,360 --> 00:03:45,200
+Im nächsten Schritt müssen die Linien so bearbeitet werden, dass Ink/Stitch verstehen kann, wie sie gestickt werden sollen.
+
+18
+00:03:53,960 --> 00:03:59,880
+An diesem Punkt nehmen wir an, dass du bereits weißt, wie man Satinkolumnen, Füllstiche und Laufstiche erstellst.
+
+19
+00:03:59,880 --> 00:04:03,680
+Wenn nicht, schau dir die entsprechenden Videos an.
+
+20
+00:04:35,260 --> 00:04:39,400
+Setze die Parameter wie benötigt und vergiss nicht eine Unterlage zu verwenden.
+
+21
+00:06:32,600 --> 00:06:34,600
+Plane die Reihenfolge der Objekte sorgfältig.
+
+22
+00:06:34,600 --> 00:06:38,500
+Sie hat großen Einfluss auf die Qualität deines Designs.
+
+23
+00:06:44,000 --> 00:06:50,960
+Bei der Planung der Reihenfolge, versuchen wir Sprungstiche und Farbwechsel so gut es geht zu vermeiden.
+
+24
+00:06:51,220 --> 00:06:56,520
+Du willst nicht die ganze Zeit die Farben wechseln, während das Motiv gestickt wird.
+
+25
+00:07:05,760 --> 00:07:10,520
+Benutze den Simulator um zu sehen, wo Richtungen der Objekte gedreht werden müssen.
+
+26
+00:07:10,520 --> 00:07:16,260
+Du kannst due Richtungen auch an den roten Zacken im Knoten-Bearbeitungs-Modus erkennen.
+
+27
+00:07:16,260 --> 00:07:19,860
+Wir haben sie bereits im "Customize"-Video erklärt.
+
+28
+00:07:24,520 --> 00:07:29,540
+Ändere die Pfadrichtung mit "Pfad > Umkehren" oder benutze dein eigenes Tastenkürzel.
+
+29
+00:07:29,540 --> 00:07:37,920
+Ink/Stitch gibt die Objekte genau in der Reihenfolge aus, in der sie im SVG-Dokument erscheinen, von unten nach oben.
+
+30
+00:07:37,920 --> 00:07:45,100
+Wenn der Abstand zwischen zwei Objekten zu lang ist, fügt Ink/Stitch automatisch einen Sprung-Stich hinzu.
+
+31
+00:07:45,100 --> 00:07:48,900
+Ink/Stitch benutzt die Farbe des Objekts um die Garnfarbe zu bestimmen,
+
+32
+00:07:48,900 --> 00:07:57,500
+so dass Farbwechsel von einem Objekt zum nächsten in eine Farbwechsel-Anweisung resultieren.
+
+33
+00:08:38,760 --> 00:08:41,140
+Wir benötigen das Objekt-Fenster.
+
+34
+00:08:41,140 --> 00:08:45,480
+Wir empfehlen an diesem Punkt starken Gebrauch von Ebenen und Gruppen zu machen.
+
+35
+00:08:45,480 --> 00:08:48,580
+Das ist eine große Hilfe, u.a. für die Sortierung der Objekte.
+
+36
+00:08:48,580 --> 00:08:54,620
+Benutze 'Strg + G' um eine Gruppe von Objekten zu erstellen und navigiere durch die Objekte in gewünschter Reihenfolge,
+
+37
+00:08:54,740 --> 00:08:59,100
+während das jeweils nächste Objekt auf den Boden der Gruppe geschoben wird.
+
+38
+00:10:29,880 --> 00:10:33,760
+Benutze Befehle um Ink/Stitch zusätzliche Informationen zu geben.
+
+39
+00:10:33,760 --> 00:10:39,320
+Fadenschneide-Befehle, Stopp-Befehle, Füllstich Start- und Endpositionen sind nur einige der Optionen.
+
+40
+00:10:39,320 --> 00:10:44,140
+Schau dir das "Visual Commands"-Video an, um mehr Informationen zu erhalten.
+
+41
+00:10:55,420 --> 00:11:01,280
+Während des ganzen Prozesses hast du bereits durch den Parameter-Dialog die Visualisierung der Stickpfade genutzt.
+
+42
+00:11:01,760 --> 00:11:10,400
+Der Simulator kann auch seperat aufgerufen werden. Die Druckvorschau gibt einen genaueren Eindruck darüber, wie das Design am Ende aussehen wird.
+
+43
+00:11:10,400 --> 00:11:14,380
+Meistens ist der Simulator völlig ausreichend.
+
+44
+00:11:14,380 --> 00:11:21,720
+Aber z.B. für Füllstiche ist die Druckvorschau sehr hilfreich, z.B. um die Wirkung von Stichlänge und Winkel sehen zu können.
+
+45
+00:11:26,860 --> 00:11:31,580
+Wenn du mit dem Ergebnnis zufrieden bist, speichere die Datei auf deiner Festplatte.
+
+46
+00:11:31,580 --> 00:11:35,120
+Wähle ein Dateiformat, dass deine Stickmaschine lesen kann.
+
+47
+00:11:35,120 --> 00:11:39,400
+Vergiss nicht die Datei auch im SVG-Format zu speichern,
+
+48
+00:11:39,400 --> 00:11:43,380
+nur für den Fall, dass du zu einem späteren Zeitpunkt noch etwas verbessern willst.
+
+49
+00:11:53,500 --> 00:11:55,500
+Übertrage die Datei auf deine Maschine.
+
+50
+00:11:55,780 --> 00:12:00,580
+Führe einen Probestickvorgang aus, vorzugsweise mit dem gleichen Stoff, den zu für dein Endprodukt nehmen willst.
+
+51
+00:12:00,580 --> 00:12:05,060
+Der Stoff hat durchaus einen Einfluss auf das Ergebnis,
+
+52
+00:12:05,060 --> 00:12:10,380
+deshalb ist es wahrscheinlich, dass du hier und da noch Kleinigkeiten anpassen musst.
+
+53
+00:12:10,380 --> 00:12:17,120
+Folge dieser Routine, bis zu zufrieden und breit bist, auf dem besten Stück Stoff in deinem Haus zu sticken ;)
+

@@ -1,0 +1,376 @@
+1
+00:00:05,860 --> 00:00:09,460
+Willkommen zur den Ink/Stitch Anfänger-Tutorials.
+
+2
+00:00:11,760 --> 00:00:15,660
+In this part we are going to learn how to display your design
+
+3
+00:00:16,120 --> 00:00:21,040
+and finally save it into an embroidery format that your machine can read.
+
+4
+00:00:27,680 --> 00:00:33,280
+Whenever you are running the params dialogue in Ink/Stitch you will see the simulator.
+
+5
+00:00:33,960 --> 00:00:40,220
+This is very important while planing your design, since you can visually see the changes as you make them.
+
+6
+00:00:40,600 --> 00:00:44,440
+The simulator can also run without the params dialogue.
+
+7
+00:00:44,720 --> 00:00:50,840
+In the customize tutorial we created a shortcut to open it with Ctrl+Shift+L,
+
+8
+00:00:51,220 --> 00:00:55,720
+but this is a custom shortcut key and not available by default.
+
+9
+00:00:56,460 --> 00:01:03,540
+If you don't have the shortcut key set, open the simulator through "Extensions > Ink/Stitch > English > Simulator".
+
+10
+00:01:03,760 --> 00:01:09,540
+It will simulate selected objects, or - if none is selected - the whole design.
+
+11
+00:01:09,960 --> 00:01:18,220
+You can speed up and slow down the simulation with arrow up and arrow down or by using the corresponding buttons.
+
+12
+00:01:18,220 --> 00:01:23,980
+You can swith the playback to be backwards or forwards with arrow left or right.
+
+13
+00:01:23,980 --> 00:01:27,600
+Pause and restart the animation with the space bar.
+
+14
+00:01:31,340 --> 00:01:35,620
+Move the animation step by step with plus or minus.
+
+15
+00:01:35,980 --> 00:01:38,880
+Restart the animation with "R".
+
+16
+00:01:39,280 --> 00:01:42,840
+You can also grab the slider and move it to an other position
+
+17
+00:01:45,340 --> 00:01:49,000
+or jump to an specific point by entering a number.
+
+18
+00:01:49,540 --> 00:01:52,680
+You should pause the simulaton before doing so.
+
+19
+00:01:53,640 --> 00:01:58,000
+During the animation you can see the current speed in the status bar,
+
+20
+00:01:58,000 --> 00:02:04,800
+beside of the information if the current command is fe. a stitch, trim or stop command.
+
+21
+00:02:05,140 --> 00:02:08,640
+When you are done, close the simulator with "Q".
+
+22
+00:02:14,720 --> 00:02:20,700
+While the simulator is very useful, you sometimes will need to see a realistic preview of your design.
+
+23
+00:02:20,700 --> 00:02:26,040
+This way you can get a better impression of your stitch length settings, etc.
+
+24
+00:02:26,040 --> 00:02:30,820
+In Ink/Stitch you will have access to a realistic preview through the print function.
+
+25
+00:02:30,820 --> 00:02:34,600
+The print function will open in your default browser.
+
+26
+00:02:34,600 --> 00:02:38,540
+Run "Extensions > Ink/Stitch > English > Print".
+
+27
+00:02:39,000 --> 00:02:43,960
+The print sheet that you will see is meant to be used either by operator or customer.
+
+28
+00:02:43,960 --> 00:02:48,880
+But before we look into these options we want to discover the realistic preview.
+
+29
+00:02:48,880 --> 00:02:51,780
+Move your mouse over the embroidery image.
+
+30
+00:02:52,100 --> 00:02:56,740
+On the bottom of the canvas you will see different options to scale the design.
+
+31
+00:02:56,740 --> 00:03:01,820
+You can also hit Ctrl and scroll the mouse-wheel to scale it up and down.
+
+32
+00:03:01,820 --> 00:03:06,100
+With the left mouse button you can grab it and move it somewhere else.
+
+33
+00:03:06,100 --> 00:03:10,260
+"Fit" will scale the design to fit into the canvas.
+
+34
+00:03:10,660 --> 00:03:13,920
+100% will scale it to real size.
+
+35
+00:03:14,560 --> 00:03:22,480
+Once you are satisfied with scaling and position you can apply the transforms to all other pages where the design is displayed.
+
+36
+00:03:23,020 --> 00:03:29,120
+Finally we enable the "Realistic" checkbox. It may take a while before it is being displayed.
+
+37
+00:03:32,160 --> 00:03:36,120
+Now let's have a look into the other settings in the print sheet.
+
+38
+00:03:36,120 --> 00:03:38,120
+Go to settings.
+
+39
+00:03:38,220 --> 00:03:41,260
+First you will see basic page setup options.
+
+40
+00:03:41,580 --> 00:03:47,640
+Depending on your country you will want to choose either "Letter" or "A4" paper format.
+
+41
+00:03:47,640 --> 00:03:53,800
+Then you have different layout options, depending on the purpose you want to use the print-out for.
+
+42
+00:04:02,820 --> 00:04:06,680
+The operator detailed view comes with an other option,
+
+43
+00:04:06,840 --> 00:04:11,160
+where you can define the size of the thumbnails through a slider.
+
+44
+00:04:11,740 --> 00:04:15,300
+In the branding tab you can change the page header logo.
+
+45
+00:04:15,620 --> 00:04:20,280
+And enter your contact information which will be displayed in the page footer.
+
+46
+00:04:20,760 --> 00:04:23,240
+Open the estimated time tab.
+
+47
+00:04:23,460 --> 00:04:32,500
+Here you can specify information about your machine and workflow to roughly calculate the time that will be needed to stitch out the design.
+
+48
+00:04:32,700 --> 00:04:37,320
+You might not want this information to be displayed on every layout type.
+
+49
+00:04:37,320 --> 00:04:40,560
+Disable those, where it shouldn't appear.
+
+50
+00:04:41,660 --> 00:04:44,940
+In the design tab you can change the thread palette.
+
+51
+00:04:45,360 --> 00:04:49,260
+If you used palettes while editing your design in Inkscape,
+
+52
+00:04:49,720 --> 00:04:53,300
+the print preview will already use these colors.
+
+53
+00:04:53,500 --> 00:05:00,060
+In other cases or if you want to change the displayed thread palette you can edit the setting here.
+
+54
+00:05:00,380 --> 00:05:06,100
+All colors in the design will be recalculated and previous changes will be lost.
+
+55
+00:05:06,400 --> 00:05:13,660
+Page Setup, Branding and Estimated Time settings can be saved as defaults and be used for every new design.
+
+56
+00:05:13,880 --> 00:05:18,480
+Close the settings dialogue and have a look to the page header.
+
+57
+00:05:18,980 --> 00:05:23,560
+You will see fields indicating that you can enter custom text.
+
+58
+00:05:23,840 --> 00:05:30,540
+So you can define a title for this particular design, enter the clients name and purchase order.
+
+59
+00:05:30,540 --> 00:05:36,120
+On detailed views you can also change the thread and color name manually.
+
+60
+00:05:46,300 --> 00:05:52,260
+The operator detailed view also has a field for custom notes for each thread.
+
+61
+00:05:55,440 --> 00:05:59,340
+When you are done with all settings use the print button.
+
+62
+00:05:59,780 --> 00:06:10,040
+You can print it with your printer, but in most cases you would want to print to PDF, so you can send the PDF-file to your customer or operator.
+
+63
+00:06:10,380 --> 00:06:20,020
+When everything is done, click on the close button to regain access to Inkscape, which has been locked while you were editing the print preview.
+
+64
+00:06:20,380 --> 00:06:26,860
+All settings you've made in the print preview will be saved into the SVG file,
+
+65
+00:06:26,940 --> 00:06:32,100
+so you don't have to do everything twice in case you want to change your design.
+
+66
+00:06:37,120 --> 00:06:43,800
+Embroider is an older function which has been very important before the simulator existed.
+
+67
+00:06:43,800 --> 00:06:50,080
+With the new functionality you will rarely be using it. But still there might be possible usecases.
+
+68
+00:06:50,960 --> 00:06:56,000
+Open "Extensions > Ink/Stitch > English > Embroider"
+
+69
+00:06:56,360 --> 00:07:00,060
+The dialogue comes with a few options.
+
+70
+00:07:00,060 --> 00:07:04,400
+You will want to set the output file format to one,
+
+71
+00:07:04,580 --> 00:07:06,700
+that your machine can read.
+
+72
+00:07:08,060 --> 00:07:10,340
+If you leave "Directory" empty,
+
+73
+00:07:10,520 --> 00:07:15,340
+the output file will be saved in the Inkscape's extensions directory.
+
+74
+00:07:16,400 --> 00:07:19,360
+You might want to change this. Enter a path.
+
+75
+00:07:19,740 --> 00:07:24,260
+When you hit "Apply" Ink/Stitch will perform two actions:
+
+76
+00:07:24,640 --> 00:07:28,140
+It will save an embroidery file on your computer
+
+77
+00:07:28,540 --> 00:07:36,560
+It will display the output in Inkscape - while hiding all other layers if the option was enabled in the embroider dialogue.
+
+78
+00:07:36,920 --> 00:07:41,400
+Now you can inspect and modify the output in Inkscape.
+
+79
+00:07:41,600 --> 00:07:46,920
+The so newly created path is a stroke with manual stitch placement enabled.
+
+80
+00:07:52,340 --> 00:07:59,500
+A more comfortable way to export to an embroidery file is to use the "File > Save as..." export function.
+
+81
+00:07:59,500 --> 00:08:03,180
+Here you can choose the file format for your machine.
+
+82
+00:08:03,680 --> 00:08:10,020
+All file format names start with Ink/Stitch, so you can easily find them in the list.
+
+83
+00:08:11,720 --> 00:08:14,580
+Enter the filename and click on "Save".
+
+84
+00:08:25,820 --> 00:08:30,740
+Don't forget to also save your design in the SVG file format,
+
+85
+00:08:30,740 --> 00:08:34,660
+just in case you want to perform changes at a later time.
+
+86
+00:08:41,540 --> 00:08:45,200
+You can also open embroidery files with Ink/Stitch.
+
+87
+00:08:45,420 --> 00:08:51,260
+Just right click on the file in your file browser and choose "Open with > Inkscape".
+
+88
+00:09:10,360 --> 00:09:14,480
+An other possibility would be to open Inkscape
+
+89
+00:09:14,640 --> 00:09:20,900
+and go to "File > Open...", choose your file in the dialgoue and click on "Open".
+
+90
+00:09:21,500 --> 00:09:27,360
+Imported embroidery files will be displayed as a stroke in manual stitch mode.
+
+91
+00:09:27,360 --> 00:09:33,300
+For certain file formats like "dst" colors may vary from your expectations,
+
+92
+00:09:33,300 --> 00:09:36,440
+because they cannot save color information.
+
+93
+00:09:36,840 --> 00:09:41,880
+We hope you enjoyed the tutorial. Now you have seen all the Ink/Stitch functions.
+
+94
+00:09:42,120 --> 00:09:47,540
+In the next video we will demonstrate a typical workflow and put all the pieces together.
+

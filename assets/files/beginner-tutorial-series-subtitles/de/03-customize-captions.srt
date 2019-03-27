@@ -1,0 +1,350 @@
+1
+00:00:06,180 --> 00:00:09,620
+Willkommen zur den Ink/Stitch Anfänger-Tutorials.
+
+2
+00:00:10,420 --> 00:00:13,440
+In diesem Teil passen wir Inkscape für die Nutzung von Ink/Stitch an.
+
+3
+00:00:13,820 --> 00:00:16,020
+Das ist nicht unbedingt notwenig,
+
+4
+00:00:16,160 --> 00:00:19,660
+erleichtert aber die Arbeit mit Ink/Stitch.
+
+5
+00:00:22,020 --> 00:00:24,400
+Dieses Tutorial behandelt folgende Themen:
+
+6
+00:00:24,960 --> 00:00:27,320
+Addons für Inkscape installieren
+
+7
+00:00:28,300 --> 00:00:32,640
+Die Ink/Stitch Addons fügen Garnpaletten verschiedenster Hersteller hinzu
+
+8
+00:00:32,640 --> 00:00:37,300
+und stellt deiner Inkscape-Installation Ink/Stitch spezifische Symbole zur Verfügung.
+
+9
+00:00:38,920 --> 00:00:43,760
+Tastenkürzel definieren, um schnellen Zugriff auf häufig genutzte Funktionen zu erhalten.
+
+10
+00:00:43,960 --> 00:00:47,820
+Pfadumrandungen anzeigen um die Stickrichtung sichtbar zu machen.
+
+11
+00:00:48,180 --> 00:00:50,540
+Gitter nutzen, um Muster auszurichten.
+
+12
+00:00:51,340 --> 00:00:55,220
+Templates erstellen für eine Grundeinstellung für Stickdateien.
+
+13
+00:00:56,240 --> 00:00:58,960
+Fangen wir mit den Addons an.
+
+14
+00:01:00,080 --> 00:01:08,960
+Eigentlich sind die Addons zwei Dateien, die in einen bestimmten Ordner von Inkscape kopiert werden müssen.
+
+15
+00:01:09,620 --> 00:01:17,280
+Führe die Funktion unter 'Erweiterungen > Ink/Stitch > Deutsch > Installiere Erweiterungen für Inkscape' aus und klicke auf 'Installieren'.
+
+16
+00:01:18,520 --> 00:01:22,940
+Inkscape muss neu gestartet werden, um die Änderungen zu integrieren.
+
+17
+00:01:23,900 --> 00:01:28,620
+Im Paletten-Menü gibt es viele neue Farbpaletten.
+
+18
+00:01:29,120 --> 00:01:32,920
+Ihre Namen beginnen alle mit Ink/Stitch, damit sie schnell zu finden sind.
+
+19
+00:01:34,520 --> 00:01:39,740
+Jetzt kannst du dein Muster direkt mit den Farben deines Garnherstellers planen.
+
+20
+00:01:49,840 --> 00:01:55,920
+Die Garnauswahl wird auch in die Druck-Ausgabe übernommen und kann so direkt mit dem Kunden geteilt werden.
+
+21
+00:02:01,740 --> 00:02:05,880
+Die zweite Funktion wird im 'Visual Commands'-Tutorial genauer behandelt.
+
+22
+00:02:07,700 --> 00:02:15,720
+Sie stellt Symbole zur Verfügung, die benutzt werden, um Ink/Stitch genauere Informationen zu liefern, wie das Motiv gestickt werden soll.
+
+23
+00:02:16,960 --> 00:02:21,180
+Wir können z.B. ein "Ignoriere dieses Objekt"-Symbol hinzufügen.
+
+24
+00:02:22,040 --> 00:02:27,020
+Es sagt Ink/Stitch, dass dieses spezielle Objekt nicht gestickt werden soll.
+
+25
+00:02:28,120 --> 00:02:30,120
+Erstelle zwei Objekte
+
+26
+00:02:37,860 --> 00:02:39,860
+und öffne die Simulation.
+
+27
+00:02:45,520 --> 00:02:47,520
+Beide Objekte werden dargestellt.
+
+28
+00:02:51,140 --> 00:02:59,460
+Mit einem ausgewählten Objekt öffne 'Erweiterungen > Ink/Stitch > Deutsch > Befehle > Befehle mit gewählten Objekten verknüpfen...'
+
+29
+00:02:59,820 --> 00:03:03,760
+Aktiviere das Kontrollkästchen 'Ignoriere dieses Objekt' und clicke auf 'Anwenden'.
+
+30
+00:03:08,840 --> 00:03:10,840
+Öffne jetzt die Simulation erneut.
+
+31
+00:03:13,240 --> 00:03:16,460
+Nur eins der beiden Objekte wird angezeigt.
+
+32
+00:03:17,500 --> 00:03:26,100
+Es gibt noch jede Menge Optionen, aber jetzt müssen wir uns zuerst um die Anpassungen kümmern.
+
+33
+00:03:29,080 --> 00:03:33,700
+Es gibt viele Funktionen von Ink/Stitch, die häufig genutzt werden müssen.
+
+34
+00:03:35,180 --> 00:03:38,660
+Da ist es etwas umständlich sich jedes Mal durch das Menü klicken zu müssen.
+
+35
+00:03:38,660 --> 00:03:42,960
+Das bedeutet, Tastenkürzel sind das Mittel der Wahl.
+
+36
+00:03:44,400 --> 00:03:47,220
+Wir werden hier nicht alle Möglichkeiten besprechen,
+
+37
+00:03:47,220 --> 00:03:52,600
+sondern nur zeigen, wie man Tastenkürzel festlegt. Dann kannst du selber mehr hinzufügen.
+
+38
+00:03:53,800 --> 00:04:00,200
+Es gibt auch eine Liste auf https://inkstitch.org. Dort gibt es weitere Hilfestellungen, welche Tastenkombinationen sich eignen.
+
+39
+00:04:01,560 --> 00:04:04,780
+Öffne die Einstellungen über 'Bearbeiten > Einstellungen'.
+
+40
+00:04:04,780 --> 00:04:08,520
+Gehe zu 'Benutzeroberfläche' und wähle den Menüpunkt 'Tastenkürzel'.
+
+41
+00:04:09,940 --> 00:04:11,500
+Suche nach 'Parameter'.
+
+42
+00:04:11,500 --> 00:04:13,500
+Es befindet sich unter 'Erweiterungen'.
+
+43
+00:04:13,500 --> 00:04:18,240
+Klicke auf das Feld unter "Tastenkürzel" und gib die Kombination "Strg+Umschalttaste+P" ein.
+
+44
+00:04:20,760 --> 00:04:25,440
+Als nächstes suchen wir nach "Simulation" und legen die Kombination "Strg+Umschalttaste+L" fest.
+
+45
+00:04:34,700 --> 00:04:39,380
+Dann fügen wir "Strg+R" für "Richtung umkehren" hinzu
+
+46
+00:04:39,940 --> 00:04:45,120
+und zu guter Letzt "Bild ab" für "Absenken" und "Bild auf" für "Anheben".
+
+47
+00:04:46,560 --> 00:04:50,620
+Schauen wir uns die Funktionen "Anheben" und "Absenken" noch einmal genauer an.
+
+48
+00:04:52,300 --> 00:04:53,680
+Öffne den Objekt-Dialog.
+
+49
+00:04:53,680 --> 00:05:01,040
+Es zeigt eine komplette Liste aller Ebenen, Gruppen und Objekte, die im Dokument vorhanden sind in der richtigen Stapelreihenfolge.
+
+50
+00:05:01,960 --> 00:05:05,240
+Entferne das Ignorieren-Symbol, das wir vorhin hinzugefügt haben und
+
+51
+00:05:05,360 --> 00:05:09,360
+bewege die Objekte so, dass sie sich überschneiden.
+
+52
+00:05:10,740 --> 00:05:14,220
+Wenn du nun die "Objekt anheben und absenken"-Knöpfe auf das erste Objekt anwendest, 
+
+53
+00:05:14,220 --> 00:05:17,880
+siehst du, wie sich ihre Reihenfolge ändert.
+
+54
+00:05:19,760 --> 00:05:23,760
+Das funktioniert nicht, wenn sich die Objekte nicht überschneiden.
+
+55
+00:05:24,880 --> 00:05:31,060
+Jetzt nutze die neuen Tastenkürzel. Die Reihenfolge ändert sich erneut.
+
+56
+00:05:31,400 --> 00:05:37,200
+Die Knöpfe im Objekt-Dialog haben den selben Effekt wie die Tastenkürzel.
+
+57
+00:05:37,920 --> 00:05:41,760
+Die Objektposition bestimmt von unten nach oben
+
+58
+00:05:41,760 --> 00:05:48,580
+in welcher Reihenfolge das Motiv gestickt werden wird. Das macht diese Funktion zu einem wichtigen Teil des Digitalisierungsprozesses.
+
+59
+00:05:54,980 --> 00:05:59,040
+Pfadumrandungen können die Pfadrichtung anzeigen.
+
+60
+00:06:00,220 --> 00:06:05,200
+Die Pfadrichtungen sind für alle Sticharten (außer Füllstich) wichtig.
+
+61
+00:06:06,040 --> 00:06:10,120
+Sie definieren an welchem Ende des Pfades die Stickerei beginnt.
+
+62
+00:06:10,120 --> 00:06:19,620
+In 'Einstellungen > Werkzeuge > Knoten' aktiviere die folgenden Kontrollkästchen
+
+63
+00:06:19,620 --> 00:06:25,340
+"Zeige die Pfadrichtung um Außenlinie" und "Zeige temporär Umrandung für ausgewählte Pfade".
+"show patch directions on outlines" and "show temporary outline for selected paths".
+
+64
+00:06:27,580 --> 00:06:34,180
+Mit ausgewählten Objekten "N" drücken, um das Knotenwerkzeug zu nutzen. Aktiviere "Zeige Entwurfspfad".
+
+65
+00:06:35,500 --> 00:06:38,640
+Eine rote Linie umrandet nun aktive Objecte.
+
+66
+00:06:38,640 --> 00:06:41,620
+Die Zacken zeigen die Richtung an.
+
+67
+00:06:46,660 --> 00:06:51,020
+Gitter helfen beim ausrichten der Objekte.
+
+68
+00:06:51,920 --> 00:06:58,420
+Um das Gitter zu aktivieren gehen öffnen wir 'Datei > Dokumenteinstellungen...' und wechseln zum Reiter "Gitter".
+
+69
+00:06:59,380 --> 00:07:06,960
+Klicke auf "Neu" und stelle die Einheiten auf mm um.
+Click on New and change units to mm (this is the common unit used for stitch length etc.)
+
+70
+00:07:07,740 --> 00:07:11,180
+x- und y-spacing können auf 1mm gesetzt werden.
+
+71
+00:07:12,260 --> 00:07:15,860
+Wenn du aus der Seite herauszoomst, wird ein größeres Gitter angezeigt.
+
+72
+00:07:16,840 --> 00:07:27,600
+Standardmäßig sind die Gitterlinien 5mm auseinander. Wenn du 10mm nutzt, ist der Abstand 1cm.
+
+73
+00:07:31,720 --> 00:07:36,000
+Die Objekte rasten in der Standardeinstellung am Gitter ein.
+
+74
+00:07:36,040 --> 00:07:45,060
+Du kannst dieses Verhalten ändern, indem du die Einrasten-Funktion deaktivierst oder gezielt die Funktion "Am Gitter einrasten" ausschaltest. 
+
+75
+00:07:51,020 --> 00:07:59,420
+Willst du das Gitter temporär verstecken, benutze die #-Taste oder schalte es über 'Ansich > Seitengitter' aus.
+
+76
+00:08:01,900 --> 00:08:08,500
+Das Dialog-Fenster "Ausrichten und verteilen..." das du unter "Objekte" im Menü findest,
+
+77
+00:08:09,660 --> 00:08:13,140
+bietet ebenfalls viele hilfreiche Methoden um Objekte anzuordnen.
+
+78
+00:08:23,080 --> 00:08:28,420
+Es macht keinen Spaß die gleiche Dokumentstruktur immer wieder neu aufzusetzen.
+
+79
+00:08:29,060 --> 00:08:35,220
+Da wäre es doch schön, ein neues Dokument zu öffnen, dass bereits die richtige Größe für deinen Stickrahmen hat.
+
+80
+00:08:35,780 --> 00:08:37,780
+Nun, das ist möglich.
+
+81
+00:08:38,260 --> 00:08:44,060
+Wenn du einmal alles richtig eingerichtet hast, speichere einfach die Datei in den Vorlagen-Ordner.
+
+82
+00:08:44,880 --> 00:08:49,720
+Wähle den Pfad für den Vorlagen-Ordner für dein Betriebssystem aus der unten stehenden Beschreibung.
+
+83
+00:09:00,780 --> 00:09:06,980
+Jetzt kannst du die Vorlage über 'Date > Neu aus Vorlage' öffnen.
+
+84
+00:09:07,760 --> 00:09:13,980
+Auf inkstitch.org findest du sogar eine Vorlage mit unterschiedlichen Rahmengrößen.
+
+85
+00:09:14,620 --> 00:09:16,620
+Wir hoffen, dir hat das Tutorial gefallen.
+
+86
+00:09:17,780 --> 00:09:20,560
+Jetzt ist alles für den kreativen Teil der Arbeit vorbereitet.
+
+87
+00:09:21,320 --> 00:09:26,480
+Wenn du irgendwelche Fragen über Ink/Stitch hast, kontaktiere uns doch über GitHub.
+

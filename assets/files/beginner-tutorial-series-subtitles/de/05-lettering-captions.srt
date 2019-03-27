@@ -1,0 +1,52 @@
+1
+00:00:05,480 --> 00:00:09,080
+Willkommen zur den Ink/Stitch Anfänger-Tutorials.
+
+2
+00:00:10,600 --> 00:00:13,920
+In diesem Teil schauen wir uns das Lettering-Werkzeug genauer an.
+
+3
+00:00:14,300 --> 00:00:22,920
+Ink/Stitch bietet die Möglichkeit mehrzeiligen Text zu erstellen, der automatisch in eine Stick-Schrift umgesetzt wird.
+
+4
+00:00:24,040 --> 00:00:27,660
+Öffne 'Erweiterung > Ink/Stitch > Deutsch > Beschriftung'
+
+5
+00:00:28,380 --> 00:00:35,340
+Diese Funktion ist noch in ihren Kinderschuhen und stellt bisher nur eine einzige Schrift zur Verfügung. Das wird sich in künftigen Versionen ändern.
+
+6
+00:00:35,340 --> 00:00:37,340
+Gebe jetzt einen Text ein.
+
+7
+00:00:40,100 --> 00:00:43,500
+Du wirst sehen, wie sich die Simulation erneuert, während du schreibst.
+
+8
+00:00:45,820 --> 00:00:53,540
+Bei mehrzeiligen Text kann es sinnvoll sein, in ungeraden Zeilennummern von rechts zu starten.
+
+9
+00:00:53,540 --> 00:00:58,960
+Aktiviere dafür die Option "Stitch lines of text back and forth".
+
+10
+00:00:59,300 --> 00:01:01,620
+Klicke auf "Anwenden und schließen"
+
+11
+00:01:02,160 --> 00:01:05,940
+Ink/Stitch fügt nun alle für deinen Text benötigten Pfade in das Dokument ein.
+
+12
+00:01:05,940 --> 00:01:11,480
+Du kannst die Ausgabe bearbeiten oder direkt in eine Stickdatei speichern.
+
+13
+00:01:17,060 --> 00:01:20,800
+Wir hoffen, dass dir dieses Tutorial und das Lettering Werkzeug gefallen hat!
+

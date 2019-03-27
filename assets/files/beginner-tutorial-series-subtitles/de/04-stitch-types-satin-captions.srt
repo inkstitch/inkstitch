@@ -1,0 +1,360 @@
+1
+00:00:06,260 --> 00:00:09,860
+Willkommen zur den Ink/Stitch Anfänger-Tutorials.
+
+2
+00:00:09,860 --> 00:00:16,200
+In diesem Teil werden wir uns anschauen, welche Sticharten Ink/Stitch zur Verfügung stellt.
+
+3
+00:00:16,200 --> 00:00:22,520
+Wir werden die Sticharten nicht an sich erläutern, aber wie sie in Ink/Stitch angewendet werden.
+
+4
+00:00:22,700 --> 00:00:30,400
+Ink/Stitch-Sticharten können grob in drei Gruppen eingeteilt werden: Linien, Satin- und Füllstich.
+
+5
+00:00:31,080 --> 00:00:36,800
+Hier ist eine komplette Liste, dann kannst du schnell zu der Stichart springen, für die du dich gerade interessierst.
+
+6
+00:00:37,400 --> 00:00:41,200
+Dieses Tutorial befasst sich mit Satin-Kolumnen.
+
+7
+00:00:41,600 --> 00:00:47,580
+Satinstiche werden meisten für Umrandungen, Buchstaben oder kleine Füllbereiche genutzt.
+
+8
+00:00:47,860 --> 00:00:55,940
+Ink/Stitch zeichnet Zick-Zack Linien zwischen zwei Pfaden, während es mögich ist die Breite der Kolumne zu variieren.
+
+9
+00:00:57,800 --> 00:01:01,120
+Es gibt verschiedene Metehoden Satin-Kolumnen zu erstellen.
+
+10
+00:01:01,120 --> 00:01:09,860
+Zuerst zeigen wir dir den grundsätzlichen, manuellen Weg, bevor wir den Prozess etwas vereinfachen und Satin Werkzeuge anwenden.
+
+11
+00:01:11,720 --> 00:01:14,240
+Erstelle zwei Pfade
+
+12
+00:01:23,700 --> 00:01:28,760
+und kombiniere sie mit 'Pfad > Vereinigung' oder 'Strg + K'.
+
+13
+00:01:29,800 --> 00:01:32,720
+Als nächstes benötigen wir den "Parameter Dialog"
+
+14
+00:01:35,340 --> 00:01:40,840
+und wechseln in den Reiter "Satinkolumne", wo wir die Option "Benutzerdefinierte Satinkolumne" aktivieren.
+
+15
+00:01:41,560 --> 00:01:45,660
+In unserem Beispiel zeigt die Simulation nicht, was wir erwartet haben.
+
+16
+00:01:45,740 --> 00:01:50,720
+Das ist das Ergebnis, das du erhälst, wenn die Richtungen der Pfade nicht gleich sind.
+
+17
+00:01:51,200 --> 00:01:55,920
+Aktiviere das Knotenwerkzeug mit "N" und wähle die Satinkolumne aus.
+
+18
+00:01:56,020 --> 00:02:02,600
+Wenn du den Schritten in dem Video "Inkscape anpassen" gefolgt bist, siehst du rote Zacken, die die Pfadrichtung anzeigen.
+
+19
+00:02:03,360 --> 00:02:12,140
+Wähle einen Knoten von einem Pfad aus und klick auf 'Pfad > umkehren' oder benutze dein individuelles Tastenkürzel um die Pfadrichtung zu ändern.
+
+20
+00:02:17,280 --> 00:02:22,500
+Wenn du jetzt den Parameter-Dialog erneut öffnest, siehst du jetzt eine richtig simulierte Satinkolumne.
+
+21
+00:02:30,460 --> 00:02:33,580
+Du kannst den Winkel der Zick-Zack-Linien mit Hilfe der Knotenpunkte beeinflussen.
+
+22
+00:02:44,140 --> 00:02:48,900
+Aber achte immer darauf, dass auf beiden Seiten die gleiche Anzahl an Knoten vorhanden ist.
+
+23
+00:02:48,900 --> 00:02:52,780
+Sonst erhälst du eine Fehlermeldung wie diese hier.
+
+24
+00:02:53,880 --> 00:02:58,560
+Das ist nicht schwer, so lange der Pfad so einfach ist wie dieser.
+
+25
+00:02:58,560 --> 00:03:04,720
+Aber bei komplexeren Strukturen, willst du nicht wirklich deinen Tag damit verbringen, die Knotenpunkte zu zählen.
+
+26
+00:03:05,220 --> 00:03:09,900
+Ink/Stitch hat eine Lösung für dieses Problem. Die "Sprossen"-Methode.
+
+27
+00:03:14,100 --> 00:03:20,240
+Mit der ausgewählten Satinkolumne aktiviere das Freihandlinienwerkzeug mit "P".
+
+28
+00:03:20,240 --> 00:03:21,254
+Male eine Sprosse, während du die Umstelltaste gedrückt hälst.
+
+29
+00:03:24,600 --> 00:03:27,920
+Sprossen müssen beide "Holme" einmal kreuzen (wie bei einer Leiter).
+
+30
+00:03:27,920 --> 00:03:34,940
+Diese Sprossen geben Ink/Stitch die nötigen Hinweise über Stichwinkel etc, so dass es nicht mehr nötig ist, die Knoten zu zählen.
+
+31
+00:03:40,860 --> 00:03:48,840
+Willst du eine Satinkolumne mit gleichbleibender Breite erstellen, gibt es eine einfache und schnelle Methode.
+
+32
+00:03:48,840 --> 00:03:50,840
+Erstelle einen Pfad.
+
+33
+00:03:50,840 --> 00:03:55,660
+Es sollte kein geschlossener Pfad sein, wir brauchen einen Start- und einen Endpunkt.
+
+34
+00:03:56,420 --> 00:04:01,220
+Stelle die Strichbreite so ein, dass sie der Breite der späteren Satinkolumne entspricht.
+
+35
+00:04:09,340 --> 00:04:16,280
+Dann führe die Funktion 'Erweiterungen > Ink/Stitch > Deutsch > Satin Werkzeuge > Konvertierung Linie zu Satinstich' aus.
+
+36
+00:04:16,680 --> 00:04:18,680
+Das ist schon alles.
+
+37
+00:04:22,360 --> 00:04:26,020
+Manchmal wirst du eine Satinkolumne in mehrere Teile aufbrechen müssen.
+
+38
+00:04:26,540 --> 00:04:34,640
+Das kann manuell geschehen, aber wenn du alle deine Einstellungen behalten willst, benutze das Satin Werkzeug: "Satinkolumne schneiden".
+
+39
+00:04:35,260 --> 00:04:38,480
+Um deine Satinkolumne manuell zu teilen, markiere zwei Knoten,
+
+40
+00:04:40,600 --> 00:04:43,580
+einen auf jedem Holm und klicke auf
+
+41
+00:04:44,660 --> 00:04:47,400
+"Pfad an den gewählten Knoten auftrennen".
+
+42
+00:04:48,220 --> 00:04:56,640
+Mit 'Strg + Umstellstaste + K' erhälst du einzelne Pfade, die du mit 'Strg + K' wieder zusammenfügen kannst.
+
+43
+00:05:06,300 --> 00:05:09,600
+Das Satin Werkzeug benötigt für diese Aufgabe zwei Schritte.
+
+44
+00:05:09,600 --> 00:05:18,760
+1. Satinkolumne auswählen, 'Erweiterungen > Ink/Stitch > Deutsch > Befehle > Befehle mit gewählten Objekten verknüpfen...'
+
+45
+00:05:18,760 --> 00:05:22,980
+aktiviere "Satin Schnittpunkt" und klicke auf "Anwenden".
+
+46
+00:05:24,580 --> 00:05:29,340
+Bewege das Symbol zu genau dem Punkt, an dem die Satinkolumne geschnitten werden soll.
+
+47
+00:05:30,120 --> 00:05:33,220
+Sie wird dort geschnitten, wo der Zeiger auf einen Holm trifft.
+
+48
+00:05:37,060 --> 00:05:43,400
+2. Führe dann die Funktion "Erweiterungen > Ink/Stitch > Deutsch > Satin Werkzeuge > Satinkolumne schneiden" aus.
+
+49
+00:05:48,500 --> 00:05:55,020
+Damit das funktioniert, muss in den Parametern bereits die Satinkolumne aktiviert sein.
+
+50
+00:06:09,480 --> 00:06:15,440
+"Konturen der Satinkolumne umkehren" ist ein Werkzeug, dass zur genauen Planung des Stickpfades dient.
+
+51
+00:06:15,440 --> 00:06:25,160
+Eine Satinkolumne, die ursprünglich auf dem linken Holm startet und auf dem rechten endet, startet anschließend auf dem rechten und endet auf dem linken.
+
+52
+00:06:25,820 --> 00:06:30,980
+Das kann Verbindungen zwischen aufeinanderfolgenden Objekten verkürzen.
+
+53
+00:06:34,880 --> 00:06:44,800
+Wähle eine Satinkolumne aus und führe 'Erweiterungen > Ink/Stitch > Deutsch > Satin Werkzeuge > Konturen der Satinkolumne umkehren' aus.
+
+54
+00:07:05,140 --> 00:07:10,800
+Die Planung der Reihenfolge und Verbindungen der einzelnen Stickobjekte kann sehr zeitraubend sein.
+
+55
+00:07:11,240 --> 00:07:16,560
+Deshalb stellt Ink/Stitch ein Werkzeug zur Verfügung, dass viel von dieser Arbeit übernimmt.
+
+56
+00:07:17,120 --> 00:07:22,860
+"Automatisch geführte Satinkolumnen..." sortiert deine Satinkolumnen in logischer Reihenfolge.
+
+57
+00:07:24,240 --> 00:07:29,180
+Es generiert versteckte Laufstiche und Sprungmarken, sofern notwendig.
+
+58
+00:07:29,560 --> 00:07:35,040
+Einzelne Satinkolumnen können auch geteilt werden, um Sprungstiche zu vermeiden.
+
+59
+00:07:39,740 --> 00:07:46,920
+Resultierende Satinkolumnen behalten alle zuvor gesetzten Parametereinstellungen bei.
+
+60
+00:07:47,340 --> 00:07:52,460
+Wähle Satinkolumnen mit gesetzten Parametern aus (mit Unterlage, etc.).
+
+61
+00:07:52,840 --> 00:07:59,460
+Öffne "Erweiterungen > Ink/Stitch > Deutsch > Satin Werkzeuge > Automatisch geführte Satinkolumnen..."
+
+62
+00:07:59,600 --> 00:08:03,060
+Aktiviere die gewünschten Optionen und klicke auf "Anwenden".
+
+63
+00:08:25,340 --> 00:08:31,020
+Du kannst sogar einen Start- und Endpunkt für die neugeordneten Satinkolumnen
+
+64
+00:08:31,060 --> 00:08:37,620
+mit Hilfe der Befehle "Startposition automatisch geführter Satinkolumnen" und "Endposition automatisch geführter Satinkolumnen" definieren.
+
+65
+00:08:56,400 --> 00:09:03,060
+Sollte dieser Teil zu schnell gegangen sein, empfehlen wir das Video "Visual Commands".
+
+66
+00:09:12,040 --> 00:09:18,340
+Schauen wir uns einmal den Parameter-Dialog genauer an.
+
+67
+00:09:18,340 --> 00:09:21,380
+"Benutzerdefinierte Satinkolumne" muss aktiviert sein.
+
+68
+00:09:21,940 --> 00:09:28,420
+Satin-Stiche ziehen den Stoff zusammen, was in einer Satinkolumne resultiert, die schmaler ist, als sie ursprünglich in Inkscape geplant wurde.
+
+69
+00:09:29,020 --> 00:09:33,400
+Mit der Einstellung "Zugausgleich" kannst du die Satinkolumne wieder erweitern.
+
+70
+00:09:33,400 --> 00:09:40,640
+Du wirst experimentieren müssen, wie will Ausgleich nötig ist. Das ist Abhängig z.B. vom Stoff, Faden und Stickflies.
+
+71
+00:09:41,140 --> 00:09:45,940
+"Zick-Zack Abstand" definiert die Dichte deiner Satinkolumne.
+
+72
+00:09:45,940 --> 00:09:49,420
+Jetzt haben wir viel über die Satinkolumne an sich gesprochen.
+
+73
+00:09:49,420 --> 00:09:53,680
+Aber ein sehr wichtiger Teil fehlt noch immer: die Unterlage.
+
+74
+00:09:54,120 --> 00:09:57,360
+Ink/Stitch unterstützt drei Arten von Unterlage.
+
+75
+00:09:57,800 --> 00:10:04,160
+Für breite Kolumnen oder herausfordernde Stoffe, kann man sogar alle drei Arten gleichzeitig benutzen.
+
+76
+00:10:09,280 --> 00:10:15,840
+Das ist eine Reihe von Laufstichen in der Mitte der Kolumne, vor und zurück.
+
+77
+00:10:16,160 --> 00:10:20,140
+Das kann für schmale Satinkolumnen schon ausreichend sein.
+
+78
+00:10:20,580 --> 00:10:25,100
+Du kannst es auch auch Grundlage für umfangreichere Unterlagen verwenden.
+
+79
+00:10:29,260 --> 00:10:36,760
+Das ist eine Reihe von Laufstichen, entlang innerhalb der Ränder der Satinkolumne.
+
+80
+00:10:36,980 --> 00:10:44,080
+Die Reihen sind eingerückt von dem Rand der Kolumne um einen definierbaren Wert.
+
+81
+00:10:44,480 --> 00:10:50,680
+Für Satinkolumnen mit kleiner oder mittlerer Breite kann die Kontur-Unterlage eigenständig stehen.
+
+82
+00:10:56,320 --> 00:11:05,280
+Das ist im Grunde genommen ein Satinstich mit geringer Dichte, die einmal unter der Satinkolumne hin und zurück gestickt wird.
+
+83
+00:11:11,640 --> 00:11:18,460
+Der meistgenutzte Zweck für E-Stich ist ein einfacher, aber fester Deckstich für Applikationen.
+
+84
+00:11:18,460 --> 00:11:23,220
+Hauptsächlich für Baby-Kleidung, da ihre Haut empfindlicher ist.
+
+85
+00:11:26,480 --> 00:11:30,120
+E-Stitch wird genauso erstellt wie eine Satinkolumne.
+
+86
+00:11:38,280 --> 00:11:44,740
+Aber im Parameter-Dialog wird zusätzlich die E-Stich-Option aktiviert. Der Zick-Zack-Abstand sollte erhöht werden.
+
+87
+00:11:44,740 --> 00:11:47,740
+Eine Unterlage ist für diese Stichart hinfällig.
+
+88
+00:11:48,360 --> 00:11:55,620
+Sollten die Enden in die falsche Richtung zeigen, benutze einfach das "Konturen der Satinkolumne umkehren"-Werkzeug, wie wir es vorhin beschrieben haben.
+
+89
+00:11:58,200 --> 00:12:03,360
+Wir hoffen, dir hat das Tutorial gefallen und du hast einen Überblick über die Funktionen für Satinkolumnen erhalten.
+
+90
+00:12:03,360 --> 00:12:09,060
+Vielleicht sind auch noch die Videos über linienartige Sticharten und Füllstiche für dich interessant.
+
