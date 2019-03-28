@@ -4,373 +4,373 @@ Willkommen zur den Ink/Stitch Anfänger-Tutorials.
 
 2
 00:00:11,760 --> 00:00:15,660
-In this part we are going to learn how to display your design
+In diesem Teil lernen wir die verschiedenen Darstellungsmöglichkeiten für das Design kennen
 
 3
 00:00:16,120 --> 00:00:21,040
-and finally save it into an embroidery format that your machine can read.
+und speichern es schließlich in einem Format für Stickdateien ab.
 
 4
 00:00:27,680 --> 00:00:33,280
-Whenever you are running the params dialogue in Ink/Stitch you will see the simulator.
+Immer, wenn du den Parameter-Dialog in Ink/Stitch aufrufst, siehst du den Simulator.
 
 5
 00:00:33,960 --> 00:00:40,220
-This is very important while planing your design, since you can visually see the changes as you make them.
+Das ist sehr wichtig, während du dein Motiv planst. So kannst du alle Änderungen direkt visuell erfassen.
 
 6
 00:00:40,600 --> 00:00:44,440
-The simulator can also run without the params dialogue.
+Der Simulator kann auch ohne den Parameter-Dialog genutzt werden.
 
 7
 00:00:44,720 --> 00:00:50,840
-In the customize tutorial we created a shortcut to open it with Ctrl+Shift+L,
+Im "Customize"-Tutorial haben wir dafür ein Tastenkürzel erstellt: "Strg + Umstelltaste + L",
 
 8
 00:00:51,220 --> 00:00:55,720
-but this is a custom shortcut key and not available by default.
+aber dieses Kürzel ist nicht standardmäßig nutzbar.
 
 9
 00:00:56,460 --> 00:01:03,540
-If you don't have the shortcut key set, open the simulator through "Extensions > Ink/Stitch > English > Simulator".
+Wenn du kein Tastenkürzel gesetzt hast, öffnest du den Simulator über "Erweiterungen > Ink/Stitch > Deutsch > Simulation".
 
 10
 00:01:03,760 --> 00:01:09,540
-It will simulate selected objects, or - if none is selected - the whole design.
+Er wird ausgewählte Objekte animieren, oder - wenn keiner ausgewählt ist - das gesamte Design.
 
 11
 00:01:09,960 --> 00:01:18,220
-You can speed up and slow down the simulation with arrow up and arrow down or by using the corresponding buttons.
+Du kannst du Animation mit der aufwärts-Pfeiltaste beschleunigen und mit der abwärts-Pfeiltaste verlangsamen oder die entsprechenden grafischen Knöpfe verwenden.
 
 12
 00:01:18,220 --> 00:01:23,980
-You can swith the playback to be backwards or forwards with arrow left or right.
+Die Animation kann vorwärts oder rückwärts abgespielt werden. Die Richtung ändert man mit den links/rechts Pfeiltasten.
 
 13
 00:01:23,980 --> 00:01:27,600
-Pause and restart the animation with the space bar.
+Die Animation wird pausiert und neugestartet mit der Leertaste.
 
 14
 00:01:31,340 --> 00:01:35,620
-Move the animation step by step with plus or minus.
+Schritt für Schritt Bewegungen können über die Plus- und Minustasten gesteuert werden.
 
 15
 00:01:35,980 --> 00:01:38,880
-Restart the animation with "R".
+Ein Neustart der Animation erfolgt über die Taste "R".
 
 16
 00:01:39,280 --> 00:01:42,840
-You can also grab the slider and move it to an other position
+Du kannst auch den Schieberegler benutzen, um zu einer anderen Position zu navigieren,
 
 17
 00:01:45,340 --> 00:01:49,000
-or jump to an specific point by entering a number.
+oder einen bestimmten Punkt über das Nummernfeld anspringen.
 
 18
 00:01:49,540 --> 00:01:52,680
-You should pause the simulaton before doing so.
+Die Animation sollte dafür pausiert werden.
 
 19
 00:01:53,640 --> 00:01:58,000
-During the animation you can see the current speed in the status bar,
+Während der Animation kannst du die derzeitige Geschwindigkeit in der Statusleiste ablesen,
 
 20
 00:01:58,000 --> 00:02:04,800
-beside of the information if the current command is fe. a stitch, trim or stop command.
+neben der Information, ob der aktuelle Befehl z.B. ein Stich, Fadenschneide- oder Stopp-Befehl ist.
 
 21
 00:02:05,140 --> 00:02:08,640
-When you are done, close the simulator with "Q".
+Wenn du fertig bist, schließe den Simulator mit "Q".
 
 22
 00:02:14,720 --> 00:02:20,700
-While the simulator is very useful, you sometimes will need to see a realistic preview of your design.
+Während der Simulator sehr nützlich ist, willst du manchmal eine realistische Vorschau für dein Design benötigen.
 
 23
 00:02:20,700 --> 00:02:26,040
-This way you can get a better impression of your stitch length settings, etc.
+So kannst du einen besseren Eindruck über z.B. die Stichlänge usw. erhalten.
 
 24
 00:02:26,040 --> 00:02:30,820
-In Ink/Stitch you will have access to a realistic preview through the print function.
+Ink/Stitch stellt die realistische Vorschau über die Druckfunktion zur Verfügung.
 
 25
 00:02:30,820 --> 00:02:34,600
-The print function will open in your default browser.
+Die Druckfunktion öffnet sich in deinem Standardbrowser.
 
 26
 00:02:34,600 --> 00:02:38,540
-Run "Extensions > Ink/Stitch > English > Print".
+Du erreichst sie über "Erweiterung > Ink/Stitch > Deutsch > Drucken".
 
 27
 00:02:39,000 --> 00:02:43,960
-The print sheet that you will see is meant to be used either by operator or customer.
+Es gibt Druck-Layouts für Anwender und Klienten.
 
 28
 00:02:43,960 --> 00:02:48,880
-But before we look into these options we want to discover the realistic preview.
+Aber bevor wir uns diese Optionen anschauen, wollen wir die realistische Vorschau entdecken.
 
 29
 00:02:48,880 --> 00:02:51,780
-Move your mouse over the embroidery image.
+Bewege die Maus über ein Vorschaubild.
 
 30
 00:02:52,100 --> 00:02:56,740
-On the bottom of the canvas you will see different options to scale the design.
+Am unteren Rand des Rahmens erscheinen verschiedene Optionen, um die Größe zu ändern.
 
 31
 00:02:56,740 --> 00:03:01,820
-You can also hit Ctrl and scroll the mouse-wheel to scale it up and down.
+Es ist auch möglich mit der Strg-Taste und dem Mausrad die Größe anzupassen.
 
 32
 00:03:01,820 --> 00:03:06,100
-With the left mouse button you can grab it and move it somewhere else.
+Mit der linken Maustaste kann das Bild gegriffen und bewegt werden.
 
 33
 00:03:06,100 --> 00:03:10,260
-"Fit" will scale the design to fit into the canvas.
+Die Option "An Fenstergröße anpassen" skaliert das Motiv entsprechend der Rahmengröße.
 
 34
 00:03:10,660 --> 00:03:13,920
-100% will scale it to real size.
+100% zeigt die tatsächliche Größe.
 
 35
 00:03:14,560 --> 00:03:22,480
-Once you are satisfied with scaling and position you can apply the transforms to all other pages where the design is displayed.
+Wenn du mit der Einstellung zufrieden bist, kannst du Skalierung und Position auf alle anderen Seiten übertragen.
 
 36
 00:03:23,020 --> 00:03:29,120
-Finally we enable the "Realistic" checkbox. It may take a while before it is being displayed.
+Jetzt aktivieren wir das Kontrollkästchen "Realistische Vorschau". Es kann eine Weile dauern, bevor sie angezeigt wird.
 
 37
 00:03:32,160 --> 00:03:36,120
-Now let's have a look into the other settings in the print sheet.
+Werfen wir einen Blick auf die anderen Einstellungen der Druckausgabe.
 
 38
 00:03:36,120 --> 00:03:38,120
-Go to settings.
+Öffne "Einstellungen".
 
 39
 00:03:38,220 --> 00:03:41,260
-First you will see basic page setup options.
+Als erstes sehen wir die "Dokumenteinstellungen".
 
 40
 00:03:41,580 --> 00:03:47,640
-Depending on your country you will want to choose either "Letter" or "A4" paper format.
+Abhängig von deinem Land wählst du entweder "Letter" oder "A4" als Papierformat.
 
 41
 00:03:47,640 --> 00:03:53,800
-Then you have different layout options, depending on the purpose you want to use the print-out for.
+Dann gibt es verscheidene Layout-Optionen, abhängig von dem Zweck für den der Ausdruck bestimmt ist.
 
 42
 00:04:02,820 --> 00:04:06,680
-The operator detailed view comes with an other option,
+Die Detailansicht im Ausführungslayout bringt eine weitere Option mit sich,
 
 43
 00:04:06,840 --> 00:04:11,160
-where you can define the size of the thumbnails through a slider.
+dort kannst du über einen Schieberegler die Größe der Vorschaubilder bestimmen.
 
 44
 00:04:11,740 --> 00:04:15,300
-In the branding tab you can change the page header logo.
+Im Reiter "Branding" kannst du das Logo im Kopfbereich festlegen
 
 45
 00:04:15,620 --> 00:04:20,280
-And enter your contact information which will be displayed in the page footer.
+und Kontaktinformationen eingeben, die im Fußbreich der Seiten angezeigt werden.
 
 46
 00:04:20,760 --> 00:04:23,240
-Open the estimated time tab.
+Öffne den Reiter "Vorraussichtliche Dauer".
 
 47
 00:04:23,460 --> 00:04:32,500
-Here you can specify information about your machine and workflow to roughly calculate the time that will be needed to stitch out the design.
+Hier können Informationen über die Maschine und den Arbeitsablauf spezifiziert werden, um eine grobe Zeitabschätzung für den Stickvorgang zu berechnen.
 
 48
 00:04:32,700 --> 00:04:37,320
-You might not want this information to be displayed on every layout type.
+Vielleicht möchtest du diese Information nicht auf jeder Seite anzeigen.
 
 49
 00:04:37,320 --> 00:04:40,560
-Disable those, where it shouldn't appear.
+Deaktiviere die entsprechenden Layouts.
 
 50
 00:04:41,660 --> 00:04:44,940
-In the design tab you can change the thread palette.
+Im Reiter "Desin" können Garnpaletten umgestellt werden.
 
 51
 00:04:45,360 --> 00:04:49,260
-If you used palettes while editing your design in Inkscape,
+Wenn du bereits beim Entwurf in Inkscape Garnpaketten benutzt hast,
 
 52
 00:04:49,720 --> 00:04:53,300
-the print preview will already use these colors.
+werden die entsprechenden Farben bereits in der Druckvorschau verwendet.
 
 53
 00:04:53,500 --> 00:05:00,060
-In other cases or if you want to change the displayed thread palette you can edit the setting here.
+Andernfalls kannst du die Einstellung hier ändern.
 
 54
 00:05:00,380 --> 00:05:06,100
-All colors in the design will be recalculated and previous changes will be lost.
+Alle Farben des Motivs werden neuberechnet und vorherige Änderungen gehen verloren.
 
 55
 00:05:06,400 --> 00:05:13,660
-Page Setup, Branding and Estimated Time settings can be saved as defaults and be used for every new design.
+Einstellungen in "Dokumenteinstellungen", "Branding" und "vorraussichtliche Dauer" können als Standardeinstellungen gespeichert werden.
 
 56
 00:05:13,880 --> 00:05:18,480
-Close the settings dialogue and have a look to the page header.
+Schließe das Fenster und schaue dir den Kopfbereich der Seite an.
 
 57
 00:05:18,980 --> 00:05:23,560
-You will see fields indicating that you can enter custom text.
+Hier gibt es Felder, in eine Texteingabe erlauben.
 
 58
 00:05:23,840 --> 00:05:30,540
-So you can define a title for this particular design, enter the clients name and purchase order.
+Auf diese Weise kannst du den Titel für das aktuelle Motiv eingeben, den Namen des Kunden und die Auftragsnummer.
 
 59
 00:05:30,540 --> 00:05:36,120
-On detailed views you can also change the thread and color name manually.
+In den Detailansichten können auch Garn- und Farbnamen manuell eingegeben werden.
 
 60
 00:05:46,300 --> 00:05:52,260
-The operator detailed view also has a field for custom notes for each thread.
+Das Dateil-Layout für Anwender bietet auch für jeden Farbabschnitt ein Feld für Notizen.
 
 61
 00:05:55,440 --> 00:05:59,340
-When you are done with all settings use the print button.
+Wenn du alle Einstellungen vorgenommen hast, benutze die Funktion "Drucken".
 
 62
 00:05:59,780 --> 00:06:10,040
-You can print it with your printer, but in most cases you would want to print to PDF, so you can send the PDF-file to your customer or operator.
+Du kannst das Dokument mit dem Drucker drucken, aber in den meisten Fällen wirst du das PDF-Format nutzen wollen und dann die Datei an den Enverbraucher verschicken.
 
 63
 00:06:10,380 --> 00:06:20,020
-When everything is done, click on the close button to regain access to Inkscape, which has been locked while you were editing the print preview.
+Wenn der Vorgang abgeschlossen ist, klicke auf "Schließen", um zu Inkscape zurückzukehren.
 
 64
 00:06:20,380 --> 00:06:26,860
-All settings you've made in the print preview will be saved into the SVG file,
+Alle Einstellungen die in der Druckvorschau vorgenommen wurden, werden in das SVG-Dokument gespeichert.
 
 65
 00:06:26,940 --> 00:06:32,100
-so you don't have to do everything twice in case you want to change your design.
+Auf diese Weise muss nicht alles doppelt eingegeben werden, solltest du Änderungen am Motiv vornehmen.
 
 66
 00:06:37,120 --> 00:06:43,800
-Embroider is an older function which has been very important before the simulator existed.
+"Sticken..." ist ein ältere Funktion, die eine besondere Bedeutung hatte, bevor es den Simulator gab.
 
 67
 00:06:43,800 --> 00:06:50,080
-With the new functionality you will rarely be using it. But still there might be possible usecases.
+Jetzt wirst du diese Funktion nur noch selten nutzen. Aber es mag immer noch mögliche Anwendungsfälle geben.
 
 68
 00:06:50,960 --> 00:06:56,000
-Open "Extensions > Ink/Stitch > English > Embroider"
+Öffne "Erweiterungen > Ink/Stitch > Deutsch > Sticken..."
 
 69
 00:06:56,360 --> 00:07:00,060
-The dialogue comes with a few options.
+Das Dialogfenster kommt mit ein paar Optionen.
 
 70
 00:07:00,060 --> 00:07:04,400
-You will want to set the output file format to one,
+Wähle als Ausgabeformat eines,
 
 71
 00:07:04,580 --> 00:07:06,700
-that your machine can read.
+das deine Maschine lesen kann.
 
 72
 00:07:08,060 --> 00:07:10,340
-If you leave "Directory" empty,
+Wenn du das Feld "Verzeichnis" leer lässt,
 
 73
 00:07:10,520 --> 00:07:15,340
-the output file will be saved in the Inkscape's extensions directory.
+wird die ausgegebene Datei in dem Erweiterungen-Verzeichnis von Inkscape gespeichert.
 
 74
 00:07:16,400 --> 00:07:19,360
-You might want to change this. Enter a path.
+Dieses Verhalten möchtest du vielleicht ändern. Gebe eine Pfad ein.
 
 75
 00:07:19,740 --> 00:07:24,260
-When you hit "Apply" Ink/Stitch will perform two actions:
+Wenn du auf "Anwenden" klickst, führt Ink/Stitch zwei Aktionen aus:
 
 76
 00:07:24,640 --> 00:07:28,140
-It will save an embroidery file on your computer
+Es speichert eine Stickdatei auf deinem Komputer
 
 77
 00:07:28,540 --> 00:07:36,560
-It will display the output in Inkscape - while hiding all other layers if the option was enabled in the embroider dialogue.
+Es stellt die Stickmuster-Ausgabe in Inkscape dar - und versteckt alle anderen Ebenen (sofern diese Option im "Sticken..."-Dialog aktiviert war).
 
 78
 00:07:36,920 --> 00:07:41,400
-Now you can inspect and modify the output in Inkscape.
+Jetzt kannst du das Ergebnis in Inkscape untersuchen und verändern.
 
 79
 00:07:41,600 --> 00:07:46,920
-The so newly created path is a stroke with manual stitch placement enabled.
+Der neu eingefügte Pfad ist eine Linie im manuellen Stich-Modus.
 
 80
 00:07:52,340 --> 00:07:59,500
-A more comfortable way to export to an embroidery file is to use the "File > Save as..." export function.
+Ein etwas komfortablerer Weg eine Stickdatei zu speichern ist, es über "Datei > Speichern unter..." zu tun.
 
 81
 00:07:59,500 --> 00:08:03,180
-Here you can choose the file format for your machine.
+Hier kannst du das richtige Dateiformat für deine Maschine wählen.
 
 82
 00:08:03,680 --> 00:08:10,020
-All file format names start with Ink/Stitch, so you can easily find them in the list.
+Alle Format-Namen für Stickdateien beginnen mit "Ink/Stich", so ist es einfach sie in der Liste zu finden.
 
 83
 00:08:11,720 --> 00:08:14,580
-Enter the filename and click on "Save".
+Gebe einen Dateinamen ein und klicke auf "Speichern".
 
 84
 00:08:25,820 --> 00:08:30,740
-Don't forget to also save your design in the SVG file format,
+Vergiss nicht, die Datei ebenfalls im SVG-Dateiformat zu speichern,
 
 85
 00:08:30,740 --> 00:08:34,660
-just in case you want to perform changes at a later time.
+nur für den Fall, dass du später noch Änderungen vornehmen willst.
 
 86
 00:08:41,540 --> 00:08:45,200
-You can also open embroidery files with Ink/Stitch.
+Du kannst Mit Ink/Stitch auch Stickdateien öffnen.
 
 87
 00:08:45,420 --> 00:08:51,260
-Just right click on the file in your file browser and choose "Open with > Inkscape".
+Klicke mit der rechten Maustaste auf die Datei in deinem Datei-Browser und wähle "Öffnen mit > Inkscape".
 
 88
 00:09:10,360 --> 00:09:14,480
-An other possibility would be to open Inkscape
+Eine andere Möglichkeit wäre, Inkscape zu öffnen
 
 89
 00:09:14,640 --> 00:09:20,900
-and go to "File > Open...", choose your file in the dialgoue and click on "Open".
+und über "Datei > Öffnen..." die entsprechende Datei auswählen und auf "Öffnen" klicken.
 
 90
 00:09:21,500 --> 00:09:27,360
-Imported embroidery files will be displayed as a stroke in manual stitch mode.
+Importierte Stickdateien werden immer als als Linien im manuellen Stick-Modus dargestellt.
 
 91
 00:09:27,360 --> 00:09:33,300
-For certain file formats like "dst" colors may vary from your expectations,
+Bei einigen Dateiformaten, wie beispielsweise "dst", kann die die Farbdarstellung von den Erwartungen abweichen,
 
 92
 00:09:33,300 --> 00:09:36,440
-because they cannot save color information.
+diese Dateiformate können keine Farbinformation abspeichern.
 
 93
 00:09:36,840 --> 00:09:41,880
-We hope you enjoyed the tutorial. Now you have seen all the Ink/Stitch functions.
+Wir hoffen, dass dir das Tutorial gefallen hat. Jetzt hast du alle Funktionen von Ink/Stitch kennengelernt.
 
 94
 00:09:42,120 --> 00:09:47,540
-In the next video we will demonstrate a typical workflow and put all the pieces together.
+Im nächsten Video zeigen wir einen typischen Arbeitsablauf und fügen so alle Teile zusammen.
 
