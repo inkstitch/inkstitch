@@ -1,17 +1,27 @@
+import atexit
 from datetime import datetime
 import os
 import socket
 import sys
 import time
 
+from inkex import etree
+import inkex
+from simplestyle import formatStyle
+
+from svg import line_strings_to_path
+from svg.tags import INKSCAPE_GROUPMODE, INKSCAPE_LABEL
+
 
 class Debug(object):
     def __init__(self):
         self.last_log_time = None
+        self.current_layer = None
 
     def enable(self):
         self.enable_log()
         self.enable_debugger()
+        self.enable_svg()
 
     def enable_log(self):
         self.log = self._log
@@ -48,6 +58,23 @@ class Debug(object):
 
             sys.stderr = stderr
 
+    def enable_svg(self):
+        self.svg = etree.Element("svg", nsmap=inkex.NSS)
+        atexit.register(self.save_svg)
+
+    def save_svg(self):
+        tree = etree.ElementTree(self.svg)
+        with open(os.path.join(os.path.dirname(os.path.dirname(__file__)), "debug.svg"), "w") as debug_svg:
+            tree.write(debug_svg)
+
+    def add_layer(self, name="Debug"):
+        layer = etree.Element("g", {
+            INKSCAPE_GROUPMODE: "layer",
+            INKSCAPE_LABEL: name
+        })
+        self.svg.append(layer)
+        self.current_layer = layer
+
     def _noop(self, *args, **kwargs):
         pass
 
@@ -78,6 +105,21 @@ class Debug(object):
             return result
 
         return decorated
+
+    def log_svg_element(self, element):
+        if self.current_layer is None:
+            self.add_layer()
+
+        self.current_layer.append(element)
+
+    def log_line_string(self, line_string, color="#000000"):
+        """Add a Shapely LineString to the SVG log."""
+        self.log_line_strings(self, [line_string])
+
+    def log_line_strings(self, line_strings, color="#000000"):
+        path = line_strings_to_path(line_strings)
+        path.set('style', formatStyle({"stroke": color, "stroke-width": "0.3"}))
+        self.log_svg_element(path)
 
 
 debug = Debug()
