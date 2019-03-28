@@ -7,6 +7,7 @@ import networkx
 from shapely import geometry as shgeo
 from shapely.strtree import STRtree
 
+from ..debug import debug
 from ..exceptions import InkstitchException
 from ..i18n import _
 from ..svg import PIXELS_PER_MM
@@ -44,6 +45,7 @@ class PathEdge(object):
         return self.key == self.SEGMENT_KEY
 
 
+@debug.time
 def auto_fill(shape,
               angle,
               row_spacing,
@@ -94,6 +96,7 @@ def project(shape, coords, outline_index):
     return outline.project(shgeo.Point(*coords))
 
 
+@debug.time
 def build_fill_stitch_graph(shape, angle, row_spacing, end_row_spacing):
     """build a graph representation of the grating segments
 
@@ -191,6 +194,7 @@ def add_edges_between_outline_nodes(graph):
             graph.add_edge(node1, node2, key="outline", **data)
 
 
+@debug.time
 def build_travel_graph(fill_stitch_graph, shape, fill_stitch_angle, underpath):
     """Build a graph for travel stitches.
 
@@ -299,6 +303,7 @@ def nearest_node(nodes, point, attr=None):
     return nearest
 
 
+@debug.time
 def find_stitch_path(graph, travel_graph, starting_point=None, ending_point=None):
     """find a path that visits every grating segment exactly once
 
@@ -449,6 +454,7 @@ def travel(travel_graph, start, end, running_stitch_length, skip_last):
         return stitches[1:]
 
 
+@debug.time
 def path_to_stitches(path, travel_graph, fill_stitch_graph, angle, row_spacing, max_stitch_length, running_stitch_length, staggers, skip_last):
     path = collapse_sequential_outline_edges(path)
 
