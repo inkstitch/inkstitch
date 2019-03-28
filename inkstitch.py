@@ -7,6 +7,7 @@ from argparse import ArgumentParser
 
 from lib import extensions
 from lib.utils import save_stderr, restore_stderr
+import lib.debug as debug
 
 
 logger = logging.getLogger('shapely.geos')
@@ -34,16 +35,7 @@ parser.add_argument("--extension")
 my_args, remaining_args = parser.parse_known_args()
 
 if os.path.exists(os.path.join(os.path.dirname(os.path.realpath(__file__)), "DEBUG")):
-    # How to debug Ink/Stitch:
-    #
-    # 1. Install LiClipse (liclipse.com) -- no need to install Eclipse first
-    # 2. Start debug server as described here: http://www.pydev.org/manual_adv_remote_debugger.html
-    #    * follow the "Note:" to enable the debug server menu item
-    # 3. Create a file named "DEBUG" next to inkstitch.py in your git clone.
-    # 4. Run any extension and PyDev will start debugging.
-
-    import pydevd
-    pydevd.settrace()
+    debug.enable()
 
 extension_name = my_args.extension
 
