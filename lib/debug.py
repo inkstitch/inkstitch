@@ -1,4 +1,5 @@
 import atexit
+from contextlib import contextmanager
 from datetime import datetime
 import os
 import socket
@@ -80,7 +81,8 @@ class Debug(object):
     def add_layer(self, name="Debug"):
         layer = etree.Element("g", {
             INKSCAPE_GROUPMODE: "layer",
-            INKSCAPE_LABEL: name
+            INKSCAPE_LABEL: name,
+            "style": "display: none"
         })
         self.svg.append(layer)
         self.current_layer = layer
@@ -171,6 +173,17 @@ class Debug(object):
             self.log_line(edge[0], edge[1], color=color)
 
         self.close_group()
+
+    @contextmanager
+    def time_this(self, label="code block"):
+        if self.enabled:
+            start = time.time()
+            self.raw_log("begin %s", label)
+
+        yield
+
+        if self.enabled:
+            self.raw_log("completed %s, duration = %s", label, time.time() - start)
 
 
 debug = Debug()

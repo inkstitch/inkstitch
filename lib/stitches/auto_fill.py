@@ -5,6 +5,7 @@ import math
 
 import networkx
 from shapely import geometry as shgeo
+from shapely.ops import snap
 from shapely.strtree import STRtree
 
 from ..debug import debug
@@ -146,21 +147,7 @@ def build_fill_stitch_graph(shape, angle, row_spacing, end_row_spacing):
         graph.add_edge(*segment, key="segment", underpath_edges=[])
 
     tag_nodes_with_outline_and_projection(graph, shape, graph.nodes())
-
-    for node in graph.nodes():
-        outline_index = which_outline(shape, node)
-        outline_projection = project(shape, node, outline_index)
-
-        # Tag each node with its index and projection.
-        graph.add_node(node, index=outline_index, projection=outline_projection)
-
-    add_edges_between_outline_nodes(graph)
-
-    for node1, node2, key, data in graph.edges(keys=True, data=True):
-        if key == "outline":
-            # duplicate every other edge
-            if data['index'] % 2 == 0:
-                graph.add_edge(node1, node2, key="extra")
+    add_edges_between_outline_nodes(graph, duplicate_every_other=True)
 
     debug.log_graph(graph, "graph")
 
@@ -175,7 +162,7 @@ def tag_nodes_with_outline_and_projection(graph, shape, nodes):
         graph.add_node(node, outline=outline_index, projection=outline_projection)
 
 
-def add_edges_between_outline_nodes(graph):
+def add_edges_between_outline_nodes(graph, duplicate_every_other=False):
     """Add edges around the outlines of the graph, connecting sequential nodes.
 
     This function assumes that all nodes in the graph are on the outline of the
@@ -197,6 +184,9 @@ def add_edges_between_outline_nodes(graph):
             data = dict(outline=outline_index, index=i)
             graph.add_edge(node1, node2, key="outline", **data)
 
+            if i % 2 == 0:
+                graph.add_edge(node1, node2, key="extra", **data)
+
 
 @debug.time
 def build_travel_graph(fill_stitch_graph, shape, fill_stitch_angle, underpath):
@@ -210,14 +200,15 @@ def build_travel_graph(fill_stitch_graph, shape, fill_stitch_angle, underpath):
     edges.
 
     If underpath is True, we'll also allow travel inside the shape.  We'll
-    fill the shape with a cross-hatched grid of lines 2mm apart, at ±45
-    degrees from the fill stitch angle.  This will ensure that travel stitches
-    won't be visible and won't disrupt the fill stitch.
+    fill the shape with a cross-hatched grid of lines.  We'll construct a
+    graph from them and use a shortest path algorithm to construct travel
+    stitch paths in travel().
 
     When underpathing, we "encourage" the travel() function to travel inside
     the shape rather than on the boundary.  We do this by weighting the
     boundary edges extra so that they're more "expensive" in the shortest path
-    calculation.
+    calculation.  We also weight the interior edges extra proportional to
+    how close they are to the boundary.
     """
 
     graph = networkx.MultiGraph()
@@ -228,33 +219,23 @@ def build_travel_graph(fill_stitch_graph, shape, fill_stitch_angle, underpath):
     graph.add_nodes_from(fill_stitch_graph.nodes(data=True))
 
     if underpath:
-        # These two MultiLineStrings will make up the cross-hatched grid.
-        grating1 = shgeo.MultiLineString(list(chain(*intersect_region_with_grating(shape, fill_stitch_angle + math.pi / 4, 2 * PIXELS_PER_MM))))
-        grating2 = shgeo.MultiLineString(list(chain(*intersect_region_with_grating(shape, fill_stitch_angle - math.pi / 4, 2 * PIXELS_PER_MM))))
+        boundary_points, travel_edges = build_travel_edges(shape, fill_stitch_angle)
 
-        debug.add_layer("auto-fill travel")
-        debug.log_line_strings(grating1, "grating1")
-        debug.log_line_strings(grating2, "grating2")
-
-        # We'll add the endpoints of the crosshatch grating lines too  These
-        # will all be on the outline of the shape.  This will ensure that a
-        # path traveling inside the shape can reach its target on the outline,
-        # which will be one of the points added above.
-        endpoints = [coord for mls in (grating1, grating2)
-                     for ls in mls
-                     for coord in ls.coords]
-        tag_nodes_with_outline_and_projection(graph, shape, endpoints)
+        # This will ensure that a path traveling inside the shape can reach its
+        # target on the outline, which will be one of the points added above.
+        tag_nodes_with_outline_and_projection(graph, shape, boundary_points)
 
     add_edges_between_outline_nodes(graph)
-    for start, end, key in graph.edges:
-        p1 = InkstitchPoint(*start)
-        p2 = InkstitchPoint(*end)
-
-        # Set the weight equal to 10x the edge length, to encourage travel()
-        # to avoid them when underpathing is enabled.
-        graph[start][end][key]["weight"] = 10 * p1.distance(p2)
 
     if underpath:
+        for start, end, key in graph.edges:
+            p1 = InkstitchPoint(*start)
+            p2 = InkstitchPoint(*end)
+
+            # Set the weight equal to 10x the edge length, to encourage travel()
+            # to avoid them.
+            graph[start][end][key]["weight"] = 10 * p1.distance(p2)
+
         segments = []
         for start, end, key, data in fill_stitch_graph.edges(keys=True, data=True):
             if key == 'segment':
@@ -264,14 +245,17 @@ def build_travel_graph(fill_stitch_graph, shape, fill_stitch_angle, underpath):
         # allows for building a set of shapes and then efficiently testing
         # the set for intersection.  This allows us to do blazing-fast
         # queries of which line segments overlap each underpath edge.
-        rtree = STRtree(segments)
+        strtree = STRtree(segments)
 
-        interior_edges = grating1.symmetric_difference(grating2)
-        for ls in interior_edges.geoms:
+        # This makes the distance calculations below a bit faster.  We're
+        # not looking for high precision anyway.
+        outline = shape.boundary.simplify(0.5 * PIXELS_PER_MM, preserve_topology=False)
+
+        for ls in travel_edges:
             p1, p2 = [InkstitchPoint(*coord) for coord in ls.coords]
             edge = (p1.as_tuple(), p2.as_tuple(), 'travel')
 
-            for segment in rtree.query(ls):
+            for segment in strtree.query(ls):
                 start, end = segment.coords
                 fill_stitch_graph[start][end]['segment']['underpath_edges'].append(edge)
 
@@ -282,18 +266,65 @@ def build_travel_graph(fill_stitch_graph, shape, fill_stitch_angle, underpath):
             # This includes the outer outline and the outlines of the holes.
             # The result is that travel stitching will tend to hug the center
             # of the shape.
-            weight /= ls.distance(shape.boundary) + 0.1
+            weight /= ls.distance(outline) + 0.1
 
             graph.add_edge(*edge, weight=weight)
 
-        # otherwise we sometimes get exceptions like this:
+        # without this, we sometimes get exceptions like this:
         # Exception AttributeError: "'NoneType' object has no attribute 'GEOSSTRtree_destroy'" in
         #   <bound method STRtree.__del__ of <shapely.strtree.STRtree instance at 0x0D2BFD50>> ignored
-        del rtree
+        del strtree
 
     debug.log_graph(graph, "travel graph")
 
     return graph
+
+
+def build_travel_edges(shape, fill_angle):
+    """Given a graph, compute the interior travel edges.
+
+    We want to fill the shape with a grid of line segments that can be used for
+    travel stitch routing.  Our goals:
+
+      * not too many edges so that the shortest path algorithm is speedy
+      * don't travel in the direction of the fill stitch rows so that the
+        travel stitch doesn't visually disrupt the fill stitch pattern
+
+    To do this, we'll fill the shape with three gratings: one at +45 degrees
+    from the fill stitch angle, one at -45 degrees, and one at +90 degrees.
+    The pattern looks like this:
+
+    /|\|/|\|/|\
+    \|/|\|/|\|/
+    /|\|/|\|/|\
+    \|/|\|/|\|/
+
+    Returns: (endpoints, edges)
+        endpoints - the points on travel edges that intersect with the boundary
+                    of the shape
+        edges     - the line segments we can travel on, as individual LineString
+                    instances
+    """
+
+    grating1 = shgeo.MultiLineString(list(chain(*intersect_region_with_grating(shape, fill_angle + math.pi / 4, 2 * PIXELS_PER_MM))))
+    grating2 = shgeo.MultiLineString(list(chain(*intersect_region_with_grating(shape, fill_angle - math.pi / 4, 2 * PIXELS_PER_MM))))
+    grating3 = shgeo.MultiLineString(list(chain(*intersect_region_with_grating(shape, fill_angle - math.pi / 2, math.sqrt(2) * PIXELS_PER_MM))))
+
+    debug.add_layer("auto-fill travel")
+    debug.log_line_strings(grating1, "grating1")
+    debug.log_line_strings(grating2, "grating2")
+    debug.log_line_strings(grating3, "grating3")
+
+    endpoints = [coord for mls in (grating1, grating2, grating3)
+                 for ls in mls
+                 for coord in ls.coords]
+
+    diagonal_edges = grating1.symmetric_difference(grating2)
+
+    # without this, floating point inaccuracies prevent the intersection points from lining up perfectly.
+    vertical_edges = snap(grating3.difference(grating1), diagonal_edges, 0.005)
+
+    return endpoints, chain(diagonal_edges, vertical_edges)
 
 
 def check_graph(graph, shape, max_stitch_length):
