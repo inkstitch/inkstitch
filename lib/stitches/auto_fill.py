@@ -130,6 +130,8 @@ def build_fill_stitch_graph(shape, angle, row_spacing, end_row_spacing):
     path must exist.
     """
 
+    debug.add_layer("auto-fill fill stitch")
+
     # Convert the shape into a set of parallel line segments.
     rows_of_segments = intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing)
     segments = [segment for row in rows_of_segments for segment in row]
@@ -159,6 +161,8 @@ def build_fill_stitch_graph(shape, angle, row_spacing, end_row_spacing):
             # duplicate every other edge
             if data['index'] % 2 == 0:
                 graph.add_edge(node1, node2, key="extra")
+
+    debug.log_graph(graph, "graph")
 
     return graph
 
@@ -228,6 +232,10 @@ def build_travel_graph(fill_stitch_graph, shape, fill_stitch_angle, underpath):
         grating1 = shgeo.MultiLineString(list(chain(*intersect_region_with_grating(shape, fill_stitch_angle + math.pi / 4, 2 * PIXELS_PER_MM))))
         grating2 = shgeo.MultiLineString(list(chain(*intersect_region_with_grating(shape, fill_stitch_angle - math.pi / 4, 2 * PIXELS_PER_MM))))
 
+        debug.add_layer("auto-fill travel")
+        debug.log_line_strings(grating1, "grating1")
+        debug.log_line_strings(grating2, "grating2")
+
         # We'll add the endpoints of the crosshatch grating lines too  These
         # will all be on the outline of the shape.  This will ensure that a
         # path traveling inside the shape can reach its target on the outline,
@@ -282,6 +290,8 @@ def build_travel_graph(fill_stitch_graph, shape, fill_stitch_angle, underpath):
         # Exception AttributeError: "'NoneType' object has no attribute 'GEOSSTRtree_destroy'" in
         #   <bound method STRtree.__del__ of <shapely.strtree.STRtree instance at 0x0D2BFD50>> ignored
         del rtree
+
+    debug.log_graph(graph, "travel graph")
 
     return graph
 
