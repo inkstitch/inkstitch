@@ -18,16 +18,18 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 locale                   : "en-US"
 title                    : "Ink/Stitch"
 title_separator          : "-"
-name                     : "<a href='https://github.com/lexelby'>lexelby</a>"
+name                     : "<a href='https://github.com/inkstitch'>Ink/Stitch</a>"
 description              : "An Inkscape extension for designing machine embroidery patterns."
-url                      : "http://inkstitch.org"
+url                      : "https://inkstitch.org"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "inkstitch/inkstitch" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
+  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
     shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -37,10 +39,13 @@ comments:
     appid                :
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
+  utterances:
+    theme                : # "github-light" (default), "github-dark"
+    issue_term           : # "pathname" (default)
 staticman:
   allowedFields          : # ['name', 'email', 'url', 'message']
   branch                 : # "master"
-  commitMessage          : # "New comment."
+  commitMessage          : # "New comment by {fields.name}"
   filename               : # comment-{@timestamp}
   format                 : # "yml"
   moderation             : # true
@@ -53,6 +58,7 @@ staticman:
       type               : # "date"
       options:
         format           : # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
+  endpoint               : # URL of your own deployment with trailing slash, will fallback to the public instance
 reCaptcha:
   siteKey                :
   secret                 :
@@ -60,13 +66,15 @@ atom_feed:
   path                   : # blank (default) uses feed.xml
 search                   : true #, false (default)
 search_full_content      : true #, false (default)
-search_provider          : # lunr (default), algolia
+search_provider          : # lunr (default), algolia, google
 algolia:
   application_id         : # YOUR_APPLICATION_ID
   index_name             : # YOUR_INDEX_NAME
   search_only_api_key    : # YOUR_SEARCH_ONLY_API_KEY
   powered_by             : # true (default), false
-
+google:
+  search_engine_id       : # YOUR_SEARCH_ENGINE_ID
+  instant_search         : # false (default), true
 # SEO Related
 google_site_verification :
 bing_site_verification   :
@@ -93,6 +101,8 @@ analytics:
   provider               : false # false (default), "google", "google-universal", "custom"
   google:
     tracking_id          :
+    anonymize_ip         : # true, false (default)
+
 
 # Site Author
 author:
@@ -101,31 +111,48 @@ author:
   bio              : ""
   location         : "Worldwide"
   email            :
-  uri              : "https://github.com/inkstitch/"
-  home             : # null (default), "absolute or relative url to link to author home"
-  bitbucket        :
-  codepen          :
-  dribbble         :
-  flickr           :
-  facebook         :
-  foursquare       :
-  github           : 
-  gitlab           :
-  google_plus      :
-  keybase          :
-  instagram        :
-  lastfm           :
-  linkedin         : # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
-  pinterest        :
-  soundcloud       :
-  stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
-  steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
-  tumblr           :
-  twitter          :
-  vine             :
-  weibo            :
-  xing             :
-  youtube          : # "https://youtube.com/c/MichaelRoseDesign"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      # url: mailto:your.name@email.com
+    - label: "Ink/Stitch"
+      icon: "fas fa-fw fa-link"
+      url: "https://inkstitch.org"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      # url: "https://twitter.com/"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-square"
+      # url: "https://facebook.com/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/inkstitch/inkstitch"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      # url: "https://instagram.com/"
+
+# Site Footer
+footer:
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      # url:
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-square"
+      # url:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      # url:
+    - label: "GitLab"
+      icon: "fab fa-fw fa-gitlab"
+      # url:
+    - label: "Bitbucket"
+      icon: "fab fa-fw fa-bitbucket"
+      # url:
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      # url:
+
 
 # Reading Files
 include:
@@ -214,6 +241,7 @@ whitelist:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+
 
 # Archives
 #  Type

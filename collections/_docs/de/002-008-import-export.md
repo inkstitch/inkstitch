@@ -2,7 +2,7 @@
 title: "Import und Export von Dateien"
 permalink: /de/docs/import-export/
 excerpt: ""
-last_modified_at: 2019-03-16
+last_modified_at: 2019-03-30
 toc: true
 ---
 
@@ -52,6 +52,15 @@ Verzeichnis              | Gib Verzeichnis an, in dem die Datei gespeichert werd
 **Info:** Für die Dateiformatkonvertierung verwendet Ink/Stitch [*pyembroidery*](https://github.com/inkstitch/pyembroidery).
 {: .notice--info }
 
+Ink/Stich erstellt eine Datei mit dem Namen `irgendwas.ext`, wobei `irgendwas` der Name der SVG-Datei ist (z. B.`irgendwas.svg`). `ext` ist die Erweiterung für das ausgewählte Ausgabeformat. Wenn `irgendwas.ext` bereits existiert, wird diese in `irgendwas.ext.1` unbenannt. Es werden bis zu 5 Backup-Kopien unterstützt.
+
+   <span style="color: #3f51b5;">↳ irgendaws.ext</span><br/>
+   <span style="color: #ff9800;">↳ irgendwas.ext</span>, <span style="color: #3f51b5;">irgendwas.ext.1</span><br/>
+   <span style="color: #f44336;">↳ irgendwasg.ext</span>, <span style="color: #ff9800;">irgendwas.ext.1</span>, <span style="color: #3f51b5;">irgendwas.ext.2</span>
+
+**Info:** In zukünftigen Versionen wird diese Methode in *`Stichplan anzeigen`* umbenannt werden und keine Speicherfunktion mehr erfüllen.
+{: .notice--info}
+
 ## Batch-Export
 
 **Info:** Seit Ink/Stitch Version 1.10.0 ist es möglich, mehrere Dateiformate gleichzeitig zu exportieren.
@@ -62,5 +71,4 @@ Unter `Datei -> Speichern unter ...` wähle den kleinen Pfeil im Dateiformat-Aus
 Navigiere zum gewünschten Ausgabeverzeichnis und wähle dort das `Ink/Stitch: Export von mehreren Formaten (.zip)` aus. Klicke auf "Speichern". Dort wird  gefragt, welche Dateiformate hinein sollen.
 
 ![Batch Export](/assets/images/docs/en/export-batch.jpg)
-
 

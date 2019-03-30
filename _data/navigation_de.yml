@@ -48,7 +48,7 @@ docs:
         url: /de/docs/install/
       - title: "Personalisierung"
         url: /de/docs/customize/
-      - title: Grundfunktionen
+      - title: Schnelleinstieg
         url: /de/docs/basic-usage/
       - title: Arbeitsablauf
         url: /de/docs/workflow/

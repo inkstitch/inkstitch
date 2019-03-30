@@ -1,8 +1,8 @@
 ---
-title: "Grundfunktionen"
+title: "Schnelleinstieg"
 permalink: /de/docs/basic-usage/
 excerpt: ""
-last_modified_at: 2018-08-26
+last_modified_at: 2019-03-30
 toc: true
 ---
 Probiere die folgenden Schritte aus, um die Erweiterung zu testen und die Grundfunktionen kennenzulernen.
@@ -12,56 +12,54 @@ Probiere die folgenden Schritte aus, um die Erweiterung zu testen und die Grundf
 
 ## Schritt 1 - Objekt zeichnen
 
-Erstelle ein Objekt, z.B. ein Kreis und stelle sicher, dass es sowohl eine Kontur als auch eine Füllung hat.
+Erstelle ein Objekt, z.B. ein Kreis und stelle sicher, dass es eine Füllung hat.
 
-**Info:** *Die Verwendung einer Linie ist für Satinkolumnen nicht geignet*. Wir haben es dennoch hier verwendet, um ein einfaches Beispiel zu geben. Lese in der Stichbibliothek, um mehr Informationen über Stichtypen zu erhalten.
-{: .notice--warning }
-
-![Füllung und Kontur](https://edutechwiki.unige.ch/mediawiki/images/thumb/8/86/SVG-yellow-circle-stroke-fill.png/300px-SVG-yellow-circle-stroke-fill.png)
+![Kreis mit Füllung](/assets/images/docs/en/basic-usage-circle-fill-color.png)
 
 ## Schritt 2 - In einen Pfad konvertieren
-**Alle Objekte** umwandeln, die zu einem Pfad werden sollen:
+
+Wandele **alle Objekte** die gestickt werden sollen in einen Pfad um:
 
 * Markiere alle Objekte (`Strg + A`)
 * `Pfad -> Objekt in Pfad umwandeln` oder `Strg + Alt + C`. <br>
 
-**Info:** Objekte, die nicht ein Pfad sind, werden von Ink/Stitch ignoriert.
+**Info:** Objekte, die kein Pfad sind, werden von Ink/Stitch ignoriert.
 {: .notice--warning }
 
 ## Schritt 3 - SVG-Pfad mit Parametern versehen
 
-* Wähle minimum ein Objekt aus.
-* Öffne `Erweiterungen -> Ink/Stitch -> Parameter` und verändere diese gegebenenfalls.
-* Akzeptiere einfach die Standardeinstellungen oder schliesse diese ohne zu speichern.
+* Wähle mindestens ein Objekt aus.
+* Öffne `Erweiterungen > Ink/Stitch > Deutsch > Parameter`.
+* Spiele mit den Werten. Der Simulator erneuert das Stickbild mit jeder geänderten Einstellung.
+* Schließe das Fenster ohne zu speichern, um die Standardeinstellungen wiederherzustellen.
 
-## Schritt 4 - Erstellung der Stickdatei
+## Schritt 4 - Stickdatei erstellen
 
-Es kann entweder eine Stickdatei für eine Auswahl von Objekten oder für alle Objekte erstellen werden.
-So wird eine Stickdatei für das gesamte Design erstellt:
+* Öffne `Datei > Speichern als...`
+* Navigiere zu dem Ordner, in dem du die Datei speichern willst
+* Wähle das Format entsprechend den Präferenzen deiner Maschine
+* Klicke auf `Speichern`
+* Sende die Datei an deine Maschine
 
-* Klicken in einen leeren Bereich (um die Auswahl aufzuheben)
-* Öffne / Starte `Erweiterungen -> Ink/Stitch -> Sticken ...`
-* Wähle das richtige Dateiformat für das Gerät aus
-* Wähle ein Verzeichnis aus, in dem die Ausgabedateien gespeichern werden. Z.B. `C:\Benutzer\%BENUTZERNAME%\Dokumente` unter Windows. Ink/Stitch merkt sich diese Auswahl.
+**Tipp:** Stelle sicher, dass du die Dateien immer auch im SVG-Format speicherst. Dann hast du immer die Möglichkeit das Motiv zu einem späteren Zeitpunkt ohne großen Aufwand zu verändern.
+{: .notice--info}
 
-## Schritt 5 - Anzeige in Inkscape
+## Step 4 - Create the Embroidery File
 
-Einen Kreis, den wir im Beispiel erstellt haben, wird verschwinden und durch einige Streifen und Zickzacks ersetzt. Ink/Stitch hat alle Ebenen ausgeblendet und einen neuen "Stich Plan" erstellt. Dieser wird visuallisiert dargestellt. Es hat die ausgewählte Form in zwei Objekte zerlegt: Füllung und Kontur. Eine Füllung wird mit Hilfe von Füllstichen erstellt. Eine Kontur wird durch Satinstiche entlang dieser Kontur erstellt.
+* Run `File > Save as...`
+* Navigate to the folder where you would like to save the file
+* Choose the correct file format for your machine
+* Click `Save`
+* Copy the file to your machine
 
-Wähle die horizontalen Linien mit dem Werkzeug "Bearbeiten der Koten..." aus. Zoome etwas heran um zu sehen, dass die Linien aus vielen Punkten bestehen. Jeder Punkt repräsentiert einen Stich - eine Nadeleindringung und eine Verriegelung des Oberfadens mit dem Unterfaden. Beachte, dass die Punkte alle in Diagonalen liegen. Dies verleiht der Füllnaht eine schöne und ordentliche Optik.
+**Tipp:** Make sure to save the file as an SVG file as well. Then you will always be able to modify it easily.
+{: .notice--info}
 
-Schaue jetzt die Zickzacks an. Dies sind die Satinstiche. Beachte, dass die Ecken ziemlich hässlich aussehen. Dies liegt daran, dass Satinstiche, die aus einer Form erzeugt wurden, ziemlich rudimentär sind und nicht intelligent umgesetzt werden. *Mit einer [**Satinkolumne**](/docs/stitches/satin/)* können Satinstiche viel besser erzeugt werden.
-![Stitch Plan](https://edutechwiki.unige.ch/mediawiki/images/thumb/6/6a/Inkstitch-stitch-plan.png/800px-Inkstitch-stitch-plan.png)
+## Arbeitsablauf
 
-Die Vorschau, die gerade betrachtet wird, soll nicht permanent sein. Sobald die Stiche betrachtet wurden, kann man diese mit `Strg + Z` rückgängig machen. Die eigentliche Arbeit ist eine Designdatei zu erstellen.
+Wenn das gut funktioniert hat, empfehlen wir auch die nächste Seite (Arbeitsablauf) zu lesen. 
+Dort erhälst du einen tieferen Einblick in Ink/Stitch und lernst wichtige Funktionen für das erstellen von Stickdateien kennen (z.B. man die Reihenfolge der Objekte ändert).
 
-## Schritt 6 - Das Design sticken
-Wohin wurde die Designdatei gespeichert? Einer der Parameter, die im Dialogfeld `Sticken` angeben werden konnten, war das Ausgabeverzeichnis. Das verwendete Verzeichnis ist standardmäßig der Ort, in dem Ink/Stitch installiert wurde.
+Wenn bei dir Fehler aufgetreten sind, kontaktiere und doch über [GitHub](https://github.com/inkstitch/inkstitch/issues/).
+Wir interessieren uns sehr für deine Probleme mit Ink/Stitch, nur auf diesem Wege können wir entweder die Dokumentation oder das Programm selbst verbessern.
 
-Ink/Stich erstellt eine Datei mit dem Namen `irgendwas.ext`, wobei `irgendwas` der Name der SVG-Datei ist (z. B.`irgendwas.svg`). `ext` ist die Erweiterung für das ausgewählte Ausgabeformat. Wenn `irgendwas.ext` bereits existiert, wird siese in `irgendwas.ext.1` unbenannt. Es werden bis zu 5 Backup-Kopien unterstützt.
-
-   <span style="color: #3f51b5;">↳ irgendaws.ext</span><br/>
-   <span style="color: #ff9800;">↳ irgendwas.ext</span>, <span style="color: #3f51b5;">irgendwas.ext.1</span><br/>
-   <span style="color: #f44336;">↳ irgendwasg.ext</span>, <span style="color: #ff9800;">irgendwas.ext.1</span>, <span style="color: #3f51b5;">irgendwas.ext.2</span>
-
-Wenn das Design wie gewünscht erstellt wurde, speichere eine Kopie von <span style="color: #f44336;">`irgendwas.ext`</span> und übertrage diese zu der Stickmaschine.

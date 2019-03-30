@@ -2,7 +2,7 @@
 title: "Import and Export Files"
 permalink: /docs/import-export/
 excerpt: ""
-last_modified_at: 2018-10-13
+last_modified_at: 2019-03-30
 toc: true
 ---
 
@@ -52,6 +52,15 @@ Directory|Type your directory path, where you would like to save your file. By d
 **Info:** For file format conversion Ink/Stitch uses [*pyembroidery*](https://github.com/inkstitch/pyembroidery).
 {: .notice--info }
 
+Ink/Stich will create a file named `something.___`, where `something` is the name of your svg file (e.g. `something.svg`) and `___` is the proper extension for the output format you select. If `something.___` already exists, it will be renamed to `something.___.1`, and `something.___.1` will be renamed to `something.___.2`, etc, up to 5 backup copies.
+
+   <span style="color: #3f51b5;">↳ something.___</span><br />
+   <span style="color: #ff9800;">↳ something.___</span>, <span style="color: #3f51b5;">something.___.1</span><br />
+   <span style="color: #f44336;">↳ something.___</span>, <span style="color: #ff9800;">something.___.1</span>, <span style="color: #3f51b5;">something.___.2</span>
+
+**Info:** In future versions this extension will be renamed to *`Show Stitch Plan`* and will not save an embroidery file anymore.
+{: .notice--info}
+
 ## Batch Export
 
 **Info:** Since Ink/Stitch version 1.10.0 it is possible to export to multiple file formats at once.
@@ -62,5 +71,4 @@ Go to `File > Save as...` and click on the little arrow on the file format selec
 Navigate to your desired output folder and choose the Ink/Stitch ZIP file format. Click `Save`. You then will be asked which file formats you wish to be included.
 
 ![Batch Export](/assets/images/docs/en/export-batch.jpg)
-
 

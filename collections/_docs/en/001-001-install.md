@@ -6,6 +6,10 @@ last_modified_at: 2019-03-14
 toc: true
 ---
 
+**Info:** On our YouTube channel you can visually follow the installation process.
+Pick the video for your operating system: [Beginner Tutorial Series](/tutorials/resources/beginner-video-tutorials/)
+{: .notice--info }
+
 ## Requirements
 
 * [Inkscape](https://inkscape.org/) Version 0.92.2 or higher
