@@ -44,22 +44,11 @@ Wandele **alle Objekte** die gestickt werden sollen in einen Pfad um:
 **Tipp:** Stelle sicher, dass du die Dateien immer auch im SVG-Format speicherst. Dann hast du immer die Möglichkeit das Motiv zu einem späteren Zeitpunkt ohne großen Aufwand zu verändern.
 {: .notice--info}
 
-## Step 4 - Create the Embroidery File
-
-* Run `File > Save as...`
-* Navigate to the folder where you would like to save the file
-* Choose the correct file format for your machine
-* Click `Save`
-* Copy the file to your machine
-
-**Tipp:** Make sure to save the file as an SVG file as well. Then you will always be able to modify it easily.
-{: .notice--info}
-
 ## Arbeitsablauf
 
 Wenn das gut funktioniert hat, empfehlen wir auch die nächste Seite (Arbeitsablauf) zu lesen. 
 Dort erhälst du einen tieferen Einblick in Ink/Stitch und lernst wichtige Funktionen für das erstellen von Stickdateien kennen (z.B. man die Reihenfolge der Objekte ändert).
 
-Wenn bei dir Fehler aufgetreten sind, kontaktiere und doch über [GitHub](https://github.com/inkstitch/inkstitch/issues/).
+Wenn bei dir Fehler aufgetreten sind, kontaktiere uns doch über [GitHub](https://github.com/inkstitch/inkstitch/issues/).
 Wir interessieren uns sehr für deine Probleme mit Ink/Stitch, nur auf diesem Wege können wir entweder die Dokumentation oder das Programm selbst verbessern.
 
