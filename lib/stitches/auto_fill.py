@@ -281,7 +281,7 @@ def build_travel_graph(fill_stitch_graph, shape, fill_stitch_angle, underpath):
 
 
 def build_travel_edges(shape, fill_angle):
-    """Given a graph, compute the interior travel edges.
+    r"""Given a graph, compute the interior travel edges.
 
     We want to fill the shape with a grid of line segments that can be used for
     travel stitch routing.  Our goals:
