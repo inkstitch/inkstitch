@@ -46,9 +46,6 @@ class ControlPanel(wx.Panel):
         self.speed = 1
         self.direction = 1
 
-        # needle penetration point
-        self.display_npp = False
-
         # Widgets
         self.btnMinus = wx.Button(self, -1, label='-')
         self.btnMinus.Bind(wx.EVT_BUTTON, self.animation_slow_down)
@@ -72,7 +69,6 @@ class ControlPanel(wx.Panel):
         self.restartBtn.Bind(wx.EVT_BUTTON, self.animation_restart)
         self.restartBtn.SetToolTip(_('Restart (R)'))
         self.nppBtn = wx.ToggleButton(self, -1, label=_('O'))
-        self.nppBtn.Bind(wx.EVT_TOGGLEBUTTON, self.toggle_npp)
         self.nppBtn.SetToolTip(_('Display needle penetration point (O)'))
         self.quitBtn = wx.Button(self, -1, label=_('Quit'))
         self.quitBtn.Bind(wx.EVT_BUTTON, self.animation_quit)
@@ -250,7 +246,7 @@ class ControlPanel(wx.Panel):
         self.drawing_panel.restart()
 
     def toggle_npp(self, event):
-        self.display_npp = not self.display_npp
+        self.nppBtn.SetValue(not self.nppBtn.GetValue())
 
 
 class DrawingPanel(wx.Panel):
@@ -379,9 +375,9 @@ class DrawingPanel(wx.Panel):
             canvas.DrawLines(((x, y - crosshair_radius), (x, y + crosshair_radius)))
 
     def draw_needle_penetration_points(self, canvas, stitches):
-        if self.control_panel.display_npp:
+        if self.control_panel.nppBtn.GetValue():
             for npp in stitches:
-                canvas.DrawRoundedRectangle(npp[0]-2.5, npp[1]-2.5, 5, 5, 2)
+                canvas.DrawRoundedRectangle(npp[0]-2.5, npp[1]-2.5, 5, 5, 2.5)
 
     def clear(self):
         dc = wx.ClientDC(self)
