@@ -252,7 +252,12 @@ def build_travel_graph(fill_stitch_graph, shape, fill_stitch_angle, underpath):
         outline = shape.boundary.simplify(0.5 * PIXELS_PER_MM, preserve_topology=False)
 
         for ls in travel_edges:
-            p1, p2 = [InkstitchPoint(*coord) for coord in ls.coords]
+            # In most cases, ls will be a simple line segment.  If we're
+            # unlucky, in rare cases we can get a tiny little extra squiggle
+            # at the end that can be ignored.
+            points = [InkstitchPoint(*coord) for coord in ls.coords]
+            p1, p2 = points[0], points[-1]
+
             edge = (p1.as_tuple(), p2.as_tuple(), 'travel')
 
             for segment in strtree.query(ls):
