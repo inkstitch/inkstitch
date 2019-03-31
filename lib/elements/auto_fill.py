@@ -141,7 +141,7 @@ class AutoFill(Fill):
         type='boolean',
         default=True)
     def underlay_underpath(self):
-        return self.get_boolean_param('underpath', True)
+        return self.get_boolean_param('underlay_underpath', True)
 
     def shrink_or_grow_shape(self, amount):
         if amount:
