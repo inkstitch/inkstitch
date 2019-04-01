@@ -336,30 +336,30 @@ class DrawingPanel(wx.Panel):
             return
 
         dc = wx.PaintDC(self)
-        self.canvas = wx.GraphicsContext.Create(dc)
+        canvas = wx.GraphicsContext.Create(dc)
 
-        transform = self.canvas.GetTransform()
+        transform = canvas.GetTransform()
         transform.Translate(*self.pan)
         transform.Scale(self.zoom / self.PIXEL_DENSITY, self.zoom / self.PIXEL_DENSITY)
-        self.canvas.SetTransform(transform)
+        canvas.SetTransform(transform)
 
         stitch = 0
         last_stitch = None
 
         start = time.time()
         for pen, stitches in izip(self.pens, self.stitch_blocks):
-            self.canvas.SetPen(pen)
+            canvas.SetPen(pen)
             if stitch + len(stitches) < self.current_stitch:
                 stitch += len(stitches)
                 if len(stitches) > 1:
-                    self.canvas.DrawLines(stitches)
-                    self.draw_needle_penetration_points(pen, stitches)
+                    canvas.DrawLines(stitches)
+                    self.draw_needle_penetration_points(canvas, pen, stitches)
                 last_stitch = stitches[-1]
             else:
                 stitches = stitches[:self.current_stitch - stitch]
                 if len(stitches) > 1:
-                    self.canvas.DrawLines(stitches)
-                    self.draw_needle_penetration_points(pen, stitches)
+                    canvas.DrawLines(stitches)
+                    self.draw_needle_penetration_points(canvas, pen, stitches)
                 last_stitch = stitches[-1]
                 break
         self.last_frame_duration = time.time() - start
@@ -368,17 +368,17 @@ class DrawingPanel(wx.Panel):
             x = last_stitch[0]
             y = last_stitch[1]
             x, y = transform.TransformPoint(float(x), float(y))
-            self.canvas.SetTransform(self.canvas.CreateMatrix())
+            canvas.SetTransform(canvas.CreateMatrix())
             crosshair_radius = 10
-            self.canvas.SetPen(self.black_pen)
-            self.canvas.DrawLines(((x - crosshair_radius, y), (x + crosshair_radius, y)))
-            self.canvas.DrawLines(((x, y - crosshair_radius), (x, y + crosshair_radius)))
+            canvas.SetPen(self.black_pen)
+            canvas.DrawLines(((x - crosshair_radius, y), (x + crosshair_radius, y)))
+            canvas.DrawLines(((x, y - crosshair_radius), (x, y + crosshair_radius)))
 
-    def draw_needle_penetration_points(self, pen, stitches):
+    def draw_needle_penetration_points(self, canvas, pen, stitches):
         if self.control_panel.nppBtn.GetValue():
             npp_pen = wx.Pen(pen.GetColour(), width=int(0.3 * PIXELS_PER_MM * self.PIXEL_DENSITY))
-            self.canvas.SetPen(npp_pen)
-            self.canvas.StrokeLineSegments(stitches, stitches)
+            canvas.SetPen(npp_pen)
+            canvas.StrokeLineSegments(stitches, stitches)
 
     def clear(self):
         dc = wx.ClientDC(self)
