@@ -324,10 +324,10 @@ $(function() {
         } else if (item.is('figure.inksimulation')) {
             setSVGTransform(item, value);
         } else if (item.is('div.footer-info')) {
-            $('#footer-info-text').html(value);
-            item.html(value);
+            $('#footer-info-text').html($.parseHTML(value));
+            item.html($.parseHTML(value));
         } else if (item.is('#custom-page-content')) {
-            $('#custom-page-content').html(value);
+            $('#custom-page-content').html($.parseHTML(value));
         } else {
             item.text(value);
         }
@@ -431,7 +431,7 @@ $(function() {
     } else {
       info_text.css('display', 'block');
       var sourceText = info_text.text();
-      info_text.html( sourceText );
+      info_text.html( $.parseHTML(sourceText) );
       element.closest('.tool-bar').find('.tb-button.edit-only').prop('disabled', false);
     }
   });
@@ -439,7 +439,6 @@ $(function() {
   function updateEditableText(element) {
     var editMode = getEditMode(element);
     var info_text = element.closest('fieldset').find('.info-text');
-    var content = info_text.html();
     var editableText = '';
 
     if (editMode) {
@@ -449,10 +448,10 @@ $(function() {
     }
 
     if(info_text.is('#footer-info-text')) {
-      $('div.footer-info').html(editableText);
-      $.postJSON('/settings/footer-info', {value: content});
+      $('div.footer-info').html($.parseHTML(editableText));
+      $.postJSON('/settings/footer-info', {value: editableText});
     } else {
-      $.postJSON('/settings/custom-page-content', {value: content});
+      $.postJSON('/settings/custom-page-content', {value: editableText});
     }
   }
 
