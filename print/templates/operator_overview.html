@@ -27,7 +27,10 @@
         <main>
             <figure class="inksimulation operator" data-field-name="operator-overview-transform" title="{{ _('Ctrl + Scroll to Zoom') }}">
                 {{ svg_overview|replace("<li>", "")|replace("</li>", "")|safe }}
-                {% include 'ui_svg_action_buttons.html' %}
+                {% with %}
+                  {% set realistic_id='realistic-operator-overview' %}
+                  {% include 'ui_svg_action_buttons.html' with context %}
+                {% endwith %}
             </figure>
         </main>
         {% include 'footer.html' %}
