@@ -69,6 +69,7 @@ class ControlPanel(wx.Panel):
         self.restartBtn.Bind(wx.EVT_BUTTON, self.animation_restart)
         self.restartBtn.SetToolTip(_('Restart (R)'))
         self.nppBtn = wx.ToggleButton(self, -1, label=_('O'))
+        self.nppBtn.Bind(wx.EVT_TOGGLEBUTTON, self.toggle_npp)
         self.nppBtn.SetToolTip(_('Display needle penetration point (O)'))
         self.quitBtn = wx.Button(self, -1, label=_('Quit'))
         self.quitBtn.Bind(wx.EVT_BUTTON, self.animation_quit)
@@ -119,7 +120,7 @@ class ControlPanel(wx.Panel):
             (wx.ACCEL_NORMAL, wx.WXK_SUBTRACT, self.animation_one_stitch_backward),
             (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_SUBTRACT, self.animation_one_stitch_backward),
             (wx.ACCEL_NORMAL, ord('r'), self.animation_restart),
-            (wx.ACCEL_NORMAL, ord('o'), self.toggle_npp),
+            (wx.ACCEL_NORMAL, ord('o'), self.on_toggle_npp_shortcut),
             (wx.ACCEL_NORMAL, ord('p'), self.on_pause_start_button),
             (wx.ACCEL_NORMAL, wx.WXK_SPACE, self.on_pause_start_button),
             (wx.ACCEL_NORMAL, ord('q'), self.animation_quit)]
@@ -245,8 +246,14 @@ class ControlPanel(wx.Panel):
     def animation_restart(self, event):
         self.drawing_panel.restart()
 
-    def toggle_npp(self, event):
+    def on_toggle_npp_shortcut(self, event):
         self.nppBtn.SetValue(not self.nppBtn.GetValue())
+        self.toggle_npp(event)
+
+    def toggle_npp(self, event):
+        if self.pauseBtn.GetLabel() == _('Start'):
+            stitch = self.stitchBox.GetValue()
+            self.drawing_panel.set_current_stitch(stitch)
 
 
 class DrawingPanel(wx.Panel):
