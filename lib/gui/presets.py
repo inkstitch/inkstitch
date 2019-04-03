@@ -63,11 +63,12 @@ class PresetsPanel(wx.Panel):
         self.delete_preset_button.Bind(wx.EVT_BUTTON, self.delete_preset)
 
         presets_sizer = wx.StaticBoxSizer(self.presets_box, wx.HORIZONTAL)
-        presets_sizer.Add(self.preset_chooser, 1, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 10)
-        presets_sizer.Add(self.load_preset_button, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 10)
-        presets_sizer.Add(self.add_preset_button, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 10)
-        presets_sizer.Add(self.overwrite_preset_button, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 10)
-        presets_sizer.Add(self.delete_preset_button, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 10)
+        self.preset_chooser.SetMinSize((200, -1))
+        presets_sizer.Add(self.preset_chooser, 1, wx.ALIGN_CENTER_VERTICAL | wx.LEFT | wx.BOTTOM | wx.EXPAND, 10)
+        presets_sizer.Add(self.load_preset_button, 0, wx.ALIGN_CENTER_VERTICAL | wx.BOTTOM | wx.LEFT, 10)
+        presets_sizer.Add(self.add_preset_button, 0, wx.ALIGN_CENTER_VERTICAL | wx.BOTTOM | wx.LEFT, 10)
+        presets_sizer.Add(self.overwrite_preset_button, 0, wx.ALIGN_CENTER_VERTICAL | wx.BOTTOM | wx.LEFT, 10)
+        presets_sizer.Add(self.delete_preset_button, 0, wx.ALIGN_CENTER_VERTICAL | wx.BOTTOM | wx.LEFT | wx.RIGHT, 10)
 
         self.SetSizerAndFit(presets_sizer)
         self.Layout()

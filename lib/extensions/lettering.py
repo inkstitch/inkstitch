@@ -33,17 +33,13 @@ class LetteringFrame(wx.Frame):
         self.preview = SimulatorPreview(self, target_duration=1)
         self.presets_panel = PresetsPanel(self)
 
-        self.load_settings()
-
         # options
         self.options_box = wx.StaticBox(self, wx.ID_ANY, label=_("Options"))
 
         self.back_and_forth_checkbox = wx.CheckBox(self, label=_("Stitch lines of text back and forth"))
-        self.back_and_forth_checkbox.SetValue(self.settings.back_and_forth)
         self.back_and_forth_checkbox.Bind(wx.EVT_CHECKBOX, lambda event: self.on_change("back_and_forth", event))
 
         self.trim_checkbox = wx.CheckBox(self, label=_("Add trims"))
-        self.trim_checkbox.SetValue(bool(self.settings.trim))
         self.trim_checkbox.Bind(wx.EVT_CHECKBOX, lambda event: self.on_change("trim", event))
 
         # text editor
@@ -53,10 +49,9 @@ class LetteringFrame(wx.Frame):
         self.font_chooser = SubtitleComboBox(self, wx.ID_ANY, choices=self.get_font_names(),
                                              subtitles=self.get_font_descriptions(), style=wx.CB_READONLY)
         self.font_chooser.Bind(wx.EVT_COMBOBOX, self.update_preview)
-        self.set_initial_font(self.settings.font)
 
-        self.text_editor = wx.TextCtrl(self, style=wx.TE_MULTILINE | wx.TE_DONTWRAP, value=self.settings.text)
-        self.Bind(wx.EVT_TEXT, lambda event: self.on_change("text", event))
+        self.text_editor = wx.TextCtrl(self, style=wx.TE_MULTILINE | wx.TE_DONTWRAP)
+        self.text_editor.Bind(wx.EVT_TEXT, lambda event: self.on_change("text", event))
 
         self.cancel_button = wx.Button(self, wx.ID_ANY, _("Cancel"))
         self.cancel_button.Bind(wx.EVT_BUTTON, self.cancel)
@@ -66,9 +61,12 @@ class LetteringFrame(wx.Frame):
         self.apply_button.Bind(wx.EVT_BUTTON, self.apply)
 
         self.__do_layout()
-        # end wxGlade
+
+        self.load_settings()
+        self.apply_settings()
 
     def load_settings(self):
+        """Load the settings saved into the SVG group element"""
         try:
             if INKSTITCH_LETTERING in self.group.attrib:
                 self.settings = DotDict(json.loads(b64decode(self.group.get(INKSTITCH_LETTERING))))
@@ -82,7 +80,16 @@ class LetteringFrame(wx.Frame):
             "font": None
         })
 
+    def apply_settings(self):
+        """Make the settings in self.settings visible in the UI."""
+        self.back_and_forth_checkbox.SetValue(self.settings.back_and_forth)
+        self.trim_checkbox.SetValue(bool(self.settings.trim))
+        self.set_initial_font(self.settings.font)
+        self.text_editor.SetValue(self.settings.text)
+
     def save_settings(self):
+        """Save the settings into the SVG group element."""
+
         # We base64 encode the string before storing it in an XML attribute.
         # In theory, lxml should properly html-encode the string, using HTML
         # entities like &#10; as necessary.  However, we've found that Inkscape
@@ -186,12 +193,15 @@ class LetteringFrame(wx.Frame):
 
     def get_preset_data(self):
         # called by self.presets_panel
-        preset = {}
-        return preset
+        settings = dict(self.settings)
+        del settings["text"]
+        return settings
 
-    def apply_preset_data(self):
-        # called by self.presets_panel
-        return
+    def apply_preset_data(self, preset_data):
+        settings = DotDict(preset_data)
+        settings["text"] = self.settings.text
+        self.settings = settings
+        self.apply_settings()
 
     def get_preset_suite_name(self):
         # called by self.presets_panel
