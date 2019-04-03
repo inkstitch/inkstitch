@@ -10,7 +10,7 @@ import inkex
 import wx
 
 from ..elements import nodes_to_elements
-from ..gui import PresetsPanel, SimulatorPreview, info_dialog
+from ..gui import PresetsPanel, SimulatorPreview, info_dialog, SubtitleComboBox
 from ..i18n import _
 from ..lettering import Font, FontError
 from ..svg import get_correction_transform
@@ -49,8 +49,10 @@ class LetteringFrame(wx.Frame):
         # text editor
         self.text_editor_box = wx.StaticBox(self, wx.ID_ANY, label=_("Text"))
 
-        self.font_chooser = wx.ComboBox(self, wx.ID_ANY, style=wx.CB_READONLY)
         self.update_font_list()
+        self.font_chooser = SubtitleComboBox(self, wx.ID_ANY, choices=self.get_font_names(),
+                                             subtitles=self.get_font_descriptions(), style=wx.CB_READONLY)
+        self.font_chooser.Bind(wx.EVT_COMBOBOX, self.update_preview)
         self.set_initial_font(self.settings.font)
 
         self.text_editor = wx.TextCtrl(self, style=wx.TE_MULTILINE | wx.TE_DONTWRAP, value=self.settings.text)
@@ -115,11 +117,18 @@ class LetteringFrame(wx.Frame):
             except FontError:
                 pass
 
-        self.font_chooser.SetItems(sorted(self.fonts))
-
         if len(self.fonts) == 0:
             info_dialog(self, _("Unable to find any fonts!  Please try reinstalling Ink/Stitch."))
             self.cancel()
+
+    def get_font_names(self):
+        font_names = [font.name for font in self.fonts.itervalues()]
+        font_names.sort()
+
+        return font_names
+
+    def get_font_descriptions(self):
+        return {font.name: font.description for font in self.fonts.itervalues()}
 
     def set_initial_font(self, font_id):
         if font_id is not None:
@@ -128,9 +137,9 @@ class LetteringFrame(wx.Frame):
                     '''This text was created using the font "%s", but Ink/Stitch can't find that font.  A default font will be substituted.''') % font_id)
 
         try:
-            self.font_chooser.SetValue(self.fonts_by_id[font_id].name)
+            self.font_chooser.SetValueByUser(self.fonts_by_id[font_id].name)
         except KeyError:
-            self.font_chooser.SetValue(self.default_font.name)
+            self.font_chooser.SetValueByUser(self.default_font.name)
 
     @property
     @cache
@@ -144,8 +153,11 @@ class LetteringFrame(wx.Frame):
         self.settings[attribute] = event.GetEventObject().GetValue()
         self.preview.update()
 
+    def update_preview(self, event=None):
+        self.preview.update()
+
     def update_lettering(self):
-        font = self.fonts_by_id.get(self.settings.font, self.default_font)
+        font = self.fonts.get(self.font_chooser.GetValue(), self.default_font)
         del self.group[:]
         font.render_text(self.settings.text, self.group, back_and_forth=self.settings.back_and_forth, trim=self.settings.trim)
 
@@ -209,8 +221,11 @@ class LetteringFrame(wx.Frame):
         options_sizer.Add(self.trim_checkbox, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT | wx.BOTTOM, 5)
         outer_sizer.Add(options_sizer, 0, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
 
+        font_chooser_sizer = wx.BoxSizer(wx.VERTICAL)
+        font_chooser_sizer.Add(self.font_chooser, 0, wx.ALL | wx.EXPAND, 10)
+
         text_editor_sizer = wx.StaticBoxSizer(self.text_editor_box, wx.VERTICAL)
-        text_editor_sizer.Add(self.font_chooser, 0, wx.ALL, 10)
+        text_editor_sizer.Add(font_chooser_sizer, 0, wx.RIGHT | wx.EXPAND, 100)
         text_editor_sizer.Add(self.text_editor, 1, wx.EXPAND | wx.LEFT | wx.RIGHT | wx.BOTTOM, 10)
         outer_sizer.Add(text_editor_sizer, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
 
