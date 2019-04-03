@@ -8,7 +8,7 @@ import inkex
 
 from ..elements import nodes_to_elements
 from ..exceptions import InkstitchException
-from ..i18n import _
+from ..i18n import _, get_languages
 from ..stitches.auto_satin import auto_satin
 from ..svg import PIXELS_PER_MM
 from ..svg.tags import SVG_GROUP_TAG, SVG_PATH_TAG, INKSCAPE_LABEL
@@ -28,6 +28,25 @@ def font_metadata(name, default=None, multiplier=None):
             value *= multiplier
 
         return value
+
+    return property(getter)
+
+
+def localized_font_metadata(name, default=None):
+    def getter(self):
+        # If the font contains a localized version of the attribute, use it.
+        for language in get_languages():
+            attr = "%s_%s" % (name, language)
+            if attr in self.metadata:
+                return self.metadata.get(attr)
+
+        if name in self.metadata:
+            # This may be a font packaged with Ink/Stitch, in which case the
+            # text will have been sent to CrowdIn for community translation.
+            # Try to fetch the translated version.
+            return _(self.metadata.get(name))
+        else:
+            return default
 
     return property(getter)
 
@@ -79,8 +98,8 @@ class Font(object):
                 # we'll deal with missing variants when we apply lettering
                 pass
 
-    name = font_metadata('name', '')
-    description = font_metadata('description', '')
+    name = localized_font_metadata('name', '')
+    description = localized_font_metadata('description', '')
     default_variant = font_metadata('default_variant', FontVariant.LEFT_TO_RIGHT)
     default_glyph = font_metadata('defalt_glyph', u"�")
     letter_spacing = font_metadata('letter_spacing', 1.5, multiplier=PIXELS_PER_MM)
