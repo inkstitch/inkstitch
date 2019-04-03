@@ -6,7 +6,7 @@
   <button class="svg-realistic">
     {% if loop_index is defined %}
       <input type="checkbox" id="realistic-color-block-{{ loop_index }}" data-field-name="block{{ loop_index }}" class="realistic" />
-      <label for="realistic-color-block-{{ loop_index }}" class="realistic">Realistic</label>
+      <label for="realistic-color-block-{{ loop_index }}" class="realistic">{{ _('Realistic') }}</label>
     {% else %}
       <input type="checkbox" id="{{ realistic_id }}" data-field-name="overview" class="realistic" />
       <label for="{{ realistic_id }}" class="realistic">{{ _('Realistic') }}</label>
