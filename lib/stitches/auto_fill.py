@@ -232,9 +232,9 @@ def build_travel_graph(fill_stitch_graph, shape, fill_stitch_angle, underpath):
             p1 = InkstitchPoint(*start)
             p2 = InkstitchPoint(*end)
 
-            # Set the weight equal to 10x the edge length, to encourage travel()
+            # Set the weight equal to 5x the edge length, to encourage travel()
             # to avoid them.
-            graph[start][end][key]["weight"] = 10 * p1.distance(p2)
+            graph[start][end][key]["weight"] = 5 * p1.distance(p2)
 
         segments = []
         for start, end, key, data in fill_stitch_graph.edges(keys=True, data=True):
@@ -261,8 +261,12 @@ def build_travel_graph(fill_stitch_graph, shape, fill_stitch_angle, underpath):
             edge = (p1.as_tuple(), p2.as_tuple(), 'travel')
 
             for segment in strtree.query(ls):
-                start, end = segment.coords
-                fill_stitch_graph[start][end]['segment']['underpath_edges'].append(edge)
+                # It seems like the STRTree only gives an approximate answer of
+                # segments that _might_ intersect ls.  Refining the result is
+                # necessary but the STRTree still saves us a ton of time.
+                if segment.crosses(ls):
+                    start, end = segment.coords
+                    fill_stitch_graph[start][end]['segment']['underpath_edges'].append(edge)
 
             # The weight of a travel edge is the length of the line segment.
             weight = p1.distance(p2)
@@ -311,9 +315,20 @@ def build_travel_edges(shape, fill_angle):
                     instances
     """
 
-    grating1 = shgeo.MultiLineString(list(chain(*intersect_region_with_grating(shape, fill_angle + math.pi / 4, 2 * PIXELS_PER_MM))))
-    grating2 = shgeo.MultiLineString(list(chain(*intersect_region_with_grating(shape, fill_angle - math.pi / 4, 2 * PIXELS_PER_MM))))
-    grating3 = shgeo.MultiLineString(list(chain(*intersect_region_with_grating(shape, fill_angle - math.pi / 2, math.sqrt(2) * PIXELS_PER_MM))))
+    # If the shape is smaller, we'll have less room to maneuver and it's more likely
+    # we'll travel around the outside border of the shape.  Counteract that by making
+    # the grid denser.
+    if shape.area < 10000:
+        scale = 0.5
+    else:
+        scale = 1.0
+
+    grating1 = shgeo.MultiLineString(
+        list(chain(*intersect_region_with_grating(shape, fill_angle + math.pi / 4, scale * 2 * PIXELS_PER_MM))))
+    grating2 = shgeo.MultiLineString(
+        list(chain(*intersect_region_with_grating(shape, fill_angle - math.pi / 4, scale * 2 * PIXELS_PER_MM))))
+    grating3 = shgeo.MultiLineString(
+        list(chain(*intersect_region_with_grating(shape, fill_angle - math.pi / 2, scale * math.sqrt(2) * PIXELS_PER_MM))))
 
     debug.add_layer("auto-fill travel")
     debug.log_line_strings(grating1, "grating1")
