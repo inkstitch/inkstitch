@@ -167,12 +167,16 @@ class Debug(object):
 
     @check_enabled
     def log_graph(self, graph, name="Graph", color=None):
-        self.open_group(name)
+        d = ""
 
         for edge in graph.edges:
-            self.log_line(edge[0], edge[1], color=color)
+            d += "M%s,%s %s,%s" % (edge[0] + edge[1])
 
-        self.close_group()
+        self.log_svg_element(etree.Element("path", {
+            "d": d,
+            "style": formatStyle({"stroke": color or "#000000", "stroke-width": "0.3"}),
+            INKSCAPE_LABEL: name
+        }))
 
     @contextmanager
     def time_this(self, label="code block"):
