@@ -1,0 +1,14 @@
+{
+  "name": "TT Directors",
+  "description": "A font suited for directing",
+  "leading": 20,
+  "letter_spacing": 1.0,
+  "word_spacing": 4.5,
+  "auto_satin": true,
+  "default_glyph": "?",
+  "min_scale": 1.0,
+  "max_scale": 5.0,
+  "kerning_pairs": {
+    "wo": -0.3
+  }
+}
