@@ -1,0 +1,16 @@
+{
+  "name": "TT Masters",
+  "description": "A font suited for heavy typing :)",
+  "leading": 22,
+  "letter_spacing": 1.5,
+  "word_spacing": 7,
+  "auto_satin": true,
+  "default_glyph": "?",
+  "min_scale": 1.0,
+  "max_scale": 3.0,
+  "kerning_pairs": {
+    "wo": -0.3,
+	"vo": -0.3
+	
+  }
+}
