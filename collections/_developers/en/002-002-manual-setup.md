@@ -21,7 +21,10 @@ A manual setup will allow you to edit the code while running the extension.
     pip install -r requirements.txt
     ```
 
-    **Info:** You might need to remove wxPython and [install](https://wiki.wxpython.org/How%20to%20install%20wxPython) a platform specific package (e.g. Debian uses `python-wxgtk3.0`).
+    **Info:** You might need to remove wxPython and [install](https://wiki.wxpython.org/How%20to%20install%20wxPython) a platform specific package (e.g. Debian uses `python-wxgtk3.0` Ubuntu 16.04 use pip install -U -f https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-16.04 wxPython ).
+    {: .notice--info }
+    
+    **Info:** If you have multiple versions of python installed you may need to use pip2
     {: .notice--info }
 
 3. Prepare INX files
