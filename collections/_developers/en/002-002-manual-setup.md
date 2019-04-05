@@ -22,6 +22,7 @@ A manual setup will allow you to edit the code while running the extension.
     ```
 
     **Info:** You might need to remove wxPython and [install](https://wiki.wxpython.org/How%20to%20install%20wxPython) a platform specific package (e.g. Debian uses `python-wxgtk3.0`).
+     If you have multiple versions of python installed you may have to use pip2.
     {: .notice--info }
 
 3. Prepare INX files
