@@ -6,7 +6,7 @@ shapely
 lxml
 appdirs
 numpy<1.16.0
-jinja2
+jinja2>2.9
 requests
 colormath
 stringcase
