@@ -68,6 +68,9 @@ class ControlPanel(wx.Panel):
         self.restartBtn = wx.Button(self, -1, label=_('Restart'))
         self.restartBtn.Bind(wx.EVT_BUTTON, self.animation_restart)
         self.restartBtn.SetToolTip(_('Restart (R)'))
+        self.nppBtn = wx.ToggleButton(self, -1, label=_('O'))
+        self.nppBtn.Bind(wx.EVT_TOGGLEBUTTON, self.toggle_npp)
+        self.nppBtn.SetToolTip(_('Display needle penetration point (O)'))
         self.quitBtn = wx.Button(self, -1, label=_('Quit'))
         self.quitBtn.Bind(wx.EVT_BUTTON, self.animation_quit)
         self.quitBtn.SetToolTip(_('Quit (Q)'))
@@ -95,6 +98,7 @@ class ControlPanel(wx.Panel):
         hbSizer2.Add(self.directionBtn, 0, wx.EXPAND | wx.ALL, 2)
         hbSizer2.Add(self.pauseBtn, 0, wx.EXPAND | wx.ALL, 2)
         hbSizer2.Add(self.restartBtn, 0, wx.EXPAND | wx.ALL, 2)
+        hbSizer2.Add(self.nppBtn, 0, wx.EXPAND | wx.ALL, 2)
         hbSizer2.Add(self.quitBtn, 0, wx.EXPAND | wx.ALL, 2)
         vbSizer.Add(hbSizer2, 0, wx.EXPAND | wx.ALL, 3)
         self.SetSizerAndFit(vbSizer)
@@ -120,6 +124,7 @@ class ControlPanel(wx.Panel):
             (wx.ACCEL_NORMAL, wx.WXK_SUBTRACT, self.animation_one_stitch_backward),
             (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_SUBTRACT, self.animation_one_stitch_backward),
             (wx.ACCEL_NORMAL, ord('r'), self.animation_restart),
+            (wx.ACCEL_NORMAL, ord('o'), self.on_toggle_npp_shortcut),
             (wx.ACCEL_NORMAL, ord('p'), self.on_pause_start_button),
             (wx.ACCEL_NORMAL, wx.WXK_SPACE, self.on_pause_start_button),
             (wx.ACCEL_NORMAL, ord('q'), self.animation_quit)]
@@ -259,6 +264,15 @@ class ControlPanel(wx.Panel):
     def animation_restart(self, event):
         self.drawing_panel.restart()
 
+    def on_toggle_npp_shortcut(self, event):
+        self.nppBtn.SetValue(not self.nppBtn.GetValue())
+        self.toggle_npp(event)
+
+    def toggle_npp(self, event):
+        if self.pauseBtn.GetLabel() == _('Start'):
+            stitch = self.stitchBox.GetValue()
+            self.drawing_panel.set_current_stitch(stitch)
+
 
 class DrawingPanel(wx.Panel):
     """"""
@@ -364,11 +378,13 @@ class DrawingPanel(wx.Panel):
                 stitch += len(stitches)
                 if len(stitches) > 1:
                     canvas.DrawLines(stitches)
+                    self.draw_needle_penetration_points(canvas, pen, stitches)
                 last_stitch = stitches[-1]
             else:
                 stitches = stitches[:self.current_stitch - stitch]
                 if len(stitches) > 1:
                     canvas.DrawLines(stitches)
+                    self.draw_needle_penetration_points(canvas, pen, stitches)
                 last_stitch = stitches[-1]
                 break
         self.last_frame_duration = time.time() - start
@@ -382,6 +398,12 @@ class DrawingPanel(wx.Panel):
             canvas.SetPen(self.black_pen)
             canvas.DrawLines(((x - crosshair_radius, y), (x + crosshair_radius, y)))
             canvas.DrawLines(((x, y - crosshair_radius), (x, y + crosshair_radius)))
+
+    def draw_needle_penetration_points(self, canvas, pen, stitches):
+        if self.control_panel.nppBtn.GetValue():
+            npp_pen = wx.Pen(pen.GetColour(), width=int(0.3 * PIXELS_PER_MM * self.PIXEL_DENSITY))
+            canvas.SetPen(npp_pen)
+            canvas.StrokeLineSegments(stitches, stitches)
 
     def clear(self):
         dc = wx.ClientDC(self)
@@ -719,6 +741,14 @@ class SimulatorPreview(Thread):
 
     def update_patches(self):
         patches = self.parent.generate_patches(self.refresh_needed)
+        try:
+            patches = self.parent.generate_patches(self.refresh_needed)
+        except:  # noqa: E722
+            # If something goes wrong when rendering patches, it's not great,
+            # but we don't really want the simulator thread to crash.  Instead,
+            # just swallow the exception and abort.  It'll show up when they
+            # try to actually embroider the shape.
+            return
 
         if patches and not self.refresh_needed.is_set():
             stitch_plan = patches_to_stitch_plan(patches)
