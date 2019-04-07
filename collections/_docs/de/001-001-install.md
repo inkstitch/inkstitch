@@ -2,9 +2,17 @@
 title: "Installation von Ink/Stitch"
 permalink: /de/docs/install/
 excerpt: "Wie wird Ink/Stitch installiert."
-last_modified_at: 2019-03-15
+last_modified_at: 2019-04-07
 toc: true
 ---
+
+**Info:** Wir stellen auch Anfänger-Tutorials auf unserem <i class="fab fa-youtube"></i> [YouTube Kanal](https://www.youtube.com/channel/UCJCDCFuT_xQoI55e10HRiRw) zur Verfügung.
+Für den Installationsprozess, wähle das Video für
+<i class="fab fa-linux"></i>&nbsp;[Linux](https://www.youtube.com/watch?v=Dkb5UvsZUNg&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=2),
+<i class="fab fa-apple"></i>&nbsp;[macOS](https://www.youtube.com/watch?v=gmOVLNh9cu8&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=3) or
+<i class="fab fa-windows"></i>&nbsp;[Windows](https://www.youtube.com/watch?v=U5htzWZSjA8&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=4).<br /><br />
+Die Videos sind in englischer Sprache. Deutsche Untertitle können zugeschaltet werden.
+{: .notice--info }
 
 ## Vorraussetzung
 
@@ -39,13 +47,6 @@ macOS | `inkstich- [VERSION] -osx-x86_64.tar.gz` | ☒ | ☑
    ![File Structure](/assets/images/docs/en/file_structure.png)
  * Starte Inkscape neu.
  * Ink/Stitch befindet sich nun unter `Erweiterungen > Ink/Stitch`.
-
-**Info:** Wir haben auch Videos für den Installationsprozess auf unserem <i class="fab fa-youtube"></i> [YouTube-Kanal](https://www.youtube.com/channel/UCJCDCFuT_xQoI55e10HRiRw) für alle drei Plattformen bereitgestellt: 
-<i class="fab fa-linux"></i> [Linux](https://www.youtube.com/watch?v=Dkb5UvsZUNg&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=2),
-<i class="fab fa-apple"></i> [macOS](https://www.youtube.com/watch?v=gmOVLNh9cu8&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=3) und
-<i class="fab fa-windows"></i> [Windows](https://www.youtube.com/watch?v=U5htzWZSjA8&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=4).
-Die Videos sind in englischer Sprache.
-{: .notice--info }
 
 #### Beispiel unter Linux und macOS:
 
