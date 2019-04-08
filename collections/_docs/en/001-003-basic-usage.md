@@ -21,7 +21,7 @@ Create an object, e.g. a circle and make sure it has a fill.
 Transform **all objects** you want to stitch to paths:
 
 * Select all objects (`Ctrl+A`)
-* `Path > Object to Path` or `Ctrl+Alt+C`.<br>
+* `Path > Object to Path` or `Ctrl+Alt+C`.
 
 **Info:** Objects that are not of "path" type, are ignored by Ink/Stitch.
 {: .notice--warning }
