@@ -41,7 +41,7 @@ class Zip(InkstitchExtension):
 
         for format in self.formats:
             if getattr(self.options, format):
-                output_file = os.path.join(path, "%s.%s" % (base_file_name, format))
+                output_file = os.path.join(path, "%s.%s" % (os.path.splitext(base_file_name)[0], format))
                 write_embroidery_file(output_file, stitch_plan, self.document.getroot())
                 files.append(output_file)
 
