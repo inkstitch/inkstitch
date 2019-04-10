@@ -1,3 +1,4 @@
+import cubicsuperpath
 import inkex
 import simpletransform
 
@@ -80,3 +81,11 @@ def point_lists_to_csp(point_lists):
         csp.append(subpath)
 
     return csp
+
+
+def line_strings_to_path(line_strings):
+    csp = line_strings_to_csp(line_strings)
+
+    return inkex.etree.Element("path", {
+        "d": cubicsuperpath.formatPath(csp)
+    })

@@ -740,7 +740,6 @@ class SimulatorPreview(Thread):
             self.update_patches()
 
     def update_patches(self):
-        patches = self.parent.generate_patches(self.refresh_needed)
         try:
             patches = self.parent.generate_patches(self.refresh_needed)
         except:  # noqa: E722
