@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-02-17 02:33+0000\n"
-"PO-Revision-Date: 2019-02-17 02:33\n"
+"POT-Creation-Date: 2019-03-27 02:52+0000\n"
+"PO-Revision-Date: 2019-03-27 02:52\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -509,7 +509,7 @@ msgstr "Veuillez sélectionner au moins une ligne pour convertir en colonne sati
 msgid "Only simple lines may be converted to satin columns."
 msgstr "Seulement les lignes simples peuvent être converties en colonnes satinées."
 
-#: lib/extensions/convert_to_satin.py:57
+#: lib/extensions/convert_to_satin.py:58
 #, python-format
 msgid "Cannot convert %s to a satin column because it intersects itself.  Try breaking it up into multiple paths."
 msgstr "Impossible de convertir %s à une colonne satinée, car elle se croise elle-même.  Essayez de la séparer en plusieurs chemins."
@@ -551,8 +551,10 @@ msgid "Install"
 msgstr "Installer"
 
 #: lib/extensions/install.py:40 lib/extensions/lettering.py:50
-#: lib/extensions/params.py:327 print/templates/ui.html:72
-#: print/templates/ui.html:76 print/templates/ui.html:82
+#: lib/extensions/params.py:327 print/templates/custom-page.html:23
+#: print/templates/custom-page.html:27 print/templates/custom-page.html:33
+#: print/templates/ui.html:91 print/templates/ui.html:95
+#: print/templates/ui.html:101
 msgid "Cancel"
 msgstr "Quitter"
 
@@ -680,7 +682,7 @@ msgid "A print preview has been opened in your web browser.  This window will st
 "This window will close after you close the print preview in your browser, or you can close it manually if necessary."
 msgstr "Un aperçu avant impression a été ouvert dans votre navigateur web.  Cette fenêtre reste ouverte pour communiquer avec le code JavaScript s’exécutant dans votre navigateur.  Cette fenêtre se fermera après avoir fermer l’aperçu avant impression dans le navigateur, vous pouvez la fermer manuellement si nécessaire."
 
-#: lib/extensions/print_pdf.py:411
+#: lib/extensions/print_pdf.py:417
 msgid "Ink/Stitch Print"
 msgstr "Imprimer Ink/Stitch"
 
@@ -899,12 +901,38 @@ msgstr "non"
 msgid "Enter thread name..."
 msgstr "Entrez le nom du fil..."
 
+#: print/templates/custom-page.html:22 print/templates/ui.html:90
+msgid "Enter URL"
+msgstr "Entrez l’URL"
+
+#: print/templates/custom-page.html:23 print/templates/custom-page.html:27
+#: print/templates/custom-page.html:33 print/templates/ui.html:91
+#: print/templates/ui.html:95 print/templates/ui.html:101
+msgid "OK"
+msgstr "OK"
+
+#: print/templates/custom-page.html:26 print/templates/ui.html:94
+msgid "Enter E-Mail"
+msgstr "Entrez votre adresse E-Mail"
+
+#: print/templates/custom-page.html:29 print/templates/custom-page.html:36
+msgid "Custom Information Sheet"
+msgstr ""
+
+#: print/templates/custom-page.html:31 print/templates/ui.html:99
+msgid "This will reset your custom text to the default."
+msgstr "Cela réinitialisera votre texte personnalisé au défaut."
+
+#: print/templates/custom-page.html:32 print/templates/ui.html:100
+msgid "All changes will be lost."
+msgstr "Toutes les modifications seront perdues."
+
 #: print/templates/footer.html:2
 msgid "Page"
 msgstr "Page"
 
-#: print/templates/footer.html:3 print/templates/ui.html:78
-#: print/templates/ui.html:85
+#: print/templates/footer.html:3 print/templates/ui.html:97
+#: print/templates/ui.html:104
 msgid "Proudly generated with"
 msgstr "Fièrement généré avec"
 
@@ -1057,11 +1085,11 @@ msgstr "Mise en page"
 msgid "Branding"
 msgstr "Image de marque"
 
-#: print/templates/ui.html:20 print/templates/ui.html:92
+#: print/templates/ui.html:20 print/templates/ui.html:111
 msgid "Estimated Time"
 msgstr "Durée estimée"
 
-#: print/templates/ui.html:21 print/templates/ui.html:126
+#: print/templates/ui.html:21 print/templates/ui.html:145
 msgid "Design"
 msgstr "Conception"
 
@@ -1073,125 +1101,108 @@ msgstr "Taille d’impression"
 msgid "Print Layouts"
 msgstr "Mises en page d’impression"
 
-#: print/templates/ui.html:39 print/templates/ui.html:116
+#: print/templates/ui.html:41 print/templates/ui.html:135
 msgid "Client Overview"
 msgstr "Vue d’ensemble du client"
 
-#: print/templates/ui.html:40 print/templates/ui.html:117
+#: print/templates/ui.html:45 print/templates/ui.html:136
 msgid "Client Detailed View"
 msgstr "Vue détaillée de client"
 
-#: print/templates/ui.html:41 print/templates/ui.html:118
+#: print/templates/ui.html:49 print/templates/ui.html:137
 msgid "Operator Overview"
 msgstr "Vue d’ensemble de l’exécution"
 
-#: print/templates/ui.html:42 print/templates/ui.html:119
+#: print/templates/ui.html:53 print/templates/ui.html:138
 msgid "Operator Detailed View"
 msgstr "Vue détaillée de l'exécution"
 
-#: print/templates/ui.html:43
+#: print/templates/ui.html:55
 msgid "Thumbnail size"
 msgstr "Taille de la miniature"
 
-#: print/templates/ui.html:45 print/templates/ui.html:88
+#: print/templates/ui.html:61
+msgid "Custom information sheet"
+msgstr ""
+
+#: print/templates/ui.html:64 print/templates/ui.html:107
 msgid "Includes these Page Setup, estimated time settings and also the icon."
 msgstr "Comprend ces paramètres de mise en page, le réglage de l'heure et l’icône."
 
-#: print/templates/ui.html:45 print/templates/ui.html:88
-#: print/templates/ui.html:122
+#: print/templates/ui.html:64 print/templates/ui.html:107
+#: print/templates/ui.html:141
 msgid "Save as defaults"
 msgstr "Enregistrer comme valeurs par défaut"
 
-#: print/templates/ui.html:50
+#: print/templates/ui.html:69
 msgid "Logo"
 msgstr "Logo"
 
-#: print/templates/ui.html:60
+#: print/templates/ui.html:79
 msgid "Footer: Operator contact information"
 msgstr "Pied de page : Coordonnées de l'opérateur"
 
-#: print/templates/ui.html:71
-msgid "Enter URL"
-msgstr "Entrez l’URL"
-
-#: print/templates/ui.html:72 print/templates/ui.html:76
-#: print/templates/ui.html:82
-msgid "OK"
-msgstr "OK"
-
-#: print/templates/ui.html:75
-msgid "Enter E-Mail"
-msgstr "Entrez votre adresse E-Mail"
-
-#: print/templates/ui.html:80
-msgid "This will reset your custom text to the default."
-msgstr "Cela réinitialisera votre texte personnalisé au défaut."
-
-#: print/templates/ui.html:81
-msgid "All changes will be lost."
-msgstr "Toutes les modifications seront perdues."
-
-#: print/templates/ui.html:94
+#: print/templates/ui.html:113
 msgid "Machine Settings"
 msgstr "Réglages de la machine"
 
-#: print/templates/ui.html:96
+#: print/templates/ui.html:115
 msgid "Average Machine Speed"
 msgstr "Vitesse moyenne de la machine"
 
-#: print/templates/ui.html:97
+#: print/templates/ui.html:116
 msgid "stitches per minute "
 msgstr "Points par minute "
 
-#: print/templates/ui.html:101
+#: print/templates/ui.html:120
 msgid "Time Factors"
 msgstr "Facteurs de temps"
 
-#: print/templates/ui.html:104
+#: print/templates/ui.html:123
 msgid "Includes average time for preparing the machine, thread breaks and/or bobbin changes, etc."
 msgstr "Comprend le temps moyen de préparation de la machine, coupures de fils et/ou changement de canette, etc."
 
-#: print/templates/ui.html:104
+#: print/templates/ui.html:123
 msgid "seconds to add to total time*"
 msgstr "secondes à ajouter à la durée totale *"
 
-#: print/templates/ui.html:108
+#: print/templates/ui.html:127
 msgid "This will be added to the total time."
 msgstr "Cela s’ajoutera à la durée totale."
 
-#: print/templates/ui.html:108
+#: print/templates/ui.html:127
 msgid "seconds needed for a color change*"
 msgstr "secondes nécessaires pour un changement de couleur *"
 
-#: print/templates/ui.html:111
+#: print/templates/ui.html:130
 msgid "seconds needed for trim"
 msgstr "secondes nécessaires pour une coupe de fil"
 
-#: print/templates/ui.html:114
+#: print/templates/ui.html:133
 msgid "Display Time On"
 msgstr "Affichage de l’heure sur"
 
-#: print/templates/ui.html:122
+#: print/templates/ui.html:141
 msgid "Includes page setup, estimated time and also the branding."
 msgstr "Comprend la mise en page, temps estimé et aussi l’image de marque."
 
-#: print/templates/ui.html:127
+#: print/templates/ui.html:146
 msgid "Thread Palette"
 msgstr "Palette de fil"
 
-#: print/templates/ui.html:130
+#: print/templates/ui.html:149
 msgid "None"
 msgstr "Aucune"
 
-#: print/templates/ui.html:146
+#: print/templates/ui.html:165
 msgid "Changing the thread palette will cause thread names and catalog numbers to be recalculated based on the new palette.  Any changes you have made to color or thread names will be lost.  Are you sure?"
 msgstr "Changer la palette de fil recalculera les noms de fils et les numéros de catalogue, basé sur la nouvelle palette.  Toutes les modifications apportées aux couleurs ou noms de fils seront perdues.  Êtes-vous sûr/e ?"
 
-#: print/templates/ui.html:149
+#: print/templates/ui.html:168
 msgid "Yes"
 msgstr "Oui"
 
-#: print/templates/ui.html:150
+#: print/templates/ui.html:169
 msgid "No"
 msgstr "Non"
 

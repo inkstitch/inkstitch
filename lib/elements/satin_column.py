@@ -590,7 +590,7 @@ class SatinColumn(EmbroideryElement):
 
         return spacings, paths
 
-    def plot_points_on_rails(self, spacing, offset):
+    def plot_points_on_rails(self, spacing, offset, compensation=True):
         # Take a section from each rail in turn, and plot out an equal number
         # of points on both rails.  Return the points plotted. The points will
         # be contracted or expanded by offset using self.offset_points().
@@ -625,43 +625,44 @@ class SatinColumn(EmbroideryElement):
             pos0, index0 = self.walk(paths[0], pos0, index0, spacing0)
             pos1, index1 = self.walk(paths[1], pos1, index1, spacing1)
 
-            try:
-                # Adjust for rails that contract or expand from each other.
-                # Without any compensation, rail sections that spread out or come
-                # together are longer than parallel rails, and we'll plot stitches
-                # too densely as a result.  We can compensate by using some trig,
-                # as described here:
-                #
-                # https://github.com/inkstitch/inkstitch/issues/379#issuecomment-467262685
-                stitch_direction = (pos1 - pos0).unit()
-                peak_to_peak0 = pos0 - old_pos0
-                peak_to_peak1 = pos1 - old_pos1
+            if compensation:
+                try:
+                    # Adjust for rails that contract or expand from each other.
+                    # Without any compensation, rail sections that spread out or come
+                    # together are longer than parallel rails, and we'll plot stitches
+                    # too densely as a result.  We can compensate by using some trig,
+                    # as described here:
+                    #
+                    # https://github.com/inkstitch/inkstitch/issues/379#issuecomment-467262685
+                    stitch_direction = (pos1 - pos0).unit()
+                    peak_to_peak0 = pos0 - old_pos0
+                    peak_to_peak1 = pos1 - old_pos1
 
-                # The dot product of two unit vectors is the cosine of the angle
-                # between them.  We want the cosine of the angle minus 90 degrees,
-                # so we rotate left by 90 degrees first.
-                #
-                # We take the absolute value to correct for the different direction
-                # of the angles on the opposing rails.
-                cos1 = abs(peak_to_peak0.unit() * stitch_direction.rotate_left())
-                cos2 = abs(peak_to_peak1.unit() * stitch_direction.rotate_left())
+                    # The dot product of two unit vectors is the cosine of the angle
+                    # between them.  We want the cosine of the angle minus 90 degrees,
+                    # so we rotate left by 90 degrees first.
+                    #
+                    # We take the absolute value to correct for the different direction
+                    # of the angles on the opposing rails.
+                    cos1 = abs(peak_to_peak0.unit() * stitch_direction.rotate_left())
+                    cos2 = abs(peak_to_peak1.unit() * stitch_direction.rotate_left())
 
-                # Use the smaller of the two angles to avoid spacing out
-                # too far on the other rail.  Note that the cosine of 0
-                # is 1, so we use min here to mean a bigger angle.
-                cos = min(cos1, cos2)
+                    # Use the smaller of the two angles to avoid spacing out
+                    # too far on the other rail.  Note that the cosine of 0
+                    # is 1, so we use min here to mean a bigger angle.
+                    cos = min(cos1, cos2)
 
-                # Beyond 0.55 (about 56 degrees), we end up distorting the
-                # stitching and it looks bad.
-                cos = max(cos, 0.55)
+                    # Beyond 0.55 (about 56 degrees), we end up distorting the
+                    # stitching and it looks bad.
+                    cos = max(cos, 0.55)
 
-                pos0, index0 = self.walk(paths[0], pos0, index0, spacing0 / cos - spacing0)
-                pos1, index1 = self.walk(paths[1], pos1, index1, spacing1 / cos - spacing1)
-            except ZeroDivisionError:
-                # These can occur in unit() if the vector has a length of zero,
-                # which can happen in certain cases.  We'll just skip the
-                # compensation.
-                continue
+                    pos0, index0 = self.walk(paths[0], pos0, index0, spacing0 / cos - spacing0)
+                    pos1, index1 = self.walk(paths[1], pos1, index1, spacing1 / cos - spacing1)
+                except ZeroDivisionError:
+                    # These can occur in unit() if the vector has a length of zero,
+                    # which can happen in certain cases.  We'll just skip the
+                    # compensation.
+                    continue
 
         # We're off by one in the algorithm above, so we need one more
         # pair of points.  We'd like to add points at the very end to
@@ -678,7 +679,8 @@ class SatinColumn(EmbroideryElement):
         # "contour walk" underlay: do stitches up one side and down the
         # other.
         forward, back = self.plot_points_on_rails(self.contour_underlay_stitch_length,
-                                                  -self.contour_underlay_inset)
+                                                  -self.contour_underlay_inset,
+                                                  compensation=False)
         return Patch(color=self.color, stitches=(forward + list(reversed(back))))
 
     def do_center_walk(self):
@@ -687,7 +689,8 @@ class SatinColumn(EmbroideryElement):
 
         # Do it like contour underlay, but inset all the way to the center.
         forward, back = self.plot_points_on_rails(self.center_walk_underlay_stitch_length,
-                                                  -100000)
+                                                  -100000,
+                                                  compensation=False)
         return Patch(color=self.color, stitches=(forward + list(reversed(back))))
 
     def do_zigzag_underlay(self):

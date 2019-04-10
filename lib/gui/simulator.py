@@ -68,14 +68,21 @@ class ControlPanel(wx.Panel):
         self.restartBtn = wx.Button(self, -1, label=_('Restart'))
         self.restartBtn.Bind(wx.EVT_BUTTON, self.animation_restart)
         self.restartBtn.SetToolTip(_('Restart (R)'))
+        self.nppBtn = wx.ToggleButton(self, -1, label=_('O'))
+        self.nppBtn.Bind(wx.EVT_TOGGLEBUTTON, self.toggle_npp)
+        self.nppBtn.SetToolTip(_('Display needle penetration point (O)'))
         self.quitBtn = wx.Button(self, -1, label=_('Quit'))
         self.quitBtn.Bind(wx.EVT_BUTTON, self.animation_quit)
         self.quitBtn.SetToolTip(_('Quit (Q)'))
         self.slider = wx.Slider(self, -1, value=1, minValue=1, maxValue=2,
                                 style=wx.SL_HORIZONTAL | wx.SL_LABELS)
         self.slider.Bind(wx.EVT_SLIDER, self.on_slider)
-        self.stitchBox = IntCtrl(self, -1, value=1, min=1, max=2, limited=True, allow_none=False)
-        self.stitchBox.Bind(wx.EVT_TEXT, self.on_stitch_box)
+        self.stitchBox = IntCtrl(self, -1, value=1, min=1, max=2, limited=True, allow_none=True, style=wx.TE_PROCESS_ENTER)
+        self.stitchBox.Bind(wx.EVT_LEFT_DOWN, self.on_stitch_box_focus)
+        self.stitchBox.Bind(wx.EVT_SET_FOCUS, self.on_stitch_box_focus)
+        self.stitchBox.Bind(wx.EVT_TEXT_ENTER, self.on_stitch_box_focusout)
+        self.stitchBox.Bind(wx.EVT_KILL_FOCUS, self.on_stitch_box_focusout)
+        self.Bind(wx.EVT_LEFT_DOWN, self.on_stitch_box_focusout)
 
         # Layout
         self.vbSizer = vbSizer = wx.BoxSizer(wx.VERTICAL)
@@ -91,6 +98,7 @@ class ControlPanel(wx.Panel):
         hbSizer2.Add(self.directionBtn, 0, wx.EXPAND | wx.ALL, 2)
         hbSizer2.Add(self.pauseBtn, 0, wx.EXPAND | wx.ALL, 2)
         hbSizer2.Add(self.restartBtn, 0, wx.EXPAND | wx.ALL, 2)
+        hbSizer2.Add(self.nppBtn, 0, wx.EXPAND | wx.ALL, 2)
         hbSizer2.Add(self.quitBtn, 0, wx.EXPAND | wx.ALL, 2)
         vbSizer.Add(hbSizer2, 0, wx.EXPAND | wx.ALL, 3)
         self.SetSizerAndFit(vbSizer)
@@ -116,19 +124,20 @@ class ControlPanel(wx.Panel):
             (wx.ACCEL_NORMAL, wx.WXK_SUBTRACT, self.animation_one_stitch_backward),
             (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_SUBTRACT, self.animation_one_stitch_backward),
             (wx.ACCEL_NORMAL, ord('r'), self.animation_restart),
+            (wx.ACCEL_NORMAL, ord('o'), self.on_toggle_npp_shortcut),
             (wx.ACCEL_NORMAL, ord('p'), self.on_pause_start_button),
             (wx.ACCEL_NORMAL, wx.WXK_SPACE, self.on_pause_start_button),
             (wx.ACCEL_NORMAL, ord('q'), self.animation_quit)]
 
-        accel_entries = []
+        self.accel_entries = []
 
         for shortcut_key in shortcut_keys:
             eventId = wx.NewId()
-            accel_entries.append((shortcut_key[0], shortcut_key[1], eventId))
+            self.accel_entries.append((shortcut_key[0], shortcut_key[1], eventId))
             self.Bind(wx.EVT_MENU, shortcut_key[2], id=eventId)
 
-        accel_table = wx.AcceleratorTable(accel_entries)
-        self.SetAcceleratorTable(accel_table)
+        self.accel_table = wx.AcceleratorTable(self.accel_entries)
+        self.SetAcceleratorTable(self.accel_table)
         self.SetFocus()
 
     def set_drawing_panel(self, drawing_panel):
@@ -186,6 +195,8 @@ class ControlPanel(wx.Panel):
         if self.drawing_panel:
             self.drawing_panel.set_current_stitch(stitch)
 
+        self.parent.SetFocus()
+
     def on_current_stitch(self, stitch, command):
         if self.current_stitch != stitch:
             self.current_stitch = stitch
@@ -193,8 +204,20 @@ class ControlPanel(wx.Panel):
             self.stitchBox.SetValue(stitch)
             self.statusbar.SetStatusText(COMMAND_NAMES[command], 1)
 
-    def on_stitch_box(self, event):
+    def on_stitch_box_focus(self, event):
+        self.animation_pause()
+        self.SetAcceleratorTable(wx.AcceleratorTable([]))
+        event.Skip()
+
+    def on_stitch_box_focusout(self, event):
+        self.SetAcceleratorTable(self.accel_table)
         stitch = self.stitchBox.GetValue()
+        self.parent.SetFocus()
+
+        if stitch is None:
+            stitch = 1
+            self.stitchBox.SetValue(1)
+
         self.slider.SetValue(stitch)
 
         if self.drawing_panel:
@@ -240,6 +263,15 @@ class ControlPanel(wx.Panel):
 
     def animation_restart(self, event):
         self.drawing_panel.restart()
+
+    def on_toggle_npp_shortcut(self, event):
+        self.nppBtn.SetValue(not self.nppBtn.GetValue())
+        self.toggle_npp(event)
+
+    def toggle_npp(self, event):
+        if self.pauseBtn.GetLabel() == _('Start'):
+            stitch = self.stitchBox.GetValue()
+            self.drawing_panel.set_current_stitch(stitch)
 
 
 class DrawingPanel(wx.Panel):
@@ -346,11 +378,13 @@ class DrawingPanel(wx.Panel):
                 stitch += len(stitches)
                 if len(stitches) > 1:
                     canvas.DrawLines(stitches)
+                    self.draw_needle_penetration_points(canvas, pen, stitches)
                 last_stitch = stitches[-1]
             else:
                 stitches = stitches[:self.current_stitch - stitch]
                 if len(stitches) > 1:
                     canvas.DrawLines(stitches)
+                    self.draw_needle_penetration_points(canvas, pen, stitches)
                 last_stitch = stitches[-1]
                 break
         self.last_frame_duration = time.time() - start
@@ -364,6 +398,12 @@ class DrawingPanel(wx.Panel):
             canvas.SetPen(self.black_pen)
             canvas.DrawLines(((x - crosshair_radius, y), (x + crosshair_radius, y)))
             canvas.DrawLines(((x, y - crosshair_radius), (x, y + crosshair_radius)))
+
+    def draw_needle_penetration_points(self, canvas, pen, stitches):
+        if self.control_panel.nppBtn.GetValue():
+            npp_pen = wx.Pen(pen.GetColour(), width=int(0.3 * PIXELS_PER_MM * self.PIXEL_DENSITY))
+            canvas.SetPen(npp_pen)
+            canvas.StrokeLineSegments(stitches, stitches)
 
     def clear(self):
         dc = wx.ClientDC(self)
@@ -629,6 +669,7 @@ class EmbroiderySimulator(wx.Frame):
         if self.on_close_hook:
             self.on_close_hook()
 
+        self.SetFocus()
         self.Destroy()
 
     def go(self):

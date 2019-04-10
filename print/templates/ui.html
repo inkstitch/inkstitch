@@ -36,11 +36,30 @@
         </fieldset>
         <fieldset>
           <legend>{{ _('Print Layouts') }}</legend>
-          <p><input type="checkbox" class="view" id="client-overview" data-field-name="client-overview" /><label for="client-overview">{{ _('Client Overview') }}</label></p>
-          <p><input type="checkbox" class="view" id="client-detailedview" data-field-name="client-detailedview" /><label for="client-detailedview">{{ _('Client Detailed View') }}</label></p>
-          <p><input type="checkbox" class="view" id="operator-overview" data-field-name="operator-overview" CHECKED /><label for="operator-overview">{{ _('Operator Overview') }}</label></p>
-          <p><input type="checkbox" class="view" id="operator-detailedview" data-field-name="operator-detailedview" CHECKED /><label for="operator-detailedview">{{ _('Operator Detailed View') }}</label></p>
-          <p style="text-indent: 1.5em;">{{ _('Thumbnail size') }}: <input type="range" min="15" max="110" value="15" step="5" id="operator-detailedview-thumbnail-size" data-field-name="operator-detailedview-thumbnail-size" style="vertical-align: middle;"> <span id="display-thumbnail-size">15mm</span></p>
+          <p>
+            <input type="checkbox" class="view" id="client-overview" data-field-name="client-overview" />
+            <label for="client-overview">{{ _('Client Overview') }}</label>
+          </p>
+          <p>
+            <input type="checkbox" class="view" id="client-detailedview" data-field-name="client-detailedview" />
+            <label for="client-detailedview">{{ _('Client Detailed View') }}</label>
+          </p>
+          <p>
+            <input type="checkbox" class="view" id="operator-overview" data-field-name="operator-overview" CHECKED />
+            <label for="operator-overview">{{ _('Operator Overview') }}</label>
+          </p>
+          <p>
+            <input type="checkbox" class="view" id="operator-detailedview" data-field-name="operator-detailedview" CHECKED />
+            <label for="operator-detailedview">{{ _('Operator Detailed View') }}</label>
+          </p>
+          <p style="text-indent: 1.5em;">{{ _('Thumbnail size') }}:
+            <input type="range" min="15" max="110" value="15" step="5" id="operator-detailedview-thumbnail-size" data-field-name="operator-detailedview-thumbnail-size" style="vertical-align: middle;" />
+            <span id="display-thumbnail-size">15mm</span>
+          </p>
+          <p>
+            <input type="checkbox" class="view" id="custom-page" data-field-name="custom-page" />
+            <label for="custom-page">{{ _('Custom information sheet') }}</label>
+          </p>
         </fieldset>
         <button class="save-settings" title="{{ _("Includes these Page Setup, estimated time settings and also the icon.") }}">{{ _("Save as defaults") }}</button>
       </fieldset>
@@ -58,31 +77,31 @@
         </fieldset>
         <fieldset id="edit-footer">
           <legend>{{ _('Footer: Operator contact information') }}</legend>
-          <div id="tool-bar">
-            <button id="tb-bold" class="tb-button ff-serif edit-only" title="Bold"><b>B</b></button>
-            <button id="tb-italic" class="tb-button ff-serif edit-only" title="Italic"><i>I</i></button>
-            <button id="tb-underline" class="tb-button ff-serif edit-only" title="Underline"><u>U</u></button>
-            <button id="tb-remove" class="tb-button ff-serif edit-only" title="Remove formatting"><u style="vertical-align: super; font-size: 60%;">A</u><span style="vertical-align: sub; font-size: 80%;">A</span></button>
-            <button id="tb-hyperlink" class="tb-button edit-only" title="Hyperlink">☍</button>
-            <button id="tb-mail" class="tb-button edit-only" title="E-Mail">✉</button>
-            <button id="tb-reset" class="tb-button" title="Reset text">↺</button>
-            <p id="edit-mode"><input type="checkbox" id="switch-mode" name="switch-mode" /> <label for="switch-mode">{{ ('Show HTML') }}</label></p>
-            <div id="footer-url">
-              <p>{{ _("Enter URL") }}: <input type="text" id="footer-link" name="footer-link" value="https://" /></p>
-              <p><button id="url-ok">{{ _("OK") }}</button> <button id="url-cancel">{{ _("Cancel") }}</button></p>
+          <div id="tool-bar" class="tool-bar">
+            <button id="tb-bold" class="tb-button tb-bold ff-serif edit-only" title="Bold"><b>B</b></button>
+            <button id="tb-italic" class="tb-button tb-italic ff-serif edit-only" title="Italic"><i>I</i></button>
+            <button id="tb-underline" class="tb-button tb-underline ff-serif edit-only" title="Underline"><u>U</u></button>
+            <button id="tb-remove" class="tb-button tb-remove ff-serif edit-only" title="Remove formatting"><u style="vertical-align: super; font-size: 60%;">A</u><span style="vertical-align: sub; font-size: 80%;">A</span></button>
+            <button id="tb-hyperlink" class="tb-button tb-hyperlink edit-only" title="Hyperlink">☍</button>
+            <button id="tb-mail" class="tb-button tb-mail edit-only" title="E-Mail">✉</button>
+            <button id="tb-reset" class="tb-button tb-reset" title="Reset text">↺</button>
+            <p id="edit-mode" class="edit-mode"><input type="checkbox" id="switch-mode" class="switch-mode" name="switch-mode" /> <label for="switch-mode">{{ ('Show HTML') }}</label></p>
+            <div id="footer-url" class="tb-popup url-window">
+              <p>{{ _("Enter URL") }}: <input type="text" id="footer-link" class="user-url" name="footer-link" value="https://" /></p>
+              <p><button id="url-ok" class="url-ok">{{ _("OK") }}</button> <button id="url-cancel" class="url-cancel">{{ _("Cancel") }}</button></p>
             </div>
-            <div id="footer-email">
-              <p>{{ _("Enter E-Mail") }}: <input type="text" id="footer-mail" name="footer-mail" value="@" /></p>
-              <p><button id="mail-ok">{{ _("OK") }}</button> <button id="mail-cancel">{{ _("Cancel") }}</button></p>
+            <div id="footer-email" class="tb-popup mail-window">
+              <p>{{ _("Enter E-Mail") }}: <input type="text" id="footer-mail" class="user-mail" name="footer-mail" value="@" /></p>
+              <p><button id="mail-ok" class="mail-ok">{{ _("OK") }}</button> <button id="mail-cancel" class="mail-cancel">{{ _("Cancel") }}</button></p>
             </div>
-            <div id="footer-info-original">{{ _("Proudly generated with") }} <a href="http://inkstitch.org/" target="_blank">Ink/Stitch</a></div>
-            <div id="footer-reset">
+            <div id="footer-info-original" class="original-info">{{ _("Proudly generated with") }} <a href="http://inkstitch.org/" target="_blank">Ink/Stitch</a></div>
+            <div id="footer-reset" class="tb-popup reset-window">
               <p>{{ _("This will reset your custom text to the default.") }}</p>
               <p>{{ _("All changes will be lost.") }}</p>
-              <p><button id="reset-ok">{{ _("OK") }}</button> <button id="reset-cancel">{{ _("Cancel") }}</button></p>
+              <p><button id="reset-ok" class="reset-ok">{{ _("OK") }}</button> <button id="reset-cancel" class="reset-cancel">{{ _("Cancel") }}</button></p>
             </div>
           </div>
-          <div id="footer-info-text" contenteditable="true"><div>{{ _("Proudly generated with") }} <a href="http://inkstitch.org/" target="_blank">Ink/Stitch</a></div></div>
+          <div id="footer-info-text" class="info-text" contenteditable="true"><div>{{ _("Proudly generated with") }} <a href="http://inkstitch.org/" target="_blank">Ink/Stitch</a></div></div>
           <p class="notice--warning"><b>Note</b>: If you are using Firefox, use visible URLs. Links will not be printed to PDF with this browser.</p>
         </fieldset>
         <button class="save-settings" title="{{ _('Includes these Page Setup, estimated time settings and also the icon.') }}">{{ _("Save as defaults") }}</button>
