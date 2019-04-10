@@ -228,65 +228,88 @@ def build_travel_graph(fill_stitch_graph, shape, fill_stitch_angle, underpath):
     add_edges_between_outline_nodes(graph)
 
     if underpath:
-        for start, end, key in graph.edges:
-            p1 = InkstitchPoint(*start)
-            p2 = InkstitchPoint(*end)
-
-            # Set the weight equal to 5x the edge length, to encourage travel()
-            # to avoid them.
-            graph[start][end][key]["weight"] = 5 * p1.distance(p2)
-
-        segments = []
-        for start, end, key, data in fill_stitch_graph.edges(keys=True, data=True):
-            if key == 'segment':
-                segments.append(shgeo.LineString((start, end)))
-
-        # The shapely documentation is pretty unclear on this.  An STRtree
-        # allows for building a set of shapes and then efficiently testing
-        # the set for intersection.  This allows us to do blazing-fast
-        # queries of which line segments overlap each underpath edge.
-        strtree = STRtree(segments)
-
-        # This makes the distance calculations below a bit faster.  We're
-        # not looking for high precision anyway.
-        outline = shape.boundary.simplify(0.5 * PIXELS_PER_MM, preserve_topology=False)
-
-        for ls in travel_edges:
-            # In most cases, ls will be a simple line segment.  If we're
-            # unlucky, in rare cases we can get a tiny little extra squiggle
-            # at the end that can be ignored.
-            points = [InkstitchPoint(*coord) for coord in ls.coords]
-            p1, p2 = points[0], points[-1]
-
-            edge = (p1.as_tuple(), p2.as_tuple(), 'travel')
-
-            for segment in strtree.query(ls):
-                # It seems like the STRTree only gives an approximate answer of
-                # segments that _might_ intersect ls.  Refining the result is
-                # necessary but the STRTree still saves us a ton of time.
-                if segment.crosses(ls):
-                    start, end = segment.coords
-                    fill_stitch_graph[start][end]['segment']['underpath_edges'].append(edge)
-
-            # The weight of a travel edge is the length of the line segment.
-            weight = p1.distance(p2)
-
-            # Give a bonus to edges that are far from the outline of the shape.
-            # This includes the outer outline and the outlines of the holes.
-            # The result is that travel stitching will tend to hug the center
-            # of the shape.
-            weight /= ls.distance(outline) + 0.1
-
-            graph.add_edge(*edge, weight=weight)
-
-        # without this, we sometimes get exceptions like this:
-        # Exception AttributeError: "'NoneType' object has no attribute 'GEOSSTRtree_destroy'" in
-        #   <bound method STRtree.__del__ of <shapely.strtree.STRtree instance at 0x0D2BFD50>> ignored
-        del strtree
+        process_travel_edges(graph, fill_stitch_graph, shape, travel_edges)
 
     debug.log_graph(graph, "travel graph")
 
     return graph
+
+
+def weight_edges_by_length(graph, multiplier=1):
+    for start, end, key in graph.edges:
+        p1 = InkstitchPoint(*start)
+        p2 = InkstitchPoint(*end)
+
+        graph[start][end][key]["weight"] = multiplier * p1.distance(p2)
+
+
+def get_segments(graph):
+    segments = []
+    for start, end, key, data in graph.edges(keys=True, data=True):
+        if key == 'segment':
+            segments.append(shgeo.LineString((start, end)))
+
+    return segments
+
+
+def process_travel_edges(graph, fill_stitch_graph, shape, travel_edges):
+    """Weight the interior edges and pre-calculate intersection with fill stitch rows."""
+
+    # Set the weight equal to 5x the edge length, to encourage travel()
+    # to avoid them.
+    weight_edges_by_length(graph, 5)
+
+    segments = get_segments(fill_stitch_graph)
+
+    # The shapely documentation is pretty unclear on this.  An STRtree
+    # allows for building a set of shapes and then efficiently testing
+    # the set for intersection.  This allows us to do blazing-fast
+    # queries of which line segments overlap each underpath edge.
+    strtree = STRtree(segments)
+
+    # This makes the distance calculations below a bit faster.  We're
+    # not looking for high precision anyway.
+    outline = shape.boundary.simplify(0.5 * PIXELS_PER_MM, preserve_topology=False)
+
+    for ls in travel_edges:
+        # In most cases, ls will be a simple line segment.  If we're
+        # unlucky, in rare cases we can get a tiny little extra squiggle
+        # at the end that can be ignored.
+        points = [InkstitchPoint(*coord) for coord in ls.coords]
+        p1, p2 = points[0], points[-1]
+
+        edge = (p1.as_tuple(), p2.as_tuple(), 'travel')
+
+        for segment in strtree.query(ls):
+            # It seems like the STRTree only gives an approximate answer of
+            # segments that _might_ intersect ls.  Refining the result is
+            # necessary but the STRTree still saves us a ton of time.
+            if segment.crosses(ls):
+                start, end = segment.coords
+                fill_stitch_graph[start][end]['segment']['underpath_edges'].append(edge)
+
+        # The weight of a travel edge is the length of the line segment.
+        weight = p1.distance(p2)
+
+        # Give a bonus to edges that are far from the outline of the shape.
+        # This includes the outer outline and the outlines of the holes.
+        # The result is that travel stitching will tend to hug the center
+        # of the shape.
+        weight /= ls.distance(outline) + 0.1
+
+        graph.add_edge(*edge, weight=weight)
+
+    # without this, we sometimes get exceptions like this:
+    # Exception AttributeError: "'NoneType' object has no attribute 'GEOSSTRtree_destroy'" in
+    #   <bound method STRtree.__del__ of <shapely.strtree.STRtree instance at 0x0D2BFD50>> ignored
+    del strtree
+
+
+def travel_grating(shape, angle, row_spacing):
+    rows_of_segments = intersect_region_with_grating(shape, angle, row_spacing)
+    segments = list(chain(*rows_of_segments))
+
+    return shgeo.MultiLineString(segments)
 
 
 def build_travel_edges(shape, fill_angle):
@@ -323,12 +346,9 @@ def build_travel_edges(shape, fill_angle):
     else:
         scale = 1.0
 
-    grating1 = shgeo.MultiLineString(
-        list(chain(*intersect_region_with_grating(shape, fill_angle + math.pi / 4, scale * 2 * PIXELS_PER_MM))))
-    grating2 = shgeo.MultiLineString(
-        list(chain(*intersect_region_with_grating(shape, fill_angle - math.pi / 4, scale * 2 * PIXELS_PER_MM))))
-    grating3 = shgeo.MultiLineString(
-        list(chain(*intersect_region_with_grating(shape, fill_angle - math.pi / 2, scale * math.sqrt(2) * PIXELS_PER_MM))))
+    grating1 = travel_grating(shape, fill_angle + math.pi / 4, scale * 2 * PIXELS_PER_MM)
+    grating2 = travel_grating(shape, fill_angle - math.pi / 4, scale * 2 * PIXELS_PER_MM)
+    grating3 = travel_grating(shape, fill_angle - math.pi / 2, scale * math.sqrt(2) * PIXELS_PER_MM)
 
     debug.add_layer("auto-fill travel")
     debug.log_line_strings(grating1, "grating1")
