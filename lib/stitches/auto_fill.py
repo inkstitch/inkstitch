@@ -370,11 +370,13 @@ def build_travel_edges(shape, fill_angle):
 def check_graph(graph, shape, max_stitch_length):
     if networkx.is_empty(graph) or not networkx.is_eulerian(graph):
         if shape.area < max_stitch_length ** 2:
-            raise InvalidPath(_("This shape is so small that it cannot be filled with rows of stitches.  "
-                                "It would probably look best as a satin column or running stitch."))
+            message = "This shape is so small that it cannot be filled with rows of stitches.  " \
+                      "It would probably look best as a satin column or running stitch."
+            raise InvalidPath(_(message))
         else:
-            raise InvalidPath(_("Cannot parse shape.  "
-                                "This most often happens because your shape is made up of multiple sections that aren't connected."))
+            message = "Cannot parse shape.  " \
+                      "This most often happens because your shape is made up of multiple sections that aren't connected."
+            raise InvalidPath(_(message))
 
 
 def nearest_node(nodes, point, attr=None):
