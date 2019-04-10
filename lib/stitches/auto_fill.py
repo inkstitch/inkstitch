@@ -411,16 +411,16 @@ def find_stitch_path(graph, travel_graph, starting_point=None, ending_point=None
 
     graph = graph.copy()
 
-    if starting_point is None:
+    if not starting_point:
         starting_point = graph.nodes.keys()[0]
 
     starting_node = nearest_node(graph, starting_point)
 
-    if ending_point is None:
+    if ending_point:
+        ending_node = nearest_node(graph, ending_point)
+    else:
         ending_point = starting_point
         ending_node = starting_node
-    else:
-        ending_node = nearest_node(graph, ending_point)
 
     # The algorithm below is adapted from networkx.eulerian_circuit().
     path = []
@@ -431,7 +431,7 @@ def find_stitch_path(graph, travel_graph, starting_point=None, ending_point=None
     while vertex_stack:
         current_vertex, current_key = vertex_stack[-1]
         if graph.degree(current_vertex) == 0:
-            if last_vertex is not None:
+            if last_vertex:
                 path.append(PathEdge((last_vertex, current_vertex), last_key))
             last_vertex, last_key = current_vertex, current_key
             vertex_stack.pop()
