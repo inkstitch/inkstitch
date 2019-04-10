@@ -1,7 +1,7 @@
 ---
 title: "Manualle Installation"
 permalink: /de/developers/inkstitch/manual-setup/
-last_modified_at: 2019-03-15
+last_modified_at: 2019-04-10
 toc: false
 ---
 Eine manuelle Installation ermöglicht es am Quellcode zu arbeiten, während du Ink/Stitch benutzt.
@@ -22,7 +22,12 @@ Eine manuelle Installation ermöglicht es am Quellcode zu arbeiten, während du 
     pip install -r requirements.txt
     ```
 
-    **Info:** Evtl. musst du auf einigen Plattformen wxPython entfernen und ein platform-spezifisches Paket [installieren](https://wiki.wxpython.org/How%20to%20install%20wxPython) (z.B. nutzt Debian `python-wxgtk3.0`).
+    **Info:** Evtl. musst du auf einigen Plattformen wxPython entfernen und ein platform-spezifisches Paket [installieren](https://wiki.wxpython.org/How%20to%20install%20wxPython):<br />
+       ⚫ Debian `python-wxgtk3.0`<br />
+       ⚫ Ubuntu 16.04: `pip install -U -f https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-16.04 wxPython`
+    {: .notice--info }
+    
+    **Info:** Wenn du mehrere Python-Versionen installiert hast, nutze **pip2**
     {: .notice--info }
 
 3. INX-Dateien vorbereiten
