@@ -2,7 +2,7 @@
 title: "Simulate"
 permalink: /docs/simulate/
 excerpt: ""
-last_modified_at: 2019-03-15
+last_modified_at: 2019-04-10
 toc: true
 ---
 
@@ -22,6 +22,7 @@ Shortcut Keys | Effect
 <key>-</key> | one frame backward
 <key>p</key> | pause animation
 <key>r</key> | restart animation
+<key>o</key> | display needle penetration points
 <key>q</key> | close
 
 It is also possible to **zoom** and **pan** the simulation with the mouse.

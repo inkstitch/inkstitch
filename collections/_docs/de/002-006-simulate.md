@@ -2,7 +2,7 @@
 title: "Simulation"
 permalink: /de/docs/simulate/
 excerpt: ""
-last_modified_at: 2019-03-15
+last_modified_at: 2019-04-10
 toc: false
 ---
 
@@ -22,6 +22,7 @@ tastenkombination | Beschreibung
 <key>-</key> | ein Frame rückwärts
 <key>p</key> | Animation anhalten
 <key>r</key> | Animation neu starten
+<key>o</key> | Zeige Nadeleinstichpositionen
 <key>q</key> | Beenden
 
 Es ist auch möglich die Simulation mit der Maus zu **zoomen** und zu **verschieben**.
