@@ -43,6 +43,7 @@ cache:
     - electron/node_modules
     - $HOME/.cache/electron
     - $HOME/.cache/electron-builder
+    - /var/cache/apt/archives
 install:
   - |
     set -e
