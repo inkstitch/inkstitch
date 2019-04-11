@@ -37,7 +37,12 @@ matrix:
 branches:
   except:
     - /^dev-build-/
-cache: pip
+cache:
+  directories:
+    - $HOME/.cache/pip
+    - electron/node_modules
+    - $HOME/.cache/electron
+    - $HOME/.cache/electron-builder
 install:
   - |
     set -e
@@ -100,6 +105,10 @@ install:
       wine c:\\Python\\python.exe c:\\Python\\scripts\\pip.exe install Shapely-1.6.3-cp27-cp27m-win32.whl
 
       wine c:\\Python\\python.exe c:\\Python\\scripts\\pip.exe install -r requirements.txt
+
+      wget -q https://nodejs.org/dist/v10.15.3/node-v10.15.3-win-x86.zip --output-document=node.zip
+      unzip node.zip
+      mv node-v*-win-x86 $(winepath 'C:\node')
 
       set +x
     elif [ "$BUILD" = "osx" ]; then

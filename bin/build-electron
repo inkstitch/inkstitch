@@ -1,0 +1,13 @@
+#!/bin/bash
+
+cd electron
+
+if [ "$BUILD" = "windows" ]; then
+  NPM="wine 'C:\node\npm'"
+else
+  NPM="npm"
+fi
+
+$NPM install
+$NPM update
+$NPM run package

@@ -7,6 +7,7 @@ ARCH:=$(shell uname -m)
 
 dist: distclean locales inx
 	bin/build-dist $(EXTENSIONS)
+	bin/build-electron
 	cp inx/*.inx dist
 	cp -a images/examples dist/inkstitch
 	cp -a palettes dist/inkstitch
@@ -15,6 +16,7 @@ dist: distclean locales inx
 	cp -a icons dist/inkstitch/bin
 	cp -a locales dist/inkstitch/bin
 	cp -a print dist/inkstitch/bin
+	mv electron/out/* dist/inkstitch/electron
 	if [ "$$BUILD" = "windows" ]; then \
 		cd dist; zip -r ../inkstitch-$(VERSION)-win32.zip *; \
 	else \
@@ -22,7 +24,7 @@ dist: distclean locales inx
 	fi
 
 distclean:
-	rm -rf build dist inx locales *.spec *.tar.gz *.zip
+	rm -rf build dist inx locales *.spec *.tar.gz *.zip electron/node_modules electron/out
 
 .PHONY: inx
 inx: locales
