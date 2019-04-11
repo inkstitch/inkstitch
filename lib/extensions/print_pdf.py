@@ -306,6 +306,7 @@ class Print(InkstitchExtension):
             realistic_color_block_svgs=realistic_color_block_svgs
         )
         print_server.start()
+        time.sleep(0.5)
         browser_window = open_url("http://%s:%s/" % (print_server.host, print_server.port))
         browser_window.wait()
         print_server.stop()
