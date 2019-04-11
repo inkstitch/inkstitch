@@ -48,7 +48,10 @@ class LetteringFrame(wx.Frame):
         self.update_font_list()
         self.font_chooser = SubtitleComboBox(self, wx.ID_ANY, choices=self.get_font_names(),
                                              subtitles=self.get_font_descriptions(), style=wx.CB_READONLY)
-        self.font_chooser.Bind(wx.EVT_COMBOBOX, self.update_preview)
+        self.font_chooser.Bind(wx.EVT_COMBOBOX, self.on_font_changed)
+
+        self.scale_spinner = wx.SpinCtrl(self, wx.ID_ANY, min=100, max=100, initial=100)
+        self.scale_spinner.Bind(wx.EVT_SPINCTRL, lambda event: self.on_change("scale", event))
 
         self.text_editor = wx.TextCtrl(self, style=wx.TE_MULTILINE | wx.TE_DONTWRAP)
         self.text_editor.Bind(wx.EVT_TEXT, lambda event: self.on_change("text", event))
@@ -77,7 +80,8 @@ class LetteringFrame(wx.Frame):
         self.settings = DotDict({
             "text": u"",
             "back_and_forth": True,
-            "font": None
+            "font": None,
+            "scale": 100
         })
 
     def apply_settings(self):
@@ -86,6 +90,7 @@ class LetteringFrame(wx.Frame):
         self.trim_checkbox.SetValue(bool(self.settings.trim))
         self.set_initial_font(self.settings.font)
         self.text_editor.SetValue(self.settings.text)
+        self.scale_spinner.SetValue(self.settings.scale)
 
     def save_settings(self):
         """Save the settings into the SVG group element."""
@@ -148,6 +153,8 @@ class LetteringFrame(wx.Frame):
         except KeyError:
             self.font_chooser.SetValueByUser(self.default_font.name)
 
+        self.on_font_changed()
+
     @property
     @cache
     def default_font(self):
@@ -160,13 +167,23 @@ class LetteringFrame(wx.Frame):
         self.settings[attribute] = event.GetEventObject().GetValue()
         self.preview.update()
 
+    def on_font_changed(self, event=None):
+        font = self.fonts.get(self.font_chooser.GetValue(), self.default_font)
+        self.scale_spinner.SetRange(int(font.min_scale * 100), int(font.max_scale * 100))
+        self.update_preview()
+
     def update_preview(self, event=None):
         self.preview.update()
 
     def update_lettering(self):
-        font = self.fonts.get(self.font_chooser.GetValue(), self.default_font)
         del self.group[:]
+        self.group.attrib.pop('transform', None)
+
+        font = self.fonts.get(self.font_chooser.GetValue(), self.default_font)
         font.render_text(self.settings.text, self.group, back_and_forth=self.settings.back_and_forth, trim=self.settings.trim)
+
+        if self.settings.scale != 100:
+            self.group.attrib['transform'] = 'scale(%s)' % (self.settings.scale / 100.0)
 
     def generate_patches(self, abort_early=None):
         patches = []
@@ -231,11 +248,14 @@ class LetteringFrame(wx.Frame):
         options_sizer.Add(self.trim_checkbox, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT | wx.BOTTOM, 5)
         outer_sizer.Add(options_sizer, 0, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
 
-        font_chooser_sizer = wx.BoxSizer(wx.VERTICAL)
-        font_chooser_sizer.Add(self.font_chooser, 0, wx.ALL | wx.EXPAND, 10)
+        font_sizer = wx.BoxSizer(wx.HORIZONTAL)
+        font_sizer.Add(self.font_chooser, 1, wx.EXPAND, 0)
+        font_sizer.Add(wx.StaticText(self, wx.ID_ANY, "Scale"), 0, wx.LEFT | wx.ALIGN_CENTRE_VERTICAL, 20)
+        font_sizer.Add(self.scale_spinner, 0, wx.LEFT, 10)
+        font_sizer.Add(wx.StaticText(self, wx.ID_ANY, "%"), 0, wx.LEFT | wx.ALIGN_CENTRE_VERTICAL, 3)
 
         text_editor_sizer = wx.StaticBoxSizer(self.text_editor_box, wx.VERTICAL)
-        text_editor_sizer.Add(font_chooser_sizer, 0, wx.RIGHT | wx.EXPAND, 100)
+        text_editor_sizer.Add(font_sizer, 0, wx.ALL | wx.EXPAND, 10)
         text_editor_sizer.Add(self.text_editor, 1, wx.EXPAND | wx.LEFT | wx.RIGHT | wx.BOTTOM, 10)
         outer_sizer.Add(text_editor_sizer, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
 

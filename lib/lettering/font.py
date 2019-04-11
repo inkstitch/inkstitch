@@ -107,6 +107,8 @@ class Font(object):
     word_spacing = font_metadata('word_spacing', 3, multiplier=PIXELS_PER_MM)
     kerning_pairs = font_metadata('kerning_pairs', {})
     auto_satin = font_metadata('auto_satin', True)
+    min_scale = font_metadata('min_scale', 1.0)
+    max_scale = font_metadata('max_scale', 1.0)
 
     @property
     def id(self):
