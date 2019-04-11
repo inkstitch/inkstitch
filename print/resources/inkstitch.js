@@ -11,12 +11,6 @@ var realistic_rendering = {};
 var realistic_cache = {};
 var normal_rendering = {};
 
-function ping() {
-  $.get("/ping")
-   .done(function() { setTimeout(ping, 1000) })
-   .fail(function() { $('#errors').attr('class', 'show') });
-}
-
 //function to chunk opd view into pieces 
   // source: https://stackoverflow.com/questions/3366529/wrap-every-3-divs-in-a-div
 $.fn.chunk = function(size) {
@@ -199,7 +193,6 @@ function setSVGTransform(figure, transform) {
 }
 
 $(function() {
-  setTimeout(ping, 1000);
   /* SCALING AND MOVING SVG  */
 
   /* Mousewheel scaling */
@@ -369,22 +362,7 @@ $(function() {
   /* Settings Bar */
 
   $('button.close').click(function() {
-    $.post('/shutdown', {})
-     .always(function(data) {
-       window.close();
-
-       /* Chrome and Firefox both have a rule: scripts can only close windows
-        * that they opened.  Chrome seems to have an exception for windows that
-        * were opened by an outside program, so the above works fine.  Firefox
-        * steadfastly refuses to allow us to close the window, so we'll tell
-        * the user (in their language) that they can close it.
-        */
-       setTimeout(function() {
-           document.open();
-           document.write("<html><body>" + data + "</body></html>");
-           document.close();
-       }, 1000);
-    });
+     window.close();
   });
 
   $('button.print').click(function() {
