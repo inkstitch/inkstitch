@@ -24,6 +24,10 @@ def open_url(url):
 
         electron_path = os.path.join(base_dir, "out", package_dir, "inkstitch-gui")
 
-    app_process = subprocess.Popen([electron_path, url])
+    if sys.platform == "darwin":
+        electron_path += ".app/Contents/MacOS/inkstitch-gui"
+        app_process = subprocess.Popen(["open", "-a", electron_path, "--args", url])
+    else:
+        app_process = subprocess.Popen([electron_path, url])
 
     return app_process
