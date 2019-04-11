@@ -3,7 +3,7 @@
 cd electron
 
 if [ "$BUILD" = "windows" ]; then
-  NPM="wine 'C:\node\npm'"
+  NPM="wine cmd /c 'C:\node\npm.cmd'"
 else
   NPM="npm"
 fi
