@@ -16,7 +16,11 @@ dist: locales inx
 	cp -a icons dist/inkstitch/bin
 	cp -a locales dist/inkstitch/bin
 	cp -a print dist/inkstitch/bin
-	cp -a electron/dist/*-unpacked dist/inkstitch/electron
+	if [ "$$BUILD" = "osx" ]; then \
+	    cp -a electron/dist/mac dist/inkstitch/electron; \
+	else \
+	    cp -a electron/dist/*-unpacked dist/inkstitch/electron; \
+	fi
 	if [ "$$BUILD" = "windows" ]; then \
 		cd dist; zip -r ../inkstitch-$(VERSION)-win32.zip *; \
 	else \
