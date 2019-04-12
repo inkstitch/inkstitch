@@ -88,18 +88,6 @@ class PrintPreviewServer(Thread):
         def resources(resource):
             return send_from_directory(self.resources_path, resource, cache_timeout=1)
 
-        @self.app.route('/printing/start')
-        def printing_start():
-            # temporarily turn off the watcher while the print dialog is up,
-            # because javascript will be frozen
-            self.last_request_time = None
-            return "OK"
-
-        @self.app.route('/printing/end')
-        def printing_end():
-            # nothing to do here -- request_started() will restart the watcher
-            return "OK"
-
         @self.app.route('/settings/<field_name>', methods=['POST'])
         def set_field(field_name):
             self.metadata[field_name] = request.json['value']

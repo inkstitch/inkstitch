@@ -1,3 +1,5 @@
+var electron = require('electron');
+
 $.postJSON = function(url, data, success=null) {
     return $.ajax(url, {
                         type: 'POST',
@@ -366,13 +368,8 @@ $(function() {
   });
 
   $('button.print').click(function() {
-    // printing halts all javascript activity, so we need to tell the backend
-    // not to shut down until we're done.
-    $.get("/printing/start")
-     .done(function() {
-        window.print();
-        $.get("/printing/end");
-     });
+	  var pageSize = $('select#printing-size').find(':selected').text();
+	  electron.ipcRenderer.send('print', pageSize)
   });
 
   $('button.settings').click(function(){

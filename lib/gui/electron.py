@@ -1,4 +1,3 @@
-from glob import glob
 import os
 import subprocess
 import sys
@@ -14,21 +13,14 @@ def open_url(url):
 
     if getattr(sys, 'frozen', None) is not None:
         electron_path = os.path.join(get_bundled_dir("electron"), "inkstitch-gui")
+
+        if sys.platform == "darwin":
+            electron_path += ".app/Contents/MacOS/inkstitch-gui"
+            subprocess.Popen(["open", "-a", electron_path, "--args", url])
+        else:
+            app_process = subprocess.Popen([electron_path, url])
     else:
-        # It's a bit trickier to find the electron app in a development environment.
-        base_dir = get_bundled_dir("electron")
-
-        try:
-            package_dir = glob(os.path.join(base_dir, 'dist', '*-unpacked'))[0]
-        except IndexError:
-            raise Exception("Electron app not found.  Be sure to run 'yarn; yarn dist' in %s." % base_dir)
-
-        electron_path = os.path.join(base_dir, package_dir, "inkstitch-gui")
-
-    if sys.platform == "darwin":
-        electron_path += ".app/Contents/MacOS/inkstitch-gui"
-        app_process = subprocess.Popen(["open", "-a", electron_path, "--args", url])
-    else:
-        app_process = subprocess.Popen([electron_path, url])
+        # if we're not running in a pyinstaller bundle, run electron directly
+        app_process = subprocess.Popen(["yarn", "dev", url], cwd=get_bundled_dir("electron"))
 
     return app_process

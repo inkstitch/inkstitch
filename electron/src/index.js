@@ -1,4 +1,5 @@
-import { app, BrowserWindow } from 'electron';
+import { app, BrowserWindow, ipcMain, dialog } from 'electron';
+var fs = require('fs');
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -11,8 +12,16 @@ const createWindow = () => {
   mainWindow.maximize();
 
   // and load the index.html of the app.
-  mainWindow.loadURL(process.argv[1]);
+  if (process.argv[1] == ".") {
+	  // run in development mode with `electron . <url>`
+	  var url = process.argv[2];
+  } else {
+	  var url = process.argv[1];
+  }
+  mainWindow.loadURL(url);
 
+  mainWindow.webContents.openDevTools();
+  
   // Emitted when the window is closed.
   mainWindow.on('closed', () => {
     // Dereference the window object, usually you would store windows
@@ -31,3 +40,11 @@ app.on('ready', createWindow);
 app.on('window-all-closed', () => {
     app.quit();
 });
+
+ipcMain.on('print', function (event, pageSize) {
+	mainWindow.webContents.printToPDF({"pageSize": pageSize}, function(error, data) {
+		dialog.showSaveDialog(mainWindow, {"defaultPath": "inkstitch.pdf"}, function(filename, bookmark) {
+			fs.writeFileSync(filename, data, 'utf-8');
+		})
+	})
+})
