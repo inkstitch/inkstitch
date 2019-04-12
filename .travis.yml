@@ -29,6 +29,8 @@ matrix:
     os: osx
     sudo: required
     env: BUILD=osx
+    node_js:
+      - 7
     if: type != cron AND (tag =~ ^v[0-9.]+$ OR branch != master)
 
   - language: python
