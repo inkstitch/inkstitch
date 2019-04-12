@@ -29,8 +29,6 @@ matrix:
     os: osx
     sudo: required
     env: BUILD=osx
-    node_js:
-      - 7
     if: type != cron AND (tag =~ ^v[0-9.]+$ OR branch != master)
 
   - language: python
@@ -134,6 +132,9 @@ install:
 
       pip install -r requirements.txt
       pip install pyinstaller==3.3.1
+
+      nvm install node
+      nvm use node
       set +x
     elif [ -n "$LINT" ]; then
       pip install flake8
