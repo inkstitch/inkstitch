@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ "$BUILD" = "windows" ]; then
+if [ "$BUILD" = "windows" -o "$BUILD" = "linux" ]; then
   docker run --rm \
     -e ELECTRON_CACHE=$HOME/.cache/electron \
     -v ${PWD}/electron:/project \
@@ -9,6 +9,6 @@ if [ "$BUILD" = "windows" ]; then
     /bin/bash -c "yarn --link-duplicates --pure-lockfile && yarn run dist"
 else
   cd electron
-  yarn install
-  yarn run dist
+  npm install
+  npm run dist
 fi
