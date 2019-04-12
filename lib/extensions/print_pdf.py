@@ -16,7 +16,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 import requests
 
 from ..gui import open_url
-from ..i18n import _, translation as inkstitch_translation
+from ..i18n import translation as inkstitch_translation
 from ..stitch_plan import patches_to_stitch_plan
 from ..svg import render_stitch_plan
 from ..svg.tags import INKSCAPE_GROUPMODE
