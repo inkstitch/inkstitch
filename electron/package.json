@@ -9,11 +9,13 @@
     "dist": "electron-builder"
   },
   "build": {
-    "linux": { "target": "dir" }
+    "linux": { "target": "dir" },
+    "win": { "target": "dir" },
+    "mac": { "target": "dir" }
   },
   "keywords": [],
   "author": "lex",
-  "license": "GPL-3.0-or-later",
+  "license": "GPL-3.0+",
   "dependencies": {
     "electron-compile": "^6.4.4"
   },
