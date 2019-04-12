@@ -16,7 +16,7 @@ dist: distclean locales inx
 	cp -a icons dist/inkstitch/bin
 	cp -a locales dist/inkstitch/bin
 	cp -a print dist/inkstitch/bin
-	cp -a electron/out/* dist/inkstitch/electron
+	cp -a electron/dist/*-unpacked dist/inkstitch/electron
 	if [ "$$BUILD" = "windows" ]; then \
 		cd dist; zip -r ../inkstitch-$(VERSION)-win32.zip *; \
 	else \

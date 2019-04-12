@@ -23,6 +23,7 @@ matrix:
   - python: 2.7
     sudo: required
     env: BUILD=windows
+    services: docker
     if: type != cron AND (tag =~ ^v[0-9.]+$ OR branch != master)
   - language: generic
     os: osx
@@ -42,7 +43,6 @@ cache:
     - $HOME/.cache/pip
     - electron/node_modules
     - $HOME/.cache/electron
-    - $HOME/.cache/electron-builder
     - /var/cache/apt/archives
 install:
   - |
@@ -106,10 +106,6 @@ install:
       wine c:\\Python\\python.exe c:\\Python\\scripts\\pip.exe install Shapely-1.6.3-cp27-cp27m-win32.whl
 
       wine c:\\Python\\python.exe c:\\Python\\scripts\\pip.exe install -r requirements.txt
-
-      wget -q https://nodejs.org/dist/v10.15.3/node-v10.15.3-win-x86.zip --output-document=node.zip
-      unzip node.zip
-      mv node-v*-win-x86 $(winepath 'C:\node')
 
       set +x
     elif [ "$BUILD" = "osx" ]; then

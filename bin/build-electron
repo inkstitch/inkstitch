@@ -1,13 +1,14 @@
 #!/bin/bash
 
-cd electron
-
 if [ "$BUILD" = "windows" ]; then
-  NPM="wine cmd /c C:\\node\\npm.cmd"
+  docker run --rm \
+    -e ELECTRON_CACHE=$HOME/.cache/electron \
+    -v ${PWD}/electron:/project \
+    -v ~/.cache/electron:/root/.cache/electron \
+    electronuserland/builder:wine \
+    /bin/bash -c "yarn --link-duplicates --pure-lockfile && yarn run dist"
 else
-  NPM="npm"
+  cd electron
+  yarn install
+  yarn run dist
 fi
-
-$NPM install
-$NPM update
-$NPM run package
