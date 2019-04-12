@@ -133,9 +133,10 @@ install:
       pip install -r requirements.txt
       pip install pyinstaller==3.3.1
 
+      set +x
+
       nvm install node
       nvm use node
-      set +x
     elif [ -n "$LINT" ]; then
       pip install flake8
     fi
