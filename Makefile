@@ -5,7 +5,7 @@ VERSION:=$(subst /,-,$(TRAVIS_BRANCH))
 OS:=$(TRAVIS_OS_NAME)
 ARCH:=$(shell uname -m)
 
-dist: distclean locales inx
+dist: locales inx
 	bin/build-dist $(EXTENSIONS)
 	bin/build-electron
 	cp inx/*.inx dist
@@ -24,7 +24,7 @@ dist: distclean locales inx
 	fi
 
 distclean:
-	rm -rf build dist inx locales *.spec *.tar.gz *.zip electron/node_modules electron/out
+	rm -rf build dist inx locales *.spec *.tar.gz *.zip electron/node_modules electron/dist
 
 .PHONY: inx
 inx: locales
