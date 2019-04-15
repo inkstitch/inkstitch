@@ -3,7 +3,7 @@
   "productName": "inkstitch-gui",
   "version": "1.0.0",
   "description": "Ink/Stitch GUI",
-  "main": "src/index.js",
+  "main": "src/main.js",
   "scripts": {
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
