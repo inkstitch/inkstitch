@@ -661,15 +661,11 @@ $(function() {
 
             // rendering slows down the browser enough that we can miss sending
             // pings, so tell the server side to wait for us
-            $.get("/printing/start")
-             .done(function() {
-               ctx.drawImage(image, 0, 0, image.width, image.height, 0, 0, canvas.width, canvas.height);
-               realistic_cache[item] = '<svg width=' + image.width + ' height=' + image.height + ' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">' +
-                               '<image x=0 y=0 width=' + image.width + ' height=' + image.height + ' xlink:href="' + canvas.toDataURL() + '" />' +
-                               '</svg>';
-               finalize(realistic_cache[item]);
-               $.get("/printing/end");
-             });
+            ctx.drawImage(image, 0, 0, image.width, image.height, 0, 0, canvas.width, canvas.height);
+            realistic_cache[item] = '<svg width=' + image.width + ' height=' + image.height + ' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">' +
+                                    '<image x=0 y=0 width=' + image.width + ' height=' + image.height + ' xlink:href="' + canvas.toDataURL() + '" />' +
+                                    '</svg>';
+            finalize(realistic_cache[item]);
           };
           image.src = '/realistic/' + item;
         } else {
