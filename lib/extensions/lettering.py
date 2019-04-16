@@ -177,13 +177,22 @@ class LetteringFrame(wx.Frame):
 
     def update_lettering(self):
         del self.group[:]
-        self.group.attrib.pop('transform', None)
+
+        if self.settings.scale == 100:
+            destination_group = self.group
+        else:
+            destination_group = inkex.etree.SubElement(self.group, SVG_GROUP_TAG, {
+                # L10N The user has chosen to scale the text by some percentage
+                # (50%, 200%, etc).  If you need to use the percentage symbol,
+                # make sure to double it (%%).
+                INKSCAPE_LABEL: _("Text scale %s%%") % self.settings.scale
+            })
 
         font = self.fonts.get(self.font_chooser.GetValue(), self.default_font)
-        font.render_text(self.settings.text, self.group, back_and_forth=self.settings.back_and_forth, trim=self.settings.trim)
+        font.render_text(self.settings.text, destination_group, back_and_forth=self.settings.back_and_forth, trim=self.settings.trim)
 
         if self.settings.scale != 100:
-            self.group.attrib['transform'] = 'scale(%s)' % (self.settings.scale / 100.0)
+            destination_group.attrib['transform'] = 'scale(%s)' % (self.settings.scale / 100.0)
 
     def generate_patches(self, abort_early=None):
         patches = []
