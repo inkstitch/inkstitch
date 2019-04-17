@@ -356,14 +356,51 @@ class DrawingPanel(wx.Panel):
         self.last_frame_duration = time.time() - start
 
         if last_stitch:
-            x = last_stitch[0]
-            y = last_stitch[1]
-            x, y = transform.TransformPoint(float(x), float(y))
-            canvas.SetTransform(canvas.CreateMatrix())
-            crosshair_radius = 10
-            canvas.SetPen(self.black_pen)
-            canvas.DrawLines(((x - crosshair_radius, y), (x + crosshair_radius, y)))
-            canvas.DrawLines(((x, y - crosshair_radius), (x, y + crosshair_radius)))
+            self.draw_crosshair(last_stitch[0], last_stitch[1], canvas, transform)
+
+        self.draw_scale(canvas)
+
+    def draw_crosshair(self, x, y, canvas, transform):
+        x, y = transform.TransformPoint(float(x), float(y))
+        canvas.SetTransform(canvas.CreateMatrix())
+        crosshair_radius = 10
+        canvas.SetPen(self.black_pen)
+        canvas.DrawLines(((x - crosshair_radius, y), (x + crosshair_radius, y)))
+        canvas.DrawLines(((x, y - crosshair_radius), (x, y + crosshair_radius)))
+
+    def draw_scale(self, canvas):
+        canvas_width, canvas_height = self.GetClientSize()
+
+        one_mm = PIXELS_PER_MM * self.zoom
+        scale_width = one_mm
+        max_width = min(canvas_width * 0.5, 300)
+
+        while scale_width > max_width:
+            scale_width /= 2.0
+
+        while scale_width < 50:
+            scale_width += one_mm
+
+        scale_width_mm = scale_width / self.zoom / PIXELS_PER_MM
+
+        # The scale bar looks like this:
+        #
+        # |           |
+        # |_____|_____|
+
+        scale_lower_left_x = 20
+        scale_lower_left_y = canvas_height - 20
+
+        canvas.DrawLines(((scale_lower_left_x, scale_lower_left_y - 6),
+                          (scale_lower_left_x, scale_lower_left_y),
+                          (scale_lower_left_x + scale_width / 2.0, scale_lower_left_y),
+                          (scale_lower_left_x + scale_width / 2.0, scale_lower_left_y - 3),
+                          (scale_lower_left_x + scale_width / 2.0, scale_lower_left_y),
+                          (scale_lower_left_x + scale_width, scale_lower_left_y),
+                          (scale_lower_left_x + scale_width, scale_lower_left_y - 5)))
+
+        canvas.SetFont(wx.Font(12, wx.DEFAULT, wx.NORMAL, wx.NORMAL), wx.Colour((0, 0, 0)))
+        canvas.DrawText("%s mm" % scale_width_mm, scale_lower_left_x, scale_lower_left_y + 5)
 
     def clear(self):
         dc = wx.ClientDC(self)
@@ -520,7 +557,7 @@ class DrawingPanel(wx.Panel):
         # If we just change the zoom, the design will appear to move on the
         # screen.  We have to adjust the pan to compensate.  We want to keep
         # the part of the design under the mouse pointer in the same spot
-        # after we zoom, so that we appar to be zooming centered on the
+        # after we zoom, so that we appear to be zooming centered on the
         # mouse pointer.
 
         # This will create a matrix that takes a point in the design and
