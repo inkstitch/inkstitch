@@ -32,9 +32,9 @@ Download the release archive for your platform from [latest release](https://git
 
 OS|File name|32&#8209;bit|64&#8209;bit
 ---|---|---|---
-Linux|inkstitch-[VERSION]-Linux-x86_64.tar.gz|☒|☑
-Windows|inkstitch-[VERSION]-win32.zip|☑|☑
-macOS|inkstitch-[VERSION]-osx-x86_64.tar.gz|☒|☑
+Linux|inkstitch-[VERSION]-Linux-x86_64-[LOCALE].tar.gz|☒|☑
+Windows|inkstitch-[VERSION]-win32-[LOCALE].zip|☑|☑
+macOS|inkstitch-[VERSION]-osx-x86_64-[LOCALE].tar.gz|☒|☑
 
 **Info:** Ink/Stitch for macOS currently works only with High Sierra (10.13) and higher.
 {: .notice--warning }
