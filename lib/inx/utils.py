@@ -1,3 +1,4 @@
+import errno
 import os
 import gettext
 from os.path import dirname
@@ -28,8 +29,16 @@ def build_environment():
 
 
 def write_inx_file(name, contents):
-    inx_file_name = "inkstitch_%s_%s.inx" % (name, current_locale)
-    with open(os.path.join(inx_path, inx_file_name), 'w') as inx_file:
+    inx_locale_dir = os.path.join(inx_path, current_locale)
+
+    try:
+        os.makedirs(inx_locale_dir)
+    except OSError as e:
+        if e.errno != errno.EEXIST:
+            raise
+
+    inx_file_name = "inkstitch_%s.inx" % name
+    with open(os.path.join(inx_locale_dir, inx_file_name), 'w') as inx_file:
         print >> inx_file, contents.encode("utf-8")
 
 
