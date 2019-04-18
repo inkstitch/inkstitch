@@ -11,12 +11,15 @@
   },
   "build": {
     "linux": {
+      "icon": "src/assets/icons/png/512x512.png",
       "target": "dir"
     },
     "win": {
+      "icon": "src/assets/icons/win/inkstitch.ico",
       "target": "dir"
     },
     "mac": {
+      "icon": "src/assets/icons/mac/inkstitch.icns",
       "target": "dir"
     }
   },
@@ -24,7 +27,8 @@
   "author": "lex",
   "license": "GPL-3.0+",
   "dependencies": {
-    "electron-compile": "^6.4.4"
+    "electron-compile": "^6.4.4",
+    "tmp": "0.1.0"
   },
   "devDependencies": {
     "electron": "4.1.3",

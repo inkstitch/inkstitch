@@ -1,5 +1,7 @@
 import { app, BrowserWindow, ipcMain, dialog } from 'electron';
 var fs = require('fs');
+var path = require('path')
+var tmp = require('tmp')
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -7,7 +9,7 @@ let mainWindow;
 
 const createWindow = () => {
   // Create the browser window.
-  mainWindow = new BrowserWindow();
+  mainWindow = new BrowserWindow({icon: path.join(__dirname, 'assets/icons/png/512x512.png')});
 
   mainWindow.maximize();
 
