@@ -44,7 +44,8 @@ app.on('window-all-closed', () => {
 ipcMain.on('print', function (event, pageSize) {
 	mainWindow.webContents.printToPDF({"pageSize": pageSize}, function(error, data) {
 		dialog.showSaveDialog(mainWindow, {"defaultPath": "inkstitch.pdf"}, function(filename, bookmark) {
-			fs.writeFileSync(filename, data, 'utf-8');
+			if (typeof filename !== 'undefined')
+				fs.writeFileSync(filename, data, 'utf-8');
 		})
 	})
 })
