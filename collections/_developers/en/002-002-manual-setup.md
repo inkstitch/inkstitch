@@ -46,7 +46,7 @@ A manual setup will allow you to edit the code while running the extension.
     ln -s inkstitch/inkstitch.py
     ```
 
-    To use another language substitute `en_US` for another locale in `inx/`.
+    To use another language for Ink/Stitch menus inside Inkscape substitute `en_US` for another locale in `inx/`. Ink/Stich dialogs outside Inkscape use the OS language.
 
 5. Run Inkscape.
 
