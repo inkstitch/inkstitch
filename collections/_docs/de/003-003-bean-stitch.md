@@ -12,7 +12,7 @@ toc: true
 ![Bean Stitch Detail](/assets/images/docs/bean-stitch-detail.jpg){: width="350x" }
 
 ## Funktionsweise
-1. Markiere eine **gestrichelte Linie** und öffne `Erweiterungen > Ink/Stitch > Deutsch > Parameter`.
+1. Markiere eine **gestrichelte Linie** und öffne `Erweiterungen > Ink/Stitch  > Parameter`.
 
 2. Im [Laufstich-Modus](/de/docs/stitches/running-stitch) gibt es die Option `Bean stitch Anzahl der Wiederholungen`. Wird eine Zahl gesetzt, aktiviert dies gleichzeitig den Bohnenstich-Modus.
 

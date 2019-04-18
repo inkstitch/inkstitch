@@ -2,7 +2,7 @@
 title: "Install Ink/Stitch"
 permalink: /docs/install/
 excerpt: "How to quickly install Ink/Stitch."
-last_modified_at: 2019-04-07
+last_modified_at: 2019-04-18
 toc: true
 ---
 

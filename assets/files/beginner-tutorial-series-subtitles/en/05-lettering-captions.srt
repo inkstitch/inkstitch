@@ -12,7 +12,7 @@ In Ink/Stitch it is possible to write a multiline text, which will automatically
 
 4
 00:00:24,040 --> 00:00:27,660
-Run "Extensions > Ink/Stitch > English > Lettering"
+Run "Extensions > Ink/Stitch  > Lettering"
 
 5
 00:00:28,380 --> 00:00:35,340

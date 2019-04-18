@@ -14,11 +14,11 @@ toc: true
 It is best practice to add commands through extensions:
 
 * Select one ore more objects
-* Run `Extensions > Ink/Stitch > English > Commands > Attach commands ...`
+* Run `Extensions > Ink/Stitch  > Commands > Attach commands ...`
 * Enable desired commands and apply
 * Start/Stop/Cut commands: The connector's endpoint nearest to the object is the point at which the effect will be performed.
 
-In `Extensions > Ink/Stitch > English > Commands` you will find three options: add commands, add layer commands and attach commands.
+In `Extensions > Ink/Stitch  > Commands` you will find three options: add commands, add layer commands and attach commands.
 
 ### Add Commands ...
 

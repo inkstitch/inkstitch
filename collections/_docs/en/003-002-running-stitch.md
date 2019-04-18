@@ -19,7 +19,7 @@ Running stitch can be created by setting a **dashed stroke** on a path. Any type
 ![Running Stitch Dashes](/assets/images/docs/running-stitch-dashes.jpg){: .align-left style="padding: 5px"}
 Select the stroke and go to `Object > Fill and Stroke...` and choose one of the dashed lines in the `Stroke style` tab.
 
-Open [`Extensions > Ink/Stitch > English > Params`](/docs/params/#stroke-params) to change parameters to your needs.
+Open [`Extensions > Ink/Stitch  > Params`](/docs/params/#stroke-params) to change parameters to your needs.
 
 **Info:** In order to avoid rounding corners, an extra stitch will be added at the point of any sharp corners.
 {: .notice--info style="clear: both;" }

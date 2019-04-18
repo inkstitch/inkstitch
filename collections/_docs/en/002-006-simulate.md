@@ -8,7 +8,7 @@ toc: true
 
 Select the objects you wish to see in a simulated preview. If you want to watch your whole design being simulated, select everything (`Ctrl+A`) or nothing.
 
-Then  run `Extensions > Ink/Stitch > English > Simulate` and enjoy.
+Then  run `Extensions > Ink/Stitch  > Simulate` and enjoy.
 
 ## Simulation Shortcut Keys
 

@@ -11,7 +11,7 @@ Das Lettering-Werkzeug generiert mehrzeiligen Text und fügt diesen als dynamisc
 
 ## Funktionsweise
 
-* Öffne `Erweiterungen > Ink/Stitch > Deutsch > Lettering`
+* Öffne `Erweiterungen > Ink/Stitch  > Lettering`
 * Schreibe einen Text (mehrzeilig ist möglich)
 * Klick auf `Anwenden und schließen`
 

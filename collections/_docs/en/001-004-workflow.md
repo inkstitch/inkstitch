@@ -114,7 +114,7 @@ Closed path with a fill color | [fill stitch](/docs/stitches/fill-stitch/)
 
 ### Parametrize
 
-Set parameters using `Extensions > Ink/Stitch > English > Params`. You find a description for each parameter in the [Params](/docs/params/) section of this documentation. Each time you change parameter values, you'll be able to see the simulated result in a preview window. Once you are satisfied with the result, click `Apply and close` to save the values into your SVG-file.
+Set parameters using `Extensions > Ink/Stitch  > Params`. You find a description for each parameter in the [Params](/docs/params/) section of this documentation. Each time you change parameter values, you'll be able to see the simulated result in a preview window. Once you are satisfied with the result, click `Apply and close` to save the values into your SVG-file.
 
 At this point, save your SVG file. If Inkscape is starting to become sluggish (due to an Inkscape memory leak), restart it before continuing.
 

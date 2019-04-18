@@ -12,7 +12,7 @@ Bean stitch describes a repetition of running stitches back and forth. This woul
 ![Bean Stitch Detail](/assets/images/docs/bean-stitch-detail.jpg){: width="350x" }
 
 ## How to Create
-1. Select a **dashed stroke** and open `Extensions > Ink/Stitch > English > Params`.
+1. Select a **dashed stroke** and open `Extensions > Ink/Stitch  > Params`.
 
 2. Set the number of repeats to `Bean stitch number of repeats` when in [running stitch mode](/docs/stitches/running-stitch).
 

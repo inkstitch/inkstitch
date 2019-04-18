@@ -56,7 +56,7 @@ In fact these Add-ons are two files which need to be placed in specific folders 
 
 15
 00:01:09,620 --> 00:01:17,280
-Run 'Extensions > Ink/Stitch > English > Install add-ons for Inkscape' and click install.
+Run 'Extensions > Ink/Stitch  > Install add-ons for Inkscape' and click install.
 
 16
 00:01:18,520 --> 00:01:22,940
@@ -108,7 +108,7 @@ Both objects are displayed.
 
 28
 00:02:51,140 --> 00:02:59,460
-With one object selected go to 'Extensions > Ink/Stitch > English > Commands > Attach command to selected Objects'.
+With one object selected go to 'Extensions > Ink/Stitch  > Commands > Attach command to selected Objects'.
 
 29
 00:02:59,820 --> 00:03:03,760

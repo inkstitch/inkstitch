@@ -1,7 +1,7 @@
 ---
 title: "Manual Setup"
 permalink: /developers/inkstitch/manual-setup/
-last_modified_at: 2019-04-07
+last_modified_at: 2019-04-18
 toc: false
 ---
 A manual setup will allow you to edit the code while running the extension.

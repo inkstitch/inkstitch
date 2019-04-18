@@ -17,7 +17,7 @@ exclude-from-tutorial-list: true
 
 In Ink/Stitch it is possible to write a multiline text, which will automatically be converted into an embroidery font.
 
-Run `Extensions > Ink/Stitch > English > Lettering`
+Run `Extensions > Ink/Stitch  > Lettering`
 
 Being in a very early state the tool can handle only one font. This will change in a future release.
 

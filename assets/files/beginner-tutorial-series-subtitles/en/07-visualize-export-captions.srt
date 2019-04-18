@@ -32,7 +32,7 @@ but this is a custom shortcut key and not available by default.
 
 9
 00:00:56,460 --> 00:01:03,540
-If you don't have the shortcut key set, open the simulator through "Extensions > Ink/Stitch > English > Simulator".
+If you don't have the shortcut key set, open the simulator through "Extensions > Ink/Stitch  > Simulator".
 
 10
 00:01:03,760 --> 00:01:09,540
@@ -100,7 +100,7 @@ The print function will open in your default browser.
 
 26
 00:02:34,600 --> 00:02:38,540
-Run "Extensions > Ink/Stitch > English > Print".
+Run "Extensions > Ink/Stitch  > Print".
 
 27
 00:02:39,000 --> 00:02:43,960
@@ -268,7 +268,7 @@ With the new functionality you will rarely be using it. But still there might be
 
 68
 00:06:50,960 --> 00:06:56,000
-Open "Extensions > Ink/Stitch > English > Embroider"
+Open "Extensions > Ink/Stitch  > Embroider"
 
 69
 00:06:56,360 --> 00:07:00,060

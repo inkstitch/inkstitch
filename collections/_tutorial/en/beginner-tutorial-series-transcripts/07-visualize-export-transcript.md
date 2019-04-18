@@ -21,7 +21,7 @@ Whenever you are running the params dialogue in Ink/Stitch you will see the simu
 This is very important while planing your design, since you can visually see the changes as you make them.
 
 The simulator can also run without the params dialogue. In the customize tutorial we created a shortcut to open it with Ctrl+Shift+L, but this is a custom shortcut key and not available by default.
-If you don't have the shortcut key set, open the simulator through `Extensions > Ink/Stitch > English > Simulator`.
+If you don't have the shortcut key set, open the simulator through `Extensions > Ink/Stitch  > Simulator`.
 
 - It will simulate selected objects, or - if none is selected - the whole design.
 - You can speed up and slow down the simulation with arrow up and arrow down or by using the corresponding buttons.
@@ -41,7 +41,7 @@ When you are done, close the simulator with `Q`.
 While the simulator is very useful, you sometimes will need to see a realistic preview of your design. This way you can get a better impression of your stitch length settings, etc.
 In Ink/Stitch you will have access to a realistic preview through the print function. The print function will open in your default browser.
 
-Run `Extensions > Ink/Stitch > English > Print`.
+Run `Extensions > Ink/Stitch  > Print`.
 
 The print sheet that you will see is meant to be used either by operator or customer. But before we look into these options we want to discover the realistic preview.
 
@@ -82,7 +82,7 @@ All settings you've made in the print preview will be saved into the SVG file, s
 ## Embroider ...
 
 Embroider is an older function which has been very important before the simulator existed. With the new functionality you will rarely be using it. But still there might be possible usecases.
-* Open `Extensions > Ink/Stitch > English > Embroider`
+* Open `Extensions > Ink/Stitch  > Embroider`
 The dialogue comes with a few options. You will want to set the output file format to one, that your machine can read. If you leave `Directory` empty, the output file will be saved in the Inkscape's extensions directory. You might want to change this. Enter a path.
 When you hit `Apply` Ink/Stitch will perform two actions:
 1. It will save an embroidery file on your computer

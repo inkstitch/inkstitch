@@ -5,7 +5,7 @@ excerpt: ""
 last_modified_at: 2018-07-15
 toc: true
 ---
-`Extensions > Ink/Stitch > English > Satin Tools` include a number of useful helpers, making it easy to work with [satin columns](/docs/stitches/satin-column/).
+`Extensions > Ink/Stitch  > Satin Tools` include a number of useful helpers, making it easy to work with [satin columns](/docs/stitches/satin-column/).
 
 **Example:**
 * Create a path with the help of the bezier curves tool (`B`)
@@ -25,7 +25,7 @@ This tool will replace your satins with a new set of satin columns in logical st
 ### Usage
 
 1. Select satin columns (prepared with underlay, etc.)
-2. Run `Extensions > Ink/Stitch > English > Satin Tools > Auto-Route Satin Columns...`
+2. Run `Extensions > Ink/Stitch  > Satin Tools > Auto-Route Satin Columns...`
 3. Enable desired options and click apply
 
 **Tip:** By default, it will choose the left-most extreme as the starting point and the right-most extreme as the ending point (even if these occur partway through a satin such as the left edge of a letter "o"). You can override this by attaching the ["Auto-route satin stitch starting/ending position" commands](/docs/commands/).
@@ -45,7 +45,7 @@ This extension will convert a stroke into a satin column with a specified width.
 
 1. Draw a bezier curve (`B`)
 2. Set a stroke width
-2. Run `Extensions > Ink/Stitch > English > Satin Tools > Convert Line to Satin`
+2. Run `Extensions > Ink/Stitch  > Satin Tools > Convert Line to Satin`
 
 ## Cut Satin Column
 
@@ -54,10 +54,10 @@ Split a satin column at a specified point. The split happens at a stitch boundar
 ### Usage
 
 1. Select a satin column (simple satin doesn't work)
-2. Attach the "Satin split point" command using `Extensions > Ink/Stitch > English > Commands > Attach Commands to Selected Objects`.
+2. Attach the "Satin split point" command using `Extensions > Ink/Stitch  > Commands > Attach Commands to Selected Objects`.
 3. Move the symbol (or just the connector line's endpoint) to point to the exact spot you want the satin to be split at.
 4. Select the satin column again.
-5. Run `Extensions > Ink/Stitch > English > Satin Tools > Split Satin Column`.
+5. Run `Extensions > Ink/Stitch  > Satin Tools > Split Satin Column`.
 6. The split point command and connector line disappear, and nothing else appears to have happened. Select your satin and you'll see that it's been split.
 
 ## Flip Satin Column Rails
@@ -71,5 +71,5 @@ A satin column which originally starts on the left rail and ends on the right, w
 ### Usage
 
 * Select one or more satin column(s)
-* Run `Extensions > Ink/Stitch > English > Satin Tools > Flip Satin Columns`
+* Run `Extensions > Ink/Stitch  > Satin Tools > Flip Satin Columns`
 

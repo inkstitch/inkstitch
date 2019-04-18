@@ -55,7 +55,7 @@ Original Design von [Liv Iko](https://thenounproject.com/liv_iko/collection/bird
 
 ## Parameter
 
-Der Dialog `Erweiterungen > Ink/Stitch > Deutsch > Parameter` gibt dir die Möglichkeit die Satinkolumne genau zu justieren und entsprechende Unterlagen zu aktivieren.
+Der Dialog `Erweiterungen > Ink/Stitch  > Parameter` gibt dir die Möglichkeit die Satinkolumne genau zu justieren und entsprechende Unterlagen zu aktivieren.
 
 Mehr Details gibt es unter [Parameter (Satinkolumne)](/de/docs/params/#satinkolumne).
 

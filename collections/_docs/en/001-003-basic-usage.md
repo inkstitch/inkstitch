@@ -29,7 +29,7 @@ Transform **all objects** you want to stitch to paths:
 ## Step 3 - Parametrize SVG Path for Embroidery
 
 * Select at least one object.
-* Open `Extensions > Ink/Stitch > English > Params`.
+* Open `Extensions > Ink/Stitch  > Params`.
 * Play with the values. The simulator will update whenever you change the settings.
 * For now, close without saving.
 
