@@ -6,7 +6,13 @@ class DotDict(dict):
 
     def __init__(self, *args, **kwargs):
         super(DotDict, self).__init__(*args, **kwargs)
+        self._dotdictify()
 
+    def update(self, *args, **kwargs):
+        super(DotDict, self).update(*args, **kwargs)
+        self.dotdictify()
+
+    def _dotdictify(self):
         for k, v in self.iteritems():
             if isinstance(v, dict):
                 self[k] = DotDict(v)

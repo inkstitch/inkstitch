@@ -70,12 +70,6 @@ class LetteringFrame(wx.Frame):
 
     def load_settings(self):
         """Load the settings saved into the SVG group element"""
-        try:
-            if INKSTITCH_LETTERING in self.group.attrib:
-                self.settings = DotDict(json.loads(b64decode(self.group.get(INKSTITCH_LETTERING))))
-                return
-        except (TypeError, ValueError):
-            pass
 
         self.settings = DotDict({
             "text": u"",
@@ -84,9 +78,16 @@ class LetteringFrame(wx.Frame):
             "scale": 100
         })
 
+        try:
+            if INKSTITCH_LETTERING in self.group.attrib:
+                self.settings.update(json.loads(b64decode(self.group.get(INKSTITCH_LETTERING))))
+                return
+        except (TypeError, ValueError):
+            pass
+
     def apply_settings(self):
         """Make the settings in self.settings visible in the UI."""
-        self.back_and_forth_checkbox.SetValue(self.settings.back_and_forth)
+        self.back_and_forth_checkbox.SetValue(bool(self.settings.back_and_forth))
         self.trim_checkbox.SetValue(bool(self.settings.trim))
         self.set_initial_font(self.settings.font)
         self.text_editor.SetValue(self.settings.text)
@@ -143,7 +144,7 @@ class LetteringFrame(wx.Frame):
         return {font.name: font.description for font in self.fonts.itervalues()}
 
     def set_initial_font(self, font_id):
-        if font_id is not None:
+        if font_id:
             if font_id not in self.fonts_by_id:
                 info_dialog(self, _(
                     '''This text was created using the font "%s", but Ink/Stitch can't find that font.  A default font will be substituted.''') % font_id)
@@ -169,6 +170,7 @@ class LetteringFrame(wx.Frame):
 
     def on_font_changed(self, event=None):
         font = self.fonts.get(self.font_chooser.GetValue(), self.default_font)
+        self.settings.font = font.id
         self.scale_spinner.SetRange(int(font.min_scale * 100), int(font.max_scale * 100))
         self.update_preview()
 
