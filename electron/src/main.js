@@ -1,4 +1,4 @@
-import { app, BrowserWindow, ipcMain, dialog } from 'electron';
+import { app, BrowserWindow, ipcMain, dialog, shell } from 'electron';
 var fs = require('fs');
 var path = require('path')
 var tmp = require('tmp')
@@ -43,11 +43,20 @@ app.on('window-all-closed', () => {
     app.quit();
 });
 
-ipcMain.on('print', function (event, pageSize) {
+ipcMain.on('save-pdf', function (event, pageSize) {
 	mainWindow.webContents.printToPDF({"pageSize": pageSize}, function(error, data) {
 		dialog.showSaveDialog(mainWindow, {"defaultPath": "inkstitch.pdf"}, function(filename, bookmark) {
 			if (typeof filename !== 'undefined')
 				fs.writeFileSync(filename, data, 'utf-8');
+		})
+	})
+})
+
+ipcMain.on('open-pdf', function (event, pageSize) {
+	mainWindow.webContents.printToPDF({"pageSize": pageSize}, function(error, data) {
+		tmp.file({keep: true, discardDescriptor: true}, function(err, path, fd, cleanupCallback) {
+			fs.writeFileSync(path, data, 'utf-8');
+			shell.openItem(path);
 		})
 	})
 })

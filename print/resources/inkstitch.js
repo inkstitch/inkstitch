@@ -369,9 +369,14 @@ $(function() {
 
   $('button.print').click(function() {
 	  var pageSize = $('select#printing-size').find(':selected').text();
-	  electron.ipcRenderer.send('print', pageSize)
+	  electron.ipcRenderer.send('open-pdf', pageSize)
   });
 
+  $('button.save-pdf').click(function() {
+	  var pageSize = $('select#printing-size').find(':selected').text();
+	  electron.ipcRenderer.send('save-pdf', pageSize)
+  });  
+  
   $('button.settings').click(function(){
     $('#settings-ui').show();
   });
