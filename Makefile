@@ -8,7 +8,6 @@ ARCH:=$(shell uname -m)
 dist: locales inx
 	bin/build-dist $(EXTENSIONS)
 	bin/build-electron
-	cp inx/*.inx dist
 	cp -a images/examples dist/inkstitch
 	cp -a palettes dist/inkstitch
 	cp -a symbols dist/inkstitch
@@ -21,11 +20,16 @@ dist: locales inx
 	else \
 	    cp -a electron/dist/*-unpacked dist/inkstitch/electron; \
 	fi
-	if [ "$$BUILD" = "windows" ]; then \
-		cd dist; zip -r ../inkstitch-$(VERSION)-win32.zip *; \
-	else \
-		cd dist; tar zcf ../inkstitch-$(VERSION)-$(OS)-$(ARCH).tar.gz *; \
-	fi
+	for d in inx/*; do \
+		lang=$${d%.*}; \
+		lang=$${lang#*/}; \
+		cp $$d/*.inx dist; \
+		if [ "$$BUILD" = "windows" ]; then \
+			cd dist; zip -r ../inkstitch-$(VERSION)-win32-$$lang.zip *; cd ..; \
+		else \
+			cd dist; tar zcf ../inkstitch-$(VERSION)-$(OS)-$(ARCH)-$$lang.tar.gz *; cd ..; \
+		fi; \
+	done
 
 distclean:
 	rm -rf build dist inx locales *.spec *.tar.gz *.zip electron/node_modules electron/dist

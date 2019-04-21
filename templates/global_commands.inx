@@ -13,10 +13,8 @@
         <object-type>all</object-type>
         <effects-menu>
             <submenu name="Ink/Stitch">
-                <submenu name="{% trans %}English{% endtrans %}">
-                    {# L10N Inkscape submenu under Extensions -> Ink/Stitch #}
-                    <submenu name="{% trans %}Commands{% endtrans %}" />
-                </submenu>
+                {# L10N Inkscape submenu under Extensions -> Ink/Stitch #}
+                <submenu name="{% trans %}Commands{% endtrans %}" />
             </submenu>
         </effects-menu>
     </effect>

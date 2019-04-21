@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-03-27 02:52+0000\n"
-"PO-Revision-Date: 2019-03-27 02:52\n"
+"POT-Creation-Date: 2019-04-11 02:59+0000\n"
+"PO-Revision-Date: 2019-04-11 02:59\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: Arabic\n"
 "MIME-Version: 1.0\n"
@@ -131,91 +131,100 @@ msgstr ""
 msgid "%(command)s: %(description)s"
 msgstr ""
 
-#: lib/elements/auto_fill.py:15
+#: lib/elements/auto_fill.py:16
 msgid "AutoFill"
 msgstr ""
 
-#: lib/elements/auto_fill.py:18
+#: lib/elements/auto_fill.py:19
 msgid "Automatically routed fill stitching"
 msgstr ""
 
-#: lib/elements/auto_fill.py:38
+#: lib/elements/auto_fill.py:39
 msgid "Running stitch length (traversal between sections)"
 msgstr ""
 
-#: lib/elements/auto_fill.py:39
+#: lib/elements/auto_fill.py:40
 msgid "Length of stitches around the outline of the fill region used when moving from section to section."
 msgstr ""
 
-#: lib/elements/auto_fill.py:47
+#: lib/elements/auto_fill.py:48
 msgid "Underlay"
 msgstr ""
 
-#: lib/elements/auto_fill.py:47 lib/elements/auto_fill.py:56
-#: lib/elements/auto_fill.py:72 lib/elements/auto_fill.py:83
-#: lib/elements/auto_fill.py:93 lib/elements/auto_fill.py:105
+#: lib/elements/auto_fill.py:48 lib/elements/auto_fill.py:57
+#: lib/elements/auto_fill.py:73 lib/elements/auto_fill.py:84
+#: lib/elements/auto_fill.py:94 lib/elements/auto_fill.py:106
+#: lib/elements/auto_fill.py:140
 msgid "AutoFill Underlay"
 msgstr ""
 
-#: lib/elements/auto_fill.py:53
+#: lib/elements/auto_fill.py:54
 msgid "Fill angle"
 msgstr ""
 
-#: lib/elements/auto_fill.py:54
+#: lib/elements/auto_fill.py:55
 msgid "default: fill angle + 90 deg"
 msgstr ""
 
-#: lib/elements/auto_fill.py:69
+#: lib/elements/auto_fill.py:70
 msgid "Row spacing"
 msgstr ""
 
-#: lib/elements/auto_fill.py:70
+#: lib/elements/auto_fill.py:71
 msgid "default: 3x fill row spacing"
 msgstr ""
 
-#: lib/elements/auto_fill.py:80
+#: lib/elements/auto_fill.py:81
 msgid "Max stitch length"
 msgstr ""
 
-#: lib/elements/auto_fill.py:81
+#: lib/elements/auto_fill.py:82
 msgid "default: equal to fill max stitch length"
 msgstr ""
 
-#: lib/elements/auto_fill.py:90
+#: lib/elements/auto_fill.py:91
 msgid "Inset"
 msgstr ""
 
-#: lib/elements/auto_fill.py:91
+#: lib/elements/auto_fill.py:92
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
 msgstr ""
 
-#: lib/elements/auto_fill.py:102 lib/elements/fill.py:47
+#: lib/elements/auto_fill.py:103 lib/elements/fill.py:47
 msgid "Skip last stitch in each row"
 msgstr ""
 
-#: lib/elements/auto_fill.py:103 lib/elements/fill.py:48
+#: lib/elements/auto_fill.py:104 lib/elements/fill.py:48
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
 msgstr ""
 
-#: lib/elements/auto_fill.py:113
+#: lib/elements/auto_fill.py:114
 msgid "Expand"
 msgstr ""
 
-#: lib/elements/auto_fill.py:114
+#: lib/elements/auto_fill.py:115
 msgid "Expand the shape before fill stitching, to compensate for gaps between shapes."
 msgstr ""
 
-#: lib/elements/auto_fill.py:186
+#: lib/elements/auto_fill.py:124 lib/elements/auto_fill.py:136
+msgid "Underpath"
+msgstr ""
+
+#: lib/elements/auto_fill.py:125 lib/elements/auto_fill.py:137
+msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
+msgstr ""
+
+#: lib/elements/auto_fill.py:213
 msgid "Unable to autofill: "
 msgstr ""
 
-#: lib/elements/auto_fill.py:190
+#: lib/elements/auto_fill.py:221
 msgid "Error during autofill!  This means that there is a problem with Ink/Stitch."
 msgstr ""
 
 #. this message is followed by a URL:
 #. https://github.com/inkstitch/inkstitch/issues/new
-#: lib/elements/auto_fill.py:193
+#: lib/elements/auto_fill.py:224
 msgid "If you'd like to help us make Ink/Stitch better, please paste this whole message into a new issue at: "
 msgstr ""
 
@@ -473,15 +482,15 @@ msgstr ""
 msgid "AutoSatin Running Stitch %d"
 msgstr ""
 
-#: lib/extensions/base.py:124
+#: lib/extensions/base.py:125
 msgid "No embroiderable paths selected."
 msgstr ""
 
-#: lib/extensions/base.py:126
+#: lib/extensions/base.py:127
 msgid "No embroiderable paths found in document."
 msgstr ""
 
-#: lib/extensions/base.py:127
+#: lib/extensions/base.py:128
 msgid "Tip: use Path -> Object to Path to convert non-paths."
 msgstr ""
 
@@ -768,7 +777,7 @@ msgstr ""
 msgid "Switch direction (arrow left | arrow right)"
 msgstr ""
 
-#: lib/gui/simulator.py:65 lib/gui/simulator.py:218 lib/gui/simulator.py:225
+#: lib/gui/simulator.py:65 lib/gui/simulator.py:241 lib/gui/simulator.py:248
 msgid "Pause"
 msgstr ""
 
@@ -785,31 +794,39 @@ msgid "Restart (R)"
 msgstr ""
 
 #: lib/gui/simulator.py:71
-msgid "Quit"
+msgid "O"
 msgstr ""
 
 #: lib/gui/simulator.py:73
+msgid "Display needle penetration point (O)"
+msgstr ""
+
+#: lib/gui/simulator.py:74
+msgid "Quit"
+msgstr ""
+
+#: lib/gui/simulator.py:76
 msgid "Quit (Q)"
 msgstr ""
 
-#: lib/gui/simulator.py:179
+#: lib/gui/simulator.py:188
 #, python-format
 msgid "Speed: %d stitches/sec"
 msgstr ""
 
-#: lib/gui/simulator.py:221
+#: lib/gui/simulator.py:244 lib/gui/simulator.py:272
 msgid "Start"
 msgstr ""
 
-#: lib/gui/simulator.py:729 lib/gui/simulator.py:741
+#: lib/gui/simulator.py:777 lib/gui/simulator.py:789
 msgid "Preview"
 msgstr ""
 
-#: lib/gui/simulator.py:745
+#: lib/gui/simulator.py:793
 msgid "Internal Error"
 msgstr ""
 
-#: lib/gui/simulator.py:774
+#: lib/gui/simulator.py:822
 msgid "Embroidery Simulation"
 msgstr ""
 
@@ -829,18 +846,6 @@ msgstr ""
 #: lib/output.py:105
 #, python-format
 msgid "Error writing to %(path)s: %(error)s"
-msgstr ""
-
-#: lib/stitches/auto_fill.py:189
-msgid "This shape is so small that it cannot be filled with rows of stitches.  It would probably look best as a satin column or running stitch."
-msgstr ""
-
-#: lib/stitches/auto_fill.py:192
-msgid "Cannot parse shape.  This most often happens because your shape is made up of multiple sections that aren't connected."
-msgstr ""
-
-#: lib/stitches/auto_fill.py:421
-msgid "Unexpected error while generating fill stitches. Please send your SVG file to lexelby@github."
 msgstr ""
 
 #: lib/svg/svg.py:97
@@ -1052,7 +1057,7 @@ msgstr ""
 msgid "Estimated time"
 msgstr ""
 
-#: print/templates/print_overview.html:39
+#: print/templates/print_overview.html:42
 msgid "Client Signature"
 msgstr ""
 
@@ -1217,7 +1222,8 @@ msgstr ""
 msgid "Apply to all"
 msgstr ""
 
-#: print/templates/ui_svg_action_buttons.html:8
+#: print/templates/ui_svg_action_buttons.html:9
+#: print/templates/ui_svg_action_buttons.html:12
 msgid "Realistic"
 msgstr ""
 
