@@ -56,7 +56,7 @@ Eigentlich sind die Addons zwei Dateien, die in einen bestimmten Ordner von Inks
 
 15
 00:01:09,620 --> 00:01:17,280
-Führe die Funktion unter 'Erweiterungen > Ink/Stitch > Deutsch > Installiere Erweiterungen für Inkscape' aus und klicke auf 'Installieren'.
+Führe die Funktion unter 'Erweiterungen > Ink/Stitch  > Installiere Erweiterungen für Inkscape' aus und klicke auf 'Installieren'.
 
 16
 00:01:18,520 --> 00:01:22,940
@@ -108,7 +108,7 @@ Beide Objekte werden dargestellt.
 
 28
 00:02:51,140 --> 00:02:59,460
-Mit einem ausgewählten Objekt öffne 'Erweiterungen > Ink/Stitch > Deutsch > Befehle > Befehle mit gewählten Objekten verknüpfen...'
+Mit einem ausgewählten Objekt öffne 'Erweiterungen > Ink/Stitch  > Befehle > Befehle mit gewählten Objekten verknüpfen...'
 
 29
 00:02:59,820 --> 00:03:03,760

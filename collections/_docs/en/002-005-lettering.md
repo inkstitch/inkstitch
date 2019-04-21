@@ -11,7 +11,7 @@ The lettering tool generates multi-line text as satin columns and dynamically ro
 
 ## Usage
 
-* Run `Extensions > Ink/Stitch > English > Lettering`
+* Run `Extensions > Ink/Stitch  > Lettering`
 * Enter your text (multi-line is possible)
 * Click on `Apply and Quit`
 

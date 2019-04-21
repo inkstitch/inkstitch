@@ -20,7 +20,7 @@ Laufstich kann durch eine **gestichelte Linie** erstellt werden. Jede Strichlini
 * Wähle eine Linie aus und öffne das Dialogfeld `Objekte > Küllung und Kontur...`.
 * Im Reiter `Muster der Kontur` eine Strichlinie aktivieren.
 
-Öffne [`Erweiterungen > Ink/Stitch > Deutsch > Parameter`](/de/docs/params/#linie) und setze die Parameter gemäß deinen persönlichen Wünschen.
+Öffne [`Erweiterungen > Ink/Stitch  > Parameter`](/de/docs/params/#linie) und setze die Parameter gemäß deinen persönlichen Wünschen.
 
 **Info:** Um abgerundete Ecken zu vermeiden, wird an jeder scharfen Ecke ein zusätzlicher Stich eingefügt.
 {: .notice--info style="clear: both;" }

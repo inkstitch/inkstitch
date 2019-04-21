@@ -32,7 +32,7 @@ aber dieses Kürzel ist nicht standardmäßig nutzbar.
 
 9
 00:00:56,460 --> 00:01:03,540
-Wenn du kein Tastenkürzel gesetzt hast, öffnest du den Simulator über "Erweiterungen > Ink/Stitch > Deutsch > Simulation".
+Wenn du kein Tastenkürzel gesetzt hast, öffnest du den Simulator über "Erweiterungen > Ink/Stitch  > Simulation".
 
 10
 00:01:03,760 --> 00:01:09,540
@@ -100,7 +100,7 @@ Die Druckfunktion öffnet sich in deinem Standardbrowser.
 
 26
 00:02:34,600 --> 00:02:38,540
-Du erreichst sie über "Erweiterung > Ink/Stitch > Deutsch > Drucken".
+Du erreichst sie über "Erweiterung > Ink/Stitch  > Drucken".
 
 27
 00:02:39,000 --> 00:02:43,960
@@ -268,7 +268,7 @@ Jetzt wirst du diese Funktion nur noch selten nutzen. Aber es mag immer noch mö
 
 68
 00:06:50,960 --> 00:06:56,000
-Öffne "Erweiterungen > Ink/Stitch > Deutsch > Sticken..."
+Öffne "Erweiterungen > Ink/Stitch  > Sticken..."
 
 69
 00:06:56,360 --> 00:07:00,060

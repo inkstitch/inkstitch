@@ -56,7 +56,7 @@ Dies wird die Höhe der Zick-Zack-Linie definieren.
 
 15
 00:01:33,860 --> 00:01:40,580
-Öffne 'Erweiterungen > Ink/Stitch > Deutsch > Parameter'.
+Öffne 'Erweiterungen > Ink/Stitch  > Parameter'.
 
 16
 00:01:42,160 --> 00:01:47,140

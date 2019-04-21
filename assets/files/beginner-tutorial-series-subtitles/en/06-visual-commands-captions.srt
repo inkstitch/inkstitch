@@ -32,7 +32,7 @@ Commands which influence selected objects
 
 9
 00:00:52,680 --> 00:01:00,820
-In "Extensions > Ink/Stitch > English > Commands > Add commands ..." you will find two options.
+In "Extensions > Ink/Stitch  > Commands > Add commands ..." you will find two options.
 
 10
 00:01:01,220 --> 00:01:07,940
@@ -100,7 +100,7 @@ Move the symbol to the right place
 
 26
 00:04:32,760 --> 00:04:38,960
-and run "Extensions > Ink/Stitch > English > Satin Tools > Auto-route satin"
+and run "Extensions > Ink/Stitch  > Satin Tools > Auto-route satin"
 
 27
 00:05:13,860 --> 00:05:17,660
@@ -116,7 +116,7 @@ With the satin column selected add a "Split satin column"-command.
 
 30
 00:05:29,940 --> 00:05:36,200
-Move the symbol and run "Extensions > Ink/Stitch > English > Satin Tools > Cut Satin Column"
+Move the symbol and run "Extensions > Ink/Stitch  > Satin Tools > Cut Satin Column"
 
 31
 00:05:36,640 --> 00:05:41,040

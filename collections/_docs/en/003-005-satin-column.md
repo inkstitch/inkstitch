@@ -15,7 +15,7 @@ You define a satin column using a shape made of **two mostly-parallel lines**. I
 * Combine two strokes with `Path > Combine` or hit `Ctrl+K`.
 * [Check path directions](/docs/customize/#enabling-path-outlines--direction). For the satin column to work, they have to be equal.<br />If they are not, with the *Node Editor Tool* (`N`) select one point of one sub-path and run `Path > Reverse`. This will reverse only the selected sub-path.
 * Use node or rung method as described below.
-* Then select your satin column and run params through `Extensions > Ink/Stitch > English > Params` or a [custom shortcut key](/docs/customize/).
+* Then select your satin column and run params through `Extensions > Ink/Stitch  > Params` or a [custom shortcut key](/docs/customize/).
 
 ### Node Method
 
@@ -36,8 +36,8 @@ The rung method will give you more control over the way the satin column is rend
 * Add a contour to a path object (with no filling).
 * Set contour width to the size you want your satin stitch to be.
 * The path should not intersect itself. Try [breaking it up](/docs/satin-tools/#cut-satin-column) into multiple paths if needed.
-* Run `Extensions > Ink/Stitch > English > Convert Line to Satin`
-* Run `Extensions > Ink/stitch > English > Auto-route Satin...`
+* Run `Extensions > Ink/Stitch  > Convert Line to Satin`
+* Run `Extensions > Ink/stitch  > Auto-route Satin...`
 * Use as-is or customize the rungs or rails
 
 **Manual adding of rungs**
@@ -58,7 +58,7 @@ The rung method will give you more control over the way the satin column is rend
 
 ## Params
 
-Running `Extensions > Ink/Stitch > English > Params` will give you the possibility to fine-tune your satin column and to use underlay.
+Running `Extensions > Ink/Stitch  > Params` will give you the possibility to fine-tune your satin column and to use underlay.
 
 For detailed information read through the [Satin Params](/docs/params/#satin-params) section.
 

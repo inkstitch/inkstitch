@@ -1,7 +1,7 @@
 ---
 title: "Manual Setup"
 permalink: /developers/inkstitch/manual-setup/
-last_modified_at: 2019-04-07
+last_modified_at: 2019-04-18
 toc: false
 ---
 A manual setup will allow you to edit the code while running the extension.
@@ -32,19 +32,21 @@ A manual setup will allow you to edit the code while running the extension.
 3. Prepare INX files
 
     ```
-    for po in translations/*.po; do lang=${po%.*}; lang=${lang#*_}; mkdir -p locales/$lang/LC_MESSAGES; msgfmt $po -o locales/$lang/LC_MESSAGES/inkstitch.mo; done;
-    mkdir inx
-    bin/generate-inx-files
+    make inx
     ```
+
+    This will create `*.inx` files for each locale in `inx/<locale>`.
 
 4. Symbolically link into the Inkscape extensions directory
 
     ```
     cd ~/.config/inkscape/extensions
     ln -s /path/to/inkstitch
-    for i in inkstitch/inx/inkstitch_*.inx; do ln -s $i; done
+    for i in inkstitch/inx/en_US/inkstitch_*.inx; do ln -s $i; done
     ln -s inkstitch/inkstitch.py
     ```
+
+    To use another language for Ink/Stitch menus inside Inkscape substitute `en_US` for another locale in `inx/`. Ink/Stich dialogs outside Inkscape use the OS language.
 
 5. Run Inkscape.
 

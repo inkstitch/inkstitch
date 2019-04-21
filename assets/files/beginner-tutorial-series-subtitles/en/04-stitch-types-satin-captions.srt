@@ -136,7 +136,7 @@ Set the stroke width to whatever you like your satin column to be.
 
 35
 00:04:09,340 --> 00:04:16,280
-Then run "Extensions > Ink/Stitch > English > Satin Tools > Convert Line to Satin Column".
+Then run "Extensions > Ink/Stitch  > Satin Tools > Convert Line to Satin Column".
 
 36
 00:04:16,680 --> 00:04:18,680
@@ -172,7 +172,7 @@ Using the satin tools will require two steps.
 
 44
 00:05:09,600 --> 00:05:18,760
-First select your satin column and run "Extensions > Ink/Stitch > English > Commands > Attach commands to selected objects..."
+First select your satin column and run "Extensions > Ink/Stitch  > Commands > Attach commands to selected objects..."
 
 45
 00:05:18,760 --> 00:05:22,980
@@ -188,7 +188,7 @@ It will split where the connector touches the rail.
 
 48
 00:05:37,060 --> 00:05:43,400
-Then run "Extensions > Ink/Stitch > English > Satin Tools > Cut Satin Column".
+Then run "Extensions > Ink/Stitch  > Satin Tools > Cut Satin Column".
 
 49
 00:05:48,500 --> 00:05:55,020
@@ -208,7 +208,7 @@ This might shorten connections between the previous and next stitch object.
 
 53
 00:06:34,880 --> 00:06:44,800
-Select the satin column and run "Extensions > Ink/Stitch > English > Satin Tools > Flip Satin Columns"
+Select the satin column and run "Extensions > Ink/Stitch  > Satin Tools > Flip Satin Columns"
 
 54
 00:07:05,140 --> 00:07:10,800
@@ -240,7 +240,7 @@ Select satin columns with all parameters set (underlay, etc.).
 
 61
 00:07:52,840 --> 00:07:59,460
-Run "Extensions > Ink/Stitch > English > Satin Tools > Auto-Route Satin Columns..."
+Run "Extensions > Ink/Stitch  > Satin Tools > Auto-Route Satin Columns..."
 
 62
 00:07:59,600 --> 00:08:03,060

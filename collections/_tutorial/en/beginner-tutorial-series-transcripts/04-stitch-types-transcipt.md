@@ -44,7 +44,7 @@ Open the `Fill and Stroke` settings and set the path width in the stroke style t
 This will define the height of your zig-zag-line.
 It should be at least 0.6 mm.
 
-Go to `Extensions > Ink/Stitch > English > Params` to open the parameter dialogue.
+Go to `Extensions > Ink/Stitch  > Params` to open the parameter dialogue.
 
 `Satin stitch along path` has to be enabled in the Stroke tab.
 Set zig-zag-spacing to whatever you like it to be.
@@ -139,7 +139,7 @@ Create a path.
 
 Make sure it is not a closed path, but has a start and an end.
 
-Set the stroke width to whatever you like your satin column to be. Then run `Extensions > Ink/Stitch > English > Satin Tools > Convert Line to Satin Column`.
+Set the stroke width to whatever you like your satin column to be. Then run `Extensions > Ink/Stitch  > Satin Tools > Convert Line to Satin Column`.
 
 And that's it.
 
@@ -151,7 +151,7 @@ This can be done manually, but if you want to keep your settings you can use a s
 
 To break up your column manually, select two nodes, one on each rail and click on `Break path at selected nodes`. Now you have to seperate the paths by hitting `Ctrl + Shift + K` and recombine your sub-paths with `Ctrl + K`.
 
-Using the satin tools will require two steps. First select your satin column and run `Extensions > Ink/Stitch > English > Commands > Attach commands to selected objects...` and enable `Satin cut point` before you click on `Apply`. Move the symbol to the exact point where you want the satin column to split up. It will split where the connector touches the rail. Then run `Extensions > Ink/Stitch > English > Satin Tools > Cut Satin Column`. Please note, that in params you already need the satin column to be enabled for this to work.
+Using the satin tools will require two steps. First select your satin column and run `Extensions > Ink/Stitch  > Commands > Attach commands to selected objects...` and enable `Satin cut point` before you click on `Apply`. Move the symbol to the exact point where you want the satin column to split up. It will split where the connector touches the rail. Then run `Extensions > Ink/Stitch  > Satin Tools > Cut Satin Column`. Please note, that in params you already need the satin column to be enabled for this to work.
 
 #### Flip Satin Column Rails
 
@@ -159,7 +159,7 @@ Using the satin tools will require two steps. First select your satin column and
 A satin column which originally starts on the left rail and ends on the right, will start on the right rail and end on the left.
 This might shorten connections between the previous and next stitch object.
 
-Select the satin column and run `Extensions > Ink/Stitch > English > Satin Tools > Flip Satin Columns`
+Select the satin column and run `Extensions > Ink/Stitch  > Satin Tools > Flip Satin Columns`
 
 #### Auto-Route Satin Columns
 
@@ -173,7 +173,7 @@ Resulting satins will retain all of the parameters you had set on the original s
 
 Select satin columns with all parameters set (underlay, etc.).
 
-Run `Extensions > Ink/Stitch > English > Satin Tools > Auto-Route Satin Columns...`
+Run `Extensions > Ink/Stitch  > Satin Tools > Auto-Route Satin Columns...`
 
 Enable desired options and click apply.
 

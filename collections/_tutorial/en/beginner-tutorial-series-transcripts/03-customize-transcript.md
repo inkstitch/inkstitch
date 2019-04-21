@@ -36,7 +36,7 @@ Let's start with the Ink/Stitch Add-ons
 
 In fact these Add-ons are two files which need to be placed in specific folders of your Inkscape installation.
 
-Run `Extensions > Ink/Stitch > English > Install add-ons for Inkscape` and click install.
+Run `Extensions > Ink/Stitch  > Install add-ons for Inkscape` and click install.
 
 You will have to restart Inkscape for this to have any effect.
 
@@ -54,7 +54,7 @@ Let's add e.g. an ignore symbol to one object. It indicates, that this particula
 
 Create two objects and run the simulator. Both objects are displayed.
 
-With one object selected go to `Extensions > Ink/Stitch > English > Commands > Attach command to selected Objects`.
+With one object selected go to `Extensions > Ink/Stitch  > Commands > Attach command to selected Objects`.
 
 Enable the ignore checkbox and click on Apply.
 

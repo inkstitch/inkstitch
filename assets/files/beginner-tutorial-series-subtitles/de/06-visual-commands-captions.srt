@@ -32,7 +32,7 @@ Befehle, die sich auf ausgewählte Objekte auswirken
 
 9
 00:00:52,680 --> 00:01:00,820
-"Erweiterungen > Ink/Stitch > Deutsch > Befehle > Befehle hinzufügen..." bietet zwei Optionen.
+"Erweiterungen > Ink/Stitch  > Befehle > Befehle hinzufügen..." bietet zwei Optionen.
 
 10
 00:01:01,220 --> 00:01:07,940
@@ -100,7 +100,7 @@ Bewege das Symbol an die richtige Stelle
 
 26
 00:04:32,760 --> 00:04:38,960
-und benutze das Werkzeug "Erweiterungen > Ink/Stitch > Deutsch > Satin Werkzeuge > Automatisch geführte Satinkolumnen...".
+und benutze das Werkzeug "Erweiterungen > Ink/Stitch  > Satin Werkzeuge > Automatisch geführte Satinkolumnen...".
 
 27
 00:05:13,860 --> 00:05:17,660
@@ -116,7 +116,7 @@ Wähle eine Satinkolumne und füge den "Satinkolumne schneiden"-Befehl hinzu.
 
 30
 00:05:29,940 --> 00:05:36,200
-Bewege das Symbol an die richtige Stelle und führte "Erweiterungen > Ink/Stitch > Deutsch > Satin Werkzeuge > Satinkolumne schneiden" aus.
+Bewege das Symbol an die richtige Stelle und führte "Erweiterungen > Ink/Stitch  > Satin Werkzeuge > Satinkolumne schneiden" aus.
 
 31
 00:05:36,640 --> 00:05:41,040

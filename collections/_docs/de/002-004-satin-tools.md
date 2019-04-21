@@ -5,7 +5,7 @@ excerpt: ""
 last_modified_at: 2019-03-16
 toc: true
 ---
-Unter `Erweiterungen > Ink/Stitch > Deutsch > Satin Tools` befindet sich eine kleine Anzahl nützlicher Helfer, die das Arbeiten mit [Satinkolumnen](/docs/stitches/satin-column/) erleichtern sollen.
+Unter `Erweiterungen > Ink/Stitch  > Satin Tools` befindet sich eine kleine Anzahl nützlicher Helfer, die das Arbeiten mit [Satinkolumnen](/docs/stitches/satin-column/) erleichtern sollen.
 
 **Beispiel:**
 * Erzeuge einen Pfad mit dem Beziér-Kurven Werkzeug (`B`)
@@ -25,7 +25,7 @@ Dieses Werkzeug ersetzt deine Satinkolumnen mit einem Set von neuen Satinkolumne
 ### Funktionsweise
 
 1. Wähle eine Satinkolumne an (fertig vorbereitet mit Unterlage, etc.)
-2. Führe `Erweiterungen > Ink/Stitch > Deutsch > Satin Tools > Auto-Route Satin Columns...` aus
+2. Führe `Erweiterungen > Ink/Stitch  > Satin Tools > Auto-Route Satin Columns...` aus
 3. Aktiviere die gewünschten Optionen und klicke auf "Anwenden"
 
 **Tip:** Standardmäßig beginnen automatisch geführte Satinkolumnen links und enden rechts. Du kannst dieses Verhalten mit den Befehlen "[Start- und Enpunkt für automatische Satinkolumnenführung](/de/docs/visual-commands/#--start--und-endposition-für-automatische-satinkolumnenführung)" überschreiben.
@@ -45,7 +45,7 @@ Diese Erweiterung konvertiert einen einfachen Pfad in eine Satinkolumnen. Dabei 
 
 1. Zeichne eine Beziér-Kurve (`B`)
 2. Stelle die Linienbreite ein (`Ctrl+Shift+F)
-2. Führe `Erweiterungen > Ink/Stitch > Deutsch > Satin Tools > Konvertierung Linie zu Satinstich` aus
+2. Führe `Erweiterungen > Ink/Stitch  > Satin Tools > Konvertierung Linie zu Satinstich` aus
 
 ## Satinkolumne schneiden
 
@@ -54,10 +54,10 @@ Diese Option schneidet eine Satinkolumne an einem vordefiniertem Punkt. Alle Par
 ### Funktionsweise
 
 1. Wähle eine Satinkolumne an (eine Zick-Zack-Linie funktioniert hier nicht)
-2. Füge über `Erweiterungen > Ink/Stitch > Deutsch > Befehle > Befehle mit gewählten Objekten verknüpfen > Satin cut point` einen "Satin-Schnittstelle"-Befehl ein
+2. Füge über `Erweiterungen > Ink/Stitch  > Befehle > Befehle mit gewählten Objekten verknüpfen > Satin cut point` einen "Satin-Schnittstelle"-Befehl ein
 3. Bewege das Symbol zur gewünschten Stelle. Der Zeiger muss genau auf die Stelle treffen, wo die Satinkolumne geschnitten werden soll
 4. Wähle die Satinkolumne erneut an
-5. Führe `Erweiterungen > Ink/Stitch > Deutsch > Satin Tools > Satinkolumne schneiden` aus
+5. Führe `Erweiterungen > Ink/Stitch  > Satin Tools > Satinkolumne schneiden` aus
 6. Der Satin-Schnittstelle-Befehl und sein Zeiger sind verschwunden. Wähle die Satinkolumne aus: es sind jetzt zwei.
 
 ## Satinkolumne umkehren

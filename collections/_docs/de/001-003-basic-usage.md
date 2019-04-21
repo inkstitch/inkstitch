@@ -29,7 +29,7 @@ Wandele **alle Objekte** die gestickt werden sollen in einen Pfad um:
 ## Schritt 3 - SVG-Pfad mit Parametern versehen
 
 * Wähle mindestens ein Objekt aus.
-* Öffne `Erweiterungen > Ink/Stitch > Deutsch > Parameter`.
+* Öffne `Erweiterungen > Ink/Stitch  > Parameter`.
 * Spiele mit den Werten. Der Simulator erneuert das Stickbild mit jeder geänderten Einstellung.
 * Schließe das Fenster ohne zu speichern, um die Standardeinstellungen wiederherzustellen.
 

@@ -32,7 +32,7 @@ There are three types of commands:
 
 ### Design commands
 
-In `Extensions > Ink/Stitch > English > Commands > Add commands ...` you will find two options.
+In `Extensions > Ink/Stitch  > Commands > Add commands ...` you will find two options.
 
 #### Stop position
 
@@ -68,14 +68,14 @@ The connectors endpoint is always in the middle of the object. The effect will b
 As for fills you can also define start and end positions for auto-route satin.
 * Select the first satin column and add the `auto-route starting position`-command.
 * Select the last satin column and add the `auto-route ending position`-command.
-* Move the symbol to the right place and run `Extensions > Ink/Stitch > English > Satin Tools > Auto-route satin`
+* Move the symbol to the right place and run `Extensions > Ink/Stitch  > Satin Tools > Auto-route satin`
 
 #### Split Satin Column
 
 For satin columns there is also a split functionality.
 This is useful if you want to split a satin column while keeping all settings that you have previously made while modifying the path.
 * With the satin column selected add a `Split satin column`-command.
-* Move the symbol and run `Extensions > Ink/Stitch > English > Satin Tools > Cut Satin Column`
+* Move the symbol and run `Extensions > Ink/Stitch  > Satin Tools > Cut Satin Column`
 This will split your satin column at the predefined position.
 
 #### Trim
