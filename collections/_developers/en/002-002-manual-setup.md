@@ -1,7 +1,7 @@
 ---
 title: "Manual Setup"
 permalink: /developers/inkstitch/manual-setup/
-last_modified_at: 2019-04-18
+last_modified_at: 2019-04-21
 toc: false
 ---
 A manual setup will allow you to edit the code while running the extension.
@@ -18,7 +18,7 @@ A manual setup will allow you to edit the code while running the extension.
 
     A few python modules are needed. In some cases this extension uses features that aren’t available in the versions of the modules pre-packaged in distributions, so we recommend installing them directly with pip:
     ```
-    pip install -r requirements.txt
+    pip2 install -r requirements.txt
     ```
 
     **Info:** You might need to remove wxPython and [install](https://wiki.wxpython.org/How%20to%20install%20wxPython) a platform specific package:<br />
@@ -26,7 +26,7 @@ A manual setup will allow you to edit the code while running the extension.
        ⚫ Ubuntu 16.04: `pip install -U -f https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-16.04 wxPython`
     {: .notice--info }
     
-    **Info:** If you have multiple versions of python installed you may need to use **pip2**
+    **Info:** If you only have Python 2 installed you may be able to use `pip` instead of `pip2`.
     {: .notice--info }
 
 3. Prepare INX files
