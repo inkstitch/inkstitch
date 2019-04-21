@@ -1,35 +1,8 @@
-EXTENSIONS:=inkstitch
-
-# This gets the branch name or the name of the tag
-VERSION:=$(subst /,-,$(TRAVIS_BRANCH))
-OS:=$(TRAVIS_OS_NAME)
-ARCH:=$(shell uname -m)
 
 dist: locales inx
-	bin/build-dist $(EXTENSIONS)
+	bin/build-python
 	bin/build-electron
-	cp -a images/examples dist/inkstitch
-	cp -a palettes dist/inkstitch
-	cp -a symbols dist/inkstitch
-	cp -a fonts dist/inkstitch
-	cp -a icons dist/inkstitch/bin
-	cp -a locales dist/inkstitch/bin
-	cp -a print dist/inkstitch/bin
-	if [ "$$BUILD" = "osx" ]; then \
-	    cp -a electron/dist/mac dist/inkstitch/electron; \
-	else \
-	    cp -a electron/dist/*-unpacked dist/inkstitch/electron; \
-	fi
-	for d in inx/*; do \
-		lang=$${d%.*}; \
-		lang=$${lang#*/}; \
-		cp $$d/*.inx dist; \
-		if [ "$$BUILD" = "windows" ]; then \
-			cd dist; zip -r ../inkstitch-$(VERSION)-win32-$$lang.zip *; cd ..; \
-		else \
-			cd dist; tar zcf ../inkstitch-$(VERSION)-$(OS)-$(ARCH)-$$lang.tar.gz *; cd ..; \
-		fi; \
-	done
+	bin/build-distribution-archives
 
 distclean:
 	rm -rf build dist inx locales *.spec *.tar.gz *.zip electron/node_modules electron/dist
