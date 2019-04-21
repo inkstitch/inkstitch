@@ -123,6 +123,12 @@ a:focus, button:focus {
   outline: none;
 }
 
+blockquote {
+  border-left: .25em solid #dfe2e5;
+  color: #6a737d;
+  padding: 0 1em;
+}
+
 table tr td:first-child {
   width: 25%;
 }

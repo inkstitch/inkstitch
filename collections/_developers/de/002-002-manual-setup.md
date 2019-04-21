@@ -1,7 +1,7 @@
 ---
 title: "Manualle Installation"
 permalink: /de/developers/inkstitch/manual-setup/
-last_modified_at: 2019-04-10
+last_modified_at: 2019-04-21
 toc: false
 ---
 Eine manuelle Installation ermöglicht es am Quellcode zu arbeiten, während du Ink/Stitch benutzt.
@@ -33,19 +33,22 @@ Eine manuelle Installation ermöglicht es am Quellcode zu arbeiten, während du 
 3. INX-Dateien vorbereiten
 
     ```
-    for po in translations/*.po; do lang=${po%.*}; lang=${lang#*_}; mkdir -p locales/$lang/LC_MESSAGES; msgfmt $po -o locales/$lang/LC_MESSAGES/inkstitch.mo; done;
-    mkdir inx
-    bin/generate-inx-files
+    make inx
     ```
+
+    This will create `*.inx` files for each locale in `inx/<locale>`.
 
 4. Symbolische Links in den Inkscape extensions-Order setzen
 
     ```
     cd ~/.config/inkscape/extensions
     ln -s /path/to/inkstitch
-    for i in inkstitch/inx/inkstitch_*.inx; do ln -s $i; done
+    for i in inkstitch/inx/de_DE/inkstitch_*.inx; do ln -s $i; done;
     ln -s inkstitch/inkstitch.py
     ```
+
+    Um eine andere Sprache im Ink/Stitch-Menü zu nutzen, ersetze `de_DE` mit einer anderen Sprache aus dem Ordner `inx/`.
+    Ink/Stich Dialoge außerhalb von Inkscape nutzen die Systemsprache.
 
 5. Inkscape starten
 

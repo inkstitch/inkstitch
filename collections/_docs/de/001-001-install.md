@@ -2,7 +2,7 @@
 title: "Installation von Ink/Stitch"
 permalink: /de/docs/install/
 excerpt: "Wie wird Ink/Stitch installiert."
-last_modified_at: 2019-04-07
+last_modified_at: 2019-04-21
 toc: true
 ---
 
@@ -33,9 +33,11 @@ Lade das Release-Archiv für deine Plattform [hier](https://github.com/inkstitch
 
 OS | Dateiname | 32-Bit | 64-Bit
 --- | --- | --- | ---
-Linux | `inkstit- [VERSION] -Linux-x86_64.tar.gz` | ☒ | ☑
-Windows | `inkstit- [VERSION] -win32.zip` | ☑ | ☑
-macOS | `inkstich- [VERSION] -osx-x86_64.tar.gz` | ☒ | ☑
+Linux | `inkstitch-[VERSION]-Linux-x86_64-[SPRACHE].tar.gz` | ☒ | ☑
+Windows | `inkstitch-[VERSION]-win32-[SPRACHE].zip` | ☑ | ☑
+macOS | `inkstitch-[VERSION]-osx-x86_64-[SPRACHE].tar.gz` | ☒ | ☑
+
+Die ausgewählte `SPRACHE` bezieht sich nur auf die Menüs von Inkscape. Ink/Stitch-Dialogfenster werden in der Sprache des Betriebssystems dargestellt (sofern diese unterstützt wird).
 
 **Info:** Ink/Stitch für macOS funktioniert derzeit nur mit High Sierra (10.13) oder höher.
 {: .notice--warning }

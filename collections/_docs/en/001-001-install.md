@@ -36,7 +36,7 @@ Linux|inkstitch-[VERSION]-Linux-x86_64-[LOCALE].tar.gz|☒|☑
 Windows|inkstitch-[VERSION]-win32-[LOCALE].zip|☑|☑
 macOS|inkstitch-[VERSION]-osx-x86_64-[LOCALE].tar.gz|☒|☑
 
-The LOCALE selected affects the menus shown inside Inkscape. Ink/Stitch dialogs are in the lanugage of your OS (if that language is supported).
+The `LOCALE` selected affects the menus shown inside Inkscape. Ink/Stitch dialogs are in the lanugage of your OS (if that language is supported).
 
 **Info:** Ink/Stitch for macOS currently works only with High Sierra (10.13) and higher.
 {: .notice--warning }
