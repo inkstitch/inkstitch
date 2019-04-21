@@ -146,8 +146,9 @@ class LetteringFrame(wx.Frame):
     def set_initial_font(self, font_id):
         if font_id:
             if font_id not in self.fonts_by_id:
-                info_dialog(self, _(
-                    '''This text was created using the font "%s", but Ink/Stitch can't find that font.  A default font will be substituted.''') % font_id)
+                message = '''This text was created using the font "%s", but Ink/Stitch can't find that font.  ''' \
+                          '''A default font will be substituted.'''
+                info_dialog(self, _(message) % font_id)
 
         try:
             self.font_chooser.SetValueByUser(self.fonts_by_id[font_id].name)
