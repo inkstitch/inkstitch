@@ -1,7 +1,7 @@
 ﻿Font origin and licence for TT_Masters 
 
-www.free-fonts-download.com/Script/tt-masters-font
-Font's name: TT Masters Font
+www.free-fonts-download.com/Script/tt-directors-font
+Font's name: TT Directors Font
 Font's license: Public domain / GPL / OFL
 Zip File size: 532 kb
 Designed by: Jovanny Lemonad
