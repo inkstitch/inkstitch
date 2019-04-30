@@ -14,10 +14,6 @@ def patches_to_stitch_plan(patches, collapse_len=3.0 * PIXELS_PER_MM, disable_ti
     """
 
     stitch_plan = StitchPlan()
-
-    if not patches:
-        return stitch_plan
-
     color_block = stitch_plan.new_color_block(color=patches[0].color)
 
     for patch in patches:
