@@ -2,6 +2,7 @@ from collections import MutableMapping
 from copy import deepcopy
 import json
 import re
+import os
 
 import inkex
 from stringcase import snakecase
@@ -188,10 +189,7 @@ class InkstitchExtension(inkex.Effect):
     def get_base_file_name(self):
         svg_filename = self.document.getroot().get(inkex.addNS('docname', 'sodipodi'), "embroidery.svg")
 
-        if svg_filename.endswith('.svg'):
-            svg_filename = svg_filename[:-4]
-
-        return svg_filename
+        return os.path.splitext(svg_filename)[0]
 
     def uniqueId(self, prefix, make_new_id=True):
         """Override inkex.Effect.uniqueId with a nicer naming scheme."""

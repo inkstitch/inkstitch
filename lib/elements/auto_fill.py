@@ -1,4 +1,5 @@
 import math
+import sys
 import traceback
 
 from shapely import geometry as shgeo
@@ -118,6 +119,30 @@ class AutoFill(Fill):
     def expand(self):
         return self.get_float_param('expand_mm', 0)
 
+    @property
+    @param('underpath',
+           _('Underpath'),
+           tooltip=_('Travel inside the shape when moving from section to section.  Underpath '
+                     'stitches avoid traveling in the direction of the row angle so that they '
+                     'are not visible.  This gives them a jagged appearance.'),
+           type='boolean',
+           default=True)
+    def underpath(self):
+        return self.get_boolean_param('underpath', True)
+
+    @property
+    @param(
+        'underlay_underpath',
+        _('Underpath'),
+        tooltip=_('Travel inside the shape when moving from section to section.  Underpath '
+                  'stitches avoid traveling in the direction of the row angle so that they '
+                  'are not visible.  This gives them a jagged appearance.'),
+        group=_('AutoFill Underlay'),
+        type='boolean',
+        default=True)
+    def underlay_underpath(self):
+        return self.get_boolean_param('underlay_underpath', True)
+
     def shrink_or_grow_shape(self, amount):
         if amount:
             shape = self.shape.buffer(amount)
@@ -168,7 +193,8 @@ class AutoFill(Fill):
                                           self.running_stitch_length,
                                           self.staggers,
                                           self.fill_underlay_skip_last,
-                                          starting_point))
+                                          starting_point,
+                                          underpath=self.underlay_underpath))
                 starting_point = stitches[-1]
 
             stitches.extend(auto_fill(self.fill_shape,
@@ -180,11 +206,16 @@ class AutoFill(Fill):
                                       self.staggers,
                                       self.skip_last,
                                       starting_point,
-                                      ending_point))
+                                      ending_point,
+                                      self.underpath))
         except InkstitchException, exc:
             # for one of our exceptions, just print the message
             self.fatal(_("Unable to autofill: ") + str(exc))
         except Exception, exc:
+            if hasattr(sys, 'gettrace') and sys.gettrace():
+                # if we're debugging, let the exception bubble up
+                raise
+
             # for an uncaught exception, give a little more info so that they can create a bug report
             message = ""
             message += _("Error during autofill!  This means that there is a problem with Ink/Stitch.")

@@ -12,4 +12,5 @@ messages.po
 /DEBUG
 .pydevproject
 .project
-
+/debug.log
+/debug.svg

@@ -40,6 +40,7 @@ class ConvertToSatin(InkstitchExtension):
             index = parent.index(element.node)
             correction_transform = get_correction_transform(element.node)
             style_args = self.join_style_args(element)
+            path_style = self.path_style(element)
 
             for path in element.paths:
                 path = self.remove_duplicate_points(path)
@@ -62,7 +63,7 @@ class ConvertToSatin(InkstitchExtension):
 
                     return
 
-                parent.insert(index, self.satin_to_svg_node(rails, rungs, correction_transform))
+                parent.insert(index, self.satin_to_svg_node(rails, rungs, correction_transform, path_style))
 
             parent.remove(element.node)
 
@@ -273,7 +274,11 @@ class ConvertToSatin(InkstitchExtension):
 
         return rungs
 
-    def satin_to_svg_node(self, rails, rungs, correction_transform):
+    def path_style(self, element):
+        color = element.get_style('stroke', '#000000')
+        return "stroke:%s;stroke-width:1px;fill:none" % (color)
+
+    def satin_to_svg_node(self, rails, rungs, correction_transform, path_style):
         d = ""
         for path in chain(rails, rungs):
             d += "M"
@@ -284,7 +289,7 @@ class ConvertToSatin(InkstitchExtension):
         return inkex.etree.Element(SVG_PATH_TAG,
                                    {
                                        "id": self.uniqueId("path"),
-                                       "style": "stroke:#000000;stroke-width:1px;fill:none",
+                                       "style": path_style,
                                        "transform": correction_transform,
                                        "d": d,
                                        "embroider_satin_column": "true",

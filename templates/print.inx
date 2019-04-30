@@ -8,9 +8,7 @@
     <effect>
         <object-type>all</object-type>
         <effects-menu>
-            <submenu name="Ink/Stitch">
-                <submenu name="{% trans %}English{% endtrans %}" />
-            </submenu>
+            <submenu name="Ink/Stitch" />
         </effects-menu>
     </effect>
     <script>

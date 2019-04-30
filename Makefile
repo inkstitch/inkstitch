@@ -7,7 +7,6 @@ ARCH:=$(shell uname -m)
 
 dist: distclean locales inx
 	bin/build-dist $(EXTENSIONS)
-	cp inx/*.inx dist
 	cp -a images/examples dist/inkstitch
 	cp -a palettes dist/inkstitch
 	cp -a symbols dist/inkstitch
@@ -15,11 +14,16 @@ dist: distclean locales inx
 	cp -a icons dist/inkstitch/bin
 	cp -a locales dist/inkstitch/bin
 	cp -a print dist/inkstitch/bin
-	if [ "$$BUILD" = "windows" ]; then \
-		cd dist; zip -r ../inkstitch-$(VERSION)-win32.zip *; \
-	else \
-		cd dist; tar zcf ../inkstitch-$(VERSION)-$(OS)-$(ARCH).tar.gz *; \
-	fi
+	for d in inx/*; do \
+		lang=$${d%.*}; \
+		lang=$${lang#*/}; \
+		cp $$d/*.inx dist; \
+		if [ "$$BUILD" = "windows" ]; then \
+			cd dist; zip -r ../inkstitch-$(VERSION)-win32-$$lang.zip *; cd ..; \
+		else \
+			cd dist; tar zcf ../inkstitch-$(VERSION)-$(OS)-$(ARCH)-$$lang.tar.gz *; cd ..; \
+		fi; \
+	done
 
 distclean:
 	rm -rf build dist inx locales *.spec *.tar.gz *.zip

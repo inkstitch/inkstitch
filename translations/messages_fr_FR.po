@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-02-17 02:33+0000\n"
-"PO-Revision-Date: 2019-02-17 02:33\n"
+"POT-Creation-Date: 2019-04-11 02:59+0000\n"
+"PO-Revision-Date: 2019-04-11 02:59\n"
 "Last-Translator: lexelby <github.com@lexneva.name>\n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -131,91 +131,100 @@ msgstr "Erreur : il y a plus d’une commande de %(command)s dans le document, 
 msgid "%(command)s: %(description)s"
 msgstr "%(command)s: %(description)s"
 
-#: lib/elements/auto_fill.py:15
+#: lib/elements/auto_fill.py:16
 msgid "AutoFill"
 msgstr "Auto-remplissage"
 
-#: lib/elements/auto_fill.py:18
+#: lib/elements/auto_fill.py:19
 msgid "Automatically routed fill stitching"
 msgstr "Auto-remplissage avec des points de broderie"
 
-#: lib/elements/auto_fill.py:38
+#: lib/elements/auto_fill.py:39
 msgid "Running stitch length (traversal between sections)"
 msgstr "Longueur du point de fonctionnement (parcours entre les sections)"
 
-#: lib/elements/auto_fill.py:39
+#: lib/elements/auto_fill.py:40
 msgid "Length of stitches around the outline of the fill region used when moving from section to section."
 msgstr "Longueur de points autour du contour de la région de remplissage lors du déplacement de section à section."
 
-#: lib/elements/auto_fill.py:47
+#: lib/elements/auto_fill.py:48
 msgid "Underlay"
 msgstr "Sous-couche"
 
-#: lib/elements/auto_fill.py:47 lib/elements/auto_fill.py:56
-#: lib/elements/auto_fill.py:72 lib/elements/auto_fill.py:83
-#: lib/elements/auto_fill.py:93 lib/elements/auto_fill.py:105
+#: lib/elements/auto_fill.py:48 lib/elements/auto_fill.py:57
+#: lib/elements/auto_fill.py:73 lib/elements/auto_fill.py:84
+#: lib/elements/auto_fill.py:94 lib/elements/auto_fill.py:106
+#: lib/elements/auto_fill.py:140
 msgid "AutoFill Underlay"
 msgstr "Sous-couche de remplissage automatique"
 
-#: lib/elements/auto_fill.py:53
+#: lib/elements/auto_fill.py:54
 msgid "Fill angle"
 msgstr "Angle de remplissage"
 
-#: lib/elements/auto_fill.py:54
+#: lib/elements/auto_fill.py:55
 msgid "default: fill angle + 90 deg"
 msgstr "défaut : Angle de remplissage + 90 deg"
 
-#: lib/elements/auto_fill.py:69
+#: lib/elements/auto_fill.py:70
 msgid "Row spacing"
 msgstr "Espacement entre rangs (lignes)"
 
-#: lib/elements/auto_fill.py:70
+#: lib/elements/auto_fill.py:71
 msgid "default: 3x fill row spacing"
 msgstr "défaut: 3x espacement entre les rangs"
 
-#: lib/elements/auto_fill.py:80
+#: lib/elements/auto_fill.py:81
 msgid "Max stitch length"
 msgstr "Longueur de point maximal"
 
-#: lib/elements/auto_fill.py:81
+#: lib/elements/auto_fill.py:82
 msgid "default: equal to fill max stitch length"
 msgstr "défaut : égal à longueur max des points de remplissage"
 
-#: lib/elements/auto_fill.py:90
+#: lib/elements/auto_fill.py:91
 msgid "Inset"
 msgstr "Incrustation"
 
-#: lib/elements/auto_fill.py:91
+#: lib/elements/auto_fill.py:92
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
 msgstr "Rétrécir la forme avant de faire la sous-couche, pour empêcher que la sous-couche se montre en dehors du remplissage."
 
-#: lib/elements/auto_fill.py:102 lib/elements/fill.py:47
+#: lib/elements/auto_fill.py:103 lib/elements/fill.py:47
 msgid "Skip last stitch in each row"
 msgstr ""
 
-#: lib/elements/auto_fill.py:103 lib/elements/fill.py:48
+#: lib/elements/auto_fill.py:104 lib/elements/fill.py:48
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
 msgstr ""
 
-#: lib/elements/auto_fill.py:113
+#: lib/elements/auto_fill.py:114
 msgid "Expand"
 msgstr "Elargir"
 
-#: lib/elements/auto_fill.py:114
+#: lib/elements/auto_fill.py:115
 msgid "Expand the shape before fill stitching, to compensate for gaps between shapes."
 msgstr "Elargir la forme avant le remplissage, pour compenser les écarts entre les formes."
 
-#: lib/elements/auto_fill.py:186
+#: lib/elements/auto_fill.py:124 lib/elements/auto_fill.py:136
+msgid "Underpath"
+msgstr ""
+
+#: lib/elements/auto_fill.py:125 lib/elements/auto_fill.py:137
+msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
+msgstr ""
+
+#: lib/elements/auto_fill.py:213
 msgid "Unable to autofill: "
 msgstr ""
 
-#: lib/elements/auto_fill.py:190
+#: lib/elements/auto_fill.py:221
 msgid "Error during autofill!  This means that there is a problem with Ink/Stitch."
 msgstr ""
 
 #. this message is followed by a URL:
 #. https://github.com/inkstitch/inkstitch/issues/new
-#: lib/elements/auto_fill.py:193
+#: lib/elements/auto_fill.py:224
 msgid "If you'd like to help us make Ink/Stitch better, please paste this whole message into a new issue at: "
 msgstr ""
 
@@ -473,15 +482,15 @@ msgstr "Auto-remplissage satin %d"
 msgid "AutoSatin Running Stitch %d"
 msgstr "Points droits pour auto-remplissage satin %d"
 
-#: lib/extensions/base.py:124
+#: lib/extensions/base.py:125
 msgid "No embroiderable paths selected."
 msgstr "Aucun chemin brodable sélectionné."
 
-#: lib/extensions/base.py:126
+#: lib/extensions/base.py:127
 msgid "No embroiderable paths found in document."
 msgstr "Aucun chemin brodable trouvé dans le document."
 
-#: lib/extensions/base.py:127
+#: lib/extensions/base.py:128
 msgid "Tip: use Path -> Object to Path to convert non-paths."
 msgstr "Astuce: utilisez Chemin -> Objet en chemin pour convertir les non-chemins."
 
@@ -509,7 +518,7 @@ msgstr "Veuillez sélectionner au moins une ligne pour convertir en colonne sati
 msgid "Only simple lines may be converted to satin columns."
 msgstr "Seulement les lignes simples peuvent être converties en colonnes satinées."
 
-#: lib/extensions/convert_to_satin.py:57
+#: lib/extensions/convert_to_satin.py:58
 #, python-format
 msgid "Cannot convert %s to a satin column because it intersects itself.  Try breaking it up into multiple paths."
 msgstr "Impossible de convertir %s à une colonne satinée, car elle se croise elle-même.  Essayez de la séparer en plusieurs chemins."
@@ -551,8 +560,10 @@ msgid "Install"
 msgstr "Installer"
 
 #: lib/extensions/install.py:40 lib/extensions/lettering.py:50
-#: lib/extensions/params.py:327 print/templates/ui.html:72
-#: print/templates/ui.html:76 print/templates/ui.html:82
+#: lib/extensions/params.py:327 print/templates/custom-page.html:23
+#: print/templates/custom-page.html:27 print/templates/custom-page.html:33
+#: print/templates/ui.html:91 print/templates/ui.html:95
+#: print/templates/ui.html:101
 msgid "Cancel"
 msgstr "Quitter"
 
@@ -680,7 +691,7 @@ msgid "A print preview has been opened in your web browser.  This window will st
 "This window will close after you close the print preview in your browser, or you can close it manually if necessary."
 msgstr "Un aperçu avant impression a été ouvert dans votre navigateur web.  Cette fenêtre reste ouverte pour communiquer avec le code JavaScript s’exécutant dans votre navigateur.  Cette fenêtre se fermera après avoir fermer l’aperçu avant impression dans le navigateur, vous pouvez la fermer manuellement si nécessaire."
 
-#: lib/extensions/print_pdf.py:411
+#: lib/extensions/print_pdf.py:417
 msgid "Ink/Stitch Print"
 msgstr "Imprimer Ink/Stitch"
 
@@ -767,7 +778,7 @@ msgstr "Aller un pas en avant (+)"
 msgid "Switch direction (arrow left | arrow right)"
 msgstr "Changer de direction (flèche à gauche | flèche à droite)"
 
-#: lib/gui/simulator.py:65 lib/gui/simulator.py:218 lib/gui/simulator.py:225
+#: lib/gui/simulator.py:65 lib/gui/simulator.py:241 lib/gui/simulator.py:248
 msgid "Pause"
 msgstr "Pause"
 
@@ -784,31 +795,39 @@ msgid "Restart (R)"
 msgstr "Redémarrer (R)"
 
 #: lib/gui/simulator.py:71
+msgid "O"
+msgstr ""
+
+#: lib/gui/simulator.py:73
+msgid "Display needle penetration point (O)"
+msgstr ""
+
+#: lib/gui/simulator.py:74
 msgid "Quit"
 msgstr "Quitter"
 
-#: lib/gui/simulator.py:73
+#: lib/gui/simulator.py:76
 msgid "Quit (Q)"
 msgstr "Quitter (Q)"
 
-#: lib/gui/simulator.py:179
+#: lib/gui/simulator.py:188
 #, python-format
 msgid "Speed: %d stitches/sec"
 msgstr "Vitesse : %d points/sec"
 
-#: lib/gui/simulator.py:221
+#: lib/gui/simulator.py:244 lib/gui/simulator.py:272
 msgid "Start"
 msgstr "Début"
 
-#: lib/gui/simulator.py:729 lib/gui/simulator.py:741
+#: lib/gui/simulator.py:777 lib/gui/simulator.py:789
 msgid "Preview"
 msgstr "Aperçu"
 
-#: lib/gui/simulator.py:745
+#: lib/gui/simulator.py:793
 msgid "Internal Error"
 msgstr "Erreur interne"
 
-#: lib/gui/simulator.py:774
+#: lib/gui/simulator.py:822
 msgid "Embroidery Simulation"
 msgstr "Simulation de broderie"
 
@@ -829,18 +848,6 @@ msgstr "Texte Ink/Stitch"
 #, python-format
 msgid "Error writing to %(path)s: %(error)s"
 msgstr "Erreur d’écriture pour %(path)s: %(error)s"
-
-#: lib/stitches/auto_fill.py:189
-msgid "This shape is so small that it cannot be filled with rows of stitches.  It would probably look best as a satin column or running stitch."
-msgstr ""
-
-#: lib/stitches/auto_fill.py:192
-msgid "Cannot parse shape.  This most often happens because your shape is made up of multiple sections that aren't connected."
-msgstr ""
-
-#: lib/stitches/auto_fill.py:421
-msgid "Unexpected error while generating fill stitches. Please send your SVG file to lexelby@github."
-msgstr "Erreur inattendue lors de la génération des points de remplissage. Veuillez envoyer votre fichier SVG à lexelby@github."
 
 #: lib/svg/svg.py:97
 msgid "Stitch Plan"
@@ -899,12 +906,38 @@ msgstr "non"
 msgid "Enter thread name..."
 msgstr "Entrez le nom du fil..."
 
+#: print/templates/custom-page.html:22 print/templates/ui.html:90
+msgid "Enter URL"
+msgstr "Entrez l’URL"
+
+#: print/templates/custom-page.html:23 print/templates/custom-page.html:27
+#: print/templates/custom-page.html:33 print/templates/ui.html:91
+#: print/templates/ui.html:95 print/templates/ui.html:101
+msgid "OK"
+msgstr "OK"
+
+#: print/templates/custom-page.html:26 print/templates/ui.html:94
+msgid "Enter E-Mail"
+msgstr "Entrez votre adresse E-Mail"
+
+#: print/templates/custom-page.html:29 print/templates/custom-page.html:36
+msgid "Custom Information Sheet"
+msgstr ""
+
+#: print/templates/custom-page.html:31 print/templates/ui.html:99
+msgid "This will reset your custom text to the default."
+msgstr "Cela réinitialisera votre texte personnalisé au défaut."
+
+#: print/templates/custom-page.html:32 print/templates/ui.html:100
+msgid "All changes will be lost."
+msgstr "Toutes les modifications seront perdues."
+
 #: print/templates/footer.html:2
 msgid "Page"
 msgstr "Page"
 
-#: print/templates/footer.html:3 print/templates/ui.html:78
-#: print/templates/ui.html:85
+#: print/templates/footer.html:3 print/templates/ui.html:97
+#: print/templates/ui.html:104
 msgid "Proudly generated with"
 msgstr "Fièrement généré avec"
 
@@ -1025,7 +1058,7 @@ msgstr "Couleur"
 msgid "Estimated time"
 msgstr "Durée estimée du Job"
 
-#: print/templates/print_overview.html:39
+#: print/templates/print_overview.html:42
 msgid "Client Signature"
 msgstr "Signature du client"
 
@@ -1057,11 +1090,11 @@ msgstr "Mise en page"
 msgid "Branding"
 msgstr "Image de marque"
 
-#: print/templates/ui.html:20 print/templates/ui.html:92
+#: print/templates/ui.html:20 print/templates/ui.html:111
 msgid "Estimated Time"
 msgstr "Durée estimée"
 
-#: print/templates/ui.html:21 print/templates/ui.html:126
+#: print/templates/ui.html:21 print/templates/ui.html:145
 msgid "Design"
 msgstr "Conception"
 
@@ -1073,125 +1106,108 @@ msgstr "Taille d’impression"
 msgid "Print Layouts"
 msgstr "Mises en page d’impression"
 
-#: print/templates/ui.html:39 print/templates/ui.html:116
+#: print/templates/ui.html:41 print/templates/ui.html:135
 msgid "Client Overview"
 msgstr "Vue d’ensemble du client"
 
-#: print/templates/ui.html:40 print/templates/ui.html:117
+#: print/templates/ui.html:45 print/templates/ui.html:136
 msgid "Client Detailed View"
 msgstr "Vue détaillée de client"
 
-#: print/templates/ui.html:41 print/templates/ui.html:118
+#: print/templates/ui.html:49 print/templates/ui.html:137
 msgid "Operator Overview"
 msgstr "Vue d’ensemble de l’exécution"
 
-#: print/templates/ui.html:42 print/templates/ui.html:119
+#: print/templates/ui.html:53 print/templates/ui.html:138
 msgid "Operator Detailed View"
 msgstr "Vue détaillée de l'exécution"
 
-#: print/templates/ui.html:43
+#: print/templates/ui.html:55
 msgid "Thumbnail size"
 msgstr "Taille de la miniature"
 
-#: print/templates/ui.html:45 print/templates/ui.html:88
+#: print/templates/ui.html:61
+msgid "Custom information sheet"
+msgstr ""
+
+#: print/templates/ui.html:64 print/templates/ui.html:107
 msgid "Includes these Page Setup, estimated time settings and also the icon."
 msgstr "Comprend ces paramètres de mise en page, le réglage de l'heure et l’icône."
 
-#: print/templates/ui.html:45 print/templates/ui.html:88
-#: print/templates/ui.html:122
+#: print/templates/ui.html:64 print/templates/ui.html:107
+#: print/templates/ui.html:141
 msgid "Save as defaults"
 msgstr "Enregistrer comme valeurs par défaut"
 
-#: print/templates/ui.html:50
+#: print/templates/ui.html:69
 msgid "Logo"
 msgstr "Logo"
 
-#: print/templates/ui.html:60
+#: print/templates/ui.html:79
 msgid "Footer: Operator contact information"
 msgstr "Pied de page : Coordonnées de l'opérateur"
 
-#: print/templates/ui.html:71
-msgid "Enter URL"
-msgstr "Entrez l’URL"
-
-#: print/templates/ui.html:72 print/templates/ui.html:76
-#: print/templates/ui.html:82
-msgid "OK"
-msgstr "OK"
-
-#: print/templates/ui.html:75
-msgid "Enter E-Mail"
-msgstr "Entrez votre adresse E-Mail"
-
-#: print/templates/ui.html:80
-msgid "This will reset your custom text to the default."
-msgstr "Cela réinitialisera votre texte personnalisé au défaut."
-
-#: print/templates/ui.html:81
-msgid "All changes will be lost."
-msgstr "Toutes les modifications seront perdues."
-
-#: print/templates/ui.html:94
+#: print/templates/ui.html:113
 msgid "Machine Settings"
 msgstr "Réglages de la machine"
 
-#: print/templates/ui.html:96
+#: print/templates/ui.html:115
 msgid "Average Machine Speed"
 msgstr "Vitesse moyenne de la machine"
 
-#: print/templates/ui.html:97
+#: print/templates/ui.html:116
 msgid "stitches per minute "
 msgstr "Points par minute "
 
-#: print/templates/ui.html:101
+#: print/templates/ui.html:120
 msgid "Time Factors"
 msgstr "Facteurs de temps"
 
-#: print/templates/ui.html:104
+#: print/templates/ui.html:123
 msgid "Includes average time for preparing the machine, thread breaks and/or bobbin changes, etc."
 msgstr "Comprend le temps moyen de préparation de la machine, coupures de fils et/ou changement de canette, etc."
 
-#: print/templates/ui.html:104
+#: print/templates/ui.html:123
 msgid "seconds to add to total time*"
 msgstr "secondes à ajouter à la durée totale *"
 
-#: print/templates/ui.html:108
+#: print/templates/ui.html:127
 msgid "This will be added to the total time."
 msgstr "Cela s’ajoutera à la durée totale."
 
-#: print/templates/ui.html:108
+#: print/templates/ui.html:127
 msgid "seconds needed for a color change*"
 msgstr "secondes nécessaires pour un changement de couleur *"
 
-#: print/templates/ui.html:111
+#: print/templates/ui.html:130
 msgid "seconds needed for trim"
 msgstr "secondes nécessaires pour une coupe de fil"
 
-#: print/templates/ui.html:114
+#: print/templates/ui.html:133
 msgid "Display Time On"
 msgstr "Affichage de l’heure sur"
 
-#: print/templates/ui.html:122
+#: print/templates/ui.html:141
 msgid "Includes page setup, estimated time and also the branding."
 msgstr "Comprend la mise en page, temps estimé et aussi l’image de marque."
 
-#: print/templates/ui.html:127
+#: print/templates/ui.html:146
 msgid "Thread Palette"
 msgstr "Palette de fil"
 
-#: print/templates/ui.html:130
+#: print/templates/ui.html:149
 msgid "None"
 msgstr "Aucune"
 
-#: print/templates/ui.html:146
+#: print/templates/ui.html:165
 msgid "Changing the thread palette will cause thread names and catalog numbers to be recalculated based on the new palette.  Any changes you have made to color or thread names will be lost.  Are you sure?"
 msgstr "Changer la palette de fil recalculera les noms de fils et les numéros de catalogue, basé sur la nouvelle palette.  Toutes les modifications apportées aux couleurs ou noms de fils seront perdues.  Êtes-vous sûr/e ?"
 
-#: print/templates/ui.html:149
+#: print/templates/ui.html:168
 msgid "Yes"
 msgstr "Oui"
 
-#: print/templates/ui.html:150
+#: print/templates/ui.html:169
 msgid "No"
 msgstr "Non"
 
@@ -1207,7 +1223,8 @@ msgstr "Ajuster"
 msgid "Apply to all"
 msgstr "Appliquer à tous"
 
-#: print/templates/ui_svg_action_buttons.html:8
+#: print/templates/ui_svg_action_buttons.html:9
+#: print/templates/ui_svg_action_buttons.html:12
 msgid "Realistic"
 msgstr "Réaliste"
 

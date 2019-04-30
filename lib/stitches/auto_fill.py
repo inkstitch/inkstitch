@@ -1,19 +1,20 @@
-from collections import deque
-from itertools import groupby, izip
-import sys
+# -*- coding: UTF-8 -*-
+
+from itertools import groupby, chain
+import math
 
 import networkx
-import shapely
+from shapely import geometry as shgeo
+from shapely.ops import snap
+from shapely.strtree import STRtree
 
+from ..debug import debug
 from ..exceptions import InkstitchException
 from ..i18n import _
-from ..utils.geometry import Point as InkstitchPoint, cut
-from .fill import intersect_region_with_grating, row_num, stitch_row
+from ..svg import PIXELS_PER_MM
+from ..utils.geometry import Point as InkstitchPoint
+from .fill import intersect_region_with_grating, stitch_row
 from .running_stitch import running_stitch
-
-
-class MaxQueueLengthExceeded(InkstitchException):
-    pass
 
 
 class InvalidPath(InkstitchException):
@@ -45,6 +46,7 @@ class PathEdge(object):
         return self.key == self.SEGMENT_KEY
 
 
+@debug.time
 def auto_fill(shape,
               angle,
               row_spacing,
@@ -54,18 +56,17 @@ def auto_fill(shape,
               staggers,
               skip_last,
               starting_point,
-              ending_point=None):
-    stitches = []
+              ending_point=None,
+              underpath=True):
 
-    rows_of_segments = intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing)
-    segments = [segment for row in rows_of_segments for segment in row]
+    fill_stitch_graph = build_fill_stitch_graph(shape, angle, row_spacing, end_row_spacing)
+    check_graph(fill_stitch_graph, shape, max_stitch_length)
+    travel_graph = build_travel_graph(fill_stitch_graph, shape, angle, underpath)
+    path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point)
+    result = path_to_stitches(path, travel_graph, fill_stitch_graph, angle, row_spacing,
+                              max_stitch_length, running_stitch_length, staggers, skip_last)
 
-    graph = build_graph(shape, segments, angle, row_spacing, max_stitch_length)
-    path = find_stitch_path(graph, segments, starting_point, ending_point)
-
-    stitches.extend(path_to_stitches(graph, path, shape, angle, row_spacing, max_stitch_length, running_stitch_length, staggers, skip_last))
-
-    return stitches
+    return result
 
 
 def which_outline(shape, coords):
@@ -78,11 +79,12 @@ def which_outline(shape, coords):
     # I'd use an intersection check, but floating point errors make it
     # fail sometimes.
 
-    point = shapely.geometry.Point(*coords)
-    outlines = enumerate(list(shape.boundary))
-    closest = min(outlines, key=lambda index_outline: index_outline[1].distance(point))
+    point = shgeo.Point(*coords)
+    outlines = list(shape.boundary)
+    outline_indices = range(len(outlines))
+    closest = min(outline_indices, key=lambda index: outlines[index].distance(point))
 
-    return closest[0]
+    return closest
 
 
 def project(shape, coords, outline_index):
@@ -92,10 +94,11 @@ def project(shape, coords, outline_index):
     """
 
     outline = list(shape.boundary)[outline_index]
-    return outline.project(shapely.geometry.Point(*coords))
+    return outline.project(shgeo.Point(*coords))
 
 
-def build_graph(shape, segments, angle, row_spacing, max_stitch_length):
+@debug.time
+def build_fill_stitch_graph(shape, angle, row_spacing, end_row_spacing):
     """build a graph representation of the grating segments
 
     This function builds a specialized graph (as in graph theory) that will
@@ -128,6 +131,12 @@ def build_graph(shape, segments, angle, row_spacing, max_stitch_length):
     path must exist.
     """
 
+    debug.add_layer("auto-fill fill stitch")
+
+    # Convert the shape into a set of parallel line segments.
+    rows_of_segments = intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing)
+    segments = [segment for row in rows_of_segments for segment in row]
+
     graph = networkx.MultiGraph()
 
     # First, add the grating segments as edges.  We'll use the coordinates
@@ -135,241 +144,250 @@ def build_graph(shape, segments, angle, row_spacing, max_stitch_length):
     for segment in segments:
         # networkx allows us to label nodes with arbitrary data.  We'll
         # mark this one as a grating segment.
-        graph.add_edge(*segment, key="segment")
+        graph.add_edge(*segment, key="segment", underpath_edges=[])
 
-    for node in graph.nodes():
+    tag_nodes_with_outline_and_projection(graph, shape, graph.nodes())
+    add_edges_between_outline_nodes(graph, duplicate_every_other=True)
+
+    debug.log_graph(graph, "graph")
+
+    return graph
+
+
+def tag_nodes_with_outline_and_projection(graph, shape, nodes):
+    for node in nodes:
         outline_index = which_outline(shape, node)
         outline_projection = project(shape, node, outline_index)
 
-        # Tag each node with its index and projection.
-        graph.add_node(node, index=outline_index, projection=outline_projection)
+        graph.add_node(node, outline=outline_index, projection=outline_projection)
+
+
+def add_edges_between_outline_nodes(graph, duplicate_every_other=False):
+    """Add edges around the outlines of the graph, connecting sequential nodes.
+
+    This function assumes that all nodes in the graph are on the outline of the
+    shape.  It figures out which nodes are next to each other on the shape and
+    connects them in the graph with an edge.
+
+    Edges are tagged with their outline number and their position on that
+    outline.
+    """
 
     nodes = list(graph.nodes(data=True))  # returns a list of tuples: [(node, {data}), (node, {data}) ...]
-    nodes.sort(key=lambda node: (node[1]['index'], node[1]['projection']))
+    nodes.sort(key=lambda node: (node[1]['outline'], node[1]['projection']))
 
-    for outline_index, nodes in groupby(nodes, key=lambda node: node[1]['index']):
+    for outline_index, nodes in groupby(nodes, key=lambda node: node[1]['outline']):
         nodes = [node for node, data in nodes]
-
-        # heuristic: change the order I visit the nodes in the outline if necessary.
-        # If the start and endpoints are in the same row, I can't tell which row
-        # I should treat it as being in.
-        for i in xrange(len(nodes)):
-            row0 = row_num(InkstitchPoint(*nodes[0]), angle, row_spacing)
-            row1 = row_num(InkstitchPoint(*nodes[1]), angle, row_spacing)
-
-            if row0 == row1:
-                nodes = nodes[1:] + [nodes[0]]
-            else:
-                break
-
-        # heuristic: it's useful to try to keep the duplicated edges in the same rows.
-        # this prevents the BFS from having to search a ton of edges.
-        min_row_num = min(row0, row1)
-        if min_row_num % 2 == 0:
-            edge_set = 0
-        else:
-            edge_set = 1
 
         # add an edge between each successive node
         for i, (node1, node2) in enumerate(zip(nodes, nodes[1:] + [nodes[0]])):
-            graph.add_edge(node1, node2, key="outline")
+            data = dict(outline=outline_index, index=i)
+            graph.add_edge(node1, node2, key="outline", **data)
 
-            # duplicate every other edge around this outline
-            if i % 2 == edge_set:
-                graph.add_edge(node1, node2, key="extra")
+            if i % 2 == 0:
+                graph.add_edge(node1, node2, key="extra", **data)
 
-    check_graph(graph, shape, max_stitch_length)
+
+@debug.time
+def build_travel_graph(fill_stitch_graph, shape, fill_stitch_angle, underpath):
+    """Build a graph for travel stitches.
+
+    This graph will be used to find a stitch path between two spots on the
+    outline of the shape.
+
+    If underpath is False, we'll just be traveling
+    around the outline of the shape, so the graph will only contain outline
+    edges.
+
+    If underpath is True, we'll also allow travel inside the shape.  We'll
+    fill the shape with a cross-hatched grid of lines.  We'll construct a
+    graph from them and use a shortest path algorithm to construct travel
+    stitch paths in travel().
+
+    When underpathing, we "encourage" the travel() function to travel inside
+    the shape rather than on the boundary.  We do this by weighting the
+    boundary edges extra so that they're more "expensive" in the shortest path
+    calculation.  We also weight the interior edges extra proportional to
+    how close they are to the boundary.
+    """
+
+    graph = networkx.MultiGraph()
+
+    # Add all the nodes from the main graph.  This will be all of the endpoints
+    # of the rows of stitches.  Every node will be on the outline of the shape.
+    # They'll all already have their `outline` and `projection` tags set.
+    graph.add_nodes_from(fill_stitch_graph.nodes(data=True))
+
+    if underpath:
+        boundary_points, travel_edges = build_travel_edges(shape, fill_stitch_angle)
+
+        # This will ensure that a path traveling inside the shape can reach its
+        # target on the outline, which will be one of the points added above.
+        tag_nodes_with_outline_and_projection(graph, shape, boundary_points)
+
+    add_edges_between_outline_nodes(graph)
+
+    if underpath:
+        process_travel_edges(graph, fill_stitch_graph, shape, travel_edges)
+
+    debug.log_graph(graph, "travel graph")
 
     return graph
+
+
+def weight_edges_by_length(graph, multiplier=1):
+    for start, end, key in graph.edges:
+        p1 = InkstitchPoint(*start)
+        p2 = InkstitchPoint(*end)
+
+        graph[start][end][key]["weight"] = multiplier * p1.distance(p2)
+
+
+def get_segments(graph):
+    segments = []
+    for start, end, key, data in graph.edges(keys=True, data=True):
+        if key == 'segment':
+            segments.append(shgeo.LineString((start, end)))
+
+    return segments
+
+
+def process_travel_edges(graph, fill_stitch_graph, shape, travel_edges):
+    """Weight the interior edges and pre-calculate intersection with fill stitch rows."""
+
+    # Set the weight equal to 5x the edge length, to encourage travel()
+    # to avoid them.
+    weight_edges_by_length(graph, 5)
+
+    segments = get_segments(fill_stitch_graph)
+
+    # The shapely documentation is pretty unclear on this.  An STRtree
+    # allows for building a set of shapes and then efficiently testing
+    # the set for intersection.  This allows us to do blazing-fast
+    # queries of which line segments overlap each underpath edge.
+    strtree = STRtree(segments)
+
+    # This makes the distance calculations below a bit faster.  We're
+    # not looking for high precision anyway.
+    outline = shape.boundary.simplify(0.5 * PIXELS_PER_MM, preserve_topology=False)
+
+    for ls in travel_edges:
+        # In most cases, ls will be a simple line segment.  If we're
+        # unlucky, in rare cases we can get a tiny little extra squiggle
+        # at the end that can be ignored.
+        points = [InkstitchPoint(*coord) for coord in ls.coords]
+        p1, p2 = points[0], points[-1]
+
+        edge = (p1.as_tuple(), p2.as_tuple(), 'travel')
+
+        for segment in strtree.query(ls):
+            # It seems like the STRTree only gives an approximate answer of
+            # segments that _might_ intersect ls.  Refining the result is
+            # necessary but the STRTree still saves us a ton of time.
+            if segment.crosses(ls):
+                start, end = segment.coords
+                fill_stitch_graph[start][end]['segment']['underpath_edges'].append(edge)
+
+        # The weight of a travel edge is the length of the line segment.
+        weight = p1.distance(p2)
+
+        # Give a bonus to edges that are far from the outline of the shape.
+        # This includes the outer outline and the outlines of the holes.
+        # The result is that travel stitching will tend to hug the center
+        # of the shape.
+        weight /= ls.distance(outline) + 0.1
+
+        graph.add_edge(*edge, weight=weight)
+
+    # without this, we sometimes get exceptions like this:
+    # Exception AttributeError: "'NoneType' object has no attribute 'GEOSSTRtree_destroy'" in
+    #   <bound method STRtree.__del__ of <shapely.strtree.STRtree instance at 0x0D2BFD50>> ignored
+    del strtree
+
+
+def travel_grating(shape, angle, row_spacing):
+    rows_of_segments = intersect_region_with_grating(shape, angle, row_spacing)
+    segments = list(chain(*rows_of_segments))
+
+    return shgeo.MultiLineString(segments)
+
+
+def build_travel_edges(shape, fill_angle):
+    r"""Given a graph, compute the interior travel edges.
+
+    We want to fill the shape with a grid of line segments that can be used for
+    travel stitch routing.  Our goals:
+
+      * not too many edges so that the shortest path algorithm is speedy
+      * don't travel in the direction of the fill stitch rows so that the
+        travel stitch doesn't visually disrupt the fill stitch pattern
+
+    To do this, we'll fill the shape with three gratings: one at +45 degrees
+    from the fill stitch angle, one at -45 degrees, and one at +90 degrees.
+    The pattern looks like this:
+
+    /|\|/|\|/|\
+    \|/|\|/|\|/
+    /|\|/|\|/|\
+    \|/|\|/|\|/
+
+    Returns: (endpoints, edges)
+        endpoints - the points on travel edges that intersect with the boundary
+                    of the shape
+        edges     - the line segments we can travel on, as individual LineString
+                    instances
+    """
+
+    # If the shape is smaller, we'll have less room to maneuver and it's more likely
+    # we'll travel around the outside border of the shape.  Counteract that by making
+    # the grid denser.
+    if shape.area < 10000:
+        scale = 0.5
+    else:
+        scale = 1.0
+
+    grating1 = travel_grating(shape, fill_angle + math.pi / 4, scale * 2 * PIXELS_PER_MM)
+    grating2 = travel_grating(shape, fill_angle - math.pi / 4, scale * 2 * PIXELS_PER_MM)
+    grating3 = travel_grating(shape, fill_angle - math.pi / 2, scale * math.sqrt(2) * PIXELS_PER_MM)
+
+    debug.add_layer("auto-fill travel")
+    debug.log_line_strings(grating1, "grating1")
+    debug.log_line_strings(grating2, "grating2")
+    debug.log_line_strings(grating3, "grating3")
+
+    endpoints = [coord for mls in (grating1, grating2, grating3)
+                 for ls in mls
+                 for coord in ls.coords]
+
+    diagonal_edges = grating1.symmetric_difference(grating2)
+
+    # without this, floating point inaccuracies prevent the intersection points from lining up perfectly.
+    vertical_edges = snap(grating3.difference(grating1), diagonal_edges, 0.005)
+
+    return endpoints, chain(diagonal_edges, vertical_edges)
 
 
 def check_graph(graph, shape, max_stitch_length):
     if networkx.is_empty(graph) or not networkx.is_eulerian(graph):
         if shape.area < max_stitch_length ** 2:
-            raise InvalidPath(_("This shape is so small that it cannot be filled with rows of stitches.  "
-                                "It would probably look best as a satin column or running stitch."))
+            message = "This shape is so small that it cannot be filled with rows of stitches.  " \
+                      "It would probably look best as a satin column or running stitch."
+            raise InvalidPath(_(message))
         else:
-            raise InvalidPath(_("Cannot parse shape.  "
-                                "This most often happens because your shape is made up of multiple sections that aren't connected."))
+            message = "Cannot parse shape.  " \
+                      "This most often happens because your shape is made up of multiple sections that aren't connected."
+            raise InvalidPath(_(message))
 
 
-def node_list_to_edge_list(node_list):
-    return zip(node_list[:-1], node_list[1:])
-
-
-def bfs_for_loop(graph, starting_node, max_queue_length=2000):
-    to_search = deque()
-    to_search.append((None, set()))
-
-    while to_search:
-        if len(to_search) > max_queue_length:
-            raise MaxQueueLengthExceeded()
-
-        path, visited_edges = to_search.pop()
-
-        if path is None:
-            # This is the very first time through the loop, so initialize.
-            path = []
-            ending_node = starting_node
-        else:
-            ending_node = path[-1][-1]
-
-        # get a list of neighbors paired with the key of the edge I can follow to get there
-        neighbors = [
-            (node, key)
-            for node, adj in graph.adj[ending_node].iteritems()
-            for key in adj
-        ]
-
-        # heuristic: try grating segments first
-        neighbors.sort(key=lambda dest_key: dest_key[1] == "segment", reverse=True)
-
-        for next_node, key in neighbors:
-            # skip if I've already followed this edge
-            edge = PathEdge((ending_node, next_node), key)
-            if edge in visited_edges:
-                continue
-
-            new_path = path + [edge]
-
-            if next_node == starting_node:
-                # ignore trivial loops (down and back a doubled edge)
-                if len(new_path) > 3:
-                    return new_path
-
-            new_visited_edges = visited_edges.copy()
-            new_visited_edges.add(edge)
-
-            to_search.appendleft((new_path, new_visited_edges))
-
-
-def find_loop(graph, starting_nodes):
-    """find a loop in the graph that is connected to the existing path
-
-    Start at a candidate node and search through edges to find a path
-    back to that node.  We'll use a breadth-first search (BFS) in order to
-    find the shortest available loop.
-
-    In most cases, the BFS should not need to search far to find a loop.
-    The queue should stay relatively short.
-
-    An added heuristic will be used: if the BFS queue's length becomes
-    too long, we'll abort and try a different starting point.  Due to
-    the way we've set up the graph, there's bound to be a better choice
-    somewhere else.
-    """
-
-    loop = None
-    retry = []
-    max_queue_length = 2000
-
-    while not loop:
-        while not loop and starting_nodes:
-            starting_node = starting_nodes.pop()
-
-            try:
-                # Note: if bfs_for_loop() returns None, no loop can be
-                # constructed from the starting_node (because the
-                # necessary edges have already been consumed).  In that
-                # case we discard that node and try the next.
-                loop = bfs_for_loop(graph, starting_node, max_queue_length)
-
-            except MaxQueueLengthExceeded:
-                # We're giving up on this node for now.  We could try
-                # this node again later, so add it to the bottm of the
-                # stack.
-                retry.append(starting_node)
-
-        # Darn, couldn't find a loop.  Try harder.
-        starting_nodes.extendleft(retry)
-        max_queue_length *= 2
-
-    starting_nodes.extendleft(retry)
-    return loop
-
-
-def insert_loop(path, loop):
-    """insert a sub-loop into an existing path
-
-    The path will be a series of edges describing a path through the graph
-    that ends where it starts.  The loop will be similar, and its starting
-    point will be somewhere along the path.
-
-    Insert the loop into the path, resulting in a longer path.
-
-    Both the path and the loop will be a list of edges specified as a
-    start and end point.  The points will be specified in order, such
-    that they will look like this:
-
-    ((p1, p2), (p2, p3), (p3, p4), ...)
-
-    path will be modified in place.
-    """
-
-    loop_start = loop[0][0]
-
-    for i, (start, end) in enumerate(path):
-        if start == loop_start:
-            break
-    else:
-        # if we didn't find the start of the loop in the list at all, it must
-        # be the endpoint of the last segment
-        i += 1
-
-    path[i:i] = loop
-
-
-def nearest_node_on_outline(graph, point, outline_index=0):
-    point = shapely.geometry.Point(*point)
-    outline_nodes = [node for node, data in graph.nodes(data=True) if data['index'] == outline_index]
-    nearest = min(outline_nodes, key=lambda node: shapely.geometry.Point(*node).distance(point))
+def nearest_node(nodes, point, attr=None):
+    point = shgeo.Point(*point)
+    nearest = min(nodes, key=lambda node: shgeo.Point(*node).distance(point))
 
     return nearest
 
 
-def get_outline_nodes(graph, outline_index=0):
-    outline_nodes = [(node, data['projection'])
-                     for node, data
-                     in graph.nodes(data=True)
-                     if data['index'] == outline_index]
-    outline_nodes.sort(key=lambda node_projection: node_projection[1])
-    outline_nodes = [node for node, data in outline_nodes]
-
-    return outline_nodes
-
-
-def find_initial_path(graph, starting_point, ending_point=None):
-    starting_node = nearest_node_on_outline(graph, starting_point)
-
-    if ending_point is not None:
-        ending_node = nearest_node_on_outline(graph, ending_point)
-
-    if ending_point is None or starting_node is ending_node:
-        # If they didn't give an ending point, pick either neighboring node
-        # along the outline -- doesn't matter which.  We do this because
-        # the algorithm requires we start with _some_ path.
-        neighbors = [n for n, keys in graph.adj[starting_node].iteritems() if 'outline' in keys]
-        return [PathEdge((starting_node, neighbors[0]), "initial")]
-    else:
-        outline_nodes = get_outline_nodes(graph)
-
-        # Multiply the outline_nodes list by 2 (duplicate it) because
-        # the ending_node may occur first.
-        outline_nodes *= 2
-        start_index = outline_nodes.index(starting_node)
-        end_index = outline_nodes.index(ending_node, start_index)
-        nodes = outline_nodes[start_index:end_index + 1]
-
-        # we have a series of sequential points, but we need to
-        # turn it into an edge list
-        path = []
-        for start, end in izip(nodes[:-1], nodes[1:]):
-            path.append(PathEdge((start, end), "initial"))
-
-        return path
-
-
-def find_stitch_path(graph, segments, starting_point=None, ending_point=None):
+@debug.time
+def find_stitch_path(graph, travel_graph, starting_point=None, ending_point=None):
     """find a path that visits every grating segment exactly once
 
     Theoretically, we just need to find an Eulerian Path in the graph.
@@ -392,51 +410,81 @@ def find_stitch_path(graph, segments, starting_point=None, ending_point=None):
     """
 
     graph = graph.copy()
-    num_segments = len(segments)
-    segments_visited = 0
-    nodes_visited = deque()
 
-    if starting_point is None:
-        starting_point = segments[0][0]
+    if not starting_point:
+        starting_point = graph.nodes.keys()[0]
 
-    path = find_initial_path(graph, starting_point, ending_point)
+    starting_node = nearest_node(graph, starting_point)
 
-    # Our graph is Eulerian: every node has an even degree.  An Eulerian graph
-    # must have an Eulerian Circuit which visits every edge and ends where it
-    # starts.
+    if ending_point:
+        ending_node = nearest_node(graph, ending_point)
+    else:
+        ending_point = starting_point
+        ending_node = starting_node
+
+    # The algorithm below is adapted from networkx.eulerian_circuit().
+    path = []
+    vertex_stack = [(ending_node, None)]
+    last_vertex = None
+    last_key = None
+
+    while vertex_stack:
+        current_vertex, current_key = vertex_stack[-1]
+        if graph.degree(current_vertex) == 0:
+            if last_vertex:
+                path.append(PathEdge((last_vertex, current_vertex), last_key))
+            last_vertex, last_key = current_vertex, current_key
+            vertex_stack.pop()
+        else:
+            ignore, next_vertex, next_key = pick_edge(graph.edges(current_vertex, keys=True))
+            vertex_stack.append((next_vertex, next_key))
+            graph.remove_edge(current_vertex, next_vertex, next_key)
+
+    # The above has the excellent property that it tends to do travel stitches
+    # before the rows in that area, so we can hide the travel stitches under
+    # the rows.
     #
-    # However, we're starting with a path and _not_ removing the edges of that
-    # path from the graph.  By doing this, we're implicitly adding those edges
-    # to the graph, after which the starting and ending point (and only those
-    # two) will now have odd degree.  A graph that's Eulerian except for two
-    # nodes must have an Eulerian Path that starts and ends at those two nodes.
-    # That's how we force the starting and ending point.
+    # The only downside is that the path is a loop starting and ending at the
+    # ending node.  We need to start at the starting node, so we'll just
+    # start off by traveling to the ending node.
+    #
+    # Note, it's quite possible that part of this PathEdge will be eliminated by
+    # collapse_sequential_outline_edges().
 
-    nodes_visited.append(path[0][0])
+    if starting_node is not ending_node:
+        path.insert(0, PathEdge((starting_node, ending_node), key="initial"))
 
-    while segments_visited < num_segments:
-        loop = find_loop(graph, nodes_visited)
+    # If the starting and/or ending point falls far away from the end of a row
+    # of stitches (like can happen at the top of a square), then we need to
+    # add travel stitch to that point.
+    real_start = nearest_node(travel_graph, starting_point)
+    path.insert(0, PathEdge((real_start, starting_node), key="outline"))
 
-        if not loop:
-            print >> sys.stderr, _("Unexpected error while generating fill stitches. Please send your SVG file to lexelby@github.")
-            break
-
-        segments_visited += sum(1 for edge in loop if edge.is_segment())
-        nodes_visited.extend(edge[0] for edge in loop)
-        graph.remove_edges_from(loop)
-
-        insert_loop(path, loop)
-
-    if ending_point is None:
-        # If they didn't specify an ending point, then the end of the path travels
-        # around the outline back to the start (see find_initial_path()). This
-        # isn't necessary, so remove it.
-        trim_end(path)
+    # We're willing to start inside the shape, since we'll just cover the
+    # stitches.  We have to end on the outline of the shape.  This is mostly
+    # relevant in the case that the user specifies an underlay with an inset
+    # value, because the starting point (and possibly ending point) can be
+    # inside the shape.
+    outline_nodes = [node for node, outline in travel_graph.nodes(data="outline") if outline is not None]
+    real_end = nearest_node(outline_nodes, ending_point)
+    path.append(PathEdge((ending_node, real_end), key="outline"))
 
     return path
 
 
-def collapse_sequential_outline_edges(graph, path):
+def pick_edge(edges):
+    """Pick the next edge to traverse in the pathfinding algorithm"""
+
+    # Prefer a segment if one is available.  This has the effect of
+    # creating long sections of back-and-forth row traversal.
+    for source, node, key in edges:
+        if key == 'segment':
+            return source, node, key
+
+    return list(edges)[0]
+
+
+def collapse_sequential_outline_edges(path):
     """collapse sequential edges that fall on the same outline
 
     When the path follows multiple edges along the outline of the region,
@@ -466,99 +514,44 @@ def collapse_sequential_outline_edges(graph, path):
     return new_path
 
 
-def connect_points(shape, start, end, running_stitch_length, row_spacing):
-    """Create stitches to get from one point on an outline of the shape to another.
+def travel(travel_graph, start, end, running_stitch_length, skip_last):
+    """Create stitches to get from one point on an outline of the shape to another."""
 
-    An outline is essentially a loop (a path of points that ends where it starts).
-    Given point A and B on that loop, we want to take the shortest path from one
-    to the other.  Due to the way our path-finding algorithm above works, it may
-    have had to take the long way around the shape to get from A to B, but we'd
-    rather ignore that and just get there the short way.
-    """
-
-    # We may be on the outer boundary or on on of the hole boundaries.
-    outline_index = which_outline(shape, start)
-    outline = shape.boundary[outline_index]
-
-    # First, figure out the start and end position along the outline.  The
-    # projection gives us the distance travelled down the outline to get to
-    # that point.
-    start = shapely.geometry.Point(start)
-    start_projection = outline.project(start)
-    end = shapely.geometry.Point(end)
-    end_projection = outline.project(end)
-
-    # If the points are pretty close, just jump there.  There's a slight
-    # risk that we're going to sew outside the shape here.  The way to
-    # avoid that is to use running_stitch() even for these really short
-    # connections, but that would be really slow for all of the
-    # connections from one row to the next.
-    #
-    # This seems to do a good job of avoiding going outside the shape in
-    # most cases.  1.4 is chosen as approximately the length of the
-    # stitch connecting two rows if the side of the shape is at a 45
-    # degree angle to the rows of stitches (sqrt(2)).
-    direct_distance = abs(end_projection - start_projection)
-    if direct_distance < row_spacing * 1.4 and direct_distance < running_stitch_length:
-        return [InkstitchPoint(end.x, end.y)]
-
-    # The outline path has a "natural" starting point.  Think of this as
-    # 0 or 12 on an analog clock.
-
-    # Cut the outline into two paths at the starting point.  The first
-    # section will go from 12 o'clock to the starting point.  The second
-    # section will go from the starting point all the way around and end
-    # up at 12 again.
-    result = cut(outline, start_projection)
-
-    # result[0] will be None if our starting point happens to already be at
-    # 12 o'clock.
-    if result[0] is not None:
-        before, after = result
-
-        # Make a new outline, starting from the starting point.  This is
-        # like rotating the clock so that now our starting point is
-        # at 12 o'clock.
-        outline = shapely.geometry.LineString(list(after.coords) + list(before.coords))
-
-    # Now figure out where our ending point is on the newly-rotated clock.
-    end_projection = outline.project(end)
-
-    # Cut the new path at the ending point.  before and after now represent
-    # two ways to get from the starting point to the ending point.  One
-    # will most likely be longer than the other.
-    before, after = cut(outline, end_projection)
-
-    if before.length <= after.length:
-        points = list(before.coords)
-    else:
-        # after goes from the ending point to the starting point, so reverse
-        # it to get from start to end.
-        points = list(reversed(after.coords))
-
-    # Now do running stitch along the path we've found.  running_stitch() will
-    # avoid cutting sharp corners.
-    path = [InkstitchPoint(*p) for p in points]
+    path = networkx.shortest_path(travel_graph, start, end, weight='weight')
+    path = [InkstitchPoint(*p) for p in path]
     stitches = running_stitch(path, running_stitch_length)
 
-    # The row of stitches already stitched the first point, so skip it.
-    return stitches[1:]
+    # The path's first stitch will start at the end of a row of stitches.  We
+    # don't want to double that last stitch, so we'd like to skip it.
+    if skip_last and len(path) > 2:
+        # However, we don't want to skip it if we've had to do any actual
+        # travel in the interior of the shape.  The reason is that we can
+        # potentially cut a corner and stitch outside the shape.
+        #
+        # If the path is longer than two nodes, then it is not a simple
+        # transition from one row to the next, so we'll keep the stitch.
+        return stitches
+    else:
+        # Just a normal transition from one row to the next, so skip the first
+        # stitch.
+        return stitches[1:]
 
 
-def trim_end(path):
-    while path and path[-1].is_outline():
-        path.pop()
-
-
-def path_to_stitches(graph, path, shape, angle, row_spacing, max_stitch_length, running_stitch_length, staggers, skip_last):
-    path = collapse_sequential_outline_edges(graph, path)
+@debug.time
+def path_to_stitches(path, travel_graph, fill_stitch_graph, angle, row_spacing, max_stitch_length, running_stitch_length, staggers, skip_last):
+    path = collapse_sequential_outline_edges(path)
 
     stitches = []
+
+    # If the very first stitch is travel, we'll omit it in travel(), so add it here.
+    if not path[0].is_segment():
+        stitches.append(InkstitchPoint(*path[0].nodes[0]))
 
     for edge in path:
         if edge.is_segment():
             stitch_row(stitches, edge[0], edge[1], angle, row_spacing, max_stitch_length, staggers, skip_last)
+            travel_graph.remove_edges_from(fill_stitch_graph[edge[0]][edge[1]]['segment'].get('underpath_edges', []))
         else:
-            stitches.extend(connect_points(shape, edge[0], edge[1], running_stitch_length, row_spacing))
+            stitches.extend(travel(travel_graph, edge[0], edge[1], running_stitch_length, skip_last))
 
     return stitches
