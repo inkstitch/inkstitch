@@ -67,36 +67,39 @@ class Font(object):
 
     def __init__(self, font_path):
         self.path = font_path
+        self.metadata = {}
+        self.license = None
+        self.variants = {}
+
         self._load_metadata()
         self._load_license()
-        self._load_variants()
-
-        if self.variants.get(self.default_variant) is None:
-            raise FontError("font not found or has no default variant")
 
     def _load_metadata(self):
         try:
             with open(os.path.join(self.path, "font.json")) as metadata_file:
                 self.metadata = json.load(metadata_file)
         except IOError:
-            self.metadata = {}
+            pass
 
     def _load_license(self):
         try:
             with open(os.path.join(self.path, "LICENSE")) as license_file:
                 self.license = license_file.read()
         except IOError:
-            self.license = None
+            pass
 
     def _load_variants(self):
-        self.variants = {}
+        if not self.variants:
+            for variant in FontVariant.VARIANT_TYPES:
+                try:
+                    self.variants[variant] = FontVariant(self.path, variant, self.default_glyph)
+                except IOError:
+                    # we'll deal with missing variants when we apply lettering
+                    pass
 
-        for variant in FontVariant.VARIANT_TYPES:
-            try:
-                self.variants[variant] = FontVariant(self.path, variant, self.default_glyph)
-            except IOError:
-                # we'll deal with missing variants when we apply lettering
-                pass
+    def _check_variants(self):
+        if self.variants.get(self.default_variant) is None:
+            raise FontError("font not found or has no default variant")
 
     name = localized_font_metadata('name', '')
     description = localized_font_metadata('description', '')
@@ -116,6 +119,7 @@ class Font(object):
 
     def render_text(self, text, destination_group, variant=None, back_and_forth=True, trim=False):
         """Render text into an SVG group element."""
+        self._load_variants()
 
         if variant is None:
             variant = self.default_variant
