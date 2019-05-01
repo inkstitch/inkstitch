@@ -1,27 +1,27 @@
-import sys
-import os
-from threading import Thread
-import socket
-import errno
-import time
-import logging
 from copy import deepcopy
-import wx
-import appdirs
+from datetime import date
+import errno
 import json
+import logging
+import os
+import socket
+import sys
+from threading import Thread
+import time
+
+import appdirs
+from flask import Flask, request, Response, send_from_directory, jsonify
 import inkex
 from jinja2 import Environment, FileSystemLoader, select_autoescape
-from datetime import date
-from flask import Flask, request, Response, send_from_directory, jsonify
-import webbrowser
 import requests
 
-from .base import InkstitchExtension
-from ..i18n import _, translation as inkstitch_translation
+from ..gui import open_url
+from ..i18n import translation as inkstitch_translation
+from ..stitch_plan import patches_to_stitch_plan
 from ..svg import render_stitch_plan
 from ..svg.tags import INKSCAPE_GROUPMODE
-from ..stitch_plan import patches_to_stitch_plan
 from ..threads import ThreadCatalog
+from .base import InkstitchExtension
 
 
 def datetimeformat(value, format='%Y/%m/%d'):
@@ -51,42 +51,6 @@ def save_defaults(defaults):
         json.dump(defaults, defaults_file)
 
 
-def open_url(url):
-    # Avoid spurious output from xdg-open.  Any output on stdout will crash
-    # inkscape.
-    null = open(os.devnull, 'w')
-    old_stdout = os.dup(sys.stdout.fileno())
-    os.dup2(null.fileno(), sys.stdout.fileno())
-
-    if getattr(sys, 'frozen', False):
-
-        # PyInstaller sets LD_LIBRARY_PATH.  We need to temporarily clear it
-        # to avoid confusing xdg-open, which webbrowser will run.
-
-        # The following code is adapted from PyInstaller's documentation
-        # http://pyinstaller.readthedocs.io/en/stable/runtime-information.html
-
-        old_environ = dict(os.environ)  # make a copy of the environment
-        lp_key = 'LD_LIBRARY_PATH'  # for Linux and *BSD.
-        lp_orig = os.environ.get(lp_key + '_ORIG')  # pyinstaller >= 20160820 has this
-        if lp_orig is not None:
-            os.environ[lp_key] = lp_orig  # restore the original, unmodified value
-        else:
-            os.environ.pop(lp_key, None)  # last resort: remove the env var
-
-        webbrowser.open(url)
-
-        # restore the old environ
-        os.environ.clear()
-        os.environ.update(old_environ)
-    else:
-        webbrowser.open(url)
-
-    # restore file descriptors
-    os.dup2(old_stdout, sys.stdout.fileno())
-    os.close(old_stdout)
-
-
 class PrintPreviewServer(Thread):
     def __init__(self, *args, **kwargs):
         self.html = kwargs.pop('html')
@@ -96,7 +60,6 @@ class PrintPreviewServer(Thread):
         self.realistic_color_block_svgs = kwargs.pop('realistic_color_block_svgs')
         Thread.__init__(self, *args, **kwargs)
         self.daemon = True
-        self.last_request_time = None
         self.shutting_down = False
 
         self.__setup_app()
@@ -111,16 +74,6 @@ class PrintPreviewServer(Thread):
         self.__set_resources_path()
         self.app = Flask(__name__)
 
-        @self.app.before_request
-        def request_started():
-            self.last_request_time = time.time()
-
-        @self.app.before_first_request
-        def start_watcher():
-            self.watcher_thread = Thread(target=self.watch)
-            self.watcher_thread.daemon = True
-            self.watcher_thread.start()
-
         @self.app.route('/')
         def index():
             return self.html
@@ -129,28 +82,11 @@ class PrintPreviewServer(Thread):
         def shutdown():
             self.shutting_down = True
             request.environ.get('werkzeug.server.shutdown')()
-            return _('Closing...') + '<br/><br/>' + _('It is safe to close this window now.')
+            return "shutting down"
 
         @self.app.route('/resources/<path:resource>', methods=['GET'])
         def resources(resource):
             return send_from_directory(self.resources_path, resource, cache_timeout=1)
-
-        @self.app.route('/ping')
-        def ping():
-            # Javascript is letting us know it's still there.  This resets self.last_request_time.
-            return "pong"
-
-        @self.app.route('/printing/start')
-        def printing_start():
-            # temporarily turn off the watcher while the print dialog is up,
-            # because javascript will be frozen
-            self.last_request_time = None
-            return "OK"
-
-        @self.app.route('/printing/end')
-        def printing_end():
-            # nothing to do here -- request_started() will restart the watcher
-            return "OK"
 
         @self.app.route('/settings/<field_name>', methods=['POST'])
         def set_field(field_name):
@@ -215,21 +151,6 @@ class PrintPreviewServer(Thread):
         # the context of a flask request, so we'll just make one
         requests.post("http://%s:%s/shutdown" % (self.host, self.port))
 
-    def watch(self):
-        try:
-            while True:
-                time.sleep(1)
-                if self.shutting_down:
-                    break
-
-                if self.last_request_time is not None and \
-                        (time.time() - self.last_request_time) > 3:
-                    self.stop()
-                    break
-        except BaseException:
-            # seems like sometimes this thread blows up during shutdown
-            pass
-
     def disable_logging(self):
         logging.getLogger('werkzeug').setLevel(logging.ERROR)
 
@@ -250,42 +171,6 @@ class PrintPreviewServer(Thread):
                     raise
             else:
                 break
-
-
-class PrintInfoFrame(wx.Frame):
-    def __init__(self, *args, **kwargs):
-        self.print_server = kwargs.pop("print_server")
-        wx.Frame.__init__(self, *args, **kwargs)
-
-        panel = wx.Panel(self)
-        sizer = wx.BoxSizer(wx.VERTICAL)
-
-        message = _("A print preview has been opened in your web browser.  "
-                    "This window will stay open in order to communicate with the JavaScript code running in your browser.\n\n"
-                    "This window will close after you close the print preview in your browser, or you can close it manually if necessary.")
-        text = wx.StaticText(panel, label=message)
-        font = wx.Font(14, wx.DEFAULT, wx.NORMAL, wx.NORMAL)
-        text.SetFont(font)
-        sizer.Add(text, proportion=1, flag=wx.ALL | wx.EXPAND, border=20)
-
-        stop_button = wx.Button(panel, id=wx.ID_CLOSE)
-        stop_button.Bind(wx.EVT_BUTTON, self.close_button_clicked)
-        sizer.Add(stop_button, proportion=0, flag=wx.ALIGN_CENTER | wx.ALL, border=10)
-
-        panel.SetSizer(sizer)
-        panel.Layout()
-
-        self.timer = wx.PyTimer(self.__watcher)
-        self.timer.Start(250)
-
-    def close_button_clicked(self, event):
-        self.print_server.stop()
-
-    def __watcher(self):
-        if not self.print_server.is_alive():
-            self.timer.Stop()
-            self.timer = None
-            self.Destroy()
 
 
 class Print(InkstitchExtension):
@@ -410,10 +295,12 @@ class Print(InkstitchExtension):
         )
         print_server.start()
 
-        time.sleep(1)
-        open_url("http://%s:%s/" % (print_server.host, print_server.port))
+        # Wait for print_server.host and print_server.port to be populated.
+        # Hacky, but Flask doesn't have an option for a callback to be run
+        # after startup.
+        time.sleep(0.5)
 
-        app = wx.App()
-        info_frame = PrintInfoFrame(None, title=_("Ink/Stitch Print"), size=(450, 350), print_server=print_server)
-        info_frame.Show()
-        app.MainLoop()
+        browser_window = open_url("http://%s:%s/" % (print_server.host, print_server.port))
+        browser_window.wait()
+        print_server.stop()
+        print_server.join()

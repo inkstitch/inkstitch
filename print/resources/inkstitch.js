@@ -1,3 +1,5 @@
+var electron = require('electron');
+
 $.postJSON = function(url, data, success=null) {
     return $.ajax(url, {
                         type: 'POST',
@@ -10,12 +12,6 @@ $.postJSON = function(url, data, success=null) {
 var realistic_rendering = {};
 var realistic_cache = {};
 var normal_rendering = {};
-
-function ping() {
-  $.get("/ping")
-   .done(function() { setTimeout(ping, 1000) })
-   .fail(function() { $('#errors').attr('class', 'show') });
-}
 
 //function to chunk opd view into pieces 
   // source: https://stackoverflow.com/questions/3366529/wrap-every-3-divs-in-a-div
@@ -199,7 +195,6 @@ function setSVGTransform(figure, transform) {
 }
 
 $(function() {
-  setTimeout(ping, 1000);
   /* SCALING AND MOVING SVG  */
 
   /* Mousewheel scaling */
@@ -369,34 +364,19 @@ $(function() {
   /* Settings Bar */
 
   $('button.close').click(function() {
-    $.post('/shutdown', {})
-     .always(function(data) {
-       window.close();
-
-       /* Chrome and Firefox both have a rule: scripts can only close windows
-        * that they opened.  Chrome seems to have an exception for windows that
-        * were opened by an outside program, so the above works fine.  Firefox
-        * steadfastly refuses to allow us to close the window, so we'll tell
-        * the user (in their language) that they can close it.
-        */
-       setTimeout(function() {
-           document.open();
-           document.write("<html><body>" + data + "</body></html>");
-           document.close();
-       }, 1000);
-    });
+     window.close();
   });
 
   $('button.print').click(function() {
-    // printing halts all javascript activity, so we need to tell the backend
-    // not to shut down until we're done.
-    $.get("/printing/start")
-     .done(function() {
-        window.print();
-        $.get("/printing/end");
-     });
+	  var pageSize = $('select#printing-size').find(':selected').text();
+	  electron.ipcRenderer.send('open-pdf', pageSize)
   });
 
+  $('button.save-pdf').click(function() {
+	  var pageSize = $('select#printing-size').find(':selected').text();
+	  electron.ipcRenderer.send('save-pdf', pageSize)
+  });  
+  
   $('button.settings').click(function(){
     $('#settings-ui').show();
   });
@@ -683,18 +663,11 @@ $(function() {
             canvas.height = image.height / 96 * 600;
 
             var ctx = canvas.getContext('2d');
-
-            // rendering slows down the browser enough that we can miss sending
-            // pings, so tell the server side to wait for us
-            $.get("/printing/start")
-             .done(function() {
-               ctx.drawImage(image, 0, 0, image.width, image.height, 0, 0, canvas.width, canvas.height);
-               realistic_cache[item] = '<svg width=' + image.width + ' height=' + image.height + ' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">' +
-                               '<image x=0 y=0 width=' + image.width + ' height=' + image.height + ' xlink:href="' + canvas.toDataURL() + '" />' +
-                               '</svg>';
-               finalize(realistic_cache[item]);
-               $.get("/printing/end");
-             });
+            ctx.drawImage(image, 0, 0, image.width, image.height, 0, 0, canvas.width, canvas.height);
+            realistic_cache[item] = '<svg width=' + image.width + ' height=' + image.height + ' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">' +
+                                    '<image x=0 y=0 width=' + image.width + ' height=' + image.height + ' xlink:href="' + canvas.toDataURL() + '" />' +
+                                    '</svg>';
+            finalize(realistic_cache[item]);
           };
           image.src = '/realistic/' + item;
         } else {

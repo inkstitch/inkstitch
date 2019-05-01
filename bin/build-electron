@@ -1,0 +1,20 @@
+#!/bin/bash
+
+if [ "$BUILD" = "windows" -o "$BUILD" = "linux" ]; then
+  if [ "$BUILD" = "windows" ]; then
+    args="-w --ia32"
+  else
+    args="-l --x64"
+  fi
+
+  docker run --rm \
+    -e ELECTRON_CACHE=$HOME/.cache/electron \
+    -v ${PWD}/electron:/project \
+    -v ~/.cache/electron:/root/.cache/electron \
+    electronuserland/builder:wine \
+    /bin/bash -c "yarn --link-duplicates --pure-lockfile && yarn run dist ${args}"
+else
+  cd electron
+  npm install
+  npm run dist
+fi

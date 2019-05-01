@@ -1,32 +1,11 @@
-EXTENSIONS:=inkstitch
 
-# This gets the branch name or the name of the tag
-VERSION:=$(subst /,-,$(TRAVIS_BRANCH))
-OS:=$(TRAVIS_OS_NAME)
-ARCH:=$(shell uname -m)
-
-dist: distclean locales inx
-	bin/build-dist $(EXTENSIONS)
-	cp -a images/examples dist/inkstitch
-	cp -a palettes dist/inkstitch
-	cp -a symbols dist/inkstitch
-	cp -a fonts dist/inkstitch
-	cp -a icons dist/inkstitch/bin
-	cp -a locales dist/inkstitch/bin
-	cp -a print dist/inkstitch/bin
-	for d in inx/*; do \
-		lang=$${d%.*}; \
-		lang=$${lang#*/}; \
-		cp $$d/*.inx dist; \
-		if [ "$$BUILD" = "windows" ]; then \
-			cd dist; zip -r ../inkstitch-$(VERSION)-win32-$$lang.zip *; cd ..; \
-		else \
-			cd dist; tar zcf ../inkstitch-$(VERSION)-$(OS)-$(ARCH)-$$lang.tar.gz *; cd ..; \
-		fi; \
-	done
+dist: locales inx
+	bin/build-python
+	bin/build-electron
+	bin/build-distribution-archives
 
 distclean:
-	rm -rf build dist inx locales *.spec *.tar.gz *.zip
+	rm -rf build dist inx locales *.spec *.tar.gz *.zip electron/node_modules electron/dist
 
 .PHONY: inx
 inx: locales
@@ -65,4 +44,4 @@ locales:
 
 .PHONY: style
 style:
-	flake8 . --count --max-complexity=10 --max-line-length=150 --statistics --exclude=pyembroidery,__init__.py
+	flake8 . --count --max-complexity=10 --max-line-length=150 --statistics --exclude=pyembroidery,__init__.py,electron,build

@@ -1,0 +1,39 @@
+{
+  "name": "inkstitch-gui",
+  "productName": "inkstitch-gui",
+  "version": "1.0.0",
+  "description": "Ink/Stitch GUI",
+  "main": "src/main.js",
+  "scripts": {
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "dev": "electron ."
+  },
+  "build": {
+    "linux": {
+      "icon": "src/assets/icons/png/512x512.png",
+      "target": "dir"
+    },
+    "win": {
+      "icon": "src/assets/icons/win/inkstitch.ico",
+      "target": "dir"
+    },
+    "mac": {
+      "icon": "src/assets/icons/mac/inkstitch.icns",
+      "target": "dir"
+    }
+  },
+  "keywords": [],
+  "author": "lex",
+  "license": "GPL-3.0+",
+  "dependencies": {
+    "electron-compile": "^6.4.4",
+    "tmp": "0.1.0"
+  },
+  "devDependencies": {
+    "electron": "4.1.3",
+    "electron-builder": "^20.39.0",
+    "electron-packager": "13.1.1",
+    "electron-prebuilt-compile": "4.0.0"
+  }
+}

@@ -23,6 +23,7 @@ matrix:
   - python: 2.7
     sudo: required
     env: BUILD=windows
+    services: docker
     if: type != cron AND (tag =~ ^v[0-9.]+$ OR branch != master)
   - language: generic
     os: osx
@@ -37,7 +38,12 @@ matrix:
 branches:
   except:
     - /^dev-build-/
-cache: pip
+cache:
+  directories:
+    - $HOME/.cache/pip
+    - electron/node_modules
+    - $HOME/.cache/electron
+    - /var/cache/apt/archives
 install:
   - |
     set -e
@@ -126,7 +132,11 @@ install:
 
       pip install -r requirements.txt
       pip install pyinstaller==3.3.1
+
       set +x
+
+      nvm install node
+      nvm use node
     elif [ -n "$LINT" ]; then
       pip install flake8
     fi
