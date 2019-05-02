@@ -1,7 +1,7 @@
 ---
 title: "Developing Ink/Stitch"
 permalink: /de/developers/inkstitch/
-last_modified_at: 2019-03-15
+last_modified_at: 2019-05-02
 toc: true
 ---
 ## Ink/Stitch Organisation
@@ -16,7 +16,7 @@ Ink/Stitch und pyembroidery sind in [Python](https://www.python.org/) 2 geschrie
 
 Ein Update auf Python 3 ist derzeit nicht möglich, da inkex.py, das Erweiterungen-Framework für Inkscape, nur in Python 2 existiert.
 
-Der im Browser dargestellte PDF-Ausdruck benutzt die typischen Web-Skriptsprachen wie HTML5, CSS und Javascript (JQuery). Dabei kommt außerdem das [Jinja Template Framework](http://jinja.pocoo.org/) zum Einsatz.
+Die PDF-Vorschau nutzt Electron, und damit die typischen Web-Skriptsprachen wie HTML5, CSS und Javascript (JQuery). Dabei kommt außerdem das [Jinja Template Framework](http://jinja.pocoo.org/) zum Einsatz. In zukünftigen Versionen wird geplant dieses durch das vue.js - Framework zu ersetzen. Es ist geplant, die gesamte Bedienungsoberfläche diesem Model anzupassen.
 
 ## Entwickler Dokumentation
 * [Manualle Installation](/de/developers/inkstitch/manual-setup/)
