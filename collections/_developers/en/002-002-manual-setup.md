@@ -1,7 +1,7 @@
 ---
 title: "Manual Setup"
 permalink: /developers/inkstitch/manual-setup/
-last_modified_at: 2019-04-21
+last_modified_at: 2019-05-01
 toc: false
 ---
 A manual setup will allow you to edit the code while running the extension.
@@ -29,7 +29,17 @@ A manual setup will allow you to edit the code while running the extension.
     **Info:** If you only have Python 2 installed you may be able to use `pip` instead of `pip2`.
     {: .notice--info }
 
-3. Prepare INX files
+3. Install Electron dependencies
+    The Ink/Stitch GUI uses Electron.  You'll need a working NodeJS installation of version 10 or greater.  If you don't have the `yarn` command, install it with `npm install yarn`.
+
+    Install Electron and its dependencies:
+
+    ```
+    cd electron
+    yarn install
+    ```
+
+4. Prepare INX files
 
     ```
     make inx
@@ -37,7 +47,7 @@ A manual setup will allow you to edit the code while running the extension.
 
     This will create `*.inx` files for each locale in `inx/<locale>`.
 
-4. Symbolically link into the Inkscape extensions directory
+5. Symbolically link into the Inkscape extensions directory
 
     ```
     cd ~/.config/inkscape/extensions
