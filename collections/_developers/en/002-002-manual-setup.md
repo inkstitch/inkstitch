@@ -58,7 +58,7 @@ A manual setup will allow you to edit the code while running the extension.
 
     To use another language for Ink/Stitch menus inside Inkscape substitute `en_US` for another locale in `inx/`. Ink/Stich dialogs outside Inkscape use the OS language.
 
-5. Run Inkscape.
+6. Run Inkscape.
 
     **Info:** If Ink/Stitch returns `ImportError: No module named shapely`, then it is likely the version of Python used by Inkscape and the version you installed the Python dependencies for above are different. Configure the Inkscape Python executable by editing `preferences.xml`. The location of `preferences.xml` can be found in Inkscape under Edit > Preferences > System > User extensions. You must *close Inkscape before editing this file*, it is over-written when Inkscape closes.<br/><br/>
     In `preferences.xml` update `<group id="extensions" />` to include the correct Python interpreter. For example,<br/><br/>
