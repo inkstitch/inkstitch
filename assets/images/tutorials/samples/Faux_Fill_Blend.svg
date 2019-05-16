@@ -377,7 +377,8 @@
        inkscape:connector-curvature="0"
        id="rect4798"
        d="M 27.970238,225.5625 H 65.956844 V 265.25 H 27.970238 Z"
-       style="fill:#8fdfe2;fill-opacity:1;stroke:none;stroke-width:0.63499993;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" />
+       style="fill:#8fdfe2;fill-opacity:1;stroke:none;stroke-width:0.63499993;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       embroider_underpath="False" />
     <path
        d="M 61.272088,61.524194 105.71442,107.95511"
        id="connector"
@@ -423,7 +424,8 @@
        style="fill:#002857;fill-opacity:1;stroke:none;stroke-width:0.69463408;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
        d="M 27.922993,35.460564 H 65.956848 V 47.555801 H 27.922993 Z"
        id="rect5322"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       embroider_underpath="False" />
     <path
        d="m 54.189896,117.59563 51.529024,16.42872"
        id="connectorE"
@@ -463,7 +465,8 @@
        style="fill:#002857;fill-opacity:1;stroke:none;stroke-width:0.62527049;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
        d="M 27.875742,47.465159 H 65.909597 V 57.635042 H 27.875742 Z"
        id="rect5417"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       embroider_underpath="False" />
     <path
        d="M 312.40971,157.23852 240.02033,179.3961"
        id="connectorP"
@@ -503,7 +506,8 @@
        style="fill:#002857;fill-opacity:1;stroke:none;stroke-width:0.64055341;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
        d="M 27.828497,57.432662 H 65.956846 V 68.249999 H 27.828497 Z"
        id="rect5532"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       embroider_underpath="False" />
     <path
        d="M 15.346761,195.09563 105.1787,218.63226"
        id="connectorV"

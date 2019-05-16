@@ -428,19 +428,22 @@
        style="fill:#aacae6;fill-opacity:1;stroke:none;stroke-width:0.63499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
        d="m 25.324406,219.51488 h 29.104166 v 12.47321 H 25.324406 Z"
        id="rect17768-2"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       embroider_underpath="False" />
     <path
        style="fill:#aacae6;fill-opacity:1;stroke:none;stroke-width:0.63500005;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
        d="m 25.324402,231.9881 h 29.104166 v 12.47321 H 25.324402 Z"
        id="rect17768-3-7"
        inkscape:connector-curvature="0"
-       embroider_row_spacing_mm=".8" />
+       embroider_row_spacing_mm=".8"
+       embroider_underpath="False" />
     <path
        style="fill:#aacae6;fill-opacity:1;stroke:none;stroke-width:0.63500005;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
        d="M 25.324394,244.4613 H 54.42856 v 12.47322 H 25.324394 Z"
        id="rect17768-6-0"
        inkscape:connector-curvature="0"
-       embroider_row_spacing_mm="1.9" />
+       embroider_row_spacing_mm="1.9"
+       embroider_underpath="False" />
     <path
        d="M 60.616829,73.667065 95.714411,87.301371"
        id="connector"
@@ -554,18 +557,21 @@
        id="rect17768-62-9"
        d="M 25.324406,34.988098 H 54.428572 V 47.461312 H 25.324406 Z"
        style="display:inline;fill:#002244;fill-opacity:1;stroke:none;stroke-width:0.63500005;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
-       embroider_row_spacing_mm="1.9" />
+       embroider_row_spacing_mm="1.9"
+       embroider_underpath="False" />
     <path
        inkscape:connector-curvature="0"
        id="rect17768-3-9-3"
        d="M 25.324402,47.461311 H 54.428568 V 59.934525 H 25.324402 Z"
        style="display:inline;fill:#002244;fill-opacity:1;stroke:none;stroke-width:0.63500011;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
-       embroider_row_spacing_mm=".8" />
+       embroider_row_spacing_mm=".8"
+       embroider_underpath="False" />
     <path
        inkscape:connector-curvature="0"
        id="rect17768-6-1-6"
        d="M 25.324394,59.934525 H 54.42856 V 72.407739 H 25.324394 Z"
-       style="display:inline;fill:#002244;fill-opacity:1;stroke:none;stroke-width:0.63500011;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" />
+       style="display:inline;fill:#002244;fill-opacity:1;stroke:none;stroke-width:0.63500011;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       embroider_underpath="False" />
     <path
        inkscape:connector-curvature="0"
        inkscape:connector-type="polyline"
