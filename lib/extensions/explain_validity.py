@@ -1,8 +1,9 @@
-import sys
 import re
 import inkex
 from shapely.validation import explain_validity
+
 from .base import InkstitchExtension
+from ..i18n import _
 from ..svg.tags import SVG_GROUP_TAG, INKSCAPE_LABEL, INKSCAPE_GROUPMODE, SVG_PATH_TAG
 
 
@@ -22,15 +23,14 @@ class ExplainValidity(InkstitchExtension):
                 self.insert_invalid_pointer(shape)
 
         if valid_shapes is True:
-            print >> sys.stderr, _('All selected shapes are valid!')
+            inkex.errormsg(_("All selected shapes are valid!"))
         else:
-            pointer_info = _('Info: A pointer has been added to direct you to an invalid section of your path.')
-            pointer_info += '\n\n'
-            pointer_info += _('It is possible, that an object contains more than one error, yet there will be only one pointer per object. ')
-            pointer_info += _('You might want to run this function again, when further errors occur.')
-            pointer_info += '\n\n'
-            pointer_info += _('Remove the pointer by deleting the layer named "Explain Validity".')
-            print >> sys.stderr, pointer_info
+            inkex.errormsg(_("Info: A pointer has been added to direct you to an invalid section of your path.  "
+                             "\n\n  "
+                             "It is possible, that an object contains more than one error, yet there will be only one pointer per object. "
+                             "You might want to run this function again, when further errors occur.  "
+                             "\n\n  "
+                             "Remove the pointer by deleting the layer named 'Explain Validity'."))
 
     def insert_invalid_pointer(self, shape):
         invalid_point = explain_validity(shape)
