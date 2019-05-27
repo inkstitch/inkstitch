@@ -1,14 +1,14 @@
-from copy import deepcopy
 import sys
-
 from argparse import ArgumentParser
-from cspsubdiv import cspsubdiv
+from copy import deepcopy
+
 import cubicsuperpath
 import simplestyle
+from cspsubdiv import cspsubdiv
 
 from ..commands import find_commands
 from ..i18n import _
-from ..svg import PIXELS_PER_MM, convert_length, get_doc_size, apply_transforms
+from ..svg import PIXELS_PER_MM, apply_transforms, convert_length, get_doc_size
 from ..svg.tags import INKSCAPE_LABEL
 from ..utils import cache
 
