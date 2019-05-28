@@ -36,7 +36,7 @@ class ExplainValidity(InkstitchExtension):
 
     def insert_invalid_pointer(self, shape):
         invalid_point = explain_validity(shape)
-        point_x, point_y = re.findall("\d+\.\d+", invalid_point)
+        point_x, point_y = re.findall(r"\d+\.\d+", invalid_point)
 
         svg = self.document.getroot()
         layer = svg.find(".//*[@id='__validity_layer__']")
@@ -71,20 +71,20 @@ class ExplainValidity(InkstitchExtension):
 
 
 class IgnoreValidityLayer(CommandsExtension):
-        COMMANDS = ['ignore_layer']
+    COMMANDS = ['ignore_layer']
 
-        def insert_layer_ignore_command(self, layer):
-            command = 'ignore_layer'
-            correction_transform = get_correction_transform(layer, child=True)
+    def insert_layer_ignore_command(self, layer):
+        command = 'ignore_layer'
+        correction_transform = get_correction_transform(layer, child=True)
 
-            inkex.etree.SubElement(layer, SVG_USE_TAG,
-                                   {
-                                       "id": self.uniqueId("use"),
-                                       INKSCAPE_LABEL: _("Ink/Stitch Command") + ": %s" % get_command_description(command),
-                                       XLINK_HREF: "#inkstitch_%s" % command,
-                                       "height": "100%",
-                                       "width": "100%",
-                                       "x": "0",
-                                       "y": "-10",
-                                       "transform": correction_transform
-                                   })
+        inkex.etree.SubElement(layer, SVG_USE_TAG,
+                               {
+                                   "id": self.uniqueId("use"),
+                                   INKSCAPE_LABEL: _("Ink/Stitch Command") + ": %s" % get_command_description(command),
+                                   XLINK_HREF: "#inkstitch_%s" % command,
+                                   "height": "100%",
+                                   "width": "100%",
+                                   "x": "0",
+                                   "y": "-10",
+                                   "transform": correction_transform
+                               })
