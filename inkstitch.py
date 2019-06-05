@@ -52,9 +52,8 @@ else:
         if shapely_errors.tell() and extension_name != 'explain_validity':
             print >> sys.stderr, shapely_errors.getvalue()
 
-    if extension_name != 'explain_validity':
-        if exception:
-            print >> sys.stderr, exception
-            sys.exit(1)
-        else:
-            sys.exit(0)
+    if exception:
+        print >> sys.stderr, exception
+        sys.exit(1)
+    else:
+        sys.exit(0)
