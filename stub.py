@@ -48,12 +48,12 @@ if sys.platform == "win32":
     import msvcrt
     msvcrt.setmode(sys.stdout.fileno(), os.O_BINARY)
 
-sys.stdout.write(stdout)
+sys.stdout.write(stdout.decode(sys.stdout.encoding))
 sys.stdout.flush()
 
 stderr = stderr.strip()
 if stderr:
-    sys.stderr.write(stderr.strip())
+    sys.stderr.write(stderr.decode(sys.stdout.encoding).strip())
     sys.stderr.flush()
 
 sys.exit(extension.returncode)
