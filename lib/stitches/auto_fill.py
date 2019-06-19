@@ -312,6 +312,15 @@ def travel_grating(shape, angle, row_spacing):
     return shgeo.MultiLineString(segments)
 
 
+def ensure_multi_line_string(thing):
+    """Given either a MultiLineString or a single LineString, return a MultiLineString"""
+
+    if isinstance(thing, shgeo.LineString):
+        return shgeo.MultiLineString([thing])
+    else:
+        return thing
+
+
 def build_travel_edges(shape, fill_angle):
     r"""Given a graph, compute the interior travel edges.
 
@@ -359,10 +368,10 @@ def build_travel_edges(shape, fill_angle):
                  for ls in mls
                  for coord in ls.coords]
 
-    diagonal_edges = grating1.symmetric_difference(grating2)
+    diagonal_edges = ensure_multi_line_string(grating1.symmetric_difference(grating2))
 
     # without this, floating point inaccuracies prevent the intersection points from lining up perfectly.
-    vertical_edges = snap(grating3.difference(grating1), diagonal_edges, 0.005)
+    vertical_edges = ensure_multi_line_string(snap(grating3.difference(grating1), diagonal_edges, 0.005))
 
     return endpoints, chain(diagonal_edges, vertical_edges)
 
