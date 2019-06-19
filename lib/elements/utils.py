@@ -16,7 +16,7 @@ def node_to_elements(node):
     elif node.tag == SVG_PATH_TAG:
         element = EmbroideryElement(node)
 
-        if element.get_boolean_param("satin_column"):
+        if element.get_boolean_param("satin_column") and element.get_style("stroke"):
             return [SatinColumn(node)]
         else:
             elements = []
