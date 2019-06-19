@@ -1,8 +1,8 @@
 from collections import MutableMapping
 from copy import deepcopy
 import json
-import re
 import os
+import re
 
 import inkex
 from stringcase import snakecase
@@ -122,10 +122,13 @@ class InkstitchExtension(inkex.Effect):
 
     def no_elements_error(self):
         if self.selected:
-            inkex.errormsg(_("No embroiderable paths selected."))
+            # l10n This was previously: "No embroiderable paths selected."
+            inkex.errormsg(_("Ink/Stitch doesn't know how to work with any of the objects you've selected.") + "\n")
         else:
-            inkex.errormsg(_("No embroiderable paths found in document."))
-        inkex.errormsg(_("Tip: use Path -> Object to Path to convert non-paths."))
+            inkex.errormsg(_("There are no objects in the entire document that Ink/Stitch knows how to work with.") + "\n")
+
+        inkex.errormsg(_("Ink/Stitch only knows how to work with paths.  It can't work with objects like text, rectangles, or circles.") + "\n")
+        inkex.errormsg(_("Tip: select some objects and use Path -> Object to Path to convert them to paths.") + "\n")
 
     def descendants(self, node, selected=False):
         nodes = []
