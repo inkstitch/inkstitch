@@ -1,6 +1,7 @@
 import math
 
 from shapely import geometry as shgeo
+from shapely.validation import explain_validity
 
 from ..i18n import _
 from ..stitches import legacy_fill
@@ -112,7 +113,15 @@ class Fill(EmbroideryElement):
         polygon = shgeo.MultiPolygon([(paths[0], paths[1:])])
 
         if not polygon.is_valid:
-            self.fatal(_("shape is not valid.  This can happen if the border crosses over itself."))
+            why = explain_validity(polygon)
+
+            # I Wish this weren't so brittle...
+            if "Hole lies outside shell" in why:
+                self.fatal(_("this object is made up of unconnected shapes.  This is not allowed because "
+                             "Ink/Stitch doesn't know what order to stitch them in.  Please break this "
+                             "object up into separate shapes."))
+            else:
+                self.fatal(_("shape is not valid.  This can happen if the border crosses over itself."))
 
         return polygon
 
