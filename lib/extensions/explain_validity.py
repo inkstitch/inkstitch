@@ -1,3 +1,4 @@
+import logging
 import re
 
 from shapely.validation import explain_validity
@@ -16,32 +17,39 @@ from .commands import CommandsExtension
 
 
 class ExplainValidity(InkstitchExtension):
+
     def effect(self):
         if not self.get_elements():
             return
 
-        valid_shapes = True
+        logger = logging.getLogger('shapely.geos')
+        level = logger.level
+        logger.setLevel(logging.CRITICAL)
+
+        invalid_shapes = False
         for element in self.elements:
             shape = element.shape
             if not shape.is_valid:
-                valid_shapes = False
-                self.insert_invalid_pointer(shape)
+                invalid_shapes = True
+                shapely_msg = explain_validity(shape)
+                message, x, y = re.findall(r".+?(?=\[)|\d+\.\d+", shapely_msg)
+                self.insert_invalid_pointer(message, x, y)
+            # TODO: display errors like "too small", etc.
 
-        if valid_shapes is True:
+        logger.setLevel(level)
+
+        if invalid_shapes is False:
             inkex.errormsg(_("All selected shapes are valid!"))
 
-    def insert_invalid_pointer(self, shape):
+    def insert_invalid_pointer(self, message, x, y):
         layer = self.get_or_create_validity_layer()
-        correction_transform = get_correction_transform(layer, child=True)
-
-        shapely_msg = explain_validity(shape)
-        message, point_x, point_y = re.findall(r".+?(?=\[)|\d+\.\d+", shapely_msg)
+        correction_transform = get_correction_transform(layer)
 
         path = inkex.etree.Element(
             SVG_PATH_TAG,
             {
                 "id": self.uniqueId("inkstitch__invalid_pointer__"),
-                "d": "m %s,%s 4,20 h -8 l 4,-20" % (point_x, point_y),
+                "d": "m %s,%s 4,20 h -8 l 4,-20" % (x, y),
                 "style": "fill:#ff0000;stroke:#ffffff;stroke-width:0.2;",
                 INKSCAPE_LABEL: _('Invalid Pointer'),
                 "transform": correction_transform
@@ -52,8 +60,8 @@ class ExplainValidity(InkstitchExtension):
         text = inkex.etree.Element(
             SVG_TEXT_TAG,
             {
-                "x": point_x,
-                "y": str(float(point_y) + 30),
+                "x": x,
+                "y": str(float(y) + 30),
                 "transform": correction_transform,
                 "style": "fill:#ff0000;troke:#ffffff;stroke-width:0.2;font-size:8px;text-align:center;text-anchor:middle"
             }
@@ -139,7 +147,7 @@ class IgnoreValidityLayer(CommandsExtension):
 
     def insert_layer_ignore_command(self, layer):
         command = 'ignore_layer'
-        correction_transform = get_correction_transform(layer, child=True)
+        correction_transform = get_correction_transform(layer)
 
         inkex.etree.SubElement(layer, SVG_USE_TAG,
                                {

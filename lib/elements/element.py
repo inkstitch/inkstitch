@@ -1,5 +1,6 @@
+# -*- coding: utf-8 -*-
+
 import sys
-from argparse import ArgumentParser
 from copy import deepcopy
 
 import cubicsuperpath
@@ -275,13 +276,6 @@ class EmbroideryElement(object):
         return patches
 
     def fatal(self, message):
-        parser = ArgumentParser()
-        parser.add_argument("--extension")
-        my_args, remaining_args = parser.parse_known_args()
-
-        if my_args.extension == 'explain_validity':
-            return
-
         label = self.node.get(INKSCAPE_LABEL)
         id = self.node.get("id")
         if label:

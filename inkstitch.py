@@ -49,7 +49,7 @@ else:
     finally:
         restore_stderr()
 
-        if shapely_errors.tell() and extension_name != 'explain_validity':
+        if shapely_errors.tell():
             print >> sys.stderr, shapely_errors.getvalue()
 
     if exception:
