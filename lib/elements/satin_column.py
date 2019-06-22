@@ -326,7 +326,8 @@ class SatinColumn(EmbroideryElement):
 
         if not self.rungs:
             if len(self.rails) < 2:
-                self.fatal(_("satin column: object %(id)s has too few paths.  A satin column should have at least two paths (the rails).") % dict(id=node_id))
+                self.fatal(_("satin column: object %(id)s has too few paths.  A satin column should have at least two paths (the rails).") %
+                           dict(id=node_id))
 
             if len(self.rails[0]) != len(self.rails[1]):
                 self.fatal(_("satin column: object %(id)s has two paths with an unequal number of points (%(length1)d and %(length2)d)") %
