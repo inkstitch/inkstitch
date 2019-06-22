@@ -1,7 +1,8 @@
 import simpletransform
 
-from ..utils import cache
 from ..i18n import _
+from ..utils import cache
+
 
 # modern versions of Inkscape use 96 pixels per inch as per the CSS standard
 PIXELS_PER_MM = 96 / 25.4
@@ -90,6 +91,15 @@ def get_viewbox(svg):
 def get_doc_size(svg):
     width = svg.get('width')
     height = svg.get('height')
+
+    if width == "100%" and height == "100%":
+        # Some SVG editors set width and height to "100%".  I can't find any
+        # solid documentation on how one is supposed to interpret that, so
+        # just ignore it and use the viewBox.  That seems to have the intended
+        # result anyway.
+
+        width = None
+        height = None
 
     if width is None or height is None:
         # fall back to the dimensions from the viewBox
