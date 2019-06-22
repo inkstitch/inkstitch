@@ -283,5 +283,5 @@ class EmbroideryElement(object):
 
         # L10N used when showing an error message to the user such as
         # "Some Path (path1234): error: satin column: One or more of the rungs doesn't intersect both rails."
-        print >> sys.stderr, "%s: %s %s" % (name, _("error:"), message.encode("UTF-8"))
+        print >> sys.stderr, "%s: %s %s" % (name.encode("UTF-8"), _("error:"), message.encode("UTF-8"))
         sys.exit(1)
