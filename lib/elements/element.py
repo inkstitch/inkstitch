@@ -1,10 +1,10 @@
-import sys
-from argparse import ArgumentParser
 from copy import deepcopy
+import sys
 
+from argparse import ArgumentParser
+from cspsubdiv import cspsubdiv
 import cubicsuperpath
 import simplestyle
-from cspsubdiv import cspsubdiv
 
 from ..commands import find_commands
 from ..i18n import _
@@ -266,6 +266,8 @@ class EmbroideryElement(object):
         raise NotImplementedError("%s must implement to_patches()" % self.__class__.__name__)
 
     def embroider(self, last_patch):
+        self.validate()
+
         patches = self.to_patches(last_patch)
 
         if patches:
@@ -275,12 +277,12 @@ class EmbroideryElement(object):
         return patches
 
     def fatal(self, message):
-        parser = ArgumentParser()
-        parser.add_argument("--extension")
-        my_args, remaining_args = parser.parse_known_args()
-
-        if my_args.extension == 'explain_validity':
-            return
+        #         parser = ArgumentParser()
+        #         parser.add_argument("--extension")
+        #         my_args, remaining_args = parser.parse_known_args()
+        #
+        #         if my_args.extension == 'explain_validity':
+        #             return
 
         label = self.node.get(INKSCAPE_LABEL)
         id = self.node.get("id")
@@ -294,3 +296,27 @@ class EmbroideryElement(object):
         error_msg = "%s: %s %s" % (name, _("error:"), message)
         print >> sys.stderr, "%s" % (error_msg.encode("UTF-8"))
         sys.exit(1)
+
+    def validation_errors(self):
+        """Return a list of problems with this Element.
+
+        Return value: an iterable or generator of tuples (message, location)
+
+          message - a description of a problem
+          location - coordinates of the problem, or None for general problems
+        """
+        raise NotImplementedError("Element subclass is expected to implement method: validation_errors")
+
+    def is_valid(self):
+        # We have to iterate since it could be a generator.
+        for message, location in self.validation_errors():
+            return False
+
+        return True
+
+    def validate(self):
+        """Print an error message and exit if this Element is invalid."""
+
+        for message, location in self.validation_errors():
+            # note that self.fatal() exits, so this only shows the first error
+            self.fatal(message)
