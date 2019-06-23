@@ -33,7 +33,7 @@ class Input(object):
 
         # rename the Stitch Plan layer so that it doesn't get overwritten by Embroider
         layer = svg.find(".//*[@id='__inkstitch_stitch_plan__']")
-        layer.set(INKSCAPE_LABEL, os.path.basename(embroidery_file))
+        layer.set(INKSCAPE_LABEL, os.path.basename(embroidery_file.decode("UTF-8")))
         layer.attrib.pop('id')
 
         # Shift the design so that its origin is at the center of the canvas
