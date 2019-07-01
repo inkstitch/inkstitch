@@ -146,13 +146,25 @@ class SatinColumn(EmbroideryElement):
     @property
     @cache
     def rails(self):
-        """The rails in order, as LineStrings"""
+        """The rails in order, as point lists"""
         return [subpath for i, subpath in enumerate(self.csp) if i in self.rail_indices]
 
     @property
     @cache
+    def flattened_rails(self):
+        """The rails, as LineStrings."""
+        return tuple(shgeo.LineString(self.flatten_subpath(rail)) for rail in self.rails)
+
+    @property
+    @cache
+    def flattened_rungs(self):
+        """The rungs, as LineStrings."""
+        return tuple(shgeo.LineString(self.flatten_subpath(rung)) for rung in self.rungs)
+
+    @property
+    @cache
     def rungs(self):
-        """The rungs, as LineStrings.
+        """The rungs, as point lists.
 
         If there are no rungs, then this is an old-style satin column.  The
         rails are expected to have the same number of path nodes.  The path
@@ -238,8 +250,6 @@ class SatinColumn(EmbroideryElement):
             return indices_by_length[:2]
 
     def _cut_rail(self, rail, rung):
-        intersections = 0
-
         for segment_index, rail_segment in enumerate(rail[:]):
             if rail_segment is None:
                 continue
@@ -252,14 +262,6 @@ class SatinColumn(EmbroideryElement):
             intersection = collapse_duplicate_point(intersection)
 
             if not intersection.is_empty:
-                if isinstance(intersection, shgeo.MultiLineString):
-                    intersections += len(intersection)
-                    break
-                elif not isinstance(intersection, shgeo.Point):
-                    self.fatal("INTERNAL ERROR: intersection is: %s %s" % (intersection, getattr(intersection, 'geoms', None)))
-                else:
-                    intersections += 1
-
                 cut_result = cut(rail_segment, rail_segment.project(intersection))
                 rail[segment_index:segment_index + 1] = cut_result
 
@@ -269,29 +271,17 @@ class SatinColumn(EmbroideryElement):
                     # segment
                     break
 
-        return intersections
-
     @property
     @cache
     def flattened_sections(self):
         """Flatten the rails, cut with the rungs, and return the sections in pairs."""
 
-        if len(self.csp) < 2:
-            self.fatal(_("satin column: %(id)s: at least two subpaths required (%(num)d found)") % dict(num=len(self.csp), id=self.node.get('id')))
-
-        rails = [[shgeo.LineString(self.flatten_subpath(rail))] for rail in self.rails]
-        rungs = [shgeo.LineString(self.flatten_subpath(rung)) for rung in self.rungs]
+        rails = [[rail] for rail in self.flattened_rails]
+        rungs = self.flattened_rungs
 
         for rung in rungs:
-            for rail_index, rail in enumerate(rails):
-                intersections = self._cut_rail(rail, rung)
-
-                if intersections == 0:
-                    self.fatal(_("satin column: One or more of the rungs doesn't intersect both rails.") +
-                               "  " + _("Each rail should intersect both rungs once."))
-                elif intersections > 1:
-                    self.fatal(_("satin column: One or more of the rungs intersects the rails more than once.") +
-                               "  " + _("Each rail should intersect both rungs once."))
+            for rail in rails:
+                self._cut_rail(rail, rung)
 
         for rail in rails:
             for i in xrange(len(rail)):
@@ -314,7 +304,7 @@ class SatinColumn(EmbroideryElement):
 
         return sections
 
-    def validate_satin_column(self):
+    def validation_errors(self):
         # The node should have exactly two paths with no fill.  Each
         # path should have the same number of points, meaning that they
         # will both be made up of the same number of bezier curves.
@@ -322,16 +312,31 @@ class SatinColumn(EmbroideryElement):
         node_id = self.node.get("id")
 
         if self.get_style("fill") is not None:
-            self.fatal(_("satin column: object %s has a fill (but should not)") % node_id)
+            yield (_("satin column: object %s has a fill (but should not)") % node_id, None)
 
-        if not self.rungs:
-            if len(self.rails) < 2:
-                self.fatal(_("satin column: object %(id)s has too few paths.  A satin column should have at least two paths (the rails).") %
-                           dict(id=node_id))
-
+        if len(self.rails) < 2:
+            yield (
+                _("satin column: object %(id)s has too few paths.  A satin column should have at least two paths (the rails).") % dict(id=node_id),
+                None
+            )
+        elif len(self.csp) == 2:
             if len(self.rails[0]) != len(self.rails[1]):
-                self.fatal(_("satin column: object %(id)s has two paths with an unequal number of points (%(length1)d and %(length2)d)") %
-                           dict(id=node_id, length1=len(self.rails[0]), length2=len(self.rails[1])))
+                yield (
+                    _("satin column: object %(id)s has two paths with an unequal number of points (%(length1)d and %(length2)d)") %
+                    dict(id=node_id, length1=len(self.rails[0]), length2=len(self.rails[1])),
+                    None
+                )
+        else:
+            for rung in self.flattened_rungs:
+                for rail in self.flattened_rails:
+                    intersection = rung.intersection(rail)
+                    if intersection.is_empty:
+                        yield (_("satin column: a rung doesn't intersect both rails.") +
+                               "  " + _("Each rail should intersect both rungs once."),
+                               rung.coords[0])
+                    elif not isinstance(intersection, shgeo.Point):
+                        yield (_("satin column: a rung intersects a rail more than once.") +
+                               "  " + _("Each rail should intersect both rungs once."))
 
     def reverse(self):
         """Return a new SatinColumn like this one but in the opposite direction.
@@ -771,9 +776,6 @@ class SatinColumn(EmbroideryElement):
         # The algorithm will draw zigzags between each consecutive pair of
         # beziers.  The boundary points between beziers serve as "checkpoints",
         # allowing the user to control how the zigzags flow around corners.
-
-        # First, verify that we have valid paths.
-        self.validate_satin_column()
 
         patch = Patch(color=self.color)
 
