@@ -19,9 +19,9 @@ class Input(object):
         for raw_stitches, thread in pattern.get_as_colorblocks():
             color_block = stitch_plan.new_color_block(thread)
             for x, y, command in raw_stitches:
-                color_block.add_stitch(x * PIXELS_PER_MM / 10.0, y * PIXELS_PER_MM / 10.0,
-                                       jump=(command == pyembroidery.JUMP),
-                                       trim=(command == pyembroidery.TRIM))
+                # let's ignore commands for now
+                if command == pyembroidery.STITCH:
+                    color_block.add_stitch(x * PIXELS_PER_MM / 10.0, y * PIXELS_PER_MM / 10.0)
 
         extents = stitch_plan.extents
         svg = etree.Element("svg", nsmap=inkex.NSS, attrib={
