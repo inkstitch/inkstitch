@@ -1,6 +1,8 @@
 import math
+import re
 
 from shapely import geometry as shgeo
+from shapely.validation import explain_validity
 
 from ..i18n import _
 from ..stitches import legacy_fill
@@ -104,19 +106,27 @@ class Fill(EmbroideryElement):
     @property
     @cache
     def shape(self):
-        polygon = self.get_polygon()
-
-        return polygon
-
-    def get_polygon(self):
         # shapely's idea of "holes" are to subtract everything in the second set
         # from the first. So let's at least make sure the "first" thing is the
         # biggest path.
         paths = self.paths
         paths.sort(key=lambda point_list: shgeo.Polygon(point_list).area, reverse=True)
-        polygon = shgeo.MultiPolygon([(paths[0], paths[1:])])
+        polygon = shgeo.Polygon(paths[0], paths[1:])
 
         return polygon
+
+    def validation_errors(self):
+        if not self.shape.is_valid:
+            why = explain_validity(self.shape)
+            message, x, y = re.findall(r".+?(?=\[)|\d+\.\d+", why)
+
+            # I Wish this weren't so brittle...
+            if "Hole lies outside shell" in message:
+                yield (_("this object is made up of unconnected shapes.  This is not allowed because "
+                         "Ink/Stitch doesn't know what order to stitch them in.  Please break this "
+                         "object up into separate shapes."), (x, y))
+            else:
+                yield (_("shape is not valid.  This can happen if the border crosses over itself."), (x, y))
 
     def to_patches(self, last_patch):
         stitch_lists = legacy_fill(self.shape,

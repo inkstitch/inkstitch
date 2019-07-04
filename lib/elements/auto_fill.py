@@ -4,7 +4,6 @@ import sys
 import traceback
 
 from shapely import geometry as shgeo
-from shapely.validation import explain_validity
 
 from ..exceptions import InkstitchException
 from ..i18n import _
@@ -180,19 +179,8 @@ class AutoFill(Fill):
             return None
 
     def validation_errors(self):
-        polygon = self.get_polygon()
-
-        if not polygon.is_valid:
-            why = explain_validity(polygon)
-            message, x, y = re.findall(r".+?(?=\[)|\d+\.\d+", why)
-
-            # I Wish this weren't so brittle...
-            if "Hole lies outside shell" in message:
-                yield (_("this object is made up of unconnected shapes.  This is not allowed because "
-                         "Ink/Stitch doesn't know what order to stitch them in.  Please break this "
-                         "object up into separate shapes."), (x, y))
-            else:
-                yield (_("shape is not valid.  This can happen if the border crosses over itself."), (x, y))
+        for error in super(AutoFill, self).validation_errors():
+            yield error
 
         # TODO: catch "too small" error
 
