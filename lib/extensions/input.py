@@ -31,7 +31,7 @@ class Input(object):
                     # some file formats use 3 or more jump stitches in a row to indicate a trim
                     if command == pyembroidery.JUMP:
                         jump_counter += 1
-                    if command == pyembroidery.TRIM or jump_counter >=3:
+                    if command == pyembroidery.TRIM or jump_counter >= 3:
                         trim_after = True
 
         extents = stitch_plan.extents
