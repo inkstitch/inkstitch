@@ -1,0 +1,19 @@
+#!/usr/bin/env python
+
+import os
+import json
+
+# generate fake python code containing the names and descriptions of all built-
+# in fonts as gettext calls so that pybabel will extract them into messages.po
+
+fonts_dir = os.path.join(os.path.dirname(__file__), "..", "fonts")
+
+for font in os.listdir(fonts_dir):
+	with open(os.path.join(fonts_dir, font, "font.json")) as font_json:
+		font_metadata = json.load(font_json)
+		
+		print "# L10N name of font in fonts/%s" % font
+		print "_(%s)" % repr(font_metadata.get("name", ""))
+		
+		print "# L10N description of font in fonts/%s" % font
+		print "_(%s)" % repr(font_metadata.get("description", ""))

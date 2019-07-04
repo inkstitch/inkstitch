@@ -1,6 +1,6 @@
 import inkex
 
-from ..commands import LAYER_COMMANDS, get_command_description
+from ..commands import LAYER_COMMANDS, get_command_description, ensure_symbol
 from ..i18n import _
 from ..svg import get_correction_transform
 from ..svg.tags import SVG_USE_TAG, INKSCAPE_LABEL, XLINK_HREF
@@ -21,7 +21,7 @@ class LayerCommands(CommandsExtension):
         correction_transform = get_correction_transform(self.current_layer, child=True)
 
         for i, command in enumerate(commands):
-            self.ensure_symbol(command)
+            ensure_symbol(command)
 
             inkex.etree.SubElement(self.current_layer, SVG_USE_TAG,
                                    {

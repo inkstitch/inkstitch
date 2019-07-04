@@ -5,19 +5,23 @@ import json
 import os
 import sys
 
+import appdirs
 import inkex
 import wx
 
 from ..elements import nodes_to_elements
-from ..gui import PresetsPanel, SimulatorPreview
+from ..gui import PresetsPanel, SimulatorPreview, info_dialog, SubtitleComboBox
 from ..i18n import _
-from ..lettering import Font
+from ..lettering import Font, FontError
+from ..svg import get_correction_transform
 from ..svg.tags import SVG_PATH_TAG, SVG_GROUP_TAG, INKSCAPE_LABEL, INKSTITCH_LETTERING
-from ..utils import get_bundled_dir, DotDict
+from ..utils import get_bundled_dir, DotDict, cache
 from .commands import CommandsExtension
 
 
 class LetteringFrame(wx.Frame):
+    DEFAULT_FONT = "small_font"
+
     def __init__(self, *args, **kwargs):
         # begin wxGlade: MyFrame.__init__
         self.group = kwargs.pop('group')
@@ -29,23 +33,28 @@ class LetteringFrame(wx.Frame):
         self.preview = SimulatorPreview(self, target_duration=1)
         self.presets_panel = PresetsPanel(self)
 
-        self.load_settings()
-
         # options
         self.options_box = wx.StaticBox(self, wx.ID_ANY, label=_("Options"))
 
         self.back_and_forth_checkbox = wx.CheckBox(self, label=_("Stitch lines of text back and forth"))
-        self.back_and_forth_checkbox.SetValue(self.settings.back_and_forth)
-        self.Bind(wx.EVT_CHECKBOX, lambda event: self.on_change("back_and_forth", event))
+        self.back_and_forth_checkbox.Bind(wx.EVT_CHECKBOX, lambda event: self.on_change("back_and_forth", event))
+
+        self.trim_checkbox = wx.CheckBox(self, label=_("Add trims"))
+        self.trim_checkbox.Bind(wx.EVT_CHECKBOX, lambda event: self.on_change("trim", event))
 
         # text editor
         self.text_editor_box = wx.StaticBox(self, wx.ID_ANY, label=_("Text"))
 
-        self.font_chooser = wx.ComboBox(self, wx.ID_ANY)
         self.update_font_list()
+        self.font_chooser = SubtitleComboBox(self, wx.ID_ANY, choices=self.get_font_names(),
+                                             subtitles=self.get_font_descriptions(), style=wx.CB_READONLY)
+        self.font_chooser.Bind(wx.EVT_COMBOBOX, self.on_font_changed)
 
-        self.text_editor = wx.TextCtrl(self, style=wx.TE_MULTILINE | wx.TE_DONTWRAP, value=self.settings.text)
-        self.Bind(wx.EVT_TEXT, lambda event: self.on_change("text", event))
+        self.scale_spinner = wx.SpinCtrl(self, wx.ID_ANY, min=100, max=100, initial=100)
+        self.scale_spinner.Bind(wx.EVT_SPINCTRL, lambda event: self.on_change("scale", event))
+
+        self.text_editor = wx.TextCtrl(self, style=wx.TE_MULTILINE | wx.TE_DONTWRAP)
+        self.text_editor.Bind(wx.EVT_TEXT, lambda event: self.on_change("text", event))
 
         self.cancel_button = wx.Button(self, wx.ID_ANY, _("Cancel"))
         self.cancel_button.Bind(wx.EVT_BUTTON, self.cancel)
@@ -55,23 +64,38 @@ class LetteringFrame(wx.Frame):
         self.apply_button.Bind(wx.EVT_BUTTON, self.apply)
 
         self.__do_layout()
-        # end wxGlade
+
+        self.load_settings()
+        self.apply_settings()
 
     def load_settings(self):
-        try:
-            if INKSTITCH_LETTERING in self.group.attrib:
-                self.settings = DotDict(json.loads(b64decode(self.group.get(INKSTITCH_LETTERING))))
-                return
-        except (TypeError, ValueError):
-            pass
+        """Load the settings saved into the SVG group element"""
 
         self.settings = DotDict({
             "text": u"",
             "back_and_forth": True,
-            "font": "small_font"
+            "font": None,
+            "scale": 100
         })
 
+        try:
+            if INKSTITCH_LETTERING in self.group.attrib:
+                self.settings.update(json.loads(b64decode(self.group.get(INKSTITCH_LETTERING))))
+                return
+        except (TypeError, ValueError):
+            pass
+
+    def apply_settings(self):
+        """Make the settings in self.settings visible in the UI."""
+        self.back_and_forth_checkbox.SetValue(bool(self.settings.back_and_forth))
+        self.trim_checkbox.SetValue(bool(self.settings.trim))
+        self.set_initial_font(self.settings.font)
+        self.text_editor.SetValue(self.settings.text)
+        self.scale_spinner.SetValue(self.settings.scale)
+
     def save_settings(self):
+        """Save the settings into the SVG group element."""
+
         # We base64 encode the string before storing it in an XML attribute.
         # In theory, lxml should properly html-encode the string, using HTML
         # entities like &#10; as necessary.  However, we've found that Inkscape
@@ -82,19 +106,102 @@ class LetteringFrame(wx.Frame):
         #   https://bugs.launchpad.net/inkscape/+bug/1804346
         self.group.set(INKSTITCH_LETTERING, b64encode(json.dumps(self.settings)))
 
+    def update_font_list(self):
+        font_paths = {
+            get_bundled_dir("fonts"),
+            os.path.expanduser("~/.inkstitch/fonts"),
+            os.path.join(appdirs.user_config_dir('inkstitch'), 'fonts'),
+        }
+
+        self.fonts = {}
+        self.fonts_by_id = {}
+
+        for font_path in font_paths:
+            try:
+                font_dirs = os.listdir(font_path)
+            except OSError:
+                continue
+
+            try:
+                for font_dir in font_dirs:
+                    font = Font(os.path.join(font_path, font_dir))
+                    self.fonts[font.name] = font
+                    self.fonts_by_id[font.id] = font
+            except FontError:
+                pass
+
+        if len(self.fonts) == 0:
+            info_dialog(self, _("Unable to find any fonts!  Please try reinstalling Ink/Stitch."))
+            self.cancel()
+
+    def get_font_names(self):
+        font_names = [font.name for font in self.fonts.itervalues()]
+        font_names.sort()
+
+        return font_names
+
+    def get_font_descriptions(self):
+        return {font.name: font.description for font in self.fonts.itervalues()}
+
+    def set_initial_font(self, font_id):
+        if font_id:
+            if font_id not in self.fonts_by_id:
+                message = '''This text was created using the font "%s", but Ink/Stitch can't find that font.  ''' \
+                          '''A default font will be substituted.'''
+                info_dialog(self, _(message) % font_id)
+
+        try:
+            self.font_chooser.SetValueByUser(self.fonts_by_id[font_id].name)
+        except KeyError:
+            self.font_chooser.SetValueByUser(self.default_font.name)
+
+        self.on_font_changed()
+
+    @property
+    @cache
+    def default_font(self):
+        try:
+            return self.fonts[self.DEFAULT_FONT]
+        except KeyError:
+            return self.fonts.values()[0]
+
     def on_change(self, attribute, event):
         self.settings[attribute] = event.GetEventObject().GetValue()
         self.preview.update()
 
+    def on_font_changed(self, event=None):
+        font = self.fonts.get(self.font_chooser.GetValue(), self.default_font)
+        self.settings.font = font.id
+        self.scale_spinner.SetRange(int(font.min_scale * 100), int(font.max_scale * 100))
+        self.update_preview()
+
+    def update_preview(self, event=None):
+        self.preview.update()
+
+    def update_lettering(self):
+        del self.group[:]
+
+        if self.settings.scale == 100:
+            destination_group = self.group
+        else:
+            destination_group = inkex.etree.SubElement(self.group, SVG_GROUP_TAG, {
+                # L10N The user has chosen to scale the text by some percentage
+                # (50%, 200%, etc).  If you need to use the percentage symbol,
+                # make sure to double it (%%).
+                INKSCAPE_LABEL: _("Text scale %s%%") % self.settings.scale
+            })
+
+        font = self.fonts.get(self.font_chooser.GetValue(), self.default_font)
+        font.render_text(self.settings.text, destination_group, back_and_forth=self.settings.back_and_forth, trim=self.settings.trim)
+
+        if self.settings.scale != 100:
+            destination_group.attrib['transform'] = 'scale(%s)' % (self.settings.scale / 100.0)
+
     def generate_patches(self, abort_early=None):
         patches = []
 
-        font_path = os.path.join(get_bundled_dir("fonts"), self.settings.font)
-        font = Font(font_path)
-
         try:
-            lines = font.render_text(self.settings.text, back_and_forth=self.settings.back_and_forth)
-            self.group[:] = lines
+            self.update_lettering()
             elements = nodes_to_elements(self.group.iterdescendants(SVG_PATH_TAG))
 
             for element in elements:
@@ -113,17 +220,17 @@ class LetteringFrame(wx.Frame):
 
         return patches
 
-    def update_font_list(self):
-        pass
-
     def get_preset_data(self):
         # called by self.presets_panel
-        preset = {}
-        return preset
+        settings = dict(self.settings)
+        del settings["text"]
+        return settings
 
-    def apply_preset_data(self):
-        # called by self.presets_panel
-        return
+    def apply_preset_data(self, preset_data):
+        settings = DotDict(preset_data)
+        settings["text"] = self.settings.text
+        self.settings = settings
+        self.apply_settings()
 
     def get_preset_suite_name(self):
         # called by self.presets_panel
@@ -131,7 +238,7 @@ class LetteringFrame(wx.Frame):
 
     def apply(self, event):
         self.preview.disable()
-        self.generate_patches()
+        self.update_lettering()
         self.save_settings()
         self.close()
 
@@ -149,11 +256,18 @@ class LetteringFrame(wx.Frame):
         outer_sizer = wx.BoxSizer(wx.VERTICAL)
 
         options_sizer = wx.StaticBoxSizer(self.options_box, wx.VERTICAL)
-        options_sizer.Add(self.back_and_forth_checkbox, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT | wx.BOTTOM, 10)
+        options_sizer.Add(self.back_and_forth_checkbox, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 5)
+        options_sizer.Add(self.trim_checkbox, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT | wx.BOTTOM, 5)
         outer_sizer.Add(options_sizer, 0, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
 
+        font_sizer = wx.BoxSizer(wx.HORIZONTAL)
+        font_sizer.Add(self.font_chooser, 1, wx.EXPAND, 0)
+        font_sizer.Add(wx.StaticText(self, wx.ID_ANY, "Scale"), 0, wx.LEFT | wx.ALIGN_CENTRE_VERTICAL, 20)
+        font_sizer.Add(self.scale_spinner, 0, wx.LEFT, 10)
+        font_sizer.Add(wx.StaticText(self, wx.ID_ANY, "%"), 0, wx.LEFT | wx.ALIGN_CENTRE_VERTICAL, 3)
+
         text_editor_sizer = wx.StaticBoxSizer(self.text_editor_box, wx.VERTICAL)
-        text_editor_sizer.Add(self.font_chooser, 0, wx.ALL, 10)
+        text_editor_sizer.Add(font_sizer, 0, wx.ALL | wx.EXPAND, 10)
         text_editor_sizer.Add(self.text_editor, 1, wx.EXPAND | wx.LEFT | wx.RIGHT | wx.BOTTOM, 10)
         outer_sizer.Add(text_editor_sizer, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
 
@@ -210,7 +324,8 @@ class Lettering(CommandsExtension):
         else:
             self.ensure_current_layer()
             return inkex.etree.SubElement(self.current_layer, SVG_GROUP_TAG, {
-                INKSCAPE_LABEL: _("Ink/Stitch Lettering")
+                INKSCAPE_LABEL: _("Ink/Stitch Lettering"),
+                "transform": get_correction_transform(self.current_layer, child=True)
             })
 
     def effect(self):

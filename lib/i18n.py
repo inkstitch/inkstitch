@@ -1,7 +1,9 @@
-import sys
+import gettext
 import os
 from os.path import dirname, realpath
-import gettext
+import sys
+
+from .utils import cache
 
 _ = translation = None
 locale_dir = None
@@ -31,6 +33,28 @@ def localize(languages=None):
 
     translation = gettext.translation("inkstitch", locale_dir, fallback=True)
     _ = translation.ugettext
+
+
+@cache
+def get_languages():
+    """return a list of languages configured by the user
+
+    I really wish gettext provided this as a function.  Instead, we've duplicated
+    its code below.
+    """
+
+    languages = []
+
+    for envar in ('LANGUAGE', 'LC_ALL', 'LC_MESSAGES', 'LANG'):
+        val = os.environ.get(envar)
+        if val:
+            languages = val.split(':')
+            break
+
+    if 'C' not in languages:
+        languages.append('C')
+
+    return languages
 
 
 _set_locale_dir()

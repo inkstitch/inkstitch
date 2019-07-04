@@ -9,9 +9,11 @@ import simplestyle
 
 import networkx as nx
 
+from ..commands import add_commands
 from ..elements import Stroke, SatinColumn
-from ..svg import PIXELS_PER_MM, line_strings_to_csp, get_correction_transform
-from ..svg.tags import SVG_PATH_TAG
+from ..i18n import _
+from ..svg import PIXELS_PER_MM, line_strings_to_csp, get_correction_transform, generate_unique_id
+from ..svg.tags import SVG_PATH_TAG, SVG_GROUP_TAG, INKSCAPE_LABEL
 from ..utils import Point as InkstitchPoint, cut, cache
 
 
@@ -258,7 +260,7 @@ class RunningStitch(object):
         return RunningStitch(new_path, self.original_element)
 
 
-def auto_satin(elements, preserve_order=False, starting_point=None, ending_point=None):
+def auto_satin(elements, preserve_order=False, starting_point=None, ending_point=None, trim=False):
     """Find an optimal order to stitch a list of SatinColumns.
 
     Add running stitch and jump stitches as necessary to construct a stitch
@@ -294,13 +296,19 @@ def auto_satin(elements, preserve_order=False, starting_point=None, ending_point
 
     If preserve_order is True, then the elements and any newly-created elements
     will be in the same position in the SVG DOM.  If preserve_order is False, then
-    the elements will be removed from the SVG DOM and it's up to the caller to
-    decide where to put the returned SVG path nodes.
+    the elements will be removed from their current position in SVG DOM and added
+    to a newly-created group node.
 
-    Returns: a list of SVG path nodes making up the selected stitch order.
+    If trim is True, then Trim commands will be added to avoid jump stitches.
+
+    Returns: a list of Element instances making up the stitching order chosen.
       Jumps between objects are implied if they are not right next to each
       other.
     """
+
+    # save these for create_new_group() call below
+    parent = elements[0].node.getparent()
+    index = parent.index(elements[0].node)
 
     graph = build_graph(elements, preserve_order)
     add_jumps(graph, elements, preserve_order)
@@ -310,12 +318,21 @@ def auto_satin(elements, preserve_order=False, starting_point=None, ending_point
     operations = path_to_operations(graph, path)
     operations = collapse_sequential_segments(operations)
     new_elements, trims, original_parents = operations_to_elements_and_trims(operations, preserve_order)
+
     remove_original_elements(elements)
 
     if preserve_order:
         preserve_original_groups(new_elements, original_parents)
+    else:
+        group = create_new_group(parent, index)
+        add_elements_to_group(new_elements, group)
 
-    return new_elements, trims
+    name_elements(new_elements, preserve_order)
+
+    if trim:
+        new_elements = add_trims(new_elements, trims)
+
+    return new_elements
 
 
 def build_graph(elements, preserve_order=False):
@@ -596,7 +613,7 @@ def operations_to_elements_and_trims(operations, preserve_order):
             elements.append(operation.to_element())
             original_parent_nodes.append(operation.original_node.getparent())
         elif isinstance(operation, (JumpStitch)):
-            if elements and operation.length > PIXELS_PER_MM:
+            if elements and operation.length > 0.75 * PIXELS_PER_MM:
                 trims.append(len(elements) - 1)
 
     return elements, list(set(trims)), original_parent_nodes
@@ -628,3 +645,91 @@ def preserve_original_groups(elements, original_parent_nodes):
         if parent is not None:
             parent.append(element.node)
             element.node.set('transform', get_correction_transform(parent, child=True))
+
+
+def create_new_group(parent, insert_index):
+    group = inkex.etree.Element(SVG_GROUP_TAG, {
+        INKSCAPE_LABEL: _("Auto-Satin"),
+        "transform": get_correction_transform(parent, child=True)
+    })
+    parent.insert(insert_index, group)
+
+    return group
+
+
+def add_elements_to_group(elements, group):
+    for element in elements:
+        group.append(element.node)
+
+
+def name_elements(new_elements, preserve_order):
+    """Give the newly-created SVG objects useful names.
+
+    Objects will be named like this:
+
+      * AutoSatin 1
+      * AutoSatin 2
+      * AutoSatin Running Stitch 3
+      * AutoSatin 4
+      * AutoSatin Running Stitch 5
+      ...
+
+    Objects are numbered starting with 1.  Satins are named "AutoSatin #", and
+    running stitches are named "AutoSatin Running Stitch #".
+
+    If preserve_order is true and the element already has an INKSCAPE_LABEL,
+    we'll leave it alone.  That way users can see which original satin the new
+    satin(s) came from.
+
+    SVG element IDs are also set.  Since these need to be unique across the
+    document, the numbers will likely not match up with the numbers in the
+    name we set.
+    """
+
+    index = 1
+    for element in new_elements:
+        if isinstance(element, SatinColumn):
+            element.node.set("id", generate_unique_id(element.node, "autosatin"))
+        else:
+            element.node.set("id", generate_unique_id(element.node, "autosatinrun"))
+
+        if not (preserve_order and INKSCAPE_LABEL in element.node.attrib):
+            if isinstance(element, SatinColumn):
+                # L10N Label for a satin column created by Auto-Route Satin Columns and Lettering extensions
+                element.node.set(INKSCAPE_LABEL, _("AutoSatin %d") % index)
+            else:
+                # L10N Label for running stitch (underpathing) created by Auto-Route Satin Columns amd Lettering extensions
+                element.node.set(INKSCAPE_LABEL, _("AutoSatin Running Stitch %d") % index)
+
+            index += 1
+
+
+def add_trims(elements, trim_indices):
+    """Add trim commands on the specified elements.
+
+    If any running stitches immediately follow a trim, they are eliminated.
+    When we're trimming, there's no need to try to reduce the jump length,
+    so the running stitch would be a waste of time (and thread).
+    """
+
+    trim_indices = set(trim_indices)
+    new_elements = []
+    just_trimmed = False
+    for i, element in enumerate(elements):
+        if just_trimmed and isinstance(element, Stroke):
+            element.node.getparent().remove(element.node)
+            continue
+
+        if i in trim_indices:
+            add_commands(element, ["trim"])
+            just_trimmed = True
+        else:
+            just_trimmed = False
+
+        new_elements.append(element)
+
+    # trim at the end, too
+    if i not in trim_indices:
+        add_commands(element, ["trim"])
+
+    return new_elements

@@ -7,12 +7,17 @@ import os
 import inkex
 
 from ..elements import nodes_to_elements
-from ..i18n import _
+from ..exceptions import InkstitchException
+from ..i18n import _, get_languages
 from ..stitches.auto_satin import auto_satin
 from ..svg import PIXELS_PER_MM
 from ..svg.tags import SVG_GROUP_TAG, SVG_PATH_TAG, INKSCAPE_LABEL
 from ..utils import Point
 from .font_variant import FontVariant
+
+
+class FontError(InkstitchException):
+    pass
 
 
 def font_metadata(name, default=None, multiplier=None):
@@ -23,6 +28,25 @@ def font_metadata(name, default=None, multiplier=None):
             value *= multiplier
 
         return value
+
+    return property(getter)
+
+
+def localized_font_metadata(name, default=None):
+    def getter(self):
+        # If the font contains a localized version of the attribute, use it.
+        for language in get_languages():
+            attr = "%s_%s" % (name, language)
+            if attr in self.metadata:
+                return self.metadata.get(attr)
+
+        if name in self.metadata:
+            # This may be a font packaged with Ink/Stitch, in which case the
+            # text will have been sent to CrowdIn for community translation.
+            # Try to fetch the translated version.
+            return _(self.metadata.get(name))
+        else:
+            return default
 
     return property(getter)
 
@@ -43,36 +67,42 @@ class Font(object):
 
     def __init__(self, font_path):
         self.path = font_path
+        self.metadata = {}
+        self.license = None
+        self.variants = {}
+
         self._load_metadata()
         self._load_license()
-        self._load_variants()
 
     def _load_metadata(self):
         try:
             with open(os.path.join(self.path, "font.json")) as metadata_file:
                 self.metadata = json.load(metadata_file)
         except IOError:
-            self.metadata = {}
+            pass
 
     def _load_license(self):
         try:
             with open(os.path.join(self.path, "LICENSE")) as license_file:
                 self.license = license_file.read()
         except IOError:
-            self.license = None
+            pass
 
     def _load_variants(self):
-        self.variants = {}
+        if not self.variants:
+            for variant in FontVariant.VARIANT_TYPES:
+                try:
+                    self.variants[variant] = FontVariant(self.path, variant, self.default_glyph)
+                except IOError:
+                    # we'll deal with missing variants when we apply lettering
+                    pass
 
-        for variant in FontVariant.VARIANT_TYPES:
-            try:
-                self.variants[variant] = FontVariant(self.path, variant, self.default_glyph)
-            except IOError:
-                # we'll deal with missing variants when we apply lettering
-                pass
+    def _check_variants(self):
+        if self.variants.get(self.default_variant) is None:
+            raise FontError("font not found or has no default variant")
 
-    name = font_metadata('name', '')
-    description = font_metadata('description', '')
+    name = localized_font_metadata('name', '')
+    description = localized_font_metadata('description', '')
     default_variant = font_metadata('default_variant', FontVariant.LEFT_TO_RIGHT)
     default_glyph = font_metadata('defalt_glyph', u"�")
     letter_spacing = font_metadata('letter_spacing', 1.5, multiplier=PIXELS_PER_MM)
@@ -80,8 +110,17 @@ class Font(object):
     word_spacing = font_metadata('word_spacing', 3, multiplier=PIXELS_PER_MM)
     kerning_pairs = font_metadata('kerning_pairs', {})
     auto_satin = font_metadata('auto_satin', True)
+    min_scale = font_metadata('min_scale', 1.0)
+    max_scale = font_metadata('max_scale', 1.0)
 
-    def render_text(self, text, variant=None, back_and_forth=True):
+    @property
+    def id(self):
+        return os.path.basename(self.path)
+
+    def render_text(self, text, destination_group, variant=None, back_and_forth=True, trim=False):
+        """Render text into an SVG group element."""
+        self._load_variants()
+
         if variant is None:
             variant = self.default_variant
 
@@ -90,9 +129,6 @@ class Font(object):
         else:
             glyph_sets = [self.get_variant(variant)] * 2
 
-        line_group = inkex.etree.Element(SVG_GROUP_TAG, {
-            INKSCAPE_LABEL: _("Ink/Stitch Text")
-        })
         position = Point(0, 0)
         for i, line in enumerate(text.splitlines()):
             glyph_set = glyph_sets[i % 2]
@@ -101,15 +137,15 @@ class Font(object):
             letter_group = self._render_line(line, position, glyph_set)
             if glyph_set.variant == FontVariant.RIGHT_TO_LEFT:
                 letter_group[:] = reversed(letter_group)
-            line_group.append(letter_group)
+            destination_group.append(letter_group)
 
             position.x = 0
             position.y += self.leading
 
-        if self.auto_satin and len(line_group) > 0:
-            self._apply_auto_satin(line_group)
+        if self.auto_satin and len(destination_group) > 0:
+            self._apply_auto_satin(destination_group, trim)
 
-        return line_group
+        return destination_group
 
     def get_variant(self, variant):
         return self.variants.get(variant, self.variants[self.default_variant])
@@ -174,7 +210,7 @@ class Font(object):
 
         return node
 
-    def _apply_auto_satin(self, group):
+    def _apply_auto_satin(self, group, trim):
         """Apply Auto-Satin to an SVG XML node tree with an svg:g at its root.
 
         The group's contents will be replaced with the results of the auto-
@@ -182,4 +218,4 @@ class Font(object):
         """
 
         elements = nodes_to_elements(group.iterdescendants(SVG_PATH_TAG))
-        auto_satin(elements, preserve_order=True)
+        auto_satin(elements, preserve_order=True, trim=trim)

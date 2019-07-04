@@ -10,6 +10,7 @@ from stringcase import snakecase
 from ..commands import layer_commands
 from ..elements import EmbroideryElement, nodes_to_elements
 from ..i18n import _
+from ..svg import generate_unique_id
 from ..svg.tags import SVG_GROUP_TAG, INKSCAPE_GROUPMODE, SVG_DEFS_TAG, EMBROIDERABLE_TAGS
 
 
@@ -195,15 +196,7 @@ class InkstitchExtension(inkex.Effect):
 
     def uniqueId(self, prefix, make_new_id=True):
         """Override inkex.Effect.uniqueId with a nicer naming scheme."""
-        i = 1
-        while True:
-            new_id = "%s%d" % (prefix, i)
-            if new_id not in self.doc_ids:
-                break
-            i += 1
-        self.doc_ids[new_id] = 1
-
-        return new_id
+        return generate_unique_id(self.document, prefix)
 
     def parse(self):
         """Override inkex.Effect.parse to add Ink/Stitch xml namespace"""

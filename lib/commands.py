@@ -1,12 +1,19 @@
+from copy import deepcopy
+import os
+from random import random
 import sys
-import inkex
+
 import cubicsuperpath
+import inkex
+from shapely import geometry as shgeo
 import simpletransform
 
-from .svg import apply_transforms, get_node_transform
-from .svg.tags import SVG_USE_TAG, SVG_SYMBOL_TAG, CONNECTION_START, CONNECTION_END, XLINK_HREF
-from .utils import cache, Point
 from .i18n import _, N_
+from .svg import apply_transforms, get_node_transform, get_correction_transform, get_document, generate_unique_id
+from .svg.tags import SVG_DEFS_TAG, SVG_GROUP_TAG, SVG_PATH_TAG, SVG_USE_TAG, SVG_SYMBOL_TAG, \
+    CONNECTION_START, CONNECTION_END, CONNECTOR_TYPE, XLINK_HREF, INKSCAPE_LABEL
+from .utils import cache, get_bundled_dir, Point
+
 
 COMMANDS = {
     # L10N command attached to an object
@@ -228,3 +235,135 @@ def _standalone_commands(svg):
 
 def is_command(node):
     return CONNECTION_START in node.attrib or CONNECTION_END in node.attrib
+
+
+@cache
+def symbols_path():
+    return os.path.join(get_bundled_dir("symbols"), "inkstitch.svg")
+
+
+@cache
+def symbols_svg():
+    with open(symbols_path()) as symbols_file:
+        return inkex.etree.parse(symbols_file)
+
+
+@cache
+def symbol_defs():
+    return get_defs(symbols_svg())
+
+
+@cache
+def get_defs(document):
+    defs = document.find(SVG_DEFS_TAG)
+
+    if defs is None:
+        defs = inkex.etree.SubElement(document, SVG_DEFS_TAG)
+
+    return defs
+
+
+def ensure_symbol(document, command):
+    """Make sure the command's symbol definition exists in the <svg:defs> tag."""
+
+    path = "./*[@id='inkstitch_%s']" % command
+    defs = get_defs(document)
+    if defs.find(path) is None:
+        defs.append(deepcopy(symbol_defs().find(path)))
+
+
+def add_group(document, node, command):
+    return inkex.etree.SubElement(
+        node.getparent(),
+        SVG_GROUP_TAG,
+        {
+            "id": generate_unique_id(document, "group"),
+            INKSCAPE_LABEL: _("Ink/Stitch Command") + ": %s" % get_command_description(command),
+            "transform": get_correction_transform(node)
+        })
+
+
+def add_connector(document, symbol, element):
+    # I'd like it if I could position the connector endpoint nicely but inkscape just
+    # moves it to the element's center immediately after the extension runs.
+    start_pos = (symbol.get('x'), symbol.get('y'))
+    end_pos = element.shape.centroid
+
+    path = inkex.etree.Element(SVG_PATH_TAG,
+                               {
+                                   "id": generate_unique_id(document, "connector"),
+                                   "d": "M %s,%s %s,%s" % (start_pos[0], start_pos[1], end_pos.x, end_pos.y),
+                                   "style": "stroke:#000000;stroke-width:1px;stroke-opacity:0.5;fill:none;",
+                                   CONNECTION_START: "#%s" % symbol.get('id'),
+                                   CONNECTION_END: "#%s" % element.node.get('id'),
+                                   CONNECTOR_TYPE: "polyline",
+
+                                   # l10n: the name of the line that connects a command to the object it applies to
+                                   INKSCAPE_LABEL: _("connector")
+                               })
+
+    symbol.getparent().insert(0, path)
+
+
+def add_symbol(document, group, command, pos):
+    return inkex.etree.SubElement(group, SVG_USE_TAG,
+                                  {
+                                      "id": generate_unique_id(document, "use"),
+                                      XLINK_HREF: "#inkstitch_%s" % command,
+                                      "height": "100%",
+                                      "width": "100%",
+                                      "x": str(pos.x),
+                                      "y": str(pos.y),
+
+                                      # l10n: the name of a command symbol (example: scissors icon for trim command)
+                                      INKSCAPE_LABEL: _("command marker"),
+                                  })
+
+
+def get_command_pos(element, index, total):
+    # Put command symbols 30 pixels out from the shape, spaced evenly around it.
+
+    # get a line running 30 pixels out from the shape
+    outline = element.shape.buffer(30).exterior
+
+    # find the top center point on the outline and start there
+    top_center = shgeo.Point(outline.centroid.x, outline.bounds[1])
+    start_position = outline.project(top_center, normalized=True)
+
+    # pick this item's spot around the outline and perturb it a bit to avoid
+    # stacking up commands if they add commands multiple times
+    position = index / float(total)
+    position += random() * 0.05
+    position += start_position
+
+    return outline.interpolate(position, normalized=True)
+
+
+def remove_legacy_param(element, command):
+    if command == "trim" or command == "stop":
+        # If they had the old "TRIM after" or "STOP after" attributes set,
+        # automatically delete them.  THe new commands will do the same
+        # thing.
+        #
+        # If we didn't delete these here, then things would get confusing.
+        # If the user were to delete a "trim" symbol added by this extension
+        # but the "embroider_trim_after" attribute is still set, then the
+        # trim would keep happening.
+
+        attribute = "embroider_%s_after" % command
+
+        if attribute in element.node.attrib:
+            del element.node.attrib[attribute]
+
+
+def add_commands(element, commands):
+    document = get_document(element.node)
+
+    for i, command in enumerate(commands):
+        ensure_symbol(document, command)
+        remove_legacy_param(element, command)
+
+        group = add_group(document, element.node, command)
+        pos = get_command_pos(element, i, len(commands))
+        symbol = add_symbol(document, group, command, pos)
+        add_connector(document, symbol, element)

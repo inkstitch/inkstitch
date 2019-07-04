@@ -1,0 +1,14 @@
+{
+  "name": "Ink/Stitch Medium Font",
+  "description": "A basic font suited for medium-sized characters.  The capital em is 0.6 inches wide at 100% scale.  Can be scaled down to 75% or up to 150%.  Every satin has contour underlay.",
+  "leading": 24,
+  "letter_spacing": 4.5,
+  "word_spacing": 13.5,
+  "auto_satin": true,
+  "default_glyph": "�",
+  "min_scale": 0.75,
+  "max_scale": 2.0,
+  "kerning_pairs": {
+    "wo": -0.9
+  }
+}

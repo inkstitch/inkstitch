@@ -20,6 +20,7 @@ inx: locales
 messages.po:
 	rm -f messages.po
 	bin/pyembroidery-gettext > pyembroidery-format-descriptions.py
+	bin/inkstitch-fonts-gettext > inkstitch-fonts-metadata.py
 	pybabel extract -o messages.po -F babel.conf --add-location=full --add-comments=l10n,L10n,L10N --sort-by-file --strip-comments -k N_ .
 	rm pyembroidery-format-descriptions.py
 

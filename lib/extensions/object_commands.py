@@ -1,8 +1,8 @@
 import inkex
 
-from .commands import CommandsExtension
-from ..commands import OBJECT_COMMANDS
+from ..commands import OBJECT_COMMANDS, add_commands
 from ..i18n import _
+from .commands import CommandsExtension
 
 
 class ObjectCommands(CommandsExtension):
@@ -24,14 +24,11 @@ class ObjectCommands(CommandsExtension):
             inkex.errormsg(_("Please choose one or more commands to attach."))
             return
 
-        for command in commands:
-            self.ensure_symbol(command)
-
         # Each object (node) in the SVG may correspond to multiple Elements of different
         # types (e.g. stroke + fill).  We only want to process each one once.
         seen_nodes = set()
 
         for element in self.elements:
             if element.node not in seen_nodes:
-                self.add_commands(element, commands)
+                add_commands(element, commands)
                 seen_nodes.add(element.node)
