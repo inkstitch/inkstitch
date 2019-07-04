@@ -1,7 +1,4 @@
 import logging
-import re
-
-from shapely.validation import explain_validity
 
 import inkex
 
@@ -28,13 +25,9 @@ class ExplainValidity(InkstitchExtension):
 
         invalid_shapes = False
         for element in self.elements:
-            shape = element.shape
-            if not shape.is_valid:
+            for message, location in element.validation_errors():
                 invalid_shapes = True
-                shapely_msg = explain_validity(shape)
-                message, x, y = re.findall(r".+?(?=\[)|\d+\.\d+", shapely_msg)
-                self.insert_invalid_pointer(message, x, y)
-            # TODO: display errors like "too small", etc.
+                self.insert_invalid_pointer(message, location[0], location[1])
 
         logger.setLevel(level)
 
@@ -60,7 +53,7 @@ class ExplainValidity(InkstitchExtension):
         text = inkex.etree.Element(
             SVG_TEXT_TAG,
             {
-                "x": x,
+                "x": str(x),
                 "y": str(float(y) + 30),
                 "transform": correction_transform,
                 "style": "fill:#ff0000;troke:#ffffff;stroke-width:0.2;font-size:8px;text-align:center;text-anchor:middle"

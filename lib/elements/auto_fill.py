@@ -1,14 +1,16 @@
 import math
+import re
 import sys
 import traceback
 
 from shapely import geometry as shgeo
+from shapely.validation import explain_validity
 
 from ..exceptions import InkstitchException
 from ..i18n import _
 from ..stitches import auto_fill
 from ..utils import cache
-from .element import param, Patch
+from .element import Patch, param
 from .fill import Fill
 
 
@@ -176,6 +178,23 @@ class AutoFill(Fill):
             return self.get_command('fill_end').target_point
         else:
             return None
+
+    def validation_errors(self):
+        polygon = self.get_polygon()
+
+        if not polygon.is_valid:
+            why = explain_validity(polygon)
+            message, x, y = re.findall(r".+?(?=\[)|\d+\.\d+", why)
+
+            # I Wish this weren't so brittle...
+            if "Hole lies outside shell" in message:
+                yield (_("this object is made up of unconnected shapes.  This is not allowed because "
+                         "Ink/Stitch doesn't know what order to stitch them in.  Please break this "
+                         "object up into separate shapes."), (x, y))
+            else:
+                yield (_("shape is not valid.  This can happen if the border crosses over itself."), (x, y))
+
+        # TODO: catch "too small" error
 
     def to_patches(self, last_patch):
         stitches = []
