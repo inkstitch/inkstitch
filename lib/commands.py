@@ -289,6 +289,10 @@ def add_connector(document, symbol, element):
     start_pos = (symbol.get('x'), symbol.get('y'))
     end_pos = element.shape.centroid
 
+    # Make sure the element's XML node has an id so that we can reference it.
+    if element.node.get('id') is None:
+        element.node.set('id', generate_unique_id(document, "object"))
+
     path = inkex.etree.Element(SVG_PATH_TAG,
                                {
                                    "id": generate_unique_id(document, "connector"),

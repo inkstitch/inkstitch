@@ -1,11 +1,13 @@
 import sys
+
 import shapely.geometry
 
-from .element import param, EmbroideryElement, Patch
 from ..i18n import _
-from ..utils import cache, Point
 from ..stitches import running_stitch, bean_stitch
 from ..svg import parse_length_with_units
+from ..utils import cache, Point
+from .element import param, EmbroideryElement, Patch
+
 
 warned_about_legacy_running_stitch = False
 
@@ -85,7 +87,11 @@ class Stroke(EmbroideryElement):
     @cache
     def shape(self):
         line_strings = [shapely.geometry.LineString(path) for path in self.paths]
-        return shapely.geometry.MultiLineString(line_strings)
+
+        # Using convex_hull here is an important optimization.  Otherwise
+        # complex paths cause operations on the shape to take a long time.
+        # This especially happens when importing machine embroidery files.
+        return shapely.geometry.MultiLineString(line_strings).convex_hull
 
     @property
     @param('manual_stitch',
