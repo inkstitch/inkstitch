@@ -6,8 +6,8 @@ from ..commands import get_command_description
 from ..i18n import _
 from ..svg import get_correction_transform
 from ..svg.tags import (INKSCAPE_GROUPMODE, INKSCAPE_LABEL,
-                        SODIPODI_INSENSITIVE, SODIPODI_ROLE, SVG_GROUP_TAG,
-                        SVG_PATH_TAG, SVG_TEXT_TAG, SVG_TSPAN_TAG, SVG_USE_TAG,
+                        SODIPODI_ROLE, SVG_GROUP_TAG, SVG_PATH_TAG,
+                        SVG_TEXT_TAG, SVG_TSPAN_TAG, SVG_USE_TAG,
                         XLINK_HREF)
 from .base import InkstitchExtension
 from .commands import CommandsExtension
@@ -82,7 +82,6 @@ class ExplainValidity(InkstitchExtension):
                     'id': '__validity_layer__',
                     INKSCAPE_LABEL: _('Explain Validity'),
                     INKSCAPE_GROUPMODE: 'layer',
-                    SODIPODI_INSENSITIVE: "true"
                 })
             svg.append(layer)
             layer = svg.find(".//*[@id='__validity_layer__']")
