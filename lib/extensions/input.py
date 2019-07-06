@@ -12,6 +12,7 @@ class Input(object):
     def affect(self, args):
         embroidery_file = args[0]
         pattern = pyembroidery.read(embroidery_file)
+        pattern = pattern.get_pattern_interpolate_trim(2)
 
         stitch_plan = StitchPlan()
         color_block = None
@@ -19,20 +20,14 @@ class Input(object):
         for raw_stitches, thread in pattern.get_as_colorblocks():
             color_block = stitch_plan.new_color_block(thread)
             trim_after = False
-            jump_counter = 0
             for x, y, command in raw_stitches:
                 if command == pyembroidery.STITCH:
                     if trim_after:
                         color_block.add_stitch(trim=True)
                         trim_after = False
                     color_block.add_stitch(x * PIXELS_PER_MM / 10.0, y * PIXELS_PER_MM / 10.0)
-                    jump_counter = 0
-                elif len(color_block) > 0:
-                    # some file formats use 3 or more jump stitches in a row to indicate a trim
-                    if command == pyembroidery.JUMP:
-                        jump_counter += 1
-                    if command == pyembroidery.TRIM or jump_counter >= 3:
-                        trim_after = True
+                if len(color_block) > 0 and command == pyembroidery.TRIM:
+                    trim_after = True
 
         extents = stitch_plan.extents
         svg = etree.Element("svg", nsmap=inkex.NSS, attrib={
