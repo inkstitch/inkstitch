@@ -22,6 +22,8 @@ pages:
         url: /docs/install/
       - title: "Workflow"
         url: /docs/workflow/
+      - title: Stitch Library
+        url: /docs/stitch-library/
       - title: "Get Help"
         url: /docs/get-help/
   - title: "Tutorials"
@@ -73,6 +75,7 @@ docs:
     - title: "Import / Export"
       url: /docs/import-export/
   - title: "Stitch Library"
+    url: /docs/stitch-library/
     children:
       - title: "Manual Stitch"
         url: /docs/stitches/manual-stitch/
