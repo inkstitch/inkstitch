@@ -18,7 +18,8 @@ class Input(object):
         color_block = None
 
         for raw_stitches, thread in pattern.get_as_colorblocks():
-            color_block = stitch_plan.new_color_block(thread)
+            if len(raw_stitches) > 1:
+                color_block = stitch_plan.new_color_block(thread)
             trim_after = False
             for x, y, command in raw_stitches:
                 if command == pyembroidery.STITCH:
