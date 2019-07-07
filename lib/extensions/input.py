@@ -18,8 +18,7 @@ class Input(object):
         color_block = None
 
         for raw_stitches, thread in pattern.get_as_colorblocks():
-            if len(raw_stitches) > 1:
-                color_block = stitch_plan.new_color_block(thread)
+            color_block = stitch_plan.new_color_block(thread)
             trim_after = False
             for x, y, command in raw_stitches:
                 if command == pyembroidery.STITCH:
@@ -29,6 +28,8 @@ class Input(object):
                     color_block.add_stitch(x * PIXELS_PER_MM / 10.0, y * PIXELS_PER_MM / 10.0)
                 if len(color_block) > 0 and command == pyembroidery.TRIM:
                     trim_after = True
+
+        stitch_plan.delete_empty_color_block(color_block)
 
         extents = stitch_plan.extents
         svg = etree.Element("svg", nsmap=inkex.NSS, attrib={

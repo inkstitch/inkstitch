@@ -72,6 +72,10 @@ class StitchPlan(object):
         self.color_blocks.append(color_block)
         return color_block
 
+    def delete_empty_color_block(self, color_block):
+        if len(color_block) == 0:
+            self.color_blocks.remove(color_block)
+
     def add_color_block(self, color_block):
         self.color_blocks.append(color_block)
 
