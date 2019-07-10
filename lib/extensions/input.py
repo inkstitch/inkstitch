@@ -1,11 +1,12 @@
 import os
-from inkex import etree
-import inkex
 import pyembroidery
 
+from inkex import etree
+import inkex
+
+from ..stitch_plan import StitchPlan
 from ..svg import PIXELS_PER_MM, render_stitch_plan
 from ..svg.tags import INKSCAPE_LABEL
-from ..stitch_plan import StitchPlan
 
 
 class Input(object):
@@ -29,7 +30,7 @@ class Input(object):
                 if len(color_block) > 0 and command == pyembroidery.TRIM:
                     trim_after = True
 
-        stitch_plan.delete_empty_color_block(color_block)
+        stitch_plan.delete_empty_color_blocks()
 
         extents = stitch_plan.extents
         svg = etree.Element("svg", nsmap=inkex.NSS, attrib={

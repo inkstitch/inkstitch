@@ -1,8 +1,8 @@
+from ..svg import PIXELS_PER_MM
+from ..threads import ThreadColor
+from ..utils.geometry import Point
 from .stitch import Stitch
 from .ties import add_ties
-from ..svg import PIXELS_PER_MM
-from ..utils.geometry import Point
-from ..threads import ThreadColor
 
 
 def patches_to_stitch_plan(patches, collapse_len=3.0 * PIXELS_PER_MM):
@@ -72,9 +72,13 @@ class StitchPlan(object):
         self.color_blocks.append(color_block)
         return color_block
 
-    def delete_empty_color_block(self, color_block):
-        if len(color_block) == 0:
-            self.color_blocks.remove(color_block)
+    def delete_empty_color_blocks(self):
+        color_blocks = []
+        for color_block in self.color_blocks:
+            if len(color_block) > 0:
+                color_blocks.append(color_block)
+
+        self.color_block = color_blocks
 
     def add_color_block(self, color_block):
         self.color_blocks.append(color_block)
