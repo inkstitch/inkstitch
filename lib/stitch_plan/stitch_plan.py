@@ -78,7 +78,7 @@ class StitchPlan(object):
             if len(color_block) > 0:
                 color_blocks.append(color_block)
 
-        self.color_block = color_blocks
+        self.color_blocks = color_blocks
 
     def add_color_block(self, color_block):
         self.color_blocks.append(color_block)

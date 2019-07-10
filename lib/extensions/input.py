@@ -13,7 +13,7 @@ class Input(object):
     def affect(self, args):
         embroidery_file = args[0]
         pattern = pyembroidery.read(embroidery_file)
-        pattern = pattern.get_pattern_interpolate_trim(2)
+        pattern = pattern.get_pattern_interpolate_trim(3)
 
         stitch_plan = StitchPlan()
         color_block = None
