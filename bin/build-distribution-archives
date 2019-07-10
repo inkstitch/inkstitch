@@ -1,6 +1,7 @@
 # TRAVIS_BRANCH is the branch name or the name of the tag.
 VERSION="$(echo ${TRAVIS_BRANCH} | tr / -)"
 OS="${TRAVIS_OS_NAME}"
+BUILDNR="${TRAVIS_BUILD_NUMBER}"
 ARCH="$(uname -m)"
 
 cp -a images/examples palettes symbols fonts dist/inkstitch
@@ -20,6 +21,8 @@ for d in inx/*; do
     cd dist
 	if [ "$BUILD" = "windows" ]; then
 		zip -r ../inkstitch-${VERSION}-win32-${lang}.zip *
+	elif [ "$BUILD" = "osx" ]; then
+		tar zcf ../inkstitch-${VERSION}-${BUILDNR}-${OS}-${ARCH}-$lang.tar.gz *
 	else
 		tar zcf ../inkstitch-${VERSION}-${OS}-${ARCH}-$lang.tar.gz *
 	fi
