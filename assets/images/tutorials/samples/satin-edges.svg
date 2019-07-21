@@ -15,7 +15,7 @@
    viewBox="0 0 298.44482 151.66847"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.4 (unknown)"
+   inkscape:version="0.92.3 (unknown)"
    sodipodi:docname="satin-edges.svg">
   <defs
      id="defs2">
@@ -68,18 +68,18 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="688.46956"
-     inkscape:cy="256.01209"
+     inkscape:zoom="1.4"
+     inkscape:cx="316.8814"
+     inkscape:cy="138.83707"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="g1013"
      showgrid="false"
-     inkscape:window-width="1918"
-     inkscape:window-height="973"
-     inkscape:window-x="0"
-     inkscape:window-y="27"
+     inkscape:window-width="2560"
+     inkscape:window-height="1409"
+     inkscape:window-x="3840"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:snap-global="true"
+     inkscape:snap-global="false"
      fit-margin-top="10"
      fit-margin-left="10"
      fit-margin-right="10"
@@ -92,7 +92,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -119,28 +119,24 @@
          transform="translate(-77.436221)">
         <path
            inkscape:connector-curvature="0"
-           d="m 168.68299,55.536419 5.65689,-27.033541 m 0.49682,27.791256 5.3052,-27.791256"
-           style="fill:none;stroke:#000000;stroke-width:0.29499999;stroke-miterlimit:4;stroke-dasharray:none"
-           id="path993"
-           embroider_satin_column="True" />
-        <path
-           inkscape:connector-curvature="0"
-           id="path1007"
-           d="M 180.1419,28.502876 V 2.0059506"
-           style="fill:none;stroke:#000000;stroke-width:0.26458332;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.79374995, 0.26458332;stroke-dashoffset:0;stroke-opacity:1" />
-        <path
-           sodipodi:nodetypes="cccc"
-           inkscape:connector-curvature="0"
-           d="M 180.1419,2.0059507 174.07261,28.502878 M 180.1419,2.0059507 186.07423,28.502878"
-           style="fill:none;stroke:#000000;stroke-width:0.29499999;stroke-miterlimit:4;stroke-dasharray:none"
-           id="path989"
-           embroider_satin_column="True" />
-        <path
-           inkscape:connector-curvature="0"
            d="m 185.80696,28.502878 5.79384,27.033541 m -11.4589,-27.033541 5.3052,27.791256"
            style="fill:none;stroke:#000000;stroke-width:0.29499999;stroke-miterlimit:4;stroke-dasharray:none"
            id="path2"
            embroider_satin_column="True" />
+        <path
+           id="path4043"
+           style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 178.14552,25.889849 9.55488,-0.80181 m -4.74403,26.92741 9.88897,-0.60136 m -1.24454,4.12233 -7.44172,-35.1256 m 1.28802,35.88331 -6.56659,-34.27969"
+           inkscape:connector-curvature="0" />
+        <path
+           id="path4038"
+           style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 169.79335,24.219424 13.36347,0.33408 m -16.63753,27.46195 12.22759,0.0668 m -3.91018,4.21188 6.24879,-34.74741 m -12.40249,33.9897 6.92346,-33.9897"
+           inkscape:connector-curvature="0" />
+        <path
+           id="path4056"
+           style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 172.55072,8.1621192 c 0.94494,-0.3779758 15.875,0 15.875,0 M 169.90489,26.115987 190.88256,25.738011 M 185.5909,26.871942 180.86619,2.3034876 M 174.07261,28.502878 180.1419,2.0059507" />
       </g>
       <g
          id="g955"
@@ -368,8 +364,7 @@
          inkscape:label="Explanation"
          transform="translate(0,-87.312549)">
         <g
-           aria-label="Do not use
-for sharp edges"
+           aria-label="Do not use for sharp edges"
            style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444447px;line-height:1;font-family:Pothana2000;-inkscape-font-specification:'Pothana2000 Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
            id="text1246">
           <path
@@ -479,12 +474,7 @@ for sharp edges"
              inkscape:connector-curvature="0" />
         </g>
         <g
-           aria-label="For small edges.
-Depending on
-the fabric, you might
-need a pull 
-compensation
-for the &quot;cap&quot;."
+           aria-label="For small edges. Depending on the fabric, you might need a pull  compensation for the &quot;cap&quot;."
            style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444447px;line-height:1;font-family:Pothana2000;-inkscape-font-specification:'Pothana2000 Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
            id="text1260">
           <path
@@ -869,10 +859,7 @@ for the &quot;cap&quot;."
              inkscape:connector-curvature="0" />
         </g>
         <g
-           aria-label="For wide edges.
-The last stitch
-should point
-to the top."
+           aria-label="For wide edges. The last stitch should point to the top."
            style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444447px;line-height:1;font-family:Pothana2000;-inkscape-font-specification:'Pothana2000 Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
            id="text1270">
           <path
@@ -1107,10 +1094,7 @@ to the top."
              inkscape:connector-curvature="0" />
         </g>
         <g
-           aria-label="This method interlocks
-the edges. The stitch
-angle needs to be 
-equal for best results."
+           aria-label="This method interlocks the edges. The stitch angle needs to be  equal for best results."
            style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444447px;line-height:1;font-family:Pothana2000;-inkscape-font-specification:'Pothana2000 Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
            id="text1280">
           <path
