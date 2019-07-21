@@ -3,7 +3,7 @@ VERSION="$(echo ${TRAVIS_BRANCH} | tr / -)"
 OS="${TRAVIS_OS_NAME}"
 ARCH="$(uname -m)"
 
-MACVERSION=${TRAVIS_OSX_IMAGE}
+MACVERSION="${TRAVIS_OSX_IMAGE}"
 if [ ${MACVERSION} = "xcode9.2" ]; then
     MACVERSION="sierra"
 elif [ ${MACVERSION} = "xcode9.4" ]; then
