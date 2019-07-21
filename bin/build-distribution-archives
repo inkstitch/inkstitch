@@ -5,11 +5,11 @@ ARCH="$(uname -m)"
 
 MACVERSION=${TRAVIS_OSX_IMAGE}
 if [ ${MACVERSION} = "xcode9.2" ]; then
-    MACVERSION="Sierra"
+    MACVERSION="sierra"
 elif [ ${MACVERSION} = "xcode9.4" ]; then
-    MACVERSION="High_Sierra"
+    MACVERSION="high_sierra"
 elif [ ${MACVERSION} = "xcode11" ]; then
-    MACVERSION="Mojave"
+    MACVERSION="mojave"
 fi
 
 cp -a images/examples palettes symbols fonts dist/inkstitch
