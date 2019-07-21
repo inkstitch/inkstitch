@@ -1,8 +1,16 @@
 # TRAVIS_BRANCH is the branch name or the name of the tag.
 VERSION="$(echo ${TRAVIS_BRANCH} | tr / -)"
 OS="${TRAVIS_OS_NAME}"
-OSXIMAGE="${TRAVIS_OSX_IMAGE}"
 ARCH="$(uname -m)"
+
+MACVERSION=${TRAVIS_OSX_IMAGE}
+if [ ${MACVERSION} = "xcode9.2" ]; then
+    MACVERSION="Sierra"
+elif [ ${MACVERSION} = "xcode9.4" ]; then
+    MACVERSION="High_Sierra"
+elif [ ${MACVERSION} = "xcode11" ]; then
+    MACVERSION="Mojave"
+fi
 
 cp -a images/examples palettes symbols fonts dist/inkstitch
 cp -a icons locales print dist/inkstitch/bin
@@ -22,7 +30,7 @@ for d in inx/*; do
 	if [ "$BUILD" = "windows" ]; then
 		zip -r ../inkstitch-${VERSION}-win32-${lang}.zip *
 	elif [ "$BUILD" = "osx" ]; then
-		tar zcf ../inkstitch-${VERSION}-${OS}-${OSXIMAGE}-${ARCH}-$lang.tar.gz *
+		tar zcf ../inkstitch-${VERSION}-${OS}-${MACVERSION}-${ARCH}-$lang.tar.gz *
 	else
 		tar zcf ../inkstitch-${VERSION}-${OS}-${ARCH}-$lang.tar.gz *
 	fi
