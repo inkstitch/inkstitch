@@ -1,11 +1,11 @@
+from ..svg import PIXELS_PER_MM
+from ..threads import ThreadColor
+from ..utils.geometry import Point
 from .stitch import Stitch
 from .ties import add_ties
-from ..svg import PIXELS_PER_MM
-from ..utils.geometry import Point
-from ..threads import ThreadColor
 
 
-def patches_to_stitch_plan(patches, collapse_len=3.0 * PIXELS_PER_MM):
+def patches_to_stitch_plan(patches, collapse_len=3.0 * PIXELS_PER_MM, disable_ties=False):
     """Convert a collection of inkstitch.element.Patch objects to a StitchPlan.
 
     * applies instructions embedded in the Patch such as trim_after and stop_after
@@ -14,10 +14,6 @@ def patches_to_stitch_plan(patches, collapse_len=3.0 * PIXELS_PER_MM):
     """
 
     stitch_plan = StitchPlan()
-
-    if not patches:
-        return stitch_plan
-
     color_block = stitch_plan.new_color_block(color=patches[0].color)
 
     for patch in patches:
@@ -56,7 +52,9 @@ def patches_to_stitch_plan(patches, collapse_len=3.0 * PIXELS_PER_MM):
         del stitch_plan.color_blocks[-1]
 
     stitch_plan.filter_duplicate_stitches()
-    stitch_plan.add_ties()
+
+    if not disable_ties:
+        stitch_plan.add_ties()
 
     return stitch_plan
 

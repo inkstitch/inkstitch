@@ -46,7 +46,7 @@ class Output(InkstitchExtension):
             return
 
         patches = self.elements_to_patches(self.elements)
-        stitch_plan = patches_to_stitch_plan(patches)
+        stitch_plan = patches_to_stitch_plan(patches, disable_ties=self.settings.get('laser_mode', False))
 
         temp_file = tempfile.NamedTemporaryFile(suffix=".%s" % self.file_extension, delete=False)
 
