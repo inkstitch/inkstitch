@@ -629,15 +629,6 @@ body {
     pointer-events: none;
   }
 
-  figure.inksimulation div {
-    display: none;
-  }
-
-  /* Display svg buttons only with svg hover */
-  figure.inksimulation:hover > div {
-    display: block;
-  }
-
 /* Color Swatches */
 
   .color-palette {
