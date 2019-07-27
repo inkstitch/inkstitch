@@ -70,6 +70,14 @@ class StitchPlan(object):
         self.color_blocks.append(color_block)
         return color_block
 
+    def delete_empty_color_blocks(self):
+        color_blocks = []
+        for color_block in self.color_blocks:
+            if len(color_block) > 0:
+                color_blocks.append(color_block)
+
+        self.color_blocks = color_blocks
+
     def add_color_block(self, color_block):
         self.color_blocks.append(color_block)
 

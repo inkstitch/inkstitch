@@ -1,27 +1,36 @@
 import os
-from inkex import etree
-import inkex
 import pyembroidery
 
+from inkex import etree
+import inkex
+
+from ..stitch_plan import StitchPlan
 from ..svg import PIXELS_PER_MM, render_stitch_plan
 from ..svg.tags import INKSCAPE_LABEL
-from ..stitch_plan import StitchPlan
 
 
 class Input(object):
     def affect(self, args):
         embroidery_file = args[0]
         pattern = pyembroidery.read(embroidery_file)
+        pattern = pattern.get_pattern_interpolate_trim(3)
 
         stitch_plan = StitchPlan()
         color_block = None
 
         for raw_stitches, thread in pattern.get_as_colorblocks():
             color_block = stitch_plan.new_color_block(thread)
+            trim_after = False
             for x, y, command in raw_stitches:
-                color_block.add_stitch(x * PIXELS_PER_MM / 10.0, y * PIXELS_PER_MM / 10.0,
-                                       jump=(command == pyembroidery.JUMP),
-                                       trim=(command == pyembroidery.TRIM))
+                if command == pyembroidery.STITCH:
+                    if trim_after:
+                        color_block.add_stitch(trim=True)
+                        trim_after = False
+                    color_block.add_stitch(x * PIXELS_PER_MM / 10.0, y * PIXELS_PER_MM / 10.0)
+                if len(color_block) > 0 and command == pyembroidery.TRIM:
+                    trim_after = True
+
+        stitch_plan.delete_empty_color_blocks()
 
         extents = stitch_plan.extents
         svg = etree.Element("svg", nsmap=inkex.NSS, attrib={

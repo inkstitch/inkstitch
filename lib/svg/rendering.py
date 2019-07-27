@@ -167,9 +167,7 @@ def get_correction_transform(svg):
     return transform
 
 
-def color_block_to_realistic_stitches(color_block, svg):
-    paths = []
-
+def color_block_to_realistic_stitches(color_block, svg, destination):
     for point_list in color_block_to_point_lists(color_block):
         if not point_list:
             continue
@@ -177,7 +175,7 @@ def color_block_to_realistic_stitches(color_block, svg):
         color = color_block.color.visible_on_white.darker.to_hex_str()
         start = point_list[0]
         for point in point_list[1:]:
-            paths.append(inkex.etree.Element(
+            destination.append(inkex.etree.Element(
                 SVG_PATH_TAG,
                 {'style': simplestyle.formatStyle(
                     {
@@ -190,16 +188,23 @@ def color_block_to_realistic_stitches(color_block, svg):
                  }))
             start = point
 
-    return paths
 
-
-def color_block_to_paths(color_block, svg):
-    paths = []
+def color_block_to_paths(color_block, svg, destination):
     # We could emit just a single path with one subpath per point list, but
     # emitting multiple paths makes it easier for the user to manipulate them.
+    first = True
     for point_list in color_block_to_point_lists(color_block):
+        if first:
+            first = False
+        else:
+            # If we try to import these above, we get into a mess of circular
+            # imports.
+            from ..commands import add_commands
+            from ..elements.stroke import Stroke
+            add_commands(Stroke(destination[-1]), ["trim"])
+
         color = color_block.color.visible_on_white.to_hex_str()
-        paths.append(inkex.etree.Element(
+        destination.append(inkex.etree.Element(
             SVG_PATH_TAG,
             {'style': simplestyle.formatStyle(
                 {'stroke': color,
@@ -207,15 +212,8 @@ def color_block_to_paths(color_block, svg):
                  'fill': 'none'}),
              'd': "M" + " ".join(" ".join(str(coord) for coord in point) for point in point_list),
              'transform': get_correction_transform(svg),
-             'embroider_manual_stitch': 'true',
-             'embroider_trim_after': 'true',
+             'embroider_manual_stitch': 'true'
              }))
-
-    # no need to trim at the end of a thread color
-    if paths:
-        paths[-1].attrib.pop('embroider_trim_after')
-
-    return paths
 
 
 def render_stitch_plan(svg, stitch_plan, realistic=False):
@@ -232,17 +230,17 @@ def render_stitch_plan(svg, stitch_plan, realistic=False):
         # make sure the layer is visible
         layer.set('style', 'display:inline')
 
+    svg.append(layer)
+
     for i, color_block in enumerate(stitch_plan):
         group = inkex.etree.SubElement(layer,
                                        SVG_GROUP_TAG,
                                        {'id': '__color_block_%d__' % i,
                                         INKSCAPE_LABEL: "color block %d" % (i + 1)})
         if realistic:
-            group.extend(color_block_to_realistic_stitches(color_block, svg))
+            color_block_to_realistic_stitches(color_block, svg, group)
         else:
-            group.extend(color_block_to_paths(color_block, svg))
-
-    svg.append(layer)
+            color_block_to_paths(color_block, svg, group)
 
     if realistic:
         defs = svg.find(SVG_DEFS_TAG)

@@ -21,7 +21,7 @@ class LayerCommands(CommandsExtension):
         correction_transform = get_correction_transform(self.current_layer, child=True)
 
         for i, command in enumerate(commands):
-            ensure_symbol(command)
+            ensure_symbol(self.document, command)
 
             inkex.etree.SubElement(self.current_layer, SVG_USE_TAG,
                                    {
