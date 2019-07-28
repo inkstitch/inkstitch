@@ -292,7 +292,7 @@ class EmbroideryElement(object):
     def validation_errors(self):
         """Return a list of problems with this Element.
 
-        Return value: an iterable or generator of ValidationError instances
+        Return value: an iterable or generator of instances of subclasses of ValidationError
         """
         raise NotImplementedError("class %s is expected to implement method: validation_errors" % self.__class__.__name__)
 

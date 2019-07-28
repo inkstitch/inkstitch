@@ -12,6 +12,27 @@ from .element import EmbroideryElement, Patch, param
 from .validation import ValidationError
 
 
+class UnconnectedError(ValidationError):
+    name = _("Unconnected")
+    description = _("Fill: This object is made up of unconnected shapes.  This is not allowed because "
+                    "Ink/Stitch doesn't know what order to stitch them in.  Please break this "
+                    "object up into separate shapes.")
+    steps_to_solve = [
+        _('* Path > Break apart (Shift+Ctrl+K)'),
+        _('* (Optional) Recombine shapes with holes (Ctrl+K).')
+    ]
+
+
+class InvalidShapeError(ValidationError):
+    name = _("Border crosses itself")
+    description = _("Fill: Shape is not valid.  This can happen if the border crosses over itself.")
+    steps_to_solve = [
+        _('* Path > Union (Ctrl++)'),
+        _('* Path > Break apart (Shift+Ctrl+K)'),
+        _('* (Optional) Recombine shapes with holes (Ctrl+K).')
+    ]
+
+
 class Fill(EmbroideryElement):
     element_name = _("Fill")
 
@@ -123,21 +144,9 @@ class Fill(EmbroideryElement):
 
             # I Wish this weren't so brittle...
             if "Hole lies outside shell" in message:
-                yield ValidationError(
-                    _("Gap"),
-                    _("Fill: This object is made up of unconnected shapes.  This is not allowed because "
-                      "Ink/Stitch doesn't know what order to stitch them in.  Please break this "
-                      "object up into separate shapes."),
-                    (x, y),
-                    [_('* Path > Break apart (Shift+Ctrl+K)'), _('* (Optional) Recombine shapes with holes (Ctrl+K).')]
-                )
+                yield UnconnectedError((x, y))
             else:
-                yield ValidationError(
-                    _("Crossing border"),
-                    _("Fill: Shape is not valid.  This can happen if the border crosses over itself."),
-                    (x, y),
-                    [_('* Path > Union (Ctrl++)'), _('* Path > Break apart (Shift+Ctrl+K)'), _('* (Optional) Recombine shapes with holes (Ctrl+K).')]
-                )
+                yield InvalidShapeError((x, y))
 
     def to_patches(self, last_patch):
         stitch_lists = legacy_fill(self.shape,

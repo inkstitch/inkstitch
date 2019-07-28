@@ -12,6 +12,51 @@ from .element import param, EmbroideryElement, Patch
 from .validation import ValidationError
 
 
+class SatinHasFillError(ValidationError):
+    name = _("satin column has fill")
+    description = _("satin column: object has a fill (but should not)")
+    steps_to_solve = [
+        _("* Select this object."),
+        _("* Open the Fill and Stroke panel"),
+        _("* Open the Fill tab"),
+        _("* Disable the Fill"),
+        _("* Alternative: open Params and switch this path to Stroke to disable Satin Column mode")
+    ]
+
+
+class TooFewPathsError(ValidationError):
+    name = _("Too few subpaths")
+    description = _("Satin column: Object has too few subpaths.  A satin column should have at least two subpaths (the rails).")
+    steps_to_solve = [
+        _("* Add another subpath (select two rails and do Path > Combine)"),
+        _("* Convert to running stitch or simple satin (Params extension)")
+    ]
+
+
+class UnequalPointsError(ValidationError):
+    name = _("Unequal number of points")
+    description = _("Satin column: There are no rungs and rails have an an unequal number of points.")
+    steps_to_solve = [
+        _('The easiest way to solve this issue is to add one or more rungs. '),
+        _('Rungs control the stitch direction in satin columns.'),
+        _('* With the selected object press "P" to activate the pencil tool.'),
+        _('* Hold "Shift" while drawing the rung.')
+    ]
+
+
+rung_message = _("Each rung should intersect both rails once.")
+
+
+class DanglingRungError(ValidationError):
+    name = _("Rung doesn't intersect rails")
+    description = _("Satin column: A rung doesn't intersect both rails.") + " " + rung_message
+
+
+class TooManyIntersectionsError(ValidationError):
+    name = _("Rung intersects too many times")
+    description = _("Satin column: A rung intersects a rail more than once.") + " " + rung_message
+
+
 class SatinColumn(EmbroideryElement):
     element_name = _("Satin Column")
 
@@ -314,46 +359,21 @@ class SatinColumn(EmbroideryElement):
         node_id = self.node.get("id")
 
         if self.get_style("fill") is not None:
-            yield ValidationError(_("satin column has fill"),
-                                  _("satin column: object %s has a fill (but should not)") % node_id)
+            yield SatinHasFillError(self.shape.centroid)
 
         if len(self.rails) < 2:
-            yield ValidationError(
-                _("Too few paths"),
-                _("Satin column: Object has too few subpaths.  A satin column should have at least two subpaths (the rails)."),
-                self.shape.centroid
-            )
+            yield TooFewPathsError(self.shape.centroid)
         elif len(self.csp) == 2:
             if len(self.rails[0]) != len(self.rails[1]):
-                yield ValidationError(
-                    _("Unequal number of points"),
-                    _("Satin column: Object has two paths with an unequal number of points (%(length1)d and %(length2)d)") %
-                    dict(length1=len(self.rails[0]), length2=len(self.rails[1])),
-                    self.flattened_rails[0].interpolate(0.5, normalized=True),
-                    [
-                        _('The easiest way to solve this issue is to add rungs. '),
-                        _('Rungs control the stitch direction in satin columns.'),
-                        _('* With the selected object press "P" to activate the pencil tool.'),
-                        _('* Hold "Shift" while drawing the rung.')
-                    ]
-                )
+                yield UnequalPointsError(self.flattened_rails[0].interpolate(0.5, normalized=True))
         else:
             for rung in self.flattened_rungs:
                 for rail in self.flattened_rails:
                     intersection = rung.intersection(rail)
-                    rung_message = _("Each rung should intersect both rails once.")
                     if intersection.is_empty:
-                        yield ValidationError(
-                            _("Rung doesn't intersect rails"),
-                            _("Satin column: A rung doesn't intersect both rails.") + " " + rung_message,
-                            rung.interpolate(0.5, normalized=True)
-                        )
+                        yield DanglingRungError(rung.interpolate(0.5, normalized=True))
                     elif not isinstance(intersection, shgeo.Point):
-                        yield ValidationError(
-                            _("Rung intersects too many times"),
-                            _("Satin column: A rung intersects a rail more than once.") + " " + rung_message,
-                            rung.interpolate(0.5, normalized=True)
-                        )
+                        yield TooManyIntersectionsError(rung.interpolate(0.5, normalized=True))
 
     def reverse(self):
         """Return a new SatinColumn like this one but in the opposite direction.

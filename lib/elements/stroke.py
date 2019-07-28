@@ -205,7 +205,5 @@ class Stroke(EmbroideryElement):
         return patches
 
     def validation_errors(self):
-        # The stroke element has no real error to check for
-        if self is None:
-            yield ValidationError(_("No object present"),
-                                  _(""))
+        # Stroke can handle any kind of path, so there's nothing to check for.
+        return []

@@ -21,16 +21,16 @@ class Troubleshoot(InkstitchExtension):
         level = logger.level
         logger.setLevel(logging.CRITICAL)
 
-        errors = set()
+        error_types = set()
         for element in self.elements:
             for error in element.validation_errors():
-                errors.add(error)
+                error_types.add(type(error))
                 self.insert_invalid_pointer(error)
 
         logger.setLevel(level)
 
-        if errors:
-            self.add_descriptions(errors)
+        if error_types:
+            self.add_descriptions(error_types)
         else:
             inkex.errormsg(_("All selected shapes are valid!"))
 
@@ -80,14 +80,17 @@ class Troubleshoot(InkstitchExtension):
             svg.append(layer)
 
             add_layer_commands(layer, ["ignore_layer"])
+        else:
+            # Clear out everything from the last run
+            del layer[:]
 
         return layer
 
     def split_text(self, string, n=15):
         pieces = string.split()
-        return (" ".join(pieces[i:i+n]) for i in xrange(0, len(pieces), n))
+        return (" ".join(pieces[i:i + n]) for i in xrange(0, len(pieces), n))
 
-    def add_descriptions(self, errors):
+    def add_descriptions(self, error_types):
         svg = self.document.getroot()
         layer = svg.find(".//*[@id='__validity_layer__']")
 
@@ -108,7 +111,7 @@ class Troubleshoot(InkstitchExtension):
             ["", ""]
         ]
 
-        for error in errors:
+        for error in error_types:
             text.append([error.name, "font-weight: bold;"])
             description_parts = self.split_text(error.description)
             for description in description_parts:
