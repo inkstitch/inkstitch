@@ -8,7 +8,8 @@ from ..i18n import _
 from ..stitches import legacy_fill
 from ..svg import PIXELS_PER_MM
 from ..utils import cache
-from .element import param, EmbroideryElement, Patch
+from .element import EmbroideryElement, Patch, param
+from .validation import ValidationError
 
 
 class Fill(EmbroideryElement):
@@ -122,11 +123,19 @@ class Fill(EmbroideryElement):
 
             # I Wish this weren't so brittle...
             if "Hole lies outside shell" in message:
-                yield (_("this object is made up of unconnected shapes.  This is not allowed because "
-                         "Ink/Stitch doesn't know what order to stitch them in.  Please break this "
-                         "object up into separate shapes."), (x, y))
+                yield ValidationError(
+                    _("Gap"),
+                    _("This object is made up of unconnected shapes.  This is not allowed because "
+                      "Ink/Stitch doesn't know what order to stitch them in.  Please break this "
+                      "object up into separate shapes."),
+                    (x, y),
+                    ['Path > Break apart (Shift+Ctrl+K)', '(Optional) Recombine shapes with holes (Ctrl+K).'])
             else:
-                yield (_("shape is not valid.  This can happen if the border crosses over itself."), (x, y))
+                yield ValidationError(
+                    _("Crossing border"),
+                    _("Shape is not valid.  This can happen if the border crosses over itself."),
+                    (x, y),
+                    ['Path > Union (Ctrl++)', 'Path > Break apart (Shift+Ctrl+K)', '(Optional) Recombine shapes with holes (Ctrl+K).'])
 
     def to_patches(self, last_patch):
         stitch_lists = legacy_fill(self.shape,

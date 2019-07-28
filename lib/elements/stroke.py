@@ -3,11 +3,11 @@ import sys
 import shapely.geometry
 
 from ..i18n import _
-from ..stitches import running_stitch, bean_stitch
+from ..stitches import bean_stitch, running_stitch
 from ..svg import parse_length_with_units
-from ..utils import cache, Point
-from .element import param, EmbroideryElement, Patch
-
+from ..utils import Point, cache
+from .element import EmbroideryElement, Patch, param
+from .validation import ValidationError
 
 warned_about_legacy_running_stitch = False
 
@@ -204,4 +204,8 @@ class Stroke(EmbroideryElement):
 
         return patches
 
-    # def validation_errors(self):
+    def validation_errors(self):
+        # The stroke element has no real error to check for
+        if self is None:
+            yield ValidationError(_("No object present"),
+                                  _(""))

@@ -83,6 +83,10 @@ class Troubleshoot(InkstitchExtension):
 
         return layer
 
+    def split_text(self, string, n=15):
+        pieces = string.split()
+        return (" ".join(pieces[i:i+n]) for i in xrange(0, len(pieces), n))
+
     def add_descriptions(self, errors):
         svg = self.document.getroot()
         layer = svg.find(".//*[@id='__validity_layer__']")
@@ -106,18 +110,21 @@ class Troubleshoot(InkstitchExtension):
 
         for error in errors:
             text.append([error.name, "font-weight: bold;"])
-            text.append(["* " + error.description, "font-size: 4px;"])
+            description_parts = self.split_text(error.description)
+            for description in description_parts:
+                text.append([description, "font-size: 3px;"])
+            text.append(["", ""])
+            for step in error.steps_to_solve:
+                text.append(["* " + step, "font-size: 4px;"])
             text.append(["", ""])
 
-        text += [
-            ["", ""],
-            [_("It is possible, that one object contains more than one error,"), "font-style: italic; font-size: 3px;"],
-            [_("yet there will be only one pointer per object."), "font-style: italic; font-size: 3px;"],
-            [_("Run this function again, when further errors occur."), "font-style: italic; font-size: 3px;"],
-            ["", ""],
-            [_('Remove pointers by deleting the layer named "Troubleshoot"'), "font-style: italic; font-size: 3px;"],
-            [_("through the objects panel (Object -> Objects...)."), "font-style: italic; font-size: 3px;"]
-        ]
+        explain_layer = _('It is possible, that one object contains more than one error, ' +
+                          'yet there will be only one pointer per object.  Run this function again, ' +
+                          'when further errors occur.  Remove pointers by deleting the layer named '
+                          '"Troubleshoot" through the objects panel (Object -> Objects...).')
+        explain_layer_parts = self.split_text(explain_layer)
+        for description in explain_layer_parts:
+            text.append([description, "font-style: italic; font-size: 3px;"])
 
         for text_line in text:
             tspan = inkex.etree.Element(
