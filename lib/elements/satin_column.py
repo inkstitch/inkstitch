@@ -320,14 +320,16 @@ class SatinColumn(EmbroideryElement):
         if len(self.rails) < 2:
             yield ValidationError(
                 _("too few paths"),
-                _("satin column: object %(id)s has too few paths.  A satin column should have at least two paths (the rails).") % dict(id=node_id)
+                _("satin column: object has too few subpaths.  A satin column should have at least two subpaths (the rails)."),
+                self.shape.centroid
             )
         elif len(self.csp) == 2:
             if len(self.rails[0]) != len(self.rails[1]):
                 yield ValidationError(
                     _("unequal number of points"),
-                    _("satin column: object %(id)s has two paths with an unequal number of points (%(length1)d and %(length2)d)") %
-                    dict(id=node_id, length1=len(self.rails[0]), length2=len(self.rails[1]))
+                    _("satin column: object has two paths with an unequal number of points (%(length1)d and %(length2)d)") %
+                    dict(length1=len(self.rails[0]), length2=len(self.rails[1])),
+                    self.rails[0].interpolate(0.5, normalized=True)
                 )
         else:
             for rung in self.flattened_rungs:
@@ -338,13 +340,13 @@ class SatinColumn(EmbroideryElement):
                         yield ValidationError(
                             _("rung doesn't intersect rails"),
                             _("satin column: a rung doesn't intersect both rails.") + " " + rung_message,
-                            rung.centroid
+                            rung.interpolate(0.5, normalized=True)
                         )
                     elif not isinstance(intersection, shgeo.Point):
                         yield ValidationError(
                             _("rung intersects too many times"),
                             _("satin column: a rung intersects a rail more than once.") + " " + rung_message,
-                            rung.centroid
+                            rung.interpolate(0.5, normalized=True)
                         )
 
     def reverse(self):

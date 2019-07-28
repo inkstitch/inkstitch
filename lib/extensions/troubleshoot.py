@@ -11,7 +11,7 @@ from ..svg.tags import (INKSCAPE_GROUPMODE, INKSCAPE_LABEL,
 from .base import InkstitchExtension
 
 
-class ExplainValidity(InkstitchExtension):
+class Troubleshoot(InkstitchExtension):
 
     def effect(self):
         if not self.get_elements():
@@ -74,7 +74,7 @@ class ExplainValidity(InkstitchExtension):
                 SVG_GROUP_TAG,
                 {
                     'id': '__validity_layer__',
-                    INKSCAPE_LABEL: _('Explain Validity'),
+                    INKSCAPE_LABEL: _('Troubleshoot'),
                     INKSCAPE_GROUPMODE: 'layer',
                 })
             svg.append(layer)
@@ -100,7 +100,7 @@ class ExplainValidity(InkstitchExtension):
         layer.append(text_container)
 
         text = [
-            [_("Explain Validity"), "font-weight: bold; font-size: 6px;"],
+            [_("Troubleshoot"), "font-weight: bold; font-size: 6px;"],
             ["", ""]
         ]
 
@@ -115,7 +115,7 @@ class ExplainValidity(InkstitchExtension):
             [_("yet there will be only one pointer per object."), "font-style: italic; font-size: 3px;"],
             [_("Run this function again, when further errors occur."), "font-style: italic; font-size: 3px;"],
             ["", ""],
-            [_('Remove pointers by deleting the layer named "Explain Validity"'), "font-style: italic; font-size: 3px;"],
+            [_('Remove pointers by deleting the layer named "Troubleshoot"'), "font-style: italic; font-size: 3px;"],
             [_("through the objects panel (Object -> Objects...)."), "font-style: italic; font-size: 3px;"]
         ]
 
