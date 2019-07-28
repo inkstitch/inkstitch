@@ -10,6 +10,7 @@ from ..stitches import auto_fill
 from ..utils import cache
 from .element import Patch, param
 from .fill import Fill
+from .validation import ValidationError
 
 
 class AutoFill(Fill):
@@ -178,10 +179,22 @@ class AutoFill(Fill):
             return None
 
     def validation_errors(self):
-        for error in super(AutoFill, self).validation_errors():
-            yield error
-
-        # TODO: catch "too small" error
+        if self.shape.area < self.max_stitch_length ** 2:
+            yield ValidationError(
+                _("Too small"),
+                _("AutoFill: This shape is so small that it cannot be filled with rows of stitches.  " +
+                  "It would probably look best as a satin column or running stitch."),
+                self.shape.centroid,
+                [
+                    _('Options to solve the issue:'),
+                    _('* Remove the object'),
+                    _('* Enlarge the object'),
+                    _('* Convert the stitch type to satin column or running stitch.')
+                ]
+            )
+        else:
+            for error in super(AutoFill, self).validation_errors():
+                yield error
 
     def to_patches(self, last_patch):
         stitches = []

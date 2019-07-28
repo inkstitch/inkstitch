@@ -112,7 +112,7 @@ class Fill(EmbroideryElement):
         # biggest path.
         paths = self.paths
         paths.sort(key=lambda point_list: shgeo.Polygon(point_list).area, reverse=True)
-        polygon = shgeo.Polygon(paths[0], paths[1:])
+        polygon = shgeo.MultiPolygon([(paths[0], paths[1:])])
 
         return polygon
 
@@ -125,17 +125,19 @@ class Fill(EmbroideryElement):
             if "Hole lies outside shell" in message:
                 yield ValidationError(
                     _("Gap"),
-                    _("This object is made up of unconnected shapes.  This is not allowed because "
+                    _("Fill: This object is made up of unconnected shapes.  This is not allowed because "
                       "Ink/Stitch doesn't know what order to stitch them in.  Please break this "
                       "object up into separate shapes."),
                     (x, y),
-                    ['Path > Break apart (Shift+Ctrl+K)', '(Optional) Recombine shapes with holes (Ctrl+K).'])
+                    [_('* Path > Break apart (Shift+Ctrl+K)'), _('* (Optional) Recombine shapes with holes (Ctrl+K).')]
+                )
             else:
                 yield ValidationError(
                     _("Crossing border"),
-                    _("Shape is not valid.  This can happen if the border crosses over itself."),
+                    _("Fill: Shape is not valid.  This can happen if the border crosses over itself."),
                     (x, y),
-                    ['Path > Union (Ctrl++)', 'Path > Break apart (Shift+Ctrl+K)', '(Optional) Recombine shapes with holes (Ctrl+K).'])
+                    [_('* Path > Union (Ctrl++)'), _('* Path > Break apart (Shift+Ctrl+K)'), _('* (Optional) Recombine shapes with holes (Ctrl+K).')]
+                )
 
     def to_patches(self, last_patch):
         stitch_lists = legacy_fill(self.shape,

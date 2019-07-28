@@ -115,7 +115,7 @@ class Troubleshoot(InkstitchExtension):
                 text.append([description, "font-size: 3px;"])
             text.append(["", ""])
             for step in error.steps_to_solve:
-                text.append(["* " + step, "font-size: 4px;"])
+                text.append([step, "font-size: 4px;"])
             text.append(["", ""])
 
         explain_layer = _('It is possible, that one object contains more than one error, ' +
