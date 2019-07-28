@@ -296,7 +296,7 @@ class EmbroideryElement(object):
 
         Return value: an iterable or generator of ValidationError instances
         """
-        raise NotImplementedError("Element subclass is expected to implement method: validation_errors")
+        raise NotImplementedError("class %s is expected to implement method: validation_errors" % self.__class__.__name__)
 
     def is_valid(self):
         # We have to iterate since it could be a generator.

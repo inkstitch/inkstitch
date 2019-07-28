@@ -338,13 +338,13 @@ class SatinColumn(EmbroideryElement):
                         yield ValidationError(
                             _("rung doesn't intersect rails"),
                             _("satin column: a rung doesn't intersect both rails.") + " " + rung_message,
-                            rung.coords[0]
+                            rung.centroid
                         )
                     elif not isinstance(intersection, shgeo.Point):
                         yield ValidationError(
                             _("rung intersects too many times"),
                             _("satin column: a rung intersects a rail more than once.") + " " + rung_message,
-                            rung.coords[0]
+                            rung.centroid
                         )
 
     def reverse(self):

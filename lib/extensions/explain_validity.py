@@ -81,8 +81,10 @@ class ExplainValidity(InkstitchExtension):
 
             add_layer_commands(layer, ["ignore_layer"])
 
+        return layer
+
     def add_descriptions(self, errors):
-        svg = self.document.geroot()
+        svg = self.document.getroot()
         layer = svg.find(".//*[@id='__validity_layer__']")
 
         text_x = str(self.unittouu(svg.get('width')) + 5)
@@ -127,5 +129,3 @@ class ExplainValidity(InkstitchExtension):
             )
             tspan.text = text_line[0]
             text_container.append(tspan)
-
-        return layer

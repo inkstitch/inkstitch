@@ -1,4 +1,6 @@
-from ..utils import Point
+from shapely.geometry import Point as ShapelyPoint
+
+from ..utils import Point as InkstitchPoint
 
 
 class ValidationError(object):
@@ -15,10 +17,15 @@ class ValidationError(object):
     def __init__(self, name, description, position=None):
         self.name = name
         self.description = description
-        self.position = Point(*position)
 
+        if isinstance(position, ShapelyPoint):
+            position = (position.x, position.y)
+
+        self.position = InkstitchPoint(*position)
+
+    # These two methods allow us to gather up errors by type in a dict or set
     def __eq__(self, other):
-        return (self.name, self.description, self.position) == (other.name, other.description, other.position)
+        return (self.name, self.description) == (other.name, other.description)
 
     def __hash__(self):
-        return hash((self.name, self.description, self.position))
+        return hash((self.name, self.description))
