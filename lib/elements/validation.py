@@ -11,7 +11,7 @@ class ValidationError(object):
       description - A detailed description of the problem, such as
         "One or more rungs does not intersect both rails."
       position - An optional position where the problem occurs,
-        to aid the user in correcting it.  type: Point or tuple of (x, y) 
+        to aid the user in correcting it.  type: Point or tuple of (x, y)
     '''
 
     def __init__(self, name, description, position=None):

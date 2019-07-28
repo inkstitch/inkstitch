@@ -11,8 +11,6 @@ from ..svg import PIXELS_PER_MM, apply_transforms, convert_length, get_doc_size
 from ..svg.tags import INKSCAPE_LABEL
 from ..utils import cache
 
-from .validation import ValidationError
-
 
 class Patch:
     """A raw collection of stitches with attached instructions."""
