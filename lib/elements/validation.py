@@ -1,6 +1,5 @@
 from shapely.geometry import Point as ShapelyPoint
 
-from ..i18n import _
 from ..utils import Point as InkstitchPoint
 
 

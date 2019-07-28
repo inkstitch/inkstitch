@@ -356,8 +356,6 @@ class SatinColumn(EmbroideryElement):
         # path should have the same number of points, meaning that they
         # will both be made up of the same number of bezier curves.
 
-        node_id = self.node.get("id")
-
         if self.get_style("fill") is not None:
             yield SatinHasFillError(self.shape.centroid)
 
