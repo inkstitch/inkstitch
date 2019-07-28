@@ -371,3 +371,22 @@ def add_commands(element, commands):
         pos = get_command_pos(element, i, len(commands))
         symbol = add_symbol(document, group, command, pos)
         add_connector(document, symbol, element)
+
+
+def add_layer_commands(layer, commands):
+    document = get_document(layer)
+    correction_transform = get_correction_transform(layer)
+
+    for command in commands:
+        ensure_symbol(document, command)
+        inkex.etree.SubElement(layer, SVG_USE_TAG,
+                               {
+                                   "id": generate_unique_id(document, "use"),
+                                   INKSCAPE_LABEL: _("Ink/Stitch Command") + ": %s" % get_command_description(command),
+                                   XLINK_HREF: "#inkstitch_%s" % command,
+                                   "height": "100%",
+                                   "width": "100%",
+                                   "x": "0",
+                                   "y": "-10",
+                                   "transform": correction_transform
+                               })
