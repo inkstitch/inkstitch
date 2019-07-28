@@ -11,6 +11,8 @@ from ..svg import PIXELS_PER_MM, apply_transforms, convert_length, get_doc_size
 from ..svg.tags import INKSCAPE_LABEL
 from ..utils import cache
 
+from .validation import ValidationError
+
 
 class Patch:
     """A raw collection of stitches with attached instructions."""
@@ -292,16 +294,13 @@ class EmbroideryElement(object):
     def validation_errors(self):
         """Return a list of problems with this Element.
 
-        Return value: an iterable or generator of tuples (message, location)
-
-          message - a description of a problem
-          location - coordinates of the problem, or None for general problems
+        Return value: an iterable or generator of ValidationError instances
         """
         raise NotImplementedError("Element subclass is expected to implement method: validation_errors")
 
     def is_valid(self):
         # We have to iterate since it could be a generator.
-        for message, location in self.validation_errors():
+        for error in self.validation_errors():
             return False
 
         return True
@@ -309,6 +308,6 @@ class EmbroideryElement(object):
     def validate(self):
         """Print an error message and exit if this Element is invalid."""
 
-        for message, location in self.validation_errors():
+        for error in self.validation_errors():
             # note that self.fatal() exits, so this only shows the first error
-            self.fatal(message)
+            self.fatal(error.description)

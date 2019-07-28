@@ -7,7 +7,9 @@ from shapely import geometry as shgeo, affinity as shaffinity
 from ..i18n import _
 from ..svg import line_strings_to_csp, point_lists_to_csp
 from ..utils import cache, Point, cut, collapse_duplicate_point
+
 from .element import param, EmbroideryElement, Patch
+from .validation import ValidationError
 
 
 class SatinColumn(EmbroideryElement):
@@ -312,31 +314,38 @@ class SatinColumn(EmbroideryElement):
         node_id = self.node.get("id")
 
         if self.get_style("fill") is not None:
-            yield (_("satin column: object %s has a fill (but should not)") % node_id, None)
+            yield ValidationError(_("satin column has fill"),
+                                  _("satin column: object %s has a fill (but should not)") % node_id)
 
         if len(self.rails) < 2:
-            yield (
-                _("satin column: object %(id)s has too few paths.  A satin column should have at least two paths (the rails).") % dict(id=node_id),
-                None
+            yield ValidationError(
+                _("too few paths"),
+                _("satin column: object %(id)s has too few paths.  A satin column should have at least two paths (the rails).") % dict(id=node_id)
             )
         elif len(self.csp) == 2:
             if len(self.rails[0]) != len(self.rails[1]):
-                yield (
+                yield ValidationError(
+                    _("unequal number of points"),
                     _("satin column: object %(id)s has two paths with an unequal number of points (%(length1)d and %(length2)d)") %
-                    dict(id=node_id, length1=len(self.rails[0]), length2=len(self.rails[1])),
-                    None
+                    dict(id=node_id, length1=len(self.rails[0]), length2=len(self.rails[1]))
                 )
         else:
             for rung in self.flattened_rungs:
                 for rail in self.flattened_rails:
                     intersection = rung.intersection(rail)
+                    rung_message = _("Each rung should intersect both rails once.")
                     if intersection.is_empty:
-                        yield (_("satin column: a rung doesn't intersect both rails.") +
-                               "  " + _("Each rail should intersect both rungs once."),
-                               rung.coords[0])
+                        yield ValidationError(
+                            _("rung doesn't intersect rails"),
+                            _("satin column: a rung doesn't intersect both rails.") + " " + rung_message,
+                            rung.coords[0]
+                        )
                     elif not isinstance(intersection, shgeo.Point):
-                        yield (_("satin column: a rung intersects a rail more than once.") +
-                               "  " + _("Each rail should intersect both rungs once."))
+                        yield ValidationError(
+                            _("rung intersects too many times"),
+                            _("satin column: a rung intersects a rail more than once.") + " " + rung_message,
+                            rung.coords[0]
+                        )
 
     def reverse(self):
         """Return a new SatinColumn like this one but in the opposite direction.

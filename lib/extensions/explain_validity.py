@@ -23,18 +23,20 @@ class ExplainValidity(InkstitchExtension):
         level = logger.level
         logger.setLevel(logging.CRITICAL)
 
-        invalid_shapes = False
+        errors = set()
         for element in self.elements:
-            for message, location in element.validation_errors():
-                invalid_shapes = True
-                self.insert_invalid_pointer(message, location[0], location[1])
+            for error in element.validation_errors():
+                errors.add(error)
+                self.insert_invalid_pointer(error)
 
         logger.setLevel(level)
 
-        if invalid_shapes is False:
+        if errors:
+            self.add_descriptions(errors)
+        else:
             inkex.errormsg(_("All selected shapes are valid!"))
 
-    def insert_invalid_pointer(self, message, x, y):
+    def insert_invalid_pointer(self, error):
         layer = self.get_or_create_validity_layer()
         correction_transform = get_correction_transform(layer)
 
@@ -42,33 +44,27 @@ class ExplainValidity(InkstitchExtension):
             SVG_PATH_TAG,
             {
                 "id": self.uniqueId("inkstitch__invalid_pointer__"),
-                "d": "m %s,%s 4,20 h -8 l 4,-20" % (x, y),
+                "d": "m %s,%s 4,20 h -8 l 4,-20" % (error.position.x, error.position.y),
                 "style": "fill:#ff0000;stroke:#ffffff;stroke-width:0.2;",
                 INKSCAPE_LABEL: _('Invalid Pointer'),
                 "transform": correction_transform
-             }
-             )
+            }
+        )
         layer.insert(0, path)
 
         text = inkex.etree.Element(
             SVG_TEXT_TAG,
             {
-                "x": str(x),
-                "y": str(float(y) + 30),
+                "x": str(error.position.x),
+                "y": str(float(error.position.y) + 30),
                 "transform": correction_transform,
                 "style": "fill:#ff0000;troke:#ffffff;stroke-width:0.2;font-size:8px;text-align:center;text-anchor:middle"
             }
-            )
+        )
         layer.append(text)
 
         tspan = inkex.etree.Element(SVG_TSPAN_TAG)
-        if message == "Self-intersection":
-            tspan.text = _("Self-intersection")
-        elif message == "Hole lies outside shell":
-            tspan.text = _("Gap")
-        else:
-            # different error (message not translatable)
-            tspan.text = message
+        tspan.text = error.name
         text.append(tspan)
 
     def get_or_create_validity_layer(self):
@@ -84,52 +80,56 @@ class ExplainValidity(InkstitchExtension):
                     INKSCAPE_GROUPMODE: 'layer',
                 })
             svg.append(layer)
-            layer = svg.find(".//*[@id='__validity_layer__']")
 
             ignore_layer = IgnoreValidityLayer()
             ignore_layer.insert_layer_ignore_command(layer)
 
-            text_x = str(self.unittouu(svg.get('width')) + 5)
+    def add_descriptions(self, errors):
+        svg = self.document.geroot()
+        layer = svg.find(".//*[@id='__validity_layer__']")
 
-            text_container = inkex.etree.Element(
-                SVG_TEXT_TAG,
+        text_x = str(self.unittouu(svg.get('width')) + 5)
+
+        text_container = inkex.etree.Element(
+            SVG_TEXT_TAG,
+            {
+                "x": text_x,
+                "y": str(5),
+                "style": "fill:#000000;font-size:5px;line-height:1;"
+            }
+        )
+        layer.append(text_container)
+
+        text = [
+            [_("Explain Validity"), "font-weight: bold; font-size: 6px;"],
+            ["", ""]
+        ]
+
+        for error in errors:
+            text.append([error.name, "font-weight: bold;"])
+            text.append(["* " + error.description, "font-size: 4px;"])
+            text.append(["", ""])
+
+        text += [
+            ["", ""],
+            [_("It is possible, that one object contains more than one error,"), "font-style: italic; font-size: 3px;"],
+            [_("yet there will be only one pointer per object."), "font-style: italic; font-size: 3px;"],
+            [_("Run this function again, when further errors occur."), "font-style: italic; font-size: 3px;"],
+            ["", ""],
+            [_('Remove pointers by deleting the layer named "Explain Validity"'), "font-style: italic; font-size: 3px;"],
+            [_("through the objects panel (Object -> Objects...)."), "font-style: italic; font-size: 3px;"]
+        ]
+
+        for text_line in text:
+            tspan = inkex.etree.Element(
+                SVG_TSPAN_TAG,
                 {
-                    "x": text_x,
-                    "y": str(5),
-                    "style": "fill:#000000;font-size:5px;line-height:1;"
+                    SODIPODI_ROLE: "line",
+                    "style": text_line[1]
                 }
-                )
-            layer.append(text_container)
-
-            text = [
-                        [_("Explain Validity"), "font-weight: bold; font-size: 6px;"],
-                        ["", ""],
-                        [_("Self-Intersection"), "font-weight: bold;"],
-                        [_("* Path > Union (Ctrl++)"), "font-size: 4px;"],
-                        [_("* Path > Break apart (Shift+Ctrl+K)"), "font-size: 4px;"],
-                        ["", ""],
-                        [_("Gap"), "font-weight: bold;"],
-                        [_("* Path > Break apart (Shift+Ctrl+K)"), "font-size: 4px;"],
-                        [_("* (Optional) Recombine shapes with holes (Ctrl+K)."), "font-size: 4px;"],
-                        ["", ""],
-                        [_("It is possible, that one object contains more than one error,"), "font-style: italic; font-size: 3px;"],
-                        [_("yet there will be only one pointer per object."), "font-style: italic; font-size: 3px;"],
-                        [_("Run this function again, when further errors occur."), "font-style: italic; font-size: 3px;"],
-                        ["", ""],
-                        [_('Remove pointers by deleting the layer named "Explain Validity"'), "font-style: italic; font-size: 3px;"],
-                        [_("through the objects panel (Object -> Objects...)."), "font-style: italic; font-size: 3px;"]
-                ]
-
-            for text_line in text:
-                tspan = inkex.etree.Element(
-                    SVG_TSPAN_TAG,
-                    {
-                        SODIPODI_ROLE: "line",
-                        "style": text_line[1]
-                    }
-                    )
-                tspan.text = text_line[0]
-                text_container.append(tspan)
+            )
+            tspan.text = text_line[0]
+            text_container.append(tspan)
 
         return layer
 
