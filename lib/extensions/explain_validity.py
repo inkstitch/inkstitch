@@ -2,15 +2,13 @@ import logging
 
 import inkex
 
-from ..commands import get_command_description
+from ..commands import add_layer_commands
 from ..i18n import _
 from ..svg import get_correction_transform
 from ..svg.tags import (INKSCAPE_GROUPMODE, INKSCAPE_LABEL,
                         SODIPODI_ROLE, SVG_GROUP_TAG, SVG_PATH_TAG,
-                        SVG_TEXT_TAG, SVG_TSPAN_TAG, SVG_USE_TAG,
-                        XLINK_HREF)
+                        SVG_TEXT_TAG, SVG_TSPAN_TAG)
 from .base import InkstitchExtension
-from .commands import CommandsExtension
 
 
 class ExplainValidity(InkstitchExtension):
@@ -81,8 +79,7 @@ class ExplainValidity(InkstitchExtension):
                 })
             svg.append(layer)
 
-            ignore_layer = IgnoreValidityLayer()
-            ignore_layer.insert_layer_ignore_command(layer)
+            add_layer_commands(layer, ["ignore_layer"])
 
     def add_descriptions(self, errors):
         svg = self.document.geroot()
@@ -132,23 +129,3 @@ class ExplainValidity(InkstitchExtension):
             text_container.append(tspan)
 
         return layer
-
-
-class IgnoreValidityLayer(CommandsExtension):
-    COMMANDS = ['ignore_layer']
-
-    def insert_layer_ignore_command(self, layer):
-        command = 'ignore_layer'
-        correction_transform = get_correction_transform(layer)
-
-        inkex.etree.SubElement(layer, SVG_USE_TAG,
-                               {
-                                   "id": self.uniqueId("use"),
-                                   INKSCAPE_LABEL: _("Ink/Stitch Command") + ": %s" % get_command_description(command),
-                                   XLINK_HREF: "#inkstitch_%s" % command,
-                                   "height": "100%",
-                                   "width": "100%",
-                                   "x": "0",
-                                   "y": "-10",
-                                   "transform": correction_transform
-                               })
