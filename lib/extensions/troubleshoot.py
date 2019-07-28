@@ -21,6 +21,8 @@ class Troubleshoot(InkstitchExtension):
         level = logger.level
         logger.setLevel(logging.CRITICAL)
 
+        self.create_troubleshoot_layer()
+
         error_types = set()
         for element in self.elements:
             for error in element.validation_errors():
@@ -35,8 +37,7 @@ class Troubleshoot(InkstitchExtension):
             inkex.errormsg(_("All selected shapes are valid!"))
 
     def insert_invalid_pointer(self, error):
-        layer = self.get_or_create_validity_layer()
-        correction_transform = get_correction_transform(layer)
+        correction_transform = get_correction_transform(self.troubleshoot_layer)
 
         path = inkex.etree.Element(
             SVG_PATH_TAG,
@@ -48,7 +49,7 @@ class Troubleshoot(InkstitchExtension):
                 "transform": correction_transform
             }
         )
-        layer.insert(0, path)
+        self.troubleshoot_layer.insert(0, path)
 
         text = inkex.etree.Element(
             SVG_TEXT_TAG,
@@ -59,13 +60,13 @@ class Troubleshoot(InkstitchExtension):
                 "style": "fill:#ff0000;troke:#ffffff;stroke-width:0.2;font-size:8px;text-align:center;text-anchor:middle"
             }
         )
-        layer.append(text)
+        self.troubleshoot_layer.append(text)
 
         tspan = inkex.etree.Element(SVG_TSPAN_TAG)
         tspan.text = error.name
         text.append(tspan)
 
-    def get_or_create_validity_layer(self):
+    def create_troubleshoot_layer(self):
         svg = self.document.getroot()
         layer = svg.find(".//*[@id='__validity_layer__']")
 
@@ -84,7 +85,7 @@ class Troubleshoot(InkstitchExtension):
             # Clear out everything from the last run
             del layer[:]
 
-        return layer
+        self.troubleshoot_layer = layer
 
     def split_text(self, string, n=15):
         pieces = string.split()
@@ -92,8 +93,6 @@ class Troubleshoot(InkstitchExtension):
 
     def add_descriptions(self, error_types):
         svg = self.document.getroot()
-        layer = svg.find(".//*[@id='__validity_layer__']")
-
         text_x = str(self.unittouu(svg.get('width')) + 5)
 
         text_container = inkex.etree.Element(
@@ -104,7 +103,7 @@ class Troubleshoot(InkstitchExtension):
                 "style": "fill:#000000;font-size:5px;line-height:1;"
             }
         )
-        layer.append(text_container)
+        self.troubleshoot_layer.append(text_container)
 
         text = [
             [_("Troubleshoot"), "font-weight: bold; font-size: 6px;"],
