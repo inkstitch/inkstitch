@@ -138,8 +138,11 @@ class ParamsTab(ScrolledPanel):
 
         if self.toggle:
             checked = self.enabled()
-            if self.toggle_checkbox in self.changed_inputs and not self.toggle.inverse:
-                values[self.toggle.name] = checked
+            if self.toggle_checkbox in self.changed_inputs:
+                if self.toggle.inverse:
+                    values[self.toggle.name] = not checked
+                else:
+                    values[self.toggle.name] = checked
 
             if not checked:
                 # Ignore params on this tab if the toggle is unchecked,

@@ -1,6 +1,7 @@
 import math
 
 from shapely import geometry as shgeo
+from shapely.validation import explain_validity
 
 from ..i18n import _
 from ..stitches import legacy_fill
@@ -104,37 +105,23 @@ class Fill(EmbroideryElement):
     @property
     @cache
     def shape(self):
-        poly_ary = []
-        for sub_path in self.paths:
-            point_ary = []
-            last_pt = None
-            for pt in sub_path:
-                if (last_pt is not None):
-                    vp = (pt[0] - last_pt[0], pt[1] - last_pt[1])
-                    dp = math.sqrt(math.pow(vp[0], 2.0) + math.pow(vp[1], 2.0))
-                    # dbg.write("dp %s\n" % dp)
-                    if (dp > 0.01):
-                        # I think too-close points confuse shapely.
-                        point_ary.append(pt)
-                        last_pt = pt
-                else:
-                    last_pt = pt
-            if len(point_ary) > 2:
-                poly_ary.append(point_ary)
-
-        if not poly_ary:
-            self.fatal(_("shape %s is so small that it cannot be filled with stitches.  Please make it bigger or delete it.") % self.node.get('id'))
-
         # shapely's idea of "holes" are to subtract everything in the second set
         # from the first. So let's at least make sure the "first" thing is the
         # biggest path.
-        # TODO: actually figure out which things are holes and which are shells
-        poly_ary.sort(key=lambda point_list: shgeo.Polygon(point_list).area, reverse=True)
-
-        polygon = shgeo.MultiPolygon([(poly_ary[0], poly_ary[1:])])
+        paths = self.paths
+        paths.sort(key=lambda point_list: shgeo.Polygon(point_list).area, reverse=True)
+        polygon = shgeo.MultiPolygon([(paths[0], paths[1:])])
 
         if not polygon.is_valid:
-            self.fatal(_("shape is not valid.  This can happen if the border crosses over itself."))
+            why = explain_validity(polygon)
+
+            # I Wish this weren't so brittle...
+            if "Hole lies outside shell" in why:
+                self.fatal(_("this object is made up of unconnected shapes.  This is not allowed because "
+                             "Ink/Stitch doesn't know what order to stitch them in.  Please break this "
+                             "object up into separate shapes."))
+            else:
+                self.fatal(_("shape is not valid.  This can happen if the border crosses over itself."))
 
         return polygon
 
