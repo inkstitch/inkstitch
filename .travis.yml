@@ -27,9 +27,12 @@ matrix:
     if: type != cron AND (tag =~ ^v[0-9.]+$ OR branch != master)
   - language: generic
     os: osx
-    osx_image: xcode11
+    osx_image: xcode10.2
     sudo: required
-    env: BUILD=osx
+    env:
+      - BUILD=osx
+      - ELECTRON_CACHE=$HOME/.cache/electron
+      - ELECTRON_BUILDER_CACHE=$HOME/.cache/electron-builder
     if: type != cron AND (tag =~ ^v[0-9.]+$ OR branch != master)
   - language: generic
     os: osx
