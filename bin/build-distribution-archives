@@ -4,7 +4,9 @@ OS="${TRAVIS_OS_NAME}"
 ARCH="$(uname -m)"
 
 MACVERSION="${TRAVIS_OSX_IMAGE}"
-if [ ${MACVERSION} = "xcode9.2" ]; then
+if [ ${MACVERSION} = "xcode7.3" ]; then
+    MACVERSION="el_capitan"
+elif [ ${MACVERSION} = "xcode9.2" ]; then
     MACVERSION="sierra"
 elif [ ${MACVERSION} = "xcode9.4" ]; then
     MACVERSION="high_sierra"
