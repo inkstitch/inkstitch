@@ -1,4 +1,5 @@
 import logging
+import textwrap
 
 import inkex
 
@@ -87,10 +88,6 @@ class Troubleshoot(InkstitchExtension):
 
         self.troubleshoot_layer = layer
 
-    def split_text(self, string, n=15):
-        pieces = string.split()
-        return (" ".join(pieces[i:i + n]) for i in xrange(0, len(pieces), n))
-
     def add_descriptions(self, error_types):
         svg = self.document.getroot()
         text_x = str(self.unittouu(svg.get('width')) + 5)
@@ -112,7 +109,7 @@ class Troubleshoot(InkstitchExtension):
 
         for error in error_types:
             text.append([error.name, "font-weight: bold;"])
-            description_parts = self.split_text(error.description)
+            description_parts = textwrap.wrap(error.description, 60)
             for description in description_parts:
                 text.append([description, "font-size: 3px;"])
             text.append(["", ""])
@@ -124,7 +121,7 @@ class Troubleshoot(InkstitchExtension):
                           'yet there will be only one pointer per object.  Run this function again, ' +
                           'when further errors occur.  Remove pointers by deleting the layer named '
                           '"Troubleshoot" through the objects panel (Object -> Objects...).')
-        explain_layer_parts = self.split_text(explain_layer)
+        explain_layer_parts = textwrap.wrap(explain_layer, 60)
         for description in explain_layer_parts:
             text.append([description, "font-style: italic; font-size: 3px;"])
 
