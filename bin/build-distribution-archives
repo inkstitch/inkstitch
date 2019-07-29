@@ -10,7 +10,7 @@ elif [ ${MACVERSION} = "xcode9.2" ]; then
     MACVERSION="sierra"
 elif [ ${MACVERSION} = "xcode9.4" ]; then
     MACVERSION="high_sierra"
-elif [ ${MACVERSION} = "xcode11" ]; then
+elif [ ${MACVERSION} = "xcode10.2" ]; then
     MACVERSION="mojave"
 fi
 
