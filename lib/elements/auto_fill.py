@@ -2,6 +2,7 @@ import math
 import sys
 import traceback
 
+from shapely import affinity as shaffinity
 from shapely import geometry as shgeo
 
 from ..exceptions import InkstitchException
@@ -190,11 +191,38 @@ class AutoFill(Fill):
             return None
 
     def validation_errors(self):
-        if self.shape.area < self.max_stitch_length ** 2:
+
+        if self._too_small(self.angle, self.row_spacing, self.max_stitch_length):
             yield TooSmallError(self.shape.centroid)
-        else:
-            for error in super(AutoFill, self).validation_errors():
-                yield error
+
+        if self.fill_underlay:
+            if self._too_small(self.fill_underlay_angle, self.fill_underlay_row_spacing, self.fill_underlay_max_stitch_length):
+                yield TooSmallError(self.shape.centroid)
+
+        for error in super(AutoFill, self).validation_errors():
+            yield error
+
+    def _too_small(self, angle, row_spacing, max_stitch_length):
+        """Check if the shape is narrow enough to break the auto-fill algorithm.
+
+        The auto-fill algorithm can fail if a shape is so narrow that it fits
+        between two rows of stitching.  This could make it so that the auto-
+        fill algorithm produces an empty graph, and generally means that the
+        shape is too small to fill with rows of stitching.
+
+        We also check if the shape is narrower left-to-right than the fill stitch
+        length.  This doesn't technically break the auto-fill algorithm, but it
+        really makes much more sense to use a satin stitch in this case.
+        """
+
+        # It all depends on how the shape is oriented relative to the rows of
+        # stitching.  This takes into account the fill angle to calculate the
+        # width and height of the shape.
+        minx, miny, maxx, maxy = shaffinity.rotate(self.shape, angle, origin='center', use_radians=True).bounds
+        height = maxy - miny
+        width = maxx - minx
+
+        return height < row_spacing or width < max_stitch_length
 
     def to_patches(self, last_patch):
         stitches = []
