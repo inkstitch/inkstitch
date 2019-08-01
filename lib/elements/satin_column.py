@@ -13,8 +13,8 @@ from .validation import ValidationError
 
 
 class SatinHasFillError(ValidationError):
-    name = _("satin column has fill")
-    description = _("satin column: object has a fill (but should not)")
+    name = _("Satin column has fill")
+    description = _("Satin column: Object has a fill (but should not)")
     steps_to_solve = [
         _("* Select this object."),
         _("* Open the Fill and Stroke panel"),

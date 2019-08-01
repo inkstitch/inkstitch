@@ -19,6 +19,7 @@ class ValidationError(object):
     name = None
     description = None
     steps_to_solve = []
+    is_warning = False
 
     def __init__(self, position=None):
         if isinstance(position, ShapelyPoint):

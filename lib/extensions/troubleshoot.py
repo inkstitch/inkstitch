@@ -40,28 +40,39 @@ class Troubleshoot(InkstitchExtension):
     def insert_invalid_pointer(self, error):
         correction_transform = get_correction_transform(self.troubleshoot_layer)
 
+        if error.is_warning:
+            fill_color = "#ffdd00"
+            layer = self.warning_group
+        else:
+            fill_color = "#ff0000"
+            layer = self.error_group
+
+        pointer_style = "stroke:#ffffff;stroke-width:0.2;fill:%s;" % (fill_color)
+        text_style = "fill:%s;stroke:#ffffff;stroke-width:0.2;font-size:8px;text-align:center;text-anchor:middle" % (fill_color)
+
         path = inkex.etree.Element(
             SVG_PATH_TAG,
             {
                 "id": self.uniqueId("inkstitch__invalid_pointer__"),
                 "d": "m %s,%s 4,20 h -8 l 4,-20" % (error.position.x, error.position.y),
-                "style": "fill:#ff0000;stroke:#ffffff;stroke-width:0.2;",
+                "style": pointer_style,
                 INKSCAPE_LABEL: _('Invalid Pointer'),
                 "transform": correction_transform
             }
         )
-        self.troubleshoot_layer.insert(0, path)
+        layer.insert(0, path)
 
         text = inkex.etree.Element(
             SVG_TEXT_TAG,
             {
+                INKSCAPE_LABEL: _('Description'),
                 "x": str(error.position.x),
                 "y": str(float(error.position.y) + 30),
                 "transform": correction_transform,
-                "style": "fill:#ff0000;troke:#ffffff;stroke-width:0.2;font-size:8px;text-align:center;text-anchor:middle"
+                "style": text_style
             }
         )
-        self.troubleshoot_layer.append(text)
+        layer.append(text)
 
         tspan = inkex.etree.Element(SVG_TSPAN_TAG)
         tspan.text = error.name
@@ -69,24 +80,45 @@ class Troubleshoot(InkstitchExtension):
 
     def create_troubleshoot_layer(self):
         svg = self.document.getroot()
-        layer = svg.find(".//*[@id='__validity_layer__']")
+        layer = svg.find(".//*[@id='__validation_layer__']")
 
         if layer is None:
             layer = inkex.etree.Element(
                 SVG_GROUP_TAG,
                 {
-                    'id': '__validity_layer__',
+                    'id': '__validation_layer__',
                     INKSCAPE_LABEL: _('Troubleshoot'),
                     INKSCAPE_GROUPMODE: 'layer',
                 })
             svg.append(layer)
 
-            add_layer_commands(layer, ["ignore_layer"])
         else:
             # Clear out everything from the last run
             del layer[:]
 
+        add_layer_commands(layer, ["ignore_layer"])
+
+        error_group = inkex.etree.SubElement(
+            layer,
+            SVG_GROUP_TAG,
+            {
+                "id": '__validation_errors__',
+                INKSCAPE_LABEL: _("Errors"),
+            })
+        layer.append(error_group)
+
+        warning_group = inkex.etree.SubElement(
+            layer,
+            SVG_GROUP_TAG,
+            {
+                "id": '__validation_warnings__',
+                INKSCAPE_LABEL: _("Warnings"),
+            })
+        layer.append(warning_group)
+
         self.troubleshoot_layer = layer
+        self.error_group = error_group
+        self.warning_group = warning_group
 
     def add_descriptions(self, error_types):
         svg = self.document.getroot()
@@ -108,7 +140,11 @@ class Troubleshoot(InkstitchExtension):
         ]
 
         for error in error_types:
-            text.append([error.name, "font-weight: bold;"])
+            text_color = "#ff0000"
+            if error.is_warning:
+                text_color = "#ffdd00"
+
+            text.append([error.name, "font-weight: bold; fill:%s;" % text_color])
             description_parts = textwrap.wrap(error.description, 60)
             for description in description_parts:
                 text.append([description, "font-size: 3px;"])

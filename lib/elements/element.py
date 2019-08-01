@@ -299,7 +299,8 @@ class EmbroideryElement(object):
     def is_valid(self):
         # We have to iterate since it could be a generator.
         for error in self.validation_errors():
-            return False
+            if not error.is_warning:
+                return False
 
         return True
 
@@ -307,5 +308,6 @@ class EmbroideryElement(object):
         """Print an error message and exit if this Element is invalid."""
 
         for error in self.validation_errors():
-            # note that self.fatal() exits, so this only shows the first error
-            self.fatal(error.description)
+            if not error.is_warning:
+                # note that self.fatal() exits, so this only shows the first error
+                self.fatal(error.description)
