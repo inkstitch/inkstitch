@@ -9,18 +9,6 @@ from ..stitches import auto_fill
 from ..utils import cache
 from .element import Patch, param
 from .fill import Fill
-from .validation import ValidationError
-
-
-class TooSmallError(ValidationError):
-    name = _("Too Small")
-    description = _("AutoFill: This shape is so small that it cannot be filled with rows of stitches.  "
-                    "It would probably look best as a satin column or running stitch.")
-    steps_to_solve = [
-        _('* Remove the object'),
-        _('* Enlarge the object'),
-        _('* Convert the stitch type to satin column or running stitch.')
-    ]
 
 
 class AutoFill(Fill):
