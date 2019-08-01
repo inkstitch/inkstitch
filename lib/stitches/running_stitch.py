@@ -1,8 +1,5 @@
 from copy import copy
 
-from shapely import geometry as shgeo
-from ..utils import Point
-
 """ Utility functions to produce running stitches. """
 
 
@@ -17,9 +14,6 @@ def running_stitch(points, stitch_length):
     The path is described by a set of line segments, each connected to the next.
     The line segments are described by a sequence of points.
     """
-
-    if isinstance(points, shgeo.LineString):
-        points = [Point(*point) for point in points.coords]
 
     if len(points) < 2:
         return []

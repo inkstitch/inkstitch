@@ -2,10 +2,8 @@ import math
 import sys
 import traceback
 
-from shapely import affinity as shaffinity
 from shapely import geometry as shgeo
 
-from ..exceptions import InkstitchException
 from ..i18n import _
 from ..stitches import auto_fill
 from ..utils import cache
@@ -221,7 +219,7 @@ class AutoFill(Fill):
                                       starting_point,
                                       ending_point,
                                       self.underpath))
-        except Exception, exc:
+        except Exception:
             if hasattr(sys, 'gettrace') and sys.gettrace():
                 # if we're debugging, let the exception bubble up
                 raise

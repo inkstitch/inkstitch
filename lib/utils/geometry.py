@@ -128,3 +128,7 @@ class Point:
 
     def __len__(self):
         return 2
+
+
+def line_string_to_point_list(line_string):
+    return [Point(*point) for point in line_string.coords]

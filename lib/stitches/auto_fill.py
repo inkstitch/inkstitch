@@ -10,7 +10,7 @@ from shapely.strtree import STRtree
 
 from ..debug import debug
 from ..svg import PIXELS_PER_MM
-from ..utils.geometry import Point as InkstitchPoint
+from ..utils.geometry import Point as InkstitchPoint, line_string_to_point_list
 from .fill import intersect_region_with_grating, stitch_row
 from .running_stitch import running_stitch
 
@@ -198,10 +198,10 @@ def fallback(shape, running_stitch_length):
     If graph_is_valid() returns False, we're not going to be able to run the
     auto-fill algorithm.  Instead, we'll just do running stitch around the
     outside of the shape.  In all likelihood, the shape is so small it won't
-    matter.    
+    matter.
     """
 
-    return running_stitch(shape.boundary[0], running_stitch_length)
+    return running_stitch(line_string_to_point_list(shape.boundary[0]), running_stitch_length)
 
 
 @debug.time
