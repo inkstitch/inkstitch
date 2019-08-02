@@ -1,3 +1,4 @@
+import logging
 import math
 import re
 
@@ -138,7 +139,17 @@ class Fill(EmbroideryElement):
         return polygon
 
     def validation_errors(self):
-        if not self.shape.is_valid:
+        # Shapely will log to stdout to complain about the shape unless we make
+        # it shut up.
+        logger = logging.getLogger('shapely.geos')
+        level = logger.level
+        logger.setLevel(logging.CRITICAL)
+
+        valid = self.shape.is_valid
+
+        logger.setLevel(level)
+
+        if not valid:
             why = explain_validity(self.shape)
             message, x, y = re.findall(r".+?(?=\[)|\d+\.\d+", why)
 

@@ -20,10 +20,6 @@ class Troubleshoot(InkstitchExtension):
         if not self.get_elements():
             return
 
-        logger = logging.getLogger('shapely.geos')
-        level = logger.level
-        logger.setLevel(logging.CRITICAL)
-
         self.create_troubleshoot_layer()
 
         problem_types = set()
@@ -31,8 +27,6 @@ class Troubleshoot(InkstitchExtension):
             for problem in chain(element.validation_errors(), element.validation_warnings()):
                 problem_types.add(type(problem))
                 self.insert_pointer(problem)
-
-        logger.setLevel(level)
 
         if problem_types:
             self.add_descriptions(problem_types)
