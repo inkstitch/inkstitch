@@ -3,7 +3,7 @@ from shapely.geometry import Point as ShapelyPoint
 from ..utils import Point as InkstitchPoint
 
 
-class ValidationError(object):
+class ValidationMessage(object):
     '''Holds information about a problem with an element.
 
     Attributes:
@@ -19,10 +19,23 @@ class ValidationError(object):
     name = None
     description = None
     steps_to_solve = []
-    is_warning = False
 
     def __init__(self, position=None):
         if isinstance(position, ShapelyPoint):
             position = (position.x, position.y)
 
         self.position = InkstitchPoint(*position)
+
+
+class ValidationError(ValidationMessage):
+    """A problem that will prevent the shape from being embroidered."""
+    pass
+
+
+class ValidationWarning(ValidationMessage):
+    """A problem that won't prevent a shape from being embroidered.
+
+    The user will almost certainly want to fix the warning, but if they
+    don't, Ink/Stitch will do its best to process the object.
+    """
+    pass

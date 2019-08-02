@@ -1,9 +1,11 @@
+from itertools import chain
 import logging
 import textwrap
 
 import inkex
 
 from ..commands import add_layer_commands
+from ..elements.validation import ValidationWarning, ValidationError
 from ..i18n import _
 from ..svg import get_correction_transform
 from ..svg.tags import (INKSCAPE_GROUPMODE, INKSCAPE_LABEL,
@@ -24,26 +26,26 @@ class Troubleshoot(InkstitchExtension):
 
         self.create_troubleshoot_layer()
 
-        error_types = set()
+        problem_types = set()
         for element in self.elements:
-            for error in element.validation_errors():
-                error_types.add(type(error))
-                self.insert_invalid_pointer(error)
+            for problem in chain(element.validation_errors(), element.validation_warnings()):
+                problem_types.add(type(problem))
+                self.insert_pointer(problem)
 
         logger.setLevel(level)
 
-        if error_types:
-            self.add_descriptions(error_types)
+        if problem_types:
+            self.add_descriptions(problem_types)
         else:
             inkex.errormsg(_("All selected shapes are valid!"))
 
-    def insert_invalid_pointer(self, error):
+    def insert_pointer(self, problem):
         correction_transform = get_correction_transform(self.troubleshoot_layer)
 
-        if error.is_warning:
+        if isinstance(problem, ValidationWarning):
             fill_color = "#ffdd00"
             layer = self.warning_group
-        else:
+        elif isinstance(problem, ValidationError):
             fill_color = "#ff0000"
             layer = self.error_group
 
@@ -54,7 +56,7 @@ class Troubleshoot(InkstitchExtension):
             SVG_PATH_TAG,
             {
                 "id": self.uniqueId("inkstitch__invalid_pointer__"),
-                "d": "m %s,%s 4,20 h -8 l 4,-20" % (error.position.x, error.position.y),
+                "d": "m %s,%s 4,20 h -8 l 4,-20" % (problem.position.x, problem.position.y),
                 "style": pointer_style,
                 INKSCAPE_LABEL: _('Invalid Pointer'),
                 "transform": correction_transform
@@ -66,8 +68,8 @@ class Troubleshoot(InkstitchExtension):
             SVG_TEXT_TAG,
             {
                 INKSCAPE_LABEL: _('Description'),
-                "x": str(error.position.x),
-                "y": str(float(error.position.y) + 30),
+                "x": str(problem.position.x),
+                "y": str(float(problem.position.y) + 30),
                 "transform": correction_transform,
                 "style": text_style
             }
@@ -75,7 +77,7 @@ class Troubleshoot(InkstitchExtension):
         layer.append(text)
 
         tspan = inkex.etree.Element(SVG_TSPAN_TAG)
-        tspan.text = error.name
+        tspan.text = problem.name
         text.append(tspan)
 
     def create_troubleshoot_layer(self):
@@ -120,7 +122,7 @@ class Troubleshoot(InkstitchExtension):
         self.error_group = error_group
         self.warning_group = warning_group
 
-    def add_descriptions(self, error_types):
+    def add_descriptions(self, problem_types):
         svg = self.document.getroot()
         text_x = str(self.unittouu(svg.get('width')) + 5)
 
@@ -139,17 +141,17 @@ class Troubleshoot(InkstitchExtension):
             ["", ""]
         ]
 
-        for error in error_types:
+        for problem in problem_types:
             text_color = "#ff0000"
-            if error.is_warning:
+            if issubclass(problem, ValidationWarning):
                 text_color = "#ffdd00"
 
-            text.append([error.name, "font-weight: bold; fill:%s;" % text_color])
-            description_parts = textwrap.wrap(error.description, 60)
+            text.append([problem.name, "font-weight: bold; fill:%s;" % text_color])
+            description_parts = textwrap.wrap(problem.description, 60)
             for description in description_parts:
                 text.append([description, "font-size: 3px;"])
             text.append(["", ""])
-            for step in error.steps_to_solve:
+            for step in problem.steps_to_solve:
                 text.append([step, "font-size: 4px;"])
             text.append(["", ""])
 

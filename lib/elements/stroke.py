@@ -202,7 +202,3 @@ class Stroke(EmbroideryElement):
                 patches.append(patch)
 
         return patches
-
-    def validation_errors(self):
-        # Stroke can handle any kind of path, so there's nothing to check for.
-        return []

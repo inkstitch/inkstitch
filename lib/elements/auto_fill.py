@@ -10,15 +10,14 @@ from ..utils import cache
 from .element import Patch, param
 from .fill import Fill
 
-from .validation import ValidationError
+from .validation import ValidationWarning
 
 
-class SmallShapeWarning(ValidationError):
+class SmallShapeWarning(ValidationWarning):
     name = _("Small Fill")
-    description = _("Warning: This fill object is valid. "
-                    "But it is so small, that it possibly looks better as running stitch or satin column. "
-                    "For very small shapes Ink/Stitch will automatically use running stitch around the outline.")
-    is_warning = True
+    description = _("This fill object is so small that it would probably look better as running stitch or satin column. "
+                    "For very small shapes, fill stitch is not possible, and Ink/Stitch will use running stitch around "
+                    "the outline instead.")
 
 
 class AutoFill(Fill):
@@ -235,9 +234,9 @@ class AutoFill(Fill):
 
         return [Patch(stitches=stitches, color=self.color)]
 
-    def validation_errors(self):
+    def validation_warnings(self):
         if self.shape.area < 20:
             yield SmallShapeWarning(self.shape.centroid)
 
-        for error in super(AutoFill, self).validation_errors():
-            yield error
+        for warning in super(AutoFill, self).validation_warnings():
+            yield warning

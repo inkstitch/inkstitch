@@ -290,17 +290,28 @@ class EmbroideryElement(object):
         sys.exit(1)
 
     def validation_errors(self):
-        """Return a list of problems with this Element.
+        """Return a list of errors with this Element.
+
+        Validation errors will prevent the Element from being stitched.
 
         Return value: an iterable or generator of instances of subclasses of ValidationError
         """
-        raise NotImplementedError("class %s is expected to implement method: validation_errors" % self.__class__.__name__)
+        return []
+
+    def validation_warnings(self):
+        """Return a list of warnings about this Element.
+
+        Validation warnings don't prevent the Element from being stitched but
+        the user should probably fix them anyway.
+
+        Return value: an iterable or generator of instances of subclasses of ValidationWarning
+        """
+        return []
 
     def is_valid(self):
         # We have to iterate since it could be a generator.
         for error in self.validation_errors():
-            if not error.is_warning:
-                return False
+            return False
 
         return True
 
@@ -308,6 +319,5 @@ class EmbroideryElement(object):
         """Print an error message and exit if this Element is invalid."""
 
         for error in self.validation_errors():
-            if not error.is_warning:
-                # note that self.fatal() exits, so this only shows the first error
-                self.fatal(error.description)
+            # note that self.fatal() exits, so this only shows the first error
+            self.fatal(error.description)
