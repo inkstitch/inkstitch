@@ -1,5 +1,4 @@
 from itertools import chain
-import logging
 import textwrap
 
 import inkex
