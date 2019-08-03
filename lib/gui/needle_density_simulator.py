@@ -42,7 +42,7 @@ class NeedleDensityDrawingPanel(NeedleDrawingPanel):
             return
 
         start = time.time()
-        last_calculated_needle_point = self.needle_density_info.calculate_needle_density_up_to_current_point(
+        self.needle_density_info.calculate_needle_density_up_to_current_point(
             self.current_stitch, self.thread_to_thread_density_search)
         self.output_needle_points_up_to_current_point()
         # self.output_needle_points_up_to_current_point(suppress_colours=["ORANGE", "SKY BLUE", "BLACK"])
@@ -82,9 +82,11 @@ class NeedleDensitySimulatorPreview(BaseSimulatorPreview):
     def __init__(self, parent, *args, **kwargs):
         BaseSimulatorPreview.__init__(self, self, parent, *args, **kwargs)
 
+
 def needle_density_simulator_main():
     stitch_plan = stitch_plan_from_file(sys.argv[1])
     show_simulator(NeedleDensitySimulator, "Needle Density Simulation", stitch_plan)
+
 
 if __name__ == "__main__":
     needle_density_simulator_main()

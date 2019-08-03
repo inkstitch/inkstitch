@@ -1,8 +1,7 @@
 import sys
-import numpy
 
 from lib.gui.needle_density_simulator import NeedleDensityDrawingPanel
-from lib.gui.needle_simulator_common import NeedlePenInfo, ThreadDensityInformation
+from lib.gui.needle_simulator_common import ThreadDensityInformation
 import time
 # TODO find where Threads are defined, and use instead of constants
 # TODO change interface to allow starting from inkscape inkstitch menues, with options/attributes
@@ -39,7 +38,7 @@ class ThreadDensityDrawingPanel(NeedleDensityDrawingPanel):
         start = time.time()
         # todo Time a first set of calculations, and set a minimum speed of what can be done in say half a second.
         #  that would allow me to calculate in advance before user requests higher speed
-        last_calculated_needle_point = self.needle_density_info.calculate_thread_density_up_to_current_point(
+        self.needle_density_info.calculate_thread_density_up_to_current_point(
             self.current_stitch, self.thread_to_core_density_search, self.thread_to_thread_density_search)
         self.output_needle_points_up_to_current_point()
         # self.output_needle_points_up_to_current_point(suppress_colours=["ORANGE", "SKY BLUE", "BLACK"])
@@ -83,6 +82,7 @@ class ThreadDensitySimulatorPreview(BaseSimulatorPreview):
 def thread_density_simulator_main():
     stitch_plan = stitch_plan_from_file(sys.argv[1])
     show_simulator(ThreadDensitySimulator, "Thread Density Simulation", stitch_plan)
+
 
 if __name__ == "__main__":
     thread_density_simulator_main()

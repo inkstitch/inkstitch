@@ -28,7 +28,7 @@ class NeedleDistanceDrawingPanel(NeedleDrawingPanel):
             return
 
         start = time.time()
-        last_calculated_needle_point = self.needle_density_info.calculate_distance_up_to_current_point(
+        self.needle_density_info.calculate_distance_up_to_current_point(
             self.current_stitch, self.distance_search)
         self.output_needle_points_up_to_current_point()
         last_stitch = self.needle_density_info.last_calculated_stitch()
