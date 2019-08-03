@@ -32,7 +32,13 @@ class Troubleshoot(InkstitchExtension):
         else:
             svg = self.document.getroot()
             svg.remove(self.troubleshoot_layer)
-            inkex.errormsg(_("All selected shapes are valid!"))
+
+            message = _("All selected shapes are valid!")
+            message += "\n\n"
+            message += _("Tip: If you are still having an issue with an object not being rendered, "
+                         "you might need to convert it it to a path (Path -> Object to Path) or check if it is possibly in an ignored layer.")
+
+            inkex.errormsg(message)
 
     def insert_pointer(self, problem):
         correction_transform = get_correction_transform(self.troubleshoot_layer)
