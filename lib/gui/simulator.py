@@ -363,6 +363,12 @@ class DrawingPanel(wx.Panel):
         dc = wx.PaintDC(self)
         canvas = wx.GraphicsContext.Create(dc)
 
+        self.draw_stitches(canvas)
+        self.draw_scale(canvas)
+
+    def draw_stitches(self, canvas):
+        canvas.BeginLayer(1)
+
         transform = canvas.GetTransform()
         transform.Translate(*self.pan)
         transform.Scale(self.zoom / self.PIXEL_DENSITY, self.zoom / self.PIXEL_DENSITY)
@@ -392,7 +398,7 @@ class DrawingPanel(wx.Panel):
         if last_stitch:
             self.draw_crosshair(last_stitch[0], last_stitch[1], canvas, transform)
 
-        self.draw_scale(canvas)
+        canvas.EndLayer()
 
     def draw_crosshair(self, x, y, canvas, transform):
         x, y = transform.TransformPoint(float(x), float(y))
@@ -403,6 +409,8 @@ class DrawingPanel(wx.Panel):
         canvas.DrawLines(((x, y - crosshair_radius), (x, y + crosshair_radius)))
 
     def draw_scale(self, canvas):
+        canvas.BeginLayer(1)
+
         canvas_width, canvas_height = self.GetClientSize()
 
         one_mm = PIXELS_PER_MM * self.zoom
@@ -435,6 +443,8 @@ class DrawingPanel(wx.Panel):
 
         canvas.SetFont(wx.Font(12, wx.DEFAULT, wx.NORMAL, wx.NORMAL), wx.Colour((0, 0, 0)))
         canvas.DrawText("%s mm" % scale_width_mm, scale_lower_left_x, scale_lower_left_y + 5)
+
+        canvas.EndLayer()
 
     def draw_needle_penetration_points(self, canvas, pen, stitches):
         if self.control_panel.nppBtn.GetValue():
