@@ -30,6 +30,8 @@ class Troubleshoot(InkstitchExtension):
         if problem_types:
             self.add_descriptions(problem_types)
         else:
+            svg = self.document.getroot()
+            svg.remove(self.troubleshoot_layer)
             inkex.errormsg(_("All selected shapes are valid!"))
 
     def insert_pointer(self, problem):
