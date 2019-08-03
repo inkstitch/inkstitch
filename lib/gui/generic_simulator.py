@@ -834,11 +834,11 @@ class BaseSimulatorPreview(Thread):
 
             try:
                 self.simulate_window = self.simulator_preview_class(None, -1, _("Preview"),
-                                                           simulator_pos,
-                                                           size=(width, height),
-                                                           stitch_plan=stitch_plan,
-                                                           on_close=self.simulate_window_closed,
-                                                           target_duration=self.target_duration)
+                                                                    simulator_pos,
+                                                                    size=(width, height),
+                                                                    stitch_plan=stitch_plan,
+                                                                    on_close=self.simulate_window_closed,
+                                                                    target_duration=self.target_duration)
             except Exception:
                 error = traceback.format_exc()
 
@@ -883,4 +883,3 @@ def show_simulator(simulation_class, simulation_text, stitch_plan):
     app.SetTopWindow(frame)
     frame.Show()
     app.MainLoop()
-

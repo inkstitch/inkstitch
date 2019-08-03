@@ -276,7 +276,7 @@ class NeedleDrawingPanel(BaseDrawingPanel):
     def output_needle_points_up_to_current_point(self, suppress_colours=None):
         for this_calculated_point in range(self.current_stitch):
             needle_pen_attributes = self.needle_density_info.calculated_needle_pens[this_calculated_point]
-            if (suppress_colours == None) or (not needle_pen_attributes[0] in suppress_colours):
+            if (suppress_colours is None) or (not needle_pen_attributes[0] in suppress_colours):
                 self.canvas.SetPen(wx.Pen(wx.Colour(needle_pen_attributes[0]), needle_pen_attributes[1]))
                 needle_line_points = self.needle_density_info.calculated_needle_points[this_calculated_point]
                 self.canvas.DrawLines(((needle_line_points[0], needle_line_points[1]),
@@ -314,9 +314,11 @@ class NeedlePenInfo:
 class NeedleCommonSearch:
     THREAD_DIAMETER_MM = 0.4
     THREAD_RADIUS_OVERLAP = 0.05
+    THREAD_TO_CORE_WARNING_MM = THREAD_DIAMETER_MM / 2 - THREAD_RADIUS_OVERLAP,
+    THREAD_TO_THREAD_WARNING_MM = THREAD_DIAMETER_MM - THREAD_RADIUS_OVERLAP * 2,
 
-    def __init__(self, pen_info, thread_to_core_warning_mm=THREAD_DIAMETER_MM / 2 - THREAD_RADIUS_OVERLAP,
-                 thread_to_thread_warning_mm=THREAD_DIAMETER_MM - THREAD_RADIUS_OVERLAP * 2,
+    def __init__(self, pen_info, thread_to_core_warning_mm=THREAD_TO_CORE_WARNING_MM,
+                 thread_to_thread_warning_mm=THREAD_TO_THREAD_WARNING_MM,
                  bol_found_short_distance=False, int_found_same_points=0, int_level_of_search=1):
         self.thread_to_core_warning_mm = thread_to_core_warning_mm
         self.thread_to_thread_warning_mm = thread_to_thread_warning_mm
@@ -386,10 +388,8 @@ class NeedleCommonSearch:
 class NeedleDistanceSearch(NeedleCommonSearch):
 
     def __init__(self, pen_info,
-                 thread_to_core_warning_mm=NeedleCommonSearch.THREAD_DIAMETER_MM / 2 -
-                                           NeedleCommonSearch.THREAD_RADIUS_OVERLAP,
-                 thread_to_thread_warning_mm=NeedleCommonSearch.THREAD_DIAMETER_MM -
-                                             NeedleCommonSearch.THREAD_RADIUS_OVERLAP * 2,
+                 thread_to_core_warning_mm=NeedleCommonSearch.THREAD_TO_CORE_WARNING_MM,
+                 thread_to_thread_warning_mm=NeedleCommonSearch.THREAD_TO_THREAD_WARNING_MM,
                  bol_found_short_distance=False, int_found_same_points=0, int_level_of_search=1):
         NeedleCommonSearch.__init__(self, pen_info, thread_to_core_warning_mm, thread_to_thread_warning_mm,
                                     bol_found_short_distance, int_found_same_points, int_level_of_search)

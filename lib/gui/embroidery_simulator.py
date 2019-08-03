@@ -5,6 +5,7 @@ from ..gui.generic_simulator import show_simulator, BaseSimulator, BaseSimulator
     BaseDrawingPanel, BaseSimulatorPreview
 # TODO possibly change import to go via init.py in gui?
 
+
 class EmbroideryControlPanel(BaseControlPanel):
     """"""
 
@@ -56,6 +57,7 @@ class SimulatorPreview(BaseSimulatorPreview):
 def embroidery_simulator_main():
     stitch_plan = stitch_plan_from_file(sys.argv[1])
     show_simulator(EmbroiderySimulator, "Embroidery Simulation", stitch_plan)
+
 
 if __name__ == "__main__":
     embroidery_simulator_main()
