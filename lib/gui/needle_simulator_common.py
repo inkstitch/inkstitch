@@ -438,10 +438,8 @@ class NeedleDistanceSearch(NeedleCommonSearch):
 
 class NeedleDensitySearch(NeedleCommonSearch):
     def __init__(self, pen_info, density_area_radius_mm=0.5,
-                 thread_to_core_warning_mm=NeedleCommonSearch.THREAD_DIAMETER_MM / 2 -
-                                           NeedleCommonSearch.THREAD_RADIUS_OVERLAP,
-                 thread_to_thread_warning_mm=NeedleCommonSearch.THREAD_DIAMETER_MM -
-                                             NeedleCommonSearch.THREAD_RADIUS_OVERLAP * 2,
+                 thread_to_core_warning_mm=NeedleCommonSearch.THREAD_TO_CORE_WARNING_MM,
+                 thread_to_thread_warning_mm=NeedleCommonSearch.THREAD_TO_THREAD_WARNING_MM,
                  bol_found_short_distance=False, int_found_same_points=0, int_level_of_search=1,
                  int_number_within_limit=0, found_needle_within_limit=False):
         NeedleCommonSearch.__init__(self, pen_info, thread_to_core_warning_mm, thread_to_thread_warning_mm,
