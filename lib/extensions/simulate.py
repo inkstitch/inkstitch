@@ -18,4 +18,3 @@ class Simulate(InkstitchExtension):
         patches = self.elements_to_patches(self.elements)
         stitch_plan = patches_to_stitch_plan(patches)
         show_simulator(EmbroiderySimulator, "Embroidery Simulation", stitch_plan)
-
