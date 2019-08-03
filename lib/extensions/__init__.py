@@ -13,6 +13,7 @@ from object_commands import ObjectCommands
 from output import Output
 from params import Params
 from print_pdf import Print
+from reset_embroidery_settings import ResetEmbroiderySettings
 from simulate import Simulate
 from zip import Zip
 
@@ -33,4 +34,5 @@ __all__ = extensions = [Embroider,
                         CutSatin,
                         AutoSatin,
                         Lettering,
-                        Troubleshoot]
+                        Troubleshoot,
+                        ResetEmbroiderySettings]
