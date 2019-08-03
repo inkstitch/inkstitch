@@ -53,6 +53,9 @@ class SimulatorPreview(BaseSimulatorPreview):
         BaseSimulatorPreview.__init__(self, self, parent, *args, **kwargs)
 
 
-if __name__ == "__main__":
+def embroidery_simulator_main():
     stitch_plan = stitch_plan_from_file(sys.argv[1])
     show_simulator(EmbroiderySimulator, "Embroidery Simulation", stitch_plan)
+
+if __name__ == "__main__":
+    embroidery_simulator_main()
