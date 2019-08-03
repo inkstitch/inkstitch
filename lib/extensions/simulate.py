@@ -1,3 +1,4 @@
+from lib.gui import EmbroiderySimulator
 from ..gui import show_simulator
 from ..stitch_plan import patches_to_stitch_plan
 from .base import InkstitchExtension
@@ -16,4 +17,5 @@ class Simulate(InkstitchExtension):
             return
         patches = self.elements_to_patches(self.elements)
         stitch_plan = patches_to_stitch_plan(patches)
-        show_simulator(stitch_plan)
+        show_simulator(EmbroiderySimulator, "Embroidery Simulation", stitch_plan)
+
