@@ -34,6 +34,7 @@ class BaseControlPanel(wx.Panel):
         self.stitch_plan = kwargs.pop('stitch_plan')
         self.target_stitches_per_second = kwargs.pop('stitches_per_second')
         self.target_duration = kwargs.pop('target_duration')
+        self.options = kwargs.pop('options', None)
         kwargs['style'] = wx.BORDER_SUNKEN
         wx.Panel.__init__(self, parent, *args, **kwargs)
 
@@ -76,7 +77,8 @@ class BaseControlPanel(wx.Panel):
         self.slider = wx.Slider(self, -1, value=1, minValue=1, maxValue=2,
                                 style=wx.SL_HORIZONTAL | wx.SL_LABELS)
         self.slider.Bind(wx.EVT_SLIDER, self.on_slider)
-        self.stitchBox = IntCtrl(self, -1, value=1, min=1, max=2, limited=True, allow_none=True, style=wx.TE_PROCESS_ENTER)
+        self.stitchBox = IntCtrl(self, -1, value=1, min=1, max=2, limited=True, allow_none=True,
+                                 style=wx.TE_PROCESS_ENTER)
         self.stitchBox.Bind(wx.EVT_LEFT_DOWN, self.on_stitch_box_focus)
         self.stitchBox.Bind(wx.EVT_SET_FOCUS, self.on_stitch_box_focus)
         self.stitchBox.Bind(wx.EVT_TEXT_ENTER, self.on_stitch_box_focusout)
@@ -305,6 +307,7 @@ class BaseDrawingPanel(wx.Panel):
         """"""
         self.stitch_plan = kwargs.pop('stitch_plan')
         self.control_panel = kwargs.pop('control_panel')
+        self.options = kwargs.pop('options', None)
         kwargs['style'] = wx.BORDER_SUNKEN
         wx.Panel.__init__(self, *args, **kwargs)
 
@@ -331,6 +334,14 @@ class BaseDrawingPanel(wx.Panel):
         self.miny = None
         self.maxx = None
         self.maxy = None
+        self.zoom = None
+        self.pan = None
+        self.pens = None
+        self.stitch_blocks = None
+        self.commands = None
+        self.drag_start = None
+        self.drag_original_pan = None
+        self.pan = None
 
         # desired simulation speed in stitches per second
         self.speed = 16
@@ -679,6 +690,7 @@ class BaseSimulatorPanel(wx.Panel):
         self.stitch_plan = kwargs.pop('stitch_plan')
         self.target_duration = kwargs.pop('target_duration')
         self.stitches_per_second = kwargs.pop('stitches_per_second')
+        self.options = kwargs.pop('options', None)
         kwargs['style'] = wx.BORDER_SUNKEN
         wx.Panel.__init__(self, parent, *args, **kwargs)
 
@@ -728,6 +740,7 @@ class BaseSimulator(wx.Frame):
         self.stitch_plan = kwargs.pop('stitch_plan', None)
         self.stitches_per_second = kwargs.pop('stitches_per_second', 16)
         self.target_duration = kwargs.pop('target_duration', None)
+        self.options = kwargs.pop('options', None)
         self.called_for_size = kwargs.get('size', (0, 0))
         wx.Frame.__init__(self, *args, **kwargs)
         self.statusbar = self.CreateStatusBar(2)
@@ -910,7 +923,7 @@ class BaseSimulatorPreview(Thread):
             self.simulate_window.Close()
 
 
-def show_simulator(simulation_class, simulation_text, stitch_plan):
+def show_simulator(simulation_class, simulation_text, stitch_plan, options=None):
     app = wx.App()
     current_screen = wx.Display.GetFromPoint(wx.GetMousePosition())
     display = wx.Display(current_screen)
@@ -921,9 +934,12 @@ def show_simulator(simulation_class, simulation_text, stitch_plan):
     # subtract 1 because otherwise the window becomes maximized on Linux
     width = screen_rect[2] - 1
     height = screen_rect[3] - 1
-
-    frame = simulation_class(None, -1, _(simulation_text), pos=simulator_pos, size=(width, height),
-                             stitch_plan=stitch_plan)
+    if options is None:
+        frame = simulation_class(None, -1, _(simulation_text), pos=simulator_pos, size=(width, height),
+                                 stitch_plan=stitch_plan)
+    else:
+        frame = simulation_class(None, -1, _(simulation_text), pos=simulator_pos, size=(width, height),
+                                 stitch_plan=stitch_plan, options=options)
     app.SetTopWindow(frame)
     frame.Show()
     app.MainLoop()
