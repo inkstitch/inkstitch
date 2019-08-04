@@ -10,7 +10,9 @@
     <effect>
         <object-type>all</object-type>
         <effects-menu>
-            <submenu name="Ink/Stitch" />
+            <submenu name="Ink/Stitch">
+                <submenu name="{% trans %}Graphic simulated stitching and warnings{% endtrans %}" />
+            </submenu>
         </effects-menu>
     </effect>
     <script>
