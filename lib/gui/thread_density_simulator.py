@@ -4,7 +4,7 @@ from lib.gui.needle_density_simulator import NeedleDensityDrawingPanel
 from lib.gui.needle_simulator_common import ThreadDensityInformation
 import time
 # TODO find where Threads are defined, and use instead of constants
-# TODO possibly add the limit thresholds for needle and thread density attributes?
+# TODO possibly add the colour limit thresholds for needle and thread density attributes?
 # TODO Make 0.15 come out as 0.15 and not 0.1 or 0.2 in incscape menus
 from ..stitch_plan import stitch_plan_from_file
 
