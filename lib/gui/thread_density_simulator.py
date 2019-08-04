@@ -22,13 +22,20 @@ class ThreadDensityControlPanel(BaseControlPanel):
 
 class ThreadDensityDrawingPanel(NeedleDensityDrawingPanel):
     """"""
+    THREAD_TO_CORE_LIMIT_MM = 0.15
+    THREAD_TO_THREAD_LIMIT_MM = 0.3
 
     def __init__(self, *args, **kwargs):
         NeedleDensityDrawingPanel.__init__(self, *args, **kwargs)
         self.needle_density_info.__class__ = ThreadDensityInformation
         # above works and is pythonic, but require that there are no additonal instance variable in the higher class
-        self.thread_to_thread_density_search = self.initialise_density_search_with_limits(density_area_radius_mm=0.3)
-        self.thread_to_core_density_search = self.initialise_density_search_with_limits(density_area_radius_mm=0.15)
+        self.thread_to_thread_density_search = self.initialise_density_search_with_limits(
+            self.check_option_overriding_default_limit(ThreadDensityDrawingPanel.THREAD_TO_THREAD_LIMIT_MM,
+                                                       "thread_to_thread_distance_examined_mm"))
+        self.thread_to_core_density_search = self.initialise_density_search_with_limits(
+            self.check_option_overriding_default_limit(ThreadDensityDrawingPanel.THREAD_TO_CORE_LIMIT_MM,
+                                                       "thread_to_needle_core_distance_examined_mm"))
+        # TODO when above works, and same in needle_density, rewrite them to simpler call
         self.distance_search = self.initialise_distance_search_with_limits()
 
     def OnPaint(self, e):
@@ -57,8 +64,10 @@ class ThreadDensitySimulatorPanel(BaseSimulatorPanel):
         self.cp = ThreadDensityControlPanel(self,
                                             stitch_plan=self.stitch_plan,
                                             stitches_per_second=self.stitches_per_second,
-                                            target_duration=self.target_duration)
-        self.dp = ThreadDensityDrawingPanel(self, stitch_plan=self.stitch_plan, control_panel=self.cp)
+                                            target_duration=self.target_duration,
+                                            options=self.options)
+        self.dp = ThreadDensityDrawingPanel(self, stitch_plan=self.stitch_plan, control_panel=self.cp,
+                                            options=self.options)
         self.FinaliseInit()
 
 
@@ -68,7 +77,8 @@ class ThreadDensitySimulator(BaseSimulator):
         needle_simulator_panel = ThreadDensitySimulatorPanel(self,
                                                              stitch_plan=self.stitch_plan,
                                                              target_duration=self.target_duration,
-                                                             stitches_per_second=self.stitches_per_second)
+                                                             stitches_per_second=self.stitches_per_second,
+                                                             options=self.options)
         self.link_simulator_panel(needle_simulator_panel)
         self.secure_minimum_size()
 
