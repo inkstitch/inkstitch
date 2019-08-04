@@ -1,5 +1,6 @@
 import sys
 import time
+import wx
 
 from ..stitch_plan import stitch_plan_from_file
 
@@ -58,7 +59,23 @@ class SimulatorPreview(BaseSimulatorPreview):
 
 def embroidery_simulator_main():
     stitch_plan = stitch_plan_from_file(sys.argv[1])
-    show_simulator(EmbroiderySimulator, "Embroidery Simulation", stitch_plan)
+    app = wx.App()
+    current_screen = wx.Display.GetFromPoint(wx.GetMousePosition())
+    display = wx.Display(current_screen)
+    screen_rect = display.GetClientArea()
+
+    simulator_pos = (screen_rect[0], screen_rect[1])
+
+    # subtract 1 because otherwise the window becomes maximized on Linux
+    width = screen_rect[2] - 1
+    height = screen_rect[3] - 1
+
+    frame = EmbroiderySimulator(None, -1, "Embroidery Simulation", pos=simulator_pos, size=(width, height),
+                                stitch_plan=stitch_plan)
+    app.SetTopWindow(frame)
+    frame.Show()
+    app.MainLoop()
+    app.__del__()
 
 
 if __name__ == "__main__":

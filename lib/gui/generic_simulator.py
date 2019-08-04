@@ -261,8 +261,7 @@ class BaseControlPanel(wx.Panel):
 
     def animation_quit(self, event):
         self.parent.quit()
-        self.stitch_plan = None
-        self.parent = None
+        self.close()
 
     def animation_restart(self, event):
         self.drawing_panel.restart()
@@ -275,6 +274,16 @@ class BaseControlPanel(wx.Panel):
         if self.pauseBtn.GetLabel() == _('Start'):
             stitch = self.stitchBox.GetValue()
             self.drawing_panel.set_current_stitch(stitch)
+
+    def close(self):
+        self.stitch_plan = None
+        self.parent = None
+        if self.drawing_panel is not None:
+            self.drawing_panel.close()
+            self.drawing_panel = None
+        self.vbSizer = None
+        self.hbSizer1 = None
+        self.hbSizer2 = None
 
 
 class BaseDrawingPanel(wx.Panel):
@@ -655,6 +664,7 @@ class BaseDrawingPanel(wx.Panel):
 
     def close(self):
         self.stitch_plan = None
+        self.dc = None
 
 
 class BaseSimulatorPanel(wx.Panel):
@@ -664,6 +674,7 @@ class BaseSimulatorPanel(wx.Panel):
         """"""
         self.cp = None
         self.dp = None
+        self.vbSizer = None
         self.parent = parent
         self.stitch_plan = kwargs.pop('stitch_plan')
         self.target_duration = kwargs.pop('target_duration')
@@ -674,15 +685,14 @@ class BaseSimulatorPanel(wx.Panel):
     def FinaliseInit(self):
         self.cp.set_drawing_panel(self.dp)
 
-        vbSizer = wx.BoxSizer(wx.VERTICAL)
-        vbSizer.Add(self.dp, 1, wx.EXPAND | wx.ALL, 2)
-        vbSizer.Add(self.cp, 0, wx.EXPAND | wx.ALL, 2)
-        self.SetSizerAndFit(vbSizer)
+        self.vbSizer = wx.BoxSizer(wx.VERTICAL)
+        self.vbSizer.Add(self.dp, 1, wx.EXPAND | wx.ALL, 2)
+        self.vbSizer.Add(self.cp, 0, wx.EXPAND | wx.ALL, 2)
+        self.SetSizerAndFit(self.vbSizer)
 
     def quit(self):
         self.parent.quit()
-        self.stitch_plan = None
-        self.parent = None
+        self.close()
 
     def go(self):
         self.dp.go()
@@ -696,6 +706,19 @@ class BaseSimulatorPanel(wx.Panel):
 
     def clear(self):
         self.dp.clear()
+
+    def close(self):
+        self.stitch_plan = None
+        self.parent = None
+        if self.dp is not None:
+            self.vbSizer.Detach(self.dp)
+            self.dp.close()
+        if self.cp is not None:
+            self.vbSizer.Detach(self.cp)
+            self.cp.close()
+        self.vbSizer.Clear()
+        self.cp = None
+        self.dp = None
 
 
 class BaseSimulator(wx.Frame):
@@ -731,14 +754,25 @@ class BaseSimulator(wx.Frame):
     def on_close(self, event):
         self.simulator_panel.stop()
         self.simulator_panel.dp.close()
-        self.simulator_panel.dp.parent = None
 
         if self.on_close_hook:
             self.on_close_hook()
 
         self.SetFocus()
         self.Destroy()
+        self.close()
+
+    def close(self):
         self.stitch_plan = None
+        self.simulator_panel.dp.close()
+        self.simulator_panel.cp.close()
+        self.simulator_panel.close()
+        self.unlink_simulator_panel()
+
+    def unlink_simulator_panel(self):
+        self.sizer.Detach(self.simulator_panel)
+        self.sizer.Clear()
+        self.simulator_panel = None
 
     def go(self):
         self.simulator_panel.go()
