@@ -4,8 +4,8 @@ from lib.gui.needle_density_simulator import NeedleDensityDrawingPanel
 from lib.gui.needle_simulator_common import ThreadDensityInformation
 import time
 # TODO find where Threads are defined, and use instead of constants
-# TODO change interface to allow starting from inkscape inkstitch menues, with options/attributes
-# TODO learn how to test through the right inkspace path, including build
+# TODO possibly add the limit thresholds for needle and thread density attributes?
+# TODO Make 0.15 come out as 0.15 and not 0.1 or 0.2 in incscape menus
 from ..stitch_plan import stitch_plan_from_file
 
 from ..gui.generic_simulator import show_simulator, BaseSimulator, BaseSimulatorPanel, BaseControlPanel, \
@@ -43,7 +43,7 @@ class ThreadDensityDrawingPanel(NeedleDensityDrawingPanel):
             return
 
         start = time.time()
-        # todo Time a first set of calculations, and set a minimum speed of what can be done in say half a second.
+        # TODO Time a first set of calculations, and set a minimum speed of what can be done in say half a second.
         #  that would allow me to calculate in advance before user requests higher speed
         self.needle_density_info.calculate_thread_density_up_to_current_point(
             self.current_stitch, self.thread_to_core_density_search, self.thread_to_thread_density_search)

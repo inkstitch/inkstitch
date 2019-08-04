@@ -4,8 +4,8 @@
     <id>org.inkstitch.needle_distance.{{ locale }}</id>
     <dependency type="executable" location="extensions">inkstitch.py</dependency>
     <dependency type="executable" location="extensions">inkex.py</dependency>
-    <param name="purple_distance_mm" type="float" min="0.05" max="1" _gui-text="{% trans %}most severe distance warning (mm){% endtrans %}" _gui-description="{% trans %}Needle distances shorter than this will be flagged in purple on the graph.{% endtrans %}">0.15</param>
-    <param name="blue_distance_mm" type="float" min="0.05" max="1" _gui-text="{% trans %}less severe distance warning (mm){% endtrans %}" _gui-description="{% trans %}Needle distances shorter than this will be flagged in sky blue on the graph.{% endtrans %}">0.30</param>
+    <param name="purple_distance_mm" type="float"  precision="2" min="0.05" max="1" _gui-text="{% trans %}most severe distance warning (mm){% endtrans %}" _gui-description="{% trans %}Needle distances shorter than this will be flagged in purple on the graph.{% endtrans %}">0.15</param>
+    <param name="blue_distance_mm" type="float"  precision="2" min="0.05" max="1" _gui-text="{% trans %}less severe distance warning (mm){% endtrans %}" _gui-description="{% trans %}Needle distances shorter than this will be flagged in sky blue on the graph.{% endtrans %}">0.30</param>
     <param name="extension" type="string" gui-hidden="true">needle_distance</param>
     <effect>
         <object-type>all</object-type>
