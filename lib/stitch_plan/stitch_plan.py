@@ -210,6 +210,20 @@ class ColorBlock(object):
         else:
             return False
 
+    @property
+    def trim_after(self):
+        # If there's a STOP, it will be at the end.  We still want to return
+        # True.
+        for stitch in reversed(self.stitches):
+            if stitch.stop or stitch.jump:
+                continue
+            elif stitch.trim:
+                return True
+            else:
+                break
+
+        return False
+
     def filter_duplicate_stitches(self):
         if not self.stitches:
             return
