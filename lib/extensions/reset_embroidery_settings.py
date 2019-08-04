@@ -1,7 +1,8 @@
-import inkex
 import wx
-from ..i18n import _
 
+import inkex
+
+from ..i18n import _
 from .base import InkstitchExtension
 
 
@@ -88,6 +89,48 @@ class ResetFrame(wx.Frame):
         if self.del_commands.GetValue():
             self.remove_commands()
 
+    def remove_print_settings(self):
+        print_settings = "svg:metadata//*"
+        print_settings = self.find_elements(print_settings)
+        for print_setting in print_settings:
+            if print_setting.prefix == "inkstitch":
+                self.remove_element(print_setting)
+
+    def remove_params(self):
+        if self.del_all:
+            xpath = ".//svg:path"
+            elements = self.find_elements(xpath)
+            self.remove_embroider_attributes(elements)
+        else:
+            for node in self.selected:
+                elements = self.get_selected_elements(node)
+                self.remove_embroider_attributes(elements)
+
+    def remove_commands(self):
+        if self.del_all:
+            commands = ".//*[starts-with(@inkscape:label, 'Ink/Stitch Command:')]"
+            self.remove_elements(commands)
+
+            symbols = ".//*[starts-with(@id, 'inkstitch_')]"
+            self.remove_elements(symbols)
+        else:
+            for node in self.selected:
+                elements = self.get_selected_elements(node)
+                for element in elements:
+                    xpath = (".//svg:path[@inkscape:connection-start='#%(id)s' or @inkscape:connection-end='#%(id)s']/parent::*" %
+                             dict(id=element.get('id')))
+                    commands = self.remove_elements(xpath)
+
+    def get_selected_elements(self, element_id):
+        xpath = ".//svg:path[@id='%s']" % element_id
+        elements = self.find_elements(xpath)
+        if elements:
+            self.remove_embroider_attributes(elements)
+        else:
+            xpath = ".//svg:g[@id='%s']//svg:path" % element_id
+            elements = self.find_elements(xpath)
+        return elements
+
     def find_elements(self, xpath):
         elements = self.svg.xpath(xpath, namespaces=inkex.NSS)
         return elements
@@ -100,42 +143,11 @@ class ResetFrame(wx.Frame):
     def remove_element(self, element):
         element.getparent().remove(element)
 
-    def remove_embroider_attributes(self, element):
-        for attrib in element.attrib:
-            if attrib.startswith('embroider_'):
-                del element.attrib[attrib]
-
-    def remove_print_settings(self):
-        print_settings = "svg:metadata//*"
-        print_settings = self.find_elements(print_settings)
-        for print_setting in print_settings:
-            if print_setting.prefix == "inkstitch":
-                self.remove_element(print_setting)
-
-    def remove_params(self):
-        if self.del_all:
-            xpath = ".//svg:path"
-            path_elements = self.find_elements(xpath)
-            for element in path_elements:
-                self.remove_embroider_attributes(element)
-        else:
-            for node in self.selected:
-                xpath = ".//*[@id='%s']" % node
-                element = self.find_elements(xpath)[0]
-                self.remove_embroider_attributes(element)
-
-    def remove_commands(self):
-        if self.del_all:
-            commands = ".//*[starts-with(@inkscape:label, 'Ink/Stitch Command:')]"
-            self.remove_elements(commands)
-
-            symbols = ".//*[starts-with(@id, 'inkstitch_')]"
-            self.remove_elements(symbols)
-        else:
-            for node in self.selected:
-                xpath = (".//svg:path[@inkscape:connection-start='#%(id)s' or @inkscape:connection-end='#%(id)s']/parent::*" %
-                         dict(id=node))
-                commands = self.remove_elements(xpath)
+    def remove_embroider_attributes(self, elements):
+        for element in elements:
+            for attrib in element.attrib:
+                if attrib.startswith('embroider_'):
+                    del element.attrib[attrib]
 
 
 class ResetEmbroiderySettings(InkstitchExtension):
