@@ -293,9 +293,17 @@ class NeedleDrawingPanel(BaseDrawingPanel):
             #                     this_needle_point_display[0] + 1, this_needle_point_display[1]],
             #                     pens=calculated_wx_pens)
 
-    def initialise_distance_search_with_limits(self):
+    def initialise_distance_search_with_limits(self, options=None):
         pen_info = NeedlePenInfo("BLACK", 2)
-        distance_search = NeedleDistanceSearch(pen_info)
+        thread_to_core_warning_mm = NeedleCommonSearch.THREAD_TO_CORE_WARNING_MM
+        thread_to_thread_warning_mm = NeedleCommonSearch.THREAD_TO_CORE_WARNING_MM
+        if options is not None:
+            if options.purple_distance_mm:
+                thread_to_core_warning_mm = options.purple_distance_mm
+            if options.blue_distance_mm:
+                thread_to_thread_warning_mm = options.blue_distance_mm
+        distance_search = NeedleDistanceSearch(pen_info, thread_to_core_warning_mm=thread_to_core_warning_mm,
+                                               thread_to_thread_warning_mm=thread_to_thread_warning_mm)
         distance_search.add_distance_limit(distance_search.thread_to_core_warning_mm, "PURPLE", 4, 1)
         distance_search.add_distance_limit(distance_search.thread_to_thread_warning_mm, "SKY BLUE", 3, 2)
         return distance_search

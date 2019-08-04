@@ -21,7 +21,7 @@ class NeedleDistanceDrawingPanel(NeedleDrawingPanel):
     """"""
     def __init__(self, *args, **kwargs):
         NeedleDrawingPanel.__init__(self, *args, **kwargs)
-        self.distance_search = self.initialise_distance_search_with_limits()
+        self.distance_search = self.initialise_distance_search_with_limits(self.options)
 
     def OnPaint(self, e):
         if not self.init_on_paint():
@@ -45,8 +45,10 @@ class NeedleDistanceSimulatorPanel(BaseSimulatorPanel):
         self.cp = NeedleDistanceControlPanel(self,
                                              stitch_plan=self.stitch_plan,
                                              stitches_per_second=self.stitches_per_second,
-                                             target_duration=self.target_duration)
-        self.dp = NeedleDistanceDrawingPanel(self, stitch_plan=self.stitch_plan, control_panel=self.cp)
+                                             target_duration=self.target_duration,
+                                             options=self.options)
+        self.dp = NeedleDistanceDrawingPanel(self, stitch_plan=self.stitch_plan, control_panel=self.cp,
+                                             options=self.options)
         self.FinaliseInit()
 
 
@@ -56,7 +58,8 @@ class NeedleDistanceSimulator(BaseSimulator):
         needle_simulator_panel = NeedleDistanceSimulatorPanel(self,
                                                               stitch_plan=self.stitch_plan,
                                                               target_duration=self.target_duration,
-                                                              stitches_per_second=self.stitches_per_second)
+                                                              stitches_per_second=self.stitches_per_second,
+                                                              options=self.options)
         self.link_simulator_panel(needle_simulator_panel)
         self.secure_minimum_size()
 
