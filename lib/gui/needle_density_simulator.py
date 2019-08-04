@@ -20,14 +20,25 @@ class NeedleDensityControlPanel(BaseControlPanel):
 
 class NeedleDensityDrawingPanel(NeedleDrawingPanel):
     """"""
+    FABRIC_DEFAULT_RADIUS_TO_CHECK_MM = 0.5
 
     def __init__(self, *args, **kwargs):
         NeedleDrawingPanel.__init__(self, *args, **kwargs)
         self.needle_density_info.__class__ = NeedleDensityInformation
         # above works and is pythonic, but require that there are no additonal instance variable in the higher class
-        self.thread_to_thread_density_search = self.initialise_density_search_with_limits()
+        self.thread_to_thread_density_search = self.initialise_density_search_with_limits(
+            self.check_option_overriding_default_limit(NeedleDensityDrawingPanel.FABRIC_DEFAULT_RADIUS_TO_CHECK_MM,
+                                                       "fabric_radius_examined_mm"))
 
-    def initialise_density_search_with_limits(self, density_area_radius_mm=0.5):
+    def check_option_overriding_default_limit(self, default_limit, option_name_to_check):
+        density_search_area_mm = NeedleDensityDrawingPanel.FABRIC_DEFAULT_RADIUS_TO_CHECK_MM
+        if self.options is not None:
+            options_as_dict = self.options.__dict__
+            if option_name_to_check in options_as_dict:
+                density_search_area_mm = options_as_dict[option_name_to_check]
+        return density_search_area_mm
+
+    def initialise_density_search_with_limits(self, density_area_radius_mm=FABRIC_DEFAULT_RADIUS_TO_CHECK_MM):
         pen_info = NeedlePenInfo("BLACK", 2)
         density_search = NeedleDensitySearch(pen_info, density_area_radius_mm=density_area_radius_mm)
         density_search.set_density_limits_based_on_radius_and_thread()
@@ -61,8 +72,10 @@ class NeedleDensitySimulatorPanel(BaseSimulatorPanel):
         self.cp = NeedleDensityControlPanel(self,
                                             stitch_plan=self.stitch_plan,
                                             stitches_per_second=self.stitches_per_second,
-                                            target_duration=self.target_duration)
-        self.dp = NeedleDensityDrawingPanel(self, stitch_plan=self.stitch_plan, control_panel=self.cp)
+                                            target_duration=self.target_duration,
+                                            options=self.options)
+        self.dp = NeedleDensityDrawingPanel(self, stitch_plan=self.stitch_plan, control_panel=self.cp,
+                                            options=self.options)
         self.FinaliseInit()
 
 
@@ -72,7 +85,8 @@ class NeedleDensitySimulator(BaseSimulator):
         needle_simulator_panel = NeedleDensitySimulatorPanel(self,
                                                              stitch_plan=self.stitch_plan,
                                                              target_duration=self.target_duration,
-                                                             stitches_per_second=self.stitches_per_second)
+                                                             stitches_per_second=self.stitches_per_second,
+                                                             options=self.options)
         self.link_simulator_panel(needle_simulator_panel)
         self.secure_minimum_size()
 

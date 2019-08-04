@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <name>{% trans %}ThreadDensity{% endtrans %}</name>
+    <name>{% trans %}Thread Density Warning Graph{% endtrans %}</name>
     <id>org.inkstitch.thread_density.{{ locale }}</id>
     <dependency type="executable" location="extensions">inkstitch.py</dependency>
     <dependency type="executable" location="extensions">inkex.py</dependency>
+    <param name="thread_to_needle_core_distance_examined_mm" type="float" min="0.05" max="1" _gui-text="{% trans %}Thread to needle core distance examined for too many (mm){% endtrans %}" _gui-description="{% trans %}Defines the thread center to needle core distance which will be examined for too many needle points and coloured in the graph.{% endtrans %}">0.15</param>
+    <param name="thread_to_thread_distance_examined_mm" type="float" min="0.05" max="1" _gui-text="{% trans %}Thread to thread distance examined for too many (mm){% endtrans %}" _gui-description="{% trans %}Defines the thread center to another thread center distance which will be examined for too many such points and coloured in the graph.{% endtrans %}">0.3</param>
     <param name="extension" type="string" gui-hidden="true">thread_density</param>
     <effect>
         <object-type>all</object-type>
