@@ -927,4 +927,3 @@ def show_simulator(simulation_class, simulation_text, stitch_plan):
     app.SetTopWindow(frame)
     frame.Show()
     app.MainLoop()
-    app.__del__()
