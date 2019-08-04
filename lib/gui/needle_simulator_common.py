@@ -27,7 +27,7 @@ class NeedleDistanceInformation:
         return len(self.np_needle_points_mm)
 
     def xrange_needle_points_left_to_calculate(self):
-        return range(self.number_of_calculated_needle_points(), self.number_of_input_needle_points())
+        return xrange(self.number_of_calculated_needle_points(), self.number_of_input_needle_points())
 
     def point_display(self, int_this_needle_point):
         return self.np_needle_points_display[int_this_needle_point]
@@ -122,7 +122,7 @@ class NeedleDistanceInformation:
 
     def check_distance_limits_for_axis_candidates(self, current_needle_point, pen_info, distance_search):
         current_x, current_y = self.x_and_y_for_point_mm(current_needle_point)
-        for this_limit_to_compare in range(distance_search.number_of_distance_limits):
+        for this_limit_to_compare in xrange(distance_search.number_of_distance_limits):
             distance_search.reset_for_next_point_check(pen_info)
             if distance_search.pen_info.colour != "PURPLE":
                 np_possibly_close_x = self.bol_array_points_close_to_x_mm(
@@ -136,7 +136,7 @@ class NeedleDistanceInformation:
 
     def last_calculated_stitch_as_list(self):
         return self.np_needle_points_display[self.number_of_calculated_needle_points() - 1].tolist()
-        # TODO with this linemissing, display ismore in line with needle points if speed is set to beyond what
+        # TODO with this line missing, display is more in line with needle points if speed is set to beyond what
         #  machine can coop with. Need to check how to set this right
 
 
@@ -218,9 +218,9 @@ class ThreadDensityInformation(NeedleDensityInformation):
         for int_this_needle_point in self.xrange_needle_points_left_to_calculate():
             this_needle_point_display = self.point_display(int_this_needle_point)
             if last_calculated_needle_point < current_stitch:
-                thread_to_thead_needle_pen = self.select_pen_per_thread_density_count(
+                thread_to_thread_needle_pen = self.select_pen_per_thread_density_count(
                     last_calculated_needle_point, thread_to_core_density_search, thread_to_thread_density_search)
-                self.append_calculated_thread_pen(this_needle_point_display, thread_to_thead_needle_pen)
+                self.append_calculated_thread_pen(this_needle_point_display, thread_to_thread_needle_pen)
                 # self.append_calculated_thread_pen(this_needle_point_display, thread_to_core_needle_pen)
                 last_calculated_needle_point += 1
             else:
@@ -274,9 +274,10 @@ class NeedleDrawingPanel(BaseDrawingPanel):
         self.start_simulation_after_load()
 
     def output_needle_points_up_to_current_point(self, suppress_colours=None):
-        for this_calculated_point in range(self.current_stitch):
+        for this_calculated_point in xrange(self.current_stitch):
             needle_pen_attributes = self.needle_density_info.calculated_needle_pens[this_calculated_point]
             if (suppress_colours is None) or (not needle_pen_attributes[0] in suppress_colours):
+                # TODO make a tick box option to deselct showing of black points
                 self.canvas.SetPen(wx.Pen(wx.Colour(needle_pen_attributes[0]), needle_pen_attributes[1]))
                 needle_line_points = self.needle_density_info.calculated_needle_points[this_calculated_point]
                 self.canvas.DrawLines(((needle_line_points[0], needle_line_points[1]),
@@ -430,7 +431,7 @@ class NeedleDistanceSearch(NeedleCommonSearch):
     def check_if_candidate_points_are_close(self, current_x, current_y, np_possibly_close):
         for possibly_close in np_possibly_close:
             this_distance = numpy.linalg.norm(possibly_close - [current_x, current_y])
-            for this_limit_to_compare in range(self.number_of_distance_limits):
+            for this_limit_to_compare in xrange(self.number_of_distance_limits):
                 if self.select_pen_for_distance_vs_limit(this_distance, this_limit_to_compare):
                     break
         return self.found_short_distance
@@ -537,7 +538,7 @@ class NeedleDensitySearch(NeedleCommonSearch):
         return self.found_needle_within_limit
 
     def translate_count_to_density_colour(self):
-        for density_limit_index in range(len(self.density_limits)):
+        for density_limit_index in xrange(len(self.density_limits)):
             if self.number_counted_within_limit >= self.density_limits[density_limit_index][0]:
                 self.pen_info.update(self.density_limits[density_limit_index][1],
                                      self.density_limits[density_limit_index][2])

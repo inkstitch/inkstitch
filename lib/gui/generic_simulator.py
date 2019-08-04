@@ -74,7 +74,7 @@ class BaseControlPanel(wx.Panel):
         self.quitBtn = wx.Button(self, -1, label=_('Quit'))
         self.quitBtn.Bind(wx.EVT_BUTTON, self.animation_quit)
         self.quitBtn.SetToolTip(_('Quit (Q)'))
-        self.slider = wx.Slider(self, -1, value=1, minValue=1, maxValue=2,
+        self.slider = wx.Slider(self, -1, value=1, minValue=1, maxValue=self.stitch_plan.num_stitches,
                                 style=wx.SL_HORIZONTAL | wx.SL_LABELS)
         self.slider.Bind(wx.EVT_SLIDER, self.on_slider)
         self.stitchBox = IntCtrl(self, -1, value=1, min=1, max=2, limited=True, allow_none=True,
