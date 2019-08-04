@@ -1,4 +1,6 @@
 import sys
+import time
+
 from ..stitch_plan import stitch_plan_from_file
 
 from ..gui.generic_simulator import show_simulator, BaseSimulator, BaseSimulatorPanel, BaseControlPanel, \
@@ -61,3 +63,7 @@ def embroidery_simulator_main():
 
 if __name__ == "__main__":
     embroidery_simulator_main()
+    # time.sleep(5)
+    # sys.exit()
+    # TODO how to ensure all classes actually closes and nothing remains active? Above two lines show that
+    #  stitch_plan remains active after 5 seconds.

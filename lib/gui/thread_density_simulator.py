@@ -42,7 +42,7 @@ class ThreadDensityDrawingPanel(NeedleDensityDrawingPanel):
             self.current_stitch, self.thread_to_core_density_search, self.thread_to_thread_density_search)
         self.output_needle_points_up_to_current_point()
         # self.output_needle_points_up_to_current_point(suppress_colours=["ORANGE", "SKY BLUE", "BLACK"])
-        last_calculated_stitch = self.needle_density_info.last_calculated_stitch()
+        last_calculated_stitch = self.needle_density_info.last_calculated_stitch_as_list()
         self.last_frame_duration = time.time() - start
 
         self.handle_last_painted_stitch(last_calculated_stitch)
