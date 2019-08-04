@@ -1,6 +1,4 @@
 import sys
-import time
-import wx
 
 from ..stitch_plan import stitch_plan_from_file
 
