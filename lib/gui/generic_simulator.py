@@ -261,6 +261,8 @@ class BaseControlPanel(wx.Panel):
 
     def animation_quit(self, event):
         self.parent.quit()
+        self.stitch_plan = None
+        self.parent = None
 
     def animation_restart(self, event):
         self.drawing_panel.restart()
@@ -407,7 +409,7 @@ class BaseDrawingPanel(wx.Panel):
     def handle_last_painted_stitch(self, last_stitch):
         if last_stitch:
             self.draw_crosshair(last_stitch[0], last_stitch[1], self.canvas, self.transform)
-
+        self.canvas.EndLayer()
         self.draw_scale(self.canvas)
 
     def draw_crosshair(self, x, y, canvas, transform):
@@ -651,6 +653,9 @@ class BaseDrawingPanel(wx.Panel):
 
         self.Refresh()
 
+    def close(self):
+        self.stitch_plan = None
+
 
 class BaseSimulatorPanel(wx.Panel):
     """"""
@@ -676,6 +681,8 @@ class BaseSimulatorPanel(wx.Panel):
 
     def quit(self):
         self.parent.quit()
+        self.stitch_plan = None
+        self.parent = None
 
     def go(self):
         self.dp.go()
@@ -723,12 +730,15 @@ class BaseSimulator(wx.Frame):
 
     def on_close(self, event):
         self.simulator_panel.stop()
+        self.simulator_panel.dp.close()
+        self.simulator_panel.dp.parent = None
 
         if self.on_close_hook:
             self.on_close_hook()
 
         self.SetFocus()
         self.Destroy()
+        self.stitch_plan = None
 
     def go(self):
         self.simulator_panel.go()
@@ -883,3 +893,4 @@ def show_simulator(simulation_class, simulation_text, stitch_plan):
     app.SetTopWindow(frame)
     frame.Show()
     app.MainLoop()
+    app.__del__()

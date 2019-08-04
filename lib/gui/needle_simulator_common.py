@@ -20,14 +20,14 @@ class NeedleDistanceInformation:
         self.minx = None
         self.miny = None
 
-    def last_calculated_needle_point(self):
+    def number_of_calculated_needle_points(self):
         return len(self.calculated_needle_pens)
 
-    def last_input_needle_point(self):
+    def number_of_input_needle_points(self):
         return len(self.np_needle_points_mm)
 
     def xrange_needle_points_left_to_calculate(self):
-        return range(self.last_calculated_needle_point(), self.last_input_needle_point())
+        return range(self.number_of_calculated_needle_points(), self.number_of_input_needle_points())
 
     def point_display(self, int_this_needle_point):
         return self.np_needle_points_display[int_this_needle_point]
@@ -71,7 +71,7 @@ class NeedleDistanceInformation:
         return (stitch_block_point / self.pixel_density + self.miny) / self.pixels_per_mm
 
     def calculate_distance_up_to_current_point(self, current_stitch, distance_search):
-        last_calculated_needle_point = self.last_calculated_needle_point()
+        last_calculated_needle_point = self.number_of_calculated_needle_points()
         for int_this_needle_point in self.xrange_needle_points_left_to_calculate():
             this_needle_point_display = self.point_display(int_this_needle_point)
             if last_calculated_needle_point < current_stitch:
@@ -134,8 +134,8 @@ class NeedleDistanceInformation:
                     self.needle_points_mm_for_and_of_bol_arrays(np_possibly_close_x, np_possibly_close_y),
                     this_limit_to_compare)
 
-    def last_calculated_stitch(self):
-        return self.np_needle_points_display[self.last_calculated_needle_point() - 1].tolist()
+    def last_calculated_stitch_as_list(self):
+        return self.np_needle_points_display[self.number_of_calculated_needle_points() - 1].tolist()
         # TODO with this linemissing, display ismore in line with needle points if speed is set to beyond what
         #  machine can coop with. Need to check how to set this right
 
@@ -166,7 +166,7 @@ class NeedleDensityInformation(NeedleDistanceInformation):
         thread_to_thread_density_search.translate_count_to_density_colour()
 
     def calculate_needle_density_up_to_current_point(self, current_stitch, thread_to_thread_density_search):
-        last_calculated_needle_point = self.last_calculated_needle_point()
+        last_calculated_needle_point = self.number_of_calculated_needle_points()
         for int_this_needle_point in self.xrange_needle_points_left_to_calculate():
             this_needle_point_display = self.point_display(int_this_needle_point)
             if last_calculated_needle_point < current_stitch:
@@ -214,7 +214,7 @@ class ThreadDensityInformation(NeedleDensityInformation):
 
     def calculate_thread_density_up_to_current_point(self, current_stitch, thread_to_core_density_search,
                                                      thread_to_thread_density_search):
-        last_calculated_needle_point = self.last_calculated_needle_point()
+        last_calculated_needle_point = self.number_of_calculated_needle_points()
         for int_this_needle_point in self.xrange_needle_points_left_to_calculate():
             this_needle_point_display = self.point_display(int_this_needle_point)
             if last_calculated_needle_point < current_stitch:

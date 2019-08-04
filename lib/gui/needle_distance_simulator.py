@@ -31,7 +31,7 @@ class NeedleDistanceDrawingPanel(NeedleDrawingPanel):
         self.needle_density_info.calculate_distance_up_to_current_point(
             self.current_stitch, self.distance_search)
         self.output_needle_points_up_to_current_point()
-        last_stitch = self.needle_density_info.last_calculated_stitch()
+        last_stitch = self.needle_density_info.last_calculated_stitch_as_list()
         self.last_frame_duration = time.time() - start
         self.handle_last_painted_stitch(last_stitch)
 
@@ -74,3 +74,7 @@ def needle_distance_simulator_main():
 
 if __name__ == "__main__":
     needle_distance_simulator_main()
+    # time.sleep(5)
+    # sys.exit()
+    # TODO how to ensure all classes actually closes and nothing remains active? Above two lines show that
+    #  stitch_plan remains active after 5 seconds.
