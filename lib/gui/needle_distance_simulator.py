@@ -74,7 +74,3 @@ def needle_distance_simulator_main():
 
 if __name__ == "__main__":
     needle_distance_simulator_main()
-    # time.sleep(5)
-    # sys.exit()
-    # TODO how to ensure all classes actually closes and nothing remains active? Above two lines show that
-    #  stitch_plan remains active after 5 seconds.
