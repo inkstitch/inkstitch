@@ -98,7 +98,7 @@ def write_embroidery_file(file_path, stitch_plan, svg, settings={}):
         settings['explicit_trim'] = False
 
     try:
-        pyembroidery.write(pattern, file_path.encode("UTF-8"), settings)
+        pyembroidery.write(pattern, file_path, settings)
     except IOError as e:
         # L10N low-level file error.  %(error)s is (hopefully?) translated by
         # the user's system automatically.
