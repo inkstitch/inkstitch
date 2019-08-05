@@ -66,7 +66,7 @@ class ThreadDensityDrawingPanel(NeedleDensityDrawingPanel):
                        "Counts: "
                        "Purple>=" + str(this_thread_density_search.terrible_density_limit_count) + " , " +
                        "Red>=" + str(this_thread_density_search.bad_density_limit_count) + " , " +
-                       "Orange>=" + str(this_thread_density_search.warn_density_limit_count)  +
+                       "Orange>=" + str(this_thread_density_search.warn_density_limit_count) +
                        sky_blue_text1 + " , ")
         return colour_text
 
