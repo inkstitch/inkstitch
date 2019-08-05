@@ -56,30 +56,24 @@ class ThreadDensityDrawingPanel(NeedleDensityDrawingPanel):
 
         self.handle_last_painted_stitch(last_calculated_stitch, dp_wanted_stitch)
 
+    def set_colour_text_for_thread_density_search(self, this_thread_density_search):
+        if this_thread_density_search.high_density_limit_count >= \
+                this_thread_density_search.warn_density_limit_count:
+            sky_blue_text1 = ""
+        else:
+            sky_blue_text1 = " , " + "sky blue>=" + str(this_thread_density_search.high_density_limit_count)
+        colour_text = ("dist1<=" + format(this_thread_density_search.density_area_radius_mm, '.2') + "mm , " +
+                       "Counts: "
+                       "Purple>=" + str(this_thread_density_search.terrible_density_limit_count) + " , " +
+                       "Red>=" + str(this_thread_density_search.bad_density_limit_count) + " , " +
+                       "Orange>=" + str(this_thread_density_search.warn_density_limit_count)  +
+                       sky_blue_text1 + " , ")
+        return colour_text
+
     def set_show_colour_info(self):
-        if self.thread_to_core_density_search.high_density_limit_count >= \
-                self.thread_to_core_density_search.warn_density_limit_count:
-            sky_blue_text1 = "disabled"
-        else:
-            sky_blue_text1 = str(self.thread_to_core_density_search.high_density_limit_count)
-        if self.thread_to_thread_density_search.high_density_limit_count >= \
-                self.thread_to_thread_density_search.warn_density_limit_count:
-            sky_blue_text2 = "disabled"
-        else:
-            sky_blue_text2 = str(self.thread_to_thread_density_search.high_density_limit_count)
         self.set_info_text(
-            "dist1<=" + format(self.thread_to_core_density_search.density_area_radius_mm, '.2') + "mm , " +
-            "Counts: "
-            "Purple>=" + str(self.thread_to_core_density_search.terrible_density_limit_count) + " , " +
-            "Red>=" + str(self.thread_to_core_density_search.bad_density_limit_count) + " , " +
-            "Orange>=" + str(self.thread_to_core_density_search.warn_density_limit_count) + " , " +
-            "sky blue>=" + sky_blue_text1 + " , " +
-            "dist2<=" + format(self.thread_to_thread_density_search.density_area_radius_mm, '.2') + "mm , " +
-            "Counts: "
-            "Purple>=" + str(self.thread_to_thread_density_search.terrible_density_limit_count) + " , " +
-            "Red>=" + str(self.thread_to_thread_density_search.bad_density_limit_count) + " , " +
-            "Orange>=" + str(self.thread_to_thread_density_search.warn_density_limit_count) + " , " +
-            "sky blue>=" + sky_blue_text2 + " , " +
+            "Either: " + self.set_colour_text_for_thread_density_search(self.thread_to_core_density_search) +
+            self.set_colour_text_for_thread_density_search(self.thread_to_thread_density_search) +
             "black=rest")
 
 
