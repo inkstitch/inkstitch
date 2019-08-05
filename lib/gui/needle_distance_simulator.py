@@ -38,7 +38,7 @@ class NeedleDistanceDrawingPanel(NeedleDrawingPanel):
         self.handle_last_painted_stitch(last_stitch, dp_wanted_stitch)
 
     def set_show_colour_info(self):
-        self.set_info_text("Purple<=" + format(self.distance_search.thread_to_core_warning_mm, '.2') +"mm , "
+        self.set_info_text("Purple<=" + format(self.distance_search.thread_to_core_warning_mm, '.2') + "mm , "
                            "sky blue<=" + format(self.distance_search.thread_to_thread_warning_mm, '.2') + "mm, " +
                            "black=rest")
 
