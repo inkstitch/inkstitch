@@ -1,6 +1,5 @@
 import inkex
 
-from ..commands import find_commands
 from .base import InkstitchExtension
 
 
