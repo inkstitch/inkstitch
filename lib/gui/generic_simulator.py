@@ -443,7 +443,6 @@ class BaseDrawingPanel(wx.Panel):
     def set_info_text(self, wanted_text):
         self.control_panel.set_info_text(wanted_text)
 
-
     def draw_crosshair(self, x, y, canvas, transform):
         x, y = transform.TransformPoint(float(x), float(y))
         canvas.SetTransform(canvas.CreateMatrix())
