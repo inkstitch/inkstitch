@@ -27,11 +27,11 @@ class NeedleDensityDrawingPanel(NeedleDrawingPanel):
         self.needle_density_info.__class__ = NeedleDensityInformation
         # above works and is pythonic, but require that there are no additonal instance variable in the higher class
         self.thread_to_thread_density_search = self.initialise_density_search_with_limits(
-            self.check_option_overriding_default_limit(NeedleDensityDrawingPanel.FABRIC_DEFAULT_RADIUS_TO_CHECK_MM,
-                                                       "fabric_radius_examined_mm"))
+            density_area_radius_mm=self.check_option_overriding_default_limit(
+                NeedleDensityDrawingPanel.FABRIC_DEFAULT_RADIUS_TO_CHECK_MM, "fabric_radius_examined_mm"))
 
     def check_option_overriding_default_limit(self, default_limit, option_name_to_check):
-        density_search_area_mm = NeedleDensityDrawingPanel.FABRIC_DEFAULT_RADIUS_TO_CHECK_MM
+        density_search_area_mm = default_limit
         if self.options is not None:
             options_as_dict = self.options.__dict__
             if option_name_to_check in options_as_dict:
@@ -54,6 +54,7 @@ class NeedleDensityDrawingPanel(NeedleDrawingPanel):
 
         start = time.time()
         dp_wanted_stitch = self.wanted_stitch
+        self.set_show_colour_info()
         self.needle_density_info.calculate_needle_density_up_to_current_point(
             dp_wanted_stitch, self.thread_to_thread_density_search)
         self.output_needle_points_up_to_current_point(dp_wanted_stitch)
@@ -62,6 +63,16 @@ class NeedleDensityDrawingPanel(NeedleDrawingPanel):
         self.last_frame_duration = time.time() - start
 
         self.handle_last_painted_stitch(last_stitch, dp_wanted_stitch)
+
+    def set_show_colour_info(self):
+        self.set_info_text(
+            "distance<=" + format(self.thread_to_thread_density_search.density_area_radius_mm, '.2') + "mm , " +
+            "Counts: "
+            "Purple>=" + str(self.thread_to_thread_density_search.terrible_density_limit_count) + " , " +
+            "Red>=" + str(self.thread_to_thread_density_search.bad_density_limit_count) + " , " +
+            "Orange>=" + str(self.thread_to_thread_density_search.warn_density_limit_count) + " , " +
+            "sky blue>=" + str(self.thread_to_thread_density_search.high_density_limit_count) + " , " +
+            "black=rest")
 
 
 class NeedleDensitySimulatorPanel(BaseSimulatorPanel):
