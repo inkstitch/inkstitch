@@ -193,7 +193,7 @@ class ControlPanel(wx.Panel):
         self.stitchBox.SetValue(stitch)
 
         if self.drawing_panel:
-            self.drawing_panel.set_current_stitch(stitch)
+            self.drawing_panel.set_wanted_stitch(stitch)
 
         self.parent.SetFocus()
 
@@ -221,7 +221,7 @@ class ControlPanel(wx.Panel):
         self.slider.SetValue(stitch)
 
         if self.drawing_panel:
-            self.drawing_panel.set_current_stitch(stitch)
+            self.drawing_panel.set_wanted_stitch(stitch)
 
     def animation_slow_down(self, event):
         """"""
@@ -271,7 +271,7 @@ class ControlPanel(wx.Panel):
     def toggle_npp(self, event):
         if self.pauseBtn.GetLabel() == _('Start'):
             stitch = self.stitchBox.GetValue()
-            self.drawing_panel.set_current_stitch(stitch)
+            self.drawing_panel.set_wanted_stitch(stitch)
 
 
 class DrawingPanel(wx.Panel):

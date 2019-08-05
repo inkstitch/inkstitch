@@ -28,12 +28,13 @@ class NeedleDistanceDrawingPanel(NeedleDrawingPanel):
             return
 
         start = time.time()
+        dp_wanted_stitch = self.wanted_stitch
         self.needle_density_info.calculate_distance_up_to_current_point(
-            self.current_stitch, self.distance_search)
-        self.output_needle_points_up_to_current_point()
-        last_stitch = self.needle_density_info.last_calculated_stitch_as_list()
+            dp_wanted_stitch, self.distance_search)
+        self.output_needle_points_up_to_current_point(dp_wanted_stitch)
+        last_stitch = self.needle_density_info.calculated_stitch_at_index_as_list(dp_wanted_stitch - 1)
         self.last_frame_duration = time.time() - start
-        self.handle_last_painted_stitch(last_stitch)
+        self.handle_last_painted_stitch(last_stitch, dp_wanted_stitch)
 
 
 class NeedleDistanceSimulatorPanel(BaseSimulatorPanel):

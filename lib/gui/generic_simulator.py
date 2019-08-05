@@ -191,10 +191,10 @@ class BaseControlPanel(wx.Panel):
 
     def on_slider(self, event):
         stitch = event.GetEventObject().GetValue()
-        self.stitchBox.SetValue(stitch)
+        # self.stitchBox.SetValue(stitch)
 
         if self.drawing_panel:
-            self.drawing_panel.set_current_stitch(stitch)
+            self.drawing_panel.set_wanted_stitch(stitch)
 
         self.parent.SetFocus()
 
@@ -204,7 +204,7 @@ class BaseControlPanel(wx.Panel):
         if self.current_stitch != stitch:
             self.current_stitch = stitch
             self.slider.SetValue(stitch)
-            self.stitchBox.SetValue(stitch)
+            # self.stitchBox.SetValue(stitch)
             self.statusbar.SetStatusText(COMMAND_NAMES[command], 1)
 
     def on_stitch_box_focus(self, event):
@@ -216,15 +216,16 @@ class BaseControlPanel(wx.Panel):
         self.SetAcceleratorTable(self.accel_table)
         stitch = self.stitchBox.GetValue()
         self.parent.SetFocus()
+        self.stitchBox.SetValue(1)
 
         if stitch is None:
             stitch = 1
-            self.stitchBox.SetValue(1)
+            # self.stitchBox.SetValue(1)
 
         self.slider.SetValue(stitch)
 
         if self.drawing_panel:
-            self.drawing_panel.set_current_stitch(stitch)
+            self.drawing_panel.set_wanted_stitch(stitch)
 
     def animation_slow_down(self, event):
         """"""
@@ -275,7 +276,7 @@ class BaseControlPanel(wx.Panel):
     def toggle_npp(self, event):
         if self.pauseBtn.GetLabel() == _('Start'):
             stitch = self.stitchBox.GetValue()
-            self.drawing_panel.set_current_stitch(stitch)
+            self.drawing_panel.set_wanted_stitch(stitch)
 
     def close(self):
         self.stitch_plan = None
@@ -321,7 +322,7 @@ class BaseDrawingPanel(wx.Panel):
         self.target_frame_period = 1.0 / self.TARGET_FPS
         self.last_frame_duration = 0
         self.direction = 1
-        self.current_stitch = 0
+        self.wanted_stitch = 0
         self.black_pen = wx.Pen((128, 128, 128))
         self.width = 0
         self.height = 0
@@ -355,21 +356,21 @@ class BaseDrawingPanel(wx.Panel):
         wx.CallLater(50, self.load, self.stitch_plan)
 
     def clamp_current_stitch(self):
-        if self.current_stitch < 1:
-            self.current_stitch = 1
-        elif self.current_stitch > self.num_stitches:
-            self.current_stitch = self.num_stitches
+        if self.wanted_stitch < 1:
+            self.wanted_stitch = 1
+        elif self.wanted_stitch > self.num_stitches:
+            self.wanted_stitch = self.num_stitches
 
     def stop_if_at_end(self):
-        if self.direction == -1 and self.current_stitch == 1:
+        if self.direction == -1 and self.wanted_stitch == 1:
             self.stop()
-        elif self.direction == 1 and self.current_stitch == self.num_stitches:
+        elif self.direction == 1 and self.wanted_stitch == self.num_stitches:
             self.stop()
 
     def start_if_not_at_end(self):
-        if self.direction == -1 and self.current_stitch > 1:
+        if self.direction == -1 and self.wanted_stitch > 1:
             self.go()
-        elif self.direction == 1 and self.current_stitch < self.num_stitches:
+        elif self.direction == 1 and self.wanted_stitch < self.num_stitches:
             self.go()
 
     def animate(self):
@@ -384,7 +385,7 @@ class BaseDrawingPanel(wx.Panel):
 
         stitch_increment = int(self.speed * frame_time)
 
-        self.set_current_stitch(self.current_stitch + self.direction * stitch_increment)
+        self.set_wanted_stitch(self.wanted_stitch + self.direction * stitch_increment)
         wx.CallLater(int(1000 * frame_time), self.animate)
 
     def init_on_paint(self):
@@ -410,25 +411,26 @@ class BaseDrawingPanel(wx.Panel):
         start = time.time()
         for pen, stitches in izip(self.pens, self.stitch_blocks):
             self.canvas.SetPen(pen)
-            if stitch + len(stitches) < self.current_stitch:
+            if stitch + len(stitches) < self.wanted_stitch:
                 stitch += len(stitches)
                 if len(stitches) > 1:
                     self.canvas.DrawLines(stitches)
                     self.draw_needle_penetration_points(self.canvas, pen, stitches)
                 last_stitch = stitches[-1]
             else:
-                stitches = stitches[:self.current_stitch - stitch]
+                stitches = stitches[:self.wanted_stitch - stitch]
                 if len(stitches) > 1:
                     self.canvas.DrawLines(stitches)
                     self.draw_needle_penetration_points(self.canvas, pen, stitches)
                 last_stitch = stitches[-1]
                 break
         self.last_frame_duration = time.time() - start
-        self.handle_last_painted_stitch(last_stitch)
+        self.handle_last_painted_stitch(last_stitch, self.wanted_stitch)
 
-    def handle_last_painted_stitch(self, last_stitch):
+    def handle_last_painted_stitch(self, last_stitch, last_painted_stitch):
         if last_stitch:
             self.draw_crosshair(last_stitch[0], last_stitch[1], self.canvas, self.transform)
+        self.control_panel.stitchBox.SetValue(last_painted_stitch)
         self.canvas.EndLayer()
         self.draw_scale(self.canvas)
 
@@ -485,7 +487,7 @@ class BaseDrawingPanel(wx.Panel):
         dc.Clear()
 
     def initialize_load(self, stitch_plan):
-        self.current_stitch = 1
+        self.wanted_stitch = 1
         self.direction = 1
         self.last_frame_duration = 0
         self.num_stitches = stitch_plan.num_stitches
@@ -497,7 +499,7 @@ class BaseDrawingPanel(wx.Panel):
 
     def start_simulation_after_load(self):
         self.choose_zoom_and_pan()
-        self.set_current_stitch(0)
+        self.set_wanted_stitch(0)
         self.loaded = True
         self.go()
 
@@ -588,26 +590,26 @@ class BaseDrawingPanel(wx.Panel):
         self.direction = -1
         self.start_if_not_at_end()
 
-    def set_current_stitch(self, stitch):
-        self.current_stitch = stitch
+    def set_wanted_stitch(self, stitch):
+        self.wanted_stitch = stitch
         self.clamp_current_stitch()
-        self.control_panel.on_current_stitch(self.current_stitch, self.commands[self.current_stitch])
+        self.control_panel.on_current_stitch(self.wanted_stitch, self.commands[self.wanted_stitch])
         self.stop_if_at_end()
         self.Refresh()
 
     def restart(self):
         if self.direction == 1:
-            self.current_stitch = 1
+            self.wanted_stitch = 1
         elif self.direction == -1:
-            self.current_stitch = self.num_stitches
+            self.wanted_stitch = self.num_stitches
 
         self.go()
 
     def one_stitch_forward(self):
-        self.set_current_stitch(self.current_stitch + 1)
+        self.set_wanted_stitch(self.wanted_stitch + 1)
 
     def one_stitch_backward(self):
-        self.set_current_stitch(self.current_stitch - 1)
+        self.set_wanted_stitch(self.wanted_stitch - 1)
 
     def on_left_mouse_button_down(self, event):
         self.CaptureMouse()
