@@ -291,7 +291,7 @@ class NeedleDrawingPanel(BaseDrawingPanel):
     def initialise_distance_search_with_limits(self, options=None):
         pen_info = NeedlePenInfo("BLACK", 2)
         thread_to_core_warning_mm = NeedleCommonSearch.THREAD_TO_CORE_WARNING_MM
-        thread_to_thread_warning_mm = NeedleCommonSearch.THREAD_TO_CORE_WARNING_MM
+        thread_to_thread_warning_mm = NeedleCommonSearch.THREAD_TO_THREAD_WARNING_MM
         if options is not None:
             if options.purple_distance_mm:
                 thread_to_core_warning_mm = options.purple_distance_mm
@@ -317,8 +317,8 @@ class NeedlePenInfo:
 class NeedleCommonSearch:
     THREAD_DIAMETER_MM = 0.4
     THREAD_RADIUS_OVERLAP = 0.05
-    THREAD_TO_CORE_WARNING_MM = THREAD_DIAMETER_MM / 2 - THREAD_RADIUS_OVERLAP,
-    THREAD_TO_THREAD_WARNING_MM = THREAD_DIAMETER_MM - THREAD_RADIUS_OVERLAP * 2,
+    THREAD_TO_CORE_WARNING_MM = THREAD_DIAMETER_MM / 2 - THREAD_RADIUS_OVERLAP
+    THREAD_TO_THREAD_WARNING_MM = THREAD_DIAMETER_MM - THREAD_RADIUS_OVERLAP * 2
 
     def __init__(self, pen_info, thread_to_core_warning_mm=THREAD_TO_CORE_WARNING_MM,
                  thread_to_thread_warning_mm=THREAD_TO_THREAD_WARNING_MM,

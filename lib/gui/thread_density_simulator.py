@@ -30,11 +30,11 @@ class ThreadDensityDrawingPanel(NeedleDensityDrawingPanel):
         self.needle_density_info.__class__ = ThreadDensityInformation
         # above works and is pythonic, but require that there are no additonal instance variable in the higher class
         self.thread_to_thread_density_search = self.initialise_density_search_with_limits(
-            self.check_option_overriding_default_limit(ThreadDensityDrawingPanel.THREAD_TO_THREAD_LIMIT_MM,
-                                                       "thread_to_thread_distance_examined_mm"))
+            density_area_radius_mm=self.check_option_overriding_default_limit(
+                ThreadDensityDrawingPanel.THREAD_TO_THREAD_LIMIT_MM, "thread_to_thread_distance_examined_mm"))
         self.thread_to_core_density_search = self.initialise_density_search_with_limits(
-            self.check_option_overriding_default_limit(ThreadDensityDrawingPanel.THREAD_TO_CORE_LIMIT_MM,
-                                                       "thread_to_needle_core_distance_examined_mm"))
+            density_area_radius_mm=self.check_option_overriding_default_limit(
+                ThreadDensityDrawingPanel.THREAD_TO_CORE_LIMIT_MM, "thread_to_needle_core_distance_examined_mm"))
         # TODO when above works, and same in needle_density, rewrite them to simpler call
         self.distance_search = self.initialise_distance_search_with_limits()
 
@@ -44,6 +44,7 @@ class ThreadDensityDrawingPanel(NeedleDensityDrawingPanel):
 
         start = time.time()
         dp_wanted_stitch = self.wanted_stitch
+        self.set_show_colour_info()
         # TODO Time a first set of calculations, and set a minimum speed of what can be done in say half a second.
         #  that would allow me to calculate in advance before user requests higher speed
         self.needle_density_info.calculate_thread_density_up_to_current_point(
@@ -54,6 +55,32 @@ class ThreadDensityDrawingPanel(NeedleDensityDrawingPanel):
         self.last_frame_duration = time.time() - start
 
         self.handle_last_painted_stitch(last_calculated_stitch, dp_wanted_stitch)
+
+    def set_show_colour_info(self):
+        if self.thread_to_core_density_search.high_density_limit_count >= \
+                self.thread_to_core_density_search.warn_density_limit_count:
+            sky_blue_text1 = "disabled"
+        else:
+            sky_blue_text1 = str(self.thread_to_core_density_search.high_density_limit_count)
+        if self.thread_to_thread_density_search.high_density_limit_count >= \
+                self.thread_to_thread_density_search.warn_density_limit_count:
+            sky_blue_text2 = "disabled"
+        else:
+            sky_blue_text2 = str(self.thread_to_thread_density_search.high_density_limit_count)
+        self.set_info_text(
+            "dist1<=" + format(self.thread_to_core_density_search.density_area_radius_mm, '.2') + "mm , " +
+            "Counts: "
+            "Purple>=" + str(self.thread_to_core_density_search.terrible_density_limit_count) + " , " +
+            "Red>=" + str(self.thread_to_core_density_search.bad_density_limit_count) + " , " +
+            "Orange>=" + str(self.thread_to_core_density_search.warn_density_limit_count) + " , " +
+            "sky blue>=" + sky_blue_text1 + " , " +
+            "dist2<=" + format(self.thread_to_thread_density_search.density_area_radius_mm, '.2') + "mm , " +
+            "Counts: "
+            "Purple>=" + str(self.thread_to_thread_density_search.terrible_density_limit_count) + " , " +
+            "Red>=" + str(self.thread_to_thread_density_search.bad_density_limit_count) + " , " +
+            "Orange>=" + str(self.thread_to_thread_density_search.warn_density_limit_count) + " , " +
+            "sky blue>=" + sky_blue_text2 + " , " +
+            "black=rest")
 
 
 class ThreadDensitySimulatorPanel(BaseSimulatorPanel):

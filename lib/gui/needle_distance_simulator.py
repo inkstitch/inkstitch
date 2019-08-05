@@ -29,12 +29,18 @@ class NeedleDistanceDrawingPanel(NeedleDrawingPanel):
 
         start = time.time()
         dp_wanted_stitch = self.wanted_stitch
+        self.set_show_colour_info()
         self.needle_density_info.calculate_distance_up_to_current_point(
             dp_wanted_stitch, self.distance_search)
         self.output_needle_points_up_to_current_point(dp_wanted_stitch)
         last_stitch = self.needle_density_info.calculated_stitch_at_index_as_list(dp_wanted_stitch - 1)
         self.last_frame_duration = time.time() - start
         self.handle_last_painted_stitch(last_stitch, dp_wanted_stitch)
+
+    def set_show_colour_info(self):
+        self.set_info_text("Purple<=" + format(self.distance_search.thread_to_core_warning_mm, '.2') +"mm , "
+                           "sky blue<=" + format(self.distance_search.thread_to_thread_warning_mm, '.2') + "mm, " +
+                           "black=rest")
 
 
 class NeedleDistanceSimulatorPanel(BaseSimulatorPanel):

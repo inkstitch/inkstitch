@@ -207,6 +207,9 @@ class BaseControlPanel(wx.Panel):
             # self.stitchBox.SetValue(stitch)
             self.statusbar.SetStatusText(COMMAND_NAMES[command], 1)
 
+    def set_info_text(self, wanted_info):
+        self.statusbar.SetStatusText(wanted_info, 2)
+
     def on_stitch_box_focus(self, event):
         self.animation_pause()
         self.SetAcceleratorTable(wx.AcceleratorTable([]))
@@ -430,9 +433,16 @@ class BaseDrawingPanel(wx.Panel):
     def handle_last_painted_stitch(self, last_stitch, last_painted_stitch):
         if last_stitch:
             self.draw_crosshair(last_stitch[0], last_stitch[1], self.canvas, self.transform)
-        self.control_panel.stitchBox.SetValue(last_painted_stitch)
+        self.set_stitchbox_value(last_painted_stitch)
         self.canvas.EndLayer()
         self.draw_scale(self.canvas)
+
+    def set_stitchbox_value(self, value):
+        self.control_panel.stitchBox.SetValue(value)
+
+    def set_info_text(self, wanted_text):
+        self.control_panel.set_info_text(wanted_text)
+
 
     def draw_crosshair(self, x, y, canvas, transform):
         x, y = transform.TransformPoint(float(x), float(y))
@@ -745,8 +755,8 @@ class BaseSimulator(wx.Frame):
         self.options = kwargs.pop('options', None)
         self.called_for_size = kwargs.get('size', (0, 0))
         wx.Frame.__init__(self, *args, **kwargs)
-        self.statusbar = self.CreateStatusBar(2)
-        self.statusbar.SetStatusWidths([250, -1])
+        self.statusbar = self.CreateStatusBar(3)
+        self.statusbar.SetStatusWidths([250, 50, -1])
         self.sizer = wx.BoxSizer(wx.HORIZONTAL)
 
     def link_simulator_panel(self, simulator_panel_instance):
