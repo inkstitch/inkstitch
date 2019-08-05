@@ -139,6 +139,9 @@ class NeedleDistanceInformation:
         # TODO with this line missing, display is more in line with needle points if speed is set to beyond what
         #  machine can coop with. Need to check how to set this right
 
+    def calculated_stitch_at_index_as_list(self, wanted_index):
+        return self.np_needle_points_display[wanted_index].tolist()
+
 
 class NeedleDensityInformation(NeedleDistanceInformation):
     def __init__(self, pixel_density, pixels_per_mm):
@@ -152,18 +155,19 @@ class NeedleDensityInformation(NeedleDistanceInformation):
     def needle_points_mm_for_bol_array(self, np_bol_array):
         return self.np_needle_points_mm[np_bol_array]
 
-    def check_needle_density_for_axis_candidates(self, current_needle_point, pen_info,
-                                                 thread_to_thread_density_search):
+    def check_one_density_for_axis_candidates(self, current_needle_point, pen_info,
+                                              thread_to_thread_density_search):
         current_x, current_y = self.x_and_y_for_point_mm(current_needle_point)
         thread_to_thread_density_search.reset_for_next_point_check(pen_info)
         np_possibly_close_x = self.bol_array_points_close_to_x_mm(
             current_x, thread_to_thread_density_search.density_area_radius_mm)
         np_possibly_close_y = self.bol_array_points_close_to_y_mm(
             current_y, thread_to_thread_density_search.density_area_radius_mm)
-        thread_to_thread_density_search.count_points_in_density_radius(
-            current_x, current_y, self.needle_points_mm_for_and_of_bol_arrays(np_possibly_close_x,
-                                                                              np_possibly_close_y))
+        np_possibly_close_combined = self.needle_points_mm_for_and_of_bol_arrays(np_possibly_close_x,
+                                                                                 np_possibly_close_y)
+        thread_to_thread_density_search.count_points_in_density_radius(current_x, current_y, np_possibly_close_combined)
         thread_to_thread_density_search.translate_count_to_density_colour()
+        return current_x, current_y, np_possibly_close_combined
 
     def calculate_needle_density_up_to_current_point(self, current_stitch, thread_to_thread_density_search):
         last_calculated_needle_point = self.number_of_calculated_needle_points()
@@ -181,7 +185,7 @@ class NeedleDensityInformation(NeedleDistanceInformation):
 
     def select_pen_per_density_count(self, current_needle_point, thread_to_thread_density_search):
         pen_info = NeedlePenInfo("BLACK", 2)
-        self.check_needle_density_for_axis_candidates(current_needle_point, pen_info, thread_to_thread_density_search)
+        self.check_one_density_for_axis_candidates(current_needle_point, pen_info, thread_to_thread_density_search)
         return thread_to_thread_density_search.pen_info
 
 
@@ -194,22 +198,12 @@ class ThreadDensityInformation(NeedleDensityInformation):
         self.append_needle_pen(thread_to_thead_needle_pen)
         self.append_calculated_point_as_x_line(this_needle_point_display, thread_to_thead_needle_pen.width)
 
-    def check_thread_density_for_axis_candidates(self, current_needle_point, pen_info,
-                                                 thread_to_core_density_search, thread_to_thread_density_search):
-        current_x, current_y = self.x_and_y_for_point_mm(current_needle_point)
-        thread_to_thread_density_search.reset_for_next_point_check(pen_info)
+    def check_thread_densities_for_axis_candidates(self, current_needle_point, pen_info,
+                                                   thread_to_core_density_search, thread_to_thread_density_search):
+        current_x, current_y, np_possibly_close_combined = self.check_one_density_for_axis_candidates(
+            current_needle_point, pen_info, thread_to_thread_density_search)
         thread_to_core_density_search.reset_for_next_point_check(pen_info)
-        np_possibly_close_x = self.bol_array_points_close_to_x_mm(
-            current_x, thread_to_thread_density_search.density_area_radius_mm)
-        np_possibly_close_y = self.bol_array_points_close_to_y_mm(
-            current_y, thread_to_thread_density_search.density_area_radius_mm)
-        thread_to_thread_density_search.count_points_in_density_radius(
-            current_x, current_y, self.needle_points_mm_for_and_of_bol_arrays(np_possibly_close_x,
-                                                                              np_possibly_close_y))
-        thread_to_thread_density_search.translate_count_to_density_colour()
-        thread_to_core_density_search.count_points_in_density_radius(
-            current_x, current_y, self.needle_points_mm_for_and_of_bol_arrays(np_possibly_close_x,
-                                                                              np_possibly_close_y))
+        thread_to_core_density_search.count_points_in_density_radius(current_x, current_y, np_possibly_close_combined)
         thread_to_core_density_search.translate_count_to_density_colour()
 
     def calculate_thread_density_up_to_current_point(self, current_stitch, thread_to_core_density_search,
@@ -230,8 +224,8 @@ class ThreadDensityInformation(NeedleDensityInformation):
     def select_pen_per_thread_density_count(self, current_needle_point, thread_to_core_density_search,
                                             thread_to_thread_density_search):
         pen_info = NeedlePenInfo("BLACK", 2)
-        self.check_thread_density_for_axis_candidates(current_needle_point, pen_info, thread_to_core_density_search,
-                                                      thread_to_thread_density_search)
+        self.check_thread_densities_for_axis_candidates(current_needle_point, pen_info, thread_to_core_density_search,
+                                                        thread_to_thread_density_search)
         self.evaluate_thread_to_core_and_to_thread_together(thread_to_core_density_search,
                                                             thread_to_thread_density_search)
         return thread_to_thread_density_search.pen_info
@@ -273,8 +267,8 @@ class NeedleDrawingPanel(BaseDrawingPanel):
         self.needle_density_info.load_all_needle_points(self.pens, self.stitch_blocks)
         self.start_simulation_after_load()
 
-    def output_needle_points_up_to_current_point(self, suppress_colours=None):
-        for this_calculated_point in xrange(self.current_stitch):
+    def output_needle_points_up_to_current_point(self, dp_wanted_stitch, suppress_colours=None):
+        for this_calculated_point in xrange(dp_wanted_stitch):
             needle_pen_attributes = self.needle_density_info.calculated_needle_pens[this_calculated_point]
             if (suppress_colours is None) or (not needle_pen_attributes[0] in suppress_colours):
                 # TODO make a tick box option to deselct showing of black points

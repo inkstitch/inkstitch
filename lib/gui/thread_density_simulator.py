@@ -43,16 +43,17 @@ class ThreadDensityDrawingPanel(NeedleDensityDrawingPanel):
             return
 
         start = time.time()
+        dp_wanted_stitch = self.wanted_stitch
         # TODO Time a first set of calculations, and set a minimum speed of what can be done in say half a second.
         #  that would allow me to calculate in advance before user requests higher speed
         self.needle_density_info.calculate_thread_density_up_to_current_point(
-            self.current_stitch, self.thread_to_core_density_search, self.thread_to_thread_density_search)
-        self.output_needle_points_up_to_current_point()
+            dp_wanted_stitch, self.thread_to_core_density_search, self.thread_to_thread_density_search)
+        self.output_needle_points_up_to_current_point(dp_wanted_stitch)
         # self.output_needle_points_up_to_current_point(suppress_colours=["ORANGE", "SKY BLUE", "BLACK"])
-        last_calculated_stitch = self.needle_density_info.last_calculated_stitch_as_list()
+        last_calculated_stitch = self.needle_density_info.calculated_stitch_at_index_as_list(dp_wanted_stitch - 1)
         self.last_frame_duration = time.time() - start
 
-        self.handle_last_painted_stitch(last_calculated_stitch)
+        self.handle_last_painted_stitch(last_calculated_stitch, dp_wanted_stitch)
 
 
 class ThreadDensitySimulatorPanel(BaseSimulatorPanel):
