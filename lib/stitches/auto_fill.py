@@ -9,16 +9,10 @@ from shapely.ops import snap
 from shapely.strtree import STRtree
 
 from ..debug import debug
-from ..exceptions import InkstitchException
-from ..i18n import _
 from ..svg import PIXELS_PER_MM
-from ..utils.geometry import Point as InkstitchPoint
+from ..utils.geometry import Point as InkstitchPoint, line_string_to_point_list
 from .fill import intersect_region_with_grating, stitch_row
 from .running_stitch import running_stitch
-
-
-class InvalidPath(InkstitchException):
-    pass
 
 
 class PathEdge(object):
@@ -60,7 +54,10 @@ def auto_fill(shape,
               underpath=True):
 
     fill_stitch_graph = build_fill_stitch_graph(shape, angle, row_spacing, end_row_spacing)
-    check_graph(fill_stitch_graph, shape, max_stitch_length)
+
+    if not graph_is_valid(fill_stitch_graph, shape, max_stitch_length):
+        return fallback(shape, running_stitch_length)
+
     travel_graph = build_travel_graph(fill_stitch_graph, shape, angle, underpath)
     path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point)
     result = path_to_stitches(path, travel_graph, fill_stitch_graph, angle, row_spacing,
@@ -186,6 +183,25 @@ def add_edges_between_outline_nodes(graph, duplicate_every_other=False):
 
             if i % 2 == 0:
                 graph.add_edge(node1, node2, key="extra", **data)
+
+
+def graph_is_valid(graph, shape, max_stitch_length):
+    # The graph may be empty if the shape is so small that it fits between the
+    # rows of stitching.  Certain small weird shapes can also cause a non-
+    # eulerian graph.
+    return not networkx.is_empty(graph) and networkx.is_eulerian(graph)
+
+
+def fallback(shape, running_stitch_length):
+    """Generate stitches when the auto-fill algorithm fails.
+
+    If graph_is_valid() returns False, we're not going to be able to run the
+    auto-fill algorithm.  Instead, we'll just do running stitch around the
+    outside of the shape.  In all likelihood, the shape is so small it won't
+    matter.
+    """
+
+    return running_stitch(line_string_to_point_list(shape.boundary[0]), running_stitch_length)
 
 
 @debug.time
@@ -374,18 +390,6 @@ def build_travel_edges(shape, fill_angle):
     vertical_edges = ensure_multi_line_string(snap(grating3.difference(grating1), diagonal_edges, 0.005))
 
     return endpoints, chain(diagonal_edges, vertical_edges)
-
-
-def check_graph(graph, shape, max_stitch_length):
-    if networkx.is_empty(graph) or not networkx.is_eulerian(graph):
-        if shape.area < max_stitch_length ** 2:
-            message = "This shape is so small that it cannot be filled with rows of stitches.  " \
-                      "It would probably look best as a satin column or running stitch."
-            raise InvalidPath(_(message))
-        else:
-            message = "Cannot parse shape.  " \
-                      "This most often happens because your shape is made up of multiple sections that aren't connected."
-            raise InvalidPath(_(message))
 
 
 def nearest_node(nodes, point, attr=None):

@@ -1,8 +1,22 @@
 from shapely import geometry as shgeo
 
-from .element import EmbroideryElement, Patch
-from ..utils.geometry import Point
+from ..i18n import _
 from ..utils import cache
+from ..utils.geometry import Point
+from .element import EmbroideryElement, Patch
+from .validation import ValidationWarning
+
+
+class PolylineWarning(ValidationWarning):
+    name = _("Object is a PolyLine")
+    description = _("This object is an SVG PolyLine.  Ink/Stitch can work with this shape, "
+                    "but you can't edit it in Inkscape.  Convert it to a manual stitch path "
+                    "to allow editing.")
+    steps_to_solve = [
+        _("* Select this object."),
+        _("* Do Path > Object to Path."),
+        _('* Optional: Run the Params extension and check the "manual stitch" box.')
+    ]
 
 
 class Polyline(EmbroideryElement):
@@ -69,6 +83,9 @@ class Polyline(EmbroideryElement):
         stitches = [point for handle_before, point, handle_after in self.csp[0]]
 
         return stitches
+
+    def validation_warnings(self):
+        yield PolylineWarning(self.points[0])
 
     def to_patches(self, last_patch):
         patch = Patch(color=self.color)

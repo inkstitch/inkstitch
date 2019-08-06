@@ -7,7 +7,7 @@ import simplestyle
 
 from ..commands import find_commands
 from ..i18n import _
-from ..svg import PIXELS_PER_MM, convert_length, get_doc_size, apply_transforms
+from ..svg import PIXELS_PER_MM, apply_transforms, convert_length, get_doc_size
 from ..svg.tags import INKSCAPE_LABEL
 from ..utils import cache
 
@@ -265,6 +265,8 @@ class EmbroideryElement(object):
         raise NotImplementedError("%s must implement to_patches()" % self.__class__.__name__)
 
     def embroider(self, last_patch):
+        self.validate()
+
         patches = self.to_patches(last_patch)
 
         if patches:
@@ -286,3 +288,36 @@ class EmbroideryElement(object):
         error_msg = "%s: %s %s" % (name, _("error:"), message)
         print >> sys.stderr, "%s" % (error_msg.encode("UTF-8"))
         sys.exit(1)
+
+    def validation_errors(self):
+        """Return a list of errors with this Element.
+
+        Validation errors will prevent the Element from being stitched.
+
+        Return value: an iterable or generator of instances of subclasses of ValidationError
+        """
+        return []
+
+    def validation_warnings(self):
+        """Return a list of warnings about this Element.
+
+        Validation warnings don't prevent the Element from being stitched but
+        the user should probably fix them anyway.
+
+        Return value: an iterable or generator of instances of subclasses of ValidationWarning
+        """
+        return []
+
+    def is_valid(self):
+        # We have to iterate since it could be a generator.
+        for error in self.validation_errors():
+            return False
+
+        return True
+
+    def validate(self):
+        """Print an error message and exit if this Element is invalid."""
+
+        for error in self.validation_errors():
+            # note that self.fatal() exits, so this only shows the first error
+            self.fatal(error.description)

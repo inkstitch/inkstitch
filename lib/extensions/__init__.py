@@ -2,6 +2,7 @@ from auto_satin import AutoSatin
 from convert_to_satin import ConvertToSatin
 from cut_satin import CutSatin
 from embroider import Embroider
+from lib.extensions.troubleshoot import Troubleshoot
 from flip import Flip
 from global_commands import GlobalCommands
 from input import Input
@@ -37,4 +38,5 @@ __all__ = extensions = [Embroider,
                         ConvertToSatin,
                         CutSatin,
                         AutoSatin,
-                        Lettering]
+                        Lettering,
+                        Troubleshoot]
