@@ -11,7 +11,6 @@ from ..stitch_plan import patches_to_stitch_plan
 
 from ..svg import PIXELS_PER_MM
 
-
 from .dialogs import info_dialog
 
 
@@ -199,8 +198,6 @@ class BaseControlPanel(wx.Panel):
         self.parent.SetFocus()
 
     def on_current_stitch(self, stitch, command):
-        # todo have to look into the display of current stitch. It seem clear that when calculation/drawing speed
-        #  is below requested speed, slider displays done long before done
         if self.current_stitch != stitch:
             self.current_stitch = stitch
             self.slider.SetValue(stitch)
@@ -397,6 +394,7 @@ class BaseDrawingPanel(wx.Panel):
 
         self.dc = wx.PaintDC(self)
         self.canvas = wx.GraphicsContext.Create(self.dc)
+        self.canvas.BeginLayer(1)
 
         self.transform = self.canvas.GetTransform()
         self.transform.Translate(*self.pan)
@@ -452,6 +450,7 @@ class BaseDrawingPanel(wx.Panel):
         canvas.DrawLines(((x, y - crosshair_radius), (x, y + crosshair_radius)))
 
     def draw_scale(self, canvas):
+        canvas.BeginLayer(1)
         canvas_width, canvas_height = self.GetClientSize()
 
         one_mm = PIXELS_PER_MM * self.zoom
@@ -484,6 +483,7 @@ class BaseDrawingPanel(wx.Panel):
 
         canvas.SetFont(wx.Font(12, wx.DEFAULT, wx.NORMAL, wx.NORMAL), wx.Colour((0, 0, 0)))
         canvas.DrawText("%s mm" % scale_width_mm, scale_lower_left_x, scale_lower_left_y + 5)
+        canvas.EndLayer()
 
     def draw_needle_penetration_points(self, canvas, pen, stitches):
         if self.control_panel.nppBtn.GetValue():

@@ -136,8 +136,6 @@ class NeedleDistanceInformation:
 
     def last_calculated_stitch_as_list(self):
         return self.np_needle_points_display[self.number_of_calculated_needle_points() - 1].tolist()
-        # TODO with this line missing, display is more in line with needle points if speed is set to beyond what
-        #  machine can coop with. Need to check how to set this right
 
     def calculated_stitch_at_index_as_list(self, wanted_index):
         return self.np_needle_points_display[wanted_index].tolist()
