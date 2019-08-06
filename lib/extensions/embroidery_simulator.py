@@ -4,7 +4,7 @@ from ..stitch_plan import patches_to_stitch_plan
 from .base import InkstitchExtension
 
 
-class Simulate(InkstitchExtension):
+class EmbroiderySimulator(InkstitchExtension):
     def __init__(self):
         InkstitchExtension.__init__(self)
         self.OptionParser.add_option("-P", "--path",
