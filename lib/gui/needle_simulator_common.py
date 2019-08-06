@@ -71,6 +71,7 @@ class NeedleDistanceInformation:
         return (stitch_block_point / self.pixel_density + self.miny) / self.pixels_per_mm
 
     def calculate_distance_up_to_current_point(self, current_stitch, distance_search):
+        # TODO in all these, I likely should ignore counting STOP commands?
         last_calculated_needle_point = self.number_of_calculated_needle_points()
         for int_this_needle_point in self.xrange_needle_points_left_to_calculate():
             this_needle_point_display = self.point_display(int_this_needle_point)
@@ -269,7 +270,7 @@ class NeedleDrawingPanel(BaseDrawingPanel):
         for this_calculated_point in xrange(dp_wanted_stitch):
             needle_pen_attributes = self.needle_density_info.calculated_needle_pens[this_calculated_point]
             if (suppress_colours is None) or (not needle_pen_attributes[0] in suppress_colours):
-                # TODO make a tick box option to deselct showing of black points
+                # TODO make a tick box option to deselect showing of black points
                 self.canvas.SetPen(wx.Pen(wx.Colour(needle_pen_attributes[0]), needle_pen_attributes[1]))
                 needle_line_points = self.needle_density_info.calculated_needle_points[this_calculated_point]
                 self.canvas.DrawLines(((needle_line_points[0], needle_line_points[1]),
