@@ -52,7 +52,7 @@ class EmbroiderySimulator(BaseSimulator):
 class SimulatorPreview(BaseSimulatorPreview):
     """Manages a preview simulation and a background thread for generating patches."""
     def __init__(self, parent, *args, **kwargs):
-        BaseSimulatorPreview.__init__(self, self, parent, *args, **kwargs)
+        BaseSimulatorPreview.__init__(self, EmbroiderySimulator, parent, *args, **kwargs)
         # TODO this should be working from params (and lettering)...
 
 
