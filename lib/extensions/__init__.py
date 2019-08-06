@@ -15,7 +15,7 @@ from object_commands import ObjectCommands
 from output import Output
 from params import Params
 from print_pdf import Print
-from embroidery_simulator import EmbroiderySimulator
+from simulate_embroidery import SimulateEmbroidery
 from zip import Zip
 
 
@@ -23,7 +23,7 @@ __all__ = extensions = [Embroider,
                         Install,
                         Params,
                         Print,
-                        EmbroiderySimulator,
+                        SimulateEmbroidery,
                         NeedleDistance,
                         ThreadDensity,
                         NeedleDensity,
