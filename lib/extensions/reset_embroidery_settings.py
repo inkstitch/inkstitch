@@ -53,9 +53,7 @@ class ResetEmbroiderySettings(InkstitchExtension):
     def get_selected_elements(self, element_id):
         xpath = ".//svg:path[@id='%s']" % element_id
         elements = self.find_elements(xpath)
-        if elements:
-            self.remove_embroider_attributes(elements)
-        else:
+        if not elements:
             xpath = ".//svg:g[@id='%s']//svg:path" % element_id
             elements = self.find_elements(xpath)
         return elements
