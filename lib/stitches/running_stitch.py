@@ -1,6 +1,5 @@
 from copy import copy
 
-
 """ Utility functions to produce running stitches. """
 
 

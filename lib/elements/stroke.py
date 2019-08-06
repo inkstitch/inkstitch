@@ -3,11 +3,10 @@ import sys
 import shapely.geometry
 
 from ..i18n import _
-from ..stitches import running_stitch, bean_stitch
+from ..stitches import bean_stitch, running_stitch
 from ..svg import parse_length_with_units
-from ..utils import cache, Point
-from .element import param, EmbroideryElement, Patch
-
+from ..utils import Point, cache
+from .element import EmbroideryElement, Patch, param
 
 warned_about_legacy_running_stitch = False
 

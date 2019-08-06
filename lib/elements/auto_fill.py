@@ -4,12 +4,20 @@ import traceback
 
 from shapely import geometry as shgeo
 
-from ..exceptions import InkstitchException
 from ..i18n import _
 from ..stitches import auto_fill
 from ..utils import cache
-from .element import param, Patch
+from .element import Patch, param
 from .fill import Fill
+
+from .validation import ValidationWarning
+
+
+class SmallShapeWarning(ValidationWarning):
+    name = _("Small Fill")
+    description = _("This fill object is so small that it would probably look better as running stitch or satin column. "
+                    "For very small shapes, fill stitch is not possible, and Ink/Stitch will use running stitch around "
+                    "the outline instead.")
 
 
 class AutoFill(Fill):
@@ -208,10 +216,7 @@ class AutoFill(Fill):
                                       starting_point,
                                       ending_point,
                                       self.underpath))
-        except InkstitchException, exc:
-            # for one of our exceptions, just print the message
-            self.fatal(_("Unable to autofill: ") + str(exc))
-        except Exception, exc:
+        except Exception:
             if hasattr(sys, 'gettrace') and sys.gettrace():
                 # if we're debugging, let the exception bubble up
                 raise
@@ -228,3 +233,10 @@ class AutoFill(Fill):
             self.fatal(message)
 
         return [Patch(stitches=stitches, color=self.color)]
+
+    def validation_warnings(self):
+        if self.shape.area < 20:
+            yield SmallShapeWarning(self.shape.centroid)
+
+        for warning in super(AutoFill, self).validation_warnings():
+            yield warning

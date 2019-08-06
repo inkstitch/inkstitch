@@ -1,4 +1,6 @@
+import logging
 import math
+import re
 
 from shapely import geometry as shgeo
 from shapely.validation import explain_validity
@@ -7,7 +9,29 @@ from ..i18n import _
 from ..stitches import legacy_fill
 from ..svg import PIXELS_PER_MM
 from ..utils import cache
-from .element import param, EmbroideryElement, Patch
+from .element import EmbroideryElement, Patch, param
+from .validation import ValidationError
+
+
+class UnconnectedError(ValidationError):
+    name = _("Unconnected")
+    description = _("Fill: This object is made up of unconnected shapes.  This is not allowed because "
+                    "Ink/Stitch doesn't know what order to stitch them in.  Please break this "
+                    "object up into separate shapes.")
+    steps_to_solve = [
+        _('* Path > Break apart (Shift+Ctrl+K)'),
+        _('* (Optional) Recombine shapes with holes (Ctrl+K).')
+    ]
+
+
+class InvalidShapeError(ValidationError):
+    name = _("Border crosses itself")
+    description = _("Fill: Shape is not valid.  This can happen if the border crosses over itself.")
+    steps_to_solve = [
+        _('* Path > Union (Ctrl++)'),
+        _('* Path > Break apart (Shift+Ctrl+K)'),
+        _('* (Optional) Recombine shapes with holes (Ctrl+K).')
+    ]
 
 
 class Fill(EmbroideryElement):
@@ -112,18 +136,28 @@ class Fill(EmbroideryElement):
         paths.sort(key=lambda point_list: shgeo.Polygon(point_list).area, reverse=True)
         polygon = shgeo.MultiPolygon([(paths[0], paths[1:])])
 
-        if not polygon.is_valid:
-            why = explain_validity(polygon)
+        return polygon
+
+    def validation_errors(self):
+        # Shapely will log to stdout to complain about the shape unless we make
+        # it shut up.
+        logger = logging.getLogger('shapely.geos')
+        level = logger.level
+        logger.setLevel(logging.CRITICAL)
+
+        valid = self.shape.is_valid
+
+        logger.setLevel(level)
+
+        if not valid:
+            why = explain_validity(self.shape)
+            message, x, y = re.findall(r".+?(?=\[)|\d+\.\d+", why)
 
             # I Wish this weren't so brittle...
-            if "Hole lies outside shell" in why:
-                self.fatal(_("this object is made up of unconnected shapes.  This is not allowed because "
-                             "Ink/Stitch doesn't know what order to stitch them in.  Please break this "
-                             "object up into separate shapes."))
+            if "Hole lies outside shell" in message:
+                yield UnconnectedError((x, y))
             else:
-                self.fatal(_("shape is not valid.  This can happen if the border crosses over itself."))
-
-        return polygon
+                yield InvalidShapeError((x, y))
 
     def to_patches(self, last_patch):
         stitch_lists = legacy_fill(self.shape,
