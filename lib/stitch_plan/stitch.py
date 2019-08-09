@@ -2,12 +2,13 @@ from ..utils.geometry import Point
 
 
 class Stitch(Point):
-    def __init__(self, x, y=None, color=None, jump=False, stop=False, trim=False, color_change=False, no_ties=False):
-        self.x = x
-        self.y = y
+    def __init__(self, x, y=None, color=None, jump=False, stop=False, trim=False, end=False, color_change=False,
+                 no_ties=False):
+        Point.__init__(self, x, y)
         self.color = color
         self.jump = jump
         self.trim = trim
+        self.end = end
         self.stop = stop
         self.color_change = color_change
         self.no_ties = no_ties
@@ -30,4 +31,5 @@ class Stitch(Point):
                                                            )
 
     def copy(self):
-        return Stitch(self.x, self.y, self.color, self.jump, self.stop, self.trim, self.color_change, self.no_ties)
+        return Stitch(self.x, self.y, self.color, self.jump, self.stop, self.trim, self.color_change, self.no_ties,
+                      self.end)
