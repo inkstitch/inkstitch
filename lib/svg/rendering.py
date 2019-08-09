@@ -214,6 +214,7 @@ def color_block_to_paths(color_block, svg, destination):
              'transform': get_correction_transform(svg),
              'embroider_manual_stitch': 'true'
              }))
+        # TODO above is a hard coded thread width should use a constant declared somewhere
 
 
 def render_stitch_plan(svg, stitch_plan, realistic=False):

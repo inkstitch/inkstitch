@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>{% trans %}Needle Density Warning Graph{% endtrans %}</name>
+    <id>org.inkstitch.needle_density.{{ locale }}</id>
+    <dependency type="executable" location="extensions">inkstitch.py</dependency>
+    <dependency type="executable" location="extensions">inkex.py</dependency>
+    <param name="fabric_radius_examined_mm" type="float" precision="2" min="0.05" max="1" _gui-text="{% trans %}fabric radius examined for overload (mm){% endtrans %}" _gui-description="{% trans %}Defines the fabric radius which will be examined for too many needle points and coloured in the graph.{% endtrans %}">0.5</param>
+    <param name="extension" type="string" gui-hidden="true">needle_density</param>
+    <effect>
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu name="Ink/Stitch">
+                <submenu name="{% trans %}Graphic simulated stitching and warnings{% endtrans %}" />
+            </submenu>
+        </effects-menu>
+    </effect>
+    <script>
+        <command reldir="extensions" interpreter="python">inkstitch.py</command>
+    </script>
+</inkscape-extension>
