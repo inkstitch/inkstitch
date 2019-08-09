@@ -152,6 +152,13 @@ class StitchPlan(object):
         else:
             return None
 
+    @property
+    def previous_color_block(self):
+        if self.color_blocks and self.num_color_blocks >= 2:
+            return self.color_blocks[-2]
+        else:
+            return None
+
 
 class ColorBlock(object):
     """Holds a set of stitches, all with the same thread color."""
