@@ -61,6 +61,5 @@ def embroidery_simulator_main():
     show_simulator(EmbroiderySimulator,  "Embroidery Simulation", stitch_plan)
 
 
-
 if __name__ == "__main__":
     embroidery_simulator_main()

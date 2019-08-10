@@ -145,7 +145,7 @@ class BaseControlPanel(wx.Panel):
     def define_button(self, label, button_function):
         new_button = wx.Button(self, -1, label=label)
         new_button.Bind(wx.EVT_BUTTON, button_function)
-        return  new_button
+        return new_button
 
     def set_drawing_panel(self, drawing_panel):
         self.drawing_panel = drawing_panel
@@ -301,16 +301,6 @@ class BaseControlPanel(wx.Panel):
         if self.pauseBtn.GetLabel() == _('Start'):
             stitch = self.stitchBox.GetValue()
             self.drawing_panel.set_wanted_stitch(stitch)
-
-    def close(self):
-        self.stitch_plan = None
-        self.parent = None
-        if self.drawing_panel is not None:
-            self.drawing_panel.close()
-            self.drawing_panel = None
-        self.vbSizer = None
-        self.hbSizer1 = None
-        self.hbSizer2 = None
 
     def close(self):
         self.stitch_plan = None

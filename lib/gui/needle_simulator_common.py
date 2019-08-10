@@ -142,9 +142,6 @@ class NeedleDistanceInformation:
     def calculated_stitch_at_index_as_list(self, wanted_index):
         return self.np_needle_points_display[wanted_index].tolist()
 
-    def calculated_stitch_at_index_as_list(self, wanted_index):
-        return self.np_needle_points_display[wanted_index].tolist()
-
 
 class NeedleDensityInformation(NeedleDistanceInformation):
     def __init__(self, pixel_density, pixels_per_mm):
