@@ -20,15 +20,16 @@ class Stitch(Point):
             self.y = point.y
 
     def __repr__(self):
-        return "Stitch(%s, %s, %s, %s, %s, %s, %s, %s)" % (self.x,
-                                                           self.y,
-                                                           self.color,
-                                                           "JUMP" if self.jump else " ",
-                                                           "TRIM" if self.trim else " ",
-                                                           "STOP" if self.stop else " ",
-                                                           "NO TIES" if self.no_ties else " ",
-                                                           "COLOR CHANGE" if self.color_change else " "
-                                                           )
+        return "Stitch(%s, %s, %s, %s, %s, %s, %s, %s, %s)" % (self.x,
+                                                               self.y,
+                                                               self.color,
+                                                               "JUMP" if self.jump else " ",
+                                                               "TRIM" if self.trim else " ",
+                                                               "END" if self.end else " ",
+                                                               "STOP" if self.stop else " ",
+                                                               "NO TIES" if self.no_ties else " ",
+                                                               "COLOR CHANGE" if self.color_change else " "
+                                                               )
 
     def copy(self):
         return Stitch(self.x, self.y, self.color, self.jump, self.stop, self.trim, self.color_change, self.no_ties,
