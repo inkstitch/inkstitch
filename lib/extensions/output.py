@@ -47,6 +47,7 @@ class Output(InkstitchExtension):
 
         patches = self.elements_to_patches(self.elements)
         stitch_plan = patches_to_stitch_plan(patches, disable_ties=self.settings.get('laser_mode', False))
+        # TODO change this one so it coordinates with vp3 input
 
         temp_file = tempfile.NamedTemporaryFile(suffix=".%s" % self.file_extension, delete=False)
 
