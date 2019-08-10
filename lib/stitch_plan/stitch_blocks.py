@@ -134,4 +134,3 @@ class StitchBlocks:
         # thickness of ~0.4mm, but if we did that, we wouldn't be able to
         # see the individual stitches.
         return wx.Pen(color.visible_on_white.rgb, width=int(0.1 * PIXELS_PER_MM * PIXEL_DENSITY))
-
