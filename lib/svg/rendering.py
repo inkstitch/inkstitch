@@ -151,7 +151,7 @@ def color_block_to_point_lists(color_block):
             point_lists[-1].append(stitch.as_tuple())
 
     # filter out empty point lists
-    point_lists = [p for p in point_lists if p]
+    point_lists = [p for p in point_lists if len(p) > 1]
 
     return point_lists
 
@@ -169,9 +169,6 @@ def get_correction_transform(svg):
 
 def color_block_to_realistic_stitches(color_block, svg, destination):
     for point_list in color_block_to_point_lists(color_block):
-        if not point_list:
-            continue
-
         color = color_block.color.visible_on_white.darker.to_hex_str()
         start = point_list[0]
         for point in point_list[1:]:
