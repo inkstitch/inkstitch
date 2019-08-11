@@ -31,6 +31,12 @@ class Input(object):
 
         stitch_plan.delete_empty_color_blocks()
 
+        if stitch_plan.last_color_block:
+            if stitch_plan.last_color_block.last_stitch:
+                if stitch_plan.last_color_block.last_stitch.stop:
+                    # ending with a STOP command is redundant, so remove it
+                    del stitch_plan.last_color_block[-1]
+
         extents = stitch_plan.extents
         svg = etree.Element("svg", nsmap=inkex.NSS, attrib={
             "width": str(extents[0] * 2),

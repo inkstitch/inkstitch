@@ -169,6 +169,12 @@ class ColorBlock(object):
     def __repr__(self):
         return "ColorBlock(%s, %s)" % (self.color, self.stitches)
 
+    def __getitem__(self, item):
+        return self.stitches[item]
+
+    def __delitem__(self, item):
+        del self.stitches[item]
+
     def has_color(self):
         return self._color is not None
 
