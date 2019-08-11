@@ -169,6 +169,12 @@ class ColorBlock(object):
     def __repr__(self):
         return "ColorBlock(%s, %s)" % (self.color, self.stitches)
 
+    def __getitem__(self, item):
+        return self.stitches[item]
+
+    def __delitem__(self, item):
+        del self.stitches[item]
+
     def has_color(self):
         return self._color is not None
 
@@ -209,6 +215,20 @@ class ColorBlock(object):
             return self.last_stitch.stop
         else:
             return False
+
+    @property
+    def trim_after(self):
+        # If there's a STOP, it will be at the end.  We still want to return
+        # True.
+        for stitch in reversed(self.stitches):
+            if stitch.stop or stitch.jump:
+                continue
+            elif stitch.trim:
+                return True
+            else:
+                break
+
+        return False
 
     def filter_duplicate_stitches(self):
         if not self.stitches:

@@ -147,11 +147,11 @@ def color_block_to_point_lists(color_block):
                 point_lists.append([])
                 continue
 
-        if not stitch.jump and not stitch.color_change:
+        if not stitch.jump and not stitch.color_change and not stitch.stop:
             point_lists[-1].append(stitch.as_tuple())
 
     # filter out empty point lists
-    point_lists = [p for p in point_lists if p]
+    point_lists = [p for p in point_lists if len(p) > 1]
 
     return point_lists
 
@@ -169,9 +169,6 @@ def get_correction_transform(svg):
 
 def color_block_to_realistic_stitches(color_block, svg, destination):
     for point_list in color_block_to_point_lists(color_block):
-        if not point_list:
-            continue
-
         color = color_block.color.visible_on_white.darker.to_hex_str()
         start = point_list[0]
         for point in point_list[1:]:
@@ -190,21 +187,23 @@ def color_block_to_realistic_stitches(color_block, svg, destination):
 
 
 def color_block_to_paths(color_block, svg, destination):
+    # If we try to import these above, we get into a mess of circular
+    # imports.
+    from ..commands import add_commands
+    from ..elements.stroke import Stroke
+
     # We could emit just a single path with one subpath per point list, but
     # emitting multiple paths makes it easier for the user to manipulate them.
     first = True
+    path = None
     for point_list in color_block_to_point_lists(color_block):
         if first:
             first = False
         else:
-            # If we try to import these above, we get into a mess of circular
-            # imports.
-            from ..commands import add_commands
-            from ..elements.stroke import Stroke
             add_commands(Stroke(destination[-1]), ["trim"])
 
         color = color_block.color.visible_on_white.to_hex_str()
-        destination.append(inkex.etree.Element(
+        path = inkex.etree.Element(
             SVG_PATH_TAG,
             {'style': simplestyle.formatStyle(
                 {'stroke': color,
@@ -213,7 +212,15 @@ def color_block_to_paths(color_block, svg, destination):
              'd': "M" + " ".join(" ".join(str(coord) for coord in point) for point in point_list),
              'transform': get_correction_transform(svg),
              'embroider_manual_stitch': 'true'
-             }))
+             })
+        destination.append(path)
+
+    if path is not None:
+        if color_block.trim_after:
+            add_commands(Stroke(path), ["trim"])
+
+        if color_block.stop_after:
+            add_commands(Stroke(path), ["stop"])
 
 
 def render_stitch_plan(svg, stitch_plan, realistic=False):

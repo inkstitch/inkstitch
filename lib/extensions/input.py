@@ -13,24 +13,29 @@ class Input(object):
     def affect(self, args):
         embroidery_file = args[0]
         pattern = pyembroidery.read(embroidery_file)
-        pattern = pattern.get_pattern_interpolate_trim(3)
 
         stitch_plan = StitchPlan()
         color_block = None
 
         for raw_stitches, thread in pattern.get_as_colorblocks():
             color_block = stitch_plan.new_color_block(thread)
-            trim_after = False
             for x, y, command in raw_stitches:
                 if command == pyembroidery.STITCH:
-                    if trim_after:
-                        color_block.add_stitch(trim=True)
-                        trim_after = False
                     color_block.add_stitch(x * PIXELS_PER_MM / 10.0, y * PIXELS_PER_MM / 10.0)
-                if len(color_block) > 0 and command == pyembroidery.TRIM:
-                    trim_after = True
+                if len(color_block) > 0:
+                    if command == pyembroidery.TRIM:
+                        color_block.add_stitch(trim=True)
+                    elif command == pyembroidery.STOP:
+                        color_block.add_stitch(stop=True)
+                        color_block = stitch_plan.new_color_block(thread)
 
         stitch_plan.delete_empty_color_blocks()
+
+        if stitch_plan.last_color_block:
+            if stitch_plan.last_color_block.last_stitch:
+                if stitch_plan.last_color_block.last_stitch.stop:
+                    # ending with a STOP command is redundant, so remove it
+                    del stitch_plan.last_color_block[-1]
 
         extents = stitch_plan.extents
         svg = etree.Element("svg", nsmap=inkex.NSS, attrib={
