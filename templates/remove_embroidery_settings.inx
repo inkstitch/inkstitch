@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <name>{% trans %}Reset embroidery settings{% endtrans %}</name>
-    <id>org.inkstitch.reset_embroidery_settings.{{ locale }}</id>
+    <name>{% trans %}Remove embroidery settings{% endtrans %}</name>
+    <id>org.inkstitch.remove_embroidery_settings.{{ locale }}</id>
     <dependency type="executable" location="extensions">inkstitch.py</dependency>
     <dependency type="executable" location="extensions">inkex.py</dependency>
-    <param name="del_params" type="boolean" _gui-text="{% trans %}Reset Params{% endtrans %}"
+    <param name="del_params" type="boolean" _gui-text="{% trans %}Remove Params{% endtrans %}"
            _gui-description="{% trans %}Removes params from selected objects or all objects if nothing is selected.{% endtrans %}">true</param>
     <param name="del_commands" type="boolean" _gui-text="{% trans %}Remove Commands{% endtrans %}"
            _gui-description="{% trans %}Removes visual commands from selected objects or all objects if nothing is selected.{% endtrans %}">false</param>
-    <param name="del_print" type="boolean" _gui-text="{% trans %}Remove Document Print Information{% endtrans %}">false</param>
-    <param name="extension" type="string" gui-hidden="true">reset_embroidery_settings</param>
+    <param name="del_print" type="boolean" _gui-text="{% trans %}Remove Print Settings from SVG metadata{% endtrans %}">false</param>
+    <param name="extension" type="string" gui-hidden="true">remove_embroidery_settings</param>
     <effect>
         <object-type>all</object-type>
         <effects-menu>

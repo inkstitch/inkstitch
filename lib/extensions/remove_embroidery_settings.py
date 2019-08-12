@@ -3,7 +3,7 @@ import inkex
 from .base import InkstitchExtension
 
 
-class ResetEmbroiderySettings(InkstitchExtension):
+class RemoveEmbroiderySettings(InkstitchExtension):
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
         self.OptionParser.add_option("-p", "--del_params", dest="del_params", type="inkbool", default=True)
