@@ -1,5 +1,6 @@
 import inkex
 
+from ..commands import find_commands
 from .base import InkstitchExtension
 
 
@@ -46,9 +47,9 @@ class RemoveEmbroiderySettings(InkstitchExtension):
             for node in self.selected:
                 elements = self.get_selected_elements(node)
                 for element in elements:
-                    xpath = (".//svg:path[@inkscape:connection-start='#%(id)s' or @inkscape:connection-end='#%(id)s']/parent::*" %
-                             dict(id=element.get('id')))
-                    commands = self.remove_elements(xpath)
+                    for command in find_commands(element):
+                        group = command.connector.getparent()
+                        group.getparent().remove(group)
 
     def get_selected_elements(self, element_id):
         xpath = ".//svg:path[@id='%s']" % element_id
