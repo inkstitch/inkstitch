@@ -2,7 +2,7 @@
 title: "Installation von Ink/Stitch"
 permalink: /de/docs/install/
 excerpt: "Wie wird Ink/Stitch installiert."
-last_modified_at: 2019-04-21
+last_modified_at: 2019-08-12
 toc: true
 ---
 
@@ -39,7 +39,7 @@ macOS | `inkstitch-[VERSION]-osx-x86_64-[SPRACHE].tar.gz` | ☒ | ☑
 
 Die ausgewählte `SPRACHE` bezieht sich nur auf die Menüs von Inkscape. Ink/Stitch-Dialogfenster werden in der Sprache des Betriebssystems dargestellt (sofern diese unterstützt wird).
 
-**Info:** Ink/Stitch für macOS funktioniert derzeit nur mit High Sierra (10.13) oder höher.
+**Info:** Ink/Stitch für macOS funktioniert derzeit nur mit Sierra (10.12) oder höher.
 {: .notice--warning }
 
 ### 2. Installation

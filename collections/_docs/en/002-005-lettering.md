@@ -2,7 +2,7 @@
 title: "Lettering Tool"
 permalink: /docs/lettering/
 excerpt: ""
-last_modified_at: 2018-12-16
+last_modified_at: 2019-08-12
 toc: false
 ---
 The lettering tool generates multi-line text as satin columns and dynamically routes stitching, breaking up satins if necessary and adding running stitch.
@@ -13,10 +13,18 @@ The lettering tool generates multi-line text as satin columns and dynamically ro
 
 * Run `Extensions > Ink/Stitch  > Lettering`
 * Enter your text (multi-line is possible)
+* Set font and scaling
 * Click on `Apply and Quit`
 
-**Info:** The lettering tool is still in a very basic version. This means:<br><br>
-<span style="color: #c50505;">✗</span> The option "Stitch lines of text back and forth" has not yet any effect.<br>
-<span style="color: #c50505;">✗</span> There is only one font available at this point.<br><br>
-But nevertheless it is a great helper already now.
-{: .notice--warning }
+## Options
+
+* **Stitch lines of text back and forth**<br>
+  With this option enabled the first line will be stitched from left to right and the second from right to left, etc.
+  This will give your machine shorter ways to travel.
+
+* **Add trims**<br>
+  With this option enabled Ink/Stitch will add TRIM-commands for each letter.
+
+## Presets
+
+You can save and load your favourite font settings.

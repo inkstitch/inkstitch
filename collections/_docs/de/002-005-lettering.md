@@ -2,7 +2,7 @@
 title: "Lettering"
 permalink: /de/docs/lettering/
 excerpt: ""
-last_modified_at: 2019-03-16
+last_modified_at: 2019-08-12
 toc: false
 ---
 Das Lettering-Werkzeug generiert mehrzeiligen Text und fügt diesen als dynamisch geführte Satinkolumne in das Dokument ein.
@@ -13,10 +13,18 @@ Das Lettering-Werkzeug generiert mehrzeiligen Text und fügt diesen als dynamisc
 
 * Öffne `Erweiterungen > Ink/Stitch  > Lettering`
 * Schreibe einen Text (mehrzeilig ist möglich)
-* Klick auf `Anwenden und schließen`
+* Wähle Schriftart und Schriftgröße
+* Klicke auf `Anwenden und schließen`
 
-**Info:** Das Lettering-Werkzeug ist noch in seinen Anfängen. Das bedeutet:<br><br>
-<span style="color: #c50505;">✗</span> Die Option "Stitch lines of text back and forth" hat keinen Effekt.<br>
-<span style="color: #c50505;">✗</span> Es gibt momentan nur eine verfügbare Schriftart.<br><br>
-Aber nichtsdestotrotz ist es bereits jetzt eine große Hilfe.
-{: .notice--warning }
+## Optionen
+
+* **Stitch lines of text back and forth**<br>
+  Ist diese Option aktiviert, wird die erste Zeile von links nach rechts und die zweite von rechts nach links gestickt, etc.
+  So kannst du lange Wege für deine Maschine vermeiden.
+
+* **Add trims**<br>
+  Ist diese Option aktiviert, fügt Ink/Stitch Fadenschneide-Befehle für jeden Buchstaben hinzu.
+
+## Voreinstellungen
+
+Du kannst deine bevorzugten Schrifteinstellungen speichern und laden.
