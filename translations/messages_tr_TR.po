@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-08-11 20:35+0000\n"
-"PO-Revision-Date: 2019-08-11 20:36\n"
+"POT-Creation-Date: 2019-08-13 20:36+0000\n"
+"PO-Revision-Date: 2019-08-15 20:38\n"
 "Last-Translator: Lex Neva (lexelby)\n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -17,46 +17,46 @@ msgstr ""
 "X-Crowdin-File: /master/messages.po\n"
 "Language: tr_TR\n"
 
-#. name of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:2
-msgid "TT Masters"
-msgstr ""
-
-#. description of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:4
-msgid "A font suited for heavy typing :)"
-msgstr ""
-
 #. name of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:6
+#: inkstitch-fonts-metadata.py:2
 msgid "Ink/Stitch Small Font"
 msgstr ""
 
 #. description of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:8
+#: inkstitch-fonts-metadata.py:4
 #, python-format
 msgid "A font suited for small characters.  The capital em is 0.2 inches wide at 100% scale.  Can be scaled up to 300%."
 msgstr ""
 
-#. name of font in fonts/medium_font
-#: inkstitch-fonts-metadata.py:10
-msgid "Ink/Stitch Medium Font"
+#. name of font in fonts/tt_masters
+#: inkstitch-fonts-metadata.py:6
+msgid "TT Masters"
 msgstr ""
 
-#. description of font in fonts/medium_font
-#: inkstitch-fonts-metadata.py:12
-#, python-format
-msgid "A basic font suited for medium-sized characters.  The capital em is 0.6 inches wide at 100% scale.  Can be scaled down to 75% or up to 150%.  Every satin has contour underlay."
+#. description of font in fonts/tt_masters
+#: inkstitch-fonts-metadata.py:8
+msgid "A font suited for heavy typing :)"
 msgstr ""
 
 #. name of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:14
+#: inkstitch-fonts-metadata.py:10
 msgid "TT Directors"
 msgstr ""
 
 #. description of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:16
+#: inkstitch-fonts-metadata.py:12
 msgid "A font suited for directing"
+msgstr ""
+
+#. name of font in fonts/medium_font
+#: inkstitch-fonts-metadata.py:14
+msgid "Ink/Stitch Medium Font"
+msgstr ""
+
+#. description of font in fonts/medium_font
+#: inkstitch-fonts-metadata.py:16
+#, python-format
+msgid "A basic font suited for medium-sized characters.  The capital em is 0.6 inches wide at 100% scale.  Can be scaled down to 75% or up to 150%.  Every satin has contour underlay."
 msgstr ""
 
 #. command attached to an object
@@ -98,20 +98,20 @@ msgstr ""
 #. command attached to an object
 #: lib/commands.py:32
 msgid "stop"
-msgstr ""
+msgstr "durakla"
 
 #: lib/commands.py:32
 msgid "Stop (pause machine) after sewing this object"
-msgstr ""
+msgstr "Bu objeyi diktikten sonra dur (makineyi duraklat)"
 
 #. command attached to an object
 #: lib/commands.py:35
 msgid "trim"
-msgstr ""
+msgstr "kes"
 
 #: lib/commands.py:35
 msgid "Trim thread after sewing this object"
-msgstr ""
+msgstr "Bu objeyi diktikten sonra ipi kes"
 
 #. command attached to an object
 #: lib/commands.py:38
@@ -120,7 +120,7 @@ msgstr ""
 
 #: lib/commands.py:38
 msgid "Ignore this object (do not stitch)"
-msgstr ""
+msgstr "Bu objeyi atla (dikme)"
 
 #. command attached to an object
 #: lib/commands.py:41
@@ -129,7 +129,7 @@ msgstr ""
 
 #: lib/commands.py:41
 msgid "Satin cut point (use with Cut Satin Column)"
-msgstr ""
+msgstr "Saten kesim noktası (Saten Kesin Sütunu ile kullan)"
 
 #. command that affects a layer
 #: lib/commands.py:45
@@ -138,7 +138,7 @@ msgstr ""
 
 #: lib/commands.py:45
 msgid "Ignore layer (do not stitch any objects in this layer)"
-msgstr ""
+msgstr "Kat atla (bu katta obje dikme)"
 
 #. command that affects entire document
 #: lib/commands.py:48
@@ -240,7 +240,7 @@ msgstr ""
 
 #: lib/elements/auto_fill.py:89
 msgid "Max stitch length"
-msgstr ""
+msgstr "Max dikiş uzunluğu"
 
 #: lib/elements/auto_fill.py:90
 msgid "default: equal to fill max stitch length"
@@ -256,7 +256,7 @@ msgstr ""
 
 #: lib/elements/auto_fill.py:111 lib/elements/fill.py:72
 msgid "Skip last stitch in each row"
-msgstr ""
+msgstr "Her sırada son dikişi atla"
 
 #: lib/elements/auto_fill.py:112 lib/elements/fill.py:73
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
@@ -280,7 +280,7 @@ msgstr ""
 
 #: lib/elements/auto_fill.py:226
 msgid "Error during autofill!  This means that there is a problem with Ink/Stitch."
-msgstr ""
+msgstr "Otodolgu sırasında hata! Bu Ink/Stitch ile bir problem mevcut olduğu anlamına gelir."
 
 #. this message is followed by a URL:
 #. https://github.com/inkstitch/inkstitch/issues/new
@@ -303,7 +303,7 @@ msgstr ""
 #. intersect both rails."
 #: lib/elements/element.py:288
 msgid "error:"
-msgstr ""
+msgstr "hata:"
 
 #: lib/elements/fill.py:17
 msgid "Unconnected"
@@ -499,7 +499,7 @@ msgstr ""
 
 #: lib/elements/satin_column.py:73
 msgid "\"E\" stitch"
-msgstr ""
+msgstr "“E” dikiş"
 
 #: lib/elements/satin_column.py:83 lib/elements/stroke.py:56
 msgid "Zig-zag spacing (peak-to-peak)"
@@ -528,7 +528,7 @@ msgstr ""
 
 #: lib/elements/satin_column.py:115 lib/elements/satin_column.py:139
 msgid "Stitch length"
-msgstr ""
+msgstr "Dikiş uzunluğu"
 
 #: lib/elements/satin_column.py:121
 msgid "Contour underlay inset amount"
@@ -597,7 +597,7 @@ msgstr ""
 
 #: lib/elements/stroke.py:68
 msgid "Repeats"
-msgstr ""
+msgstr "Tekrarlamalar"
 
 #: lib/elements/stroke.py:69
 msgid "Defines how many times to run down and back along the path."
@@ -623,7 +623,7 @@ msgstr ""
 #. auto-route satin columns extension
 #: lib/extensions/auto_satin.py:43
 msgid "Please select one or more satin columns."
-msgstr ""
+msgstr "Lütfen bir veya birden fazla saten sütun seçiniz."
 
 #. This was previously: "No embroiderable paths selected."
 #: lib/extensions/base.py:127
@@ -690,7 +690,7 @@ msgstr ""
 
 #: lib/extensions/install.py:37
 msgid "Install"
-msgstr ""
+msgstr "Kurulum"
 
 #: lib/extensions/install.py:40 lib/extensions/lettering.py:59
 #: lib/extensions/params.py:330 print/templates/custom-page.html:23
@@ -698,7 +698,7 @@ msgstr ""
 #: print/templates/ui.html:92 print/templates/ui.html:96
 #: print/templates/ui.html:102
 msgid "Cancel"
-msgstr ""
+msgstr "İptal et"
 
 #: lib/extensions/install.py:54
 msgid "Choose Inkscape directory"
@@ -710,7 +710,7 @@ msgstr ""
 
 #: lib/extensions/install.py:72
 msgid "Installation Failed"
-msgstr ""
+msgstr "Kurulum başarısız"
 
 #: lib/extensions/install.py:76
 msgid "Inkscape add-on files have been installed.  Please restart Inkscape to load the new add-ons."
@@ -718,7 +718,7 @@ msgstr ""
 
 #: lib/extensions/install.py:77
 msgid "Installation Completed"
-msgstr ""
+msgstr "Kurulum Tamamlandı"
 
 #: lib/extensions/install.py:114
 msgid "Ink/Stitch Add-ons Installer"
@@ -746,11 +746,11 @@ msgstr ""
 
 #: lib/extensions/lettering.py:46
 msgid "Text"
-msgstr ""
+msgstr "Yazı"
 
 #: lib/extensions/lettering.py:63 lib/extensions/params.py:337
 msgid "Apply and Quit"
-msgstr ""
+msgstr "Uygula ve Kapat"
 
 #: lib/extensions/lettering.py:134
 msgid "Unable to find any fonts!  Please try reinstalling Ink/Stitch."
@@ -766,7 +766,7 @@ msgstr ""
 
 #: lib/extensions/lettering.py:316
 msgid "Please select only one block of text."
-msgstr ""
+msgstr "Lütfen sadece tek blok yazı seçiniz."
 
 #: lib/extensions/lettering.py:319
 msgid "You've selected objects that were not created by the Lettering extension.  Please clear your selection or select different objects before running Lettering again."
@@ -782,12 +782,12 @@ msgstr ""
 
 #: lib/extensions/params.py:194
 msgid "These settings will be applied to 1 object."
-msgstr ""
+msgstr "Bu ayarlar sadece 1 objeye uygulanacaktır."
 
 #: lib/extensions/params.py:196
 #, python-format
 msgid "These settings will be applied to %d objects."
-msgstr ""
+msgstr "Bu ayarlar sadece %d objeye uygulanacaktır."
 
 #: lib/extensions/params.py:199
 msgid "Some settings had different values across objects.  Select a value from the dropdown or enter a new one."
@@ -809,7 +809,7 @@ msgstr ""
 
 #: lib/extensions/params.py:238
 msgid "Inkscape objects"
-msgstr ""
+msgstr "Inkscape objeleri"
 
 #: lib/extensions/params.py:295
 msgid "Click to force this parameter to be saved when you click \"Apply and Quit\""
@@ -825,7 +825,7 @@ msgstr ""
 
 #: lib/extensions/params.py:334
 msgid "Use Last Settings"
-msgstr ""
+msgstr "En Son Ayarları Kullan"
 
 #: lib/extensions/troubleshoot.py:36
 msgid "All selected shapes are valid!"
@@ -869,11 +869,11 @@ msgstr ""
 
 #: lib/gui/presets.py:53
 msgid "Load"
-msgstr ""
+msgstr "Yükle"
 
 #: lib/gui/presets.py:56
 msgid "Add"
-msgstr ""
+msgstr "Ekle"
 
 #: lib/gui/presets.py:59
 msgid "Overwrite"
@@ -881,7 +881,7 @@ msgstr ""
 
 #: lib/gui/presets.py:62
 msgid "Delete"
-msgstr ""
+msgstr "Sil"
 
 #: lib/gui/presets.py:121
 msgid "Please enter or select a preset name first."
@@ -904,15 +904,15 @@ msgstr ""
 #. command label at bottom of simulator window
 #: lib/gui/simulator.py:20
 msgid "STITCH"
-msgstr ""
+msgstr "DİK"
 
 #: lib/gui/simulator.py:20
 msgid "JUMP"
-msgstr ""
+msgstr "ATLA"
 
 #: lib/gui/simulator.py:20
 msgid "TRIM"
-msgstr ""
+msgstr "KES"
 
 #: lib/gui/simulator.py:20
 msgid "STOP"
@@ -993,7 +993,7 @@ msgstr ""
 
 #: lib/gui/simulator.py:869
 msgid "Embroidery Simulation"
-msgstr ""
+msgstr "Nakış Simülasyonu"
 
 #. If you translate this string, that will tell Ink/Stitch to
 #. generate menu items for this language in Inkscape's "Extensions"
@@ -1044,7 +1044,7 @@ msgstr ""
 #: print/templates/color_swatch.html:8 print/templates/color_swatch.html:40
 #: print/templates/operator_detailedview.html:9
 msgid "Color"
-msgstr ""
+msgstr "Renk"
 
 #: print/templates/color_swatch.html:11 print/templates/color_swatch.html:41
 msgid "rgb"
@@ -1052,16 +1052,16 @@ msgstr ""
 
 #: print/templates/color_swatch.html:15 print/templates/color_swatch.html:42
 msgid "thread"
-msgstr ""
+msgstr "iplik"
 
 #: print/templates/color_swatch.html:19 print/templates/color_swatch.html:43
 #: print/templates/operator_detailedview.html:63
 msgid "# stitches"
-msgstr ""
+msgstr "# dikiş"
 
 #: print/templates/color_swatch.html:23 print/templates/color_swatch.html:44
 msgid "# trims"
-msgstr ""
+msgstr "# kesim"
 
 #: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
 #: print/templates/operator_detailedview.html:68
@@ -1071,32 +1071,32 @@ msgstr ""
 #: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
 #: print/templates/operator_detailedview.html:68
 msgid "yes"
-msgstr ""
+msgstr "evet"
 
 #: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
 #: print/templates/operator_detailedview.html:68
 msgid "no"
-msgstr ""
+msgstr "hayır"
 
 #: print/templates/color_swatch.html:40
 #: print/templates/operator_detailedview.html:57
 #: print/templates/print_detail.html:6
 msgid "Enter thread name..."
-msgstr ""
+msgstr "İplik ismi giriniz..."
 
 #: print/templates/custom-page.html:22 print/templates/ui.html:91
 msgid "Enter URL"
-msgstr ""
+msgstr "URL girin"
 
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
 #: print/templates/custom-page.html:33 print/templates/ui.html:92
 #: print/templates/ui.html:96 print/templates/ui.html:102
 msgid "OK"
-msgstr ""
+msgstr "TAMAM"
 
 #: print/templates/custom-page.html:26 print/templates/ui.html:95
 msgid "Enter E-Mail"
-msgstr ""
+msgstr "E-Posta Girin"
 
 #: print/templates/custom-page.html:29 print/templates/custom-page.html:36
 msgid "Custom Information Sheet"
@@ -1108,11 +1108,11 @@ msgstr ""
 
 #: print/templates/custom-page.html:32 print/templates/ui.html:101
 msgid "All changes will be lost."
-msgstr ""
+msgstr "Bütün değişiklikler kaybedilecektir."
 
 #: print/templates/footer.html:2
 msgid "Page"
-msgstr ""
+msgstr "Sayfa"
 
 #: print/templates/footer.html:3 print/templates/ui.html:98
 #: print/templates/ui.html:105
@@ -1121,19 +1121,19 @@ msgstr ""
 
 #: print/templates/headline.html:5
 msgid "Click to choose another logo"
-msgstr ""
+msgstr "Farklı logo seçmek için tıklayın"
 
 #: print/templates/headline.html:10
 msgid "Enter job title..."
-msgstr ""
+msgstr "Meslek ünvanı girin..."
 
 #: print/templates/headline.html:11
 msgid "CLIENT"
-msgstr ""
+msgstr "MÜŞTERİ"
 
 #: print/templates/headline.html:11
 msgid "Enter client name..."
-msgstr ""
+msgstr "Müşteri ismi girin..."
 
 #: print/templates/headline.html:12
 msgid "PURCHASE ORDER #:"
@@ -1150,73 +1150,73 @@ msgstr ""
 
 #: print/templates/operator_detailedview.html:10
 msgid "Thread Consumption"
-msgstr ""
+msgstr "İplik Kullanımı"
 
 #: print/templates/operator_detailedview.html:11
 msgid "Stops and Trims"
-msgstr ""
+msgstr "Duraklamalar ve Kesimler"
 
 #: print/templates/operator_detailedview.html:12
 msgid "Notes"
-msgstr ""
+msgstr "Notlar"
 
 #: print/templates/operator_detailedview.html:24
 #: print/templates/operator_overview.html:6
 #: print/templates/print_overview.html:6
 msgid "Unique Colors"
-msgstr ""
+msgstr "Eşsiz Renkler"
 
 #: print/templates/operator_detailedview.html:25
 #: print/templates/operator_overview.html:7
 #: print/templates/print_overview.html:7
 msgid "Color Blocks"
-msgstr ""
+msgstr "Renk Blokları"
 
 #: print/templates/operator_detailedview.html:28
 #: print/templates/operator_overview.html:14
 #: print/templates/print_overview.html:14
 msgid "Design box size"
-msgstr ""
+msgstr "Tasarım kutu büyüklüğü"
 
 #: print/templates/operator_detailedview.html:29
 #: print/templates/operator_overview.html:16
 #: print/templates/print_overview.html:16
 msgid "Total thread used"
-msgstr ""
+msgstr "Toplam kullanılan iplik"
 
 #: print/templates/operator_detailedview.html:30
 #: print/templates/operator_overview.html:15
 #: print/templates/print_overview.html:15
 msgid "Total stitch count"
-msgstr ""
+msgstr "Toplam atılan dikiş"
 
 #: print/templates/operator_detailedview.html:34
 #: print/templates/operator_overview.html:8
 #: print/templates/print_overview.html:8
 msgid "Total stops"
-msgstr ""
+msgstr "Toplam duraklamalar"
 
 #: print/templates/operator_detailedview.html:35
 #: print/templates/operator_overview.html:9
 #: print/templates/print_overview.html:9
 msgid "Total trims"
-msgstr ""
+msgstr "Toplam kesimler"
 
 #: print/templates/operator_detailedview.html:62
 msgid "thread used"
-msgstr ""
+msgstr "iplik kullanıldı"
 
 #: print/templates/operator_detailedview.html:64
 msgid "estimated time"
-msgstr ""
+msgstr "tahmini süre"
 
 #: print/templates/operator_detailedview.html:67
 msgid "trims"
-msgstr ""
+msgstr "kesimler"
 
 #: print/templates/operator_detailedview.html:72
 msgid "Enter operator notes..."
-msgstr ""
+msgstr "Operatör notları ekle..."
 
 #: print/templates/operator_overview.html:21
 #: print/templates/print_overview.html:21
@@ -1230,11 +1230,11 @@ msgstr ""
 
 #: print/templates/print_detail.html:6
 msgid "COLOR"
-msgstr ""
+msgstr "RENK"
 
 #: print/templates/print_detail.html:11
 msgid "Estimated time"
-msgstr ""
+msgstr "Tahmini süre"
 
 #: print/templates/print_overview.html:42
 msgid "Client Signature"
@@ -1387,11 +1387,11 @@ msgstr ""
 
 #: print/templates/ui.html:169
 msgid "Yes"
-msgstr ""
+msgstr "Evet"
 
 #: print/templates/ui.html:170
 msgid "No"
-msgstr ""
+msgstr "Hayır"
 
 #: print/templates/ui_svg_action_buttons.html:1
 msgid "Scale"
@@ -1403,12 +1403,12 @@ msgstr ""
 
 #: print/templates/ui_svg_action_buttons.html:5
 msgid "Apply to all"
-msgstr ""
+msgstr "Hepsine uygula"
 
 #: print/templates/ui_svg_action_buttons.html:9
 #: print/templates/ui_svg_action_buttons.html:12
 msgid "Realistic"
-msgstr ""
+msgstr "Gerçekçi"
 
 #. description for pyembroidery file format: pec
 #. description for pyembroidery file format: pes
@@ -1418,18 +1418,18 @@ msgstr ""
 #: pyembroidery-format-descriptions.py:56
 #: pyembroidery-format-descriptions.py:58
 msgid "Brother Embroidery Format"
-msgstr ""
+msgstr "Brother Nakış Formatı"
 
 #. description for pyembroidery file format: exp
 #: pyembroidery-format-descriptions.py:6
 msgid "Melco Embroidery Format"
-msgstr ""
+msgstr "Melco Nakış Formatı"
 
 #. description for pyembroidery file format: dst
 #. description for pyembroidery file format: tbf
 #: pyembroidery-format-descriptions.py:8 pyembroidery-format-descriptions.py:48
 msgid "Tajima Embroidery Format"
-msgstr ""
+msgstr "Tajima Nakış Formatı"
 
 #. description for pyembroidery file format: jef
 #. description for pyembroidery file format: sew
@@ -1438,7 +1438,7 @@ msgstr ""
 #: pyembroidery-format-descriptions.py:20
 #: pyembroidery-format-descriptions.py:74
 msgid "Janome Embroidery Format"
-msgstr ""
+msgstr "Janome Nakış Formatı"
 
 #. description for pyembroidery file format: vp3
 #. description for pyembroidery file format: ksm
@@ -1455,7 +1455,7 @@ msgstr ""
 #: pyembroidery-format-descriptions.py:70
 #: pyembroidery-format-descriptions.py:72
 msgid "Pfaff Embroidery Format"
-msgstr ""
+msgstr "Pfaff Nakış Formatı"
 
 #. description for pyembroidery file format: svg
 #: pyembroidery-format-descriptions.py:14
@@ -1470,109 +1470,109 @@ msgstr ""
 #. description for pyembroidery file format: xxx
 #: pyembroidery-format-descriptions.py:18
 msgid "Singer Embroidery Format"
-msgstr ""
+msgstr "Singer Nakış Formatı"
 
 #. description for pyembroidery file format: u01
 #: pyembroidery-format-descriptions.py:22
 msgid "Barudan Embroidery Format"
-msgstr ""
+msgstr "Barudan Nakış Formatı"
 
 #. description for pyembroidery file format: shv
 #: pyembroidery-format-descriptions.py:24
 msgid "Husqvarna Viking Embroidery Format"
-msgstr ""
+msgstr "Husqvarna Viking Nakış Formatı"
 
 #. description for pyembroidery file format: 10o
 #. description for pyembroidery file format: 100
 #: pyembroidery-format-descriptions.py:26
 #: pyembroidery-format-descriptions.py:28
 msgid "Toyota Embroidery Format"
-msgstr ""
+msgstr "Toyota Nakış Formatı"
 
 #. description for pyembroidery file format: bro
 #: pyembroidery-format-descriptions.py:30
 msgid "Bits & Volts Embroidery Format"
-msgstr ""
+msgstr "Bits & Volts Nakış Formatı"
 
 #. description for pyembroidery file format: dat
 #: pyembroidery-format-descriptions.py:32
 msgid "Sunstar or Barudan Embroidery Format"
-msgstr ""
+msgstr "Sunstar yada Barudan Nakış Formatı"
 
 #. description for pyembroidery file format: dsb
 #: pyembroidery-format-descriptions.py:34
 msgid "Tajima(Barudan) Embroidery Format"
-msgstr ""
+msgstr "Tajima(Barudan) Nakış Formatı"
 
 #. description for pyembroidery file format: dsz
 #: pyembroidery-format-descriptions.py:36
 msgid "ZSK USA Embroidery Format"
-msgstr ""
+msgstr "ZSK USA Nakış Formatı"
 
 #. description for pyembroidery file format: emd
 #: pyembroidery-format-descriptions.py:38
 msgid "Elna Embroidery Format"
-msgstr ""
+msgstr "Elna Nakış Formatı"
 
 #. description for pyembroidery file format: exy
 #: pyembroidery-format-descriptions.py:40
 msgid "Eltac Embroidery Format"
-msgstr ""
+msgstr "Eltac Nakış Formatı"
 
 #. description for pyembroidery file format: fxy
 #: pyembroidery-format-descriptions.py:42
 msgid "Fortron Embroidery Format"
-msgstr ""
+msgstr "Fortron Nakış Formatı"
 
 #. description for pyembroidery file format: gt
 #: pyembroidery-format-descriptions.py:44
 msgid "Gold Thread Embroidery Format"
-msgstr ""
+msgstr "Gold Thread Nakış Formatı"
 
 #. description for pyembroidery file format: inb
 #: pyembroidery-format-descriptions.py:46
 msgid "Inbro Embroidery Format"
-msgstr ""
+msgstr "Inbro Nakış Formatı"
 
 #. description for pyembroidery file format: tap
 #: pyembroidery-format-descriptions.py:52
 msgid "Happy Embroidery Format"
-msgstr ""
+msgstr "Happy Nakış Formatı"
 
 #. description for pyembroidery file format: stx
 #: pyembroidery-format-descriptions.py:54
 msgid "Data Stitch Embroidery Format"
-msgstr ""
+msgstr "Data Stitch Nakış Formatı"
 
 #. description for pyembroidery file format: new
 #: pyembroidery-format-descriptions.py:60
 msgid "Ameco Embroidery Format"
-msgstr ""
+msgstr "Ameco Nakış Formatı"
 
 #. description for pyembroidery file format: mit
 #: pyembroidery-format-descriptions.py:64
 msgid "Mitsubishi Embroidery Format"
-msgstr ""
+msgstr "Mitsubishi Nakış Formatı"
 
 #. description for pyembroidery file format: stc
 #: pyembroidery-format-descriptions.py:76
 msgid "Gunold Embroidery Format"
-msgstr ""
+msgstr "Gunold Nakış Formatı"
 
 #. description for pyembroidery file format: zxy
 #: pyembroidery-format-descriptions.py:78
 msgid "ZSK TC Embroidery Format"
-msgstr ""
+msgstr "ZSK TC Nakış Formatı"
 
 #. description for pyembroidery file format: pmv
 #: pyembroidery-format-descriptions.py:80
 msgid "Brother Stitch Format"
-msgstr ""
+msgstr "Brother Dikiş Formatı"
 
 #. description for pyembroidery file format: txt
 #: pyembroidery-format-descriptions.py:82
 msgid "G-code Format"
-msgstr ""
+msgstr "G-code Formatı"
 
 #: templates/auto_satin.inx:3
 msgid "Auto-Route Satin Columns"
@@ -1589,15 +1589,15 @@ msgstr ""
 #: templates/auto_satin.inx:14 templates/convert_to_satin.inx:12
 #: templates/cut_satin.inx:12 templates/flip.inx:12
 msgid "Satin Tools"
-msgstr ""
+msgstr "Saten Gereçler"
 
 #: templates/convert_to_satin.inx:3
 msgid "Convert Line to Satin"
-msgstr ""
+msgstr "Çizgiyi Saten’e Çevir"
 
 #: templates/cut_satin.inx:3
 msgid "Cut Satin Column"
-msgstr ""
+msgstr "Saten Sütunu Kes"
 
 #: templates/embroider.inx:3
 msgid "Embroider"
@@ -1613,7 +1613,7 @@ msgstr ""
 
 #: templates/embroider.inx:8
 msgid "Hide other layers"
-msgstr ""
+msgstr "Diğer katları gizle"
 
 #: templates/embroider.inx:8
 msgid "Hide all other top-level layers when the embroidery layer is generated, in order to make stitching discernible."
@@ -1629,7 +1629,7 @@ msgstr ""
 
 #: templates/embroider.inx:17
 msgid "Directory"
-msgstr ""
+msgstr "Klasör"
 
 #: templates/embroider.inx:17
 msgid "Leave empty to save the output in Inkscape's extension directory."
