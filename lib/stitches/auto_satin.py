@@ -201,7 +201,7 @@ class RunningStitch(object):
             # Technically a Stroke object's underlying path could have multiple
             # subpaths.  We don't have a particularly good way of dealing with
             # that so we'll just use the first one.
-            self.path = path_or_stroke.shape.geoms[0]
+            self.path = shgeo.LineString(path_or_stroke.paths[0])
             original_element = path_or_stroke
         else:
             self.path = path_or_stroke
