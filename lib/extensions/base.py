@@ -129,7 +129,7 @@ class InkstitchExtension(inkex.Effect):
             inkex.errormsg(_("There are no objects in the entire document that Ink/Stitch knows how to work with.") + "\n")
 
         inkex.errormsg(_("Ink/Stitch only knows how to work with paths.  It can't work with objects like text, rectangles, or circles.") + "\n")
-        inkex.errormsg(_("Tip: select some objects and use Path -> Object to Path to convert them to paths.") + "\n")
+        inkex.errormsg(_("Tip: Select some objects and use Path -> Object to Path to convert them to paths.") + "\n")
 
     def descendants(self, node, selected=False):
         nodes = []
@@ -166,11 +166,11 @@ class InkstitchExtension(inkex.Effect):
     def get_nodes(self):
         return self.descendants(self.document.getroot())
 
-    def get_elements(self):
+    def get_elements(self, show_no_elements_error=True):
         self.elements = nodes_to_elements(self.get_nodes())
         if self.elements:
             return True
-        else:
+        elif show_no_elements_error:
             self.no_elements_error()
             return False
 
