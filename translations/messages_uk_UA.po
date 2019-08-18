@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2019-08-13 20:36+0000\n"
-"PO-Revision-Date: 2019-08-15 20:38\n"
+"PO-Revision-Date: 2019-08-18 20:39\n"
 "Last-Translator: Lex Neva (lexelby)\n"
 "Language-Team: Ukrainian\n"
 "MIME-Version: 1.0\n"
@@ -20,13 +20,13 @@ msgstr ""
 #. name of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:2
 msgid "Ink/Stitch Small Font"
-msgstr ""
+msgstr "Ink/Stitch дрібний шрифт"
 
 #. description of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:4
 #, python-format
 msgid "A font suited for small characters.  The capital em is 0.2 inches wide at 100% scale.  Can be scaled up to 300%."
-msgstr ""
+msgstr "Шрифт пасує до маленьких написів. Великі літери мають ширину 0,2 дюйма при 100% масштабі. Можна масштабувати до 300%."
 
 #. name of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:6
@@ -36,7 +36,7 @@ msgstr ""
 #. description of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:8
 msgid "A font suited for heavy typing :)"
-msgstr ""
+msgstr "Шрифт пасує до важкого тексту :)"
 
 #. name of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:10
@@ -51,7 +51,7 @@ msgstr ""
 #. name of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:14
 msgid "Ink/Stitch Medium Font"
-msgstr ""
+msgstr "Ink/Stitch середній шрифт"
 
 #. description of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:16
@@ -66,7 +66,7 @@ msgstr ""
 
 #: lib/commands.py:20
 msgid "Fill stitch starting position"
-msgstr ""
+msgstr "Стартова позиція заповнення"
 
 #. command attached to an object
 #: lib/commands.py:23
@@ -75,7 +75,7 @@ msgstr ""
 
 #: lib/commands.py:23
 msgid "Fill stitch ending position"
-msgstr ""
+msgstr "Кінцева позиція заповнення"
 
 #. command attached to an object
 #: lib/commands.py:26
@@ -175,21 +175,21 @@ msgstr ""
 
 #: lib/commands.py:281 lib/commands.py:385 lib/extensions/layer_commands.py:29
 msgid "Ink/Stitch Command"
-msgstr ""
+msgstr "Ink/Stitch команда"
 
 #. : the name of the line that connects a command to the object it applies to
 #: lib/commands.py:306
 msgid "connector"
-msgstr ""
+msgstr "з'єднувач"
 
 #. : the name of a command symbol (example: scissors icon for trim command)
 #: lib/commands.py:323
 msgid "command marker"
-msgstr ""
+msgstr "маркер команд"
 
 #: lib/elements/auto_fill.py:17
 msgid "Small Fill"
-msgstr ""
+msgstr "Дрібне заповнення"
 
 #: lib/elements/auto_fill.py:18
 msgid "This fill object is so small that it would probably look better as running stitch or satin column. For very small shapes, fill stitch is not possible, and Ink/Stitch will use running stitch around the outline instead."
@@ -197,54 +197,54 @@ msgstr ""
 
 #: lib/elements/auto_fill.py:24
 msgid "AutoFill"
-msgstr ""
+msgstr "Автозаповнення"
 
 #: lib/elements/auto_fill.py:27
 msgid "Automatically routed fill stitching"
-msgstr ""
+msgstr "Автоматично прокладене заповнення"
 
 #: lib/elements/auto_fill.py:47
 msgid "Running stitch length (traversal between sections)"
-msgstr ""
+msgstr "Довжина стібка по ходу (перехід між секціями)"
 
 #: lib/elements/auto_fill.py:48
 msgid "Length of stitches around the outline of the fill region used when moving from section to section."
-msgstr ""
+msgstr "Довжина стібків навколо контуру області заповнення, що використовується при переході від розділу до розділу."
 
 #: lib/elements/auto_fill.py:56
 msgid "Underlay"
-msgstr ""
+msgstr "Підкладка"
 
 #: lib/elements/auto_fill.py:56 lib/elements/auto_fill.py:65
 #: lib/elements/auto_fill.py:81 lib/elements/auto_fill.py:92
 #: lib/elements/auto_fill.py:102 lib/elements/auto_fill.py:114
 #: lib/elements/auto_fill.py:148
 msgid "AutoFill Underlay"
-msgstr ""
+msgstr "Автозаповнення підкладки"
 
 #: lib/elements/auto_fill.py:62
 msgid "Fill angle"
-msgstr ""
+msgstr "Кут заповнення"
 
 #: lib/elements/auto_fill.py:63
 msgid "default: fill angle + 90 deg"
-msgstr ""
+msgstr "типовий: кут заповнення + 90 град"
 
 #: lib/elements/auto_fill.py:78
 msgid "Row spacing"
-msgstr ""
+msgstr "Міжрядковий інтервал"
 
 #: lib/elements/auto_fill.py:79
 msgid "default: 3x fill row spacing"
-msgstr ""
+msgstr "типовий: 3-кратний проміжок між рядками"
 
 #: lib/elements/auto_fill.py:89
 msgid "Max stitch length"
-msgstr ""
+msgstr "Максимальна довжина стібка"
 
 #: lib/elements/auto_fill.py:90
 msgid "default: equal to fill max stitch length"
-msgstr ""
+msgstr "типовий: дорівнює максимальній довжині стібка"
 
 #: lib/elements/auto_fill.py:99
 msgid "Inset"
@@ -690,7 +690,7 @@ msgstr ""
 
 #: lib/extensions/install.py:37
 msgid "Install"
-msgstr ""
+msgstr "Встановити"
 
 #: lib/extensions/install.py:40 lib/extensions/lettering.py:59
 #: lib/extensions/params.py:330 print/templates/custom-page.html:23
@@ -698,23 +698,23 @@ msgstr ""
 #: print/templates/ui.html:92 print/templates/ui.html:96
 #: print/templates/ui.html:102
 msgid "Cancel"
-msgstr ""
+msgstr "Скасувати"
 
 #: lib/extensions/install.py:54
 msgid "Choose Inkscape directory"
-msgstr ""
+msgstr "Виберіть каталог Inkscape"
 
 #: lib/extensions/install.py:71
 msgid "Inkscape add-on installation failed"
-msgstr ""
+msgstr "Помилка встановлення додатка Inkscape"
 
 #: lib/extensions/install.py:72
 msgid "Installation Failed"
-msgstr ""
+msgstr "Помилка встановлення"
 
 #: lib/extensions/install.py:76
 msgid "Inkscape add-on files have been installed.  Please restart Inkscape to load the new add-ons."
-msgstr ""
+msgstr "Файли додатків Inkscape встановлені. Перезапустіть Inkscape, щоб завантажити нові додатки."
 
 #: lib/extensions/install.py:77
 msgid "Installation Completed"
@@ -722,7 +722,7 @@ msgstr ""
 
 #: lib/extensions/install.py:114
 msgid "Ink/Stitch Add-ons Installer"
-msgstr ""
+msgstr "Ink/Stitch Установник додатків"
 
 #: lib/extensions/layer_commands.py:17
 msgid "Please choose one or more commands to add."
@@ -877,29 +877,29 @@ msgstr ""
 
 #: lib/gui/presets.py:59
 msgid "Overwrite"
-msgstr ""
+msgstr "Перезаписати"
 
 #: lib/gui/presets.py:62
 msgid "Delete"
-msgstr ""
+msgstr "Видалити"
 
 #: lib/gui/presets.py:121
 msgid "Please enter or select a preset name first."
-msgstr ""
+msgstr "Спочатку введіть або виберіть ім’я передвстановленого набору параметрів."
 
 #: lib/gui/presets.py:121 lib/gui/presets.py:127 lib/gui/presets.py:143
 msgid "Preset"
-msgstr ""
+msgstr "Передвстановлений набір параметрів"
 
 #: lib/gui/presets.py:127
 #, python-format
 msgid "Preset \"%s\" not found."
-msgstr ""
+msgstr "Передвстановленого набору параметрів \"%s\" не знайдено."
 
 #: lib/gui/presets.py:143
 #, python-format
 msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
-msgstr ""
+msgstr "Передвстановлений набір параметрів \"%s\" вже існує.  Будь ласка, використайте інше ім’я або натисніть \"Перезаписати\""
 
 #. command label at bottom of simulator window
 #: lib/gui/simulator.py:20
@@ -1108,11 +1108,11 @@ msgstr ""
 
 #: print/templates/custom-page.html:32 print/templates/ui.html:101
 msgid "All changes will be lost."
-msgstr ""
+msgstr "Усі зміни будуть втрачені."
 
 #: print/templates/footer.html:2
 msgid "Page"
-msgstr ""
+msgstr "Сторінка"
 
 #: print/templates/footer.html:3 print/templates/ui.html:98
 #: print/templates/ui.html:105
@@ -1125,7 +1125,7 @@ msgstr ""
 
 #: print/templates/headline.html:10
 msgid "Enter job title..."
-msgstr ""
+msgstr "Введіть назву роботи..."
 
 #: print/templates/headline.html:11
 msgid "CLIENT"
@@ -1133,7 +1133,7 @@ msgstr ""
 
 #: print/templates/headline.html:11
 msgid "Enter client name..."
-msgstr ""
+msgstr "Введіть ім'я клієнта..."
 
 #: print/templates/headline.html:12
 msgid "PURCHASE ORDER #:"
@@ -1141,7 +1141,7 @@ msgstr ""
 
 #: print/templates/headline.html:12
 msgid "Enter purchase order number..."
-msgstr ""
+msgstr "Введіть номер замовлення..."
 
 #: print/templates/headline.html:15
 #, python-format
@@ -1158,19 +1158,19 @@ msgstr ""
 
 #: print/templates/operator_detailedview.html:12
 msgid "Notes"
-msgstr ""
+msgstr "Примітки"
 
 #: print/templates/operator_detailedview.html:24
 #: print/templates/operator_overview.html:6
 #: print/templates/print_overview.html:6
 msgid "Unique Colors"
-msgstr ""
+msgstr "Унікальні кольори"
 
 #: print/templates/operator_detailedview.html:25
 #: print/templates/operator_overview.html:7
 #: print/templates/print_overview.html:7
 msgid "Color Blocks"
-msgstr ""
+msgstr "Кольорові блоки"
 
 #: print/templates/operator_detailedview.html:28
 #: print/templates/operator_overview.html:14
@@ -1182,46 +1182,46 @@ msgstr ""
 #: print/templates/operator_overview.html:16
 #: print/templates/print_overview.html:16
 msgid "Total thread used"
-msgstr ""
+msgstr "Всього використано нитки"
 
 #: print/templates/operator_detailedview.html:30
 #: print/templates/operator_overview.html:15
 #: print/templates/print_overview.html:15
 msgid "Total stitch count"
-msgstr ""
+msgstr "Всього стібків"
 
 #: print/templates/operator_detailedview.html:34
 #: print/templates/operator_overview.html:8
 #: print/templates/print_overview.html:8
 msgid "Total stops"
-msgstr ""
+msgstr "Всього зупинок"
 
 #: print/templates/operator_detailedview.html:35
 #: print/templates/operator_overview.html:9
 #: print/templates/print_overview.html:9
 msgid "Total trims"
-msgstr ""
+msgstr "Всього обрізок"
 
 #: print/templates/operator_detailedview.html:62
 msgid "thread used"
-msgstr ""
+msgstr "використано нитки"
 
 #: print/templates/operator_detailedview.html:64
 msgid "estimated time"
-msgstr ""
+msgstr "орієнтовний час"
 
 #: print/templates/operator_detailedview.html:67
 msgid "trims"
-msgstr ""
+msgstr "обрізки"
 
 #: print/templates/operator_detailedview.html:72
 msgid "Enter operator notes..."
-msgstr ""
+msgstr "Введіть нотатки оператора..."
 
 #: print/templates/operator_overview.html:21
 #: print/templates/print_overview.html:21
 msgid "Job estimated time"
-msgstr ""
+msgstr "Орієнтовний час роботи"
 
 #: print/templates/operator_overview.html:28
 #: print/templates/print_detail.html:18 print/templates/print_overview.html:28
@@ -1234,7 +1234,7 @@ msgstr ""
 
 #: print/templates/print_detail.html:11
 msgid "Estimated time"
-msgstr ""
+msgstr "Орієнтовний час"
 
 #: print/templates/print_overview.html:42
 msgid "Client Signature"
@@ -1242,47 +1242,47 @@ msgstr ""
 
 #: print/templates/ui.html:2
 msgid "Ink/Stitch Print Preview"
-msgstr ""
+msgstr "Ink/Stitch Попередній перегляд"
 
 #: print/templates/ui.html:4
 msgid "Print"
-msgstr ""
+msgstr "Друк"
 
 #: print/templates/ui.html:5
 msgid "Save PDF"
-msgstr ""
+msgstr "Зберегти PDF"
 
 #: print/templates/ui.html:6 print/templates/ui.html:16
 msgid "Settings"
-msgstr ""
+msgstr "Налаштування"
 
 #: print/templates/ui.html:7
 msgid "Close"
-msgstr ""
+msgstr "Закрити"
 
 #: print/templates/ui.html:10
 msgid "⚠ lost connection to Ink/Stitch"
-msgstr ""
+msgstr "⚠ втрачено з'єднання з Ink/Stitch"
 
 #: print/templates/ui.html:19 print/templates/ui.html:29
 msgid "Page Setup"
-msgstr ""
+msgstr "Налаштування сторінки"
 
 #: print/templates/ui.html:20
 msgid "Branding"
-msgstr ""
+msgstr "Брендінг"
 
 #: print/templates/ui.html:21 print/templates/ui.html:112
 msgid "Estimated Time"
-msgstr ""
+msgstr "Орієнтовний час"
 
 #: print/templates/ui.html:22 print/templates/ui.html:146
 msgid "Design"
-msgstr ""
+msgstr "Дизайн"
 
 #: print/templates/ui.html:31
 msgid "Printing Size"
-msgstr ""
+msgstr "Розмір друку"
 
 #: print/templates/ui.html:39
 msgid "Print Layouts"
@@ -1306,20 +1306,20 @@ msgstr ""
 
 #: print/templates/ui.html:56
 msgid "Thumbnail size"
-msgstr ""
+msgstr "Розмір мініатюри"
 
 #: print/templates/ui.html:62
 msgid "Custom information sheet"
-msgstr ""
+msgstr "Спеціальний інформаційний лист"
 
 #: print/templates/ui.html:65 print/templates/ui.html:108
 msgid "Includes these Page Setup, estimated time settings and also the icon."
-msgstr ""
+msgstr "Включає ці налаштування сторінки, орієнтовні параметри часу, а також піктограму."
 
 #: print/templates/ui.html:65 print/templates/ui.html:108
 #: print/templates/ui.html:142
 msgid "Save as defaults"
-msgstr ""
+msgstr "Зберегти як типове"
 
 #: print/templates/ui.html:70
 msgid "Logo"
