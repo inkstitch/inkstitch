@@ -3,8 +3,7 @@ import textwrap
 import inkex
 
 from ..commands import add_layer_commands
-from ..elements.inkscape_objects import InkscapeObjects
-from ..elements.validation import (ValidationError, ValidationTypeWarning,
+from ..elements.validation import (ObjectTypeWarning, ValidationError,
                                    ValidationWarning)
 from ..i18n import _
 from ..svg import get_correction_transform
@@ -22,18 +21,16 @@ class Troubleshoot(InkstitchExtension):
 
         problem_types = {'error': set(), 'warning': set(), 'type_warning': set()}
 
-        ink_objects = InkscapeObjects(self.document.getroot(), self.selected)
-        for problem in ink_objects.validation_warnings():
-            problem_types['type_warning'].add(type(problem))
-            self.insert_pointer(problem)
-
-        if self.get_elements(False):
+        if self.get_elements(True):
             for element in self.elements:
                 for problem in element.validation_errors():
                     problem_types['error'].add(type(problem))
                     self.insert_pointer(problem)
                 for problem in element.validation_warnings():
-                    problem_types['warning'].add(type(problem))
+                    if isinstance(problem, ObjectTypeWarning):
+                        problem_types['type_warning'].add(type(problem))
+                    else:
+                        problem_types['warning'].add(type(problem))
                     self.insert_pointer(problem)
 
         if any(problem_types.values()):
@@ -57,12 +54,12 @@ class Troubleshoot(InkstitchExtension):
         elif isinstance(problem, ValidationError):
             fill_color = "#ff0000"
             layer = self.error_group
-        elif isinstance(problem, ValidationTypeWarning):
+        elif isinstance(problem, ObjectTypeWarning):
             fill_color = "#ff9900"
             layer = self.type_warning_group
 
-        pointer_style = "stroke:#ffffff;stroke-width:0.2;fill:%s;" % (fill_color)
-        text_style = "fill:%s;stroke:#ffffff;stroke-width:0.2;font-size:8px;text-align:center;text-anchor:middle" % (fill_color)
+        pointer_style = "stroke:#000000;stroke-width:0.2;fill:%s;" % (fill_color)
+        text_style = "fill:%s;stroke:#000000;stroke-width:0.2;font-size:8px;text-align:center;text-anchor:middle" % (fill_color)
 
         path = inkex.etree.Element(
             SVG_PATH_TAG,
@@ -146,7 +143,7 @@ class Troubleshoot(InkstitchExtension):
 
     def add_descriptions(self, problem_types):
         svg = self.document.getroot()
-        text_x = str(self.unittouu(svg.get('width')) + 5)
+        text_x = str(self.unittouu(svg.get('width', '')) + 5)
 
         text_container = inkex.etree.Element(
             SVG_TEXT_TAG,
@@ -200,7 +197,7 @@ class Troubleshoot(InkstitchExtension):
                           '"Troubleshoot" through the objects panel (Object -> Objects...).')
         explain_layer_parts = textwrap.wrap(explain_layer, 60)
         for description in explain_layer_parts:
-            text.append([description, "font-style: italic; font-size: 5px;"])
+            text.append([description, "font-style: italic; font-size: 4px;"])
 
         text = self.split_text(text)
 
