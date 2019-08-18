@@ -1,43 +1,51 @@
-from itertools import chain
 import textwrap
 
 import inkex
 
 from ..commands import add_layer_commands
-from ..elements.validation import ValidationWarning, ValidationError
+from ..elements.inkscape_objects import InkscapeObjects
+from ..elements.validation import (ValidationError, ValidationTypeWarning,
+                                   ValidationWarning)
 from ..i18n import _
 from ..svg import get_correction_transform
-from ..svg.tags import (INKSCAPE_GROUPMODE, INKSCAPE_LABEL,
-                        SODIPODI_ROLE, SVG_GROUP_TAG, SVG_PATH_TAG,
-                        SVG_TEXT_TAG, SVG_TSPAN_TAG)
+from ..svg.tags import (INKSCAPE_GROUPMODE, INKSCAPE_LABEL, SODIPODI_ROLE,
+                        SVG_GROUP_TAG, SVG_PATH_TAG, SVG_TEXT_TAG,
+                        SVG_TSPAN_TAG)
 from .base import InkstitchExtension
 
 
 class Troubleshoot(InkstitchExtension):
 
     def effect(self):
-        if not self.get_elements():
-            return
 
         self.create_troubleshoot_layer()
 
-        problem_types = set()
-        for element in self.elements:
-            for problem in chain(element.validation_errors(), element.validation_warnings()):
-                problem_types.add(type(problem))
-                self.insert_pointer(problem)
+        problem_types = {'error': set(), 'warning': set(), 'type_warning': set()}
 
-        if problem_types:
+        ink_objects = InkscapeObjects(self.document.getroot(), self.selected)
+        for problem in ink_objects.validation_warnings():
+            problem_types['type_warning'].add(type(problem))
+            self.insert_pointer(problem)
+
+        if self.get_elements(False):
+            for element in self.elements:
+                for problem in element.validation_errors():
+                    problem_types['error'].add(type(problem))
+                    self.insert_pointer(problem)
+                for problem in element.validation_warnings():
+                    problem_types['warning'].add(type(problem))
+                    self.insert_pointer(problem)
+
+        if any(problem_types.values()):
             self.add_descriptions(problem_types)
         else:
             svg = self.document.getroot()
             svg.remove(self.troubleshoot_layer)
 
-            message = _("All selected shapes are valid!")
+            message = _("All selected shapes are valid! ")
             message += "\n\n"
-            message += _("Tip: If you are still having an issue with an object not being rendered, "
-                         "you might need to convert it it to a path (Path -> Object to Path) or check if it is possibly in an ignored layer.")
-
+            message += _("If you are still having trouble with a shape not being embroidered, "
+                         "check if it is in a layer with an ignore command.")
             inkex.errormsg(message)
 
     def insert_pointer(self, problem):
@@ -49,6 +57,9 @@ class Troubleshoot(InkstitchExtension):
         elif isinstance(problem, ValidationError):
             fill_color = "#ff0000"
             layer = self.error_group
+        elif isinstance(problem, ValidationTypeWarning):
+            fill_color = "#ff9900"
+            layer = self.type_warning_group
 
         pointer_style = "stroke:#ffffff;stroke-width:0.2;fill:%s;" % (fill_color)
         text_style = "fill:%s;stroke:#ffffff;stroke-width:0.2;font-size:8px;text-align:center;text-anchor:middle" % (fill_color)
@@ -119,9 +130,19 @@ class Troubleshoot(InkstitchExtension):
             })
         layer.append(warning_group)
 
+        type_warning_group = inkex.etree.SubElement(
+            layer,
+            SVG_GROUP_TAG,
+            {
+                "id": '__validation_ignored__',
+                INKSCAPE_LABEL: _("Type Warnings"),
+            })
+        layer.append(type_warning_group)
+
         self.troubleshoot_layer = layer
         self.error_group = error_group
         self.warning_group = warning_group
+        self.type_warning_group = type_warning_group
 
     def add_descriptions(self, problem_types):
         svg = self.document.getroot()
@@ -138,23 +159,40 @@ class Troubleshoot(InkstitchExtension):
         self.troubleshoot_layer.append(text_container)
 
         text = [
-            [_("Troubleshoot"), "font-weight: bold; font-size: 6px;"],
+            [_("Troubleshoot"), "font-weight: bold; font-size: 8px;"],
             ["", ""]
         ]
 
-        for problem in problem_types:
-            text_color = "#ff0000"
-            if issubclass(problem, ValidationWarning):
+        for problem_type, problems in problem_types.items():
+            if problem_type is "error":
+                text_color = "#ff0000"
+                problem_type_header = _("Errors")
+                problem_type_description = _("Problems that will prevent the shape from being embroidered.")
+            elif problem_type is "warning":
                 text_color = "#ffdd00"
+                problem_type_header = _("Warnings")
+                problem_type_description = _("These are problems that won't prevent the shape from being embroidered. "
+                                             "You should consider to fix the warning, but if you don't, "
+                                             "Ink/Stitch will do its best to process the object.")
+            elif problem_type is "type_warning":
+                text_color = "#ff9900"
+                problem_type_header = _("Object Type Warnings")
+                problem_type_description = _("Ink/Stitch only knows how to works with paths and ignores everything else. "
+                                             "You might want these shapes to be ignored, but if you don't, "
+                                             "follow the instructions to change this behaviour.")
+            if problems:
+                text.append([problem_type_header, "font-weight: bold; fill: %s; text-decoration: underline; font-size: 7px;" % text_color])
+                text.append(["", ""])
+                text.append([problem_type_description, "fill:%s;" % text_color])
+                text.append(["", ""])
 
-            text.append([problem.name, "font-weight: bold; fill:%s;" % text_color])
-            description_parts = textwrap.wrap(problem.description, 60)
-            for description in description_parts:
-                text.append([description, "font-size: 3px;"])
-            text.append(["", ""])
-            for step in problem.steps_to_solve:
-                text.append([step, "font-size: 4px;"])
-            text.append(["", ""])
+            for problem in problems:
+                text.append([problem.name, "font-weight: bold; fill: %s;" % text_color])
+                text.append([problem.description, "font-size: 3px;"])
+                text.append(["", ""])
+                for step in problem.steps_to_solve:
+                    text.append([step, "font-size: 4px;"])
+                text.append(["", ""])
 
         explain_layer = _('It is possible, that one object contains more than one error, ' +
                           'yet there will be only one pointer per object.  Run this function again, ' +
@@ -162,7 +200,9 @@ class Troubleshoot(InkstitchExtension):
                           '"Troubleshoot" through the objects panel (Object -> Objects...).')
         explain_layer_parts = textwrap.wrap(explain_layer, 60)
         for description in explain_layer_parts:
-            text.append([description, "font-style: italic; font-size: 3px;"])
+            text.append([description, "font-style: italic; font-size: 5px;"])
+
+        text = self.split_text(text)
 
         for text_line in text:
             tspan = inkex.etree.Element(
@@ -174,3 +214,14 @@ class Troubleshoot(InkstitchExtension):
             )
             tspan.text = text_line[0]
             text_container.append(tspan)
+
+    def split_text(self, text):
+        splitted_text = []
+        for text_part, style in text:
+            if text_part:
+                description_parts = textwrap.wrap(text_part, 60)
+                for description in description_parts:
+                    splitted_text.append([description, style])
+            else:
+                splitted_text.append(["", ""])
+        return splitted_text
