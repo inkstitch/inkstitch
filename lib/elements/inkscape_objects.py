@@ -47,7 +47,7 @@ class InkscapeObjects(object):
         if self.selection:
             for node in self.selection:
                 xpath = ".//svg:rect[@id='%(id)s']|.//svg:ellipse[@id='%(id)s']|.//svg:text[@id='%(id)s']|" \
-                        ".//svg:use[@id='%(id)s' and not(starts-with(@xlink:href, '#inkstitch_')]|.//svg:image[@id='%(id)s']" \
+                        ".//svg:use[@id='%(id)s' and not(starts-with(@xlink:href, '#inkstitch_'))]|.//svg:image[@id='%(id)s']" \
                         % dict(id=node)
                 objects = find_elements(self.svg, xpath)
 
