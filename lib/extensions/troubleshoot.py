@@ -164,17 +164,17 @@ class Troubleshoot(InkstitchExtension):
         ]
 
         for problem_type, problems in problem_types.items():
-            if problem_type is "error":
+            if problem_type == "error":
                 text_color = "#ff0000"
                 problem_type_header = _("Errors")
                 problem_type_description = _("Problems that will prevent the shape from being embroidered.")
-            elif problem_type is "warning":
+            elif problem_type == "warning":
                 text_color = "#ffdd00"
                 problem_type_header = _("Warnings")
                 problem_type_description = _("These are problems that won't prevent the shape from being embroidered. "
                                              "You should consider to fix the warning, but if you don't, "
                                              "Ink/Stitch will do its best to process the object.")
-            elif problem_type is "type_warning":
+            elif problem_type == "type_warning":
                 text_color = "#ff9900"
                 problem_type_header = _("Object Type Warnings")
                 problem_type_description = _("Ink/Stitch only knows how to works with paths and ignores everything else. "
