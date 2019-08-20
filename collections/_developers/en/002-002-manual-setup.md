@@ -4,7 +4,8 @@ permalink: /developers/inkstitch/manual-setup/
 last_modified_at: 2019-05-01
 toc: false
 ---
-A manual setup will allow you to edit the code while running the extension.
+A manual setup will allow you to edit the code while running the extension. If you are aiming to debug extensions, and are running on Windows,
+some supplementary instructions are available at [windows-manual-setup](/developers/windows-manual-setup/)  
 
 1. Clone the extension source and update submodule pyembroidery
 
