@@ -1,6 +1,7 @@
 from auto_satin import AutoSatin
 from convert_to_satin import ConvertToSatin
 from cut_satin import CutSatin
+from electron_simulator import ElectronSimulator
 from embroider import Embroider
 from flip import Flip
 from global_commands import GlobalCommands
@@ -35,4 +36,5 @@ __all__ = extensions = [Embroider,
                         AutoSatin,
                         Lettering,
                         Troubleshoot,
-                        RemoveEmbroiderySettings]
+                        RemoveEmbroiderySettings,
+                        ElectronSimulator]

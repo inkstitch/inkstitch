@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>{% trans %}Electron-based Stitch Simulator{% endtrans %}</name>
+    <id>org.inkstitch.electron_simulator.{{ locale }}</id>
+    <dependency type="executable" location="extensions">inkstitch.py</dependency>
+    <dependency type="executable" location="extensions">inkex.py</dependency>
+    <param name="extension" type="string" gui-hidden="true">electron_simulator</param>
+    <effect>
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu name="Ink/Stitch" />
+        </effects-menu>
+    </effect>
+    <script>
+        <command reldir="extensions" interpreter="python">inkstitch.py</command>
+    </script>
+</inkscape-extension>
