@@ -77,7 +77,7 @@ install:
       sudo apt-get install libgeos-dev
 
       # for wxPython
-      sudo apt-get install glib-networking
+      sudo apt-get install glib-networking libsdl1.2-dev
 
       # This is the same as the pypi module PyGObject.  We can't just do
       # "pip install PyGObject" because it depends on a version of
