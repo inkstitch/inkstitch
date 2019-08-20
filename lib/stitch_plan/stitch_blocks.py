@@ -1,21 +1,6 @@
 import wx
-from lib.i18n import _
+from lib.stitch_plan.stitch import STITCH, JUMP, TRIM, STOP, COLOR_CHANGE, END, PIXEL_DENSITY
 from lib.svg import PIXELS_PER_MM
-
-# L10N command label at bottom of simulator window
-COMMAND_NAMES = [_("STITCH"), _("JUMP"), _("TRIM"), _("STOP"), _("COLOR CHANGE"), _("END")]
-STITCH = 0
-JUMP = 1
-TRIM = 2
-STOP = 3
-COLOR_CHANGE = 4
-END = 5
-
-# It's not possible to specify a line thickness less than 1 pixel, even
-# though we're drawing anti-aliased lines.  To get around this we scale
-# the stitch positions up by this factor and then scale down by a
-# corresponding amount during rendering.
-PIXEL_DENSITY = 10
 
 
 class StitchBlocks:

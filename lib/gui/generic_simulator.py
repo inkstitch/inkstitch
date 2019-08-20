@@ -5,7 +5,8 @@ import traceback
 import wx
 from wx.lib.intctrl import IntCtrl
 
-from lib.stitch_plan.stitch_blocks import StitchBlocks, COMMAND_NAMES, PIXEL_DENSITY
+from lib.stitch_plan.stitch_blocks import StitchBlocks
+from lib.stitch_plan.stitch import COMMAND_NAMES, PIXEL_DENSITY
 from ..i18n import _
 from ..stitch_plan import patches_to_stitch_plan
 

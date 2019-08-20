@@ -5,7 +5,7 @@ import wx
 import math
 
 from lib.gui.generic_simulator import BaseDrawingPanel
-from lib.stitch_plan.stitch_blocks import PIXEL_DENSITY
+from lib.stitch_plan.stitch import PIXEL_DENSITY
 from lib.svg import PIXELS_PER_MM
 
 

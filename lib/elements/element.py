@@ -15,12 +15,15 @@ from ..utils import cache
 class Patch:
     """A raw collection of stitches with attached instructions."""
 
-    def __init__(self, color=None, stitches=None, trim_after=False, stop_after=False, stitch_as_is=False):
+    def __init__(self, color=None, stitches=None, trim_after=False, stop_after=False, stitch_as_is=False,
+                 end_after=False, trim_before=False):
         self.color = color
         self.stitches = stitches or []
         self.trim_after = trim_after
         self.stop_after = stop_after
         self.stitch_as_is = stitch_as_is
+        self.end_after = end_after
+        self.trim_before = trim_before
 
     def __add__(self, other):
         if isinstance(other, Patch):
@@ -40,7 +43,8 @@ class Patch:
 
 
 class Param(object):
-    def __init__(self, name, description, unit=None, values=[], type=None, group=None, inverse=False, default=None, tooltip=None, sort_index=0):
+    def __init__(self, name, description, unit=None, values=[], type=None, group=None, inverse=False, default=None,
+                 tooltip=None, sort_index=0):
         self.name = name
         self.description = description
         self.unit = unit

@@ -1,7 +1,7 @@
 from copy import deepcopy
 
 from .stitch import Stitch
-from ..svg import PIXELS_PER_MM
+from ..svg.units import PIXELS_PER_MM
 
 
 def add_tie(stitches, tie_path):

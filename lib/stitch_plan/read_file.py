@@ -1,7 +1,7 @@
 import pyembroidery
 from .stitch_plan import StitchPlan
 
-from ..svg import PIXELS_PER_MM
+from ..svg.units import PIXELS_PER_MM
 
 
 def stitch_plan_from_file(embroidery_file):

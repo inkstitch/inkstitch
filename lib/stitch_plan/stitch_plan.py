@@ -1,4 +1,6 @@
-from ..svg import PIXELS_PER_MM
+import pyembroidery
+from lib.stitch_plan.point_lists import PointLists
+from ..svg.units import PIXELS_PER_MM
 from ..threads import ThreadColor
 from ..utils.geometry import Point
 from .stitch import Stitch
@@ -34,11 +36,17 @@ def patches_to_stitch_plan(patches, collapse_len=3.0 * PIXELS_PER_MM, disable_ti
 
                 # always start a color with a JUMP to the first stitch position
                 color_block.add_stitch(patch.stitches[0], jump=True)
+
+                if patch.trim_before:
+                    color_block.add_stitch(trim=True)
         else:
             if len(color_block) and (patch.stitches[0] - color_block.stitches[-1]).length() > collapse_len:
                 color_block.add_stitch(patch.stitches[0], jump=True)
 
         color_block.add_stitches(patch.stitches, no_ties=patch.stitch_as_is)
+
+        if patch.end_after:
+            color_block.add_stitch(end=True)
 
         if patch.trim_after:
             color_block.add_stitch(trim=True)
@@ -74,6 +82,7 @@ class StitchPlan(object):
         color_blocks = []
         for color_block in self.color_blocks:
             if len(color_block) > 0:
+                color_block.delete_empty_point_lists()
                 color_blocks.append(color_block)
 
         self.color_blocks = color_blocks
@@ -114,6 +123,10 @@ class StitchPlan(object):
     @property
     def num_trims(self):
         return sum(block.num_trims for block in self)
+
+    @property
+    def num_ends(self):
+        return sum(block.num_ends for block in self.color_blocks)
 
     @property
     def num_stitches(self):
@@ -159,6 +172,42 @@ class StitchPlan(object):
         else:
             return None
 
+    def parse_pattern_to_color_blocks(self, pattern):
+        # self.delete_end_if_last_stitch_in_last_color_block()
+        previous_command = pyembroidery.NO_COMMAND
+        pre_previous_command = pyembroidery.NO_COMMAND
+        trim_after = False
+        for raw_stitches, thread in pattern.get_as_colorblocks():
+            color_block = self.new_color_block(thread)
+            for x, y, command in raw_stitches:
+                if command == pyembroidery.END:
+                    self.last_color_block.add_stitch(x * PIXELS_PER_MM / 10.0, y * PIXELS_PER_MM / 10.0, end=True,
+                                                     next_pointlist=True)
+                elif command == pyembroidery.JUMP and previous_command == pyembroidery.END:
+                    self.last_color_block.add_stitch(x * PIXELS_PER_MM / 10.0, y * PIXELS_PER_MM / 10.0, jump=True)
+                elif (command == pyembroidery.TRIM and pre_previous_command == pyembroidery.END and
+                        previous_command == pyembroidery.JUMP):
+                    self.last_color_block.add_stitch(x * PIXELS_PER_MM / 10.0, y * PIXELS_PER_MM / 10.0, trim=True)
+                    # TODO maybe I should add them as END, end, trim, end trim jump, to be able to handle them?
+                    # TODO this should be done as stitch_blocks, not color block changes.
+                else:
+                    trim_after = False
+                if command == pyembroidery.STITCH:
+                    if trim_after:
+                        color_block.add_stitch(trim=True)
+                        trim_after = False
+                    color_block.add_stitch(x * PIXELS_PER_MM / 10.0, y * PIXELS_PER_MM / 10.0)
+                if len(color_block) > 0 and command == pyembroidery.TRIM and previous_command != pyembroidery.END:
+                    trim_after = True
+                pre_previous_command = previous_command
+                previous_command = command
+        self.delete_empty_color_blocks()
+
+        # def delete_end_if_last_stitch_in_last_color_block():
+        # if self.last_color_block.last_stitch.end:
+        # self.last_color_block.delete_stitch()
+        # TODO is this really needed? Then implement
+
 
 class ColorBlock(object):
     """Holds a set of stitches, all with the same thread color."""
@@ -166,6 +215,7 @@ class ColorBlock(object):
     def __init__(self, color=None, stitches=None):
         self.color = color
         self.stitches = stitches or []
+        self.point_lists = PointLists()
 
     def __iter__(self):
         return iter(self.stitches)
@@ -175,6 +225,12 @@ class ColorBlock(object):
 
     def __repr__(self):
         return "ColorBlock(%s, %s)" % (self.color, self.stitches)
+
+    def __getitem__(self, item):
+        return self.stitches[item]
+
+    def __delitem__(self, item):
+        del self.stitches[item]
 
     def has_color(self):
         return self._color is not None
@@ -211,11 +267,35 @@ class ColorBlock(object):
         return sum(1 for stitch in self if stitch.trim)
 
     @property
+    def num_ends(self):
+        """Number of internal ends in this color block."""
+        return sum(1 for stitch in self.stitches if stitch.end)
+
+    @property
     def stop_after(self):
         if self.last_stitch is not None:
             return self.last_stitch.stop
         else:
             return False
+
+    @property
+    def trim_after(self):
+        # If there's a STOP, it will be at the end.  We still want to return
+        # True.
+        for stitch in reversed(self.stitches):
+            if stitch.stop or stitch.jump:
+                continue
+            elif stitch.trim:
+                return True
+            else:
+                break
+
+        return False
+
+    def delete_empty_point_lists(self):
+        for int_this_point_list in xrange(self.point_lists.__len__()):
+            if len(self.point_lists.point_list_at_index(int_this_point_list)) == 0:
+                self.point_lists.delete_point_list_at_index(int_this_point_list)
 
     def filter_duplicate_stitches(self):
         if not self.stitches:
@@ -224,7 +304,7 @@ class ColorBlock(object):
         stitches = [self.stitches[0]]
 
         for stitch in self.stitches[1:]:
-            if stitches[-1].jump or stitch.stop or stitch.trim or stitch.color_change:
+            if stitches[-1].jump or stitch.stop or stitch.trim or stitch.color_change or stitch.end:
                 # Don't consider jumps, stops, color changes, or trims as candidates for filtering
                 pass
             else:
@@ -238,6 +318,7 @@ class ColorBlock(object):
         self.stitches = stitches
 
     def add_stitch(self, *args, **kwargs):
+        next_pointlist = False
         if not args:
             # They're adding a command, e.g. `color_block.add_stitch(stop=True)``.
             # Use the position from the last stitch.
@@ -245,15 +326,22 @@ class ColorBlock(object):
                 args = (self.last_stitch.x, self.last_stitch.y)
             else:
                 raise ValueError("internal error: can't add a command to an empty stitch block")
+        else:
+            next_pointlist = kwargs.pop('next_pointlist', False)
 
         if isinstance(args[0], Stitch):
             self.stitches.append(args[0])
+            self.point_lists.current_point_list.append((args[0].x, args[0].y))
         elif isinstance(args[0], Point):
             self.stitches.append(Stitch(args[0].x, args[0].y, *args[1:], **kwargs))
+            self.point_lists.current_point_list.append((args[0].x, args[0].y))
         else:
             if not args and self.last_stitch:
                 args = (self.last_stitch.x, self.last_stitch.y)
             self.stitches.append(Stitch(*args, **kwargs))
+            self.point_lists.current_point_list.append((args[0], args[1]))
+        if next_pointlist:
+            self.point_lists.add_point_list()
 
     def add_stitches(self, stitches, *args, **kwargs):
         for stitch in stitches:

@@ -5,7 +5,7 @@ from inkex import etree
 import inkex
 
 from ..stitch_plan import StitchPlan
-from ..svg import PIXELS_PER_MM, render_stitch_plan
+from ..svg import render_stitch_plan
 from ..svg.tags import INKSCAPE_LABEL
 
 
@@ -16,37 +16,7 @@ class Input(object):
         pattern.convert_jumps_to_trim(3)
 
         stitch_plan = StitchPlan()
-        previous_command = pyembroidery.NO_COMMAND
-        pre_previous_command = pyembroidery.NO_COMMAND
-        trim_after = False
-        for raw_stitches, thread in pattern.get_as_colorblocks():
-            color_block = stitch_plan.new_color_block(thread)
-            for x, y, command in raw_stitches:
-                if command == pyembroidery.END:
-                    stitch_plan.previous_color_block.add_stitch(x * PIXELS_PER_MM / 10.0, y * PIXELS_PER_MM / 10.0,
-                                                                end=True)
-                elif command == pyembroidery.TRIM and previous_command == pyembroidery.END:
-                    stitch_plan.previous_color_block.add_stitch(x * PIXELS_PER_MM / 10.0, y * PIXELS_PER_MM / 10.0,
-                                                                trim=True)
-                elif (command == pyembroidery.JUMP and pre_previous_command == pyembroidery.END and
-                        previous_command == pyembroidery.TRIM):
-                    stitch_plan.last_color_block.add_stitch(x * PIXELS_PER_MM / 10.0, y * PIXELS_PER_MM / 10.0,
-                                                            jump=True)
-                    # TODO maybe I should add them as END, end, trim, end trim jump, to be able to handle them?
-                    # TODO this should be done as stitch_blocks, not color block changes.
-                else:
-                    trim_after = False
-                if command == pyembroidery.STITCH:
-                    if trim_after:
-                        color_block.add_stitch(trim=True)
-                        trim_after = False
-                    color_block.add_stitch(x * PIXELS_PER_MM / 10.0, y * PIXELS_PER_MM / 10.0)
-                if len(color_block) > 0 and command == pyembroidery.TRIM and previous_command != pyembroidery.END:
-                    trim_after = True
-                pre_previous_command = previous_command
-                previous_command = command
-
-        stitch_plan.delete_empty_color_blocks()
+        stitch_plan.parse_pattern_to_color_blocks(pattern)
 
         extents = stitch_plan.extents
         svg = etree.Element("svg", nsmap=inkex.NSS, attrib={
