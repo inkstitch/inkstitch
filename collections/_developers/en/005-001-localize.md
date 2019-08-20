@@ -2,7 +2,7 @@
 title: "Localization"
 permalink: /developers/localize/
 excerpt: ""
-last_modified_at: 2019-08-18
+last_modified_at: 2019-08-20
 toc: true
 ---
 The goal of the Ink/Stitch project is to put free, high-quality embroidery design tools in the hands of folks that might normally not have access to such tools.  To further that goal, we seek to support as many languages and locales as possible.
@@ -20,6 +20,9 @@ Want to help translate?  We'd really appreciate your contributions!  Ink/Stitch 
 
 To start translating, visit our [project page on Crowdin](https://crowdin.com/project/inkstitch).  It's easy to sign in using your GitHub account.  Pick a language and start suggesting translations!
 
+**Info:** If you want your language to appear in the release section of Ink/Stitch, watch out for the string `"Generate INX files"` and make sure you create a translation for it. This is the key for Ink/Stitch to create the menu files in your language.
+{: .notice--warning }
+
 Approved contributors can accept your translations, which causes them to be committed to this repository within 24 hours.  If you'd like to become an approver, please ping [**@lexelby**](https://github.com/lexelby) or another approved contributor, or email **inkstitch-l10n** at **lex** dot **gd**.
 
 **Please note that our [code of conduct](CODE_OF_CONDUCT.md) also covers contributions and interactions on our Crowdin page.**
@@ -27,7 +30,7 @@ Approved contributors can accept your translations, which causes them to be comm
 ### Continuous Translation
 
 If you find these steps too complicated just add your translations to our [project page on Crowdin](https://crowdin.com/project/inkstitch) and inform us about your update.
-{: ..notice--info}
+{: .notice--info}
 
 When new code is added to Ink/Stitch, user-facing text can change and new messages can be added.  These changes will be uploaded to Crowdin within 24 hours and made available for contributors to translate.
 

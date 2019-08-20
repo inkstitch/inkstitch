@@ -2,7 +2,7 @@
 title: "Übersetzungen"
 permalink: /de/developers/localize/
 excerpt: ""
-last_modified_at: 2019-08-18
+last_modified_at: 2019-08-20
 toc: true
 ---
 Das Ziel des Ink/Stitch-Projektes ist es, hochwertige Werkzeuge zur Erstellung von Stickdesigns in die Hände von Menschen zu geben, die sonst keinen Zugriff auf solche Werkzeuge hätten.
@@ -20,6 +20,9 @@ Ink/Stitch unterstützt die Darstellung von Text in der bevorzugten Sprache des 
 Willst du bei den Übersetzungen helfen?  Wir würden deinen Beitrag wirklich sehr begrüßen!  Ink/Stitch benutzt die kollaborative Übersetzungsplatfrom [CrowdIn](http://crowdin.com) um die gemeinschaftliche Übersetzungsarbeit zu erleichtern.  Durch deren tolles Open Source Programm, ist es uns möglich, die Platform kostenlos zu nutzen, was wir wirklich sehr wertschätzen.
 
 Um mit dem Übersetzen zu beginnen, besuche unsere [Projektseite bei CrowdIn](https://crowdin.com/project/inkstitch).  Du kannst dich einfach mit deinem GitHub-Account einloggen.  Wähle eine Sprache und beginne Übersetzungen vorzuschlagen!
+
+**Info:** Wenn du deine Sprache als gesonderte Datei herunterladen willst, halte Ausschau nach dem Begriff `"Generate INX files"` und stelle sicher, dass es dafür eine Übersetzung gibt. Das ist der Schlüsselbegriff für Ink/Stitch, das Menü ist deiner Sprache zu erstellen.
+{: .notice--warning }
 
 Bestätigte Teammitglieder können deine Übersetzung dann akzeptieren, womit sie dann innerhalb von 24 Stunden in das Ink/Stitch GitHub Repository übernommen werden.  Wenn du gerne vorhandene Übersetzungen bestätigen willst, wende dich an [**@lexelby**](https://github.com/lexelby) oder einen anderes Teammitglied. Alternativ kannst du auch eine E-Mail and **inkstitch-l10n** at **lex** dot **gd** mit deinem Anliegen schicken.
 
