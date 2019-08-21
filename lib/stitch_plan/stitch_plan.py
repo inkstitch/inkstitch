@@ -99,7 +99,12 @@ class StitchPlan(object):
         return "StitchPlan(%s)" % ", ".join(repr(cb) for cb in self.color_blocks)
 
     def __json__(self):
-        return dict(color_blocks=self.color_blocks)
+        return dict(color_blocks=self.color_blocks,
+                    num_stops=self.num_stops,
+                    num_trims=self.num_trims,
+                    num_stitches=self.num_stitches,
+                    bounding_box=self.bounding_box
+                    )
 
     @property
     def num_colors(self):
