@@ -31,6 +31,7 @@
     "electron-compile": "^6.4.4",
     "query-string": "^6.8.2",
     "svg.js": "^2.7.1",
+    "svg.panzoom.js": "https://github.com/inkstitch/svg.panzoom.js",
     "tmp": "0.1.0"
   },
   "devDependencies": {

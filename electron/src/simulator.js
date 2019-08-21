@@ -1,13 +1,11 @@
 const inkStitch = require("./lib/api")
 const SVG = require("svg.js")
+require("svg.panzoom.js")
 
 var fps = document.getElementById("fps")
 
-let svg_width = window.innerWidth * 0.9
-let svg_height = window.innerHeight * 0.85
-
 var container = document.getElementById("simulation")
-var svg = SVG("simulation").size(svg_width, svg_height)
+var svg = SVG("simulation").size("90%", "85%").panZoom({zoomMin: 0.1})
 var simulation = svg.group()
 
 var stitches = Array()
@@ -17,6 +15,9 @@ inkStitch.get('stitch_plan').then(response => {
 	
 	var stitch_plan = response.data
     let [minx, miny, maxx, maxy] = stitch_plan.bounding_box    
+    let width = maxx - minx
+    let height = maxy - miny    
+    svg.viewbox(0, 0, width, height);
 	
 	console.log(stitch_plan)
 	stitch_plan.color_blocks.forEach(color_block => {
@@ -39,15 +40,6 @@ inkStitch.get('stitch_plan').then(response => {
 	})
 
 	container.style.display = "";
-
-	let width = maxx - minx
-    let height = maxy - miny
-    let scale_x = svg_width / width
-    let scale_y = svg_height / height
-    let scale = Math.min(scale_x, scale_y)
-    
-    simulation.move((svg_width - scale * width) / 2.0, (svg_height - scale * height) / 2.0)
-    simulation.scale(scale, scale)
     
     var i = 0;
 	var last_tick = performance.now()
