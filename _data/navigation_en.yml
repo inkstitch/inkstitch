@@ -141,8 +141,10 @@ developers:
   - title: Ink/Stitch
     url: /developers/inkstitch/
     children:
-    - title: Manual Setup
+    - title: Manual Setup (Linux/macOS)
       url: /developers/inkstitch/manual-setup/
+    - title: Manual Setup (Windows)
+      url: /developers/inkstitch/windows-manual-setup/
     - title: Python Modules
       url: /developers/inkstitch/python-modules/
     - title: Namespace

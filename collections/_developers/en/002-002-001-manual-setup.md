@@ -1,11 +1,11 @@
 ---
 title: "Manual Setup"
 permalink: /developers/inkstitch/manual-setup/
-last_modified_at: 2019-05-01
+last_modified_at: 2019-08-20
 toc: false
 ---
 A manual setup will allow you to edit the code while running the extension. If you are aiming to debug extensions, and are running on Windows,
-some supplementary instructions are available at [windows-manual-setup](/developers/windows-manual-setup/)  
+some supplementary instructions are available at [windows-manual-setup](/developers/inkstitch/windows-manual-setup/)
 
 1. Clone the extension source and update submodule pyembroidery
 
@@ -26,7 +26,7 @@ some supplementary instructions are available at [windows-manual-setup](/develop
        ⚫ Debian uses `python-wxgtk3.0`<br />
        ⚫ Ubuntu 16.04: `pip install -U -f https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-16.04 wxPython`
     {: .notice--info }
-    
+
     **Info:** If you only have Python 2 installed you may be able to use `pip` instead of `pip2`.
     {: .notice--info }
 
