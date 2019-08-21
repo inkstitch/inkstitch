@@ -7,7 +7,9 @@ import time
 from flask import Flask, request, g
 import requests
 
+from ..utils.json import InkStitchJSONEncoder
 from .simulator import simulator
+from .stitch_plan import stitch_plan
 
 
 class APIServer(Thread):
@@ -25,8 +27,10 @@ class APIServer(Thread):
 
     def __setup_app(self):  # noqa: C901
         self.app = Flask(__name__)
+        self.app.json_encoder = InkStitchJSONEncoder
 
         self.app.register_blueprint(simulator, url_prefix="/simulator")
+        self.app.register_blueprint(stitch_plan, url_prefix="/stitch_plan")
 
         @self.app.before_request
         def store_extension():

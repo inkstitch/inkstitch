@@ -8,20 +8,26 @@ var simulation = SVG("simulation").size("90%", "85%")
 
 var stitches = Array()
 
-inkStitch.get('simulator/get_stitch_plan').then(response => {
+inkStitch.get('stitch_plan').then(response => {
 	var start = performance.now()
 	container.style.display = "none"
 	
 	var stitch_plan = response.data
 	console.log(stitch_plan)
-	stitch_plan.stitch_blocks.forEach((stitch_block, i) => {
-		let attrs = {fill: "none", stroke: `#${stitch_plan.colors[i]}`}
+	stitch_plan.color_blocks.forEach(color_block => {
+		let attrs = {fill: "none", stroke: `${color_block.color.visible_on_white.hex}`}
 		let prevStitch = null
-		stitch_block.forEach(stitch => {
-			if (prevStitch) {
-				stitches.push(simulation.path(`M${prevStitch.join(',')} ${stitch.join(',')}`).attr(attrs).hide())
-			}
-			prevStitch = stitch
+		color_block.stitches.forEach(stitch => {
+		    if (stitch.trim) {
+		        prevStitch = null
+		    } else if (stitch.color_change) {
+		        // ignore
+		    } else {
+        			if (prevStitch) {
+        				stitches.push(simulation.path(`M${prevStitch.x},${prevStitch.y} ${stitch.x},${stitch.y}`).attr(attrs).hide())
+        			}
+        			prevStitch = stitch
+		    }
 		})
 	})
 	console.log(performance.now() - start)
