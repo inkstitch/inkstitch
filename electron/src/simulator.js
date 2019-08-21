@@ -1,6 +1,7 @@
 const inkStitch = require("./lib/api")
 const SVG = require("svg.js")
 require("svg.panzoom.js")
+const Mousetrap = require("mousetrap")
 
 var fps = document.getElementById("fps")
 
@@ -9,6 +10,10 @@ var svg = SVG("simulation").size("90%", "85%").panZoom({zoomMin: 0.1})
 var simulation = svg.group()
 
 var stitches = Array()
+
+var speed = 16
+const target_fps = 30
+const target_frame_period = 1000.0 / target_fps
 
 inkStitch.get('stitch_plan').then(response => {
 	container.style.display = "none"
@@ -41,28 +46,59 @@ inkStitch.get('stitch_plan').then(response => {
 
 	container.style.display = "";
     
-    var i = 0;
-	var last_tick = performance.now()
+	var last_frame_start = performance.now()
+	var current_stitch = 1
+	var rendered_stitch = 0
+	var direction = 1
 
-	var interval = setInterval(function() {
-		let now = performance.now()
-		let frame_time = (now - last_tick) / 1000.0;
-		last_tick = now
-
-		let segments = 300 * frame_time;
+	var renderFrame = function() {
+		let frame_start = performance.now();
+		let frame_time = frame_start - last_frame_start
+		last_frame_start = frame_start
 		
-		fps.innerHTML = `${segments} ${frame_time}`
+		let num_stitches = speed * Math.max(frame_time, target_frame_period) / 1000.0;
+		current_stitch = Math.max(Math.min(current_stitch + num_stitches * direction, stitches.length - 1), 0)
 		
-		for (let j=0; j < segments && i < stitches.length; j++) {
-	    	    stitches[i].show();
-		    i++;
+        //fps.innerHTML = `${num_stitches.toFixed(2)} ${last_frame_time.toFixed(2)}`
+		
+		while (rendered_stitch + 1 <= current_stitch) {
+		    rendered_stitch += 1
+		    stitches[rendered_stitch].show();
 		}
 		
-		if (i >= stitches.length) {
-		    clearInterval(interval);
+		while (rendered_stitch - 1 >= current_stitch) {
+		    stitches[rendered_stitch].hide();
+		    rendered_stitch -= 1
 		}
-	}, 33);
+		
+		fps.innerHTML = `${num_stitches.toFixed(2)} ${frame_time.toFixed(2)}`
+		
+		if (current_stitch < stitches.length - 1) {
+		    setTimeout(renderFrame, Math.max(0, target_frame_period - frame_time))
+		}
+	}
 	
+	renderFrame()
+	
+	Mousetrap.bind("up", () => {
+	    speed *= 2.0
+        console.log(speed)
+	})
+	
+	Mousetrap.bind("down", () => {
+	    speed /= 2.0
+	    speed = Math.max(speed, 1)
+	    
+	    console.log(speed)
+	})
+	
+	Mousetrap.bind("right", () => {
+	    direction = 1
+	})
+
+    Mousetrap.bind("left", () => {
+        direction = -1
+    })
 })
 
 
