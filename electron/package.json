@@ -3,23 +3,31 @@
   "productName": "inkstitch-gui",
   "version": "1.0.0",
   "description": "Ink/Stitch GUI",
-  "main": "src/main.js",
+  "main": "./dist/electron/main.js",
   "scripts": {
     "pack": "electron-builder --dir",
-    "dist": "electron-builder",
-    "dev": "electron ."
+    "dist": "node .electron-vue/build.js && electron-builder",
+    "dev": "node .electron-vue/dev-runner.js"
   },
   "build": {
+    "productName": "inkstitch-gui",
+    "appId": "org.inkstitch.gui",
+    "directories": {
+      "output": "build"
+    },
+    "files": [
+      "dist/electron/**/*"
+    ],
     "linux": {
-      "icon": "src/assets/icons/png/512x512.png",
+      "icon": "build/icons",
       "target": "dir"
     },
     "win": {
-      "icon": "src/assets/icons/win/inkstitch.ico",
+      "icon": "build/icons/inkstitch.ico",
       "target": "dir"
     },
     "mac": {
-      "icon": "src/assets/icons/mac/inkstitch.icns",
+      "icon": "build/icons/inkstitch.icns",
       "target": "dir"
     }
   },
@@ -33,12 +41,56 @@
     "query-string": "^6.8.2",
     "svg.js": "^2.7.1",
     "svg.panzoom.js": "https://github.com/inkstitch/svg.panzoom.js",
-    "tmp": "0.1.0"
+    "tmp": "0.1.0",
+    "vue": "^2.5.16",
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
+    "ajv": "^6.5.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "babili-webpack-plugin": "^0.1.2",
+    "cfonts": "^2.1.2",
+    "chalk": "^2.4.1",
+    "copy-webpack-plugin": "^4.5.1",
+    "cross-env": "^5.1.6",
+    "css-loader": "^0.28.11",
+    "del": "^3.0.0",
+    "devtron": "^1.4.0",
+    "electron-debug": "^1.5.0",
+    "electron-devtools-installer": "^2.2.4",
+    "babel-eslint": "^8.2.3",
     "electron": "4.1.3",
     "electron-builder": "^20.39.0",
-    "electron-packager": "13.1.1",
-    "electron-prebuilt-compile": "4.0.0"
+    "electron-prebuilt-compile": "4.0.0",
+    "eslint": "^4.19.1",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-html": "^4.0.3",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "mini-css-extract-plugin": "0.4.0",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "multispinner": "^0.2.1",
+    "node-loader": "^0.6.0",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "vue-html-loader": "^1.2.4",
+    "vue-loader": "^15.2.4",
+    "vue-style-loader": "^4.1.0",
+    "vue-template-compiler": "^2.5.16",
+    "webpack-cli": "^3.0.8",
+    "webpack": "^4.15.1",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-hot-middleware": "^2.22.2",
+    "webpack-merge": "^4.1.3"
   }
 }

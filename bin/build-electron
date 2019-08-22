@@ -10,10 +10,14 @@ elif [ "$BUILD" = "linux" ]; then
     -e ELECTRON_CACHE=$HOME/.cache/electron \
     -v ${PWD}/electron:/project \
     -v ~/.cache/electron:/root/.cache/electron \
+    -e NODE_ENV=production \
     electronuserland/builder:wine \
     /bin/bash -c "yarn --link-duplicates --pure-lockfile && yarn run dist ${args}"
 else
+  export NODE_ENV=production
+
   cd electron
-  npm install
-  npm run dist
+  npm install -g yarn
+  yarn
+  yarn run dist
 fi
