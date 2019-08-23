@@ -114,10 +114,12 @@ function startMain () {
 }
 
 function startElectron () {
+  process.argv.shift();
+  process.argv.shift();
   var args = [
     '--inspect=5858',
     path.join(__dirname, '../dist/electron/main.js')
-  ]
+  ].concat(process.argv)
 
   // detect yarn or npm and process commandline args accordingly
   if (process.env.npm_execpath.endsWith('yarn.js')) {
@@ -127,7 +129,7 @@ function startElectron () {
   }
 
   electronProcess = spawn(electron, args)
-  
+
   electronProcess.stdout.on('data', data => {
     electronLog(data, 'blue')
   })

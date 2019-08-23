@@ -11,7 +11,7 @@ class ElectronSimulator(InkstitchExtension):
     def effect(self):
         api_server = APIServer(self)
         port = api_server.start_server()
-        electron = open_url("simulator.html?port=%d" % port)
+        electron = open_url("/simulator?port=%d" % port)
         electron.wait()
         api_server.stop()
         api_server.join()
