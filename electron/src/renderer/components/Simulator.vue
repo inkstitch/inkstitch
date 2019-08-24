@@ -1,5 +1,5 @@
 <template>
-  <div class="simulator">
+  <div class="simulator vld-parent">
     <div class="simulation"></div>
     <div class="display">
       speed: {{speedDisplay}} stitches/sec   current stitch: {{currentStitchDisplay}}/{{numStitches}}  command: {{currentCommand}}
@@ -8,6 +8,12 @@
       <button v-on:click="animationSpeedUp">&gt;&gt;</button>
       <button v-on:click="animationSlowDown">&lt;&lt;</button>
     </div>
+    <loading :active.sync="loading" :is-full-page="returnFalse">
+      <div class="loading">
+        <div class="loading-icon"><font-awesome-icon icon="spinner" size="4x" pulse /></div>
+        <div class="loading-text">Rendering stitch-plan...</div>
+      </div>
+    </loading>
   </div>
 </template>
 
@@ -16,11 +22,17 @@
   const Mousetrap = require("mousetrap")
   const SVG = require("svg.js")
   require("svg.panzoom.js")
+  import Loading from 'vue-loading-overlay';
+  import 'vue-loading-overlay/dist/vue-loading.css';
 
   export default {
     name: 'simulator',
+    components: {
+      Loading
+    },
     data: function() {
       return {
+        loading: false,
         speed: 16,
         currentStitch: 1,
         direction: 1,
@@ -29,6 +41,12 @@
       }
     },
     computed: {
+      returnFalse() {
+        // only way I could figure out to specify a boolean value for a prop,
+        // other than adding a needless extra "isFullPage" property on this
+        // component
+        return false
+      },
       currentStitchDisplay() {
         return this.currentStitch.toFixed()
       },
@@ -176,6 +194,8 @@
       this.svg = SVG(this.$el.querySelector(".simulation")).size("90%", "85%").panZoom({zoomMin: 0.1})
       this.simulation = this.svg.group()
 
+      this.loading = true
+
       inkStitch.get('stitch_plan').then(response => {
         var stitch_plan = response.data
           let [minx, miny, maxx, maxy] = stitch_plan.bounding_box    
@@ -208,6 +228,8 @@
           })
         })
 
+        this.loading = false
+
         this.numStitches = this.stitches.length - 1
 
         // v-on:keydown doesn't seem to work, maybe an Electron issue?
@@ -225,6 +247,21 @@
   }
 </script>
 
-<style>
-  /* CSS */
+<style scoped>
+  .loading-icon {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: rgb(0, 51, 153);
+  }
+
+  .loading-text {
+    font-family: sans-serif;
+  }
+
+  .loading {
+    border-radius: 1rem;
+    border: 3px solid rgb(0, 51, 153);
+    background-color: rgba(0, 51, 153, 0.1);
+    padding: 1rem;
+  }
 </style>
