@@ -8,6 +8,19 @@
       <button v-on:click="animationSpeedUp">&gt;&gt;</button>
       <button v-on:click="animationSlowDown">&lt;&lt;</button>
     </div>
+    <div class="slider-box">
+      <vue-slider class="slider"
+                  :value="currentStitchDisplay"
+                  @change="setCurrentStitch"
+                  :min="1"
+                  :max="numStitches"
+                  :duration="0"></vue-slider>
+    </div>
+    <input ref="currentStitchInput"
+           class="current-stitch-input"
+           :value="currentStitchDisplay"
+           @change="onCurrentStitchEntered"
+           @focus="stop" />
     <loading :active.sync="loading" :is-full-page="returnFalse">
       <div class="loading">
         <div class="loading-icon"><font-awesome-icon icon="spinner" size="4x" pulse /></div>
@@ -24,21 +37,31 @@
   require("svg.panzoom.js")
   import Loading from 'vue-loading-overlay';
   import 'vue-loading-overlay/dist/vue-loading.css';
+  import VueSlider from 'vue-slider-component'
+  import 'vue-slider-component/theme/default.css'
+  const throttle = require('lodash.throttle')  
 
   export default {
     name: 'simulator',
     components: {
-      Loading
+      Loading,
+      VueSlider
     },
     data: function() {
       return {
         loading: false,
         speed: 16,
         currentStitch: 1,
+        currentStitchDisplay: 1,
         direction: 1,
-        numStitches: 0,
+        numStitches: 1,
         animating: false
       }
+    },
+    watch: {
+      currentStitch: throttle(function() {
+        this.currentStitchDisplay = this.currentStitch.toFixed()
+      }, 100, {leading: true, trailing: true}),
     },
     computed: {
       returnFalse() {
@@ -46,9 +69,6 @@
         // other than adding a needless extra "isFullPage" property on this
         // component
         return false
-      },
-      currentStitchDisplay() {
-        return this.currentStitch.toFixed()
       },
       speedDisplay() {
         return this.speed * this.direction
@@ -102,14 +122,23 @@
         }
       },
       animationForwardOneFrame() {
-        this.stop()
-        this.currentStitch++
-        this.clampCurrentStitch()
-        this.renderFrame()
+        this.setCurrentStitch(this.currentStitch + 1)
       },
       animationBackwardOneFrame() {
+        this.setCurrentStitch(this.currentStitch - 1)
+      },
+      onCurrentStitchEntered() {
+        let newCurrentStitch = parseInt(this.$refs.currentStitchInput.value)
+
+        if (isNaN(newCurrentStitch)) {
+          this.$refs.currentStitchInput.value = this.currentStitch.toFixed()
+        } else {
+          this.setCurrentStitch(parseInt(newCurrentStitch))
+        }
+      },
+      setCurrentStitch(newCurrentStitch) {
         this.stop()
-        this.currentStitch--
+        this.currentStitch = newCurrentStitch
         this.clampCurrentStitch()
         this.renderFrame()
       },
@@ -263,5 +292,23 @@
     border: 3px solid rgb(0, 51, 153);
     background-color: rgba(0, 51, 153, 0.1);
     padding: 1rem;
+  }
+
+  .slider-box, .current-stitch-input {
+    display: inline-block;
+    margin-top: 1rem;
+  }
+
+  .slider-box {
+    width: calc(100% - 5rem);
+  }
+
+  .current-stitch-input {
+    width: 4rem;
+    float: right;
+  }
+
+  svg {
+    margin: 1rem;
   }
 </style>

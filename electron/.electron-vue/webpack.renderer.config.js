@@ -19,7 +19,9 @@ const { VueLoaderPlugin } = require('vue-loader')
  * that provide pure *.vue files that need compiling
  * https://simulatedgreg.gitbooks.io/electron-vue/content/en/webpack-configurations.html#white-listing-externals
  */
-let whiteListedModules = ['vue']
+// 'vue-slider-component' needed here due to this issue: 
+// https://github.com/SimulatedGREG/electron-vue/issues/725
+let whiteListedModules = ['vue', 'vue-slider-component']
 
 let rendererConfig = {
   devtool: '#cheap-module-eval-source-map',
