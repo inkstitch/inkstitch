@@ -1,26 +1,34 @@
 <template>
   <div class="simulator vld-parent">
-    <div class="simulation"></div>
-    <div class="display">
-      speed: {{speedDisplay}} stitches/sec   current stitch: {{currentStitchDisplay}}/{{numStitches}}  command: {{currentCommand}}
+    <div ref="simulation" class="simulation"></div>
+    <div class="panel">
+      <fieldset>
+        <legend>Speed: {{speed}} stitches/sec</legend>
+        <button v-on:click="animationSlowDown"><font-awesome-icon icon="angle-right" size="2x" class="fa-button" /></button>
+        <button v-on:click="animationSpeedUp"><font-awesome-icon icon="angle-double-right" size="2x" class="fa-button" /></button>
+      </fieldset>
+      <fieldset>
+        <legend>Command</legend>
+        <span class="current-command">{{currentCommand}}</span>
+      </fieldset>
     </div>
-    <div class="controls">
-      <button v-on:click="animationSpeedUp">&gt;&gt;</button>
-      <button v-on:click="animationSlowDown">&lt;&lt;</button>
-    </div>
-    <div class="slider-box">
-      <vue-slider class="slider"
+    <div class="slider-container">
+      <span>1</span>
+      <span class="slider-box">
+        <vue-slider
                   :value="currentStitchDisplay"
                   @change="setCurrentStitch"
                   :min="1"
                   :max="numStitches"
                   :duration="0"></vue-slider>
-    </div>
-    <input ref="currentStitchInput"
+      </span>
+      <span>{{numStitches}}</span>
+      <input ref="currentStitchInput"
            class="current-stitch-input"
            :value="currentStitchDisplay"
            @change="onCurrentStitchEntered"
            @focus="stop" />
+    </div>
     <loading :active.sync="loading" :is-full-page="returnFalse">
       <div class="loading">
         <div class="loading-icon"><font-awesome-icon icon="spinner" size="4x" pulse /></div>
@@ -77,7 +85,7 @@
         let stitch = this.stitches[this.currentStitch.toFixed()]
 
         if (stitch === undefined) {
-          return ""
+          return "NONE"
         }
 
         let label = "STITCH"
@@ -220,7 +228,7 @@
       this.timer = null
     },
 	  mounted: function() {
-      this.svg = SVG(this.$el.querySelector(".simulation")).size("90%", "85%").panZoom({zoomMin: 0.1})
+      this.svg = SVG(this.$refs.simulation).size("90%", "85%").panZoom({zoomMin: 0.1})
       this.simulation = this.svg.group()
 
       this.loading = true
@@ -294,21 +302,53 @@
     padding: 1rem;
   }
 
-  .slider-box, .current-stitch-input {
+  .slider-container {
+    padding: 1rem;
+  }
+
+  .slider-container > * {
     display: inline-block;
-    margin-top: 1rem;
+    vertical-align: middle;
   }
 
   .slider-box {
-    width: calc(100% - 5rem);
+    width: calc(80%);
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   .current-stitch-input {
     width: 4rem;
     float: right;
+    font-size: 1rem;
   }
 
   svg {
     margin: 1rem;
+  }
+
+  .fa-spin-fast {
+    animation: fa-spin 0.4s infinite linear;
+  }
+
+  .fa-button {
+    margin: 3px;
+  }
+
+  .panel > * {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  fieldset {
+    text-align: center;
+  }
+  fieldset button {
+    display: inline-block;
+  }
+  .current-command {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: sans-serif;
   }
 </style>
