@@ -1,8 +1,12 @@
 <template>
-  <div>
-    <div class="simulator"></div>
+  <div class="simulator">
+    <div class="simulation"></div>
     <div class="display">
-      speed: {{speedDisplay}} stitches/sec   current stitch: {{currentStitchDisplay}}/{{numStitches}}  animating: {{animating}}  command: {{currentCommand}}
+      speed: {{speedDisplay}} stitches/sec   current stitch: {{currentStitchDisplay}}/{{numStitches}}  command: {{currentCommand}}
+    </div>
+    <div class="controls">
+      <button v-on:click="animationSpeedUp">&gt;&gt;</button>
+      <button v-on:click="animationSlowDown">&lt;&lt;</button>
     </div>
   </div>
 </template>
@@ -169,7 +173,7 @@
       this.timer = null
     },
 	  mounted: function() {
-      this.svg = SVG(this.$el.querySelector(".simulator")).size("90%", "85%").panZoom({zoomMin: 0.1})
+      this.svg = SVG(this.$el.querySelector(".simulation")).size("90%", "85%").panZoom({zoomMin: 0.1})
       this.simulation = this.svg.group()
 
       inkStitch.get('stitch_plan').then(response => {
