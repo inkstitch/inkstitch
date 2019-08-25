@@ -1,15 +1,23 @@
 <template>
-  <div class="simulator vld-parent">
-    <div ref="simulation" class="simulation"></div>
+  <div ref = "simulator" class="simulator vld-parent">
     <div class="panel">
-      <fieldset>
+      <fieldset class="controls">
+        <legend>Controls</legend>
+        <button v-on:click="stop" :class="{pressed: paused}"><font-awesome-icon icon="pause" size="2x" class="fa-button" /></button>
+        <button v-on:click="start" :class="{pressed: animating}"><font-awesome-icon icon="play" size="2x" class="fa-button" /></button>
+        <button v-on:click="animationReverse" :class="{pressed: reverse}"><font-awesome-icon icon="angle-double-left" size="2x" class="fa-button" :mask="['fas', 'stop']" /></button>
+        <button v-on:click="animationForward" :class="{pressed: forward}"><font-awesome-icon icon="angle-double-right" size="2x" class="fa-button" :mask="['fas', 'stop']" /></button>
+        <button v-on:click="animationBackwardOneStitch"><font-awesome-icon icon="step-backward" size="2x" class="fa-button" /></button>
+        <button v-on:click="animationForwardOneStitch"><font-awesome-icon icon="step-forward" size="2x" class="fa-button" /></button>        
+      </fieldset>
+      <fieldset class="speed">
         <legend>Speed: {{speed}} stitches/sec</legend>
         <button v-on:click="animationSlowDown"><font-awesome-icon icon="angle-right" size="2x" class="fa-button" /></button>
         <button v-on:click="animationSpeedUp"><font-awesome-icon icon="angle-double-right" size="2x" class="fa-button" /></button>
       </fieldset>
-      <fieldset>
+      <fieldset class="command">
         <legend>Command</legend>
-        <span class="current-command">{{currentCommand}}</span>
+        <span>{{currentCommand}}</span>
       </fieldset>
     </div>
     <div class="slider-container">
@@ -29,7 +37,7 @@
            @change="onCurrentStitchEntered"
            @focus="stop" />
     </div>
-    <loading :active.sync="loading" :is-full-page="returnFalse">
+    <loading :active.sync="loading" :is-full-page="false">
       <div class="loading">
         <div class="loading-icon"><font-awesome-icon icon="spinner" size="4x" pulse /></div>
         <div class="loading-text">Rendering stitch-plan...</div>
@@ -47,7 +55,7 @@
   import 'vue-loading-overlay/dist/vue-loading.css';
   import VueSlider from 'vue-slider-component'
   import 'vue-slider-component/theme/default.css'
-  const throttle = require('lodash.throttle')  
+  const throttle = require('lodash.throttle')
 
   export default {
     name: 'simulator',
@@ -72,12 +80,6 @@
       }, 100, {leading: true, trailing: true}),
     },
     computed: {
-      returnFalse() {
-        // only way I could figure out to specify a boolean value for a prop,
-        // other than adding a needless extra "isFullPage" property on this
-        // component
-        return false
-      },
       speedDisplay() {
         return this.speed * this.direction
       },
@@ -105,7 +107,16 @@
         }
 
         return label
-      }
+      },
+      paused() {
+        return !this.animating
+      },
+      forward() {
+        return this.direction > 0
+      },
+      reverse() {
+        return this.direction < 0
+      },
     },
     methods: {
       animationSpeedUp() {
@@ -122,17 +133,19 @@
         this.direction = 1
         this.start()
       },
-      toggleAnimation() {
+      toggleAnimation(e) {
         if (this.animating) {
           this.stop()
         } else {
           this.start()
         }
+
+        e.preventDefault();
       },
-      animationForwardOneFrame() {
+      animationForwardOneStitch() {
         this.setCurrentStitch(this.currentStitch + 1)
       },
-      animationBackwardOneFrame() {
+      animationBackwardOneStitch() {
         this.setCurrentStitch(this.currentStitch - 1)
       },
       onCurrentStitchEntered() {
@@ -228,7 +241,11 @@
       this.timer = null
     },
 	  mounted: function() {
-      this.svg = SVG(this.$refs.simulation).size("90%", "85%").panZoom({zoomMin: 0.1})
+      this.svg = SVG(this.$refs.simulator).panZoom({zoomMin: 0.1})
+      this.svg.node.style.flex_grow = 1
+      this.svg.node.style.flex_shrink = 1
+      this.svg.node.style.order = -1
+            
       this.simulation = this.svg.group()
 
       this.loading = true
@@ -275,8 +292,8 @@
         Mousetrap.bind("left", this.animationReverse)
         Mousetrap.bind("right", this.animationForward)
         Mousetrap.bind("space", this.toggleAnimation)
-        Mousetrap.bind("+", this.animationForwardOneFrame)
-        Mousetrap.bind("-", this.animationBackwardOneFrame)
+        Mousetrap.bind("+", this.animationForwardOneStitch)
+        Mousetrap.bind("-", this.animationBackwardOneStitch)
 
         this.start()
       })
@@ -303,7 +320,8 @@
   }
 
   .slider-container {
-    padding: 1rem;
+    margin-top: 10px;
+    height: 25px;
   }
 
   .slider-container > * {
@@ -323,10 +341,6 @@
     font-size: 1rem;
   }
 
-  svg {
-    margin: 1rem;
-  }
-
   .fa-spin-fast {
     animation: fa-spin 0.4s infinite linear;
   }
@@ -338,17 +352,39 @@
   .panel > * {
     display: inline-block;
     vertical-align: middle;
+    text-align: center;
   }
 
   fieldset {
     text-align: center;
+    height: 50px;
   }
   fieldset button {
     display: inline-block;
   }
-  .current-command {
-    font-size: 2rem;
-    font-weight: bold;
+  fieldset.command span {
     font-family: sans-serif;
+    font-size: 2rem;
+    vertical-align: middle;
+  }
+  button.pressed {
+    border-style: inset;
+  }
+  .simulation {
+    margin: 1rem;
+    flex-grow: 1;
+    flex-shrink: 1;
+    order: -1;
+  }
+  .panel {
+    flex-grow: 0;
+  }
+  .slider-container {
+    flex-grow: 0;
+  }
+  .simulator {
+    display: flex;
+    flex-direction: column;
+    height: 98vh;
   }
 </style>
