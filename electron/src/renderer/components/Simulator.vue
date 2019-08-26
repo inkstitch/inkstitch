@@ -1,5 +1,6 @@
 <template>
   <div ref = "simulator" class="simulator vld-parent">
+    <fieldset>
     <div class="panel">
       <fieldset class="controls">
         <legend>Controls</legend>
@@ -54,6 +55,7 @@
            @change="onCurrentStitchEntered"
            @focus="stop" />
     </div>
+    </fieldset>
     <loading :active.sync="loading" :is-full-page="false">
       <div class="loading">
         <div class="loading-icon"><font-awesome-icon icon="spinner" size="4x" pulse /></div>
@@ -79,8 +81,9 @@
   const markStyle = {
     display: "block",
     width: "4px",
-    height: "8px",
-    backgroundColor: "#000000A0",
+    height: "20px",
+    borderRadius: "4px",
+    backgroundColor: "#808080",
     transform: "translate(0, -2px)"
   }
   const labelStyle = {
@@ -316,10 +319,7 @@
     },
     mounted: function() {
       this.svg = SVG(this.$refs.simulator).panZoom({zoomMin: 0.1})
-      this.svg.node.style.flex_grow = 1
-      this.svg.node.style.flex_shrink = 1
-      this.svg.node.style.order = -1
-            
+      this.svg.node.classList.add('simulation')
       this.simulation = this.svg.group()
 
       this.loading = true
@@ -441,9 +441,11 @@
     text-align: center;
   }
 
-  fieldset {
+  .panel fieldset {
     text-align: center;
     height: 50px;
+  }
+  fieldset {
     border-color: rgb(0, 51, 153);
   }
   fieldset button {
@@ -460,6 +462,9 @@
   fieldset.show-commands span {
     display: inline-block;
   }
+  fieldset.show-commands span:first-of-type {
+    padding-right: 12px;
+  }
   button.pressed {
     border-style: inset;
   }
@@ -471,6 +476,8 @@
   }
   .panel {
     flex-grow: 0;
+    white-space: nowrap;
+    text-align: center;
   }
   .slider-container {
     flex-grow: 0;
@@ -483,5 +490,18 @@
   .current-command {
     color: rgb(0, 51, 153);
     font-weight: bold;
+  }
+</style>
+
+<style>
+  /* This is unscoped because the SVG tag isn't controlled by Vue and thus doesn't
+     get the attribute used for scoping.  See:
+
+     https://vue-loader.vuejs.org/guide/scoped-css.html
+   */
+  svg.simulation {
+    flex_grow: 1;
+    flex_shrink: 1;
+    order: -1;
   }
 </style>
