@@ -12,12 +12,28 @@
       </fieldset>
       <fieldset class="speed">
         <legend>Speed: {{speed}} stitches/sec</legend>
-        <button v-on:click="animationSlowDown"><font-awesome-icon icon="angle-right" size="2x" class="fa-button" /></button>
-        <button v-on:click="animationSpeedUp"><font-awesome-icon icon="angle-double-right" size="2x" class="fa-button" /></button>
+        <button v-on:click="animationSlowDown"><font-awesome-icon icon="hippo" size="2x" class="fa-button" /></button>
+        <button v-on:click="animationSpeedUp">
+          <font-awesome-icon icon="align-right" class="fa-motion-lines" />
+          <font-awesome-icon icon="horse" size="2x" class="fa-button fa-fast" />
+        </button>
       </fieldset>
       <fieldset class="command">
         <legend>Command</legend>
-        <span>{{currentCommand}}</span>
+        <span class="current-command">{{currentCommand}}</span>
+      </fieldset>
+      <fieldset class="show-commands">
+        <legend>Show Commands</legend>
+        <span>
+          <input id="trim-checkbox" type="checkbox" v-model="showTrims" /><label for="trim-checkbox">✂ trims</label>
+          <br />
+          <input id="jump-checkbox" type="checkbox" v-model="showJumps" /><label for="jump-checkbox">↷ jumps</label>
+        </span>
+        <span>
+          <input id="color-change-checkbox" type="checkbox" v-model="showColorChanges" /><label for="color-change-checkbox">⇄ color changes</label>
+          <br />
+          <input id="stop-checkbox" type="checkbox" v-model="showStops" /><label for="stop-checkbox">⏸ stops</label>
+        </span>
       </fieldset>
     </div>
     <div class="slider-container">
@@ -28,7 +44,8 @@
                   @change="setCurrentStitch"
                   :min="1"
                   :max="numStitches"
-                  :duration="0"></vue-slider>
+                  :duration="0"
+                  :marks="sliderMarks"></vue-slider>
       </span>
       <span>{{numStitches}}</span>
       <input ref="currentStitchInput"
@@ -57,6 +74,24 @@
   import 'vue-slider-component/theme/default.css'
   const throttle = require('lodash.throttle')
 
+  // I should totally be able to set these on the prototype but then vue-slider
+  // ignores them?!
+  const markStyle = {
+    display: "block",
+    width: "4px",
+    height: "8px",
+    backgroundColor: "#000000A0",
+    transform: "translate(0, -2px)"
+  }
+  const labelStyle = {
+    "font-size": "2rem"
+  }
+  function SliderMark(label) {
+    this.label = label
+    this.style = markStyle
+    this.labelStyle = labelStyle
+  }
+  
   export default {
     name: 'simulator',
     components: {
@@ -71,7 +106,11 @@
         currentStitchDisplay: 1,
         direction: 1,
         numStitches: 1,
-        animating: false
+        animating: false,
+        showTrims: false,
+        showJumps: false,
+        showColorChanges: false,
+        showStops: false
       }
     },
     watch: {
@@ -117,6 +156,23 @@
       reverse() {
         return this.direction < 0
       },
+      sliderMarks() {
+        var marks = {}
+        
+        if (this.showTrims)
+          Object.assign(marks, this.trimMarks);
+
+        if (this.showJumps)
+          Object.assign(marks, this.jumpMarks);
+
+        if (this.showColorChanges)
+          Object.assign(marks, this.colorChangeMarks);
+
+        if (this.showStops)
+          Object.assign(marks, this.stopMarks);
+          
+        return marks
+      }
     },
     methods: {
       animationSpeedUp() {
@@ -226,7 +282,20 @@
           this.animating = false
           this.lastFrameStart = null
         }
-      }
+      },
+      generateMarks() {
+        for (let i = 1; i < this.stitches.length; i++) {
+          if (this.stitches[i].trim) {
+            this.trimMarks[i] = new SliderMark("✂")
+          } else if (this.stitches[i].stop) {
+            this.stopMarks[i] = new SliderMark("⏸")
+          } else if (this.stitches[i].jump) {
+            this.jumpMarks[i] = new SliderMark("↷")
+          } else if (this.stitches[i].color_change) {
+            this.colorChangeMarks[i] = new SliderMark("⇄")
+          }
+        }
+      }      
     },
     created: function() {
       // non-reactive properties
@@ -239,8 +308,13 @@
       this.svg = null
       this.simulation = null
       this.timer = null
+      this.trimMarks = {}
+      this.stopMarks = {}
+      this.colorChangeMarks = {}
+      this.jumpMarks = {}
+      
     },
-	  mounted: function() {
+    mounted: function() {
       this.svg = SVG(this.$refs.simulator).panZoom({zoomMin: 0.1})
       this.svg.node.style.flex_grow = 1
       this.svg.node.style.flex_shrink = 1
@@ -282,9 +356,9 @@
           })
         })
 
-        this.loading = false
-
         this.numStitches = this.stitches.length - 1
+        this.generateMarks()
+        this.loading = false
 
         // v-on:keydown doesn't seem to work, maybe an Electron issue?
         Mousetrap.bind("up", this.animationSpeedUp)
@@ -297,7 +371,7 @@
 
         this.start()
       })
-  	}
+    }
   }
 </script>
 
@@ -341,12 +415,24 @@
     font-size: 1rem;
   }
 
+  button {
+    color: rgb(0, 51, 153)
+  }
+
   .fa-spin-fast {
     animation: fa-spin 0.4s infinite linear;
   }
 
   .fa-button {
     margin: 3px;
+  }
+  
+  .fa-fast {
+    transform: skew(-15deg, -15deg) rotate(15deg) scale(1.25, 0.90);
+  }
+  
+  .fa-motion-lines {
+    transform: scale(1.0, 1.6) translate(0, -18%) skew(-15deg, -15deg) rotate(15deg);
   }
 
   .panel > * {
@@ -358,6 +444,7 @@
   fieldset {
     text-align: center;
     height: 50px;
+    border-color: rgb(0, 51, 153);
   }
   fieldset button {
     display: inline-block;
@@ -366,6 +453,12 @@
     font-family: sans-serif;
     font-size: 2rem;
     vertical-align: middle;
+  }
+  fieldset.show-commands {
+    text-align: left;
+  }
+  fieldset.show-commands span {
+    display: inline-block;
   }
   button.pressed {
     border-style: inset;
@@ -385,6 +478,10 @@
   .simulator {
     display: flex;
     flex-direction: column;
-    height: 98vh;
+    height: 95vh;
+  }
+  .current-command {
+    color: rgb(0, 51, 153);
+    font-weight: bold;
   }
 </style>

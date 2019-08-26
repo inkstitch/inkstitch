@@ -13,8 +13,11 @@ import { faSpinner,
          faPause,
          faStepBackward,
          faStepForward,
-         faStop } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+         faStop,
+         faHippo,
+         faHorse,
+         faAlignRight} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon, FontAwesomeLayers } from '@fortawesome/vue-fontawesome'
 
 // We have to add to the library every icon we use anywhere in the UI.
 // This avoids the need to bundle the entire font-awesome icon set with
@@ -27,9 +30,13 @@ library.add(faSpinner,
             faPause,
             faStepBackward,
             faStepForward,
-            faStop)
+            faStop,
+            faHippo,
+            faHorse,
+            faAlignRight)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
+Vue.component('font-awesome-layers', FontAwesomeLayers)
 
 Vue.http = Vue.prototype.$http = axios
 Vue.config.productionTip = false
