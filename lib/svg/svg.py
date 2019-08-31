@@ -26,6 +26,7 @@ def generate_unique_id(document_or_element, prefix="path"):
     return new_id
 
 
-def find_elements(document, xpath):
+def find_elements(node, xpath):
+    document = get_document(node)
     elements = document.xpath(xpath, namespaces=NSS)
     return elements

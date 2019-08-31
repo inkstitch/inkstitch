@@ -12,6 +12,7 @@ from ..elements import EmbroideryElement, nodes_to_elements
 from ..i18n import _
 from ..svg import generate_unique_id
 from ..svg.tags import SVG_GROUP_TAG, INKSCAPE_GROUPMODE, SVG_DEFS_TAG, EMBROIDERABLE_TAGS
+from ..elements.inkscape_objects import is_embroiderable_clone
 
 
 SVG_METADATA_TAG = inkex.addNS("metadata", "svg")
@@ -158,7 +159,7 @@ class InkstitchExtension(inkex.Effect):
         for child in node:
             nodes.extend(self.descendants(child, selected))
 
-        if selected and node.tag in EMBROIDERABLE_TAGS:
+        if selected and (node.tag in EMBROIDERABLE_TAGS or is_embroiderable_clone(node)):
             nodes.append(node)
 
         return nodes
