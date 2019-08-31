@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2019-08-13 20:36+0000\n"
-"PO-Revision-Date: 2019-08-18 20:39\n"
+"PO-Revision-Date: 2019-08-31 20:45\n"
 "Last-Translator: Lex Neva (lexelby)\n"
 "Language-Team: Finnish\n"
 "MIME-Version: 1.0\n"
@@ -20,38 +20,38 @@ msgstr ""
 #. name of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:2
 msgid "Ink/Stitch Small Font"
-msgstr ""
+msgstr "Ink/Stitch Small Font"
 
 #. description of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:4
 #, python-format
 msgid "A font suited for small characters.  The capital em is 0.2 inches wide at 100% scale.  Can be scaled up to 300%."
-msgstr ""
+msgstr "Pienikirjasin tyyppi."
 
 #. name of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:6
 msgid "TT Masters"
-msgstr ""
+msgstr "TT Masters"
 
 #. description of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:8
 msgid "A font suited for heavy typing :)"
-msgstr ""
+msgstr "Raskaampaan käyttöön"
 
 #. name of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:10
 msgid "TT Directors"
-msgstr ""
+msgstr "TT Directors"
 
 #. description of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:12
 msgid "A font suited for directing"
-msgstr ""
+msgstr "Ohjaus kirjasin tyyppi"
 
 #. name of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:14
 msgid "Ink/Stitch Medium Font"
-msgstr ""
+msgstr "Ink/Stitch Keskikokoinen kirjasin"
 
 #. description of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:16
@@ -66,7 +66,7 @@ msgstr ""
 
 #: lib/commands.py:20
 msgid "Fill stitch starting position"
-msgstr ""
+msgstr "Täyttötikki aloitus paikka"
 
 #. command attached to an object
 #: lib/commands.py:23
@@ -75,7 +75,7 @@ msgstr ""
 
 #: lib/commands.py:23
 msgid "Fill stitch ending position"
-msgstr ""
+msgstr "Täyttötikki lopetus paikka"
 
 #. command attached to an object
 #: lib/commands.py:26
@@ -84,7 +84,7 @@ msgstr ""
 
 #: lib/commands.py:26
 msgid "Auto-route satin stitch starting position"
-msgstr ""
+msgstr "Automaattisen satiinin reitityksen aloitus paikka"
 
 #. command attached to an object
 #: lib/commands.py:29
@@ -93,25 +93,25 @@ msgstr ""
 
 #: lib/commands.py:29
 msgid "Auto-route satin stitch ending position"
-msgstr ""
+msgstr "Automaattisen satiinin reitityksen lopetus paikka"
 
 #. command attached to an object
 #: lib/commands.py:32
 msgid "stop"
-msgstr ""
+msgstr "pysäytä"
 
 #: lib/commands.py:32
 msgid "Stop (pause machine) after sewing this object"
-msgstr ""
+msgstr "Pysäytä objektin jälkeen"
 
 #. command attached to an object
 #: lib/commands.py:35
 msgid "trim"
-msgstr ""
+msgstr "katkaise"
 
 #: lib/commands.py:35
 msgid "Trim thread after sewing this object"
-msgstr ""
+msgstr "Katkaise objektin jälkeen"
 
 #. command attached to an object
 #: lib/commands.py:38
@@ -120,7 +120,7 @@ msgstr ""
 
 #: lib/commands.py:38
 msgid "Ignore this object (do not stitch)"
-msgstr ""
+msgstr "Ohita tämä objekti (ei tikata)"
 
 #. command attached to an object
 #: lib/commands.py:41
@@ -138,16 +138,16 @@ msgstr ""
 
 #: lib/commands.py:45
 msgid "Ignore layer (do not stitch any objects in this layer)"
-msgstr ""
+msgstr "Ohita taso (ei tikata mitään tältä tasolta)"
 
 #. command that affects entire document
 #: lib/commands.py:48
 msgid "origin"
-msgstr ""
+msgstr "origo"
 
 #: lib/commands.py:48
 msgid "Origin for exported embroidery files"
-msgstr ""
+msgstr "Viedyn brodeeraus tiedoston origo"
 
 #. command that affects entire document
 #: lib/commands.py:51
@@ -175,29 +175,29 @@ msgstr ""
 
 #: lib/commands.py:281 lib/commands.py:385 lib/extensions/layer_commands.py:29
 msgid "Ink/Stitch Command"
-msgstr ""
+msgstr "Ink/Stitch komento"
 
 #. : the name of the line that connects a command to the object it applies to
 #: lib/commands.py:306
 msgid "connector"
-msgstr ""
+msgstr "yhdistäjä"
 
 #. : the name of a command symbol (example: scissors icon for trim command)
 #: lib/commands.py:323
 msgid "command marker"
-msgstr ""
+msgstr "komento merkki"
 
 #: lib/elements/auto_fill.py:17
 msgid "Small Fill"
-msgstr ""
+msgstr "Pieni täyttö"
 
 #: lib/elements/auto_fill.py:18
 msgid "This fill object is so small that it would probably look better as running stitch or satin column. For very small shapes, fill stitch is not possible, and Ink/Stitch will use running stitch around the outline instead."
-msgstr ""
+msgstr "Objektin täyttä on niin pieni että se voisi toimia paremmin satiinina tai juoksevana tikkinä. Täytetikki ei ole mahdollista ja Ink/Stitch neuloo vain reunan."
 
 #: lib/elements/auto_fill.py:24
 msgid "AutoFill"
-msgstr ""
+msgstr "Automaatti täyttö"
 
 #: lib/elements/auto_fill.py:27
 msgid "Automatically routed fill stitching"
@@ -205,7 +205,7 @@ msgstr ""
 
 #: lib/elements/auto_fill.py:47
 msgid "Running stitch length (traversal between sections)"
-msgstr ""
+msgstr "Juoksevan tikin pituus"
 
 #: lib/elements/auto_fill.py:48
 msgid "Length of stitches around the outline of the fill region used when moving from section to section."
@@ -213,34 +213,34 @@ msgstr ""
 
 #: lib/elements/auto_fill.py:56
 msgid "Underlay"
-msgstr ""
+msgstr "Alatäyttö"
 
 #: lib/elements/auto_fill.py:56 lib/elements/auto_fill.py:65
 #: lib/elements/auto_fill.py:81 lib/elements/auto_fill.py:92
 #: lib/elements/auto_fill.py:102 lib/elements/auto_fill.py:114
 #: lib/elements/auto_fill.py:148
 msgid "AutoFill Underlay"
-msgstr ""
+msgstr "Automaattinen alatäyttö"
 
 #: lib/elements/auto_fill.py:62
 msgid "Fill angle"
-msgstr ""
+msgstr "Täytön suuntakulma"
 
 #: lib/elements/auto_fill.py:63
 msgid "default: fill angle + 90 deg"
-msgstr ""
+msgstr "vakio: täyttökulma + 90 astetta"
 
 #: lib/elements/auto_fill.py:78
 msgid "Row spacing"
-msgstr ""
+msgstr "Rivien välit"
 
 #: lib/elements/auto_fill.py:79
 msgid "default: 3x fill row spacing"
-msgstr ""
+msgstr "vakio: 3x rivien välit"
 
 #: lib/elements/auto_fill.py:89
 msgid "Max stitch length"
-msgstr ""
+msgstr "Pisin tikin pituus"
 
 #: lib/elements/auto_fill.py:90
 msgid "default: equal to fill max stitch length"
@@ -303,11 +303,11 @@ msgstr ""
 #. intersect both rails."
 #: lib/elements/element.py:288
 msgid "error:"
-msgstr ""
+msgstr "virhe:"
 
 #: lib/elements/fill.py:17
 msgid "Unconnected"
-msgstr ""
+msgstr "Ei yhteyttä"
 
 #: lib/elements/fill.py:18
 msgid "Fill: This object is made up of unconnected shapes.  This is not allowed because Ink/Stitch doesn't know what order to stitch them in.  Please break this object up into separate shapes."
@@ -323,11 +323,11 @@ msgstr ""
 
 #: lib/elements/fill.py:28
 msgid "Border crosses itself"
-msgstr ""
+msgstr "Reuna ylittää itsensä"
 
 #: lib/elements/fill.py:29
 msgid "Fill: Shape is not valid.  This can happen if the border crosses over itself."
-msgstr ""
+msgstr "Täyttö; muoto ei ole sallittu. Tämä voi tapahtua jos reuna ylittää itsensä."
 
 #: lib/elements/fill.py:31
 msgid "* Path > Union (Ctrl++)"
@@ -335,19 +335,19 @@ msgstr ""
 
 #: lib/elements/fill.py:38
 msgid "Fill"
-msgstr ""
+msgstr "Täyttö"
 
 #: lib/elements/fill.py:45
 msgid "Manually routed fill stitching"
-msgstr ""
+msgstr "Manuaalisesti reititetty täyttö"
 
 #: lib/elements/fill.py:46
 msgid "AutoFill is the default method for generating fill stitching."
-msgstr ""
+msgstr "Automaattinentäyttö on vakio metodi generoitaessa täyttöä."
 
 #: lib/elements/fill.py:55
 msgid "Angle of lines of stitches"
-msgstr ""
+msgstr "Tikkien kulma"
 
 #: lib/elements/fill.py:56
 msgid "The angle increases in a counter-clockwise direction.  0 is horizontal.  Negative angles are allowed."
@@ -355,7 +355,7 @@ msgstr ""
 
 #: lib/elements/fill.py:83
 msgid "Flip fill (start right-to-left)"
-msgstr ""
+msgstr "Käännä täytön suunta (aloita oikealta vasemmalle)"
 
 #: lib/elements/fill.py:84
 msgid "The flip option can help you with routing your stitch path.  When you enable flip, stitching goes from right-to-left instead of left-to-right."
@@ -363,15 +363,15 @@ msgstr ""
 
 #: lib/elements/fill.py:93
 msgid "Spacing between rows"
-msgstr ""
+msgstr "Rivien väli"
 
 #: lib/elements/fill.py:94
 msgid "Distance between rows of stitches."
-msgstr ""
+msgstr "Tikkirivien välinen etäisyys."
 
 #: lib/elements/fill.py:107
 msgid "Maximum fill stitch length"
-msgstr ""
+msgstr "Tikin maksimi pituus"
 
 #: lib/elements/fill.py:108
 msgid "The length of each stitch in a row.  Shorter stitch may be used at the start or end of a row."
@@ -395,7 +395,7 @@ msgstr ""
 
 #: lib/elements/polyline.py:16 lib/elements/satin_column.py:19
 msgid "* Select this object."
-msgstr ""
+msgstr "* valitse tämä objekti."
 
 #: lib/elements/polyline.py:17
 msgid "* Do Path > Object to Path."
@@ -407,11 +407,11 @@ msgstr ""
 
 #: lib/elements/satin_column.py:16
 msgid "Satin column has fill"
-msgstr ""
+msgstr "Satiinissa on täyttö"
 
 #: lib/elements/satin_column.py:17
 msgid "Satin column: Object has a fill (but should not)"
-msgstr ""
+msgstr "Satiini: objektissa on täyttö (mutta ei pitäisi olla)"
 
 #: lib/elements/satin_column.py:20
 msgid "* Open the Fill and Stroke panel"
@@ -419,11 +419,11 @@ msgstr ""
 
 #: lib/elements/satin_column.py:21
 msgid "* Open the Fill tab"
-msgstr ""
+msgstr "* avaa täyttö välilehti"
 
 #: lib/elements/satin_column.py:22
 msgid "* Disable the Fill"
-msgstr ""
+msgstr "* Täyttö pois käytöstä"
 
 #: lib/elements/satin_column.py:23
 msgid "* Alternative: open Params and switch this path to Stroke to disable Satin Column mode"
@@ -511,7 +511,7 @@ msgstr ""
 
 #: lib/elements/satin_column.py:95
 msgid "Pull compensation"
-msgstr ""
+msgstr "Veto kompensaatio"
 
 #: lib/elements/satin_column.py:96
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape.  This setting expands each pair of needle penetrations outward from the center of the satin column."
@@ -528,7 +528,7 @@ msgstr ""
 
 #: lib/elements/satin_column.py:115 lib/elements/satin_column.py:139
 msgid "Stitch length"
-msgstr ""
+msgstr "Tikin pituus"
 
 #: lib/elements/satin_column.py:121
 msgid "Contour underlay inset amount"
@@ -597,7 +597,7 @@ msgstr ""
 
 #: lib/elements/stroke.py:68
 msgid "Repeats"
-msgstr ""
+msgstr "Toistot"
 
 #: lib/elements/stroke.py:69
 msgid "Defines how many times to run down and back along the path."
@@ -623,7 +623,7 @@ msgstr ""
 #. auto-route satin columns extension
 #: lib/extensions/auto_satin.py:43
 msgid "Please select one or more satin columns."
-msgstr ""
+msgstr "Valitse yksi tai useampi satiini."
 
 #. This was previously: "No embroiderable paths selected."
 #: lib/extensions/base.py:127
@@ -690,7 +690,7 @@ msgstr ""
 
 #: lib/extensions/install.py:37
 msgid "Install"
-msgstr ""
+msgstr "Asenna"
 
 #: lib/extensions/install.py:40 lib/extensions/lettering.py:59
 #: lib/extensions/params.py:330 print/templates/custom-page.html:23
@@ -698,15 +698,15 @@ msgstr ""
 #: print/templates/ui.html:92 print/templates/ui.html:96
 #: print/templates/ui.html:102
 msgid "Cancel"
-msgstr ""
+msgstr "Peru"
 
 #: lib/extensions/install.py:54
 msgid "Choose Inkscape directory"
-msgstr ""
+msgstr "Valitse Inkscape hakemisto"
 
 #: lib/extensions/install.py:71
 msgid "Inkscape add-on installation failed"
-msgstr ""
+msgstr "Inkscape lisäosan asennus epäonnistui"
 
 #: lib/extensions/install.py:72
 msgid "Installation Failed"
@@ -742,19 +742,19 @@ msgstr ""
 
 #: lib/extensions/lettering.py:42
 msgid "Add trims"
-msgstr ""
+msgstr "Lisää trimmaus"
 
 #: lib/extensions/lettering.py:46
 msgid "Text"
-msgstr ""
+msgstr "Teksti"
 
 #: lib/extensions/lettering.py:63 lib/extensions/params.py:337
 msgid "Apply and Quit"
-msgstr ""
+msgstr "Hyväksy ja lopeta"
 
 #: lib/extensions/lettering.py:134
 msgid "Unable to find any fonts!  Please try reinstalling Ink/Stitch."
-msgstr ""
+msgstr "Yhtään fonttia ei löydy! Asenna Ink/Stitch uudelleen."
 
 #. The user has chosen to scale the text by some percentage
 #. (50%, 200%, etc).  If you need to use the percentage symbol,
@@ -849,11 +849,11 @@ msgstr ""
 
 #: lib/extensions/troubleshoot.py:109
 msgid "Errors"
-msgstr ""
+msgstr "Virhe"
 
 #: lib/extensions/troubleshoot.py:118
 msgid "Warnings"
-msgstr ""
+msgstr "Varoitukset"
 
 #: lib/extensions/troubleshoot.py:159
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
@@ -869,19 +869,19 @@ msgstr ""
 
 #: lib/gui/presets.py:53
 msgid "Load"
-msgstr ""
+msgstr "Lataa"
 
 #: lib/gui/presets.py:56
 msgid "Add"
-msgstr ""
+msgstr "Lisää"
 
 #: lib/gui/presets.py:59
 msgid "Overwrite"
-msgstr ""
+msgstr "Ylikirjoita"
 
 #: lib/gui/presets.py:62
 msgid "Delete"
-msgstr ""
+msgstr "Poista"
 
 #: lib/gui/presets.py:121
 msgid "Please enter or select a preset name first."
@@ -904,51 +904,51 @@ msgstr ""
 #. command label at bottom of simulator window
 #: lib/gui/simulator.py:20
 msgid "STITCH"
-msgstr ""
+msgstr "Tikkaa"
 
 #: lib/gui/simulator.py:20
 msgid "JUMP"
-msgstr ""
+msgstr "Hyppää"
 
 #: lib/gui/simulator.py:20
 msgid "TRIM"
-msgstr ""
+msgstr "Trimmaa"
 
 #: lib/gui/simulator.py:20
 msgid "STOP"
-msgstr ""
+msgstr "Pysäytä"
 
 #: lib/gui/simulator.py:20
 msgid "COLOR CHANGE"
-msgstr ""
+msgstr "Vaihda väriä"
 
 #: lib/gui/simulator.py:52
 msgid "Slow down (arrow down)"
-msgstr ""
+msgstr "Hidasta (nuoli alas)"
 
 #: lib/gui/simulator.py:55
 msgid "Speed up (arrow up)"
-msgstr ""
+msgstr "Nopeuta (nuoli ylös)"
 
 #: lib/gui/simulator.py:58
 msgid "Go on step backward (-)"
-msgstr ""
+msgstr "Mene askel taakse (-)"
 
 #: lib/gui/simulator.py:61
 msgid "Go on step forward (+)"
-msgstr ""
+msgstr "Mene askel eteen (+)"
 
 #: lib/gui/simulator.py:64
 msgid "Switch direction (arrow left | arrow right)"
-msgstr ""
+msgstr "Vaihda suuntaa (nuoli vasemmalle | nuoli oikealle)"
 
 #: lib/gui/simulator.py:65 lib/gui/simulator.py:241 lib/gui/simulator.py:248
 msgid "Pause"
-msgstr ""
+msgstr "Pysäytä"
 
 #: lib/gui/simulator.py:67
 msgid "Pause (P)"
-msgstr ""
+msgstr "Pysäytä (P)"
 
 #: lib/gui/simulator.py:68
 msgid "Restart"
@@ -1071,77 +1071,77 @@ msgstr ""
 #: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
 #: print/templates/operator_detailedview.html:68
 msgid "yes"
-msgstr ""
+msgstr "kyllä"
 
 #: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
 #: print/templates/operator_detailedview.html:68
 msgid "no"
-msgstr ""
+msgstr "ei"
 
 #: print/templates/color_swatch.html:40
 #: print/templates/operator_detailedview.html:57
 #: print/templates/print_detail.html:6
 msgid "Enter thread name..."
-msgstr ""
+msgstr "Anna langan nimi..."
 
 #: print/templates/custom-page.html:22 print/templates/ui.html:91
 msgid "Enter URL"
-msgstr ""
+msgstr "WWW osoite"
 
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
 #: print/templates/custom-page.html:33 print/templates/ui.html:92
 #: print/templates/ui.html:96 print/templates/ui.html:102
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: print/templates/custom-page.html:26 print/templates/ui.html:95
 msgid "Enter E-Mail"
-msgstr ""
+msgstr "Sähköposti"
 
 #: print/templates/custom-page.html:29 print/templates/custom-page.html:36
 msgid "Custom Information Sheet"
-msgstr ""
+msgstr "Lisäinformaatio sivu"
 
 #: print/templates/custom-page.html:31 print/templates/ui.html:100
 msgid "This will reset your custom text to the default."
-msgstr ""
+msgstr "Tämä nollaa erikoistekstin vakioksi."
 
 #: print/templates/custom-page.html:32 print/templates/ui.html:101
 msgid "All changes will be lost."
-msgstr ""
+msgstr "Kaikki muutokset menetetään."
 
 #: print/templates/footer.html:2
 msgid "Page"
-msgstr ""
+msgstr "Sivu"
 
 #: print/templates/footer.html:3 print/templates/ui.html:98
 #: print/templates/ui.html:105
 msgid "Proudly generated with"
-msgstr ""
+msgstr "Ylpeästi generoitu"
 
 #: print/templates/headline.html:5
 msgid "Click to choose another logo"
-msgstr ""
+msgstr "Klikkaa valitaksesi toisen logon"
 
 #: print/templates/headline.html:10
 msgid "Enter job title..."
-msgstr ""
+msgstr "Työn nimi..."
 
 #: print/templates/headline.html:11
 msgid "CLIENT"
-msgstr ""
+msgstr "Asiakas"
 
 #: print/templates/headline.html:11
 msgid "Enter client name..."
-msgstr ""
+msgstr "Asiakkaan nimi..."
 
 #: print/templates/headline.html:12
 msgid "PURCHASE ORDER #:"
-msgstr ""
+msgstr "Osto järjestys:"
 
 #: print/templates/headline.html:12
 msgid "Enter purchase order number..."
-msgstr ""
+msgstr "Syötä ostojärjestys numero..."
 
 #: print/templates/headline.html:15
 #, python-format
@@ -1150,21 +1150,21 @@ msgstr ""
 
 #: print/templates/operator_detailedview.html:10
 msgid "Thread Consumption"
-msgstr ""
+msgstr "Langan tarve"
 
 #: print/templates/operator_detailedview.html:11
 msgid "Stops and Trims"
-msgstr ""
+msgstr "Pysäytyksiä ja leikkauksia"
 
 #: print/templates/operator_detailedview.html:12
 msgid "Notes"
-msgstr ""
+msgstr "Muistiinpanoja"
 
 #: print/templates/operator_detailedview.html:24
 #: print/templates/operator_overview.html:6
 #: print/templates/print_overview.html:6
 msgid "Unique Colors"
-msgstr ""
+msgstr "Uniikkeja värejä"
 
 #: print/templates/operator_detailedview.html:25
 #: print/templates/operator_overview.html:7
@@ -1182,46 +1182,46 @@ msgstr ""
 #: print/templates/operator_overview.html:16
 #: print/templates/print_overview.html:16
 msgid "Total thread used"
-msgstr ""
+msgstr "Lankoja käytetty yhteensä"
 
 #: print/templates/operator_detailedview.html:30
 #: print/templates/operator_overview.html:15
 #: print/templates/print_overview.html:15
 msgid "Total stitch count"
-msgstr ""
+msgstr "Kokonais tikki määrä"
 
 #: print/templates/operator_detailedview.html:34
 #: print/templates/operator_overview.html:8
 #: print/templates/print_overview.html:8
 msgid "Total stops"
-msgstr ""
+msgstr "Pysäytyksiä yhteensä"
 
 #: print/templates/operator_detailedview.html:35
 #: print/templates/operator_overview.html:9
 #: print/templates/print_overview.html:9
 msgid "Total trims"
-msgstr ""
+msgstr "Leikkauksia yhteensä"
 
 #: print/templates/operator_detailedview.html:62
 msgid "thread used"
-msgstr ""
+msgstr "käytettävä lanka"
 
 #: print/templates/operator_detailedview.html:64
 msgid "estimated time"
-msgstr ""
+msgstr "arvioitu aika"
 
 #: print/templates/operator_detailedview.html:67
 msgid "trims"
-msgstr ""
+msgstr "leikkaukset"
 
 #: print/templates/operator_detailedview.html:72
 msgid "Enter operator notes..."
-msgstr ""
+msgstr "Lisää operaattorin muistiinpanoja..."
 
 #: print/templates/operator_overview.html:21
 #: print/templates/print_overview.html:21
 msgid "Job estimated time"
-msgstr ""
+msgstr "Arvioitu työn kesto"
 
 #: print/templates/operator_overview.html:28
 #: print/templates/print_detail.html:18 print/templates/print_overview.html:28
@@ -1230,67 +1230,67 @@ msgstr ""
 
 #: print/templates/print_detail.html:6
 msgid "COLOR"
-msgstr ""
+msgstr "VÄRI"
 
 #: print/templates/print_detail.html:11
 msgid "Estimated time"
-msgstr ""
+msgstr "Arvioitu aika"
 
 #: print/templates/print_overview.html:42
 msgid "Client Signature"
-msgstr ""
+msgstr "Asiakkaan allekirjoitus"
 
 #: print/templates/ui.html:2
 msgid "Ink/Stitch Print Preview"
-msgstr ""
+msgstr "Ink/Stitch tulostus esikatselu"
 
 #: print/templates/ui.html:4
 msgid "Print"
-msgstr ""
+msgstr "Tulosta"
 
 #: print/templates/ui.html:5
 msgid "Save PDF"
-msgstr ""
+msgstr "Tallenna PDF"
 
 #: print/templates/ui.html:6 print/templates/ui.html:16
 msgid "Settings"
-msgstr ""
+msgstr "Asetukset"
 
 #: print/templates/ui.html:7
 msgid "Close"
-msgstr ""
+msgstr "Sulje"
 
 #: print/templates/ui.html:10
 msgid "⚠ lost connection to Ink/Stitch"
-msgstr ""
+msgstr "⚠ Yhteys ink/stichiin menetettiin"
 
 #: print/templates/ui.html:19 print/templates/ui.html:29
 msgid "Page Setup"
-msgstr ""
+msgstr "Sivun asetukset"
 
 #: print/templates/ui.html:20
 msgid "Branding"
-msgstr ""
+msgstr "Brändäys"
 
 #: print/templates/ui.html:21 print/templates/ui.html:112
 msgid "Estimated Time"
-msgstr ""
+msgstr "Arvioitu aika"
 
 #: print/templates/ui.html:22 print/templates/ui.html:146
 msgid "Design"
-msgstr ""
+msgstr "Malli"
 
 #: print/templates/ui.html:31
 msgid "Printing Size"
-msgstr ""
+msgstr "Tulostus koko"
 
 #: print/templates/ui.html:39
 msgid "Print Layouts"
-msgstr ""
+msgstr "Tulostuksen ulkoasu"
 
 #: print/templates/ui.html:42 print/templates/ui.html:136
 msgid "Client Overview"
-msgstr ""
+msgstr "Esikatselu asiakkaalle"
 
 #: print/templates/ui.html:46 print/templates/ui.html:137
 msgid "Client Detailed View"
@@ -1379,7 +1379,7 @@ msgstr ""
 
 #: print/templates/ui.html:150
 msgid "None"
-msgstr ""
+msgstr "-"
 
 #: print/templates/ui.html:166
 msgid "Changing the thread palette will cause thread names and catalog numbers to be recalculated based on the new palette.  Any changes you have made to color or thread names will be lost.  Are you sure?"
@@ -1387,23 +1387,23 @@ msgstr ""
 
 #: print/templates/ui.html:169
 msgid "Yes"
-msgstr ""
+msgstr "Kyllä"
 
 #: print/templates/ui.html:170
 msgid "No"
-msgstr ""
+msgstr "Ei"
 
 #: print/templates/ui_svg_action_buttons.html:1
 msgid "Scale"
-msgstr ""
+msgstr "Skaalaa"
 
 #: print/templates/ui_svg_action_buttons.html:3
 msgid "Fit"
-msgstr ""
+msgstr "Sovita"
 
 #: print/templates/ui_svg_action_buttons.html:5
 msgid "Apply to all"
-msgstr ""
+msgstr "Lisää kaikkiin"
 
 #: print/templates/ui_svg_action_buttons.html:9
 #: print/templates/ui_svg_action_buttons.html:12
@@ -1418,18 +1418,18 @@ msgstr ""
 #: pyembroidery-format-descriptions.py:56
 #: pyembroidery-format-descriptions.py:58
 msgid "Brother Embroidery Format"
-msgstr ""
+msgstr "Brother Brodeeraus tiedostomuoto"
 
 #. description for pyembroidery file format: exp
 #: pyembroidery-format-descriptions.py:6
 msgid "Melco Embroidery Format"
-msgstr ""
+msgstr "Melco brodeeraus tiedostomuoto"
 
 #. description for pyembroidery file format: dst
 #. description for pyembroidery file format: tbf
 #: pyembroidery-format-descriptions.py:8 pyembroidery-format-descriptions.py:48
 msgid "Tajima Embroidery Format"
-msgstr ""
+msgstr "Tajima brodeeraus tiedostomuoto"
 
 #. description for pyembroidery file format: jef
 #. description for pyembroidery file format: sew
@@ -1438,7 +1438,7 @@ msgstr ""
 #: pyembroidery-format-descriptions.py:20
 #: pyembroidery-format-descriptions.py:74
 msgid "Janome Embroidery Format"
-msgstr ""
+msgstr "Janome brodeeraus tiedostomuoto"
 
 #. description for pyembroidery file format: vp3
 #. description for pyembroidery file format: ksm
@@ -1455,12 +1455,12 @@ msgstr ""
 #: pyembroidery-format-descriptions.py:70
 #: pyembroidery-format-descriptions.py:72
 msgid "Pfaff Embroidery Format"
-msgstr ""
+msgstr "Pfaff brodeeraus tiedostomuoto"
 
 #. description for pyembroidery file format: svg
 #: pyembroidery-format-descriptions.py:14
 msgid "Scalable Vector Graphics"
-msgstr ""
+msgstr "Skaalattava vektori grafiikka"
 
 #. description for pyembroidery file format: csv
 #: pyembroidery-format-descriptions.py:16
@@ -1470,109 +1470,109 @@ msgstr ""
 #. description for pyembroidery file format: xxx
 #: pyembroidery-format-descriptions.py:18
 msgid "Singer Embroidery Format"
-msgstr ""
+msgstr "Singer Brodeeraus tiedostomuoto"
 
 #. description for pyembroidery file format: u01
 #: pyembroidery-format-descriptions.py:22
 msgid "Barudan Embroidery Format"
-msgstr ""
+msgstr "Barudan brodeeraus tiedostomuoto"
 
 #. description for pyembroidery file format: shv
 #: pyembroidery-format-descriptions.py:24
 msgid "Husqvarna Viking Embroidery Format"
-msgstr ""
+msgstr "Husqvarna Viking brodeeraus tiedostomuoto"
 
 #. description for pyembroidery file format: 10o
 #. description for pyembroidery file format: 100
 #: pyembroidery-format-descriptions.py:26
 #: pyembroidery-format-descriptions.py:28
 msgid "Toyota Embroidery Format"
-msgstr ""
+msgstr "Toyota brodeeraus tiedostomuoto"
 
 #. description for pyembroidery file format: bro
 #: pyembroidery-format-descriptions.py:30
 msgid "Bits & Volts Embroidery Format"
-msgstr ""
+msgstr "Bits & Volts brodeeraus tiedostomuoto"
 
 #. description for pyembroidery file format: dat
 #: pyembroidery-format-descriptions.py:32
 msgid "Sunstar or Barudan Embroidery Format"
-msgstr ""
+msgstr "Sunstar tai Barudan brodeeraus tiedostomuoto"
 
 #. description for pyembroidery file format: dsb
 #: pyembroidery-format-descriptions.py:34
 msgid "Tajima(Barudan) Embroidery Format"
-msgstr ""
+msgstr "Tajima(Barudan) brodeeraus tiedostomuoto"
 
 #. description for pyembroidery file format: dsz
 #: pyembroidery-format-descriptions.py:36
 msgid "ZSK USA Embroidery Format"
-msgstr ""
+msgstr "ZSK USA brodeeraus tiedostomuoto"
 
 #. description for pyembroidery file format: emd
 #: pyembroidery-format-descriptions.py:38
 msgid "Elna Embroidery Format"
-msgstr ""
+msgstr "Elna brodeeraus tiedostomuoto"
 
 #. description for pyembroidery file format: exy
 #: pyembroidery-format-descriptions.py:40
 msgid "Eltac Embroidery Format"
-msgstr ""
+msgstr "Eltac brodeeraus tiedostomuoto"
 
 #. description for pyembroidery file format: fxy
 #: pyembroidery-format-descriptions.py:42
 msgid "Fortron Embroidery Format"
-msgstr ""
+msgstr "Fortron brodeeraus tiedostomuoto"
 
 #. description for pyembroidery file format: gt
 #: pyembroidery-format-descriptions.py:44
 msgid "Gold Thread Embroidery Format"
-msgstr ""
+msgstr "Gold Thread brodeeraus tiedostomuoto"
 
 #. description for pyembroidery file format: inb
 #: pyembroidery-format-descriptions.py:46
 msgid "Inbro Embroidery Format"
-msgstr ""
+msgstr "Inbro brodeeraus tiedostomuoto"
 
 #. description for pyembroidery file format: tap
 #: pyembroidery-format-descriptions.py:52
 msgid "Happy Embroidery Format"
-msgstr ""
+msgstr "Happy brodeeraus tiedostomuoto"
 
 #. description for pyembroidery file format: stx
 #: pyembroidery-format-descriptions.py:54
 msgid "Data Stitch Embroidery Format"
-msgstr ""
+msgstr "Data Stitch Brodeeraus tiedostomuoto"
 
 #. description for pyembroidery file format: new
 #: pyembroidery-format-descriptions.py:60
 msgid "Ameco Embroidery Format"
-msgstr ""
+msgstr "Ameco brodeeraus tiedostomuoto"
 
 #. description for pyembroidery file format: mit
 #: pyembroidery-format-descriptions.py:64
 msgid "Mitsubishi Embroidery Format"
-msgstr ""
+msgstr "Mitsubishi brodeeraus tiedostomuoto"
 
 #. description for pyembroidery file format: stc
 #: pyembroidery-format-descriptions.py:76
 msgid "Gunold Embroidery Format"
-msgstr ""
+msgstr "Gunold brodeeraus tiedostomuoto"
 
 #. description for pyembroidery file format: zxy
 #: pyembroidery-format-descriptions.py:78
 msgid "ZSK TC Embroidery Format"
-msgstr ""
+msgstr "ZSK TC brodeeraus tiedostomuoto"
 
 #. description for pyembroidery file format: pmv
 #: pyembroidery-format-descriptions.py:80
 msgid "Brother Stitch Format"
-msgstr ""
+msgstr "Brother brodeeraus tiedostomuoto"
 
 #. description for pyembroidery file format: txt
 #: pyembroidery-format-descriptions.py:82
 msgid "G-code Format"
-msgstr ""
+msgstr "G-code brodeeraus tiedostomuoto"
 
 #: templates/auto_satin.inx:3
 msgid "Auto-Route Satin Columns"
@@ -1580,28 +1580,28 @@ msgstr ""
 
 #: templates/auto_satin.inx:7
 msgid "Trim jump stitches"
-msgstr ""
+msgstr "Trimmaa hyppytikki"
 
 #: templates/auto_satin.inx:8
 msgid "Preserve order of satin columns"
-msgstr ""
+msgstr "Säilytä satiinien järjestys"
 
 #: templates/auto_satin.inx:14 templates/convert_to_satin.inx:12
 #: templates/cut_satin.inx:12 templates/flip.inx:12
 msgid "Satin Tools"
-msgstr ""
+msgstr "Satiini työkalut"
 
 #: templates/convert_to_satin.inx:3
 msgid "Convert Line to Satin"
-msgstr ""
+msgstr "Muunna viiva satiiniksi"
 
 #: templates/cut_satin.inx:3
 msgid "Cut Satin Column"
-msgstr ""
+msgstr "Leikkaa satiini"
 
 #: templates/embroider.inx:3
 msgid "Embroider"
-msgstr ""
+msgstr "Brodeeraus"
 
 #: templates/embroider.inx:7
 msgid "Collapse length (mm)"
@@ -1609,11 +1609,11 @@ msgstr ""
 
 #: templates/embroider.inx:7
 msgid "Jump stitches smaller than this will be treated as normal stitches."
-msgstr ""
+msgstr "Tätä yhemmän hyppytikit tulkitaan normaaliksi tikiksi."
 
 #: templates/embroider.inx:8
 msgid "Hide other layers"
-msgstr ""
+msgstr "Piilota muut kerrokset"
 
 #: templates/embroider.inx:8
 msgid "Hide all other top-level layers when the embroidery layer is generated, in order to make stitching discernible."
@@ -1621,79 +1621,79 @@ msgstr ""
 
 #: templates/embroider.inx:9
 msgid "Output file format"
-msgstr ""
+msgstr "Tallennus muoto"
 
 #: templates/embroider.inx:14
 msgid "DEBUG"
-msgstr ""
+msgstr "DEBUG"
 
 #: templates/embroider.inx:17
 msgid "Directory"
-msgstr ""
+msgstr "Hakemisto"
 
 #: templates/embroider.inx:17
 msgid "Leave empty to save the output in Inkscape's extension directory."
-msgstr ""
+msgstr "Jätä tyhjäksi tallentaaksesi inkscapen lisäosien hakemistoon."
 
 #: templates/flip.inx:3
 msgid "Flip Satin Column Rails"
-msgstr ""
+msgstr "Käännä satiinin suunta"
 
 #: templates/global_commands.inx:3
 msgid "Add Commands"
-msgstr ""
+msgstr "Lisää käsky"
 
 #: templates/global_commands.inx:7
 msgid "These commands affect the entire embroidery design."
-msgstr ""
+msgstr "Nämä käskyt vaikuttavat koko brodeeraus malliin."
 
 #. Inkscape submenu under Extensions -> Ink/Stitch
 #: templates/global_commands.inx:17 templates/layer_commands.inx:16
 #: templates/object_commands.inx:15
 msgid "Commands"
-msgstr ""
+msgstr "Käskyt"
 
 #: templates/input.inx:11
 #, python-format
 msgid "convert %(file_extension)s file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "muunna %(file_extension)s tiedosto Ink/Stitch manuaali tikiksi"
 
 #: templates/install.inx:3
 msgid "Install add-ons for Inkscape"
-msgstr ""
+msgstr "Asenna lisäosa inkscapeen"
 
 #: templates/layer_commands.inx:3
 msgid "Add Layer Commands"
-msgstr ""
+msgstr "Lisää taso komento"
 
 #: templates/layer_commands.inx:7
 msgid "Commands will be added to the currently-selected layer."
-msgstr ""
+msgstr "Käsky lisätään valittuun tasoon."
 
 #: templates/lettering.inx:3
 msgid "Lettering"
-msgstr ""
+msgstr "Kirjaimet"
 
 #: templates/object_commands.inx:3
 msgid "Attach Commands to Selected Objects"
-msgstr ""
+msgstr "Liitä komento valittuihin objekteihin"
 
 #: templates/output.inx:11
 #, python-format
 msgid "Save design in %(file_extension)s format using Ink/Stitch"
-msgstr ""
+msgstr "Tallenna malli %(file_extension)s muodossa käyttäen Ink/Stitch"
 
 #: templates/output_params_txt.xml:2
 msgid "laser mode"
-msgstr ""
+msgstr "laser moodi"
 
 #: templates/output_params_txt.xml:2
 msgid "Laser mode (generate g-code for grbl laser mode)"
-msgstr ""
+msgstr "Laser moodi (generoi G-koodi Grbl laaserille)"
 
 #: templates/output_params_txt.xml:3
 msgid "dynamic laser power"
-msgstr ""
+msgstr "dynaaminen laaserin teho"
 
 #: templates/output_params_txt.xml:3
 msgid "Use Grbl's M4 dynamic laser power mode.  Ensures consistent laser cutting power regardless of motor speed.  Only for PWM-capable lasers."
@@ -1733,7 +1733,7 @@ msgstr ""
 
 #: templates/output_params_txt.xml:8
 msgid "spindle speed"
-msgstr ""
+msgstr "karan nopeus"
 
 #: templates/output_params_txt.xml:8
 msgid "spindle speed (laser power for laser mode, set to -1 to omit)"
@@ -1741,19 +1741,19 @@ msgstr ""
 
 #: templates/output_params_txt.xml:9
 msgid "min spindle speed"
-msgstr ""
+msgstr "pienin karan nopeus"
 
 #: templates/output_params_txt.xml:9
 msgid "minimum spindle speed value (grbl $31 setting)"
-msgstr ""
+msgstr "pienin karan nopeus arvo (grbl $31)"
 
 #: templates/output_params_txt.xml:10
 msgid "max spindle speed"
-msgstr ""
+msgstr "maksimi karan nopeus"
 
 #: templates/output_params_txt.xml:10
 msgid "minimum spindle speed value (grbl $30 setting)"
-msgstr ""
+msgstr "pienin karan nopeus (grbl $30 asetus)"
 
 #: templates/output_params_txt.xml:11
 msgid "feed rate (in mm/min, set to -1 to omit)"
@@ -1761,25 +1761,25 @@ msgstr ""
 
 #: templates/params.inx:3
 msgid "Params"
-msgstr ""
+msgstr "Parametrit"
 
 #: templates/print.inx:3
 msgid "Print / Realistic Preview"
-msgstr ""
+msgstr "Tulosta/realistisempi esikatselu"
 
 #: templates/simulate.inx:3
 msgid "Simulate"
-msgstr ""
+msgstr "Simuloi"
 
 #: templates/troubleshoot.inx:3
 msgid "Troubleshoot Objects"
-msgstr ""
+msgstr "Tutki virheitä objekteista"
 
 #: templates/zip.inx:10
 msgid "Ink/Stitch: ZIP export multiple formats (.zip)"
-msgstr ""
+msgstr "Ink/Stitch: ZIP vie monta formaattia"
 
 #: templates/zip.inx:11
 msgid "Create a ZIP with multiple embroidery file formats using Ink/Stitch"
-msgstr ""
+msgstr "Tee ZIP paketti monesta eri tiedostomuodosta"
 
