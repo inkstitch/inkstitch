@@ -1,19 +1,22 @@
 
 from ..commands import is_command
-from ..svg.tags import SVG_POLYLINE_TAG, SVG_PATH_TAG
-
+from ..svg.tags import SVG_PATH_TAG, SVG_POLYLINE_TAG, SVG_USE_TAG
 from .auto_fill import AutoFill
 from .element import EmbroideryElement
 from .fill import Fill
+from .inkscape_objects import add_path_to_clone
 from .polyline import Polyline
 from .satin_column import SatinColumn
 from .stroke import Stroke
 
 
 def node_to_elements(node):
+    if node.tag == SVG_USE_TAG:
+        node = add_path_to_clone(node)
+
     if node.tag == SVG_POLYLINE_TAG:
         return [Polyline(node)]
-    elif node.tag == SVG_PATH_TAG:
+    elif node.tag == SVG_PATH_TAG or node.tag == SVG_USE_TAG:
         element = EmbroideryElement(node)
 
         if element.get_boolean_param("satin_column") and element.get_style("stroke"):
@@ -35,6 +38,7 @@ def node_to_elements(node):
                 elements.reverse()
 
             return elements
+
     else:
         return []
 
