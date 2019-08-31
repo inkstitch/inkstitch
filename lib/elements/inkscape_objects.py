@@ -1,11 +1,11 @@
-from cubicsuperpath import parsePath
 from simpletransform import (applyTransformToPoint, composeTransform,
-                             invertTransform, parseTransform, roughBBox)
+                             invertTransform, parseTransform)
 
+from ..commands import is_command
 from ..i18n import _
 from ..svg import get_correction_transform
 from ..svg.svg import find_elements
-from ..svg.tags import XLINK_HREF
+from ..svg.tags import EMBROIDERABLE_TAGS, SVG_USE_TAG, XLINK_HREF
 from .validation import ValidationTypeWarning
 
 
@@ -14,15 +14,20 @@ class ObjectTypeWarning(ValidationTypeWarning):
     description = _("Ink/Stitch only knows how to work with paths.  It can't work with objects like text, rectangles, or circles.")
     steps_to_solve = [
         _('* Path > Object to Path (Shift+Ctrl+C)'),
-        _('* For text also try the lettering tool: Extensions > Ink/Stitch > Lettering')
+        _('* For text also try the lettering tool:'),
+        _('- Extensions > Ink/Stitch > Lettering')
     ]
 
 
-class CloneTypeWarning(ValidationTypeWarning):
-    name = _("Clone")
-    description = _("Ink/Stitch only knows how to work with paths.  It can't work with objects like clones.")
+class CloneSourceWarning(ValidationTypeWarning):
+    name = _("Clone with invalid origin")
+    description = _("Ink/Stitch only knows how to work with paths.  This object is a clone of an object which is not a path.")
     steps_to_solve = [
-        _('* Edit > Clone > Unlink Clone (Shift+Alt+D)'),
+        _('* Select the source of this object and convert it to a path:'),
+        _('- Path > Object to Path (Shift+Ctrl+C)'),
+        _('* Alternatively unlink the clone and convert it to a path:'),
+        _('- Edit > Clone > Unlink Clone (Shift+Alt+D)'),
+        _('- Path > Object to Path (Shift+Ctrl+C)')
     ]
 
 
@@ -72,24 +77,24 @@ class InkscapeObjects(object):
                 continue
 
             if "image" in node.tag:
-                # Image Object
+                # image
                 point = self.get_coordinates(node)
                 correction_transform = self.invert_correction_transform(node)
                 applyTransformToPoint(correction_transform, point)
                 yield ImageTypeWarning(point)
             elif node.get(XLINK_HREF):
-                # Clone
-                eid = node.get(XLINK_HREF)[1:]
-                xpath = ".//*[@id='%s']" % (eid)
-                orig_node = find_elements(self.svg, xpath)[0]
+                # clone
+                if is_embroiderable_clone(node):
+                    continue
+                orig_node = get_clone_source(node)
                 point = self.get_coordinates(orig_node)
                 correction_transform = self.invert_correction_transform(node)
                 node_transform = parseTransform(node.get('transform'))
                 transform = composeTransform(correction_transform, node_transform)
                 applyTransformToPoint(transform, point)
-                yield CloneTypeWarning(point)
+                yield CloneSourceWarning(point)
             else:
-                # Rect, Ellipse
+                # rect, ellipse
                 point = self.get_coordinates(node)
                 correction_transform = self.invert_correction_transform(node)
                 applyTransformToPoint(correction_transform, point)
@@ -99,19 +104,56 @@ class InkscapeObjects(object):
         return invertTransform(parseTransform(get_correction_transform(element)))
 
     def get_coordinates(self, node):
-        point = [0, 0]
         if node.get('cx'):
-            # Ellipse
-            point = [float(node.get('cx')), float(node.get('cy'))]
+            # ellipse
+            x, y = ['cx', 'cy']
         elif node.get('x'):
-            # Rect, image
-            point = [float(node.get('x')), float(node.get('y'))]
-        else:
-            # Origin of clone is a path object
-            xmin, xMax, ymin, yMax = roughBBox(parsePath(node.get('d')))
-            point = [xmin+((xMax-xmin)/2), ymin+((yMax-ymin)/2)]
+            # rect, image
+            x, y = ['x', 'y']
 
-        if node.get('width'):
+        point = [float(node.get(x)), float(node.get(y))]
+
+        try:
             point = [(point[0]+(float(node.get('width'))/2)), (point[1]+(float(node.get('height'))/2))]
+        except TypeError:
+            pass
 
         return point
+
+
+def is_clone(node):
+    if node.tag == SVG_USE_TAG and not is_command(node):
+        return True
+    else:
+        return False
+
+
+def is_embroiderable_clone(node):
+    if not is_clone(node):
+        return False
+
+    clone_source = get_clone_source(node)
+    if clone_source.tag in EMBROIDERABLE_TAGS:
+        return True
+
+
+def get_clone_source(node):
+    orig_id = node.get(XLINK_HREF)[1:]
+    xpath = ".//*[@id='%s']" % (orig_id)
+    source_node = find_elements(node, xpath)[0]
+    return source_node
+
+
+def add_path_to_clone(node):
+    if not is_embroiderable_clone(node):
+        return []
+
+    orig_node = get_clone_source(node)
+
+    path = "%s" % orig_node.get("d")
+    node.set("d", path)
+
+    style = "%s" % orig_node.get("style")
+    node.set("style", style)
+
+    return node
