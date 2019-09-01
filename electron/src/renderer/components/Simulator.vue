@@ -575,8 +575,8 @@
      https://vue-loader.vuejs.org/guide/scoped-css.html
    */
   svg.simulation {
-    flex_grow: 1;
-    flex_shrink: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
     order: -1;
   }
 </style>
