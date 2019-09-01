@@ -554,6 +554,7 @@
 
   .slider-container {
     flex-grow: 0;
+    padding-bottom: 1.5rem;
   }
 
   .simulator {
