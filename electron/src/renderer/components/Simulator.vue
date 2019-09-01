@@ -387,7 +387,6 @@
       this.stopMarks = {}
       this.colorChangeMarks = {}
       this.jumpMarks = {}
-
     },
     mounted: function () {
       this.svg = SVG(this.$refs.simulator).panZoom({zoomMin: 0.1})
@@ -443,6 +442,7 @@
         Mousetrap.bind("-", this.animationBackwardOneStitch)
 
         this.start()
+        this.showColorChanges = true
       })
     }
   }
