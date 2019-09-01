@@ -66,7 +66,8 @@
           :min="1"
           :max="numStitches"
           :duration="0"
-          :marks="sliderMarks"></vue-slider>
+          :marks="sliderMarks"
+          :process="sliderProcess"></vue-slider>
       </span>
         <span>{{numStitches}}</span>
         <input ref="currentStitchInput"
@@ -134,6 +135,7 @@
         direction: 1,
         numStitches: 1,
         animating: false,
+        sliderProcess: dotPos => this.sliderColorSections,
         showTrims: false,
         showJumps: false,
         showColorChanges: false,
@@ -356,19 +358,31 @@
             this.commandList.push(i)
           }
         }
+      },
+      generateColorSections() {
+        var currentStitch = 0
+        this.stitchPlan.color_blocks.forEach(color_block => {
+          this.sliderColorSections.push([
+            (currentStitch + 1) / this.numStitches * 100,
+            (currentStitch + color_block.stitches.length) / this.numStitches * 100,
+            {backgroundColor: color_block.color.visible_on_white.hex}
+          ])
+          currentStitch += color_block.stitches.length
+        })
       }
     },
     created: function () {
       // non-reactive properties
       this.targetFPS = 30
-      this.targetFramePeriod = 1000.0 / this.targetFPS,
-        this.renderedStitch = 0
+      this.targetFramePeriod = 1000.0 / this.targetFPS
+      this.renderedStitch = 0
       this.lastFrameStart = null
       this.stitchPaths = [null]  // 1-indexed to match up with stitch number display
       this.stitches = [null]
       this.svg = null
       this.simulation = null
       this.timer = null
+      this.sliderColorSections = []
       this.trimMarks = {}
       this.stopMarks = {}
       this.colorChangeMarks = {}
@@ -383,13 +397,13 @@
       this.loading = true
 
       inkStitch.get('stitch_plan').then(response => {
-        var stitch_plan = response.data
-        let [minx, miny, maxx, maxy] = stitch_plan.bounding_box
+        this.stitchPlan = response.data
+        let [minx, miny, maxx, maxy] = this.stitchPlan.bounding_box
         let width = maxx - minx
         let height = maxy - miny
         this.svg.viewbox(0, 0, width, height);
 
-        stitch_plan.color_blocks.forEach(color_block => {
+        this.stitchPlan.color_blocks.forEach(color_block => {
           let attrs = {fill: "none", stroke: `${color_block.color.visible_on_white.hex}`, "stroke-width": 0.3}
           let stitching = false
           let prevStitch = null
@@ -416,6 +430,7 @@
 
         this.numStitches = this.stitches.length - 1
         this.generateMarks()
+        this.generateColorSections()
         this.loading = false
 
         // v-on:keydown doesn't seem to work, maybe an Electron issue?
