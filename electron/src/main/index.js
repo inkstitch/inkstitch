@@ -1,6 +1,7 @@
 'use strict'
 
-import { app, BrowserWindow } from 'electron'
+import {app, BrowserWindow} from 'electron'
+
 const url = require('url')
 
 /**
@@ -27,15 +28,15 @@ var winURL = null;
 // Eventually this will be migrated to Vue.
 if (targetURL.protocol) {
   winURL = target
-} else {  
+} else {
   if (process.env.NODE_ENV == 'development') {
-    winURL = `http://localhost:9080/?${targetURL.query || ""}#${targetURL.pathname || "" }`
+    winURL = `http://localhost:9080/?${targetURL.query || ""}#${targetURL.pathname || ""}`
   } else {
     winURL = `file://${__dirname}/index.html?${targetURL.query || ""}#${targetURL.pathname || ""}`;
   }
 }
 
-function createWindow () {
+function createWindow() {
   /**
    * Initial window options
    */

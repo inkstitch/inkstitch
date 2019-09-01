@@ -1,82 +1,86 @@
 <template>
-  <div ref = "simulator" class="simulator vld-parent">
+  <div ref="simulator" class="simulator vld-parent">
     <fieldset>
-    <div class="panel">
-      <fieldset class="controls">
-        <legend>Controls</legend>
-        <button v-on:click="stop" :class="{pressed: paused}" title="Pause (space)">
-            <font-awesome-icon icon="pause" size="2x" class="fa-button" />
-        </button>
-        <button v-on:click="start" :class="{pressed: animating}" title="Play (arrow left | arrow right)">
-            <font-awesome-icon icon="play" size="2x" class="fa-button" />
-        </button>
-        <button v-on:click="animationReverse" :class="{pressed: reverse}" title="Play backward (arrow left)">
-            <font-awesome-icon icon="angle-double-left" size="2x" class="fa-button" :mask="['fas', 'stop']" />
-        </button>
-        <button v-on:click="animationForward" :class="{pressed: forward}" title="Play forward (arrow right)">
-            <font-awesome-icon icon="angle-double-right" size="2x" class="fa-button" :mask="['fas', 'stop']" />
-        </button>
-        <button v-on:click="animationBackwardOneStitch" title="One step backward (-)">
-            <font-awesome-icon icon="shoe-prints" size="2x" class="fa-button fa-flip-horizontal" />
-        </button>
-        <button v-on:click="animationForwardOneStitch" title="One step forward (+)">
-            <font-awesome-icon icon="shoe-prints" size="2x" class="fa-button" />
-        </button>
-        <button v-on:click="animationPreviousCommand" title="Jump to previous command (?)">
-            <font-awesome-icon icon="step-backward" size="2x" class="fa-button" />
-        </button>
-        <button v-on:click="animationNextCommand" title="Jump to next command (?)">
-            <font-awesome-icon icon="step-forward" size="2x" class="fa-button" />
-        </button>
-      </fieldset>
-      <fieldset class="speed">
-        <legend>Speed: {{speed}} stitches/sec</legend>
-        <button v-on:click="animationSlowDown" title="Slow down (arrow down)"><font-awesome-icon icon="hippo" size="2x" class="fa-button" /></button>
-        <button v-on:click="animationSpeedUp" title="Speed up (arrow up)">
-          <font-awesome-icon icon="align-right" class="fa-motion-lines" />
-          <font-awesome-icon icon="horse" size="2x" class="fa-button fa-fast" />
-        </button>
-      </fieldset>
-      <fieldset class="command">
-        <legend>Command</legend>
-        <span class="current-command">{{currentCommand}}</span>
-      </fieldset>
-      <fieldset class="show-commands">
-        <legend>Show Commands</legend>
-        <span>
-          <input id="trim-checkbox" type="checkbox" v-model="showTrims" /><label for="trim-checkbox">✂ trims</label>
-          <br />
-          <input id="jump-checkbox" type="checkbox" v-model="showJumps" /><label for="jump-checkbox">↷ jumps</label>
+      <div class="panel">
+        <fieldset class="controls">
+          <legend>Controls</legend>
+          <button v-on:click="stop" :class="{pressed: paused}" title="Pause (space)">
+            <font-awesome-icon icon="pause" size="2x" class="fa-button"/>
+          </button>
+          <button v-on:click="start" :class="{pressed: animating}" title="Play (arrow left | arrow right)">
+            <font-awesome-icon icon="play" size="2x" class="fa-button"/>
+          </button>
+          <button v-on:click="animationReverse" :class="{pressed: reverse}" title="Play backward (arrow left)">
+            <font-awesome-icon icon="angle-double-left" size="2x" class="fa-button" :mask="['fas', 'stop']"/>
+          </button>
+          <button v-on:click="animationForward" :class="{pressed: forward}" title="Play forward (arrow right)">
+            <font-awesome-icon icon="angle-double-right" size="2x" class="fa-button" :mask="['fas', 'stop']"/>
+          </button>
+          <button v-on:click="animationBackwardOneStitch" title="One step backward (-)">
+            <font-awesome-icon icon="shoe-prints" size="2x" class="fa-button fa-flip-horizontal"/>
+          </button>
+          <button v-on:click="animationForwardOneStitch" title="One step forward (+)">
+            <font-awesome-icon icon="shoe-prints" size="2x" class="fa-button"/>
+          </button>
+          <button v-on:click="animationPreviousCommand" title="Jump to previous command (?)">
+            <font-awesome-icon icon="step-backward" size="2x" class="fa-button"/>
+          </button>
+          <button v-on:click="animationNextCommand" title="Jump to next command (?)">
+            <font-awesome-icon icon="step-forward" size="2x" class="fa-button"/>
+          </button>
+        </fieldset>
+        <fieldset class="speed">
+          <legend>Speed: {{speed}} stitches/sec</legend>
+          <button v-on:click="animationSlowDown" title="Slow down (arrow down)">
+            <font-awesome-icon icon="hippo" size="2x" class="fa-button"/>
+          </button>
+          <button v-on:click="animationSpeedUp" title="Speed up (arrow up)">
+            <font-awesome-icon icon="align-right" class="fa-motion-lines"/>
+            <font-awesome-icon icon="horse" size="2x" class="fa-button fa-fast"/>
+          </button>
+        </fieldset>
+        <fieldset class="command">
+          <legend>Command</legend>
+          <span class="current-command">{{currentCommand}}</span>
+        </fieldset>
+        <fieldset class="show-commands">
+          <legend>Show Commands</legend>
+          <span>
+          <input id="trim-checkbox" type="checkbox" v-model="showTrims"/><label for="trim-checkbox">✂ trims</label>
+          <br/>
+          <input id="jump-checkbox" type="checkbox" v-model="showJumps"/><label for="jump-checkbox">↷ jumps</label>
         </span>
-        <span>
-          <input id="color-change-checkbox" type="checkbox" v-model="showColorChanges" /><label for="color-change-checkbox">⇄ color changes</label>
-          <br />
-          <input id="stop-checkbox" type="checkbox" v-model="showStops" /><label for="stop-checkbox">⏸ stops</label>
+          <span>
+          <input id="color-change-checkbox" type="checkbox" v-model="showColorChanges"/><label for="color-change-checkbox">⇄ color changes</label>
+          <br/>
+          <input id="stop-checkbox" type="checkbox" v-model="showStops"/><label for="stop-checkbox">⏸ stops</label>
         </span>
-      </fieldset>
-    </div>
-    <div class="slider-container">
-      <span>1</span>
-      <span class="slider-box">
+        </fieldset>
+      </div>
+      <div class="slider-container">
+        <span>1</span>
+        <span class="slider-box">
         <vue-slider
-                  :value="currentStitchDisplay"
-                  @change="setCurrentStitch"
-                  :min="1"
-                  :max="numStitches"
-                  :duration="0"
-                  :marks="sliderMarks"></vue-slider>
+          :value="currentStitchDisplay"
+          @change="setCurrentStitch"
+          :min="1"
+          :max="numStitches"
+          :duration="0"
+          :marks="sliderMarks"></vue-slider>
       </span>
-      <span>{{numStitches}}</span>
-      <input ref="currentStitchInput"
-           class="current-stitch-input"
-           :value="currentStitchDisplay"
-           @change="onCurrentStitchEntered"
-           @focus="stop" />
-    </div>
+        <span>{{numStitches}}</span>
+        <input ref="currentStitchInput"
+               class="current-stitch-input"
+               :value="currentStitchDisplay"
+               @change="onCurrentStitchEntered"
+               @focus="stop"/>
+      </div>
     </fieldset>
     <loading :active.sync="loading" :is-full-page="false">
       <div class="loading">
-        <div class="loading-icon"><font-awesome-icon icon="spinner" size="4x" pulse /></div>
+        <div class="loading-icon">
+          <font-awesome-icon icon="spinner" size="4x" pulse/>
+        </div>
         <div class="loading-text">Rendering stitch-plan...</div>
       </div>
     </loading>
@@ -92,6 +96,7 @@
   import 'vue-loading-overlay/dist/vue-loading.css';
   import VueSlider from 'vue-slider-component'
   import 'vue-slider-component/theme/default.css'
+
   const throttle = require('lodash.throttle')
 
   // I should totally be able to set these on the prototype but then vue-slider
@@ -107,19 +112,20 @@
   const labelStyle = {
     "font-size": "2rem"
   }
+
   function SliderMark(label) {
     this.label = label
     this.style = markStyle
     this.labelStyle = labelStyle
   }
-  
+
   export default {
     name: 'simulator',
     components: {
       Loading,
       VueSlider
     },
-    data: function() {
+    data: function () {
       return {
         loading: false,
         speed: 16,
@@ -135,7 +141,7 @@
       }
     },
     watch: {
-      currentStitch: throttle(function() {
+      currentStitch: throttle(function () {
         this.currentStitchDisplay = this.currentStitch.toFixed()
       }, 100, {leading: true, trailing: true}),
     },
@@ -151,7 +157,7 @@
         }
 
         let label = "STITCH"
-        switch(true) {
+        switch (true) {
           case stitch.jump:
             label = "JUMP"
             break
@@ -179,7 +185,7 @@
       },
       sliderMarks() {
         var marks = {}
-        
+
         if (this.showTrims)
           Object.assign(marks, this.trimMarks);
 
@@ -191,7 +197,7 @@
 
         if (this.showStops)
           Object.assign(marks, this.stopMarks);
-          
+
         return marks
       }
     },
@@ -200,7 +206,7 @@
         this.speed *= 2.0
       },
       animationSlowDown() {
-        this.speed = Math.max(this.speed/2.0, 1)
+        this.speed = Math.max(this.speed / 2.0, 1)
       },
       animationReverse() {
         this.direction = -1
@@ -225,31 +231,33 @@
       animationBackwardOneStitch() {
         this.setCurrentStitch(this.currentStitch - 1)
       },
-      animationNextCommand(){
+      animationNextCommand() {
         let nextCommandIndex = this.getNextCommandIndex()
         if (nextCommandIndex === -1) {
-            this.setCurrentStitch(this.stitches.length)
+          this.setCurrentStitch(this.stitches.length)
         } else {
-            this.setCurrentStitch(this.commandList[nextCommandIndex])
+          this.setCurrentStitch(this.commandList[nextCommandIndex])
         }
       },
-      animationPreviousCommand(){
+      animationPreviousCommand() {
         let nextCommandIndex = this.getNextCommandIndex()
         let prevCommandIndex = 0
         if (nextCommandIndex === -1) {
-            prevCommandIndex = this.commandList.length-2
+          prevCommandIndex = this.commandList.length - 2
         } else {
-            prevCommandIndex = nextCommandIndex-2
+          prevCommandIndex = nextCommandIndex - 2
         }
         let previousCommand = this.commandList[prevCommandIndex]
         if (previousCommand === undefined) {
-            previousCommand = 1
+          previousCommand = 1
         }
         this.setCurrentStitch(previousCommand)
       },
       getNextCommandIndex() {
         let currentStitch = this.currentStitchDisplay
-        let nextCommand = this.commandList.findIndex(function(command){return command > currentStitch})
+        let nextCommand = this.commandList.findIndex(function (command) {
+          return command > currentStitch
+        })
         return nextCommand
       },
       onCurrentStitchEntered() {
@@ -348,13 +356,13 @@
             this.commandList.push(i)
           }
         }
-      }      
+      }
     },
-    created: function() {
+    created: function () {
       // non-reactive properties
       this.targetFPS = 30
       this.targetFramePeriod = 1000.0 / this.targetFPS,
-      this.renderedStitch = 0
+        this.renderedStitch = 0
       this.lastFrameStart = null
       this.stitchPaths = [null]  // 1-indexed to match up with stitch number display
       this.stitches = [null]
@@ -365,9 +373,9 @@
       this.stopMarks = {}
       this.colorChangeMarks = {}
       this.jumpMarks = {}
-      
+
     },
-    mounted: function() {
+    mounted: function () {
       this.svg = SVG(this.$refs.simulator).panZoom({zoomMin: 0.1})
       this.svg.node.classList.add('simulation')
       this.simulation = this.svg.group()
@@ -376,11 +384,11 @@
 
       inkStitch.get('stitch_plan').then(response => {
         var stitch_plan = response.data
-          let [minx, miny, maxx, maxy] = stitch_plan.bounding_box    
-          let width = maxx - minx
-          let height = maxy - miny    
-          this.svg.viewbox(0, 0, width, height);
-        
+        let [minx, miny, maxx, maxy] = stitch_plan.bounding_box
+        let width = maxx - minx
+        let height = maxy - miny
+        this.svg.viewbox(0, 0, width, height);
+
         stitch_plan.color_blocks.forEach(color_block => {
           let attrs = {fill: "none", stroke: `${color_block.color.visible_on_white.hex}`, "stroke-width": 0.3}
           let stitching = false
@@ -476,11 +484,11 @@
   .fa-button {
     margin: 3px;
   }
-  
+
   .fa-fast {
     transform: skew(-15deg, -15deg) rotate(15deg) scale(1.25, 0.90);
   }
-  
+
   .fa-motion-lines {
     transform: scale(1.0, 1.6) translate(0, -18%) skew(-15deg, -15deg) rotate(15deg);
   }
@@ -495,52 +503,65 @@
     text-align: center;
     height: 50px;
   }
+
   fieldset {
     border-color: rgb(0, 51, 153);
   }
+
   fieldset button {
     display: inline-block;
   }
+
   fieldset.command span {
     font-family: sans-serif;
     font-size: 2rem;
     vertical-align: middle;
   }
+
   fieldset.command span.current-command {
     display: block;
     width: 18rem;
   }
+
   fieldset.show-commands {
     text-align: left;
   }
+
   fieldset.show-commands span {
     display: inline-block;
   }
+
   fieldset.show-commands span:first-of-type {
     padding-right: 12px;
   }
+
   button.pressed {
     border-style: inset;
   }
+
   .simulation {
     margin: 1rem;
     flex-grow: 1;
     flex-shrink: 1;
     order: -1;
   }
+
   .panel {
     flex-grow: 0;
     white-space: nowrap;
     text-align: center;
   }
+
   .slider-container {
     flex-grow: 0;
   }
+
   .simulator {
     display: flex;
     flex-direction: column;
     height: 95vh;
   }
+
   .current-command {
     color: rgb(0, 51, 153);
     font-weight: bold;
