@@ -16,7 +16,8 @@ import { faSpinner,
          faStop,
          faHippo,
          faHorse,
-         faAlignRight} from '@fortawesome/free-solid-svg-icons'
+         faAlignRight,
+         faShoePrints} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon, FontAwesomeLayers } from '@fortawesome/vue-fontawesome'
 
 // We have to add to the library every icon we use anywhere in the UI.
@@ -33,7 +34,8 @@ library.add(faSpinner,
             faStop,
             faHippo,
             faHorse,
-            faAlignRight)
+            faAlignRight,
+            faShoePrints)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component('font-awesome-layers', FontAwesomeLayers)

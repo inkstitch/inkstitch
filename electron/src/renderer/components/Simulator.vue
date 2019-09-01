@@ -4,17 +4,35 @@
     <div class="panel">
       <fieldset class="controls">
         <legend>Controls</legend>
-        <button v-on:click="stop" :class="{pressed: paused}"><font-awesome-icon icon="pause" size="2x" class="fa-button" /></button>
-        <button v-on:click="start" :class="{pressed: animating}"><font-awesome-icon icon="play" size="2x" class="fa-button" /></button>
-        <button v-on:click="animationReverse" :class="{pressed: reverse}"><font-awesome-icon icon="angle-double-left" size="2x" class="fa-button" :mask="['fas', 'stop']" /></button>
-        <button v-on:click="animationForward" :class="{pressed: forward}"><font-awesome-icon icon="angle-double-right" size="2x" class="fa-button" :mask="['fas', 'stop']" /></button>
-        <button v-on:click="animationBackwardOneStitch"><font-awesome-icon icon="step-backward" size="2x" class="fa-button" /></button>
-        <button v-on:click="animationForwardOneStitch"><font-awesome-icon icon="step-forward" size="2x" class="fa-button" /></button>        
+        <button v-on:click="stop" :class="{pressed: paused}" title="Pause (space)">
+            <font-awesome-icon icon="pause" size="2x" class="fa-button" />
+        </button>
+        <button v-on:click="start" :class="{pressed: animating}" title="Play (arrow left | arrow right)">
+            <font-awesome-icon icon="play" size="2x" class="fa-button" />
+        </button>
+        <button v-on:click="animationReverse" :class="{pressed: reverse}" title="Play backward (arrow left)">
+            <font-awesome-icon icon="angle-double-left" size="2x" class="fa-button" :mask="['fas', 'stop']" />
+        </button>
+        <button v-on:click="animationForward" :class="{pressed: forward}" title="Play forward (arrow right)">
+            <font-awesome-icon icon="angle-double-right" size="2x" class="fa-button" :mask="['fas', 'stop']" />
+        </button>
+        <button v-on:click="animationBackwardOneStitch" title="One step backward (-)">
+            <font-awesome-icon icon="shoe-prints" size="2x" class="fa-button fa-flip-horizontal" />
+        </button>
+        <button v-on:click="animationForwardOneStitch" title="One step forward (+)">
+            <font-awesome-icon icon="shoe-prints" size="2x" class="fa-button" />
+        </button>
+        <button v-on:click="animationPreviousCommand" title="Jump to previous command (?)">
+            <font-awesome-icon icon="step-backward" size="2x" class="fa-button" />
+        </button>
+        <button v-on:click="animationNextCommand" title="Jump to next command (?)">
+            <font-awesome-icon icon="step-forward" size="2x" class="fa-button" />
+        </button>
       </fieldset>
       <fieldset class="speed">
         <legend>Speed: {{speed}} stitches/sec</legend>
-        <button v-on:click="animationSlowDown"><font-awesome-icon icon="hippo" size="2x" class="fa-button" /></button>
-        <button v-on:click="animationSpeedUp">
+        <button v-on:click="animationSlowDown" title="Slow down (arrow down)"><font-awesome-icon icon="hippo" size="2x" class="fa-button" /></button>
+        <button v-on:click="animationSpeedUp" title="Speed up (arrow up)">
           <font-awesome-icon icon="align-right" class="fa-motion-lines" />
           <font-awesome-icon icon="horse" size="2x" class="fa-button fa-fast" />
         </button>
@@ -207,6 +225,33 @@
       animationBackwardOneStitch() {
         this.setCurrentStitch(this.currentStitch - 1)
       },
+      animationNextCommand(){
+        let nextCommandIndex = this.getNextCommandIndex()
+        if (nextCommandIndex === -1) {
+            this.setCurrentStitch(this.stitches.length)
+        } else {
+            this.setCurrentStitch(this.commandList[nextCommandIndex])
+        }
+      },
+      animationPreviousCommand(){
+        let nextCommandIndex = this.getNextCommandIndex()
+        let prevCommandIndex = 0
+        if (nextCommandIndex === -1) {
+            prevCommandIndex = this.commandList.length-2
+        } else {
+            prevCommandIndex = nextCommandIndex-2
+        }
+        let previousCommand = this.commandList[prevCommandIndex]
+        if (previousCommand === undefined) {
+            previousCommand = 1
+        }
+        this.setCurrentStitch(previousCommand)
+      },
+      getNextCommandIndex() {
+        let currentStitch = this.currentStitchDisplay
+        let nextCommand = this.commandList.findIndex(function(command){return command > currentStitch})
+        return nextCommand
+      },
       onCurrentStitchEntered() {
         let newCurrentStitch = parseInt(this.$refs.currentStitchInput.value)
 
@@ -287,15 +332,20 @@
         }
       },
       generateMarks() {
+        this.commandList = Array()
         for (let i = 1; i < this.stitches.length; i++) {
           if (this.stitches[i].trim) {
             this.trimMarks[i] = new SliderMark("✂")
+            this.commandList.push(i)
           } else if (this.stitches[i].stop) {
             this.stopMarks[i] = new SliderMark("⏸")
+            this.commandList.push(i)
           } else if (this.stitches[i].jump) {
             this.jumpMarks[i] = new SliderMark("↷")
+            this.commandList.push(i)
           } else if (this.stitches[i].color_change) {
             this.colorChangeMarks[i] = new SliderMark("⇄")
+            this.commandList.push(i)
           }
         }
       }      
@@ -404,7 +454,7 @@
   }
 
   .slider-box {
-    width: calc(80%);
+    width: calc(100% - 12rem);
     margin-left: 10px;
     margin-right: 10px;
   }
@@ -455,6 +505,10 @@
     font-family: sans-serif;
     font-size: 2rem;
     vertical-align: middle;
+  }
+  fieldset.command span.current-command {
+    display: block;
+    width: 18rem;
   }
   fieldset.show-commands {
     text-align: left;
