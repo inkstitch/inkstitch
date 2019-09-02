@@ -97,27 +97,14 @@
   import 'vue-loading-overlay/dist/vue-loading.css';
   import VueSlider from 'vue-slider-component'
   import 'vue-slider-component/theme/default.css'
+  import '../assets/style/simulator.css'
 
   const throttle = require('lodash.throttle')
 
   // I should totally be able to set these on the prototype but then vue-slider
   // ignores them?!
-  const markStyle = {
-    display: "block",
-    width: "4px",
-    height: "20px",
-    borderRadius: "4px",
-    backgroundColor: "#808080",
-    transform: "translate(0, -2px)"
-  }
-  const labelStyle = {
-    "font-size": "2rem"
-  }
-
   function SliderMark(label) {
     this.label = label
-    this.style = markStyle
-    this.labelStyle = labelStyle
   }
 
   export default {
@@ -447,152 +434,3 @@
     }
   }
 </script>
-
-<style scoped>
-  .loading-icon {
-    text-align: center;
-    margin-bottom: 1rem;
-    color: rgb(0, 51, 153);
-  }
-
-  .loading-text {
-    font-family: sans-serif;
-  }
-
-  .loading {
-    border-radius: 1rem;
-    border: 3px solid rgb(0, 51, 153);
-    background-color: rgba(0, 51, 153, 0.1);
-    padding: 1rem;
-  }
-
-  .slider-container {
-    margin-top: 10px;
-    height: 25px;
-  }
-
-  .slider-container > * {
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  .slider-box {
-    width: calc(100% - 12rem);
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
-  .current-stitch-input {
-    width: 4rem;
-    float: right;
-    font-size: 1rem;
-  }
-
-  button {
-    color: rgb(0, 51, 153)
-  }
-
-  .fa-spin-fast {
-    animation: fa-spin 0.4s infinite linear;
-  }
-
-  .fa-button {
-    margin: 3px;
-  }
-
-  .fa-fast {
-    transform: skew(-15deg, -15deg) rotate(15deg) scale(1.25, 0.90);
-  }
-
-  .fa-motion-lines {
-    transform: scale(1.0, 1.6) translate(0, -18%) skew(-15deg, -15deg) rotate(15deg);
-  }
-
-  .panel > * {
-    display: inline-block;
-    vertical-align: middle;
-    text-align: center;
-  }
-
-  .panel fieldset {
-    text-align: center;
-    height: 50px;
-  }
-
-  fieldset {
-    border-color: rgb(0, 51, 153);
-  }
-
-  fieldset button {
-    display: inline-block;
-  }
-
-  fieldset.command span {
-    font-family: sans-serif;
-    font-size: 2rem;
-    vertical-align: middle;
-  }
-
-  fieldset.command span.current-command {
-    display: block;
-    width: 18rem;
-  }
-
-  fieldset.show-commands {
-    text-align: left;
-  }
-
-  fieldset.show-commands span {
-    display: inline-block;
-  }
-
-  fieldset.show-commands span:first-of-type {
-    padding-right: 12px;
-  }
-
-  button.pressed {
-    border-style: inset;
-  }
-
-  .simulation {
-    margin: 1rem;
-    flex-grow: 1;
-    flex-shrink: 1;
-    order: -1;
-  }
-
-  .panel {
-    flex-grow: 0;
-    white-space: nowrap;
-    text-align: center;
-  }
-
-  .slider-container {
-    flex-grow: 0;
-    padding-bottom: 1.5rem;
-  }
-
-  .simulator {
-    display: flex;
-    flex-direction: column;
-    height: 95vh;
-  }
-
-  .current-command {
-    color: rgb(0, 51, 153);
-    font-weight: bold;
-  }
-</style>
-
-<style>
-  /* This is unscoped because the SVG tag isn't controlled by Vue and thus doesn't
-     get the attribute used for scoping.  See:
-
-     https://vue-loader.vuejs.org/guide/scoped-css.html
-   */
-  svg.simulation {
-    flex-grow: 1;
-    flex-shrink: 1;
-    order: -1;
-  }
-</style>
