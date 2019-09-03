@@ -15,41 +15,6 @@
     padding: 1rem;
   }
 
-  .slider-container {
-    margin-top: 10px;
-    height: 25px;
-  }
-
-  .slider-container > * {
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  .slider-box {
-    width: calc(100% - 12rem);
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
-  .vue-slider-mark-label {
-    font-size: 2rem;
-  }
-
-  .vue-slider-mark-step {
-    display: block;
-    width: 4px;
-    height: 20px;
-    border-radius: 4px;
-    background: #808080;
-    transform: translate(0, -2px);
-  }
-
-  .current-stitch-input {
-    width: 4rem;
-    float: right;
-    font-size: 1rem;
-  }
-
   button {
     color: rgb(0, 51, 153)
   }
@@ -129,17 +94,55 @@
     text-align: center;
   }
 
-  .slider-container {
-    flex-grow: 0;
-    padding-bottom: 1.5rem;
+  .vue-slider {
+    height: 10px !important;
   }
 
-  .vue-slider {
-    height: 0.5rem !important;
+  .slider-container {
+    margin-top: 25px;
+    padding-bottom: 30px;
+    height: 25px;
+    flex-grow: 0;
+  }
+
+  .slider-container > * {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .slider-box {
+    width: calc(100% - 11rem);
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .vue-slider-mark-label {
+    font-size: 1.4rem;
+    color: #545454;
+  }
+
+  .vue-slider-mark-step {
+    width: 2px;
+    height: 20px;
+    border-radius: 2px;
+    background: #545454;
+    transform: translate(0, -25%);
+    box-shadow: inset 1px 0 1px #ffffffbd, inset -1px 0 1px black;
+  }
+
+  .vue-slider-mark:first-child .vue-slider-mark-step,
+  .vue-slider-mark:last-child .vue-slider-mark-step {
+    display: block;
+  }
+
+  .vue-slider-rail {
+    border: 1px solid #dedede;
   }
 
   .vue-slider-process {
     border-radius: 0;
+    border-radius: 0;
+    box-shadow: inset 0px 2px 2px #ffffff80, inset 0px -2px 2px #0000002e;
   }
 
   .vue-slider-process:first-child {
@@ -150,6 +153,12 @@
   .vue-slider-process:nth-last-child(3) {
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
+  }
+
+  .current-stitch-input {
+    width: 4rem;
+    float: right;
+    font-size: 1rem;
   }
 
   .simulator {

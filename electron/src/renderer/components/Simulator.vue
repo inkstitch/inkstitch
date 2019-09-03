@@ -97,14 +97,12 @@
   import 'vue-loading-overlay/dist/vue-loading.css';
   import VueSlider from 'vue-slider-component'
   import 'vue-slider-component/theme/default.css'
-  import '../assets/style/simulator.css'
 
   const throttle = require('lodash.throttle')
 
-  // I should totally be able to set these on the prototype but then vue-slider
-  // ignores them?!
-  function SliderMark(label) {
+  function SliderMark(label, labelStyle) {
     this.label = label
+    this.labelStyle = labelStyle
   }
 
   export default {
@@ -332,16 +330,16 @@
         this.commandList = Array()
         for (let i = 1; i < this.stitches.length; i++) {
           if (this.stitches[i].trim) {
-            this.trimMarks[i] = new SliderMark("✂")
+            this.trimMarks[i] = new SliderMark("✂", {transform: "translate(-50%, -5px)"})
             this.commandList.push(i)
           } else if (this.stitches[i].stop) {
-            this.stopMarks[i] = new SliderMark("⏸")
+            this.stopMarks[i] = new SliderMark("⏸", {transform: "translate(-50%, 10px)"})
             this.commandList.push(i)
           } else if (this.stitches[i].jump) {
-            this.jumpMarks[i] = new SliderMark("↷")
+            this.jumpMarks[i] = new SliderMark("↷", {transform: "translate(-50%, -50px)"})
             this.commandList.push(i)
           } else if (this.stitches[i].color_change) {
-            this.colorChangeMarks[i] = new SliderMark("⇄")
+            this.colorChangeMarks[i] = new SliderMark("⇄", {transform: "translate(-50%, 10px)"})
             this.commandList.push(i)
           }
         }
@@ -434,3 +432,7 @@
     }
   }
 </script>
+
+<style lang="css" scoped>
+   @import '../assets/style/simulator.css'
+</style>
