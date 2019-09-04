@@ -61,13 +61,13 @@
         <span>1</span>
         <span class="slider-box">
         <vue-slider
-          :value="currentStitchDisplay"
-          @change="setCurrentStitch"
-          :min="1"
-          :max="numStitches"
-          :duration="0"
-          :marks="sliderMarks"
-          :process="sliderProcess"></vue-slider>
+            :value="currentStitchDisplay"
+            @change="setCurrentStitch"
+            :min="1"
+            :max="numStitches"
+            :duration="0"
+            :marks="sliderMarks"
+            :process="sliderProcess"></vue-slider>
       </span>
         <span>{{numStitches}}</span>
         <input ref="currentStitchInput"
@@ -433,6 +433,4 @@
   }
 </script>
 
-<style lang="css" scoped>
-   @import '../assets/style/simulator.css'
-</style>
+<style src="../assets/style/simulator.css" scoped></style>

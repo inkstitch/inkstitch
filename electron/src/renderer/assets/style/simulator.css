@@ -1,179 +1,181 @@
-  .loading-icon {
-    text-align: center;
-    margin-bottom: 1rem;
-    color: rgb(0, 51, 153);
-  }
+.loading-icon {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: rgb(0, 51, 153);
+}
 
-  .loading-text {
-    font-family: sans-serif;
-  }
+.loading-text {
+  font-family: sans-serif;
+}
 
-  .loading {
-    border-radius: 1rem;
-    border: 3px solid rgb(0, 51, 153);
-    background-color: rgba(0, 51, 153, 0.1);
-    padding: 1rem;
-  }
+.loading {
+  border-radius: 1rem;
+  border: 3px solid rgb(0, 51, 153);
+  background-color: rgba(0, 51, 153, 0.1);
+  padding: 1rem;
+}
 
-  button {
-    color: rgb(0, 51, 153)
-  }
+button {
+  color: rgb(0, 51, 153)
+}
 
-  .fa-spin-fast {
-    animation: fa-spin 0.4s infinite linear;
-  }
+.fa-spin-fast {
+  animation: fa-spin 0.4s infinite linear;
+}
 
-  .fa-button {
-    margin: 3px;
-  }
+.fa-button {
+  margin: 3px;
+}
 
-  .fa-fast {
-    transform: skew(-15deg, -15deg) rotate(15deg) scale(1.25, 0.90);
-  }
+.fa-fast {
+  transform: skew(-15deg, -15deg) rotate(15deg) scale(1.25, 0.90);
+}
 
-  .fa-motion-lines {
-    transform: scale(1.0, 1.6) translate(0, -18%) skew(-15deg, -15deg) rotate(15deg);
-  }
+.fa-motion-lines {
+  transform: scale(1.0, 1.6) translate(0, -18%) skew(-15deg, -15deg) rotate(15deg);
+}
 
-  .panel > * {
-    display: inline-block;
-    vertical-align: middle;
-    text-align: center;
-  }
+.panel > * {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
 
-  .panel fieldset {
-    text-align: center;
-    height: 50px;
-  }
+.panel fieldset {
+  text-align: center;
+  height: 50px;
+}
 
-  fieldset {
-    border-color: rgb(0, 51, 153);
-  }
+fieldset {
+  border-color: rgb(0, 51, 153);
+}
 
-  fieldset button {
-    display: inline-block;
-  }
+fieldset button {
+  display: inline-block;
+}
 
-  fieldset.command span {
-    font-family: sans-serif;
-    font-size: 2rem;
-    vertical-align: middle;
-  }
+fieldset.command span {
+  font-family: sans-serif;
+  font-size: 2rem;
+  vertical-align: middle;
+}
 
-  fieldset.command span.current-command {
-    display: block;
-    width: 18rem;
-  }
+fieldset.command span.current-command {
+  display: block;
+  width: 18rem;
+}
 
-  fieldset.show-commands {
-    text-align: left;
-  }
+fieldset.show-commands {
+  text-align: left;
+}
 
-  fieldset.show-commands span {
-    display: inline-block;
-  }
+fieldset.show-commands span {
+  display: inline-block;
+}
 
-  fieldset.show-commands span:first-of-type {
-    padding-right: 12px;
-  }
+fieldset.show-commands span:first-of-type {
+  padding-right: 12px;
+}
 
-  button.pressed {
-    border-style: inset;
-  }
+button.pressed {
+  border-style: inset;
+}
 
-  .simulation {
-    margin: 1rem;
-    flex-grow: 1;
-    flex-shrink: 1;
-    order: -1;
-  }
+.simulation {
+  margin: 1rem;
+  flex-grow: 1;
+  flex-shrink: 1;
+  order: -1;
+}
 
-  .panel {
-    flex-grow: 0;
-    white-space: nowrap;
-    text-align: center;
-  }
+.panel {
+  flex-grow: 0;
+  white-space: nowrap;
+  text-align: center;
+}
 
-  .vue-slider {
-    height: 10px !important;
-  }
+.vue-slider {
+  height: 10px !important;
+}
 
-  .slider-container {
-    margin-top: 25px;
-    padding-bottom: 30px;
-    height: 25px;
-    flex-grow: 0;
-  }
+.slider-container {
+  margin-top: 25px;
+  padding-bottom: 30px;
+  height: 25px;
+  flex-grow: 0;
+}
 
-  .slider-container > * {
-    display: inline-block;
-    vertical-align: middle;
-  }
+.slider-container > * {
+  display: inline-block;
+  vertical-align: middle;
+}
 
-  .slider-box {
-    width: calc(100% - 11rem);
-    margin-left: 10px;
-    margin-right: 10px;
-  }
+.slider-box {
+  width: calc(100% - 11rem);
+  margin-left: 10px;
+  margin-right: 10px;
+}
 
-  .vue-slider-mark-label {
-    font-size: 1.4rem;
-    color: #545454;
-  }
+.slider-container::v-deep .vue-slider-mark-label {
+  font-size: 1.4rem;
+  color: #545454;
+}
 
-  .vue-slider-mark-step {
-    width: 2px;
-    height: 20px;
-    border-radius: 2px;
-    background: #545454;
-    transform: translate(0, -25%);
-    box-shadow: inset 1px 0 1px #ffffffbd, inset -1px 0 1px black;
-  }
+.slider-container::v-deep .vue-slider-mark-step {
+  width: 2px;
+  height: 20px;
+  border-radius: 2px;
+  background: #545454;
+  transform: translate(0, -25%);
+  box-shadow: inset 1px 0 1px #ffffffbd, inset -1px 0 1px black;
+}
 
-  .vue-slider-mark:first-child .vue-slider-mark-step,
-  .vue-slider-mark:last-child .vue-slider-mark-step {
-    display: block;
-  }
+.slider-container::v-deep .vue-slider-mark:first-child .vue-slider-mark-step,
+.slider-container::v-deep .vue-slider-mark:last-child .vue-slider-mark-step {
+  display: block;
+}
 
-  .vue-slider-rail {
-    border: 1px solid #dedede;
-  }
+.slider-container::v-deep .vue-slider-rail {
+  border: 1px solid #dedede;
+}
 
-  .vue-slider-process {
-    border-radius: 0;
-    border-radius: 0;
-    box-shadow: inset 0px 2px 2px #ffffff80, inset 0px -2px 2px #0000002e;
-  }
+.slider-container::v-deep .vue-slider-process {
+  border-radius: 0;
+  box-shadow: inset 0px 2px 2px #ffffff80, inset 0px -2px 2px #0000002e;
+}
 
-  .vue-slider-process:first-child {
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-  }
+.slider-container::v-deep .vue-slider-process:first-child {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
 
-  .vue-slider-process:nth-last-child(3) {
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-  }
+.slider-container::v-deep .vue-slider-process:nth-last-child(3) {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
 
-  .current-stitch-input {
-    width: 4rem;
-    float: right;
-    font-size: 1rem;
-  }
+.current-stitch-input {
+  width: 4rem;
+  float: right;
+  font-size: 1rem;
+}
 
-  .simulator {
-    display: flex;
-    flex-direction: column;
-    height: 95vh;
-  }
+.simulator {
+  display: flex;
+  flex-direction: column;
+  height: 95vh;
+}
 
-  .current-command {
-    color: rgb(0, 51, 153);
-    font-weight: bold;
-  }
+.current-command {
+  color: rgb(0, 51, 153);
+  font-weight: bold;
+}
 
-  svg.simulation {
-    flex-grow: 1;
-    flex-shrink: 1;
-    order: -1;
-  }
+/* we need ::v-deep here because the svg tag is added by svg.js and so Vue
+   can't add the data-v-* attribute
+ */
+div.simulator::v-deep svg.simulation {
+  flex-grow: 1;
+  flex-shrink: 1;
+  order: -1;
+}
