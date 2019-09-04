@@ -438,7 +438,6 @@
         Mousetrap.bind("-", this.animationBackwardOneStitch)
 
         this.start()
-        this.showColorChanges = true
       })
     }
   }
