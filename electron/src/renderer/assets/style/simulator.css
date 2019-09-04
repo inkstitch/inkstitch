@@ -116,11 +116,6 @@ button.pressed {
   margin-right: 10px;
 }
 
-.slider-container::v-deep .vue-slider-mark-label {
-  font-size: 1.4rem;
-  color: #545454;
-}
-
 .slider-container::v-deep .vue-slider-mark-step {
   width: 2px;
   height: 20px;
@@ -152,6 +147,28 @@ button.pressed {
 .slider-container::v-deep .vue-slider-process:nth-last-child(3) {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
+}
+
+.vue-slider-mark-label {
+  font-size: 1.4rem;
+  color: #545454;
+}
+
+.slider-label-trim {
+  transform: scale(1, 0.75) translate(-50%, -9px);
+}
+
+.slider-label-stop {
+  font-size: 1.2rem;
+  transform: translate(-50%, 12px);
+}
+
+.slider-label-jump {
+  transform: translate(-50%, -50px);
+}
+
+.slider-label-color-change {
+  transform: translate(-50%, 10px);
 }
 
 .current-stitch-input {

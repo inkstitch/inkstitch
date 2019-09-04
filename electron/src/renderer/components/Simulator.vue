@@ -46,29 +46,39 @@
         <fieldset class="show-commands">
           <legend>Show Commands</legend>
           <span>
-          <input id="trim-checkbox" type="checkbox" v-model="showTrims"/><label for="trim-checkbox">✂ trims</label>
-          <br/>
-          <input id="jump-checkbox" type="checkbox" v-model="showJumps"/><label for="jump-checkbox">↷ jumps</label>
-        </span>
+            <input id="trim-checkbox" type="checkbox" v-model="showTrims"/>
+            <label for="trim-checkbox"><font-awesome-icon icon="cut"/> trims</label>
+            <br/>
+            <input id="jump-checkbox" type="checkbox" v-model="showJumps"/>
+            <label for="jump-checkbox"><font-awesome-icon icon="frog"/> jumps</label>
+          </span>
           <span>
-          <input id="color-change-checkbox" type="checkbox" v-model="showColorChanges"/><label for="color-change-checkbox">⇄ color changes</label>
-          <br/>
-          <input id="stop-checkbox" type="checkbox" v-model="showStops"/><label for="stop-checkbox">⏸ stops</label>
-        </span>
+            <input id="color-change-checkbox" type="checkbox" v-model="showColorChanges"/>
+            <label for="color-change-checkbox"><font-awesome-icon icon="exchange-alt"/> color changes</label>
+            <br/>
+            <input id="stop-checkbox" type="checkbox" v-model="showStops"/>
+            <label for="stop-checkbox"><font-awesome-icon icon="pause"/> stops</label>
+          </span>
         </fieldset>
       </div>
       <div class="slider-container">
         <span>1</span>
         <span class="slider-box">
-        <vue-slider
-            :value="currentStitchDisplay"
-            @change="setCurrentStitch"
-            :min="1"
-            :max="numStitches"
-            :duration="0"
-            :marks="sliderMarks"
-            :process="sliderProcess"></vue-slider>
-      </span>
+          <vue-slider
+              :value="currentStitchDisplay"
+              @change="setCurrentStitch"
+              :min="1"
+              :max="numStitches"
+              :duration="0"
+              :marks="sliderMarks"
+              :process="sliderProcess">
+            <template v-slot:label="mark">
+              <div :class="['vue-slider-mark-label', `slider-label-${mark.command}`, { active: mark.active }]">
+                <font-awesome-icon :icon="mark.icon"/>
+              </div>
+            </template>
+          </vue-slider>
+        </span>
         <span>{{numStitches}}</span>
         <input ref="currentStitchInput"
                class="current-stitch-input"
@@ -100,9 +110,10 @@
 
   const throttle = require('lodash.throttle')
 
-  function SliderMark(label, labelStyle) {
-    this.label = label
-    this.labelStyle = labelStyle
+  function SliderMark(command, icon) {
+    this.label = ""
+    this.command = command
+    this.icon = icon
   }
 
   export default {
@@ -330,16 +341,16 @@
         this.commandList = Array()
         for (let i = 1; i < this.stitches.length; i++) {
           if (this.stitches[i].trim) {
-            this.trimMarks[i] = new SliderMark("✂", {transform: "translate(-50%, -5px)"})
+            this.trimMarks[i] = new SliderMark("trim", "cut")
             this.commandList.push(i)
           } else if (this.stitches[i].stop) {
-            this.stopMarks[i] = new SliderMark("⏸", {transform: "translate(-50%, 10px)"})
+            this.stopMarks[i] = new SliderMark("stop", "pause")
             this.commandList.push(i)
           } else if (this.stitches[i].jump) {
-            this.jumpMarks[i] = new SliderMark("↷", {transform: "translate(-50%, -50px)"})
+            this.jumpMarks[i] = new SliderMark("jump", "frog")
             this.commandList.push(i)
           } else if (this.stitches[i].color_change) {
-            this.colorChangeMarks[i] = new SliderMark("⇄", {transform: "translate(-50%, 10px)"})
+            this.colorChangeMarks[i] = new SliderMark("color-change", "exchange-alt")
             this.commandList.push(i)
           }
         }
