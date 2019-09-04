@@ -59,6 +59,26 @@ button {
 
 fieldset {
   border-color: rgb(0, 51, 153);
+  position: relative;
+}
+
+.toggle-controls {
+  position: absolute;
+  top: -0.2rem;
+  right: 0;
+  padding: 5px;
+  font-size: 0.3rem;
+  color: white;
+  background: rgb(0, 51, 153);
+  transform: scale(1, 0.8);
+}
+
+.toggle-controls.up {
+  transform: rotate(180deg) scale(1, 0.8);
+}
+
+.hidden {
+  display: none !important;
 }
 
 fieldset button {

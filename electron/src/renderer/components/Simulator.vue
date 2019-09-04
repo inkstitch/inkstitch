@@ -1,7 +1,10 @@
 <template>
   <div ref="simulator" class="simulator vld-parent">
     <fieldset>
-      <div class="panel">
+      <div class="toggle-controls" :class="{up: expandControls}" v-on:click="toggleControls">
+        <font-awesome-icon icon="chevron-down" />
+      </div>
+      <div class="panel" :class="{hidden: hide}">
         <fieldset class="controls">
           <legend>Controls</legend>
           <button v-on:click="stop" :class="{pressed: paused}" title="Pause (space)">
@@ -125,6 +128,8 @@
     data: function () {
       return {
         loading: false,
+        expandControls: false,
+        hide: false,
         speed: 16,
         currentStitch: 1,
         currentStitchDisplay: 1,
@@ -200,6 +205,11 @@
       }
     },
     methods: {
+      toggleControls() {
+        console.log("toggle")
+        this.expandControls = !this.expandControls;
+        this.hide = !this.hide
+      },
       animationSpeedUp() {
         this.speed *= 2.0
       },

@@ -21,7 +21,8 @@ import {
   faSpinner,
   faStepBackward,
   faStepForward,
-  faStop
+  faStop,
+  faChevronDown
 } from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon, FontAwesomeLayers} from '@fortawesome/vue-fontawesome'
 
@@ -44,7 +45,8 @@ library.add(
   faSpinner,
   faStepBackward,
   faStepForward,
-  faStop
+  faStop,
+  faChevronDown
 )
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
