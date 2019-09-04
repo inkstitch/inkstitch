@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .loading-icon {
   text-align: center;
   margin-bottom: 1rem;
@@ -35,6 +39,12 @@ button {
   transform: scale(1.0, 1.6) translate(0, -18%) skew(-15deg, -15deg) rotate(15deg);
 }
 
+.panel {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: wrap;
+}
+
 .panel > * {
   display: inline-block;
   vertical-align: middle;
@@ -43,7 +53,8 @@ button {
 
 .panel fieldset {
   text-align: center;
-  height: 50px;
+  flex: 1;
+  white-space: nowrap;
 }
 
 fieldset {
@@ -63,6 +74,7 @@ fieldset.command span {
 fieldset.command span.current-command {
   display: block;
   width: 18rem;
+  margin: 0 auto;
 }
 
 fieldset.show-commands {
@@ -88,19 +100,13 @@ button.pressed {
   order: -1;
 }
 
-.panel {
-  flex-grow: 0;
-  white-space: nowrap;
-  text-align: center;
-}
-
 .vue-slider {
-  height: 10px !important;
+  height: 25px !important;
 }
 
 .slider-container {
   margin-top: 25px;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
   height: 25px;
   flex-grow: 0;
 }
@@ -121,7 +127,7 @@ button.pressed {
   height: 20px;
   border-radius: 2px;
   background: #545454;
-  transform: translate(0, -25%);
+  transform: translate(1px, -25%);
   box-shadow: inset 1px 0 1px #ffffffbd, inset -1px 0 1px black;
 }
 
