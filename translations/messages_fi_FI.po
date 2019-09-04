@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2019-08-13 20:36+0000\n"
-"PO-Revision-Date: 2019-08-31 20:45\n"
+"PO-Revision-Date: 2019-09-04 20:47\n"
 "Last-Translator: Lex Neva (lexelby)\n"
 "Language-Team: Finnish\n"
 "MIME-Version: 1.0\n"
@@ -201,7 +201,7 @@ msgstr "Automaatti täyttö"
 
 #: lib/elements/auto_fill.py:27
 msgid "Automatically routed fill stitching"
-msgstr ""
+msgstr "Automaattisesti reititetty täytetikki"
 
 #: lib/elements/auto_fill.py:47
 msgid "Running stitch length (traversal between sections)"
@@ -248,7 +248,7 @@ msgstr ""
 
 #: lib/elements/auto_fill.py:99
 msgid "Inset"
-msgstr ""
+msgstr "Sisennys"
 
 #: lib/elements/auto_fill.py:100
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
@@ -256,7 +256,7 @@ msgstr ""
 
 #: lib/elements/auto_fill.py:111 lib/elements/fill.py:72
 msgid "Skip last stitch in each row"
-msgstr ""
+msgstr "Hyppää yli joka rivin viimenen tikki"
 
 #: lib/elements/auto_fill.py:112 lib/elements/fill.py:73
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
@@ -264,15 +264,15 @@ msgstr ""
 
 #: lib/elements/auto_fill.py:122
 msgid "Expand"
-msgstr ""
+msgstr "Laajenna"
 
 #: lib/elements/auto_fill.py:123
 msgid "Expand the shape before fill stitching, to compensate for gaps between shapes."
-msgstr ""
+msgstr "Laajenna muotoa ennen täyttöä, kompensoidaksesi muotojen välejä."
 
 #: lib/elements/auto_fill.py:132 lib/elements/auto_fill.py:144
 msgid "Underpath"
-msgstr ""
+msgstr "Alipolku"
 
 #: lib/elements/auto_fill.py:133 lib/elements/auto_fill.py:145
 msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
@@ -483,31 +483,31 @@ msgstr ""
 
 #: lib/elements/satin_column.py:56
 msgid "Rung intersects too many times"
-msgstr ""
+msgstr "Poikkiviiva ylittää liian monta kertaa"
 
 #: lib/elements/satin_column.py:57
 msgid "Satin column: A rung intersects a rail more than once."
-msgstr ""
+msgstr "Satiini: poikkiviiva ylittää muodon enemmän kuin kerran."
 
 #: lib/elements/satin_column.py:61
 msgid "Satin Column"
-msgstr ""
+msgstr "Satiini"
 
 #: lib/elements/satin_column.py:67
 msgid "Custom satin column"
-msgstr ""
+msgstr "Erikois satiini"
 
 #: lib/elements/satin_column.py:73
 msgid "\"E\" stitch"
-msgstr ""
+msgstr "\"E\" tikki"
 
 #: lib/elements/satin_column.py:83 lib/elements/stroke.py:56
 msgid "Zig-zag spacing (peak-to-peak)"
-msgstr ""
+msgstr "Sik-sak väli (huipusta huippuun)"
 
 #: lib/elements/satin_column.py:84
 msgid "Peak-to-peak distance between zig-zags."
-msgstr ""
+msgstr "Huipusta huippuun väli siksakissa."
 
 #: lib/elements/satin_column.py:95
 msgid "Pull compensation"
@@ -519,12 +519,12 @@ msgstr ""
 
 #: lib/elements/satin_column.py:108
 msgid "Contour underlay"
-msgstr ""
+msgstr "Muodon pohja"
 
 #: lib/elements/satin_column.py:108 lib/elements/satin_column.py:115
 #: lib/elements/satin_column.py:124
 msgid "Contour Underlay"
-msgstr ""
+msgstr "Muodon pohja"
 
 #: lib/elements/satin_column.py:115 lib/elements/satin_column.py:139
 msgid "Stitch length"
@@ -532,28 +532,28 @@ msgstr "Tikin pituus"
 
 #: lib/elements/satin_column.py:121
 msgid "Contour underlay inset amount"
-msgstr ""
+msgstr "Muodon pohjan sisennys"
 
 #: lib/elements/satin_column.py:122
 msgid "Shrink the outline, to prevent the underlay from showing around the outside of the satin column."
-msgstr ""
+msgstr "Kutista ylkoviivaa, estääksesi pohjan näkymisen satiinin alta."
 
 #: lib/elements/satin_column.py:132
 msgid "Center-walk underlay"
-msgstr ""
+msgstr "Keskitikki pohjustus"
 
 #: lib/elements/satin_column.py:132 lib/elements/satin_column.py:139
 msgid "Center-Walk Underlay"
-msgstr ""
+msgstr "Keskitikki pohjustus"
 
 #: lib/elements/satin_column.py:144
 msgid "Zig-zag underlay"
-msgstr ""
+msgstr "Sik-Sak pohjustus"
 
 #: lib/elements/satin_column.py:144 lib/elements/satin_column.py:153
 #: lib/elements/satin_column.py:164
 msgid "Zig-zag Underlay"
-msgstr ""
+msgstr "Sik-Sak pohjustus"
 
 #: lib/elements/satin_column.py:150
 msgid "Zig-Zag spacing (peak-to-peak)"
@@ -565,7 +565,7 @@ msgstr ""
 
 #: lib/elements/satin_column.py:161
 msgid "Inset amount"
-msgstr ""
+msgstr "Sisennyksen etäisyys"
 
 #: lib/elements/satin_column.py:162
 msgid "default: half of contour underlay inset"
@@ -593,7 +593,7 @@ msgstr ""
 
 #: lib/elements/stroke.py:57
 msgid "Length of stitches in zig-zag mode."
-msgstr ""
+msgstr "Tikin pituus sik-sak moodissa."
 
 #: lib/elements/stroke.py:68
 msgid "Repeats"
@@ -601,15 +601,15 @@ msgstr "Toistot"
 
 #: lib/elements/stroke.py:69
 msgid "Defines how many times to run down and back along the path."
-msgstr ""
+msgstr "Määrittää kuinka monta kertaa polkua pitkin tikataan edestakaisin."
 
 #: lib/elements/stroke.py:97
 msgid "Manual stitch placement"
-msgstr ""
+msgstr "Manuaalinen tikin sijoitus"
 
 #: lib/elements/stroke.py:98
 msgid "Stitch every node in the path.  Stitch length and zig-zag spacing are ignored."
-msgstr ""
+msgstr "Tikkaa jokainen kulmapiste polulla. Tikin pituus ja sik-sak väli jätetään huomiotta."
 
 #: lib/elements/stroke.py:132
 msgid "Legacy running stitch setting detected!\n\n"
@@ -650,7 +650,7 @@ msgstr ""
 #. not lines.
 #: lib/extensions/convert_to_satin.py:35
 msgid "Only simple lines may be converted to satin columns."
-msgstr ""
+msgstr "Vain yksinkertaiset viivat voidaan muuntaa satiinimuotoviivoiksi."
 
 #: lib/extensions/convert_to_satin.py:58
 #, python-format
@@ -659,7 +659,7 @@ msgstr ""
 
 #: lib/extensions/cut_satin.py:15
 msgid "Please select one or more satin columns to cut."
-msgstr ""
+msgstr "Valitse yksi tai useampi satiinimuoto leikataksesi."
 
 #. will have the satin's id prepended, like this:
 #. path12345: error: this satin column does not ...
@@ -674,7 +674,7 @@ msgstr ""
 
 #: lib/extensions/flip.py:24
 msgid "Please select one or more satin columns to flip."
-msgstr ""
+msgstr "Valitse yksi tai useampi satiinimuoto leikataksesi."
 
 #: lib/extensions/install.py:25
 msgid "Ink/Stitch can install files (\"add-ons\") that make it easier to use Inkscape to create machine embroidery designs.  These add-ons will be installed:"
@@ -682,7 +682,7 @@ msgstr ""
 
 #: lib/extensions/install.py:27
 msgid "thread manufacturer color palettes"
-msgstr ""
+msgstr "värivalmistajan väripaletti"
 
 #: lib/extensions/install.py:28
 msgid "Ink/Stitch visual commands (Object -> Symbols...)"
@@ -710,27 +710,27 @@ msgstr "Inkscape lisäosan asennus epäonnistui"
 
 #: lib/extensions/install.py:72
 msgid "Installation Failed"
-msgstr ""
+msgstr "Asennus epäonnistui"
 
 #: lib/extensions/install.py:76
 msgid "Inkscape add-on files have been installed.  Please restart Inkscape to load the new add-ons."
-msgstr ""
+msgstr "Inkscape lisäosa on asennettu. Käynnistä Inkscape uudelleen ottaaksesi lisäosan käyttöön."
 
 #: lib/extensions/install.py:77
 msgid "Installation Completed"
-msgstr ""
+msgstr "Asennus valmis"
 
 #: lib/extensions/install.py:114
 msgid "Ink/Stitch Add-ons Installer"
-msgstr ""
+msgstr "Ink/Stitch lisäosan asennusohjelma"
 
 #: lib/extensions/layer_commands.py:17
 msgid "Please choose one or more commands to add."
-msgstr ""
+msgstr "Valitse lisättäväksi yksi tai useampi komento."
 
 #: lib/extensions/lettering.py:30 lib/extensions/lettering.py:327
 msgid "Ink/Stitch Lettering"
-msgstr ""
+msgstr "Ink/Stitch Kirjaimet"
 
 #: lib/extensions/lettering.py:37
 msgid "Options"
@@ -738,7 +738,7 @@ msgstr ""
 
 #: lib/extensions/lettering.py:39
 msgid "Stitch lines of text back and forth"
-msgstr ""
+msgstr "Tikkaa tekstiviivat molempiin suuntiin"
 
 #: lib/extensions/lettering.py:42
 msgid "Add trims"
@@ -762,11 +762,11 @@ msgstr "Yhtään fonttia ei löydy! Asenna Ink/Stitch uudelleen."
 #: lib/extensions/lettering.py:191
 #, python-format
 msgid "Text scale %s%%"
-msgstr ""
+msgstr "Skaalaa teksti %s%%"
 
 #: lib/extensions/lettering.py:316
 msgid "Please select only one block of text."
-msgstr ""
+msgstr "Valitse vain yksi teksti."
 
 #: lib/extensions/lettering.py:319
 msgid "You've selected objects that were not created by the Lettering extension.  Please clear your selection or select different objects before running Lettering again."
@@ -782,12 +782,12 @@ msgstr ""
 
 #: lib/extensions/params.py:194
 msgid "These settings will be applied to 1 object."
-msgstr ""
+msgstr "Nämä asetukset lisätään yhteen objektiin."
 
 #: lib/extensions/params.py:196
 #, python-format
 msgid "These settings will be applied to %d objects."
-msgstr ""
+msgstr "Nämä asetukset lisätään %d objekteihin."
 
 #: lib/extensions/params.py:199
 msgid "Some settings had different values across objects.  Select a value from the dropdown or enter a new one."
@@ -796,11 +796,11 @@ msgstr ""
 #: lib/extensions/params.py:203
 #, python-format
 msgid "Disabling this tab will disable the following %d tabs."
-msgstr ""
+msgstr "Tämäm välilehden sammuttaminen sulkee myös %d välilehden."
 
 #: lib/extensions/params.py:205
 msgid "Disabling this tab will disable the following tab."
-msgstr ""
+msgstr "Tämän välilehden sammuttaminen sammuttaa seuraavan välilehden."
 
 #: lib/extensions/params.py:208
 #, python-format
@@ -809,7 +809,7 @@ msgstr ""
 
 #: lib/extensions/params.py:238
 msgid "Inkscape objects"
-msgstr ""
+msgstr "Inkscapen objekteja"
 
 #: lib/extensions/params.py:295
 msgid "Click to force this parameter to be saved when you click \"Apply and Quit\""
@@ -821,15 +821,15 @@ msgstr ""
 
 #: lib/extensions/params.py:319
 msgid "Embroidery Params"
-msgstr ""
+msgstr "Brodeeraus Parametrit"
 
 #: lib/extensions/params.py:334
 msgid "Use Last Settings"
-msgstr ""
+msgstr "Käytä viimeisempiä asetuksia"
 
 #: lib/extensions/troubleshoot.py:36
 msgid "All selected shapes are valid!"
-msgstr ""
+msgstr "Kaikki valitut muodot ovat hyväksyttäviä!"
 
 #: lib/extensions/troubleshoot.py:38
 msgid "Tip: If you are still having an issue with an object not being rendered, you might need to convert it it to a path (Path -> Object to Path) or check if it is possibly in an ignored layer."
@@ -841,11 +841,11 @@ msgstr ""
 
 #: lib/extensions/troubleshoot.py:71
 msgid "Description"
-msgstr ""
+msgstr "Kuvaus"
 
 #: lib/extensions/troubleshoot.py:93 lib/extensions/troubleshoot.py:141
 msgid "Troubleshoot"
-msgstr ""
+msgstr "Vianhaku"
 
 #: lib/extensions/troubleshoot.py:109
 msgid "Errors"
@@ -865,7 +865,7 @@ msgstr ""
 
 #: lib/gui/presets.py:47
 msgid "Presets"
-msgstr ""
+msgstr "Esiasetukset"
 
 #: lib/gui/presets.py:53
 msgid "Load"
@@ -885,16 +885,16 @@ msgstr "Poista"
 
 #: lib/gui/presets.py:121
 msgid "Please enter or select a preset name first."
-msgstr ""
+msgstr "Syötä tai valitse esiasetuksen nimi ensin."
 
 #: lib/gui/presets.py:121 lib/gui/presets.py:127 lib/gui/presets.py:143
 msgid "Preset"
-msgstr ""
+msgstr "Esiasetus"
 
 #: lib/gui/presets.py:127
 #, python-format
 msgid "Preset \"%s\" not found."
-msgstr ""
+msgstr "Esiasetusta \"%s\" ei löydy."
 
 #: lib/gui/presets.py:143
 #, python-format
@@ -952,66 +952,66 @@ msgstr "Pysäytä (P)"
 
 #: lib/gui/simulator.py:68
 msgid "Restart"
-msgstr ""
+msgstr "Käynnistä uudelleen"
 
 #: lib/gui/simulator.py:70
 msgid "Restart (R)"
-msgstr ""
+msgstr "Käynnistä uudelleen (R)"
 
 #: lib/gui/simulator.py:71
 msgid "O"
-msgstr ""
+msgstr "O"
 
 #: lib/gui/simulator.py:73
 msgid "Display needle penetration point (O)"
-msgstr ""
+msgstr "Näytä neulan paikat (O)"
 
 #: lib/gui/simulator.py:74
 msgid "Quit"
-msgstr ""
+msgstr "Lopeta"
 
 #: lib/gui/simulator.py:76
 msgid "Quit (Q)"
-msgstr ""
+msgstr "Lopeta (Q)"
 
 #: lib/gui/simulator.py:188
 #, python-format
 msgid "Speed: %d stitches/sec"
-msgstr ""
+msgstr "Nopeus: %d Tikkiä/sekunnissa"
 
 #: lib/gui/simulator.py:244 lib/gui/simulator.py:272
 msgid "Start"
-msgstr ""
+msgstr "Aloita"
 
 #: lib/gui/simulator.py:824 lib/gui/simulator.py:836
 msgid "Preview"
-msgstr ""
+msgstr "Esikatselu"
 
 #: lib/gui/simulator.py:840
 msgid "Internal Error"
-msgstr ""
+msgstr "Sisäinen virhe"
 
 #: lib/gui/simulator.py:869
 msgid "Embroidery Simulation"
-msgstr ""
+msgstr "Brodeeraus simulaatio"
 
 #. If you translate this string, that will tell Ink/Stitch to
 #. generate menu items for this language in Inkscape's "Extensions"
 #. menu.
 #: lib/inx/utils.py:55
 msgid "Generate INX files"
-msgstr ""
+msgstr "Generoi INX tiedostot"
 
 #. low-level file error.  %(error)s is (hopefully?) translated by
 #. the user's system automatically.
 #: lib/output.py:105
 #, python-format
 msgid "Error writing to %(path)s: %(error)s"
-msgstr ""
+msgstr "Virhe kirjoitettaessa %(path)s: %(error)s"
 
 #: lib/stitches/auto_satin.py:652
 msgid "Auto-Satin"
-msgstr ""
+msgstr "Automaattinen satiini"
 
 #. Label for a satin column created by Auto-Route Satin Columns and Lettering
 #. extensions
@@ -1029,7 +1029,7 @@ msgstr ""
 
 #: lib/svg/rendering.py:231
 msgid "Stitch Plan"
-msgstr ""
+msgstr "Tikkaus suunnitelma"
 
 #: lib/svg/units.py:47
 #, python-format
@@ -1039,12 +1039,12 @@ msgstr ""
 #: lib/svg/units.py:79
 #, python-format
 msgid "Unknown unit: %s"
-msgstr ""
+msgstr "Tunnistamaton yksikkö: %s"
 
 #: print/templates/color_swatch.html:8 print/templates/color_swatch.html:40
 #: print/templates/operator_detailedview.html:9
 msgid "Color"
-msgstr ""
+msgstr "Väri"
 
 #: print/templates/color_swatch.html:11 print/templates/color_swatch.html:41
 msgid "rgb"
@@ -1052,21 +1052,21 @@ msgstr ""
 
 #: print/templates/color_swatch.html:15 print/templates/color_swatch.html:42
 msgid "thread"
-msgstr ""
+msgstr "lanka"
 
 #: print/templates/color_swatch.html:19 print/templates/color_swatch.html:43
 #: print/templates/operator_detailedview.html:63
 msgid "# stitches"
-msgstr ""
+msgstr "# tikkiä"
 
 #: print/templates/color_swatch.html:23 print/templates/color_swatch.html:44
 msgid "# trims"
-msgstr ""
+msgstr "# trimmausta"
 
 #: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
 #: print/templates/operator_detailedview.html:68
 msgid "stop after?"
-msgstr ""
+msgstr "lopeta jälkeen?"
 
 #: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
 #: print/templates/operator_detailedview.html:68
@@ -1176,7 +1176,7 @@ msgstr ""
 #: print/templates/operator_overview.html:14
 #: print/templates/print_overview.html:14
 msgid "Design box size"
-msgstr ""
+msgstr "Suunnittelulaatikon koko"
 
 #: print/templates/operator_detailedview.html:29
 #: print/templates/operator_overview.html:16
@@ -1294,23 +1294,23 @@ msgstr "Esikatselu asiakkaalle"
 
 #: print/templates/ui.html:46 print/templates/ui.html:137
 msgid "Client Detailed View"
-msgstr ""
+msgstr "Asiakkaan tarkempikatselu"
 
 #: print/templates/ui.html:50 print/templates/ui.html:138
 msgid "Operator Overview"
-msgstr ""
+msgstr "Käyttäjän esikatselu"
 
 #: print/templates/ui.html:54 print/templates/ui.html:139
 msgid "Operator Detailed View"
-msgstr ""
+msgstr "Operaattorin tarkempikatselu"
 
 #: print/templates/ui.html:56
 msgid "Thumbnail size"
-msgstr ""
+msgstr "Minikuvan koko"
 
 #: print/templates/ui.html:62
 msgid "Custom information sheet"
-msgstr ""
+msgstr "Lisäinformaatio sivu"
 
 #: print/templates/ui.html:65 print/templates/ui.html:108
 msgid "Includes these Page Setup, estimated time settings and also the icon."
@@ -1323,7 +1323,7 @@ msgstr ""
 
 #: print/templates/ui.html:70
 msgid "Logo"
-msgstr ""
+msgstr "Logo"
 
 #: print/templates/ui.html:80
 msgid "Footer: Operator contact information"
@@ -1331,15 +1331,15 @@ msgstr ""
 
 #: print/templates/ui.html:114
 msgid "Machine Settings"
-msgstr ""
+msgstr "Koneen asetukset"
 
 #: print/templates/ui.html:116
 msgid "Average Machine Speed"
-msgstr ""
+msgstr "Koneen keskiarvo nopeus"
 
 #: print/templates/ui.html:117
 msgid "stitches per minute "
-msgstr ""
+msgstr "tikkiä minuutissa "
 
 #: print/templates/ui.html:121
 msgid "Time Factors"
@@ -1355,19 +1355,19 @@ msgstr ""
 
 #: print/templates/ui.html:128
 msgid "This will be added to the total time."
-msgstr ""
+msgstr "Tämä lisätään kokonaisaikaan."
 
 #: print/templates/ui.html:128
 msgid "seconds needed for a color change*"
-msgstr ""
+msgstr "värinvaihtoon tarvittava aika*"
 
 #: print/templates/ui.html:131
 msgid "seconds needed for trim"
-msgstr ""
+msgstr "trimmaukseen tarvittava aika"
 
 #: print/templates/ui.html:134
 msgid "Display Time On"
-msgstr ""
+msgstr "Näytön aika päällä"
 
 #: print/templates/ui.html:142
 msgid "Includes page setup, estimated time and also the branding."
