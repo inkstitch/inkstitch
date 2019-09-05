@@ -1,9 +1,70 @@
 <template>
   <div ref="simulator" class="simulator vld-parent">
     <fieldset>
-      <div class="toggle-controls" v-on:click="toggleControls">
-        <font-awesome-icon v-if="controlsExpanded" icon="minus"/>
-        <font-awesome-icon v-else icon="plus"/>
+    <div class="window-controls">
+        <div class="control-info-button" v-on:click="toggleInfo">
+          <font-awesome-icon icon="info"/>
+          <div class="control-info" v-if="infoExpanded">
+            <h1><font-awesome-icon icon="info" class="info-icon"/> Simulator Shortcut Keys</h1>
+            <div>
+              <div><p>Button</p><p>Function</p><p>Shortcut Key</p></div>
+              <div>
+                <p><font-awesome-icon icon="pause" class="fa-button"/></p>
+                <p>Pause</p>
+                <p>Space</p>
+              </div>
+              <div>
+                <p><font-awesome-icon icon="play" class="fa-button"/></p>
+                <p>Play</p>
+                <p>P</p>
+              </div>
+              <div>
+                <p><font-awesome-icon icon="angle-double-left" class="fa-button"/></p>
+                <p>Play backward</p>
+                <p>← Arrow lef</p>
+              </div>
+              <div>
+                <p><font-awesome-icon icon="angle-double-right" class="fa-button"/></p>
+                <p>Play forward</p>
+                <p>→ Arrow right</p>
+              </div>
+              <div>
+                <p><font-awesome-icon icon="shoe-prints" class="fa-button"/></p>
+                <p>One step backward</p>
+                <p>-</p>
+              </div>
+              <div>
+                <p><font-awesome-icon icon="shoe-prints" class="fa-button fa-flip-horizontal"/></p>
+                <p>One step forward</p>
+                <p>+</p>
+              </div>
+              <div>
+                <p><font-awesome-icon icon="step-backward" class="fa-button"/></p>
+                <p>Jump to previous command</p>
+                <p>?</p>
+              </div>
+              <div>
+                <p><font-awesome-icon icon="step-forward" class="fa-button"/></p>
+                <p>Jump to next command</p>
+                <p>?</p>
+              </div>
+              <div>
+                <p><font-awesome-icon icon="hippo" class="fa-button"/></p>
+                <p>Slow down</p>
+                <p>↓ Arrow down</p>
+              </div>
+              <div>
+                <p><font-awesome-icon icon="horse" class="fa-button"/></p>
+                <p>Speed up</p>
+                <p>↑ Arrow up</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="toggle-controls" v-on:click="toggleControls">
+          <font-awesome-icon v-if="controlsExpanded" icon="minus"/>
+          <font-awesome-icon v-else icon="plus"/>
+        </div>
       </div>
       <div class="panel" v-show="controlsExpanded">
         <fieldset class="controls">
@@ -130,6 +191,7 @@
       return {
         loading: false,
         controlsExpanded: true,
+        infoExpanded: false,
         speed: 16,
         currentStitch: 1,
         currentStitchDisplay: 1,
@@ -205,6 +267,9 @@
       }
     },
     methods: {
+      toggleInfo() {
+        this.infoExpanded = !this.infoExpanded;
+      },
       toggleControls() {
         this.controlsExpanded = !this.controlsExpanded;
       },

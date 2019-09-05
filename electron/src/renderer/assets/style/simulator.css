@@ -62,15 +62,62 @@ fieldset {
   position: relative;
 }
 
-.toggle-controls {
+.window-controls {
   position: absolute;
   top: -0.2rem;
   right: -2px;
-  padding: 5px;
   font-size: 0.8rem;
   color: white;
   background: rgb(0, 51, 153);
   transform: scale(1, 0.8) translate(0, -100%);
+}
+
+.window-controls > div {
+  display: inline-block;
+  padding: 5px;
+}
+
+.control-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-100%, -100%);
+  padding: 0 1rem 1rem;
+  background: white;
+  color: black;
+  border: 1px solid rgb(0, 51, 153);
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.info-icon {
+  float: right;
+}
+
+.control-info h1 {
+  background: rgb(0, 51, 153);
+  color: white;
+  margin: 0 -1rem 1rem;
+  padding: 1rem;
+}
+
+.control-info div {
+  display: table-row;
+}
+
+.control-info > div {
+  display: table;
+}
+
+.control-info div:first-child p {
+  font-weight: bold;
+}
+
+.control-info p {
+  display: table-cell;
+  white-space: nowrap;
+  border-bottom: 1px solid #ccc;
+  padding: 0.5rem;
 }
 
 fieldset button {
