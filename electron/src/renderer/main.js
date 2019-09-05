@@ -10,19 +10,21 @@ import {
   faAngleDoubleLeft,
   faAngleDoubleRight,
   faAngleRight,
+  faChevronDown,
   faCut,
   faExchangeAlt,
   faFrog,
   faHippo,
   faHorse,
+  faMinus,
   faPause,
   faPlay,
+  faPlus,
   faShoePrints,
   faSpinner,
   faStepBackward,
   faStepForward,
-  faStop,
-  faChevronDown
+  faStop
 } from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon, FontAwesomeLayers} from '@fortawesome/vue-fontawesome'
 
@@ -34,19 +36,21 @@ library.add(
   faAngleDoubleLeft,
   faAngleDoubleRight,
   faAngleRight,
+  faChevronDown,
   faCut,
   faExchangeAlt,
   faFrog,
   faHippo,
   faHorse,
+  faMinus,
   faPause,
   faPlay,
+  faPlus,
   faShoePrints,
   faSpinner,
   faStepBackward,
   faStepForward,
-  faStop,
-  faChevronDown
+  faStop
 )
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
