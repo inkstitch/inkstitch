@@ -250,15 +250,17 @@
         this.currentStitchDisplay = this.currentStitch.toFixed()
       }, 100, {leading: true, trailing: true}),
       showNeedlePenetrationPoints: function () {
-        if (this.needlePenetrationPoint === null) {
+        if (this.needlePenetrationPoints === null) {
           return;
         }
 
-        if (this.showNeedlePenetrationPoints) {
-          this.needlePenetrationPoint.show();
-        } else {
-          this.needlePenetrationPoint.hide();
-        }
+        this.needlePenetrationPoints.forEach(npp => {
+          if (this.showNeedlePenetrationPoints) {
+            npp.show()
+          } else {
+            npp.hide()
+          }
+        })
       }
     },
     computed: {
@@ -489,6 +491,12 @@
           ])
           currentStitch += color_block.stitches.length
         })
+      },
+      generateMarker(color) {
+        return this.svg.marker(3, 3, add => {
+          let needlePenetrationPoint = add.circle(3).fill(color).hide()
+          this.needlePenetrationPoints.push(needlePenetrationPoint)
+        })
       }
     },
     created: function () {
@@ -507,17 +515,12 @@
       this.stopMarks = {}
       this.colorChangeMarks = {}
       this.jumpMarks = {}
-      this.needlePenetrationPoint = null
+      this.needlePenetrationPoints = []
     },
     mounted: function () {
       this.svg = SVG(this.$refs.simulator).panZoom({zoomMin: 0.1})
       this.svg.node.classList.add('simulation')
       this.simulation = this.svg.group()
-      var marker = this.svg.marker(3, 3, add => {
-        this.needlePenetrationPoint = add.circle(3)
-      })
-      this.needlePenetrationPoint.hide()
-
       this.loading = true
 
       inkStitch.get('stitch_plan').then(response => {
@@ -528,7 +531,10 @@
         this.svg.viewbox(0, 0, width, height);
 
         this.stitchPlan.color_blocks.forEach(color_block => {
-          let attrs = {fill: "none", stroke: `${color_block.color.visible_on_white.hex}`, "stroke-width": 0.3}
+          let color = `${color_block.color.visible_on_white.hex}`
+          let path_attrs = {fill: "none", stroke: color, "stroke-width": 0.3}
+          let marker = this.generateMarker(color)
+
           let stitching = false
           let prevStitch = null
           color_block.stitches.forEach(stitch => {
@@ -537,9 +543,9 @@
 
             let path = null
             if (stitching && prevStitch) {
-              path = this.simulation.path(`M${prevStitch.x},${prevStitch.y} ${stitch.x},${stitch.y}`).attr(attrs).hide()
+              path = this.simulation.path(`M${prevStitch.x},${prevStitch.y} ${stitch.x},${stitch.y}`).attr(path_attrs).hide()
             } else {
-              path = this.simulation.path(`M${stitch.x},${stitch.y} ${stitch.x},${stitch.y}`).attr(attrs).hide()
+              path = this.simulation.path(`M${stitch.x},${stitch.y} ${stitch.x},${stitch.y}`).attr(path_attrs).hide()
             }
             path.marker('end', marker)
             this.stitchPaths.push(path)
