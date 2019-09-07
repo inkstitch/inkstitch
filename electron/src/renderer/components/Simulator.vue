@@ -1,130 +1,158 @@
 <template>
   <div ref="simulator" class="simulator vld-parent">
     <fieldset>
-    <div class="window-controls">
+      <div class="window-controls">
         <div class="control-info-button" v-on:click="toggleInfo">
           <font-awesome-icon icon="info"/>
-          <div class="control-info" v-if="infoExpanded">
-            <h1><font-awesome-icon icon="info" class="info-icon"/> Simulator Shortcut Keys</h1>
-            <div>
-              <div><p>Button</p><p>Function</p><p>Shortcut Key</p></div>
+          <collapse-transition>
+            <div class="control-info" v-show="infoExpanded">
+              <h1>
+                <font-awesome-icon icon="info" class="info-icon"/>
+                Simulator Shortcut Keys
+              </h1>
               <div>
-                <p><font-awesome-icon icon="pause" class="fa-button"/></p>
-                <p>Pause</p>
-                <p>Space</p>
-              </div>
-              <div>
-                <p><font-awesome-icon icon="play" class="fa-button"/></p>
-                <p>Play</p>
-                <p>P</p>
-              </div>
-              <div>
-                <p><font-awesome-icon icon="angle-double-left" class="fa-button"/></p>
-                <p>Play backward</p>
-                <p>← Arrow lef</p>
-              </div>
-              <div>
-                <p><font-awesome-icon icon="angle-double-right" class="fa-button"/></p>
-                <p>Play forward</p>
-                <p>→ Arrow right</p>
-              </div>
-              <div>
-                <p><font-awesome-icon icon="shoe-prints" class="fa-button"/></p>
-                <p>One step backward</p>
-                <p>-</p>
-              </div>
-              <div>
-                <p><font-awesome-icon icon="shoe-prints" class="fa-button fa-flip-horizontal"/></p>
-                <p>One step forward</p>
-                <p>+</p>
-              </div>
-              <div>
-                <p><font-awesome-icon icon="step-backward" class="fa-button"/></p>
-                <p>Jump to previous command</p>
-                <p>?</p>
-              </div>
-              <div>
-                <p><font-awesome-icon icon="step-forward" class="fa-button"/></p>
-                <p>Jump to next command</p>
-                <p>?</p>
-              </div>
-              <div>
-                <p><font-awesome-icon icon="hippo" class="fa-button"/></p>
-                <p>Slow down</p>
-                <p>↓ Arrow down</p>
-              </div>
-              <div>
-                <p><font-awesome-icon icon="horse" class="fa-button"/></p>
-                <p>Speed up</p>
-                <p>↑ Arrow up</p>
+                <div><p>Button</p>
+                  <p>Function</p>
+                  <p>Shortcut Key</p></div>
+                <div>
+                  <p>
+                    <font-awesome-icon icon="pause" class="fa-button"/>
+                  </p>
+                  <p>Pause</p>
+                  <p>Space</p>
+                </div>
+                <div>
+                  <p>
+                    <font-awesome-icon icon="play" class="fa-button"/>
+                  </p>
+                  <p>Play</p>
+                  <p>P</p>
+                </div>
+                <div>
+                  <p>
+                    <font-awesome-icon icon="angle-double-left" class="fa-button"/>
+                  </p>
+                  <p>Play backward</p>
+                  <p>← Arrow lef</p>
+                </div>
+                <div>
+                  <p>
+                    <font-awesome-icon icon="angle-double-right" class="fa-button"/>
+                  </p>
+                  <p>Play forward</p>
+                  <p>→ Arrow right</p>
+                </div>
+                <div>
+                  <p>
+                    <font-awesome-icon icon="shoe-prints" class="fa-button"/>
+                  </p>
+                  <p>One step backward</p>
+                  <p>-</p>
+                </div>
+                <div>
+                  <p>
+                    <font-awesome-icon icon="shoe-prints" class="fa-button fa-flip-horizontal"/>
+                  </p>
+                  <p>One step forward</p>
+                  <p>+</p>
+                </div>
+                <div>
+                  <p>
+                    <font-awesome-icon icon="step-backward" class="fa-button"/>
+                  </p>
+                  <p>Jump to previous command</p>
+                  <p>?</p>
+                </div>
+                <div>
+                  <p>
+                    <font-awesome-icon icon="step-forward" class="fa-button"/>
+                  </p>
+                  <p>Jump to next command</p>
+                  <p>?</p>
+                </div>
+                <div>
+                  <p>
+                    <font-awesome-icon icon="hippo" class="fa-button"/>
+                  </p>
+                  <p>Slow down</p>
+                  <p>↓ Arrow down</p>
+                </div>
+                <div>
+                  <p>
+                    <font-awesome-icon icon="horse" class="fa-button"/>
+                  </p>
+                  <p>Speed up</p>
+                  <p>↑ Arrow up</p>
+                </div>
               </div>
             </div>
-          </div>
+          </collapse-transition>
         </div>
         <div class="toggle-controls" v-on:click="toggleControls">
           <font-awesome-icon v-if="controlsExpanded" icon="minus"/>
           <font-awesome-icon v-else icon="plus"/>
         </div>
       </div>
-      <div class="panel" v-show="controlsExpanded">
-        <fieldset class="controls">
-          <legend>Controls</legend>
-          <button v-on:click="stop" :class="{pressed: paused}" title="Pause (space)">
-            <font-awesome-icon icon="pause" size="2x" class="fa-button"/>
-          </button>
-          <button v-on:click="start" :class="{pressed: animating}" title="Play (arrow left | arrow right)">
-            <font-awesome-icon icon="play" size="2x" class="fa-button"/>
-          </button>
-          <button v-on:click="animationReverse" :class="{pressed: reverse}" title="Play backward (arrow left)">
-            <font-awesome-icon icon="angle-double-left" size="2x" class="fa-button" :mask="['fas', 'stop']"/>
-          </button>
-          <button v-on:click="animationForward" :class="{pressed: forward}" title="Play forward (arrow right)">
-            <font-awesome-icon icon="angle-double-right" size="2x" class="fa-button" :mask="['fas', 'stop']"/>
-          </button>
-          <button v-on:click="animationBackwardOneStitch" title="One step backward (-)">
-            <font-awesome-icon icon="shoe-prints" size="2x" class="fa-button fa-flip-horizontal"/>
-          </button>
-          <button v-on:click="animationForwardOneStitch" title="One step forward (+)">
-            <font-awesome-icon icon="shoe-prints" size="2x" class="fa-button"/>
-          </button>
-          <button v-on:click="animationPreviousCommand" title="Jump to previous command (?)">
-            <font-awesome-icon icon="step-backward" size="2x" class="fa-button"/>
-          </button>
-          <button v-on:click="animationNextCommand" title="Jump to next command (?)">
-            <font-awesome-icon icon="step-forward" size="2x" class="fa-button"/>
-          </button>
-        </fieldset>
-        <fieldset class="speed">
-          <legend>Speed: {{speed}} stitches/sec</legend>
-          <button v-on:click="animationSlowDown" title="Slow down (arrow down)">
-            <font-awesome-icon icon="hippo" size="2x" class="fa-button"/>
-          </button>
-          <button v-on:click="animationSpeedUp" title="Speed up (arrow up)">
-            <font-awesome-icon icon="align-right" class="fa-motion-lines"/>
-            <font-awesome-icon icon="horse" size="2x" class="fa-button fa-fast"/>
-          </button>
-        </fieldset>
-        <fieldset class="command">
-          <legend>Command</legend>
-          <span class="current-command">{{currentCommand}}</span>
-        </fieldset>
-        <fieldset class="show-commands">
-          <legend>Show</legend>
-          <span>
+      <collapse-transition>
+        <div class="panel" v-show="controlsExpanded">
+          <fieldset class="controls">
+            <legend>Controls</legend>
+            <button v-on:click="stop" :class="{pressed: paused}" title="Pause (space)">
+              <font-awesome-icon icon="pause" size="2x" class="fa-button"/>
+            </button>
+            <button v-on:click="start" :class="{pressed: animating}" title="Play (arrow left | arrow right)">
+              <font-awesome-icon icon="play" size="2x" class="fa-button"/>
+            </button>
+            <button v-on:click="animationReverse" :class="{pressed: reverse}" title="Play backward (arrow left)">
+              <font-awesome-icon icon="angle-double-left" size="2x" class="fa-button" :mask="['fas', 'stop']"/>
+            </button>
+            <button v-on:click="animationForward" :class="{pressed: forward}" title="Play forward (arrow right)">
+              <font-awesome-icon icon="angle-double-right" size="2x" class="fa-button" :mask="['fas', 'stop']"/>
+            </button>
+            <button v-on:click="animationBackwardOneStitch" title="One step backward (-)">
+              <font-awesome-icon icon="shoe-prints" size="2x" class="fa-button fa-flip-horizontal"/>
+            </button>
+            <button v-on:click="animationForwardOneStitch" title="One step forward (+)">
+              <font-awesome-icon icon="shoe-prints" size="2x" class="fa-button"/>
+            </button>
+            <button v-on:click="animationPreviousCommand" title="Jump to previous command (?)">
+              <font-awesome-icon icon="step-backward" size="2x" class="fa-button"/>
+            </button>
+            <button v-on:click="animationNextCommand" title="Jump to next command (?)">
+              <font-awesome-icon icon="step-forward" size="2x" class="fa-button"/>
+            </button>
+          </fieldset>
+          <fieldset class="speed">
+            <legend>Speed: {{speed}} stitches/sec</legend>
+            <button v-on:click="animationSlowDown" title="Slow down (arrow down)">
+              <font-awesome-icon icon="hippo" size="2x" class="fa-button"/>
+            </button>
+            <button v-on:click="animationSpeedUp" title="Speed up (arrow up)">
+              <font-awesome-icon icon="align-right" class="fa-motion-lines"/>
+              <font-awesome-icon icon="horse" size="2x" class="fa-button fa-fast"/>
+            </button>
+          </fieldset>
+          <fieldset class="command">
+            <legend>Command</legend>
+            <span class="current-command">{{currentCommand}}</span>
+          </fieldset>
+          <fieldset class="show-commands">
+            <legend>Show</legend>
+            <span>
             <input id="trim-checkbox" type="checkbox" v-model="showTrims"/>
             <label for="trim-checkbox"><font-awesome-icon icon="cut"/> trims</label>
             <br/>
             <input id="jump-checkbox" type="checkbox" v-model="showJumps"/>
             <label for="jump-checkbox"><font-awesome-icon icon="frog"/> jumps</label>
           </span>
-          <span>
+            <span>
             <input id="color-change-checkbox" type="checkbox" v-model="showColorChanges"/>
             <label for="color-change-checkbox"><font-awesome-icon icon="exchange-alt"/> color changes</label>
             <br/>
             <input id="stop-checkbox" type="checkbox" v-model="showStops"/>
             <label for="stop-checkbox"><font-awesome-icon icon="pause"/> stops</label>
           </span>
-          <span class="npp">
+            <span class="npp">
             <input id="npp-checkbox" type="checkbox" v-model="showNeedlePenetrationPoints"/>
             <label for="npp-checkbox">
               <font-awesome-layers>
@@ -134,8 +162,9 @@
               needle<br/>points
             </label>
           </span>
-        </fieldset>
-      </div>
+          </fieldset>
+        </div>
+      </collapse-transition>
       <div class="slider-container">
         <span>1</span>
         <span class="slider-box">

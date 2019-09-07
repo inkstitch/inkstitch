@@ -49,7 +49,8 @@
     "vue": "^2.5.16",
     "vue-loading-overlay": "^3.2.0",
     "vue-router": "^3.0.1",
-    "vue-slider-component": "^3.0.38"
+    "vue-slider-component": "^3.0.38",
+    "vue2-transitions": "^0.3.0"
   },
   "devDependencies": {
     "ajv": "^6.5.0",
