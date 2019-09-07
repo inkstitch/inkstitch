@@ -171,7 +171,7 @@
           <vue-slider
               :value="currentStitchDisplay"
               @change="setCurrentStitch"
-              :min="1"
+              :min="0"
               :max="numStitches"
               :duration="0"
               :marks="sliderMarks"
@@ -270,8 +270,8 @@
       currentCommand() {
         let stitch = this.stitches[this.currentStitch.toFixed()]
 
-        if (stitch === undefined) {
-          return "NONE"
+        if (stitch === undefined || stitch === null) {
+          return ""
         }
 
         let label = "STITCH"
@@ -400,7 +400,7 @@
         this.renderFrame()
       },
       clampCurrentStitch() {
-        this.currentStitch = Math.max(Math.min(this.currentStitch, this.numStitches), 1)
+        this.currentStitch = Math.max(Math.min(this.currentStitch, this.numStitches), 0)
       },
       animate() {
         let frameStart = performance.now()
@@ -433,7 +433,7 @@
           this.stitchPaths[this.renderedStitch].show();
         }
 
-        while (this.renderedStitch >= this.currentStitch) {
+        while (this.renderedStitch > this.currentStitch) {
           this.stitchPaths[this.renderedStitch].hide();
           this.renderedStitch -= 1
         }
@@ -441,7 +441,7 @@
       shouldAnimate() {
         if (this.direction == 1 && this.currentStitch < this.numStitches) {
           return true;
-        } else if (this.direction == -1 && this.currentStitch > 1) {
+        } else if (this.direction == -1 && this.currentStitch > 0) {
           return true;
         } else {
           return false;
