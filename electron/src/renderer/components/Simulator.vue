@@ -44,17 +44,17 @@
                 </div>
                 <div>
                   <p>
-                    <font-awesome-icon icon="shoe-prints" class="fa-button"/>
+                    <font-awesome-icon icon="shoe-prints" class="fa-button fa-flip-horizontal"/>
                   </p>
                   <p>One step backward</p>
-                  <p>-</p>
+                  <p>- Minus</p>
                 </div>
                 <div>
                   <p>
-                    <font-awesome-icon icon="shoe-prints" class="fa-button fa-flip-horizontal"/>
+                    <font-awesome-icon icon="shoe-prints" class="fa-button"/>
                   </p>
                   <p>One step forward</p>
-                  <p>+</p>
+                  <p>+ Plus</p>
                 </div>
                 <div>
                   <p>
@@ -513,8 +513,8 @@
       this.svg = SVG(this.$refs.simulator).panZoom({zoomMin: 0.1})
       this.svg.node.classList.add('simulation')
       this.simulation = this.svg.group()
-      var marker = this.svg.marker(4, 4, add => {
-        this.needlePenetrationPoint = add.circle(4)
+      var marker = this.svg.marker(3, 3, add => {
+        this.needlePenetrationPoint = add.circle(3)
       })
       this.needlePenetrationPoint.hide()
 
