@@ -109,7 +109,7 @@
           <span class="current-command">{{currentCommand}}</span>
         </fieldset>
         <fieldset class="show-commands">
-          <legend>Show Commands</legend>
+          <legend>Show</legend>
           <span>
             <input id="trim-checkbox" type="checkbox" v-model="showTrims"/>
             <label for="trim-checkbox"><font-awesome-icon icon="cut"/> trims</label>
@@ -123,6 +123,16 @@
             <br/>
             <input id="stop-checkbox" type="checkbox" v-model="showStops"/>
             <label for="stop-checkbox"><font-awesome-icon icon="pause"/> stops</label>
+          </span>
+          <span class="npp">
+            <input id="npp-checkbox" type="checkbox" v-model="showNeedlePenetrationPoints"/>
+            <label for="npp-checkbox">
+              <font-awesome-layers>
+                <font-awesome-icon icon="circle" transform="shrink-9"/>
+                <font-awesome-icon icon="minus" class="fa-thin-line"/>
+              </font-awesome-layers>
+              needle<br/>points
+            </label>
           </span>
         </fieldset>
       </div>
@@ -202,13 +212,25 @@
         showTrims: false,
         showJumps: false,
         showColorChanges: false,
-        showStops: false
+        showStops: false,
+        showNeedlePenetrationPoints: false
       }
     },
     watch: {
       currentStitch: throttle(function () {
         this.currentStitchDisplay = this.currentStitch.toFixed()
       }, 100, {leading: true, trailing: true}),
+      showNeedlePenetrationPoints: function () {
+        if (this.needlePenetrationPoint === null) {
+          return;
+        }
+
+        if (this.showNeedlePenetrationPoints) {
+          this.needlePenetrationPoint.show();
+        } else {
+          this.needlePenetrationPoint.hide();
+        }
+      }
     },
     computed: {
       speedDisplay() {
@@ -456,11 +478,16 @@
       this.stopMarks = {}
       this.colorChangeMarks = {}
       this.jumpMarks = {}
+      this.needlePenetrationPoint = null
     },
     mounted: function () {
       this.svg = SVG(this.$refs.simulator).panZoom({zoomMin: 0.1})
       this.svg.node.classList.add('simulation')
       this.simulation = this.svg.group()
+      var marker = this.svg.marker(4, 4, add => {
+        this.needlePenetrationPoint = add.circle(4)
+      })
+      this.needlePenetrationPoint.hide()
 
       this.loading = true
 
@@ -479,11 +506,14 @@
             stitch.x -= minx
             stitch.y -= miny
 
+            let path = null
             if (stitching && prevStitch) {
-              this.stitchPaths.push(this.simulation.path(`M${prevStitch.x},${prevStitch.y} ${stitch.x},${stitch.y}`).attr(attrs).hide())
+              path = this.simulation.path(`M${prevStitch.x},${prevStitch.y} ${stitch.x},${stitch.y}`).attr(attrs).hide()
             } else {
-              this.stitchPaths.push(this.simulation.path(`M${stitch.x},${stitch.y} ${stitch.x},${stitch.y}`).attr(attrs).hide())
+              path = this.simulation.path(`M${stitch.x},${stitch.y} ${stitch.x},${stitch.y}`).attr(attrs).hide()
             }
+            path.marker('end', marker)
+            this.stitchPaths.push(path)
             this.stitches.push(stitch)
 
             if (stitch.trim || stitch.color_change) {

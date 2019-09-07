@@ -39,6 +39,10 @@ button {
   transform: scale(1.0, 1.6) translate(0, -18%) skew(-15deg, -15deg) rotate(15deg);
 }
 
+.fa-thin-line {
+  transform: scale(1.4, 0.4);
+}
+
 .panel {
   display: flex;
   justify-content: space-between;
@@ -142,6 +146,11 @@ fieldset.show-commands {
 
 fieldset.show-commands span {
   display: inline-block;
+  vertical-align: top;
+}
+
+fieldset.show-commands span.npp {
+  text-align: right;
 }
 
 fieldset.show-commands span:first-of-type {
