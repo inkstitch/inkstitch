@@ -247,7 +247,7 @@
     },
     watch: {
       currentStitch: throttle(function () {
-        this.currentStitchDisplay = this.currentStitch.toFixed()
+        this.currentStitchDisplay = Math.floor(this.currentStitch)
       }, 100, {leading: true, trailing: true}),
       showNeedlePenetrationPoints: function () {
         if (this.needlePenetrationPoints === null) {
@@ -268,7 +268,7 @@
         return this.speed * this.direction
       },
       currentCommand() {
-        let stitch = this.stitches[this.currentStitch.toFixed()]
+        let stitch = this.stitches[Math.floor(this.currentStitch)]
 
         if (stitch === undefined || stitch === null) {
           return ""
@@ -388,7 +388,7 @@
         let newCurrentStitch = parseInt(this.$refs.currentStitchInput.value)
 
         if (isNaN(newCurrentStitch)) {
-          this.$refs.currentStitchInput.value = this.currentStitch.toFixed()
+          this.$refs.currentStitchInput.value = Math.floor(this.currentStitch)
         } else {
           this.setCurrentStitch(parseInt(newCurrentStitch))
         }
@@ -437,6 +437,8 @@
           this.stitchPaths[this.renderedStitch].hide();
           this.renderedStitch -= 1
         }
+
+        this.moveCursor()
       },
       shouldAnimate() {
         if (this.direction == 1 && this.currentStitch < this.numStitches) {
@@ -461,6 +463,22 @@
           }
           this.animating = false
           this.lastFrameStart = null
+        }
+      },
+      resizeCursor() {
+        // This makes the cursor stay the same size when zooming in or out.
+        // I'm not exactly sure how it works, but it does.
+        this.cursor.size(25 / this.svg.zoom())
+        this.cursor.stroke({width: 2 / this.svg.zoom()})
+
+        // SVG.js seems to move the cursor when we resize it, so we need to put
+        // it back where it goes.
+        this.moveCursor()
+      },
+      moveCursor() {
+        let stitch = this.stitches[Math.floor(this.currentStitch)]
+        if (stitch !== null && stitch !== undefined) {
+          this.cursor.center(stitch.x, stitch.y)
         }
       },
       generateMarks() {
@@ -516,6 +534,7 @@
       this.colorChangeMarks = {}
       this.jumpMarks = {}
       this.needlePenetrationPoints = []
+      this.cursor = null
     },
     mounted: function () {
       this.svg = SVG(this.$refs.simulator).panZoom({zoomMin: 0.1})
@@ -566,6 +585,9 @@
         this.generateColorSections()
         this.loading = false
 
+        this.cursor = this.svg.path("M0,0 h1 M0.5,-0.5 v1").stroke({width: 0.5, color: '#000000'})
+        this.cursor.node.classList.add("cursor")
+
         // v-on:keydown doesn't seem to work, maybe an Electron issue?
         Mousetrap.bind("up", this.animationSpeedUp)
         Mousetrap.bind("down", this.animationSlowDown)
@@ -574,6 +596,9 @@
         Mousetrap.bind("space", this.toggleAnimation)
         Mousetrap.bind("+", this.animationForwardOneStitch)
         Mousetrap.bind("-", this.animationBackwardOneStitch)
+
+        this.svg.on('zoom', this.resizeCursor)
+        this.resizeCursor()
 
         this.start()
       })

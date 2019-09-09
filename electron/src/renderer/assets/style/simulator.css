@@ -270,3 +270,7 @@ div.simulator::v-deep svg.simulation {
   flex-shrink: 1;
   order: -1;
 }
+
+div.simulator::v-deep .cursor {
+  /* not sure what to add here to make it more visible */
+}
