@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2019-08-13 20:36+0000\n"
-"PO-Revision-Date: 2019-09-08 20:47\n"
+"PO-Revision-Date: 2019-09-09 20:47\n"
 "Last-Translator: Lex Neva (lexelby)\n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -20,44 +20,44 @@ msgstr ""
 #. name of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:2
 msgid "Ink/Stitch Small Font"
-msgstr ""
+msgstr "Petite fonte Ink/Stitch"
 
 #. description of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:4
 #, python-format
 msgid "A font suited for small characters.  The capital em is 0.2 inches wide at 100% scale.  Can be scaled up to 300%."
-msgstr ""
+msgstr "Une fonte adaptée pour les petits caractères. Le \"M\" a une largeur de 5,08mm à une échelle de 100%. Il est possible de l’agrandir de 300%."
 
 #. name of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:6
 msgid "TT Masters"
-msgstr ""
+msgstr "TT masters"
 
 #. description of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:8
 msgid "A font suited for heavy typing :)"
-msgstr ""
+msgstr "Une fonte \"lourde\""
 
 #. name of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:10
 msgid "TT Directors"
-msgstr ""
+msgstr "TT directors"
 
 #. description of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:12
 msgid "A font suited for directing"
-msgstr ""
+msgstr "Une fonte faite diriger"
 
 #. name of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:14
 msgid "Ink/Stitch Medium Font"
-msgstr ""
+msgstr "Fonte médium pour Ink/Stitch"
 
 #. description of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:16
 #, python-format
 msgid "A basic font suited for medium-sized characters.  The capital em is 0.6 inches wide at 100% scale.  Can be scaled down to 75% or up to 150%.  Every satin has contour underlay."
-msgstr ""
+msgstr "Une fonte idéale pour des caractères de taille moyenne. La lettre \"M\" (majuscule) a une largeur de 15,24 mm à une échelle de 100%. On peut transformer la taille entre 75% et 150%. Les points satin utilisent une sous-couches avec des lignes de contour."
 
 #. command attached to an object
 #: lib/commands.py:20
@@ -189,11 +189,11 @@ msgstr "marqueur de commande"
 
 #: lib/elements/auto_fill.py:17
 msgid "Small Fill"
-msgstr ""
+msgstr "Petit remplissage"
 
 #: lib/elements/auto_fill.py:18
 msgid "This fill object is so small that it would probably look better as running stitch or satin column. For very small shapes, fill stitch is not possible, and Ink/Stitch will use running stitch around the outline instead."
-msgstr ""
+msgstr "Ce remplissage est si petit qu'il serait sans doute mieux en point droit ou colonne satin. Pour les très petites formes, le remplissage n'est pas possible, et Ink/Stitch le remplacera par du point droit sur le contour."
 
 #: lib/elements/auto_fill.py:24
 msgid "AutoFill"
@@ -307,31 +307,31 @@ msgstr "erreur :"
 
 #: lib/elements/fill.py:17
 msgid "Unconnected"
-msgstr ""
+msgstr "Déconnecté"
 
 #: lib/elements/fill.py:18
 msgid "Fill: This object is made up of unconnected shapes.  This is not allowed because Ink/Stitch doesn't know what order to stitch them in.  Please break this object up into separate shapes."
-msgstr ""
+msgstr "Remplissage: Cet objet est constitué de formes non connectées. Ce n'est pas permis parce qu'Ink/Stitch ne sait pas dans quel ordre les broder. Partager cet objet en forme séparées."
 
 #: lib/elements/fill.py:22 lib/elements/fill.py:32
 msgid "* Path > Break apart (Shift+Ctrl+K)"
-msgstr ""
+msgstr "* Chemin > Séparer (Maj+Ctrl+K)"
 
 #: lib/elements/fill.py:23 lib/elements/fill.py:33
 msgid "* (Optional) Recombine shapes with holes (Ctrl+K)."
-msgstr ""
+msgstr "* (Optionnel) Recombiner les formes avec des trous (Ctrl+K)."
 
 #: lib/elements/fill.py:28
 msgid "Border crosses itself"
-msgstr ""
+msgstr "La bordure se croise"
 
 #: lib/elements/fill.py:29
 msgid "Fill: Shape is not valid.  This can happen if the border crosses over itself."
-msgstr ""
+msgstr "Remplissage: La forme n'est pas valide. Cela peut arriver si la bordure se croise elle-même."
 
 #: lib/elements/fill.py:31
 msgid "* Path > Union (Ctrl++)"
-msgstr ""
+msgstr "* Chemin > Union (Ctrl++)"
 
 #: lib/elements/fill.py:38
 msgid "Fill"
@@ -387,19 +387,19 @@ msgstr "Ce paramétrage définit l’écart entre les points en tant que nombre 
 
 #: lib/elements/polyline.py:11
 msgid "Object is a PolyLine"
-msgstr ""
+msgstr "L'objet est un PolyLine"
 
 #: lib/elements/polyline.py:12
 msgid "This object is an SVG PolyLine.  Ink/Stitch can work with this shape, but you can't edit it in Inkscape.  Convert it to a manual stitch path to allow editing."
-msgstr ""
+msgstr "Cet objet est un SVG Polyline. Ink/Stitch ne peut pas traiter cette forme, mais vous pouvez la modifier dans Inkscape. Convertissez la en chemin de points manuels."
 
 #: lib/elements/polyline.py:16 lib/elements/satin_column.py:19
 msgid "* Select this object."
-msgstr ""
+msgstr "* Sélectionner cet objet."
 
 #: lib/elements/polyline.py:17
 msgid "* Do Path > Object to Path."
-msgstr ""
+msgstr "* Faire Chemin > Objet en chemin."
 
 #: lib/elements/polyline.py:18
 msgid "* Optional: Run the Params extension and check the \"manual stitch\" box."
@@ -439,55 +439,55 @@ msgstr ""
 
 #: lib/elements/satin_column.py:31
 msgid "* Add another subpath (select two rails and do Path > Combine)"
-msgstr ""
+msgstr "Ajouter un autre sous-chemin (sélectionner deux rails et faire Chemin>Combiner)"
 
 #: lib/elements/satin_column.py:32
 msgid "* Convert to running stitch or simple satin (Params extension)"
-msgstr ""
+msgstr "Convertir en point droit ou satin simple (Params extension)"
 
 #: lib/elements/satin_column.py:37
 msgid "Unequal number of points"
-msgstr ""
+msgstr "Nombre de points inégal"
 
 #: lib/elements/satin_column.py:38
 msgid "Satin column: There are no rungs and rails have an an unequal number of points."
-msgstr ""
+msgstr "Colonne satin: Il n'y a aucun échelon ou les rails n'ont pas le même nombre de points."
 
 #: lib/elements/satin_column.py:40
 msgid "The easiest way to solve this issue is to add one or more rungs. "
-msgstr ""
+msgstr "La façon la plus simple de résoudre ce problème est d'ajouter un ou plusieurs échelons. "
 
 #: lib/elements/satin_column.py:41
 msgid "Rungs control the stitch direction in satin columns."
-msgstr ""
+msgstr "Les échelons contrôlent la direction des points dans les colonnes Satin."
 
 #: lib/elements/satin_column.py:42
 msgid "* With the selected object press \"P\" to activate the pencil tool."
-msgstr ""
+msgstr "*L'objet étant sélectionné appuyez sur \"P\" pour activer l'outil crayon."
 
 #: lib/elements/satin_column.py:43
 msgid "* Hold \"Shift\" while drawing the rung."
-msgstr ""
+msgstr "*Maintenir la touche \"Majuscule\" enfoncée en traçant l'échelon."
 
 #: lib/elements/satin_column.py:47
 msgid "Each rung should intersect both rails once."
-msgstr ""
+msgstr "Chaque échelon doit couper les deux rails une fois."
 
 #: lib/elements/satin_column.py:51
 msgid "Rung doesn't intersect rails"
-msgstr ""
+msgstr "L'échelon ne coupe pas les rails"
 
 #: lib/elements/satin_column.py:52
 msgid "Satin column: A rung doesn't intersect both rails."
-msgstr ""
+msgstr "Colonne satin: Un échelon ne coupe pas les rails."
 
 #: lib/elements/satin_column.py:56
 msgid "Rung intersects too many times"
-msgstr ""
+msgstr "L'échelon coupe trop de fois"
 
 #: lib/elements/satin_column.py:57
 msgid "Satin column: A rung intersects a rail more than once."
-msgstr ""
+msgstr "Colonne satin: Un échelon coupe un rail plus d'une fois."
 
 #: lib/elements/satin_column.py:61
 msgid "Satin Column"
@@ -628,19 +628,19 @@ msgstr "Veuillez sélection une ou plusieurs colonnes satin."
 #. This was previously: "No embroiderable paths selected."
 #: lib/extensions/base.py:127
 msgid "Ink/Stitch doesn't know how to work with any of the objects you've selected."
-msgstr ""
+msgstr "Ink/Stitch ne sait comment traiter aucun des objets que vous avez sélectionnés."
 
 #: lib/extensions/base.py:129
 msgid "There are no objects in the entire document that Ink/Stitch knows how to work with."
-msgstr ""
+msgstr "Il n'y a aucun objet dans tout le document sur lequel Ink/Stitch sait quoi faire."
 
 #: lib/extensions/base.py:131
 msgid "Ink/Stitch only knows how to work with paths.  It can't work with objects like text, rectangles, or circles."
-msgstr ""
+msgstr "Ink/Stitch sait seulement traiter des chemins. Il ne peut pas traiter les objets comme le texte, les rectangles ou les cercles."
 
 #: lib/extensions/base.py:132
 msgid "Tip: select some objects and use Path -> Object to Path to convert them to paths."
-msgstr ""
+msgstr "Astuce: sélectionner des objets et utiliser -> Objet en chemin pour les convertir en chemin."
 
 #: lib/extensions/convert_to_satin.py:30
 msgid "Please select at least one line to convert to a satin column."
@@ -743,7 +743,7 @@ msgstr "Broder les lignes de texte avant et arrière"
 
 #: lib/extensions/lettering.py:42
 msgid "Add trims"
-msgstr ""
+msgstr "Ajouter des coupes"
 
 #: lib/extensions/lettering.py:46
 msgid "Text"
@@ -755,7 +755,7 @@ msgstr "Appliquer et Quitter"
 
 #: lib/extensions/lettering.py:134
 msgid "Unable to find any fonts!  Please try reinstalling Ink/Stitch."
-msgstr ""
+msgstr "Impossible de trouver une police! S'il vous plait essayez de réinstaller Ink/Stitch."
 
 #. The user has chosen to scale the text by some percentage
 #. (50%, 200%, etc).  If you need to use the percentage symbol,
@@ -763,7 +763,7 @@ msgstr ""
 #: lib/extensions/lettering.py:191
 #, python-format
 msgid "Text scale %s%%"
-msgstr ""
+msgstr "Échelle du texte %s%%"
 
 #: lib/extensions/lettering.py:316
 msgid "Please select only one block of text."
@@ -1766,7 +1766,7 @@ msgstr "Paramètres"
 
 #: templates/print.inx:3
 msgid "Print / Realistic Preview"
-msgstr ""
+msgstr "Imprimer / Prévisualisation réaliste"
 
 #: templates/simulate.inx:3
 msgid "Simulate"
