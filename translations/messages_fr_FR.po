@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2019-08-13 20:36+0000\n"
-"PO-Revision-Date: 2019-09-09 20:47\n"
+"PO-Revision-Date: 2019-09-10 20:48\n"
 "Last-Translator: Lex Neva (lexelby)\n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 #. name of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:2
 msgid "Ink/Stitch Small Font"
-msgstr "Petite fonte Ink/Stitch"
+msgstr ""
 
 #. description of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:4
@@ -46,7 +46,7 @@ msgstr "TT directors"
 #. description of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:12
 msgid "A font suited for directing"
-msgstr "Une fonte faite diriger"
+msgstr ""
 
 #. name of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:14
@@ -403,39 +403,39 @@ msgstr "* Faire Chemin > Objet en chemin."
 
 #: lib/elements/polyline.py:18
 msgid "* Optional: Run the Params extension and check the \"manual stitch\" box."
-msgstr ""
+msgstr "* A option: Exécuter l'extension Params et cocher la boite \"points manuels\"."
 
 #: lib/elements/satin_column.py:16
 msgid "Satin column has fill"
-msgstr ""
+msgstr "La colonne satin a un remplissage"
 
 #: lib/elements/satin_column.py:17
 msgid "Satin column: Object has a fill (but should not)"
-msgstr ""
+msgstr "Colonne satin: L'objet a un remplissage (mais ne devrait pas)"
 
 #: lib/elements/satin_column.py:20
 msgid "* Open the Fill and Stroke panel"
-msgstr ""
+msgstr "* Ouvrir le panneau Fond et contour"
 
 #: lib/elements/satin_column.py:21
 msgid "* Open the Fill tab"
-msgstr ""
+msgstr "* Ouvrir l'onglet Fond"
 
 #: lib/elements/satin_column.py:22
 msgid "* Disable the Fill"
-msgstr ""
+msgstr "* Empêcher le Fond"
 
 #: lib/elements/satin_column.py:23
 msgid "* Alternative: open Params and switch this path to Stroke to disable Satin Column mode"
-msgstr ""
+msgstr "* Alternative: Ouvrir Params et basculer ce chemin vers Contour pour empêcher le mode colonne satin"
 
 #: lib/elements/satin_column.py:28
 msgid "Too few subpaths"
-msgstr ""
+msgstr "Trop peu de sous-chemin"
 
 #: lib/elements/satin_column.py:29
 msgid "Satin column: Object has too few subpaths.  A satin column should have at least two subpaths (the rails)."
-msgstr ""
+msgstr "Colonne satin: L'objet a trop peu de sous-chemins. Une colonne satin doit avoir au moins deux sous-chemins (les rails)."
 
 #: lib/elements/satin_column.py:31
 msgid "* Add another subpath (select two rails and do Path > Combine)"
@@ -830,35 +830,35 @@ msgstr "Utiliser les derniers paramètres"
 
 #: lib/extensions/troubleshoot.py:36
 msgid "All selected shapes are valid!"
-msgstr ""
+msgstr "Toutes les formes sélectionnées sont valides!"
 
 #: lib/extensions/troubleshoot.py:38
 msgid "Tip: If you are still having an issue with an object not being rendered, you might need to convert it it to a path (Path -> Object to Path) or check if it is possibly in an ignored layer."
-msgstr ""
+msgstr "Astuce: si vous avez encore un problème avec un objet qui n'est pas traité, vous devriez peut-être le convertir en chemin (Chemin -> objet en chemin) ou vérifier qu'il n'est pas dans un calque ignoré."
 
 #: lib/extensions/troubleshoot.py:62
 msgid "Invalid Pointer"
-msgstr ""
+msgstr "Curseur invalide"
 
 #: lib/extensions/troubleshoot.py:71
 msgid "Description"
-msgstr ""
+msgstr "Description"
 
 #: lib/extensions/troubleshoot.py:93 lib/extensions/troubleshoot.py:141
 msgid "Troubleshoot"
-msgstr ""
+msgstr "Résolution de problèmes"
 
 #: lib/extensions/troubleshoot.py:109
 msgid "Errors"
-msgstr ""
+msgstr "Erreurs"
 
 #: lib/extensions/troubleshoot.py:118
 msgid "Warnings"
-msgstr ""
+msgstr "Avertissements"
 
 #: lib/extensions/troubleshoot.py:159
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
-msgstr ""
+msgstr "Il est possible qu'un objet contienne plus d'une erreur, même s'il n'y a qu'un conseil par objet. Relancer cette fonction quand il y a plus d'erreurs. Enlever les conseils en supprimant le calque \"Résolution de problèmes\" dans le dialogue objets (Objet -> Objets...)."
 
 #: lib/extensions/zip.py:49
 msgid "No embroidery file formats selected."
@@ -1012,7 +1012,7 @@ msgstr "Erreur d’écriture pour %(path)s: %(error)s"
 
 #: lib/stitches/auto_satin.py:652
 msgid "Auto-Satin"
-msgstr ""
+msgstr "Satin automatique"
 
 #. Label for a satin column created by Auto-Route Satin Columns and Lettering
 #. extensions
@@ -1251,7 +1251,7 @@ msgstr "Imprimer"
 
 #: print/templates/ui.html:5
 msgid "Save PDF"
-msgstr ""
+msgstr "Enregistrer PDF"
 
 #: print/templates/ui.html:6 print/templates/ui.html:16
 msgid "Settings"
@@ -1686,23 +1686,23 @@ msgstr "Enregistrer la création au format %(file_extension)s à l’aide d’In
 
 #: templates/output_params_txt.xml:2
 msgid "laser mode"
-msgstr ""
+msgstr "mode laser"
 
 #: templates/output_params_txt.xml:2
 msgid "Laser mode (generate g-code for grbl laser mode)"
-msgstr ""
+msgstr "Mode laser (générer du G-code pour le mode laser grbl)"
 
 #: templates/output_params_txt.xml:3
 msgid "dynamic laser power"
-msgstr ""
+msgstr "puissance dynamique du laser"
 
 #: templates/output_params_txt.xml:3
 msgid "Use Grbl's M4 dynamic laser power mode.  Ensures consistent laser cutting power regardless of motor speed.  Only for PWM-capable lasers."
-msgstr ""
+msgstr "Utiliser le mode puissance laser dynamique du Grbl. Assure une puissance consistante indépendamment de la vitesse du moteur. Seulement pour des laser capables PWM."
 
 #: templates/output_params_txt.xml:4
 msgid "laser warm-up time"
-msgstr ""
+msgstr "temps de réchauffement du laser"
 
 #: templates/output_params_txt.xml:4
 msgid "When turning on the laser, wait this many seconds for laser to warm up (G4 command)"
