@@ -477,7 +477,10 @@
       },
       moveCursor() {
         let stitch = this.stitches[Math.floor(this.currentStitch)]
-        if (stitch !== null && stitch !== undefined) {
+        if (stitch === null || stitch === undefined) {
+          this.cursor.hide()
+        } else {
+          this.cursor.show()
           this.cursor.center(stitch.x, stitch.y)
         }
       },
