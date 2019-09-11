@@ -585,7 +585,13 @@
         this.generateColorSections()
         this.loading = false
 
-        this.cursor = this.svg.path("M0,0 h1 M0.5,-0.5 v1").stroke({width: 0.5, color: '#000000'})
+        this.cursor =
+          this.svg.path("M0,0 v2.8 h1.2 v-2.8 h2.8 v-1.2 h-2.8 v-2.8 h-1.2 v2.8 h-2.8 v1.2 h2.8")
+          .stroke({
+            width: 0.1,
+            color: '#FFFFFF',
+          })
+          .fill('#000000')
         this.cursor.node.classList.add("cursor")
 
         // v-on:keydown doesn't seem to work, maybe an Electron issue?
