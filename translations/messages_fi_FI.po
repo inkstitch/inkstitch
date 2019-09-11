@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2019-08-13 20:36+0000\n"
-"PO-Revision-Date: 2019-09-10 20:48\n"
+"PO-Revision-Date: 2019-09-11 20:48\n"
 "Last-Translator: Lex Neva (lexelby)\n"
 "Language-Team: Finnish\n"
 "MIME-Version: 1.0\n"
@@ -156,7 +156,7 @@ msgstr ""
 
 #: lib/commands.py:51
 msgid "Jump destination for Stop commands (a.k.a. \"Frame Out position\")."
-msgstr ""
+msgstr "Hyppää pysäytyspaikkaan (kehyksen irrotus paikka)."
 
 #: lib/commands.py:209
 #, python-format
@@ -252,7 +252,7 @@ msgstr "Sisennys"
 
 #: lib/elements/auto_fill.py:100
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
-msgstr ""
+msgstr "Kutista muotoa ennen pohjan tikkaamista, estääksesi pohjatikkien näkymisen täyttötikin ulkopuolelta."
 
 #: lib/elements/auto_fill.py:111 lib/elements/fill.py:72
 msgid "Skip last stitch in each row"
@@ -260,7 +260,7 @@ msgstr "Hyppää yli joka rivin viimenen tikki"
 
 #: lib/elements/auto_fill.py:112 lib/elements/fill.py:73
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
-msgstr ""
+msgstr "Viimenen tikki jokaisessa rivissä on melko lähellä ensimmäistä tikkiä seuraavassa rivissä. Viimeisen tikin ohitus vähentää tikkimäärää ja tiheyttä."
 
 #: lib/elements/auto_fill.py:122
 msgid "Expand"
@@ -280,7 +280,7 @@ msgstr ""
 
 #: lib/elements/auto_fill.py:226
 msgid "Error during autofill!  This means that there is a problem with Ink/Stitch."
-msgstr ""
+msgstr "Virhe automaattisessa täytössä! Virhe ohjelmistossa."
 
 #. this message is followed by a URL:
 #. https://github.com/inkstitch/inkstitch/issues/new
@@ -379,11 +379,11 @@ msgstr ""
 
 #: lib/elements/fill.py:117
 msgid "Stagger rows this many times before repeating"
-msgstr ""
+msgstr "Erota rivit näin monta kertaa ennenkuin toistetaan"
 
 #: lib/elements/fill.py:118
 msgid "Setting this dictates how many rows apart the stitches will be before they fall in the same column position."
-msgstr ""
+msgstr "Tämä määritys määrittää kuinka monta riviä eroa tikeissä on ennenkuin palataan samaan polun asentoon."
 
 #: lib/elements/polyline.py:11
 msgid "Object is a PolyLine"
@@ -431,55 +431,55 @@ msgstr ""
 
 #: lib/elements/satin_column.py:28
 msgid "Too few subpaths"
-msgstr ""
+msgstr "Liian vähän alipolkuja"
 
 #: lib/elements/satin_column.py:29
 msgid "Satin column: Object has too few subpaths.  A satin column should have at least two subpaths (the rails)."
-msgstr ""
+msgstr "Satiinipolku: objektilla on liianvähän alipolkuja. Satiinipolulla pitää olla vähintään kaksi alipolkua."
 
 #: lib/elements/satin_column.py:31
 msgid "* Add another subpath (select two rails and do Path > Combine)"
-msgstr ""
+msgstr "* Lisää toinen alipolku (valitse 2 polkua ja tee polku>yhdistä)"
 
 #: lib/elements/satin_column.py:32
 msgid "* Convert to running stitch or simple satin (Params extension)"
-msgstr ""
+msgstr "* Muuta juoksevaksitikiksi tai yksinkertaiseksi satiiniksi (parametri lisäosa)"
 
 #: lib/elements/satin_column.py:37
 msgid "Unequal number of points"
-msgstr ""
+msgstr "Pisteitä pariton määrä"
 
 #: lib/elements/satin_column.py:38
 msgid "Satin column: There are no rungs and rails have an an unequal number of points."
-msgstr ""
+msgstr "Saatiinipolku: Apuviivat puuttuu ja pisteitä on pariton määrä."
 
 #: lib/elements/satin_column.py:40
 msgid "The easiest way to solve this issue is to add one or more rungs. "
-msgstr ""
+msgstr "Helpoin tapa ratkaista tämä on lisätä yksi tai useampi apuviiva. "
 
 #: lib/elements/satin_column.py:41
 msgid "Rungs control the stitch direction in satin columns."
-msgstr ""
+msgstr "Apuviivat määrittävät satiinin suunnan satiini polulla."
 
 #: lib/elements/satin_column.py:42
 msgid "* With the selected object press \"P\" to activate the pencil tool."
-msgstr ""
+msgstr "*valitussa objektissa paina \"P\" aktivoidaksesi kynätyökalun."
 
 #: lib/elements/satin_column.py:43
 msgid "* Hold \"Shift\" while drawing the rung."
-msgstr ""
+msgstr "*Pidä \"shift\" pohjassa piirtäessäsi apuviivan."
 
 #: lib/elements/satin_column.py:47
 msgid "Each rung should intersect both rails once."
-msgstr ""
+msgstr "Jokaisen apuviivan pitää ylittää molemmat satiiniviivat."
 
 #: lib/elements/satin_column.py:51
 msgid "Rung doesn't intersect rails"
-msgstr ""
+msgstr "Apuviiva ei ylitä satiinipolkua"
 
 #: lib/elements/satin_column.py:52
 msgid "Satin column: A rung doesn't intersect both rails."
-msgstr ""
+msgstr "Satiinipolku: apuviiva ei ylitä molempia satiiniviivoja."
 
 #: lib/elements/satin_column.py:56
 msgid "Rung intersects too many times"
@@ -515,7 +515,7 @@ msgstr "Veto kompensaatio"
 
 #: lib/elements/satin_column.py:96
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape.  This setting expands each pair of needle penetrations outward from the center of the satin column."
-msgstr ""
+msgstr "Satiinitikki vetää kangasta yhteen, lopputuloksena on satiini polku joka on kapeampi kuin mallinnettu. Tämä asetus kompensoi satiinin kapenemista."
 
 #: lib/elements/satin_column.py:108
 msgid "Contour underlay"
@@ -557,11 +557,11 @@ msgstr "Sik-Sak pohjustus"
 
 #: lib/elements/satin_column.py:150
 msgid "Zig-Zag spacing (peak-to-peak)"
-msgstr ""
+msgstr "Sik-Sak väli (huipustahuippuun)"
 
 #: lib/elements/satin_column.py:151
 msgid "Distance between peaks of the zig-zags."
-msgstr ""
+msgstr "Sik-Sak huippujen väli."
 
 #: lib/elements/satin_column.py:161
 msgid "Inset amount"
@@ -573,19 +573,19 @@ msgstr ""
 
 #: lib/elements/stroke.py:18
 msgid "Satin stitch along paths"
-msgstr ""
+msgstr "Satiini tikki poluille"
 
 #: lib/elements/stroke.py:32
 msgid "Running stitch length"
-msgstr ""
+msgstr "Juoksutikin pituus"
 
 #: lib/elements/stroke.py:33
 msgid "Length of stitches in running stitch mode."
-msgstr ""
+msgstr "Tikinpituus juoksutikki moodissa."
 
 #: lib/elements/stroke.py:44
 msgid "Bean stitch number of repeats"
-msgstr ""
+msgstr "Helmitikki toistojen määrä"
 
 #: lib/elements/stroke.py:45
 msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.  Only applies to running stitch."
@@ -618,7 +618,7 @@ msgstr ""
 
 #: lib/extensions/auto_satin.py:29
 msgid "Please ensure that at most one start and end command is attached to the selected satin columns."
-msgstr ""
+msgstr "Huolehdi että enintään yksi aloitus ja lopetus komento on liitetty valittuun satiinipolkuun."
 
 #. auto-route satin columns extension
 #: lib/extensions/auto_satin.py:43
@@ -670,7 +670,8 @@ msgstr ""
 #: lib/extensions/embroider.py:38
 msgid "\n\n"
 "Seeing a 'no such option' message?  Please restart Inkscape to fix."
-msgstr ""
+msgstr "\n\n"
+"Jos näät 'ei sellaista vaihtoehtoa' viestin? Käynnistä Inkscape uudelleen."
 
 #: lib/extensions/flip.py:24
 msgid "Please select one or more satin columns to flip."
@@ -734,7 +735,7 @@ msgstr "Ink/Stitch Kirjaimet"
 
 #: lib/extensions/lettering.py:37
 msgid "Options"
-msgstr ""
+msgstr "Asetukset"
 
 #: lib/extensions/lettering.py:39
 msgid "Stitch lines of text back and forth"
@@ -774,11 +775,11 @@ msgstr ""
 
 #: lib/extensions/object_commands.py:16
 msgid "Please select one or more objects to which to attach commands."
-msgstr ""
+msgstr "Valitse yksi tai useampi objekti liittääksesi käskyjä."
 
 #: lib/extensions/object_commands.py:24
 msgid "Please choose one or more commands to attach."
-msgstr ""
+msgstr "Valitse lisättäväksi yksi tai useampi komento."
 
 #: lib/extensions/params.py:194
 msgid "These settings will be applied to 1 object."
@@ -805,7 +806,7 @@ msgstr "Tämän välilehden sammuttaminen sammuttaa seuraavan välilehden."
 #: lib/extensions/params.py:208
 #, python-format
 msgid "Enabling this tab will disable %s and vice-versa."
-msgstr ""
+msgstr "Tämän välilehden käyttöönotto poistaa käytöstä %s ja päinvastoin."
 
 #: lib/extensions/params.py:238
 msgid "Inkscape objects"
@@ -813,11 +814,11 @@ msgstr "Inkscapen objekteja"
 
 #: lib/extensions/params.py:295
 msgid "Click to force this parameter to be saved when you click \"Apply and Quit\""
-msgstr ""
+msgstr "Klikkaa pakottaaksesi tämän asetuksen tallentumaan kun klikkaat \"Hyväksy ja lopeta\""
 
 #: lib/extensions/params.py:303
 msgid "This parameter will be saved when you click \"Apply and Quit\""
-msgstr ""
+msgstr "Tämä asetus tullaan tallentamaan kun klikkaat \"Hyväksy ja lopeta\""
 
 #: lib/extensions/params.py:319
 msgid "Embroidery Params"
@@ -837,7 +838,7 @@ msgstr ""
 
 #: lib/extensions/troubleshoot.py:62
 msgid "Invalid Pointer"
-msgstr ""
+msgstr "Epäkelpo osoitin"
 
 #: lib/extensions/troubleshoot.py:71
 msgid "Description"
@@ -861,7 +862,7 @@ msgstr ""
 
 #: lib/extensions/zip.py:49
 msgid "No embroidery file formats selected."
-msgstr ""
+msgstr "Ei brodeeraus tiedostomuotoa valittuna."
 
 #: lib/gui/presets.py:47
 msgid "Presets"
@@ -899,7 +900,7 @@ msgstr "Esiasetusta \"%s\" ei löydy."
 #: lib/gui/presets.py:143
 #, python-format
 msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
-msgstr ""
+msgstr "Pikavalinta \"%s\" on jo olemassa. Käytä muuta nimeä tai paina ylikirjoita"
 
 #. command label at bottom of simulator window
 #: lib/gui/simulator.py:20
@@ -1018,14 +1019,14 @@ msgstr "Automaattinen satiini"
 #: lib/stitches/auto_satin.py:699
 #, python-format
 msgid "AutoSatin %d"
-msgstr ""
+msgstr "Automaattinen satiini %d"
 
 #. Label for running stitch (underpathing) created by Auto-Route Satin Columns
 #. amd Lettering extensions
 #: lib/stitches/auto_satin.py:702
 #, python-format
 msgid "AutoSatin Running Stitch %d"
-msgstr ""
+msgstr "Automaattinen satiini juoksevatikki %d"
 
 #: lib/svg/rendering.py:231
 msgid "Stitch Plan"
@@ -1319,7 +1320,7 @@ msgstr ""
 #: print/templates/ui.html:65 print/templates/ui.html:108
 #: print/templates/ui.html:142
 msgid "Save as defaults"
-msgstr ""
+msgstr "Tallenna vakioksi"
 
 #: print/templates/ui.html:70
 msgid "Logo"
@@ -1343,7 +1344,7 @@ msgstr "tikkiä minuutissa "
 
 #: print/templates/ui.html:121
 msgid "Time Factors"
-msgstr ""
+msgstr "Ajan kertoimet"
 
 #: print/templates/ui.html:124
 msgid "Includes average time for preparing the machine, thread breaks and/or bobbin changes, etc."
@@ -1351,7 +1352,7 @@ msgstr ""
 
 #: print/templates/ui.html:124
 msgid "seconds to add to total time*"
-msgstr ""
+msgstr "sekunnit lisättäväksi kokonaisaikaan*"
 
 #: print/templates/ui.html:128
 msgid "This will be added to the total time."
@@ -1375,7 +1376,7 @@ msgstr ""
 
 #: print/templates/ui.html:147
 msgid "Thread Palette"
-msgstr ""
+msgstr "Lankapaletti"
 
 #: print/templates/ui.html:150
 msgid "None"
@@ -1408,7 +1409,7 @@ msgstr "Lisää kaikkiin"
 #: print/templates/ui_svg_action_buttons.html:9
 #: print/templates/ui_svg_action_buttons.html:12
 msgid "Realistic"
-msgstr ""
+msgstr "Realistinen"
 
 #. description for pyembroidery file format: pec
 #. description for pyembroidery file format: pes
@@ -1576,7 +1577,7 @@ msgstr "G-code brodeeraus tiedostomuoto"
 
 #: templates/auto_satin.inx:3
 msgid "Auto-Route Satin Columns"
-msgstr ""
+msgstr "Satiinipolun automaattinen reititys"
 
 #: templates/auto_satin.inx:7
 msgid "Trim jump stitches"
@@ -1701,7 +1702,7 @@ msgstr ""
 
 #: templates/output_params_txt.xml:4
 msgid "laser warm-up time"
-msgstr ""
+msgstr "laaserin lämmitys aika"
 
 #: templates/output_params_txt.xml:4
 msgid "When turning on the laser, wait this many seconds for laser to warm up (G4 command)"
@@ -1729,7 +1730,7 @@ msgstr ""
 
 #: templates/output_params_txt.xml:7
 msgid "increment z coordinate by this amount per stitch"
-msgstr ""
+msgstr "lisää Z koordinaattia tämän verran jokaisella tikillä"
 
 #: templates/output_params_txt.xml:8
 msgid "spindle speed"
