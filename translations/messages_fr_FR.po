@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2019-08-13 20:36+0000\n"
-"PO-Revision-Date: 2019-09-11 20:47\n"
+"PO-Revision-Date: 2019-09-12 20:48\n"
 "Last-Translator: Lex Neva (lexelby)\n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -355,11 +355,11 @@ msgstr "L’angle augmente dans un sens anti-horaire.  0 est horizontal.  Les an
 
 #: lib/elements/fill.py:83
 msgid "Flip fill (start right-to-left)"
-msgstr "Invertir remplissage (début droite vers la gauche)"
+msgstr "Intervertir le remplissage (début à la droite vers la gauche)"
 
 #: lib/elements/fill.py:84
 msgid "The flip option can help you with routing your stitch path.  When you enable flip, stitching goes from right-to-left instead of left-to-right."
-msgstr "L’option invertir peut vous aider avec le routage de votre chemin de broderie.  Lorsque vous activez l'inversion, la broderie va de droite à gauche au lieu de gauche à droite."
+msgstr "L’option intervertir peut vous aider avec le routage de votre chemin de broderie.  Lorsque vous activez l'inversion, la broderie va de droite à gauche au lieu de gauche à droite."
 
 #: lib/elements/fill.py:93
 msgid "Spacing between rows"
@@ -675,7 +675,7 @@ msgstr "\n\n"
 
 #: lib/extensions/flip.py:24
 msgid "Please select one or more satin columns to flip."
-msgstr "Veuillez sélectionner une ou plusieurs colonnes satin pour retourner."
+msgstr "Veuillez sélectionner une ou plusieurs colonnes satin pour intervertir leur rails."
 
 #: lib/extensions/install.py:25
 msgid "Ink/Stitch can install files (\"add-ons\") that make it easier to use Inkscape to create machine embroidery designs.  These add-ons will be installed:"
@@ -1638,7 +1638,7 @@ msgstr "Laissez vide pour enregistrer la sortie dans le dossier d’Inkscape."
 
 #: templates/flip.inx:3
 msgid "Flip Satin Column Rails"
-msgstr "Invertir les rails satin"
+msgstr "Intervertir les rails satin"
 
 #: templates/global_commands.inx:3
 msgid "Add Commands"
