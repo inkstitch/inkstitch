@@ -8,81 +8,127 @@
             <div class="control-info" v-show="infoExpanded">
               <h1>
                 <font-awesome-icon icon="info" class="info-icon"/>
-                Simulator Shortcut Keys
+                <translate>Simulator Shortcut Keys</translate>
               </h1>
               <div>
-                <div><p>Button</p>
-                  <p>Function</p>
-                  <p>Shortcut Key</p></div>
+                <div>
+                  <p>
+                    <translate>Button</translate>
+                  </p>
+                  <p>
+                    <translate>Function</translate>
+                  </p>
+                  <p>
+                    <translate>Shortcut Key</translate>
+                  </p>
+                </div>
                 <div>
                   <p>
                     <font-awesome-icon icon="pause" class="fa-button"/>
                   </p>
-                  <p>Pause</p>
-                  <p>Space</p>
+                  <p>
+                    <translate>Pause</translate>
+                  </p>
+                  <p>
+                    <translate>Space</translate>
+                  </p>
                 </div>
                 <div>
                   <p>
                     <font-awesome-icon icon="play" class="fa-button"/>
                   </p>
-                  <p>Play</p>
+                  <p>
+                    <translate>Play</translate>
+                  </p>
                   <p>P</p>
                 </div>
                 <div>
                   <p>
                     <font-awesome-icon icon="angle-double-left" class="fa-button"/>
                   </p>
-                  <p>Play backward</p>
-                  <p>← Arrow lef</p>
+                  <p>
+                    <translate>Play backward</translate>
+                  </p>
+                  <p>
+                    <translate translate-comment="name for left arrow keyboard key">← Arrow left</translate>
+                  </p>
                 </div>
                 <div>
                   <p>
                     <font-awesome-icon icon="angle-double-right" class="fa-button"/>
                   </p>
-                  <p>Play forward</p>
-                  <p>→ Arrow right</p>
+                  <p>
+                    <translate>Play forward</translate>
+                  </p>
+                  <p>
+                    <translate translate-comment="name for right arrow keyboard key">→ Arrow right</translate>
+                  </p>
                 </div>
                 <div>
                   <p>
                     <font-awesome-icon icon="shoe-prints" class="fa-button fa-flip-horizontal"/>
                   </p>
-                  <p>One step backward</p>
-                  <p>- Minus</p>
+                  <p>
+                    <translate translate-comment="description of keyboard shortcut that moves one stitch backward in simulator">
+                      One step backward
+                    </translate>
+                  </p>
+                  <p>-
+                    <translate translate-comment="name for this keyboard key: -">Minus</translate>
+                  </p>
                 </div>
                 <div>
                   <p>
                     <font-awesome-icon icon="shoe-prints" class="fa-button"/>
                   </p>
-                  <p>One step forward</p>
-                  <p>+ Plus</p>
+                  <p>
+                    <translate translate-comment="description of keyboard shortcut that moves one stitch forward in simulator">
+                      One step forward
+                    </translate>
+                  </p>
+                  <p>
+                    <translate translate-comment="name for this keyboard key: +">+ Plus</translate>
+                  </p>
                 </div>
                 <div>
                   <p>
                     <font-awesome-icon icon="step-backward" class="fa-button"/>
                   </p>
-                  <p>Jump to previous command</p>
+                  <p>
+                    <translate>Jump to previous command</translate>
+                  </p>
                   <p>?</p>
                 </div>
                 <div>
                   <p>
                     <font-awesome-icon icon="step-forward" class="fa-button"/>
                   </p>
-                  <p>Jump to next command</p>
+                  <p>
+                    <translate>Jump to next command</translate>
+                  </p>
                   <p>?</p>
                 </div>
                 <div>
                   <p>
                     <font-awesome-icon icon="hippo" class="fa-button"/>
                   </p>
-                  <p>Slow down</p>
-                  <p>↓ Arrow down</p>
+                  <p>
+                    <translate>Slow down</translate>
+                  </p>
+                  <p>
+                    <translate translate-comment="name for down arrow keyboard key">↓ Arrow down</translate>
+                  </p>
                 </div>
                 <div>
                   <p>
                     <font-awesome-icon icon="horse" class="fa-button"/>
                   </p>
-                  <p>Speed up</p>
-                  <p>↑ Arrow up</p>
+                  <p>
+                    <translate>Speed up</translate>
+                  </p>
+                  <p>
+                    <translate translate-comment="name for up arrow keyboard key">↑ Arrow up</translate>
+                  </p>
                 </div>
               </div>
             </div>
@@ -96,62 +142,68 @@
       <collapse-transition>
         <div class="panel" v-show="controlsExpanded">
           <fieldset class="controls">
-            <legend>Controls</legend>
-            <button v-on:click="stop" :class="{pressed: paused}" title="Pause (space)">
+            <legend>
+              <translate>Controls</translate>
+            </legend>
+            <button v-on:click="stop" :class="{pressed: paused}" :title="$gettext('Pause (space)')">
               <font-awesome-icon icon="pause" size="2x" class="fa-button"/>
             </button>
-            <button v-on:click="start" :class="{pressed: animating}" title="Play (arrow left | arrow right)">
+            <button v-on:click="start" :class="{pressed: animating}" :title="$gettext('Play (arrow left | arrow right)')">
               <font-awesome-icon icon="play" size="2x" class="fa-button"/>
             </button>
-            <button v-on:click="animationReverse" :class="{pressed: reverse}" title="Play backward (arrow left)">
+            <button v-on:click="animationReverse" :class="{pressed: reverse}" :title="$gettext('Play backward (arrow left)')">
               <font-awesome-icon icon="angle-double-left" size="2x" class="fa-button" :mask="['fas', 'stop']"/>
             </button>
-            <button v-on:click="animationForward" :class="{pressed: forward}" title="Play forward (arrow right)">
+            <button v-on:click="animationForward" :class="{pressed: forward}" :title="$gettext('Play forward (arrow right)')">
               <font-awesome-icon icon="angle-double-right" size="2x" class="fa-button" :mask="['fas', 'stop']"/>
             </button>
-            <button v-on:click="animationBackwardOneStitch" title="One step backward (-)">
+            <button v-on:click="animationBackwardOneStitch" :title="$gettext('One step backward (-)')">
               <font-awesome-icon icon="shoe-prints" size="2x" class="fa-button fa-flip-horizontal"/>
             </button>
-            <button v-on:click="animationForwardOneStitch" title="One step forward (+)">
+            <button v-on:click="animationForwardOneStitch" :title="$gettext('One step forward (+)')">
               <font-awesome-icon icon="shoe-prints" size="2x" class="fa-button"/>
             </button>
-            <button v-on:click="animationPreviousCommand" title="Jump to previous command (?)">
+            <button v-on:click="animationPreviousCommand" :title="$gettext('Jump to previous command (?)')">
               <font-awesome-icon icon="step-backward" size="2x" class="fa-button"/>
             </button>
-            <button v-on:click="animationNextCommand" title="Jump to next command (?)">
+            <button v-on:click="animationNextCommand" :title="$gettext('Jump to next command (?)')">
               <font-awesome-icon icon="step-forward" size="2x" class="fa-button"/>
             </button>
           </fieldset>
           <fieldset class="speed">
-            <legend>Speed: {{speed}} stitches/sec</legend>
-            <button v-on:click="animationSlowDown" title="Slow down (arrow down)">
+            <legend>
+              <translate :translate-n="speed" translate-plural="Speed: %{speed} stitches/sec">Speed: %{speed} stitch/sec</translate>
+            </legend>
+            <button v-on:click="animationSlowDown" :title="$gettext('Slow down (arrow down)')">
               <font-awesome-icon icon="hippo" size="2x" class="fa-button"/>
             </button>
-            <button v-on:click="animationSpeedUp" title="Speed up (arrow up)">
+            <button v-on:click="animationSpeedUp" :title="$gettext('Speed up (arrow up)')">
               <font-awesome-icon icon="align-right" class="fa-motion-lines"/>
               <font-awesome-icon icon="horse" size="2x" class="fa-button fa-fast"/>
             </button>
           </fieldset>
           <fieldset class="command">
-            <legend>Command</legend>
+            <legend>
+              <translate>Command</translate>
+            </legend>
             <span class="current-command">{{currentCommand}}</span>
           </fieldset>
           <fieldset class="show-commands">
             <legend>Show</legend>
             <span>
-            <input id="trim-checkbox" type="checkbox" v-model="showTrims"/>
-            <label for="trim-checkbox"><font-awesome-icon icon="cut"/> trims</label>
-            <br/>
-            <input id="jump-checkbox" type="checkbox" v-model="showJumps"/>
-            <label for="jump-checkbox"><font-awesome-icon icon="frog"/> jumps</label>
-          </span>
+              <input id="trim-checkbox" type="checkbox" v-model="showTrims"/>
+              <label for="trim-checkbox"><font-awesome-icon icon="cut"/> <translate>trims</translate></label>
+              <br/>
+              <input id="jump-checkbox" type="checkbox" v-model="showJumps"/>
+              <label for="jump-checkbox"><font-awesome-icon icon="frog"/> <translate>jumps</translate></label>
+            </span>
             <span>
-            <input id="color-change-checkbox" type="checkbox" v-model="showColorChanges"/>
-            <label for="color-change-checkbox"><font-awesome-icon icon="exchange-alt"/> color changes</label>
-            <br/>
-            <input id="stop-checkbox" type="checkbox" v-model="showStops"/>
-            <label for="stop-checkbox"><font-awesome-icon icon="pause"/> stops</label>
-          </span>
+              <input id="color-change-checkbox" type="checkbox" v-model="showColorChanges"/>
+              <label for="color-change-checkbox"><font-awesome-icon icon="exchange-alt"/> <translate>color changes</translate></label>
+              <br/>
+              <input id="stop-checkbox" type="checkbox" v-model="showStops"/>
+              <label for="stop-checkbox"><font-awesome-icon icon="pause"/> <translate>stops</translate></label>
+            </span>
             <span class="npp">
             <input id="npp-checkbox" type="checkbox" v-model="showNeedlePenetrationPoints"/>
             <label for="npp-checkbox">
@@ -159,7 +211,7 @@
                 <font-awesome-icon icon="circle" transform="shrink-9"/>
                 <font-awesome-icon icon="minus" class="fa-thin-line"/>
               </font-awesome-layers>
-              needle<br/>points
+              <span v-translate>needle<br/>points</span>
             </label>
           </span>
           </fieldset>
@@ -196,7 +248,9 @@
         <div class="loading-icon">
           <font-awesome-icon icon="spinner" size="4x" pulse/>
         </div>
-        <div class="loading-text">Rendering stitch-plan...</div>
+        <div class="loading-text">
+          <translate>Rendering stitch-plan...</translate>
+        </div>
       </div>
     </loading>
   </div>
@@ -277,16 +331,16 @@
         let label = "STITCH"
         switch (true) {
           case stitch.jump:
-            label = "JUMP"
+            label = this.$gettext("JUMP")
             break
           case stitch.trim:
-            label = "TRIM"
+            label = this.$gettext("TRIM")
             break
           case stitch.stop:
-            label = "STOP"
+            label = this.$gettext("STOP")
             break
           case stitch.color_change:
-            label = "COLOR CHANGE"
+            label = this.$gettext("COLOR CHANGE")
             break
         }
 

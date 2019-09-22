@@ -8,7 +8,7 @@ const url = require('url')
  * Set `__static` path to static files in production
  * https://simulatedgreg.gitbooks.io/electron-vue/content/en/using-static-assets.html
  */
-if (process.env.NODE_ENV == 'development') {
+if (process.env.NODE_ENV === 'development') {
   // we were run as electron --inspect=5858 path/to/main.js <args>
   // so get rid of the first two args
   console.log("args " + process.argv)
@@ -29,7 +29,7 @@ var winURL = null;
 if (targetURL.protocol) {
   winURL = target
 } else {
-  if (process.env.NODE_ENV == 'development') {
+  if (process.env.NODE_ENV === 'development') {
     winURL = `http://localhost:9080/?${targetURL.query || ""}#${targetURL.pathname || ""}`
   } else {
     winURL = `file://${__dirname}/index.html?${targetURL.query || ""}#${targetURL.pathname || ""}`;

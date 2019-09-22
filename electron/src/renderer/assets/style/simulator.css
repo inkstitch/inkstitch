@@ -128,16 +128,13 @@ fieldset button {
   display: inline-block;
 }
 
-fieldset.command span {
-  font-family: sans-serif;
-  font-size: 2rem;
-  vertical-align: middle;
-}
-
 fieldset.command span.current-command {
   display: block;
   width: 18rem;
   margin: 0 auto;
+  font-family: sans-serif;
+  font-size: 2rem;
+  vertical-align: middle;
 }
 
 fieldset.show-commands {

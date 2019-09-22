@@ -17,8 +17,17 @@ messages.po:
 	rm -f messages.po
 	bin/pyembroidery-gettext > pyembroidery-format-descriptions.py
 	bin/inkstitch-fonts-gettext > inkstitch-fonts-metadata.py
-	pybabel extract -o messages.po -F babel.conf --add-location=full --add-comments=l10n,L10n,L10N --sort-by-file --strip-comments -k N_ .
-	rm pyembroidery-format-descriptions.py
+	pybabel extract -o messages-babel.po -F babel.conf --add-location=full --add-comments=l10n,L10n,L10N --sort-by-file --strip-comments -k N_ -k '$$gettext' .
+	rm pyembroidery-format-descriptions.py inkstitch-fonts-metadata.py
+	find electron/src -name '*.html' -o -name '*.js' -o -name '*.vue' | xargs electron/node_modules/.bin/gettext-extract --quiet --attribute v-translate --output messages-vue.po
+	msgcat -o messages.po messages-babel.po messages-vue.po
+
+electron/src/renderer/assets/translations.json: $(addsuffix /LC_MESSAGES/inkstitch.po,$(wildcard locales/*))
+	find locales -name '*.po' -a ! -empty | \
+		xargs electron/node_modules/.bin/gettext-compile --output electron/src/renderer/assets/translations.json
+
+%.po: %.mo
+	msgunfmt -o $@ $<
 
 .PHONY: clean
 clean:
