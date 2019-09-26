@@ -528,6 +528,8 @@
         // SVG.js seems to move the cursor when we resize it, so we need to put
         // it back where it goes.
         this.moveCursor()
+
+        this.adjustScale()
       },
       moveCursor() {
         let stitch = this.stitches[Math.floor(this.currentStitch)]
@@ -538,6 +540,29 @@
           this.cursor.center(stitch.x, stitch.y)
         }
       },
+      adjustScale: throttle(function () {
+          let one_mm = 96 / 25.4 * this.svg.zoom();
+          let scaleWidth = one_mm
+          let simulatorWidth = this.$refs.simulator.getBoundingClientRect().width
+          let maxWidth = Math.min(simulatorWidth / 2, 300)
+
+          while (scaleWidth > maxWidth) {
+            scaleWidth /= 2.0
+          }
+
+          while (scaleWidth < 100) {
+            scaleWidth += one_mm
+          }
+
+          let scaleMM = scaleWidth / one_mm
+
+          this.scale.plot(`M0,0 v10 h${scaleWidth / 2} v-5 v5 h${scaleWidth / 2} v-10`)
+
+          // round and strip trailing zeros, source: https://stackoverflow.com/a/53397618
+          let mm = scaleMM.toFixed(8).replace(/([0-9]+(\.[0-9]+[1-9])?)(\.?0+$)/, '$1')
+          this.scaleLabel.text(`${mm} mm`)
+        }, 100, {leading: true, trailing: true}
+      ),
       generateMarks() {
         this.commandList = Array()
         for (let i = 1; i < this.stitches.length; i++) {
@@ -572,6 +597,23 @@
           let needlePenetrationPoint = add.circle(3).fill(color).hide()
           this.needlePenetrationPoints.push(needlePenetrationPoint)
         })
+      },
+      generateScale() {
+        let svg = SVG(this.$refs.simulator)
+        svg.node.classList.add("simulation-scale")
+        this.scale = svg.path("M0,0").stroke({color: "black", width: "1px"}).fill("none")
+        this.scaleLabel = svg.text("0 mm").move(0, 12)
+        this.scaleLabel.node.classList.add("simulation-scale-label")
+      },
+      generateCursor() {
+        this.cursor =
+          this.svg.path("M0,0 v2.8 h1.2 v-2.8 h2.8 v-1.2 h-2.8 v-2.8 h-1.2 v2.8 h-2.8 v1.2 h2.8")
+          .stroke({
+            width: 0.1,
+            color: '#FFFFFF',
+          })
+          .fill('#000000')
+        this.cursor.node.classList.add("cursor")
       }
     },
     created: function () {
@@ -640,16 +682,10 @@
         this.numStitches = this.stitches.length - 1
         this.generateMarks()
         this.generateColorSections()
-        this.loading = false
+        this.generateScale()
+        this.generateCursor()
 
-        this.cursor =
-          this.svg.path("M0,0 v2.8 h1.2 v-2.8 h2.8 v-1.2 h-2.8 v-2.8 h-1.2 v2.8 h-2.8 v1.2 h2.8")
-          .stroke({
-            width: 0.1,
-            color: '#FFFFFF',
-          })
-          .fill('#000000')
-        this.cursor.node.classList.add("cursor")
+        this.loading = false
 
         // v-on:keydown doesn't seem to work, maybe an Electron issue?
         Mousetrap.bind("up", this.animationSpeedUp)

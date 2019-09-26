@@ -158,13 +158,6 @@ button.pressed {
   border-style: inset;
 }
 
-.simulation {
-  margin: 1rem;
-  flex-grow: 1;
-  flex-shrink: 1;
-  order: -1;
-}
-
 .vue-slider {
   height: 25px !important;
 }
@@ -265,7 +258,16 @@ button.pressed {
 div.simulator::v-deep svg.simulation {
   flex-grow: 1;
   flex-shrink: 1;
+  order: -2;
+}
+
+div.simulator::v-deep svg.simulation-scale {
+  height: 50px;
   order: -1;
+}
+
+div.simulator::v-deep .simulation-scale-label {
+  font-size: 14px;
 }
 
 div.simulator::v-deep .cursor {
