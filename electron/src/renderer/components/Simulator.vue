@@ -97,7 +97,7 @@
                   <p>
                     <translate>Jump to previous command</translate>
                   </p>
-                  <p>?</p>
+                  <p><translate translate-comment="name for page down keyboard key">Page down (PgDn)</translate></p>
                 </div>
                 <div>
                   <p>
@@ -106,7 +106,7 @@
                   <p>
                     <translate>Jump to next command</translate>
                   </p>
-                  <p>?</p>
+                  <p><translate translate-comment="name for page up keyboard key">Page up (PgUp)</translate></p>
                 </div>
                 <div>
                   <p>
@@ -163,10 +163,10 @@
             <button v-on:click="animationForwardOneStitch" :title="$gettext('One step forward (+)')">
               <font-awesome-icon icon="shoe-prints" size="2x" class="fa-button"/>
             </button>
-            <button v-on:click="animationPreviousCommand" :title="$gettext('Jump to previous command (?)')">
+            <button v-on:click="animationPreviousCommand" :title="$gettext('Jump to previous command (Page down)')">
               <font-awesome-icon icon="step-backward" size="2x" class="fa-button"/>
             </button>
-            <button v-on:click="animationNextCommand" :title="$gettext('Jump to next command (?)')">
+            <button v-on:click="animationNextCommand" :title="$gettext('Jump to next command (Page up)')">
               <font-awesome-icon icon="step-forward" size="2x" class="fa-button"/>
             </button>
           </fieldset>
@@ -692,6 +692,8 @@
         Mousetrap.bind("down", this.animationSlowDown)
         Mousetrap.bind("left", this.animationReverse)
         Mousetrap.bind("right", this.animationForward)
+        Mousetrap.bind("pagedown", this.animationPreviousCommand)
+        Mousetrap.bind("pageup", this.animationNextCommand)
         Mousetrap.bind("space", this.toggleAnimation)
         Mousetrap.bind("+", this.animationForwardOneStitch)
         Mousetrap.bind("-", this.animationBackwardOneStitch)
