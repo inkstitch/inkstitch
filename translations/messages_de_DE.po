@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2019-08-13 20:36+0000\n"
-"PO-Revision-Date: 2019-09-12 20:48\n"
+"PO-Revision-Date: 2019-09-30 20:58\n"
 "Last-Translator: Lex Neva (lexelby)\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -31,22 +31,22 @@ msgstr "Für kleine Schriftgrößen geeignet. Der Großbuchstabe \"M\" ist bei 1
 #. name of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:6
 msgid "TT Masters"
-msgstr ""
+msgstr "TT Meister"
 
 #. description of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:8
 msgid "A font suited for heavy typing :)"
-msgstr ""
+msgstr "Eine Schrift geeignete für fett geschriebenes :)"
 
 #. name of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:10
 msgid "TT Directors"
-msgstr ""
+msgstr "TT Directors"
 
 #. description of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:12
 msgid "A font suited for directing"
-msgstr ""
+msgstr "Eine Schrift geeignete für wichtiges"
 
 #. name of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:14
@@ -839,7 +839,7 @@ msgstr "Tipp: Wenn ein Objekt trotzdem nicht umgewandelt wird, musst es vielleic
 
 #: lib/extensions/troubleshoot.py:62
 msgid "Invalid Pointer"
-msgstr ""
+msgstr "Fehlerzeiger"
 
 #: lib/extensions/troubleshoot.py:71
 msgid "Description"
@@ -847,7 +847,7 @@ msgstr "Beschreibung"
 
 #: lib/extensions/troubleshoot.py:93 lib/extensions/troubleshoot.py:141
 msgid "Troubleshoot"
-msgstr ""
+msgstr "Fehlerbehebung"
 
 #: lib/extensions/troubleshoot.py:109
 msgid "Errors"
@@ -1013,7 +1013,7 @@ msgstr "Fehler beim Schreiben in %(path)s: %(error)s"
 
 #: lib/stitches/auto_satin.py:652
 msgid "Auto-Satin"
-msgstr ""
+msgstr "Automatischer Satinstich"
 
 #. Label for a satin column created by Auto-Route Satin Columns and Lettering
 #. extensions
@@ -1691,15 +1691,15 @@ msgstr "Lasermodus"
 
 #: templates/output_params_txt.xml:2
 msgid "Laser mode (generate g-code for grbl laser mode)"
-msgstr ""
+msgstr "Lasermodus (G-Code für den GRBL Lasermodus generieren)"
 
 #: templates/output_params_txt.xml:3
 msgid "dynamic laser power"
-msgstr ""
+msgstr "dynamische Kraft des Lasers"
 
 #: templates/output_params_txt.xml:3
 msgid "Use Grbl's M4 dynamic laser power mode.  Ensures consistent laser cutting power regardless of motor speed.  Only for PWM-capable lasers."
-msgstr ""
+msgstr "Verwende den dynamischen Laserleistungsmodus M4 von GRBL. Gewährleistet eine konstante Laserschneidleistung unabhängig von der Motordrehzahl. Nur für PWM-fähige Laser."
 
 #: templates/output_params_txt.xml:4
 msgid "laser warm-up time"
@@ -1711,7 +1711,7 @@ msgstr "Warte so viele Sekunden nach dem Einschalten des Lasers - Aufwärmphase 
 
 #: templates/output_params_txt.xml:5
 msgid "negate X coordinate values"
-msgstr ""
+msgstr "x-Koordinatenwerte negieren"
 
 #: templates/output_params_txt.xml:5
 msgid "Negate x coordinates"
@@ -1719,7 +1719,7 @@ msgstr "X-Koordinaten negieren"
 
 #: templates/output_params_txt.xml:6
 msgid "negate Y coordinate values"
-msgstr ""
+msgstr "y-Koordinatenwerte negieren"
 
 #: templates/output_params_txt.xml:6
 msgid "Negate y coordinates"
@@ -1727,7 +1727,7 @@ msgstr "Y-Koordinaten negieren"
 
 #: templates/output_params_txt.xml:7
 msgid "Z travel per stitch"
-msgstr ""
+msgstr "Z Weg pro Stich"
 
 #: templates/output_params_txt.xml:7
 msgid "increment z coordinate by this amount per stitch"
@@ -1735,31 +1735,31 @@ msgstr "Erhöhe z-Koordinate um diesen Wert pro Stich"
 
 #: templates/output_params_txt.xml:8
 msgid "spindle speed"
-msgstr ""
+msgstr "Spindeldrehzahl"
 
 #: templates/output_params_txt.xml:8
 msgid "spindle speed (laser power for laser mode, set to -1 to omit)"
-msgstr ""
+msgstr "Spindeldrehzahl (Laserpower für Lasermodus, setze auf -1 um es auszulassen)"
 
 #: templates/output_params_txt.xml:9
 msgid "min spindle speed"
-msgstr ""
+msgstr "minimale Spindeldrehzahl"
 
 #: templates/output_params_txt.xml:9
 msgid "minimum spindle speed value (grbl $31 setting)"
-msgstr ""
+msgstr "minimale Spindeldrehzahl Wert (grbl $31 setting)"
 
 #: templates/output_params_txt.xml:10
 msgid "max spindle speed"
-msgstr ""
+msgstr "maximale Spindeldrehzahl"
 
 #: templates/output_params_txt.xml:10
 msgid "minimum spindle speed value (grbl $30 setting)"
-msgstr ""
+msgstr "minimale Spindeldrehzahl Wert (grbl $30 setting)"
 
 #: templates/output_params_txt.xml:11
 msgid "feed rate (in mm/min, set to -1 to omit)"
-msgstr ""
+msgstr "Vorschubsrate (in mm/min, setzte auf -1 um es auszulassen)"
 
 #: templates/params.inx:3
 msgid "Params"
@@ -1775,7 +1775,7 @@ msgstr "Simulation"
 
 #: templates/troubleshoot.inx:3
 msgid "Troubleshoot Objects"
-msgstr ""
+msgstr "Fehlerbehebung an den Objekten"
 
 #: templates/zip.inx:10
 msgid "Ink/Stitch: ZIP export multiple formats (.zip)"
