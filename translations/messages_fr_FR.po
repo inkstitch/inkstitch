@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2019-08-13 20:36+0000\n"
-"PO-Revision-Date: 2019-09-30 20:58\n"
+"PO-Revision-Date: 2019-10-02 20:59\n"
 "Last-Translator: Lex Neva (lexelby)\n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 #. name of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:2
 msgid "Ink/Stitch Small Font"
-msgstr ""
+msgstr "Petite fonte Ink/Stitch"
 
 #. description of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:4
@@ -46,7 +46,7 @@ msgstr "TT directors"
 #. description of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:12
 msgid "A font suited for directing"
-msgstr ""
+msgstr "Une fonte faite pour des metteurs en scène"
 
 #. name of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:14
@@ -1750,15 +1750,15 @@ msgstr ""
 
 #: templates/output_params_txt.xml:10
 msgid "max spindle speed"
-msgstr ""
+msgstr "vitesse de broche maximale"
 
 #: templates/output_params_txt.xml:10
 msgid "minimum spindle speed value (grbl $30 setting)"
-msgstr ""
+msgstr "vitesse de broche minimale (spindle speed, valeur grbl $30)"
 
 #: templates/output_params_txt.xml:11
 msgid "feed rate (in mm/min, set to -1 to omit)"
-msgstr ""
+msgstr "vitesse de déplacement (en mm/min, mettre à -1 pour omettre)"
 
 #: templates/params.inx:3
 msgid "Params"
@@ -1774,7 +1774,7 @@ msgstr "Simuler"
 
 #: templates/troubleshoot.inx:3
 msgid "Troubleshoot Objects"
-msgstr ""
+msgstr "Dépistage de problèmes avec des objets"
 
 #: templates/zip.inx:10
 msgid "Ink/Stitch: ZIP export multiple formats (.zip)"
