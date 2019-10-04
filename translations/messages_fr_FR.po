@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2019-08-13 20:36+0000\n"
-"PO-Revision-Date: 2019-10-02 20:59\n"
+"PO-Revision-Date: 2019-10-04 20:59\n"
 "Last-Translator: Lex Neva (lexelby)\n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -1706,11 +1706,11 @@ msgstr "temps de réchauffement du laser"
 
 #: templates/output_params_txt.xml:4
 msgid "When turning on the laser, wait this many seconds for laser to warm up (G4 command)"
-msgstr ""
+msgstr "Lorsque vous allumez le laser, attendez X secondes pour qu'il se réchauffe (commande G4)"
 
 #: templates/output_params_txt.xml:5
 msgid "negate X coordinate values"
-msgstr ""
+msgstr "intervertir les valeurs des coordonnées X"
 
 #: templates/output_params_txt.xml:5
 msgid "Negate x coordinates"
@@ -1718,7 +1718,7 @@ msgstr "Négativer coordonnés x"
 
 #: templates/output_params_txt.xml:6
 msgid "negate Y coordinate values"
-msgstr ""
+msgstr "intervertir les valeurs des coordonnées Y"
 
 #: templates/output_params_txt.xml:6
 msgid "Negate y coordinates"
@@ -1726,7 +1726,7 @@ msgstr "Négativer coordonnés y"
 
 #: templates/output_params_txt.xml:7
 msgid "Z travel per stitch"
-msgstr ""
+msgstr "déplacement Z par point"
 
 #: templates/output_params_txt.xml:7
 msgid "increment z coordinate by this amount per stitch"
@@ -1734,19 +1734,19 @@ msgstr "augmenter coordonné z par ce montant par point"
 
 #: templates/output_params_txt.xml:8
 msgid "spindle speed"
-msgstr ""
+msgstr "vitesse de la broche"
 
 #: templates/output_params_txt.xml:8
 msgid "spindle speed (laser power for laser mode, set to -1 to omit)"
-msgstr ""
+msgstr "vitesse de la broche (puissance du laser pour le mode laser, mettre à -1 pour l'omettre)"
 
 #: templates/output_params_txt.xml:9
 msgid "min spindle speed"
-msgstr ""
+msgstr "vitesse minimale de la broche"
 
 #: templates/output_params_txt.xml:9
 msgid "minimum spindle speed value (grbl $31 setting)"
-msgstr ""
+msgstr "valeur maximale de vitesse de la broche (réglage grbl $1)"
 
 #: templates/output_params_txt.xml:10
 msgid "max spindle speed"
