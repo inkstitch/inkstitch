@@ -317,6 +317,13 @@ table tr td:first-child {
 .tutorial__group h3 > span, .tutorial__item > h4, .tutorial__item > div, .tutorial__item > p { display: table-cell; vertical-align: top; padding-right: 1em; }
 .tutorial__item > p { min-width: 7em; }
 
+/* Compare languages */
+.lang-headline {
+    background: #4c7c7c;
+    padding: 5px;
+    color: white;
+}
+
 /* Image Manipulation */
 .img-invert { filter: invert(1); }
 

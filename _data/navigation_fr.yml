@@ -1,0 +1,160 @@
+# main links
+main:
+  - title: "Features"
+    url: /fr/features/
+  - title: "Documentation"
+    url: /fr/docs/install/
+  - title: "Tutorials"
+    url: /fr/tutorials/
+  - title: "Get Help"
+    url: /fr/docs/get-help/
+  - title: "Get Involved"
+    url: /fr/developers/introduction/
+    
+# index + specific pages which have the sidebar option in the header
+pages:
+  - title: "Features"
+    url: /fr/features/
+  - title: "Documentation"
+    url: /fr/docs/install/
+    children:
+      - title: "Installation"
+        url: /fr/docs/install/
+      - title: "Workflow"
+        url: /fr/docs/workflow/
+      - title: Stitch Library
+        url: /fr/docs/stitch-library/
+      - title: "Get Help"
+        url: /fr/docs/get-help/
+  - title: "Tutorials"
+    url: /fr/tutorials/
+    children:
+      - title: "Artwork Galleries"
+        url: /fr/tutorials/inspiration/
+      - title: "Sample Files"
+        url: /fr/tutorials/resources/samples/
+      - title: "Templates"
+        url: /fr/tutorials/resources/templates/
+      - title: "Tutorials"
+        url: /fr/tutorials/
+      - title: "DIY Embroidery Machine"
+        url: /fr/tutorials/embroidery-machine/
+  - title: "Get involved"
+    url: /fr/developers/introduction/
+  - title: "News"
+    url: /fr/news/
+
+# documentation links
+docs:
+  - title: Getting Started
+    children:
+      - title: "Install / Upgrade"
+        url: /fr/docs/install/
+      - title: "Customize"
+        url: /fr/docs/customize/
+      - title: "Basic Usage"
+        url: /fr/docs/basic-usage/
+      - title: "Workflow"
+        url: /fr/docs/workflow/
+  - title: Interface
+    children:
+    - title: "Params"
+      url: /fr/docs/params/
+    - title: Install Add-Ons
+      url: /fr/docs/addons/
+    - title: "Commands"
+      url: /fr/docs/commands/
+    - title: "Satin Tools"
+      url: /fr/docs/satin-tools/
+    - title: "Lettering"
+      url: /fr/docs/lettering/
+    - title: "Simulate"
+      url: /fr/docs/simulate/
+    - title: "Print"
+      url: /fr/docs/print/
+    - title: "Import / Export"
+      url: /fr/docs/import-export/
+  - title: "Stitch Library"
+    url: /fr/docs/stitch-library/
+    children:
+      - title: "Manual Stitch"
+        url: /fr/docs/stitches/manual-stitch/
+      - title: "Running Stitch"
+        url: /fr/docs/stitches/running-stitch/
+      - title: "Bean Stitch"
+        url: /fr/docs/stitches/bean-stitch/
+      - title: "Zig-Zag (Simple Satin)"
+        url: /fr/docs/stitches/zigzag-stitch/
+      - title: "Satin Column"
+        url: /fr/docs/stitches/satin-column/
+      - title: "E-Stitch"
+        url: /fr/docs/stitches/e-stitch/
+      - title: "Fill Stitch"
+        url: /fr/docs/stitches/fill-stitch/
+  - title: Tips
+    children:
+      - title: "Fonts"
+        url: /fr/docs/fonts/
+      - title: "Hidden Features"
+        url: /fr/docs/features/
+      - title: Inkscape Tips
+        url: /fr/docs/inkscape-tips/
+  - title: Troubleshooting
+    children:
+      - title: "Get help"
+        url: /fr/docs/get-help/
+      - title: "F.A.Q."
+        url: /fr/docs/faq/
+      - title: Error Messages
+        url: /fr/docs/error-messages/
+      - title: "Missing Translation"
+        url: /fr/docs/localization/
+    
+# tutorial links
+tutorials:
+  - title: Inspiration
+    children:
+      - title: "Artwork Gallery"
+        url: /fr/tutorials/inspiration/
+      - title: "DIY Embroidery Machine"
+        url: /fr/tutorials/embroidery-machine/
+  - title: Resources
+    children:
+    - title: "Branding Guide"
+      url: /fr/tutorials/resources/branding-guide/
+    - title: "Sample Files"
+      url: /fr/tutorials/resources/samples/
+    - title: "Templates"
+      url: /fr/tutorials/resources/templates/
+  - title: Tutorials
+    url: /fr/tutorials/
+    children:
+    - title: "Tutorials A - Z"
+      url: /fr/tutorials/
+    - title: "Video Tutorials"
+      url: /fr/tutorials/video/
+  
+# developers links
+developers:
+  - title: Get involved
+    url: /fr/developers/introduction/
+  - title: Ink/Stitch
+    url: /fr/developers/inkstitch/
+    children:
+    - title: Manual Setup (Linux/macOS)
+      url: /fr/developers/inkstitch/manual-setup/
+    - title: Manual Setup (Windows)
+      url: /fr/developers/inkstitch/windows-manual-setup/
+    - title: Python Modules
+      url: /fr/developers/inkstitch/python-modules/
+    - title: Namespace
+      url: /fr/developers/inkstitch/namespace/
+  - title: Pyembroidery
+    url: /fr/developers/pyembroidery
+  - title: Documentation
+    url: /fr/developers/documentation/
+  - title: Localization
+    url: /fr/developers/localize/
+  - title: "Bug Reports"
+    url: /fr/developers/report-bugs/
+      

@@ -29,7 +29,7 @@ masthead_title           : # overrides the website title displayed in the masthe
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2", "utterances", "custom"
+  provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
     shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -214,7 +214,7 @@ kramdown:
 # Sass/SCSS
 sass:
   sass_dir: _sass
-  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
 
 
 # Outputting
@@ -230,7 +230,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
-  - jemoji
   - jekyll-include-cache
 
 # mimic GitHub Pages with --safe
@@ -239,7 +238,6 @@ whitelist:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
-  - jemoji
   - jekyll-include-cache
 
 
@@ -251,8 +249,8 @@ whitelist:
 #  - Archive page should exist at path when using Liquid method or you can
 #    expect broken links (especially with breadcrumbs enabled)
 #  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
-#  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
-#  - <base_path/my-awesome-category/index.html ~> path: /
+#  - <base_path>/categories/my-awesome-category/index.html ~> path: /categories/
+#  - <base_path>/my-awesome-category/index.html ~> path: /
 category_archive:
   type: liquid
   path: /categories/
@@ -273,7 +271,7 @@ tag_archive:
 
 
 # HTML Compression
-# - http://jch.penibelst.de/
+# - https://jch.penibelst.de/
 compress_html:
   clippings: all
   ignore:
@@ -288,6 +286,9 @@ languages:
   - 
     - de
     - Deutsch
+  -
+    - fr
+    - Français
 
 # Directories
 collections_dir: collections
@@ -347,6 +348,11 @@ defaults:
       path: "_posts/de"
     values:
       lang: de
+    # fr
+  - scope:
+      path: "_posts/fr"
+    values:
+      lang: fr
   # _pages
   - scope:
       type: pages
@@ -363,6 +369,11 @@ defaults:
       path: "_pages/de"
     values:
       lang: de
+    # fr
+  - scope:
+      path: "_pages/fr"
+    values:
+      lang: fr
   # _docs
   - scope:
       type: docs
@@ -379,6 +390,11 @@ defaults:
       path: "_docs/de"
     values:
       lang: de
+    # fr
+  - scope:
+      path: "_docs/fr"
+    values:
+      lang: fr
   # _tutorials
   - scope:
       type: tutorials
@@ -395,6 +411,11 @@ defaults:
       path: "_tutorials/de"
     values:
       lang: de
+    # de
+  - scope:
+      path: "_tutorials/fr"
+    values:
+      lang: fr
   # _tutorial
   - scope: 
       type: tutorial
@@ -412,6 +433,11 @@ defaults:
       path: "_tutorial/de"
     values:
       lang: de
+    # fr
+  - scope:
+      path: "_tutorial/fr"
+    values:
+      lang: fr
   # _developers
   - scope:
       type: developers
@@ -428,6 +454,11 @@ defaults:
       path: "_developers/de"
     values:
       lang: de
+    # fr
+  - scope:
+      path: "_developers/fr"
+    values:
+      lang: fr
       
           
 # It'd be nice to have "lang" set through wildcard, using * for directories:

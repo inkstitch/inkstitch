@@ -1,8 +1,9 @@
 {%- assign page_lang = '/en' -%}
 {% for lang in site.languages %}
-  {% if lang[0] != blank %}
+  {% if lang[1] != "English" %}
 
-### {{ lang[1] }} 
+### {{ lang[1] }}
+{: .lang-headline }
 
   {% for collection in site.collections %}
   {% assign label = collection.label %}
@@ -46,11 +47,9 @@
             {%- assign post_modified_at = post.last_modified_at -%}
           {% endif %}
 
-- {{ please_update.path }}
-
-  |---|---|
-  |{{ modified_at | date: "%Y-%m-%-d" }}|[{{ please_update.title }}]({{ permalink }})|
-  |{{ post_modified_at | date: "%Y-%m-%-d" }}|[{{ post.title }}]({{ post_permalink }})|
+- [{{ please_update.title }}]({{ permalink }}) ({{ modified_at | date: "%Y-%m-%-d" }})<br>
+  English: [{{ post.title }}]({{ post_permalink }}) ({{ post_modified_at | date: "%Y-%m-%-d" }})<br>
+  File: [{{ please_update.path }}](https://github.com/inkstitch/inkstitch/tree/gh-pages/collections/{{ please_update.path }})
 
         {% endfor %}
       {%- endfor -%}
@@ -65,11 +64,9 @@
     {%- assign lang_page = site.pages | where: "permalink", new_url | where_exp: "item", "item.lang != 'en'" | where_exp: "item", "item.last_modified_at < post.last_modified_at" -%} 
     {% for please_update in lang_page %}
 
-- {{ please_update.path }}
-
-  |---|---|
-  |{{ please_update.last_modified_at }}|[{{ please_update.title }}]({{ please_update.permalink }})|
-  |{{ post.last_modified_at }}|[{{ post.title }}]({{ post.permalink }})|
+- [{{ please_update.title }}]({{ please_update.permalink }}) ({{ please_update.last_modified_at }})<br>
+  English: [{{ post.title }}]({{ post.permalink }}) ({{ post.last_modified_at }})<br>
+  File: [{{ please_update.path }}](https://github.com/inkstitch/inkstitch/tree/gh-pages/_pages/{{ please_update.path }})
 
     {% endfor %}
     {%- if lang_page == blank -%}
