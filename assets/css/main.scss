@@ -286,13 +286,22 @@ table tr td:first-child {
     overflow: inherit;
   }
 
-.logo__gallery .archive__item-teaser img {
-    height: 100px;
-}
+/* Gallery */
 
-.logo__gallery .archive__item-body {
-    text-align: center;
-}
+  .logo__gallery .archive__item-teaser img {
+      height: 100px;
+  }
+
+  .logo__gallery .archive__item-body {
+      text-align: center;
+  }
+
+/* Footer */
+
+  .page__date, .file__path {
+      display: inline-block;
+      padding-left: 1em;
+  }
 
   
 /* Tutorials */

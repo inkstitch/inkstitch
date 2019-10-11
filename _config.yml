@@ -357,6 +357,7 @@ defaults:
   - scope:
       type: pages
     values:
+      is_page: true
       sidebar: 
         nav: "pages"
     # en

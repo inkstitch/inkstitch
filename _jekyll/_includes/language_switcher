@@ -18,7 +18,7 @@
 
     {%- comment -%} Pages and Collections {%- endcomment -%}
     {%- else -%}
-			{%- assign new_url = page.url | replace: page_lang, '' | prepend: lang[0] | prepend: '/' | replace: '//', '/' -%}
+			{%- assign new_url = page.url | replace: page_lang, '/' | prepend: lang[0] | prepend: '/' | replace: '//', '/' -%}
 			{%- assign lang_page = site.pages | where: "url", new_url -%}
 			{%- if lang_page == blank -%}
 				{%- for collection in site.collections -%}

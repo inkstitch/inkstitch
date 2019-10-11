@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
   {% include page__hero.html %}
 {% elsif page.header.video.id and page.header.video.provider %}
@@ -16,7 +17,7 @@ layout: default
 <div id="main" role="main">
   {% include sidebar.html %}
 
-  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date: "%B %d, %Y" }}">{% endif %}
@@ -35,7 +36,7 @@ layout: default
 
       <section class="page__content" itemprop="text">
         {% if page.toc %}
-          <aside class="sidebar__right">
+          <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-{{ page.toc_icon | default: 'file-alt' }}"></i> {{ page.toc_label | default: site.data.ui-text[page.lang].toc_label }}</h4></header>
               {% include toc.html sanitize=true html=content h_min=2 h_max=3 class="toc__menu" %}
@@ -56,6 +57,12 @@ layout: default
         {% elsif page.date %}
           <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ site.data.ui-text[page.lang].date_label | default: "Updated:" }}</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
         {% endif %}
+        <p class="file__path"><i class="fab fa-fw fa-github"></i>
+          {% if page.is_page %}<a href="https://github.com/inkstitch/inkstitch/tree/gh-pages/{{ page.path }}">
+          {% else %}<a href="https://github.com/inkstitch/inkstitch/tree/gh-pages/collections/{{ page.path }}">
+          {% endif %}
+          View page source on GitHub
+        </p>
       </footer>
 
       {% if page.share %}{% include social-share.html %}{% endif %}
@@ -84,6 +91,9 @@ layout: default
       <h4 class="page__related-title">{{ site.data.ui-text[page.lang].related_label | default: "You May Also Enjoy" }}</h4>
       <div class="grid__wrapper">
         {% for post in site.posts limit:4 %}
+          {% if post.id == page.id %}
+            {% continue %}
+          {% endif %}
           {% include archive-single.html type="grid" %}
         {% endfor %}
       </div>
