@@ -1,41 +1,39 @@
 ---
-title: "Manual Stitch"
+title: "Point manuel"
 permalink: /fr/docs/stitches/manual-stitch/
 excerpt: ""
 last_modified_at: 2018-10-09
 toc: true
 ---
 ## What it is
-[![Manual Stitch Flowers](/assets/images/docs/manual-stitch.jpg){: width="200x"}](/assets/images/docs/manual-stitch.svg){: title="Download SVG File" .align-left download="manual-stitch.svg" }
-In manual stitch mode Ink/Stitch will use each node of a path as a needle penetration point, exactly as you placed them.
-
-![Manual Stitch Detail](/assets/images/docs/manual-stitch-detail.png)
+[![Fleurs en point manuel](/assets/images/docs/manual-stitch.jpg){: width="200x"}](/assets/images/docs/manual-stitch.svg){: title="Download SVG File" .align-left download="manual-stitch.svg" }
+En mode point manuel Ink / Stitch utilisera chaque nœud d’un chemin comme point de pénétration de l’aiguille, exactement comme vous les avez placés.
+![Detail de point manuel](/assets/images/docs/manual-stitch-detail.png)
 
 ## How to Create
 
-1. Create a path. Line style or width are irrelevant.
-2. Open `Extensions > Ink/Stitch  > Params`.
-3. Enable `Manual stitch placement`. The other settings will not have any effect in manual stitch mode.
-
+1. Créez un chemin. Le style de trait ou la largeur ne sont pas pertinents.
+2. Ouvrez `Extensions > Ink/Stitch  > Paramètres`.
+3. Activez `Manual stitch placement`. Les autres réglages n'auront aucun effet en mode point manuel.
    ![Params Stroke](/assets/images/docs/en/params-manual-stitch.jpg)
 
-## Tips
+## Astuce
 
-### Tie-In and Tie-Off
+### Points d'arrêt en début et fin
 
-It will not add tie-in or tie-off stitches automatically, so be aware of creating them within the path.
+Il ne sera pas ajouter automatiquement de points d'arrêt. Veillez donc à les créer dans le chemin.
 
-### Make Nodes Corner
+### Faire des noeuds durs
 
-Each node of a path represents a needle penetration point. It will not go along curves.
+Chaque nœud d'un chemin représente un point de pénétration de l'aiguille. Ça ne va pas suivre les courbes.
 
 ![Manual Stitch Placement](/assets/images/docs/manual-stitch-placement.png)
 
-A clean representation of your manual stitch path can be achieved as follows:
-1. Select all nodes (`F2` then `Ctrl`+`A`)
-2. Click on ![Make selected nodes corner](/assets/images/docs/tool-controls-corner.jpg){: title="Make selected nodes corner" } in the `Tool Controls Bar`.
+Une représentation nette de votre chemin de point manuel peut être obtenue comme suit:
+1. Selectionner tous les noeuds (`F2` puis `Ctrl`+`A`)
+2. Cliquer sur ![Rendre durs les noeuds sélectionnés](/assets/images/docs/tool-controls-corner.jpg){: title="Make selected nodes corner" } in the `Tool Controls Bar`.
 
-## Sample Files Including Manual Stitch
+## Fichier exemple avec point manuel
 {: style="clear: both;" }
 {% include tutorials/tutorial_list key="stitch-type" value="Manual Stitch" %}
 
