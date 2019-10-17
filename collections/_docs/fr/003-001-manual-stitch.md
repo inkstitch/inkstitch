@@ -5,12 +5,12 @@ excerpt: ""
 last_modified_at: 2019-10-17
 toc: true
 ---
-## What it is
+## Qu'est-ce que c'est
 [![Fleurs en point manuel](/assets/images/docs/manual-stitch.jpg){: width="200x"}](/assets/images/docs/manual-stitch.svg){: title="Download SVG File" .align-left download="manual-stitch.svg" }
 En mode point manuel Ink / Stitch utilisera chaque nœud d’un chemin comme point de pénétration de l’aiguille, exactement comme vous les avez placés.
 ![Detail de point manuel](/assets/images/docs/manual-stitch-detail.png)
 
-## How to Create
+## Comment le créer
 
 1. Créez un chemin. Le style de trait ou la largeur ne sont pas pertinents.
 2. Ouvrez `Extensions > Ink/Stitch  > Paramètres`.
