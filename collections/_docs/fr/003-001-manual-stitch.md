@@ -2,7 +2,7 @@
 title: "Point manuel"
 permalink: /fr/docs/stitches/manual-stitch/
 excerpt: ""
-last_modified_at: 2018-10-09
+last_modified_at: 2019-10-17
 toc: true
 ---
 ## What it is
