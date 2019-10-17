@@ -1,5 +1,5 @@
 ---
-title: "Bean Stitch"
+title: "Point triple"
 permalink: /fr/docs/stitches/bean-stitch/
 excerpt: ""
 last_modified_at: 2019-10-17
