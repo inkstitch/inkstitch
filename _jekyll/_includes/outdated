@@ -1,28 +1,27 @@
 {%- if page.lang != 'en' -%}
+    {%- assign en_page_exists = false -%}
     {%- assign page_lang= page.lang | prepend: '/' | append: '/' -%}
-    {%- if page.is_post == true -%}
-      {%- assign en_url = page.url | replace_first: page_lang, '/en/' -%}
-      {%- assign en_page = site.posts | where: "url", en_url | where_exp: "item", "item.last_modified_at > page.last_modified_at" -%}
-      {%- assign en_page_exist = site.posts | where: "url", en_url -%}
-    {%- else -%}
-	    {%- assign en_url = page.url | replace: page_lang, '/' -%}
-	    {%- assign en_page = site.pages | where: "url", en_url | where_exp: "item", "item.last_modified_at > page.last_modified_at" -%}
-        {%- assign en_page_exist = site.pages | where: "url", en_url -%}
-	    {%- if en_page_exist == blank -%}
-		    {%- for collection in site.collections -%}
-                {%- assign en_page = collection.docs | where: "permalink", en_url | where_exp: "item", "item.last_modified_at > page.last_modified_at" -%}
-                {%- assign en_page_exist = collection.docs | where: "permalink", en_url -%}
-			    {%- if en_page_exist != blank -%}
-				    {%- break -%}
-			    {%- endif -%}
-		    {%- endfor -%}
-	    {%- endif -%}
-    {%- endif -%}
-    {%- if en_page != blank -%}
-        <p class="notice--warning"><b>⚠</b> This page might be outdated. Consider to have a look at the <a href="{{en_url}}">englisch original</a>.</p>
-    {%- else -%}
-        {%- if en_page_exist == blank -%}
-            <p class="notice--warning"><b>⚠</b> This page might be outdated. Consider to have a look at the <a href="/">englisch section</a>.</p>
+    {%- unless page.is_post == true -%}
+      {%- assign en_url = page.url | replace: page_lang, '/' -%}
+      {%- if page.is_page -%}
+        {%- assign en_page = site.pages | where: "permalink", en_url -%}
+        {%- if en_page.size > 0 -%}
+            {%- assign en_page_exists = true -%}
         {%- endif -%}
+      {%- else -%}
+	      {%- for collection in site.collections -%}
+          {%- assign en_page = collection.docs | where: "permalink", en_url -%}
+          {%- if en_page.size > 0 -%}
+              {%- assign en_page_exists = true -%}
+              {%- break -%}
+          {%- endif -%}
+	      {%- endfor -%}
+      {%- endif -%}
+    {%- endunless -%}
+
+    {%- if en_page_exists == false -%}
+        <p class="notice--warning"><b>⚠</b> This page might be outdated. For more recent information have a look at the <a href="/">englisch section</a>.</p>
+    {%- elsif en_page.first.last_modified_at > page.last_modified_at -%}
+          <p class="notice--warning"><b>⚠</b> This page might be outdated. For more recent information have a look at the <a href="{{en_url}}">englisch original</a>.</p>
     {%- endif -%}
 {%- endif -%}
