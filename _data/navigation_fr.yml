@@ -74,6 +74,8 @@ docs:
       url: /fr/docs/print/
     - title: "Import / Export"
       url: /fr/docs/import-export/
+    - title: "Troubleshoot Objects"
+      url: /fr/docs/troubleshoot/
   - title: "Stitch Library"
     url: /fr/docs/stitch-library/
     children:

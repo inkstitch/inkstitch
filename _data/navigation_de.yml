@@ -70,6 +70,8 @@ docs:
       url: /de/docs/print/
     - title: Importieren / Exportieren
       url: /de/docs/import-export/
+    - title: "Troubleshoot Objects"
+      url: /de/docs/troubleshoot/
   - title: Stich-Bibliothek
     children:
       - title: "Manueller Stich"
