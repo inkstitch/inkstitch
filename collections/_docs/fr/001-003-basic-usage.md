@@ -1,52 +1,55 @@
 ---
-title: "Basic Usage"
+title: "Premiers pas"
 permalink: /fr/docs/basic-usage/
 excerpt: ""
-last_modified_at: 2019-03-29
+last_modified_at: 2019-10-19
 toc: true
 ---
-Try the following steps in order to test the extension and to learn the basic functionality.
+Essayez les étaoes suivantes pour tester l'extension et apprendre les fonctionnalités de base.
 
-**Tip:** If you are new to Inkscape, have a look at their [Basic Tutorial](https://inkscape.org/en/doc/tutorials/basic/tutorial-basic.html) first.
+**Astuces:** Si vous êtes débutant avec Inkscape, jetez d'abord un coup d'oeil sur leur [Tutoriel de base](https://inkscape.org/fr/doc/tutorials/basic/tutorial-basic.html).
 {: .notice--info }
 
-## Step 1 - Draw an Object
+## Etape 1 - Dessiner un objet
 
-Create an object, e.g. a circle and make sure it has a fill.
+Créez un objet, par exemple un cercle et assurez-vous qu'il a un remplissage.
 
-![Circle with fill color](/assets/images/docs/en/basic-usage-circle-fill-color.png)
 
-## Step 2 - Convert to Path
+![Cercle avec couleur de remplissage](/assets/images/docs/en/basic-usage-circle-fill-color.png)
 
-Transform **all objects** you want to stitch to paths:
+## Etape 2 - Convertir en chemin
 
-* Select all objects (`Ctrl+A`)
-* `Path > Object to Path` or `Ctrl+Alt+C`.
+Transformer **Tous les onjets** que vous voulez broder en chemin:
 
-**Info:** Objects that are not of "path" type, are ignored by Ink/Stitch.
+* Sélectionnez tous les objets (`Ctrl+A`)
+* ``Chemin > Objet en chemin` ou `Ctrl+Alt+C`.
+
+**Info:** Les objets qui ne sont pas du type "chemin", sont ignorés par Ink/Stitch.
 {: .notice--warning }
 
-## Step 3 - Parametrize SVG Path for Embroidery
+## Etape 3 - Paramétrer les chemins SVG pour la broderie
 
-* Select at least one object.
-* Open `Extensions > Ink/Stitch  > Params`.
-* Play with the values. The simulator will update whenever you change the settings.
-* For now, close without saving.
+*  Sélectionner au moins un objet.
+* Ouvrir `Extensions > Ink/Stitch  > Paramètres`.
+* Essayer différentes valeurs. Le simulateur s'actualisera à chaque modification des paramètres.
+* Pour l'instant, fermer sans sauvegarder.
 
-## Step 4 - Create the Embroidery File
+## Etape 4 - Créer le fichier de Broderie
 
-* Run `File > Save as...`
-* Navigate to the folder where you would like to save the file
-* Choose the correct file format for your machine
-* Click `Save`
-* Copy the file to your machine
 
-**Tipp:** Make sure to save the file as an SVG file as well. Then you will always be able to modify it easily.
+* Faire `Fichier > Enregistrer sous...`
+* Ouvrez le dossier où vous souhaitez enregistrer le fichier
+*  Choisissez le format de fichier adapté à votre machine
+* Cliquer `Enregistrer`
+* Copier le fichier dans votre machine
+
+**Astuce:** Assurez-vous d'avoir également enregistré le fichier en tant que fichier SVG. Vous pourrez ensuite toujours le modifier facilement.
 {: .notice--info}
 
-## Workflow
+## Organisation du travail
 
-If this worked well, we recommend to also read through the next page (workflow). Where you can get a deeper insight into Ink/Stitch and you can learn how to perform essential functions for embroidery files, like e.g. ordering objects, etc.
+Si tout a bien fonctionné nous vous conseillons de parcourir aussi la page suivante (organisation du travail). Là, vous aurez une vision plus approfondie d'Ink/Stitch et vous apprendrez à effectuer les fonctions essentielles pour les fichiers de broderie, par exemple ordonner les objets, etc.
+Si vous rencontrez des difficultés, contactez-nous sur [GitHub](https://github.com/inkstitch/inkstitch/issues/). Nous souhaitons vraiment être au courant de votre problème pour pouvoir améliorer la documentation ou le programme lui-même.   
 
-If you run into trouble, contact us through [GitHub](https://github.com/inkstitch/inkstitch/issues/). We really like to hear about your problem, this way we can either improve the documentation or the programm itself.
+
 
