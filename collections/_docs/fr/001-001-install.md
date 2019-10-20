@@ -2,33 +2,33 @@
 title: "Install Ink/Stitch"
 permalink: /fr/docs/install/
 excerpt: "How to quickly install Ink/Stitch."
-last_modified_at: 2019-08-11
+last_modified_at: 2019-10-11
 toc: true
 ---
 
-**Info:** We also provide beginner tutorial videos on our <i class="fab fa-youtube"></i> [YouTube channel](https://www.youtube.com/channel/UCJCDCFuT_xQoI55e10HRiRw).<br />
-For the installation process watch the video for
+**Info:** Nous fournissons aussi aux débutants des tutoriels vidéo sur notre <i class="fab fa-youtube"></i> [chaine YouTube](https://www.youtube.com/channel/UCJCDCFuT_xQoI55e10HRiRw).<br />
+Pour le processus d'installation regarder la vidéo pour
 <i class="fab fa-linux"></i>&nbsp;[Linux](https://www.youtube.com/watch?v=Dkb5UvsZUNg&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=2),
 <i class="fab fa-apple"></i>&nbsp;[macOS](https://www.youtube.com/watch?v=gmOVLNh9cu8&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=3) or
 <i class="fab fa-windows"></i>&nbsp;[Windows](https://www.youtube.com/watch?v=U5htzWZSjA8&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=4).
 {: .notice--info }
 
-## Requirements
+## Prérequis
 
-* [Inkscape](https://inkscape.org/) Version 0.92.2 or higher
-* Modern Browser for the Print Preview
+* [Inkscape](https://inkscape.org/) Version 0.92.2 ou supérieure
+* Un navigateur récent pour l'aperçu avant impression
 
-That's it!  All python libraries and external dependencies are bundled (using the excellent [pyinstaller](http://www.pyinstaller.org)), so you shouldn't need to set anything else up.
+C'est tout! Toutes les librairies python et dépendances externes sont incluses (en utilisant l'excellent [pyinstaller](http://www.pyinstaller.org)), de sorte que vous ne devriez pas avoir quoi que ce soit d'autre à installer.
 
-**Info:** Inkscape Version 0.92 or greater, has a really key feature: the *Objects panel*.<br>
-This gives you a heirarchical list of objects in your SVG file, listed in their stacking order. This is really important because the stacking order dictates the order that the shapes will be sewn in.<br><br>
-Versions 0.92.2 and higher let you [bind a key](/docs/customize/#shortcut-keys) to new commands, “stack up” and “stack down”, which you can assign to pageup and pagedown. These let you arbitrarily reorder objects in the SVG file, which lets you directly manipulate which order they stitch in. It works way better than the default “raise” and “lower” commands.
+**Info:** Inkscape Version 0.92 ou supérieure, a une caractéristique vraiment essentielle: la "*boite de dialogue Objets*".<br>
+Elle vous donne une liste hiérarchisée des objets de votre fichier SVG, dans leur ordre d'empilement. C'est vraiment important parce que l'ordre d'empilement dicte l'ordre dans lequel les formes seront brodées.<br><br>
+Les versions 0.92.2 et supérieures vous permettent de [lier une touche](/docs/customize/#shortcut-keys) aux nouvelles commandes, “monter” et “descendre”, que vous pouvez assigner aux touches "page haut", "page bas". Cela vous permettra de réordonner les objets dans le fichier SVG directement dand l'ordre de broderie. Cela marche beaucoup mieux que les anciennes commandes "monter" et "descendre".
 {: .notice--info }
 
-## Quick Setup
+## Installation rapide
 
-### 1. Download
-Download the release archive for your platform from [latest release](https://github.com/inkstitch/inkstitch/releases/latest).
+### 1. Télécharger
+Télécharger, en tenant compte de votre plateforme la [dernière version](https://github.com/inkstitch/inkstitch/releases/latest).
 
 OS|File name|32&#8209;bit|64&#8209;bit
 ---|---|---|---
@@ -36,18 +36,18 @@ Linux|inkstitch-[VERSION]-Linux-x86_64-[LOCALE].tar.gz|☒|☑
 Windows|inkstitch-[VERSION]-win32-[LOCALE].zip|☑|☑
 macOS|inkstitch-[VERSION]-osx-x86_64-[LOCALE].tar.gz|☒|☑
 
-The `LOCALE` selected affects the menus shown inside Inkscape. Ink/Stitch dialogs are in the lanugage of your OS (if that language is supported).
+Le`LOCALE` sélectionné affecte les menus à l'intérieur d'Inkscape. Les dialogues d'Ink/Stitch sont dans la langue de votre OS (si cette langue est supportée).
 
-**Info:** Ink/Stitch for macOS currently works only with Sierra (10.12) and higher.
+**Info:** Ink/Stitch pour macOS fonctionne actuellement seulement avec Sierra (10.12) et supérieur.
 {: .notice--warning }
 
-### 2. Install
- * In Inkscape, go to `Edit > Preferences > System` and check where your `User Extensions` folder is.
- * Decompress the Ink/Stitch archive **directly** into this folder.<br />
-   In this folder the file structure should look similiar to this (just a lot more files):
+### 2. Installation
+ * Dans Inkscape, aller à  `Edition > Préferences > Systeme` et cherchez où se trouve votre fichier `Extensions utilisateur`.
+ * Decompresser l'archive Ink/Stitch **directement** dans ce fichier.<br />
+  Ce dossier doit présenter une structure semblable à l'exemple ci-dessous (avec juste un tas de fichiers en plus):
    ![File Structure](/assets/images/docs/en/file_structure.png)
- * Restart Inkscape.
- * You will then find Ink/Stitch under `Extensions > Ink/Stitch`.
+ * Redémarrer Inkscape.
+ * Vous trouverez alors Ink/Stitch sous `Extensions > Ink/Stitch`.
 
 #### Linux and macOS:
 
@@ -58,24 +58,23 @@ The `LOCALE` selected affects the menus shown inside Inkscape. Ink/Stitch dialog
 
 #### Windows
 
- * Unhide the AppData directory (go to `C:\Users\%USERNAME%\`, e.g. `C:\Users\Janet`)
- * Unzip in `C:\Users\%USERNAME%\AppData\Roaming\inkscape\extensions`
+ *Faites afficher le répertoire caché AppData (aller à  `C:\Users\%USERNAME%\`, e.g. `C:\Users\Janet`)
+ * Dézipper dans `C:\Users\%USERNAME%\AppData\Roaming\inkscape\extensions`
 
-## Upgrade
+## Mise à jour
 
- * You may have to delete the old extension files first:<br />
-   Go to the extension directory and remove each inkstitch* file and folder.
- * Then, proceed as above.
+ * Il faut d'abord effacer tous les fichiers de l'ancienne extension:<br />
+   Ouvrez le répertoire des extensions et supprimez chaque dossier ou fichier inkstitch*.
+ * Puid procédez comme ci-dessus.
 
-**Tip:** Subscribe to a news feed channel to keep track on Ink/Stitch Updates:<br />
+**Astuce:** Inscrivez-vous aux news pour avoir connaissance des mises à jour d'Ink/Stitch:<br />
  <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [GitHub Feed on new Releases](https://github.com/inkstitch/inkstitch/releases.atom)<br>
  <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [Ink/Stitch News](/feed.xml)<br />
 {: .notice--info }
 
 <p class="notice--info" style="margin-top: -3.5em !important;">Or watch the project on GitHub:<br /><iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=inkstitch&repo=inkstitch&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe></p>
 
-## Manual Setup
+## Installation manuelle
 
-It is possible to install Ink/Stitch manually. It is not recommended though - unless you want to help developing the extension.
-In this case, please have a look at the [developer documentation](/developers/inkstitch/manual-setup/) section.
-
+C'est possible d'installer Ink/Stitch manuellemnt. Ce n'est cependant pas recommander - 0 moins que vous vouliez participer au développement de l'extension.
+Dans ce cas jetez un coup d'oeil à la section [documentation developpeur](/developers/inkstitch/manual-setup/).

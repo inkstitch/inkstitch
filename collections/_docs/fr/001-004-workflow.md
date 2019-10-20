@@ -1,165 +1,153 @@
 ---
-title: "Workflow"
+title: "Organisation du travail"
 permalink: /fr/docs/workflow/
 excerpt: ""
-last_modified_at: 2019-04-07
+last_modified_at: 2019-10-19
 toc: true
 ---
 ![Ink/Stitch workflow](/assets/images/docs/en/workflow-chart.svg)
 
-## ![Create Icon](/assets/images/docs/workflow-icon-create.png) Step 1: Create a Vector Image
+## ![Create Icon](/assets/images/docs/workflow-icon-create.png) Etape 1: Créer une image vectorielle
 
-At first you need an idea or an image that you want to transfer into an embroidery file. You can either paint it from scratch or use an existing image.
+Au début, vous avez besoin d’une idée ou d’une image à transférer dans un fichier de broderie. Vous pouvez le peindre à partir de zéro ou utiliser une image existante.
 
-### Draw in Inkscape
+### Dessiner avec Inkscape
 
-#### Create Paths
+#### Créer des chemins
+Inkscape offre des outils variés pour créer des images vectorielles. Vous pouvez, par exemple, utiliser
 
-Inkscape offers various tools to create vector images. You can use e.g.
+* ![dessiner des lignes à main levée](/assets/images/docs/inkscape-tools-freehand.png) Lignes à main levée (<key>P</key>)
+* ![Courbes de Bézier](/assets/images/docs/inkscape-tools-bezier.png) Courbes de Bézier (<key>B</key>)
 
-* ![freehand lines icon](/assets/images/docs/inkscape-tools-freehand.png) Freehand lines (<key>P</key>)
-* ![freehand lines icon](/assets/images/docs/inkscape-tools-bezier.png) Bezier curves (<key>B</key>)
+Essayer aussi d'autres outils de la barre des outils. Par exemple des formes spécifiques comme
 
-Try also the other tools in the toolbar. For example specific shapes like
+* ![carré icon](/assets/images/docs/inkscape-tools-square.png) Rectangle
+* ![cercle icon](/assets/images/docs/inkscape-tools-circle.png) Cercle
+* ![polygone icon](/assets/images/docs/inkscape-tools-polygon.png) Etoile/Polygone
+* ![spirale icon](/assets/images/docs/inkscape-tools-spiral.png) Spirale
 
-* ![square icon](/assets/images/docs/inkscape-tools-square.png) Rectangle
-* ![circle icon](/assets/images/docs/inkscape-tools-circle.png) Circle
-* ![polygon icon](/assets/images/docs/inkscape-tools-polygon.png) Star/Polygon
-* ![spiral icon](/assets/images/docs/inkscape-tools-spiral.png) Spiral
+####  Modifier les chemins
+Modifier les objets et les chemins avec:
+* ![outil de sélectionicon](/assets/images/docs/inkscape-tools-select.png) Outil de sélection (<key>S</key>) and 
+* ![outil noeud icon](/assets/images/docs/inkscape-tools-node.png) Outil d'édition de noeuds (<key>N</key>)
 
-#### Edit Paths
+Mettez à l'échelle, faites pivoter et déplacez tout l'objet avec l'outil de sélection. L'éditeur de nœuds sert à manipuler les nœuds sélectionnés, etc.
+De plus, vous pouvez utiliser les effets de chemin (`Chemin> Effets de chemin ... '). N'oubliez pas de toujours reconvertir l'objet résultant en un chemin, comme décrit ci-dessus.
 
-Edit objects and paths with:
-* ![node tool icon](/assets/images/docs/inkscape-tools-select.png) Select tool (<key>S</key>) and 
-* ![node tool icon](/assets/images/docs/inkscape-tools-node.png) Node editor tool (<key>N</key>)
+### Utiliser une image / un graphique existant
 
-Scale, rotate and move the whole object with the select tool. The node editor tool serves to manipulate selected nodes, etc.
+Lorsque vous basez un dessin sur une image ou un graphique existant, chargez-le dans Inkscape dans son propre calque. Certains graphiques sont compatibles avec Inkscape [fonction de traçage automatique](https://inkscape.org/fr/doc/tutorials/tracing/tutorial-tracing.html) (`Chemin > Vectoriser une image matricielle` ou `Shift+Alt+B`), surtout si vous simplifiez d’abord l’image dans un éditeur graphique (par exemple avec[GIMP](https://www.gimp.org/)).
 
-Additionally you could use path effects (`Path > Path Effects...`). Remember to always convert the resulting object back into a path as described above.
-
-### Use Existing Picture/Graphic
-
-When basing a design off an existing picture or graphic, load it into Inkscape in its own layer. Some graphics are amenable to Inkscape's [auto-tracing feature](https://inkscape.org/en/doc/tutorials/tracing/tutorial-tracing.html) (`Path > Trace Bitmap` or `Shift+Alt+B`), especially if you simplify the image in a graphic editor first (e.g. with [GIMP](https://www.gimp.org/)).
-
-**Tip:** If you have Linux and need to vectorize a stroke, you could make use of an other Inkscape plugin, which aims to do [centerline tracing](https://github.com/fablabnbg/inkscape-centerline-trace). For embroidery purposes it might only apply to simple shapes.
+**Astuce:** Si vous avez besoin de vectoriser un trait, vous pouvez utiliser un autre plugin Inkscape, qui a pour but de faire [traçage du trait d'axe](https://github.com/fablabnbg/inkscape-centerline-trace). Pour la broderie, il vaut mieux ne l'appliquer qu'aux formes simples.
 {: .notice--info }
 
-After tracing, clean up the vector shapes, using `Path > Simplify` (`Ctrl+L`) and deleting nodes by hand when possible. The goal is to use as few Bezier curves as reasonably possible to represent the image.
+Après le traçage, nettoyez les formes vectorielles en utilisant `Chemin> Simplifier` (` Ctrl + L`) et en supprimant les nœuds à la main lorsque cela est possible. Le but est d’utiliser le moins de courbes de Bézier possible pour représenter l’image.
 
-When the image is needed to be traced by hand, use the freehand drawing tool. This tool creates paths with a lot of Beziér nodes, so again, simplify the curves as much as possible.
+Lorsque l’image doit être tracée à la main, utilisez l’outil de dessin à main levée. Cet outil crée des chemins avec beaucoup de noeuds de Beziér, simplifiez donc autant que possible les courbes.
 
-**Tip:** Working with an existing SVG image can save a ton of time, so consider using your search engine with image search filter set to SVG.
+**Astuce:** Travailler avec une image SVG existante peut vous faire gagner beaucoup de temps. Songez donc à utiliser votre moteur de recherche avec le filtre de recherche d'image défini sur SVG.
 {: .notice--info }
 
-### Text
+### Texte
 
-For text, choose a font carefully. It's quite hard to make satin look good when it's 1mm wide or narrower. Sans-serif fonts tend to be the easiest. For text smaller than 4mm tall, you'll have a very difficult time making lowercase letters look good, so consider block-caps. Cursive/script fonts can work well, but it's not going to be as easy as you think.
+Pour le texte, choisissez une police avec soin. Il est assez difficile de faire en sorte que le satin soit beau quand il fait 1mm de large ou moins. Les polices sans empattement ont tendance à être les plus faciles. Pour un texte de moins de 4 mm de hauteur, il vous sera très difficile de donner une belle apparence aux lettres minuscules. Par conséquent, envisagez des majuscules. Les polices Cursive / Script peuvent bien fonctionner, mais ce ne sera pas aussi facile que vous le pensez.
 
+## ![Vectorize](/assets/images/docs/workflow-icon-vectorize.png) Etape 2: Convertir en vecteur de broderie et paramétrer
 
-## ![Vectorize](/assets/images/docs/workflow-icon-vectorize.png) Step 2: Convert to Embroidery Vectors & Parametrize
+À ce stade, vous aurez une représentation graphique vectorielle de votre image. La prochaine chose à faire est de convertir vos vecteurs en un type compris par Ink/Stitch.
 
-At this point, you'll have a vector graphic representation of your image. The next thing to do is to convert your vectors into the kind that Ink/Stitch understands.
+### Le dialogue Objets
 
-### The Object Panel
+Nous vous recommandons de faire un usage intensif des calques et des groupes à ce stade.
 
-We recommend to make heavy use of layers and groups at this point.
+Dans le panneau des objets (ouvert avec <key>Ctrl</key><key>Shift</key><key>O</key>, vous pouvez gérer des calques, des groupes et des objets.
+Vous pouvez enregistrer l'image d'origine en dupliquant le calque:
 
-In the object panel (open with <key>Ctrl</key><key>Shift</key><key>O</key>) you can manage layers, groups and objects.
+* Faites un clic droit sur le calque (si vous n'avez pas renommé le calque, il s'appellera `Calque 1`)
+* Cliquez sur `Dupliquer`
+* Fermez l'oeil en cliquant dessus.
 
-You can save the original image by duplicating the layer:
+Cela rendra le premier calque invisible. Tout calque, groupe ou forme vectorielle défini comme invisible sera ignoré par Ink/ Stitch. Nous allons maintenant travailler avec la copie.
 
-* Right click on the layer (if you didn't rename the layer it will be called `Layer 1`)
-* Click on `Duplicate`
-* Close the eye by clicking on it.
+![Dialogue objet](/assets/images/docs/en/objects-panel.png)
 
-This will make the first layer invisible. Any layer, group, or vector shape that is set invisible will be ignored by Ink/Stitch. We will now work with the copy.
-
-![Objects panel](/assets/images/docs/en/objects-panel.png)
-
-### Groups
+### Groupes
 
 Use groups to structure your document:
 
-* Select objects with your mouse
-* Add or remove objects with <key>shift</key><key>click</key>
-* Hit <key>Ctrl</key><key>G</key>
+* Sélectionnez des objets avec votre souris
+* Ajouter ou supprimer des objets avec <key>shift</key><key>click</key>
+* Appuyez sur <key>Ctrl</key><key>G</key>
 
-Ungrouping objects works as follows:
 
-* Select the group(s)
-* Hit <key>Ctrl</key><key>Shift</key><key>G</key>
+Dégrouper des objets fonctionne comme suit:
 
-### Convert to Path
+*Sélectionnez le(s) groupe(s)
+* Appuyez sur <key>Ctrl</key><key>Shift</key><key>G</key>
 
-Transform **all objects** you want to stitch to paths:
+### Convertir en chemin
 
-* Select all objects (`Ctrl+A`)
-* Click on ![convert to path](/assets/images/docs/inkscape-tools-convert-to-path.png) or hit <key>Ctrl</key><key>Alt</key><key>C</key>.
-
-**Info:** Objects that are not of "path" type, are ignored by Ink/Stitch.
+Transformez ** tous les objets ** que vous souhaitez broder en chemins:
+* Sélectionner tous les objets (`Ctrl+A`)
+* Cliquer sur ![convertir en chemin](/assets/images/docs/inkscape-tools-convert-to-path.png) ou appuyer <key>Ctrl</key><key>Alt</key><key>C</key>.
+**Info:** Les objets qui ne sont pas de type "chemin" sont ignorés par Ink/Stitch.
 {: .notice--warning }
 
-### Stitch Types
+### Types de point
 
-Ink/Stitch offers various stitch types. Depending on which stitch type you are willing to use, you have to set the fill color, or stroke parameters with `Object > Fill and Stroke...` (<key>Ctrl</key><key>Shift</key><key>F</key>).
+Ink/Stitch propose différents types de points. Selon le type de point que vous souhaitez utiliser, vous devez définir la couleur de remplissage ou les paramètres de trait avec`Objet > Fond et forme...` (<key>Ctrl</key><key>Shift</key><key>F</key>).
+Regardez ce tableau et suivez les liens pour comprendre comment créer un type de point spécifique:
 
-Have a look at this table and follow the links to understand how to create a specific stitch type:
-
-Path Object | Stitch Type
+Objet chemin | Type de point
 ---|---|---
-(Dashed) stroke |[running stitch](/docs/stitches/running-stitch/), [manual stitch](/docs/stitches/manual-stitch/), [zig-zag stitch](/docs/stitches/zigzag-stitch/), [bean stitch](/docs/stitches/bean-stitch/)
-Two combined strokes (with optional rungs) | [satin column](/docs/stitches/satin-column), [e-stitch](/docs/stitches/e-stitch)
-Closed path with a fill color | [fill stitch](/docs/stitches/fill-stitch/)
+Trait(pointillé) |[point droit](/docs/stitches/running-stitch/), [point manuel](/docs/stitches/manual-stitch/), [point zig-zag](/docs/stitches/zigzag-stitch/), [point triple](/docs/stitches/bean-stitch/)
+Deux traits combinés (avec échelons optionnels) | [colonne satin](/docs/stitches/satin-column), [point en E](/docs/stitches/e-stitch)
+Chemin fermé avec une couleur de remplissage | [point de remplissage](/docs/stitches/fill-stitch/)
 {: .equal-tables }
 
-### Parametrize
+### Paramétrer
 
-Set parameters using `Extensions > Ink/Stitch  > Params`. You find a description for each parameter in the [Params](/docs/params/) section of this documentation. Each time you change parameter values, you'll be able to see the simulated result in a preview window. Once you are satisfied with the result, click `Apply and close` to save the values into your SVG-file.
-
-At this point, save your SVG file. If Inkscape is starting to become sluggish (due to an Inkscape memory leak), restart it before continuing.
+Définir les paramètres en utilisant `Extensions > Ink/Stitch  > Paramètres`. Vous trouvez une description pour chaque paramètre dans la section [Paramètres](/docs/params/) de cette documentation. Chaque fois que vous modifiez les valeurs des paramètres, vous pourrez voir le résultat simulé dans une fenêtre d'aperçu. Une fois que vous êtes satisfait du résultat, cliquez sur `Appliquer et fermer` pour enregistrer les valeurs dans votre fichier SVG.
 
 
-## ![Create Icon](/assets/images/docs/workflow-icon-order.png) Step 3: Plan Stitch Order & Attach Commands
+A ce stade, enregistrez votre fichier SVG. Si Inkscape commence à ralentir (en raison d'une fuite de mémoire Inkscape), redémarrez-le avant de continuer.
 
-### Stitch Order
+## ![Create Icon](/assets/images/docs/workflow-icon-order.png) Etape 3: Mettre le plan de broderie en ordre & Mettre des commandes
 
-When you're designing for embroidery machines that can't cut the thread mid-sew or switch colors automatically, you're going to want to optimize your stitch path to reduce or hide jump stitches and make minimal color changes. Also try to avoid stitching over jump stitches when possible, because it's a total pain to trim them by hand when you do.
+### Ordre de broderie
 
-The order of stitching also affects how the fabric pulls and pushes. Each stitch will distort the fabric, and you'll need to take this into account and compensate accordingly. [More Information](/tutorials/push-pull-compensation/)
+Lorsque vous concevez des motifs pour des machines à broder qui ne peuvent pas couper le fil au milieu de la broderie ou changer de couleur automatiquement, vous souhaiterez optimiser les chemin de points pour réduire ou masquer les sauts de points et effectuer le minimum de changement de couleur. Essayez également d'éviter autant que possible de broder sur les sauts de points, car il est très pénible de les couper à la main quand vous le faites.
 
-Once you've created all vectors, it's time to put everything in the right order. This is where the Inkscapes Objects tool (`Objects > Objects ...`) comes in useful. Optimize your order to minimize color changes and reduce or hide jump-stitches.
+L'ordre des points affecte également la façon dont le tissu est étiré et rétréci. Chaque point déformera le tissu et vous devrez en tenir compte et compenser en conséquence. [Voir plus](/tutorials/push-pull-compensation/)
 
-Ink/Stitch will stitch objects in exactly the order they appear in your SVG document, from lowest to highest in stacking order. If the distance between two objects is long, Ink/Stitch will add a jump-stitch between them automatically. It uses the color of the object to determine thread color, so changes in color from one object to the next will result in a thread-change instruction being added to the embroidery output file.
+Une fois que vous avez créé tous les vecteurs, il est temps de tout mettre dans le bon ordre. C'est ici que l'outil Objets d'Inkscapes (`Objets> Objets ...`) est utile. Optimisez votre ordre pour minimiser les changements de couleur et réduire ou masquer les sauts de points.
+Ink/Stitch brodera les objets dans l'ordre exact dans lequel ils apparaissent dans votre document SVG, du plus bas au plus élevé dans l'ordre d'empilement. Si la distance entre deux objets est longue, Ink/Stitch ajoutera automatiquement un point de saut entre eux. Il utilise la couleur de l'objet pour déterminer la couleur du fil. Par conséquent, si vous changez de couleur d'un objet à l'autre, une instruction de changement de fil sera ajoutée au fichier de sortie de la broderie.
 
-**Tip:** Inkscape gives you the ability to "raise" and "lower" objects in the stacking order using the PageUp and PageDown keys. The new functions "Stack Up" and "Stack Down" will give you much better control over the stacking order. So we recommend to rather bind PageUp and Page Down to them. [More Information](/docs/customize/#shortcut-keys)
+**Astuce:** Inkscape vous permet de "monter" et "descendre" des objets dans l'ordre d'empilement à l'aide des touches Page haut et Page bas. Les nouvelles fonctions "Monter" et "Descendre" vous donneront un bien meilleur contrôle de l'ordre d'empilement. Nous recommandons donc de leur lier Page haut et Page bas. [Plus d'Information](/docs/customize/#shortcut-keys)
 {: .notice--info }
 
-**Info:** You can also manually manipulate the underlying SVG XML structure by using Inkscape's XML Editor pane (`CTRL-SHIFT-X`). Its "Raise" and "Lower" buttons directly manipulate the order of XML tags in the SVG file and are not subject to the same limitations as the original PageUp and PageDown. Note that the ordering of XML tags in the XML Editor tool is the _reverse_ of the order of objects in the Objects tool.
+**Info:** Vous pouvez également modifier manuellement la structure XML SVG sous-jacente à l'aide du dialogue Editeur XML d'Inkscape (`CTRL-SHIFT-X`). Ses boutons "Monter" et "Descendre" agissent directement sur l'ordre des balises XML dans le fichier SVG et ne sont pas soumis aux mêmes limitations que les Page haut et Page bas d'origine. Notez que l'ordre des balises XML dans l'outil XML Editor est l'_inverse_ de l'ordre des objets dans l'outil Objects.
 {: .notice--info }
 
-### Commands
+### Commandes
+[Commandes](/docs/commands/) aide également à optimiser votre chemin de point. Vous pouvez définir les points de début et de fin, déplacer le cadre dans des positions définies ou définir les commandes de découpage et de coupe, etc.
 
-[Commands](/docs/commands/) also help to optimize your stitch path. You can set start and ending points, push the frame into defined positions or set trim and cut commands, etc.
+## ![Create Icon](/assets/images/docs/workflow-icon-visualize.png)  Etape 4: Visualiser
 
-## ![Create Icon](/assets/images/docs/workflow-icon-visualize.png)  Step 4: Visualize
+Ink/Stitch prend en charge trois façons de prévisualiser votre conception:
 
-Ink/Stitch supports three ways to preview your design:
+* [Simulateur](/docs/simulate/)
+* [Aperçu d'impression](/docs/print/)
+* [Affichage du plan de broderie](/docs/import-export/#method-2-display-stitch-plan) (Undo with <key>Ctrl</key><key>Z</key>)
 
-* [Simulator](/docs/simulate/)
-* [Print Preview](/docs/print/)
-* [Display Stitch Plan](/docs/import-export/#method-2-display-stitch-plan) (Undo with <key>Ctrl</key><key>Z</key>)
+## ![Create Icon](/assets/images/docs/workflow-icon-export.png) Etape 5: Enregistrer le fichier broderie
 
-## ![Create Icon](/assets/images/docs/workflow-icon-export.png) Step 5: Save the Embroidery File
+Une fois que tout est dans le bon ordre, lancez  `Fichier > Enregistrer sous...` pour  [exporter](/docs/import-export/) dans un format de fichier supporté par votre machine. La plupart des machines peuvent prendre en charge le format DST et certaines machines Brother préfèrent le PES. N'oubliez pas de sauvegarder également votre fichier au format SVG. Sinon, il sera difficile de changer les détails plus tard.
 
-Once you've got everything in the right order, run `File > Save as...` to [export](/docs/import-export/) to a file format supported by your machine. Most machines can support DST, and some Brother machines prefer PES. Do not forget to also save your file in the SVG-format. Otherwise it's going to be difficult to change details later.
+## ![Create Icon](/assets/images/docs/workflow-icon-testsew.png) Etape 6: Test de broderie
 
-## ![Create Icon](/assets/images/docs/workflow-icon-testsew.png) Step 7: Test-sew
+Il y a toujours place à l'amélioration! Pour tester votre conception, préparez un morceau de tissu qui correspond le mieux à votre tissu final. Utilisez le même stabilisateur et le même tissu, si possible. Pour les t-shirts, essayez de trouver un tissu similaire (généralement tricoté). Ces tissus ont besoin de beaucoup de stabilisation.
+Brodez le motif en regardant la machine pour vous assurer qu'il n'y a pas de surprises. Faites attention aux espaces entre des zones qui indiquent que le tissu a été déformé. Recherchez également les zones où les points se superposent trop et où la machine a du mal à coudre, ce qui indique que la densité de points est trop élevée.
+## ![Create Icon](/assets/images/docs/workflow-icon-optimize.png) Etape 7+: Optimisation
 
-There's always room for improvement! To test out your design, prepare a test piece of fabric that matches your final fabric as closely as possible. Use the same stabilizer and the exact same fabric if possible. For t-shirts, try to find a similar fabric (usually knit). Knits need a lot of stabilization.
-
-Sew out the design, watching the machine to make sure that there aren't any surprises. Watch out for gaps that indicate that the fabric has been distorted. Also search for areas where stitches are piling up too closely and the machine is having trouble sewing, which indicates that the stitch density is too high.
-
-## ![Create Icon](/assets/images/docs/workflow-icon-optimize.png) Step 8+: Optimize
-
-Then go back and tweak your design. Hopefully it only takes a few tries to get it how you want it. Once you're done, copy the final embroidery file from your output directory, just to avoid accidentally overwriting it in the future.
-
+Revenez ensuite et ajustez votre motif. Espérons que cela ne prendra que quelques essais pour l'obtenir comme vous le souhaitez. Une fois que vous avez terminé, copiez le fichier de broderie final à partir de votre répertoire de sortie afin d'éviter tout écrasement accidentel à l'avenir.
