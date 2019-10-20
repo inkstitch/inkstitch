@@ -1,100 +1,94 @@
 ---
-title: "Visual Commands"
+title: "Commandes visuelles"
 permalink: /fr/docs/commands/
 excerpt: ""
-last_modified_at: 2018-10-10
+last_modified_at: 2019-10-20
 toc: true
 ---
 ## Installation
 
-[Install Commands](/docs/addons/) before usage.
+[Installer les Commandes](/docs/addons/) avant usage.
 
-## Attach visual commands via extension
+## Attachez des commandes visuelles via l'extension
 
-It is best practice to add commands through extensions:
+Il est recommandé d’ajouter des commandes via les extensions:
 
-* Select one ore more objects
-* Run `Extensions > Ink/Stitch  > Commands > Attach commands ...`
-* Enable desired commands and apply
-* Start/Stop/Cut commands: The connector's endpoint nearest to the object is the point at which the effect will be performed.
+* Sélectionnez un ou plusieurs objets
+* Lancer `Extensions > Ink/Stitch  > Commandes > Attacher commandes ...`
+* Activer les commandes souhaitées et appliquer
+* Commandes Départ/Stop/découpage: Le noeud final du connecteur le plus proche de l'objet est le point auquel l'effet sera effectué.
 
-In `Extensions > Ink/Stitch  > Commands` you will find three options: add commands, add layer commands and attach commands.
+Dans `Extensions > Ink/Stitch  > Commandes` vous trouverez trois options: ajouter des commandes, ajouter des commandes de calque et attacher des commandes à l'objet sélectionné.
+### Ajouter des Commandes ...
 
-### Add Commands ...
-
-These commands effect the entire embroidery design.
+Ces commandes affectent l’ensemble du motif de broderie.
 
 ![stop position](/assets/images/docs/visual-commands-stop-position.jpg) [Stop Position](#-stop-position)
 
-![origin](/assets/images/docs/visual-commands-origin.jpg) [Origin](#-origin)
+![origine](/assets/images/docs/visual-commands-origin.jpg) [Origine](#-origin)
 
-#### Add Layer Commands ...
+#### Ajouter des commandes de calque ...
 
-These commands will be added to the currently selected layer.
+Ces commandes seront ajoutées au calque sélectionné.
 
-![ignore layer symbol](/assets/images/docs/visual-commands-ignore-layer.jpg) Ignore layer
+![symbole ignorer le calque ](/assets/images/docs/visual-commands-ignore-layer.jpg) Ignorer le calque
 
-#### Attach Commands to Selected Objects ...
+#### Attacher des commandes aux objets sélectionnés ...
 
-These commands will be attached to the currently selected objects.
+Ces commandes seront attachées aux objets actuellement sélectionnés.
 
-![starting point symbol](/assets/images/docs/visual-commands-start.jpg) Fill stitch starting point
+![symbole de point de départ](/assets/images/docs/visual-commands-start.jpg) Point de départ du remplissage
 
-![ending point symbol](/assets/images/docs/visual-commands-end.jpg) Fill stitch ending point
+![symbole de point de fin](/assets/images/docs/visual-commands-end.jpg) Point de fin du remplissage
 
-![trim symbol](/assets/images/docs/visual-commands-trim.jpg) [Trim](#-trim) the thread after sewing this object
+![symbole de coupe](/assets/images/docs/visual-commands-trim.jpg) [Coupe](#-trim) le fil après avoir brodé l'objet
 
-![stop symbol](/assets/images/docs/visual-commands-stop.jpg) [Stop](#-stop) (pause) the machine after sewing this object (for applique, etc)
+![symbole de stop ](/assets/images/docs/visual-commands-stop.jpg) [Stop](#-stop) (pause) la machine parès avoir brodé cet objet (pour les appliqués, etc)
 
-![ignore symbol](/assets/images/docs/visual-commands-ignore.jpg) Ignore object
+![symbole ignorer ](/assets/images/docs/visual-commands-ignore.jpg) Ignore l'objet
 
-![satin cut point symbol](/assets/images/docs/visual-commands-satin-cut-point.jpg) [Satin cut point](/docs/commands/#-satin-cut-point) (use with "Cut Satin Column")
+![symbole de découpage de point satin](/assets/images/docs/visual-commands-satin-cut-point.jpg) [Point de partage de la colonne satin](/docs/commands/#-satin-cut-point) (utiliser avec "Cut Satin Column")
 
-![auto route satin starting position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-start.jpg) Auto-route satin stitch [starting position](#--startingending-position-for-auto-route-satin)
+![symbole de départ de auto route satin ](/assets/images/docs/visual-commands-auto-route-satin-stitch-start.jpg) Mode Auto-route satin  [position de départ](#--startingending-position-for-auto-route-satin)
 
-![auto route satin starting position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-end.jpg) Auto-route satin stitch [ending position](#--startingending-position-for-auto-route-satin)
+![symbole de position de fin de auto route satin](/assets/images/docs/visual-commands-auto-route-satin-stitch-end.jpg) Auto-route satin  [position de fin](#--startingending-position-for-auto-route-satin)
 
-### Attach visual commands manually
-
-* Go to `Object > Symbols` or hit `Shift+Ctrl+Y` to access the markers through the symbols dialog.
-* Select "Ink/Stitch Commands" as the symbol set.
-![Symbol Set](/assets/images/docs/en/visual-commands-symbol-set.jpg)
-* Drag a marker out onto your canvas (doesn't matter where).
-* Use the Flow-Chart Tool ("create diagram connectors" `Ctrl+F2`) to draw a connection between the marker and the fill object to which it should apply. This will add a connector path.
-* Moving the marker will change the connector's position to match. You can also move the endpoints of the connector manually. The connector's endpoint nearest to the fill object is the point at which stitching will start or end.
-
+### Attacher des commandes visuelles à la main
+* Aller à `Objet > Symboles` oo taper `Shift+Ctrl+Y` pour accéder aux marqueurs via la boîte de dialogue des symboles.
+* Selectionner "Ink/Stitch Commands" comme jeu de symboles.
+![Jeux de symboles](/assets/images/docs/en/visual-commands-symbol-set.jpg)
+* Faites glisser un marqueur sur votre canevas (peu importe où).
+* Utiliser l'outil Créer des connecteurs (`Ctrl+F2`) pour dessiner une connexion entre le marqueur et l'objet de remplissage auquel il s'appliquera. Cela va ajouter un chemin de connecteur.
+* Déplacer le marqueur va changer la position du connecteur pour correspondre au point choisi. Vous pouvez également déplacer manuellement les extrémités du connecteur. Le noeud final du connecteur le plus proche de l'objet de remplissage est le point de début ou de fin de la broderie.
   <div style="position: relative; padding-bottom: 50%; height: 0;">
     <iframe src="/assets/video/docs/visual-commands.m4v" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
   </div>
   
-  [Download Sample File](/assets/images/docs/visual-commands-fill-stitch.svg){: download="visual-commands-fill-stitch.svg" title="Download Sample File"}
+  [Télécharger le fichier exemple](/assets/images/docs/visual-commands-fill-stitch.svg){: download="visual-commands-fill-stitch.svg" title="Télécharger le fichier exemple"}
 
-## Visual commands reference
+## Référence des commandes visuelles
 
-### ![trim symbol](/assets/images/docs/visual-commands-trim.jpg) Trim
+### ![symbole de coupe](/assets/images/docs/visual-commands-trim.jpg) Coupe le fil
 
-"Trim after" tells the embroidery machine to cut the thread after the assigned object has been stitched.  Not all home machines support the trim function within a color block.  Mainly used to prevent long jump stitched between embroidery objects and to avoid post embroidery trimming by the operator.
+"Couper après" indique à la machine à broder de couper le fil une fois que l'objet désigné a été brodé. Toutes les machines domestiques ne prennent pas en charge la fonction de coupe dans un bloc de couleur. Principalement utilisé pour empêcher le saut de fil entre les objets de broderie et pour éviter la coupe des fils après la broderie par l'opérateur.
+### ![ symbole stop](/assets/images/docs/visual-commands-stop.jpg) Stop
+Les machines à broder commerciales qui ont plusieurs aiguilles passent normalement d’une couleur à l’autre sans pause entre elles. Parfois, vous * voulez * une pause (par exemple pour couper le tissu appliqué), donc "STOP après" ajoute un changement de couleur supplémentaire qui peut être affecté à une instruction d'arrêt spéciale à l'aide de l'interface utilisateur de la machine (par exemple C00 sur les machines Barudan). Les utilisations courantes de cette méthode sont l’application de mousse feuilletée après une broderie régulière. Appliquer du tissu appliqué et / ou même vouloir ralentir la machine à un certain endroit pour certains types de broderie sans avoir à surveiller la machine.
 
-### ![stop symbol](/assets/images/docs/visual-commands-stop.jpg) Stop
+### ![position de stop](/assets/images/docs/visual-commands-stop-position.jpg) Stop position
 
-Commercial embroidery machines that have multiple needles normally proceed from one color to the next without pausing in between. Sometimes you *want* a pause (e.g. to trim applique fabric), so "STOP after" adds an extra color change which can be assigned to a special stop instruction using the machine's user interface (e.g. C00 on Barudan machines). Common uses for this would be to apply puff foam after doing regular embroidery.  Applying applique fabric and/or even wanting to slow down the machine at a certain spot for certain types of embroidery without having to babysit the machine.
+La machine à broder va à ce point avant chaque commande d'arrêt. Cela permet de pousser le cadre de broderie vers l'utilisateur pour faciliter les étapes pour un appliqué.
+### ![origine](/assets/images/docs/visual-commands-origin.jpg) Origine
 
-### ![stop position](/assets/images/docs/visual-commands-stop-position.jpg) Stop position
+Spécifie le point d'origine (0,0) pour les fichiers de broderie. La configuration des origines est particulièrement utile pour les personnes ayant un accès complet à l’ensemble du champ de couture dont leur machine est capable, quel que soit le cadre qu’elles utilisent.
 
-The embroidery machine jumps to this point before every stop command. This allows for pushing the embroidery frame out toward the user to make applique steps easier.
-
-### ![origin](/assets/images/docs/visual-commands-origin.jpg) Origin
-
-Specifies the origin (0,0) point for embroidery files. Setting up origins is especially useful for people that have full access to the entire sewing field that their machine is capable of regardless of what hoop they use.
-
-### ![starting point symbol](/assets/images/docs/visual-commands-start.jpg) ![ending point symbol](/assets/images/docs/visual-commands-end.jpg) Starting/Ending Position for Fills
+### ![starting point symbol](/assets/images/docs/visual-commands-start.jpg) ![ending point symbol](/assets/images/docs/visual-commands-end.jpg)Position de départ/de fin pour un remplissage 
 
 Defines the (1) starting or (2) ending point of an fill stitch area.
 
-###  ![auto route satin starting position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-start.jpg) ![auto route satin ending position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-end.jpg) Starting/Ending Position for Auto Route Satin
+###  ![symbole de position de départ de auto route satin](/assets/images/docs/visual-commands-auto-route-satin-stitch-start.jpg) ![symbole de position de fin de auto route satin](/assets/images/docs/visual-commands-auto-route-satin-stitch-end.jpg) symbole de position de départ/de fin de auto route satin
 
-Defines the (1) starting or (2) ending point for satin auto route column. Run "[Auto-route Satin Column...](/docs/satin-tools/#auto-route-satin-columns)" afterwards.
+Définit le point de départ (1) ou le point final (2) de la colonne auto route satin. Exécutez ensuite "[Colonne satin de routage automatique ...](/docs/satin-tools/#auto-route-satin-columns)".
 
-### ![satin cut point symbol](/assets/images/docs/visual-commands-satin-cut-point.jpg) Satin cut point
+### ![symbole de point de partagede colonne satin](/assets/images/docs/visual-commands-satin-cut-point.jpg) Point de partage de colonne satin
 
-Split a Satin Column at the point specified by this command. After attaching run "[Cut Satin Column](/docs/satin-tools/#cut-satin-column)".
+Fractionner une colonne satin au point spécifié par cette commande. Après le placement de la commande, exécutez la commande "[Cut Satin Column] (/ docs / satin-tools / # cut-satin-column)".
