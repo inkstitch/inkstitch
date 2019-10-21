@@ -19,7 +19,7 @@ Créez un objet, par exemple un cercle et assurez-vous qu'il a un remplissage.
 
 ## Etape 2 - Convertir en chemin
 
-Transformer **Tous les onjets** que vous voulez broder en chemin:
+Transformer **Tous les objets** que vous voulez broder en chemin:
 
 * Sélectionnez tous les objets (`Ctrl+A`)
 * ``Chemin > Objet en chemin` ou `Ctrl+Alt+C`.
