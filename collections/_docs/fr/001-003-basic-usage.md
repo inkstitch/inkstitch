@@ -5,7 +5,7 @@ excerpt: ""
 last_modified_at: 2019-10-19
 toc: true
 ---
-Essayez les étaoes suivantes pour tester l'extension et apprendre les fonctionnalités de base.
+Essayez les étapes suivantes pour tester l'extension et apprendre les fonctionnalités de base.
 
 **Astuces:** Si vous êtes débutant avec Inkscape, jetez d'abord un coup d'oeil sur leur [Tutoriel de base](https://inkscape.org/fr/doc/tutorials/basic/tutorial-basic.html).
 {: .notice--info }
