@@ -24,7 +24,7 @@ Le point triple décrit une répétition de points droits avant arrière.Il en r
 [En savoir plus](/docs/stitches/bean-stitch/){: .btn .btn--primary}
 
 ### Point manuel
-En mode point manuel Ink / Stitch utilisera chaque nœud d’un chemin comme point de pénétration de l’aiguille, exactement comme vous les avez placés. 
+En mode point manuel Ink/Stitch utilisera chaque nœud d’un chemin comme point de pénétration de l’aiguille, exactement comme vous les avez placés. 
 
 !Point manuel Détail](/assets/images/docs/manual-stitch-detail.png)
 
