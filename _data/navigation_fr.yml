@@ -1,144 +1,144 @@
 # main links
 main:
-  - title: "Features"
+  - title: "Fonctionnalités"
     url: /fr/features/
   - title: "Documentation"
     url: /fr/docs/install/
-  - title: "Tutorials"
+  - title: "Tutoriels"
     url: /fr/tutorials/
-  - title: "Get Help"
+  - title: "Aide"
     url: /fr/docs/get-help/
-  - title: "Get Involved"
+  - title: "Nous rejoindre"
     url: /fr/developers/introduction/
     
 # index + specific pages which have the sidebar option in the header
 pages:
-  - title: "Features"
+  - title: "Fonctionnalités"
     url: /fr/features/
   - title: "Documentation"
     url: /fr/docs/install/
     children:
       - title: "Installation"
         url: /fr/docs/install/
-      - title: "Workflow"
+      - title: "Organisation du travail"
         url: /fr/docs/workflow/
-      - title: Stitch Library
+      - title: Bibliothèque de points
         url: /fr/docs/stitch-library/
-      - title: "Get Help"
+      - title: "Aide"
         url: /fr/docs/get-help/
-  - title: "Tutorials"
+  - title: "Tutoriels"
     url: /fr/tutorials/
     children:
-      - title: "Artwork Galleries"
+      - title: "Galeries de réalisations"
         url: /fr/tutorials/inspiration/
-      - title: "Sample Files"
+      - title: "Fichiers exemples"
         url: /fr/tutorials/resources/samples/
-      - title: "Templates"
+      - title: "Modèles"
         url: /fr/tutorials/resources/templates/
-      - title: "Tutorials"
+      - title: "Tutoriels"
         url: /fr/tutorials/
-      - title: "DIY Embroidery Machine"
+      - title: "Fabriquer sa machine à broder"
         url: /fr/tutorials/embroidery-machine/
-  - title: "Get involved"
+  - title: "Rejoignez-nous"
     url: /fr/developers/introduction/
   - title: "News"
     url: /fr/news/
 
 # documentation links
 docs:
-  - title: Getting Started
+  - title: Commencer
     children:
-      - title: "Install / Upgrade"
+      - title: "Installation / mise à jour"
         url: /fr/docs/install/
-      - title: "Customize"
+      - title: "Personnaliser"
         url: /fr/docs/customize/
-      - title: "Basic Usage"
+      - title: "Premiers pas"
         url: /fr/docs/basic-usage/
-      - title: "Workflow"
+      - title: "Organisation du travail"
         url: /fr/docs/workflow/
   - title: Interface
     children:
-    - title: "Params"
+    - title: "Paramètres"
       url: /fr/docs/params/
-    - title: Install Add-Ons
+    - title: Installer les Add-Ons
       url: /fr/docs/addons/
-    - title: "Commands"
+    - title: "Commandes"
       url: /fr/docs/commands/
-    - title: "Satin Tools"
+    - title: "Outils Satin"
       url: /fr/docs/satin-tools/
-    - title: "Lettering"
+    - title: "Lettrage"
       url: /fr/docs/lettering/
-    - title: "Simulate"
+    - title: "Simulation"
       url: /fr/docs/simulate/
-    - title: "Print"
+    - title: "Imprimer"
       url: /fr/docs/print/
     - title: "Import / Export"
       url: /fr/docs/import-export/
-    - title: "Troubleshoot Objects"
+    - title: "Dépannage pour objets"
       url: /fr/docs/troubleshoot/
-  - title: "Stitch Library"
+  - title: "Bibliothèque de points"
     url: /fr/docs/stitch-library/
     children:
-      - title: "Manual Stitch"
+      - title: "Point manuel"
         url: /fr/docs/stitches/manual-stitch/
-      - title: "Running Stitch"
+      - title: "Point droit"
         url: /fr/docs/stitches/running-stitch/
-      - title: "Bean Stitch"
+      - title: "Point triple"
         url: /fr/docs/stitches/bean-stitch/
-      - title: "Zig-Zag (Simple Satin)"
+      - title: "Zig-Zag (Satin Simple)"
         url: /fr/docs/stitches/zigzag-stitch/
-      - title: "Satin Column"
+      - title: "Colonne Satin"
         url: /fr/docs/stitches/satin-column/
-      - title: "E-Stitch"
+      - title: "Point en "E""
         url: /fr/docs/stitches/e-stitch/
-      - title: "Fill Stitch"
+      - title: "Poin de remplissage"
         url: /fr/docs/stitches/fill-stitch/
-  - title: Tips
+  - title: Astuces
     children:
-      - title: "Fonts"
+      - title: "Polices"
         url: /fr/docs/fonts/
-      - title: "Hidden Features"
+      - title: "Fonctions cachées"
         url: /fr/docs/features/
-      - title: Inkscape Tips
+      - title: Astuces pour Inkscape
         url: /fr/docs/inkscape-tips/
-  - title: Troubleshooting
+  - title: Dépannage
     children:
-      - title: "Get help"
+      - title: "Aide"
         url: /fr/docs/get-help/
       - title: "F.A.Q."
         url: /fr/docs/faq/
-      - title: Error Messages
+      - title: Messages d'erreur
         url: /fr/docs/error-messages/
-      - title: "Missing Translation"
+      - title: "Traduction manquante"
         url: /fr/docs/localization/
     
 # tutorial links
 tutorials:
   - title: Inspiration
     children:
-      - title: "Artwork Gallery"
+      - title: "Galeries de réalisations"
         url: /fr/tutorials/inspiration/
-      - title: "DIY Embroidery Machine"
+      - title: "Fabriquer sa machine à broder"
         url: /fr/tutorials/embroidery-machine/
   - title: Resources
     children:
     - title: "Branding Guide"
       url: /fr/tutorials/resources/branding-guide/
-    - title: "Sample Files"
+    - title: "Fichiers exemples"
       url: /fr/tutorials/resources/samples/
-    - title: "Templates"
+    - title: "Modèles"
       url: /fr/tutorials/resources/templates/
-  - title: Tutorials
+  - title: Tutoriels
     url: /fr/tutorials/
     children:
-    - title: "Tutorials A - Z"
+    - title: "Tutoriels A - Z"
       url: /fr/tutorials/
-    - title: "Video Tutorials"
+    - title: "Tutoriels Video"
       url: /fr/tutorials/video/
   
 # developers links
 developers:
-  - title: Get involved
+  - title: Rejoignez-nous
     url: /fr/developers/introduction/
   - title: Ink/Stitch
     url: /fr/developers/inkstitch/
