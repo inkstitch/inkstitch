@@ -2,7 +2,7 @@
 title: "Bibliothèque de points"
 permalink: /fr/docs/stitch-library/
 excerpt: ""
-last_modified_at: 2019-07-05
+last_modified_at: 2019-10-21
 toc: true
 ---Les types de points Ink/Stitch peuvent être grossièrement divisés en trois sections: trait, satin et remplissage.
 
