@@ -1,26 +1,26 @@
 ---
-title: "E-Stitch"
+title: "Point en E"
 permalink: /fr/docs/stitches/e-stitch/
 excerpt: ""
-last_modified_at: 2018-10-10
+last_modified_at: 2019-10-21
 toc: true
 ---
-## What it is
+## Qu'est-ce que c'est
 
 [![E-Stitch Dolphin](/assets/images/docs/e-stitch-example.jpg){: width="200x"}](/assets/images/docs/e-stitch.svg){: title="Download SVG File" .align-left download="e-stitch.svg" }
-It's biggest purpose is for a simple (and yet deceivingly strong) cover stitch for applique items. Mainly for baby cloths as their skin tends to be more sensitive.
+Le point "E" est un point de recouvrement simple mais solide pour les éléments appliqués. Principalement pour les vêtements de bébé car leur peau a tendance à être plus sensible. Point en E Détail
 
 ![E-Stitch Detail](/assets/images/docs/e-stitch-detail.jpg)
 
-## How to Create
+## Comment le créer
 
-Prepare your path exactly as you would with a [Satin Column](/docs/stitches/satin-column). But in Params enable `"E" stitch`. Don't forget to enlarge the zig-zag spacing for this stitch type.
+Preparez votre chemin exactement comme vous le feriez pour une [Colonne Satin](/docs/stitches/satin-column). Mais dans les paramètres activez `"E" stitch`. N'oubliez pas d'élargir lllllllllll'espacement du zig-zag pour ce type de point.
 
 ![Params Satin Column.jpg](/assets/images/docs/en/params-e-stitch.jpg)
 
-**Tip:** If the points are facing the wrong way, just use the ["flip satin column rails"](/docs/satin-tools/#flip-satin-column-rails) extension.
+**Astuce** Si vos points ne sont pas tournés du bon côté utilisez ["flip satin column rails"](/docs/satin-tools/#flip-satin-column-rails) .
 {: .notice--info }
 
-## Sample Files Including E-Stitch
+## Fichiers exemples contenant du point en E
 {% include tutorials/tutorial_list key="stitch-type" value="E-Stitch" %}
 
