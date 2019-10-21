@@ -1,66 +1,62 @@
 ---
-title: "Stitch Library"
+title: "Bibliothèque de points"
 permalink: /fr/docs/stitch-library/
 excerpt: ""
 last_modified_at: 2019-07-05
 toc: true
----
-Ink/Stitch stitch types can be roughly divided into three sections: stroke, satin and fill.
+---Les types de points Ink/Stitch peuvent être grossièrement divisés en trois sections: trait, satin et remplissage.
 
-## Stroke
-Stroke stitches can be used for: outlines, line art embroidery or to add details into your design.
+## Traits
+Les points de trait peuvent être utilisés pour: les contours, la broderie au trait ou pour ajouter des détails à votre dessin.
 
-### Running Stitch
-Running stitch produces a series of small stitches following a line or curve.
+### Points droits
+Le point droit produit une série de petits points suivant une ligne ou une courbe.
 
-![Running Stitch Detail](/assets/images/docs/running-stitch-detail.jpg)
+![Détail point droit](/assets/images/docs/running-stitch-detail.jpg)
 
-[Learn more](/docs/stitches/running-stitch/){: .btn .btn--primary}
+[En savoir plus](/docs/stitches/running-stitch/){: .btn .btn--primary}
 
-### Bean Stitch
-Bean stitch describes a repetition of running stitches back and forth. This would result in thicker threading.
+### Point triple
+Le point triple décrit une répétition de points droits avant arrière.Il en résultera un point plus fourni 
 
-![Bean Stitch Detail](/assets/images/docs/bean-stitch-detail.jpg){: width="350x" }
+![Point triple Détail](/assets/images/docs/bean-stitch-detail.jpg){: width="350x" }
 
-[Learn more](/docs/stitches/bean-stitch/){: .btn .btn--primary}
+[En savoir plus](/docs/stitches/bean-stitch/){: .btn .btn--primary}
 
-### Manual Stitch
-In manual stitch mode Ink/Stitch will use each node of a path as a needle penetration point, exactly as you placed them.
+### Point manuel
+En mode point manuel Ink / Stitch utilisera chaque nœud d’un chemin comme point de pénétration de l’aiguille, exactement comme vous les avez placés. 
 
-![Manual Stitch Detail](/assets/images/docs/manual-stitch-detail.png)
+!Point manuel Détail](/assets/images/docs/manual-stitch-detail.png)
 
-[Learn more](/docs/stitches/manual-stitch/){: .btn .btn--primary}
+[En savoir plus](/docs/stitches/manual-stitch/){: .btn .btn--primary}
 
-### Zig-Zag Stitch
-Zig-Zag stitches are a very basic option to create a simple zig-zag line. We recommend to use them only for straight lines, because they will not stitch nicely around edges. In most cases, you would prefer a satin column instead.
+### Point Zig-Zag
+Le point zig-zag est une option très basique pour créer une simple ligne en zig-zag. Nous vous recommandons de ne l'utiliser que pour les lignes droites, parce qu'ils ne piqueront pas bien autour des bords. Dans la plupart des cas, choisissez plutôt une colonne satin.
+![Zigzag Detail](/assets/images/docs/zigzag-stitch-detail.png)
 
-![Zigzag Stitch Detail](/assets/images/docs/zigzag-stitch-detail.png)
-
-[Learn more](/docs/stitches/zigzag-stitch/){: .btn .btn--primary}
+[En savoir plus](/docs/stitches/zigzag-stitch/){: .btn .btn--primary}
 
 
 ## Satin
-### Satin Column
-Satin stitch is mostly used for borders, letters or small fill areas.
+### Colonne Satin
+Le point satin est principalement utilisé pour les bordures, les lettres ou les petites zones de remplissage.
+Ink/Stitch va dessiner des zig-zags entre deux lignes. Vous pouvez faire varier l'épaisseur de la colonne à votre guise.
 
-Ink/Stitch will draw zig-zags back and forth between two lines, while you can vary the thickness of the column as you like.
+![Colonne satin Détail](/assets/images/docs/satin-column-detail.png)
 
-![Satin Column Detail](/assets/images/docs/satin-column-detail.png)
-
-[Learn more](/docs/stitches/satin-column/){: .btn .btn--primary}
+[En savoir plus](/docs/stitches/satin-column/){: .btn .btn--primary}
 
 ### E-Stitch
-The biggest purpose for E-stitch is a simple but strong cover stitch for applique items. Mainly for baby cloths as their skin tends to be more sensitive.
+Le point "E" est un point de recouvrement simple mais solide pour les éléments appliqués. Principalement pour les vêtements de bébé car leur peau a tendance à être plus sensible.
+![Point en E Détail](/assets/images/docs/e-stitch-detail.jpg)
 
-![E-Stitch Detail](/assets/images/docs/e-stitch-detail.jpg)
-
-[Learn more](/docs/stitches/e-stitch/){: .btn .btn--primary}
+[En savoir plus](/docs/stitches/e-stitch/){: .btn .btn--primary}
 
 
-## Fill
-### Fill Stitch
-Fill stitch is used to fill big areas with a color.
+## Remplissage
+### Point de remplissage
+Le point de remplissage est utilisé pour remplir une grande surface avec une couleur.
 
-![Fill stitch realistic](/assets/images/docs/fill-stitch-realistic.png)
+![Point de remplissage](/assets/images/docs/fill-stitch-realistic.png)
 
-[Learn more](/docs/stitches/fill-stitch/){: .btn .btn--primary}
+[En savoir plus](/docs/stitches/fill-stitch/){: .btn .btn--primary}
