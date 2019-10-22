@@ -4,7 +4,8 @@ permalink: /fr/docs/stitch-library/
 excerpt: ""
 last_modified_at: 2019-10-21
 toc: true
----Les types de points Ink/Stitch peuvent être grossièrement divisés en trois sections: trait, satin et remplissage.
+---
+Les types de points Ink/Stitch peuvent être grossièrement divisés en trois sections: trait, satin et remplissage.
 
 ## Traits
 Les points de trait peuvent être utilisés pour: les contours, la broderie au trait ou pour ajouter des détails à votre dessin.
