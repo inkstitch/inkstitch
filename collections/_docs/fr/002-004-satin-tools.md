@@ -1,75 +1,72 @@
 ---
-title: "Satin Tools"
+title: "Outils Satin"
 permalink: /fr/docs/satin-tools/
 excerpt: ""
-last_modified_at: 2018-07-14
+last_modified_at: 2019-10-21
 toc: true
 ---
-`Extensions > Ink/Stitch  > Satin Tools` include a number of useful helpers, making it easy to work with [satin columns](/docs/stitches/satin-column/).
+`Extensions > Ink/Stitch  > Satin Tools`inclut un certain nombre d’aides utiles, facilitant le travail avec [les colonnes satin](/docs/stitches/satin-column/).
 
-**Example:**
-* Create a path with the help of the bezier curves tool (`B`)
-* Run [Convert Line to Satin](/docs/satin-tools/#convert-line-to-satin)
-* Use the [Params dialog](/docs/params/#satin-params) to set an underlay
-* Run [Auto-Route Satin](/docs/satin-tools/#auto-route-satin-columns) to recieve nicely routed satin columns
+**Exemple:**
+* Créer un chemin à l'aide de l'outil courbes de Bézier (`B`)
+* Faire [Convertir les lignes Satin](/docs/satin-tools/#convert-line-to-satin)
+* Utiliser le [Dialogue de Paramètres ](/docs/params/#satin-params) pour choisir une sous-couche
+* Lancer [Auto-Route Satin](/docs/satin-tools/#auto-route-satin-columns) pour obtenir des colonnes de satin bien organisées
 
-[![Convert Line to Satin](/assets/images/docs/en/satin-tools.svg)](/assets/images/docs/en/satin-tools.svg){: title="Download SVG File" download="satin-tools.svg" }
+[![Convertir Ligne en Satin](/assets/images/docs/en/satin-tools.svg)](/assets/images/docs/en/satin-tools.svg){: title="Télécharger le fichier SVG" download="satin-tools.svg" }
 
-**Tip:** For faster access [set shortcuts](/docs/customize/) on specific satin tools.
+**Astuce** Pour un accès plus rapide [activer les raccourcis](/docs/customize/) des outils satin spécifiques.
 {: .notice--info}
 
-## Auto-Route Satin Columns...
+## Auto-Route Satin Colonnes...
 
-This tool will replace your satins with a new set of satin columns in logical stitching order. Under-pathing and jump-stitches will be added as necessary and satins will be broken to facilitate jumps. The resulting satins will retain all of the parameters you had set on the original satins, including underlay, zig-zag spacing, etc.
-
+Cet outil remplacera vos colonnes satin par un nouvel ensemble de colonnes satin dans un ordre d'assemblage logique. Des sous-chemins et les sauts de points seront ajoutés si nécessaire et les colonnes seront scindées pour faciliter les sauts. Les points satins résultants conserveront tous les paramètres que vous avez définis sur les points satins originaux, y compris la sous-couche, l’espacement en zigzag, etc.
 ### Usage
 
-1. Select satin columns (prepared with underlay, etc.)
-2. Run `Extensions > Ink/Stitch  > Satin Tools > Auto-Route Satin Columns...`
-3. Enable desired options and click apply
+1. Sélectionnez les colonnes satin (préparées avec sous-couche, etc.)
+2. Lancer `Extensions > Ink/Stitch  > Satin Tools > Auto-Route Satin Columns...`
+3. Activer les options souhaitées et cliquez sur Appliquer
 
-**Tip:** By default, it will choose the left-most extreme as the starting point and the right-most extreme as the ending point (even if these occur partway through a satin such as the left edge of a letter "o"). You can override this by attaching the ["Auto-route satin stitch starting/ending position" commands](/docs/commands/).
+**Astuce:** Par défaut, le point à l'extrême gauche sera choisi comme départ et celui à l'extrême droite comme fin (même s'ils se trouvent à mi-chemin dans un satin, tel que le bord gauche de la lettre "o"). Vous pouvez le remplacer en activant les [commandes de "Auto-route satin stitch starting/ending position"](/docs/commands/).
 {: .notice--info }
 
 ### Options
 
-* Enable **Trim jump stitches** to use trims instead of jump stitches. Any jump stitch over 1mm is trimmed. Trim commands are added to the SVG, so you can modify/delete as you see fit.
+* Activer **Couper les sauts de fil** pour couper les fils au lieu de créer des sauts de fil. Tout saut de fil au-dessus de 1mm est coupé. Les commandes de coupe sont ajoutées au SVG, vous pouvez donc les modifier / supprimer à votre guise.
 
-* If you prefer to keep your previous order (which might be the case if you have overlaying satins), enable the option **Preserve order of Satin Columns**.
+* Si vous préférez conserver votre ordre initial (ce qui pourrait être le cas si vous avez superposé des satins), activez l'option ** **Préserver l'ordre des colonnes satinées**.
 
-## Convert Line to Satin
+## Convertir des Lignes en Satin
 
-This extension will convert a stroke into a satin column with a specified width. After the conversion you will see the two rails and (possibly) lots of rungs, depending on the shape of your line.
-
-### Usage
-
-1. Draw a bezier curve (`B`)
-2. Set a stroke width
-2. Run `Extensions > Ink/Stitch  > Satin Tools > Convert Line to Satin`
-
-## Cut Satin Column
-
-Split a satin column at a specified point. The split happens at a stitch boundary to ensure that the two resulting satins sew just like the original. All parameters set on the original satin remain on the two new satins, and all rungs are retained. If one of the satins would have no rungs left, a new rung is added.
+Cette extension convertira un trait en une colonne satin avec une largeur spécifiée. Après la conversion, vous verrez les deux rails et (éventuellement) de nombreuses traverses de direction, en fonction de la forme de votre ligne.
 
 ### Usage
 
-1. Select a satin column (simple satin doesn't work)
-2. Attach the "Satin split point" command using `Extensions > Ink/Stitch  > Commands > Attach Commands to Selected Objects`.
-3. Move the symbol (or just the connector line's endpoint) to point to the exact spot you want the satin to be split at.
-4. Select the satin column again.
-5. Run `Extensions > Ink/Stitch  > Satin Tools > Split Satin Column`.
-6. The split point command and connector line disappear, and nothing else appears to have happened. Select your satin and you'll see that it's been split.
+1. Tracer une courbe de Bézier (`B`)
+2. Définir une largeur de trait
+2. Lancer `Extensions > Ink/Stitch  > Satin Tools > Convert Line to Satin`
 
-## Flip Satin Column Rails
+## Scinder une colonne Satin
 
-This is a little tool to help you to plan your stitch path precisely. E.g. flip satin columns to shorten connections between two sections.
-
-A satin column which originally starts on the left rail and ends on the right, will start on the right rail and end on the left.
-
-![Flip Satin Columns](/assets/images/docs/en/flip-satin-column.jpg)
+Scinder une colonne Satin à un point précisé. La coupure a lieu à la limite d'un point pour que les deux satins résultants soient cousus exactement comme l'original. Tous les paramètres définis sur le satin d'origine restent sur les deux nouveaux satins et toutes les traverses sont conservées. Si l'un des satins n'a plus de traverse, de nouvelles sont ajoutées.
 
 ### Usage
 
-* Select one or more satin column(s)
-* Run `Extensions > Ink/Stitch  > Satin Tools > Flip Satin Columns`
+1. Sélectionnez une colonne satin (le satin simple ne fonctionne pas)
+2. Ajouter la commande "Satin split point" avec `Extensions > Ink/Stitch  > Commands > Attach Commands to Selected Objects`.
+3. Déplacez le symbole (ou simplement l'extrémité de la ligne de connexion) pour pointer sur l'endroit exact où vous souhaitez diviser le satin.
+4. Sélectionnez à nouveau la colonne satin.
+5. Faire `Extensions > Ink/Stitch  > Satin Tools > Split Satin Column`.
+6. La commande de point de partage et la ligne de connexion disparaissent et il ne semble plus rien s'être passé. Sélectionnez votre satin et vous verrez qu'il a été divisé.
+## Intrevertir les rails des colonnes satin
+
+C'est un petit outil pour vous aider à planifier votre chemin de points avec précision. Par exemple. retourner les colonnes satin pour raccourcir les connexions entre deux sections.
+
+Une colonne satin qui commence à l'origine sur le rail de gauche et se termine à droite commence sur le rail de droite et se termine à gauche.
+![Retourner la colonne satin](/assets/images/docs/en/flip-satin-column.jpg)
+
+### Usage
+
+* Sélectionnez une ou plusieurs colonnes satin
+* Lancez `Extensions > Ink/Stitch  > Satin Tools > Flip Satin Columns`
 
