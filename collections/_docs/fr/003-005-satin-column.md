@@ -1,72 +1,67 @@
 ---
-title: "Satin Column"
+title: "Colonne Satin"
 permalink: /fr/docs/stitches/satin-column/
 excerpt: ""
-last_modified_at: 2018-10-10
+last_modified_at: 2019-10-23
 toc: true
 ---
-## What it is
+## Qu’est-ce que c’est
 
 ![Stitch Types - Satin Column](/assets/images/docs/stitch-type-satincolumn.jpg)
 
-## How to Create
-You define a satin column using a shape made of **two mostly-parallel lines**. Ink/Stitch will draw zig-zags back and forth between the two lines. You can vary the thickness of the column as you like.
+## Comment le créer
+Vous définissez une colonne satin à l'aide d'une forme composée de **deux lignes presque parallèles**. Ink/Stitch va dessiner des zig-zags entre les deux lignes. Vous pouvez faire varier l'épaisseur de la colonne à votre guise.
+* Combinez deux traits avec `Chemin > Combiner` ou taper `Ctrl+K`.
+* [Vérifier les directions de chemin](/docs/customize/#enabling-path-outlines--direction). Pour que la colonne satin fonctionne, elles doivent être égales.<br />Si ce n'est pas le cas Sélectionnez avec l' *Outil Editer les noeuds* (`N`) un point du sous-chemin et faites `Chemin > Inverser`. Cela n'inversera que le sous-chemin sélectionné.
+* Utilisez la méthode noeud ou traverse comme décrit ci-dessous.
+* Ensuite, sélectionnez votre colonne satin et lancez les paramètres avec `Extensions > Ink/Stitch  > Paramètres` ou un  [raccourci clavier personnalisé](/docs/customize/).
 
-* Combine two strokes with `Path > Combine` or hit `Ctrl+K`.
-* [Check path directions](/docs/customize/#enabling-path-outlines--direction). For the satin column to work, they have to be equal.<br />If they are not, with the *Node Editor Tool* (`N`) select one point of one sub-path and run `Path > Reverse`. This will reverse only the selected sub-path.
-* Use node or rung method as described below.
-* Then select your satin column and run params through `Extensions > Ink/Stitch  > Params` or a [custom shortcut key](/docs/customize/).
+### Méthode des noeuds
 
-### Node Method
+[![Bateau en colonne satin](/assets/images/docs/satin-column.jpg){: width="200x"}](/assets/images/docs/satin-column.svg){: title="Télécharger le fichier SVG" .align-left download="satin-column.svg" }
+Selon la complexité de votre conception, cette méthode peut prendre beaucoup de temps, car les deux chemins doivent avoir le **même nombre de points**. Cela signifie que chaque chemin sera composé d'un nombre égal de courbes de Bézier. Chaque paire de points agit comme un "point de contrôle": Ink/Stitch garantira qu'un "zag" finisse par aller d'un point à l'autre.
 
-[![Satin Column Boat](/assets/images/docs/satin-column.jpg){: width="200x"}](/assets/images/docs/satin-column.svg){: title="Download SVG File" .align-left download="satin-column.svg" }
-Depending on the complexity of your design, this method might be time consuming, because the two paths must have the **same number of points**. This means that each path will be made up of an equal number of Bezier curves. Each pair of points acts as a "checkpoint": Ink/Stitch will ensure that a "zag" ends up going from one point to the other.
+### Méthode des traverses
 
-### Rung Method
-
-[![Satin Column chefshat](/assets/images/docs/satin-column-rungs-example.jpg){: width="200x"}](/assets/images/docs/satin-column-rungs.svg){: title="Download SVG File" .align-left download="satin-column-rungs.svg" }
-The rung method will give you more control over the way the satin column is rendered. Good positioning of points on each of the two lines helps getting the stitch directions right. However, there are situations where you need to add direction lines ("rungs") for satin columns:
-
-* Some tricky corner areas
-* Complicated drawings where moving points is both difficult and time consuming
-* Special situations where you want the stitch directions to be weird
+[![Chapeau du chef en colonne satin](/assets/images/docs/satin-column-rungs-example.jpg){: width="200x"}](/assets/images/docs/satin-column-rungs.svg){: title="Télécharger le fichier SVG" .align-left download="satin-column-rungs.svg" }
+La méthode des traverses vous donnera plus de contrôle sur le rendu de la colonne satin. Un bon positionnement des points sur chacune des deux lignes aide à bien orienter les points. Cependant, il existe des situations dans lesquelles vous devez ajouter des lignes de direction ("traverses") pour les colonnes satin:
+* Quelques angles difficiles
+* Dessins complexes où les déplacements de points sont à la fois difficiles et longs
+* Situations spéciales dans lesquelles vous souhaitez que les instructions de point soient particulières
 {: style="clear: both;" }
 
-**Auto generated Satin Columns**
-* Add a contour to a path object (with no filling).
-* Set contour width to the size you want your satin stitch to be.
-* The path should not intersect itself. Try [breaking it up](/docs/satin-tools/#cut-satin-column) into multiple paths if needed.
-* Run `Extensions > Ink/Stitch  > Convert Line to Satin`
-* Run `Extensions > Ink/stitch  > Auto-route Satin...`
-* Use as-is or customize the rungs or rails
+**Colonnes Satin auto-générées**
+* Ajouter un contour à un objet chemin (sans remplissage).
+* Définissez la largeur du contour à la taille souhaitée pour votre point satin.
+* Le chemin ne doit pas se recouper lui-même. Essayez de le [briser](/docs/satin-tools/#cut-satin-column) en plusieurs chemins si nécessaire.
+* Lancer `Extensions > Ink/Stitch  > Convert Line to Satin`
+* Lancer `Extensions > Ink/stitch  > Auto-route Satin...`
+* Utilisez tel quel ou modifier les traverses ou les rails
 
-**Manual adding of rungs**
+**Ajout manuel de traverses**
 
-* Make sure the existing satin column path (with the two subpaths) is selected with the Node Editor tool.
-* Press `P` or select the Pencil Tool.
-* Hold `Shift`.
-* Click once at the start of the rung.
-* Click a second time at the end of the rung.
+* Assurez-vous que le chemin de la colonne satin existant (avec les deux sous-chemins) est sélectionné avec l'outil Editer les noeuds.
+* Appuyez sur `P` ou sélectionnez l'outil Crayon.
+* Maintenir la touche `Maj`enfoncée.
+* Cliquez une fois au début de la traverse.
+* Cliquez une seconde fois à la fin de la traverse.
+  [![Traverse en Action](https://edutechwiki.unige.ch/mediawiki/images/thumb/6/68/InkStitch-round-bird-2.png/300px-InkStitch-round-bird-2.png)](https://edutechwiki.unige.ch/mediawiki/images/6/68/InkStitch-round-bird-2.png)
 
-  [![Rungs in Action](https://edutechwiki.unige.ch/mediawiki/images/thumb/6/68/InkStitch-round-bird-2.png/300px-InkStitch-round-bird-2.png)](https://edutechwiki.unige.ch/mediawiki/images/6/68/InkStitch-round-bird-2.png)
-
-  Original design by [Liv Iko](https://thenounproject.com/liv_iko/collection/birds/?i=898697) edited by [EDUTECH Wiki](https://edutechwiki.unige.ch/en/InkStitch)
+  Dessin original de [Liv Iko](https://thenounproject.com/liv_iko/collection/birds/?i=898697) modifié par [EDUTECH Wiki](https://edutechwiki.unige.ch/en/InkStitch)
 {: style="font-size: 0.5rem;"}
 
-**Info:** Rungs have to be shorter than the satin column itself. Otherwise Ink/Stitch will switch directions or you receive the following message: `error: satin column: One or more of the rungs doesn't intersect both rails.  Each rail should intersect both rungs once.`
+**Info:** Les traverses doivent être plus courtes que la colonne satin elle-même. Sinon Ink/Stitch changera de direction ou vous recevrez le message suivant: `error: satin column: One or more of the rungs doesn't intersect both rails.  Each rail should intersect both rungs once.`
 {: .notice--warning }
 
-## Params
+## Paramètres
 
-Running `Extensions > Ink/Stitch  > Params` will give you the possibility to fine-tune your satin column and to use underlay.
+Utiliser `Extensions > Ink/Stitch  > Params` vous donnera la possibilité de parfaire votre colonne de satin et d’utiliser une sous-couche.
+Pour des informations détaillées, lisez [Satin Paramètres](/docs/params/#satin-params) section.
+Lisez aussi [cet excellent article](https://www.mrxstitch.com/underlay/) on satin column design.
 
-For detailed information read through the [Satin Params](/docs/params/#satin-params) section.
+## Outils Satin
 
-Read also [this excellent article](https://www.mrxstitch.com/underlay/) on satin column design.
+Assurez-vous de regarder [Satin Tools](/docs/satin-tools/). Cela vous facilitera grandement la vie avec les colonnes en satin.
 
-## Satin Tools
-
-Make sure to have a look at the [Satin Tools](/docs/satin-tools/). They will make your life with Satin Columns a lot easier.
-
-## Sample Files Including Satin Column
+## Fichiers exemple avec des colonnes satin
 {% include tutorials/tutorial_list key="stitch-type" value="Satin Stitch" %}
