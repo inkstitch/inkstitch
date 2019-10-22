@@ -5,13 +5,10 @@ import simplepath
 import simplestyle
 import simpletransform
 
+from .tags import INKSCAPE_GROUPMODE, INKSCAPE_LABEL, SVG_DEFS_TAG, SVG_GROUP_TAG, SVG_PATH_TAG
+from .units import PIXELS_PER_MM, get_viewbox_transform
 from ..i18n import _
-from ..utils import Point
-from ..utils import cache
-from .tags import SVG_GROUP_TAG, INKSCAPE_LABEL, INKSCAPE_GROUPMODE, SVG_PATH_TAG, SVG_DEFS_TAG
-from .units import PIXELS_PER_MM
-from .units import get_viewbox_transform
-
+from ..utils import Point, cache
 
 # The stitch vector path looks like this:
 #  _______
@@ -172,21 +169,19 @@ def color_block_to_realistic_stitches(color_block, svg, destination):
         color = color_block.color.visible_on_white.darker.to_hex_str()
         start = point_list[0]
         for point in point_list[1:]:
-            destination.append(inkex.etree.Element(
-                SVG_PATH_TAG,
-                {'style': simplestyle.formatStyle(
-                    {
-                        'fill': color,
-                        'stroke': 'none',
-                        'filter': 'url(#realistic-stitch-filter)'
-                    }),
-                 'd': realistic_stitch(start, point),
-                 'transform': get_correction_transform(svg)
-                 }))
+            destination.append(inkex.etree.Element(SVG_PATH_TAG, {
+                'style': simplestyle.formatStyle({
+                    'fill': color,
+                    'stroke': 'none',
+                    'filter': 'url(#realistic-stitch-filter)'
+                }),
+                'd': realistic_stitch(start, point),
+                'transform': get_correction_transform(svg)
+            }))
             start = point
 
 
-def color_block_to_paths(color_block, svg, destination):
+def color_block_to_paths(color_block, svg, destination, visual_commands):
     # If we try to import these above, we get into a mess of circular
     # imports.
     from ..commands import add_commands
@@ -199,23 +194,23 @@ def color_block_to_paths(color_block, svg, destination):
     for point_list in color_block_to_point_lists(color_block):
         if first:
             first = False
-        else:
+        elif visual_commands:
             add_commands(Stroke(destination[-1]), ["trim"])
 
         color = color_block.color.visible_on_white.to_hex_str()
-        path = inkex.etree.Element(
-            SVG_PATH_TAG,
-            {'style': simplestyle.formatStyle(
-                {'stroke': color,
-                 'stroke-width': "0.4",
-                 'fill': 'none'}),
-             'd': "M" + " ".join(" ".join(str(coord) for coord in point) for point in point_list),
-             'transform': get_correction_transform(svg),
-             'embroider_manual_stitch': 'true'
-             })
+        path = inkex.etree.Element(SVG_PATH_TAG, {
+            'style': simplestyle.formatStyle({
+                'stroke': color,
+                'stroke-width': "0.4",
+                'fill': 'none'
+            }),
+            'd': "M" + " ".join(" ".join(str(coord) for coord in point) for point in point_list),
+            'transform': get_correction_transform(svg),
+            'embroider_manual_stitch': 'true'
+        })
         destination.append(path)
 
-    if path is not None:
+    if path is not None and visual_commands:
         if color_block.trim_after:
             add_commands(Stroke(path), ["trim"])
 
@@ -223,7 +218,7 @@ def color_block_to_paths(color_block, svg, destination):
             add_commands(Stroke(path), ["stop"])
 
 
-def render_stitch_plan(svg, stitch_plan, realistic=False):
+def render_stitch_plan(svg, stitch_plan, realistic=False, visual_commands=True):
     layer = svg.find(".//*[@id='__inkstitch_stitch_plan__']")
     if layer is None:
         layer = inkex.etree.Element(SVG_GROUP_TAG,
@@ -247,7 +242,7 @@ def render_stitch_plan(svg, stitch_plan, realistic=False):
         if realistic:
             color_block_to_realistic_stitches(color_block, svg, group)
         else:
-            color_block_to_paths(color_block, svg, group)
+            color_block_to_paths(color_block, svg, group, visual_commands)
 
     if realistic:
         defs = svg.find(SVG_DEFS_TAG)

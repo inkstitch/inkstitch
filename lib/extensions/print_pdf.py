@@ -199,7 +199,7 @@ class Print(InkstitchExtension):
 
     def render_svgs(self, stitch_plan, realistic=False):
         svg = deepcopy(self.document).getroot()
-        render_stitch_plan(svg, stitch_plan, realistic)
+        render_stitch_plan(svg, stitch_plan, realistic, visual_commands=False)
 
         self.strip_namespaces(svg)
 
