@@ -1,30 +1,30 @@
 ---
-title: "Lettering Tool"
+title: "Outil lettrage"
 permalink: /fr/docs/lettering/
 excerpt: ""
-last_modified_at: 2019-08-11
+last_modified_at: 2019-10-23
 toc: false
 ---
-The lettering tool generates multi-line text as satin columns and dynamically routes stitching, breaking up satins if necessary and adding running stitch.
+L'outil de lettrage génère un texte multiligne sous la forme de colonnes satin et génère de manière dynamique les points, divisant éventuellement les points satins et ajoutant du point droit.
 
-![Lettering Extensions](/assets/images/docs/lettering.jpg)
+![Lettrage Extensions](/assets/images/docs/lettering.jpg)
 
 ## Usage
 
-* Run `Extensions > Ink/Stitch  > Lettering`
-* Enter your text (multi-line is possible)
-* Set font and scaling
-* Click on `Apply and Quit`
+* Faire `Extensions > Ink/Stitch  > Lettrage
+* Entrez votre texte (multi-ligne possible)
+* Définir la police et l'échelle
+* Cliquer sur `Apply and Quit`
 
 ## Options
 
-* **Stitch lines of text back and forth**<br>
-  With this option enabled the first line will be stitched from left to right and the second from right to left, etc.
-  This will give your machine shorter ways to travel.
+* **Broder les lignes de texte en aller retour**<br>
+ Lorsque cette option est activée, la première ligne sera brodée de gauche à droite et la seconde de droite à gauche, etc.
+   Cela donnera à votre machine des déplacements plus courts.
 
-* **Add trims**<br>
-  With this option enabled Ink/Stitch will add TRIM-commands for each letter.
+* **Ajouter des coupes**<br>
+  Si cette option est activée, Ink/Stitch ajoutera des commandes de coupe pour chaque lettre.
 
-## Presets
+## Préconfigurations
 
-You can save and load your favourite font settings.
+Vous pouvez enregistrer et rouvrir vos paramètres de police préférés.
