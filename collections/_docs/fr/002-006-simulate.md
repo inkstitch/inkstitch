@@ -1,35 +1,35 @@
 ---
-title: "Simulate"
+title: "Simulation"
 permalink: /fr/docs/simulate/
 excerpt: ""
-last_modified_at: 2019-04-09
+last_modified_at: 2019-10-24
 toc: true
 ---
 
-Select the objects you wish to see in a simulated preview. If you want to watch your whole design being simulated, select everything (`Ctrl+A`) or nothing.
+Sélectionnez les objets que vous souhaitez voir dans un aperçu simulé. Si vous souhaitez regarder toute votre conception simulée, sélectionnez tout (`Ctrl+A`) ou rien.
 
-Then  run `Extensions > Ink/Stitch  > Simulate` and enjoy.
+Puis faites `Extensions > Ink/Stitch  > Simulate` et appréciez.
 
-## Simulation Shortcut Keys
+## Raccourcis pour la Simulation 
 
-Shortcut Keys | Effect
+Raccourci | Effet
 -------- | --------
-<key>→</key> | play forward
-<key>←</key> | play backward
-<key>↑</key> | speed up
-<key>↓</key> | slow down
-<key>+</key> | one frame forward
-<key>-</key> | one frame backward
-<key>p</key> | pause animation
-<key>r</key> | restart animation
-<key>o</key> | display needle penetration points
-<key>q</key> | close
+<key>→</key> | Avancer
+<key>←</key> | Reculer
+<key>↑</key> | Accélérer
+<key>↓</key> | Ralentir
+<key>+</key> | Une image en avant
+<key>-</key> | Une image en arrière
+<key>p</key> | Pause animation
+<key>r</key> | Redémarrer animation
+<key>o</key> | Afficher les points de pénétration de l'aiguille
+<key>q</key> | Fermer
 
-It is also possible to **zoom** and **pan** the simulation with the mouse.
+C'est aussi possible de **zoomer** et de **déplacer** la simulation avec la souris.
 
-## Run Simulator Independently
+## Exécuter le simulateur indépendamment
 
-Run the simulator by itself on any supported embroidery file:
+Exécutez le simulateur sur n'importe quel fichier de broderie pris en charge:
 
 ```
 PYTHONPATH=/usr/share/inkscape/extensions python -m lib.simulator path/to/myfile.ext
