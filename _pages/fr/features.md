@@ -2,7 +2,7 @@
 title: "Fonctionnalités d'Ink/Stitch"
 permalink: /fr/features/
 excerpt: "Ink/Stitch features"
-last_modified_at: 2019-03-14
+last_modified_at: 2019-10-24
 sidebar:
   nav: pages
 toc: true
