@@ -1,5 +1,5 @@
 ---
-title: "Hidden Features"
+title: "Fonction cachée"
 permalink: /fr/docs/features/
 excerpt: ""
 last_modified_at: 2019-10-24
@@ -8,7 +8,7 @@ toc: true
 ## Mélange de couleurs
 
 La version 1.4.0 introduit une fonctionnalité masquée pour le dégradé. Cela ne fonctionne pas avec une fiabilité à 100%, c'est pourquoi elle est gardée cachée.
-Si vous utilisez l'éditeur XML pour ajouter le paramètre masqué `embroider_end_row_spacing_mm`, vous obtiendrez un effet similaire à celui décrit dans[#78](https://github.com/inkstitch/inkstitch/issues/78), Exponent Modifier for Fill and Satin (juste la partie remplissage).
+Si vous utilisez l'éditeur XML pour ajouter le paramètre masqué `embroider_end_row_spacing_mm`, vous obtiendrez un effet similaire à celui décrit dans[#78](https://github.com/inkstitch/inkstitch/issues/78), Remplissage dégradé(juste la partie remplissage).
 
 Notamment, certaines formes avec des trous compliqués semblent provoquer l'algorithme de remplissage automatique sans fin, et vous devez arrêter le processus manuellement. Mais pour la plupart des formes, cela semble faire l'affaire. Combinez deux de ces remplissages dans des directions opposées et vous obtiendrez un remplissage en dégradé.
 
