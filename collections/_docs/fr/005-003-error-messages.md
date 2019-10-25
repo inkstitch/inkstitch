@@ -14,6 +14,7 @@ Message d'erreur|Description
 Seeing a 'no such option' message?<br />Please restart Inkscape to fix.|
 No embroiderable paths selected.<br />Tip: use Path -> Object to Path to convert non-paths before embroidering.|Ink / Stitch ignore tous les objets non-chemin. Convertir votre forme en un chemin résoudra le problème (`Ctrl+Shift+C`).
 No embroiderable paths found in document.<br />Tip: use Path -> Object to Path to convert non-paths before embroidering.|Ink / Stitch ignorera tous les objets non-chemin. Convertir votre forme en un chemin résoudra le problème: sélectionnez tous les objets avec `Ctrl+A` et taper `Ctrl+Shift+C` pour les convertir.
+
 ## Fils
 
 Error Message|Description
@@ -44,6 +45,7 @@ Message d'erreur|Description
 ---|---
 No embroiderable paths selected.<br />Tip: use Path -> Object to Path to convert non-paths before embroidering.|Ink/Stitch ignorera tous les objets non-chemin. Convertir votre forme en un chemin résoudra le problème.
 No embroiderable paths found in document.<br />Tip: use Path -> Object to Path to convert non-paths before embroidering.|Ink/Stitch ignorera tous les objets non-chemin. Convertir votre forme en un chemin résoudra le problème.
+
 ## Colonne Satin
 
 Message d'erreur|Description
@@ -54,6 +56,7 @@ Each rail should intersect both rungs once.|Assurez-vous que les traverses de di
 satin column: One or more of the rungs intersects the rails more than once.||Assurez-vous que les traverses de direction coupent les deux rails. Si c'est déjà le cas et que vous recevez toujours ce message, une ou plusieurs traverses peuvent être plus longues que les rails. Dans ce cas, vous devriez envisager d'utiliser la [méthode des noeuds](/docs/stitches/satin-column/#node-method) ou de prolonger les rails.
 satin column: object %s has a fill (but should not)|Supprimez la couleur de remplissage de l'objet:<br />`Objet > Fond et contour...` La boîte de dialogue apparaîtra à droite. Cliquez sur le X dans l'onglet de remplissage.
 satin column: object %(id)s has two paths with an unequal number of points (%(length1)d and %(length2)d)|Si vous recevez ce message, vous devriez envisager d’utiliser les avantages de la [méthode des traverses](/docs/stitches/satin-column/#rung-method),ce qui permet une quantité inégale de nœuds. Sinon, vérifiez s'il y a des doublons sur chaque nœud et comptez tous les nœuds sur chaque chemin.
+
 ## Traits
 
 Message d'erreur|Description
@@ -66,6 +69,7 @@ Message d'erreur|Description
 ---|---
 Unable to autofill.<br />This most often happens because your shape is made up of multiple sections that aren't connected.|[Remplissage](/docs/stitches/fill-stitch/) doit être affecté à des chemins fermés avec une couleur de remplissage, mais il semble y avoir au moins deux lacunes dans votre forme.<br />Pour savoir où votre chemin n’est pas connecté, sélectionnez un nœud avec l’outil de modification de nœud et appuyez sur`Ctrl+A`. Il sélectionnera tous les nœuds connectés et les lacunes deviendront évidentes à l’endroit où la sélection se termine.
 Unexpected error while generating fill stitches. Please send your SVG file to lexelby@github.|Ce message d'erreur indique que vous avez découvert un bug inconnu. Merci de nous faire un rapport pour aider Ink/Stitch à s'améliorer.
+
 ## Imprimer
 
 Message d'erreur|Description
