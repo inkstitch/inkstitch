@@ -1,22 +1,22 @@
 ---
-title: "Troubleshoot Objects"
+title: "Dépannage objets"
 permalink: /fr/docs/troubleshoot/
 excerpt: ""
-last_modified_at: 2019-08-11
+last_modified_at: 2019-10-25
 toc: false
 ---
-Ink/Stitch sometimes can be confusing. Especially for beginners. But also if you are using Ink/Stitch for a while, you will receive error messages, indicating that something went wrong and your shape cannot be rendered for whatever reason.
+Ink/Stitch peut parfois être déroutant. Surtout pour les débutants. Mais également si vous utilisez Ink/Stitch pendant un certain temps, vous recevrez des messages d'erreur, indiquant que quelque chose s'est mal passé et que votre forme ne peut pas être affichée pour une raison quelconque.
 
-Ink/Stitch comes with an troubleshoot extension, which is designed to help you to understand the error while pointing you to the exact position were the problem lies. It will suggest how to resolve each kind of error and gives helpful tips for shapes that have issues, even if they won’t cause Ink/Stitch to error out.
+Ink/Stitch est livré avec une extension de dépannage, conçue pour vous aider à comprendre l'erreur tout en vous indiquant la position exacte du problème. Elle vous indiquera comment résoudre chaque type d'erreur et donnera des conseils utiles sur les formes présentant des problèmes, même si elles ne causent pas d'erreur dans Ink/Stitch.
 
 ## Usage
 
-* (Optional) Select objects that you want to test. If you select none, the whole document will be tested.
-* Run `Extensions > Ink/Stitch > Troubleshoot Objects`
+* (Optionel) Sélectionnez les objets que vous souhaitez tester. Si vous n'en sélectionnez aucun, l'ensemble du document sera testé.
+* Lancer `Extensions > Ink/Stitch > Troubleshoot Objects`
 
-You will either get a message, that no error could be found or a new layer with the troubleshoot information will be added to your SVG document. Use the objects panel (Ctrl + Shift + O) to delete the layer once you are finished.
+Vous recevrez soit un message indiquant qu'aucune erreur ne peut être trouvée, soit un nouveau calque contenant les informations de dépannage sera ajouté à votre document SVG. Utilisez le panneau des objets(Ctrl + Shift + O) supprimer le calque une fois que vous avez terminé.
 
 ![Troubleshoot Example](/assets/images/docs/en/troubleshoot.jpg)
 
-**Tip:** It is possible that one object contains more than one error. Fill shapes only display the first error that will appear. Run the extension again, if you are receiving more error messages.
+**Astuce:** Il est possible qu'un objet contienne plus d'une erreur. Les formes de remplissage affichent uniquement la première erreur qui apparaîtra. Exécutez l'extension à nouveau si vous recevez encore des messages d'erreur.
 {: .notice--info }
