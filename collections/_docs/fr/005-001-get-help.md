@@ -8,7 +8,7 @@ toc: false
 
 Besoin d'aide avec Ink/Stitch ou une demande de fonctionnalité?
 N'hésitez pas et [déposer un problème sur GitHub](https://github.com/inkstitch/inkstitch/issues). Nous ferons de notre mieux pour vous aider à résoudre votre problème.
-Si vous rencontrez un nouveau bogue, il serait très utile d’ajouter un nouveau problème pour nous le signaler.
+Si vous rencontrez un nouveau bug, il serait très utile d’ajouter un nouveau problème pour nous le signaler.
 
 Regardez également ces problèmes existants:
 
