@@ -1,24 +1,22 @@
 ---
-title: "Get help"
+title: "Aide"
 permalink: /fr/docs/get-help/
 excerpt: ""
-last_modified_at: 2018-12-14
+last_modified_at: 2019-10-25
 toc: false
 ---
 
-Need help with Ink/Stitch or having a feature request?
+Besoin d'aide avec Ink/Stitch ou une demande de fonctionnalité?
+N'hésitez pas et [déposer un problème sur GitHub](https://github.com/inkstitch/inkstitch/issues). Nous ferons de notre mieux pour vous aider à résoudre votre problème.
+Si vous rencontrez un nouveau bogue, il serait très utile d’ajouter un nouveau problème pour nous le signaler.
 
-Don't hesitate and [file an issue on GitHub](https://github.com/inkstitch/inkstitch/issues). We will do our best to to help you resolve your issue.
+Regardez également ces problèmes existants:
 
-If you encounter a new bug, it would be very helpful, if you would add a new Issue to report it back to us.
+* [Bugs signalés](https://github.com/inkstitch/inkstitch/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
+* [Requêtes de nouvelles fonctionnalités](https://github.com/inkstitch/inkstitch/issues?q=is%3Aissue+is%3Aopen+label%3A%22feature+request%22)
 
-Also have look at these existing issues:
-
-* [Reported Bugs](https://github.com/inkstitch/inkstitch/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
-* [Feature Requests](https://github.com/inkstitch/inkstitch/issues?q=is%3Aissue+is%3Aopen+label%3A%22feature+request%22)
-
-Help might also be provided on these pages:
+Une aide peut également être fournie sur ces pages:
 
 * [FAQ](/docs/faq)
-* [Error Messages](/docs/error-messages)
-* [Videos: Beginner Tutorial Series](/tutorials/resources/beginner-video-tutorials/)
+* [Messages d'erreur](/docs/error-messages)
+* [Videos: Série de tutoriels pour débutants](/tutorials/resources/beginner-video-tutorials/)
