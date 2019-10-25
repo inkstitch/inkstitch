@@ -71,5 +71,4 @@ Unexpected error while generating fill stitches. Please send your SVG file to le
 Message d'erreur|Description
 ---|---
 No embroiderable paths found in document.<br />Tip: use Path -> Object to Path to convert non-paths before embroidering.|Ink/Stitch ignorera tous les objets non-chemin. Convertir votre forme en un chemin résoudra le problème.
-
 ⚠ lost connection to Ink/Stitch.|Le navigateur a perdu la connexion à Ink/Stitch. Vous pourrez toujours imprimer et appliquer des modifications au document, mais toutes les modifications seront perdues lors de la prochaine ouverture de l'aperçu avant impression.
