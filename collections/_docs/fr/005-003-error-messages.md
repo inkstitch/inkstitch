@@ -1,78 +1,75 @@
 ---
-title: "Error Messages"
+title: "Messages d'erreur"
 permalink: /fr/docs/error-messages/
 excerpt: ""
-last_modified_at: 2018-12-14
+last_modified_at: 2019-10-25
 toc: true
 classes: equal-tables
 ---
 
-## Embroider
+## Broder
 
-Error Message|Description
+Message d'erreur|Description
 ---|---
 Seeing a 'no such option' message?<br />Please restart Inkscape to fix.|
-No embroiderable paths selected.<br />Tip: use Path -> Object to Path to convert non-paths before embroidering.|Ink/Stitch will ignore every non-path object. Converting your shape to a path will solve the problem (`Ctrl+Shift+C`).
-No embroiderable paths found in document.<br />Tip: use Path -> Object to Path to convert non-paths before embroidering.|Ink/Stitch will ignore every non-path object. Converting your shape to a path will solve the problem: Select all objects with `Ctrl+A` and hit `Ctrl+Shift+C` for conversion.
-
-## Threads
+No embroiderable paths selected.<br />Tip: use Path -> Object to Path to convert non-paths before embroidering.|Ink / Stitch ignore tous les objets non-chemin. Convertir votre forme en un chemin résoudra le problème (`Ctrl+Shift+C`).
+No embroiderable paths found in document.<br />Tip: use Path -> Object to Path to convert non-paths before embroidering.|Ink / Stitch ignorera tous les objets non-chemin. Convertir votre forme en un chemin résoudra le problème: sélectionnez tous les objets avec `Ctrl+A` et taper `Ctrl+Shift+C` pour les convertir.
+## Fils
 
 Error Message|Description
 ---|---
-Thread palette installation failed|
+Thread palette installation failed|L'installation de palette de fils à échoué
 Installation Failed|
 
-## Params
+## Paramètres
 
-Error Message|Description
+Message d'erreur|Description
 ---|---
-Some settings had different values across objects.  Select a value from the dropdown or enter a new one.|
-Preset "%s" not found.|Preset with the given name is not existent. View a list of all available presets by clicking on the arrow beside the input field.
-Preset "%s" already exists.<br />Please use another name or press "Overwrite"|You cannot `Add` presets with existent names. If you want to keep the old preset settings, change the name - otherwise use `Overwrite`.
-No embroiderable paths selected.<br />Tip: use Path -> Object to Path to convert non-paths before embroidering.|Ink/Stitch will ignore every non-path object. Converting your shape to a path will solve the problem.
-No embroiderable paths found in document.<br />Tip: use Path -> Object to Path to convert non-paths before embroidering.|Ink/Stitch will ignore every non-path object. Converting your shape to a path will solve the problem.
+Some settings had different values across objects.  Select a value from the dropdown or enter a new one.|Certains paramètres ont des valeurs différentes selon les objets. Sélectionnez une valeur dans la liste déroulante ou entrez-en une nouvelle.
+Preset "%s" not found.|Le préréglage avec le nom donné n’existe pas. Affichez une liste de tous les préréglages disponibles en cliquant sur la flèche en regard du champ de saisie.
+Preset "%s" already exists.<br />Please use another name or press "Overwrite"|Vous ne pouvez pas `Ajouter` des préréglages avec le même nom. Si vous souhaitez conserver les anciens paramètres prédéfinis, modifiez le nom - sinon, utilisez `Overwrite`.
+No embroiderable paths selected.<br />Tip: use Path -> Object to Path to convert non-paths before embroidering.|Ink/Stitch ignorera tous les objets non-chemin. Convertir votre forme en un chemin résoudra le problème.
+No embroiderable paths found in document.<br />Tip: use Path -> Object to Path to convert non-paths before embroidering.|Ink/Stitch ignorera tous les objets non-chemin. Convertir votre forme en un chemin résoudra le problème.
 
-## Units
+## Unités
 
-Error Message|Description
+Message d'erreur|Description
 ---|---
 parseLengthWithUnits: unknown unit %s|
 Unknown unit: %s|
 
-## Simulate
+## Simulation
 
-Error Message|Description
+Message d'erreur|Description
 ---|---
-No embroiderable paths selected.<br />Tip: use Path -> Object to Path to convert non-paths before embroidering.|Ink/Stitch will ignore every non-path object. Converting your shape to a path will solve the problem.
-No embroiderable paths found in document.<br />Tip: use Path -> Object to Path to convert non-paths before embroidering.|Ink/Stitch will ignore every non-path object. Converting your shape to a path will solve the problem.
+No embroiderable paths selected.<br />Tip: use Path -> Object to Path to convert non-paths before embroidering.|Ink/Stitch ignorera tous les objets non-chemin. Convertir votre forme en un chemin résoudra le problème.
+No embroiderable paths found in document.<br />Tip: use Path -> Object to Path to convert non-paths before embroidering.|Ink/Stitch ignorera tous les objets non-chemin. Convertir votre forme en un chemin résoudra le problème.
+## Colonne Satin
 
-## Satin Column
-
-Error Message|Description
+Message d'erreur|Description
 ---|---
-One or more rails crosses itself, and this is not allowed.<br />Please split into multiple satin columns.|With *Node Edit Tool* select a node at the position where you want to split your path. Click on `Break path at selected nodes` within the *Tool Controls Bar*.<br /><br />![Split Path](/assets/images/docs/en/split-path.jpg)<br />Hit `Ctrl+Shift+K` to seperate all pieces. Recombine selected rails and rungs with `Ctrl+K`. Then apply param settings to both seperated satin columns. 
-satin column: One or more of the rungs doesn't intersect both rails.|Make sure rungs intersect both rails.<br />[More information](/docs/stitches/satin-column/#rung-method)
-Each rail should intersect both rungs once.|Make sure rungs intersect both rails once.<br />[More information](/docs/stitches/satin-column/#rung-method)
-satin column: One or more of the rungs intersects the rails more than once.|Make sure rungs intersect rails only once. If this is already the case and you still are receiving this message, one or more rungs might be longer than the rails. In this case you should consider using the [node method](/docs/stitches/satin-column/#node-method) or to prolong the rails.
-satin column: object %s has a fill (but should not)|Remove the fill color from the object:<br />`Object > Fill and Stroke...` The dialog will appear on the right side. Click the x within the fill tab.
-satin column: object %(id)s has two paths with an unequal number of points (%(length1)d and %(length2)d)|Getting this message, you should consider to use the advantages of the [rung method](/docs/stitches/satin-column/#rung-method), which allows an unequal amount of nodes. Otherwise check on every node if there are dublications and count all nodes on each path.
+One or more rails crosses itself, and this is not allowed.<br />Please split into multiple satin columns.|Avec l'*outil édition de noeud* sélectionnez un nœud à la position où vous souhaitez diviser votre chemin. Cliquer sur `Briser le chemin aux noeuds sélectionnés` dans la *Barre de contôle des outils*.<br /><br />![Split Path](/assets/images/docs/en/split-path.jpg)<br />Tapez `Ctrl+Shift+K` séparer toutes les pièces. Recombinez les rails et les barreaux sélectionnés avec `Ctrl+K`. Appliquez ensuite les réglages de paramétrage aux deux colonnes satin séparées. 
+satin column: One or more of the rungs doesn't intersect both rails.|Assurez-vous que les traverses de direction coupent les deux rails.<br />[plus d'information](/docs/stitches/satin-column/#rung-method)
+Each rail should intersect both rungs once.|Assurez-vous que les traverses de direction coupent les deux rails..<br />[Plus d'information](/docs/stitches/satin-column/#rung-method)
+satin column: One or more of the rungs intersects the rails more than once.||Assurez-vous que les traverses de direction coupent les deux rails. Si c'est déjà le cas et que vous recevez toujours ce message, une ou plusieurs traverses peuvent être plus longues que les rails. Dans ce cas, vous devriez envisager d'utiliser la [méthode des noeuds](/docs/stitches/satin-column/#node-method) ou de prolonger les rails.
+satin column: object %s has a fill (but should not)|Supprimez la couleur de remplissage de l'objet:<br />`Objet > Fond et contour...` La boîte de dialogue apparaîtra à droite. Cliquez sur le X dans l'onglet de remplissage.
+satin column: object %(id)s has two paths with an unequal number of points (%(length1)d and %(length2)d)|Si vous recevez ce message, vous devriez envisager d’utiliser les avantages de la [méthode des traverses](/docs/stitches/satin-column/#rung-method),ce qui permet une quantité inégale de nœuds. Sinon, vérifiez s'il y a des doublons sur chaque nœud et comptez tous les nœuds sur chaque chemin.
+## Traits
 
-## Stroke
-
-Error Message|Description
+Message d'erreur|Description
 ---|---
-Legacy running stitch setting detected!<br />It looks like you're using a stroke smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set your stroke to be dashed to indicate running stitch.  Any kind of dash will work.|More information on [running stitch mode](/docs/stitches/running-stitch/)
+Legacy running stitch setting detected!<br />It looks like you're using a stroke smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set your stroke to be dashed to indicate running stitch.  Any kind of dash will work.|Plus d'informations sur [mode point droit](/docs/stitches/running-stitch/)
 
-## AutoFill
+## Auto-remplissage
 
-Error Message|Description
+Message d'erreur|Description
 ---|---
-Unable to autofill.<br />This most often happens because your shape is made up of multiple sections that aren't connected.|[Fills](/docs/stitches/fill-stitch/) should be assigned to closed paths with a fill color, but there seems to be at least two gaps in your shape.<br />To find out where your path is not connected, select one node with the node edit tool and hit `Ctrl+A`. It will select all connected nodes and gaps become obvious where the selection ends.
-Unexpected error while generating fill stitches. Please send your SVG file to lexelby@github.|This error message indicates that you discovered an unkown bug. Please report back to us and help Ink/Stitch to improve.
+Unable to autofill.<br />This most often happens because your shape is made up of multiple sections that aren't connected.|[Remplissage](/docs/stitches/fill-stitch/) doit être affecté à des chemins fermés avec une couleur de remplissage, mais il semble y avoir au moins deux lacunes dans votre forme.<br />Pour savoir où votre chemin n’est pas connecté, sélectionnez un nœud avec l’outil de modification de nœud et appuyez sur`Ctrl+A`. Il sélectionnera tous les nœuds connectés et les lacunes deviendront évidentes à l’endroit où la sélection se termine.
+Unexpected error while generating fill stitches. Please send your SVG file to lexelby@github.|Ce message d'erreur indique que vous avez découvert un bug inconnu. Merci de nous faire un rapport pour aider Ink/Stitch à s'améliorer.
+## Imprimer
 
-## Print
-
-Error Message|Description
+Message d'erreur|Description
 ---|---
-No embroiderable paths found in document.<br />Tip: use Path -> Object to Path to convert non-paths before embroidering.|Ink/Stitch will ignore every non-path object. Converting your shape to a path will solve the problem.
-⚠ lost connection to Ink/Stitch|The browser lost connection to Ink/Stitch. You will still be able to print and apply changes to the document, but any changes will be lost the next time you open the print preview.
+No embroiderable paths found in document.<br />Tip: use Path -> Object to Path to convert non-paths before embroidering.|Ink/Stitch ignorera tous les objets non-chemin. Convertir votre forme en un chemin résoudra le problème.
+
+⚠ lost connection to Ink/Stitch.|Le navigateur a perdu la connexion à Ink/Stitch. Vous pourrez toujours imprimer et appliquer des modifications au document, mais toutes les modifications seront perdues lors de la prochaine ouverture de l'aperçu avant impression.
