@@ -1,74 +1,70 @@
 ---
-title: "Import and Export Files"
+title: "Import et Export de Fichiers"
 permalink: /fr/docs/import-export/
 excerpt: ""
-last_modified_at: 2019-03-29
+last_modified_at: 2019-10-25
 toc: true
 ---
 
-Ink/Stitch supports many embroidery formats. It can import and export files to the formats listed below.
+Ink/Stitch prend en charge de nombreux formats de broderie. Il peut importer et exporter des fichiers aux formats énumérés ci-dessous.
+## Formats de fichiers pris en charge (A - Z):
 
-## Supported File Formats (A - Z):
-
-### Writing
+### Ecriture
 CSV, **DST**, **EXP**, **JEF**, PEC, **PES**, SVG, TXT (G-CODE), U01, **VP3**
 
-### Reading
+### Lecture
 100, 10o, BRO, DAT, DSB, **DST**, DSZ, EMD, **EXP**, EXY, FXY, GT, INB, **JEF**, JPX, KSM, MAX, MIT, NEW, PCD, PCM, PCQ, PCS, PEC, **PES**, PHB, PHC, SEW, SHV, STC, STX, TAP, TBF, TXT (G-CODE), U01, **VP3**, XXX, ZXY
 
-**Info:** Detailed information about embroidery file formats is available in the [EduTechWiki](http://edutechwiki.unige.ch/en/Embroidery_format).
+**Info:** Des informations détaillées sur les formats de fichier de broderie sont disponibles dans le [EduTechWiki](http://edutechwiki.unige.ch/en/Embroidery_format).
 {: .notice--info }
 
-## Import Embroidery Files
+## Import de fichiers de broderie
 
-Open an embroidery file as you would open any SVG file in Inkscape: `File > Open...` > choose your file and click `Open`.
+Ouvrez un fichier de broderie comme vous ouvririez n’importe quel fichier SVG dans Inkscape: `Fichier > Ouvrir...` > choisissez votre fichier et cliquez `Ouvrir`.
 
-It will open your file in [Manual Stitch Mode](/docs/stitches/stroke/#manual-stitch-mode). You can edit individual points and finetune your design. Once your are satisfied, save the file as described below.
+Il ouvrira votre dossier dans le [Mode Point manuel](/docs/stitches/stroke/#manual-stitch-mode). Vous pouvez modifier des points individuels et affiner votre conception. Une fois que vous êtes satisfait, enregistrez le fichier comme décrit ci-dessous.
+## Export de fichiers de broderie
 
-## Export Embroidery Files
+### Methode 1
 
-### Method 1
+Ink/Stitch version 1.10.0 introduit la possibilité d’exporter des fichiers directement via Inkscapes `Fichier > Enregistrer sous...` (`Ctrl + Shift + S`) 
+Sélectionnez un format de fichier que votre machine à broder peut lire et `Enregistrer` le fichier dans votre répertoire de sortie souhaité.
 
-Ink/Stitch version 1.10.0 introduced the possibility to export files directly through Inkscapes `File > Save as...` (`Ctrl + Shift + S`) dialog.
+![Formats de fichiers](/assets/images/docs/en/export-selection-field.jpg)
 
-Select a file format that your embroidery machine can read and `Save` the file in your desired output directory.
+Pour les modifications ultérieures, veillez à conserver également une version SVG de votre motif.
 
-![File Format Field](/assets/images/docs/en/export-selection-field.jpg)
+### Methode 2 (Affichage du plan de broderie)
+Pour exporter vos dessins, lancez `Extensions > Ink/Stitch  > Broder...`.
 
-For later changes make sure that you keep an SVG version of your design as well.
+![Broder...](/assets/images/docs/en/embroider.jpg){: width="450" }
 
-### Method 2 (Display Stitch Plan)
-To export your designs run `Extensions > Ink/Stitch  > Embroider...`.
-
-![Embroider...](/assets/images/docs/en/embroider.jpg){: width="450" }
-
-Settings|Description
+Paramètres|Description
 ---|---
-Collapse length (mm)|0.0 - 10.0
-Hide other layers|Wether or not hide your original design layers while presenting the newly generated stitch plan
-Output File Format|Choose a file format that your embroidery machine can read
-Directory|Type your directory path, where you would like to save your file. By default, the directory used is the place where you installed the extension's Python files.
+Réduire la longueur (mm)|0.0 - 10.0
+Masquer les autres calques|Masquer ou pas vos calques de conception d'origine lors de la présentation du plan de points nouvellement généré
+Format de fichier de sortie|Choisissez un format de fichier lisible par votre machine à broder
+Dossier|Tapez votre chemin du répertoire, où vous souhaitez enregistrer votre fichier. Par défaut, le répertoire utilisé est l'emplacement où vous avez installé les fichiers Python de l'extension.
 
-**Info:** For file format conversion Ink/Stitch uses [*pyembroidery*](https://github.com/inkstitch/pyembroidery).
+**Info:** Pour la conversion de format de fichier Ink/Stitch utilise [*pyembroidery*](https://github.com/inkstitch/pyembroidery).
 {: .notice--info }
 
-Ink/Stich will create a file named `something.___`, where `something` is the name of your svg file (e.g. `something.svg`) and `___` is the proper extension for the output format you select. If `something.___` already exists, it will be renamed to `something.___.1`, and `something.___.1` will be renamed to `something.___.2`, etc, up to 5 backup copies.
+Ink/Stich va créer un fichier nommé `something.___`, où `something` est le nom de votre fichier svg(e.g. `something.svg`) et `___` est l'extension appropriée pour le format de sortie sélectionné. Si `something.___` existe déjà, il sera renommé en `something.___.1`, et `something.___.1`sera renommé en `something.___.2`, etc, jusqu'à 5 copies de sauvegarde.
 
    <span style="color: #3f51b5;">↳ something.___</span><br />
    <span style="color: #ff9800;">↳ something.___</span>, <span style="color: #3f51b5;">something.___.1</span><br />
    <span style="color: #f44336;">↳ something.___</span>, <span style="color: #ff9800;">something.___.1</span>, <span style="color: #3f51b5;">something.___.2</span>
 
-**Info:** In future versions this extension will be renamed to *`Show Stitch Plan`* and will not save an embroidery file anymore.
+**Info:** Dans les futures versions, cette extension sera renommée *`Show Stitch Plan`* et ne sauvegardera plus un fichier de broderie.
 {: .notice--info}
 
-## Batch Export
+## Export par lot
 
-**Info:** Since Ink/Stitch version 1.10.0 it is possible to export to multiple file formats at once.
+**Info:** Depuis Ink/Stitch version 1.10.0, il est possible d’exporter simultanément vers plusieurs formats de fichiers..
 {: .notice--info }
 
-Go to `File > Save as...` and click on the little arrow on the file format selection field to open a list of available file formats.
+Aller à `Fichier > Enregistrer sous...` et cliquez sur la petite flèche dans le champ de sélection du format de fichier pour ouvrir une liste des formats de fichier disponibles.
 
-Navigate to your desired output folder and choose the Ink/Stitch ZIP file format. Click `Save`. You then will be asked which file formats you wish to be included.
-
-![Batch Export](/assets/images/docs/en/export-batch.jpg)
+Naviguez jusqu'au dossier de sortie souhaité et choisissez le format de fichier ZIP Ink/Stitch. Cliquez sur `Enregistrer`. On vous demandera ensuite quels formats de fichier vous souhaitez inclure.
+![Export par lot](/assets/images/docs/en/export-batch.jpg)
 
