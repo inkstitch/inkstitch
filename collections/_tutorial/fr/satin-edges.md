@@ -1,7 +1,7 @@
 ---
-title: Satin Stitch Edges
+title: Pointe en colonne satin
 permalink: /fr/tutorials/satin-edges/
-last_modified_at: 2019-07-20
+last_modified_at: 2019-10-25
 language: fr
 excerpt: "Sample file for satin stitch edges"
 image: "/assets/images/tutorials/tutorial-preview-images/satin-edges.png"
@@ -14,18 +14,17 @@ techniques:
 field-of-use:
 user-level: 
 ---
-When you create embroidery designs you will come across cases were you need to create a sharp edge with satin stitches and the simple way won't look good anymore.
-
-There are several common solutions for this type of work and you will need to make a choice for each design and for each specific edge you want to be stitching.
+Lorsque vous créez des motifs de broderie, vous rencontrerez des cas dans lesquels vous devez créer une pointe nette avec des points de satin et la méthode de base ne rend pas bien.
+Il existe plusieurs solutions courantes pour ce type de travail et vous devrez faire un choix pour chaque motif et pour chaque pointe spécifique que vous souhaitez broder.
 ![Satin Edges Real](/assets/images/tutorials/tutorial-preview-images/satin-edges.png)
 
 <hr>
-Download the [sample file](/assets/images/tutorials/samples/satin-edges.svg){: download="Inkstitch-Satin-Stitch-Edges.svg" }. It shows how to create various edge types in Ink/Stitch.
+Télécharger le [fichier exemple](/assets/images/tutorials/samples/satin-edges.svg){: download="Inkstitch-Satin-Stitch-Edges.svg" }. Il montre comment créer différents types de pointes dans Ink/Stitch.
 <hr>
 
-![Satin Edges](/assets/images/tutorials/samples/satin-edges.svg)
+![Bord Satin](/assets/images/tutorials/samples/satin-edges.svg)
 
 <hr>
-**Info:** If you don't understand what you are seeing here, you might want to read the general article about [satin columns in Ink/Stitch](/docs/stitches/satin-column/) first.
+**Info:** Si vous ne comprenez pas ce que vous voyez ici, vous devriez lire l'article général sur [colonnes satin dans Ink/Stitch](/docs/stitches/satin-column/) first.
 {: .notice--info }
 <hr>
