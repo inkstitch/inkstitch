@@ -1,9 +1,9 @@
 ---
-title: Beginner Tutorial Video Series
+title: Tutoriels Vidéos pour les débutants
 permalink: /fr/tutorials/resources/beginner-video-tutorials/
-last_modified_at: 2019-03-09
+last_modified_at: 2019-10-26
 language: fr
-excerpt: "Beginner Tutorial Series on our YouTube-Channel"
+excerpt: "Tutoriels Vidéos pour les débutants sur notre chaine YouTube"
 image: "/assets/images/tutorials/video-preview-images/beginner-tutorial-series.png"
 
 tutorial-type: Video
@@ -14,15 +14,13 @@ user-level: Beginner
 
 toc: true
 ---
-This video series is meant to introduce new users to Ink/Stitch. It briefly goes from the installation process to all functions available in the open source embroidery platform.
+Cette série de vidéos est destinée à présenter Ink/Stitch aux nouveaux utilisateurs. Il passe brièvement du processus d’installation à toutes les fonctions disponibles dans la plate-forme de broderie open source.
+Connaître [les bases d'Inkscape](https://inkscape.org/fr/apprendre/) sera utile. N'hésitez pas à expérimenter et à utiliser les fonctions qui nous parviennent via Inkscape.
 
-Knowing the [Inkscape basics](https://inkscape.org/learn/) will be helpful. Feel free to experiment and also use functions that are coming to us through Inkscape.
+Si vous n’êtes pas anglophone, il peut être intéressant de noter que chaque vidéo est sous-titrée. Sur cette page, vous pouvez même les télécharger. Si vous le souhaitez, aidez-nous en traduisant les sous-titres dans votre langue.
+Les vidéos sont hébergées dans une [YouTube playlist](https://www.youtube.com/playlist?list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP).
 
-If you are not a native english speaker, then you might find it interesting that each video has subtitles. On this page you can even download them. If you like, help us by translating the subtitles into your language.
-
-Videos are hosted in a [YouTube playlist](https://www.youtube.com/playlist?list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP).
-
-We wish you a good start with Ink/Stitch!
+Nous vous souhaitons un bon début avec Ink/Stitch!
 
 ## 01 Introduction
 {% include video id="PTcSRuCA1Aw" provider="youtube" %}
