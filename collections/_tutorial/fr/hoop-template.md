@@ -17,6 +17,7 @@ user-level:
 {: .text-center}
 
 [Télécharger](/assets/images/tutorials/templates/hoop-template.svg){: download="hoop-template.svg" } dans le dossier des modèles d’utilisateur inkscape à utiliser:
+
 Operating System|Location
 ----|----
 Windows|`C:\Users%USERNAME%\AppData\Roaming\inkscape\templates`
