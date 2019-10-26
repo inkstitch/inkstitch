@@ -16,9 +16,9 @@
           {%- assign page_url = post.url | replace_first: page_lang, '' -%}
           {%- assign new_url = '/' | append: lang[0] | append: page_url -%}
           {%- assign lang_page = collection.docs | where: "url", new_url | where_exp: "item", "item.lang != 'en'" | where_exp: "item", "item.date < post.date" -%}
-          {%- if lang_page == blank -%}
+          {%- if lang_page.size == 0 -%}
               {%- assign missing_lang = collection.docs | where: "url", new_url -%}
-              {% if missing_lang == blank %}
+              {% if missing_lang.size == 0 %}
 - New: {{ post.date | date: '%Y-%m-%-d' }} - [{{ post.title }}]({{ post.url }})
               {% endif %}
           {%- endif -%}
@@ -26,10 +26,10 @@
           {%- assign page_url = post.permalink | replace_first: page_lang, '' -%}
           {%- assign new_url = '/' | append: lang[0] | append: page_url -%}
           {%- assign lang_page = collection.docs | where: "permalink", new_url | where_exp: "item", "item.lang != 'en'" | where_exp: "item", "item.last_modified_at < post.last_modified_at" -%}
-          {%- if lang_page == blank -%}
+          {%- if lang_page.size == 0 -%}
               {%- assign missing_lang = collection.docs | where: "url", new_url -%}
-              {% if missing_lang == blank %}
-- New: {{ post.date | date: '%Y-%m-%-d' }} - [{{ post.title }}]({{ post.url }})
+              {% if missing_lang.size == 0 %}
+- New: [{{ post.title }}]({{ post.url }}) ({{ post.date | date: '%Y-%m-%-d' }})
               {% endif %}
           {%- endif -%}
         {%- endif -%}
@@ -57,7 +57,7 @@
 
 #### Pages
 
-  {% assign pages = site.pages | where: "lang", "en" |  where_exp: "item", "item.last_modified_at != blank" %}
+  {% assign pages = site.pages | where: "lang", "en" |  where_exp: "item", "item.last_modified_at != nil" %}
   {% for post in pages %}
     {%- assign page_url = post.permalink | replace_first: page_lang, '' -%}
     {%- assign new_url = '/' | append: lang[0] | append: page_url -%}
@@ -66,13 +66,13 @@
 
 - [{{ please_update.title }}]({{ please_update.permalink }}) ({{ please_update.last_modified_at }})<br>
   English: [{{ post.title }}]({{ post.permalink }}) ({{ post.last_modified_at }})<br>
-  File: [{{ please_update.path }}](https://github.com/inkstitch/inkstitch/tree/gh-pages/_pages/{{ please_update.path }})
+  File: [{{ please_update.path }}](https://github.com/inkstitch/inkstitch/tree/gh-pages/{{ please_update.path }})
 
     {% endfor %}
-    {%- if lang_page == blank -%}
+    {%- if lang_page.size == 0 -%}
         {%- assign missing_lang = site.pages | where: "url", new_url -%}
-        {% if missing_lang == blank %}
-- New: {{ post.date | date: '%Y-%m-%-d' }} - [{{ post.title }}]({{ post.url }})
+        {% if missing_lang.size == 0 %}
+- New: [{{ post.title }}]({{ post.url }}) ({{ post.date | date: '%Y-%m-%-d' }})
         {% endif %}
     {%- endif -%}
   {% endfor %}
