@@ -1,7 +1,7 @@
 ---
 title: Encadrement pour monogramme
 permalink: /fr/tutorials/monogram/
-last_modified_at: 2018-08-05
+last_modified_at: 2019-10-26
 language: fr
 excerpt: "Exemple d'encadrement pour monogramme"
 image: "/assets/images/tutorials/samples/Monogram Frame Example.svg"
