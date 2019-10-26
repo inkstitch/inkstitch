@@ -1,5 +1,5 @@
 ---
-title: "Sample Files"
+title: "Fichiers exemple"
 permalink: /fr/tutorials/resources/samples/
 excerpt: ""
 read_time: false
