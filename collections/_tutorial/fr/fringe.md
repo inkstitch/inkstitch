@@ -1,9 +1,9 @@
 ---
 permalink: /fr/tutorials/fringe/
-title: Fringe
+title: Frange au ponit manuel
 language: fr
-last_modified_at: 2018-05-10
-excerpt: "Fringe example file"
+last_modified_at: 2019-10-25
+excerpt: "fichier exemple de frange au point manuel"
 image: "/assets/images/tutorials/samples/Fringe Example.svg"
 
 tutorial-type:
@@ -18,8 +18,8 @@ techniques:
 field-of-use:
 user-level: 
 ---
-## Fringe Example (by Evan West)
+## Exemple de frange (by Evan West)
 
-![Fringe Example](/assets/images/tutorials/samples/Fringe Example.svg)
+![Exemple de frange](/assets/images/tutorials/samples/Fringe Example.svg)
 
-[Download](/assets/images/tutorials/samples/Fringe Example.svg){: download="Fringe-Example.svg" }
+[Télécharger](/assets/images/tutorials/samples/Fringe Example.svg){: download="Fringe-Example.svg" }
