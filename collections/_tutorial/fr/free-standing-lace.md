@@ -1,9 +1,9 @@
 ---
 permalink: /fr/tutorials/fsl/
-title: Free Standing Lace - Butterfly
+title: Free Standing Lace - Papillon
 language: fr
-last_modified_at: 2018-08-05
-excerpt: Free Standing Lace - Butterfly
+last_modified_at: 2019-10-26
+excerpt: Papillon en Free Standing Lace
 image: "/assets/images/tutorials/samples/Bfly FSL.svg"
 
 tutorial-type:
@@ -18,15 +18,15 @@ user-level:
 ---
 ## Instructions
 
-1. For free standing lace, the areas that would be for traditional fills are going to be for 2 layers of loose fill with opposing angles.  For instance, one loose fill would have 0 degree angle and the second layer would have 90 degree angle.
-2. Experiment with different density levels and stitch angles to attach different looks and affects.
-3. For detail work and outline work, use a decent size satin stitch.  Satin stitch outlines are required as that helps "seal" the edges and keep the design together after the solvy stabilizer is removed.
-4. For the actual embroidery, use solvy and I prefer heavy weight solvy, usually with two layers of stabilizer. Depending on the brand, may still have to use more even with it being heavy weight. Just have to experiement to find out what is needed.
-5. Following the instructions on the stabilizer for removal.  I tend to like to have a little of the stabilizer left and to try not to remove all of it.  This allows for some stiffness to remain in the finished product.
-6. Enjoy your new FSL ornament.
+1. Pour le free standing lace(FSL), les zones qui seraient réservées aux remplissages traditionnels seront constituées de 2 couches de remplissage peu dense avec des angles opposés. Par exemple, un remplissage aurait un angle de 0 degré et la deuxième couche aurait un angle de 90 degrés.
+2. Expérimentez avec différents niveaux de densité et angles de point pour obtenir différents aspects et effets.
+3. Pour les travaux de détail ou de contour, utilisez un point satin de bonne taille. Des contours au points satin sont nécessaires, car ils aident à "sceller" les bords et à maintenir le motif brodé après le retrait du stabilisateur soluble.
+4. Pour la broderie proprement dite, utilisez des hydrosolubles et je préfère les plus lourds, généralement en deux couches. Selon la marque, il faudra peut-être encore en utiliser plus, même s'il est lourd. Il faut expérimenter pour savoir ce qui est nécessaire.
+5. Suivez les instructions sur le stabilisateur pour le retrait. J'ai tendance à laisser un peu de stabilisateur autour et à essayer de ne pas tout enlever. Cela permet de conserver une certaine rigidité dans le produit fini.
+6. Profitez de votre nouvel ornement FSL.
 
-## Free Standing Lace (FSL) - Butterfly (by Evan West)
+## Free Standing Lace (FSL) - Papillon (by Evan West)
 
-![Applique Color Change](/assets/images/tutorials/samples/Bfly FSL.svg)
+![FSL](/assets/images/tutorials/samples/Bfly FSL.svg)
 
-[Download](/assets/images/tutorials/samples/Bfly FSL.svg){: download="Bfly-FSL.svg" }
+[Télécharger](/assets/images/tutorials/samples/Bfly FSL.svg){: download="Bfly-FSL.svg" }
