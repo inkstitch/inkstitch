@@ -3,7 +3,7 @@ title: Pointe en colonne satin
 permalink: /fr/tutorials/satin-edges/
 last_modified_at: 2019-10-25
 language: fr
-excerpt: "Sample file for satin stitch edges"
+excerpt: "Fichier exemple pour les pointes satin"
 image: "/assets/images/tutorials/tutorial-preview-images/satin-edges.png"
 
 tutorial-type:
