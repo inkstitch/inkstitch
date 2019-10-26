@@ -1,7 +1,7 @@
 ---
-title: Push/Pull Compensation
+title: Compensation d'étirement
 permalink: /fr/tutorials/push-pull-compensation/
-last_modified_at: 2018-05-29
+last_modified_at: 2019-10-25
 language: fr
 excerpt: Push/Pull Compensation
 image: /assets/images/tutorials/embroidery/push-pull-effect.svg
@@ -14,26 +14,25 @@ user-level:
 
 classes: wide
 ---
-## Push/Pull Effect
+## Effet resserrement/étirement (Push/Pull effect)
 
-You have carefuly planned and digitized your design. But when you finally send your project to your machine to see the result, there might be a dissappointment. You notice gaps between the color blocks and everything seems to be distorted. This happens, because each stitch will distort the fabric. There will be some shrinking (pulling) and expansion (pushing) going on. The pulling will occur on the sides with needle penetrations, while the pushing will be on the opposite sites.
-
+Vous avez soigneusement planifié et numérisé votre dessin. Mais lorsque vous envoyez enfin votre projet sur votre machine pour voir le résultat, il peut y avoir de la déception. Vous remarquez des espaces entre les blocs de couleur et tout semble déformé. Cela se produit car chaque point déformera le tissu. Il y aura des resserements (Pull) et des étirements(Push). Le resserrement se produira dans la direction des rangées de points, tandis que la poussée se fera sur les côtés opposés.
 ![Push/Pull Effect](/assets/images/tutorials/embroidery/push-pull-effect.svg)
 
-## Push/Pull Compensation
+## Compensation d'étirement
 
-Plan the sizes accordingly to the distortion. If you want to create the rectangle on the left side, you have to leave a gap on both sides where the fabric gets pushed and overlap on the other sides to compensate the pull effect.
-
+Planifiez les tailles en fonction de la distorsion. Si vous voulez créer le rectangle du côté gauche, vous devez laisser un espace des deux côtés où le tissu est poussé et un  chevauchement des autres côtés pour compenser l'effet de traction.
+NDLT : Dans le schéma ci-dessous ma traduction ne me semble pas cohérente avec les indications "Stitch Direction" sur lesquelles j'ai des doutes!)
 ![Push/Pull Compensation](/assets/images/tutorials/embroidery/push-pull-compensation.svg)
 
-For the actual amount of compensation, there is a lot of things to consider:
+Pour la valeur effective de la compensation, il y a beaucoup de choses à prendre en compte:
 
-* fabric
-* stabilizer
-* design size
-* stitch type/length
-* underlay stitches
-* hoop(-ing)
-* machine speed
+* tissu
+* stabilisateur
+* taille du motif
+* type et longueur de points
+* sous-couche
+* cadre
+* vitesse de la machine
 
-It might need a lot of testing to get the right compensation. Best way is to test sew with same conditions as you planned your finished design and finetune your shapes after you've seen the result.
+Il faudra peut-être beaucoup de tests pour obtenir la bonne compensation. Le meilleur moyen est d’essayer de broder avec les mêmes conditions que celles avec lesquelles vous avez planifié votre dessin fini et d’affiner vos formes après avoir vu le résultat.
