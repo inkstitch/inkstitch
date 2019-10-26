@@ -1,9 +1,9 @@
 ---
-title: Applique
+title: Appliqué
 permalink: /fr/tutorials/applique/
-last_modified_at: 2018-05-10
+last_modified_at: 2019-10-26
 language: fr
-excerpt: "Applique example file"
+excerpt: "Appliqué: fichier exemple"
 image: "/assets/images/tutorials/samples/Applique Color Change.svg"
 
 tutorial-type:
@@ -17,25 +17,25 @@ techniques:
 field-of-use:
 user-level: Beginner
 ---
-## Steps
+## Etapes
 
-1. Digitize placement and tackdown stitches as different colors, in order to force a stop on your machine.
-2. May or may not have to digitize the zig zag tackdown stitch as a different color, depends on the design.
-3. Complete the rest of the design as normal.
-4. Start sewing like normal, after machine does Placement Stitch, stop machine.
-5. Place material over Placement stitch, totally covering the stitch.  Use a light adhesive spray to hold material.
-6. Start sewing 1st Tackdown stitch.  Stop Machine after.
-7. Completely cut away excess material from the tack down stitch.  Best to use applique scissors if available.
-8. Start machine again and let it finish stitching the rest of the design.  Applique portion is finished at this point.
+1. Numérisez les points de placement et de fixation du tissu dans différentes couleurs afin de forcer la machine à s'arrêter.
+2. On peut ou non numériser le point de fixation en zigzag dans une couleur différente, dépend de la conception.
+3. Terminez le reste de la conception comme d'habitude.
+4. Commencez à broder normalement, puis lorsque la machine a brodé le point de placement, arrêtez la machine.
+5. Placez le matériau sur le point de placement, en recouvrant totalement le contour. Utilisez un spray adhésif léger pour retenir le matériau.
+6. Brodez le premier point de fixation.  Stoppez la machine.
+7. Coupez complètement le surplus de tissu du point de fixation. Il est préférable d’utiliser des ciseaux d’appliqué.
+8. Redémarrez la machine et laissez-la finir de broder le reste du motif. La partie Appliqué est terminée à ce stade.
 
-## Applique Color Change (by Evan West)
+## Changement de couleur pour un appliqué (by Evan West)
 
 ![Applique Color Change](/assets/images/tutorials/samples/Applique Color Change.svg)
 
-[Download](/assets/images/tutorials/samples/Applique Color Change.svg){: download="Applique-Color-Change.svg" }
+[Télécharger](/assets/images/tutorials/samples/Applique Color Change.svg){: download="Applique-Color-Change.svg" }
 
-## Applique Stop (by Evan West)
+## Appliqué Stop (by Evan West)
 
 ![Applique Stop](/assets/images/tutorials/samples/Applique Stop.svg)
 
-[Download](/assets/images/tutorials/samples/Applique Stop.svg){: download="Applique-Stop.svg" }
+[Télécharger](/assets/images/tutorials/samples/Applique Stop.svg){: download="Applique-Stop.svg" }
