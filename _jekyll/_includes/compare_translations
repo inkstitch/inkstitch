@@ -16,10 +16,12 @@
           {%- assign page_url = post.url | replace_first: page_lang, '' -%}
           {%- assign new_url = '/' | append: lang[0] | append: page_url -%}
           {%- assign lang_page = collection.docs | where: "url", new_url | where_exp: "item", "item.lang != 'en'" | where_exp: "item", "item.date < post.date" -%}
-          {%- if lang_page.size == 0 -%}
+          {%- assign this_year = site.time | date: "%Y" -%}
+          {%- assign post_year = post.date | date: "%Y" -%}
+          {%- if lang_page.size == 0 and this_year == post_year -%}
               {%- assign missing_lang = collection.docs | where: "url", new_url -%}
               {% if missing_lang.size == 0 %}
-- New: {{ post.date | date: '%Y-%m-%-d' }} - [{{ post.title }}]({{ post.url }})
+- New: [{{ post.title }}]({{ post.url }}) ({{ post.date | date: '%Y-%m-%-d' }})
               {% endif %}
           {%- endif -%}
         {%- else -%}
