@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2019-08-13 20:36+0000\n"
-"PO-Revision-Date: 2019-10-04 20:59\n"
+"PO-Revision-Date: 2019-10-28 21:08\n"
 "Last-Translator: Lex Neva (lexelby)\n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -451,15 +451,15 @@ msgstr "Nombre de points inégal"
 
 #: lib/elements/satin_column.py:38
 msgid "Satin column: There are no rungs and rails have an an unequal number of points."
-msgstr "Colonne satin: Il n'y a aucun échelon ou les rails n'ont pas le même nombre de points."
+msgstr "Colonne satin: Soit il n'y a aucune traverse de direction, soit les rails n'ont pas le même nombre de points."
 
 #: lib/elements/satin_column.py:40
 msgid "The easiest way to solve this issue is to add one or more rungs. "
-msgstr "La façon la plus simple de résoudre ce problème est d'ajouter un ou plusieurs échelons. "
+msgstr "La façon la plus simple de résoudre ce problème est d'ajouter une ou plusieurs traverses de direction. "
 
 #: lib/elements/satin_column.py:41
 msgid "Rungs control the stitch direction in satin columns."
-msgstr "Les échelons contrôlent la direction des points dans les colonnes Satin."
+msgstr "Les traverses de direction contrôlent la direction des points dans les colonnes Satin."
 
 #: lib/elements/satin_column.py:42
 msgid "* With the selected object press \"P\" to activate the pencil tool."
@@ -467,19 +467,19 @@ msgstr "*L'objet étant sélectionné appuyez sur \"P\" pour activer l'outil cra
 
 #: lib/elements/satin_column.py:43
 msgid "* Hold \"Shift\" while drawing the rung."
-msgstr "*Maintenir la touche \"Majuscule\" enfoncée en traçant l'échelon."
+msgstr "*Maintenir la touche \"Majuscule\" enfoncée en traçant la traverse de direction."
 
 #: lib/elements/satin_column.py:47
 msgid "Each rung should intersect both rails once."
-msgstr "Chaque échelon doit couper les deux rails une fois."
+msgstr "Chaque traverse de direction doit couper les deux rails une fois."
 
 #: lib/elements/satin_column.py:51
 msgid "Rung doesn't intersect rails"
-msgstr "L'échelon ne coupe pas les rails"
+msgstr "La traverse de direction ne coupe pas les rails"
 
 #: lib/elements/satin_column.py:52
 msgid "Satin column: A rung doesn't intersect both rails."
-msgstr "Colonne satin: Un échelon ne coupe pas les rails."
+msgstr "Colonne satin: Une traverse de direction ne coupe pas les deux rails."
 
 #: lib/elements/satin_column.py:56
 msgid "Rung intersects too many times"
@@ -487,7 +487,7 @@ msgstr "L'échelon coupe trop de fois"
 
 #: lib/elements/satin_column.py:57
 msgid "Satin column: A rung intersects a rail more than once."
-msgstr "Colonne satin: Un échelon coupe un rail plus d'une fois."
+msgstr "Colonne satin: Une traverse de direction coupe un rail plus d'une fois."
 
 #: lib/elements/satin_column.py:61
 msgid "Satin Column"
