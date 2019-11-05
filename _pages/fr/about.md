@@ -1,19 +1,18 @@
 ---
 lang: fr
-title: "Ink/Stitch: An open source machine embroidery design platform based on Inkscape"
+title: "Ink/Stitch: Un logiciel de broderie machine basé sur Inkscape"
 permalink: /fr/about/
 excerpt: ""
 last_modified_at: 2018-06-22
 ---
 ## Background and Philosophy
 
-_by @lexelby, an Ink/Stitch programmer_
+_par @lexelby, un programmeur d'Ink/Stitch_
 
-I received a really wonderful christmas gift for a geeky programmer hacker: an [embroidery machine](http://www.brother-usa.com/homesewing/ModelDetail.aspx?ProductID=SE400).  It's pretty much a CNC thread-bot... I just had to figure out how to design programs for it.  The problem is, **all free embroidery design software seemed to be terrible**, especially when you add in the requirement of being able to run in Linux, my OS of choice.
+J'ai reçu un cadeau de Noël vraiment merveilleux pour un hacker informatique geek: une [machine à broder](http://www.brother-usa.com/homesewing/ModelDetail.aspx?ProductID=SE400).  C'est à peu près un thread-bot CNC... Je devais juste trouver comment concevoir des programmes pour cela.  Le problème est que, **tout logiciel de broderie machine gratuit semblait être terrible**, surtout lorsque vous ajoutez l'exigence de pouvoir fonctionner sous Linux, mon système d'exploitation préféré.
 
-I started off hacking on [inkscape-embroidery](http://www.jonh.net/~jonh/inkscape-embroidery/).  It had some of the basic capabilities I needed, and I saw a lot of potential.  I love the idea of using an existing, ultra-powerful SVG editor as the basis for an embroidery design suite.
+J'ai commencé par regarder[inkscape-embroidery](http://www.jonh.net/~jonh/inkscape-embroidery/).  Il avait certaines des capacités de base dont j'avais besoin et je voyais beaucoup de potentiel. J'aime l'idée d'utiliser un éditeur SVG ultra puissant existant pour créer un logiciel de broderie.
+Les choses ont décollé de là. J'ai continué à ajouter des fonctionnalités au fur et à mesure de mes besoins et, à ce stade, il ne reste que très peu de code, voire aucun.
 
-Things took off from there.  I continued adding features as I needed them, and by this point, very little if any of the original code remains.
-
-The goal of Ink/Stitch is to provide a powerful embroidery digitizing platform for everyone **completely free**.  I want to open up the field of embroidery design, making it approachable even for those who can't spend hundreds or thousands of dollars on software.  And I want folks like me, who love to combine code with art, to have an open, extensible, and approachable platform to hack on.
+Ink / Stitch a pour objectif de fournir une plate-forme de numérisation de broderie puissante pour tous.**completement libre**.  Je souhaite ouvrir le domaine de la conception de broderie, en la rendant accessible même pour ceux qui ne peuvent pas dépenser des centaines, voire des milliers de dollars en logiciels. Et je veux que des gens comme moi, qui aiment combiner le code avec l’art, aient une plate-forme ouverte, extensible et abordable pour bidouiller.
 
