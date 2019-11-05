@@ -5,7 +5,7 @@ permalink: /fr/about/
 excerpt: ""
 last_modified_at: 2018-06-22
 ---
-## Background and Philosophy
+## Contexte et philosophie
 
 _par @lexelby, un programmeur d'Ink/Stitch_
 
