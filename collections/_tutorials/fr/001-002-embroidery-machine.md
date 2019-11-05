@@ -1,5 +1,5 @@
 ---
-title: "Self-Made Embroidery Machine (Running on G-Code)"
+title: "Brodeuse auto-construite (Fonctionnant avec G-Code)"
 permalink: /fr/tutorials/embroidery-machine/
 excerpt: ""
 last_modified_at: 2018-10-13
