@@ -57,7 +57,7 @@ La méthode des traverses vous donnera plus de contrôle sur le rendu de la colo
 
 Utiliser `Extensions > Ink/Stitch  > Params` vous donnera la possibilité de parfaire votre colonne de satin et d’utiliser une sous-couche.
 Pour des informations détaillées, lisez [Satin Paramètres](/docs/params/#satin-params) section.
-Lisez aussi [cet excellent article](https://www.mrxstitch.com/underlay/) on satin column design.
+Lisez aussi [cet excellent article](https://www.mrxstitch.com/underlay/) sur les motifs en colonnes satin.
 
 ## Outils Satin
 
