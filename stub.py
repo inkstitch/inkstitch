@@ -5,7 +5,6 @@ import subprocess
 import sys
 import traceback
 
-
 # ink/stitch
 #
 # stub.py: pyinstaller execution stub
@@ -46,20 +45,25 @@ except BaseException:
 
 if sys.platform == "win32":
     import msvcrt
+
     msvcrt.setmode(sys.stdout.fileno(), os.O_BINARY)
 
-if sys.stdout.encoding:
-    stdout = stdout.decode(sys.stdout.encoding)
-
-sys.stdout.write(stdout)
-sys.stdout.flush()
+try:
+    # In Python 3, we need to use sys.stdout.buffer to write binary data to stdout.
+    sys.stdout.buffer.write(stdout)
+    sys.stdout.buffer.flush()
+except AttributeError:
+    # Python 2 doesn't have sys.stdout.buffer but we can write binary data to stdout by default.
+    sys.stdout.write(stdout)
+    sys.stdout.flush()
 
 stderr = stderr.strip()
 if stderr:
-    if sys.stderr.encoding:
-        stderr = stderr.decode(sys.stderr.encoding)
-
-    sys.stderr.write(stderr)
-    sys.stderr.flush()
+    try:
+        sys.stderr.buffer.write(stderr)
+        sys.stderr.buffer.flush()
+    except AttributeError:
+        sys.stderr.write(stderr)
+        sys.stderr.flush()
 
 sys.exit(extension.returncode)
