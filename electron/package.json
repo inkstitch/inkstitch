@@ -23,11 +23,11 @@
       "target": "dir"
     },
     "win": {
-      "icon": "build/icons/inkstitch.ico",
+      "icon": "build/icons/win/inkstitch.ico",
       "target": "dir"
     },
     "mac": {
-      "icon": "build/icons/inkstitch.icns",
+      "icon": "build/icons/mac/inkstitch.icns",
       "target": "dir"
     }
   },
