@@ -4,7 +4,6 @@ import sys
 
 from ..utils import get_bundled_dir
 
-
 app_process = None
 
 
@@ -19,7 +18,7 @@ def open_url(url):
 
         if sys.platform == "darwin":
             electron_path += ".app/Contents/MacOS/inkstitch-gui"
-            command = ["open", "-a", electron_path, "--args", url]
+            command = ["open", "-W", "-a", electron_path, "--args", url]
         else:
             command = [electron_path, url]
     else:
