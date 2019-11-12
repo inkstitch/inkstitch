@@ -2,7 +2,7 @@
 title: "Laufstich"
 permalink: /de/docs/stitches/running-stitch/
 excerpt: ""
-last_modified_at: 2019-03-16
+last_modified_at: 2019-11-12
 toc: true
 ---
 ## Beschreibung
@@ -21,6 +21,8 @@ Laufstich kann durch eine **gestichelte Linie** erstellt werden. Jede Strichlini
 * Im Reiter `Muster der Kontur` eine Strichlinie aktivieren.
 
 Öffne [`Erweiterungen > Ink/Stitch  > Parameter`](/de/docs/params/#linie) und setze die Parameter gemäß deinen persönlichen Wünschen.
+
+Die Stickrichtung wird durch die Pfadrichtung bestimmt. Wenn du die Richtung ändern willst, führe die Funktion `Pfad > Richtung umkehren` aus.
 
 **Info:** Um abgerundete Ecken zu vermeiden, wird an jeder scharfen Ecke ein zusätzlicher Stich eingefügt.
 {: .notice--info style="clear: both;" }
