@@ -2,7 +2,7 @@
 title: "Running Stitch"
 permalink: /docs/stitches/running-stitch/
 excerpt: ""
-last_modified_at: 2018-12-15
+last_modified_at: 2019-11-12
 toc: true
 ---
 ## What it is
@@ -20,6 +20,8 @@ Running stitch can be created by setting a **dashed stroke** on a path. Any type
 Select the stroke and go to `Object > Fill and Stroke...` and choose one of the dashed lines in the `Stroke style` tab.
 
 Open [`Extensions > Ink/Stitch  > Params`](/docs/params/#stroke-params) to change parameters to your needs.
+
+The stitch direction can be influenced by the path direction. If you want to swap the starting and ending point of your running stitch run `Path > Reverse`.
 
 **Info:** In order to avoid rounding corners, an extra stitch will be added at the point of any sharp corners.
 {: .notice--info style="clear: both;" }

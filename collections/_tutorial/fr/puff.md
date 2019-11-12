@@ -1,6 +1,6 @@
 ---
 title: "Mousse Puffy"
-permalink: /fr/tutorials/puff/05
+permalink: /fr/tutorials/puff/
 language: fr
 excerpt: Puff example file
 image: /assets/images/tutorials/samples/PuffRegular.svg
