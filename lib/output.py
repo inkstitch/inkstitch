@@ -1,12 +1,11 @@
-import pyembroidery
 import sys
 
-import simpletransform
+import pyembroidery
 
 from .commands import global_command
 from .i18n import _
 from .stitch_plan import Stitch
-from .svg import PIXELS_PER_MM, get_doc_size, get_viewbox_transform
+from .svg import PIXELS_PER_MM, get_viewbox_transform
 from .utils import Point
 
 
@@ -28,24 +27,15 @@ def _string_to_floats(string):
     return [float(num) for num in floats]
 
 
-def get_origin(svg):
+def get_origin(svg, bounding_box):
     origin_command = global_command(svg, "origin")
 
     if origin_command:
         return origin_command.point
     else:
-        # default: center of the canvas
-
-        doc_size = list(get_doc_size(svg))
-
-        # convert the size from viewbox-relative to real-world pixels
-        viewbox_transform = get_viewbox_transform(svg)
-        simpletransform.applyTransformToPoint(simpletransform.invertTransform(viewbox_transform), doc_size)
-
-        default = [doc_size[0] / 2.0, doc_size[1] / 2.0]
-        simpletransform.applyTransformToPoint(viewbox_transform, default)
-        default = Point(*default)
-
+        minx, miny, maxx, maxy = bounding_box
+        bounding_box_center = [(maxx+minx)/2, (maxy+miny)/2]
+        default = Point(*bounding_box_center)
         return default
 
 
@@ -56,7 +46,7 @@ def jump_to_stop_point(pattern, svg):
 
 
 def write_embroidery_file(file_path, stitch_plan, svg, settings={}):
-    origin = get_origin(svg)
+    origin = get_origin(svg, stitch_plan.bounding_box)
 
     pattern = pyembroidery.EmbPattern()
     stitch = Stitch(0, 0)
