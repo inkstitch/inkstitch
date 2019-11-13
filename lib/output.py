@@ -5,7 +5,7 @@ import pyembroidery
 from .commands import global_command
 from .i18n import _
 from .stitch_plan import Stitch
-from .svg import PIXELS_PER_MM, get_viewbox_transform
+from .svg import PIXELS_PER_MM
 from .utils import Point
 
 
