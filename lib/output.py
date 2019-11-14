@@ -27,13 +27,12 @@ def _string_to_floats(string):
     return [float(num) for num in floats]
 
 
-def get_origin(svg, bounding_box):
+def get_origin(svg, (minx, miny, maxx, maxy)):
     origin_command = global_command(svg, "origin")
 
     if origin_command:
         return origin_command.point
     else:
-        minx, miny, maxx, maxy = bounding_box
         bounding_box_center = [(maxx+minx)/2, (maxy+miny)/2]
         default = Point(*bounding_box_center)
         return default
