@@ -1,0 +1,45 @@
+name: Build
+on: [push]
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          submodules: recursive
+      - uses: actions/setup-python@v1
+        with:
+          python-version: '2.7.x'
+          architecture: 'x86'
+      - name: download dependencies
+        shell: bash
+        run: |
+          curl -sOL https://github.com/lexelby/inkstitch-build-objects/releases/download/v1.0.0/Shapely-1.6.3-cp27-cp27m-win32.whl
+          curl -sOL https://inkscape.org/en/gallery/item/12187/inkscape-0.92.3.tar.bz2          
+      - name: install dependencies
+        shell: bash
+        run: |
+          pip install Shapely-1.6.3-cp27-cp27m-win32.whl
+          pip install -r requirements.txt
+          pip install pyinstaller==3.3.1
+          
+          tar -jxf inkscape-0.92.3.tar.bz2
+          rm inkscape-0.92.3.tar.bz2
+          mv inkscape-0.92.3 inkscape
+
+          echo "::add-path::${{ env.pythonLocation }}\bin"
+      - name: fix geos
+        shell: bash
+        run: |
+          cd "${{ env.pythonLocation }}\Lib/site-packages/shapely/DLLs"
+          cp geos_c.dll geos.dll
+      - shell: bash
+        run: |
+          make dist
+          find .
+        env:
+          BUILD: windows
+      - uses: actions/upload-artifact@master
+        with:
+          name: inkstitch-windows
+          path: artifacts
