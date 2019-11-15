@@ -1,11 +1,10 @@
 #!/bin/bash
 
-if [ "$BUILD" = "windows" -o "$BUILD" = "linux" ]; then
-  if [ "$BUILD" = "windows" ]; then
-    args="-w --ia32"
-  else
-    args="-l --x64"
-  fi
+if [ "$BUILD" = "windows" ]; then
+  cd electron
+  yarn --link-duplicates --pure-lockfile && yarn run dist -w --ia32
+elif [ "$BUILD" = "linux" ]; then
+  args="-l --x64"
 
   docker run --rm \
     -e ELECTRON_CACHE=$HOME/.cache/electron \
