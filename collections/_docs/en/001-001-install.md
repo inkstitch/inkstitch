@@ -30,20 +30,16 @@ Versions 0.92.2 and higher let you [bind a key](/docs/customize/#shortcut-keys) 
 ### 1. Download
 Download the release archive for your platform from [latest release](https://github.com/inkstitch/inkstitch/releases/latest).
 
-OS|File name|32&#8209;bit|64&#8209;bit
+OS|Download File|32&#8209;bit|64&#8209;bit
 ---|---|---|---
-Linux|inkstitch-[VERSION]-Linux-x86_64-[LOCALE].tar.gz|☒|☑
-Windows|inkstitch-[VERSION]-win32-[LOCALE].zip|☑|☑
-macOS|inkstitch-[VERSION]-osx-x86_64-[LOCALE].tar.gz|☒|☑
+Linux|[English]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-x86_64-en_US.tar.gz), [German]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-x86_64-de_DE.tar.gz), [French]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-x86_64-fr_FR.tar.gz)|☒|☑
+Windows|[English]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-win32-en_US.zip), [German]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-win32-de_DE.zip), [French]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-win32-fr_FR.zip),|☑|☑
+macOS|Sierra: [English]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-sierra-x86_64-en_US.tar.gz), [German]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-sierra-x86_64-de_DE.tar.gz), [French]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-sierra-x86_64-fr_FR.tar.gz)<br>High Sierra: [English]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-high_sierra-x86_64-en_US.tar.gz), [German]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-high_sierra-x86_64-de_DE.tar.gz), [French]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-high_sierra-x86_64-fr_FR.tar.gz)<br>Mojave: [English]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-mojave-x86_64-en_US.tar.gz), [German]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-mojave-x86_64-de_DE.tar.gz), [French]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-mojave-x86_64-fr_FR.tar.gz)|☒|☑
 
 The `LOCALE` selected affects the menus shown inside Inkscape. Ink/Stitch dialogs are in the lanugage of your OS (if that language is supported).
 
 **Info:** Ink/Stitch for macOS currently works only with Sierra (10.12) and higher.
 {: .notice--warning }
-
-### Test:
-
----{{ site.github.latest_release.tag_name }}---
 
 ### 2. Install
  * In Inkscape, go to `Edit > Preferences > System` and check where your `User Extensions` folder is.
