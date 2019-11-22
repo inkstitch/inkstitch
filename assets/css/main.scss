@@ -129,6 +129,10 @@ blockquote {
   padding: 0 1em;
 }
 
+table.inline-table {
+  display: inline-table;
+}
+
 table tr td:first-child {
   width: 25%;
 }
