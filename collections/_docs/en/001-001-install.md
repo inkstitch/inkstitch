@@ -41,6 +41,12 @@ The `LOCALE` selected affects the menus shown inside Inkscape. Ink/Stitch dialog
 **Info:** Ink/Stitch for macOS currently works only with Sierra (10.12) and higher.
 {: .notice--warning }
 
+### Test:
+
+-> {{ site.github | inspect }}
+
+---{{ site.github.latest_release.tag_name }}---
+
 ### 2. Install
  * In Inkscape, go to `Edit > Preferences > System` and check where your `User Extensions` folder is.
  * Decompress the Ink/Stitch archive **directly** into this folder.<br />
