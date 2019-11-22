@@ -43,8 +43,6 @@ The `LOCALE` selected affects the menus shown inside Inkscape. Ink/Stitch dialog
 
 ### Test:
 
--> {{ site.github | inspect }}
-
 ---{{ site.github.latest_release.tag_name }}---
 
 ### 2. Install
