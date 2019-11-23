@@ -45,7 +45,7 @@ Langue|Linux (64bit)|Windows|macOS
 **Info:** Ink/Stitch pour macOS fonctionne actuellement seulement avec Sierra (10.12) et supérieur.
 {: .notice--warning }
 
-*Dernière version: [Ink/Stitch {{ site.github.latest_release.tag_name }} ({{ site.github.latest_release.published_at | date: "%Y-%m-%d }})](https://github.com/inkstitch/inkstitch/releases/latest)*
+*Dernière version: [Ink/Stitch {{ site.github.latest_release.tag_name }} ({{ site.github.latest_release.published_at | date: "%Y-%m-%d" }})](https://github.com/inkstitch/inkstitch/releases/latest)*
 
 ### 2. Installation
  * Dans Inkscape, aller à  `Edition > Préferences > Systeme` et cherchez où se trouve votre fichier `Extensions utilisateur`.
