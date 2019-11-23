@@ -2,10 +2,10 @@
   <div ref="simulator" class="simulator vld-parent">
     <fieldset>
       <div class="window-controls">
-        <div class="control-info-button" v-on:click="toggleInfo">
+        <div ref="controlInfoButton" class="control-info-button" v-on:click="toggleInfo">
           <font-awesome-icon icon="info"/>
           <collapse-transition>
-            <div class="control-info" v-show="infoExpanded">
+            <div class="control-info" v-show="infoExpanded" v-bind:style="{'max-height': infoMaxHeight + 'px'}">
               <h1>
                 <font-awesome-icon icon="info" class="info-icon"/>
                 <translate>Simulator Shortcut Keys</translate>
@@ -285,6 +285,7 @@
         loading: false,
         controlsExpanded: true,
         infoExpanded: false,
+        infoMaxHeight: 0,
         speed: 16,
         currentStitch: 1,
         currentStitchDisplay: 1,
@@ -376,6 +377,7 @@
     methods: {
       toggleInfo() {
         this.infoExpanded = !this.infoExpanded;
+        this.infoMaxHeight = this.$refs.controlInfoButton.getBoundingClientRect().top;
       },
       toggleControls() {
         this.controlsExpanded = !this.controlsExpanded;

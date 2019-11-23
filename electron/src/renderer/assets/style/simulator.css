@@ -85,6 +85,7 @@ fieldset {
   position: absolute;
   top: 0;
   left: 0;
+  overflow-y: auto;
   transform: translate(-100%, -100%);
   padding: 0 1rem 1rem;
   background: white;
