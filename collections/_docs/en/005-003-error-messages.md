@@ -19,8 +19,8 @@ No embroiderable paths found in document.<br />Tip: use Path -> Object to Path t
 
 Error Message|Description
 ---|---
-Thread palette installation failed|
-Installation Failed|
+Thread palette installation failed|Create an GitHub issue and describe the steps you've done so far.
+Installation Failed|Create an GitHub issue and describe the steps you've done so far.
 
 ## Params
 

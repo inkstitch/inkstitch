@@ -30,7 +30,7 @@ Raccourci&nbsp;clavier | Effet
 
 ### Simulation : Raccourci
 
-Dans Ink/Stitch la [simulation](/docs/simulate) inclut déjà le raccourci.
+Dans Ink/Stitch la [simulation](/fr/docs/simulate) inclut déjà le raccourci.
 
 ## Grilles
 Pour aligner correctement vos formes vectorielles, vous pouvez utiliser la fonctionnalité de grille d’Inkscape. Aller à  `Affichage` et activer `Grille`. Dans la`Barre des magnétismes` vérifier que `Aimanter aux grilles` est activé. Il est également possible de régler l'espacement et l'origine de vos grilles dans `Fichier> Propriétés du document> Grilles`.
@@ -52,7 +52,7 @@ Système|Dossier des modèles
 ---|---
 Linux|`~/.config/inkscape/templates`
 Windows|`C:\Users\%USERNAME%\AppData\Roaming\inkscape\templates`
-Retrouvez le dossier utilisateur dans vos préférences inkscape. Voir [FAQ](/docs/faq/#i-have-downloaded-and-unzipped-the-latest-release-where-do-i-put-it).
+Retrouvez le dossier utilisateur dans vos préférences inkscape. Voir [FAQ](/fr/docs/faq/#jai-t%C3%A9l%C3%A9charg%C3%A9-et-d%C3%A9compress%C3%A9-la-derni%C3%A8re-version-o%C3%B9-je-la-mets).
 
-**Astuce:** Obtenez des [modèles prédéfinis](/tutorials/resources/templates/) dans notre section tutoriel.
+**Astuce:** Obtenez des [modèles prédéfinis](/fr/tutorials/resources/templates/) dans notre section tutoriel.
 {: .notice--info }

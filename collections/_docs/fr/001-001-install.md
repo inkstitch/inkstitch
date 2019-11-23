@@ -2,7 +2,7 @@
 title: "Install Ink/Stitch"
 permalink: /fr/docs/install/
 excerpt: "How to quickly install Ink/Stitch."
-last_modified_at: 2019-10-11
+last_modified_at: 2019-11-23
 toc: true
 ---
 
@@ -22,24 +22,30 @@ C'est tout! Toutes les librairies python et dépendances externes sont incluses 
 
 **Info:** Inkscape Version 0.92 ou supérieure, a une caractéristique vraiment essentielle: la "*boite de dialogue Objets*".<br>
 Elle vous donne une liste hiérarchisée des objets de votre fichier SVG, dans leur ordre d'empilement. C'est vraiment important parce que l'ordre d'empilement dicte l'ordre dans lequel les formes seront brodées.<br><br>
-Les versions 0.92.2 et supérieures vous permettent de [lier une touche](/docs/customize/#shortcut-keys) aux nouvelles commandes, “monter” et “descendre”, que vous pouvez assigner aux touches "page haut", "page bas". Cela vous permettra de réordonner les objets dans le fichier SVG directement dand l'ordre de broderie. Cela marche beaucoup mieux que les anciennes commandes "monter" et "descendre".
+Les versions 0.92.2 et supérieures vous permettent de [lier une touche](/fr/docs/customize/#shortcut-keys) aux nouvelles commandes, “monter” et “descendre”, que vous pouvez assigner aux touches "page haut", "page bas". Cela vous permettra de réordonner les objets dans le fichier SVG directement dand l'ordre de broderie. Cela marche beaucoup mieux que les anciennes commandes "monter" et "descendre".
 {: .notice--info }
 
 ## Installation rapide
 
 ### 1. Télécharger
-Télécharger, en tenant compte de votre plateforme la [dernière version](https://github.com/inkstitch/inkstitch/releases/latest).
+Télécharger, en tenant compte de votre plateforme.
 
-OS|File name|32&#8209;bit|64&#8209;bit
+Le `LOCALE` sélectionné affecte les menus à l'intérieur d'Inkscape. Les dialogues d'Ink/Stitch sont dans la langue de votre OS (si cette langue est supportée).
+
+**Tip:** Ink/Stitch n’existe pas dans votre langue?<br>Aidez-nous à [traduire les dialogues dans votre langue maternelle](/fr/developers/localize/).
+{: .notice--info }
+
+Langue|Linux (64bit)|Windows|macOS
 ---|---|---|---
-Linux|inkstitch-[VERSION]-Linux-x86_64-[LOCALE].tar.gz|☒|☑
-Windows|inkstitch-[VERSION]-win32-[LOCALE].zip|☑|☑
-macOS|inkstitch-[VERSION]-osx-x86_64-[LOCALE].tar.gz|☒|☑
-
-Le`LOCALE` sélectionné affecte les menus à l'intérieur d'Inkscape. Les dialogues d'Ink/Stitch sont dans la langue de votre OS (si cette langue est supportée).
+**Allemand**|<i class="fa fa-download " ></i> [Linux]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-x86_64-de_DE.tar.gz)|<i class="fa fa-download " ></i> [Windows]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-win32-de_DE.zip)|<i class="fa fa-download " ></i> [Sierra]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-sierra-x86_64-de_DE.tar.gz)<br><i class="fa fa-download " ></i> [High Sierra]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-high_sierra-x86_64-de_DE.tar.gz)<br><i class="fa fa-download " ></i> [Mojave + Catalina]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-mojave-x86_64-de_DE.tar.gz)|
+**Anglais**|<i class="fa fa-download " ></i> [Linux]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-x86_64-en_US.tar.gz)|<i class="fa fa-download " ></i> [Windows]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-win32-en_US.zip)|<i class="fa fa-download " ></i> [Sierra]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-sierra-x86_64-en_US.tar.gz)<br><i class="fa fa-download " ></i> [High Sierra]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-high_sierra-x86_64-en_US.tar.gz)<br><i class="fa fa-download " ></i> [Mojave + Catalina]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-mojave-x86_64-en_US.tar.gz)|
+**Français**|<i class="fa fa-download " ></i> [Linux]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-x86_64-fr_FR.tar.gz)|<i class="fa fa-download " ></i> [Windows]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-win32-fr_FR.zip)|<i class="fa fa-download " ></i> [Sierra]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-sierra-x86_64-fr_FR.tar.gz)<br><i class="fa fa-download " ></i> [High Sierra]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-high_sierra-x86_64-fr_FR.tar.gz)<br><i class="fa fa-download " ></i> [Mojave + Catalina]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-mojave-x86_64-fr_FR.tar.gz)|
+{: .inline-table }
 
 **Info:** Ink/Stitch pour macOS fonctionne actuellement seulement avec Sierra (10.12) et supérieur.
 {: .notice--warning }
+
+*Dernière version: [Ink/Stitch {{ site.github.latest_release.tag_name }} ({{ site.github.latest_release.published_at | date: "%Y-%m-%d }})](https://github.com/inkstitch/inkstitch/releases/latest)*
 
 ### 2. Installation
  * Dans Inkscape, aller à  `Edition > Préferences > Systeme` et cherchez où se trouve votre fichier `Extensions utilisateur`.
@@ -77,4 +83,4 @@ Le`LOCALE` sélectionné affecte les menus à l'intérieur d'Inkscape. Les dialo
 ## Installation manuelle
 
 C'est possible d'installer Ink/Stitch manuellemnt. Ce n'est cependant pas recommander - 0 moins que vous vouliez participer au développement de l'extension.
-Dans ce cas jetez un coup d'oeil à la section [documentation developpeur](/developers/inkstitch/manual-setup/).
+Dans ce cas jetez un coup d'oeil à la section [documentation developpeur](/fr/developers/inkstitch/manual-setup/).

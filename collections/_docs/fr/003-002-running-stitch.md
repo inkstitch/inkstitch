@@ -18,7 +18,7 @@ Le point droit est créé en définissant un trait en pointillé sur un chemin. 
 ![Pointillé pour point droit](/assets/images/docs/running-stitch-dashes.jpg){: .align-left style="padding: 5px"}
 Sélectionnez le trait et allez à `Objet > Fond et contour...` et choisissez l’une des lignes pointillées de l’onglet `Style du contour`.
 
-Ouvrir [`Extensions > Ink/Stitch  > Paramètres`](/docs/params/#stroke-params) pour modifier les paramètres selon vos besoins.
+Ouvrir [`Extensions > Ink/Stitch  > Paramètres`](/fr/docs/params/#stroke-params) pour modifier les paramètres selon vos besoins.
 
 **Info:** Afin d'éviter les angles arrondis, un point supplémentaire sera ajouté à la pointe des coins pointus.
 {: .notice--info style="clear: both;" }

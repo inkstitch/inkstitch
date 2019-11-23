@@ -5,17 +5,17 @@ excerpt: ""
 last_modified_at: 2019-10-21
 toc: true
 ---
-`Extensions > Ink/Stitch  > Satin Tools`inclut un certain nombre d’aides utiles, facilitant le travail avec [les colonnes satin](/docs/stitches/satin-column/).
+`Extensions > Ink/Stitch  > Satin Tools`inclut un certain nombre d’aides utiles, facilitant le travail avec [les colonnes satin](/fr/docs/stitches/satin-column/).
 
 **Exemple:**
 * Créer un chemin à l'aide de l'outil courbes de Bézier (`B`)
-* Faire [Convertir les lignes Satin](/docs/satin-tools/#convert-line-to-satin)
-* Utiliser le [Dialogue de Paramètres ](/docs/params/#satin-params) pour choisir une sous-couche
-* Lancer [Auto-Route Satin](/docs/satin-tools/#auto-route-satin-columns) pour obtenir des colonnes de satin bien organisées
+* Faire [Convertir les lignes Satin](#convertir-des-lignes-en-satin)
+* Utiliser le [Dialogue de Paramètres ](/fr/docs/params/#paramètres-satin) pour choisir une sous-couche
+* Lancer [Auto-Route Satin](#auto-route-satin-colonnes) pour obtenir des colonnes de satin bien organisées
 
 [![Convertir Ligne en Satin](/assets/images/docs/en/satin-tools.svg)](/assets/images/docs/en/satin-tools.svg){: title="Télécharger le fichier SVG" download="satin-tools.svg" }
 
-**Astuce** Pour un accès plus rapide [activer les raccourcis](/docs/customize/) des outils satin spécifiques.
+**Astuce** Pour un accès plus rapide [activer les raccourcis](/fr/docs/customize/) des outils satin spécifiques.
 {: .notice--info}
 
 ## Auto-Route Satin Colonnes...
@@ -27,7 +27,7 @@ Cet outil remplacera vos colonnes satin par un nouvel ensemble de colonnes satin
 2. Lancer `Extensions > Ink/Stitch  > Satin Tools > Auto-Route Satin Columns...`
 3. Activer les options souhaitées et cliquez sur Appliquer
 
-**Astuce:** Par défaut, le point à l'extrême gauche sera choisi comme départ et celui à l'extrême droite comme fin (même s'ils se trouvent à mi-chemin dans un satin, tel que le bord gauche de la lettre "o"). Vous pouvez le remplacer en activant les [commandes de "Auto-route satin stitch starting/ending position"](/docs/commands/).
+**Astuce:** Par défaut, le point à l'extrême gauche sera choisi comme départ et celui à l'extrême droite comme fin (même s'ils se trouvent à mi-chemin dans un satin, tel que le bord gauche de la lettre "o"). Vous pouvez le remplacer en activant les [commandes de "Auto-route satin stitch starting/ending position"](/fr/docs/commands/).
 {: .notice--info }
 
 ### Options

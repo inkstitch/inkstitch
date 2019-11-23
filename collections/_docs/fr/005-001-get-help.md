@@ -17,6 +17,6 @@ Regardez également ces problèmes existants:
 
 Une aide peut également être fournie sur ces pages:
 
-* [FAQ](/docs/faq)
-* [Messages d'erreur](/docs/error-messages)
-* [Videos: Série de tutoriels pour débutants](/tutorials/resources/beginner-video-tutorials/)
+* [FAQ](/fr/docs/faq)
+* [Messages d'erreur](/fr/docs/error-messages)
+* [Videos: Série de tutoriels pour débutants](/fr/tutorials/resources/beginner-video-tutorials/)

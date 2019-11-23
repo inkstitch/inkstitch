@@ -12,9 +12,9 @@ toc: true
 ## Comment le créer
 Vous définissez une colonne satin à l'aide d'une forme composée de **deux lignes presque parallèles**. Ink/Stitch va dessiner des zig-zags entre les deux lignes. Vous pouvez faire varier l'épaisseur de la colonne à votre guise.
 * Combinez deux traits avec `Chemin > Combiner` ou taper `Ctrl+K`.
-* [Vérifier les directions de chemin](/docs/customize/#enabling-path-outlines--direction). Pour que la colonne satin fonctionne, elles doivent être égales.<br />Si ce n'est pas le cas Sélectionnez avec l' *Outil Editer les noeuds* (`N`) un point du sous-chemin et faites `Chemin > Inverser`. Cela n'inversera que le sous-chemin sélectionné.
+* [Vérifier les directions de chemin](/fr/docs/customize/#activation-de-la-direction-des-chemins). Pour que la colonne satin fonctionne, elles doivent être égales.<br />Si ce n'est pas le cas Sélectionnez avec l' *Outil Editer les noeuds* (`N`) un point du sous-chemin et faites `Chemin > Inverser`. Cela n'inversera que le sous-chemin sélectionné.
 * Utilisez la méthode noeud ou traverse comme décrit ci-dessous.
-* Ensuite, sélectionnez votre colonne satin et lancez les paramètres avec `Extensions > Ink/Stitch  > Paramètres` ou un  [raccourci clavier personnalisé](/docs/customize/).
+* Ensuite, sélectionnez votre colonne satin et lancez les paramètres avec `Extensions > Ink/Stitch  > Paramètres` ou un  [raccourci clavier personnalisé](/fr/docs/customize/).
 
 ### Méthode des noeuds
 
@@ -33,7 +33,7 @@ La méthode des traverses vous donnera plus de contrôle sur le rendu de la colo
 **Colonnes Satin auto-générées**
 * Ajouter un contour à un objet chemin (sans remplissage).
 * Définissez la largeur du contour à la taille souhaitée pour votre point satin.
-* Le chemin ne doit pas se recouper lui-même. Essayez de le [briser](/docs/satin-tools/#cut-satin-column) en plusieurs chemins si nécessaire.
+* Le chemin ne doit pas se recouper lui-même. Essayez de le [briser](/fr/docs/satin-tools/#scinder-une-colonne-satin) en plusieurs chemins si nécessaire.
 * Lancer `Extensions > Ink/Stitch  > Convert Line to Satin`
 * Lancer `Extensions > Ink/stitch  > Auto-route Satin...`
 * Utilisez tel quel ou modifier les traverses ou les rails
@@ -56,12 +56,12 @@ La méthode des traverses vous donnera plus de contrôle sur le rendu de la colo
 ## Paramètres
 
 Utiliser `Extensions > Ink/Stitch  > Params` vous donnera la possibilité de parfaire votre colonne de satin et d’utiliser une sous-couche.
-Pour des informations détaillées, lisez [Satin Paramètres](/docs/params/#satin-params) section.
+Pour des informations détaillées, lisez [Satin Paramètres](/fr/docs/params/#paramètres-satin) section.
 Lisez aussi [cet excellent article](https://www.mrxstitch.com/underlay/) sur les motifs en colonnes satin.
 
 ## Outils Satin
 
-Assurez-vous de regarder [Satin Tools](/docs/satin-tools/). Cela vous facilitera grandement la vie avec les colonnes en satin.
+Assurez-vous de regarder [Satin Tools](/fr/docs/params/#paramètres-satin/docs/satin-tools/). Cela vous facilitera grandement la vie avec les colonnes en satin.
 
 ## Fichiers exemple avec des colonnes satin
 {% include tutorials/tutorial_list key="stitch-type" value="Satin Stitch" %}

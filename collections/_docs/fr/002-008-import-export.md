@@ -22,7 +22,7 @@ CSV, **DST**, **EXP**, **JEF**, PEC, **PES**, SVG, TXT (G-CODE), U01, **VP3**
 
 Ouvrez un fichier de broderie comme vous ouvririez n’importe quel fichier SVG dans Inkscape: `Fichier > Ouvrir...` > choisissez votre fichier et cliquez `Ouvrir`.
 
-Il ouvrira votre dossier dans le [Mode Point manuel](/docs/stitches/stroke/#manual-stitch-mode). Vous pouvez modifier des points individuels et affiner votre conception. Une fois que vous êtes satisfait, enregistrez le fichier comme décrit ci-dessous.
+Il ouvrira votre dossier dans le [Mode Point manuel](/fr/docs/stitches/manual-stitch/). Vous pouvez modifier des points individuels et affiner votre conception. Une fois que vous êtes satisfait, enregistrez le fichier comme décrit ci-dessous.
 ## Export de fichiers de broderie
 
 ### Methode 1

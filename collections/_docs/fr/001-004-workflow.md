@@ -100,14 +100,14 @@ Regardez ce tableau et suivez les liens pour comprendre comment créer un type d
 
 Objet chemin | Type de point
 ---|---|---
-Trait(pointillé) |[point droit](/docs/stitches/running-stitch/), [point manuel](/docs/stitches/manual-stitch/), [point zig-zag](/docs/stitches/zigzag-stitch/), [point triple](/docs/stitches/bean-stitch/)
-Deux traits combinés (avec échelons optionnels) | [colonne satin](/docs/stitches/satin-column), [point en E](/docs/stitches/e-stitch)
-Chemin fermé avec une couleur de remplissage | [point de remplissage](/docs/stitches/fill-stitch/)
+Trait(pointillé) |[point droit](/fr/docs/stitches/running-stitch/), [point manuel](/fr/docs/stitches/manual-stitch/), [point zig-zag](/fr/docs/stitches/zigzag-stitch/), [point triple](/fr/docs/stitches/bean-stitch/)
+Deux traits combinés (avec échelons optionnels) | [colonne satin](/fr/docs/stitches/satin-column), [point en E](/fr/docs/stitches/e-stitch)
+Chemin fermé avec une couleur de remplissage | [point de remplissage](/fr/docs/stitches/fill-stitch/)
 {: .equal-tables }
 
 ### Paramétrer
 
-Définir les paramètres en utilisant `Extensions > Ink/Stitch  > Paramètres`. Vous trouvez une description pour chaque paramètre dans la section [Paramètres](/docs/params/) de cette documentation. Chaque fois que vous modifiez les valeurs des paramètres, vous pourrez voir le résultat simulé dans une fenêtre d'aperçu. Une fois que vous êtes satisfait du résultat, cliquez sur `Appliquer et fermer` pour enregistrer les valeurs dans votre fichier SVG.
+Définir les paramètres en utilisant `Extensions > Ink/Stitch  > Paramètres`. Vous trouvez une description pour chaque paramètre dans la section [Paramètres](/fr/docs/params/) de cette documentation. Chaque fois que vous modifiez les valeurs des paramètres, vous pourrez voir le résultat simulé dans une fenêtre d'aperçu. Une fois que vous êtes satisfait du résultat, cliquez sur `Appliquer et fermer` pour enregistrer les valeurs dans votre fichier SVG.
 
 
 A ce stade, enregistrez votre fichier SVG. Si Inkscape commence à ralentir (en raison d'une fuite de mémoire Inkscape), redémarrez-le avant de continuer.
@@ -123,26 +123,26 @@ L'ordre des points affecte également la façon dont le tissu est étiré et ré
 Une fois que vous avez créé tous les vecteurs, il est temps de tout mettre dans le bon ordre. C'est ici que l'outil Objets d'Inkscapes (`Objets> Objets ...`) est utile. Optimisez votre ordre pour minimiser les changements de couleur et réduire ou masquer les sauts de points.
 Ink/Stitch brodera les objets dans l'ordre exact dans lequel ils apparaissent dans votre document SVG, du plus bas au plus élevé dans l'ordre d'empilement. Si la distance entre deux objets est longue, Ink/Stitch ajoutera automatiquement un point de saut entre eux. Il utilise la couleur de l'objet pour déterminer la couleur du fil. Par conséquent, si vous changez de couleur d'un objet à l'autre, une instruction de changement de fil sera ajoutée au fichier de sortie de la broderie.
 
-**Astuce:** Inkscape vous permet de "monter" et "descendre" des objets dans l'ordre d'empilement à l'aide des touches Page haut et Page bas. Les nouvelles fonctions "Monter" et "Descendre" vous donneront un bien meilleur contrôle de l'ordre d'empilement. Nous recommandons donc de leur lier Page haut et Page bas. [Plus d'Information](/docs/customize/#shortcut-keys)
+**Astuce:** Inkscape vous permet de "monter" et "descendre" des objets dans l'ordre d'empilement à l'aide des touches Page haut et Page bas. Les nouvelles fonctions "Monter" et "Descendre" vous donneront un bien meilleur contrôle de l'ordre d'empilement. Nous recommandons donc de leur lier Page haut et Page bas. [Plus d'Information](/fr/docs/customize/#shortcut-keys)
 {: .notice--info }
 
 **Info:** Vous pouvez également modifier manuellement la structure XML SVG sous-jacente à l'aide du dialogue Editeur XML d'Inkscape (`CTRL-SHIFT-X`). Ses boutons "Monter" et "Descendre" agissent directement sur l'ordre des balises XML dans le fichier SVG et ne sont pas soumis aux mêmes limitations que les Page haut et Page bas d'origine. Notez que l'ordre des balises XML dans l'outil XML Editor est l'_inverse_ de l'ordre des objets dans l'outil Objects.
 {: .notice--info }
 
 ### Commandes
-[Commandes](/docs/commands/) aide également à optimiser votre chemin de point. Vous pouvez définir les points de début et de fin, déplacer le cadre dans des positions définies ou définir les commandes de découpage et de coupe, etc.
+[Commandes](/fr/docs/commands/) aide également à optimiser votre chemin de point. Vous pouvez définir les points de début et de fin, déplacer le cadre dans des positions définies ou définir les commandes de découpage et de coupe, etc.
 
 ## ![Create Icon](/assets/images/docs/workflow-icon-visualize.png)  Etape 4: Visualiser
 
 Ink/Stitch prend en charge trois façons de prévisualiser votre conception:
 
-* [Simulateur](/docs/simulate/)
-* [Aperçu d'impression](/docs/print/)
-* [Affichage du plan de broderie](/docs/import-export/#method-2-display-stitch-plan) (Undo with <key>Ctrl</key><key>Z</key>)
+* [Simulateur](/fr/docs/simulate/)
+* [Aperçu d'impression](/fr/docs/print/)
+* [Affichage du plan de broderie](/fr/docs/import-export/#method-2-display-stitch-plan) (Undo with <key>Ctrl</key><key>Z</key>)
 
 ## ![Create Icon](/assets/images/docs/workflow-icon-export.png) Etape 5: Enregistrer le fichier broderie
 
-Une fois que tout est dans le bon ordre, lancez  `Fichier > Enregistrer sous...` pour  [exporter](/docs/import-export/) dans un format de fichier supporté par votre machine. La plupart des machines peuvent prendre en charge le format DST et certaines machines Brother préfèrent le PES. N'oubliez pas de sauvegarder également votre fichier au format SVG. Sinon, il sera difficile de changer les détails plus tard.
+Une fois que tout est dans le bon ordre, lancez  `Fichier > Enregistrer sous...` pour  [exporter](/fr/docs/import-export/) dans un format de fichier supporté par votre machine. La plupart des machines peuvent prendre en charge le format DST et certaines machines Brother préfèrent le PES. N'oubliez pas de sauvegarder également votre fichier au format SVG. Sinon, il sera difficile de changer les détails plus tard.
 
 ## ![Create Icon](/assets/images/docs/workflow-icon-testsew.png) Etape 6: Test de broderie
 

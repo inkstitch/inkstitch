@@ -14,7 +14,7 @@ Le point triple décrit une répétition de points droits avant arrière. Il en 
 ## Comment le créer
 1. Sélectionner un trait pointillé et ouvrir  `Extensions > Ink/Stitch  > Paramètres`.
 
-2. Définissez le nombre de répétitions dans `Nombre de répétitions de points triples` dans [paramètres de point droit](/docs/stitches/running-stitch).
+2. Définissez le nombre de répétitions dans `Nombre de répétitions de points triples` dans [paramètres de point droit](/fr/docs/stitches/running-stitch).
 
    ![Bean Stitch Params](/assets/images/docs/en/params-bean-stitch.jpg)
 

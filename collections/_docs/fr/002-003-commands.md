@@ -7,7 +7,7 @@ toc: true
 ---
 ## Installation
 
-[Installer les Commandes](/docs/addons/) avant usage.
+[Installer les Commandes](/fr/docs/addons/) avant usage.
 
 ## Attachez des commandes visuelles via l'extension
 
@@ -25,7 +25,7 @@ Ces commandes affectent l’ensemble du motif de broderie.
 
 ![stop position](/assets/images/docs/visual-commands-stop-position.jpg) [Stop Position](#-stop-position)
 
-![origine](/assets/images/docs/visual-commands-origin.jpg) [Origine](#-origin)
+![origine](/assets/images/docs/visual-commands-origin.jpg) [Origine](#-origine)
 
 #### Ajouter des commandes de calque ...
 
@@ -41,17 +41,17 @@ Ces commandes seront attachées aux objets actuellement sélectionnés.
 
 ![symbole de point de fin](/assets/images/docs/visual-commands-end.jpg) Point de fin du remplissage
 
-![symbole de coupe](/assets/images/docs/visual-commands-trim.jpg) [Coupe](#-trim) le fil après avoir brodé l'objet
+![symbole de coupe](/assets/images/docs/visual-commands-trim.jpg) [Coupe](#-coupe-le-fil) le fil après avoir brodé l'objet
 
 ![symbole de stop ](/assets/images/docs/visual-commands-stop.jpg) [Stop](#-stop) (pause) la machine parès avoir brodé cet objet (pour les appliqués, etc)
 
 ![symbole ignorer ](/assets/images/docs/visual-commands-ignore.jpg) Ignore l'objet
 
-![symbole de découpage de point satin](/assets/images/docs/visual-commands-satin-cut-point.jpg) [Point de partage de la colonne satin](/docs/commands/#-satin-cut-point) (utiliser avec "Cut Satin Column")
+![symbole de découpage de point satin](/assets/images/docs/visual-commands-satin-cut-point.jpg) [Point de partage de la colonne satin](#-point-de-partage-de-colonne-satin) (utiliser avec "Cut Satin Column")
 
-![symbole de départ de auto route satin ](/assets/images/docs/visual-commands-auto-route-satin-stitch-start.jpg) Mode Auto-route satin  [position de départ](#--startingending-position-for-auto-route-satin)
+![symbole de départ de auto route satin ](/assets/images/docs/visual-commands-auto-route-satin-stitch-start.jpg) Mode Auto-route satin  [position de départ](#--symbole-de-position-de-d%C3%A9partde-fin-de-auto-route-satin)
 
-![symbole de position de fin de auto route satin](/assets/images/docs/visual-commands-auto-route-satin-stitch-end.jpg) Auto-route satin  [position de fin](#--startingending-position-for-auto-route-satin)
+![symbole de position de fin de auto route satin](/assets/images/docs/visual-commands-auto-route-satin-stitch-end.jpg) Auto-route satin  [position de fin](#--symbole-de-position-de-d%C3%A9partde-fin-de-auto-route-satin)
 
 ### Attacher des commandes visuelles à la main
 * Aller à `Objet > Symboles` oo taper `Shift+Ctrl+Y` pour accéder aux marqueurs via la boîte de dialogue des symboles.
@@ -87,8 +87,8 @@ Defines the (1) starting or (2) ending point of an fill stitch area.
 
 ###  ![symbole de position de départ de auto route satin](/assets/images/docs/visual-commands-auto-route-satin-stitch-start.jpg) ![symbole de position de fin de auto route satin](/assets/images/docs/visual-commands-auto-route-satin-stitch-end.jpg) symbole de position de départ/de fin de auto route satin
 
-Définit le point de départ (1) ou le point final (2) de la colonne auto route satin. Exécutez ensuite "[Colonne satin de routage automatique ...](/docs/satin-tools/#auto-route-satin-columns)".
+Définit le point de départ (1) ou le point final (2) de la colonne auto route satin. Exécutez ensuite "[Colonne satin de routage automatique ...](/fr/docs/satin-tools/#auto-route-satin-columns)".
 
 ### ![symbole de point de partagede colonne satin](/assets/images/docs/visual-commands-satin-cut-point.jpg) Point de partage de colonne satin
 
-Fractionner une colonne satin au point spécifié par cette commande. Après le placement de la commande, exécutez la commande "[Cut Satin Column] (/ docs / satin-tools / # cut-satin-column)".
+Fractionner une colonne satin au point spécifié par cette commande. Après le placement de la commande, exécutez la commande "[Cut Satin Column] (/fr/docs/satin-tools/#scinder-une-colonne-satin)".

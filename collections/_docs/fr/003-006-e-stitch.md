@@ -14,11 +14,11 @@ Le point "E" est un point de recouvrement simple mais solide pour les éléments
 
 ## Comment le créer
 
-Préparez votre chemin exactement comme vous le feriez pour une [Colonne Satin](/docs/stitches/satin-column). Mais dans les paramètres activez `"E" stitch`. N'oubliez pas d'élargir l'espacement du zig-zag pour ce type de point.
+Préparez votre chemin exactement comme vous le feriez pour une [Colonne Satin](/fr/docs/params/#paramètres-satin/docs/stitches/satin-column). Mais dans les paramètres activez `"E" stitch`. N'oubliez pas d'élargir l'espacement du zig-zag pour ce type de point.
 
 ![Paramètres Satin Colonne.jpg](/assets/images/docs/en/params-e-stitch.jpg)
 
-**Astuce** Si vos points ne sont pas tournés du bon côté utilisez ["flip satin column rails"](/docs/satin-tools/#flip-satin-column-rails) .
+**Astuce** Si vos points ne sont pas tournés du bon côté utilisez ["flip satin column rails"](/fr/docs/satin-tools/#intrevertir-les-rails-des-colonnes-satin) .
 {: .notice--info }
 
 ## Fichiers exemples contenant du point en E
