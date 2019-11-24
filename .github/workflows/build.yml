@@ -1,5 +1,10 @@
 name: Build
-on: []
+on:
+  push:
+    branches-ignore:
+      - master
+    tags:
+      - "v*"
 jobs:
   windows:
     runs-on: windows-latest
@@ -43,14 +48,28 @@ jobs:
         with:
           name: inkstitch-windows
           path: artifacts
-      - name: create/update dev release
-#        if: not tagged v1.2.3
+      - name: determine release info
         shell: bash
         run: |
-          branch="${GITHUB_REF#refs/heads/}"
-          tag="dev-build-$(echo $branch | tr / -)"
-          git tag -f $tag
-          git push -f "https://git:${{secrets.INKSTITCH_BUILDS_GITHUB_TOKEN}}@github.com/inkstitch/inkstitch.git" $tag
+          if [[ "${GITHUB_REF}" =~ ^v[0-9.]+$ ]]; then
+            echo "::set-env name=release_tag::${GITHUB_REF}"
+            echo "::set-env name=prerelease::false"
+            echo "::set-env name=title::${GITHUB_REF}"
+          else
+            branch="${GITHUB_REF#refs/heads/}"
+            tag="dev-build-$(echo $branch | tr / -)"
+            echo "::set-env name=release_tag::${tag}"
+            echo "::set-env name=prerelease::true"
+            echo "::set-env name=title::development build of $branch"
+          fi          
+      - name: create/update release
+        uses: "marvinpinto/action-automatic-releases@v0.2.0"
+        with:
+          repo_token: "${{secrets.GITHUB_TOKEN}}"
+          automatic_release_tag: "${{env.release_tag}}"
+          prerelease: "${{env.prerelease}}"
+          title: "${{env.title}}"
+          files: |
+            artifacts/*.zip
 
-          gem install dpl
-          dpl --provider=releases --api-key=${{secrets.INKSTITCH_BUILDS_GITHUB_TOKEN}} --file=artifacts/*.zip --file_glob --overwrite --tag_name=$tag --prerelease --name="development build of $branch" --body="Automatic development build of $branch ($GITHUB_COMMIT) built on $(date +'%F %T %Z')."
+            
