@@ -13,4 +13,4 @@ Please visit the particular sections to get more informations.
 * [Localization](/developers/localize/)
 * [Bug Reports](/developers/report-bugs/)
 
-Whenever you have questions or remark, please don't hesitate to get in touch with us through the [github issues](https://github.com/inkstitch/inkstitch/issues).
+Whenever you have questions or remarks, please don't hesitate to get in touch with us through the [GitHub issues](https://github.com/inkstitch/inkstitch/issues).
