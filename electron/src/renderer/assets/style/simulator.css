@@ -165,8 +165,7 @@ button.pressed {
 
 .slider-container {
   margin-top: 25px;
-  padding-bottom: 50px;
-  height: 25px;
+  margin-bottom: 25px;
   flex-grow: 0;
 }
 
@@ -217,6 +216,11 @@ button.pressed {
 .vue-slider-mark-label {
   font-size: 1.4rem;
   color: #545454;
+}
+
+.vue-slider-mark-label svg path {
+  stroke: white;
+  stroke-width: 10px;
 }
 
 .slider-label-trim {
