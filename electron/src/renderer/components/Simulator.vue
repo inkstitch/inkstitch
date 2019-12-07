@@ -205,15 +205,22 @@
               <label for="stop-checkbox"><font-awesome-icon icon="pause"/> <translate>stops</translate></label>
             </span>
             <span class="npp">
-            <input id="npp-checkbox" type="checkbox" v-model="showNeedlePenetrationPoints"/>
-            <label for="npp-checkbox">
-              <font-awesome-layers>
-                <font-awesome-icon icon="circle" transform="shrink-9"/>
-                <font-awesome-icon icon="minus" class="fa-thin-line"/>
-              </font-awesome-layers>
-              <span v-translate>needle<br/>points</span>
-            </label>
-          </span>
+              <input id="npp-checkbox" type="checkbox" v-model="showNeedlePenetrationPoints"/>
+              <label for="npp-checkbox">
+                <font-awesome-layers>
+                  <font-awesome-icon icon="circle" transform="shrink-9"/>
+                  <font-awesome-icon icon="minus" class="fa-thin-line"/>
+                </font-awesome-layers>
+                <span v-translate>needle<br/>points</span>
+              </label>
+            </span>
+            <span>
+              <input id="realistic-checkbox" type="checkbox" v-model="showRealisticPreview"/>
+              <label for="realistic-checkbox"><font-awesome-icon icon="eye"/> <span v-translate>realistic</span></label>
+              <br/>
+              <input id="cursor-checkbox" type="checkbox" v-model="showCursor"/>
+              <label for="cursor-checkbox"><font-awesome-icon icon="plus"/> <span v-translate>cursor</span></label>
+            </span>
           </fieldset>
         </div>
       </collapse-transition>

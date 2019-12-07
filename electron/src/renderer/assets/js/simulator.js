@@ -2,6 +2,7 @@ const inkStitch = require("../../../lib/api")
 const Mousetrap = require("mousetrap")
 import { SVG } from '@svgdotjs/svg.js'
 require('@svgdotjs/svg.panzoom.js/src/svg.panzoom.js')
+require('@svgdotjs/svg.filter.js')
 import Loading from 'vue-loading-overlay';
 import 'vue-loading-overlay/dist/vue-loading.css';
 import VueSlider from 'vue-slider-component'
@@ -38,7 +39,9 @@ export default {
       showJumps: false,
       showColorChanges: false,
       showStops: false,
-      showNeedlePenetrationPoints: false
+      showNeedlePenetrationPoints: false,
+      showRealisticPreview: false,
+      showCursor: true
     }
   },
   watch: {
@@ -57,6 +60,58 @@ export default {
           npp.hide()
         }
       })
+    },
+    showRealisticPreview() {
+      let animating = this.animating
+      this.stop()
+
+      if (this.showRealisticPreview) {
+        if (this.realisticPreview === null) {
+          // This workflow should be improved and might be a bit unconventional.
+          // We don't want to make the user wait for it too long.
+          // It would be best, if the realistic preview could load before it is actually requested.
+          this.$nextTick(() => {this.loading=true})
+          setImmediate(()=> {this.generateRealisticPaths()})
+          setImmediate(()=> {this.loading = false})
+        }
+
+        setImmediate(()=> {
+          for (let i = 1; i < this.stitches.length; i++) {
+            if (i < this.currentStitch) {
+              this.realisticPaths[i].show()
+            } else {
+              this.realisticPaths[i].hide()
+            }
+          }
+
+          this.simulation.hide()
+          this.realisticPreview.show()
+        })
+
+      } else {
+
+        for (let i = 1; i < this.stitches.length; i++) {
+          if (i < this.currentStitch) {
+            this.stitchPaths[i].show()
+          } else {
+            this.stitchPaths[i].hide()
+          }
+        }
+
+        this.simulation.show()
+        this.realisticPreview.hide()
+
+      }
+      if (animating) {
+        this.start()
+      }
+    },
+    showCursor: function () {
+      if (this.showCursor) {
+        this.cursor.show()
+      } else {
+        this.cursor.hide()
+      }
     }
   },
   computed: {
@@ -227,11 +282,19 @@ export default {
     renderFrame() {
       while (this.renderedStitch < this.currentStitch) {
         this.renderedStitch += 1
-        this.stitchPaths[this.renderedStitch].show();
+        if (this.showRealisticPreview) {
+          this.realisticPaths[this.renderedStitch].show()
+        } else {
+          this.stitchPaths[this.renderedStitch].show();
+        }
       }
 
       while (this.renderedStitch > this.currentStitch) {
-        this.stitchPaths[this.renderedStitch].hide();
+        if (this.showRealisticPreview) {
+          this.realisticPaths[this.renderedStitch].hide()
+        } else {
+          this.stitchPaths[this.renderedStitch].hide();
+        }
         this.renderedStitch -= 1
       }
 
@@ -278,7 +341,7 @@ export default {
       let stitch = this.stitches[Math.floor(this.currentStitch)]
       if (stitch === null || stitch === undefined) {
         this.cursor.hide()
-      } else {
+      } else if (this.showCursor) {
         this.cursor.show()
         this.cursor.center(stitch.x, stitch.y)
       }
@@ -357,6 +420,73 @@ export default {
         })
         .fill('#000000')
       this.cursor.node.classList.add("cursor")
+    },
+    generateRealisticPaths() {
+
+      // Create Realistic Filter
+      this.filter = this.svg.defs().filter()
+
+      this.filter.attr({id: "realistic-stitch-filter", x: "-10%", y: "-10%", height: "120%", width: "120%", style: "color-interpolation-filters:sRGB"})
+      this.filter.gaussianBlur({id: "gaussianBlur1", stdDeviation: "1.3", in: "SourceAlpha"})
+      this.filter.componentTransfer(function (add) {
+          add.funcR({ type: "identity" }),
+          add.funcG({ type: "identity" }),
+          add.funcB({ type: "identity", slope: "4.53" }),
+          add.funcA({ type: "gamma", slope: "0.149", intercept: "0", amplitude: "3.13", offset: "-0.33" })
+      }).attr({id: "componentTransfer1", in: "gaussianBlur1"})
+      this.filter.composite({id: "composite1", in: "componentTransfer1", in2: "SourceAlpha", operator: "in"})
+      this.filter.gaussianBlur({id: "gaussianBlur2", in: "composite1", stdDeviation: 0.09})
+      this.filter.morphology({id: "morphology1", in: "gaussianBlur2", erode: 0.1, radius: 0.1})
+      this.filter.specularLighting({id: "specularLighting1", in: "morphology1", specularConstant: 0.79, surfaceScale: 30}).pointLight({z: 10})
+      this.filter.gaussianBlur({id: "gaussianBlur3", in: "specularLighting1", stdDeviation: 0.1})
+      this.filter.composite({id: "composite2", in: "gaussianBlur3", in2: "SourceGraphic", operator: "arithmetic", k2: 1, k3: 1, k1: 0, k4: 0})
+      this.filter.composite({in: "composite2", in2: "SourceAlpha", operator: "in"})
+
+      // Create realistic paths in it's own group and move it behind the cursor
+      this.realisticPreview = this.svg.group({id: 'realistic'}).backward()
+
+      this.stitchPlan.color_blocks.forEach(color_block => {
+        let color = `${color_block.color.visible_on_white.hex}`
+        let realistic_path_attrs = {fill: color, stroke: "none", filter: this.filter}
+
+        let stitching = false
+        let prevStitch = null
+        color_block.stitches.forEach(stitch => {
+
+          let realisticPath = null
+          if (stitching && prevStitch) {
+
+            // Position
+            let stitch_center = []
+            stitch_center.x = (prevStitch.x + stitch.x) / 2
+            stitch_center.y = (prevStitch.y + stitch.y) / 2
+
+            // Angle
+            var stitch_angle = Math.atan2(prevStitch.y - stitch.y, prevStitch.x - stitch.x) * (180 / Math.PI)
+            // the filter rotates with the object, so let's make sure we always rotate into the same direction
+            if (stitch_angle > 90) { stitch_angle -= 180 }
+            if (stitch_angle <= -90) { stitch_angle += 180 }
+
+            // Length
+            let path_length = Math.hypot(prevStitch.x-stitch.x,prevStitch.y-stitch.y)
+
+            realisticPath = this.realisticPreview.rect(path_length, 1).radius(0.45).attr(realistic_path_attrs).center(stitch_center.x, stitch_center.y).rotate(stitch_angle).hide()
+
+          } else {
+            realisticPath = this.realisticPreview.rect(0, 1).attr(realistic_path_attrs).center(stitch.x, stitch.y).hide()
+          }
+
+          this.realisticPaths.push(realisticPath)
+
+          if (stitch.trim || stitch.color_change) {
+            stitching = false
+          } else if (!stitch.jump) {
+            stitching = true
+          }
+
+          prevStitch = stitch
+        })
+      })
     }
   },
   created: function () {
@@ -366,9 +496,11 @@ export default {
     this.renderedStitch = 0
     this.lastFrameStart = null
     this.stitchPaths = [null]  // 1-indexed to match up with stitch number display
+    this.realisticPaths = [null]
     this.stitches = [null]
     this.svg = null
     this.simulation = null
+    this.realisticPreview = null
     this.timer = null
     this.sliderColorSections = []
     this.trimMarks = {}
@@ -379,9 +511,10 @@ export default {
     this.cursor = null
   },
   mounted: function () {
-    this.svg = SVG().addTo(this.$refs.simulator).panZoom({zoomMin: 0.1})
+    this.svg = SVG().addTo(this.$refs.simulator).size('100%', '100%').panZoom({zoomMin: 0.1})
     this.svg.node.classList.add('simulation')
-    this.simulation = this.svg.group()
+    this.simulation = this.svg.group({id: 'line'})
+
     this.loading = true
 
     inkStitch.get('stitch_plan').then(response => {

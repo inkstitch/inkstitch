@@ -45,6 +45,7 @@
     "query-string": "^6.8.2",
     "@svgdotjs/svg.js": "^3.0.16",
     "@svgdotjs/svg.panzoom.js": "https://github.com/inkstitch/svg.panzoom.js",
+    "@svgdotjs/svg.filter.js": "^3.0.7",
     "tmp": "0.1.0",
     "vue": "^2.5.16",
     "vue-gettext": "^2.1.5",
