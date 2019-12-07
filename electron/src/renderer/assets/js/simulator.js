@@ -1,7 +1,7 @@
 const inkStitch = require("../../../lib/api")
 const Mousetrap = require("mousetrap")
-const SVG = require("svg.js")
-require("svg.panzoom.js")
+import { SVG } from '@svgdotjs/svg.js'
+require('@svgdotjs/svg.panzoom.js/src/svg.panzoom.js')
 import Loading from 'vue-loading-overlay';
 import 'vue-loading-overlay/dist/vue-loading.css';
 import VueSlider from 'vue-slider-component'
@@ -342,7 +342,7 @@ export default {
       })
     },
     generateScale() {
-      let svg = SVG(this.$refs.simulator)
+      let svg = SVG().addTo(this.$refs.simulator)
       svg.node.classList.add("simulation-scale")
       this.scale = svg.path("M0,0").stroke({color: "black", width: "1px"}).fill("none")
       this.scaleLabel = svg.text("0 mm").move(0, 12)
@@ -379,7 +379,7 @@ export default {
     this.cursor = null
   },
   mounted: function () {
-    this.svg = SVG(this.$refs.simulator).panZoom({zoomMin: 0.1})
+    this.svg = SVG().addTo(this.$refs.simulator).panZoom({zoomMin: 0.1})
     this.svg.node.classList.add('simulation')
     this.simulation = this.svg.group()
     this.loading = true
