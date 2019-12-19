@@ -63,7 +63,7 @@ jobs:
             echo "::set-env name=title::development build of $branch"
           fi          
       - name: create/update release
-        uses: "marvinpinto/action-automatic-releases@v0.2.0"
+        uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{secrets.GITHUB_TOKEN}}"
           automatic_release_tag: "${{env.release_tag}}"
