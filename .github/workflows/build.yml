@@ -48,6 +48,46 @@ jobs:
         with:
           name: inkstitch-windows
           path: artifacts
+  mac:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          submodules: recursive
+      - uses: actions/setup-python@v1
+        with:
+          python-version: '2.7.x'
+      - name: download inkscape
+        shell: bash
+        run: |
+          curl -sOL https://inkscape.org/en/gallery/item/12187/inkscape-0.92.3.tar.bz2          
+      - name: install dependencies
+        shell: bash
+        run: |
+          pip install -r requirements.txt
+          pip install pyinstaller==3.3.1
+          
+          tar -jxf inkscape-0.92.3.tar.bz2
+          rm inkscape-0.92.3.tar.bz2
+          mv inkscape-0.92.3 inkscape
+
+          echo "::add-path::${{ env.pythonLocation }}\bin"
+      - shell: bash
+        run: |
+          make dist
+          find .
+        env:
+          BUILD: osx
+      - uses: actions/upload-artifact@master
+        with:
+          name: inkstitch-mac
+          path: artifacts
+
+  release:
+    runs-on: ubuntu-latest
+    needs: [windows, mac]
+    if: always()
+    steps:
       - name: determine release info
         shell: bash
         run: |
@@ -61,7 +101,19 @@ jobs:
             echo "::set-env name=release_tag::${tag}"
             echo "::set-env name=prerelease::true"
             echo "::set-env name=title::development build of $branch"
-          fi          
+          fi
+      - name: download artifacts
+        uses: actions/download-artifact@v1
+        with:
+          name: 'inkstitch-*'
+          path: 'artifacts/'
+      - name: unzip artifacts
+        shell: bash
+        run: |
+          cd artifacts
+          for file in inkstitch-*.zip; do
+            unzip $file
+          done
       - name: create/update release
         uses: "marvinpinto/action-automatic-releases@latest"
         with:
