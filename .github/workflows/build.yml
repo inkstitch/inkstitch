@@ -41,7 +41,6 @@ jobs:
       - shell: bash
         run: |
           make dist
-          find .
         env:
           BUILD: windows
       - uses: actions/upload-artifact@master
@@ -60,10 +59,20 @@ jobs:
       - name: download inkscape
         shell: bash
         run: |
-          curl -sOL https://inkscape.org/en/gallery/item/12187/inkscape-0.92.3.tar.bz2          
+          curl -sOL https://inkscape.org/en/gallery/item/12187/inkscape-0.92.3.tar.bz2
       - name: install dependencies
         shell: bash
         run: |
+          brew update
+
+          # the 3 in pygobject3 signifies gtk3, not python3
+          brew install pygobject3 gtk+3
+
+          # for msgfmt
+          brew link gettext --force
+
+          echo "::set-env name=GI_TYPELIB_PATH::/usr/local/lib/girepository-1.0/"
+
           pip install -r requirements.txt
           pip install pyinstaller==3.3.1
           
@@ -75,7 +84,6 @@ jobs:
       - shell: bash
         run: |
           make dist
-          find .
         env:
           BUILD: osx
       - uses: actions/upload-artifact@master
