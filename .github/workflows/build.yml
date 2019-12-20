@@ -110,11 +110,17 @@ jobs:
             echo "::set-env name=prerelease::true"
             echo "::set-env name=title::development build of $branch"
           fi
-      - name: download artifacts
+      - name: download windows
         uses: actions/download-artifact@v1
         with:
-          name: 'inkstitch-*'
+          name: 'inkstitch-windows'
           path: 'artifacts/'
+      - name: download mac
+        uses: actions/download-artifact@v1
+        with:
+          name: 'inkstitch-mac'
+          path: 'artifacts/'
+        if: always()
       - name: unzip artifacts
         shell: bash
         run: |
@@ -122,6 +128,7 @@ jobs:
           for file in inkstitch-*.zip; do
             unzip $file
           done
+        if: always()
       - name: create/update release
         uses: "marvinpinto/action-automatic-releases@latest"
         with:
