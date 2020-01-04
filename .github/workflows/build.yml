@@ -123,6 +123,7 @@ jobs:
         if: always()
       - name: create/update release
         uses: "marvinpinto/action-automatic-releases@latest"
+        if: always()
         with:
           repo_token: "${{secrets.GITHUB_TOKEN}}"
           automatic_release_tag: "${{env.release_tag}}"
