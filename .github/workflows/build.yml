@@ -65,8 +65,7 @@ jobs:
         run: |
           brew update
 
-          #brew install python@2
-          brew install gtk+3
+          brew install python@2 gtk+3
 
           # for msgfmt
           brew link gettext --force
