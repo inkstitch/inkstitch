@@ -65,8 +65,10 @@ jobs:
         run: |
           brew update
 
+          brew install python@2
+
           # the 3 in pygobject3 signifies gtk3, not python3
-          brew install --with-python@2 python@2 pygobject3 gtk+3
+          brew install pygobject3 --with-python@2 gtk+3
 
           # for msgfmt
           brew link gettext --force
