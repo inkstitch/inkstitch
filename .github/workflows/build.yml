@@ -121,14 +121,6 @@ jobs:
           name: 'inkstitch-mac'
           path: 'artifacts/'
         if: always()
-      - name: unzip artifacts
-        shell: bash
-        run: |
-          cd artifacts
-          for file in inkstitch-*.zip; do
-            unzip $file
-          done
-        if: always()
       - name: create/update release
         uses: "marvinpinto/action-automatic-releases@latest"
         with:
@@ -138,5 +130,3 @@ jobs:
           title: "${{env.title}}"
           files: |
             artifacts/*.zip
-
-            
