@@ -66,15 +66,15 @@ jobs:
           brew update
 
           #brew install python@2
-
-          # the 3 in pygobject3 signifies gtk3, not python3
-          brew install pygobject3 --with-python@2 gtk+3
+          brew install gtk+3
 
           # for msgfmt
           brew link gettext --force
 
           echo "::set-env name=GI_TYPELIB_PATH::/usr/local/lib/girepository-1.0/"
 
+          pip --version
+          pip install PyGObject
           pip install -r requirements.txt
           pip install pyinstaller==3.3.1
           
