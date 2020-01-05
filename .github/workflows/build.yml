@@ -65,7 +65,8 @@ jobs:
         run: |
           brew update
 
-          brew install python@2 gtk+3
+          # this errors because it installs python3 but python2 is already installed
+          brew install gtk+3 || true
 
           # for msgfmt
           brew link gettext --force
