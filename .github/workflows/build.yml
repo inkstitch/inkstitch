@@ -66,8 +66,11 @@ jobs:
           brew update
 
           # this errors because it installs python3 but python2 is already installed
-          brew install gtk+3 || true
+          brew install gtk+3 pkg-config gobject-introspection libffi || true
 
+          export LDFLAGS="-L/usr/local/opt/libffi/lib"
+          export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
+          
           # for msgfmt
           brew link gettext --force
 
