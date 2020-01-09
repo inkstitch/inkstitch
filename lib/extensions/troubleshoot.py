@@ -3,7 +3,7 @@ import textwrap
 import inkex
 
 from ..commands import add_layer_commands
-from ..elements.inkscape_objects import InkscapeObjects
+from ..elements.svg_objects import SVGObjects
 from ..elements.validation import (ValidationError, ValidationTypeWarning,
                                    ValidationWarning)
 from ..i18n import _
@@ -22,7 +22,7 @@ class Troubleshoot(InkstitchExtension):
 
         problem_types = {'error': set(), 'warning': set(), 'type_warning': set()}
 
-        ink_objects = InkscapeObjects(self.document.getroot(), self.selected)
+        ink_objects = SVGObjects(self.document.getroot(), self.selected)
         for problem in ink_objects.validation_warnings():
             problem_types['type_warning'].add(type(problem))
             self.insert_pointer(problem)

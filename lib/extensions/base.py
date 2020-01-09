@@ -1,19 +1,20 @@
-from collections import MutableMapping
-from copy import deepcopy
 import json
 import os
 import re
+from collections import MutableMapping
+from copy import deepcopy
+
+from stringcase import snakecase
 
 import inkex
-from stringcase import snakecase
 
 from ..commands import layer_commands
 from ..elements import EmbroideryElement, nodes_to_elements
+from ..elements.svg_objects import is_clone
 from ..i18n import _
 from ..svg import generate_unique_id
-from ..svg.tags import SVG_GROUP_TAG, INKSCAPE_GROUPMODE, SVG_DEFS_TAG, EMBROIDERABLE_TAGS
-from ..elements.inkscape_objects import is_embroiderable_clone
-
+from ..svg.tags import (EMBROIDERABLE_TAGS, INKSCAPE_GROUPMODE, SVG_DEFS_TAG,
+                        SVG_GROUP_TAG)
 
 SVG_METADATA_TAG = inkex.addNS("metadata", "svg")
 
@@ -129,7 +130,7 @@ class InkstitchExtension(inkex.Effect):
         else:
             inkex.errormsg(_("There are no objects in the entire document that Ink/Stitch knows how to work with.") + "\n")
 
-        inkex.errormsg(_("Ink/Stitch only knows how to work with paths.  It can't work with objects like text, rectangles, or circles.") + "\n")
+        inkex.errormsg(_("Ink/Stitch only knows how to work with paths.  It can't work with objects like text.") + "\n")
         inkex.errormsg(_("Tip: Select some objects and use Path -> Object to Path to convert them to paths.") + "\n")
 
     def descendants(self, node, selected=False):
@@ -159,7 +160,7 @@ class InkstitchExtension(inkex.Effect):
         for child in node:
             nodes.extend(self.descendants(child, selected))
 
-        if selected and (node.tag in EMBROIDERABLE_TAGS or is_embroiderable_clone(node)):
+        if selected and (node.tag in EMBROIDERABLE_TAGS or is_clone(node)):
             nodes.append(node)
 
         return nodes
