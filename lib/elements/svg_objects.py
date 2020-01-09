@@ -28,18 +28,6 @@ class ImageTypeWarning(ValidationTypeWarning):
     ]
 
 
-class CloneSourceWarning(ValidationTypeWarning):
-    name = _("Clone with invalid origin")
-    description = _("Ink/Stitch works best with paths.  This object is a clone of an object which is not embroiderable.")
-    steps_to_solve = [
-        _('* Select the source of this object and convert it to a path:'),
-        _('- Path > Object to Path (Shift+Ctrl+C)'),
-        _('* Alternatively unlink the clone and convert it to a path:'),
-        _('- Edit > Clone > Unlink Clone (Shift+Alt+D)'),
-        _('- Path > Object to Path (Shift+Ctrl+C)')
-    ]
-
-
 class SVGObjects(object):
 
     def __init__(self, svg, selection):
