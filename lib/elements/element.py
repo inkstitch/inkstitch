@@ -1,13 +1,14 @@
-from copy import deepcopy
 import sys
+from copy import deepcopy
 
-from cspsubdiv import cspsubdiv
 import cubicsuperpath
 import simplestyle
+from cspsubdiv import cspsubdiv
 
 from ..commands import find_commands
 from ..i18n import _
 from ..svg import PIXELS_PER_MM, apply_transforms, convert_length, get_doc_size
+from ..svg.path import get_path
 from ..svg.tags import INKSCAPE_LABEL
 from ..utils import cache
 
@@ -197,7 +198,8 @@ class EmbroideryElement(object):
         # In a path, each element in the 3-tuple is itself a tuple of (x, y).
         # Tuples all the way down.  Hasn't anyone heard of using classes?
 
-        d = self.node.get("d", "")
+        d = get_path(self.node)
+
         if not d:
             self.fatal(_("Object %(id)s has an empty 'd' attribute.  Please delete this object from your document.") % dict(id=self.node.get("id")))
 
