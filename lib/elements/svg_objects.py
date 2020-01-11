@@ -5,7 +5,8 @@ from ..commands import is_command
 from ..i18n import _
 from ..svg import get_correction_transform
 from ..svg.svg import find_elements
-from ..svg.tags import SVG_IMAGE_TAG, SVG_TEXT_TAG, SVG_USE_TAG, XLINK_HREF
+from ..svg.tags import (EMBROIDERABLE_TAGS, SVG_IMAGE_TAG, SVG_TEXT_TAG,
+                        SVG_USE_TAG, XLINK_HREF)
 from .validation import ValidationTypeWarning
 
 
@@ -97,9 +98,19 @@ def is_clone(node):
     if not node.tag == SVG_USE_TAG or (node.tag == SVG_USE_TAG and is_command(node)):
         return False
 
-    elif node.tag == SVG_USE_TAG and node.get(XLINK_HREF):
-        return True
+    elif node.tag == SVG_USE_TAG and node.get(XLINK_HREF, ''):
+        clone_source = get_origin_clone_source(node)
+        if clone_source.tag in EMBROIDERABLE_TAGS:
+            return True
+        else:
+            return False
 
+def get_origin_clone_source(node):
+    orig_id = node.get(XLINK_HREF)[1:]
+    source_node = get_clone_source(node, orig_id)
+    if source_node.get(XLINK_HREF):
+        source_node = get_origin_source(source_node)
+    return source_node
 
 def get_clone_source(node, id=None):
     if not id:
