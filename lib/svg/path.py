@@ -38,7 +38,7 @@ def get_node_transform(node):
         # combine this node's transform with all parent groups' transforms
         transform = compose_parent_transforms(node, transform)
 
-    if node.get('id').startswith('clone_'):
+    if node.get('id', '').startswith('clone_'):
         transform = simpletransform.parseTransform(node.get('transform'))
 
     # add in the transform implied by the viewBox
