@@ -105,12 +105,14 @@ def is_clone(node):
         else:
             return False
 
+
 def get_origin_clone_source(node):
     orig_id = node.get(XLINK_HREF)[1:]
     source_node = get_clone_source(node, orig_id)
     if source_node.get(XLINK_HREF):
-        source_node = get_origin_source(source_node)
+        source_node = get_origin_clone_source(source_node)
     return source_node
+
 
 def get_clone_source(node, id=None):
     if not id:

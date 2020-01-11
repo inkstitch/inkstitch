@@ -3,7 +3,7 @@ from shapely import geometry as shgeo
 from ..i18n import _
 from ..utils import cache
 from ..utils.geometry import Point
-from .element import EmbroideryElement, Patch
+from .element import EmbroideryElement, Patch, param
 from .validation import ValidationWarning
 
 
@@ -31,6 +31,13 @@ class Polyline(EmbroideryElement):
     # common machine embroidery file formats to SVG.  Handling those here lets
     # users use File -> Import to pull in existing designs they may have
     # obtained, for example purchased fonts.
+
+    element_name = "Polyline"
+
+    @property
+    @param('satin_column', _('Satin stitch along paths'), type='toggle', inverse=True)
+    def satin_column(self):
+        return self.get_boolean_param("satin_column")
 
     @property
     def points(self):

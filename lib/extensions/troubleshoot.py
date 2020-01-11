@@ -146,7 +146,7 @@ class Troubleshoot(InkstitchExtension):
 
     def add_descriptions(self, problem_types):
         svg = self.document.getroot()
-        text_x = str(self.unittouu(svg.get('width')) + 5)
+        text_x = str(self.unittouu(svg.get('width', '')) + 5)
 
         text_container = inkex.etree.Element(
             SVG_TEXT_TAG,

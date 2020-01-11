@@ -1,19 +1,20 @@
 # -*- coding: UTF-8 -*-
 
+import os
+import sys
 from collections import defaultdict
 from copy import copy
 from itertools import groupby
-import os
-import sys
-
 
 import wx
 from wx.lib.scrolledpanel import ScrolledPanel
 
 from ..commands import is_command
-from ..elements import EmbroideryElement, Fill, AutoFill, Stroke, SatinColumn
+from ..elements import (AutoFill, EmbroideryElement, Fill, Polyline,
+                        SatinColumn, Stroke)
 from ..gui import PresetsPanel, SimulatorPreview
 from ..i18n import _
+from ..svg.tags import SVG_POLYLINE_TAG
 from ..utils import get_resource_dir
 from .base import InkstitchExtension
 
@@ -465,15 +466,20 @@ class Params(InkstitchExtension):
         classes = []
 
         if not is_command(node):
-            if element.get_style("fill", "black") is not None:
-                classes.append(AutoFill)
-                classes.append(Fill)
+            if node.tag == SVG_POLYLINE_TAG:
+                classes.append(Polyline)
 
-            if element.get_style("stroke") is not None:
-                classes.append(Stroke)
+            else:
 
-                if element.get_style("stroke-dasharray") is None:
-                    classes.append(SatinColumn)
+                if element.get_style("fill", "black") is not None:
+                    classes.append(AutoFill)
+                    classes.append(Fill)
+
+                if element.get_style("stroke") is not None:
+                    classes.append(Stroke)
+
+                    if element.get_style("stroke-dasharray") is None:
+                        classes.append(SatinColumn)
 
         return classes
 
