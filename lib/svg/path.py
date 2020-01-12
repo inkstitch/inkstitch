@@ -39,7 +39,7 @@ def get_node_transform(node):
         transform = compose_parent_transforms(node, transform)
 
     if node.get('id', '').startswith('clone_'):
-        transform = simpletransform.parseTransform(node.get('transform'))
+        transform = simpletransform.parseTransform(node.get('transform', ''))
 
     # add in the transform implied by the viewBox
     viewbox_transform = get_viewbox_transform(node.getroottree().getroot())
