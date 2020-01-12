@@ -100,11 +100,13 @@ class Clone(EmbroideryElement):
 
         else:
             if clone.tag == SVG_GROUP_TAG:
-
                 for clone_node in clone.iterdescendants():
+                    if clone_node.get('id', '').startswith('command_'):
+                        continue
+
                     if is_clone(clone_node):
-                        clone_node_source = get_clone_source(node, clone_node.get('id'))
-                        transform = formatTransform(composeTransform(transform, parseTransform(clone_node_source.get('transform'))))
+                        clone_node_source = get_clone_source(node, clone_node.get('id', ''))
+                        transform = formatTransform(composeTransform(transform, parseTransform(clone_node_source.get('transform', ''))))
                         elements.extend(self.clones_to_elements(clone_node_source, transform))
 
                     clone_id = 'clones__%s__%s' % (node.get('id', ''), clone_node.get('id', ''))
