@@ -6,6 +6,62 @@ on:
     tags:
       - "v*"
 jobs:
+  linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          submodules: recursive
+      - uses: actions/setup-python@v1
+        with:
+          python-version: '2.7.x'
+          architecture: 'x64'
+      - name: download dependencies
+        shell: bash
+        run: |
+          curl -sOL https://inkscape.org/en/gallery/item/12187/inkscape-0.92.3.tar.bz2
+      - name: install dependencies
+        shell: bash
+        run: |
+          sudo apt-get install gettext
+
+          # for shapely
+          sudo apt-get install libgeos-dev
+
+          # for wxPython
+          sudo apt-get install glib-networking libsdl1.2-dev
+
+          # for PyGObject
+          sudo apt install libgirepository1.0-dev
+
+          # wxPython doen't publish linux wheels in pypi
+          wget -q https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-18.04/wxPython-4.0.7-cp27-cp27mu-linux_x86_64.whl
+          pip install wxPython*.whl
+
+          # We can't use the shapely wheel because it includes the geos
+          # library but with a weird file name.  Details:
+          # https://github.com/pyinstaller/pyinstaller/blob/61b1c75c2b0469b32d114298a63bf60b8d597e37/PyInstaller/hooks/hook-shapely.py#L34
+          pip install --no-binary shapely -r requirements.txt
+
+          pip install PyGObject
+
+          pip install -r requirements.txt
+          pip install pyinstaller==3.3.1
+          
+          tar -jxf inkscape-0.92.3.tar.bz2
+          rm inkscape-0.92.3.tar.bz2
+          mv inkscape-0.92.3 inkscape
+
+          echo "::add-path::${{ env.pythonLocation }}\bin"
+      - shell: bash
+        run: |
+          make dist
+        env:
+          BUILD: linux
+      - uses: actions/upload-artifact@master
+        with:
+          name: inkstitch-linux
+          path: artifacts
   windows:
     runs-on: windows-latest
     steps:
@@ -98,7 +154,7 @@ jobs:
 
   release:
     runs-on: ubuntu-latest
-    needs: [windows, mac]
+    needs: [linux, windows, mac]
     if: always()
     steps:
       - name: determine release info
@@ -115,11 +171,17 @@ jobs:
             echo "::set-env name=prerelease::true"
             echo "::set-env name=title::development build of $branch"
           fi
+      - name: download linux
+        uses: actions/download-artifact@v1
+        with:
+          name: 'inkstitch-linux'
+          path: 'artifacts/'
       - name: download windows
         uses: actions/download-artifact@v1
         with:
           name: 'inkstitch-windows'
           path: 'artifacts/'
+        if: always()
       - name: download mac
         uses: actions/download-artifact@v1
         with:
