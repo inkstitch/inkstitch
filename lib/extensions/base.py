@@ -10,7 +10,7 @@ import inkex
 
 from ..commands import layer_commands
 from ..elements import EmbroideryElement, nodes_to_elements
-from ..elements.svg_objects import is_clone
+from ..elements.clone import is_clone
 from ..i18n import _
 from ..svg import generate_unique_id
 from ..svg.tags import (EMBROIDERABLE_TAGS, INKSCAPE_GROUPMODE, SVG_DEFS_TAG,

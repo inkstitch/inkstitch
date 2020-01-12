@@ -10,8 +10,9 @@ import wx
 from wx.lib.scrolledpanel import ScrolledPanel
 
 from ..commands import is_command
-from ..elements import (AutoFill, EmbroideryElement, Fill, Polyline,
+from ..elements import (AutoFill, Clone, EmbroideryElement, Fill, Polyline,
                         SatinColumn, Stroke)
+from ..elements.clone import is_clone
 from ..gui import PresetsPanel, SimulatorPreview
 from ..i18n import _
 from ..svg.tags import SVG_POLYLINE_TAG
@@ -468,7 +469,8 @@ class Params(InkstitchExtension):
         if not is_command(node):
             if node.tag == SVG_POLYLINE_TAG:
                 classes.append(Polyline)
-
+            elif is_clone(node):
+                classes.append(Clone)
             else:
 
                 if element.get_style("fill", "black") is not None:

@@ -8,7 +8,7 @@ from .validation import ValidationWarning
 
 
 class PolylineWarning(ValidationWarning):
-    name = _("Object is a PolyLine")
+    name = _("PolyLine Object")
     description = _("This object is an SVG PolyLine.  Ink/Stitch can work with this shape, "
                     "but you can't edit it in Inkscape.  Convert it to a manual stitch path "
                     "to allow editing.")

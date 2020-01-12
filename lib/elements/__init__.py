@@ -1,4 +1,5 @@
 from auto_fill import AutoFill
+from clone import Clone
 from element import EmbroideryElement
 from fill import Fill
 from polyline import Polyline
