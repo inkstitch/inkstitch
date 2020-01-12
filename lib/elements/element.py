@@ -154,6 +154,10 @@ class EmbroideryElement(object):
     def stroke_scale(self):
         svg = self.node.getroottree().getroot()
         doc_width, doc_height = get_doc_size(svg)
+        # this is necessary for clones, since they are disconnected from the DOM
+        # it will result in a slighty wrong result for zig-zag stitches
+        if doc_width == 0:
+            doc_width = 1
         viewbox = svg.get('viewBox', '0 0 %s %s' % (doc_width, doc_height))
         viewbox = viewbox.strip().replace(',', ' ').split()
         return doc_width / float(viewbox[2])
