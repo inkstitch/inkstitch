@@ -8,9 +8,10 @@ from cspsubdiv import cspsubdiv
 from ..commands import find_commands
 from ..i18n import _
 from ..svg import PIXELS_PER_MM, apply_transforms, convert_length, get_doc_size
-from ..svg.path import get_path
-from ..svg.tags import INKSCAPE_LABEL
+from ..svg.tags import (INKSCAPE_LABEL, SVG_CIRCLE_TAG, SVG_ELLIPSE_TAG,
+                        SVG_RECT_TAG)
 from ..utils import cache
+from .svg_objects import circle_to_path, ellipse_to_path, rect_to_path
 
 
 class Patch:
@@ -202,7 +203,15 @@ class EmbroideryElement(object):
         # In a path, each element in the 3-tuple is itself a tuple of (x, y).
         # Tuples all the way down.  Hasn't anyone heard of using classes?
 
-        d = get_path(self.node)
+        d = self.node.get("d", "")
+
+        if not d:
+            if self.node.tag == SVG_RECT_TAG:
+                d = rect_to_path(self.node)
+            elif self.node.tag == SVG_ELLIPSE_TAG:
+                d = ellipse_to_path(self.node)
+            elif self.node.tag == SVG_CIRCLE_TAG:
+                d = circle_to_path(self.node)
 
         if not d:
             self.fatal(_("Object %(id)s has an empty 'd' attribute.  Please delete this object from your document.") % dict(id=self.node.get("id")))
