@@ -77,7 +77,7 @@ class Polyline(EmbroideryElement):
     def color(self):
         # EmbroiderModder2 likes to use the `stroke` property directly instead
         # of CSS.
-        return self.get_style("stroke", "#000000") or self.node.get("stroke", "#000000")
+        return self.get_style("stroke", "#000000")
 
     @property
     def stitches(self):

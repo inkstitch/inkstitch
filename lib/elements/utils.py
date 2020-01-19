@@ -25,13 +25,13 @@ def node_to_elements(node):
         else:
             elements = []
 
-            if element.get_style("fill", "black"):
+            if element.get_style("fill"):
                 if element.get_boolean_param("auto_fill", True):
                     elements.append(AutoFill(node))
                 else:
                     elements.append(Fill(node))
 
-            if element.get_style("stroke"):
+            if element.get_style("stroke", "#000000"):
                 if not is_command(element.node):
                     elements.append(Stroke(node))
 
