@@ -1,9 +1,8 @@
 from cubicsuperpath import parsePath
-from simpletransform import (applyTransformToPoint, composeTransform,
-                             invertTransform, parseTransform, roughBBox)
+from simpletransform import applyTransformToPoint, roughBBox
 
 from ..i18n import _
-from ..svg import get_correction_transform, get_node_transform
+from ..svg import get_node_transform
 from ..svg.svg import find_elements
 from ..svg.tags import (EMBROIDERABLE_TAGS, SVG_CIRCLE_TAG, SVG_ELLIPSE_TAG,
                         SVG_IMAGE_TAG, SVG_RECT_TAG, SVG_TEXT_TAG)
@@ -84,15 +83,13 @@ class SVGObjects(object):
             if node.tag == SVG_IMAGE_TAG:
                 # image
                 point = self.get_coordinates(node)
-                correction_transform = self.invert_correction_transform(node)
-                applyTransformToPoint(correction_transform, point)
+                transform = get_node_transform(node)
+                applyTransformToPoint(transform, point)
                 yield ImageTypeWarning(point)
             elif node.tag == SVG_TEXT_TAG:
                 # text
                 point = self.get_coordinates(node)
-                correction_transform = self.invert_correction_transform(node)
-                node_transform = parseTransform(node.get('transform'))
-                transform = composeTransform(correction_transform, node_transform)
+                transform = get_node_transform(node)
                 applyTransformToPoint(transform, point)
                 yield TextTypeWarning(point)
             elif node.tag in EMBROIDERABLE_TAGS:
@@ -111,9 +108,6 @@ class SVGObjects(object):
                 node_transform = get_node_transform(node)
                 applyTransformToPoint(node_transform, point)
                 yield NoColorWarning(point)
-
-    def invert_correction_transform(self, element):
-        return invertTransform(parseTransform(get_correction_transform(element)))
 
     def get_coordinates(self, node):
         point = [float(node.get('x')), float(node.get('y'))]
