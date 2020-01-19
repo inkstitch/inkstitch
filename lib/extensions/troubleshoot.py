@@ -200,7 +200,7 @@ class Troubleshoot(InkstitchExtension):
                           '"Troubleshoot" through the objects panel (Object -> Objects...).')
         explain_layer_parts = textwrap.wrap(explain_layer, 60)
         for description in explain_layer_parts:
-            text.append([description, "font-style: italic; font-size: 5px;"])
+            text.append([description, "font-style: italic; font-size: 4px;"])
 
         text = self.split_text(text)
 

@@ -1,10 +1,12 @@
+from cubicsuperpath import parsePath
 from simpletransform import (applyTransformToPoint, composeTransform,
-                             invertTransform, parseTransform)
+                             invertTransform, parseTransform, roughBBox)
 
 from ..i18n import _
-from ..svg import get_correction_transform
+from ..svg import get_correction_transform, get_node_transform
 from ..svg.svg import find_elements
-from ..svg.tags import SVG_IMAGE_TAG, SVG_TEXT_TAG
+from ..svg.tags import (EMBROIDERABLE_TAGS, SVG_CIRCLE_TAG, SVG_ELLIPSE_TAG,
+                        SVG_IMAGE_TAG, SVG_RECT_TAG, SVG_TEXT_TAG)
 from .validation import ValidationTypeWarning
 
 
@@ -27,6 +29,17 @@ class ImageTypeWarning(ValidationTypeWarning):
     ]
 
 
+class NoColorWarning(ValidationTypeWarning):
+    name = _("No color settings")
+    description = _("There is no color information for this object. "
+                    "Ink/Stitch doesn't know, wether it was meant to be a stroke or a fill object. "
+                    "It will be rendered as stroke, until a fill color is set.")
+    steps_to_solve = [
+        _('Go to: Objects > Fill and Stroke ...'),
+        _('Apply a fill or a stroke color to the object.')
+    ]
+
+
 class SVGObjects(object):
 
     def __init__(self, svg, selection):
@@ -39,19 +52,24 @@ class SVGObjects(object):
         if self.selection:
             for node in self.selection:
                 xpath = ".//svg:text[@id='%(id)s']|.//svg:image[@id='%(id)s']|" \
-                        ".//svg:use[@id='%(id)s' and not(starts-with(@xlink:href, '#inkstitch_'))]" \
+                        ".//svg:use[@id='%(id)s' and not(starts-with(@xlink:href, '#inkstitch_'))]|" \
+                        ".//*[@id='%(id)s' and not(contains(@style, 'fill:')) and not(contains(@style, 'stroke:')) " \
+                        "and not(@stroke) and not(@fill)]" \
                         % dict(id=node)
                 objects = find_elements(self.svg, xpath)
 
                 if not objects:
                     xpath = ".//svg:g[@id='%(id)s']//svg:text|.//svg:g[@id='%(id)s']//svg:image|" \
-                            ".//svg:g[@id='%(id)s']//svg:use[not(starts-with(@xlink:href, '#inkstitch_'))]" \
+                            ".//svg:g[@id='%(id)s']//svg:use[not(starts-with(@xlink:href, '#inkstitch_'))]|" \
+                            ".//svg:g[@id='%(id)s']//*[not(contains(@style, 'fill:')) and not(contains(@style, 'stroke:')) " \
+                            "and not(@stroke) and not(@fill)]" \
                             % dict(id=node)
                     objects = find_elements(self.svg, xpath)
                 elements.extend(objects)
         else:
             xpath = ".//svg:text|.//svg:image|" \
-                    ".//svg:use[not(starts-with(@xlink:href, '#inkstitch_'))]"
+                    ".//svg:use[not(starts-with(@xlink:href, '#inkstitch_'))]|" \
+                    ".//*[not(contains(@style, 'fill:')) and not(contains(@style, 'stroke:')) and not(@stroke) and not(@fill)]"
             elements.extend(find_elements(self.svg, xpath))
 
         return elements
@@ -77,6 +95,22 @@ class SVGObjects(object):
                 transform = composeTransform(correction_transform, node_transform)
                 applyTransformToPoint(transform, point)
                 yield TextTypeWarning(point)
+            elif node.tag in EMBROIDERABLE_TAGS:
+                d = node.get("d", "")
+                if not d:
+                    if node.tag == SVG_RECT_TAG:
+                        d = rect_to_path(node)
+                    elif node.tag == SVG_ELLIPSE_TAG:
+                        d = ellipse_to_path(node)
+                    elif node.tag == SVG_CIRCLE_TAG:
+                        d = circle_to_path(node)
+
+                path = parsePath(d)
+                xmin, ymin, xmax, ymax = roughBBox(path)
+                point = [(xmin), (ymax)]
+                node_transform = get_node_transform(node)
+                applyTransformToPoint(node_transform, point)
+                yield NoColorWarning(point)
 
     def invert_correction_transform(self, element):
         return invertTransform(parseTransform(get_correction_transform(element)))

@@ -139,7 +139,12 @@ class EmbroideryElement(object):
     def get_style(self, style_name, default=None):
         style = simplestyle.parseStyle(self.node.get("style"))
         if (style_name not in style):
-            return default
+            # possibly the specific style is set as a seperate attribute
+            style = self.node.get(style_name)
+            if style is None:
+                return default
+            else:
+                return style
         value = style[style_name]
         if value == 'none':
             return None

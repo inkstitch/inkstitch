@@ -21,7 +21,7 @@ class Stroke(EmbroideryElement):
 
     @property
     def color(self):
-        return self.get_style("stroke")
+        return self.get_style("stroke", "#000000")
 
     @property
     def dashed(self):
