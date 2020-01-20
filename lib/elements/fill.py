@@ -136,10 +136,7 @@ class Fill(EmbroideryElement):
            type='int',
            default=4)
     def staggers(self):
-        staggers = self.get_int_param("staggers", 4)
-        if staggers == 0:
-            staggers = 1
-        return staggers
+        return max(self.get_int_param("staggers", 4), 1)
 
     @property
     @cache
