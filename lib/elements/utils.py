@@ -10,7 +10,6 @@ from .stroke import Stroke
 
 
 def node_to_elements(node):
-
     if node.tag == SVG_POLYLINE_TAG:
         return [Polyline(node)]
 
@@ -25,13 +24,13 @@ def node_to_elements(node):
         else:
             elements = []
 
-            if element.get_style("fill"):
+            if element.get_style("fill", 'black') and not element.get_style('fill-opacity', 1) == "0":
                 if element.get_boolean_param("auto_fill", True):
                     elements.append(AutoFill(node))
                 else:
                     elements.append(Fill(node))
 
-            if element.get_style("stroke", "#000000"):
+            if element.get_style("stroke"):
                 if not is_command(element.node):
                     elements.append(Stroke(node))
 
@@ -39,7 +38,6 @@ def node_to_elements(node):
                 elements.reverse()
 
             return elements
-
     else:
         return []
 

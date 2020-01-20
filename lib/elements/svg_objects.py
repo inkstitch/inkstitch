@@ -32,7 +32,7 @@ class NoColorWarning(ValidationTypeWarning):
     name = _("No color settings")
     description = _("There is no color information for this object. "
                     "Ink/Stitch doesn't know, wether it was meant to be a stroke or a fill object. "
-                    "It will be rendered as stroke, until a fill color is set.")
+                    "It will be rendered as fill, until a stroke color is set.")
     steps_to_solve = [
         _('Go to: Objects > Fill and Stroke ...'),
         _('Apply a fill or a stroke color to the object.')
