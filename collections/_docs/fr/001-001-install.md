@@ -16,7 +16,6 @@ Pour le processus d'installation regarder la vidéo pour
 ## Prérequis
 
 * [Inkscape](https://inkscape.org/) Version 0.92.2 ou supérieure
-* Un navigateur récent pour l'aperçu avant impression
 
 C'est tout! Toutes les librairies python et dépendances externes sont incluses (en utilisant l'excellent [pyinstaller](http://www.pyinstaller.org)), de sorte que vous ne devriez pas avoir quoi que ce soit d'autre à installer.
 

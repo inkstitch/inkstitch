@@ -16,7 +16,6 @@ For the installation process watch the video for
 ## Requirements
 
 * [Inkscape](https://inkscape.org/) Version 0.92.2 or higher
-* Modern Browser for the Print Preview
 
 That's it!  All python libraries and external dependencies are bundled (using the excellent [pyinstaller](http://www.pyinstaller.org)), so you shouldn't need to set anything else up.
 

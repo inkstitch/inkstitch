@@ -17,7 +17,6 @@ Die Videos sind in englischer Sprache. Deutsche Untertitel können zugeschaltet 
 ## Vorraussetzung
 
 * [Inkscape](https://inkscape.org/) Version 0.92.2 oder höher
-* Moderner Browser für die Druckvorschau
 
 Das ist alles! Alle Python-Bibliotheken und externen Abhängigkeiten sind schon dabei (durch den ausgezeichneten [pyinstaller](http://www.pyinstaller.org)), so dass nichts weiteres eingerichtet werden muss.
 
