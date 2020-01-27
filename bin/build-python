@@ -35,11 +35,11 @@ pyinstaller_args+="-p inkscape/share/extensions "
 pyinstaller_args+="--log-level DEBUG "
 
 if [ "$BUILD" = "windows" ]; then
-    pyinstaller $pyinstaller_args inkstitch.py
+    python -m PyInstaller $pyinstaller_args inkstitch.py
 else
     # without the LD_LIBRARY_PATH, it seems that pyinstaller can't find all of
     # wxpython's shared libraries
-    LD_LIBRARY_PATH="${site_packages}/wx" pyinstaller $pyinstaller_args --strip inkstitch.py;
+    LD_LIBRARY_PATH="${site_packages}/wx" python -m PyInstaller $pyinstaller_args --strip inkstitch.py;
 fi
 
 # pyinstaller put a whole mess of libraries under dist/inkstitch.  We'd like
