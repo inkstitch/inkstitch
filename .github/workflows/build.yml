@@ -24,6 +24,7 @@ jobs:
           #   https://github.com/actions/setup-python/issues/23
 
           sudo apt-get install python2.7
+          python -m pip install --upgrade pip
 
           sudo apt-get install gettext
 
@@ -40,8 +41,6 @@ jobs:
           python --version
           pip --version
           pip debug
-
-          python -m pip install --upgrade pip
 
           # wxPython doen't publish linux wheels in pypi
           wget -q https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-16.04/wxPython-4.0.6-cp27-cp27mu-linux_x86_64.whl
