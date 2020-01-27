@@ -91,10 +91,9 @@ jobs:
           pip install Shapely-1.6.3-cp27-cp27m-win32.whl
           pip install -r requirements.txt
           pip install pyinstaller==3.3.1
-          
-          echo "before tar"
+
+          # Just using tar -j freezes forever with no output.  Heck if I know why.  This seems to work.
           bzcat inkscape-0.92.3.tar.bz2 | tar -vxf -
-          echo "after tar"
           rm inkscape-0.92.3.tar.bz2
           mv inkscape-0.92.3 inkscape
 
