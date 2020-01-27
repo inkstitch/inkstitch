@@ -41,17 +41,17 @@ jobs:
 
           # wxPython doen't publish linux wheels in pypi
           wget -q https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-16.04/wxPython-4.0.6-cp27-cp27mu-linux_x86_64.whl
-          pip install wxPython*.whl
+          python -m pip install wxPython*.whl
 
           # We can't use the shapely wheel because it includes the geos
           # library but with a weird file name.  Details:
           # https://github.com/pyinstaller/pyinstaller/blob/61b1c75c2b0469b32d114298a63bf60b8d597e37/PyInstaller/hooks/hook-shapely.py#L34
-          pip install --no-binary shapely -r requirements.txt
+          python -m pip install --no-binary shapely -r requirements.txt
 
-          pip install PyGObject
+          python -m pip install PyGObject
 
-          pip install -r requirements.txt
-          pip install pyinstaller==3.3.1
+          python -m pip install -r requirements.txt
+          python -m pip install pyinstaller==3.3.1
           
           tar -jxf inkscape-0.92.3.tar.bz2
           rm inkscape-0.92.3.tar.bz2
