@@ -94,7 +94,7 @@ jobs:
           pip install pyinstaller==3.3.1
           
           echo "before tar"
-          tar -jxf inkscape-0.92.3.tar.bz2
+          tar -vjxf inkscape-0.92.3.tar.bz2
           echo "after tar"
           rm inkscape-0.92.3.tar.bz2
           mv inkscape-0.92.3 inkscape
