@@ -35,9 +35,9 @@ jobs:
           sudo apt install libgirepository1.0-dev
 
           uname -a
-          pip --version
           python --version
-          file "$(which python)"
+          pip --version
+          pip debug
 
           python -m pip install --upgrade pip
 
