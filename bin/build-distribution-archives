@@ -1,8 +1,7 @@
 #!/bin/bash
 
-# TRAVIS_BRANCH is the branch name or the name of the tag.
-VERSION="$(echo ${TRAVIS_BRANCH:-${GITHUB_REF}} | tr / -)"
-OS="${TRAVIS_OS_NAME:-${BUILD:-$(uname)}}"
+VERSION="$(echo ${GITHUB_REF} | tr / -)"
+OS="${BUILD:-$(uname)}"
 ARCH="$(uname -m)"
 
 cp -a images/examples palettes symbols fonts dist/inkstitch

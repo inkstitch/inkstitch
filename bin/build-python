@@ -4,7 +4,7 @@ set -e
 
 site_packages="$(python -c "import os; print(os.path.dirname(os.__file__) + '/site-packages')")"
 
-if [ "$TRAVIS_OS_NAME" = "linux" -a "$BUILD" != "windows" ]; then
+if [ "$BUILD" = "linux" ]; then
     # pyinstaller misses these two
     pyinstaller_args+="--add-binary /usr/lib/x86_64-linux-gnu/gio/modules/libgiolibproxy.so:. "
     pyinstaller_args+="--add-binary  /usr/lib/x86_64-linux-gnu/libproxy.so.1:. "
@@ -24,7 +24,7 @@ pyinstaller_args+="--hidden-import wx "
 
 # We need to use the precompiled bootloader linked with graphical Mac OS X
 # libraries if we develop a GUI application for Mac:
-if [ "$TRAVIS_OS_NAME" = "osx" ]; then
+if [ "$BUILD" = "osx" ]; then
     pyinstaller_args+="--windowed "
 fi
 
@@ -52,7 +52,7 @@ mv dist/inkstitch/* dist/bin
 mv dist/bin dist/inkstitch
 
 # on Mac, pyinstaller creates a .app version as well, but we don't need that
-if [ "$TRAVIS_OS_NAME" = "osx" ]; then
+if [ "$BUILD" = "osx" ]; then
     rm -rf dist/inkstitch.app/
 fi
 
