@@ -2,16 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-08-13 20:36+0000\n"
-"PO-Revision-Date: 2019-10-28 21:09\n"
-"Last-Translator: Lex Neva (lexelby)\n"
+"POT-Creation-Date: 2020-01-01 21:42+0000\n"
+"PO-Revision-Date: 2020-01-30 21:57\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Polish\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.8.0\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
-"X-Generator: crowdin.com\n"
 "X-Crowdin-Project: inkstitch\n"
 "X-Crowdin-Language: pl\n"
 "X-Crowdin-File: /master/messages.po\n"
@@ -20,23 +19,23 @@ msgstr ""
 #. name of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:2
 msgid "Ink/Stitch Small Font"
-msgstr ""
+msgstr "Ink/Stitch mała czcionka"
 
 #. description of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:4
 #, python-format
 msgid "A font suited for small characters.  The capital em is 0.2 inches wide at 100% scale.  Can be scaled up to 300%."
-msgstr ""
+msgstr "Czcionka dostosowana do małych znaków. Przy skali 100% wysokość wynosi 5,08 mm. Można skalować do 300%."
 
 #. name of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:6
 msgid "TT Masters"
-msgstr ""
+msgstr "TT Metry"
 
 #. description of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:8
 msgid "A font suited for heavy typing :)"
-msgstr ""
+msgstr "Czcionka dostosowana do ciężkiego pisania :)"
 
 #. name of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:10
@@ -51,76 +50,76 @@ msgstr ""
 #. name of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:14
 msgid "Ink/Stitch Medium Font"
-msgstr ""
+msgstr "Ink/Stitch średnia czcionka"
 
 #. description of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:16
 #, python-format
 msgid "A basic font suited for medium-sized characters.  The capital em is 0.6 inches wide at 100% scale.  Can be scaled down to 75% or up to 150%.  Every satin has contour underlay."
-msgstr ""
+msgstr "Podstawowa czcionka do średniej wielkości znaków. Wielkość w skali 100% wynosi 15,24 mm. Można skalować od 75% do 150%. Każda satyna ma podkład konturowy."
 
 #. command attached to an object
 #: lib/commands.py:20
 msgid "fill_start"
-msgstr ""
+msgstr "start_wypełnienia"
 
 #: lib/commands.py:20
 msgid "Fill stitch starting position"
-msgstr ""
+msgstr "Punkt startowy ściegu wypełnienia"
 
 #. command attached to an object
 #: lib/commands.py:23
 msgid "fill_end"
-msgstr ""
+msgstr "koniec_wypełnienia"
 
 #: lib/commands.py:23
 msgid "Fill stitch ending position"
-msgstr ""
+msgstr "Punkt końcowy ściegu wypełnienia"
 
 #. command attached to an object
 #: lib/commands.py:26
 msgid "satin_start"
-msgstr ""
+msgstr "start_satyny"
 
 #: lib/commands.py:26
 msgid "Auto-route satin stitch starting position"
-msgstr ""
+msgstr "Automatycznie trasuj pozycję początkową ściegu satynowego"
 
 #. command attached to an object
 #: lib/commands.py:29
 msgid "satin_end"
-msgstr ""
+msgstr "koniec_satyny"
 
 #: lib/commands.py:29
 msgid "Auto-route satin stitch ending position"
-msgstr ""
+msgstr "Automatycznie trasuj pozycję końcową ściegu satynowego"
 
 #. command attached to an object
 #: lib/commands.py:32
 msgid "stop"
-msgstr ""
+msgstr "stop"
 
 #: lib/commands.py:32
 msgid "Stop (pause machine) after sewing this object"
-msgstr ""
+msgstr "Zatrzymaj (wstrzymaj maszynę) po wyhaftowaniu tego obiektu"
 
 #. command attached to an object
 #: lib/commands.py:35
 msgid "trim"
-msgstr ""
+msgstr "trym"
 
 #: lib/commands.py:35
 msgid "Trim thread after sewing this object"
-msgstr ""
+msgstr "Po wyszyciu tego obiektu obetnij nić"
 
 #. command attached to an object
 #: lib/commands.py:38
 msgid "ignore_object"
-msgstr ""
+msgstr "ignoruj_obiekt"
 
 #: lib/commands.py:38
 msgid "Ignore this object (do not stitch)"
-msgstr ""
+msgstr "Ignoruj ten obiekt (nie wyszywaj)"
 
 #. command attached to an object
 #: lib/commands.py:41
@@ -1004,7 +1003,7 @@ msgstr ""
 
 #. low-level file error.  %(error)s is (hopefully?) translated by
 #. the user's system automatically.
-#: lib/output.py:105
+#: lib/output.py:94
 #, python-format
 msgid "Error writing to %(path)s: %(error)s"
 msgstr ""
@@ -1112,7 +1111,7 @@ msgstr ""
 
 #: print/templates/footer.html:2
 msgid "Page"
-msgstr ""
+msgstr "Strona"
 
 #: print/templates/footer.html:3 print/templates/ui.html:98
 #: print/templates/ui.html:105
@@ -1121,27 +1120,27 @@ msgstr ""
 
 #: print/templates/headline.html:5
 msgid "Click to choose another logo"
-msgstr ""
+msgstr "Kliknij, aby wybrać inne logo"
 
 #: print/templates/headline.html:10
 msgid "Enter job title..."
-msgstr ""
+msgstr "Wpisz nazwę zadania..."
 
 #: print/templates/headline.html:11
 msgid "CLIENT"
-msgstr ""
+msgstr "KLIENT"
 
 #: print/templates/headline.html:11
 msgid "Enter client name..."
-msgstr ""
+msgstr "Wpisz nazwę klienta..."
 
 #: print/templates/headline.html:12
 msgid "PURCHASE ORDER #:"
-msgstr ""
+msgstr "NUMER ZAMÓWIENIA #:"
 
 #: print/templates/headline.html:12
 msgid "Enter purchase order number..."
-msgstr ""
+msgstr "Wpisz numer zamówienia..."
 
 #: print/templates/headline.html:15
 #, python-format
@@ -1399,16 +1398,16 @@ msgstr ""
 
 #: print/templates/ui_svg_action_buttons.html:3
 msgid "Fit"
-msgstr ""
+msgstr "Dopasuj"
 
 #: print/templates/ui_svg_action_buttons.html:5
 msgid "Apply to all"
-msgstr ""
+msgstr "Przypisz wszystkim"
 
 #: print/templates/ui_svg_action_buttons.html:9
 #: print/templates/ui_svg_action_buttons.html:12
 msgid "Realistic"
-msgstr ""
+msgstr "Realistycznie"
 
 #. description for pyembroidery file format: pec
 #. description for pyembroidery file format: pes
@@ -1761,25 +1760,25 @@ msgstr ""
 
 #: templates/params.inx:3
 msgid "Params"
-msgstr ""
+msgstr "Ustawienia"
 
 #: templates/print.inx:3
 msgid "Print / Realistic Preview"
-msgstr ""
+msgstr "Wydruk / Podgląd realistyczny"
 
 #: templates/simulate.inx:3
 msgid "Simulate"
-msgstr ""
+msgstr "Wykonaj symulację"
 
 #: templates/troubleshoot.inx:3
 msgid "Troubleshoot Objects"
-msgstr ""
+msgstr "Znajdź problematyczne obiekty"
 
 #: templates/zip.inx:10
 msgid "Ink/Stitch: ZIP export multiple formats (.zip)"
-msgstr ""
+msgstr "Ink/Stitch: ZIP eksport wielu formatów (.zip)"
 
 #: templates/zip.inx:11
 msgid "Create a ZIP with multiple embroidery file formats using Ink/Stitch"
-msgstr ""
+msgstr "Stwórz ZIP z wieloma plikami ściegu dla różnych hafciarek używając Ink/Stitch"
 

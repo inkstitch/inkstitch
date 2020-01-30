@@ -2,16 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-08-13 20:36+0000\n"
-"PO-Revision-Date: 2019-10-28 21:09\n"
-"Last-Translator: Lex Neva (lexelby)\n"
+"POT-Creation-Date: 2020-01-01 21:42+0000\n"
+"PO-Revision-Date: 2020-01-30 21:57\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.8.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: crowdin.com\n"
 "X-Crowdin-Project: inkstitch\n"
 "X-Crowdin-Language: es-ES\n"
 "X-Crowdin-File: /master/messages.po\n"
@@ -20,18 +19,18 @@ msgstr ""
 #. name of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:2
 msgid "Ink/Stitch Small Font"
-msgstr ""
+msgstr "Ink/Stitch Fuente Pequeña"
 
 #. description of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:4
 #, python-format
 msgid "A font suited for small characters.  The capital em is 0.2 inches wide at 100% scale.  Can be scaled up to 300%."
-msgstr ""
+msgstr "Fuente adecuada para caracteres pequeños. La \"M\", eme mayúscula, tiene 5,08mm de ancho en la escala 100%. Se puede escalar hasta 300%."
 
 #. name of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:6
 msgid "TT Masters"
-msgstr ""
+msgstr "TT Masters"
 
 #. description of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:8
@@ -41,7 +40,7 @@ msgstr ""
 #. name of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:10
 msgid "TT Directors"
-msgstr ""
+msgstr "TT Directors"
 
 #. description of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:12
@@ -51,108 +50,108 @@ msgstr ""
 #. name of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:14
 msgid "Ink/Stitch Medium Font"
-msgstr ""
+msgstr "Ink/Stitch Fuente Tamaño Medio"
 
 #. description of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:16
 #, python-format
 msgid "A basic font suited for medium-sized characters.  The capital em is 0.6 inches wide at 100% scale.  Can be scaled down to 75% or up to 150%.  Every satin has contour underlay."
-msgstr ""
+msgstr "Una fuente básica adecuada para caracteres de tamaño medio. La \"M\", eme mayúscula, tiene un ancho de 15,24mm en una ecala de 100%. Puede escalarse entre 75% y 150%.  Los puntos de satín tienen un contorno base."
 
 #. command attached to an object
 #: lib/commands.py:20
 msgid "fill_start"
-msgstr ""
+msgstr "inicio_relleno"
 
 #: lib/commands.py:20
 msgid "Fill stitch starting position"
-msgstr ""
+msgstr "Posición de inicio de puntada de relleno"
 
 #. command attached to an object
 #: lib/commands.py:23
 msgid "fill_end"
-msgstr ""
+msgstr "fin_relleno"
 
 #: lib/commands.py:23
 msgid "Fill stitch ending position"
-msgstr ""
+msgstr "Posicion final de puntada de relleno"
 
 #. command attached to an object
 #: lib/commands.py:26
 msgid "satin_start"
-msgstr ""
+msgstr "inicio_satín"
 
 #: lib/commands.py:26
 msgid "Auto-route satin stitch starting position"
-msgstr ""
+msgstr "Posición de inicio de puntada de satín automática"
 
 #. command attached to an object
 #: lib/commands.py:29
 msgid "satin_end"
-msgstr ""
+msgstr "fin_satín"
 
 #: lib/commands.py:29
 msgid "Auto-route satin stitch ending position"
-msgstr ""
+msgstr "Posición de fin de puntada de satín automática"
 
 #. command attached to an object
 #: lib/commands.py:32
 msgid "stop"
-msgstr ""
+msgstr "parada"
 
 #: lib/commands.py:32
 msgid "Stop (pause machine) after sewing this object"
-msgstr ""
+msgstr "Parar (pausar máquina) después de coser este objeto"
 
 #. command attached to an object
 #: lib/commands.py:35
 msgid "trim"
-msgstr ""
+msgstr "recortar"
 
 #: lib/commands.py:35
 msgid "Trim thread after sewing this object"
-msgstr ""
+msgstr "Recortar hilo después de coser este objeto"
 
 #. command attached to an object
 #: lib/commands.py:38
 msgid "ignore_object"
-msgstr ""
+msgstr "ignorar_objeto"
 
 #: lib/commands.py:38
 msgid "Ignore this object (do not stitch)"
-msgstr ""
+msgstr "Ignorar este objeto (no dar puntada)"
 
 #. command attached to an object
 #: lib/commands.py:41
 msgid "satin_cut_point"
-msgstr ""
+msgstr "punto_corte_satín"
 
 #: lib/commands.py:41
 msgid "Satin cut point (use with Cut Satin Column)"
-msgstr ""
+msgstr "Punto de corte de satín (usar con Cortar Columna Satín)"
 
 #. command that affects a layer
 #: lib/commands.py:45
 msgid "ignore_layer"
-msgstr ""
+msgstr "ignorar_capa"
 
 #: lib/commands.py:45
 msgid "Ignore layer (do not stitch any objects in this layer)"
-msgstr ""
+msgstr "Ignorar capa (no coser ningún objeto en esta capa)"
 
 #. command that affects entire document
 #: lib/commands.py:48
 msgid "origin"
-msgstr ""
+msgstr "origen"
 
 #: lib/commands.py:48
 msgid "Origin for exported embroidery files"
-msgstr ""
+msgstr "Origen para archivos de bordado exportados"
 
 #. command that affects entire document
 #: lib/commands.py:51
 msgid "stop_position"
-msgstr ""
+msgstr "posición_parada"
 
 #: lib/commands.py:51
 msgid "Jump destination for Stop commands (a.k.a. \"Frame Out position\")."
@@ -161,7 +160,7 @@ msgstr ""
 #: lib/commands.py:209
 #, python-format
 msgid "Error: there is more than one %(command)s command in the document, but there can only be one.  Please remove all but one."
-msgstr ""
+msgstr "Error: hay más de un comando de %(command)s en el documento, pero sólo puede haber uno.  Por favor eliminar todos menos uno."
 
 #. This is a continuation of the previous error message, letting the user know
 #. what command we're talking about since we don't normally expose the actual
@@ -171,33 +170,33 @@ msgstr ""
 #: lib/commands.py:216
 #, python-format
 msgid "%(command)s: %(description)s"
-msgstr ""
+msgstr "%(command)s: %(description)s"
 
 #: lib/commands.py:281 lib/commands.py:385 lib/extensions/layer_commands.py:29
 msgid "Ink/Stitch Command"
-msgstr ""
+msgstr "Ink/Stich Instrucción"
 
 #. : the name of the line that connects a command to the object it applies to
 #: lib/commands.py:306
 msgid "connector"
-msgstr ""
+msgstr "conector"
 
 #. : the name of a command symbol (example: scissors icon for trim command)
 #: lib/commands.py:323
 msgid "command marker"
-msgstr ""
+msgstr "marcador de instrucción"
 
 #: lib/elements/auto_fill.py:17
 msgid "Small Fill"
-msgstr ""
+msgstr "Relleno Pequeño"
 
 #: lib/elements/auto_fill.py:18
 msgid "This fill object is so small that it would probably look better as running stitch or satin column. For very small shapes, fill stitch is not possible, and Ink/Stitch will use running stitch around the outline instead."
-msgstr ""
+msgstr "Este objeto para relleno es tan pequeño que probablemente sería mejor en puntada recta o columna de satín. Para formas muy pequeñas, no es posible usar la puntada de relleno, e Ink/Stitch usará puntada recta a lo largo de contorno."
 
 #: lib/elements/auto_fill.py:24
 msgid "AutoFill"
-msgstr ""
+msgstr "AutoRelleno"
 
 #: lib/elements/auto_fill.py:27
 msgid "Automatically routed fill stitching"
@@ -224,7 +223,7 @@ msgstr ""
 
 #: lib/elements/auto_fill.py:62
 msgid "Fill angle"
-msgstr ""
+msgstr "Ángulo de relleno"
 
 #: lib/elements/auto_fill.py:63
 msgid "default: fill angle + 90 deg"
@@ -232,7 +231,7 @@ msgstr ""
 
 #: lib/elements/auto_fill.py:78
 msgid "Row spacing"
-msgstr ""
+msgstr "Espaciado de la fila"
 
 #: lib/elements/auto_fill.py:79
 msgid "default: 3x fill row spacing"
@@ -240,7 +239,7 @@ msgstr ""
 
 #: lib/elements/auto_fill.py:89
 msgid "Max stitch length"
-msgstr ""
+msgstr "Longitud de puntada máxima"
 
 #: lib/elements/auto_fill.py:90
 msgid "default: equal to fill max stitch length"
@@ -248,7 +247,7 @@ msgstr ""
 
 #: lib/elements/auto_fill.py:99
 msgid "Inset"
-msgstr ""
+msgstr "Recuadro"
 
 #: lib/elements/auto_fill.py:100
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
@@ -256,7 +255,7 @@ msgstr ""
 
 #: lib/elements/auto_fill.py:111 lib/elements/fill.py:72
 msgid "Skip last stitch in each row"
-msgstr ""
+msgstr "Saltar última puntada de cada fila"
 
 #: lib/elements/auto_fill.py:112 lib/elements/fill.py:73
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
@@ -296,14 +295,14 @@ msgstr ""
 #: lib/elements/element.py:234
 #, python-format
 msgid "%(id)s has more than one command of type '%(command)s' linked to it"
-msgstr ""
+msgstr "%(id)s tiene más de un comando de tipo '%(command)s' ligado a él"
 
 #. used when showing an error message to the user such as
 #. "Some Path (path1234): error: satin column: One or more of the rungs doesn't
 #. intersect both rails."
 #: lib/elements/element.py:288
 msgid "error:"
-msgstr ""
+msgstr "error:"
 
 #: lib/elements/fill.py:17
 msgid "Unconnected"
@@ -1004,7 +1003,7 @@ msgstr ""
 
 #. low-level file error.  %(error)s is (hopefully?) translated by
 #. the user's system automatically.
-#: lib/output.py:105
+#: lib/output.py:94
 #, python-format
 msgid "Error writing to %(path)s: %(error)s"
 msgstr ""
@@ -1071,48 +1070,48 @@ msgstr ""
 #: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
 #: print/templates/operator_detailedview.html:68
 msgid "yes"
-msgstr ""
+msgstr "sí"
 
 #: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
 #: print/templates/operator_detailedview.html:68
 msgid "no"
-msgstr ""
+msgstr "no"
 
 #: print/templates/color_swatch.html:40
 #: print/templates/operator_detailedview.html:57
 #: print/templates/print_detail.html:6
 msgid "Enter thread name..."
-msgstr ""
+msgstr "Introduzca nombre del hilo..."
 
 #: print/templates/custom-page.html:22 print/templates/ui.html:91
 msgid "Enter URL"
-msgstr ""
+msgstr "Introduzca URL"
 
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
 #: print/templates/custom-page.html:33 print/templates/ui.html:92
 #: print/templates/ui.html:96 print/templates/ui.html:102
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: print/templates/custom-page.html:26 print/templates/ui.html:95
 msgid "Enter E-Mail"
-msgstr ""
+msgstr "Introduzca correo electrónico"
 
 #: print/templates/custom-page.html:29 print/templates/custom-page.html:36
 msgid "Custom Information Sheet"
-msgstr ""
+msgstr "Hoja de Información personalizada"
 
 #: print/templates/custom-page.html:31 print/templates/ui.html:100
 msgid "This will reset your custom text to the default."
-msgstr ""
+msgstr "Esto cambiará tu texto personalizada por el texto por defecto."
 
 #: print/templates/custom-page.html:32 print/templates/ui.html:101
 msgid "All changes will be lost."
-msgstr ""
+msgstr "Se perderán todos los cambios."
 
 #: print/templates/footer.html:2
 msgid "Page"
-msgstr ""
+msgstr "Página"
 
 #: print/templates/footer.html:3 print/templates/ui.html:98
 #: print/templates/ui.html:105
@@ -1121,27 +1120,27 @@ msgstr ""
 
 #: print/templates/headline.html:5
 msgid "Click to choose another logo"
-msgstr ""
+msgstr "Haz click para elegir otro logo"
 
 #: print/templates/headline.html:10
 msgid "Enter job title..."
-msgstr ""
+msgstr "Introduzca título profesional..."
 
 #: print/templates/headline.html:11
 msgid "CLIENT"
-msgstr ""
+msgstr "CLIENTE"
 
 #: print/templates/headline.html:11
 msgid "Enter client name..."
-msgstr ""
+msgstr "Introduzca nombre de cliente..."
 
 #: print/templates/headline.html:12
 msgid "PURCHASE ORDER #:"
-msgstr ""
+msgstr "NÚMERO DE COMPRA #:"
 
 #: print/templates/headline.html:12
 msgid "Enter purchase order number..."
-msgstr ""
+msgstr "Introduzca número de orden de compra..."
 
 #: print/templates/headline.html:15
 #, python-format
@@ -1150,115 +1149,115 @@ msgstr ""
 
 #: print/templates/operator_detailedview.html:10
 msgid "Thread Consumption"
-msgstr ""
+msgstr "Consumo de hilo"
 
 #: print/templates/operator_detailedview.html:11
 msgid "Stops and Trims"
-msgstr ""
+msgstr "Paradas y Cortes"
 
 #: print/templates/operator_detailedview.html:12
 msgid "Notes"
-msgstr ""
+msgstr "Notas"
 
 #: print/templates/operator_detailedview.html:24
 #: print/templates/operator_overview.html:6
 #: print/templates/print_overview.html:6
 msgid "Unique Colors"
-msgstr ""
+msgstr "Colores únicos"
 
 #: print/templates/operator_detailedview.html:25
 #: print/templates/operator_overview.html:7
 #: print/templates/print_overview.html:7
 msgid "Color Blocks"
-msgstr ""
+msgstr "Bloques de color"
 
 #: print/templates/operator_detailedview.html:28
 #: print/templates/operator_overview.html:14
 #: print/templates/print_overview.html:14
 msgid "Design box size"
-msgstr ""
+msgstr "Tamaño de la caja de diseño"
 
 #: print/templates/operator_detailedview.html:29
 #: print/templates/operator_overview.html:16
 #: print/templates/print_overview.html:16
 msgid "Total thread used"
-msgstr ""
+msgstr "Uso total de hilo"
 
 #: print/templates/operator_detailedview.html:30
 #: print/templates/operator_overview.html:15
 #: print/templates/print_overview.html:15
 msgid "Total stitch count"
-msgstr ""
+msgstr "Cuenta total de puntos"
 
 #: print/templates/operator_detailedview.html:34
 #: print/templates/operator_overview.html:8
 #: print/templates/print_overview.html:8
 msgid "Total stops"
-msgstr ""
+msgstr "Total de paradas"
 
 #: print/templates/operator_detailedview.html:35
 #: print/templates/operator_overview.html:9
 #: print/templates/print_overview.html:9
 msgid "Total trims"
-msgstr ""
+msgstr "Total de cortes"
 
 #: print/templates/operator_detailedview.html:62
 msgid "thread used"
-msgstr ""
+msgstr "hilo usado"
 
 #: print/templates/operator_detailedview.html:64
 msgid "estimated time"
-msgstr ""
+msgstr "tiempo estimado"
 
 #: print/templates/operator_detailedview.html:67
 msgid "trims"
-msgstr ""
+msgstr "cortes"
 
 #: print/templates/operator_detailedview.html:72
 msgid "Enter operator notes..."
-msgstr ""
+msgstr "Intorduzca notas del operador..."
 
 #: print/templates/operator_overview.html:21
 #: print/templates/print_overview.html:21
 msgid "Job estimated time"
-msgstr ""
+msgstr "Tiempo estimado para el trabajo"
 
 #: print/templates/operator_overview.html:28
 #: print/templates/print_detail.html:18 print/templates/print_overview.html:28
 msgid "Ctrl + Scroll to Zoom"
-msgstr ""
+msgstr "Ctrl + Scroll para hacer Zoom"
 
 #: print/templates/print_detail.html:6
 msgid "COLOR"
-msgstr ""
+msgstr "COLOR"
 
 #: print/templates/print_detail.html:11
 msgid "Estimated time"
-msgstr ""
+msgstr "Tiempo estimado"
 
 #: print/templates/print_overview.html:42
 msgid "Client Signature"
-msgstr ""
+msgstr "Firma de cliente"
 
 #: print/templates/ui.html:2
 msgid "Ink/Stitch Print Preview"
-msgstr ""
+msgstr "Ink/Stitch Vista Previa de Impresión"
 
 #: print/templates/ui.html:4
 msgid "Print"
-msgstr ""
+msgstr "Imprimir"
 
 #: print/templates/ui.html:5
 msgid "Save PDF"
-msgstr ""
+msgstr "Guardad PDF"
 
 #: print/templates/ui.html:6 print/templates/ui.html:16
 msgid "Settings"
-msgstr ""
+msgstr "Ajustes"
 
 #: print/templates/ui.html:7
 msgid "Close"
-msgstr ""
+msgstr "Cerrar"
 
 #: print/templates/ui.html:10
 msgid "⚠ lost connection to Ink/Stitch"
@@ -1497,82 +1496,82 @@ msgstr ""
 #. description for pyembroidery file format: dat
 #: pyembroidery-format-descriptions.py:32
 msgid "Sunstar or Barudan Embroidery Format"
-msgstr ""
+msgstr "Formato de bordado Sunstar o Barudan"
 
 #. description for pyembroidery file format: dsb
 #: pyembroidery-format-descriptions.py:34
 msgid "Tajima(Barudan) Embroidery Format"
-msgstr ""
+msgstr "Formato de bordado Tajima (Barudan)"
 
 #. description for pyembroidery file format: dsz
 #: pyembroidery-format-descriptions.py:36
 msgid "ZSK USA Embroidery Format"
-msgstr ""
+msgstr "Formato de bordado ZSK USA"
 
 #. description for pyembroidery file format: emd
 #: pyembroidery-format-descriptions.py:38
 msgid "Elna Embroidery Format"
-msgstr ""
+msgstr "Formato de bordado Elna"
 
 #. description for pyembroidery file format: exy
 #: pyembroidery-format-descriptions.py:40
 msgid "Eltac Embroidery Format"
-msgstr ""
+msgstr "Formato de bordado Eltac"
 
 #. description for pyembroidery file format: fxy
 #: pyembroidery-format-descriptions.py:42
 msgid "Fortron Embroidery Format"
-msgstr ""
+msgstr "Formato de bordado Fortron"
 
 #. description for pyembroidery file format: gt
 #: pyembroidery-format-descriptions.py:44
 msgid "Gold Thread Embroidery Format"
-msgstr ""
+msgstr "Formato de bordado Gold Thread"
 
 #. description for pyembroidery file format: inb
 #: pyembroidery-format-descriptions.py:46
 msgid "Inbro Embroidery Format"
-msgstr ""
+msgstr "Formato de bordado Inbro"
 
 #. description for pyembroidery file format: tap
 #: pyembroidery-format-descriptions.py:52
 msgid "Happy Embroidery Format"
-msgstr ""
+msgstr "Formato de bordado Happy"
 
 #. description for pyembroidery file format: stx
 #: pyembroidery-format-descriptions.py:54
 msgid "Data Stitch Embroidery Format"
-msgstr ""
+msgstr "Formato de bordado Data Stitch"
 
 #. description for pyembroidery file format: new
 #: pyembroidery-format-descriptions.py:60
 msgid "Ameco Embroidery Format"
-msgstr ""
+msgstr "Formato de bordado Ameco"
 
 #. description for pyembroidery file format: mit
 #: pyembroidery-format-descriptions.py:64
 msgid "Mitsubishi Embroidery Format"
-msgstr ""
+msgstr "Formato de bordado Mitsubishi"
 
 #. description for pyembroidery file format: stc
 #: pyembroidery-format-descriptions.py:76
 msgid "Gunold Embroidery Format"
-msgstr ""
+msgstr "Formato de bordado Gunold"
 
 #. description for pyembroidery file format: zxy
 #: pyembroidery-format-descriptions.py:78
 msgid "ZSK TC Embroidery Format"
-msgstr ""
+msgstr "Formato de bordado ZSK TC"
 
 #. description for pyembroidery file format: pmv
 #: pyembroidery-format-descriptions.py:80
 msgid "Brother Stitch Format"
-msgstr ""
+msgstr "Formato de puntada Brother"
 
 #. description for pyembroidery file format: txt
 #: pyembroidery-format-descriptions.py:82
 msgid "G-code Format"
-msgstr ""
+msgstr "Formato G-code"
 
 #: templates/auto_satin.inx:3
 msgid "Auto-Route Satin Columns"
@@ -1781,5 +1780,5 @@ msgstr ""
 
 #: templates/zip.inx:11
 msgid "Create a ZIP with multiple embroidery file formats using Ink/Stitch"
-msgstr ""
+msgstr "Crear un archivo ZIP con múltiples formatos de archivos de bordado usando Ink/Stitch"
 

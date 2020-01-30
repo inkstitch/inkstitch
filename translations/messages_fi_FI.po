@@ -2,16 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-08-13 20:36+0000\n"
-"PO-Revision-Date: 2019-10-28 21:08\n"
-"Last-Translator: Lex Neva (lexelby)\n"
+"POT-Creation-Date: 2020-01-01 21:42+0000\n"
+"PO-Revision-Date: 2020-01-30 21:57\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Finnish\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.8.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: crowdin.com\n"
 "X-Crowdin-Project: inkstitch\n"
 "X-Crowdin-Language: fi\n"
 "X-Crowdin-File: /master/messages.po\n"
@@ -62,7 +61,7 @@ msgstr ""
 #. command attached to an object
 #: lib/commands.py:20
 msgid "fill_start"
-msgstr ""
+msgstr "täyttö_aloitus"
 
 #: lib/commands.py:20
 msgid "Fill stitch starting position"
@@ -71,7 +70,7 @@ msgstr "Täyttötikki aloitus paikka"
 #. command attached to an object
 #: lib/commands.py:23
 msgid "fill_end"
-msgstr ""
+msgstr "täytön_lopetus"
 
 #: lib/commands.py:23
 msgid "Fill stitch ending position"
@@ -80,7 +79,7 @@ msgstr "Täyttötikki lopetus paikka"
 #. command attached to an object
 #: lib/commands.py:26
 msgid "satin_start"
-msgstr ""
+msgstr "satiinin_aloitus"
 
 #: lib/commands.py:26
 msgid "Auto-route satin stitch starting position"
@@ -89,7 +88,7 @@ msgstr "Automaattisen satiinin reitityksen aloitus paikka"
 #. command attached to an object
 #: lib/commands.py:29
 msgid "satin_end"
-msgstr ""
+msgstr "satiinin_lopetus"
 
 #: lib/commands.py:29
 msgid "Auto-route satin stitch ending position"
@@ -116,7 +115,7 @@ msgstr "Katkaise objektin jälkeen"
 #. command attached to an object
 #: lib/commands.py:38
 msgid "ignore_object"
-msgstr ""
+msgstr "ohita_objekti"
 
 #: lib/commands.py:38
 msgid "Ignore this object (do not stitch)"
@@ -125,16 +124,16 @@ msgstr "Ohita tämä objekti (ei tikata)"
 #. command attached to an object
 #: lib/commands.py:41
 msgid "satin_cut_point"
-msgstr ""
+msgstr "satiinin_leikkaus_piste"
 
 #: lib/commands.py:41
 msgid "Satin cut point (use with Cut Satin Column)"
-msgstr ""
+msgstr "Satiinin leikkauspiste (käytä satiinin leikkaus työkalua)"
 
 #. command that affects a layer
 #: lib/commands.py:45
 msgid "ignore_layer"
-msgstr ""
+msgstr "ohita_taso"
 
 #: lib/commands.py:45
 msgid "Ignore layer (do not stitch any objects in this layer)"
@@ -152,7 +151,7 @@ msgstr "Viedyn brodeeraus tiedoston origo"
 #. command that affects entire document
 #: lib/commands.py:51
 msgid "stop_position"
-msgstr ""
+msgstr "pysäytys_paikka"
 
 #: lib/commands.py:51
 msgid "Jump destination for Stop commands (a.k.a. \"Frame Out position\")."
@@ -1005,7 +1004,7 @@ msgstr "Generoi INX tiedostot"
 
 #. low-level file error.  %(error)s is (hopefully?) translated by
 #. the user's system automatically.
-#: lib/output.py:105
+#: lib/output.py:94
 #, python-format
 msgid "Error writing to %(path)s: %(error)s"
 msgstr "Virhe kirjoitettaessa %(path)s: %(error)s"
@@ -1171,7 +1170,7 @@ msgstr "Uniikkeja värejä"
 #: print/templates/operator_overview.html:7
 #: print/templates/print_overview.html:7
 msgid "Color Blocks"
-msgstr ""
+msgstr "Väriä"
 
 #: print/templates/operator_detailedview.html:28
 #: print/templates/operator_overview.html:14

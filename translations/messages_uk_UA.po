@@ -2,16 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-08-13 20:36+0000\n"
-"PO-Revision-Date: 2019-10-28 21:09\n"
-"Last-Translator: Lex Neva (lexelby)\n"
+"POT-Creation-Date: 2020-01-01 21:42+0000\n"
+"PO-Revision-Date: 2020-01-30 21:57\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Ukrainian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.8.0\n"
 "Plural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\n"
-"X-Generator: crowdin.com\n"
 "X-Crowdin-Project: inkstitch\n"
 "X-Crowdin-Language: uk\n"
 "X-Crowdin-File: /master/messages.po\n"
@@ -143,11 +142,11 @@ msgstr ""
 #. command that affects entire document
 #: lib/commands.py:48
 msgid "origin"
-msgstr ""
+msgstr "початок координат"
 
 #: lib/commands.py:48
 msgid "Origin for exported embroidery files"
-msgstr ""
+msgstr "Початок координат для експорту файлів вишивки"
 
 #. command that affects entire document
 #: lib/commands.py:51
@@ -156,12 +155,12 @@ msgstr ""
 
 #: lib/commands.py:51
 msgid "Jump destination for Stop commands (a.k.a. \"Frame Out position\")."
-msgstr ""
+msgstr "Перейти в положення зупинки (\"Положення поза рамкою\")."
 
 #: lib/commands.py:209
 #, python-format
 msgid "Error: there is more than one %(command)s command in the document, but there can only be one.  Please remove all but one."
-msgstr ""
+msgstr "Помилка: у документі є більше ніж одна команда %(command)s, але може бути лише одна. Видаліть усі, крім однієї."
 
 #. This is a continuation of the previous error message, letting the user know
 #. what command we're talking about since we don't normally expose the actual
@@ -171,7 +170,7 @@ msgstr ""
 #: lib/commands.py:216
 #, python-format
 msgid "%(command)s: %(description)s"
-msgstr ""
+msgstr "%(command)s: %(description)s"
 
 #: lib/commands.py:281 lib/commands.py:385 lib/extensions/layer_commands.py:29
 msgid "Ink/Stitch Command"
@@ -248,7 +247,7 @@ msgstr "типовий: дорівнює максимальній довжині
 
 #: lib/elements/auto_fill.py:99
 msgid "Inset"
-msgstr ""
+msgstr "Вставки"
 
 #: lib/elements/auto_fill.py:100
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
@@ -256,7 +255,7 @@ msgstr "Перед тим, як робити підкладку, стисніт�
 
 #: lib/elements/auto_fill.py:111 lib/elements/fill.py:72
 msgid "Skip last stitch in each row"
-msgstr ""
+msgstr "Пропустіть останній стібок у кожному ряду"
 
 #: lib/elements/auto_fill.py:112 lib/elements/fill.py:73
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
@@ -264,7 +263,7 @@ msgstr "Останній стібок у кожному ряду досить б
 
 #: lib/elements/auto_fill.py:122
 msgid "Expand"
-msgstr ""
+msgstr "Розширити"
 
 #: lib/elements/auto_fill.py:123
 msgid "Expand the shape before fill stitching, to compensate for gaps between shapes."
@@ -303,11 +302,11 @@ msgstr ""
 #. intersect both rails."
 #: lib/elements/element.py:288
 msgid "error:"
-msgstr ""
+msgstr "помилка:"
 
 #: lib/elements/fill.py:17
 msgid "Unconnected"
-msgstr ""
+msgstr "Нез'єднані"
 
 #: lib/elements/fill.py:18
 msgid "Fill: This object is made up of unconnected shapes.  This is not allowed because Ink/Stitch doesn't know what order to stitch them in.  Please break this object up into separate shapes."
@@ -347,7 +346,7 @@ msgstr "Автозаповнення є методом за замовчуван
 
 #: lib/elements/fill.py:55
 msgid "Angle of lines of stitches"
-msgstr ""
+msgstr "Кут стібків"
 
 #: lib/elements/fill.py:56
 msgid "The angle increases in a counter-clockwise direction.  0 is horizontal.  Negative angles are allowed."
@@ -407,11 +406,11 @@ msgstr ""
 
 #: lib/elements/satin_column.py:16
 msgid "Satin column has fill"
-msgstr ""
+msgstr "Атласні стовпці мають заповнення"
 
 #: lib/elements/satin_column.py:17
 msgid "Satin column: Object has a fill (but should not)"
-msgstr ""
+msgstr "Атласні стовпці: Об’єкт має заповнення (але не повинен)"
 
 #: lib/elements/satin_column.py:20
 msgid "* Open the Fill and Stroke panel"
@@ -499,7 +498,7 @@ msgstr ""
 
 #: lib/elements/satin_column.py:73
 msgid "\"E\" stitch"
-msgstr ""
+msgstr "\"E\" стібок"
 
 #: lib/elements/satin_column.py:83 lib/elements/stroke.py:56
 msgid "Zig-zag spacing (peak-to-peak)"
@@ -511,7 +510,7 @@ msgstr ""
 
 #: lib/elements/satin_column.py:95
 msgid "Pull compensation"
-msgstr ""
+msgstr "Компенсації розтягування"
 
 #: lib/elements/satin_column.py:96
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape.  This setting expands each pair of needle penetrations outward from the center of the satin column."
@@ -573,7 +572,7 @@ msgstr ""
 
 #: lib/elements/stroke.py:18
 msgid "Satin stitch along paths"
-msgstr ""
+msgstr "Атласна вишивка вздовж шляхів"
 
 #: lib/elements/stroke.py:32
 msgid "Running stitch length"
@@ -585,7 +584,7 @@ msgstr ""
 
 #: lib/elements/stroke.py:44
 msgid "Bean stitch number of repeats"
-msgstr ""
+msgstr "Бобова вишивка кількість повторень"
 
 #: lib/elements/stroke.py:45
 msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.  Only applies to running stitch."
@@ -908,7 +907,7 @@ msgstr ""
 
 #: lib/gui/simulator.py:20
 msgid "JUMP"
-msgstr ""
+msgstr "СТРИБОК"
 
 #: lib/gui/simulator.py:20
 msgid "TRIM"
@@ -1004,7 +1003,7 @@ msgstr ""
 
 #. low-level file error.  %(error)s is (hopefully?) translated by
 #. the user's system automatically.
-#: lib/output.py:105
+#: lib/output.py:94
 #, python-format
 msgid "Error writing to %(path)s: %(error)s"
 msgstr ""
@@ -1580,7 +1579,7 @@ msgstr ""
 
 #: templates/auto_satin.inx:7
 msgid "Trim jump stitches"
-msgstr ""
+msgstr "Обрізати стрибкові стібки"
 
 #: templates/auto_satin.inx:8
 msgid "Preserve order of satin columns"
@@ -1609,7 +1608,7 @@ msgstr ""
 
 #: templates/embroider.inx:7
 msgid "Jump stitches smaller than this will be treated as normal stitches."
-msgstr ""
+msgstr "Стрибкові стібки менші за це, трактуватимуться як звичайні стібки."
 
 #: templates/embroider.inx:8
 msgid "Hide other layers"
