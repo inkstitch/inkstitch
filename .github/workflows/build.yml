@@ -28,9 +28,6 @@ jobs:
 
           sudo apt-get install gettext
 
-          # for shapely
-          sudo apt-get install libgeos-dev
-
           # for wxPython
           sudo apt-get install glib-networking libsdl1.2-dev
 
