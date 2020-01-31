@@ -1,18 +1,18 @@
 # -*- coding: UTF-8 -*-
 
-from itertools import groupby, chain
 import math
+from itertools import chain, groupby
 
 import networkx
 from shapely import geometry as shgeo
 from shapely.ops import snap
 from shapely.strtree import STRtree
 
+from .fill import intersect_region_with_grating, stitch_row
+from .running_stitch import running_stitch
 from ..debug import debug
 from ..svg import PIXELS_PER_MM
 from ..utils.geometry import Point as InkstitchPoint, line_string_to_point_list
-from .fill import intersect_region_with_grating, stitch_row
-from .running_stitch import running_stitch
 
 
 class PathEdge(object):
@@ -52,7 +52,6 @@ def auto_fill(shape,
               starting_point,
               ending_point=None,
               underpath=True):
-
     fill_stitch_graph = build_fill_stitch_graph(shape, angle, row_spacing, end_row_spacing)
 
     if not graph_is_valid(fill_stitch_graph, shape, max_stitch_length):
@@ -159,6 +158,27 @@ def tag_nodes_with_outline_and_projection(graph, shape, nodes):
         graph.add_node(node, outline=outline_index, projection=outline_projection)
 
 
+def add_boundary_travel_nodes(graph, shape):
+    for outline_index, outline in enumerate(shape.boundary):
+        prev = None
+        for point in outline.coords:
+            point = shgeo.Point(point)
+            if prev is not None:
+                # Subdivide long straight line segments.  Otherwise we may not
+                # have a node near the user's chosen starting or ending point
+                length = point.distance(prev)
+                segment = shgeo.LineString((prev, point))
+                if length > 1:
+                    # Just plot a point every pixel, that should be plenty of
+                    # resolution.  A pixel is around a quarter of a millimeter.
+                    for i in xrange(1, int(length)):
+                        subpoint = segment.interpolate(i)
+                        graph.add_node((subpoint.x, subpoint.y), projection=outline.project(subpoint), outline=outline_index)
+
+            graph.add_node((point.x, point.y), projection=outline.project(point), outline=outline_index)
+            prev = point
+
+
 def add_edges_between_outline_nodes(graph, duplicate_every_other=False):
     """Add edges around the outlines of the graph, connecting sequential nodes.
 
@@ -240,6 +260,8 @@ def build_travel_graph(fill_stitch_graph, shape, fill_stitch_angle, underpath):
         # This will ensure that a path traveling inside the shape can reach its
         # target on the outline, which will be one of the points added above.
         tag_nodes_with_outline_and_projection(graph, shape, boundary_points)
+    else:
+        add_boundary_travel_nodes(graph, shape)
 
     add_edges_between_outline_nodes(graph)
 
