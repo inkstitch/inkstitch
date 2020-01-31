@@ -17,10 +17,16 @@ mkdir artifacts
 
 for d in inx/*; do
 	lang=${d%.*}
-	lang=${lang#*/}	
+	lang=${lang#*/}
 	cp $d/*.inx dist
 
     cd dist
-    python -m zipfile -c ../artifacts/inkstitch-${VERSION}-${OS}-${lang}.zip *
-	cd ..
+    if [ "$BUILD" = "windows" ]; then
+      # The python zipfile command line utility can't handle directories
+      # containing files with UTF-8 names on Windows, so we use 7-zip instead.
+      7z a ../artifacts/inkstitch-${VERSION}-${OS}-${lang}.zip *
+    else
+      python -m zipfile -c ../artifacts/inkstitch-${VERSION}-${OS}-${lang}.zip *
+    fi
+    cd ..
 done
