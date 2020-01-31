@@ -586,7 +586,7 @@ class SatinColumn(EmbroideryElement):
                 distance_remaining -= segment_length
                 pos = segment_end
 
-    def plot_points_on_rails(self, spacing, offset, compensation=True):
+    def plot_points_on_rails(self, spacing, offset):
         # Take a section from each rail in turn, and plot out an equal number
         # of points on both rails.  Return the points plotted. The points will
         # be contracted or expanded by offset using self.offset_points().
@@ -670,8 +670,7 @@ class SatinColumn(EmbroideryElement):
         # "contour walk" underlay: do stitches up one side and down the
         # other.
         forward, back = self.plot_points_on_rails(self.contour_underlay_stitch_length,
-                                                  -self.contour_underlay_inset,
-                                                  compensation=False)
+                                                  -self.contour_underlay_inset)
         return Patch(color=self.color, stitches=(forward + list(reversed(back))))
 
     def do_center_walk(self):
@@ -680,8 +679,7 @@ class SatinColumn(EmbroideryElement):
 
         # Do it like contour underlay, but inset all the way to the center.
         forward, back = self.plot_points_on_rails(self.center_walk_underlay_stitch_length,
-                                                  -100000,
-                                                  compensation=False)
+                                                  -100000)
         return Patch(color=self.color, stitches=(forward + list(reversed(back))))
 
     def do_zigzag_underlay(self):
