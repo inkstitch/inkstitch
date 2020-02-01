@@ -52,7 +52,7 @@ def auto_fill(shape,
               starting_point,
               ending_point=None,
               underpath=True):
-    fill_stitch_graph = build_fill_stitch_graph(shape, angle, row_spacing, end_row_spacing)
+    fill_stitch_graph = build_fill_stitch_graph(shape, angle, row_spacing, end_row_spacing, starting_point, ending_point)
 
     if not graph_is_valid(fill_stitch_graph, shape, max_stitch_length):
         return fallback(shape, running_stitch_length)
@@ -94,7 +94,7 @@ def project(shape, coords, outline_index):
 
 
 @debug.time
-def build_fill_stitch_graph(shape, angle, row_spacing, end_row_spacing):
+def build_fill_stitch_graph(shape, angle, row_spacing, end_row_spacing, starting_point=None, ending_point=None):
     """build a graph representation of the grating segments
 
     This function builds a specialized graph (as in graph theory) that will
@@ -145,9 +145,33 @@ def build_fill_stitch_graph(shape, angle, row_spacing, end_row_spacing):
     tag_nodes_with_outline_and_projection(graph, shape, graph.nodes())
     add_edges_between_outline_nodes(graph, duplicate_every_other=True)
 
+    if starting_point:
+        insert_node(graph, shape, starting_point)
+
+    if ending_point:
+        insert_node(graph, shape, ending_point)
+
     debug.log_graph(graph, "graph")
 
     return graph
+
+
+def insert_node(graph, shape, node):
+    """Add node to graph, splitting one of the outline edges"""
+    node = tuple(node)
+    point = shgeo.Point(node)
+
+    edges = []
+    for start, end, key, data in graph.edges(keys=True, data=True):
+        if key == "outline":
+            edges.append(((start, end), data))
+
+    edge, data = min(edges, key=lambda (edge, data): shgeo.LineString(edge).distance(point))
+
+    graph.remove_edge(*edge, key="outline")
+    graph.add_edge(edge[0], node, key="outline", **data)
+    graph.add_edge(node, edge[1], key="outline", **data)
+    tag_nodes_with_outline_and_projection(graph, shape, nodes=[node])
 
 
 def tag_nodes_with_outline_and_projection(graph, shape, nodes):
