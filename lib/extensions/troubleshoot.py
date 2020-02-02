@@ -3,7 +3,6 @@ import textwrap
 import inkex
 
 from ..commands import add_layer_commands
-from ..elements.svg_objects import SVGObjects
 from ..elements.validation import (ObjectTypeWarning, ValidationError,
                                    ValidationWarning)
 from ..i18n import _
@@ -22,18 +21,16 @@ class Troubleshoot(InkstitchExtension):
 
         problem_types = {'error': set(), 'warning': set(), 'type_warning': set()}
 
-        ink_objects = SVGObjects(self.document.getroot(), self.selected)
-        for problem in ink_objects.validation_warnings():
-            problem_types['type_warning'].add(type(problem))
-            self.insert_pointer(problem)
-
         if self.get_elements(False):
             for element in self.elements:
                 for problem in element.validation_errors():
                     problem_types['error'].add(type(problem))
                     self.insert_pointer(problem)
                 for problem in element.validation_warnings():
-                    problem_types['warning'].add(type(problem))
+                    if isinstance(problem, ObjectTypeWarning):
+                        problem_types['type_warning'].add(type(problem))
+                    else:
+                        problem_types['warning'].add(type(problem))
                     self.insert_pointer(problem)
 
         if any(problem_types.values()):
