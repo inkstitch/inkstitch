@@ -35,9 +35,9 @@ class Polyline(EmbroideryElement):
     element_name = "Polyline"
 
     @property
-    @param('satin_column', _('Satin stitch along paths'), type='toggle', inverse=True)
+    @param('polyline', _('Manual stitch along path'), type='toggle', inverse=True)
     def satin_column(self):
-        return self.get_boolean_param("satin_column")
+        return self.get_boolean_param("polyline")
 
     @property
     def points(self):
