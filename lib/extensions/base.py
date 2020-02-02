@@ -130,8 +130,7 @@ class InkstitchExtension(inkex.Effect):
         else:
             inkex.errormsg(_("There are no objects in the entire document that Ink/Stitch knows how to work with.") + "\n")
 
-        inkex.errormsg(_("Tip 1: Check if the object has the correct color settings applied to it (Object -> Fill and Stroke...).") + "\n")
-        inkex.errormsg(_("Tip 2: Select some objects and use Path -> Object to Path to convert them to paths.") + "\n")
+        inkex.errormsg(_("Tip: Select some objects and use Path -> Object to Path to convert them to paths.") + "\n")
 
     def descendants(self, node, selected=False):
         nodes = []

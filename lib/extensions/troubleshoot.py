@@ -4,7 +4,7 @@ import inkex
 
 from ..commands import add_layer_commands
 from ..elements.svg_objects import SVGObjects
-from ..elements.validation import (ValidationError, ValidationTypeWarning,
+from ..elements.validation import (ObjectTypeWarning, ValidationError,
                                    ValidationWarning)
 from ..i18n import _
 from ..svg import get_correction_transform
@@ -57,7 +57,7 @@ class Troubleshoot(InkstitchExtension):
         elif isinstance(problem, ValidationError):
             fill_color = "#ff0000"
             layer = self.error_group
-        elif isinstance(problem, ValidationTypeWarning):
+        elif isinstance(problem, ObjectTypeWarning):
             fill_color = "#ff9900"
             layer = self.type_warning_group
 

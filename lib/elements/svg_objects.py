@@ -6,10 +6,10 @@ from ..svg import get_node_transform
 from ..svg.svg import find_elements
 from ..svg.tags import (EMBROIDERABLE_TAGS, SVG_CIRCLE_TAG, SVG_ELLIPSE_TAG,
                         SVG_IMAGE_TAG, SVG_RECT_TAG, SVG_TEXT_TAG)
-from .validation import ValidationTypeWarning
+from .validation import ObjectTypeWarning
 
 
-class TextTypeWarning(ValidationTypeWarning):
+class TextTypeWarning(ObjectTypeWarning):
     name = _("Text")
     description = _("Ink/Stitch cannot work with objects like text.")
     steps_to_solve = [
@@ -18,7 +18,7 @@ class TextTypeWarning(ValidationTypeWarning):
     ]
 
 
-class ImageTypeWarning(ValidationTypeWarning):
+class ImageTypeWarning(ObjectTypeWarning):
     name = _("Image")
     description = _("Ink/Stitch can't work with objects like images.")
     steps_to_solve = [
@@ -28,7 +28,7 @@ class ImageTypeWarning(ValidationTypeWarning):
     ]
 
 
-class NoColorWarning(ValidationTypeWarning):
+class NoColorWarning(ObjectTypeWarning):
     name = _("No color settings")
     description = _("There is no color information for this object. "
                     "Ink/Stitch doesn't know, wether it was meant to be a stroke or a fill object. "

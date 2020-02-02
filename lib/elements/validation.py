@@ -41,7 +41,7 @@ class ValidationWarning(ValidationMessage):
     pass
 
 
-class ValidationTypeWarning(ValidationMessage):
+class ObjectTypeWarning(ValidationMessage):
     """A shape is not a path and will not be embroidered.
 
     Ink/Stitch only works with paths and ignores everything else.
