@@ -12,7 +12,7 @@ from .stroke import Stroke
 from .text import TextObject
 
 
-def node_to_elements(node):
+def node_to_elements(node):  # noqa: C901
     if node.tag == SVG_POLYLINE_TAG:
         return [Polyline(node)]
 
