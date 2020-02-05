@@ -237,6 +237,11 @@ def is_command(node):
     return CONNECTION_START in node.attrib or CONNECTION_END in node.attrib
 
 
+def is_command_symbol(node):
+    symbol = node.get(XLINK_HREF)[11:]
+    return symbol in OBJECT_COMMANDS or symbol in GLOBAL_COMMANDS
+
+
 @cache
 def symbols_path():
     return os.path.join(get_bundled_dir("symbols"), "inkstitch.svg")

@@ -58,8 +58,8 @@ class Troubleshoot(InkstitchExtension):
             fill_color = "#ff9900"
             layer = self.type_warning_group
 
-        pointer_style = "stroke:#ffffff;stroke-width:0.2;fill:%s;" % (fill_color)
-        text_style = "fill:%s;stroke:#ffffff;stroke-width:0.2;font-size:8px;text-align:center;text-anchor:middle" % (fill_color)
+        pointer_style = "stroke:#000000;stroke-width:0.2;fill:%s;" % (fill_color)
+        text_style = "fill:%s;stroke:#000000;stroke-width:0.2;font-size:8px;text-align:center;text-anchor:middle" % (fill_color)
 
         path = inkex.etree.Element(
             SVG_PATH_TAG,
