@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-01-01 21:42+0000\n"
-"PO-Revision-Date: 2020-01-30 21:57\n"
+"POT-Creation-Date: 2020-02-02 21:59+0000\n"
+"PO-Revision-Date: 2020-02-05 22:00\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: English\n"
 "MIME-Version: 1.0\n"
@@ -1026,7 +1026,7 @@ msgstr ""
 msgid "AutoSatin Running Stitch %d"
 msgstr ""
 
-#: lib/svg/rendering.py:231
+#: lib/svg/rendering.py:226
 msgid "Stitch Plan"
 msgstr ""
 
@@ -1764,6 +1764,34 @@ msgstr ""
 
 #: templates/print.inx:3
 msgid "Print / Realistic Preview"
+msgstr ""
+
+#: templates/remove_embroidery_settings.inx:3
+msgid "Remove embroidery settings"
+msgstr ""
+
+#: templates/remove_embroidery_settings.inx:7
+msgid "Use this extension to remove the information Ink/Stitch has stored in your document.  This can be especially useful if you copy and paste objects from an embroidery design into another document."
+msgstr ""
+
+#: templates/remove_embroidery_settings.inx:8
+msgid "Remove Params"
+msgstr ""
+
+#: templates/remove_embroidery_settings.inx:9
+msgid "Removes params from selected objects or all objects if nothing is selected."
+msgstr ""
+
+#: templates/remove_embroidery_settings.inx:10
+msgid "Remove Commands"
+msgstr ""
+
+#: templates/remove_embroidery_settings.inx:11
+msgid "Removes visual commands from selected objects or all objects if nothing is selected."
+msgstr ""
+
+#: templates/remove_embroidery_settings.inx:12
+msgid "Remove Print Settings from SVG metadata"
 msgstr ""
 
 #: templates/simulate.inx:3
