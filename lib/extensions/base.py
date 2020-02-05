@@ -167,13 +167,18 @@ class InkstitchExtension(inkex.Effect):
     def get_nodes(self):
         return self.descendants(self.document.getroot())
 
-    def get_elements(self, show_no_elements_error=True):
+    def get_elements(self, troubleshoot=False):
         self.elements = nodes_to_elements(self.get_nodes())
+        if not troubleshoot:
+            # strip out elements with empty to_patches
+            for element in self.elements:
+                if not element.to_patches(None):
+                    self.elements.remove(element)
         if self.elements:
             return True
-        elif show_no_elements_error:
+        if not troubleshoot:
             self.no_elements_error()
-            return False
+        return False
 
     def elements_to_patches(self, elements):
         patches = []
@@ -182,7 +187,6 @@ class InkstitchExtension(inkex.Effect):
                 last_patch = patches[-1]
             else:
                 last_patch = None
-
             patches.extend(element.embroider(last_patch))
 
         return patches
