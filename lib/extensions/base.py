@@ -8,13 +8,13 @@ from stringcase import snakecase
 
 import inkex
 
-from ..commands import layer_commands
+from ..commands import is_command, layer_commands
 from ..elements import EmbroideryElement, nodes_to_elements
-from ..elements.clone import is_clone
+from ..elements.clone import is_clone, is_embroiderable_clone
 from ..i18n import _
 from ..svg import generate_unique_id
-from ..svg.tags import (EMBROIDERABLE_TAGS, INKSCAPE_GROUPMODE,
-                        NOT_EMBROIDERABLE_TAGS, SVG_DEFS_TAG, SVG_GROUP_TAG)
+from ..svg.tags import (INKSCAPE_GROUPMODE, NOT_EMBROIDERABLE_TAGS,
+                        SVG_DEFS_TAG, SVG_GROUP_TAG)
 
 SVG_METADATA_TAG = inkex.addNS("metadata", "svg")
 
@@ -159,7 +159,7 @@ class InkstitchExtension(inkex.Effect):
         for child in node:
             nodes.extend(self.descendants(child, selected))
 
-        if selected and (node.tag in EMBROIDERABLE_TAGS or is_clone(node) or node.tag in NOT_EMBROIDERABLE_TAGS):
+        if selected and not is_command(node):
             nodes.append(node)
 
         return nodes
@@ -172,7 +172,8 @@ class InkstitchExtension(inkex.Effect):
         if not troubleshoot:
             # strip out elements with empty to_patches
             for element in self.elements:
-                if not element.to_patches(None):
+                if (element.node.tag in NOT_EMBROIDERABLE_TAGS or
+                   (is_clone(element.node) and not is_embroiderable_clone(element.node))):
                     self.elements.remove(element)
         if self.elements:
             return True
