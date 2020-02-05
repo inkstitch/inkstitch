@@ -4,7 +4,7 @@ from math import atan, degrees
 from simpletransform import (applyTransformToNode, applyTransformToPoint,
                              computeBBox, parseTransform)
 
-from ..commands import is_command
+from ..commands import is_command, is_command_symbol
 from ..i18n import _
 from ..svg.path import get_node_transform
 from ..svg.svg import find_elements
@@ -150,7 +150,7 @@ class Clone(EmbroideryElement):
 
 
 def is_clone(node):
-    if node.tag == SVG_USE_TAG and node.get(XLINK_HREF) and not is_command(node):
+    if node.tag == SVG_USE_TAG and node.get(XLINK_HREF) and not is_command_symbol(node):
         return True
     else:
         return False
