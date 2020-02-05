@@ -1,7 +1,8 @@
 from copy import copy
 from math import atan, degrees
 
-from simpletransform import applyTransformToNode, parseTransform
+from simpletransform import (applyTransformToNode, applyTransformToPoint,
+                             computeBBox, parseTransform)
 
 from ..commands import is_command
 from ..i18n import _
@@ -113,10 +114,10 @@ class Clone(EmbroideryElement):
             embroider_angle = self.clone_fill_angle
         else:
             # clone angle
-            clone_mat = parseTransform(clone.get('transform', 0))
+            clone_mat = parseTransform(clone.get('transform', ''))
             clone_angle = degrees(atan(-clone_mat[1][0]/clone_mat[1][1]))
             # source node angle
-            source_mat = parseTransform(source_node.get('transform', 0))
+            source_mat = parseTransform(source_node.get('transform', ''))
             source_angle = degrees(atan(-source_mat[1][0]/source_mat[1][1]))
             # source node fill angle
             source_fill_angle = source_node.get('embroider_angle', 0)
@@ -131,16 +132,20 @@ class Clone(EmbroideryElement):
 
         return patches
 
+    def center(self, source_node):
+        xmin, xmax, ymin, ymax = computeBBox([source_node])
+        point = [(xmax-((xmax-xmin)/2)), (ymax-((ymax-ymin)/2))]
+        transform = get_node_transform(self.node)
+        applyTransformToPoint(transform, point)
+        return point
+
     def validation_warnings(self):
-        # This will always point to (0,0), which is not a good soltion.
-        # We would need to detect the source type of the cloned element to find it's center.
-        # So, let's be lazy here and just tell the user how to unlink clones in the description.
         source_node = get_clone_source(self.node)
         if source_node.tag not in EMBROIDERABLE_TAGS:
-            point = [0, 0]
+            point = self.center(source_node)
             yield CloneSourceWarning(point)
         else:
-            point = [0, 0]
+            point = self.center(source_node)
             yield CloneWarning(point)
 
 

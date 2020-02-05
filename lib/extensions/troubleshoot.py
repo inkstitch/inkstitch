@@ -21,7 +21,7 @@ class Troubleshoot(InkstitchExtension):
 
         problem_types = {'error': set(), 'warning': set(), 'type_warning': set()}
 
-        if self.get_elements(False):
+        if self.get_elements(True):
             for element in self.elements:
                 for problem in element.validation_errors():
                     problem_types['error'].add(type(problem))
