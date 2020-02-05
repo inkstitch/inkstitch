@@ -152,8 +152,13 @@ class Clone(EmbroideryElement):
 def is_clone(node):
     if node.tag == SVG_USE_TAG and node.get(XLINK_HREF) and not is_command_symbol(node):
         return True
-    else:
-        return False
+    return False
+
+
+def is_embroiderable_clone(node):
+    if is_clone(node) and get_clone_source(node).tag in EMBROIDERABLE_TAGS:
+        return True
+    return False
 
 
 def get_clone_source(node):
