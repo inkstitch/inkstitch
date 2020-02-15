@@ -158,7 +158,8 @@ def build_fill_stitch_graph(shape, angle, row_spacing, end_row_spacing, starting
 
 def insert_node(graph, shape, node):
     """Add node to graph, splitting one of the outline edges"""
-    node = tuple(node)
+
+    node = nearest_node(graph, tuple(node))
     point = shgeo.Point(node)
 
     edges = []
