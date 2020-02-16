@@ -156,18 +156,21 @@ def build_fill_stitch_graph(shape, angle, row_spacing, end_row_spacing, starting
     return graph
 
 
-def insert_node(graph, shape, node):
+def insert_node(graph, shape, point):
     """Add node to graph, splitting one of the outline edges"""
 
-    node = nearest_node(graph, tuple(node))
-    point = shgeo.Point(node)
+    point = tuple(point)
+    outline = which_outline(shape, point)
+    projection = project(shape, point, outline)
+    projected_point = list(shape.boundary)[outline].interpolate(projection)
+    node = (projected_point.x, projected_point.y)
 
     edges = []
     for start, end, key, data in graph.edges(keys=True, data=True):
         if key == "outline":
             edges.append(((start, end), data))
 
-    edge, data = min(edges, key=lambda (edge, data): shgeo.LineString(edge).distance(point))
+    edge, data = min(edges, key=lambda (edge, data): shgeo.LineString(edge).distance(projected_point))
 
     graph.remove_edge(*edge, key="outline")
     graph.add_edge(edge[0], node, key="outline", **data)
