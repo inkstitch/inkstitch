@@ -1,16 +1,8 @@
-# TRAVIS_BRANCH is the branch name or the name of the tag.
-VERSION="$(echo ${TRAVIS_BRANCH} | tr / -)"
-OS="${TRAVIS_OS_NAME}"
-ARCH="$(uname -m)"
+#!/bin/bash
 
-MACVERSION="${TRAVIS_OSX_IMAGE}"
-if [ ${MACVERSION} = "xcode9.2" ]; then
-    MACVERSION="sierra"
-elif [ ${MACVERSION} = "xcode9.4" ]; then
-    MACVERSION="high_sierra"
-elif [ ${MACVERSION} = "xcode10.2" ]; then
-    MACVERSION="mojave"
-fi
+VERSION="$(echo ${GITHUB_REF} | tr / -)"
+OS="${BUILD:-$(uname)}"
+ARCH="$(uname -m)"
 
 cp -a images/examples palettes symbols fonts dist/inkstitch
 cp -a icons locales print dist/inkstitch/bin
@@ -21,18 +13,20 @@ else
     cp -a electron/dist/*-unpacked dist/inkstitch/electron
 fi
 
+mkdir artifacts
+
 for d in inx/*; do
 	lang=${d%.*}
-	lang=${lang#*/}	
+	lang=${lang#*/}
 	cp $d/*.inx dist
 
     cd dist
-	if [ "$BUILD" = "windows" ]; then
-		zip -r ../inkstitch-${VERSION}-win32-${lang}.zip *
-	elif [ "$BUILD" = "osx" ]; then
-		tar zcf ../inkstitch-${VERSION}-${OS}-${MACVERSION}-${ARCH}-$lang.tar.gz *
-	else
-		tar zcf ../inkstitch-${VERSION}-${OS}-${ARCH}-$lang.tar.gz *
-	fi
-	cd ..
+    if [ "$BUILD" = "windows" ]; then
+      # The python zipfile command line utility can't handle directories
+      # containing files with UTF-8 names on Windows, so we use 7-zip instead.
+      7z a ../artifacts/inkstitch-${VERSION}-${OS}-${lang}.zip *
+    else
+      python -m zipfile -c ../artifacts/inkstitch-${VERSION}-${OS}-${lang}.zip *
+    fi
+    cd ..
 done

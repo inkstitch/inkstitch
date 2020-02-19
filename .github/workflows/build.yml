@@ -1,0 +1,201 @@
+name: Build
+on:
+  push:
+    branches-ignore:
+      - master
+    tags:
+      - "v*"
+jobs:
+  linux:
+    runs-on: ubuntu-16.04
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          submodules: recursive
+      - name: download dependencies
+        shell: bash
+        run: |
+          curl -sOL https://inkscape.org/en/gallery/item/12187/inkscape-0.92.3.tar.bz2
+      - name: install dependencies
+        shell: bash
+        run: |
+          # I'd love to use a setup-python action but it seems to give a
+          # python that doesn't support unicode.  See:
+          #   https://github.com/actions/setup-python/issues/23
+
+          sudo apt-get install python2.7
+          python -m pip install --upgrade pip
+
+          sudo apt-get install gettext
+
+          # for wxPython
+          sudo apt-get install glib-networking libsdl1.2-dev
+
+          # for PyGObject
+          sudo apt install libgirepository1.0-dev
+
+          uname -a
+          python --version
+          python -m pip --version
+          python -m pip debug
+
+          # wxPython doen't publish linux wheels in pypi
+          wget -q https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-16.04/wxPython-4.0.6-cp27-cp27mu-linux_x86_64.whl
+          python -m pip install wxPython*.whl
+
+          python -m pip install PyGObject
+
+          python -m pip install -r requirements.txt
+          python -m pip install pyinstaller==3.3.1
+          
+          tar -jxf inkscape-0.92.3.tar.bz2
+          rm inkscape-0.92.3.tar.bz2
+          mv inkscape-0.92.3 inkscape
+
+          echo "::add-path::${{ env.pythonLocation }}\bin"
+      - shell: bash
+        run: |
+          make dist
+        env:
+          BUILD: linux
+      - uses: actions/upload-artifact@master
+        with:
+          name: inkstitch-linux
+          path: artifacts
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          submodules: recursive
+      - uses: actions/setup-python@v1
+        with:
+          python-version: '2.7.x'
+          architecture: 'x86'
+      - name: download dependencies
+        shell: bash
+        run: |
+          curl -sOL https://github.com/lexelby/inkstitch-build-objects/releases/download/v1.0.0/Shapely-1.6.3-cp27-cp27m-win32.whl
+          curl -sOL https://inkscape.org/en/gallery/item/12187/inkscape-0.92.3.tar.bz2          
+      - name: install dependencies
+        shell: bash
+        run: |
+          pip install Shapely-1.6.3-cp27-cp27m-win32.whl
+          pip install -r requirements.txt
+          pip install pyinstaller==3.3.1
+
+          # Just using tar -j freezes forever with no output.  Heck if I know why.  This seems to work.
+          bzcat inkscape-0.92.3.tar.bz2 | tar -vxf -
+          rm inkscape-0.92.3.tar.bz2
+          mv inkscape-0.92.3 inkscape
+
+          echo "::add-path::${{ env.pythonLocation }}\bin"
+      - name: fix geos
+        shell: bash
+        run: |
+          cd "${{ env.pythonLocation }}\Lib/site-packages/shapely/DLLs"
+          cp geos_c.dll geos.dll
+      - shell: bash
+        run: |
+          make dist
+        env:
+          BUILD: windows
+      - uses: actions/upload-artifact@master
+        with:
+          name: inkstitch-windows
+          path: artifacts
+  mac:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          submodules: recursive
+      - uses: actions/setup-python@v1
+        with:
+          python-version: '2.7.x'
+      - name: download inkscape
+        shell: bash
+        run: |
+          curl -sOL https://inkscape.org/en/gallery/item/12187/inkscape-0.92.3.tar.bz2
+      - name: install dependencies
+        shell: bash
+        run: |
+          brew update
+
+          # this errors because it installs python3 but python2 is already installed
+          brew install gtk+3 pkg-config gobject-introspection libffi || true
+
+          export LDFLAGS="-L/usr/local/opt/libffi/lib"
+          export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
+          
+          # for msgfmt
+          brew link gettext --force
+
+          echo "::set-env name=GI_TYPELIB_PATH::/usr/local/lib/girepository-1.0/"
+
+          pip --version
+          pip install PyGObject
+          pip install -r requirements.txt
+          pip install pyinstaller==3.3.1
+          
+          tar -jxf inkscape-0.92.3.tar.bz2
+          rm inkscape-0.92.3.tar.bz2
+          mv inkscape-0.92.3 inkscape
+
+          echo "::add-path::${{ env.pythonLocation }}\bin"
+      - shell: bash
+        run: |
+          make dist
+        env:
+          BUILD: osx
+      - uses: actions/upload-artifact@master
+        with:
+          name: inkstitch-mac
+          path: artifacts
+
+  release:
+    runs-on: ubuntu-latest
+    needs: [linux, windows, mac]
+    if: always()
+    steps:
+      - name: determine release info
+        shell: bash
+        run: |
+          if [[ "${GITHUB_REF}" =~ ^v[0-9.]+$ ]]; then
+            echo "::set-env name=release_tag::${GITHUB_REF}"
+            echo "::set-env name=prerelease::false"
+            echo "::set-env name=title::${GITHUB_REF}"
+          else
+            branch="${GITHUB_REF#refs/heads/}"
+            tag="dev-build-$(echo $branch | tr / -)"
+            echo "::set-env name=release_tag::${tag}"
+            echo "::set-env name=prerelease::true"
+            echo "::set-env name=title::development build of $branch"
+          fi
+      - name: download linux
+        uses: actions/download-artifact@v1
+        with:
+          name: 'inkstitch-linux'
+          path: 'artifacts/'
+      - name: download windows
+        uses: actions/download-artifact@v1
+        with:
+          name: 'inkstitch-windows'
+          path: 'artifacts/'
+        if: always()
+      - name: download mac
+        uses: actions/download-artifact@v1
+        with:
+          name: 'inkstitch-mac'
+          path: 'artifacts/'
+        if: always()
+      - name: create/update release
+        uses: "marvinpinto/action-automatic-releases@latest"
+        if: always()
+        with:
+          repo_token: "${{secrets.GITHUB_TOKEN}}"
+          automatic_release_tag: "${{env.release_tag}}"
+          prerelease: "${{env.prerelease}}"
+          title: "${{env.title}}"
+          files: |
+            artifacts/*.zip
