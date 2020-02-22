@@ -1,7 +1,7 @@
 ---
-title: Transcript - 02 Install - Beginner Tutorial Series
+title: Transcript - 02 Installation - Beginner Tutorial Series
 permalink: /fr/tutorials/resources/beginner-video-tutorials/02-install-transcript
-last_modified_at: 2019-03-11
+last_modified_at: 2020-02-21
 language: fr
 image: "/assets/images/tutorials/video-preview-images/beginner-tutorial-series.png"
 
@@ -11,68 +11,64 @@ exclude-from-tutorial-list: true
 ---
 [← Back](/tutorials/resources/beginner-video-tutorials/)
 
-## Welcome to the Ink/Stitch beginner tutorial series.
+## Bienvenue dans la série de tutoriels pour débutants Ink/Stitch.
 
-**In this part we are going to install Ink/Stitch on your computer.**
+**Dans cette partie, nous allons installer Ink / Stitch sur votre ordinateur.**
 
-Although the installation process is quiet similar on the various operating systems, you might prefer watching the video corresponding to yours.
+Bien que le processus d'installation soit assez similaire sur les différents systèmes d'exploitation, vous préférerez peut-être regarder la vidéo correspondant à la vôtre.
 
-**Windows:** You find the tutorials for Linux and MacOS in the description below. This is the tutorial for Windows users.
+**Windows:** Vous trouverez les tutoriels pour Linux et MacOS dans la description ci-dessous. Ceci est le tutoriel pour les utilisateurs de Windows.
 
-**Linux:** You find the tutorials for Windows and MacOS in the description below. This is the tutorial for Linux users.
+**Linux:** Vous trouverez les tutoriels pour Windows et MacOS dans la description ci-dessous. Ceci est le tutoriel pour les utilisateurs Linux.
 
-**macOS:** You find the tutorials for Windows and Linux in the description below. This is the tutorial for MacOS users.
+**macOS:** Vous trouverez les tutoriels pour Windows et Linux dans la description ci-dessous. Ceci est le tutoriel pour les utilisateurs de MacOS.
 
-## Requirements
+## Exigences
 
-Let's start with the requirements.
+Commençons par les exigences.
 
-1.  Ink/Stitch is an Inkscape plugin. Which means you definitely need to have Inkscape installed.
+1.  Ink/Stitch est un plugin Inkscape. Ce qui signifie que vous devez absolument installer Inkscape.
 
-    Any version is fine, but we recommend to have at least version 0.92.2 installed, because it comes with new features that are essential to organize the stitching order of your design.
+    N'importe quelle version est correcte, mais nous vous recommandons d'installer au moins la version 0.92.2, car elle est livrée avec de nouvelles fonctionnalités qui sont essentielles pour organiser l'ordre d'assemblage de votre conception.
 
-    You can download Inkscape for free on their website at <https://inkscape.org><br>
-    **Linux:** or install it directly through your distributions repositories.
+   Vous pouvez télécharger Inkscape gratuitement sur leur site Web à <https://inkscape.org/fr/><br>
+    **Linux:** ou installez-le directement via vos distributions.
 
-2.  Ink/Stitch uses a web-browser to create print-out information sheets for both, operator and customer. You might also enjoy this feature, because it optionally displays a realistic preview of your design.
+2.  Ink/Stitch utilise un navigateur Web pour créer des fiches d'information imprimées pour l'opérateur et le client. Vous pouvez également profiter de cette fonctionnalité, car elle affiche en option un aperçu réaliste de votre conception.
 
-    To be able to use this feature you will need a modern HTML5 capable browser, which you will most likely have already installed since you are watching this tutorial.
+   Pour pouvoir utiliser cette fonctionnalité, vous aurez besoin d'un navigateur compatible HTML5 moderne, que vous aurez probablement déjà installé puisque vous regardez ce tutoriel.
 
-3.  All other dependencies are delivered by the Ink/Stitch plugin itself. Which makes the installation fairly easy.
-
+3. Toutes les autres dépendances sont fournies par le plugin Ink/Stitch lui-même. Ce qui rend l'installation assez facile.
 ## Installation
 
-* To get the latest Ink/Stitch release for your operating system visit <https://inkstitch.org>
+* Pour obtenir la dernière version Ink / Stitch pour votre système d'exploitation, visitez <https://inkstitch.org/fr/>
 
-  **Windows:** Click on "Download Ink/Stitch" and save the archive with win32 in its filename.
+  **Windows:** Clic sur "Download Ink/Stitch" et enregistrez l'archive avec win32 dans son nom de fichier.
 
-  **Linux:** Click on "Download Ink/Stitch" and save the archive with linux_64 in its filename. It will work on 64bit systems only.
+  **Linux:** Clic sur "Download Ink/Stitch" et enregistrez l'archive avec linux_64 dans son nom de fichier. Il ne fonctionnera que sur les systèmes 64 bits.
+  **macOS:** Clic sur "Download Ink/Stitch" et enregistrez l'archive avec osx_64 dans son nom de fichier.
+  
+* Dans Inkscape, accédez à Edition> Préférences> Système et vérifiez où se trouve votre dossier d'extensions utilisateur.
+* Décompressez l'archive Ink / Stitch directement dans le dossier des extensions.
 
-  **macOS:** Click on "Download Ink/Stitch" and save the archive with osx_64 in its filename.
+Et c'est tout. Vous avez déjà effectué toutes les étapes nécessaires pour installer Ink / Stitch.
 
-* In Inkscape go to Edit > Preferences > System and check where your user extensions folder is located.
-* Decompress the Ink/Stitch archive directly into the extensions folder.
+## Test
 
-And that's it. You already did all the steps necessary in order to install Ink/Stitch.
+Vérifions maintenant si Ink/Stitch fonctionne réellement.
+*   Redémarrez Inkscape
 
-## Testrun
+*  Vous trouverez l'extension sous Extensions > Ink/Stitch
 
-Now let's check if Ink/Stitch is actually working.
+*   Dessinez une forme et convertissez-la en chemin
 
-*   Restart Inkscape
-
-*   You will find the extension under Extensions > Ink/Stitch
-
-*   Draw a shape and convert it to a path
-
-*   With the newly created path selected run "Params". Beside of the params dialogue you will see a simulation which will update as you change the values.
-
+*  Avec le chemin nouvellement créé sélectionné, exécutez "Paramètres". À côté de la boîte de dialogue des paramètres, vous verrez une simulation qui sera mise à jour lorsque vous modifiez les valeurs.
 
 ---
 
-We hope you enjoyed the tutorial and have Ink/Stitch up and running.
+Nous espérons que vous avez apprécié le tutoriel et que Ink/Stitch est opérationnel.
 
-If you run into any trouble during the installation process, please report your problem back to us on GitHub (link in the description below). So we can help you to get started creating embroidery designs.
+Si vous rencontrez des problèmes pendant le processus d'installation, veuillez nous signaler votre problème sur GitHub (lien dans la description ci-dessous). Nous pouvons donc vous aider à commencer à créer des motifs de broderie.
 
 [← Back](/tutorials/resources/beginner-video-tutorials/)
 
