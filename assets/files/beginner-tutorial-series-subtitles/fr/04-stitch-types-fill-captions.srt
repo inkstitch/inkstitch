@@ -1,0 +1,140 @@
+1
+00:00:05,780 --> 00:00:09,380
+Welcome to the Ink/Stitch beginner tutorial series.
+
+2
+00:00:09,380 --> 00:00:15,600
+In this part we are going to have a closer look which stitch types Ink/Stitch is able to perform.
+
+3
+00:00:15,600 --> 00:00:21,900
+We will not explain the stitch types in general, but only how to create them in Ink/Stitch.
+
+4
+00:00:21,900 --> 00:00:29,720
+Ink/Stitch stitch types can be roughly divided into three sections: stroke, satin and fill.
+
+5
+00:00:30,440 --> 00:00:36,060
+Here is a complete list, so you can quickly navigate to the stitch type you are interested in.
+
+6
+00:00:37,200 --> 00:00:40,940
+This is the tutorial about fill stitches.
+
+7
+00:00:41,640 --> 00:00:45,560
+Fill stitch is used to fill big areas with a color.
+
+8
+00:00:46,000 --> 00:00:50,840
+Ink/Stitch comes with two fill stitch types: manual and auto-fill.
+
+9
+00:00:51,240 --> 00:00:54,480
+We will not show manual fill in this tutorial.
+
+10
+00:00:55,160 --> 00:00:59,380
+If you are interested in it, you can read more on our website.
+
+11
+00:00:59,820 --> 00:01:03,540
+Auto-fill is the default method for generating fill stitches.
+
+12
+00:01:03,800 --> 00:01:05,940
+Create a path with a fill color.
+
+13
+00:01:18,340 --> 00:01:23,820
+Shapes can also have holes, but should not consist of more than one section.
+
+14
+00:01:23,820 --> 00:01:31,700
+If you need to fill a shape like the one on the right side, hit Ctrl+Shift+K to treat it as two seperate shapes.
+
+15
+00:01:40,800 --> 00:01:46,220
+Open the params dialogue and enable "Automatically routed fill stitching".
+
+16
+00:01:46,540 --> 00:01:53,000
+Set the stitch angle, while 0 is horizontal. You can also use negative values.
+
+17
+00:01:54,660 --> 00:02:02,120
+Expand the shape before stitching. This compensates the pull effect and helps to avoid gaps between sections.
+
+18
+00:02:02,120 --> 00:02:09,640
+Define the maximum fill stitch length. Stitches may be shorter at the end or start of a row.
+
+19
+00:02:10,420 --> 00:02:15,060
+Set spacing between rows - and running stitch length.
+
+20
+00:02:16,260 --> 00:02:22,300
+With "Skip last stitch in each row" you will save a hugh amount of stitches.
+
+21
+00:02:22,600 --> 00:02:27,060
+The last stitch in each row is quite close to the first stitch in the next row.
+
+22
+00:02:27,060 --> 00:02:30,520
+Skipping it decreases stitch count and density.
+
+23
+00:02:30,860 --> 00:02:33,700
+Influence the output with the last setting;
+
+24
+00:02:33,780 --> 00:02:39,480
+where you define, how many rows apart stitches will fall into the same column position.
+
+25
+00:02:43,600 --> 00:02:47,020
+Fill stitch areas also need an underlay.
+
+26
+00:02:47,320 --> 00:02:51,400
+Switch to the "AutoFill Underlay" tab and enable "Underlay".
+
+27
+00:02:51,560 --> 00:02:54,780
+Here you will find  the "Fill angle" setting again.
+
+28
+00:02:54,780 --> 00:02:59,620
+By default it will be shifted for + 90 deg to the fill stitch.
+
+29
+00:02:59,620 --> 00:03:05,480
+Prevent underlay from showing around the outside of the fill with "inset".
+
+30
+00:03:05,480 --> 00:03:13,040
+Define "max. stitch length" and "row spacing", wich defaults to 3x the spacing of the top layer.
+
+31
+00:03:19,040 --> 00:03:24,160
+In embroidery files you want to plan where stitching starts and ends.
+
+32
+00:03:24,200 --> 00:03:29,320
+You can control the start and end position of a fill with visual commands.
+
+33
+00:03:39,160 --> 00:03:44,440
+If you cannot follow the steps shown here, follow our visual commands tutorial.
+
+34
+00:03:48,460 --> 00:03:50,460
+We hope you enjoyed this tutorial.
+
+35
+00:03:50,900 --> 00:03:56,460
+You might also want to watch our videos about stroke type stitches and satin columns.
+

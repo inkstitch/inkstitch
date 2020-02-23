@@ -1,0 +1,216 @@
+1
+00:00:06,460 --> 00:00:10,060
+Welcome to the Ink/Stitch beginner tutorial series.
+
+2
+00:00:11,040 --> 00:00:14,880
+In this part we are going to have a look at the Ink/Stitch workflow.
+
+3
+00:00:15,200 --> 00:00:20,760
+It includes the following steps, without being too strongly attached to this exact order.
+
+4
+00:00:20,760 --> 00:00:24,760
+Quiet a few of the shortcut keys used in this tutorial are customly set.
+
+5
+00:00:24,760 --> 00:00:28,200
+Watch the customize video to learn how to establish them.
+
+6
+00:00:28,200 --> 00:00:31,360
+The first thing to do is to create a vector image.
+
+7
+00:00:31,360 --> 00:00:40,040
+You could also use existing images. If you have an PNG-image you could even trace it through 'Path > Trace Bitmap'.
+
+8
+00:00:40,040 --> 00:00:44,720
+For a brief demonstration we will create the image by ourselves.
+
+9
+00:00:44,720 --> 00:00:49,940
+To create lines you can either use the pencil tool, which can be activated with 'P'
+
+10
+00:00:49,940 --> 00:00:52,620
+- or the beziér tool enabled with 'B'.
+
+11
+00:01:22,800 --> 00:01:26,300
+You can also use shapes such as the square or the circle.
+
+12
+00:01:26,300 --> 00:01:33,000
+Convert them to a path with 'Shift + Control + C' or the corresponding symbol in node editor mode.
+
+13
+00:02:17,520 --> 00:02:23,540
+Fill bounded areas with help of the fill tool. The shortcut key for this is 'U'.
+
+14
+00:02:25,480 --> 00:02:29,500
+If you installed the Addons you will have color palettes available.
+
+15
+00:02:29,940 --> 00:02:35,440
+Set the fill color by clicking on them. The stroke color can be change with 'Shift + Click'.
+
+16
+00:03:28,980 --> 00:03:36,960
+Now that the image is done, you should save a copy into an other layer and hide the first one (we skipped this step here).
+
+17
+00:03:37,360 --> 00:03:45,200
+The next step will be to convert the lines in such way, that Ink/Stitch will understand how it should be sewn out.
+
+18
+00:03:53,960 --> 00:03:59,880
+At this point we assume that you know how to create satin columns, fills and running stitches.
+
+19
+00:03:59,880 --> 00:04:03,680
+If not, have a look at the corresponding videos.
+
+20
+00:04:35,260 --> 00:04:39,400
+Set the params as you like and don't forget to use underlay.
+
+21
+00:06:32,600 --> 00:06:34,600
+Plan your stitch order carefully.
+
+22
+00:06:34,600 --> 00:06:38,500
+It will have a lot of impact on the quality of your design.
+
+23
+00:06:44,000 --> 00:06:50,960
+While planning the stitch order you try to avoid jump stitches and also color changes.
+
+24
+00:06:51,220 --> 00:06:56,520
+You don't want to change colors all the time while stitching out the design.
+
+25
+00:07:05,760 --> 00:07:10,520
+Run the simulator to see if you might need to adjust the direction of some objects.
+
+26
+00:07:10,520 --> 00:07:16,260
+You can also see the direction through the red sparks when in node editor mode.
+
+27
+00:07:16,260 --> 00:07:19,860
+We have explained them in the customize video.
+
+28
+00:07:24,520 --> 00:07:29,540
+Change the direction through `Path > Reverse` or use a custom shortcut key.
+
+29
+00:07:29,540 --> 00:07:37,920
+Ink/Stitch will stitch objects in exactly the order they appear in your SVG document, from lowest to highest in stacking order.
+
+30
+00:07:37,920 --> 00:07:45,100
+If the distance between two objects is long, Ink/Stitch will add a jump-stitch between them automatically.
+
+31
+00:07:45,100 --> 00:07:48,900
+It uses the color of the object to determine thread color,
+
+32
+00:07:48,900 --> 00:07:54,660
+so changes in color from one object to the next will result in a thread-change instruction
+
+33
+00:07:54,660 --> 00:07:57,500
+being added to the embroidery output file.
+
+34
+00:08:38,760 --> 00:08:41,140
+We need to use the objects panel.
+
+35
+00:08:41,140 --> 00:08:45,480
+We recommend to make heavy use of layers and groups at this point.
+
+36
+00:08:45,480 --> 00:08:48,580
+This will help a lot while reordering objects.
+
+37
+00:08:48,580 --> 00:08:54,620
+Create a group of objects with 'Ctrl + G' and move through the objects in the desired order,
+
+38
+00:08:54,740 --> 00:08:59,100
+while pushing the next object in line to the bottom of the group.
+
+39
+00:10:29,880 --> 00:10:33,760
+Attach commands to give Ink/Stitch additional information.
+
+40
+00:10:33,760 --> 00:10:39,320
+Trims, Stops, Fill start- and ending points are just some of the options.
+
+41
+00:10:39,320 --> 00:10:44,140
+Watch our visual commands video to get more information.
+
+42
+00:10:55,420 --> 00:11:01,280
+During the whole process you were already running visualizations through the params dialogue.
+
+43
+00:11:01,760 --> 00:11:10,400
+Use the simulator as standalone or even the print preview to get an impression on how the design will look in the end.
+
+44
+00:11:10,400 --> 00:11:14,380
+Most of the time the simulator will do the job just fine.
+
+45
+00:11:14,380 --> 00:11:21,720
+But for fill stitches the print preview is very helpful, f.e. in matter of stitch length and angle.
+
+46
+00:11:26,860 --> 00:11:31,580
+Once you are satisfied with the outcome, save the file to your disk.
+
+47
+00:11:31,580 --> 00:11:35,120
+Choose the file format that your machine can read.
+
+48
+00:11:35,120 --> 00:11:39,400
+Don't forget to also save the file in the svg file format,
+
+49
+00:11:39,400 --> 00:11:43,380
+just in case you want to improve your design at a later time.
+
+50
+00:11:53,500 --> 00:11:55,500
+Transfer the file to your machine.
+
+51
+00:11:55,780 --> 00:12:00,580
+Perform a test sew with preferably the same fabric that you are planing to use.
+
+52
+00:12:00,580 --> 00:12:05,060
+The fabric will have influence on the outcome of the design
+
+53
+00:12:05,060 --> 00:12:10,380
+in this way that you most likely will have to adjust your design here and there.
+
+54
+00:12:10,380 --> 00:12:17,120
+Follow this routine until you are happy and ready to embroider on your best piece of fabric in your house ;)
+

@@ -1,0 +1,160 @@
+1
+00:00:05,300 --> 00:00:09,360
+Welcome to the Ink/Stitch beginner tutorial series.
+
+2
+00:00:09,580 --> 00:00:15,640
+In this part we are going to have a closer look which stitch types Ink/Stitch is able to perform.
+
+3
+00:00:15,940 --> 00:00:21,640
+We will not explain the stitch types in general, but only how to create them in Ink/Stitch.
+
+4
+00:00:22,260 --> 00:00:30,100
+Ink/Stitch stitch types can be roughly divided into three sections: stroke, satin and fill.
+
+5
+00:00:30,580 --> 00:00:36,300
+Here is a complete list, so you can quickly navigate to the stitch type you are interested in.
+
+6
+00:00:37,060 --> 00:00:40,400
+This is the tutorial about stroke type stitches.
+
+7
+00:00:40,940 --> 00:00:48,140
+Stroke stitches can be used for: outlines, line art embroidery or to add details into your design.
+
+8
+00:00:53,400 --> 00:00:56,160
+Zig-zag stitches are are easy to create.
+
+9
+00:00:56,720 --> 00:01:03,360
+We recommend to use them only for straight lines, because they will not stitch nicely around edges.
+
+10
+00:01:05,280 --> 00:01:09,320
+In most cases, you would prefer a satin column instead.
+
+11
+00:01:09,760 --> 00:01:12,880
+That said, let's see how they are done.
+
+12
+00:01:13,620 --> 00:01:18,280
+Hit "B" to enable the bezier curve tool and draw a simple path.
+
+13
+00:01:22,700 --> 00:01:29,340
+Open the "Fill and Stroke" settings and set the path width in the stroke style tab.
+
+14
+00:01:29,340 --> 00:01:33,160
+This will define the height of your zig-zag-line.
+
+15
+00:01:33,860 --> 00:01:40,580
+Go to 'Extensions > Ink/Stitch  > Params' to open the parameter dialogue.
+
+16
+00:01:42,160 --> 00:01:47,140
+"Satin stitch along path" has to be enabled in the Stroke tab.
+
+17
+00:01:48,000 --> 00:01:51,380
+Set zig-zag-spacing to whatever you like it to be.
+
+18
+00:01:55,800 --> 00:01:58,920
+You can also define the number of repeats.
+
+19
+00:01:58,920 --> 00:02:04,200
+All other settings will not have any effect on zig-zag stitching.
+
+20
+00:02:10,280 --> 00:02:13,460
+Running stitches are created in a similiar way.
+
+21
+00:02:26,100 --> 00:02:30,800
+But this time you have to set the stroke style to a dashed line.
+
+22
+00:02:31,260 --> 00:02:35,940
+Any type of dashes will do the job and stroke width is irrelevant.
+
+23
+00:02:36,580 --> 00:02:39,580
+Create a path and open the params dialogue.
+
+24
+00:02:53,640 --> 00:02:57,720
+"Satin stitch along path" has to be enabled in the Stroke tab.
+
+25
+00:02:57,720 --> 00:03:01,360
+Setting can be applied for "running stitch length"
+
+26
+00:03:04,620 --> 00:03:06,620
+and "repeats".
+
+27
+00:03:16,960 --> 00:03:22,180
+Bean stitch creates thicker threading through back and forth repetition of running stitches.
+
+28
+00:03:30,520 --> 00:03:33,860
+It works almost the same as running stitches,
+
+29
+00:03:52,000 --> 00:03:56,340
+but you have to set additionally the "bean stitch number of repeats".
+
+30
+00:03:56,340 --> 00:04:03,120
+A value of 1 would triple each stitch, because it goes forward, back and forward again.
+
+31
+00:04:03,120 --> 00:04:07,580
+A value of 2 would results in a quintupled stitch.
+
+32
+00:04:21,720 --> 00:04:30,660
+In manual stitch mode Ink/Stitch will use each node of a path as a needle penetration point, exactly as you placed them.
+
+33
+00:04:30,660 --> 00:04:35,540
+Create a path. Line style and width are irrelevant.
+
+34
+00:04:43,700 --> 00:04:51,780
+We recommend to display all nodes of the corresponding path as corners, since manual stitch will not respect bezier curves.
+
+35
+00:04:54,280 --> 00:04:56,280
+Run "Params"
+
+36
+00:05:02,040 --> 00:05:04,520
+and enable "Manual stitch placement".
+
+37
+00:05:04,520 --> 00:05:08,680
+All other settings will have no effect in manual stitch mode.
+
+38
+00:05:08,680 --> 00:05:17,380
+Remember to also add tie-in or tie-off stitches, since they are not created automatically in manual stitch mode.
+
+39
+00:05:17,820 --> 00:05:25,560
+We hope you enjoyed this tutorial and got a small overview about all stroke stitch types Ink/Stitch is capable to perform.
+
+40
+00:05:26,060 --> 00:05:31,440
+You might also want to watch our videos about satin columns and fill stitches.
+

@@ -1,0 +1,124 @@
+1
+00:00:00,000 --> 00:00:09,000
+Bienvenue dans la série de tutoriels pour débutants Ink/Stitch.
+
+2
+00:00:10,660 --> 00:00:15,020
+Dans cette partie, nous allons installer Ink / Stitch sur votre ordinateur.
+
+3
+00:00:15,260 --> 00:00:20,120
+Bien que le processus d'installation soit assez similaire sur les différents systèmes d'exploitation,
+
+4
+00:00:20,120 --> 00:00:23,660
+vous préférerez peut-être regarder la vidéo correspondant à la vôtre.
+
+5
+00:00:24,160 --> 00:00:31,340
+Vous trouverez les tutoriels pour Windows et MacOS dans la description ci-dessous. Ceci est le tutoriel pour les utilisateurs Linux.
+
+6
+00:00:33,940 --> 00:00:35,940
+Commençons par les exigences.
+
+7
+00:00:37,080 --> 00:00:42,940
+Ink/Stitch est un plugin Inkscape. Ce qui signifie que vous devez absolument installer Inkscape.
+
+8
+00:00:44,400 --> 00:00:52,200
+N'importe quelle version est correcte, mais nous vous recommandons d'installer au moins la version 0.92.2,
+
+9
+00:00:52,400 --> 00:00:58,940
+car elle est livrée avec de nouvelles fonctionnalités qui sont essentielles pour organiser l'ordre d'assemblage de votre conception.
+
+10
+00:01:00,840 --> 00:01:06,160
+Vous pouvez télécharger Inkscape gratuitement sur leur site Web à inkscape.org/fr/. Ou installez-le directement via vos distributions.
+
+11
+00:01:07,760 --> 00:01:14,220
+Ink/Stitch benutzt einen Web-Browser um eine Druckversion anzuzeigen. Es gibt Layouts für Anwender und Kunden.
+
+12
+00:01:14,220 --> 00:01:21,280
+Ink/Stitch utilise un navigateur Web pour créer des fiches d'information imprimées pour l'opérateur et le client. Vous pouvez également profiter de cette fonctionnalité, car elle affiche en option un aperçu réaliste de votre conception.
+
+13
+00:01:21,980 --> 00:01:27,680
+Pour pouvoir utiliser cette fonctionnalité, vous aurez besoin d'un navigateur compatible HTML5 moderne,
+
+14
+00:01:28,340 --> 00:01:33,200
+que vous aurez probablement déjà installé puisque vous regardez ce tutoriel.
+
+15
+00:01:33,700 --> 00:01:38,340
+Toutes les autres dépendances sont fournies par le plugin Ink/Stitch lui-même.
+
+16
+00:01:38,340 --> 00:01:41,120
+Ce qui rend l'installation assez facile.
+
+17
+00:01:43,660 --> 00:01:49,020
+Pour obtenir la dernière version Ink / Stitch pour votre système d'exploitation, visitez inkstitch.org/fr/
+
+18
+00:01:50,500 --> 00:01:56,700
+Clic sur "Download Ink/Stitch" et enregistrez l'archive avec linux_64 dans son nom de fichier. Il ne fonctionnera que sur les systèmes 64 bits.
+
+19
+00:02:02,520 --> 00:02:09,700
+Dans Inkscape, accédez à Edition> Préférences> Système et vérifiez où se trouve votre dossier d'extensions utilisateur.
+
+20
+00:02:20,960 --> 00:02:25,960
+Décompressez l'archive Ink / Stitch directement dans le dossier des extensions.
+
+21
+00:02:36,640 --> 00:02:43,360
+Et c'est tout. Vous avez déjà effectué toutes les étapes nécessaires pour installer Ink / Stitch.
+
+22
+00:02:45,040 --> 00:02:48,640
+Vérifions maintenant si Ink/Stitch fonctionne réellement.
+
+23
+00:02:48,640 --> 00:02:50,640
+Redémarrez Inkscape
+
+24
+00:02:50,640 --> 00:02:55,360
+Vous trouverez l'extension sous Extensions > Ink/Stitch
+
+25
+00:02:55,360 --> 00:02:58,880
+Dessinez une forme
+
+26
+00:03:00,320 --> 00:03:03,200
+et convertissez-la en chemin
+
+27
+00:03:03,920 --> 00:03:08,240
+Avec le chemin nouvellement créé sélectionné, exécutez "Paramètres".
+
+28
+00:03:09,040 --> 00:03:16,560
+À côté de la boîte de dialogue des paramètres, vous verrez une simulation qui sera mise à jour lorsque vous modifiez les valeurs.
+
+29
+00:03:19,200 --> 00:03:24,320
+Nous espérons que vous avez apprécié le tutoriel et que Ink/Stitch est opérationnel.
+
+30
+00:03:25,520 --> 00:03:33,040
+Si vous rencontrez des problèmes pendant le processus d'installation, veuillez nous signaler votre problème sur GitHub (lien dans la description ci-dessous).
+
+31
+00:03:33,920 --> 00:03:38,240
+Nous pouvons donc vous aider à commencer à créer des motifs de broderie.
+
