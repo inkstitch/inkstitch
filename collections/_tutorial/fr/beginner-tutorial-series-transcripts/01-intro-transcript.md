@@ -1,7 +1,7 @@
 ---
 title: Transcript - 01 Intro - Beginner Tutorial Series
 permalink: /fr/tutorials/resources/beginner-video-tutorials/01-intro-transcript
-last_modified_at: 2019-03-11
+last_modified_at: 2020-02-24
 language: fr
 image: "/assets/images/tutorials/video-preview-images/beginner-tutorial-series.png"
 
@@ -11,32 +11,27 @@ exclude-from-tutorial-list: true
 ---
 [← Back](/tutorials/resources/beginner-video-tutorials/)
 
-## Welcome to the Ink/Stitch beginner tutorial series.
+## Bienvenue dans la série de tutoriels pour débutants Ink/Stitch.
 
-Ink/Stitch is an open source machine embroidery design platform based on Inkscape.
-Our goal is to be approachable for hobbyists while also providing the power needed by professional digitizers.
+Ink/Stitch est une plate-forme de conception de broderie machine open source basée sur Inkscape.
+Notre objectif est d'être accessible aux amateurs tout en fournissant la puissance nécessaire aux numériseurs professionnels.
 
-In this tutorial series we are going through all important functions of Ink/Stitch.
-For each tutorial you will see the Ink/Stitch version used while recording.
-If you are using an other version of Ink/Stitch there might be some differences within the interface and functionality.
-In this case, we would appreciate if you would contact us through our github repository, so we can update the video for you.
+Dans cette série de didacticiels, nous allons parcourir toutes les fonctions importantes de Ink/Stitch.Pour chaque tutoriel, vous verrez la version d'Ink/Stitch utilisée pendant l'enregistrement.Si vous utilisez une autre version de Ink/Stitch, il peut y avoir des différences au niveau de l'interface et des fonctionnalités.Dans ce cas, nous apprécierions que vous nous contactiez via notre référentiel github, afin que nous puissions mettre à jour la vidéo.
 
-Also if things are going too fast or are not understandable for whatever reason, file an issue on github - because only then we can improve the video when it needs an update for a newer Ink/Stitch version.
+De plus, si les choses vont trop vite ou ne sont pas compréhensibles pour quelque raison que ce soit, signalez le problème sur github - car ce n'est qu'alors que nous pourrons améliorer la vidéo lors d'une mise à jour pour une nouvelle version d'Ink/Stitch.
 
-We will try to keep the videos up to date, which sometimes is not an easy task, since Ink/Stitch is a very active project. This will mean, that some videos will be disappearing as it is not possible to keep the same url for updated videos.
-We recommend to link to the tutorials playlist and not to specific videos directly.
+Nous essaierons de maintenir les vidéos à jour, ce qui n'est parfois pas une tâche facile, car Ink/Stitch est un projet très actif. Cela signifie que certaines vidéos disparaîtront car il n'est pas possible de conserver la même URL pour les vidéos mises à jour.
+Nous vous recommandons de créer un lien vers la liste de lecture des didacticiels et non directement vers des vidéos spécifiques.
 
-The videos are not trying to teach digitizing for embroidery itself, there are much better ressources for this. These videos are meant to explain the Ink/Stitch way of creating embroidery files.
-If you don't know Inkscape you might want to learn their basics first.
+Les vidéos n'essaient pas d'enseigner la numérisation pour la broderie elle-même, il existe de bien meilleures ressources pour cela. Ces vidéos sont destinées à expliquer la façon dont Ink/Stitch est utilisé pour créer des fichiers de broderie.Si vous ne connaissez pas Inkscape, vous devriez peut-être d'abord apprendre ses bases.
 
-In these tutorials we often use shortcut keys. In the bottom right corner you will see in most videos a keyboard indicator.
-But be aware, that some shortcut keys were individually set in the customize tutorial.
-Shortcut key combinations not mentioned in this video are native shortcut keys from Inkscape and can be used without any customization.
+Dans ces didacticiels, nous utilisons souvent des touches de raccourci. Dans le coin inférieur droit, vous verrez dans la plupart des vidéos un indicateur de clavier.
+Mais sachez que certaines touches de raccourci ont été définies individuellement dans le didacticiel de personnalisation.
+Les combinaisons de touches de raccourci non mentionnées dans cette vidéo sont des touches de raccourci natives d'Inkscape et peuvent être utilisées sans aucune personnalisation.
 
-Whenever you have questions or remarks you are welcome on github to discuss your issue.
-We have a section on our homepage were you could publish your Ink/Stitch created designs.
-We are very curious to see, what you will create.
+Chaque fois que vous avez des questions ou des remarques, vous êtes les bienvenus sur github pour discuter de votre problème.
+Nous avons une section sur notre page d'accueil où vous pouvez publier vos créations avec Ink/Stitch.
+Nous sommes très curieux de voir ce que vous allez créer.
 
-Have fun with this tutorial series, we hope it will make it easy for you to express your creativity in stitched out designs.
-
+Amusez-vous avec cette série de tutoriels, nous espérons qu'elle vous permettra d'exprimer facilement votre créativité dans des designs brodés.
 [← Back](/tutorials/resources/beginner-video-tutorials/)
