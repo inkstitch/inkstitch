@@ -162,9 +162,10 @@ jobs:
         shell: bash
         run: |
           if [[ "${GITHUB_REF}" =~ ^refs/tags/v[0-9.]+$ ]]; then
-            echo "::set-env name=release_tag::${GITHUB_REF}"
+            tag="${GITHUB_REF#refs/tags/}"
+            echo "::set-env name=release_tag::${tag}"
             echo "::set-env name=prerelease::false"
-            echo "::set-env name=title::${GITHUB_REF}"
+            echo "::set-env name=title::${tag}"
           else
             branch="${GITHUB_REF#refs/heads/}"
             tag="dev-build-$(echo $branch | tr / -)"
