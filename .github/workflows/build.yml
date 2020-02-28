@@ -161,7 +161,7 @@ jobs:
       - name: determine release info
         shell: bash
         run: |
-          if [[ "${GITHUB_REF}" =~ ^v[0-9.]+$ ]]; then
+          if [[ "${GITHUB_REF}" =~ ^refs/tags/v[0-9.]+$ ]]; then
             echo "::set-env name=release_tag::${GITHUB_REF}"
             echo "::set-env name=prerelease::false"
             echo "::set-env name=title::${GITHUB_REF}"
