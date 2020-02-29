@@ -34,17 +34,31 @@ Le `LOCALE` sélectionné affecte les menus à l'intérieur d'Inkscape. Les dial
 **Tip:** Ink/Stitch n’existe pas dans votre langue?<br>Aidez-nous à [traduire les dialogues dans votre langue maternelle](/fr/developers/localize/).
 {: .notice--info }
 
-Langue|Linux (64bit)|Windows|macOS
+Language|Linux (64bit)|Windows|macOS
 ---|---|---|---
-**Allemand**|<i class="fa fa-download " ></i> [Linux]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-x86_64-de_DE.tar.gz)|<i class="fa fa-download " ></i> [Windows]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-win32-de_DE.zip)|<i class="fa fa-download " ></i> [Sierra]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-sierra-x86_64-de_DE.tar.gz)<br><i class="fa fa-download " ></i> [High Sierra]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-high_sierra-x86_64-de_DE.tar.gz)<br><i class="fa fa-download " ></i> [Mojave + Catalina]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-mojave-x86_64-de_DE.tar.gz)|
-**Anglais**|<i class="fa fa-download " ></i> [Linux]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-x86_64-en_US.tar.gz)|<i class="fa fa-download " ></i> [Windows]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-win32-en_US.zip)|<i class="fa fa-download " ></i> [Sierra]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-sierra-x86_64-en_US.tar.gz)<br><i class="fa fa-download " ></i> [High Sierra]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-high_sierra-x86_64-en_US.tar.gz)<br><i class="fa fa-download " ></i> [Mojave + Catalina]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-mojave-x86_64-en_US.tar.gz)|
-**Français**|<i class="fa fa-download " ></i> [Linux]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-x86_64-fr_FR.tar.gz)|<i class="fa fa-download " ></i> [Windows]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-win32-fr_FR.zip)|<i class="fa fa-download " ></i> [Sierra]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-sierra-x86_64-fr_FR.tar.gz)<br><i class="fa fa-download " ></i> [High Sierra]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-high_sierra-x86_64-fr_FR.tar.gz)<br><i class="fa fa-download " ></i> [Mojave + Catalina]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-mojave-x86_64-fr_FR.tar.gz)|
+**Allemand**|<i class="fa fa-download " ></i> [Linux]({{ site.github.releases_url }}/latest/download/inkstitch-refs-tags-{{ site.github.latest_release.tag_name }}-linux-de_DE.zip)|<i class="fa fa-download " ></i> [Windows]({{ site.github.releases_url }}/latest/download/inkstitch-refs-tags-{{ site.github.latest_release.tag_name }}-windows-de_DE.zip)|<i class="fa fa-download " ></i> [macOS (Catalina)]({{ site.github.releases_url }}/latest/download/inkstitch-refs-tags-{{ site.github.latest_release.tag_name }}-osx-de_DE-2413e616807472808f5ce86132e58016.zip)|
+**Anglais**|<i class="fa fa-download " ></i> [Linux]({{ site.github.releases_url }}/latest/download/inkstitch-refs-tags-{{ site.github.latest_release.tag_name }}-linux-en_US-ff55eccaa4069d9cbcd2dd74890e3797.zip)|<i class="fa fa-download " ></i> [Windows]({{ site.github.releases_url }}/latest/download/inkstitch-refs-tags-{{ site.github.latest_release.tag_name }}-windows-en_US.zip)|<i class="fa fa-download " ></i> [macOS (Catalina)]({{ site.github.releases_url }}/latest/download/inkstitch-refs-tags-{{ site.github.latest_release.tag_name }}-osx-en_US.zip)|
+**Finnois**|<i class="fa fa-download " ></i> [Linux]({{ site.github.releases_url }}/latest/download/inkstitch-refs-tags-{{ site.github.latest_release.tag_name }}-linux-fi_FI.zip)|<i class="fa fa-download " ></i> [Windows]({{ site.github.releases_url }}/latest/download/inkstitch-refs-tags-{{ site.github.latest_release.tag_name }}-windows-fi_FI.zip)|<i class="fa fa-download " ></i> [macOS (Catalina)]({{ site.github.releases_url }}/latest/download/inkstitch-refs-tags-{{ site.github.latest_release.tag_name }}-osx-fi_FI.zip)|
+**Français**|<i class="fa fa-download " ></i> [Linux]({{ site.github.releases_url }}/latest/download/inkstitch-refs-tags-{{ site.github.latest_release.tag_name }}-linux-fr_FR.zip)|<i class="fa fa-download " ></i> [Windows]({{ site.github.releases_url }}/latest/download/inkstitch-refs-tags-{{ site.github.latest_release.tag_name }}-windows-fr_FR.zip)|<i class="fa fa-download " ></i> [macOS (Catalina)]({{ site.github.releases_url }}/latest/download/inkstitch-refs-tags-{{ site.github.latest_release.tag_name }}-osx-fr_FR.zip)|
 {: .inline-table }
 
-**Info:** Ink/Stitch pour macOS fonctionne actuellement seulement avec Sierra (10.12) et supérieur.
-{: .notice--warning }
+**Dernière version:** [Ink/Stitch {{ site.github.latest_release.tag_name }} ({{ site.github.latest_release.published_at | date: "%Y-%m-%d" }})](https://github.com/inkstitch/inkstitch/releases/latest)
 
-*Dernière version: [Ink/Stitch {{ site.github.latest_release.tag_name }} ({{ site.github.latest_release.published_at | date: "%Y-%m-%d" }})](https://github.com/inkstitch/inkstitch/releases/latest)*
+**Info:** Ink/Stitch pour macOS fonctionne actuellement seulement avec Catalina (10.15) et supérieur.
+Pour les anciennes versions de macOS, utilisez Ink/Stitch 1.26.2 (2019-08-20):
+<br>**Allemand:**
+<i class="fa fa-download " ></i> [Sierra]({{ site.github.releases_url }}/v1.26.2/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-sierra-x86_64-de_DE.tar.gz),
+<i class="fa fa-download " ></i> [High Sierra]({{ site.github.releases_url }}/v1.26.2/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-high_sierra-x86_64-de_DE.tar.gz),
+<i class="fa fa-download " ></i> [Mojave]({{ site.github.releases_url }}/v1.26.2/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-mojave-x86_64-de_DE.tar.gz)
+<br>**Anglais:**
+<i class="fa fa-download " ></i> [Sierra]({{ site.github.releases_url }}/v1.26.2/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-sierra-x86_64-en_US.tar.gz),
+<i class="fa fa-download " ></i> [High Sierra]({{ site.github.releases_url }}/v1.26.2/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-high_sierra-x86_64-en_US.tar.gz),
+<i class="fa fa-download " ></i> [Mojave]({{ site.github.releases_url }}/v1.26.2/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-mojave-x86_64-en_US.tar.gz)
+<br>**Français:**
+<i class="fa fa-download " ></i> [Sierra]({{ site.github.releases_url }}/v1.26.2/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-sierra-x86_64-fr_FR.tar.gz),
+<i class="fa fa-download " ></i> [High Sierra]({{ site.github.releases_url }}/v1.26.2/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-high_sierra-x86_64-fr_FR.tar.gz),
+<i class="fa fa-download " ></i> [Mojave]({{ site.github.releases_url }}/v1.26.2/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-mojave-x86_64-fr_FR.tar.gz)
+{: .notice--warning }
 
 ### 2. Installation
  * Dans Inkscape, aller à  `Edition > Préferences > Systeme` et cherchez où se trouve votre fichier `Extensions utilisateur`.

@@ -1,7 +1,7 @@
 {% comment %}
   This page is included into: 
     * _pages/namespace.md 
-    * _developers/002-004-namespace.md
+    * _developers/{LANG}/002-004-namespace.md
     Please update the last_modified parameter in those files when updating this content.
 {% endcomment %}
 

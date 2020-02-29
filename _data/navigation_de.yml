@@ -72,6 +72,8 @@ docs:
       url: /de/docs/import-export/
     - title: "Troubleshoot Objects"
       url: /de/docs/troubleshoot/
+    - title: "Stickeinstellungen entfernen"
+      url: /de/docs/remove-embroidery-settings/
   - title: Stich-Bibliothek
     children:
       - title: "Manueller Stich"

@@ -76,6 +76,8 @@ docs:
       url: /fr/docs/import-export/
     - title: "Dépannage pour objets"
       url: /fr/docs/troubleshoot/
+    - title: "Remove Embroidery Settings"
+      url: /fr/docs/remove-embroidery-settings/
   - title: "Bibliothèque de points"
     url: /fr/docs/stitch-library/
     children:

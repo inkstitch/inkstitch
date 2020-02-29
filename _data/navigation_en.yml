@@ -76,6 +76,8 @@ docs:
       url: /docs/import-export/
     - title: "Troubleshoot Objects"
       url: /docs/troubleshoot/
+    - title: "Remove Embroidery Settings"
+      url: /docs/remove-embroidery-settings/
   - title: "Stitch Library"
     url: /docs/stitch-library/
     children:
