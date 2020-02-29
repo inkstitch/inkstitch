@@ -1,6 +1,6 @@
 {%- if page.lang != 'en' -%}
     {%- assign en_page_exists = false -%}
-    {%- assign page_lang= page.lang | prepend: '/' | append: '/' -%}
+    {%- assign page_lang = page.lang | prepend: '/' | append: '/' -%}
     {%- unless page.is_post == true -%}
       {%- assign en_url = page.url | replace: page_lang, '/' -%}
       {%- if page.is_page -%}

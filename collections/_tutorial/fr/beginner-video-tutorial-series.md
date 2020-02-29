@@ -25,7 +25,7 @@ Nous vous souhaitons un bon début avec Ink/Stitch!
 ## 01 Introduction
 {% include video id="PTcSRuCA1Aw" provider="youtube" %}
 
-[transcript](/fr/tutorials/resources/beginner-video-tutorials/01-intro-transcript), [subtitles](/assets/files/beginner-tutorial-series-subtitles/en/01-introduction-captions.srt)
+[transcript](/fr/tutorials/resources/beginner-video-tutorials/01-intro-transcript), [subtitles](/assets/files/beginner-tutorial-series-subtitles/fr/01-introduction-captions.srt)
 
 ## 02 Installation
 ### Linux
@@ -52,7 +52,7 @@ Nous vous souhaitons un bon début avec Ink/Stitch!
 |[03:20](https://youtube.com/watch?v=gmOVLNh9cu8&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=3&amp;t=200s) |Testrun|
 {: .table-full-width }
 
-[transcript](/tutorials/resources/beginner-video-tutorials/02-install-transcript), [subtitles](/assets/files/beginner-tutorial-series-subtitles/fr/02-install-mac-captions.srt)
+[transcript](/fr/tutorials/resources/beginner-video-tutorials/02-install-transcript), [subtitles](/assets/files/beginner-tutorial-series-subtitles/fr/02-install-mac-captions.srt)
 
 ### Windows
 {% include video id="U5htzWZSjA8" provider="youtube" %}
@@ -65,7 +65,7 @@ Nous vous souhaitons un bon début avec Ink/Stitch!
 |[02:50](https://youtube.com/watch?v=U5htzWZSjA8&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=4&amp;t=170s) |Testrun|
 {: .table-full-width }
 
-[transcript](/tutorials/resources/beginner-video-tutorials/02-install-transcript), [subtitles](/assets/files/beginner-tutorial-series-subtitles/en/02-install-windows-captions.srt)
+[transcript](/fr/tutorials/resources/beginner-video-tutorials/02-install-transcript), [subtitles](/assets/files/beginner-tutorial-series-subtitles/fr/02-install-windows-captions.srt)
 
 ## 03 Customize
 {% include video id="1p9gyeV2tK0" provider="youtube" %}

@@ -1,116 +1,115 @@
 1
 00:00:06,000 --> 00:00:09,000
-Welcome to the Ink/Stitch beginner tutorial series.
+Bienvenue dans la série de tutoriels pour débutants Ink/Stitch.
 
 2
 00:00:09,200 --> 00:00:15,200
-Ink/Stitch is an open source machine embroidery design platform based on Inkscape.
+Ink/Stitch est une plate-forme de conception de broderie machine open source basée sur Inkscape.
 
 3
 00:00:15,440 --> 00:00:22,940
-Our goal is to be approachable for hobbyists while also providing the power needed by professional digitizers.
+Notre objectif est d'être accessible aux amateurs tout en fournissant la puissance nécessaire aux numériseurs professionnels.
 
 4
 00:00:23,240 --> 00:00:28,340
-In this tutorial series we are going through all important functions of Ink/Stitch.
+Dans cette série de didacticiels, nous allons parcourir toutes les fonctions importantes de Ink/Stitch.
 
 5
 00:00:28,680 --> 00:00:33,580
-For each tutorial you will see the Ink/Stitch version used while recording.
+Pour chaque tutoriel, vous verrez la version d'Ink/Stitch utilisée pendant l'enregistrement.
 
 6
 00:00:34,060 --> 00:00:40,820
-If you are using an other version of Ink/Stitch there might be some differences within the interface and functionality.
+Si vous utilisez une autre version de Ink/Stitch, il peut y avoir des différences au niveau de l'interface et des fonctionnalités.
 
 7
 00:00:41,400 --> 00:00:49,240
-In this case, we would appreciate if you would contact us through our github repository, so we can update the video for you.
+Dans ce cas, nous apprécierions que vous nous contactiez via notre référentiel github, afin que nous puissions mettre à jour la vidéo.
 
 8
 00:00:49,600 --> 00:00:52,980
-Also if things are going too fast or are not
+De plus, si les choses vont trop vite ou ne sont pas
 
 9
 00:00:53,080 --> 00:00:55,260
-understandable for whatever reason,
+compréhensibles pour quelque raison que ce soit,
 
 10
 00:00:55,460 --> 00:00:57,200
-file an issue on github -
+signalez le problème sur github -
 
 11
 00:00:57,440 --> 00:01:04,140
-because only then we can improve the video when it needs an update for a newer Ink/Stitch version.
+car ce n'est qu'alors que nous pourrons améliorer la vidéo lors d'une mise à jour pour une nouvelle version d'Ink/Stitch.
 
 12
 00:01:04,580 --> 00:01:07,300
-We will try to keep the videos up to date
+Nous essaierons de maintenir les vidéos à jour,
 
 13
 00:01:07,300 --> 00:01:09,220
-which sometimes is not an easy task
+ce qui n'est parfois pas une tâche facile,
 
 14
 00:01:09,220 --> 00:01:12,460
-since ink stitch is a very active project
+car Ink/Stitch est un projet très actif.
 
 15
 00:01:12,740 --> 00:01:18,200
-this will mean that some videos will be disappearing as it is not possible to keep the
+Cela signifie que certaines vidéos disparaîtront car il n'est pas possible de conserver la
 
 16
 00:01:18,820 --> 00:01:21,420
-same URL for updated videos.
+même URL pour les vidéos mises à jour.
 
 17
 00:01:21,740 --> 00:01:27,520
-We recommend to link to the tutorial playlist and not to the specific videos directly.
+Nous vous recommandons de créer un lien vers la liste de lecture des didacticiels et non directement vers des vidéos spécifiques.
 
 18
 00:01:28,000 --> 00:01:34,620
-The videos are not trying to teach digitizing for embroidery itself. There are much better resources for this
+Les vidéos n'essaient pas d'enseigner la numérisation pour la broderie elle-même, il existe de bien meilleures ressources pour cela.
 
 19
 00:01:35,200 --> 00:01:40,140
-These videos are meant to explain the Ink/Stitch way of creating embroidery files.
+Ces vidéos sont destinées à expliquer la façon dont Ink/Stitch est utilisé pour créer des fichiers de broderie.
 
 20
 00:01:41,020 --> 00:01:45,420
-If you don't know Inkscape, you might want to learn their basics first
+Si vous ne connaissez pas Inkscape, vous devriez peut-être d'abord apprendre ses bases.
 
 21
 00:01:45,800 --> 00:01:49,020
-In these tutorials we often use shortcut keys.
+Dans ces didacticiels, nous utilisons souvent des touches de raccourci.
 
 22
 00:01:49,020 --> 00:01:54,660
-In the bottom right corner you will see in most videos a keyboard indicator.
+Dans le coin inférieur droit, vous verrez dans la plupart des vidéos un indicateur de clavier.
 
 23
 00:01:54,920 --> 00:02:00,780
-Be aware that some shortcut keys are individually set in the customize tutorial.
+Mais sachez que certaines touches de raccourci ont été définies individuellement dans le didacticiel de personnalisation.
 
 24
 00:02:01,610 --> 00:02:09,309
-Shortcut key combinations not mentioned in this video are native shortcut keys from Inkscape and can be used without any customization.
+Les combinaisons de touches de raccourci non mentionnées dans cette vidéo sont des touches de raccourci natives d'Inkscape et peuvent être utilisées sans aucune personnalisation.
 
 25
 00:02:10,459 --> 00:02:15,549
-Whenever you have questions or remarks you are welcome on GitHub to discuss your issue.
+Chaque fois que vous avez des questions ou des remarques, vous êtes les bienvenus sur github pour discuter de votre problème.
 
 26
 00:02:16,190 --> 00:02:21,969
-We have a section on our homepage were you could publish your Ink/Stitch created designs.
+Nous avons une section sur notre page d'accueil où vous pouvez publier vos créations avec Ink/Stitch.
 
 27
 00:02:22,640 --> 00:02:25,900
-We are very curious to see, what you will create.
+Nous sommes très curieux de voir ce que vous allez créer.
 
 28
 00:02:26,220 --> 00:02:28,220
-Have fun with this tutorial series.
+Amusez-vous avec cette série de tutoriels,
 
 29
 00:02:28,620 --> 00:02:33,060
-We hope it will make it easy for you to express your creativity in stitched out designs.
-
+nous espérons qu'elle vous permettra d'exprimer facilement votre créativité dans des designs brodés.
