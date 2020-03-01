@@ -93,6 +93,10 @@ $text-color: #000;
   clear: both;
 }
 
+.page__content h2 {
+    border-bottom: 3px solid #ccc;
+}
+
 .page__content p, .page__content li, .page__content dl {
   font-size: 0.8rem;
 }
