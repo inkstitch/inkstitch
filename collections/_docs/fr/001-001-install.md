@@ -7,7 +7,7 @@ toc: true
 ---
 ## Guide vidéo
 
-Nous fournissons aussi aux débutants des tutoriels vidéo sur notre <i class="fab fa-youtube"></i> [chaine YouTube](https://www.youtube.com/channel/UCJCDCFuT_xQoI55e10HRiRw). Les vidéos sont en anglais. Mais il y a des sous-titres français.
+Nous fournissons aussi aux débutants des tutoriels vidéo sur notre <i class="fab fa-youtube"></i> [chaine YouTube](https://www.youtube.com/channel/UCJCDCFuT_xQoI55e10HRiRw). Les vidéos sont en anglais. Mais il y a des sous-titres en français.
 
 Pour le processus d'installation regarder la vidéo pour votre système d'exploitation
 * <i class="fab fa-linux"></i> [Linux](https://www.youtube.com/watch?v=Dkb5UvsZUNg&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=2)
@@ -35,7 +35,7 @@ Le `LOCALE` sélectionné affecte les menus à l'intérieur d'Inkscape. Les dial
 **Tip:** Ink/Stitch n’existe pas dans votre langue?<br>Aidez-nous à [traduire les dialogues dans votre langue maternelle](/fr/developers/localize/).
 {: .notice--info }
 
-Language|Linux (64bit)|Windows|macOS (Catalina) [[?]](#macos)
+Langage|Linux (64bit)|Windows|macOS (Catalina) [[?]](#macos)
 ---|---|---|---
 **Allemand**|<i class="fa fa-download " ></i> [Linux]({{ site.github.releases_url }}/latest/download/inkstitch-refs-tags-{{ site.github.latest_release.tag_name }}-linux-de_DE.zip)|<i class="fa fa-download " ></i> [Windows]({{ site.github.releases_url }}/latest/download/inkstitch-refs-tags-{{ site.github.latest_release.tag_name }}-windows-de_DE.zip)|<i class="fa fa-download " ></i> [macOS]({{ site.github.releases_url }}/latest/download/inkstitch-refs-tags-{{ site.github.latest_release.tag_name }}-osx-de_DE-2413e616807472808f5ce86132e58016.zip)|
 **Anglais**|<i class="fa fa-download " ></i> [Linux]({{ site.github.releases_url }}/latest/download/inkstitch-refs-tags-{{ site.github.latest_release.tag_name }}-linux-en_US-ff55eccaa4069d9cbcd2dd74890e3797.zip)|<i class="fa fa-download " ></i> [Windows]({{ site.github.releases_url }}/latest/download/inkstitch-refs-tags-{{ site.github.latest_release.tag_name }}-windows-en_US.zip)|<i class="fa fa-download " ></i> [macOS]({{ site.github.releases_url }}/latest/download/inkstitch-refs-tags-{{ site.github.latest_release.tag_name }}-osx-en_US.zip)|
@@ -46,11 +46,11 @@ Language|Linux (64bit)|Windows|macOS (Catalina) [[?]](#macos)
 **Dernière version:** [Ink/Stitch {{ site.github.latest_release.tag_name }} ({{ site.github.latest_release.published_at | date: "%Y-%m-%d" }})](https://github.com/inkstitch/inkstitch/releases/latest)
 
 ### 2. Installation
- * Dans Inkscape, aller à  `Edition > Préferences > Systeme` et cherchez où se trouve votre fichier `Extensions utilisateur`.
- * Decompresser l'archive Ink/Stitch **directement** dans ce fichier.<br />
+ * Dans Inkscape, aller à  `Edition > Préferences > Systeme` et cherchez où se trouve votre dossier `Extensions`.
+ * Decompresser l'archive Ink/Stitch **directement** dans ce dossier.<br />
   Ce dossier doit présenter une structure semblable à l'exemple ci-dessous (avec juste un tas de fichiers en plus):
    ![File Structure](/assets/images/docs/en/file_structure.png)
- * Redémarrer Inkscape.
+ * Redémarrez Inkscape.
  * Vous trouverez alors Ink/Stitch sous `Extensions > Ink/Stitch`.
 
 #### Linux:
@@ -88,14 +88,14 @@ Pour les anciennes versions de macOS, utilisez Ink/Stitch 1.26.2 (2019-08-20):
 
 #### Windows
 
- * Faites afficher le répertoire caché AppData (aller à  `C:\Users\%USERNAME%\`, e.g. `C:\Users\Janet`)
- * Dézipper dans `C:\Users\%USERNAME%\AppData\Roaming\inkscape\extensions`
+ * Faites afficher le répertoire caché AppData (aller à  `C:\Users\%USERNAME%\`, par exemple `C:\Users\Janet`)
+ * Dézippez dans `C:\Users\%USERNAME%\AppData\Roaming\inkscape\extensions`
 
 ## Mise à jour
 
  * Il faut d'abord effacer tous les fichiers de l'ancienne extension:<br />
    Ouvrez le répertoire des extensions et supprimez chaque dossier ou fichier inkstitch*.
- * Puid procédez comme ci-dessus.
+ * Puis procédez comme ci-dessus.
 
 **Astuce:** Inscrivez-vous aux news pour avoir connaissance des mises à jour d'Ink/Stitch:<br />
  <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [GitHub Feed on new Releases](https://github.com/inkstitch/inkstitch/releases.atom)<br>
@@ -106,5 +106,5 @@ Pour les anciennes versions de macOS, utilisez Ink/Stitch 1.26.2 (2019-08-20):
 
 ## Installation manuelle
 
-C'est possible d'installer Ink/Stitch manuellemnt. Ce n'est cependant pas recommander - 0 moins que vous vouliez participer au développement de l'extension.
-Dans ce cas jetez un coup d'oeil à la section [documentation developpeur](/fr/developers/inkstitch/manual-setup/).
+C'est possible d'installer Ink/Stitch manuellemnt. Ce n'est cependant pas recommandé - A moins que vous vouliez participer au développement de l'extension.
+Dans ce cas jetez un coup d'oeil à la section [documentation développeur](/fr/developers/inkstitch/manual-setup/).
