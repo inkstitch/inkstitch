@@ -9,7 +9,7 @@ toc: true
 
 Nous fournissons aussi aux débutants des tutoriels vidéo sur notre <i class="fab fa-youtube"></i> [chaine YouTube](https://www.youtube.com/channel/UCJCDCFuT_xQoI55e10HRiRw). Les vidéos sont en anglais. Mais il y a des sous-titres en français.
 
-Pour le processus d'installation regarder la vidéo pour votre système d'exploitation
+Pour le processus d'installation regardez la vidéo pour votre système d'exploitation
 * <i class="fab fa-linux"></i> [Linux](https://www.youtube.com/watch?v=Dkb5UvsZUNg&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=2)
 * <i class="fab fa-apple"></i> [macOS](https://www.youtube.com/watch?v=gmOVLNh9cu8&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=3)
 * <i class="fab fa-windows"></i> [Windows](https://www.youtube.com/watch?v=U5htzWZSjA8&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=4)
@@ -46,8 +46,8 @@ Langage|Linux (64bit)|Windows|macOS (Catalina) [[?]](#macos)
 **Dernière version:** [Ink/Stitch {{ site.github.latest_release.tag_name }} ({{ site.github.latest_release.published_at | date: "%Y-%m-%d" }})](https://github.com/inkstitch/inkstitch/releases/latest)
 
 ### 2. Installation
- * Dans Inkscape, aller à  `Edition > Préferences > Systeme` et cherchez où se trouve votre dossier `Extensions`.
- * Decompresser l'archive Ink/Stitch **directement** dans ce dossier.<br />
+ * Dans Inkscape, allez à  `Edition > Préferences > Systeme` et cherchez où se trouve votre dossier `Extensions`.
+ * Décompressez l'archive Ink/Stitch **directement** dans ce dossier.<br />
   Ce dossier doit présenter une structure semblable à l'exemple ci-dessous (avec juste un tas de fichiers en plus):
    ![File Structure](/assets/images/docs/en/file_structure.png)
  * Redémarrez Inkscape.
