@@ -2,8 +2,6 @@
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
     <name>{% trans %}Embroider{% endtrans %}</name>
     <id>org.inkstitch.embroider.{{ locale }}</id>
-    <dependency type="executable" location="extensions">inkstitch.py</dependency>
-    <dependency type="executable" location="extensions">inkex.py</dependency>
     <param name="collapse_len_mm" type="float" min="0.0" max="10.0" _gui-text="{% trans %}Collapse length (mm){% endtrans %}" _gui-description="{% trans %}Jump stitches smaller than this will be treated as normal stitches.{% endtrans %}">3.0</param>
     <param name="hide_layers" type="boolean" _gui-text="{% trans %}Hide other layers{% endtrans %}" _gui-description="{% trans %}Hide all other top-level layers when the embroidery layer is generated, in order to make stitching discernible.{% endtrans %}">true</param>
     <param name="output_format" type="optiongroup" _gui-text="{% trans %}Output file format{% endtrans %}" appearance="minimal">

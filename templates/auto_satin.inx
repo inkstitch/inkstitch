@@ -2,8 +2,6 @@
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
     <name>{% trans %}Auto-Route Satin Columns{% endtrans %}</name>
     <id>org.inkstitch.auto_satin.{{ locale }}</id>
-    <dependency type="executable" location="extensions">inkstitch.py</dependency>
-    <dependency type="executable" location="extensions">inkex.py</dependency>
     <param name="trim" type="boolean" _gui-text="{% trans %}Trim jump stitches{% endtrans %}">true</param>
     <param name="preserve_order" type="boolean" _gui-text="{% trans %}Preserve order of satin columns{% endtrans %}">false</param>
     <param name="extension" type="string" gui-hidden="true">auto_satin</param>

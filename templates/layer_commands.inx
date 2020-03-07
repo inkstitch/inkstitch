@@ -2,8 +2,6 @@
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
     <name>{% trans %}Add Layer Commands{% endtrans %}</name>
     <id>org.inkstitch.layer_commands.{{ locale }}</id>
-    <dependency type="executable" location="extensions">inkstitch.py</dependency>
-    <dependency type="executable" location="extensions">inkex.py</dependency>
     <param name="description" type="description">{% trans %}Commands will be added to the currently-selected layer.{% endtrans %}</param>
     {% for command, description in layer_commands %}
     <param name="{{ command }}" type="boolean" _gui-text="{{ _(description) }}">false</param>
