@@ -7,7 +7,7 @@ main:
   - title: "Tutorials"
     url: /tutorials/
   - title: "Get Help"
-    url: /docs/get-help/
+    url: /docs/faq/
   - title: "Get Involved"
     url: /developers/introduction/
     
@@ -24,8 +24,8 @@ pages:
         url: /docs/workflow/
       - title: Stitch Library
         url: /docs/stitch-library/
-      - title: "Get Help"
-        url: /docs/get-help/
+      - title: "FAQ"
+        url: /docs/faq/
   - title: "Tutorials"
     url: /tutorials/
     children:
@@ -105,8 +105,6 @@ docs:
         url: /docs/inkscape-tips/
   - title: Troubleshooting
     children:
-      - title: "Get help"
-        url: /docs/get-help/
       - title: "F.A.Q."
         url: /docs/faq/
       - title: Error Messages

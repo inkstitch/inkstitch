@@ -7,7 +7,7 @@ main:
   - title: "Tutorials"
     url: /de/tutorials/
   - title: "Hilfe"
-    url: /de/docs/get-help/
+    url: /de/docs/faq/
   - title: "Mitmachen"
     url: /de/developers/introduction/
     
@@ -22,8 +22,8 @@ pages:
         url: /de/docs/install/
       - title: "Arbeitsablauf"
         url: /de/docs/workflow/
-      - title: "Hilfe"
-        url: /de/docs/get-help/
+      - title: "FAQ"
+        url: /de/docs/faq/
   - title: "Tutorials"
     url: /de/tutorials/
     children:
@@ -100,8 +100,6 @@ docs:
         url: /de/docs/inkscape-tips/
   - title: Fehlerbehebung
     children:
-      - title: "Hilfe"
-        url: /de/docs/get-help/
       - title: "F.A.Q."
         url: /de/docs/faq/
       - title: Fehlermeldungen
