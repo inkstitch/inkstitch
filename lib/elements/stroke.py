@@ -74,17 +74,6 @@ class Stroke(EmbroideryElement):
         return self.get_int_param("repeats", 1)
 
     @property
-    @param('ties',
-           _('Ties'),
-           tooltip=_('Add ties. Manual stitch will not add ties.'),
-           type='boolean',
-           default=True,
-           sort_index=4)
-    @cache
-    def ties(self):
-        return not self.get_boolean_param("ties", True)
-
-    @property
     def paths(self):
         path = self.parse_path()
 

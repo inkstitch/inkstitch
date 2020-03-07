@@ -24,7 +24,7 @@ class Patch:
 
     def __add__(self, other):
         if isinstance(other, Patch):
-            return Patch(self.color, self.stitches + other.stitches)
+            return Patch(self.color, self.stitches + other.stitches, stitch_as_is=self.stitch_as_is)
         else:
             raise TypeError("Patch can only be added to another Patch")
 
@@ -36,7 +36,7 @@ class Patch:
         self.stitches.append(stitch)
 
     def reverse(self):
-        return Patch(self.color, self.stitches[::-1])
+        return Patch(self.color, self.stitches[::-1], stitch_as_is=self.stitch_as_is)
 
 
 class Param(object):
@@ -167,6 +167,17 @@ class EmbroideryElement(object):
 
         width = convert_length(width)
         return width * self.stroke_scale
+
+    @property
+    @param('ties',
+           _('Ties'),
+           tooltip=_('Add ties. Manual stitch will not add ties.'),
+           type='boolean',
+           default=True,
+           sort_index=4)
+    @cache
+    def ties(self):
+        return not self.get_boolean_param("ties", True)
 
     @property
     def path(self):
