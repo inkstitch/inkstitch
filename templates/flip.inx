@@ -14,6 +14,6 @@
         </effects-menu>
     </effect>
     <script>
-        <command reldir="extensions" interpreter="python">inkstitch.py</command>
+        {{ command_tag | safe }}
     </script>
 </inkscape-extension>

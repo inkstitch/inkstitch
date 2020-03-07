@@ -16,6 +16,6 @@
     {% set params = "output_params_" + format + ".xml" %}
     {% include params ignore missing %}
     <script>
-        <command reldir="extensions" interpreter="python">inkstitch.py</command>
+        {{ command_tag | safe }}
     </script>
 </inkscape-extension>

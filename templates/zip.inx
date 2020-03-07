@@ -16,6 +16,6 @@
     {% endfor %}
     <param name="extension" type="string" gui-hidden="true">zip</param>
     <script>
-        <command reldir="extensions" interpreter="python">inkstitch.py</command>
+        {{ command_tag | safe }}
     </script>
 </inkscape-extension>

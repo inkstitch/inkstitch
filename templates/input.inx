@@ -12,6 +12,6 @@
     </input>
     <param name="extension" type="string" gui-hidden="true">input</param>
     <script>
-        <command reldir="extensions" interpreter="python">inkstitch.py</command>
+        {{ command_tag | safe }}
     </script>
 </inkscape-extension>

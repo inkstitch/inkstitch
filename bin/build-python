@@ -55,7 +55,3 @@ mv dist/bin dist/inkstitch
 if [ "$BUILD" = "osx" ]; then
     rm -rf dist/inkstitch.app/
 fi
-
-# Inkscape doesn't let us run native binaries as extensions(?!).  Instead we
-# add this stub script which executes the binary that pyinstaller creates.
-cp stub.py dist/inkstitch.py
