@@ -1,0 +1,47 @@
+name: Translations
+on:
+  schedule:
+    - cron: '0 0 * * *'
+jobs:
+  crowdin:
+    runs-on: ubuntu-16.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: master
+          token: ${{secrets.INKSTITCH_BUILDS_GITHUB_TOKEN}}
+      - name: checkout submodules
+        run: |
+          git submodule update --init --recursive
+      - uses: actions/setup-python@v1
+        with:
+          python-version: '2.7.x'
+      - env:
+          CROWDIN_API_KEY: ${{ secrets.CROWDIN_API_KEY }}
+        run: |
+          git config --global user.email "inkstitch-crowdin@lex.gd"
+          git config --global user.name "Ink/Stitch Crowdin integration"
+
+          wget --quiet https://downloads.crowdin.com/cli/v2/crowdin-cli.zip
+          unzip -j crowdin-cli.zip
+
+          sudo apt-get install python2.7
+          python -m pip install --upgrade pip
+          python -m pip install flask==0.* jinja2 Babel ./pyembroidery
+
+          make messages.po
+          echo "uploading messages.po to crowdin"
+          java -jar crowdin-cli.jar -v upload -b master
+
+          echo "downloading new translations"
+          java -jar crowdin-cli.jar -v pull -b master
+
+          # Try to only commit if translations changed.  Crowdin will update all
+          # files when a new translation string is added but we don't need to
+          # commit those until folks actually translate the new strings.
+          if git diff translations | grep -qE '^[-+]msgstr ".+"$'; then
+            git add translations
+            git commit -m "new translations from Crowdin"
+            git push https://github.com/inkstitch/inkstitch master
+          fi
