@@ -13,7 +13,7 @@ toc: true
 Eine Satinkolumne wird aus zwei **meist parallel verlaufenden Linien** gebildet. Ink/Stitch zeichnet ein Zick-Zack Muster zwischen den beiden Linien hin und her. Die Breite der Kolumne kann beliebig variiert werden.
 
 * Kombiniere zwei Linien mit `Pfad > Kombinieren` oder benutze `Strg + K`.
-* [Überprüfe die Pfad-Richtungen](/docs/customize/#enabling-path-outlines--direction). Damit die Satinkolumne erzeugt werden kann, müssen sie gleich sein.<br />Wenn dies nicht der Fall ist, wähle mit dem *Node Editor Tool* (`N`) einen Punkt eines Unterpfads und führe ein `Pfad -> Richtung umkehren` durch. Dadurch wird nur der ausgewählte Unterpfad umgekehrt.
+* [Überprüfe die Pfad-Richtungen](/docs/customize/#enabling-path-outlines--direction). Damit die Satinkolumne erzeugt werden kann, müssen sie gleich sein.<br />Wenn dies nicht der Fall ist, wähle mit dem *Knoten-Werkzeug* (`N`) einen Punkt eines Unterpfads und führe ein `Pfad -> Richtung umkehren` durch. Dadurch wird nur der ausgewählte Unterpfad umgekehrt.
 * Benutze die Knoten- oder die Sprossenmethode wie unten beschrieben.
 * Wähle dann die Satinkolumne und führe `Erweiterungen > Ink/Stitch > Paramter`, oder eine [Benutzerdefinierte Tastenkombination](/docs/customize/) aus.
 
@@ -24,7 +24,7 @@ Abhängig von der Komplexität des Entwurfs kann diese Methode zeitaufwendig sei
 
 ## Die Sprossen Methode
 
-Die Sprossenmethode gibt mehr Kontrolle darüber, wie die Satinkolumne erstellt wird. Eine gute Positionierung der Punkte auf jeder der beiden Linien hilft, die Stichrichtungen richtig zu machen. Es gibt jedoch Situationen, in denen Richtungslinien ("Sprossen") für Satinkolumnen hinzugefügt werden müssen:
+Die Sprossenmethode gibt mehr Kontrolle darüber, wie die Satinkolumne erstellt wird. Eine gute Positionierung der Punkte auf jeder der beiden Linien hilft, die Stichrichtungen zu setzen. Es gibt jedoch Situationen, in denen Richtungslinien ("Sprossen") für Satinkolumnen hinzugefügt werden müssen:
 
 * Einige knifflige Eckareale
 * Komplizierte Zeichnungen, bei denen das positionieren von den Knoten schwierig und zeitaufwendig ist
@@ -38,7 +38,7 @@ Die Sprossenmethode gibt mehr Kontrolle darüber, wie die Satinkolumne erstellt 
 * Verwende diese wie vorhanden oder passe die Sprossen oder Bahnen an
 
 **Manuelles Hinzufügen von Sprossen**
-* Stelle sicher, dass der vorhandene Satinpfad (mit den zwei Unterpfaden) mit dem Node-Editor-Werkzeug ausgewählt ist.
+* Stelle sicher, dass der vorhandene Satinpfad (mit den zwei Unterpfaden) mit dem Knoten-Werkzeug ausgewählt ist.
 * Drücke `P` oder wähle das Freihandlinien-Werkzeug.
 * Halte die Umschalttaste gedrückt.
 * Klicke einmal für den Anfang der Sprosse.
@@ -50,7 +50,8 @@ Die Sprossenmethode gibt mehr Kontrolle darüber, wie die Satinkolumne erstellt 
 Original Design von [Liv Iko](https://thenounproject.com/liv_iko/collection/birds/?i=898697) bearbeitet von [EDUTECH Wiki](https://edutechwiki.unige.ch/en/InkStitch)
 {: style="font-size: 0.5rem;"}
 
-**Info:** Die Sprossen müssen weiter sein als die Satinkolumne selbst. Andernfalls wechselt Ink/Stitch die Richtung oder es erscheint folgende Meldung: `error: satin column: One or more of the rungs doesn't intersect both rails.  Each rail should intersect both rungs once.`
+**Info:** Wir empfehlen dringend mindestens drei "Sprossen" zu nutzen.
+Wenn du genau zwei Sprossen (und zwei Holme) nutzt, ist es schwer für Ink/Stitch zu entscheiden, was Sprosse und was Holm ist.
 {: .notice--warning }
 
 ## Parameter

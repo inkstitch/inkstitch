@@ -50,7 +50,7 @@ La méthode des traverses vous donnera plus de contrôle sur le rendu de la colo
   Dessin original de [Liv Iko](https://thenounproject.com/liv_iko/collection/birds/?i=898697) modifié par [EDUTECH Wiki](https://edutechwiki.unige.ch/en/InkStitch)
 {: style="font-size: 0.5rem;"}
 
-**Info:** Les traverses doivent être plus courtes que la colonne satin elle-même. Sinon Ink/Stitch changera de direction ou vous recevrez le message suivant: `error: satin column: One or more of the rungs doesn't intersect both rails.  Each rail should intersect both rungs once.`
+**Info:** We strongly recommend to use at least three rungs. If you use exactly two rungs (and two rails) it is hard for Ink/stitch to decide which is which.
 {: .notice--warning }
 
 ## Paramètres

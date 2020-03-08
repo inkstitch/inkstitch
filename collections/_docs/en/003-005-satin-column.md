@@ -53,7 +53,7 @@ The rung method will give you more control over the way the satin column is rend
   Original design by [Liv Iko](https://thenounproject.com/liv_iko/collection/birds/?i=898697) edited by [EDUTECH Wiki](https://edutechwiki.unige.ch/en/InkStitch)
 {: style="font-size: 0.5rem;"}
 
-**Info:** Rungs have to be shorter than the satin column itself. Otherwise Ink/Stitch will switch directions or you receive the following message: `error: satin column: One or more of the rungs doesn't intersect both rails.  Each rail should intersect both rungs once.`
+**Info:** We strongly recommend to use at least three rungs. If you use exactly two rungs (and two rails) it is hard for Ink/stitch to decide which is which.
 {: .notice--warning }
 
 ## Params
