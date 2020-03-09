@@ -1,194 +1,189 @@
 1
 00:00:06,180 --> 00:00:09,620
-Welcome to the Ink/Stitch beginner tutorial series.
+Bienvenue dans la série de tutoriels pour débutants Ink/Stitch.
 
 2
 00:00:10,420 --> 00:00:13,440
-In this part we are going to customize Inkscape.
+Dans cette partie, nous allons personnaliser Inkscape.
 
 3
 00:00:13,820 --> 00:00:16,020
-The customizations are not mandatory,
+Les personnalisations ne sont pas obligatoires,
 
 4
 00:00:16,160 --> 00:00:19,660
-but they will make it more comfortable working with Ink/Stitch.
+mais elles rendront plus confortable le travail avec Ink / Stitch.
 
 5
 00:00:22,020 --> 00:00:24,400
-This tutorial will teach how to:
+Ce tutoriel vous apprendra à:
 
 6
 00:00:24,960 --> 00:00:27,320
-Install Ink/Stitch Addons for Inkscape
+installer les "Addons" d'Ink/Stitch pour Inkscape
 
 7
 00:00:28,300 --> 00:00:32,640
-The Ink/Stitch Add-ons installer will add manufacturer color palettes
+Le programme d'installation des addons Ink/Stitch ajoutera des palettes de couleurs des fabricants
 
 8
 00:00:32,640 --> 00:00:37,300
-and Ink/Stitch specific symbols to your Inkscape installation.
+et des symboles spécifiques à Ink/Stitch dans votre installation d'Inkscape.
 
 9
 00:00:38,920 --> 00:00:43,760
-Define shortcut keys for fast and easy access to often used functions.
+Définissez des touches de raccourci pour un accès rapide et facile aux fonctions souvent utilisées.
 
 10
 00:00:43,960 --> 00:00:47,820
-Display path outlines to make the stitch direction visible.
+Affichez les contours du chemin pour rendre visible la direction de broderie.
 
 11
 00:00:48,180 --> 00:00:50,540
-Use grids to align your pattern.
+Utilisez des grilles pour aligner votre motif.
 
 12
 00:00:51,340 --> 00:00:55,220
-Create and load templates as a basic page setup.
+Créez et chargez des modèles en tant que mise en page de base.
 
 13
 00:00:56,240 --> 00:00:58,960
-Let's start with the Ink/Stitch Add-ons.
+Commençons avec les Add-ons d' Ink/Stitch .
 
 14
 00:01:00,080 --> 00:01:08,960
-In fact these Add-ons are two files which need to be placed in specific folders of your Inkscape installation.
+En fait, ces Add-ons sont deux fichiers qui doivent être placés dans des dossiers spécifiques de votre installation Inkscape.
 
 15
 00:01:09,620 --> 00:01:17,280
-Run 'Extensions > Ink/Stitch  > Install add-ons for Inkscape' and click install.
-
+Exécutez «Extensions>Ink/Stitch>Installer des modules complémentaires pour Inkscape» et cliquez sur installer.
 16
 00:01:18,520 --> 00:01:22,940
-You will have to restart Inkscape for this to have any effect.
+Vous devrez redémarrer Inkscape pour que cela ait un effet.
 
 17
 00:01:23,900 --> 00:01:28,620
-Open the color palettes panel and you will find a lot of new palettes.
+Ouvrez le panneau des palettes de couleurs et vous trouverez de nombreuses nouvelles palettes.
 
 18
 00:01:29,120 --> 00:01:32,920
-They all start with Ink/Stitch, so you can easily recognize them.
+Ils commencent tous par Ink/Stitch, vous pouvez donc facilement les reconnaître.
 
 19
 00:01:34,520 --> 00:01:39,740
-Now you can plan your design directly with your thread manufacturers color palettes.
+Vous pouvez maintenant concevoir votre motif directement avec les palettes de couleurs des fabricants de fils.
 
 20
 00:01:49,840 --> 00:01:55,920
-Thread names will also be displayed in the browser output so you can share it directly with your customer.
+Les noms des fils seront également affichés dans la fiche afin que vous puissiez les partager directement avec votre client.
 
 21
 00:02:01,740 --> 00:02:05,880
-The second feature we will get to know better in the visual commands tutorial.
+La deuxième fonctionnalité que nous apprendrons à mieux connaître dans ce tutoriel porte sur les commandes visuelles.
 
 22
 00:02:07,700 --> 00:02:15,720
-It made symbols available, which will be used to give Ink/Stitch more information about the way your design should be stitched out.
-
+Ink/Stitch fournit des symboles, qui seront utilisés pour donner au logiciel plus d'informations sur la façon dont votre motif doit être brodé.
 23
 00:02:16,960 --> 00:02:21,180
-Let's add e.g. an ignore symbol to one object.
+par exemple ajouter ou ignorer un symbole pour un objet.
 
 24
 00:02:22,040 --> 00:02:27,020
-It indicates, that this particular object should not be stitched at all.
+Cela indique que cet objet particulier ne doit pas du tout être brodé.
 
 25
 00:02:28,120 --> 00:02:30,120
-Create two objects
+Créez deux objets
 
 26
 00:02:37,860 --> 00:02:39,860
-and run the simulator.
+et lancez le simulateur.
 
 27
 00:02:45,520 --> 00:02:47,520
-Both objects are displayed.
+Les deux objets sont affichés.
 
 28
 00:02:51,140 --> 00:02:59,460
-With one object selected go to 'Extensions > Ink/Stitch  > Commands > Attach command to selected Objects'.
+Avec un objet sélectionné, allez à 'Extensions > Ink/Stitch  > Commandes > Ajouter des commandes à des objets sélectionnés'.
 
 29
 00:02:59,820 --> 00:03:03,760
-Enable the ignore checkbox and click on 'Apply'.
+Cochez la case Ignorer et cliquez sur 'Appliquer'.
 
 30
 00:03:08,840 --> 00:03:10,840
-Now run the simulator again.
+Lancez à nouveau le simulateur.
 
 31
 00:03:13,240 --> 00:03:16,460
-Only one of the two objects is being shown.
+Un seul des deux objets est affiché.
 
 32
 00:03:17,500 --> 00:03:26,100
-There are many more options in the visual commands section, but for now we have more customizations to do.
+Il y a beaucoup plus d'options dans la section des commandes visuelles, mais pour l'instant nous avons plus de personnalisations à faire.
 
 33
 00:03:29,080 --> 00:03:33,700
-In Ink/Stitch there are many functions which you will be frequently using.
+Dans Ink/Stitch il existe de nombreuses fonctions que vous utiliserez fréquemment.
 
 34
 00:03:35,180 --> 00:03:38,660
-You do not really want to click through the menu all the time.
+Vous ne voulez pas vraiment cliquer tout le temps sur le menu.
 
 35
 00:03:38,660 --> 00:03:42,960
-This means you will be wanting to use keyboard shortcuts.
+Cela signifie que vous souhaiterez utiliser des raccourcis clavier.
 
 36
 00:03:44,400 --> 00:03:47,220
-We will not go through all possibilities here,
-
+Nous ne verrons pas toutes les possibilités ici,
 37
 00:03:47,220 --> 00:03:52,600
-but only show you how to setup shortcut keys, so you can add more later.
+Voyons uniquement comment configurer les touches de raccourci, afin que vous puissiez en ajouter plus tard.
 
 38
 00:03:53,800 --> 00:04:00,200
-There is a list on inkstitch.org to give you further advice which key combinations you could use.
-
+Il y a une liste sur inkstitch.org pour vous donner des conseils supplémentaires sur les combinaisons de touches que vous pourriez utiliser.
 39
 00:04:01,560 --> 00:04:04,780
-Open the Preferences through 'Edit > Preferences'.
+Ouvrez les Preferences avec 'Edition > Preferences'.
 
 40
 00:04:04,780 --> 00:04:08,520
-Navigate to "Interface" and choose "Keyboard Shortcuts".
-
+Accédez à "Interface" et choisissez "Raccourcis clavier".
 41
 00:04:09,940 --> 00:04:11,500
-Search for "params".
+Recherchez "paramètres".
 
 42
 00:04:11,500 --> 00:04:13,500
-You will find it under "Extensions".
+Vous le trouverez sous "Extensions".
 
 43
 00:04:13,500 --> 00:04:18,240
-Click into the field below "Shortcut" and enter "Ctrl+Shift+P".
+Cliquez dans le champ sous "Raccourci" et entrez "Ctrl + Maj + P".
 
 44
 00:04:20,760 --> 00:04:25,440
-Next search for "simulate" and enter "Ctrl+Shift+L"
+Recherchez ensuite "simuler" et entrez "Ctrl + Maj + L"
 
 45
 00:04:34,700 --> 00:04:39,380
-Then add "Ctrl+R" to reverse the path direction.
+Ajoutez ensuite "Ctrl + R" pour inverser la direction du chemin.
 
 46
 00:04:39,940 --> 00:04:45,120
-and finally "Page down" for "stack down" and "Page up" for "stack up"
+et enfin "Page down" pour "descendre" et "Page up" pour "monter"
 
 47
 00:04:46,560 --> 00:04:50,620
-Let's have a closer look to the stack up and down functions.
+Examinons de plus près les fonctions de pile de haut en bas.
 
 48
 00:04:52,300 --> 00:04:53,680
-Open the object panel.
+Ouvrez le panneau d'objets.
 
 49
 00:04:53,680 --> 00:05:01,040
