@@ -179,7 +179,7 @@ et enfin "Page down" pour "descendre" et "Page up" pour "monter"
 
 47
 00:04:46,560 --> 00:04:50,620
-Examinons de plus près les fonctions de pile de haut en bas.
+Examinons de plus près les fonctions d'empilement de haut en bas.
 
 48
 00:04:52,300 --> 00:04:53,680
@@ -187,157 +187,146 @@ Ouvrez le panneau d'objets.
 
 49
 00:04:53,680 --> 00:05:01,040
-It displays a full list of all layers, groups and objects in the document in it's "stacking order".
+Il affiche une liste complète de tous les calques, groupes et objets du document dans son "ordre d'empilement".
 
 50
 00:05:01,960 --> 00:05:05,240
-Remove the ignore symbol that we previously added and
+Supprimez le symbole ignorer que nous avons ajouté précédemment et
 
 51
 00:05:05,360 --> 00:05:09,360
-move the objects so that they are overlapping each other.
+déplacez les objets de sorte qu'ils se chevauchent.
 
 52
 00:05:10,740 --> 00:05:14,220
-If you use the raise and lower buttons on the first object,
+Si vous utilisez les boutons de montée et de descente du premier objet,
 
 53
 00:05:14,220 --> 00:05:17,880
-you will see, how their stacking order is changing positions.
+vous verrez comment leur position est modifiée dans l'ordre d'empilement
 
 54
 00:05:19,760 --> 00:05:23,760
-This doesn't work work if the objects are not overlapping each other.
-
+Cela ne fonctionne pas si les objets ne se chevauchent pas.
 55
 00:05:24,880 --> 00:05:31,060
-Now use your newly created shortcut keys and see, that the stacking order is changing again.
+Utilisez maintenant les touches de raccourci que vous venez de créer et voyez que l'ordre d'empilement change à nouveau.
 
 56
 00:05:31,400 --> 00:05:37,200
-The up and down buttons in the objects panel will do the same as your keyboard shortcuts.
+Les boutons haut et bas du panneau d'objets feront la même chose que vos raccourcis clavier.
 
 57
 00:05:37,920 --> 00:05:41,760
-The objects position will define the order from bottom to top
+La position des objets définira l'ordre de bas en haut
 
 58
 00:05:41,760 --> 00:05:48,580
 how your pattern is being stitched out and this makes it to be a main feature while carefully planing your design.
+dans lequel votre motif est brodé et cela en fait une fonctionnalité principale dans l'organisation de votre création.
 
 59
 00:05:54,980 --> 00:05:59,040
-Path outlines will show you the direction of the path.
-
+Les contours du chemin vous montreront la direction du chemin.
 60
 00:06:00,220 --> 00:06:05,200
-The path direction is important for all stitch types except for fill stitches.
-
+La direction du chemin est importante pour tous les types de points, sauf les points de remplissage.
 61
 00:06:06,040 --> 00:06:10,120
-It defines at which end of the stroke the stitching will begin.
+Il définit à quelle extrémité du trait la piqure commencera.
 
 62
 00:06:10,120 --> 00:06:19,620
-In 'Preferences > Tools > Node' enable the following checkboxes
-
+Dans 'Préférences> Outils> Nœud', cochez les cases suivantes
 63
 00:06:19,620 --> 00:06:25,340
-"show patch directions on outlines" and "show temporary outline for selected paths".
+"Afficher la direction du chemin sur les contours " et "Afficher le contour temporaire pour les chemins sélectionnés".
 
 64
 00:06:27,580 --> 00:06:34,180
-With objects selected press "N" to activate the node tool and enable "Show path outline".
+Avec les objets sélectionnés, appuyez sur "N" pour activer l'outil de nœud et activer "Afficher le contour du chemin".
 
 65
 00:06:35,500 --> 00:06:38,640
-You will see a red path surrounding the objects.
+Vous verrez un chemin rouge entourant les objets.
 
 66
 00:06:38,640 --> 00:06:41,620
-The spikes indicate the path direction.
+Les pointes indiquent la direction du chemin.
 
 67
 00:06:46,660 --> 00:06:51,020
-You can use grids to align patterns properly.
-
+Vous pouvez utiliser des grilles pour aligner correctement les motifs.
 68
 00:06:51,920 --> 00:06:58,420
-To activate them open 'File > Document Properties' and switch to the "Grids" tab.
-
+Pour les activer, ouvrez «Fichier> Propriétés du document» et passez à l'onglet «Grilles».
 69
 00:06:59,380 --> 00:07:06,960
-Click on New and change units to mm (this is the common unit used for stitch length etc.)
+Cliquez sur Nouveau et changez les unités en mm (il s'agit de l'unité courante utilisée pour la longueur de point, etc.)
 
 70
 00:07:07,740 --> 00:07:11,180
-and set the x- and y-spacing to 1.
-
+et définissez l'espacement x et y sur 1.
 71
 00:07:12,260 --> 00:07:15,860
-If you zoom out the major grid line will be displayed.
-
+Si vous effectuez un zoom arrière, la ligne de quadrillage principale s'affiche.
 72
 00:07:16,840 --> 00:07:27,600
-It defaults to 5, change it to 10, then you have 1 cm to be displayed.
-
+La valeur par défaut est 5, changez-la en 10, puis vous avez 1 cm par carreau.
 73
 00:07:31,720 --> 00:07:36,000
-Your objects will will snap to the grid edges by default.
-
+Vos objets s'aligneront par défaut sur les traits de la grille.
 74
 00:07:36,040 --> 00:07:45,060
 You can change this by disabling snapping or disable "Snap to grids only".
+Vous pouvez modifier en désactivant le magnétisme ou en désactivant "Aimenter aux grilles" uniquement.
 
 75
 00:07:51,020 --> 00:07:59,420
-If you want to temporarily hide the grid, hit # or change it through the menu: 'View > Page Grid'.
+Si vous souhaitez masquer temporairement la grille, appuyez sur # ou modifiez-la via le menu: 'Affichage> Grille'.
 
 76
 00:08:01,900 --> 00:08:08,500
-Also have a look at the panel "Align and Distribute" which you can find under 'Objects' in the menu.
-
+Jetez également un œil au panneau "Aligner et distribuer" que vous pouvez trouver sous "Objets" dans le menu.
 77
 00:08:09,660 --> 00:08:13,140
-Here you can find a lot of useful aligning methods.
+Vous y trouverez de nombreuses méthodes d'alignement utiles.
 
 78
 00:08:23,080 --> 00:08:28,420
-It seems to be no fun to set up the same document properties over and over again.
+Il n'est pas amusant de configurer les mêmes propriétés de document encore et encore.
 
 79
 00:08:29,060 --> 00:08:35,220
-You would rather like to open a new document and it has the size of your embroidery frame.
+Vous préférez ouvrir un nouveau document qui a la taille de votre cadre de broderie.
 
 80
 00:08:35,780 --> 00:08:37,780
-Well, that is possible.
+Eh bien, c'est possible.
 
 81
 00:08:38,260 --> 00:08:44,060
-Once you organized everything as desired, simply save your file in your templates folder.
+Une fois que vous avez tout organisé comme vous le souhaitez, enregistrez simplement votre fichier dans votre dossier de modèles.
 
 82
 00:08:44,880 --> 00:08:49,720
-Select the template folder path for your operating system from the description below.
+Sélectionnez le chemin du dossier de modèles pour votre système d'exploitation dans la description ci-dessous.
 
 83
 00:09:00,780 --> 00:09:06,980
-You can now access your template through 'File > New from template'
+Vous pouvez désormais accéder à votre modèle via 'Fichier> Nouveau à partir d'un modèle'
 
 84
 00:09:07,760 --> 00:09:13,980
-On inkstitch.org you can even download a predefined template with various hoop sizes.
+Sur inkstitch.org, vous pouvez même télécharger un modèle prédéfini avec différentes tailles de cadre.
 
 85
 00:09:14,620 --> 00:09:16,620
-We hope you enjoyed the tutorial.
+Nous espérons que vous avez apprécié le tutoriel.
 
 86
 00:09:17,780 --> 00:09:20,560
-Now you are all set to start your creative work.
-
+Vous êtes maintenant prêt à démarrer votre travail créatif.
 87
 00:09:21,320 --> 00:09:26,480
-If you have any questions about Ink/Stitch, please contact us on GitHub.
-
+Si vous avez des questions sur Ink/Stitch, veuillez nous contacter sur GitHub.
