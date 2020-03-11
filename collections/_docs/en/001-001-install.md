@@ -73,17 +73,17 @@ $ unzip inkstitch-refs-tags-{{ site.github.latest_release.tag_name }}-osx-en_US.
 **Info:** Ink/Stitch for macOS currently works only with **Catalina (10.15)**.<br>
 If you have an older macOS version, get Ink/Stitch v1.26.2 (2019-08-20):
 <br>**English:**
-<i class="fa fa-download " ></i> [Sierra]({{ site.github.releases_url }}/v1.26.2/download/inkstitch-v1.26.2}-osx-sierra-x86_64-en_US.tar.gz),
-<i class="fa fa-download " ></i> [High Sierra]({{ site.github.releases_url }}/v1.26.2/download/inkstitch-v1.26.2-osx-high_sierra-x86_64-en_US.tar.gz),
-<i class="fa fa-download " ></i> [Mojave]({{ site.github.releases_url }}/v1.26.2/download/inkstitch-v1.26.2-osx-mojave-x86_64-en_US.tar.gz)
+<i class="fa fa-download " ></i> [Sierra]({{ site.github.releases_url }}/download/v1.26.2/inkstitch-v1.26.2-osx-sierra-x86_64-en_US.tar.gz),
+<i class="fa fa-download " ></i> [High Sierra]({{ site.github.releases_url }}/download/v1.26.2/inkstitch-v1.26.2-osx-high_sierra-x86_64-en_US.tar.gz),
+<i class="fa fa-download " ></i> [Mojave]({{ site.github.releases_url }}/download/v1.26.2/inkstitch-v1.26.2-osx-mojave-x86_64-en_US.tar.gz)
 <br>**French:**
-<i class="fa fa-download " ></i> [Sierra]({{ site.github.releases_url }}/v1.26.2/download/inkstitch-v1.26.2-osx-sierra-x86_64-fr_FR.tar.gz),
-<i class="fa fa-download " ></i> [High Sierra]({{ site.github.releases_url }}/v1.26.2/download/inkstitch-v1.26.2-osx-high_sierra-x86_64-fr_FR.tar.gz),
-<i class="fa fa-download " ></i> [Mojave]({{ site.github.releases_url }}/v1.26.2/download/inkstitch-v1.26.2-osx-mojave-x86_64-fr_FR.tar.gz)
+<i class="fa fa-download " ></i> [Sierra]({{ site.github.releases_url }}/download/v1.26.2/inkstitch-v1.26.2-osx-sierra-x86_64-fr_FR.tar.gz),
+<i class="fa fa-download " ></i> [High Sierra]({{ site.github.releases_url }}/download/v1.26.2/inkstitch-v1.26.2-osx-high_sierra-x86_64-fr_FR.tar.gz),
+<i class="fa fa-download " ></i> [Mojave]({{ site.github.releases_url }}/download/v1.26.2/inkstitch-v1.26.2-osx-mojave-x86_64-fr_FR.tar.gz)
 <br>**German:**
-<i class="fa fa-download " ></i> [Sierra]({{ site.github.releases_url }}/v1.26.2/download/inkstitch-v1.26.2-osx-sierra-x86_64-de_DE.tar.gz),
-<i class="fa fa-download " ></i> [High Sierra]({{ site.github.releases_url }}/v1.26.2/download/inkstitch-v1.26.2-osx-high_sierra-x86_64-de_DE.tar.gz),
-<i class="fa fa-download " ></i> [Mojave]({{ site.github.releases_url }}/v1.26.2/download/inkstitch-v1.26.2-osx-mojave-x86_64-de_DE.tar.gz)
+<i class="fa fa-download " ></i> [Sierra]({{ site.github.releases_url }}/download/v1.26.2/inkstitch-v1.26.2-osx-sierra-x86_64-de_DE.tar.gz),
+<i class="fa fa-download " ></i> [High Sierra]({{ site.github.releases_url }}/download/v1.26.2/inkstitch-v1.26.2-osx-high_sierra-x86_64-de_DE.tar.gz),
+<i class="fa fa-download " ></i> [Mojave]({{ site.github.releases_url }}/download/v1.26.2/inkstitch-v1.26.2-osx-mojave-x86_64-de_DE.tar.gz)
 {: .notice--warning }
 
 #### Windows
