@@ -80,7 +80,7 @@ Nous vous souhaitons un bon début avec Ink/Stitch!
 |[08:20](https://youtube.com/watch?v=1p9gyeV2tK0&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=5&amp;t=500s)|Templates|
 {: .table-full-width }
 
-[transcript](/tutorials/resources/beginner-video-tutorials/03-customize-transcript), [subtitles](/assets/files/beginner-tutorial-series-subtitles/en/03-customize-captions.srt)
+[transcript](/fr/tutorials/resources/beginner-video-tutorials/03-customize-transcript), [subtitles](/assets/files/beginner-tutorial-series-subtitles/fr/03-customize-captions.srt)
 
 ## 04 Stitch Types
 ### Stroke Type Stitches
@@ -95,7 +95,7 @@ Nous vous souhaitons un bon début avec Ink/Stitch!
 |[04:19](https://youtube.com/watch?v=S_NiFiI6cPY&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=8&amp;t=259s) | Manual Stitch|
 {: .table-full-width }
 
-[transcript](/tutorials/resources/beginner-video-tutorials/04-stitch-types-transcript), [subtitles](/assets/files/beginner-tutorial-series-subtitles/en/04-stitch-types-stroke-captions.srt)
+[transcript](/fr/tutorials/resources/beginner-video-tutorials/04-stitch-types-transcript), [subtitles](/assets/files/beginner-tutorial-series-subtitles/fr/04-stitch-types-stroke-captions.srt)
 
 ### Fill Stitches
 {% include video id="Dn1cVOxlX8c" provider="youtube" %}
@@ -109,7 +109,7 @@ Nous vous souhaitons un bon début avec Ink/Stitch!
 |[03:16](https://youtube.com/watch?v=Dn1cVOxlX8c&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=6&amp;t=196s) |Start- and Endposition|
 {: .table-full-width }
 
-[transcript](/tutorials/resources/beginner-video-tutorials/04-stitch-types-transcript), [subtitles](/assets/files/beginner-tutorial-series-subtitles/en/04-stitch-types-fill-captions.srt)
+[transcript](/fr/tutorials/resources/beginner-video-tutorials/04-stitch-types-transcript), [subtitles](/assets/files/beginner-tutorial-series-subtitles/fr/04-stitch-types-fill-captions.srt)
 
 ### Satin Column
 {% include video id="U7YtajKlftQ" provider="youtube" %}
@@ -133,12 +133,12 @@ Nous vous souhaitons un bon début avec Ink/Stitch!
 |[11:10](https://youtube.comatch?v=U7YtajKlftQ&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=7&amp;t=670s) |**E-Stitch**|
 {: .table-full-width }
 
-[transcript](/tutorials/resources/beginner-video-tutorials/04-stitch-types-transcript), [subtitles](/assets/files/beginner-tutorial-series-subtitles/en/04-stitch-types-satin-captions.srt)
+[transcript](/fr/tutorials/resources/beginner-video-tutorials/04-stitch-types-transcript), [subtitles](/assets/files/beginner-tutorial-series-subtitles/fr/04-stitch-types-satin-captions.srt)
 
 ## 05 Lettering
 {% include video id="-Kcc970TJxM" provider="youtube" %}
 
-[transcript](/tutorials/resources/beginner-video-tutorials/05-lettering-transcript), [subtitles](/assets/files/beginner-tutorial-series-subtitles/en/05-lettering-captions.srt)
+[transcript](/fr/tutorials/resources/beginner-video-tutorials/05-lettering-transcript), [subtitles](/assets/files/beginner-tutorial-series-subtitles/fr/05-lettering-captions.srt)
 
 ## 06 Visual Commands
 {% include video id="RU0WzMYZ6ik" provider="youtube" %}
@@ -161,7 +161,7 @@ Nous vous souhaitons un bon début avec Ink/Stitch!
 |[07:26](https://youtube.com/watch?v=RU0WzMYZ6ik&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=10&amp;t=446s)| Ignore|
 {: .table-full-width }
 
-[transcript](/tutorials/resources/beginner-video-tutorials/06-visual-commands-transcript), [subtitles](/assets/files/beginner-tutorial-series-subtitles/en/06-visual-commands-captions.srt)
+[transcript](/fr/tutorials/resources/beginner-video-tutorials/06-visual-commands-transcript), [subtitles](/assets/files/beginner-tutorial-series-subtitles/fr/06-visual-commands-captions.srt)
 
 ## 07 Visualize and Export
 {% include video id="KGiSM66vC4c" provider="youtube" %}
@@ -176,7 +176,7 @@ Nous vous souhaitons un bon début avec Ink/Stitch!
 |[08:38](https://youtube.com/watch?v=KGiSM66vC4c&amp;index=11&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;t=518s) | Import|
 {: .table-full-width }
 
-[transcript](/tutorials/resources/beginner-video-tutorials/07-visualize-export-transcript), [subtitles](/assets/files/beginner-tutorial-series-subtitles/en/07-visualize-export-captions.srt)
+[transcript](/fr/tutorials/resources/beginner-video-tutorials/07-visualize-export-transcript), [subtitles](/assets/files/beginner-tutorial-series-subtitles/fr/07-visualize-export-captions.srt)
 
 ## 08 Workflow
 {% include video id="D8nCtyBH63Q" provider="youtube" %}
@@ -193,4 +193,4 @@ Nous vous souhaitons un bon début avec Ink/Stitch!
 |[11:49](https://youtube.com/watch?v=D8nCtyBH63Q&amp;t=709s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=12) | Sew Out your Design|
 {: .table-full-width }
 
-[transcript](/tutorials/resources/beginner-video-tutorials/08-workflow-transcript), [subtitles](/assets/files/beginner-tutorial-series-subtitles/en/08-workflow-captions.srt)
+[transcript](/fr/tutorials/resources/beginner-video-tutorials/08-workflow-transcript), [subtitles](/assets/files/beginner-tutorial-series-subtitles/fr/08-workflow-captions.srt)
