@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-02-02 21:59+0000\n"
-"PO-Revision-Date: 2020-02-05 22:00\n"
+"POT-Creation-Date: 2020-03-08 04:05+0000\n"
+"PO-Revision-Date: 2020-03-08 04:05\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -27,36 +27,36 @@ msgstr "Petite fonte Ink/Stitch"
 msgid "A font suited for small characters.  The capital em is 0.2 inches wide at 100% scale.  Can be scaled up to 300%."
 msgstr "Une fonte adaptée pour les petits caractères. Le \"M\" a une largeur de 5,08mm à une échelle de 100%. Il est possible de l’agrandir de 300%."
 
-#. name of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:6
-msgid "TT Masters"
-msgstr "TT masters"
-
-#. description of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:8
-msgid "A font suited for heavy typing :)"
-msgstr "Une fonte \"lourde\""
-
 #. name of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:10
+#: inkstitch-fonts-metadata.py:6
 msgid "TT Directors"
 msgstr "TT directors"
 
 #. description of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:12
+#: inkstitch-fonts-metadata.py:8
 msgid "A font suited for directing"
 msgstr "Une fonte faite pour des metteurs en scène"
 
 #. name of font in fonts/medium_font
-#: inkstitch-fonts-metadata.py:14
+#: inkstitch-fonts-metadata.py:10
 msgid "Ink/Stitch Medium Font"
 msgstr "Fonte médium pour Ink/Stitch"
 
 #. description of font in fonts/medium_font
-#: inkstitch-fonts-metadata.py:16
+#: inkstitch-fonts-metadata.py:12
 #, python-format
 msgid "A basic font suited for medium-sized characters.  The capital em is 0.6 inches wide at 100% scale.  Can be scaled down to 75% or up to 150%.  Every satin has contour underlay."
 msgstr "Une fonte idéale pour des caractères de taille moyenne. La lettre \"M\" (majuscule) a une largeur de 15,24 mm à une échelle de 100%. On peut transformer la taille entre 75% et 150%. Les points satin utilisent une sous-couches avec des lignes de contour."
+
+#. name of font in fonts/tt_masters
+#: inkstitch-fonts-metadata.py:14
+msgid "TT Masters"
+msgstr "TT masters"
+
+#. description of font in fonts/tt_masters
+#: inkstitch-fonts-metadata.py:16
+msgid "A font suited for heavy typing :)"
+msgstr "Une fonte \"lourde\""
 
 #. command attached to an object
 #: lib/commands.py:20
@@ -271,11 +271,11 @@ msgstr "Elargir la forme avant le remplissage, pour compenser les écarts entre 
 
 #: lib/elements/auto_fill.py:132 lib/elements/auto_fill.py:144
 msgid "Underpath"
-msgstr "Chemin de support (underlay)"
+msgstr "Chemin de dessous"
 
 #: lib/elements/auto_fill.py:133 lib/elements/auto_fill.py:145
 msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
-msgstr "Les points qui relient les sections sont à l'intérieur de l'objet. Les points de support ne vont pas dans le sens des lignes. Cela leur donne une apparence déchiquetée."
+msgstr "Les points qui relient les sections sont à l'intérieur de l'objet. Les points des chemins de dessous évitent d'aller dans la même direction que le dessus. Cela leur donne une apparence déchiquetée."
 
 #: lib/elements/auto_fill.py:226
 msgid "Error during autofill!  This means that there is a problem with Ink/Stitch."
@@ -584,7 +584,7 @@ msgstr "Longueur de points en mode points avants (droits)"
 
 #: lib/elements/stroke.py:44
 msgid "Bean stitch number of repeats"
-msgstr "Nombre de répétitions pour le point coulé (bean stitch)"
+msgstr "Nombre de répétitions pour le point triple (bean stitch)"
 
 #: lib/elements/stroke.py:45
 msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.  Only applies to running stitch."
@@ -1605,7 +1605,7 @@ msgstr "Broder"
 
 #: templates/embroider.inx:7
 msgid "Collapse length (mm)"
-msgstr "Longueur de fusion (mm)"
+msgstr "Distance maximale sans points d'arrêt (mm)"
 
 #: templates/embroider.inx:7
 msgid "Jump stitches smaller than this will be treated as normal stitches."
