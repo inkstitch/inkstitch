@@ -34,9 +34,9 @@ Nous vous souhaitons un bon début avec Ink/Stitch!
 |Time|Chapter (links open in YouTube)|
 |---|---|
 |[00:00](https://youtube.com/watch?v=Dkb5UvsZUNg&amp;t=0s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=2)   |Introduction|
-|[00:32](https://youtube.com/watch?v=Dkb5UvsZUNg&amp;t=32s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=2)  |Requirements|
-|[01:43](https://youtube.com/watch?v=Dkb5UvsZUNg&amp;t=103s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=2) |Install|
-|[02:44](https://youtube.com/watch?v=Dkb5UvsZUNg&amp;t=164s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=2) |Testrun|
+|[00:32](https://youtube.com/watch?v=Dkb5UvsZUNg&amp;t=32s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=2)  |Prérequis|
+|[01:43](https://youtube.com/watch?v=Dkb5UvsZUNg&amp;t=103s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=2) |Installation|
+|[02:44](https://youtube.com/watch?v=Dkb5UvsZUNg&amp;t=164s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=2) |Test|
 {: .table-full-width }
 
 [transcript](/fr/tutorials/resources/beginner-video-tutorials/02-install-transcript), [subtitles](/assets/files/beginner-tutorial-series-subtitles/fr/02-install-linux-captions.srt)
@@ -47,9 +47,9 @@ Nous vous souhaitons un bon début avec Ink/Stitch!
 |Time|Chapter (links open in YouTube)|
 |---|---|
 |[00:00](https://youtube.com/watch?v=gmOVLNh9cu8&amp;t=0s&amp;index=3&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP)   |Introduction|
-|[00:32](https://youtube.com/watch?v=gmOVLNh9cu8&amp;t=32s&amp;index=3&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP)  |Requirements|
-|[01:40](https://youtube.com/watch?v=gmOVLNh9cu8&amp;t=100s&amp;index=3&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP) |Install|
-|[03:20](https://youtube.com/watch?v=gmOVLNh9cu8&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=3&amp;t=200s) |Testrun|
+|[00:32](https://youtube.com/watch?v=gmOVLNh9cu8&amp;t=32s&amp;index=3&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP)  |Prérequis|
+|[01:40](https://youtube.com/watch?v=gmOVLNh9cu8&amp;t=100s&amp;index=3&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP) |Installation|
+|[03:20](https://youtube.com/watch?v=gmOVLNh9cu8&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=3&amp;t=200s) |Test|
 {: .table-full-width }
 
 [transcript](/fr/tutorials/resources/beginner-video-tutorials/02-install-transcript), [subtitles](/assets/files/beginner-tutorial-series-subtitles/fr/02-install-mac-captions.srt)
@@ -60,9 +60,9 @@ Nous vous souhaitons un bon début avec Ink/Stitch!
 |Time|Chapter (links open in YouTube)|
 |---|---|
 |[00:00](https://youtube.com/watch?v=U5htzWZSjA8&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=4&amp;t=0s)   |Introduction|
-|[00:32](https://youtube.com/watch?v=U5htzWZSjA8&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=4&amp;t=32s)  |Requirements|
-|[01:40](https://youtube.com/watch?v=U5htzWZSjA8&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=4&amp;t=100s) |Install|
-|[02:50](https://youtube.com/watch?v=U5htzWZSjA8&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=4&amp;t=170s) |Testrun|
+|[00:32](https://youtube.com/watch?v=U5htzWZSjA8&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=4&amp;t=32s)  |Prérequis|
+|[01:40](https://youtube.com/watch?v=U5htzWZSjA8&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=4&amp;t=100s) |Installation|
+|[02:50](https://youtube.com/watch?v=U5htzWZSjA8&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=4&amp;t=170s) |Test|
 {: .table-full-width }
 
 [transcript](/fr/tutorials/resources/beginner-video-tutorials/02-install-transcript), [subtitles](/assets/files/beginner-tutorial-series-subtitles/fr/02-install-windows-captions.srt)
@@ -74,10 +74,10 @@ Nous vous souhaitons un bon début avec Ink/Stitch!
 |---|---|
 |[00:00](https://youtube.com/watch?v=1p9gyeV2tK0&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=5&amp;t=0s) |Introduction|
 |[00:56](https://youtube.com/watch?v=1p9gyeV2tK0&amp;t=56s&amp;index=5&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP) |Add-Ons|
-|[03:26](https://youtube.com/watch?v=1p9gyeV2tK0&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=5&amp;t=206s)|Shortcut Keys|
-|[05:52](https://youtube.com/watch?v=1p9gyeV2tK0&amp;t=352s&amp;index=5&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP)|Path Outlines|
+|[03:26](https://youtube.com/watch?v=1p9gyeV2tK0&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=5&amp;t=206s)|Raccourcis clavier|
+|[05:52](https://youtube.com/watch?v=1p9gyeV2tK0&amp;t=352s&amp;index=5&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP)|Contour de chemin|
 |[06:46](https://youtube.com/watch?v=1p9gyeV2tK0&amp;t=406s&amp;index=5&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP)|Grids|
-|[08:20](https://youtube.com/watch?v=1p9gyeV2tK0&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=5&amp;t=500s)|Templates|
+|[08:20](https://youtube.com/watch?v=1p9gyeV2tK0&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=5&amp;t=500s)|Modèles|
 {: .table-full-width }
 
 [transcript](/fr/tutorials/resources/beginner-video-tutorials/03-customize-transcript), [subtitles](/assets/files/beginner-tutorial-series-subtitles/fr/03-customize-captions.srt)
