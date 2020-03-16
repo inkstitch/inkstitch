@@ -57,6 +57,7 @@ En fait, ces Add-ons sont deux fichiers qui doivent être placés dans des dossi
 15
 00:01:09,620 --> 00:01:17,280
 Exécutez «Extensions>Ink/Stitch>Installer des modules complémentaires pour Inkscape» et cliquez sur installer.
+
 16
 00:01:18,520 --> 00:01:22,940
 Vous devrez redémarrer Inkscape pour que cela ait un effet.
