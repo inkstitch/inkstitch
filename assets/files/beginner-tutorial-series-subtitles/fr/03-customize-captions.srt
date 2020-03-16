@@ -84,6 +84,7 @@ La deuxième fonctionnalité que nous apprendrons à mieux connaître dans ce tu
 22
 00:02:07,700 --> 00:02:15,720
 Ink/Stitch fournit des symboles, qui seront utilisés pour donner au logiciel plus d'informations sur la façon dont votre motif doit être brodé.
+
 23
 00:02:16,960 --> 00:02:21,180
 par exemple ajouter ou ignorer un symbole pour un objet.
@@ -139,6 +140,7 @@ Cela signifie que vous souhaiterez utiliser des raccourcis clavier.
 36
 00:03:44,400 --> 00:03:47,220
 Nous ne verrons pas toutes les possibilités ici,
+
 37
 00:03:47,220 --> 00:03:52,600
 Voyons uniquement comment configurer les touches de raccourci, afin que vous puissiez en ajouter plus tard.
@@ -146,6 +148,7 @@ Voyons uniquement comment configurer les touches de raccourci, afin que vous pui
 38
 00:03:53,800 --> 00:04:00,200
 Il y a une liste sur inkstitch.org pour vous donner des conseils supplémentaires sur les combinaisons de touches que vous pourriez utiliser.
+
 39
 00:04:01,560 --> 00:04:04,780
 Ouvrez les Preferences avec 'Edition > Preferences'.
@@ -153,6 +156,7 @@ Ouvrez les Preferences avec 'Edition > Preferences'.
 40
 00:04:04,780 --> 00:04:08,520
 Accédez à "Interface" et choisissez "Raccourcis clavier".
+
 41
 00:04:09,940 --> 00:04:11,500
 Recherchez "paramètres".
@@ -208,6 +212,7 @@ vous verrez comment leur position est modifiée dans l'ordre d'empilement
 54
 00:05:19,760 --> 00:05:23,760
 Cela ne fonctionne pas si les objets ne se chevauchent pas.
+
 55
 00:05:24,880 --> 00:05:31,060
 Utilisez maintenant les touches de raccourci que vous venez de créer et voyez que l'ordre d'empilement change à nouveau.
@@ -222,15 +227,16 @@ La position des objets définira l'ordre de bas en haut
 
 58
 00:05:41,760 --> 00:05:48,580
-how your pattern is being stitched out and this makes it to be a main feature while carefully planing your design.
 dans lequel votre motif est brodé et cela en fait une fonctionnalité principale dans l'organisation de votre création.
 
 59
 00:05:54,980 --> 00:05:59,040
 Les contours du chemin vous montreront la direction du chemin.
+
 60
 00:06:00,220 --> 00:06:05,200
 La direction du chemin est importante pour tous les types de points, sauf les points de remplissage.
+
 61
 00:06:06,040 --> 00:06:10,120
 Il définit à quelle extrémité du trait la piqure commencera.
@@ -238,6 +244,7 @@ Il définit à quelle extrémité du trait la piqure commencera.
 62
 00:06:10,120 --> 00:06:19,620
 Dans 'Préférences> Outils> Nœud', cochez les cases suivantes
+
 63
 00:06:19,620 --> 00:06:25,340
 "Afficher la direction du chemin sur les contours " et "Afficher le contour temporaire pour les chemins sélectionnés".
@@ -257,9 +264,11 @@ Les pointes indiquent la direction du chemin.
 67
 00:06:46,660 --> 00:06:51,020
 Vous pouvez utiliser des grilles pour aligner correctement les motifs.
+
 68
 00:06:51,920 --> 00:06:58,420
 Pour les activer, ouvrez «Fichier> Propriétés du document» et passez à l'onglet «Grilles».
+
 69
 00:06:59,380 --> 00:07:06,960
 Cliquez sur Nouveau et changez les unités en mm (il s'agit de l'unité courante utilisée pour la longueur de point, etc.)
@@ -267,15 +276,19 @@ Cliquez sur Nouveau et changez les unités en mm (il s'agit de l'unité courante
 70
 00:07:07,740 --> 00:07:11,180
 et définissez l'espacement x et y sur 1.
+
 71
 00:07:12,260 --> 00:07:15,860
 Si vous effectuez un zoom arrière, la ligne de quadrillage principale s'affiche.
+
 72
 00:07:16,840 --> 00:07:27,600
 La valeur par défaut est 5, changez-la en 10, puis vous avez 1 cm par carreau.
+
 73
 00:07:31,720 --> 00:07:36,000
 Vos objets s'aligneront par défaut sur les traits de la grille.
+
 74
 00:07:36,040 --> 00:07:45,060
 You can change this by disabling snapping or disable "Snap to grids only".
@@ -288,6 +301,7 @@ Si vous souhaitez masquer temporairement la grille, appuyez sur # ou modifiez-la
 76
 00:08:01,900 --> 00:08:08,500
 Jetez également un œil au panneau "Aligner et distribuer" que vous pouvez trouver sous "Objets" dans le menu.
+
 77
 00:08:09,660 --> 00:08:13,140
 Vous y trouverez de nombreuses méthodes d'alignement utiles.
@@ -327,6 +341,7 @@ Nous espérons que vous avez apprécié le tutoriel.
 86
 00:09:17,780 --> 00:09:20,560
 Vous êtes maintenant prêt à démarrer votre travail créatif.
+
 87
 00:09:21,320 --> 00:09:26,480
 Si vous avez des questions sur Ink/Stitch, veuillez nous contacter sur GitHub.
