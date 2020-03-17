@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-03-08 04:05+0000\n"
-"PO-Revision-Date: 2020-03-08 04:05\n"
+"POT-Creation-Date: 2020-03-17 00:13+0000\n"
+"PO-Revision-Date: 2020-03-17 00:13\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Finnish\n"
 "MIME-Version: 1.0\n"
@@ -215,9 +215,9 @@ msgid "Underlay"
 msgstr "Alatäyttö"
 
 #: lib/elements/auto_fill.py:56 lib/elements/auto_fill.py:65
-#: lib/elements/auto_fill.py:81 lib/elements/auto_fill.py:92
-#: lib/elements/auto_fill.py:102 lib/elements/auto_fill.py:114
-#: lib/elements/auto_fill.py:148
+#: lib/elements/auto_fill.py:87 lib/elements/auto_fill.py:98
+#: lib/elements/auto_fill.py:108 lib/elements/auto_fill.py:120
+#: lib/elements/auto_fill.py:154
 msgid "AutoFill Underlay"
 msgstr "Automaattinen alatäyttö"
 
@@ -226,64 +226,64 @@ msgid "Fill angle"
 msgstr "Täytön suuntakulma"
 
 #: lib/elements/auto_fill.py:63
-msgid "default: fill angle + 90 deg"
-msgstr "vakio: täyttökulma + 90 astetta"
+msgid "Default: fill angle + 90 deg. Insert comma-seperated list for multiple layers."
+msgstr ""
 
-#: lib/elements/auto_fill.py:78
+#: lib/elements/auto_fill.py:84
 msgid "Row spacing"
 msgstr "Rivien välit"
 
-#: lib/elements/auto_fill.py:79
+#: lib/elements/auto_fill.py:85
 msgid "default: 3x fill row spacing"
 msgstr "vakio: 3x rivien välit"
 
-#: lib/elements/auto_fill.py:89
+#: lib/elements/auto_fill.py:95
 msgid "Max stitch length"
 msgstr "Pisin tikin pituus"
 
-#: lib/elements/auto_fill.py:90
+#: lib/elements/auto_fill.py:96
 msgid "default: equal to fill max stitch length"
 msgstr ""
 
-#: lib/elements/auto_fill.py:99
+#: lib/elements/auto_fill.py:105
 msgid "Inset"
 msgstr "Sisennys"
 
-#: lib/elements/auto_fill.py:100
+#: lib/elements/auto_fill.py:106
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
 msgstr "Kutista muotoa ennen pohjan tikkaamista, estääksesi pohjatikkien näkymisen täyttötikin ulkopuolelta."
 
-#: lib/elements/auto_fill.py:111 lib/elements/fill.py:72
+#: lib/elements/auto_fill.py:117 lib/elements/fill.py:72
 msgid "Skip last stitch in each row"
 msgstr "Hyppää yli joka rivin viimenen tikki"
 
-#: lib/elements/auto_fill.py:112 lib/elements/fill.py:73
+#: lib/elements/auto_fill.py:118 lib/elements/fill.py:73
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
 msgstr "Viimenen tikki jokaisessa rivissä on melko lähellä ensimmäistä tikkiä seuraavassa rivissä. Viimeisen tikin ohitus vähentää tikkimäärää ja tiheyttä."
 
-#: lib/elements/auto_fill.py:122
+#: lib/elements/auto_fill.py:128
 msgid "Expand"
 msgstr "Laajenna"
 
-#: lib/elements/auto_fill.py:123
+#: lib/elements/auto_fill.py:129
 msgid "Expand the shape before fill stitching, to compensate for gaps between shapes."
 msgstr "Laajenna muotoa ennen täyttöä, kompensoidaksesi muotojen välejä."
 
-#: lib/elements/auto_fill.py:132 lib/elements/auto_fill.py:144
+#: lib/elements/auto_fill.py:138 lib/elements/auto_fill.py:150
 msgid "Underpath"
 msgstr "Alipolku"
 
-#: lib/elements/auto_fill.py:133 lib/elements/auto_fill.py:145
+#: lib/elements/auto_fill.py:139 lib/elements/auto_fill.py:151
 msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
 msgstr ""
 
-#: lib/elements/auto_fill.py:226
+#: lib/elements/auto_fill.py:233
 msgid "Error during autofill!  This means that there is a problem with Ink/Stitch."
 msgstr "Virhe automaattisessa täytössä! Virhe ohjelmistossa."
 
 #. this message is followed by a URL:
 #. https://github.com/inkstitch/inkstitch/issues/new
-#: lib/elements/auto_fill.py:229
+#: lib/elements/auto_fill.py:236
 msgid "If you'd like to help us make Ink/Stitch better, please paste this whole message into a new issue at: "
 msgstr ""
 
