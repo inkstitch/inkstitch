@@ -103,10 +103,10 @@ Nous vous souhaitons un bon début avec Ink/Stitch!
 |Time|Chapter (links open in YouTube)|
 |---|---|
 |[00:00 ](https://youtube.com/watch?v=Dn1cVOxlX8c&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=6&amp;t=0s)|Introduction|
-|[01:00](https://youtube.com/watch?v=Dn1cVOxlX8c&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=6&amp;t=60s) |Path|
-|[01:37](https://youtube.com/watch?v=Dn1cVOxlX8c&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=6&amp;t=97s) |Params|
-|[02:41](https://youtube.com/watch?v=Dn1cVOxlX8c&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=6&amp;t=161s) |Underlay|
-|[03:16](https://youtube.com/watch?v=Dn1cVOxlX8c&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=6&amp;t=196s) |Start- and Endposition|
+|[01:00](https://youtube.com/watch?v=Dn1cVOxlX8c&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=6&amp;t=60s) |Chemin|
+|[01:37](https://youtube.com/watch?v=Dn1cVOxlX8c&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=6&amp;t=97s) |Paramètres|
+|[02:41](https://youtube.com/watch?v=Dn1cVOxlX8c&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=6&amp;t=161s) |Sous-couche|
+|[03:16](https://youtube.com/watch?v=Dn1cVOxlX8c&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=6&amp;t=196s) |Position de début et fin|
 {: .table-full-width }
 
 [transcript](/fr/tutorials/resources/beginner-video-tutorials/04-stitch-types-transcript), [subtitles](/assets/files/beginner-tutorial-series-subtitles/fr/04-stitch-types-fill-captions.srt)
