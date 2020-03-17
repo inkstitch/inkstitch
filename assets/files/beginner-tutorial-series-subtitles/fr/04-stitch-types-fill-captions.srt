@@ -1,140 +1,140 @@
 1
 00:00:05,780 --> 00:00:09,380
-Welcome to the Ink/Stitch beginner tutorial series.
+Bienvenue dans la série de tutoriels pour débutants Ink/Stitch.
 
 2
 00:00:09,380 --> 00:00:15,600
-In this part we are going to have a closer look which stitch types Ink/Stitch is able to perform.
+Dans cette partie, nous allons voir de plus près quels types de points Ink/Stitch peut créer.
 
 3
 00:00:15,600 --> 00:00:21,900
-We will not explain the stitch types in general, but only how to create them in Ink/Stitch.
+Nous n'expliquerons pas les types de points en général, mais seulement comment les créer dans Ink/Stitch.
 
 4
 00:00:21,900 --> 00:00:29,720
-Ink/Stitch stitch types can be roughly divided into three sections: stroke, satin and fill.
+Les types de points d'Ink/Stitch peuvent être grossièrement divisés en trois sections: trait, satin et remplissage.
 
 5
 00:00:30,440 --> 00:00:36,060
-Here is a complete list, so you can quickly navigate to the stitch type you are interested in.
+Voici une liste complète, afin que vous puissiez naviguer rapidement vers le type de point qui vous intéresse.
 
 6
 00:00:37,200 --> 00:00:40,940
-This is the tutorial about fill stitches.
+Ceci est le tutoriel sur les points de remplissage.
 
 7
 00:00:41,640 --> 00:00:45,560
-Fill stitch is used to fill big areas with a color.
+Le point de remplissage est utilisé pour remplir de grandes zones avec une couleur.
 
 8
 00:00:46,000 --> 00:00:50,840
-Ink/Stitch comes with two fill stitch types: manual and auto-fill.
+Ink/Stitch est livré avec deux types de points de remplissage: manuel et remplissage automatique.
 
 9
 00:00:51,240 --> 00:00:54,480
-We will not show manual fill in this tutorial.
+Nous ne montrerons pas le remplissage manuel dans ce tutoriel.
 
 10
 00:00:55,160 --> 00:00:59,380
-If you are interested in it, you can read more on our website.
+Si cela vous intéresse, vous pouvez en savoir plus sur notre site Web.
 
 11
 00:00:59,820 --> 00:01:03,540
-Auto-fill is the default method for generating fill stitches.
+Le remplissage automatique est la méthode par défaut pour générer des points de remplissage.
 
 12
 00:01:03,800 --> 00:01:05,940
-Create a path with a fill color.
+Créez un chemin avec une couleur de remplissage.
 
 13
 00:01:18,340 --> 00:01:23,820
-Shapes can also have holes, but should not consist of more than one section.
+Les formes peuvent également avoir des trous, mais ne doivent pas comporter plus d'une section.
 
 14
 00:01:23,820 --> 00:01:31,700
-If you need to fill a shape like the one on the right side, hit Ctrl+Shift+K to treat it as two seperate shapes.
+Si vous devez remplir une forme comme celle de droite, appuyez sur Ctrl + Maj + K pour la traiter comme deux formes distinctes.
 
 15
 00:01:40,800 --> 00:01:46,220
-Open the params dialogue and enable "Automatically routed fill stitching".
+Ouvrez la boîte de dialogue des paramètres et activez "Auto-remplissage avec des points de broderie".
 
 16
 00:01:46,540 --> 00:01:53,000
-Set the stitch angle, while 0 is horizontal. You can also use negative values.
+Réglez l'angle de point, sachant que 0 est horizontal. Vous pouvez également utiliser des valeurs négatives.
 
 17
 00:01:54,660 --> 00:02:02,120
-Expand the shape before stitching. This compensates the pull effect and helps to avoid gaps between sections.
+Elargissez la forme avant de broder. Cela compense l'effet de traction et aide à éviter les écarts entre les sections.
 
 18
 00:02:02,120 --> 00:02:09,640
-Define the maximum fill stitch length. Stitches may be shorter at the end or start of a row.
+Définissez la longueur maximale du point de remplissage. Les points peuvent être plus courts à la fin ou au début d'une rangée.
 
 19
 00:02:10,420 --> 00:02:15,060
-Set spacing between rows - and running stitch length.
+Définissez l'espacement entre les rangées et la longueur du point de remplissage.
 
 20
 00:02:16,260 --> 00:02:22,300
-With "Skip last stitch in each row" you will save a hugh amount of stitches.
+Avec "Ignorer le dernier point de chaque ligne", vous économiserez un grand nombre de points.
 
 21
 00:02:22,600 --> 00:02:27,060
-The last stitch in each row is quite close to the first stitch in the next row.
+Le dernier point de chaque ligne est assez proche du premier point de la ligne suivante.
 
 22
 00:02:27,060 --> 00:02:30,520
-Skipping it decreases stitch count and density.
+Le sauter diminue le nombre de points et la densité.
 
 23
 00:02:30,860 --> 00:02:33,700
-Influence the output with the last setting;
+Agissez sur le résultat final avec le dernier réglage;
 
 24
 00:02:33,780 --> 00:02:39,480
-where you define, how many rows apart stitches will fall into the same column position.
+où vous définissez, combien de rangées de points décalés retomberont dans la même position de colonne.
 
 25
 00:02:43,600 --> 00:02:47,020
-Fill stitch areas also need an underlay.
+Les zones de point de remplissage nécessitent également une sous-couche.
 
 26
 00:02:47,320 --> 00:02:51,400
-Switch to the "AutoFill Underlay" tab and enable "Underlay".
+Basculez vers l'onglet "Sous-couche de remplissage" et activez "Sous-couche".
 
 27
 00:02:51,560 --> 00:02:54,780
-Here you will find  the "Fill angle" setting again.
+Vous retrouverez ici le réglage "Angle de remplissage".
 
 28
 00:02:54,780 --> 00:02:59,620
-By default it will be shifted for + 90 deg to the fill stitch.
+Par défaut, il sera décalé de + 90 degrés par rapport au point de remplissage.
 
 29
 00:02:59,620 --> 00:03:05,480
-Prevent underlay from showing around the outside of the fill with "inset".
+Empêchez la sous-couche d'être visible à l'extérieur du remplissage avec "incrustation".
 
 30
 00:03:05,480 --> 00:03:13,040
-Define "max. stitch length" and "row spacing", wich defaults to 3x the spacing of the top layer.
+Définissez la «longueur de point maximale» et l'«espacement des rangs» qui est par défaut à 3x l'espacement de la couche supérieure.
 
 31
 00:03:19,040 --> 00:03:24,160
-In embroidery files you want to plan where stitching starts and ends.
+Dans les fichiers de broderie, vous souhaitez planifier le début et la fin de la broderie.
 
 32
 00:03:24,200 --> 00:03:29,320
-You can control the start and end position of a fill with visual commands.
+Vous pouvez contrôler la position de début et de fin d'un remplissage avec des commandes visuelles.
 
 33
 00:03:39,160 --> 00:03:44,440
-If you cannot follow the steps shown here, follow our visual commands tutorial.
+Si vous ne pouvez pas suivre les étapes indiquées ici, suivez notre tutoriel sur les commandes visuelles.
 
 34
 00:03:48,460 --> 00:03:50,460
-We hope you enjoyed this tutorial.
+Nous espérons que vous avez apprécié ce tutoriel.
 
 35
 00:03:50,900 --> 00:03:56,460
-You might also want to watch our videos about stroke type stitches and satin columns.
+Vous pouvez également regarder nos vidéos sur les points de type trait et les colonnes en satin.
 
