@@ -725,7 +725,7 @@ class SatinColumn(EmbroideryElement):
         forward, back = self.plot_points_on_rails(self.contour_underlay_stitch_length,
                                                   -self.contour_underlay_inset,
                                                   compensation=False)
-        return Patch(color=self.color, stitches=(forward + list(reversed(back))), stitch_as_is=self.ties)
+        return Patch(color=self.color, stitches=(forward + list(reversed(back))))
 
     def do_center_walk(self):
         # Center walk underlay is just a running stitch down and back on the
@@ -735,7 +735,7 @@ class SatinColumn(EmbroideryElement):
         forward, back = self.plot_points_on_rails(self.center_walk_underlay_stitch_length,
                                                   -100000,
                                                   compensation=False)
-        return Patch(color=self.color, stitches=(forward + list(reversed(back))), stitch_as_is=self.ties)
+        return Patch(color=self.color, stitches=(forward + list(reversed(back))))
 
     def do_zigzag_underlay(self):
         # zigzag underlay, usually done at a much lower density than the
@@ -748,7 +748,7 @@ class SatinColumn(EmbroideryElement):
         # "German underlay" described here:
         #   http://www.mrxstitch.com/underlay-what-lies-beneath-machine-embroidery/
 
-        patch = Patch(color=self.color, stitch_as_is=self.ties)
+        patch = Patch(color=self.color)
 
         sides = self.plot_points_on_rails(self.zigzag_underlay_spacing / 2.0,
                                           -self.zigzag_underlay_inset)
@@ -774,7 +774,7 @@ class SatinColumn(EmbroideryElement):
 
         # print >> dbg, "satin", self.zigzag_spacing, self.pull_compensation
 
-        patch = Patch(color=self.color, stitch_as_is=self.ties)
+        patch = Patch(color=self.color)
 
         sides = self.plot_points_on_rails(self.zigzag_spacing, self.pull_compensation)
 
@@ -792,7 +792,7 @@ class SatinColumn(EmbroideryElement):
 
         # print >> dbg, "satin", self.zigzag_spacing, self.pull_compensation
 
-        patch = Patch(color=self.color, stitch_as_is=self.ties)
+        patch = Patch(color=self.color)
 
         sides = self.plot_points_on_rails(self.zigzag_spacing, self.pull_compensation)
 
@@ -812,7 +812,7 @@ class SatinColumn(EmbroideryElement):
         # beziers.  The boundary points between beziers serve as "checkpoints",
         # allowing the user to control how the zigzags flow around corners.
 
-        patch = Patch(color=self.color, stitch_as_is=self.ties)
+        patch = Patch(color=self.color)
 
         if self.center_walk_underlay:
             patch += self.do_center_walk()

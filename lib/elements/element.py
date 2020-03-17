@@ -1,9 +1,9 @@
-from copy import deepcopy
 import sys
+from copy import deepcopy
 
-from cspsubdiv import cspsubdiv
 import cubicsuperpath
 import simplestyle
+from cspsubdiv import cspsubdiv
 
 from ..commands import find_commands
 from ..i18n import _
@@ -24,7 +24,7 @@ class Patch:
 
     def __add__(self, other):
         if isinstance(other, Patch):
-            return Patch(self.color, self.stitches + other.stitches, stitch_as_is=self.stitch_as_is)
+            return Patch(self.color, self.stitches + other.stitches)
         else:
             raise TypeError("Patch can only be added to another Patch")
 
@@ -36,7 +36,7 @@ class Patch:
         self.stitches.append(stitch)
 
     def reverse(self):
-        return Patch(self.color, self.stitches[::-1], stitch_as_is=self.stitch_as_is)
+        return Patch(self.color, self.stitches[::-1])
 
 
 class Param(object):
@@ -177,7 +177,7 @@ class EmbroideryElement(object):
            sort_index=4)
     @cache
     def ties(self):
-        return not self.get_boolean_param("ties", True)
+        return self.get_boolean_param("ties", True)
 
     @property
     def path(self):
@@ -279,6 +279,10 @@ class EmbroideryElement(object):
         self.validate()
 
         patches = self.to_patches(last_patch)
+
+        if not self.ties:
+            for patch in patches:
+                patch.stitch_as_is = True
 
         if patches:
             patches[-1].trim_after = self.has_command("trim") or self.trim_after

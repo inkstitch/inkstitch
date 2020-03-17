@@ -180,7 +180,7 @@ class Stroke(EmbroideryElement):
 
         stitches = running_stitch(repeated_path, stitch_length)
 
-        return Patch(self.color, stitches, stitch_as_is=self.ties)
+        return Patch(self.color, stitches)
 
     def to_patches(self, last_patch):
         patches = []

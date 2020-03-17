@@ -232,7 +232,7 @@ class AutoFill(Fill):
 
             self.fatal(message)
 
-        return [Patch(stitches=stitches, color=self.color, stitch_as_is=self.ties)]
+        return [Patch(stitches=stitches, color=self.color)]
 
     def validation_warnings(self):
         if self.shape.area < 20:
