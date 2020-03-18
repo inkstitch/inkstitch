@@ -350,6 +350,7 @@ La sous-couche n'est pas nécessaire pour ce type de point.
 88
 00:11:48,360 --> 00:11:55,620
 Si les points sont orientés dans le mauvais sens, utilisez simplement l'outil «intervertir les rails satin» comme décrit précédemment.
+
 89
 00:11:58,200 --> 00:12:03,360
 Nous espérons que vous avez apprécié ce tutoriel et obtenu un aperçu des types de points satin.
