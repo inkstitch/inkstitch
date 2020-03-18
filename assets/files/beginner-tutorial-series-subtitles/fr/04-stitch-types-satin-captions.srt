@@ -1,360 +1,359 @@
 1
 00:00:06,260 --> 00:00:09,860
-Welcome to the Ink/Stitch beginner tutorial series.
+Bienvenue dans la série de tutoriels pour débutants Ink/Stitch.
 
 2
 00:00:09,860 --> 00:00:16,200
-In this part we are going to have a closer look which stitch types Ink/Stitch is able to perform.
+Dans cette partie, nous allons voir de plus près quels types de points Ink/Stitch peut créer.
 
 3
 00:00:16,200 --> 00:00:22,520
-We will not explain the stitch types in general, but only how to create them in Ink/Stitch.
+Nous n'expliquerons pas les types de points en général, mais seulement comment les créer dans Ink/Stitch.
 
 4
 00:00:22,700 --> 00:00:30,400
-Ink/Stitch stitch types can be roughly divided into three sections: stroke, satin and fill.
+Les types de points d'Ink/Stitch peuvent être grossièrement divisés en trois sections: trait, satin et remplissage.
 
 5
 00:00:31,080 --> 00:00:36,800
-Here is a complete list, so you can quickly navigate to the stitch type you are interested in.
+Voici une liste complète, afin que vous puissiez naviguer rapidement vers le type de point qui vous intéresse.
 
 6
 00:00:37,400 --> 00:00:41,200
-This is the tutorial about satin columns.
+Ceci est le tutoriel sur les colonnes satin.
 
 7
 00:00:41,600 --> 00:00:47,580
-Satin stitch is mostly used for borders, letters or small fill areas.
+Le point satin est principalement utilisé pour les bordures, les lettres ou les petites zones de remplissage.
 
 8
 00:00:47,860 --> 00:00:55,940
-Ink/Stitch will draw zig-zags back and forth between two lines, while you can vary the thickness of the column as you like.
+Ink/Stitch dessine des zigzags d'avant en arrière entre deux lignes, tandis que vous pouvez varier l'épaisseur de la colonne comme vous le souhaitez.
 
 9
 00:00:57,800 --> 00:01:01,120
-There are various methods to create satin columns.
+Il existe différentes méthodes pour créer des colonnes en satin.
 
 10
 00:01:01,120 --> 00:01:09,860
-We will first show you the very basic and manual way, before we simplify the process with the help from satin tools.
+Nous allons d'abord vous montrer la manière très basique et manuelle, avant de simplifier le processus à l'aide d'outils satin.
 
 11
 00:01:11,720 --> 00:01:14,240
-So let's create two paths
+Créons donc deux chemins
 
 12
 00:01:23,700 --> 00:01:28,760
-and combine them with 'Path > Combine' or 'Ctrl + K'.
+et combinons-les avec 'Chemin> Combiner' ou 'Ctrl + K'.
 
 13
 00:01:29,800 --> 00:01:32,720
-Next we open the params dialogue
+Ensuite, nous ouvrons le dialogue de paramètres
 
 14
 00:01:35,340 --> 00:01:40,840
-and switch to the "satin column" tab, where we enable "Custom satin column".
+et basculons vers l'onglet "colonne satin", où nous cochons "colonne satin personnalisée".
 
 15
 00:01:41,560 --> 00:01:45,660
-In our example the simulator shows not what we expected.
+Dans notre exemple, le simulateur ne montre pas ce que nous attendions.
 
 16
 00:01:45,740 --> 00:01:50,720
-This is what you get, when path directions aren't the same on both sides of the rails.
+C'est ce que vous obtenez, lorsque les directions de chemin ne sont pas les mêmes sur les deux rails.
 
 17
 00:01:51,200 --> 00:01:55,920
-Activate the node tool by pressing "N" and select your satin column.
+Activez l'outil nœud en appuyant sur "N" et sélectionnez votre colonne satin.
 
 18
-00:01:56,020 --> 00:02:02,600
-If you followed our customize tutorial you will see red sparks indicating the path direction.
+00:01:56,020 --> 00:02:02,Vous pouvez influencer l'angle à l'aide des nœuds
+Si vous avez suivi notre tutoriel de personnalisation, vous verrez des pointes rouges indiquant la direction du chemin.
 
 19
 00:02:03,360 --> 00:02:12,140
-Select one node of one path and run "Path > Reverse" or use your custom shortcut key to reverse the path.
+Sélectionnez un nœud d'un chemin et exécutez "Chemin> Inverser" ou utilisez votre touche de raccourci personnalisé pour inverser le chemin.
 
 20
 00:02:17,280 --> 00:02:22,500
-If you run params again you will now see the correct satin column being animated.
+Si vous exécutez à nouveau les paramètres, vous verrez maintenant la bonne colonne de satin en simulation.
 
 21
 00:02:30,460 --> 00:02:33,580
-You can influence the angle with help of the nodes.
+Vous pouvez agir sur l'angle à l'aide des nœuds.
 
 22
 00:02:44,140 --> 00:02:48,900
-But always keep in mind, that on both rails we need the same amount of nodes.
+Mais gardez toujours à l'esprit que, sur les deux rails, nous avons besoin de la même quantité de nœuds.
 
 23
 00:02:48,900 --> 00:02:52,780
-Otherwise you will receive an error message like this.
+Sinon, vous recevrez un message d'erreur comme celui-ci.
 
 24
 00:02:53,880 --> 00:02:58,560
-This is easy to achieve in a simple path like this.
+Ceci est facile à réaliser dans un chemin simple comme celui-ci.
 
 25
 00:02:58,560 --> 00:03:04,720
-But what if you have a more complex shape and you really don't feel like counting nodes all day.
+Mais que se passe-t-il si vous avez une forme plus complexe et que vous n'avez vraiment pas envie de compter les nœuds toute la journée.
 
 26
 00:03:05,220 --> 00:03:09,900
-Well, Ink/Stitch has a solution for this. The "rung"-method.
+Eh bien, Ink/Stitch a une solution. La méthode des "traverses".
 
 27
 00:03:14,100 --> 00:03:20,240
-With the  satin column selected activate the pencil tool by pressing "P".
+Avec la colonne de satin sélectionnée, activez l'outil crayon en appuyant sur "P".
 
 28
 00:03:20,240 --> 00:03:21,254
-Hold "shift" while you draw the rung.
+Maintenez "Maj" pendant que vous dessinez le barreau.
 
 29
 00:03:24,600 --> 00:03:27,920
-Rungs have to cross both rails once.
+Les traverses doivent couper les deux rails une fois.
 
 30
 00:03:27,920 --> 00:03:34,940
-These rungs will give Ink/Stitch all the information about the stitch angle and no counting of nodes is needed.
+Ces traverses donneront à Ink/Stitch toutes les informations sur l'angle de point et plus besoin de compter les nœuds.
 
 31
 00:03:40,860 --> 00:03:48,840
-If you want the satin column to be a line of equal width, there is a very fast method to create a satin column.
+Si vous voulez que la colonne satin soit une ligne de largeur constante, il existe une méthode très rapide pour créer une colonne satin.
 
 32
 00:03:48,840 --> 00:03:50,840
-Create a path.
+Créez un chemin.
 
 33
 00:03:50,840 --> 00:03:55,660
-Make sure it is not a closed path, but has a start and an end.
+Assurez-vous que ce n'est pas un chemin fermé et qu'il a un début et une fin.
 
 34
 00:03:56,420 --> 00:04:01,220
-Set the stroke width to whatever you like your satin column to be.
+Réglez la largeur de trait sur ce que vous voulez que votre colonne de satin ait.
 
 35
 00:04:09,340 --> 00:04:16,280
-Then run "Extensions > Ink/Stitch  > Satin Tools > Convert Line to Satin Column".
+Puis exécutez "Extensions > Ink/Stitch  > Outils satin > Convertir Ligne en Satin".
 
 36
 00:04:16,680 --> 00:04:18,680
-And that's it.
+Et c'est tout.
 
 37
 00:04:22,360 --> 00:04:26,020
-Sometimes you will need to break up your path into pieces.
+Parfois, vous devrez diviser votre chemin en plusieurs morceaux.
 
 38
 00:04:26,540 --> 00:04:34,640
-This can be done manually, but if you want to keep your settings you can use a specific satin tool: "Cut Satin Column".
+Cela peut être fait manuellement, mais si vous souhaitez conserver vos paramètres, vous pouvez utiliser un outil de satin spécifique: "Scinder colonne satin".
 
 39
 00:04:35,260 --> 00:04:38,480
-To break up your column manually, select two nodes,
+Pour diviser votre colonne manuellement, sélectionnez deux nœuds,
 
 40
 00:04:40,600 --> 00:04:43,580
-one on each rail and click on
+un sur chaque rail et cliquez sur
 
 41
 00:04:44,660 --> 00:04:47,400
-"Break path at selected nodes".
+"Briser le chemin aux nœuds sélectionnés".
 
 42
 00:04:48,220 --> 00:04:56,640
-Now you have to seperate the paths by hitting "Ctrl + Shift + K" and recombine your sub-paths with "Ctrl + K".
+Maintenant, vous devez séparer les chemins en appuyant sur "Ctrl + Maj + K" et recombiner vos sous-chemins avec "Ctrl + K".
 
 43
 00:05:06,300 --> 00:05:09,600
-Using the satin tools will require two steps.
+L'utilisation des outils satin nécessitera deux étapes.
 
 44
 00:05:09,600 --> 00:05:18,760
-First select your satin column and run "Extensions > Ink/Stitch  > Commands > Attach commands to selected objects..."
+Sélectionnez d'abord votre colonne satin et exécutez "Extensions> Ink/Stitch > Commandes> Attacher des commandes aux objets sélectionnés ..."
 
 45
 00:05:18,760 --> 00:05:22,980
-and enable "Satin cut point" before you click on "Apply".
+et cochez "Point de partage" avant de cliquer sur "Appliquer".
 
 46
 00:05:24,580 --> 00:05:29,340
-Move the symbol to the exact point where you want the satin column to split up.
+Déplacez le symbole à l'endroit exact où vous souhaitez que la colonne de satin soit scindée.
 
 47
 00:05:30,120 --> 00:05:33,220
-It will split where the connector touches the rail.
+Elle se scindera là où le connecteur touche le rail.
 
 48
 00:05:37,060 --> 00:05:43,400
-Then run "Extensions > Ink/Stitch  > Satin Tools > Cut Satin Column".
+Exécutez ensuite "Extensions> Ink/Stitch > Outils Satin> Scinder colonne Satin".
 
 49
 00:05:48,500 --> 00:05:55,020
-Please note, that in params you already need the satin column to be enabled for this to work.
+Veuillez noter que dans les paramètres, vous devez avoir déjà activé Colonne satin pour que cela fonctionne.
 
 50
 00:06:09,480 --> 00:06:15,440
-"Flip Satin Column Rails" is a tool to help you plan your stitch path precisely.
+"Intervertir les rails satin" est un outil pour vous aider à organiser les points de broderie avec précision.
 
 51
 00:06:15,440 --> 00:06:25,160
-A satin column which originally starts on the left rail and ends on the right, will start on the right rail and end on the left.
+Une colonne satin qui commence à l'origine sur le rail gauche et se termine à droite, commencera sur le rail droit et se terminera sur la gauche.
 
 52
 00:06:25,820 --> 00:06:30,980
-This might shorten connections between the previous and next stitch object.
+Cela pourrait raccourcir les connexions entre le précédent et le suivant objet brodé .
 
 53
 00:06:34,880 --> 00:06:44,800
-Select the satin column and run "Extensions > Ink/Stitch  > Satin Tools > Flip Satin Columns"
+Sélectionnez la colonne satin et exécutez "Extensions > Ink/Stitch  > Outils Satin  > intervertir les rails satin"
 
 54
 00:07:05,140 --> 00:07:10,800
-Planing the order and connections of stitch objects can be very time consuming.
+La planification de l'ordre et des connexions des objets brodés peut prendre beaucoup de temps.
 
 55
 00:07:11,240 --> 00:07:16,560
-Therefore Ink/Stitch comes with a tool that will take away a lot of this work.
+Par conséquent, Ink/Stitch est livré avec un outil qui enlèvera une grande partie de ce travail.
 
 56
 00:07:17,120 --> 00:07:22,860
-"Auto-Route Satin Columns" will order your satin columns in logical stitching order.
+"Remplissage automatique de colonnes Satin " organisera vos colonnes satin dans un ordre de broderie logique.
 
 57
 00:07:24,240 --> 00:07:29,180
-It will create under-pathing and jump-stitches as necessary.
+Il créera des sous-chemins et des sauts si nécessaire.
 
 58
 00:07:29,560 --> 00:07:35,040
-Single satin columns might also be split up to avoid jump stitches.
+Les colonnes de satin simples peuvent également être divisées pour éviter des sauts de points.
 
 59
 00:07:39,740 --> 00:07:46,920
-Resulting satins will retain all of the parameters you had set on the original satins.
+Les satins résultants conserveront tous les paramètres que vous aviez définis sur les satins d'origine.
 
 60
 00:07:47,340 --> 00:07:52,460
-Select satin columns with all parameters set (underlay, etc.).
+Sélectionnez des colonnes satin avec tous les paramètres définis (sous-couches, etc.).
 
 61
 00:07:52,840 --> 00:07:59,460
-Run "Extensions > Ink/Stitch  > Satin Tools > Auto-Route Satin Columns..."
+Faire "Extensions > Ink/Stitch  > Outils Satin > Remplissage automatique de colonnes Satin..."
 
 62
 00:07:59,600 --> 00:08:03,060
-Enable desired options and click apply.
+Cochez les options souhaitées et cliquez sur Appliquer.
 
 63
 00:08:25,340 --> 00:08:31,020
-You can even define a start and an end point for your ordered satin columns by
+Vous pouvez même définir un point de départ et un point d'arrivée pour vos colonnes satinées commandées en
 
 64
 00:08:31,060 --> 00:08:37,620
-attaching "Auto-route satin stitch starting" and "ending position" commands.
+en choisissant les commandes "Position de départ ou de fin pour point satin autogénéré" .
 
 65
 00:08:56,400 --> 00:09:03,060
-If this went too fast for you, you might be interested into the visual commands tutorial.
+Si cela est allé trop vite pour vous, vous serez intéressé par le tutoriel sur les commandes visuelles.
 
 66
 00:09:12,040 --> 00:09:18,340
-Let's have a closer look into the params dialogue and what it offers for satin columns.
+Examinons de plus près le dialogue des paramètres et ce qu'il offre pour les colonnes satin.
 
 67
 00:09:18,340 --> 00:09:21,380
-"Custom satin column" has to be enabled.
+"Colonne de satin personnalisée" doit être activé.
 
 68
 00:09:21,940 --> 00:09:28,420
-Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape.
+Les points satin tirent sur le tissu, ce qui donne une colonne plus étroite que celle que vous dessinez dans Inkscape.
 
 69
 00:09:29,020 --> 00:09:33,400
-With the "Pull compensation" setting you can expand the satin column.
+Avec le paramètre "Compensation d'étirement" vous pouvez élargir la colonne satin.
 
 70
 00:09:33,400 --> 00:09:40,640
-You’ll have to experiment how much compensation you need for your combination of fabric, thread, and stabilizer.
+Vous devrez tester la compensation dont vous avez besoin pour votre combinaison de tissu, de fil et de stabilisateur.
 
 71
 00:09:41,140 --> 00:09:45,940
-Zig-zag spacing will define the density of your satin column.
+L'espacement du zig-zag (crête à crête) définira la densité de votre colonne de satin.
 
 72
 00:09:45,940 --> 00:09:49,420
-Well, now we talked much about the satin column itself.
+Eh bien, maintenant, nous avons beaucoup parlé de la colonne de satin elle-même.
 
 73
 00:09:49,420 --> 00:09:53,680
-But a very important part is still missing, which is the underlay.
+Mais une partie très importante manque toujours,c'est la sous-couche.
 
 74
 00:09:54,120 --> 00:09:57,360
-Ink/Stitch supports three kinds of underlay.
+Ink/Stitch offre trois types de sous-couches.
 
 75
 00:09:57,800 --> 00:10:04,160
-For wide columns or challenging fabrics, you can even use all three underlay types together.
+Pour les colonnes larges ou les tissus difficiles, vous pouvez même utiliser les trois types de sous-couches ensemble.
 
 76
 00:10:09,280 --> 00:10:15,840
-This is a row of running stitch down the center of the column and back.
+Ceci est une rangée de points en cours d'exécution au centre de la colonne et à l'arrière.
 
 77
 00:10:16,160 --> 00:10:20,140
-This may be all you need for thin satin columns.
+C'est peut-être tout ce dont vous aurez besoin pour les colonnes satin minces.
 
 78
 00:10:20,580 --> 00:10:25,100
-You can also use it as a base for more elaborate underlay.
+Vous pouvez également utiliser comme base une sous-couche plus élaborée.
 
 79
 00:10:29,260 --> 00:10:36,760
-This is a row of running stitch up one side of the column and back down the other.
+Il s'agit d'une rangée de points en cours d'exécution sur un côté de la colonne puis sur l'autre.
 
 80
 00:10:36,980 --> 00:10:44,080
-The rows are set in from the edge of the column by the amount you specify.
+Les rangées sont définies à une distance du bord de la colonne que vous spécifiez.
 
 81
 00:10:44,480 --> 00:10:50,680
-For small or medium width satin, this may serve well enough by itself.
+Pour les colonnes satin de petite ou moyenne largeur, cela peut convenir assez bien.
 
 82
 00:10:56,320 --> 00:11:05,280
-This is essentially a lower-density satin stitch sewn to the end of the column and back to the start.
+Il s'agit essentiellement d'un point de satin de faible densité brodé de la fin de la colonne au début.
 
 83
 00:11:11,640 --> 00:11:18,460
-The biggest purpose for E-stitch is a simple but strong cover stitch for applique items.
+Le plus grand objectif du point E est un point de couverture simple mais solide pour les appliqués.
 
 84
 00:11:18,460 --> 00:11:23,220
-Mainly for baby cloths as their skin tends to be more sensitive.
+Principalement pour les lingeries de bébés car leur peau a tendance à être plus sensible.
 
 85
 00:11:26,480 --> 00:11:30,120
-E-stitch is created just as a satin column.
+Le point E est créé comme une colonne satin.
 
 86
 00:11:38,280 --> 00:11:44,740
-But in the params dialogue enable the E-stitch option and increase the zig-zag spacing.
+Mais dans la boîte de dialogue des paramètres, activez l'option Point-E et augmentez l'espacement en zig-zag.
 
 87
 00:11:44,740 --> 00:11:47,740
-Underlay is not needed for this stitch type.
+La sous-couche n'est pas nécessaire pour ce type de point.
 
 88
 00:11:48,360 --> 00:11:55,620
-If the points are facing the wrong way, just use the “flip satin column rails” tool as described before.
-
+Si les points sont orientés dans le mauvais sens, utilisez simplement l'outil «intervertir les rails satin» comme décrit précédemment.
 89
 00:11:58,200 --> 00:12:03,360
-We hope you enjoyed this tutorial and got an overview about satin stitch types.
+Nous espérons que vous avez apprécié ce tutoriel et obtenu un aperçu des types de points satin.
 
 90
 00:12:03,360 --> 00:12:09,060
-You might also want to watch our videos about stroke type stitches and fill stitches.
+Vous pouvez également regarder nos vidéos sur les points de type trait et les points de remplissage.
 
