@@ -46,7 +46,7 @@ Langage|Linux (64bit)|Windows|macOS (Catalina) [[?]](#macos)
 **Dernière version:** [Ink/Stitch {{ site.github.latest_release.tag_name }} ({{ site.github.latest_release.published_at | date: "%Y-%m-%d" }})](https://github.com/inkstitch/inkstitch/releases/latest)
 
 ### 2. Installation
- * Dans Inkscape, allez à  `Edition > Préferences > Systeme` et cherchez dans ce tableau où se trouve votre dossier `Extensions`.
+ * Dans Inkscape, allez à  `Edition > Préferences > Systeme` et cherchez dans ce tableau où se trouve votre dossier `Extensions utilisateur`.
  * Décompressez l'archive Ink/Stitch **directement** dans ce dossier.<br />
   Ce dossier doit présenter une structure semblable à l'exemple ci-dessous (avec juste un tas de fichiers en plus):
    ![File Structure](/assets/images/docs/en/file_structure.png)
