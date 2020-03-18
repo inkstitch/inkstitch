@@ -67,7 +67,8 @@ C'est ce que vous obtenez, lorsque les directions de chemin ne sont pas les mêm
 Activez l'outil nœud en appuyant sur "N" et sélectionnez votre colonne satin.
 
 18
-00:01:56,020 --> 00:02:02,Vous pouvez influencer l'angle à l'aide des nœuds
+00:01:56,020 --> 00:02:02
+Vous pouvez influencer l'angle à l'aide des nœuds
 Si vous avez suivi notre tutoriel de personnalisation, vous verrez des pointes rouges indiquant la direction du chemin.
 
 19
