@@ -1,9 +1,9 @@
-from copy import deepcopy
 import sys
+from copy import deepcopy
 
-from cspsubdiv import cspsubdiv
 import cubicsuperpath
-import simplestyle
+import tinycss2
+from cspsubdiv import cspsubdiv
 
 from ..commands import find_commands
 from ..i18n import _
@@ -133,20 +133,23 @@ class EmbroideryElement(object):
     def set_param(self, name, value):
         self.node.set("embroider_%s" % name, str(value))
 
+    @property
     @cache
-    def get_style(self, style_name, default=None):
-        style = simplestyle.parseStyle(self.node.get("style"))
-        if (style_name not in style):
-            return default
-        value = style[style_name]
-        if value == 'none':
-            return None
-        return value
+    def style(self):
+        declarations = tinycss2.parse_declaration_list(self.node.get("style", ""))
+        style = {declaration.lower_name: declaration.value[0].serialize() for declaration in declarations}
 
-    @cache
+        for name, value in style.items():
+            if value == 'none':
+                style[name] = None
+
+        return style
+
+    def get_style(self, style_name, default=None):
+        return self.style.get(style_name, default)
+
     def has_style(self, style_name):
-        style = simplestyle.parseStyle(self.node.get("style"))
-        return style_name in style
+        return style_name in self.style
 
     @property
     @cache
