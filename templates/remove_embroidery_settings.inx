@@ -2,8 +2,6 @@
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
     <name>{% trans %}Remove embroidery settings{% endtrans %}</name>
     <id>org.inkstitch.remove_embroidery_settings.{{ locale }}</id>
-    <dependency type="executable" location="extensions">inkstitch.py</dependency>
-    <dependency type="executable" location="extensions">inkex.py</dependency>
     <param name="description" type="description">{% trans %}Use this extension to remove the information Ink/Stitch has stored in your document.  This can be especially useful if you copy and paste objects from an embroidery design into another document.{% endtrans %}</param>
     <param name="del_params" type="boolean" _gui-text="{% trans %}Remove Params{% endtrans %}"
            _gui-description="{% trans %}Removes params from selected objects or all objects if nothing is selected.{% endtrans %}">true</param>
@@ -19,6 +17,6 @@
         </effects-menu>
     </effect>
     <script>
-        <command reldir="extensions" interpreter="python">inkstitch.py</command>
+        {{ command_tag | safe }}
     </script>
 </inkscape-extension>

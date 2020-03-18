@@ -2,8 +2,6 @@
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
     <name>{% trans %}Add Commands{% endtrans %}</name>
     <id>org.inkstitch.global_commands.{{ locale }}</id>
-    <dependency type="executable" location="extensions">inkstitch.py</dependency>
-    <dependency type="executable" location="extensions">inkex.py</dependency>
     <param name="description" type="description">{% trans %}These commands affect the entire embroidery design.{% endtrans %}</param>
     {% for command, description in global_commands %}
     <param name="{{ command }}" type="boolean" _gui-text="{{ _(description) }}">false</param>
@@ -19,6 +17,6 @@
         </effects-menu>
     </effect>
     <script>
-        <command reldir="extensions" interpreter="python">inkstitch.py</command>
+        {{ command_tag | safe }}
     </script>
 </inkscape-extension>

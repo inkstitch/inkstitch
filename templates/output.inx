@@ -2,8 +2,6 @@
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
     <name>{{ format | upper }} file output</name>
     <id>org.inkstitch.output.{{ format }}.{{ locale }}</id>
-    <dependency type="executable" location="extensions">inkstitch.py</dependency>
-    <dependency type="executable" location="extensions">inkex.py</dependency>
     <output>
         <extension>.{{ format }}</extension>
         <mimetype>application/x-embroidery-{{ format }}</mimetype>
@@ -16,6 +14,6 @@
     {% set params = "output_params_" + format + ".xml" %}
     {% include params ignore missing %}
     <script>
-        <command reldir="extensions" interpreter="python">inkstitch.py</command>
+        {{ command_tag | safe }}
     </script>
 </inkscape-extension>
