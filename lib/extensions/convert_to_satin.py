@@ -164,6 +164,13 @@ class ConvertToSatin(InkstitchExtension):
                 # The dot product of two vectors is |v1| * |v2| * cos(angle).
                 # These are unit vectors, so their magnitudes are 1.
                 cos_angle_between = prev_direction * direction
+
+                # Clamp to the valid range for a cosine.  The above _should_
+                # already be in this range, but floating point inaccuracy can
+                # push it outside the range causing math.acos to throw
+                # ValueError ("math domain error").
+                cos_angle_between = max(-1.0, min(1.0, cos_angle_between))
+
                 angle = abs(math.degrees(math.acos(cos_angle_between)))
 
                 # Use the square of the angle, measured in degrees.
