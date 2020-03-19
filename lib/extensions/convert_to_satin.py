@@ -54,7 +54,7 @@ class ConvertToSatin(InkstitchExtension):
 
             parent.remove(element.node)
 
-    def convert_path_to_satins(self, path, stroke_width, style_args, correction_transform, path_style):
+    def convert_path_to_satins(self, path, stroke_width, style_args, correction_transform, path_style, depth=0):
         try:
             rails, rungs = self.path_to_satin(path, stroke_width, style_args)
             yield self.satin_to_svg_node(rails, rungs, correction_transform, path_style)
@@ -62,11 +62,16 @@ class ConvertToSatin(InkstitchExtension):
             # The path intersects itself.  Split it in two and try doing the halves
             # individually.
 
+            if depth >= 20:
+                # At this point we're slicing the path way too small and still
+                # getting nowhere.  Just give up on this section of the path.
+                return
+
             half = int(len(path) / 2.0)
             halves = [path[:half + 1], path[half:]]
 
             for path in halves:
-                for satin in self.convert_path_to_satins(path, stroke_width, style_args, correction_transform, path_style):
+                for satin in self.convert_path_to_satins(path, stroke_width, style_args, correction_transform, path_style, depth=depth + 1):
                     yield satin
 
     def fix_loop(self, path):
