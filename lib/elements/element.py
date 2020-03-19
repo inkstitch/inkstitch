@@ -1,9 +1,9 @@
-from copy import deepcopy
 import sys
+from copy import deepcopy
 
-from cspsubdiv import cspsubdiv
 import cubicsuperpath
 import simplestyle
+from cspsubdiv import cspsubdiv
 
 from ..commands import find_commands
 from ..i18n import _
@@ -169,6 +169,17 @@ class EmbroideryElement(object):
         return width * self.stroke_scale
 
     @property
+    @param('ties',
+           _('Ties'),
+           tooltip=_('Add ties. Manual stitch will not add ties.'),
+           type='boolean',
+           default=True,
+           sort_index=4)
+    @cache
+    def ties(self):
+        return self.get_boolean_param("ties", True)
+
+    @property
     def path(self):
         # A CSP is a  "cubic superpath".
         #
@@ -268,6 +279,10 @@ class EmbroideryElement(object):
         self.validate()
 
         patches = self.to_patches(last_patch)
+
+        if not self.ties:
+            for patch in patches:
+                patch.stitch_as_is = True
 
         if patches:
             patches[-1].trim_after = self.has_command("trim") or self.trim_after
