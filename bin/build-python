@@ -9,7 +9,6 @@ if [ "$BUILD" = "linux" ]; then
     pyinstaller_args+="--add-binary /usr/lib/x86_64-linux-gnu/gio/modules/libgiolibproxy.so:. "
     pyinstaller_args+="--add-binary  /usr/lib/x86_64-linux-gnu/libproxy.so.1:. "
     pyinstaller_args+="--add-binary  /lib/x86_64-linux-gnu/libnsl.so.1:. "
-    pyinstaller_args+="--add-binary  /lib/x86_64-linux-gnu/librt.so.1:. "
     pyinstaller_args+="--add-binary  /usr/lib/x86_64-linux-gnu/libxcb.so.1:. "
 fi
 
