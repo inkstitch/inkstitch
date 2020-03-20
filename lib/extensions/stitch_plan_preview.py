@@ -21,4 +21,4 @@ class StitchPlanPreview(InkstitchExtension):
 
         # translate stitch plan to the right side of the canvas
         layer = svg.find(".//*[@id='__inkstitch_stitch_plan__']")
-        layer.set('transform', 'translate(%s)' % str(self.unittouu(svg.get('width')) + 5))
+        layer.set('transform', 'translate(%s)' % svg.get('viewBox', '0 0 800 0').split(' ')[2])
