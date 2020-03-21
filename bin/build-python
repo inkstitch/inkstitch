@@ -5,9 +5,11 @@ set -e
 site_packages="$(python -c "import os; print(os.path.dirname(os.__file__) + '/site-packages')")"
 
 if [ "$BUILD" = "linux" ]; then
-    # pyinstaller misses these two
+    # pyinstaller misses these
     pyinstaller_args+="--add-binary /usr/lib/x86_64-linux-gnu/gio/modules/libgiolibproxy.so:. "
     pyinstaller_args+="--add-binary  /usr/lib/x86_64-linux-gnu/libproxy.so.1:. "
+    pyinstaller_args+="--add-binary  /lib/x86_64-linux-gnu/libnsl.so.1:. "
+    pyinstaller_args+="--add-binary  /usr/lib/x86_64-linux-gnu/libxcb.so.1:. "
 fi
 
 # This one's tricky.  ink/stitch doesn't actually _use_ gi.repository.Gtk,
