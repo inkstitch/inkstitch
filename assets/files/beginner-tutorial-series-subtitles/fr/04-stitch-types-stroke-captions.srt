@@ -1,78 +1,79 @@
 1
 00:00:05,300 --> 00:00:09,360
-Welcome to the Ink/Stitch beginner tutorial series.
+Bienvenue dans la série de tutoriels pour débutants Ink/Stitch.
 
 2
 00:00:09,580 --> 00:00:15,640
-In this part we are going to have a closer look which stitch types Ink/Stitch is able to perform.
+Dans cette partie, nous allons voir de plus près quels types de points Ink/Stitch peut créer.
 
 3
 00:00:15,940 --> 00:00:21,640
-We will not explain the stitch types in general, but only how to create them in Ink/Stitch.
+Nous n'expliquerons pas les types de points en général, mais seulement comment les créer dans Ink/Stitch.
 
 4
 00:00:22,260 --> 00:00:30,100
-Ink/Stitch stitch types can be roughly divided into three sections: stroke, satin and fill.
+Les types de points d'Ink/Stitch peuvent être grossièrement divisés en trois sections: trait, satin et remplissage.
 
 5
 00:00:30,580 --> 00:00:36,300
-Here is a complete list, so you can quickly navigate to the stitch type you are interested in.
+Voici une liste complète, afin que vous puissiez naviguer rapidement vers le type de point qui vous intéresse.
 
 6
 00:00:37,060 --> 00:00:40,400
-This is the tutorial about stroke type stitches.
+Ceci est le tutoriel sur les types de points en ligne.
 
 7
 00:00:40,940 --> 00:00:48,140
-Stroke stitches can be used for: outlines, line art embroidery or to add details into your design.
+Les points en ligne peuvent être utilisés pour: les contours, la broderie au trait ou pour ajouter des détails à votre motif.
 
 8
 00:00:53,400 --> 00:00:56,160
-Zig-zag stitches are are easy to create.
+Les points zig-zag sont faciles à créer.
 
 9
 00:00:56,720 --> 00:01:03,360
-We recommend to use them only for straight lines, because they will not stitch nicely around edges.
+Nous vous recommandons de les utiliser uniquement pour les lignes droites, car ils seront mal piqués dans les angles.
+
 
 10
 00:01:05,280 --> 00:01:09,320
-In most cases, you would prefer a satin column instead.
+Dans la plupart des cas, vous préférerez une colonne satin au zigzag.
 
 11
 00:01:09,760 --> 00:01:12,880
-That said, let's see how they are done.
+Cela dit, voyons comment on fait.
 
 12
 00:01:13,620 --> 00:01:18,280
-Hit "B" to enable the bezier curve tool and draw a simple path.
+Appuyez sur "B" pour activer l'outil de courbe de Bézier et dessiner un chemin simple.
 
 13
 00:01:22,700 --> 00:01:29,340
-Open the "Fill and Stroke" settings and set the path width in the stroke style tab.
+Ouvrez les paramètres "Remplissage et contour" et définissez la largeur du chemin dans l'onglet Style du contour.
 
 14
 00:01:29,340 --> 00:01:33,160
-This will define the height of your zig-zag-line.
+Cela définira la hauteur de votre ligne en point zig-zag.
 
 15
 00:01:33,860 --> 00:01:40,580
-Go to 'Extensions > Ink/Stitch  > Params' to open the parameter dialogue.
+Aller à 'Extensions > Ink/Stitch  > Paramètres' pour ouvrir le dialogue de paramètres.
 
 16
 00:01:42,160 --> 00:01:47,140
-"Satin stitch along path" has to be enabled in the Stroke tab.
+"Point satin le long du chemin" doit être activé dans l'onglet Stroke (Trait) .
 
 17
 00:01:48,000 --> 00:01:51,380
-Set zig-zag-spacing to whatever you like it to be.
+Définissez l'espacement des zigzags comme vous le souhaitez.
 
 18
 00:01:55,800 --> 00:01:58,920
-You can also define the number of repeats.
+Vous pouvez également définir le nombre de répétitions.
 
 19
 00:01:58,920 --> 00:02:04,200
-All other settings will not have any effect on zig-zag stitching.
+Tous les autres paramètres n'auront aucun effet sur la couture en zig-zag.
 
 20
 00:02:10,280 --> 00:02:13,460
