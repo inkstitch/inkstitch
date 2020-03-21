@@ -127,6 +127,15 @@ def get_viewbox_transform(node):
     try:
         sx = doc_width / float(viewbox[2])
         sy = doc_height / float(viewbox[3])
+
+        # preserve aspect ratio if not set to 'none'
+        # this does not meet the svg specs exactly, since it just checks for 'none' and nothing else
+        # but at least it will respect the default aspect ratio setting (?)
+        aspect_ratio = node.get('preserveAspectRatio', 'xMidYMid meet')
+        if aspect_ratio != 'none':
+            sx = min(sx, sy)
+            sy = min(sx, sy)
+
         scale_transform = simpletransform.parseTransform("scale(%f, %f)" % (sx, sy))
         transform = simpletransform.composeTransform(transform, scale_transform)
     except ZeroDivisionError:
