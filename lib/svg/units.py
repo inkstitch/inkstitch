@@ -128,13 +128,15 @@ def get_viewbox_transform(node):
         sx = doc_width / float(viewbox[2])
         sy = doc_height / float(viewbox[3])
 
-        # preserve aspect ratio if not set to 'none'
-        # this does not meet the svg specs exactly, since it just checks for 'none' and nothing else
-        # but at least it will respect the default aspect ratio setting (?)
+        # preserve aspect ratio
         aspect_ratio = node.get('preserveAspectRatio', 'xMidYMid meet')
         if aspect_ratio != 'none':
-            sx = min(sx, sy)
-            sy = min(sx, sy)
+            unit = parse_length_with_units(node.get('width'))[1]
+            if float(viewbox[2]) > parse_length_with_units(node.get('width'))[0]:
+                sx = convert_length(viewbox[2] + unit) / float(viewbox[2]) if 'slice' in aspect_ratio else 1.0
+            if float(viewbox[2]) > parse_length_with_units(node.get('width'))[0]:
+                sy = convert_length(viewbox[3] + unit) / float(viewbox[3]) if 'slice' in aspect_ratio else 1.0
+            sx = sy = max(sx, sy) if 'slice' in aspect_ratio else min(sx, sy)
 
         scale_transform = simpletransform.parseTransform("scale(%f, %f)" % (sx, sy))
         transform = simpletransform.composeTransform(transform, scale_transform)
