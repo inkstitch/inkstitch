@@ -1,18 +1,20 @@
-from collections import MutableMapping
-from copy import deepcopy
 import json
 import os
 import re
+from collections import MutableMapping
+from copy import deepcopy
 
-import inkex
 from stringcase import snakecase
 
-from ..commands import layer_commands
+import inkex
+
+from ..commands import is_command, layer_commands
 from ..elements import EmbroideryElement, nodes_to_elements
+from ..elements.clone import is_clone, is_embroiderable_clone
 from ..i18n import _
 from ..svg import generate_unique_id
-from ..svg.tags import SVG_GROUP_TAG, INKSCAPE_GROUPMODE, SVG_DEFS_TAG, EMBROIDERABLE_TAGS
-
+from ..svg.tags import (INKSCAPE_GROUPMODE, NOT_EMBROIDERABLE_TAGS,
+                        SVG_DEFS_TAG, SVG_GROUP_TAG)
 
 SVG_METADATA_TAG = inkex.addNS("metadata", "svg")
 
@@ -128,8 +130,7 @@ class InkstitchExtension(inkex.Effect):
         else:
             inkex.errormsg(_("There are no objects in the entire document that Ink/Stitch knows how to work with.") + "\n")
 
-        inkex.errormsg(_("Ink/Stitch only knows how to work with paths.  It can't work with objects like text, rectangles, or circles.") + "\n")
-        inkex.errormsg(_("Tip: select some objects and use Path -> Object to Path to convert them to paths.") + "\n")
+        inkex.errormsg(_("Tip: Select some objects and use Path -> Object to Path to convert them to paths.") + "\n")
 
     def descendants(self, node, selected=False):
         nodes = []
@@ -158,7 +159,7 @@ class InkstitchExtension(inkex.Effect):
         for child in node:
             nodes.extend(self.descendants(child, selected))
 
-        if selected and node.tag in EMBROIDERABLE_TAGS:
+        if selected and not is_command(node):
             nodes.append(node)
 
         return nodes
@@ -166,13 +167,19 @@ class InkstitchExtension(inkex.Effect):
     def get_nodes(self):
         return self.descendants(self.document.getroot())
 
-    def get_elements(self):
+    def get_elements(self, troubleshoot=False):
         self.elements = nodes_to_elements(self.get_nodes())
+        if not troubleshoot:
+            # strip out elements with empty to_patches
+            for element in self.elements:
+                if (element.node.tag in NOT_EMBROIDERABLE_TAGS or
+                   (is_clone(element.node) and not is_embroiderable_clone(element.node))):
+                    self.elements.remove(element)
         if self.elements:
             return True
-        else:
+        if not troubleshoot:
             self.no_elements_error()
-            return False
+        return False
 
     def elements_to_patches(self, elements):
         patches = []
