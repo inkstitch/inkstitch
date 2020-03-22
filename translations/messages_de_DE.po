@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-03-17 00:13+0000\n"
-"PO-Revision-Date: 2020-03-17 00:13\n"
+"POT-Creation-Date: 2020-03-22 00:09+0000\n"
+"PO-Revision-Date: 2020-03-22 00:10\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -287,12 +287,20 @@ msgstr "Es ist ein Fehler bei der AutoFüllung aufgetreten! Das bedeutet, es gib
 msgid "If you'd like to help us make Ink/Stitch better, please paste this whole message into a new issue at: "
 msgstr "Wenn du uns helfen willst Ink/Stitch zu verbessern, kopiere die gesamte Nachricht und erstelle einen neuen Fehlerbericht (Issue) auf: "
 
-#: lib/elements/element.py:202
+#: lib/elements/element.py:173
+msgid "Ties"
+msgstr ""
+
+#: lib/elements/element.py:174
+msgid "Add ties. Manual stitch will not add ties."
+msgstr ""
+
+#: lib/elements/element.py:213
 #, python-format
 msgid "Object %(id)s has an empty 'd' attribute.  Please delete this object from your document."
 msgstr "Objekt %(id)s hat ein leeres Attribut 'd'. Bitte lösche dieses Objekt aus dem Dokument."
 
-#: lib/elements/element.py:234
+#: lib/elements/element.py:245
 #, python-format
 msgid "%(id)s has more than one command of type '%(command)s' linked to it"
 msgstr "%(id)s beinhaltet mehr als einen Befehl vom Typ '%(command)s'"
@@ -300,7 +308,7 @@ msgstr "%(id)s beinhaltet mehr als einen Befehl vom Typ '%(command)s'"
 #. used when showing an error message to the user such as
 #. "Some Path (path1234): error: satin column: One or more of the rungs doesn't
 #. intersect both rails."
-#: lib/elements/element.py:288
+#: lib/elements/element.py:303
 msgid "error:"
 msgstr "Fehler:"
 
@@ -642,20 +650,15 @@ msgstr "Ink/Stitch kann nur mit Pfaden arbeiten, nicht aber mit Objekten wie Tex
 msgid "Tip: select some objects and use Path -> Object to Path to convert them to paths."
 msgstr "Tipp: Markiere einige Objekte und nutze die Funktion \"Pfad > Objekt in Pfad umwandeln\"."
 
-#: lib/extensions/convert_to_satin.py:30
+#: lib/extensions/convert_to_satin.py:29
 msgid "Please select at least one line to convert to a satin column."
 msgstr "Bitte wähle mindestens eine Zeile aus, die in eine Satinkolumne konvertiert werden soll."
 
 #. : Convert To Satin extension, user selected one or more objects that were
 #. not lines.
-#: lib/extensions/convert_to_satin.py:35
+#: lib/extensions/convert_to_satin.py:34
 msgid "Only simple lines may be converted to satin columns."
 msgstr "Nur einfache Linien können in Satinkolumnen konvertiert werden."
-
-#: lib/extensions/convert_to_satin.py:58
-#, python-format
-msgid "Cannot convert %s to a satin column because it intersects itself.  Try breaking it up into multiple paths."
-msgstr "%s kann nicht in eine Satinkolumne konvertiert werden, da sie sich selbst berührt. Versuche es in mehrere Pfade aufzuteilen."
 
 #: lib/extensions/cut_satin.py:15
 msgid "Please select one or more satin columns to cut."
@@ -999,7 +1002,7 @@ msgstr "Stick Simulation"
 #. If you translate this string, that will tell Ink/Stitch to
 #. generate menu items for this language in Inkscape's "Extensions"
 #. menu.
-#: lib/inx/utils.py:55
+#: lib/inx/utils.py:66
 msgid "Generate INX files"
 msgstr "Erzeuge INX Dateien"
 
@@ -1579,16 +1582,16 @@ msgstr "G-Code Format"
 msgid "Auto-Route Satin Columns"
 msgstr "Automatisch geführte Satinkolumnen"
 
-#: templates/auto_satin.inx:7
+#: templates/auto_satin.inx:5
 msgid "Trim jump stitches"
 msgstr "Schneide Faden bei Sprungstichen"
 
-#: templates/auto_satin.inx:8
+#: templates/auto_satin.inx:6
 msgid "Preserve order of satin columns"
 msgstr "Behalte Reihenfolge der Satinkolumnen bei"
 
-#: templates/auto_satin.inx:14 templates/convert_to_satin.inx:12
-#: templates/cut_satin.inx:12 templates/flip.inx:12
+#: templates/auto_satin.inx:12 templates/convert_to_satin.inx:10
+#: templates/cut_satin.inx:10 templates/flip.inx:10
 msgid "Satin Tools"
 msgstr "Satin Werkzeuge"
 
@@ -1604,35 +1607,35 @@ msgstr "Satinkolumne schneiden"
 msgid "Embroider"
 msgstr "Sticken"
 
-#: templates/embroider.inx:7
+#: templates/embroider.inx:5
 msgid "Collapse length (mm)"
 msgstr "Mindestlänge (mm)"
 
-#: templates/embroider.inx:7
+#: templates/embroider.inx:5
 msgid "Jump stitches smaller than this will be treated as normal stitches."
 msgstr "Sprungstiche, die kleiner sind, werden als normale Stiche behandelt."
 
-#: templates/embroider.inx:8
+#: templates/embroider.inx:6
 msgid "Hide other layers"
 msgstr "Andere Ebenen ausblenden"
 
-#: templates/embroider.inx:8
+#: templates/embroider.inx:6
 msgid "Hide all other top-level layers when the embroidery layer is generated, in order to make stitching discernible."
 msgstr "Verberge alle anderen Ebenen, wenn die Stickebene erstellt wird, um die Nähte sichtbar zu machen."
 
-#: templates/embroider.inx:9
+#: templates/embroider.inx:7
 msgid "Output file format"
 msgstr "Ausgabeformat"
 
-#: templates/embroider.inx:14
+#: templates/embroider.inx:12
 msgid "DEBUG"
 msgstr "DEBUG"
 
-#: templates/embroider.inx:17
+#: templates/embroider.inx:15
 msgid "Directory"
 msgstr "Verzeichnis"
 
-#: templates/embroider.inx:17
+#: templates/embroider.inx:15
 msgid "Leave empty to save the output in Inkscape's extension directory."
 msgstr "Leer lassen, um die Ausgabe im Erweiterungsverzeichnis von Inkscape zu speichern."
 
@@ -1644,17 +1647,17 @@ msgstr "Konturen der Satinkolumne umkehren"
 msgid "Add Commands"
 msgstr "Befehle hinzufügen"
 
-#: templates/global_commands.inx:7
+#: templates/global_commands.inx:5
 msgid "These commands affect the entire embroidery design."
 msgstr "Diese Befehle wirken sich auf das gesamte Stickdesign aus."
 
 #. Inkscape submenu under Extensions -> Ink/Stitch
-#: templates/global_commands.inx:17 templates/layer_commands.inx:16
-#: templates/object_commands.inx:15
+#: templates/global_commands.inx:15 templates/layer_commands.inx:14
+#: templates/object_commands.inx:13
 msgid "Commands"
 msgstr "Befehle"
 
-#: templates/input.inx:11
+#: templates/input.inx:9
 #, python-format
 msgid "convert %(file_extension)s file to Ink/Stitch manual-stitch paths"
 msgstr "Konvertierung der %(file_extension)s Datei in Ink/Stitch manuelle Stichpfade"
@@ -1667,7 +1670,7 @@ msgstr "Installiere Erweiterungen für Inkscape"
 msgid "Add Layer Commands"
 msgstr "Ebenenbefehle hinzufügen"
 
-#: templates/layer_commands.inx:7
+#: templates/layer_commands.inx:5
 msgid "Commands will be added to the currently-selected layer."
 msgstr "Befehle werden zur aktuell ausgewählten Ebene hinzugefügt."
 
@@ -1679,7 +1682,7 @@ msgstr "Text"
 msgid "Attach Commands to Selected Objects"
 msgstr "Befehle mit gewählten Objekten verknüpfen"
 
-#: templates/output.inx:11
+#: templates/output.inx:9
 #, python-format
 msgid "Save design in %(file_extension)s format using Ink/Stitch"
 msgstr "Speichern des Designs ins %(file_extension)s Format mit Ink/Stitch"
@@ -1772,27 +1775,27 @@ msgstr "Drucken / Realistische Vorschau"
 msgid "Remove embroidery settings"
 msgstr "Stickeinstellungen entfernen"
 
-#: templates/remove_embroidery_settings.inx:7
+#: templates/remove_embroidery_settings.inx:5
 msgid "Use this extension to remove the information Ink/Stitch has stored in your document.  This can be especially useful if you copy and paste objects from an embroidery design into another document."
 msgstr "Entfernt Informationen, die Ink/Stitch in diesem Dokument gespeichert hat.  Das kann besonders dann hilfreich sein, wenn du Objekte aus einem Stickdesign in ein anderes Dokument kopierst."
 
-#: templates/remove_embroidery_settings.inx:8
+#: templates/remove_embroidery_settings.inx:6
 msgid "Remove Params"
 msgstr "Parameter entfernen"
 
-#: templates/remove_embroidery_settings.inx:9
+#: templates/remove_embroidery_settings.inx:7
 msgid "Removes params from selected objects or all objects if nothing is selected."
 msgstr "Entfernt Parameter von ausgewählten Objekten oder allen Objekten, wenn keines ausgewählt ist."
 
-#: templates/remove_embroidery_settings.inx:10
+#: templates/remove_embroidery_settings.inx:8
 msgid "Remove Commands"
 msgstr "Befehle entfernen"
 
-#: templates/remove_embroidery_settings.inx:11
+#: templates/remove_embroidery_settings.inx:9
 msgid "Removes visual commands from selected objects or all objects if nothing is selected."
 msgstr "Entfernt Befehle von ausgewählten Objekten oder allen Objekten, wenn keines ausgewählt ist."
 
-#: templates/remove_embroidery_settings.inx:12
+#: templates/remove_embroidery_settings.inx:10
 msgid "Remove Print Settings from SVG metadata"
 msgstr "Druckeinstellungen aus den SVG Metadaten entfernen"
 
@@ -1804,11 +1807,11 @@ msgstr "Simulation"
 msgid "Troubleshoot Objects"
 msgstr "Fehlerbehebung an den Objekten"
 
-#: templates/zip.inx:10
+#: templates/zip.inx:8
 msgid "Ink/Stitch: ZIP export multiple formats (.zip)"
 msgstr "Ink/Stitch: Export von mehreren Formaten (.zip)"
 
-#: templates/zip.inx:11
+#: templates/zip.inx:9
 msgid "Create a ZIP with multiple embroidery file formats using Ink/Stitch"
 msgstr "Erstellen einer ZIP-Datei mit mehreren Stickformaten die Ink/Stitch unterstützt"
 
