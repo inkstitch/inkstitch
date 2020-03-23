@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-03-22 00:09+0000\n"
-"PO-Revision-Date: 2020-03-22 00:10\n"
+"POT-Creation-Date: 2020-03-23 00:09+0000\n"
+"PO-Revision-Date: 2020-03-23 00:10\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Greek\n"
 "MIME-Version: 1.0\n"
@@ -1799,6 +1799,10 @@ msgstr ""
 
 #: templates/simulate.inx:3
 msgid "Simulate"
+msgstr ""
+
+#: templates/stitch_plan_preview.inx:3
+msgid "Stitch Plan Preview"
 msgstr ""
 
 #: templates/troubleshoot.inx:3

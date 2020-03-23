@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-03-22 00:09+0000\n"
-"PO-Revision-Date: 2020-03-22 00:10\n"
+"POT-Creation-Date: 2020-03-23 00:09+0000\n"
+"PO-Revision-Date: 2020-03-23 00:10\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -227,7 +227,7 @@ msgstr "Füllwinkel"
 
 #: lib/elements/auto_fill.py:63
 msgid "Default: fill angle + 90 deg. Insert comma-seperated list for multiple layers."
-msgstr ""
+msgstr "Standard: Füllwinkel + 90 Grad. Füge durch Kommata getrennte Werte ein, um mehrere Unterlagen zu erzeugen (z.B. 45, -45)."
 
 #: lib/elements/auto_fill.py:84
 msgid "Row spacing"
@@ -289,11 +289,11 @@ msgstr "Wenn du uns helfen willst Ink/Stitch zu verbessern, kopiere die gesamte 
 
 #: lib/elements/element.py:173
 msgid "Ties"
-msgstr ""
+msgstr "Vernähen"
 
 #: lib/elements/element.py:174
 msgid "Add ties. Manual stitch will not add ties."
-msgstr ""
+msgstr "Faden vernähen. Bei manueller Stichplatzierung hat diese Einstellung keinen Effekt."
 
 #: lib/elements/element.py:213
 #, python-format
@@ -1802,6 +1802,10 @@ msgstr "Druckeinstellungen aus den SVG Metadaten entfernen"
 #: templates/simulate.inx:3
 msgid "Simulate"
 msgstr "Simulation"
+
+#: templates/stitch_plan_preview.inx:3
+msgid "Stitch Plan Preview"
+msgstr ""
 
 #: templates/troubleshoot.inx:3
 msgid "Troubleshoot Objects"
