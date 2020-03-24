@@ -20,7 +20,7 @@ Voici une liste complète, afin que vous puissiez naviguer rapidement vers le ty
 
 6
 00:00:37,060 --> 00:00:40,400
-Ceci est le tutoriel sur les types de points en ligne.
+Ceci est le tutoriel sur les types de points alignés.
 
 7
 00:00:40,940 --> 00:00:48,140
@@ -32,8 +32,7 @@ Les points zig-zag sont faciles à créer.
 
 9
 00:00:56,720 --> 00:01:03,360
-Nous vous recommandons de les utiliser uniquement pour les lignes droites, car ils seront mal piqués dans les angles.
-
+Nous vous recommandons de les utiliser uniquement pour les lignes droites, car ils seront mal organisés dans les angles.
 
 10
 00:01:05,280 --> 00:01:09,320
@@ -53,7 +52,7 @@ Ouvrez les paramètres "Remplissage et contour" et définissez la largeur du che
 
 14
 00:01:29,340 --> 00:01:33,160
-Cela définira la hauteur de votre ligne en point zig-zag.
+Cela définira la hauteur de votre trait en point zig-zag.
 
 15
 00:01:33,860 --> 00:01:40,580
@@ -73,89 +72,89 @@ Vous pouvez également définir le nombre de répétitions.
 
 19
 00:01:58,920 --> 00:02:04,200
-Tous les autres paramètres n'auront aucun effet sur la couture en zig-zag.
+Tous les autres paramètres seront sans effet sur la piqure en zig-zag.
 
 20
 00:02:10,280 --> 00:02:13,460
-Running stitches are created in a similiar way.
+Les points droits sont créés de la même manière.
 
 21
 00:02:26,100 --> 00:02:30,800
-But this time you have to set the stroke style to a dashed line.
+Mais cette fois, vous devez définir le style de contour sur un motif de pointillé.
 
 22
 00:02:31,260 --> 00:02:35,940
-Any type of dashes will do the job and stroke width is irrelevant.
+N'importe quel type de tirets fera l'affaire et la largeur du trait est sans importance.
 
 23
 00:02:36,580 --> 00:02:39,580
-Create a path and open the params dialogue.
+Créez un chemin et ouvrez la boîte de dialogue des paramètres.
 
 24
 00:02:53,640 --> 00:02:57,720
-"Satin stitch along path" has to be enabled in the Stroke tab.
+"Point en satin le long du chemin "doit être activé dans l'onglet Stroke(Trait).
 
 25
 00:02:57,720 --> 00:03:01,360
-Setting can be applied for "running stitch length"
+Un réglage peut être appliqué pour "longueur de point courant"
 
 26
 00:03:04,620 --> 00:03:06,620
-and "repeats".
+et "répètez".
 
 27
 00:03:16,960 --> 00:03:22,180
-Bean stitch creates thicker threading through back and forth repetition of running stitches.
+Le point triple (Bean Stitch) crée une piqure plus épaisse en répétant d'avant en arrière les points en cours d'exécution.
 
 28
 00:03:30,520 --> 00:03:33,860
-It works almost the same as running stitches,
+Cela fonctionne presque de la même manière que le point droit,
 
 29
 00:03:52,000 --> 00:03:56,340
-but you have to set additionally the "bean stitch number of repeats".
+mais vous devez également définir le "nombre de répétitions du point".
 
 30
 00:03:56,340 --> 00:04:03,120
-A value of 1 would triple each stitch, because it goes forward, back and forward again.
+Une valeur de 1 triple chaque point, car ça avance, recule et avance à nouveau.
 
 31
 00:04:03,120 --> 00:04:07,580
-A value of 2 would results in a quintupled stitch.
+Une valeur de 2 entraînerait un point quintuplé.
 
 32
 00:04:21,720 --> 00:04:30,660
-In manual stitch mode Ink/Stitch will use each node of a path as a needle penetration point, exactly as you placed them.
+En mode point manuel, Inkstitch utilisera chaque nœud d'un chemin comme point de pénétration de l'aiguille, exactement comme vous l'avez placé.
 
 33
 00:04:30,660 --> 00:04:35,540
-Create a path. Line style and width are irrelevant.
+Créez un chemin. Le style et la largeur des traits sont sans importance.
 
 34
 00:04:43,700 --> 00:04:51,780
-We recommend to display all nodes of the corresponding path as corners, since manual stitch will not respect bezier curves.
+Nous vous recommandons de transformer tous les nœuds du chemin en noeuds durs, car le point manuel ne respectera pas les courbes de Bézier.
 
 35
 00:04:54,280 --> 00:04:56,280
-Run "Params"
+Exécutez "Paramètres"
 
 36
 00:05:02,040 --> 00:05:04,520
-and enable "Manual stitch placement".
+et activez "Placement manuel de points".
 
 37
 00:05:04,520 --> 00:05:08,680
-All other settings will have no effect in manual stitch mode.
+Tous les autres paramètres seront sans effet en mode point manuel.
 
 38
 00:05:08,680 --> 00:05:17,380
-Remember to also add tie-in or tie-off stitches, since they are not created automatically in manual stitch mode.
+N'oubliez pas d'ajouter également des points d'arrêt en début et fin, car ils ne sont pas créés automatiquement en mode point manuel.
 
 39
 00:05:17,820 --> 00:05:25,560
-We hope you enjoyed this tutorial and got a small overview about all stroke stitch types Ink/Stitch is capable to perform.
+Nous espérons que vous avez apprécié ce tutoriel et que vous avez obtenu un petit aperçu de tous les types de points alignés que Ink/Stitch est capable d'effectuer..
 
 40
 00:05:26,060 --> 00:05:31,440
-You might also want to watch our videos about satin columns and fill stitches.
+Vous pouvez également regarder nos vidéos sur les colonnes satin et les points de remplissage.
 
