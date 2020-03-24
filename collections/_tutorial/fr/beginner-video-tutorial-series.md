@@ -76,28 +76,28 @@ Nous vous souhaitons un bon début avec Ink/Stitch!
 |[00:56](https://youtube.com/watch?v=1p9gyeV2tK0&amp;t=56s&amp;index=5&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP) |Add-Ons|
 |[03:26](https://youtube.com/watch?v=1p9gyeV2tK0&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=5&amp;t=206s)|Raccourcis clavier|
 |[05:52](https://youtube.com/watch?v=1p9gyeV2tK0&amp;t=352s&amp;index=5&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP)|Contour de chemin|
-|[06:46](https://youtube.com/watch?v=1p9gyeV2tK0&amp;t=406s&amp;index=5&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP)|Grids|
+|[06:46](https://youtube.com/watch?v=1p9gyeV2tK0&amp;t=406s&amp;index=5&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP)|Grilles|
 |[08:20](https://youtube.com/watch?v=1p9gyeV2tK0&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=5&amp;t=500s)|Modèles|
 {: .table-full-width }
 
 [transcript](/fr/tutorials/resources/beginner-video-tutorials/03-customize-transcript), [subtitles](/assets/files/beginner-tutorial-series-subtitles/fr/03-customize-captions.srt)
 
-## 04 Stitch Types
-### Stroke Type Stitches
+## 04 Types de points
+### Points alignés
 {% include video id="S_NiFiI6cPY" provider="youtube" %}
 
 |Time|Chapter (links open in YouTube)|
 |---|---|
 |[00:00](https://youtube.com/watch?v=S_NiFiI6cPY&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=8&amp;t=0s) | Introduction|
-|[00:50](https://youtube.com/watch?v=S_NiFiI6cPY&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=8&amp;t=50s) | Zig-Zag Stitch|
-|[02:06](https://youtube.com/watch?v=S_NiFiI6cPY&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=8&amp;t=126s) | Running Stitch|
-|[03:12](https://youtube.com/watch?v=S_NiFiI6cPY&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=8&amp;t=192s) | Bean Stitch|
-|[04:19](https://youtube.com/watch?v=S_NiFiI6cPY&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=8&amp;t=259s) | Manual Stitch|
+|[00:50](https://youtube.com/watch?v=S_NiFiI6cPY&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=8&amp;t=50s) | Point Zig-Zag|
+|[02:06](https://youtube.com/watch?v=S_NiFiI6cPY&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=8&amp;t=126s) | Point droit|
+|[03:12](https://youtube.com/watch?v=S_NiFiI6cPY&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=8&amp;t=192s) | Point tripe (Bean Stitch)|
+|[04:19](https://youtube.com/watch?v=S_NiFiI6cPY&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=8&amp;t=259s) | Point manuel|
 {: .table-full-width }
 
 [transcript](/fr/tutorials/resources/beginner-video-tutorials/04-stitch-types-transcript), [subtitles](/assets/files/beginner-tutorial-series-subtitles/fr/04-stitch-types-stroke-captions.srt)
 
-### Fill Stitches
+### Point de remplissage
 {% include video id="Dn1cVOxlX8c" provider="youtube" %}
 
 |Time|Chapter (links open in YouTube)|
@@ -111,42 +111,42 @@ Nous vous souhaitons un bon début avec Ink/Stitch!
 
 [transcript](/fr/tutorials/resources/beginner-video-tutorials/04-stitch-types-transcript), [subtitles](/assets/files/beginner-tutorial-series-subtitles/fr/04-stitch-types-fill-captions.srt)
 
-### Satin Column
+### Colonnes satin
 {% include video id="U7YtajKlftQ" provider="youtube" %}
 
 |Time|Chapter (links open in YouTube)|
 |---|---|
 |[00:00](https://youtube.comatch?v=U7YtajKlftQ&amp;t=0s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=7) |Introduction|
 ||**Satin Path Object**|
-|[01:05](https://youtube.com/watch?v=U7YtajKlftQ&amp;t=65s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=7) |Node Method|
-|[03:09](https://youtube.com/watch?v=U7YtajKlftQ&amp;t=189s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=7) |Rung Method|
+|[01:05](https://youtube.com/watch?v=U7YtajKlftQ&amp;t=65s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=7) |Node Methode des noeuds|
+|[03:09](https://youtube.com/watch?v=U7YtajKlftQ&amp;t=189s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=7) |Methode des traverses|
 ||**Satin Tools**|
-|[03:38](https://youtube.com/watch?v=U7YtajKlftQ&amp;t=218s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=7) |Convert Line to Satin Column|
-|[04:19](https://youtube.com/watch?v=U7YtajKlftQ&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=7&amp;t=259s) |Cut Satin Column|
-|[06:07](https://youtube.com/watch?v=U7YtajKlftQ&amp;t=367s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=7) |Flip Satin Column Rails|
-|[07:02](https://youtube.com/watch?v=U7YtajKlftQ&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=7&amp;t=422s) |Auto-Route Satin Columns|
-||**Params & Underlay**|
-|[09:10](https://youtube.com/watch?v=U7YtajKlftQ&amp;t=550s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=7) |Params|
-|[10:07](https://youtube.com/watch?v=U7YtajKlftQ&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=7&amp;t=607s) |Center-Walk Underlay|
-|[10:27](https://youtube.com/watch?v=U7YtajKlftQ&amp;t=627s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=7) |Contour Underlay|
-|[10:54](https://youtube.com/watch?v=U7YtajKlftQ&amp;t=654s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=7) |Zig-Zag Underlay|
-|[11:10](https://youtube.comatch?v=U7YtajKlftQ&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=7&amp;t=670s) |**E-Stitch**|
+|[03:38](https://youtube.com/watch?v=U7YtajKlftQ&amp;t=218s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=7) |Convertir Ligne en colonne Satin|
+|[04:19](https://youtube.com/watch?v=U7YtajKlftQ&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=7&amp;t=259s) |Scinder colonne Satin|
+|[06:07](https://youtube.com/watch?v=U7YtajKlftQ&amp;t=367s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=7) |Intervertir rails satin|
+|[07:02](https://youtube.com/watch?v=U7YtajKlftQ&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=7&amp;t=422s) |Remplissage automatique de colonnes satin|
+||**Paramètres & Sous-couche**|
+|[09:10](https://youtube.com/watch?v=U7YtajKlftQ&amp;t=550s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=7) |Paramètress|
+|[10:07](https://youtube.com/watch?v=U7YtajKlftQ&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=7&amp;t=607s) |Sous-couche centrée|
+|[10:27](https://youtube.com/watch?v=U7YtajKlftQ&amp;t=627s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=7) |Sous-couche|
+|[10:54](https://youtube.com/watch?v=U7YtajKlftQ&amp;t=654s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=7) |Sous-couche Zig-Zag|
+|[11:10](https://youtube.comatch?v=U7YtajKlftQ&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=7&amp;t=670s) |**Point en E**|
 {: .table-full-width }
 
 [transcript](/fr/tutorials/resources/beginner-video-tutorials/04-stitch-types-transcript), [subtitles](/assets/files/beginner-tutorial-series-subtitles/fr/04-stitch-types-satin-captions.srt)
 
-## 05 Lettering
+## 05 Lettrage
 {% include video id="-Kcc970TJxM" provider="youtube" %}
 
 [transcript](/fr/tutorials/resources/beginner-video-tutorials/05-lettering-transcript), [subtitles](/assets/files/beginner-tutorial-series-subtitles/fr/05-lettering-captions.srt)
 
-## 06 Visual Commands
+## 06 Commandes visuelles
 {% include video id="RU0WzMYZ6ik" provider="youtube" %}
 
 |Time|Chapter (links open in YouTube)|
 |---|---|
 |[00:00](https://youtube.com/watch?v=RU0WzMYZ6ik&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=10&amp;t=0s)| Introduction|
-|[00:25](https://youtube.com/watch?v=RU0WzMYZ6ik&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=10&amp;t=25s)| Install Add-Ons|
+|[00:25](https://youtube.com/watch?v=RU0WzMYZ6ik&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=10&amp;t=25s)| Installer Add-Ons|
 ||**Design Commands**|
 |[00:49](https://youtube.com/watch?v=RU0WzMYZ6ik&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=10&amp;t=49s)| Stop Position|
 |[01:16](https://youtube.com/watch?v=RU0WzMYZ6ik&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=10&amp;t=76s)| Origin|
