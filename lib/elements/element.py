@@ -2,7 +2,6 @@ import sys
 from copy import deepcopy
 
 import cubicsuperpath
-import simplestyle
 from cspsubdiv import cspsubdiv
 
 from ..commands import find_commands
@@ -158,9 +157,9 @@ class EmbroideryElement(object):
         # simplestyle would split the string multiple times if more than one ":" are existent
         """Create a dictionary from the value of an inline style attribute"""
         if s is None:
-          return {}
+            return {}
         else:
-          return dict([[x.strip() for x in i.split(":", 1)] for i in s.split(";") if len(i.strip())])
+            return dict([[x.strip() for x in i.split(":", 1)] for i in s.split(";") if len(i.strip())])
 
     @property
     @cache
