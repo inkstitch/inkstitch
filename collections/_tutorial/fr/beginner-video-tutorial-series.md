@@ -118,7 +118,7 @@ Nous vous souhaitons un bon début avec Ink/Stitch!
 |---|---|
 |[00:00](https://youtube.comatch?v=U7YtajKlftQ&amp;t=0s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=7) |Introduction|
 ||**Satin Path Object**|
-|[01:05](https://youtube.com/watch?v=U7YtajKlftQ&amp;t=65s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=7) |Node Methode des noeuds|
+|[01:05](https://youtube.com/watch?v=U7YtajKlftQ&amp;t=65s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=7) |Methode des noeuds|
 |[03:09](https://youtube.com/watch?v=U7YtajKlftQ&amp;t=189s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=7) |Methode des traverses|
 ||**Satin Tools**|
 |[03:38](https://youtube.com/watch?v=U7YtajKlftQ&amp;t=218s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=7) |Convertir Ligne en colonne Satin|

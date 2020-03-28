@@ -18,6 +18,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 locale                   : "en-US"
 title                    : "Ink/Stitch"
 title_separator          : "-"
+subtitle                 : # site tagline that appears below site title in masthead
 name                     : "<a href='https://github.com/inkstitch'>Ink/Stitch</a>"
 description              : "An Inkscape extension for designing machine embroidery patterns."
 url                      : "https://inkstitch.org"
@@ -123,12 +124,9 @@ footer:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url:
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: https://github.com/inkstitch/inkstitch
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
@@ -138,6 +136,12 @@ footer:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url:
+    - label: "YouTube"
+      icon: "fab fa-fw fa-youtube-square"
+      url: "https://www.youtube.com/channel/UCJCDCFuT_xQoI55e10HRiRw"
+    - label: "Facebook"
+      icon: "fab fa-wf fa-facebook-square"
+      url: "https://www.facebook.com/groups/369667580374203/"
 
 
 # Reading Files
