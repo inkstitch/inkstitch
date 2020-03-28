@@ -426,8 +426,8 @@ export default {
       // Create Realistic Filter
       this.filter = this.svg.defs().filter()
 
-      this.filter.attr({id: "realistic-stitch-filter", x: "-10%", y: "-10%", height: "120%", width: "120%", style: "color-interpolation-filters:sRGB"})
-      this.filter.gaussianBlur({id: "gaussianBlur1", stdDeviation: "1.3", in: "SourceAlpha"})
+      this.filter.attr({id: "realistic-stitch-filter", x: "-0.1", y: "-0.1", height: "1.2", width: "1.2", style: "color-interpolation-filters:sRGB"})
+      this.filter.gaussianBlur({id: "gaussianBlur1", stdDeviation: "1.5", in: "SourceAlpha"})
       this.filter.componentTransfer(function (add) {
           add.funcR({ type: "identity" }),
           add.funcG({ type: "identity" }),
@@ -436,9 +436,9 @@ export default {
       }).attr({id: "componentTransfer1", in: "gaussianBlur1"})
       this.filter.composite({id: "composite1", in: "componentTransfer1", in2: "SourceAlpha", operator: "in"})
       this.filter.gaussianBlur({id: "gaussianBlur2", in: "composite1", stdDeviation: 0.09})
-      this.filter.morphology({id: "morphology1", in: "gaussianBlur2", erode: 0.1, radius: 0.1})
-      this.filter.specularLighting({id: "specularLighting1", in: "morphology1", specularConstant: 0.79, surfaceScale: 30}).pointLight({z: 10})
-      this.filter.gaussianBlur({id: "gaussianBlur3", in: "specularLighting1", stdDeviation: 0.1})
+      this.filter.morphology({id: "morphology1", in: "gaussianBlur2", operator: "dilate", radius: 0.1})
+      this.filter.specularLighting({id: "specularLighting1", in: "morphology1", specularConstant: 0.709, surfaceScale: 30}).pointLight({z: 10})
+      this.filter.gaussianBlur({id: "gaussianBlur3", in: "specularLighting1", stdDeviation: 0.04})
       this.filter.composite({id: "composite2", in: "gaussianBlur3", in2: "SourceGraphic", operator: "arithmetic", k2: 1, k3: 1, k1: 0, k4: 0})
       this.filter.composite({in: "composite2", in2: "SourceAlpha", operator: "in"})
 
@@ -458,19 +458,19 @@ export default {
 
             // Position
             let stitch_center = []
-            stitch_center.x = (prevStitch.x + stitch.x) / 2
-            stitch_center.y = (prevStitch.y + stitch.y) / 2
+            stitch_center.x = (prevStitch.x + stitch.x) / 2.0
+            stitch_center.y = (prevStitch.y + stitch.y) / 2.0
 
             // Angle
-            var stitch_angle = Math.atan2(prevStitch.y - stitch.y, prevStitch.x - stitch.x) * (180 / Math.PI)
+            var stitch_angle = Math.atan2(stitch.y - prevStitch.y, stitch.x - prevStitch.x) * (180 / Math.PI)
             // the filter rotates with the object, so let's make sure we always rotate into the same direction
-            if (stitch_angle > 90) { stitch_angle -= 180 }
-            if (stitch_angle <= -90) { stitch_angle += 180 }
+            //if (stitch_angle > 90) { stitch_angle -= 180 }
+            //if (stitch_angle <= -90) { stitch_angle += 180 }
 
             // Length
-            let path_length = Math.hypot(prevStitch.x-stitch.x,prevStitch.y-stitch.y)
+            let path_length = Math.hypot(stitch.x - prevStitch.x, stitch.y - prevStitch.y)
 
-            realisticPath = this.realisticPreview.rect(path_length, 1).radius(0.45).attr(realistic_path_attrs).center(stitch_center.x, stitch_center.y).rotate(stitch_angle).hide()
+            realisticPath = this.realisticPreview.path(`M0,0c0.4,0,0.4,0.3,0.4,0.6c0,0.3,-0.1,0.6,-0.4,0.6v0.2,-0.2h-${path_length}c-0.4,0,-0.4,-0.3,-0.4,-0.6c0,-0.3,0.1,-0.6,0.4,-0.6v-0.2,0.2z`).attr(realistic_path_attrs).center(stitch_center.x, stitch_center.y).rotate(stitch_angle).hide()
 
           } else {
             realisticPath = this.realisticPreview.rect(0, 1).attr(realistic_path_attrs).center(stitch.x, stitch.y).hide()
