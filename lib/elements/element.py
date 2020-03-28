@@ -135,9 +135,14 @@ class EmbroideryElement(object):
 
     @cache
     def get_style(self, style_name, default=None):
-        style = simplestyle.parseStyle(self.node.get("style"))
+        style = self.parseStyle(self.node.get("style"))
         if (style_name not in style):
-            return default
+            # possibly the specific style is set as a seperate attribute
+            style = self.node.get(style_name)
+            if style is None:
+                return default
+            else:
+                return style
         value = style[style_name]
         if value == 'none':
             return None
@@ -145,8 +150,17 @@ class EmbroideryElement(object):
 
     @cache
     def has_style(self, style_name):
-        style = simplestyle.parseStyle(self.node.get("style"))
+        style = self.parseStyle(self.node.get("style"))
         return style_name in style
+
+    def parseStyle(self, s):
+        # this function is copied from inkscape simplestyle. It was necessary, because
+        # simplestyle would split the string multiple times if more than one ":" are existent
+        """Create a dictionary from the value of an inline style attribute"""
+        if s is None:
+          return {}
+        else:
+          return dict([[x.strip() for x in i.split(":", 1)] for i in s.split(";") if len(i.strip())])
 
     @property
     @cache
