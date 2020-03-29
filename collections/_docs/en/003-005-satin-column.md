@@ -7,6 +7,8 @@ toc: true
 ---
 ## What it is
 
+Satin stitch is mostly used for borders, letters or small fill areas.
+
 ![Stitch Types - Satin Column](/assets/images/docs/stitch-type-satincolumn.jpg)
 
 ## How to Create

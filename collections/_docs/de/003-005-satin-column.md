@@ -1,11 +1,13 @@
 ---
-title: "Satin Column"
+title: "Satinkolumne"
 permalink: /de/docs/stitches/satin-column/
 excerpt: ""
 last_modified_at: 2020-03-29
 toc: true
 ---
 ## Beschreibung
+
+Satinkolumnen werden meistens für Ränder, Buchstaben oder sehr kleine Füllbereiche verwendet.
 
 ![Stitch Types - Satin Column](/assets/images/docs/stitch-type-satincolumn.jpg)
 
@@ -17,12 +19,12 @@ Eine Satinkolumne wird aus zwei **meist parallel verlaufenden Linien** gebildet.
 * Benutze die Knoten- oder die Sprossenmethode wie unten beschrieben.
 * Wähle dann die Satinkolumne und führe `Erweiterungen > Ink/Stitch > Paramter`, oder eine [Benutzerdefinierte Tastenkombination](/docs/customize/) aus.
 
-## Die Knoten Methode
+### Die Knoten Methode
 [![Satinkolumne Boat](/assets/images/docs/satin-column.jpg){: width="200x"}](/assets/images/docs/satin-column.svg){: title="Download SVG-Datei" .align-left download="satin-column.svg" }
 
 Abhängig von der Komplexität des Entwurfs kann diese Methode zeitaufwendig sein, da die beiden Pfade die **gleiche Anzahl an Knoten** aufweisen müssen. Dies bedeutet, dass jeder Pfad aus einer gleichen Anzahl von Bezierkurven bestehen muss. Jedes Knotenpaar fungiert als "Kontrollpunkt": Ink/Stich sorgt dafür, dass ein "Zacken" von einem Punkt zum anderen führt.
 
-## Die Sprossen Methode
+### Die Sprossen Methode
 
 Die Sprossenmethode gibt mehr Kontrolle darüber, wie die Satinkolumne erstellt wird. Eine gute Positionierung der Punkte auf jeder der beiden Linien hilft, die Stichrichtungen festzulegen. Es gibt jedoch Situationen, in denen Richtungslinien ("Sprossen") für Satinkolumnen hinzugefügt werden müssen:
 
