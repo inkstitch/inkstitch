@@ -2,7 +2,7 @@
 title: "Satin Column"
 permalink: /docs/stitches/satin-column/
 excerpt: ""
-last_modified_at: 2018-10-11
+last_modified_at: 2020-03-29
 toc: true
 ---
 ## What it is
@@ -32,14 +32,6 @@ The rung method will give you more control over the way the satin column is rend
 * Special situations where you want the stitch directions to be weird
 {: style="clear: both;" }
 
-**Auto generated Satin Columns**
-* Add a contour to a path object (with no filling).
-* Set contour width to the size you want your satin stitch to be.
-* The path should not intersect itself. Try [breaking it up](/docs/satin-tools/#cut-satin-column) into multiple paths if needed.
-* Run `Extensions > Ink/Stitch  > Convert Line to Satin`
-* Run `Extensions > Ink/stitch  > Auto-route Satin...`
-* Use as-is or customize the rungs or rails
-
 **Manual adding of rungs**
 
 * Make sure the existing satin column path (with the two subpaths) is selected with the Node Editor tool.
@@ -55,6 +47,14 @@ The rung method will give you more control over the way the satin column is rend
 
 **Info:** We strongly recommend to use at least three rungs. If you use exactly two rungs (and two rails) it is hard for Ink/stitch to decide which is which.
 {: .notice--warning }
+
+### Auto generated Satin Columns
+
+* Add a contour to a path object (with no filling).
+* Set contour width to the size you want your satin stitch to be.
+* Run `Extensions > Ink/Stitch > Satin Tools > Convert Line to Satin`
+* Optionally run `Extensions > Ink/stitch > Satin Tools > Auto-route Satin...`
+* Use as-is or customize rungs or rails
 
 ## Params
 

@@ -2,7 +2,7 @@
 title: "Satin Column"
 permalink: /de/docs/stitches/satin-column/
 excerpt: ""
-last_modified_at: 2018-10-11
+last_modified_at: 2020-03-29
 toc: true
 ---
 ## Beschreibung
@@ -24,18 +24,11 @@ Abhängig von der Komplexität des Entwurfs kann diese Methode zeitaufwendig sei
 
 ## Die Sprossen Methode
 
-Die Sprossenmethode gibt mehr Kontrolle darüber, wie die Satinkolumne erstellt wird. Eine gute Positionierung der Punkte auf jeder der beiden Linien hilft, die Stichrichtungen zu setzen. Es gibt jedoch Situationen, in denen Richtungslinien ("Sprossen") für Satinkolumnen hinzugefügt werden müssen:
+Die Sprossenmethode gibt mehr Kontrolle darüber, wie die Satinkolumne erstellt wird. Eine gute Positionierung der Punkte auf jeder der beiden Linien hilft, die Stichrichtungen festzulegen. Es gibt jedoch Situationen, in denen Richtungslinien ("Sprossen") für Satinkolumnen hinzugefügt werden müssen:
 
 * Einige knifflige Eckareale
-* Komplizierte Zeichnungen, bei denen das positionieren von den Knoten schwierig und zeitaufwendig ist
-* Spezielle Situationen, in denen die Stichrichtungen ausgefallen aussehen sollen
-
-**Automatisch generierte Satinkolumne**
-* Füge einem Pfadobjekt eine Kontur hinzu (ohne Füllung).
-* Stelle die Konturenbreite auf die Größe ein, die der Satinstich haben soll.
-* Der Pfad sollte sich nicht selbst überschneiden. Versuche bei Bedarf diesen Pfad in mehrere Pfade aufzuteilen. (Diese Regel könnte sich in zukünftigen Versionen von Ink/Stitch ändern.)
-* Starte `Erweiterungen -> Ink/Stitch -> Konvertierung Linie zu Satinstich`
-* Verwende diese wie vorhanden oder passe die Sprossen oder Bahnen an
+* Komplizierte Zeichnungen, bei denen das Positionieren von den Knoten schwierig und zeitaufwendig ist
+* Spezielle Situationen, in denen die Stichrichtungen auf ausgefallene Weise gestaltet werden sollen
 
 **Manuelles Hinzufügen von Sprossen**
 * Stelle sicher, dass der vorhandene Satinpfad (mit den zwei Unterpfaden) mit dem Knoten-Werkzeug ausgewählt ist.
@@ -53,6 +46,14 @@ Original Design von [Liv Iko](https://thenounproject.com/liv_iko/collection/bird
 **Info:** Wir empfehlen dringend mindestens drei "Sprossen" zu nutzen.
 Wenn du genau zwei Sprossen (und zwei Holme) nutzt, ist es schwer für Ink/Stitch zu entscheiden, was Sprosse und was Holm ist.
 {: .notice--warning }
+
+### Automatisch generierte Satinkolumne
+
+* Füge einem Pfadobjekt eine Kontur hinzu (ohne Füllung).
+* Stelle die Konturenbreite auf die Größe ein, die der Satinstich haben soll.
+* Starte `Erweiterungen > Ink/Stitch > Satin Werkzeuge > Konvertierung Linie zu Satinstich`
+* Optional kann auch noch die Funktion `Erweiterungen > Ink/Stitch > Satin Werkzeuge > Automatisch geführte Satinkolumnen` ausgeführt werden
+* Anschließend können auf Wunsch Sprossen und Holme angepasst werden
 
 ## Parameter
 

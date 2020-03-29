@@ -2,7 +2,7 @@
 title: "Colonne Satin"
 permalink: /fr/docs/stitches/satin-column/
 excerpt: ""
-last_modified_at: 2019-10-23
+last_modified_at: 2020-03-29
 toc: true
 ---
 ## Qu’est-ce que c’est
@@ -30,14 +30,6 @@ La méthode des traverses vous donnera plus de contrôle sur le rendu de la colo
 * Situations spéciales dans lesquelles vous souhaitez que les instructions de point soient particulières
 {: style="clear: both;" }
 
-**Colonnes Satin auto-générées**
-* Ajouter un contour à un objet chemin (sans remplissage).
-* Définissez la largeur du contour à la taille souhaitée pour votre point satin.
-* Le chemin ne doit pas se recouper lui-même. Essayez de le [briser](/fr/docs/satin-tools/#scinder-une-colonne-satin) en plusieurs chemins si nécessaire.
-* Lancer `Extensions > Ink/Stitch  > Convert Line to Satin`
-* Lancer `Extensions > Ink/stitch  > Auto-route Satin...`
-* Utilisez tel quel ou modifier les traverses ou les rails
-
 **Ajout manuel de traverses**
 
 * Assurez-vous que le chemin de la colonne satin existant (avec les deux sous-chemins) est sélectionné avec l'outil Editer les noeuds.
@@ -52,6 +44,14 @@ La méthode des traverses vous donnera plus de contrôle sur le rendu de la colo
 
 **Info:** We strongly recommend to use at least three rungs. If you use exactly two rungs (and two rails) it is hard for Ink/stitch to decide which is which.
 {: .notice--warning }
+
+### Colonnes Satin auto-générées
+
+* Ajouter un contour à un objet chemin (sans remplissage).
+* Définissez la largeur du contour à la taille souhaitée pour votre point satin.
+* Lancer `Extensions > Ink/Stitch > Outils de satin > Convertir ligne en satin`
+* En option lancer `Extensions > Ink/stitch > Outils de satin > Remplissage automatique de colonnes satin...`
+* Utilisez tel quel ou modifier les traverses ou les rails
 
 ## Paramètres
 
