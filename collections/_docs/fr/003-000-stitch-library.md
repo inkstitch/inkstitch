@@ -8,7 +8,10 @@ toc: true
 Les types de points Ink/Stitch peuvent être grossièrement divisés en trois sections: trait, satin et remplissage.
 
 ## Traits
+
 Les points de trait peuvent être utilisés pour: les contours, la broderie au trait ou pour ajouter des détails à votre dessin.
+
+{% include video id="S_NiFiI6cPY" provider="youtube" %}
 
 ### Points droits
 Le point droit produit une série de petits points suivant une ligne ou une courbe.
@@ -39,6 +42,9 @@ Le point zig-zag est une option très basique pour créer une simple ligne en zi
 
 
 ## Satin
+
+{% include video id="S_NiFiI6cPY" provider="youtube" %}
+
 ### Colonne Satin
 Le point satin est principalement utilisé pour les bordures, les lettres ou les petites zones de remplissage.
 Ink/Stitch va dessiner des zig-zags entre deux lignes. Vous pouvez faire varier l'épaisseur de la colonne à votre guise.
@@ -55,6 +61,9 @@ Le point "E" est un point de recouvrement simple mais solide pour les éléments
 
 
 ## Remplissage
+
+{% include video id="Dn1cVOxlX8c" provider="youtube" %}
+
 ### Point de remplissage
 Le point de remplissage est utilisé pour remplir une grande surface avec une couleur.
 

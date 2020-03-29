@@ -10,6 +10,8 @@ Ink/Stitch stitch types can be roughly divided into three sections: stroke, sati
 ## Stroke
 Stroke stitches can be used for: outlines, line art embroidery or to add details into your design.
 
+{% include video id="S_NiFiI6cPY" provider="youtube" %}
+
 ### Running Stitch
 Running stitch produces a series of small stitches following a line or curve.
 
@@ -40,6 +42,9 @@ Zig-Zag stitches are a very basic option to create a simple zig-zag line. We rec
 
 
 ## Satin
+
+{% include video id="S_NiFiI6cPY" provider="youtube" %}
+
 ### Satin Column
 Satin stitch is mostly used for borders, letters or small fill areas.
 
@@ -58,6 +63,9 @@ The biggest purpose for E-stitch is a simple but strong cover stitch for appliqu
 
 
 ## Fill
+
+{% include video id="Dn1cVOxlX8c" provider="youtube" %}
+
 ### Fill Stitch
 Fill stitch is used to fill big areas with a color.
 

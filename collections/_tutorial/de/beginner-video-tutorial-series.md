@@ -1,9 +1,9 @@
 ---
-title: Beginner Tutorial Video Series
+title: Beginner Tutorial Video Serie
 permalink: /de/tutorials/resources/beginner-video-tutorials/
 last_modified_at: 2020-03-29
 language: de
-excerpt: "Beginner Tutorial Series on our YouTube-Channel"
+excerpt: "Beginner Tutorial Serie auf unserem YouTube-Kanal"
 image: "/assets/images/tutorials/video-preview-images/beginner-tutorial-series.png"
 
 tutorial-type: Video

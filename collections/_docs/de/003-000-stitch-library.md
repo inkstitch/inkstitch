@@ -11,6 +11,8 @@ Ink/Stitch-Sticharten können grob in drei Gruppen eingeteilt werden: Linien, Sa
 
 Linienartige Sticharten können benutzt werden für: Umrandungen, Strichkunst-Stickereien oder um dem Motiv Details hinzuzufügen.
 
+{% include video id="S_NiFiI6cPY" provider="youtube" %}
+
 ### Laufstich
 
 Der Laufstich produziert eine Serie von kleinen Stichen entlang eines Pfades.
@@ -46,6 +48,8 @@ Zick-Zack-Stiche sind eine sehr einfache Version für Zick-Zack-Linien. Wir empf
 
 ## Satin
 
+{% include video id="S_NiFiI6cPY" provider="youtube" %}
+
 ### Satinkolumne
 
 Satinkolumnen werden meistens für Ränder, Buchstaben oder sehr kleine Füllbereiche verwendet.
@@ -66,6 +70,8 @@ E-Stich dient als einfacher (und dennoch fester) Deckstich für Applikationen. E
 
 
 ## Füllstiche
+
+{% include video id="Dn1cVOxlX8c" provider="youtube" %}
 
 ### Füllstich
 
