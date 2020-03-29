@@ -9,7 +9,7 @@ toc: true
 
 exclude-from-tutorial-list: true
 ---
-[← Back](/tutorials/resources/beginner-video-tutorials/)
+[← Back](/fr/tutorials/resources/beginner-video-tutorials/)
 
 ## Bienvenue dans la série de tutoriels pour débutants Ink/Stitch.
 

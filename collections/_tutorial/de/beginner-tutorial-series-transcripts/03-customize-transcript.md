@@ -1,15 +1,15 @@
 ---
 title: Transcript - 03 Customize - Beginner Tutorial Series
-permalink: /fr/tutorials/resources/beginner-video-tutorials/03-customize-transcript
+permalink: /de/tutorials/resources/beginner-video-tutorials/03-customize-transcript
 last_modified_at: 2019-03-11
-language: fr
+language: de
 image: '/assets/images/tutorials/video-preview-images/beginner-tutorial-series.png'
 
 toc: true
 
 exclude-from-tutorial-list: true
 ---
-[← Back](/fr/tutorials/resources/beginner-video-tutorials/)
+[← Back](/de/tutorials/resources/beginner-video-tutorials/)
 
 ## Welcome to the Ink/Stitch beginner tutorial series.
 

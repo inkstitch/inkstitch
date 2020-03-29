@@ -1,15 +1,15 @@
 ---
 title: Transcript - 06 Visual Commands - Beginner Tutorial Series
-permalink: /fr/tutorials/resources/beginner-video-tutorials/06-visual-commands-transcript
+permalink: /de/tutorials/resources/beginner-video-tutorials/06-visual-commands-transcript
 last_modified_at: 2019-03-11
-language: fr
+language: de
 image: "/assets/images/tutorials/video-preview-images/beginner-tutorial-series.png"
 
 toc: true
 
 exclude-from-tutorial-list: true
 ---
-[← Back](/fr/tutorials/resources/beginner-video-tutorials/)
+[← Back](/de/tutorials/resources/beginner-video-tutorials/)
 
 ## Welcome to the Ink/Stitch beginner tutorial series.
 
