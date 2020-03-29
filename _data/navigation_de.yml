@@ -75,6 +75,7 @@ docs:
     - title: "Stickeinstellungen entfernen"
       url: /de/docs/remove-embroidery-settings/
   - title: Stich-Bibliothek
+    url: /de/docs/stitch-library/
     children:
       - title: "Manueller Stich"
         url: /de/docs/stitches/manual-stitch/
