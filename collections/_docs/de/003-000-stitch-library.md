@@ -48,7 +48,7 @@ Zick-Zack-Stiche sind eine sehr einfache Version für Zick-Zack-Linien. Wir empf
 
 ## Satin
 
-{% include video id="S_NiFiI6cPY" provider="youtube" %}
+{% include video id="U7YtajKlftQ" provider="youtube" %}
 
 ### Satinkolumne
 

@@ -43,7 +43,7 @@ Zig-Zag stitches are a very basic option to create a simple zig-zag line. We rec
 
 ## Satin
 
-{% include video id="S_NiFiI6cPY" provider="youtube" %}
+{% include video id="U7YtajKlftQ" provider="youtube" %}
 
 ### Satin Column
 Satin stitch is mostly used for borders, letters or small fill areas.

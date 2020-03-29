@@ -43,7 +43,7 @@ Le point zig-zag est une option très basique pour créer une simple ligne en zi
 
 ## Satin
 
-{% include video id="S_NiFiI6cPY" provider="youtube" %}
+{% include video id="U7YtajKlftQ" provider="youtube" %}
 
 ### Colonne Satin
 Le point satin est principalement utilisé pour les bordures, les lettres ou les petites zones de remplissage.
