@@ -3,9 +3,6 @@ import simpletransform
 from ..i18n import _
 from ..utils import cache
 
-import sys
-
-
 # modern versions of Inkscape use 96 pixels per inch as per the CSS standard
 PIXELS_PER_MM = 96 / 25.4
 
