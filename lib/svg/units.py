@@ -3,6 +3,8 @@ import simpletransform
 from ..i18n import _
 from ..utils import cache
 
+import sys
+
 
 # modern versions of Inkscape use 96 pixels per inch as per the CSS standard
 PIXELS_PER_MM = 96 / 25.4
@@ -131,11 +133,6 @@ def get_viewbox_transform(node):
         # preserve aspect ratio
         aspect_ratio = node.get('preserveAspectRatio', 'xMidYMid meet')
         if aspect_ratio != 'none':
-            unit = parse_length_with_units(node.get('width'))[1]
-            if float(viewbox[2]) > parse_length_with_units(node.get('width'))[0]:
-                sx = convert_length(viewbox[2] + unit) / float(viewbox[2]) if 'slice' in aspect_ratio else 1.0
-            if float(viewbox[3]) > parse_length_with_units(node.get('height'))[0]:
-                sy = convert_length(viewbox[3] + unit) / float(viewbox[3]) if 'slice' in aspect_ratio else 1.0
             sx = sy = max(sx, sy) if 'slice' in aspect_ratio else min(sx, sy)
 
         scale_transform = simpletransform.parseTransform("scale(%f, %f)" % (sx, sy))
