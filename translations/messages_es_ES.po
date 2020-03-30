@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-03-23 00:09+0000\n"
-"PO-Revision-Date: 2020-03-26 00:11\n"
+"POT-Creation-Date: 2020-03-30 00:10+0000\n"
+"PO-Revision-Date: 2020-03-30 00:11\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -27,35 +27,35 @@ msgstr "Ink/Stitch Fuente Pequeña"
 msgid "A font suited for small characters.  The capital em is 0.2 inches wide at 100% scale.  Can be scaled up to 300%."
 msgstr "Fuente adecuada para caracteres pequeños. La \"M\", eme mayúscula, tiene 5,08mm de ancho en la escala 100%. Se puede escalar hasta 300%."
 
-#. name of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:6
-msgid "TT Directors"
-msgstr "TT Directors"
-
-#. description of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:8
-msgid "A font suited for directing"
-msgstr ""
-
 #. name of font in fonts/medium_font
-#: inkstitch-fonts-metadata.py:10
+#: inkstitch-fonts-metadata.py:6
 msgid "Ink/Stitch Medium Font"
 msgstr "Ink/Stitch Fuente Tamaño Medio"
 
 #. description of font in fonts/medium_font
-#: inkstitch-fonts-metadata.py:12
+#: inkstitch-fonts-metadata.py:8
 #, python-format
 msgid "A basic font suited for medium-sized characters.  The capital em is 0.6 inches wide at 100% scale.  Can be scaled down to 75% or up to 150%.  Every satin has contour underlay."
 msgstr "Una fuente básica adecuada para caracteres de tamaño medio. La \"M\", eme mayúscula, tiene un ancho de 15,24mm en una ecala de 100%. Puede escalarse entre 75% y 150%.  Los puntos de satín tienen un contorno base."
 
 #. name of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:14
+#: inkstitch-fonts-metadata.py:10
 msgid "TT Masters"
 msgstr "TT Masters"
 
 #. description of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:16
+#: inkstitch-fonts-metadata.py:12
 msgid "A font suited for heavy typing :)"
+msgstr ""
+
+#. name of font in fonts/tt_directors
+#: inkstitch-fonts-metadata.py:14
+msgid "TT Directors"
+msgstr "TT Directors"
+
+#. description of font in fonts/tt_directors
+#: inkstitch-fonts-metadata.py:16
+msgid "A font suited for directing"
 msgstr ""
 
 #. command attached to an object
