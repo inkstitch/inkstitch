@@ -44,7 +44,7 @@ La méthode des traverses vous donnera plus de contrôle sur le rendu de la colo
   Dessin original de [Liv Iko](https://thenounproject.com/liv_iko/collection/birds/?i=898697) modifié par [EDUTECH Wiki](https://edutechwiki.unige.ch/en/InkStitch)
 {: style="font-size: 0.5rem;"}
 
-**Info:** We strongly recommend to use at least three rungs. If you use exactly two rungs (and two rails) it is hard for Ink/stitch to decide which is which.
+**Info:** Nous recommandons fortement d'utiliser au moins trois traverses. Si vous utilisez exactement deux traverses (et deux rails), il est difficile pour Ink/stitch de décider qui est qui.
 {: .notice--warning }
 
 ### Colonnes Satin auto-générées
