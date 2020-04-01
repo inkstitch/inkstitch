@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2020-03-30 00:10+0000\n"
-"PO-Revision-Date: 2020-03-30 00:11\n"
+"PO-Revision-Date: 2020-04-01 00:11\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -227,7 +227,7 @@ msgstr "Ángulo de relleno"
 
 #: lib/elements/auto_fill.py:63
 msgid "Default: fill angle + 90 deg. Insert comma-seperated list for multiple layers."
-msgstr ""
+msgstr "Por defecto: rellenar el ángulo + 90 grados. Insertar lista de elementos separados por coma para capas múltiples."
 
 #: lib/elements/auto_fill.py:84
 msgid "Row spacing"
@@ -235,7 +235,7 @@ msgstr "Espaciado de la fila"
 
 #: lib/elements/auto_fill.py:85
 msgid "default: 3x fill row spacing"
-msgstr ""
+msgstr "por defecto: rellenar el espaciado de línea x3"
 
 #: lib/elements/auto_fill.py:95
 msgid "Max stitch length"
@@ -243,7 +243,7 @@ msgstr "Longitud de puntada máxima"
 
 #: lib/elements/auto_fill.py:96
 msgid "default: equal to fill max stitch length"
-msgstr ""
+msgstr "por defecto: igual a rellenar la longitud máxima de puntada"
 
 #: lib/elements/auto_fill.py:105
 msgid "Inset"
@@ -263,11 +263,11 @@ msgstr ""
 
 #: lib/elements/auto_fill.py:128
 msgid "Expand"
-msgstr ""
+msgstr "Expandir"
 
 #: lib/elements/auto_fill.py:129
 msgid "Expand the shape before fill stitching, to compensate for gaps between shapes."
-msgstr ""
+msgstr "Expandir la forma antes de rellenar el bordado, para compensar los espacios entre figuras."
 
 #: lib/elements/auto_fill.py:138 lib/elements/auto_fill.py:150
 msgid "Underpath"
@@ -279,7 +279,7 @@ msgstr ""
 
 #: lib/elements/auto_fill.py:233
 msgid "Error during autofill!  This means that there is a problem with Ink/Stitch."
-msgstr ""
+msgstr "Error durante Auto-Relleno! Esto significa que hubo un problema con Ink/Stitch."
 
 #. this message is followed by a URL:
 #. https://github.com/inkstitch/inkstitch/issues/new
@@ -1148,7 +1148,7 @@ msgstr "Introduzca número de orden de compra..."
 #: print/templates/headline.html:15
 #, python-format
 msgid "%m/%d/%Y"
-msgstr ""
+msgstr "%d-%m-%Y"
 
 #: print/templates/operator_detailedview.html:10
 msgid "Thread Consumption"
