@@ -1,14 +1,16 @@
-import sys
 import os
+import sys
 import tempfile
 from zipfile import ZipFile
+
+import inkex
 import pyembroidery
 
-from .base import InkstitchExtension
 from ..i18n import _
 from ..output import write_embroidery_file
 from ..stitch_plan import patches_to_stitch_plan
 from ..svg import PIXELS_PER_MM
+from .base import InkstitchExtension
 
 
 class Zip(InkstitchExtension):
@@ -26,6 +28,8 @@ class Zip(InkstitchExtension):
                 extension = format['extension']
                 self.OptionParser.add_option('--format-%s' % extension, type="inkbool", dest=extension)
                 self.formats.append(extension)
+        self.OptionParser.add_option('--format-svg', type="inkbool", dest='svg')
+        self.formats.append('svg')
 
     def effect(self):
         if not self.get_elements():
@@ -42,7 +46,12 @@ class Zip(InkstitchExtension):
         for format in self.formats:
             if getattr(self.options, format):
                 output_file = os.path.join(path, "%s.%s" % (base_file_name, format))
-                write_embroidery_file(output_file, stitch_plan, self.document.getroot())
+                if not format == 'svg':
+                    write_embroidery_file(output_file, stitch_plan, self.document.getroot())
+                else:
+                    output = open(output_file, 'w')
+                    output.write(inkex.etree.tostring(self.document.getroot()))
+                    output.close()
                 files.append(output_file)
 
         if not files:
