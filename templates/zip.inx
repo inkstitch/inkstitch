@@ -12,7 +12,7 @@
     {%- for format, description in formats %}
     <param name="format-{{ format }}" type="boolean" _gui-text=".{{ format | upper }}: {{ _(description) }}">false</param>
     {%- endfor %}
-    <param name="format-svg" type="boolean" _gui-text=".SVG: Vektor Graphic">false</param>
+    <param name="format-svg" type="boolean" _gui-text=".SVG: {{ _("Scalable Vector Graphic") }}">false</param>
     <param name="extension" type="string" gui-hidden="true">zip</param>
     <script>
         {{ command_tag | safe }}
