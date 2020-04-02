@@ -17,38 +17,38 @@ from .utils import cache, get_bundled_dir, Point
 
 COMMANDS = {
     # L10N command attached to an object
-    N_("fill_start"): N_("Fill stitch starting position"),
+    "fill_start": N_("Fill stitch starting position"),
 
     # L10N command attached to an object
-    N_("fill_end"): N_("Fill stitch ending position"),
+    "fill_end": N_("Fill stitch ending position"),
 
     # L10N command attached to an object
-    N_("satin_start"): N_("Auto-route satin stitch starting position"),
+    "satin_start": N_("Auto-route satin stitch starting position"),
 
     # L10N command attached to an object
-    N_("satin_end"): N_("Auto-route satin stitch ending position"),
+    "satin_end": N_("Auto-route satin stitch ending position"),
 
     # L10N command attached to an object
-    N_("stop"): N_("Stop (pause machine) after sewing this object"),
+    "stop": N_("Stop (pause machine) after sewing this object"),
 
     # L10N command attached to an object
-    N_("trim"): N_("Trim thread after sewing this object"),
+    "trim": N_("Trim thread after sewing this object"),
 
     # L10N command attached to an object
-    N_("ignore_object"): N_("Ignore this object (do not stitch)"),
+    "ignore_object": N_("Ignore this object (do not stitch)"),
 
     # L10N command attached to an object
-    N_("satin_cut_point"): N_("Satin cut point (use with Cut Satin Column)"),
+    "satin_cut_point": N_("Satin cut point (use with Cut Satin Column)"),
 
 
     # L10N command that affects a layer
-    N_("ignore_layer"): N_("Ignore layer (do not stitch any objects in this layer)"),
+    "ignore_layer": N_("Ignore layer (do not stitch any objects in this layer)"),
 
     # L10N command that affects entire document
-    N_("origin"): N_("Origin for exported embroidery files"),
+    "origin": N_("Origin for exported embroidery files"),
 
     # L10N command that affects entire document
-    N_("stop_position"): N_("Jump destination for Stop commands (a.k.a. \"Frame Out position\")."),
+    "stop_position": N_("Jump destination for Stop commands (a.k.a. \"Frame Out position\")."),
 }
 
 OBJECT_COMMANDS = ["fill_start", "fill_end", "satin_start", "satin_end", "stop", "trim", "ignore_object", "satin_cut_point"]
