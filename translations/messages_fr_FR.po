@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-03-30 00:10+0000\n"
-"PO-Revision-Date: 2020-04-01 00:10\n"
+"POT-Creation-Date: 2020-04-03 00:09+0000\n"
+"PO-Revision-Date: 2020-04-03 00:10\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -60,99 +60,55 @@ msgstr "Une fonte faite pour des metteurs en scène"
 
 #. command attached to an object
 #: lib/commands.py:20
-msgid "fill_start"
-msgstr "début_remplissage"
-
-#: lib/commands.py:20
 msgid "Fill stitch starting position"
 msgstr "Position de départ du remplissage"
 
 #. command attached to an object
-#: lib/commands.py:23
-msgid "fill_end"
-msgstr "fin_remplissage"
-
 #: lib/commands.py:23
 msgid "Fill stitch ending position"
 msgstr "Position de fin de remplissage"
 
 #. command attached to an object
 #: lib/commands.py:26
-msgid "satin_start"
-msgstr "début_satin"
-
-#: lib/commands.py:26
 msgid "Auto-route satin stitch starting position"
 msgstr "Position de départ pour points satins auto-générés"
 
 #. command attached to an object
-#: lib/commands.py:29
-msgid "satin_end"
-msgstr "fin_satin"
-
 #: lib/commands.py:29
 msgid "Auto-route satin stitch ending position"
 msgstr "Position de fin pour points satins auto-générés"
 
 #. command attached to an object
 #: lib/commands.py:32
-msgid "stop"
-msgstr "stop"
-
-#: lib/commands.py:32
 msgid "Stop (pause machine) after sewing this object"
 msgstr "Stop (pause machine) après avoir brodé cet objet"
 
 #. command attached to an object
-#: lib/commands.py:35
-msgid "trim"
-msgstr "couper"
-
 #: lib/commands.py:35
 msgid "Trim thread after sewing this object"
 msgstr "Couper le fil après avoir brodé cet objet"
 
 #. command attached to an object
 #: lib/commands.py:38
-msgid "ignore_object"
-msgstr "ignorer_objet"
-
-#: lib/commands.py:38
 msgid "Ignore this object (do not stitch)"
 msgstr "Ignorer cet objet (ne pas le broder)"
 
 #. command attached to an object
-#: lib/commands.py:41
-msgid "satin_cut_point"
-msgstr "point de coupe satin"
-
 #: lib/commands.py:41
 msgid "Satin cut point (use with Cut Satin Column)"
 msgstr "Point de partage (à utiliser avec scinder colonne satin)"
 
 #. command that affects a layer
 #: lib/commands.py:45
-msgid "ignore_layer"
-msgstr "ignorer_calque"
-
-#: lib/commands.py:45
 msgid "Ignore layer (do not stitch any objects in this layer)"
 msgstr "Ignorer le calque (broder aucun objet dans cette couche)"
 
 #. command that affects entire document
 #: lib/commands.py:48
-msgid "origin"
-msgstr "origine"
-
-#: lib/commands.py:48
 msgid "Origin for exported embroidery files"
 msgstr "Origine des fichiers broderie exportés"
 
 #. command that affects entire document
-#: lib/commands.py:51
-msgid "stop_position"
-msgstr "position_stop"
-
 #: lib/commands.py:51
 msgid "Jump destination for Stop commands (a.k.a. \"Frame Out position\")."
 msgstr "Destination de saut pour les commandes stop (\"position en dehors du cadre\")."
@@ -862,7 +818,7 @@ msgstr "Avertissements"
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
 msgstr "Il est possible qu'un objet contienne plus d'une erreur, même s'il n'y a qu'un conseil par objet. Relancer cette fonction quand il y a plus d'erreurs. Enlever les conseils en supprimant le calque \"Résolution de problèmes\" dans le dialogue objets (Objet -> Objets...)."
 
-#: lib/extensions/zip.py:49
+#: lib/extensions/zip.py:58
 msgid "No embroidery file formats selected."
 msgstr "Aucun format de fichier broderie sélectionné."
 
@@ -1034,12 +990,12 @@ msgstr "Points droits pour auto-remplissage satin %d"
 msgid "Stitch Plan"
 msgstr "Plan de broderie"
 
-#: lib/svg/units.py:47
+#: lib/svg/units.py:46
 #, python-format
 msgid "parseLengthWithUnits: unknown unit %s"
 msgstr "analyser Longueur avec Unités: unité inconnue %s"
 
-#: lib/svg/units.py:79
+#: lib/svg/units.py:78
 #, python-format
 msgid "Unknown unit: %s"
 msgstr "Unité inconnue: %s"
@@ -1817,4 +1773,8 @@ msgstr "Ink/Stitch : ZIP exporter plusieurs formats (.zip)"
 #: templates/zip.inx:9
 msgid "Create a ZIP with multiple embroidery file formats using Ink/Stitch"
 msgstr "Créer un ZIP avec des formats de fichiers de broderie multiples à l’aide d’encre/Stitch"
+
+#: templates/zip.inx:13
+msgid "Scalable Vector Graphic"
+msgstr ""
 

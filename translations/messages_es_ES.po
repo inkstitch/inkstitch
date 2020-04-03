@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-03-30 00:10+0000\n"
-"PO-Revision-Date: 2020-04-01 00:11\n"
+"POT-Creation-Date: 2020-04-03 00:09+0000\n"
+"PO-Revision-Date: 2020-04-03 00:10\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -60,99 +60,55 @@ msgstr ""
 
 #. command attached to an object
 #: lib/commands.py:20
-msgid "fill_start"
-msgstr "inicio_relleno"
-
-#: lib/commands.py:20
 msgid "Fill stitch starting position"
 msgstr "Posición de inicio de puntada de relleno"
 
 #. command attached to an object
-#: lib/commands.py:23
-msgid "fill_end"
-msgstr "fin_relleno"
-
 #: lib/commands.py:23
 msgid "Fill stitch ending position"
 msgstr "Posicion final de puntada de relleno"
 
 #. command attached to an object
 #: lib/commands.py:26
-msgid "satin_start"
-msgstr "inicio_satín"
-
-#: lib/commands.py:26
 msgid "Auto-route satin stitch starting position"
 msgstr "Posición de inicio de puntada de satín automática"
 
 #. command attached to an object
-#: lib/commands.py:29
-msgid "satin_end"
-msgstr "fin_satín"
-
 #: lib/commands.py:29
 msgid "Auto-route satin stitch ending position"
 msgstr "Posición de fin de puntada de satín automática"
 
 #. command attached to an object
 #: lib/commands.py:32
-msgid "stop"
-msgstr "parada"
-
-#: lib/commands.py:32
 msgid "Stop (pause machine) after sewing this object"
 msgstr "Parar (pausar máquina) después de coser este objeto"
 
 #. command attached to an object
-#: lib/commands.py:35
-msgid "trim"
-msgstr "recortar"
-
 #: lib/commands.py:35
 msgid "Trim thread after sewing this object"
 msgstr "Recortar hilo después de coser este objeto"
 
 #. command attached to an object
 #: lib/commands.py:38
-msgid "ignore_object"
-msgstr "ignorar_objeto"
-
-#: lib/commands.py:38
 msgid "Ignore this object (do not stitch)"
 msgstr "Ignorar este objeto (no dar puntada)"
 
 #. command attached to an object
-#: lib/commands.py:41
-msgid "satin_cut_point"
-msgstr "punto_corte_satín"
-
 #: lib/commands.py:41
 msgid "Satin cut point (use with Cut Satin Column)"
 msgstr "Punto de corte de satín (usar con Cortar Columna Satín)"
 
 #. command that affects a layer
 #: lib/commands.py:45
-msgid "ignore_layer"
-msgstr "ignorar_capa"
-
-#: lib/commands.py:45
 msgid "Ignore layer (do not stitch any objects in this layer)"
 msgstr "Ignorar capa (no coser ningún objeto en esta capa)"
 
 #. command that affects entire document
 #: lib/commands.py:48
-msgid "origin"
-msgstr "origen"
-
-#: lib/commands.py:48
 msgid "Origin for exported embroidery files"
 msgstr "Origen para archivos de bordado exportados"
 
 #. command that affects entire document
-#: lib/commands.py:51
-msgid "stop_position"
-msgstr "posición_parada"
-
 #: lib/commands.py:51
 msgid "Jump destination for Stop commands (a.k.a. \"Frame Out position\")."
 msgstr ""
@@ -285,7 +241,7 @@ msgstr "Error durante Auto-Relleno! Esto significa que hubo un problema con Ink/
 #. https://github.com/inkstitch/inkstitch/issues/new
 #: lib/elements/auto_fill.py:236
 msgid "If you'd like to help us make Ink/Stitch better, please paste this whole message into a new issue at: "
-msgstr ""
+msgstr "Si quieres ayudarnos a mejorar Ink/Stitch, por favor pega este completo mensaje a un nuevo tema en: "
 
 #: lib/elements/element.py:173
 msgid "Ties"
@@ -314,7 +270,7 @@ msgstr "error:"
 
 #: lib/elements/fill.py:17
 msgid "Unconnected"
-msgstr ""
+msgstr "Desconectado"
 
 #: lib/elements/fill.py:18
 msgid "Fill: This object is made up of unconnected shapes.  This is not allowed because Ink/Stitch doesn't know what order to stitch them in.  Please break this object up into separate shapes."
@@ -861,7 +817,7 @@ msgstr ""
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
 msgstr ""
 
-#: lib/extensions/zip.py:49
+#: lib/extensions/zip.py:58
 msgid "No embroidery file formats selected."
 msgstr ""
 
@@ -1033,12 +989,12 @@ msgstr ""
 msgid "Stitch Plan"
 msgstr ""
 
-#: lib/svg/units.py:47
+#: lib/svg/units.py:46
 #, python-format
 msgid "parseLengthWithUnits: unknown unit %s"
 msgstr ""
 
-#: lib/svg/units.py:79
+#: lib/svg/units.py:78
 #, python-format
 msgid "Unknown unit: %s"
 msgstr ""
@@ -1816,4 +1772,8 @@ msgstr ""
 #: templates/zip.inx:9
 msgid "Create a ZIP with multiple embroidery file formats using Ink/Stitch"
 msgstr "Crear un archivo ZIP con múltiples formatos de archivos de bordado usando Ink/Stitch"
+
+#: templates/zip.inx:13
+msgid "Scalable Vector Graphic"
+msgstr ""
 

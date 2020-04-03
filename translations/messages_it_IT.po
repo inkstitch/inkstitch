@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-03-30 00:10+0000\n"
-"PO-Revision-Date: 2020-04-01 00:10\n"
+"POT-Creation-Date: 2020-04-03 00:09+0000\n"
+"PO-Revision-Date: 2020-04-03 00:10\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
@@ -60,99 +60,55 @@ msgstr "Un font adatto a dare direzione"
 
 #. command attached to an object
 #: lib/commands.py:20
-msgid "fill_start"
-msgstr "riempi_inizio"
-
-#: lib/commands.py:20
 msgid "Fill stitch starting position"
 msgstr "Posizione di partenza del punto di riempimento"
 
 #. command attached to an object
-#: lib/commands.py:23
-msgid "fill_end"
-msgstr "riempi_fine"
-
 #: lib/commands.py:23
 msgid "Fill stitch ending position"
 msgstr "Posizione finale del punto di riempimento"
 
 #. command attached to an object
 #: lib/commands.py:26
-msgid "satin_start"
-msgstr "raso_inizio"
-
-#: lib/commands.py:26
 msgid "Auto-route satin stitch starting position"
 msgstr "Posizione di partenza del riempimento satinato in modalità percorso automatico"
 
 #. command attached to an object
-#: lib/commands.py:29
-msgid "satin_end"
-msgstr "raso_fine"
-
 #: lib/commands.py:29
 msgid "Auto-route satin stitch ending position"
 msgstr "Posizione di arrivo del riempimento satinato in modalità percorso automatico"
 
 #. command attached to an object
 #: lib/commands.py:32
-msgid "stop"
-msgstr "stop"
-
-#: lib/commands.py:32
 msgid "Stop (pause machine) after sewing this object"
 msgstr "Ferma (metti in pausa) la macchina dopo aver ricamato questo oggetto"
 
 #. command attached to an object
-#: lib/commands.py:35
-msgid "trim"
-msgstr "togli_spazi"
-
 #: lib/commands.py:35
 msgid "Trim thread after sewing this object"
 msgstr "Taglia il filo dopo aver ricamato questo oggetto"
 
 #. command attached to an object
 #: lib/commands.py:38
-msgid "ignore_object"
-msgstr "ignora_oggetto"
-
-#: lib/commands.py:38
 msgid "Ignore this object (do not stitch)"
 msgstr "Ignora questo oggetto (non ricamare)"
 
 #. command attached to an object
-#: lib/commands.py:41
-msgid "satin_cut_point"
-msgstr "punto_per_taglio_raso"
-
 #: lib/commands.py:41
 msgid "Satin cut point (use with Cut Satin Column)"
 msgstr "Punto di taglio del ricamo satinato (da usare con il comando \"Taglia Colonna Satinata\")"
 
 #. command that affects a layer
 #: lib/commands.py:45
-msgid "ignore_layer"
-msgstr "ignora_livello"
-
-#: lib/commands.py:45
 msgid "Ignore layer (do not stitch any objects in this layer)"
 msgstr "Ignora livello (non ricamare alcun oggetto del livello selezionato)"
 
 #. command that affects entire document
 #: lib/commands.py:48
-msgid "origin"
-msgstr "origine"
-
-#: lib/commands.py:48
 msgid "Origin for exported embroidery files"
 msgstr "Punto di origine per file di ricamo da esportare"
 
 #. command that affects entire document
-#: lib/commands.py:51
-msgid "stop_position"
-msgstr "stop_posizione"
-
 #: lib/commands.py:51
 msgid "Jump destination for Stop commands (a.k.a. \"Frame Out position\")."
 msgstr "Posizione di destinazione per i comandi Stop (anche: \"Posizione fuori quadro\")."
@@ -862,7 +818,7 @@ msgstr "Avvertimenti"
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
 msgstr "Potrebbe accadere che un oggetto contenga più di un errore, ma ci sarà comunque un solo puntatore per oggetto. Eseguire questa funzione un'altra volta, se si verificano ulteriori errori. Rimuovere i puntatori cancellando il livello chiamato \"Risoluzione problemi\" attraverso il pannello degli oggetti (Oggetto -> Oggetti...)."
 
-#: lib/extensions/zip.py:49
+#: lib/extensions/zip.py:58
 msgid "No embroidery file formats selected."
 msgstr "Non è stato selezionato nessun formato di file per il ricamo."
 
@@ -1034,12 +990,12 @@ msgstr "Punto progressivo AutoRase %d"
 msgid "Stitch Plan"
 msgstr "Piano di cucitura"
 
-#: lib/svg/units.py:47
+#: lib/svg/units.py:46
 #, python-format
 msgid "parseLengthWithUnits: unknown unit %s"
 msgstr "parseLengthWithUnits: unità sconosciuta %s"
 
-#: lib/svg/units.py:79
+#: lib/svg/units.py:78
 #, python-format
 msgid "Unknown unit: %s"
 msgstr "Unità sconosciuta: %s"
@@ -1817,4 +1773,8 @@ msgstr "Ink/Stitch: esportazione ZIP formati multipli (.zip)"
 #: templates/zip.inx:9
 msgid "Create a ZIP with multiple embroidery file formats using Ink/Stitch"
 msgstr "Creare un file ZIP con formati di ricamo multipli usando Ink/Stitch"
+
+#: templates/zip.inx:13
+msgid "Scalable Vector Graphic"
+msgstr ""
 
