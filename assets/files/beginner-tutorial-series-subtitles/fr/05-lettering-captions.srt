@@ -1,52 +1,52 @@
 1
 00:00:05,480 --> 00:00:09,080
-Welcome to the Ink/Stitch beginner tutorial series.
+Bienvenue dans la série de tutoriels pour débutants Ink/Stitch.
 
 2
 00:00:10,600 --> 00:00:13,920
-In this part we are going to look into the lettering tool.
+Dans cette partie, nous allons examiner l'outil de lettrage.
 
 3
 00:00:14,300 --> 00:00:22,920
-In Ink/Stitch it is possible to write a multiline text, which will automatically be converted into an embroidery font.
+Dans Ink/Stitch il est possible d'écrire un texte multiligne, qui sera automatiquement converti en police de broderie.
 
 4
 00:00:24,040 --> 00:00:27,660
-Run "Extensions > Ink/Stitch  > Lettering"
+Exécutez "Extensions> Ink/Stitch> Lettrage"
 
 5
 00:00:28,380 --> 00:00:35,340
-Being in a very early state the tool can handle only one font. This will change in a future release.
+Étant dans un état très précoce, l'outil ne peut gérer qu'une seule police. Cela va changer dans une future version.
 
 6
 00:00:35,340 --> 00:00:37,340
-Now enter your text.
+Entrez maintenant votre texte.
 
 7
 00:00:40,100 --> 00:00:43,500
-You will see the simulator updating as you write.
+Vous verrez le simulateur se mettre à jour au fur et à mesure que vous écrivez.
 
 8
 00:00:45,820 --> 00:00:53,540
-With multiline text you might want Ink/Stitch to start stitching from the right in uneven line numbers.
+Avec du texte multiligne, vous souhaiterez peut-être que Ink/Stitch commence à broder à partir de la droite en cas de nombres de lignes inégaux.
 
 9
 00:00:53,540 --> 00:00:58,960
-Enable the option “Stitch lines of text back and forth” for this matter.
+Activez l'option «Broder des lignes de texte dans les deux sens» dans ce cas.
 
 10
 00:00:59,300 --> 00:01:01,620
-Click on "Apply and Quit"
+Cliquez sur "Appliquer et quitter"
 
 11
 00:01:02,160 --> 00:01:05,940
-Ink/Stitch will insert all paths necessary for your text.
+Ink/Stitch insérera tous les chemins nécessaires à votre texte.
 
 12
 00:01:05,940 --> 00:01:11,480
-You can modify it if you like or save it directly as an embroidery file.
+Vous pouvez le modifier si vous le souhaitez ou l'enregistrer directement en tant que fichier de broderie.
 
 13
 00:01:17,060 --> 00:01:20,800
-We hope you enjoyed the tutorial and the lettering tool.
+Nous espérons que vous avez apprécié le tutoriel et l'outil de lettrage.
 
