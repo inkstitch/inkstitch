@@ -4,6 +4,7 @@ import tempfile
 
 from ..output import write_embroidery_file
 from ..stitch_plan import patches_to_stitch_plan
+from ..threads import ThreadCatalog
 from .base import InkstitchExtension
 
 
@@ -37,6 +38,7 @@ class Output(InkstitchExtension):
                 extra_args.append(arg)
 
         self.file_extension = self.settings.pop('format')
+        self.file_mimetype = self.settings.pop('mimetype')
         del sys.argv[1:]
 
         InkstitchExtension.getoptions(self, extra_args)
@@ -49,11 +51,13 @@ class Output(InkstitchExtension):
         stitch_plan = patches_to_stitch_plan(patches, disable_ties=self.settings.get('laser_mode', False))
 
         temp_file = tempfile.NamedTemporaryFile(suffix=".%s" % self.file_extension, delete=False)
-
         # in windows, failure to close here will keep the file locked
         temp_file.close()
+        file = [temp_file.name, self.file_mimetype]
 
-        write_embroidery_file(temp_file.name, stitch_plan, self.document.getroot(), self.settings)
+        ThreadCatalog().match_and_apply_palette(stitch_plan, self.get_inkstitch_metadata()['thread-palette'])
+
+        write_embroidery_file(file, stitch_plan, self.document.getroot(), self.settings)
 
         if sys.platform == "win32":
             import msvcrt

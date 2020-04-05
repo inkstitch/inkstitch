@@ -24,7 +24,7 @@ def object_commands():
 def pyembroidery_debug_formats():
     for format in pyembroidery.supported_formats():
         if 'writer' in format and format['category'] != 'embroidery':
-            yield format['extension'], format['description']
+            yield format['extension'], format['description'], format['mimetype']
 
 
 def generate_extension_inx_files():

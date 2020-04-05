@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    {%- set mimetype_format = mimetype.split("/") -%}
     <name>{{ format | upper }} file output</name>
-    <id>org.inkstitch.output.{{ format }}.{{ locale }}</id>
+    <id>org.inkstitch.output.{{ mimetype_format[1] }}.{{ locale }}</id>
     <output>
         <extension>.{{ format }}</extension>
         <mimetype>application/x-embroidery-{{ format }}</mimetype>
@@ -11,7 +12,8 @@
     </output>
     <param name="extension" type="string" gui-hidden="true">output</param>
     <param name="format" type="string" gui-hidden="true">{{ format }}</param>
-    {% set params = "output_params_" + format + ".xml" %}
+    <param name="mimetype" type="string" gui-hidden="true">{{ mimetype }}</param>
+    {%- set params = "output_params_" + mimetype_format[1] + ".xml" -%}
     {% include params ignore missing %}
     <script>
         {{ command_tag | safe }}

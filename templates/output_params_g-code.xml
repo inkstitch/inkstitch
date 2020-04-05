@@ -1,4 +1,4 @@
-    {# these parameters are for g-code files (*.txt) #}
+    {#- these parameters are for g-code files (*.gcd) -#}
     <param name="laser_mode" type="boolean" gui-text="{{ _("laser mode") }}" gui-description="{{ _("Laser mode (generate g-code for grbl laser mode)") }}">false</param>
     <param name="dynamic_laser_power" type="boolean" gui-text="{{ _("dynamic laser power") }}" gui-description="{{ _("Use Grbl's M4 dynamic laser power mode.  Ensures consistent laser cutting power regardless of motor speed.  Only for PWM-capable lasers.") }}" min="0.0" max="5.0">true</param>
     <param name="laser_warm_up_time" type="float" gui-text="{{ _("laser warm-up time") }}" gui-description="{{ _("When turning on the laser, wait this many seconds for laser to warm up (G4 command)") }}">0.0</param>

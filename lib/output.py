@@ -44,7 +44,13 @@ def jump_to_stop_point(pattern, svg):
         pattern.add_stitch_absolute(pyembroidery.JUMP, stop_position.point.x, stop_position.point.y)
 
 
-def write_embroidery_file(file_path, stitch_plan, svg, settings={}):
+def write_embroidery_file(file, stitch_plan, svg, settings={}):
+    if type(file) is not list:
+        file_path = file
+        mimetype = None
+    else:
+        file_path, mimetype = file
+
     origin = get_origin(svg, stitch_plan.bounding_box)
 
     pattern = pyembroidery.EmbPattern()
@@ -87,7 +93,7 @@ def write_embroidery_file(file_path, stitch_plan, svg, settings={}):
         settings['explicit_trim'] = False
 
     try:
-        pyembroidery.write(pattern, file_path, settings)
+        pyembroidery.write(pattern, file, settings)
     except IOError as e:
         # L10N low-level file error.  %(error)s is (hopefully?) translated by
         # the user's system automatically.

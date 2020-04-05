@@ -10,6 +10,7 @@ from ..i18n import _
 from ..output import write_embroidery_file
 from ..stitch_plan import patches_to_stitch_plan
 from ..svg import PIXELS_PER_MM
+from ..threads import ThreadCatalog
 from .base import InkstitchExtension
 
 
@@ -26,10 +27,15 @@ class Zip(InkstitchExtension):
         for format in pyembroidery.supported_formats():
             if 'writer' in format and format['category'] == 'embroidery':
                 extension = format['extension']
-                self.OptionParser.add_option('--format-%s' % extension, type="inkbool", dest=extension)
-                self.formats.append(extension)
+                mimetype = format['mimetype']
+                subtype = mimetype.split("/")[1]
+                self.formats.append([extension, mimetype])
+                if extension == 'txt':
+                    extension = str(extension + "-" + subtype)
+                self.OptionParser.add_option('--format-%s' % extension, type="inkbool", dest=subtype)
         self.OptionParser.add_option('--format-svg', type="inkbool", dest='svg')
-        self.formats.append('svg')
+        # we actually don't need the full mimetype here, so let's skip the +xml
+        self.formats.append(['svg', 'image/svg'])
 
     def effect(self):
         if not self.get_elements():
@@ -37,6 +43,7 @@ class Zip(InkstitchExtension):
 
         patches = self.elements_to_patches(self.elements)
         stitch_plan = patches_to_stitch_plan(patches, self.options.collapse_length_mm * PIXELS_PER_MM)
+        ThreadCatalog().match_and_apply_palette(stitch_plan, self.get_inkstitch_metadata()['thread-palette'])
 
         base_file_name = self.get_base_file_name()
         path = tempfile.mkdtemp()
@@ -44,10 +51,16 @@ class Zip(InkstitchExtension):
         files = []
 
         for format in self.formats:
-            if getattr(self.options, format):
-                output_file = os.path.join(path, "%s.%s" % (base_file_name, format))
-                if not format == 'svg':
-                    write_embroidery_file(output_file, stitch_plan, self.document.getroot())
+            extension, mimetype = format
+            if getattr(self.options, mimetype.split("/")[1]):
+                if extension.startswith('txt') and mimetype == "text/plain":
+                    colorlist_file_name = base_file_name + "_" + _("colorlist")
+                    output_file = os.path.join(path, "%s.%s" % (colorlist_file_name, extension))
+                else:
+                    output_file = os.path.join(path, "%s.%s" % (base_file_name, extension))
+                if not extension == 'svg':
+                    file = [output_file, mimetype]
+                    write_embroidery_file(file, stitch_plan, self.document.getroot())
                 else:
                     output = open(output_file, 'w')
                     output.write(inkex.etree.tostring(self.document.getroot()))
