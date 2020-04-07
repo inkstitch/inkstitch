@@ -163,7 +163,7 @@ Nous vous souhaitons un bon début avec Ink/Stitch!
 
 [transcript](/fr/tutorials/resources/beginner-video-tutorials/06-visual-commands-transcript), [subtitles](/assets/files/beginner-tutorial-series-subtitles/fr/06-visual-commands-captions.srt)
 
-## 07 Visualize and Export
+## 07 Visualisation et Export
 {% include video id="KGiSM66vC4c" provider="youtube" %}
 
 |Index|Chapitre (lien vers YouTube)|
