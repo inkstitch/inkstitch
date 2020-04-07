@@ -31,7 +31,7 @@ Nous vous souhaitons un bon début avec Ink/Stitch!
 ### Linux
 {% include video id="Dkb5UvsZUNg" provider="youtube" %}
 
-|Index|Chapitre (links open in YouTube)|
+|Index|Chapitre (lien vers YouTube)|
 |---|---|
 |[00:00](https://youtube.com/watch?v=Dkb5UvsZUNg&amp;t=0s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=2)   |Introduction|
 |[00:32](https://youtube.com/watch?v=Dkb5UvsZUNg&amp;t=32s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=2)  |Prérequis|
@@ -44,7 +44,7 @@ Nous vous souhaitons un bon début avec Ink/Stitch!
 ### macOS
 {% include video id="gmOVLNh9cu8" provider="youtube" %}
 
-|Time|Chapter (links open in YouTube)|
+|Time|Chapter (lien vers YouTube)|
 |---|---|
 |[00:00](https://youtube.com/watch?v=gmOVLNh9cu8&amp;t=0s&amp;index=3&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP)   |Introduction|
 |[00:32](https://youtube.com/watch?v=gmOVLNh9cu8&amp;t=32s&amp;index=3&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP)  |Prérequis|
@@ -57,7 +57,7 @@ Nous vous souhaitons un bon début avec Ink/Stitch!
 ### Windows
 {% include video id="U5htzWZSjA8" provider="youtube" %}
 
-|Index|Chapitre (links open in YouTube)|
+|Index|Chapitre (lien vers YouTube)|
 |---|---|
 |[00:00](https://youtube.com/watch?v=U5htzWZSjA8&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=4&amp;t=0s)   |Introduction|
 |[00:32](https://youtube.com/watch?v=U5htzWZSjA8&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=4&amp;t=32s)  |Prérequis|
@@ -70,7 +70,7 @@ Nous vous souhaitons un bon début avec Ink/Stitch!
 ## 03 Customize
 {% include video id="1p9gyeV2tK0" provider="youtube" %}
 
-|Index|Chapitre (links open in YouTube)|
+|Index|Chapitre (lien vers YouTube)|
 |---|---|
 |[00:00](https://youtube.com/watch?v=1p9gyeV2tK0&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=5&amp;t=0s) |Introduction|
 |[00:56](https://youtube.com/watch?v=1p9gyeV2tK0&amp;t=56s&amp;index=5&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP) |Add-Ons|
@@ -86,7 +86,7 @@ Nous vous souhaitons un bon début avec Ink/Stitch!
 ### Points alignés
 {% include video id="S_NiFiI6cPY" provider="youtube" %}
 
-|Index|Chapitre (links open in YouTube)|
+|Index|Chapitre (links open in YouTubelien vers YouTube)|
 |---|---|
 |[00:00](https://youtube.com/watch?v=S_NiFiI6cPY&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=8&amp;t=0s) | Introduction|
 |[00:50](https://youtube.com/watch?v=S_NiFiI6cPY&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=8&amp;t=50s) | Point Zig-Zag|
@@ -100,7 +100,7 @@ Nous vous souhaitons un bon début avec Ink/Stitch!
 ### Point de remplissage
 {% include video id="Dn1cVOxlX8c" provider="youtube" %}
 
-|Index|Chapitre (links open in YouTube)|
+|Index|Chapitre (lien vers YouTube)|
 |---|---|
 |[00:00 ](https://youtube.com/watch?v=Dn1cVOxlX8c&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=6&amp;t=0s)|Introduction|
 |[01:00](https://youtube.com/watch?v=Dn1cVOxlX8c&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=6&amp;t=60s) |Chemin|
@@ -114,7 +114,7 @@ Nous vous souhaitons un bon début avec Ink/Stitch!
 ### Colonnes satin
 {% include video id="U7YtajKlftQ" provider="youtube" %}
 
-|Index|Chapitre (links open in YouTube)|
+|Index|Chapitre (lien vers YouTube)|
 |---|---|
 |[00:00](https://youtube.comatch?v=U7YtajKlftQ&amp;t=0s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=7) |Introduction|
 ||**Objet chemin en satin**|
@@ -166,7 +166,7 @@ Nous vous souhaitons un bon début avec Ink/Stitch!
 ## 07 Visualize and Export
 {% include video id="KGiSM66vC4c" provider="youtube" %}
 
-|Index|Chapitre (links open in YouTube)|
+|Index|Chapitre (lien vers YouTube)|
 |---|---|
 |[00:00](https://youtube.com/watch?v=KGiSM66vC4c&amp;index=11&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;t=0s) | Introduction|
 |[00:24](https://youtube.com/watch?v=KGiSM66vC4c&amp;index=11&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;t=24s) | Simulation|
@@ -181,7 +181,7 @@ Nous vous souhaitons un bon début avec Ink/Stitch!
 ## 08 Organisation du travail
 {% include video id="D8nCtyBH63Q" provider="youtube" %}
 
-|Index|Chapitre (links open in YouTube)|
+|Index|Chapitre (lien vers YouTube)|
 |---|---|
 |[00:00](https://youtube.com/watch?v=D8nCtyBH63Q&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=12&amp;t=0s) | Introduction|
 |[00:30](https://youtube.com/watch?v=D8nCtyBH63Q&amp;t=30s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=12) | Créer une Image Vectorielle|
