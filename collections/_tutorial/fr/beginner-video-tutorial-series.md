@@ -44,7 +44,7 @@ Nous vous souhaitons un bon début avec Ink/Stitch!
 ### macOS
 {% include video id="gmOVLNh9cu8" provider="youtube" %}
 
-|Time|Chapter (lien vers YouTube)|
+|Index|Chapitre (lien vers YouTube)|
 |---|---|
 |[00:00](https://youtube.com/watch?v=gmOVLNh9cu8&amp;t=0s&amp;index=3&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP)   |Introduction|
 |[00:32](https://youtube.com/watch?v=gmOVLNh9cu8&amp;t=32s&amp;index=3&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP)  |Prérequis|
@@ -67,7 +67,7 @@ Nous vous souhaitons un bon début avec Ink/Stitch!
 
 [transcript](/fr/tutorials/resources/beginner-video-tutorials/02-install-transcript), [subtitles](/assets/files/beginner-tutorial-series-subtitles/fr/02-install-windows-captions.srt)
 
-## 03 Customize
+## 03 Personnalisation
 {% include video id="1p9gyeV2tK0" provider="youtube" %}
 
 |Index|Chapitre (lien vers YouTube)|
