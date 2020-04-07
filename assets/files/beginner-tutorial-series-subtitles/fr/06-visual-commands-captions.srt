@@ -1,160 +1,159 @@
 1
 00:00:05,820 --> 00:00:09,420
-Welcome to the Ink/Stitch beginner tutorial series.
+Bienvenue dans la série de tutoriels pour débutants Ink/Stitch.
 
 2
 00:00:10,200 --> 00:00:13,760
-In this tutorial are we going to talk about visual commands.
+Dans ce tutoriel allons-nous parler des commandes visuelles.
 
 3
 00:00:14,160 --> 00:00:21,740
-Visual commands are used to give Ink/Stitch additional information about the way how your design should be stitched out.
+Les commandes visuelles sont utilisées pour donner des informations supplémentaires sur Ink/Stitch sur la façon dont votre motif doit être cousu.
 
 4
 00:00:24,840 --> 00:00:32,940
-Before you can use visual commands you need to run "Install add-ons for Inkscape" in order to make the symbols accessible.
+Avant de pouvoir utiliser les commandes visuelles, vous devez exécuter "Installer des extensions pour Inkscape" afin de rendre les symboles accessibles.
 
 5
 00:00:37,300 --> 00:00:40,180
-There are three types of commands:
+Il existe trois types de commandes:
 
 6
 00:00:40,440 --> 00:00:43,240
-Commands which effect the entire design
+Commandes qui affectent le motif entièr
 
 7
 00:00:43,580 --> 00:00:45,860
-Commands which effect the selected layer
+Commandes qui affectent le calque sélectionné
 
 8
 00:00:46,160 --> 00:00:49,160
-Commands which influence selected objects
-
+Commandes qui influencent les objets sélectionnés
 9
 00:00:52,680 --> 00:01:00,820
-In "Extensions > Ink/Stitch  > Commands > Add commands ..." you will find two options.
+Dans "Extensions > Ink/Stitch  > Commandes > Ajouter des commandes ..." vous trouverez deux options.
 
 10
 00:01:01,220 --> 00:01:07,940
-"Stop position" will define a point where your machine will jump to, before every stop command.
+"Destination de saut..." définira un point où votre machine va sauter, avant chaque commande de stop.
 
 11
 00:01:08,240 --> 00:01:14,740
-This allows for pushing the embroidery frame out towards the user, to make applique steps easier.
+Cela permet de pousser le cadre de broderie vers l'utilisateur, pour faciliter les positionnements des appliqués.
 
 12
 00:01:19,920 --> 00:01:24,360
-The Origin specifies the zero point for embroidery files.
+L'origine spécifie le point zéro pour les fichiers de broderie.
 
 13
 00:01:24,780 --> 00:01:35,760
-Setting up origins is especially useful for people that have full access to the entire sewing field that their machine is capable of, regardless of what hoop they use.
+La configuration des origines est particulièrement utile pour les personnes qui ont un accès complet à l'ensemble du champ de broderie dont leur machine est capable, quel que soit le cadre qu'ils utilisent.
 
 14
 00:01:42,500 --> 00:01:46,120
-"Add Layer commands..." has only one option:
+"Ajouter des commandes de calque ..." n'a qu'une seule option:
 
 15
 00:01:46,120 --> 00:01:52,160
-"Ignore Layer" can be used to ignore an entire layer when converting to an embroidery file.
+"Ignorer le calque" peut être utilisé pour ignorer un calque entier lors de la conversion en fichier de broderie.
 
 16
 00:01:52,660 --> 00:02:03,760
-This can be useful if you want to add extra information into the file, f.e. tutorial instructions - or if you temporarily want to exclude a part of your design.
+Cela peut être utile si vous souhaitez ajouter des informations supplémentaires dans le fichier, par exemple. instructions du tutoriel - ou si vous souhaitez temporairement exclure une partie de votre conception.
 
 17
 00:02:09,300 --> 00:02:14,920
-"Attach commands to selected objects..." will add information to selected objects.
+"Attacher des commandes aux objets sélectionnés ..." ajoutera des informations aux objets sélectionnés.
 
 18
 00:02:15,300 --> 00:02:19,820
-For fill stitching we can define starting and ending positions.
+Pour les points de remplissage, nous pouvons définir les positions de début et de fin.
 
 19
 00:02:19,820 --> 00:02:25,860
-Select a fill object and enable "starting position for fill" and "Ending position for fill".
+Sélectionnez un objet de remplissage et activez "Position de départ pour le remplissage" et "Position de fin pour le remplissage".
 
 20
 00:02:25,860 --> 00:02:29,860
-Click apply and move the symbols to the desired position.
+Cliquez sur Appliquer et déplacez les symboles à la position souhaitée.
 
 21
 00:02:33,640 --> 00:02:38,920
-The effect will be performed where the connector crosses the outline of the shape.
+L'effet sera effectué là où le connecteur croise le contour de la forme.
 
 22
 00:03:42,720 --> 00:03:48,280
-As for fills you can also define start and end positions for auto-route satin.
+Comme pour les remplissages, vous pouvez également définir les positions de début et de fin pour le remplissage automatique de satin.
 
 23
 00:03:48,280 --> 00:03:54,100
-Select the first satin column and add the "auto-route starting position"-command.
+Sélectionnez la première colonne satin et ajoutez la commande "Position de départ pour points satin autogénérés".
 
 24
 00:03:56,760 --> 00:04:01,840
-Select the last satin column and add the "auto-route ending position"-command.
+Sélectionnez la dernière colonne satin et ajoutez la commande "Position de fin pour points satin autogénérés".
 
 25
 00:04:10,460 --> 00:04:12,460
-Move the symbol to the right place
+Déplacez le symbole au bon endroit
 
 26
 00:04:32,760 --> 00:04:38,960
-and run "Extensions > Ink/Stitch  > Satin Tools > Auto-route satin"
+et exécutez "Extensions > Ink/Stitch  > Outils Satin > Remplissage automatique de colonne satin"
 
 27
 00:05:13,860 --> 00:05:17,660
-For satin columns there is also a split functionality.
+Pour les colonnes satin, il existe également une fonctionnalité pour couper la colonne en deux.
 
 28
 00:05:17,660 --> 00:05:25,080
-This is useful if you want to split a satin column while keeping all settings that you have previously made while modifying the path.
+C'est utile si vous souhaitez partager une colonne satin tout en conservant tous les paramètres que vous avez définis précédemment tout en modifiant le chemin.
 
 29
 00:05:25,080 --> 00:05:29,580
-With the satin column selected add a "Split satin column"-command.
+Avec la colonne satin sélectionnée, ajoutez une commande "Point de partage...".
 
 30
 00:05:29,940 --> 00:05:36,200
-Move the symbol and run "Extensions > Ink/Stitch  > Satin Tools > Cut Satin Column"
+Déplacez le symbole et exécutez "Extensions > Ink/Stitch  > Outils Satin > Scinder colonne Satin"
 
 31
 00:05:36,640 --> 00:05:41,040
-This will split your satin column at the predefined position.
+Cela divisera votre colonne de satin à la position prédéfinie.
 
 32
 00:05:57,640 --> 00:06:01,020
-The "Trim"-command can be applied to any embroidery shape.
+La commande "Couper..." peut être appliquée à n'importe quelle forme de broderie.
 
 33
 00:06:01,400 --> 00:06:06,000
-It will tell the machine to trim the thread after sewing this object.
+Cela indiquera à la machine de couper le fil après avoir brodé cet objet.
 
 34
 00:06:55,940 --> 00:07:04,080
-The "Stop" or "Pause" command will cause the machine to move into the position which you have previously defined through the "stop position"-command.
+La commande "Stop" ou "Pause" amènera la machine à se déplacer à la position que vous avez précédemment définie via la commande de "position de stop".
 
 35
 00:07:04,080 --> 00:07:08,340
-And is therefor useful especially for applique designs.
+Et est donc utile en particulier pour les motifs d'appliqués.
 
 36
 00:07:08,380 --> 00:07:11,440
-It can be applied to any object as well.
+Cela peut également être appliqué à n'importe quel objet.
 
 37
 00:07:28,980 --> 00:07:33,000
-Objects with an "ignore"-command will be ignored in the embroidery output.
+Les objets avec une commande "ignorer" seront ignorés dans la tranformation en broderie.
 
 38
 00:07:50,900 --> 00:07:57,180
-It might happen though, that some machines will ignore certain commands like e.g. the trim command.
+Il peut arriver cependant que certaines machines ignorent certaines commandes comme par exemple la commande de coupe.
 
 39
 00:07:57,180 --> 00:08:01,340
-Not every machine is capable to follow these instructions.
+Toutes les machines ne sont pas capables d'exécuter ces instructions.
 
 40
 00:08:01,340 --> 00:08:08,140
-We hope this tutorial was useful for you and helps you to gain more control over the embroidery output.
+Nous espérons que ce tutoriel vous a été utile et vous aide à mieux contrôler l'exécution de la broderie..
 
