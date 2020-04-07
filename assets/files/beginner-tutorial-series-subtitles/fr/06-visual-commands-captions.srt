@@ -29,6 +29,7 @@ Commandes qui affectent le calque sélectionné
 8
 00:00:46,160 --> 00:00:49,160
 Commandes qui influencent les objets sélectionnés
+
 9
 00:00:52,680 --> 00:01:00,820
 Dans "Extensions > Ink/Stitch  > Commandes > Ajouter des commandes ..." vous trouverez deux options.
