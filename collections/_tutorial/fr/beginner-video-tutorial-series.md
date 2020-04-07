@@ -18,7 +18,7 @@ Cette série de vidéos est destinée à présenter Ink/Stitch aux nouveaux util
 Connaître [les bases d'Inkscape](https://inkscape.org/fr/apprendre/) sera utile. N'hésitez pas à expérimenter et à utiliser les fonctions qui nous parviennent via Inkscape.
 
 Si vous n’êtes pas anglophone, il peut être intéressant de noter que chaque vidéo est sous-titrée. Sur cette page, vous pouvez même les télécharger. Si vous le souhaitez, aidez-nous en traduisant les sous-titres dans votre langue.
-Les vidéos sont hébergées dans une [YouTube playlist](https://www.youtube.com/playlist?list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP).
+Les vidéos sont hébergées dans une [playlist YouTube ](https://www.youtube.com/playlist?list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP).
 
 Nous vous souhaitons un bon début avec Ink/Stitch!
 
@@ -31,7 +31,7 @@ Nous vous souhaitons un bon début avec Ink/Stitch!
 ### Linux
 {% include video id="Dkb5UvsZUNg" provider="youtube" %}
 
-|Time|Chapter (links open in YouTube)|
+|Index|Chapitre (links open in YouTube)|
 |---|---|
 |[00:00](https://youtube.com/watch?v=Dkb5UvsZUNg&amp;t=0s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=2)   |Introduction|
 |[00:32](https://youtube.com/watch?v=Dkb5UvsZUNg&amp;t=32s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=2)  |Prérequis|
@@ -57,7 +57,7 @@ Nous vous souhaitons un bon début avec Ink/Stitch!
 ### Windows
 {% include video id="U5htzWZSjA8" provider="youtube" %}
 
-|Time|Chapter (links open in YouTube)|
+|Index|Chapitre (links open in YouTube)|
 |---|---|
 |[00:00](https://youtube.com/watch?v=U5htzWZSjA8&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=4&amp;t=0s)   |Introduction|
 |[00:32](https://youtube.com/watch?v=U5htzWZSjA8&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=4&amp;t=32s)  |Prérequis|
@@ -70,7 +70,7 @@ Nous vous souhaitons un bon début avec Ink/Stitch!
 ## 03 Customize
 {% include video id="1p9gyeV2tK0" provider="youtube" %}
 
-|Time|Chapter (links open in YouTube)|
+|Index|Chapitre (links open in YouTube)|
 |---|---|
 |[00:00](https://youtube.com/watch?v=1p9gyeV2tK0&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=5&amp;t=0s) |Introduction|
 |[00:56](https://youtube.com/watch?v=1p9gyeV2tK0&amp;t=56s&amp;index=5&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP) |Add-Ons|
@@ -86,7 +86,7 @@ Nous vous souhaitons un bon début avec Ink/Stitch!
 ### Points alignés
 {% include video id="S_NiFiI6cPY" provider="youtube" %}
 
-|Time|Chapter (links open in YouTube)|
+|Index|Chapitre (links open in YouTube)|
 |---|---|
 |[00:00](https://youtube.com/watch?v=S_NiFiI6cPY&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=8&amp;t=0s) | Introduction|
 |[00:50](https://youtube.com/watch?v=S_NiFiI6cPY&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=8&amp;t=50s) | Point Zig-Zag|
@@ -100,7 +100,7 @@ Nous vous souhaitons un bon début avec Ink/Stitch!
 ### Point de remplissage
 {% include video id="Dn1cVOxlX8c" provider="youtube" %}
 
-|Time|Chapter (links open in YouTube)|
+|Index|Chapitre (links open in YouTube)|
 |---|---|
 |[00:00 ](https://youtube.com/watch?v=Dn1cVOxlX8c&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=6&amp;t=0s)|Introduction|
 |[01:00](https://youtube.com/watch?v=Dn1cVOxlX8c&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=6&amp;t=60s) |Chemin|
@@ -114,13 +114,13 @@ Nous vous souhaitons un bon début avec Ink/Stitch!
 ### Colonnes satin
 {% include video id="U7YtajKlftQ" provider="youtube" %}
 
-|Time|Chapter (links open in YouTube)|
+|Index|Chapitre (links open in YouTube)|
 |---|---|
 |[00:00](https://youtube.comatch?v=U7YtajKlftQ&amp;t=0s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=7) |Introduction|
-||**Satin Path Object**|
+||**Objet chemin en satin**|
 |[01:05](https://youtube.com/watch?v=U7YtajKlftQ&amp;t=65s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=7) |Methode des noeuds|
 |[03:09](https://youtube.com/watch?v=U7YtajKlftQ&amp;t=189s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=7) |Methode des traverses|
-||**Satin Tools**|
+||**Outils Satin**|
 |[03:38](https://youtube.com/watch?v=U7YtajKlftQ&amp;t=218s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=7) |Convertir Ligne en colonne Satin|
 |[04:19](https://youtube.com/watch?v=U7YtajKlftQ&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=7&amp;t=259s) |Scinder colonne Satin|
 |[06:07](https://youtube.com/watch?v=U7YtajKlftQ&amp;t=367s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=7) |Intervertir rails satin|
@@ -143,20 +143,20 @@ Nous vous souhaitons un bon début avec Ink/Stitch!
 ## 06 Commandes visuelles
 {% include video id="RU0WzMYZ6ik" provider="youtube" %}
 
-|Time|Chapter (links open in YouTube)|
+|Index|Chapitre (lien vers YouTube)|
 |---|---|
 |[00:00](https://youtube.com/watch?v=RU0WzMYZ6ik&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=10&amp;t=0s)| Introduction|
 |[00:25](https://youtube.com/watch?v=RU0WzMYZ6ik&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=10&amp;t=25s)| Installer Add-Ons|
-||**Design Commands**|
+||**Commandes du motif**|
 |[00:49](https://youtube.com/watch?v=RU0WzMYZ6ik&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=10&amp;t=49s)| Stop Position|
 |[01:16](https://youtube.com/watch?v=RU0WzMYZ6ik&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=10&amp;t=76s)| Origin|
-||**Layer Commands**|
+||**Commandes de calques**|
 |[01:38](https://youtube.com/watch?v=RU0WzMYZ6ik&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=10&amp;t=98s)| Ignore Layer|
-||**Object Commands**|
-|[02:07](https://youtube.com/watch?v=RU0WzMYZ6ik&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=10&amp;t=127s)| Fill: Starting- and Ending Position|
-|[03:39](https://youtube.com/watch?v=RU0WzMYZ6ik&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=10&amp;t=219s)| Auto-Route Satin: Starting- and Ending Position|
-|[05:10](https://youtube.com/watch?v=RU0WzMYZ6ik&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=10&amp;t=310s)| Split Satin Column|
-|[05:54](https://youtube.com/watch?v=RU0WzMYZ6ik&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=10&amp;t=354s)| Trim|
+||**Commandes d'objet**|
+|[02:07](https://youtube.com/watch?v=RU0WzMYZ6ik&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=10&amp;t=127s)| Remplissage: Position de début et de fin|
+|[03:39](https://youtube.com/watch?v=RU0WzMYZ6ik&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=10&amp;t=219s)| Remplissage automatique Satin: Position de début et de fin|
+|[05:10](https://youtube.com/watch?v=RU0WzMYZ6ik&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=10&amp;t=310s)| Scinder colonne Satin|
+|[05:54](https://youtube.com/watch?v=RU0WzMYZ6ik&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=10&amp;t=354s)| Coupe|
 |[06:53](https://youtube.com/watch?v=RU0WzMYZ6ik&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=10&amp;t=413s)| Stop|
 |[07:26](https://youtube.com/watch?v=RU0WzMYZ6ik&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=10&amp;t=446s)| Ignore|
 {: .table-full-width }
@@ -166,31 +166,31 @@ Nous vous souhaitons un bon début avec Ink/Stitch!
 ## 07 Visualize and Export
 {% include video id="KGiSM66vC4c" provider="youtube" %}
 
-|Time|Chapter (links open in YouTube)|
+|Index|Chapitre (links open in YouTube)|
 |---|---|
 |[00:00](https://youtube.com/watch?v=KGiSM66vC4c&amp;index=11&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;t=0s) | Introduction|
-|[00:24](https://youtube.com/watch?v=KGiSM66vC4c&amp;index=11&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;t=24s) | Simulator|
-|[02:11](https://youtube.com/watch?v=KGiSM66vC4c&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=11&amp;t=131s) | Print PDF|
-|[06:35](https://youtube.com/watch?v=KGiSM66vC4c&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=11&amp;t=395s) | Embroider ...|
-|[07:49](https://youtube.com/watch?v=KGiSM66vC4c&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=11&amp;t=469s) | Save as ...|
+|[00:24](https://youtube.com/watch?v=KGiSM66vC4c&amp;index=11&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;t=24s) | Simulation|
+|[02:11](https://youtube.com/watch?v=KGiSM66vC4c&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=11&amp;t=131s) | Impression PDF|
+|[06:35](https://youtube.com/watch?v=KGiSM66vC4c&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=11&amp;t=395s) | Broder ...|
+|[07:49](https://youtube.com/watch?v=KGiSM66vC4c&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=11&amp;t=469s) | Enregistrer sous ...|
 |[08:38](https://youtube.com/watch?v=KGiSM66vC4c&amp;index=11&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;t=518s) | Import|
 {: .table-full-width }
 
 [transcript](/fr/tutorials/resources/beginner-video-tutorials/07-visualize-export-transcript), [subtitles](/assets/files/beginner-tutorial-series-subtitles/fr/07-visualize-export-captions.srt)
 
-## 08 Workflow
+## 08 Organisation du travail
 {% include video id="D8nCtyBH63Q" provider="youtube" %}
 
-|Time|Chapter (links open in YouTube)|
+|Index|Chapitre (links open in YouTube)|
 |---|---|
 |[00:00](https://youtube.com/watch?v=D8nCtyBH63Q&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=12&amp;t=0s) | Introduction|
-|[00:30](https://youtube.com/watch?v=D8nCtyBH63Q&amp;t=30s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=12) | Create a Vector Image|
-|[03:26](https://youtube.com/watch?v=D8nCtyBH63Q&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=12&amp;t=206s) | Convert to Embroidery Vectors|
-|[06:30](https://youtube.com/watch?v=D8nCtyBH63Q&amp;t=390s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=12) | Plan Stitch Order|
-|[10:24](https://youtube.com/watch?v=D8nCtyBH63Q&amp;t=624s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=12) | Attach Commands|
-|[10:52](https://youtube.com/watch?v=D8nCtyBH63Q&amp;t=652s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=12) | Visualize|
-|[11:24](https://youtube.com/watch?v=D8nCtyBH63Q&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=12&amp;t=684s) | Save Embroidery File|
-|[11:49](https://youtube.com/watch?v=D8nCtyBH63Q&amp;t=709s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=12) | Sew Out your Design|
+|[00:30](https://youtube.com/watch?v=D8nCtyBH63Q&amp;t=30s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=12) | Créer une Image Vectorielle|
+|[03:26](https://youtube.com/watch?v=D8nCtyBH63Q&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=12&amp;t=206s) | Convertir en vecteurs de broderie|
+|[06:30](https://youtube.com/watch?v=D8nCtyBH63Q&amp;t=390s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=12) | Plan d'ordre de broderie|
+|[10:24](https://youtube.com/watch?v=D8nCtyBH63Q&amp;t=624s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=12) | Attacher des Commandes|
+|[10:52](https://youtube.com/watch?v=D8nCtyBH63Q&amp;t=652s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=12) | Visualisation|
+|[11:24](https://youtube.com/watch?v=D8nCtyBH63Q&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=12&amp;t=684s) | Enregistrer enfichier de broderie|
+|[11:49](https://youtube.com/watch?v=D8nCtyBH63Q&amp;t=709s&amp;list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&amp;index=12) | Brodez votre motif|
 {: .table-full-width }
 
 [transcript](/fr/tutorials/resources/beginner-video-tutorials/08-workflow-transcript), [subtitles](/assets/files/beginner-tutorial-series-subtitles/fr/08-workflow-captions.srt)
