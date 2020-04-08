@@ -1,154 +1,154 @@
 1
 00:00:05,860 --> 00:00:09,460
-Welcome to the Ink/Stitch beginner tutorial series.
+Bienvenue dans la série de tutoriels pour débutants Ink/Stitch.
 
 2
 00:00:11,760 --> 00:00:15,660
-In this part we are going to learn how to display your design
+Dans cette partie, nous allons apprendre à afficher votre motif
 
 3
 00:00:16,120 --> 00:00:21,040
-and finally save it into an embroidery format that your machine can read.
+et enfin l'enregistrer dans un format de broderie que votre machine peut lire.
 
 4
 00:00:27,680 --> 00:00:33,280
-Whenever you are running the params dialogue in Ink/Stitch you will see the simulator.
+Chaque fois que vous exécutez la boîte de dialogue des paramètres dans Ink/Stitch, vous verrez le simulateur.
 
 5
 00:00:33,960 --> 00:00:40,220
-This is very important while planing your design, since you can visually see the changes as you make them.
+Ceci est très important lors de la planification de votre conception, car vous pouvez voir les modifications lorsque vous les effectuez.
 
 6
 00:00:40,600 --> 00:00:44,440
-The simulator can also run without the params dialogue.
+Le simulateur peut également fonctionner sans la boîte de dialogue des paramètres.
 
 7
 00:00:44,720 --> 00:00:50,840
-In the customize tutorial we created a shortcut to open it with Ctrl+Shift+L,
+Dans le tutoriel de personnalisation, nous avons créé un raccourci pour l'ouvrir avec Ctrl + Maj + L,
 
 8
 00:00:51,220 --> 00:00:55,720
-but this is a custom shortcut key and not available by default.
+mais il s'agit d'une touche de raccourci personnalisée et elle n'est pas disponible par défaut.
 
 9
 00:00:56,460 --> 00:01:03,540
-If you don't have the shortcut key set, open the simulator through "Extensions > Ink/Stitch  > Simulator".
+Si vous ne disposez pas du jeu de touches de raccourci, ouvrez le simulateur via "Extensions> Ink/Stitch> Simulateur".
 
 10
 00:01:03,760 --> 00:01:09,540
-It will simulate selected objects, or - if none is selected - the whole design.
+Il simulera les objets sélectionnés ou - si aucun n'est sélectionné - le motif entier.
 
 11
 00:01:09,960 --> 00:01:18,220
-You can speed up and slow down the simulation with arrow up and arrow down or by using the corresponding buttons.
+Vous pouvez accélérer et ralentir la simulation avec les flèches haut et bas ou en utilisant les boutons correspondants.
 
 12
 00:01:18,220 --> 00:01:23,980
-You can swith the playback to be backwards or forwards with arrow left or right.
+Vous pouvez basculer la lecture vers l'arrière ou vers l'avant avec la flèche gauche ou droite.
 
 13
 00:01:23,980 --> 00:01:27,600
-Pause and restart the animation with the space bar.
+Mettre en pause et redémarrer l'animation avec la barre d'espace.
 
 14
 00:01:31,340 --> 00:01:35,620
-Move the animation step by step with plus or minus.
+Déplacez l'animation étape par étape avec plus ou moins.
 
 15
 00:01:35,980 --> 00:01:38,880
-Restart the animation with "R".
+Redémarrez l'animation avec "R".
 
 16
 00:01:39,280 --> 00:01:42,840
-You can also grab the slider and move it to an other position
+Vous pouvez également saisir le curseur et le déplacer vers une autre position
 
 17
 00:01:45,340 --> 00:01:49,000
-or jump to an specific point by entering a number.
+ou sauter à un point spécifique en entrant un nombre.
 
 18
 00:01:49,540 --> 00:01:52,680
-You should pause the simulaton before doing so.
+Vous devez interrompre la simulation avant de le faire.
 
 19
 00:01:53,640 --> 00:01:58,000
-During the animation you can see the current speed in the status bar,
+Pendant l'animation, vous pouvez voir la vitesse actuelle dans la barre d'état,
 
 20
 00:01:58,000 --> 00:02:04,800
-beside of the information if the current command is fe. a stitch, trim or stop command.
+à côté des informations si la commande courante est une commande de point, de coupe ou d'arrêt...
 
 21
 00:02:05,140 --> 00:02:08,640
-When you are done, close the simulator with "Q".
+Lorsque vous avez terminé, fermez le simulateur avec "Q".
 
 22
 00:02:14,720 --> 00:02:20,700
-While the simulator is very useful, you sometimes will need to see a realistic preview of your design.
+Bien que le simulateur soit très utile, vous avez parfois besoin de voir un aperçu réaliste de votre conception.
 
 23
 00:02:20,700 --> 00:02:26,040
-This way you can get a better impression of your stitch length settings, etc.
+De cette façon, vous pouvez avoir une meilleure idée de vos paramètres de longueur de point, etc..
 
 24
 00:02:26,040 --> 00:02:30,820
-In Ink/Stitch you will have access to a realistic preview through the print function.
+Dans Ink/Stitch vous aurez accès à un aperçu réaliste grâce à la fonction d'impression.
 
 25
 00:02:30,820 --> 00:02:34,600
-The print function will open in your default browser.
+La fonction d'impression s'ouvrira dans votre navigateur par défaut.
 
 26
 00:02:34,600 --> 00:02:38,540
-Run "Extensions > Ink/Stitch  > Print".
+Exécutez "Extensions> Ink/Stitch> Imprimer".
 
 27
 00:02:39,000 --> 00:02:43,960
-The print sheet that you will see is meant to be used either by operator or customer.
+La feuille d'impression que vous verrez est destinée à être utilisée par l'opérateur ou le client.
 
 28
 00:02:43,960 --> 00:02:48,880
-But before we look into these options we want to discover the realistic preview.
+Mais avant d'examiner ces options, nous voulons découvrir l'aperçu réaliste.
 
 29
 00:02:48,880 --> 00:02:51,780
-Move your mouse over the embroidery image.
+Déplacez votre souris sur l'image de broderie.
 
 30
 00:02:52,100 --> 00:02:56,740
-On the bottom of the canvas you will see different options to scale the design.
+Au bas de la toile, vous verrez différentes options pour mettre le motif à l'échelle.
 
 31
 00:02:56,740 --> 00:03:01,820
-You can also hit Ctrl and scroll the mouse-wheel to scale it up and down.
+Vous pouvez également appuyer sur Ctrl et faire défiler la molette de la souris de haut en bas pour le mettre à l'échelle.
 
 32
 00:03:01,820 --> 00:03:06,100
-With the left mouse button you can grab it and move it somewhere else.
+Avec le bouton gauche de la souris, vous pouvez le saisir et le déplacer ailleurs.
 
 33
 00:03:06,100 --> 00:03:10,260
-"Fit" will scale the design to fit into the canvas.
+"Ajuster" affichera le motif aux dimensions du canevas.
 
 34
 00:03:10,660 --> 00:03:13,920
-100% will scale it to real size.
+100% le redimensionnera à la taille réelle.
 
 35
 00:03:14,560 --> 00:03:22,480
-Once you are satisfied with scaling and position you can apply the transforms to all other pages where the design is displayed.
+Une fois que vous êtes satisfait de l'échelle et de la position, vous pouvez appliquer les transformations à toutes les autres pages où la conception est affichée.
 
 36
 00:03:23,020 --> 00:03:29,120
-Finally we enable the "Realistic" checkbox. It may take a while before it is being displayed.
+Enfin, activons la case à cocher "Réaliste". Il peut s'écouler un certain temps avant l'affichage.
 
 37
 00:03:32,160 --> 00:03:36,120
-Now let's have a look into the other settings in the print sheet.
+Voyons maintenant les autres paramètres de la feuille d'impression.
 
 38
 00:03:36,120 --> 00:03:38,120
-Go to settings.
+Aller aux paramètres.
 
 39
 00:03:38,220 --> 00:03:41,260
