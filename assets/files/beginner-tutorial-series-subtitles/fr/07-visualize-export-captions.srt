@@ -4,7 +4,7 @@ Bienvenue dans la série de tutoriels pour débutants Ink/Stitch.
 
 2
 00:00:11,760 --> 00:00:15,660
-Dans cette partie, nous allons apprendre à afficher votre motif
+Dans cette partie, vous allez apprendre à afficher votre motif
 
 3
 00:00:16,120 --> 00:00:21,040
@@ -152,225 +152,225 @@ Aller aux paramètres.
 
 39
 00:03:38,220 --> 00:03:41,260
-First you will see basic page setup options.
+Vous verrez d'abord les options de configuration de page de base.
 
 40
 00:03:41,580 --> 00:03:47,640
-Depending on your country you will want to choose either "Letter" or "A4" paper format.
+Selon votre pays, vous choisirez le format de papier "Lettre" ou "A4".
 
 41
 00:03:47,640 --> 00:03:53,800
-Then you have different layout options, depending on the purpose you want to use the print-out for.
+Ensuite, vous avez différentes options de mise en page, selon la destination de votre impression.
 
 42
 00:04:02,820 --> 00:04:06,680
-The operator detailed view comes with an other option,
+La vue détaillée de l'opérateur est livrée avec une autre option,
 
 43
 00:04:06,840 --> 00:04:11,160
-where you can define the size of the thumbnails through a slider.
+où vous pouvez définir la taille des vignettes via un curseur.
 
 44
 00:04:11,740 --> 00:04:15,300
-In the branding tab you can change the page header logo.
+Dans l'onglet image de marque, vous pouvez modifier le logo de l'en-tête de la page.
 
 45
 00:04:15,620 --> 00:04:20,280
-And enter your contact information which will be displayed in the page footer.
+Et entrez vos coordonnées qui seront affichées dans le pied de page.
 
 46
 00:04:20,760 --> 00:04:23,240
-Open the estimated time tab.
+Ouvrez l'onglet de durée estimée.
 
 47
 00:04:23,460 --> 00:04:32,500
-Here you can specify information about your machine and workflow to roughly calculate the time that will be needed to stitch out the design.
+Ici, vous pouvez spécifier des informations sur votre machine et votre organisation de travail pour calculer approximativement le temps qui sera nécessaire pour broder le motif.
 
 48
 00:04:32,700 --> 00:04:37,320
-You might not want this information to be displayed on every layout type.
+Vous ne souhaiterez peut-être pas que ces informations soient affichées sur chaque type de mise en page.
 
 49
 00:04:37,320 --> 00:04:40,560
-Disable those, where it shouldn't appear.
+Désactivez ceux là où ils ne devront pas apparaître.
 
 50
 00:04:41,660 --> 00:04:44,940
-In the design tab you can change the thread palette.
+Dans l'onglet de conception, vous pouvez modifier la palette de fils.
 
 51
 00:04:45,360 --> 00:04:49,260
-If you used palettes while editing your design in Inkscape,
+Si vous avez utilisé des palettes lors de la modification de votre conception dans Inkscape,
 
 52
 00:04:49,720 --> 00:04:53,300
-the print preview will already use these colors.
+l'aperçu avant impression utilisera déjà ces couleurs.
 
 53
 00:04:53,500 --> 00:05:00,060
-In other cases or if you want to change the displayed thread palette you can edit the setting here.
+Dans d'autres cas ou si vous souhaitez modifier la palette de fils affichée, vous pouvez modifier le paramètre ici.
 
 54
 00:05:00,380 --> 00:05:06,100
-All colors in the design will be recalculated and previous changes will be lost.
+Toutes les couleurs du motif seront recalculées et les modifications précédentes seront perdues.
 
 55
 00:05:06,400 --> 00:05:13,660
-Page Setup, Branding and Estimated Time settings can be saved as defaults and be used for every new design.
+Les paramètres de mise en page, d'image de marque et de durée estimée peuvent être enregistrés par défaut et être utilisés pour chaque nouvelle conception.
 
 56
 00:05:13,880 --> 00:05:18,480
-Close the settings dialogue and have a look to the page header.
+Fermez la boîte de dialogue des paramètres et regardez l'en-tête de la page.
 
 57
 00:05:18,980 --> 00:05:23,560
-You will see fields indicating that you can enter custom text.
+Vous verrez des champs indiquant que vous pouvez saisir du texte personnalisé.
 
 58
 00:05:23,840 --> 00:05:30,540
-So you can define a title for this particular design, enter the clients name and purchase order.
+Ainsi, vous pouvez définir un titre pour ce motif particulier, entrer le nom du client et le bon de commande.
 
 59
 00:05:30,540 --> 00:05:36,120
-On detailed views you can also change the thread and color name manually.
+Sur les vues détaillées, vous pouvez également modifier manuellement le nom du fil et de la couleur.
 
 60
 00:05:46,300 --> 00:05:52,260
-The operator detailed view also has a field for custom notes for each thread.
+La vue détaillée de l'opérateur dispose également d'un champ pour les notes personnalisées pour chaque fil.
 
 61
 00:05:55,440 --> 00:05:59,340
-When you are done with all settings use the print button.
+Lorsque vous avez terminé avec tous les paramètres, utilisez le bouton Imprimer.
 
 62
 00:05:59,780 --> 00:06:10,040
-You can print it with your printer, but in most cases you would want to print to PDF, so you can send the PDF-file to your customer or operator.
+Vous pouvez l'imprimer avec votre imprimante, mais dans la plupart des cas, vous souhaitez imprimer au format PDF, vous pouvez donc envoyer le fichier PDF à votre client ou opérateur.
 
 63
 00:06:10,380 --> 00:06:20,020
-When everything is done, click on the close button to regain access to Inkscape, which has been locked while you were editing the print preview.
+Lorsque tout est terminé, cliquez sur le bouton de fermeture pour retrouver l'accès à Inkscape, qui a été verrouillé pendant que vous modifiiez l'aperçu avant impression.
 
 64
 00:06:20,380 --> 00:06:26,860
-All settings you've made in the print preview will be saved into the SVG file,
+Tous les paramètres que vous avez définis dans l'aperçu avant impression seront enregistrés dans le fichier SVG,
 
 65
 00:06:26,940 --> 00:06:32,100
-so you don't have to do everything twice in case you want to change your design.
+vous n'avez donc pas à tout faire deux fois au cas où vous voudriez changer votre motif.
 
 66
 00:06:37,120 --> 00:06:43,800
-Embroider is an older function which has been very important before the simulator existed.
+Broder est une fonction plus ancienne qui était très importante avant l'existence du simulateur.
 
 67
 00:06:43,800 --> 00:06:50,080
-With the new functionality you will rarely be using it. But still there might be possible usecases.
+Avec la nouvelle fonctionnalité, vous l'utiliserez rarement. Mais il pourrait toujours y avoir des cas d'utilisation possibles.
 
 68
 00:06:50,960 --> 00:06:56,000
-Open "Extensions > Ink/Stitch  > Embroider"
+Ouvrez "Extensions> Ink/Stitch> Broder"
 
 69
 00:06:56,360 --> 00:07:00,060
-The dialogue comes with a few options.
+Le dialogue est livré avec quelques options.
 
 70
 00:07:00,060 --> 00:07:04,400
-You will want to set the output file format to one,
+Vous souhaiterez définir le format de fichier de sortie à un,
 
 71
 00:07:04,580 --> 00:07:06,700
-that your machine can read.
+que votre machine peut lire.
 
 72
 00:07:08,060 --> 00:07:10,340
-If you leave "Directory" empty,
+Si vous laissez "Répertoire" vide,
 
 73
 00:07:10,520 --> 00:07:15,340
-the output file will be saved in the Inkscape's extensions directory.
+le fichier de sortie sera enregistré dans le répertoire d'extensions d'Inkscape.
 
 74
 00:07:16,400 --> 00:07:19,360
-You might want to change this. Enter a path.
+Vous voudrez peut-être changer cela. Entrez un chemin.
 
 75
 00:07:19,740 --> 00:07:24,260
-When you hit "Apply" Ink/Stitch will perform two actions:
+Lorsque vous appuyez sur "Appliquer", Ink/Stitch effectuera deux actions:
 
 76
 00:07:24,640 --> 00:07:28,140
-It will save an embroidery file on your computer
+Il enregistrera un fichier de broderie sur votre ordinateur
 
 77
 00:07:28,540 --> 00:07:36,560
-It will display the output in Inkscape - while hiding all other layers if the option was enabled in the embroider dialogue.
+Il affichera le résultat dans Inkscape - tout en cachant tous les autres calques si l'option a été activée dans la boîte de dialogue de broderie.
 
 78
 00:07:36,920 --> 00:07:41,400
-Now you can inspect and modify the output in Inkscape.
+Vous pouvez maintenant inspecter et modifier le résultat dans Inkscape.
 
 79
 00:07:41,600 --> 00:07:46,920
-The so newly created path is a stroke with manual stitch placement enabled.
+Le chemin nouvellement créé est un trait avec placement manuel de points activé.
 
 80
 00:07:52,340 --> 00:07:59,500
-A more comfortable way to export to an embroidery file is to use the "File > Save as..." export function.
+Une façon plus simple d'exporter vers un fichier de broderie est d'utiliser la fonction d'exportation "Fichier> Enregistrer sous ...".
 
 81
 00:07:59,500 --> 00:08:03,180
-Here you can choose the file format for your machine.
+Ici, vous pouvez choisir le format de fichier pour votre machine.
 
 82
 00:08:03,680 --> 00:08:10,020
-All file format names start with Ink/Stitch, so you can easily find them in the list.
+Tous les noms de format de fichier commencent par Ink/Stitch, vous pouvez donc les trouver facilement dans la liste.
 
 83
 00:08:11,720 --> 00:08:14,580
-Enter the filename and click on "Save".
+Entrez le nom du fichier et cliquez sur "Enregistrer".
 
 84
 00:08:25,820 --> 00:08:30,740
-Don't forget to also save your design in the SVG file format,
+N'oubliez pas de sauvegarder également votre conception au format de fichier SVG,
 
 85
 00:08:30,740 --> 00:08:34,660
-just in case you want to perform changes at a later time.
+juste au cas où vous souhaiteriez effectuer des modifications ultérieurement.
 
 86
 00:08:41,540 --> 00:08:45,200
-You can also open embroidery files with Ink/Stitch.
+Vous pouvez également ouvrir des fichiers de broderie avec Ink/Stitch.
 
 87
 00:08:45,420 --> 00:08:51,260
-Just right click on the file in your file browser and choose "Open with > Inkscape".
+Faites un clic droit sur le fichier dans votre navigateur de fichiers et choisissez "Ouvrir avec> Inkscape".
 
 88
 00:09:10,360 --> 00:09:14,480
-An other possibility would be to open Inkscape
+Une autre possibilité serait d'ouvrir Inkscape
 
 89
 00:09:14,640 --> 00:09:20,900
-and go to "File > Open...", choose your file in the dialgoue and click on "Open".
+et allez dans "Fichier> Ouvrir ...", choisissez votre fichier dans la boîte de dialogue et cliquez sur "Ouvrir".
 
 90
 00:09:21,500 --> 00:09:27,360
-Imported embroidery files will be displayed as a stroke in manual stitch mode.
+Les fichiers de broderie importés seront affichés sous forme de trait en mode point manuel.
 
 91
 00:09:27,360 --> 00:09:33,300
-For certain file formats like "dst" colors may vary from your expectations,
+Pour certains formats de fichiers comme "dst", les couleurs peuvent différer de vos attentes,
 
 92
 00:09:33,300 --> 00:09:36,440
-because they cannot save color information.
+car ils ne peuvent pas enregistrer les informations de couleur.
 
 93
 00:09:36,840 --> 00:09:41,880
-We hope you enjoyed the tutorial. Now you have seen all the Ink/Stitch functions.
+Nous espérons que vous avez apprécié le tutoriel. Vous avez maintenant vu toutes les fonctions Ink/Stitch.
 
 94
 00:09:42,120 --> 00:09:47,540
-In the next video we will demonstrate a typical workflow and put all the pieces together.
+Dans la prochaine vidéo, nous allons montrer une organisation de travail typique et assembler toutes les morceaux.
 
