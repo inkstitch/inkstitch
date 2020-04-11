@@ -24,7 +24,7 @@ La première chose à faire est de créer une image vectorielle.
 
 7
 00:00:31,360 --> 00:00:40,040
-Vous pouvez également utiliser des images existantes. Si vous avez une image PNG, vous pouvez même la tracer via 'Path> Trace Bitmap'.
+Vous pouvez également utiliser des images existantes. Si vous avez une image PNG, vous pouvez même la tracer via 'Chemin> Vectoriser objet matriciel'.
 
 8
 00:00:40,040 --> 00:00:44,720
@@ -56,7 +56,7 @@ Si vous avez installé les Addons, vous aurez des palettes de couleurs à dispos
 
 15
 00:02:29,940 --> 00:02:35,440
-Définissez la couleur de remplissage en cliquant dessus. La couleur de tait peut être changée avec 'Maj + Clic'.
+Définissez la couleur de remplissage en cliquant dessus. La couleur de trait peut être changée avec 'Maj + Clic'.
 
 16
 00:03:28,980 --> 00:03:36,960
@@ -64,7 +64,7 @@ Maintenant que l'image est terminée, vous devez enregistrer une copie dans un a
 
 17
 00:03:37,360 --> 00:03:45,200
-La prochaine étape consistera à convertir les lignes de manière à ce que Ink/Stitch comprenne comment elles doivent être broder..
+La prochaine étape consistera à convertir les lignes de manière à ce que Ink/Stitch comprenne comment elles doivent être brodées..
 
 18
 00:03:53,960 --> 00:03:59,880
@@ -88,7 +88,7 @@ Cela aura beaucoup d'impact sur la qualité de votre motif.
 
 23
 00:06:44,000 --> 00:06:50,960
-Lors de la planification de l'ordre des points, Il faut éviter les sauts de points et les changements de couleur.
+Lors de la planification de l'ordre de broderie, Il faut éviter les sauts de points et les changements de couleur.
 
 24
 00:06:51,220 --> 00:06:56,520
@@ -116,101 +116,101 @@ Ink/Stitch brodera les objets dans l'ordre exact où ils apparaissent dans votre
 
 30
 00:07:37,920 --> 00:07:45,100
-Si la distance entre deux objets est grande, Ink / Stitch ajoutera automatiquement un point de saut entre eux.
+Si la distance entre deux objets est grande, Ink/Stitch ajoutera automatiquement un point de saut entre eux.
 
 31
 00:07:45,100 --> 00:07:48,900
-It uses the color of the object to determine thread color,
+C'est la couleur de l'objet qui détermine la couleur du fil,
 
 32
 00:07:48,900 --> 00:07:54,660
-so changes in color from one object to the next will result in a thread-change instruction
+donc les changements de couleur d'un objet au suivant entraîneront une instruction de changement de fil
 
 33
 00:07:54,660 --> 00:07:57,500
-being added to the embroidery output file.
+dans le fichier final de broderie.
 
 34
 00:08:38,760 --> 00:08:41,140
-We need to use the objects panel.
+Il faut utiliser la boite des objets.
 
 35
 00:08:41,140 --> 00:08:45,480
-We recommend to make heavy use of layers and groups at this point.
+Nous vous recommandons de faire un usage intensif des calques et des groupes à ce stade.
 
 36
 00:08:45,480 --> 00:08:48,580
-This will help a lot while reordering objects.
+Cela aidera beaucoup lors de la réorganisation des objets.
 
 37
 00:08:48,580 --> 00:08:54,620
-Create a group of objects with 'Ctrl + G' and move through the objects in the desired order,
+Créez un groupe d'objets avec 'Ctrl + G' et déplacez les objets dans l'ordre souhaité,
 
 38
 00:08:54,740 --> 00:08:59,100
-while pushing the next object in line to the bottom of the group.
+tout en envoyant l'objet suivant en ligne vers le bas du groupe.
 
 39
 00:10:29,880 --> 00:10:33,760
-Attach commands to give Ink/Stitch additional information.
+Attachez des commandes pour donner à Ink/Stitch des informations additionelles.
 
 40
 00:10:33,760 --> 00:10:39,320
-Trims, Stops, Fill start- and ending points are just some of the options.
+Coupes, Stops, points de début et de fin de remplissage ne sont que quelques-unes des options.
 
 41
 00:10:39,320 --> 00:10:44,140
-Watch our visual commands video to get more information.
+Regardez notre vidéo sur les commandes visuelles pour obtenir plus d'informations.
 
 42
 00:10:55,420 --> 00:11:01,280
-During the whole process you were already running visualizations through the params dialogue.
+Pendant tout le processus, vous exécutiez déjà des visualisations via la boîte de dialogue des paramètres.
 
 43
 00:11:01,760 --> 00:11:10,400
-Use the simulator as standalone or even the print preview to get an impression on how the design will look in the end.
+Utilisez la simulation de manière autonome ou même l'aperçu avant impression pour vous faire une idée de l'aspect final du motif.
 
 44
 00:11:10,400 --> 00:11:14,380
-Most of the time the simulator will do the job just fine.
+La plupart du temps, la simulation fera très bien l'affaire.
 
 45
 00:11:14,380 --> 00:11:21,720
-But for fill stitches the print preview is very helpful, f.e. in matter of stitch length and angle.
+Mais pour les points de remplissage, l'aperçu avant impression est très utile, par exemple. en matière de longueur et d'angle de point.
 
 46
 00:11:26,860 --> 00:11:31,580
-Once you are satisfied with the outcome, save the file to your disk.
+Une fois que vous êtes satisfait du résultat, enregistrez le fichier sur votre disque.
 
 47
 00:11:31,580 --> 00:11:35,120
-Choose the file format that your machine can read.
+Choisissez le format de fichier que votre machine peut lire.
 
 48
 00:11:35,120 --> 00:11:39,400
-Don't forget to also save the file in the svg file format,
+N'oubliez pas d'enregistrer également le fichier au format SVG,
 
 49
 00:11:39,400 --> 00:11:43,380
-just in case you want to improve your design at a later time.
+juste au cas où vous voudriez améliorer votre motif plus tard.
 
 50
 00:11:53,500 --> 00:11:55,500
-Transfer the file to your machine.
+Transférez le fichier sur votre machine.
 
 51
 00:11:55,780 --> 00:12:00,580
-Perform a test sew with preferably the same fabric that you are planing to use.
+Effectuez un test de couture avec de préférence le même tissu que vous envisagez d'utiliser.
 
 52
 00:12:00,580 --> 00:12:05,060
-The fabric will have influence on the outcome of the design
+Le tissu aura une influence sur le résultat du motif
 
 53
 00:12:05,060 --> 00:12:10,380
-in this way that you most likely will have to adjust your design here and there.
+de cette façon, vous devrez probablement ajuster votre motif ici et là.
 
 54
 00:12:10,380 --> 00:12:17,120
-Follow this routine until you are happy and ready to embroider on your best piece of fabric in your house ;)
+Suivez ce processus jusqu'à ce que vous soyez satisfait et prêt à broder sur le meilleur morceau de tissu dans votre maison ;)
 
