@@ -1,122 +1,122 @@
 1
 00:00:06,460 --> 00:00:10,060
-Welcome to the Ink/Stitch beginner tutorial series.
+Bienvenue dans la série de tutoriels pour débutants Ink/Stitch.
 
 2
 00:00:11,040 --> 00:00:14,880
-In this part we are going to have a look at the Ink/Stitch workflow.
+Dans cette partie, nous allons voir l4organisation du travail dans Ink/Stitch.
 
 3
 00:00:15,200 --> 00:00:20,760
-It includes the following steps, without being too strongly attached to this exact order.
+Il comprend les étapes suivantes, sans forcément s'en tenir à cet ordre exact.
 
 4
 00:00:20,760 --> 00:00:24,760
-Quiet a few of the shortcut keys used in this tutorial are customly set.
+Un bon nombre des touches de raccourci utilisées dans ce didacticiel sont définies de manière personnalisée.
 
 5
 00:00:24,760 --> 00:00:28,200
-Watch the customize video to learn how to establish them.
+Regardez la vidéo de personnalisation pour savoir comment les obtenir.
 
 6
 00:00:28,200 --> 00:00:31,360
-The first thing to do is to create a vector image.
+La première chose à faire est de créer une image vectorielle.
 
 7
 00:00:31,360 --> 00:00:40,040
-You could also use existing images. If you have an PNG-image you could even trace it through 'Path > Trace Bitmap'.
+Vous pouvez également utiliser des images existantes. Si vous avez une image PNG, vous pouvez même la tracer via 'Path> Trace Bitmap'.
 
 8
 00:00:40,040 --> 00:00:44,720
-For a brief demonstration we will create the image by ourselves.
+Pour une brève démonstration, nous allons créer l'image par nous-mêmes.
 
 9
 00:00:44,720 --> 00:00:49,940
-To create lines you can either use the pencil tool, which can be activated with 'P'
+Pour créer des lignes, vous pouvez soit utiliser l'outil crayon, qui peut être activé avec 'P'
 
 10
 00:00:49,940 --> 00:00:52,620
-- or the beziér tool enabled with 'B'.
+- ou l'outil beziér activé avec 'B'.
 
 11
 00:01:22,800 --> 00:01:26,300
-You can also use shapes such as the square or the circle.
+Vous pouvez également utiliser des formes telles que le carré ou le cercle.
 
 12
 00:01:26,300 --> 00:01:33,000
-Convert them to a path with 'Shift + Control + C' or the corresponding symbol in node editor mode.
+Convertissez-les en chemin avec 'Maj + Ctrl + C' ou le symbole correspondant en mode éditeur de noeud.
 
 13
 00:02:17,520 --> 00:02:23,540
-Fill bounded areas with help of the fill tool. The shortcut key for this is 'U'.
+Remplissez les zones délimitées à l'aide de l'outil de remplissage dont la touche de raccourci est «U».
 
 14
 00:02:25,480 --> 00:02:29,500
-If you installed the Addons you will have color palettes available.
+Si vous avez installé les Addons, vous aurez des palettes de couleurs à disposition.
 
 15
 00:02:29,940 --> 00:02:35,440
-Set the fill color by clicking on them. The stroke color can be change with 'Shift + Click'.
+Définissez la couleur de remplissage en cliquant dessus. La couleur de tait peut être changée avec 'Maj + Clic'.
 
 16
 00:03:28,980 --> 00:03:36,960
-Now that the image is done, you should save a copy into an other layer and hide the first one (we skipped this step here).
+Maintenant que l'image est terminée, vous devez enregistrer une copie dans un autre calque et masquer le premier (nous avons ignoré cette étape ici).
 
 17
 00:03:37,360 --> 00:03:45,200
-The next step will be to convert the lines in such way, that Ink/Stitch will understand how it should be sewn out.
+La prochaine étape consistera à convertir les lignes de manière à ce que Ink/Stitch comprenne comment elles doivent être broder..
 
 18
 00:03:53,960 --> 00:03:59,880
-At this point we assume that you know how to create satin columns, fills and running stitches.
+À ce stade, nous supposons que vous savez comment créer des colonnes satin, des remplissages et des points alignés.
 
 19
 00:03:59,880 --> 00:04:03,680
-If not, have a look at the corresponding videos.
+Sinon, regardez les vidéos correspondantes.
 
 20
 00:04:35,260 --> 00:04:39,400
-Set the params as you like and don't forget to use underlay.
+Réglez les paramètres comme vous le souhaitez et n'oubliez pas de mettre des sous-couches.
 
 21
 00:06:32,600 --> 00:06:34,600
-Plan your stitch order carefully.
+Planifiez soigneusement l'ordre de votre broderie.
 
 22
 00:06:34,600 --> 00:06:38,500
-It will have a lot of impact on the quality of your design.
+Cela aura beaucoup d'impact sur la qualité de votre motif.
 
 23
 00:06:44,000 --> 00:06:50,960
-While planning the stitch order you try to avoid jump stitches and also color changes.
+Lors de la planification de l'ordre des points, Il faut éviter les sauts de points et les changements de couleur.
 
 24
 00:06:51,220 --> 00:06:56,520
-You don't want to change colors all the time while stitching out the design.
+Vous ne souhaitez pas changer les couleurs tout le temps pendant la broderie du motif.
 
 25
 00:07:05,760 --> 00:07:10,520
-Run the simulator to see if you might need to adjust the direction of some objects.
+Exécutez la simulation pour voir s'il est nécessaire d'ajuster le sens de certains objets.
 
 26
 00:07:10,520 --> 00:07:16,260
-You can also see the direction through the red sparks when in node editor mode.
+Vous pouvez également voir le sens à l'aide des flèches rouges en mode éditeur de nœud.
 
 27
 00:07:16,260 --> 00:07:19,860
-We have explained them in the customize video.
+Nous l'avons expliqué dans la vidéo de personnalisation.
 
 28
 00:07:24,520 --> 00:07:29,540
-Change the direction through `Path > Reverse` or use a custom shortcut key.
+Modifiez le sens via «Chemin> Inverser» ou utilisez une touche de raccourci personnalisée.
 
 29
 00:07:29,540 --> 00:07:37,920
-Ink/Stitch will stitch objects in exactly the order they appear in your SVG document, from lowest to highest in stacking order.
+Ink/Stitch brodera les objets dans l'ordre exact où ils apparaissent dans votre document SVG, du plus bas au plus élevé dans l'ordre d'empilement des objets.
 
 30
 00:07:37,920 --> 00:07:45,100
-If the distance between two objects is long, Ink/Stitch will add a jump-stitch between them automatically.
+Si la distance entre deux objets est grande, Ink / Stitch ajoutera automatiquement un point de saut entre eux.
 
 31
 00:07:45,100 --> 00:07:48,900
