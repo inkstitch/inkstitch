@@ -329,10 +329,22 @@ table tr td:first-child {
 .tutorial__group h3 { height: 1.5em }
 .tutorial__group h3 span { position: absolute; display: inline-block; width: 100%; border-bottom: 1px solid #f2f3f3; }
 .tutorial__group .archive__item-title a::before { display: none; }
-.tutorial__item-teaser img { max-width: 50px; }
+.tutorial__item-teaser img { max-width: 10em; max-height: 5em; }
 .tutorial__item, .tutorial__group h3 { display: table-row; }
 .tutorial__group h3 > span, .tutorial__item > h4, .tutorial__item > div, .tutorial__item > p { display: table-cell; vertical-align: top; padding-right: 1em; }
 .tutorial__item > p { min-width: 7em; }
+
+/* Mobile Tutorials */
+
+@media (max-width: 800px) {
+    .tutorial__group { display: block; }
+    .tutorial__item, .tutorial__group h3 { display: block; background-image: linear-gradient(to top, #eee, transparent 45px);}
+    .tutorial__group h3 > span, .tutorial__item > h4, .tutorial__item > div { display: block; text-align: center; }
+    .tutorial__group .tutorial__item { padding: 1em 0; }
+    .tutorial__item-teaser img { max-width: 400px; }
+    .tutorial__group h3 { border-top: 1px solid gray; }
+    .tutorial__item > p { display: none; }
+}
 
 /* Compare languages */
 .lang-headline {
