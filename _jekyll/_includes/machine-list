@@ -1,0 +1,51 @@
+{% assign inkstitch-formats-write = page.inkstitch-formats[0].write | remove: " " | upcase | split: "," %}
+{% assign inkstitch-formats-read = page.inkstitch-formats[0].read | remove: " " | upcase | split: "," %}
+
+<table>
+    <thead>
+    <tr>
+        <th>{{ page.headlines[0].machine }}</th>
+        <th>{{ page.headlines[1].file-formats }}</th>
+        <th>{{ page.headlines[2].features }}</th>
+        <th>{{ page.headlines[3].comments }}</th>
+    </tr>
+    </thead>
+{% for brand in page.machine-database %}
+
+<tr><td colspan="5"><span style="font-weight: bold;">{{ brand.brand }}</span></td></tr>
+
+    {% for machine in brand.machines %}
+
+<tr>
+<td>{{ machine.name }}</td>
+<td>
+{% assign formats = machine.file-formats | remove: " " | upcase | split: "," %}
+{% for format in formats %}
+    {% assign color = "red" %}
+    {% assign title = "unsupported" %}
+    {% for inkstitch-write in inkstitch-formats-write %}
+        {% if format==inkstitch-write %}
+            {% assign color = "green" %}
+            {% assign title = "supported" %}
+            {% break %}
+        {% endif %}
+    {% endfor %}
+    {% if color == "red" %}
+        {% for inkstitch-read in inkstitch-formats-read %}
+            {% if format == inkstitch-read %}
+                {% assign color = "orange" %}
+                {% assign title = "read-only" %}
+                {% break %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+<span class="machine-fileformat" style="color: {{ color }}" title="{{ title }}">{{ format }}</span>
+{% endfor %}
+</td>
+<td>{{ machine.features }}</td>
+<td>{{ machine.comments }}</td>
+</tr>
+
+    {% endfor %}
+{% endfor %}
+</table>

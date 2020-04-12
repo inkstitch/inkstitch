@@ -2,7 +2,7 @@
 main:
   - title: "Features"
     url: /de/features/
-  - title: "Dokumentation"
+  - title: "Benutzerhandbuch"
     url: /de/docs/install/
   - title: "Tutorials"
     url: /de/tutorials/
@@ -15,7 +15,7 @@ main:
 pages:
   - title: "Features"
     url: /de/features/
-  - title: "Dokumentation"
+  - title: "Benutzerhandbuch"
     url: /de/docs/install/
     children:
       - title: "Installation"

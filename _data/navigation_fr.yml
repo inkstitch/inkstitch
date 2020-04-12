@@ -2,7 +2,7 @@
 main:
   - title: "Fonctionnalités"
     url: /fr/features/
-  - title: "Documentation"
+  - title: "Manuel de l'Utilisateur"
     url: /fr/docs/install/
   - title: "Tutoriels"
     url: /fr/tutorials/
@@ -15,7 +15,7 @@ main:
 pages:
   - title: "Fonctionnalités"
     url: /fr/features/
-  - title: "Documentation"
+  - title: "Manuel de l'Utilisateur"
     url: /fr/docs/install/
     children:
       - title: "Installation"

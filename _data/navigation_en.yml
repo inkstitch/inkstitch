@@ -2,7 +2,7 @@
 main:
   - title: "Features"
     url: /features/
-  - title: "Documentation"
+  - title: "User Manual"
     url: /docs/install/
   - title: "Tutorials"
     url: /tutorials/
@@ -15,7 +15,7 @@ main:
 pages:
   - title: "Features"
     url: /features/
-  - title: "Documentation"
+  - title: "User Manual"
     url: /docs/install/
     children:
       - title: "Installation"
@@ -103,6 +103,8 @@ docs:
         url: /docs/features/
       - title: Inkscape Tips
         url: /docs/inkscape-tips/
+      - title: Machine Database
+        url: /docs/machine-database/
   - title: Troubleshooting
     children:
       - title: "F.A.Q."
