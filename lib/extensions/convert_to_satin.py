@@ -1,17 +1,18 @@
 import math
 from itertools import chain, groupby
 
-import inkex
 import numpy
 from numpy import diff, setdiff1d, sign
 from shapely import geometry as shgeo
 
-from .base import InkstitchExtension
+import inkex
+
 from ..elements import Stroke
 from ..i18n import _
 from ..svg import PIXELS_PER_MM, get_correction_transform
-from ..svg.tags import SVG_PATH_TAG
+from ..svg.tags import INKSTITCH_ATTRIBS, SVG_PATH_TAG
 from ..utils import Point
+from .base import InkstitchExtension
 
 
 class SelfIntersectionError(Exception):
@@ -309,6 +310,6 @@ class ConvertToSatin(InkstitchExtension):
                                        "style": path_style,
                                        "transform": correction_transform,
                                        "d": d,
-                                       "embroider_satin_column": "true",
+                                       INKSTITCH_ATTRIBS['satin_column']: "true",
                                    }
                                    )

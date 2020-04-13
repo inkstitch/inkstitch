@@ -5,10 +5,11 @@ import simplepath
 import simplestyle
 import simpletransform
 
-from .tags import INKSCAPE_GROUPMODE, INKSCAPE_LABEL, SVG_DEFS_TAG, SVG_GROUP_TAG, SVG_PATH_TAG
-from .units import PIXELS_PER_MM, get_viewbox_transform
 from ..i18n import _
 from ..utils import Point, cache
+from .tags import (INKSCAPE_GROUPMODE, INKSCAPE_LABEL, INKSTITCH_ATTRIBS,
+                   SVG_DEFS_TAG, SVG_GROUP_TAG, SVG_PATH_TAG)
+from .units import PIXELS_PER_MM, get_viewbox_transform
 
 # The stitch vector path looks like this:
 #  _______
@@ -198,6 +199,7 @@ def color_block_to_paths(color_block, svg, destination, visual_commands):
             add_commands(Stroke(destination[-1]), ["trim"])
 
         color = color_block.color.visible_on_white.to_hex_str()
+
         path = inkex.etree.Element(SVG_PATH_TAG, {
             'style': simplestyle.formatStyle({
                 'stroke': color,
@@ -206,7 +208,7 @@ def color_block_to_paths(color_block, svg, destination, visual_commands):
             }),
             'd': "M" + " ".join(" ".join(str(coord) for coord in point) for point in point_list),
             'transform': get_correction_transform(svg),
-            'embroider_manual_stitch': 'true'
+            INKSTITCH_ATTRIBS['manual_stitch']: 'true'
         })
         destination.append(path)
 
