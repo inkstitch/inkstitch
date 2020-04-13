@@ -72,9 +72,15 @@ class EmbroideryElement(object):
     def __init__(self, node):
         self.node = node
 
+        legacy_attribs = False
         for attrib in self.node.attrib:
             if attrib.startswith('embroider_'):
+                # update embroider_ attributes to namespaced attributes
                 self.replace_legacy_param(attrib)
+                legacy_attribs = True
+        if legacy_attribs and not self.get_param('fill_underlay', ""):
+            # defaut setting for fill_underlay has changed
+            self.set_param('fill_underlay', False)
 
     @property
     def id(self):
@@ -95,8 +101,6 @@ class EmbroideryElement(object):
         value = self.node.get(param, "").strip()
         self.set_param(param[10:], value)
         del self.node.attrib[param]
-        # defaut setting has changed for fill_underlay
-        self.set_param('fill_underlay', False)
 
     @cache
     def get_param(self, param, default):
