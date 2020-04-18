@@ -1,9 +1,10 @@
 import os
-from os.path import dirname, realpath
 import sys
-from glob import glob
 from collections import Sequence
+from glob import glob
+from os.path import dirname, realpath
 
+from ..utils import guess_inkscape_config_path
 from .palette import ThreadPalette
 
 
@@ -18,12 +19,15 @@ class _ThreadCatalog(Sequence):
         if getattr(sys, 'frozen', None) is not None:
             path = os.path.join(sys._MEIPASS, "..")
         else:
-            path = dirname(dirname(dirname(realpath(__file__))))
+            path = guess_inkscape_config_path()
+            # Fallback on inkstitch palettes folder
+            if not os.path.exists(path):
+                path = dirname(dirname(dirname(realpath(__file__))))
 
         return os.path.join(path, 'palettes')
 
     def load_palettes(self, path):
-        for palette_file in glob(os.path.join(path, '*.gpl')):
+        for palette_file in glob(os.path.join(path, 'InkStitch*.gpl')):
             self.palettes.append(ThreadPalette(palette_file))
 
     def palette_names(self):
