@@ -129,9 +129,7 @@ jobs:
           export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
           
           # for msgfmt
-          echo 'export PATH="/usr/local/opt/gettext/bin:$PATH"' >> ~/.zshrc
-          export LDFLAGS="-L/usr/local/opt/gettext/lib"
-          export CPPFLAGS="-I/usr/local/opt/gettext/include"
+          echo "::add-path::/usr/local/opt/gettext/bin"
 
           echo "::set-env name=GI_TYPELIB_PATH::/usr/local/lib/girepository-1.0/"
 
@@ -144,7 +142,7 @@ jobs:
           rm inkscape-0.92.3.tar.bz2
           mv inkscape-0.92.3 inkscape
 
-          echo "::add-path::${{ env.pythonLocation }}\bin"
+          echo "::add-path::${{ env.pythonLocation }}/bin"
       - shell: bash
         run: |
           make dist
