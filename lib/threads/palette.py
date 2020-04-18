@@ -49,7 +49,7 @@ class ThreadPalette(Set):
 
             for line in palette:
                 try:
-                    fields = line.split("\t", 3)
+                    fields = line.split(None, 3)
                     thread_color = [int(field) for field in fields[:3]]
                     thread_name, thread_number = fields[3].strip().rsplit(" ", 1)
                     thread_name = thread_name.strip()
