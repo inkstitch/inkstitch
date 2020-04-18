@@ -129,6 +129,7 @@ jobs:
           export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
           
           # for msgfmt
+          brew install gettext
           brew link gettext --force
 
           echo "::set-env name=GI_TYPELIB_PATH::/usr/local/lib/girepository-1.0/"
