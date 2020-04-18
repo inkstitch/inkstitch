@@ -16,12 +16,13 @@ class _ThreadCatalog(Sequence):
         self.load_palettes(self.get_palettes_path())
 
     def get_palettes_path(self):
-        if getattr(sys, 'frozen', None) is not None:
-            path = os.path.join(sys._MEIPASS, "..")
-        else:
-            path = guess_inkscape_config_path()
-            # Fallback on inkstitch palettes folder
-            if not os.path.exists(path):
+        path = guess_inkscape_config_path()
+
+        # Fallback on inkstitch palettes folder
+        if not os.path.exists(path):
+            if getattr(sys, 'frozen', None) is not None:
+                path = os.path.join(sys._MEIPASS, "..")
+            else:
                 path = dirname(dirname(dirname(realpath(__file__))))
 
         return os.path.join(path, 'palettes')
