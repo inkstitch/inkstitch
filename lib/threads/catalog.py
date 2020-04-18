@@ -13,23 +13,28 @@ class _ThreadCatalog(Sequence):
 
     def __init__(self):
         self.palettes = []
-        self.load_palettes(self.get_palettes_path())
+        self.load_palettes(self.get_palettes_paths())
 
-    def get_palettes_path(self):
-        path = guess_inkscape_config_path()
+    def get_palettes_paths(self):
+        """Creates a list containing the path of two directories:
+        1. Palette directory of Inkscape
+        2. Palette directory of inkstitch
+        """
+        path = [os.path.join(guess_inkscape_config_path(), 'palettes')]
 
-        # Fallback on inkstitch palettes folder
-        if not os.path.exists(path):
-            if getattr(sys, 'frozen', None) is not None:
-                path = os.path.join(sys._MEIPASS, "..")
-            else:
-                path = dirname(dirname(dirname(realpath(__file__))))
+        if getattr(sys, 'frozen', None) is not None:
+            inkstitch_path = os.path.join(sys._MEIPASS, "..")
+        else:
+            inkstitch_path = dirname(dirname(dirname(realpath(__file__))))
 
-        return os.path.join(path, 'palettes')
+        path.append(os.path.join(inkstitch_path, 'palettes'))
 
-    def load_palettes(self, path):
-        for palette_file in glob(os.path.join(path, 'InkStitch*.gpl')):
-            self.palettes.append(ThreadPalette(palette_file))
+        return path
+
+    def load_palettes(self, paths):
+        for path in paths:
+            for palette_file in glob(os.path.join(path, 'InkStitch*.gpl')):
+                self.palettes.append(ThreadPalette(palette_file))
 
     def palette_names(self):
         return list(sorted(palette.name for palette in self))
