@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-04-03 00:09+0000\n"
-"PO-Revision-Date: 2020-04-03 00:10\n"
+"POT-Creation-Date: 2020-04-09 00:06+0000\n"
+"PO-Revision-Date: 2020-04-09 00:07\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Czech\n"
 "MIME-Version: 1.0\n"
@@ -16,15 +16,14 @@ msgstr ""
 "X-Crowdin-File: /master/messages.po\n"
 "Language: cs_CZ\n"
 
-#. name of font in fonts/small_font
+#. name of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:2
-msgid "Ink/Stitch Small Font"
+msgid "TT Directors"
 msgstr ""
 
-#. description of font in fonts/small_font
+#. description of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:4
-#, python-format
-msgid "A font suited for small characters.  The capital em is 0.2 inches wide at 100% scale.  Can be scaled up to 300%."
+msgid "A font suited for directing"
 msgstr ""
 
 #. name of font in fonts/medium_font
@@ -38,24 +37,25 @@ msgstr ""
 msgid "A basic font suited for medium-sized characters.  The capital em is 0.6 inches wide at 100% scale.  Can be scaled down to 75% or up to 150%.  Every satin has contour underlay."
 msgstr ""
 
-#. name of font in fonts/tt_masters
+#. name of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:10
+msgid "Ink/Stitch Small Font"
+msgstr ""
+
+#. description of font in fonts/small_font
+#: inkstitch-fonts-metadata.py:12
+#, python-format
+msgid "A font suited for small characters.  The capital em is 0.2 inches wide at 100% scale.  Can be scaled up to 300%."
+msgstr ""
+
+#. name of font in fonts/tt_masters
+#: inkstitch-fonts-metadata.py:14
 msgid "TT Masters"
 msgstr ""
 
 #. description of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:12
-msgid "A font suited for heavy typing :)"
-msgstr ""
-
-#. name of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:14
-msgid "TT Directors"
-msgstr ""
-
-#. description of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:16
-msgid "A font suited for directing"
+msgid "A font suited for heavy typing :)"
 msgstr ""
 
 #. command attached to an object
