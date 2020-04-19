@@ -32,9 +32,13 @@ class _ThreadCatalog(Sequence):
         return path
 
     def load_palettes(self, paths):
+        palettes = []
         for path in paths:
             for palette_file in glob(os.path.join(path, 'InkStitch*.gpl')):
-                self.palettes.append(ThreadPalette(palette_file))
+                palette_basename = os.path.basename(palette_file)
+                if palette_basename not in palettes:
+                    self.palettes.append(ThreadPalette(palette_file))
+                    palettes.append(palette_basename)
 
     def palette_names(self):
         return list(sorted(palette.name for palette in self))
