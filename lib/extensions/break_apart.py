@@ -1,6 +1,6 @@
 from copy import deepcopy
 
-from shapely import geometry as shgeo
+from shapely.geometry import Polygon
 
 import inkex
 
@@ -29,24 +29,25 @@ class BreakApart(InkstitchExtension):
             multipolygons = []
             holes = []
 
-            # sort paths by size and convert to polygons
-            element.paths.sort(key=lambda point_list: shgeo.Polygon(point_list).area, reverse=True)
             for path in element.paths:
-                polygons.append(shgeo.Polygon(path))
+                polygons.append(Polygon(path))
+
+            # sort paths by size and convert to polygons
+            polygons.sort(key=lambda polygon: polygon.area, reverse=True)
 
             for shape in polygons:
                 if shape in holes:
                     continue
-                multipolygon = [shape]
+                polygon_list = [shape]
 
                 for other in polygons:
                     if shape != other and shape.contains(other) and other not in holes:
                         # check if "other" is inside a hole, before we add it to the list
-                        if any(p.contains(other) for p in multipolygon[1:]):
+                        if any(p.contains(other) for p in polygon_list[1:]):
                             continue
-                        multipolygon.append(other)
+                        polygon_list.append(other)
                         holes.append(other)
-                multipolygons.append(shgeo.MultiPolygon(multipolygon))
+                multipolygons.append(polygon_list)
             self.element_to_nodes(multipolygons, element)
 
     def element_to_nodes(self, multipolygons, element):
