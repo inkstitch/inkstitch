@@ -1,4 +1,5 @@
 from auto_satin import AutoSatin
+from break_apart import BreakApart
 from convert_to_satin import ConvertToSatin
 from cut_satin import CutSatin
 from embroider import Embroider
@@ -36,4 +37,5 @@ __all__ = extensions = [Embroider,
                         AutoSatin,
                         Lettering,
                         Troubleshoot,
-                        RemoveEmbroiderySettings]
+                        RemoveEmbroiderySettings,
+                        BreakApart]
