@@ -1,5 +1,6 @@
 {% assign inkstitch-formats-write = page.inkstitch-formats[0].write | remove: " " | upcase | split: "," %}
 {% assign inkstitch-formats-read = page.inkstitch-formats[0].read | remove: " " | upcase | split: "," %}
+{% assign machine-database = page.machine-database | sort: 'brand' %}
 
 <table>
     <thead>
@@ -7,19 +8,21 @@
         <th>{{ page.headlines[0].machine }}</th>
         <th>{{ page.headlines[1].file-formats }}</th>
         <th>{{ page.headlines[2].features }}</th>
-        <th>{{ page.headlines[3].comments }}</th>
+        <th>{{ page.headlines[3].inkstitch-version }}</th>
+        <th>{{ page.headlines[4].comments }}</th>
     </tr>
     </thead>
-{% for brand in page.machine-database %}
+{% for brand in machine-database %}
+{% assign machines = brand.machines | sort: "name" %}
 
 <tr><td colspan="5"><span style="font-weight: bold;">{{ brand.brand }}</span></td></tr>
 
-    {% for machine in brand.machines %}
+    {% for machine in machines %}
 
 <tr>
 <td>{{ machine.name }}</td>
 <td>
-{% assign formats = machine.file-formats | remove: " " | upcase | split: "," %}
+{% assign formats = machine.file-formats | remove: " " | upcase | split: "," | sort %}
 {% for format in formats %}
     {% assign color = "red" %}
     {% assign title = "unsupported" %}
@@ -43,6 +46,7 @@
 {% endfor %}
 </td>
 <td>{{ machine.features }}</td>
+<td>{{ machine.inkstitch-version }}</td>
 <td>{{ machine.comments }}</td>
 </tr>
 
