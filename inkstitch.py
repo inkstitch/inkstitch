@@ -53,19 +53,6 @@ else:
             print >> sys.stderr, shapely_errors.getvalue()
 
     if exception:
-        script_name = os.path.basename(__file__)
-
-        if script_name.endswith('.py'):
-            binary_name = script_name[:-3]
-        else:
-            # Probably not right, but we can at least try.
-            binary_name = script_name
-
-        binary_path = os.path.join("inkstitch", "bin", binary_name)
-
-        args = sys.argv[:]
-        args[0] = binary_path
-
         print >> sys.stderr, _("Ink/Stitch experienced an unexpected error.")
         print >> sys.stderr, _("If you'd like to help, please file an issue at "
                                "https://github.com/inkstitch/inkstitch/issues "
