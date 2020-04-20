@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-04-09 00:06+0000\n"
-"PO-Revision-Date: 2020-04-09 00:07\n"
+"POT-Creation-Date: 2020-04-20 00:09+0000\n"
+"PO-Revision-Date: 2020-04-20 00:10\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -603,6 +603,10 @@ msgstr ""
 
 #: lib/extensions/base.py:132
 msgid "Tip: select some objects and use Path -> Object to Path to convert them to paths."
+msgstr ""
+
+#: lib/extensions/break_apart.py:19
+msgid "Please select one or more fill areas to break apart."
 msgstr ""
 
 #: lib/extensions/convert_to_satin.py:29
@@ -1549,6 +1553,14 @@ msgstr ""
 msgid "Satin Tools"
 msgstr ""
 
+#: templates/break_apart.inx:3
+msgid "Break Apart and Retain Holes"
+msgstr ""
+
+#: templates/break_apart.inx:10
+msgid "Fill Tools"
+msgstr ""
+
 #: templates/convert_to_satin.inx:3
 msgid "Convert Line to Satin"
 msgstr ""
@@ -1641,79 +1653,91 @@ msgstr ""
 msgid "Save design in %(file_extension)s format using Ink/Stitch"
 msgstr ""
 
-#: templates/output_params_txt.xml:2
-msgid "laser mode"
-msgstr ""
-
-#: templates/output_params_txt.xml:2
-msgid "Laser mode (generate g-code for grbl laser mode)"
-msgstr ""
-
-#: templates/output_params_txt.xml:3
-msgid "dynamic laser power"
-msgstr ""
-
-#: templates/output_params_txt.xml:3
-msgid "Use Grbl's M4 dynamic laser power mode.  Ensures consistent laser cutting power regardless of motor speed.  Only for PWM-capable lasers."
-msgstr ""
-
 #: templates/output_params_txt.xml:4
-msgid "laser warm-up time"
-msgstr ""
-
-#: templates/output_params_txt.xml:4
-msgid "When turning on the laser, wait this many seconds for laser to warm up (G4 command)"
-msgstr ""
-
-#: templates/output_params_txt.xml:5
 msgid "negate X coordinate values"
 msgstr ""
 
-#: templates/output_params_txt.xml:5
+#: templates/output_params_txt.xml:4
 msgid "Negate x coordinates"
 msgstr ""
 
-#: templates/output_params_txt.xml:6
+#: templates/output_params_txt.xml:5
 msgid "negate Y coordinate values"
 msgstr ""
 
-#: templates/output_params_txt.xml:6
+#: templates/output_params_txt.xml:5
 msgid "Negate y coordinates"
 msgstr ""
 
+#: templates/output_params_txt.xml:6
+msgid "Z coordinate value"
+msgstr ""
+
+#: templates/output_params_txt.xml:6
+msgid "Either alternate Z value between 0 and 1 or travel custom value."
+msgstr ""
+
 #: templates/output_params_txt.xml:7
+msgid "alternate Z value"
+msgstr ""
+
+#: templates/output_params_txt.xml:8 templates/output_params_txt.xml:10
 msgid "Z travel per stitch"
 msgstr ""
 
-#: templates/output_params_txt.xml:7
-msgid "increment z coordinate by this amount per stitch"
+#: templates/output_params_txt.xml:10
+msgid "increment z coordinate by this amount per stitch if \"Z travel per stitch\" is enabled"
 msgstr ""
 
-#: templates/output_params_txt.xml:8
+#: templates/output_params_txt.xml:13
+msgid "laser mode"
+msgstr ""
+
+#: templates/output_params_txt.xml:13
+msgid "Laser mode (generate g-code for grbl laser mode)"
+msgstr ""
+
+#: templates/output_params_txt.xml:14
+msgid "dynamic laser power"
+msgstr ""
+
+#: templates/output_params_txt.xml:14
+msgid "Use Grbl's M4 dynamic laser power mode.  Ensures consistent laser cutting power regardless of motor speed.  Only for PWM-capable lasers."
+msgstr ""
+
+#: templates/output_params_txt.xml:15
+msgid "laser warm-up time"
+msgstr ""
+
+#: templates/output_params_txt.xml:15
+msgid "When turning on the laser, wait this many seconds for laser to warm up (G4 command)"
+msgstr ""
+
+#: templates/output_params_txt.xml:16
 msgid "spindle speed"
 msgstr ""
 
-#: templates/output_params_txt.xml:8
+#: templates/output_params_txt.xml:16
 msgid "spindle speed (laser power for laser mode, set to -1 to omit)"
 msgstr ""
 
-#: templates/output_params_txt.xml:9
+#: templates/output_params_txt.xml:17
 msgid "min spindle speed"
 msgstr ""
 
-#: templates/output_params_txt.xml:9
+#: templates/output_params_txt.xml:17
 msgid "minimum spindle speed value (grbl $31 setting)"
 msgstr ""
 
-#: templates/output_params_txt.xml:10
+#: templates/output_params_txt.xml:18
 msgid "max spindle speed"
 msgstr ""
 
-#: templates/output_params_txt.xml:10
+#: templates/output_params_txt.xml:18
 msgid "minimum spindle speed value (grbl $30 setting)"
 msgstr ""
 
-#: templates/output_params_txt.xml:11
+#: templates/output_params_txt.xml:19
 msgid "feed rate (in mm/min, set to -1 to omit)"
 msgstr ""
 
@@ -1773,7 +1797,7 @@ msgstr ""
 msgid "Create a ZIP with multiple embroidery file formats using Ink/Stitch"
 msgstr ""
 
-#: templates/zip.inx:13
+#: templates/zip.inx:15
 msgid "Scalable Vector Graphic"
 msgstr ""
 
