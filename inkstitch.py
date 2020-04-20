@@ -1,14 +1,14 @@
+import logging
 import os
 import sys
-import logging
 import traceback
-from cStringIO import StringIO
 from argparse import ArgumentParser
+from cStringIO import StringIO
 
-from lib import extensions
-from lib.utils import save_stderr, restore_stderr
 import lib.debug as debug
-
+from lib import extensions
+from lib.i18n import _
+from lib.utils import restore_stderr, save_stderr
 
 logger = logging.getLogger('shapely.geos')
 logger.setLevel(logging.DEBUG)
@@ -66,12 +66,10 @@ else:
         args = sys.argv[:]
         args[0] = binary_path
 
-        print >> sys.stderr, "Unexpected error launching Ink/Stitch."
-        print >> sys.stderr, "If you're having trouble, please file an issue here, "\
-                             "including the text below: https://github.com/inkstitch/inkstitch/issues\n"
-        print >> sys.stderr, "Tried to launch:", binary_path
-        print >> sys.stderr, "Arguments:", args
-        print >> sys.stderr, "Debugging information:\n"
+        print >> sys.stderr, _("Ink/Stitch experienced an unexpected error.")
+        print >> sys.stderr, _("If you'd like to help, please file an issue at "
+                               "https://github.com/inkstitch/inkstitch/issues "
+                               "and include the entire error description below:"), "\n"
         print >> sys.stderr, exception
         sys.exit(1)
     else:
