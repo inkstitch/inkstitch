@@ -11,6 +11,7 @@ from ..output import write_embroidery_file
 from ..stitch_plan import patches_to_stitch_plan
 from ..svg import PIXELS_PER_MM
 from .base import InkstitchExtension
+from ..threads import ThreadCatalog
 
 
 class Zip(InkstitchExtension):
@@ -29,7 +30,9 @@ class Zip(InkstitchExtension):
                 self.OptionParser.add_option('--format-%s' % extension, type="inkbool", dest=extension)
                 self.formats.append(extension)
         self.OptionParser.add_option('--format-svg', type="inkbool", dest='svg')
+        self.OptionParser.add_option('--format-threadlist', type="inkbool", dest='threadlist')
         self.formats.append('svg')
+        self.formats.append('threadlist')
 
     def effect(self):
         if not self.get_elements():
@@ -46,12 +49,17 @@ class Zip(InkstitchExtension):
         for format in self.formats:
             if getattr(self.options, format):
                 output_file = os.path.join(path, "%s.%s" % (base_file_name, format))
-                if not format == 'svg':
-                    write_embroidery_file(output_file, stitch_plan, self.document.getroot())
-                else:
+                if format == 'svg':
                     output = open(output_file, 'w')
                     output.write(inkex.etree.tostring(self.document.getroot()))
                     output.close()
+                if format == 'threadlist':
+                    output_file = os.path.join(path, "%s_%s.txt" % (base_file_name, _("threadlist")))
+                    output = open(output_file, 'w')
+                    output.write(self.get_threadlist(stitch_plan, base_file_name))
+                    output.close()
+                else:
+                    write_embroidery_file(output_file, stitch_plan, self.document.getroot())
                 files.append(output_file)
 
         if not files:
@@ -78,3 +86,36 @@ class Zip(InkstitchExtension):
 
         # don't let inkex output the SVG!
         sys.exit(0)
+
+    def get_threadlist(self, stitch_plan, design_name):
+        ThreadCatalog().match_and_apply_palette(stitch_plan, self.get_inkstitch_metadata()['thread-palette'])
+        thread_used = []
+
+        thread_output = "%s\n" % _("Design Details")
+        thread_output += "==============\n\n"
+
+        thread_output += "%s: %s\n" % (_("Title"), design_name)
+        thread_output += "%s (mm): %.2f x %.2f\n" % (_("Size"),  stitch_plan.dimensions_mm[0], stitch_plan.dimensions_mm[1])
+        thread_output += "%s: %s\n" % (_("Stitches"), stitch_plan.num_stitches)
+        thread_output += "%s: %s\n\n" % (_("Colors"), stitch_plan.num_colors)
+
+        thread_output += "%s\n" % _("Thread Order")
+        thread_output += "============\n\n"
+
+        for i, color_block in enumerate(stitch_plan):
+            thread = color_block.color
+
+            thread_output += str(i + 1) + " "
+            string = "%s #%s - %s (#%s)" % (thread.name, thread.number, thread.manufacturer, thread.hex_digits.lower())
+            thread_output += string + "\n"
+
+            thread_used.append(string)
+
+        thread_output += "\n"
+        thread_output += _("Thread Used") + "\n"
+        thread_output += "============" + "\n\n"
+
+        for thread in set(thread_used):
+            thread_output += thread + "\n"
+
+        return "%s" % thread_output
