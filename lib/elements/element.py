@@ -139,17 +139,15 @@ class EmbroideryElement(object):
         declarations = tinycss2.parse_declaration_list(self.node.get("style", ""))
         style = {declaration.lower_name: declaration.value[0].serialize() for declaration in declarations}
 
-        for name, value in style.items():
-            if value == 'none':
-                style[name] = None
-
         return style
 
     def get_style(self, style_name, default=None):
         style = self.style.get(style_name)
         # Style not found, let's see if it is set as a separate attribute
-        if not style:
-            style = self.node.get(style_name, None)
+        if style is None:
+            style = self.node.get(style_name, default)
+        if style == 'none':
+            style = None
         return style
 
     def has_style(self, style_name):
