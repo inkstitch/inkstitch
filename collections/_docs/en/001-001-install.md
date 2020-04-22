@@ -2,7 +2,7 @@
 title: "Install Ink/Stitch"
 permalink: /docs/install/
 excerpt: "How to quickly install Ink/Stitch."
-last_modified_at: 2020-03-01
+last_modified_at: 2020-04-21
 toc: true
 ---
 ## Video Guide
@@ -16,7 +16,7 @@ For the installation process watch the video for your operating system
 
 ## Requirements
 
-* [Inkscape](https://inkscape.org/) Version 0.92.2 or higher
+* [Inkscape](https://inkscape.org/) Version 0.92.2 or higher (Including [Inkscape](https://inkscape.org/release/inkscape-1.0/?latest=1) Version 1.0 RC)
 
 That's it!  All python libraries and external dependencies are bundled (using the excellent [pyinstaller](http://www.pyinstaller.org)), so you shouldn't need to set anything else up.
 
@@ -46,7 +46,8 @@ Language|Linux (64bit)|Windows|macOS (Catalina) [[?]](#macos)
 **Latest release:** [Ink/Stitch {{ site.github.latest_release.tag_name }} ({{ site.github.latest_release.published_at | date: "%Y-%m-%d"  }})](https://github.com/inkstitch/inkstitch/releases/latest)
 
 ### 2. Install
- * In Inkscape, go to `Edit > Preferences > System` and check where your `User Extensions` folder is.
+ * In Inkscape 0.9, go to `Edit > Preferences > System` and check where your `User Extensions` folder is.
+ * In Inkscape 1.0, go to `Inkscape > Preferences > System` and check where your `User Extensions` folder is.
  * Decompress the Ink/Stitch archive **directly** into this folder.<br />
    In this folder the file structure should look similiar to this (just a lot more files):
    ![File Structure](/assets/images/docs/en/file_structure.png)
@@ -62,7 +63,9 @@ $ unzip ~/Downloads/inkstitch-refs-tags-{{ site.github.latest_release.tag_name }
 
 #### macOS
 
-macOS requires a special download method. If you download the Ink/Stitch release through the browser, you'll receive messages such as **"'xxxx' cannot be opened, because the developer cannot be verified"**. This happens because we did not buy a Developer ID Certificate. You can avoid those messages by downloading Ink/Stitch with `curl`:
+macOS Catalina requires a special download method. If you download the Ink/Stitch release through the browser, you'll receive messages such as **"'xxxx' cannot be opened, because the developer cannot be verified"**. This happens because we did not pay Apple yearly for a developer id. You can avoid those messages by downloading Ink/Stitch with `curl` via Terminal App:
+
+_for Inskscape 1.0 the `cd $directory` is different, please check and confirm the directory in your preferences_
 
 ```
 $ cd ~/.config/inkscape/extensions
@@ -108,4 +111,3 @@ If you have an older macOS version, get Ink/Stitch v1.26.2 (2019-08-20):
 
 It is possible to install Ink/Stitch manually. It is not recommended though - unless you want to help developing the extension.
 In this case, please have a look at the [developer documentation](/developers/inkstitch/manual-setup/) section.
-
