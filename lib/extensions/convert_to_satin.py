@@ -1,18 +1,17 @@
-from copy import deepcopy
-from itertools import chain, groupby
 import math
+from itertools import chain, groupby
 
 import inkex
-from numpy import diff, sign, setdiff1d
 import numpy
+from numpy import diff, setdiff1d, sign
 from shapely import geometry as shgeo
 
+from .base import InkstitchExtension
 from ..elements import Stroke
 from ..i18n import _
-from ..svg import get_correction_transform, PIXELS_PER_MM
+from ..svg import PIXELS_PER_MM, get_correction_transform
 from ..svg.tags import SVG_PATH_TAG
 from ..utils import Point
-from .base import InkstitchExtension
 
 
 class SelfIntersectionError(Exception):
@@ -49,23 +48,31 @@ class ConvertToSatin(InkstitchExtension):
                     # ignore paths with just one point -- they're not visible to the user anyway
                     continue
 
-                self.fix_loop(path)
-
-                try:
-                    rails, rungs = self.path_to_satin(path, element.stroke_width, style_args)
-                except SelfIntersectionError:
-                    inkex.errormsg(
-                        _("Cannot convert %s to a satin column because it intersects itself.  Try breaking it up into multiple paths.") %
-                        element.node.get('id'))
-
-                    # revert any changes we've made
-                    self.document = deepcopy(self.original_document)
-
-                    return
-
-                parent.insert(index, self.satin_to_svg_node(rails, rungs, correction_transform, path_style))
+                for satin in self.convert_path_to_satins(path, element.stroke_width, style_args, correction_transform, path_style):
+                    parent.insert(index, satin)
+                    index += 1
 
             parent.remove(element.node)
+
+    def convert_path_to_satins(self, path, stroke_width, style_args, correction_transform, path_style, depth=0):
+        try:
+            rails, rungs = self.path_to_satin(path, stroke_width, style_args)
+            yield self.satin_to_svg_node(rails, rungs, correction_transform, path_style)
+        except SelfIntersectionError:
+            # The path intersects itself.  Split it in two and try doing the halves
+            # individually.
+
+            if depth >= 20:
+                # At this point we're slicing the path way too small and still
+                # getting nowhere.  Just give up on this section of the path.
+                return
+
+            half = int(len(path) / 2.0)
+            halves = [path[:half + 1], path[half:]]
+
+            for path in halves:
+                for satin in self.convert_path_to_satins(path, stroke_width, style_args, correction_transform, path_style, depth=depth + 1):
+                    yield satin
 
     def fix_loop(self, path):
         if path[0] == path[-1]:
@@ -107,13 +114,16 @@ class ConvertToSatin(InkstitchExtension):
         return args
 
     def path_to_satin(self, path, stroke_width, style_args):
+        if Point(*path[0]).distance(Point(*path[-1])) < 1:
+            raise SelfIntersectionError()
+
         path = shgeo.LineString(path)
 
         left_rail = path.parallel_offset(stroke_width / 2.0, 'left', **style_args)
         right_rail = path.parallel_offset(stroke_width / 2.0, 'right', **style_args)
 
         if not isinstance(left_rail, shgeo.LineString) or \
-           not isinstance(right_rail, shgeo.LineString):
+                not isinstance(right_rail, shgeo.LineString):
             # If the parallel offsets come out as anything but a LineString, that means the
             # path intersects itself, when taking its stroke width into consideration.  See
             # the last example for parallel_offset() in the Shapely documentation:
@@ -159,6 +169,13 @@ class ConvertToSatin(InkstitchExtension):
                 # The dot product of two vectors is |v1| * |v2| * cos(angle).
                 # These are unit vectors, so their magnitudes are 1.
                 cos_angle_between = prev_direction * direction
+
+                # Clamp to the valid range for a cosine.  The above _should_
+                # already be in this range, but floating point inaccuracy can
+                # push it outside the range causing math.acos to throw
+                # ValueError ("math domain error").
+                cos_angle_between = max(-1.0, min(1.0, cos_angle_between))
+
                 angle = abs(math.degrees(math.acos(cos_angle_between)))
 
                 # Use the square of the angle, measured in degrees.
@@ -248,7 +265,7 @@ class ConvertToSatin(InkstitchExtension):
             # arbitrarily rejects the rung if there was one less than 2
             # millimeters before this one.
             if last_rung_center is not None and \
-               (rung_center - last_rung_center).length() < 2 * PIXELS_PER_MM:
+                    (rung_center - last_rung_center).length() < 2 * PIXELS_PER_MM:
                 continue
             else:
                 last_rung_center = rung_center
