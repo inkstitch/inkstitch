@@ -146,7 +146,11 @@ class EmbroideryElement(object):
         return style
 
     def get_style(self, style_name, default=None):
-        return self.style.get(style_name, default)
+        style = self.style.get(style_name)
+        # Style not found, let's see if it is set as a separate attribute
+        if not style:
+            style = self.node.get(style_name, None)
+        return style
 
     def has_style(self, style_name):
         return style_name in self.style
@@ -163,7 +167,7 @@ class EmbroideryElement(object):
     @property
     @cache
     def stroke_width(self):
-        width = self.get_style("stroke-width", "1")
+        width = self.get_style("stroke-width", None)
 
         if width is None:
             return 1.0
