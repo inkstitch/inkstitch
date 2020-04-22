@@ -16,7 +16,7 @@ For the installation process watch the video for your operating system
 
 ## Requirements
 
-* [Inkscape](https://inkscape.org/) Version 0.92.2 and [Inkscape](https://inkscape.org/release/inkscape-1.0/?latest=1) Version 1.0 Release Candidate.
+* [Inkscape](https://inkscape.org/) Version 0.92.2 or higher (Including [Inkscape](https://inkscape.org/release/inkscape-1.0/?latest=1) Version 1.0 RC)
 
 That's it!  All python libraries and external dependencies are bundled (using the excellent [pyinstaller](http://www.pyinstaller.org)), so you shouldn't need to set anything else up.
 
