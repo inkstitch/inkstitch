@@ -2,7 +2,7 @@
 title: "Installation von Ink/Stitch"
 permalink: /de/docs/install/
 excerpt: "Wie wird Ink/Stitch installiert."
-last_modified_at: 2020-03-01
+last_modified_at: 2020-04-23
 toc: true
 ---
 ## Video-Anleitung
@@ -16,7 +16,7 @@ Für den Installationsprozess, wähle das Video für dein Betriebssystem
 
 ## Vorraussetzung
 
-* [Inkscape](https://inkscape.org/) Version 0.92.2 oder höher
+* [Inkscape](https://inkscape.org/) Version 0.92.2 oder höher (einschließlich [Inkscape](https://inkscape.org/release/inkscape-1.0/?latest=1) Version 1.0 RC)
 
 Das ist alles! Alle Python-Bibliotheken und externen Abhängigkeiten sind schon dabei (durch den ausgezeichneten [pyinstaller](http://www.pyinstaller.org)), so dass nichts weiteres eingerichtet werden muss.
 
@@ -47,6 +47,7 @@ Language|Linux (64bit)|Windows|macOS (Catalina) [[?]](#macos)
 
 ### 2. Installation
  * Öffne Inkscape. In `Bearbeiten > Einstellungen > System` kannst du sehen, wo sich der Ordner "Benutzererweiterungen" befindet.
+    * Inkscape 1.0 zeigt unter `Inkscape > Einstellungen > System > Benutzererweiterungen` den Installationsordner an.
  * Entpacke das Ink/Stitch-Archiv **direkt** in diesen Ordner.
    Die Dateistruktur sollte ungefähr dem Bild unten entsprechen (aber ein paar mehr Dateien enthalten):
    ![File Structure](/assets/images/docs/en/file_structure.png)
@@ -62,7 +63,10 @@ Language|Linux (64bit)|Windows|macOS (Catalina) [[?]](#macos)
 
 #### macOS
 
-macOS benötigt eine spezielle Download-Methode. Wenn du die aktuelle Ink/Stitch Version über den Browser herunterlädst, erhälst du Nachrichten wie beispielsweise **"'xxxx' kann nicht geöffnet werden, weil es von einem nicht verifizierten Entwickler stammt"**. Das passiert, weil wir keine Entwickler Zertifikate von Apple gekauft haben. Du kannst diese Nachrichten umgehen, indem du Ink/Stitch mit Hilfe von `curl` herunterlädst:
+macOS Catalina benötigt eine spezielle Download-Methode. Wenn du die aktuelle Ink/Stitch Version über den Browser herunterlädst, erhälst du Nachrichten wie beispielsweise **"'xxxx' kann nicht geöffnet werden, weil es von einem nicht verifizierten Entwickler stammt"**. Das passiert, weil wir keine Entwickler Zertifikate von Apple gekauft haben. Du kannst diese Nachrichten umgehen, indem du Ink/Stitch mit Hilfe von `curl` (Terminal) herunterlädst:
+
+_Bei Inskscape 1.0 unterscheidet sich der Installationspfad. Überprüfe hierfür bitte den Pfad in den Einstellungen._
+
 
 ```
 $ cd ~/.config/inkscape/extensions
