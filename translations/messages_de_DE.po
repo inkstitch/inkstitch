@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-04-20 00:09+0000\n"
-"PO-Revision-Date: 2020-04-20 00:09\n"
+"POT-Creation-Date: 2020-04-21 00:09+0000\n"
+"PO-Revision-Date: 2020-04-24 00:10\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -57,6 +57,14 @@ msgstr "TT Meister"
 #: inkstitch-fonts-metadata.py:16
 msgid "A font suited for heavy typing :)"
 msgstr "Eine Schrift geeignete für fett geschriebenes :)"
+
+#: inkstitch.py:56
+msgid "Ink/Stitch experienced an unexpected error."
+msgstr "Ink/Stitch hat einen unerwarteten Fehler zurückgegeben."
+
+#: inkstitch.py:57
+msgid "If you'd like to help, please file an issue at https://github.com/inkstitch/inkstitch/issues and include the entire error description below:"
+msgstr "Wenn du uns bei der Fehlerbehebung helfen willst, gehe auf https://github.com/inkstitch/inkstitch/issues. Klicke auf \"New Issue\" und füge unten stehende Fehlermeldung in das Textfeld ein:"
 
 #. command attached to an object
 #: lib/commands.py:20
@@ -608,7 +616,7 @@ msgstr "Tipp: Markiere einige Objekte und nutze die Funktion \"Pfad > Objekt in 
 
 #: lib/extensions/break_apart.py:19
 msgid "Please select one or more fill areas to break apart."
-msgstr ""
+msgstr "Um unverbundene Flächen voneinander zu trennen, wähle bitte ein oder mehrere Füllobjekte aus."
 
 #: lib/extensions/convert_to_satin.py:29
 msgid "Please select at least one line to convert to a satin column."
@@ -823,9 +831,41 @@ msgstr "Warnungen"
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
 msgstr "Es ist möglich, dass ein Objekt mehr als einen Fehler enthält. Trotzdem wird in einigen Fällen nur ein Fehler pro Objekt angezeigt. Tauchen noch weitere Fehlermeldungen auf, führe diese Funktion einfach erneut aus.  Entferne diese Hinweise durch das Löschen der Ebene \"Troubleshoot\" im Dialogfenster Objekte (Objekt > Objekte...)."
 
-#: lib/extensions/zip.py:58
+#: lib/extensions/zip.py:57
+msgid "threadlist"
+msgstr "Garnliste"
+
+#: lib/extensions/zip.py:66
 msgid "No embroidery file formats selected."
 msgstr "Keine Stick-Dateiformate ausgewählt."
+
+#: lib/extensions/zip.py:94
+msgid "Design Details"
+msgstr "Design Details"
+
+#: lib/extensions/zip.py:97
+msgid "Title"
+msgstr "Titel"
+
+#: lib/extensions/zip.py:98
+msgid "Size"
+msgstr "Größe"
+
+#: lib/extensions/zip.py:99
+msgid "Stitches"
+msgstr "Stiche"
+
+#: lib/extensions/zip.py:100
+msgid "Colors"
+msgstr "Farben"
+
+#: lib/extensions/zip.py:102
+msgid "Thread Order"
+msgstr "Garnabfolge"
+
+#: lib/extensions/zip.py:115
+msgid "Thread Used"
+msgstr "Verwendetes Garn"
 
 #: lib/gui/presets.py:47
 msgid "Presets"
@@ -1557,11 +1597,11 @@ msgstr "Satin Werkzeuge"
 
 #: templates/break_apart.inx:3
 msgid "Break Apart and Retain Holes"
-msgstr ""
+msgstr "Unverbundene Flächen voneinander trennen"
 
 #: templates/break_apart.inx:10
 msgid "Fill Tools"
-msgstr ""
+msgstr "Füllstitch Werkzeuge"
 
 #: templates/convert_to_satin.inx:3
 msgid "Convert Line to Satin"
@@ -1673,23 +1713,23 @@ msgstr "Y-Koordinaten negieren"
 
 #: templates/output_params_txt.xml:6
 msgid "Z coordinate value"
-msgstr ""
+msgstr "Wert für Z-Koordinate"
 
 #: templates/output_params_txt.xml:6
 msgid "Either alternate Z value between 0 and 1 or travel custom value."
-msgstr ""
+msgstr "Nutze entweder alternierende Z Werte (0 und 1) oder addiere jeweils den vordefinierten Wert."
 
 #: templates/output_params_txt.xml:7
 msgid "alternate Z value"
-msgstr ""
+msgstr "alternierender Z Wert"
 
 #: templates/output_params_txt.xml:8 templates/output_params_txt.xml:10
 msgid "Z travel per stitch"
-msgstr "Z Weg pro Stich"
+msgstr "Z Wert pro Stich"
 
 #: templates/output_params_txt.xml:10
 msgid "increment z coordinate by this amount per stitch if \"Z travel per stitch\" is enabled"
-msgstr ""
+msgstr "Erhöhe die Z-Koordinate um diesen Wert pro Stitch, wenn \"Z Wert pro Stich\" aktiviert ist"
 
 #: templates/output_params_txt.xml:13
 msgid "laser mode"
@@ -1801,5 +1841,9 @@ msgstr "Erstellen einer ZIP-Datei mit mehreren Stickformaten die Ink/Stitch unte
 
 #: templates/zip.inx:15
 msgid "Scalable Vector Graphic"
-msgstr ""
+msgstr "Skalierbare Vektorgrafik"
+
+#: templates/zip.inx:16
+msgid "Threadlist"
+msgstr "Garnliste"
 

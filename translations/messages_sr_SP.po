@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-04-20 00:09+0000\n"
-"PO-Revision-Date: 2020-04-20 00:10\n"
+"POT-Creation-Date: 2020-04-21 00:09+0000\n"
+"PO-Revision-Date: 2020-04-24 00:10\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Serbian (Cyrillic)\n"
 "MIME-Version: 1.0\n"
@@ -56,6 +56,14 @@ msgstr ""
 #. description of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:16
 msgid "A font suited for heavy typing :)"
+msgstr ""
+
+#: inkstitch.py:56
+msgid "Ink/Stitch experienced an unexpected error."
+msgstr ""
+
+#: inkstitch.py:57
+msgid "If you'd like to help, please file an issue at https://github.com/inkstitch/inkstitch/issues and include the entire error description below:"
 msgstr ""
 
 #. command attached to an object
@@ -821,8 +829,40 @@ msgstr ""
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
 msgstr ""
 
-#: lib/extensions/zip.py:58
+#: lib/extensions/zip.py:57
+msgid "threadlist"
+msgstr ""
+
+#: lib/extensions/zip.py:66
 msgid "No embroidery file formats selected."
+msgstr ""
+
+#: lib/extensions/zip.py:94
+msgid "Design Details"
+msgstr ""
+
+#: lib/extensions/zip.py:97
+msgid "Title"
+msgstr ""
+
+#: lib/extensions/zip.py:98
+msgid "Size"
+msgstr ""
+
+#: lib/extensions/zip.py:99
+msgid "Stitches"
+msgstr ""
+
+#: lib/extensions/zip.py:100
+msgid "Colors"
+msgstr ""
+
+#: lib/extensions/zip.py:102
+msgid "Thread Order"
+msgstr ""
+
+#: lib/extensions/zip.py:115
+msgid "Thread Used"
 msgstr ""
 
 #: lib/gui/presets.py:47
@@ -1799,5 +1839,9 @@ msgstr ""
 
 #: templates/zip.inx:15
 msgid "Scalable Vector Graphic"
+msgstr ""
+
+#: templates/zip.inx:16
+msgid "Threadlist"
 msgstr ""
 
