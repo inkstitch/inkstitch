@@ -1,19 +1,22 @@
-from copy import deepcopy
 import os
-from random import random
 import sys
+from copy import deepcopy
+from random import random
+
+from shapely import geometry as shgeo
 
 import cubicsuperpath
 import inkex
-from shapely import geometry as shgeo
 import simpletransform
 
-from .i18n import _, N_
-from .svg import apply_transforms, get_node_transform, get_correction_transform, get_document, generate_unique_id
-from .svg.tags import SVG_DEFS_TAG, SVG_GROUP_TAG, SVG_PATH_TAG, SVG_USE_TAG, SVG_SYMBOL_TAG, \
-    CONNECTION_START, CONNECTION_END, CONNECTOR_TYPE, XLINK_HREF, INKSCAPE_LABEL
-from .utils import cache, get_bundled_dir, Point
-
+from .i18n import N_, _
+from .svg import (apply_transforms, generate_unique_id,
+                  get_correction_transform, get_document, get_node_transform)
+from .svg.tags import (CONNECTION_END, CONNECTION_START, CONNECTOR_TYPE,
+                       INKSCAPE_LABEL, INKSTITCH_ATTRIBS, SVG_DEFS_TAG,
+                       SVG_GROUP_TAG, SVG_PATH_TAG, SVG_SYMBOL_TAG,
+                       SVG_USE_TAG, XLINK_HREF)
+from .utils import Point, cache, get_bundled_dir
 
 COMMANDS = {
     # L10N command attached to an object
@@ -346,7 +349,7 @@ def get_command_pos(element, index, total):
 def remove_legacy_param(element, command):
     if command == "trim" or command == "stop":
         # If they had the old "TRIM after" or "STOP after" attributes set,
-        # automatically delete them.  THe new commands will do the same
+        # automatically delete them.  The new commands will do the same
         # thing.
         #
         # If we didn't delete these here, then things would get confusing.
@@ -355,6 +358,13 @@ def remove_legacy_param(element, command):
         # trim would keep happening.
 
         attribute = "embroider_%s_after" % command
+
+        if attribute in element.node.attrib:
+            del element.node.attrib[attribute]
+
+        # Attributes have changed to be namespaced.
+        # Let's check for them as well, they might have automatically changed.
+        attribute = INKSTITCH_ATTRIBS["%s_after" % command]
 
         if attribute in element.node.attrib:
             del element.node.attrib[attribute]

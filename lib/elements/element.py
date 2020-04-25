@@ -8,7 +8,7 @@ from cspsubdiv import cspsubdiv
 from ..commands import find_commands
 from ..i18n import _
 from ..svg import PIXELS_PER_MM, apply_transforms, convert_length, get_doc_size
-from ..svg.tags import INKSCAPE_LABEL
+from ..svg.tags import INKSCAPE_LABEL, INKSTITCH_ATTRIBS
 from ..utils import cache
 
 
@@ -72,6 +72,16 @@ class EmbroideryElement(object):
     def __init__(self, node):
         self.node = node
 
+        legacy_attribs = False
+        for attrib in self.node.attrib:
+            if attrib.startswith('embroider_'):
+                # update embroider_ attributes to namespaced attributes
+                self.replace_legacy_param(attrib)
+                legacy_attribs = True
+        if legacy_attribs and not self.get_param('fill_underlay', ""):
+            # defaut setting for fill_underlay has changed
+            self.set_param('fill_underlay', False)
+
     @property
     def id(self):
         return self.node.get('id')
@@ -85,13 +95,16 @@ class EmbroideryElement(object):
                 # The 'param' attribute is set by the 'param' decorator defined above.
                 if hasattr(prop.fget, 'param'):
                     params.append(prop.fget.param)
-
         return params
+
+    def replace_legacy_param(self, param):
+        value = self.node.get(param, "").strip()
+        self.set_param(param[10:], value)
+        del self.node.attrib[param]
 
     @cache
     def get_param(self, param, default):
-        value = self.node.get("embroider_" + param, "").strip()
-
+        value = self.node.get(INKSTITCH_ATTRIBS[param], "").strip()
         return value or default
 
     @cache
@@ -131,7 +144,8 @@ class EmbroideryElement(object):
         return value
 
     def set_param(self, name, value):
-        self.node.set("embroider_%s" % name, str(value))
+        param = INKSTITCH_ATTRIBS[name]
+        self.node.set(param, str(value))
 
     @property
     @cache

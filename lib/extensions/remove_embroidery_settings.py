@@ -30,11 +30,11 @@ class RemoveEmbroiderySettings(InkstitchExtension):
         if not self.selected:
             xpath = ".//svg:path"
             elements = self.find_elements(xpath)
-            self.remove_embroider_attributes(elements)
+            self.remove_inkstitch_attributes(elements)
         else:
             for node in self.selected:
                 elements = self.get_selected_elements(node)
-                self.remove_embroider_attributes(elements)
+                self.remove_inkstitch_attributes(elements)
 
     def remove_commands(self):
         if not self.selected:
@@ -83,8 +83,8 @@ class RemoveEmbroiderySettings(InkstitchExtension):
     def remove_element(self, element):
         element.getparent().remove(element)
 
-    def remove_embroider_attributes(self, elements):
+    def remove_inkstitch_attributes(self, elements):
         for element in elements:
             for attrib in element.attrib:
-                if attrib.startswith('embroider_'):
+                if attrib.startswith(inkex.NSS['inkstitch'], 1):
                     del element.attrib[attrib]

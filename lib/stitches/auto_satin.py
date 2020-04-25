@@ -1,20 +1,23 @@
-from itertools import chain, izip
 import math
+from itertools import chain, izip
+
+import networkx as nx
+from shapely import geometry as shgeo
+from shapely.geometry import Point as ShapelyPoint
 
 import cubicsuperpath
 import inkex
-from shapely import geometry as shgeo
-from shapely.geometry import Point as ShapelyPoint
 import simplestyle
 
-import networkx as nx
-
 from ..commands import add_commands
-from ..elements import Stroke, SatinColumn
+from ..elements import SatinColumn, Stroke
 from ..i18n import _
-from ..svg import PIXELS_PER_MM, line_strings_to_csp, get_correction_transform, generate_unique_id
-from ..svg.tags import SVG_PATH_TAG, SVG_GROUP_TAG, INKSCAPE_LABEL
-from ..utils import Point as InkstitchPoint, cut, cache
+from ..svg import (PIXELS_PER_MM, generate_unique_id, get_correction_transform,
+                   line_strings_to_csp)
+from ..svg.tags import (INKSCAPE_LABEL, INKSTITCH_ATTRIBS, SVG_GROUP_TAG,
+                        SVG_PATH_TAG)
+from ..utils import Point as InkstitchPoint
+from ..utils import cache, cut
 
 
 class SatinSegment(object):
@@ -209,9 +212,9 @@ class RunningStitch(object):
         self.original_element = original_element
         self.style = original_element.node.get('style', '')
         self.running_stitch_length = \
-            original_element.node.get('embroider_running_stitch_length_mm', '') or \
-            original_element.node.get('embroider_center_walk_underlay_stitch_length_mm', '') or \
-            original_element.node.get('embroider_contour_underlay_stitch_length_mm', '')
+            original_element.node.get(INKSTITCH_ATTRIBS['running_stitch_length_mm'], '') or \
+            original_element.node.get(INKSTITCH_ATTRIBS['center_walk_underlay_stitch_length_mm'], '') or \
+            original_element.node.get(INKSTITCH_ATTRIBS['contour_underlay_stitch_length_mm'], '')
 
     def to_element(self):
         node = inkex.etree.Element(SVG_PATH_TAG)
@@ -222,7 +225,7 @@ class RunningStitch(object):
         style['stroke-dasharray'] = "0.5,0.5"
         style = simplestyle.formatStyle(style)
         node.set("style", style)
-        node.set("embroider_running_stitch_length_mm", self.running_stitch_length)
+        node.set(INKSTITCH_ATTRIBS['running_stitch_length_mm'], self.running_stitch_length)
 
         stroke = Stroke(node)
 
