@@ -23,6 +23,8 @@ jobs:
           # python that doesn't support unicode.  See:
           #   https://github.com/actions/setup-python/issues/23
 
+          sudo apt-get update
+
           sudo apt-get install python2.7
           python -m pip install --upgrade pip
 
