@@ -10,6 +10,7 @@ jinja2>2.9
 requests
 colormath
 stringcase
+tinycss2
 
 # We're not ready for flask 1.0 yet.  Logging changed, among othe things.
 flask==0.*

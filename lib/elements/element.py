@@ -2,7 +2,7 @@ import sys
 from copy import deepcopy
 
 import cubicsuperpath
-import simplestyle
+import tinycss2
 from cspsubdiv import cspsubdiv
 
 from ..commands import find_commands
@@ -133,20 +133,25 @@ class EmbroideryElement(object):
     def set_param(self, name, value):
         self.node.set("embroider_%s" % name, str(value))
 
+    @property
     @cache
-    def get_style(self, style_name, default=None):
-        style = simplestyle.parseStyle(self.node.get("style"))
-        if (style_name not in style):
-            return default
-        value = style[style_name]
-        if value == 'none':
-            return None
-        return value
+    def style(self):
+        declarations = tinycss2.parse_declaration_list(self.node.get("style", ""))
+        style = {declaration.lower_name: declaration.value[0].serialize() for declaration in declarations}
 
-    @cache
+        return style
+
+    def get_style(self, style_name, default=None):
+        style = self.style.get(style_name)
+        # Style not found, let's see if it is set as a separate attribute
+        if style is None:
+            style = self.node.get(style_name, default)
+        if style == 'none':
+            style = None
+        return style
+
     def has_style(self, style_name):
-        style = simplestyle.parseStyle(self.node.get("style"))
-        return style_name in style
+        return style_name in self.style
 
     @property
     @cache
@@ -160,7 +165,7 @@ class EmbroideryElement(object):
     @property
     @cache
     def stroke_width(self):
-        width = self.get_style("stroke-width", "1")
+        width = self.get_style("stroke-width", None)
 
         if width is None:
             return 1.0
