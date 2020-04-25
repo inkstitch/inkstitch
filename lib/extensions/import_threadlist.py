@@ -20,6 +20,9 @@ class ImportThreadlist(InkstitchExtension):
         # Remove selection, we want all the elements in the document
         self.selected = {}
 
+        if not self.get_elements():
+            return
+
         path = self.options.filepath
         if not os.path.exists(path):
             print >> sys.stderr, _("File not found.")
@@ -39,18 +42,20 @@ class ImportThreadlist(InkstitchExtension):
                 print >>sys.stderr, _("Please chose an other color palette for your design.")
             sys.exit(1)
 
-        # Iterate through the color blocks to aplly colors
-        for i, color in enumerate(colors):
-            xpath = ".//svg:g[@id='__color_block_%d__']//svg:path" % i
-            elements = self.find_elements(xpath)
+        # Iterate through the color blocks to apply colors
+        element_color = ""
+        i = -1
+        for element in self.elements:
+            if element.color != element_color:
+                element_color = element.color
+                i += 1
 
-            # Color Block not found, no need to move on
-            if not elements:
+            # No more colors in the list, stop here
+            if i == len(colors):
                 break
 
-            for element in elements:
-                style = re.sub(r"#[0-9A-Fa-f]{6}", "%s" % colors[i], element.get('style'))
-                element.set('style', style)
+            style = re.sub(r"#[0-9A-Fa-f]{6}", "%s" % colors[i], element.node.get('style'))
+            element.node.set('style', style)
 
     def parse_inkstitch_threadlist(self, path):
         colors = []
@@ -61,7 +66,7 @@ class ImportThreadlist(InkstitchExtension):
                     if m:
                         colors.append(m.group(1))
                     else:
-                        # No color found
+                        # Color not found
                         colors.append(None)
         return colors
 
