@@ -53,12 +53,12 @@ Scinder une colonne Satin à un point précisé. La coupure a lieu à la limite 
 ### Usage
 
 1. Sélectionnez une colonne satin (le satin simple ne fonctionne pas)
-2. Ajouter la commande "Satin split point" avec `Extensions > Ink/Stitch  > Commands > Attach Commands to Selected Objects`.
+2. Ajouter la commande "Point de partage..." avec `Extensions > Ink/Stitch  > Commandes > Attacher des Commandes à un objet sélectionné`.
 3. Déplacez le symbole (ou simplement l'extrémité de la ligne de connexion) pour pointer sur l'endroit exact où vous souhaitez diviser le satin.
 4. Sélectionnez à nouveau la colonne satin.
-5. Faire `Extensions > Ink/Stitch  > Satin Tools > Split Satin Column`.
+5. Faire `Extensions > Ink/Stitch  > Outils Satin > Scinder colonne Satin`.
 6. La commande de point de partage et la ligne de connexion disparaissent et il ne semble plus rien s'être passé. Sélectionnez votre satin et vous verrez qu'il a été divisé.
-## Intrevertir les rails des colonnes satin
+## Intervertir les rails des colonnes satin
 
 C'est un petit outil pour vous aider à planifier votre chemin de points avec précision. Par exemple. retourner les colonnes satin pour raccourcir les connexions entre deux sections.
 
