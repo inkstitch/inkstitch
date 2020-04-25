@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-02-02 21:59+0000\n"
-"PO-Revision-Date: 2020-02-05 22:00\n"
+"POT-Creation-Date: 2020-04-21 00:09+0000\n"
+"PO-Revision-Date: 2020-04-24 00:10\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Hebrew\n"
 "MIME-Version: 1.0\n"
@@ -16,143 +16,107 @@ msgstr ""
 "X-Crowdin-File: /master/messages.po\n"
 "Language: he_IL\n"
 
-#. name of font in fonts/small_font
+#. name of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:2
+msgid "TT Directors"
+msgstr ""
+
+#. description of font in fonts/tt_directors
+#: inkstitch-fonts-metadata.py:4
+msgid "A font suited for directing"
+msgstr ""
+
+#. name of font in fonts/medium_font
+#: inkstitch-fonts-metadata.py:6
+msgid "Ink/Stitch Medium Font"
+msgstr ""
+
+#. description of font in fonts/medium_font
+#: inkstitch-fonts-metadata.py:8
+#, python-format
+msgid "A basic font suited for medium-sized characters.  The capital em is 0.6 inches wide at 100% scale.  Can be scaled down to 75% or up to 150%.  Every satin has contour underlay."
+msgstr ""
+
+#. name of font in fonts/small_font
+#: inkstitch-fonts-metadata.py:10
 msgid "Ink/Stitch Small Font"
 msgstr ""
 
 #. description of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:4
+#: inkstitch-fonts-metadata.py:12
 #, python-format
 msgid "A font suited for small characters.  The capital em is 0.2 inches wide at 100% scale.  Can be scaled up to 300%."
 msgstr ""
 
 #. name of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:6
+#: inkstitch-fonts-metadata.py:14
 msgid "TT Masters"
 msgstr ""
 
 #. description of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:8
+#: inkstitch-fonts-metadata.py:16
 msgid "A font suited for heavy typing :)"
 msgstr ""
 
-#. name of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:10
-msgid "TT Directors"
+#: inkstitch.py:56
+msgid "Ink/Stitch experienced an unexpected error."
 msgstr ""
 
-#. description of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:12
-msgid "A font suited for directing"
-msgstr ""
-
-#. name of font in fonts/medium_font
-#: inkstitch-fonts-metadata.py:14
-msgid "Ink/Stitch Medium Font"
-msgstr ""
-
-#. description of font in fonts/medium_font
-#: inkstitch-fonts-metadata.py:16
-#, python-format
-msgid "A basic font suited for medium-sized characters.  The capital em is 0.6 inches wide at 100% scale.  Can be scaled down to 75% or up to 150%.  Every satin has contour underlay."
+#: inkstitch.py:57
+msgid "If you'd like to help, please file an issue at https://github.com/inkstitch/inkstitch/issues and include the entire error description below:"
 msgstr ""
 
 #. command attached to an object
-#: lib/commands.py:20
-msgid "fill_start"
-msgstr ""
-
 #: lib/commands.py:20
 msgid "Fill stitch starting position"
 msgstr ""
 
 #. command attached to an object
 #: lib/commands.py:23
-msgid "fill_end"
-msgstr ""
-
-#: lib/commands.py:23
 msgid "Fill stitch ending position"
 msgstr ""
 
 #. command attached to an object
-#: lib/commands.py:26
-msgid "satin_start"
-msgstr ""
-
 #: lib/commands.py:26
 msgid "Auto-route satin stitch starting position"
 msgstr ""
 
 #. command attached to an object
 #: lib/commands.py:29
-msgid "satin_end"
-msgstr ""
-
-#: lib/commands.py:29
 msgid "Auto-route satin stitch ending position"
 msgstr ""
 
 #. command attached to an object
-#: lib/commands.py:32
-msgid "stop"
-msgstr ""
-
 #: lib/commands.py:32
 msgid "Stop (pause machine) after sewing this object"
 msgstr ""
 
 #. command attached to an object
 #: lib/commands.py:35
-msgid "trim"
-msgstr ""
-
-#: lib/commands.py:35
 msgid "Trim thread after sewing this object"
 msgstr ""
 
 #. command attached to an object
-#: lib/commands.py:38
-msgid "ignore_object"
-msgstr ""
-
 #: lib/commands.py:38
 msgid "Ignore this object (do not stitch)"
 msgstr ""
 
 #. command attached to an object
 #: lib/commands.py:41
-msgid "satin_cut_point"
-msgstr ""
-
-#: lib/commands.py:41
 msgid "Satin cut point (use with Cut Satin Column)"
 msgstr ""
 
 #. command that affects a layer
-#: lib/commands.py:45
-msgid "ignore_layer"
-msgstr ""
-
 #: lib/commands.py:45
 msgid "Ignore layer (do not stitch any objects in this layer)"
 msgstr ""
 
 #. command that affects entire document
 #: lib/commands.py:48
-msgid "origin"
-msgstr ""
-
-#: lib/commands.py:48
 msgid "Origin for exported embroidery files"
 msgstr ""
 
 #. command that affects entire document
-#: lib/commands.py:51
-msgid "stop_position"
-msgstr ""
-
 #: lib/commands.py:51
 msgid "Jump destination for Stop commands (a.k.a. \"Frame Out position\")."
 msgstr ""
@@ -215,9 +179,9 @@ msgid "Underlay"
 msgstr ""
 
 #: lib/elements/auto_fill.py:56 lib/elements/auto_fill.py:65
-#: lib/elements/auto_fill.py:81 lib/elements/auto_fill.py:92
-#: lib/elements/auto_fill.py:102 lib/elements/auto_fill.py:114
-#: lib/elements/auto_fill.py:148
+#: lib/elements/auto_fill.py:87 lib/elements/auto_fill.py:98
+#: lib/elements/auto_fill.py:108 lib/elements/auto_fill.py:120
+#: lib/elements/auto_fill.py:154
 msgid "AutoFill Underlay"
 msgstr ""
 
@@ -226,73 +190,81 @@ msgid "Fill angle"
 msgstr ""
 
 #: lib/elements/auto_fill.py:63
-msgid "default: fill angle + 90 deg"
+msgid "Default: fill angle + 90 deg. Insert comma-seperated list for multiple layers."
 msgstr ""
 
-#: lib/elements/auto_fill.py:78
+#: lib/elements/auto_fill.py:84
 msgid "Row spacing"
 msgstr ""
 
-#: lib/elements/auto_fill.py:79
+#: lib/elements/auto_fill.py:85
 msgid "default: 3x fill row spacing"
 msgstr ""
 
-#: lib/elements/auto_fill.py:89
+#: lib/elements/auto_fill.py:95
 msgid "Max stitch length"
 msgstr ""
 
-#: lib/elements/auto_fill.py:90
+#: lib/elements/auto_fill.py:96
 msgid "default: equal to fill max stitch length"
 msgstr ""
 
-#: lib/elements/auto_fill.py:99
+#: lib/elements/auto_fill.py:105
 msgid "Inset"
 msgstr ""
 
-#: lib/elements/auto_fill.py:100
+#: lib/elements/auto_fill.py:106
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
 msgstr ""
 
-#: lib/elements/auto_fill.py:111 lib/elements/fill.py:72
+#: lib/elements/auto_fill.py:117 lib/elements/fill.py:72
 msgid "Skip last stitch in each row"
 msgstr ""
 
-#: lib/elements/auto_fill.py:112 lib/elements/fill.py:73
+#: lib/elements/auto_fill.py:118 lib/elements/fill.py:73
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
 msgstr ""
 
-#: lib/elements/auto_fill.py:122
+#: lib/elements/auto_fill.py:128
 msgid "Expand"
 msgstr ""
 
-#: lib/elements/auto_fill.py:123
+#: lib/elements/auto_fill.py:129
 msgid "Expand the shape before fill stitching, to compensate for gaps between shapes."
 msgstr ""
 
-#: lib/elements/auto_fill.py:132 lib/elements/auto_fill.py:144
+#: lib/elements/auto_fill.py:138 lib/elements/auto_fill.py:150
 msgid "Underpath"
 msgstr ""
 
-#: lib/elements/auto_fill.py:133 lib/elements/auto_fill.py:145
+#: lib/elements/auto_fill.py:139 lib/elements/auto_fill.py:151
 msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
 msgstr ""
 
-#: lib/elements/auto_fill.py:226
+#: lib/elements/auto_fill.py:233
 msgid "Error during autofill!  This means that there is a problem with Ink/Stitch."
 msgstr ""
 
 #. this message is followed by a URL:
 #. https://github.com/inkstitch/inkstitch/issues/new
-#: lib/elements/auto_fill.py:229
+#: lib/elements/auto_fill.py:236
 msgid "If you'd like to help us make Ink/Stitch better, please paste this whole message into a new issue at: "
 msgstr ""
 
-#: lib/elements/element.py:202
+#: lib/elements/element.py:173
+msgid "Ties"
+msgstr ""
+
+#: lib/elements/element.py:174
+msgid "Add ties. Manual stitch will not add ties."
+msgstr ""
+
+#: lib/elements/element.py:213
 #, python-format
 msgid "Object %(id)s has an empty 'd' attribute.  Please delete this object from your document."
 msgstr ""
 
-#: lib/elements/element.py:234
+#: lib/elements/element.py:245
 #, python-format
 msgid "%(id)s has more than one command of type '%(command)s' linked to it"
 msgstr ""
@@ -300,7 +272,7 @@ msgstr ""
 #. used when showing an error message to the user such as
 #. "Some Path (path1234): error: satin column: One or more of the rungs doesn't
 #. intersect both rails."
-#: lib/elements/element.py:288
+#: lib/elements/element.py:303
 msgid "error:"
 msgstr ""
 
@@ -641,19 +613,18 @@ msgstr ""
 msgid "Tip: select some objects and use Path -> Object to Path to convert them to paths."
 msgstr ""
 
-#: lib/extensions/convert_to_satin.py:30
+#: lib/extensions/break_apart.py:19
+msgid "Please select one or more fill areas to break apart."
+msgstr ""
+
+#: lib/extensions/convert_to_satin.py:29
 msgid "Please select at least one line to convert to a satin column."
 msgstr ""
 
 #. : Convert To Satin extension, user selected one or more objects that were
 #. not lines.
-#: lib/extensions/convert_to_satin.py:35
+#: lib/extensions/convert_to_satin.py:34
 msgid "Only simple lines may be converted to satin columns."
-msgstr ""
-
-#: lib/extensions/convert_to_satin.py:58
-#, python-format
-msgid "Cannot convert %s to a satin column because it intersects itself.  Try breaking it up into multiple paths."
 msgstr ""
 
 #: lib/extensions/cut_satin.py:15
@@ -858,8 +829,40 @@ msgstr ""
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
 msgstr ""
 
-#: lib/extensions/zip.py:49
+#: lib/extensions/zip.py:57
+msgid "threadlist"
+msgstr ""
+
+#: lib/extensions/zip.py:66
 msgid "No embroidery file formats selected."
+msgstr ""
+
+#: lib/extensions/zip.py:94
+msgid "Design Details"
+msgstr ""
+
+#: lib/extensions/zip.py:97
+msgid "Title"
+msgstr ""
+
+#: lib/extensions/zip.py:98
+msgid "Size"
+msgstr ""
+
+#: lib/extensions/zip.py:99
+msgid "Stitches"
+msgstr ""
+
+#: lib/extensions/zip.py:100
+msgid "Colors"
+msgstr ""
+
+#: lib/extensions/zip.py:102
+msgid "Thread Order"
+msgstr ""
+
+#: lib/extensions/zip.py:115
+msgid "Thread Used"
 msgstr ""
 
 #: lib/gui/presets.py:47
@@ -997,7 +1000,7 @@ msgstr ""
 #. If you translate this string, that will tell Ink/Stitch to
 #. generate menu items for this language in Inkscape's "Extensions"
 #. menu.
-#: lib/inx/utils.py:55
+#: lib/inx/utils.py:66
 msgid "Generate INX files"
 msgstr ""
 
@@ -1030,12 +1033,12 @@ msgstr ""
 msgid "Stitch Plan"
 msgstr ""
 
-#: lib/svg/units.py:47
+#: lib/svg/units.py:46
 #, python-format
 msgid "parseLengthWithUnits: unknown unit %s"
 msgstr ""
 
-#: lib/svg/units.py:79
+#: lib/svg/units.py:78
 #, python-format
 msgid "Unknown unit: %s"
 msgstr ""
@@ -1577,17 +1580,25 @@ msgstr ""
 msgid "Auto-Route Satin Columns"
 msgstr ""
 
-#: templates/auto_satin.inx:7
+#: templates/auto_satin.inx:5
 msgid "Trim jump stitches"
 msgstr ""
 
-#: templates/auto_satin.inx:8
+#: templates/auto_satin.inx:6
 msgid "Preserve order of satin columns"
 msgstr ""
 
-#: templates/auto_satin.inx:14 templates/convert_to_satin.inx:12
-#: templates/cut_satin.inx:12 templates/flip.inx:12
+#: templates/auto_satin.inx:12 templates/convert_to_satin.inx:10
+#: templates/cut_satin.inx:10 templates/flip.inx:10
 msgid "Satin Tools"
+msgstr ""
+
+#: templates/break_apart.inx:3
+msgid "Break Apart and Retain Holes"
+msgstr ""
+
+#: templates/break_apart.inx:10
+msgid "Fill Tools"
 msgstr ""
 
 #: templates/convert_to_satin.inx:3
@@ -1602,35 +1613,35 @@ msgstr ""
 msgid "Embroider"
 msgstr ""
 
-#: templates/embroider.inx:7
+#: templates/embroider.inx:5
 msgid "Collapse length (mm)"
 msgstr ""
 
-#: templates/embroider.inx:7
+#: templates/embroider.inx:5
 msgid "Jump stitches smaller than this will be treated as normal stitches."
 msgstr ""
 
-#: templates/embroider.inx:8
+#: templates/embroider.inx:6
 msgid "Hide other layers"
 msgstr ""
 
-#: templates/embroider.inx:8
+#: templates/embroider.inx:6
 msgid "Hide all other top-level layers when the embroidery layer is generated, in order to make stitching discernible."
 msgstr ""
 
-#: templates/embroider.inx:9
+#: templates/embroider.inx:7
 msgid "Output file format"
 msgstr ""
 
-#: templates/embroider.inx:14
+#: templates/embroider.inx:12
 msgid "DEBUG"
 msgstr ""
 
-#: templates/embroider.inx:17
+#: templates/embroider.inx:15
 msgid "Directory"
 msgstr ""
 
-#: templates/embroider.inx:17
+#: templates/embroider.inx:15
 msgid "Leave empty to save the output in Inkscape's extension directory."
 msgstr ""
 
@@ -1642,17 +1653,17 @@ msgstr ""
 msgid "Add Commands"
 msgstr ""
 
-#: templates/global_commands.inx:7
+#: templates/global_commands.inx:5
 msgid "These commands affect the entire embroidery design."
 msgstr ""
 
 #. Inkscape submenu under Extensions -> Ink/Stitch
-#: templates/global_commands.inx:17 templates/layer_commands.inx:16
-#: templates/object_commands.inx:15
+#: templates/global_commands.inx:15 templates/layer_commands.inx:14
+#: templates/object_commands.inx:13
 msgid "Commands"
 msgstr ""
 
-#: templates/input.inx:11
+#: templates/input.inx:9
 #, python-format
 msgid "convert %(file_extension)s file to Ink/Stitch manual-stitch paths"
 msgstr ""
@@ -1665,7 +1676,7 @@ msgstr ""
 msgid "Add Layer Commands"
 msgstr ""
 
-#: templates/layer_commands.inx:7
+#: templates/layer_commands.inx:5
 msgid "Commands will be added to the currently-selected layer."
 msgstr ""
 
@@ -1677,84 +1688,96 @@ msgstr ""
 msgid "Attach Commands to Selected Objects"
 msgstr ""
 
-#: templates/output.inx:11
+#: templates/output.inx:9
 #, python-format
 msgid "Save design in %(file_extension)s format using Ink/Stitch"
 msgstr ""
 
-#: templates/output_params_txt.xml:2
-msgid "laser mode"
-msgstr ""
-
-#: templates/output_params_txt.xml:2
-msgid "Laser mode (generate g-code for grbl laser mode)"
-msgstr ""
-
-#: templates/output_params_txt.xml:3
-msgid "dynamic laser power"
-msgstr ""
-
-#: templates/output_params_txt.xml:3
-msgid "Use Grbl's M4 dynamic laser power mode.  Ensures consistent laser cutting power regardless of motor speed.  Only for PWM-capable lasers."
-msgstr ""
-
 #: templates/output_params_txt.xml:4
-msgid "laser warm-up time"
-msgstr ""
-
-#: templates/output_params_txt.xml:4
-msgid "When turning on the laser, wait this many seconds for laser to warm up (G4 command)"
-msgstr ""
-
-#: templates/output_params_txt.xml:5
 msgid "negate X coordinate values"
 msgstr ""
 
-#: templates/output_params_txt.xml:5
+#: templates/output_params_txt.xml:4
 msgid "Negate x coordinates"
 msgstr ""
 
-#: templates/output_params_txt.xml:6
+#: templates/output_params_txt.xml:5
 msgid "negate Y coordinate values"
 msgstr ""
 
-#: templates/output_params_txt.xml:6
+#: templates/output_params_txt.xml:5
 msgid "Negate y coordinates"
 msgstr ""
 
+#: templates/output_params_txt.xml:6
+msgid "Z coordinate value"
+msgstr ""
+
+#: templates/output_params_txt.xml:6
+msgid "Either alternate Z value between 0 and 1 or travel custom value."
+msgstr ""
+
 #: templates/output_params_txt.xml:7
+msgid "alternate Z value"
+msgstr ""
+
+#: templates/output_params_txt.xml:8 templates/output_params_txt.xml:10
 msgid "Z travel per stitch"
 msgstr ""
 
-#: templates/output_params_txt.xml:7
-msgid "increment z coordinate by this amount per stitch"
+#: templates/output_params_txt.xml:10
+msgid "increment z coordinate by this amount per stitch if \"Z travel per stitch\" is enabled"
 msgstr ""
 
-#: templates/output_params_txt.xml:8
+#: templates/output_params_txt.xml:13
+msgid "laser mode"
+msgstr ""
+
+#: templates/output_params_txt.xml:13
+msgid "Laser mode (generate g-code for grbl laser mode)"
+msgstr ""
+
+#: templates/output_params_txt.xml:14
+msgid "dynamic laser power"
+msgstr ""
+
+#: templates/output_params_txt.xml:14
+msgid "Use Grbl's M4 dynamic laser power mode.  Ensures consistent laser cutting power regardless of motor speed.  Only for PWM-capable lasers."
+msgstr ""
+
+#: templates/output_params_txt.xml:15
+msgid "laser warm-up time"
+msgstr ""
+
+#: templates/output_params_txt.xml:15
+msgid "When turning on the laser, wait this many seconds for laser to warm up (G4 command)"
+msgstr ""
+
+#: templates/output_params_txt.xml:16
 msgid "spindle speed"
 msgstr ""
 
-#: templates/output_params_txt.xml:8
+#: templates/output_params_txt.xml:16
 msgid "spindle speed (laser power for laser mode, set to -1 to omit)"
 msgstr ""
 
-#: templates/output_params_txt.xml:9
+#: templates/output_params_txt.xml:17
 msgid "min spindle speed"
 msgstr ""
 
-#: templates/output_params_txt.xml:9
+#: templates/output_params_txt.xml:17
 msgid "minimum spindle speed value (grbl $31 setting)"
 msgstr ""
 
-#: templates/output_params_txt.xml:10
+#: templates/output_params_txt.xml:18
 msgid "max spindle speed"
 msgstr ""
 
-#: templates/output_params_txt.xml:10
+#: templates/output_params_txt.xml:18
 msgid "minimum spindle speed value (grbl $30 setting)"
 msgstr ""
 
-#: templates/output_params_txt.xml:11
+#: templates/output_params_txt.xml:19
 msgid "feed rate (in mm/min, set to -1 to omit)"
 msgstr ""
 
@@ -1770,27 +1793,27 @@ msgstr ""
 msgid "Remove embroidery settings"
 msgstr ""
 
-#: templates/remove_embroidery_settings.inx:7
+#: templates/remove_embroidery_settings.inx:5
 msgid "Use this extension to remove the information Ink/Stitch has stored in your document.  This can be especially useful if you copy and paste objects from an embroidery design into another document."
 msgstr ""
 
-#: templates/remove_embroidery_settings.inx:8
+#: templates/remove_embroidery_settings.inx:6
 msgid "Remove Params"
 msgstr ""
 
-#: templates/remove_embroidery_settings.inx:9
+#: templates/remove_embroidery_settings.inx:7
 msgid "Removes params from selected objects or all objects if nothing is selected."
 msgstr ""
 
-#: templates/remove_embroidery_settings.inx:10
+#: templates/remove_embroidery_settings.inx:8
 msgid "Remove Commands"
 msgstr ""
 
-#: templates/remove_embroidery_settings.inx:11
+#: templates/remove_embroidery_settings.inx:9
 msgid "Removes visual commands from selected objects or all objects if nothing is selected."
 msgstr ""
 
-#: templates/remove_embroidery_settings.inx:12
+#: templates/remove_embroidery_settings.inx:10
 msgid "Remove Print Settings from SVG metadata"
 msgstr ""
 
@@ -1798,15 +1821,27 @@ msgstr ""
 msgid "Simulate"
 msgstr ""
 
+#: templates/stitch_plan_preview.inx:3
+msgid "Stitch Plan Preview"
+msgstr ""
+
 #: templates/troubleshoot.inx:3
 msgid "Troubleshoot Objects"
 msgstr ""
 
-#: templates/zip.inx:10
+#: templates/zip.inx:8
 msgid "Ink/Stitch: ZIP export multiple formats (.zip)"
 msgstr ""
 
-#: templates/zip.inx:11
+#: templates/zip.inx:9
 msgid "Create a ZIP with multiple embroidery file formats using Ink/Stitch"
+msgstr ""
+
+#: templates/zip.inx:15
+msgid "Scalable Vector Graphic"
+msgstr ""
+
+#: templates/zip.inx:16
+msgid "Threadlist"
 msgstr ""
 

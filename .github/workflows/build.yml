@@ -26,6 +26,8 @@ jobs:
           # python that doesn't support unicode.  See:
           #   https://github.com/actions/setup-python/issues/23
 
+          sudo apt-get update
+
           sudo apt-get install python2.7
           python -m pip install --upgrade pip
 
@@ -122,6 +124,9 @@ jobs:
       - uses: actions/setup-python@v1
         with:
           python-version: '2.7.x'
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
       - name: download inkscape
         shell: bash
         run: |
@@ -132,13 +137,13 @@ jobs:
           brew update
 
           # this errors because it installs python3 but python2 is already installed
-          brew install gtk+3 pkg-config gobject-introspection libffi || true
+          brew install gtk+3 pkg-config gobject-introspection libffi gettext || true
 
           export LDFLAGS="-L/usr/local/opt/libffi/lib"
           export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
           
           # for msgfmt
-          brew link gettext --force
+          echo "::add-path::/usr/local/opt/gettext/bin"
 
           echo "::set-env name=GI_TYPELIB_PATH::/usr/local/lib/girepository-1.0/"
 
@@ -151,7 +156,7 @@ jobs:
           rm inkscape-0.92.3.tar.bz2
           mv inkscape-0.92.3 inkscape
 
-          echo "::add-path::${{ env.pythonLocation }}\bin"
+          echo "::add-path::${{ env.pythonLocation }}/bin"
       - shell: bash
         run: |
           make dist

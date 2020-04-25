@@ -30,32 +30,43 @@ class RemoveEmbroiderySettings(InkstitchExtension):
         if not self.selected:
             xpath = ".//svg:path"
             elements = self.find_elements(xpath)
-            self.remove_embroider_attributes(elements)
+            self.remove_inkstitch_attributes(elements)
         else:
             for node in self.selected:
                 elements = self.get_selected_elements(node)
-                self.remove_embroider_attributes(elements)
+                self.remove_inkstitch_attributes(elements)
 
     def remove_commands(self):
         if not self.selected:
-            commands = ".//*[starts-with(@inkscape:label, 'Ink/Stitch Command:')]"
-            self.remove_elements(commands)
+            # we are not able to grab commands by a specific id
+            # so let's move through every object instead and see if it has a command
+            xpath = ".//svg:path|.//svg:circle|.//svg:rect|.//svg:ellipse"
+            elements = self.find_elements(xpath)
+        else:
+            elements = []
+            for node in self.selected:
+                elements.extend(self.get_selected_elements(node))
 
+        if elements:
+            for element in elements:
+                for command in find_commands(element):
+                    group = command.connector.getparent()
+                    group.getparent().remove(group)
+
+        if not self.selected:
+            # remove standalone commands
+            standalone_commands = ".//svg:use[starts-with(@xlink:href, '#inkstitch_')]"
+            self.remove_elements(standalone_commands)
+
+            # let's remove the symbols (defs), we won't need them in the document
             symbols = ".//*[starts-with(@id, 'inkstitch_')]"
             self.remove_elements(symbols)
-        else:
-            for node in self.selected:
-                elements = self.get_selected_elements(node)
-                for element in elements:
-                    for command in find_commands(element):
-                        group = command.connector.getparent()
-                        group.getparent().remove(group)
 
     def get_selected_elements(self, element_id):
-        xpath = ".//svg:path[@id='%s']" % element_id
+        xpath = ".//svg:g[@id='%(id)s']//svg:path|.//svg:g[@id='%(id)s']//svg:use" % dict(id=element_id)
         elements = self.find_elements(xpath)
         if not elements:
-            xpath = ".//svg:g[@id='%s']//svg:path" % element_id
+            xpath = ".//*[@id='%s']" % element_id
             elements = self.find_elements(xpath)
         return elements
 
@@ -72,8 +83,8 @@ class RemoveEmbroiderySettings(InkstitchExtension):
     def remove_element(self, element):
         element.getparent().remove(element)
 
-    def remove_embroider_attributes(self, elements):
+    def remove_inkstitch_attributes(self, elements):
         for element in elements:
             for attrib in element.attrib:
-                if attrib.startswith('embroider_'):
+                if attrib.startswith(inkex.NSS['inkstitch'], 1):
                     del element.attrib[attrib]

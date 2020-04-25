@@ -48,13 +48,16 @@ class ThreadPalette(Set):
             palette.readline()
 
             for line in palette:
-                fields = line.split("\t", 3)
-                thread_color = [int(field) for field in fields[:3]]
-                thread_name, thread_number = fields[3].strip().rsplit(" ", 1)
-                thread_name = thread_name.strip()
+                try:
+                    fields = line.split(None, 3)
+                    thread_color = [int(field) for field in fields[:3]]
+                    thread_name, thread_number = fields[3].strip().rsplit(" ", 1)
+                    thread_name = thread_name.strip()
 
-                thread = ThreadColor(thread_color, thread_name, thread_number, manufacturer=self.name)
-                self.threads[thread] = convert_color(sRGBColor(*thread_color, is_upscaled=True), LabColor)
+                    thread = ThreadColor(thread_color, thread_name, thread_number, manufacturer=self.name)
+                    self.threads[thread] = convert_color(sRGBColor(*thread_color, is_upscaled=True), LabColor)
+                except ValueError:
+                    continue
 
     def __contains__(self, thread):
         return thread in self.threads

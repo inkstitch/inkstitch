@@ -1,11 +1,12 @@
 import errno
-import os
 import gettext
+import os
+import sys
 from os.path import dirname
+
 from jinja2 import Environment, FileSystemLoader
 
-from ..i18n import translation as default_translation, locale_dir, N_
-
+from ..i18n import N_, locale_dir, translation as default_translation
 
 _top_path = dirname(dirname(dirname(os.path.realpath(__file__))))
 inx_path = os.path.join(_top_path, "inx")
@@ -24,6 +25,16 @@ def build_environment():
 
     env.install_gettext_translations(current_translation)
     env.globals["locale"] = current_locale
+
+    if "BUILD" in os.environ:
+        # building a ZIP release, with inkstitch packaged as a binary
+        if sys.platform == "win32":
+            env.globals["command_tag"] = '<command reldir="extensions">inkstitch/bin/inkstitch.exe</command>'
+        else:
+            env.globals["command_tag"] = '<command reldir="extensions">inkstitch/bin/inkstitch</command>'
+    else:
+        # user is running inkstitch.py directly as a developer
+        env.globals["command_tag"] = '<command reldir="extensions" interpreter="python">inkstitch.py</command>'
 
     return env
 

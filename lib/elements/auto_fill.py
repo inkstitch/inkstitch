@@ -53,25 +53,31 @@ class AutoFill(Fill):
         return max(self.get_float_param("running_stitch_length_mm", 1.5), 0.01)
 
     @property
-    @param('fill_underlay', _('Underlay'), type='toggle', group=_('AutoFill Underlay'), default=False)
+    @param('fill_underlay', _('Underlay'), type='toggle', group=_('AutoFill Underlay'), default=True)
     def fill_underlay(self):
-        return self.get_boolean_param("fill_underlay", default=False)
+        return self.get_boolean_param("fill_underlay", default=True)
 
     @property
     @param('fill_underlay_angle',
            _('Fill angle'),
-           tooltip=_('default: fill angle + 90 deg'),
+           tooltip=_('Default: fill angle + 90 deg. Insert comma-seperated list for multiple layers.'),
            unit='deg',
            group=_('AutoFill Underlay'),
            type='float')
     @cache
     def fill_underlay_angle(self):
-        underlay_angle = self.get_float_param("fill_underlay_angle")
-
-        if underlay_angle is not None:
-            return math.radians(underlay_angle)
+        underlay_angles = self.get_param('fill_underlay_angle', None)
+        default_value = [self.angle + math.pi / 2.0]
+        if underlay_angles is not None:
+            underlay_angles = underlay_angles.strip().split(',')
+            try:
+                underlay_angles = [math.radians(float(angle)) for angle in underlay_angles]
+            except (TypeError, ValueError):
+                return default_value
         else:
-            return self.angle + math.pi / 2.0
+            underlay_angles = default_value
+
+        return underlay_angles
 
     @property
     @param('fill_underlay_row_spacing_mm',
@@ -193,17 +199,18 @@ class AutoFill(Fill):
 
         try:
             if self.fill_underlay:
-                stitches.extend(auto_fill(self.underlay_shape,
-                                          self.fill_underlay_angle,
-                                          self.fill_underlay_row_spacing,
-                                          self.fill_underlay_row_spacing,
-                                          self.fill_underlay_max_stitch_length,
-                                          self.running_stitch_length,
-                                          self.staggers,
-                                          self.fill_underlay_skip_last,
-                                          starting_point,
-                                          underpath=self.underlay_underpath))
-                starting_point = stitches[-1]
+                for i in range(len(self.fill_underlay_angle)):
+                    stitches.extend(auto_fill(self.underlay_shape,
+                                              self.fill_underlay_angle[i],
+                                              self.fill_underlay_row_spacing,
+                                              self.fill_underlay_row_spacing,
+                                              self.fill_underlay_max_stitch_length,
+                                              self.running_stitch_length,
+                                              self.staggers,
+                                              self.fill_underlay_skip_last,
+                                              starting_point,
+                                              underpath=self.underlay_underpath))
+                    starting_point = stitches[-1]
 
             stitches.extend(auto_fill(self.fill_shape,
                                       self.angle,

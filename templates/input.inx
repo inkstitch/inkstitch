@@ -2,8 +2,6 @@
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
     <name>{{ format | upper }} file input</name>
     <id>org.inkstitch.input.{{ format }}.{{ locale }}</id>
-    <dependency type="executable" location="extensions">inkstitch.py</dependency>
-    <dependency type="executable" location="extensions">inkex.py</dependency>
     <input>
         <extension>.{{ format }}</extension>
         <mimetype>application/x-embroidery-{{ format }}</mimetype>
@@ -12,6 +10,6 @@
     </input>
     <param name="extension" type="string" gui-hidden="true">input</param>
     <script>
-        <command reldir="extensions" interpreter="python">inkstitch.py</command>
+        {{ command_tag | safe }}
     </script>
 </inkscape-extension>

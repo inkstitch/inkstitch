@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <name>{% trans %}Simulate{% endtrans %}</name>
-    <id>org.inkstitch.simulate.{{ locale }}</id>
-    <param name="extension" type="string" gui-hidden="true">simulate</param>
+    <name>{% trans %}Stitch Plan Preview{% endtrans %}</name>
+    <id>org.inkstitch.stitch_plan_preview.{{ locale }}</id>
+    <param name="extension" type="string" gui-hidden="true">stitch_plan_preview</param>
     <effect>
         <object-type>all</object-type>
         <effects-menu>

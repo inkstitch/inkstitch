@@ -1,14 +1,14 @@
-from copy import deepcopy
 import sys
+from copy import deepcopy
 
-from cspsubdiv import cspsubdiv
 import cubicsuperpath
-import simplestyle
+import tinycss2
+from cspsubdiv import cspsubdiv
 
 from ..commands import find_commands
 from ..i18n import _
 from ..svg import PIXELS_PER_MM, apply_transforms, convert_length, get_doc_size
-from ..svg.tags import INKSCAPE_LABEL
+from ..svg.tags import INKSCAPE_LABEL, INKSTITCH_ATTRIBS
 from ..utils import cache
 
 
@@ -72,6 +72,16 @@ class EmbroideryElement(object):
     def __init__(self, node):
         self.node = node
 
+        legacy_attribs = False
+        for attrib in self.node.attrib:
+            if attrib.startswith('embroider_'):
+                # update embroider_ attributes to namespaced attributes
+                self.replace_legacy_param(attrib)
+                legacy_attribs = True
+        if legacy_attribs and not self.get_param('fill_underlay', ""):
+            # defaut setting for fill_underlay has changed
+            self.set_param('fill_underlay', False)
+
     @property
     def id(self):
         return self.node.get('id')
@@ -85,13 +95,16 @@ class EmbroideryElement(object):
                 # The 'param' attribute is set by the 'param' decorator defined above.
                 if hasattr(prop.fget, 'param'):
                     params.append(prop.fget.param)
-
         return params
+
+    def replace_legacy_param(self, param):
+        value = self.node.get(param, "").strip()
+        self.set_param(param[10:], value)
+        del self.node.attrib[param]
 
     @cache
     def get_param(self, param, default):
-        value = self.node.get("embroider_" + param, "").strip()
-
+        value = self.node.get(INKSTITCH_ATTRIBS[param], "").strip()
         return value or default
 
     @cache
@@ -131,22 +144,28 @@ class EmbroideryElement(object):
         return value
 
     def set_param(self, name, value):
-        self.node.set("embroider_%s" % name, str(value))
+        param = INKSTITCH_ATTRIBS[name]
+        self.node.set(param, str(value))
 
+    @property
     @cache
+    def style(self):
+        declarations = tinycss2.parse_declaration_list(self.node.get("style", ""))
+        style = {declaration.lower_name: declaration.value[0].serialize() for declaration in declarations}
+
+        return style
+
     def get_style(self, style_name, default=None):
-        style = simplestyle.parseStyle(self.node.get("style"))
-        if (style_name not in style):
-            return default
-        value = style[style_name]
-        if value == 'none':
-            return None
-        return value
+        style = self.style.get(style_name)
+        # Style not found, let's see if it is set as a separate attribute
+        if style is None:
+            style = self.node.get(style_name, default)
+        if style == 'none':
+            style = None
+        return style
 
-    @cache
     def has_style(self, style_name):
-        style = simplestyle.parseStyle(self.node.get("style"))
-        return style_name in style
+        return style_name in self.style
 
     @property
     @cache
@@ -160,13 +179,24 @@ class EmbroideryElement(object):
     @property
     @cache
     def stroke_width(self):
-        width = self.get_style("stroke-width", "1")
+        width = self.get_style("stroke-width", None)
 
         if width is None:
             return 1.0
 
         width = convert_length(width)
         return width * self.stroke_scale
+
+    @property
+    @param('ties',
+           _('Ties'),
+           tooltip=_('Add ties. Manual stitch will not add ties.'),
+           type='boolean',
+           default=True,
+           sort_index=4)
+    @cache
+    def ties(self):
+        return self.get_boolean_param("ties", True)
 
     @property
     def path(self):
@@ -268,6 +298,10 @@ class EmbroideryElement(object):
         self.validate()
 
         patches = self.to_patches(last_patch)
+
+        if not self.ties:
+            for patch in patches:
+                patch.stitch_as_is = True
 
         if patches:
             patches[-1].trim_after = self.has_command("trim") or self.trim_after

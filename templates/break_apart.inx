@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <name>{% trans %}Flip Satin Column Rails{% endtrans %}</name>
-    <id>org.inkstitch.flip_satins.{{ locale }}</id>
-    <param name="extension" type="string" gui-hidden="true">flip</param>
+    <name>{% trans %}Break Apart and Retain Holes{% endtrans %}</name>
+    <id>org.inkstitch.break_apart.{{ locale }}</id>
+    <param name="extension" type="string" gui-hidden="true">break_apart</param>
     <effect>
         <object-type>all</object-type>
         <effects-menu>
             <submenu name="Ink/Stitch">
-                <submenu name="{% trans %}Satin Tools{% endtrans %}" />
+                <submenu name="{% trans %}Fill Tools{% endtrans %}" />
             </submenu>
         </effects-menu>
     </effect>

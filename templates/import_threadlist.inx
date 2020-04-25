@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>{% trans %}Import Threadlist{% endtrans %}</name>
+    <id>org.inkstitch.import_threadlist.{{ locale }}</id>
+    <param name="extension" type="string" gui-hidden="true">import_threadlist</param>
+    <!-- This doesn't work at the moment. It's an Inkstitch 1.0 feature, but would be desireable.
+    <param type="path" name="filepath" gui-text="{{ _('Choose file') }}" mode="file" filetypes="txt"/> -->
+    <param name="filepath" type="string" _gui-text="{{ _('File Path') }}">{{ _("Enter path to file") }}</param>
+    <param name="method" type="optiongroup" _gui-text="Choose method">
+       <option value="1">Import Ink/Stitch threadlist</option>
+       <option value="2">Import other threadlist*</option>
+    </param>
+    <param name="palette" type="enum" _gui-text="*Choose color palette">
+    {%- for item in threadcatalog %}
+       <item value="{{ item }}">{{ item }}</item>
+    {%- endfor %}
+    </param>
+    <effect>
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu name="Ink/Stitch" />
+        </effects-menu>
+    </effect>
+    <script>
+        {{ command_tag | safe }}
+    </script>
+</inkscape-extension>

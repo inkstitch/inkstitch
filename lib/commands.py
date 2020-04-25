@@ -1,54 +1,57 @@
-from copy import deepcopy
 import os
-from random import random
 import sys
+from copy import deepcopy
+from random import random
+
+from shapely import geometry as shgeo
 
 import cubicsuperpath
 import inkex
-from shapely import geometry as shgeo
 import simpletransform
 
-from .i18n import _, N_
-from .svg import apply_transforms, get_node_transform, get_correction_transform, get_document, generate_unique_id
-from .svg.tags import SVG_DEFS_TAG, SVG_GROUP_TAG, SVG_PATH_TAG, SVG_USE_TAG, SVG_SYMBOL_TAG, \
-    CONNECTION_START, CONNECTION_END, CONNECTOR_TYPE, XLINK_HREF, INKSCAPE_LABEL
-from .utils import cache, get_bundled_dir, Point
-
+from .i18n import N_, _
+from .svg import (apply_transforms, generate_unique_id,
+                  get_correction_transform, get_document, get_node_transform)
+from .svg.tags import (CONNECTION_END, CONNECTION_START, CONNECTOR_TYPE,
+                       INKSCAPE_LABEL, INKSTITCH_ATTRIBS, SVG_DEFS_TAG,
+                       SVG_GROUP_TAG, SVG_PATH_TAG, SVG_SYMBOL_TAG,
+                       SVG_USE_TAG, XLINK_HREF)
+from .utils import Point, cache, get_bundled_dir
 
 COMMANDS = {
     # L10N command attached to an object
-    N_("fill_start"): N_("Fill stitch starting position"),
+    "fill_start": N_("Fill stitch starting position"),
 
     # L10N command attached to an object
-    N_("fill_end"): N_("Fill stitch ending position"),
+    "fill_end": N_("Fill stitch ending position"),
 
     # L10N command attached to an object
-    N_("satin_start"): N_("Auto-route satin stitch starting position"),
+    "satin_start": N_("Auto-route satin stitch starting position"),
 
     # L10N command attached to an object
-    N_("satin_end"): N_("Auto-route satin stitch ending position"),
+    "satin_end": N_("Auto-route satin stitch ending position"),
 
     # L10N command attached to an object
-    N_("stop"): N_("Stop (pause machine) after sewing this object"),
+    "stop": N_("Stop (pause machine) after sewing this object"),
 
     # L10N command attached to an object
-    N_("trim"): N_("Trim thread after sewing this object"),
+    "trim": N_("Trim thread after sewing this object"),
 
     # L10N command attached to an object
-    N_("ignore_object"): N_("Ignore this object (do not stitch)"),
+    "ignore_object": N_("Ignore this object (do not stitch)"),
 
     # L10N command attached to an object
-    N_("satin_cut_point"): N_("Satin cut point (use with Cut Satin Column)"),
+    "satin_cut_point": N_("Satin cut point (use with Cut Satin Column)"),
 
 
     # L10N command that affects a layer
-    N_("ignore_layer"): N_("Ignore layer (do not stitch any objects in this layer)"),
+    "ignore_layer": N_("Ignore layer (do not stitch any objects in this layer)"),
 
     # L10N command that affects entire document
-    N_("origin"): N_("Origin for exported embroidery files"),
+    "origin": N_("Origin for exported embroidery files"),
 
     # L10N command that affects entire document
-    N_("stop_position"): N_("Jump destination for Stop commands (a.k.a. \"Frame Out position\")."),
+    "stop_position": N_("Jump destination for Stop commands (a.k.a. \"Frame Out position\")."),
 }
 
 OBJECT_COMMANDS = ["fill_start", "fill_end", "satin_start", "satin_end", "stop", "trim", "ignore_object", "satin_cut_point"]
@@ -346,7 +349,7 @@ def get_command_pos(element, index, total):
 def remove_legacy_param(element, command):
     if command == "trim" or command == "stop":
         # If they had the old "TRIM after" or "STOP after" attributes set,
-        # automatically delete them.  THe new commands will do the same
+        # automatically delete them.  The new commands will do the same
         # thing.
         #
         # If we didn't delete these here, then things would get confusing.
@@ -355,6 +358,13 @@ def remove_legacy_param(element, command):
         # trim would keep happening.
 
         attribute = "embroider_%s_after" % command
+
+        if attribute in element.node.attrib:
+            del element.node.attrib[attribute]
+
+        # Attributes have changed to be namespaced.
+        # Let's check for them as well, they might have automatically changed.
+        attribute = INKSTITCH_ATTRIBS["%s_after" % command]
 
         if attribute in element.node.attrib:
             del element.node.attrib[attribute]

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION="$(echo ${GITHUB_REF} | tr / -)"
+VERSION="$(echo ${GITHUB_REF#refs/heads/} | tr / -)"
 OS="${BUILD:-$(uname)}"
 ARCH="$(uname -m)"
 

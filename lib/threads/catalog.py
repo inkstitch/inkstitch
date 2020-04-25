@@ -1,9 +1,10 @@
 import os
-from os.path import dirname, realpath
 import sys
-from glob import glob
 from collections import Sequence
+from glob import glob
+from os.path import dirname, realpath
 
+from ..utils import guess_inkscape_config_path
 from .palette import ThreadPalette
 
 
@@ -12,19 +13,32 @@ class _ThreadCatalog(Sequence):
 
     def __init__(self):
         self.palettes = []
-        self.load_palettes(self.get_palettes_path())
+        self.load_palettes(self.get_palettes_paths())
 
-    def get_palettes_path(self):
+    def get_palettes_paths(self):
+        """Creates a list containing the path of two directories:
+        1. Palette directory of Inkscape
+        2. Palette directory of inkstitch
+        """
+        path = [os.path.join(guess_inkscape_config_path(), 'palettes')]
+
         if getattr(sys, 'frozen', None) is not None:
-            path = os.path.join(sys._MEIPASS, "..")
+            inkstitch_path = os.path.join(sys._MEIPASS, "..")
         else:
-            path = dirname(dirname(dirname(realpath(__file__))))
+            inkstitch_path = dirname(dirname(dirname(realpath(__file__))))
 
-        return os.path.join(path, 'palettes')
+        path.append(os.path.join(inkstitch_path, 'palettes'))
 
-    def load_palettes(self, path):
-        for palette_file in glob(os.path.join(path, '*.gpl')):
-            self.palettes.append(ThreadPalette(palette_file))
+        return path
+
+    def load_palettes(self, paths):
+        palettes = []
+        for path in paths:
+            for palette_file in glob(os.path.join(path, 'InkStitch*.gpl')):
+                palette_basename = os.path.basename(palette_file)
+                if palette_basename not in palettes:
+                    self.palettes.append(ThreadPalette(palette_file))
+                    palettes.append(palette_basename)
 
     def palette_names(self):
         return list(sorted(palette.name for palette in self))
@@ -59,6 +73,8 @@ class _ThreadCatalog(Sequence):
         chosen if more tha 80% of the thread colors in the stitch plan are
         exact matches for threads in the palette.
         """
+        if not self.palettes:
+            return None
 
         threads = [color_block.color for color_block in stitch_plan]
         palettes_and_matches = [(palette, self._num_exact_color_matches(palette, threads))
