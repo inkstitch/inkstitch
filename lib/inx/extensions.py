@@ -4,6 +4,7 @@ from .utils import build_environment, write_inx_file
 from .outputs import pyembroidery_output_formats
 from ..extensions import extensions, Input, Output
 from ..commands import LAYER_COMMANDS, OBJECT_COMMANDS, GLOBAL_COMMANDS, COMMANDS
+from ..threads import ThreadCatalog
 
 
 def layer_commands():
@@ -27,6 +28,11 @@ def pyembroidery_debug_formats():
             yield format['extension'], format['description']
 
 
+def threadcatalog():
+    threadcatalog = ThreadCatalog().palette_names()
+    return threadcatalog
+
+
 def generate_extension_inx_files():
     env = build_environment()
 
@@ -38,6 +44,7 @@ def generate_extension_inx_files():
         template = env.get_template('%s.inx' % name)
         write_inx_file(name, template.render(formats=pyembroidery_output_formats(),
                                              debug_formats=pyembroidery_debug_formats(),
+                                             threadcatalog=threadcatalog(),
                                              layer_commands=layer_commands(),
                                              object_commands=object_commands(),
                                              global_commands=global_commands()))

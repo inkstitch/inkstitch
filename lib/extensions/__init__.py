@@ -1,9 +1,11 @@
 from auto_satin import AutoSatin
+from break_apart import BreakApart
 from convert_to_satin import ConvertToSatin
 from cut_satin import CutSatin
 from embroider import Embroider
 from flip import Flip
 from global_commands import GlobalCommands
+from import_threadlist import ImportThreadlist
 from input import Input
 from install import Install
 from layer_commands import LayerCommands
@@ -36,4 +38,6 @@ __all__ = extensions = [Embroider,
                         AutoSatin,
                         Lettering,
                         Troubleshoot,
-                        RemoveEmbroiderySettings]
+                        RemoveEmbroiderySettings,
+                        BreakApart,
+                        ImportThreadlist]

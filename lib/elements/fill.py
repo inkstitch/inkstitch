@@ -20,8 +20,7 @@ class UnconnectedError(ValidationError):
                     "Ink/Stitch doesn't know what order to stitch them in.  Please break this "
                     "object up into separate shapes.")
     steps_to_solve = [
-        _('* Path > Break apart (Shift+Ctrl+K)'),
-        _('* (Optional) Recombine shapes with holes (Ctrl+K).')
+        _('* Extensions > Ink/Stitch > Fill Tools > Break Apart and Retain Holes.')
     ]
 
 
