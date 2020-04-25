@@ -54,7 +54,7 @@ class ImportThreadlist(InkstitchExtension):
             if i == len(colors):
                 break
 
-            style = re.sub(r"#[0-9A-Fa-f]{6}", "%s" % colors[i], element.node.get('style'))
+            style = element.node.get('style').replace("%s" % element_color, "%s" % colors[i])
             element.node.set('style', style)
 
     def parse_inkstitch_threadlist(self, path):
