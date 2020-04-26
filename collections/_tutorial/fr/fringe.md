@@ -1,6 +1,6 @@
 ---
 permalink: /fr/tutorials/fringe/
-title: Frange au ponit manuel
+title: Frange au point manuel
 language: fr
 last_modified_at: 2019-10-25
 excerpt: "fichier exemple de frange au point manuel"
