@@ -150,16 +150,32 @@ class EmbroideryElement(object):
     @property
     @cache
     def style(self):
-        declarations = tinycss2.parse_declaration_list(self.node.get("style", ""))
-        style = {declaration.lower_name: declaration.value[0].serialize() for declaration in declarations}
+        return self.parse_style()
 
+    def parse_style(self, node=None):
+        if node is None:
+            node = self.node
+        declarations = tinycss2.parse_declaration_list(node.get("style", ""))
+        style = {declaration.lower_name: declaration.value[0].serialize() for declaration in declarations}
+        return style
+
+    def get_inherited_style(self, element, style_name):
+        style = self.parse_style(element)
+        style = style.get(style_name) or element.get(style_name)
+        if not style:
+            parent = element.getparent()
+            if parent is not None:
+                style = self.get_inherited_style(parent, style_name)
         return style
 
     def get_style(self, style_name, default=None):
-        style = self.style.get(style_name)
-        # Style not found, let's see if it is set as a separate attribute
-        if style is None:
-            style = self.node.get(style_name, default)
+        style = self.style.get(style_name) or self.node.get(style_name)
+        # style not found, get inherited style elements
+        if not style:
+            style = self.get_inherited_style(self.node.getparent(), style_name)
+        # style not found, set default value
+        if not style:
+            style = default
         if style == 'none':
             style = None
         return style
