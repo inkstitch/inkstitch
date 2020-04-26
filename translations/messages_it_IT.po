@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-04-21 00:09+0000\n"
-"PO-Revision-Date: 2020-04-24 00:10\n"
+"POT-Creation-Date: 2020-04-26 00:09+0000\n"
+"PO-Revision-Date: 2020-04-26 00:10\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
@@ -67,61 +67,61 @@ msgid "If you'd like to help, please file an issue at https://github.com/inkstit
 msgstr ""
 
 #. command attached to an object
-#: lib/commands.py:20
+#: lib/commands.py:23
 msgid "Fill stitch starting position"
 msgstr "Posizione di partenza del punto di riempimento"
 
 #. command attached to an object
-#: lib/commands.py:23
+#: lib/commands.py:26
 msgid "Fill stitch ending position"
 msgstr "Posizione finale del punto di riempimento"
 
 #. command attached to an object
-#: lib/commands.py:26
+#: lib/commands.py:29
 msgid "Auto-route satin stitch starting position"
 msgstr "Posizione di partenza del riempimento satinato in modalità percorso automatico"
 
 #. command attached to an object
-#: lib/commands.py:29
+#: lib/commands.py:32
 msgid "Auto-route satin stitch ending position"
 msgstr "Posizione di arrivo del riempimento satinato in modalità percorso automatico"
 
 #. command attached to an object
-#: lib/commands.py:32
+#: lib/commands.py:35
 msgid "Stop (pause machine) after sewing this object"
 msgstr "Ferma (metti in pausa) la macchina dopo aver ricamato questo oggetto"
 
 #. command attached to an object
-#: lib/commands.py:35
+#: lib/commands.py:38
 msgid "Trim thread after sewing this object"
 msgstr "Taglia il filo dopo aver ricamato questo oggetto"
 
 #. command attached to an object
-#: lib/commands.py:38
+#: lib/commands.py:41
 msgid "Ignore this object (do not stitch)"
 msgstr "Ignora questo oggetto (non ricamare)"
 
 #. command attached to an object
-#: lib/commands.py:41
+#: lib/commands.py:44
 msgid "Satin cut point (use with Cut Satin Column)"
 msgstr "Punto di taglio del ricamo satinato (da usare con il comando \"Taglia Colonna Satinata\")"
 
 #. command that affects a layer
-#: lib/commands.py:45
+#: lib/commands.py:48
 msgid "Ignore layer (do not stitch any objects in this layer)"
 msgstr "Ignora livello (non ricamare alcun oggetto del livello selezionato)"
 
 #. command that affects entire document
-#: lib/commands.py:48
+#: lib/commands.py:51
 msgid "Origin for exported embroidery files"
 msgstr "Punto di origine per file di ricamo da esportare"
 
 #. command that affects entire document
-#: lib/commands.py:51
+#: lib/commands.py:54
 msgid "Jump destination for Stop commands (a.k.a. \"Frame Out position\")."
 msgstr "Posizione di destinazione per i comandi Stop (anche: \"Posizione fuori quadro\")."
 
-#: lib/commands.py:209
+#: lib/commands.py:212
 #, python-format
 msgid "Error: there is more than one %(command)s command in the document, but there can only be one.  Please remove all but one."
 msgstr "Errore: esiste più d'un comando %(command)s nel documento ma ne è ammesso solo uno. Per favore rimuovili tutti meno uno."
@@ -131,22 +131,22 @@ msgstr "Errore: esiste più d'un comando %(command)s nel documento ma ne è amme
 #. command name to them.  Contents of %(description)s are in a separate
 #. translation
 #. string.
-#: lib/commands.py:216
+#: lib/commands.py:219
 #, python-format
 msgid "%(command)s: %(description)s"
 msgstr "%(command)s: %(description)s"
 
-#: lib/commands.py:281 lib/commands.py:385 lib/extensions/layer_commands.py:29
+#: lib/commands.py:284 lib/commands.py:395 lib/extensions/layer_commands.py:29
 msgid "Ink/Stitch Command"
 msgstr "Comando Ink/Stitch"
 
 #. : the name of the line that connects a command to the object it applies to
-#: lib/commands.py:306
+#: lib/commands.py:309
 msgid "connector"
 msgstr "raccordo"
 
 #. : the name of a command symbol (example: scissors icon for trim command)
-#: lib/commands.py:323
+#: lib/commands.py:326
 msgid "command marker"
 msgstr "indicatore di comando"
 
@@ -217,11 +217,11 @@ msgstr "Intarsio"
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
 msgstr "Restringe la forma prima di eseguire il sottostrato per evitare che quest'ultimo sia visibile all'esterno del riempimento."
 
-#: lib/elements/auto_fill.py:117 lib/elements/fill.py:72
+#: lib/elements/auto_fill.py:117 lib/elements/fill.py:71
 msgid "Skip last stitch in each row"
 msgstr "Salta l'ultimo punto in ogni fila"
 
-#: lib/elements/auto_fill.py:118 lib/elements/fill.py:73
+#: lib/elements/auto_fill.py:118 lib/elements/fill.py:72
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
 msgstr "L'ultimo punto di ogni fila è molto vicino al primo punto della fila successiva.  Saltandolo si riduce il numero di punti e la loro densità."
 
@@ -251,20 +251,20 @@ msgstr "Errore durante l'auto-riempimento! C'è un problema con Ink/Stitch."
 msgid "If you'd like to help us make Ink/Stitch better, please paste this whole message into a new issue at: "
 msgstr "Se vuoi contribuire a migliorare Ink/Stitch, copia questo messaggio in una nuova issue a questo link: "
 
-#: lib/elements/element.py:173
+#: lib/elements/element.py:192
 msgid "Ties"
 msgstr ""
 
-#: lib/elements/element.py:174
+#: lib/elements/element.py:193
 msgid "Add ties. Manual stitch will not add ties."
 msgstr ""
 
-#: lib/elements/element.py:213
+#: lib/elements/element.py:232
 #, python-format
 msgid "Object %(id)s has an empty 'd' attribute.  Please delete this object from your document."
 msgstr "L'oggetto %(id)s ha un attributo vuoto. Cancella questo oggetto dal tuo documento."
 
-#: lib/elements/element.py:245
+#: lib/elements/element.py:264
 #, python-format
 msgid "%(id)s has more than one command of type '%(command)s' linked to it"
 msgstr "%(id)s ha più di un comando del tipo '%(command)s' collegato ad esso"
@@ -272,7 +272,7 @@ msgstr "%(id)s ha più di un comando del tipo '%(command)s' collegato ad esso"
 #. used when showing an error message to the user such as
 #. "Some Path (path1234): error: satin column: One or more of the rungs doesn't
 #. intersect both rails."
-#: lib/elements/element.py:303
+#: lib/elements/element.py:322
 msgid "error:"
 msgstr "errore:"
 
@@ -284,75 +284,79 @@ msgstr "Disconnesso"
 msgid "Fill: This object is made up of unconnected shapes.  This is not allowed because Ink/Stitch doesn't know what order to stitch them in.  Please break this object up into separate shapes."
 msgstr "Riempimento: questo oggetto è composto da forme non collegate. Questo non è permesso in quanto Ink/Stich non può sapere l'ordine con cui devono essere cucite. Scomponi l'oggetto."
 
-#: lib/elements/fill.py:22 lib/elements/fill.py:32
-msgid "* Path > Break apart (Shift+Ctrl+K)"
-msgstr "* Percorso > Scomponi (Shift+Ctrl+K)"
+#: lib/elements/fill.py:22
+msgid "* Extensions > Ink/Stitch > Fill Tools > Break Apart and Retain Holes."
+msgstr ""
 
-#: lib/elements/fill.py:23 lib/elements/fill.py:33
-msgid "* (Optional) Recombine shapes with holes (Ctrl+K)."
-msgstr "* (Opzionale) Ricomponi le forme con spazi (Ctrl+K)."
-
-#: lib/elements/fill.py:28
+#: lib/elements/fill.py:27
 msgid "Border crosses itself"
 msgstr "Il bordo incrocia se stesso"
 
-#: lib/elements/fill.py:29
+#: lib/elements/fill.py:28
 msgid "Fill: Shape is not valid.  This can happen if the border crosses over itself."
 msgstr "Riempimento: forma non valida. Può accadere se i bordi incrociano se stessi."
 
-#: lib/elements/fill.py:31
+#: lib/elements/fill.py:30
 msgid "* Path > Union (Ctrl++)"
 msgstr "* Percorso > Unione (Ctrl++)"
 
-#: lib/elements/fill.py:38
+#: lib/elements/fill.py:31
+msgid "* Path > Break apart (Shift+Ctrl+K)"
+msgstr "* Percorso > Scomponi (Shift+Ctrl+K)"
+
+#: lib/elements/fill.py:32
+msgid "* (Optional) Recombine shapes with holes (Ctrl+K)."
+msgstr "* (Opzionale) Ricomponi le forme con spazi (Ctrl+K)."
+
+#: lib/elements/fill.py:37
 msgid "Fill"
 msgstr "Riempi"
 
-#: lib/elements/fill.py:45
+#: lib/elements/fill.py:44
 msgid "Manually routed fill stitching"
 msgstr "Riempimento impunture indirizzato manualmente"
 
-#: lib/elements/fill.py:46
+#: lib/elements/fill.py:45
 msgid "AutoFill is the default method for generating fill stitching."
 msgstr "AutoFill è il metodo di default per generare cuciture di riempimento."
 
-#: lib/elements/fill.py:55
+#: lib/elements/fill.py:54
 msgid "Angle of lines of stitches"
 msgstr "Angolo delle linee dei punti"
 
-#: lib/elements/fill.py:56
+#: lib/elements/fill.py:55
 msgid "The angle increases in a counter-clockwise direction.  0 is horizontal.  Negative angles are allowed."
 msgstr "L'angolo si incrementa in senso anti-orario. Zero è orizzontale. Sono ammessi valori negativi."
 
-#: lib/elements/fill.py:83
+#: lib/elements/fill.py:82
 msgid "Flip fill (start right-to-left)"
 msgstr "Capovolgi il riempimento (parti da destra a sinistra)"
 
-#: lib/elements/fill.py:84
+#: lib/elements/fill.py:83
 msgid "The flip option can help you with routing your stitch path.  When you enable flip, stitching goes from right-to-left instead of left-to-right."
 msgstr "L'opzione di inversione può facilitare l'instradamento del percorso di cucitura. Quando è abilitata, l'ago va da destra a sinistra invece che da sinistra a destra."
 
-#: lib/elements/fill.py:93
+#: lib/elements/fill.py:92
 msgid "Spacing between rows"
 msgstr "Spaziatura tra le righe"
 
-#: lib/elements/fill.py:94
+#: lib/elements/fill.py:93
 msgid "Distance between rows of stitches."
 msgstr "Distanza tra righe di cucitura."
 
-#: lib/elements/fill.py:107
+#: lib/elements/fill.py:106
 msgid "Maximum fill stitch length"
 msgstr "Lunghezza massima del punto di riempimento"
 
-#: lib/elements/fill.py:108
+#: lib/elements/fill.py:107
 msgid "The length of each stitch in a row.  Shorter stitch may be used at the start or end of a row."
 msgstr "La lunghezza di ogni punto di una riga. I punti più corti potrebbero essere usati all'inizio o alla fine della riga."
 
-#: lib/elements/fill.py:117
+#: lib/elements/fill.py:116
 msgid "Stagger rows this many times before repeating"
 msgstr "Scorri le file questo tanto di volte prima di ripetere"
 
-#: lib/elements/fill.py:118
+#: lib/elements/fill.py:117
 msgid "Setting this dictates how many rows apart the stitches will be before they fall in the same column position."
 msgstr "Questa impostazione determina quante righe ci saranno dalla cucitura prima di arrivare alla stessa colonna."
 
@@ -617,13 +621,13 @@ msgstr "Consiglio: seleziona degli oggetti ed utilizza il comando \"Percorso -> 
 msgid "Please select one or more fill areas to break apart."
 msgstr ""
 
-#: lib/extensions/convert_to_satin.py:29
+#: lib/extensions/convert_to_satin.py:30
 msgid "Please select at least one line to convert to a satin column."
 msgstr "Seleziona almeno una linea per convertirla in una colonna raso."
 
 #. : Convert To Satin extension, user selected one or more objects that were
 #. not lines.
-#: lib/extensions/convert_to_satin.py:34
+#: lib/extensions/convert_to_satin.py:35
 msgid "Only simple lines may be converted to satin columns."
 msgstr "Solo linee semplici possono essere convertite in colonne raso."
 
@@ -646,6 +650,22 @@ msgstr "\n\n"
 #: lib/extensions/flip.py:24
 msgid "Please select one or more satin columns to flip."
 msgstr "Selezionare una o più colonne raso da ribaltare."
+
+#: lib/extensions/import_threadlist.py:28
+msgid "File not found."
+msgstr ""
+
+#: lib/extensions/import_threadlist.py:38
+msgid "Couldn't find any matching colors in the file."
+msgstr ""
+
+#: lib/extensions/import_threadlist.py:40
+msgid "Please try to import as \"other threadlist\" and specify a color palette below."
+msgstr ""
+
+#: lib/extensions/import_threadlist.py:42
+msgid "Please chose an other color palette for your design."
+msgstr ""
 
 #: lib/extensions/install.py:25
 msgid "Ink/Stitch can install files (\"add-ons\") that make it easier to use Inkscape to create machine embroidery designs.  These add-ons will be installed:"
@@ -1012,25 +1032,25 @@ msgstr "Genera file INX"
 msgid "Error writing to %(path)s: %(error)s"
 msgstr "Errore scrivendo in %(path)s: %(error)s"
 
-#: lib/stitches/auto_satin.py:652
+#: lib/stitches/auto_satin.py:655
 msgid "Auto-Satin"
 msgstr "Auto-raso"
 
 #. Label for a satin column created by Auto-Route Satin Columns and Lettering
 #. extensions
-#: lib/stitches/auto_satin.py:699
+#: lib/stitches/auto_satin.py:702
 #, python-format
 msgid "AutoSatin %d"
 msgstr "AutoRaso %d"
 
 #. Label for running stitch (underpathing) created by Auto-Route Satin Columns
 #. amd Lettering extensions
-#: lib/stitches/auto_satin.py:702
+#: lib/stitches/auto_satin.py:705
 #, python-format
 msgid "AutoSatin Running Stitch %d"
 msgstr "Punto progressivo AutoRase %d"
 
-#: lib/svg/rendering.py:226
+#: lib/svg/rendering.py:228
 msgid "Stitch Plan"
 msgstr "Piano di cucitura"
 
@@ -1663,6 +1683,22 @@ msgstr "Questi comandi agiscono sull'intero disegno di ricamo."
 #: templates/object_commands.inx:13
 msgid "Commands"
 msgstr "Comandi"
+
+#: templates/import_threadlist.inx:3
+msgid "Import Threadlist"
+msgstr ""
+
+#: templates/import_threadlist.inx:7
+msgid "Choose file"
+msgstr ""
+
+#: templates/import_threadlist.inx:8
+msgid "File Path"
+msgstr ""
+
+#: templates/import_threadlist.inx:8
+msgid "Enter path to file"
+msgstr ""
 
 #: templates/input.inx:9
 #, python-format
