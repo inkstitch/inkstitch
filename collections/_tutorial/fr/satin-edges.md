@@ -25,6 +25,6 @@ Télécharger le [fichier exemple](/assets/images/tutorials/samples/satin-edges.
 ![Bord Satin](/assets/images/tutorials/samples/satin-edges.svg)
 
 <hr>
-**Info:** Si vous ne comprenez pas ce que vous voyez ici, vous devriez lire l'article général sur [colonnes satin dans Ink/Stitch](/docs/stitches/satin-column/) first.
+**Info:** Si vous ne comprenez pas ce que vous voyez ici, vous devriez lire d'abord l'article général sur [colonnes satin dans Ink/Stitch](/docs/stitches/satin-column/).
 {: .notice--info }
 <hr>
