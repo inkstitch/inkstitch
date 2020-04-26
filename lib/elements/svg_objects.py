@@ -53,7 +53,6 @@ def ellipse_to_path(node):
            '%(cx_rx)f,%(cy)f %(rx)f,%(ry)f 0 0 1 ' \
            '%(cx)f,%(cy_ry)f %(rx)f,%(ry)f 0 0 1 ' \
            '%(cxrx)f,%(cy)f ' \
-           'Z' \
            % dict(cxrx=cx+rx, cyry=cy+ry, cx_rx=cx-rx, cy_ry=cy-ry, rx=rx, ry=ry, cx=cx, cy=cy)
 
     return path
@@ -70,7 +69,6 @@ def circle_to_path(node):
            '-%(r)f,-%(r)f %(r)f,%(r)f 0 0 1 ' \
            '%(r)f,-%(r)f %(r)f,%(r)f 0 0 1 ' \
            '%(r)f,%(r)f ' \
-           'Z' \
            % dict(xstart=cx+r, cy=cy, r=r)
 
     return path
