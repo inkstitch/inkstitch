@@ -3,6 +3,7 @@ const Mousetrap = require("mousetrap")
 import { SVG } from '@svgdotjs/svg.js'
 require('@svgdotjs/svg.panzoom.js/src/svg.panzoom.js')
 require('@svgdotjs/svg.filter.js')
+const svgpath = require('svgpath')
 import Loading from 'vue-loading-overlay';
 import 'vue-loading-overlay/dist/vue-loading.css';
 import VueSlider from 'vue-slider-component'
@@ -463,14 +464,14 @@ export default {
 
             // Angle
             var stitch_angle = Math.atan2(stitch.y - prevStitch.y, stitch.x - prevStitch.x) * (180 / Math.PI)
-            // the filter rotates with the object, so let's make sure we always rotate into the same direction
-            //if (stitch_angle > 90) { stitch_angle -= 180 }
-            //if (stitch_angle <= -90) { stitch_angle += 180 }
 
             // Length
             let path_length = Math.hypot(stitch.x - prevStitch.x, stitch.y - prevStitch.y)
 
-            realisticPath = this.realisticPreview.path(`M0,0c0.4,0,0.4,0.3,0.4,0.6c0,0.3,-0.1,0.6,-0.4,0.6v0.2,-0.2h-${path_length}c-0.4,0,-0.4,-0.3,-0.4,-0.6c0,-0.3,0.1,-0.6,0.4,-0.6v-0.2,0.2z`).attr(realistic_path_attrs).center(stitch_center.x, stitch_center.y).rotate(stitch_angle).hide()
+            var path = `M0,0 c 0.4,0,0.4,0.3,0.4,0.6 c 0,0.3,-0.1,0.6,-0.4,0.6 v 0.2,-0.2 h -${path_length} c -0.4,0,-0.4,-0.3,-0.4,-0.6 c 0,-0.3,0.1,-0.6,0.4,-0.6 v -0.2,0.2 z`
+            path = svgpath(path).rotate(stitch_angle).toString()
+
+            realisticPath = this.realisticPreview.path(path).attr(realistic_path_attrs).center(stitch_center.x, stitch_center.y).hide()
 
           } else {
             realisticPath = this.realisticPreview.rect(0, 1).attr(realistic_path_attrs).center(stitch.x, stitch.y).hide()
@@ -483,7 +484,6 @@ export default {
           } else if (!stitch.jump) {
             stitching = true
           }
-
           prevStitch = stitch
         })
       })
