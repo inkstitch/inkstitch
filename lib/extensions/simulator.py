@@ -4,7 +4,7 @@ from ..gui import open_url
 from .base import InkstitchExtension
 
 
-class ElectronSimulator(InkstitchExtension):
+class Simulator(InkstitchExtension):
     def __init__(self):
         InkstitchExtension.__init__(self)
 

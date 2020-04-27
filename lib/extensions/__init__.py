@@ -2,7 +2,6 @@ from auto_satin import AutoSatin
 from break_apart import BreakApart
 from convert_to_satin import ConvertToSatin
 from cut_satin import CutSatin
-from electron_simulator import ElectronSimulator
 from embroider import Embroider
 from flip import Flip
 from global_commands import GlobalCommands
@@ -17,7 +16,7 @@ from output import Output
 from params import Params
 from print_pdf import Print
 from remove_embroidery_settings import RemoveEmbroiderySettings
-from simulate import Simulate
+from simulator import Simulator
 from stitch_plan_preview import StitchPlanPreview
 from zip import Zip
 
@@ -26,7 +25,6 @@ __all__ = extensions = [Embroider,
                         Install,
                         Params,
                         Print,
-                        Simulate,
                         Input,
                         Output,
                         Zip,
@@ -42,4 +40,4 @@ __all__ = extensions = [Embroider,
                         RemoveEmbroiderySettings,
                         BreakApart,
                         ImportThreadlist,
-                        ElectronSimulator]
+                        Simulator]
