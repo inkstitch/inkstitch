@@ -53,10 +53,10 @@ else:
             print >> sys.stderr, shapely_errors.getvalue()
 
     if exception:
-        print >> sys.stderr, _("Ink/Stitch experienced an unexpected error.")
+        print >> sys.stderr, _("Ink/Stitch experienced an unexpected error.").encode("UTF-8")
         print >> sys.stderr, _("If you'd like to help, please file an issue at "
                                "https://github.com/inkstitch/inkstitch/issues "
-                               "and include the entire error description below:"), "\n"
+                               "and include the entire error description below:").encode("UTF-8"), "\n"
         print >> sys.stderr, exception
         sys.exit(1)
     else:
