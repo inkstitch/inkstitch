@@ -1,7 +1,8 @@
-import simplestyle
-import re
 import colorsys
 from pyembroidery.EmbThread import EmbThread
+import re
+
+import simplestyle
 
 
 class ThreadColor(object):
@@ -26,6 +27,20 @@ class ThreadColor(object):
         self.name = name
         self.number = number
         self.manufacturer = manufacturer
+
+    def __json__(self):
+        jsonified = self._as_dict()
+        jsonified["visible_on_white"] = self.visible_on_white._as_dict()
+
+        return jsonified
+
+    def _as_dict(self):
+        return dict(name=self.name,
+                    number=self.number,
+                    manufacturer=self.manufacturer,
+                    rgb=self.rgb,
+                    hex=self.to_hex_str(),
+                    )
 
     def __eq__(self, other):
         if isinstance(other, ThreadColor):

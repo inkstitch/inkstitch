@@ -1,0 +1,280 @@
+* {
+  box-sizing: border-box;
+}
+
+.loading-icon {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: rgb(0, 51, 153);
+}
+
+.loading-text {
+  font-family: sans-serif;
+}
+
+.loading {
+  border-radius: 1rem;
+  border: 3px solid rgb(0, 51, 153);
+  background-color: rgba(0, 51, 153, 0.1);
+  padding: 1rem;
+}
+
+button {
+  color: rgb(0, 51, 153)
+}
+
+.fa-spin-fast {
+  animation: fa-spin 0.4s infinite linear;
+}
+
+.fa-button {
+  margin: 3px;
+}
+
+.fa-fast {
+  transform: skew(-15deg, -15deg) rotate(15deg) scale(1.25, 0.90);
+}
+
+.fa-motion-lines {
+  transform: scale(1.0, 1.6) translate(0, -18%) skew(-15deg, -15deg) rotate(15deg);
+}
+
+.fa-thin-line {
+  transform: scale(1.4, 0.4);
+}
+
+.panel {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: wrap;
+}
+
+.panel > * {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.panel fieldset {
+  text-align: center;
+  flex: 1;
+  white-space: nowrap;
+}
+
+fieldset {
+  border: 2px solid rgb(0, 51, 153);
+  position: relative;
+}
+
+.window-controls {
+  position: absolute;
+  top: -0.2rem;
+  right: -2px;
+  font-size: 0.8rem;
+  color: white;
+  background: rgb(0, 51, 153);
+  transform: scale(1, 0.8) translate(0, -100%);
+}
+
+.window-controls > div {
+  display: inline-block;
+  padding: 5px;
+}
+
+.control-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  transform: translate(-100%, -100%);
+  padding: 0 1rem 1rem;
+  background: white;
+  color: black;
+  border: 1px solid rgb(0, 51, 153);
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.info-icon {
+  float: right;
+}
+
+.control-info h1 {
+  background: rgb(0, 51, 153);
+  color: white;
+  margin: 0 -1rem 1rem;
+  padding: 1rem;
+}
+
+.control-info div {
+  display: table-row;
+}
+
+.control-info > div {
+  display: table;
+}
+
+.control-info div:first-child p {
+  font-weight: bold;
+}
+
+.control-info p {
+  display: table-cell;
+  white-space: nowrap;
+  border-bottom: 1px solid #ccc;
+  padding: 0.5rem;
+}
+
+fieldset button {
+  display: inline-block;
+}
+
+fieldset.command span.current-command {
+  display: block;
+  width: 18rem;
+  margin: 0 auto;
+  font-family: sans-serif;
+  font-size: 2rem;
+  vertical-align: middle;
+}
+
+fieldset.show-commands {
+  text-align: left;
+}
+
+fieldset.show-commands span {
+  display: inline-block;
+  vertical-align: top;
+}
+
+fieldset.show-commands span.npp {
+  text-align: right;
+}
+
+fieldset.show-commands span:first-of-type {
+  padding-right: 12px;
+}
+
+button.pressed {
+  border-style: inset;
+}
+
+.vue-slider {
+  height: 25px !important;
+}
+
+.slider-container {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  flex-grow: 0;
+}
+
+.slider-container > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.slider-box {
+  width: calc(100% - 11rem);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.slider-container::v-deep .vue-slider-mark-step {
+  width: 2px;
+  height: 20px;
+  border-radius: 2px;
+  background: #545454;
+  transform: translate(1px, -25%);
+  box-shadow: inset 1px 0 1px #ffffffbd, inset -1px 0 1px black;
+}
+
+.slider-container::v-deep .vue-slider-mark:first-child .vue-slider-mark-step,
+.slider-container::v-deep .vue-slider-mark:last-child .vue-slider-mark-step {
+  display: block;
+}
+
+.slider-container::v-deep .vue-slider-rail {
+  border: 1px solid #dedede;
+}
+
+.slider-container::v-deep .vue-slider-process {
+  border-radius: 0;
+  box-shadow: inset 0px 2px 2px #ffffff80, inset 0px -2px 2px #0000002e;
+}
+
+.slider-container::v-deep .vue-slider-process:first-child {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.slider-container::v-deep .vue-slider-process:nth-last-child(3) {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.vue-slider-mark-label {
+  font-size: 1.4rem;
+  color: #545454;
+}
+
+.vue-slider-mark-label svg path {
+  stroke: white;
+  stroke-width: 10px;
+}
+
+.slider-label-trim {
+  transform: scale(1, 0.75) translate(-50%, -9px);
+}
+
+.slider-label-stop {
+  font-size: 1.2rem;
+  transform: translate(-50%, 12px);
+}
+
+.slider-label-jump {
+  transform: translate(-50%, -50px);
+}
+
+.slider-label-color-change {
+  transform: translate(-50%, 10px);
+}
+
+.current-stitch-input {
+  width: 4rem;
+  float: right;
+  font-size: 1rem;
+}
+
+.simulator {
+  display: flex;
+  flex-direction: column;
+  height: 95vh;
+}
+
+.current-command {
+  color: rgb(0, 51, 153);
+  font-weight: bold;
+}
+
+/* we need ::v-deep here because the svg tag is added by svg.js and so Vue
+   can't add the data-v-* attribute
+ */
+div.simulator::v-deep svg.simulation {
+  flex-grow: 1;
+  flex-shrink: 1;
+  order: -2;
+}
+
+div.simulator::v-deep svg.simulation-scale {
+  height: 50px;
+  order: -1;
+}
+
+div.simulator::v-deep .simulation-scale-label {
+  font-size: 14px;
+}
+
+div.simulator::v-deep .cursor {
+  /* not sure what to add here to make it more visible */
+}
