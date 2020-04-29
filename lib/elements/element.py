@@ -159,20 +159,14 @@ class EmbroideryElement(object):
         style = {declaration.lower_name: declaration.value[0].serialize() for declaration in declarations}
         return style
 
-    def get_inherited_style(self, element, style_name):
-        style = self.parse_style(element)
-        style = style.get(style_name) or element.get(style_name)
-        if not style:
-            parent = element.getparent()
-            if parent is not None:
-                style = self.get_inherited_style(parent, style_name)
-        return style
-
     def get_style(self, style_name, default=None):
         style = self.style.get(style_name) or self.node.get(style_name)
         # style not found, get inherited style elements
-        if not style:
-            style = self.get_inherited_style(self.node.getparent(), style_name)
+        parent = self.node.getparent()
+        while not style and parent is not None:
+            style = self.parse_style(parent)
+            style = style.get(style_name) or parent.get(style_name)
+            parent = parent.getparent()
         # style not found, set default value
         if not style:
             style = default
