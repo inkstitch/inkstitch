@@ -98,6 +98,14 @@ class StitchPlan(object):
     def __repr__(self):
         return "StitchPlan(%s)" % ", ".join(repr(cb) for cb in self.color_blocks)
 
+    def __json__(self):
+        return dict(color_blocks=self.color_blocks,
+                    num_stops=self.num_stops,
+                    num_trims=self.num_trims,
+                    num_stitches=self.num_stitches,
+                    bounding_box=self.bounding_box
+                    )
+
     @property
     def num_colors(self):
         """Number of unique colors in the stitch plan."""
@@ -174,6 +182,9 @@ class ColorBlock(object):
 
     def __delitem__(self, item):
         del self.stitches[item]
+
+    def __json__(self):
+        return dict(color=self.color, stitches=self.stitches)
 
     def has_color(self):
         return self._color is not None

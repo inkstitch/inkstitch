@@ -8,9 +8,10 @@ dist/
 build/
 locales/
 /inx/
-messages.po
+*.po
 /DEBUG
 .pydevproject
 .project
 /debug.log
 /debug.svg
+/.idea

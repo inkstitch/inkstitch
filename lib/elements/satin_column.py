@@ -2,14 +2,13 @@ from copy import deepcopy
 from itertools import chain, izip
 
 import cubicsuperpath
-from shapely import geometry as shgeo, affinity as shaffinity
+from shapely import affinity as shaffinity, geometry as shgeo
 
+from .element import EmbroideryElement, Patch, param
+from .validation import ValidationError
 from ..i18n import _
 from ..svg import line_strings_to_csp, point_lists_to_csp
-from ..utils import cache, Point, cut, collapse_duplicate_point
-
-from .element import param, EmbroideryElement, Patch
-from .validation import ValidationError
+from ..utils import Point, cache, collapse_duplicate_point, cut
 
 
 class SatinHasFillError(ValidationError):
@@ -587,134 +586,82 @@ class SatinColumn(EmbroideryElement):
                 distance_remaining -= segment_length
                 pos = segment_end
 
-    def calculate_spacings(self, spacing):
-        """Determine how far apart to space stitches in each section.
-
-        The user has used rungs to break up the satin into sections.  Our
-        job is to ensure that a stitch approximately lines up with each rung
-        and that we transition smoothly from rung to rung.
-
-        This function calculates the peak-to-peak spacing along each rung in
-        each section.  It records the calculated spacings in a lookup table
-        keyed by the indices of the points that define each rail.
-        """
-
-        spacings = [[], []]
-        paths = [[], []]
-
-        for section0, section1 in self.flattened_sections:
-            len0 = shgeo.LineString(section0).length
-            len1 = shgeo.LineString(section1).length
-
-            # Base the number of stitches in each section on the _longest_ of
-            # the two beziers. Otherwise, things could get too sparse when one
-            # side is significantly longer (e.g. when going around a corner).
-            # The risk here is that we poke a hole in the fabric if we try to
-            # cram too many stitches on the short bezier.  The user will need
-            # to avoid this through careful construction of paths.
-            #
-            # TODO: some commercial machine embroidery software compensates by
-            # pulling in some of the "inner" stitches toward the center a bit.
-
-            # note, this rounds down using integer-division
-            num_stitches = max(len0, len1) / spacing
-
-            # Once we know how many stitches will occur in this section, the
-            # peak-to-peak spacing along each rail is easy.
-            spacing0 = len0 / num_stitches
-            spacing1 = len1 / num_stitches
-
-            for i in xrange(len(section0)):
-                spacings[0].append(spacing0)
-            paths[0].extend(section0)
-
-            for i in xrange(len(section1)):
-                spacings[1].append(spacing1)
-            paths[1].extend(section1)
-
-        return spacings, paths
-
-    def plot_points_on_rails(self, spacing, offset, compensation=True):
+    def plot_points_on_rails(self, spacing, offset):
         # Take a section from each rail in turn, and plot out an equal number
         # of points on both rails.  Return the points plotted. The points will
         # be contracted or expanded by offset using self.offset_points().
-
-        points = [[], []]
-        spacings, paths = self.calculate_spacings(spacing)
 
         def add_pair(pos0, pos1):
             pos0, pos1 = self.offset_points(pos0, pos1, offset)
             points[0].append(pos0)
             points[1].append(pos1)
 
-        pos0 = paths[0][0]
-        old_pos0 = pos0
-        index0 = 0
-        last_index0 = len(paths[0]) - 1
+        points = [[], []]
 
-        pos1 = paths[1][0]
-        old_pos1 = pos1
-        index1 = 0
-        last_index1 = len(paths[1]) - 1
+        to_travel = 0
 
-        while index0 < last_index0 or index1 < last_index1:
-            add_pair(pos0, pos1)
+        for section0, section1 in self.flattened_sections:
+            # Take one section at a time, delineated by the rungs.  For each
+            # one, we want to try to travel proportionately on each rail as
+            # we go between stitches.  For example, for the letter O, the
+            # outside rail is longer than the inside rail.  We need to travel
+            # further on the outside rail between each stitch than we do
+            # on the inside rail.
 
-            old_pos0 = pos0
-            old_pos1 = pos1
+            pos0 = section0[0]
+            pos1 = section1[0]
 
-            spacing0 = spacings[0][index0]
-            spacing1 = spacings[1][index1]
+            len0 = shgeo.LineString(section0).length
+            len1 = shgeo.LineString(section1).length
 
-            pos0, index0 = self.walk(paths[0], pos0, index0, spacing0)
-            pos1, index1 = self.walk(paths[1], pos1, index1, spacing1)
+            last_index0 = len(section0) - 1
+            last_index1 = len(section1) - 1
 
-            if compensation:
-                try:
-                    # Adjust for rails that contract or expand from each other.
-                    # Without any compensation, rail sections that spread out or come
-                    # together are longer than parallel rails, and we'll plot stitches
-                    # too densely as a result.  We can compensate by using some trig,
-                    # as described here:
+            ratio = len1 / len0
+
+            index0 = 0
+            index1 = 0
+
+            while index0 < last_index0 and index1 < last_index1:
+                # Each iteration of this outer loop is one stitch.  Keep going
+                # until we fall off the end of the section.
+
+                old_center = (pos0 + pos1) / 2.0
+
+                while to_travel > 0 and index0 < last_index0 and index1 < last_index1:
+                    # In this loop, we inch along each rail a tiny bit per
+                    # iteration.  The goal is to travel the requested spacing
+                    # amount along the _centerline_ between the two rails.
                     #
-                    # https://github.com/inkstitch/inkstitch/issues/379#issuecomment-467262685
-                    stitch_direction = (pos1 - pos0).unit()
-                    peak_to_peak0 = pos0 - old_pos0
-                    peak_to_peak1 = pos1 - old_pos1
-
-                    # The dot product of two unit vectors is the cosine of the angle
-                    # between them.  We want the cosine of the angle minus 90 degrees,
-                    # so we rotate left by 90 degrees first.
+                    # Why not just travel the requested amount along the rails
+                    # themselves?  Imagine a letter V.  The distance we travel
+                    # along the rails themselves is much longer than the distance
+                    # between the horizontal stitches themselves:
                     #
-                    # We take the absolute value to correct for the different direction
-                    # of the angles on the opposing rails.
-                    cos1 = abs(peak_to_peak0.unit() * stitch_direction.rotate_left())
-                    cos2 = abs(peak_to_peak1.unit() * stitch_direction.rotate_left())
+                    # \______/
+                    #  \____/
+                    #   \__/
+                    #    \/
+                    #
+                    # For more complicated rail shapes, the distance between each
+                    # stitch will vary as the angles of the rails vary.  The
+                    # easiest way to compensate for this is to just go a tiny bit
+                    # at a time and see how far we went.
 
-                    # Use the smaller of the two angles to avoid spacing out
-                    # too far on the other rail.  Note that the cosine of 0
-                    # is 1, so we use min here to mean a bigger angle.
-                    cos = min(cos1, cos2)
+                    # Note that this is 0.05 pixels, which is around 0.01mm, way
+                    # smaller than the resolution of an embroidery machine.
+                    pos0, index0 = self.walk(section0, pos0, index0, 0.05)
+                    pos1, index1 = self.walk(section1, pos1, index1, 0.05 * ratio)
 
-                    # Beyond 0.55 (about 56 degrees), we end up distorting the
-                    # stitching and it looks bad.
-                    cos = max(cos, 0.55)
+                    new_center = (pos0 + pos1) / 2.0
+                    to_travel -= new_center.distance(old_center)
+                    old_center = new_center
 
-                    pos0, index0 = self.walk(paths[0], pos0, index0, spacing0 / cos - spacing0)
-                    pos1, index1 = self.walk(paths[1], pos1, index1, spacing1 / cos - spacing1)
-                except ZeroDivisionError:
-                    # These can occur in unit() if the vector has a length of zero,
-                    # which can happen in certain cases.  We'll just skip the
-                    # compensation.
-                    continue
+                if to_travel <= 0:
+                    add_pair(pos0, pos1)
+                    to_travel = spacing
 
-        # We're off by one in the algorithm above, so we need one more
-        # pair of points.  We'd like to add points at the very end to
-        # make sure we match the vectors on screen as best as possible,
-        # but we avoid doing so if the stitches will stack up too closely.
-
-        if (pos0 - old_pos0).length() > 0.1 * spacing and \
-           (pos1 - old_pos1).length() > 0.1 * spacing:
+        if to_travel > 0:
             add_pair(pos0, pos1)
 
         return points
@@ -723,8 +670,7 @@ class SatinColumn(EmbroideryElement):
         # "contour walk" underlay: do stitches up one side and down the
         # other.
         forward, back = self.plot_points_on_rails(self.contour_underlay_stitch_length,
-                                                  -self.contour_underlay_inset,
-                                                  compensation=False)
+                                                  -self.contour_underlay_inset)
         return Patch(color=self.color, stitches=(forward + list(reversed(back))))
 
     def do_center_walk(self):
@@ -733,8 +679,7 @@ class SatinColumn(EmbroideryElement):
 
         # Do it like contour underlay, but inset all the way to the center.
         forward, back = self.plot_points_on_rails(self.center_walk_underlay_stitch_length,
-                                                  -100000,
-                                                  compensation=False)
+                                                  -100000)
         return Patch(color=self.color, stitches=(forward + list(reversed(back))))
 
     def do_zigzag_underlay(self):

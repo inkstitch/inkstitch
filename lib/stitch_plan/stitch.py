@@ -31,3 +31,6 @@ class Stitch(Point):
 
     def copy(self):
         return Stitch(self.x, self.y, self.color, self.jump, self.stop, self.trim, self.color_change, self.no_ties)
+
+    def __json__(self):
+        return vars(self)

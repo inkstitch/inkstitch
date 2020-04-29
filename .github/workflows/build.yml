@@ -12,6 +12,9 @@ jobs:
       - uses: actions/checkout@v1
         with:
           submodules: recursive
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '11.x'
       - name: download dependencies
         shell: bash
         run: |
@@ -22,6 +25,8 @@ jobs:
           # I'd love to use a setup-python action but it seems to give a
           # python that doesn't support unicode.  See:
           #   https://github.com/actions/setup-python/issues/23
+
+          sudo apt-get update
 
           sudo apt-get install python2.7
           python -m pip install --upgrade pip
@@ -68,6 +73,9 @@ jobs:
       - uses: actions/checkout@v1
         with:
           submodules: recursive
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '11.x'
       - uses: actions/setup-python@v1
         with:
           python-version: '2.7.x'
@@ -110,9 +118,15 @@ jobs:
       - uses: actions/checkout@v1
         with:
           submodules: recursive
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '11.x'
       - uses: actions/setup-python@v1
         with:
           python-version: '2.7.x'
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
       - name: download inkscape
         shell: bash
         run: |

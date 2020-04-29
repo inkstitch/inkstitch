@@ -16,7 +16,7 @@ from output import Output
 from params import Params
 from print_pdf import Print
 from remove_embroidery_settings import RemoveEmbroiderySettings
-from simulate import Simulate
+from simulator import Simulator
 from stitch_plan_preview import StitchPlanPreview
 from zip import Zip
 
@@ -25,7 +25,6 @@ __all__ = extensions = [Embroider,
                         Install,
                         Params,
                         Print,
-                        Simulate,
                         Input,
                         Output,
                         Zip,
@@ -40,4 +39,5 @@ __all__ = extensions = [Embroider,
                         Troubleshoot,
                         RemoveEmbroiderySettings,
                         BreakApart,
-                        ImportThreadlist]
+                        ImportThreadlist,
+                        Simulator]
