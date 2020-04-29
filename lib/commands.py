@@ -241,7 +241,10 @@ def is_command(node):
 
 
 def is_command_symbol(node):
-    symbol = node.get(XLINK_HREF)[11:]
+    symbol = None
+    xlink = node.get(XLINK_HREF, "")
+    if len(xlink) > 11:
+        symbol = node.get(XLINK_HREF)[11:]
     return symbol in OBJECT_COMMANDS or symbol in GLOBAL_COMMANDS
 
 

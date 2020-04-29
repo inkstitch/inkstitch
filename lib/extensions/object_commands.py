@@ -3,6 +3,7 @@ import inkex
 from ..commands import OBJECT_COMMANDS, add_commands
 from ..i18n import _
 from .commands import CommandsExtension
+from ..svg.tags import EMBROIDERABLE_TAGS
 
 
 class ObjectCommands(CommandsExtension):
@@ -29,6 +30,6 @@ class ObjectCommands(CommandsExtension):
         seen_nodes = set()
 
         for element in self.elements:
-            if element.node not in seen_nodes:
+            if element.node not in seen_nodes and element.node in EMBROIDERABLE_TAGS:
                 add_commands(element, commands)
                 seen_nodes.add(element.node)

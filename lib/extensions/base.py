@@ -8,13 +8,13 @@ from stringcase import snakecase
 
 import inkex
 
-from ..commands import is_command, layer_commands
+from ..commands import layer_commands
 from ..elements import EmbroideryElement, nodes_to_elements
 from ..elements.clone import is_clone, is_embroiderable_clone
 from ..i18n import _
 from ..svg import generate_unique_id
-from ..svg.tags import (INKSCAPE_GROUPMODE, NOT_EMBROIDERABLE_TAGS,
-                        SVG_DEFS_TAG, SVG_GROUP_TAG)
+from ..svg.tags import (EMBROIDERABLE_TAGS, INKSCAPE_GROUPMODE,
+                        NOT_EMBROIDERABLE_TAGS, SVG_DEFS_TAG, SVG_GROUP_TAG)
 
 SVG_METADATA_TAG = inkex.addNS("metadata", "svg")
 
@@ -132,7 +132,7 @@ class InkstitchExtension(inkex.Effect):
 
         inkex.errormsg(_("Tip: Select some objects and use Path -> Object to Path to convert them to paths.") + "\n")
 
-    def descendants(self, node, selected=False):
+    def descendants(self, node, selected=False, troubleshoot=False):  # noqa: C901
         nodes = []
         element = EmbroideryElement(node)
 
@@ -157,24 +157,21 @@ class InkstitchExtension(inkex.Effect):
             selected = True
 
         for child in node:
-            nodes.extend(self.descendants(child, selected))
+            nodes.extend(self.descendants(child, selected, troubleshoot))
 
-        if selected and not is_command(node):
-            nodes.append(node)
+        if selected:
+            if node.tag in EMBROIDERABLE_TAGS or is_embroiderable_clone(node):
+                nodes.append(node)
+            elif troubleshoot and (node.tag in NOT_EMBROIDERABLE_TAGS or is_clone(node)):
+                nodes.append(node)
 
         return nodes
 
-    def get_nodes(self):
-        return self.descendants(self.document.getroot())
+    def get_nodes(self, troubleshoot=False):
+        return self.descendants(self.document.getroot(), troubleshoot=troubleshoot)
 
     def get_elements(self, troubleshoot=False):
-        self.elements = nodes_to_elements(self.get_nodes())
-        if not troubleshoot:
-            # strip out elements with empty to_patches
-            for element in self.elements:
-                if (element.node.tag in NOT_EMBROIDERABLE_TAGS or
-                   (is_clone(element.node) and not is_embroiderable_clone(element.node))):
-                    self.elements.remove(element)
+        self.elements = nodes_to_elements(self.get_nodes(troubleshoot))
         if self.elements:
             return True
         if not troubleshoot:

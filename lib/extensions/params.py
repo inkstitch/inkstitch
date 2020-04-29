@@ -472,17 +472,13 @@ class Params(InkstitchExtension):
             elif is_clone(node):
                 classes.append(Clone)
             else:
-
-                if element.get_style("fill", "black") is not None:
+                if element.get_style("fill", 'black') and not element.get_style("fill-opacity", 1) == "0":
                     classes.append(AutoFill)
                     classes.append(Fill)
-
                 if element.get_style("stroke") is not None:
                     classes.append(Stroke)
-
                     if element.get_style("stroke-dasharray") is None:
                         classes.append(SatinColumn)
-
         return classes
 
     def get_nodes_by_class(self):

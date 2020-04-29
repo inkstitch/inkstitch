@@ -43,6 +43,8 @@ inkstitch_attribs = [
                 'ties',
                 'trim_after',
                 'stop_after',
+                # clone
+                'clone',
                 # fill
                 'angle',
                 'auto_fill',

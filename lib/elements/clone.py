@@ -8,8 +8,8 @@ from ..commands import is_command, is_command_symbol
 from ..i18n import _
 from ..svg.path import get_node_transform
 from ..svg.svg import find_elements
-from ..svg.tags import (EMBROIDERABLE_TAGS, SVG_POLYLINE_TAG, SVG_USE_TAG,
-                        XLINK_HREF)
+from ..svg.tags import (EMBROIDERABLE_TAGS, INKSTITCH_ATTRIBS,
+                        SVG_POLYLINE_TAG, SVG_USE_TAG, XLINK_HREF)
 from ..utils import cache
 from .auto_fill import AutoFill
 from .element import EmbroideryElement, param
@@ -17,7 +17,7 @@ from .fill import Fill
 from .polyline import Polyline
 from .satin_column import SatinColumn
 from .stroke import Stroke
-from .validation import ValidationWarning
+from .validation import ObjectTypeWarning, ValidationWarning
 
 
 class CloneWarning(ValidationWarning):
@@ -31,7 +31,7 @@ class CloneWarning(ValidationWarning):
     ]
 
 
-class CloneSourceWarning(ValidationWarning):
+class CloneSourceWarning(ObjectTypeWarning):
     name = _("Clone is not embroiderable")
     description = _("There is one ore more clone objects in this document. A clone must be a direct child of an embroiderable element. "
                     "Ink/Stitch cannot embroider clones of groups or other not embroiderable elements (text or image).")
@@ -52,19 +52,19 @@ class Clone(EmbroideryElement):
         super(Clone, self).__init__(*args, **kwargs)
 
     @property
-    @param('clone_element', _("Clone"), type='toggle', inverse=False, default=True)
-    def clone_element(self):
-        return self.get_boolean_param("clone_element")
+    @param('clone', _("Clone"), type='toggle', inverse=False, default=True)
+    def clone(self):
+        return self.get_boolean_param("clone")
 
     @property
-    @param('clone_fill_angle',
+    @param('angle',
            _('Custom fill angle'),
            tooltip=_("This setting will apply a custom fill angle for the clone."),
            unit='deg',
            type='float')
     @cache
     def clone_fill_angle(self):
-        return self.get_float_param("clone_fill_angle")
+        return self.get_float_param('angle', 0)
 
     def clone_to_element(self, node):
         # we need to determine if the source element is polyline, stroke, fill or satin
@@ -110,8 +110,9 @@ class Clone(EmbroideryElement):
         # set fill angle. Use either
         # a. a custom set fill angle
         # b. calculated rotation for the cloned fill element to look exactly as it's source
+        param = INKSTITCH_ATTRIBS['angle']
         if self.clone_fill_angle is not None:
-            embroider_angle = self.clone_fill_angle
+            angle = self.clone_fill_angle
         else:
             # clone angle
             clone_mat = parseTransform(clone.get('transform', ''))
@@ -120,10 +121,10 @@ class Clone(EmbroideryElement):
             source_mat = parseTransform(source_node.get('transform', ''))
             source_angle = degrees(atan(-source_mat[1][0]/source_mat[1][1]))
             # source node fill angle
-            source_fill_angle = source_node.get('embroider_angle', 0)
+            source_fill_angle = source_node.get(param, 0)
 
-            embroider_angle = clone_angle + float(source_fill_angle) - source_angle
-        clone.set('embroider_angle', str(embroider_angle))
+            angle = clone_angle + float(source_fill_angle) - source_angle
+        clone.set(param, str(angle))
 
         elements = self.clone_to_element(clone)
 

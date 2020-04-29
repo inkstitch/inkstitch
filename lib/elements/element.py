@@ -1,15 +1,16 @@
 import sys
 from copy import deepcopy
 
-import cubicsuperpath
 import tinycss2
+
+import cubicsuperpath
 from cspsubdiv import cspsubdiv
 
 from ..commands import find_commands
 from ..i18n import _
 from ..svg import PIXELS_PER_MM, apply_transforms, convert_length, get_doc_size
-from ..svg.tags import (INKSCAPE_LABEL, SVG_CIRCLE_TAG, SVG_ELLIPSE_TAG,
-                        SVG_OBJECT_TAGS, SVG_RECT_TAG, INKSTITCH_ATTRIBS)
+from ..svg.tags import (INKSCAPE_LABEL, INKSTITCH_ATTRIBS, SVG_CIRCLE_TAG,
+                        SVG_ELLIPSE_TAG, SVG_OBJECT_TAGS, SVG_RECT_TAG)
 from ..utils import cache
 from .svg_objects import circle_to_path, ellipse_to_path, rect_to_path
 
