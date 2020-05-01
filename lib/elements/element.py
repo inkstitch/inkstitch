@@ -147,11 +147,7 @@ class EmbroideryElement(object):
         param = INKSTITCH_ATTRIBS[name]
         self.node.set(param, str(value))
 
-    @property
     @cache
-    def style(self):
-        return self.parse_style()
-
     def parse_style(self, node=None):
         if node is None:
             node = self.node
@@ -159,10 +155,12 @@ class EmbroideryElement(object):
         style = {declaration.lower_name: declaration.value[0].serialize() for declaration in declarations}
         return style
 
-    def get_style(self, style_name, default=None):
-        style = self.style.get(style_name) or self.node.get(style_name)
-        # style not found, get inherited style elements
+    @cache
+    def get_style(self, style_name, default=None, has_style=False):
+        style = self.parse_style()
+        style = style.get(style_name) or self.node.get(style_name)
         parent = self.node.getparent()
+        # style not found, get inherited style elements
         while not style and parent is not None:
             style = self.parse_style(parent)
             style = style.get(style_name) or parent.get(style_name)
@@ -170,12 +168,12 @@ class EmbroideryElement(object):
         # style not found, set default value
         if not style:
             style = default
-        if style == 'none':
+        if style == 'none' and not has_style:
             style = None
         return style
 
-    def has_style(self, style_name):
-        return style_name in self.style
+    def has_style(self, style_name, has_style=True):
+        return self.get_style(style_name, has_style=True) is not None
 
     @property
     @cache
