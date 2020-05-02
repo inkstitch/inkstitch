@@ -1,7 +1,7 @@
 Small Font
 ==========
 
-This is a small font for use in machine embroidery.  It includes capital and lowercase letters, numbers, and the following punctuation: `< > = - + , : ( ) @ . _ ' " “ ”`
+This is a small font for use in machine embroidery.  It includes capital and lowercase letters, numbers, and the following punctuation: `< > = - + , : ( ) @ . _ ' " “ ”#`
 
 Currently one size is available, 0.2 inches, as measured by the width of the capital letter "M".
 
