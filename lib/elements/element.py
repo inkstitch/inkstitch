@@ -156,7 +156,7 @@ class EmbroideryElement(object):
         return style
 
     @cache
-    def get_style(self, style_name, default=None, has_style=False):
+    def _get_style_raw(self, style_name):
         style = self.parse_style()
         style = style.get(style_name) or self.node.get(style_name)
         parent = self.node.getparent()
@@ -165,15 +165,16 @@ class EmbroideryElement(object):
             style = self.parse_style(parent)
             style = style.get(style_name) or parent.get(style_name)
             parent = parent.getparent()
-        # style not found, set default value
-        if not style:
-            style = default
-        if style == 'none' and not has_style:
+        return style
+
+    def get_style(self, style_name, default=None):
+        style = self._get_style_raw(style_name) or default
+        if style == 'none':
             style = None
         return style
 
-    def has_style(self, style_name, has_style=True):
-        return self.get_style(style_name, has_style=True) is not None
+    def has_style(self, style_name):
+        return self._get_style_raw(style_name) is not None
 
     @property
     @cache
