@@ -147,25 +147,34 @@ class EmbroideryElement(object):
         param = INKSTITCH_ATTRIBS[name]
         self.node.set(param, str(value))
 
-    @property
     @cache
-    def style(self):
-        declarations = tinycss2.parse_declaration_list(self.node.get("style", ""))
+    def parse_style(self, node=None):
+        if node is None:
+            node = self.node
+        declarations = tinycss2.parse_declaration_list(node.get("style", ""))
         style = {declaration.lower_name: declaration.value[0].serialize() for declaration in declarations}
+        return style
 
+    @cache
+    def _get_style_raw(self, style_name):
+        style = self.parse_style()
+        style = style.get(style_name) or self.node.get(style_name)
+        parent = self.node.getparent()
+        # style not found, get inherited style elements
+        while not style and parent is not None:
+            style = self.parse_style(parent)
+            style = style.get(style_name) or parent.get(style_name)
+            parent = parent.getparent()
         return style
 
     def get_style(self, style_name, default=None):
-        style = self.style.get(style_name)
-        # Style not found, let's see if it is set as a separate attribute
-        if style is None:
-            style = self.node.get(style_name, default)
+        style = self._get_style_raw(style_name) or default
         if style == 'none':
             style = None
         return style
 
     def has_style(self, style_name):
-        return style_name in self.style
+        return self._get_style_raw(style_name) is not None
 
     @property
     @cache

@@ -210,7 +210,6 @@ class RunningStitch(object):
             self.path = path_or_stroke
 
         self.original_element = original_element
-        self.style = original_element.node.get('style', '')
         self.running_stitch_length = \
             original_element.node.get(INKSTITCH_ATTRIBS['running_stitch_length_mm'], '') or \
             original_element.node.get(INKSTITCH_ATTRIBS['center_walk_underlay_stitch_length_mm'], '') or \
@@ -221,7 +220,7 @@ class RunningStitch(object):
         node.set("d", cubicsuperpath.formatPath(
             line_strings_to_csp([self.path])))
 
-        style = simplestyle.parseStyle(self.style)
+        style = self.original_element.parse_style()
         style['stroke-dasharray'] = "0.5,0.5"
         style = simplestyle.formatStyle(style)
         node.set("style", style)
