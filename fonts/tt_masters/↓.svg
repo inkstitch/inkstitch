@@ -2,6 +2,7 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
+   xmlns:inkstitch="http://inkstitch.org/namespace"
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -9,8 +10,8 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   sodipodi:docname="↑.svg"
-   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="↓.svg"
+   inkscape:version="0.92.5 (0.92.5+68)"
    id="svg25060"
    version="1.1"
    viewBox="0 0 100 100"
@@ -284,13 +285,18 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="7.919596"
-     inkscape:cx="63.1419"
+     inkscape:cx="35.994051"
      inkscape:cy="63.063306"
      inkscape:document-units="px"
-     inkscape:current-layer="g1199"
+     inkscape:current-layer="g1254"
      showgrid="false"
      units="px"
-     inkscape:snap-global="false">
+     inkscape:snap-global="false"
+     inkscape:window-width="1918"
+     inkscape:window-height="973"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1">
     <sodipodi:guide
        inkscape:locked="false"
        orientation="0,1"
@@ -2929,6 +2935,20 @@
        sodipodi:nodetypes="ccscsccscccccc"
        embroider_satin_column="True"
        embroider_contour_underlay="True" />
+  </g>
+  <g
+     inkscape:label="GlyphLayer-� copy"
+     inkscape:groupmode="layer"
+     style="display:inline"
+     id="g1254">
+    <path
+       inkstitch:contour_underlay="True"
+       inkstitch:satin_column="True"
+       sodipodi:nodetypes="cscccssccsssscccccccccccccscscccccccccccccccccccc"
+       inkscape:connector-curvature="0"
+       id="path438"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:96.22016144px;line-height:0;font-family:'TT Masters DEMO Black';-inkscape-font-specification:'TT Masters DEMO Black, Bold';letter-spacing:0px;word-spacing:0px;display:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.55400002;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 51.441041,47.309751 c -1.539522,2.597944 -6.25431,7.697613 -9.622016,7.216512 -8.756035,-1.250862 -7.312732,-10.487998 -7.408952,-14.721685 -0.09622,-6.25431 5.96565,-18.18561 16.068766,-16.838528 4.522348,0.577321 10.680438,2.116843 12.219961,4.041247 0.384881,0.4811 0.481101,1.731963 0.481101,3.463925 0,2.405504 -0.384881,5.67699 -0.384881,8.852255 0,4.811008 0.865982,8.948475 2.886605,9.429576 l 0.673541,0.09622 c 3.367706,-2.886605 4.811008,-10.584217 4.811008,-15.395226 0,-13.182162 -13.085942,-18.08939 -19.917573,-18.08939 -14.240584,0 -22.707958,11.450199 -22.707958,27.615186 0,10.391778 9.140915,19.821354 19.917573,19.821354 2.886605,0 4.811008,-0.769762 5.86943,-1.443303 0.865981,-0.577321 1.828183,-1.539522 3.367706,-1.635742 1.058421,-0.09622 2.020623,0.09622 3.656366,1.058421 M 50.59328,39.810333 c -1.250863,1.347083 -2.135064,2.88085 -2.712385,2.495969 -0.577321,-0.28866 -0.384881,-3.079045 0,-4.714788 0.865982,-3.752586 1.347082,-4.137467 2.597944,-4.714788 0.673542,-0.28866 1.539523,-0.19244 1.539523,0.769762 -0.07885,1.623822 -0.209012,3.30215 -0.180452,4.610253 -2.585321,12.276862 7.204524,18.771246 17.692521,19.252347 9.429576,0 15.491446,-16.742308 15.299006,-23.8626 C 84.252116,12.766713 68.66445,10.264989 60.389516,7.5708246 56.444489,6.3199626 47.784675,3.9144586 41.145484,5.0691006 32.485669,6.5124026 15.16604,18.347482 15.16604,41.440321 c 0,15.395226 6.927852,22.900398 10.872878,25.498343 3.848807,2.597944 20.206234,8.082493 26.941646,8.082493 4.522347,0 9.044695,-0.673541 14.144363,-4.137467 1.635743,-0.865981 2.790385,-2.886605 0.962202,-4.522347 M 52.654165,60.393199 63.513305,74.661603 M 31.188424,49.40779 15.909866,56.478858 M 38.51203,21.123519 31.188424,6.4763076 M 63.387036,21.502326 76.140212,11.148263 M 69.069144,40.442686 83.08501,48.397637 M 64.649726,44.988373 54.800739,53.953476 M 50.63386,34.760578 58.967618,22.891286 M 49.118631,37.033421 34.34515,31.098775 m 14.015867,9.217642 -4.166879,15.657364" />
   </g>
   <g
      id="g1684"
