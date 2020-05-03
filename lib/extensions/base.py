@@ -8,12 +8,12 @@ from stringcase import snakecase
 
 import inkex
 
-from ..commands import layer_commands
+from ..commands import is_command, layer_commands
 from ..elements import EmbroideryElement, nodes_to_elements
 from ..elements.clone import is_clone, is_embroiderable_clone
 from ..i18n import _
 from ..svg import generate_unique_id
-from ..svg.tags import (EMBROIDERABLE_TAGS, INKSCAPE_GROUPMODE,
+from ..svg.tags import (CONNECTOR_TYPE, EMBROIDERABLE_TAGS, INKSCAPE_GROUPMODE,
                         NOT_EMBROIDERABLE_TAGS, SVG_DEFS_TAG, SVG_GROUP_TAG)
 
 SVG_METADATA_TAG = inkex.addNS("metadata", "svg")
@@ -148,6 +148,10 @@ class InkstitchExtension(inkex.Effect):
 
         if node.tag == SVG_DEFS_TAG:
             return []
+
+        # command connectors with a fill color set, will glitch into the elements list
+        if is_command(node) or node.get(CONNECTOR_TYPE):
+            return[]
 
         if self.selected:
             if node.get("id") in self.selected:
