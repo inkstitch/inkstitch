@@ -144,6 +144,12 @@ class Font(object):
 
         if self.auto_satin and len(destination_group) > 0:
             self._apply_auto_satin(destination_group, trim)
+        else:
+            # set stroke width because it is almost invisible otherwise (why?)
+            for element in destination_group.iterdescendants(SVG_PATH_TAG):
+                style = ['stroke-width:1px' if s.startswith('stroke-width') else s for s in element.get('style').split(';')]
+                style = ';'.join(style)
+                element.set('style', '%s' % style)
 
         return destination_group
 
@@ -179,6 +185,7 @@ class Font(object):
 
                 if glyph is not None:
                     node = self._render_glyph(glyph, position, character, last_character)
+
                     group.append(node)
 
                 last_character = character
@@ -218,4 +225,5 @@ class Font(object):
         """
 
         elements = nodes_to_elements(group.iterdescendants(SVG_PATH_TAG))
+
         auto_satin(elements, preserve_order=True, trim=trim)
