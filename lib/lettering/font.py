@@ -185,7 +185,6 @@ class Font(object):
 
                 if glyph is not None:
                     node = self._render_glyph(glyph, position, character, last_character)
-
                     group.append(node)
 
                 last_character = character
@@ -225,5 +224,4 @@ class Font(object):
         """
 
         elements = nodes_to_elements(group.iterdescendants(SVG_PATH_TAG))
-
         auto_satin(elements, preserve_order=True, trim=trim)
