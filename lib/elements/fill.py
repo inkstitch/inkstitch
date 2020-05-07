@@ -8,7 +8,6 @@ from shapely.validation import explain_validity
 from ..i18n import _
 from ..stitches import legacy_fill
 from ..svg import PIXELS_PER_MM
-from ..svg.tags import SVG_OBJECT_TAGS
 from ..utils import cache
 from .element import EmbroideryElement, Patch, param
 from .validation import ValidationError
@@ -37,16 +36,6 @@ class InvalidShapeError(ValidationError):
         _("* Path > Union (Ctrl++)"),
         _("* Path > Break apart (Shift+Ctrl+K)"),
         _("* (Optional) Recombine shapes with holes (Ctrl+K).")
-    ]
-
-
-class InvalidSVGObjectError(ValidationError):
-    name = _("Object conversion failed")
-    description = _("Fill: Automated path-creation for this object failed.  Convert it to a path (Shift+Ctrl+C).")
-    steps_to_solve = [
-        _('* Move the object just a little bit, mostly this action will solve the issue.'),
-        _('* Convert the object into a path (Shift+Ctrl+C).  If the issue still persists '
-          'run the troubleshoot extension to see, where exactly the problem lies.')
     ]
 
 
@@ -173,10 +162,7 @@ class Fill(EmbroideryElement):
             if "Hole lies outside shell" in message:
                 yield UnconnectedError((x, y))
             else:
-                if self.node.tag in SVG_OBJECT_TAGS:
-                    yield InvalidSVGObjectError((x, y))
-                else:
-                    yield InvalidShapeError((x, y))
+                yield InvalidShapeError((x, y))
 
     def to_patches(self, last_patch):
         stitch_lists = legacy_fill(self.shape,

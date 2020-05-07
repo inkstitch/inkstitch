@@ -47,13 +47,13 @@ def ellipse_to_path(node):
     cx = float(node.get('cx'))
     cy = float(node.get('cy'))
 
-    path = 'M %(cxrx)f,%(cy)f ' \
-           'A %(rx)f,%(ry)f 0 0 1 '\
-           '%(cx)f,%(cyry)f %(rx)f,%(ry)f 0 0 1 ' \
-           '%(cx_rx)f,%(cy)f %(rx)f,%(ry)f 0 0 1 ' \
-           '%(cx)f,%(cy_ry)f %(rx)f,%(ry)f 0 0 1 ' \
-           '%(cxrx)f,%(cy)f ' \
-           % dict(cxrx=cx+rx, cyry=cy+ry, cx_rx=cx-rx, cy_ry=cy-ry, rx=rx, ry=ry, cx=cx, cy=cy)
+    path = 'M %(cx_r)f,%(cy)f' \
+           'C %(cx_r)f,%(cy_r)f %(cx)f,%(cy_r)f %(cx)f,%(cy_r)f ' \
+           '%(cxr)f,%(cy_r)f %(cxr)f,%(cy)f %(cxr)f,%(cy)f ' \
+           '%(cxr)f,%(cyr)f %(cx)f,%(cyr)f %(cx)f,%(cyr)f ' \
+           '%(cx_r)f,%(cyr)f %(cx_r)f,%(cy)f %(cx_r)f,%(cy)f ' \
+           'Z' \
+           % dict(cx=cx, cx_r=cx-rx, cxr=cx+rx, cy=cy, cyr=cy+ry, cy_r=cy-ry)
 
     return path
 
@@ -63,12 +63,9 @@ def circle_to_path(node):
     cy = float(node.get('cy'))
     r = float(node.get('r'))
 
-    path = 'M %(xstart)f,%(cy)f ' \
-           'a %(r)f,%(r)f 0 0 1 '\
-           '-%(r)f,%(r)f %(r)f,%(r)f 0 0 1 ' \
-           '-%(r)f,-%(r)f %(r)f,%(r)f 0 0 1 ' \
-           '%(r)f,-%(r)f %(r)f,%(r)f 0 0 1 ' \
-           '%(r)f,%(r)f ' \
-           % dict(xstart=cx+r, cy=cy, r=r)
+    path = 'M %(xstart)f, %(cy)f ' \
+           'a %(r)f,%(r)f 0 1,0 %(rr)f,0 ' \
+           'a %(r)f,%(r)f 0 1,0 -%(rr)f,0 ' \
+           % dict(xstart=(cx-r), cy=cy, r=r, rr=(r*2))
 
     return path
