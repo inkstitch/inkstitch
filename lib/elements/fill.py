@@ -19,7 +19,7 @@ class UnconnectedError(ValidationError):
                     "Ink/Stitch doesn't know what order to stitch them in.  Please break this "
                     "object up into separate shapes.")
     steps_to_solve = [
-        _('* Extensions > Ink/Stitch > Fill Tools > Break Apart and Retain Holes.')
+        _('* Extensions > Ink/Stitch > Troubleshoot > Break Apart and Retain Holes')
     ]
 
 
@@ -27,9 +27,7 @@ class InvalidShapeError(ValidationError):
     name = _("Border crosses itself")
     description = _("Fill: Shape is not valid.  This can happen if the border crosses over itself.")
     steps_to_solve = [
-        _('* Path > Union (Ctrl++)'),
-        _('* Path > Break apart (Shift+Ctrl+K)'),
-        _('* (Optional) Recombine shapes with holes (Ctrl+K).')
+        _('* Extensions > Ink/Stitch > Troubleshoot > Break Apart and Retain Holes.'),
     ]
 
 

@@ -1,6 +1,7 @@
 from copy import deepcopy
 
-from shapely.geometry import Polygon
+from shapely.geometry import LineString, Polygon
+from shapely.ops import polygonize, unary_union
 
 import inkex
 
@@ -22,15 +23,20 @@ class BreakApart(InkstitchExtension):
         for element in self.elements:
             if not isinstance(element, AutoFill) and not isinstance(element, Fill):
                 continue
-            if len(element.paths) <= 1:
-                continue
 
             polygons = []
             multipolygons = []
             holes = []
 
             for path in element.paths:
-                polygons.append(Polygon(path))
+                linestring = LineString(path)
+                if linestring.is_simple:
+                    polygons.append(Polygon(path))
+                else:
+                    # split non-simple linestrings (with loops)
+                    union = unary_union(linestring)
+                    for polygon in polygonize(union):
+                        polygons.append(polygon)
 
             # sort paths by size and convert to polygons
             polygons.sort(key=lambda polygon: polygon.area, reverse=True)
