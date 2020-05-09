@@ -59,23 +59,24 @@ class BreakApart(InkstitchExtension):
         for polygon in polygons:
             if polygon in holes:
                 continue
-            polygon_list = [polygon]
 
+            polygon_list = [polygon]
             for other in polygons:
                 if polygon != other and polygon.contains(other) and other not in holes:
-                    # check if "other" is inside a hole, before we add it to the list
-                    if any(p.contains(other) for p in polygon_list[1:]):
+                    # dont't add to holes if "other" is inside a hole or intersects with an outer polygon
+                    if any(p.contains(other) or p.intersects(other) for p in polygon_list[1:]):
                         continue
                     polygon_list.append(other)
                     holes.append(other)
-
             multipolygons.append(polygon_list)
 
         return multipolygons
 
     def element_to_nodes(self, multipolygons, element):
-        valid = True
         for polygons in multipolygons:
+            # ignore very small areas
+            if polygons[0].area < 5:
+                continue
             el = deepcopy(element)
             d = ""
             for polygon in polygons:
@@ -89,10 +90,4 @@ class BreakApart(InkstitchExtension):
             el.node.set('d', d)
             el.node.set('transform', get_correction_transform(element.node))
             element.node.getparent().insert(0, el.node)
-            if not el.is_valid() and valid:
-                # in a very few cases we do not receive a valid path (e.g. loop to the inside)
-                # let's give it a second chance and run the function once again
-                valid = False
-                multipolygons = self.break_apart_element(el)
-                self.element_to_nodes(multipolygons, el)
         element.node.getparent().remove(element.node)
