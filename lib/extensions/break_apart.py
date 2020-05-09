@@ -1,6 +1,6 @@
 from copy import deepcopy
 
-from shapely.geometry import LineString, Polygon
+from shapely.geometry import LineString
 from shapely.ops import polygonize, unary_union
 
 import inkex
@@ -12,7 +12,7 @@ from .base import InkstitchExtension
 
 
 class BreakApart(InkstitchExtension):
-    def effect(self):  # noqa: C901
+    def effect(self):
         if not self.get_elements():
             return
 
@@ -24,37 +24,50 @@ class BreakApart(InkstitchExtension):
             if not isinstance(element, AutoFill) and not isinstance(element, Fill):
                 continue
 
-            polygons = []
-            multipolygons = []
-            holes = []
-
-            for path in element.paths:
-                linestring = LineString(path)
-                if linestring.is_simple:
-                    polygons.append(Polygon(path))
-                else:
-                    # split non-simple linestrings (with loops)
-                    union = unary_union(linestring)
-                    for polygon in polygonize(union):
-                        polygons.append(polygon)
-
-            # sort paths by size and convert to polygons
-            polygons.sort(key=lambda polygon: polygon.area, reverse=True)
-
-            for shape in polygons:
-                if shape in holes:
-                    continue
-                polygon_list = [shape]
-
-                for other in polygons:
-                    if shape != other and shape.contains(other) and other not in holes:
-                        # check if "other" is inside a hole, before we add it to the list
-                        if any(p.contains(other) for p in polygon_list[1:]):
-                            continue
-                        polygon_list.append(other)
-                        holes.append(other)
-                multipolygons.append(polygon_list)
+            multipolygons = self.break_apart_element(element)
             self.element_to_nodes(multipolygons, element)
+
+    def break_apart_element(self, element):
+        '''
+        Divides element paths into a list of polygons.
+        This will solve the crossing border error for most fill shapes
+        '''
+        polygons = []
+
+        for path in element.paths:
+            linestring = LineString(path)
+            if not linestring.is_simple:
+                linestring = unary_union(linestring)
+            else:
+                linestring = [linestring]
+            for polygon in polygonize(linestring):
+                polygons.append(polygon)
+
+        # sort paths by size and convert to polygons
+        polygons.sort(key=lambda polygon: polygon.area, reverse=True)
+
+        return self.recombine_polygons(polygons)
+
+    def recombine_polygons(self, polygons):
+        multipolygons = []
+        holes = []
+
+        for polygon in polygons:
+            if polygon in holes:
+                continue
+            polygon_list = [polygon]
+
+            for other in polygons:
+                if polygon != other and polygon.contains(other) and other not in holes:
+                    # check if "other" is inside a hole, before we add it to the list
+                    if any(p.contains(other) for p in polygon_list[1:]):
+                        continue
+                    polygon_list.append(other)
+                    holes.append(other)
+
+            multipolygons.append(polygon_list)
+
+        return multipolygons
 
     def element_to_nodes(self, multipolygons, element):
         for polygons in multipolygons:
