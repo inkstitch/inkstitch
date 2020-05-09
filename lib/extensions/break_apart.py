@@ -25,7 +25,8 @@ class BreakApart(InkstitchExtension):
                 continue
 
             multipolygons = self.break_apart_element(element)
-            self.element_to_nodes(multipolygons, element)
+            if multipolygons:
+                self.element_to_nodes(multipolygons, element)
 
     def break_apart_element(self, element):
         '''
@@ -39,6 +40,9 @@ class BreakApart(InkstitchExtension):
             if not linestring.is_simple:
                 linestring = unary_union(linestring)
             else:
+                # if it is simple (not crossing) ignore single paths
+                if len(element.paths) <= 1:
+                    return
                 linestring = [linestring]
             for polygon in polygonize(linestring):
                 polygons.append(polygon)
@@ -70,6 +74,7 @@ class BreakApart(InkstitchExtension):
         return multipolygons
 
     def element_to_nodes(self, multipolygons, element):
+        valid = True
         for polygons in multipolygons:
             el = deepcopy(element)
             d = ""
@@ -84,4 +89,10 @@ class BreakApart(InkstitchExtension):
             el.node.set('d', d)
             el.node.set('transform', get_correction_transform(element.node))
             element.node.getparent().insert(0, el.node)
+            if not el.is_valid() and valid:
+                # in a very few cases we do not receive a valid path (e.g. loop to the inside)
+                # let's give it a second chance and run the function once again
+                valid = False
+                multipolygons = self.break_apart_element(el)
+                self.element_to_nodes(multipolygons, el)
         element.node.getparent().remove(element.node)
