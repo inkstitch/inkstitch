@@ -1,6 +1,7 @@
+import logging
 from copy import deepcopy
 
-from shapely.geometry import LineString
+from shapely.geometry import LineString, Polygon
 from shapely.ops import polygonize, unary_union
 
 import inkex
@@ -12,6 +13,10 @@ from .base import InkstitchExtension
 
 
 class BreakApart(InkstitchExtension):
+    '''
+    This will solve crossing border and holes lies outside shell errors for fill shapes
+    and breaks them into multiple elements if necessary.
+    '''
     def effect(self):
         if not self.get_elements():
             return
@@ -24,28 +29,30 @@ class BreakApart(InkstitchExtension):
             if not isinstance(element, AutoFill) and not isinstance(element, Fill):
                 continue
 
+            # ignore valid elements
+            logger = logging.getLogger('shapely.geos')
+            level = logger.level
+            logger.setLevel(logging.CRITICAL)
+            valid = element.shape.is_valid
+            logger.setLevel(level)
+            if valid:
+                continue
+
             multipolygons = self.break_apart_element(element)
             if multipolygons:
                 self.element_to_nodes(multipolygons, element)
 
     def break_apart_element(self, element):
-        '''
-        Divides element paths into a list of polygons.
-        This will solve the crossing border error for most fill shapes
-        '''
         polygons = []
 
         for path in element.paths:
             linestring = LineString(path)
             if not linestring.is_simple:
                 linestring = unary_union(linestring)
+                for polygon in polygonize(linestring):
+                    polygons.append(polygon)
             else:
-                # if it is simple (not crossing) ignore single paths
-                if len(element.paths) <= 1:
-                    return
-                linestring = [linestring]
-            for polygon in polygonize(linestring):
-                polygons.append(polygon)
+                polygons.append(Polygon(path))
 
         # sort paths by size and convert to polygons
         polygons.sort(key=lambda polygon: polygon.area, reverse=True)
@@ -81,7 +88,7 @@ class BreakApart(InkstitchExtension):
             d = ""
             for polygon in polygons:
                 # copy element and replace path
-                el.node.set('id', self.uniqueId(element.node.get('id') + "_"))
+                el.node.set('id', self.uniqueId(element.node.get('id') + '_'))
                 d += "M"
                 for x, y in polygon.exterior.coords:
                     d += "%s,%s " % (x, y)
