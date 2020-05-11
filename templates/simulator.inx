@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <name>{% trans %}Simulator{% endtrans %}</name>
+    <name>{% trans %}Simulator / Realistic Preview{% endtrans %}</name>
     <id>org.inkstitch.simulator.{{ locale }}</id>
     <dependency type="executable" location="extensions">inkstitch.py</dependency>
     <dependency type="executable" location="extensions">inkex.py</dependency>
@@ -9,7 +9,7 @@
         <object-type>all</object-type>
         <effects-menu>
             <submenu name="Ink/Stitch">
-                <submenu name="{% trans %}Visualise and Output{% endtrans %}" />
+                <submenu name="{% trans %}Visualise and Export{% endtrans %}" />
             </submenu>
         </effects-menu>
     </effect>

@@ -18,7 +18,7 @@
         <object-type>all</object-type>
         <effects-menu>
             <submenu name="Ink/Stitch">
-                <submenu name="{% trans %}Visualise and Output{% endtrans %}" />
+                <submenu name="{% trans %}Visualise and Export{% endtrans %}" />
             </submenu>
         </effects-menu>
     </effect>
