@@ -1,0 +1,14 @@
+{
+  "name": "Geneva Simple Sans",
+  "description": "Suitable for small fonts (6 to 15mm)",
+  "leading": 16,
+  "letter_spacing": 2.5,
+  "word_spacing": 9,
+  "auto_satin": true,
+  "default_glyph": "�",
+  "min_scale": 0.75,
+  "max_scale": 2.0,
+  "kerning_pairs": {
+    "wo": -0.9
+  }
+}
