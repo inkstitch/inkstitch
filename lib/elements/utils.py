@@ -10,18 +10,23 @@ from .satin_column import SatinColumn
 from .stroke import Stroke
 
 
-def node_to_elements(node):
+def node_to_elements(node):  # noqa: C901
     if node.tag == SVG_POLYLINE_TAG:
         return [Polyline(node)]
     elif node.tag == SVG_PATH_TAG:
         element = EmbroideryElement(node)
+
+        if element.flattened_path_length < 2:
+            return []
 
         if element.get_boolean_param("satin_column") and element.get_style("stroke"):
             return [SatinColumn(node)]
         else:
             elements = []
 
-            if element.get_style("fill", "black"):
+            if element.get_style("fill", "black") and not element.get_style('fill-opacity', 1) == "0":
+                if element.flattened_path_length < 3:
+                    return []
                 if element.get_boolean_param("auto_fill", True):
                     elements.append(AutoFill(node))
                 else:
