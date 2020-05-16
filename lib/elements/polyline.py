@@ -3,12 +3,12 @@ from shapely import geometry as shgeo
 from ..i18n import _
 from ..utils import cache
 from ..utils.geometry import Point
-from .element import EmbroideryElement, Patch
+from .element import EmbroideryElement, Patch, param
 from .validation import ValidationWarning
 
 
 class PolylineWarning(ValidationWarning):
-    name = _("Object is a PolyLine")
+    name = _("Polyline Object")
     description = _("This object is an SVG PolyLine.  Ink/Stitch can work with this shape, "
                     "but you can't edit it in Inkscape.  Convert it to a manual stitch path "
                     "to allow editing.")
@@ -31,6 +31,13 @@ class Polyline(EmbroideryElement):
     # common machine embroidery file formats to SVG.  Handling those here lets
     # users use File -> Import to pull in existing designs they may have
     # obtained, for example purchased fonts.
+
+    element_name = "Polyline"
+
+    @property
+    @param('polyline', _('Manual stitch along path'), type='toggle', inverse=True)
+    def satin_column(self):
+        return self.get_boolean_param("polyline")
 
     @property
     def points(self):
@@ -70,7 +77,7 @@ class Polyline(EmbroideryElement):
     def color(self):
         # EmbroiderModder2 likes to use the `stroke` property directly instead
         # of CSS.
-        return self.get_style("stroke") or self.node.get("stroke")
+        return self.get_style("stroke", "#000000")
 
     @property
     def stitches(self):

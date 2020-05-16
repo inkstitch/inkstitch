@@ -7,12 +7,16 @@ inkex.NSS['inkstitch'] = 'http://inkstitch.org/namespace'
 
 SVG_PATH_TAG = inkex.addNS('path', 'svg')
 SVG_POLYLINE_TAG = inkex.addNS('polyline', 'svg')
+SVG_RECT_TAG = inkex.addNS('rect', 'svg')
+SVG_ELLIPSE_TAG = inkex.addNS('ellipse', 'svg')
+SVG_CIRCLE_TAG = inkex.addNS('circle', 'svg')
 SVG_TEXT_TAG = inkex.addNS('text', 'svg')
 SVG_TSPAN_TAG = inkex.addNS('tspan', 'svg')
 SVG_DEFS_TAG = inkex.addNS('defs', 'svg')
 SVG_GROUP_TAG = inkex.addNS('g', 'svg')
 SVG_SYMBOL_TAG = inkex.addNS('symbol', 'svg')
 SVG_USE_TAG = inkex.addNS('use', 'svg')
+SVG_IMAGE_TAG = inkex.addNS('image', 'svg')
 
 EMBROIDERABLE_TAGS = (SVG_PATH_TAG, SVG_POLYLINE_TAG)
 
@@ -30,12 +34,17 @@ SODIPODI_ROLE = inkex.addNS('role', 'sodipodi')
 
 INKSTITCH_LETTERING = inkex.addNS('lettering', 'inkstitch')
 
+EMBROIDERABLE_TAGS = (SVG_PATH_TAG, SVG_POLYLINE_TAG, SVG_RECT_TAG, SVG_ELLIPSE_TAG, SVG_CIRCLE_TAG)
+NOT_EMBROIDERABLE_TAGS = (SVG_IMAGE_TAG, SVG_TEXT_TAG)
+SVG_OBJECT_TAGS = (SVG_ELLIPSE_TAG, SVG_CIRCLE_TAG, SVG_RECT_TAG)
+
 INKSTITCH_ATTRIBS = {}
-# Fill
 inkstitch_attribs = [
                 'ties',
                 'trim_after',
                 'stop_after',
+                # clone
+                'clone',
                 # fill
                 'angle',
                 'auto_fill',

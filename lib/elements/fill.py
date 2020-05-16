@@ -27,7 +27,7 @@ class InvalidShapeError(ValidationError):
     name = _("Border crosses itself")
     description = _("Fill: Shape is not valid.  This can happen if the border crosses over itself.")
     steps_to_solve = [
-        _('* Extensions > Ink/Stitch > Fill Tools > Break Apart Fill Objects'),
+        _('* Extensions > Ink/Stitch > Fill Tools > Break Apart Fill Objects')
     ]
 
 
@@ -116,7 +116,7 @@ class Fill(EmbroideryElement):
            type='int',
            default=4)
     def staggers(self):
-        return self.get_int_param("staggers", 4)
+        return max(self.get_int_param("staggers", 4), 1)
 
     @property
     @cache
@@ -148,7 +148,7 @@ class Fill(EmbroideryElement):
 
         if not valid:
             why = explain_validity(self.shape)
-            message, x, y = re.findall(r".+?(?=\[)|\d+\.\d+", why)
+            message, x, y = re.findall(r".+?(?=\[)|-?\d+\.\d+", why)
 
             # I Wish this weren't so brittle...
             if "Hole lies outside shell" in message:
