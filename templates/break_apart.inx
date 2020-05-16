@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <name>{% trans %}Break Apart and Retain Holes{% endtrans %}</name>
+    <name>{% trans %}Break Apart Fill Objects{% endtrans %}</name>
     <id>org.inkstitch.break_apart.{{ locale }}</id>
     <param name="extension" type="string" gui-hidden="true">break_apart</param>
     <effect>
@@ -11,6 +11,13 @@
             </submenu>
         </effects-menu>
     </effect>
+    <param name="description" type="description">
+        {% trans %}This extension will try to repair fill shapes and break them apart if necessary. Holes will be retained. Use on simple or overlapping shapes.{% endtrans %}
+    </param>
+    <param name="method" type="optiongroup" _gui-text="Method">
+       <option value="0">Simple</option>
+       <option value="1">Complex</option>
+    </param>
     <script>
         {{ command_tag | safe }}
     </script>

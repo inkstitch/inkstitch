@@ -9,6 +9,8 @@ class Simulator(InkstitchExtension):
         InkstitchExtension.__init__(self)
 
     def effect(self):
+        if not self.get_elements():
+            return
         api_server = APIServer(self)
         port = api_server.start_server()
         electron = open_url("/simulator?port=%d" % port)

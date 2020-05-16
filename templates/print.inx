@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <name>{% trans %}Print / Realistic Preview{% endtrans %}</name>
+    <name>{% trans %}PDF Export{% endtrans %}</name>
     <id>org.inkstitch.print.{{ locale }}</id>
     <param name="extension" type="string" gui-hidden="true">print</param>
     <effect>
         <object-type>all</object-type>
         <effects-menu>
-            <submenu name="Ink/Stitch" />
+            <submenu name="Ink/Stitch">
+                <submenu name="{% trans %}Visualise and Export{% endtrans %}" />
+            </submenu>
         </effects-menu>
     </effect>
     <script>

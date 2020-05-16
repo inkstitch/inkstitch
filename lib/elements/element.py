@@ -1,15 +1,18 @@
 import sys
 from copy import deepcopy
 
-import cubicsuperpath
 import tinycss2
+
+import cubicsuperpath
 from cspsubdiv import cspsubdiv
 
 from ..commands import find_commands
 from ..i18n import _
 from ..svg import PIXELS_PER_MM, apply_transforms, convert_length, get_doc_size
-from ..svg.tags import INKSCAPE_LABEL, INKSTITCH_ATTRIBS
+from ..svg.tags import (INKSCAPE_LABEL, INKSTITCH_ATTRIBS, SVG_CIRCLE_TAG,
+                        SVG_ELLIPSE_TAG, SVG_OBJECT_TAGS, SVG_RECT_TAG)
 from ..utils import cache
+from .svg_objects import circle_to_path, ellipse_to_path, rect_to_path
 
 
 class Patch:
@@ -181,6 +184,10 @@ class EmbroideryElement(object):
     def stroke_scale(self):
         svg = self.node.getroottree().getroot()
         doc_width, doc_height = get_doc_size(svg)
+        # this is necessary for clones, since they are disconnected from the DOM
+        # it will result in a slighty wrong result for zig-zag stitches
+        if doc_width == 0:
+            return 1
         viewbox = svg.get('viewBox', '0 0 %s %s' % (doc_width, doc_height))
         viewbox = viewbox.strip().replace(',', ' ').split()
         return doc_width / float(viewbox[2])
@@ -236,7 +243,16 @@ class EmbroideryElement(object):
         # In a path, each element in the 3-tuple is itself a tuple of (x, y).
         # Tuples all the way down.  Hasn't anyone heard of using classes?
 
-        d = self.node.get("d", "")
+        if self.node.tag in SVG_OBJECT_TAGS:
+            if self.node.tag == SVG_RECT_TAG:
+                d = rect_to_path(self.node)
+            elif self.node.tag == SVG_ELLIPSE_TAG:
+                d = ellipse_to_path(self.node)
+            elif self.node.tag == SVG_CIRCLE_TAG:
+                d = circle_to_path(self.node)
+        else:
+            d = self.node.get("d", "")
+
         if not d:
             self.fatal(_("Object %(id)s has an empty 'd' attribute.  Please delete this object from your document.") % dict(id=self.node.get("id")))
 

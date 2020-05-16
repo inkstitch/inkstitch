@@ -13,6 +13,7 @@
         <object-type>all</object-type>
         <effects-menu>
             <submenu name="Ink/Stitch">
+                <submenu name="{% trans %}Troubleshoot{% endtrans %}" />
             </submenu>
         </effects-menu>
     </effect>
