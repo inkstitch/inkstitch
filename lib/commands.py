@@ -243,9 +243,9 @@ def is_command(node):
 def is_command_symbol(node):
     symbol = None
     xlink = node.get(XLINK_HREF, "")
-    if len(xlink) > 11:
+    if xlink.startswith("#inkstitch_"):
         symbol = node.get(XLINK_HREF)[11:]
-    return symbol in OBJECT_COMMANDS or symbol in GLOBAL_COMMANDS
+    return symbol in COMMANDS
 
 
 @cache

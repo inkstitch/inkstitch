@@ -22,7 +22,7 @@ from .validation import ObjectTypeWarning, ValidationWarning
 
 class CloneWarning(ValidationWarning):
     name = _("Clone Object")
-    description = _("There is one or more clone objects in this document.  "
+    description = _("There are one or more clone objects in this document.  "
                     "Ink/Stitch can work with single clones, but you are limited to set a very few parameters. ")
     steps_to_solve = [
         _("If you want to convert the clone into a real element, follow these steps:"),
@@ -33,7 +33,7 @@ class CloneWarning(ValidationWarning):
 
 class CloneSourceWarning(ObjectTypeWarning):
     name = _("Clone is not embroiderable")
-    description = _("There is one ore more clone objects in this document. A clone must be a direct child of an embroiderable element. "
+    description = _("There are one ore more clone objects in this document. A clone must be a direct child of an embroiderable element. "
                     "Ink/Stitch cannot embroider clones of groups or other not embroiderable elements (text or image).")
     steps_to_solve = [
         _("Convert the clone into a real element:"),
