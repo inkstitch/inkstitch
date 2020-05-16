@@ -2,7 +2,7 @@
 title: "Import and Export Files"
 permalink: /docs/import-export/
 excerpt: ""
-last_modified_at: 2019-03-30
+last_modified_at: 2020-05-12
 toc: true
 ---
 
@@ -11,25 +11,21 @@ Ink/Stitch supports many embroidery formats. It can import and export files to t
 ## Supported File Formats (A - Z):
 
 ### Writing
+
 CSV, **DST**, **EXP**, **JEF**, PEC, **PES**, SVG, TXT (G-CODE), U01, **VP3**
 
 ### Reading
+
 100, 10o, BRO, DAT, DSB, **DST**, DSZ, EMD, **EXP**, EXY, FXY, GT, INB, **JEF**, JPX, KSM, MAX, MIT, NEW, PCD, PCM, PCQ, PCS, PEC, **PES**, PHB, PHC, SEW, SHV, STC, STX, TAP, TBF, TXT (G-CODE), U01, **VP3**, XXX, ZXY
 
 **Info:** Detailed information about embroidery file formats is available in the [EduTechWiki](http://edutechwiki.unige.ch/en/Embroidery_format).
 {: .notice--info }
 
-## Import Embroidery Files
-
-Open an embroidery file as you would open any SVG file in Inkscape: `File > Open...` > choose your file and click `Open`.
-
-It will open your file in [Manual Stitch Mode](/docs/stitches/manual-stitch/). You can edit individual points and finetune your design. Once your are satisfied, save the file as described below.
-
 ## Export Embroidery Files
 
 ### Method 1
 
-Ink/Stitch version 1.10.0 introduced the possibility to export files directly through Inkscapes `File > Save as...` (`Ctrl + Shift + S`) dialog.
+Export files directly through Inkscapes `File > Save as...` (`Ctrl + Shift + S`) dialog.
 
 Select a file format that your embroidery machine can read and `Save` the file in your desired output directory.
 
@@ -38,7 +34,7 @@ Select a file format that your embroidery machine can read and `Save` the file i
 For later changes make sure that you keep an SVG version of your design as well.
 
 ### Method 2 (Display Stitch Plan)
-To export your designs run `Extensions > Ink/Stitch  > Embroider...`.
+To export your designs run `Extensions > Ink/Stitch  > Visualize and Export > Embroider...`.
 
 ![Embroider...](/assets/images/docs/en/embroider.jpg){: width="450" }
 
@@ -72,3 +68,28 @@ Navigate to your desired output folder and choose the Ink/Stitch ZIP file format
 
 ![Batch Export](/assets/images/docs/en/export-batch.jpg)
 
+## Import
+
+### Embroidery Files
+
+Open an embroidery file as you would open any SVG file in Inkscape: `File > Open...` > choose your file and click `Open`.
+
+It will open your file in [Manual Stitch Mode](/docs/stitches/manual-stitch/). You can edit individual points and finetune your design. Once your are satisfied, save the file as described below.
+
+## Threadlist
+
+You can also apply a thread list to an embroidery file in Ink/Stitch. This is especially useful, if you want to work on existing embroidery files without color information (such as DST).
+
+It could also be helpful, if you are wanting to test different color settings. You can export and import them as you like. But be careful not to change the amount and order of colors. In case you are planing to change these, you'd prefer to save the entire SVG instead.
+
+## Import
+
+* Run `Extensions > Ink/Stitch > Import Threadlist`
+* In the dialog enter the path to your file (this dialog will be improved when we update to Inkscape 1.0)
+* Choose a method depending on your file you are wanting to import. It should be a simple textfile (txt).
+* If you want to import a threadlist which wasn't created through Ink/Stitch, also select a color palette to match colors
+* Apply
+
+## Export
+
+Threadlists can only be **exported** through a zip-file ([batch export](/docs/import-export/#batch-export)).

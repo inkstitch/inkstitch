@@ -18,50 +18,56 @@ See the [namespace github discussion](https://github.com/inkstitch/inkstitch/iss
 |Attribute of `<path>`                              | Data Type| Description |
 |---|---|---|
 |**AutoFill**|
-|*embroider_auto_fill*                              | boolean  | True: automatic routed fill stitching (Auto-Fill)<br>False: fill |
-|embroider_angle                                    | float    | angle |
-|embroider_expand_mm                                | float    | expand the shape before fill stitching, to compensate for gaps between shapes. |
-|embroider_max_stitch_length_mm                     | float    | max. stitch length in mm |
-|embroider_row_spacing_mm                           | float    | stitch length in mm |
-|embroider_running_stitch_length_mm                 | float    | running stitch length in mm |
-|embroider_staggers                                 | float    | stagger this many times before repeating |
-|*embroider_fill_underlay*                          | boolean  | enable Auto-Fill underlay |
-|embroider_fill_underlay_angle                      | float    | underlay angle |
-|embroider_fill_underlay_inset_mm                   | float    | underlay inset in mm |
-|embroider_fill_underlay_max_stitch_length_mm       | float    | underlay max. stitch length in mm |
-|embroider_fill_underlay_row_spacing_mm             | float    | underlay row spacing in mm |
+|*inkstitch:auto_fill*                              | boolean  | True: automatic routed fill stitching (Auto-Fill)<br>False: fill |
+|inkstitch:angle                                    | float    | angle |
+|inkstitch:expand_mm                                | float    | expand the shape before fill stitching, to compensate for gaps between shapes. |
+|inkstitch:max_stitch_length_mm                     | float    | max. stitch length in mm |
+|inkstitch:row_spacing_mm                           | float    | stitch length in mm |
+|inkstitch:running_stitch_length_mm                 | float    | running stitch length in mm |
+|inkstitch:staggers                                 | float    | stagger this many times before repeating |
+|*inkstitch:fill_underlay*                          | boolean  | enable Auto-Fill underlay |
+|inkstitch:fill_underlay_angle                      | float    | underlay angle, can also take a comma separated list for multiple underlays |
+|inkstitch:fill_underlay_inset_mm                   | float    | underlay inset in mm |
+|inkstitch:fill_underlay_max_stitch_length_mm       | float    | underlay max. stitch length in mm |
+|inkstitch:fill_underlay_row_spacing_mm             | float    | underlay row spacing in mm |
+|inkstitch:ties                                     | boolean  | True: use lock down stitches |
+|inkstitch:stroke_first                             | boolean  | False: fill before stroke (default), True: reverse order |
 |**Fill**|
-|*embroider_auto_fill*                              | boolean  | True: automatic routed fill stitching (Auto-Fill)<br>False: fill |
-|embroider_angle                                    | float    | angle |
-|embroider_flip                                     | boolean  | flip start (right to left) |
-|embroider_max_stitch_length_mm                     | float    | max. stitch length in mm |
-|embroider_row_spacing_mm                           | float    | spacing between rows in mm |
-|embroider_end_row_spacing_mm                       | float    | used for [color blending](/docs/features/#color-blending) |
-|embroider_staggers                                 | float    | stagger this many times before repeating |
+|*inkstitch:auto_fill*                              | boolean  | True: automatic routed fill stitching (Auto-Fill)<br>False: fill |
+|inkstitch:angle                                    | float    | angle |
+|inkstitch:flip                                     | boolean  | flip start (right to left) |
+|inkstitch:max_stitch_length_mm                     | float    | max. stitch length in mm |
+|inkstitch:row_spacing_mm                           | float    | spacing between rows in mm |
+|inkstitch:end_row_spacing_mm                       | float    | used for [color blending](/docs/features/#color-blending) |
+|inkstitch:staggers                                 | float    | stagger this many times before repeating |
 |**Stroke**|
 |**↳ Stroke: Running Stitch**|
-|embroider_zigzag_spacing_mm                        | float    | Stroke/Satin column: zig-zag spacing (peak-to-peak) in mm |
-|embroider_running_stitch_length_mm                 | float    | AutoFill/Stroke: running stitch length in mm |
-|embroider_repeats                                  | float    | Stroke: defines how many times to run down and back along the path |
+|inkstitch:zigzag_spacing_mm                        | float    | Stroke/Satin column: zig-zag spacing (peak-to-peak) in mm |
+|inkstitch:running_stitch_length_mm                 | float    | AutoFill/Stroke: running stitch length in mm |
+|inkstitch:repeats                                  | float    | Stroke: defines how many times to run down and back along the path |
+|bean_stitch_repeats                                | float    | Stroke: back and forth repeats of stitches
+|inkstitch:ties                                     | boolean  | True: use lock down stitches |
+|inkstitch:stroke_first                             | boolean  | False: stroke before fill, True: reverse order
 |**↳ Stroke: Zig-Zag**|
-|*embroider_satin_column*                           | boolean  | True: satin column<br>False: stroke (zig-zag stitch) |
-|embroider_running_stitch_length_mm                 | float    | AutoFill/Stroke: running stitch length in mm |
-|embroider_zigzag_spacing_mm                        | float    | Stroke/Satin column: zig-zag spacing (peak-to-peak) in mm |
-|embroider_repeats                                  | float    | Stroke: defines how many times to run down and back along the path |
+|*inkstitch:satin_column*                           | boolean  | True: satin column<br>False: stroke (zig-zag stitch) |
+|inkstitch:running_stitch_length_mm                 | float    | AutoFill/Stroke: running stitch length in mm |
+|inkstitch:zigzag_spacing_mm                        | float    | Stroke/Satin column: zig-zag spacing (peak-to-peak) in mm |
+|inkstitch:repeats                                  | float    | Stroke: defines how many times to run down and back along the path |
 |**↳ Stroke: Manual Stitch**|
-|*embroider_manual_stitch*                          | boolean  | True: manual stitch<br>False: stroke (running stitch / zig-zag stitch |
+|*inkstitch:manual_stitch*                          | boolean  | True: manual stitch<br>False: stroke (running stitch / zig-zag stitch |
 |**Satin Column**|
-|*embroider_satin_column*                           | boolean  | True: satin column<br>False: stroke (zig-zag stitch) |
-|embroider_pull_compensation_mm                     | float    | Satin column: pull compensation in mm|
-|embroider_zigzag_spacing_mm                        | float    | Stroke/Satin column: zig-zag spacing (peak-to-peak) in mm |
-|*embroider_center_walk_underlay*                   | boolean  | Satin column: enable center walk underlay |
-|embroider_center_walk_underlay_stitch_length_mm    | float    | Satin column: center-walk underlay stitch length in mm |
-|*embroider_contour_underlay*                       | boolean  | Satin column: enable Contour underlay |
-|embroider_contour_underlay_inset_mm                | float    | Satin column: contour underlay inset amount in mm |
-|embroider_contour_underlay_stitch_length_mm        | float    | Satin column: contour underlay stitch length in mm |
-|*embroider_zigzag_underlay*                        | boolean  | Satin column: enable zig-zag underlay |
-|embroider_zigzag_underlay_inset_mm                 | float    | Satin Column: zig-zag underlay inset in mm |
-|embroider_zigzag_underlay_spacing_mm               | float    | Satin Column: zig-zag underlay spacing in mm |
+|*inkstitch:satin_column*                           | boolean  | True: satin column<br>False: stroke (zig-zag stitch) |
+|inkstitch:pull_compensation_mm                     | float    | Satin column: pull compensation in mm|
+|inkstitch:zigzag_spacing_mm                        | float    | Stroke/Satin column: zig-zag spacing (peak-to-peak) in mm |
+|*inkstitch:center_walk_underlay*                   | boolean  | Satin column: enable center walk underlay |
+|inkstitch:center_walk_underlay_stitch_length_mm    | float    | Satin column: center-walk underlay stitch length in mm |
+|*inkstitch:contour_underlay*                       | boolean  | Satin column: enable Contour underlay |
+|inkstitch:contour_underlay_inset_mm                | float    | Satin column: contour underlay inset amount in mm |
+|inkstitch:contour_underlay_stitch_length_mm        | float    | Satin column: contour underlay stitch length in mm |
+|*inkstitch:zigzag_underlay*                        | boolean  | Satin column: enable zig-zag underlay |
+|inkstitch:zigzag_underlay_inset_mm                 | float    | Satin Column: zig-zag underlay inset in mm |
+|inkstitch:zigzag_underlay_spacing_mm               | float    | Satin Column: zig-zag underlay spacing in mm |
+|inkstitch:ties                                     | boolean  | True: use lock down stitches |
 
 ## Visual Commands
 

@@ -66,10 +66,12 @@ docs:
       url: /docs/commands/
     - title: "Satin Tools"
       url: /docs/satin-tools/
+    - title: "Fill Tools"
+      url: /docs/fill-tools/
     - title: "Lettering"
       url: /docs/lettering/
-    - title: "Simulate"
-      url: /docs/simulate/
+    - title: "Visualize"
+      url: /docs/visualize/
     - title: "Print"
       url: /docs/print/
     - title: "Import / Export"

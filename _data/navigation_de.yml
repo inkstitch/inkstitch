@@ -62,10 +62,12 @@ docs:
       url: /de/docs/commands/
     - title: Satin Werkzeuge
       url: /de/docs/satin-tools/
+    - title: Füllstich Werkzeuge
+      url: /de/docs/fill-tools/
     - title: Lettering
       url: /de/docs/lettering/
-    - title: Simulation
-      url: /de/docs/simulate/
+    - title: Visualisierung
+      url: /de/docs/visualize/
     - title: Drucken
       url: /de/docs/print/
     - title: Importieren / Exportieren

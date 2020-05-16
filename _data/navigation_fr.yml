@@ -66,10 +66,12 @@ docs:
       url: /fr/docs/commands/
     - title: "Outils Satin"
       url: /fr/docs/satin-tools/
+    - title: "Outils de remplissage"
+      url: /fr/docs/fill-tools/
     - title: "Lettrage"
       url: /fr/docs/lettering/
     - title: "Simulation"
-      url: /fr/docs/simulate/
+      url: /fr/docs/visualize/
     - title: "Imprimer"
       url: /fr/docs/print/
     - title: "Import / Export"
@@ -93,7 +95,7 @@ docs:
         url: /fr/docs/stitches/satin-column/
       - title: "Point en E"
         url: /fr/docs/stitches/e-stitch/
-      - title: "Poin de remplissage"
+      - title: "Point de remplissage"
         url: /fr/docs/stitches/fill-stitch/
   - title: Astuces
     children:

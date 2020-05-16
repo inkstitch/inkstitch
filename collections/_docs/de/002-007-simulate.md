@@ -1,14 +1,14 @@
 ---
-title: "Simulation"
-permalink: /de/docs/simulate/
+title: "Visualisierung"
+permalink: /de/docs/visualize/
 excerpt: ""
-last_modified_at: 2019-04-10
+last_modified_at: 2020-05-12
 toc: false
 ---
 
 Wähle die Objekte aus, die in der simulierten Vorschau angezeigt werden sollen. Wenn das gesamtes Design simuliert werden soll, wähle alles (`Strg + A`) oder nichts aus.
 
-Dann starte `Erweiterungen -> Ink/Stitch -> Simulation` und genieße.
+Dann starte `Erweiterungen -> Ink/Stitch -> Simulation`.
 
 ### Tastenkombinationen der Simulation
 
@@ -20,10 +20,6 @@ tastenkombination | Beschreibung
 <key>↓</key> | langsamer
 <key>+</key> | ein Frame vorwärts
 <key>-</key> | ein Frame rückwärts
-<key>p</key> | Animation anhalten
-<key>r</key> | Animation neu starten
-<key>o</key> | Zeige Nadeleinstichpositionen
-<key>q</key> | Beenden
 
 Es ist auch möglich die Simulation mit der Maus zu **zoomen** und zu **verschieben**.
 
@@ -34,3 +30,10 @@ Der Simulator kann auf jedes von Ink/Stitch unterstütze Dateiformat angewendet 
 ```
 PYTHONPATH=/usr/share/inkscape/extensions python -m lib.simulator Pfad/zur/Datei.Dateiendung
 ```
+
+## Stich-Plan Vorschau
+
+Führe den Befehl `Erweiterungen > Ink/Stitch > Visualisierung und Export > Stich-Plan Vorschau` aus.
+Dies fügt den Stichplan direkt am rechten Rand deines Dokuments ein.
+Dort kannst du das Ergebnis untersuchen und anschließend wieder entfernen.
+You can inspect it from there and delete it afterwards.
