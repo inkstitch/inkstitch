@@ -240,6 +240,14 @@ def is_command(node):
     return CONNECTION_START in node.attrib or CONNECTION_END in node.attrib
 
 
+def is_command_symbol(node):
+    symbol = None
+    xlink = node.get(XLINK_HREF, "")
+    if xlink.startswith("#inkstitch_"):
+        symbol = node.get(XLINK_HREF)[11:]
+    return symbol in COMMANDS
+
+
 @cache
 def symbols_path():
     return os.path.join(get_bundled_dir("symbols"), "inkstitch.svg")
@@ -280,7 +288,7 @@ def add_group(document, node, command):
         node.getparent(),
         SVG_GROUP_TAG,
         {
-            "id": generate_unique_id(document, "group"),
+            "id": generate_unique_id(document, "command_group"),
             INKSCAPE_LABEL: _("Ink/Stitch Command") + ": %s" % get_command_description(command),
             "transform": get_correction_transform(node)
         })
@@ -298,7 +306,7 @@ def add_connector(document, symbol, element):
 
     path = inkex.etree.Element(SVG_PATH_TAG,
                                {
-                                   "id": generate_unique_id(document, "connector"),
+                                   "id": generate_unique_id(document, "command_connector"),
                                    "d": "M %s,%s %s,%s" % (start_pos[0], start_pos[1], end_pos.x, end_pos.y),
                                    "style": "stroke:#000000;stroke-width:1px;stroke-opacity:0.5;fill:none;",
                                    CONNECTION_START: "#%s" % symbol.get('id'),
@@ -315,7 +323,7 @@ def add_connector(document, symbol, element):
 def add_symbol(document, group, command, pos):
     return inkex.etree.SubElement(group, SVG_USE_TAG,
                                   {
-                                      "id": generate_unique_id(document, "use"),
+                                      "id": generate_unique_id(document, "command_use"),
                                       XLINK_HREF: "#inkstitch_%s" % command,
                                       "height": "100%",
                                       "width": "100%",

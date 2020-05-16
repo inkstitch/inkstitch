@@ -1,4 +1,4 @@
-from inkex import etree
+from inkex import NSS, etree
 
 from ..utils import cache
 
@@ -24,3 +24,9 @@ def generate_unique_id(document_or_element, prefix="path"):
         i += 1
 
     return new_id
+
+
+def find_elements(node, xpath):
+    document = get_document(node)
+    elements = document.xpath(xpath, namespaces=NSS)
+    return elements

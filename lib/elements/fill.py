@@ -27,9 +27,15 @@ class InvalidShapeError(ValidationError):
     name = _("Border crosses itself")
     description = _("Fill: Shape is not valid.  This can happen if the border crosses over itself.")
     steps_to_solve = [
-        _('* Path > Union (Ctrl++)'),
-        _('* Path > Break apart (Shift+Ctrl+K)'),
-        _('* (Optional) Recombine shapes with holes (Ctrl+K).')
+        _("1. Inkscape has a limit to how far it lets you zoom in.  Sometimes there can be a little loop, "
+          "that's so small, you can't see it, but Ink/Stitch can. It's especially common for Inkscape's "
+          "Trace Bitmap to produce those tiny loops."),
+        _("* Delete the node"),
+        _("* Or try to adjust it's handles"),
+        _("2. If you can actually see a loop, run the following commands to seperate the crossing shapes:"),
+        _("* Path > Union (Ctrl++)"),
+        _("* Path > Break apart (Shift+Ctrl+K)"),
+        _("* (Optional) Recombine shapes with holes (Ctrl+K).")
     ]
 
 

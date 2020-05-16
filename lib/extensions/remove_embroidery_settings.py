@@ -1,6 +1,7 @@
 import inkex
 
 from ..commands import find_commands
+from ..svg.svg import find_elements
 from .base import InkstitchExtension
 
 
@@ -12,6 +13,8 @@ class RemoveEmbroiderySettings(InkstitchExtension):
         self.OptionParser.add_option("-d", "--del_print", dest="del_print", type="inkbool", default=False)
 
     def effect(self):
+        self.svg = self.document.getroot()
+
         if self.options.del_params:
             self.remove_params()
         if self.options.del_commands:
@@ -21,7 +24,7 @@ class RemoveEmbroiderySettings(InkstitchExtension):
 
     def remove_print_settings(self):
         print_settings = "svg:metadata//*"
-        print_settings = self.find_elements(print_settings)
+        print_settings = find_elements(self.svg, print_settings)
         for print_setting in print_settings:
             if print_setting.prefix == "inkstitch":
                 self.remove_element(print_setting)
@@ -29,7 +32,7 @@ class RemoveEmbroiderySettings(InkstitchExtension):
     def remove_params(self):
         if not self.selected:
             xpath = ".//svg:path"
-            elements = self.find_elements(xpath)
+            elements = find_elements(self.svg, xpath)
             self.remove_inkstitch_attributes(elements)
         else:
             for node in self.selected:
@@ -41,7 +44,7 @@ class RemoveEmbroiderySettings(InkstitchExtension):
             # we are not able to grab commands by a specific id
             # so let's move through every object instead and see if it has a command
             xpath = ".//svg:path|.//svg:circle|.//svg:rect|.//svg:ellipse"
-            elements = self.find_elements(xpath)
+            elements = find_elements(self.svg, xpath)
         else:
             elements = []
             for node in self.selected:
@@ -64,19 +67,14 @@ class RemoveEmbroiderySettings(InkstitchExtension):
 
     def get_selected_elements(self, element_id):
         xpath = ".//svg:g[@id='%(id)s']//svg:path|.//svg:g[@id='%(id)s']//svg:use" % dict(id=element_id)
-        elements = self.find_elements(xpath)
+        elements = find_elements(self.svg, xpath)
         if not elements:
             xpath = ".//*[@id='%s']" % element_id
-            elements = self.find_elements(xpath)
-        return elements
-
-    def find_elements(self, xpath):
-        svg = self.document.getroot()
-        elements = svg.xpath(xpath, namespaces=inkex.NSS)
+            elements = find_elements(self.svg, xpath)
         return elements
 
     def remove_elements(self, xpath):
-        elements = self.find_elements(xpath)
+        elements = find_elements(self.svg, xpath)
         for element in elements:
             self.remove_element(element)
 
