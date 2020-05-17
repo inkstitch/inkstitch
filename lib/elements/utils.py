@@ -22,18 +22,12 @@ def node_to_elements(node):  # noqa: C901
     elif node.tag in EMBROIDERABLE_TAGS:
         element = EmbroideryElement(node)
 
-        if element.flattened_path_length < 2:
-            return []
-
         if element.get_boolean_param("satin_column") and element.get_style("stroke"):
             return [SatinColumn(node)]
         else:
             elements = []
 
             if element.get_style("fill", "black") and not element.get_style('fill-opacity', 1) == "0":
-                if element.flattened_path_length < 3:
-                    return []
-
                 if element.get_boolean_param("auto_fill", True):
                     elements.append(AutoFill(node))
                 else:

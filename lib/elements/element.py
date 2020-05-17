@@ -263,10 +263,6 @@ class EmbroideryElement(object):
         return apply_transforms(self.path, self.node)
 
     @property
-    def flattened_path_length(self):
-        return len(self.flatten(self.path))
-
-    @property
     def shape(self):
         raise NotImplementedError("INTERNAL ERROR: %s must implement shape()", self.__class__)
 
