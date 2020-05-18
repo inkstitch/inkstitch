@@ -12,7 +12,7 @@ warned_about_legacy_running_stitch = False
 
 
 class Stroke(EmbroideryElement):
-    element_name = "Stroke"
+    element_name = _("Stroke")
 
     @property
     @param('satin_column', _('Satin stitch along paths'), type='toggle', inverse=True)
