@@ -26,7 +26,7 @@ def node_to_elements(node):  # noqa: C901
             return [SatinColumn(node)]
         else:
             elements = []
-            if element.get_style("fill", 'black') and not element.get_style('fill-opacity', 1) == "0":
+            if element.get_style("fill", "black") and not element.get_style('fill-opacity', 1) == "0":
                 if element.get_boolean_param("auto_fill", True):
                     elements.append(AutoFill(node))
                 else:

@@ -121,7 +121,12 @@ class Fill(EmbroideryElement):
     @property
     @cache
     def paths(self):
-        return self.flatten(self.parse_path())
+        paths = self.flatten(self.parse_path())
+        #ensure path length
+        for i, path in enumerate(paths):
+            if len(path) < 3:
+                paths[i] = [(path[0][0], path[0][1]), (path[0][0]+1.0, path[0][1]), (path[0][0], path[0][1]+1.0)]
+        return paths
 
     @property
     @cache
