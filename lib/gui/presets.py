@@ -98,7 +98,7 @@ class PresetsPanel(wx.Panel):
             with open(self.presets_path(), 'r') as presets:
                 presets = json.load(presets)
                 return presets
-        except IOError:
+        except (IOError, ValueError):
             return {}
 
     def _save_presets(self, presets):

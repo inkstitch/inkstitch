@@ -41,10 +41,10 @@ SVG_OBJECT_TAGS = (SVG_ELLIPSE_TAG, SVG_CIRCLE_TAG, SVG_RECT_TAG)
 INKSTITCH_ATTRIBS = {}
 inkstitch_attribs = [
                 'ties',
-                'trim_after',
-                'stop_after',
                 # clone
                 'clone',
+                # polyline
+                'polyline',
                 # fill
                 'angle',
                 'auto_fill',
@@ -86,8 +86,8 @@ inkstitch_attribs = [
                 'pull_compensation_mm',
                 'stroke_first',
                 # Legacy
-                'embroider_trim_after',
-                'embroider_stop_after'
+                'trim_after',
+                'stop_after'
                 ]
 for attrib in inkstitch_attribs:
     INKSTITCH_ATTRIBS[attrib] = inkex.addNS(attrib, 'inkstitch')
