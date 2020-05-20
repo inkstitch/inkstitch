@@ -100,6 +100,8 @@ class PresetsPanel(wx.Panel):
                 return presets
         except IOError:
             return {}
+        except ValueError:
+            return {}
 
     def _save_presets(self, presets):
         with open(self.presets_path(), 'w') as presets_file:
