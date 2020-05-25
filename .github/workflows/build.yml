@@ -84,13 +84,17 @@ jobs:
         shell: bash
         run: |
           curl -sOL https://github.com/lexelby/inkstitch-build-objects/releases/download/v1.0.0/Shapely-1.6.3-cp27-cp27m-win32.whl
-          curl -sOL https://inkscape.org/en/gallery/item/12187/inkscape-0.92.3.tar.bz2          
+          curl -sOL https://inkscape.org/en/gallery/item/12187/inkscape-0.92.3.tar.bz2
+          curl -sOL https://github.com/pyinstaller/pyinstaller/releases/download/v3.3.1/PyInstaller-3.3.1.tar.gz
       - name: install dependencies
         shell: bash
         run: |
           pip install Shapely-1.6.3-cp27-cp27m-win32.whl
           pip install -r requirements.txt
-          pip install pyinstaller==3.3.1
+
+          # build our own pyinstaller bootloader to (hopefully) avoid antivirus
+          tar zxf PyInstaller-3.3.1.tar.gz
+          (cd PyInstaller-3.3.1/bootloader && python ./waf distclean all && cd .. && python setup.py install)
 
           # Just using tar -j freezes forever with no output.  Heck if I know why.  This seems to work.
           bzcat inkscape-0.92.3.tar.bz2 | tar -vxf -
