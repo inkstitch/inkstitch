@@ -18,8 +18,6 @@ SVG_SYMBOL_TAG = inkex.addNS('symbol', 'svg')
 SVG_USE_TAG = inkex.addNS('use', 'svg')
 SVG_IMAGE_TAG = inkex.addNS('image', 'svg')
 
-EMBROIDERABLE_TAGS = (SVG_PATH_TAG, SVG_POLYLINE_TAG)
-
 INKSCAPE_LABEL = inkex.addNS('label', 'inkscape')
 INKSCAPE_GROUPMODE = inkex.addNS('groupmode', 'inkscape')
 CONNECTION_START = inkex.addNS('connection-start', 'inkscape')
