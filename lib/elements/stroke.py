@@ -76,11 +76,16 @@ class Stroke(EmbroideryElement):
     @property
     def paths(self):
         path = self.parse_path()
+        flattened = self.flatten(path)
+
+        # manipulate invalid path
+        if len(flattened[0]) == 1:
+            return [[[flattened[0][0][0], flattened[0][0][1]], [flattened[0][0][0]+1.0, flattened[0][0][1]]]]
 
         if self.manual_stitch_mode:
             return [self.strip_control_points(subpath) for subpath in path]
         else:
-            return self.flatten(path)
+            return flattened
 
     @property
     @cache
