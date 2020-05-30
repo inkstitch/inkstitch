@@ -30,12 +30,13 @@ def node_to_elements(node):  # noqa: C901
             return [SatinColumn(node)]
         else:
             elements = []
-            if element.get_style("fill", "black") and not element.get_style('fill-opacity', 1) == "0":
+            fill = element.get_style("fill", "#000000")
+            if fill and not element.get_style('fill-opacity', 1) == "0":
                 if element.get_boolean_param("auto_fill", True):
                     elements.append(AutoFill(node))
                 else:
                     elements.append(Fill(node))
-            if element.get_style("stroke"):
+            if element.get_style("stroke") and not (fill and fill.startswith("url")):
                 if not is_command(element.node):
                     elements.append(Stroke(node))
             if element.get_boolean_param("stroke_first", False):

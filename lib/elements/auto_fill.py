@@ -4,8 +4,14 @@ import traceback
 
 from shapely import geometry as shgeo
 
+import cubicsuperpath
+import simpletransform
+from inkex import NSS
+
 from ..i18n import _
 from ..stitches import auto_fill
+from ..svg import get_correction_transform, get_node_transform
+from ..svg.tags import XLINK_HREF
 from ..utils import cache, version
 from .element import Patch, param
 from .fill import Fill
@@ -189,6 +195,45 @@ class AutoFill(Fill):
     def fill_shape(self):
         return self.shrink_or_grow_shape(self.expand)
 
+    @property
+    def pattern(self):
+        pattern = self.get_style("fill", "#000000")
+
+        if not pattern.startswith('url'):
+            return None
+
+        svg = self.node.getroottree().getroot()
+        pattern_id = pattern[6:-2]
+        pattern_element = svg.find(".//*[@id='%s']" % pattern_id)
+        pattern_transform = simpletransform.parseTransform(pattern_element.get('patternTransform', ''))
+        if pattern_element.get(XLINK_HREF):
+            pattern_group_id = pattern_element.get(XLINK_HREF)[1:]
+            pattern_group = svg.find(".//*[@id='%s']" % pattern_group_id)
+            pattern_group_transform = simpletransform.parseTransform(pattern_group.get('patternTransform', ''))
+            pattern_transform = simpletransform.composeTransform(pattern_transform, pattern_group_transform)
+            pattern_element = pattern_group
+
+        pattern_path_elements = pattern_element.xpath(".//svg:path", namespaces=NSS)
+
+        # For now, let's take only the first occuring path # TODO: Handle multiple paths (if present)
+        pattern_element = pattern_path_elements[0]
+        pattern_path = pattern_element.get('d')
+        pattern_csp = cubicsuperpath.parsePath(pattern_path)
+
+        # TODO: create tiled pattern before(?) transformation
+
+        # Transform magic
+        pattern_path_transform = get_node_transform(pattern_element)
+        pattern_transform = simpletransform.composeTransform(pattern_transform, pattern_path_transform)
+        correction_transform = simpletransform.parseTransform(get_correction_transform(self.node))
+        pattern_transform = simpletransform.composeTransform(pattern_transform, correction_transform)
+        simpletransform.applyTransformToPath(pattern_transform, pattern_csp)
+
+        pattern = cubicsuperpath.formatPath(pattern_csp)
+        print("pattern path: ", pattern, file=sys.stderr)
+
+        return pattern_csp
+
     def get_starting_point(self, last_patch):
         # If there is a "fill_start" Command, then use that; otherwise pick
         # the point closest to the end of the last patch.
@@ -227,6 +272,8 @@ class AutoFill(Fill):
                                               underpath=self.underlay_underpath))
                     starting_point = stitches[-1]
 
+            # TODO: include pattern into stitches
+            self.pattern
             stitches.extend(auto_fill(self.fill_shape,
                                       self.angle,
                                       self.row_spacing,

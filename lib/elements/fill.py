@@ -61,7 +61,10 @@ class Fill(EmbroideryElement):
     @property
     def color(self):
         # SVG spec says the default fill is black
-        return self.get_style("fill", "#000000")
+        color = self.get_style("fill", "#000000")
+        if color.startswith("url"):
+            color = self.get_style("stroke", "#000000")
+        return color
 
     @property
     @param(
