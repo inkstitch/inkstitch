@@ -3,14 +3,14 @@ def rect_to_path(node):
     y = float(node.get('y', '0'))
     width = float(node.get('width', '0'))
     height = float(node.get('height', '0'))
-    rx = None
-    ry = None
+    rx = 0
+    ry = 0
 
     # rounded corners
     # the following rules apply for radius calculations:
-    #   if rx or ry is missing it has to take the value of the other one
-    #   the radius cannot be bigger than half of the corresponding side
-    #   (otherwise we receive an invalid path)
+    #   * if rx or ry is missing it has to take the value of the other one
+    #   * the radius cannot be bigger than half of the corresponding side
+    #     (otherwise we receive an invalid path)
     if node.get('rx') or node.get('ry'):
         if node.get('rx'):
             rx = float(node.get('rx', '0'))
