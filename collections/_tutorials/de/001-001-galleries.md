@@ -22,3 +22,7 @@ Kappe von @wwderw ([Wild West Designs](https://www.youtube.com/channel/UCyMKE9BO
 {%include folder-galleries path="augusa/" %}
 
 von @Augusa [http://lyogau.over-blog.com/tag/inkscape inkstitch/](http://lyogau.over-blog.com/tag/inkscape inkstitch/) (French)
+
+## @aStarHen
+
+{% include folder-galleries path="aStarHen/" %}

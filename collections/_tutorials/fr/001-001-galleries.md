@@ -22,3 +22,7 @@ Hat by @wwderw ([Wild West Designs](https://www.youtube.com/channel/UCyMKE9BOi4s
 {%include folder-galleries path="augusa/" %}
 
 by @Augusa [http://lyogau.over-blog.com/tag/inkscape inkstitch/](http://lyogau.over-blog.com/tag/inkscape inkstitch/) (French)
+
+## @aStarHen
+
+{% include folder-galleries path="aStarHen/" %}
