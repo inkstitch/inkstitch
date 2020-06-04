@@ -445,8 +445,9 @@ def add_jumps(graph, elements, preserve_order):
                     point2 = graph.nodes[node2]['point']
                     potential_edges.append((point1, point2))
 
-            edge = min(potential_edges, key=lambda (p1, p2): p1.distance(p2))
-            graph.add_edge(str(edge[0]), str(edge[1]), jump=True)
+            if potential_edges:
+                edge = min(potential_edges, key=lambda (p1, p2): p1.distance(p2))
+                graph.add_edge(str(edge[0]), str(edge[1]), jump=True)
     else:
         # networkx makes this super-easy!  k_edge_agumentation tells us what edges
         # we need to add to ensure that the graph is fully connected.  We give it a

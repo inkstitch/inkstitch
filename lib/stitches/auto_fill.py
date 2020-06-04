@@ -170,12 +170,13 @@ def insert_node(graph, shape, point):
         if key == "outline":
             edges.append(((start, end), data))
 
-    edge, data = min(edges, key=lambda (edge, data): shgeo.LineString(edge).distance(projected_point))
+    if edges:
+        edge, data = min(edges, key=lambda (edge, data): shgeo.LineString(edge).distance(projected_point))
 
-    graph.remove_edge(*edge, key="outline")
-    graph.add_edge(edge[0], node, key="outline", **data)
-    graph.add_edge(node, edge[1], key="outline", **data)
-    tag_nodes_with_outline_and_projection(graph, shape, nodes=[node])
+        graph.remove_edge(*edge, key="outline")
+        graph.add_edge(edge[0], node, key="outline", **data)
+        graph.add_edge(node, edge[1], key="outline", **data)
+        tag_nodes_with_outline_and_projection(graph, shape, nodes=[node])
 
 
 def tag_nodes_with_outline_and_projection(graph, shape, nodes):
