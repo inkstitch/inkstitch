@@ -1,6 +1,7 @@
 import cubicsuperpath
 import inkex
 import simpletransform
+from tags import SVG_GROUP_TAG, SVG_LINK_TAG
 
 from .units import get_viewbox_transform
 
@@ -22,7 +23,7 @@ def compose_parent_transforms(node, mat):
     if trans:
         mat = simpletransform.composeTransform(simpletransform.parseTransform(trans), mat)
     if node.getparent() is not None:
-        if node.getparent().tag == inkex.addNS('g', 'svg'):
+        if node.getparent().tag in [SVG_GROUP_TAG, SVG_LINK_TAG]:
             mat = compose_parent_transforms(node.getparent(), mat)
     return mat
 
