@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-05-23 00:23+0000\n"
-"PO-Revision-Date: 2020-05-23 00:24\n"
+"POT-Creation-Date: 2020-06-11 00:20+0000\n"
+"PO-Revision-Date: 2020-06-11 00:21\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -20,67 +20,67 @@ msgstr ""
 "X-Crowdin-File: /master/messages.po\n"
 "Language: zh_CN\n"
 
-#. name of font in fonts/dejavufont
-#: inkstitch-fonts-metadata.py:2
-msgid "Dejavu for Inkstitch semicondensed"
-msgstr ""
-
-#. description of font in fonts/dejavufont
-#: inkstitch-fonts-metadata.py:4
-#, python-format
-msgid "The capital em is 19,8 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 150%.  Every satin has center-walk underlay."
-msgstr ""
-
-#. name of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:6
-msgid "Ink/Stitch Small Font"
-msgstr ""
-
-#. description of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:8
-#, python-format
-msgid "A font suited for small characters.  The capital em is 0.2 inches wide at 100% scale.  Can be scaled up to 300%."
-msgstr ""
-
-#. name of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:10
-msgid "TT Directors"
-msgstr ""
-
-#. description of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:12
-msgid "A font suited for directing"
-msgstr ""
-
 #. name of font in fonts/medium_font
-#: inkstitch-fonts-metadata.py:14
+#: inkstitch-fonts-metadata.py:2
 msgid "Ink/Stitch Medium Font"
 msgstr ""
 
 #. description of font in fonts/medium_font
-#: inkstitch-fonts-metadata.py:16
+#: inkstitch-fonts-metadata.py:4
 #, python-format
 msgid "A basic font suited for medium-sized characters.  The capital em is 0.6 inches wide at 100% scale.  Can be scaled down to 75% or up to 150%.  Every satin has contour underlay."
 msgstr ""
 
-#. name of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:18
-msgid "TT Masters"
+#. name of font in fonts/tt_directors
+#: inkstitch-fonts-metadata.py:6
+msgid "TT Directors"
 msgstr ""
 
-#. description of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:20
-msgid "A font suited for heavy typing :)"
+#. description of font in fonts/tt_directors
+#: inkstitch-fonts-metadata.py:8
+msgid "A font suited for directing"
+msgstr ""
+
+#. name of font in fonts/dejavufont
+#: inkstitch-fonts-metadata.py:10
+msgid "Dejavu for Inkstitch semicondensed"
+msgstr ""
+
+#. description of font in fonts/dejavufont
+#: inkstitch-fonts-metadata.py:12
+#, python-format
+msgid "The capital em is 19,8 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 150%.  Every satin has center-walk underlay."
 msgstr ""
 
 #. name of font in fonts/geneva_simple
-#: inkstitch-fonts-metadata.py:22
+#: inkstitch-fonts-metadata.py:14
 msgid "Geneva Simple Sans"
 msgstr ""
 
 #. description of font in fonts/geneva_simple
-#: inkstitch-fonts-metadata.py:24
+#: inkstitch-fonts-metadata.py:16
 msgid "Suitable for small fonts (6 to 15mm)"
+msgstr ""
+
+#. name of font in fonts/small_font
+#: inkstitch-fonts-metadata.py:18
+msgid "Ink/Stitch Small Font"
+msgstr ""
+
+#. description of font in fonts/small_font
+#: inkstitch-fonts-metadata.py:20
+#, python-format
+msgid "A font suited for small characters.  The capital em is 0.2 inches wide at 100% scale.  Can be scaled up to 300%."
+msgstr ""
+
+#. name of font in fonts/tt_masters
+#: inkstitch-fonts-metadata.py:22
+msgid "TT Masters"
+msgstr ""
+
+#. description of font in fonts/tt_masters
+#: inkstitch-fonts-metadata.py:24
+msgid "A font suited for heavy typing :)"
 msgstr ""
 
 #. name of font in fonts/geneva_rounded
@@ -334,20 +334,20 @@ msgstr ""
 msgid "This setting will apply a custom fill angle for the clone."
 msgstr ""
 
-#: lib/elements/element.py:208
+#: lib/elements/element.py:212
 msgid "Ties"
 msgstr ""
 
-#: lib/elements/element.py:209
+#: lib/elements/element.py:213
 msgid "Add ties. Manual stitch will not add ties."
 msgstr ""
 
-#: lib/elements/element.py:257
+#: lib/elements/element.py:261
 #, python-format
 msgid "Object %(id)s has an empty 'd' attribute.  Please delete this object from your document."
 msgstr ""
 
-#: lib/elements/element.py:289
+#: lib/elements/element.py:293
 #, python-format
 msgid "%(id)s has more than one command of type '%(command)s' linked to it"
 msgstr ""
@@ -355,7 +355,7 @@ msgstr ""
 #. used when showing an error message to the user such as
 #. "Some Path (path1234): error: satin column: One or more of the rungs doesn't
 #. intersect both rails."
-#: lib/elements/element.py:347
+#: lib/elements/element.py:351
 msgid "error:"
 msgstr ""
 
@@ -673,15 +673,15 @@ msgstr ""
 msgid "Defines how many times to run down and back along the path."
 msgstr ""
 
-#: lib/elements/stroke.py:97
+#: lib/elements/stroke.py:102
 msgid "Manual stitch placement"
 msgstr ""
 
-#: lib/elements/stroke.py:98
+#: lib/elements/stroke.py:103
 msgid "Stitch every node in the path.  Stitch length and zig-zag spacing are ignored."
 msgstr ""
 
-#: lib/elements/stroke.py:132
+#: lib/elements/stroke.py:137
 msgid "Legacy running stitch setting detected!\n\n"
 "It looks like you're using a stroke smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set your stroke to be dashed to indicate running stitch.  Any kind of dash will work."
 msgstr ""
@@ -726,6 +726,11 @@ msgstr ""
 
 #: lib/extensions/break_apart.py:26
 msgid "Please select one or more fill areas to break apart."
+msgstr ""
+
+#: lib/extensions/cleanup.py:39
+#, python-format
+msgid "%s elements removed"
 msgstr ""
 
 #: lib/extensions/convert_to_satin.py:30
@@ -937,7 +942,8 @@ msgid "Description"
 msgstr ""
 
 #: lib/extensions/troubleshoot.py:101 lib/extensions/troubleshoot.py:159
-#: templates/remove_embroidery_settings.inx:16 templates/troubleshoot.inx:10
+#: templates/cleanup.inx:17 templates/remove_embroidery_settings.inx:16
+#: templates/troubleshoot.inx:10
 msgid "Troubleshoot"
 msgstr ""
 
@@ -1751,6 +1757,34 @@ msgstr ""
 
 #: templates/break_apart.inx:15
 msgid "This extension will try to repair fill shapes and break them apart if necessary. Holes will be retained. Use on simple or overlapping shapes."
+msgstr ""
+
+#: templates/cleanup.inx:3
+msgid "Cleanup Document"
+msgstr ""
+
+#: templates/cleanup.inx:5
+msgid "Use this extension to remove small objects from the document."
+msgstr ""
+
+#: templates/cleanup.inx:6
+msgid "Remove Small Fill Areas"
+msgstr ""
+
+#: templates/cleanup.inx:7
+msgid "Removes areas smaller than dedined by threshold."
+msgstr ""
+
+#: templates/cleanup.inx:8
+msgid "Fill area threshold"
+msgstr ""
+
+#: templates/cleanup.inx:10
+msgid "Removes small strokes shorter than defined by threshold."
+msgstr ""
+
+#: templates/cleanup.inx:11
+msgid "Stroke threshold"
 msgstr ""
 
 #: templates/convert_to_satin.inx:3
