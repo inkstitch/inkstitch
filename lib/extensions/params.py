@@ -151,7 +151,7 @@ class ParamsTab(ScrolledPanel):
                 # because they're grayed out anyway.
                 return values
 
-        for name, input in self.param_inputs.iteritems():
+        for name, input in self.param_inputs.items():
             if input in self.changed_inputs and input != self.toggle_checkbox:
                 values[name] = input.GetValue()
 
@@ -161,7 +161,7 @@ class ParamsTab(ScrolledPanel):
         values = self.get_values()
         for node in self.nodes:
             # print >> sys.stderr, "apply: ", self.name, node.id, values
-            for name, value in values.iteritems():
+            for name, value in values.items():
                 node.set_param(name, value)
 
     def on_change(self, callable):
@@ -181,7 +181,7 @@ class ParamsTab(ScrolledPanel):
     def load_preset(self, preset):
         preset_data = preset.get(self.name, {})
 
-        for name, value in preset_data.iteritems():
+        for name, value in preset_data.items():
             if name in self.param_inputs:
                 self.param_inputs[name].SetValue(value)
                 self.changed_inputs.add(self.param_inputs[name])
@@ -198,16 +198,16 @@ class ParamsTab(ScrolledPanel):
             description = _("These settings will be applied to %d objects.") % len(self.nodes)
 
         if any(len(param.values) > 1 for param in self.params):
-            description += u"\n • " + _("Some settings had different values across objects.  Select a value from the dropdown or enter a new one.")
+            description += "\n • " + _("Some settings had different values across objects.  Select a value from the dropdown or enter a new one.")
 
         if self.dependent_tabs:
             if len(self.dependent_tabs) == 1:
-                description += u"\n • " + _("Disabling this tab will disable the following %d tabs.") % len(self.dependent_tabs)
+                description += "\n • " + _("Disabling this tab will disable the following %d tabs.") % len(self.dependent_tabs)
             else:
-                description += u"\n • " + _("Disabling this tab will disable the following tab.")
+                description += "\n • " + _("Disabling this tab will disable the following tab.")
 
         if self.paired_tab:
-            description += u"\n • " + _("Enabling this tab will disable %s and vice-versa.") % self.paired_tab.name
+            description += "\n • " + _("Enabling this tab will disable %s and vice-versa.") % self.paired_tab.name
 
         self.description_text = description
 
@@ -285,7 +285,7 @@ class ParamsTab(ScrolledPanel):
             self.settings_grid.Add(input, proportion=1, flag=wx.ALIGN_CENTER_VERTICAL | wx.EXPAND | wx.LEFT, border=40)
             self.settings_grid.Add(wx.StaticText(self, label=param.unit or ""), proportion=1, flag=wx.ALIGN_CENTER_VERTICAL)
 
-        self.inputs_to_params = {v: k for k, v in self.param_inputs.iteritems()}
+        self.inputs_to_params = {v: k for k, v in self.param_inputs.items()}
 
         box.Add(self.settings_grid, proportion=1, flag=wx.ALL, border=10)
         self.SetSizer(box)
@@ -491,7 +491,7 @@ class Params(InkstitchExtension):
                 element.order = z
                 nodes_by_class[cls].append(element)
 
-        return sorted(nodes_by_class.items(), key=lambda (cls, nodes): cls.__name__)
+        return sorted(list(nodes_by_class.items()), key=lambda cls_nodes: cls_nodes[0].__name__)
 
     def get_values(self, param, nodes):
         getter = 'get_param'
@@ -501,8 +501,7 @@ class Params(InkstitchExtension):
         else:
             getter = 'get_param'
 
-        values = filter(lambda item: item is not None,
-                        (getattr(node, getter)(param.name, param.default) for node in nodes))
+        values = [item for item in (getattr(node, getter)(param.name, param.default) for node in nodes) if item is not None]
 
         return values
 

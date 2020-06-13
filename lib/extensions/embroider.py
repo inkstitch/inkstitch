@@ -42,11 +42,11 @@ class Embroider(InkstitchExtension):
             # This is helpful for folks that run the embroider extension
             # manually from the command line (without Inkscape) for
             # debugging purposes.
-            output_path = os.path.join(os.path.expanduser(os.path.expandvars(self.options.path.decode("UTF-8"))),
+            output_path = os.path.join(os.path.expanduser(os.path.expandvars(self.options.path)),
                                        self.options.output_file.decode("UTF-8"))
         else:
             csv_filename = '%s.%s' % (self.get_base_file_name(), self.options.output_format)
-            output_path = os.path.join(self.options.path.decode("UTF-8"), csv_filename)
+            output_path = os.path.join(self.options.path, csv_filename)
 
         def add_suffix(path, suffix):
             if suffix > 0:

@@ -77,7 +77,7 @@ def which_outline(shape, coords):
 
     point = shgeo.Point(*coords)
     outlines = list(shape.boundary)
-    outline_indices = range(len(outlines))
+    outline_indices = list(range(len(outlines)))
     closest = min(outline_indices, key=lambda index: outlines[index].distance(point))
 
     return closest
@@ -170,7 +170,7 @@ def insert_node(graph, shape, point):
         if key == "outline":
             edges.append(((start, end), data))
 
-    edge, data = min(edges, key=lambda (edge, data): shgeo.LineString(edge).distance(projected_point))
+    edge, data = min(edges, key=lambda edge_data: shgeo.LineString(edge_data[0]).distance(projected_point))
 
     graph.remove_edge(*edge, key="outline")
     graph.add_edge(edge[0], node, key="outline", **data)
@@ -199,7 +199,7 @@ def add_boundary_travel_nodes(graph, shape):
                 if length > 1:
                     # Just plot a point every pixel, that should be plenty of
                     # resolution.  A pixel is around a quarter of a millimeter.
-                    for i in xrange(1, int(length)):
+                    for i in range(1, int(length)):
                         subpoint = segment.interpolate(i)
                         graph.add_node((subpoint.x, subpoint.y), projection=outline.project(subpoint), outline=outline_index)
 
@@ -475,7 +475,7 @@ def find_stitch_path(graph, travel_graph, starting_point=None, ending_point=None
     graph = graph.copy()
 
     if not starting_point:
-        starting_point = graph.nodes.keys()[0]
+        starting_point = list(graph.nodes.keys())[0]
 
     starting_node = nearest_node(graph, starting_point)
 

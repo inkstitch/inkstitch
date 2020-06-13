@@ -1,4 +1,4 @@
-from itertools import izip
+
 import sys
 from threading import Thread, Event
 import time
@@ -378,7 +378,7 @@ class DrawingPanel(wx.Panel):
         last_stitch = None
 
         start = time.time()
-        for pen, stitches in izip(self.pens, self.stitch_blocks):
+        for pen, stitches in zip(self.pens, self.stitch_blocks):
             canvas.SetPen(pen)
             if stitch + len(stitches) < self.current_stitch:
                 stitch += len(stitches)

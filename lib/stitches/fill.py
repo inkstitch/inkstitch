@@ -223,7 +223,7 @@ def pull_runs(rows, shape, row_spacing):
         run = []
         prev = None
 
-        for row_num in xrange(len(rows)):
+        for row_num in range(len(rows)):
             row = rows[row_num]
             first, rest = row[0], row[1:]
 

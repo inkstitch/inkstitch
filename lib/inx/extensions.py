@@ -41,7 +41,7 @@ def generate_extension_inx_files():
             continue
 
         name = extension.name()
-        template = env.get_template('%s.inx' % name)
+        template = env.get_template('%s.xml' % name)
         write_inx_file(name, template.render(formats=pyembroidery_output_formats(),
                                              debug_formats=pyembroidery_debug_formats(),
                                              threadcatalog=threadcatalog(),

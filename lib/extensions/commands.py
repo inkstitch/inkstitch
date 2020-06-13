@@ -1,4 +1,5 @@
 from .base import InkstitchExtension
+import inkex
 
 
 class CommandsExtension(InkstitchExtension):
@@ -7,4 +8,4 @@ class CommandsExtension(InkstitchExtension):
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
         for command in self.COMMANDS:
-            self.OptionParser.add_option("--%s" % command, type="inkbool")
+            self.arg_parser.add_argument("--%s" % command, type=inkex.utils.Boolean)

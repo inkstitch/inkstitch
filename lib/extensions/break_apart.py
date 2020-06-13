@@ -11,6 +11,7 @@ from ..i18n import _
 from ..svg import get_correction_transform
 from ..svg.tags import SVG_PATH_TAG
 from .base import InkstitchExtension
+import sys
 
 
 class BreakApart(InkstitchExtension):
@@ -19,11 +20,11 @@ class BreakApart(InkstitchExtension):
     '''
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
-        self.OptionParser.add_option("-m", "--method", type="int", default=1, dest="method")
+        self.arg_parser.add_argument("-m", "--method", type=int, default=1, dest="method")
 
     def effect(self):
-        if not self.selected:
-            inkex.errormsg(_("Please select one or more fill areas to break apart."))
+        if not self.svg.selected:
+            print(_("Please select one or more fill areas to break apart."), file=sys.stderr)
             return
 
         elements = []

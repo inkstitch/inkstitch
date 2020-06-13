@@ -25,10 +25,10 @@ class FontVariant(object):
 
     # We use unicode characters rather than English strings for font file names
     # in order to be more approachable for languages other than English.
-    LEFT_TO_RIGHT = u"→"
-    RIGHT_TO_LEFT = u"←"
-    TOP_TO_BOTTOM = u"↓"
-    BOTTOM_TO_TOP = u"↑"
+    LEFT_TO_RIGHT = "→"
+    RIGHT_TO_LEFT = "←"
+    TOP_TO_BOTTOM = "↓"
+    BOTTOM_TO_TOP = "↑"
     VARIANT_TYPES = (LEFT_TO_RIGHT, RIGHT_TO_LEFT, TOP_TO_BOTTOM, BOTTOM_TO_TOP)
 
     @classmethod
@@ -52,7 +52,7 @@ class FontVariant(object):
         self._load_glyphs()
 
     def _load_glyphs(self):
-        svg_path = os.path.join(self.path, u"%s.svg" % self.variant)
+        svg_path = os.path.join(self.path, "%s.svg" % self.variant)
         with open(svg_path) as svg_file:
             svg = inkex.etree.parse(svg_file)
 

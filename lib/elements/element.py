@@ -3,8 +3,8 @@ from copy import deepcopy
 
 import tinycss2
 
-import cubicsuperpath
-from cspsubdiv import cspsubdiv
+import inkex
+from inkex import bezier
 
 from ..commands import find_commands
 from ..i18n import _
@@ -155,22 +155,29 @@ class EmbroideryElement(object):
     def parse_style(self, node=None):
         if node is None:
             node = self.node
+        element_style = node.get("style", "")
+        if element_style is None:
+            return None
         declarations = tinycss2.parse_declaration_list(node.get("style", ""))
         style = {declaration.lower_name: declaration.value[0].serialize() for declaration in declarations}
         return style
 
     @cache
     def _get_style_raw(self, style_name):
+        if self.node is None:
+            return None
         if self.node.tag != SVG_GROUP_TAG and self.node.tag not in EMBROIDERABLE_TAGS:
             return None
 
         style = self.parse_style()
-        style = style.get(style_name) or self.node.get(style_name)
+        if style:
+            style = style.get(style_name) or self.node.get(style_name)
         parent = self.node.getparent()
         # style not found, get inherited style elements
         while not style and parent is not None:
             style = self.parse_style(parent)
-            style = style.get(style_name) or parent.get(style_name)
+            if style:
+                style = style.get(style_name) or parent.get(style_name)
             parent = parent.getparent()
         return style
 
@@ -260,7 +267,7 @@ class EmbroideryElement(object):
         if not d:
             self.fatal(_("Object %(id)s has an empty 'd' attribute.  Please delete this object from your document.") % dict(id=self.node.get("id")))
 
-        return cubicsuperpath.parsePath(d)
+        return inkex.paths.Path(d).to_superpath()
 
     @cache
     def parse_path(self):
@@ -302,13 +309,13 @@ class EmbroideryElement(object):
         """approximate a path containing beziers with a series of points"""
 
         path = deepcopy(path)
-        cspsubdiv(path, 0.1)
+        bezier.cspsubdiv(path, 0.1)
 
         return [self.strip_control_points(subpath) for subpath in path]
 
     def flatten_subpath(self, subpath):
         path = [deepcopy(subpath)]
-        cspsubdiv(path, 0.1)
+        bezier.cspsubdiv(path, 0.1)
 
         return self.strip_control_points(path[0])
 
@@ -349,7 +356,7 @@ class EmbroideryElement(object):
         # L10N used when showing an error message to the user such as
         # "Some Path (path1234): error: satin column: One or more of the rungs doesn't intersect both rails."
         error_msg = "%s: %s %s" % (name, _("error:"), message)
-        print >> sys.stderr, "%s" % (error_msg.encode("UTF-8"))
+        print(error_msg, file=sys.stderr)
         sys.exit(1)
 
     def validation_errors(self):

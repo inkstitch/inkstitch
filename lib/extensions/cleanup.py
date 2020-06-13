@@ -36,4 +36,4 @@ class Cleanup(InkstitchExtension):
                 element.node.getparent().remove(element.node)
                 count += 1
 
-        print >> sys.stderr, _("%s elements removed" % count)
+        print(_("%s elements removed" % count), file=sys.stderr)

@@ -10,8 +10,8 @@ from inkex import etree
 import inkex
 from simplestyle import formatStyle
 
-from svg import line_strings_to_path
-from svg.tags import INKSCAPE_GROUPMODE, INKSCAPE_LABEL
+from .svg import line_strings_to_path
+from .svg.tags import INKSCAPE_GROUPMODE, INKSCAPE_LABEL
 
 
 def check_enabled(func):
@@ -60,7 +60,7 @@ class Debug(object):
 
             try:
                 pydevd.settrace()
-            except socket.error, error:
+            except socket.error as error:
                 self.log("Debugging: connection to pydevd failed: %s", error)
                 self.log("Be sure to run 'Start debugging server' in PyDev to enable debugging.")
             else:
@@ -113,20 +113,20 @@ class Debug(object):
         timestamp = now.isoformat()
         self.last_log_time = now
 
-        print >> self.log_file, timestamp, message % args
+        print(timestamp, message % args, file=self.log_file)
         self.log_file.flush()
 
     def time(self, func):
         def decorated(*args, **kwargs):
             if self.enabled:
-                self.raw_log("entering %s()", func.func_name)
+                self.raw_log("entering %s()", func.__name__)
                 start = time.time()
 
             result = func(*args, **kwargs)
 
             if self.enabled:
                 end = time.time()
-                self.raw_log("leaving %s(), duration = %s", func.func_name, round(end - start, 6))
+                self.raw_log("leaving %s(), duration = %s", func.__name__, round(end - start, 6))
 
             return result
 

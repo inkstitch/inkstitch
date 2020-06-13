@@ -1,4 +1,4 @@
-from collections import Set
+from collections.abc import Set
 from colormath.color_objects import sRGBColor, LabColor
 from colormath.color_conversions import convert_color
 from colormath.color_diff import delta_e_cie1994

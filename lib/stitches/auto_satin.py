@@ -1,5 +1,5 @@
 import math
-from itertools import chain, izip
+from itertools import chain
 
 import networkx as nx
 from shapely import geometry as shgeo
@@ -87,7 +87,7 @@ class SatinSegment(object):
 
         num_segments = int(math.ceil(self.center_line.length / segment_size))
         segments = []
-        for i in xrange(num_segments):
+        for i in range(num_segments):
             segments.append(SatinSegment(self.satin,
                                          float(i) / num_segments,
                                          float(i + 1) / num_segments,
@@ -445,7 +445,7 @@ def add_jumps(graph, elements, preserve_order):
                     point2 = graph.nodes[node2]['point']
                     potential_edges.append((point1, point2))
 
-            edge = min(potential_edges, key=lambda (p1, p2): p1.distance(p2))
+            edge = min(potential_edges, key=lambda p1_p2: p1_p2[0].distance(p1_p2[1]))
             graph.add_edge(str(edge[0]), str(edge[1]), jump=True)
     else:
         # networkx makes this super-easy!  k_edge_agumentation tells us what edges
@@ -497,7 +497,7 @@ def find_path(graph, starting_node, ending_node):
     # forth on each satin twice due to the satin edges being in the graph
     # twice (forward and reverse).
     graph = nx.Graph(graph)
-    graph.remove_edges_from(zip(path[:-1], path[1:]))
+    graph.remove_edges_from(list(zip(path[:-1], path[1:])))
 
     final_path = []
     prev = None
@@ -643,7 +643,7 @@ def preserve_original_groups(elements, original_parent_nodes):
     to the group that contained the original SatinColumn that spawned it.
     """
 
-    for element, parent in izip(elements, original_parent_nodes):
+    for element, parent in zip(elements, original_parent_nodes):
         if parent is not None:
             parent.append(element.node)
             element.node.set('transform', get_correction_transform(parent, child=True))

@@ -72,7 +72,7 @@ class LetteringFrame(wx.Frame):
         """Load the settings saved into the SVG group element"""
 
         self.settings = DotDict({
-            "text": u"",
+            "text": "",
             "back_and_forth": True,
             "font": None,
             "scale": 100
@@ -135,13 +135,13 @@ class LetteringFrame(wx.Frame):
             self.cancel()
 
     def get_font_names(self):
-        font_names = [font.name for font in self.fonts.itervalues()]
+        font_names = [font.name for font in self.fonts.values()]
         font_names.sort()
 
         return font_names
 
     def get_font_descriptions(self):
-        return {font.name: font.description for font in self.fonts.itervalues()}
+        return {font.name: font.description for font in self.fonts.values()}
 
     def set_initial_font(self, font_id):
         if font_id:
@@ -163,7 +163,7 @@ class LetteringFrame(wx.Frame):
         try:
             return self.fonts[self.DEFAULT_FONT]
         except KeyError:
-            return self.fonts.values()[0]
+            return list(self.fonts.values())[0]
 
     def on_change(self, attribute, event):
         self.settings[attribute] = event.GetEventObject().GetValue()
@@ -304,7 +304,7 @@ class Lettering(CommandsExtension):
         if self.selected:
             groups = set()
 
-            for node in self.selected.itervalues():
+            for node in self.selected.values():
                 if node.tag == SVG_GROUP_TAG and INKSTITCH_LETTERING in node.attrib:
                     groups.add(node)
 

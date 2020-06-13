@@ -19,7 +19,7 @@ class ThreadColor(object):
             self.manufacturer = color.brand
             self.rgb = (color.get_red(), color.get_green(), color.get_blue())
             return
-        elif isinstance(color, unicode):
+        elif isinstance(color, str):
             self.rgb = tinycss2.color3.parse_color(color)
             # remove alpha channel and multiply with 255
             self.rgb = tuple(channel * 255.0 for channel in list(self.rgb)[:-1])
@@ -77,7 +77,7 @@ class ThreadColor(object):
 
     @property
     def hex_digits(self):
-        return "%02X%02X%02X" % self.rgb
+        return "%02X%02X%02X" % tuple([int(x) for x in self.rgb])
 
     @property
     def rgb_normalized(self):

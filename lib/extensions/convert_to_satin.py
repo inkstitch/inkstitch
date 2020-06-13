@@ -4,6 +4,7 @@ from itertools import chain, groupby
 import numpy
 from numpy import diff, setdiff1d, sign
 from shapely import geometry as shgeo
+from lxml import etree
 
 import inkex
 
@@ -26,7 +27,7 @@ class ConvertToSatin(InkstitchExtension):
         if not self.get_elements():
             return
 
-        if not self.selected:
+        if not self.svg.selected:
             inkex.errormsg(_("Please select at least one line to convert to a satin column."))
             return
 
@@ -304,7 +305,7 @@ class ConvertToSatin(InkstitchExtension):
                 d += "%s,%s " % (x, y)
             d += " "
 
-        return inkex.etree.Element(SVG_PATH_TAG,
+        return etree.Element(SVG_PATH_TAG,
                                    {
                                        "id": self.uniqueId("path"),
                                        "style": path_style,

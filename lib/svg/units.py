@@ -1,4 +1,4 @@
-import simpletransform
+import inkex
 
 from ..i18n import _
 from ..utils import cache
@@ -121,7 +121,7 @@ def get_viewbox_transform(node):
 
     dx = -float(viewbox[0])
     dy = -float(viewbox[1])
-    transform = simpletransform.parseTransform("translate(%f, %f)" % (dx, dy))
+    transform = inkex.transforms.Transform("translate(%f, %f)" % (dx, dy))
 
     try:
         sx = doc_width / float(viewbox[2])
@@ -132,8 +132,8 @@ def get_viewbox_transform(node):
         if aspect_ratio != 'none':
             sx = sy = max(sx, sy) if 'slice' in aspect_ratio else min(sx, sy)
 
-        scale_transform = simpletransform.parseTransform("scale(%f, %f)" % (sx, sy))
-        transform = simpletransform.composeTransform(transform, scale_transform)
+        scale_transform = inkex.transforms.Transform("scale(%f, %f)" % (sx, sy))
+        transform = transform * scale_transform
     except ZeroDivisionError:
         pass
 

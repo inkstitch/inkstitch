@@ -1,7 +1,7 @@
 import json
 import os
 import re
-from collections import MutableMapping
+from collections.abc import MutableMapping
 from copy import deepcopy
 
 from stringcase import snakecase
@@ -116,7 +116,7 @@ class InkstitchExtension(inkex.Effect):
     def ensure_current_layer(self):
         # if no layer is selected, inkex defaults to the root, which isn't
         # particularly useful
-        if self.current_layer is self.document.getroot():
+        if self.svg.get_current_layer() is self.document.getroot():
             try:
                 self.current_layer = self.document.xpath(".//svg:g[@inkscape:groupmode='layer']", namespaces=inkex.NSS)[0]
             except IndexError:
@@ -124,7 +124,7 @@ class InkstitchExtension(inkex.Effect):
                 pass
 
     def no_elements_error(self):
-        if self.selected:
+        if self.svg.selected:
             # l10n This was previously: "No embroiderable paths selected."
             inkex.errormsg(_("Ink/Stitch doesn't know how to work with any of the objects you've selected.") + "\n")
         else:
@@ -153,8 +153,8 @@ class InkstitchExtension(inkex.Effect):
         if is_command(node) or node.get(CONNECTOR_TYPE):
             return[]
 
-        if self.selected:
-            if node.get("id") in self.selected:
+        if self.svg.selected:
+            if node.get("id") in self.svg.selected:
                 selected = True
         else:
             # if the user didn't select anything that means we process everything
@@ -224,5 +224,5 @@ class InkstitchExtension(inkex.Effect):
         # existing element tree at the top without getting ugly prefixes like "ns0".
         inkex.etree.cleanup_namespaces(self.document,
                                        top_nsmap=inkex.NSS,
-                                       keep_ns_prefixes=inkex.NSS.keys())
+                                       keep_ns_prefixes=list(inkex.NSS.keys()))
         self.original_document = deepcopy(self.document)

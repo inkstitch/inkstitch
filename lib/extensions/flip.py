@@ -1,5 +1,4 @@
 import inkex
-import cubicsuperpath
 
 from .base import InkstitchExtension
 from ..i18n import _
@@ -14,13 +13,13 @@ class Flip(InkstitchExtension):
             first, second = satin.rail_indices
             csp[first], csp[second] = csp[second], csp[first]
 
-            satin.node.set("d", cubicsuperpath.formatPath(csp))
+            satin.node.set("d", inkex.paths.CubicSuperPath.to_path(csp))
 
     def effect(self):
         if not self.get_elements():
             return
 
-        if not self.selected:
+        if not self.svg.selected:
             inkex.errormsg(_("Please select one or more satin columns to flip."))
             return
 

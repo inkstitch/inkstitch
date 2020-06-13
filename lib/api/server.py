@@ -87,7 +87,7 @@ class APIServer(Thread):
                     response = requests.get("http://%s:%s/ping" % (self.host, self.port))
                     if response.status_code == 200:
                         break
-                except socket.error, e:
+                except socket.error as e:
                     if e.errno == errno.ECONNREFUSED:
                         pass
                     else:

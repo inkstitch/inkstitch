@@ -106,7 +106,7 @@ class PresetsPanel(wx.Panel):
             json.dump(presets, presets_file)
 
     def update_preset_list(self):
-        preset_names = self._load_presets().keys()
+        preset_names = list(self._load_presets().keys())
         preset_names = [preset for preset in preset_names if not self.is_hidden(preset)]
         self.preset_chooser.SetItems(sorted(preset_names))
 
