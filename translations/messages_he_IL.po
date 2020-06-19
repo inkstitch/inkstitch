@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-06-11 00:20+0000\n"
-"PO-Revision-Date: 2020-06-11 00:21\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2020-06-19 00:21+0000\n"
+"PO-Revision-Date: 2020-06-19 00:22\n"
+"Last-Translator: \n"
 "Language-Team: Hebrew\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,8 +16,10 @@ msgstr ""
 "Project-Id-Version: \n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3;\n"
 "X-Crowdin-Project: inkstitch\n"
+"X-Crowdin-Project-ID: 299419\n"
 "X-Crowdin-Language: he\n"
 "X-Crowdin-File: /master/messages.po\n"
+"X-Crowdin-File-ID: 5\n"
 "Language: he_IL\n"
 
 #. name of font in fonts/medium_font
@@ -41,36 +43,35 @@ msgstr ""
 msgid "A font suited for directing"
 msgstr ""
 
-#. name of font in fonts/dejavufont
-#: inkstitch-fonts-metadata.py:10
-msgid "Dejavu for Inkstitch semicondensed"
-msgstr ""
-
-#. description of font in fonts/dejavufont
-#: inkstitch-fonts-metadata.py:12
-#, python-format
-msgid "The capital em is 19,8 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 150%.  Every satin has center-walk underlay."
-msgstr ""
-
 #. name of font in fonts/geneva_simple
-#: inkstitch-fonts-metadata.py:14
+#: inkstitch-fonts-metadata.py:10
 msgid "Geneva Simple Sans"
 msgstr ""
 
 #. description of font in fonts/geneva_simple
-#: inkstitch-fonts-metadata.py:16
+#: inkstitch-fonts-metadata.py:12
 msgid "Suitable for small fonts (6 to 15mm)"
 msgstr ""
 
-#. name of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:18
-msgid "Ink/Stitch Small Font"
+#. name of font in fonts/dejavufont
+#: inkstitch-fonts-metadata.py:14
+msgid "Dejavu for Inkstitch semicondensed"
 msgstr ""
 
-#. description of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:20
+#. description of font in fonts/dejavufont
+#: inkstitch-fonts-metadata.py:16
 #, python-format
-msgid "A font suited for small characters.  The capital em is 0.2 inches wide at 100% scale.  Can be scaled up to 300%."
+msgid "The capital em is 19,8 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 150%.  Every satin has center-walk underlay."
+msgstr ""
+
+#. name of font in fonts/geneva_rounded
+#: inkstitch-fonts-metadata.py:18
+msgid "Geneva Simple Sans Rounded"
+msgstr ""
+
+#. description of font in fonts/geneva_rounded
+#: inkstitch-fonts-metadata.py:20
+msgid "Suitable for small fonts (8 to 20 mm)"
 msgstr ""
 
 #. name of font in fonts/tt_masters
@@ -83,14 +84,15 @@ msgstr ""
 msgid "A font suited for heavy typing :)"
 msgstr ""
 
-#. name of font in fonts/geneva_rounded
+#. name of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:26
-msgid "Geneva Simple Sans Rounded"
+msgid "Ink/Stitch Small Font"
 msgstr ""
 
-#. description of font in fonts/geneva_rounded
+#. description of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:28
-msgid "Suitable for small fonts (8 to 20 mm)"
+#, python-format
+msgid "A font suited for small characters.  The capital em is 0.2 inches wide at 100% scale.  Can be scaled up to 300%."
 msgstr ""
 
 #: inkstitch.py:56
