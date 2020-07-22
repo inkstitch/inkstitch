@@ -1,6 +1,9 @@
 'use strict'
 
-import {app, BrowserWindow} from 'electron'
+import {app, BrowserWindow, ipcMain, dialog, shell} from 'electron'
+var fs = require('fs');
+var path = require('path');
+var tmp = require('tmp');
 
 const url = require('url')
 
@@ -15,7 +18,7 @@ if (process.env.NODE_ENV === 'development') {
   process.argv.shift()
   process.argv.shift()
 } else {
-  global.__static = require('path').join(__dirname, '/static').replace(/\\/g, '\\\\')
+  global.__static = path.join(__dirname, '/static').replace(/\\/g, '\\\\')
 }
 
 let mainWindow
@@ -68,6 +71,25 @@ app.on('activate', () => {
     createWindow()
   }
 })
+
+ipcMain.on('save-pdf', function (event, pageSize) {
+    mainWindow.webContents.printToPDF({"pageSize": pageSize}, function(error, data) {
+        dialog.showSaveDialog(mainWindow, {"defaultPath": "inkstitch.pdf"}, function(filename, bookmark) {
+            if (typeof filename !== 'undefined')
+                fs.writeFileSync(filename, data, 'utf-8');
+        })
+    })
+})
+
+ipcMain.on('open-pdf', function (event, pageSize) {
+    mainWindow.webContents.printToPDF({"pageSize": pageSize}, function(error, data) {
+        tmp.file({keep: true, discardDescriptor: true}, function(err, path, fd, cleanupCallback) {
+            fs.writeFileSync(path, data, 'utf-8');
+            shell.openItem(path);
+        })
+    })
+})
+
 
 /**
  * Auto Updater
