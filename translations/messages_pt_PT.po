@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-07-30 00:29+0000\n"
-"PO-Revision-Date: 2020-07-30 00:32\n"
+"POT-Creation-Date: 2020-08-07 00:32+0000\n"
+"PO-Revision-Date: 2020-08-07 00:33\n"
 "Last-Translator: \n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -43,56 +43,56 @@ msgstr ""
 msgid "A font suited for small characters.  The capital em is 0.2 inches wide at 100% scale.  Can be scaled up to 300%."
 msgstr ""
 
-#. name of font in fonts/geneva_rounded
+#. name of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:10
-msgid "Geneva Simple Sans Rounded"
+msgid "TT Masters"
 msgstr ""
 
-#. description of font in fonts/geneva_rounded
+#. description of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:12
-msgid "Suitable for small fonts (8 to 20 mm)"
-msgstr ""
-
-#. name of font in fonts/dejavufont
-#: inkstitch-fonts-metadata.py:14
-msgid "Dejavu for Inkstitch semicondensed"
-msgstr ""
-
-#. description of font in fonts/dejavufont
-#: inkstitch-fonts-metadata.py:16
-#, python-format
-msgid "The capital em is 19,8 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 150%.  Every satin has center-walk underlay."
+msgid "A font suited for heavy typing :)"
 msgstr ""
 
 #. name of font in fonts/medium_font
-#: inkstitch-fonts-metadata.py:18
+#: inkstitch-fonts-metadata.py:14
 msgid "Ink/Stitch Medium Font"
 msgstr ""
 
 #. description of font in fonts/medium_font
-#: inkstitch-fonts-metadata.py:20
+#: inkstitch-fonts-metadata.py:16
 #, python-format
 msgid "A basic font suited for medium-sized characters.  The capital em is 0.6 inches wide at 100% scale.  Can be scaled down to 75% or up to 150%.  Every satin has contour underlay."
 msgstr ""
 
 #. name of font in fonts/geneva_simple
-#: inkstitch-fonts-metadata.py:22
+#: inkstitch-fonts-metadata.py:18
 msgid "Geneva Simple Sans"
 msgstr ""
 
 #. description of font in fonts/geneva_simple
-#: inkstitch-fonts-metadata.py:24
+#: inkstitch-fonts-metadata.py:20
 msgid "Suitable for small fonts (6 to 15mm)"
 msgstr ""
 
-#. name of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:26
-msgid "TT Masters"
+#. name of font in fonts/geneva_rounded
+#: inkstitch-fonts-metadata.py:22
+msgid "Geneva Simple Sans Rounded"
 msgstr ""
 
-#. description of font in fonts/tt_masters
+#. description of font in fonts/geneva_rounded
+#: inkstitch-fonts-metadata.py:24
+msgid "Suitable for small fonts (8 to 20 mm)"
+msgstr ""
+
+#. name of font in fonts/dejavufont
+#: inkstitch-fonts-metadata.py:26
+msgid "Dejavu for Inkstitch semicondensed"
+msgstr ""
+
+#. description of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:28
-msgid "A font suited for heavy typing :)"
+#, python-format
+msgid "The capital em is 19,8 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 150%.  Every satin has center-walk underlay."
 msgstr ""
 
 #: inkstitch.py:56
