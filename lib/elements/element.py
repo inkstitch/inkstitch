@@ -11,7 +11,7 @@ from ..i18n import _
 from ..svg import PIXELS_PER_MM, apply_transforms, convert_length, get_doc_size
 from ..svg.tags import (EMBROIDERABLE_TAGS, INKSCAPE_LABEL, INKSTITCH_ATTRIBS,
                         SVG_CIRCLE_TAG, SVG_ELLIPSE_TAG, SVG_GROUP_TAG,
-                        SVG_OBJECT_TAGS, SVG_RECT_TAG)
+                        SVG_OBJECT_TAGS, SVG_RECT_TAG, SVG_LINK_TAG)
 from ..utils import cache
 from .svg_objects import circle_to_path, ellipse_to_path, rect_to_path
 
@@ -161,7 +161,7 @@ class EmbroideryElement(object):
 
     @cache
     def _get_style_raw(self, style_name):
-        if self.node.tag != SVG_GROUP_TAG and self.node.tag not in EMBROIDERABLE_TAGS:
+        if self.node.tag not in [SVG_GROUP_TAG, SVG_LINK_TAG] and self.node.tag not in EMBROIDERABLE_TAGS:
             return None
 
         style = self.parse_style()
