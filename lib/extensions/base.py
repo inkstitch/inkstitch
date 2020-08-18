@@ -14,7 +14,8 @@ from ..elements.clone import is_clone, is_embroiderable_clone
 from ..i18n import _
 from ..svg import generate_unique_id
 from ..svg.tags import (CONNECTOR_TYPE, EMBROIDERABLE_TAGS, INKSCAPE_GROUPMODE,
-                        NOT_EMBROIDERABLE_TAGS, SVG_DEFS_TAG, SVG_GROUP_TAG)
+                        NOT_EMBROIDERABLE_TAGS, SVG_DEFS_TAG, SVG_GROUP_TAG,
+                        SVG_PATH_TAG)
 
 SVG_METADATA_TAG = inkex.addNS("metadata", "svg")
 
@@ -164,9 +165,9 @@ class InkstitchExtension(inkex.Effect):
             nodes.extend(self.descendants(child, selected, troubleshoot))
 
         if selected:
-            if node.tag in EMBROIDERABLE_TAGS or is_embroiderable_clone(node):
+            if (node.tag in EMBROIDERABLE_TAGS or is_embroiderable_clone(node)) and not (node.tag == SVG_PATH_TAG and not node.get('d', '')):
                 nodes.append(node)
-            elif troubleshoot and (node.tag in NOT_EMBROIDERABLE_TAGS or is_clone(node)):
+            elif troubleshoot and (node.tag in NOT_EMBROIDERABLE_TAGS or node.tag in EMBROIDERABLE_TAGS or is_clone(node)):
                 nodes.append(node)
 
         return nodes
