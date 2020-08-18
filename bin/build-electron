@@ -1,6 +1,6 @@
 #!/bin/bash
 
-
+set -e
 
 if [ "$BUILD" = "windows" ]; then
   args="-w --ia32"
