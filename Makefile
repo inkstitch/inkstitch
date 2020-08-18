@@ -1,8 +1,8 @@
 
 dist: locales inx
-	bin/build-python
-	bin/build-electron
-	bin/build-distribution-archives
+	bash bin/build-python
+	bash bin/build-electron
+	bash bin/build-distribution-archives
 
 distclean:
 	rm -rf build dist inx locales *.spec *.tar.gz *.zip electron/node_modules electron/dist
