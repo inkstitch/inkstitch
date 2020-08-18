@@ -1,6 +1,7 @@
 #!/bin/bash
 
-
+set -e
+set -x
 
 if [ "$BUILD" = "windows" ]; then
   args="-w --ia32"
@@ -11,6 +12,6 @@ elif [ "$BUILD" = "osx" ]; then
 fi
 
 cd electron
-npm install -g yarn
+which yarn > /dev/null 2>&1 || npm install -g yarn
 yarn --link-duplicates --pure-lockfile
 yarn run dist ${args}
