@@ -18,7 +18,7 @@ msgstr ""
 "X-Crowdin-Project: inkstitch\n"
 "X-Crowdin-Project-ID: 299419\n"
 "X-Crowdin-Language: ca\n"
-"X-Crowdin-File: /master/messages.po\n"
+"X-Crowdin-File: /main/messages.po\n"
 "X-Crowdin-File-ID: 5\n"
 "Language: ca_ES\n"
 
