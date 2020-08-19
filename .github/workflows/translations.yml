@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-          ref: master
+          ref: main
           token: ${{secrets.INKSTITCH_BUILDS_GITHUB_TOKEN}}
       - name: checkout submodules
         run: |
@@ -32,10 +32,10 @@ jobs:
 
           make messages.po
           echo "uploading messages.po to crowdin"
-          java -jar crowdin-cli.jar -v upload -b master
+          java -jar crowdin-cli.jar -v upload -b main
 
           echo "downloading new translations"
-          java -jar crowdin-cli.jar -v pull -b master
+          java -jar crowdin-cli.jar -v pull -b main
 
           # Try to only commit if translations changed.  Crowdin will update all
           # files when a new translation string is added but we don't need to
@@ -43,5 +43,5 @@ jobs:
           if git diff translations | grep -qE '^[-+]msgstr ".+"$'; then
             git add translations
             git commit -m "new translations from Crowdin"
-            git push https://github.com/inkstitch/inkstitch master
+            git push https://github.com/inkstitch/inkstitch main
           fi
