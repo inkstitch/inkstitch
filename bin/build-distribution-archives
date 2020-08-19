@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION="$(echo ${GITHUB_REF#refs/heads/} | tr / -)"
+VERSION="$(echo ${GITHUB_REF} | sed -e 's|refs/heads/||' -e 's|refs/tags/||' -e 's|/|-|g')"
 OS="${BUILD:-$(uname)}"
 ARCH="$(uname -m)"
 
