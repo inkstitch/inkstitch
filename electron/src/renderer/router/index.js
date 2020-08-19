@@ -5,14 +5,19 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-  	{
-  	    path: '/simulator',
-  	    name: 'simulator',
-  	    component: require('@/components/Simulator').default
-  	},
-  	{
-  	    path: '*',
-  	    redirect: '/'
-  	}
+    {
+      path: '/simulator',
+      name: 'simulator',
+      component: require('@/components/Simulator').default
+    },
+    {
+      path: '/install',
+      name: 'install',
+      component: require('@/components/InstallPalettes').default
+    },
+    {
+      path: '*',
+      redirect: '/'
+    }
   ]
 })
