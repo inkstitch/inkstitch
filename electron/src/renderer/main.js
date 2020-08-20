@@ -35,6 +35,9 @@ import Transitions from 'vue2-transitions'
 import GetTextPlugin from 'vue-gettext'
 import translations from './assets/translations.json'
 import {selectLanguage} from '../lib/i18n'
+import Vuetify from 'vuetify'
+import 'vuetify/dist/vuetify.min.css'
+import '@mdi/font/css/materialdesignicons.css'
 
 // We have to add to the library every icon we use anywhere in the UI.
 // This avoids the need to bundle the entire font-awesome icon set with
@@ -77,8 +80,11 @@ Vue.use(GetTextPlugin, {
 Vue.http = Vue.prototype.$http = axios
 Vue.config.productionTip = false
 
+Vue.use(Vuetify)
+let vuetify = new Vuetify({})
 /* eslint-disable no-new */
 new Vue({
+  vuetify,
   components: {App},
   router,
   template: '<App/>'
