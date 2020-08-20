@@ -81,6 +81,7 @@ jobs:
         with:
           python-version: '2.7.x'
           architecture: 'x86'
+      - uses: microsoft/setup-msbuild@v1.0.1
       - name: download dependencies
         shell: bash
         run: |
