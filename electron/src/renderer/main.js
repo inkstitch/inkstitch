@@ -81,7 +81,19 @@ Vue.http = Vue.prototype.$http = axios
 Vue.config.productionTip = false
 
 Vue.use(Vuetify)
-let vuetify = new Vuetify({})
+const vuetify = new Vuetify({
+  theme: {
+    themes: {
+      light: {
+        primary: '#003399',
+        secondary: '#000000',
+        accent: '#8c9eff',
+        error: '#b71c1c',
+      },
+    },
+  },
+})
+
 /* eslint-disable no-new */
 new Vue({
   vuetify,

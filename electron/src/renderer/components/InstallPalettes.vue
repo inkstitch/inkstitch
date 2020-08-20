@@ -11,14 +11,14 @@
           <translate>Ink/Stitch can install palettes for Inkscape matching the thread colors from popular machine embroidery thread manufacturers.
           </translate>
         </v-card-text>
-        <v-file-input class="mb-3" webkitdirectory hide-details v-model="path" color="rgb(0,51,153)"
+        <v-file-input class="mb-3" webkitdirectory hide-details v-model="path"
                       :label="$gettext('Choose Inkscape directory')"></v-file-input>
         <v-card-actions>
-          <v-btn text color="rgb(0,51,153)" v-on:click="install">
+          <v-btn text color="primary" v-on:click="install">
             <v-icon>mdi-palette</v-icon>
             <translate>Install</translate>
           </v-btn>
-          <v-btn text color="rgb(0,51,153)" v-on:click="close">
+          <v-btn text color="primary" v-on:click="close">
             <translate>Cancel</translate>
           </v-btn>
         </v-card-actions>
@@ -36,7 +36,7 @@
         </translate>
       </v-card-text>
       <v-card-actions>
-        <v-btn text color="rgb(0,51,153)" v-on:click="close">
+        <v-btn text color="primary" v-on:click="close">
           Done
         </v-btn>
       </v-card-actions>
@@ -54,10 +54,10 @@
         {{ error }}
       </v-card-text>
       <v-card-actions>
-        <v-btn text color="rgb(0,51,153)" v-on:click="retry">
+        <v-btn text color="primary" v-on:click="retry">
           <translate>Try again</translate>
         </v-btn>
-        <v-btn text color="rgb(0,51,153)" v-on:click="close">
+        <v-btn text color="primary" v-on:click="close">
           <translate>Cancel</translate>
         </v-btn>
       </v-card-actions>
