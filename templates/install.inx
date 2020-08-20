@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <name>{% trans %}Install add-ons for Inkscape{% endtrans %}</name>
+    <name>{% trans %}Install thread color palettes for Inkscape{% endtrans %}</name>
     <id>org.inkstitch.install.{{ locale }}</id>
     <param name="extension" type="string" gui-hidden="true">install</param>
     <effect>
