@@ -2,14 +2,7 @@
   <div id="app">
     <v-app>
       <v-main>
-        <!-- the v-container, v-row, and v-col give us vertical centering -->
-        <v-container fill-height fluid>
-          <v-row align="center" justify="center">
-            <v-col>
-              <router-view></router-view>
-            </v-col>
-          </v-row>
-        </v-container>
+        <router-view></router-view>
       </v-main>
     </v-app>
   </div>

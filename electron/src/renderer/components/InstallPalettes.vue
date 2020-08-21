@@ -1,36 +1,34 @@
 <template>
-  <div>
-    <v-card v-if="step == 'pick'" rounded="lg" :loading="installing" :disabled="installing" class="mx-auto my-3 pa-1" elevation=8 max-width="500px">
-      <v-container>
-        <v-card-title>
-          <translate>
-            Install Palettes
-          </translate>
-        </v-card-title>
-        <v-card-text class="text--primary">
-          <translate>Ink/Stitch can install palettes for Inkscape matching the thread colors from popular machine embroidery thread manufacturers.
-          </translate>
-        </v-card-text>
-        <v-file-input class="mb-3" webkitdirectory hide-details v-model="path"
-                      :label="$gettext('Choose Inkscape directory')"></v-file-input>
-        <v-card-actions>
-          <v-btn text color="primary" v-on:click="install">
-            <v-icon>mdi-palette</v-icon>
-            <translate>Install</translate>
-          </v-btn>
-          <v-btn text color="primary" v-on:click="close">
-            <translate>Cancel</translate>
-          </v-btn>
-        </v-card-actions>
-      </v-container>
+  <v-dialog max-width="500px" value="true">
+    <v-card v-if="step == 'pick'" key="pick" rounded="lg" :loading="installing" :disabled="installing">
+      <v-card-title>
+        <translate>
+          Install Palettes
+        </translate>
+      </v-card-title>
+      <v-card-text class="text--primary">
+        <translate>Ink/Stitch can install palettes for Inkscape matching the thread colors from popular machine embroidery thread manufacturers.
+        </translate>
+      </v-card-text>
+      <v-file-input class="mb-3 mx-3" webkitdirectory hide-details v-model="path"
+                    :label="$gettext('Choose Inkscape directory')"></v-file-input>
+      <v-card-actions>
+        <v-btn text color="primary" v-on:click="install">
+          <v-icon>mdi-palette</v-icon>
+          <translate>Install</translate>
+        </v-btn>
+        <v-btn text color="primary" v-on:click="close">
+          <translate>Cancel</translate>
+        </v-btn>
+      </v-card-actions>
     </v-card>
-    <v-card v-if="step == 'done'" class="mx-auto my-3 pa-1" elevation=8 max-width="500px">
+    <v-card v-if="step == 'done'" key="done">
       <v-card-title>
         <translate>
           Installation Completed
         </translate>
       </v-card-title>
-      <v-card-text>
+      <v-card-text class="text--primary">
         <translate>
           Inkscape palettes have been installed. Please restart Inkscape to load the new palettes.
         </translate>
@@ -41,13 +39,13 @@
         </v-btn>
       </v-card-actions>
     </v-card>
-    <v-card v-if="step == 'error'" class="mx-auto my-3 pa-1" elevation=8 max-width="500px">
+    <v-card v-if="step == 'error'" key="error">
       <v-card-title>
         <translate>
           Installation Failed
         </translate>
       </v-card-title>
-      <v-card-text>
+      <v-card-text class="text--primary">
         <translate>Inkscape add-on installation failed</translate>
       </v-card-text>
       <v-card-text class="text--secondary">
@@ -62,7 +60,7 @@
         </v-btn>
       </v-card-actions>
     </v-card>
-  </div>
+  </v-dialog>
 </template>
 
 <script>
