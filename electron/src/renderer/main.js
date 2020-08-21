@@ -20,6 +20,7 @@ import {
   faHorse,
   faInfo,
   faMinus,
+  faPalette,
   faPause,
   faPlay,
   faPlus,
@@ -34,6 +35,9 @@ import Transitions from 'vue2-transitions'
 import GetTextPlugin from 'vue-gettext'
 import translations from './assets/translations.json'
 import {selectLanguage} from '../lib/i18n'
+import Vuetify from 'vuetify'
+import 'vuetify/dist/vuetify.min.css'
+import '@mdi/font/css/materialdesignicons.css'
 
 // We have to add to the library every icon we use anywhere in the UI.
 // This avoids the need to bundle the entire font-awesome icon set with
@@ -52,6 +56,7 @@ library.add(
   faHorse,
   faInfo,
   faMinus,
+  faPalette,
   faPause,
   faPlay,
   faPlus,
@@ -75,8 +80,23 @@ Vue.use(GetTextPlugin, {
 Vue.http = Vue.prototype.$http = axios
 Vue.config.productionTip = false
 
+Vue.use(Vuetify)
+const vuetify = new Vuetify({
+  theme: {
+    themes: {
+      light: {
+        primary: '#003399',
+        secondary: '#000000',
+        accent: '#8c9eff',
+        error: '#b71c1c',
+      },
+    },
+  },
+})
+
 /* eslint-disable no-new */
 new Vue({
+  vuetify,
   components: {App},
   router,
   template: '<App/>'
