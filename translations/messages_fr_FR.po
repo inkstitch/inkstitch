@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-08-07 00:32+0000\n"
-"PO-Revision-Date: 2020-08-07 00:33\n"
+"POT-Creation-Date: 2020-08-21 00:34+0000\n"
+"PO-Revision-Date: 2020-08-21 00:35\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -19,81 +19,81 @@ msgstr ""
 "X-Crowdin-Project-ID: 299419\n"
 "X-Crowdin-Language: fr\n"
 "X-Crowdin-File: /main/messages.po\n"
-"X-Crowdin-File-ID: 5\n"
+"X-Crowdin-File-ID: 8\n"
 "Language: fr_FR\n"
 
-#. name of font in fonts/tt_directors
+#. name of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:2
-msgid "TT Directors"
-msgstr "TT directors"
+msgid "Dejavu for Inkstitch semicondensed"
+msgstr "Dejavu pour Inkstitch semi-condensé"
 
-#. description of font in fonts/tt_directors
+#. description of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:4
-msgid "A font suited for directing"
-msgstr "Une fonte faite pour des metteurs en scène"
+#, python-format
+msgid "The capital em is 19,8 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 150%.  Every satin has center-walk underlay."
+msgstr "Une lettre majuscule (em) a une largeur de 19,8 millimètres à l'échelle 100 %.  Peut être réduit à 80 % ou augmenté à 150 %.  Chaque satin a une sous-couche centrale."
+
+#. name of font in fonts/geneva_simple
+#: inkstitch-fonts-metadata.py:6
+msgid "Geneva Simple Sans"
+msgstr "Geneva Simple Sans"
+
+#. description of font in fonts/geneva_simple
+#: inkstitch-fonts-metadata.py:8
+msgid "Suitable for small fonts (6 to 15mm)"
+msgstr "Convient aux petites polices (6 à 15 mm)"
 
 #. name of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:6
+#: inkstitch-fonts-metadata.py:10
 msgid "Ink/Stitch Small Font"
 msgstr "Petite fonte Ink/Stitch"
 
 #. description of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:8
+#: inkstitch-fonts-metadata.py:12
 #, python-format
 msgid "A font suited for small characters.  The capital em is 0.2 inches wide at 100% scale.  Can be scaled up to 300%."
 msgstr "Une fonte adaptée pour les petits caractères. Le \"M\" a une largeur de 5,08mm à une échelle de 100%. Il est possible de l’agrandir de 300%."
 
 #. name of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:10
+#: inkstitch-fonts-metadata.py:14
 msgid "TT Masters"
 msgstr "TT masters"
 
 #. description of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:12
+#: inkstitch-fonts-metadata.py:16
 msgid "A font suited for heavy typing :)"
 msgstr "Une fonte \"lourde\""
 
 #. name of font in fonts/medium_font
-#: inkstitch-fonts-metadata.py:14
+#: inkstitch-fonts-metadata.py:18
 msgid "Ink/Stitch Medium Font"
 msgstr "Fonte médium pour Ink/Stitch"
 
 #. description of font in fonts/medium_font
-#: inkstitch-fonts-metadata.py:16
+#: inkstitch-fonts-metadata.py:20
 #, python-format
 msgid "A basic font suited for medium-sized characters.  The capital em is 0.6 inches wide at 100% scale.  Can be scaled down to 75% or up to 150%.  Every satin has contour underlay."
 msgstr "Une fonte idéale pour des caractères de taille moyenne. La lettre \"M\" (majuscule) a une largeur de 15,24 mm à une échelle de 100%. On peut transformer la taille entre 75% et 150%. Les points satin utilisent une sous-couches avec des lignes de contour."
 
-#. name of font in fonts/geneva_simple
-#: inkstitch-fonts-metadata.py:18
-msgid "Geneva Simple Sans"
-msgstr "Geneva Simple Sans"
+#. name of font in fonts/tt_directors
+#: inkstitch-fonts-metadata.py:22
+msgid "TT Directors"
+msgstr "TT directors"
 
-#. description of font in fonts/geneva_simple
-#: inkstitch-fonts-metadata.py:20
-msgid "Suitable for small fonts (6 to 15mm)"
-msgstr "Convient aux petites polices (6 à 15 mm)"
+#. description of font in fonts/tt_directors
+#: inkstitch-fonts-metadata.py:24
+msgid "A font suited for directing"
+msgstr "Une fonte faite pour des metteurs en scène"
 
 #. name of font in fonts/geneva_rounded
-#: inkstitch-fonts-metadata.py:22
+#: inkstitch-fonts-metadata.py:26
 msgid "Geneva Simple Sans Rounded"
 msgstr "Geneva Simple Sans Arrondi"
 
 #. description of font in fonts/geneva_rounded
-#: inkstitch-fonts-metadata.py:24
+#: inkstitch-fonts-metadata.py:28
 msgid "Suitable for small fonts (8 to 20 mm)"
 msgstr "Convient aux petites polices de caractères (8 à 20 mm)"
-
-#. name of font in fonts/dejavufont
-#: inkstitch-fonts-metadata.py:26
-msgid "Dejavu for Inkstitch semicondensed"
-msgstr "Dejavu pour Inkstitch semi-condensé"
-
-#. description of font in fonts/dejavufont
-#: inkstitch-fonts-metadata.py:28
-#, python-format
-msgid "The capital em is 19,8 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 150%.  Every satin has center-walk underlay."
-msgstr "Une lettre majuscule (em) a une largeur de 19,8 millimètres à l'échelle 100 %.  Peut être réduit à 80 % ou augmenté à 150 %.  Chaque satin a une sous-couche centrale."
 
 #: inkstitch.py:56
 msgid "Ink/Stitch experienced an unexpected error."
@@ -288,51 +288,51 @@ msgstr "Erreur pendant l'auto-remplissage. Cela veut dire que Ink/Stitch a un pr
 msgid "If you'd like to help us make Ink/Stitch better, please paste this whole message into a new issue at: "
 msgstr "Si vous désirez nous aider à améliorer Ink/Stitch, veuillez SVP copier/coller ce message dans un nouveau rapport d'erreur (issue) ici: "
 
-#: lib/elements/clone.py:24
+#: lib/elements/clone.py:25
 msgid "Clone Object"
 msgstr "Cloner l'objet"
 
-#: lib/elements/clone.py:25
+#: lib/elements/clone.py:26
 msgid "There are one or more clone objects in this document.  Ink/Stitch can work with single clones, but you are limited to set a very few parameters. "
 msgstr "Ce document contient un ou plusieurs objets clonés.  Ink/Stitch peut fonctionner avec des clones uniques, mais vous êtes limité à la définition de quelques paramètres. "
 
-#: lib/elements/clone.py:28
+#: lib/elements/clone.py:29
 msgid "If you want to convert the clone into a real element, follow these steps:"
 msgstr "Si vous voulez convertir le clone en un élément réel, suivez ces étapes :"
 
-#: lib/elements/clone.py:29
+#: lib/elements/clone.py:30
 msgid "* Select the clone"
 msgstr "* Sélectionner le clone"
 
-#: lib/elements/clone.py:30 lib/elements/clone.py:41
+#: lib/elements/clone.py:31 lib/elements/clone.py:42
 msgid "* Run: Edit > Clone > Unlink Clone (Alt+Shift+D)"
 msgstr "* Exécutez : Édition > Cloner > Délier le clone (Alt+Shift+D)"
 
-#: lib/elements/clone.py:35
+#: lib/elements/clone.py:36
 msgid "Clone is not embroiderable"
 msgstr "Le clone n'est pas brodable"
 
-#: lib/elements/clone.py:36
+#: lib/elements/clone.py:37
 msgid "There are one ore more clone objects in this document. A clone must be a direct child of an embroiderable element. Ink/Stitch cannot embroider clones of groups or other not embroiderable elements (text or image)."
 msgstr "Ce document contient un ou plusieurs objets clones. Un clone doit être l'enfant direct d'un élément brodable. Ink/Stitch ne peut pas broder des clones de groupes ou d'autres éléments non brodables (textes ou images)."
 
-#: lib/elements/clone.py:39
+#: lib/elements/clone.py:40
 msgid "Convert the clone into a real element:"
 msgstr "Convertissez le clone en un élément réel :"
 
-#: lib/elements/clone.py:40
+#: lib/elements/clone.py:41
 msgid "* Select the clone."
 msgstr "* Sélectionner le clone."
 
-#: lib/elements/clone.py:55
+#: lib/elements/clone.py:56
 msgid "Clone"
 msgstr "Cloner"
 
-#: lib/elements/clone.py:61
+#: lib/elements/clone.py:62
 msgid "Custom fill angle"
 msgstr "Angle de remplissage personnalisé"
 
-#: lib/elements/clone.py:62
+#: lib/elements/clone.py:63
 msgid "This setting will apply a custom fill angle for the clone."
 msgstr "Ce paramètre appliquera un angle de remplissage personnalisé pour le clone."
 
@@ -360,6 +360,18 @@ msgstr "Plus d’une commande de type «%(command)s» est liée à %(id)s"
 #: lib/elements/element.py:351
 msgid "error:"
 msgstr "erreur :"
+
+#: lib/elements/empty_d_object.py:7
+msgid "Empty D-Attribute"
+msgstr ""
+
+#: lib/elements/empty_d_object.py:8
+msgid "There is an invalid path object in the document, the d-attribute is missing."
+msgstr ""
+
+#: lib/elements/empty_d_object.py:10
+msgid "* Run Extensions > Ink/Stitch > Troubleshoot > Cleanup Document..."
+msgstr ""
 
 #: lib/elements/fill.py:17
 msgid "Unconnected"
@@ -714,15 +726,15 @@ msgid "Please select one or more satin columns."
 msgstr "Veuillez sélection une ou plusieurs colonnes satin."
 
 #. This was previously: "No embroiderable paths selected."
-#: lib/extensions/base.py:129
+#: lib/extensions/base.py:130
 msgid "Ink/Stitch doesn't know how to work with any of the objects you've selected."
 msgstr "Ink/Stitch ne sait comment traiter aucun des objets que vous avez sélectionnés."
 
-#: lib/extensions/base.py:131
+#: lib/extensions/base.py:132
 msgid "There are no objects in the entire document that Ink/Stitch knows how to work with."
 msgstr "Il n'y a aucun objet dans tout le document sur lequel Ink/Stitch sait quoi faire."
 
-#: lib/extensions/base.py:133
+#: lib/extensions/base.py:134
 msgid "Tip: Select some objects and use Path -> Object to Path to convert them to paths."
 msgstr "Conseil : sélectionnez certains objets et utilisez Chemin -> Objet en chemin pour les convertir en chemins."
 
@@ -730,7 +742,7 @@ msgstr "Conseil : sélectionnez certains objets et utilisez Chemin -> Objet en c
 msgid "Please select one or more fill areas to break apart."
 msgstr "Veuillez sélectionner une ou plusieurs zones de remplissage à séparer."
 
-#: lib/extensions/cleanup.py:39
+#: lib/extensions/cleanup.py:35 lib/extensions/cleanup.py:47
 #, python-format
 msgid "%s elements removed"
 msgstr "%s éléments supprimés"
