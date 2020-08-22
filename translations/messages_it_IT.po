@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-08-21 00:34+0000\n"
-"PO-Revision-Date: 2020-08-21 00:36\n"
+"POT-Creation-Date: 2020-08-22 00:34+0000\n"
+"PO-Revision-Date: 2020-08-22 00:36\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
@@ -794,54 +794,6 @@ msgstr "Si provi ad importare come \"altra lista di fili\" e specificare una pal
 msgid "Please chose an other color palette for your design."
 msgstr "Si selezioni un'altra palette di colori per il tuo design."
 
-#: lib/extensions/install.py:25
-msgid "Ink/Stitch can install files (\"add-ons\") that make it easier to use Inkscape to create machine embroidery designs.  These add-ons will be installed:"
-msgstr "Ink/Stitch può installare file (\"add-on\") che facilitano l'utilizzo di Inkscape per creare disegni per ricamatrici.  I seguenti add-on saranno installati:"
-
-#: lib/extensions/install.py:27
-msgid "thread manufacturer color palettes"
-msgstr "palette colori dei produttori di filo"
-
-#: lib/extensions/install.py:28
-msgid "Ink/Stitch visual commands (Object -> Symbols...)"
-msgstr "Ink/Stitch comandi visuali (Oggetto -> Simboli...)"
-
-#: lib/extensions/install.py:37
-msgid "Install"
-msgstr "Installa"
-
-#: lib/extensions/install.py:40 lib/extensions/lettering.py:59
-#: lib/extensions/params.py:332 print/templates/custom-page.html:23
-#: print/templates/custom-page.html:27 print/templates/custom-page.html:33
-#: print/templates/ui.html:92 print/templates/ui.html:96
-#: print/templates/ui.html:102
-msgid "Cancel"
-msgstr "Annulla"
-
-#: lib/extensions/install.py:54
-msgid "Choose Inkscape directory"
-msgstr "Seleziona la cartella di Inkscape"
-
-#: lib/extensions/install.py:71
-msgid "Inkscape add-on installation failed"
-msgstr "L'installazione di un componente aggiuntivo di Inscape non è riuscita"
-
-#: lib/extensions/install.py:72
-msgid "Installation Failed"
-msgstr "L'installazione non è riuscita"
-
-#: lib/extensions/install.py:76
-msgid "Inkscape add-on files have been installed.  Please restart Inkscape to load the new add-ons."
-msgstr "I file con i componenti aggiuntivi di Inkscape sono stati installati. Riavviare Inkscape per caricare i nuovi componenti."
-
-#: lib/extensions/install.py:77
-msgid "Installation Completed"
-msgstr "Installazione completata"
-
-#: lib/extensions/install.py:114
-msgid "Ink/Stitch Add-ons Installer"
-msgstr "Servizio di installazione dei componenti aggiuntivi di Ink/Stitch"
-
 #: lib/extensions/layer_commands.py:17
 msgid "Please choose one or more commands to add."
 msgstr "Seleziona uno o più comandi da aggiungere."
@@ -861,6 +813,15 @@ msgstr "Cucire le linee di testo avanti e indietro"
 #: lib/extensions/lettering.py:42
 msgid "Add trims"
 msgstr "Aggiungi tagli"
+
+#: lib/extensions/lettering.py:59 lib/extensions/params.py:332
+#: print/templates/custom-page.html:23 print/templates/custom-page.html:27
+#: print/templates/custom-page.html:33 print/templates/ui.html:92
+#: print/templates/ui.html:96 print/templates/ui.html:102
+#: electron/src/renderer/components/InstallPalettes.vue:20
+#: electron/src/renderer/components/InstallPalettes.vue:58
+msgid "Cancel"
+msgstr "Annulla"
 
 #: lib/extensions/lettering.py:63 lib/extensions/params.py:339
 msgid "Apply and Quit"
@@ -1892,8 +1853,8 @@ msgid "convert %(file_extension)s file to Ink/Stitch manual-stitch paths"
 msgstr "convertire il file %(file_extension)s in percorsi di cucito manuale Ink/Stitch"
 
 #: templates/install.inx:3
-msgid "Install add-ons for Inkscape"
-msgstr "Installa add-ons per Inkscap"
+msgid "Install thread color palettes for Inkscape"
+msgstr ""
 
 #: templates/layer_commands.inx:3
 msgid "Add Layer Commands"
@@ -2138,6 +2099,34 @@ msgstr ""
 msgid "Function"
 msgstr ""
 
+#: electron/src/renderer/components/InstallPalettes.vue:9
+msgid "Ink/Stitch can install palettes for Inkscape matching the thread colors from popular machine embroidery thread manufacturers."
+msgstr ""
+
+#: electron/src/renderer/components/InstallPalettes.vue:48
+msgid "Inkscape add-on installation failed"
+msgstr "L'installazione di un componente aggiuntivo di Inscape non è riuscita"
+
+#: electron/src/renderer/components/InstallPalettes.vue:31
+msgid "Inkscape palettes have been installed. Please restart Inkscape to load the new palettes."
+msgstr ""
+
+#: electron/src/renderer/components/InstallPalettes.vue:17
+msgid "Install"
+msgstr "Installa"
+
+#: electron/src/renderer/components/InstallPalettes.vue:4
+msgid "Install Palettes"
+msgstr ""
+
+#: electron/src/renderer/components/InstallPalettes.vue:26
+msgid "Installation Completed"
+msgstr "Installazione completata"
+
+#: electron/src/renderer/components/InstallPalettes.vue:43
+msgid "Installation Failed"
+msgstr "L'installazione non è riuscita"
+
 #: electron/src/renderer/components/Simulator.vue:106
 msgid "Jump to next command"
 msgstr ""
@@ -2227,5 +2216,9 @@ msgstr[1] ""
 
 #: electron/src/renderer/components/Simulator.vue:204
 msgid "stops"
+msgstr ""
+
+#: electron/src/renderer/components/InstallPalettes.vue:55
+msgid "Try again"
 msgstr ""
 
