@@ -37,11 +37,11 @@ Die ausgewählte `SPRACHE` bezieht sich nur auf die Menüs von Inkscape. Ink/Sti
 
 Language|Linux (64bit)|Windows|macOS (Catalina) [[?]](#macos)
 ---|---|---|---
-**Deutsch**|<i class="fa fa-download " ></i> [Linux]({{ site.github.releases_url }}/latest/download/inkstitch-refs-tags-{{ site.github.latest_release.tag_name }}-linux-de_DE.zip)|<i class="fa fa-download " ></i> [Windows]({{ site.github.releases_url }}/latest/download/inkstitch-refs-tags-{{ site.github.latest_release.tag_name }}-windows-de_DE.zip)|<i class="fa fa-download " ></i> [macOS]({{ site.github.releases_url }}/latest/download/inkstitch-refs-tags-{{ site.github.latest_release.tag_name }}-osx-de_DE.zip)|
-**Englisch**|<i class="fa fa-download " ></i> [Linux]({{ site.github.releases_url }}/latest/download/inkstitch-refs-tags-{{ site.github.latest_release.tag_name }}-linux-en_US.zip)|<i class="fa fa-download " ></i> [Windows]({{ site.github.releases_url }}/latest/download/inkstitch-refs-tags-{{ site.github.latest_release.tag_name }}-windows-en_US.zip)|<i class="fa fa-download " ></i> [macOS]({{ site.github.releases_url }}/latest/download/inkstitch-refs-tags-{{ site.github.latest_release.tag_name }}-osx-en_US.zip)|
-**Finnisch**|<i class="fa fa-download " ></i> [Linux]({{ site.github.releases_url }}/latest/download/inkstitch-refs-tags-{{ site.github.latest_release.tag_name }}-linux-fi_FI.zip)|<i class="fa fa-download " ></i> [Windows]({{ site.github.releases_url }}/latest/download/inkstitch-refs-tags-{{ site.github.latest_release.tag_name }}-windows-fi_FI.zip)|<i class="fa fa-download " ></i> [macOS]({{ site.github.releases_url }}/latest/download/inkstitch-refs-tags-{{ site.github.latest_release.tag_name }}-osx-fi_FI.zip)|
-**Französisch**|<i class="fa fa-download " ></i> [Linux]({{ site.github.releases_url }}/latest/download/inkstitch-refs-tags-{{ site.github.latest_release.tag_name }}-linux-fr_FR.zip)|<i class="fa fa-download " ></i> [Windows]({{ site.github.releases_url }}/latest/download/inkstitch-refs-tags-{{ site.github.latest_release.tag_name }}-windows-fr_FR.zip)|<i class="fa fa-download " ></i> [macOS]({{ site.github.releases_url }}/latest/download/inkstitch-refs-tags-{{ site.github.latest_release.tag_name }}-osx-fr_FR.zip)|
-**Italienisch**|<i class="fa fa-download " ></i> [Linux]({{ site.github.releases_url }}/latest/download/inkstitch-refs-tags-{{ site.github.latest_release.tag_name }}-linux-it_IT.zip)|<i class="fa fa-download " ></i> [Windows]({{ site.github.releases_url }}/latest/download/inkstitch-refs-tags-{{ site.github.latest_release.tag_name }}-windows-it_IT.zip)|<i class="fa fa-download " ></i> [macOS]({{ site.github.releases_url }}/latest/download/inkstitch-refs-tags-{{ site.github.latest_release.tag_name }}-osx-it_IT.zip)|
+**Deutsch**|<i class="fa fa-download " ></i> [Linux]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-de_DE.zip)|<i class="fa fa-download " ></i> [Windows]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-de_DE.zip)|<i class="fa fa-download " ></i> [macOS]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-de_DE.zip)|
+**Englisch**|<i class="fa fa-download " ></i> [Linux]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-en_US.zip)|<i class="fa fa-download " ></i> [Windows]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-en_US.zip)|<i class="fa fa-download " ></i> [macOS]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-en_US.zip)|
+**Finnisch**|<i class="fa fa-download " ></i> [Linux]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-fi_FI.zip)|<i class="fa fa-download " ></i> [Windows]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-fi_FI.zip)|<i class="fa fa-download " ></i> [macOS]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-fi_FI.zip)|
+**Französisch**|<i class="fa fa-download " ></i> [Linux]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-fr_FR.zip)|<i class="fa fa-download " ></i> [Windows]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-fr_FR.zip)|<i class="fa fa-download " ></i> [macOS]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-fr_FR.zip)|
+**Italienisch**|<i class="fa fa-download " ></i> [Linux]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-it_IT.zip)|<i class="fa fa-download " ></i> [Windows]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-it_IT.zip)|<i class="fa fa-download " ></i> [macOS]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-it_IT.zip)|
 {: .inline-table }
 
 **Aktuelle Version:** [Ink/Stitch {{ site.github.latest_release.tag_name }} ({{ site.github.latest_release.published_at | date: "%d.%m.%Y"  }})](https://github.com/inkstitch/inkstitch/releases/latest)
@@ -59,7 +59,7 @@ Language|Linux (64bit)|Windows|macOS (Catalina) [[?]](#macos)
 
  ```
  $ cd ~/.config/inkscape/extensions
- $ unzip ~/Downloads/inkstitch-refs-tags-{{ site.github.latest_release.tag_name }}-linux-de_DE.zip
+ $ unzip ~/Downloads/inkstitch-{{ site.github.latest_release.tag_name }}-linux-de_DE.zip
  ```
 
 #### macOS
@@ -71,8 +71,8 @@ _Bei Inskscape 1.0 unterscheidet sich der Installationspfad. Überprüfe hierfü
 
 ```
 $ cd ~/.config/inkscape/extensions
-$ curl -LJO {{ site.github.releases_url }}/latest/download/inkstitch-refs-tags-{{ site.github.latest_release.tag_name }}-osx-de_DE.zip
-$ unzip inkstitch-refs-tags-{{ site.github.latest_release.tag_name }}-osx-de_DE.zip
+$ curl -LJO {{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-de_DE.zip
+$ unzip inkstitch-{{ site.github.latest_release.tag_name }}-osx-de_DE.zip
 ```
 
 **Info:** Für macOS gibt es derzeit nur eine aktuelle Version für **Catalina (10.15)**.<br>

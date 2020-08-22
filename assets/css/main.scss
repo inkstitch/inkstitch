@@ -167,7 +167,7 @@ table tr td:first-child {
   @media (min-width: 64em) {
     .sidebar.sticky {
       position: relative;
-      overflow: auto;
+      overflow: visible;
       height: auto;
       top: 0;
     }
