@@ -1,5 +1,7 @@
 import sys
 
+from inkex import NSS
+
 from ..elements import Fill, Stroke
 from ..i18n import _
 from .base import InkstitchExtension
@@ -22,13 +24,19 @@ class Cleanup(InkstitchExtension):
         # Remove selection, we want every element in the document
         self.selected = {}
 
+        count = 0
+        svg = self.document.getroot()
+        empty_d_objects = svg.xpath(".//svg:path[@d='' or not(@d)]", namespaces=NSS)
+        for empty in empty_d_objects:
+            empty.getparent().remove(empty)
+            count += 1
+
         if not self.get_elements():
+            print >> sys.stderr, _("%s elements removed" % count)
             return
 
-        count = 0
         for element in self.elements:
-            if (isinstance(element, Fill) and self.rm_fill and
-               element.shape.area < self.fill_threshold):
+            if (isinstance(element, Fill) and self.rm_fill and element.shape.area < self.fill_threshold):
                 element.node.getparent().remove(element.node)
                 count += 1
             if (isinstance(element, Stroke) and self.rm_stroke and

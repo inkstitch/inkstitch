@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-06-11 00:20+0000\n"
-"PO-Revision-Date: 2020-06-11 00:21\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2020-08-22 00:34+0000\n"
+"PO-Revision-Date: 2020-08-22 00:36\n"
+"Last-Translator: \n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,72 +16,74 @@ msgstr ""
 "Project-Id-Version: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Crowdin-Project: inkstitch\n"
+"X-Crowdin-Project-ID: 299419\n"
 "X-Crowdin-Language: it\n"
-"X-Crowdin-File: /master/messages.po\n"
+"X-Crowdin-File: /main/messages.po\n"
+"X-Crowdin-File-ID: 8\n"
 "Language: it_IT\n"
 
-#. name of font in fonts/medium_font
-#: inkstitch-fonts-metadata.py:2
-msgid "Ink/Stitch Medium Font"
-msgstr "Ink/Stitch Font Medio"
-
-#. description of font in fonts/medium_font
-#: inkstitch-fonts-metadata.py:4
-#, python-format
-msgid "A basic font suited for medium-sized characters.  The capital em is 0.6 inches wide at 100% scale.  Can be scaled down to 75% or up to 150%.  Every satin has contour underlay."
-msgstr "Font di base adatto per caratteri di medie dimensioni.  L'em maiuscolo è largo 1,5 cm a scala 100%.  Può essere ridotto al 75% o ampliato al 150%.  Ogni satinato ha un contorno sul livello inferiore."
-
-#. name of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:6
-msgid "TT Directors"
-msgstr "TT Direttori"
-
-#. description of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:8
-msgid "A font suited for directing"
-msgstr "Un font adatto a dare direzione"
-
 #. name of font in fonts/dejavufont
-#: inkstitch-fonts-metadata.py:10
+#: inkstitch-fonts-metadata.py:2
 msgid "Dejavu for Inkstitch semicondensed"
 msgstr ""
 
 #. description of font in fonts/dejavufont
-#: inkstitch-fonts-metadata.py:12
+#: inkstitch-fonts-metadata.py:4
 #, python-format
 msgid "The capital em is 19,8 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 150%.  Every satin has center-walk underlay."
 msgstr ""
 
 #. name of font in fonts/geneva_simple
-#: inkstitch-fonts-metadata.py:14
+#: inkstitch-fonts-metadata.py:6
 msgid "Geneva Simple Sans"
 msgstr ""
 
 #. description of font in fonts/geneva_simple
-#: inkstitch-fonts-metadata.py:16
+#: inkstitch-fonts-metadata.py:8
 msgid "Suitable for small fonts (6 to 15mm)"
 msgstr ""
 
 #. name of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:18
+#: inkstitch-fonts-metadata.py:10
 msgid "Ink/Stitch Small Font"
 msgstr "Ink/Stitch Font Piccolo"
 
 #. description of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:20
+#: inkstitch-fonts-metadata.py:12
 #, python-format
 msgid "A font suited for small characters.  The capital em is 0.2 inches wide at 100% scale.  Can be scaled up to 300%."
 msgstr "Un font adatto per caratteri piccoli.  L'em maiuscolo è largo 0.5 cm al 100%.  Può essere ampliato fino a 300%."
 
 #. name of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:22
+#: inkstitch-fonts-metadata.py:14
 msgid "TT Masters"
 msgstr "TT Masters"
 
 #. description of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:24
+#: inkstitch-fonts-metadata.py:16
 msgid "A font suited for heavy typing :)"
 msgstr "Un font adatto a chi batte forte sui tasti :)"
+
+#. name of font in fonts/medium_font
+#: inkstitch-fonts-metadata.py:18
+msgid "Ink/Stitch Medium Font"
+msgstr "Ink/Stitch Font Medio"
+
+#. description of font in fonts/medium_font
+#: inkstitch-fonts-metadata.py:20
+#, python-format
+msgid "A basic font suited for medium-sized characters.  The capital em is 0.6 inches wide at 100% scale.  Can be scaled down to 75% or up to 150%.  Every satin has contour underlay."
+msgstr "Font di base adatto per caratteri di medie dimensioni.  L'em maiuscolo è largo 1,5 cm a scala 100%.  Può essere ridotto al 75% o ampliato al 150%.  Ogni satinato ha un contorno sul livello inferiore."
+
+#. name of font in fonts/tt_directors
+#: inkstitch-fonts-metadata.py:22
+msgid "TT Directors"
+msgstr "TT Direttori"
+
+#. description of font in fonts/tt_directors
+#: inkstitch-fonts-metadata.py:24
+msgid "A font suited for directing"
+msgstr "Un font adatto a dare direzione"
 
 #. name of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:26
@@ -286,51 +288,51 @@ msgstr "Errore durante l'auto-riempimento! C'è un problema con Ink/Stitch."
 msgid "If you'd like to help us make Ink/Stitch better, please paste this whole message into a new issue at: "
 msgstr "Se vuoi contribuire a migliorare Ink/Stitch, copia questo messaggio in una nuova issue a questo link: "
 
-#: lib/elements/clone.py:24
+#: lib/elements/clone.py:25
 msgid "Clone Object"
 msgstr ""
 
-#: lib/elements/clone.py:25
+#: lib/elements/clone.py:26
 msgid "There are one or more clone objects in this document.  Ink/Stitch can work with single clones, but you are limited to set a very few parameters. "
 msgstr ""
 
-#: lib/elements/clone.py:28
+#: lib/elements/clone.py:29
 msgid "If you want to convert the clone into a real element, follow these steps:"
 msgstr ""
 
-#: lib/elements/clone.py:29
+#: lib/elements/clone.py:30
 msgid "* Select the clone"
 msgstr ""
 
-#: lib/elements/clone.py:30 lib/elements/clone.py:41
+#: lib/elements/clone.py:31 lib/elements/clone.py:42
 msgid "* Run: Edit > Clone > Unlink Clone (Alt+Shift+D)"
 msgstr ""
 
-#: lib/elements/clone.py:35
+#: lib/elements/clone.py:36
 msgid "Clone is not embroiderable"
 msgstr ""
 
-#: lib/elements/clone.py:36
+#: lib/elements/clone.py:37
 msgid "There are one ore more clone objects in this document. A clone must be a direct child of an embroiderable element. Ink/Stitch cannot embroider clones of groups or other not embroiderable elements (text or image)."
 msgstr ""
 
-#: lib/elements/clone.py:39
+#: lib/elements/clone.py:40
 msgid "Convert the clone into a real element:"
 msgstr ""
 
-#: lib/elements/clone.py:40
+#: lib/elements/clone.py:41
 msgid "* Select the clone."
 msgstr ""
 
-#: lib/elements/clone.py:55
+#: lib/elements/clone.py:56
 msgid "Clone"
 msgstr ""
 
-#: lib/elements/clone.py:61
+#: lib/elements/clone.py:62
 msgid "Custom fill angle"
 msgstr ""
 
-#: lib/elements/clone.py:62
+#: lib/elements/clone.py:63
 msgid "This setting will apply a custom fill angle for the clone."
 msgstr ""
 
@@ -358,6 +360,18 @@ msgstr "%(id)s ha più di un comando del tipo '%(command)s' collegato ad esso"
 #: lib/elements/element.py:351
 msgid "error:"
 msgstr "errore:"
+
+#: lib/elements/empty_d_object.py:7
+msgid "Empty D-Attribute"
+msgstr ""
+
+#: lib/elements/empty_d_object.py:8
+msgid "There is an invalid path object in the document, the d-attribute is missing."
+msgstr ""
+
+#: lib/elements/empty_d_object.py:10
+msgid "* Run Extensions > Ink/Stitch > Troubleshoot > Cleanup Document..."
+msgstr ""
 
 #: lib/elements/fill.py:17
 msgid "Unconnected"
@@ -713,15 +727,15 @@ msgid "Please select one or more satin columns."
 msgstr "Selezionare una o più colonne raso."
 
 #. This was previously: "No embroiderable paths selected."
-#: lib/extensions/base.py:129
+#: lib/extensions/base.py:130
 msgid "Ink/Stitch doesn't know how to work with any of the objects you've selected."
 msgstr "Ink/Stitch non riesce a lavorare con nessuno degli oggetti selezionati."
 
-#: lib/extensions/base.py:131
+#: lib/extensions/base.py:132
 msgid "There are no objects in the entire document that Ink/Stitch knows how to work with."
 msgstr "In tutto il documento non ci sono oggetti con cui Ink/Stitch sia in grado di lavorare."
 
-#: lib/extensions/base.py:133
+#: lib/extensions/base.py:134
 msgid "Tip: Select some objects and use Path -> Object to Path to convert them to paths."
 msgstr ""
 
@@ -729,7 +743,7 @@ msgstr ""
 msgid "Please select one or more fill areas to break apart."
 msgstr "Seleziona una o più area di riempimento da dividere."
 
-#: lib/extensions/cleanup.py:39
+#: lib/extensions/cleanup.py:35 lib/extensions/cleanup.py:47
 #, python-format
 msgid "%s elements removed"
 msgstr ""
@@ -780,54 +794,6 @@ msgstr "Si provi ad importare come \"altra lista di fili\" e specificare una pal
 msgid "Please chose an other color palette for your design."
 msgstr "Si selezioni un'altra palette di colori per il tuo design."
 
-#: lib/extensions/install.py:25
-msgid "Ink/Stitch can install files (\"add-ons\") that make it easier to use Inkscape to create machine embroidery designs.  These add-ons will be installed:"
-msgstr "Ink/Stitch può installare file (\"add-on\") che facilitano l'utilizzo di Inkscape per creare disegni per ricamatrici.  I seguenti add-on saranno installati:"
-
-#: lib/extensions/install.py:27
-msgid "thread manufacturer color palettes"
-msgstr "palette colori dei produttori di filo"
-
-#: lib/extensions/install.py:28
-msgid "Ink/Stitch visual commands (Object -> Symbols...)"
-msgstr "Ink/Stitch comandi visuali (Oggetto -> Simboli...)"
-
-#: lib/extensions/install.py:37
-msgid "Install"
-msgstr "Installa"
-
-#: lib/extensions/install.py:40 lib/extensions/lettering.py:59
-#: lib/extensions/params.py:332 print/templates/custom-page.html:23
-#: print/templates/custom-page.html:27 print/templates/custom-page.html:33
-#: print/templates/ui.html:92 print/templates/ui.html:96
-#: print/templates/ui.html:102
-msgid "Cancel"
-msgstr "Annulla"
-
-#: lib/extensions/install.py:54
-msgid "Choose Inkscape directory"
-msgstr "Seleziona la cartella di Inkscape"
-
-#: lib/extensions/install.py:71
-msgid "Inkscape add-on installation failed"
-msgstr "L'installazione di un componente aggiuntivo di Inscape non è riuscita"
-
-#: lib/extensions/install.py:72
-msgid "Installation Failed"
-msgstr "L'installazione non è riuscita"
-
-#: lib/extensions/install.py:76
-msgid "Inkscape add-on files have been installed.  Please restart Inkscape to load the new add-ons."
-msgstr "I file con i componenti aggiuntivi di Inkscape sono stati installati. Riavviare Inkscape per caricare i nuovi componenti."
-
-#: lib/extensions/install.py:77
-msgid "Installation Completed"
-msgstr "Installazione completata"
-
-#: lib/extensions/install.py:114
-msgid "Ink/Stitch Add-ons Installer"
-msgstr "Servizio di installazione dei componenti aggiuntivi di Ink/Stitch"
-
 #: lib/extensions/layer_commands.py:17
 msgid "Please choose one or more commands to add."
 msgstr "Seleziona uno o più comandi da aggiungere."
@@ -847,6 +813,15 @@ msgstr "Cucire le linee di testo avanti e indietro"
 #: lib/extensions/lettering.py:42
 msgid "Add trims"
 msgstr "Aggiungi tagli"
+
+#: lib/extensions/lettering.py:59 lib/extensions/params.py:332
+#: print/templates/custom-page.html:23 print/templates/custom-page.html:27
+#: print/templates/custom-page.html:33 print/templates/ui.html:92
+#: print/templates/ui.html:96 print/templates/ui.html:102
+#: electron/src/renderer/components/InstallPalettes.vue:20
+#: electron/src/renderer/components/InstallPalettes.vue:58
+msgid "Cancel"
+msgstr "Annulla"
 
 #: lib/extensions/lettering.py:63 lib/extensions/params.py:339
 msgid "Apply and Quit"
@@ -1878,8 +1853,8 @@ msgid "convert %(file_extension)s file to Ink/Stitch manual-stitch paths"
 msgstr "convertire il file %(file_extension)s in percorsi di cucito manuale Ink/Stitch"
 
 #: templates/install.inx:3
-msgid "Install add-ons for Inkscape"
-msgstr "Installa add-ons per Inkscap"
+msgid "Install thread color palettes for Inkscape"
+msgstr ""
 
 #: templates/layer_commands.inx:3
 msgid "Add Layer Commands"
@@ -2124,6 +2099,34 @@ msgstr ""
 msgid "Function"
 msgstr ""
 
+#: electron/src/renderer/components/InstallPalettes.vue:9
+msgid "Ink/Stitch can install palettes for Inkscape matching the thread colors from popular machine embroidery thread manufacturers."
+msgstr ""
+
+#: electron/src/renderer/components/InstallPalettes.vue:48
+msgid "Inkscape add-on installation failed"
+msgstr "L'installazione di un componente aggiuntivo di Inscape non è riuscita"
+
+#: electron/src/renderer/components/InstallPalettes.vue:31
+msgid "Inkscape palettes have been installed. Please restart Inkscape to load the new palettes."
+msgstr ""
+
+#: electron/src/renderer/components/InstallPalettes.vue:17
+msgid "Install"
+msgstr "Installa"
+
+#: electron/src/renderer/components/InstallPalettes.vue:4
+msgid "Install Palettes"
+msgstr ""
+
+#: electron/src/renderer/components/InstallPalettes.vue:26
+msgid "Installation Completed"
+msgstr "Installazione completata"
+
+#: electron/src/renderer/components/InstallPalettes.vue:43
+msgid "Installation Failed"
+msgstr "L'installazione non è riuscita"
+
 #: electron/src/renderer/components/Simulator.vue:106
 msgid "Jump to next command"
 msgstr ""
@@ -2213,5 +2216,9 @@ msgstr[1] ""
 
 #: electron/src/renderer/components/Simulator.vue:204
 msgid "stops"
+msgstr ""
+
+#: electron/src/renderer/components/InstallPalettes.vue:55
+msgid "Try again"
 msgstr ""
 

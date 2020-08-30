@@ -31,6 +31,6 @@ class LayerCommands(CommandsExtension):
                                        "height": "100%",
                                        "width": "100%",
                                        "x": str(i * 20),
-                                       "y": "-10"
+                                       "y": "-10",
                                        "transform": correction_transform
                                    })

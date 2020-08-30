@@ -1,9 +1,10 @@
 from ..commands import is_command
-from ..svg.tags import (EMBROIDERABLE_TAGS, SVG_IMAGE_TAG, SVG_POLYLINE_TAG,
-                        SVG_TEXT_TAG)
+from ..svg.tags import (EMBROIDERABLE_TAGS, SVG_IMAGE_TAG, SVG_PATH_TAG,
+                        SVG_POLYLINE_TAG, SVG_TEXT_TAG)
 from .auto_fill import AutoFill
 from .clone import Clone, is_clone
 from .element import EmbroideryElement
+from .empty_d_object import EmptyDObject
 from .fill import Fill
 from .image import ImageObject
 from .polyline import Polyline
@@ -18,6 +19,9 @@ def node_to_elements(node):  # noqa: C901
 
     elif is_clone(node):
         return [Clone(node)]
+
+    elif node.tag == SVG_PATH_TAG and not node.get('d', ''):
+        return [EmptyDObject(node)]
 
     elif node.tag in EMBROIDERABLE_TAGS:
         element = EmbroideryElement(node)

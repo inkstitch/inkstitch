@@ -22,7 +22,7 @@ class BreakApart(InkstitchExtension):
         InkstitchExtension.__init__(self, *args, **kwargs)
         self.arg_parser.add_argument("-m", "--method", type=int, default=1, dest="method")
 
-    def effect(self):
+    def effect(self):  # noqa: C901
         if not self.svg.selected:
             print(_("Please select one or more fill areas to break apart."), file=sys.stderr)
             return
@@ -39,10 +39,13 @@ class BreakApart(InkstitchExtension):
 
             # we don't want to touch valid elements
             paths = element.flatten(element.parse_path())
-            paths.sort(key=lambda point_list: Polygon(point_list).area, reverse=True)
-            polygon = MultiPolygon([(paths[0], paths[1:])])
-            if self.geom_is_valid(polygon):
-                continue
+            try:
+                paths.sort(key=lambda point_list: Polygon(point_list).area, reverse=True)
+                polygon = MultiPolygon([(paths[0], paths[1:])])
+                if self.geom_is_valid(polygon):
+                    continue
+            except ValueError:
+                pass
 
             polygons = self.break_apart_paths(paths)
             polygons = self.ensure_minimum_size(polygons, 5)
@@ -55,13 +58,15 @@ class BreakApart(InkstitchExtension):
     def break_apart_paths(self, paths):
         polygons = []
         for path in paths:
+            if len(path) < 3:
+                continue
             linestring = LineString(path)
-            polygon = Polygon(path).buffer(0)
             if not linestring.is_simple:
                 linestring = unary_union(linestring)
                 for polygon in polygonize(linestring):
                     polygons.append(polygon)
             else:
+                polygon = Polygon(path).buffer(0)
                 polygons.append(polygon)
         return polygons
 
