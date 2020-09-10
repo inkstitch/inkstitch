@@ -25,7 +25,7 @@ user-level:
 7. While this is not a true blend, in most instances, this type of blend is good enough to achieve the desired end look.
 8. The density values in this example are not set in stone, but just to illustrate the concept.  True settings will depend on the design, fabric it's going on and the size of design.
 
-[Download Sample File](/assets/images/tutorials/samples//assets/images/tutorials/samples/Faux_Fill_Blend.svg){: download="/assets/images/tutorials/samples/Faux_Fill_Blend.svg" }
+[Download Sample File](/assets/images/tutorials/samples/Faux_Fill_Blend.svg){: download="Faux_Fill_Blend.svg" }
 
 ## True Blend
 
