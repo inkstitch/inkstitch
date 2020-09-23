@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2020-09-19 00:40+0000\n"
-"PO-Revision-Date: 2020-09-19 00:41\n"
+"PO-Revision-Date: 2020-09-23 00:42\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -363,15 +363,15 @@ msgstr "erreur :"
 
 #: lib/elements/empty_d_object.py:7
 msgid "Empty D-Attribute"
-msgstr ""
+msgstr "L'attribut d du chemin est vide"
 
 #: lib/elements/empty_d_object.py:8
 msgid "There is an invalid path object in the document, the d-attribute is missing."
-msgstr ""
+msgstr "Il y a un chemin non valide dans le document. L'attribut d est manquant."
 
 #: lib/elements/empty_d_object.py:10
 msgid "* Run Extensions > Ink/Stitch > Troubleshoot > Cleanup Document..."
-msgstr ""
+msgstr "Exécutez Extensions > Ink/Stitch > Résolution de problèmes > Nettoyer le document..."
 
 #: lib/elements/fill.py:17
 msgid "Unconnected"
