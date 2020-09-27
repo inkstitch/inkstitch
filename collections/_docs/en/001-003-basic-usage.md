@@ -16,15 +16,12 @@ Create an object, e.g. a circle and make sure it has a fill.
 
 ![Circle with fill color](/assets/images/docs/en/basic-usage-circle-fill-color.png)
 
-## Step 2 - Convert to Path
+## Step 2 - Convert to Path (optional)
 
-Transform **all objects** you want to stitch to paths:
+Ink/Stitch works best with path objects. We recommend to transform objects you want to stitch to paths:
 
 * Select all objects (`Ctrl+A`)
 * `Path > Object to Path` or `Ctrl+Alt+C`.
-
-**Info:** Objects that are not of "path" type, are ignored by Ink/Stitch.
-{: .notice--warning }
 
 ## Step 3 - Parametrize SVG Path for Embroidery
 

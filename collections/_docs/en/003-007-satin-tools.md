@@ -28,7 +28,7 @@ This tool will replace your satins with a new set of satin columns in logical st
 2. Run `Extensions > Ink/Stitch  > Satin Tools > Auto-Route Satin Columns...`
 3. Enable desired options and click apply
 
-**Tip:** By default, it will choose the left-most extreme as the starting point and the right-most extreme as the ending point (even if these occur partway through a satin such as the left edge of a letter "o"). You can override this by attaching the ["Auto-route satin stitch starting/ending position" commands](/docs/commands/).
+**Tip:** By default, it will choose the left-most extreme as the starting point and the right-most extreme as the ending point (even if these occur partway through a satin such as the left edge of a letter "o"). You can override this by attaching the ["Auto-route satin stitch starting/ending position" commands](/docs/commands/#--startingending-position-for-auto-route-satin).
 {: .notice--info }
 
 ### Options

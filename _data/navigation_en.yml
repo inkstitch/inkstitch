@@ -56,30 +56,6 @@ docs:
         url: /docs/basic-usage/
       - title: "Workflow"
         url: /docs/workflow/
-  - title: Interface
-    children:
-    - title: "Params"
-      url: /docs/params/
-    - title: Install Add-Ons
-      url: /docs/addons/
-    - title: "Commands"
-      url: /docs/commands/
-    - title: "Satin Tools"
-      url: /docs/satin-tools/
-    - title: "Fill Tools"
-      url: /docs/fill-tools/
-    - title: "Lettering"
-      url: /docs/lettering/
-    - title: "Visualize"
-      url: /docs/visualize/
-    - title: "Print"
-      url: /docs/print/
-    - title: "Import / Export"
-      url: /docs/import-export/
-    - title: "Troubleshoot Objects"
-      url: /docs/troubleshoot/
-    - title: "Remove Embroidery Settings"
-      url: /docs/remove-embroidery-settings/
   - title: "Stitch Library"
     url: /docs/stitch-library/
     children:
@@ -97,6 +73,28 @@ docs:
         url: /docs/stitches/e-stitch/
       - title: "Fill Stitch"
         url: /docs/stitches/fill-stitch/
+  - title: Interface
+    children:
+    - title: "Commands"
+      url: /docs/commands/
+    - title: "Fill Tools"
+      url: /docs/fill-tools/
+    - title: "Import Threadlist"
+      url: /docs/import-threadlist/
+    - title: Install Add-Ons
+      url: /docs/addons/   
+    - title: "Lettering"
+      url: /docs/lettering/
+    - title: "Params"
+      url: /docs/params/
+    - title: "Satin Tools"
+      url: /docs/satin-tools/
+    - title: "Troubleshoot"
+      url: /docs/troubleshoot/
+    - title: "Visualize"
+      url: /docs/visualize/
+    - title: "Export and Import"
+      url: /docs/import-export/
   - title: Tips
     children:
       - title: "Fonts"
