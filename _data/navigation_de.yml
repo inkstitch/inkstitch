@@ -52,30 +52,6 @@ docs:
         url: /de/docs/basic-usage/
       - title: Arbeitsablauf
         url: /de/docs/workflow/
-  - title: Benutzeroberfläche
-    children:
-    - title: Parameter
-      url: /de/docs/params/
-    - title: Add-Ons installieren
-      url: /de/docs/addons/
-    - title: "Befehle"
-      url: /de/docs/commands/
-    - title: Satin Werkzeuge
-      url: /de/docs/satin-tools/
-    - title: Füllstich Werkzeuge
-      url: /de/docs/fill-tools/
-    - title: Lettering
-      url: /de/docs/lettering/
-    - title: Visualisierung
-      url: /de/docs/visualize/
-    - title: Drucken
-      url: /de/docs/print/
-    - title: Importieren / Exportieren
-      url: /de/docs/import-export/
-    - title: "Troubleshoot Objects"
-      url: /de/docs/troubleshoot/
-    - title: "Stickeinstellungen entfernen"
-      url: /de/docs/remove-embroidery-settings/
   - title: Stich-Bibliothek
     url: /de/docs/stitch-library/
     children:
@@ -93,6 +69,28 @@ docs:
         url: /de/docs/stitches/e-stitch/
       - title: "Füllstich"
         url: /de/docs/stitches/fill-stitch/
+  - title: Benutzeroberfläche
+    children:
+    - title: "Befehle"
+      url: /de/docs/commands/
+    - title: Füllstich Werkzeuge
+      url: /de/docs/fill-tools/
+    - title: Garnliste importieren
+      url: /de/docs/import-threadlist/
+    - title: Add-Ons installieren
+      url: /de/docs/addons/
+    - title: Lettering
+      url: /de/docs/lettering/
+    - title: Parameter
+      url: /de/docs/params/
+    - title: Satin Werkzeuge
+      url: /de/docs/satin-tools/
+    - title: "Fehlerbehebung"
+      url: /de/docs/troubleshoot/
+    - title: Visualisierung
+      url: /de/docs/visualize/
+    - title: Importieren / Exportieren
+      url: /de/docs/import-export/
   - title: Tips
     children:
       - title: "Fonts"
