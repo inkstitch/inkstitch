@@ -79,8 +79,6 @@ docs:
       url: /docs/commands/
     - title: "Fill Tools"
       url: /docs/fill-tools/
-    - title: "Import Threadlist"
-      url: /docs/import-threadlist/
     - title: Install Add-Ons
       url: /docs/addons/   
     - title: "Lettering"
