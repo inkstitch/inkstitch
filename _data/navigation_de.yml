@@ -137,6 +137,8 @@ tutorials:
       url: /de/tutorials/
     - title: "Video Tutorials"
       url: /de/tutorials/video/
+    - title: External Tutorials
+      url: /de/tutorials/external-tutorials/
   
 # developers links
 developers:

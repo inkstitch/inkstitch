@@ -141,6 +141,8 @@ tutorials:
       url: /fr/tutorials/
     - title: "Tutoriels Video"
       url: /fr/tutorials/video/
+    - title: External Tutorials
+      url: /fr/tutorials/external-tutorials/
   
 # developers links
 developers:

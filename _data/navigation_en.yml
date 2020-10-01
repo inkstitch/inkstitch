@@ -143,6 +143,8 @@ tutorials:
       url: /tutorials/
     - title: "Video Tutorials"
       url: /tutorials/video/
+    - title: External Tutorials
+      url: /tutorials/external-tutorials/
   
 # developers links
 developers:
