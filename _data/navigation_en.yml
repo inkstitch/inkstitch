@@ -93,8 +93,16 @@ docs:
       url: /docs/troubleshoot/
     - title: "Visualize"
       url: /docs/visualize/
-    - title: "Export and Import"
+  - title: "File Handling"
+    children:
+    - title: Supported File Formats
+      url: /docs/file-formats/
+    - title: Export and Import Files
       url: /docs/import-export/
+    - title: Print PDF
+      url: /docs/print-pdf/
+    - title: Threadlist
+      url: /docs/threadlist/
   - title: Tips
     children:
       - title: "Fonts"

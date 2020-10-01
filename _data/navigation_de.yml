@@ -75,8 +75,6 @@ docs:
       url: /de/docs/commands/
     - title: Füllstich Werkzeuge
       url: /de/docs/fill-tools/
-    - title: Garnliste importieren
-      url: /de/docs/import-threadlist/
     - title: Add-Ons installieren
       url: /de/docs/addons/
     - title: Lettering
@@ -89,8 +87,16 @@ docs:
       url: /de/docs/troubleshoot/
     - title: Visualisierung
       url: /de/docs/visualize/
-    - title: Importieren / Exportieren
+  - title: (Stick-)Dateien
+    children:
+    - title: Unterstützte Dateiformate
+      url: /de/docs/file-formats/
+    - title: Dateien importieren und exportieren
       url: /de/docs/import-export/
+    - title: PDF Drucken
+      url: /de/docs/print-pdf/
+    - title: Garnliste
+      url: /de/docs/threadlist/
   - title: Tips
     children:
       - title: "Fonts"
