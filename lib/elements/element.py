@@ -1,19 +1,16 @@
 import sys
 from copy import deepcopy
 
-import tinycss2
-
 import inkex
+import tinycss2
 from inkex import bezier
 
 from ..commands import find_commands
 from ..i18n import _
 from ..svg import PIXELS_PER_MM, apply_transforms, convert_length, get_doc_size
 from ..svg.tags import (EMBROIDERABLE_TAGS, INKSCAPE_LABEL, INKSTITCH_ATTRIBS,
-                        SVG_CIRCLE_TAG, SVG_ELLIPSE_TAG, SVG_GROUP_TAG,
-                        SVG_OBJECT_TAGS, SVG_RECT_TAG, SVG_LINK_TAG)
+                        SVG_GROUP_TAG, SVG_LINK_TAG)
 from ..utils import cache
-from .svg_objects import circle_to_path, ellipse_to_path, rect_to_path
 
 
 class Patch:
@@ -254,15 +251,7 @@ class EmbroideryElement(object):
         # In a path, each element in the 3-tuple is itself a tuple of (x, y).
         # Tuples all the way down.  Hasn't anyone heard of using classes?
 
-        if self.node.tag in SVG_OBJECT_TAGS:
-            if self.node.tag == SVG_RECT_TAG:
-                d = rect_to_path(self.node)
-            elif self.node.tag == SVG_ELLIPSE_TAG:
-                d = ellipse_to_path(self.node)
-            elif self.node.tag == SVG_CIRCLE_TAG:
-                d = circle_to_path(self.node)
-        else:
-            d = self.node.get("d", "")
+        d = self.node.get_path()
 
         if not d:
             self.fatal(_("Object %(id)s has an empty 'd' attribute.  Please delete this object from your document.") % dict(id=self.node.get("id")))

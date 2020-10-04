@@ -1,19 +1,19 @@
-from copy import deepcopy
-from datetime import date
 import errno
 import json
 import logging
 import os
 import socket
 import sys
-from threading import Thread
 import time
+from copy import deepcopy
+from datetime import date
+from threading import Thread
 
 import appdirs
-from flask import Flask, request, Response, send_from_directory, jsonify
-import inkex
-from jinja2 import Environment, FileSystemLoader, select_autoescape
 import requests
+from flask import Flask, Response, jsonify, request, send_from_directory
+from jinja2 import Environment, FileSystemLoader, select_autoescape
+from lxml import etree
 
 from ..gui import open_url
 from ..i18n import translation as inkstitch_translation
@@ -217,7 +217,7 @@ class Print(InkstitchExtension):
             if layer is not stitch_plan_layer:
                 svg.remove(layer)
 
-        overview_svg = inkex.etree.tostring(svg)
+        overview_svg = etree.tostring(svg)
         color_block_groups = stitch_plan_layer.getchildren()
         color_block_svgs = []
 
@@ -229,7 +229,7 @@ class Print(InkstitchExtension):
             stitch_plan_layer.append(group)
 
             # save an SVG preview
-            color_block_svgs.append(inkex.etree.tostring(svg))
+            color_block_svgs.append(etree.tostring(svg))
 
         return overview_svg, color_block_svgs
 
@@ -269,7 +269,8 @@ class Print(InkstitchExtension):
         # objects.  It's almost certain they meant to print the whole design.
         # If they really wanted to print just a few objects, they could set
         # the rest invisible temporarily.
-        self.selected = {}
+        # TODO: select all
+        # self.svg.selected = None
 
         if not self.get_elements():
             return

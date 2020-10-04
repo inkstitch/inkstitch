@@ -1,11 +1,10 @@
 import sys
-import inkex
 
+import inkex
 import shapely.geometry
 
 from ..i18n import _
 from ..stitches import bean_stitch, running_stitch
-from ..svg import parse_length_with_units
 from ..utils import Point, cache
 from .element import EmbroideryElement, Patch, param
 
@@ -136,8 +135,8 @@ class Stroke(EmbroideryElement):
             if not warned_about_legacy_running_stitch:
                 warned_about_legacy_running_stitch = True
                 print(_("Legacy running stitch setting detected!\n\nIt looks like you're using a stroke " +
-                                       "smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set " +
-                                       "your stroke to be dashed to indicate running stitch.  Any kind of dash will work."), file=sys.stderr)
+                        "smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set " +
+                        "your stroke to be dashed to indicate running stitch.  Any kind of dash will work."), file=sys.stderr)
 
             # still allow the deprecated setting to work in order to support old files
             return True

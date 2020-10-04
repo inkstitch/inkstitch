@@ -64,7 +64,7 @@ class PresetsPanel(wx.Panel):
 
         presets_sizer = wx.StaticBoxSizer(self.presets_box, wx.HORIZONTAL)
         self.preset_chooser.SetMinSize((200, -1))
-        presets_sizer.Add(self.preset_chooser, 1, wx.ALIGN_CENTER_VERTICAL | wx.LEFT | wx.BOTTOM | wx.EXPAND, 10)
+        presets_sizer.Add(self.preset_chooser, 1, wx.BOTTOM | wx.EXPAND, 10)
         presets_sizer.Add(self.load_preset_button, 0, wx.ALIGN_CENTER_VERTICAL | wx.BOTTOM | wx.LEFT, 10)
         presets_sizer.Add(self.add_preset_button, 0, wx.ALIGN_CENTER_VERTICAL | wx.BOTTOM | wx.LEFT, 10)
         presets_sizer.Add(self.overwrite_preset_button, 0, wx.ALIGN_CENTER_VERTICAL | wx.BOTTOM | wx.LEFT, 10)

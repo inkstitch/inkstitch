@@ -1,8 +1,7 @@
-# -*- coding: UTF-8 -*-
-
 import os
+
 import inkex
-import simplestyle
+from lxml import etree
 
 from ..svg.tags import INKSCAPE_GROUPMODE, INKSCAPE_LABEL
 from .glyph import Glyph
@@ -54,7 +53,7 @@ class FontVariant(object):
     def _load_glyphs(self):
         svg_path = os.path.join(self.path, "%s.svg" % self.variant)
         with open(svg_path) as svg_file:
-            svg = inkex.etree.parse(svg_file)
+            svg = etree.parse(svg_file)
 
         glyph_layers = svg.xpath(".//svg:g[starts-with(@inkscape:label, 'GlyphLayer-')]", namespaces=inkex.NSS)
         for layer in glyph_layers:
@@ -73,9 +72,9 @@ class FontVariant(object):
         if style_text:
             # The layer may be marked invisible, so we'll clear the 'display'
             # style.
-            style = simplestyle.parseStyle(group.get('style'))
+            style = dict(inkex.Style.parse_str(group.get('style')))
             style.pop('display')
-            group.set('style', simplestyle.formatStyle(style))
+            group.set('style', str(inkex.Style(style)))
 
     def __getitem__(self, character):
         if character in self.glyphs:

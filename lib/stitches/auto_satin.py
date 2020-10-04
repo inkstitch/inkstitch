@@ -1,13 +1,11 @@
 import math
 from itertools import chain
 
+import inkex
 import networkx as nx
+from lxml import etree
 from shapely import geometry as shgeo
 from shapely.geometry import Point as ShapelyPoint
-
-import cubicsuperpath
-import inkex
-import simplestyle
 
 from ..commands import add_commands
 from ..elements import SatinColumn, Stroke
@@ -216,13 +214,13 @@ class RunningStitch(object):
             original_element.node.get(INKSTITCH_ATTRIBS['contour_underlay_stitch_length_mm'], '')
 
     def to_element(self):
-        node = inkex.etree.Element(SVG_PATH_TAG)
-        node.set("d", cubicsuperpath.formatPath(
-            line_strings_to_csp([self.path])))
+        node = etree.Element(SVG_PATH_TAG)
+        d = str(inkex.paths.CubicSuperPath(line_strings_to_csp([self.path])).to_path())
+        node.set("d", d)
 
         style = self.original_element.parse_style()
         style['stroke-dasharray'] = "0.5,0.5"
-        style = simplestyle.formatStyle(style)
+        style = str(inkex.Style(style))
         node.set("style", style)
         node.set(INKSTITCH_ATTRIBS['running_stitch_length_mm'], self.running_stitch_length)
 
@@ -650,7 +648,7 @@ def preserve_original_groups(elements, original_parent_nodes):
 
 
 def create_new_group(parent, insert_index):
-    group = inkex.etree.Element(SVG_GROUP_TAG, {
+    group = etree.Element(SVG_GROUP_TAG, {
         INKSCAPE_LABEL: _("Auto-Satin"),
         "transform": get_correction_transform(parent, child=True)
     })

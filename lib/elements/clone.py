@@ -1,16 +1,13 @@
 from copy import copy
 from math import atan, degrees
 
-from simpletransform import (applyTransformToNode, applyTransformToPoint,
-                             computeBBox, parseTransform)
+import inkex
 
 from ..commands import is_command, is_command_symbol
 from ..i18n import _
-from ..svg.path import get_node_transform
 from ..svg.svg import find_elements
-from ..svg.tags import (EMBROIDERABLE_TAGS, INKSTITCH_ATTRIBS, SVG_GROUP_TAG,
-                        SVG_LINK_TAG, SVG_POLYLINE_TAG, SVG_USE_TAG,
-                        XLINK_HREF)
+from ..svg.tags import (EMBROIDERABLE_TAGS, INKSTITCH_ATTRIBS,
+                        SVG_POLYLINE_TAG, SVG_USE_TAG, XLINK_HREF)
 from ..utils import cache
 from .auto_fill import AutoFill
 from .element import EmbroideryElement, param
@@ -105,8 +102,7 @@ class Clone(EmbroideryElement):
         clone.set('id', clone_id)
 
         # apply transform
-        transform = get_node_transform(self.node)
-        applyTransformToNode(transform, clone)
+        clone.transform = self.node.composed_transform() * clone.composed_transform()
 
         # apply style
         stroke_style = self.get_clone_style('stroke', self.node)
@@ -131,10 +127,10 @@ class Clone(EmbroideryElement):
             angle = self.clone_fill_angle
         else:
             # clone angle
-            clone_mat = parseTransform(clone.get('transform', ''))
+            clone_mat = clone.composed_transform()
             clone_angle = degrees(atan(-clone_mat[1][0]/clone_mat[1][1]))
             # source node angle
-            source_mat = parseTransform(source_node.get('transform', ''))
+            source_mat = source_node.composed_transform()
             source_angle = degrees(atan(-source_mat[1][0]/source_mat[1][1]))
             # source node fill angle
             source_fill_angle = source_node.get(param, 0)
@@ -149,30 +145,14 @@ class Clone(EmbroideryElement):
 
         return patches
 
-    def _get_clone_style_raw(self, style_name, node):
-        style = self.parse_style()
-        style = style.get(style_name) or self.node.get(style_name)
-        parent = self.node.getparent()
-        # style not found, get inherited style elements
-        while not style and parent is not None:
-            if parent.tag not in [SVG_GROUP_TAG, SVG_LINK_TAG]:
-                parent = parent.getparent()
-                continue
-            style = self.parse_style(parent)
-            style = style.get(style_name) or parent.get(style_name)
-            parent = parent.getparent()
-        return style
-
     def get_clone_style(self, style_name, node, default=None):
-        style = self._get_clone_style_raw(style_name, node) or default
+        style = inkex.styles.AttrFallbackStyle(node).get(style_name) or default
         return style
 
     def center(self, source_node):
-        xmin, xmax, ymin, ymax = computeBBox([source_node])
-        point = [(xmax-((xmax-xmin)/2)), (ymax-((ymax-ymin)/2))]
-        transform = get_node_transform(self.node)
-        applyTransformToPoint(transform, point)
-        return point
+        transform = self.node.composed_transform()*-self.node.transform
+        center = self.node.bounding_box(transform).center
+        return center
 
     def validation_warnings(self):
         source_node = get_clone_source(self.node)

@@ -55,8 +55,8 @@ else:
     if exception:
         print(_("Ink/Stitch experienced an unexpected error."), file=sys.stderr)
         print(_("If you'd like to help, please file an issue at "
-                               "https://github.com/inkstitch/inkstitch/issues "
-                               "and include the entire error description below:"), "\n", file=sys.stderr)
+                "https://github.com/inkstitch/inkstitch/issues "
+                "and include the entire error description below:"), "\n", file=sys.stderr)
         print(exception, file=sys.stderr)
         sys.exit(1)
     else:

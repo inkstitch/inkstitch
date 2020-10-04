@@ -1,17 +1,17 @@
 # -*- coding: UTF-8 -*-
 
-from copy import deepcopy
 import json
 import os
+from copy import deepcopy
 
-import inkex
+from lxml import etree
 
 from ..elements import nodes_to_elements
 from ..exceptions import InkstitchException
 from ..i18n import _, get_languages
 from ..stitches.auto_satin import auto_satin
 from ..svg import PIXELS_PER_MM
-from ..svg.tags import SVG_GROUP_TAG, SVG_PATH_TAG, INKSCAPE_LABEL
+from ..svg.tags import INKSCAPE_LABEL, SVG_GROUP_TAG, SVG_PATH_TAG
 from ..utils import Point
 from .font_variant import FontVariant
 
@@ -171,7 +171,7 @@ class Font(object):
         Returns:
             An svg:g element containing the rendered text.
         """
-        group = inkex.etree.Element(SVG_GROUP_TAG, {
+        group = etree.Element(SVG_GROUP_TAG, {
             INKSCAPE_LABEL: line
         })
 

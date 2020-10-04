@@ -1,9 +1,8 @@
 from copy import copy
 
-import cubicsuperpath
-import simpletransform
+from inkex import paths
 
-from ..svg import apply_transforms, get_guides
+from ..svg import get_guides
 from ..svg.tags import SVG_GROUP_TAG, SVG_PATH_TAG
 
 
@@ -47,11 +46,14 @@ class Glyph(object):
                 node_copy = copy(node)
 
                 if "d" in node.attrib:
+                    # TODO: do this a better way
                     # Convert the path to absolute coordinates, incorporating all
                     # nested transforms.
-                    path = cubicsuperpath.parsePath(node.get("d"))
-                    apply_transforms(path, node)
-                    node_copy.set("d", cubicsuperpath.formatPath(path))
+                    # cubicsuperpath.parsePath(node.get("d"))
+                    path = paths.CubicSuperPath(node.get("d"))
+                    path.transform = node.get("transform")
+                    # apply_transforms(path, node)
+                    node_copy.set("d", str(path))
 
                 # Delete transforms from paths and groups, since we applied
                 # them to the paths already.
@@ -71,8 +73,10 @@ class Glyph(object):
             self._baseline = 0
 
     def _process_bbox(self):
-        left, right, top, bottom = simpletransform.computeBBox(self.node.iterdescendants())
-
+        # TODO: compute bounding box (bbox) - we need a inkex.ShapeElement to access the bounding_box method
+        # left, right, top, bottom = simpletransform.computeBBox(self.node.iterdescendants())
+        # left, right, top, bottom = sum([node.bounding_box() for node in self.node.iterdescendants()])
+        left, right = [0, 20]
         self.width = right - left
         self._min_x = left
 
@@ -83,4 +87,5 @@ class Glyph(object):
 
         for node in self.node.iter(SVG_PATH_TAG):
             node.set('transform', transform)
-            simpletransform.fuseTransform(node)
+            # TODO: fuseTransform
+            # simpletransform.fuseTransform(node)

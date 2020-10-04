@@ -1,17 +1,15 @@
 import logging
+import sys
 from copy import copy
 
 from shapely.geometry import LineString, MultiPolygon, Polygon
 from shapely.ops import polygonize, unary_union
-
-import inkex
 
 from ..elements import EmbroideryElement
 from ..i18n import _
 from ..svg import get_correction_transform
 from ..svg.tags import SVG_PATH_TAG
 from .base import InkstitchExtension
-import sys
 
 
 class BreakApart(InkstitchExtension):

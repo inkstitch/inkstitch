@@ -1,14 +1,15 @@
 from copy import deepcopy
 from itertools import chain
 
-import cubicsuperpath
-from shapely import affinity as shaffinity, geometry as shgeo
+from inkex import paths
+from shapely import affinity as shaffinity
+from shapely import geometry as shgeo
 
-from .element import EmbroideryElement, Patch, param
-from .validation import ValidationError
 from ..i18n import _
 from ..svg import line_strings_to_csp, point_lists_to_csp
 from ..utils import Point, cache, collapse_duplicate_point, cut
+from .element import EmbroideryElement, Patch, param
+from .validation import ValidationError
 
 
 class SatinHasFillError(ValidationError):
@@ -517,7 +518,7 @@ class SatinColumn(EmbroideryElement):
 
     def _csp_to_satin(self, csp):
         node = deepcopy(self.node)
-        d = cubicsuperpath.formatPath(csp)
+        d = paths.CubicSuperPath(csp).to_path()
         node.set("d", d)
 
         # we've already applied the transform, so get rid of it

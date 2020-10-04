@@ -32,7 +32,7 @@ class Cleanup(InkstitchExtension):
             count += 1
 
         if not self.get_elements():
-            print >> sys.stderr, _("%s elements removed" % count)
+            print(_("%s elements removed" % count), file=sys.stderr)
             return
 
         for element in self.elements:

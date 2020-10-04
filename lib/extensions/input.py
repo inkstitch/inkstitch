@@ -1,8 +1,9 @@
 import os
-import pyembroidery
 
-from inkex import etree
 import inkex
+from lxml import etree
+
+import pyembroidery
 
 from ..stitch_plan import StitchPlan
 from ..svg import PIXELS_PER_MM, render_stitch_plan
@@ -10,7 +11,7 @@ from ..svg.tags import INKSCAPE_LABEL
 
 
 class Input(object):
-    def affect(self, args):
+    def run(self, args):
         embroidery_file = args[0]
         pattern = pyembroidery.read(embroidery_file)
 

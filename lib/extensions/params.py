@@ -151,7 +151,7 @@ class ParamsTab(ScrolledPanel):
                 # because they're grayed out anyway.
                 return values
 
-        for name, input in self.param_inputs.items():
+        for name, input in iter(self.param_inputs.items()):
             if input in self.changed_inputs and input != self.toggle_checkbox:
                 values[name] = input.GetValue()
 
@@ -161,7 +161,7 @@ class ParamsTab(ScrolledPanel):
         values = self.get_values()
         for node in self.nodes:
             # print >> sys.stderr, "apply: ", self.name, node.id, values
-            for name, value in values.items():
+            for name, value in iter(values.items()):
                 node.set_param(name, value)
 
     def on_change(self, callable):
@@ -181,7 +181,7 @@ class ParamsTab(ScrolledPanel):
     def load_preset(self, preset):
         preset_data = preset.get(self.name, {})
 
-        for name, value in preset_data.items():
+        for name, value in iter(preset_data.items()):
             if name in self.param_inputs:
                 self.param_inputs[name].SetValue(value)
                 self.changed_inputs.add(self.param_inputs[name])
@@ -507,10 +507,16 @@ class Params(InkstitchExtension):
 
     def group_params(self, params):
         def by_group_and_sort_index(param):
+            # TODO: shouldn't be none
+            if param.group is None:
+                param.group = "AutoFill"
             return param.group, param.sort_index
 
         def by_group(param):
-            return param.group
+            # TODO: shouldn't be none
+            if param.group is None:
+                param.group = "AutoFill"
+            return str(param.group)
 
         return groupby(sorted(params, key=by_group_and_sort_index), by_group)
 

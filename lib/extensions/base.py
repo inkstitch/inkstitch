@@ -4,9 +4,9 @@ import re
 from collections.abc import MutableMapping
 from copy import deepcopy
 
-from stringcase import snakecase
-
 import inkex
+from lxml import etree
+from stringcase import snakecase
 
 from ..commands import is_command, layer_commands
 from ..elements import EmbroideryElement, nodes_to_elements
@@ -71,7 +71,7 @@ class InkStitchMetadata(MutableMapping):
         tag = inkex.addNS(name, "inkstitch")
         item = self.metadata.find(tag)
         if item is None and create:
-            item = inkex.etree.SubElement(self.metadata, tag)
+            item = etree.SubElement(self.metadata, tag)
 
         return item
 

@@ -1,13 +1,14 @@
 import inkex
+
 from .tags import SVG_GROUP_TAG, SVG_LINK_TAG
 from .units import get_viewbox_transform
 
 
 def apply_transforms(path, node):
-    transform = get_node_transform(node)
+    transform = node.composed_transform()
 
     # apply the combined transform to this node's path
-    path.transform(transform)
+    path = path.transform(transform)
 
     return path
 
@@ -26,6 +27,8 @@ def compose_parent_transforms(node, mat):
 
 
 def get_node_transform(node):
+    return node.composed_transform()
+
     # start with the identity transform
     transform = inkex.transforms.Transform([[1.0, 0.0, 0.0], [0.0, 1.0, 0.0]])
 
@@ -50,19 +53,17 @@ def get_correction_transform(node, child=False):
     # if we want to place our new nodes in the same group/layer as this node,
     # then we'll need to factor in the effects of any transforms set on
     # the parents of this node.
+    try:
+        transform = node.composed_transform()
+    except AttributeError:
+        return ""
 
-    if child:
-        transform = get_node_transform(node)
-    else:
+    if not child:
         # we can ignore the transform on the node itself since it won't apply
         # to the objects we add
-        transform = get_node_transform(node.getparent())
+        transform = transform*-node.transform
 
-    # now invert it, so that we can position our objects in absolute
-    # coordinates
-    transform = -transform
-    
-    return "" # str(transform) # TODO: get get_correction_transform right
+    return str(transform)
 
 
 def line_strings_to_csp(line_strings):

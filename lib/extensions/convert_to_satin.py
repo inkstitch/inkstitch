@@ -1,12 +1,11 @@
 import math
 from itertools import chain, groupby
 
+import inkex
 import numpy
+from lxml import etree
 from numpy import diff, setdiff1d, sign
 from shapely import geometry as shgeo
-from lxml import etree
-
-import inkex
 
 from ..elements import Stroke
 from ..i18n import _
@@ -306,11 +305,10 @@ class ConvertToSatin(InkstitchExtension):
             d += " "
 
         return etree.Element(SVG_PATH_TAG,
-                                   {
-                                       "id": self.uniqueId("path"),
-                                       "style": path_style,
-                                       "transform": correction_transform,
-                                       "d": d,
-                                       INKSTITCH_ATTRIBS['satin_column']: "true",
-                                   }
-                                   )
+                             {
+                              "id": self.uniqueId("path"),
+                              "style": path_style,
+                              "transform": correction_transform,
+                              "d": d,
+                              INKSTITCH_ATTRIBS['satin_column']: "true",
+                             })
