@@ -1,11 +1,11 @@
 ---
 title: "Get Involved"
 permalink: /developers/introduction/
-last_modified_at: 2018-10-13
+last_modified_at: 2020-10-04
 toc: false
 ---
 This section will provide information for developers, translators and documenters.
-Please visit the particular sections to get more informations.
+Please visit the particular sections to get more information.
 
 * [Developing Ink/Stitch](/developers/inkstitch/)
 * [Developing Pyembroidery](/developers/pyembroidery/)
