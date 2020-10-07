@@ -2,7 +2,7 @@
 title: "Inkscape Tips"
 permalink: /docs/inkscape-tips/
 excerpt: ""
-last_modified_at: 2018-06-06
+last_modified_at: 2020-10-07
 toc: true
 ---
 ## Tips for Ink/Stitch
@@ -59,7 +59,7 @@ Paths are good for:
  * Drawing unique freehand shapes
  * Preparing your finished design for embroidery
 
-You can check whether an object is path or a special object by selecting it with the Node Tool. Paths will show gray markers all across the shape, while special objects will show only 2 to 4 white markers. Note that you _cannot_ tell whether something is a path by looking at its name in the Objects panel, because Inkscape gives names like "path1234" to circles and spirals as well as to actual paths.
+You can check an object's type in the description that appears in the status bar at the bottom of the screen when it's selected. Note that you _cannot_ tell whether something is a path by looking at its name in the Objects panel, because Inkscape gives names like "path1234" to circles and spirals as well as to actual paths.
 
 ### Stroke and Fill
 Bring up the Fill and Stroke panel by pressing `Shift+Ctrl+F` or selecting `Object > Fill and Stroke...` from the menu to control the color and style of a path's fill and stroke. The exact color and style of your path are mostly irrelevant to the embroidery file, but you do need to know how to edit them because Ink/Stitch uses stroke style to determine what kind of stitch to use and inserts thread change prompts based on whether paths are the same color.
