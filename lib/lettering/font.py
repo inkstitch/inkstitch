@@ -214,7 +214,7 @@ class Font(object):
 
         transform = "translate(%s, %s)" % position.as_tuple()
         node.set('transform', transform)
-        position.x -= self.horiz_adv_x.get(character, glyph.width)
+        position.x -= self.horiz_adv_x.get(character, -1*glyph.width)
 
         return node
 
