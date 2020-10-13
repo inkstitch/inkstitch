@@ -223,7 +223,7 @@ class Font(object):
         transform = "translate(%s, %s)" % position.as_tuple()
         node.set('transform', transform)
 
-         if version == "2":
+        if version == "2":
             position.x += self.horiz_adv_x.get(character, glyph.width)
         else:
             position.x += glyph.width
