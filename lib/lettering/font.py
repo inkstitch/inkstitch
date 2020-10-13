@@ -109,11 +109,14 @@ class Font(object):
     leading = font_metadata('leading', 5, multiplier=PIXELS_PER_MM)
     word_spacing = font_metadata('word_spacing', 3, multiplier=PIXELS_PER_MM)
     kerning_pairs = font_metadata('kerning_pairs', {})
-    kerning_pairs_px = font_metadata('kerning_pairs_px', {})
-    horiz_adv_x = font_metadata('horiz_adv_x', {})
     auto_satin = font_metadata('auto_satin', True)
     min_scale = font_metadata('min_scale', 1.0)
     max_scale = font_metadata('max_scale', 1.0)
+
+    # Version 2 : Use values ​​from SVG Font <glyph horiz-adv-x = "..." ... /> and <hkern k = ".." .... />
+    version = localized_font_metadata('version', '')
+    kerning_pairs_px = font_metadata('kerning_pairs_px', {})
+    horiz_adv_x = font_metadata('horiz_adv_x', {})
 
     @property
     def id(self):
@@ -210,11 +213,21 @@ class Font(object):
         node = deepcopy(glyph.node)
 
         if last_character is not None:
-            position.x -= -self.letter_spacing + self.kerning_pairs_px.get(last_character + character, -self.kerning_pairs.get(last_character + character, 0) * PIXELS_PER_MM)    
-
+            if version == "2":
+                position.x += self._min_x - self.kerning_pairs_px.get(last_character + character, 0)  
+            else:
+                position.x += self.letter_spacing + self.kerning_pairs.get(last_character + character, 0) * PIXELS_PER_MM
+        
+        
+            
         transform = "translate(%s, %s)" % position.as_tuple()
         node.set('transform', transform)
-        position.x += self.horiz_adv_x.get(character, glyph.width)
+
+         if version == "2":
+            position.x += self.horiz_adv_x.get(character, glyph.width)
+        else:
+            position.x += glyph.width
+        
 
         return node
 
