@@ -222,12 +222,9 @@ class Font(object):
 
         node = deepcopy(glyph.node)
 
-        inkex.errormsg(_(self._min_x)
-        sys.exit(1)
-
         if last_character is not None:
             if version == "2":
-                position.x += self._min_x - self.kerning_pairs_px.get(last_character + character, 0)  
+                position.x += glyph._min_x - self.kerning_pairs_px.get(last_character + character, 0)  
             else:
                 position.x += self.letter_spacing + self.kerning_pairs.get(last_character + character, 0) * PIXELS_PER_MM
         
