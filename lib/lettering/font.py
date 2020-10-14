@@ -1,15 +1,4 @@
 # -*- coding: UTF-8 -*-
-
-import gettext
-
-try:
-    from plot_utils_import import from_dependency_import
-    inkex = from_dependency_import('ink_extensions.inkex')
-    serial = from_dependency_import('serial')
-except:
-    import inkex
-    import serial
-
 from copy import deepcopy
 import json
 import os
