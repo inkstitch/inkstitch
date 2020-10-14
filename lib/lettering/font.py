@@ -114,7 +114,7 @@ class Font(object):
     max_scale = font_metadata('max_scale', 1.0)
 
     # Version 2 : Use values ​​from SVG Font <glyph horiz-adv-x = "..." ... /> and <hkern k = ".." .... />
-    version = localized_font_metadata('version', '')
+    version = font_metadata('version', '')
     kerning_pairs_px = font_metadata('kerning_pairs_px', {})
     horiz_adv_x = font_metadata('horiz_adv_x', {})
 
