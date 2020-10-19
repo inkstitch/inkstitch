@@ -211,13 +211,22 @@ class Font(object):
         """
 
         node = deepcopy(glyph.node)
-        position.x += self.letter_spacing + self.kerning_pairs.get(last_character + character, 0) * PIXELS_PER_MM
+        #glyph._min_x - self.kerning_pairs_px.get(last_character + character, 0)  
+        if last_character is not None:
+            if version == "2":
+                position.x += self.letter_spacing + self.kerning_pairs.get(last_character + character, 0) * PIXELS_PER_MM
+            else:
+                position.x += self.letter_spacing + self.kerning_pairs.get(last_character + character, 0) * PIXELS_PER_MM
         
         
             
         transform = "translate(%s, %s)" % position.as_tuple()
         node.set('transform', transform)
-        position.x += glyph.width
+        #position.x += self.horiz_adv_x.get(character, glyph.width)
+        if version == "2":
+            position.x += glyph.width
+        else:
+            position.x += glyph.width
         
 
         return node
