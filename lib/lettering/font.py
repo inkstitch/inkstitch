@@ -113,10 +113,11 @@ class Font(object):
     min_scale = font_metadata('min_scale', 1.0)
     max_scale = font_metadata('max_scale', 1.0)
 
-    # Version 2 : Use values ​​from SVG Font <glyph horiz-adv-x = "..." ... /> and <hkern k = ".." .... />
-    version = font_metadata('version', '')
-    kerning_pairs_px = font_metadata('kerning_pairs_px', {})
-    horiz_adv_x = font_metadata('horiz_adv_x', {})
+    # Version 2 : For use values ​​from SVG Font, exemple <font horiz-adv-x="45" ...  <glyph .... horiz-adv-x="49" glyph-name="A" /> ... <hkern... k="3"g1="A" g2="B" /> .... />
+    version = font_metadata('version', '') # Exemple font.json : "version":"2"
+    kerning_pairs_px = font_metadata('kerning_pairs_px', {}) #Exemple font.json : "kerning_pairs_px": {"AB":3},
+    horiz_adv_x = font_metadata('horiz_adv_x', {}) # Exemple font.json : "horiz_adv_x": {"A":49},
+    horiz_adv_x_default = font_metadata('horiz_adv_x_default', 0) # Exemple font.json : "horiz_adv_x_default" : 45,
 
     @property
     def id(self):
@@ -221,7 +222,7 @@ class Font(object):
         transform = "translate(%s, %s)" % position.as_tuple()
         node.set('transform', transform)
         if self.version == "2":
-            position.x += self.horiz_adv_x.get(character, glyph.width)
+            position.x += self.horiz_adv_x.get(character, self.horiz_adv_x_default) - glyph._min_x
         else:
             position.x += glyph.width
         
