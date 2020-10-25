@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2020-10-22 00:49+0000\n"
-"PO-Revision-Date: 2020-10-22 00:50\n"
+"PO-Revision-Date: 2020-10-25 00:53\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -907,7 +907,7 @@ msgstr "Toutes les formes sélectionnées sont valables ! "
 
 #: lib/extensions/troubleshoot.py:44
 msgid "If you are still having trouble with a shape not being embroidered, check if it is in a layer with an ignore command."
-msgstr "Si vous avez toujours des difficultés avec une forme qui n'est pas brodée, vérifiez si elle se trouve dans un calque avec une commande ignorer."
+msgstr "Si vous avez toujours des difficultés avec une forme qui n'est pas brodée, vérifiez si elle se trouve dans un calque avec une commande «ignorer»."
 
 #: lib/extensions/troubleshoot.py:70
 msgid "Invalid Pointer"
