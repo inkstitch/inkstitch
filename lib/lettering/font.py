@@ -118,7 +118,8 @@ class Font(object):
     kerning_pairs_px = font_metadata('kerning_pairs_px', {}) #Exemple font.json : "kerning_pairs_px": {"AB":3},
     horiz_adv_x = font_metadata('horiz_adv_x', {}) # Exemple font.json : "horiz_adv_x": {"A":49},
     horiz_adv_x_default = font_metadata('horiz_adv_x_default', 0) # Exemple font.json : "horiz_adv_x_default" : 45,
-    word_spacing = font_metadata('horiz_adv_x_space', 0) # Define by <glyph glyph-name="space" unicode=" " horiz-adv-x="22" />, Exemple font.json : "horiz_adv_x_space":22,
+    if version == "2":
+        word_spacing = font_metadata('horiz_adv_x_space', 0) # Define by <glyph glyph-name="space" unicode=" " horiz-adv-x="22" />, Exemple font.json : "horiz_adv_x_space":22,
 
     @property
     def id(self):
