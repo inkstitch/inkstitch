@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2020-10-22 00:49+0000\n"
-"PO-Revision-Date: 2020-10-25 00:53\n"
+"PO-Revision-Date: 2020-10-29 00:58\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -1853,7 +1853,7 @@ msgstr "Convertir fichier %(file_extension)s en chemins de points manuels Ink/St
 
 #: templates/install.inx:3
 msgid "Install thread color palettes for Inkscape"
-msgstr ""
+msgstr "Installer des palettes de couleurs de fils à broder pour Inkscape"
 
 #: templates/layer_commands.inx:3
 msgid "Add Layer Commands"
@@ -2100,7 +2100,7 @@ msgstr "Fonction"
 
 #: electron/src/renderer/components/InstallPalettes.vue:9
 msgid "Ink/Stitch can install palettes for Inkscape matching the thread colors from popular machine embroidery thread manufacturers."
-msgstr ""
+msgstr "Ink/Stitch peut installer des palettes pour Inkscape correspondant aux couleurs des fils à broder des fabricants les plus populaires."
 
 #: electron/src/renderer/components/InstallPalettes.vue:48
 msgid "Inkscape add-on installation failed"
@@ -2108,7 +2108,7 @@ msgstr "échec d'installation de l'extension Inkscape"
 
 #: electron/src/renderer/components/InstallPalettes.vue:31
 msgid "Inkscape palettes have been installed. Please restart Inkscape to load the new palettes."
-msgstr ""
+msgstr "Des palettes Inkscape ont été installées. Veuillez redémarrer Inkscape pour charger les nouvelles ."
 
 #: electron/src/renderer/components/InstallPalettes.vue:17
 msgid "Install"
@@ -2116,7 +2116,7 @@ msgstr "Installer"
 
 #: electron/src/renderer/components/InstallPalettes.vue:4
 msgid "Install Palettes"
-msgstr ""
+msgstr "Installer palettes"
 
 #: electron/src/renderer/components/InstallPalettes.vue:26
 msgid "Installation Completed"
@@ -2219,5 +2219,5 @@ msgstr "arrêts"
 
 #: electron/src/renderer/components/InstallPalettes.vue:55
 msgid "Try again"
-msgstr ""
+msgstr "Essayer à nouveau"
 
