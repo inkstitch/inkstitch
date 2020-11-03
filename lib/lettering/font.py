@@ -216,7 +216,7 @@ class Font(object):
         node = deepcopy(glyph.node)
         if last_character is not None:
             if self.version == "2":
-                position.x += glyph._min_x - self.kerning_pairs_px.get(last_character + character, 0)  
+                position.x += glyph.min_x - self.kerning_pairs_px.get(last_character + character, 0)
             else: 
                 position.x += self.letter_spacing + self.kerning_pairs.get(last_character + character, 0) * PIXELS_PER_MM
         
@@ -224,7 +224,7 @@ class Font(object):
         transform = "translate(%s, %s)" % position.as_tuple()
         node.set('transform', transform)
         if self.version == "2":
-            position.x += self.horiz_adv_x.get(character, self.horiz_adv_x_default) - glyph._min_x
+            position.x += self.horiz_adv_x.get(character, self.horiz_adv_x_default) - glyph.min_x
         else:
             position.x += glyph.width
         
