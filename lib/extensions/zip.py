@@ -3,22 +3,24 @@ import sys
 import tempfile
 from zipfile import ZipFile
 
-import inkex
+from inkex import Boolean
+from lxml import etree
+
 import pyembroidery
 
 from ..i18n import _
 from ..output import write_embroidery_file
 from ..stitch_plan import patches_to_stitch_plan
 from ..svg import PIXELS_PER_MM
-from .base import InkstitchExtension
 from ..threads import ThreadCatalog
+from .base import InkstitchExtension
 
 
 class Zip(InkstitchExtension):
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self)
-        self.OptionParser.add_option("-c", "--collapse_len_mm",
-                                     action="store", type="float",
+        self.arg_parser.add_argument("-c", "--collapse_len_mm",
+                                     action="store", type=float,
                                      dest="collapse_length_mm", default=3.0,
                                      help="max collapse length (mm)")
 
@@ -27,10 +29,10 @@ class Zip(InkstitchExtension):
         for format in pyembroidery.supported_formats():
             if 'writer' in format and format['category'] == 'embroidery':
                 extension = format['extension']
-                self.OptionParser.add_option('--format-%s' % extension, type="inkbool", dest=extension)
+                self.arg_parser.add_argument('--format-%s' % extension, type=Boolean, dest=extension)
                 self.formats.append(extension)
-        self.OptionParser.add_option('--format-svg', type="inkbool", dest='svg')
-        self.OptionParser.add_option('--format-threadlist', type="inkbool", dest='threadlist')
+        self.arg_parser.add_argument('--format-svg', type=Boolean, dest='svg')
+        self.arg_parser.add_argument('--format-threadlist', type=Boolean, dest='threadlist')
         self.formats.append('svg')
         self.formats.append('threadlist')
 
@@ -51,7 +53,7 @@ class Zip(InkstitchExtension):
                 output_file = os.path.join(path, "%s.%s" % (base_file_name, format))
                 if format == 'svg':
                     output = open(output_file, 'w')
-                    output.write(inkex.etree.tostring(self.document.getroot()))
+                    output.write(etree.tostring(self.document.getroot(), encoding=str))
                     output.close()
                 if format == 'threadlist':
                     output_file = os.path.join(path, "%s_%s.txt" % (base_file_name, _("threadlist")))
@@ -76,8 +78,8 @@ class Zip(InkstitchExtension):
 
         # inkscape will read the file contents from stdout and copy
         # to the destination file that the user chose
-        with open(temp_file.name) as output_file:
-            sys.stdout.write(output_file.read())
+        with open(temp_file.name, 'rb') as output_file:
+            sys.stdout.buffer.write(output_file.read())
 
         os.remove(temp_file.name)
         for file in files:

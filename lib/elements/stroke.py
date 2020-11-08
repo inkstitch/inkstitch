@@ -134,9 +134,9 @@ class Stroke(EmbroideryElement):
             global warned_about_legacy_running_stitch
             if not warned_about_legacy_running_stitch:
                 warned_about_legacy_running_stitch = True
-                print >> sys.stderr, _("Legacy running stitch setting detected!\n\nIt looks like you're using a stroke " +
-                                       "smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set " +
-                                       "your stroke to be dashed to indicate running stitch.  Any kind of dash will work.")
+                print(_("Legacy running stitch setting detected!\n\nIt looks like you're using a stroke " +
+                        "smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set " +
+                        "your stroke to be dashed to indicate running stitch.  Any kind of dash will work."), file=sys.stderr)
 
             # still allow the deprecated setting to work in order to support old files
             return True
@@ -157,7 +157,7 @@ class Stroke(EmbroideryElement):
 
         offset = stroke_width / 2.0
 
-        for i in xrange(len(patch) - 1):
+        for i in range(len(patch) - 1):
             start = patch.stitches[i]
             end = patch.stitches[i + 1]
             segment_direction = (end - start).unit()
@@ -174,7 +174,7 @@ class Stroke(EmbroideryElement):
         repeated_path = []
 
         # go back and forth along the path as specified by self.repeats
-        for i in xrange(self.repeats):
+        for i in range(self.repeats):
             if i % 2 == 1:
                 # reverse every other pass
                 this_path = path[::-1]

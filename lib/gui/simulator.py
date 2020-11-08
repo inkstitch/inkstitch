@@ -1,20 +1,15 @@
-from itertools import izip
 import sys
-from threading import Thread, Event
 import time
 import traceback
+from threading import Event, Thread
 
 import wx
 from wx.lib.intctrl import IntCtrl
 
 from ..i18n import _
-from ..stitch_plan import stitch_plan_from_file, patches_to_stitch_plan
-
+from ..stitch_plan import patches_to_stitch_plan, stitch_plan_from_file
 from ..svg import PIXELS_PER_MM
-
-
 from .dialogs import info_dialog
-
 
 # L10N command label at bottom of simulator window
 COMMAND_NAMES = [_("STITCH"), _("JUMP"), _("TRIM"), _("STOP"), _("COLOR CHANGE")]
@@ -132,7 +127,7 @@ class ControlPanel(wx.Panel):
         self.accel_entries = []
 
         for shortcut_key in shortcut_keys:
-            eventId = wx.NewId()
+            eventId = wx.NewIdRef()
             self.accel_entries.append((shortcut_key[0], shortcut_key[1], eventId))
             self.Bind(wx.EVT_MENU, shortcut_key[2], id=eventId)
 
@@ -378,7 +373,7 @@ class DrawingPanel(wx.Panel):
         last_stitch = None
 
         start = time.time()
-        for pen, stitches in izip(self.pens, self.stitch_blocks):
+        for pen, stitches in zip(self.pens, self.stitch_blocks):
             canvas.SetPen(pen)
             if stitch + len(stitches) < self.current_stitch:
                 stitch += len(stitches)
@@ -504,7 +499,7 @@ class DrawingPanel(wx.Panel):
         # We draw the thread with a thickness of 0.1mm.  Real thread has a
         # thickness of ~0.4mm, but if we did that, we wouldn't be able to
         # see the individual stitches.
-        return wx.Pen(color.visible_on_white.rgb, width=int(0.1 * PIXELS_PER_MM * self.PIXEL_DENSITY))
+        return wx.Pen(list(map(int, color.visible_on_white.rgb)), int(0.1 * PIXELS_PER_MM * self.PIXEL_DENSITY))
 
     def parse_stitch_plan(self, stitch_plan):
         self.pens = []

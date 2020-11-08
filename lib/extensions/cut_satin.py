@@ -1,9 +1,9 @@
 import inkex
 
-from .base import InkstitchExtension
-from ..i18n import _
 from ..elements import SatinColumn
+from ..i18n import _
 from ..svg import get_correction_transform
+from .base import InkstitchExtension
 
 
 class CutSatin(InkstitchExtension):
@@ -11,7 +11,7 @@ class CutSatin(InkstitchExtension):
         if not self.get_elements():
             return
 
-        if not self.selected:
+        if not self.svg.selected:
             inkex.errormsg(_("Please select one or more satin columns to cut."))
             return
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <name>{% trans %}Lettering{% endtrans %}</name>
-    <id>org.inkstitch.lettering.{{ locale }}</id>
-    <param name="extension" type="string" gui-hidden="true">lettering</param>
-    <effect>
+    <name>{% trans %}Params{% endtrans %}</name>
+    <id>org.inkstitch.params.{{ locale }}</id>
+    <param name="extension" type="string" gui-hidden="true">params</param>
+    <effect implements-custom-gui="true">
         <object-type>all</object-type>
         <effects-menu>
             <submenu name="Ink/Stitch" />

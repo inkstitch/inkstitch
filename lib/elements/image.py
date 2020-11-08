@@ -1,7 +1,5 @@
-from simpletransform import applyTransformToPoint
-
 from ..i18n import _
-from ..svg import get_node_transform
+from ..svg.path import get_node_transform
 from .element import EmbroideryElement
 from .validation import ObjectTypeWarning
 
@@ -19,13 +17,9 @@ class ImageTypeWarning(ObjectTypeWarning):
 class ImageObject(EmbroideryElement):
 
     def center(self):
-        point = [float(self.node.get('x', 0)), float(self.node.get('y', 0))]
-        point = [(point[0]+(float(self.node.get('width', 0))/2)), (point[1]+(float(self.node.get('height', 0))/2))]
-
-        transform = get_node_transform(self.node)
-        applyTransformToPoint(transform, point)
-
-        return point
+        transform = get_node_transform(self.node.getparent())
+        center = self.node.bounding_box(transform).center
+        return center
 
     def validation_warnings(self):
         yield ImageTypeWarning(self.center())

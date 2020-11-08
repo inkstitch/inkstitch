@@ -1,21 +1,19 @@
 import json
 import os
 import re
-from collections import MutableMapping
-from copy import deepcopy
-
-from stringcase import snakecase
+from collections.abc import MutableMapping
 
 import inkex
+from lxml import etree
+from stringcase import snakecase
 
 from ..commands import is_command, layer_commands
 from ..elements import EmbroideryElement, nodes_to_elements
-from ..elements.clone import is_clone, is_embroiderable_clone
+from ..elements.clone import is_clone
 from ..i18n import _
 from ..svg import generate_unique_id
 from ..svg.tags import (CONNECTOR_TYPE, EMBROIDERABLE_TAGS, INKSCAPE_GROUPMODE,
-                        NOT_EMBROIDERABLE_TAGS, SVG_DEFS_TAG, SVG_GROUP_TAG,
-                        SVG_PATH_TAG)
+                        NOT_EMBROIDERABLE_TAGS, SVG_DEFS_TAG, SVG_GROUP_TAG)
 
 SVG_METADATA_TAG = inkex.addNS("metadata", "svg")
 
@@ -71,7 +69,7 @@ class InkStitchMetadata(MutableMapping):
         tag = inkex.addNS(name, "inkstitch")
         item = self.metadata.find(tag)
         if item is None and create:
-            item = inkex.etree.SubElement(self.metadata, tag)
+            item = etree.SubElement(self.metadata, tag)
 
         return item
 
@@ -117,7 +115,7 @@ class InkstitchExtension(inkex.Effect):
     def ensure_current_layer(self):
         # if no layer is selected, inkex defaults to the root, which isn't
         # particularly useful
-        if self.current_layer is self.document.getroot():
+        if self.svg.get_current_layer() is self.document.getroot():
             try:
                 self.current_layer = self.document.xpath(".//svg:g[@inkscape:groupmode='layer']", namespaces=inkex.NSS)[0]
             except IndexError:
@@ -125,7 +123,7 @@ class InkstitchExtension(inkex.Effect):
                 pass
 
     def no_elements_error(self):
-        if self.selected:
+        if self.svg.selected:
             # l10n This was previously: "No embroiderable paths selected."
             inkex.errormsg(_("Ink/Stitch doesn't know how to work with any of the objects you've selected.") + "\n")
         else:
@@ -154,8 +152,8 @@ class InkstitchExtension(inkex.Effect):
         if is_command(node) or node.get(CONNECTOR_TYPE):
             return[]
 
-        if self.selected:
-            if node.get("id") in self.selected:
+        if self.svg.selected:
+            if node.get("id") in self.svg.selected:
                 selected = True
         else:
             # if the user didn't select anything that means we process everything
@@ -165,7 +163,7 @@ class InkstitchExtension(inkex.Effect):
             nodes.extend(self.descendants(child, selected, troubleshoot))
 
         if selected:
-            if (node.tag in EMBROIDERABLE_TAGS or is_embroiderable_clone(node)) and not (node.tag == SVG_PATH_TAG and not node.get('d', '')):
+            if getattr(node, "get_path", None):
                 nodes.append(node)
             elif troubleshoot and (node.tag in NOT_EMBROIDERABLE_TAGS or node.tag in EMBROIDERABLE_TAGS or is_clone(node)):
                 nodes.append(node)
@@ -206,24 +204,3 @@ class InkstitchExtension(inkex.Effect):
     def uniqueId(self, prefix, make_new_id=True):
         """Override inkex.Effect.uniqueId with a nicer naming scheme."""
         return generate_unique_id(self.document, prefix)
-
-    def parse(self):
-        """Override inkex.Effect.parse to add Ink/Stitch xml namespace"""
-
-        # SVG parsers don't actually look for anything at this URL.  They just
-        # care that it's unique.  That defines a "namespace" of element and
-        # attribute names to disambiguate conflicts with element and
-        # attribute names other XML namespaces.
-
-        # call the superclass's method first
-        inkex.Effect.parse(self)
-
-        # Add the inkstitch namespace to the SVG.  The inkstitch namespace is
-        # added to inkex.NSS in ../svg/tags.py at import time.
-
-        # The below is the only way I could find to add a namespace to an
-        # existing element tree at the top without getting ugly prefixes like "ns0".
-        inkex.etree.cleanup_namespaces(self.document,
-                                       top_nsmap=inkex.NSS,
-                                       keep_ns_prefixes=inkex.NSS.keys())
-        self.original_document = deepcopy(self.document)

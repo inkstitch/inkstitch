@@ -1,14 +1,13 @@
-# -*- coding: UTF-8 -*-
-
 import json
 import os
 import sys
-from base64 import b64decode, b64encode
 
 import appdirs
 import inkex
 import wx
 import wx.adv
+
+from lxml import etree
 
 from ..elements import nodes_to_elements
 from ..gui import PresetsPanel, SimulatorPreview, info_dialog
@@ -80,7 +79,7 @@ class LetteringFrame(wx.Frame):
         """Load the settings saved into the SVG group element"""
 
         self.settings = DotDict({
-            "text": u"",
+            "text": "",
             "back_and_forth": False,
             "font": None,
             "scale": 100
@@ -88,7 +87,7 @@ class LetteringFrame(wx.Frame):
 
         try:
             if INKSTITCH_LETTERING in self.group.attrib:
-                self.settings.update(json.loads(b64decode(self.group.get(INKSTITCH_LETTERING))))
+                self.settings.update(json.loads(self.group.get(INKSTITCH_LETTERING)))
                 return
         except (TypeError, ValueError):
             pass
@@ -103,16 +102,7 @@ class LetteringFrame(wx.Frame):
 
     def save_settings(self):
         """Save the settings into the SVG group element."""
-
-        # We base64 encode the string before storing it in an XML attribute.
-        # In theory, lxml should properly html-encode the string, using HTML
-        # entities like &#10; as necessary.  However, we've found that Inkscape
-        # incorrectly interpolates the HTML entities upon reading the
-        # extension's output, rather than leaving them as is.
-        #
-        # Details:
-        #   https://bugs.launchpad.net/inkscape/+bug/1804346
-        self.group.set(INKSTITCH_LETTERING, b64encode(json.dumps(self.settings)))
+        self.group.set(INKSTITCH_LETTERING, json.dumps(self.settings))
 
     def update_font_list(self):
         font_paths = {
@@ -165,13 +155,13 @@ class LetteringFrame(wx.Frame):
                 self.font_chooser.Append(font.name)
 
     def get_font_names(self):
-        font_names = [font.name for font in self.fonts.itervalues()]
+        font_names = [font.name for font in self.fonts.values()]
         font_names.sort()
 
         return font_names
 
     def get_font_descriptions(self):
-        return {font.name: font.description for font in self.fonts.itervalues()}
+        return {font.name: font.description for font in self.fonts.values()}
 
     def set_initial_font(self, font_id):
         if font_id:
@@ -191,7 +181,7 @@ class LetteringFrame(wx.Frame):
         try:
             return self.fonts_by_id[self.DEFAULT_FONT]
         except KeyError:
-            return self.fonts.values()[0]
+            return list(self.fonts.values())[0]
 
     def on_change(self, attribute, event):
         self.settings[attribute] = event.GetEventObject().GetValue()
@@ -241,7 +231,7 @@ class LetteringFrame(wx.Frame):
         if self.settings.scale == 100:
             destination_group = self.group
         else:
-            destination_group = inkex.etree.SubElement(self.group, SVG_GROUP_TAG, {
+            destination_group = etree.SubElement(self.group, SVG_GROUP_TAG, {
                 # L10N The user has chosen to scale the text by some percentage
                 # (50%, 200%, etc).  If you need to use the percentage symbol,
                 # make sure to double it (%%).
@@ -369,10 +359,10 @@ class Lettering(CommandsExtension):
         self.cancelled = True
 
     def get_or_create_group(self):
-        if self.selected:
+        if self.svg.selected:
             groups = set()
 
-            for node in self.selected.itervalues():
+            for node in self.svg.selected.values():
                 if node.tag == SVG_GROUP_TAG and INKSTITCH_LETTERING in node.attrib:
                     groups.add(node)
 
@@ -391,9 +381,9 @@ class Lettering(CommandsExtension):
                 return list(groups)[0]
         else:
             self.ensure_current_layer()
-            return inkex.etree.SubElement(self.current_layer, SVG_GROUP_TAG, {
+            return etree.SubElement(self.svg.get_current_layer(), SVG_GROUP_TAG, {
                 INKSCAPE_LABEL: _("Ink/Stitch Lettering"),
-                "transform": get_correction_transform(self.current_layer, child=True)
+                "transform": get_correction_transform(self.svg.get_current_layer(), child=True)
             })
 
     def effect(self):
@@ -405,7 +395,7 @@ class Lettering(CommandsExtension):
         display = wx.Display(current_screen)
         display_size = display.GetClientArea()
         frame_size = frame.GetSize()
-        frame.SetPosition((display_size[0], display_size[3] / 2 - frame_size[1] / 2))
+        frame.SetPosition((int(display_size[0]), int(display_size[3] / 2 - frame_size[1] / 2)))
 
         frame.Show()
         app.MainLoop()

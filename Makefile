@@ -1,5 +1,5 @@
 
-dist: locales inx
+dist: version locales inx
 	bash bin/build-python
 	bash bin/build-electron
 	bash bin/build-distribution-archives
@@ -8,7 +8,7 @@ distclean:
 	rm -rf build dist inx locales *.spec *.tar.gz *.zip electron/node_modules electron/dist
 
 .PHONY: inx
-inx: locales
+inx: version locales
 	mkdir -p inx
 	python bin/generate-inx-files; \
 
@@ -48,6 +48,10 @@ locales:
 	else \
 		mkdir -p locales; \
 	fi
+
+.PHONY: version
+version:
+	bash bin/generate-version-file
 
 .PHONY: style
 style:

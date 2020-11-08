@@ -1,8 +1,9 @@
 import os
-import pyembroidery
 
-from inkex import etree
 import inkex
+from lxml import etree
+
+import pyembroidery
 
 from ..stitch_plan import StitchPlan
 from ..svg import PIXELS_PER_MM, render_stitch_plan
@@ -10,7 +11,7 @@ from ..svg.tags import INKSCAPE_LABEL
 
 
 class Input(object):
-    def affect(self, args):
+    def run(self, args):
         embroidery_file = args[0]
         pattern = pyembroidery.read(embroidery_file)
 
@@ -47,11 +48,11 @@ class Input(object):
 
         # rename the Stitch Plan layer so that it doesn't get overwritten by Embroider
         layer = svg.find(".//*[@id='__inkstitch_stitch_plan__']")
-        layer.set(INKSCAPE_LABEL, os.path.basename(embroidery_file.decode("UTF-8")))
+        layer.set(INKSCAPE_LABEL, os.path.basename(embroidery_file))
         layer.attrib.pop('id')
 
         # Shift the design so that its origin is at the center of the canvas
         # Note: this is NOT the same as centering the design in the canvas!
         layer.set('transform', 'translate(%s,%s)' % (extents[0], extents[1]))
 
-        print etree.tostring(svg)
+        print(etree.tostring(svg, encoding=str))

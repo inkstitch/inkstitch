@@ -11,7 +11,7 @@ def pyembroidery_output_formats():
 
 def generate_output_inx_files():
     env = build_environment()
-    template = env.get_template('output.inx')
+    template = env.get_template('output.xml')
 
     for format, description in pyembroidery_output_formats():
         name = "output_%s" % format.upper()

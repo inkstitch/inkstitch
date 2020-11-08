@@ -1,4 +1,5 @@
-from inkex import NSS, etree
+from inkex import NSS
+from lxml import etree
 
 from ..utils import cache
 
