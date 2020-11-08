@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>{% trans %}Generate JSON{% endtrans %}</name>
+    <id>org.inkstitch.lettering_generate_json.{{ locale }}</id>
+    <param name="extension" type="string" gui-hidden="true">lettering_generate_json</param>
+    <effect needs-live-preview="false">
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu name="Ink/Stitch">
+                <submenu name="{% trans %}Font Creation Tools{% endtrans %}" />
+            </submenu>
+        </effects-menu>
+    </effect>
+    <param name="header" type="description" appearance="header" indent="1" >
+        Generates font.json which can be used by the lettering tool.
+    </param>
+    <spacer />
+    <separator indent="1"/>
+    <param type="string" name="font-name" gui-text="Name" indent="1" />
+    <param type="string" name="font-description" gui-text="Beschreibung" indent="1" />
+    <separator indent="1"/>
+        <spacer />
+    <param name="file-description" type="description" indent="1" >
+        Insert a font SVG file with kerning information.
+    </param>
+    <param type="path" name="font-file" gui-text="Font File" indent="1" mode="file" filetypes="svg"/>
+    <spacer />
+    <separator indent="1"/>
+    <param type="bool" name="auto-satin" gui-text="AutoSatin" indent="1">true</param>
+    <param type="bool" name="reversible" gui-text="Reversible" indent="1">true</param>
+    <separator indent="1"/>
+    <param type="string" name="default-glyph" gui-text="Default Glyph" indent="1">&#65533;</param>
+    <separator indent="1"/>
+    <spacer />
+    <param name="min-scale" type="float" precision="1" min="0.1" max="1" gui-text="Min Scale" indent="1">1</param>
+    <param name="max-scale" type="float" precision="1" min="1" max="10" gui-text="Max Scale" indent="1">1</param>
+    <separator indent="1"/>
+    <param name="leading" type="float" precision="1" min="0" max="100" gui-text="Leading" indent="1">5</param>
+     <spacer />
+    <separator indent="1"/>
+    <script>
+        {{ command_tag | safe }}
+    </script>
+</inkscape-extension>

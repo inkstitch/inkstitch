@@ -22,6 +22,8 @@ from .reorder import Reorder
 from .simulator import Simulator
 from .stitch_plan_preview import StitchPlanPreview
 from .zip import Zip
+from .lettering_generate_json import LetteringGenerateJson
+from .lettering_remove_kerning import LetteringRemoveKerning
 
 __all__ = extensions = [Embroider,
                         StitchPlanPreview,
@@ -39,6 +41,8 @@ __all__ = extensions = [Embroider,
                         CutSatin,
                         AutoSatin,
                         Lettering,
+                        LetteringGenerateJson,
+                        LetteringRemoveKerning,
                         Troubleshoot,
                         RemoveEmbroiderySettings,
                         Cleanup,
