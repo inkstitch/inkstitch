@@ -14,7 +14,7 @@ class AutoSatin(CommandsExtension):
     def __init__(self, *args, **kwargs):
         CommandsExtension.__init__(self, *args, **kwargs)
 
-        self.OptionParser.add_option("-p", "--preserve_order", dest="preserve_order", type="inkbool", default=False)
+        self.arg_parser.add_argument("-p", "--preserve_order", dest="preserve_order", type=inkex.Boolean, default=False)
 
     def get_starting_point(self):
         return self.get_point("satin_start")
@@ -39,7 +39,7 @@ class AutoSatin(CommandsExtension):
         if not self.get_elements():
             return
 
-        if not self.selected:
+        if not self.svg.selected:
             # L10N auto-route satin columns extension
             inkex.errormsg(_("Please select one or more satin columns."))
             return False

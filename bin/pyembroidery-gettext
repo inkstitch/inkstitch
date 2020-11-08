@@ -6,5 +6,5 @@ import pyembroidery
 # generate fake python code containing the descriptions of pyembroidery formats
 # as gettext calls so that pybabel will extract them into messages.po
 for format in pyembroidery.supported_formats():
-    print "# L10N description for pyembroidery file format: %s" % format['extension']
-    print "_(%s)" % repr(format['description'])
+    print("# L10N description for pyembroidery file format: %s" % format['extension'])
+    print("_(%s)" % repr(format['description']))

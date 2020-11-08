@@ -27,7 +27,8 @@ def _string_to_floats(string):
     return [float(num) for num in floats]
 
 
-def get_origin(svg, (minx, miny, maxx, maxy)):
+def get_origin(svg, xxx_todo_changeme):
+    (minx, miny, maxx, maxy) = xxx_todo_changeme
     origin_command = global_command(svg, "origin")
 
     if origin_command:
@@ -91,5 +92,5 @@ def write_embroidery_file(file_path, stitch_plan, svg, settings={}):
     except IOError as e:
         # L10N low-level file error.  %(error)s is (hopefully?) translated by
         # the user's system automatically.
-        print >> sys.stderr, _("Error writing to %(path)s: %(error)s") % dict(path=file_path, error=e.strerror)
+        print(_("Error writing to %(path)s: %(error)s") % dict(path=file_path, error=e.strerror), file=sys.stderr)
         sys.exit(1)

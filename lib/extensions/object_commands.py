@@ -12,7 +12,7 @@ class ObjectCommands(CommandsExtension):
         if not self.get_elements():
             return
 
-        if not self.selected:
+        if not self.svg.selected:
             inkex.errormsg(_("Please select one or more objects to which to attach commands."))
             return
 

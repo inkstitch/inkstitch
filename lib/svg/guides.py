@@ -1,7 +1,7 @@
-import simpletransform
+from inkex import transforms
 
-from ..utils import string_to_floats, Point, cache
-from .tags import SODIPODI_NAMEDVIEW, SODIPODI_GUIDE, INKSCAPE_LABEL
+from ..utils import Point, cache, string_to_floats
+from .tags import INKSCAPE_LABEL, SODIPODI_GUIDE, SODIPODI_NAMEDVIEW
 from .units import get_doc_size, get_viewbox_transform
 
 
@@ -19,7 +19,7 @@ class InkscapeGuide(object):
 
         # convert the size from viewbox-relative to real-world pixels
         viewbox_transform = get_viewbox_transform(self.svg)
-        simpletransform.applyTransformToPoint(simpletransform.invertTransform(viewbox_transform), doc_size)
+        viewbox_transform = transforms.Transform(-transforms.Transform(viewbox_transform)).apply_to_point(doc_size)
 
         self.position = Point(*string_to_floats(self.node.get('position')))
 

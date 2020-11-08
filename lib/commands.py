@@ -3,11 +3,9 @@ import sys
 from copy import deepcopy
 from random import random
 
-from shapely import geometry as shgeo
-
-import cubicsuperpath
 import inkex
-import simpletransform
+from lxml import etree
+from shapely import geometry as shgeo
 
 from .i18n import N_, _
 from .svg import (apply_transforms, generate_unique_id,
@@ -104,7 +102,7 @@ class Command(BaseCommand):
         self.parse_command()
 
     def parse_connector_path(self):
-        path = cubicsuperpath.parsePath(self.connector.get('d'))
+        path = inkex.paths.Path(self.connector.get('d')).to_superpath()
         return apply_transforms(path, self.connector)
 
     def parse_command(self):
@@ -153,7 +151,7 @@ class StandaloneCommand(BaseCommand):
     def point(self):
         pos = [float(self.node.get("x", 0)), float(self.node.get("y", 0))]
         transform = get_node_transform(self.node)
-        simpletransform.applyTransformToPoint(transform, pos)
+        pos = inkex.transforms.Transform(transform).apply_to_point(pos)
 
         return Point(*pos)
 
@@ -209,14 +207,14 @@ def global_command(svg, command):
     if len(commands) == 1:
         return commands[0]
     elif len(commands) > 1:
-        print >> sys.stderr, _("Error: there is more than one %(command)s command in the document, but there can only be one.  "
-                               "Please remove all but one.") % dict(command=command)
+        print(_("Error: there is more than one %(command)s command in the document, but there can only be one.  "
+                "Please remove all but one.") % dict(command=command), file=sys.stderr)
 
         # L10N This is a continuation of the previous error message, letting the user know
         # what command we're talking about since we don't normally expose the actual
         # command name to them.  Contents of %(description)s are in a separate translation
         # string.
-        print >> sys.stderr, _("%(command)s: %(description)s") % dict(command=command, description=_(get_command_description(command)))
+        print(_("%(command)s: %(description)s") % dict(command=command, description=_(get_command_description(command))), file=sys.stderr)
 
         sys.exit(1)
     else:
@@ -256,7 +254,7 @@ def symbols_path():
 @cache
 def symbols_svg():
     with open(symbols_path()) as symbols_file:
-        return inkex.etree.parse(symbols_file)
+        return etree.parse(symbols_file)
 
 
 @cache
@@ -269,7 +267,7 @@ def get_defs(document):
     defs = document.find(SVG_DEFS_TAG)
 
     if defs is None:
-        defs = inkex.etree.SubElement(document, SVG_DEFS_TAG)
+        defs = etree.SubElement(document, SVG_DEFS_TAG)
 
     return defs
 
@@ -284,7 +282,7 @@ def ensure_symbol(document, command):
 
 
 def add_group(document, node, command):
-    return inkex.etree.SubElement(
+    return etree.SubElement(
         node.getparent(),
         SVG_GROUP_TAG,
         {
@@ -304,35 +302,35 @@ def add_connector(document, symbol, element):
     if element.node.get('id') is None:
         element.node.set('id', generate_unique_id(document, "object"))
 
-    path = inkex.etree.Element(SVG_PATH_TAG,
-                               {
-                                   "id": generate_unique_id(document, "command_connector"),
-                                   "d": "M %s,%s %s,%s" % (start_pos[0], start_pos[1], end_pos.x, end_pos.y),
-                                   "style": "stroke:#000000;stroke-width:1px;stroke-opacity:0.5;fill:none;",
-                                   CONNECTION_START: "#%s" % symbol.get('id'),
-                                   CONNECTION_END: "#%s" % element.node.get('id'),
-                                   CONNECTOR_TYPE: "polyline",
+    path = etree.Element(SVG_PATH_TAG,
+                         {
+                          "id": generate_unique_id(document, "command_connector"),
+                          "d": "M %s,%s %s,%s" % (start_pos[0], start_pos[1], end_pos.x, end_pos.y),
+                          "style": "stroke:#000000;stroke-width:1px;stroke-opacity:0.5;fill:none;",
+                          CONNECTION_START: "#%s" % symbol.get('id'),
+                          CONNECTION_END: "#%s" % element.node.get('id'),
+                          CONNECTOR_TYPE: "polyline",
 
-                                   # l10n: the name of the line that connects a command to the object it applies to
-                                   INKSCAPE_LABEL: _("connector")
-                               })
+                          # l10n: the name of the line that connects a command to the object it applies to
+                          INKSCAPE_LABEL: _("connector")
+                         })
 
     symbol.getparent().insert(0, path)
 
 
 def add_symbol(document, group, command, pos):
-    return inkex.etree.SubElement(group, SVG_USE_TAG,
-                                  {
-                                      "id": generate_unique_id(document, "command_use"),
-                                      XLINK_HREF: "#inkstitch_%s" % command,
-                                      "height": "100%",
-                                      "width": "100%",
-                                      "x": str(pos.x),
-                                      "y": str(pos.y),
+    return etree.SubElement(group, SVG_USE_TAG,
+                            {
+                             "id": generate_unique_id(document, "command_use"),
+                             XLINK_HREF: "#inkstitch_%s" % command,
+                             "height": "100%",
+                             "width": "100%",
+                             "x": str(pos.x),
+                             "y": str(pos.y),
 
-                                      # l10n: the name of a command symbol (example: scissors icon for trim command)
-                                      INKSCAPE_LABEL: _("command marker"),
-                                  })
+                             # l10n: the name of a command symbol (example: scissors icon for trim command)
+                             INKSCAPE_LABEL: _("command marker"),
+                            })
 
 
 def get_command_pos(element, index, total):
@@ -397,14 +395,14 @@ def add_layer_commands(layer, commands):
 
     for command in commands:
         ensure_symbol(document, command)
-        inkex.etree.SubElement(layer, SVG_USE_TAG,
-                               {
-                                   "id": generate_unique_id(document, "use"),
-                                   INKSCAPE_LABEL: _("Ink/Stitch Command") + ": %s" % get_command_description(command),
-                                   XLINK_HREF: "#inkstitch_%s" % command,
-                                   "height": "100%",
-                                   "width": "100%",
-                                   "x": "0",
-                                   "y": "-10",
-                                   "transform": correction_transform
-                               })
+        etree.SubElement(layer, SVG_USE_TAG,
+                         {
+                          "id": generate_unique_id(document, "use"),
+                          INKSCAPE_LABEL: _("Ink/Stitch Command") + ": %s" % get_command_description(command),
+                          XLINK_HREF: "#inkstitch_%s" % command,
+                          "height": "100%",
+                          "width": "100%",
+                          "x": "0",
+                          "y": "-10",
+                          "transform": correction_transform
+                         })

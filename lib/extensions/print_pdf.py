@@ -1,19 +1,19 @@
-from copy import deepcopy
-from datetime import date
 import errno
 import json
 import logging
 import os
 import socket
 import sys
-from threading import Thread
 import time
+from copy import deepcopy
+from datetime import date
+from threading import Thread
 
 import appdirs
-from flask import Flask, request, Response, send_from_directory, jsonify
-import inkex
-from jinja2 import Environment, FileSystemLoader, select_autoescape
 import requests
+from flask import Flask, Response, jsonify, request, send_from_directory
+from jinja2 import Environment, FileSystemLoader, select_autoescape
+from lxml import etree
 
 from ..gui import open_url
 from ..i18n import translation as inkstitch_translation
@@ -72,6 +72,11 @@ class PrintPreviewServer(Thread):
 
     def __setup_app(self):  # noqa: C901
         self.__set_resources_path()
+
+        # Disable warning about using a development server in a production environment
+        cli = sys.modules['flask.cli']
+        cli.show_server_banner = lambda *x: None
+
         self.app = Flask(__name__)
 
         @self.app.route('/')
@@ -211,13 +216,21 @@ class Print(InkstitchExtension):
         layers = svg.findall("./g[@%s='layer']" % INKSCAPE_GROUPMODE)
         stitch_plan_layer = svg.find(".//*[@id='__inkstitch_stitch_plan__']")
 
+        # Make sure there is no leftover translation from stitch plan preview
+        stitch_plan_layer.pop('transform')
+
+        # objects outside of the viewbox are invisible
+        # TODO: if we want them to be seen, we need to redefine document size to fit the design
+        #       this is just a quick fix and doesn't work on realistic view
+        svg.set('style', 'overflow:visible;')
+
         # First, delete all of the other layers.  We don't need them and they'll
         # just bulk up the SVG.
         for layer in layers:
             if layer is not stitch_plan_layer:
                 svg.remove(layer)
 
-        overview_svg = inkex.etree.tostring(svg)
+        overview_svg = etree.tostring(svg, encoding=str)
         color_block_groups = stitch_plan_layer.getchildren()
         color_block_svgs = []
 
@@ -229,7 +242,7 @@ class Print(InkstitchExtension):
             stitch_plan_layer.append(group)
 
             # save an SVG preview
-            color_block_svgs.append(inkex.etree.tostring(svg))
+            color_block_svgs.append(etree.tostring(svg, encoding=str))
 
         return overview_svg, color_block_svgs
 
@@ -269,7 +282,7 @@ class Print(InkstitchExtension):
         # objects.  It's almost certain they meant to print the whole design.
         # If they really wanted to print just a few objects, they could set
         # the rest invisible temporarily.
-        self.selected = {}
+        self.svg.selected.clear()
 
         if not self.get_elements():
             return

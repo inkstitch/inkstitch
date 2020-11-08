@@ -3,7 +3,7 @@ import os
 import sys
 import traceback
 from argparse import ArgumentParser
-from cStringIO import StringIO
+from io import StringIO
 
 import lib.debug as debug
 from lib import extensions
@@ -36,12 +36,12 @@ extension_class = getattr(extensions, extension_class_name)
 extension = extension_class()
 
 if hasattr(sys, 'gettrace') and sys.gettrace():
-    extension.affect(args=remaining_args)
+    extension.run(args=remaining_args)
 else:
     save_stderr()
     exception = None
     try:
-        extension.affect(args=remaining_args)
+        extension.run(args=remaining_args)
     except (SystemExit, KeyboardInterrupt):
         raise
     except Exception:
@@ -50,14 +50,14 @@ else:
         restore_stderr()
 
         if shapely_errors.tell():
-            print >> sys.stderr, shapely_errors.getvalue()
+            print(shapely_errors.getvalue(), file=sys.stderr)
 
     if exception:
-        print >> sys.stderr, _("Ink/Stitch experienced an unexpected error.").encode("UTF-8")
-        print >> sys.stderr, _("If you'd like to help, please file an issue at "
-                               "https://github.com/inkstitch/inkstitch/issues "
-                               "and include the entire error description below:").encode("UTF-8"), "\n"
-        print >> sys.stderr, exception
+        print(_("Ink/Stitch experienced an unexpected error."), file=sys.stderr)
+        print(_("If you'd like to help, please file an issue at "
+                "https://github.com/inkstitch/inkstitch/issues "
+                "and include the entire error description below:"), "\n", file=sys.stderr)
+        print(exception, file=sys.stderr)
         sys.exit(1)
     else:
         sys.exit(0)

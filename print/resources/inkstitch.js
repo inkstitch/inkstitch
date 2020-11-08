@@ -150,7 +150,7 @@ function writeEstimatedTime( selector, estimatedTime ) {
 function scaleSVG(element, scale = 'fit') {
 
   // always center svg
-  transform = "translate(-50%, -50%)";
+  var transform = "translate(-50%, -50%)";
 
   if(scale == 'fit') {
     var scale = Math.min(
@@ -278,7 +278,7 @@ $(function() {
     })
   });
 
-  /* Contendeditable Fields */
+  /* Contenteditable Fields */
 
   $('body').on('focusout', '[contenteditable="true"]:not(.info-text)', function() {
     /* change svg scale */

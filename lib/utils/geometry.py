@@ -1,6 +1,7 @@
 import math
 
-from shapely.geometry import LineString, Point as ShapelyPoint
+from shapely.geometry import LineString
+from shapely.geometry import Point as ShapelyPoint
 
 
 def cut(line, distance, normalized=False):
@@ -122,9 +123,6 @@ class Point:
 
     def as_tuple(self):
         return (self.x, self.y)
-
-    def __cmp__(self, other):
-        return cmp(self.as_tuple(), other.as_tuple())
 
     def __getitem__(self, item):
         return self.as_tuple()[item]

@@ -11,7 +11,7 @@ class Output(InkstitchExtension):
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
 
-    def getoptions(self, args=sys.argv[1:]):
+    def parse_arguments(self, args=sys.argv[1:]):
         # inkex's option parsing can't handle arbitrary command line arguments
         # that may be passed for a given output format, so we'll just parse the
         # args ourselves. :P
@@ -39,7 +39,7 @@ class Output(InkstitchExtension):
         self.file_extension = self.settings.pop('format')
         del sys.argv[1:]
 
-        InkstitchExtension.getoptions(self, extra_args)
+        InkstitchExtension.parse_arguments(self, extra_args)
 
     def effect(self):
         if not self.get_elements():
@@ -62,7 +62,7 @@ class Output(InkstitchExtension):
         # inkscape will read the file contents from stdout and copy
         # to the destination file that the user chose
         with open(temp_file.name, "rb") as output_file:
-            sys.stdout.write(output_file.read())
+            sys.stdout.buffer.write(output_file.read())
             sys.stdout.flush()
 
         # clean up the temp file

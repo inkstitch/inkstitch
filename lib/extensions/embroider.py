@@ -1,52 +1,55 @@
 import os
 
+from inkex import Boolean
+
 from ..i18n import _
 from ..output import write_embroidery_file
 from ..stitch_plan import patches_to_stitch_plan
-from ..svg import render_stitch_plan, PIXELS_PER_MM
+from ..svg import PIXELS_PER_MM, render_stitch_plan
 from .base import InkstitchExtension
 
 
 class Embroider(InkstitchExtension):
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
-        self.OptionParser.add_option("-c", "--collapse_len_mm",
-                                     action="store", type="float",
+        self.arg_parser.add_argument("-c", "--collapse_len_mm",
+                                     action="store", type=float,
                                      dest="collapse_length_mm", default=3.0,
                                      help="max collapse length (mm)")
-        self.OptionParser.add_option("--hide_layers",
-                                     action="store", type="choice",
-                                     choices=["true", "false"],
+        self.arg_parser.add_argument("--hide_layers",
+                                     action="store", type=Boolean,
                                      dest="hide_layers", default="true",
                                      help="Hide all other layers when the embroidery layer is generated")
-        self.OptionParser.add_option("-O", "--output_format",
-                                     action="store", type="string",
+        self.arg_parser.add_argument("-O", "--output_format",
+                                     action="store", type=str,
                                      dest="output_format", default="csv",
                                      help="Output file extenstion (default: csv)")
-        self.OptionParser.add_option("-P", "--path",
-                                     action="store", type="string",
+        self.arg_parser.add_argument("-P", "--path",
+                                     action="store", type=str,
                                      dest="path", default=".",
                                      help="Directory in which to store output file")
-        self.OptionParser.add_option("-F", "--output-file",
-                                     action="store", type="string",
+        self.arg_parser.add_argument("-F", "--output-file",
+                                     action="store", type=str,
                                      dest="output_file",
                                      help="Output filename.")
-        self.OptionParser.add_option("-b", "--max-backups",
-                                     action="store", type="int",
+        self.arg_parser.add_argument("-b", "--max-backups",
+                                     action="store", type=int,
                                      dest="max_backups", default=5,
                                      help="Max number of backups of output files to keep.")
-        self.OptionParser.usage += _("\n\nSeeing a 'no such option' message?  Please restart Inkscape to fix.")
+        if not self.arg_parser.usage:
+            self.arg_parser.usage = ""
+        self.arg_parser.usage += _("\n\nSeeing a 'no such option' message?  Please restart Inkscape to fix.")
 
     def get_output_path(self):
         if self.options.output_file:
             # This is helpful for folks that run the embroider extension
             # manually from the command line (without Inkscape) for
             # debugging purposes.
-            output_path = os.path.join(os.path.expanduser(os.path.expandvars(self.options.path.decode("UTF-8"))),
-                                       self.options.output_file.decode("UTF-8"))
+            output_path = os.path.join(os.path.expanduser(os.path.expandvars(self.options.path)),
+                                       self.options.output_file)
         else:
             csv_filename = '%s.%s' % (self.get_base_file_name(), self.options.output_format)
-            output_path = os.path.join(self.options.path.decode("UTF-8"), csv_filename)
+            output_path = os.path.join(self.options.path, csv_filename)
 
         def add_suffix(path, suffix):
             if suffix > 0:
