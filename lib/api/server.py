@@ -1,16 +1,17 @@
 import errno
 import logging
 import socket
+import sys
 import time
 from threading import Thread
 
 import requests
 from flask import Flask, g, request
 
+from ..utils.json import InkStitchJSONEncoder
 from .install import install
 from .simulator import simulator
 from .stitch_plan import stitch_plan
-from ..utils.json import InkStitchJSONEncoder
 
 
 class APIServer(Thread):
@@ -27,6 +28,10 @@ class APIServer(Thread):
         self.__setup_app()
 
     def __setup_app(self):  # noqa: C901
+        # Disable warning about using a development server in a production environment
+        cli = sys.modules['flask.cli']
+        cli.show_server_banner = lambda *x: None
+
         self.app = Flask(__name__)
         self.app.json_encoder = InkStitchJSONEncoder
 
@@ -89,7 +94,7 @@ class APIServer(Thread):
                     response = requests.get("http://%s:%s/ping" % (self.host, self.port))
                     if response.status_code == 200:
                         break
-                except socket.error, e:
+                except socket.error as e:
                     if e.errno == errno.ECONNREFUSED:
                         pass
                     else:

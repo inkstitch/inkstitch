@@ -1,1 +1,1 @@
-from generate import generate_inx_files
+from .generate import generate_inx_files

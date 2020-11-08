@@ -36,6 +36,6 @@
             gui-description="{{ _("minimum spindle speed value (grbl $31 setting)") }}" min="-1" max="1000000000">-1</param>
         <param name="max_spindle_speed" type="int" gui-text="{{ _("max spindle speed") }}"
             gui-description="{{ _("minimum spindle speed value (grbl $30 setting)") }}" min="-1" max="1000000000">-1</param>
-        <param name="feed_rate" type="int" gui-description="{{ _("feed rate (in mm/min, set to -1 to omit)")}}" min="-1" max="1000000000">-1</param>
+        <param name="feed_rate" type="int" gui-text="{{ _("feed rate (in mm/min, set to -1 to omit)")}}" min="-1" max="1000000000">-1</param>
     </page>
 </param>

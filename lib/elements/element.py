@@ -1,19 +1,16 @@
 import sys
 from copy import deepcopy
 
-import cubicsuperpath
-import simpletransform
+import inkex
 import tinycss2
-from cspsubdiv import cspsubdiv
+from inkex import bezier
 
-from .svg_objects import circle_to_path, ellipse_to_path, rect_to_path
 from ..commands import find_commands
 from ..i18n import _
-from ..svg import (PIXELS_PER_MM, apply_transforms, convert_length,
-                   get_node_transform)
-from ..svg.tags import (EMBROIDERABLE_TAGS, INKSCAPE_LABEL, INKSTITCH_ATTRIBS, SVG_CIRCLE_TAG, SVG_ELLIPSE_TAG, SVG_GROUP_TAG, SVG_LINK_TAG,
-                        SVG_OBJECT_TAGS, SVG_RECT_TAG)
-from ..utils import Point, cache
+from ..svg import PIXELS_PER_MM, apply_transforms, convert_length, get_doc_size, get_node_transform
+from ..svg.tags import (EMBROIDERABLE_TAGS, INKSCAPE_LABEL, INKSTITCH_ATTRIBS,
+                        SVG_GROUP_TAG, SVG_LINK_TAG, SVG_USE_TAG)
+from ..utils import cache, Point
 
 
 class Patch:
@@ -155,22 +152,29 @@ class EmbroideryElement(object):
     def parse_style(self, node=None):
         if node is None:
             node = self.node
+        element_style = node.get("style", "")
+        if element_style is None:
+            return None
         declarations = tinycss2.parse_declaration_list(node.get("style", ""))
         style = {declaration.lower_name: declaration.value[0].serialize() for declaration in declarations}
         return style
 
     @cache
     def _get_style_raw(self, style_name):
-        if self.node.tag not in [SVG_GROUP_TAG, SVG_LINK_TAG] and self.node.tag not in EMBROIDERABLE_TAGS:
+        if self.node is None:
+            return None
+        if self.node.tag not in [SVG_GROUP_TAG, SVG_LINK_TAG, SVG_USE_TAG] and self.node.tag not in EMBROIDERABLE_TAGS:
             return None
 
         style = self.parse_style()
-        style = style.get(style_name) or self.node.get(style_name)
+        if style:
+            style = style.get(style_name) or self.node.get(style_name)
         parent = self.node.getparent()
         # style not found, get inherited style elements
         while not style and parent is not None:
             style = self.parse_style(parent)
-            style = style.get(style_name) or parent.get(style_name)
+            if style:
+                style = style.get(style_name) or parent.get(style_name)
             parent = parent.getparent()
         return style
 
@@ -196,23 +200,23 @@ class EmbroideryElement(object):
         # Of course, transforms may also involve rotation, skewing, and translation.
         # All except translation can affect how wide the stroke appears on the screen.
 
-        node_transform = get_node_transform(self.node)
+        node_transform = inkex.transforms.Transform(get_node_transform(self.node))
 
         # First, figure out the translation component of the transform.  Using a zero
         # vector completely cancels out the rotation, scale, and skew components.
         zero = [0, 0]
-        simpletransform.applyTransformToPoint(node_transform, zero)
+        zero = inkex.Transform.apply_to_point(node_transform, zero)
         translate = Point(*zero)
 
         # Next, see how the transform affects unit vectors in the X and Y axes.  We
         # need to subtract off the translation or it will affect the magnitude of
         # the resulting vector, which we don't want.
         unit_x = [1, 0]
-        simpletransform.applyTransformToPoint(node_transform, unit_x)
+        unit_x = inkex.Transform.apply_to_point(node_transform, unit_x)
         sx = (Point(*unit_x) - translate).length()
 
         unit_y = [0, 1]
-        simpletransform.applyTransformToPoint(node_transform, unit_y)
+        unit_y = inkex.Transform.apply_to_point(node_transform, unit_y)
         sy = (Point(*unit_y) - translate).length()
 
         # Take the average as a best guess.
@@ -223,11 +227,7 @@ class EmbroideryElement(object):
     @property
     @cache
     def stroke_width(self):
-        width = self.get_style("stroke-width", None)
-
-        if width is None:
-            return 1.0
-
+        width = self.get_style("stroke-width", "1.0")
         width = convert_length(width)
         return width * self.stroke_scale
 
@@ -271,20 +271,15 @@ class EmbroideryElement(object):
         # In a path, each element in the 3-tuple is itself a tuple of (x, y).
         # Tuples all the way down.  Hasn't anyone heard of using classes?
 
-        if self.node.tag in SVG_OBJECT_TAGS:
-            if self.node.tag == SVG_RECT_TAG:
-                d = rect_to_path(self.node)
-            elif self.node.tag == SVG_ELLIPSE_TAG:
-                d = ellipse_to_path(self.node)
-            elif self.node.tag == SVG_CIRCLE_TAG:
-                d = circle_to_path(self.node)
+        if getattr(self.node, "get_path", None):
+            d = self.node.get_path()
         else:
             d = self.node.get("d", "")
 
         if not d:
             self.fatal(_("Object %(id)s has an empty 'd' attribute.  Please delete this object from your document.") % dict(id=self.node.get("id")))
 
-        return cubicsuperpath.parsePath(d)
+        return inkex.paths.Path(d).to_superpath()
 
     @cache
     def parse_path(self):
@@ -326,13 +321,13 @@ class EmbroideryElement(object):
         """approximate a path containing beziers with a series of points"""
 
         path = deepcopy(path)
-        cspsubdiv(path, 0.1)
+        bezier.cspsubdiv(path, 0.1)
 
         return [self.strip_control_points(subpath) for subpath in path]
 
     def flatten_subpath(self, subpath):
         path = [deepcopy(subpath)]
-        cspsubdiv(path, 0.1)
+        bezier.cspsubdiv(path, 0.1)
 
         return self.strip_control_points(path[0])
 
@@ -373,7 +368,7 @@ class EmbroideryElement(object):
         # L10N used when showing an error message to the user such as
         # "Some Path (path1234): error: satin column: One or more of the rungs doesn't intersect both rails."
         error_msg = "%s: %s %s" % (name, _("error:"), message)
-        print >> sys.stderr, "%s" % (error_msg.encode("UTF-8"))
+        print(error_msg, file=sys.stderr)
         sys.exit(1)
 
     def validation_errors(self):

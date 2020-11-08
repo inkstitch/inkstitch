@@ -1,19 +1,18 @@
 ./pyembroidery
+inkex
 backports.functools_lru_cache
-wxPython==4.0.6
-networkx==2.2
-shapely==1.6.3
+wxPython
+networkx
+shapely
 lxml
 appdirs
-numpy<1.16.0
+numpy
 jinja2>2.9
 requests
 colormath
 stringcase
 tinycss2
-
-# We're not ready for flask 1.0 yet.  Logging changed, among othe things.
-flask==0.*
+flask
 
 pywinutils; sys.platform == 'win32'
 pywin32; sys.platform == 'win32'

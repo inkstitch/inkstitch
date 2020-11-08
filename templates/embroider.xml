@@ -12,7 +12,7 @@
         <_option value="{{ format }}">{{ _(description) }} ({{ format | upper }}) [{{ _("DEBUG") }}]</_option>
         {% endfor %}
     </param>
-    <param name="path" type="string" _gui-text="{% trans %}Directory{% endtrans %}" _gui-description="{% trans %}Leave empty to save the output in Inkscape's extension directory.{% endtrans %}"></param>
+    <param name="path" type="path" mode="folder" gui-text="{% trans %}Directory{% endtrans %}"></param>
     <param name="extension" type="string" gui-hidden="true">embroider</param>
     <effect>
         <object-type>all</object-type>

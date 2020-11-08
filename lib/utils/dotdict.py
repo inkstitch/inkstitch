@@ -13,7 +13,7 @@ class DotDict(dict):
         self.dotdictify()
 
     def _dotdictify(self):
-        for k, v in self.iteritems():
+        for k, v in self.items():
             if isinstance(v, dict):
                 self[k] = DotDict(v)
 

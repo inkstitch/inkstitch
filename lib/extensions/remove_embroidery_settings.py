@@ -1,4 +1,4 @@
-import inkex
+from inkex import NSS, Boolean
 
 from ..commands import find_commands
 from ..svg.svg import find_elements
@@ -8,9 +8,9 @@ from .base import InkstitchExtension
 class RemoveEmbroiderySettings(InkstitchExtension):
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
-        self.OptionParser.add_option("-p", "--del_params", dest="del_params", type="inkbool", default=True)
-        self.OptionParser.add_option("-c", "--del_commands", dest="del_commands", type="inkbool", default=False)
-        self.OptionParser.add_option("-d", "--del_print", dest="del_print", type="inkbool", default=False)
+        self.arg_parser.add_argument("-p", "--del_params", dest="del_params", type=Boolean, default=True)
+        self.arg_parser.add_argument("-c", "--del_commands", dest="del_commands", type=Boolean, default=False)
+        self.arg_parser.add_argument("-d", "--del_print", dest="del_print", type=Boolean, default=False)
 
     def effect(self):
         self.svg = self.document.getroot()
@@ -30,24 +30,24 @@ class RemoveEmbroiderySettings(InkstitchExtension):
                 self.remove_element(print_setting)
 
     def remove_params(self):
-        if not self.selected:
+        if not self.svg.selected:
             xpath = ".//svg:path"
             elements = find_elements(self.svg, xpath)
             self.remove_inkstitch_attributes(elements)
         else:
-            for node in self.selected:
+            for node in self.svg.selected:
                 elements = self.get_selected_elements(node)
                 self.remove_inkstitch_attributes(elements)
 
     def remove_commands(self):
-        if not self.selected:
+        if not self.svg.selected:
             # we are not able to grab commands by a specific id
             # so let's move through every object instead and see if it has a command
             xpath = ".//svg:path|.//svg:circle|.//svg:rect|.//svg:ellipse"
             elements = find_elements(self.svg, xpath)
         else:
             elements = []
-            for node in self.selected:
+            for node in self.svg.selected:
                 elements.extend(self.get_selected_elements(node))
 
         if elements:
@@ -56,7 +56,7 @@ class RemoveEmbroiderySettings(InkstitchExtension):
                     group = command.connector.getparent()
                     group.getparent().remove(group)
 
-        if not self.selected:
+        if not self.svg.selected:
             # remove standalone commands
             standalone_commands = ".//svg:use[starts-with(@xlink:href, '#inkstitch_')]"
             self.remove_elements(standalone_commands)
@@ -84,5 +84,5 @@ class RemoveEmbroiderySettings(InkstitchExtension):
     def remove_inkstitch_attributes(self, elements):
         for element in elements:
             for attrib in element.attrib:
-                if attrib.startswith(inkex.NSS['inkstitch'], 1):
+                if attrib.startswith(NSS['inkstitch'], 1):
                     del element.attrib[attrib]

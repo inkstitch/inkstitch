@@ -11,7 +11,7 @@ def pyembroidery_input_formats():
 
 def generate_input_inx_files():
     env = build_environment()
-    template = env.get_template('input.inx')
+    template = env.get_template('input.xml')
 
     for format, description in pyembroidery_input_formats():
         name = "input_%s" % format.upper()
