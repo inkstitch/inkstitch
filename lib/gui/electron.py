@@ -27,5 +27,5 @@ def open_url(url):
         cwd = get_bundled_dir("electron")
 
     # Any output on stdout will crash inkscape.
-    null = open(os.devnull, 'w')
-    return subprocess.Popen(command, cwd=cwd, stdout=null)
+    with open(os.devnull, 'w') as null:
+        return subprocess.Popen(command, cwd=cwd, stdout=null)

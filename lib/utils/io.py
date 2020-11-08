@@ -1,15 +1,15 @@
 import os
 import sys
-from cStringIO import StringIO
+from io import StringIO
 
 
 def save_stderr():
     # GTK likes to spam stderr, which inkscape will show in a dialog.
-    null = open(os.devnull, 'w')
-    sys.stderr_dup = os.dup(sys.stderr.fileno())
-    sys.real_stderr = os.fdopen(sys.stderr_dup, 'w')
-    os.dup2(null.fileno(), 2)
-    sys.stderr = StringIO()
+    with open(os.devnull, 'w') as null:
+        sys.stderr_dup = os.dup(sys.stderr.fileno())
+        sys.real_stderr = os.fdopen(sys.stderr_dup, 'w')
+        os.dup2(null.fileno(), 2)
+        sys.stderr = StringIO()
 
 
 def restore_stderr():
@@ -22,11 +22,11 @@ def restore_stderr():
 
 
 def save_stdout():
-    null = open(os.devnull, 'w')
-    sys.stdout_dup = os.dup(sys.stdout.fileno())
-    sys.real_stdout = os.fdopen(sys.stdout_dup, 'w')
-    os.dup2(null.fileno(), 1)
-    sys.stdout = StringIO()
+    with open(os.devnull, 'w') as null:
+        sys.stdout_dup = os.dup(sys.stdout.fileno())
+        sys.real_stdout = os.fdopen(sys.stdout_dup, 'w')
+        os.dup2(null.fileno(), 1)
+        sys.stdout = StringIO()
 
 
 def restore_stdout():

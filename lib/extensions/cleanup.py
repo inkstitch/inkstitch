@@ -1,6 +1,6 @@
 import sys
 
-from inkex import NSS
+from inkex import NSS, Boolean
 
 from ..elements import Fill, Stroke
 from ..i18n import _
@@ -10,10 +10,10 @@ from .base import InkstitchExtension
 class Cleanup(InkstitchExtension):
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
-        self.OptionParser.add_option("-f", "--rm_fill", dest="rm_fill", type="inkbool", default=True)
-        self.OptionParser.add_option("-s", "--rm_stroke", dest="rm_stroke", type="inkbool", default=True)
-        self.OptionParser.add_option("-a", "--fill_threshold", dest="fill_threshold", type="int", default=20)
-        self.OptionParser.add_option("-l", "--stroke_threshold", dest="stroke_threshold", type="int", default=5)
+        self.arg_parser.add_argument("-f", "--rm_fill", dest="rm_fill", type=Boolean, default=True)
+        self.arg_parser.add_argument("-s", "--rm_stroke", dest="rm_stroke", type=Boolean, default=True)
+        self.arg_parser.add_argument("-a", "--fill_threshold", dest="fill_threshold", type=int, default=20)
+        self.arg_parser.add_argument("-l", "--stroke_threshold", dest="stroke_threshold", type=int, default=5)
 
     def effect(self):
         self.rm_fill = self.options.rm_fill
@@ -21,8 +21,7 @@ class Cleanup(InkstitchExtension):
         self.fill_threshold = self.options.fill_threshold
         self.stroke_threshold = self.options.stroke_threshold
 
-        # Remove selection, we want every element in the document
-        self.selected = {}
+        self.svg.selected.clear()
 
         count = 0
         svg = self.document.getroot()
@@ -32,7 +31,7 @@ class Cleanup(InkstitchExtension):
             count += 1
 
         if not self.get_elements():
-            print >> sys.stderr, _("%s elements removed" % count)
+            print(_("%s elements removed" % count), file=sys.stderr)
             return
 
         for element in self.elements:
@@ -44,4 +43,4 @@ class Cleanup(InkstitchExtension):
                 element.node.getparent().remove(element.node)
                 count += 1
 
-        print >> sys.stderr, _("%s elements removed" % count)
+        print(_("%s elements removed" % count), file=sys.stderr)

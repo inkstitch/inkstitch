@@ -3,7 +3,8 @@ import math
 import shapely
 
 from ..svg import PIXELS_PER_MM
-from ..utils import cache, Point as InkstitchPoint
+from ..utils import Point as InkstitchPoint
+from ..utils import cache
 
 
 def legacy_fill(shape, angle, row_spacing, end_row_spacing, max_stitch_length, flip, staggers, skip_last):
@@ -223,7 +224,7 @@ def pull_runs(rows, shape, row_spacing):
         run = []
         prev = None
 
-        for row_num in xrange(len(rows)):
+        for row_num in range(len(rows)):
             row = rows[row_num]
             first, rest = row[0], row[1:]
 

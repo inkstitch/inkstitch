@@ -12,8 +12,8 @@ for font in os.listdir(fonts_dir):
 	with open(os.path.join(fonts_dir, font, "font.json")) as font_json:
 		font_metadata = json.load(font_json)
 		
-		print "# L10N name of font in fonts/%s" % font
-		print "_(%s)" % repr(font_metadata.get("name", ""))
+		print("# L10N name of font in fonts/%s" % font)
+		print("_(%s)" % repr(font_metadata.get("name", "")))
 		
-		print "# L10N description of font in fonts/%s" % font
-		print "_(%s)" % repr(font_metadata.get("description", ""))
+		print("# L10N description of font in fonts/%s" % font)
+		print("_(%s)" % repr(font_metadata.get("description", "")))

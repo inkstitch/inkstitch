@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>{% trans %}About{% endtrans %}</name>
+    <id>org.inkstitch.about.{{ locale }}</id>
+    <param type="notebook" name="about-tabs" indent="1">
+      <page name="about" gui-text="{%trans %}About{% endtrans %}">
+          <image>{{ image_path }}inkstitch_colour_logo.svg</image>
+          <label indent="1" appearance="header">Ink/Stitch - {{ inkstitch_version }}</label>
+          <separator/>
+          <label indent="1">An open-source machine embroidery design platform based on Inkscape.</label>
+          <separator/>
+          <spacer/>
+          <label indent="1" appearance="url">https://inkstitch.org</label>
+      </page>
+      <page name="license" gui-text="{%trans %}License{% endtrans %}">
+          <param name="license-text" type="description" xml:space="preserve">
+{{ inkstitch_license }}
+          </param>
+      </page>
+    </param>
+    <effect needs-live-preview="false" needs-document="false">
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu name="Ink/Stitch">
+            </submenu>
+        </effects-menu>
+    </effect>
+</inkscape-extension>

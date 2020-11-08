@@ -1,4 +1,4 @@
-import simpletransform
+import inkex
 
 from ..i18n import _
 from ..utils import cache
@@ -6,10 +6,14 @@ from ..utils import cache
 # modern versions of Inkscape use 96 pixels per inch as per the CSS standard
 PIXELS_PER_MM = 96 / 25.4
 
-# cribbed from inkscape-silhouette
-
 
 def parse_length_with_units(str):
+    value, unit = inkex.units.parse_unit(str)
+    if not unit:
+        raise ValueError(_("parseLengthWithUnits: unknown unit %s") % str)
+    return value, unit
+
+    """
     '''
     Parse an SVG value which may or may not have units attached
     This version is greatly simplified in that it only allows: no units,
@@ -17,6 +21,8 @@ def parse_length_with_units(str):
     There is a more general routine to consider in scour.py if more
     generality is ever needed.
     '''
+
+    # cribbed from inkscape-silhouette
 
     u = 'px'
     s = str.strip()
@@ -46,11 +52,15 @@ def parse_length_with_units(str):
         raise ValueError(_("parseLengthWithUnits: unknown unit %s") % s)
 
     return v, u
+    """
 
 
 def convert_length(length):
     value, units = parse_length_with_units(length)
 
+    return inkex.units.convert_unit(str(value) + units, 'px')
+
+    """
     if not units or units == "px":
         return value
 
@@ -67,7 +77,7 @@ def convert_length(length):
         units = 'mm'
 
     if units == 'mm':
-        value = value / 25.4
+        value /= 25.4
         units = 'in'
 
     if units == 'in':
@@ -76,6 +86,7 @@ def convert_length(length):
         return value * 96
 
     raise ValueError(_("Unknown unit: %s") % units)
+    """
 
 
 @cache
@@ -121,7 +132,7 @@ def get_viewbox_transform(node):
 
     dx = -float(viewbox[0])
     dy = -float(viewbox[1])
-    transform = simpletransform.parseTransform("translate(%f, %f)" % (dx, dy))
+    transform = inkex.transforms.Transform("translate(%f, %f)" % (dx, dy))
 
     try:
         sx = doc_width / float(viewbox[2])
@@ -132,8 +143,8 @@ def get_viewbox_transform(node):
         if aspect_ratio != 'none':
             sx = sy = max(sx, sy) if 'slice' in aspect_ratio else min(sx, sy)
 
-        scale_transform = simpletransform.parseTransform("scale(%f, %f)" % (sx, sy))
-        transform = simpletransform.composeTransform(transform, scale_transform)
+        scale_transform = inkex.transforms.Transform("scale(%f, %f)" % (sx, sy))
+        transform = transform * scale_transform
     except ZeroDivisionError:
         pass
 

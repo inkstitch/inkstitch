@@ -1,9 +1,9 @@
 from copy import copy
 
-import cubicsuperpath
-import simpletransform
+from inkex import paths, transforms
 
-from ..svg import apply_transforms, get_guides
+from ..svg import get_guides
+from ..svg.path import get_correction_transform
 from ..svg.tags import SVG_GROUP_TAG, SVG_PATH_TAG
 
 
@@ -37,8 +37,9 @@ class Glyph(object):
 
     def _process_group(self, group):
         new_group = copy(group)
-        new_group.attrib.pop('transform', None)
-        del new_group[:]  # delete references to the original group's children
+        # new_group.attrib.pop('transform', None)
+        # delete references to the original group's children
+        del new_group[:]
 
         for node in group:
             if node.tag == SVG_GROUP_TAG:
@@ -47,11 +48,9 @@ class Glyph(object):
                 node_copy = copy(node)
 
                 if "d" in node.attrib:
-                    # Convert the path to absolute coordinates, incorporating all
-                    # nested transforms.
-                    path = cubicsuperpath.parsePath(node.get("d"))
-                    apply_transforms(path, node)
-                    node_copy.set("d", cubicsuperpath.formatPath(path))
+                    transform = -transforms.Transform(get_correction_transform(node, True))
+                    path = paths.Path(node.get("d")).transform(transform).to_absolute()
+                    node_copy.set("d", str(path))
 
                 # Delete transforms from paths and groups, since we applied
                 # them to the paths already.
@@ -71,16 +70,18 @@ class Glyph(object):
             self._baseline = 0
 
     def _process_bbox(self):
-        left, right, top, bottom = simpletransform.computeBBox(self.node.iterdescendants())
-
+        bbox = [paths.Path(node.get("d")).bounding_box() for node in self.node.iterdescendants(SVG_PATH_TAG)]
+        left, right = min([box.left for box in bbox]), max([box.right for box in bbox])
         self.width = right - left
-        self._min_x = left
+        self.min_x = left
 
     def _move_to_origin(self):
-        translate_x = -self._min_x
+        translate_x = -self.min_x
         translate_y = -self._baseline
-        transform = "translate(%s, %s)" % (translate_x, translate_y)
+        transform = transforms.Transform("translate(%s, %s)" % (translate_x, translate_y))
 
         for node in self.node.iter(SVG_PATH_TAG):
-            node.set('transform', transform)
-            simpletransform.fuseTransform(node)
+            path = paths.Path(node.get("d"))
+            path = path.transform(transform)
+            node.set('d', str(path))
+            node.attrib.pop('transform', None)

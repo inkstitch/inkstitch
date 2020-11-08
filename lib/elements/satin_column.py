@@ -1,14 +1,15 @@
 from copy import deepcopy
-from itertools import chain, izip
+from itertools import chain
 
-import cubicsuperpath
-from shapely import affinity as shaffinity, geometry as shgeo
+from inkex import paths
+from shapely import affinity as shaffinity
+from shapely import geometry as shgeo
 
-from .element import EmbroideryElement, Patch, param
-from .validation import ValidationError
 from ..i18n import _
 from ..svg import line_strings_to_csp, point_lists_to_csp
 from ..utils import Point, cache, collapse_duplicate_point, cut
+from .element import EmbroideryElement, Patch, param
+from .validation import ValidationError
 
 
 class SatinHasFillError(ValidationError):
@@ -234,7 +235,7 @@ class SatinColumn(EmbroideryElement):
             rung_endpoints.append(points)
 
         rungs = []
-        for start, end in izip(*rung_endpoints):
+        for start, end in zip(*rung_endpoints):
             # Expand the points just a bit to ensure that shapely thinks they
             # intersect with the rails even with floating point inaccuracy.
             start = Point(*start)
@@ -266,12 +267,12 @@ class SatinColumn(EmbroideryElement):
 
         if num_paths <= 2:
             # old-style satin column with no rungs
-            return range(num_paths)
+            return list(range(num_paths))
 
         # This takes advantage of the fact that sum() counts True as 1
-        intersection_counts = [sum(paths[i].intersects(paths[j]) for j in xrange(num_paths) if i != j)
-                               for i in xrange(num_paths)]
-        paths_not_intersecting_two = [i for i in xrange(num_paths) if intersection_counts[i] != 2]
+        intersection_counts = [sum(paths[i].intersects(paths[j]) for j in range(num_paths) if i != j)
+                               for i in range(num_paths)]
+        paths_not_intersecting_two = [i for i in range(num_paths) if intersection_counts[i] != 2]
         num_not_intersecting_two = len(paths_not_intersecting_two)
 
         if num_not_intersecting_two == 2:
@@ -292,7 +293,7 @@ class SatinColumn(EmbroideryElement):
             # kind of weird thing.  Maybe one of the rungs crosses a rail more
             # than once.  Treat it like the previous case and we'll sort out
             # the intersection issues later.
-            indices_by_length = sorted(range(num_paths), key=lambda index: paths[index].length, reverse=True)
+            indices_by_length = sorted(list(range(num_paths)), key=lambda index: paths[index].length, reverse=True)
             return indices_by_length[:2]
 
     def _cut_rail(self, rail, rung):
@@ -330,7 +331,7 @@ class SatinColumn(EmbroideryElement):
                 self._cut_rail(rail, rung)
 
         for rail in rails:
-            for i in xrange(len(rail)):
+            for i in range(len(rail)):
                 if rail[i] is not None:
                     rail[i] = [Point(*coord) for coord in rail[i].coords]
 
@@ -345,7 +346,7 @@ class SatinColumn(EmbroideryElement):
         # zero-length bezier at the star.  The user's goal here is to ignore the
         # horizontal section of the right rail.
 
-        sections = zip(*rails)
+        sections = list(zip(*rails))
         sections = [s for s in sections if s[0] is not None and s[1] is not None]
 
         return sections
@@ -438,13 +439,13 @@ class SatinColumn(EmbroideryElement):
         """
 
         # like in do_satin()
-        points = list(chain.from_iterable(izip(*self.plot_points_on_rails(self.zigzag_spacing, 0))))
+        points = list(chain.from_iterable(zip(*self.plot_points_on_rails(self.zigzag_spacing, 0))))
 
         if isinstance(split_point, float):
             index_of_closest_stitch = int(round(len(points) * split_point))
         else:
             split_point = Point(*split_point)
-            index_of_closest_stitch = min(range(len(points)), key=lambda index: split_point.distance(points[index]))
+            index_of_closest_stitch = min(list(range(len(points))), key=lambda index: split_point.distance(points[index]))
 
         if index_of_closest_stitch % 2 == 0:
             # split point is on the first rail
@@ -517,7 +518,7 @@ class SatinColumn(EmbroideryElement):
 
     def _csp_to_satin(self, csp):
         node = deepcopy(self.node)
-        d = cubicsuperpath.formatPath(csp)
+        d = paths.CubicSuperPath(csp).to_path()
         node.set("d", d)
 
         # we've already applied the transform, so get rid of it
@@ -626,7 +627,9 @@ class SatinColumn(EmbroideryElement):
                 # Each iteration of this outer loop is one stitch.  Keep going
                 # until we fall off the end of the section.
 
-                old_center = (pos0 + pos1) / 2.0
+                # TODO: is there an other way?
+                # old_center = (pos0 + pos1) / 2.0
+                old_center = shgeo.Point(x/2 for x in (pos0 + pos1))
 
                 while to_travel > 0 and index0 < last_index0 and index1 < last_index1:
                     # In this loop, we inch along each rail a tiny bit per
@@ -653,7 +656,9 @@ class SatinColumn(EmbroideryElement):
                     pos0, index0 = self.walk(section0, pos0, index0, 0.05)
                     pos1, index1 = self.walk(section1, pos1, index1, 0.05 * ratio)
 
-                    new_center = (pos0 + pos1) / 2.0
+                    # TODO: is there a better way?
+                    # new_center = (pos0 + pos1) / 2.0
+                    new_center = shgeo.Point(x/2 for x in (pos0 + pos1))
                     to_travel -= new_center.distance(old_center)
                     old_center = new_center
 
@@ -705,7 +710,7 @@ class SatinColumn(EmbroideryElement):
 
         # This fancy bit of iterable magic just repeatedly takes a point
         # from each side in turn.
-        for point in chain.from_iterable(izip(*sides)):
+        for point in chain.from_iterable(zip(*sides)):
             patch.add_stitch(point)
 
         return patch
@@ -724,7 +729,7 @@ class SatinColumn(EmbroideryElement):
         sides = self.plot_points_on_rails(self.zigzag_spacing, self.pull_compensation)
 
         # Like in zigzag_underlay(): take a point from each side in turn.
-        for point in chain.from_iterable(izip(*sides)):
+        for point in chain.from_iterable(zip(*sides)):
             patch.add_stitch(point)
 
         return patch
@@ -743,7 +748,7 @@ class SatinColumn(EmbroideryElement):
 
         # "left" and "right" here are kind of arbitrary designations meaning
         # a point from the first and second rail repectively
-        for left, right in izip(*sides):
+        for left, right in zip(*sides):
             patch.add_stitch(left)
             patch.add_stitch(right)
             patch.add_stitch(left)

@@ -1,8 +1,7 @@
-# -*- coding: UTF-8 -*-
-
 import os
+
 import inkex
-import simplestyle
+from lxml import etree
 
 from ..svg.tags import INKSCAPE_GROUPMODE, INKSCAPE_LABEL
 from .glyph import Glyph
@@ -25,10 +24,10 @@ class FontVariant(object):
 
     # We use unicode characters rather than English strings for font file names
     # in order to be more approachable for languages other than English.
-    LEFT_TO_RIGHT = u"→"
-    RIGHT_TO_LEFT = u"←"
-    TOP_TO_BOTTOM = u"↓"
-    BOTTOM_TO_TOP = u"↑"
+    LEFT_TO_RIGHT = "→"
+    RIGHT_TO_LEFT = "←"
+    TOP_TO_BOTTOM = "↓"
+    BOTTOM_TO_TOP = "↑"
     VARIANT_TYPES = (LEFT_TO_RIGHT, RIGHT_TO_LEFT, TOP_TO_BOTTOM, BOTTOM_TO_TOP)
 
     @classmethod
@@ -52,9 +51,9 @@ class FontVariant(object):
         self._load_glyphs()
 
     def _load_glyphs(self):
-        svg_path = os.path.join(self.path, u"%s.svg" % self.variant)
+        svg_path = os.path.join(self.path, "%s.svg" % self.variant)
         with open(svg_path) as svg_file:
-            svg = inkex.etree.parse(svg_file)
+            svg = etree.parse(svg_file)
 
         glyph_layers = svg.xpath(".//svg:g[starts-with(@inkscape:label, 'GlyphLayer-')]", namespaces=inkex.NSS)
         for layer in glyph_layers:
@@ -73,9 +72,9 @@ class FontVariant(object):
         if style_text:
             # The layer may be marked invisible, so we'll clear the 'display'
             # style.
-            style = simplestyle.parseStyle(group.get('style'))
+            style = dict(inkex.Style.parse_str(group.get('style')))
             style.pop('display')
-            group.set('style', simplestyle.formatStyle(style))
+            group.set('style', str(inkex.Style(style)))
 
     def __getitem__(self, character):
         if character in self.glyphs:

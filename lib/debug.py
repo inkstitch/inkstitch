@@ -1,17 +1,16 @@
 import atexit
-from contextlib import contextmanager
-from datetime import datetime
 import os
 import socket
 import sys
 import time
+from contextlib import contextmanager
+from datetime import datetime
 
-from inkex import etree
 import inkex
-from simplestyle import formatStyle
+from lxml import etree
 
-from svg import line_strings_to_path
-from svg.tags import INKSCAPE_GROUPMODE, INKSCAPE_LABEL
+from .svg import line_strings_to_path
+from .svg.tags import INKSCAPE_GROUPMODE, INKSCAPE_LABEL
 
 
 def check_enabled(func):
@@ -36,7 +35,10 @@ class Debug(object):
         self.init_svg()
 
     def init_log(self):
-        self.log_file = open(os.path.join(os.path.dirname(os.path.dirname(__file__)), "debug.log"), "w")
+        self.log_file = os.path.join(os.path.dirname(os.path.dirname(__file__)), "debug.log")
+        # delete old content
+        with open(self.log_file, "w"):
+            pass
         self.log("Debug logging enabled.")
 
     def init_debugger(self):
@@ -60,7 +62,7 @@ class Debug(object):
 
             try:
                 pydevd.settrace()
-            except socket.error, error:
+            except socket.error as error:
                 self.log("Debugging: connection to pydevd failed: %s", error)
                 self.log("Be sure to run 'Start debugging server' in PyDev to enable debugging.")
             else:
@@ -74,8 +76,8 @@ class Debug(object):
 
     def save_svg(self):
         tree = etree.ElementTree(self.svg)
-        with open(os.path.join(os.path.dirname(os.path.dirname(__file__)), "debug.svg"), "w") as debug_svg:
-            tree.write(debug_svg)
+        debug_svg = os.path.join(os.path.dirname(os.path.dirname(__file__)), "debug.svg")
+        tree.write(debug_svg)
 
     @check_enabled
     def add_layer(self, name="Debug"):
@@ -113,20 +115,21 @@ class Debug(object):
         timestamp = now.isoformat()
         self.last_log_time = now
 
-        print >> self.log_file, timestamp, message % args
-        self.log_file.flush()
+        with open(self.log_file, "a") as logfile:
+            print(timestamp, message % args, file=logfile)
+            logfile.flush()
 
     def time(self, func):
         def decorated(*args, **kwargs):
             if self.enabled:
-                self.raw_log("entering %s()", func.func_name)
+                self.raw_log("entering %s()", func.__name__)
                 start = time.time()
 
             result = func(*args, **kwargs)
 
             if self.enabled:
                 end = time.time()
-                self.raw_log("leaving %s(), duration = %s", func.func_name, round(end - start, 6))
+                self.raw_log("leaving %s(), duration = %s", func.__name__, round(end - start, 6))
 
             return result
 
@@ -150,7 +153,7 @@ class Debug(object):
     @check_enabled
     def log_line_strings(self, line_strings, name=None, color=None):
         path = line_strings_to_path(line_strings)
-        path.set('style', formatStyle({"stroke": color or "#000000", "stroke-width": "0.3"}))
+        path.set('style', str(inkex.Style({"stroke": color or "#000000", "stroke-width": "0.3"})))
 
         if name is not None:
             path.set(INKSCAPE_LABEL, name)
@@ -161,7 +164,7 @@ class Debug(object):
     def log_line(self, start, end, name="line", color=None):
         self.log_svg_element(etree.Element("path", {
             "d": "M%s,%s %s,%s" % (start + end),
-            "style": formatStyle({"stroke": color or "#000000", "stroke-width": "0.3"}),
+            "style": str(inkex.Style({"stroke": color or "#000000", "stroke-width": "0.3"})),
             INKSCAPE_LABEL: name
         }))
 
@@ -174,7 +177,7 @@ class Debug(object):
 
         self.log_svg_element(etree.Element("path", {
             "d": d,
-            "style": formatStyle({"stroke": color or "#000000", "stroke-width": "0.3"}),
+            "style": str(inkex.Style({"stroke": color or "#000000", "stroke-width": "0.3"})),
             INKSCAPE_LABEL: name
         }))
 

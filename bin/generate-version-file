@@ -1,0 +1,6 @@
+#!/bin/bash
+
+VERSION="${GITHUB_REF##*/}"
+OS="${BUILD:-$(uname)}"
+
+echo "${VERSION} (${OS})" > VERSION

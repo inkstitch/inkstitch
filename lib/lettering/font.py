@@ -1,17 +1,17 @@
 # -*- coding: UTF-8 -*-
 
-from copy import deepcopy
 import json
 import os
+from copy import deepcopy
 
-import inkex
+from lxml import etree
 
 from ..elements import nodes_to_elements
 from ..exceptions import InkstitchException
 from ..i18n import _, get_languages
 from ..stitches.auto_satin import auto_satin
 from ..svg import PIXELS_PER_MM
-from ..svg.tags import SVG_GROUP_TAG, SVG_PATH_TAG, INKSCAPE_LABEL
+from ..svg.tags import INKSCAPE_LABEL, SVG_GROUP_TAG, SVG_PATH_TAG
 from ..utils import Point
 from .font_variant import FontVariant
 
@@ -83,7 +83,7 @@ class Font(object):
 
     def _load_license(self):
         try:
-            with open(os.path.join(self.path, "LICENSE")) as license_file:
+            with open(os.path.join(self.path, "LICENSE"), encoding="utf-8") as license_file:
                 self.license = license_file.read()
         except IOError:
             pass
@@ -104,7 +104,7 @@ class Font(object):
     name = localized_font_metadata('name', '')
     description = localized_font_metadata('description', '')
     default_variant = font_metadata('default_variant', FontVariant.LEFT_TO_RIGHT)
-    default_glyph = font_metadata('defalt_glyph', u"�")
+    default_glyph = font_metadata('defalt_glyph', "�")
     letter_spacing = font_metadata('letter_spacing', 1.5, multiplier=PIXELS_PER_MM)
     leading = font_metadata('leading', 5, multiplier=PIXELS_PER_MM)
     word_spacing = font_metadata('word_spacing', 3, multiplier=PIXELS_PER_MM)
@@ -144,12 +144,12 @@ class Font(object):
 
         if self.auto_satin and len(destination_group) > 0:
             self._apply_auto_satin(destination_group, trim)
-        else:
-            # set stroke width because it is almost invisible otherwise (why?)
-            for element in destination_group.iterdescendants(SVG_PATH_TAG):
-                style = ['stroke-width:1px' if s.startswith('stroke-width') else s for s in element.get('style').split(';')]
-                style = ';'.join(style)
-                element.set('style', '%s' % style)
+
+        # set stroke width because it is almost invisible otherwise
+        for element in destination_group.iterdescendants(SVG_PATH_TAG):
+            style = ['stroke-width:0.5' if s.startswith('stroke-width') else s for s in element.get('style').split(';')]
+            style = ';'.join(style)
+            element.set('style', '%s' % style)
 
         return destination_group
 
@@ -171,7 +171,7 @@ class Font(object):
         Returns:
             An svg:g element containing the rendered text.
         """
-        group = inkex.etree.Element(SVG_GROUP_TAG, {
+        group = etree.Element(SVG_GROUP_TAG, {
             INKSCAPE_LABEL: line
         })
 

@@ -1,13 +1,11 @@
 import math
-from itertools import chain, izip
+from itertools import chain
 
+import inkex
 import networkx as nx
+from lxml import etree
 from shapely import geometry as shgeo
 from shapely.geometry import Point as ShapelyPoint
-
-import cubicsuperpath
-import inkex
-import simplestyle
 
 from ..commands import add_commands
 from ..elements import SatinColumn, Stroke
@@ -87,7 +85,7 @@ class SatinSegment(object):
 
         num_segments = int(math.ceil(self.center_line.length / segment_size))
         segments = []
-        for i in xrange(num_segments):
+        for i in range(num_segments):
             segments.append(SatinSegment(self.satin,
                                          float(i) / num_segments,
                                          float(i + 1) / num_segments,
@@ -216,13 +214,13 @@ class RunningStitch(object):
             original_element.node.get(INKSTITCH_ATTRIBS['contour_underlay_stitch_length_mm'], '')
 
     def to_element(self):
-        node = inkex.etree.Element(SVG_PATH_TAG)
-        node.set("d", cubicsuperpath.formatPath(
-            line_strings_to_csp([self.path])))
+        node = etree.Element(SVG_PATH_TAG)
+        d = str(inkex.paths.CubicSuperPath(line_strings_to_csp([self.path])))
+        node.set("d", d)
 
         style = self.original_element.parse_style()
         style['stroke-dasharray'] = "0.5,0.5"
-        style = simplestyle.formatStyle(style)
+        style = str(inkex.Style(style))
         node.set("style", style)
         node.set(INKSTITCH_ATTRIBS['running_stitch_length_mm'], self.running_stitch_length)
 
@@ -445,8 +443,9 @@ def add_jumps(graph, elements, preserve_order):
                     point2 = graph.nodes[node2]['point']
                     potential_edges.append((point1, point2))
 
-            edge = min(potential_edges, key=lambda (p1, p2): p1.distance(p2))
-            graph.add_edge(str(edge[0]), str(edge[1]), jump=True)
+            if potential_edges:
+                edge = min(potential_edges, key=lambda p1_p2: p1_p2[0].distance(p1_p2[1]))
+                graph.add_edge(str(edge[0]), str(edge[1]), jump=True)
     else:
         # networkx makes this super-easy!  k_edge_agumentation tells us what edges
         # we need to add to ensure that the graph is fully connected.  We give it a
@@ -497,7 +496,7 @@ def find_path(graph, starting_node, ending_node):
     # forth on each satin twice due to the satin edges being in the graph
     # twice (forward and reverse).
     graph = nx.Graph(graph)
-    graph.remove_edges_from(zip(path[:-1], path[1:]))
+    graph.remove_edges_from(list(zip(path[:-1], path[1:])))
 
     final_path = []
     prev = None
@@ -643,14 +642,14 @@ def preserve_original_groups(elements, original_parent_nodes):
     to the group that contained the original SatinColumn that spawned it.
     """
 
-    for element, parent in izip(elements, original_parent_nodes):
+    for element, parent in zip(elements, original_parent_nodes):
         if parent is not None:
             parent.append(element.node)
             element.node.set('transform', get_correction_transform(parent, child=True))
 
 
 def create_new_group(parent, insert_index):
-    group = inkex.etree.Element(SVG_GROUP_TAG, {
+    group = etree.Element(SVG_GROUP_TAG, {
         INKSCAPE_LABEL: _("Auto-Satin"),
         "transform": get_correction_transform(parent, child=True)
     })
