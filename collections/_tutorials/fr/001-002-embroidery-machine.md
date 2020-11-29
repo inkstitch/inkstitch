@@ -155,20 +155,20 @@ These are only ones that are important, recommend to read setups for $0-$4 just 
 | Item | Length | PCS | note |
 |---|---|---|---|
 |Sewing machine || 1 | Fully working one will do|
-|Nema || 17 | stepper 3 Anything that suits 3D printers or similar applications|
-|Nema || 23 | stepper 1 This drives sewing, bigger is better|
+|Nema 17 stepper || 3 | Anything that suits 3D printers or similar applications|
+|Nema 23 stepper || 1 | This drives sewing, bigger is better|
 |Stepper driver TB6600 || 1 | Or similar to suit sewing machine stepper|
 |Arduino uno || 1 ||
 |GRBL shield for uno || 1 | Make sure it is equipped with 4 stepper driver places|
 |DRV8825 || 3 | Stepper drivers for nema 17 steppers|
 |Jumpers || 9 | For micro stepping configuration|
-|Jumper wires x Connecting sewing machine stepper driver and controls|
+|Jumper wires || x | Connecting sewing machine stepper driver and controls|
 |Connecting wires || x | Connecting everything else|
-|8mm linear slide | 400mm | 4 Stainless rods or better|
+|8mm linear slide | 400mm | 4 | Stainless rods or better|
 |LM8UU || 8 | 8mm linear bearings|
 |624ZZ bearings || 6 | Tightening bearings for belt|
 |8mm GT2 belt | 3M || Or 3x 800mm|
-|GT2 pulley || 16 | Teeth 3 Suitable for nema17 steppers|
+|GT2 pulley 16 Teeth || 3 | Suitable for nema17 steppers|
 |Mounting for big stepper || 1 | Depends on what was used|
 |Gear and belt for machine ||| Timing belt or chain, to keep machine on sync.|
 |M4 screws | 20mm | 60 | Some are extra|

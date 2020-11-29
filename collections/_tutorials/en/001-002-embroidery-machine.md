@@ -162,9 +162,9 @@ These are only ones that are important, recommend to read setups for $0-$4 just 
 |GRBL shield for uno || 1 | Make sure it is equipped with 4 stepper driver places|
 |DRV8825 || 3 | Stepper drivers for nema 17 steppers|
 |Jumpers || 9 | For micro stepping configuration|
-|Jumper wires x Connecting sewing machine stepper driver and controls|
+|Jumper wires || x | Connecting sewing machine stepper driver and controls|
 |Connecting wires || x | Connecting everything else|
-|8mm linear slide | 400mm | 4 Stainless rods or better|
+|8mm linear slide | 400mm | 4 | Stainless rods or better|
 |LM8UU || 8 | 8mm linear bearings|
 |624ZZ bearings || 6 | Tightening bearings for belt|
 |8mm GT2 belt | 3M || Or 3x 800mm|
