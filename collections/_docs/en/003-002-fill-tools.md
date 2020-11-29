@@ -2,7 +2,7 @@
 title: "Fill Tools"
 permalink: /docs/fill-tools/
 excerpt: ""
-last_modified_at: 2020-08-19
+last_modified_at: 2020-11-29
 toc: true
 ---
 ## Break Apart Fill Objects
@@ -16,4 +16,14 @@ Therefore error messages for fill areas happen quiet often and are annoying for 
 
 * Select one or more fill objects
 * Run: Extensions > Ink/Stitch  > Fill Tools > Break Apart Fill Objects
-* For most shapes the option `simple` will be sufficient. If you are still having trouble try `complex`.
+
+## Simple or Complex
+
+Simple will handle holes and unconnected shapes. Overlapping shapes will remain intact and will be split up into seperate objects.
+
+Complex will handle holes in the same way as simple, but it will additionally handle overlapping shapes by splitting them into seperate objects by altering the path.
+
+The image below may clarify the difference.
+
+![Break apart fill objects](/assets/images/docs/en/break_apart.svg)
+[Download SVG](/assets/images/docs/en/break_apart.svg)
