@@ -19,11 +19,9 @@ Therefore error messages for fill areas happen quiet often and are annoying for 
 
 ## Simple or Complex
 
-Simple will handle holes and unconnected shapes. Overlapping shapes will remain intact and will be split up into seperate objects.
+* *Simple* will handle holes, unconnected shapes and crossing border issues. Combined paths will split up into separate objects.
 
-Complex will handle holes in the same way as simple, but it will additionally handle overlapping shapes by splitting them into seperate objects by altering the path.
+* *Complex* will handle everything in the same way as simple but it will additionally handle multiple path objects.
 
-The image below may clarify the difference.
-
-![Break apart fill objects](/assets/images/docs/en/break_apart.svg)
+![Break apart fill objects](/assets/images/docs/en/break_apart.jpg)
 [Download SVG](/assets/images/docs/en/break_apart.svg)

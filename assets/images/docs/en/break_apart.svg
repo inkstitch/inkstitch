@@ -5,17 +5,60 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   id="svg8"
-   version="1.1"
-   viewBox="0 0 169.21004 116.81151"
-   height="116.81151mm"
-   width="169.21004mm"
+   sodipodi:docname="break_apart.svg"
    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
-   sodipodi:docname="break_apart.svg">
+   width="169.21004mm"
+   height="116.81151mm"
+   viewBox="0 0 169.21004 116.81151"
+   version="1.1"
+   id="svg8">
   <defs
-     id="defs2" />
+     id="defs2">
+    <symbol
+       id="inkstitch_ignore_layer">
+      <title
+         id="title9694">Ignore entire layer when generating stitch plan</title>
+      <path
+         inkscape:connector-curvature="0"
+         style="opacity:1;vector-effect:none;fill:#fafafa;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:1.06501234;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.19503705, 3.19503705;stroke-dashoffset:0;stroke-opacity:1"
+         d="M 9.2465269,-4.9265995e-6 C 9.246525,5.1067241 5.1067028,9.2465451 -2.615882e-5,9.2465451 -5.1067554,9.2465451 -9.2465782,5.1067241 -9.2465801,-4.9265995e-6 -9.24658,-2.4523429 -8.2723922,-4.8042399 -6.538327,-6.5383059 c 1.7340653,-1.734065 4.0859624,-2.708252 6.53830084118,-2.708252 5.10673015882,0 9.24655285882,4.139823 9.24655305882,9.2465529734005 0,0 0,0 0,0"
+         id="inkstitch_path25368-7" />
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         style="color:#000000;fill:#d5d5d5;fill-opacity:1;fill-rule:evenodd;stroke:#5a5a5a;stroke-width:0.63330007;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1"
+         d="M 4,4.452769 1.46667,1.286102 H -5.5 l 2.53333,3.166667 z"
+         id="use5800" />
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         style="color:#000000;opacity:0.5;fill:#d5d5d5;fill-opacity:1;fill-rule:evenodd;stroke:#858585;stroke-width:0.63339424;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1"
+         d="M 4,2.552769 1.46667,-0.613898 H -5.5 l 2.53333,3.166667 z"
+         id="use5864" />
+      <g
+         id="g5771">
+        <path
+           sodipodi:nodetypes="ccccccccc"
+           inkscape:connector-curvature="0"
+           style="fill:#aa0000;fill-rule:evenodd;stroke:#aa0000;stroke-width:1px"
+           d="m -1.0666699,-5.0472339 h 4.4333333 l 0.6333333,0.6333333 V 0.01943274 L 3.3666634,0.65276607 H -1.0666699 L -1.7000032,0.01943274 V -4.4139006 Z"
+           id="path8011" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path8023"
+           d="m -0.43333658,-3.8755672 c 0,0 3.16666668,3.16666661 3.16666668,3.16666661"
+           style="fill:none;stroke:#ffffff;stroke-width:1.70000005" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path8025"
+           d="m 2.7333301,-3.8755672 c 0,0 -3.16666668,3.16666661 -3.16666668,3.16666661"
+           style="fill:none;stroke:#ffffff;stroke-width:1.79999995;stroke-linejoin:round" />
+      </g>
+    </symbol>
+  </defs>
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -23,11 +66,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="391.17622"
-     inkscape:cy="261.74673"
+     inkscape:zoom="1.1699656"
+     inkscape:cx="319.5406"
+     inkscape:cy="149.92118"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer2"
      inkscape:document-rotation="0"
      showgrid="false"
      inkscape:window-width="1920"
@@ -53,32 +96,10 @@
     </rdf:RDF>
   </metadata>
   <g
-     inkscape:label="Ebene 1"
+     inkscape:label="Example"
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(22.807263,2.5852197)">
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="19.7052"
-       y="16.031187"
-       id="text844"><tspan
-         sodipodi:role="line"
-         id="tspan842"
-         x="19.7052"
-         y="16.031187"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Barlow;-inkscape-font-specification:'Barlow Bold';stroke-width:0.264583">Simple</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="90.563705"
-       y="14.944213"
-       id="text848"><tspan
-         sodipodi:role="line"
-         id="tspan846"
-         x="90.563705"
-         y="14.944213"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583">Complex</tspan></text>
     <path
        id="circle972"
        style="fill:#000000;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.172769"
@@ -138,61 +159,91 @@
        style="fill:#000000;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.172769"
        d="m 136.18993,66.802878 0.8201,1.388085 0.70405,2.083681 0.24548,2.237141 -0.24548,2.23714 -0.70405,2.083682 -0.74431,1.259811 0.49325,-0.04972 1.07129,-0.332548 0.96945,-0.526198 0.84465,-0.696897 0.69689,-0.844647 0.5262,-0.969446 0.33255,-1.071295 0.11595,-1.150195 -0.11595,-1.150195 -0.33255,-1.071295 -0.5262,-0.969446 -0.69689,-0.844647 -0.84465,-0.696897 -0.96945,-0.526198 -1.07129,-0.332548 z"
        sodipodi:nodetypes="ssssssssssssssss" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.93889px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;white-space:pre;inline-size:62.8877;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="37.905514"
-       y="101.46328"
-       id="text861"
-       transform="translate(-2.2946293,-4.5822983)"><tspan
-         x="37.905514"
-         y="101.46328"><tspan
-           style="font-size:4.93889px;text-align:center;text-anchor:middle;stroke-width:0.264583">Handles holes and will split</tspan><tspan
-           y="101.46328"> </tspan></tspan><tspan
-         x="37.905514"
-         y="107.63689"><tspan
-           style="font-size:4.93889px;text-align:center;text-anchor:middle;stroke-width:0.264583">up overlapping shapes</tspan></tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.93889px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="112.86655"
-       y="96.880981"
-       id="text867"><tspan
-         sodipodi:role="line"
-         id="tspan865"
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Text"
+     sodipodi:insensitive="true">
+    <g
+       id="g883"
+       transform="translate(22.807263,2.5852197)">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="19.7052"
+         y="16.031187"
+         id="text844"><tspan
+           sodipodi:role="line"
+           id="tspan842"
+           x="19.7052"
+           y="16.031187"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Barlow;-inkscape-font-specification:'Barlow Bold';stroke-width:0.264583">Simple</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="90.563705"
+         y="14.944213"
+         id="text848"><tspan
+           sodipodi:role="line"
+           id="tspan846"
+           x="90.563705"
+           y="14.944213"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583">Complex</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:4.93889px;line-height:1.25;font-family:sans-serif;text-align:start;text-anchor:start;white-space:pre;inline-size:63.7672;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="10.539166"
+         y="101.46328"
+         id="text861"
+         transform="translate(-2.2946293,-4.5822983)"><tspan
+           x="10.539166"
+           y="101.46328"><tspan
+             style="font-size:4.23333px;text-align:start;text-anchor:start">Separates combined paths</tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;white-space:pre;inline-size:67.3859;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
          x="112.86655"
          y="96.880981"
-         style="font-size:4.93889px;text-align:center;text-anchor:middle;stroke-width:0.264583">Handles holes and</tspan><tspan
-         sodipodi:role="line"
-         x="112.86655"
-         y="103.0546"
-         style="font-size:4.93889px;text-align:center;text-anchor:middle;stroke-width:0.264583"
-         id="tspan869">overlapping paths</tspan></text>
+         id="text867"><tspan
+           x="112.86655"
+           y="96.880981"><tspan
+             style="font-size:4.23333px;text-align:center;text-anchor:middle;stroke-width:0.264583">Handles multiple path objects</tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444px;line-height:1.25;font-family:Barlow;-inkscape-font-specification:'Barlow Bold';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="-18.072552"
+         y="42.98959"
+         id="text942"><tspan
+           sodipodi:role="line"
+           id="tspan940"
+           x="-18.072552"
+           y="42.98959"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444px;font-family:Barlow;-inkscape-font-specification:'Barlow Bold';stroke-width:0.264583">Original</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444px;line-height:1.25;font-family:Barlow;-inkscape-font-specification:'Barlow Bold';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="-17.046253"
+         y="76.113289"
+         id="text946"><tspan
+           sodipodi:role="line"
+           id="tspan944"
+           x="-17.046253"
+           y="76.113289"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444px;font-family:Barlow;-inkscape-font-specification:'Barlow Bold';stroke-width:0.264583">Result</tspan></text>
+    </g>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="M 75.469474,2.4147803 V 109.22629"
-       id="path892" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444px;line-height:1.25;font-family:Barlow;-inkscape-font-specification:'Barlow Bold';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="-18.072552"
-       y="42.98959"
-       id="text942"><tspan
-         sodipodi:role="line"
-         id="tspan940"
-         x="-18.072552"
-         y="42.98959"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444px;font-family:Barlow;-inkscape-font-specification:'Barlow Bold';stroke-width:0.264583">Original</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444px;line-height:1.25;font-family:Barlow;-inkscape-font-specification:'Barlow Bold';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="-17.046253"
-       y="76.113289"
-       id="text946"><tspan
-         sodipodi:role="line"
-         id="tspan944"
-         x="-17.046253"
-         y="76.113289"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444px;font-family:Barlow;-inkscape-font-specification:'Barlow Bold';stroke-width:0.264583">Result</tspan></text>
+       id="path892"
+       transform="translate(22.807263,2.5852197)" />
+    <use
+       id="use1"
+       inkscape:label="Ink/Stitch Command: Ignore layer (do not stitch any objects in this layer)"
+       xlink:href="#inkstitch_ignore_layer"
+       height="100%"
+       width="100%"
+       x="0"
+       y="-10" />
   </g>
 </svg>

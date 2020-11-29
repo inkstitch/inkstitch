@@ -46,13 +46,13 @@
         {% else %}
           "{{page.img_path}}{{ f.image | relative_url }}"
         {% endif %}
-      alt="{% if f.alt %}{{ f.alt }}{% endif %}">
+        {% if f.alt %} alt="{{ f.alt }}"{% endif %}>
     {% endif %}
     </div><!-- /tutorial item-teaser -->
     <div class="tutorial__description-wrapper">
     {% if f.url contains "://" %}{% capture f_url %}{{ f.url }}{% endcapture %}{% else %}{% capture f_url %}{{ f.url | relative_url }}{% endcapture %}{% endif %}
-    {% if f.title %}<h4 class="archive__item-title">{% if f.tutorial-type contains 'Video' %} <i class="fa fa-play-circle" aria-hidden="true" title="video tutorial"></i>
-    {% endif %}<a href="{{ f_url }}">{{ f.title }}</a></h4>{% endif %}
+    {% if f.title %}<p class="archive__item-title">{% if f.tutorial-type contains 'Video' %} <i class="fa fa-play-circle" aria-hidden="true" title="video tutorial"></i>
+    {% endif %}<a href="{{ f_url }}">{{ f.title }}</a></p>{% endif %}
     {% if f.excerpt %}
       <div class="archive__item-excerpt">
         {{ f.excerpt | markdownify }}

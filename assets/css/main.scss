@@ -294,6 +294,12 @@ table tr td:first-child {
     overflow: inherit;
   }
 
+  p.archive__item-title {
+    font-weight: bold;
+    font-size: 1.1em !important;
+    margin-bottom: 5px !important;
+  }
+
 /* Gallery */
 
   .logo__gallery .archive__item-teaser img {
