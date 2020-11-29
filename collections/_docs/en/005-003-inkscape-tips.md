@@ -6,7 +6,7 @@ last_modified_at: 2020-10-07
 toc: true
 ---
 ## Tips for Ink/Stitch
-Ink/Stitch can only work with designs that are formatted as _paths_. However, many Inkscape tools (such as text and shapes) create _objects_ instead of paths. To use them with Ink/Stitch, you have to convert them by pressing `Shift + Ctrl + C` or selecting `Path > Object to Path` in the menu.
+Ink/Stitch can work best with designs that are formatted as _paths_. However, many Inkscape tools (such as text and shapes) create _objects_ instead of paths. To use them with Ink/Stitch, you have to convert them by pressing `Shift + Ctrl + C` or selecting `Path > Object to Path` in the menu.
 
 Either Inkscape 0.92 or Inkscape 1 may be used with Ink/Stitch. Most tutorials on this page are based on Inkscape 0.92.
 
@@ -84,7 +84,7 @@ All objects in Inkscape are stacked on top of each other in a specific order. In
 
 You can double click an object name to rename it, which may help you keep track of your layering. You will also see three icons to the left of each object name in this panel. Click the eye icon to hide something from view, and click the lock icon to prevent it from being edited. 
 
-_Groups_ and _layers_ can make it easier to manage your objects and their order. Once a group is formed, clicking one item in the group selects the entire group, allowing you to alter all elements of the group at once. To group objects together, select all of them with `Shift+click`, then press `Ctrl+G` or click `Object > Group` in the menu. The group also appears as a collapsible item in the Objects list, and objects can be moved in and out of the group (or from one group to another) by dragging them around the Objects panel. A group can contain other groups. 
+_Groups_ and _layers_ can make it easier to manage your objects and their order. Once a group is formed, clicking one item in the group selects the entire group, allowing you to alter all elements of the group at once. To group objects together, select all of them with `Shift+click`, then press `Ctrl+G` or click `Object > Group` in the menu. The group also appears as a collapsible item in the Objects list, and objects can be moved in and out of the group (or from one group to another) by dragging them around the Objects panel. A group can contain other groups. However the safest way seems to be to `Edit > Cut` an object out of one group and then `Edit > Paste` it into another. You have to select an object in the destination group so that the pasted object goes into that group.
 
 Layers function similarly to groups, but their main purpose is to more easily control how your objects are ordered. A new layer is created with the + button below the Objects list, or by pressing `Shift+Ctrl+N`. Objects can be moved from one layer to another by dragging in the Objects list, just like groups, but they can also be quickly moved to the layer above or below by pressing `Ctrl+Page Up` or `Ctrl+Page Down`. 
 
