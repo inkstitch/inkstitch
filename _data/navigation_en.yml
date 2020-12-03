@@ -46,10 +46,17 @@ pages:
 
 # documentation links
 docs:
+  - title: Installation
+    url: /docs/install/
+    children:
+      - title: "Windows"
+        url: /docs/install-windows/
+      - title: "macOS"
+        url: /docs/install-macos/
+      - title: "Linux"
+        url: /docs/install-linux/
   - title: Getting Started
     children:
-      - title: "Install / Upgrade"
-        url: /docs/install/
       - title: "Customize"
         url: /docs/customize/
       - title: "Basic Usage"

@@ -138,7 +138,3 @@ Read more about [Tiles on tavmjong.free.fr](http://tavmjong.free.fr/INKSCAPE/MAN
   * [Sketch (tavmjong.free.fr)](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Paths-LivePathEffects-Sketch.html)
   * [Stitch Sub Paths (tavmjong.free.fr)](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Paths-LivePathEffects-StitchSubPaths.html)
   * [Roughen (Youtube)](https://www.youtube.com/watch?v=130Dbt0juvY)
-
-
-
-
