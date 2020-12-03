@@ -2,12 +2,12 @@
 title: "Install Ink/Stitch on macOS"
 permalink: /docs/install-macos/
 excerpt: "How to quickly install Ink/Stitch."
-last_modified_at: 2020-04-21
+last_modified_at: 2020-12-03
 toc: true
 ---
 ## Video Guide
 
-We also provide beginner tutorial videos on our <i class="fab fa-youtube"></i> [YouTube channel](https://www.youtube.com/channel/UCJCDCFuT_xQoI55e10HRiRw). For the installation process watch the video for <i class="fab fa-apple"></i> [macOS](https://www.youtube.com/watch?v=gmOVLNh9cu8&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=3)
+We also provide beginner tutorial videos on our <i class="fab fa-youtube"></i> [YouTube channel](https://www.youtube.com/channel/UCJCDCFuT_xQoI55e10HRiRw). Watch the installation process for <i class="fab fa-apple"></i> [macOS](https://www.youtube.com/watch?v=gmOVLNh9cu8&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=3).
 
 **Warning:** The video for macOS users is outdated. Please read updated info ["Additional Steps for Catalina and Big Sur"](#addtitional-steps-for-catalina--big-sur)
 {: .notice--warning }
@@ -32,9 +32,9 @@ Language|macOS Catalina / Big Sur | Sierra* | High Sierra* | Mojave*
 **Italian**|<i class="fa fa-download " ></i> [Catalina / Big Sur]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-it_IT.zip)|
 {: .inline-table }
 
-**Latest release:** [Ink/Stitch {{ site.github.latest_release.tag_name }} ({{ site.github.latest_release.published_at | date: "%Y-%m-%d"  }})](https://github.com/inkstitch/inkstitch/releases/latest)
-
 \* There are no recent versions of Ink/Stitch for Sierra, High Sierra or Mojave. The files are from an older Ink/Stitch release: Ink/Stitch v1.26.2 (2019-08-20).
+
+**Latest release:** [Ink/Stitch {{ site.github.latest_release.tag_name }} ({{ site.github.latest_release.published_at | date: "%Y-%m-%d"  }})](https://github.com/inkstitch/inkstitch/releases/latest)
 
 The `LOCALE` selected affects the menus shown inside Inkscape. Ink/Stitch dialogs are in the lanugage of your OS (if that language is supported).<br><br>Your language is not available? Help us to [translate the dialogs into your native language](/developers/localize/).
 {: .notice--info }
@@ -89,8 +89,3 @@ Then, proceed as above.
 {: .notice--info }
 
 <p class="notice--info" style="margin-top: -3.5em !important;">Or watch the project on GitHub:<br /><iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=inkstitch&repo=inkstitch&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe></p>
-
-## Manual Setup
-
-It is possible to install Ink/Stitch manually. It is not recommended though - unless you want to help developing the extension.
-In this case, please have a look at the [developer documentation](/developers/inkstitch/manual-setup/) section.

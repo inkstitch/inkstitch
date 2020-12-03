@@ -2,12 +2,12 @@
 title: "Install Ink/Stitch on Windows"
 permalink: /docs/install-windows/
 excerpt: "How to quickly install Ink/Stitch."
-last_modified_at: 2020-04-21
+last_modified_at: 2020-12-03
 toc: true
 ---
 ## Video Guide
 
-We also provide beginner tutorial videos on our <i class="fab fa-youtube"></i> [YouTube channel](https://www.youtube.com/channel/UCJCDCFuT_xQoI55e10HRiRw). For the installation process watch the video for <i class="fab fa-windows"></i> [Windows](https://www.youtube.com/watch?v=U5htzWZSjA8&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=4)
+We also provide beginner tutorial videos on our <i class="fab fa-youtube"></i> [YouTube channel](https://www.youtube.com/channel/UCJCDCFuT_xQoI55e10HRiRw). Watch the installation process for <i class="fab fa-windows"></i> [Windows](https://www.youtube.com/watch?v=U5htzWZSjA8&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=4).
 
 ## Requirements
 
@@ -58,8 +58,3 @@ Then, proceed as above.
 {: .notice--info }
 
 <p class="notice--info" style="margin-top: -3.5em !important;">Or watch the project on GitHub:<br /><iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=inkstitch&repo=inkstitch&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe></p>
-
-## Manual Setup
-
-It is possible to install Ink/Stitch manually. It is not recommended though - unless you want to help developing the extension.
-In this case, please have a look at the [developer documentation](/developers/inkstitch/manual-setup/) section.

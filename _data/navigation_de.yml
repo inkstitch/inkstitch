@@ -42,10 +42,17 @@ pages:
 
 # documentation links
 docs:
+  - title: Installation
+    url: /de/docs/install/
+    children:
+      - title: Windows
+        url: /de/docs/install-windows/
+      - title: macOS
+        url: /de/docs/install-macos/
+      - title: Linux
+        url: /de/docs/install-linux/
   - title: Erste Schritte
     children:
-      - title: "Installation / Aktualisierung"
-        url: /de/docs/install/
       - title: "Personalisierung"
         url: /de/docs/customize/
       - title: Schnelleinstieg
