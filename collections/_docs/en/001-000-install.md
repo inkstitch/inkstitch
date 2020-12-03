@@ -9,7 +9,7 @@ toc: true
 
 Read instructions for
 * <i class="fab fa-linux"></i> [Linux](/docs/install-linux)
-* <i class="fab fa-apple"></i> [macOS](/docs/install-mac)
+* <i class="fab fa-apple"></i> [macOS](/docs/install-macos)
 * <i class="fab fa-windows"></i> [Windows](/docs/install/windows)
 
 ## Video Guide
