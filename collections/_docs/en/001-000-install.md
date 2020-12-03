@@ -5,9 +5,9 @@ excerpt: "How to quickly install Ink/Stitch."
 last_modified_at: 2020-12-03
 toc: false
 ---
-* <i class="fab fa-linux"></i> [Linux](/docs/install-linux)
-* <i class="fab fa-apple"></i> [macOS](/docs/install-macos)
-* <i class="fab fa-windows"></i> [Windows](/docs/install/windows)
+* <i class="fab fa-linux"></i> [Linux](/docs/install-linux/)
+* <i class="fab fa-apple"></i> [macOS](/docs/install-macos/)
+* <i class="fab fa-windows"></i> [Windows](/docs/install-windows/)
 
 ## Manual Setup
 

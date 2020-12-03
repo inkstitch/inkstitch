@@ -1,5 +1,5 @@
 ---
-title: "Installation von Ink/Stitch"
+title: "Installation von Ink/Stitch für macOS"
 permalink: /de/docs/install-macos/
 excerpt: "Wie wird Ink/Stitch installiert."
 last_modified_at: 2020-12-03
@@ -11,7 +11,7 @@ Wir stellen Anfänger-Tutorials auf unserem <i class="fab fa-youtube"></i> [YouT
 
 Schaue den Installationsprozess für <i class="fab fa-apple"></i> [macOS](https://www.youtube.com/watch?v=gmOVLNh9cu8&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=3) an.
 
-**Warnung:** Das Video für macOS-Nutzer ist nicht mehr aktuell. Bitte beachte die ["Additional Steps for Catalina and Big Sur"](#addtitional-steps-for-catalina--big-sur).
+**Warnung:** Das Video für macOS-Nutzer ist nicht mehr aktuell. Bitte beachte die ["Zusätzliche Schritte für Catalina / Big SurPermalink"](#a#zusätzliche-schritte-für-catalina--big-sur).
 {: .notice--warning }
 
 ## Vorraussetzung
