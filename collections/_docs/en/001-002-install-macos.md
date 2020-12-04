@@ -68,7 +68,7 @@ Users of **Big Sur** will need to do one further step to complete the installati
 ```
 cd ~/Library/Application\ Support/org.inkscape.Inkscape/config/inkscape/extensions/
 cd inkstitch/bin
-ln -s libpython2.7.dylib libc.dylib #Any random dylib should work, libpython2.7 is just a convenient one in the directory. 
+ln -s libpython2.7.dylib libc.dylib
 ```
 
 ### Run Ink/Stitch

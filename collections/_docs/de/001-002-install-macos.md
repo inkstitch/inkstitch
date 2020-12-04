@@ -64,12 +64,12 @@ xattr -r -d com.apple.quarantine ~/Library/Application\ Support/org.inkscape.Ink
 
 Falls dein Installationspfad für Erweiterungen vom Standard abweicht, ersetzte `~/Library/Application\ Support/org.inkscape.Inkscape/config/inkscape/extensions/` durch den Pfad der in Inkscape unter `Inkscape > Preferences > System` eingetragen ist).
 
-Nutzer von **Big Sur** müssen noch weitere Befehle eingeben, um die Installation abzuschließen:
+Nutzer von **Big Sur** müssen noch weitere Befehle eingeben um die Installation abzuschließen:
 
 ```
 cd ~/Library/Application\ Support/org.inkscape.Inkscape/config/inkscape/extensions/
 cd inkstitch/bin
-ln -s libpython2.7.dylib libc.dylib #Any random dylib should work, libpython2.7 is just a convenient one in the directory. 
+ln -s libpython2.7.dylib libc.dylib
 ```
 
 ### Ink/Stitch öffnen
