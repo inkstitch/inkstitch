@@ -11,14 +11,14 @@ Wir stellen Anfänger-Tutorials auf unserem <i class="fab fa-youtube"></i> [YouT
 
 Schaue den Installationsprozess für <i class="fab fa-apple"></i> [macOS](https://www.youtube.com/watch?v=gmOVLNh9cu8&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=3) an.
 
-**Warnung:** Das Video für macOS-Nutzer ist nicht mehr aktuell. Bitte beachte die ["Zusätzliche Schritte für Catalina / Big SurPermalink"](#a#zusätzliche-schritte-für-catalina--big-sur).
+**Warnung:** Das Video für macOS-Nutzer ist nicht mehr aktuell. Bitte beachte ["Zusätzliche Schritte für Catalina / Big Sur"](#zusätzliche-schritte-für-catalina--big-sur).
 {: .notice--warning }
 
 ## Vorraussetzung
 
 * [Inkscape](https://inkscape.org/) Version 0.92.2 oder höher (einschließlich [Inkscape](https://inkscape.org/release/inkscape-1.0/?latest=1) Version 1.0 RC)
 
-Das ist alles! Alle Python-Bibliotheken und externen Abhängigkeiten werden mitgeliefert (durch den ausgezeichneten [pyinstaller](http://www.pyinstaller.org)), so dass keine weiteren Installationen notwendig sind.
+Das ist alles! Alle Python-Bibliotheken und externen Abhängigkeiten werden mitgeliefert, so dass keine weiteren Installationen notwendig sind.
 
 ## Installation
 
@@ -34,7 +34,7 @@ Sprache|macOS Catalina / Big Sur | Sierra* | High Sierra* | Mojave*
 **Italian**|<i class="fa fa-download " ></i> [Catalina / Big Sur]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-it_IT.zip)|
 {: .inline-table }
 
-\* Es gibt keine aktuelle Ink/Stitch Version für Sierra, High Sierra or Mojave. Die hier angebotenen Dateien sind aus einer älteren Ausgabe: Ink/Stitch v1.26.2 (20.08.2019).
+\* Es gibt keine aktuelle Ink/Stitch Version für Sierra, High Sierra or Mojave. Die hier angebotenen Dateien stammen aus der Ink/Stitch Version v1.26.2 (20.08.2019).
 
 **Aktuelle Version:** {{ site.github.latest_release.published_at | date: "%d.%m.%Y"  }} [Ink/Stitch {{ site.github.latest_release.tag_name }}](https://github.com/inkstitch/inkstitch/releases/latest)
 
@@ -43,8 +43,6 @@ Die ausgewählte Sprache bezieht sich nur auf die Menüs von Inkscape. Ink/Stitc
 
 ### Dateien entpacken
 Öffne Inkscape. Unter `Bearbeiten > Einstellungen > System` (Inkscape 0.9) oder `Inkscape > Einstellungen > System > Benutzererweiterungen` (Inkscape 1.0) kannst du einsehen, wo sich der Installationsordner befindet.
-
-In Windows sieht das in den meisten Fällen wie folgt aus: `C:\Benutzer\%USERNAME%\AppData\Roaming\inkscape\extensions`
 
 Entpacke das Ink/Stitch-Archiv **direkt** in diesen Ordner. Die Dateistruktur sollte ungefähr dem Bild unten entsprechen (aber ein paar mehr Dateien enthalten):
 
