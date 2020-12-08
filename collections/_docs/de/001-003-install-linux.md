@@ -11,7 +11,7 @@ Wir stellen Anfänger-Tutorials auf unserem <i class="fab fa-youtube"></i> [YouT
 
 ## Vorraussetzung
 
-* [Inkscape](https://inkscape.org/) Version 0.92.2 oder höher (einschließlich [Inkscape](https://inkscape.org/release/inkscape-1.0/?latest=1) Version 1.0 RC)
+* [Inkscape](https://inkscape.org/) Version 0.92.2 oder höher (einschließlich [Inkscape](https://inkscape.org/release/inkscape-1.0/?latest=1) Version 1.0.1)
 
 Das ist alles! Alle Python-Bibliotheken und externen Abhängigkeiten werden mitgeliefert (durch den ausgezeichneten [pyinstaller](http://www.pyinstaller.org)), so dass keine weiteren Installationen notwendig sind.
 
@@ -24,12 +24,16 @@ Lade das passende Archiv für deine Sprache herunter.
 
 **Aktuelle Version:** {{ site.github.latest_release.published_at | date: "%d.%m.%Y" }} [Ink/Stitch {{ site.github.latest_release.tag_name }})](https://github.com/inkstitch/inkstitch/releases/latest)
 
-Die ausgewählte Sprache bezieht sich nur auf die Menüs von Inkscape. Ink/Stitch-Dialogfenster werden in der Sprache des Betriebssystems dargestellt (sofern diese unterstützt wird).<br><br>Deine Sprache ist nicht verfügbar oder unvollständig? Hilf uns [die Dialoge und Menüs in deine Muttersprache zu übersetzen](/de/developers/localize/).
+Die ausgewählte Sprache bezieht sich nur auf die Menüs von Inkscape. Ink/Stitch-Dialogfenster werden in der Sprache des Betriebssystems dargestellt (sofern diese unterstützt wird).<br><br>Deine Sprache ist nicht verfügbar oder unvollständig? Hilf uns [Ink/Stitch in deine Muttersprache zu übersetzen](/de/developers/localize/).
 {: .notice--info }
 
 ### Dateien entpacken
 
-Öffne Inkscape. Unter `Bearbeiten > Einstellungen > System` (Inkscape 0.9) oder `Inkscape > Einstellungen > System > Benutzererweiterungen` (Inkscape 1.0) kannst du einsehen, wo sich der Installationsordner befindet.
+Öffne Inkscape.
+
+Unter `Bearbeiten > Einstellungen > System` (Inkscape 0.9) oder `Inkscape > Einstellungen > System > Benutzererweiterungen` (Inkscape 1.0) kannst du einsehen, wo sich der Installationsordner befindet.
+
+![Ordner für Inkscape Erweiterungen](/assets/images/docs/de/extensions-folder-location-linux.jpg)
 
 Entpacke das Ink/Stitch-Archiv **direkt** in diesen Ordner.
 
@@ -59,3 +63,46 @@ Dann folge erneut der Installationsbeschreibung auf dieser Seite.
 {: .notice--info }
 
 <p class="notice--info" style="margin-top: -3.5em !important;">Oder schaue das Projekt auf GitHub an:<br><iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=inkstitch&repo=inkstitch&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe></p>
+
+## Fehlerbehebung
+
+### Ink/Stitch startet nicht / Menüpunkte sind grau
+
+**Installationspfad überprüfen**
+
+Überprüfe, ob die Dateien evtl. in einen *Unterordner* extrahiert wurden.
+Es ist wichtig, dass die Ink/Stitch-Dateien **direkt** in dem Ordner "Benutzererweiterungen" sind.
+
+**Ink/Stitch-Version überprüfen**
+
+Bitte überprüfe noch einmal, ob du die richtige Ink/Stitch Version für dein Betriebssytsem heruntergeladen hast.
+Für Linux findest du den Download-Link unter [Herunterladen](#herunterladen) oben auf dieser Seite.
+
+**Nutzer/Nutzerrechte überprüfen**
+
+Einige Nutzer berichten, dass falsche Nutzereinstellungen, bzw. Nutzerrechte der Ink/Stitch-Dateien dieses Problem herbeiführen.
+
+### Ink/Stitch Fenster verschwinden kurz nach dem Aufruf wieder
+
+Dieser Fehler kann durch wayland verursacht werden. Starte Inkscape mit folgendem Befehl: `export GDK_BACKEND=x11 && inkscape`
+
+Nutze diesen Workaround bis wir die gesamte Oberfläche auf electron umgestellt haben.
+
+### Ich habe Ink/Stitch in meiner Muttersprache installiert, aber die Dialog-Fenster sind englisch!
+
+**Unvollständige Übersetzung**
+
+Es möglich, dass die Übersetzung unvollständig ist. Das erkennt man daran, dass in einem Fenster sowohl englische, als auch anderssprachige Texte erscheinen.
+Wenn du helfen willst, die Übersetzung zu vervollständigen, lese unsere [Beschreibung für Übersetzer](/de/developers/localize/).
+
+
+**Spracheinstellungen**
+
+Die Dialog-Fenster von Ink/Stitch richten sich nach der Sprache deines Betriebssytsems. Nur die eigentlichen Menüpunkte unter Erweiterungen werden von der installierten Ink/Stitch Sprachversion beeinflusst.
+Ink/Stitch wird bei unklarar Spracheinstellung immer auf die englisch Standardsprache zurückgreifen.
+In Inkscape kann die Spracheinstellung manuell angepasst werden:
+  * Öffne Bearbeiten > Einstellungen > Benutzeroberfläche (Strg + Shift + P)
+  * Wähle deine Sprache
+  * Schließe Inkscape und starte es erneut
+
+![Einstellungen > Benutzeroberfläche](/assets/images/docs/de/preferences_language.png)

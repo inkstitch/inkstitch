@@ -43,7 +43,7 @@ The `LOCALE` selected affects the menus shown inside Inkscape. Ink/Stitch dialog
 
 Go to `Edit > Preferences > System` (Inkscape 0.9) or `Inkscape > Preferences > System` (Inkscape 1.0) and check where your `User Extensions` folder is.
 
-![Preferences: Extensions Folder](/assets/images/docs/en/extensions-folder-localtion-mac.jpg)
+![Preferences: Extensions Folder](/assets/images/docs/en/extensions-folder-location-macos.jpg)
   
 Extract the Ink/Stitch archive **directly** into this folder. In this folder the file structure should look similiar to this (just a lot more files):
 
@@ -53,7 +53,7 @@ Extract the Ink/Stitch archive **directly** into this folder. In this folder the
 
 Newer macOS versions will complain about Ink/Stitch if it is downloaded through your browser. You will receive an error message like this: `'xxxx' cannot be opened, because the developer cannot be verified`.
 
-To avoid this error message open your Terminal App. Click on the small magnifying glass icon in your menu bar in the top right corner (or press <key>Command (⌘)</key>+<key>Space</key>). Search for `Terminal` and open the application.
+To avoid this error message open your Terminal App. Click on the small magnifying glass icon in your menu bar at the top right corner (or press <key>Command (⌘)</key>+<key>Space</key>). Search for `Terminal` and open the application.
 
 In the Terminal enter the following command:
 
@@ -89,3 +89,40 @@ Then, proceed as above.
 {: .notice--info }
 
 <p class="notice--info" style="margin-top: -3.5em !important;">Or watch the project on GitHub:<br /><iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=inkstitch&repo=inkstitch&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe></p>
+
+## Troubleshoot
+
+### Ink/Stitch doesn't run / is greyed out
+
+**Confirm installation path**
+
+Check if files were possibly extracted into a *sub-directory*.
+You should see a lot of files starting with "inkstitch" **directly** inside the extension folder, beside of one folder called "inkstitch".
+
+**Confirm version**
+
+Please verify if you have downloaded Ink/Stitch for macOS ([Download](#download)).
+
+### 'xxxx' cannot be opened, because the developer cannot be verified
+
+Read ["Additional Steps for Catalina and Big Sur"](#addtitional-steps-for-catalina--big-sur).
+
+### I installed Ink/Stitch in my native language, but the dialogue windows are displayed in English
+
+**Incomplete Translation**
+
+It is possible, that not all strings have been translated. This is indicated by **some strings of text beeing in English and others in your native language**.
+If you like to complete the translation, have a look at our [description for translators](/developers/localize/).
+
+**Language Settings**
+
+We have to distinguish between the Extension menu in Inkscape and the dialogue windows.
+The selection of the ZIP file causes only the Extension menu to be in a certain language.
+The dialgoue windows are build differently. They will use the language of your operating system.
+If Ink/Stitch is uncertain, which language to support, it will fallback on English.
+You can tell Inkscape explicitly to use your native language as follows:
+  * Go to Edit > Preferences > Interface (Ctrl + Shift + P)
+  * Set your language
+  * Restart Inkscape
+
+![Preferences > Interface](/assets/images/docs/en/preferences_language.png)

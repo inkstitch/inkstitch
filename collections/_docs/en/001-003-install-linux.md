@@ -11,7 +11,7 @@ We also provide beginner tutorial videos on our <i class="fab fa-youtube"></i> [
 
 ## Requirements
 
-* [Inkscape](https://inkscape.org/) Version 0.92.2 or higher (including [Inkscape](https://inkscape.org/release/inkscape-1.0/?latest=1) Version 1.0 RC)
+* [Inkscape](https://inkscape.org/) Version 0.92.2 or higher (including [Inkscape](https://inkscape.org/release/inkscape-1.0/?latest=1) Version 1.0.1)
 
 That's it!  All python libraries and external dependencies are bundled (using the excellent [pyinstaller](http://www.pyinstaller.org)), so you shouldn't need to set anything else up.
 
@@ -26,6 +26,8 @@ Download the release archive for your prefered language.
 
 ### Extract Files
 Go to `Edit > Preferences > System` (Inkscape 0.9) or `Inkscape > Preferences > System` (Inkscape 1.0) and check where your `User Extensions` folder is.
+
+![Extensions folder location](/assets/images/docs/en/extensions-folder-location-linux.jpg)
 
 Extract the Ink/Stitch archive **directly** into this folder.
 
@@ -55,3 +57,46 @@ Then, proceed as above.
 {: .notice--info }
 
 <p class="notice--info" style="margin-top: -3.5em !important;">Or watch the project on GitHub:<br /><iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=inkstitch&repo=inkstitch&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe></p>
+
+## Troubleshoot
+
+### Ink/Stitch doesn't run / is greyed out
+
+**Confirm installation path**
+
+Check if files were possibly extracted into a *sub-directory*.
+You should see a lot of files starting with "inkstitch" **directly** inside the extension folder, beside of one folder called "inkstitch".
+
+**Confirm Ink/Stitch Version**
+
+Verify if you have downloaded Ink/Stitch for Linux ([Download](#download))
+
+**Confirm ownership/permissions**
+
+Some users report false ownership/permissions can cause this issue.
+
+### Ink/Stitch dialogues disappear after a few seconds
+
+This issue can be caused by wayland. Start Inkscape with the following command: `export GDK_BACKEND=x11 && inkscape`.
+
+This workaround has to be used until we moved all Ink/Stitch applications to the electron environment. 
+
+### I installed Ink/Stitch in my native language, but the dialogue windows are displayed in English
+
+**Incomplete Translation**
+
+It is possible, that not all strings have been translated. This is indicated by **some strings of text beeing in English and others in your native language**.
+If you like to complete the translation, have a look at our [description for translators](/developers/localize/).
+
+**Language Setting**
+
+We have to distinguish between the Extension menu in Inkscape and the dialogue windows.
+The selection of the ZIP file causes only the Extension menu to be in a certain language.
+The dialgoue windows are build differently. They will use the language of your operating system.
+If Ink/Stitch is uncertain, which language to support, it will fallback on English.
+You can tell Inkscape explicitly to use your native language as follows:
+  * Go to Edit > Preferences > Interface (Ctrl + Shift + P)
+  * Set your language
+  * Restart Inkscape
+
+![Preferences > Interface](/assets/images/docs/en/preferences_language.png)

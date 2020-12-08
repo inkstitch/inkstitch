@@ -20,7 +20,7 @@ That's it!  All python libraries and external dependencies are bundled (using th
 ### Download
 Download the release archive in your prefered language:
 
-<i class="fa fa-download " ></i> [Englisch]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-en_US.zip) <i class="fa fa-download " ></i> [Finnish]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-fi_FI.zip), <i class="fa fa-download " ></i> [French]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-fr_FR.zip) <i class="fa fa-download " ></i> [German]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-de_DE.zip) <i class="fa fa-download " ></i> [Italian]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-it_IT.zip)
+<i class="fa fa-download " ></i> [Englisch]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-en_US.zip) <i class="fa fa-download " ></i> [Finnish]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-fi_FI.zip) <i class="fa fa-download " ></i> [French]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-fr_FR.zip) <i class="fa fa-download " ></i> [German]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-de_DE.zip) <i class="fa fa-download " ></i> [Italian]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-it_IT.zip)
 
 **Latest release:** {{ site.github.latest_release.published_at | date: "%Y-%m-%d"  }} [Ink/Stitch {{ site.github.latest_release.tag_name }}](https://github.com/inkstitch/inkstitch/releases/latest)
 
@@ -32,7 +32,7 @@ The `LOCALE` selected affects the menus shown inside Inkscape. Ink/Stitch dialog
 
 Go to `Edit > Preferences > System` (Inkscape 0.9) or `Inkscape > Preferences > System` (Inkscape 1.0) and check where your `User Extensions` folder is.
 
-![Preferences: Extensions Folder](/assets/images/docs/en/extensions-folder-localtion-mac.jpg)
+![Preferences: Extensions Folder](/assets/images/docs/en/extensions-folder-location-win.jpg)
 
 Your folder will most likely look like this `C:\Users\%USERNAME%\AppData\Roaming\inkscape\extensions`
 
@@ -58,3 +58,55 @@ Then, proceed as above.
 {: .notice--info }
 
 <p class="notice--info" style="margin-top: -3.5em !important;">Or watch the project on GitHub:<br /><iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=inkstitch&repo=inkstitch&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe></p>
+
+## Troubleshoot
+
+### Ink/Stitch doesn't show up / is greyed out
+
+**Confirm installation path**
+
+Check if files were possibly extracted into a *sub-directory*.
+You should see a lot of files starting with "inkstitch" **directly** inside the extension folder, beside of one folder called "inkstitch".
+
+**Antivirus Software**
+
+Since Ink/Stitch is packed into a executable there are reports of anti-virus-software using heuristics that mark the extension as a false positive. The solution in this cases is to add the Ink/Stitch extension folder to the exception list on the av program and reinstall the extension and try again.
+
+If your antivirus software deleted files, you will receive an error message like this:
+
+```
+Tried to launch: inkstitch\bin\inkstitch
+  Arguments: ['inkstitch\bin\inkstitch', '--id=XXX', '--extension=XXX', 'C:\Users\XXX\AppData\Local\Temp\ink_ext_XXXXXX.svgXXXXX']
+  Debugging information:
+
+Traceback (most recent call last):
+  File "inkstitch.py", line 35, in <module>
+    extension = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+  File "C:\Program Files\Inkscape\lib\python2.7/subprocess.py", line 325, in __init__ errread, errwrite)
+  File "C:\Program Files\Inkscape\lib\python2.7/subprocess.py", line 575, in _execute_child startupinfo)
+WindowsError: [Error 2] The system cannot find the file specified
+```
+
+**Confirm Ink/Stitch Version**
+
+Verify if you have downloaded Ink/Stitch for Windows ([Download](#download))
+
+### I installed Ink/Stitch in my native language, but the dialogue windows are displayed in English
+
+**Incomplete Translation**
+
+It is possible, that not all strings have been translated. This is indicated by **some strings of text beeing in English and others in your native language**.
+If you like to complete the translation, have a look at our [description for translators](/developers/localize/).
+
+**Language Settings**
+
+We have to distinguish between the Extension menu in Inkscape and the dialogue windows.
+The selection of the ZIP file causes only the Extension menu to be in a certain language.
+The dialgoue windows are build differently. They will use the language of your operating system.
+If Ink/Stitch is uncertain, which language to support, it will fallback on English.
+You can tell Inkscape explicitly to use your native language as follows:
+  * Go to Edit > Preferences > Interface (Ctrl + Shift + P)
+  * Set your language
+  * Restart Inkscape
+
+![Preferences > Interface](/assets/images/docs/en/preferences_language.png)

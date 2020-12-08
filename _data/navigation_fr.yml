@@ -46,10 +46,17 @@ pages:
 
 # documentation links
 docs:
+  - title: Installation / mise à jour
+    url: /fr/docs/install/
+    children:
+      - title: Windows
+        url: /fr/docs/install-windows/
+      - title: macOS
+        url: /fr/docs/install-macos/
+      - title: Linux
+        url: /fr/docs/install-linux/
   - title: Commencer
     children:
-      - title: "Installation / mise à jour"
-        url: /fr/docs/install/
       - title: "Personnaliser"
         url: /fr/docs/customize/
       - title: "Premiers pas"
