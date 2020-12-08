@@ -316,6 +316,10 @@ table tr td:first-child {
       display: inline-block;
       padding-left: 1em;
   }
+  
+  .sidebar.sticky {
+      max-height: none;
+  }
 
   
 /* Tutorials */
