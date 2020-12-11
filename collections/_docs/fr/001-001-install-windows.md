@@ -41,6 +41,8 @@ Décompressez l'archive Ink/Stitch **directement** dans ce dossier.
 Ce dossier doit présenter une structure semblable à l'exemple ci-dessous (avec juste un tas de fichiers en plus):
 ![File Structure](/assets/images/docs/en/file_structure.png)
 
+### Exécuter Ink/Stitch
+
 Redémarrez Inkscape.
 
 Vous trouverez alors Ink/Stitch sous `Extensions > Ink/Stitch`.
