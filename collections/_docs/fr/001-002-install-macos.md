@@ -122,10 +122,10 @@ Si vous avez des signes diacritiques dans votre nom d'utilisateur, essayez le ch
     WindowsError: [Error 2] The system cannot find the file specified
     ```
 
-### I installed Ink/Stitch but the menu is greyed out (disabled)
+### J'ai installé Ink/Stitch mais le menu est grisé (désactivé)
 
-This is often the case, if the wrong Ink/Stitch version has been installed.
-Please verify if you have downloaded the correct Ink/Stitch version for your operating system.
+C'est souvent le cas si la mauvaise version Ink / Stitch a été installée.
+Veuillez vérifier si vous avez téléchargé la bonne version Ink / Stitch pour votre système d'exploitation.
 
 ### J'ai installé Ink / Stitch dans ma langue maternelle, mais les fenêtres de dialogue sont affichées en anglais!
 
