@@ -45,7 +45,7 @@ Le `LOCALE` sélectionné affecte les menus à l'intérieur d'Inkscape. Les dial
 ### Installation
 Dans Inkscape, allez à  `Edition > Préferences > Systeme` et cherchez dans ce tableau où se trouve votre dossier `Extensions utilisateur`.
 
-![Extensions folder](/assets/images/docs/fr/extensions-folder-location-macos.jpg)
+![Extensions Utilisateur](/assets/images/docs/fr/extensions-folder-location-macos.jpg)
 
 Décompressez l'archive Ink/Stitch **directement** dans ce dossier.
 
@@ -56,21 +56,21 @@ Redémarrez Inkscape.
 
 Vous trouverez alors Ink/Stitch sous `Extensions > Ink/Stitch`.
 
-### Addtitional Steps for Catalina / Big Sur
+### Etapes additionnelles pour Catalina / Big Sur
 
-Newer macOS versions will complain about Ink/Stitch if it is downloaded through your browser. You will receive an error message like this: `'xxxx' cannot be opened, because the developer cannot be verified`.
+Les nouvelles versions de macOS n’accepteront pas Ink / Stitch s'il est téléchargé via votre navigateur. Vous recevrez un message d'erreur comme celui-ci: `impossible d'ouvrir'xxxx' carle développeur ne peut pas être vérifié`.
 
-To avoid this error message open your Terminal App. Click on the small magnifying glass icon in your menu bar at the top right corner (or press <key>Command (⌘)</key>+<key>Space</key>). Search for `Terminal` and open the application.
+Pour éviter ce message d'erreur, ouvrez votre application Terminal. Cliquez sur la petite icône en forme de loupe dans votre barre de menu dans le coin supérieur droit (ou appuyez <key>Commande (⌘)</key>+<key>Espace</key>). Cherchez `Terminal` et ouvrez l'application.
 
-In the Terminal enter the following command:
+Dans le terminal, entrez la commande suivante:
 
 ```
 xattr -r -d com.apple.quarantine ~/Library/Application\ Support/org.inkscape.Inkscape/config/inkscape/extensions/
 ```
 
-Replace `~/Library/Application\ Support/org.inkscape.Inkscape/config/inkscape/extensions/` if your Inkscape extension folder path has an other location (verify through `Inkscape > Preferences > System`).
+Remplacer `~/Library/Application\ Support/org.inkscape.Inkscape/config/inkscape/extensions/` si le chemin de votre dossier d'extension Inkscape a un autre emplacement (vérifiez dans `Inkscape > Preferences > System>Extension Utilisateur`).
 
-Users of **Big Sur** will need to do one further step to complete the installation:
+Les utilisateurs de **Big Sur** devront faire une étape supplémentaire pour terminer l'installation
 
 ```
 cd ~/Library/Application\ Support/org.inkscape.Inkscape/config/inkscape/extensions/
