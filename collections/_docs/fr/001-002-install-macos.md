@@ -77,6 +77,12 @@ cd ~/Library/Application\ Support/org.inkscape.Inkscape/config/inkscape/extensio
 cd inkstitch/bin
 ln -s libpython2.7.dylib libc.dylib
 ```
+### Exécuter Ink/Stitch
+
+Relancer Inkscape.
+
+Vous trouverez alors Ink/Stitch dans `Extensions > Ink/Stitch`.
+
 
 ## Mise à jour
 
