@@ -2,7 +2,7 @@
 title: "Install Ink/Stitch"
 permalink: /fr/docs/install-linux/
 excerpt: "How to quickly install Ink/Stitch."
-last_modified_at: 2020-03-01
+last_modified_at: 2020-12-11
 toc: true
 ---
 ## Guide vidéo
@@ -47,6 +47,68 @@ Ce dossier doit présenter une structure semblable à l'exemple ci-dessous (avec
 Redémarrez Inkscape.
 
 Vous trouverez alors Ink/Stitch sous `Extensions > Ink/Stitch`.
+
+## Installation Ink/Stitch
+
+### J'ai téléchargé et décompressé la [dernière version](https://github.com/inkstitch/inkstitch/releases/latest). Où je la mets?
+
+Dans Inkscape ouvrir: `Edition > Preferences > System` et vérifier les chemins pour les extensions.
+
+![image](https://user-images.githubusercontent.com/11083514/37572872-899a7de0-2b09-11e8-93ed-e4be6228c414.png)
+
+Vous devriez de préférence installer dans **USER EXTENSIONS**, car cela facilitera la mise à jour ultérieure.
+
+Si vous avez des signes diacritiques dans votre nom d'utilisateur, essayez le chemin d'accès de **INKSCAPE EXTENSIONS** si vous rencontrez des difficultés pour exécuter Ink/Stitch.
+
+### Ink/Stitch ne fonctionne pas!
+
+*   **Confirmer le chemin d'installation**<br>
+    Vérifier si des fichiers ont éventuellement été extraits dans un *sous-dossier*.
+   Vous devriez voir beaucoup de fichiers commençant par "inkstitch" **directement** dans le dossier d'extensions, à côté d'un dossier appelé "inkstitch".
+
+*   **Windows Anti-Virus**<br>
+    Ceci est plus susceptible de se produire sous Windows, car python est condensé dans un exécutable,
+    des rapports de logiciels antivirus utilisant des méthodes heuristiques cela marque l'extension comme un faux positif.
+    Dans ce cas, la solution consiste à ajouter le dossier d’extensions Ink/Stitch à la liste des exceptions de l'antivirus. puis réinstaller l’extension et réessayer.
+
+    Si votre logiciel antivirus a supprimé des fichiers, vous recevrez le message d'erreur suivant:
+    ```
+    Tried to launch: inkstitch\bin\inkstitch
+    Arguments: ['inkstitch\bin\inkstitch', '--id=XXX', '--extension=XXX', 'C:\Users\XXX\AppData\Local\Temp\ink_ext_XXXXXX.svgXXXXX']
+    Debugging information:
+
+    Traceback (most recent call last):
+      File "inkstitch.py", line 35, in <module>
+        extension = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+      File "C:\Program Files\Inkscape\lib\python2.7/subprocess.py", line 325, in __init__
+        errread, errwrite)
+      File "C:\Program Files\Inkscape\lib\python2.7/subprocess.py", line 575, in _execute_child
+        startupinfo)
+    WindowsError: [Error 2] The system cannot find the file specified
+    ```
+
+### J'ai installé Ink/Stitch mais le menu est grisé (désactivé)
+
+C'est souvent le cas si la mauvaise version Ink / Stitch a été installée.
+Veuillez vérifier si vous avez téléchargé la bonne version Ink / Stitch pour votre système d'exploitation.
+
+### J'ai installé Ink / Stitch dans ma langue maternelle, mais les fenêtres de dialogue sont affichées en anglais!
+
+Premièrement, il est possible que toutes les chaînes n'aient pas été traduites. Ceci est indiqué par **certaines chaînes de texte en anglais et d'autres dans votre langue maternelle**.
+
+Si vous souhaitez terminer la traduction, consultez notre [description pour les traducteurs](/developers/localize/).
+
+Ensuite, nous devons faire la distinction entre le menu Extension dans Inkscape et les fenêtres de dialogue.
+La sélection du fichier ZIP a pour seule conséquuence la traduction du menu Extension dans une certaine langue.
+Les fenêtres de dialogue sont construites différemment. Elles utiliseront la langue de votre système d'exploitation.
+Si Ink/Stitch n'est pas sûr de la langue à prendre en charge, il retombera sur l'anglais.
+Vous pouvez indiquer explicitement à Inkscape d'utiliser votre langue maternelle comme suit:
+  * Aller à Edition > Preferences > Interface (Ctrl + Shift + P)
+  * choisissez votre langue
+  * Redémarrer Inkscape
+
+![Preferences > Interface](/assets/images/docs/fr/preferences_language.png)
+
 
 ## Mise à jour
 
