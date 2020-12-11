@@ -16,7 +16,7 @@ Nous fournissons aussi aux débutants des tutoriels vidéo sur notre <i class="f
 
 ## Prérequis
 
-* [Inkscape](https://inkscape.org/) Version 0.92.2 ou supérieure
+* [Inkscape](https://inkscape.org/) Version 0.92.2 jusquà Mojave, 1.0.1 à partir de Catalina
 
 C'est tout! Toutes les librairies python et dépendances externes sont incluses (en utilisant l'excellent [pyinstaller](http://www.pyinstaller.org)), de sorte que vous ne devriez pas avoir quoi que ce soit d'autre à installer.
 
