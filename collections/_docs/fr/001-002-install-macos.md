@@ -11,7 +11,7 @@ Nous fournissons aussi aux débutants des tutoriels vidéo sur notre <i class="f
 
 * <i class="fab fa-apple"></i> [macOS](https://www.youtube.com/watch?v=gmOVLNh9cu8&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=3)
 
-**Warning:** The video for macOS users is outdated. Please read updated info ["Additional Steps for Catalina and Big Sur"](#addtitional-steps-for-catalina--big-sur)
+**Warning:** La vidéo pour les utilisteurs de Mac est obsolète. Lisez la mise à jour des infos ["Etapes additionnelles pour Catalina / Big Sur"](#addtitional-steps-for-catalina--big-sur)
 {: .notice--warning }
 
 ## Prérequis
