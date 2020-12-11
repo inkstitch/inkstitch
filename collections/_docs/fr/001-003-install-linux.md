@@ -44,6 +44,8 @@ $ unzip ~/Downloads/inkstitch-{{ site.github.latest_release.tag_name }}-linux-fr
 Ce dossier doit présenter une structure semblable à l'exemple ci-dessous (avec juste un tas de fichiers en plus):
 ![File Structure](/assets/images/docs/en/file_structure.png)
 
+### Exécuter Ink/Stitch
+
 Redémarrez Inkscape.
 
 Vous trouverez alors Ink/Stitch sous `Extensions > Ink/Stitch`.
