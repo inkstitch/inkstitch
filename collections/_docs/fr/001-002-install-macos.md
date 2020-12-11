@@ -2,7 +2,7 @@
 title: "Install Ink/Stitch"
 permalink: /fr/docs/install-macos/
 excerpt: "How to quickly install Ink/Stitch."
-last_modified_at: 2020-03-01
+last_modified_at: 2020-12-11
 toc: true
 ---
 ## Guide vidéo
@@ -11,7 +11,7 @@ Nous fournissons aussi aux débutants des tutoriels vidéo sur notre <i class="f
 
 * <i class="fab fa-apple"></i> [macOS](https://www.youtube.com/watch?v=gmOVLNh9cu8&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=3)
 
-**Warning:** La vidéo pour les utilisteurs de Mac est obsolète. Lisez la mise à jour des infos ["Etapes additionnelles pour Catalina / Big Sur"](#addtitional-steps-for-catalina--big-sur)
+**Attention:** La vidéo pour les utilisteurs de Mac est obsolète. Lisez la mise à jour des infos ["Etapes additionnelles pour Catalina / Big Sur"](#addtitional-steps-for-catalina--big-sur)
 {: .notice--warning }
 
 ## Prérequis
@@ -58,7 +58,7 @@ Vous trouverez alors Ink/Stitch sous `Extensions > Ink/Stitch`.
 
 ### Etapes additionnelles pour Catalina / Big Sur
 
-Les nouvelles versions de macOS n’accepteront pas Ink / Stitch s'il est téléchargé via votre navigateur. Vous recevrez un message d'erreur comme celui-ci: `impossible d'ouvrir'xxxx' carle développeur ne peut pas être vérifié`.
+Les nouvelles versions de macOS n’accepteront pas Ink / Stitch s'il est téléchargé via votre navigateur. Vous recevrez un message d'erreur comme celui-ci: `impossible d'ouvrir'Inkstitch' car le développeur ne peut pas être vérifié`.
 
 Pour éviter ce message d'erreur, ouvrez votre application Terminal. Cliquez sur la petite icône en forme de loupe dans votre barre de menu dans le coin supérieur droit (ou appuyez <key>Commande (⌘)</key>+<key>Espace</key>). Cherchez `Terminal` et ouvrez l'application.
 
