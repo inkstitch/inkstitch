@@ -107,6 +107,12 @@ Please verify if you have downloaded Ink/Stitch for macOS ([Download](#download)
 
 Read ["Additional Steps for Catalina and Big Sur"](#addtitional-steps-for-catalina--big-sur).
 
+### ValueError: Null geometry supports no operations
+
+Ink/Stitch on macOS (Catalina) could raise the following error message:  `[...] ValueError: Null geometry supports no operations`.
+
+It was reported to us, that removing the file `inkstitch/bin/shapely.speedups._speedups.so` has been successfull in order to bring Ink/Stitch to work properly.
+
 ### I installed Ink/Stitch in my native language, but the dialogue windows are displayed in English
 
 **Incomplete Translation**

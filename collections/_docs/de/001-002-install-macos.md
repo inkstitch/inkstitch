@@ -114,6 +114,12 @@ Einige Nutzer berichten, dass falsche Nutzereinstellungen, bzw. Nutzerrechte der
 
 In der Installationsbeschreibung haben wir unter ["Zusätzliche Installationsschritte für Catalina und Bg Sur"](#zusätzliche-schritte-für-catalina--big-sur) notwenige Schritte zur Beseitigung dieser Fehlermeldung zusammengefasst.
 
+### ValueError: Null geometry supports no operations
+
+Ink/Stitch mit macOS (Catalina) kann folgende Fehlermeldung hervorrufen:  `[...] ValueError: Null geometry supports no operations`.
+
+Es wurde uns berichtet, dass die Entfernung der Datei `inkstitch/bin/shapely.speedups._speedups.so` das Problem erfolgreich beseitigt hat.
+
 ### Ich habe Ink/Stitch in meiner Muttersprache installiert, aber die Dialog-Fenster sind englisch
 
 **Unvollständige Übersetzung**
