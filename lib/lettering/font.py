@@ -114,12 +114,12 @@ class Font(object):
     max_scale = font_metadata('max_scale', 1.0)
 
     # Version 2 : For use values ​​from SVG Font, exemple <font horiz-adv-x="45" ...  <glyph .... horiz-adv-x="49" glyph-name="A" /> ... <hkern ... k="3"g1="A" g2="B" /> .... />
-    version = font_metadata('version', '') # Exemple font.json : "version":"2"
-    kerning_pairs_px = font_metadata('kerning_pairs_px', {}) #Exemple font.json : "kerning_pairs_px": {"AB":3},
-    horiz_adv_x = font_metadata('horiz_adv_x', {}) # Exemple font.json : "horiz_adv_x": {"A":49},
-    horiz_adv_x_default = font_metadata('horiz_adv_x_default', 0) # Exemple font.json : "horiz_adv_x_default" : 45,
+    version = font_metadata('version', '') # Example font.json : "version":"2"
+    kerning_pairs_px = font_metadata('kerning_pairs_px', {}) #Example font.json : "kerning_pairs_px": {"AB":3},
+    horiz_adv_x = font_metadata('horiz_adv_x', {}) # Example font.json : "horiz_adv_x": {"A":49},
+    horiz_adv_x_default = font_metadata('horiz_adv_x_default', 0) # Example font.json : "horiz_adv_x_default" : 45,
     if self.version == "2":
-        word_spacing = font_metadata('horiz_adv_x_space', 0) # Define by <glyph glyph-name="space" unicode=" " horiz-adv-x="22" />, Exemple font.json : "horiz_adv_x_space":22,
+        word_spacing = font_metadata('horiz_adv_x_space', 0) # Define by <glyph glyph-name="space" unicode=" " horiz-adv-x="22" />, Example font.json : "horiz_adv_x_space":22,
 
     @property
     def id(self):
