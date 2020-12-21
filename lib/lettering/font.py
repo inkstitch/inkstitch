@@ -107,7 +107,6 @@ class Font(object):
     default_glyph = font_metadata('defalt_glyph', u"�")
     letter_spacing = font_metadata('letter_spacing', 1.5, multiplier=PIXELS_PER_MM)
     leading = font_metadata('leading', 5, multiplier=PIXELS_PER_MM)
-    word_spacing = font_metadata('word_spacing', 3, multiplier=PIXELS_PER_MM)
     kerning_pairs = font_metadata('kerning_pairs', {})
     auto_satin = font_metadata('auto_satin', True)
     min_scale = font_metadata('min_scale', 1.0)
@@ -118,8 +117,7 @@ class Font(object):
     kerning_pairs_px = font_metadata('kerning_pairs_px', {}) #Example font.json : "kerning_pairs_px": {"AB":3},
     horiz_adv_x = font_metadata('horiz_adv_x', {}) # Example font.json : "horiz_adv_x": {"A":49},
     horiz_adv_x_default = font_metadata('horiz_adv_x_default', 0) # Example font.json : "horiz_adv_x_default" : 45,
-    if self.version == "2":
-        word_spacing = font_metadata('horiz_adv_x_space', 0) # Define by <glyph glyph-name="space" unicode=" " horiz-adv-x="22" />, Example font.json : "horiz_adv_x_space":22,
+    word_spacing = font_metadata('horiz_adv_x_space', 0) # Define by <glyph glyph-name="space" unicode=" " horiz-adv-x="22" />, Example font.json : "horiz_adv_x_space":22,
     reversible_font = font_metadata('reversible_font', True) #  TODO : How disabled checkbox back_and_forth_checkbox (lettering.py) when reversible_font=false ?
 
 
