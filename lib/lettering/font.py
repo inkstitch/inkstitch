@@ -112,14 +112,18 @@ class Font(object):
     min_scale = font_metadata('min_scale', 1.0)
     max_scale = font_metadata('max_scale', 1.0)
 
-    # Version 2 : For use values ​​from SVG Font, exemple:
+    # use values from SVG Font, exemple:
     # <font horiz-adv-x="45" ...  <glyph .... horiz-adv-x="49" glyph-name="A" /> ... <hkern ... k="3"g1="A" g2="B" /> .... />
-    version = font_metadata('version', '')  # Example font.json : "version":"2"
-    kerning_pairs_px = font_metadata('kerning_pairs_px', {})  # Example font.json : "kerning_pairs_px": {"AB":3},
-    horiz_adv_x = font_metadata('horiz_adv_x', {})  # Example font.json : "horiz_adv_x": {"A":49},
-    horiz_adv_x_default = font_metadata('horiz_adv_x_default', 0)  # Example font.json : "horiz_adv_x_default" : 45,
+
+    # Example font.json : "horiz_adv_x": {"A":49},
+    horiz_adv_x = font_metadata('horiz_adv_x', {})
+
+    # Example font.json : "horiz_adv_x_default" : 45,
+    horiz_adv_x_default = font_metadata('horiz_adv_x_default', 0)
+
     # Define by <glyph glyph-name="space" unicode=" " horiz-adv-x="22" />, Example font.json : "horiz_adv_x_space":22,
     word_spacing = font_metadata('horiz_adv_x_space', 0)
+
     # TODO : How disabled checkbox back_and_forth_checkbox (lettering.py) when reversible_font=false ?
     reversible_font = font_metadata('reversible_font', True)
 
@@ -217,17 +221,11 @@ class Font(object):
 
         node = deepcopy(glyph.node)
         if last_character is not None:
-            if self.version == "2":
-                position.x += glyph.min_x - self.kerning_pairs_px.get(last_character + character, 0)
-            else:
-                position.x += self.letter_spacing + self.kerning_pairs.get(last_character + character, 0) * PIXELS_PER_MM
+            position.x += glyph.min_x - self.kerning_pairs.get(last_character + character, 0)
 
         transform = "translate(%s, %s)" % position.as_tuple()
         node.set('transform', transform)
-        if self.version == "2":
-            position.x += self.horiz_adv_x.get(character, self.horiz_adv_x_default) - glyph.min_x
-        else:
-            position.x += glyph.width
+        position.x += self.horiz_adv_x.get(character, self.horiz_adv_x_default) - glyph.min_x
 
         return node
 
