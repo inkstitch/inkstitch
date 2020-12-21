@@ -147,7 +147,7 @@ jobs:
           # for msgfmt
           echo "/usr/local/opt/gettext/bin" >> $GITHUB_PATH
 
-          echo "::set-env name=GI_TYPELIB_PATH::/usr/local/lib/girepository-1.0/"
+          echo "GI_TYPELIB_PATH=/usr/local/lib/girepository-1.0/" >> $GITHUB_ENV
 
           pip --version
           pip install PyGObject
@@ -179,29 +179,29 @@ jobs:
         run: |
           if [[ "${GITHUB_REF}" =~ ^refs/tags/v[0-9.]+$ ]]; then
             tag="${GITHUB_REF#refs/tags/}"
-            echo "::set-env name=release_tag::${tag}"
-            echo "::set-env name=prerelease::false"
-            echo "::set-env name=title::${tag}"
+            echo "release_tag=${tag}" >> $GITHUB_ENV
+            echo "prerelease=false" >> $GITHUB_ENV
+            echo "title=${tag}" >> $GITHUB_ENV
           else
             branch="${GITHUB_REF#refs/heads/}"
             tag="dev-build-$(echo $branch | tr / -)"
-            echo "::set-env name=release_tag::${tag}"
-            echo "::set-env name=prerelease::true"
-            echo "::set-env name=title::development build of $branch"
+            echo "release_tag=${tag}" >> $GITHUB_ENV
+            echo "prerelease=true" >> $GITHUB_ENV
+            echo "title=development build of $branch" >> $GITHUB_ENV
           fi
       - name: download linux
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v2
         with:
           name: 'inkstitch-linux'
           path: 'artifacts/'
       - name: download windows
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v2
         with:
           name: 'inkstitch-windows'
           path: 'artifacts/'
         if: always()
       - name: download mac
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v2
         with:
           name: 'inkstitch-mac'
           path: 'artifacts/'
