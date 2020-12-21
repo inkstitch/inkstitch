@@ -173,6 +173,12 @@ class LetteringFrame(wx.Frame):
         font = self.fonts.get(self.font_chooser.GetValue(), self.default_font)
         self.settings.font = font.id
         self.scale_spinner.SetRange(int(font.min_scale * 100), int(font.max_scale * 100))
+
+        if font.reversible:
+            self.back_and_forth_checkbox.Enable()
+        else:
+            self.back_and_forth_checkbox.Disable()
+
         self.update_preview()
 
     def update_preview(self, event=None):

@@ -124,8 +124,7 @@ class Font(object):
     # Define by <glyph glyph-name="space" unicode=" " horiz-adv-x="22" />, Example font.json : "horiz_adv_x_space":22,
     word_spacing = font_metadata('horiz_adv_x_space', 0)
 
-    # TODO : How disabled checkbox back_and_forth_checkbox (lettering.py) when reversible_font=false ?
-    reversible_font = font_metadata('reversible_font', True)
+    reversible = font_metadata('reversible', True)
 
     @property
     def id(self):
@@ -138,7 +137,7 @@ class Font(object):
         if variant is None:
             variant = self.default_variant
 
-        if back_and_forth and self.reversible_font:
+        if back_and_forth and self.reversible:
             glyph_sets = [self.get_variant(variant), self.get_variant(FontVariant.reversed_variant(variant))]
         else:
             glyph_sets = [self.get_variant(variant)] * 2
