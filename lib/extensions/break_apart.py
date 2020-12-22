@@ -134,12 +134,22 @@ class BreakApart(InkstitchExtension):
             if polygons[0].area < 5:
                 continue
             el = copy(element.node)
+
+            # Set fill-rule to evenodd
+            style = el.get('style', '').split(';')
+            style = [s for s in style if not s.startswith('fill-rule')]
+            style.append('fill-rule:evenodd;')
+            style = ';'.join(style)
+            el.set('style', style)
+
+            # update element id
+            if len(polygon_list) > 1:
+                node_id = self.uniqueId(el.get('id') + '_')
+                el.set('id', node_id)
+
+            # Set path
             d = ""
             for polygon in polygons:
-                # update element id
-                if len(polygon_list) > 1:
-                    node_id = self.uniqueId(el.get('id') + '_')
-                    el.set('id', node_id)
                 d += "M"
                 for x, y in polygon.exterior.coords:
                     d += "%s,%s " % (x, y)
