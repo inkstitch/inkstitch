@@ -53,6 +53,7 @@ class FontVariant(object):
 
     def _load_glyphs(self):
         svg_path = os.path.join(self.path, u"%s.svg" % self.variant)
+        #TODO : How to do ? If the variant file does not exist, take left to right by default 
         with open(svg_path) as svg_file:
             svg = inkex.etree.parse(svg_file)
 
