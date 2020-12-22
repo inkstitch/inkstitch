@@ -119,7 +119,7 @@ class Font(object):
     horiz_adv_x = font_metadata('horiz_adv_x', {})
 
     # Example font.json : "horiz_adv_x_default" : 45,
-    horiz_adv_x_default = font_metadata('horiz_adv_x_default', 0)
+    horiz_adv_x_default = font_metadata('horiz_adv_x_default')
 
     # Define by <glyph glyph-name="space" unicode=" " horiz-adv-x="22" />, Example font.json : "horiz_adv_x_space":22,
     word_spacing = font_metadata('horiz_adv_x_space', 0)
@@ -218,13 +218,21 @@ class Font(object):
                               we're at the start of the line or a word.
         """
 
+        #Concerning min_x: I add it before moving the letter because it is to take into account the margin in the drawing of the letter. With respect to point 0 the letter can start at 5 or -5. The letters have a defined place in the drawing that's important.
+        #Then to calculate the position of x for the next letter I have to remove the min_x margin because the horizontal adv is calculated from point 0 of the drawing.
+
         node = deepcopy(glyph.node)
         if last_character is not None:
             position.x += glyph.min_x - self.kerning_pairs.get(last_character + character, 0)
 
         transform = "translate(%s, %s)" % position.as_tuple()
         node.set('transform', transform)
-        position.x += self.horiz_adv_x.get(character, self.horiz_adv_x_default) - glyph.min_x
+    
+        horiz_adv_x_default = self.horiz_adv_x_default
+        if horiz_adv_x_default is None:
+            horiz_adv_x_default = glyph.width + glyph.min_x 
+
+        position.x += self.horiz_adv_x.get(character, horiz_adv_x_default) - glyph.min_x
 
         return node
 
