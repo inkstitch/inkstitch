@@ -2,13 +2,9 @@
   "name": "Geneva Simple Sans Rounded",
   "description": "Suitable for small fonts (8 to 20 mm)",
   "leading": 16,
-  "letter_spacing": 2,
-  "word_spacing": 8,
+  "horiz_adv_x_space": 30,
   "auto_satin": true,
   "default_glyph": "�",
   "min_scale": 0.75,
-  "max_scale": 2.0,
-  "kerning_pairs": {
-    "wo": -0.9
-  }
+  "max_scale": 2.0
 }

@@ -95,6 +95,7 @@ class Font(object):
                     self.variants[variant] = FontVariant(self.path, variant, self.default_glyph)
                 except IOError:
                     # we'll deal with missing variants when we apply lettering
+                    #TODO If the variant does not exist, it is because the right-left file is identical to the left-right so take the non-variant. If the variant does not exist, it is because the right-left file is identical to the left-right so take the non-variant. Today the reverse direction does not work if the right-left file is not found. We should change that.
                     pass
 
     def _check_variants(self):
