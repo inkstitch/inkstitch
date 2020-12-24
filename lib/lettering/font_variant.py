@@ -1,9 +1,12 @@
 # -*- coding: UTF-8 -*-
 
 import os
+import sys
+
 import inkex
 import simplestyle
 
+from ..i18n import _
 from ..svg.tags import INKSCAPE_GROUPMODE, INKSCAPE_LABEL
 from .glyph import Glyph
 
@@ -53,7 +56,13 @@ class FontVariant(object):
 
     def _load_glyphs(self):
         svg_path = os.path.join(self.path, u"%s.svg" % self.variant)
-        #TODO : How to do ? If the variant file does not exist, take left to right by default 
+        # Fallback to LEFT_TO_RIGHT if variant doesn't exist
+        if not os.path.isfile(svg_path):
+            svg_path = os.path.join(self.path, u"→.svg")
+            if not os.path.isfile(svg_path):
+                invalid_font_mssg = _("The font doesn't seem to have a →.svg file.  "
+                                      "It is mandatory for the font to work.  Please update or delete this font.")
+                print >> sys.stderr, invalid_font_mssg
         with open(svg_path) as svg_file:
             svg = inkex.etree.parse(svg_file)
 
