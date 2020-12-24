@@ -95,7 +95,11 @@ class Font(object):
                     self.variants[variant] = FontVariant(self.path, variant, self.default_glyph)
                 except IOError:
                     # we'll deal with missing variants when we apply lettering
-                    #TODO If the variant does not exist, it is because the right-left file is identical to the left-right so take the non-variant. If the variant does not exist, it is because the right-left file is identical to the left-right so take the non-variant. Today the reverse direction does not work if the right-left file is not found. We should change that.
+                    # TODO If the variant does not exist, it is because the right-left
+                    # file is identical to the left-right so take the non-variant.
+                    # If the variant does not exist, it is because the right-left file is
+                    # identical to the left-right so take the non-variant. Today the reverse
+                    # direction does not work if the right-left file is not found. We should change that.
                     pass
 
     def _check_variants(self):
@@ -219,8 +223,12 @@ class Font(object):
                               we're at the start of the line or a word.
         """
 
-        #Concerning min_x: I add it before moving the letter because it is to take into account the margin in the drawing of the letter. With respect to point 0 the letter can start at 5 or -5. The letters have a defined place in the drawing that's important.
-        #Then to calculate the position of x for the next letter I have to remove the min_x margin because the horizontal adv is calculated from point 0 of the drawing.
+        # Concerning min_x: I add it before moving the letter because it is to
+        # take into account the margin in the drawing of the letter. With respect
+        # to point 0 the letter can start at 5 or -5. The letters have a defined
+        # place in the drawing that's important.
+        # Then to calculate the position of x for the next letter I have to remove
+        # the min_x margin because the horizontal adv is calculated from point 0 of the drawing.
 
         node = deepcopy(glyph.node)
         if last_character is not None:
@@ -228,10 +236,10 @@ class Font(object):
 
         transform = "translate(%s, %s)" % position.as_tuple()
         node.set('transform', transform)
-    
+
         horiz_adv_x_default = self.horiz_adv_x_default
         if horiz_adv_x_default is None:
-            horiz_adv_x_default = glyph.width + glyph.min_x 
+            horiz_adv_x_default = glyph.width + glyph.min_x
 
         position.x += self.horiz_adv_x.get(character, horiz_adv_x_default) - glyph.min_x
 

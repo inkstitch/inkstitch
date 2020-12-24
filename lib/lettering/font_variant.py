@@ -55,14 +55,10 @@ class FontVariant(object):
         self._load_glyphs()
 
     def _load_glyphs(self):
+        variants = self._validate_variant_paths()
+        if self.variant not in variants:
+            self.variant = variants[0]
         svg_path = os.path.join(self.path, u"%s.svg" % self.variant)
-        # Fallback to LEFT_TO_RIGHT if variant doesn't exist
-        if not os.path.isfile(svg_path):
-            svg_path = os.path.join(self.path, u"→.svg")
-            if not os.path.isfile(svg_path):
-                invalid_font_mssg = _("The font doesn't seem to have a →.svg file.  "
-                                      "It is mandatory for the font to work.  Please update or delete this font.")
-                print >> sys.stderr, invalid_font_mssg
         with open(svg_path) as svg_file:
             svg = inkex.etree.parse(svg_file)
 
@@ -72,6 +68,16 @@ class FontVariant(object):
             layer.attrib[INKSCAPE_LABEL] = layer.attrib[INKSCAPE_LABEL].replace("GlyphLayer-", "", 1)
             glyph_name = layer.attrib[INKSCAPE_LABEL]
             self.glyphs[glyph_name] = Glyph(layer)
+
+    def _validate_variant_paths(self):
+        variants = []
+        for variant in self.VARIANT_TYPES:
+            svg_path = os.path.join(self.path, "%s.svg" % variant)
+            if os.path.isfile(svg_path):
+                invalid_font_mssg = _("The font doesn't contain any variant files (such as →.svg).")
+                print >> sys.stderr, invalid_font_mssg
+                sys.exit(1)
+        return variants
 
     def _clean_group(self, group):
         # We'll repurpose the layer as a container group labelled with the
