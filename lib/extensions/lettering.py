@@ -174,15 +174,23 @@ class LetteringFrame(wx.Frame):
         self.settings.font = font.id
         self.scale_spinner.SetRange(int(font.min_scale * 100), int(font.max_scale * 100))
 
-        if font.reversible:
-            self.back_and_forth_checkbox.Enable()
-            self.back_and_forth_checkbox.SetValue(bool(self.settings.back_and_forth))
-        else:
-            self.back_and_forth_checkbox.Disable()
-            self.back_and_forth_checkbox.SetValue(False)
 
-        # TODO If the variant font file does not exist, uncheck back_and_forth_checkbox because
-        # it means the font has not been optimized for both directions.
+        #Update the back_and_forth checkbox according to the chosen font
+        if font.reversible:
+            #by default
+            self.back_and_forth_checkbox.Enable()
+            #TODO HERE :
+            #if (the reverse variant file does not exist for the variant):
+                #One svg variant file
+            #    self.back_and_forth_checkbox.SetValue(False)
+            #else:
+                #by default
+            #    self.back_and_forth_checkbox.SetValue(bool(self.settings.back_and_forth))
+        else:
+            #The creator of the font banned the possibility of writing in reverse with json file: "reversible": false
+            self.back_and_forth_checkbox.SetValue(False)
+            self.back_and_forth_checkbox.Disable() 
+
 
         self.update_preview()
 
