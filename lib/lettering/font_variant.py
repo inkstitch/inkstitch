@@ -78,7 +78,6 @@ class FontVariant(object):
         if len(variants) == 0:
             invalid_font_mssg = _("The font doesn't contain any variant files.  Please update or remove.")
             print >> sys.stderr, invalid_font_mssg
-            sys.exit(1)
         return variants
 
     def _clean_group(self, group):

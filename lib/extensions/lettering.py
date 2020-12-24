@@ -176,8 +176,10 @@ class LetteringFrame(wx.Frame):
 
         if font.reversible:
             self.back_and_forth_checkbox.Enable()
+            self.back_and_forth_checkbox.SetValue(bool(self.settings.back_and_forth))
         else:
             self.back_and_forth_checkbox.Disable()
+            self.back_and_forth_checkbox.SetValue(False)
 
         # TODO If the variant font file does not exist, uncheck back_and_forth_checkbox because
         # it means the font has not been optimized for both directions.
