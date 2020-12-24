@@ -74,7 +74,7 @@ class FontVariant(object):
         for variant in self.VARIANT_TYPES:
             svg_path = os.path.join(self.path, u"%s.svg" % variant)
             if os.path.isfile(svg_path):
-                invalid_font_mssg = _("The font doesn't contain any variant files (such as →.svg).")
+                invalid_font_mssg = _(u"The font doesn't contain any variant files.")
                 print >> sys.stderr, invalid_font_mssg
                 sys.exit(1)
         return variants
