@@ -72,7 +72,7 @@ class FontVariant(object):
     def _validate_variant_paths(self):
         variants = []
         for variant in self.VARIANT_TYPES:
-            svg_path = os.path.join(self.path, "%s.svg" % variant)
+            svg_path = os.path.join(self.path, u"%s.svg" % variant)
             if os.path.isfile(svg_path):
                 invalid_font_mssg = _("The font doesn't contain any variant files (such as →.svg).")
                 print >> sys.stderr, invalid_font_mssg
