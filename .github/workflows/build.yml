@@ -40,6 +40,9 @@ jobs:
           # for PyGObject
           sudo apt install libgirepository1.0-dev
 
+          # for shapely
+          sudo apt install libgeos-dev
+
           uname -a
           python --version
           python -m pip --version
