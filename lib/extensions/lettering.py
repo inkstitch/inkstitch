@@ -13,6 +13,7 @@ from ..elements import nodes_to_elements
 from ..gui import PresetsPanel, SimulatorPreview, SubtitleComboBox, info_dialog
 from ..i18n import _
 from ..lettering import Font, FontError
+from ..lettering.font_variant import FontVariant
 from ..svg import get_correction_transform
 from ..svg.tags import (INKSCAPE_LABEL, INKSTITCH_LETTERING, SVG_GROUP_TAG,
                         SVG_PATH_TAG)
@@ -179,8 +180,7 @@ class LetteringFrame(wx.Frame):
         available_variants = font.available_variants()
         if font.reversible:
             self.back_and_forth_checkbox.Enable()
-            # TODO replace u"←" with something more clever
-            if u"←" in available_variants:
+            if FontVariant.reversed_variant(font.default_variant) in available_variants:
                 self.back_and_forth_checkbox.SetValue(bool(self.settings.back_and_forth))
             else:
                 self.back_and_forth_checkbox.SetValue(False)
