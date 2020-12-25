@@ -1,8 +1,9 @@
 # -*- coding: UTF-8 -*-
 
-from copy import deepcopy
 import json
 import os
+import sys
+from copy import deepcopy
 
 import inkex
 
@@ -11,7 +12,7 @@ from ..exceptions import InkstitchException
 from ..i18n import _, get_languages
 from ..stitches.auto_satin import auto_satin
 from ..svg import PIXELS_PER_MM
-from ..svg.tags import SVG_GROUP_TAG, SVG_PATH_TAG, INKSCAPE_LABEL
+from ..svg.tags import INKSCAPE_LABEL, SVG_GROUP_TAG, SVG_PATH_TAG
 from ..utils import Point
 from .font_variant import FontVariant
 
@@ -94,6 +95,7 @@ class Font(object):
                 try:
                     self.variants[variant] = FontVariant(self.path, variant, self.default_glyph)
                 except IOError:
+                    # we'll deal with missing variants when we apply lettering
                     pass
 
     def _check_variants(self):
@@ -102,8 +104,7 @@ class Font(object):
 
     name = localized_font_metadata('name', '')
     description = localized_font_metadata('description', '')
-    default_variant = font_metadata('default_variant', FontVariant.LEFT_TO_RIGHT)
-    default_glyph = font_metadata('default_glyph', u"�")
+    default_glyph = font_metadata('default_glyph', "�")
     letter_spacing = font_metadata('letter_spacing', 1.5, multiplier=PIXELS_PER_MM)
     leading = font_metadata('leading', 5, multiplier=PIXELS_PER_MM)
     kerning_pairs = font_metadata('kerning_pairs', {})
@@ -129,6 +130,24 @@ class Font(object):
     def id(self):
         return os.path.basename(self.path)
 
+    @property
+    def default_variant(self):
+        # Set default variant to any existing variant if default font file is missing
+        default_variant = font_metadata('default_variant', FontVariant.LEFT_TO_RIGHT)
+        available_variants = self.available_variants()
+        if default_variant not in available_variants and len(available_variants) > 0:
+            default_variant = self.available_variants()[0]
+        return default_variant
+
+    def available_variants(self):
+        available_variants = []
+        for variant in FontVariant.VARIANT_TYPES:
+            if os.path.isfile(os.path.join(self.path, "%s.svg" % variant)):
+                available_variants.append(variant)
+        if len(available_variants) == 0:
+            print >> sys.stderr, _('Font "%s" has no font variant. Please update or remove the font.') % self.name
+        return available_variants
+
     def render_text(self, text, destination_group, variant=None, back_and_forth=True, trim=False):
         """Render text into an SVG group element."""
         self._load_variants()
@@ -147,7 +166,7 @@ class Font(object):
             line = line.strip()
 
             letter_group = self._render_line(line, position, glyph_set)
-            if glyph_set.variant == FontVariant.RIGHT_TO_LEFT:
+            if back_and_forth and self.reversible and i % 2 == 1:
                 letter_group[:] = reversed(letter_group)
             destination_group.append(letter_group)
 

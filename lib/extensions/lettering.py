@@ -1,21 +1,22 @@
 # -*- coding: UTF-8 -*-
 
-from base64 import b64encode, b64decode
 import json
 import os
 import sys
+from base64 import b64decode, b64encode
 
 import appdirs
 import inkex
 import wx
 
 from ..elements import nodes_to_elements
-from ..gui import PresetsPanel, SimulatorPreview, info_dialog, SubtitleComboBox
+from ..gui import PresetsPanel, SimulatorPreview, SubtitleComboBox, info_dialog
 from ..i18n import _
 from ..lettering import Font, FontError
 from ..svg import get_correction_transform
-from ..svg.tags import SVG_PATH_TAG, SVG_GROUP_TAG, INKSCAPE_LABEL, INKSTITCH_LETTERING
-from ..utils import get_bundled_dir, DotDict, cache
+from ..svg.tags import (INKSCAPE_LABEL, INKSTITCH_LETTERING, SVG_GROUP_TAG,
+                        SVG_PATH_TAG)
+from ..utils import DotDict, cache, get_bundled_dir
 from .commands import CommandsExtension
 
 
@@ -174,23 +175,19 @@ class LetteringFrame(wx.Frame):
         self.settings.font = font.id
         self.scale_spinner.SetRange(int(font.min_scale * 100), int(font.max_scale * 100))
 
-
-        #Update the back_and_forth checkbox according to the chosen font
+        # Update the back_and_forth checkbox according to the chosen font
+        available_variants = font.available_variants()
         if font.reversible:
-            #by default
             self.back_and_forth_checkbox.Enable()
-            #TODO HERE :
-            #if (the reverse variant file does not exist for the variant):
-                #One svg variant file
-            #    self.back_and_forth_checkbox.SetValue(False)
-            #else:
-                #by default
-            #    self.back_and_forth_checkbox.SetValue(bool(self.settings.back_and_forth))
+            # TODO replace u"←" with something more clever
+            if u"←" in available_variants:
+                self.back_and_forth_checkbox.SetValue(bool(self.settings.back_and_forth))
+            else:
+                self.back_and_forth_checkbox.SetValue(False)
         else:
-            #The creator of the font banned the possibility of writing in reverse with json file: "reversible": false
+            # The creator of the font banned the possibility of writing in reverse with json file: "reversible": false
             self.back_and_forth_checkbox.SetValue(False)
-            self.back_and_forth_checkbox.Disable() 
-
+            self.back_and_forth_checkbox.Disable()
 
         self.update_preview()
 
