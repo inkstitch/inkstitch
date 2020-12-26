@@ -45,7 +45,11 @@ def localized_font_metadata(name, default=None):
             # This may be a font packaged with Ink/Stitch, in which case the
             # text will have been sent to CrowdIn for community translation.
             # Try to fetch the translated version.
-            return _(self.metadata.get(name))
+            original_metadata = self.metadata.get(name)
+            localized_metadata = ""
+            if original_metadata != "":
+                localized_metadata = _(self.metadata.get(name))
+            return localized_metadata
         else:
             return default
 
