@@ -1,5 +1,7 @@
 import sys
 from copy import deepcopy
+from math import sqrt
+from re import findall
 
 import tinycss2
 
@@ -8,7 +10,8 @@ from cspsubdiv import cspsubdiv
 
 from ..commands import find_commands
 from ..i18n import _
-from ..svg import PIXELS_PER_MM, apply_transforms, convert_length, get_doc_size
+from ..svg import (PIXELS_PER_MM, apply_transforms, convert_length,
+                   get_node_transform)
 from ..svg.tags import (EMBROIDERABLE_TAGS, INKSCAPE_LABEL, INKSTITCH_ATTRIBS,
                         SVG_CIRCLE_TAG, SVG_ELLIPSE_TAG, SVG_GROUP_TAG,
                         SVG_OBJECT_TAGS, SVG_RECT_TAG, SVG_LINK_TAG)
@@ -186,15 +189,18 @@ class EmbroideryElement(object):
     @property
     @cache
     def stroke_scale(self):
-        svg = self.node.getroottree().getroot()
-        doc_width, doc_height = get_doc_size(svg)
-        # this is necessary for clones, since they are disconnected from the DOM
-        # it will result in a slighty wrong result for zig-zag stitches
-        if doc_width == 0:
-            return 1
-        viewbox = svg.get('viewBox', '0 0 %s %s' % (doc_width, doc_height))
-        viewbox = viewbox.strip().replace(',', ' ').split()
-        return doc_width / float(viewbox[2])
+        node_scale = 1
+        node_transform = str(get_node_transform(self.node))
+        if node_transform is not None:
+            if node_transform.startswith('matrix'):
+                decomposed_transform = findall(r"[-+]?\d*\.\d+|\d+", node_transform)
+                sx = sqrt(float(decomposed_transform[0])**2 + float(decomposed_transform[2])**2)
+                sy = sqrt(float(decomposed_transform[1])**2 + float(decomposed_transform[3])**2)
+                node_scale = (sx + sy) / 2
+            elif node_transform.startswith('scale'):
+                decomposed_transform = findall(r"[-+]?\d*\.\d+|\d+", node_transform)
+                node_scale = (float(decomposed_transform[0]) + float(decomposed_transform[1])) / 2
+        return node_scale
 
     @property
     @cache
