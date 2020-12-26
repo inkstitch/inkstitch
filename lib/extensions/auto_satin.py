@@ -2,6 +2,7 @@ import sys
 
 import inkex
 
+from ..elements import SatinColumn
 from ..i18n import _
 from ..stitches.auto_satin import auto_satin
 from .commands import CommandsExtension
@@ -41,6 +42,11 @@ class AutoSatin(CommandsExtension):
         if not self.selected:
             # L10N auto-route satin columns extension
             inkex.errormsg(_("Please select one or more satin columns."))
+            return False
+
+        satincolumns = [element for element in self.elements if isinstance(element, SatinColumn)]
+        if len(satincolumns) == 0:
+            inkex.errormsg(_("Please select at least one satin column."))
             return False
 
         return True
