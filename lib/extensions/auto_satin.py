@@ -2,6 +2,7 @@ import sys
 
 import inkex
 
+from ..elements import SatinColumn
 from ..i18n import _
 from ..stitches.auto_satin import auto_satin
 from .commands import CommandsExtension
@@ -43,6 +44,11 @@ class AutoSatin(CommandsExtension):
             inkex.errormsg(_("Please select one or more satin columns."))
             return False
 
+        satincolumns = [element for element in self.elements if isinstance(element, SatinColumn)]
+        if len(satincolumns) == 0:
+            inkex.errormsg(_("Please select at least one satin column."))
+            return False
+
         return True
 
     def effect(self):
@@ -51,4 +57,8 @@ class AutoSatin(CommandsExtension):
 
         starting_point = self.get_starting_point()
         ending_point = self.get_ending_point()
-        auto_satin(self.elements, self.options.preserve_order, starting_point, ending_point, self.options.trim)
+
+        # Ignore fills
+        elements = [element for element in self.elements if isinstance(element, SatinColumn) or isinstance(element, Stroke)]
+
+        auto_satin(elements, self.options.preserve_order, starting_point, ending_point, self.options.trim)
