@@ -48,7 +48,7 @@ def localized_font_metadata(name, default=None):
             original_metadata = self.metadata.get(name)
             localized_metadata = ""
             if original_metadata != "":
-                localized_metadata = _(self.metadata.get(name))
+                localized_metadata = _(original_metadata)
             return localized_metadata
         else:
             return default
@@ -108,7 +108,7 @@ class Font(object):
 
     name = localized_font_metadata('name', '')
     description = localized_font_metadata('description', '')
-    default_glyph = font_metadata('default_glyph', "�")
+    default_glyph = font_metadata('default_glyph', u"�")
     letter_spacing = font_metadata('letter_spacing', 1.5, multiplier=PIXELS_PER_MM)
     leading = font_metadata('leading', 5, multiplier=PIXELS_PER_MM)
     kerning_pairs = font_metadata('kerning_pairs', {})
@@ -138,19 +138,19 @@ class Font(object):
     def default_variant(self):
         # Set default variant to any existing variant if default font file is missing
         default_variant = font_metadata('default_variant', FontVariant.LEFT_TO_RIGHT)
-        available_variants = self.available_variants()
-        if default_variant not in available_variants and len(available_variants) > 0:
-            default_variant = self.available_variants()[0]
+        font_variants = self.has_variants()
+        if default_variant not in font_variants and len(font_variants) > 0:
+            default_variant = font_variants[0]
         return default_variant
 
-    def available_variants(self):
-        available_variants = []
+    def has_variants(self):
+        font_variants = []
         for variant in FontVariant.VARIANT_TYPES:
             if os.path.isfile(os.path.join(self.path, "%s.svg" % variant)):
-                available_variants.append(variant)
-        if len(available_variants) == 0:
+                font_variants.append(variant)
+        if len(font_variants) == 0:
             print >> sys.stderr, _('Font "%s" has no font variant. Please update or remove the font.') % self.name
-        return available_variants
+        return font_variants
 
     def render_text(self, text, destination_group, variant=None, back_and_forth=True, trim=False):
         """Render text into an SVG group element."""

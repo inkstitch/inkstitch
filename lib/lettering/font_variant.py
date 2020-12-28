@@ -5,7 +5,6 @@ import os
 import inkex
 import simplestyle
 
-from ..i18n import _
 from ..svg.tags import INKSCAPE_GROUPMODE, INKSCAPE_LABEL
 from .glyph import Glyph
 

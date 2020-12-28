@@ -13,7 +13,6 @@ from ..elements import nodes_to_elements
 from ..gui import PresetsPanel, SimulatorPreview, SubtitleComboBox, info_dialog
 from ..i18n import _
 from ..lettering import Font, FontError
-from ..lettering.font_variant import FontVariant
 from ..svg import get_correction_transform
 from ..svg.tags import (INKSCAPE_LABEL, INKSTITCH_LETTERING, SVG_GROUP_TAG,
                         SVG_PATH_TAG)
@@ -40,6 +39,9 @@ class LetteringFrame(wx.Frame):
 
         self.back_and_forth_checkbox = wx.CheckBox(self, label=_("Stitch lines of text back and forth"))
         self.back_and_forth_checkbox.Bind(wx.EVT_CHECKBOX, lambda event: self.on_change("back_and_forth", event))
+
+        self.font_variant_info = wx.StaticText(self, wx.ID_ANY)
+        self.font_variant_info.SetForegroundColour((100, 100, 100))
 
         self.trim_checkbox = wx.CheckBox(self, label=_("Add trims"))
         self.trim_checkbox.Bind(wx.EVT_CHECKBOX, lambda event: self.on_change("trim", event))
@@ -176,14 +178,13 @@ class LetteringFrame(wx.Frame):
         self.settings.font = font.id
         self.scale_spinner.SetRange(int(font.min_scale * 100), int(font.max_scale * 100))
 
-        # Update the back_and_forth checkbox according to the chosen font
-        available_variants = font.available_variants()
+        # Update font_variant_info box
+        font_variants = font.has_variants()
+        self.font_variant_info.SetLabel(_(u"Font variants: %s") % " ".join(font_variants))
+
         if font.reversible:
             self.back_and_forth_checkbox.Enable()
-            if FontVariant.reversed_variant(font.default_variant) in available_variants:
-                self.back_and_forth_checkbox.SetValue(bool(self.settings.back_and_forth))
-            else:
-                self.back_and_forth_checkbox.SetValue(False)
+            self.back_and_forth_checkbox.SetValue(bool(self.settings.back_and_forth))
         else:
             # The creator of the font banned the possibility of writing in reverse with json file: "reversible": false
             self.back_and_forth_checkbox.SetValue(False)
@@ -273,6 +274,7 @@ class LetteringFrame(wx.Frame):
 
         options_sizer = wx.StaticBoxSizer(self.options_box, wx.VERTICAL)
         options_sizer.Add(self.back_and_forth_checkbox, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 5)
+        options_sizer.Add(self.font_variant_info, 0, wx.LEFT, 30)
         options_sizer.Add(self.trim_checkbox, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT | wx.BOTTOM, 5)
         outer_sizer.Add(options_sizer, 0, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
 
