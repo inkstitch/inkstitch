@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-12-17 00:50+0000\n"
-"PO-Revision-Date: 2020-12-17 00:51\n"
+"POT-Creation-Date: 2020-12-29 00:54+0000\n"
+"PO-Revision-Date: 2020-12-29 00:56\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -161,7 +161,7 @@ msgstr "Destination de saut pour les commandes stop (\"position en dehors du cad
 #: lib/commands.py:212
 #, python-format
 msgid "Error: there is more than one %(command)s command in the document, but there can only be one.  Please remove all but one."
-msgstr "Erreur : il y a plus d’une commande de %(command)s dans le document, mais il ne peut être un.  S’il vous plaît supprimer tous sauf un."
+msgstr "Erreur : il y a plus d’une commande de %(command)s dans le document, mais il ne peut y en avoir qu'un seul.  S’il vous plaît supprimer les tous sauf un."
 
 #. This is a continuation of the previous error message, letting the user know
 #. what command we're talking about since we don't normally expose the actual
@@ -232,11 +232,11 @@ msgstr "Par défaut : angle de remplissage + 90 degrés. Insérez une liste sép
 
 #: lib/elements/auto_fill.py:84
 msgid "Row spacing"
-msgstr "Espacement entre rangs (lignes)"
+msgstr "Espacement entre rangées de points"
 
 #: lib/elements/auto_fill.py:85
 msgid "default: 3x fill row spacing"
-msgstr "défaut: 3x espacement entre les rangs"
+msgstr "défaut: 3x espacement entre les rangées"
 
 #: lib/elements/auto_fill.py:95
 msgid "Max stitch length"
@@ -248,7 +248,7 @@ msgstr "défaut : égal à longueur max des points de remplissage"
 
 #: lib/elements/auto_fill.py:105
 msgid "Inset"
-msgstr "Incrustation"
+msgstr "Décalage"
 
 #: lib/elements/auto_fill.py:106
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
@@ -256,11 +256,11 @@ msgstr "Rétrécir la forme avant de faire la sous-couche, pour empêcher que la
 
 #: lib/elements/auto_fill.py:117 lib/elements/fill.py:69
 msgid "Skip last stitch in each row"
-msgstr "Sauter le dernier point dans chaque ligne"
+msgstr "Sauter le dernier point dans chaque rangée"
 
 #: lib/elements/auto_fill.py:118 lib/elements/fill.py:70
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
-msgstr "Le dernier point dans chaque ligne est très proche du premier point dans la ligne suivante. Le sauter diminue le nombre de points et la densité."
+msgstr "Le dernier point dans chaque rangée est très proche du premier point dans la rangée suivante. Le sauter diminue le nombre de points et la densité."
 
 #: lib/elements/auto_fill.py:128
 msgid "Expand"
@@ -387,7 +387,7 @@ msgstr "* Extensions > Ink/Stitch > Outils de remplissage > Briser des objets de
 
 #: lib/elements/fill.py:27
 msgid "Border crosses itself"
-msgstr "La bordure se croise"
+msgstr "La bordure se croise sur elle-même"
 
 #: lib/elements/fill.py:28
 msgid "Fill: Shape is not valid.  This can happen if the border crosses over itself."
@@ -423,7 +423,7 @@ msgstr "L’option intervertir peut vous aider avec le routage de votre chemin d
 
 #: lib/elements/fill.py:90
 msgid "Spacing between rows"
-msgstr "Espacement entre les lignes"
+msgstr "Espacement entre les rangées"
 
 #: lib/elements/fill.py:91
 msgid "Distance between rows of stitches."
@@ -439,7 +439,7 @@ msgstr "La longueur de points dans une rangée.  Des point plus courts peuvent �
 
 #: lib/elements/fill.py:114
 msgid "Stagger rows this many times before repeating"
-msgstr "Décaler les rangs autant de fois avant de répéter"
+msgstr "Décaler les rangées autant de fois avant de répéter"
 
 #: lib/elements/fill.py:115
 msgid "Setting this dictates how many rows apart the stitches will be before they fall in the same column position."
@@ -503,15 +503,15 @@ msgstr "* Ouvrir l'onglet Fond"
 
 #: lib/elements/satin_column.py:21
 msgid "* Disable the Fill"
-msgstr "* Empêcher le Fond"
+msgstr "* Désactiver le Fond"
 
 #: lib/elements/satin_column.py:22
 msgid "* Alternative: open Params and switch this path to Stroke to disable Satin Column mode"
-msgstr "* Alternative: Ouvrir Params et basculer ce chemin vers Contour pour empêcher le mode colonne satin"
+msgstr "* Alternative: Ouvrir Paramètres et basculer ce chemin vers Contour pour désactiver le mode colonne satin"
 
 #: lib/elements/satin_column.py:27
 msgid "Too few subpaths"
-msgstr "Trop peu de sous-chemin"
+msgstr "Trop peu de sous-chemins"
 
 #: lib/elements/satin_column.py:28
 msgid "Satin column: Object has too few subpaths.  A satin column should have at least two subpaths (the rails)."
@@ -563,7 +563,7 @@ msgstr "Colonne satin: Une traverse de direction ne coupe pas les deux rails."
 
 #: lib/elements/satin_column.py:55
 msgid "Rung intersects too many times"
-msgstr "L'échelon coupe trop de fois"
+msgstr "La traverse de direction coupe trop de fois"
 
 #: lib/elements/satin_column.py:56
 msgid "Satin column: A rung intersects a rail more than once."
@@ -595,7 +595,7 @@ msgstr "Compensation d'étirement"
 
 #: lib/elements/satin_column.py:95
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape.  This setting expands each pair of needle penetrations outward from the center of the satin column."
-msgstr "Les points satin serrent le tissu, ce qui entraîne une colonne plus étroite que celle que vous dessinez dans Inkscape.  Ce paramètre étend le points depuis le centre vers l’extérieur de la colonne satinée."
+msgstr "Les points satin resserrent le tissu, ce qui entraîne une colonne plus étroite que celle que vous dessinez dans Inkscape.  Ce paramètre agrandit le point depuis le centre vers l’extérieur de la colonne satinée."
 
 #: lib/elements/satin_column.py:107
 msgid "Contour underlay"
@@ -612,7 +612,7 @@ msgstr "Longueur de point"
 
 #: lib/elements/satin_column.py:120
 msgid "Contour underlay inset amount"
-msgstr "Montant de l'incrustation de la sous-couche de contour"
+msgstr "Montant du décalage de la sous-couche de contour"
 
 #: lib/elements/satin_column.py:121
 msgid "Shrink the outline, to prevent the underlay from showing around the outside of the satin column."
@@ -620,11 +620,11 @@ msgstr "Rétrécir le contour, pour empêcher que la sous-couche se montre autou
 
 #: lib/elements/satin_column.py:131
 msgid "Center-walk underlay"
-msgstr "Sous-couche de marche centrale"
+msgstr "Sous-couche centrale"
 
 #: lib/elements/satin_column.py:131 lib/elements/satin_column.py:138
 msgid "Center-Walk Underlay"
-msgstr "Sous-couche de Marche-centrale"
+msgstr "Sous-couche centrale"
 
 #: lib/elements/satin_column.py:143
 msgid "Zig-zag underlay"
@@ -645,11 +645,11 @@ msgstr "Distance entre les crêtes des zig-zags."
 
 #: lib/elements/satin_column.py:160
 msgid "Inset amount"
-msgstr "Montant de l’incrustation"
+msgstr "Montant du décalage"
 
 #: lib/elements/satin_column.py:161
 msgid "default: half of contour underlay inset"
-msgstr "par défaut: la moitié de l'incrustation du contour de la sous-couche"
+msgstr "par défaut: la moitié du décalage du contour de la sous-couche"
 
 #: lib/elements/stroke.py:15
 msgid "Stroke"
@@ -681,7 +681,7 @@ msgstr "Longueur de points en mode zig-zag."
 
 #: lib/elements/stroke.py:68
 msgid "Repeats"
-msgstr "répétez"
+msgstr "Répétitions"
 
 #: lib/elements/stroke.py:69
 msgid "Defines how many times to run down and back along the path."
@@ -716,14 +716,18 @@ msgstr "* Texte : Créez vos propres lettres ou essayez l'outil de lettrage :"
 msgid "- Extensions > Ink/Stitch > Lettering"
 msgstr "- Extensions > Ink/Stitch > Lettrage"
 
-#: lib/extensions/auto_satin.py:29
+#: lib/extensions/auto_satin.py:30
 msgid "Please ensure that at most one start and end command is attached to the selected satin columns."
 msgstr "Veuillez vous assurer qu’au plus une seule commande début et fin soit attachée aux colonnes de satin sélectionnées."
 
 #. auto-route satin columns extension
-#: lib/extensions/auto_satin.py:43
+#: lib/extensions/auto_satin.py:44
 msgid "Please select one or more satin columns."
 msgstr "Veuillez sélection une ou plusieurs colonnes satin."
+
+#: lib/extensions/auto_satin.py:49
+msgid "Please select at least one satin column."
+msgstr ""
 
 #. This was previously: "No embroiderable paths selected."
 #: lib/extensions/base.py:130
@@ -765,7 +769,7 @@ msgstr "Veuillez sélectionner une ou plusieurs colonnes satin à scinder."
 #. path12345: error: this satin column does not ...
 #: lib/extensions/cut_satin.py:25
 msgid "this satin column does not have a \"satin column cut point\" command attached to it. Please use the \"Attach commands\" extension and attach the \"Satin Column cut point\" command first."
-msgstr "cette colonne satinée n’a pas de commande « point de coupe satin » attachée à elle. SVP, utilisez l’extension « ajouter des commandes » et attachez d’abord la commande « point de coupe satin »."
+msgstr "cette colonne satinée n’a pas de commande « point de partage satin » attachée à elle. Utilisez l’extension « ajouter des commandes » et attachez d’abord la commande « point de partage satin »."
 
 #: lib/extensions/embroider.py:38
 msgid "\n\n"
@@ -807,11 +811,11 @@ msgstr "Options"
 
 #: lib/extensions/lettering.py:39
 msgid "Stitch lines of text back and forth"
-msgstr "Broder les lignes de texte avant et arrière"
+msgstr "Broder les lignes de texte en aller-retour"
 
 #: lib/extensions/lettering.py:42
 msgid "Add trims"
-msgstr "Ajouter des coupes"
+msgstr "Ajouter des coupures"
 
 #: lib/extensions/lettering.py:59 lib/extensions/params.py:332
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
@@ -1035,7 +1039,7 @@ msgstr "SAUT"
 
 #: lib/gui/simulator.py:20 electron/src/renderer/assets/js/simulator.js:135
 msgid "TRIM"
-msgstr "COUPE"
+msgstr "COUPURE"
 
 #. command label at bottom of simulator window
 #: lib/gui/simulator.py:20 templates/output_params_txt.xml:14
@@ -1192,7 +1196,7 @@ msgstr "# points"
 
 #: print/templates/color_swatch.html:23 print/templates/color_swatch.html:44
 msgid "# trims"
-msgstr "# trims"
+msgstr "# coupures"
 
 #: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
 #: print/templates/operator_detailedview.html:68
@@ -1285,7 +1289,7 @@ msgstr "Consommation de fil"
 
 #: print/templates/operator_detailedview.html:11
 msgid "Stops and Trims"
-msgstr "Arrêts et coupes"
+msgstr "Arrêts et coupures"
 
 #: print/templates/operator_detailedview.html:12
 msgid "Notes"
@@ -1325,13 +1329,13 @@ msgstr "Nombre de points total"
 #: print/templates/operator_overview.html:8
 #: print/templates/print_overview.html:8
 msgid "Total stops"
-msgstr "Total nr stop"
+msgstr "Total de stops"
 
 #: print/templates/operator_detailedview.html:35
 #: print/templates/operator_overview.html:9
 #: print/templates/print_overview.html:9
 msgid "Total trims"
-msgstr "Total nr coupure"
+msgstr "Total de coupures"
 
 #: print/templates/operator_detailedview.html:62
 msgid "thread used"
@@ -1495,7 +1499,7 @@ msgstr "secondes nécessaires pour un changement de couleur *"
 
 #: print/templates/ui.html:131
 msgid "seconds needed for trim"
-msgstr "secondes nécessaires pour une coupe de fil"
+msgstr "secondes nécessaires pour une coupure de fil"
 
 #: print/templates/ui.html:134
 msgid "Display Time On"
@@ -1708,7 +1712,7 @@ msgstr "Format G-code"
 
 #: templates/auto_satin.inx:3
 msgid "Auto-Route Satin Columns"
-msgstr "Remplissage automatique de colonnes satin"
+msgstr "Agencement automatique de colonnes satin"
 
 #: templates/auto_satin.inx:5
 msgid "Trim jump stitches"
@@ -2039,7 +2043,7 @@ msgstr "Ink/Stitch : ZIP exporter plusieurs formats (.zip)"
 
 #: templates/zip.inx:9
 msgid "Create a ZIP with multiple embroidery file formats using Ink/Stitch"
-msgstr "Créer un ZIP avec des formats de fichiers de broderie multiples à l’aide d’encre/Stitch"
+msgstr "Créer un ZIP avec des formats de fichiers de broderie multiples à l’aide d’Ink/Stitch"
 
 #: templates/zip.inx:15
 msgid "Scalable Vector Graphic"

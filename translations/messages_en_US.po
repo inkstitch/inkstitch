@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-12-17 00:50+0000\n"
-"PO-Revision-Date: 2020-12-17 00:51\n"
+"POT-Creation-Date: 2020-12-29 00:54+0000\n"
+"PO-Revision-Date: 2020-12-29 00:56\n"
 "Last-Translator: \n"
 "Language-Team: English\n"
 "MIME-Version: 1.0\n"
@@ -716,13 +716,17 @@ msgstr ""
 msgid "- Extensions > Ink/Stitch > Lettering"
 msgstr ""
 
-#: lib/extensions/auto_satin.py:29
+#: lib/extensions/auto_satin.py:30
 msgid "Please ensure that at most one start and end command is attached to the selected satin columns."
 msgstr ""
 
 #. auto-route satin columns extension
-#: lib/extensions/auto_satin.py:43
+#: lib/extensions/auto_satin.py:44
 msgid "Please select one or more satin columns."
+msgstr ""
+
+#: lib/extensions/auto_satin.py:49
+msgid "Please select at least one satin column."
 msgstr ""
 
 #. This was previously: "No embroiderable paths selected."
