@@ -43,8 +43,6 @@ class LetteringFrame(wx.Frame):
         self.font_chooser.Bind(wx.EVT_COMBOBOX, self.on_font_changed)
 
         # font details
-        self.font_detail_box = wx.CollapsiblePane(self, wx.ID_ANY, _("Font Details"))
-
         self.font_description = wx.StaticText(self, wx.ID_ANY)
         self.font_variant_info = wx.StaticText(self, wx.ID_ANY)
 
@@ -218,8 +216,15 @@ class LetteringFrame(wx.Frame):
             self.back_and_forth_checkbox.SetValue(bool(self.settings.back_and_forth))
         else:
             # The creator of the font banned the possibility of writing in reverse with json file: "reversible": false
-            self.back_and_forth_checkbox.SetValue(False)
             self.back_and_forth_checkbox.Disable()
+            self.back_and_forth_checkbox.SetValue(False)
+
+        if font.auto_satin:
+            self.trim_checkbox.Enable()
+            self.back_and_forth_checkbox.SetValue(bool(self.settings.trim))
+        else:
+            self.trim_checkbox.Disable()
+            self.trim_checkbox.SetValue(False)
 
         self.update_preview()
 
