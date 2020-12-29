@@ -148,12 +148,18 @@ class LetteringFrame(wx.Frame):
             image = font.preview_image
             if image is not None:
                 image = wx.Image(font.preview_image)
+                """
+                # I would like to do this but Windows requires all images to be the exact same size
+                # It might work with an updated wxpython version - so let's keep it here
+
                 # Scale to max 20 height
                 img_height = 20
                 width, height = image.GetSize()
                 scale_factor = height / img_height
                 width = int(width / scale_factor)
                 image.Rescale(width, img_height, quality=wx.IMAGE_QUALITY_HIGH)
+                """
+                image.Rescale(300, 20, quality=wx.IMAGE_QUALITY_HIGH)
                 self.font_chooser.Append(font.name, wx.Bitmap(image))
             else:
                 self.font_chooser.Append(font.name)
