@@ -2,7 +2,6 @@
 
 import json
 import os
-import sys
 from copy import deepcopy
 
 import inkex
@@ -143,13 +142,18 @@ class Font(object):
             default_variant = font_variants[0]
         return default_variant
 
+    @property
+    def preview_image(self):
+        preview_image_path = os.path.join(self.path, "preview.png")
+        if os.path.isfile(preview_image_path):
+            return preview_image_path
+        return None
+
     def has_variants(self):
         font_variants = []
         for variant in FontVariant.VARIANT_TYPES:
             if os.path.isfile(os.path.join(self.path, "%s.svg" % variant)):
                 font_variants.append(variant)
-        if len(font_variants) == 0:
-            print >> sys.stderr, _('Font "%s" has no font variant. Please update or remove the font.') % self.name
         return font_variants
 
     def render_text(self, text, destination_group, variant=None, back_and_forth=True, trim=False):
