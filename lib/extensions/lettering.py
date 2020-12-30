@@ -13,6 +13,7 @@ from ..elements import nodes_to_elements
 from ..gui import PresetsPanel, SimulatorPreview, info_dialog
 from ..i18n import _
 from ..lettering import Font, FontError
+from ..lettering.font_variant import FontVariant
 from ..svg import get_correction_transform
 from ..svg.tags import (INKSCAPE_LABEL, INKSTITCH_LETTERING, SVG_GROUP_TAG,
                         SVG_PATH_TAG)
@@ -21,7 +22,7 @@ from .commands import CommandsExtension
 
 
 class LetteringFrame(wx.Frame):
-    DEFAULT_FONT = "small_font"
+    DEFAULT_FONT = _("Ink/Stitch Small Font")
 
     def __init__(self, *args, **kwargs):
         # begin wxGlade: MyFrame.__init__
@@ -38,13 +39,14 @@ class LetteringFrame(wx.Frame):
         self.font_selector_box = wx.StaticBox(self, wx.ID_ANY, label=_("Font"))
         self.update_font_list()
 
-        self.font_chooser = wx.adv.BitmapComboBox(self, wx.ID_ANY)
+        self.font_chooser = wx.adv.BitmapComboBox(self, wx.ID_ANY, style=wx.CB_READONLY | wx.CB_SORT)
         self.set_font_list()
         self.font_chooser.Bind(wx.EVT_COMBOBOX, self.on_font_changed)
 
         # font details
         self.font_description = wx.StaticText(self, wx.ID_ANY)
         self.font_variant_info = wx.StaticText(self, wx.ID_ANY)
+        self.font_variant_info.SetForegroundColour((100, 100, 100))
 
         # options
         self.options_box = wx.StaticBox(self, wx.ID_ANY, label=_("Options"))
@@ -81,7 +83,7 @@ class LetteringFrame(wx.Frame):
 
         self.settings = DotDict({
             "text": u"",
-            "back_and_forth": True,
+            "back_and_forth": False,
             "font": None,
             "scale": 100
         })
@@ -143,8 +145,7 @@ class LetteringFrame(wx.Frame):
             self.cancel()
 
     def set_font_list(self):
-        fonts = sorted(self.fonts.values(), key=lambda x: x.name)
-        for font in fonts:
+        for font in self.fonts.values():
             image = font.preview_image
             if image is not None:
                 image = wx.Image(font.preview_image)
@@ -159,6 +160,7 @@ class LetteringFrame(wx.Frame):
                 width = int(width / scale_factor)
                 image.Rescale(width, img_height, quality=wx.IMAGE_QUALITY_HIGH)
                 """
+                # Windows requires all images to have the exact same size
                 image.Rescale(300, 20, quality=wx.IMAGE_QUALITY_HIGH)
                 self.font_chooser.Append(font.name, wx.Bitmap(image))
             else:
@@ -205,7 +207,10 @@ class LetteringFrame(wx.Frame):
         font_variants = font.has_variants()
 
         # Update font_variant_info box
-        self.font_variant_info.SetLabel(_(u"Available stitch directions: %s") % " ".join(font_variants))
+        # As long as we do not support up and down, we don't want to expose them to the user
+        left_right = [FontVariant.LEFT_TO_RIGHT, FontVariant.RIGHT_TO_LEFT]
+        directions = [d for d in font_variants if d in left_right]
+        self.font_variant_info.SetLabel(_(u"Available stitch directions: %s") % " ".join(directions))
 
         # Update font description
         color = (0, 0, 0)
@@ -215,7 +220,7 @@ class LetteringFrame(wx.Frame):
             description = _('This font has no available font variant. Please update or remove the font.')
         self.font_description.SetLabel(description)
         self.font_description.SetForegroundColour(color)
-        self.font_description.Wrap(self.GetSize().width)
+        self.font_description.Wrap(self.GetSize().width - 20)
 
         if font.reversible:
             self.back_and_forth_checkbox.Enable()
@@ -227,16 +232,16 @@ class LetteringFrame(wx.Frame):
 
         if font.auto_satin:
             self.trim_checkbox.Enable()
-            self.back_and_forth_checkbox.SetValue(bool(self.settings.trim))
+            self.trim_checkbox.SetValue(bool(self.settings.trim))
         else:
             self.trim_checkbox.Disable()
             self.trim_checkbox.SetValue(False)
 
         self.update_preview()
+        self.GetSizer().Layout()
 
     def update_preview(self, event=None):
         self.preview.update()
-        self.GetSizer().Layout()
 
     def update_lettering(self):
         del self.group[:]
@@ -318,25 +323,9 @@ class LetteringFrame(wx.Frame):
         # font selection
         font_selector_sizer = wx.StaticBoxSizer(self.font_selector_box, wx.VERTICAL)
         font_selector_sizer.Add(self.font_chooser, 0, wx.EXPAND | wx.ALL, 10)
+        font_selector_sizer.Add(self.font_description, 1, wx.EXPAND | wx.ALL, 10)
+        font_selector_sizer.Add(self.font_variant_info, 0, wx.EXPAND | wx.BOTTOM | wx.RIGHT | wx.LEFT, 10)
         outer_sizer.Add(font_selector_sizer, 0, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
-
-        # font detail
-        font_detail_sizer = wx.BoxSizer(wx.VERTICAL)
-        font_detail_pane = wx.CollapsiblePane(self, wx.ID_ANY, "Details")
-        pane = font_detail_pane.GetPane()
-        collapsable_sizer = wx.BoxSizer(wx.VERTICAL)
-
-        self.font_variant_info = wx.StaticText(pane, wx.ID_ANY)
-        self.font_description = wx.StaticText(pane, wx.ID_ANY)
-
-        collapsable_sizer.Add(self.font_description, 1, wx.EXPAND | wx.TOP, 10)
-        collapsable_sizer.Add(self.font_variant_info, 0, wx.EXPAND | wx.TOP, 10)
-
-        pane.SetSizer(collapsable_sizer)
-        collapsable_sizer.SetSizeHints(pane)
-
-        font_detail_sizer.Add(font_detail_pane, 0, wx.EXPAND, 0)
-        font_selector_sizer.Add(font_detail_sizer, 1, wx.EXPAND | wx.ALL, 10)
 
         # options
         left_option_sizer = wx.BoxSizer(wx.VERTICAL)
