@@ -2,7 +2,7 @@
 title: "Fill Tools"
 permalink: /docs/fill-tools/
 excerpt: ""
-last_modified_at: 2020-11-29
+last_modified_at: 2020-12-31
 toc: true
 ---
 ## Break Apart Fill Objects
@@ -11,7 +11,6 @@ Fill objects can be treated best, if they are single elements without any crossi
 
 Therefore error messages for fill areas happen quiet often and are annoying for users. This extension will help you to fix broken fill shapes. Run it on every fill shape which is causing trouble for you. It will repair your fill element and separate shapes with crossing borders into it's pieces if necessary.
 
-
 ### Usage
 
 * Select one or more fill objects
@@ -19,9 +18,19 @@ Therefore error messages for fill areas happen quiet often and are annoying for 
 
 ## Simple or Complex
 
-* *Simple* will handle holes, unconnected shapes and crossing border issues. Combined paths will split up into separate objects.
+Always prefer `simple` when possible. It retains holes and repairs the "border crossing error" by splitting up loops into separate objects or deletes them if they are too small to embroider.
 
-* *Complex* will handle everything in the same way as simple but it will additionally handle multiple path objects.
+While "simple" splits up loops, it will not respect overlapping subpaths. It will treat them as separate objects. `Complex` is capable to recognize overlapping paths and treat them well.
+
+"Break apart fill objects" can be expressed in native Inkscape functions:
+1. Path > Union (Solve subpath issues)
+2. Path > Break apart (Separate objectes)
+3. Delete objects which are too small to embroider
+4. Path > Combine (if you want to preserve holes)
+5. Path > Combine (if you want to preserve even more holes)
+
+**Info:** For overlapping paths step 1 is only performed by `complex`.
+{: .notice--info}
 
 ![Break apart fill objects](/assets/images/docs/en/break_apart.jpg)
 [Download SVG](/assets/images/docs/en/break_apart.svg)

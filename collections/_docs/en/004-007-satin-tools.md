@@ -44,7 +44,7 @@ This extension will convert a stroke into a satin column with a specified width.
 ### Usage
 
 1. Draw a bezier curve (`B`)
-2. Set a stroke width
+2. Set the stroke width in the "Fill and Stroke" panel ("Stroke style" tab), which you can access with `Shift+Ctrl+F`
 2. Run `Extensions > Ink/Stitch  > Satin Tools > Convert Line to Satin`
 
 ## Cut Satin Column

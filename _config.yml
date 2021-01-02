@@ -294,6 +294,9 @@ collections:
   tutorials:
     output: true
     permalink: /:collection/:path/
+  fonts:
+    output: true
+    permaink: /:collection/:path/
   tutorial:
     output: true
     permalink: /:collection/:path/
@@ -385,6 +388,27 @@ defaults:
     # fr
   - scope:
       path: "_docs/fr"
+    values:
+      lang: fr
+  # _fonts
+  - scope:
+      type: fonts
+    values:
+      sidebar:
+        nav: "fonts"
+    # en
+  - scope:
+      path: "_fonts/en"
+    values:
+      lang: en
+    # de
+  - scope:
+      path: "_fonts/de"
+    values:
+      lang: de
+    # fr
+  - scope:
+      path: "_fonts/fr"
     values:
       lang: fr
   # _tutorials
