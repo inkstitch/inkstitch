@@ -1,19 +1,37 @@
 ---
-title: "Satin Tools"
+title: "Outils Satin"
 permalink: /fr/docs/fill-tools/
 excerpt: ""
-last_modified_at: 2020-05-15
+last_modified_at: 2021-01-04
 toc: true
 ---
-## Break Apart Fill Objects
+## Briser les objets de remplissage
 
-Fill objects can be treated best, if they are single elements without any crossing borders. Sometimes these rules are not easy to meet and your shape will have tiny little loops which are impossible to discover in Inkscape.
+Les objets de remplissage peuvent être traités au mieux s'ils sont des éléments uniques sans bordures qui se croisent. Parfois, ces règles ne sont pas faciles à respecter et votre forme aura de minuscules petites boucles impossibles à découvrir dans Inkscape.
 
-Therefore error messages for fill areas happen quiet often and are annoying for users. This extension will help you to fix broken fill shapes. Run it on every fill shape which is causing trouble for you. It will repair your fill element and separate shapes with crossing borders into it's pieces if necessary.
+Par conséquent, les messages d'erreur pour les zones de remplissage sont souvent peu parlants et ennuyeux pour les utilisateurs. Cette extension vous aidera à corriger les formes de remplissage défectueuses. Exécutez-la sur toutes les formes de remplissage qui vous causent des problèmes. Elle réparera votre élément de remplissage et séparera les formes avec des bordures croisées en les partageant en plusieurs parties si nécessaire.
 
 
 ### Usage
 
-* Select one or more fill objects
-* Run: Extensions > Ink/Stitch  > Fill Tools > Break Apart Fill Objects
-* For most shapes the option `simple` will be sufficient. If you are still having trouble try `complex`.
+* Selectionner un remplissage ou plus
+* Exécutez: Extensions > Ink/Stitch  > Outils de remplissage > Briser les objets de remplissage
+* Pour la plupart des formes `simple` sera suffisant. Si vous avez encore des problèmes essayez `complex`.
+
+Simple ou Complex
+
+Toujours préférer simple si c'est possible. Il conserve les trous et répare "bordure se croise" en divisant les boucles en objets séparés ou en les supprimant si elles sont trop petites pour être brodées.
+
+Bien que "simple" divise les boucles, il ne respectera pas les sous-chemins qui se chevauchent. Il les traitera comme des objets séparés. Complex est capable de reconnaître les chemins qui se chevauchent et de bien les traiter
+
+"Briser les objets de remplissage" peut être traduit dans les fonctions natives d'Inkscape:
+
+    Chemin > Union (Résout les problèmes de sous-chemin)
+    Chemin > Briser (Séparer les objets)
+    Supprimer les objets trop petits pour être brodés
+    Chemin > Combiner (si vous voulez maintenir les trous)
+    Chemin > Combiner (si vous voulez conserver encore plus de trous)
+
+Info: Pour les chemins qui se chevauchent, l'étape 1 n'est effectuée que par complex. {: .notice--info}
+Image à venir. La voir sur la version anglaise
+Break apart fill objects Download SVG
