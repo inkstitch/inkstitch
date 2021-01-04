@@ -26,12 +26,14 @@ Bien que "simple" divise les boucles, il ne respectera pas les sous-chemins qui 
 
 "Briser les objets de remplissage" peut être traduit dans les fonctions natives d'Inkscape:
 
-    Chemin > Union (Résout les problèmes de sous-chemin)
-    Chemin > Briser (Séparer les objets)
-    Supprimer les objets trop petits pour être brodés
-    Chemin > Combiner (si vous voulez maintenir les trous)
-    Chemin > Combiner (si vous voulez conserver encore plus de trous)
+   1 Chemin > Union (Résout les problèmes de sous-chemin)
+   2 Chemin > Briser (Séparer les objets)
+   3 Supprimer les objets trop petits pour être brodés
+   4 Chemin > Combiner (si vous voulez maintenir les trous)
+   5 Chemin > Combiner (si vous voulez conserver encore plus de trous)
 
 Info: Pour les chemins qui se chevauchent, l'étape 1 n'est effectuée que par complex. {: .notice--info}
+
 Image à venir. La voir sur la version anglaise
+
 Break apart fill objects Download SVG
