@@ -22,7 +22,7 @@ from .commands import CommandsExtension
 
 
 class LetteringFrame(wx.Frame):
-    DEFAULT_FONT = _("Ink/Stitch Small Font")
+    DEFAULT_FONT = "small_font"
 
     def __init__(self, *args, **kwargs):
         # begin wxGlade: MyFrame.__init__
@@ -191,7 +191,7 @@ class LetteringFrame(wx.Frame):
     @cache
     def default_font(self):
         try:
-            return self.fonts[self.DEFAULT_FONT]
+            return self.fonts_by_id[self.DEFAULT_FONT]
         except KeyError:
             return self.fonts.values()[0]
 
