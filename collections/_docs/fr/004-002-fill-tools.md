@@ -18,7 +18,7 @@ Par conséquent, les messages d'erreur pour les zones de remplissage sont souven
 * Exécutez: Extensions > Ink/Stitch  > Outils de remplissage > Briser les objets de remplissage
 * Pour la plupart des formes `simple` sera suffisant. Si vous avez encore des problèmes essayez `complex`.
 
-Simple ou Complex
+## Simple ou Complex
 
 Toujours préférer simple si c'est possible. Il conserve les trous et répare "bordure se croise" en divisant les boucles en objets séparés ou en les supprimant si elles sont trop petites pour être brodées.
 
@@ -26,14 +26,14 @@ Bien que "simple" divise les boucles, il ne respectera pas les sous-chemins qui 
 
 "Briser les objets de remplissage" peut être traduit dans les fonctions natives d'Inkscape:
 
-   1 Chemin > Union (Résout les problèmes de sous-chemin)
-   2 Chemin > Briser (Séparer les objets)
-   3 Supprimer les objets trop petits pour être brodés
-   4 Chemin > Combiner (si vous voulez maintenir les trous)
-   5 Chemin > Combiner (si vous voulez conserver encore plus de trous)
+ 1. Chemin > Union (Résout les problèmes de sous-chemin)
+ 2. Chemin > Briser (Séparer les objets)
+ 3. Supprimer les objets trop petits pour être brodés
+ 4. Chemin > Combiner (si vous voulez maintenir les trous)
+ 5. Chemin > Combiner (si vous voulez conserver encore plus de trous)
 
-Info: Pour les chemins qui se chevauchent, l'étape 1 n'est effectuée que par complex. {: .notice--info}
+Info: Pour les chemins qui se chevauchent, l'étape 1 n'est effectuée que par complex.
+{: .notice--info}
 
-Image à venir. La voir sur la version anglaise
-
-Break apart fill objects Download SVG
+![Break apart fill objects](/assets/images/docs/en/break_apart.jpg)
+[Download SVG](/assets/images/docs/en/break_apart.svg)

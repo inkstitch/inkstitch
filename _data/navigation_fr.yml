@@ -131,8 +131,12 @@ tutorials:
     children:
       - title: "Galeries de réalisations"
         url: /fr/tutorials/inspiration/
+  - title: Hardware Projects
+    children:
       - title: "Fabriquer sa machine à broder"
         url: /fr/tutorials/embroidery-machine/
+      - title: Broder sur une chaussette
+        url: /fr/tutorials/sock-hoop/
   - title: Resources
     children:
     - title: "Branding Guide"

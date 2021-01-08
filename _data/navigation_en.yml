@@ -133,8 +133,12 @@ tutorials:
     children:
       - title: "Artwork Gallery"
         url: /tutorials/inspiration/
+  - title: Hardware Projects
+    children:
       - title: "DIY Embroidery Machine"
         url: /tutorials/embroidery-machine/
+      - title: "Sock Hoop"
+        url: /tutorials/sock-hoop/
   - title: Resources
     children:
     - title: "Branding Guide"

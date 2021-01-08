@@ -127,8 +127,12 @@ tutorials:
     children:
       - title: "Bildergallerie"
         url: /de/tutorials/inspiration/
+  - title: Hardware Projekte
+    children:
       - title: "DIY Embroidery Machine"
         url: /de/tutorials/embroidery-machine/
+      - title: Socken besticken
+        url: /de/tutorials/sock-hoop/
   - title: Ressourcen
     children:
     - title: Ink/Stitch Logo
