@@ -22,3 +22,7 @@ If you own a 3D printer or a laser cutter but your embroidery machine is not cap
 * [http://tecfa.unige.ch/guides/embroid/sock-frame/](http://tecfa.unige.ch/guides/embroid/sock-frame/)
 * [http://tecfa.unige.ch/guides/embroid/sock-tool/](http://tecfa.unige.ch/guides/embroid/sock-tool/)
 
+### Files to Stitch on Socks
+
+* **Français** (with downloadable SVGs): [https://edutechwiki.unige.ch/fr/InkStitch_-_broder_un_emoji](https://edutechwiki.unige.ch/fr/InkStitch_-_broder_un_emoji)
+* **English translation**: [https://edutechwiki.unige.ch/en/InkStitch_-_emoji_embroidery](https://edutechwiki.unige.ch/en/InkStitch_-_emoji_embroidery)

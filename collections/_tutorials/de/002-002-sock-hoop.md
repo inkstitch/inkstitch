@@ -14,11 +14,15 @@ Wenn du einen 3D-Drucker oder einen Lasercutter bestitzt, aber deine Maschine ni
 ## Projektinformationen
 
 ### Dokumentation
-* **English**: [https://edutechwiki.unige.ch/en/Embroider_on_socks](https://edutechwiki.unige.ch/en/Embroider_on_socks)
-* **French** with downloadable example files: [https://edutechwiki.unige.ch/fr/Broder_sur_une_chaussette](https://edutechwiki.unige.ch/fr/Broder_sur_une_chaussette)
-* **French**: [https://faclab.unige.ch/html/node/62](https://faclab.unige.ch/html/node/62)
+* **Englisch**: [https://edutechwiki.unige.ch/en/Embroider_on_socks](https://edutechwiki.unige.ch/en/Embroider_on_socks)
+* **Französisch**: [https://edutechwiki.unige.ch/fr/Broder_sur_une_chaussette](https://edutechwiki.unige.ch/fr/Broder_sur_une_chaussette)
+* **Französisch**: [https://faclab.unige.ch/html/node/62](https://faclab.unige.ch/html/node/62)
 
 ### Dateien
 * [http://tecfa.unige.ch/guides/embroid/sock-frame/](http://tecfa.unige.ch/guides/embroid/sock-frame/)
 * [http://tecfa.unige.ch/guides/embroid/sock-tool/](http://tecfa.unige.ch/guides/embroid/sock-tool/)
 
+### Files to Stitch on Socks
+
+* **Französisch** (with downloadable SVGs): [https://edutechwiki.unige.ch/fr/InkStitch_-_broder_un_emoji](https://edutechwiki.unige.ch/fr/InkStitch_-_broder_un_emoji)
+* **Englische Übersetzung**: [https://edutechwiki.unige.ch/en/InkStitch_-_emoji_embroidery](https://edutechwiki.unige.ch/en/InkStitch_-_emoji_embroidery)

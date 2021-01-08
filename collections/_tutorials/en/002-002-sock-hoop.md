@@ -11,14 +11,18 @@ If you own a 3D printer or a laser cutter but your embroidery machine is not cap
 ![Sock Hoop in Action](/assets/images/tutorials/sock-hoop/sock-hoop-in-action.jpg)
 ![Sock Hoop Annotated](/assets/images/tutorials/sock-hoop/sock-hoop-annotated.jpg)
 
-## Resources:
+## Resources
 
-### Documentation:
+### Documentation
 * **English**: [https://edutechwiki.unige.ch/en/Embroider_on_socks](https://edutechwiki.unige.ch/en/Embroider_on_socks)
-* **French** with downloadable example files: [https://edutechwiki.unige.ch/fr/Broder_sur_une_chaussette](https://edutechwiki.unige.ch/fr/Broder_sur_une_chaussette)
+* **French**: [https://edutechwiki.unige.ch/fr/Broder_sur_une_chaussette](https://edutechwiki.unige.ch/fr/Broder_sur_une_chaussette)
 * **French**: [https://faclab.unige.ch/html/node/62](https://faclab.unige.ch/html/node/62)
 
-### Files:
+### Files
 * [http://tecfa.unige.ch/guides/embroid/sock-frame/](http://tecfa.unige.ch/guides/embroid/sock-frame/)
 * [http://tecfa.unige.ch/guides/embroid/sock-tool/](http://tecfa.unige.ch/guides/embroid/sock-tool/)
 
+### Files to Stitch on Socks
+
+* **French** (with downloadable SVGs): [https://edutechwiki.unige.ch/fr/InkStitch_-_broder_un_emoji](https://edutechwiki.unige.ch/fr/InkStitch_-_broder_un_emoji)
+* **English translation**: [https://edutechwiki.unige.ch/en/InkStitch_-_emoji_embroidery](https://edutechwiki.unige.ch/en/InkStitch_-_emoji_embroidery)
