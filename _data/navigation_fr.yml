@@ -124,6 +124,15 @@ docs:
         url: /fr/docs/error-messages/
       - title: "Traduction manquante"
         url: /fr/docs/localization/
+
+# fonts
+fonts:
+  - title: Lettering
+    children:
+      - title: Create Fonts
+        url: /fr/fonts/create/
+  - title: Font Library
+    url: /fr/fonts/font-library/
     
 # tutorial links
 tutorials:

@@ -120,6 +120,15 @@ docs:
         url: /de/docs/error-messages/
       - title: "Übersetzungen"
         url: /de/docs/localization/
+
+# fonts
+fonts:
+  - title: Text (Lettering)
+    children:
+      - title: Schriften erstellen
+        url: /de/fonts/create/
+  - title: Schriftarten
+    url: /de/fonts/font-library/
     
 # tutorial links
 tutorials:

@@ -1,0 +1,9 @@
+{% assign fonts = site.fonts | where: "lang", page.lang %}
+
+<li>
+  <ul>
+  {% for font in fonts %}
+    <li><a href="{{ font.permalink }}"{% if font.permalink == page.url %} class="active"{% endif %}>{{ font.title }}</a></li>
+  {% endfor %}
+  </ul>
+</li>

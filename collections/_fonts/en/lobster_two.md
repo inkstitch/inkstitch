@@ -3,6 +3,7 @@ title: "Lobster Two"
 permalink: /fonts/lobster_two/
 last_modified_at: 2020-12-31
 toc: false
+preview_image: /assets/images/fonts/lobster_two_bold_italic.png
 ---
 ## Bold Italic
 ![Lobster Two](/assets/images/fonts/lobster_two_bold_italic.png)

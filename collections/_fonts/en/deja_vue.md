@@ -3,6 +3,7 @@ title: "Deja Vue"
 permalink: /fonts/deja_vue/
 last_modified_at: 2020-12-31
 toc: false
+preview_image: /assets/images/fonts/deja_vue_serif.png
 ---
 ## Serif Semi-condensed
 

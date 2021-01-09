@@ -126,6 +126,15 @@ docs:
         url: /docs/error-messages/
       - title: "Missing Translation"
         url: /docs/localization/
+
+# fonts
+fonts:
+  - title: Lettering
+    children:
+      - title: Create Fonts
+        url: fonts/create/
+  - title: Font Library
+    url: /fonts/font-library/
     
 # tutorial links
 tutorials:
