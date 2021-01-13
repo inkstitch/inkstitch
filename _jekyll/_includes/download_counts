@@ -27,10 +27,10 @@
 
 ## Ink/Stitch {{ site.github.latest_release.name }}
 
-|{{ site.data.ui-text[page.lang].downloads}}|{{ site.data.ui-text[page.lang].operating_system }}|
+|{{ site.data.ui-text[page.lang].downloads }}|{{ site.data.ui-text[page.lang].operating_system }}|
 |--|--|
 |{{ linux }}|Linux|
 |{{ osx }}|macOS|
 |{{ windows }}|Windows|
-|**{{ linux | plus: osx | plus: windows }}**|**Total Downloads**|
+|**{{ linux | plus: osx | plus: windows }}**|**{{ site.data.ui-text[page.lang].total_downloads }}**|
 {: .table-first-column-alignright }

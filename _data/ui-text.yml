@@ -52,6 +52,7 @@ en: &DEFAULT_EN
   choose_language            : "Select Language"
   downloads                  : "Downloads"
   operating_system           : "Operating System"
+  total_downloads            : "Total Downloads"
 en-US:
   <<: *DEFAULT_EN
 en-CA:
@@ -111,6 +112,9 @@ es: &DEFAULT_ES
   results_found              : "resultado(s) encontrado(s)"
   back_to_top                : "Volver arriba"
   choose_language            : "Elige idioma"
+  downloads                  : "Downloads"
+  operating_system           : "Operating System"
+  total_downloads            : "Total Downloads"
 es-ES:
   <<: *DEFAULT_ES
 es-CO:
@@ -166,6 +170,9 @@ fr: &DEFAULT_FR
   results_found              : "Résultat(s) trouvé(s)"
   back_to_top                : "Retour en haut"
   choose_language            : "Choisir la langue"
+  downloads                  : "Téléchargements"
+  operating_system           : "Système d'exploitation"
+  total_downloads            : "Total des téléchargements"
 fr-FR:
   <<: *DEFAULT_FR
 fr-BE:
@@ -219,6 +226,9 @@ tr: &DEFAULT_TR
   comment_error_msg          : "Maalesef bir hata oluştu. Lütfen zorunlu olan tüm alanları doldurduğunuzdan emin olun ve sonrasında tekrar deneyin."
   loading_label              : "Yükleniyor..."
   choose_language            : "Select Language"
+  downloads                  : "Downloads"
+  operating_system           : "Operating System"
+  total_downloads            : "Total Downloads"
 tr-TR:
   <<: *DEFAULT_TR
 
@@ -268,6 +278,9 @@ pt: &DEFAULT_PT
   comment_error_msg          : "Lamento, ocorreu um erro na sua submissão. Por favor verifique se todos os campos obrigatórios estão corretamente preenchidos e tente novamente."
   loading_label              : "A carregar..."
   choose_language            : "Select Language"
+  downloads                  : "Downloads"
+  operating_system           : "Operating System"
+  total_downloads            : "Total Downloads"
 pt-PT:
   <<: *DEFAULT_PT
 # Brazilian Portuguese
@@ -319,6 +332,9 @@ pt-BR:
   results_found              : "Resultado(s) encontrado(s)"
   back_to_top                : "Voltar para o topo"
   choose_language            : "Select Language"
+  downloads                  : "Downloads"
+  operating_system           : "Operating System"
+  total_downloads            : "Total Downloads"
 
 # Italian
 # -------
@@ -370,6 +386,9 @@ it: &DEFAULT_IT
   results_found              : "Risultati"
   back_to_top                : "Vai su"
   choose_language            : "Select Language"
+  downloads                  : "Downloads"
+  operating_system           : "Operating System"
+  total_downloads            : "Total Downloads"
 it-IT:
   <<: *DEFAULT_IT
 
@@ -423,6 +442,9 @@ zh: &DEFAULT_ZH_HANS
   results_found              : "条记录匹配"
   back_to_top                : "返回顶部"
   choose_language            : "Select Language"
+  downloads                  : "Downloads"
+  operating_system           : "Operating System"
+  total_downloads            : "Total Downloads"
 zh-CN:
   <<: *DEFAULT_ZH_HANS
 zh-SG:
@@ -473,6 +495,9 @@ zh-TW: &DEFAULT_ZH_HANT
   loading_label              : "載入中..."
   search_label_text          :
   choose_language            : "Select Language"
+  downloads                  : "Downloads"
+  operating_system           : "Operating System"
+  total_downloads            : "Total Downloads"
 zh-HK:
   <<: *DEFAULT_ZH_HANT
 
@@ -525,6 +550,9 @@ de: &DEFAULT_DE
   search_placeholder_text    : "Suchbegriff eingeben..."
   results_found              : "Ergebnis(se) gefunden"
   choose_language            : "Sprache wechseln"
+  downloads                  : "Downloads"
+  operating_system           : "Betriebssystem"
+  total_downloads            : "Gesamt"
 de-DE:
   <<: *DEFAULT_DE
 de-AT:
@@ -585,6 +613,9 @@ ne: &DEFAULT_NE
   loading_label              : "लोड हुँदैछ ..."
   search_label_text          :
   choose_language            : "Select Language"
+  downloads                  : "Downloads"
+  operating_system           : "Operating System"
+  total_downloads            : "Total Downloads"
 ne-NP:
   <<: *DEFAULT_NE
 
@@ -638,6 +669,9 @@ ko: &DEFAULT_KO
   results_found              : "개 결과 발견"
   back_to_top                : "맨 위로 이동"
   choose_language            : "Select Language"
+  downloads                  : "Downloads"
+  operating_system           : "Operating System"
+  total_downloads            : "Total Downloads"
 ko-KR:
   <<: *DEFAULT_KO
 
@@ -690,6 +724,9 @@ ru: &DEFAULT_RU
   search_placeholder_text    : "Введите поисковый запрос..."
   results_found              : "Найдено"
   choose_language            : "Select Language"
+  downloads                  : "Downloads"
+  operating_system           : "Operating System"
+  total_downloads            : "Total Downloads"
 ru-RU:
   <<: *DEFAULT_RU
 
@@ -740,6 +777,9 @@ lt: &DEFAULT_LT
   loading_label              : "Kraunama..."
   search_label_text          :
   choose_language            : "Select Language"
+  downloads                  : "Downloads"
+  operating_system           : "Operating System"
+  total_downloads            : "Total Downloads"
 lt-LT:
   <<: *DEFAULT_LT
 
@@ -792,6 +832,9 @@ gr: &DEFAULT_GR
   search_placeholder_text    : "Εισάγετε όρο αναζήτησης..."
   results_found              : "Αποτελέσματα"
   choose_language            : "Select Language"
+  downloads                  : "Downloads"
+  operating_system           : "Operating System"
+  total_downloads            : "Total Downloads"
 gr-GR:
   <<: *DEFAULT_GR
 
@@ -845,6 +888,9 @@ sv: &DEFAULT_SV
   results_found              : "Resultat funna"
   back_to_top                : "Tillbaka till toppen"
   choose_language            : "Select Language"
+  downloads                  : "Downloads"
+  operating_system           : "Operating System"
+  total_downloads            : "Total Downloads"
 sv-SE:
   <<: *DEFAULT_SV
 sv-FI:
@@ -896,6 +942,10 @@ nl: &DEFAULT_NL
   comment_error_msg          : "Sorry, er is een fout opgetreden bij uw inzending. Zorg ervoor dat alle vereiste velden zijn voltooid en probeer het opnieuw."
   loading_label              : "Laden..."
   search_label_text          :
+  choose_language            : "Select Language"
+  downloads                  : "Downloads"
+  operating_system           : "Operating System"
+  total_downloads            : "Total Downloads"
 nl-BE:
   <<: *DEFAULT_NL
 nl-NL:
@@ -948,6 +998,9 @@ id: &DEFAULT_ID
   loading_label              : "Sedang meload..."
   search_label_text          :
   choose_language            : "Select Language"
+  downloads                  : "Downloads"
+  operating_system           : "Operating System"
+  total_downloads            : "Total Downloads"
 id-ID:
   <<: *DEFAULT_ID
 
@@ -1001,6 +1054,9 @@ vi: &DEFAULT_VI
   results_found              : "Kết quả tìm được"
   back_to_top                : "Lên đầu trang"
   choose_language            : "Select Language"
+  downloads                  : "Downloads"
+  operating_system           : "Operating System"
+  total_downloads            : "Total Downloads"
 vi-VN:
   <<: *DEFAULT_VI
 
@@ -1054,6 +1110,9 @@ da: &DEFAULT_DA
   results_found              : "Resultat(er) fundet"
   back_to_top                : "Tilbage til toppen"
   choose_language            : "Select Language"
+  downloads                  : "Downloads"
+  operating_system           : "Operating System"
+  total_downloads            : "Total Downloads"
 da-DK:
   <<: *DEFAULT_DA
 
@@ -1104,6 +1163,9 @@ pl: &DEFAULT_PL
   loading_label              : "Trwa ładowanie strony..."
   search_label_text          :
   choose_language            : "Select Language"
+  downloads                  : "Downloads"
+  operating_system           : "Operating System"
+  total_downloads            : "Total Downloads"
 pl-PL:
   <<: *DEFAULT_PL
 
@@ -1156,6 +1218,9 @@ ja: &DEFAULT_JA
   search_placeholder_text    : "検索キーワードを入力してください..."
   results_found              : "件"
   choose_language            : "Select Language"
+  downloads                  : "Downloads"
+  operating_system           : "Operating System"
+  total_downloads            : "Total Downloads"
 ja-JP:
   <<: *DEFAULT_JA
 
@@ -1209,6 +1274,9 @@ sk: &DEFAULT_SK
   results_found              : "Nájdených výsledkov"
   back_to_top                : "Na začiatok stránky"
   choose_language            : "Select Language"
+  downloads                  : "Downloads"
+  operating_system           : "Operating System"
+  total_downloads            : "Total Downloads"
 sk-SK:
   <<: *DEFAULT_SK
 
@@ -1262,6 +1330,9 @@ hu: &DEFAULT_HU
   results_found              : "Találatok:"
   back_to_top                : "Oldal tetejére"
   choose_language            : "Select Language"
+  downloads                  : "Downloads"
+  operating_system           : "Operating System"
+  total_downloads            : "Total Downloads"
 hu-HU:
   <<: *DEFAULT_HU
 
@@ -1315,6 +1386,9 @@ ro: &DEFAULT_RO
   results_found              : "Rezultate găsite"
   back_to_top                : "Înapoi în susul paginii"
   choose_language            : "Select Language"
+  downloads                  : "Downloads"
+  operating_system           : "Operating System"
+  total_downloads            : "Total Downloads"
 ro-RO:
   <<: *DEFAULT_RO
 
@@ -1368,6 +1442,9 @@ pa: &DEFAULT_PA
   results_found              : "ਨਤੀਜਾ ਮਿਲਿਆ/ਮਿਲੇ"
   back_to_top                : "ਵਾਪਸ ਚੋਟੀ 'ਤੇ ਜਾਓ"
   choose_language            : "Select Language"
+  downloads                  : "Downloads"
+  operating_system           : "Operating System"
+  total_downloads            : "Total Downloads"
 pa-IN:
   <<: *DEFAULT_PA
 
@@ -1420,6 +1497,9 @@ fa: &DEFAULT_FA
   results_found              : "نتایج"
   back_to_top                : "بازگشت به بالا"
   choose_language            : "Select Language"
+  downloads                  : "Downloads"
+  operating_system           : "Operating System"
+  total_downloads            : "Total Downloads"
 fa-IR:
   <<: *DEFAULT_FA
 
@@ -1474,6 +1554,9 @@ ml: &DEFAULT_ML
   results_found              : "ഫലം (കൾ) കണ്ടെത്തി"
   back_to_top                : "മുകളിലേയ്ക്ക്"
   choose_language            : "Select Language"
+  downloads                  : "Downloads"
+  operating_system           : "Operating System"
+  total_downloads            : "Total Downloads"
 ml-IN:
   <<: *DEFAULT_ML
 
@@ -1527,6 +1610,9 @@ th: &DEFAULT_TH
   results_found              : "ผลการค้นหา พบ"
   back_to_top                : "กลับด้านบน"
   choose_language            : "Select Language"
+  downloads                  : "Downloads"
+  operating_system           : "Operating System"
+  total_downloads            : "Total Downloads"
 th-TH:
   <<: *DEFAULT_TH
 
@@ -1579,6 +1665,9 @@ hi: &DEFAULT_HI
   results_found              : "परिणाम मिला/मिले"
   back_to_top                : "शीर्ष पर वापस"
   choose_language            : "Select Language"
+  downloads                  : "Downloads"
+  operating_system           : "Operating System"
+  total_downloads            : "Total Downloads"
 hi-IN:
   <<: *DEFAULT_HI
   
@@ -1632,6 +1721,9 @@ ca: &DEFAULT_CA
   results_found              : "resultat(s)"
   back_to_top                : "Torna a dalt"
   choose_language            : "Select Language"
+  downloads                  : "Downloads"
+  operating_system           : "Operating System"
+  total_downloads            : "Total Downloads"
 ca-ES:
   <<: *DEFAULT_CA
   
