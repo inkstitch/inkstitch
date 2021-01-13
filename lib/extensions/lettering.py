@@ -13,7 +13,6 @@ from ..elements import nodes_to_elements
 from ..gui import PresetsPanel, SimulatorPreview, info_dialog
 from ..i18n import _
 from ..lettering import Font, FontError
-from ..lettering.font_variant import FontVariant
 from ..svg import get_correction_transform
 from ..svg.tags import (INKSCAPE_LABEL, INKSTITCH_LETTERING, SVG_GROUP_TAG,
                         SVG_PATH_TAG)
@@ -45,8 +44,6 @@ class LetteringFrame(wx.Frame):
 
         # font details
         self.font_description = wx.StaticText(self, wx.ID_ANY)
-        self.font_variant_info = wx.StaticText(self, wx.ID_ANY)
-        self.font_variant_info.SetForegroundColour((100, 100, 100))
 
         # options
         self.options_box = wx.StaticBox(self, wx.ID_ANY, label=_("Options"))
@@ -206,12 +203,6 @@ class LetteringFrame(wx.Frame):
 
         font_variants = font.has_variants()
 
-        # Update font_variant_info box
-        # As long as we do not support up and down, we don't want to expose them to the user
-        left_right = [FontVariant.LEFT_TO_RIGHT, FontVariant.RIGHT_TO_LEFT]
-        directions = [d for d in font_variants if d in left_right]
-        self.font_variant_info.SetLabel(_(u"Available stitch directions: %s") % " ".join(directions))
-
         # Update font description
         color = (0, 0, 0)
         description = font.description
@@ -324,7 +315,6 @@ class LetteringFrame(wx.Frame):
         font_selector_sizer = wx.StaticBoxSizer(self.font_selector_box, wx.VERTICAL)
         font_selector_sizer.Add(self.font_chooser, 0, wx.EXPAND | wx.ALL, 10)
         font_selector_sizer.Add(self.font_description, 1, wx.EXPAND | wx.ALL, 10)
-        font_selector_sizer.Add(self.font_variant_info, 0, wx.EXPAND | wx.BOTTOM | wx.RIGHT | wx.LEFT, 10)
         outer_sizer.Add(font_selector_sizer, 0, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
 
         # options
