@@ -50,6 +50,8 @@ en: &DEFAULT_EN
   results_found              : "Result(s) found"
   back_to_top                : "Back to top"
   choose_language            : "Select Language"
+  downloads                  : "Downloads"
+  operating_system           : "Operating System"
 en-US:
   <<: *DEFAULT_EN
 en-CA:

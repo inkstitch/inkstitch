@@ -157,6 +157,10 @@ table tr td:first-child {
     width: 100%;
 }
 
+.table-first-column-alignright tr td:first-child, .table-first-column-alignright tr th:first-child {
+    text-align: right;
+}
+
 /* Table of Contents */
   .toc .nav__title {
     background: #808080;

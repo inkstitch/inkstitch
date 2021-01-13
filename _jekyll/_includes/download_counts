@@ -1,0 +1,36 @@
+{% assign assets = site.github.latest_release.assets %}
+{%- assign linux = 0 -%}
+{%- assign osx = 0 -%}
+{%- assign windows = 0 -%}
+
+{% for asset in assets %}
+
+{%- assign version = asset.name | split: "-" %}
+{%- comment -%}
+{{ version[2] }} {{ version[3] | replace: ".zip" "" }}
+{{ asset.download_count }}
+{%- endcomment -%}
+
+{%- if version[2] == "linux" -%}
+{%- assign linux = linux | plus: asset.download_count %}
+{%- endif -%}
+
+{%- if version[2] == "osx" -%}
+{%- assign osx = osx | plus: asset.download_count %}
+{%- endif -%}
+
+{%- if version[2] == "windows" -%}
+{%- assign windows = windows | plus: asset.download_count %}
+{%- endif -%}
+
+{% endfor %}
+
+## Ink/Stitch {{ site.github.latest_release.name }}
+
+|{{ site.data.ui-text[page.lang].downloads}}|{{ site.data.ui-text[page.lang].operating_system }}|
+|--|--|
+|{{ linux }}|Linux|
+|{{ osx }}|macOS|
+|{{ windows }}|Windows|
+|**{{ linux | plus: osx | plus: windows }}**|**Total Downloads**|
+{: .table-first-column-alignright }
