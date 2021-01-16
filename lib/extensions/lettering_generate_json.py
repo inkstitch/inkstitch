@@ -1,8 +1,10 @@
 import json
 import os
+import sys
 
 from inkex import Boolean
 
+from ..i18n import _
 from ..lettering.kerning import FontKerning
 from .base import InkstitchExtension
 
@@ -18,7 +20,7 @@ class LetteringGenerateJson(InkstitchExtension):
         self.arg_parser.add_argument("-s", "--auto-satin", type=Boolean, default="true", dest="auto_satin")
         self.arg_parser.add_argument("-r", "--reversible", type=Boolean, default="true", dest="reversible")
         self.arg_parser.add_argument("-g", "--default-glyph", type=str, default="�", dest="default_glyph")
-        self.arg_parser.add_argument("-e", "--default-letter-spacing", type=str, default="1.5", dest="default_letter_spacing")
+        self.arg_parser.add_argument("-e", "--default-letter-spacing", type=float, default=1.5, dest="default_letter_spacing")
         self.arg_parser.add_argument("-i", "--min-scale", type=float, default=1, dest="min_scale")
         self.arg_parser.add_argument("-a", "--max-scale", type=float, default=1, dest="max_scale")
         self.arg_parser.add_argument("-l", "--leading", type=float, default=5, dest="leading")
@@ -27,6 +29,9 @@ class LetteringGenerateJson(InkstitchExtension):
     def effect(self):
         # file paths
         path = self.options.path
+        if not os.path.isfile(path):
+            print(_("Please specify a font file."), file=sys.stderr)
+            return
         output_path = os.path.join(os.path.dirname(path), 'font.json')
 
         # kerning
