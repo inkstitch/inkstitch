@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <name>{% trans %}Lettering - Generate JSON{% endtrans %}</name>
+    <name>{% trans %}Generate JSON{% endtrans %}</name>
     <id>org.inkstitch.lettering_generate_json.{{ locale }}</id>
     <param name="extension" type="string" gui-hidden="true">lettering_generate_json</param>
     <effect needs-live-preview="false">
         <object-type>all</object-type>
         <effects-menu>
             <submenu name="Ink/Stitch">
-                <submenu name="{% trans %}Lettering Tools{% endtrans %}" />
+                <submenu name="{% trans %}Font Creation Tools{% endtrans %}" />
             </submenu>
         </effects-menu>
     </effect>

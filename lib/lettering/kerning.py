@@ -1,4 +1,3 @@
-from fontTools.agl import toUnicode
 from inkex import NSS
 from lxml import etree
 
@@ -23,6 +22,12 @@ class FontKerning(object):
         xpath = ".//svg:hkern[(@u1 or @g1) and (@u1 or @g1) and @k]/@*[contains(name(), '1') or contains(name(), '2') or name()='k']"
         hkern = self.svg.xpath(xpath, namespaces=NSS)
         for index, glyph in enumerate(hkern):
+            # fontTools.agl will import fontTools.misc.py23 which will output a deprecation warning
+            # ignore the warning for now - until the library fixed it
+            if index == 0:
+                import warnings
+                warnings.filterwarnings('ignore')
+                from fontTools.agl import toUnicode
             if len(glyph) > 1 and not (index + 1) % 3 == 0:
                 glyph_names = glyph.split(",")
                 # the glyph name is written in various languages, second is english. Let's look it up.

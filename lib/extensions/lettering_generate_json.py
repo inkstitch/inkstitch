@@ -59,4 +59,4 @@ class LetteringGenerateJson(InkstitchExtension):
 
         # write data to font.json into the same directory as the font file
         with open(output_path, 'w') as font_data:
-            json.dump(data, font_data, indent=4, ensure_ascii=False)
+            json.dump(data, font_data, indent=4) # ensure_ascii=False doesn't work in windows

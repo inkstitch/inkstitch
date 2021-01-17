@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>{% trans %}Remove Kerning{% endtrans %}</name>
+    <id>org.inkstitch.lettering_remove_kerning.{{ locale }}</id>
+    <param name="extension" type="string" gui-hidden="true">lettering_remove_kerning</param>
+    <effect needs-live-preview="false">
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu name="Ink/Stitch">
+                <submenu name="{% trans %}Font Creation Tools{% endtrans %}" />
+            </submenu>
+        </effects-menu>
+    </effect>
+    <param name="header" type="description" appearance="header" indent="1" >
+        {% trans %}Removes Kerning information from given SVG files{% endtrans %}
+    </param>
+    <param name="file-description" type="description" indent="1" >
+        &#9888; {% trans %}Make sure you keep a copy of the original file. After running this extension kerning information will be lost unrevertably from these files.{% endtrans %}
+    </param>
+    <param type="path" name="font-files" gui-text="{% trans %}Select Font Files{% endtrans %}" indent="1" mode="files" filetypes="svg"/>
+    <spacer />
+    <script>
+        {{ command_tag | safe }}
+    </script>
+</inkscape-extension>
