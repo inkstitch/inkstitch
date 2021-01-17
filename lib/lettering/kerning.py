@@ -44,6 +44,10 @@ class FontKerning(object):
         xpath = "string(.//svg:glyph[@glyph-name='space'][1]/@*[name()='horiz-adv-x'])"
         return float(self.svg.xpath(xpath, namespaces=NSS))
 
+    def letter_spacing(self):
+        xpath = "string(.//svg:font[@glyph-name='space'][1]/@*[name()='horiz-adv-x'])"
+        return float(self.svg.xpath(xpath, namespaces=NSS))
+
     """
     def missing_glyph_spacing(self):
         xpath = "string(.//svg:missing-glyph/@*[name()='horiz-adv-x'])"

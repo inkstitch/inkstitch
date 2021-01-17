@@ -20,7 +20,6 @@ class LetteringGenerateJson(InkstitchExtension):
         self.arg_parser.add_argument("-s", "--auto-satin", type=Boolean, default="true", dest="auto_satin")
         self.arg_parser.add_argument("-r", "--reversible", type=Boolean, default="true", dest="reversible")
         self.arg_parser.add_argument("-g", "--default-glyph", type=str, default="", dest="default_glyph")
-        self.arg_parser.add_argument("-e", "--default-letter-spacing", type=float, default=1.5, dest="default_letter_spacing")
         self.arg_parser.add_argument("-i", "--min-scale", type=float, default=1, dest="min_scale")
         self.arg_parser.add_argument("-a", "--max-scale", type=float, default=1, dest="max_scale")
         self.arg_parser.add_argument("-l", "--leading", type=float, default=5, dest="leading")
@@ -40,6 +39,7 @@ class LetteringGenerateJson(InkstitchExtension):
         horiz_adv_x = kerning.horiz_adv_x()
         hkern = kerning.hkern()
         word_spacing = kerning.word_spacing()
+        letter_spacing = kerning.letter_spacing()
         # missing_glyph_spacing = kerning.missing_glyph_spacing()
 
         # collect data
@@ -51,12 +51,12 @@ class LetteringGenerateJson(InkstitchExtension):
                 'default_glyph': self.options.default_glyph,
                 'min_scale': self.options.min_scale,
                 'max_scale': self.options.max_scale,
-                'horiz_adv_x_default': float(self.options.default_letter_spacing),
+                'horiz_adv_x_default': letter_spacing,
                 'horiz_adv_x_space': word_spacing,
                 'horiz_adv_x': horiz_adv_x,
                 'kerning_pairs': hkern,
                 }
 
         # write data to font.json into the same directory as the font file
-        with open(output_path, 'w') as font_data:
-            json.dump(data, font_data, indent=4) # ensure_ascii=False doesn't work in windows
+        with open(output_path, 'w', encoding="utf8") as font_data:
+            json.dump(data, font_data, indent=4, ensure_ascii=False)
