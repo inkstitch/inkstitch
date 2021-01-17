@@ -42,11 +42,13 @@ class FontKerning(object):
 
     def word_spacing(self):
         xpath = "string(.//svg:glyph[@glyph-name='space'][1]/@*[name()='horiz-adv-x'])"
-        return float(self.svg.xpath(xpath, namespaces=NSS))
+        word_spacing = self.svg.xpath(xpath, namespaces=NSS) or 3
+        return float(word_spacing)
 
     def letter_spacing(self):
         xpath = "string(.//svg:font[@horiz-adv-x][1]/@*[name()='horiz-adv-x'])"
-        return float(self.svg.xpath(xpath, namespaces=NSS))
+        letter_spacing = self.svg.xpath(xpath, namespaces=NSS) or 1.5
+        return float(letter_spacing)
 
     """
     def missing_glyph_spacing(self):
