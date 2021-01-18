@@ -61,7 +61,7 @@ def write_inx_file(name, contents):
             raise
 
     inx_file_name = "inkstitch_%s.inx" % name
-    with open(os.path.join(inx_locale_dir, inx_file_name), 'w') as inx_file:
+    with open(os.path.join(inx_locale_dir, inx_file_name), 'w', encoding="utf-8") as inx_file:
         print(contents, file=inx_file)
 
 
