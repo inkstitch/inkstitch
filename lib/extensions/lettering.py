@@ -8,6 +8,7 @@ from base64 import b64decode, b64encode
 import appdirs
 import inkex
 import wx
+import wx.adv
 
 from ..elements import nodes_to_elements
 from ..gui import PresetsPanel, SimulatorPreview, info_dialog
