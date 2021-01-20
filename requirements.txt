@@ -6,7 +6,7 @@ networkx
 shapely
 lxml
 appdirs
-numpy
+numpy<=1.17.4
 jinja2>2.9
 requests
 colormath
