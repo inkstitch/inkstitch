@@ -4,12 +4,14 @@ VERSION="$(echo ${GITHUB_REF} | sed -e 's|refs/heads/||' -e 's|refs/tags/||' -e 
 OS="${BUILD:-$(uname)}"
 ARCH="$(uname -m)"
 
-cp -a images/examples palettes symbols fonts LICENSE VERSION dist/inkstitch
-cp -a icons locales print dist/inkstitch/bin
-
 if [ "$BUILD" = "osx" ]; then
-    cp -a electron/build/mac dist/inkstitch/electron
+    cp -a images/examples palettes symbols fonts LICENSE VERSION dist/inkstitch.app/Contents
+    cp -a icons locales print dist/inkstitch.app/Contents/MacOS
+    cp -a electron/build/mac dist/inkstitch.app/Contents/electron
+    rm -rf dist/inkstitch/
 else
+    cp -a images/examples palettes symbols fonts LICENSE VERSION dist/inkstitch
+    cp -a icons locales print dist/inkstitch/bin
     cp -a electron/build/*-unpacked dist/inkstitch/electron
 fi
 
