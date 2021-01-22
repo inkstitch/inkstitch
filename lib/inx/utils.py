@@ -41,6 +41,8 @@ def build_environment():
         # Command tag
         if sys.platform == "win32":
             env.globals["command_tag"] = '<command location="inx">inkstitch/bin/inkstitch.exe</command>'
+        elif sys.platform == "darwin":
+            env.globals["command_tag"] = '<command location="inx">inkstitch.app/Contents/MacOS/inkstitch</command>'
         else:
             env.globals["command_tag"] = '<command location="inx">inkstitch/bin/inkstitch</command>'
     else:
