@@ -33,18 +33,19 @@ def build_environment():
 
     if "BUILD" in os.environ:
         # building a ZIP release, with inkstitch packaged as a binary
-        env.globals["image_path"] = 'inkstitch/bin/icons/'
-        env.globals["inkstitch_version"] = "Testversion Inkscape 1.0 + Python 3.9"
         # About extension: add version information
         with open(os.path.join(version_path, 'VERSION'), 'r') as version:
             env.globals["inkstitch_version"] = "%s %s" % (version.readline(), current_locale)
-        # Command tag
+        # Command tag and icons path
         if sys.platform == "win32":
             env.globals["command_tag"] = '<command location="inx">inkstitch/bin/inkstitch.exe</command>'
+            env.globals["image_path"] = 'inkstitch/bin/icons/'
         elif sys.platform == "darwin":
             env.globals["command_tag"] = '<command location="inx">inkstitch.app/Contents/MacOS/inkstitch</command>'
+            env.globals["image_path"] = 'inkstitch.app/Contents/MacOS/icons/'
         else:
             env.globals["command_tag"] = '<command location="inx">inkstitch/bin/inkstitch</command>'
+            env.globals["image_path"] = 'inkstitch/bin/icons/'
     else:
         # user is running inkstitch.py directly as a developer
         env.globals["command_tag"] = '<command location="inx" interpreter="python">../../inkstitch.py</command>'
