@@ -52,8 +52,3 @@ shopt -s dotglob
 mkdir dist/bin
 mv dist/inkstitch/* dist/bin
 mv dist/bin dist/inkstitch
-
-# on Mac, pyinstaller creates a .app version as well, but we don't need that
-if [ "$BUILD" = "osx" ]; then
-    rm -rf dist/inkstitch.app/
-fi
