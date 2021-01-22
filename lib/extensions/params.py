@@ -525,7 +525,7 @@ class Params(InkstitchExtension):
 
                 # If multiple tabs are enabled, make sure dependent
                 # tabs are grouped with the parent.
-                parent,
+                parent and parent.name,
 
                 # Within parent/dependents, put the parent first.
                 tab == parent
