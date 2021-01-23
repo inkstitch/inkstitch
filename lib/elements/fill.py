@@ -153,7 +153,7 @@ class Fill(EmbroideryElement):
 
         if not valid:
             why = explain_validity(self.shape)
-            message, x, y = re.findall(r".+?(?=\[)|-?\d+\.\d+", why)
+            message, x, y = re.findall(r".+?(?=\[)|-?\d+(?:\.\d+)?", why)
 
             # I Wish this weren't so brittle...
             if "Hole lies outside shell" in message:
