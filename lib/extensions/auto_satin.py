@@ -2,7 +2,7 @@ import sys
 
 import inkex
 
-from ..elements import SatinColumn
+from ..elements import SatinColumn, Stroke
 from ..i18n import _
 from ..stitches.auto_satin import auto_satin
 from .commands import CommandsExtension
