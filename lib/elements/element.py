@@ -1,19 +1,19 @@
 import sys
 from copy import deepcopy
 
-import tinycss2
-
 import cubicsuperpath
+import simpletransform
+import tinycss2
 from cspsubdiv import cspsubdiv
 
+from .svg_objects import circle_to_path, ellipse_to_path, rect_to_path
 from ..commands import find_commands
 from ..i18n import _
-from ..svg import PIXELS_PER_MM, apply_transforms, convert_length, get_doc_size
-from ..svg.tags import (EMBROIDERABLE_TAGS, INKSCAPE_LABEL, INKSTITCH_ATTRIBS,
-                        SVG_CIRCLE_TAG, SVG_ELLIPSE_TAG, SVG_GROUP_TAG,
-                        SVG_OBJECT_TAGS, SVG_RECT_TAG, SVG_LINK_TAG)
-from ..utils import cache
-from .svg_objects import circle_to_path, ellipse_to_path, rect_to_path
+from ..svg import (PIXELS_PER_MM, apply_transforms, convert_length,
+                   get_node_transform)
+from ..svg.tags import (EMBROIDERABLE_TAGS, INKSCAPE_LABEL, INKSTITCH_ATTRIBS, SVG_CIRCLE_TAG, SVG_ELLIPSE_TAG, SVG_GROUP_TAG, SVG_LINK_TAG,
+                        SVG_OBJECT_TAGS, SVG_RECT_TAG)
+from ..utils import Point, cache
 
 
 class Patch:
@@ -186,15 +186,39 @@ class EmbroideryElement(object):
     @property
     @cache
     def stroke_scale(self):
-        svg = self.node.getroottree().getroot()
-        doc_width, doc_height = get_doc_size(svg)
-        # this is necessary for clones, since they are disconnected from the DOM
-        # it will result in a slighty wrong result for zig-zag stitches
-        if doc_width == 0:
-            return 1
-        viewbox = svg.get('viewBox', '0 0 %s %s' % (doc_width, doc_height))
-        viewbox = viewbox.strip().replace(',', ' ').split()
-        return doc_width / float(viewbox[2])
+        # How wide is the stroke, after the transforms are applied?
+        #
+        # If the transform is just simple scaling that preserves the aspect ratio,
+        # then this is completely accurate.  If there's uneven scaling or skewing,
+        # then the stroke is bent out of shape.  We'll make an approximation based on
+        # the average scaling in the X and Y axes.
+        #
+        # Of course, transforms may also involve rotation, skewing, and translation.
+        # All except translation can affect how wide the stroke appears on the screen.
+
+        node_transform = get_node_transform(self.node)
+
+        # First, figure out the translation component of the transform.  Using a zero
+        # vector completely cancels out the rotation, scale, and skew components.
+        zero = [0, 0]
+        simpletransform.applyTransformToPoint(node_transform, zero)
+        translate = Point(*zero)
+
+        # Next, see how the transform affects unit vectors in the X and Y axes.  We
+        # need to subtract off the translation or it will affect the magnitude of
+        # the resulting vector, which we don't want.
+        unit_x = [1, 0]
+        simpletransform.applyTransformToPoint(node_transform, unit_x)
+        sx = (Point(*unit_x) - translate).length()
+
+        unit_y = [0, 1]
+        simpletransform.applyTransformToPoint(node_transform, unit_y)
+        sy = (Point(*unit_y) - translate).length()
+
+        # Take the average as a best guess.
+        node_scale = (sx + sy) / 2.0
+
+        return node_scale
 
     @property
     @cache
