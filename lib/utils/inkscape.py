@@ -1,5 +1,5 @@
-from os.path import realpath, expanduser, join as path_join
 import sys
+from os.path import expanduser, realpath
 
 
 def guess_inkscape_config_path():
