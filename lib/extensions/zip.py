@@ -1,6 +1,7 @@
 import os
 import sys
 import tempfile
+from copy import deepcopy
 from zipfile import ZipFile
 
 from inkex import Boolean
@@ -52,10 +53,10 @@ class Zip(InkstitchExtension):
             if getattr(self.options, format):
                 output_file = os.path.join(path, "%s.%s" % (base_file_name, format))
                 if format == 'svg':
-                    output = open(output_file, 'w')
-                    output.write(etree.tostring(self.document.getroot(), encoding=str))
-                    output.close()
-                if format == 'threadlist':
+                    document = deepcopy(self.document.getroot())
+                    with open(output_file, 'w', encoding='utf-8') as svg:
+                        svg.write(etree.tostring(document).decode('utf-8'))
+                elif format == 'threadlist':
                     output_file = os.path.join(path, "%s_%s.txt" % (base_file_name, _("threadlist")))
                     output = open(output_file, 'w')
                     output.write(self.get_threadlist(stitch_plan, base_file_name))
