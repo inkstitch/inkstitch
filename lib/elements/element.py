@@ -7,10 +7,11 @@ from inkex import bezier
 
 from ..commands import find_commands
 from ..i18n import _
-from ..svg import PIXELS_PER_MM, apply_transforms, convert_length, get_doc_size, get_node_transform
+from ..svg import (PIXELS_PER_MM, apply_transforms, convert_length,
+                   get_doc_size, get_node_transform)
 from ..svg.tags import (EMBROIDERABLE_TAGS, INKSCAPE_LABEL, INKSTITCH_ATTRIBS,
                         SVG_GROUP_TAG, SVG_LINK_TAG, SVG_USE_TAG)
-from ..utils import cache, Point
+from ..utils import Point, cache
 
 
 class Patch:
