@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-21 01:23+0000\n"
-"PO-Revision-Date: 2021-01-21 01:24\n"
+"POT-Creation-Date: 2021-01-29 00:46+0000\n"
+"PO-Revision-Date: 2021-01-29 00:48\n"
 "Last-Translator: \n"
 "Language-Team: Finnish\n"
 "MIME-Version: 1.0\n"
@@ -22,36 +22,36 @@ msgstr ""
 "X-Crowdin-File-ID: 8\n"
 "Language: fi_FI\n"
 
-#. name of font in fonts/medium_font
-#: inkstitch-fonts-metadata.py:2
-msgid "Ink/Stitch Medium Font"
-msgstr "Ink/Stitch Keskikokoinen kirjasin"
-
-#. description of font in fonts/medium_font
-#: inkstitch-fonts-metadata.py:4
-#, python-format
-msgid "A basic font suited for medium-sized characters.  The capital em is 0.6 inches wide at 100% scale.  Can be scaled down to 75% or up to 150%.  Every satin has contour underlay."
-msgstr ""
-
 #. name of font in fonts/dejavufont
-#: inkstitch-fonts-metadata.py:6
+#: inkstitch-fonts-metadata.py:2
 msgid "Dejavu for Inkstitch semicondensed"
 msgstr ""
 
 #. description of font in fonts/dejavufont
-#: inkstitch-fonts-metadata.py:8
+#: inkstitch-fonts-metadata.py:4
 #, python-format
 msgid "The capital em is 19,8 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 150%.  Every satin has center-walk underlay."
 msgstr ""
 
-#. name of font in fonts/geneva_rounded
-#: inkstitch-fonts-metadata.py:10
-msgid "Geneva Simple Sans Rounded"
-msgstr ""
+#. name of font in fonts/tt_masters
+#: inkstitch-fonts-metadata.py:6
+msgid "TT Masters"
+msgstr "TT Masters"
 
-#. description of font in fonts/geneva_rounded
+#. description of font in fonts/tt_masters
+#: inkstitch-fonts-metadata.py:8
+msgid "A font suited for heavy typing :)"
+msgstr "Raskaampaan käyttöön"
+
+#. name of font in fonts/medium_font
+#: inkstitch-fonts-metadata.py:10
+msgid "Ink/Stitch Medium Font"
+msgstr "Ink/Stitch Keskikokoinen kirjasin"
+
+#. description of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:12
-msgid "Suitable for small fonts (8 to 20 mm)"
+#, python-format
+msgid "A basic font suited for medium-sized characters.  The capital em is 0.6 inches wide at 100% scale.  Can be scaled down to 75% or up to 150%.  Every satin has contour underlay."
 msgstr ""
 
 #. name of font in fonts/geneva_simple
@@ -64,36 +64,36 @@ msgstr ""
 msgid "Suitable for small fonts (6 to 15mm)"
 msgstr ""
 
-#. name of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:18
-msgid "TT Directors"
-msgstr "TT Directors"
-
-#. description of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:20
-msgid "A font suited for directing"
-msgstr "Ohjaus kirjasin tyyppi"
-
 #. name of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:22
+#: inkstitch-fonts-metadata.py:18
 msgid "Ink/Stitch Small Font"
 msgstr "Ink/Stitch Small Font"
 
 #. description of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:24
+#: inkstitch-fonts-metadata.py:20
 #, python-format
 msgid "A font suited for small characters.  The capital em is 0.2 inches wide at 100% scale.  Can be scaled up to 300%."
 msgstr "Pienikirjasin tyyppi."
 
-#. name of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:26
-msgid "TT Masters"
-msgstr "TT Masters"
+#. name of font in fonts/tt_directors
+#: inkstitch-fonts-metadata.py:22
+msgid "TT Directors"
+msgstr "TT Directors"
 
-#. description of font in fonts/tt_masters
+#. description of font in fonts/tt_directors
+#: inkstitch-fonts-metadata.py:24
+msgid "A font suited for directing"
+msgstr "Ohjaus kirjasin tyyppi"
+
+#. name of font in fonts/geneva_rounded
+#: inkstitch-fonts-metadata.py:26
+msgid "Geneva Simple Sans Rounded"
+msgstr ""
+
+#. description of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:28
-msgid "A font suited for heavy typing :)"
-msgstr "Raskaampaan käyttöön"
+msgid "Suitable for small fonts (8 to 20 mm)"
+msgstr ""
 
 #: inkstitch.py:56
 msgid "Ink/Stitch experienced an unexpected error."
@@ -336,20 +336,20 @@ msgstr ""
 msgid "This setting will apply a custom fill angle for the clone."
 msgstr ""
 
-#: lib/elements/element.py:212
+#: lib/elements/element.py:236
 msgid "Ties"
 msgstr ""
 
-#: lib/elements/element.py:213
+#: lib/elements/element.py:237
 msgid "Add ties. Manual stitch will not add ties."
 msgstr ""
 
-#: lib/elements/element.py:261
+#: lib/elements/element.py:285
 #, python-format
 msgid "Object %(id)s has an empty 'd' attribute.  Please delete this object from your document."
 msgstr ""
 
-#: lib/elements/element.py:293
+#: lib/elements/element.py:317
 #, python-format
 msgid "%(id)s has more than one command of type '%(command)s' linked to it"
 msgstr ""
@@ -357,7 +357,7 @@ msgstr ""
 #. used when showing an error message to the user such as
 #. "Some Path (path1234): error: satin column: One or more of the rungs doesn't
 #. intersect both rails."
-#: lib/elements/element.py:351
+#: lib/elements/element.py:375
 msgid "error:"
 msgstr "virhe:"
 
