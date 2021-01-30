@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-29 00:46+0000\n"
-"PO-Revision-Date: 2021-01-29 00:48\n"
+"PO-Revision-Date: 2021-01-30 00:48\n"
 "Last-Translator: \n"
 "Language-Team: Norwegian\n"
 "MIME-Version: 1.0\n"
@@ -106,37 +106,37 @@ msgstr ""
 #. command attached to an object
 #: lib/commands.py:23
 msgid "Fill stitch starting position"
-msgstr ""
+msgstr "Fyll startposisjon"
 
 #. command attached to an object
 #: lib/commands.py:26
 msgid "Fill stitch ending position"
-msgstr ""
+msgstr "Fyll sluttposisjon"
 
 #. command attached to an object
 #: lib/commands.py:29
 msgid "Auto-route satin stitch starting position"
-msgstr ""
+msgstr "Sett satin stitch startposisjon automatisk"
 
 #. command attached to an object
 #: lib/commands.py:32
 msgid "Auto-route satin stitch ending position"
-msgstr ""
+msgstr "Sett satin stitch sluttposisjon automatisk"
 
 #. command attached to an object
 #: lib/commands.py:35
 msgid "Stop (pause machine) after sewing this object"
-msgstr ""
+msgstr "Stopp (pause maskina) når objektet er ferdig"
 
 #. command attached to an object
 #: lib/commands.py:38
 msgid "Trim thread after sewing this object"
-msgstr ""
+msgstr "Klipp tråden når objektet er ferdig"
 
 #. command attached to an object
 #: lib/commands.py:41
 msgid "Ignore this object (do not stitch)"
-msgstr ""
+msgstr "Ignorer dette objektet (ikkje sy)"
 
 #. command attached to an object
 #: lib/commands.py:44

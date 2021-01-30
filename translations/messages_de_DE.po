@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-29 00:46+0000\n"
-"PO-Revision-Date: 2021-01-29 00:48\n"
+"PO-Revision-Date: 2021-01-30 00:48\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -25,13 +25,13 @@ msgstr ""
 #. name of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:2
 msgid "Dejavu for Inkstitch semicondensed"
-msgstr ""
+msgstr "Dejavu für Inkstitch halbkondensiert"
 
 #. description of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:4
 #, python-format
 msgid "The capital em is 19,8 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 150%.  Every satin has center-walk underlay."
-msgstr ""
+msgstr "Der Großbuchstabe em ist 19,8 Millimeter breit und zu 100% skaliert. Kann auf 80% verkleinert oder auf bis zu 150% vergrößert werden. Jeder Satin hat eine Mittelunterlage."
 
 #. name of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:6
@@ -57,12 +57,12 @@ msgstr "Für mittelgroße Schriftgrößen geeignet. Der Großbuchstabe \"M\" ist
 #. name of font in fonts/geneva_simple
 #: inkstitch-fonts-metadata.py:14
 msgid "Geneva Simple Sans"
-msgstr ""
+msgstr "Geneva Simple Sans"
 
 #. description of font in fonts/geneva_simple
 #: inkstitch-fonts-metadata.py:16
 msgid "Suitable for small fonts (6 to 15mm)"
-msgstr ""
+msgstr "Geeignet für kleine Schriftarten (6 bis 15 mm)"
 
 #. name of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:18
@@ -88,12 +88,12 @@ msgstr "Eine Schrift geeignete für wichtiges"
 #. name of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:26
 msgid "Geneva Simple Sans Rounded"
-msgstr ""
+msgstr "Geneva Simple Sans Rounded"
 
 #. description of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:28
 msgid "Suitable for small fonts (8 to 20 mm)"
-msgstr ""
+msgstr "Geeignet für kleine Schriftarten (8 bis 20 mm)"
 
 #: inkstitch.py:56
 msgid "Ink/Stitch experienced an unexpected error."
@@ -290,51 +290,51 @@ msgstr "Wenn du uns helfen willst Ink/Stitch zu verbessern, kopiere die gesamte 
 
 #: lib/elements/clone.py:25
 msgid "Clone Object"
-msgstr ""
+msgstr "Objekt klonen"
 
 #: lib/elements/clone.py:26
 msgid "There are one or more clone objects in this document.  Ink/Stitch can work with single clones, but you are limited to set a very few parameters. "
-msgstr ""
+msgstr "Dieses Dokument enthält ein oder mehrere Klonobjekte. Ink/Stitch kann mit einzelnen Klonen arbeiten, es können jedoch nur wenige Parameter festlegt werden. "
 
 #: lib/elements/clone.py:29
 msgid "If you want to convert the clone into a real element, follow these steps:"
-msgstr ""
+msgstr "Um einen Klon in ein echtes Element zu konvertieren, bitte folgendermaßen vorgehen:"
 
 #: lib/elements/clone.py:30
 msgid "* Select the clone"
-msgstr ""
+msgstr "* Klon auswählen"
 
 #: lib/elements/clone.py:31 lib/elements/clone.py:42
 msgid "* Run: Edit > Clone > Unlink Clone (Alt+Shift+D)"
-msgstr ""
+msgstr "* Ausführen: Bearbeiten> Klonen> Klon aufheben (Alt + Umschalt + D)"
 
 #: lib/elements/clone.py:36
 msgid "Clone is not embroiderable"
-msgstr ""
+msgstr "Klon ist nicht stickbar"
 
 #: lib/elements/clone.py:37
 msgid "There are one ore more clone objects in this document. A clone must be a direct child of an embroiderable element. Ink/Stitch cannot embroider clones of groups or other not embroiderable elements (text or image)."
-msgstr ""
+msgstr "In diesem Dokument befinden sich ein oder mehrere Klonobjekte. Ein Klon muss ein direktes Kind eines stickbaren Elements sein. Ink/Stitch kann keine Klone von Gruppen oder anderen nicht stickbaren Elementen (Text oder Bild) sticken."
 
 #: lib/elements/clone.py:40
 msgid "Convert the clone into a real element:"
-msgstr ""
+msgstr "Klon in ein echtes Element konvertieren:"
 
 #: lib/elements/clone.py:41
 msgid "* Select the clone."
-msgstr ""
+msgstr "* Klon auswählen."
 
 #: lib/elements/clone.py:56
 msgid "Clone"
-msgstr ""
+msgstr "Klon"
 
 #: lib/elements/clone.py:62
 msgid "Custom fill angle"
-msgstr ""
+msgstr "Benutzerdefinierter Füllwinkel"
 
 #: lib/elements/clone.py:63
 msgid "This setting will apply a custom fill angle for the clone."
-msgstr ""
+msgstr "Diese Einstellung wendet einen benutzerdefinierten Füllwinkel für den Klon an."
 
 #: lib/elements/element.py:236
 msgid "Ties"
@@ -363,15 +363,15 @@ msgstr "Fehler:"
 
 #: lib/elements/empty_d_object.py:7
 msgid "Empty D-Attribute"
-msgstr ""
+msgstr "Leeres D-Attribut"
 
 #: lib/elements/empty_d_object.py:8
 msgid "There is an invalid path object in the document, the d-attribute is missing."
-msgstr ""
+msgstr "Es gibt ein ungültiges Pfadobjekt im Dokument, das d-Attribut fehlt."
 
 #: lib/elements/empty_d_object.py:10
 msgid "* Run Extensions > Ink/Stitch > Troubleshoot > Cleanup Document..."
-msgstr ""
+msgstr "*Erweiterung ausführen> Ink/Stitch> Fehlerbehebung> Bereinigungsdokument..."
 
 #: lib/elements/fill.py:17
 msgid "Unconnected"
@@ -383,7 +383,7 @@ msgstr "Füllung: Dieses Objekt besteht aus unzusammenhängenden Formen. Das ist
 
 #: lib/elements/fill.py:22 lib/elements/fill.py:30
 msgid "* Extensions > Ink/Stitch > Fill Tools > Break Apart Fill Objects"
-msgstr ""
+msgstr "* Erweiterung > Ink/Stitch > Füllstich-Werkzeuge > Zerlegen und Löcher erhalten"
 
 #: lib/elements/fill.py:27
 msgid "Border crosses itself"
@@ -447,23 +447,23 @@ msgstr "Die Einstellung bestimmt, wie viele Reihen die Stiche voneinander entfer
 
 #: lib/elements/image.py:10
 msgid "Image"
-msgstr ""
+msgstr "Bild"
 
 #: lib/elements/image.py:11
 msgid "Ink/Stitch can't work with objects like images."
-msgstr ""
+msgstr "Ink/Stitch kann mit Objekten wie Bildern nicht arbeiten."
 
 #: lib/elements/image.py:13
 msgid "* Convert your image into a path: Path > Trace Bitmap... (Shift+Alt+B) (further steps might be required)"
-msgstr ""
+msgstr "* Bild in einen Pfad konvertieren: Pfad> Bitmap nachzeichnen... (Umschalt + Alt + B) (weitere Schritte sind möglicherweise erforderlich)"
 
 #: lib/elements/image.py:15
 msgid "* Alternatively redraw the image with the pen (P) or bezier (B) tool"
-msgstr ""
+msgstr "* Alternativ kann das Bild auch mit dem Stift (P) oder dem Bezier (B) Werkzeug neu gezeichnet werden"
 
 #: lib/elements/polyline.py:11
 msgid "Polyline Object"
-msgstr ""
+msgstr "Polylinienobjekt"
 
 #: lib/elements/polyline.py:12
 msgid "This object is an SVG PolyLine.  Ink/Stitch can work with this shape, but you can't edit it in Inkscape.  Convert it to a manual stitch path to allow editing."
@@ -483,7 +483,7 @@ msgstr "* Optional: Öffne die Parametereinstellungen und aktiviere \"manuelle S
 
 #: lib/elements/polyline.py:38
 msgid "Manual stitch along path"
-msgstr ""
+msgstr "Manueller Stich entlang des Pfades"
 
 #: lib/elements/satin_column.py:15
 msgid "Satin column has fill"
@@ -653,7 +653,7 @@ msgstr "Standard: Halbe Einrückung der Konturunterlage"
 
 #: lib/elements/stroke.py:15
 msgid "Stroke"
-msgstr ""
+msgstr "Strich"
 
 #: lib/elements/stroke.py:18
 msgid "Satin stitch along paths"
@@ -707,15 +707,15 @@ msgstr "Text"
 
 #: lib/elements/text.py:11
 msgid "Ink/Stitch cannot work with objects like text."
-msgstr ""
+msgstr "Ink/Stitch kann nicht mit Objekten wie Text arbeiten."
 
 #: lib/elements/text.py:13
 msgid "* Text: Create your own letters or try the lettering tool:"
-msgstr ""
+msgstr "* Text: Erstellen Sie Ihre eigenen Buchstaben oder probieren Sie das Beschriftungswerkzeug aus:"
 
 #: lib/elements/text.py:14
 msgid "- Extensions > Ink/Stitch > Lettering"
-msgstr ""
+msgstr "- Erweiterungen> Ink/Stitch > Text"
 
 #: lib/extensions/auto_satin.py:30
 msgid "Please ensure that at most one start and end command is attached to the selected satin columns."
@@ -728,7 +728,7 @@ msgstr "Bitte eine oder mehrere Satinkolumnen auswählen."
 
 #: lib/extensions/auto_satin.py:49
 msgid "Please select at least one satin column."
-msgstr ""
+msgstr "Bitte mindestens eine Satinkolumne aus auswählen."
 
 #. This was previously: "No embroiderable paths selected."
 #: lib/extensions/base.py:130
@@ -741,7 +741,7 @@ msgstr "Es gibt im gesamten Dokument keine Objekte, mit denen Ink/Stitch arbeite
 
 #: lib/extensions/base.py:134
 msgid "Tip: Select some objects and use Path -> Object to Path to convert them to paths."
-msgstr ""
+msgstr "Tipp: Markiere einige Objekte und nutze die Funktion \"Pfad > Objekt in Pfad umwandeln\"."
 
 #: lib/extensions/break_apart.py:26
 msgid "Please select one or more fill areas to break apart."
@@ -750,7 +750,7 @@ msgstr "Um unverbundene Flächen voneinander zu trennen, wähle bitte ein oder m
 #: lib/extensions/cleanup.py:35 lib/extensions/cleanup.py:47
 #, python-format
 msgid "%s elements removed"
-msgstr ""
+msgstr "%s Elemente entfernt"
 
 #: lib/extensions/convert_to_satin.py:30
 msgid "Please select at least one line to convert to a satin column."
@@ -804,7 +804,7 @@ msgstr "Bitte wählen Sie einen oder mehrere Befehle um diese zu verknüpfen."
 
 #: lib/extensions/lettering.py:30 lib/extensions/lettering.py:327
 msgid "Ink/Stitch Lettering"
-msgstr "Ink/Stitch Lettering"
+msgstr "Ink/Stitch Text"
 
 #: lib/extensions/lettering.py:37
 msgid "Options"
@@ -849,7 +849,7 @@ msgstr "Bitte wähle nur einen Textabschnitt."
 
 #: lib/extensions/lettering.py:319
 msgid "You've selected objects that were not created by the Lettering extension.  Please clear your selection or select different objects before running Lettering again."
-msgstr "Du hast Objekte ausgewählt, die nicht von der Lettering-Erweiterung erstellt wurden. Bitte entferne deine Auswahl oder wähle andere Objekte aus, bevor du das Lettering-Modul erneut startest."
+msgstr "Du hast Objekte ausgewählt, die nicht von der Text-Erweiterung erstellt wurden. Bitte entferne deine Auswahl oder wähle andere Objekte aus, bevor du das Text-Modul erneut startest."
 
 #: lib/extensions/object_commands.py:16
 msgid "Please select one or more objects to which to attach commands."
@@ -908,11 +908,11 @@ msgstr "Letzte Einstellungen verwenden"
 
 #: lib/extensions/troubleshoot.py:42
 msgid "All selected shapes are valid! "
-msgstr ""
+msgstr "Alle ausgewählten Formen sind gültig! "
 
 #: lib/extensions/troubleshoot.py:44
 msgid "If you are still having trouble with a shape not being embroidered, check if it is in a layer with an ignore command."
-msgstr ""
+msgstr "Wenn eine Form noch immer nicht nicht gestickt wird, bitte überprüfen, ob sie sich in einer Ebene mit einem Ignorierbefehl befindet."
 
 #: lib/extensions/troubleshoot.py:70
 msgid "Invalid Pointer"
@@ -938,23 +938,23 @@ msgstr "Warnungen"
 
 #: lib/extensions/troubleshoot.py:135
 msgid "Type Warnings"
-msgstr ""
+msgstr "Typ Warnungen"
 
 #: lib/extensions/troubleshoot.py:167
 msgid "Problems that will prevent the shape from being embroidered."
-msgstr ""
+msgstr "Probleme, die verhindern, dass die Form gestickt wird."
 
 #: lib/extensions/troubleshoot.py:171
 msgid "These are problems that won't prevent the shape from being embroidered. You should consider to fix the warning, but if you don't, Ink/Stitch will do its best to process the object."
-msgstr ""
+msgstr "Dies sind Probleme, die nicht verhindern, dass die Form gestickt wird. Es empfiehlt sich, die Warnung zu beheben. Wenn dies nicht geschieht, wird Ink/Stitch sein Bestes tun, um das Objekt trotzdem zu verarbeiten."
 
 #: lib/extensions/troubleshoot.py:176
 msgid "Object Type Warnings"
-msgstr ""
+msgstr "Objekttypwarnungen"
 
 #: lib/extensions/troubleshoot.py:177
 msgid "Ink/Stitch only knows how to works with paths and ignores everything else. You might want these shapes to be ignored, but if you don't, follow the instructions to change this behaviour."
-msgstr ""
+msgstr "Ink/Stitch kann nur mit Pfaden arbeiten und ignoriert alles andere. Möglicherweise möchten Sie, dass diese Formen ignoriert werden. Wenn Sie dies nicht tun, befolgen Sie die Anweisungen, um dieses Verhalten zu ändern."
 
 #: lib/extensions/troubleshoot.py:194
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
@@ -1730,7 +1730,7 @@ msgstr "Satin Werkzeuge"
 
 #: templates/break_apart.inx:3
 msgid "Break Apart Fill Objects"
-msgstr ""
+msgstr "Aufteilen von Füllobjekten"
 
 #: templates/break_apart.inx:10
 msgid "Fill Tools"
@@ -1738,35 +1738,35 @@ msgstr "Füllstitch Werkzeuge"
 
 #: templates/break_apart.inx:15
 msgid "This extension will try to repair fill shapes and break them apart if necessary. Holes will be retained. Use on simple or overlapping shapes."
-msgstr ""
+msgstr "Diese Erweiterung versucht, Füllformen zu reparieren und bei Bedarf auseinanderzubrechen. Löcher bleiben erhalten. Verwendung bei einfachen oder überlappenden Formen."
 
 #: templates/cleanup.inx:3
 msgid "Cleanup Document"
-msgstr ""
+msgstr "Dokument bereinigen"
 
 #: templates/cleanup.inx:5
 msgid "Use this extension to remove small objects from the document."
-msgstr ""
+msgstr "Diese Erweiterung entfernt kleine Objekte aus dem Dokument."
 
 #: templates/cleanup.inx:6
 msgid "Remove Small Fill Areas"
-msgstr ""
+msgstr "Kleine Füllbereiche entfernen"
 
 #: templates/cleanup.inx:7
 msgid "Removes areas smaller than dedined by threshold."
-msgstr ""
+msgstr "Entfernt Bereiche, die kleiner sind als vom Schwellenwert festgelegt."
 
 #: templates/cleanup.inx:8
 msgid "Fill area threshold"
-msgstr ""
+msgstr "Minimale Größe für Füllstich-Objekte"
 
 #: templates/cleanup.inx:10
 msgid "Removes small strokes shorter than defined by threshold."
-msgstr ""
+msgstr "Entfernt kleine Striche, die kleiner sind als vom Schwellenwert festgelegt."
 
 #: templates/cleanup.inx:11
 msgid "Stroke threshold"
-msgstr ""
+msgstr "Strich-Schwelle"
 
 #: templates/convert_to_satin.inx:3
 msgid "Convert Line to Satin"
@@ -1815,7 +1815,7 @@ msgstr "Leer lassen, um die Ausgabe im Erweiterungsverzeichnis von Inkscape zu s
 #: templates/embroider.inx:21 templates/print.inx:10 templates/simulator.inx:10
 #: templates/stitch_plan_preview.inx:10
 msgid "Visualise and Export"
-msgstr ""
+msgstr "Visualisieren und exportieren"
 
 #: templates/flip.inx:3
 msgid "Flip Satin Column Rails"
@@ -1858,7 +1858,7 @@ msgstr "Konvertierung der %(file_extension)s Datei in Ink/Stitch manuelle Stichp
 
 #: templates/install.inx:3
 msgid "Install thread color palettes for Inkscape"
-msgstr ""
+msgstr "Garnfarbpaletten für Inkscape installieren"
 
 #: templates/layer_commands.inx:3
 msgid "Add Layer Commands"
@@ -1920,23 +1920,23 @@ msgstr "Erhöhe die Z-Koordinate um diesen Wert pro Stitch, wenn \"Z Wert pro St
 #: templates/output_params_txt.xml:15
 #, python-format
 msgid "Use '%X' for x-coordinate. Use '%Y' for y-coordinate and '%Z' for z-coordinate. Use '\\n' for a new line."
-msgstr ""
+msgstr "Verwenden Sie '%X' für die x-Koordinate. Verwenden Sie '%Y' für die y-Koordinate und '%Z' für die z-Koordinate. Verwenden Sie '\\n' für eine neue Zeile."
 
 #: templates/output_params_txt.xml:17 templates/output_params_txt.xml:19
 msgid "Use '\\n' for a new line. Leave empty to use default value. Use 'none' to remove."
-msgstr ""
+msgstr "Verwenden Sie '\\n' für eine neue Zeile. Leer lassen, um den Standardwert zu verwenden. Verwenden Sie 'none' zum Entfernen."
 
 #: templates/output_params_txt.xml:20
 msgid "START"
-msgstr ""
+msgstr "START"
 
 #: templates/output_params_txt.xml:21 templates/output_params_txt.xml:23
 msgid "Use '\\n' for a new line."
-msgstr ""
+msgstr "Verwenden Sie '\\n' für eine neue Zeile."
 
 #: templates/output_params_txt.xml:22
 msgid "END"
-msgstr ""
+msgstr "ENDE"
 
 #: templates/output_params_txt.xml:26
 msgid "laser mode"
@@ -1996,7 +1996,7 @@ msgstr "Parameter"
 
 #: templates/print.inx:3
 msgid "PDF Export"
-msgstr ""
+msgstr "PDF-Export"
 
 #: templates/remove_embroidery_settings.inx:3
 msgid "Remove embroidery settings"
@@ -2028,7 +2028,7 @@ msgstr "Druckeinstellungen aus den SVG Metadaten entfernen"
 
 #: templates/simulator.inx:3
 msgid "Simulator / Realistic Preview"
-msgstr ""
+msgstr "Simulator / Realistische Vorschau"
 
 #: templates/stitch_plan_preview.inx:3
 msgid "Stitch Plan Preview"
@@ -2057,55 +2057,55 @@ msgstr "Garnliste"
 #. name for left arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:52
 msgid "← Arrow left"
-msgstr ""
+msgstr "← Pfeil links"
 
 #. name for right arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:63
 msgid "→ Arrow right"
-msgstr ""
+msgstr "→ Pfeil rechts"
 
 #. name for up arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:129
 msgid "↑ Arrow up"
-msgstr ""
+msgstr "↑ Pfeil oben"
 
 #. name for down arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:118
 msgid "↓ Arrow down"
-msgstr ""
+msgstr "↓ Pfeil unten"
 
 #. name for this keyboard key: +
 #: electron/src/renderer/components/Simulator.vue:89
 msgid "+ Plus"
-msgstr ""
+msgstr "+ Plus"
 
 #: electron/src/renderer/components/Simulator.vue:15
 msgid "Button"
-msgstr ""
+msgstr "Knopf"
 
 #: electron/src/renderer/components/Simulator.vue:201
 msgid "color changes"
-msgstr ""
+msgstr "Farbwechsel"
 
 #: electron/src/renderer/components/Simulator.vue:186
 msgid "Command"
-msgstr ""
+msgstr "Befehl"
 
 #: electron/src/renderer/components/Simulator.vue:145
 msgid "Controls"
-msgstr ""
+msgstr "Steuerung"
 
 #: electron/src/renderer/components/Simulator.vue:221
 msgid "cursor"
-msgstr ""
+msgstr "Mauszeiger"
 
 #: electron/src/renderer/components/Simulator.vue:18
 msgid "Function"
-msgstr ""
+msgstr "Funktion"
 
 #: electron/src/renderer/components/InstallPalettes.vue:9
 msgid "Ink/Stitch can install palettes for Inkscape matching the thread colors from popular machine embroidery thread manufacturers."
-msgstr ""
+msgstr "Ink/Stitch kann Paletten für Inkscape installieren, die den Garnfarben der gängigen Hersteller von Maschinenstickgarn entsprechen."
 
 #: electron/src/renderer/components/InstallPalettes.vue:48
 msgid "Inkscape add-on installation failed"
@@ -2113,7 +2113,7 @@ msgstr "Installation der Inkscape Erweiterung gescheitert"
 
 #: electron/src/renderer/components/InstallPalettes.vue:31
 msgid "Inkscape palettes have been installed. Please restart Inkscape to load the new palettes."
-msgstr ""
+msgstr "Inkscape-Paletten wurden installiert. Bitte Inkscape neu starten, um die neuen Paletten zu laden."
 
 #: electron/src/renderer/components/InstallPalettes.vue:17
 msgid "Install"
@@ -2121,7 +2121,7 @@ msgstr "Installieren"
 
 #: electron/src/renderer/components/InstallPalettes.vue:4
 msgid "Install Palettes"
-msgstr ""
+msgstr "Paletten installieren"
 
 #: electron/src/renderer/components/InstallPalettes.vue:26
 msgid "Installation Completed"
@@ -2133,96 +2133,96 @@ msgstr "Installation fehlgeschlagen"
 
 #: electron/src/renderer/components/Simulator.vue:106
 msgid "Jump to next command"
-msgstr ""
+msgstr "Zum nächsten Befehl springen"
 
 #: electron/src/renderer/components/Simulator.vue:97
 msgid "Jump to previous command"
-msgstr ""
+msgstr "Zum vorherigen Befehl springen"
 
 #: electron/src/renderer/components/Simulator.vue:197
 msgid "jumps"
-msgstr ""
+msgstr "Sprungstiche"
 
 #. name for this keyboard key: -
 #: electron/src/renderer/components/Simulator.vue:76
 msgid "Minus"
-msgstr ""
+msgstr "Minus"
 
 #: electron/src/renderer/components/Simulator.vue:213
 msgid "needle<br/>points"
-msgstr ""
+msgstr "Nadel <br/> Punkte"
 
 #. description of keyboard shortcut that moves one stitch backward in simulator
 #: electron/src/renderer/components/Simulator.vue:71
 msgid "One step backward"
-msgstr ""
+msgstr " ein Schritt rückwärts"
 
 #. description of keyboard shortcut that moves one stitch forward in simulator
 #: electron/src/renderer/components/Simulator.vue:84
 msgid "One step forward"
-msgstr ""
+msgstr " ein Schritt vorwärts"
 
 #. name for page down keyboard key
 #: electron/src/renderer/components/Simulator.vue:99
 msgid "Page down (PgDn)"
-msgstr ""
+msgstr "Bild runter (PgDn)"
 
 #. name for page up keyboard key
 #: electron/src/renderer/components/Simulator.vue:108
 msgid "Page up (PgUp)"
-msgstr ""
+msgstr "Bild hoch (PgUp)"
 
 #: electron/src/renderer/components/Simulator.vue:40
 msgid "Play"
-msgstr ""
+msgstr "Abspielen"
 
 #: electron/src/renderer/components/Simulator.vue:49
 msgid "Play backward"
-msgstr ""
+msgstr "rückwärts Abspielen"
 
 #: electron/src/renderer/components/Simulator.vue:60
 msgid "Play forward"
-msgstr ""
+msgstr "Vorwärts abspielen"
 
 #: electron/src/renderer/components/Simulator.vue:218
 msgid "realistic"
-msgstr ""
+msgstr "realistisch"
 
 #: electron/src/renderer/components/Simulator.vue:258
 msgid "Rendering stitch-plan..."
-msgstr ""
+msgstr "Stichplan wird erstellt..."
 
 #: electron/src/renderer/components/Simulator.vue:21
 msgid "Shortcut Key"
-msgstr ""
+msgstr "Tastenkürzel"
 
 #: electron/src/renderer/components/Simulator.vue:10
 msgid "Simulator Shortcut Keys"
-msgstr ""
+msgstr "Simulator-Tastenkürzel"
 
 #: electron/src/renderer/components/Simulator.vue:115
 msgid "Slow down"
-msgstr ""
+msgstr "Verlangsamen"
 
 #: electron/src/renderer/components/Simulator.vue:32
 msgid "Space"
-msgstr ""
+msgstr "Leerzeichen"
 
 #: electron/src/renderer/components/Simulator.vue:126
 msgid "Speed up"
-msgstr ""
+msgstr "Beschleunigen"
 
 #: electron/src/renderer/components/Simulator.vue:174
 msgid "Speed: %{speed} stitch/sec"
 msgid_plural "Speed: %{speed} stitches/sec"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Geschwindigkeit: %{speed} Stich/Sek"
+msgstr[1] "Geschwindigkeit: %{speed} Stiche/Sek"
 
 #: electron/src/renderer/components/Simulator.vue:204
 msgid "stops"
-msgstr ""
+msgstr "Stopp-Befehle"
 
 #: electron/src/renderer/components/InstallPalettes.vue:55
 msgid "Try again"
-msgstr ""
+msgstr "Versuchen sie es erneut"
 

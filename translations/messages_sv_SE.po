@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-29 00:46+0000\n"
-"PO-Revision-Date: 2021-01-29 00:49\n"
+"PO-Revision-Date: 2021-01-30 00:48\n"
 "Last-Translator: \n"
 "Language-Team: Swedish\n"
 "MIME-Version: 1.0\n"
@@ -62,7 +62,7 @@ msgstr ""
 #. description of font in fonts/geneva_simple
 #: inkstitch-fonts-metadata.py:16
 msgid "Suitable for small fonts (6 to 15mm)"
-msgstr ""
+msgstr "Passar små fonter (6 till 15 mm)"
 
 #. name of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:18
@@ -73,7 +73,7 @@ msgstr ""
 #: inkstitch-fonts-metadata.py:20
 #, python-format
 msgid "A font suited for small characters.  The capital em is 0.2 inches wide at 100% scale.  Can be scaled up to 300%."
-msgstr ""
+msgstr "En font som passar för små bokstäver. Versaler är en halv cm breda i 100%. Går att förstora upp till 300%."
 
 #. name of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:22
@@ -97,11 +97,11 @@ msgstr ""
 
 #: inkstitch.py:56
 msgid "Ink/Stitch experienced an unexpected error."
-msgstr ""
+msgstr "Ink/Stitch stötte på ett oväntat fel."
 
 #: inkstitch.py:57
 msgid "If you'd like to help, please file an issue at https://github.com/inkstitch/inkstitch/issues and include the entire error description below:"
-msgstr ""
+msgstr "Om du vill hjälpa till, anmäl problem på https://github.com/inkstitch/inkstitch/issues och beskriv vad det var som gick fel nedan:"
 
 #. command attached to an object
 #: lib/commands.py:23
@@ -126,17 +126,17 @@ msgstr ""
 #. command attached to an object
 #: lib/commands.py:35
 msgid "Stop (pause machine) after sewing this object"
-msgstr ""
+msgstr "Stoppa (stanna maskinen) efter att ha sytt detta objekt"
 
 #. command attached to an object
 #: lib/commands.py:38
 msgid "Trim thread after sewing this object"
-msgstr ""
+msgstr "Klipp av tråden efter att ha sytt detta objekt"
 
 #. command attached to an object
 #: lib/commands.py:41
 msgid "Ignore this object (do not stitch)"
-msgstr ""
+msgstr "Hoppa över detta objekt (sy inte)"
 
 #. command attached to an object
 #: lib/commands.py:44
@@ -146,7 +146,7 @@ msgstr ""
 #. command that affects a layer
 #: lib/commands.py:48
 msgid "Ignore layer (do not stitch any objects in this layer)"
-msgstr ""
+msgstr "Ignorera lager (sy inga objekt i det här lagret)"
 
 #. command that affects entire document
 #: lib/commands.py:51
@@ -240,7 +240,7 @@ msgstr ""
 
 #: lib/elements/auto_fill.py:95
 msgid "Max stitch length"
-msgstr ""
+msgstr "Max stygn längd"
 
 #: lib/elements/auto_fill.py:96
 msgid "default: equal to fill max stitch length"
@@ -256,7 +256,7 @@ msgstr ""
 
 #: lib/elements/auto_fill.py:117 lib/elements/fill.py:69
 msgid "Skip last stitch in each row"
-msgstr ""
+msgstr "Hoppa över sista stygnet i varje rad"
 
 #: lib/elements/auto_fill.py:118 lib/elements/fill.py:70
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."

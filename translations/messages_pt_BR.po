@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-29 00:46+0000\n"
-"PO-Revision-Date: 2021-01-29 00:48\n"
+"PO-Revision-Date: 2021-01-30 00:48\n"
 "Last-Translator: \n"
 "Language-Team: Portuguese, Brazilian\n"
 "MIME-Version: 1.0\n"
@@ -46,13 +46,13 @@ msgstr ""
 #. name of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:10
 msgid "Ink/Stitch Medium Font"
-msgstr ""
+msgstr "Ink/Stitch Fonte Média"
 
 #. description of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:12
 #, python-format
 msgid "A basic font suited for medium-sized characters.  The capital em is 0.6 inches wide at 100% scale.  Can be scaled down to 75% or up to 150%.  Every satin has contour underlay."
-msgstr ""
+msgstr "Uma fonte básica adequada a caracteres de tamanho médio. A maiúscula tem 1,5 centímetros de largura na escala de 100%. Pode ser reduzida em até 75% ou aumentada em até 150%. Todas as colunas têm camada inferior em contorno."
 
 #. name of font in fonts/geneva_simple
 #: inkstitch-fonts-metadata.py:14
@@ -67,13 +67,13 @@ msgstr ""
 #. name of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:18
 msgid "Ink/Stitch Small Font"
-msgstr ""
+msgstr "Ink/Stitch Fonte Pequena"
 
 #. description of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:20
 #, python-format
 msgid "A font suited for small characters.  The capital em is 0.2 inches wide at 100% scale.  Can be scaled up to 300%."
-msgstr ""
+msgstr "Uma fonte adequada para letras pequenas. A maiúscula tem 0,5 centímetros de largura na escala de 100%. Pode ser aumentada em até 300%."
 
 #. name of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:22
@@ -106,12 +106,12 @@ msgstr ""
 #. command attached to an object
 #: lib/commands.py:23
 msgid "Fill stitch starting position"
-msgstr ""
+msgstr "Posição inicial do ponto de preenchimento"
 
 #. command attached to an object
 #: lib/commands.py:26
 msgid "Fill stitch ending position"
-msgstr ""
+msgstr "Posição final do ponto de preenchimento"
 
 #. command attached to an object
 #: lib/commands.py:29
@@ -189,7 +189,7 @@ msgstr ""
 
 #: lib/elements/auto_fill.py:17
 msgid "Small Fill"
-msgstr ""
+msgstr "Pequeno preenchimento"
 
 #: lib/elements/auto_fill.py:18
 msgid "This fill object is so small that it would probably look better as running stitch or satin column. For very small shapes, fill stitch is not possible, and Ink/Stitch will use running stitch around the outline instead."
@@ -197,7 +197,7 @@ msgstr ""
 
 #: lib/elements/auto_fill.py:24
 msgid "AutoFill"
-msgstr ""
+msgstr "Preenchimento automático"
 
 #: lib/elements/auto_fill.py:27
 msgid "Automatically routed fill stitching"
@@ -240,35 +240,35 @@ msgstr ""
 
 #: lib/elements/auto_fill.py:95
 msgid "Max stitch length"
-msgstr ""
+msgstr "Comprimento máximo do ponto"
 
 #: lib/elements/auto_fill.py:96
 msgid "default: equal to fill max stitch length"
-msgstr ""
+msgstr "padrão: igual ao comprimento máximo do ponto de preenchimento"
 
 #: lib/elements/auto_fill.py:105
 msgid "Inset"
-msgstr ""
+msgstr "Inserir"
 
 #: lib/elements/auto_fill.py:106
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
-msgstr ""
+msgstr "Reduza a forma antes de fazer a base, para evitar que a base apareça na parte externa do preenchimento."
 
 #: lib/elements/auto_fill.py:117 lib/elements/fill.py:69
 msgid "Skip last stitch in each row"
-msgstr ""
+msgstr "Pule o último ponto de cada linha"
 
 #: lib/elements/auto_fill.py:118 lib/elements/fill.py:70
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
-msgstr ""
+msgstr "O último ponto de cada linha é bastante próximo ao primeiro ponto da próxima linha. Ignorá-lo diminui a densidade e a contagem de pontos."
 
 #: lib/elements/auto_fill.py:128
 msgid "Expand"
-msgstr ""
+msgstr "Expandir"
 
 #: lib/elements/auto_fill.py:129
 msgid "Expand the shape before fill stitching, to compensate for gaps between shapes."
-msgstr ""
+msgstr "Expanda a forma antes da costura de preenchimento, para compensar as lacunas entre as formas."
 
 #: lib/elements/auto_fill.py:138 lib/elements/auto_fill.py:150
 msgid "Underpath"
@@ -727,7 +727,7 @@ msgstr ""
 
 #: lib/extensions/auto_satin.py:49
 msgid "Please select at least one satin column."
-msgstr ""
+msgstr "Selecione pelo menos uma coluna do cetim."
 
 #. This was previously: "No embroiderable paths selected."
 #: lib/extensions/base.py:130
@@ -928,15 +928,15 @@ msgstr ""
 
 #: lib/extensions/troubleshoot.py:117 lib/extensions/troubleshoot.py:166
 msgid "Errors"
-msgstr ""
+msgstr "Erros"
 
 #: lib/extensions/troubleshoot.py:126 lib/extensions/troubleshoot.py:170
 msgid "Warnings"
-msgstr ""
+msgstr "Alertas"
 
 #: lib/extensions/troubleshoot.py:135
 msgid "Type Warnings"
-msgstr ""
+msgstr "Tipos de Alertas"
 
 #: lib/extensions/troubleshoot.py:167
 msgid "Problems that will prevent the shape from being embroidered."
@@ -972,11 +972,11 @@ msgstr ""
 
 #: lib/extensions/zip.py:97
 msgid "Title"
-msgstr ""
+msgstr "Título"
 
 #: lib/extensions/zip.py:98
 msgid "Size"
-msgstr ""
+msgstr "Tamanho"
 
 #: lib/extensions/zip.py:99
 msgid "Stitches"
@@ -984,7 +984,7 @@ msgstr ""
 
 #: lib/extensions/zip.py:100
 msgid "Colors"
-msgstr ""
+msgstr "Cores"
 
 #: lib/extensions/zip.py:102
 msgid "Thread Order"
@@ -1086,11 +1086,11 @@ msgstr ""
 
 #: lib/gui/simulator.py:68
 msgid "Restart"
-msgstr ""
+msgstr "Recomeçar"
 
 #: lib/gui/simulator.py:70
 msgid "Restart (R)"
-msgstr ""
+msgstr "Recomeçar (R)"
 
 #: lib/gui/simulator.py:71
 msgid "O"
@@ -1102,11 +1102,11 @@ msgstr ""
 
 #: lib/gui/simulator.py:74
 msgid "Quit"
-msgstr ""
+msgstr "Sair"
 
 #: lib/gui/simulator.py:76
 msgid "Quit (Q)"
-msgstr ""
+msgstr "Sair (Q)"
 
 #: lib/gui/simulator.py:188
 #, python-format
@@ -1115,7 +1115,7 @@ msgstr ""
 
 #: lib/gui/simulator.py:244 lib/gui/simulator.py:272
 msgid "Start"
-msgstr ""
+msgstr "Começar"
 
 #: lib/gui/simulator.py:824 lib/gui/simulator.py:836
 msgid "Preview"
@@ -1127,7 +1127,7 @@ msgstr ""
 
 #: lib/gui/simulator.py:869
 msgid "Embroidery Simulation"
-msgstr ""
+msgstr "Simulador de Bordado"
 
 #. If you translate this string, that will tell Ink/Stitch to
 #. generate menu items for this language in Inkscape's "Extensions"
@@ -1205,12 +1205,12 @@ msgstr ""
 #: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
 #: print/templates/operator_detailedview.html:68
 msgid "yes"
-msgstr ""
+msgstr "sim"
 
 #: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
 #: print/templates/operator_detailedview.html:68
 msgid "no"
-msgstr ""
+msgstr "não"
 
 #: print/templates/color_swatch.html:40
 #: print/templates/operator_detailedview.html:57
@@ -1389,11 +1389,11 @@ msgstr ""
 
 #: print/templates/ui.html:6 print/templates/ui.html:16
 msgid "Settings"
-msgstr ""
+msgstr "Configurações"
 
 #: print/templates/ui.html:7
 msgid "Close"
-msgstr ""
+msgstr "Fechar"
 
 #: print/templates/ui.html:10
 msgid "⚠ lost connection to Ink/Stitch"
@@ -1522,11 +1522,11 @@ msgstr ""
 
 #: print/templates/ui.html:169
 msgid "Yes"
-msgstr ""
+msgstr "Sim"
 
 #: print/templates/ui.html:170
 msgid "No"
-msgstr ""
+msgstr "Não"
 
 #: print/templates/ui_svg_action_buttons.html:1
 msgid "Scale"
@@ -1856,7 +1856,7 @@ msgstr ""
 
 #: templates/install.inx:3
 msgid "Install thread color palettes for Inkscape"
-msgstr ""
+msgstr "Instalar paleta de cores para linhas no Inkscape"
 
 #: templates/layer_commands.inx:3
 msgid "Add Layer Commands"
@@ -1918,7 +1918,7 @@ msgstr ""
 #: templates/output_params_txt.xml:15
 #, python-format
 msgid "Use '%X' for x-coordinate. Use '%Y' for y-coordinate and '%Z' for z-coordinate. Use '\\n' for a new line."
-msgstr ""
+msgstr "Use '%X' para coordenada X. Use '%Y' para coordenada Y. Use '%Z' para coordenada Z. Use '\\n' para uma nova linha."
 
 #: templates/output_params_txt.xml:17 templates/output_params_txt.xml:19
 msgid "Use '\\n' for a new line. Leave empty to use default value. Use 'none' to remove."
@@ -1930,7 +1930,7 @@ msgstr ""
 
 #: templates/output_params_txt.xml:21 templates/output_params_txt.xml:23
 msgid "Use '\\n' for a new line."
-msgstr ""
+msgstr "Use '\\n' para uma nova linha."
 
 #: templates/output_params_txt.xml:22
 msgid "END"
@@ -1990,15 +1990,15 @@ msgstr ""
 
 #: templates/params.inx:3
 msgid "Params"
-msgstr ""
+msgstr "Parâmetros"
 
 #: templates/print.inx:3
 msgid "PDF Export"
-msgstr ""
+msgstr "Exportar PDF"
 
 #: templates/remove_embroidery_settings.inx:3
 msgid "Remove embroidery settings"
-msgstr ""
+msgstr "Remover configurações do bordado"
 
 #: templates/remove_embroidery_settings.inx:5
 msgid "Use this extension to remove the information Ink/Stitch has stored in your document.  This can be especially useful if you copy and paste objects from an embroidery design into another document."
@@ -2055,35 +2055,35 @@ msgstr ""
 #. name for left arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:52
 msgid "← Arrow left"
-msgstr ""
+msgstr "← Seta esquerda"
 
 #. name for right arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:63
 msgid "→ Arrow right"
-msgstr ""
+msgstr "→ Seta direira"
 
 #. name for up arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:129
 msgid "↑ Arrow up"
-msgstr ""
+msgstr "↑ Seta para cima"
 
 #. name for down arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:118
 msgid "↓ Arrow down"
-msgstr ""
+msgstr "↓ Seta para baixo"
 
 #. name for this keyboard key: +
 #: electron/src/renderer/components/Simulator.vue:89
 msgid "+ Plus"
-msgstr ""
+msgstr "+ mais"
 
 #: electron/src/renderer/components/Simulator.vue:15
 msgid "Button"
-msgstr ""
+msgstr "Botão"
 
 #: electron/src/renderer/components/Simulator.vue:201
 msgid "color changes"
-msgstr ""
+msgstr "mudança de cor"
 
 #: electron/src/renderer/components/Simulator.vue:186
 msgid "Command"
@@ -2103,7 +2103,7 @@ msgstr ""
 
 #: electron/src/renderer/components/InstallPalettes.vue:9
 msgid "Ink/Stitch can install palettes for Inkscape matching the thread colors from popular machine embroidery thread manufacturers."
-msgstr ""
+msgstr "Ink/Stitch pode instalar paletas para o Inkscape combinando as cores de linha dos fabricantes populares para linhas de bordado para máquinas."
 
 #: electron/src/renderer/components/InstallPalettes.vue:48
 msgid "Inkscape add-on installation failed"
@@ -2111,7 +2111,7 @@ msgstr ""
 
 #: electron/src/renderer/components/InstallPalettes.vue:31
 msgid "Inkscape palettes have been installed. Please restart Inkscape to load the new palettes."
-msgstr ""
+msgstr "As paletas para o Inkscape foram instaladas. Por favor reinicie o Inkscape para usar as novas paletas."
 
 #: electron/src/renderer/components/InstallPalettes.vue:17
 msgid "Install"
@@ -2119,7 +2119,7 @@ msgstr ""
 
 #: electron/src/renderer/components/InstallPalettes.vue:4
 msgid "Install Palettes"
-msgstr ""
+msgstr "Instalando Paletas"
 
 #: electron/src/renderer/components/InstallPalettes.vue:26
 msgid "Installation Completed"
@@ -2131,11 +2131,11 @@ msgstr ""
 
 #: electron/src/renderer/components/Simulator.vue:106
 msgid "Jump to next command"
-msgstr ""
+msgstr "Ir para o próximo comando"
 
 #: electron/src/renderer/components/Simulator.vue:97
 msgid "Jump to previous command"
-msgstr ""
+msgstr "Ir para comando anterior"
 
 #: electron/src/renderer/components/Simulator.vue:197
 msgid "jumps"
@@ -2204,7 +2204,7 @@ msgstr ""
 
 #: electron/src/renderer/components/Simulator.vue:32
 msgid "Space"
-msgstr ""
+msgstr "Espaço"
 
 #: electron/src/renderer/components/Simulator.vue:126
 msgid "Speed up"
@@ -2222,5 +2222,5 @@ msgstr ""
 
 #: electron/src/renderer/components/InstallPalettes.vue:55
 msgid "Try again"
-msgstr ""
+msgstr "Tente novamente"
 
