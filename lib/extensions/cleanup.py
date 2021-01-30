@@ -1,6 +1,4 @@
-import sys
-
-from inkex import NSS, Boolean
+from inkex import NSS, Boolean, errormsg
 
 from ..elements import Fill, Stroke
 from ..i18n import _
@@ -31,7 +29,7 @@ class Cleanup(InkstitchExtension):
             count += 1
 
         if not self.get_elements():
-            print(_("%s elements removed" % count), file=sys.stderr)
+            errormsg(_("%s elements removed" % count))
             return
 
         for element in self.elements:
@@ -43,4 +41,4 @@ class Cleanup(InkstitchExtension):
                 element.node.getparent().remove(element.node)
                 count += 1
 
-        print(_("%s elements removed" % count), file=sys.stderr)
+        errormsg(_("%s elements removed" % count))
