@@ -55,4 +55,4 @@ class Input(object):
         # Note: this is NOT the same as centering the design in the canvas!
         layer.set('transform', 'translate(%s,%s)' % (extents[0], extents[1]))
 
-        print(etree.tostring(svg, encoding=str))
+        print(etree.tostring(svg).decode('utf-8'))

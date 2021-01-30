@@ -230,7 +230,7 @@ class Print(InkstitchExtension):
             if layer is not stitch_plan_layer:
                 svg.remove(layer)
 
-        overview_svg = etree.tostring(svg, encoding=str)
+        overview_svg = etree.tostring(svg).decode('utf-8')
         color_block_groups = stitch_plan_layer.getchildren()
         color_block_svgs = []
 
@@ -242,7 +242,7 @@ class Print(InkstitchExtension):
             stitch_plan_layer.append(group)
 
             # save an SVG preview
-            color_block_svgs.append(etree.tostring(svg, encoding=str))
+            color_block_svgs.append(etree.tostring(svg).decode('utf-8'))
 
         return overview_svg, color_block_svgs
 

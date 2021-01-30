@@ -1,4 +1,5 @@
 import sys
+import inkex
 
 import pyembroidery
 
@@ -92,5 +93,6 @@ def write_embroidery_file(file_path, stitch_plan, svg, settings={}):
     except IOError as e:
         # L10N low-level file error.  %(error)s is (hopefully?) translated by
         # the user's system automatically.
-        print(_("Error writing to %(path)s: %(error)s") % dict(path=file_path, error=e.strerror), file=sys.stderr)
+        msg = _("Error writing to %(path)s: %(error)s") % dict(path=file_path, error=e.strerror)
+        inkex.errormsg(msg)
         sys.exit(1)

@@ -25,10 +25,10 @@ class ImportThreadlist(InkstitchExtension):
 
         path = self.options.filepath
         if not os.path.exists(path):
-            print(_("File not found."), file=sys.stderr)
+            inkex.errormsg(_("File not found."))
             sys.exit(1)
         if os.path.isdir(path):
-            print(_("The filepath specified is not a file but a dictionary.\nPlease choose a threadlist file to import."), file=sys.stderr)
+            inkex.errormsg(_("The filepath specified is not a file but a dictionary.\nPlease choose a threadlist file to import."))
             sys.exit(1)
 
         method = self.options.method
@@ -38,11 +38,11 @@ class ImportThreadlist(InkstitchExtension):
             colors = self.parse_threadlist_by_catalog_number(path)
 
         if all(c is None for c in colors):
-            print(_("Couldn't find any matching colors in the file."), file=sys.stderr)
+            inkex.errormsg(_("Couldn't find any matching colors in the file."))
             if method == 1:
-                print(_('Please try to import as "other threadlist" and specify a color palette below.'), file=sys.stderr)
+                inkex.errormsg(_('Please try to import as "other threadlist" and specify a color palette below.'))
             else:
-                print(_("Please chose an other color palette for your design."), file=sys.stderr)
+                inkex.errormsg(_("Please chose an other color palette for your design."))
             sys.exit(1)
 
         # Iterate through the color blocks to apply colors

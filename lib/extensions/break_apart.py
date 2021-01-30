@@ -1,7 +1,7 @@
 import logging
-import sys
 from copy import copy
 
+import inkex
 from shapely.geometry import LineString, MultiPolygon, Polygon
 from shapely.ops import polygonize, unary_union
 
@@ -22,7 +22,7 @@ class BreakApart(InkstitchExtension):
 
     def effect(self):  # noqa: C901
         if not self.svg.selected:
-            print(_("Please select one or more fill areas to break apart."), file=sys.stderr)
+            inkex.errormsg(_("Please select one or more fill areas to break apart."))
             return
 
         elements = []
