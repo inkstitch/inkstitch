@@ -3,4 +3,8 @@
 VERSION="${GITHUB_REF##*/}"
 OS="${BUILD:-$(uname)}"
 
+if VERSION=""; then
+  VERSION="Manual Install"
+fi
+
 echo "${VERSION} (${OS})" > VERSION
