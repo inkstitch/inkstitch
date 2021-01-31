@@ -361,9 +361,18 @@ table tr td:first-child {
 
 /* Compare languages */
 .lang-headline {
+    display: inline-block;
+    width: 90%;
     background: #4c7c7c;
     padding: 5px;
     color: white;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.lang-title {
+  font-weight: bold;
+  border-bottom: 1px solid grey;
 }
 
 /* Image Manipulation */

@@ -2,7 +2,7 @@
 title: "Übersetzungen"
 permalink: /de/developers/localize/
 excerpt: ""
-last_modified_at: 2019-08-20
+last_modified_at: 2021-01-31
 toc: true
 ---
 Das Ziel des Ink/Stitch-Projektes ist es, hochwertige Werkzeuge zur Erstellung von Stickdesigns in die Hände von Menschen zu geben, die sonst keinen Zugriff auf solche Werkzeuge hätten.
@@ -24,7 +24,7 @@ Um mit dem Übersetzen zu beginnen, besuche unsere [Projektseite bei CrowdIn](ht
 **Info:** Wenn du deine Sprache als gesonderte Datei herunterladen willst, halte Ausschau nach dem Begriff `"Generate INX files"` und stelle sicher, dass es dafür eine Übersetzung gibt. Das ist der Schlüsselbegriff für Ink/Stitch, das Menü ist deiner Sprache zu erstellen.
 {: .notice--warning }
 
-Bestätigte Teammitglieder können deine Übersetzung dann akzeptieren, womit sie dann innerhalb von 24 Stunden in das Ink/Stitch GitHub Repository übernommen werden.  Wenn du gerne vorhandene Übersetzungen bestätigen willst, wende dich an [**@lexelby**](https://github.com/lexelby) oder einen anderes Teammitglied. Alternativ kannst du auch eine E-Mail and **inkstitch-l10n** at **lex** dot **gd** mit deinem Anliegen schicken.
+Bestätigte Teammitglieder können deine Übersetzung dann akzeptieren, womit sie dann innerhalb von 24 Stunden in das Ink/Stitch GitHub Repository übernommen werden.  Wenn du gerne vorhandene Übersetzungen bestätigen willst, wende dich an uns über [GitHub](https://github.com/inkstitch/inkstitch/issues/).
 
 **Bitte beachte, dass unsere [Verhaltensregeln](CODE_OF_CONDUCT.md) auch für Interaktionen auf unserer CrowdIn Seite gelten.**
 
@@ -35,16 +35,12 @@ Wenn dir diese Schritte zu kompliziert sind, füge deine Übersetzung unserer [C
 
 Wenn neuer Code zu Ink/Stitch hinzugefügt wird, kann es sein, dass sich der Text in der Benutzeroberfläche ändert. CrowdIn bemerkt diese Veränderungen automatisch und stellt diese innerhalb von 24 Stunden für Übersetzer bereit.
 
-Manchmal ist es nötig den übersetzten Text in Ink/Stitch zu verifizieren.  Um dies zu tun, führe folgende Schritte aus:
+Manchmal ist es nötig den übersetzten Text in Ink/Stitch zu überprüfen.  Um dies zu tun, führe folgende Schritte aus:
 1. Warte bis zu 24 Stunden bis neue Übersetzungen in das GitHub Repository übernommen wurden ([Beispiel](https://github.com/inkstitch/inkstitch/commit/96c319f870f7da5370ac4f3378f2cf6de0e0ccde)).
 2. Erstelle einen neuen Entwicklerweig. Folge dafür [dieser Anleitung](https://help.github.com/articles/creating-and-deleting-branches-within-your-repository/).
-3. Besuche die [Ink/Stitch Travis CI Projektseite](https://travis-ci.org/inkstitch/inkstitch).
-4. Klicke auf "Trigger build" im Menü oben rechts.
-5. Wähle deinen Entwicklerzweig aus der Liste aus.
-6. Klicke auf "trigger custom build".
-7. Wenn der Prozess abgeschlossen ist, findest du das Ergebnis unter den [Veröffentlichungen](https://github.com/inkstitch/inkstitch/releases) auf GitHub.
+3. Das Ergebnis befindet ist anschließend unter [Veröffentlichungen](https://github.com/inkstitch/inkstitch/releases) auf GitHub abrufbar.
 
-Um diese Schritte ausführen zu können, musst du ein Mitglied des Ink/Stitch Projektes sein.  Um aufgenommen zu werden, schicke eine Nachricht an [**@lexelby**](https://github.com/lexelby) (email: **inkstitch-l10n** at **lex** dot **gd**).
+Um diese Schritte ausführen zu können, musst du ein Mitglied des Ink/Stitch Projektes sein.  Um aufgenommen zu werden, kontaktiere uns über [GitHub](https://github.com/inkstitch/inkstitch/issues/).
 
 
 ## Webseite

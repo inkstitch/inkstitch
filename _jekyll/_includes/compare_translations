@@ -2,14 +2,18 @@
 {% for lang in site.languages %}
   {% if lang[1] != "English" %}
 
-### {{ lang[1] }}
-{: .lang-headline }
+<details>
+<summary>
+
+<p class="lang-headline">{{ lang[1] }}</p>
+
+</summary>
 
   {% for collection in site.collections %}
   {% assign label = collection.label %}
 
-#### {{ label | capitalize }}
-
+<p class="lang-title">{{ label | capitalize }}</p>
+<ul>
     {%- assign pages = collection.docs | where: "lang", "en" -%}
     {%- for post in pages -%}
         {%- if label == 'posts' -%}
@@ -21,7 +25,7 @@
           {%- if lang_page.size == 0 and this_year == post_year -%}
               {%- assign missing_lang = collection.docs | where: "url", new_url -%}
               {% if missing_lang.size == 0 %}
-- New: [{{ post.title }}]({{ post.url }}) ({{ post.date | date: '%Y-%m-%-d' }})
+<li>New: <a href="({{ post.url }}">{{ post.title }}</a> ({{ post.date | date: '%Y-%m-%-d' }})</li>
               {% endif %}
           {%- endif -%}
         {%- else -%}
@@ -31,7 +35,7 @@
           {%- if lang_page.size == 0 -%}
               {%- assign missing_lang = collection.docs | where: "url", new_url -%}
               {% if missing_lang.size == 0 %}
-- New: [{{ post.title }}]({{ post.url }}) ({{ post.date | date: '%Y-%m-%-d' }})
+<li>New: <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date: '%Y-%m-%-d' }})</li>
               {% endif %}
           {%- endif -%}
         {%- endif -%}
@@ -49,16 +53,17 @@
             {%- assign post_modified_at = post.last_modified_at -%}
           {% endif %}
 
-- [{{ please_update.title }}]({{ permalink }}) ({{ modified_at | date: "%Y-%m-%-d" }})<br>
-  English: [{{ post.title }}]({{ post_permalink }}) ({{ post_modified_at | date: "%Y-%m-%-d" }})<br>
-  File: [{{ please_update.path }}](https://github.com/inkstitch/inkstitch/tree/gh-pages/collections/{{ please_update.path }})
-
+<li> {{ post_modified_at | date: "%Y-%m-%-d" }} <a href="{{ post_permalink }}">{{ post.title }}</a><br>
+     {{ modified_at | date: "%Y-%m-%-d" }} <a href="{{ permalink }}">{{ please_update.title }}</a><br>
+     <b><a href="https://github.com/inkstitch/inkstitch/tree/gh-pages/collections/{{ please_update.path }}">Edit translation</a></b>
+</li>
         {% endfor %}
       {%- endfor -%}
-  {% endfor %}  
+  </ul>
+  {% endfor %}
 
-#### Pages
-
+<p class="lang-title">Pages</p>
+<ul>
   {% assign pages = site.pages | where: "lang", "en" |  where_exp: "item", "item.last_modified_at != nil" %}
   {% for post in pages %}
     {%- assign page_url = post.permalink | replace_first: page_lang, '' -%}
@@ -66,18 +71,21 @@
     {%- assign lang_page = site.pages | where: "permalink", new_url | where_exp: "item", "item.lang != 'en'" | where_exp: "item", "item.last_modified_at < post.last_modified_at" -%} 
     {% for please_update in lang_page %}
 
-- [{{ please_update.title }}]({{ please_update.permalink }}) ({{ please_update.last_modified_at }})<br>
-  English: [{{ post.title }}]({{ post.permalink }}) ({{ post.last_modified_at }})<br>
-  File: [{{ please_update.path }}](https://github.com/inkstitch/inkstitch/tree/gh-pages/{{ please_update.path }})
+<li> {{ post.last_modified_at }} <a href="({{ post.permalink }}">{{ post.title }}</a><br>
+     {{ please_update.last_modified_at }} <a href="{{ please_update.permalink }}">{{ please_update.title }}</a><br>
+     <b><a href="https://github.com/inkstitch/inkstitch/tree/gh-pages/{{ please_update.path }}">Edit translation</a></b>
+</li>
 
     {% endfor %}
     {%- if lang_page.size == 0 -%}
         {%- assign missing_lang = site.pages | where: "url", new_url -%}
         {% if missing_lang.size == 0 %}
-- New: [{{ post.title }}]({{ post.url }}) ({{ post.date | date: '%Y-%m-%-d' }})
+<li>New: <a href="{{ post.url }}">{{ post.title }}</a> {{ post.date | date: '%Y-%m-%-d' }})</li>
         {% endif %}
     {%- endif -%}
   {% endfor %}
+</ul>
+</details>
 
   {% endif %}
 {% endfor %}

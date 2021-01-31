@@ -23,7 +23,7 @@ To start translating, visit our [project page on Crowdin](https://crowdin.com/pr
 **Info:** If you want your language to appear in the release section of Ink/Stitch, watch out for the string `"Generate INX files"` and make sure you create a translation for it. This is the key for Ink/Stitch to create the menu files in your language.
 {: .notice--warning }
 
-Approved contributors can accept your translations, which causes them to be committed to this repository within 24 hours.  If you'd like to become an approver, please ping [**@lexelby**](https://github.com/lexelby) or another approved contributor, or email **inkstitch-l10n** at **lex** dot **gd**.
+Approved contributors can accept your translations, which causes them to be committed to this repository within 24 hours.  If you'd like to become an approver, please contact us on [GitHub](https://github.com/inkstitch/inkstitch/issues).
 
 **Please note that our [code of conduct](CODE_OF_CONDUCT.md) also covers contributions and interactions on our Crowdin page.**
 
@@ -37,19 +37,15 @@ When new code is added to Ink/Stitch, user-facing text can change and new messag
 Sometimes, it's necessary to see how your translated text looks in Ink/Stitch.  In order to do this, follow these steps:
 
 1. Wait up to 24 hours until your new translations are committed to Ink/Stitch ([example](https://github.com/inkstitch/inkstitch/commit/96c319f870f7da5370ac4f3378f2cf6de0e0ccde)).
-2. Make a new branch by following [these instructions](https://help.github.com/articles/creating-and-deleting-branches-within-your-repository/).
-3. Visit the [Travis CI project page for Ink/Stitch](https://travis-ci.org/inkstitch/inkstitch).
-4. From the menu in the upper right, choose "Trigger build".
-5. Choose your branch from the list.
-6. Click "trigger custom build".
-7. Once your build finishes, it will be posted to our [releases page](https://github.com/inkstitch/inkstitch/releases).
+2. Make a new branch by following [these instructions](https://help.github.com/articles/creating-and-deleting-branches-within-your-repository/). This will trigger a development release to be build.
+3. Once your build finishes, it will be posted to our [releases page](https://github.com/inkstitch/inkstitch/releases).
 
-In order to do the above steps, you'll need to be added as a collaborator on this repository.  You can ping [**@lexelby**](https://github.com/lexelby) or email **inkstitch-l10n** at **lex** dot **gd** and we'll get you set up.
+In order to do the above steps, you'll need to be added as a collaborator on this repository.  You can contact us through [GitHub](https://github.com/inkstitch/inkstitch/issues) and we'll get you set up.
 
 ## Website
 
 This website is multilingual. When you are willing to translate the documentation please ask for directions on [GitHub](https://github.com/inkstitch/inkstitch/issues).
 
-If your native language is already translated, you might want to have a look at the list below. The list contains pages which are not translated yet or will need an update.
+If your native language is already translated, have a look at the list below. The list contains pages which are not translated yet or will need an update.
 
 {% include compare_translations %}
