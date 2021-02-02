@@ -1,9 +1,9 @@
 module.exports.selectLanguage = function () {
-  ['LANGUAGE', 'LC_ALL', 'LC_MESSAGES', 'LANG'].forEach(language => {
-    if (process.env[language]) {
-      return process.env[language].split(":")[0]
+  var lang = "en_US";
+  ['LANG', 'LC_MESSAGES', 'LC_ALL', 'LANGUAGE'].forEach(language => {
+    if (process.env[language] && process.env[language].split("_").length > 1) {
+      lang = process.env[language].split(".")[0];
     }
   })
-
-  return "en_US"
+  return lang
 }
