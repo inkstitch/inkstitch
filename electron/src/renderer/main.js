@@ -73,7 +73,7 @@ Vue.component('font-awesome-layers', FontAwesomeLayers)
 Vue.use(Transitions)
 Vue.use(GetTextPlugin, {
   translations: translations,
-  defaultLanguage: selectLanguage(),
+  defaultLanguage: selectLanguage(translations),
   silent: true
 })
 
