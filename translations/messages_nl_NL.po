@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-29 00:46+0000\n"
-"PO-Revision-Date: 2021-02-01 00:51\n"
+"PO-Revision-Date: 2021-02-02 00:46\n"
 "Last-Translator: \n"
 "Language-Team: Dutch\n"
 "MIME-Version: 1.0\n"
@@ -52,7 +52,7 @@ msgstr "Ink/Stitch Medium Lettertype"
 #: inkstitch-fonts-metadata.py:12
 #, python-format
 msgid "A basic font suited for medium-sized characters.  The capital em is 0.6 inches wide at 100% scale.  Can be scaled down to 75% or up to 150%.  Every satin has contour underlay."
-msgstr ""
+msgstr "Een basislettertype geschikt voor tekens van gemiddelde grootte. De hoofdletter em is 1.5cm breed bij een 100% schaal. Kan worden verkleind naar 75% of vergroot naar 150%. Elke satijnbaan heeft contour ondergrond."
 
 #. name of font in fonts/geneva_simple
 #: inkstitch-fonts-metadata.py:14
@@ -106,12 +106,12 @@ msgstr "Als je wilt helpen, maak dan een melding aan op https://github.com/inkst
 #. command attached to an object
 #: lib/commands.py:23
 msgid "Fill stitch starting position"
-msgstr ""
+msgstr "Opvulsteek startpositie"
 
 #. command attached to an object
 #: lib/commands.py:26
 msgid "Fill stitch ending position"
-msgstr ""
+msgstr "Opvulsteek eindpositie"
 
 #. command attached to an object
 #: lib/commands.py:29
@@ -141,7 +141,7 @@ msgstr "Negeer dit object (niet borduren)"
 #. command attached to an object
 #: lib/commands.py:44
 msgid "Satin cut point (use with Cut Satin Column)"
-msgstr ""
+msgstr "Satijn snijpunt (gebruik met Snij Satijnbaan)"
 
 #. command that affects a layer
 #: lib/commands.py:48
@@ -193,7 +193,7 @@ msgstr "Kleine Opvulling"
 
 #: lib/elements/auto_fill.py:18
 msgid "This fill object is so small that it would probably look better as running stitch or satin column. For very small shapes, fill stitch is not possible, and Ink/Stitch will use running stitch around the outline instead."
-msgstr ""
+msgstr "Dit invulobject is zo klein dat het er waarschijnlijk beter uitziet als doorlopende steek of satijnbaan. Voor hele kleine vormen is invulsteek niet mogelijk, Ink/Stitch zal inplaats daarvan een doorlopende steek langs de rand maken."
 
 #: lib/elements/auto_fill.py:24
 msgid "AutoFill"
@@ -201,7 +201,7 @@ msgstr "AutoOpvullen"
 
 #: lib/elements/auto_fill.py:27
 msgid "Automatically routed fill stitching"
-msgstr ""
+msgstr "Automatisch gerouteerde opvulsteken"
 
 #: lib/elements/auto_fill.py:47
 msgid "Running stitch length (traversal between sections)"
@@ -252,7 +252,7 @@ msgstr "Inzet"
 
 #: lib/elements/auto_fill.py:106
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
-msgstr ""
+msgstr "Verklein de vorm van de versteviging om te voorkomen dat de versteviging zichtbaar is aan de buitenkant van de opvulling."
 
 #: lib/elements/auto_fill.py:117 lib/elements/fill.py:69
 msgid "Skip last stitch in each row"
@@ -383,7 +383,7 @@ msgstr "Opvulling: Dit objecte bestaat uit losstaande vormen. Dit is niet toeges
 
 #: lib/elements/fill.py:22 lib/elements/fill.py:30
 msgid "* Extensions > Ink/Stitch > Fill Tools > Break Apart Fill Objects"
-msgstr ""
+msgstr "* Uitbreidingen > Ink/Stitch > Opvul gereedschap > Opdelen Opvulobjecten"
 
 #: lib/elements/fill.py:27
 msgid "Border crosses itself"
@@ -459,7 +459,7 @@ msgstr "* Zet je afbeelding om naar een pad: Pad -> Afbeelding Overtrekken (Shif
 
 #: lib/elements/image.py:15
 msgid "* Alternatively redraw the image with the pen (P) or bezier (B) tool"
-msgstr ""
+msgstr "* Je kunt de afbeelding ook overtrekken met de pen (P) of het bezier gereedschap (B)"
 
 #: lib/elements/polyline.py:11
 msgid "Polyline Object"
@@ -487,27 +487,27 @@ msgstr "Handmatige steek langs het pad"
 
 #: lib/elements/satin_column.py:15
 msgid "Satin column has fill"
-msgstr ""
+msgstr "Satijnbaan heeft opvulling"
 
 #: lib/elements/satin_column.py:16
 msgid "Satin column: Object has a fill (but should not)"
-msgstr ""
+msgstr "Satijnbaan: Object heeft opvulling (maar dat moet niet)"
 
 #: lib/elements/satin_column.py:19
 msgid "* Open the Fill and Stroke panel"
-msgstr ""
+msgstr "* Open het Vulling en Lijn paneel"
 
 #: lib/elements/satin_column.py:20
 msgid "* Open the Fill tab"
-msgstr ""
+msgstr "* Open het Opvul tabblad"
 
 #: lib/elements/satin_column.py:21
 msgid "* Disable the Fill"
-msgstr ""
+msgstr "* Opvullen uitschakelen"
 
 #: lib/elements/satin_column.py:22
 msgid "* Alternative: open Params and switch this path to Stroke to disable Satin Column mode"
-msgstr ""
+msgstr "* Je kunt ook het Params menu openen en dit pad naar Lijn omzetten om Satijnbaan modus uit te schakelen"
 
 #: lib/elements/satin_column.py:27
 msgid "Too few subpaths"
@@ -543,7 +543,7 @@ msgstr "Sporten bepalen de steekrichting voor Satijnbanen."
 
 #: lib/elements/satin_column.py:41
 msgid "* With the selected object press \"P\" to activate the pencil tool."
-msgstr ""
+msgstr "* Met het geselecteerde object kies \"P\" om het potlood gereedschap te activeren."
 
 #: lib/elements/satin_column.py:42
 msgid "* Hold \"Shift\" while drawing the rung."
@@ -653,7 +653,7 @@ msgstr "standaard: de helft van de versteviging randafstand"
 
 #: lib/elements/stroke.py:15
 msgid "Stroke"
-msgstr ""
+msgstr "Lijn"
 
 #: lib/elements/stroke.py:18
 msgid "Satin stitch along paths"
@@ -698,7 +698,8 @@ msgstr "Naai elke punt in het pad. Steeklengte en zig-zag afstand worden genegee
 #: lib/elements/stroke.py:137
 msgid "Legacy running stitch setting detected!\n\n"
 "It looks like you're using a stroke smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set your stroke to be dashed to indicate running stitch.  Any kind of dash will work."
-msgstr ""
+msgstr "Verouderde doorlopende steek instelling gedetecteerd!\n\n"
+"Het lijkt erop dat je een lijn smaller dan 0.5 eenheden gebruikt om een doorlopende steek mee aan te geven, dat is verouderd. Gebruik een streepjes/stippellijn voor een doorlopende steek. Elke soort streepjes voldoen."
 
 #: lib/elements/text.py:10 lib/extensions/lettering.py:46
 msgid "Text"
@@ -710,7 +711,7 @@ msgstr "Ink/Stitch kan niet omgaan met objecten zoals tekst."
 
 #: lib/elements/text.py:13
 msgid "* Text: Create your own letters or try the lettering tool:"
-msgstr ""
+msgstr "* Tekst: Creëer je eigen letters of probeer het belettering gereedchap:"
 
 #: lib/elements/text.py:14
 msgid "- Extensions > Ink/Stitch > Lettering"
@@ -824,7 +825,7 @@ msgstr "Afknippen toevoegen"
 #: electron/src/renderer/components/InstallPalettes.vue:20
 #: electron/src/renderer/components/InstallPalettes.vue:58
 msgid "Cancel"
-msgstr ""
+msgstr "Annuleren"
 
 #: lib/extensions/lettering.py:63 lib/extensions/params.py:339
 msgid "Apply and Quit"
@@ -911,7 +912,7 @@ msgstr "Alle geselecteerde vormen zijn geldig! "
 
 #: lib/extensions/troubleshoot.py:44
 msgid "If you are still having trouble with a shape not being embroidered, check if it is in a layer with an ignore command."
-msgstr ""
+msgstr "Als je nog steeds problemen hebt met een vorm die niet wordt geborduurd, controleer dan of er een laag is met een Negeer commando erin."
 
 #: lib/extensions/troubleshoot.py:70
 msgid "Invalid Pointer"
@@ -1281,7 +1282,7 @@ msgstr "Voer bestellingnummer in..."
 #: print/templates/headline.html:15
 #, python-format
 msgid "%m/%d/%Y"
-msgstr ""
+msgstr "%d/%m/%Y"
 
 #: print/templates/operator_detailedview.html:10
 msgid "Thread Consumption"
@@ -1725,15 +1726,15 @@ msgstr "Behoudt volgorde van Satijnbanen"
 #: templates/auto_satin.inx:12 templates/convert_to_satin.inx:10
 #: templates/cut_satin.inx:10 templates/flip.inx:10
 msgid "Satin Tools"
-msgstr ""
+msgstr "Satijn Gereedschap"
 
 #: templates/break_apart.inx:3
 msgid "Break Apart Fill Objects"
-msgstr ""
+msgstr "Opbreken Opvulobjecten"
 
 #: templates/break_apart.inx:10
 msgid "Fill Tools"
-msgstr ""
+msgstr "Opvul Gereedschap"
 
 #: templates/break_apart.inx:15
 msgid "This extension will try to repair fill shapes and break them apart if necessary. Holes will be retained. Use on simple or overlapping shapes."
@@ -1749,7 +1750,7 @@ msgstr "Gebruik deze uitbreiding om kleine objecten uit het document te verwijde
 
 #: templates/cleanup.inx:6
 msgid "Remove Small Fill Areas"
-msgstr ""
+msgstr "Verwijder Kleine Opvulgebieden"
 
 #: templates/cleanup.inx:7
 msgid "Removes areas smaller than dedined by threshold."
@@ -1757,15 +1758,15 @@ msgstr "Verwijdert gebieden kleiner dan de grenswaarde."
 
 #: templates/cleanup.inx:8
 msgid "Fill area threshold"
-msgstr ""
+msgstr "Opvulgebied grenswaarde"
 
 #: templates/cleanup.inx:10
 msgid "Removes small strokes shorter than defined by threshold."
-msgstr ""
+msgstr "Verwijdert kleine lijnen korter dan de grenswaarde."
 
 #: templates/cleanup.inx:11
 msgid "Stroke threshold"
-msgstr ""
+msgstr "Lijn grenswaarde"
 
 #: templates/convert_to_satin.inx:3
 msgid "Convert Line to Satin"
@@ -1818,7 +1819,7 @@ msgstr "Visualiseren en Exporteren"
 
 #: templates/flip.inx:3
 msgid "Flip Satin Column Rails"
-msgstr ""
+msgstr "Wissel Satijnbaan Rails om"
 
 #: templates/global_commands.inx:3
 msgid "Add Commands"
