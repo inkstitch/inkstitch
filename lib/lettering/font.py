@@ -1,5 +1,3 @@
-# -*- coding: UTF-8 -*-
-
 import json
 import os
 from copy import deepcopy
@@ -107,9 +105,7 @@ class Font(object):
 
     name = localized_font_metadata('name', '')
     description = localized_font_metadata('description', '')
-    default_variant = font_metadata('default_variant', FontVariant.LEFT_TO_RIGHT)
     default_glyph = font_metadata('defalt_glyph', "�")
-    letter_spacing = font_metadata('letter_spacing', 1.5, multiplier=PIXELS_PER_MM)
     leading = font_metadata('leading', 5, multiplier=PIXELS_PER_MM)
     kerning_pairs = font_metadata('kerning_pairs', {})
     auto_satin = font_metadata('auto_satin', True)
