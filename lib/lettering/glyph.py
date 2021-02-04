@@ -64,21 +64,21 @@ class Glyph(object):
     def _process_baseline(self, svg):
         for guide in get_guides(svg):
             if guide.label == "baseline":
-                self._baseline = guide.position.y
+                self.baseline = guide.position.y
                 break
         else:
             # no baseline guide found, assume 0 for lack of anything better to use...
-            self._baseline = 0
+            self.baseline = 0
 
     def _process_bbox(self):
         left, right, top, bottom = simpletransform.computeBBox(self.node.iterdescendants())
 
         self.width = right - left
-        self._min_x = left
+        self.min_x = left
 
     def _move_to_origin(self):
-        translate_x = -self._min_x
-        translate_y = -self._baseline
+        translate_x = -self.min_x
+        translate_y = -self.baseline
         transform = "translate(%s, %s)" % (translate_x, translate_y)
 
         for node in self.node.iter(SVG_PATH_TAG):

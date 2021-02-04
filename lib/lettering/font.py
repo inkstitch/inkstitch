@@ -1,8 +1,8 @@
 # -*- coding: UTF-8 -*-
 
-from copy import deepcopy
 import json
 import os
+from copy import deepcopy
 
 import inkex
 
@@ -11,7 +11,7 @@ from ..exceptions import InkstitchException
 from ..i18n import _, get_languages
 from ..stitches.auto_satin import auto_satin
 from ..svg import PIXELS_PER_MM
-from ..svg.tags import SVG_GROUP_TAG, SVG_PATH_TAG, INKSCAPE_LABEL
+from ..svg.tags import INKSCAPE_LABEL, SVG_GROUP_TAG, SVG_PATH_TAG
 from ..utils import Point
 from .font_variant import FontVariant
 
@@ -44,7 +44,11 @@ def localized_font_metadata(name, default=None):
             # This may be a font packaged with Ink/Stitch, in which case the
             # text will have been sent to CrowdIn for community translation.
             # Try to fetch the translated version.
-            return _(self.metadata.get(name))
+            original_metadata = self.metadata.get(name)
+            localized_metadata = ""
+            if original_metadata != "":
+                localized_metadata = _(original_metadata)
+            return localized_metadata
         else:
             return default
 
@@ -103,19 +107,53 @@ class Font(object):
 
     name = localized_font_metadata('name', '')
     description = localized_font_metadata('description', '')
-    default_variant = font_metadata('default_variant', FontVariant.LEFT_TO_RIGHT)
-    default_glyph = font_metadata('defalt_glyph', u"�")
-    letter_spacing = font_metadata('letter_spacing', 1.5, multiplier=PIXELS_PER_MM)
+    default_glyph = font_metadata('default_glyph', u"�")
     leading = font_metadata('leading', 5, multiplier=PIXELS_PER_MM)
-    word_spacing = font_metadata('word_spacing', 3, multiplier=PIXELS_PER_MM)
     kerning_pairs = font_metadata('kerning_pairs', {})
     auto_satin = font_metadata('auto_satin', True)
     min_scale = font_metadata('min_scale', 1.0)
     max_scale = font_metadata('max_scale', 1.0)
 
+    # use values from SVG Font, exemple:
+    # <font horiz-adv-x="45" ...  <glyph .... horiz-adv-x="49" glyph-name="A" /> ... <hkern ... k="3"g1="A" g2="B" /> .... />
+
+    # Example font.json : "horiz_adv_x": {"A":49},
+    horiz_adv_x = font_metadata('horiz_adv_x', {})
+
+    # Example font.json : "horiz_adv_x_default" : 45,
+    horiz_adv_x_default = font_metadata('horiz_adv_x_default')
+
+    # Define by <glyph glyph-name="space" unicode=" " horiz-adv-x="22" />, Example font.json : "horiz_adv_x_space":22,
+    word_spacing = font_metadata('horiz_adv_x_space', 0)
+
+    reversible = font_metadata('reversible', True)
+
     @property
     def id(self):
         return os.path.basename(self.path)
+
+    @property
+    def default_variant(self):
+        # Set default variant to any existing variant if default font file is missing
+        default_variant = font_metadata('default_variant', FontVariant.LEFT_TO_RIGHT)
+        font_variants = self.has_variants()
+        if default_variant not in font_variants and len(font_variants) > 0:
+            default_variant = font_variants[0]
+        return default_variant
+
+    @property
+    def preview_image(self):
+        preview_image_path = os.path.join(self.path, "preview.png")
+        if os.path.isfile(preview_image_path):
+            return preview_image_path
+        return None
+
+    def has_variants(self):
+        font_variants = []
+        for variant in FontVariant.VARIANT_TYPES:
+            if os.path.isfile(os.path.join(self.path, "%s.svg" % variant)):
+                font_variants.append(variant)
+        return font_variants
 
     def render_text(self, text, destination_group, variant=None, back_and_forth=True, trim=False):
         """Render text into an SVG group element."""
@@ -124,7 +162,7 @@ class Font(object):
         if variant is None:
             variant = self.default_variant
 
-        if back_and_forth:
+        if back_and_forth and self.reversible:
             glyph_sets = [self.get_variant(variant), self.get_variant(FontVariant.reversed_variant(variant))]
         else:
             glyph_sets = [self.get_variant(variant)] * 2
@@ -135,7 +173,7 @@ class Font(object):
             line = line.strip()
 
             letter_group = self._render_line(line, position, glyph_set)
-            if glyph_set.variant == FontVariant.RIGHT_TO_LEFT:
+            if back_and_forth and self.reversible and i % 2 == 1:
                 letter_group[:] = reversed(letter_group)
             destination_group.append(letter_group)
 
@@ -205,14 +243,25 @@ class Font(object):
                               we're at the start of the line or a word.
         """
 
-        node = deepcopy(glyph.node)
+        # Concerning min_x: I add it before moving the letter because it is to
+        # take into account the margin in the drawing of the letter. With respect
+        # to point 0 the letter can start at 5 or -5. The letters have a defined
+        # place in the drawing that's important.
+        # Then to calculate the position of x for the next letter I have to remove
+        # the min_x margin because the horizontal adv is calculated from point 0 of the drawing.
 
+        node = deepcopy(glyph.node)
         if last_character is not None:
-            position.x += self.letter_spacing + self.kerning_pairs.get(last_character + character, 0) * PIXELS_PER_MM
+            position.x += glyph.min_x - self.kerning_pairs.get(last_character + character, 0)
 
         transform = "translate(%s, %s)" % position.as_tuple()
         node.set('transform', transform)
-        position.x += glyph.width
+
+        horiz_adv_x_default = self.horiz_adv_x_default
+        if horiz_adv_x_default is None:
+            horiz_adv_x_default = glyph.width + glyph.min_x
+
+        position.x += self.horiz_adv_x.get(character, horiz_adv_x_default) - glyph.min_x
 
         return node
 

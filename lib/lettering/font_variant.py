@@ -1,6 +1,7 @@
 # -*- coding: UTF-8 -*-
 
 import os
+
 import inkex
 import simplestyle
 
@@ -45,6 +46,10 @@ class FontVariant(object):
             return None
 
     def __init__(self, font_path, variant, default_glyph=None):
+        # If the font variant file does not exist, this constructor will
+        # raise an exception.  The caller should catch it and decide
+        # what to do.
+
         self.path = font_path
         self.variant = variant
         self.default_glyph = default_glyph

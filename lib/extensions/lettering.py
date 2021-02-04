@@ -1,21 +1,23 @@
 # -*- coding: UTF-8 -*-
 
-from base64 import b64encode, b64decode
 import json
 import os
 import sys
+from base64 import b64decode, b64encode
 
 import appdirs
 import inkex
 import wx
+import wx.adv
 
 from ..elements import nodes_to_elements
-from ..gui import PresetsPanel, SimulatorPreview, info_dialog, SubtitleComboBox
+from ..gui import PresetsPanel, SimulatorPreview, info_dialog
 from ..i18n import _
 from ..lettering import Font, FontError
 from ..svg import get_correction_transform
-from ..svg.tags import SVG_PATH_TAG, SVG_GROUP_TAG, INKSCAPE_LABEL, INKSTITCH_LETTERING
-from ..utils import get_bundled_dir, DotDict, cache
+from ..svg.tags import (INKSCAPE_LABEL, INKSTITCH_LETTERING, SVG_GROUP_TAG,
+                        SVG_PATH_TAG)
+from ..utils import DotDict, cache, get_bundled_dir
 from .commands import CommandsExtension
 
 
@@ -33,8 +35,22 @@ class LetteringFrame(wx.Frame):
         self.preview = SimulatorPreview(self, target_duration=1)
         self.presets_panel = PresetsPanel(self)
 
+        # font
+        self.font_selector_box = wx.StaticBox(self, wx.ID_ANY, label=_("Font"))
+        self.update_font_list()
+
+        self.font_chooser = wx.adv.BitmapComboBox(self, wx.ID_ANY, style=wx.CB_READONLY | wx.CB_SORT)
+        self.set_font_list()
+        self.font_chooser.Bind(wx.EVT_COMBOBOX, self.on_font_changed)
+
+        # font details
+        self.font_description = wx.StaticText(self, wx.ID_ANY)
+
         # options
         self.options_box = wx.StaticBox(self, wx.ID_ANY, label=_("Options"))
+
+        self.scale_spinner = wx.SpinCtrl(self, wx.ID_ANY, min=100, max=100, initial=100)
+        self.scale_spinner.Bind(wx.EVT_SPINCTRL, lambda event: self.on_change("scale", event))
 
         self.back_and_forth_checkbox = wx.CheckBox(self, label=_("Stitch lines of text back and forth"))
         self.back_and_forth_checkbox.Bind(wx.EVT_CHECKBOX, lambda event: self.on_change("back_and_forth", event))
@@ -43,15 +59,7 @@ class LetteringFrame(wx.Frame):
         self.trim_checkbox.Bind(wx.EVT_CHECKBOX, lambda event: self.on_change("trim", event))
 
         # text editor
-        self.text_editor_box = wx.StaticBox(self, wx.ID_ANY, label=_("Text"))
-
-        self.update_font_list()
-        self.font_chooser = SubtitleComboBox(self, wx.ID_ANY, choices=self.get_font_names(),
-                                             subtitles=self.get_font_descriptions(), style=wx.CB_READONLY)
-        self.font_chooser.Bind(wx.EVT_COMBOBOX, self.on_font_changed)
-
-        self.scale_spinner = wx.SpinCtrl(self, wx.ID_ANY, min=100, max=100, initial=100)
-        self.scale_spinner.Bind(wx.EVT_SPINCTRL, lambda event: self.on_change("scale", event))
+        self.text_input_box = wx.StaticBox(self, wx.ID_ANY, label=_("Text"))
 
         self.text_editor = wx.TextCtrl(self, style=wx.TE_MULTILINE | wx.TE_DONTWRAP)
         self.text_editor.Bind(wx.EVT_TEXT, lambda event: self.on_change("text", event))
@@ -73,7 +81,7 @@ class LetteringFrame(wx.Frame):
 
         self.settings = DotDict({
             "text": u"",
-            "back_and_forth": True,
+            "back_and_forth": False,
             "font": None,
             "scale": 100
         })
@@ -134,6 +142,28 @@ class LetteringFrame(wx.Frame):
             info_dialog(self, _("Unable to find any fonts!  Please try reinstalling Ink/Stitch."))
             self.cancel()
 
+    def set_font_list(self):
+        for font in self.fonts.values():
+            image = font.preview_image
+            if image is not None:
+                image = wx.Image(font.preview_image)
+                """
+                # I would like to do this but Windows requires all images to be the exact same size
+                # It might work with an updated wxpython version - so let's keep it here
+
+                # Scale to max 20 height
+                img_height = 20
+                width, height = image.GetSize()
+                scale_factor = height / img_height
+                width = int(width / scale_factor)
+                image.Rescale(width, img_height, quality=wx.IMAGE_QUALITY_HIGH)
+                """
+                # Windows requires all images to have the exact same size
+                image.Rescale(300, 20, quality=wx.IMAGE_QUALITY_HIGH)
+                self.font_chooser.Append(font.name, wx.Bitmap(image))
+            else:
+                self.font_chooser.Append(font.name)
+
     def get_font_names(self):
         font_names = [font.name for font in self.fonts.itervalues()]
         font_names.sort()
@@ -149,19 +179,17 @@ class LetteringFrame(wx.Frame):
                 message = '''This text was created using the font "%s", but Ink/Stitch can't find that font.  ''' \
                           '''A default font will be substituted.'''
                 info_dialog(self, _(message) % font_id)
-
         try:
-            self.font_chooser.SetValueByUser(self.fonts_by_id[font_id].name)
+            self.font_chooser.SetValue(self.fonts_by_id[font_id].name)
         except KeyError:
-            self.font_chooser.SetValueByUser(self.default_font.name)
-
+            self.font_chooser.SetValue(self.default_font.name)
         self.on_font_changed()
 
     @property
     @cache
     def default_font(self):
         try:
-            return self.fonts[self.DEFAULT_FONT]
+            return self.fonts_by_id[self.DEFAULT_FONT]
         except KeyError:
             return self.fonts.values()[0]
 
@@ -173,7 +201,36 @@ class LetteringFrame(wx.Frame):
         font = self.fonts.get(self.font_chooser.GetValue(), self.default_font)
         self.settings.font = font.id
         self.scale_spinner.SetRange(int(font.min_scale * 100), int(font.max_scale * 100))
+
+        font_variants = font.has_variants()
+
+        # Update font description
+        color = (0, 0, 0)
+        description = font.description
+        if len(font_variants) == 0:
+            color = (255, 0, 0)
+            description = _('This font has no available font variant. Please update or remove the font.')
+        self.font_description.SetLabel(description)
+        self.font_description.SetForegroundColour(color)
+        self.font_description.Wrap(self.GetSize().width - 20)
+
+        if font.reversible:
+            self.back_and_forth_checkbox.Enable()
+            self.back_and_forth_checkbox.SetValue(bool(self.settings.back_and_forth))
+        else:
+            # The creator of the font banned the possibility of writing in reverse with json file: "reversible": false
+            self.back_and_forth_checkbox.Disable()
+            self.back_and_forth_checkbox.SetValue(False)
+
+        if font.auto_satin:
+            self.trim_checkbox.Enable()
+            self.trim_checkbox.SetValue(bool(self.settings.trim))
+        else:
+            self.trim_checkbox.Disable()
+            self.trim_checkbox.SetValue(False)
+
         self.update_preview()
+        self.GetSizer().Layout()
 
     def update_preview(self, event=None):
         self.preview.update()
@@ -255,27 +312,38 @@ class LetteringFrame(wx.Frame):
     def __do_layout(self):
         outer_sizer = wx.BoxSizer(wx.VERTICAL)
 
-        options_sizer = wx.StaticBoxSizer(self.options_box, wx.VERTICAL)
-        options_sizer.Add(self.back_and_forth_checkbox, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 5)
-        options_sizer.Add(self.trim_checkbox, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT | wx.BOTTOM, 5)
+        # font selection
+        font_selector_sizer = wx.StaticBoxSizer(self.font_selector_box, wx.VERTICAL)
+        font_selector_sizer.Add(self.font_chooser, 0, wx.EXPAND | wx.ALL, 10)
+        font_selector_sizer.Add(self.font_description, 1, wx.EXPAND | wx.ALL, 10)
+        outer_sizer.Add(font_selector_sizer, 0, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
+
+        # options
+        left_option_sizer = wx.BoxSizer(wx.VERTICAL)
+        left_option_sizer.Add(self.back_and_forth_checkbox, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 5)
+        left_option_sizer.Add(self.trim_checkbox, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT | wx.BOTTOM, 5)
+
+        font_scale_sizer = wx.BoxSizer(wx.HORIZONTAL)
+        font_scale_sizer.Add(wx.StaticText(self, wx.ID_ANY, "Scale"), 0, wx.LEFT | wx.ALIGN_CENTRE_VERTICAL, 0)
+        font_scale_sizer.Add(self.scale_spinner, 0, wx.LEFT, 10)
+        font_scale_sizer.Add(wx.StaticText(self, wx.ID_ANY, "%"), 0, wx.LEFT | wx.ALIGN_CENTRE_VERTICAL, 3)
+
+        options_sizer = wx.StaticBoxSizer(self.options_box, wx.HORIZONTAL)
+        options_sizer.Add(left_option_sizer, 1, wx.EXPAND, 10)
+        options_sizer.Add(font_scale_sizer, 0, wx.RIGHT, 10)
+
         outer_sizer.Add(options_sizer, 0, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
 
-        font_sizer = wx.BoxSizer(wx.HORIZONTAL)
-        font_sizer.Add(self.font_chooser, 1, wx.EXPAND, 0)
-        font_sizer.Add(wx.StaticText(self, wx.ID_ANY, "Scale"), 0, wx.LEFT | wx.ALIGN_CENTRE_VERTICAL, 20)
-        font_sizer.Add(self.scale_spinner, 0, wx.LEFT, 10)
-        font_sizer.Add(wx.StaticText(self, wx.ID_ANY, "%"), 0, wx.LEFT | wx.ALIGN_CENTRE_VERTICAL, 3)
+        # text input
+        text_input_sizer = wx.StaticBoxSizer(self.text_input_box, wx.VERTICAL)
+        text_input_sizer.Add(self.text_editor, 1, wx.EXPAND | wx.LEFT | wx.RIGHT | wx.BOTTOM, 10)
+        outer_sizer.Add(text_input_sizer, 2, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
 
-        text_editor_sizer = wx.StaticBoxSizer(self.text_editor_box, wx.VERTICAL)
-        text_editor_sizer.Add(font_sizer, 0, wx.ALL | wx.EXPAND, 10)
-        text_editor_sizer.Add(self.text_editor, 1, wx.EXPAND | wx.LEFT | wx.RIGHT | wx.BOTTOM, 10)
-        outer_sizer.Add(text_editor_sizer, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
-
+        # presets
         outer_sizer.Add(self.presets_panel, 0, wx.EXPAND | wx.EXPAND | wx.ALL, 10)
-
         buttons_sizer = wx.BoxSizer(wx.HORIZONTAL)
-        buttons_sizer.Add(self.cancel_button, 0, wx.ALIGN_RIGHT | wx.RIGHT, 10)
-        buttons_sizer.Add(self.apply_button, 0, wx.ALIGN_RIGHT | wx.RIGHT | wx.BOTTOM, 10)
+        buttons_sizer.Add(self.cancel_button, 0, wx.RIGHT, 10)
+        buttons_sizer.Add(self.apply_button, 0, wx.RIGHT | wx.BOTTOM, 10)
         outer_sizer.Add(buttons_sizer, 0, wx.ALIGN_RIGHT, 10)
 
         self.SetSizerAndFit(outer_sizer)
