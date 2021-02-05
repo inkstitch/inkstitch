@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-29 00:46+0000\n"
-"PO-Revision-Date: 2021-02-02 00:46\n"
+"POT-Creation-Date: 2021-02-05 00:38+0000\n"
+"PO-Revision-Date: 2021-02-05 00:40\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -24,8 +24,8 @@ msgstr ""
 
 #. name of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:2
-msgid "Dejavu for Inkstitch semicondensed"
-msgstr "Dejavu für Inkstitch halbkondensiert"
+msgid "Dejavu Serif Semi-condensed"
+msgstr ""
 
 #. description of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:4
@@ -94,6 +94,21 @@ msgstr "Geneva Simple Sans Rounded"
 #: inkstitch-fonts-metadata.py:28
 msgid "Suitable for small fonts (8 to 20 mm)"
 msgstr "Geeignet für kleine Schriftarten (8 bis 20 mm)"
+
+#. name of font in fonts/chopin
+#: inkstitch-fonts-metadata.py:30
+msgid "Chopin Script"
+msgstr ""
+
+#. name of font in fonts/lobster
+#: inkstitch-fonts-metadata.py:34
+msgid "Lobster Two Bold Italic"
+msgstr ""
+
+#. name of font in fonts/baumans
+#: inkstitch-fonts-metadata.py:38
+msgid "Baumans"
+msgstr ""
 
 #: inkstitch.py:56
 msgid "Ink/Stitch experienced an unexpected error."
@@ -701,7 +716,7 @@ msgid "Legacy running stitch setting detected!\n\n"
 msgstr "Veraltete Laufstich-Einstellung erkannt!\n\n"
 "Es sieht so aus, als ob für einen Laufstich eine Linie verwendet wurde, die schmaler als 0.5 Einheiten ist. Diese Methode ist veraltet. Bitte eine gestrichelte Linie für diesen Zweck benutzen. Die genaue Linienart spielt dabei keine Rolle, Hauptsache es ist keine durchgehende Linie."
 
-#: lib/elements/text.py:10 lib/extensions/lettering.py:46
+#: lib/elements/text.py:10 lib/extensions/lettering.py:62
 msgid "Text"
 msgstr "Text"
 
@@ -802,23 +817,27 @@ msgstr "Wähle eine andere Garnpalette für das Design."
 msgid "Please choose one or more commands to add."
 msgstr "Bitte wählen Sie einen oder mehrere Befehle um diese zu verknüpfen."
 
-#: lib/extensions/lettering.py:30 lib/extensions/lettering.py:327
+#: lib/extensions/lettering.py:32 lib/extensions/lettering.py:395
 msgid "Ink/Stitch Lettering"
 msgstr "Ink/Stitch Text"
 
-#: lib/extensions/lettering.py:37
+#: lib/extensions/lettering.py:39
+msgid "Font"
+msgstr ""
+
+#: lib/extensions/lettering.py:50
 msgid "Options"
 msgstr "Optionen"
 
-#: lib/extensions/lettering.py:39
+#: lib/extensions/lettering.py:55
 msgid "Stitch lines of text back and forth"
 msgstr "Sticke Textzeilen vor und zurück"
 
-#: lib/extensions/lettering.py:42
+#: lib/extensions/lettering.py:58
 msgid "Add trims"
 msgstr "Schnittmarker hinzufügen"
 
-#: lib/extensions/lettering.py:59 lib/extensions/params.py:332
+#: lib/extensions/lettering.py:67 lib/extensions/params.py:332
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
 #: print/templates/custom-page.html:33 print/templates/ui.html:92
 #: print/templates/ui.html:96 print/templates/ui.html:102
@@ -827,27 +846,31 @@ msgstr "Schnittmarker hinzufügen"
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: lib/extensions/lettering.py:63 lib/extensions/params.py:339
+#: lib/extensions/lettering.py:71 lib/extensions/params.py:339
 msgid "Apply and Quit"
 msgstr "Anwenden und schließen"
 
-#: lib/extensions/lettering.py:134
+#: lib/extensions/lettering.py:142
 msgid "Unable to find any fonts!  Please try reinstalling Ink/Stitch."
 msgstr "Keine Schriftart gefunden! Bitte versuche Ink/Stitch erneut zu installieren."
+
+#: lib/extensions/lettering.py:212
+msgid "This font has no available font variant. Please update or remove the font."
+msgstr ""
 
 #. The user has chosen to scale the text by some percentage
 #. (50%, 200%, etc).  If you need to use the percentage symbol,
 #. make sure to double it (%%).
-#: lib/extensions/lettering.py:191
+#: lib/extensions/lettering.py:248
 #, python-format
 msgid "Text scale %s%%"
 msgstr "Text Skalierung %s%%"
 
-#: lib/extensions/lettering.py:316
+#: lib/extensions/lettering.py:384
 msgid "Please select only one block of text."
 msgstr "Bitte wähle nur einen Textabschnitt."
 
-#: lib/extensions/lettering.py:319
+#: lib/extensions/lettering.py:387
 msgid "You've selected objects that were not created by the Lettering extension.  Please clear your selection or select different objects before running Lettering again."
 msgstr "Du hast Objekte ausgewählt, die nicht von der Text-Erweiterung erstellt wurden. Bitte entferne deine Auswahl oder wähle andere Objekte aus, bevor du das Text-Modul erneut startest."
 

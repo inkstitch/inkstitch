@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-29 00:46+0000\n"
-"PO-Revision-Date: 2021-02-02 00:46\n"
+"POT-Creation-Date: 2021-02-05 00:38+0000\n"
+"PO-Revision-Date: 2021-02-05 00:40\n"
 "Last-Translator: \n"
 "Language-Team: Dutch\n"
 "MIME-Version: 1.0\n"
@@ -24,8 +24,8 @@ msgstr ""
 
 #. name of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:2
-msgid "Dejavu for Inkstitch semicondensed"
-msgstr "Dejavu for Inkstitch semicondensed"
+msgid "Dejavu Serif Semi-condensed"
+msgstr ""
 
 #. description of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:4
@@ -94,6 +94,21 @@ msgstr "Geneva Simple Sans Rounded"
 #: inkstitch-fonts-metadata.py:28
 msgid "Suitable for small fonts (8 to 20 mm)"
 msgstr "Geschikt voor kleine letters (8 tot 20mm)"
+
+#. name of font in fonts/chopin
+#: inkstitch-fonts-metadata.py:30
+msgid "Chopin Script"
+msgstr ""
+
+#. name of font in fonts/lobster
+#: inkstitch-fonts-metadata.py:34
+msgid "Lobster Two Bold Italic"
+msgstr ""
+
+#. name of font in fonts/baumans
+#: inkstitch-fonts-metadata.py:38
+msgid "Baumans"
+msgstr ""
 
 #: inkstitch.py:56
 msgid "Ink/Stitch experienced an unexpected error."
@@ -701,7 +716,7 @@ msgid "Legacy running stitch setting detected!\n\n"
 msgstr "Verouderde doorlopende steek instelling gedetecteerd!\n\n"
 "Het lijkt erop dat je een lijn smaller dan 0.5 eenheden gebruikt om een doorlopende steek mee aan te geven, dat is verouderd. Gebruik een streepjes/stippellijn voor een doorlopende steek. Elke soort streepjes voldoen."
 
-#: lib/elements/text.py:10 lib/extensions/lettering.py:46
+#: lib/elements/text.py:10 lib/extensions/lettering.py:62
 msgid "Text"
 msgstr "Tekst"
 
@@ -802,23 +817,27 @@ msgstr "Kies een ander kleurpalet voor je ontwerp."
 msgid "Please choose one or more commands to add."
 msgstr "Kies één of meer commando's om toe te voegen."
 
-#: lib/extensions/lettering.py:30 lib/extensions/lettering.py:327
+#: lib/extensions/lettering.py:32 lib/extensions/lettering.py:395
 msgid "Ink/Stitch Lettering"
 msgstr "Ink/Stitch Belettering"
 
-#: lib/extensions/lettering.py:37
+#: lib/extensions/lettering.py:39
+msgid "Font"
+msgstr ""
+
+#: lib/extensions/lettering.py:50
 msgid "Options"
 msgstr "Opties"
 
-#: lib/extensions/lettering.py:39
+#: lib/extensions/lettering.py:55
 msgid "Stitch lines of text back and forth"
 msgstr "Borduur regels tekst heen en terug"
 
-#: lib/extensions/lettering.py:42
+#: lib/extensions/lettering.py:58
 msgid "Add trims"
 msgstr "Afknippen toevoegen"
 
-#: lib/extensions/lettering.py:59 lib/extensions/params.py:332
+#: lib/extensions/lettering.py:67 lib/extensions/params.py:332
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
 #: print/templates/custom-page.html:33 print/templates/ui.html:92
 #: print/templates/ui.html:96 print/templates/ui.html:102
@@ -827,27 +846,31 @@ msgstr "Afknippen toevoegen"
 msgid "Cancel"
 msgstr "Annuleren"
 
-#: lib/extensions/lettering.py:63 lib/extensions/params.py:339
+#: lib/extensions/lettering.py:71 lib/extensions/params.py:339
 msgid "Apply and Quit"
 msgstr "Toepassen en Sluiten"
 
-#: lib/extensions/lettering.py:134
+#: lib/extensions/lettering.py:142
 msgid "Unable to find any fonts!  Please try reinstalling Ink/Stitch."
 msgstr "Geen lettertypen gevonden! Probeer Ink/Stitch opnieuw te installeren."
+
+#: lib/extensions/lettering.py:212
+msgid "This font has no available font variant. Please update or remove the font."
+msgstr ""
 
 #. The user has chosen to scale the text by some percentage
 #. (50%, 200%, etc).  If you need to use the percentage symbol,
 #. make sure to double it (%%).
-#: lib/extensions/lettering.py:191
+#: lib/extensions/lettering.py:248
 #, python-format
 msgid "Text scale %s%%"
 msgstr "Tekst schaling %s%%"
 
-#: lib/extensions/lettering.py:316
+#: lib/extensions/lettering.py:384
 msgid "Please select only one block of text."
 msgstr "Selecteer aub slechts een enkel blok tekst."
 
-#: lib/extensions/lettering.py:319
+#: lib/extensions/lettering.py:387
 msgid "You've selected objects that were not created by the Lettering extension.  Please clear your selection or select different objects before running Lettering again."
 msgstr "Er zijn objecten geselecteerd die niet met de Belettering uitbreiding zijn gemaakt. Wis de selectie of selecteer andere objecten alvorens Belettering opnieuw te starten."
 
