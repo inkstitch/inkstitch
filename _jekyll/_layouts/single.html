@@ -42,7 +42,7 @@ layout: default
           </aside>
         {% endif %}
         {{ content }}
-        {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[page.lang].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
+        {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[page.lang].text_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
 
       <footer class="page__meta">
@@ -60,6 +60,7 @@ layout: default
           {% else %}<a href="https://github.com/inkstitch/inkstitch/tree/gh-pages/collections/{{ page.path }}">
           {% endif %}
           View page source on GitHub
+          </a>
         </p>
       </footer>
 
