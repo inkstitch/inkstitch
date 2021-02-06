@@ -14,9 +14,12 @@
     <param name="header" type="description" appearance="header" indent="1" >
         {% trans %}Removes Kerning information from given SVG files{% endtrans %}
     </param>
+    <separator />
     <param name="file-description" type="description" indent="1" >
         &#9888; {% trans %}Make sure you keep a copy of the original file. After running this extension kerning information will be lost unrevertably from these files.{% endtrans %}
     </param>
+    <separator />
+    <spacer />
     <param type="path" name="font-files" gui-text="{% trans %}Select Font Files{% endtrans %}" indent="1" mode="files" filetypes="svg"/>
     <spacer />
     <script>

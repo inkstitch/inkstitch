@@ -35,7 +35,7 @@
     <param name="min-scale" type="float" precision="1" min="0.1" max="1" gui-text="Min Scale" indent="1">1</param>
     <param name="max-scale" type="float" precision="1" min="1" max="10" gui-text="Max Scale" indent="1">1</param>
     <separator indent="1"/>
-    <param name="leading" type="float" precision="1" min="0" max="100" gui-text="Leading" indent="1">5</param>
+    <param name="leading" type="float" precision="1" min="-100" max="100" gui-text="Leading" indent="1">5</param>
      <spacer />
     <separator indent="1"/>
     <script>
