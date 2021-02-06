@@ -138,22 +138,39 @@ class Fill(EmbroideryElement):
         paths.sort(key=lambda point_list: shgeo.Polygon(point_list).area, reverse=True)
         polygon = shgeo.MultiPolygon([(paths[0], paths[1:])])
 
+        # There is a great number of "crossing border" errors on fill shapes
+        # If the polygon fails, we can try to run buffer(0) on the polygon in the
+        # hope it will fix at least some of them
+        if not self.shape_is_valid(polygon):
+            why = explain_validity(polygon)
+            message = re.match(r".+?(?=\[)", why)
+            if message.group(0) == "Self-intersection":
+                buffered = polygon.buffer(0)
+                # we do not want to break apart into multiple objects (possibly in the future?!)
+                # best way to distinguish the resulting polygon is to compare the area size of the two
+                # and make sure users will not experience significantly altered shapes without a warning
+                if math.isclose(polygon.area, buffered.area):
+                    polygon = shgeo.MultiPolygon([buffered])
+
         return polygon
 
-    def validation_errors(self):
+    def shape_is_valid(self, shape):
         # Shapely will log to stdout to complain about the shape unless we make
         # it shut up.
         logger = logging.getLogger('shapely.geos')
         level = logger.level
         logger.setLevel(logging.CRITICAL)
 
-        valid = self.shape.is_valid
+        valid = shape.is_valid
 
         logger.setLevel(level)
 
-        if not valid:
+        return valid
+
+    def validation_errors(self):
+        if not self.shape_is_valid(self.shape):
             why = explain_validity(self.shape)
-            message, x, y = re.findall(r".+?(?=\[)|-?\d+\.\d+", why)
+            message, x, y = re.findall(r".+?(?=\[)|-?\d+(?:\.\d+)?", why)
 
             # I Wish this weren't so brittle...
             if "Hole lies outside shell" in message:
