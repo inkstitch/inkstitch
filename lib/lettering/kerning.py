@@ -26,8 +26,9 @@ class FontKerning(object):
             # ignore the warning for now - until the library fixed it
             if index == 0:
                 import warnings
-                warnings.filterwarnings('ignore')
-                from fontTools.agl import toUnicode
+                with warnings.catch_warnings():
+                    warnings.simplefilter("ignore")
+                    from fontTools.agl import toUnicode
             if len(glyph) > 1 and not (index + 1) % 3 == 0:
                 glyph_names = glyph.split(",")
                 # the glyph name is written in various languages, second is english. Let's look it up.
