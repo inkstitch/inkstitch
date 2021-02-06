@@ -6,7 +6,6 @@ import appdirs
 import inkex
 import wx
 import wx.adv
-
 from lxml import etree
 
 from ..elements import nodes_to_elements
@@ -18,6 +17,7 @@ from ..svg.tags import (INKSCAPE_LABEL, INKSTITCH_LETTERING, SVG_GROUP_TAG,
                         SVG_PATH_TAG)
 from ..utils import DotDict, cache, get_bundled_dir
 from .commands import CommandsExtension
+from .lettering_custom_font_dir import get_custom_font_dir
 
 
 class LetteringFrame(wx.Frame):
@@ -109,6 +109,7 @@ class LetteringFrame(wx.Frame):
             get_bundled_dir("fonts"),
             os.path.expanduser("~/.inkstitch/fonts"),
             os.path.join(appdirs.user_config_dir('inkstitch'), 'fonts'),
+            get_custom_font_dir()
         }
 
         self.fonts = {}
