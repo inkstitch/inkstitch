@@ -5,13 +5,13 @@ import traceback
 from argparse import ArgumentParser
 from io import StringIO
 
+from inkex import errormsg
 from lxml.etree import XMLSyntaxError
 
 import lib.debug as debug
 from lib import extensions
 from lib.i18n import _
-from lib.utils import restore_stderr, save_stderr
-from lib.utils import version
+from lib.utils import restore_stderr, save_stderr, version
 
 logger = logging.getLogger('shapely.geos')
 logger.setLevel(logging.DEBUG)
@@ -48,25 +48,26 @@ else:
     except (SystemExit, KeyboardInterrupt):
         raise
     except XMLSyntaxError:
-        print(_("Ink/Stitch cannot read your SVG file. "
-              "This is often the case when you use a file which has been created with Adobe Illustrator."),
-              "\n\n",
-              _("Try to import the file into Inkscape through 'File > Import...' (Ctrl+I)"), file=sys.stderr)
+        msg = _("Ink/Stitch cannot read your SVG file. "
+                "This is often the case when you use a file which has been created with Adobe Illustrator.")
+        msg += "\n\n",
+        msg += _("Try to import the file into Inkscape through 'File > Import...' (Ctrl+I)")
+        errormsg(msg)
     except Exception:
         exception = traceback.format_exc()
     finally:
         restore_stderr()
 
         if shapely_errors.tell():
-            print(shapely_errors.getvalue(), file=sys.stderr)
+            errormsg(shapely_errors.getvalue())
 
     if exception:
-        print(_("Ink/Stitch experienced an unexpected error."), file=sys.stderr)
-        print(_("If you'd like to help, please file an issue at "
-                "https://github.com/inkstitch/inkstitch/issues "
-                "and include the entire error description below:"), "\n", file=sys.stderr)
-        print(version.get_inkstitch_version(), file=sys.stderr)
-        print(exception, file=sys.stderr)
+        errormsg(_("Ink/Stitch experienced an unexpected error.") + "\n")
+        errormsg(_("If you'd like to help, please file an issue at "
+                   "https://github.com/inkstitch/inkstitch/issues "
+                   "and include the entire error description below:") + "\n")
+        errormsg(version.get_inkstitch_version() + "\n")
+        errormsg(exception)
         sys.exit(1)
     else:
         sys.exit(0)

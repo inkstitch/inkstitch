@@ -311,7 +311,7 @@ class EmbroideryElement(object):
             return commands[0]
         elif len(commands) > 1:
             raise ValueError(_("%(id)s has more than one command of type '%(command)s' linked to it") %
-                             dict(id=self.node.get(id), command=command))
+                             dict(id=self.node.get('id'), command=command))
         else:
             return None
 

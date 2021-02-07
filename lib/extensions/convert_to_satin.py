@@ -1,4 +1,5 @@
 import math
+import sys
 from itertools import chain, groupby
 
 import inkex
@@ -120,8 +121,15 @@ class ConvertToSatin(InkstitchExtension):
 
         path = shgeo.LineString(path)
 
-        left_rail = path.parallel_offset(stroke_width / 2.0, 'left', **style_args)
-        right_rail = path.parallel_offset(stroke_width / 2.0, 'right', **style_args)
+        try:
+            left_rail = path.parallel_offset(stroke_width / 2.0, 'left', **style_args)
+            right_rail = path.parallel_offset(stroke_width / 2.0, 'right', **style_args)
+        except ValueError:
+            # TODO: fix this error automatically
+            # Error reference: https://github.com/inkstitch/inkstitch/issues/964
+            inkex.errormsg(_("Ink/Stitch cannot convert your stroke into a satin column. "
+                             "Please break up your path and try again.") + '\n')
+            sys.exit(1)
 
         if not isinstance(left_rail, shgeo.LineString) or \
                 not isinstance(right_rail, shgeo.LineString):
