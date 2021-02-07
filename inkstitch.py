@@ -50,7 +50,7 @@ else:
     except XMLSyntaxError:
         msg = _("Ink/Stitch cannot read your SVG file. "
                 "This is often the case when you use a file which has been created with Adobe Illustrator.")
-        msg += "\n\n",
+        msg += "\n\n"
         msg += _("Try to import the file into Inkscape through 'File > Import...' (Ctrl+I)")
         errormsg(msg)
     except Exception:
