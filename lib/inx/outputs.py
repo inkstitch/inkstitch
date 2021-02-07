@@ -15,4 +15,7 @@ def generate_output_inx_files():
 
     for format, description in pyembroidery_output_formats():
         name = "output_%s" % format.upper()
-        write_inx_file(name, template.render(format=format, description=description))
+        mimetype="application/x-embroidery-%s" % format
+        write_inx_file(name, template.render(format=format, mimetype=mimetype, description=description))
+
+    write_inx_file('output_csv', template.render(format='csv', mimetype='text/csv', description="DEBUG"))
