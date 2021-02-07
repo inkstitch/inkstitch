@@ -106,6 +106,7 @@ class BreakApart(InkstitchExtension):
         polygons.sort(key=lambda polygon: polygon.area, reverse=True)
         multipolygons = []
         holes = []
+        self.ensure_minimum_size(polygons, self.minimum_size)
         for polygon in polygons:
             if polygon in holes:
                 continue

@@ -136,6 +136,12 @@ class Fill(EmbroideryElement):
         # biggest path.
         paths = self.paths
         paths.sort(key=lambda point_list: shgeo.Polygon(point_list).area, reverse=True)
+        # Very small holes will cause a shape to be rendered as an outline only
+        # they are too small to be rendered and only confuse the auto_fill algorithm.
+        # So let's ignore them
+        if shgeo.Polygon(paths[0]).area > 5 and shgeo.Polygon(paths[-1]).area < 5:
+            paths = [path for path in paths if shgeo.Polygon(path).area > 3]
+
         polygon = shgeo.MultiPolygon([(paths[0], paths[1:])])
 
         # There is a great number of "crossing border" errors on fill shapes
