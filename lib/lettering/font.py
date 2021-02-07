@@ -2,6 +2,7 @@ import json
 import os
 from copy import deepcopy
 
+from inkex import styles
 from lxml import etree
 
 from ..elements import nodes_to_elements
@@ -181,11 +182,22 @@ class Font(object):
         if self.auto_satin and len(destination_group) > 0:
             self._apply_auto_satin(destination_group, trim)
 
-        # set stroke width because it is almost invisible otherwise
+        # make sure font stroke styles have always a similar look
         for element in destination_group.iterdescendants(SVG_PATH_TAG):
-            style = ['stroke-width:0.5' if s.startswith('stroke-width') else s for s in element.get('style').split(';')]
-            style = ';'.join(style)
-            element.set('style', '%s' % style)
+            dash_array = ""
+            stroke_width = ""
+            style = styles.Style(element.get('style'))
+
+            if style.get('fill') == 'none':
+                stroke_width = ";stroke-width:1px"
+                if style.get('stroke-width'):
+                    style.pop('stroke-width')
+
+                if style.get('stroke-dasharray') and style.get('stroke-dasharray') != 'none':
+                    stroke_width = ";stroke-width:0.5px"
+                    dash_array = ";stroke-dasharray:3, 1"
+
+                element.set('style', '%s%s%s' % (style.to_str(), stroke_width, dash_array))
 
         return destination_group
 
