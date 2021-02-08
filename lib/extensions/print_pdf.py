@@ -287,8 +287,10 @@ class Print(InkstitchExtension):
         if not self.get_elements():
             return
 
+        self.metadata = self.get_inkstitch_metadata()
+        collapse_len = self.metadata['collapse_len_mm']
         patches = self.elements_to_patches(self.elements)
-        stitch_plan = patches_to_stitch_plan(patches)
+        stitch_plan = patches_to_stitch_plan(patches, collapse_len=collapse_len)
         palette = ThreadCatalog().match_and_apply_palette(stitch_plan, self.get_inkstitch_metadata()['thread-palette'])
 
         overview_svg, color_block_svgs = self.render_svgs(stitch_plan, realistic=False)
