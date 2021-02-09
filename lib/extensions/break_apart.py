@@ -47,7 +47,6 @@ class BreakApart(InkstitchExtension):
                 pass
 
             polygons = self.break_apart_paths(paths)
-            polygons = self.ensure_minimum_size(polygons, self.minimum_size)
             if self.options.method == 1:
                 polygons = self.combine_overlapping_polygons(polygons)
             polygons = self.recombine_polygons(polygons)
