@@ -75,6 +75,11 @@ Verify if you have downloaded Ink/Stitch for Linux ([Download](#download))
 
 Some users report false ownership/permissions can cause this issue.
 
+### AttributeError: 'NoneType' object has no attribute 'title' in inkstitch.py
+
+This error has been reported to us by users who have installed Inkscape through snap. Snap is known to cause issues for Ink/Stitch to run with Inkscape.
+Please try an other installing method. Any described on [https://inkscape.org/](https://inkscape.org/releases/latest/) will be fine. 
+
 ### Ink/Stitch dialogues disappear after a few seconds
 
 This issue can be caused by wayland. Start Inkscape with the following command: `export GDK_BACKEND=x11 && inkscape`.

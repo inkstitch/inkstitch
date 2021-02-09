@@ -97,29 +97,24 @@ Si vous avez des signes diacritiques dans votre nom d'utilisateur, essayez le ch
 
 ### Ink/Stitch ne fonctionne pas!
 
-*   **Confirmer le chemin d'installation**<br>
-    Vérifier si des fichiers ont éventuellement été extraits dans un *sous-dossier*.
-   Vous devriez voir beaucoup de fichiers commençant par "inkstitch" **directement** dans le dossier d'extensions, à côté d'un dossier appelé "inkstitch".
+**Confirmer le chemin d'installation**<br>
 
-*   **Windows Anti-Virus**<br>
-    Ceci est plus susceptible de se produire sous Windows, car python est condensé dans un exécutable,
-    des rapports de logiciels antivirus utilisant des méthodes heuristiques cela marque l'extension comme un faux positif.
-    Dans ce cas, la solution consiste à ajouter le dossier d’extensions Ink/Stitch à la liste des exceptions de l'antivirus. puis réinstaller l’extension et réessayer.
+Vérifier si des fichiers ont éventuellement été extraits dans un *sous-dossier*.
+Vous devriez voir beaucoup de fichiers commençant par "inkstitch" **directement** dans le dossier d'extensions, à côté d'un dossier appelé "inkstitch".
 
-    Si votre logiciel antivirus a supprimé des fichiers, vous recevrez le message d'erreur suivant:
-    ```
-    Tried to launch: inkstitch\bin\inkstitch
-    Arguments: ['inkstitch\bin\inkstitch', '--id=XXX', '--extension=XXX', 'C:\Users\XXX\AppData\Local\Temp\ink_ext_XXXXXX.svgXXXXX']
-    Debugging information:
+**Confirm version**
 
-    Traceback (most recent call last):
-      File "inkstitch.py", line 35, in <module>
-        extension = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-      File "C:\Program Files\Inkscape\lib\python2.7/subprocess.py", line 325, in __init__
-        errread, errwrite)
-      File "C:\Program Files\Inkscape\lib\python2.7/subprocess.py", line 575, in _execute_child
-        startupinfo)
-    WindowsError: [Error 2] The system cannot find the file specified
+Please verify if you have downloaded Ink/Stitch for macOS ([Download](#download)).
+
+### 'xxxx' cannot be opened, because the developer cannot be verified
+
+Read ["Additional Steps for Catalina and Big Sur"](#addtitional-steps-for-catalina--big-sur).
+
+### ValueError: Null geometry supports no operations
+
+Ink/Stitch on macOS (Catalina) could raise the following error message:  `[...] ValueError: Null geometry supports no operations`.
+
+It was reported to us, that removing the file `inkstitch/bin/shapely.speedups._speedups.so` has been successfull in order to bring Ink/Stitch to work properly.
     ```
 
 ### J'ai installé Ink/Stitch mais le menu est grisé (désactivé)

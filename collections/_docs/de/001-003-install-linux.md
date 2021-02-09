@@ -88,6 +88,11 @@ Dieser Fehler kann durch wayland verursacht werden. Starte Inkscape mit folgende
 
 Nutze diesen Workaround bis wir die gesamte Oberfläche auf electron umgestellt haben.
 
+### AttributeError: 'NoneType' object has no attribute 'title' in inkstitch.py
+
+Dieser Fehler wird von Nutzern berichtet, die Inkscape über snap installiert haben. Die Installation mit snap verhindert die Kommunikation zwischen Inkscape und Ink/Stitch.
+Versuche Inkscape mit einer anderen Methode zu isntallieren. Alle auf [https://inkscape.org/](https://inkscape.org/de/releases/latest/) beschriebenen Methoden sollten funktionieren.
+
 ### Ich habe Ink/Stitch in meiner Muttersprache installiert, aber die Dialog-Fenster sind englisch!
 
 **Unvollständige Übersetzung**

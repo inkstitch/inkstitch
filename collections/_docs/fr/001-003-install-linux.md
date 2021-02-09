@@ -64,35 +64,29 @@ Si vous avez des signes diacritiques dans votre nom d'utilisateur, essayez le ch
 
 ### Ink/Stitch ne fonctionne pas!
 
-*   **Confirmer le chemin d'installation**<br>
-    Vérifier si des fichiers ont éventuellement été extraits dans un *sous-dossier*.
-   Vous devriez voir beaucoup de fichiers commençant par "inkstitch" **directement** dans le dossier d'extensions, à côté d'un dossier appelé "inkstitch".
+**Confirmer le chemin d'installation**<br>
 
-*   **Windows Anti-Virus**<br>
-    Ceci est plus susceptible de se produire sous Windows, car python est condensé dans un exécutable,
-    des rapports de logiciels antivirus utilisant des méthodes heuristiques cela marque l'extension comme un faux positif.
-    Dans ce cas, la solution consiste à ajouter le dossier d’extensions Ink/Stitch à la liste des exceptions de l'antivirus. puis réinstaller l’extension et réessayer.
+Vérifier si des fichiers ont éventuellement été extraits dans un *sous-dossier*.
+Vous devriez voir beaucoup de fichiers commençant par "inkstitch" **directement** dans le dossier d'extensions, à côté d'un dossier appelé "inkstitch".
 
-    Si votre logiciel antivirus a supprimé des fichiers, vous recevrez le message d'erreur suivant:
-    ```
-    Tried to launch: inkstitch\bin\inkstitch
-    Arguments: ['inkstitch\bin\inkstitch', '--id=XXX', '--extension=XXX', 'C:\Users\XXX\AppData\Local\Temp\ink_ext_XXXXXX.svgXXXXX']
-    Debugging information:
+**Confirm Ink/Stitch Version**
 
-    Traceback (most recent call last):
-      File "inkstitch.py", line 35, in <module>
-        extension = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-      File "C:\Program Files\Inkscape\lib\python2.7/subprocess.py", line 325, in __init__
-        errread, errwrite)
-      File "C:\Program Files\Inkscape\lib\python2.7/subprocess.py", line 575, in _execute_child
-        startupinfo)
-    WindowsError: [Error 2] The system cannot find the file specified
-    ```
+Verify if you have downloaded Ink/Stitch for Linux ([Download](#download))
 
-### J'ai installé Ink/Stitch mais le menu est grisé (désactivé)
+**Confirm ownership/permissions**
 
-C'est souvent le cas si la mauvaise version Ink / Stitch a été installée.
-Veuillez vérifier si vous avez téléchargé la bonne version Ink / Stitch pour votre système d'exploitation.
+Some users report false ownership/permissions can cause this issue.
+
+### AttributeError: 'NoneType' object has no attribute 'title' in inkstitch.py
+
+This error has been reported to us by users who have installed Inkscape through snap. Snap is known to cause issues for Ink/Stitch to run with Inkscape.
+Please try an other installing method. Any described on [https://inkscape.org/](https://inkscape.org/releases/latest/) will be fine. 
+
+### Ink/Stitch dialogues disappear after a few seconds
+
+This issue can be caused by wayland. Start Inkscape with the following command: `export GDK_BACKEND=x11 && inkscape`.
+
+This workaround has to be used until we moved all Ink/Stitch applications to the electron environment. 
 
 ### J'ai installé Ink / Stitch dans ma langue maternelle, mais les fenêtres de dialogue sont affichées en anglais!
 
