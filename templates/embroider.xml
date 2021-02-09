@@ -2,19 +2,12 @@
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
     <name>{% trans %}Embroider{% endtrans %}</name>
     <id>org.inkstitch.embroider.{{ locale }}</id>
-    <param name="collapse_len_mm" type="float" min="0.0" max="10.0" _gui-text="{% trans %}Collapse length (mm){% endtrans %}" _gui-description="{% trans %}Jump stitches smaller than this will be treated as normal stitches.{% endtrans %}">3.0</param>
-    <param name="hide_layers" type="boolean" _gui-text="{% trans %}Hide other layers{% endtrans %}" _gui-description="{% trans %}Hide all other top-level layers when the embroidery layer is generated, in order to make stitching discernible.{% endtrans %}">true</param>
-    <param name="output_format" type="optiongroup" _gui-text="{% trans %}Output file format{% endtrans %}" appearance="minimal">
-        {% for format, description in formats %}
-        <_option value="{{ format }}">{{ _(description) }} ({{ format | upper }})</_option>
-        {% endfor %}
-        {% for format, description in debug_formats %}
-        <_option value="{{ format }}">{{ _(description) }} ({{ format | upper }}) [{{ _("DEBUG") }}]</_option>
-        {% endfor %}
-    </param>
-    <param name="path" type="path" mode="folder" gui-text="{% trans %}Directory{% endtrans %}"></param>
-    <param name="extension" type="string" gui-hidden="true">embroider</param>
-    <effect>
+    <param name="title" type="description" appearance="header">{% trans %}Create a stitch file{% endtrans %}</param>
+    <param name="howto" type="description">{% trans %}Save your embroidery file through | File > Save a Copy ... |{% endtrans %}</param>
+    <param name="howto_detail" type="description">{% trans %}Choose from listed embroidery file formats and save.{% endtrans %}</param>
+    <spacer />
+    <param name="info_zip" type="description">{% trans %}Multiple file formats can be saved by choosing the zip file format.{% endtrans %}</param>
+    <effect needs-live-preview="false" needs-document="false">
         <object-type>all</object-type>
         <effects-menu>
             <submenu name="Ink/Stitch">
@@ -22,7 +15,4 @@
             </submenu>
         </effects-menu>
     </effect>
-    <script>
-        {{ command_tag | safe }}
-    </script>
 </inkscape-extension>
