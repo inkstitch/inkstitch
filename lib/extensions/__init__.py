@@ -5,7 +5,6 @@ from .break_apart import BreakApart
 from .cleanup import Cleanup
 from .convert_to_satin import ConvertToSatin
 from .cut_satin import CutSatin
-from .embroider import Embroider
 from .flip import Flip
 from .global_commands import GlobalCommands
 from .import_threadlist import ImportThreadlist
@@ -25,9 +24,9 @@ from .zip import Zip
 from .lettering_generate_json import LetteringGenerateJson
 from .lettering_remove_kerning import LetteringRemoveKerning
 from .lettering_custom_font_dir import LetteringCustomFontDir
+from .embroider_settings import EmbroiderSettings
 
-__all__ = extensions = [Embroider,
-                        StitchPlanPreview,
+__all__ = extensions = [StitchPlanPreview,
                         Install,
                         Params,
                         Print,
@@ -51,4 +50,5 @@ __all__ = extensions = [Embroider,
                         BreakApart,
                         ImportThreadlist,
                         Simulator,
-                        Reorder]
+                        Reorder,
+                        EmbroiderSettings]
