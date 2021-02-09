@@ -1,10 +1,9 @@
 module.exports.selectLanguage = function (translations) {
   // get a list of available translations
-  var availableTranslations = [];
+  var availableTranslations = ['en_US'];
   for(var k in translations) availableTranslations.push(k);
 
-  // set default language
-  var lang = "en_US";
+  var lang = undefined;
 
   // get system language / Inkscape language
   ['LANG', 'LC_MESSAGES', 'LC_ALL', 'LANGUAGE'].forEach(language => {
@@ -16,9 +15,13 @@ module.exports.selectLanguage = function (translations) {
         // compare with available languages and if present, set to a long locale name (e.g. en_US)
         lang = availableTranslations.find(elem => elem.startsWith(current_lang));
       } else {
-        lang = process.env[language].split(".")[0];
+        lang = current_lang;
       }
     }
   })
+  // set default language
+  if (lang === undefined) {
+    lang = "en_US"
+  }
   return lang
 }
