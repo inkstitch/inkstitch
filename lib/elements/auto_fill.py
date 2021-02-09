@@ -20,6 +20,18 @@ class SmallShapeWarning(ValidationWarning):
                     "the outline instead.")
 
 
+class ExpandWarning(ValidationWarning):
+    name = _("Expand")
+    description = _("The expand parameter for this fill object cannot be applied. "
+                    "Ink/Stitch will ignore it and will use original size instead.")
+
+
+class UnderlayInsetWarning(ValidationWarning):
+    name = _("Inset")
+    description = _("The underlay inset parameter for this fill object cannot be applied. "
+                    "Ink/Stitch will ignore it and will use the original size instead.")
+
+
 class AutoFill(Fill):
     element_name = _("AutoFill")
 
@@ -157,9 +169,13 @@ class AutoFill(Fill):
     def underlay_underpath(self):
         return self.get_boolean_param('underlay_underpath', True)
 
-    def shrink_or_grow_shape(self, amount):
+    def shrink_or_grow_shape(self, amount, validate=False):
         if amount:
             shape = self.shape.buffer(amount)
+            # changing the size can empty the shape
+            # in this case we want to use the original shape rather than returning an error
+            if shape.is_empty and not validate:
+                return self.shape
             if not isinstance(shape, shgeo.MultiPolygon):
                 shape = shgeo.MultiPolygon([shape])
             return shape
@@ -244,6 +260,12 @@ class AutoFill(Fill):
     def validation_warnings(self):
         if self.shape.area < 20:
             yield SmallShapeWarning(self.shape.centroid)
+
+        if self.shrink_or_grow_shape(self.expand, True).is_empty:
+            yield ExpandWarning(self.shape.centroid)
+
+        if self.shrink_or_grow_shape(-self.fill_underlay_inset, True).is_empty:
+            yield UnderlayInsetWarning(self.shape.centroid)
 
         for warning in super(AutoFill, self).validation_warnings():
             yield warning
