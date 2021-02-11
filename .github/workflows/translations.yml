@@ -4,7 +4,7 @@ on:
     - cron: '0 0 * * *'
 jobs:
   crowdin:
-    runs-on: ubuntu-16.04
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
         with:
@@ -16,7 +16,7 @@ jobs:
           git submodule update --init --recursive
       - uses: actions/setup-python@v1
         with:
-          python-version: '2.7.x'
+          python-version: '3.x'
       - env:
           CROWDIN_API_KEY: ${{ secrets.CROWDIN_API_KEY }}
         run: |
@@ -41,7 +41,8 @@ jobs:
           # files when a new translation string is added but we don't need to
           # commit those until folks actually translate the new strings.
           if git diff translations | grep -qE '^[-+]msgstr ".+"$'; then
-            git add translations
+            make electron/src/renderer/assets/translations.json
+            git add translations electron/src/renderer/assets/translations.json
             git commit -m "new translations from Crowdin"
             git push https://github.com/inkstitch/inkstitch main
           fi
