@@ -56,7 +56,7 @@ class FontVariant(object):
 
     def _load_glyphs(self):
         svg_path = os.path.join(self.path, "%s.svg" % self.variant)
-        with open(svg_path) as svg_file:
+        with open(svg_path, encoding="utf-8") as svg_file:
             svg = etree.parse(svg_file)
 
         glyph_layers = svg.xpath(".//svg:g[starts-with(@inkscape:label, 'GlyphLayer-')]", namespaces=inkex.NSS)

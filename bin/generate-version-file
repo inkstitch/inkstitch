@@ -3,7 +3,7 @@
 VERSION="${GITHUB_REF##*/}"
 OS="${BUILD:-$(uname)}"
 
-if VERSION=""; then
+if [ $VERSION = "" ]; then
   VERSION="Manual Install"
 fi
 
