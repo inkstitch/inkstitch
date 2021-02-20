@@ -79,7 +79,7 @@ class Font(object):
 
     def _load_metadata(self):
         try:
-            with open(os.path.join(self.path, "font.json")) as metadata_file:
+            with open(os.path.join(self.path, "font.json"), encoding="utf-8") as metadata_file:
                 self.metadata = json.load(metadata_file)
         except IOError:
             pass
