@@ -25,3 +25,24 @@ I started off hacking on [inkscape-embroidery](http://www.jonh.net/~jonh/inkscap
 Things took off from there.  I continued adding features as I needed them, and by this point, very little if any of the original code remains.
 
 The goal of Ink/Stitch is to provide a powerful embroidery digitizing platform for everyone **completely free**.  I want to open up the field of embroidery design, making it approachable even for those who can't spend hundreds or thousands of dollars on software.  And I want folks like me, who love to combine code with art, to have an open, extensible, and approachable platform to hack on.
+
+# License
+
+ink/stitch: an extension for machine embroidery design using Inkscape
+Copyright (C) 2010 Jon Howell
+Copyright (C) 2015 Bas Wijnen - these additions also released under AGPLv3
+Copyright (C) 2015 Steven Siegl
+Copyright (C) 2016-2018 Lex Neva
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
