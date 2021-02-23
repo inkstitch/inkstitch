@@ -40,6 +40,7 @@ class LetteringGenerateJson(InkstitchExtension):
         hkern = kerning.hkern()
         word_spacing = kerning.word_spacing()
         letter_spacing = kerning.letter_spacing()
+        units_per_em = kerning.units_per_em()
         # missing_glyph_spacing = kerning.missing_glyph_spacing()
 
         # collect data
@@ -53,8 +54,9 @@ class LetteringGenerateJson(InkstitchExtension):
                 'max_scale': self.options.max_scale,
                 'horiz_adv_x_default': letter_spacing,
                 'horiz_adv_x_space': word_spacing,
+                'units_per_em': units_per_em,
                 'horiz_adv_x': horiz_adv_x,
-                'kerning_pairs': hkern,
+                'kerning_pairs': hkern
                 }
 
         # write data to font.json into the same directory as the font file

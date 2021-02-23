@@ -51,6 +51,11 @@ class FontKerning(object):
         letter_spacing = self.svg.xpath(xpath, namespaces=NSS) or 1.5
         return float(letter_spacing)
 
+    def units_per_em(self):
+        xpath = "string(.//svg:font-face[@units-per-em][1]/@*[name()='units-per-em'])"
+        units_per_em = self.svg.xpath(xpath, namespaces=NSS) or 0
+        return int(units_per_em)
+
     """
     def missing_glyph_spacing(self):
         xpath = "string(.//svg:missing-glyph/@*[name()='horiz-adv-x'])"
