@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-02-15 00:39+0000\n"
-"PO-Revision-Date: 2021-02-15 00:41\n"
+"PO-Revision-Date: 2021-02-25 00:42\n"
 "Last-Translator: \n"
 "Language-Team: Portuguese, Brazilian\n"
 "MIME-Version: 1.0\n"
@@ -41,7 +41,7 @@ msgstr ""
 #: inkstitch-fonts-metadata.py:12
 #, python-format
 msgid "The capital em is 19,8 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 150%.  Every satin has center-walk underlay."
-msgstr ""
+msgstr "O em máximo é 19,8 milímetros de largura em escala de 100%. Pode ser reduzida para 80% ou aumentado para 150%. Todo cetim deve ter o suporte de caminho central."
 
 #. name of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:14
@@ -51,7 +51,7 @@ msgstr ""
 #. description of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:16
 msgid "Suitable for small fonts (8 to 20 mm)"
-msgstr ""
+msgstr "Adequada para fontes pequenas (8 a 20mm)"
 
 #. name of font in fonts/geneva_simple
 #: inkstitch-fonts-metadata.py:18
@@ -61,7 +61,7 @@ msgstr ""
 #. description of font in fonts/geneva_simple
 #: inkstitch-fonts-metadata.py:20
 msgid "Suitable for small fonts (6 to 15mm)"
-msgstr ""
+msgstr "Adequada para fontes pequenas (6 a 15mm)"
 
 #. name of font in fonts/lobster
 #: inkstitch-fonts-metadata.py:22
@@ -98,7 +98,7 @@ msgstr ""
 #. description of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:36
 msgid "A font suited for directing"
-msgstr ""
+msgstr "Uma fonte adequada para direcionar"
 
 #. name of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:38
@@ -108,15 +108,15 @@ msgstr ""
 #. description of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:40
 msgid "A font suited for heavy typing :)"
-msgstr ""
+msgstr "Uma fonte adequada para digitação pesada :)"
 
 #: inkstitch.py:56
 msgid "Ink/Stitch experienced an unexpected error."
-msgstr ""
+msgstr "Ocorreu um erro inesperado com o Ink/Stitch."
 
 #: inkstitch.py:57
 msgid "If you'd like to help, please file an issue at https://github.com/inkstitch/inkstitch/issues and include the entire error description below:"
-msgstr ""
+msgstr "Se precisar de ajudar, registre o problema em https://github.com/inkstitch/inkstitch/issues e inclua a descrição completa do erro abaixo:"
 
 #. command attached to an object
 #: lib/commands.py:23
@@ -131,42 +131,42 @@ msgstr "Posição final do ponto de preenchimento"
 #. command attached to an object
 #: lib/commands.py:29
 msgid "Auto-route satin stitch starting position"
-msgstr ""
+msgstr "Rota automática na posição inicial do ponto cetim"
 
 #. command attached to an object
 #: lib/commands.py:32
 msgid "Auto-route satin stitch ending position"
-msgstr ""
+msgstr "Rota automática na posição final do ponto cetim"
 
 #. command attached to an object
 #: lib/commands.py:35
 msgid "Stop (pause machine) after sewing this object"
-msgstr ""
+msgstr "Parar (pausa a máquina) depois de costurar o objeto"
 
 #. command attached to an object
 #: lib/commands.py:38
 msgid "Trim thread after sewing this object"
-msgstr ""
+msgstr "Cortar a linha depois de costurar o objeto"
 
 #. command attached to an object
 #: lib/commands.py:41
 msgid "Ignore this object (do not stitch)"
-msgstr ""
+msgstr "Ignore este objeto (não costurar)"
 
 #. command attached to an object
 #: lib/commands.py:44
 msgid "Satin cut point (use with Cut Satin Column)"
-msgstr ""
+msgstr "Ponto de corte cetim (use com o Corte de Coluna Cetim)"
 
 #. command that affects a layer
 #: lib/commands.py:48
 msgid "Ignore layer (do not stitch any objects in this layer)"
-msgstr ""
+msgstr "Ignorar camada (não costurar nenhum objeto nessa camada)"
 
 #. command that affects entire document
 #: lib/commands.py:51
 msgid "Origin for exported embroidery files"
-msgstr ""
+msgstr "Origem para os arquivos de bordado exportados"
 
 #. command that affects entire document
 #: lib/commands.py:54
@@ -190,17 +190,17 @@ msgstr ""
 
 #: lib/commands.py:292 lib/commands.py:403 lib/extensions/layer_commands.py:29
 msgid "Ink/Stitch Command"
-msgstr ""
+msgstr "Comando Ink/Stitch"
 
 #. : the name of the line that connects a command to the object it applies to
 #: lib/commands.py:317
 msgid "connector"
-msgstr ""
+msgstr "connector"
 
 #. : the name of a command symbol (example: scissors icon for trim command)
 #: lib/commands.py:334
 msgid "command marker"
-msgstr ""
+msgstr "comando do marcador"
 
 #: lib/elements/auto_fill.py:17
 msgid "Small Fill"
@@ -854,7 +854,7 @@ msgstr ""
 
 #: lib/extensions/lettering.py:212
 msgid "This font has no available font variant. Please update or remove the font."
-msgstr ""
+msgstr "Esta fonte não possui uma variante disponível. Por favor, atualize ou remova a fonte."
 
 #. The user has chosen to scale the text by some percentage
 #. (50%, 200%, etc).  If you need to use the percentage symbol,
@@ -1561,7 +1561,7 @@ msgstr ""
 
 #: print/templates/ui_svg_action_buttons.html:5
 msgid "Apply to all"
-msgstr ""
+msgstr "Aplicar a todos"
 
 #: print/templates/ui_svg_action_buttons.html:9
 #: print/templates/ui_svg_action_buttons.html:12
@@ -2122,7 +2122,7 @@ msgstr ""
 
 #: electron/src/renderer/components/Simulator.vue:18
 msgid "Function"
-msgstr ""
+msgstr "Função"
 
 #: electron/src/renderer/components/InstallPalettes.vue:9
 msgid "Ink/Stitch can install palettes for Inkscape matching the thread colors from popular machine embroidery thread manufacturers."
@@ -2162,7 +2162,7 @@ msgstr "Ir para comando anterior"
 
 #: electron/src/renderer/components/Simulator.vue:197
 msgid "jumps"
-msgstr ""
+msgstr "saltos"
 
 #. name for this keyboard key: -
 #: electron/src/renderer/components/Simulator.vue:76

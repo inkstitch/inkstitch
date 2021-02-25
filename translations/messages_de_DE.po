@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-02-15 00:39+0000\n"
-"PO-Revision-Date: 2021-02-15 00:41\n"
+"PO-Revision-Date: 2021-02-25 00:42\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -25,17 +25,17 @@ msgstr ""
 #. name of font in fonts/baumans
 #: inkstitch-fonts-metadata.py:2
 msgid "Baumans"
-msgstr ""
+msgstr "Baumans"
 
 #. name of font in fonts/chopin
 #: inkstitch-fonts-metadata.py:6
 msgid "Chopin Script"
-msgstr ""
+msgstr "Chopin Script"
 
 #. name of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:10
 msgid "Dejavu Serif Semi-condensed"
-msgstr ""
+msgstr "Dejavu Serif Semi-condensed"
 
 #. description of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:12
@@ -66,7 +66,7 @@ msgstr "Geeignet für kleine Schriftarten (6 bis 15 mm)"
 #. name of font in fonts/lobster
 #: inkstitch-fonts-metadata.py:22
 msgid "Lobster Two Bold Italic"
-msgstr ""
+msgstr "Lobster Two Bold Italic"
 
 #. name of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:26
@@ -743,7 +743,7 @@ msgstr "Bitte eine oder mehrere Satinkolumnen auswählen."
 
 #: lib/extensions/auto_satin.py:49
 msgid "Please select at least one satin column."
-msgstr "Bitte mindestens eine Satinkolumne aus auswählen."
+msgstr "Bitte mindestens eine Satinkolumne auswählen."
 
 #. This was previously: "No embroiderable paths selected."
 #: lib/extensions/base.py:130
@@ -823,7 +823,7 @@ msgstr "Ink/Stitch Text"
 
 #: lib/extensions/lettering.py:39
 msgid "Font"
-msgstr ""
+msgstr "Schriftart"
 
 #: lib/extensions/lettering.py:50
 msgid "Options"
@@ -856,7 +856,7 @@ msgstr "Keine Schriftart gefunden! Bitte versuche Ink/Stitch erneut zu installie
 
 #: lib/extensions/lettering.py:212
 msgid "This font has no available font variant. Please update or remove the font."
-msgstr ""
+msgstr "Diese Schriftart hat keine verfügbare Schriftvariante. Bitte aktualisieren oder entfernen Sie die Schriftart."
 
 #. The user has chosen to scale the text by some percentage
 #. (50%, 200%, etc).  If you need to use the percentage symbol,

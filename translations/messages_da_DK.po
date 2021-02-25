@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-02-15 00:39+0000\n"
-"PO-Revision-Date: 2021-02-15 00:41\n"
+"PO-Revision-Date: 2021-02-25 00:41\n"
 "Last-Translator: \n"
 "Language-Team: Danish\n"
 "MIME-Version: 1.0\n"
@@ -742,7 +742,7 @@ msgstr ""
 
 #: lib/extensions/auto_satin.py:49
 msgid "Please select at least one satin column."
-msgstr ""
+msgstr "Vælg mindst én satinsøjle."
 
 #. This was previously: "No embroiderable paths selected."
 #: lib/extensions/base.py:130
@@ -1879,7 +1879,7 @@ msgstr ""
 
 #: templates/install.inx:3
 msgid "Install thread color palettes for Inkscape"
-msgstr ""
+msgstr "Installér trådfarvepaletter til Inkscape"
 
 #: templates/layer_commands.inx:3
 msgid "Add Layer Commands"
@@ -2126,7 +2126,7 @@ msgstr ""
 
 #: electron/src/renderer/components/InstallPalettes.vue:9
 msgid "Ink/Stitch can install palettes for Inkscape matching the thread colors from popular machine embroidery thread manufacturers."
-msgstr ""
+msgstr "Ink/Stitch kan installere paletter til Inkscape, som matcher trådfarverne fra populære maskinbroderitrådproducenter."
 
 #: electron/src/renderer/components/InstallPalettes.vue:48
 msgid "Inkscape add-on installation failed"
@@ -2134,7 +2134,7 @@ msgstr ""
 
 #: electron/src/renderer/components/InstallPalettes.vue:31
 msgid "Inkscape palettes have been installed. Please restart Inkscape to load the new palettes."
-msgstr ""
+msgstr "Inkscape-paletter er nu installeret. Genstart Inkscape for at indlæse de nye paletter."
 
 #: electron/src/renderer/components/InstallPalettes.vue:17
 msgid "Install"
@@ -2142,7 +2142,7 @@ msgstr ""
 
 #: electron/src/renderer/components/InstallPalettes.vue:4
 msgid "Install Palettes"
-msgstr ""
+msgstr "Installér paletter"
 
 #: electron/src/renderer/components/InstallPalettes.vue:26
 msgid "Installation Completed"
@@ -2245,5 +2245,5 @@ msgstr ""
 
 #: electron/src/renderer/components/InstallPalettes.vue:55
 msgid "Try again"
-msgstr ""
+msgstr "Forsøg igen"
 
