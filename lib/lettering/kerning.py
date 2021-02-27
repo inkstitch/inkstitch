@@ -16,7 +16,7 @@ class FontKerning(object):
         hax = self.svg.xpath(xpath, namespaces=NSS)
         if len(hax) == 0:
             return {}
-        return dict(zip(hax[0::2], [float(x) for x in hax[1::2]]))
+        return dict(zip(hax[0::2], [int(x) for x in hax[1::2]]))
 
     def hkern(self):
         xpath = ".//svg:hkern[(@u1 or @g1) and (@u1 or @g1) and @k]/@*[contains(name(), '1') or contains(name(), '2') or name()='k']"
@@ -36,24 +36,24 @@ class FontKerning(object):
                     hkern[index] = toUnicode(glyph)
                 else:
                     hkern[index] = toUnicode(glyph_names[1])
-        k = [float(x) for x in hkern[2::3]]
+        k = [int(x) for x in hkern[2::3]]
         u = [k + v for k, v in zip(hkern[0::3], hkern[1::3])]
         hkern = dict(zip(u, k))
         return hkern
 
     def word_spacing(self):
         xpath = "string(.//svg:glyph[@glyph-name='space'][1]/@*[name()='horiz-adv-x'])"
-        word_spacing = self.svg.xpath(xpath, namespaces=NSS) or 3
-        return float(word_spacing)
+        word_spacing = self.svg.xpath(xpath, namespaces=NSS) or 20
+        return int(word_spacing)
 
     def letter_spacing(self):
         xpath = "string(.//svg:font[@horiz-adv-x][1]/@*[name()='horiz-adv-x'])"
-        letter_spacing = self.svg.xpath(xpath, namespaces=NSS) or 1.5
-        return float(letter_spacing)
+        letter_spacing = self.svg.xpath(xpath, namespaces=NSS) or 0
+        return int(letter_spacing)
 
-    def units_per_em(self):
+    def units_per_em(self, default=100):
         xpath = "string(.//svg:font-face[@units-per-em][1]/@*[name()='units-per-em'])"
-        units_per_em = self.svg.xpath(xpath, namespaces=NSS) or 0
+        units_per_em = self.svg.xpath(xpath, namespaces=NSS) or default
         return int(units_per_em)
 
     """

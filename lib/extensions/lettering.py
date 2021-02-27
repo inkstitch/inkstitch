@@ -44,6 +44,7 @@ class LetteringFrame(wx.Frame):
 
         # font details
         self.font_description = wx.StaticText(self, wx.ID_ANY)
+        self.Bind(wx.EVT_SIZE, self.resize)
 
         # options
         self.options_box = wx.StaticBox(self, wx.ID_ANY, label=_("Options"))
@@ -203,7 +204,7 @@ class LetteringFrame(wx.Frame):
             description = _('This font has no available font variant. Please update or remove the font.')
         self.font_description.SetLabel(description)
         self.font_description.SetForegroundColour(color)
-        self.font_description.Wrap(self.GetSize().width - 20)
+        self.font_description.Wrap(self.GetSize().width - 35)
 
         if font.reversible:
             self.back_and_forth_checkbox.Enable()
@@ -221,7 +222,13 @@ class LetteringFrame(wx.Frame):
             self.trim_checkbox.SetValue(False)
 
         self.update_preview()
-        self.GetSizer().Layout()
+        self.Layout()
+
+    def resize(self, event=None):
+        description = self.font_description.GetLabel().replace("\n", " ")
+        self.font_description.SetLabel(description)
+        self.font_description.Wrap(self.GetSize().width - 35)
+        self.Layout()
 
     def update_preview(self, event=None):
         self.preview.update()

@@ -22,7 +22,7 @@ class LetteringGenerateJson(InkstitchExtension):
         self.arg_parser.add_argument("-g", "--default-glyph", type=str, default="", dest="default_glyph")
         self.arg_parser.add_argument("-i", "--min-scale", type=float, default=1, dest="min_scale")
         self.arg_parser.add_argument("-a", "--max-scale", type=float, default=1, dest="max_scale")
-        self.arg_parser.add_argument("-l", "--leading", type=float, default=5, dest="leading")
+        self.arg_parser.add_argument("-l", "--leading", type=int, default=0, dest="leading")
         self.arg_parser.add_argument("-p", "--font-file", type=str, default="", dest="path")
 
     def effect(self):
@@ -41,12 +41,20 @@ class LetteringGenerateJson(InkstitchExtension):
         word_spacing = kerning.word_spacing()
         letter_spacing = kerning.letter_spacing()
         units_per_em = kerning.units_per_em()
+
+        if letter_spacing == 0:
+            letter_spacing = None
+
+        if self.options.leading == 0:
+            leading = units_per_em
+        else:
+            leading = self.options.leading
         # missing_glyph_spacing = kerning.missing_glyph_spacing()
 
         # collect data
         data = {'name': self.options.font_name,
                 'description': self.options.font_description,
-                'leading': self.options.leading,
+                'leading': leading,
                 'auto_satin': self.options.auto_satin,
                 'reversible': self.options.reversible,
                 'default_glyph': self.options.default_glyph,

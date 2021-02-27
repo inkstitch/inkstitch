@@ -418,7 +418,7 @@ class DrawingPanel(wx.Panel):
         while scale_width < 50:
             scale_width += one_mm
 
-        scale_width_mm = scale_width / self.zoom / PIXELS_PER_MM
+        scale_width_mm = int(scale_width / self.zoom / PIXELS_PER_MM)
 
         # The scale bar looks like this:
         #
