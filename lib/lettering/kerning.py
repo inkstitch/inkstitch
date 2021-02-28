@@ -46,7 +46,7 @@ class FontKerning(object):
     # the space character
     def word_spacing(self):
         xpath = "string(.//svg:glyph[@glyph-name='space'][1]/@*[name()='horiz-adv-x'])"
-        word_spacing = self.svg.xpath(xpath, namespaces=NSS) or 20
+        word_spacing = self.svg.xpath(xpath, namespaces=NSS) or 26
         return int(word_spacing)
 
     # default letter spacing
