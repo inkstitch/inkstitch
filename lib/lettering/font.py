@@ -100,10 +100,6 @@ class Font(object):
                     # we'll deal with missing variants when we apply lettering
                     pass
 
-    def _check_variants(self):
-        if self.variants.get(self.default_variant) is None:
-            raise FontError("font not found or has no default variant")
-
     name = localized_font_metadata('name', '')
     description = localized_font_metadata('description', '')
     default_glyph = font_metadata('defalt_glyph', "�")
@@ -148,10 +144,13 @@ class Font(object):
         return None
 
     def has_variants(self):
+        # returns available variants
         font_variants = []
         for variant in FontVariant.VARIANT_TYPES:
             if os.path.isfile(os.path.join(self.path, "%s.svg" % variant)):
                 font_variants.append(variant)
+        if not font_variants:
+            raise FontError(_("The font '%s' has no variants.") % self.name)
         return font_variants
 
     def render_text(self, text, destination_group, variant=None, back_and_forth=True, trim=False):
@@ -219,6 +218,7 @@ class Font(object):
         Returns:
             An svg:g element containing the rendered text.
         """
+
         group = etree.Element(SVG_GROUP_TAG, {
             INKSCAPE_LABEL: line
         })

@@ -122,13 +122,12 @@ class LetteringFrame(wx.Frame):
             except OSError:
                 continue
 
-            try:
-                for font_dir in font_dirs:
-                    font = Font(os.path.join(font_path, font_dir))
-                    self.fonts[font.name] = font
-                    self.fonts_by_id[font.id] = font
-            except FontError:
-                pass
+            for font_dir in font_dirs:
+                font = Font(os.path.join(font_path, font_dir))
+                if font.name == "" or font.id == "":
+                    continue
+                self.fonts[font.name] = font
+                self.fonts_by_id[font.id] = font
 
         if len(self.fonts) == 0:
             info_dialog(self, _("Unable to find any fonts!  Please try reinstalling Ink/Stitch."))
@@ -194,7 +193,11 @@ class LetteringFrame(wx.Frame):
         self.settings.font = font.id
         self.scale_spinner.SetRange(int(font.min_scale * 100), int(font.max_scale * 100))
 
-        font_variants = font.has_variants()
+        font_variants = []
+        try:
+            font_variants = font.has_variants()
+        except FontError:
+            pass
 
         # Update font description
         color = (0, 0, 0)
@@ -233,7 +236,7 @@ class LetteringFrame(wx.Frame):
     def update_preview(self, event=None):
         self.preview.update()
 
-    def update_lettering(self):
+    def update_lettering(self, raise_error=False):
         del self.group[:]
 
         if self.settings.scale == 100:
@@ -247,7 +250,14 @@ class LetteringFrame(wx.Frame):
             })
 
         font = self.fonts.get(self.font_chooser.GetValue(), self.default_font)
-        font.render_text(self.settings.text, destination_group, back_and_forth=self.settings.back_and_forth, trim=self.settings.trim)
+        try:
+            font.render_text(self.settings.text, destination_group, back_and_forth=self.settings.back_and_forth, trim=self.settings.trim)
+        except FontError as e:
+            if raise_error:
+                inkex.errormsg("Error: Text cannot be applied to the document.\n%s" % e)
+                return
+            else:
+                pass
 
         if self.settings.scale != 100:
             destination_group.attrib['transform'] = 'scale(%s)' % (self.settings.scale / 100.0)
@@ -293,7 +303,7 @@ class LetteringFrame(wx.Frame):
 
     def apply(self, event):
         self.preview.disable()
-        self.update_lettering()
+        self.update_lettering(True)
         self.save_settings()
         self.close()
 

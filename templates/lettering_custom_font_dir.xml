@@ -14,11 +14,12 @@
     <param name="file-description" type="description" indent="1" >
         {% trans %}Set a custom directory for additional fonts to be used with the lettering tool.{% endtrans %}
     </param>
-    <param name="file-description" type="description" indent="1" >
-        {% trans %}The fonts specified in this folder can be used directly. Restarting Inkscape won't be necessary.{% endtrans %}
-    </param>
     <spacer />
     <param name="path" type="path" mode="folder" gui-text="{% trans %}Custom font directory{% endtrans %}"  indent="1"></param>
+    <spacer />
+    <param name="file-description" type="description" indent="1" >
+        {% trans %}Usage: Create a subdirectory for each font you add.{% endtrans %}
+    </param>
     <script>
         {{ command_tag | safe }}
     </script>

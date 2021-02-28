@@ -41,15 +41,19 @@ class LetteringGenerateJson(InkstitchExtension):
         word_spacing = kerning.word_spacing()
         letter_spacing = kerning.letter_spacing()
         units_per_em = kerning.units_per_em()
+        # missing_glyph_spacing = kerning.missing_glyph_spacing()
 
+        # if letter spacing returns 0, it hasn't been specified in the font file
+        # Ink/Stitch will calculate the width of each letter automatically
         if letter_spacing == 0:
             letter_spacing = None
 
+        # if leading (line height) is set to 0, the font author wants Ink/Stitch to use units_per_em
+        # if units_per_em is not defined in the font file a default value will be returned
         if self.options.leading == 0:
             leading = units_per_em
         else:
             leading = self.options.leading
-        # missing_glyph_spacing = kerning.missing_glyph_spacing()
 
         # collect data
         data = {'name': self.options.font_name,

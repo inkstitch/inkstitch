@@ -426,7 +426,7 @@ class DrawingPanel(wx.Panel):
         # |_____|_____|
 
         scale_lower_left_x = 20
-        scale_lower_left_y = canvas_height - 20
+        scale_lower_left_y = canvas_height - 30
 
         canvas.DrawLines(((scale_lower_left_x, scale_lower_left_y - 6),
                           (scale_lower_left_x, scale_lower_left_y),
