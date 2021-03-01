@@ -693,12 +693,7 @@ class EmbroiderySimulator(wx.Frame):
                                               stitches_per_second=stitches_per_second)
         sizer.Add(self.simulator_panel, 1, wx.EXPAND)
 
-        # self.SetSizerAndFit() sets the minimum size so that the buttons don't
-        # get squished.  But it then also shrinks the window down to that size.
-        self.SetSizerAndFit(sizer)
-
-        # Therefore we have to reapply the size that the caller asked for.
-        self.SetSize(size)
+        self.SetSizeHints(sizer.CalcMin())
 
         self.Bind(wx.EVT_CLOSE, self.on_close)
 
