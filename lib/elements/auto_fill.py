@@ -6,10 +6,9 @@ from shapely import geometry as shgeo
 
 from ..i18n import _
 from ..stitches import auto_fill
-from ..utils import cache
+from ..utils import cache, version
 from .element import Patch, param
 from .fill import Fill
-
 from .validation import ValidationWarning
 
 
@@ -251,6 +250,7 @@ class AutoFill(Fill):
             # L10N this message is followed by a URL: https://github.com/inkstitch/inkstitch/issues/new
             message += _("If you'd like to help us make Ink/Stitch better, please paste this whole message into a new issue at: ")
             message += "https://github.com/inkstitch/inkstitch/issues/new\n\n"
+            message += version.get_inkstitch_version() + "\n\n"
             message += traceback.format_exc()
 
             self.fatal(message)

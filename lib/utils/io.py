@@ -7,7 +7,7 @@ def save_stderr():
     # GTK likes to spam stderr, which inkscape will show in a dialog.
     with open(os.devnull, 'w') as null:
         sys.stderr_dup = os.dup(sys.stderr.fileno())
-        sys.real_stderr = os.fdopen(sys.stderr_dup, 'w')
+        sys.real_stderr = os.fdopen(sys.stderr_dup, 'w', encoding='utf-8')
         os.dup2(null.fileno(), 2)
         sys.stderr = StringIO()
 
