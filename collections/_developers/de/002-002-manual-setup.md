@@ -1,77 +1,98 @@
 ---
 title: "Manualle Installation"
 permalink: /de/developers/inkstitch/manual-setup/
-last_modified_at: 2019-05-05
+last_modified_at: 2021-03-04
 toc: false
 ---
-Eine manuelle Installation ermöglicht es am Quellcode zu arbeiten, während du Ink/Stitch benutzt.
+Eine manuelle Installation ermöglicht es am Quellcode zu arbeiten und die Änderungen
 
-1. Klone die Erweiterung und aktualisiere das Submodul pyembroidery
+Wenn du die Erweiterung unter **Windows** debuggen willst, sind ein paar [zusätzliche Schritte](/developers/inkstitch/windows-manual-setup/) nötig (englisch).
 
-    ```
-    git clone https://github.com/inkstitch/inkstitch
-    cd inkstitch
-    git submodule init
-    git submodule update
-    ```
-2.  Installiere Python Abhängigkeiten
+## How to Install Ink/Stich Manually
 
-    Es werden ein paar Python Module gebraucht. In einigen Fällen benutzt Ink/Stitch Funktionen, die nicht automatisch durch die Distributionen mit Python mitgeliefert werden.
-    Deshalb empfehlen wir sie mit pip zu installieren:
+### 1. Ink/Stitch herunterladen
 
-    ```
-    pip2 install -r requirements.txt
-    ```
+```
+git clone https://github.com/inkstitch/inkstitch
+```
 
-    **Info:** Evtl. musst du auf einigen Plattformen wxPython entfernen und ein platform-spezifisches Paket [installieren](https://wiki.wxpython.org/How%20to%20install%20wxPython):<br />
-       ⚫ Debian `python-wxgtk3.0`<br />
-       ⚫ Ubuntu 16.04: `pip install -U -f https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-16.04 wxPython`
-    {: .notice--info }
- 
-    **Info:** Wenn du nur Python 2 installiert hast, kannst du evtl. auch einfach `pip` anstelle von `pip2` benutzen.
-    {: .notice--info }
+### 2. Install Pyembroidery
 
-3.  Installiere Abhängigkeiten für Electron
+```
+git clone https://github.com/inkstitch/pyembroidery.git
+pip install -e pyembroidery/
+```
 
-    Die grafische Oberfläche von Ink/Stitch nutzt Electron.  Dazu brauchst du eine funktionsfähige Installation von NodeJS (Version 10 oder höher).  Sofern nicht vorhanden, installiere yarn mit `npm install yarn`.
+We recommend to use `pyenv` to avoid the need of root privileges for `pip`.
 
-    Installiere Electron mit den dazugehörigen Abhängigkeiten wie folgt:
+### 3.  Installiere Python Abhängigkeiten
 
-    ```
-    cd electron
-    yarn install
-    ```
+Es werden ein paar Python Module gebraucht. In einigen Fällen benutzt Ink/Stitch Funktionen, die nicht automatisch durch die Distributionen mit Python mitgeliefert werden.
+Deshalb empfehlen wir sie mit pip zu installieren:
 
-4.  INX-Dateien vorbereiten
+```
+pip install -r requirements.txt
+```
 
-    ```
-    make inx
-    ```
-
-    This will create `*.inx` files for each locale in `inx/<locale>`.
-
-5.  Symbolische Links in den Inkscape extensions-Order setzen
-
-    ```
-    cd ~/.config/inkscape/extensions
-    ln -s /path/to/inkstitch
-    for i in inkstitch/inx/de_DE/inkstitch_*.inx; do ln -s $i; done;
-    ln -s inkstitch/inkstitch.py
-    ```
-
-    Um eine andere Sprache im Ink/Stitch-Menü zu nutzen, ersetze `de_DE` mit einer anderen Sprache aus dem Ordner `inx/`.
-    Ink/Stich Dialoge außerhalb von Inkscape nutzen die Systemsprache.
-
-6.  Inkscape starten
-
-    **Info:** Wenn Ink/Stitch `ImportError: No module named shapely` ausgibt, dann ist es gut möglich, dass Inkscape eine andere Python Version benutzt,
-    als die in den installierten Abängigkeiten. Konfiguriere in Inkscape die Ausführungsdatei für Python in `preferences.xml`.
-    Der Speicherort für `preferences.xml` kann in Inkscape unter `Bearbeiten > Einstellungen > System > Benutzereinstellungen` eingesehen werden.
-    *Schließe Inkscape bevor du diese Datei bearbeitest*, anderenfalls wird sie beim Schließen von Inkscape wieder überschrieben.<br /><br />
-    In `preferences.xml` aktualisiere `group id="extensions" \>` mit dem richtigen Python interpreter. Zum Beispiel,<br /><br />
-    `<group id="extensions" python-interpreter="/usr/local/bin/python2" />`<br/><br/>
-    wobei, `/usr/local/bin/python2` der Rückgabewert von `which python2` ist.
-    {: .notice--warning }
-
-**Info:** Änderungen am Python-Code werden wirksam, sobald die Erweiterung das nächste Mal gestartet wird. Änderungen an den Inkscape-Menü Dateien (`*.inx`) zeigen sich erst, nachdem Inkscape neu gestartet wurde.
+**Info:** Evtl. musst du auf einigen Plattformen wxPython entfernen und ein platform-spezifisches Paket [installieren](https://wiki.wxpython.org/How%20to%20install%20wxPython):<br />
+   ⚫ Debian `python-wxgtk3.0`<br />
+   ⚫ Ubuntu 16.04: `pip install -U -f https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-16.04 wxPython`
 {: .notice--info }
+
+**Info:** Wenn du nur Python 2 installiert hast, kannst du evtl. auch einfach `pip` anstelle von `pip2` benutzen.
+{: .notice--info }
+
+### 4.  Installiere Abhängigkeiten für Electron
+
+Die grafische Oberfläche von Ink/Stitch nutzt Electron.  Dazu brauchst du eine funktionsfähige Installation von NodeJS (Version 10 oder höher).  Sofern nicht vorhanden, installiere yarn mit `npm install yarn`.
+
+Installiere Electron mit den dazugehörigen Abhängigkeiten wie folgt:
+
+```
+cd electron
+yarn install
+cd ..
+```
+
+### 4.  INX-Dateien vorbereiten
+
+```
+make inx
+```
+
+Das erstellt `*.inx` Dateien für jede Sprache in `inx/<locale>`.
+
+Navigiere zum neu erstellten inx-Ordner und lösche alle Sprachen, bis auf eine oder nutze folgenden Befehl:
+```
+find inx/ -mindepth 1 -maxdepth 1 -type d -not -name de_DE -exec rm -rf {} +
+```
+Ersetze `de_DE` mit deiner bevorzugten Sprache (sofern vorhanden).
+
+Die Wahl der Sprache der inx-Dateien beeinflusst lediglich die Sprache im Inkscape Menü.
+Für die Ink/Stitch Dialoge wird die Systemsprache genutzt.
+{: .notice--info }
+
+### 5.  Symbolische Links in den Inkscape extensions-Order setzen
+
+```
+cd ~/.config/inkscape/extensions
+ln -s /path/to/inkstitch
+```
+
+### 6.  Inkscape starten
+
+Änderungen am Python-Code werden wirksam, sobald die Erweiterung das nächste Mal gestartet wird. Änderungen an den Inkscape-Menü Dateien (`*.inx`) zeigen sich erst, nachdem Inkscape neu gestartet wurde.
+
+## Fehlerbehebung
+
+### ImportError: No module named shapely
+
+Wenn Ink/Stitch `ImportError: No module named shapely` ausgibt, dann ist es gut möglich, dass Inkscape eine andere Python Version benutzt,
+als die in den installierten Abängigkeiten.
+
+* Schließe Inkscape, sonst werden alle Änderungen wieder überschrieben
+* Öffne `preferences.xml`.<br>
+  Wo sich die Datei befindet kann unter `Bearbeiten > Einstellungen > System > Benutzereinstellungen` eingesehen werden
+* Suche nach dem Begriff `<group id="extensions" />` und füge den richtigen Python-Interpreter ein.
+
+  **Beispiel:** Benutze `<group id="extensions" python-interpreter="/usr/local/bin/python3" />` wobei `/usr/local/bin/python3` der Wert ist, der von `which python3` zurückgegeben wird.

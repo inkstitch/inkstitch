@@ -38,7 +38,7 @@ Nachdem die Schriftartlizenz auf Eignung genau überprüft wurde, sollte die Sch
 
 Es ist gut - und äußerst interessant -, sich mit der Dokumentation von Schriftarten zu befassen. Es ist überraschend, was für ein Universum von unglaublichem Reichtum es zu entdecken gilt.
 
-## Schritt eins: Die Glyphenebenendatei
+## 1. Die Glyphenebenendatei
 
 Die Glyphenebenendatei aus der heruntergeladenen Schriftartdatei erstellen
 
@@ -99,7 +99,7 @@ Die Glyphenebenendatei aus der heruntergeladenen Schriftartdatei erstellen
 
 Es macht Sinn die Ursprungsdatei zu behalten. Nur für den Fall, dass es später Probleme mit der Schrift geben sollte.
 
-## Zweiter Schritt: Digitalisierung der Glyphen
+## 2. Digitalisierung der Glyphen
 
 Wir beginnen mit einem Buchstaben der jetzt zum Sticken vorbereitet werden muss.
 
@@ -111,23 +111,13 @@ Für die Stickreihenfolge können wir die Erweiterung "Automatisch geführte Sat
 
 Ansonsten sollten alle Buchstaben ordentlich geprüft werden und bei Bedarf eine separate Datei für jede Stickrichtung mit manueller Führung entstehen.
 
-## Dritter Schritt: die JSON-Datei
+## 3. Die JSON-Datei und Kerning
 
-Zu jeder Schrift in Ink/Stitch gibt es die Datei font.json. Die Datei kann mit einem Texteditor (z.B. Notepad) geöffnet werden.
-
-Dort kann der Name der Schrift, sowie eine kleine Beschreibung eingegeben werden. Außerdem werden hier bestimmte Abstände definiert.
+Zu jeder Schrift in Ink/Stitch gibt es die Datei font.json. Dort wird der Name der Schrift, sowie eine kleine Beschreibung definiert. Außerdem werden hier die Buchstaben-Abstände festgelegt.
 
 ![Augusa Schriftlinien](/assets/images/fonts/augusa_tutorial/augusa_json.jpg)
 
-Die Angabe des Namens kann zunächst ausreichen, um Ihre Buchstaben anzuzeigen. Das Ergebnis wird wahrscheinlich ungleichmäßig aussehen, aber man kann die Schriftart bereits nutzen, was ein wichtiger Schritt ist. Sollte die Schrift nicht erscheinen, sollten alle Buchstaben noch einmal auf Fehler untersucht werden.
-
-In den Ordner gehört auch auf jeden Fall die Lizenz der Schrift, die Sie mit der Schriftdatei erhalten haben. Der Dateiname für die Schrift selbst lautet `→.svg`.
-
-Wenn alles funktioniert, können wir einen ersten Entwurf sticken.
-
-![Augusa Schrift](/assets/images/fonts/augusa_tutorial/augusa_roboto.jpg)
-
-## Vierter Schritt: Kerning.
+In den Ordner gehört auch auf jeden Fall die **Lizenz** der Schrift, die du mit der Schriftdatei erhalten hast. Der Dateiname für die Schrift lautet `→.svg`.
 
 Mit Kerning können die Buchstaben harmonische aufeinander abgestimmt werden. Ein kleines Beispiel zum besseren Verständnis:
 
@@ -141,12 +131,56 @@ In *Zeile 2* haben alle Buchstaben den gleichen Abstand zueinander. Das Lesen is
 
 In *Zeile 1* sind die Auswahlrechtecke nicht gleichmäßig angeordnet, während sie in *Zeile 2* alle gleich weit voneinander entfernt sind.
 
-Für eine bessere Qualität ist es daher erforderlich, die Position der Buchstaben relativ zueinander anzupassen und das bestmögliche Kerning zu erzielen. Wir müssen daher die Position der Buchstaben zueinander untersuchen. A und V liegen beispielsweise nahe beieinander, während G und E weit voneinander entfernt sind! In einer Schriftart gibt es 2 mal 26 Buchstaben plus Zeichen mit Akzent plus Sonderzeichen plus Interpunktion. Wir kommen schnell zu mehr als 80 Glyphen oder 6400 Paaren!!!
+Für eine bessere Qualität ist es daher erforderlich, die Position der Buchstaben relativ zueinander anzupassen und das bestmögliche Kerning zu erzielen. Wir müssen daher die Position der Buchstaben zueinander untersuchen. A und V liegen beispielsweise nahe beieinander, während G und E weit voneinander entfernt sind! In einer Schriftart gibt es 2 mal 26 Buchstaben plus Zeichen mit Akzent plus Sonderzeichen plus Interpunktion. Wir kommen schnell zu mehr als 80 Glyphen oder 6400 Paaren.
 
----
+Das kann man unmöglich von Hand machen. Jetzt kommt uns die Methode zu Gute, die wir zur digitalisierung der Schriften genutzt haben (FontForge). Dadurch haben wir das richtige Kerning bereits in die Schriftdatei integriert und wir müssen sie nur noch auslesen.
 
-Das kann man unmöglich von Hand machen. Jetzt kommt uns die Methode zu Gute, die wir zur digitalisierung der Schriften genutzt haben (FontForge). Dadurch haben wir das richtige Kerning bereits in die Schriftdatei integriert und müssen sie nur noch auslesen.
+Ink/Stitch bietet ein Werkzeug an, mit dem die JSON-Datei mit der richtigen Kerning-Information befüllt werdeb kann.
 
-Noch kann Ink/Stitch dies nicht automatisch tun. Es ist aber für zukünftige Versionen geplant.
+1. `Erweiterungen > Ink/Stitch > Font Tools > Generate JSON ...`
+   ![Generate JSON](/assets/images/fonts/augusa_tutorial/en_generate_JSON.png)
 
-Wendet euch in Fragen des Kernings gerne an das Ink/Stitch-Team. Wir helfen gerne weiter!
+2. Fülle die gewünschten Felder aus:
+   * **Name** Pflichfeld. Der Name der Schrift.
+   * **Description** eine kurze Beschreibung deiner Schrift (wie z.B. Informationen zur Größe der Schrift, etc.)
+   * **Font File** Pflichtfeld. Wenn du deine Schrift mit Hilfe von FontForge erstellt hast, wird Ink/Stitch die Kerning informationen aus dieser Datei lesen und in die JSON-Datei einfügen.
+     Außerdem legt der Dateipfad den Speicherort für die neue JSON-Datei fest.
+   * **AutoRoute Satin**:
+     * aktiviert: Ink/Stitch generiert automatisch geführte Satinkolumnen, wenn die Schrift mit dem Text Werkzeug von Ink/Stitch benutzt wird. [Mehr Informationen über automatisch geführte Satinkolumnen](/de/docs/satin-tools/#auto-route-satin-columns)
+     * deaktiviert: Ink/Stitch benutzt die Buchstaben so wie du sie digitalisiert hast. Wennn du selbst schon für einen optimalen Stichpfad gesorgt hast, kannst du diese Funktion deaktivieren.
+   * **Reversible**: definiere, ob deine Schrift vorwärts und rückwärts gestickt werden kann.
+   * **Default Glyph**: das Zeichen/der Buchstabe der ausgegeben werden soll, wenn der eingegebene Buchstabe nicht in der Schriftdatei vorhanden ist
+   * **Min Scale / Max Scale**: definiert, wie weit die Schrift maximal skaliert werden darf ohne beim Sticken an Qualität zu verlieren 
+   * **Leading (px)**: definiert die Zeilenhöhe der Schrift. Bei `0` versucht Ink/Stitch den Wert aus der Schriftdatei herauszulesen (fehlt die Information wird der Wert 100 zurückgegeben).
+
+3. Klicke auf `Anwenden` um die JSON-Datei zu erstellen. Sie wird im selben Ordner gespeichert in dem sich die Schriftdatei befindet.
+   Sie kann mit einem Text-Editor (z.B. Notepad) nachbearbeitet werden.
+
+## 4. Ink/Stitch Speicherorte für Schriftdateien
+
+Ink/Stitch kann Schriften aus verschiedenen Speicherorten lesen, aber der beste Weg ist einen eigenen Ordner für deine Schriftarten zu bestimmen.
+
+1. Öffne `Erweiterungen > Font Tools > Custom Font Directory ...`
+2. Wähle den Ordner aus, in dem du deine Schriften speichern willst
+3. Klicke auf `Anwenden`
+
+Jetzt kannst du in dem soeben festgelegten Ordner für jede neue Schriftart einen weiteren Ordner erstellen und die Schriftdateien (svgs, json und license) darin speichern.
+
+Wenn alles funktioniert, können wir einen ersten Entwurf sticken. Das dazu benötigte Text-Werkzeug findest du unter `Erweiterungen > Ink/Stitch > Text`.
+
+![Augusa Schrift](/assets/images/fonts/augusa_tutorial/augusa_roboto.jpg)
+
+Sollte die Schrift nicht angezeigt werden, untersuche deine digitalisierten Buchstaben noch einmal genau und verbessere die Pfade, wenn du Fehler findest.
+
+## 5. SVG-Schriftdatei aufräumen (Optional)
+
+**⚠ Warnung**: Änderungen die von diesem Werkzeug durchgeführt werden, können nicht rückgängig gemacht werden. Speichere auf jeden Fall eine **Kopie** deiner Datei ab, bevor du die hier beschriebenen Schritte durchführst.
+{: .notice--warning }
+
+Deine Schrift ist bereits einsatzbereit. Aber wenn du sie mit FontForge erstellt hast, beinhaltet sie noch jede Menge Informationen, die wir jetzt nicht mehr brauchen. Sie können sogar die Benutzung der Schrift ein wenig verlangsamen. Ink/Stitch stellt deshalb ein Werkzeug bereit, um die Datei von überflüssigen Informationen zu bereinigen.
+
+1. Stelle sicher, dass du eine **Kopie** deiner Schriftdatei erstellt hast. Die zusätzlichen Informationen werden zwar nicht für den Gebrauch der Schrift benötigt,
+   könnten aber nützlich werden, wenn du z.B. weitere Buchstaben zu der Schrift hinzufügen willst.
+2. Öffne `Erweiterungen > Ink/Stitch > Font Tools > Remove Kerning`
+3. Die die zu bereinigende(n) Datei(en)
+4. Klicke auf `Anwenden`
