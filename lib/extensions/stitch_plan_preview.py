@@ -4,7 +4,6 @@ from .base import InkstitchExtension
 
 
 class StitchPlanPreview(InkstitchExtension):
-
     def effect(self):
         # delete old stitch plan
         svg = self.document.getroot()
@@ -15,9 +14,13 @@ class StitchPlanPreview(InkstitchExtension):
         # create new stitch plan
         if not self.get_elements():
             return
+
+        realistic = False
+        self.metadata = self.get_inkstitch_metadata()
+        collapse_len = self.metadata['collapse_len_mm']
         patches = self.elements_to_patches(self.elements)
-        stitch_plan = patches_to_stitch_plan(patches)
-        render_stitch_plan(svg, stitch_plan)
+        stitch_plan = patches_to_stitch_plan(patches, collapse_len=collapse_len)
+        render_stitch_plan(svg, stitch_plan, realistic)
 
         # translate stitch plan to the right side of the canvas
         layer = svg.find(".//*[@id='__inkstitch_stitch_plan__']")

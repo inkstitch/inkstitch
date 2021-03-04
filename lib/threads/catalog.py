@@ -1,6 +1,6 @@
 import os
 import sys
-from collections import Sequence
+from collections.abc import Sequence
 from glob import glob
 from os.path import dirname, realpath
 

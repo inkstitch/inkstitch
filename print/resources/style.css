@@ -384,7 +384,7 @@ body {
     z-index: 4;
     position: fixed;
     width: 50%;
-    height: 25%%;
+    height: 25%;
     top: 200px;
     left: 25%;
     background: rgb(255, 255, 255);
@@ -906,7 +906,6 @@ body {
     background: #fff;
     margin-left: auto;
     margin-right: auto;
-    white-space: wrap;
     text-align: center;
     padding-top: 2mm;
     position: relative;

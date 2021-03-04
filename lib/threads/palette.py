@@ -1,7 +1,8 @@
-from collections import Set
-from colormath.color_objects import sRGBColor, LabColor
+from collections.abc import Set
+
 from colormath.color_conversions import convert_color
 from colormath.color_diff import delta_e_cie1994
+from colormath.color_objects import LabColor, sRGBColor
 
 from .color import ThreadColor
 

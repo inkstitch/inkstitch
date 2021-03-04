@@ -1,7 +1,7 @@
 import gettext
 import os
-from os.path import dirname, realpath
 import sys
+from os.path import dirname, realpath
 
 from .utils import cache
 
@@ -32,7 +32,7 @@ def localize(languages=None):
     global translation, _
 
     translation = gettext.translation("inkstitch", locale_dir, fallback=True)
-    _ = translation.ugettext
+    _ = translation.gettext
 
 
 @cache

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>{% trans %}Embroider{% endtrans %}</name>
+    <id>org.inkstitch.embroider.{{ locale }}</id>
+    <param name="title" type="description" appearance="header">{% trans %}Create a stitch file{% endtrans %}</param>
+    <param name="howto" type="description">{% trans %}Save your embroidery file through | File > Save a Copy ... |{% endtrans %}</param>
+    <param name="howto_detail" type="description">{% trans %}Choose from listed embroidery file formats and save.{% endtrans %}</param>
+    <spacer />
+    <param name="info_zip" type="description">{% trans %}Multiple file formats can be saved by choosing the zip file format.{% endtrans %}</param>
+    <effect needs-live-preview="false" needs-document="false">
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu name="Ink/Stitch">
+                <submenu name="{% trans %}Visualise and Export{% endtrans %}" />
+            </submenu>
+        </effects-menu>
+    </effect>
+</inkscape-extension>

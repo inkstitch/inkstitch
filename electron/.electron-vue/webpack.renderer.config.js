@@ -103,12 +103,6 @@ let rendererConfig = {
           'css-loader',
           {
             loader: 'sass-loader',
-            // Requires sass-loader@^7.0.0
-            options: {
-              implementation: require('sass'),
-              fiber: require('fibers'),
-              indentedSyntax: true // optional
-            },
             // Requires sass-loader@^8.0.0
             options: {
               implementation: require('sass'),
@@ -132,6 +126,18 @@ let rendererConfig = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: path.resolve(__dirname, '../src/index.ejs'),
+      templateParameters(compilation, assets, options) {
+        return {
+          compilation: compilation,
+          webpack: compilation.getStats().toJson(),
+          webpackConfig: compilation.options,
+          htmlWebpackPlugin: {
+            files: assets,
+            options: options
+          },
+          process
+        }
+      },
       minify: {
         collapseWhitespace: true,
         removeAttributeQuotes: true,

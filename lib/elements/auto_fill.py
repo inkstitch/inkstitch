@@ -6,10 +6,9 @@ from shapely import geometry as shgeo
 
 from ..i18n import _
 from ..stitches import auto_fill
-from ..utils import cache
+from ..utils import cache, version
 from .element import Patch, param
 from .fill import Fill
-
 from .validation import ValidationWarning
 
 
@@ -18,6 +17,18 @@ class SmallShapeWarning(ValidationWarning):
     description = _("This fill object is so small that it would probably look better as running stitch or satin column. "
                     "For very small shapes, fill stitch is not possible, and Ink/Stitch will use running stitch around "
                     "the outline instead.")
+
+
+class ExpandWarning(ValidationWarning):
+    name = _("Expand")
+    description = _("The expand parameter for this fill object cannot be applied. "
+                    "Ink/Stitch will ignore it and will use original size instead.")
+
+
+class UnderlayInsetWarning(ValidationWarning):
+    name = _("Inset")
+    description = _("The underlay inset parameter for this fill object cannot be applied. "
+                    "Ink/Stitch will ignore it and will use the original size instead.")
 
 
 class AutoFill(Fill):
@@ -157,9 +168,13 @@ class AutoFill(Fill):
     def underlay_underpath(self):
         return self.get_boolean_param('underlay_underpath', True)
 
-    def shrink_or_grow_shape(self, amount):
+    def shrink_or_grow_shape(self, amount, validate=False):
         if amount:
             shape = self.shape.buffer(amount)
+            # changing the size can empty the shape
+            # in this case we want to use the original shape rather than returning an error
+            if shape.is_empty and not validate:
+                return self.shape
             if not isinstance(shape, shgeo.MultiPolygon):
                 shape = shgeo.MultiPolygon([shape])
             return shape
@@ -235,6 +250,7 @@ class AutoFill(Fill):
             # L10N this message is followed by a URL: https://github.com/inkstitch/inkstitch/issues/new
             message += _("If you'd like to help us make Ink/Stitch better, please paste this whole message into a new issue at: ")
             message += "https://github.com/inkstitch/inkstitch/issues/new\n\n"
+            message += version.get_inkstitch_version() + "\n\n"
             message += traceback.format_exc()
 
             self.fatal(message)
@@ -244,6 +260,12 @@ class AutoFill(Fill):
     def validation_warnings(self):
         if self.shape.area < 20:
             yield SmallShapeWarning(self.shape.centroid)
+
+        if self.shrink_or_grow_shape(self.expand, True).is_empty:
+            yield ExpandWarning(self.shape.centroid)
+
+        if self.shrink_or_grow_shape(-self.fill_underlay_inset, True).is_empty:
+            yield UnderlayInsetWarning(self.shape.centroid)
 
         for warning in super(AutoFill, self).validation_warnings():
             yield warning

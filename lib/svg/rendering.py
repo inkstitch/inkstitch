@@ -1,9 +1,8 @@
 import math
 
 import inkex
-import simplepath
-import simplestyle
-import simpletransform
+from lxml import etree
+from math import pi
 
 from ..i18n import _
 from ..utils import Point, cache
@@ -116,24 +115,25 @@ def realistic_stitch(start, end):
     start = Point(*start)
 
     stitch_length = (end - start).length()
-    stitch_center = (end + start) / 2.0
+    stitch_center = Point((end.x+start.x)/2.0, (end[1]+start[1])/2.0)
     stitch_direction = (end - start)
-    stitch_angle = math.atan2(stitch_direction.y, stitch_direction.x)
+    stitch_angle = math.atan2(stitch_direction.y, stitch_direction.x) * (180 / pi)
 
     stitch_length = max(0, stitch_length - 0.2 * PIXELS_PER_MM)
 
     # create the path by filling in the length in the template
-    path = simplepath.parsePath(stitch_path % stitch_length)
+    path = inkex.Path(stitch_path % stitch_length).to_arrays()
 
     # rotate the path to match the stitch
     rotation_center_x = -stitch_length / 2.0
     rotation_center_y = stitch_height / 2.0
-    simplepath.rotatePath(path, stitch_angle, cx=rotation_center_x, cy=rotation_center_y)
+
+    path = inkex.Path(path).rotate(stitch_angle, (rotation_center_x, rotation_center_y))
 
     # move the path to the location of the stitch
-    simplepath.translatePath(path, stitch_center.x - rotation_center_x, stitch_center.y - rotation_center_y)
+    path = inkex.Path(path).translate(stitch_center.x - rotation_center_x, stitch_center.y - rotation_center_y)
 
-    return simplepath.formatPath(path)
+    return str(path)
 
 
 def color_block_to_point_lists(color_block):
@@ -159,10 +159,9 @@ def get_correction_transform(svg):
     transform = get_viewbox_transform(svg)
 
     # we need to correct for the viewbox
-    transform = simpletransform.invertTransform(transform)
-    transform = simpletransform.formatTransform(transform)
+    transform = -inkex.transforms.Transform(transform)
 
-    return transform
+    return str(transform)
 
 
 def color_block_to_realistic_stitches(color_block, svg, destination):
@@ -170,12 +169,8 @@ def color_block_to_realistic_stitches(color_block, svg, destination):
         color = color_block.color.visible_on_white.darker.to_hex_str()
         start = point_list[0]
         for point in point_list[1:]:
-            destination.append(inkex.etree.Element(SVG_PATH_TAG, {
-                'style': simplestyle.formatStyle({
-                    'fill': color,
-                    'stroke': 'none',
-                    'filter': 'url(#realistic-stitch-filter)'
-                }),
+            destination.append(etree.Element(SVG_PATH_TAG, {
+                'style': "fill: %s; stroke: none; filter: url(#realistic-stitch-filter);" % color,
                 'd': realistic_stitch(start, point),
                 'transform': get_correction_transform(svg)
             }))
@@ -200,12 +195,8 @@ def color_block_to_paths(color_block, svg, destination, visual_commands):
 
         color = color_block.color.visible_on_white.to_hex_str()
 
-        path = inkex.etree.Element(SVG_PATH_TAG, {
-            'style': simplestyle.formatStyle({
-                'stroke': color,
-                'stroke-width': "0.4",
-                'fill': 'none'
-            }),
+        path = etree.Element(SVG_PATH_TAG, {
+            'style': "stroke: %s; stroke-width: 0.4; fill: none;" % color,
             'd': "M" + " ".join(" ".join(str(coord) for coord in point) for point in point_list),
             'transform': get_correction_transform(svg),
             INKSTITCH_ATTRIBS['manual_stitch']: 'true'
@@ -223,10 +214,10 @@ def color_block_to_paths(color_block, svg, destination, visual_commands):
 def render_stitch_plan(svg, stitch_plan, realistic=False, visual_commands=True):
     layer = svg.find(".//*[@id='__inkstitch_stitch_plan__']")
     if layer is None:
-        layer = inkex.etree.Element(SVG_GROUP_TAG,
-                                    {'id': '__inkstitch_stitch_plan__',
-                                     INKSCAPE_LABEL: _('Stitch Plan'),
-                                     INKSCAPE_GROUPMODE: 'layer'})
+        layer = etree.Element(SVG_GROUP_TAG,
+                              {'id': '__inkstitch_stitch_plan__',
+                               INKSCAPE_LABEL: _('Stitch Plan'),
+                               INKSCAPE_GROUPMODE: 'layer'})
     else:
         # delete old stitch plan
         del layer[:]
@@ -237,10 +228,10 @@ def render_stitch_plan(svg, stitch_plan, realistic=False, visual_commands=True):
     svg.append(layer)
 
     for i, color_block in enumerate(stitch_plan):
-        group = inkex.etree.SubElement(layer,
-                                       SVG_GROUP_TAG,
-                                       {'id': '__color_block_%d__' % i,
-                                        INKSCAPE_LABEL: "color block %d" % (i + 1)})
+        group = etree.SubElement(layer,
+                                 SVG_GROUP_TAG,
+                                 {'id': '__color_block_%d__' % i,
+                                  INKSCAPE_LABEL: "color block %d" % (i + 1)})
         if realistic:
             color_block_to_realistic_stitches(color_block, svg, group)
         else:
@@ -250,6 +241,6 @@ def render_stitch_plan(svg, stitch_plan, realistic=False, visual_commands=True):
         defs = svg.find(SVG_DEFS_TAG)
 
         if defs is None:
-            defs = inkex.etree.SubElement(svg, SVG_DEFS_TAG)
+            defs = etree.SubElement(svg, SVG_DEFS_TAG)
 
-        defs.append(inkex.etree.fromstring(realistic_filter))
+        defs.append(etree.fromstring(realistic_filter))

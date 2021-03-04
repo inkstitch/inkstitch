@@ -3,12 +3,15 @@ import os
 import sys
 import traceback
 from argparse import ArgumentParser
-from cStringIO import StringIO
+from io import StringIO
+
+from inkex import errormsg
+from lxml.etree import XMLSyntaxError
 
 import lib.debug as debug
 from lib import extensions
 from lib.i18n import _
-from lib.utils import restore_stderr, save_stderr
+from lib.utils import restore_stderr, save_stderr, version
 
 logger = logging.getLogger('shapely.geos')
 logger.setLevel(logging.DEBUG)
@@ -36,28 +39,35 @@ extension_class = getattr(extensions, extension_class_name)
 extension = extension_class()
 
 if hasattr(sys, 'gettrace') and sys.gettrace():
-    extension.affect(args=remaining_args)
+    extension.run(args=remaining_args)
 else:
     save_stderr()
     exception = None
     try:
-        extension.affect(args=remaining_args)
+        extension.run(args=remaining_args)
     except (SystemExit, KeyboardInterrupt):
         raise
+    except XMLSyntaxError:
+        msg = _("Ink/Stitch cannot read your SVG file. "
+                "This is often the case when you use a file which has been created with Adobe Illustrator.")
+        msg += "\n\n"
+        msg += _("Try to import the file into Inkscape through 'File > Import...' (Ctrl+I)")
+        errormsg(msg)
     except Exception:
         exception = traceback.format_exc()
     finally:
         restore_stderr()
 
         if shapely_errors.tell():
-            print >> sys.stderr, shapely_errors.getvalue()
+            errormsg(shapely_errors.getvalue())
 
     if exception:
-        print >> sys.stderr, _("Ink/Stitch experienced an unexpected error.").encode("UTF-8")
-        print >> sys.stderr, _("If you'd like to help, please file an issue at "
-                               "https://github.com/inkstitch/inkstitch/issues "
-                               "and include the entire error description below:").encode("UTF-8"), "\n"
-        print >> sys.stderr, exception
+        errormsg(_("Ink/Stitch experienced an unexpected error.") + "\n")
+        errormsg(_("If you'd like to help, please file an issue at "
+                   "https://github.com/inkstitch/inkstitch/issues "
+                   "and include the entire error description below:") + "\n")
+        errormsg(version.get_inkstitch_version() + "\n")
+        errormsg(exception)
         sys.exit(1)
     else:
         sys.exit(0)
