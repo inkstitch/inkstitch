@@ -8,17 +8,17 @@ toc: true
 
 [Inkstitch : Créer une police de caractères brodés](https://lyogau.over-blog.com/2020/12/inkstitch-creer-une-police-de-caracteres-brodes.html)
 
-<bold><u>Den Text findet ihr hier in einer nicht ganz wortgereuen und gekürzten deutschen Übersetzung</u></bold><br>
 
-Hier erkläre ich nicht, wie man einzelne Buchstaben digitalisiert, sondern wie man eine Datei mit einem bestimmten Schrifttyp erstellen kann, um sie anschließend mit dem Lettering-Tool von Ink/Stitch zu verwenden.
+Den Text findet ihr hier in einer **nicht ganz wortgereuen und gekürzten** deutschen Übersetzung.
+{: .notice--info }
 
-Wir können eine komplett neue Schriftart mit dem SVG-Schriftarten-Editor von Inkscape erstellen. Ich ziehe es hier jedoch vor, mit einer bereits vorhandenen Schrift zu arbeiten. Mit Hilfe von [Fontforge](https://fontforge.org) erleichtern wir uns so das Festlegen von Buchstabenabständen.
+<hr>
 
-Ich fing blind an, eine erste Schriftart zu digitalisieren, und sagte mir, dass ich diese Schriftart möglicherweise in Ink/Stitch einfügen könnte. Also nahm ich die Buchstaben von einer Schriftart (DejaVu-Serif) und skalierte sie auf die Größe, die ich haben wollte bevor ich dich Zeichen nacheinander digitalisierte. Dann kontaktierte ich das Ink/Stitch-Team. Mit ihrer Hilfe konnte ich die erforderliche Datei erstellen, damit sie für alle in Ink/Stitch verfügbar ist.
+In diesem Artikel geht es nicht darum, wie man einzelne Buchstaben digitalisiert, sondern wie man eine Datei mit einem bestimmten Schrifttyp erstellen kann, um sie anschließend mit dem Lettering-Tool von Ink/Stitch zu verwenden.
+
+Mit dem SVG-Schriftarten-Editor von Inkscape ist es möglich komplett neue Schriftarten zu erstellen. Ich ziehe es hier jedoch vor, mit einer bereits vorhandenen Schrift zu arbeiten. Mit Hilfe von [Fontforge](https://fontforge.org) erleichtern wir uns so das Festlegen von Buchstabenabständen.
 
 ![Augusa Deja Vu](/assets/images/fonts/augusa_tutorial/augusa_dejavu.png)
-
-Ich wollte eine zweite Schrift digitalisieren (Lobster 2 fett kursiv). Laure hat mir geholfen die Schriftart von [Dafont](https://www.dafont.com/) herunterzuladen und direkt in eine Datei umzuwandeln, in der wir die Buchstaben und alles, was dazu gehört (Interpunktion, Sonderzeichen) digitalisieren können ...
 
 **Vokabular**<br>Eine Schrift besteht aus mehreren Schriftarten. Die DejaVu-Schriftart besteht beispielsweise aus Kursivschrift, Fettdruck, serifenloser Fettschrift, ...<br>Jede Schriftart besteht aus einer Reihe von Grundelementen, die Buchstaben, Zahlen, Satzzeichen ... etc. Wir werden hier über Glyphen sprechen.
 {: .notice--info }
@@ -103,9 +103,9 @@ Es macht Sinn die Ursprungsdatei zu behalten. Nur für den Fall, dass es später
 
 Wir beginnen mit einem Buchstaben der jetzt zum Sticken vorbereitet werden muss.
 
-Für Buchstaben eignen sich besonders Satinkolumnen. Diese erstellen wir zunächst ohne an die Stickriehenfolge zu denken.
+Für Buchstaben eignen sich besonders Satinkolumnen. Diese erstellen wir zunächst die Stickriehenfolge zu beachten.
 
-Für die Stickreihenfolge erstellen wir eine Kopie der Datei mit dem Namen `→.svg`. Dort legen wir die Reihenfolge für von links nach rechts zu stickenden Schriftzügen fest. In dieser Datei sollte jede Glyphe unten links beginnen und unten rechts enden.
+Für die Stickreihenfolge erstellen wir eine Kopie der Schriftdatei mit dem Namen `→.svg`. Dort legen wir die Reihenfolge für von links nach rechts zu stickenden Schriftzügen fest. In dieser Datei sollte jede Glyphe unten links beginnen und unten rechts enden.
 
 Für die Stickreihenfolge können wir die Erweiterung "Automatisch geführte Satinkolumne" nutzen. Sollte sie bei allen Buchstaben problemlos funktionieren, können wir die digitalisierten Buchstaben so für jede Richtung nutzen, da das Lettering-Tool von Ink/Stitch diese Funktion auch automatisch durchführen kann.
 
@@ -113,7 +113,7 @@ Ansonsten sollten alle Buchstaben ordentlich geprüft werden und bei Bedarf eine
 
 ## 3. Die JSON-Datei und Kerning
 
-Zu jeder Schrift in Ink/Stitch gibt es die Datei font.json. Dort wird der Name der Schrift, sowie eine kleine Beschreibung definiert. Außerdem werden hier die Buchstaben-Abstände festgelegt.
+Zu jeder Schrift in Ink/Stitch gibt es die Datei font.json. Dort wird der Name der Schrift, sowie eine kleine Beschreibung definiert. Außerdem werden hier die Buchstabenabstände festgelegt.
 
 ![Augusa Schriftlinien](/assets/images/fonts/augusa_tutorial/augusa_json.jpg)
 

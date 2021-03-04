@@ -13,7 +13,7 @@ Here you will find a shortened and slightly **altered version of her text** in e
 
 This article wil not explain how to digitize single letters, but how to create a font to be used in the lettering tool of Ink/Stitch.
 
-It would be possible to create a completely new font with the svg font editor tool offered by Inkscape. I will prefer to use an existent font. Using [Fontforge](https://fontforge.org) will make it easy for us to define the kerning (distances between letters) later. 
+It would be possible to create a completely new font with the svg font editor tool offered by Inkscape. I will prefer to use an existent font. Using [Fontforge](https://fontforge.org) will make it easy for us to define the kerning (distances between letters) later.
 
 ![Augusa Deja Vu](/assets/images/fonts/augusa_tutorial/augusa_dejavu.png)
 
