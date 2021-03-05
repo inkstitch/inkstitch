@@ -23,8 +23,8 @@ messages.po:
 	find electron/src -name '*.html' -o -name '*.js' -o -name '*.vue' | xargs electron/node_modules/.bin/gettext-extract --quiet --attribute v-translate --output messages-vue.po
 	msgcat -o messages.po messages-babel.po messages-vue.po
 
-electron/src/renderer/assets/translations.json: $(addsuffix /LC_MESSAGES/inkstitch.po,$(wildcard locales/*))
-	find locales -name '*.po' -a ! -empty | \
+electron/src/renderer/assets/translations.json: $(wildcard translations/messages_*.po)
+	find translations -name '*.po' -a ! -empty | \
 		xargs electron/node_modules/.bin/gettext-compile --output electron/src/renderer/assets/translations.json
 
 %.po: %.mo
