@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-03-05 00:42+0000\n"
-"PO-Revision-Date: 2021-03-05 00:43\n"
+"PO-Revision-Date: 2021-03-06 00:47\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -1232,11 +1232,11 @@ msgstr "AnalysiereLängeMitEinheiten: Unbekannte Einheit %s"
 #: lib/utils/version.py:14
 #, python-format
 msgid "Ink/Stitch Version: %s"
-msgstr ""
+msgstr "Ink/Stitch Version: %s"
 
 #: lib/utils/version.py:16
 msgid "Ink/Stitch Version: unkown"
-msgstr ""
+msgstr "Ink/Stitch Version: unbekannt"
 
 #: print/templates/color_swatch.html:8 print/templates/color_swatch.html:40
 #: print/templates/operator_detailedview.html:9
@@ -1776,7 +1776,7 @@ msgstr "G-Code Format"
 
 #: templates/about.xml:3 templates/about.xml:6
 msgid "About"
-msgstr ""
+msgstr "Über"
 
 #: templates/about.xml:10
 msgid "An open-source machine embroidery design platform based on Inkscape."
@@ -1784,7 +1784,7 @@ msgstr ""
 
 #: templates/about.xml:15
 msgid "License"
-msgstr ""
+msgstr "Lizenz"
 
 #: templates/auto_satin.xml:3
 msgid "Auto-Route Satin Columns"
@@ -1964,7 +1964,7 @@ msgstr ""
 
 #: templates/lettering_generate_json.xml:19
 msgid "Name"
-msgstr ""
+msgstr "Name"
 
 #: templates/lettering_generate_json.xml:24
 msgid "Insert a font SVG file with kerning information."
@@ -1972,7 +1972,7 @@ msgstr ""
 
 #: templates/lettering_generate_json.xml:26
 msgid "Font File"
-msgstr ""
+msgstr "Schriftdatei"
 
 #: templates/lettering_generate_json.xml:29
 msgid "Autoroute Satin"
@@ -2004,11 +2004,11 @@ msgstr ""
 
 #: templates/lettering_generate_json.xml:40
 msgid "Leading (px)"
-msgstr ""
+msgstr "Zeilenhöhe (px)"
 
 #: templates/lettering_generate_json.xml:40
 msgid "If 0, the value will be calculated or defaults to 100"
-msgstr ""
+msgstr "Bei 0 wird der Wert berechnet oder auf den Standardwert 100 gesetzt"
 
 #: templates/lettering_remove_kerning.xml:3
 msgid "Remove Kerning"
@@ -2308,7 +2308,7 @@ msgstr "Minus"
 
 #: electron/src/renderer/components/Simulator.vue:215
 msgid "needle points"
-msgstr ""
+msgstr "Nadeleinstichstellen"
 
 #. description of keyboard shortcut that moves one stitch backward in simulator
 #: electron/src/renderer/components/Simulator.vue:71
