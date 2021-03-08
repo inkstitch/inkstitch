@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-03-05 00:42+0000\n"
-"PO-Revision-Date: 2021-03-06 00:47\n"
+"PO-Revision-Date: 2021-03-08 00:49\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -112,11 +112,11 @@ msgstr "Eine Schrift geeignete für fett geschriebenes :)"
 
 #: inkstitch.py:51
 msgid "Ink/Stitch cannot read your SVG file. This is often the case when you use a file which has been created with Adobe Illustrator."
-msgstr ""
+msgstr "Ink/Stitch can deine SVG-Datei nicht lesen. Das passiert häufig, wenn du die Datei mit Adobe Illustrator erstellt hast."
 
 #: inkstitch.py:54
 msgid "Try to import the file into Inkscape through 'File > Import...' (Ctrl+I)"
-msgstr ""
+msgstr "Versuche die Datei über 'Datei > Importieren...' (Strg+I) in Inkscape zu öffnen"
 
 #: inkstitch.py:65
 msgid "Ink/Stitch experienced an unexpected error."
@@ -224,7 +224,7 @@ msgstr "Erweitern"
 
 #: lib/elements/auto_fill.py:24
 msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use original size instead."
-msgstr ""
+msgstr "Die \"Erweitern\"-Einstellung für dieses Füll-Objekt kann nicht angewendet werden. Ink/Stitch wird diese Einstellung ignorieren und stattdessen die Originalgröße nutzen."
 
 #: lib/elements/auto_fill.py:29 lib/elements/auto_fill.py:116
 msgid "Inset"
@@ -232,7 +232,7 @@ msgstr "Einzug"
 
 #: lib/elements/auto_fill.py:30
 msgid "The underlay inset parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use the original size instead."
-msgstr ""
+msgstr "Die \"Einzug\"-Einstellung für die Unterlage für dieses Füll-Objekt kann nicht angewendet werden. Ink/Stitch wird diese Einstellung ignorieren und stattdessen die Originalgröße nutzen."
 
 #: lib/elements/auto_fill.py:35
 msgid "AutoFill"
@@ -795,7 +795,7 @@ msgstr "Nur einfache Linien können in Satinkolumnen konvertiert werden."
 
 #: lib/extensions/convert_to_satin.py:130
 msgid "Ink/Stitch cannot convert your stroke into a satin column. Please break up your path and try again."
-msgstr ""
+msgstr "Ink/Stitch kann die Linie nicht in eine Satinkolumne umwandeln. Bitte diesen Pfad auftrennen und erneut versuchen."
 
 #: lib/extensions/cut_satin.py:15
 msgid "Please select one or more satin columns to cut."
@@ -818,7 +818,8 @@ msgstr "Datei nicht gefunden."
 #: lib/extensions/import_threadlist.py:31
 msgid "The filepath specified is not a file but a dictionary.\n"
 "Please choose a threadlist file to import."
-msgstr ""
+msgstr "Der angegebene Dateipfad ist keine Datei sondern ein Ordner.\n"
+"Bitte wähle Garnliste für den Import aus."
 
 #: lib/extensions/import_threadlist.py:41
 msgid "Couldn't find any matching colors in the file."
@@ -895,11 +896,11 @@ msgstr "Du hast Objekte ausgewählt, die nicht von der Text-Erweiterung erstellt
 
 #: lib/extensions/lettering_custom_font_dir.py:22
 msgid "Please specify the directory of your custom fonts."
-msgstr ""
+msgstr "Bitte den Ordner für die benutzerdefinierte Schriften angeben."
 
 #: lib/extensions/lettering_generate_json.py:32
 msgid "Please specify a font file."
-msgstr ""
+msgstr "Bitte eine Schriftdatei auswählen."
 
 #: lib/extensions/object_commands.py:16
 msgid "Please select one or more objects to which to attach commands."
@@ -1193,7 +1194,7 @@ msgstr "Erzeuge INX Dateien"
 #: lib/lettering/font.py:153
 #, python-format
 msgid "The font '%s' has no variants."
-msgstr ""
+msgstr "Die Schrift '%s' hat keine Varianten."
 
 #. low-level file error.  %(error)s is (hopefully?) translated by
 #. the user's system automatically.
@@ -1780,7 +1781,7 @@ msgstr "Über"
 
 #: templates/about.xml:10
 msgid "An open-source machine embroidery design platform based on Inkscape."
-msgstr ""
+msgstr "Eine quelloffene Digitalisierungssoftware für das Erstellen von Maschinenstickereien."
 
 #: templates/about.xml:15
 msgid "License"
@@ -1857,19 +1858,19 @@ msgstr "Sticken"
 
 #: templates/embroider.xml:5
 msgid "Create a stitch file"
-msgstr ""
+msgstr "Stickdatei erstellen"
 
 #: templates/embroider.xml:6
 msgid "Save your embroidery file through | File > Save a Copy ... |"
-msgstr ""
+msgstr "Speichere deine Stickdatei über | Datei > Kopie speichern ... |"
 
 #: templates/embroider.xml:7
 msgid "Choose from listed embroidery file formats and save."
-msgstr ""
+msgstr "Wähle aus den dort aufgelisteten Dateiformaten und klicke auf \"Speichern\"."
 
 #: templates/embroider.xml:9
 msgid "Multiple file formats can be saved by choosing the zip file format."
-msgstr ""
+msgstr "Mehrere Dateiformate können über das zip-Format gleichzeitig gespeichert werden."
 
 #: templates/embroider.xml:14 templates/print.xml:10 templates/simulator.xml:10
 #: templates/stitch_plan_preview.xml:10
@@ -1878,7 +1879,7 @@ msgstr "Visualisieren und exportieren"
 
 #: templates/embroider_settings.xml:13
 msgid "Output Settings"
-msgstr ""
+msgstr "Ausgabeeinstellungen"
 
 #: templates/embroider_settings.xml:16
 msgid "Collapse length (mm)"
@@ -1938,29 +1939,29 @@ msgstr "Text"
 #: templates/lettering_custom_font_dir.xml:3
 #: templates/lettering_custom_font_dir.xml:18
 msgid "Custom font directory"
-msgstr ""
+msgstr "Benutzerdefinierter Ordner für Schriften"
 
 #: templates/lettering_custom_font_dir.xml:10
 #: templates/lettering_generate_json.xml:10
 #: templates/lettering_remove_kerning.xml:10
 msgid "Font Tools"
-msgstr ""
+msgstr "Schriftwerkzeuge"
 
 #: templates/lettering_custom_font_dir.xml:15
 msgid "Set a custom directory for additional fonts to be used with the lettering tool."
-msgstr ""
+msgstr "Definiere einen Ordner mit zusätzliche Schriften für das Textwerkzeug."
 
 #: templates/lettering_custom_font_dir.xml:21
 msgid "Usage: Create a subdirectory for each font you add."
-msgstr ""
+msgstr "Anwendungshinweis: Erstelle für jede Schrift einen Unterordner."
 
 #: templates/lettering_generate_json.xml:3
 msgid "Generate JSON"
-msgstr ""
+msgstr "JSON erstellen"
 
 #: templates/lettering_generate_json.xml:15
 msgid "Generates font.json which can be used by the lettering tool."
-msgstr ""
+msgstr "Erstellt die font.json-Datei, um die Schrift für das Textwerkzeug nutzbar zu machen."
 
 #: templates/lettering_generate_json.xml:19
 msgid "Name"
@@ -1968,7 +1969,7 @@ msgstr "Name"
 
 #: templates/lettering_generate_json.xml:24
 msgid "Insert a font SVG file with kerning information."
-msgstr ""
+msgstr "Füge eine SVG-Schriftdatei ein."
 
 #: templates/lettering_generate_json.xml:26
 msgid "Font File"
@@ -1976,31 +1977,31 @@ msgstr "Schriftdatei"
 
 #: templates/lettering_generate_json.xml:29
 msgid "Autoroute Satin"
-msgstr ""
+msgstr "Automatisch geführte Satinkolumne"
 
 #: templates/lettering_generate_json.xml:30
 msgid "Disable if you defined manual routing in your font."
-msgstr ""
+msgstr "Deaktiviere diese Funktion, wenn du für eine manuelle Stichführung in deiner Schriftdatei angelegt hast."
 
 #: templates/lettering_generate_json.xml:31
 msgid "Reversible"
-msgstr ""
+msgstr "Umkehrbar"
 
 #: templates/lettering_generate_json.xml:32
 msgid "If disabled back and forth stitching will not be possile for this font."
-msgstr ""
+msgstr "Wenn diese Funktion deaktiviert ist, ist die Option \"Sticke Textzeilen vor und zurück\" für diese Schrift nicht verfügbar."
 
 #: templates/lettering_generate_json.xml:34
 msgid "Default Glyph"
-msgstr ""
+msgstr "Standard-Glyphe"
 
 #: templates/lettering_generate_json.xml:37
 msgid "Min Scale"
-msgstr ""
+msgstr "Minimale Skalierung"
 
 #: templates/lettering_generate_json.xml:38
 msgid "Max Scale"
-msgstr ""
+msgstr "Maximale Skalierung"
 
 #: templates/lettering_generate_json.xml:40
 msgid "Leading (px)"
@@ -2012,19 +2013,19 @@ msgstr "Bei 0 wird der Wert berechnet oder auf den Standardwert 100 gesetzt"
 
 #: templates/lettering_remove_kerning.xml:3
 msgid "Remove Kerning"
-msgstr ""
+msgstr "Kerning entfernen"
 
 #: templates/lettering_remove_kerning.xml:15
 msgid "Removes Kerning information from given SVG files"
-msgstr ""
+msgstr "Entfernt die Kerning Information aus den ausgewählten SVG-Dateien"
 
 #: templates/lettering_remove_kerning.xml:19
 msgid "Make sure you keep a copy of the original file. After running this extension kerning information will be lost unrevertably from these files."
-msgstr ""
+msgstr "Stelle sicher, dass eine Kopie der Original-Dateien existiert. Nach dem Ausführen dieser Funktion, wird die Kerning Information unwiderbringlich aus den Dateien entfernt sein."
 
 #: templates/lettering_remove_kerning.xml:23
 msgid "Select Font Files"
-msgstr ""
+msgstr "Schriftdateien auswählen"
 
 #: templates/object_commands.xml:3
 msgid "Attach Commands to Selected Objects"
@@ -2182,7 +2183,7 @@ msgstr "Druckeinstellungen aus den SVG Metadaten entfernen"
 
 #: templates/reorder.xml:3
 msgid "Reorder"
-msgstr ""
+msgstr "Auswahlreihenfolge übernehmen"
 
 #: templates/simulator.xml:3
 msgid "Simulator / Realistic Preview"
@@ -2356,7 +2357,7 @@ msgstr "Tastenkürzel"
 
 #: electron/src/renderer/components/Simulator.vue:192
 msgid "Show"
-msgstr ""
+msgstr "Zeige"
 
 #: electron/src/renderer/components/Simulator.vue:10
 msgid "Simulator Shortcut Keys"
