@@ -23,8 +23,10 @@ class LetteringRemoveKerning(InkstitchExtension):
             with open(path, 'r+', encoding="utf-8") as fontfile:
                 svg = etree.parse(fontfile)
                 xpath = ".//svg:font[1]"
-                kerning = svg.xpath(xpath, namespaces=NSS)[0]
-                kerning.getparent().remove(kerning)
-                fontfile.seek(0)
-                fontfile.write(etree.tostring(svg).decode('utf-8'))
-                fontfile.truncate()
+                kerning = svg.xpath(xpath, namespaces=NSS)
+                if kerning:
+                    kerning = kerning[0]
+                    kerning.getparent().remove(kerning)
+                    fontfile.seek(0)
+                    fontfile.write(etree.tostring(svg).decode('utf-8'))
+                    fontfile.truncate()

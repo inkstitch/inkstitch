@@ -28,6 +28,8 @@ class LetteringCustomFontDir(InkstitchExtension):
             config_path = appdirs.user_config_dir('inkstitch')
         except ImportError:
             config_path = os.path.expanduser('~/.inkstitch')
+        if not os.path.exists(config_path):
+            os.makedirs(config_path)
         config_path = os.path.join(config_path, 'custom_dirs.json')
 
         with open(config_path, 'w', encoding="utf8") as font_data:

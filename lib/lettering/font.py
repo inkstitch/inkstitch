@@ -9,7 +9,6 @@ from ..elements import nodes_to_elements
 from ..exceptions import InkstitchException
 from ..i18n import _, get_languages
 from ..stitches.auto_satin import auto_satin
-from ..svg import PIXELS_PER_MM
 from ..svg.tags import INKSCAPE_LABEL, SVG_GROUP_TAG, SVG_PATH_TAG
 from ..utils import Point
 from .font_variant import FontVariant
@@ -103,7 +102,7 @@ class Font(object):
     name = localized_font_metadata('name', '')
     description = localized_font_metadata('description', '')
     default_glyph = font_metadata('defalt_glyph', "�")
-    leading = font_metadata('leading', 5, multiplier=PIXELS_PER_MM)
+    leading = font_metadata('leading', 100)
     kerning_pairs = font_metadata('kerning_pairs', {})
     auto_satin = font_metadata('auto_satin', True)
     min_scale = font_metadata('min_scale', 1.0)
@@ -119,7 +118,7 @@ class Font(object):
     horiz_adv_x_default = font_metadata('horiz_adv_x_default')
 
     # Define by <glyph glyph-name="space" unicode=" " horiz-adv-x="22" />, Example font.json : "horiz_adv_x_space":22,
-    word_spacing = font_metadata('horiz_adv_x_space', 0)
+    word_spacing = font_metadata('horiz_adv_x_space', 20)
 
     reversible = font_metadata('reversible', True)
 

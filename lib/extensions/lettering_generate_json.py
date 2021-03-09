@@ -20,9 +20,12 @@ class LetteringGenerateJson(InkstitchExtension):
         self.arg_parser.add_argument("-s", "--auto-satin", type=Boolean, default="true", dest="auto_satin")
         self.arg_parser.add_argument("-r", "--reversible", type=Boolean, default="true", dest="reversible")
         self.arg_parser.add_argument("-g", "--default-glyph", type=str, default="", dest="default_glyph")
-        self.arg_parser.add_argument("-i", "--min-scale", type=float, default=1, dest="min_scale")
-        self.arg_parser.add_argument("-a", "--max-scale", type=float, default=1, dest="max_scale")
+        self.arg_parser.add_argument("-i", "--min-scale", type=float, default=1.0, dest="min_scale")
+        self.arg_parser.add_argument("-a", "--max-scale", type=float, default=1.0, dest="max_scale")
+        self.arg_parser.add_argument("-c", "--use-custom-leading", type=Boolean, default="false", dest="use_custom_leading")
+        self.arg_parser.add_argument("-b", "--use-custom-spacing", type=Boolean, default="false", dest="use_custom_spacing")
         self.arg_parser.add_argument("-l", "--leading", type=int, default=0, dest="leading")
+        self.arg_parser.add_argument("-w", "--word-spacing", type=int, default=26, dest="word_spacing")
         self.arg_parser.add_argument("-p", "--font-file", type=str, default="", dest="path")
 
     def effect(self):
@@ -38,19 +41,18 @@ class LetteringGenerateJson(InkstitchExtension):
 
         horiz_adv_x = kerning.horiz_adv_x()
         hkern = kerning.hkern()
+        custom_leading = self.options.use_custom_leading
+        custom_spacing = self.options.use_custom_spacing
         word_spacing = kerning.word_spacing()
+        # use user input in case that the default word spacing is not defined
+        # in the svg file or the user forces custom values
+        if custom_spacing or not word_spacing:
+            word_spacing = self.options.word_spacing
         letter_spacing = kerning.letter_spacing()
-        units_per_em = kerning.units_per_em()
-        # missing_glyph_spacing = kerning.missing_glyph_spacing()
-
-        # if letter spacing returns 0, it hasn't been specified in the font file
-        # Ink/Stitch will calculate the width of each letter automatically
-        if letter_spacing == 0:
-            letter_spacing = None
-
-        # if leading (line height) is set to 0, the font author wants Ink/Stitch to use units_per_em
-        # if units_per_em is not defined in the font file a default value will be returned
-        if self.options.leading == 0:
+        units_per_em = kerning.units_per_em() or self.options.leading
+        # use units_per_em for leading (line height) if defined in the font file,
+        # unless the user wishes to overwrite the value
+        if units_per_em and not custom_leading:
             leading = units_per_em
         else:
             leading = self.options.leading
@@ -62,8 +64,8 @@ class LetteringGenerateJson(InkstitchExtension):
                 'auto_satin': self.options.auto_satin,
                 'reversible': self.options.reversible,
                 'default_glyph': self.options.default_glyph,
-                'min_scale': self.options.min_scale,
-                'max_scale': self.options.max_scale,
+                'min_scale': round(self.options.min_scale, 1),
+                'max_scale': round(self.options.max_scale, 1),
                 'horiz_adv_x_default': letter_spacing,
                 'horiz_adv_x_space': word_spacing,
                 'units_per_em': units_per_em,

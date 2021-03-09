@@ -18,7 +18,7 @@
     <param name="path" type="path" mode="folder" gui-text="{% trans %}Custom font directory{% endtrans %}"  indent="1"></param>
     <spacer />
     <param name="file-description" type="description" indent="1" >
-        {% trans %}Usage: Create a subdirectory for each font you add.{% endtrans %}
+        {% trans %}Usage: The custom font directory must contain a subdirectory for each font.{% endtrans %}
     </param>
     <script>
         {{ command_tag | safe }}
