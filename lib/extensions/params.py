@@ -153,7 +153,11 @@ class ParamsTab(ScrolledPanel):
 
         for name, input in self.param_inputs.items():
             if input in self.changed_inputs and input != self.toggle_checkbox:
-                values[name] = input.GetValue()
+                try:
+                    values[name] = input.GetValue()
+                except AttributeError:
+                    # dropdown
+                    values[name] = input.GetSelection()
 
         return values
 
@@ -271,6 +275,10 @@ class ParamsTab(ScrolledPanel):
                         input.SetValue(param.values[0])
 
                 input.Bind(wx.EVT_CHECKBOX, self.changed)
+            elif param.type == 'dropdown':
+                input = wx.Choice(self, wx.ID_ANY, choices=param.options)
+                input.SetSelection(int(param.values[0]))
+                input.Bind(wx.EVT_CHOICE, self.changed)
             elif len(param.values) > 1:
                 input = wx.ComboBox(self, wx.ID_ANY, choices=sorted(str(value) for value in param.values), style=wx.CB_DROPDOWN)
                 input.Bind(wx.EVT_COMBOBOX, self.changed)
