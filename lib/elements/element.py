@@ -77,14 +77,20 @@ class EmbroideryElement(object):
     def __init__(self, node):
         self.node = node
 
+        # update legacy embroider_ attributes to namespaced attributes
         legacy_attribs = False
         for attrib in self.node.attrib:
             if attrib.startswith('embroider_'):
-                # update embroider_ attributes to namespaced attributes
                 self.replace_legacy_param(attrib)
                 legacy_attribs = True
+        # convert legacy tie setting
+        legacy_tie = self.get_boolean_param('ties', None)
+        if legacy_tie is False:
+            self.set_param('ties', 3)
+        elif legacy_tie is True:
+            self.set_param('ties', 0)
+        # defaut setting for fill_underlay has changed
         if legacy_attribs and not self.get_param('fill_underlay', ""):
-            # defaut setting for fill_underlay has changed
             self.set_param('fill_underlay', False)
 
     @property
@@ -246,7 +252,7 @@ class EmbroideryElement(object):
            sort_index=4)
     @cache
     def ties(self):
-        return self.get_int_param("ties", True)
+        return self.get_int_param("ties", 0)
 
     @property
     def path(self):
