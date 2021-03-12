@@ -9,7 +9,7 @@ from itertools import groupby
 import wx
 from wx.lib.scrolledpanel import ScrolledPanel
 
-from ..commands import is_command
+from ..commands import is_command, is_command_symbol
 from ..elements import (AutoFill, Clone, EmbroideryElement, Fill, Polyline,
                         SatinColumn, Stroke)
 from ..elements.clone import is_clone
@@ -466,7 +466,7 @@ class Params(InkstitchExtension):
         element = EmbroideryElement(node)
         classes = []
 
-        if not is_command(node):
+        if not is_command(node) and not is_command_symbol(node):
             if node.tag == SVG_POLYLINE_TAG:
                 classes.append(Polyline)
             elif is_clone(node):

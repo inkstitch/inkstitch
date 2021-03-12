@@ -150,7 +150,7 @@ class InkstitchExtension(inkex.Effect):
 
         # command connectors with a fill color set, will glitch into the elements list
         if is_command(node) or node.get(CONNECTOR_TYPE):
-            return[]
+            return []
 
         if self.svg.selected:
             if node.get("id") in self.svg.selected:
@@ -163,7 +163,9 @@ class InkstitchExtension(inkex.Effect):
             nodes.extend(self.descendants(child, selected, troubleshoot))
 
         if selected:
-            if getattr(node, "get_path", None):
+            if node.tag == SVG_GROUP_TAG:
+                pass
+            elif getattr(node, "get_path", None):
                 nodes.append(node)
             elif troubleshoot and (node.tag in NOT_EMBROIDERABLE_TAGS or node.tag in EMBROIDERABLE_TAGS or is_clone(node)):
                 nodes.append(node)
