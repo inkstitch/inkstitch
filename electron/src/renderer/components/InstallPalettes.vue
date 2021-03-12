@@ -1,3 +1,12 @@
+<!--
+
+  Authors: see git history
+
+  Copyright (c) 2010 Authors
+  Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
+
+-->
+
 <template>
   <v-dialog max-width="500px" value="true">
     <v-card v-if="step == 'pick'" key="pick" rounded="lg" :loading="installing" :disabled="installing">
