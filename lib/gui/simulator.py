@@ -6,10 +6,10 @@ from threading import Event, Thread
 import wx
 from wx.lib.intctrl import IntCtrl
 
+from .dialogs import info_dialog
 from ..i18n import _
 from ..stitch_plan import patches_to_stitch_plan, stitch_plan_from_file
 from ..svg import PIXELS_PER_MM
-from .dialogs import info_dialog
 
 # L10N command label at bottom of simulator window
 COMMAND_NAMES = [_("STITCH"), _("JUMP"), _("TRIM"), _("STOP"), _("COLOR CHANGE")]
@@ -681,7 +681,6 @@ class EmbroiderySimulator(wx.Frame):
         stitch_plan = kwargs.pop('stitch_plan', None)
         stitches_per_second = kwargs.pop('stitches_per_second', 16)
         target_duration = kwargs.pop('target_duration', None)
-        size = kwargs.get('size', (0, 0))
         wx.Frame.__init__(self, *args, **kwargs)
         self.statusbar = self.CreateStatusBar(2)
         self.statusbar.SetStatusWidths([250, -1])
