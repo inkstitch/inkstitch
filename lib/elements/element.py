@@ -247,6 +247,7 @@ class EmbroideryElement(object):
            tooltip=_('Tie thread at the beginning and/or end of this object. Manual stitch will not add lock stitches.'),
            type='dropdown',
            # Ties: 0 = Both | 1 = Before | 2 = After | 3 = Neither
+           # L10N options to allow lock stitch before and after objects
            options=[_("Both"), _("Before"), _("After"), _("Neither")],
            default=0,
            sort_index=4)
