@@ -51,17 +51,17 @@
     </param>
     <spacer />
     <hbox indent="1">
-    <param name="use-custom-leading" type="bool" gui-text="{% trans %}Use{% endtrans %}" indent="1"
+    <param name="use-custom-leading" type="bool" gui-text="{% trans %}Force{% endtrans %}" indent="1"
            gui-description="{% trans %}Overwrite leading information from font file.{% endtrans %}">false</param>
     <param name="leading" type="int" precision="1" min="-100" max="500" gui-text="{% trans %}Leading (px){% endtrans %}"
-           gui-description="{% trans %}Line height{% endtrans %}" indent="1">100</param>
+           gui-description="{% trans %}Line height (default: 100){% endtrans %}" indent="1">100</param>
     </hbox>
     <spacer />
     <hbox indent="1">
-    <param name="use-custom-spacing" type="bool" gui-text="{% trans %}Use{% endtrans %}" indent="1"
+    <param name="use-custom-spacing" type="bool" gui-text="{% trans %}Force{% endtrans %}" indent="1"
            gui-description="{% trans %}Overwrite word spacing information from font file.{% endtrans %}">false</param>    
     <param name="word-spacing" type="int" precision="1" min="-100" max="500" gui-text="{% trans %}Word spacing (px){% endtrans %}"
-           gui-description="{% trans %}Space character width{% endtrans %}" indent="1">20</param>
+           gui-description="{% trans %}Space character width (default: 20){% endtrans %}" indent="1">20</param>
      </hbox>
      <spacer />
     <separator indent="1"/>
