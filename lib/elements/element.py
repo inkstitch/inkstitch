@@ -243,11 +243,11 @@ class EmbroideryElement(object):
 
     @property
     @param('ties',
-           _('Ties'),
-           tooltip=_('Tie thread at the beginning and/or end of this object. Manual stitch will not add ties.'),
+           _('Allow lock stitches'),
+           tooltip=_('Tie thread at the beginning and/or end of this object. Manual stitch will not add lock stitches.'),
            type='dropdown',
-           # Ties: 0 = Both | 1 = In | 2 = Out | 3 = None
-           options=[_("Tie all"), _("Tie in"), _("Tie off"), _("No tie")],
+           # Ties: 0 = Both | 1 = Before | 2 = After | 3 = Neither
+           options=[_("Both"), _("Before"), _("After"), _("Neither")],
            default=0,
            sort_index=4)
     @cache
