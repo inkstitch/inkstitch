@@ -17,11 +17,12 @@ from ..utils import Point, cache
 class Patch:
     """A raw collection of stitches with attached instructions."""
 
-    def __init__(self, color=None, stitches=None, trim_after=False, stop_after=False, stitch_as_is=False):
+    def __init__(self, color=None, stitches=None, trim_after=False, stop_after=False, tie_modus=0, stitch_as_is=False):
         self.color = color
         self.stitches = stitches or []
         self.trim_after = trim_after
         self.stop_after = stop_after
+        self.tie_modus = tie_modus
         self.stitch_as_is = stitch_as_is
 
     def __add__(self, other):
@@ -42,7 +43,8 @@ class Patch:
 
 
 class Param(object):
-    def __init__(self, name, description, unit=None, values=[], type=None, group=None, inverse=False, default=None, tooltip=None, sort_index=0):
+    def __init__(self, name, description, unit=None, values=[], type=None, group=None, inverse=False,
+                 options=[], default=None, tooltip=None, sort_index=0):
         self.name = name
         self.description = description
         self.unit = unit
@@ -50,6 +52,7 @@ class Param(object):
         self.type = type
         self.group = group
         self.inverse = inverse
+        self.options = options
         self.default = default
         self.tooltip = tooltip
         self.sort_index = sort_index
@@ -74,14 +77,20 @@ class EmbroideryElement(object):
     def __init__(self, node):
         self.node = node
 
+        # update legacy embroider_ attributes to namespaced attributes
         legacy_attribs = False
         for attrib in self.node.attrib:
             if attrib.startswith('embroider_'):
-                # update embroider_ attributes to namespaced attributes
                 self.replace_legacy_param(attrib)
                 legacy_attribs = True
+        # convert legacy tie setting
+        legacy_tie = self.get_boolean_param('ties', None)
+        if legacy_tie is False:
+            self.set_param('ties', 3)
+        elif legacy_tie is True:
+            self.set_param('ties', 0)
+        # defaut setting for fill_underlay has changed
         if legacy_attribs and not self.get_param('fill_underlay', ""):
-            # defaut setting for fill_underlay has changed
             self.set_param('fill_underlay', False)
 
     @property
@@ -234,14 +243,17 @@ class EmbroideryElement(object):
 
     @property
     @param('ties',
-           _('Ties'),
-           tooltip=_('Add ties. Manual stitch will not add ties.'),
-           type='boolean',
-           default=True,
+           _('Allow lock stitches'),
+           tooltip=_('Tie thread at the beginning and/or end of this object. Manual stitch will not add lock stitches.'),
+           type='dropdown',
+           # Ties: 0 = Both | 1 = Before | 2 = After | 3 = Neither
+           # L10N options to allow lock stitch before and after objects
+           options=[_("Both"), _("Before"), _("After"), _("Neither")],
+           default=0,
            sort_index=4)
     @cache
     def ties(self):
-        return self.get_boolean_param("ties", True)
+        return self.get_int_param("ties", 0)
 
     @property
     def path(self):
@@ -348,9 +360,8 @@ class EmbroideryElement(object):
 
         patches = self.to_patches(last_patch)
 
-        if not self.ties:
-            for patch in patches:
-                patch.stitch_as_is = True
+        for patch in patches:
+            patch.tie_modus = self.ties
 
         if patches:
             patches[-1].trim_after = self.has_command("trim") or self.trim_after

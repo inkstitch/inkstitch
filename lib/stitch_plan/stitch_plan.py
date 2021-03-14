@@ -40,7 +40,7 @@ def patches_to_stitch_plan(patches, collapse_len=None, disable_ties=False):
             if len(color_block) and (patch.stitches[0] - color_block.stitches[-1]).length() > collapse_len:
                 color_block.add_stitch(patch.stitches[0], jump=True)
 
-        color_block.add_stitches(patch.stitches, no_ties=patch.stitch_as_is)
+        color_block.add_stitches(stitches=patch.stitches, tie_modus=patch.tie_modus, no_ties=patch.stitch_as_is)
 
         if patch.trim_after:
             color_block.add_stitch(trim=True)
