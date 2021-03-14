@@ -681,7 +681,6 @@ class EmbroiderySimulator(wx.Frame):
         stitch_plan = kwargs.pop('stitch_plan', None)
         stitches_per_second = kwargs.pop('stitches_per_second', 16)
         target_duration = kwargs.pop('target_duration', None)
-        size = kwargs.get('size', (0, 0))
         wx.Frame.__init__(self, *args, **kwargs)
         self.statusbar = self.CreateStatusBar(2)
         self.statusbar.SetStatusWidths([250, -1])
