@@ -1,6 +1,7 @@
 import json
 import os
 import sys
+from base64 import b64decode
 
 import appdirs
 import inkex
@@ -86,12 +87,17 @@ class LetteringFrame(wx.Frame):
             "scale": 100
         })
 
-        try:
-            if INKSTITCH_LETTERING in self.group.attrib:
+        if INKSTITCH_LETTERING in self.group.attrib:
+            try:
                 self.settings.update(json.loads(self.group.get(INKSTITCH_LETTERING)))
-                return
-        except (TypeError, ValueError):
-            pass
+            except json.decoder.JSONDecodeError:
+                # legacy base64 encoded (changed in v2.0)
+                try:
+                    self.settings.update(json.loads(b64decode(self.group.get(INKSTITCH_LETTERING))))
+                except (TypeError, ValueError):
+                    pass
+            except (TypeError, ValueError):
+                pass
 
     def apply_settings(self):
         """Make the settings in self.settings visible in the UI."""
