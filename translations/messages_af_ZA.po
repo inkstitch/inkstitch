@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-03-05 00:42+0000\n"
-"PO-Revision-Date: 2021-03-08 00:49\n"
+"POT-Creation-Date: 2021-03-15 00:47+0000\n"
+"PO-Revision-Date: 2021-03-15 00:49\n"
 "Last-Translator: \n"
 "Language-Team: Afrikaans\n"
 "MIME-Version: 1.0\n"
@@ -367,20 +367,37 @@ msgstr ""
 msgid "This setting will apply a custom fill angle for the clone."
 msgstr ""
 
-#: lib/elements/element.py:237
-msgid "Ties"
+#: lib/elements/element.py:246
+msgid "Allow lock stitches"
 msgstr ""
 
-#: lib/elements/element.py:238
-msgid "Add ties. Manual stitch will not add ties."
+#: lib/elements/element.py:247
+msgid "Tie thread at the beginning and/or end of this object. Manual stitch will not add lock stitches."
 msgstr ""
 
-#: lib/elements/element.py:281
+#. options to allow lock stitch before and after objects
+#: lib/elements/element.py:251
+msgid "Both"
+msgstr ""
+
+#: lib/elements/element.py:251
+msgid "Before"
+msgstr ""
+
+#: lib/elements/element.py:251
+msgid "After"
+msgstr ""
+
+#: lib/elements/element.py:251
+msgid "Neither"
+msgstr ""
+
+#: lib/elements/element.py:293
 #, python-format
 msgid "Object %(id)s has an empty 'd' attribute.  Please delete this object from your document."
 msgstr ""
 
-#: lib/elements/element.py:313
+#: lib/elements/element.py:325
 #, python-format
 msgid "%(id)s has more than one command of type '%(command)s' linked to it"
 msgstr ""
@@ -388,7 +405,7 @@ msgstr ""
 #. used when showing an error message to the user such as
 #. "Some Path (path1234): error: satin column: One or more of the rungs doesn't
 #. intersect both rails."
-#: lib/elements/element.py:371
+#: lib/elements/element.py:382
 msgid "error:"
 msgstr ""
 
@@ -855,7 +872,7 @@ msgstr ""
 msgid "Add trims"
 msgstr ""
 
-#: lib/extensions/lettering.py:67 lib/extensions/params.py:332
+#: lib/extensions/lettering.py:67 lib/extensions/params.py:340
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
 #: print/templates/custom-page.html:33 print/templates/ui.html:92
 #: print/templates/ui.html:96 print/templates/ui.html:102
@@ -864,7 +881,7 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-#: lib/extensions/lettering.py:71 lib/extensions/params.py:339
+#: lib/extensions/lettering.py:71 lib/extensions/params.py:347
 msgid "Apply and Quit"
 msgstr ""
 
@@ -908,50 +925,50 @@ msgstr ""
 msgid "Please choose one or more commands to attach."
 msgstr ""
 
-#: lib/extensions/params.py:196
+#: lib/extensions/params.py:200
 msgid "These settings will be applied to 1 object."
 msgstr ""
 
-#: lib/extensions/params.py:198
+#: lib/extensions/params.py:202
 #, python-format
 msgid "These settings will be applied to %d objects."
 msgstr ""
 
-#: lib/extensions/params.py:201
+#: lib/extensions/params.py:205
 msgid "Some settings had different values across objects.  Select a value from the dropdown or enter a new one."
 msgstr ""
 
-#: lib/extensions/params.py:205
+#: lib/extensions/params.py:209
 #, python-format
 msgid "Disabling this tab will disable the following %d tabs."
 msgstr ""
 
-#: lib/extensions/params.py:207
+#: lib/extensions/params.py:211
 msgid "Disabling this tab will disable the following tab."
 msgstr ""
 
-#: lib/extensions/params.py:210
+#: lib/extensions/params.py:214
 #, python-format
 msgid "Enabling this tab will disable %s and vice-versa."
 msgstr ""
 
-#: lib/extensions/params.py:240
+#: lib/extensions/params.py:244
 msgid "Inkscape objects"
 msgstr ""
 
-#: lib/extensions/params.py:297
+#: lib/extensions/params.py:305
 msgid "Click to force this parameter to be saved when you click \"Apply and Quit\""
 msgstr ""
 
-#: lib/extensions/params.py:305
+#: lib/extensions/params.py:313
 msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr ""
 
-#: lib/extensions/params.py:321
+#: lib/extensions/params.py:329
 msgid "Embroidery Params"
 msgstr ""
 
-#: lib/extensions/params.py:336
+#: lib/extensions/params.py:344
 msgid "Use Last Settings"
 msgstr ""
 
@@ -1170,15 +1187,15 @@ msgstr ""
 msgid "Start"
 msgstr ""
 
-#: lib/gui/simulator.py:814 lib/gui/simulator.py:826
+#: lib/gui/simulator.py:813 lib/gui/simulator.py:825
 msgid "Preview"
 msgstr ""
 
-#: lib/gui/simulator.py:830
+#: lib/gui/simulator.py:829
 msgid "Internal Error"
 msgstr ""
 
-#: lib/gui/simulator.py:859
+#: lib/gui/simulator.py:858
 msgid "Embroidery Simulation"
 msgstr ""
 
