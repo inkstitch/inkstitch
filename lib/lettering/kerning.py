@@ -7,7 +7,7 @@ class FontKerning(object):
     This class reads kerning information from an SVG file
     """
     def __init__(self, path):
-        with open(path) as svg:
+        with open(path, 'r', encoding="utf-8") as svg:
             self.svg = etree.parse(svg)
 
     # horiz_adv_x defines the wdith of specific letters (distance to next letter)
