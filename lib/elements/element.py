@@ -5,7 +5,7 @@ import inkex
 import tinycss2
 from inkex import bezier
 
-from ..commands import find_commands, COMMANDS
+from ..commands import find_commands
 from ..i18n import _
 from ..svg import (PIXELS_PER_MM, apply_transforms, convert_length,
                    get_node_transform)
@@ -320,12 +320,8 @@ class EmbroideryElement(object):
     def get_command(self, command):
         commands = self.get_commands(command)
 
-        if len(commands) == 1:
+        if commands:
             return commands[0]
-        elif len(commands) > 1:
-            inkex.errormsg(_("%(id)s has more than one command of type '%(command)s' linked to it") %
-                           dict(id=self.node.get('id'), command=COMMANDS[command]))
-            sys.exit(1)
         else:
             return None
 
