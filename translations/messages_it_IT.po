@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-03-15 00:47+0000\n"
-"PO-Revision-Date: 2021-03-15 00:49\n"
+"POT-Creation-Date: 2021-03-16 00:42+0000\n"
+"PO-Revision-Date: 2021-03-21 00:47\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
@@ -749,7 +749,7 @@ msgid "Legacy running stitch setting detected!\n\n"
 msgstr "Rilevata vecchia impostazione del punto corrente!\n"
 "Sembra che tu stia utilizzando un tratto più piccolo di 0,5 unità per indicare un punto corrente, che è depracato. Invece, il tratto può essere impostato a tratteggio per indicare un punto corrente. Qualsiasi tipo di tratteggio andrà bene."
 
-#: lib/elements/text.py:8 lib/extensions/lettering.py:62
+#: lib/elements/text.py:8 lib/extensions/lettering.py:63
 msgid "Text"
 msgstr "Testo"
 
@@ -853,27 +853,27 @@ msgstr "Si selezioni un'altra palette di colori per il tuo design."
 msgid "Please choose one or more commands to add."
 msgstr "Seleziona uno o più comandi da aggiungere."
 
-#: lib/extensions/lettering.py:31 lib/extensions/lettering.py:403
+#: lib/extensions/lettering.py:32 lib/extensions/lettering.py:409
 msgid "Ink/Stitch Lettering"
 msgstr "Caratteri Ink/Stitch"
 
-#: lib/extensions/lettering.py:38
+#: lib/extensions/lettering.py:39
 msgid "Font"
 msgstr ""
 
-#: lib/extensions/lettering.py:50
+#: lib/extensions/lettering.py:51
 msgid "Options"
 msgstr "Opzioni"
 
-#: lib/extensions/lettering.py:55
+#: lib/extensions/lettering.py:56
 msgid "Stitch lines of text back and forth"
 msgstr "Cucire le linee di testo avanti e indietro"
 
-#: lib/extensions/lettering.py:58
+#: lib/extensions/lettering.py:59
 msgid "Add trims"
 msgstr "Aggiungi tagli"
 
-#: lib/extensions/lettering.py:67 lib/extensions/params.py:340
+#: lib/extensions/lettering.py:68 lib/extensions/params.py:340
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
 #: print/templates/custom-page.html:33 print/templates/ui.html:92
 #: print/templates/ui.html:96 print/templates/ui.html:102
@@ -882,31 +882,31 @@ msgstr "Aggiungi tagli"
 msgid "Cancel"
 msgstr "Annulla"
 
-#: lib/extensions/lettering.py:71 lib/extensions/params.py:347
+#: lib/extensions/lettering.py:72 lib/extensions/params.py:347
 msgid "Apply and Quit"
 msgstr "Applica ed esci"
 
-#: lib/extensions/lettering.py:133
+#: lib/extensions/lettering.py:139
 msgid "Unable to find any fonts!  Please try reinstalling Ink/Stitch."
 msgstr "Nessun font disponibile! Provare ad installare nuovamente Ink/Stitch."
 
-#: lib/extensions/lettering.py:207
+#: lib/extensions/lettering.py:213
 msgid "This font has no available font variant. Please update or remove the font."
 msgstr ""
 
 #. The user has chosen to scale the text by some percentage
 #. (50%, 200%, etc).  If you need to use the percentage symbol,
 #. make sure to double it (%%).
-#: lib/extensions/lettering.py:249
+#: lib/extensions/lettering.py:255
 #, python-format
 msgid "Text scale %s%%"
 msgstr "Scala del testo %s%%"
 
-#: lib/extensions/lettering.py:392
+#: lib/extensions/lettering.py:398
 msgid "Please select only one block of text."
 msgstr "Selezionare solo un blocco di testo."
 
-#: lib/extensions/lettering.py:395
+#: lib/extensions/lettering.py:401
 msgid "You've selected objects that were not created by the Lettering extension.  Please clear your selection or select different objects before running Lettering again."
 msgstr "Hai selezionato degli oggetti che non sono stati creati dalla estensione Caratteri. Si provi a liberare la tua selezione o selezionare oggetti diversi prima di avviare Caratteri di nuovo."
 

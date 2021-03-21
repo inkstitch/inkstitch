@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-03-15 00:47+0000\n"
-"PO-Revision-Date: 2021-03-15 00:49\n"
+"POT-Creation-Date: 2021-03-16 00:42+0000\n"
+"PO-Revision-Date: 2021-03-21 00:47\n"
 "Last-Translator: \n"
 "Language-Team: Catalan\n"
 "MIME-Version: 1.0\n"
@@ -748,7 +748,7 @@ msgid "Legacy running stitch setting detected!\n\n"
 "It looks like you're using a stroke smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set your stroke to be dashed to indicate running stitch.  Any kind of dash will work."
 msgstr ""
 
-#: lib/elements/text.py:8 lib/extensions/lettering.py:62
+#: lib/elements/text.py:8 lib/extensions/lettering.py:63
 msgid "Text"
 msgstr ""
 
@@ -852,27 +852,27 @@ msgstr ""
 msgid "Please choose one or more commands to add."
 msgstr ""
 
-#: lib/extensions/lettering.py:31 lib/extensions/lettering.py:403
+#: lib/extensions/lettering.py:32 lib/extensions/lettering.py:409
 msgid "Ink/Stitch Lettering"
 msgstr ""
 
-#: lib/extensions/lettering.py:38
+#: lib/extensions/lettering.py:39
 msgid "Font"
 msgstr ""
 
-#: lib/extensions/lettering.py:50
+#: lib/extensions/lettering.py:51
 msgid "Options"
 msgstr ""
 
-#: lib/extensions/lettering.py:55
+#: lib/extensions/lettering.py:56
 msgid "Stitch lines of text back and forth"
 msgstr ""
 
-#: lib/extensions/lettering.py:58
+#: lib/extensions/lettering.py:59
 msgid "Add trims"
 msgstr ""
 
-#: lib/extensions/lettering.py:67 lib/extensions/params.py:340
+#: lib/extensions/lettering.py:68 lib/extensions/params.py:340
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
 #: print/templates/custom-page.html:33 print/templates/ui.html:92
 #: print/templates/ui.html:96 print/templates/ui.html:102
@@ -881,31 +881,31 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-#: lib/extensions/lettering.py:71 lib/extensions/params.py:347
+#: lib/extensions/lettering.py:72 lib/extensions/params.py:347
 msgid "Apply and Quit"
 msgstr ""
 
-#: lib/extensions/lettering.py:133
+#: lib/extensions/lettering.py:139
 msgid "Unable to find any fonts!  Please try reinstalling Ink/Stitch."
 msgstr ""
 
-#: lib/extensions/lettering.py:207
+#: lib/extensions/lettering.py:213
 msgid "This font has no available font variant. Please update or remove the font."
 msgstr ""
 
 #. The user has chosen to scale the text by some percentage
 #. (50%, 200%, etc).  If you need to use the percentage symbol,
 #. make sure to double it (%%).
-#: lib/extensions/lettering.py:249
+#: lib/extensions/lettering.py:255
 #, python-format
 msgid "Text scale %s%%"
 msgstr ""
 
-#: lib/extensions/lettering.py:392
+#: lib/extensions/lettering.py:398
 msgid "Please select only one block of text."
 msgstr ""
 
-#: lib/extensions/lettering.py:395
+#: lib/extensions/lettering.py:401
 msgid "You've selected objects that were not created by the Lettering extension.  Please clear your selection or select different objects before running Lettering again."
 msgstr ""
 

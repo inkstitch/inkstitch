@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-03-15 00:47+0000\n"
-"PO-Revision-Date: 2021-03-15 00:49\n"
+"POT-Creation-Date: 2021-03-16 00:42+0000\n"
+"PO-Revision-Date: 2021-03-21 00:47\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -369,28 +369,28 @@ msgstr "Diese Einstellung wendet einen benutzerdefinierten Füllwinkel für den 
 
 #: lib/elements/element.py:246
 msgid "Allow lock stitches"
-msgstr ""
+msgstr "Vernähen erlauben"
 
 #: lib/elements/element.py:247
 msgid "Tie thread at the beginning and/or end of this object. Manual stitch will not add lock stitches."
-msgstr ""
+msgstr "Faden am Anfang und/oder Ende dieses Objektes vernähen. Manuelle Stiche werden nie vernäht."
 
 #. options to allow lock stitch before and after objects
 #: lib/elements/element.py:251
 msgid "Both"
-msgstr ""
+msgstr "Anfang und Ende"
 
 #: lib/elements/element.py:251
 msgid "Before"
-msgstr ""
+msgstr "Anfang"
 
 #: lib/elements/element.py:251
 msgid "After"
-msgstr ""
+msgstr "Ende"
 
 #: lib/elements/element.py:251
 msgid "Neither"
-msgstr ""
+msgstr "Nie"
 
 #: lib/elements/element.py:293
 #, python-format
@@ -749,7 +749,7 @@ msgid "Legacy running stitch setting detected!\n\n"
 msgstr "Veraltete Laufstich-Einstellung erkannt!\n\n"
 "Es sieht so aus, als ob für einen Laufstich eine Linie verwendet wurde, die schmaler als 0.5 Einheiten ist. Diese Methode ist veraltet. Bitte eine gestrichelte Linie für diesen Zweck benutzen. Die genaue Linienart spielt dabei keine Rolle, Hauptsache es ist keine durchgehende Linie."
 
-#: lib/elements/text.py:8 lib/extensions/lettering.py:62
+#: lib/elements/text.py:8 lib/extensions/lettering.py:63
 msgid "Text"
 msgstr "Text"
 
@@ -854,27 +854,27 @@ msgstr "Wähle eine andere Garnpalette für das Design."
 msgid "Please choose one or more commands to add."
 msgstr "Bitte wählen Sie einen oder mehrere Befehle um diese zu verknüpfen."
 
-#: lib/extensions/lettering.py:31 lib/extensions/lettering.py:403
+#: lib/extensions/lettering.py:32 lib/extensions/lettering.py:409
 msgid "Ink/Stitch Lettering"
 msgstr "Ink/Stitch Text"
 
-#: lib/extensions/lettering.py:38
+#: lib/extensions/lettering.py:39
 msgid "Font"
 msgstr "Schriftart"
 
-#: lib/extensions/lettering.py:50
+#: lib/extensions/lettering.py:51
 msgid "Options"
 msgstr "Optionen"
 
-#: lib/extensions/lettering.py:55
+#: lib/extensions/lettering.py:56
 msgid "Stitch lines of text back and forth"
 msgstr "Sticke Textzeilen vor und zurück"
 
-#: lib/extensions/lettering.py:58
+#: lib/extensions/lettering.py:59
 msgid "Add trims"
 msgstr "Schnittmarker hinzufügen"
 
-#: lib/extensions/lettering.py:67 lib/extensions/params.py:340
+#: lib/extensions/lettering.py:68 lib/extensions/params.py:340
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
 #: print/templates/custom-page.html:33 print/templates/ui.html:92
 #: print/templates/ui.html:96 print/templates/ui.html:102
@@ -883,31 +883,31 @@ msgstr "Schnittmarker hinzufügen"
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: lib/extensions/lettering.py:71 lib/extensions/params.py:347
+#: lib/extensions/lettering.py:72 lib/extensions/params.py:347
 msgid "Apply and Quit"
 msgstr "Anwenden und schließen"
 
-#: lib/extensions/lettering.py:133
+#: lib/extensions/lettering.py:139
 msgid "Unable to find any fonts!  Please try reinstalling Ink/Stitch."
 msgstr "Keine Schriftart gefunden! Bitte versuche Ink/Stitch erneut zu installieren."
 
-#: lib/extensions/lettering.py:207
+#: lib/extensions/lettering.py:213
 msgid "This font has no available font variant. Please update or remove the font."
 msgstr "Diese Schriftart hat keine verfügbare Schriftvariante. Bitte aktualisieren oder entfernen Sie die Schriftart."
 
 #. The user has chosen to scale the text by some percentage
 #. (50%, 200%, etc).  If you need to use the percentage symbol,
 #. make sure to double it (%%).
-#: lib/extensions/lettering.py:249
+#: lib/extensions/lettering.py:255
 #, python-format
 msgid "Text scale %s%%"
 msgstr "Text Skalierung %s%%"
 
-#: lib/extensions/lettering.py:392
+#: lib/extensions/lettering.py:398
 msgid "Please select only one block of text."
 msgstr "Bitte wähle nur einen Textabschnitt."
 
-#: lib/extensions/lettering.py:395
+#: lib/extensions/lettering.py:401
 msgid "You've selected objects that were not created by the Lettering extension.  Please clear your selection or select different objects before running Lettering again."
 msgstr "Du hast Objekte ausgewählt, die nicht von der Text-Erweiterung erstellt wurden. Bitte entferne deine Auswahl oder wähle andere Objekte aus, bevor du das Text-Modul erneut startest."
 
@@ -1900,7 +1900,7 @@ msgstr "Ausgabeeinstellungen"
 
 #: templates/embroider_settings.xml:16
 msgid "Collapse length (mm)"
-msgstr "Mindestlänge (mm)"
+msgstr "Maximaler Abstand zwischen zwei Objekten ohne vernähen (mm)"
 
 #: templates/embroider_settings.xml:17
 msgid "Jump stitches smaller than this will be treated as normal stitches."
