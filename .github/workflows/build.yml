@@ -15,7 +15,7 @@ jobs:
           submodules: recursive
       - uses: actions/setup-python@v2
         with:
-          python-version: '3.9'
+          python-version: '3.9.x'
       - uses: actions/setup-node@v1
         with:
           node-version: '15.x'
@@ -94,7 +94,7 @@ jobs:
           node-version: '15.x'
       - uses: actions/setup-python@v2
         with:
-          python-version: '3.9'
+          python-version: '3.8.x'
           architecture: 'x86'
       - uses: microsoft/setup-msbuild@v1.0.2
       - name: install dependencies
@@ -126,7 +126,7 @@ jobs:
           submodules: recursive
       - uses: actions/setup-python@v2
         with:
-          python-version: '3.9'
+          python-version: '3.9.x'
       - uses: actions/setup-node@v1
         with:
           node-version: '15.x'
