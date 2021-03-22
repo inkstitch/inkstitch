@@ -84,11 +84,12 @@ class EmbroideryElement(object):
                 self.replace_legacy_param(attrib)
                 legacy_attribs = True
         # convert legacy tie setting
-        legacy_tie = self.get_boolean_param('ties', None)
-        if legacy_tie is False:
-            self.set_param('ties', 3)
-        elif legacy_tie is True:
+        legacy_tie = self.get_param('ties', None)
+        if legacy_tie == "True":
             self.set_param('ties', 0)
+        elif legacy_tie == "False":
+            self.set_param('ties', 3)
+
         # defaut setting for fill_underlay has changed
         if legacy_attribs and not self.get_param('fill_underlay', ""):
             self.set_param('fill_underlay', False)
@@ -319,11 +320,8 @@ class EmbroideryElement(object):
     def get_command(self, command):
         commands = self.get_commands(command)
 
-        if len(commands) == 1:
+        if commands:
             return commands[0]
-        elif len(commands) > 1:
-            raise ValueError(_("%(id)s has more than one command of type '%(command)s' linked to it") %
-                             dict(id=self.node.get('id'), command=command))
         else:
             return None
 

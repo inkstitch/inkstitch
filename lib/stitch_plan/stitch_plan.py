@@ -14,7 +14,9 @@ def patches_to_stitch_plan(patches, collapse_len=None, disable_ties=False):
     * adds jump-stitches between patches if necessary
     """
 
-    collapse_len = (collapse_len or 3.0) * PIXELS_PER_MM
+    if collapse_len is None:
+        collapse_len = 3.0
+    collapse_len = collapse_len * PIXELS_PER_MM
     stitch_plan = StitchPlan()
     color_block = stitch_plan.new_color_block(color=patches[0].color)
 

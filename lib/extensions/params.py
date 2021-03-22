@@ -187,7 +187,10 @@ class ParamsTab(ScrolledPanel):
 
         for name, value in preset_data.items():
             if name in self.param_inputs:
-                self.param_inputs[name].SetValue(value)
+                try:
+                    self.param_inputs[name].SetValue(value)
+                except AttributeError:
+                    self.param_inputs[name].SetSelection(int(value))
                 self.changed_inputs.add(self.param_inputs[name])
 
         self.update_toggle_state()

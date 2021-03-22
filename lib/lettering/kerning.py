@@ -7,7 +7,7 @@ class FontKerning(object):
     This class reads kerning information from an SVG file
     """
     def __init__(self, path):
-        with open(path) as svg:
+        with open(path, 'r', encoding="utf-8") as svg:
             self.svg = etree.parse(svg)
 
     # horiz_adv_x defines the wdith of specific letters (distance to next letter)
@@ -46,21 +46,30 @@ class FontKerning(object):
     # the space character
     def word_spacing(self):
         xpath = "string(.//svg:glyph[@glyph-name='space'][1]/@*[name()='horiz-adv-x'])"
-        word_spacing = self.svg.xpath(xpath, namespaces=NSS) or 26
-        return int(word_spacing)
+        word_spacing = self.svg.xpath(xpath, namespaces=NSS)
+        try:
+            return int(word_spacing)
+        except ValueError:
+            return None
 
     # default letter spacing
     def letter_spacing(self):
         xpath = "string(.//svg:font[@horiz-adv-x][1]/@*[name()='horiz-adv-x'])"
-        letter_spacing = self.svg.xpath(xpath, namespaces=NSS) or 0
-        return int(letter_spacing)
+        letter_spacing = self.svg.xpath(xpath, namespaces=NSS)
+        try:
+            return int(letter_spacing)
+        except ValueError:
+            return None
 
     # this value will be saved into the json file to preserve it for later font edits
     # additionally it serves to automatically define the line height (leading)
-    def units_per_em(self, default=100):
+    def units_per_em(self):
         xpath = "string(.//svg:font-face[@units-per-em][1]/@*[name()='units-per-em'])"
-        units_per_em = self.svg.xpath(xpath, namespaces=NSS) or default
-        return int(units_per_em)
+        units_per_em = self.svg.xpath(xpath, namespaces=NSS)
+        try:
+            return int(units_per_em)
+        except ValueError:
+            return None
 
     """
     def missing_glyph_spacing(self):

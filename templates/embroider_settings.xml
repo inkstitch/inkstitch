@@ -3,7 +3,7 @@
     <name>{% trans %}Settings{% endtrans %}</name>
     <id>org.inkstitch.embroider_settings.{{ locale }}</id>
     <param name="extension" type="string" gui-hidden="true">embroider_settings</param>
-    <effect>
+    <effect needs-live-preview="false">
         <object-type>all</object-type>
         <effects-menu>
             <submenu name="Ink/Stitch" />
