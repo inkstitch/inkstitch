@@ -6,6 +6,7 @@
 import inkex
 
 from .base import InkstitchExtension
+from ..svg.tags import SVG_GROUP_TAG, EMBROIDERABLE_TAGS
 
 
 class CopyParams(InkstitchExtension):
@@ -16,11 +17,21 @@ class CopyParams(InkstitchExtension):
         copy_from = objects[0]
         copy_to = objects[1:]
 
+        # extract copy_to group elements
+        for i, element in enumerate(copy_to):
+            if element.tag == SVG_GROUP_TAG:
+                for descendant in element.iterdescendants():
+                    if descendant.tag in EMBROIDERABLE_TAGS:
+                        copy_to.append(descendant)
+                copy_to.pop(i)
+
+        # remove inkstitch params from copy_to elements
         for element in copy_to:
             attribs = self.get_inkstitch_attributes(copy_to[0])
             for attrib in attribs:
                 element.pop(attrib)
 
+        # paste inkstitch params from copy_from element to copy_to elements
         for attrib in self.get_inkstitch_attributes(copy_from):
             for element in copy_to:
                 element.attrib[attrib] = copy_from.attrib[attrib]
