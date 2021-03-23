@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <name>{% trans %}Settings{% endtrans %}</name>
+    <name>{% trans %}Preferences{% endtrans %}</name>
     <id>org.inkstitch.embroider_settings.{{ locale }}</id>
     <param name="extension" type="string" gui-hidden="true">embroider_settings</param>
     <effect needs-live-preview="false">

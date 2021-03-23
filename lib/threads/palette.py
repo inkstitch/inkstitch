@@ -57,7 +57,7 @@ class ThreadPalette(Set):
 
                     thread = ThreadColor(thread_color, thread_name, thread_number, manufacturer=self.name)
                     self.threads[thread] = convert_color(sRGBColor(*thread_color, is_upscaled=True), LabColor)
-                except ValueError:
+                except (ValueError, IndexError):
                     continue
 
     def __contains__(self, thread):
