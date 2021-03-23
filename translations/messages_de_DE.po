@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-03-16 00:42+0000\n"
-"PO-Revision-Date: 2021-03-21 00:47\n"
+"POT-Creation-Date: 2021-03-23 00:43+0000\n"
+"PO-Revision-Date: 2021-03-23 00:45\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -367,45 +367,40 @@ msgstr "Benutzerdefinierter Füllwinkel"
 msgid "This setting will apply a custom fill angle for the clone."
 msgstr "Diese Einstellung wendet einen benutzerdefinierten Füllwinkel für den Klon an."
 
-#: lib/elements/element.py:246
+#: lib/elements/element.py:247
 msgid "Allow lock stitches"
 msgstr "Vernähen erlauben"
 
-#: lib/elements/element.py:247
+#: lib/elements/element.py:248
 msgid "Tie thread at the beginning and/or end of this object. Manual stitch will not add lock stitches."
 msgstr "Faden am Anfang und/oder Ende dieses Objektes vernähen. Manuelle Stiche werden nie vernäht."
 
 #. options to allow lock stitch before and after objects
-#: lib/elements/element.py:251
+#: lib/elements/element.py:252
 msgid "Both"
 msgstr "Anfang und Ende"
 
-#: lib/elements/element.py:251
+#: lib/elements/element.py:252
 msgid "Before"
 msgstr "Anfang"
 
-#: lib/elements/element.py:251
+#: lib/elements/element.py:252
 msgid "After"
 msgstr "Ende"
 
-#: lib/elements/element.py:251
+#: lib/elements/element.py:252
 msgid "Neither"
 msgstr "Nie"
 
-#: lib/elements/element.py:293
+#: lib/elements/element.py:294
 #, python-format
 msgid "Object %(id)s has an empty 'd' attribute.  Please delete this object from your document."
 msgstr "Objekt %(id)s hat ein leeres Attribut 'd'. Bitte lösche dieses Objekt aus dem Dokument."
 
-#: lib/elements/element.py:325
-#, python-format
-msgid "%(id)s has more than one command of type '%(command)s' linked to it"
-msgstr "%(id)s beinhaltet mehr als einen Befehl vom Typ '%(command)s'"
-
 #. used when showing an error message to the user such as
 #. "Some Path (path1234): error: satin column: One or more of the rungs doesn't
 #. intersect both rails."
-#: lib/elements/element.py:382
+#: lib/elements/element.py:380
 msgid "error:"
 msgstr "Fehler:"
 
@@ -874,7 +869,7 @@ msgstr "Sticke Textzeilen vor und zurück"
 msgid "Add trims"
 msgstr "Schnittmarker hinzufügen"
 
-#: lib/extensions/lettering.py:68 lib/extensions/params.py:340
+#: lib/extensions/lettering.py:68 lib/extensions/params.py:343
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
 #: print/templates/custom-page.html:33 print/templates/ui.html:92
 #: print/templates/ui.html:96 print/templates/ui.html:102
@@ -883,7 +878,7 @@ msgstr "Schnittmarker hinzufügen"
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: lib/extensions/lettering.py:72 lib/extensions/params.py:347
+#: lib/extensions/lettering.py:72 lib/extensions/params.py:350
 msgid "Apply and Quit"
 msgstr "Anwenden und schließen"
 
@@ -915,7 +910,7 @@ msgstr "Du hast Objekte ausgewählt, die nicht von der Text-Erweiterung erstellt
 msgid "Please specify the directory of your custom fonts."
 msgstr "Bitte den Ordner für die benutzerdefinierte Schriften angeben."
 
-#: lib/extensions/lettering_generate_json.py:32
+#: lib/extensions/lettering_generate_json.py:35
 msgid "Please specify a font file."
 msgstr "Bitte eine Schriftdatei auswählen."
 
@@ -927,50 +922,50 @@ msgstr "Wählen Sie ein oder mehrere Objekte aus, an die Sie die Befehle anhäng
 msgid "Please choose one or more commands to attach."
 msgstr "Bitte wählen Sie einen oder mehrere Befehle um diese zu verknüpfen."
 
-#: lib/extensions/params.py:200
+#: lib/extensions/params.py:203
 msgid "These settings will be applied to 1 object."
 msgstr "Diese Einstellung wird auf 1 Objekt angewendet."
 
-#: lib/extensions/params.py:202
+#: lib/extensions/params.py:205
 #, python-format
 msgid "These settings will be applied to %d objects."
 msgstr "Diese Einstellungen werden auf %d Objekte angewendet."
 
-#: lib/extensions/params.py:205
+#: lib/extensions/params.py:208
 msgid "Some settings had different values across objects.  Select a value from the dropdown or enter a new one."
 msgstr "Einige Einstellungen hatten unterschiedliche Werte der Objekte.  Bitte einen Wert aus der Liste auswählen oder einen neuen Namen eingeben."
 
-#: lib/extensions/params.py:209
+#: lib/extensions/params.py:212
 #, python-format
 msgid "Disabling this tab will disable the following %d tabs."
 msgstr "Deaktivierung dieser Registerkarte, deaktiviert die folgenden %d Registerkarten."
 
-#: lib/extensions/params.py:211
+#: lib/extensions/params.py:214
 msgid "Disabling this tab will disable the following tab."
 msgstr "Deaktivierung dieser Registerkarte, deaktiviert die folgende Registerkarte."
 
-#: lib/extensions/params.py:214
+#: lib/extensions/params.py:217
 #, python-format
 msgid "Enabling this tab will disable %s and vice-versa."
 msgstr "Aktivierung dieser Registerkarte deaktiviert %s und umgekehrt."
 
-#: lib/extensions/params.py:244
+#: lib/extensions/params.py:247
 msgid "Inkscape objects"
 msgstr "Inkscape Objekte"
 
-#: lib/extensions/params.py:305
+#: lib/extensions/params.py:308
 msgid "Click to force this parameter to be saved when you click \"Apply and Quit\""
 msgstr "Klicke hier, um zu erzwingen, dass dieser Parameter gespeichert wird, wenn man auf \"Übernehmen und Beenden\" klickt"
 
-#: lib/extensions/params.py:313
+#: lib/extensions/params.py:316
 msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr "Dieser Parameter wird gespeichert, wenn man auf \"Übernehmen und beenden\" klickt"
 
-#: lib/extensions/params.py:329
+#: lib/extensions/params.py:332
 msgid "Embroidery Params"
 msgstr "Stickparameter"
 
-#: lib/extensions/params.py:344
+#: lib/extensions/params.py:347
 msgid "Use Last Settings"
 msgstr "Letzte Einstellungen verwenden"
 
@@ -986,7 +981,7 @@ msgstr "Wenn eine Form noch immer nicht nicht gestickt wird, bitte überprüfen,
 msgid "Invalid Pointer"
 msgstr "Fehlerzeiger"
 
-#: lib/extensions/troubleshoot.py:80 templates/lettering_generate_json.xml:20
+#: lib/extensions/troubleshoot.py:80 templates/lettering_generate_json.xml:26
 msgid "Description"
 msgstr "Beschreibung"
 
@@ -1208,7 +1203,7 @@ msgstr "Stick Simulation"
 msgid "Generate INX files"
 msgstr "Erzeuge INX Dateien"
 
-#: lib/lettering/font.py:153
+#: lib/lettering/font.py:152
 #, python-format
 msgid "The font '%s' has no variants."
 msgstr "Die Schrift '%s' hat keine Varianten."
@@ -1969,8 +1964,8 @@ msgid "Set a custom directory for additional fonts to be used with the lettering
 msgstr "Definiere einen Ordner mit zusätzliche Schriften für das Textwerkzeug."
 
 #: templates/lettering_custom_font_dir.xml:21
-msgid "Usage: Create a subdirectory for each font you add."
-msgstr "Anwendungshinweis: Erstelle für jede Schrift einen Unterordner."
+msgid "Usage: The custom font directory must contain a subdirectory for each font."
+msgstr ""
 
 #: templates/lettering_generate_json.xml:3
 msgid "Generate JSON"
@@ -1980,53 +1975,83 @@ msgstr "JSON erstellen"
 msgid "Generates font.json which can be used by the lettering tool."
 msgstr "Erstellt die font.json-Datei, um die Schrift für das Textwerkzeug nutzbar zu machen."
 
-#: templates/lettering_generate_json.xml:19
+#: templates/lettering_generate_json.xml:17
+msgid "The generated file can be viewed and updated with a standard text editor tool."
+msgstr ""
+
+#: templates/lettering_generate_json.xml:21
+msgid "SVG Font File"
+msgstr ""
+
+#: templates/lettering_generate_json.xml:25
 msgid "Name"
 msgstr "Name"
 
-#: templates/lettering_generate_json.xml:24
-msgid "Insert a font SVG file with kerning information."
-msgstr "Füge eine SVG-Schriftdatei ein."
-
-#: templates/lettering_generate_json.xml:26
-msgid "Font File"
-msgstr "Schriftdatei"
-
-#: templates/lettering_generate_json.xml:29
+#: templates/lettering_generate_json.xml:32
 msgid "Autoroute Satin"
 msgstr "Automatisch geführte Satinkolumne"
 
-#: templates/lettering_generate_json.xml:30
+#: templates/lettering_generate_json.xml:33
 msgid "Disable if you defined manual routing in your font."
 msgstr "Deaktiviere diese Funktion, wenn du für eine manuelle Stichführung in deiner Schriftdatei angelegt hast."
 
-#: templates/lettering_generate_json.xml:31
+#: templates/lettering_generate_json.xml:34
 msgid "Reversible"
 msgstr "Umkehrbar"
 
-#: templates/lettering_generate_json.xml:32
+#: templates/lettering_generate_json.xml:35
 msgid "If disabled back and forth stitching will not be possile for this font."
 msgstr "Wenn diese Funktion deaktiviert ist, ist die Option \"Sticke Textzeilen vor und zurück\" für diese Schrift nicht verfügbar."
 
-#: templates/lettering_generate_json.xml:34
-msgid "Default Glyph"
-msgstr "Standard-Glyphe"
-
-#: templates/lettering_generate_json.xml:37
+#: templates/lettering_generate_json.xml:38
 msgid "Min Scale"
 msgstr "Minimale Skalierung"
 
-#: templates/lettering_generate_json.xml:38
+#: templates/lettering_generate_json.xml:39
 msgid "Max Scale"
 msgstr "Maximale Skalierung"
 
-#: templates/lettering_generate_json.xml:40
+#: templates/lettering_generate_json.xml:43
+msgid "Default Glyph"
+msgstr "Standard-Glyphe"
+
+#: templates/lettering_generate_json.xml:47
+msgid "Kerning"
+msgstr ""
+
+#: templates/lettering_generate_json.xml:49
+msgid "If your font file contains kerning information, you can completely ignore the following settings (unless you want to overwrite them).\n"
+"                   If the kerning information cannot be found, these values will apply automatically."
+msgstr ""
+
+#: templates/lettering_generate_json.xml:54
+#: templates/lettering_generate_json.xml:61
+msgid "Force"
+msgstr ""
+
+#: templates/lettering_generate_json.xml:55
+msgid "Overwrite leading information from font file."
+msgstr ""
+
+#: templates/lettering_generate_json.xml:56
 msgid "Leading (px)"
 msgstr "Zeilenhöhe (px)"
 
-#: templates/lettering_generate_json.xml:40
-msgid "If 0, the value will be calculated or defaults to 100"
-msgstr "Bei 0 wird der Wert berechnet oder auf den Standardwert 100 gesetzt"
+#: templates/lettering_generate_json.xml:57
+msgid "Line height (default: 100)"
+msgstr ""
+
+#: templates/lettering_generate_json.xml:62
+msgid "Overwrite word spacing information from font file."
+msgstr ""
+
+#: templates/lettering_generate_json.xml:63
+msgid "Word spacing (px)"
+msgstr ""
+
+#: templates/lettering_generate_json.xml:64
+msgid "Space character width (default: 20)"
+msgstr ""
 
 #: templates/lettering_remove_kerning.xml:3
 msgid "Remove Kerning"
