@@ -5,15 +5,21 @@
 
 import inkex
 
+from ..i18n import _
+from ..svg.tags import EMBROIDERABLE_TAGS, SVG_GROUP_TAG
 from .base import InkstitchExtension
-from ..svg.tags import SVG_GROUP_TAG, EMBROIDERABLE_TAGS
 
 
-class CopyParams(InkstitchExtension):
-    # Copy inkstitch namespaced attributes from the first selected element to the rest of selection
+class TransferParams(InkstitchExtension):
+    # Transfer inkstitch namespaced attributes from the first selected element to the rest of selection
 
     def effect(self):
         objects = self.get_selected_in_order()
+        if len(objects) < 2:
+            inkex.errormsg(_("This function transfers Ink/Stitch parameters from the first selected element to the rest of the selection. "
+                             "Please select at least two elements."))
+            return
+
         copy_from = objects[0]
         copy_to = objects[1:]
 
