@@ -460,6 +460,13 @@ class SettingsFrame(wx.Frame):
         sizer_1.Add(sizer_3, 0, wx.ALIGN_RIGHT, 0)
         self.SetSizer(sizer_1)
         sizer_1.Fit(self)
+
+        # prevent the param dialog to become smaller than 500*400
+        # otherwise the scrollbar jumps to the side and produces a
+        # deprecation warning in wxpythons scrolledpanel.py line 225 -
+        # which is expecting an integer, but uses previously a division
+        self.SetSizeHints(500, 400)
+
         self.Layout()
         # end wxGlade
 
