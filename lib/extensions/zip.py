@@ -55,7 +55,7 @@ class Zip(InkstitchExtension):
                         svg.write(etree.tostring(document).decode('utf-8'))
                 elif format == 'threadlist':
                     output_file = os.path.join(path, "%s_%s.txt" % (base_file_name, _("threadlist")))
-                    output = open(output_file, 'w')
+                    output = open(output_file, 'w', encoding='utf-8')
                     output.write(self.get_threadlist(stitch_plan, base_file_name))
                     output.close()
                 else:
