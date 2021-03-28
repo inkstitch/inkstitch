@@ -6,10 +6,10 @@ from threading import Event, Thread
 import wx
 from wx.lib.intctrl import IntCtrl
 
+from .dialogs import info_dialog
 from ..i18n import _
 from ..stitch_plan import patches_to_stitch_plan, stitch_plan_from_file
 from ..svg import PIXELS_PER_MM
-from .dialogs import info_dialog
 
 # L10N command label at bottom of simulator window
 COMMAND_NAMES = [_("STITCH"), _("JUMP"), _("TRIM"), _("STOP"), _("COLOR CHANGE")]
