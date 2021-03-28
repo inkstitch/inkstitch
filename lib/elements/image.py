@@ -1,3 +1,8 @@
+# Authors: see git history
+#
+# Copyright (c) 2010 Authors
+# Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
+
 from ..i18n import _
 from ..svg.path import get_node_transform
 from .element import EmbroideryElement

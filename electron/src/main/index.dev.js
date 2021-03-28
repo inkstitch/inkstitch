@@ -1,3 +1,11 @@
+/*
+ * Authors: see git history
+ *
+ * Copyright (c) 2010 Authors
+ * Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
+ *
+ */
+
 /**
  * This file is used specifically and only for development. It installs
  * `electron-debug` & `vue-devtools`. There shouldn't be any need to

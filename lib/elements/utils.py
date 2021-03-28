@@ -1,3 +1,8 @@
+# Authors: see git history
+#
+# Copyright (c) 2010 Authors
+# Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
+
 from ..commands import is_command
 from ..svg.tags import (EMBROIDERABLE_TAGS, SVG_IMAGE_TAG, SVG_PATH_TAG,
                         SVG_POLYLINE_TAG, SVG_TEXT_TAG)

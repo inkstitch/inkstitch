@@ -33,7 +33,7 @@
   },
   "keywords": [],
   "author": "lex",
-  "license": "GPL-3.0+",
+  "license": "GPL-3.0-or-later",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.22",
     "@fortawesome/free-solid-svg-icons": "^5.10.2",
