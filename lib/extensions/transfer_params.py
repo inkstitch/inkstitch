@@ -21,26 +21,29 @@ class TransferParams(InkstitchExtension):
             return
 
         copy_from = objects[0]
-        copy_to = objects[1:]
+        copy_from_attribs = self.get_inkstitch_attributes(copy_from)
+
+        copy_to_selection = objects[1:]
+        self.copy_to = []
 
         # extract copy_to group elements
-        for i, element in enumerate(copy_to):
+        for element in copy_to_selection:
             if element.tag == SVG_GROUP_TAG:
-                for descendant in element.iterdescendants():
-                    if descendant.tag in EMBROIDERABLE_TAGS:
-                        copy_to.append(descendant)
-                copy_to.pop(i)
+                for descendant in element.iterdescendants(EMBROIDERABLE_TAGS):
+                    self.copy_to.append(descendant)
+            elif element.tag in EMBROIDERABLE_TAGS:
+                self.copy_to.append(element)
 
         # remove inkstitch params from copy_to elements
-        for element in copy_to:
-            attribs = self.get_inkstitch_attributes(copy_to[0])
-            for attrib in attribs:
+        for element in self.copy_to:
+            copy_to_attribs = self.get_inkstitch_attributes(element)
+            for attrib in copy_to_attribs:
                 element.pop(attrib)
 
         # paste inkstitch params from copy_from element to copy_to elements
-        for attrib in self.get_inkstitch_attributes(copy_from):
-            for element in copy_to:
-                element.attrib[attrib] = copy_from.attrib[attrib]
+        for attrib in copy_from_attribs:
+            for element in self.copy_to:
+                element.attrib[attrib] = copy_from_attribs[attrib]
 
     def get_inkstitch_attributes(self, node):
         return {k: v for k, v in node.attrib.iteritems() if inkex.NSS['inkstitch'] in k}
