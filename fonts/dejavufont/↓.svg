@@ -9,11 +9,6 @@
     <marker id="marker8694" orient="auto" refY="0.49999997" refX="211.18742" markerHeight="0.99999994" markerWidth="422.37488">
       <path style="fill:none;stroke:#000000;stroke-width:0.99999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="M 0,0.49999997 H 422.37487" id="path4985" inkscape:connector-curvature="0"/>
     </marker>
-    <font inkscape:label="fonte 2" id="font8713" horiz-adv-x="1024">
-      <font-face font-family="" id="font-face8715" units-per-em="1024"/>
-      <missing-glyph id="missing-glyph8717" d="M0,0h1000v1024h-1000z"/>
-      <glyph d="m -61.588471,905.70121 -1.603617,-15.7689 18.976136,-1.87089 1.069078,20.84703 z" unicode="a" id="glyph8719" glyph-name="glyphe 1"/>
-    </font>
     <symbol id="inkstitch_satin_cut_point" style="display:inline">
       <title id="inkstitch_title9427-675">Satin Column cut point</title>
       <path id="inkstitch_circle13166-3" d="m 9.220113,0.07922893 c -1.9e-6,5.10672897 -4.1398241,9.24654997 -9.24655297,9.24654997 -5.10672933,0 -9.24655213,-4.139821 -9.24655403,-9.24654997 1e-7,-2.45233803 0.9741879,-4.80423503 2.7082531,-6.53830103 1.7340653,-1.734065 4.0859624,-2.708252 6.53830093,-2.708252 5.10673007,0 9.24655277,4.139823 9.24655297,9.24655303 0,0 0,0 0,0" style="opacity:1;vector-effect:none;fill:#fafafa;fill-opacity:1;fill-rule:evenodd;stroke:#003399;stroke-width:1.06500006;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.19500017, 3.19500017;stroke-dashoffset:0;stroke-opacity:1" inkscape:connector-curvature="0"/>
