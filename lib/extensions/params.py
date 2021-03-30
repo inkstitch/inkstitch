@@ -151,9 +151,13 @@ class ParamsTab(ScrolledPanel):
                 # because they're grayed out anyway.
                 return values
 
-        for name, input in self.param_inputs.iteritems():
+        for name, input in self.param_inputs.items():
             if input in self.changed_inputs and input != self.toggle_checkbox:
-                values[name] = input.GetValue()
+                try:
+                    values[name] = input.GetValue()
+                except AttributeError:
+                    # dropdown
+                    values[name] = input.GetSelection()
 
         return values
 
@@ -161,7 +165,7 @@ class ParamsTab(ScrolledPanel):
         values = self.get_values()
         for node in self.nodes:
             # print >> sys.stderr, "apply: ", self.name, node.id, values
-            for name, value in values.iteritems():
+            for name, value in values.items():
                 node.set_param(name, value)
 
     def on_change(self, callable):
@@ -181,9 +185,12 @@ class ParamsTab(ScrolledPanel):
     def load_preset(self, preset):
         preset_data = preset.get(self.name, {})
 
-        for name, value in preset_data.iteritems():
+        for name, value in preset_data.items():
             if name in self.param_inputs:
-                self.param_inputs[name].SetValue(value)
+                try:
+                    self.param_inputs[name].SetValue(value)
+                except AttributeError:
+                    self.param_inputs[name].SetSelection(int(value))
                 self.changed_inputs.add(self.param_inputs[name])
 
         self.update_toggle_state()
@@ -198,16 +205,16 @@ class ParamsTab(ScrolledPanel):
             description = _("These settings will be applied to %d objects.") % len(self.nodes)
 
         if any(len(param.values) > 1 for param in self.params):
-            description += u"\n • " + _("Some settings had different values across objects.  Select a value from the dropdown or enter a new one.")
+            description += "\n • " + _("Some settings had different values across objects.  Select a value from the dropdown or enter a new one.")
 
         if self.dependent_tabs:
             if len(self.dependent_tabs) == 1:
-                description += u"\n • " + _("Disabling this tab will disable the following %d tabs.") % len(self.dependent_tabs)
+                description += "\n • " + _("Disabling this tab will disable the following %d tabs.") % len(self.dependent_tabs)
             else:
-                description += u"\n • " + _("Disabling this tab will disable the following tab.")
+                description += "\n • " + _("Disabling this tab will disable the following tab.")
 
         if self.paired_tab:
-            description += u"\n • " + _("Enabling this tab will disable %s and vice-versa.") % self.paired_tab.name
+            description += "\n • " + _("Enabling this tab will disable %s and vice-versa.") % self.paired_tab.name
 
         self.description_text = description
 
@@ -271,6 +278,10 @@ class ParamsTab(ScrolledPanel):
                         input.SetValue(param.values[0])
 
                 input.Bind(wx.EVT_CHECKBOX, self.changed)
+            elif param.type == 'dropdown':
+                input = wx.Choice(self, wx.ID_ANY, choices=param.options)
+                input.SetSelection(int(param.values[0]))
+                input.Bind(wx.EVT_CHOICE, self.changed)
             elif len(param.values) > 1:
                 input = wx.ComboBox(self, wx.ID_ANY, choices=sorted(str(value) for value in param.values), style=wx.CB_DROPDOWN)
                 input.Bind(wx.EVT_COMBOBOX, self.changed)
@@ -285,7 +296,7 @@ class ParamsTab(ScrolledPanel):
             self.settings_grid.Add(input, proportion=1, flag=wx.ALIGN_CENTER_VERTICAL | wx.EXPAND | wx.LEFT, border=40)
             self.settings_grid.Add(wx.StaticText(self, label=param.unit or ""), proportion=1, flag=wx.ALIGN_CENTER_VERTICAL)
 
-        self.inputs_to_params = {v: k for k, v in self.param_inputs.iteritems()}
+        self.inputs_to_params = {v: k for k, v in self.param_inputs.items()}
 
         box.Add(self.settings_grid, proportion=1, flag=wx.ALL, border=10)
         self.SetSizer(box)
@@ -443,12 +454,19 @@ class SettingsFrame(wx.Frame):
             self.notebook.AddPage(tab, tab.name)
         sizer_1.Add(self.notebook, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
         sizer_1.Add(self.presets_panel, 0, flag=wx.EXPAND | wx.ALL, border=10)
-        sizer_3.Add(self.cancel_button, 0, wx.ALIGN_RIGHT | wx.RIGHT, 5)
-        sizer_3.Add(self.use_last_button, 0, wx.ALIGN_RIGHT | wx.RIGHT | wx.BOTTOM, 5)
-        sizer_3.Add(self.apply_button, 0, wx.ALIGN_RIGHT | wx.RIGHT | wx.BOTTOM, 5)
+        sizer_3.Add(self.cancel_button, 0, wx.RIGHT, 5)
+        sizer_3.Add(self.use_last_button, 0, wx.RIGHT | wx.BOTTOM, 5)
+        sizer_3.Add(self.apply_button, 0, wx.RIGHT | wx.BOTTOM, 5)
         sizer_1.Add(sizer_3, 0, wx.ALIGN_RIGHT, 0)
         self.SetSizer(sizer_1)
         sizer_1.Fit(self)
+
+        # prevent the param dialog to become smaller than 500*400
+        # otherwise the scrollbar jumps to the side and produces a
+        # deprecation warning in wxpythons scrolledpanel.py line 225 -
+        # which is expecting an integer, but uses previously a division
+        self.SetSizeHints(500, 400)
+
         self.Layout()
         # end wxGlade
 
@@ -491,7 +509,7 @@ class Params(InkstitchExtension):
                 element.order = z
                 nodes_by_class[cls].append(element)
 
-        return sorted(nodes_by_class.items(), key=lambda (cls, nodes): cls.__name__)
+        return sorted(list(nodes_by_class.items()), key=lambda cls_nodes: cls_nodes[0].__name__)
 
     def get_values(self, param, nodes):
         getter = 'get_param'
@@ -501,17 +519,16 @@ class Params(InkstitchExtension):
         else:
             getter = 'get_param'
 
-        values = filter(lambda item: item is not None,
-                        (getattr(node, getter)(param.name, param.default) for node in nodes))
+        values = [item for item in (getattr(node, getter)(param.name, param.default) for node in nodes) if item is not None]
 
         return values
 
     def group_params(self, params):
         def by_group_and_sort_index(param):
-            return param.group, param.sort_index
+            return param.group or "", param.sort_index
 
         def by_group(param):
-            return param.group
+            return param.group or ""
 
         return groupby(sorted(params, key=by_group_and_sort_index), by_group)
 
@@ -526,7 +543,7 @@ class Params(InkstitchExtension):
 
                 # If multiple tabs are enabled, make sure dependent
                 # tabs are grouped with the parent.
-                parent,
+                parent and parent.name,
 
                 # Within parent/dependents, put the parent first.
                 tab == parent
@@ -565,12 +582,13 @@ class Params(InkstitchExtension):
 
             parent_tab = None
             new_tabs = []
+
             for group, params in self.group_params(params):
                 tab_name = group or cls.element_name
                 tab = ParamsTab(parent, id=wx.ID_ANY, name=tab_name, params=list(params), nodes=nodes)
                 new_tabs.append(tab)
 
-                if group is None:
+                if group == "":
                     parent_tab = tab
 
             self.assign_parents(new_tabs, parent_tab)
@@ -594,7 +612,7 @@ class Params(InkstitchExtension):
             display = wx.Display(current_screen)
             display_size = display.GetClientArea()
             frame_size = frame.GetSize()
-            frame.SetPosition((display_size[0], display_size[3] / 2 - frame_size[1] / 2))
+            frame.SetPosition((int(display_size[0]), int(display_size[3]/2 - frame_size[1]/2)))
 
             frame.Show()
             app.MainLoop()

@@ -92,7 +92,7 @@ def bean_stitch(stitches, repeats):
     for stitch in stitches:
         new_stitches.append(stitch)
 
-        for i in xrange(repeats):
+        for i in range(repeats):
             new_stitches.extend(copy(new_stitches[-2:]))
 
     return new_stitches

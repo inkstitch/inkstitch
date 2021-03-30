@@ -16,7 +16,7 @@ def palettes():
         path = os.path.join(base_path, 'palettes')
         src_dir = get_bundled_dir('palettes')
         copy_files(glob(os.path.join(src_dir, "*")), path)
-    except Exception, exc:
+    except Exception as exc:
         return jsonify({"error": str(exc)}), 500
 
     return jsonify({"status": "success"})
@@ -25,7 +25,10 @@ def palettes():
 if sys.platform == "win32":
     # If we try to just use shutil.copy it says the operation requires elevation.
     def copy_files(files, dest):
+        import pythoncom
         import winutils
+
+        pythoncom.CoInitialize()
 
         if not os.path.exists(dest):
             os.makedirs(dest)

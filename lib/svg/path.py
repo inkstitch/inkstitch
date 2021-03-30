@@ -1,8 +1,7 @@
-import cubicsuperpath
 import inkex
-import simpletransform
-from tags import SVG_GROUP_TAG, SVG_LINK_TAG
+from lxml import etree
 
+from .tags import SVG_GROUP_TAG, SVG_LINK_TAG
 from .units import get_viewbox_transform
 
 
@@ -10,7 +9,7 @@ def apply_transforms(path, node):
     transform = get_node_transform(node)
 
     # apply the combined transform to this node's path
-    simpletransform.applyTransformToPath(transform, path)
+    path = path.transform(transform)
 
     return path
 
@@ -21,7 +20,7 @@ def compose_parent_transforms(node, mat):
 
     trans = node.get('transform')
     if trans:
-        mat = simpletransform.composeTransform(simpletransform.parseTransform(trans), mat)
+        mat = inkex.transforms.Transform(trans) * mat
     if node.getparent() is not None:
         if node.getparent().tag in [SVG_GROUP_TAG, SVG_LINK_TAG]:
             mat = compose_parent_transforms(node.getparent(), mat)
@@ -29,20 +28,22 @@ def compose_parent_transforms(node, mat):
 
 
 def get_node_transform(node):
+    """
+    if getattr(node, "composed_transform", None):
+        return node.composed_transform()
+    """
+
     # start with the identity transform
-    transform = [[1.0, 0.0, 0.0], [0.0, 1.0, 0.0]]
+    transform = inkex.transforms.Transform([[1.0, 0.0, 0.0], [0.0, 1.0, 0.0]])
 
     # this if is because sometimes inkscape likes to create paths outside of a layer?!
     if node.getparent() is not None:
         # combine this node's transform with all parent groups' transforms
         transform = compose_parent_transforms(node, transform)
 
-    if node.get('id', '').startswith('clone_'):
-        transform = simpletransform.parseTransform(node.get('transform', ''))
-
     # add in the transform implied by the viewBox
     viewbox_transform = get_viewbox_transform(node.getroottree().getroot())
-    transform = simpletransform.composeTransform(viewbox_transform, transform)
+    transform = viewbox_transform * transform
 
     return transform
 
@@ -63,9 +64,9 @@ def get_correction_transform(node, child=False):
 
     # now invert it, so that we can position our objects in absolute
     # coordinates
-    transform = simpletransform.invertTransform(transform)
+    transform = -transform
 
-    return simpletransform.formatTransform(transform)
+    return str(transform)
 
 
 def line_strings_to_csp(line_strings):
@@ -90,6 +91,6 @@ def point_lists_to_csp(point_lists):
 def line_strings_to_path(line_strings):
     csp = line_strings_to_csp(line_strings)
 
-    return inkex.etree.Element("path", {
-        "d": cubicsuperpath.formatPath(csp)
+    return etree.Element("path", {
+        "d": str(inkex.paths.CubicSuperPath(csp))
     })

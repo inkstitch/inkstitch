@@ -1,5 +1,5 @@
 
-dist: locales inx
+dist: version locales inx
 	bash bin/build-python
 	bash bin/build-electron
 	bash bin/build-distribution-archives
@@ -8,7 +8,7 @@ distclean:
 	rm -rf build dist inx locales *.spec *.tar.gz *.zip electron/node_modules electron/dist
 
 .PHONY: inx
-inx: locales
+inx: version locales
 	mkdir -p inx
 	python bin/generate-inx-files; \
 
@@ -23,8 +23,8 @@ messages.po:
 	find electron/src -name '*.html' -o -name '*.js' -o -name '*.vue' | xargs electron/node_modules/.bin/gettext-extract --quiet --attribute v-translate --output messages-vue.po
 	msgcat -o messages.po messages-babel.po messages-vue.po
 
-electron/src/renderer/assets/translations.json: $(addsuffix /LC_MESSAGES/inkstitch.po,$(wildcard locales/*))
-	find locales -name '*.po' -a ! -empty | \
+electron/src/renderer/assets/translations.json: $(wildcard translations/messages_*.po)
+	find translations -name '*.po' -a ! -empty | \
 		xargs electron/node_modules/.bin/gettext-compile --output electron/src/renderer/assets/translations.json
 
 %.po: %.mo
@@ -48,6 +48,10 @@ locales:
 	else \
 		mkdir -p locales; \
 	fi
+
+.PHONY: version
+version:
+	bash bin/generate-version-file
 
 .PHONY: style
 style:

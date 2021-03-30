@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <name>{% trans %}PDF Export{% endtrans %}</name>
-    <id>org.inkstitch.print.{{ locale }}</id>
-    <param name="extension" type="string" gui-hidden="true">print</param>
-    <effect>
+    <name>{% trans %}Simulator / Realistic Preview{% endtrans %}</name>
+    <id>org.inkstitch.simulator.{{ locale }}</id>
+    <param name="extension" type="string" gui-hidden="true">simulator</param>
+    <effect implements-custom-gui="true">
         <object-type>all</object-type>
         <effects-menu>
             <submenu name="Ink/Stitch">

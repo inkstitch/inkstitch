@@ -189,7 +189,9 @@
             <span class="current-command">{{currentCommand}}</span>
           </fieldset>
           <fieldset class="show-commands">
-            <legend>Show</legend>
+            <legend>
+                <translate>Show</translate>
+            </legend>
             <span>
               <input id="trim-checkbox" type="checkbox" v-model="showTrims"/>
               <label for="trim-checkbox"><font-awesome-icon icon="cut"/> <translate>trims</translate></label>
@@ -211,7 +213,7 @@
                   <font-awesome-icon icon="circle" transform="shrink-9"/>
                   <font-awesome-icon icon="minus" class="fa-thin-line"/>
                 </font-awesome-layers>
-                <span v-translate>needle<br/>points</span>
+                <span v-translate>needle points</span>
               </label>
             </span>
             <span>

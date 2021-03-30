@@ -1,10 +1,9 @@
 import logging
 from copy import copy
 
+import inkex
 from shapely.geometry import LineString, MultiPolygon, Polygon
 from shapely.ops import polygonize, unary_union
-
-import inkex
 
 from ..elements import EmbroideryElement
 from ..i18n import _
@@ -19,10 +18,11 @@ class BreakApart(InkstitchExtension):
     '''
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
-        self.OptionParser.add_option("-m", "--method", type="int", default=1, dest="method")
+        self.arg_parser.add_argument("-m", "--method", type=int, default=1, dest="method")
+        self.minimum_size = 5
 
     def effect(self):  # noqa: C901
-        if not self.selected:
+        if not self.svg.selected:
             inkex.errormsg(_("Please select one or more fill areas to break apart."))
             return
 
@@ -41,13 +41,12 @@ class BreakApart(InkstitchExtension):
             try:
                 paths.sort(key=lambda point_list: Polygon(point_list).area, reverse=True)
                 polygon = MultiPolygon([(paths[0], paths[1:])])
-                if self.geom_is_valid(polygon):
+                if self.geom_is_valid(polygon) and Polygon(paths[-1]).area > self.minimum_size:
                     continue
             except ValueError:
                 pass
 
             polygons = self.break_apart_paths(paths)
-            polygons = self.ensure_minimum_size(polygons, 5)
             if self.options.method == 1:
                 polygons = self.combine_overlapping_polygons(polygons)
             polygons = self.recombine_polygons(polygons)
@@ -106,6 +105,7 @@ class BreakApart(InkstitchExtension):
         polygons.sort(key=lambda polygon: polygon.area, reverse=True)
         multipolygons = []
         holes = []
+        self.ensure_minimum_size(polygons, self.minimum_size)
         for polygon in polygons:
             if polygon in holes:
                 continue

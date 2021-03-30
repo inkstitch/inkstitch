@@ -126,7 +126,7 @@ export default {
         return ""
       }
 
-      let label = "STITCH"
+      let label = this.$gettext("STITCH")
       switch (true) {
         case stitch.jump:
           label = this.$gettext("JUMP")

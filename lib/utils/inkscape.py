@@ -1,10 +1,10 @@
-from os.path import realpath, expanduser, join as path_join
 import sys
+from os.path import expanduser, realpath
 
 
 def guess_inkscape_config_path():
     if getattr(sys, 'frozen', None):
-        path = realpath(path_join(sys._MEIPASS, "..", "..", ".."))
+        path = realpath(sys._MEIPASS.split('extensions', 1)[0])
         if sys.platform == "win32":
             import win32api
 

@@ -1,16 +1,14 @@
-# -*- coding: UTF-8 -*-
-
 import json
 import os
 from copy import deepcopy
 
-import inkex
+from inkex import styles
+from lxml import etree
 
 from ..elements import nodes_to_elements
 from ..exceptions import InkstitchException
 from ..i18n import _, get_languages
 from ..stitches.auto_satin import auto_satin
-from ..svg import PIXELS_PER_MM
 from ..svg.tags import INKSCAPE_LABEL, SVG_GROUP_TAG, SVG_PATH_TAG
 from ..utils import Point
 from .font_variant import FontVariant
@@ -80,14 +78,14 @@ class Font(object):
 
     def _load_metadata(self):
         try:
-            with open(os.path.join(self.path, "font.json")) as metadata_file:
+            with open(os.path.join(self.path, "font.json"), encoding="utf-8") as metadata_file:
                 self.metadata = json.load(metadata_file)
         except IOError:
             pass
 
     def _load_license(self):
         try:
-            with open(os.path.join(self.path, "LICENSE")) as license_file:
+            with open(os.path.join(self.path, "LICENSE"), encoding="utf-8") as license_file:
                 self.license = license_file.read()
         except IOError:
             pass
@@ -101,14 +99,10 @@ class Font(object):
                     # we'll deal with missing variants when we apply lettering
                     pass
 
-    def _check_variants(self):
-        if self.variants.get(self.default_variant) is None:
-            raise FontError("font not found or has no default variant")
-
     name = localized_font_metadata('name', '')
     description = localized_font_metadata('description', '')
-    default_glyph = font_metadata('default_glyph', u"�")
-    leading = font_metadata('leading', 5, multiplier=PIXELS_PER_MM)
+    default_glyph = font_metadata('defalt_glyph', "�")
+    leading = font_metadata('leading', 100)
     kerning_pairs = font_metadata('kerning_pairs', {})
     auto_satin = font_metadata('auto_satin', True)
     min_scale = font_metadata('min_scale', 1.0)
@@ -124,7 +118,7 @@ class Font(object):
     horiz_adv_x_default = font_metadata('horiz_adv_x_default')
 
     # Define by <glyph glyph-name="space" unicode=" " horiz-adv-x="22" />, Example font.json : "horiz_adv_x_space":22,
-    word_spacing = font_metadata('horiz_adv_x_space', 0)
+    word_spacing = font_metadata('horiz_adv_x_space', 20)
 
     reversible = font_metadata('reversible', True)
 
@@ -149,10 +143,13 @@ class Font(object):
         return None
 
     def has_variants(self):
+        # returns available variants
         font_variants = []
         for variant in FontVariant.VARIANT_TYPES:
             if os.path.isfile(os.path.join(self.path, "%s.svg" % variant)):
                 font_variants.append(variant)
+        if not font_variants:
+            raise FontError(_("The font '%s' has no variants.") % self.name)
         return font_variants
 
     def render_text(self, text, destination_group, variant=None, back_and_forth=True, trim=False):
@@ -182,12 +179,23 @@ class Font(object):
 
         if self.auto_satin and len(destination_group) > 0:
             self._apply_auto_satin(destination_group, trim)
-        else:
-            # set stroke width because it is almost invisible otherwise (why?)
-            for element in destination_group.iterdescendants(SVG_PATH_TAG):
-                style = ['stroke-width:1px' if s.startswith('stroke-width') else s for s in element.get('style').split(';')]
-                style = ';'.join(style)
-                element.set('style', '%s' % style)
+
+        # make sure font stroke styles have always a similar look
+        for element in destination_group.iterdescendants(SVG_PATH_TAG):
+            dash_array = ""
+            stroke_width = ""
+            style = styles.Style(element.get('style'))
+
+            if style.get('fill') == 'none':
+                stroke_width = ";stroke-width:1px"
+                if style.get('stroke-width'):
+                    style.pop('stroke-width')
+
+                if style.get('stroke-dasharray') and style.get('stroke-dasharray') != 'none':
+                    stroke_width = ";stroke-width:0.5px"
+                    dash_array = ";stroke-dasharray:3, 1"
+
+                element.set('style', '%s%s%s' % (style.to_str(), stroke_width, dash_array))
 
         return destination_group
 
@@ -209,7 +217,8 @@ class Font(object):
         Returns:
             An svg:g element containing the rendered text.
         """
-        group = inkex.etree.Element(SVG_GROUP_TAG, {
+
+        group = etree.Element(SVG_GROUP_TAG, {
             INKSCAPE_LABEL: line
         })
 

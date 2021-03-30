@@ -31,11 +31,14 @@ def add_tie(stitches, tie_path):
 
 
 def add_tie_off(stitches):
-    add_tie(stitches, stitches[-1:-3:-1])
+    # tie_modus: 0 = both | 1 = before | 2 = after | 3 = neither
+    if stitches[-1].tie_modus not in [1, 3]:
+        add_tie(stitches, stitches[-1:-3:-1])
 
 
 def add_tie_in(stitches, upcoming_stitches):
-    add_tie(stitches, upcoming_stitches)
+    if stitches[0].tie_modus not in [2, 3]:
+        add_tie(stitches, upcoming_stitches)
 
 
 def add_ties(stitch_plan):

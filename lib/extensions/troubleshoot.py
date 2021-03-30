@@ -1,12 +1,13 @@
 import textwrap
 
-import inkex
+from inkex import errormsg
+from lxml import etree
 
 from ..commands import add_layer_commands
 from ..elements.validation import (ObjectTypeWarning, ValidationError,
                                    ValidationWarning)
 from ..i18n import _
-from ..svg import get_correction_transform
+from ..svg.path import get_correction_transform
 from ..svg.tags import (INKSCAPE_GROUPMODE, INKSCAPE_LABEL, SODIPODI_ROLE,
                         SVG_GROUP_TAG, SVG_PATH_TAG, SVG_TEXT_TAG,
                         SVG_TSPAN_TAG)
@@ -43,7 +44,7 @@ class Troubleshoot(InkstitchExtension):
             message += "\n\n"
             message += _("If you are still having trouble with a shape not being embroidered, "
                          "check if it is in a layer with an ignore command.")
-            inkex.errormsg(message)
+            errormsg(message)
 
     def insert_pointer(self, problem):
         correction_transform = get_correction_transform(self.troubleshoot_layer)
@@ -61,7 +62,7 @@ class Troubleshoot(InkstitchExtension):
         pointer_style = "stroke:#000000;stroke-width:0.2;fill:%s;" % (fill_color)
         text_style = "fill:%s;stroke:#000000;stroke-width:0.2;font-size:8px;text-align:center;text-anchor:middle" % (fill_color)
 
-        path = inkex.etree.Element(
+        path = etree.Element(
             SVG_PATH_TAG,
             {
                 "id": self.uniqueId("inkstitch__invalid_pointer__"),
@@ -73,7 +74,7 @@ class Troubleshoot(InkstitchExtension):
         )
         layer.insert(0, path)
 
-        text = inkex.etree.Element(
+        text = etree.Element(
             SVG_TEXT_TAG,
             {
                 INKSCAPE_LABEL: _('Description'),
@@ -85,7 +86,7 @@ class Troubleshoot(InkstitchExtension):
         )
         layer.append(text)
 
-        tspan = inkex.etree.Element(SVG_TSPAN_TAG)
+        tspan = etree.Element(SVG_TSPAN_TAG)
         tspan.text = problem.name
         text.append(tspan)
 
@@ -94,7 +95,7 @@ class Troubleshoot(InkstitchExtension):
         layer = svg.find(".//*[@id='__validation_layer__']")
 
         if layer is None:
-            layer = inkex.etree.Element(
+            layer = etree.Element(
                 SVG_GROUP_TAG,
                 {
                     'id': '__validation_layer__',
@@ -109,7 +110,7 @@ class Troubleshoot(InkstitchExtension):
 
         add_layer_commands(layer, ["ignore_layer"])
 
-        error_group = inkex.etree.SubElement(
+        error_group = etree.SubElement(
             layer,
             SVG_GROUP_TAG,
             {
@@ -118,7 +119,7 @@ class Troubleshoot(InkstitchExtension):
             })
         layer.append(error_group)
 
-        warning_group = inkex.etree.SubElement(
+        warning_group = etree.SubElement(
             layer,
             SVG_GROUP_TAG,
             {
@@ -127,7 +128,7 @@ class Troubleshoot(InkstitchExtension):
             })
         layer.append(warning_group)
 
-        type_warning_group = inkex.etree.SubElement(
+        type_warning_group = etree.SubElement(
             layer,
             SVG_GROUP_TAG,
             {
@@ -145,7 +146,7 @@ class Troubleshoot(InkstitchExtension):
         svg = self.document.getroot()
         text_x = str(float(svg.get('viewBox', '0 0 800 0').split(' ')[2]) + 5.0)
 
-        text_container = inkex.etree.Element(
+        text_container = etree.Element(
             SVG_TEXT_TAG,
             {
                 "x": text_x,
@@ -160,7 +161,7 @@ class Troubleshoot(InkstitchExtension):
             ["", ""]
         ]
 
-        for problem_type, problems in problem_types.items():
+        for problem_type, problems in list(problem_types.items()):
             if problem_type == "error":
                 text_color = "#ff0000"
                 problem_type_header = _("Errors")
@@ -202,7 +203,7 @@ class Troubleshoot(InkstitchExtension):
         text = self.split_text(text)
 
         for text_line in text:
-            tspan = inkex.etree.Element(
+            tspan = etree.Element(
                 SVG_TSPAN_TAG,
                 {
                     SODIPODI_ROLE: "line",

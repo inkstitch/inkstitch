@@ -1,11 +1,12 @@
 import math
+import sys
 from itertools import chain, groupby
 
+import inkex
 import numpy
+from lxml import etree
 from numpy import diff, setdiff1d, sign
 from shapely import geometry as shgeo
-
-import inkex
 
 from ..elements import Stroke
 from ..i18n import _
@@ -26,7 +27,7 @@ class ConvertToSatin(InkstitchExtension):
         if not self.get_elements():
             return
 
-        if not self.selected:
+        if not self.svg.selected:
             inkex.errormsg(_("Please select at least one line to convert to a satin column."))
             return
 
@@ -120,8 +121,15 @@ class ConvertToSatin(InkstitchExtension):
 
         path = shgeo.LineString(path)
 
-        left_rail = path.parallel_offset(stroke_width / 2.0, 'left', **style_args)
-        right_rail = path.parallel_offset(stroke_width / 2.0, 'right', **style_args)
+        try:
+            left_rail = path.parallel_offset(stroke_width / 2.0, 'left', **style_args)
+            right_rail = path.parallel_offset(stroke_width / 2.0, 'right', **style_args)
+        except ValueError:
+            # TODO: fix this error automatically
+            # Error reference: https://github.com/inkstitch/inkstitch/issues/964
+            inkex.errormsg(_("Ink/Stitch cannot convert your stroke into a satin column. "
+                             "Please break up your path and try again.") + '\n')
+            sys.exit(1)
 
         if not isinstance(left_rail, shgeo.LineString) or \
                 not isinstance(right_rail, shgeo.LineString):
@@ -304,12 +312,11 @@ class ConvertToSatin(InkstitchExtension):
                 d += "%s,%s " % (x, y)
             d += " "
 
-        return inkex.etree.Element(SVG_PATH_TAG,
-                                   {
-                                       "id": self.uniqueId("path"),
-                                       "style": path_style,
-                                       "transform": correction_transform,
-                                       "d": d,
-                                       INKSTITCH_ATTRIBS['satin_column']: "true",
-                                   }
-                                   )
+        return etree.Element(SVG_PATH_TAG,
+                             {
+                              "id": self.uniqueId("path"),
+                              "style": path_style,
+                              "transform": correction_transform,
+                              "d": d,
+                              INKSTITCH_ATTRIBS['satin_column']: "true",
+                             })

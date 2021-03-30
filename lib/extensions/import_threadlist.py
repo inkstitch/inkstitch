@@ -12,20 +12,23 @@ from .base import InkstitchExtension
 class ImportThreadlist(InkstitchExtension):
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
-        self.OptionParser.add_option("-f", "--filepath", type="str", default="", dest="filepath")
-        self.OptionParser.add_option("-m", "--method", type="int", default=1, dest="method")
-        self.OptionParser.add_option("-t", "--palette", type="str", default=None, dest="palette")
+        self.arg_parser.add_argument("-f", "--filepath", type=str, default="", dest="filepath")
+        self.arg_parser.add_argument("-m", "--method", type=int, default=1, dest="method")
+        self.arg_parser.add_argument("-t", "--palette", type=str, default=None, dest="palette")
 
     def effect(self):
         # Remove selection, we want all the elements in the document
-        self.selected = {}
+        self.svg.selected.clear()
 
         if not self.get_elements():
             return
 
         path = self.options.filepath
         if not os.path.exists(path):
-            print >> sys.stderr, _("File not found.")
+            inkex.errormsg(_("File not found."))
+            sys.exit(1)
+        if os.path.isdir(path):
+            inkex.errormsg(_("The filepath specified is not a file but a dictionary.\nPlease choose a threadlist file to import."))
             sys.exit(1)
 
         method = self.options.method
@@ -35,11 +38,11 @@ class ImportThreadlist(InkstitchExtension):
             colors = self.parse_threadlist_by_catalog_number(path)
 
         if all(c is None for c in colors):
-            print >>sys.stderr, _("Couldn't find any matching colors in the file.")
+            inkex.errormsg(_("Couldn't find any matching colors in the file."))
             if method == 1:
-                print >>sys.stderr, _('Please try to import as "other threadlist" and specify a color palette below.')
+                inkex.errormsg(_('Please try to import as "other threadlist" and specify a color palette below.'))
             else:
-                print >>sys.stderr, _("Please chose an other color palette for your design.")
+                inkex.errormsg(_("Please chose an other color palette for your design."))
             sys.exit(1)
 
         # Iterate through the color blocks to apply colors

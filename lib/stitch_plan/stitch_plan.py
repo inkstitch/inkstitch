@@ -5,7 +5,8 @@ from .stitch import Stitch
 from .ties import add_ties
 
 
-def patches_to_stitch_plan(patches, collapse_len=3.0 * PIXELS_PER_MM, disable_ties=False):
+def patches_to_stitch_plan(patches, collapse_len=None, disable_ties=False):
+
     """Convert a collection of inkstitch.element.Patch objects to a StitchPlan.
 
     * applies instructions embedded in the Patch such as trim_after and stop_after
@@ -13,6 +14,9 @@ def patches_to_stitch_plan(patches, collapse_len=3.0 * PIXELS_PER_MM, disable_ti
     * adds jump-stitches between patches if necessary
     """
 
+    if collapse_len is None:
+        collapse_len = 3.0
+    collapse_len = collapse_len * PIXELS_PER_MM
     stitch_plan = StitchPlan()
     color_block = stitch_plan.new_color_block(color=patches[0].color)
 
@@ -38,7 +42,7 @@ def patches_to_stitch_plan(patches, collapse_len=3.0 * PIXELS_PER_MM, disable_ti
             if len(color_block) and (patch.stitches[0] - color_block.stitches[-1]).length() > collapse_len:
                 color_block.add_stitch(patch.stitches[0], jump=True)
 
-        color_block.add_stitches(patch.stitches, no_ties=patch.stitch_as_is)
+        color_block.add_stitches(stitches=patch.stitches, tie_modus=patch.tie_modus, no_ties=patch.stitch_as_is)
 
         if patch.trim_after:
             color_block.add_stitch(trim=True)

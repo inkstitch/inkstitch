@@ -1,3 +1,4 @@
+from inkex import Path
 from shapely import geometry as shgeo
 
 from ..i18n import _
@@ -36,7 +37,7 @@ class Polyline(EmbroideryElement):
 
     @property
     @param('polyline', _('Manual stitch along path'), type='toggle', inverse=True)
-    def satin_column(self):
+    def polyline(self):
         return self.get_boolean_param("polyline")
 
     @property
@@ -61,8 +62,8 @@ class Polyline(EmbroideryElement):
         # svg transforms that is in our superclass, we'll convert the polyline
         # to a degenerate cubic superpath in which the bezier handles are on
         # the segment endpoints.
-
-        path = [[[point[:], point[:], point[:]] for point in self.points]]
+        path = self.node.get_path()
+        path = Path(path).to_superpath()
 
         return path
 
