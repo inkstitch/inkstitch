@@ -47,11 +47,3 @@ class TransferParams(InkstitchExtension):
 
     def get_inkstitch_attributes(self, node):
         return {k: v for k, v in node.attrib.iteritems() if inkex.NSS['inkstitch'] in k}
-
-    def get_selected_in_order(self):
-        selected = []
-        for i in self.options.ids:
-            path = '//*[@id="%s"]' % i
-            for node in self.document.xpath(path, namespaces=inkex.NSS):
-                selected.append(node)
-        return selected
