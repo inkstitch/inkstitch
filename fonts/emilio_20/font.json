@@ -1,11 +1,11 @@
 {
     "name": "Emilio_20",
-    "description": "Emilio 20 Is a font with capital only ans numbers. em is 48.5 millimeter wide at 100% scale.  Can be scaled down to 40% or up to 140%.  Every satin has zigzag underlay",
+    "description": "Emilio 20 is a font with capital only ans numbers. M is 48.5 millimeter wide at 100% scale. Can be scaled down to 40% or up to 140%. Every satin has zigzag underlay",
     "leading": 200,
     "auto_satin": false,
     "reversible": false,
     "default_glyph": " ",
-    "min_scale": 0.4,
+    "min_scale": 0.7,
     "max_scale": 1.4,
     "horiz_adv_x_default": 165,
     "horiz_adv_x_space": 90,

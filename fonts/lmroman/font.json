@@ -1,6 +1,6 @@
 {
     "name": "LM Roman",
-    "description": "Latin Modern 10 Bold italic. The capital em is 42.5 millimeter wide at 100% scale.  Can be scaled down to 70% or up to 130%.  Every satin has zigzag underlay",
+    "description": "Latin Modern 10 Bold italic. The capital M is 42.5 millimeter wide at 100% scale.  Can be scaled down to 70% or up to 130%.  Every satin has zigzag underlay",
     "leading": 150,
     "auto_satin": false,
     "reversible": true,
