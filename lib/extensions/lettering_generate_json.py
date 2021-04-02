@@ -24,6 +24,7 @@ class LetteringGenerateJson(InkstitchExtension):
         self.arg_parser.add_argument("-d", "--font-description", type=str, default="Description", dest="font_description")
         self.arg_parser.add_argument("-s", "--auto-satin", type=Boolean, default="true", dest="auto_satin")
         self.arg_parser.add_argument("-r", "--reversible", type=Boolean, default="true", dest="reversible")
+        self.arg_parser.add_argument("-u", "--letter-case", type=str, default="", dest="letter_case")
         self.arg_parser.add_argument("-g", "--default-glyph", type=str, default="", dest="default_glyph")
         self.arg_parser.add_argument("-i", "--min-scale", type=float, default=1.0, dest="min_scale")
         self.arg_parser.add_argument("-a", "--max-scale", type=float, default=1.0, dest="max_scale")
@@ -68,6 +69,7 @@ class LetteringGenerateJson(InkstitchExtension):
                 'leading': leading,
                 'auto_satin': self.options.auto_satin,
                 'reversible': self.options.reversible,
+                'letter_case': self.options.letter_case,
                 'default_glyph': self.options.default_glyph,
                 'min_scale': round(self.options.min_scale, 1),
                 'max_scale': round(self.options.max_scale, 1),
