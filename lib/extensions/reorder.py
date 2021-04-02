@@ -3,24 +3,12 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-import inkex
-
 from .base import InkstitchExtension
 
 
 class Reorder(InkstitchExtension):
     # Remove selected objects from the document and readd them in the order they
     # were selected.
-
-    def get_selected_in_order(self):
-        selected = []
-
-        for i in self.options.ids:
-            path = '//*[@id="%s"]' % i
-            for node in self.document.xpath(path, namespaces=inkex.NSS):
-                selected.append(node)
-
-        return selected
 
     def effect(self):
         objects = self.get_selected_in_order()

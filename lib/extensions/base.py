@@ -188,6 +188,14 @@ class InkstitchExtension(inkex.Effect):
             self.no_elements_error()
         return False
 
+    def get_selected_in_order(self):
+        selected = []
+        for i in self.options.ids:
+            path = '//*[@id="%s"]' % i
+            for node in self.document.xpath(path, namespaces=inkex.NSS):
+                selected.append(node)
+        return selected
+
     def elements_to_patches(self, elements):
         patches = []
         for element in elements:
