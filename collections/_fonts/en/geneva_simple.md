@@ -11,10 +11,10 @@ preview_image:
 
 ![Geneva Simple Sans](/assets/images/fonts/geneva_simple_sans.png)
 
-[Download Font License](https://github.com/inkstitch/inkstitch/blob/kerning/fonts/geneva_simple/LICENSE)
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/geneva_simple/LICENSE)
 
 ## Sans Rounded
 
 ![Geneva Simple Sans](/assets/images/fonts/geneva_simple_sans_rounded.png)
 
-[Download Font License](https://github.com/inkstitch/inkstitch/blob/kerning/fonts/geneva_rounded/LICENSE)
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/geneva_rounded/LICENSE)

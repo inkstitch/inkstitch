@@ -9,4 +9,4 @@ preview_image: /assets/images/fonts/deja_vue_serif.png
 
 ![Deja Vue Serif Semi-condensed](/assets/images/fonts/deja_vue_serif.png)
 
-[Download Font License](https://github.com/inkstitch/inkstitch/blob/kerning/fonts/dejavuefont/LICENSE)
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/dejavuefont/LICENSE)

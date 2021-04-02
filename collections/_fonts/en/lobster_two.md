@@ -8,4 +8,4 @@ preview_image: /assets/images/fonts/lobster_two_bold_italic.png
 ## Bold Italic
 ![Lobster Two](/assets/images/fonts/lobster_two_bold_italic.png)
 
-[Download Font License](https://github.com/inkstitch/inkstitch/blob/kerning/fonts/lobster/LICENSE)
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/lobster/LICENSE)

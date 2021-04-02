@@ -82,14 +82,24 @@ docs:
       url: /de/docs/commands/
     - title: Füllstich Werkzeuge
       url: /de/docs/fill-tools/
+    - title: "Schriftwerkzeuge"
+      url: /de/docs/font-tools/
+    - title: "Garnliste importieren"
+      url: /de/docs/import-threadlist/
     - title: Add-Ons installieren
       url: /de/docs/addons/
     - title: Lettering
       url: /de/docs/lettering/
     - title: Parameter
       url: /de/docs/params/
+    - title: "Einstellungen"
+      url: /de/docs/preferences/
+    - title: "Auswahlreihenfolge übernehmen"
+      url: /de/docs/reorder/
     - title: Satin Werkzeuge
       url: /de/docs/satin-tools/
+    - title: "Stickparameter transferieren"
+      url: /fr/docs/transfer-params/
     - title: "Fehlerbehebung"
       url: /de/docs/troubleshoot/
     - title: Visualisierung
@@ -123,10 +133,10 @@ docs:
 
 # fonts
 fonts:
-  - title: Text (Lettering)
+  - title: Schrift Tutorials
     children:
-      - title: Schriften erstellen
-        url: /de/fonts/create/
+      - title: Neue Schriftarten erstellen
+        url: /de/tutorials/font-creation/
   - title: Schriftarten
     url: /de/fonts/font-library/
     

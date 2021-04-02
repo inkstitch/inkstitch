@@ -86,14 +86,24 @@ docs:
       url: /fr/docs/commands/
     - title: "Outils de remplissage"
       url: /fr/docs/fill-tools/
+    - title: "Font tools"
+      url: /fr/docs/font-tools/
+    - title: "Import threadlist"
+      url: /fr/docs/import-threadlist/
     - title: Installer les Add-Ons
       url: /fr/docs/addons/
     - title: "Lettrage"
       url: /fr/docs/lettering/
     - title: "Paramètres"
       url: /fr/docs/params/
+    - title: "Preferences"
+      url: /fr/docs/preferences/
+    - title: "Reorder"
+      url: /fr/docs/reorder/
     - title: "Outils Satin"
       url: /fr/docs/satin-tools/
+    - title: "Transfer Params"
+      url: /fr/docs/transfer-params/
     - title: "Dépannage pour objets"
       url: /fr/docs/troubleshoot/
     - title: Visualize
@@ -127,10 +137,10 @@ docs:
 
 # fonts
 fonts:
-  - title: Lettering
+  - title: Font Tutorials
     children:
-      - title: Create Fonts
-        url: /fr/fonts/create/
+      - title: Create New Fonts
+        url: /fr/tutorials/font-creation
   - title: Font Library
     url: /fr/fonts/font-library/
     

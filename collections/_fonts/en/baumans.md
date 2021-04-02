@@ -7,4 +7,4 @@ preview_image: /assets/images/fonts/baumans.png
 ---
 ![Baumans](/assets/images/fonts/baumans.png)
 
-[Download Font License](https://github.com/inkstitch/inkstitch/blob/kerning/fonts/baumans/LICENSE)
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/baumans/LICENSE)

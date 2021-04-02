@@ -10,8 +10,8 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-# theme                    : "minimal-mistakes-jekyll"
-remote_theme           : "mmistakes/minimal-mistakes"
+theme                    : "minimal-mistakes-jekyll"
+# remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
@@ -280,6 +280,9 @@ languages:
   -
     - fr
     - Français
+  -
+    - ru
+    - Русский
 
 # Directories
 collections_dir: collections
@@ -350,6 +353,10 @@ defaults:
       path: "_posts/fr"
     values:
       lang: fr
+  - scope:
+      path: "_posts/ru/"
+    values:
+      lang: ru
   # _pages
   - scope:
       type: pages
@@ -372,6 +379,11 @@ defaults:
       path: "_pages/fr"
     values:
       lang: fr
+    # ru
+  - scope:
+      path: "_pages/ru"
+    values:
+      lang: ru
   # _docs
   - scope:
       type: docs
@@ -393,6 +405,11 @@ defaults:
       path: "_docs/fr"
     values:
       lang: fr
+    # ru
+  - scope:
+      path: "_docs/ru"
+    values:
+      lang: ru
   # _lettering
   - scope:
       type: lettering
@@ -415,6 +432,11 @@ defaults:
       path: "_lettering/fr"
     values:
       lang: fr
+    # ru
+  - scope:
+      path: "_lettering/ru"
+    values:
+      lang: ru
   # _fonts
   - scope:
       type: fonts
@@ -436,6 +458,11 @@ defaults:
       path: "_fonts/fr"
     values:
       lang: fr
+    # ru
+  - scope:
+      path: "_fonts/ru"
+    values:
+      lang: ru
   # _tutorials
   - scope:
       type: tutorials
@@ -457,6 +484,11 @@ defaults:
       path: "_tutorials/fr"
     values:
       lang: fr
+    # ru
+  - scope:
+      path: "_tutorials/ru"
+    values:
+      lang: ru
   # _tutorial
   - scope: 
       type: tutorial
@@ -479,6 +511,11 @@ defaults:
       path: "_tutorial/fr"
     values:
       lang: fr
+    # ru
+  - scope:
+      path: "_tutorial/ru"
+    values:
+      lang: ru
   # _developers
   - scope:
       type: developers
@@ -500,6 +537,11 @@ defaults:
       path: "_developers/fr"
     values:
       lang: fr
+    # ru
+  - scope:
+      path: "_developers/ru"
+    values:
+      lang: ru
       
           
 # It'd be nice to have "lang" set through wildcard, using * for directories:
