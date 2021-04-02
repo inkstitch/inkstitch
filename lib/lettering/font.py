@@ -106,6 +106,7 @@ class Font(object):
 
     name = localized_font_metadata('name', '')
     description = localized_font_metadata('description', '')
+    letter_case = font_metadata('letter_case', '')
     default_glyph = font_metadata('defalt_glyph', "�")
     leading = font_metadata('leading', 100)
     kerning_pairs = font_metadata('kerning_pairs', {})
@@ -229,6 +230,11 @@ class Font(object):
 
         last_character = None
         for character in line:
+            if self.letter_case == "upper":
+                character = character.upper()
+            elif self.letter_case == "lower":
+                character = character.lower()
+
             if character == " ":
                 position.x += self.word_spacing
                 last_character = None
