@@ -6,7 +6,9 @@
     <effect implements-custom-gui="true">
         <object-type>all</object-type>
         <effects-menu>
-            <submenu name="Ink/Stitch" />
+            <submenu name="Ink/Stitch">
+                <submenu name="{% trans %}Thread Color Management{% endtrans %}" />
+            </submenu>
         </effects-menu>
     </effect>
     <script>
