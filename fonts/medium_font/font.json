@@ -1,10 +1,15 @@
 {
-  "name": "Ink/Stitch Medium Font",
-  "description": "A basic font suited for medium-sized characters.  The capital em is 0.6 inches wide at 100% scale.  Can be scaled down to 75% or up to 150%.  Every satin has contour underlay.",
-  "leading": 24,
-  "horiz_adv_x_space": 51,
-  "auto_satin": true,
-  "default_glyph": "�",
-  "min_scale": 0.75,
-  "max_scale": 2.0
+    "name": "Geneva Simple Sans Rounded",
+    "description": "A basic font suited for medium-sized characters.  The capital em is 0.6 inches wide at 100% scale.  Can be scaled down to 75% or up to 150%.  Every satin has contour underlay.",
+    "leading": 90,
+    "auto_satin": true,
+    "reversible": true,
+    "default_glyph": "�",
+    "min_scale": 0.7,
+    "max_scale": 2.0,
+    "horiz_adv_x_default": null,
+    "horiz_adv_x_space": 51,
+    "units_per_em": 90,
+    "horiz_adv_x": {},
+    "kerning_pairs": {}
 }
