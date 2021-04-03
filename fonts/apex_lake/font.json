@@ -1,6 +1,6 @@
 {
     "name": "Apex Lake",
-    "description": "Police de lettrines 59.4 par 57.8mm",
+    "description": "Police de lettrines 59.4 par 57.8mm. Majuscules, chiffres, ! et ?",
     "leading": 232,
     "auto_satin": false,
     "reversible": false,
