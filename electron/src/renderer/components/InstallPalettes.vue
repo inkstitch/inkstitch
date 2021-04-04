@@ -19,7 +19,7 @@
         <translate>Ink/Stitch can install palettes for Inkscape matching the thread colors from popular machine embroidery thread manufacturers.
         </translate>
       </v-card-text>
-      <v-file-input class="mb-3 mx-3" webkitdirectory hide-details v-model="path"
+      <v-file-input class="mb-3 mx-3" webkitdirectory hide-details v-model="path" truncate-length="45"
                     :label="$gettext('Choose Inkscape directory')"></v-file-input>
       <v-card-actions>
         <v-btn text color="primary" v-on:click="install">
