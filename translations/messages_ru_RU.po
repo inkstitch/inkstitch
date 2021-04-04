@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-04-03 00:57+0000\n"
-"PO-Revision-Date: 2021-04-03 00:59\n"
+"POT-Creation-Date: 2021-04-04 01:00+0000\n"
+"PO-Revision-Date: 2021-04-04 01:02\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -1933,6 +1933,10 @@ msgstr "Импортировать список ниток"
 msgid "Choose file"
 msgstr "Выбрать файл"
 
+#: templates/import_threadlist.xml:20 templates/install.xml:10
+msgid "Thread Color Management"
+msgstr ""
+
 #: templates/input.xml:9
 #, python-format
 msgid "convert %(file_extension)s file to Ink/Stitch manual-stitch paths"
@@ -1962,8 +1966,8 @@ msgstr "Папка пользовательских шрифтов"
 #: templates/lettering_custom_font_dir.xml:10
 #: templates/lettering_generate_json.xml:10
 #: templates/lettering_remove_kerning.xml:10
-msgid "Font Tools"
-msgstr "Инструменты шрифта"
+msgid "Font Management"
+msgstr ""
 
 #: templates/lettering_custom_font_dir.xml:15
 msgid "Set a custom directory for additional fonts to be used with the lettering tool."
@@ -2243,8 +2247,8 @@ msgid "Remove Print Settings from SVG metadata"
 msgstr "Убрать настройки печати из данных SVG"
 
 #: templates/reorder.xml:3
-msgid "Reorder"
-msgstr "Упорядочить"
+msgid "Re-stack objects in order of selection"
+msgstr ""
 
 #: templates/simulator.xml:3
 msgid "Simulator / Realistic Preview"

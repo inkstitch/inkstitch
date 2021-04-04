@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-04-03 00:57+0000\n"
-"PO-Revision-Date: 2021-04-03 00:59\n"
+"POT-Creation-Date: 2021-04-04 01:00+0000\n"
+"PO-Revision-Date: 2021-04-04 01:02\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -25,17 +25,17 @@ msgstr ""
 #. name of font in fonts/baumans
 #: inkstitch-fonts-metadata.py:2
 msgid "Baumans"
-msgstr ""
+msgstr "Baumans"
 
 #. name of font in fonts/chopin
 #: inkstitch-fonts-metadata.py:6
 msgid "Chopin Script"
-msgstr ""
+msgstr "Chopin Script"
 
 #. name of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:10
 msgid "Dejavu Serif Semi-condensed"
-msgstr ""
+msgstr "Dejavu Serif Semi-condensed"
 
 #. description of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:12
@@ -66,7 +66,7 @@ msgstr "Convient aux petites polices (6 à 15 mm)"
 #. name of font in fonts/lobster
 #: inkstitch-fonts-metadata.py:22
 msgid "Lobster Two Bold Italic"
-msgstr ""
+msgstr "Lobster Two Bold Italic"
 
 #. name of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:26
@@ -369,28 +369,28 @@ msgstr "Ce paramètre appliquera un angle de remplissage personnalisé pour le c
 
 #: lib/elements/element.py:252
 msgid "Allow lock stitches"
-msgstr ""
+msgstr "Autoriser les points d'arrêts"
 
 #: lib/elements/element.py:253
 msgid "Tie thread at the beginning and/or end of this object. Manual stitch will not add lock stitches."
-msgstr ""
+msgstr "Autorise l'ajout de points d'arrêts sur l’élément uniquement au début ou en fin ou en début et fin ou jamais. Les points manuels ne sont pas concernés par les points d'arrêts."
 
 #. options to allow lock stitch before and after objects
 #: lib/elements/element.py:257
 msgid "Both"
-msgstr ""
+msgstr "Au début et à la fin"
 
 #: lib/elements/element.py:257
 msgid "Before"
-msgstr ""
+msgstr "Au début"
 
 #: lib/elements/element.py:257
 msgid "After"
-msgstr ""
+msgstr "A la fin"
 
 #: lib/elements/element.py:257
 msgid "Neither"
-msgstr ""
+msgstr "Jamais"
 
 #: lib/elements/element.py:299
 #, python-format
@@ -970,7 +970,7 @@ msgstr "Utiliser les derniers paramètres"
 
 #: lib/extensions/transfer_params.py:19
 msgid "This function transfers Ink/Stitch parameters from the first selected element to the rest of the selection. Please select at least two elements."
-msgstr ""
+msgstr "Cette fonction transfère les paramètres de Ink/Stitch du premier élément sélectionné vers le reste de la sélection. Veuillez sélectionner au moins deux éléments."
 
 #: lib/extensions/troubleshoot.py:48
 msgid "All selected shapes are valid! "
@@ -1209,7 +1209,7 @@ msgstr "Générer les fichiers INX"
 #: lib/lettering/font.py:158
 #, python-format
 msgid "The font '%s' has no variants."
-msgstr ""
+msgstr "Aucun fichier variant trouvé pour la police '%s'."
 
 #. low-level file error.  %(error)s is (hopefully?) translated by
 #. the user's system automatically.
@@ -1791,7 +1791,7 @@ msgstr "Format G-code"
 
 #: templates/about.xml:3 templates/about.xml:6
 msgid "About"
-msgstr ""
+msgstr "A propos"
 
 #: templates/about.xml:10
 msgid "An open-source machine embroidery design platform based on Inkscape."
@@ -1807,7 +1807,7 @@ msgstr "Agencement automatique de colonnes satin"
 
 #: templates/auto_satin.xml:5
 msgid "Trim jump stitches"
-msgstr "Couper après des sauts"
+msgstr "Couper les sauts de fil"
 
 #: templates/auto_satin.xml:6
 msgid "Preserve order of satin columns"
@@ -1893,7 +1893,7 @@ msgstr "Visualiser et exporter"
 
 #: templates/embroider_settings.xml:3
 msgid "Preferences"
-msgstr ""
+msgstr "Préférences"
 
 #: templates/embroider_settings.xml:13
 msgid "Output Settings"
@@ -1905,7 +1905,7 @@ msgstr "Distance maximale sans points d'arrêt (mm)"
 
 #: templates/embroider_settings.xml:17
 msgid "Jump stitches smaller than this will be treated as normal stitches."
-msgstr "Des points sautés plus petits que cela seront considérés comme des points ordinaires."
+msgstr "Des sauts de fil plus petits que cela seront considérés comme des points ordinaires."
 
 #: templates/flip.xml:3
 msgid "Flip Satin Column Rails"
@@ -1932,6 +1932,10 @@ msgstr "Importer liste de fils"
 #: templates/import_threadlist.xml:6
 msgid "Choose file"
 msgstr "Choisir fils"
+
+#: templates/import_threadlist.xml:20 templates/install.xml:10
+msgid "Thread Color Management"
+msgstr ""
 
 #: templates/input.xml:9
 #, python-format
@@ -1962,8 +1966,8 @@ msgstr "Répertoire de police personnalisée"
 #: templates/lettering_custom_font_dir.xml:10
 #: templates/lettering_generate_json.xml:10
 #: templates/lettering_remove_kerning.xml:10
-msgid "Font Tools"
-msgstr "Outils de Police"
+msgid "Font Management"
+msgstr ""
 
 #: templates/lettering_custom_font_dir.xml:15
 msgid "Set a custom directory for additional fonts to be used with the lettering tool."
@@ -1971,7 +1975,7 @@ msgstr "Définissez un répertoire personnalisé pour les polices supplémentair
 
 #: templates/lettering_custom_font_dir.xml:21
 msgid "Usage: The custom font directory must contain a subdirectory for each font."
-msgstr ""
+msgstr "Important: le répertoire de polices personnalisées doit contenir un sous-répertoire pour chaque police et pas le contenu d'une police directement."
 
 #: templates/lettering_generate_json.xml:3
 msgid "Generate JSON"
@@ -1983,11 +1987,11 @@ msgstr "Génère un fichier font.json qui peut être utilisé par l'outil de let
 
 #: templates/lettering_generate_json.xml:17
 msgid "The generated file can be viewed and updated with a standard text editor tool."
-msgstr ""
+msgstr "Le fichier généré peut être visualisé et mis à jour avec un outil d'édition de texte standard (Bloc-notes, Notepad++...)."
 
 #: templates/lettering_generate_json.xml:21
 msgid "SVG Font File"
-msgstr ""
+msgstr "Fichier svg de la police"
 
 #: templates/lettering_generate_json.xml:25
 msgid "Name"
@@ -2011,15 +2015,15 @@ msgstr "Si désactivé, la broderie en aller-retour ne sera pas possible pour ce
 
 #: templates/lettering_generate_json.xml:36
 msgid "Force letter case"
-msgstr ""
+msgstr "Forcer la casse"
 
 #: templates/lettering_generate_json.xml:38
 msgid "Upper"
-msgstr ""
+msgstr "Majuscule"
 
 #: templates/lettering_generate_json.xml:39
 msgid "Lower"
-msgstr ""
+msgstr "Minuscule"
 
 #: templates/lettering_generate_json.xml:43
 msgid "Min Scale"
@@ -2035,21 +2039,22 @@ msgstr "Glyphe par défaut"
 
 #: templates/lettering_generate_json.xml:52
 msgid "Kerning"
-msgstr ""
+msgstr "Crénage"
 
 #: templates/lettering_generate_json.xml:54
 msgid "If your font file contains kerning information, you can completely ignore the following settings (unless you want to overwrite them).\n"
 "                   If the kerning information cannot be found, these values will apply automatically."
-msgstr ""
+msgstr "Si votre fichier de police contient des informations de crénage, vous pouvez ignorer complètement les paramètres suivants (sauf si vous souhaitez les écraser).\n"
+"                   Si les informations de crénage sont introuvables, ces valeurs s'appliqueront automatiquement."
 
 #: templates/lettering_generate_json.xml:59
 #: templates/lettering_generate_json.xml:66
 msgid "Force"
-msgstr ""
+msgstr "Forcer"
 
 #: templates/lettering_generate_json.xml:60
 msgid "Overwrite leading information from font file."
-msgstr ""
+msgstr "Surcharger la valeur d'interligne du fichier."
 
 #: templates/lettering_generate_json.xml:61
 msgid "Leading (px)"
@@ -2057,19 +2062,19 @@ msgstr "Hauteur de ligne (px)"
 
 #: templates/lettering_generate_json.xml:62
 msgid "Line height (default: 100)"
-msgstr ""
+msgstr "Hauteur de ligne (par défaut : 100)"
 
 #: templates/lettering_generate_json.xml:67
 msgid "Overwrite word spacing information from font file."
-msgstr ""
+msgstr "Surcharger la valeur d’espacement des mots du fichier."
 
 #: templates/lettering_generate_json.xml:68
 msgid "Word spacing (px)"
-msgstr ""
+msgstr "Espacement des mots (px)"
 
 #: templates/lettering_generate_json.xml:69
 msgid "Space character width (default: 20)"
-msgstr ""
+msgstr "Largeur du caractère espace (par défaut : 20)"
 
 #: templates/lettering_remove_kerning.xml:3
 msgid "Remove Kerning"
@@ -2242,8 +2247,8 @@ msgid "Remove Print Settings from SVG metadata"
 msgstr "Supprimer les paramètres d'impression des métadonnées SVG"
 
 #: templates/reorder.xml:3
-msgid "Reorder"
-msgstr "Réorganiser"
+msgid "Re-stack objects in order of selection"
+msgstr ""
 
 #: templates/simulator.xml:3
 msgid "Simulator / Realistic Preview"
@@ -2255,7 +2260,7 @@ msgstr "Prévisualisation du plan de broderie"
 
 #: templates/transfer_params.xml:3
 msgid "Transfer Params"
-msgstr ""
+msgstr "Transférer les paramètres"
 
 #: templates/troubleshoot.xml:3
 msgid "Troubleshoot Objects"
