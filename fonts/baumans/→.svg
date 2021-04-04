@@ -758,7 +758,7 @@ http://scripts.sil.org/OFL
      inkscape:groupmode="layer">
     <path
        id="path958"
-       style="-inkscape-font-specification:Baumans;fill:none;fill-opacity:1;font-family:Baumans;font-size:42px;font-stretch:normal;font-style:normal;font-variant:normal;font-weight:normal;line-height:1.25;opacity:0.5;stroke:#000000;stroke-dasharray:none;stroke-miterlimit:4;stroke-opacity:1;stroke-width:0.270876"
+       style="-inkscape-font-specification:Baumans;fill:none;fill-opacity:1;font-family:Baumans;font-size:42px;font-stretch:normal;font-style:normal;font-variant:normal;font-weight:normal;line-height:1.25;opacity:1;stroke:#000000;stroke-dasharray:none;stroke-miterlimit:4;stroke-opacity:1;stroke-width:0.270876"
        d="M 10.9838 137.5 C 11.0308 110.993 10.8897 84.4818 11.0546 57.977 C 11.1782 47.4078 15.7771 36.8638 24.0135 30.2077 C 31.696 23.6006 42.0955 21.0654 52.0231 21.8513 C 60.9002 22.2917 70.1675 25.2853 76.006 32.4006 C 83.5214 40.7422 85.4039 53.6835 80.9114 63.9389 C 78.3833 69.4616 73.8326 73.8657 68.9775 77.2919 C 67.0227 78.6713 65.3134 79.8786 63.7931 80.8528 M 26 137.5 C 26.0455 111.004 25.9089 84.5057 26.0685 58.012 C 26.2172 50.9907 29.0942 43.7021 35.1184 39.7891 C 41.6611 35.3406 50.3448 35.2057 57.6571 37.5962 C 66.2064 40.6246 69.9219 51.2778 67.3621 59.6125 C 65.6619 65.2772 60.5094 69.1398 55.123 70.9088 M 7.73617 59.3208 L 27.332 59.8862 M 48.9806 19.5532 C 49.0429 25.71 49.1051 31.8667 49.1673 38.0235 M 65.4038 54.4205 C 71.8113 54.3576 78.2188 54.2947 84.6263 54.2319"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
@@ -767,7 +767,7 @@ http://scripts.sil.org/OFL
        inkstitch:ties="False" />
     <path
        id="path1921"
-       style="-inkscape-font-specification:Baumans;fill:none;fill-opacity:1;font-family:Baumans;font-size:42px;font-stretch:normal;font-style:normal;font-variant:normal;font-weight:normal;line-height:1.25;opacity:0.5;stroke:#000000;stroke-dasharray:none;stroke-miterlimit:4;stroke-opacity:1;stroke-width:0.270876"
+       style="-inkscape-font-specification:Baumans;fill:none;fill-opacity:1;font-family:Baumans;font-size:42px;font-stretch:normal;font-style:normal;font-variant:normal;font-weight:normal;line-height:1.25;opacity:1;stroke:#000000;stroke-dasharray:none;stroke-miterlimit:4;stroke-opacity:1;stroke-width:0.270876"
        d="M 55.1227 70.9075 L 52.8669 71.4772 L 50.5826 71.8417 L 48.0446 71.9974 M 63.7927 80.8518 C 63.7927 80.8518 62.2513 82.0128 61.4289 82.5127 C 60.6048 83.0138 59.7441 83.4564 58.8637 83.8479 C 57.9824 84.2398 57.0747 84.5747 56.1536 84.8583 C 55.3425 85.1079 53.6815 85.4644 53.6815 85.4644 M 63.7505 81.9125 L 54.62 70.5084"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.25"
@@ -780,7 +780,7 @@ http://scripts.sil.org/OFL
        d="M 44.0003 78.8802 C 41.5524 78.88 39.1045 78.8782 36.6567 78.8802" />
     <path
        id="autosatin9-0"
-       style="-inkscape-font-specification:Baumans;fill:none;fill-opacity:1;font-family:Baumans;font-size:42px;font-stretch:normal;font-style:normal;font-variant:normal;font-weight:normal;line-height:1.25;opacity:0.5;stroke:#000000;stroke-dasharray:none;stroke-miterlimit:4;stroke-opacity:1;stroke-width:0.270876"
+       style="-inkscape-font-specification:Baumans;fill:none;fill-opacity:1;font-family:Baumans;font-size:42px;font-stretch:normal;font-style:normal;font-variant:normal;font-weight:normal;line-height:1.25;opacity:1;stroke:#000000;stroke-dasharray:none;stroke-miterlimit:4;stroke-opacity:1;stroke-width:0.270876"
        d="M 36.6562 72.1115 L 45.9554 72.1231 L 48.0446 71.995 M 36.6562 85.6434 L 45.01 85.6551 L 53.3551 85.5414 L 53.6815 85.4614 M 36.7579 71.4322 L 36.7579 86.3197"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.25"
@@ -943,7 +943,7 @@ http://scripts.sil.org/OFL
      inkscape:groupmode="layer">
     <path
        id="autosatinrun6-6"
-       style="display:inline;fill:none;fill-opacity:1;opacity:0.998;stroke:#000000;stroke-dasharray:0.489676, 0.489676;stroke-miterlimit:4;stroke-opacity:1;stroke-width:0.370149"
+       style="display:inline;fill:none;fill-opacity:1;opacity:1;stroke:#000000;stroke-dasharray:0.489676, 0.489676;stroke-miterlimit:4;stroke-opacity:1;stroke-width:0.370149"
        d="M 18.4997 130.13 C 18.5265 103.705 18.4461 77.2781 18.5399 50.8534 C 18.4976 44.7925 21.4006 38.6901 26.4982 35.6004 C 31.6993 31.9514 38.083 30.8818 44.2427 31 C 49.9372 31 55.6317 31 61.3263 31"
        inkstitch:ties="False" />
     <path
@@ -953,7 +953,7 @@ http://scripts.sil.org/OFL
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="False"
        inkstitch:satin_column="True"
-       style="display:inline;fill:none;fill-opacity:1;opacity:0.998;stroke:#000000;stroke-dasharray:none;stroke-miterlimit:4;stroke-opacity:1;stroke-width:0.377953"
+       style="display:inline;fill:none;fill-opacity:1;opacity:1;stroke:#000000;stroke-dasharray:none;stroke-miterlimit:4;stroke-opacity:1;stroke-width:0.377953"
        d="M 63.1513 38.5 L 43 38.5 L 38.7969 38.7344 L 35.1875 39.4375 L 33.6055 39.9649 L 32.1719 40.6094 L 30.8867 41.3711 L 29.75 42.25 L 28.7617 43.2461 L 27.9219 44.3594 L 27.2305 45.5899 L 26.6875 46.9375 L 26.293 48.4024 L 26.0469 49.9844 L 26 53.5 L 26 72.5 L 26 74.5 M 63.1513 23.5 L 45 23.5 L 40.6875 23.6563 L 36.75 24.125 L 33.1875 24.9063 L 30 26 L 27.0625 27.3438 L 24.25 28.875 L 21.5625 30.5938 L 19 32.5 L 17.125 34.3281 L 15.5 36.3125 L 14.125 38.4531 L 13 40.75 L 12.125 43.2031 L 11.5 45.8125 C 11.2122 47.0139 10.7612 63.8774 11.1047 74.5681 M 29.324 52.9926 L 7.55905 52.9134 M 41.4725 41.0536 L 41.5748 18.8976 M 9.72636 68.0828 L 27.3784 68.0123"
        id="autosatin6-4" />
     <path
@@ -978,7 +978,7 @@ http://scripts.sil.org/OFL
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="False"
        inkstitch:satin_column="True"
-       style="display:inline;fill:none;fill-opacity:1;opacity:0.998;stroke:#000000;stroke-dasharray:none;stroke-miterlimit:4;stroke-opacity:1;stroke-width:0.377953"
+       style="display:inline;fill:none;fill-opacity:1;opacity:1;stroke:#000000;stroke-dasharray:none;stroke-miterlimit:4;stroke-opacity:1;stroke-width:0.377953"
        d="M 26 74.5 L 26 85.5 L 26 130.672 M 11.1047 74.5681 L 11 130.6 M 27.6483 116.877 L 7.55905 117.165"
        id="autosatin8-0" />
     <path
@@ -988,7 +988,7 @@ http://scripts.sil.org/OFL
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="True"
        inkstitch:satin_column="True"
-       style="display:inline;fill:none;fill-opacity:1;opacity:0.998;stroke:#000000;stroke-dasharray:none;stroke-miterlimit:4;stroke-opacity:1;stroke-width:0.377953"
+       style="display:inline;fill:none;fill-opacity:1;opacity:1;stroke:#000000;stroke-dasharray:none;stroke-miterlimit:4;stroke-opacity:1;stroke-width:0.377953"
        d="M 11 137.5 L 11 130.6 M 26 137.718 L 26 130.672 M 10.25 137.389 L 26.75 137.629"
        id="autosatin9-7" />
   </g>
@@ -1519,7 +1519,7 @@ http://scripts.sil.org/OFL
      inkscape:groupmode="layer">
     <path
        id="path958-3"
-       style="-inkscape-font-specification:Baumans;display:inline;fill:none;fill-opacity:1;font-family:Baumans;font-size:42px;font-stretch:normal;font-style:normal;font-variant:normal;font-weight:normal;line-height:1.25;opacity:0.5;stroke:#000000;stroke-dasharray:none;stroke-miterlimit:4;stroke-opacity:1;stroke-width:0.270876"
+       style="-inkscape-font-specification:Baumans;display:inline;fill:none;fill-opacity:1;font-family:Baumans;font-size:42px;font-stretch:normal;font-style:normal;font-variant:normal;font-weight:normal;line-height:1.25;opacity:1;stroke:#000000;stroke-dasharray:none;stroke-miterlimit:4;stroke-opacity:1;stroke-width:0.270876"
        d="M 11 137.5 C 11.047 110.993 10.9059 84.4817 11.0708 57.9769 C 11.1944 47.4077 15.7933 35.5022 24.0297 28.8461 C 31.7122 22.239 42.1117 21.0654 52.0393 21.8512 C 60.9164 22.2916 70.8121 25.1805 76.6506 32.2958 C 84.166 40.6373 85.51 58.5592 81.0175 68.8146 C 77.889 76.1685 68.6776 81.647 67.291 82.6491 C 65.7716 83.7471 63.5722 85.315 61.0889 86.4801 M 26.0162 137.5 C 26.0617 111.004 25.9252 84.5056 26.0846 58.0119 C 26.2334 50.9906 29.1104 43.702 35.1345 39.789 C 41.6772 35.3405 50.361 35.2057 57.6732 37.5961 C 66.2225 40.6245 70.1378 50.9725 68.3209 59.5 C 66.8048 66.6155 60.5256 73.4393 55.1392 75.2083 M 7.75237 59.3207 L 27.3482 59.8861 M 48.9969 19.5531 C 49.059 25.7099 49.1213 31.8666 49.1835 38.0234 M 65.42 54.4205 C 71.8275 54.3576 80.1201 54.2947 86.5276 54.2318 M 59.7281 71.8542 L 66.5026 84.0969"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
@@ -1527,12 +1527,12 @@ http://scripts.sil.org/OFL
        inkstitch:zigzag_spacing_mm="0.25"
        inkstitch:ties="False" />
     <path
-       style="-inkscape-font-specification:Baumans;display:inline;fill:none;fill-opacity:1;font-family:Baumans;font-size:42px;font-stretch:normal;font-style:normal;font-variant:normal;font-weight:normal;line-height:1.25;opacity:0.5;stroke:#000000;stroke-dasharray:none;stroke-miterlimit:4;stroke-opacity:1;stroke-width:0.270876"
+       style="-inkscape-font-specification:Baumans;display:inline;fill:none;fill-opacity:1;font-family:Baumans;font-size:42px;font-stretch:normal;font-style:normal;font-variant:normal;font-weight:normal;line-height:1.25;opacity:1;stroke:#000000;stroke-dasharray:none;stroke-miterlimit:4;stroke-opacity:1;stroke-width:0.270876"
        d="M 52.9134 83.1496 C 50.4655 83.1494 36.4636 83.1476 34.0157 83.1496"
        id="path2391" />
     <path
        id="autosatin9-0-4"
-       style="-inkscape-font-specification:Baumans;display:inline;fill:none;fill-opacity:1;font-family:Baumans;font-size:42px;font-stretch:normal;font-style:normal;font-variant:normal;font-weight:normal;line-height:1.25;opacity:0.5;stroke:#000000;stroke-dasharray:none;stroke-miterlimit:4;stroke-opacity:1;stroke-width:0.270876"
+       style="-inkscape-font-specification:Baumans;display:inline;fill:none;fill-opacity:1;font-family:Baumans;font-size:42px;font-stretch:normal;font-style:normal;font-variant:normal;font-weight:normal;line-height:1.25;opacity:1;stroke:#000000;stroke-dasharray:none;stroke-miterlimit:4;stroke-opacity:1;stroke-width:0.270876"
        d="M 33 76.5 L 45.9716 76.4243 L 48.0607 76.2964 L 50.5988 76.141 L 52.8831 75.7766 L 55.1389 75.2069 M 43.1017 75.8231 L 43.1571 89.8666 M 33 89.5 L 44.0605 89.506 C 47.1588 89.6008 48.2214 89.7184 50.3254 89.9189 C 55.6331 88.9537 57.8504 88.3646 61.0889 86.4802"
        inkstitch:satin_column="True"
        inkstitch:ties="False"
@@ -4257,12 +4257,12 @@ http://scripts.sil.org/OFL
      inkscape:groupmode="layer">
     <path
        id="autosatinrun34"
-       style="display:inline;fill:none;opacity:0.995146;stroke:#000000;stroke-dasharray:0.5, 0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-width:1.0"
+       style="display:inline;fill:none;opacity:1;stroke:#000000;stroke-dasharray:0.5, 0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-width:1.0"
        d="M 24 130.211 C 24 132.64 24 135.07 24 137.5"
        inkstitch:ties="False" />
     <path
        id="autosatin39-5"
-       style="display:inline;fill:none;opacity:0.995146;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-width:1.0"
+       style="display:inline;fill:none;opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-width:1.0"
        d="M 31 137.5 L 31 130.6 M 17 137.5 L 17 130.6 M 31.7 137.4 L 16.3 137.4"
        inkstitch:satin_column="True"
        inkstitch:ties="True"
@@ -4272,12 +4272,12 @@ http://scripts.sil.org/OFL
        inkstitch:zigzag_underlay_inset_mm=".25" />
     <path
        id="autosatinrun35"
-       style="display:inline;fill:none;opacity:0.995146;stroke:#000000;stroke-dasharray:0.5, 0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-width:1.0"
+       style="display:inline;fill:none;opacity:1;stroke:#000000;stroke-dasharray:0.5, 0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-width:1.0"
        d="M 24 130.211 C 24.0278 111.425 23.9446 92.6387 24.0413 73.8529 L 10.0438 61.5944"
        inkstitch:ties="False" />
     <path
        id="autosatinrun14-9"
-       style="display:inline;opacity:0.995146;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
+       style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
        d="M 10 47.5 L 22.5927 26.9312 C 27.0029 32.6617 34.5441 38.7373 38.897 44.5115"
        inkstitch:ties="False" />
     <path
@@ -4288,7 +4288,7 @@ http://scripts.sil.org/OFL
        inkstitch:ties="False"
        inkstitch:satin_column="True"
        d="M 48 47.5 L 30 23.5 L 30 23.5 M 31.616 45.1193 L 41.3716 37.2692 M 23.9945 36.0497 L 34.3598 27.8185 M 34 47.5 L 22.3811 32.6524 L 28.2626 25.7607"
-       style="display:inline;opacity:0.995146;fill:none;stroke:#000000"
+       style="display:inline;opacity:1;fill:none;stroke:#000000"
        id="autosatin17-6" />
     <path
        inkstitch:zigzag_underlay_inset_mm="0.25"
@@ -4298,21 +4298,21 @@ http://scripts.sil.org/OFL
        inkstitch:ties="True"
        inkstitch:satin_column="True"
        d="M 14.3 23.5 L -4 47.5 M 30 23.5 L 10 47.5 M 5.47425 34.0682 L 21.6319 33.9919"
-       style="display:inline;opacity:0.995146;fill:none;stroke:#000000"
+       style="display:inline;opacity:1;fill:none;stroke:#000000"
        id="autosatin18-5" />
     <path
        id="autosatinrun36"
-       style="display:none;fill:none;opacity:0.995146;stroke:#000000;stroke-dasharray:0.5, 0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-width:1.0"
+       style="display:none;fill:none;opacity:1;stroke:#000000;stroke-dasharray:0.5, 0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-width:1.0"
        d="M 41 47.5 C 35.7875 40.772 30.6345 33.9258 25.3857 27.2719 C 24.2559 26.4342 23.1261 25.5964 21.9964 24.7586"
        inkstitch:ties="False" />
     <path
        id="autosatinrun37"
-       style="display:none;fill:none;opacity:0.995146;stroke:#000000;stroke-dasharray:0.5, 0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-width:1.0"
+       style="display:none;fill:none;opacity:1;stroke:#000000;stroke-dasharray:0.5, 0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-width:1.0"
        d="M 21.9964 24.7586 C 17.0267 27.8456 14.3534 33.2219 10.6414 37.5593 C 8.09404 40.8727 5.54861 44.1876 3 47.5"
        inkstitch:ties="False" />
     <path
        id="autosatin40-7"
-       style="display:none;fill:none;opacity:0.995146;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-width:1.0"
+       style="display:none;fill:none;opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-width:1.0"
        d="M 10 47.5 L 22 32.5 L 22.2329 26.0172 M -4 47.5 L 14 23.5 L 21.7598 23.5 M 20.5772 38.0797 L 7.0956 27.4363"
        inkstitch:satin_column="True"
        inkstitch:ties="True"
@@ -4322,7 +4322,7 @@ http://scripts.sil.org/OFL
        inkstitch:zigzag_underlay_inset_mm=".25" />
     <path
        id="autosatin41-4"
-       style="display:none;fill:none;opacity:0.995146;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-width:1.0"
+       style="display:none;fill:none;opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-width:1.0"
        d="M 22.2329 26.0172 L 22 32.5 L 34 47.5 M 21.7598 23.5 L 30 23.5 L 48 47.5 M 23.4155 37.8432 L 37.1336 28.1459"
        inkstitch:satin_column="True"
        inkstitch:ties="True"
@@ -4332,12 +4332,12 @@ http://scripts.sil.org/OFL
        inkstitch:zigzag_underlay_inset_mm=".25" />
     <path
        id="autosatinrun38"
-       style="display:inline;fill:none;opacity:0.995146;stroke:#000000;stroke-dasharray:0.5, 0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-width:1.0"
+       style="display:inline;fill:none;opacity:1;stroke:#000000;stroke-dasharray:0.5, 0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-width:1.0"
        d="M 10.0438 61.5944 L 6.94183 70.7089"
        inkstitch:ties="False" />
     <path
        id="autosatin42-0"
-       style="display:inline;fill:none;opacity:0.995146;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-width:1.0"
+       style="display:inline;fill:none;opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-width:1.0"
        d="M 3 73.5 L 17 73.5 L 27.1998 64.57 M 4.96692 68.3543 L 9 59.5 L 31 59.5 M 12.0625 56.7648 L 11.5895 76.1595"
        inkstitch:satin_column="True"
        inkstitch:ties="True"
@@ -4347,7 +4347,7 @@ http://scripts.sil.org/OFL
        inkstitch:zigzag_underlay_inset_mm=".25" />
     <path
        id="autosatin43-5"
-       style="display:inline;fill:none;opacity:0.995146;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-width:1.0"
+       style="display:inline;fill:none;opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-width:1.0"
        d="M 27.1998 64.57 L 17 73.5 L 17 130.6 M 31 59.5 L 31 130.6 M 13.9547 84.6742 L 33.8224 84.6742"
        inkstitch:satin_column="True"
        inkstitch:ties="True"

@@ -2225,7 +2225,7 @@
     <path
        id="autosatinrun1"
        embroider_running_stitch_length_mm=""
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:0.88;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1"
        d="m 1.0541838,4.1154361 v 0.34402 0.41798 0.3279701 0 0.09 0.41798 0.4179898 0.1639703 0 -0.2462901 0.4179901 0.4179898" />
     <path
        embroider_center_walk_underlay="True"
@@ -2233,21 +2233,21 @@
        embroider_satin_column="True"
        id="autosatin1"
        d="M 1.5550038,6.8850562 V 3.6234861 M 0.3090168,6.8850562 V 3.6234861 m 1.320483,3.22472 h -1.39498"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:0.88;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <path
        d="m 0.9322088,3.6234861 v -0.1979 -0.3"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:0.88;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1"
        embroider_running_stitch_length_mm=""
        id="autosatinrun3" />
     <path
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:0.88;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1"
        d="m 0.3092148,3.1255861 v 0.4979 m 1.245988,-0.4979 v 0.4979 m 0.0745,-0.0369 h -1.394979"
        id="autosatin4"
        embroider_satin_column="True"
        embroider_zigzag_spacing_mm="0.3"
        embroider_center_walk_underlay="True" />
     <path
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:0.88;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 1.5549898,3.0254461 H 6.9441949 M 1.5327028,4.3163862 h 5.400437 m -5.350578,-1.3554801 -0.02452,1.4200301"
        id="autosatin2"
        embroider_satin_column="True"
@@ -2262,7 +2262,7 @@
     <path
        id="autosatinrun1-8"
        embroider_running_stitch_length_mm=""
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:0.88;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1"
        d="m 12.959991,4.0944761 v 0.34402 0.41798 0.3279701 0 0.09 0.41798 0.4179901 0.1639699 0 -0.24629 0.4179901 0.4179898" />
     <path
        embroider_center_walk_underlay="True"
@@ -2270,13 +2270,13 @@
        embroider_satin_column="True"
        id="autosatin1-1"
        d="M 13.460811,6.8640962 V 3.6025261 M 12.214824,6.8640962 V 3.6025261 m 1.320483,3.22472 h -1.39498"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:0.88;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <path
        id="autosatinrun2-9"
        d="m 12.936367,3.4212061 0.02362,-0.3171"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:0.88;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1" />
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1" />
     <path
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:0.88;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1"
        d="m 13.460996,3.6025261 v -0.4979 m -1.245987,0.4979 v -0.4979 m 1.320487,0.461 h -1.394978"
        id="autosatin3"
        embroider_satin_column="True"
@@ -2290,7 +2290,7 @@
        embroider_satin_column="True"
        id="path5176"
        d="M 12.248318,3.0254561 H 6.9442079 M 12.248318,4.3163962 H 6.9331538 m 0.025911,0.0645 0.01216,-1.42003"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:0.88;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <path
        embroider_satin_column="True"
        embroider_zigzag_underlay="False"
@@ -2877,7 +2877,7 @@
     <path
        id="autosatinrun1-83"
        embroider_running_stitch_length_mm=""
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:0.88;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.0264583;stroke-miterlimit:4;stroke-dasharray:0.132291, 0.132291;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.0264583;stroke-miterlimit:4;stroke-dasharray:0.132291, 0.132291;stroke-opacity:1"
        d="m 1.9086229,4.0961363 v 0.34402 0.41799 0.3279601 0 0.09 0.41798 0.4179901 0.16398 0 -0.24629 0.41798 0.41799" />
     <path
        embroider_center_walk_underlay="True"
@@ -2885,21 +2885,21 @@
        embroider_satin_column="True"
        id="autosatin1-9"
        d="m 2.4094429,6.8657563 v -3.26157 m -1.245987,3.26157 v -3.26157 m 1.320483,3.2247201 h -1.39498"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:0.88;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <path
        id="autosatinrun3-9"
        embroider_running_stitch_length_mm=""
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:0.88;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.0050244;stroke-miterlimit:4;stroke-dasharray:0.132292, 0.132292;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.0050244;stroke-miterlimit:4;stroke-dasharray:0.132292, 0.132292;stroke-opacity:1"
        d="m 1.7866599,3.6041963 c 0,0 0,-0.29802 0,-0.29802 0,0 0,-0.3 0,-0.3" />
     <path
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:0.88;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 1.1636649,3.0061763 c 0,0 0,0.59802 0,0.59802 m 1.245991,-0.59802 c 0,0 0,0.59802 0,0.59802 m 0.0745,-0.0369 c 0,0 -1.394982,0 -1.394982,0"
        id="autosatin4-8"
        embroider_satin_column="True"
        embroider_zigzag_spacing_mm="0.3"
        embroider_center_walk_underlay="True" />
     <path
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:0.88;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 2.4094499,3.0061763 c 0,0 10.4540871,0 10.4540871,0 m -10.5006361,1.36775 c 0,0 7.6538991,0 7.6538991,0 0,0 2.846737,-0.57214 2.846737,-0.57214 m -3.1737181,-1.57358 c 0,0 0,2.42401 0,2.42401"
        id="autosatin2-7"
        embroider_satin_column="True"
@@ -2912,21 +2912,21 @@
        embroider_zigzag_spacing_mm="0.3"
        embroider_satin_column="True"
        d="M 12.863528,3.8017763 C 9.7966429,8.2613064 6.7052509,13.649946 3.638366,18.109476 M 10.016793,4.3739163 0.81613687,18.671706"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:0.88;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path9615" />
     <path
        embroider_center_walk_underlay="True"
        embroider_zigzag_spacing_mm="0.3"
        embroider_satin_column="True"
        d="M 0.81613687,18.671706 3.638366,18.109476 h 8.378471 M 0.81613987,19.463786 H 12.07504 m -8.0175232,-2.36353 v 2.69977"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:0.88;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path9599" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.4, 0.1;stroke-dashoffset:0;stroke-opacity:1"
        d="m 12.709357,18.577026 0.06583,-2.58762"
        id="path9921" />
     <path
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:0.88;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 13.265272,15.774156 v 3.14691 m -1.190248,-3.14691 v 3.14691 m 1.264743,-3.11004 h -1.33924"
        id="path9608"
        embroider_satin_column="True"
@@ -2938,7 +2938,7 @@
        embroider_satin_column="True"
        id="path10018"
        d="m 12.075024,19.463756 v -0.54269 m 1.190248,0.54269 v -0.54269 m -1.264745,0.0369 h 1.33924"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:0.88;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   </g>
   <g
      inkscape:label="GlyphLayer-a"
@@ -5717,25 +5717,25 @@
        id="path9919-5" />
     <path
        d="m 1.6929079,8.5259963 c 0,0 0,0.24693 0,0.24693 0,0 0,0.30004 0,0.30004 0,0 0,0.23542 0,0.23542 0,0 0,0 0,0 0,0 0,0.0646 0,0.0646 0,0 0,0.30004 0,0.30004 0,0 0,0.3000297 0,0.3000297 0,0 0,0.11771 0,0.11771 0,0 0,0 0,0 0,0 0,0.18233 0,0.18233 0,0 0,0.30003 0,0.30003 0,0 0,0.30004 0,0.30004"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:0.88;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.0264583;stroke-miterlimit:4;stroke-dasharray:0.132291, 0.132291;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.0264583;stroke-miterlimit:4;stroke-dasharray:0.132291, 0.132291;stroke-opacity:1"
        embroider_running_stitch_length_mm=""
        id="autosatinrun1-11" />
     <path
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:0.88;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 2.2275869,10.873176 c 0,0 0,-2.7003197 0,-2.7003197 m -1.069359,2.7003197 c 0,0 0,-2.7003197 0,-2.7003197 m 1.122827,2.6738497 c 0,0 -1.176295,0 -1.176295,0"
        id="autosatin1-70"
        embroider_satin_column="True"
        embroider_zigzag_spacing_mm="0.3"
        embroider_center_walk_underlay="True" />
     <path
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:0.88;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 1.1582279,7.7435963 c 0,0 0,0.42926 0,0.42926 m 1.069359,-0.42926 c 0,0 0,0.42926 0,0.42926 m 0.05347,-0.0265 c 0,0 -1.176295,0 -1.176295,0"
        id="autosatin2-14"
        embroider_satin_column="True"
        embroider_zigzag_spacing_mm="0.3"
        embroider_center_walk_underlay="True" />
     <path
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:0.88;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 2.2275869,7.7435963 c 0,0 7.5402817,0 7.5402817,0 m -7.5736907,1.17973 c 0,0 5.225514,0 5.225514,0 0,0 2.3481767,-0.23154 2.3481767,-0.23154 m -2.5828597,-1.50663 c 0,0 0,1.93793 0,1.93793"
        id="autosatin3-4"
        embroider_satin_column="True"
@@ -5745,14 +5745,14 @@
        embroider_zigzag_underlay="False" />
     <path
        id="path9615-0"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:0.88;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 9.7678796,8.6917963 C 7.5666928,11.892886 5.3655069,15.093986 3.1643199,18.295076 M 7.4196998,8.9233363 0.81613987,18.515586"
        embroider_satin_column="True"
        embroider_zigzag_spacing_mm="0.3"
        embroider_center_walk_underlay="True" />
     <path
        id="path9599-7"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:0.88;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 0.81613987,18.515586 2.34818003,-0.22051 h 5.7326397 m -8.08081973,1.16871 H 8.8969596 m -5.7543947,-1.60331 v 1.93793"
        embroider_satin_column="True"
        embroider_zigzag_spacing_mm="0.3"
@@ -5767,9 +5767,9 @@
        embroider_satin_column="True"
        id="path9608-4"
        d="m 9.9663066,16.167126 c 0,0 0,3.00034 0,3.00034 m -1.069359,-3.00034 c 0,0 0,3.00034 0,3.00034 m 1.1228274,-2.97388 c 0,0 -1.1762954,0 -1.1762954,0"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:0.88;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <path
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:0.88;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 8.8969476,19.463766 c 0,0 0,-0.2963 0,-0.2963 m 1.069359,0.2963 c 0,0 0,-0.2963 0,-0.2963 m -1.122827,0.0265 c 0,0 1.1762954,0 1.1762954,0"
        id="path10018-9"
        embroider_satin_column="True"
