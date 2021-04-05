@@ -25,16 +25,16 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1565"
-     inkscape:window-height="925"
+     inkscape:window-height="1593"
      id="namedview3461"
      showgrid="true"
-     inkscape:zoom="6.0525164"
-     inkscape:cx="-15.051006"
-     inkscape:cy="65.660883"
+     inkscape:zoom="34.238203"
+     inkscape:cx="11.763889"
+     inkscape:cy="116.28917"
      inkscape:window-x="246"
-     inkscape:window-y="675"
+     inkscape:window-y="7"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g6436"
+     inkscape:current-layer="g6492"
      inkscape:document-rotation="0"
      inkscape:document-units="px"
      inkscape:snap-global="false"
@@ -6156,7 +6156,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-/"
-     style="display:inline"
+     style="display:none"
      id="g6436">
     <path
        id="autosatinrun97-7"
@@ -6351,7 +6351,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-|"
-     style="display:none"
+     style="display:inline"
      id="g6492">
     <path
        id="autosatinrun97-4"
@@ -6374,7 +6374,7 @@ Copyright (c) 2014, Eduardo Rodriguez Tunni. Copyright (c) 2000, Modular Infotec
     <path
        id="autosatin146-2"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 7.5590551,128.50394 -0.811901,-1.28949 M 21,125 20.256998,123.83451 m 0.357224,-0.1095 -14.1172559,3.76788"
+       d="m 7.5590551,128.50394 -0.811901,-1.28949 M 21,125 20.256998,123.83451 m 0.561674,0.21178 -14.3217059,3.4466"
        inkstitch:satin_column="True"
        inkstitch:ties="True"
        inkstitch:zigzag_spacing_mm="0.3"
