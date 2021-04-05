@@ -10,6 +10,7 @@ from .break_apart import BreakApart
 from .cleanup import Cleanup
 from .convert_to_satin import ConvertToSatin
 from .cut_satin import CutSatin
+from .duplicate_params import DuplicateParams
 from .embroider_settings import EmbroiderSettings
 from .flip import Flip
 from .global_commands import GlobalCommands
@@ -29,7 +30,6 @@ from .remove_embroidery_settings import RemoveEmbroiderySettings
 from .reorder import Reorder
 from .simulator import Simulator
 from .stitch_plan_preview import StitchPlanPreview
-from .transfer_params import TransferParams
 from .zip import Zip
 
 __all__ = extensions = [StitchPlanPreview,
@@ -57,5 +57,5 @@ __all__ = extensions = [StitchPlanPreview,
                         ImportThreadlist,
                         Simulator,
                         Reorder,
-                        TransferParams,
+                        DuplicateParams,
                         EmbroiderSettings]

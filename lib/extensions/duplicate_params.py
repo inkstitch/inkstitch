@@ -10,13 +10,13 @@ from ..svg.tags import EMBROIDERABLE_TAGS, SVG_GROUP_TAG
 from .base import InkstitchExtension
 
 
-class TransferParams(InkstitchExtension):
+class DuplicateParams(InkstitchExtension):
     # Transfer inkstitch namespaced attributes from the first selected element to the rest of selection
 
     def effect(self):
         objects = self.get_selected_in_order()
         if len(objects) < 2:
-            inkex.errormsg(_("This function transfers Ink/Stitch parameters from the first selected element to the rest of the selection. "
+            inkex.errormsg(_("This function copies Ink/Stitch parameters from the first selected element to the rest of the selection. "
                              "Please select at least two elements."))
             return
 
