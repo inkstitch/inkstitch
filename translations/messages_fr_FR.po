@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-04-04 01:00+0000\n"
-"PO-Revision-Date: 2021-04-04 01:02\n"
+"PO-Revision-Date: 2021-04-05 01:02\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -741,7 +741,8 @@ msgstr "Broder chaque nœud dans le tracé.  La longueur de points et l’espace
 #: lib/elements/stroke.py:142
 msgid "Legacy running stitch setting detected!\n\n"
 "It looks like you're using a stroke smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set your stroke to be dashed to indicate running stitch.  Any kind of dash will work."
-msgstr "Détection d'une définition obsolète de point droit !  Il semble que vous utilisez une largeur inférieure à 0,5 unités pour indiquer un point droit, qui est obsolète.  Au lieu de cela, veuillez configurer votre tracé avec des pointillés.  N’importe quel genre de trait fonctionne."
+msgstr "Détection d'un paramétrage de point droit obsolète !\n\n"
+"L'épaisseur de contour de votre chemin est inférieure à 0,5 unités, ce qui semble indiquer que vous souhaitez un point droit. Veuillez donc configurer votre style de contour avec des pointillés (n’importe quel genre de pointillés fonctionne)."
 
 #: lib/elements/text.py:13 lib/extensions/lettering.py:68
 msgid "Text"
@@ -1935,7 +1936,7 @@ msgstr "Choisir fils"
 
 #: templates/import_threadlist.xml:20 templates/install.xml:10
 msgid "Thread Color Management"
-msgstr ""
+msgstr "Gestion des couleurs de fil"
 
 #: templates/input.xml:9
 #, python-format
@@ -1967,7 +1968,7 @@ msgstr "Répertoire de police personnalisée"
 #: templates/lettering_generate_json.xml:10
 #: templates/lettering_remove_kerning.xml:10
 msgid "Font Management"
-msgstr ""
+msgstr "Gestion des polices"
 
 #: templates/lettering_custom_font_dir.xml:15
 msgid "Set a custom directory for additional fonts to be used with the lettering tool."
@@ -2248,7 +2249,7 @@ msgstr "Supprimer les paramètres d'impression des métadonnées SVG"
 
 #: templates/reorder.xml:3
 msgid "Re-stack objects in order of selection"
-msgstr ""
+msgstr "Réempiler les objets dans l'ordre de sélection"
 
 #: templates/simulator.xml:3
 msgid "Simulator / Realistic Preview"
