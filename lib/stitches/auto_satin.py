@@ -628,8 +628,12 @@ def operations_to_elements_and_trims(operations, preserve_order):
 def remove_original_elements(elements):
     for element in elements:
         for command in element.commands:
-            remove_from_parent(command.connector)
-            remove_from_parent(command.use)
+            command_group = command.use.getparent()
+            if command_group is not None and command_group.get('id').startswith('command_group'):
+                remove_from_parent(command_group)
+            else:
+                remove_from_parent(command.connector)
+                remove_from_parent(command.use)
         remove_from_parent(element.node)
 
 
