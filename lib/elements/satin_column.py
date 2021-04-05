@@ -332,6 +332,7 @@ class SatinColumn(EmbroideryElement):
         rungs = self.flattened_rungs
 
         for rung in rungs:
+            rung = shaffinity.scale(rung, 1.1, 1.1)
             for rail in rails:
                 self._cut_rail(rail, rung)
 
@@ -371,6 +372,7 @@ class SatinColumn(EmbroideryElement):
                 yield UnequalPointsError(self.flattened_rails[0].interpolate(0.5, normalized=True))
         else:
             for rung in self.flattened_rungs:
+                rung = shaffinity.scale(rung, 1.1, 1.1)
                 for rail in self.flattened_rails:
                     intersection = rung.intersection(rail)
                     if intersection.is_empty:
