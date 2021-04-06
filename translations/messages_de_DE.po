@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-04-04 01:00+0000\n"
-"PO-Revision-Date: 2021-04-05 01:02\n"
+"POT-Creation-Date: 2021-04-06 00:59+0000\n"
+"PO-Revision-Date: 2021-04-06 01:01\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -819,6 +819,10 @@ msgstr "Bitte wähle eine oder mehrere Satinkolumnen zum schneiden aus."
 msgid "this satin column does not have a \"satin column cut point\" command attached to it. Please use the \"Attach commands\" extension and attach the \"Satin Column cut point\" command first."
 msgstr "Diese Satinkolumne hat keinen \"Satinkolumnen schneiden\" -Befehl. Bitte verwende die Erweiterung \"Befehle hinzufügen\" und füge zuerst den Befehl \"Satinkolumne schneiden\" hinzu."
 
+#: lib/extensions/duplicate_params.py:19
+msgid "This function copies Ink/Stitch parameters from the first selected element to the rest of the selection. Please select at least two elements."
+msgstr ""
+
 #: lib/extensions/flip.py:28
 msgid "Please select one or more satin columns to flip."
 msgstr "Bitte wählen Sie eine oder mehrere Satinkolumnen zum drehen aus."
@@ -968,10 +972,6 @@ msgstr "Stickparameter"
 #: lib/extensions/params.py:352
 msgid "Use Last Settings"
 msgstr "Letzte Einstellungen verwenden"
-
-#: lib/extensions/transfer_params.py:19
-msgid "This function transfers Ink/Stitch parameters from the first selected element to the rest of the selection. Please select at least two elements."
-msgstr ""
 
 #: lib/extensions/troubleshoot.py:48
 msgid "All selected shapes are valid! "
@@ -1219,20 +1219,20 @@ msgstr "Die Schrift '%s' hat keine Varianten."
 msgid "Error writing to %(path)s: %(error)s"
 msgstr "Fehler beim Schreiben in %(path)s: %(error)s"
 
-#: lib/stitches/auto_satin.py:658
+#: lib/stitches/auto_satin.py:662
 msgid "Auto-Satin"
 msgstr "Automatischer Satinstich"
 
 #. Label for a satin column created by Auto-Route Satin Columns and Lettering
 #. extensions
-#: lib/stitches/auto_satin.py:705
+#: lib/stitches/auto_satin.py:709
 #, python-format
 msgid "AutoSatin %d"
 msgstr "AutoSatin %d"
 
 #. Label for running stitch (underpathing) created by Auto-Route Satin Columns
 #. amd Lettering extensions
-#: lib/stitches/auto_satin.py:708
+#: lib/stitches/auto_satin.py:712
 #, python-format
 msgid "AutoSatin Running Stitch %d"
 msgstr "AutoSatin Laufstich %d"
@@ -1867,6 +1867,10 @@ msgstr "Konvertierung Linie zu Satinstich"
 msgid "Cut Satin Column"
 msgstr "Satinkolumne schneiden"
 
+#: templates/duplicate_params.xml:3
+msgid "Duplicate Params"
+msgstr ""
+
 #: templates/embroider.xml:3
 msgid "Embroider"
 msgstr "Sticken"
@@ -1936,7 +1940,7 @@ msgstr "Datei wählen"
 
 #: templates/import_threadlist.xml:20 templates/install.xml:10
 msgid "Thread Color Management"
-msgstr ""
+msgstr "Garnfarben Verwaltung"
 
 #: templates/input.xml:9
 #, python-format
@@ -1968,7 +1972,7 @@ msgstr "Benutzerdefinierter Ordner für Schriften"
 #: templates/lettering_generate_json.xml:10
 #: templates/lettering_remove_kerning.xml:10
 msgid "Font Management"
-msgstr ""
+msgstr "Schriftverwaltung"
 
 #: templates/lettering_custom_font_dir.xml:15
 msgid "Set a custom directory for additional fonts to be used with the lettering tool."
@@ -2016,15 +2020,15 @@ msgstr "Wenn diese Funktion deaktiviert ist, ist die Option \"Sticke Textzeilen 
 
 #: templates/lettering_generate_json.xml:36
 msgid "Force letter case"
-msgstr ""
+msgstr "Klein-/Großbuchstaben erzwingen"
 
 #: templates/lettering_generate_json.xml:38
 msgid "Upper"
-msgstr ""
+msgstr "Großbuchstaben"
 
 #: templates/lettering_generate_json.xml:39
 msgid "Lower"
-msgstr ""
+msgstr "Kleinbuchstaben"
 
 #: templates/lettering_generate_json.xml:43
 msgid "Min Scale"
@@ -2248,7 +2252,7 @@ msgstr "Druckeinstellungen aus den SVG Metadaten entfernen"
 
 #: templates/reorder.xml:3
 msgid "Re-stack objects in order of selection"
-msgstr ""
+msgstr "Objekte in Auswahlreihenfolge sortieren"
 
 #: templates/simulator.xml:3
 msgid "Simulator / Realistic Preview"
@@ -2257,10 +2261,6 @@ msgstr "Simulator / Realistische Vorschau"
 #: templates/stitch_plan_preview.xml:3
 msgid "Stitch Plan Preview"
 msgstr "Stich-Plan Vorschau"
-
-#: templates/transfer_params.xml:3
-msgid "Transfer Params"
-msgstr ""
 
 #: templates/troubleshoot.xml:3
 msgid "Troubleshoot Objects"

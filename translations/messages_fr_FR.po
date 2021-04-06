@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-04-04 01:00+0000\n"
-"PO-Revision-Date: 2021-04-05 01:02\n"
+"POT-Creation-Date: 2021-04-06 00:59+0000\n"
+"PO-Revision-Date: 2021-04-06 01:01\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -819,6 +819,10 @@ msgstr "Veuillez sélectionner une ou plusieurs colonnes satin à scinder."
 msgid "this satin column does not have a \"satin column cut point\" command attached to it. Please use the \"Attach commands\" extension and attach the \"Satin Column cut point\" command first."
 msgstr "cette colonne satinée n’a pas de commande « point de partage satin » attachée à elle. Utilisez l’extension « ajouter des commandes » et attachez d’abord la commande « point de partage satin »."
 
+#: lib/extensions/duplicate_params.py:19
+msgid "This function copies Ink/Stitch parameters from the first selected element to the rest of the selection. Please select at least two elements."
+msgstr ""
+
 #: lib/extensions/flip.py:28
 msgid "Please select one or more satin columns to flip."
 msgstr "Veuillez sélectionner une ou plusieurs colonnes satin pour intervertir leur rails."
@@ -968,10 +972,6 @@ msgstr "Paramètres de broderie"
 #: lib/extensions/params.py:352
 msgid "Use Last Settings"
 msgstr "Utiliser les derniers paramètres"
-
-#: lib/extensions/transfer_params.py:19
-msgid "This function transfers Ink/Stitch parameters from the first selected element to the rest of the selection. Please select at least two elements."
-msgstr "Cette fonction transfère les paramètres de Ink/Stitch du premier élément sélectionné vers le reste de la sélection. Veuillez sélectionner au moins deux éléments."
 
 #: lib/extensions/troubleshoot.py:48
 msgid "All selected shapes are valid! "
@@ -1219,20 +1219,20 @@ msgstr "Aucun fichier variant trouvé pour la police '%s'."
 msgid "Error writing to %(path)s: %(error)s"
 msgstr "Erreur d’écriture pour %(path)s: %(error)s"
 
-#: lib/stitches/auto_satin.py:658
+#: lib/stitches/auto_satin.py:662
 msgid "Auto-Satin"
 msgstr "Satin automatique"
 
 #. Label for a satin column created by Auto-Route Satin Columns and Lettering
 #. extensions
-#: lib/stitches/auto_satin.py:705
+#: lib/stitches/auto_satin.py:709
 #, python-format
 msgid "AutoSatin %d"
 msgstr "Auto-remplissage satin %d"
 
 #. Label for running stitch (underpathing) created by Auto-Route Satin Columns
 #. amd Lettering extensions
-#: lib/stitches/auto_satin.py:708
+#: lib/stitches/auto_satin.py:712
 #, python-format
 msgid "AutoSatin Running Stitch %d"
 msgstr "Points droits pour auto-remplissage satin %d"
@@ -1867,6 +1867,10 @@ msgstr "Convertir ligne en satin"
 msgid "Cut Satin Column"
 msgstr "Scinder colonne satin"
 
+#: templates/duplicate_params.xml:3
+msgid "Duplicate Params"
+msgstr ""
+
 #: templates/embroider.xml:3
 msgid "Embroider"
 msgstr "Broder"
@@ -2004,7 +2008,7 @@ msgstr "Agencement automatique de colonnes satin"
 
 #: templates/lettering_generate_json.xml:33
 msgid "Disable if you defined manual routing in your font."
-msgstr "Désactivez si vous avez défini le routage manuel dans votre police."
+msgstr "Désactivez si vous avez défini manuellement l'agencement des colonnes satin."
 
 #: templates/lettering_generate_json.xml:34
 msgid "Reversible"
@@ -2258,10 +2262,6 @@ msgstr "Simulateur / Aperçu réaliste"
 #: templates/stitch_plan_preview.xml:3
 msgid "Stitch Plan Preview"
 msgstr "Prévisualisation du plan de broderie"
-
-#: templates/transfer_params.xml:3
-msgid "Transfer Params"
-msgstr "Transférer les paramètres"
 
 #: templates/troubleshoot.xml:3
 msgid "Troubleshoot Objects"

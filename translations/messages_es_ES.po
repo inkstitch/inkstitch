@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-04-04 01:00+0000\n"
-"PO-Revision-Date: 2021-04-05 01:02\n"
+"POT-Creation-Date: 2021-04-06 00:59+0000\n"
+"PO-Revision-Date: 2021-04-06 01:01\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -818,6 +818,10 @@ msgstr ""
 msgid "this satin column does not have a \"satin column cut point\" command attached to it. Please use the \"Attach commands\" extension and attach the \"Satin Column cut point\" command first."
 msgstr ""
 
+#: lib/extensions/duplicate_params.py:19
+msgid "This function copies Ink/Stitch parameters from the first selected element to the rest of the selection. Please select at least two elements."
+msgstr ""
+
 #: lib/extensions/flip.py:28
 msgid "Please select one or more satin columns to flip."
 msgstr ""
@@ -965,10 +969,6 @@ msgstr ""
 
 #: lib/extensions/params.py:352
 msgid "Use Last Settings"
-msgstr ""
-
-#: lib/extensions/transfer_params.py:19
-msgid "This function transfers Ink/Stitch parameters from the first selected element to the rest of the selection. Please select at least two elements."
 msgstr ""
 
 #: lib/extensions/troubleshoot.py:48
@@ -1217,20 +1217,20 @@ msgstr ""
 msgid "Error writing to %(path)s: %(error)s"
 msgstr ""
 
-#: lib/stitches/auto_satin.py:658
+#: lib/stitches/auto_satin.py:662
 msgid "Auto-Satin"
 msgstr ""
 
 #. Label for a satin column created by Auto-Route Satin Columns and Lettering
 #. extensions
-#: lib/stitches/auto_satin.py:705
+#: lib/stitches/auto_satin.py:709
 #, python-format
 msgid "AutoSatin %d"
 msgstr ""
 
 #. Label for running stitch (underpathing) created by Auto-Route Satin Columns
 #. amd Lettering extensions
-#: lib/stitches/auto_satin.py:708
+#: lib/stitches/auto_satin.py:712
 #, python-format
 msgid "AutoSatin Running Stitch %d"
 msgstr ""
@@ -1865,6 +1865,10 @@ msgstr ""
 msgid "Cut Satin Column"
 msgstr ""
 
+#: templates/duplicate_params.xml:3
+msgid "Duplicate Params"
+msgstr ""
+
 #: templates/embroider.xml:3
 msgid "Embroider"
 msgstr ""
@@ -2254,10 +2258,6 @@ msgstr ""
 
 #: templates/stitch_plan_preview.xml:3
 msgid "Stitch Plan Preview"
-msgstr ""
-
-#: templates/transfer_params.xml:3
-msgid "Transfer Params"
 msgstr ""
 
 #: templates/troubleshoot.xml:3

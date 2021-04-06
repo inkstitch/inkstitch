@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-04-04 01:00+0000\n"
-"PO-Revision-Date: 2021-04-05 01:02\n"
+"POT-Creation-Date: 2021-04-06 00:59+0000\n"
+"PO-Revision-Date: 2021-04-06 01:01\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -819,6 +819,10 @@ msgstr "Выберите одну или несколько сатиновых �
 msgid "this satin column does not have a \"satin column cut point\" command attached to it. Please use the \"Attach commands\" extension and attach the \"Satin Column cut point\" command first."
 msgstr "эта сатиновая колонна не имеет команды \"точка разрыва сатиновой колонны\" прикрепленной к ней. Используйте \"Добавить команды\" из меню и прикрепите команду \"Точка разрыва сатиновой колонны\"."
 
+#: lib/extensions/duplicate_params.py:19
+msgid "This function copies Ink/Stitch parameters from the first selected element to the rest of the selection. Please select at least two elements."
+msgstr ""
+
 #: lib/extensions/flip.py:28
 msgid "Please select one or more satin columns to flip."
 msgstr "Выберите одну или несколько сатиновых колонн для разворота."
@@ -967,10 +971,6 @@ msgstr "Параметры вышивки"
 #: lib/extensions/params.py:352
 msgid "Use Last Settings"
 msgstr "Использовать последние настройки"
-
-#: lib/extensions/transfer_params.py:19
-msgid "This function transfers Ink/Stitch parameters from the first selected element to the rest of the selection. Please select at least two elements."
-msgstr ""
 
 #: lib/extensions/troubleshoot.py:48
 msgid "All selected shapes are valid! "
@@ -1218,20 +1218,20 @@ msgstr "Для шрифта '%s' нет вариантов."
 msgid "Error writing to %(path)s: %(error)s"
 msgstr "Ошибка при записи в %(path)s: %(error)s"
 
-#: lib/stitches/auto_satin.py:658
+#: lib/stitches/auto_satin.py:662
 msgid "Auto-Satin"
 msgstr "Авто-Сатин"
 
 #. Label for a satin column created by Auto-Route Satin Columns and Lettering
 #. extensions
-#: lib/stitches/auto_satin.py:705
+#: lib/stitches/auto_satin.py:709
 #, python-format
 msgid "AutoSatin %d"
 msgstr "АвтоСатин %d"
 
 #. Label for running stitch (underpathing) created by Auto-Route Satin Columns
 #. amd Lettering extensions
-#: lib/stitches/auto_satin.py:708
+#: lib/stitches/auto_satin.py:712
 #, python-format
 msgid "AutoSatin Running Stitch %d"
 msgstr "АвтоСатин Строчка %d"
@@ -1866,6 +1866,10 @@ msgstr "Преобразовать линию в Сатин"
 msgid "Cut Satin Column"
 msgstr "Разделить Сатиновую Колонну"
 
+#: templates/duplicate_params.xml:3
+msgid "Duplicate Params"
+msgstr ""
+
 #: templates/embroider.xml:3
 msgid "Embroider"
 msgstr "Экспорт вышивки"
@@ -2015,15 +2019,15 @@ msgstr "При отключении вышивание вперед-назад �
 
 #: templates/lettering_generate_json.xml:36
 msgid "Force letter case"
-msgstr ""
+msgstr "Перезаписать регистр"
 
 #: templates/lettering_generate_json.xml:38
 msgid "Upper"
-msgstr ""
+msgstr "Верхний"
 
 #: templates/lettering_generate_json.xml:39
 msgid "Lower"
-msgstr ""
+msgstr "Нижний"
 
 #: templates/lettering_generate_json.xml:43
 msgid "Min Scale"
@@ -2257,10 +2261,6 @@ msgstr "Симулятор / Реалистичный предпросмотр"
 #: templates/stitch_plan_preview.xml:3
 msgid "Stitch Plan Preview"
 msgstr "Предпросмотр плана вышивки"
-
-#: templates/transfer_params.xml:3
-msgid "Transfer Params"
-msgstr ""
 
 #: templates/troubleshoot.xml:3
 msgid "Troubleshoot Objects"
