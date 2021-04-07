@@ -9,6 +9,7 @@ from itertools import chain
 from inkex import paths
 from shapely import affinity as shaffinity
 from shapely import geometry as shgeo
+from shapely.ops import nearest_points
 
 from ..i18n import _
 from ..svg import line_strings_to_csp, point_lists_to_csp
@@ -211,7 +212,17 @@ class SatinColumn(EmbroideryElement):
     @cache
     def flattened_rungs(self):
         """The rungs, as LineStrings."""
-        return tuple(shgeo.LineString(self.flatten_subpath(rung)) for rung in self.rungs)
+        rungs = []
+        for rung in self.rungs:
+            rung = shgeo.LineString(self.flatten_subpath(rung))
+            # make sure each rung intersects both rails
+            if not rung.intersects(self.flattened_rails[0]) or not rung.intersects(self.flattened_rails[1]):
+                start = nearest_points(rung, self.flattened_rails[0])[1]
+                end = nearest_points(rung, self.flattened_rails[1])[1]
+                rungs.append(shgeo.LineString([start, end]))
+            else:
+                rungs.append(rung)
+        return tuple(rungs)
 
     @property
     @cache
@@ -332,7 +343,7 @@ class SatinColumn(EmbroideryElement):
         rungs = self.flattened_rungs
 
         for rung in rungs:
-            rung = shaffinity.scale(rung, 1.1, 1.1)
+            # rung = shaffinity.scale(rung, 1.1, 1.1)
             for rail in rails:
                 self._cut_rail(rail, rung)
 
@@ -372,7 +383,6 @@ class SatinColumn(EmbroideryElement):
                 yield UnequalPointsError(self.flattened_rails[0].interpolate(0.5, normalized=True))
         else:
             for rung in self.flattened_rungs:
-                rung = shaffinity.scale(rung, 1.1, 1.1)
                 for rail in self.flattened_rails:
                     intersection = rung.intersection(rail)
                     if intersection.is_empty:
