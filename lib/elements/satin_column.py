@@ -343,7 +343,6 @@ class SatinColumn(EmbroideryElement):
         rungs = self.flattened_rungs
 
         for rung in rungs:
-            # rung = shaffinity.scale(rung, 1.1, 1.1)
             for rail in rails:
                 self._cut_rail(rail, rung)
 
