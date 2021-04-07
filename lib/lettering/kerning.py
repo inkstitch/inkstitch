@@ -36,16 +36,38 @@ class FontKerning(object):
                 with warnings.catch_warnings():
                     warnings.simplefilter("ignore")
                     from fontTools.agl import toUnicode
-            if len(glyph) > 1 and not (index + 1) % 3 == 0:
+            if not (index + 1) % 3 == 0:
+                # glyph names need to be converted to unicode
+                # we need to take into account, that there can be more than one start/end letter in the very same hkern element
+                # in this case they will be commas separated and each first letter needs to be combined with each next letter
+                # e.g. <hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Amacron,Abreve,Aogonek" g2="T,Tcaron" k="5" />
+                glyphs = []
                 glyph_names = glyph.split(",")
-                # the glyph name is written in various languages, second is english. Let's look it up.
-                if len(glyph_names) == 1:
-                    hkern[index] = toUnicode(glyph)
-                else:
-                    hkern[index] = toUnicode(glyph_names[1])
+                for glyph_name in glyph_names:
+                    # each glyph can have additional special markers, e.g. o.cmp
+                    # toUnicode will not respect those and convert them to a simple letter
+                    # this behaviour will generate a wrong spacing for this letter.
+                    # Let's make sure to also transfer the separators and extensions to our json file
+                    separators = [".", "_"]
+                    used_separator = False
+                    for separator in separators:
+                        glyph_with_separator = glyph_name.split(separator)
+                        if len(glyph_with_separator) == 2:
+                            glyphs.append("%s%s%s" % (toUnicode(glyph_with_separator[0]), separator, glyph_with_separator[1]))
+                            used_separator = True
+                            continue
+                    # there is no extra separator
+                    if not used_separator:
+                        glyphs.append(toUnicode(glyph_name))
+                hkern[index] = glyphs
         k = [int(x) for x in hkern[2::3]]
-        u = [k + v for k, v in zip(hkern[0::3], hkern[1::3])]
-        hkern = dict(zip(u, k))
+        u_start = [k for k in hkern[0::3]]
+        u_end = [k for k in hkern[1::3]]
+        hkern = {}
+        for i, start in enumerate(u_start):
+            for e in u_end[i]:
+                for s in start:
+                    hkern[s+e] = k[i]
         return hkern
 
     # the space character
