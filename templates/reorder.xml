@@ -6,7 +6,9 @@
     <effect>
         <object-type>all</object-type>
         <effects-menu>
-            <submenu name="Ink/Stitch" />
+            <submenu name="Ink/Stitch">
+                <submenu name="Edit" />
+            </submenu>
         </effects-menu>
     </effect>
     <script>
