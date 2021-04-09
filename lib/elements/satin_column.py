@@ -217,9 +217,13 @@ class SatinColumn(EmbroideryElement):
             rung = shgeo.LineString(self.flatten_subpath(rung))
             # make sure each rung intersects both rails
             if not rung.intersects(self.flattened_rails[0]) or not rung.intersects(self.flattened_rails[1]):
+                # the rung does not intersect both rails
+                # get nearest points on rungs
                 start = nearest_points(rung, self.flattened_rails[0])[1]
                 end = nearest_points(rung, self.flattened_rails[1])[1]
-                rungs.append(shgeo.LineString([start, end]))
+                # extend from the nearest points just a little bit to make sure that we get an intersection
+                rung = shaffinity.scale(shgeo.LineString([start, end]), 1.1, 1.1)
+                rungs.append(rung)
             else:
                 rungs.append(rung)
         return tuple(rungs)
