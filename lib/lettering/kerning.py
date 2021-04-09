@@ -36,7 +36,7 @@ class FontKerning(object):
                 with warnings.catch_warnings():
                     warnings.simplefilter("ignore")
                     from fontTools.agl import toUnicode
-            if not (index + 1) % 3 == 0:
+            if len(glyph) > 1 and not (index + 1) % 3 == 0:
                 # glyph names need to be converted to unicode
                 # we need to take into account, that there can be more than one start/end letter in the very same hkern element
                 # in this case they will be commas separated and each first letter needs to be combined with each next letter
@@ -65,8 +65,8 @@ class FontKerning(object):
         u_end = [k for k in hkern[1::3]]
         hkern = {}
         for i, start in enumerate(u_start):
-            for e in u_end[i]:
-                for s in start:
+            for s in start:
+                for e in u_end[i]:
                     hkern[s+e] = k[i]
         return hkern
 
