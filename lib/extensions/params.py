@@ -18,7 +18,7 @@ from ..commands import is_command, is_command_symbol
 from ..elements import (AutoFill, Clone, EmbroideryElement, Fill, Polyline,
                         SatinColumn, Stroke)
 from ..elements.clone import is_clone
-from ..gui import PresetsPanel, SimulatorPreview
+from ..gui import PresetsPanel, SimulatorPreview, WarningPanel
 from ..i18n import _
 from ..svg.tags import SVG_POLYLINE_TAG
 from ..utils import get_resource_dir
@@ -344,6 +344,8 @@ class SettingsFrame(wx.Frame):
 
         self.preview = SimulatorPreview(self)
         self.presets_panel = PresetsPanel(self)
+        self.warning_panel = WarningPanel(self)
+        self.warning_panel.Hide()
 
         self.cancel_button = wx.Button(self, wx.ID_ANY, _("Cancel"))
         self.cancel_button.Bind(wx.EVT_BUTTON, self.cancel)
@@ -379,6 +381,8 @@ class SettingsFrame(wx.Frame):
         nodes.sort(key=lambda node: node.order)
 
         try:
+            self.warning_panel.Hide()
+            self.Layout()
             for node in nodes:
                 if abort_early.is_set():
                     # cancel; params were updated and we need to start over
@@ -390,6 +394,9 @@ class SettingsFrame(wx.Frame):
 
                 patches.extend(copy(node).embroider(None))
         except SystemExit:
+            self.warning_panel.Show()
+            self.Layout()
+
             raise
         except Exception:
             # Ignore errors.  This can be things like incorrect paths for
@@ -457,6 +464,7 @@ class SettingsFrame(wx.Frame):
         sizer_3 = wx.BoxSizer(wx.HORIZONTAL)
         for tab in self.tabs:
             self.notebook.AddPage(tab, tab.name)
+        sizer_1.Add(self.warning_panel, 0, flag=wx.EXPAND | wx.ALL, border=10)
         sizer_1.Add(self.notebook, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
         sizer_1.Add(self.presets_panel, 0, flag=wx.EXPAND | wx.ALL, border=10)
         sizer_3.Add(self.cancel_button, 0, wx.RIGHT, 5)

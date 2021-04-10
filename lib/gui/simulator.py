@@ -5,13 +5,11 @@
 
 import sys
 import time
-import traceback
 from threading import Event, Thread
 
 import wx
 from wx.lib.intctrl import IntCtrl
 
-from .dialogs import info_dialog
 from ..i18n import _
 from ..stitch_plan import patches_to_stitch_plan, stitch_plan_from_file
 from ..svg import PIXELS_PER_MM
@@ -822,16 +820,12 @@ class SimulatorPreview(Thread):
                                                            on_close=self.simulate_window_closed,
                                                            target_duration=self.target_duration)
             except Exception:
-                error = traceback.format_exc()
-
                 try:
                     # a window may have been created, so we need to destroy it
                     # or the app will never exit
                     wx.Window.FindWindowByName(_("Preview")).Destroy()
                 except Exception:
                     pass
-
-                info_dialog(self, error, _("Internal Error"))
 
             self.simulate_window.Show()
             wx.CallLater(10, self.parent.Raise)
