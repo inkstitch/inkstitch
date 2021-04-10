@@ -84,6 +84,8 @@ docs:
     children:
     - title: "Commands"
       url: /docs/commands/
+    - title: "Edit"
+      url: /docs/edit/
     - title: "Fill Tools"
       url: /docs/fill-tools/
     - title: "Fonts Tools"
@@ -98,12 +100,8 @@ docs:
       url: /docs/params/
     - title: "Preferences"
       url: /docs/preferences/
-    - title: "Reorder"
-      url: /docs/reorder/
     - title: "Satin Tools"
       url: /docs/satin-tools/
-    - title: "Transfer Params"
-      url: /docs/transfer-params/
     - title: "Troubleshoot"
       url: /docs/troubleshoot/
     - title: "Visualize"

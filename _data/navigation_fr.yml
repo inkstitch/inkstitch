@@ -84,6 +84,8 @@ docs:
     children:
     - title: "Commandes"
       url: /fr/docs/commands/
+    - title: "Edit"
+      url: /fr/docs/edit/
     - title: "Outils de remplissage"
       url: /fr/docs/fill-tools/
     - title: "Font tools"
@@ -98,12 +100,8 @@ docs:
       url: /fr/docs/params/
     - title: "Preferences"
       url: /fr/docs/preferences/
-    - title: "Reorder"
-      url: /fr/docs/reorder/
     - title: "Outils Satin"
       url: /fr/docs/satin-tools/
-    - title: "Transfer Params"
-      url: /fr/docs/transfer-params/
     - title: "Dépannage pour objets"
       url: /fr/docs/troubleshoot/
     - title: Visualize

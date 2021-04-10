@@ -24,20 +24,52 @@
 
 @font-face {
   font-family: 'Barlow';
-  font-style: normal;
+  font-style: bold;
   font-weight: 700;
   src: url(barlow-bold.ttf) format('truetype');
 }
 
-$sans-serif         : 'Barlow', sans-serif;
-$sans-serif-narrow  : 'Barlow Condensed', sans-serif;
+@font-face {
+  font-family: 'FiraSans Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url(FiraSansCondensed-Light.woff) format('woff');
+}
 
-$global-font-family : $sans-serif;
-$header-font-family : $sans-serif-narrow;
+@font-face {
+  font-family: 'FiraSans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(FiraSansLight.woff) format('woff');
+}
 
-tt, code, kbd, samp, pre {
-  font-family: 'Barlow Condensed', monospace;
-  font-size: 0.6rem;
+
+@font-face {
+  font-family: 'FiraSans';
+  font-style: bold;
+  font-weight: 700;
+  src: url(FiraSansLight.woff) format('woff');
+}
+
+html:not([lang="ru"]) body {
+    font-family         : 'Barlow', sans-serif;
+    
+    tt, code, kbd, samp, pre, ul, ul li a, .masthead__inner-wrap,
+    .btn {
+      font-family: 'Barlow Condensed', sans-serif;
+    }
+    a[lang="ru"] {
+      font-family: 'FiraSans', sans-serif;
+    }
+}
+
+html[lang="ru"] body{
+    font-family         : 'FiraSans', sans-serif;
+
+    tt, code, kbd, samp, pre, ul, ul li a, .masthead__inner-wrap,
+    .btn {
+      font-family: 'FiraSans Condensed', sans-serif;
+    }
 }
 
 nobr {
@@ -102,8 +134,8 @@ $text-color: #000;
 }
 
 .highlighter-rouge, figure.highlight {
-  font-size: .6rem;
   background: #efefef;
+  padding: 0 5px;
 }
 
 .page__content .align-left {

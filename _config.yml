@@ -354,7 +354,7 @@ defaults:
     values:
       lang: fr
   - scope:
-      path: "_posts/ru/"
+      path: "_posts/ru"
     values:
       lang: ru
   # _pages

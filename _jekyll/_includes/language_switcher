@@ -31,7 +31,7 @@
     {%- endif -%}
 
 		{%- if lang_page.size > 0 -%}
-	    {%- assign lang_sub = new_url | append: '|' | append: lang[1] -%}
+	    {%- assign lang_sub = new_url | append: '|' | append: lang[1] | append: '|' | append: lang[0] -%}
 	    {%- assign lang_sub_array = lang_sub | split: '|' -%}
 	    {%- assign lang_array = lang_array | push: lang_sub_array -%}
 	  {%- endif -%}
@@ -43,7 +43,7 @@
     <li id="language_switcher"><span class="nav__sub-title">{{ site.data.ui-text[page.lang].choose_language | default: "Choose your language" }}</span>
         <ul>
         {% for l in lang_array %}
-          <li><a href="{{ l[0] }}">{{ l[1] }}</a></li>
+          <li><a  lang="{{ l[2] }}" href="{{ l[0] }}">{{ l[1] }}</a></li>
         {% endfor %}
         </ul>
     </li>

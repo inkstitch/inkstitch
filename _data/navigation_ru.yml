@@ -1,204 +1,202 @@
 # main links
 main:
   - title: "Features"
-    url: /features/
+    url: /ru/features/
   - title: "User Manual"
-    url: /docs/install/
+    url: /ru/docs/install/
   - title: "Tutorials"
-    url: /tutorials/
+    url: /ru/tutorials/
   - title: "Get Help"
-    url: /docs/faq/
+    url: /ru/docs/faq/
   - title: "Get Involved"
-    url: /developers/introduction/
+    url: /ru/developers/introduction/
     
 # index + specific pages which have the sidebar option in the header
 pages:
   - title: "Features"
-    url: /features/
+    url: /ru/features/
   - title: "User Manual"
-    url: /docs/install/
+    url: /ru/docs/install/
     children:
       - title: "Installation"
-        url: /docs/install/
+        url: /ru/docs/install/
       - title: "Workflow"
-        url: /docs/workflow/
+        url: /ru/docs/workflow/
       - title: Stitch Library
-        url: /docs/stitch-library/
+        url: /ru/docs/stitch-library/
       - title: "FAQ"
-        url: /docs/faq/
+        url: /ru/docs/faq/
   - title: "Tutorials"
-    url: /tutorials/
+    url: /ru/tutorials/
     children:
       - title: "Artwork Galleries"
-        url: /tutorials/inspiration/
+        url: /ru/tutorials/inspiration/
       - title: "Sample Files"
-        url: /tutorials/resources/samples/
+        url: /ru/tutorials/resources/samples/
       - title: "Templates"
-        url: /tutorials/resources/templates/
+        url: /ru/tutorials/resources/templates/
       - title: "Tutorials"
-        url: /tutorials/
+        url: /ru/tutorials/
       - title: "DIY Embroidery Machine"
-        url: /tutorials/embroidery-machine/
+        url: /ru/tutorials/embroidery-machine/
   - title: "Get involved"
-    url: /developers/introduction/
+    url: /ru/developers/introduction/
   - title: "News"
-    url: /news/
+    url: /ru/news/
 
 # documentation links
 docs:
   - title: Installation
-    url: /docs/install/
+    url: /ru/docs/install/
     children:
       - title: "Windows"
-        url: /docs/install-windows/
+        url: /ru/docs/install-windows/
       - title: "macOS"
-        url: /docs/install-macos/
+        url: /ru/docs/install-macos/
       - title: "Linux"
-        url: /docs/install-linux/
+        url: /ru/docs/install-linux/
   - title: Getting Started
     children:
       - title: "Customize"
-        url: /docs/customize/
+        url: /ru/docs/customize/
       - title: "Basic Usage"
-        url: /docs/basic-usage/
+        url: /ru/docs/basic-usage/
       - title: "Workflow"
-        url: /docs/workflow/
+        url: /ru/docs/workflow/
   - title: "Stitch Library"
-    url: /docs/stitch-library/
+    url: /ru/docs/stitch-library/
     children:
       - title: "Manual Stitch"
-        url: /docs/stitches/manual-stitch/
+        url: /ru/docs/stitches/manual-stitch/
       - title: "Running Stitch"
-        url: /docs/stitches/running-stitch/
+        url: /ru/docs/stitches/running-stitch/
       - title: "Bean Stitch"
-        url: /docs/stitches/bean-stitch/
+        url: /ru/docs/stitches/bean-stitch/
       - title: "Zig-Zag (Simple Satin)"
-        url: /docs/stitches/zigzag-stitch/
+        url: /ru/docs/stitches/zigzag-stitch/
       - title: "Satin Column"
-        url: /docs/stitches/satin-column/
+        url: /ru/docs/stitches/satin-column/
       - title: "E-Stitch"
-        url: /docs/stitches/e-stitch/
+        url: /ru/docs/stitches/e-stitch/
       - title: "Fill Stitch"
-        url: /docs/stitches/fill-stitch/
+        url: /ru/docs/stitches/fill-stitch/
   - title: Interface
     children:
     - title: "Commands"
-      url: /docs/commands/
+      url: /ru/docs/commands/
+    - title: "Edit"
+      url: /ru/docs/edit/
     - title: "Fill Tools"
-      url: /docs/fill-tools/
+      url: /ru/docs/fill-tools/
     - title: "Fonts Tools"
-      url: /docs/font-tools/
+      url: /ru/docs/font-tools/
     - title: "Import threadlist"
-      url: /docs/import-threadlist/
+      url: /ru/docs/import-threadlist/
     - title: Install Add-Ons
-      url: /docs/addons/   
+      url: /ru/docs/addons/   
     - title: "Lettering"
-      url: /docs/lettering/
+      url: /ru/docs/lettering/
     - title: "Params"
-      url: /docs/params/
+      url: /ru/docs/params/
     - title: "Preferences"
-      url: /docs/preferences/
-    - title: "Reorder"
-      url: /docs/reorder/
+      url: /ru/docs/preferences/
     - title: "Satin Tools"
-      url: /docs/satin-tools/
-    - title: "Transfer Params"
-      url: /docs/transfer-params/
+      url: /ru/docs/satin-tools/
     - title: "Troubleshoot"
-      url: /docs/troubleshoot/
+      url: /ru/docs/troubleshoot/
     - title: "Visualize"
-      url: /docs/visualize/
+      url: /ru/docs/visualize/
   - title: "File Handling"
     children:
     - title: Supported File Formats
-      url: /docs/file-formats/
+      url: /ru/docs/file-formats/
     - title: Export and Import Files
-      url: /docs/import-export/
+      url: /ru/docs/import-export/
     - title: Print PDF
-      url: /docs/print-pdf/
+      url: /ru/docs/print-pdf/
     - title: Threadlist
-      url: /docs/threadlist/
+      url: /ru/docs/threadlist/
   - title: Tips
     children:
       - title: "Fonts"
-        url: /docs/fonts/
+        url: /ru/docs/fonts/
       - title: "Hidden Features"
-        url: /docs/features/
+        url: /ru/docs/features/
       - title: Inkscape Tips
-        url: /docs/inkscape-tips/
+        url: /ru/docs/inkscape-tips/
       - title: Machine Database
-        url: /docs/machine-database/
+        url: /ru/docs/machine-database/
   - title: Troubleshooting
     children:
       - title: "F.A.Q."
-        url: /docs/faq/
+        url: /ru/docs/faq/
       - title: Error Messages
-        url: /docs/error-messages/
+        url: /ru/docs/error-messages/
       - title: "Missing Translation"
-        url: /docs/localization/
+        url: /ru/docs/localization/
 
 # fonts
 fonts:
   - title: Font Tutorials
     children:
       - title: Create New Fonts
-        url: /tutorials/font-creation
+        url: /ru/tutorials/font-creation
   - title: Font Library
-    url: /fonts/font-library/
+    url: /ru/fonts/font-library/
     
 # tutorial links
 tutorials:
   - title: Inspiration
     children:
       - title: "Artwork Gallery"
-        url: /tutorials/inspiration/
+        url: /ru/tutorials/inspiration/
   - title: Hardware Projects
     children:
       - title: "DIY Embroidery Machine"
-        url: /tutorials/embroidery-machine/
+        url: /ru/tutorials/embroidery-machine/
       - title: "Sock Hoop"
-        url: /tutorials/sock-hoop/
+        url: /ru/tutorials/sock-hoop/
   - title: Resources
     children:
     - title: "Branding Guide"
-      url: /tutorials/resources/branding-guide/
+      url: /ru/tutorials/resources/branding-guide/
     - title: "Sample Files"
-      url: /tutorials/resources/samples/
+      url: /ru/tutorials/resources/samples/
     - title: "Templates"
-      url: /tutorials/resources/templates/
+      url: /ru/tutorials/resources/templates/
   - title: Tutorials
-    url: /tutorials/
+    url: /ru/tutorials/
     children:
     - title: "Tutorials A - Z"
-      url: /tutorials/
+      url: /ru/tutorials/
     - title: "Video Tutorials"
-      url: /tutorials/video/
+      url: /ru/tutorials/video/
     - title: External Tutorials
-      url: /tutorials/external-tutorials/
+      url: /ru/tutorials/external-tutorials/
   
 # developers links
 developers:
   - title: Get involved
-    url: /developers/introduction/
+    url: /ru/developers/introduction/
   - title: Ink/Stitch
-    url: /developers/inkstitch/
+    url: /ru/developers/inkstitch/
     children:
     - title: Manual Setup (Linux/macOS)
-      url: /developers/inkstitch/manual-setup/
+      url: /ru/developers/inkstitch/manual-setup/
     - title: Manual Setup (Windows)
-      url: /developers/inkstitch/windows-manual-setup/
+      url: /ru/developers/inkstitch/windows-manual-setup/
     - title: Python Modules
-      url: /developers/inkstitch/python-modules/
+      url: /ru/developers/inkstitch/python-modules/
     - title: Namespace
-      url: /developers/inkstitch/namespace/
+      url: /ru/developers/inkstitch/namespace/
   - title: Pyembroidery
-    url: /developers/pyembroidery
+    url: /ru/developers/pyembroidery
   - title: Documentation
-    url: /developers/documentation/
+    url: /ru/developers/documentation/
   - title: Localization
-    url: /developers/localize/
+    url: /ru/developers/localize/
   - title: "Bug Reports"
-    url: /developers/report-bugs/
+    url: /ru/developers/report-bugs/
   - title: "Statistics"
-    url: /statistics/
+    url: /ru/statistics/
       
