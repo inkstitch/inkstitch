@@ -1,8 +1,8 @@
 ---
 title: "Install Add-Ons for Inkscape"
-permalink: /de/docs/addons/
+permalink: /de/docs/thread-color/
 excerpt: ""
-last_modified_at: 2018-10-13
+last_modified_at: 2021-04-11
 toc: true
 ---
 ## Garnliste importieren

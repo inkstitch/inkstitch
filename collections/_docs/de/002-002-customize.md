@@ -2,7 +2,7 @@
 title: "Anpassung von Ink/Stitch"
 permalink: /de/docs/customize/
 excerpt: ""
-last_modified_at: 2019-03-15
+last_modified_at: 2021-04-11
 toc: true
 ---
 
@@ -60,3 +60,9 @@ Das Benutzerverzeichnis für Erweiterungen kann in den Inkscape Einstellungen ü
 **Tip:** Hier gibt es [Vorlagen](/de/tutorials/resources/templates/) die du nutzen kannst.
 {: .notice--info }
 
+## Farbpaletten für Insckape installieren
+
+Ink/Stitch enthält viele Farbpaletten der üblichen Garnhersteller. Diese können installiert werden, damit sie in Inkscape nutzbar sind.
+Das erlaubt dir dein Design mit den richtigen Farben zu planen. Die Farben werden in die PDF-Ausgabe übernommen und auch in der Stickdatei abgespeichert, sofern dein Stickformat dies unterstützt.
+
+[Mehr Informationen](/de/docs/thread-color/#farbpaletten-für-insckape-installieren)
