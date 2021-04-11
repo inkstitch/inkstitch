@@ -50,19 +50,6 @@ class UnequalPointsError(ValidationError):
     ]
 
 
-rung_message = _("Each rung should intersect both rails once.")
-
-
-class DanglingRungError(ValidationError):
-    name = _("Rung doesn't intersect rails")
-    description = _("Satin column: A rung doesn't intersect both rails.") + " " + rung_message
-
-
-class TooManyIntersectionsError(ValidationError):
-    name = _("Rung intersects too many times")
-    description = _("Satin column: A rung intersects a rail more than once.") + " " + rung_message
-
-
 class SatinColumn(EmbroideryElement):
     element_name = _("Satin Column")
 
@@ -384,14 +371,6 @@ class SatinColumn(EmbroideryElement):
         elif len(self.csp) == 2:
             if len(self.rails[0]) != len(self.rails[1]):
                 yield UnequalPointsError(self.flattened_rails[0].interpolate(0.5, normalized=True))
-        else:
-            for rung in self.flattened_rungs:
-                for rail in self.flattened_rails:
-                    intersection = rung.intersection(rail)
-                    if intersection.is_empty:
-                        yield DanglingRungError(rung.interpolate(0.5, normalized=True))
-                    elif not isinstance(intersection, shgeo.Point):
-                        yield TooManyIntersectionsError(rung.interpolate(0.5, normalized=True))
 
     def reverse(self):
         """Return a new SatinColumn like this one but in the opposite direction.
