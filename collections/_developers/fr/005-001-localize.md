@@ -18,7 +18,7 @@ Ink/Stitch supports displaying text in the user's preferred language in the foll
 
 Want to help translate?  We'd really appreciate your contributions!  Ink/Stitch uses a the collaborative translation platform [Crowdin](http://crowdin.com) to facilitate community translations.  Through their generous open source program, we're able to use their platform free of charge, and we greatly appreciate their support.
 
-To start translating, visit our [project page on Crowdin](https://crowdin.com/project/inkstitch).  It's easy to sign in using your GitHub account.  Pick a language and start suggesting translations!
+To start translating, visit our [project page on Crowdin](https://translate.inkstitch.org).  It's easy to sign in using your GitHub account.  Pick a language and start suggesting translations!
 
 **Info:** If you want your language to appear in the release section of Ink/Stitch, watch out for the string `"Generate INX files"` and make sure you create a translation for it. This is the key for Ink/Stitch to create the menu files in your language.
 {: .notice--warning }

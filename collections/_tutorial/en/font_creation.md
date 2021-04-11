@@ -134,7 +134,7 @@ Ink/Stitch offers a tool for you to create the json file with the correct kernin
 1. `Extensions > Ink/Stitch > Font Tools > Generate JSON ...`
    ![Generate JSON](/assets/images/fonts/augusa_tutorial/en_generate_JSON.png)
 
-2. Fill in everything you want to be included into the json file:
+2. Fill in everything you want to include into the json file:
    * **Name**: the name of your font (mandatory).
    * **Description**: additional information about your font (such as sizing information, etc)
    * **Font File** (mandatory): When you have been using FontForge to generate your svg font file, Ink/Stitch will read the kerning information from your font to include it into the json file.
@@ -142,7 +142,11 @@ Ink/Stitch offers a tool for you to create the json file with the correct kernin
    * **AutoRoute Satin**:
       * enabled: Ink/Stitch will generate a reasonable routing for satin columns in your font when used in the lettering tool. [More information about AutoRoute Satin](/docs/satin-tools/#auto-route-satin-columns)
       * disabled: Ink/Stitch will use the glyphs as is. Disable this option, if you took care for the routing in your font by yourself.
-   * **Reversible**: wether your font can be stitch forwards and backwards or only forwards
+   * **Reversible**: wether your font can be stitched forwards and backwards or only forwards
+   * **Force letter case**:
+      * No: Choose this option if your font contains upper and lower case letters (default).
+      * Upper: Choose this option if your font only contains upper case letters.
+      * Lower: Choose this option if your font only contains lower case letters.
    * **Default Glyph**: the glyph to be shown if the user requested glyph isn't available in the font file (missing glyph)
    * **Min Scale / Max Scale**: Define how much can your glyphs can be scaled without loosing quality when stitched out
 

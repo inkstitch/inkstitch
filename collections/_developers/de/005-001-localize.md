@@ -19,7 +19,7 @@ Ink/Stitch unterstützt die Darstellung von Text in der bevorzugten Sprache des 
 
 Willst du bei den Übersetzungen helfen?  Wir würden deinen Beitrag wirklich sehr begrüßen!  Ink/Stitch benutzt die kollaborative Übersetzungsplatfrom [CrowdIn](http://crowdin.com) um die gemeinschaftliche Übersetzungsarbeit zu erleichtern.  Durch deren tolles Open Source Programm, ist es uns möglich, die Platform kostenlos zu nutzen, was wir wirklich sehr wertschätzen.
 
-Um mit dem Übersetzen zu beginnen, besuche unsere [Projektseite bei CrowdIn](https://crowdin.com/project/inkstitch).  Du kannst dich einfach mit deinem GitHub-Account einloggen.  Wähle eine Sprache und beginne Übersetzungen vorzuschlagen!
+Um mit dem Übersetzen zu beginnen, besuche unsere [Projektseite bei CrowdIn](https://translate.inkstitch.org).  Du kannst dich einfach mit deinem GitHub-Account einloggen.  Wähle eine Sprache und beginne Übersetzungen vorzuschlagen!
 
 **Info:** Wenn du deine Sprache als gesonderte Datei herunterladen willst, halte Ausschau nach dem Begriff `"Generate INX files"` und stelle sicher, dass es dafür eine Übersetzung gibt. Das ist der Schlüsselbegriff für Ink/Stitch, das Menü ist deiner Sprache zu erstellen.
 {: .notice--warning }

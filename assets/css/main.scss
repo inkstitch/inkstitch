@@ -169,10 +169,6 @@ table.inline-table {
   display: table;
 }
 
-table tr td:first-child {
-  width: 25%;
-}
-
 .equal-tables th, .equal-tables td {
   width: 50%;
 }
@@ -191,6 +187,11 @@ table tr td:first-child {
 
 .table-first-column-alignright tr td:first-child, .table-first-column-alignright tr th:first-child {
     text-align: right;
+}
+
+.params-table tr td:nth-child(2) {
+    min-width: 150px;
+    text-align: center;
 }
 
 /* Table of Contents */

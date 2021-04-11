@@ -158,13 +158,17 @@ Ink/Stitch bietet ein Werkzeug an, mit dem die JSON-Datei mit der richtigen Kern
      * aktiviert: Ink/Stitch generiert automatisch geführte Satinkolumnen, wenn die Schrift mit dem Text Werkzeug von Ink/Stitch benutzt wird. [Mehr Informationen über automatisch geführte Satinkolumnen](/de/docs/satin-tools/#auto-route-satin-columns)
      * deaktiviert: Ink/Stitch benutzt die Buchstaben so wie du sie digitalisiert hast. Wennn du selbst schon für einen optimalen Stichpfad gesorgt hast, kannst du diese Funktion deaktivieren.
    * **Umkehrbar**: definiere, ob deine Schrift vorwärts und rückwärts gestickt werden kann.
+  * **Klein-/Großbuchstaben erzwingen**:
+      * Nein: Wähle diese Option, wenn deine Schrift sowohl Klein- als auch Großbuchstaben enthält (Standard)
+      * Großbuchstaben: Wähle diese Option, wenn deine Schrift nur Großbuchstaben enthält.
+      * Kleinbuchstaben: Wähle diese Option, wenn deine Schrift nur Kleinbuchstaben enthält.
    * **Standard-Glyphe**: das Zeichen/der Buchstabe der ausgegeben werden soll, wenn der eingegebene Buchstabe nicht in der Schriftdatei vorhanden ist
    * **Minimale Skalierung / Maximale Skalierung**: definiert, wie weit die Schrift maximal skaliert werden darf ohne beim Sticken an Qualität zu verlieren 
 
    Die folgenden Felder sind nur notwendig, wenn die SVG-Schriftdatei keine Kerning Information enthält.
    Wenn keine Kerning Information vorhanden ist, werden die unten stehenden Werte automatisch genutzt.
 
-   * **Erzwinge nutzerdefinierte Werte**: Benutze nicht die Kerning Information aus der Schriftdatei, sondern die unten definierten Werte.
+   * **Wert erzwingen**: Benutze nicht die Kerning Information aus der Schriftdatei, sondern die nebenstehenden Werte.
 
    * **Zeilenhöhe (px)**: Abstand zur nächsten Zeile
    * **Wortabstand (px)**: Die Breite des Leerzeichens
