@@ -15,7 +15,7 @@ from ..i18n import _
 from ..svg import line_strings_to_csp, point_lists_to_csp
 from ..utils import Point, cache, collapse_duplicate_point, cut
 from .element import EmbroideryElement, Patch, param
-from .validation import ValidationError
+from .validation import ValidationError, ValidationWarning
 
 
 class SatinHasFillError(ValidationError):
@@ -48,6 +48,19 @@ class UnequalPointsError(ValidationError):
         _('* With the selected object press "P" to activate the pencil tool.'),
         _('* Hold "Shift" while drawing the rung.')
     ]
+
+
+rung_message = _("Each rung should intersect both rails once.")
+
+
+class DanglingRungWarning(ValidationWarning):
+    name = _("Rung doesn't intersect rails")
+    description = _("Satin column: A rung doesn't intersect both rails.") + " " + rung_message
+
+
+class TooManyIntersectionsWarning(ValidationWarning):
+    name = _("Rung intersects too many times")
+    description = _("Satin column: A rung intersects a rail more than once.") + " " + rung_message
 
 
 class SatinColumn(EmbroideryElement):
@@ -357,6 +370,16 @@ class SatinColumn(EmbroideryElement):
         sections = [s for s in sections if s[0] is not None and s[1] is not None]
 
         return sections
+
+    def validation_warnings(self):
+        rungs = tuple(shgeo.LineString(self.flatten_subpath(rung)) for rung in self.rungs)
+        for rung in rungs:
+            for rail in self.flattened_rails:
+                intersection = rung.intersection(rail)
+                if intersection.is_empty:
+                    yield DanglingRungWarning(rung.interpolate(0.5, normalized=True))
+                elif not isinstance(intersection, shgeo.Point):
+                    yield TooManyIntersectionsWarning(rung.interpolate(0.5, normalized=True))
 
     def validation_errors(self):
         # The node should have exactly two paths with no fill.  Each
