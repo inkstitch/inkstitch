@@ -88,12 +88,8 @@ docs:
       url: /fr/docs/edit/
     - title: "Outils de remplissage"
       url: /fr/docs/fill-tools/
-    - title: "Font tools"
+    - title: "Font Management"
       url: /fr/docs/font-tools/
-    - title: "Import threadlist"
-      url: /fr/docs/import-threadlist/
-    - title: Installer les Add-Ons
-      url: /fr/docs/addons/
     - title: "Lettrage"
       url: /fr/docs/lettering/
     - title: "Paramètres"
@@ -103,6 +99,8 @@ docs:
     - title: "Outils Satin"
       url: /fr/docs/satin-tools/
     - title: "Dépannage pour objets"
+    - title: "Thread Color Management"
+      url: /fr/docs/thread-color/
       url: /fr/docs/troubleshoot/
     - title: Visualize
       url: /fr/docs/visualize/

@@ -2,7 +2,7 @@
 title: "Workflow"
 permalink: /ru/docs/workflow/
 excerpt: ""
-last_modified_at: 2019-04-08
+last_modified_at: 2021-04-11
 toc: true
 ---
 ![Ink/Stitch workflow](/assets/images/docs/en/workflow-chart.svg)
@@ -35,16 +35,14 @@ Edit objects and paths with:
 
 Scale, rotate and move the whole object with the select tool. The node editor tool serves to manipulate selected nodes, etc.
 
-Additionally you could use path effects (`Path > Path Effects...`). Remember to always convert the resulting object back into a path as described above.
+Additionally you could use path effects (`Path > Path Effects...`). Remember to always convert the resulting object back into a path (`Path > Convert object to path`).
 
 ### Use Existing Picture/Graphic
 
 When basing a design off an existing picture or graphic, load it into Inkscape in its own layer. Some graphics are amenable to Inkscape's [auto-tracing feature](https://inkscape.org/en/doc/tutorials/tracing/tutorial-tracing.html) (`Path > Trace Bitmap` or `Shift+Alt+B`), especially if you simplify the image in a graphic editor first (e.g. with [GIMP](https://www.gimp.org/)).
 
-**Tip:** If you have Linux and need to vectorize a stroke, you could make use of an other Inkscape plugin, which aims to do [centerline tracing](https://github.com/fablabnbg/inkscape-centerline-trace). For embroidery purposes it might only apply to simple shapes.
-{: .notice--info }
-
 After tracing, clean up the vector shapes, using `Path > Simplify` (`Ctrl+L`) and deleting nodes by hand when possible. The goal is to use as few Bezier curves as reasonably possible to represent the image.
+Often the tracing function will produce very little objekts which are impossible to embroider. Therefore it is advisable to cleanup your document with `Extensions > Ink/Stitch > Troubleshoot > Cleanup document...`.
 
 When the image is needed to be traced by hand, use the freehand drawing tool. This tool creates paths with a lot of Beziér nodes, so again, simplify the curves as much as possible.
 
@@ -55,6 +53,7 @@ When the image is needed to be traced by hand, use the freehand drawing tool. Th
 
 For text, choose a font carefully. It's quite hard to make satin look good when it's 1mm wide or narrower. Sans-serif fonts tend to be the easiest. For text smaller than 4mm tall, you'll have a very difficult time making lowercase letters look good, so consider block-caps. Cursive/script fonts can work well, but it's not going to be as easy as you think.
 
+Ink/Stitch offers ready to use fonts which can be inserted into your document through `Extensions > Ink/Stitch > Lettering`
 
 ## ![Vectorize](/assets/images/docs/workflow-icon-vectorize.png) Step 2: Convert to Embroidery Vectors & Parametrize
 
@@ -89,16 +88,6 @@ Ungrouping objects works as follows:
 * Select the group(s)
 * Hit <key>Ctrl</key><key>Shift</key><key>G</key>
 
-### Convert to Path
-
-Transform **all objects** you want to stitch to paths:
-
-* Select all objects (`Ctrl+A`)
-* Click on ![convert to path](/assets/images/docs/inkscape-tools-convert-to-path.png) or hit <key>Ctrl</key><key>Alt</key><key>C</key>.
-
-**Info:** Objects that are not of "path" type, are ignored by Ink/Stitch.
-{: .notice--warning }
-
 ### Stitch Types
 
 Ink/Stitch offers various stitch types. Depending on which stitch type you are willing to use, you have to set the fill color, or stroke parameters with `Object > Fill and Stroke...` (<key>Ctrl</key><key>Shift</key><key>F</key>).
@@ -127,7 +116,7 @@ When you're designing for embroidery machines that can't cut the thread mid-sew 
 
 The order of stitching also affects how the fabric pulls and pushes. Each stitch will distort the fabric, and you'll need to take this into account and compensate accordingly. [More Information](/tutorials/push-pull-compensation/)
 
-Once you've created all vectors, it's time to put everything in the right order. This is where the Inkscapes Objects tool (`Objects > Objects ...`) comes in useful. Optimize your order to minimize color changes and reduce or hide jump-stitches.
+Once you've created all vectors, it's time to put everything in the right order. This is where the Inkscapes Objects tool (`Objects > Objects ...`) comes in useful. Optimize your order to minimize color changes and reduce or hide jump-stitches. Additionally you can make use of the Ink/Stitch [sorting function](/docs/edit/#re-stack-objects-in-order-of-selection) gebrauch machen.
 
 Ink/Stitch will stitch objects in exactly the order they appear in your SVG document, from lowest to highest in stacking order. If the distance between two objects is long, Ink/Stitch will add a jump-stitch between them automatically. It uses the color of the object to determine thread color, so changes in color from one object to the next will result in a thread-change instruction being added to the embroidery output file.
 
@@ -145,13 +134,13 @@ Ink/Stitch will stitch objects in exactly the order they appear in your SVG docu
 
 Ink/Stitch supports three ways to preview your design:
 
-* [Simulator](/docs/simulate/)
-* [Print Preview](/docs/print/)
-* [Display Stitch Plan](/docs/import-export/#method-2-display-stitch-plan) (Undo with <key>Ctrl</key><key>Z</key>)
+* [Simulator with (optional) realistic preview](/docs/visualize/#simulator--realistic-preview)
+* [Print Preview](/docs/print-pdf/)
+* [Stitch Plan Preview](/docs/visualize/#stitch-plan-preview) (Undo with <key>Ctrl</key><key>Z</key>)
 
 ## ![Create Icon](/assets/images/docs/workflow-icon-export.png) Step 5: Save the Embroidery File
 
-Once you've got everything in the right order, run `File > Save as...` to [export](/docs/import-export/) to a file format supported by your machine. Most machines can support DST, and some Brother machines prefer PES. Do not forget to also save your file in the SVG-format. Otherwise it's going to be difficult to change details later.
+Once you've got everything in the right order, run `File > Save a copy...` to [export](/docs/import-export/) to a file format supported by your machine. Most machines can support DST, and some Brother machines prefer PES. Do not forget to also save your file in the SVG-format. Otherwise it's going to be difficult to change details later.
 
 ## ![Create Icon](/assets/images/docs/workflow-icon-testsew.png) Step 7: Test-sew
 
@@ -161,5 +150,4 @@ Sew out the design, watching the machine to make sure that there aren't any surp
 
 ## ![Create Icon](/assets/images/docs/workflow-icon-optimize.png) Step 8+: Optimize
 
-Then go back and tweak your design. Hopefully it only takes a few tries to get it how you want it. Once you're done, copy the final embroidery file from your output directory, just to avoid accidentally overwriting it in the future.
-
+Then go back and tweak your design. Hopefully it only takes a few tries to get it how you want it.

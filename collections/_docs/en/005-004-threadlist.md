@@ -5,7 +5,6 @@ excerpt: ""
 last_modified_at: 2020-10-01
 toc: true
 ---
-
 Ink/Stitch can apply custom threadlists to an embroidery design. This is especially useful, if you want to work on existing embroidery files which do not support color information (e.g. DST).
 
 It could also be helpful, if you are wanting to test different color settings. You can export and import them as you like. But be careful not to change the amount and order of colors. In case you are planing to change these, you'd prefer to save the entire SVG instead.

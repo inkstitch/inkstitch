@@ -36,6 +36,10 @@ Wenn du deine Schrift ohne Kerning erstellt hast, kannst du mit diesem Werkzeug 
 * **Automatisch geführte Satinkolumne**:
     * aktiviert: Ink/Stitch generiert automatisch geführte Satinkolumnen, wenn die Schrift mit dem Text Werkzeug von Ink/Stitch benutzt wird. [Mehr Informationen über automatisch geführte Satinkolumnen](/de/docs/satin-tools/#auto-route-satin-columns)
     * deaktiviert: Ink/Stitch benutzt die Buchstaben so wie du sie digitalisiert hast. Wennn du selbst schon für einen optimalen Stichpfad gesorgt hast, kannst du diese Funktion deaktivieren.
+* **Klein-/Großbuchstaben erzwingen**:
+    * Nein: Wähle diese Option, wenn deine Schrift sowohl Klein- als auch Großbuchstaben enthält (Standard)
+    * Großbuchstaben: Wähle diese Option, wenn deine Schrift nur Großbuchstaben enthält.
+    * Kleinbuchstaben: Wähle diese Option, wenn deine Schrift nur Kleinbuchstaben enthält.
 * **Umkehrbar**: definiere, ob deine Schrift vorwärts und rückwärts gestickt werden kann.
 * **Standard-Glyphe**: das Zeichen/der Buchstabe der ausgegeben werden soll, wenn der eingegebene Buchstabe nicht in der Schriftdatei vorhanden ist
 * **Minimale Skalierung / Maximale Skalierung**: definiert, wie weit die Schrift maximal skaliert werden darf ohne beim Sticken an Qualität zu verlieren 

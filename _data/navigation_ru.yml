@@ -88,12 +88,8 @@ docs:
       url: /ru/docs/edit/
     - title: "Fill Tools"
       url: /ru/docs/fill-tools/
-    - title: "Fonts Tools"
+    - title: "Font Management"
       url: /ru/docs/font-tools/
-    - title: "Import threadlist"
-      url: /ru/docs/import-threadlist/
-    - title: Install Add-Ons
-      url: /ru/docs/addons/   
     - title: "Lettering"
       url: /ru/docs/lettering/
     - title: "Params"
@@ -102,6 +98,8 @@ docs:
       url: /ru/docs/preferences/
     - title: "Satin Tools"
       url: /ru/docs/satin-tools/
+    - title: "Thread Color Management"
+      url: /docs/thread-color/
     - title: "Troubleshoot"
       url: /ru/docs/troubleshoot/
     - title: "Visualize"

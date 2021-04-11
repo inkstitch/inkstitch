@@ -2,7 +2,7 @@
 title: "Customize Ink/Stitch"
 permalink: /docs/customize/
 excerpt: ""
-last_modified_at: 2019-03-15
+last_modified_at: 2021-04-11
 toc: true
 ---
 
@@ -62,3 +62,9 @@ You should confirm the user folder in your inkscape preferences see the [FAQ](/d
 **Tip:** Get [predefined templates](/tutorials/resources/templates/) from our tutorial section.
 {: .notice--info }
 
+## Install Thread Color Palettes
+
+Ink/Stitch comes with a lot of thread manufacturer color palettes which can be installed into Inkscape. This allows to build the designs with the correct colors in mind.
+Colors will appear in the PDF-Output and will also be included into your embroidery file, if your file format supports it. 
+
+[Read more](/docs/thread-color/#install-thread-color-palettes-for-inkscape)

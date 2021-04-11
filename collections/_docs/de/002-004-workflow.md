@@ -2,78 +2,147 @@
 title: "Arbeitsablauf"
 permalink: /de/docs/workflow/
 excerpt: ""
-last_modified_at: 2018-08-26
+last_modified_at: 2021-04-11
 toc: true
 ---
-## Schritt 1: Zeichnung oder ein Bild als Designvorlage
+![Ink/Stitch workflow](/assets/images/docs/en/workflow-chart.svg)
 
-Wenn ein Design von einem vorhandenen Bild oder auf einer vorhandenen Grafik basiert, lade es in Inkscape in eine eigene Ebene. Einige Grafiken sind über die Inkscape-Funktion [Bitmap nachzeichnen](https://inkscape.org/en/doc/tutorials/tracing/tutorial-tracing.html) zugänglich, besonders wenn das Bild zuerst in einem Grafikeditor vereinfacht wurde (z. B. mit [GIMP](https://www.gimp.org/)).
+## ![Create Icon](/assets/images/docs/workflow-icon-create.png) Schritt 1: Vektorgrafik erstellen
 
-**Tipp:** Wenn Linux verwendet wird und eine Linie vektorisieren müssen, kann man ein anderes Inkscape-Plugin verwenden, das [centerline tracing](https://github.com/fablabnbg/inkscape-centerline-trace). Für Stickereien kann es nur für einfache Formen genutzt werden.
+Zuerst brauchst du eine Idee oder ein Bild, dass du in eine Stickdatei umsetzen willst. Du kannst es mit dem Zeichenwerkzeug selbst erstellen oder ein bereits existierenden Bild nutzen.
+
+### Mit Inkscape zeichnen
+
+#### Pfade erstellen
+
+Inkscape bietet verschiedene Werkzeuge zur Erstellung von Vektorgrafiken an.
+Hier eine Auswahl an Werkzeugen, die du sehr viel einsetzen wirst:
+
+* ![freehand lines icon](/assets/images/docs/inkscape-tools-freehand.png) Freihandlinie zeichnen (<key>P</key>)
+* ![freehand lines icon](/assets/images/docs/inkscape-tools-bezier.png) Bezierkurven und gerade Linien zeichnen (<key>B</key>)
+
+Mit anderen Werkzeugen können sehr schnell geometrische Grundelemente erstellt werden:
+
+* ![square icon](/assets/images/docs/inkscape-tools-square.png) Recheck
+* ![circle icon](/assets/images/docs/inkscape-tools-circle.png) Kreis
+* ![polygon icon](/assets/images/docs/inkscape-tools-polygon.png) Sterne und Polygone
+* ![spiral icon](/assets/images/docs/inkscape-tools-spiral.png) Spirale
+
+#### Pfade bearbeiten
+
+Bearbeite Objekte und Pfade mit:
+* ![node tool icon](/assets/images/docs/inkscape-tools-select.png) Auswahlwerkzeug (<key>S</key>) and
+* ![node tool icon](/assets/images/docs/inkscape-tools-node.png) Knoten bearbeiten (<key>N</key>)
+
+Skalieren, rotierend und Objekte bewegen kann man mit dem Auswahlwerkzeug. Das Knotenwerkzeug dient zum manipulieren der Pfade eines Elements.
+
+Zusaätzlich gibt es eine Reihe an Pfadeffekten (`Pfad > Pfadeffekte...`). Nach der Bearbeitung eines Objektes mit Pfadeffekten, sollte immer die Funktion `Pfad > Objekt in Pfad umwandeln` eingesetzt werden.
+
+### Eine existierende Grafik verwenden
+
+Um dein Design an ein bereits existierendes Bild anzulehnen, muss es zunächst in Inkscape in eine eigene Ebene importiert werden. Einige Grafiken lassen sich sehr gut mit der [Inkscape Option](https://inkscape.org/de/doc/tutorials/tracing/tutorial-tracing.html) `Pfad > Bitmap nachzeichnen` in eine Vektorgrafik verwandeln. Das trifft besonders dann zu, wenn du die Grafik zuvor mit einem Grafikprogramm wie zum Beispiel [GIMP](https://www.gimp.org/) vereinfachst hast.  
+
+Nach der Vektorisierung ist es oft notwendig, die Datei etwas aufzuräumen. Nutze zum Beispiel `Pfad > Vereinfachen`(`Strg+L`) oder lösche einige Knoten von Hand so weit wie möglich. Oft gibt es auch kleine Bildfragmente, die es sich lohnt zu entfernen. Nutze dafür z.B. die Funktion `Erweiterungen > Ink/Stitch > Troubleshoot > Cleanup document...`.
+
+Manche Bilder sollten besser von Hand nachgezeichnet werden. Dazu kann man die Freihandlinien oder das Werkzeug für Bezierkurven verwenden. Freihandlinien erzeugen eine große Anzahl an Knotenpunkten, die anschließend mit Strg + L vereinfacht werden sollten.
+
+**Tip:** Eine existierende Vektorgrafik zu benutzen, kann dir eine Menge Arbeit ersparen. Benutze dafür den SVG-Filter in deiner Suchmaschine oder https://openclipart.org/.
 {: .notice--info }
 
-Eine Bereinigung der Vektorformen erreicht man mit `Pfad -> Vereinfachen` (`Strg + L`) danach lösche andere Knoten von Hand, wenn es möglich ist. Ziel ist es, so wenig Bezierkurven wie möglich zu verwenden, um das Bild darzustellen.
+### Text
 
-Wenn das Bild von Hand nachgezeichnet werden muss, verwende das Freihandlinien Werkzeug. Dieses Werkzeug erstellt Pfade mit vielen Bezierknoten, also vereinfache die Kurven so weit wie möglich.
+Wähle für einen Text die Schriftart sorgfältig aus. Es ist ziemlich schwer, Satinkolummnen gut aussehen zu lassen, wenn diese nur 1 mm breit oder dünner sind. Sans-Serif-Schriften sind in der Regel am einfachsten. Bei Texten, die kleiner als 4 mm sind, wird es sehr schwer, die Kleinbuchstaben gut aussehen zu lassen. Denke also an die Blockkappen. Kursive- oder Script-Schriftarten können gut funktionieren, aber es wird nicht so einfach sein, wie man denkt.
 
-**Tipp:** Durch eine schon vorhandene SVG-Datei, kann eine Menge Zeit gespart werden. Verwende daher die Google-Bildsuche mit dem Filter SVG.
+Darüber hinaus bietet Ink/Stitch inzwischen fertige Schriftarten an. Sie können über `Erweiterungen > Ink/Stitch > Text` abgerufen werden.
+
+## ![Vectorize](/assets/images/docs/workflow-icon-vectorize.png) Schritt 2: In Stickvektoren umwandeln & Parametrisieren
+
+An diesem Punkt hast du bereits eine Vektorgrafik deines Bildes. Als nächstes müssen die Vektoren so angepasst werden, dass Ink/Stitch sie auch versteht.
+
+### Objekte-Dialog
+
+Wir empfehlen mit Ebenen und Gruppen zu arbeiten. Im Objekt-Dialog (`Objekte > Objekte...` oder `Strg + Umschalt + O`) kannst du Ebenen, Gruppen und Objekte verwalten.
+
+Speichere dein Bild in einer duplizierten Ebene:
+
+* Rechtsklick auf die Ebene (wenn du den Namen nicht verändert hast, heißt sie `Ebene 1`)
+* Klicke auf `Duplizieren`
+* Klicke auf das Auge, die Ebene wird unsichtbar und das Auge schließt sich
+
+Jede Ebene, Gruppe und jedes Objekt das unsichtbar gemacht wurde, wird von Ink/Stitch ignoriert.
+Wir arbeiten nun mit der duplizierten Ebene weiter.
+
+![Objects panel](/assets/images/docs/en/objects-panel.png)
+
+### Gruppen
+
+Benutze Gruppen um deine Datei zu strukturieren.
+
+* Markieren Objekte mit der Maus
+* Füge Objekte hinzu oder entferne sie mit `Shift + Klick`
+* Drücke `Strg + G` um sie zu gruppieren
+
+Gruppierungen können mit `Strg + Umschalt + G` aufgehoben werden
+
+### Sticharten
+
+Ink/Stitch bietet verschiedene Sticharten an. Davon abhängend, welchen Stichtyp du verwenden willst, musst du Füllfarbe, Konturfarbe und Muster der Kontur verwenden. Die Einstellungen dafür befinden sich unter `Objekte > Füllung und Kontur...` (`Strg + Umschalt + F`).
+
+Schau die in der untenstehenden Tabelle die einzelnen Sticharten an. Klicke auf die Links, um sie dir genauer anzuschauen und zu lernen, wie sie funktionieren.
+
+Pfad Objekt | Stichart
+---|---|---
+(Gestrichelte) Linie |[Laufstich](/de/docs/stitches/running-stitch/), [Manueller Stich](/de/docs/stitches/manual-stitch/), [Zick-Zack-Stich](/de/docs/stitches/zigzag-stitch/), [Bohnen-Stich](/de/docs/stitches/bean-stitch/)
+Zwei kombinierte Linien (mit optionalen Querstreben) | [Satinkolumne](/de/docs/stitches/satin-column), [E-Stitch](/de/docs/stitches/e-stitch)
+Pfad mit Füllung | [Füllstich](/de/docs/stitches/fill-stitch/)
+{: .equal-tables }
+
+### Parametrisieren
+
+Setze Stickparameter mit `Erweiterungen > Ink/Stitch > Parameter`. Du findest eine Beschreibung für jede Option unter [Parameter](/de/docs/params) auf dieser Webseite.
+Jedes Mal, wenn du einen Wert änderst, erneuert sich die Stickvorschau. Wenn du mit dem Ergebnis zufrieden bist, klicke auf `Anwenden und schließen` um die Werte in die SVG-Datei zu speichern.
+
+Speichere deine SVG-Datei regelmäßig.
+
+## ![Create Icon](/assets/images/docs/workflow-icon-order.png) Schritt 3: Stichreihenfolge & Befehle
+
+### Stickreihenfolge
+
+Wenn du ein Stickdesign erstellst, ist es wichtig die Stickpfade zu optimieren. Du willst so wenig Sprungstiche wie möglich erzeugen und Farbwechsel mit sinnvoller Planung reduzieren. Sind einmal alle Vektoren erstellt, ist es jetzt Zeit die richtige Reihenfolge festzulegen. Hier ist das Objekt-Fenster (`Objekte > Objekte ...`) sehr nützlich. Hier kannst du Objekte, Gruppen und Ebenen in ihrer Position verschieben. Außerdem kannst du von der Ink/Stitch [Sortierfunktion](/de/docs/edit/#objekte-in-auswahlreihenfolge-sortieren) gebrauch machen.
+
+Ink/Stitch wird die Objekte in genau der Reihenfolge sticken, in der sie im Dokument angelegt sind. Dabei wird stets das unterste Objekte zuerst gestickt und das oberste zuletzt. Ist der Abstand zum nächsten Objekt zu lamg, werden automatisch Sprungstiche eingefügt. Die Objektfarbe legt auch die Garnfarbe fest. Farbwechsel resultieren dementsprechend in einen Farbwechsel-Anweisung in der Stickdatei.
+
+Die Stickreihenfolge wirkt sich außerdem auf Stoffverzerrungen aus. Jeder Stich schiebt oder drückt den Stoff. Deshalb muss schon im Design dieser Effekt entsprechend kompensiert werden. [Mehr Informationen](/de/tutorials/push-pull-compensation/)
+
+**Tip:** Inkscape bietet die Möglichkeit, Objekte in der Reihenfolge mit den Tasten BildHoch und BildRunter anzuheben und zu senken. Die neuen Funktionen “StackUp” und “StackDown” bieten eine bessere Kontrolle über diese Reihenfolge. Wir empfehlen daher, BildHoch und Bildrunter an diese Funtionen zu knüpfen. [Tastenkombinationen](/de/docs/customize/#Tastenkombinationen)
 {: .notice--info }
 
-Wähle für einen **Text** die Schriftart sorgfältig aus. Es ist ziemlich schwer, Satinkolummnen gut aussehen zu lassen, wenn diese nur 1 mm breit oder dünner sind. Sans-Serif-Schriften sind in der Regel am einfachsten. Bei Texten, die kleiner als 4 mm sind, wird es sehr schwer, die Kleinbuchstaben gut aussehen zu lassen. Denke also an die Blockkappen. Kursive- oder Script-Schriftarten können gut funktionieren, aber es wird nicht so einfach sein, wie man denkt.
-
-## Schritt 2: Plane den Stichpfad und die Farbwechsel
-
-Ab diesem Punkt haben wir eine Vektorgrafik des Bildes. Als nächstes müssen die Vektoren in etwas konvertieren, die Ink/Stitch versteht und diese dann in eine richtige Reihenfolge bringen.
-
-Wenn die benutzte Stickmaschine den Faden nicht in der Mitte näht oder die Farben automatisch wechseln kann, sollte der Stichpfad optimiert werden, um Sprungstiche zu reduzieren oder zu verbergen und mache nur minimale Farbwechsel. Versuche auch, Stiche über Sprungstiche zu vermeiden, wenn es möglich ist, weil es ein totaler Aufwand ist, sie später von Hand abzuschneiden.
-
-Die Stichreihenfolge beeinflusst auch, wie der Stoff gezogen und geschoben wird. Jeder Stich verzerrt den Stoff, und deshalb muss dies berücksichtigt und entsprechend kompensiert werden. [Weitere Informationen](/tutorials/push-pull-compensation/)
-
-## Schritt 3: Erstellung der Stickvektoren
-
-Wir empfehlen an dieser Stelle verstärkt mit Ebenen und Gruppen zu arbeiten. Wenn ein Bild nachgezeichnet wurde, behalte es als unterste Ebene und stelle es über die Ebenen- oder Objektpalette als unsichtbar ein. Jede Ebene, Gruppe oder Vektorform, die als unsichtbar festgelegt wurde, wird von Ink/Stitch ignoriert.
-
-Behalte die initial hinterlegten Vektoren in einer eigenen Ebene und verwende diese als Referenz beim Entwerfen von Stickvektoren. Kopiere und füge diese bei Bedarf in eine höhere Ebene ein und arbeite mit den Kopien.
-
-Stelle die Parameter unter `Erweiterungen -> Ink/Stitch -> Parameter` ein. Weitere Informationen zu Sticharten und deren Anwendung findet man im Abschnitt [Parameter](/docs/params/) dieser Dokumentation. Jedes Mal, wenn Parameterwerte geändert werden, wird das simulierte Ergebnis in dem Vorschaufenster sichtbar. Wenn das Ergebnis zufriedenstellend ist, klicke auf "Anwenden und schließen", um die Werte in der SVG-Datei zu speichern.
-
-Für eine detaillierte Ansicht des Ergebnisses wähle einen Vektorpfad und führe `Erweiterungen -> Ink/Stitch -> Sticken ...` aus, wodurch ein Stichplan nur für die ausgewählten Objekte angezeigt wird. Untersuche den resultierenden Stichplan mit dem Werkzeug Knoteneditor. Jeder Punkt ist ein einzelner Stich; Die Nadel dringt in das Gewebe ein und verriegelt sich an dieser Stelle mit dem Unterfaden. Nachdem der Stichplan geprüft wurde, mache den Stickvorgang rückgängig (`Strg + Z`), um den Stichplan zu verwerfen und die Vektoren wieder sichtbar zu machen.
-
-An dieser Stelle speichere die SVG-Datei. Wenn Inkscape langsam wird (aufgrund eines Inkscape-Speicherlecks), starte es neu, bevor fortgefahren wird.
-
-## Step 4: Reihenfolge
-
-Sobald alle Vektoren erstellt und einzeln geprüft haben, ist es an der Zeit alles in die richtige Reihenfolge zu bringen. Hier kommt das Objektwerkzeug von Inkscape zum Einsatz. Optimiere die Reihenfolge, um Farbänderungen zu minimieren und Sprungstiche zu reduzieren oder diese zu verstecken.
-
-In Ink/Stitch werden Objekte in genau der Reihenfolge zusammengefügt, in der sie in der SVG-Datei erscheinen, von der niedrigsten bis zur höchsten Stapelfolge. Wenn der Abstand zwischen zwei Objekten zu lang ist, fügt Ink/Stitch automatisch einen Sprungstich dazwischen ein. Es verwendet die Farbe des Objekts, um die Garnfarbe zu bestimmen, so dass Änderungen der Farbe von einem Objekt zum nächsten zu einem Farbwechsel führt, die der Stickdatei hinzugefügt wird.
-
-**Tipp:** Inkscape bietet die Möglichkeit, Objekte in der Reihenfolge mit den Tasten BildHoch und BildRunter anzuheben und zu senken. Die neuen Funktionen "StackUp" und "StackDown" bieten eine bessere Kontrolle über diese Reihenfolge. Wir empfehlen daher, BildHoch und Bildrunter an diese Funtionen zu knüpfen. [Tastenkombinationen](/docs/customize/#Tastenkombinationen)
+**Info:**  Die SVG-XML-Struktur kann auch manuell bearbeitet werden, indem der XML-Editor von Inkscape verwendet (Strg + Umschalt + X) wird. Die Schaltflächen “Raise” und “Lower” beeinflussen direkt die Reihenfolge der XML-Tags in der SVG-Datei und unterliegen nicht den gleichen Einschränkungen wie das ursprüngliche BildHoch und BildRunter. Beachte dabei, dass die Reihenfolge der XML-Tags im XML-Editor die umgekehrte Reihenfolge der Objekte im Objektfenster ist.
 {: .notice--info }
 
-** Info:** Die SVG-XML-Struktur kann auch manuell bearbeitet werden, indem der XML-Editor von Inkscape verwendet (`Strg + Umschalt + X`) wird. Die Schaltflächen "Raise" und "Lower" beeinflussen direkt die Reihenfolge der XML-Tags in der SVG-Datei und unterliegen nicht den gleichen Einschränkungen wie das ursprüngliche BildHoch und BildRunter. Beachte dabei, dass die Reihenfolge der XML-Tags im XML-Editor die _umgekehrte_ Reihenfolge der Objekte im Objektfenster ist.
-{: .notice--info }
+### Befehle
 
-## Schritt 5: Ausgabeformat
+[Befehle](/de/docs/commands/) können zur Pfadoptimierung beitragen. Du kannst Start- und Endpunkte festlegen, den Rahmen in eine bestimmte Position rücken oder Faden trennen, etc. 
 
-Sobald alles in der richtigen Reihenfolge ist, deaktiviere alle Objekte und führe *Sticken ...* erneut aus. Dies stickt alle sichtbaren Objekte in der Datei. Wähle in den Erweiterungseinstellungen ein Dateiformat, das von der Stickmaschine unterstützt wird. Die meisten Maschinen unterstützen DST, und einige Brother-Maschinen bevorzugen PES.
 
-*Sticken* erstellt eine Datei im angegebenen Ausgabeverzeichnis, die nach Ihrer SVG-Datei benannt ist, jedoch mit der Dateierweiterung `.DST`,` .PES` oder einem anderen gewählten Format. Es wird eine vorhandene Datei dort gespeichert und bis zu 5 alte Kopien jeder Datei erstellt.
+## ![Create Icon](/assets/images/docs/workflow-icon-visualize.png) Schritt 4: Visualiierung
 
-## Schritt 6: Ausgabe
+Ink/Stitch unterstützt drei Wege um sich ein Bild des entstehenden Designs zu machen:
 
-Es kann entweder eine Stickdatei für eine Auswahl von Objekten oder für alle Objekte erstellt werden. So wird eine Stickdatei für das gesamte Design erstellt:
+* [Simulator mit (optionaler) realistischen Vorschau](/de/docs/visualize/)
+* [PDF Vorschau](/de/docs/print-pdf/)
+* [Stichplan Vorschau](/de/docs/visualize/#stich-plan-vorschau) (Undo with <key>Ctrl</key><key>Z</key>)
 
-* Klicke in einen leeren Bereich (um die Auswahl aufzuheben)
-* Wähle `Erweiterungen -> Ink/Stitch -> Sticken ...`
-* Wähle das richtige Dateiformat für die Maschine
-* Gebe einen Verzeichnisnamen ein, in dem die Ausgabedateien gespeichern werden sollen. Z.B. `C:\Benutzer\%BENUTZERNAME%\Dokumente` unter Windows. Ink/Stitch wird sich an diese Information erinnern.
+## ![Create Icon](/assets/images/docs/workflow-icon-export.png) Schritt 5: Stickdatei speichern
 
-## Schritt 7: Sticktest
+Ist die Stickreihenfolge festgelegt, [exportiere](/de/docs/import-export/) dein Design über `Datei > Kopie speichern...` in das richtige Dateiformat für deine Stickmaschine. Die meisten Maschinen unterstützen DST, zusätzlich gibt es aber meistens noch ein weiteres Format. Brother Maschinen z.B. bevorzugen PES. Vergiss nicht die Datei auch im SVG-Format abzuspeichern. Sonst wird es später schwierig, das Motiv im Nachhinein weiter zu bearbeiten und kleine Details anzupassen.
 
-Es gibt immer Möglichkeiten für Verbesserungen! Um das Design zu testen, bereite ein Stück Teststoff vor, dass so genau wie möglich zu dem endgültigen Stoff passt. Verwende den gleichen Stabilisator und den gleichen Stoff wenn es möglich ist. Versuche für T-Shirts einen ähnlichen Stoff (normalerweise Knit) zu finden. Knit braucht viel Stabilisierung.
+## ![Create Icon](/assets/images/docs/workflow-icon-testsew.png) Schritt 7: Test-Sticken
 
-Nähe das Design und beobachte die Maschine um sicherzustellen, dass es keine Überraschungen gibt. Achte auf Lücken, die darauf hinweisen dass der Stoff verzerrt wurde. Beobachte auch Bereiche, in denen sich die Stiche zu sehr aufstauen und die Maschine Probleme damit hat, was darauf hinweist, dass die Stichdichte zu hoch ist.
+Es gibt immer Raum für Verbesserung! Um dein Design zu testen, benutze am Besten ein Stück Stoff, dass dem Material so weit wie möglich ähnelt, für das du dein Motiv vorgesehen hast. Nutze auch das gleiche Stickvlies.
 
-## Schritt 8+: Optimierung
+Beobachte deine Maschine, während sie stickt. Achte dabei auf Lücken zwischen den Objekten die auf Stoffverzerrungen hindeuten. Suche auch nach Stellen, an denen die Stiche zu eng sind und der Maschine Probleme bereiten.
 
-Optimiere das Design. Eventuell sind einige Versuche nötig, um das zu bekommen, wie es gewünscht wurde. Wenn es fertig ist, kopiere die endgültige Stickdatei aus dem Ausgabeverzeichnis, um zu verhindern, dass diese versehentlich zu einem andern Zeitpunkt überschrieben wird.
+## ![Create Icon](/assets/images/docs/workflow-icon-optimize.png) Schritt 8+: Optimieren
+
+Gehe anschließend zurück an die Bearbeitung des Designs. Es kann mehrere Anläufe benötigen, bis alles glatt läuft. Aber die Mühe lohnt sich und du erreichst am Ende eine gute Qualität.

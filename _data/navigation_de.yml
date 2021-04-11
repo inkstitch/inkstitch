@@ -84,12 +84,8 @@ docs:
       url: /de/docs/edit/
     - title: Füllstich Werkzeuge
       url: /de/docs/fill-tools/
-    - title: "Schriftwerkzeuge"
+    - title: "Schriftverwaltung"
       url: /de/docs/font-tools/
-    - title: "Garnliste importieren"
-      url: /de/docs/import-threadlist/
-    - title: Add-Ons installieren
-      url: /de/docs/addons/
     - title: Lettering
       url: /de/docs/lettering/
     - title: Parameter
@@ -98,6 +94,8 @@ docs:
       url: /de/docs/preferences/
     - title: Satin Werkzeuge
       url: /de/docs/satin-tools/
+    - title: "Thread Color Management"
+      url: /de/docs/thread-color/
     - title: "Fehlerbehebung"
       url: /de/docs/troubleshoot/
     - title: Visualisierung
