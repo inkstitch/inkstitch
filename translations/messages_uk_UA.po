@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-04-06 00:59+0000\n"
-"PO-Revision-Date: 2021-04-06 01:01\n"
+"POT-Creation-Date: 2021-04-11 01:02+0000\n"
+"PO-Revision-Date: 2021-04-11 01:04\n"
 "Last-Translator: \n"
 "Language-Team: Ukrainian\n"
 "MIME-Version: 1.0\n"
@@ -871,7 +871,7 @@ msgstr "Прошийте рядки тексту вперед і назад"
 msgid "Add trims"
 msgstr "Додати обрізку"
 
-#: lib/extensions/lettering.py:73 lib/extensions/params.py:348
+#: lib/extensions/lettering.py:73 lib/extensions/params.py:350
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
 #: print/templates/custom-page.html:33 print/templates/ui.html:92
 #: print/templates/ui.html:96 print/templates/ui.html:102
@@ -880,7 +880,7 @@ msgstr "Додати обрізку"
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: lib/extensions/lettering.py:77 lib/extensions/params.py:355
+#: lib/extensions/lettering.py:77 lib/extensions/params.py:357
 msgid "Apply and Quit"
 msgstr "Застосувати і закрити"
 
@@ -967,7 +967,7 @@ msgstr ""
 msgid "Embroidery Params"
 msgstr ""
 
-#: lib/extensions/params.py:352
+#: lib/extensions/params.py:354
 msgid "Use Last Settings"
 msgstr ""
 
@@ -1099,103 +1099,104 @@ msgstr "Передвстановленого набору параметрів \
 msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
 msgstr "Передвстановлений набір параметрів \"%s\" вже існує.  Будь ласка, використайте інше ім’я або натисніть \"Перезаписати\""
 
-#: lib/gui/simulator.py:20 electron/src/renderer/assets/js/simulator.js:140
+#: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:140
 msgid "JUMP"
 msgstr "СТРИБОК"
 
-#: lib/gui/simulator.py:20 electron/src/renderer/assets/js/simulator.js:143
+#: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:143
 msgid "TRIM"
 msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command label at bottom of simulator window
-#: lib/gui/simulator.py:20 templates/output_params_txt.xml:14
+#: lib/gui/simulator.py:18 templates/output_params_txt.xml:14
 #: electron/src/renderer/assets/js/simulator.js:137
 msgid "STITCH"
 msgstr ""
 
-#: lib/gui/simulator.py:20 templates/output_params_txt.xml:16
+#: lib/gui/simulator.py:18 templates/output_params_txt.xml:16
 #: electron/src/renderer/assets/js/simulator.js:149
 msgid "COLOR CHANGE"
 msgstr ""
 
-#: lib/gui/simulator.py:20 templates/output_params_txt.xml:18
+#: lib/gui/simulator.py:18 templates/output_params_txt.xml:18
 #: electron/src/renderer/assets/js/simulator.js:146
 msgid "STOP"
 msgstr ""
 
-#: lib/gui/simulator.py:52
+#: lib/gui/simulator.py:50
 msgid "Slow down (arrow down)"
 msgstr "Уповільнення (стрілка вниз)"
 
-#: lib/gui/simulator.py:55
+#: lib/gui/simulator.py:53
 msgid "Speed up (arrow up)"
 msgstr "Прискорити (стрілка вгору)"
 
-#: lib/gui/simulator.py:58
+#: lib/gui/simulator.py:56
 msgid "Go on step backward (-)"
 msgstr "Перейдіть на крок назад (-)"
 
-#: lib/gui/simulator.py:61
+#: lib/gui/simulator.py:59
 msgid "Go on step forward (+)"
 msgstr "Перейдіть на крок вперед (+)"
 
-#: lib/gui/simulator.py:64
+#: lib/gui/simulator.py:62
 msgid "Switch direction (arrow left | arrow right)"
 msgstr "Перемикач напрямку (стрілка вліво | стрілка вправо)"
 
-#: lib/gui/simulator.py:65 lib/gui/simulator.py:241 lib/gui/simulator.py:248
+#: lib/gui/simulator.py:63 lib/gui/simulator.py:239 lib/gui/simulator.py:246
 #: electron/src/renderer/components/Simulator.vue:29
 msgid "Pause"
 msgstr "Пауза"
 
-#: lib/gui/simulator.py:67
+#: lib/gui/simulator.py:65
 msgid "Pause (P)"
 msgstr "Пауза (P)"
 
-#: lib/gui/simulator.py:68
+#: lib/gui/simulator.py:66
 msgid "Restart"
 msgstr "Перезапустити"
 
-#: lib/gui/simulator.py:70
+#: lib/gui/simulator.py:68
 msgid "Restart (R)"
 msgstr "Перезапустити (R)"
 
-#: lib/gui/simulator.py:71
+#: lib/gui/simulator.py:69
 msgid "O"
 msgstr ""
 
-#: lib/gui/simulator.py:73
+#: lib/gui/simulator.py:71
 msgid "Display needle penetration point (O)"
 msgstr "Показати точку проникнення голки (O)"
 
-#: lib/gui/simulator.py:74
+#: lib/gui/simulator.py:72
 msgid "Quit"
 msgstr "Вийти"
 
-#: lib/gui/simulator.py:76
+#: lib/gui/simulator.py:74
 msgid "Quit (Q)"
 msgstr ""
 
-#: lib/gui/simulator.py:188
+#: lib/gui/simulator.py:186
 #, python-format
 msgid "Speed: %d stitches/sec"
 msgstr ""
 
-#: lib/gui/simulator.py:244 lib/gui/simulator.py:272
+#: lib/gui/simulator.py:242 lib/gui/simulator.py:270
 msgid "Start"
 msgstr ""
 
-#: lib/gui/simulator.py:818 lib/gui/simulator.py:830
+#: lib/gui/simulator.py:816 lib/gui/simulator.py:826
 msgid "Preview"
 msgstr ""
 
-#: lib/gui/simulator.py:834
-msgid "Internal Error"
+#: lib/gui/simulator.py:857
+msgid "Embroidery Simulation"
 msgstr ""
 
-#: lib/gui/simulator.py:863
-msgid "Embroidery Simulation"
+#: lib/gui/warnings.py:21
+msgid "Cannot load simulator.\n"
+"Close Params to get full error message."
 msgstr ""
 
 #. If you translate this string, that will tell Ink/Stitch to
