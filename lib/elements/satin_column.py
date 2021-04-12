@@ -222,7 +222,7 @@ class SatinColumn(EmbroideryElement):
                 start = nearest_points(rung, self.flattened_rails[0])[1]
                 end = nearest_points(rung, self.flattened_rails[1])[1]
                 # extend from the nearest points just a little bit to make sure that we get an intersection
-                rung = shaffinity.scale(shgeo.LineString([start, end]), 1.1, 1.1)
+                rung = shaffinity.scale(shgeo.LineString([start, end]), 1.01, 1.01)
                 rungs.append(rung)
             else:
                 rungs.append(rung)
