@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-04-11 01:02+0000\n"
-"PO-Revision-Date: 2021-04-11 01:03\n"
+"PO-Revision-Date: 2021-04-12 01:02\n"
 "Last-Translator: \n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -25,166 +25,168 @@ msgstr ""
 #. name of font in fonts/baumans
 #: inkstitch-fonts-metadata.py:2
 msgid "Baumans"
-msgstr ""
+msgstr "バウマン"
 
 #. name of font in fonts/chopin
 #: inkstitch-fonts-metadata.py:6
 msgid "Chopin Script"
-msgstr ""
+msgstr "ショパンスクリプト"
 
 #. name of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:10
 msgid "Dejavu Serif Semi-condensed"
-msgstr ""
+msgstr "DejavuSerif半凝縮"
 
 #. description of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:12
 #, python-format
 msgid "The capital em is 19,8 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 150%.  Every satin has center-walk underlay."
-msgstr ""
+msgstr "大文字のemは、100％スケールで幅19.8ミリメートルです。 80％または最大150％まで縮小できます。すべてのサテンにはセンターウォークアンダーレイがあります。"
 
 #. name of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:14
 msgid "Geneva Simple Sans Rounded"
-msgstr ""
+msgstr "ジュネーブシンプルサンセリフ"
 
 #. description of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:16
 msgid "Suitable for small fonts (8 to 20 mm)"
-msgstr ""
+msgstr "小さいフォント（8〜20 mm）に適しています"
 
 #. name of font in fonts/geneva_simple
 #: inkstitch-fonts-metadata.py:18
 msgid "Geneva Simple Sans"
-msgstr ""
+msgstr "ジュネーブシンプルサンズ"
 
 #. description of font in fonts/geneva_simple
 #: inkstitch-fonts-metadata.py:20
 msgid "Suitable for small fonts (6 to 15mm)"
-msgstr ""
+msgstr "小さいフォント(6〜15mm)に適しています"
 
 #. name of font in fonts/lobster
 #: inkstitch-fonts-metadata.py:22
 msgid "Lobster Two Bold Italic"
-msgstr ""
+msgstr "ロブスター2つの太字のイタリック"
 
 #. name of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:26
 msgid "Ink/Stitch Medium Font"
-msgstr ""
+msgstr "インク/ステッチミディアムフォント"
 
 #. description of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:28
 #, python-format
 msgid "A basic font suited for medium-sized characters.  The capital em is 0.6 inches wide at 100% scale.  Can be scaled down to 75% or up to 150%.  Every satin has contour underlay."
-msgstr ""
+msgstr "中型文字に適した基本フォント。大文字のemは、100％スケールで幅0.6インチです。 75％または最大150％に縮小できます。すべてのサテンには輪郭の下縫いがあります。"
 
 #. name of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:30
 msgid "Ink/Stitch Small Font"
-msgstr ""
+msgstr "インク/ステッチスモールフォント"
 
 #. description of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:32
 #, python-format
 msgid "A font suited for small characters.  The capital em is 0.2 inches wide at 100% scale.  Can be scaled up to 300%."
-msgstr ""
+msgstr "小さい文字に適したフォント。大文字のemは、100％スケールで幅0.2インチです。 300％までスケールアップできます。"
 
 #. name of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:34
 msgid "TT Directors"
-msgstr ""
+msgstr "TTディレクター"
 
 #. description of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:36
 msgid "A font suited for directing"
-msgstr ""
+msgstr "演出に適したフォント"
 
 #. name of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:38
 msgid "TT Masters"
-msgstr ""
+msgstr "TTマスターズ"
 
 #. description of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:40
 msgid "A font suited for heavy typing :)"
-msgstr ""
+msgstr "ヘビータイピングに適したフォント:)"
 
 #: inkstitch.py:56
 msgid "Ink/Stitch cannot read your SVG file. This is often the case when you use a file which has been created with Adobe Illustrator."
-msgstr ""
+msgstr "\n"
+"インク/ステッチはこのSVGファイルを読み取りできません。これは、AdobeIllustratorで作成されたファイルを使用する場合によくあります。"
 
 #: inkstitch.py:59
 msgid "Try to import the file into Inkscape through 'File > Import...' (Ctrl+I)"
-msgstr ""
+msgstr "「ファイル>インポート...」（Ctrl + I）を使用してファイルをInkscapeにインポートして下さい"
 
 #: inkstitch.py:70
 msgid "Ink/Stitch experienced an unexpected error."
-msgstr ""
+msgstr "インク/ステッチで予期しないエラーが発生しました。"
 
 #: inkstitch.py:71
 msgid "If you'd like to help, please file an issue at https://github.com/inkstitch/inkstitch/issues and include the entire error description below:"
-msgstr ""
+msgstr "ヘルプが必要な場合は、https：//github.com/inkstitch/inkstitch/issuesで問題を報告し、以下にエラーの説明全体を含めてください。"
 
 #. command attached to an object
 #: lib/commands.py:26
 msgid "Fill stitch starting position"
-msgstr ""
+msgstr "ステッチ開始位置を埋める"
 
 #. command attached to an object
 #: lib/commands.py:29
 msgid "Fill stitch ending position"
-msgstr ""
+msgstr "ステッチ終了位置を埋める"
 
 #. command attached to an object
 #: lib/commands.py:32
 msgid "Auto-route satin stitch starting position"
-msgstr ""
+msgstr "サテンステッチの開始位置を自動ルーティングします"
 
 #. command attached to an object
 #: lib/commands.py:35
 msgid "Auto-route satin stitch ending position"
-msgstr ""
+msgstr "サテンステッチの終了位置を自動ルーティングします"
 
 #. command attached to an object
 #: lib/commands.py:38
 msgid "Stop (pause machine) after sewing this object"
-msgstr ""
+msgstr "このオブジェクトを縫った後、停止（ミシンを一時停止）します"
 
 #. command attached to an object
 #: lib/commands.py:41
 msgid "Trim thread after sewing this object"
-msgstr ""
+msgstr "このオブジェクトを縫った後、糸を切り取ります"
 
 #. command attached to an object
 #: lib/commands.py:44
 msgid "Ignore this object (do not stitch)"
-msgstr ""
+msgstr "このオブジェクトを無視します（ステッチしないでください）"
 
 #. command attached to an object
 #: lib/commands.py:47
 msgid "Satin cut point (use with Cut Satin Column)"
-msgstr ""
+msgstr "サテンカットポイント（カットサテンカラムで使用）"
 
 #. command that affects a layer
 #: lib/commands.py:51
 msgid "Ignore layer (do not stitch any objects in this layer)"
-msgstr ""
+msgstr "レイヤーを無視します（このレイヤー内のオブジェクトをステッチしないでください）"
 
 #. command that affects entire document
 #: lib/commands.py:54
 msgid "Origin for exported embroidery files"
-msgstr ""
+msgstr "エクスポートされた刺繡ファイルの原点"
 
 #. command that affects entire document
 #: lib/commands.py:57
 msgid "Jump destination for Stop commands (a.k.a. \"Frame Out position\")."
-msgstr ""
+msgstr "\n"
+"停止コマンドのジャンプ先（別名「フレームアウト位置」）"
 
 #: lib/commands.py:215
 #, python-format
 msgid "Error: there is more than one %(command)s command in the document, but there can only be one.  Please remove all but one."
-msgstr ""
+msgstr "エラー：ドキュメントに複数の%(command)sコマンドがありますが、存在できるのは1つだけです。 1つを除いてすべて削除してください。"
 
 #. This is a continuation of the previous error message, letting the user know
 #. what command we're talking about since we don't normally expose the actual
@@ -194,29 +196,29 @@ msgstr ""
 #: lib/commands.py:222
 #, python-format
 msgid "%(command)s: %(description)s"
-msgstr ""
+msgstr "%(command)s: %(description)s"
 
 #: lib/commands.py:295 lib/commands.py:406 lib/extensions/layer_commands.py:34
 msgid "Ink/Stitch Command"
-msgstr ""
+msgstr "インク/ステッチコマンド"
 
 #. : the name of the line that connects a command to the object it applies to
 #: lib/commands.py:320
 msgid "connector"
-msgstr ""
+msgstr "コネクタ"
 
 #. : the name of a command symbol (example: scissors icon for trim command)
 #: lib/commands.py:337
 msgid "command marker"
-msgstr ""
+msgstr "コマンドマーカー"
 
 #: lib/elements/auto_fill.py:21
 msgid "Small Fill"
-msgstr ""
+msgstr "スモールフィル"
 
 #: lib/elements/auto_fill.py:22
 msgid "This fill object is so small that it would probably look better as running stitch or satin column. For very small shapes, fill stitch is not possible, and Ink/Stitch will use running stitch around the outline instead."
-msgstr ""
+msgstr "この塗りつぶしオブジェクトは非常に小さいので、ランニングステッチやサテンの柱として見栄えがよくなります。非常に小さい形状の場合、塗りつぶしステッチは不可能であり、インク/ステッチは代わりにアウトラインの周りにランニングステッチを使用します。"
 
 #: lib/elements/auto_fill.py:28 lib/elements/auto_fill.py:144
 msgid "Expand"
@@ -224,78 +226,80 @@ msgstr ""
 
 #: lib/elements/auto_fill.py:29
 msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use original size instead."
-msgstr ""
+msgstr "この塗りつぶしオブジェクトの展開パラメータは適用できません。\n"
+"インク/ステッチはそれを無視し、代わりに元のサイズを使用します。"
 
 #: lib/elements/auto_fill.py:34 lib/elements/auto_fill.py:121
 msgid "Inset"
-msgstr ""
+msgstr "挿入する"
 
 #: lib/elements/auto_fill.py:35
 msgid "The underlay inset parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use the original size instead."
-msgstr ""
+msgstr "この塗りつぶしオブジェクトの展開パラメータは適用できません。\n"
+"インク/ステッチはそれを無視し、代わりに元のサイズを使用します。"
 
 #: lib/elements/auto_fill.py:40
 msgid "AutoFill"
-msgstr ""
+msgstr "オートフィル"
 
 #: lib/elements/auto_fill.py:43
 msgid "Automatically routed fill stitching"
-msgstr ""
+msgstr "自動的にルーティングされたフィルステッチ"
 
 #: lib/elements/auto_fill.py:63
 msgid "Running stitch length (traversal between sections)"
-msgstr ""
+msgstr "ランニングステッチの長さ（セクション間のトラバース）"
 
 #: lib/elements/auto_fill.py:64
 msgid "Length of stitches around the outline of the fill region used when moving from section to section."
-msgstr ""
+msgstr "セクション間を移動するときに使用される塗りつぶし領域の輪郭の周りのステッチの長さ。"
 
 #: lib/elements/auto_fill.py:72
 msgid "Underlay"
-msgstr ""
+msgstr "アンダーレイ"
 
 #: lib/elements/auto_fill.py:72 lib/elements/auto_fill.py:81
 #: lib/elements/auto_fill.py:103 lib/elements/auto_fill.py:114
 #: lib/elements/auto_fill.py:124 lib/elements/auto_fill.py:136
 #: lib/elements/auto_fill.py:170
 msgid "AutoFill Underlay"
-msgstr ""
+msgstr "オートフィルアンダーレイ"
 
 #: lib/elements/auto_fill.py:78
 msgid "Fill angle"
-msgstr ""
+msgstr "塗りつぶし角度"
 
 #: lib/elements/auto_fill.py:79
 msgid "Default: fill angle + 90 deg. Insert comma-seperated list for multiple layers."
-msgstr ""
+msgstr "デフォルト：塗りつぶし角度+90度。複数のレイヤーにコンマ区切りのリストを挿入します。"
 
 #: lib/elements/auto_fill.py:100
 msgid "Row spacing"
-msgstr ""
+msgstr "行間隔"
 
 #: lib/elements/auto_fill.py:101
 msgid "default: 3x fill row spacing"
-msgstr ""
+msgstr "デフォルト：3x塗りつぶし行間隔"
 
 #: lib/elements/auto_fill.py:111
 msgid "Max stitch length"
-msgstr ""
+msgstr "最大ステッチ長さ"
 
 #: lib/elements/auto_fill.py:112
 msgid "default: equal to fill max stitch length"
-msgstr ""
+msgstr "デフォルト：最大ステッチ長を埋めるのと同じ"
 
 #: lib/elements/auto_fill.py:122
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
-msgstr ""
+msgstr "アンダーレイを行う前に形状を縮小して、アンダーレイが塗りつぶしの外側に表示されないようにします。"
 
 #: lib/elements/auto_fill.py:133 lib/elements/fill.py:74
 msgid "Skip last stitch in each row"
-msgstr ""
+msgstr "各行の最後のステッチをスキップします"
 
 #: lib/elements/auto_fill.py:134 lib/elements/fill.py:75
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
-msgstr ""
+msgstr "各行の最後のステッチは、次の行の最初のステッチに非常に近いです。スキップすると、ステッチ数と密度が減少します。"
 
 #: lib/elements/auto_fill.py:145
 msgid "Expand the shape before fill stitching, to compensate for gaps between shapes."
@@ -369,28 +373,28 @@ msgstr ""
 
 #: lib/elements/element.py:252
 msgid "Allow lock stitches"
-msgstr ""
+msgstr "ロックステッチを許可する"
 
 #: lib/elements/element.py:253
 msgid "Tie thread at the beginning and/or end of this object. Manual stitch will not add lock stitches."
-msgstr ""
+msgstr "このオブジェクトの最初または最後、あるいはその両方でスレッドを結びます。手動ステッチはロックステッチを追加しません。"
 
 #. options to allow lock stitch before and after objects
 #: lib/elements/element.py:257
 msgid "Both"
-msgstr ""
+msgstr "両方"
 
 #: lib/elements/element.py:257
 msgid "Before"
-msgstr ""
+msgstr "前"
 
 #: lib/elements/element.py:257
 msgid "After"
-msgstr ""
+msgstr "後"
 
 #: lib/elements/element.py:257
 msgid "Neither"
-msgstr ""
+msgstr "どちらでもない"
 
 #: lib/elements/element.py:299
 #, python-format
@@ -770,7 +774,7 @@ msgstr ""
 
 #: lib/extensions/auto_satin.py:54
 msgid "Please select at least one satin column."
-msgstr ""
+msgstr "少なくとも1つのサテンカラムを選択してください。"
 
 #. This was previously: "No embroiderable paths selected."
 #: lib/extensions/base.py:133
@@ -806,7 +810,7 @@ msgstr ""
 
 #: lib/extensions/convert_to_satin.py:135
 msgid "Ink/Stitch cannot convert your stroke into a satin column. Please break up your path and try again."
-msgstr ""
+msgstr "インク/ステッチでは、ストロークをサテンの列に変換できません。パスを分割して、もう一度やり直してください。"
 
 #: lib/extensions/cut_satin.py:20
 msgid "Please select one or more satin columns to cut."
@@ -820,7 +824,7 @@ msgstr ""
 
 #: lib/extensions/duplicate_params.py:19
 msgid "This function copies Ink/Stitch parameters from the first selected element to the rest of the selection. Please select at least two elements."
-msgstr ""
+msgstr "この関数は、最初に選択された要素から残りの選択要素にインク/ステッチパラメータをコピーします。少なくとも2つの要素を選択してください。"
 
 #: lib/extensions/flip.py:28
 msgid "Please select one or more satin columns to flip."
@@ -833,7 +837,8 @@ msgstr ""
 #: lib/extensions/import_threadlist.py:36
 msgid "The filepath specified is not a file but a dictionary.\n"
 "Please choose a threadlist file to import."
-msgstr ""
+msgstr "指定されたファイルパスはファイルではなく辞書です。\n"
+"インポートするスレッドリストファイルを選択してください。"
 
 #: lib/extensions/import_threadlist.py:46
 msgid "Couldn't find any matching colors in the file."
@@ -857,7 +862,7 @@ msgstr ""
 
 #: lib/extensions/lettering.py:44
 msgid "Font"
-msgstr ""
+msgstr "フォント"
 
 #: lib/extensions/lettering.py:56
 msgid "Options"
@@ -890,7 +895,7 @@ msgstr ""
 
 #: lib/extensions/lettering.py:218
 msgid "This font has no available font variant. Please update or remove the font."
-msgstr ""
+msgstr "このフォントには、使用可能なフォントバリアントがありません。フォントを更新または削除してください。"
 
 #. The user has chosen to scale the text by some percentage
 #. (50%, 200%, etc).  If you need to use the percentage symbol,
@@ -910,11 +915,11 @@ msgstr ""
 
 #: lib/extensions/lettering_custom_font_dir.py:27
 msgid "Please specify the directory of your custom fonts."
-msgstr ""
+msgstr "カスタムフォントのディレクトリを指定してください。"
 
 #: lib/extensions/lettering_generate_json.py:41
 msgid "Please specify a font file."
-msgstr ""
+msgstr "フォントファイルを指定してください。"
 
 #: lib/extensions/object_commands.py:21
 msgid "Please select one or more objects to which to attach commands."
@@ -1209,7 +1214,7 @@ msgstr ""
 #: lib/lettering/font.py:158
 #, python-format
 msgid "The font '%s' has no variants."
-msgstr ""
+msgstr "フォント '％s'にはバリアントがありません。"
 
 #. low-level file error.  %(error)s is (hopefully?) translated by
 #. the user's system automatically.
@@ -1248,11 +1253,11 @@ msgstr ""
 #: lib/utils/version.py:19
 #, python-format
 msgid "Ink/Stitch Version: %s"
-msgstr ""
+msgstr "インク/ステッチバージョン：％s"
 
 #: lib/utils/version.py:21
 msgid "Ink/Stitch Version: unkown"
-msgstr ""
+msgstr "インク/ステッチバージョン：不明"
 
 #: print/templates/color_swatch.html:8 print/templates/color_swatch.html:40
 #: print/templates/operator_detailedview.html:9
@@ -1791,15 +1796,15 @@ msgstr ""
 
 #: templates/about.xml:3 templates/about.xml:6
 msgid "About"
-msgstr ""
+msgstr "約"
 
 #: templates/about.xml:10
 msgid "An open-source machine embroidery design platform based on Inkscape."
-msgstr ""
+msgstr "Inkscapeをベースにしたオープンソースのミシン刺繍デザインプラットフォーム。"
 
 #: templates/about.xml:15
 msgid "License"
-msgstr ""
+msgstr "ライセンス"
 
 #: templates/auto_satin.xml:3
 msgid "Auto-Route Satin Columns"
@@ -1868,7 +1873,7 @@ msgstr ""
 
 #: templates/duplicate_params.xml:3
 msgid "Duplicate Params"
-msgstr ""
+msgstr "重複したパラメータ"
 
 #: templates/embroider.xml:3
 msgid "Embroider"
@@ -1876,19 +1881,19 @@ msgstr ""
 
 #: templates/embroider.xml:5
 msgid "Create a stitch file"
-msgstr ""
+msgstr "ステッチファイルを作成する"
 
 #: templates/embroider.xml:6
 msgid "Save your embroidery file through | File > Save a Copy ... |"
-msgstr ""
+msgstr "を介して刺繡ファイルを保存しますファイル>コピーを保存... |"
 
 #: templates/embroider.xml:7
 msgid "Choose from listed embroidery file formats and save."
-msgstr ""
+msgstr "リストされている刺繡ファイル形式から選択して保存します。"
 
 #: templates/embroider.xml:9
 msgid "Multiple file formats can be saved by choosing the zip file format."
-msgstr ""
+msgstr "zipファイル形式を選択すると、複数のファイル形式を保存できます。"
 
 #: templates/embroider.xml:14 templates/print.xml:10 templates/simulator.xml:10
 #: templates/stitch_plan_preview.xml:10
@@ -1897,11 +1902,11 @@ msgstr ""
 
 #: templates/embroider_settings.xml:3
 msgid "Preferences"
-msgstr ""
+msgstr "環境設定"
 
 #: templates/embroider_settings.xml:13
 msgid "Output Settings"
-msgstr ""
+msgstr "出力設定"
 
 #: templates/embroider_settings.xml:16
 msgid "Collapse length (mm)"
@@ -1939,7 +1944,7 @@ msgstr ""
 
 #: templates/import_threadlist.xml:20 templates/install.xml:10
 msgid "Thread Color Management"
-msgstr ""
+msgstr "糸の色の管理"
 
 #: templates/input.xml:9
 #, python-format
@@ -1948,7 +1953,7 @@ msgstr ""
 
 #: templates/install.xml:3
 msgid "Install thread color palettes for Inkscape"
-msgstr ""
+msgstr "Inkscapeのスレッドカラーパレットをインストールする"
 
 #: templates/layer_commands.xml:3
 msgid "Add Layer Commands"
@@ -1965,135 +1970,136 @@ msgstr ""
 #: templates/lettering_custom_font_dir.xml:3
 #: templates/lettering_custom_font_dir.xml:18
 msgid "Custom font directory"
-msgstr ""
+msgstr "カスタムフォントディレクトリ"
 
 #: templates/lettering_custom_font_dir.xml:10
 #: templates/lettering_generate_json.xml:10
 #: templates/lettering_remove_kerning.xml:10
 msgid "Font Management"
-msgstr ""
+msgstr "フォント管理"
 
 #: templates/lettering_custom_font_dir.xml:15
 msgid "Set a custom directory for additional fonts to be used with the lettering tool."
-msgstr ""
+msgstr "レタリングツールで使用する追加のフォント用のカスタムディレクトリを設定します。"
 
 #: templates/lettering_custom_font_dir.xml:21
 msgid "Usage: The custom font directory must contain a subdirectory for each font."
-msgstr ""
+msgstr "使用法：カスタムフォントディレクトリには、各フォントのサブディレクトリが含まれている必要があります。"
 
 #: templates/lettering_generate_json.xml:3
 msgid "Generate JSON"
-msgstr ""
+msgstr "JSONを生成する"
 
 #: templates/lettering_generate_json.xml:15
 msgid "Generates font.json which can be used by the lettering tool."
-msgstr ""
+msgstr "レタリングツールで使用できるfont.jsonを生成します。"
 
 #: templates/lettering_generate_json.xml:17
 msgid "The generated file can be viewed and updated with a standard text editor tool."
-msgstr ""
+msgstr "生成されたファイルは、標準のテキストエディタツールで表示および更新できます。"
 
 #: templates/lettering_generate_json.xml:21
 msgid "SVG Font File"
-msgstr ""
+msgstr "SVGフォントファイル"
 
 #: templates/lettering_generate_json.xml:25
 msgid "Name"
-msgstr ""
+msgstr "名前"
 
 #: templates/lettering_generate_json.xml:32
 msgid "Autoroute Satin"
-msgstr ""
+msgstr "サテンの自動ルート"
 
 #: templates/lettering_generate_json.xml:33
 msgid "Disable if you defined manual routing in your font."
-msgstr ""
+msgstr "フォントで手動ルーティングを定義した場合は無効にします。"
 
 #: templates/lettering_generate_json.xml:34
 msgid "Reversible"
-msgstr ""
+msgstr "可逆"
 
 #: templates/lettering_generate_json.xml:35
 msgid "If disabled back and forth stitching will not be possile for this font."
-msgstr ""
+msgstr "無効にすると、このフォントの前後のステッチはできなくなります。"
 
 #: templates/lettering_generate_json.xml:36
 msgid "Force letter case"
-msgstr ""
+msgstr "大文字と小文字を強制する"
 
 #: templates/lettering_generate_json.xml:38
 msgid "Upper"
-msgstr ""
+msgstr "アッパー"
 
 #: templates/lettering_generate_json.xml:39
 msgid "Lower"
-msgstr ""
+msgstr "下"
 
 #: templates/lettering_generate_json.xml:43
 msgid "Min Scale"
-msgstr ""
+msgstr "最小スケール"
 
 #: templates/lettering_generate_json.xml:44
 msgid "Max Scale"
-msgstr ""
+msgstr "最大スケール"
 
 #: templates/lettering_generate_json.xml:48
 msgid "Default Glyph"
-msgstr ""
+msgstr "デフォルトのグリフ"
 
 #: templates/lettering_generate_json.xml:52
 msgid "Kerning"
-msgstr ""
+msgstr "字詰め"
 
 #: templates/lettering_generate_json.xml:54
 msgid "If your font file contains kerning information, you can completely ignore the following settings (unless you want to overwrite them).\n"
 "                   If the kerning information cannot be found, these values will apply automatically."
-msgstr ""
+msgstr "フォントファイルにカーニング情報が含まれている場合は、次の設定を完全に無視できます（上書きする場合を除く）。\n"
+"                   カーニング情報が見つからない場合、これらの値は自動的に適用されます。"
 
 #: templates/lettering_generate_json.xml:59
 #: templates/lettering_generate_json.xml:66
 msgid "Force"
-msgstr ""
+msgstr "力"
 
 #: templates/lettering_generate_json.xml:60
 msgid "Overwrite leading information from font file."
-msgstr ""
+msgstr "フォントファイルから先頭の情報を上書きします。"
 
 #: templates/lettering_generate_json.xml:61
 msgid "Leading (px)"
-msgstr ""
+msgstr "リーディング（px）"
 
 #: templates/lettering_generate_json.xml:62
 msgid "Line height (default: 100)"
-msgstr ""
+msgstr "行の高さ（デフォルト：100）"
 
 #: templates/lettering_generate_json.xml:67
 msgid "Overwrite word spacing information from font file."
-msgstr ""
+msgstr "フォントファイルから単語間隔情報を上書きします。"
 
 #: templates/lettering_generate_json.xml:68
 msgid "Word spacing (px)"
-msgstr ""
+msgstr "単語間隔（px）"
 
 #: templates/lettering_generate_json.xml:69
 msgid "Space character width (default: 20)"
-msgstr ""
+msgstr "スペース文字の幅（デフォルト：20）"
 
 #: templates/lettering_remove_kerning.xml:3
 msgid "Remove Kerning"
-msgstr ""
+msgstr "カーニングを削除します"
 
 #: templates/lettering_remove_kerning.xml:15
 msgid "Removes Kerning information from given SVG files"
-msgstr ""
+msgstr "指定されたSVGファイルからカーニング情報を削除します"
 
 #: templates/lettering_remove_kerning.xml:19
 msgid "Make sure you keep a copy of the original file. After running this extension kerning information will be lost unrevertably from these files."
-msgstr ""
+msgstr "元のファイルのコピーを必ず保管してください。この拡張機能を実行すると、カーニング情報はこれらのファイルから元に戻せなくなります。"
 
 #: templates/lettering_remove_kerning.xml:23
 msgid "Select Font Files"
-msgstr ""
+msgstr "フォントファイルを選択"
 
 #: templates/object_commands.xml:3
 msgid "Attach Commands to Selected Objects"
@@ -2251,7 +2257,7 @@ msgstr ""
 
 #: templates/reorder.xml:3
 msgid "Re-stack objects in order of selection"
-msgstr ""
+msgstr "選択順にオブジェクトを再スタックします"
 
 #: templates/simulator.xml:3
 msgid "Simulator / Realistic Preview"
@@ -2332,7 +2338,7 @@ msgstr ""
 
 #: electron/src/renderer/components/InstallPalettes.vue:9
 msgid "Ink/Stitch can install palettes for Inkscape matching the thread colors from popular machine embroidery thread manufacturers."
-msgstr ""
+msgstr "Ink / Stitchは、人気のあるミシン刺繍糸メーカーの糸の色に一致するInkscapeのパレットをインストールできます。"
 
 #: electron/src/renderer/components/InstallPalettes.vue:48
 msgid "Inkscape add-on installation failed"
@@ -2340,7 +2346,7 @@ msgstr ""
 
 #: electron/src/renderer/components/InstallPalettes.vue:31
 msgid "Inkscape palettes have been installed. Please restart Inkscape to load the new palettes."
-msgstr ""
+msgstr "Inkscapeパレットがインストールされました。 Inkscapeを再起動して、新しいパレットをロードしてください。"
 
 #: electron/src/renderer/components/InstallPalettes.vue:17
 msgid "Install"
@@ -2348,7 +2354,7 @@ msgstr ""
 
 #: electron/src/renderer/components/InstallPalettes.vue:4
 msgid "Install Palettes"
-msgstr ""
+msgstr "パレットをインストールする"
 
 #: electron/src/renderer/components/InstallPalettes.vue:26
 msgid "Installation Completed"
@@ -2377,7 +2383,7 @@ msgstr ""
 
 #: electron/src/renderer/components/Simulator.vue:215
 msgid "needle points"
-msgstr ""
+msgstr "針先"
 
 #. description of keyboard shortcut that moves one stitch backward in simulator
 #: electron/src/renderer/components/Simulator.vue:71
@@ -2425,7 +2431,7 @@ msgstr ""
 
 #: electron/src/renderer/components/Simulator.vue:192
 msgid "Show"
-msgstr ""
+msgstr "表示"
 
 #: electron/src/renderer/components/Simulator.vue:10
 msgid "Simulator Shortcut Keys"
@@ -2454,5 +2460,5 @@ msgstr ""
 
 #: electron/src/renderer/components/InstallPalettes.vue:55
 msgid "Try again"
-msgstr ""
+msgstr "再試行"
 

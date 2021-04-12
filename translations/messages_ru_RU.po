@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-04-11 01:02+0000\n"
-"PO-Revision-Date: 2021-04-11 01:04\n"
+"PO-Revision-Date: 2021-04-12 01:04\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -821,7 +821,7 @@ msgstr "эта сатиновая колонна не имеет команды 
 
 #: lib/extensions/duplicate_params.py:19
 msgid "This function copies Ink/Stitch parameters from the first selected element to the rest of the selection. Please select at least two elements."
-msgstr ""
+msgstr "Эта функция копирует параметры Ink/Stitch из первого выделенного объекта в остальные объекты в выделении. Выберите как минимум два объекта."
 
 #: lib/extensions/flip.py:28
 msgid "Please select one or more satin columns to flip."
@@ -1869,7 +1869,7 @@ msgstr "Разделить Сатиновую Колонну"
 
 #: templates/duplicate_params.xml:3
 msgid "Duplicate Params"
-msgstr ""
+msgstr "Дублировать параметры"
 
 #: templates/embroider.xml:3
 msgid "Embroider"
@@ -1940,7 +1940,7 @@ msgstr "Выбрать файл"
 
 #: templates/import_threadlist.xml:20 templates/install.xml:10
 msgid "Thread Color Management"
-msgstr ""
+msgstr "Управление цветами нитей"
 
 #: templates/input.xml:9
 #, python-format
@@ -1972,7 +1972,7 @@ msgstr "Папка пользовательских шрифтов"
 #: templates/lettering_generate_json.xml:10
 #: templates/lettering_remove_kerning.xml:10
 msgid "Font Management"
-msgstr ""
+msgstr "Управление шрифтами"
 
 #: templates/lettering_custom_font_dir.xml:15
 msgid "Set a custom directory for additional fonts to be used with the lettering tool."
@@ -2253,7 +2253,7 @@ msgstr "Убрать настройки печати из данных SVG"
 
 #: templates/reorder.xml:3
 msgid "Re-stack objects in order of selection"
-msgstr ""
+msgstr "Упорядочить объекты в порядке выделения"
 
 #: templates/simulator.xml:3
 msgid "Simulator / Realistic Preview"
