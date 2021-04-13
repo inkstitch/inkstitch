@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-04-11 01:02+0000\n"
-"PO-Revision-Date: 2021-04-12 01:04\n"
+"PO-Revision-Date: 2021-04-13 01:04\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -1198,7 +1198,8 @@ msgstr "Симуляция Вышивки"
 #: lib/gui/warnings.py:21
 msgid "Cannot load simulator.\n"
 "Close Params to get full error message."
-msgstr ""
+msgstr "Не удалось запустить симулятор.\n"
+"Закройте Параметры, чтобы увидеть сообщение об ошибке."
 
 #. If you translate this string, that will tell Ink/Stitch to
 #. generate menu items for this language in Inkscape's "Extensions"
