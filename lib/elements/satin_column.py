@@ -9,12 +9,13 @@ from itertools import chain
 from inkex import paths
 from shapely import affinity as shaffinity
 from shapely import geometry as shgeo
+from shapely.ops import nearest_points
 
 from ..i18n import _
 from ..svg import line_strings_to_csp, point_lists_to_csp
 from ..utils import Point, cache, collapse_duplicate_point, cut
 from .element import EmbroideryElement, Patch, param
-from .validation import ValidationError
+from .validation import ValidationError, ValidationWarning
 
 
 class SatinHasFillError(ValidationError):
@@ -52,13 +53,13 @@ class UnequalPointsError(ValidationError):
 rung_message = _("Each rung should intersect both rails once.")
 
 
-class DanglingRungError(ValidationError):
+class DanglingRungWarning(ValidationWarning):
     name = _("Rung doesn't intersect rails")
     description = _("Satin column: A rung doesn't intersect both rails.") + " " + rung_message
 
 
 class TooManyIntersectionsError(ValidationError):
-    name = _("Rung intersects too many times")
+    name = _("Rungs intersects too many times")
     description = _("Satin column: A rung intersects a rail more than once.") + " " + rung_message
 
 
@@ -211,6 +212,24 @@ class SatinColumn(EmbroideryElement):
     @cache
     def flattened_rungs(self):
         """The rungs, as LineStrings."""
+        rungs = []
+        for rung in self._raw_rungs:
+            # make sure each rung intersects both rails
+            if not rung.intersects(self.flattened_rails[0]) or not rung.intersects(self.flattened_rails[1]):
+                # the rung does not intersect both rails
+                # get nearest points on rungs
+                start = nearest_points(rung, self.flattened_rails[0])[1]
+                end = nearest_points(rung, self.flattened_rails[1])[1]
+                # extend from the nearest points just a little bit to make sure that we get an intersection
+                rung = shaffinity.scale(shgeo.LineString([start, end]), 1.01, 1.01)
+                rungs.append(rung)
+            else:
+                rungs.append(rung)
+        return tuple(rungs)
+
+    @property
+    @cache
+    def _raw_rungs(self):
         return tuple(shgeo.LineString(self.flatten_subpath(rung)) for rung in self.rungs)
 
     @property
@@ -356,6 +375,13 @@ class SatinColumn(EmbroideryElement):
 
         return sections
 
+    def validation_warnings(self):
+        for rung in self._raw_rungs:
+            for rail in self.flattened_rails:
+                intersection = rung.intersection(rail)
+                if intersection.is_empty:
+                    yield DanglingRungWarning(rung.interpolate(0.5, normalized=True))
+
     def validation_errors(self):
         # The node should have exactly two paths with no fill.  Each
         # path should have the same number of points, meaning that they
@@ -370,12 +396,10 @@ class SatinColumn(EmbroideryElement):
             if len(self.rails[0]) != len(self.rails[1]):
                 yield UnequalPointsError(self.flattened_rails[0].interpolate(0.5, normalized=True))
         else:
-            for rung in self.flattened_rungs:
+            for rung in self._raw_rungs:
                 for rail in self.flattened_rails:
                     intersection = rung.intersection(rail)
-                    if intersection.is_empty:
-                        yield DanglingRungError(rung.interpolate(0.5, normalized=True))
-                    elif not isinstance(intersection, shgeo.Point):
+                    if not intersection.is_empty and not isinstance(intersection, shgeo.Point):
                         yield TooManyIntersectionsError(rung.interpolate(0.5, normalized=True))
 
     def reverse(self):
