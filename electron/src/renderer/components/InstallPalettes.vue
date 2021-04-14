@@ -20,7 +20,12 @@
         </translate>
       </v-card-text>
       <v-file-input class="mb-3 mx-3" webkitdirectory hide-details v-model="path" truncate-length="45"
-                    :label="$gettext('Choose Inkscape directory')"></v-file-input>
+                    :label="$gettext('Choose Inkscape directory')">
+      </v-file-input>
+      <v-card-text>
+        <translate>If you are not sure which file path to choose, click on install directly. In most cases Ink/Stitch will guess the correct path.
+        </translate>
+      </v-card-text>
       <v-card-actions>
         <v-btn text color="primary" v-on:click="install">
           <v-icon>mdi-palette</v-icon>
