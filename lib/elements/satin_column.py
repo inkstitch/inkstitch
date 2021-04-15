@@ -647,6 +647,9 @@ class SatinColumn(EmbroideryElement):
             last_index0 = len(section0) - 1
             last_index1 = len(section1) - 1
 
+            if len0 == 0:
+                continue
+
             ratio = len1 / len0
 
             index0 = 0
