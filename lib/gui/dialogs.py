@@ -13,7 +13,7 @@ def confirm_dialog(parent, question, caption='ink/stitch'):
     return result
 
 
-def info_dialog(parent, message, caption='Ink/Stitch'):
+def info_dialog(parent, message, caption='ink/stitch'):
     dlg = wx.MessageDialog(parent, message, caption, wx.OK | wx.ICON_INFORMATION)
     dlg.ShowModal()
     dlg.Destroy()
