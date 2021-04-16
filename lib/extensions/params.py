@@ -381,8 +381,7 @@ class SettingsFrame(wx.Frame):
         nodes.sort(key=lambda node: node.order)
 
         try:
-            self.warning_panel.Hide()
-            self.Layout()
+            wx.CallAfter(self._hide_warning)
             for node in nodes:
                 if abort_early.is_set():
                     # cancel; params were updated and we need to start over
@@ -394,9 +393,7 @@ class SettingsFrame(wx.Frame):
 
                 patches.extend(copy(node).embroider(None))
         except SystemExit:
-            self.warning_panel.Show()
-            self.Layout()
-
+            wx.CallAfter(self._show_warning)
             raise
         except Exception:
             # Ignore errors.  This can be things like incorrect paths for
@@ -404,6 +401,14 @@ class SettingsFrame(wx.Frame):
             pass
 
         return patches
+
+    def _hide_warning(self):
+        self.warning_panel.Hide()
+        self.Layout()
+
+    def _show_warning(self):
+        self.warning_panel.Show()
+        self.Layout()
 
     def get_preset_data(self):
         # called by self.presets_panel
