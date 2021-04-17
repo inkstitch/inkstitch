@@ -1,12 +1,12 @@
 @font-face {
-  font-family: 'Barlow Condensed';
+  font-family: 'Font Condensed';
   font-style: normal;
   font-weight: 400;
   src: url(barlow_condensed.ttf) format('truetype');
 }
 
 @font-face {
-  font-family: 'Barlow';
+  font-family: 'Font';
   font-style: normal;
   font-weight: 400;
   src: url(barlow.ttf) format('truetype');
@@ -14,14 +14,14 @@
 
 
 @font-face {
-  font-family: 'Barlow';
+  font-family: 'Font';
   font-style: normal;
   font-weight: 700;
   src: url(barlow-bold.ttf) format('truetype');
 }
 
 @font-face {
-  font-family: 'Barlow';
+  font-family: 'Font';
   font-style: normal;
   font-weight: 800;
   src: url(barlow-extra-bold.ttf) format('truetype');
@@ -29,21 +29,47 @@
 
 
 @font-face {
-  font-family: 'Barlow Condensed';
+  font-family: 'Font Condensed';
   font-style: normal;
   font-weight: 700;
   src: url(barlow-condensed-bold.ttf) format('truetype');
 }
 
 @font-face {
-  font-family: 'Barlow Condensed';
+  font-family: 'Font Condensed';
   font-style: normal;
   font-weight: 800;
   src: url(barlow-condensed-extra-bold.ttf) format('truetype');
 }
 
+/* Fira Sans for cyrillic letters */
+@font-face {
+  font-family: 'Font Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url(FiraSansCondensed-Light.woff) format('woff');
+  unicode-range: U+370-FFFF;
+}
+
+@font-face {
+  font-family: 'Font';
+  font-style: normal;
+  font-weight: 400;
+  src: url(FiraSansLight.woff) format('woff');
+  unicode-range: U+370-FFFF;
+}
+
+
+@font-face {
+  font-family: 'Font';
+  font-style: bold;
+  font-weight: 800;
+  src: url(FiraSansLight.woff) format('woff');
+  unicode-range: U+370-FFFF;
+}
+
 body {
-    font-family: "Barlow", sans-serif;
+    font-family: "Font", sans-serif;
     font-size: 8pt;
     text-align: center;
     color: rgb(80,80,80);
@@ -408,6 +434,10 @@ body {
       flex-direction: column;
   }
 
+  main {
+    margin-top: 1mm;
+  }
+
   figure.brandlogo {
     height: 30mm;
     width: 30mm;
@@ -475,7 +505,7 @@ body {
       display: -ms-flexbox;   /* IE 10 */
     width: calc(100% - 50mm);
     height: 50%;
-    font-family: "Barlow Condensed", sans-serif;
+    font-family: "Font Condensed", sans-serif;
     font-size: 10pt;
   }
 
@@ -610,10 +640,11 @@ body {
     color: white;
     display: inline-block;
     font-size: 16px;
-    font-family: "Barlow", sans-serif;
+    font-family: "Font", sans-serif;
     padding-left: 3px;
     padding-right: 3px;
     margin: 0px 1px 0px 1px;
+    line-height: 1.2rem;
     cursor: pointer;
   }
 
@@ -647,7 +678,7 @@ body {
   }
 
   .color-swatch {
-    font-family: "Barlow", sans-serif;
+    font-family: "Font", sans-serif;
 
     /* white text on dark colors doesn't print well unless it's bold */
     font-weight: 700;
@@ -946,7 +977,7 @@ body {
     right: 1em;
     top: 1em;
     color: red;
-    font-family: "Barlow", sans-serif;
+    font-family: "Font", sans-serif;
     font-size: 12pt;
   }
 
