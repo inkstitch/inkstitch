@@ -214,3 +214,4 @@ jobs:
           title: "${{env.title}}"
           files: |
             artifacts/*.zip
+            artifacts/*.dmg
