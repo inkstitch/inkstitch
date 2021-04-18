@@ -154,6 +154,8 @@ jobs:
           pip install -r requirements.txt
           pip install pyinstaller
 
+          pip install dmgbuild
+
           echo "${{ env.pythonLocation }}/bin" >> $GITHUB_PATH
       - shell: bash
         run: |
