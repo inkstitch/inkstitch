@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-04-14 00:56+0000\n"
-"PO-Revision-Date: 2021-04-14 00:58\n"
+"POT-Creation-Date: 2021-04-15 00:58+0000\n"
+"PO-Revision-Date: 2021-04-18 01:01\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -606,7 +606,7 @@ msgstr "Satinkolumne: Eine Stichlage kreuzt nicht beide Außenlinien."
 
 #: lib/elements/satin_column.py:62
 msgid "Rungs intersects too many times"
-msgstr ""
+msgstr "Stichlagen kreuzen Außenlinie zu oft"
 
 #: lib/elements/satin_column.py:63
 msgid "Satin column: A rung intersects a rail more than once."
@@ -877,8 +877,8 @@ msgstr "Schnittmarker hinzufügen"
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
 #: print/templates/custom-page.html:33 print/templates/ui.html:92
 #: print/templates/ui.html:96 print/templates/ui.html:102
-#: electron/src/renderer/components/InstallPalettes.vue:20
-#: electron/src/renderer/components/InstallPalettes.vue:58
+#: electron/src/renderer/components/InstallPalettes.vue:25
+#: electron/src/renderer/components/InstallPalettes.vue:63
 msgid "Cancel"
 msgstr "Abbrechen"
 
@@ -2333,19 +2333,23 @@ msgstr "Mauszeiger"
 msgid "Function"
 msgstr "Funktion"
 
+#: electron/src/renderer/components/InstallPalettes.vue:16
+msgid "If you are not sure which file path to choose, click on install directly. In most cases Ink/Stitch will guess the correct path."
+msgstr "Wenn du nicht sicher bist, wo die Dateien installiert werden müssen, klicke direkt auf installieren. In den meisten Fällen wählt Ink/Stitch automatisch den richtigen Dateipfad aus."
+
 #: electron/src/renderer/components/InstallPalettes.vue:9
 msgid "Ink/Stitch can install palettes for Inkscape matching the thread colors from popular machine embroidery thread manufacturers."
 msgstr "Ink/Stitch kann Paletten für Inkscape installieren, die den Garnfarben der gängigen Hersteller von Maschinenstickgarn entsprechen."
 
-#: electron/src/renderer/components/InstallPalettes.vue:48
+#: electron/src/renderer/components/InstallPalettes.vue:53
 msgid "Inkscape add-on installation failed"
 msgstr "Installation der Inkscape Erweiterung gescheitert"
 
-#: electron/src/renderer/components/InstallPalettes.vue:31
+#: electron/src/renderer/components/InstallPalettes.vue:36
 msgid "Inkscape palettes have been installed. Please restart Inkscape to load the new palettes."
 msgstr "Inkscape-Paletten wurden installiert. Bitte Inkscape neu starten, um die neuen Paletten zu laden."
 
-#: electron/src/renderer/components/InstallPalettes.vue:17
+#: electron/src/renderer/components/InstallPalettes.vue:22
 msgid "Install"
 msgstr "Installieren"
 
@@ -2353,11 +2357,11 @@ msgstr "Installieren"
 msgid "Install Palettes"
 msgstr "Paletten installieren"
 
-#: electron/src/renderer/components/InstallPalettes.vue:26
+#: electron/src/renderer/components/InstallPalettes.vue:31
 msgid "Installation Completed"
 msgstr "Installation abgeschlossen"
 
-#: electron/src/renderer/components/InstallPalettes.vue:43
+#: electron/src/renderer/components/InstallPalettes.vue:48
 msgid "Installation Failed"
 msgstr "Installation fehlgeschlagen"
 
@@ -2456,7 +2460,7 @@ msgstr[1] "Geschwindigkeit: %{speed} Stiche/Sek"
 msgid "stops"
 msgstr "Stopp-Befehle"
 
-#: electron/src/renderer/components/InstallPalettes.vue:55
+#: electron/src/renderer/components/InstallPalettes.vue:60
 msgid "Try again"
 msgstr "Versuchen sie es erneut"
 

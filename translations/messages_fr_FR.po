@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-04-14 00:56+0000\n"
-"PO-Revision-Date: 2021-04-14 00:58\n"
+"POT-Creation-Date: 2021-04-15 00:58+0000\n"
+"PO-Revision-Date: 2021-04-18 01:01\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -606,7 +606,7 @@ msgstr "Colonne satin: Une traverse de direction ne coupe pas les deux rails."
 
 #: lib/elements/satin_column.py:62
 msgid "Rungs intersects too many times"
-msgstr ""
+msgstr "La traverse de direction coupe les rails trop de fois"
 
 #: lib/elements/satin_column.py:63
 msgid "Satin column: A rung intersects a rail more than once."
@@ -821,7 +821,7 @@ msgstr "cette colonne satinée n’a pas de commande « point de partage satin�
 
 #: lib/extensions/duplicate_params.py:19
 msgid "This function copies Ink/Stitch parameters from the first selected element to the rest of the selection. Please select at least two elements."
-msgstr ""
+msgstr "Cette fonction copie les paramètres de Ink/Stitch du premier élément sélectionné vers le reste de la sélection. Veuillez sélectionner au moins deux éléments."
 
 #: lib/extensions/flip.py:28
 msgid "Please select one or more satin columns to flip."
@@ -877,8 +877,8 @@ msgstr "Ajouter des coupures"
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
 #: print/templates/custom-page.html:33 print/templates/ui.html:92
 #: print/templates/ui.html:96 print/templates/ui.html:102
-#: electron/src/renderer/components/InstallPalettes.vue:20
-#: electron/src/renderer/components/InstallPalettes.vue:58
+#: electron/src/renderer/components/InstallPalettes.vue:25
+#: electron/src/renderer/components/InstallPalettes.vue:63
 msgid "Cancel"
 msgstr "Quitter"
 
@@ -1199,7 +1199,8 @@ msgstr "Simulation de broderie"
 #: lib/gui/warnings.py:21
 msgid "Cannot load simulator.\n"
 "Close Params to get full error message."
-msgstr ""
+msgstr "Impossible de charger le simulateur.\n"
+"Fermez la fenêtre des Paramètres pour obtenir le message d'erreur complet."
 
 #. If you translate this string, that will tell Ink/Stitch to
 #. generate menu items for this language in Inkscape's "Extensions"
@@ -1870,7 +1871,7 @@ msgstr "Scinder colonne satin"
 
 #: templates/duplicate_params.xml:3
 msgid "Duplicate Params"
-msgstr ""
+msgstr "Dupliquer les paramètres"
 
 #: templates/embroider.xml:3
 msgid "Embroider"
@@ -2333,19 +2334,23 @@ msgstr "curseur"
 msgid "Function"
 msgstr "Fonction"
 
+#: electron/src/renderer/components/InstallPalettes.vue:16
+msgid "If you are not sure which file path to choose, click on install directly. In most cases Ink/Stitch will guess the correct path."
+msgstr "Si vous ne savez pas quel chemin de fichier choisir, cliquez sur Installer directement. Dans la plupart des cas, Ink/Stitch devinera le chemin correct."
+
 #: electron/src/renderer/components/InstallPalettes.vue:9
 msgid "Ink/Stitch can install palettes for Inkscape matching the thread colors from popular machine embroidery thread manufacturers."
 msgstr "Ink/Stitch peut installer des palettes pour Inkscape correspondant aux couleurs des fils à broder des fabricants les plus populaires."
 
-#: electron/src/renderer/components/InstallPalettes.vue:48
+#: electron/src/renderer/components/InstallPalettes.vue:53
 msgid "Inkscape add-on installation failed"
 msgstr "échec d'installation de l'extension Inkscape"
 
-#: electron/src/renderer/components/InstallPalettes.vue:31
+#: electron/src/renderer/components/InstallPalettes.vue:36
 msgid "Inkscape palettes have been installed. Please restart Inkscape to load the new palettes."
 msgstr "Des palettes Inkscape ont été installées. Veuillez redémarrer Inkscape pour charger les nouvelles ."
 
-#: electron/src/renderer/components/InstallPalettes.vue:17
+#: electron/src/renderer/components/InstallPalettes.vue:22
 msgid "Install"
 msgstr "Installer"
 
@@ -2353,11 +2358,11 @@ msgstr "Installer"
 msgid "Install Palettes"
 msgstr "Installer palettes"
 
-#: electron/src/renderer/components/InstallPalettes.vue:26
+#: electron/src/renderer/components/InstallPalettes.vue:31
 msgid "Installation Completed"
 msgstr "Installation terminée"
 
-#: electron/src/renderer/components/InstallPalettes.vue:43
+#: electron/src/renderer/components/InstallPalettes.vue:48
 msgid "Installation Failed"
 msgstr "Echec de l’installation"
 
@@ -2456,7 +2461,7 @@ msgstr[1] "Vitesse : %{speed} point/sec"
 msgid "stops"
 msgstr "arrêts"
 
-#: electron/src/renderer/components/InstallPalettes.vue:55
+#: electron/src/renderer/components/InstallPalettes.vue:60
 msgid "Try again"
 msgstr "Essayer à nouveau"
 

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-04-14 00:56+0000\n"
-"PO-Revision-Date: 2021-04-14 00:58\n"
+"POT-Creation-Date: 2021-04-15 00:58+0000\n"
+"PO-Revision-Date: 2021-04-18 01:01\n"
 "Last-Translator: \n"
 "Language-Team: Finnish\n"
 "MIME-Version: 1.0\n"
@@ -875,8 +875,8 @@ msgstr "Lisää trimmaus"
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
 #: print/templates/custom-page.html:33 print/templates/ui.html:92
 #: print/templates/ui.html:96 print/templates/ui.html:102
-#: electron/src/renderer/components/InstallPalettes.vue:20
-#: electron/src/renderer/components/InstallPalettes.vue:58
+#: electron/src/renderer/components/InstallPalettes.vue:25
+#: electron/src/renderer/components/InstallPalettes.vue:63
 msgid "Cancel"
 msgstr "Peru"
 
@@ -2330,19 +2330,23 @@ msgstr ""
 msgid "Function"
 msgstr ""
 
+#: electron/src/renderer/components/InstallPalettes.vue:16
+msgid "If you are not sure which file path to choose, click on install directly. In most cases Ink/Stitch will guess the correct path."
+msgstr ""
+
 #: electron/src/renderer/components/InstallPalettes.vue:9
 msgid "Ink/Stitch can install palettes for Inkscape matching the thread colors from popular machine embroidery thread manufacturers."
 msgstr ""
 
-#: electron/src/renderer/components/InstallPalettes.vue:48
+#: electron/src/renderer/components/InstallPalettes.vue:53
 msgid "Inkscape add-on installation failed"
 msgstr "Inkscape lisäosan asennus epäonnistui"
 
-#: electron/src/renderer/components/InstallPalettes.vue:31
+#: electron/src/renderer/components/InstallPalettes.vue:36
 msgid "Inkscape palettes have been installed. Please restart Inkscape to load the new palettes."
 msgstr ""
 
-#: electron/src/renderer/components/InstallPalettes.vue:17
+#: electron/src/renderer/components/InstallPalettes.vue:22
 msgid "Install"
 msgstr "Asenna"
 
@@ -2350,11 +2354,11 @@ msgstr "Asenna"
 msgid "Install Palettes"
 msgstr ""
 
-#: electron/src/renderer/components/InstallPalettes.vue:26
+#: electron/src/renderer/components/InstallPalettes.vue:31
 msgid "Installation Completed"
 msgstr "Asennus valmis"
 
-#: electron/src/renderer/components/InstallPalettes.vue:43
+#: electron/src/renderer/components/InstallPalettes.vue:48
 msgid "Installation Failed"
 msgstr "Asennus epäonnistui"
 
@@ -2453,7 +2457,7 @@ msgstr[1] ""
 msgid "stops"
 msgstr ""
 
-#: electron/src/renderer/components/InstallPalettes.vue:55
+#: electron/src/renderer/components/InstallPalettes.vue:60
 msgid "Try again"
 msgstr ""
 
