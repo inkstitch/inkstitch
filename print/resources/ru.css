@@ -16,6 +16,6 @@ body {
   font-family: 'FiraSans', sans-serif;
 }
 
-div.job.details {
+.condensed {
   font-family: 'FiraSans Condensed', sans-serif;
 }

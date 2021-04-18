@@ -49,6 +49,10 @@ body {
     margin-bottom: 5mm;
 }
 
+.condensed {
+    font-family: "Barlow Condensed", sans-serif;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -473,7 +477,6 @@ body {
       display: -ms-flexbox;   /* IE 10 */
     width: calc(100% - 50mm);
     height: 50%;
-    font-family: "Barlow Condensed", sans-serif;
     font-size: 10pt;
   }
 
