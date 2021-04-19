@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-04-15 00:58+0000\n"
-"PO-Revision-Date: 2021-04-18 01:01\n"
+"PO-Revision-Date: 2021-04-19 01:00\n"
 "Last-Translator: \n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -582,11 +582,11 @@ msgstr "サテンの柱：横木はなく、パスのポイント数は等しく
 
 #: lib/elements/satin_column.py:46
 msgid "The easiest way to solve this issue is to add one or more rungs. "
-msgstr ""
+msgstr "この問題を解決する最も簡単な方法は、1つ以上のラングを追加することです。 "
 
 #: lib/elements/satin_column.py:47
 msgid "Rungs control the stitch direction in satin columns."
-msgstr ""
+msgstr "ラングは、サテンの柱のステッチの方向を制御します。"
 
 #: lib/elements/satin_column.py:48
 msgid "* With the selected object press \"P\" to activate the pencil tool."
@@ -594,15 +594,15 @@ msgstr "*選択したオブジェクトで「P」を押して鉛筆ツールを�
 
 #: lib/elements/satin_column.py:49
 msgid "* Hold \"Shift\" while drawing the rung."
-msgstr ""
+msgstr "*ラングを描画している間「Shift」を押したままにします。"
 
 #: lib/elements/satin_column.py:53
 msgid "Each rung should intersect both rails once."
-msgstr ""
+msgstr "各ラングは、両方のレールと1回交差する必要があります。"
 
 #: lib/elements/satin_column.py:57
 msgid "Rung doesn't intersect rails"
-msgstr ""
+msgstr "ラングはレールと交差しません"
 
 #: lib/elements/satin_column.py:58
 msgid "Satin column: A rung doesn't intersect both rails."
@@ -610,7 +610,7 @@ msgstr "サテンの柱：ラングは両方のパスと交差しません。"
 
 #: lib/elements/satin_column.py:62
 msgid "Rungs intersects too many times"
-msgstr ""
+msgstr "ラングが何度も交差する"
 
 #: lib/elements/satin_column.py:63
 msgid "Satin column: A rung intersects a rail more than once."
@@ -720,57 +720,58 @@ msgstr "繰り返すビーンステッチ数"
 
 #: lib/elements/stroke.py:50
 msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.  Only applies to running stitch."
-msgstr ""
+msgstr "各ステッチをバックトラックします。値が1の場合、各ステッチは3倍になります（前方、後方、前方）。値が2の場合、各ステッチは5倍になります。ランニングステッチにのみ適用されます。"
 
 #: lib/elements/stroke.py:62
 msgid "Length of stitches in zig-zag mode."
-msgstr ""
+msgstr "ジグザグモードでのステッチ長さ"
 
 #: lib/elements/stroke.py:73
 msgid "Repeats"
-msgstr ""
+msgstr "繰り返し"
 
 #: lib/elements/stroke.py:74
 msgid "Defines how many times to run down and back along the path."
-msgstr ""
+msgstr "パスに沿って縫ったり戻ったりする回数を定義します。"
 
 #: lib/elements/stroke.py:107
 msgid "Manual stitch placement"
-msgstr ""
+msgstr "手動ステッチ配置"
 
 #: lib/elements/stroke.py:108
 msgid "Stitch every node in the path.  Stitch length and zig-zag spacing are ignored."
-msgstr ""
+msgstr "パス内のすべてのノードをステッチします。ステッチの長さとジグザグの間隔は無視されます。"
 
 #: lib/elements/stroke.py:142
 msgid "Legacy running stitch setting detected!\n\n"
 "It looks like you're using a stroke smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set your stroke to be dashed to indicate running stitch.  Any kind of dash will work."
-msgstr ""
+msgstr "レガシーランニングステッチの設定が検出されました！\n\n"
+"ランニングステッチを示すために0.5単位未満のストロークを使用しているようですが、これは非推奨です。代わりに、ランニングステッチを示すために、ストロークを破線に設定してください。どんな種類のダッシュでも機能します。"
 
 #: lib/elements/text.py:13 lib/extensions/lettering.py:68
 msgid "Text"
-msgstr ""
+msgstr "文字"
 
 #: lib/elements/text.py:14
 msgid "Ink/Stitch cannot work with objects like text."
-msgstr ""
+msgstr "インク/ステッチは、テキストなどのオブジェクトでは機能しません。"
 
 #: lib/elements/text.py:16
 msgid "* Text: Create your own letters or try the lettering tool:"
-msgstr ""
+msgstr "*テキスト：独自の文字を作成するか、レタリングツールを試してください："
 
 #: lib/elements/text.py:17
 msgid "- Extensions > Ink/Stitch > Lettering"
-msgstr ""
+msgstr "-拡張機能>インク/ステッチ>レタリング"
 
 #: lib/extensions/auto_satin.py:35
 msgid "Please ensure that at most one start and end command is attached to the selected satin columns."
-msgstr ""
+msgstr "選択したサテンの列に、最大で1つの開始コマンドと終了コマンドが付加されていることを確認してください。"
 
 #. auto-route satin columns extension
 #: lib/extensions/auto_satin.py:49
 msgid "Please select one or more satin columns."
-msgstr ""
+msgstr "1つまたは複数のサテンの列を選択してください。"
 
 #: lib/extensions/auto_satin.py:54
 msgid "Please select at least one satin column."
@@ -779,34 +780,34 @@ msgstr "少なくとも1つのサテンカラムを選択してください。"
 #. This was previously: "No embroiderable paths selected."
 #: lib/extensions/base.py:133
 msgid "Ink/Stitch doesn't know how to work with any of the objects you've selected."
-msgstr ""
+msgstr "インク/ステッチは、選択したオブジェクトの操作方法を認識していません。"
 
 #: lib/extensions/base.py:135
 msgid "There are no objects in the entire document that Ink/Stitch knows how to work with."
-msgstr ""
+msgstr "インクステッチが操作可能なオブジェクトがこのドキュメント全体にありません。"
 
 #: lib/extensions/base.py:137
 msgid "Tip: Select some objects and use Path -> Object to Path to convert them to paths."
-msgstr ""
+msgstr "ヒント：いくつかのオブジェクトを選択し、[パス]-> [オブジェクトをパスへ] を使用してそれらをパスに変換します。"
 
 #: lib/extensions/break_apart.py:31
 msgid "Please select one or more fill areas to break apart."
-msgstr ""
+msgstr "分解する1つまたは複数の塗りつぶし領域を選択してください。"
 
 #: lib/extensions/cleanup.py:37 lib/extensions/cleanup.py:49
 #, python-format
 msgid "%s elements removed"
-msgstr ""
+msgstr "%s 要素が削除されました"
 
 #: lib/extensions/convert_to_satin.py:36
 msgid "Please select at least one line to convert to a satin column."
-msgstr ""
+msgstr "サテンの列に変換するには、少なくとも1行を選択してください。"
 
 #. : Convert To Satin extension, user selected one or more objects that were
 #. not lines.
 #: lib/extensions/convert_to_satin.py:41
 msgid "Only simple lines may be converted to satin columns."
-msgstr ""
+msgstr "単純な線のみをサテンの列に変換できます。"
 
 #: lib/extensions/convert_to_satin.py:135
 msgid "Ink/Stitch cannot convert your stroke into a satin column. Please break up your path and try again."
@@ -814,13 +815,13 @@ msgstr "インク/ステッチでは、ストロークをサテンの列に変�
 
 #: lib/extensions/cut_satin.py:20
 msgid "Please select one or more satin columns to cut."
-msgstr ""
+msgstr "カットするサテンの柱を1つ以上選択してください。"
 
 #. will have the satin's id prepended, like this:
 #. path12345: error: this satin column does not ...
 #: lib/extensions/cut_satin.py:30
 msgid "this satin column does not have a \"satin column cut point\" command attached to it. Please use the \"Attach commands\" extension and attach the \"Satin Column cut point\" command first."
-msgstr ""
+msgstr "このサテンカラムには、「サテンカラムカットポイント」コマンドが付加されていません。 「コマンドの添付」拡張機能を使用して、最初に「サテンカラムカットポイント」コマンドを添付してください。"
 
 #: lib/extensions/duplicate_params.py:19
 msgid "This function copies Ink/Stitch parameters from the first selected element to the rest of the selection. Please select at least two elements."
@@ -828,11 +829,11 @@ msgstr "この関数は、最初に選択された要素から残りの選択要
 
 #: lib/extensions/flip.py:28
 msgid "Please select one or more satin columns to flip."
-msgstr ""
+msgstr "反転するサテンの列を1つ以上選択してください。"
 
 #: lib/extensions/import_threadlist.py:33
 msgid "File not found."
-msgstr ""
+msgstr "ファイルが見つかりません。"
 
 #: lib/extensions/import_threadlist.py:36
 msgid "The filepath specified is not a file but a dictionary.\n"
@@ -842,23 +843,23 @@ msgstr "指定されたファイルパスはファイルではなく辞書です
 
 #: lib/extensions/import_threadlist.py:46
 msgid "Couldn't find any matching colors in the file."
-msgstr ""
+msgstr "ファイル内に一致する色が見つかりませんでした。"
 
 #: lib/extensions/import_threadlist.py:48
 msgid "Please try to import as \"other threadlist\" and specify a color palette below."
-msgstr ""
+msgstr "「その他のスレッドリスト」としてインポートし、以下のカラーパレットを指定してください。"
 
 #: lib/extensions/import_threadlist.py:50
 msgid "Please chose an other color palette for your design."
-msgstr ""
+msgstr "デザインに他のカラーパレットを選択してください。"
 
 #: lib/extensions/layer_commands.py:23
 msgid "Please choose one or more commands to add."
-msgstr ""
+msgstr "追加するコマンドを1つ以上選択してください。"
 
 #: lib/extensions/lettering.py:37 lib/extensions/lettering.py:414
 msgid "Ink/Stitch Lettering"
-msgstr ""
+msgstr "インク/ステッチの文字配置"
 
 #: lib/extensions/lettering.py:44
 msgid "Font"
@@ -866,15 +867,15 @@ msgstr "フォント"
 
 #: lib/extensions/lettering.py:56
 msgid "Options"
-msgstr ""
+msgstr "オプション"
 
 #: lib/extensions/lettering.py:61
 msgid "Stitch lines of text back and forth"
-msgstr ""
+msgstr "テキストの行を前後にステッチします。"
 
 #: lib/extensions/lettering.py:64
 msgid "Add trims"
-msgstr ""
+msgstr "トリムを追加"
 
 #: lib/extensions/lettering.py:73 lib/extensions/params.py:350
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
@@ -883,15 +884,15 @@ msgstr ""
 #: electron/src/renderer/components/InstallPalettes.vue:25
 #: electron/src/renderer/components/InstallPalettes.vue:63
 msgid "Cancel"
-msgstr ""
+msgstr "キャンセル"
 
 #: lib/extensions/lettering.py:77 lib/extensions/params.py:357
 msgid "Apply and Quit"
-msgstr ""
+msgstr "適用して終了"
 
 #: lib/extensions/lettering.py:144
 msgid "Unable to find any fonts!  Please try reinstalling Ink/Stitch."
-msgstr ""
+msgstr "フォントが見つかりません。 インクステッチを再インストールしてください。"
 
 #: lib/extensions/lettering.py:218
 msgid "This font has no available font variant. Please update or remove the font."
@@ -903,15 +904,15 @@ msgstr "このフォントには、使用可能なフォントバリアントが
 #: lib/extensions/lettering.py:260
 #, python-format
 msgid "Text scale %s%%"
-msgstr ""
+msgstr "文字の大きさ %s%%"
 
 #: lib/extensions/lettering.py:403
 msgid "Please select only one block of text."
-msgstr ""
+msgstr "1ブロックのみ選択してください。"
 
 #: lib/extensions/lettering.py:406
 msgid "You've selected objects that were not created by the Lettering extension.  Please clear your selection or select different objects before running Lettering again."
-msgstr ""
+msgstr "レタリングエクステンションで作成されていないオブジェクトが選択されています。 選択を解除するか、別のオブジェクトを選択してから再度レタリングを実行してください。"
 
 #: lib/extensions/lettering_custom_font_dir.py:27
 msgid "Please specify the directory of your custom fonts."
@@ -923,281 +924,281 @@ msgstr "フォントファイルを指定してください。"
 
 #: lib/extensions/object_commands.py:21
 msgid "Please select one or more objects to which to attach commands."
-msgstr ""
+msgstr "コマンドを添付するオブジェクトを1つまたは複数選択してください。"
 
 #: lib/extensions/object_commands.py:29
 msgid "Please choose one or more commands to attach."
-msgstr ""
+msgstr "添付するコマンドを1つ以上選択してください。"
 
 #: lib/extensions/params.py:208
 msgid "These settings will be applied to 1 object."
-msgstr ""
+msgstr "この設定は1つのオブジェクトに適用されます。"
 
 #: lib/extensions/params.py:210
 #, python-format
 msgid "These settings will be applied to %d objects."
-msgstr ""
+msgstr "この設定は%d個のオブジェクトに適用されます。"
 
 #: lib/extensions/params.py:213
 msgid "Some settings had different values across objects.  Select a value from the dropdown or enter a new one."
-msgstr ""
+msgstr "一部の設定でオブジェクト間で異なる値が設定されています。 ドロップダウンから値を選択するか、新しい値を入力してください。"
 
 #: lib/extensions/params.py:217
 #, python-format
 msgid "Disabling this tab will disable the following %d tabs."
-msgstr ""
+msgstr "このタブを無効にすると、次の %d のタブが無効になります。"
 
 #: lib/extensions/params.py:219
 msgid "Disabling this tab will disable the following tab."
-msgstr ""
+msgstr "このタブを無効にすると、次のタブも無効になります。"
 
 #: lib/extensions/params.py:222
 #, python-format
 msgid "Enabling this tab will disable %s and vice-versa."
-msgstr ""
+msgstr "このタブを有効にすると %s が無効になり、その逆も同様です。"
 
 #: lib/extensions/params.py:252
 msgid "Inkscape objects"
-msgstr ""
+msgstr "Inkscapeオブジェクト"
 
 #: lib/extensions/params.py:313
 msgid "Click to force this parameter to be saved when you click \"Apply and Quit\""
-msgstr ""
+msgstr "適用して終了 \"をクリックしたときに、このパラメータを強制的に保存する場合は、クリックしてください。"
 
 #: lib/extensions/params.py:321
 msgid "This parameter will be saved when you click \"Apply and Quit\""
-msgstr ""
+msgstr "このパラメータは、\"適応して終了 \"をクリックしたときに保存されます。"
 
 #: lib/extensions/params.py:337
 msgid "Embroidery Params"
-msgstr ""
+msgstr "刺繍パラメータ"
 
 #: lib/extensions/params.py:354
 msgid "Use Last Settings"
-msgstr ""
+msgstr "前回の設定を使う"
 
 #: lib/extensions/troubleshoot.py:48
 msgid "All selected shapes are valid! "
-msgstr ""
+msgstr "選択されたすべての形状が有効です。 "
 
 #: lib/extensions/troubleshoot.py:50
 msgid "If you are still having trouble with a shape not being embroidered, check if it is in a layer with an ignore command."
-msgstr ""
+msgstr "形状が刺繍されない場合は、非表示設定のレイヤーにあるか確認してください。"
 
 #: lib/extensions/troubleshoot.py:76
 msgid "Invalid Pointer"
-msgstr ""
+msgstr "無効なポインタ"
 
 #: lib/extensions/troubleshoot.py:85 templates/lettering_generate_json.xml:26
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: lib/extensions/troubleshoot.py:107 lib/extensions/troubleshoot.py:165
 #: templates/cleanup.xml:17 templates/remove_embroidery_settings.xml:16
 #: templates/troubleshoot.xml:10
 msgid "Troubleshoot"
-msgstr ""
+msgstr "トラブルシューティング"
 
 #: lib/extensions/troubleshoot.py:123 lib/extensions/troubleshoot.py:172
 msgid "Errors"
-msgstr ""
+msgstr "エラー"
 
 #: lib/extensions/troubleshoot.py:132 lib/extensions/troubleshoot.py:176
 msgid "Warnings"
-msgstr ""
+msgstr "注意事項"
 
 #: lib/extensions/troubleshoot.py:141
 msgid "Type Warnings"
-msgstr ""
+msgstr "タイプ別警告"
 
 #: lib/extensions/troubleshoot.py:173
 msgid "Problems that will prevent the shape from being embroidered."
-msgstr ""
+msgstr "刺繍されない問題"
 
 #: lib/extensions/troubleshoot.py:177
 msgid "These are problems that won't prevent the shape from being embroidered. You should consider to fix the warning, but if you don't, Ink/Stitch will do its best to process the object."
-msgstr ""
+msgstr "この形状を刺繍することを妨げない問題です。この警告を修正を検討する必要がありますが、そうしない場合、インクステッチはこのオブジェクトを処理するために最善を尽くします。"
 
 #: lib/extensions/troubleshoot.py:182
 msgid "Object Type Warnings"
-msgstr ""
+msgstr "オブジェクトタイプの警告"
 
 #: lib/extensions/troubleshoot.py:183
 msgid "Ink/Stitch only knows how to works with paths and ignores everything else. You might want these shapes to be ignored, but if you don't, follow the instructions to change this behaviour."
-msgstr ""
+msgstr "インクステッチはパスしか扱えず、それ以外は無視します。この図形を無視したくない場合は、指示に従って動作を変更してください。"
 
 #: lib/extensions/troubleshoot.py:200
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
-msgstr ""
+msgstr "1つのオブジェクトに複数のエラーが含まれている可能性がありますが、ポインタはオブジェクトごとに1つしかありません。 さらにエラーが発生した場合は、この関数を再度実行してください。 ポインタを削除するには、オブジェクトパネル（オブジェクト -> Objects...）で「Troubleshoot」というレイヤーを削除します。"
 
 #: lib/extensions/zip.py:62
 msgid "threadlist"
-msgstr ""
+msgstr "スレッド一覧"
 
 #: lib/extensions/zip.py:71
 msgid "No embroidery file formats selected."
-msgstr ""
+msgstr "刺繍ファイルのフォーマットが選択されていません。"
 
 #: lib/extensions/zip.py:99
 msgid "Design Details"
-msgstr ""
+msgstr "デザイン詳細"
 
 #: lib/extensions/zip.py:102
 msgid "Title"
-msgstr ""
+msgstr "タイトル"
 
 #: lib/extensions/zip.py:103
 msgid "Size"
-msgstr ""
+msgstr "サイズ"
 
 #: lib/extensions/zip.py:104
 msgid "Stitches"
-msgstr ""
+msgstr "ステッチ"
 
 #: lib/extensions/zip.py:105
 msgid "Colors"
-msgstr ""
+msgstr "カラー"
 
 #: lib/extensions/zip.py:107
 msgid "Thread Order"
-msgstr ""
+msgstr "スレッド順序"
 
 #: lib/extensions/zip.py:120
 msgid "Thread Used"
-msgstr ""
+msgstr "使用済みスレッド"
 
 #: lib/gui/presets.py:52
 msgid "Presets"
-msgstr ""
+msgstr "プリセット"
 
 #: lib/gui/presets.py:58
 msgid "Load"
-msgstr ""
+msgstr "読み込み"
 
 #: lib/gui/presets.py:61
 msgid "Add"
-msgstr ""
+msgstr "追加"
 
 #: lib/gui/presets.py:64
 msgid "Overwrite"
-msgstr ""
+msgstr "上書き"
 
 #: lib/gui/presets.py:67
 msgid "Delete"
-msgstr ""
+msgstr "削除"
 
 #: lib/gui/presets.py:126
 msgid "Please enter or select a preset name first."
-msgstr ""
+msgstr "最初にプリセット名を入力または選択してください。"
 
 #: lib/gui/presets.py:126 lib/gui/presets.py:132 lib/gui/presets.py:148
 msgid "Preset"
-msgstr ""
+msgstr "プリセット"
 
 #: lib/gui/presets.py:132
 #, python-format
 msgid "Preset \"%s\" not found."
-msgstr ""
+msgstr "プリセット\"%s \"が見つかりません。"
 
 #: lib/gui/presets.py:148
 #, python-format
 msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
-msgstr ""
+msgstr "プリセット「%s」はすでに存在しています。 別の名前を使うか、\"上書き \"を押してください。"
 
 #: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:140
 msgid "JUMP"
-msgstr ""
+msgstr "ジャンプ"
 
 #: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:143
 msgid "TRIM"
-msgstr ""
+msgstr "トリム"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command label at bottom of simulator window
 #: lib/gui/simulator.py:18 templates/output_params_txt.xml:14
 #: electron/src/renderer/assets/js/simulator.js:137
 msgid "STITCH"
-msgstr ""
+msgstr "ステッチ"
 
 #: lib/gui/simulator.py:18 templates/output_params_txt.xml:16
 #: electron/src/renderer/assets/js/simulator.js:149
 msgid "COLOR CHANGE"
-msgstr ""
+msgstr "色変更"
 
 #: lib/gui/simulator.py:18 templates/output_params_txt.xml:18
 #: electron/src/renderer/assets/js/simulator.js:146
 msgid "STOP"
-msgstr ""
+msgstr "ストップ"
 
 #: lib/gui/simulator.py:50
 msgid "Slow down (arrow down)"
-msgstr ""
+msgstr "スローダウン（下矢印）"
 
 #: lib/gui/simulator.py:53
 msgid "Speed up (arrow up)"
-msgstr ""
+msgstr "スピードアップ（上矢印）"
 
 #: lib/gui/simulator.py:56
 msgid "Go on step backward (-)"
-msgstr ""
+msgstr "戻る（-）"
 
 #: lib/gui/simulator.py:59
 msgid "Go on step forward (+)"
-msgstr ""
+msgstr "進む（+）"
 
 #: lib/gui/simulator.py:62
 msgid "Switch direction (arrow left | arrow right)"
-msgstr ""
+msgstr "方向を切り替えます（左矢印|右矢印）"
 
 #: lib/gui/simulator.py:63 lib/gui/simulator.py:239 lib/gui/simulator.py:246
 #: electron/src/renderer/components/Simulator.vue:29
 msgid "Pause"
-msgstr ""
+msgstr "一時停止"
 
 #: lib/gui/simulator.py:65
 msgid "Pause (P)"
-msgstr ""
+msgstr "一時停止（P）"
 
 #: lib/gui/simulator.py:66
 msgid "Restart"
-msgstr ""
+msgstr "再スタート"
 
 #: lib/gui/simulator.py:68
 msgid "Restart (R)"
-msgstr ""
+msgstr "再スタート（R）"
 
 #: lib/gui/simulator.py:69
 msgid "O"
-msgstr ""
+msgstr "O"
 
 #: lib/gui/simulator.py:71
 msgid "Display needle penetration point (O)"
-msgstr ""
+msgstr "針落ち点（O）を表示"
 
 #: lib/gui/simulator.py:72
 msgid "Quit"
-msgstr ""
+msgstr "終了"
 
 #: lib/gui/simulator.py:74
 msgid "Quit (Q)"
-msgstr ""
+msgstr "終了（Q）"
 
 #: lib/gui/simulator.py:186
 #, python-format
 msgid "Speed: %d stitches/sec"
-msgstr ""
+msgstr "速度： %d ステッチ/秒"
 
 #: lib/gui/simulator.py:242 lib/gui/simulator.py:270
 msgid "Start"
-msgstr ""
+msgstr "スタート"
 
 #: lib/gui/simulator.py:816 lib/gui/simulator.py:826
 msgid "Preview"
-msgstr ""
+msgstr "プレビュー"
 
 #: lib/gui/simulator.py:857
 msgid "Embroidery Simulation"
-msgstr ""
+msgstr "刺繡シミュレーション"
 
 #: lib/gui/warnings.py:21
 msgid "Cannot load simulator.\n"
@@ -1209,7 +1210,7 @@ msgstr "完全なエラーメッセージを表示するには、Paramsを閉じ
 #. menu.
 #: lib/inx/utils.py:86
 msgid "Generate INX files"
-msgstr ""
+msgstr "INXファイルを生成する"
 
 #: lib/lettering/font.py:158
 #, python-format
@@ -1221,34 +1222,34 @@ msgstr "フォント '％s'にはバリアントがありません。"
 #: lib/output.py:101
 #, python-format
 msgid "Error writing to %(path)s: %(error)s"
-msgstr ""
+msgstr "%(path)sへの書き込みエラー:%(error)s"
 
 #: lib/stitches/auto_satin.py:662
 msgid "Auto-Satin"
-msgstr ""
+msgstr "自動サテン"
 
 #. Label for a satin column created by Auto-Route Satin Columns and Lettering
 #. extensions
 #: lib/stitches/auto_satin.py:709
 #, python-format
 msgid "AutoSatin %d"
-msgstr ""
+msgstr "自動サテン %d"
 
 #. Label for running stitch (underpathing) created by Auto-Route Satin Columns
 #. amd Lettering extensions
 #: lib/stitches/auto_satin.py:712
 #, python-format
 msgid "AutoSatin Running Stitch %d"
-msgstr ""
+msgstr "自動サテンランニングステッチ %d"
 
 #: lib/svg/rendering.py:224
 msgid "Stitch Plan"
-msgstr ""
+msgstr "ステッチプラン"
 
 #: lib/svg/units.py:18
 #, python-format
 msgid "parseLengthWithUnits: unknown unit %s"
-msgstr ""
+msgstr "parseLengthWithUnits：不明なユニット %s"
 
 #: lib/utils/version.py:19
 #, python-format
@@ -1262,373 +1263,373 @@ msgstr "インク/ステッチバージョン：不明"
 #: print/templates/color_swatch.html:8 print/templates/color_swatch.html:40
 #: print/templates/operator_detailedview.html:9
 msgid "Color"
-msgstr ""
+msgstr "カラー"
 
 #: print/templates/color_swatch.html:11 print/templates/color_swatch.html:41
 msgid "rgb"
-msgstr ""
+msgstr "rgb"
 
 #: print/templates/color_swatch.html:15 print/templates/color_swatch.html:42
 msgid "thread"
-msgstr ""
+msgstr "糸"
 
 #: print/templates/color_swatch.html:19 print/templates/color_swatch.html:43
 #: print/templates/operator_detailedview.html:63
 msgid "# stitches"
-msgstr ""
+msgstr "＃ステッチ"
 
 #: print/templates/color_swatch.html:23 print/templates/color_swatch.html:44
 msgid "# trims"
-msgstr ""
+msgstr "＃トリム"
 
 #: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
 #: print/templates/operator_detailedview.html:68
 msgid "stop after?"
-msgstr ""
+msgstr "後で停止しますか？"
 
 #: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
 #: print/templates/operator_detailedview.html:68
 msgid "yes"
-msgstr ""
+msgstr "はい"
 
 #: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
 #: print/templates/operator_detailedview.html:68
 msgid "no"
-msgstr ""
+msgstr "いいえ"
 
 #: print/templates/color_swatch.html:40
 #: print/templates/operator_detailedview.html:57
 #: print/templates/print_detail.html:6
 msgid "Enter thread name..."
-msgstr ""
+msgstr "スレッド名を入力してください..."
 
 #: print/templates/custom-page.html:22 print/templates/ui.html:91
 msgid "Enter URL"
-msgstr ""
+msgstr "URLを入力"
 
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
 #: print/templates/custom-page.html:33 print/templates/ui.html:92
 #: print/templates/ui.html:96 print/templates/ui.html:102
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: print/templates/custom-page.html:26 print/templates/ui.html:95
 msgid "Enter E-Mail"
-msgstr ""
+msgstr "メールアドレスを入力"
 
 #: print/templates/custom-page.html:29 print/templates/custom-page.html:36
 msgid "Custom Information Sheet"
-msgstr ""
+msgstr "カスタム情報シート"
 
 #: print/templates/custom-page.html:31 print/templates/ui.html:100
 msgid "This will reset your custom text to the default."
-msgstr ""
+msgstr "これにより、カスタムテキストがデフォルトにリセットされます。"
 
 #: print/templates/custom-page.html:32 print/templates/ui.html:101
 msgid "All changes will be lost."
-msgstr ""
+msgstr "すべての変更が失われます。"
 
 #: print/templates/footer.html:2
 msgid "Page"
-msgstr ""
+msgstr "ページ"
 
 #: print/templates/footer.html:3 print/templates/ui.html:98
 #: print/templates/ui.html:105
 msgid "Proudly generated with"
-msgstr ""
+msgstr "誇りを持って生成"
 
 #: print/templates/headline.html:5
 msgid "Click to choose another logo"
-msgstr ""
+msgstr "クリックして別のロゴを選択"
 
 #: print/templates/headline.html:10
 msgid "Enter job title..."
-msgstr ""
+msgstr "職種を入力してください..."
 
 #: print/templates/headline.html:11
 msgid "CLIENT"
-msgstr ""
+msgstr "クライアント"
 
 #: print/templates/headline.html:11
 msgid "Enter client name..."
-msgstr ""
+msgstr "クライアント名の入力..."
 
 #: print/templates/headline.html:12
 msgid "PURCHASE ORDER #:"
-msgstr ""
+msgstr "注文する #:"
 
 #: print/templates/headline.html:12
 msgid "Enter purchase order number..."
-msgstr ""
+msgstr "注文書番号を入力..."
 
 #: print/templates/headline.html:15
 #, python-format
 msgid "%m/%d/%Y"
-msgstr ""
+msgstr "%m/%d/%Y"
 
 #: print/templates/operator_detailedview.html:10
 msgid "Thread Consumption"
-msgstr ""
+msgstr "糸の消費量"
 
 #: print/templates/operator_detailedview.html:11
 msgid "Stops and Trims"
-msgstr ""
+msgstr "ストップ＆トリム"
 
 #: print/templates/operator_detailedview.html:12
 msgid "Notes"
-msgstr ""
+msgstr "備考"
 
 #: print/templates/operator_detailedview.html:24
 #: print/templates/operator_overview.html:6
 #: print/templates/print_overview.html:6
 msgid "Unique Colors"
-msgstr ""
+msgstr "特色"
 
 #: print/templates/operator_detailedview.html:25
 #: print/templates/operator_overview.html:7
 #: print/templates/print_overview.html:7
 msgid "Color Blocks"
-msgstr ""
+msgstr "カラーブロック"
 
 #: print/templates/operator_detailedview.html:28
 #: print/templates/operator_overview.html:14
 #: print/templates/print_overview.html:14
 msgid "Design box size"
-msgstr ""
+msgstr "デザインボックスサイズ"
 
 #: print/templates/operator_detailedview.html:29
 #: print/templates/operator_overview.html:16
 #: print/templates/print_overview.html:16
 msgid "Total thread used"
-msgstr ""
+msgstr "糸の総量"
 
 #: print/templates/operator_detailedview.html:30
 #: print/templates/operator_overview.html:15
 #: print/templates/print_overview.html:15
 msgid "Total stitch count"
-msgstr ""
+msgstr "合計ステッチ数"
 
 #: print/templates/operator_detailedview.html:31
 #: print/templates/print_detail.html:11
 msgid "Estimated time"
-msgstr ""
+msgstr "推定時間"
 
 #: print/templates/operator_detailedview.html:34
 #: print/templates/operator_overview.html:8
 #: print/templates/print_overview.html:8
 msgid "Total stops"
-msgstr ""
+msgstr "トータルストップ数"
 
 #: print/templates/operator_detailedview.html:35
 #: print/templates/operator_overview.html:9
 #: print/templates/print_overview.html:9
 msgid "Total trims"
-msgstr ""
+msgstr "トータルトリム数"
 
 #: print/templates/operator_detailedview.html:62
 msgid "thread used"
-msgstr ""
+msgstr "使用糸"
 
 #: print/templates/operator_detailedview.html:64
 msgid "estimated time"
-msgstr ""
+msgstr "推定時間"
 
 #: print/templates/operator_detailedview.html:67
 #: electron/src/renderer/components/Simulator.vue:196
 msgid "trims"
-msgstr ""
+msgstr "トリム"
 
 #: print/templates/operator_detailedview.html:72
 msgid "Enter operator notes..."
-msgstr ""
+msgstr "オペレーターのメモを入力..."
 
 #: print/templates/operator_overview.html:21
 #: print/templates/print_overview.html:21
 msgid "Job estimated time"
-msgstr ""
+msgstr "作業時間の目安"
 
 #: print/templates/operator_overview.html:28
 #: print/templates/print_detail.html:18 print/templates/print_overview.html:28
 msgid "Ctrl + Scroll to Zoom"
-msgstr ""
+msgstr "Ctrl + スクロールでズーム"
 
 #: print/templates/print_detail.html:6
 msgid "COLOR"
-msgstr ""
+msgstr "色"
 
 #: print/templates/print_overview.html:42
 msgid "Client Signature"
-msgstr ""
+msgstr "お客様署名"
 
 #: print/templates/ui.html:2
 msgid "Ink/Stitch Print Preview"
-msgstr ""
+msgstr "インク/ステッチの印刷プレビュー"
 
 #: print/templates/ui.html:4
 msgid "Print"
-msgstr ""
+msgstr "プリント"
 
 #: print/templates/ui.html:5
 msgid "Save PDF"
-msgstr ""
+msgstr "PDF保存"
 
 #: print/templates/ui.html:6 print/templates/ui.html:16
 msgid "Settings"
-msgstr ""
+msgstr "設定"
 
 #: print/templates/ui.html:7
 msgid "Close"
-msgstr ""
+msgstr "閉じる"
 
 #: print/templates/ui.html:10
 msgid "⚠ lost connection to Ink/Stitch"
-msgstr ""
+msgstr "⚠インクステッチとの接続が切れました。"
 
 #: print/templates/ui.html:19 print/templates/ui.html:29
 msgid "Page Setup"
-msgstr ""
+msgstr "ページ設定"
 
 #: print/templates/ui.html:20
 msgid "Branding"
-msgstr ""
+msgstr "ブランディング"
 
 #: print/templates/ui.html:21 print/templates/ui.html:112
 msgid "Estimated Time"
-msgstr ""
+msgstr "推定時間"
 
 #: print/templates/ui.html:22 print/templates/ui.html:146
 msgid "Design"
-msgstr ""
+msgstr "デザイン"
 
 #: print/templates/ui.html:31
 msgid "Printing Size"
-msgstr ""
+msgstr "プリントサイズ"
 
 #: print/templates/ui.html:39
 msgid "Print Layouts"
-msgstr ""
+msgstr "プリントレイアウト"
 
 #: print/templates/ui.html:42 print/templates/ui.html:136
 msgid "Client Overview"
-msgstr ""
+msgstr "クライアント概要"
 
 #: print/templates/ui.html:46 print/templates/ui.html:137
 msgid "Client Detailed View"
-msgstr ""
+msgstr "クライアントの詳細表示"
 
 #: print/templates/ui.html:50 print/templates/ui.html:138
 msgid "Operator Overview"
-msgstr ""
+msgstr "オペレーター概要"
 
 #: print/templates/ui.html:54 print/templates/ui.html:139
 msgid "Operator Detailed View"
-msgstr ""
+msgstr "オペレーター詳細表示"
 
 #: print/templates/ui.html:56
 msgid "Thumbnail size"
-msgstr ""
+msgstr "サムネイルサイズ"
 
 #: print/templates/ui.html:62
 msgid "Custom information sheet"
-msgstr ""
+msgstr "カスタムインフォメーション"
 
 #: print/templates/ui.html:65 print/templates/ui.html:108
 msgid "Includes these Page Setup, estimated time settings and also the icon."
-msgstr ""
+msgstr "これらのページ設定、推定時間の設定、そしてアイコンが含まれています。"
 
 #: print/templates/ui.html:65 print/templates/ui.html:108
 #: print/templates/ui.html:142
 msgid "Save as defaults"
-msgstr ""
+msgstr "既定値として保存"
 
 #: print/templates/ui.html:70
 msgid "Logo"
-msgstr ""
+msgstr "ロゴ"
 
 #: print/templates/ui.html:80
 msgid "Footer: Operator contact information"
-msgstr ""
+msgstr "フッター：オペレーターの連絡先"
 
 #: print/templates/ui.html:114
 msgid "Machine Settings"
-msgstr ""
+msgstr "機械の設定"
 
 #: print/templates/ui.html:116
 msgid "Average Machine Speed"
-msgstr ""
+msgstr "機械の平均速度"
 
 #: print/templates/ui.html:117
 msgid "stitches per minute "
-msgstr ""
+msgstr "ステッチ数/分 "
 
 #: print/templates/ui.html:121
 msgid "Time Factors"
-msgstr ""
+msgstr "時間要因"
 
 #: print/templates/ui.html:124
 msgid "Includes average time for preparing the machine, thread breaks and/or bobbin changes, etc."
-msgstr ""
+msgstr "機械の準備、糸切りやボビン交換などの平均的な時間を含みます。"
 
 #: print/templates/ui.html:124
 msgid "seconds to add to total time*"
-msgstr ""
+msgstr "合計時間に追加する秒数*。"
 
 #: print/templates/ui.html:128
 msgid "This will be added to the total time."
-msgstr ""
+msgstr "合計時間に加算されます。"
 
 #: print/templates/ui.html:128
 msgid "seconds needed for a color change*"
-msgstr ""
+msgstr "カラーチェンジに必要な秒数*。"
 
 #: print/templates/ui.html:131
 msgid "seconds needed for trim"
-msgstr ""
+msgstr "トリムに必要な秒数"
 
 #: print/templates/ui.html:134
 msgid "Display Time On"
-msgstr ""
+msgstr "時間表示をオン"
 
 #: print/templates/ui.html:142
 msgid "Includes page setup, estimated time and also the branding."
-msgstr ""
+msgstr "ページの設定や所要時間、ブランディングについても説明します。"
 
 #: print/templates/ui.html:147
 msgid "Thread Palette"
-msgstr ""
+msgstr "スレッドパレット"
 
 #: print/templates/ui.html:150
 msgid "None"
-msgstr ""
+msgstr "なし"
 
 #: print/templates/ui.html:166
 msgid "Changing the thread palette will cause thread names and catalog numbers to be recalculated based on the new palette.  Any changes you have made to color or thread names will be lost.  Are you sure?"
-msgstr ""
+msgstr "糸のパレットを変更すると、糸の名前やカタログ番号が新しいパレットに基づいて再設定されます。 それまでに行った色や糸の名前の変更は失われます。 続行しますか？"
 
 #: print/templates/ui.html:169
 msgid "Yes"
-msgstr ""
+msgstr "はい"
 
 #: print/templates/ui.html:170 templates/lettering_generate_json.xml:37
 msgid "No"
-msgstr ""
+msgstr "いいえ"
 
 #: print/templates/ui_svg_action_buttons.html:1
 msgid "Scale"
-msgstr ""
+msgstr "サイズ"
 
 #: print/templates/ui_svg_action_buttons.html:3
 msgid "Fit"
-msgstr ""
+msgstr "フィットする"
 
 #: print/templates/ui_svg_action_buttons.html:5
 msgid "Apply to all"
-msgstr ""
+msgstr "全てに適用"
 
 #: print/templates/ui_svg_action_buttons.html:9
 #: print/templates/ui_svg_action_buttons.html:12
 msgid "Realistic"
-msgstr ""
+msgstr "リアル"
 
 #. description for pyembroidery file format: pec
 #. description for pyembroidery file format: pes
@@ -1638,18 +1639,18 @@ msgstr ""
 #: pyembroidery-format-descriptions.py:56
 #: pyembroidery-format-descriptions.py:58
 msgid "Brother Embroidery Format"
-msgstr ""
+msgstr "ブラザー刺繍フォーマット"
 
 #. description for pyembroidery file format: exp
 #: pyembroidery-format-descriptions.py:6
 msgid "Melco Embroidery Format"
-msgstr ""
+msgstr "メルコ刺繍フォーマット"
 
 #. description for pyembroidery file format: dst
 #. description for pyembroidery file format: tbf
 #: pyembroidery-format-descriptions.py:8 pyembroidery-format-descriptions.py:48
 msgid "Tajima Embroidery Format"
-msgstr ""
+msgstr "タジマ刺繍フォーマット"
 
 #. description for pyembroidery file format: jef
 #. description for pyembroidery file format: sew
@@ -1658,7 +1659,7 @@ msgstr ""
 #: pyembroidery-format-descriptions.py:20
 #: pyembroidery-format-descriptions.py:74
 msgid "Janome Embroidery Format"
-msgstr ""
+msgstr "ジャノメ刺繍フォーマット"
 
 #. description for pyembroidery file format: vp3
 #. description for pyembroidery file format: ksm
@@ -1675,124 +1676,124 @@ msgstr ""
 #: pyembroidery-format-descriptions.py:70
 #: pyembroidery-format-descriptions.py:72
 msgid "Pfaff Embroidery Format"
-msgstr ""
+msgstr "パフ刺繍　フォーマット"
 
 #. description for pyembroidery file format: svg
 #: pyembroidery-format-descriptions.py:14
 msgid "Scalable Vector Graphics"
-msgstr ""
+msgstr "メルコスケーラブルベクターグラフィックス"
 
 #. description for pyembroidery file format: csv
 #: pyembroidery-format-descriptions.py:16
 msgid "Comma-separated values"
-msgstr ""
+msgstr "コンマで区切られた値"
 
 #. description for pyembroidery file format: xxx
 #: pyembroidery-format-descriptions.py:18
 msgid "Singer Embroidery Format"
-msgstr ""
+msgstr "シンガー刺繍フォーマット"
 
 #. description for pyembroidery file format: u01
 #: pyembroidery-format-descriptions.py:22
 msgid "Barudan Embroidery Format"
-msgstr ""
+msgstr "バルダン刺繍フォーマット"
 
 #. description for pyembroidery file format: shv
 #: pyembroidery-format-descriptions.py:24
 msgid "Husqvarna Viking Embroidery Format"
-msgstr ""
+msgstr "ハスクバーナバイキング刺繍フォーマット"
 
 #. description for pyembroidery file format: 10o
 #. description for pyembroidery file format: 100
 #: pyembroidery-format-descriptions.py:26
 #: pyembroidery-format-descriptions.py:28
 msgid "Toyota Embroidery Format"
-msgstr ""
+msgstr "トヨタ刺繍フォーマット"
 
 #. description for pyembroidery file format: bro
 #: pyembroidery-format-descriptions.py:30
 msgid "Bits & Volts Embroidery Format"
-msgstr ""
+msgstr "Bits & Volts刺繍フォーマット"
 
 #. description for pyembroidery file format: dat
 #: pyembroidery-format-descriptions.py:32
 msgid "Sunstar or Barudan Embroidery Format"
-msgstr ""
+msgstr "サンスターまたはバルダン刺繍フォーマット"
 
 #. description for pyembroidery file format: dsb
 #: pyembroidery-format-descriptions.py:34
 msgid "Tajima(Barudan) Embroidery Format"
-msgstr ""
+msgstr "タジマ（バルダン）刺繍フォーマット"
 
 #. description for pyembroidery file format: dsz
 #: pyembroidery-format-descriptions.py:36
 msgid "ZSK USA Embroidery Format"
-msgstr ""
+msgstr "ZSK USA 刺繍フォーマット"
 
 #. description for pyembroidery file format: emd
 #: pyembroidery-format-descriptions.py:38
 msgid "Elna Embroidery Format"
-msgstr ""
+msgstr "エルナ刺繍フォーマット"
 
 #. description for pyembroidery file format: exy
 #: pyembroidery-format-descriptions.py:40
 msgid "Eltac Embroidery Format"
-msgstr ""
+msgstr "エルタック刺繍フォーマット"
 
 #. description for pyembroidery file format: fxy
 #: pyembroidery-format-descriptions.py:42
 msgid "Fortron Embroidery Format"
-msgstr ""
+msgstr "フォートロン刺繍フォーマット"
 
 #. description for pyembroidery file format: gt
 #: pyembroidery-format-descriptions.py:44
 msgid "Gold Thread Embroidery Format"
-msgstr ""
+msgstr "ゴールドスレッド刺繍フォーマット"
 
 #. description for pyembroidery file format: inb
 #: pyembroidery-format-descriptions.py:46
 msgid "Inbro Embroidery Format"
-msgstr ""
+msgstr "インブロ刺繍フォーマット"
 
 #. description for pyembroidery file format: tap
 #: pyembroidery-format-descriptions.py:52
 msgid "Happy Embroidery Format"
-msgstr ""
+msgstr "ハッピー刺繍フォーマット"
 
 #. description for pyembroidery file format: stx
 #: pyembroidery-format-descriptions.py:54
 msgid "Data Stitch Embroidery Format"
-msgstr ""
+msgstr "データステッチ刺繍フォーマット"
 
 #. description for pyembroidery file format: new
 #: pyembroidery-format-descriptions.py:60
 msgid "Ameco Embroidery Format"
-msgstr ""
+msgstr "アメコ刺繍フォーマット"
 
 #. description for pyembroidery file format: mit
 #: pyembroidery-format-descriptions.py:64
 msgid "Mitsubishi Embroidery Format"
-msgstr ""
+msgstr "三菱刺繍フォーマット"
 
 #. description for pyembroidery file format: stc
 #: pyembroidery-format-descriptions.py:76
 msgid "Gunold Embroidery Format"
-msgstr ""
+msgstr "グノルド刺繍フォーマット"
 
 #. description for pyembroidery file format: zxy
 #: pyembroidery-format-descriptions.py:78
 msgid "ZSK TC Embroidery Format"
-msgstr ""
+msgstr "ZSK TC刺繍フォーマット"
 
 #. description for pyembroidery file format: pmv
 #: pyembroidery-format-descriptions.py:80
 msgid "Brother Stitch Format"
-msgstr ""
+msgstr "ブラザーステッチフォーマット"
 
 #. description for pyembroidery file format: txt
 #: pyembroidery-format-descriptions.py:82
 msgid "G-code Format"
-msgstr ""
+msgstr "G-codeフォーマット"
 
 #: templates/about.xml:3 templates/about.xml:6
 msgid "About"
@@ -1808,68 +1809,68 @@ msgstr "ライセンス"
 
 #: templates/auto_satin.xml:3
 msgid "Auto-Route Satin Columns"
-msgstr ""
+msgstr "サテン自動ルーティング"
 
 #: templates/auto_satin.xml:5
 msgid "Trim jump stitches"
-msgstr ""
+msgstr "ジャンプスティッチのトリミング"
 
 #: templates/auto_satin.xml:6
 msgid "Preserve order of satin columns"
-msgstr ""
+msgstr "サテンカラムの順序を保持"
 
 #: templates/auto_satin.xml:12 templates/convert_to_satin.xml:10
 #: templates/cut_satin.xml:10 templates/flip.xml:10
 msgid "Satin Tools"
-msgstr ""
+msgstr "サテンツール"
 
 #: templates/break_apart.xml:3
 msgid "Break Apart Fill Objects"
-msgstr ""
+msgstr "塗りつぶしオブジェクトの分割"
 
 #: templates/break_apart.xml:10
 msgid "Fill Tools"
-msgstr ""
+msgstr "塗り潰しツール"
 
 #: templates/break_apart.xml:15
 msgid "This extension will try to repair fill shapes and break them apart if necessary. Holes will be retained. Use on simple or overlapping shapes."
-msgstr ""
+msgstr "この拡張機能は、塗りつぶした形状を修復し、必要に応じて分解します。穴は維持されます。単純な形状や重なり合う形状に使用します。"
 
 #: templates/cleanup.xml:3
 msgid "Cleanup Document"
-msgstr ""
+msgstr "クリーンアップドキュメント"
 
 #: templates/cleanup.xml:5
 msgid "Use this extension to remove small objects from the document."
-msgstr ""
+msgstr "この拡張機能を使って、ドキュメントから小さなオブジェクトを削除します。"
 
 #: templates/cleanup.xml:6
 msgid "Remove Small Fill Areas"
-msgstr ""
+msgstr "小さな塗りつぶし部分の削除"
 
 #: templates/cleanup.xml:7
 msgid "Removes areas smaller than dedined by threshold."
-msgstr ""
+msgstr "しきい値で指定された領域よりも小さい領域を削除します。"
 
 #: templates/cleanup.xml:8
 msgid "Fill area threshold"
-msgstr ""
+msgstr "塗りつぶし領域のしきい値"
 
 #: templates/cleanup.xml:10
 msgid "Removes small strokes shorter than defined by threshold."
-msgstr ""
+msgstr "しきい値で定義された長さよりも短いストロークを削除します。"
 
 #: templates/cleanup.xml:11
 msgid "Stroke threshold"
-msgstr ""
+msgstr "ストロークのしきい値"
 
 #: templates/convert_to_satin.xml:3
 msgid "Convert Line to Satin"
-msgstr ""
+msgstr "ラインをサテンに変換"
 
 #: templates/cut_satin.xml:3
 msgid "Cut Satin Column"
-msgstr ""
+msgstr "カットサテンコラム"
 
 #: templates/duplicate_params.xml:3
 msgid "Duplicate Params"
@@ -1877,7 +1878,7 @@ msgstr "重複したパラメータ"
 
 #: templates/embroider.xml:3
 msgid "Embroider"
-msgstr ""
+msgstr "刺繍"
 
 #: templates/embroider.xml:5
 msgid "Create a stitch file"
@@ -1898,7 +1899,7 @@ msgstr "zipファイル形式を選択すると、複数のファイル形式を
 #: templates/embroider.xml:14 templates/print.xml:10 templates/simulator.xml:10
 #: templates/stitch_plan_preview.xml:10
 msgid "Visualise and Export"
-msgstr ""
+msgstr "ビジュアライズとエクスポート"
 
 #: templates/embroider_settings.xml:3
 msgid "Preferences"
@@ -1910,37 +1911,37 @@ msgstr "出力設定"
 
 #: templates/embroider_settings.xml:16
 msgid "Collapse length (mm)"
-msgstr ""
+msgstr "切る長さ(mm)"
 
 #: templates/embroider_settings.xml:17
 msgid "Jump stitches smaller than this will be treated as normal stitches."
-msgstr ""
+msgstr "これより小さいジャンプステッチは、通常のステッチとして扱われます。"
 
 #: templates/flip.xml:3
 msgid "Flip Satin Column Rails"
-msgstr ""
+msgstr "フリップサテンコラムレール"
 
 #: templates/global_commands.xml:3
 msgid "Add Commands"
-msgstr ""
+msgstr "追加コマンド"
 
 #: templates/global_commands.xml:5
 msgid "These commands affect the entire embroidery design."
-msgstr ""
+msgstr "このコマンドは、刺繍デザイン全体に影響を与えます。"
 
 #. Inkscape submenu under Extensions -> Ink/Stitch
 #: templates/global_commands.xml:15 templates/layer_commands.xml:14
 #: templates/object_commands.xml:13
 msgid "Commands"
-msgstr ""
+msgstr "コマンド"
 
 #: templates/import_threadlist.xml:3
 msgid "Import Threadlist"
-msgstr ""
+msgstr "スレッドリストの読み込み"
 
 #: templates/import_threadlist.xml:6
 msgid "Choose file"
-msgstr ""
+msgstr "ファイル選択"
 
 #: templates/import_threadlist.xml:20 templates/install.xml:10
 msgid "Thread Color Management"
@@ -1949,7 +1950,7 @@ msgstr "糸の色の管理"
 #: templates/input.xml:9
 #, python-format
 msgid "convert %(file_extension)s file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "%(file_extension)s のファイルをインクステッチのマニュアルステッチ・パスに変換する。"
 
 #: templates/install.xml:3
 msgid "Install thread color palettes for Inkscape"
@@ -1957,15 +1958,15 @@ msgstr "Inkscapeのスレッドカラーパレットをインストールする"
 
 #: templates/layer_commands.xml:3
 msgid "Add Layer Commands"
-msgstr ""
+msgstr "レイヤー追加コマンド"
 
 #: templates/layer_commands.xml:5
 msgid "Commands will be added to the currently-selected layer."
-msgstr ""
+msgstr "現在選択されているレイヤーにコマンドが追加されます。"
 
 #: templates/lettering.xml:3
 msgid "Lettering"
-msgstr ""
+msgstr "レタリング"
 
 #: templates/lettering_custom_font_dir.xml:3
 #: templates/lettering_custom_font_dir.xml:18
@@ -2103,157 +2104,157 @@ msgstr "フォントファイルを選択"
 
 #: templates/object_commands.xml:3
 msgid "Attach Commands to Selected Objects"
-msgstr ""
+msgstr "選択したオブジェクトにコマンドを付加"
 
 #: templates/output.xml:9
 #, python-format
 msgid "Save design in %(file_extension)s format using Ink/Stitch"
-msgstr ""
+msgstr "インクステッチを使ってデザインを%(file_extension)s形式で保存する。"
 
 #: templates/output_params_txt.xml:4
 msgid "negate X coordinate values"
-msgstr ""
+msgstr "X座標値をマイナス"
 
 #: templates/output_params_txt.xml:4
 msgid "Negate x coordinates"
-msgstr ""
+msgstr "X座標をマイナス"
 
 #: templates/output_params_txt.xml:5
 msgid "negate Y coordinate values"
-msgstr ""
+msgstr "Y座標値をマイナス"
 
 #: templates/output_params_txt.xml:5
 msgid "Negate y coordinates"
-msgstr ""
+msgstr "Y座標をマイナス"
 
 #: templates/output_params_txt.xml:6
 msgid "Z coordinate value"
-msgstr ""
+msgstr "Z座標値"
 
 #: templates/output_params_txt.xml:6
 msgid "Either alternate Z value between 0 and 1 or travel custom value."
-msgstr ""
+msgstr "Z値を0～1の間で交互に変更するか、カスタム値を移動"
 
 #: templates/output_params_txt.xml:7
 msgid "alternate Z value"
-msgstr ""
+msgstr "代替Z値"
 
 #: templates/output_params_txt.xml:8 templates/output_params_txt.xml:10
 msgid "Z travel per stitch"
-msgstr ""
+msgstr "ステッチごとのZ移動量"
 
 #: templates/output_params_txt.xml:11
 msgid "increment z coordinate by this amount per stitch if \"Z travel per stitch\" is enabled"
-msgstr ""
+msgstr "Zステッチ移動量が設定されている場合、Z座標を1ステッチごとにこの量だけ増加させます。"
 
 #: templates/output_params_txt.xml:15
 #, python-format
 msgid "Use '%X' for x-coordinate. Use '%Y' for y-coordinate and '%Z' for z-coordinate. Use '\\n' for a new line."
-msgstr ""
+msgstr "x座標は「%X」を、Y座標は「%Y」を、Z座標は「%Z」を、改行は '\\n' を使用します。"
 
 #: templates/output_params_txt.xml:17 templates/output_params_txt.xml:19
 msgid "Use '\\n' for a new line. Leave empty to use default value. Use 'none' to remove."
-msgstr ""
+msgstr "新しい行には '\\n' を使用します。空欄にすると、デフォルト値が使用されます。削除する場合は「none」を使用します。"
 
 #: templates/output_params_txt.xml:20
 msgid "START"
-msgstr ""
+msgstr "スタート"
 
 #: templates/output_params_txt.xml:21 templates/output_params_txt.xml:23
 msgid "Use '\\n' for a new line."
-msgstr ""
+msgstr "新しい行には '\\n' を使用します。"
 
 #: templates/output_params_txt.xml:22
 msgid "END"
-msgstr ""
+msgstr "終了"
 
 #: templates/output_params_txt.xml:26
 msgid "laser mode"
-msgstr ""
+msgstr "レーザーモード"
 
 #: templates/output_params_txt.xml:27
 msgid "Laser mode (generate g-code for grbl laser mode)"
-msgstr ""
+msgstr "レーザーモード（grblレーザーモードのg-codeを生成)"
 
 #: templates/output_params_txt.xml:28
 msgid "dynamic laser power"
-msgstr ""
+msgstr "ダイナミックレーザーパワー"
 
 #: templates/output_params_txt.xml:29
 msgid "Use Grbl's M4 dynamic laser power mode.  Ensures consistent laser cutting power regardless of motor speed.  Only for PWM-capable lasers."
-msgstr ""
+msgstr "GrblのM4ダイナミックレーザーパワーモードを使用。 モーターの回転数に関わらず、安定したレーザー切断出力を確保します。 PWM対応のレーザーに限ります。"
 
 #: templates/output_params_txt.xml:31
 msgid "laser warm-up time"
-msgstr ""
+msgstr "レーザーのウォームアップ時間"
 
 #: templates/output_params_txt.xml:32
 msgid "When turning on the laser, wait this many seconds for laser to warm up (G4 command)"
-msgstr ""
+msgstr "レーザー電源オン時、レーザーが温まるまでの秒数（G4コマンド）"
 
 #: templates/output_params_txt.xml:33
 msgid "spindle speed"
-msgstr ""
+msgstr "主軸回転数"
 
 #: templates/output_params_txt.xml:34
 msgid "spindle speed (laser power for laser mode, set to -1 to omit)"
-msgstr ""
+msgstr "主軸回転数（レーザーモードの場合はレーザー出力、省略する場合は-1を設定)"
 
 #: templates/output_params_txt.xml:35
 msgid "min spindle speed"
-msgstr ""
+msgstr "最小主軸回転数"
 
 #: templates/output_params_txt.xml:36
 msgid "minimum spindle speed value (grbl $31 setting)"
-msgstr ""
+msgstr "主軸回転数最小値（grbl $31設定)"
 
 #: templates/output_params_txt.xml:37
 msgid "max spindle speed"
-msgstr ""
+msgstr "主軸最高回転速度"
 
 #: templates/output_params_txt.xml:38
 msgid "minimum spindle speed value (grbl $30 setting)"
-msgstr ""
+msgstr "主軸回転速度の最小値（grbl $31設定)"
 
 #: templates/output_params_txt.xml:39
 msgid "feed rate (in mm/min, set to -1 to omit)"
-msgstr ""
+msgstr "送り速度（単位：mm/min、省略する場合は-1を設定)"
 
 #: templates/params.xml:3
 msgid "Params"
-msgstr ""
+msgstr "パラメーター"
 
 #: templates/print.xml:3
 msgid "PDF Export"
-msgstr ""
+msgstr "PDFエクスポート"
 
 #: templates/remove_embroidery_settings.xml:3
 msgid "Remove embroidery settings"
-msgstr ""
+msgstr "刺繍設定を解除"
 
 #: templates/remove_embroidery_settings.xml:5
 msgid "Use this extension to remove the information Ink/Stitch has stored in your document.  This can be especially useful if you copy and paste objects from an embroidery design into another document."
-msgstr ""
+msgstr "この拡張機能を使用すると、インクステッチがドキュメントに保存した情報を削除することができます。 これは、刺繍デザインのオブジェクトを他のドキュメントにコピー＆ペーストする場合に特に役立ちます。"
 
 #: templates/remove_embroidery_settings.xml:6
 msgid "Remove Params"
-msgstr ""
+msgstr "パラメーターの削除"
 
 #: templates/remove_embroidery_settings.xml:7
 msgid "Removes params from selected objects or all objects if nothing is selected."
-msgstr ""
+msgstr "選択されたオブジェクトや、何も選択されていない場合はすべてのオブジェクトからパラメータを削除します。"
 
 #: templates/remove_embroidery_settings.xml:8
 msgid "Remove Commands"
-msgstr ""
+msgstr "削除コマンド"
 
 #: templates/remove_embroidery_settings.xml:9
 msgid "Removes visual commands from selected objects or all objects if nothing is selected."
-msgstr ""
+msgstr "選択されたオブジェクトや、何も選択されていない場合はすべてのオブジェクトからビジュアルコマンドを削除します。"
 
 #: templates/remove_embroidery_settings.xml:10
 msgid "Remove Print Settings from SVG metadata"
-msgstr ""
+msgstr "SVG メタデータから印刷設定を削除"
 
 #: templates/reorder.xml:3
 msgid "Re-stack objects in order of selection"
@@ -2261,84 +2262,84 @@ msgstr "選択順にオブジェクトを再スタックします"
 
 #: templates/simulator.xml:3
 msgid "Simulator / Realistic Preview"
-msgstr ""
+msgstr "シミュレータ／リアルプレビュー"
 
 #: templates/stitch_plan_preview.xml:3
 msgid "Stitch Plan Preview"
-msgstr ""
+msgstr "ステッチプランプレビュー"
 
 #: templates/troubleshoot.xml:3
 msgid "Troubleshoot Objects"
-msgstr ""
+msgstr "オブジェクトのトラブルシューティング"
 
 #: templates/zip.xml:8
 msgid "Ink/Stitch: ZIP export multiple formats (.zip)"
-msgstr ""
+msgstr "インク／スティッチ ZIPで複数のフォーマットを書き出し（.zip"
 
 #: templates/zip.xml:9
 msgid "Create a ZIP with multiple embroidery file formats using Ink/Stitch"
-msgstr ""
+msgstr "Ink/Stitchを使って複数の刺繍ファイルフォーマットでZIPを作成"
 
 #: templates/zip.xml:17
 msgid "Scalable Vector Graphic"
-msgstr ""
+msgstr "スケーラブルベクターグラフィック"
 
 #: templates/zip.xml:18
 msgid "Threadlist"
-msgstr ""
+msgstr "スレッド一覧"
 
 #. name for left arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:52
 msgid "← Arrow left"
-msgstr ""
+msgstr "←左矢印"
 
 #. name for right arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:63
 msgid "→ Arrow right"
-msgstr ""
+msgstr "→右矢印"
 
 #. name for up arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:129
 msgid "↑ Arrow up"
-msgstr ""
+msgstr "↑ 上矢印"
 
 #. name for down arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:118
 msgid "↓ Arrow down"
-msgstr ""
+msgstr "↓下矢印"
 
 #. name for this keyboard key: +
 #: electron/src/renderer/components/Simulator.vue:89
 msgid "+ Plus"
-msgstr ""
+msgstr "+プラス"
 
 #: electron/src/renderer/components/Simulator.vue:15
 msgid "Button"
-msgstr ""
+msgstr "ボタン"
 
 #: electron/src/renderer/components/Simulator.vue:203
 msgid "color changes"
-msgstr ""
+msgstr "色変更"
 
 #: electron/src/renderer/components/Simulator.vue:186
 msgid "Command"
-msgstr ""
+msgstr "コマンド"
 
 #: electron/src/renderer/components/Simulator.vue:145
 msgid "Controls"
-msgstr ""
+msgstr "コントロール"
 
 #: electron/src/renderer/components/Simulator.vue:223
 msgid "cursor"
-msgstr ""
+msgstr "カーソル"
 
 #: electron/src/renderer/components/Simulator.vue:18
 msgid "Function"
-msgstr ""
+msgstr "機能"
 
 #: electron/src/renderer/components/InstallPalettes.vue:16
 msgid "If you are not sure which file path to choose, click on install directly. In most cases Ink/Stitch will guess the correct path."
-msgstr ""
+msgstr "選択するファイルパスがわからない場合は、[直接インストール] をクリックしてください。ほとんどの場合、インク/ステッチは正しいパスを推測します。"
 
 #: electron/src/renderer/components/InstallPalettes.vue:9
 msgid "Ink/Stitch can install palettes for Inkscape matching the thread colors from popular machine embroidery thread manufacturers."
@@ -2346,7 +2347,7 @@ msgstr "Ink / Stitchは、人気のあるミシン刺繍糸メーカーの糸の
 
 #: electron/src/renderer/components/InstallPalettes.vue:53
 msgid "Inkscape add-on installation failed"
-msgstr ""
+msgstr "Inkscapeアドオンのインストールに失敗しました。"
 
 #: electron/src/renderer/components/InstallPalettes.vue:36
 msgid "Inkscape palettes have been installed. Please restart Inkscape to load the new palettes."
@@ -2354,7 +2355,7 @@ msgstr "Inkscapeパレットがインストールされました。 Inkscapeを�
 
 #: electron/src/renderer/components/InstallPalettes.vue:22
 msgid "Install"
-msgstr ""
+msgstr "インストール"
 
 #: electron/src/renderer/components/InstallPalettes.vue:4
 msgid "Install Palettes"
@@ -2362,28 +2363,28 @@ msgstr "パレットをインストールする"
 
 #: electron/src/renderer/components/InstallPalettes.vue:31
 msgid "Installation Completed"
-msgstr ""
+msgstr "インストールが完了しました。"
 
 #: electron/src/renderer/components/InstallPalettes.vue:48
 msgid "Installation Failed"
-msgstr ""
+msgstr "インストールに失敗しました"
 
 #: electron/src/renderer/components/Simulator.vue:106
 msgid "Jump to next command"
-msgstr ""
+msgstr "次のコマンドに進む"
 
 #: electron/src/renderer/components/Simulator.vue:97
 msgid "Jump to previous command"
-msgstr ""
+msgstr "前のコマンドに戻る"
 
 #: electron/src/renderer/components/Simulator.vue:199
 msgid "jumps"
-msgstr ""
+msgstr "ジャンプ"
 
 #. name for this keyboard key: -
 #: electron/src/renderer/components/Simulator.vue:76
 msgid "Minus"
-msgstr ""
+msgstr "マイナス"
 
 #: electron/src/renderer/components/Simulator.vue:215
 msgid "needle points"
@@ -2392,38 +2393,38 @@ msgstr "針先"
 #. description of keyboard shortcut that moves one stitch backward in simulator
 #: electron/src/renderer/components/Simulator.vue:71
 msgid "One step backward"
-msgstr ""
+msgstr "戻る"
 
 #. description of keyboard shortcut that moves one stitch forward in simulator
 #: electron/src/renderer/components/Simulator.vue:84
 msgid "One step forward"
-msgstr ""
+msgstr "進む"
 
 #. name for page down keyboard key
 #: electron/src/renderer/components/Simulator.vue:99
 msgid "Page down (PgDn)"
-msgstr ""
+msgstr "ページダウン(PgDn)"
 
 #. name for page up keyboard key
 #: electron/src/renderer/components/Simulator.vue:108
 msgid "Page up (PgUp)"
-msgstr ""
+msgstr "ページアップ (PgUp)"
 
 #: electron/src/renderer/components/Simulator.vue:40
 msgid "Play"
-msgstr ""
+msgstr "再生"
 
 #: electron/src/renderer/components/Simulator.vue:49
 msgid "Play backward"
-msgstr ""
+msgstr "逆再生"
 
 #: electron/src/renderer/components/Simulator.vue:60
 msgid "Play forward"
-msgstr ""
+msgstr "通常再生"
 
 #: electron/src/renderer/components/Simulator.vue:220
 msgid "realistic"
-msgstr ""
+msgstr "リアル"
 
 #: electron/src/renderer/components/Simulator.vue:260
 msgid "Rendering stitch-plan..."

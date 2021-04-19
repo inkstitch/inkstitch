@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-04-15 00:58+0000\n"
-"PO-Revision-Date: 2021-04-18 01:02\n"
+"PO-Revision-Date: 2021-04-19 01:00\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -606,7 +606,7 @@ msgstr "Сатиновая колонна: Поперечина не перес�
 
 #: lib/elements/satin_column.py:62
 msgid "Rungs intersects too many times"
-msgstr ""
+msgstr "Поперечины пересекаются слишком много раз"
 
 #: lib/elements/satin_column.py:63
 msgid "Satin column: A rung intersects a rail more than once."
@@ -2335,7 +2335,7 @@ msgstr "Функция"
 
 #: electron/src/renderer/components/InstallPalettes.vue:16
 msgid "If you are not sure which file path to choose, click on install directly. In most cases Ink/Stitch will guess the correct path."
-msgstr ""
+msgstr "Если вы не уверены какой путь нужно ввести, жмите сразу на Установить. В большинстве случаев Ink/Stitch удастся угадать верную папку."
 
 #: electron/src/renderer/components/InstallPalettes.vue:9
 msgid "Ink/Stitch can install palettes for Inkscape matching the thread colors from popular machine embroidery thread manufacturers."
