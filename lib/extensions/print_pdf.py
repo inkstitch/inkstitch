@@ -21,6 +21,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 from lxml import etree
 
 from ..gui import open_url
+from ..i18n import get_languages
 from ..i18n import translation as inkstitch_translation
 from ..stitch_plan import patches_to_stitch_plan
 from ..svg import render_stitch_plan
@@ -186,9 +187,11 @@ class PrintPreviewServer(Thread):
 class Print(InkstitchExtension):
     def build_environment(self):
         if getattr(sys, 'frozen', False):
-            template_dir = os.path.join(sys._MEIPASS, "print", "templates")
+            print_dir = os.path.join(sys._MEIPASS, "print")
         else:
-            template_dir = os.path.realpath(os.path.join(os.path.dirname(__file__), "..", "..", "print", "templates"))
+            print_dir = os.path.realpath(os.path.join(os.path.dirname(__file__), "..", "..", "print"))
+
+        template_dir = os.path.join(print_dir, "templates")
 
         env = Environment(
             loader=FileSystemLoader(template_dir),
@@ -198,6 +201,14 @@ class Print(InkstitchExtension):
 
         env.filters['datetimeformat'] = datetimeformat
         env.install_gettext_translations(inkstitch_translation)
+
+        languages_with_style = []
+        languages = get_languages()
+        for lang in languages:
+            css_file = "%s.css" % lang
+            if os.path.isfile(os.path.join(print_dir, "resources", css_file)):
+                languages_with_style.append(lang)
+        env.languages = languages_with_style
 
         return env
 
@@ -280,6 +291,7 @@ class Print(InkstitchExtension):
             color_blocks=stitch_plan.color_blocks,
             palettes=ThreadCatalog().palette_names(),
             selected_palette=selected_palette,
+            languages=env.languages
         )
 
     def effect(self):

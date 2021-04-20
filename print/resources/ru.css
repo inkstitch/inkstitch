@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'FiraSans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/FiraSansLight.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'FiraSans Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/FiraSansCondensed-Light.woff) format('woff');
+}
+
+body {
+  font-family: 'FiraSans', sans-serif;
+}
+
+.condensed {
+  font-family: 'FiraSans Condensed', sans-serif;
+}
