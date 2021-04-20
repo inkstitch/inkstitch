@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-04-15 00:58+0000\n"
-"PO-Revision-Date: 2021-04-19 01:00\n"
+"PO-Revision-Date: 2021-04-20 01:01\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -1379,19 +1379,19 @@ msgstr "Заметки"
 #: print/templates/operator_overview.html:6
 #: print/templates/print_overview.html:6
 msgid "Unique Colors"
-msgstr "Уникальных цветов"
+msgstr "Цветов"
 
 #: print/templates/operator_detailedview.html:25
 #: print/templates/operator_overview.html:7
 #: print/templates/print_overview.html:7
 msgid "Color Blocks"
-msgstr "Цветных блоков"
+msgstr "Блоков"
 
 #: print/templates/operator_detailedview.html:28
 #: print/templates/operator_overview.html:14
 #: print/templates/print_overview.html:14
 msgid "Design box size"
-msgstr "Размер дизайна"
+msgstr "Размер"
 
 #: print/templates/operator_detailedview.html:29
 #: print/templates/operator_overview.html:16
@@ -1403,7 +1403,7 @@ msgstr "Всего использовано нити"
 #: print/templates/operator_overview.html:15
 #: print/templates/print_overview.html:15
 msgid "Total stitch count"
-msgstr "Всего стяжков"
+msgstr "Стежков"
 
 #: print/templates/operator_detailedview.html:31
 #: print/templates/print_detail.html:11
@@ -1414,13 +1414,13 @@ msgstr "Ожидаемое время"
 #: print/templates/operator_overview.html:8
 #: print/templates/print_overview.html:8
 msgid "Total stops"
-msgstr "Всего остановок"
+msgstr "Остановок"
 
 #: print/templates/operator_detailedview.html:35
 #: print/templates/operator_overview.html:9
 #: print/templates/print_overview.html:9
 msgid "Total trims"
-msgstr "Всего обрезок"
+msgstr "Обрезок"
 
 #: print/templates/operator_detailedview.html:62
 msgid "thread used"
@@ -1442,7 +1442,7 @@ msgstr "Заметки для оператора..."
 #: print/templates/operator_overview.html:21
 #: print/templates/print_overview.html:21
 msgid "Job estimated time"
-msgstr "Ожидаемое время для дизайна"
+msgstr "Время вышивки"
 
 #: print/templates/operator_overview.html:28
 #: print/templates/print_detail.html:18 print/templates/print_overview.html:28
