@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-04-15 00:58+0000\n"
-"PO-Revision-Date: 2021-04-21 01:00\n"
+"PO-Revision-Date: 2021-04-22 01:01\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -71,7 +71,7 @@ msgstr "Lobster Two Bold Italic"
 #. name of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:26
 msgid "Ink/Stitch Medium Font"
-msgstr "Fonte médium pour Ink/Stitch"
+msgstr "Ink/Stitch Moyenne police"
 
 #. description of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:28
@@ -82,7 +82,7 @@ msgstr "Une fonte idéale pour des caractères de taille moyenne. La lettre \"M\
 #. name of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:30
 msgid "Ink/Stitch Small Font"
-msgstr "Petite fonte Ink/Stitch"
+msgstr "Ink/Stitch Petite police"
 
 #. description of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:32
