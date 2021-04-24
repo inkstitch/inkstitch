@@ -7,7 +7,7 @@
         <object-type>all</object-type>
         <effects-menu>
             <submenu name="Ink/Stitch">
-                <submenu name="Edit" />
+                <submenu name="{% trans %}Edit{% endtrans %}" />
             </submenu>
         </effects-menu>
     </effect>
