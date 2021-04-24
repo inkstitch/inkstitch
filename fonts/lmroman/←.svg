@@ -33,7 +33,7 @@
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g3809"
+     inkscape:current-layer="g3469"
      inkscape:document-rotation="0"
      inkscape:snap-global="true"
      inkscape:snap-grids="false"
@@ -181,12 +181,12 @@ Copyright 2003, 2008 B. Jackowski and J. M. Nowacki (on behalf of TeX users grou
      style="display:none">
     <path
        d="m 27.868484,134.54732 c 0,0 -0.05505,0.76452 -0.05505,0.76452 0,0 -0.07201,1.13415 -0.07201,1.13415 0,0 -0.0674,1.13942 -0.0674,1.13942 0,0 -0.05924,0.48802 -0.05924,0.48802"
-       style="display:inline;fill:none;stroke:#ff0000;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
        inkstitch:running_stitch_length_mm=""
        id="autosatinrun48"
        inkscape:label="Points droits pour auto-remplissage satin 1" />
     <path
-       style="display:inline;fill:none;stroke:#ff0000;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 24.641285,138.07343 c 0,0 -1.824169,-0.12451 -1.824169,-0.12451 0,0 -1.819017,-0.39853 -1.819017,-0.39853 0,0 -1.741059,-0.66724 -1.741059,-0.66724 0,0 -1.590297,-0.93067 -1.590297,-0.93067 0,0 -0.575016,-0.50017 -0.575016,-0.50017 m 13.496551,2.62112 c 0,0 1.750128,-0.24687 1.750128,-0.24687 0,0 1.872167,-0.48638 1.872167,-0.48638 0,0 1.887292,-0.72484 1.887292,-0.72484 0,0 1.795505,-0.96225 1.795505,-0.96225 0,0 0.64176,-0.48172 0.64176,-0.48172 m 0.984423,0.0457 c 0,0 -23.416774,0.3152 -23.416774,0.3152"
        id="autosatin66"
        sodipodi:nodetypes="csccsc"
@@ -198,21 +198,21 @@ Copyright 2003, 2008 B. Jackowski and J. M. Nowacki (on behalf of TeX users grou
        inkscape:label="Auto-remplissage satin 2" />
     <path
        id="autosatinrun49"
-       style="display:inline;fill:none;stroke:#ff0000;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
        inkscape:label="Points droits pour auto-remplissage satin 3"
        d="m 27.868484,134.54732 1.896888,-14.14783 -0.366237,-2.82641"
        inkstitch:ties="False"
        sodipodi:nodetypes="ccc" />
     <path
        id="autosatinrun50"
-       style="fill:none;stroke:#ff0000;stroke-width:0.377953;stroke-dasharray:0.5, 0.5"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:0.5, 0.5"
        inkscape:label="Points droits pour auto-remplissage satin 4"
        d="M 32.800209,108.7121 C 33.613708,103.23896 36.698775,98.172062 37.921381,92.780061 41.478089,78.24308 45.089522,63.714797 48.604752,49.170645"
        inkstitch:ties="False"
        sodipodi:nodetypes="ccc" />
     <path
        id="autosatin67"
-       style="fill:none;stroke:#ff0000;stroke-width:0.377953"
+       style="fill:none;stroke:#000000;stroke-width:1"
        d="M 53.352766,40.3169 C 56.925979,41.319848 59,44.505594 59,47 c 0,1 0,3 -1,5 0,0 -19,55 -19,55 -0.70167,1.40334 -1.895679,1.822 -3.582029,1.9469 m 12.154146,-68.63 C 43.93442,41.31991 38.676815,44.231847 38,51 c 0,0 -8,55.04462 -8,55.04462 0,1.04462 1,2.90228 3,2.90228 m 4.003458,-59.733234 c 0,0 23.48834,-0.186415 23.48834,-0.186415 M 31.131372,90.877509 c 0,0 14.353986,-0.09321 14.353986,-0.09321"
        inkstitch:satin_column="True"
        inkstitch:ties="True"
@@ -221,7 +221,7 @@ Copyright 2003, 2008 B. Jackowski and J. M. Nowacki (on behalf of TeX users grou
        inkstitch:zigzag_underlay="True"
        inkscape:label="Auto-remplissage satin 5" />
     <path
-       style="display:inline;fill:none;stroke:#ff0000;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 30.144278,116.909 c 0,0 3.031063,0.23135 3.031063,0.23135 0,0 1.332002,0.31206 1.332002,0.31206 0,0 1.213303,0.43208 1.213303,0.43208 0,0 2.08147,1.19145 2.08147,1.19145 0,0 1.63956,1.57328 1.63956,1.57328 0,0 1.219572,1.88965 1.219572,1.88965 0,0 0.821509,2.14052 0.821509,2.14052 0,0 0.445369,2.32592 0.445369,2.32592 0,0 0.09115,2.44585 0.09115,2.44585 0,0 -0.108006,0.97974 -0.108006,0.97974 0,0 -0.251229,0.92157 -0.251229,0.92157 0,0 -0.878672,1.66813 -0.878672,1.66813 0,0 -1.291195,1.43389 -1.291195,1.43389 0,0 -0.955046,0.71688 -0.955046,0.71688 M 25.554747,116.909 c 0,0 -2.363255,0.55851 -2.363255,0.55851 0,0 -2.16378,0.91148 -2.16378,0.91148 0,0 -1.927961,1.2366 -1.927961,1.2366 0,0 -1.655798,1.53388 -1.655798,1.53388 0,0 -1.347291,1.80334 -1.347291,1.80334 0,0 -1.002439,2.04496 -1.002439,2.04496 0,0 -0.621242,2.25872 -0.621242,2.25872 0,0 -0.203703,2.44467 -0.203703,2.44467 0,0 0.259198,1.93155 0.259198,1.93155 0,0 0.70118,1.68926 0.70118,1.68926 0,0 1.070357,1.44169 1.070357,1.44169 0,0 0.791714,0.68865 0.791714,0.68865 m 24.937551,-6.00124 c 0,0 -27.77,0.25018 -27.77,0.25018"
        id="autosatin68"
        sodipodi:nodetypes="csccsc"

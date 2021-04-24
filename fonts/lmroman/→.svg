@@ -23,17 +23,17 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1972"
-     inkscape:window-height="1620"
+     inkscape:window-width="2536"
+     inkscape:window-height="1771"
      id="namedview1755"
      showgrid="true"
      inkscape:zoom="2.2571143"
-     inkscape:cx="41.75739"
+     inkscape:cx="17.833037"
      inkscape:cy="111.26457"
      inkscape:window-x="4"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g3809"
+     inkscape:current-layer="g3473"
      inkscape:document-rotation="0"
      inkscape:snap-global="true"
      inkscape:snap-grids="false">
@@ -148,7 +148,7 @@ Copyright 2003, 2008 B. Jackowski and J. M. Nowacki (on behalf of TeX users grou
      style="display:none">
     <path
        id="path3467"
-       style="fill:none;stroke:#ff0000;stroke-width:0.377953"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-opacity:1"
        d="M 53.352766,40.3169 C 56.925979,41.319848 59,44.505594 59,47 c 0,1 0,3 -1,5 l -19,55 c -0.70167,1.40334 -1.895679,1.822 -3.582029,1.9469 m 12.154146,-68.63 C 43.93442,41.31991 38.676815,44.231847 38,51 l -8,55.04462 c 0,1.04462 1,2.90228 3,2.90228 m 4.003458,-59.733234 23.48834,-0.186415 m -29.360426,41.850258 14.353986,-0.09321"
        inkstitch:satin_column="True"
        inkstitch:ties="False"
@@ -156,7 +156,7 @@ Copyright 2003, 2008 B. Jackowski and J. M. Nowacki (on behalf of TeX users grou
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="True" />
     <path
-       style="display:inline;fill:none;stroke:#ff0000;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 30.144278,116.909 c 8.75,-0.125 12.084728,5.91821 11.875,12.54216 -0.170346,5.38012 -7.021742,8.28426 -11.431,8.62227 M 25.554747,116.909 c -6.535674,0.994 -11.331288,6.04988 -11.285469,12.79216 0.03717,5.46916 5.565401,8.41027 10.372007,8.37227"
        id="path43869-1-4"
        inkstitch:satin_column="True"
@@ -321,7 +321,7 @@ Copyright 2003, 2008 B. Jackowski and J. M. Nowacki (on behalf of TeX users grou
     <path
        d="M 45.097453,41.418519 C 42.29718,42.149726 39.77073,44.083966 39,49 L 36,80 M 51.417682,41.393737 C 53.858723,42.303767 55.025051,44.802023 54,49 L 43,80 M 36.677757,57.590513 h 16.730205"
        id="path3479"
-       style="display:none;fill:none;stroke:#000000"
+       style="display:inline;fill:none;stroke:#000000"
        inkstitch:satin_column="True"
        inkstitch:ties="True"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -1694,10 +1694,10 @@ Copyright 2003, 2008 B. Jackowski and J. M. Nowacki (on behalf of TeX users grou
        inkstitch:center_walk_underlay="False" />
   </g>
   <g
-     inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-F"
      style="display:none"
-     id="g3593">
+     id="g3593"
+     inkscape:groupmode="layer">
     <path
        id="autosatin1-1"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"

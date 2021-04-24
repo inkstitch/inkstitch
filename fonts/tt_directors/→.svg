@@ -14,7 +14,7 @@
    viewBox="0 0 100 100"
    height="100"
    width="100"
-   inkscape:version="1.0 (4035a4fb49, 2020-05-01)">
+   inkscape:version="1.0.2 (e86c870, 2021-01-15)">
   <defs
      id="defs4566">
     <symbol
@@ -66,18 +66,18 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.744"
-     inkscape:cx="3.3159039"
-     inkscape:cy="108.85873"
+     inkscape:zoom="21.952"
+     inkscape:cx="13.113364"
+     inkscape:cy="48.911349"
      inkscape:document-units="px"
-     inkscape:current-layer="g643"
+     inkscape:current-layer="g7381"
      showgrid="false"
      units="px"
      inkscape:snap-global="false"
-     inkscape:window-width="1402"
-     inkscape:window-height="1500"
-     inkscape:window-x="105"
-     inkscape:window-y="7"
+     inkscape:window-width="2212"
+     inkscape:window-height="1947"
+     inkscape:window-x="655"
+     inkscape:window-y="176"
      inkscape:window-maximized="0"
      inkscape:document-rotation="0">
     <sodipodi:guide
@@ -2281,7 +2281,7 @@
        inkstitch:contour_underlay="True"
        id="path3398"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4583px;line-height:1.25;font-family:'TT Directors DEMO BL';-inkscape-font-specification:'TT Directors DEMO BL';letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
-       d="M 22.957394,39.981674 C 21.652738,36.872037 22.080354,33.136189 21.894288,29.787192 M 11.457387,39.981674 c 1.029581,-3.22303 0.749632,-6.823371 0.936907,-10.194482"
+       d="M 22.957394,39.981674 C 21.652738,36.872037 22.080354,33.136189 21.894288,29.787192 M 11.457387,39.981674 c 1.029581,-3.22303 0.749632,-6.823371 0.936907,-10.194482 m -2.144658,4.059382 13.575072,0.09111"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc" />
   </g>
