@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-04-15 00:58+0000\n"
-"PO-Revision-Date: 2021-04-22 01:02\n"
+"POT-Creation-Date: 2021-04-25 01:04+0000\n"
+"PO-Revision-Date: 2021-04-25 01:05\n"
 "Last-Translator: \n"
 "Language-Team: Vietnamese\n"
 "MIME-Version: 1.0\n"
@@ -1868,6 +1868,10 @@ msgstr ""
 
 #: templates/duplicate_params.xml:3
 msgid "Duplicate Params"
+msgstr ""
+
+#: templates/duplicate_params.xml:10 templates/reorder.xml:10
+msgid "Edit"
 msgstr ""
 
 #: templates/embroider.xml:3

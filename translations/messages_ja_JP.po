@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-04-15 00:58+0000\n"
-"PO-Revision-Date: 2021-04-22 01:01\n"
+"POT-Creation-Date: 2021-04-25 01:04+0000\n"
+"PO-Revision-Date: 2021-04-25 01:05\n"
 "Last-Translator: \n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -179,8 +179,7 @@ msgstr "エクスポートされた刺繡ファイルの原点"
 #. command that affects entire document
 #: lib/commands.py:57
 msgid "Jump destination for Stop commands (a.k.a. \"Frame Out position\")."
-msgstr "\n"
-"停止コマンドのジャンプ先（別名「フレームアウト位置」）"
+msgstr ""
 
 #: lib/commands.py:215
 #, python-format
@@ -1874,6 +1873,10 @@ msgstr "カットサテンコラム"
 #: templates/duplicate_params.xml:3
 msgid "Duplicate Params"
 msgstr "重複したパラメータ"
+
+#: templates/duplicate_params.xml:10 templates/reorder.xml:10
+msgid "Edit"
+msgstr ""
 
 #: templates/embroider.xml:3
 msgid "Embroider"
