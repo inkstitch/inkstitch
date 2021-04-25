@@ -6,7 +6,7 @@ format = 'UDBZ'
 files = [application]
 symlinks = {'Applications': '/Applications/Inkscape.app/Contents/Resources/share/inkscape/extensions'}
 background = os.path.join(os.getcwd(), '..', 'dmg', 'dmg-background.png')
-icon =  os.path.join(os.getcwd(), '..', 'dmg', 'icon.icns')
+icon = os.path.join(os.getcwd(), '..', 'dmg', 'icon.icns')
 
 icon_locations = {
     appname:        (150, 230),

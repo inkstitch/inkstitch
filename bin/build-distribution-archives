@@ -9,6 +9,14 @@ if [ "$BUILD" = "osx" ]; then
     cp -a icons locales print dist/inkstitch.app/Contents/MacOS
     cp -a electron/build/mac dist/inkstitch.app/Contents/electron
     rm -rf dist/inkstitch/
+    #first part of codesiging which is importing to build keychain
+    echo $MACOS_CERTIFICATE | base64 --decode > certificate.p12
+    security create-keychain -p "$KEYCHAIN_PWD" build.keychain
+    security default-keychain -s build.keychain
+    security unlock-keychain -p "$KEYCHAIN_PWD" build.keychain
+    security import certificate.p12 -k build.keychain -P "$MACOS_CERTIFICATE_PWD" -T /usr/bin/codesign
+    security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "$KEYCHAIN_PWD" build.keychain
+    #the rest of the build will be inside a packaging loop below
 else
     cp -a images/examples palettes symbols fonts LICENSE VERSION dist/inkstitch
     cp -a icons locales print dist/inkstitch/bin
@@ -26,19 +34,21 @@ for d in inx/*; do
       	cp $d/*.inx dist
     fi
 
-      cd dist
-      if [ "$BUILD" = "windows" ]; then
-          # The python zipfile command line utility can't handle directories
-          # containing files with UTF-8 names on Windows, so we use 7-zip instead.
-          7z a ../artifacts/inkstitch-${VERSION}-${OS}-${lang}.zip *
-      else
-          if [ "$BUILD" = "osx" ]; then
-              # hdiutil create -volname "InkStich" -srcfolder inkstitch.app -ov -format UDZO ../artifacts/inkstitch-${VERSION}-${OS}-${lang}.dmg
-              # with dmgbuild
-              dmgbuild -s ../dmg/build-inkstitch-dmg.py -D app=inkstitch.app "Ink/Stitch" ../artifacts/inkstitch-${VERSION}-${OS}-${lang}.dmg
-          else
-              python -m zipfile -c ../artifacts/inkstitch-${VERSION}-${OS}-${lang}.zip *
-          fi
-      fi
-      cd ..
+    cd dist
+    if [ "$BUILD" = "windows" ]; then
+        # The python zipfile command line utility can't handle directories
+        # containing files with UTF-8 names on Windows, so we use 7-zip instead.
+        7z a ../artifacts/inkstitch-${VERSION}-${OS}-${lang}.zip *
+    else
+        if [ "$BUILD" = "osx" ]; then
+            #this will sign the inkstitch.apple
+            /usr/bin/codesign --force -s "929A568N58" inkstitch.app -v
+            # hdiutil create -volname "InkStich" -srcfolder inkstitch.app -ov -format UDZO ../artifacts/inkstitch-${VERSION}-${OS}-${lang}.dmg
+            # with dmgbuild
+            dmgbuild -s ../dmg/build-inkstitch-dmg.py -D app=inkstitch.app "Ink/Stitch" ../artifacts/inkstitch-${VERSION}-${OS}-${lang}.dmg
+        else
+            python -m zipfile -c ../artifacts/inkstitch-${VERSION}-${OS}-${lang}.zip *
+        fi
+fi
+cd ..
 done
