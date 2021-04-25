@@ -29,7 +29,7 @@ for d in inx/*; do
 	  lang=${d%.*}
 	  lang=${lang#*/}
 	  if [ "$BUILD" = "osx" ]; then
-	      cp $d/*.inx dist/inkstitch.app
+	      cp $d/*.inx dist/inkstitch.app/Contents
 	  else
       	cp $d/*.inx dist
     fi
@@ -42,7 +42,7 @@ for d in inx/*; do
     else
         if [ "$BUILD" = "osx" ]; then
             #this will sign the inkstitch.apple
-            /usr/bin/codesign --force -s "929A568N58" inkstitch.app -v
+            /usr/bin/codesign --force -s "929A568N58" --deep inkstitch.app -v
             # hdiutil create -volname "InkStich" -srcfolder inkstitch.app -ov -format UDZO ../artifacts/inkstitch-${VERSION}-${OS}-${lang}.dmg
             # with dmgbuild
             dmgbuild -s ../dmg/build-inkstitch-dmg.py -D app=inkstitch.app "Ink/Stitch" ../artifacts/inkstitch-${VERSION}-${OS}-${lang}.dmg
