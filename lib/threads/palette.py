@@ -38,7 +38,7 @@ class ThreadPalette(Set):
 
         """
 
-        with open(palette_file) as palette:
+        with open(palette_file, encoding='utf8') as palette:
             line = palette.readline().strip()
             if line.lower() != "gimp palette":
                 raise ValueError("Invalid gimp palette header")
