@@ -23,11 +23,18 @@ class InstallCustomPalette(InkstitchExtension):
         if not os.path.isfile(gpl):
             inkex.errormsg(_("File does not exist."))
 
+        palette_name = os.path.basename(gpl)
+        if not palette_name.endswith('.gpl'):
+            inkex.errormsg(_("Wrong file type. Ink/Stitch only accepts gpl color palettes."))
+
+        if not palette_name.startswith('InkStitch'):
+            palette_name = 'InkStitch %s' % palette_name
+
         palette_path = os.path.join(guess_inkscape_config_path(), 'palettes')
 
         if not os.path.isdir(palette_path):
             inkex.errormsg(_("Ink/Stitch cannot find your palette folder automatically. Please install your palette manually."))
-        dest = os.path.join(palette_path, os.path.basename(gpl))
+        dest = os.path.join(palette_path, palette_name)
         shutil.copyfile(gpl,  dest)
 
         if not os.path.isfile(dest):
