@@ -20,7 +20,7 @@ class Stroke(EmbroideryElement):
     element_name = _("Stroke")
 
     @property
-    @param('satin_column', _('Satin stitch along paths'), type='toggle', inverse=True)
+    @param('satin_column', _('Running stitch along paths'), type='toggle', inverse=True)
     def satin_column(self):
         return self.get_boolean_param("satin_column")
 
