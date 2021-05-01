@@ -13,7 +13,7 @@
           <label indent="1" appearance="url">https://inkstitch.org</label>
       </page>
       <page name="license" gui-text="{%trans %}License{% endtrans %}">
-          <param name="license-text" gui-text="" type="string" appearance="multiline">
+          <param name="license-text" gui-text=" " type="string" appearance="multiline">
 {{ inkstitch_license }}
           </param>
       </page>
