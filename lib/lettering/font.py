@@ -107,7 +107,7 @@ class Font(object):
     name = localized_font_metadata('name', '')
     description = localized_font_metadata('description', '')
     letter_case = font_metadata('letter_case', '')
-    default_glyph = font_metadata('defalt_glyph', "�")
+    default_glyph = font_metadata('default_glyph', "�")
     leading = font_metadata('leading', 100)
     kerning_pairs = font_metadata('kerning_pairs', {})
     auto_satin = font_metadata('auto_satin', True)
@@ -235,11 +235,14 @@ class Font(object):
             elif self.letter_case == "lower":
                 character = character.lower()
 
-            if character == " ":
+            glyph = glyph_set[character]
+
+            if character == " " or (glyph is None and self.default_glyph == " "):
                 position.x += self.word_spacing
                 last_character = None
             else:
-                glyph = glyph_set[character] or glyph_set[self.default_glyph]
+                if glyph is None:
+                    glyph = glyph_set[self.default_glyph]
 
                 if glyph is not None:
                     node = self._render_glyph(glyph, position, character, last_character)
