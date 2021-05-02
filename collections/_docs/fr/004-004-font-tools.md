@@ -1,49 +1,48 @@
 ---
-title: "Font Tools"
+title: "Outils de police"
 permalink: /fr/docs/font-tools/
 excerpt: ""
-last_modified_at: 2021-03-06
+last_modified_at: 2021-05-02
 toc: true
 ---
-A collection of tools suitable for font creators or those who want to add additional fonts to the Ink/Stitch [lettering tool](/docs/lettering).
+Un ensemble d'outils adaptés aux créateurs de polices ou à ceux qui souhaitent ajouter des polices supplémentaires dans [l'outil de lettrage](/docs/lettering) d'Ink/Stitch.
 
-Read the [Ink/Stitch font creation tutorial](/fr/tutorials/font-creation) for in-depth instrustions.
+Lisez le [Tutoriel de création de police pour Ink/Stitch](/fr/tutorials/font-creation) pour des instructions approfondies.
 
-## Custom Font Directory
+## Répertoire personnalisé de polices 
 
-This extension allows you to define a directory in your file system where you want to store additional fonts to be used with the lettering tool.
+Cette extension vous permet de définir un répertoire dans votre système de fichiers dans lequel vous souhaitez stocker les polices supplémentaires pour l'outil de lettrage.
 
-Place each font in a subdiretory of your custom font directory. Each font folder should contain at least one font variant and one json file.
-Additionally it is recommended to save a license file as well.
+Placez chaque police dans un sous-répertoire de votre répertoire personnalisé de polices. Chaque dossier de polices doit contenir au moins une variante de police et un fichier json.
+De plus, il est recommandé d'enregistrer également un fichier de licence.
 
-Font variants have to be named with an arrow, indicating the stitch direction it has been created for (`→.svg`, `←.svg`, etc.).
+Les variantes de police doivent être nommées avec une flèche, indiquant la direction de broderie pour laquelle elles ont été créées (`→.svg`, `←.svg`, etc.).
 
-The json file has to include as a minimum requirement the fonts name.
+Le fichier json doit inclure au minimum le nom des polices.
 
-## Generate JSON
+## Générer  le fichier JSON
+Cette extension est destinée à vous aider à créer le fichier json.
+Selon la façon dont vous avez généré votre fichier de police, il peut inclure des informations de crénage supplémentaires dans le fichier json.
+Lire [**comment générer une police svg avec des informations de crénage**](/tutorials/font-creation).
+Si vous avez généré votre fichier svg sans informations de crénage, cette extension peut quand même vous aider à configurer votre fichier json avec des informations de base.
 
-This extension was created to help you to create the json file.
-Depending on the way you generated your font file it can include additional kerning information into the json file.
-Read [**how to generate a svg font with kerning information**](/tutorials/font-creation).
-If you generated your svg file without kerning information this extension can still help you to set up your json file with basic information.
+* **Nom**: le nom de votre police (obligatoire).
+* **Description**: informations supplémentaires sur votre police (telles que des informations de taille, etc.)
+* **Fichier de police** (obligatoire): Si vous avez utilisé FontForge pour générer votre fichier de police svg, Ink/Stitch lira les informations de crénage de votre police pour les inclure dans le fichier json.
+ De plus, le fichier de police sera utilisé pour déterminer le chemin de sortie.
+* **Agencement automatique des colonnes Satin**:
+    * activé: Ink/Stitch générera une organisation raisonnable pour les colonnes de satin de votre police lorsqu'elle est utilisée dans l'outil de lettrage. [Plus d'information sur Agencement automatique des colonnes Satin](/fr/docs/satin-tools/#auto-route-satin-columns)
+    * désactivé: Ink / Stitch utilisera les glyphes tels quels. Désactivez cette option, si vous vous avez créé vous-même l'agencement des colonnes satin dans votre police.
+* **Reversible**: si votre police peut être brodée vers l'avant et vers l'arrière ou seulement vers l'avant
+* **Forcer la casse**:
+  * Non: choisissez cette option si votre police contient des lettres majuscules et minuscules (par défaut).
+  * Upper: Choisissez cette option si votre police ne contient que des majuscules.
+  * Lower: Choisissez cette option si votre police ne contient que des minuscules.
+* **Glyphe par défaut**: le glyphe à afficher si le glyphe demandé par l'utilisateur n'est pas disponible dans le fichier de police (glyphe manquant)
+* **Min Scale / Max Scale**: Définit dans quelle mesure vos glyphes peuvent être agrandis ou diminués sans perdre en qualité une fois brodés
 
-* **Name**: the name of your font (mandatory).
-* **Description**: additional information about your font (such as sizing information, etc)
-* **Font File** (mandatory): When you have been using FontForge to generate your svg font file, Ink/Stitch will read the kerning information from your font to include it into the json file.
- Additionally the font file will be used to determine the output path.
-* **AutoRoute Satin**:
-    * enabled: Ink/Stitch will generate a reasonable routing for satin columns in your font when used in the lettering tool. [More information about AutoRoute Satin](/docs/satin-tools/#auto-route-satin-columns)
-    * disabled: Ink/Stitch will use the glyphs as is. Disable this option, if you took care for the routing in your font by yourself.
-* **Reversible**: wether your font can be stitch forwards and backwards or only forwards
-* **Force letter case**:
-  * No: Choose this option if your font contains upper and lower case letters (default).
-  * Upper: Choose this option if your font only contains upper case letters.
-  * Lower: Choose this option if your font only contains lower case letters.
-* **Default Glyph**: the glyph to be shown if the user requested glyph isn't available in the font file (missing glyph)
-* **Min Scale / Max Scale**: Define how much can your glyphs can be scaled without loosing quality when stitched out
-
-The following fields are optional only necessary, when your svg file doesn't contain kerning information.
-If kerning information cannot be found, these values will be used instead.
+Les champs suivants sont facultatifs, uniquement nécessaires lorsque votre fichier svg ne contient pas d'informations de crénage.
+Si les informations de crénage ne peuvent être trouvées, ces valeurs seront utilisées en remplacement.
 
 * **Force custom values**: Do not use the kerning information from the svg file, but use the given values instead.
 
