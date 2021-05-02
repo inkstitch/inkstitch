@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-04-29 00:58+0000\n"
-"PO-Revision-Date: 2021-05-01 00:59\n"
+"POT-Creation-Date: 2021-05-02 01:01+0000\n"
+"PO-Revision-Date: 2021-05-02 01:03\n"
 "Last-Translator: \n"
 "Language-Team: Vietnamese\n"
 "MIME-Version: 1.0\n"
@@ -22,91 +22,245 @@ msgstr ""
 "X-Crowdin-File-ID: 8\n"
 "Language: vi_VN\n"
 
-#. name of font in fonts/baumans
+#. name of font in fonts/amita
 #: inkstitch-fonts-metadata.py:2
+msgid "Amita"
+msgstr ""
+
+#. description of font in fonts/amita
+#: inkstitch-fonts-metadata.py:4
+#, python-format
+msgid "Amita bold. The capital M is 25.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 160%. Every satin has zigzag underlay"
+msgstr ""
+
+#. name of font in fonts/apex_lake
+#: inkstitch-fonts-metadata.py:6
+msgid "Apex Lake"
+msgstr ""
+
+#. description of font in fonts/apex_lake
+#: inkstitch-fonts-metadata.py:8
+msgid "Police de lettrines 59.4 par 57.8mm. Majuscules, chiffres, ! et ?"
+msgstr ""
+
+#. name of font in fonts/baumans
+#: inkstitch-fonts-metadata.py:10
 msgid "Baumans"
 msgstr ""
 
+#. description of font in fonts/baumans
+#: inkstitch-fonts-metadata.py:12
+#, python-format
+msgid "The capital M is 22.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 150%. Every satin has zigzag underlay"
+msgstr ""
+
 #. name of font in fonts/chopin
-#: inkstitch-fonts-metadata.py:6
+#: inkstitch-fonts-metadata.py:14
 msgid "Chopin Script"
 msgstr ""
 
+#. description of font in fonts/chopin
+#: inkstitch-fonts-metadata.py:16
+#, python-format
+msgid "The capital M is 38.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 120%. Every satin has zigzag underlay"
+msgstr ""
+
+#. name of font in fonts/coronaviral
+#: inkstitch-fonts-metadata.py:18
+msgid "Coronaviral"
+msgstr ""
+
+#. description of font in fonts/coronaviral
+#: inkstitch-fonts-metadata.py:20
+msgid "A font created with manual sitch. Do not change the size or very little. The capital em is 22mm wide at 100%"
+msgstr ""
+
 #. name of font in fonts/dejavufont
-#: inkstitch-fonts-metadata.py:10
-msgid "Dejavu Serif Semi-condensed"
+#: inkstitch-fonts-metadata.py:22
+msgid "Dejavu Serif"
 msgstr ""
 
 #. description of font in fonts/dejavufont
-#: inkstitch-fonts-metadata.py:12
+#: inkstitch-fonts-metadata.py:24
 #, python-format
-msgid "The capital em is 19,8 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 150%.  Every satin has center-walk underlay."
+msgid "DejaVu Serif Condensed. The capital M is 19,8 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 150%.  Every satin has center-walk underlay."
+msgstr ""
+
+#. name of font in fonts/digory_doodles_bean
+#: inkstitch-fonts-metadata.py:26
+msgid "Digory Doodles Bean"
+msgstr ""
+
+#. description of font in fonts/digory_doodles_bean
+#: inkstitch-fonts-metadata.py:28
+msgid "All letteres have mixed satin and bean stitch; The capital M is 16mm tall. The small x is 7 mm"
+msgstr ""
+
+#. name of font in fonts/emilio_20
+#: inkstitch-fonts-metadata.py:30
+msgid "Emilio 20"
+msgstr ""
+
+#. description of font in fonts/emilio_20
+#: inkstitch-fonts-metadata.py:32
+#, python-format
+msgid "Emilio 20 is a font with capital only ans numbers. M is 48.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 140%. Every satin has zigzag underlay"
+msgstr ""
+
+#. name of font in fonts/espresso_dolce
+#: inkstitch-fonts-metadata.py:34
+msgid "Espresso Dolce"
+msgstr ""
+
+#. description of font in fonts/espresso_dolce
+#: inkstitch-fonts-metadata.py:36
+msgid "The capital M is 16.2 mm high at 100 scale. Every satin has zigzag underlay. x is 11.5 mm high, q is 17.5 mm high, l is 17.2 mm high."
 msgstr ""
 
 #. name of font in fonts/geneva_rounded
-#: inkstitch-fonts-metadata.py:14
+#: inkstitch-fonts-metadata.py:38
 msgid "Geneva Simple Sans Rounded"
 msgstr ""
 
 #. description of font in fonts/geneva_rounded
-#: inkstitch-fonts-metadata.py:16
+#: inkstitch-fonts-metadata.py:40
 msgid "Suitable for small fonts (8 to 20 mm)"
 msgstr ""
 
 #. name of font in fonts/geneva_simple
-#: inkstitch-fonts-metadata.py:18
+#: inkstitch-fonts-metadata.py:42
 msgid "Geneva Simple Sans"
 msgstr ""
 
 #. description of font in fonts/geneva_simple
-#: inkstitch-fonts-metadata.py:20
+#: inkstitch-fonts-metadata.py:44
 msgid "Suitable for small fonts (6 to 15mm)"
 msgstr ""
 
+#. name of font in fonts/kaushan_script
+#: inkstitch-fonts-metadata.py:46
+msgid "Kaushan Script"
+msgstr ""
+
+#. description of font in fonts/kaushan_script
+#: inkstitch-fonts-metadata.py:48
+#, python-format
+msgid "The capital M is 29 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 200%.  Every satin has zigzag underlay"
+msgstr ""
+
+#. name of font in fonts/learning_curve
+#: inkstitch-fonts-metadata.py:50
+msgid "Learning curve"
+msgstr ""
+
+#. description of font in fonts/learning_curve
+#: inkstitch-fonts-metadata.py:52
+msgid "Cursive italique en point triple pour des minuscules de 6 à 14mm"
+msgstr ""
+
 #. name of font in fonts/lobster
-#: inkstitch-fonts-metadata.py:22
-msgid "Lobster Two Bold Italic"
+#: inkstitch-fonts-metadata.py:54
+msgid "Lobster Two"
+msgstr ""
+
+#. description of font in fonts/lobster
+#: inkstitch-fonts-metadata.py:56
+#, python-format
+msgid "Lobster Two Bold Italic. The capital M is 19.8 millimeter wide at 100% scale. Can be scaled down to 80% or up to 150%. Every satin has zigzag underlay"
+msgstr ""
+
+#. name of font in fonts/magnolia_ script
+#: inkstitch-fonts-metadata.py:58
+msgid "Magnolia Script"
+msgstr ""
+
+#. description of font in fonts/magnolia_ script
+#: inkstitch-fonts-metadata.py:60
+msgid "The Capital M is a bit less than 2 cm high. It can be scaled down to 80% and up to 120%"
+msgstr ""
+
+#. name of font in fonts/manuskript_gotisch
+#: inkstitch-fonts-metadata.py:62
+msgid "Manuskript Gothisch"
+msgstr ""
+
+#. description of font in fonts/manuskript_gotisch
+#: inkstitch-fonts-metadata.py:64
+#, python-format
+msgid "The capital M is 35 millimeter wide at 100% scale.  Can be scaled down to 70% or up to 140%.  Every satin has zigzag underlay"
 msgstr ""
 
 #. name of font in fonts/medium_font
-#: inkstitch-fonts-metadata.py:26
+#: inkstitch-fonts-metadata.py:66
 msgid "Ink/Stitch Medium Font"
 msgstr ""
 
 #. description of font in fonts/medium_font
-#: inkstitch-fonts-metadata.py:28
+#: inkstitch-fonts-metadata.py:68
 #, python-format
 msgid "A basic font suited for medium-sized characters.  The capital em is 0.6 inches wide at 100% scale.  Can be scaled down to 75% or up to 150%.  Every satin has contour underlay."
 msgstr ""
 
+#. name of font in fonts/romanaugusa
+#: inkstitch-fonts-metadata.py:70
+msgid "Romanaugusa"
+msgstr ""
+
+#. description of font in fonts/romanaugusa
+#: inkstitch-fonts-metadata.py:72
+#, python-format
+msgid "Based on Latin Modern Roman 10 Bold italic. The capital M is 42.5 millimeter wide at 100% scale.  Can be scaled down to 70% or up to 130%.  Every satin has zigzag underlay"
+msgstr ""
+
+#. name of font in fonts/romanaugusa_bicolor
+#: inkstitch-fonts-metadata.py:74
+msgid "Romanaugusa bicolor"
+msgstr ""
+
+#. description of font in fonts/romanaugusa_bicolor
+#: inkstitch-fonts-metadata.py:76
+#, python-format
+msgid "Based on Latin Modern Roman 10 Bold italic. A font with capital letters with 2 colors. Very easy to use with letters from Romanaugusa. The capital M is 42.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 130%. Every satin has zigzag underlay"
+msgstr ""
+
+#. name of font in fonts/sacramarif
+#: inkstitch-fonts-metadata.py:78
+msgid "Sacramarif"
+msgstr ""
+
+#. description of font in fonts/sacramarif
+#: inkstitch-fonts-metadata.py:80
+msgid "Based on Sacramento. Very small font with runstitch. It can be scaled from 80% to 150%"
+msgstr ""
+
 #. name of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:30
+#: inkstitch-fonts-metadata.py:82
 msgid "Ink/Stitch Small Font"
 msgstr ""
 
 #. description of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:32
+#: inkstitch-fonts-metadata.py:84
 #, python-format
 msgid "A font suited for small characters.  The capital em is 0.2 inches wide at 100% scale.  Can be scaled up to 300%."
 msgstr ""
 
 #. name of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:34
+#: inkstitch-fonts-metadata.py:86
 msgid "TT Directors"
 msgstr ""
 
 #. description of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:36
+#: inkstitch-fonts-metadata.py:88
 msgid "A font suited for directing"
 msgstr ""
 
 #. name of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:38
+#: inkstitch-fonts-metadata.py:90
 msgid "TT Masters"
 msgstr ""
 
 #. description of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:40
+#: inkstitch-fonts-metadata.py:92
 msgid "A font suited for heavy typing :)"
 msgstr ""
 
@@ -699,7 +853,7 @@ msgid "Stroke"
 msgstr ""
 
 #: lib/elements/stroke.py:23
-msgid "Satin stitch along paths"
+msgid "Running stitch along paths"
 msgstr ""
 
 #: lib/elements/stroke.py:37
