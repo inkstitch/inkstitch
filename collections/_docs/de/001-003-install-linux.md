@@ -2,7 +2,7 @@
 title: "Installation von Ink/Stitch für Linux"
 permalink: /de/docs/install-linux/
 excerpt: "Wie wird Ink/Stitch installiert."
-last_modified_at: 2020-12-03
+last_modified_at: 2021-05-03
 toc: true
 ---
 ## Video-Anleitung
@@ -11,7 +11,7 @@ Wir stellen Anfänger-Tutorials auf unserem <i class="fab fa-youtube"></i> [YouT
 
 ## Vorraussetzung
 
-* [Inkscape](https://inkscape.org/) Version 0.92.2 oder höher (einschließlich [Inkscape](https://inkscape.org/release/inkscape-1.0/?latest=1) Version 1.0.1)
+* [Inkscape](https://inkscape.org/release/) Version 1.0.2 oder höher
 
 Das ist alles! Alle Python-Bibliotheken und externen Abhängigkeiten werden mitgeliefert (durch den ausgezeichneten [pyinstaller](http://www.pyinstaller.org)), so dass keine weiteren Installationen notwendig sind.
 
@@ -20,7 +20,14 @@ Das ist alles! Alle Python-Bibliotheken und externen Abhängigkeiten werden mitg
 ### Herunterladen
 Lade das passende Archiv für deine Sprache herunter.
 
-<i class="fa fa-download " ></i> [Deutsch]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-de_DE.zip) <i class="fa fa-download " ></i> [Englisch]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-en_US.zip) <i class="fa fa-download " ></i> [Finnisch]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-fi_FI.zip) <i class="fa fa-download " ></i> [Französisch]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-fr_FR.zip) <i class="fa fa-download " ></i> [Italienisch]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-it_IT.zip)
+* <i class="fa fa-download " ></i> [Deutsch]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-de_DE.zip)
+* <i class="fa fa-download " ></i> [Englisch]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-en_US.zip)
+* <i class="fa fa-download " ></i> [Finnisch]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-fi_FI.zip)
+* <i class="fa fa-download " ></i> [Französisch]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-fr_FR.zip)
+* <i class="fa fa-download " ></i> [Italienisch]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-it_IT.zip)
+* <i class="fa fa-download " ></i> [Japanisch]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-ja_JP.zip)
+* <i class="fa fa-download " ></i> [Niederländisch]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-nl_NL.zip)
+* <i class="fa fa-download " ></i> [Russisch]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-ru_RU.zip)
 
 **Aktuelle Version:** {{ site.github.latest_release.published_at | date: "%d.%m.%Y" }} [Ink/Stitch {{ site.github.latest_release.tag_name }})](https://github.com/inkstitch/inkstitch/releases/latest)
 
@@ -35,16 +42,12 @@ Unter `Bearbeiten > Einstellungen > System` (Inkscape 0.9) oder `Inkscape > Eins
 
 ![Ordner für Inkscape Erweiterungen](/assets/images/docs/de/extensions-folder-location-linux.jpg)
 
-Entpacke das Ink/Stitch-Archiv **direkt** in diesen Ordner.
+Entpacke das Ink/Stitch-Archiv in diesen Ordner.
 
  ```
  $ cd ~/.config/inkscape/extensions
  $ unzip ~/Downloads/inkstitch-{{ site.github.latest_release.tag_name }}-linux-de_DE.zip
  ```
-
-Die Dateistruktur sollte ungefähr dem Bild unten entsprechen (aber ein paar mehr Dateien enthalten):
-
-![File Structure](/assets/images/docs/en/file_structure.png)
 
 ### Ink/Stitch öffnen
 Starte Inkscape neu.
@@ -70,8 +73,8 @@ Dann folge erneut der Installationsbeschreibung auf dieser Seite.
 
 **Installationspfad überprüfen**
 
-Überprüfe, ob die Dateien evtl. in einen *Unterordner* extrahiert wurden.
-Es ist wichtig, dass die Ink/Stitch-Dateien **direkt** in dem Ordner "Benutzererweiterungen" sind.
+Überprüfe noch einmal, ob du den richtigen Installationspfad gewählt hast. Sollte Ink/Stitch unter `Benutzererweiterungen` nicht funktionieren, kannst du auch versuchen, es unter `Inkscape Erweiterungen` zu platzieren.
+Der Pfad kann auch unter `Bearbeiten > Einstellungen > System` nachgeschaut werden.
 
 **Ink/Stitch-Version überprüfen**
 

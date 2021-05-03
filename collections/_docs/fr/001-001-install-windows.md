@@ -2,7 +2,7 @@
 title: "Install Ink/Stitch"
 permalink: /fr/docs/install-windows/
 excerpt: "How to quickly install Ink/Stitch."
-last_modified_at: 2020-12-11
+last_modified_at: 2021-05-03
 toc: true
 ---
 ## Guide vidéo
@@ -13,7 +13,7 @@ Nous fournissons aussi aux débutants des tutoriels vidéo sur notre <i class="f
 
 ## Prérequis
 
-* [Inkscape](https://inkscape.org/) Version 0.92.2 ou supérieure
+* [Inkscape](https://inkscape.org/releases) Version 1.0.2 ou supérieure
 
 C'est tout! Toutes les librairies python et dépendances externes sont incluses (en utilisant l'excellent [pyinstaller](http://www.pyinstaller.org)), de sorte que vous ne devriez pas avoir quoi que ce soit d'autre à installer.
 
@@ -22,7 +22,14 @@ C'est tout! Toutes les librairies python et dépendances externes sont incluses 
 ### Télécharger
 Télécharger, en tenant compte de votre plateforme.
 
-<i class="fa fa-download " ></i> [Français]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-fr_FR.zip) <i class="fa fa-download " ></i> [Allemand]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-de_DE.zip) <i class="fa fa-download " ></i> [Anglais]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-en_US.zip) <i class="fa fa-download " ></i> [Finnois]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-fi_FI.zip) <i class="fa fa-download " ></i> [Italien]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-it_IT.zip)
+* <i class="fa fa-download " ></i> [Français]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-fr_FR.zip)
+* <i class="fa fa-download " ></i> [Allemand]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-de_DE.zip)
+* <i class="fa fa-download " ></i> [Anglais]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-en_US.zip)
+* <i class="fa fa-download " ></i> [Finnois]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-fi_FI.zip)
+* <i class="fa fa-download " ></i> [Italien]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-it_IT.zip)
+* <i class="fa fa-download " ></i> [Néerlandaise]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-nl_NL.zip)
+* <i class="fa fa-download " ></i> [Japanese]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-ja_JP.zip)
+* <i class="fa fa-download " ></i> [Russe]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-ru_RU.zip)
 {: .inline-table }
 
 **Dernière version:** [Ink/Stitch {{ site.github.latest_release.tag_name }} ({{ site.github.latest_release.published_at | date: "%Y-%m-%d" }})](https://github.com/inkstitch/inkstitch/releases/latest)
@@ -36,10 +43,7 @@ Dans Inkscape, allez à  `Edition > Préferences > Systeme` et cherchez dans ce 
 
 ![Extensions folder](/assets/images/docs/fr/extensions-folder-location-windows.jpg)
 
-Décompressez l'archive Ink/Stitch **directement** dans ce dossier.
-
-Ce dossier doit présenter une structure semblable à l'exemple ci-dessous (avec juste un tas de fichiers en plus):
-![File Structure](/assets/images/docs/en/file_structure.png)
+Décompressez l'archive Ink/Stitch dans ce dossier.
 
 ### Exécuter Ink/Stitch
 
@@ -62,8 +66,8 @@ Si vous avez des signes diacritiques dans votre nom d'utilisateur, essayez le ch
 ### Ink/Stitch ne fonctionne pas!
 
 *   **Confirmer le chemin d'installation**<br>
-    Vérifier si des fichiers ont éventuellement été extraits dans un *sous-dossier*.
-   Vous devriez voir beaucoup de fichiers commençant par "inkstitch" **directement** dans le dossier d'extensions, à côté d'un dossier appelé "inkstitch".
+    Check if you extracted Ink/Stitch into the correct folder. If the `User extensions folder` doesn't work out correctly, you can also try to install into the `Inkscape extensions folder`.
+    You can also look it up under `Edit > Preferences > System`.
 
 *   **Windows Anti-Virus**<br>
     Ceci est plus susceptible de se produire sous Windows, car python est condensé dans un exécutable,

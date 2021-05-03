@@ -2,7 +2,7 @@
 title: "Install Ink/Stitch"
 permalink: /fr/docs/install-linux/
 excerpt: "How to quickly install Ink/Stitch."
-last_modified_at: 2020-12-11
+last_modified_at: 2021-05-03
 toc: true
 ---
 ## Guide vidéo
@@ -22,7 +22,14 @@ C'est tout! Toutes les librairies python et dépendances externes sont incluses 
 ### Télécharger
 Télécharger, en tenant compte de votre plateforme.
 
-<i class="fa fa-download " ></i> [Français]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-fr_FR.zip) <i class="fa fa-download " ></i> [Allemand]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-de_DE.zip) <i class="fa fa-download " ></i> [Anglais]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-en_US.zip) <i class="fa fa-download " ></i> [Finnois]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-fi_FI.zip) <i class="fa fa-download " ></i> [Italien]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-it_IT.zip)
+* <i class="fa fa-download " ></i> [Français]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-fr_FR.zip)
+* <i class="fa fa-download " ></i> [Allemand]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-de_DE.zip)
+* <i class="fa fa-download " ></i> [Anglais]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-en_US.zip)
+* <i class="fa fa-download " ></i> [Finnois]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-fi_FI.zip)
+* <i class="fa fa-download " ></i> [Italien]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-it_IT.zip)
+* <i class="fa fa-download " ></i> [Dutch]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-nl_NL.zip)
+* <i class="fa fa-download " ></i> [Japanois]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-ja_JP.zip)
+* <i class="fa fa-download " ></i> [Russe]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-ru_RU.zip)
 
 **Dernière version:** [Ink/Stitch {{ site.github.latest_release.tag_name }} ({{ site.github.latest_release.published_at | date: "%Y-%m-%d" }})](https://github.com/inkstitch/inkstitch/releases/latest)
 
@@ -34,15 +41,12 @@ Dans Inkscape, allez à  `Edition > Préferences > Systeme` et cherchez dans ce 
 
 ![Extensions folder](/assets/images/docs/fr/extensions-folder-location-linux.jpg)
 
-Décompressez l'archive Ink/Stitch **directement** dans ce dossier.
+Décompressez l'archive Ink/Stitch dans ce dossier.
  
 ```
 $ cd ~/.config/inkscape/extensions
 $ unzip ~/Downloads/inkstitch-{{ site.github.latest_release.tag_name }}-linux-fr_FR.zip
 ```
-
-Ce dossier doit présenter une structure semblable à l'exemple ci-dessous (avec juste un tas de fichiers en plus):
-![File Structure](/assets/images/docs/en/file_structure.png)
 
 ### Exécuter Ink/Stitch
 
@@ -66,8 +70,8 @@ Si vous avez des signes diacritiques dans votre nom d'utilisateur, essayez le ch
 
 **Confirmer le chemin d'installation**<br>
 
-Vérifier si des fichiers ont éventuellement été extraits dans un *sous-dossier*.
-Vous devriez voir beaucoup de fichiers commençant par "inkstitch" **directement** dans le dossier d'extensions, à côté d'un dossier appelé "inkstitch".
+Check if you extracted Ink/Stitch into the correct folder. If the `User extensions folder` doesn't work out correctly, you can also try to install into the `Inkscape extensions folder`.
+You can also look it up under `Edit > Preferences > System`.
 
 **Confirm Ink/Stitch Version**
 

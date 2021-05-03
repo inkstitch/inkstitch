@@ -67,7 +67,13 @@ After checking the font license carefully, start to determine the size of the fo
  
   5. Open the generated file in Inkscape. It is empty!
 
-     Run `Extensions > Typhographie > Convert SVG font to Glyph layers...`
+  6. Run `Extensions > Typographie > Setup Typography Canvas...`
+
+     ![Setup Typography Canvas](/assets/images/fonts/augusa_tutorial/en_typography_canvas.png)
+     
+     Set at least the Em-Size correctly.
+
+  7. Run `Extensions > Typhographie > Convert SVG font to Glyph layers...`
 
      ![Convert](/assets/images/fonts/augusa_tutorial/en_convert.png)
 
@@ -75,11 +81,11 @@ After checking the font license carefully, start to determine the size of the fo
 
      ![Convert Dialog](/assets/images/fonts/augusa_tutorial/en_convert_dialog.png)
 
-  6. The basic file is done. Now it will be necessary to open `File > Document properties`. In Scale click on `+` and `-` once. This will create a `viewbox` tag in the document which is missing otherwise and the baseline will not be properly regognized by Ink/Stitch.
+  8. The basic file is done. Now it will be necessary to open `File > Document properties`. In Scale click on `+` and `-` once. This will create a `viewbox` tag in the document which is missing otherwise and the baseline will not be properly regognized by Ink/Stitch.
   
-  7. Define font lines. Place the lines while unhiding suitable letters.
+  9. Define font lines. Place the lines while unhiding suitable letters.
      * Descender will be at the lowest point of your glyphs. In most cases the **p** can be used to define it.
-     * The baseline (writing line) will be the online one by now which is used by Ink/Stitch to position the glyphs and must be set properly (use e.g. **M**).
+     * The baseline (writing line) will be the only line which is used by Ink/Stitch to position the glyphs and must be set properly (use e.g. **M**).
      * Caps will define the height of the upper case letters (e.g. **M**).
      * xheight the height of lower case letters (e.g. the top of **x**)
      * Ascender defines the highest point of your glyphs in most fonts it can be set with help of the **l**)
@@ -95,13 +101,13 @@ Keep the original file. Just in case there will be problems with the font at a l
 
 We will now beginn to prepare a glyph to be embroiderable.
 
-Satin columns are best for letters. Create them without having the order in mind.
+[Satin columns](/docs/stitches/satin-column/) are best for letters. Create them without having the order in mind.
 
 Before you order them correctly save a copy of the file and name it `→.svg`.
 In this copy define the glyph order so that it can be stitched from left to right:
 each glyph should have its starting point in the lower left corner and end in the lower right corner.
 
-Ink/Stitch comes with a tool "Auto-Route Satin". Use it to order your satin columns. If it runs on all letters without any issue, you don't have to do anythin more. Use your basefile and allow Ink/Stitch to automatically run the Auto-Route Satin tool when inserting the letters into the document.
+Ink/Stitch comes with a tool named "[Auto-Route Satin](/docs/satin-tools/#auto-route-satin-columns)". Use it to order your satin columns. If all letters run without any issue, you don't have to do anything more. Use your basefile and allow Ink/Stitch to automatically run the Auto-Route Satin tool when inserting the letters into the document.
 
 Otherwise inspect every letter carefully and create separate files for each stitch direction with manual routing.
 

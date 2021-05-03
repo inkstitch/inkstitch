@@ -1,5 +1,5 @@
 ---
-title: "Install Add-Ons for Inkscape"
+title: "Garnfarben-Verwaltung"
 permalink: /de/docs/thread-color/
 excerpt: ""
 last_modified_at: 2021-04-11

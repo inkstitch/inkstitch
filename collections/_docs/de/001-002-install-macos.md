@@ -2,7 +2,7 @@
 title: "Installation von Ink/Stitch für macOS"
 permalink: /de/docs/install-macos/
 excerpt: "Wie wird Ink/Stitch installiert."
-last_modified_at: 2020-12-03
+last_modified_at: 2021-05-03
 toc: true
 ---
 ## Video-Anleitung
@@ -25,16 +25,17 @@ Das ist alles! Alle Python-Bibliotheken und externen Abhängigkeiten werden mitg
 ### Herunterladen
 Lade das passende Archiv für deine Sprache herunter.
 
-Sprache|macOS Catalina / Big Sur | Sierra* | High Sierra* | Mojave*
+Sprache| Catalina & Big Sur | High Sierra & Mojave | Sierra & El Capitan
 ---|---|---|---
-**English**|<i class="fa fa-download " ></i> [Catalina / Big Sur]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-en_US.zip)|<i class="fa fa-download " ></i> [Sierra]({{ site.github.releases_url }}/download/v1.26.2/inkstitch-v1.26.2-osx-sierra-x86_64-en_US.tar.gz)|<i class="fa fa-download " ></i> [High Sierra]({{ site.github.releases_url }}/download/v1.26.2/inkstitch-v1.26.2-osx-high_sierra-x86_64-en_US.tar.gz)|<i class="fa fa-download " ></i> [Mojave]({{ site.github.releases_url }}/download/v1.26.2/inkstitch-v1.26.2-osx-mojave-x86_64-en_US.tar.gz)|
-**Finnish**|<i class="fa fa-download " ></i> [Catalina / Big Sur]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-fi_FI.zip)|
-**French**|<i class="fa fa-download " ></i> [Catalina / Big Sur]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-fr_FR.zip)|<i class="fa fa-download " ></i> [Sierra]({{ site.github.releases_url }}/download/v1.26.2/inkstitch-v1.26.2-osx-sierra-x86_64-fr_FR.tar.gz)|<i class="fa fa-download " ></i> [High Sierra]({{ site.github.releases_url }}/download/v1.26.2/inkstitch-v1.26.2-osx-high_sierra-x86_64-fr_FR.tar.gz)|<i class="fa fa-download " ></i> [Mojave]({{ site.github.releases_url }}/download/v1.26.2/inkstitch-v1.26.2-osx-mojave-x86_64-fr_FR.tar.gz)|
-**German**|<i class="fa fa-download " ></i> [Catalina / Big Sur]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-de_DE.zip)|<i class="fa fa-download " ></i> [Sierra]({{ site.github.releases_url }}/download/v1.26.2/inkstitch-v1.26.2-osx-sierra-x86_64-de_DE.tar.gz)|<i class="fa fa-download " ></i> [High Sierra]({{ site.github.releases_url }}/download/v1.26.2/inkstitch-v1.26.2-osx-high_sierra-x86_64-de_DE.tar.gz)|<i class="fa fa-download " ></i> [Mojave]({{ site.github.releases_url }}/download/v1.26.2/inkstitch-v1.26.2-osx-mojave-x86_64-de_DE.tar.gz)|
-**Italian**|<i class="fa fa-download " ></i> [Catalina / Big Sur]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-it_IT.zip)|
+**Deutsch** | <i class="fa fa-download " ></i> [Catalina / Big Sur]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-de_DE.zip) | <i class="fa fa-download " ></i> [High Sierra / Mojave]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-mojave-de_DE.tar.gz)|<i class="fa fa-download " ></i> [Sierra / El Capitan]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-sierra-de_DE.tar.gz)
+**Englisch** | <i class="fa fa-download " ></i> [Catalina / Big Sur]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-en_US.zip) | <i class="fa fa-download " ></i> [High Sierra / Mojave]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-mojave-en_US.tar.gz)|<i class="fa fa-download " ></i> [Sierra / El Capitan]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-sierra-en_US.tar.gz)
+**Finnisch** | <i class="fa fa-download " ></i> [Catalina / Big Sur]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-fi_FI.zip) | <i class="fa fa-download " ></i> [High Sierra / Mojave]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-mojave-fi_FI.tar.gz)|<i class="fa fa-download " ></i> [Sierra / El Capitan]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-sierra-fi_FI.tar.gz)
+**Französisch** | <i class="fa fa-download " ></i> [Catalina / Big Sur]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-fr_FR.zip) | <i class="fa fa-download " ></i> [High Sierra / Mojave]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-mojave-fr_FR.tar.gz)|<i class="fa fa-download " ></i> [Sierra / El Capitan]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-sierra-fr_FR.tar.gz)
+**Italienisch** | <i class="fa fa-download " ></i> [Catalina / Big Sur]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-it_IT.zip) | <i class="fa fa-download " ></i> [High Sierra / Mojave]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-mojave-it_IT.tar.gz)|<i class="fa fa-download " ></i> [Sierra / El Capitan]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-sierra-it_IT.tar.gz)
+**Japanisch** | <i class="fa fa-download " ></i> [Catalina / Big Sur]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-ja_JP.zip) | <i class="fa fa-download " ></i> [High Sierra / Mojave]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-mojave-ja_JP.tar.gz)|<i class="fa fa-download " ></i> [Sierra / El Capitan]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-sierra-ja_JP.tar.gz)
+**Niederländisch** | <i class="fa fa-download " ></i> [Catalina / Big Sur]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-nl_NL.zip) | <i class="fa fa-download " ></i> [High Sierra / Mojave]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-mojave-nl_NL.tar.gz)|<i class="fa fa-download " ></i> [Sierra / El Capitan]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-sierra-nl_NL.tar.gz)
+**Russisch** | <i class="fa fa-download " ></i> [Catalina / Big Sur]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-ru_RU.zip) | <i class="fa fa-download " ></i> [High Sierra / Mojave]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-mojave-ru_RU.tar.gz)|<i class="fa fa-download " ></i> [Sierra / El Capitan]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-sierra-ru_RU.tar.gz)
 {: .inline-table }
-
-\* Es gibt keine aktuelle Ink/Stitch Version für Sierra, High Sierra or Mojave. Die hier angebotenen Dateien stammen aus der Ink/Stitch Version v1.26.2 (20.08.2019).
 
 **Aktuelle Version:** {{ site.github.latest_release.published_at | date: "%d.%m.%Y"  }} [Ink/Stitch {{ site.github.latest_release.tag_name }}](https://github.com/inkstitch/inkstitch/releases/latest)
 
@@ -44,13 +45,11 @@ Die ausgewählte Sprache bezieht sich nur auf die Menüs von Inkscape. Ink/Stitc
 ### Dateien entpacken
 Öffne Inkscape.
 
-Unter `Bearbeiten > Einstellungen > System` (Inkscape 0.9) oder `Inkscape > Einstellungen > System > Benutzererweiterungen` (Inkscape 1.0) kannst du einsehen, wo sich der Installationsordner befindet.
+Unter `Bearbeiten > Einstellungen > System > Benutzererweiterungen` kannst du einsehen, wo sich der Installationsordner befindet.
 
 ![](/assets/images/docs/de/extensions-folder-location-macos.jpg)
 
-Entpacke das Ink/Stitch-Archiv **direkt** in diesen Ordner. Die Dateistruktur sollte ungefähr dem Bild unten entsprechen (aber ein paar mehr Dateien enthalten):
-
-![File Structure](/assets/images/docs/en/file_structure.png)
+Entpacke das Ink/Stitch-Archiv in diesen Ordner.
 
 ### Zusätzliche Schritte für Catalina / Big Sur
 
@@ -65,14 +64,6 @@ xattr -r -d com.apple.quarantine ~/Library/Application\ Support/org.inkscape.Ink
 ```
 
 Falls dein Installationspfad für Erweiterungen vom Standard abweicht, ersetzte `~/Library/Application\ Support/org.inkscape.Inkscape/config/inkscape/extensions/` durch den Pfad der in Inkscape unter `Inkscape > Preferences > System` eingetragen ist).
-
-Nutzer von **Big Sur** müssen noch weitere Befehle eingeben um die Installation abzuschließen:
-
-```
-cd ~/Library/Application\ Support/org.inkscape.Inkscape/config/inkscape/extensions/
-cd inkstitch/bin
-ln -s libpython2.7.dylib libc.dylib
-```
 
 ### Ink/Stitch öffnen
 Starte Inkscape neu.
@@ -98,8 +89,8 @@ Dann folge erneut der Installationsbeschreibung auf dieser Seite.
 
 **Installationspfad überprüfen**
 
-Überprüfe, ob die Dateien evtl. in einen *Unterordner* extrahiert wurden.
-Es ist wichtig, dass die Ink/Stitch-Dateien **direkt** in dem Ordner "Benutzererweiterungen" sind.
+Überprüfe noch einmal, ob du den richtigen Installationspfad gewählt hast. Sollte Ink/Stitch unter `Benutzererweiterungen` nicht funktionieren, kannst du auch versuchen, es unter `Inkscape Erweiterungen` zu platzieren.
+Der Pfad kann auch unter `Bearbeiten > Einstellungen > System` nachgeschaut werden.
 
 **Ink/Stitch-Version überprüfen**
 
@@ -116,9 +107,19 @@ In der Installationsbeschreibung haben wir unter ["Zusätzliche Installationssch
 
 ### ValueError: Null geometry supports no operations
 
-Ink/Stitch mit macOS (Catalina) kann folgende Fehlermeldung hervorrufen:  `[...] ValueError: Null geometry supports no operations`.
+Ink/Stitch mit macOS kann folgende Fehlermeldung hervorrufen:  `[...] ValueError: Null geometry supports no operations`.
 
-Es wurde uns berichtet, dass die Entfernung der Datei `inkstitch/bin/shapely.speedups._speedups.so` das Problem erfolgreich beseitigt hat.
+Diese Fehlermeldung entsteht durch eine Inkompatibilität mit der speedups-Bibliothek von shapely, die mit Ink/Stitch mitgeliefert wird.
+Um Ink/Stitch wieder nutzen zu können, muss die Bibliothek aus der Ink/Stitch Installation entfernt werden.
+
+* Öffne den Ordner, in dem du Ink/Stitch installiert hast (meisten ist das: `~/Library/Application\ Support/org.inkscape.Inkscape/config/inkscape/extensions/`)
+* Öffne auch den Ink/Stitch Unterordner, sofern du einen angelegt hast
+* Halte die `Strg`-Taste gedrücl während du auf die Ink/Stitch Applikations-Datei klickst und wähle `Show Package Contents`
+
+  ![Show Package Contents](/assets/images/docs/en/macOS-nogeometry.png)
+
+* Öffne anschließend die Ordner `Contents > MacOS`, dort befindet sich der Ordner `shapely`.
+  Der shapely-Ordner kann komplett gelöscht werden.
 
 ### Ich habe Ink/Stitch in meiner Muttersprache installiert, aber die Dialog-Fenster sind englisch
 

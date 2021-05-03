@@ -79,7 +79,13 @@ Die Glyphenebenendatei aus der heruntergeladenen Schriftartdatei erstellen
      Fontforge erstellt nun die gewünschte SVG-Datei.
   5. Öffne die SVG-Datei mit Inkscape. Sie ist leer!
 
-     Über `Erweiterungen > Typhografie > Konvertiere SVG-Schrift zu Glyph-Ebenen...` lassen sich die gewünschten Glyphenebenen erstellen
+  6. Erstelle die Canvas-Oberfläche entsprechend deiner Schrift über `Erweiterungen > Typographie > Arbeitsfläche für Typographie einrichten ...`
+
+    ![Typographie Canvas](/assets/images/fonts/augusa_tutorial/de_typography_canvas.png)
+
+    Setze mindestens den Em-Wert auf die richtige Größe
+
+  7. Über `Erweiterungen > Typhografie > Konvertiere SVG-Schrift zu Glyph-Ebenen...` lassen sich die gewünschten Glyphenebenen erstellen
 
      ![Convert](/assets/images/fonts/augusa_tutorial/de_convert.png)
 
@@ -87,8 +93,8 @@ Die Glyphenebenendatei aus der heruntergeladenen Schriftartdatei erstellen
 
      ![Convert Dialog](/assets/images/fonts/augusa_tutorial/de_convert_dialog.png)
 
-  6. Die Basisdatei ist fertig. Es ist nun notwendig, die Abmessungen der Seite in den `Datei > Dokumenteinstellungen` zu ändern. Klicken Sie unter Skalieren x einmal auf + und dann auf -. Ansonsten fehlt die viewbox im Dokument. Das kann zu Problemen mit der baseline führen.
-  7. Schriftlinien definieren
+  8. Die Basisdatei ist fertig. Es ist nun notwendig, die Abmessungen der Seite in den `Datei > Dokumenteinstellungen` zu ändern. Klicken Sie unter Skalieren x einmal auf + und dann auf -. Ansonsten fehlt die viewbox im Dokument. Das kann zu Problemen mit der baseline führen.
+  9. Schriftlinien definieren
 
      Majuskelhöhe (descender) ist die niedrigste Linie, die Ihre Glyphen erreichen können (oft die unterste Linie des **p**
 
@@ -112,11 +118,11 @@ Es macht Sinn die Ursprungsdatei zu behalten. Nur für den Fall, dass es später
 
 Wir beginnen mit einem Buchstaben der jetzt zum Sticken vorbereitet werden muss.
 
-Für Buchstaben eignen sich besonders Satinkolumnen. Diese erstellen wir zunächst die Stickriehenfolge zu beachten.
+Für Buchstaben eignen sich besonders [Satinkolumnen](/de/docs/stitches/satin-column/). Diese erstellen wir zunächst ohne die Stickriehenfolge zu beachten.
 
 Für die Stickreihenfolge erstellen wir eine Kopie der Schriftdatei mit dem Namen `→.svg`. Dort legen wir die Reihenfolge für von links nach rechts zu stickenden Schriftzügen fest. In dieser Datei sollte jede Glyphe unten links beginnen und unten rechts enden.
 
-Für die Stickreihenfolge können wir die Erweiterung "Automatisch geführte Satinkolumne" nutzen. Sollte sie bei allen Buchstaben problemlos funktionieren, können wir die digitalisierten Buchstaben so für jede Richtung nutzen, da das Lettering-Tool von Ink/Stitch diese Funktion auch automatisch durchführen kann.
+Für die Stickreihenfolge können wir die Erweiterung "[Automatisch geführte Satinkolumne](/de/docs/satin-tools/#automatische-satinkolumnenführung)" nutzen. Sollte sie bei allen Buchstaben problemlos funktionieren, können wir die digitalisierten Buchstaben so für jede Richtung nutzen, da das Lettering-Tool von Ink/Stitch diese Funktion auch automatisch durchführen kann.
 
 Ansonsten sollten alle Buchstaben ordentlich geprüft werden und bei Bedarf eine separate Datei für jede Stickrichtung mit manueller Führung entstehen.
 

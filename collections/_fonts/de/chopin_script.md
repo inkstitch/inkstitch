@@ -1,5 +1,5 @@
 ---
-title: "Deja Vue"
+title: "Chopin Script"
 permalink: /de/fonts/chopin/
 last_modified_at: 2020-12-31
 toc: false

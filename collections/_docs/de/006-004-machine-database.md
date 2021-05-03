@@ -1,6 +1,6 @@
 ---
 title: "Machine Database"
-permalink: /docs/machine-database/
+permalink: /de/docs/machine-database/
 excerpt: ""
 last_modified_at: 2020-04-12
 classes: wide

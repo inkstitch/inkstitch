@@ -1,6 +1,6 @@
 ---
 title: Transcript - 04 Stitch Types - Beginner Tutorial Series
-permalink: /tutorials/resources/beginner-video-tutorials/04-stitch-types-transcript
+permalink: /de/tutorials/resources/beginner-video-tutorials/04-stitch-types-transcript
 last_modified_at: 2019-03-11
 language: de
 image: "/assets/images/tutorials/video-preview-images/beginner-tutorial-series.png"
