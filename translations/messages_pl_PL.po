@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-05-02 01:01+0000\n"
-"PO-Revision-Date: 2021-05-02 01:03\n"
+"PO-Revision-Date: 2021-05-03 00:58\n"
 "Last-Translator: \n"
 "Language-Team: Polish\n"
 "MIME-Version: 1.0\n"
@@ -352,7 +352,7 @@ msgstr ""
 
 #: lib/commands.py:295 lib/commands.py:406 lib/extensions/layer_commands.py:34
 msgid "Ink/Stitch Command"
-msgstr ""
+msgstr "Komenda Ink/Stitch"
 
 #. : the name of the line that connects a command to the object it applies to
 #: lib/commands.py:320
@@ -406,7 +406,7 @@ msgstr ""
 
 #: lib/elements/auto_fill.py:72
 msgid "Underlay"
-msgstr ""
+msgstr "Podszycie"
 
 #: lib/elements/auto_fill.py:72 lib/elements/auto_fill.py:81
 #: lib/elements/auto_fill.py:103 lib/elements/auto_fill.py:114
@@ -417,7 +417,7 @@ msgstr ""
 
 #: lib/elements/auto_fill.py:78
 msgid "Fill angle"
-msgstr ""
+msgstr "Kąt wypełnienia"
 
 #: lib/elements/auto_fill.py:79
 msgid "Default: fill angle + 90 deg. Insert comma-seperated list for multiple layers."
@@ -433,7 +433,7 @@ msgstr ""
 
 #: lib/elements/auto_fill.py:111
 msgid "Max stitch length"
-msgstr ""
+msgstr "Maks. długość ściegu"
 
 #: lib/elements/auto_fill.py:112
 msgid "default: equal to fill max stitch length"
