@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-05-02 01:01+0000\n"
-"PO-Revision-Date: 2021-05-03 00:58\n"
+"PO-Revision-Date: 2021-05-03 05:29\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -25,23 +25,23 @@ msgstr ""
 #. name of font in fonts/amita
 #: inkstitch-fonts-metadata.py:2
 msgid "Amita"
-msgstr ""
+msgstr "Amita"
 
 #. description of font in fonts/amita
 #: inkstitch-fonts-metadata.py:4
 #, python-format
 msgid "Amita bold. The capital M is 25.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 160%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "La majuscule M a une largeur de 25.3 millimètres à l'échelle 100 %. Peut être réduit à 80 % ou augmenté à 160 %. Chaque satin a une sous-couche zigzag"
 
 #. name of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:6
 msgid "Apex Lake"
-msgstr ""
+msgstr "Apex Lake"
 
 #. description of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:8
 msgid "Police de lettrines 59.4 par 57.8mm. Majuscules, chiffres, ! et ?"
-msgstr ""
+msgstr "Police de lettrines 59.4 par 57.8mm. Majuscules, chiffres, ! et ?"
 
 #. name of font in fonts/baumans
 #: inkstitch-fonts-metadata.py:10
@@ -52,7 +52,7 @@ msgstr "Baumans"
 #: inkstitch-fonts-metadata.py:12
 #, python-format
 msgid "The capital M is 22.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 150%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "La majuscule M a une largeur de 22.3 millimètres à l'échelle 100 %. Peut être réduit à 80 % ou augmenté à 150 %. Chaque satin a une sous-couche centrale"
 
 #. name of font in fonts/chopin
 #: inkstitch-fonts-metadata.py:14
@@ -63,59 +63,59 @@ msgstr "Chopin Script"
 #: inkstitch-fonts-metadata.py:16
 #, python-format
 msgid "The capital M is 38.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 120%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "La majuscule M a une largeur de 38.3 millimètres à l'échelle 100 %. Peut être réduit à 80 % ou augmenté à 120 %. Chaque satin a une sous-couche centrale"
 
 #. name of font in fonts/coronaviral
 #: inkstitch-fonts-metadata.py:18
 msgid "Coronaviral"
-msgstr ""
+msgstr "Coronaviral"
 
 #. description of font in fonts/coronaviral
 #: inkstitch-fonts-metadata.py:20
 msgid "A font created with manual sitch. Do not change the size or very little. The capital em is 22mm wide at 100%"
-msgstr ""
+msgstr "Cette police est créée au point manuel. Ne pas modifier sa taille ou alors très peu. La majuscule M a 22mm de large à 100%"
 
 #. name of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:22
 msgid "Dejavu Serif"
-msgstr ""
+msgstr "DejaVu Serif"
 
 #. description of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:24
 #, python-format
 msgid "DejaVu Serif Condensed. The capital M is 19,8 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 150%.  Every satin has center-walk underlay."
-msgstr ""
+msgstr "DejeVu Serif Condensé. La majuscule M a une largeur de 19,8 millimètres à l'échelle 100 %. Peut être réduit à 80 % ou augmenté à 150 %. Chaque satin a une sous-couche centrale."
 
 #. name of font in fonts/digory_doodles_bean
 #: inkstitch-fonts-metadata.py:26
 msgid "Digory Doodles Bean"
-msgstr ""
+msgstr "Digory Doodles Bean"
 
 #. description of font in fonts/digory_doodles_bean
 #: inkstitch-fonts-metadata.py:28
 msgid "All letteres have mixed satin and bean stitch; The capital M is 16mm tall. The small x is 7 mm"
-msgstr ""
+msgstr "Toutes les lettres ont du point satin et du point triple; la majuscule M a 16mm de hauteur. La minuscule x a 7mm"
 
 #. name of font in fonts/emilio_20
 #: inkstitch-fonts-metadata.py:30
 msgid "Emilio 20"
-msgstr ""
+msgstr "Emilio 20"
 
 #. description of font in fonts/emilio_20
 #: inkstitch-fonts-metadata.py:32
 #, python-format
 msgid "Emilio 20 is a font with capital only ans numbers. M is 48.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 140%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "La majuscule M a une largeur de 48.5 millimètres à l'échelle 100 %. Peut être réduit à 70 % ou augmenté à 140 %. Chaque satin a une sous-couche zigzag"
 
 #. name of font in fonts/espresso_dolce
 #: inkstitch-fonts-metadata.py:34
 msgid "Espresso Dolce"
-msgstr ""
+msgstr "Espresso Dolce"
 
 #. description of font in fonts/espresso_dolce
 #: inkstitch-fonts-metadata.py:36
 msgid "The capital M is 16.2 mm high at 100 scale. Every satin has zigzag underlay. x is 11.5 mm high, q is 17.5 mm high, l is 17.2 mm high."
-msgstr ""
+msgstr "La majuscule M a une hauteur de 16.2 millimètres à l'échelle 100 %. Peut être réduit à 70 % ou augmenté à 140 %. Chaque satin a une sous-couche zigzag. x a 11.5mm de haut, l a 17.2mm de haut"
 
 #. name of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:38
@@ -140,55 +140,55 @@ msgstr "Convient aux petites polices (6 à 15 mm)"
 #. name of font in fonts/kaushan_script
 #: inkstitch-fonts-metadata.py:46
 msgid "Kaushan Script"
-msgstr ""
+msgstr "Kaushan Script"
 
 #. description of font in fonts/kaushan_script
 #: inkstitch-fonts-metadata.py:48
 #, python-format
 msgid "The capital M is 29 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 200%.  Every satin has zigzag underlay"
-msgstr ""
+msgstr "La majuscule M a une largeur de 29 millimètres à l'échelle 100 %. Peut être réduit à 80 % ou augmenté à 200 %. Chaque satin a une sous-couche zigzag"
 
 #. name of font in fonts/learning_curve
 #: inkstitch-fonts-metadata.py:50
 msgid "Learning curve"
-msgstr ""
+msgstr "Learning curve"
 
 #. description of font in fonts/learning_curve
 #: inkstitch-fonts-metadata.py:52
 msgid "Cursive italique en point triple pour des minuscules de 6 à 14mm"
-msgstr ""
+msgstr "Cursive italique en point triple pour des minuscules de 6 à 14mm"
 
 #. name of font in fonts/lobster
 #: inkstitch-fonts-metadata.py:54
 msgid "Lobster Two"
-msgstr ""
+msgstr "Lobster Two"
 
 #. description of font in fonts/lobster
 #: inkstitch-fonts-metadata.py:56
 #, python-format
 msgid "Lobster Two Bold Italic. The capital M is 19.8 millimeter wide at 100% scale. Can be scaled down to 80% or up to 150%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Lobster Two Bold Italic. La majuscule M a une largeur de 19.8 millimètres à l'échelle 100 %. Peut être réduit à 80 % ou augmenté à 150 %. Chaque satin a une sous-couche zigzag"
 
 #. name of font in fonts/magnolia_ script
 #: inkstitch-fonts-metadata.py:58
 msgid "Magnolia Script"
-msgstr ""
+msgstr "Magnolia Script"
 
 #. description of font in fonts/magnolia_ script
 #: inkstitch-fonts-metadata.py:60
 msgid "The Capital M is a bit less than 2 cm high. It can be scaled down to 80% and up to 120%"
-msgstr ""
+msgstr "La majuscule M a un peu moins de 2cm de haut à l'échelle 100%. Peut être diminué jusqu'à 80% et augmenté à 120%"
 
 #. name of font in fonts/manuskript_gotisch
 #: inkstitch-fonts-metadata.py:62
 msgid "Manuskript Gothisch"
-msgstr ""
+msgstr "Manuskript Gothisch"
 
 #. description of font in fonts/manuskript_gotisch
 #: inkstitch-fonts-metadata.py:64
 #, python-format
 msgid "The capital M is 35 millimeter wide at 100% scale.  Can be scaled down to 70% or up to 140%.  Every satin has zigzag underlay"
-msgstr ""
+msgstr "La majuscule M a une largeur de 35 millimètres à l'échelle 100 %. Peut être réduit à 70 % ou augmenté à 140 %. Chaque satin a une sous-couche zigzag"
 
 #. name of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:66
@@ -204,34 +204,34 @@ msgstr "Une fonte idéale pour des caractères de taille moyenne. La lettre \"M\
 #. name of font in fonts/romanaugusa
 #: inkstitch-fonts-metadata.py:70
 msgid "Romanaugusa"
-msgstr ""
+msgstr "Romanaugusa"
 
 #. description of font in fonts/romanaugusa
 #: inkstitch-fonts-metadata.py:72
 #, python-format
 msgid "Based on Latin Modern Roman 10 Bold italic. The capital M is 42.5 millimeter wide at 100% scale.  Can be scaled down to 70% or up to 130%.  Every satin has zigzag underlay"
-msgstr ""
+msgstr "Basée sur Latin Modern Roman 10 Bold italic. La majuscule M a une largeur de 42.5 millimètres à l'échelle 100 %. Peut être réduit à 80 % ou augmenté à 150 %. Chaque satin a une sous-couche zigzag"
 
 #. name of font in fonts/romanaugusa_bicolor
 #: inkstitch-fonts-metadata.py:74
 msgid "Romanaugusa bicolor"
-msgstr ""
+msgstr "Romanaugusa bicolore"
 
 #. description of font in fonts/romanaugusa_bicolor
 #: inkstitch-fonts-metadata.py:76
 #, python-format
 msgid "Based on Latin Modern Roman 10 Bold italic. A font with capital letters with 2 colors. Very easy to use with letters from Romanaugusa. The capital M is 42.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 130%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Basée sur Latin Modern Roman 10 Bold italic. Une police de majuscules à deux couleurs. Très facile à utiliser avec les lettres de Romanaugusa. La majuscule M a une largeur de 42.5 millimètres à l'échelle 100 %. Peut être réduit à 80 % ou augmenté à 150 %. Chaque satin a une sous-couche zigzag"
 
 #. name of font in fonts/sacramarif
 #: inkstitch-fonts-metadata.py:78
 msgid "Sacramarif"
-msgstr ""
+msgstr "Sacramarif"
 
 #. description of font in fonts/sacramarif
 #: inkstitch-fonts-metadata.py:80
 msgid "Based on Sacramento. Very small font with runstitch. It can be scaled from 80% to 150%"
-msgstr ""
+msgstr "Basée sur Sacramento. Très petite police en point droit. Peut être utilisée entre 80% et 150% de la taille de base"
 
 #. name of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:82
@@ -854,7 +854,7 @@ msgstr "Trait"
 
 #: lib/elements/stroke.py:23
 msgid "Running stitch along paths"
-msgstr ""
+msgstr "Points droits le long des chemins"
 
 #: lib/elements/stroke.py:37
 msgid "Running stitch length"
