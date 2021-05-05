@@ -330,6 +330,11 @@ class ParamsTab(ScrolledPanel):
 
 class SettingsFrame(wx.Frame):
     def __init__(self, *args, **kwargs):
+        # This is necessary because of https://github.com/inkstitch/inkstitch/issues/1186
+        if sys.platform.startswith('win'):
+            import locale
+            locale.setlocale(locale.LC_ALL, "C")
+
         # begin wxGlade: MyFrame.__init__
         self.tabs_factory = kwargs.pop('tabs_factory', [])
         self.cancel_hook = kwargs.pop('on_cancel', None)
