@@ -41,11 +41,17 @@ for d in inx/*; do
         7z a ../artifacts/inkstitch-${VERSION}-${OS}-${lang}.zip *
     else
         if [ "$BUILD" = "osx" ]; then
-            #this will sign the inkstitch.apple
-            /usr/bin/codesign --force -s "929A568N58" --deep inkstitch.app -v
-            # hdiutil create -volname "InkStich" -srcfolder inkstitch.app -ov -format UDZO ../artifacts/inkstitch-${VERSION}-${OS}-${lang}.dmg
-            # with dmgbuild
+            # This will sign the inkstitch.app
+            /usr/bin/codesign --force --options runtime --entitlements "../dmg/entitlements.plist" -s "929A568N58" --deep --timestamp inkstitch.app -v
+
+            # Generate dmg
             dmgbuild -s ../dmg/build-inkstitch-dmg.py -D app=inkstitch.app "Ink/Stitch" ../artifacts/inkstitch-${VERSION}-${OS}-${lang}.dmg
+
+            # Only notarize the english version for now (if at all)
+            if [ $lang = "en_US" ]; then
+                bash notarize-app "929A568N58" "$APPLE_USER" "$APPLE_PASS" "org.inkstitch.$(lang)" ../artifacts/inkstitch-${VERSION}-${OS}-${lang}.dmg
+            fi
+
         else
             python -m zipfile -c ../artifacts/inkstitch-${VERSION}-${OS}-${lang}.zip *
         fi
