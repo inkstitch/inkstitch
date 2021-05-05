@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-05-02 01:01+0000\n"
-"PO-Revision-Date: 2021-05-03 05:29\n"
+"PO-Revision-Date: 2021-05-05 00:51\n"
 "Last-Translator: \n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -46,7 +46,7 @@ msgstr ""
 #. name of font in fonts/baumans
 #: inkstitch-fonts-metadata.py:10
 msgid "Baumans"
-msgstr "バウマン"
+msgstr ""
 
 #. description of font in fonts/baumans
 #: inkstitch-fonts-metadata.py:12
@@ -57,7 +57,7 @@ msgstr ""
 #. name of font in fonts/chopin
 #: inkstitch-fonts-metadata.py:14
 msgid "Chopin Script"
-msgstr "ショパンスクリプト"
+msgstr ""
 
 #. description of font in fonts/chopin
 #: inkstitch-fonts-metadata.py:16
@@ -120,7 +120,7 @@ msgstr ""
 #. name of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:38
 msgid "Geneva Simple Sans Rounded"
-msgstr "ジュネーブシンプルサンセリフ"
+msgstr ""
 
 #. description of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:40
@@ -130,7 +130,7 @@ msgstr "小さいフォント（8〜20 mm）に適しています"
 #. name of font in fonts/geneva_simple
 #: inkstitch-fonts-metadata.py:42
 msgid "Geneva Simple Sans"
-msgstr "ジュネーブシンプルサンズ"
+msgstr ""
 
 #. description of font in fonts/geneva_simple
 #: inkstitch-fonts-metadata.py:44
@@ -193,7 +193,7 @@ msgstr ""
 #. name of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:66
 msgid "Ink/Stitch Medium Font"
-msgstr "インク/ステッチミディアムフォント"
+msgstr ""
 
 #. description of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:68
@@ -236,7 +236,7 @@ msgstr ""
 #. name of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:82
 msgid "Ink/Stitch Small Font"
-msgstr "インク/ステッチスモールフォント"
+msgstr ""
 
 #. description of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:84
@@ -247,7 +247,7 @@ msgstr "小さい文字に適したフォント。大文字のemは、100％ス�
 #. name of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:86
 msgid "TT Directors"
-msgstr "TTディレクター"
+msgstr ""
 
 #. description of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:88
@@ -257,7 +257,7 @@ msgstr "演出に適したフォント"
 #. name of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:90
 msgid "TT Masters"
-msgstr "TTマスターズ"
+msgstr ""
 
 #. description of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:92
@@ -278,7 +278,7 @@ msgstr "インク/ステッチで予期しないエラーが発生しました�
 
 #: inkstitch.py:71
 msgid "If you'd like to help, please file an issue at https://github.com/inkstitch/inkstitch/issues and include the entire error description below:"
-msgstr "ヘルプが必要な場合は、https：//github.com/inkstitch/inkstitch/issuesで問題を報告し、以下にエラーの説明全体を含めてください。"
+msgstr ""
 
 #. command attached to an object
 #: lib/commands.py:26
@@ -313,12 +313,12 @@ msgstr "このオブジェクトを縫った後、糸を切り取ります"
 #. command attached to an object
 #: lib/commands.py:44
 msgid "Ignore this object (do not stitch)"
-msgstr "このオブジェクトを無視します（ステッチしないでください）"
+msgstr ""
 
 #. command attached to an object
 #: lib/commands.py:47
 msgid "Satin cut point (use with Cut Satin Column)"
-msgstr "サテンカットポイント（カットサテンカラムで使用）"
+msgstr ""
 
 #. command that affects a layer
 #: lib/commands.py:51
@@ -328,7 +328,7 @@ msgstr "レイヤーを無視します（このレイヤー内のオブジェク
 #. command that affects entire document
 #: lib/commands.py:54
 msgid "Origin for exported embroidery files"
-msgstr "エクスポートされた刺繡ファイルの原点"
+msgstr ""
 
 #. command that affects entire document
 #: lib/commands.py:57
@@ -370,7 +370,7 @@ msgstr "スモールフィル"
 
 #: lib/elements/auto_fill.py:22
 msgid "This fill object is so small that it would probably look better as running stitch or satin column. For very small shapes, fill stitch is not possible, and Ink/Stitch will use running stitch around the outline instead."
-msgstr "この塗りつぶしオブジェクトは非常に小さいので、ランニングステッチやサテンの柱として見栄えがよくなります。非常に小さい形状の場合、塗りつぶしステッチは不可能であり、インク/ステッチは代わりにアウトラインの周りにランニングステッチを使用します。"
+msgstr ""
 
 #: lib/elements/auto_fill.py:28 lib/elements/auto_fill.py:144
 msgid "Expand"
@@ -400,7 +400,7 @@ msgstr "自動的にルーティングされたフィルステッチ"
 
 #: lib/elements/auto_fill.py:63
 msgid "Running stitch length (traversal between sections)"
-msgstr "ランニングステッチの長さ（セクション間のトラバース）"
+msgstr ""
 
 #: lib/elements/auto_fill.py:64
 msgid "Length of stitches around the outline of the fill region used when moving from section to section."
@@ -439,7 +439,7 @@ msgstr "最大ステッチ長さ"
 
 #: lib/elements/auto_fill.py:112
 msgid "default: equal to fill max stitch length"
-msgstr "デフォルト：最大ステッチ長を埋めるのと同じ"
+msgstr ""
 
 #: lib/elements/auto_fill.py:122
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
@@ -473,11 +473,11 @@ msgstr "自動入力中にエラーが発生しました！インク/ステッ�
 #. https://github.com/inkstitch/inkstitch/issues/new
 #: lib/elements/auto_fill.py:256
 msgid "If you'd like to help us make Ink/Stitch better, please paste this whole message into a new issue at: "
-msgstr "インク/ステッチの改善にご協力いただける場合は、このメッセージ全体を新しいメッセージに貼り付けてください。"
+msgstr ""
 
 #: lib/elements/clone.py:27
 msgid "Clone Object"
-msgstr "クローンオブジェクト"
+msgstr ""
 
 #: lib/elements/clone.py:28
 msgid "There are one or more clone objects in this document.  Ink/Stitch can work with single clones, but you are limited to set a very few parameters. "
@@ -501,7 +501,7 @@ msgstr "クローンは刺繍できません"
 
 #: lib/elements/clone.py:39
 msgid "There are one ore more clone objects in this document. A clone must be a direct child of an embroiderable element. Ink/Stitch cannot embroider clones of groups or other not embroiderable elements (text or image)."
-msgstr "このドキュメントには、1つ以上のクローンオブジェクトがあります。クローンは、刺繍可能な要素の直接の子である必要があります。インク/ステッチは、グループのクローンやその他の刺繍できない要素（テキストまたは画像）を刺繍すことができません。"
+msgstr ""
 
 #: lib/elements/clone.py:42
 msgid "Convert the clone into a real element:"
