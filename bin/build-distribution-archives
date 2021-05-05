@@ -48,8 +48,8 @@ for d in inx/*; do
             dmgbuild -s ../dmg/build-inkstitch-dmg.py -D app=inkstitch.app "Ink/Stitch" ../artifacts/inkstitch-${VERSION}-${OS}-${lang}.dmg
 
             # Only notarize the english version for now (if at all)
-            if [ $lang = "en_US" ]; then
-                bash notarize-app "929A568N58" "$APPLE_USER" "$APPLE_PASS" "org.inkstitch.$(lang)" ../artifacts/inkstitch-${VERSION}-${OS}-${lang}.dmg
+            if [ "$lang" = "en_US" ]; then
+                bash ../bin/notarize-app "929A568N58" "$APPLE_USER" "$APPLE_PASS" "org.inkstitch.$(lang)" ../artifacts/inkstitch-${VERSION}-${OS}-${lang}.dmg
             fi
 
         else
