@@ -1,7 +1,11 @@
 {% assign assets = site.github.latest_release.assets %}
 {%- assign linux = 0 -%}
-{%- assign osx = 0 -%}
 {%- assign windows = 0 -%}
+{%- assign osx = 0 -%}
+{%- assign sierra = 0 -%}
+{%- assign mojave = 0 -%}
+
+{% assign languages = "de_DE;Deutsch, en_US;English, fi_FI;Suomalainen, fr_FR;Français, it_IT;Italiano, ja_JP;日本語, nl_NL;Nederlands, ru_RU;русский" | split: ", " %}
 
 {% for asset in assets %}
 
@@ -11,26 +15,84 @@
 {{ asset.download_count }}
 {%- endcomment -%}
 
-{%- if version[2] == "linux" -%}
+{%- if asset.name contains "linux" -%}
 {%- assign linux = linux | plus: asset.download_count %}
 {%- endif -%}
 
-{%- if version[2] == "osx" -%}
+{%- if asset.name contains "osx" -%}
 {%- assign osx = osx | plus: asset.download_count %}
 {%- endif -%}
 
-{%- if version[2] == "windows" -%}
+{%- if asset.name contains "windows" -%}
 {%- assign windows = windows | plus: asset.download_count %}
+{%- endif -%}
+
+{%- if asset.name contains "mojave" -%}
+{%- assign mojave = mojave | plus: asset.download_count %}
+{%- endif -%}
+
+{%- if asset.name contains "sierra" -%}
+{%- assign sierra = sierra | plus: asset.download_count %}
 {%- endif -%}
 
 {% endfor %}
 
 ## Ink/Stitch {{ site.github.latest_release.name }}
 
-|{{ site.data.ui-text[page.lang].downloads }}|{{ site.data.ui-text[page.lang].operating_system }}|
-|--|--|
-|{{ linux }}|Linux|
-|{{ osx }}|macOS|
-|{{ windows }}|Windows|
-|**{{ linux | plus: osx | plus: windows }}**|**{{ site.data.ui-text[page.lang].total_downloads }}**|
-{: .table-first-column-alignright }
+<table class="inline-table" style="text-align: right;">
+<thead>
+<tr>
+  <th></th>
+  <th style="text-align: right;">Linux</th>
+  <th style="text-align: right;">macOS</th>
+  <th style="text-align: right; color: grey; font-style: italic; max-width:6.1em;">(C/BS | HS/M | EC/S)</th>
+  <th style="text-align: right;">Windows</th>
+</tr>
+<thead>
+<tbody>
+
+{% for lang in languages %}
+  {% assign l = lang | split: ";" %}
+  {% assign linux_data = assets | where_exp:"asset", "asset.name contains l[0]" | where_exp:"asset", "asset.name contains 'linux'" | first %}
+  {% assign osx_data = assets | where_exp:"asset", "asset.name contains l[0]" | where_exp:"asset", "asset.name contains 'osx'" %}
+  {% assign osx_lang_count = 0 %}
+  {% for s in osx_data %}
+    {% assign osx_lang_count = osx_lang_count | plus: s.download_count %}
+  {% endfor %}
+
+  {% assign windows_data = assets | where_exp:"asset", "asset.name contains l[0]" | where_exp:"asset", "asset.name contains 'windows'" | first %}
+  {% assign sierra_data = assets | where_exp:"asset", "asset.name contains l[0]" | where_exp:"asset", "asset.name contains 'sierra'" | first %}
+  {% assign mojave_data = assets | where_exp:"asset", "asset.name contains l[0]" | where_exp:"asset", "asset.name contains 'mojave'" | first %}
+  {% assign bigsur_lang_count = osx_lang_count | minus: sierra_data.download_count | minus: mojave_data.download_count %}
+
+  <tr>
+    <td style="text-align: left;">{{ l[0] }}: {{ l[1] }}</td>
+    <td>{{ linux_data.download_count }}</td>
+    <td>{{ osx_lang_count }}</td>
+    <td style="text-align:left; color: grey; font-style: italic;">({{ bigsur_lang_count }} | {{ mojave_data.download_count }} |   
+        {{ sierra_data.download_count }})</td>
+    <td>{{ windows_data.download_count }}</td>
+  </tr>
+{% endfor %}
+
+</tbody>
+<tfoot>
+
+  <tr style="font-weight: bold; border-top: 2px solid #b6b6b6;">
+    <td></td>
+    <td>{{ linux }}</td>
+    <td>{{ osx }}</td>
+    <td style="text-align:left; color: grey; font-style: italic;">({{ osx | minus: mojave | minus: sierra }} | {{ mojave }} | {{ sierra }})</td>
+    <td>{{ windows }}</td>
+  </tr>
+
+  <tr>
+    <td style="text-align: left;"><b>{{ site.data.ui-text[page.lang].total_downloads }}</b></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td><b>{{ linux | plus: osx | plus: windows }}</b></td>
+  </tr>
+
+</tfoot>
+<!-- </table> -->
