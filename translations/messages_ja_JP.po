@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-05-02 01:01+0000\n"
-"PO-Revision-Date: 2021-05-05 00:51\n"
+"PO-Revision-Date: 2021-05-06 00:49\n"
 "Last-Translator: \n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -25,18 +25,18 @@ msgstr ""
 #. name of font in fonts/amita
 #: inkstitch-fonts-metadata.py:2
 msgid "Amita"
-msgstr ""
+msgstr "Amita"
 
 #. description of font in fonts/amita
 #: inkstitch-fonts-metadata.py:4
 #, python-format
 msgid "Amita bold. The capital M is 25.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 160%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Amita bold。大文字の「M」は100％の縮尺で25.3ミリ幅。80%～160%まで拡大縮小可能です。すべてのサテンにはジグザグの下地があります。"
 
 #. name of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:6
 msgid "Apex Lake"
-msgstr ""
+msgstr "Apex Lake"
 
 #. description of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:8
@@ -46,81 +46,81 @@ msgstr ""
 #. name of font in fonts/baumans
 #: inkstitch-fonts-metadata.py:10
 msgid "Baumans"
-msgstr ""
+msgstr "Baumans"
 
 #. description of font in fonts/baumans
 #: inkstitch-fonts-metadata.py:12
 #, python-format
 msgid "The capital M is 22.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 150%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "大文字のMは100％の縮尺で22.3ミリ幅。80%～150%まで拡大縮小可能です。すべてのサテンにはジグザグの下地があります。"
 
 #. name of font in fonts/chopin
 #: inkstitch-fonts-metadata.py:14
 msgid "Chopin Script"
-msgstr ""
+msgstr "Chopin Script"
 
 #. description of font in fonts/chopin
 #: inkstitch-fonts-metadata.py:16
 #, python-format
 msgid "The capital M is 38.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 120%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "大文字のMは100％の縮尺で38.3ミリ幅。80%～120%まで拡大縮小可能です。すべてのサテンにはジグザグの下地があります。"
 
 #. name of font in fonts/coronaviral
 #: inkstitch-fonts-metadata.py:18
 msgid "Coronaviral"
-msgstr ""
+msgstr "Coronaviral"
 
 #. description of font in fonts/coronaviral
 #: inkstitch-fonts-metadata.py:20
 msgid "A font created with manual sitch. Do not change the size or very little. The capital em is 22mm wide at 100%"
-msgstr ""
+msgstr "マニュアルシッチで作成したフォントです。サイズは変更しないか、ほぼ変更なし。大文字のemは100%で22mm幅"
 
 #. name of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:22
 msgid "Dejavu Serif"
-msgstr ""
+msgstr "Dejavu Serif"
 
 #. description of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:24
 #, python-format
 msgid "DejaVu Serif Condensed. The capital M is 19,8 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 150%.  Every satin has center-walk underlay."
-msgstr ""
+msgstr "DejaVu Serif Condensed。大文字のMは100％の縮尺で幅19,8ミリです。 80%～150%に拡大縮小可能です。 すべてのサテンには中心線に下縫いがあります。"
 
 #. name of font in fonts/digory_doodles_bean
 #: inkstitch-fonts-metadata.py:26
 msgid "Digory Doodles Bean"
-msgstr ""
+msgstr "Digory Doodles Bean"
 
 #. description of font in fonts/digory_doodles_bean
 #: inkstitch-fonts-metadata.py:28
 msgid "All letteres have mixed satin and bean stitch; The capital M is 16mm tall. The small x is 7 mm"
-msgstr ""
+msgstr "すべての文字にサテンとビーンステッチが混在しています。小さなxは7mmです。"
 
 #. name of font in fonts/emilio_20
 #: inkstitch-fonts-metadata.py:30
 msgid "Emilio 20"
-msgstr ""
+msgstr "Emilio 20"
 
 #. description of font in fonts/emilio_20
 #: inkstitch-fonts-metadata.py:32
 #, python-format
 msgid "Emilio 20 is a font with capital only ans numbers. M is 48.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 140%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Emilio 20は大文字のみの数字のフォントです。Mは100％の縮尺で48.5ミリ幅。70%～140%まで拡大縮小可能です。すべてのサテンにはジグザグの下地があります。"
 
 #. name of font in fonts/espresso_dolce
 #: inkstitch-fonts-metadata.py:34
 msgid "Espresso Dolce"
-msgstr ""
+msgstr "Espresso Dolce"
 
 #. description of font in fonts/espresso_dolce
 #: inkstitch-fonts-metadata.py:36
 msgid "The capital M is 16.2 mm high at 100 scale. Every satin has zigzag underlay. x is 11.5 mm high, q is 17.5 mm high, l is 17.2 mm high."
-msgstr ""
+msgstr "大文字のMは100目盛で16.2mmの高さです。xは高さ11.5mm、qは高さ17.5mm、lは高さ17.2mm、すべてのサテンにはジグザグの下地があります。"
 
 #. name of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:38
 msgid "Geneva Simple Sans Rounded"
-msgstr ""
+msgstr "Geneva Simple Sans Rounded"
 
 #. description of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:40
@@ -130,7 +130,7 @@ msgstr "小さいフォント（8〜20 mm）に適しています"
 #. name of font in fonts/geneva_simple
 #: inkstitch-fonts-metadata.py:42
 msgid "Geneva Simple Sans"
-msgstr ""
+msgstr "Geneva Simple Sans"
 
 #. description of font in fonts/geneva_simple
 #: inkstitch-fonts-metadata.py:44
@@ -140,60 +140,60 @@ msgstr "小さいフォント(6〜15mm)に適しています"
 #. name of font in fonts/kaushan_script
 #: inkstitch-fonts-metadata.py:46
 msgid "Kaushan Script"
-msgstr ""
+msgstr "Kaushan Script"
 
 #. description of font in fonts/kaushan_script
 #: inkstitch-fonts-metadata.py:48
 #, python-format
 msgid "The capital M is 29 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 200%.  Every satin has zigzag underlay"
-msgstr ""
+msgstr "大文字のMは100％の縮尺で29ミリ幅。 80%～200%まで拡大縮小可能です。 すべてのサテンにはジグザグの下地があります。"
 
 #. name of font in fonts/learning_curve
 #: inkstitch-fonts-metadata.py:50
 msgid "Learning curve"
-msgstr ""
+msgstr "Learning curve"
 
 #. description of font in fonts/learning_curve
 #: inkstitch-fonts-metadata.py:52
 msgid "Cursive italique en point triple pour des minuscules de 6 à 14mm"
-msgstr ""
+msgstr "6～14mm小文字用トリプルポイントのイタリック筆記体"
 
 #. name of font in fonts/lobster
 #: inkstitch-fonts-metadata.py:54
 msgid "Lobster Two"
-msgstr ""
+msgstr "Lobster Two"
 
 #. description of font in fonts/lobster
 #: inkstitch-fonts-metadata.py:56
 #, python-format
 msgid "Lobster Two Bold Italic. The capital M is 19.8 millimeter wide at 100% scale. Can be scaled down to 80% or up to 150%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Lobster Two Bold Italic。大文字のMは100％の縮尺で19.8ミリ幅。80%～150%に拡大縮小可能です。すべてのサテンにはジグザグの下地があります。"
 
 #. name of font in fonts/magnolia_ script
 #: inkstitch-fonts-metadata.py:58
 msgid "Magnolia Script"
-msgstr ""
+msgstr "Magnolia Script"
 
 #. description of font in fonts/magnolia_ script
 #: inkstitch-fonts-metadata.py:60
 msgid "The Capital M is a bit less than 2 cm high. It can be scaled down to 80% and up to 120%"
-msgstr ""
+msgstr "大文字のMは高さは2cm弱。80%～120%に拡大縮小可能です。"
 
 #. name of font in fonts/manuskript_gotisch
 #: inkstitch-fonts-metadata.py:62
 msgid "Manuskript Gothisch"
-msgstr ""
+msgstr "Manuskript Gothisch"
 
 #. description of font in fonts/manuskript_gotisch
 #: inkstitch-fonts-metadata.py:64
 #, python-format
 msgid "The capital M is 35 millimeter wide at 100% scale.  Can be scaled down to 70% or up to 140%.  Every satin has zigzag underlay"
-msgstr ""
+msgstr "大文字のMは100％の縮尺で35ミリ幅。 70%～140%まで拡大縮小可能です。 すべてのサテンにはジグザグの下地があります。"
 
 #. name of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:66
 msgid "Ink/Stitch Medium Font"
-msgstr ""
+msgstr "Ink/Stitch Medium Font"
 
 #. description of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:68
@@ -204,39 +204,39 @@ msgstr "中型文字に適した基本フォント。大文字のemは、100％�
 #. name of font in fonts/romanaugusa
 #: inkstitch-fonts-metadata.py:70
 msgid "Romanaugusa"
-msgstr ""
+msgstr "Romanaugusa"
 
 #. description of font in fonts/romanaugusa
 #: inkstitch-fonts-metadata.py:72
 #, python-format
 msgid "Based on Latin Modern Roman 10 Bold italic. The capital M is 42.5 millimeter wide at 100% scale.  Can be scaled down to 70% or up to 130%.  Every satin has zigzag underlay"
-msgstr ""
+msgstr "Latin Modern Roman 10 Bold italicをベースにしています。大文字のMは100％の縮尺で42.5ミリ幅。 70%～130%に拡大縮小可能です。 すべてのサテンにはジグザグの下地があります。"
 
 #. name of font in fonts/romanaugusa_bicolor
 #: inkstitch-fonts-metadata.py:74
 msgid "Romanaugusa bicolor"
-msgstr ""
+msgstr "Romanaugusa bicolor"
 
 #. description of font in fonts/romanaugusa_bicolor
 #: inkstitch-fonts-metadata.py:76
 #, python-format
 msgid "Based on Latin Modern Roman 10 Bold italic. A font with capital letters with 2 colors. Very easy to use with letters from Romanaugusa. The capital M is 42.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 130%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Latin Modern Roman 10 Bold italicをベースにしています。大文字の2色使いフォント。Romanaugusa文字でとても使用しやすい。大文字のMは100％の縮尺で42.5ミリ幅。70%～130%に拡大縮小可能です。すべてのサテンにはジグザグの下地があります。"
 
 #. name of font in fonts/sacramarif
 #: inkstitch-fonts-metadata.py:78
 msgid "Sacramarif"
-msgstr ""
+msgstr "Sacramarif"
 
 #. description of font in fonts/sacramarif
 #: inkstitch-fonts-metadata.py:80
 msgid "Based on Sacramento. Very small font with runstitch. It can be scaled from 80% to 150%"
-msgstr ""
+msgstr "Sacramentoをベースにしています。非常に小さなフォントに走り縫いされます。80%～150%まで拡大縮小可能です。"
 
 #. name of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:82
 msgid "Ink/Stitch Small Font"
-msgstr ""
+msgstr "Ink/Stitch Small Font"
 
 #. description of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:84
@@ -247,7 +247,7 @@ msgstr "小さい文字に適したフォント。大文字のemは、100％ス�
 #. name of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:86
 msgid "TT Directors"
-msgstr ""
+msgstr "TT Directors"
 
 #. description of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:88
@@ -257,7 +257,7 @@ msgstr "演出に適したフォント"
 #. name of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:90
 msgid "TT Masters"
-msgstr ""
+msgstr "TT Masters"
 
 #. description of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:92
@@ -278,7 +278,7 @@ msgstr "インク/ステッチで予期しないエラーが発生しました�
 
 #: inkstitch.py:71
 msgid "If you'd like to help, please file an issue at https://github.com/inkstitch/inkstitch/issues and include the entire error description below:"
-msgstr ""
+msgstr "ヘルプが必要な場合は https://github.com/inkstitch/inkstitch/issues でエラー全体の説明を含めて問題を報告してください。"
 
 #. command attached to an object
 #: lib/commands.py:26
@@ -313,12 +313,12 @@ msgstr "このオブジェクトを縫った後、糸を切り取ります"
 #. command attached to an object
 #: lib/commands.py:44
 msgid "Ignore this object (do not stitch)"
-msgstr ""
+msgstr "このオブジェクトを無視します(ステッチしない)"
 
 #. command attached to an object
 #: lib/commands.py:47
 msgid "Satin cut point (use with Cut Satin Column)"
-msgstr ""
+msgstr "サテンカットポイント (カットサテンカラムで使用)"
 
 #. command that affects a layer
 #: lib/commands.py:51
@@ -328,7 +328,7 @@ msgstr "レイヤーを無視します（このレイヤー内のオブジェク
 #. command that affects entire document
 #: lib/commands.py:54
 msgid "Origin for exported embroidery files"
-msgstr ""
+msgstr "エクスポートされた刺繡ファイルの元データ"
 
 #. command that affects entire document
 #: lib/commands.py:57
@@ -370,7 +370,7 @@ msgstr "スモールフィル"
 
 #: lib/elements/auto_fill.py:22
 msgid "This fill object is so small that it would probably look better as running stitch or satin column. For very small shapes, fill stitch is not possible, and Ink/Stitch will use running stitch around the outline instead."
-msgstr ""
+msgstr "この塗りつぶしオブジェクトは非常に小さいので、ランニングステッチやサテンステッチのラインとした方が見栄えがよくなります。非常に小さい形状の場合、塗りつぶしステッチは不可能であり、インク/ステッチは代わりにアウトラインの周りにランニングステッチを使用します。"
 
 #: lib/elements/auto_fill.py:28 lib/elements/auto_fill.py:144
 msgid "Expand"
@@ -400,7 +400,7 @@ msgstr "自動的にルーティングされたフィルステッチ"
 
 #: lib/elements/auto_fill.py:63
 msgid "Running stitch length (traversal between sections)"
-msgstr ""
+msgstr "ランニングステッチの長さ（セクション間の間隔）"
 
 #: lib/elements/auto_fill.py:64
 msgid "Length of stitches around the outline of the fill region used when moving from section to section."
@@ -439,7 +439,7 @@ msgstr "最大ステッチ長さ"
 
 #: lib/elements/auto_fill.py:112
 msgid "default: equal to fill max stitch length"
-msgstr ""
+msgstr "デフォルト：最大フィルステッチ長"
 
 #: lib/elements/auto_fill.py:122
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
@@ -473,11 +473,11 @@ msgstr "自動入力中にエラーが発生しました！インク/ステッ�
 #. https://github.com/inkstitch/inkstitch/issues/new
 #: lib/elements/auto_fill.py:256
 msgid "If you'd like to help us make Ink/Stitch better, please paste this whole message into a new issue at: "
-msgstr ""
+msgstr "インク/ステッチの改善にご協力いただける場合は、このメッセージ全体を新しい Issue に貼り付けてください。 "
 
 #: lib/elements/clone.py:27
 msgid "Clone Object"
-msgstr ""
+msgstr "オブジェクトのクローン"
 
 #: lib/elements/clone.py:28
 msgid "There are one or more clone objects in this document.  Ink/Stitch can work with single clones, but you are limited to set a very few parameters. "
@@ -501,7 +501,7 @@ msgstr "クローンは刺繍できません"
 
 #: lib/elements/clone.py:39
 msgid "There are one ore more clone objects in this document. A clone must be a direct child of an embroiderable element. Ink/Stitch cannot embroider clones of groups or other not embroiderable elements (text or image)."
-msgstr ""
+msgstr "このドキュメントには、1つ以上のクローンオブジェクトがあります。クローンは、刺繍可能な要素の直接の子である必要があります。インク/ステッチは、グループのクローンやその他の刺繍できない要素（テキストまたは画像）を刺繍することができません。"
 
 #: lib/elements/clone.py:42
 msgid "Convert the clone into a real element:"
@@ -856,7 +856,7 @@ msgstr "ストローク"
 
 #: lib/elements/stroke.py:23
 msgid "Running stitch along paths"
-msgstr ""
+msgstr "パスに沿ってステッチを走らせる"
 
 #: lib/elements/stroke.py:37
 msgid "Running stitch length"
@@ -1949,7 +1949,7 @@ msgstr "G-codeフォーマット"
 
 #: templates/about.xml:3 templates/about.xml:6
 msgid "About"
-msgstr "約"
+msgstr "Ink/stitchについて"
 
 #: templates/about.xml:10
 msgid "An open-source machine embroidery design platform based on Inkscape."
