@@ -9,14 +9,15 @@ if [ "$BUILD" = "osx" ]; then
     cp -a icons locales print dist/inkstitch.app/Contents/MacOS
     cp -a electron/build/mac dist/inkstitch.app/Contents/electron
     rm -rf dist/inkstitch/
-    #first part of codesiging which is importing to build keychain
+
+    # first part of codesiging which is importing to build keychain
     echo $MACOS_CERTIFICATE | base64 --decode > certificate.p12
     security create-keychain -p "$KEYCHAIN_PWD" build.keychain
     security default-keychain -s build.keychain
     security unlock-keychain -p "$KEYCHAIN_PWD" build.keychain
     security import certificate.p12 -k build.keychain -P "$MACOS_CERTIFICATE_PWD" -T /usr/bin/codesign
     security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "$KEYCHAIN_PWD" build.keychain
-    #the rest of the build will be inside a packaging loop below
+    # the rest of the build will be inside a packaging loop below
 else
     cp -a images/examples palettes symbols fonts LICENSE VERSION dist/inkstitch
     cp -a icons locales print dist/inkstitch/bin
@@ -49,7 +50,7 @@ for d in inx/*; do
 
             # Only notarize the english version for now (if at all)
             if [ "$lang" = "en_US" ]; then
-                bash ../bin/notarize-app "929A568N58" "$APPLE_USER" "$APPLE_PASS" "org.inkstitch.$(lang)" ../artifacts/inkstitch-${VERSION}-${OS}-${lang}.dmg
+                bash ../bin/notarize-app "929A568N58" "$APPLE_USER" "$APPLE_PASS" "org.inkstitch.${lang}" ../artifacts/inkstitch-${VERSION}-${OS}-${lang}.dmg
             fi
 
         else
