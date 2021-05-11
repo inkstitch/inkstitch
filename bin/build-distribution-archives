@@ -50,7 +50,7 @@ for d in inx/*; do
 
             # Only notarize the english version for now (if at all)
             if [ "$lang" = "en_US" ]; then
-                bash ../bin/notarize-app "929A568N58" "$APPLE_USER" "$APPLE_PASS" "org.inkstitch.${lang}" ../artifacts/inkstitch-${VERSION}-${OS}-${lang}.dmg
+                bash ../bin/notarize-app "929A568N58" "$APPLE_USER" "$APPLE_PASS" "org.inkstitch.${lang:0:2}" ../artifacts/inkstitch-${VERSION}-${OS}-${lang}.dmg
             fi
 
         else
