@@ -7,6 +7,7 @@ from inkex import NSS, Boolean
 
 from ..commands import find_commands
 from ..svg.svg import find_elements
+from ..svg.tags import EMBROIDERABLE_TAGS, SVG_GROUP_TAG
 from .base import InkstitchExtension
 
 
@@ -36,13 +37,12 @@ class RemoveEmbroiderySettings(InkstitchExtension):
 
     def remove_params(self):
         if not self.svg.selected:
-            xpath = ".//svg:path"
+            xpath = ".//svg:path|.//svg:circle|.//svg:rect|.//svg:ellipse"
             elements = find_elements(self.svg, xpath)
             self.remove_inkstitch_attributes(elements)
         else:
-            for node in self.svg.selected:
-                elements = self.get_selected_elements(node)
-                self.remove_inkstitch_attributes(elements)
+            elements = self.get_selected_elements()
+            self.remove_inkstitch_attributes(elements)
 
     def remove_commands(self):
         if not self.svg.selected:
@@ -51,9 +51,7 @@ class RemoveEmbroiderySettings(InkstitchExtension):
             xpath = ".//svg:path|.//svg:circle|.//svg:rect|.//svg:ellipse"
             elements = find_elements(self.svg, xpath)
         else:
-            elements = []
-            for node in self.svg.selected:
-                elements.extend(self.get_selected_elements(node))
+            elements = self.get_selected_elements()
 
         if elements:
             for element in elements:
@@ -70,12 +68,14 @@ class RemoveEmbroiderySettings(InkstitchExtension):
             symbols = ".//*[starts-with(@id, 'inkstitch_')]"
             self.remove_elements(symbols)
 
-    def get_selected_elements(self, element_id):
-        xpath = ".//svg:g[@id='%(id)s']//svg:path|.//svg:g[@id='%(id)s']//svg:use" % dict(id=element_id)
-        elements = find_elements(self.svg, xpath)
-        if not elements:
-            xpath = ".//*[@id='%s']" % element_id
-            elements = find_elements(self.svg, xpath)
+    def get_selected_elements(self):
+        elements = []
+        for node in self.svg.selected.values():
+            if node.tag == SVG_GROUP_TAG:
+                for child in node.iterdescendants(EMBROIDERABLE_TAGS):
+                    elements.append(child)
+            else:
+                elements.append(node)
         return elements
 
     def remove_elements(self, xpath):
