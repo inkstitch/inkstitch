@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-05-02 01:01+0000\n"
-"PO-Revision-Date: 2021-05-12 00:56\n"
+"PO-Revision-Date: 2021-05-15 01:00\n"
 "Last-Translator: \n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -41,7 +41,7 @@ msgstr "Apex Lake"
 #. description of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:8
 msgid "Police de lettrines 59.4 par 57.8mm. Majuscules, chiffres, ! et ?"
-msgstr ""
+msgstr "レタリングフォント59.4×57.8mm。大文字、数字、！、？"
 
 #. name of font in fonts/baumans
 #: inkstitch-fonts-metadata.py:10
