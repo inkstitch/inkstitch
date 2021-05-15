@@ -10,7 +10,7 @@ from .stitch import Stitch
 from .ties import add_ties
 
 
-def patches_to_stitch_plan(patches, collapse_len=None, disable_ties=False):
+def patches_to_stitch_plan(patches, collapse_len=None, disable_ties=False):  # noqa: C901
 
     """Convert a collection of inkstitch.element.Patch objects to a StitchPlan.
 
