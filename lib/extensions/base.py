@@ -55,7 +55,7 @@ class InkStitchMetadata(MutableMapping):
         metadata = self.document.find(SVG_METADATA_TAG)
 
         if metadata is None:
-            metadata = inkex.etree.SubElement(self.document.getroot(), SVG_METADATA_TAG)
+            metadata = etree.SubElement(self.document.getroot(), SVG_METADATA_TAG)
 
             # move it so that it goes right after the first element, sodipodi:namedview
             self.document.getroot().remove(metadata)
