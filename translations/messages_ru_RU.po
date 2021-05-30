@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-05-02 01:01+0000\n"
-"PO-Revision-Date: 2021-05-15 01:00\n"
+"POT-Creation-Date: 2021-05-30 02:00+0000\n"
+"PO-Revision-Date: 2021-05-30 02:01\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -2003,16 +2003,16 @@ msgid "Removes areas smaller than dedined by threshold."
 msgstr "Удаляет области, которые меньше указанного порога."
 
 #: templates/cleanup.xml:8
-msgid "Fill area threshold"
-msgstr "Порог площади заливок"
+msgid "Fill area threshold (px²)"
+msgstr ""
 
 #: templates/cleanup.xml:10
 msgid "Removes small strokes shorter than defined by threshold."
 msgstr "Удаляет маленькие линии, которые короче указанного порога."
 
 #: templates/cleanup.xml:11
-msgid "Stroke threshold"
-msgstr "Порог длины линий"
+msgid "Stroke threshold (px)"
+msgstr ""
 
 #: templates/convert_to_satin.xml:3
 msgid "Convert Line to Satin"
