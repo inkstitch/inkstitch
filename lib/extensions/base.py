@@ -170,9 +170,9 @@ class InkstitchExtension(inkex.Effect):
         if selected:
             if node.tag == SVG_GROUP_TAG:
                 pass
-            elif getattr(node, "get_path", None):
+            elif node.tag in EMBROIDERABLE_TAGS or is_clone(node):
                 nodes.append(node)
-            elif troubleshoot and (node.tag in NOT_EMBROIDERABLE_TAGS or node.tag in EMBROIDERABLE_TAGS or is_clone(node)):
+            elif troubleshoot and node.tag in NOT_EMBROIDERABLE_TAGS:
                 nodes.append(node)
 
         return nodes
