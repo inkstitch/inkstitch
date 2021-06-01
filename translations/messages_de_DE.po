@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-05-30 02:00+0000\n"
-"PO-Revision-Date: 2021-05-30 02:01\n"
+"PO-Revision-Date: 2021-06-01 02:35\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -1179,7 +1179,7 @@ msgstr "Ink/Stitch kann nur mit Pfaden arbeiten und ignoriert alles andere. Mög
 
 #: lib/extensions/troubleshoot.py:200
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
-msgstr "Es ist möglich, dass ein Objekt mehr als einen Fehler enthält. Trotzdem wird in einigen Fällen nur ein Fehler pro Objekt angezeigt. Tauchen noch weitere Fehlermeldungen auf, führe diese Funktion einfach erneut aus.  Entferne diese Hinweise durch das Löschen der Ebene \"Troubleshoot\" im Dialogfenster Objekte (Objekt > Objekte...)."
+msgstr "Es ist möglich, dass ein Objekt mehr als einen Fehler enthält. Trotzdem wird in einigen Fällen nur ein Fehler pro Objekt angezeigt. Tauchen noch weitere Fehlermeldungen auf, führe diese Funktion einfach erneut aus.  Entferne diese Hinweise durch das Löschen der Ebene \"Fehlerbehebung\" im Dialogfenster Objekte (Objekt > Objekte...)."
 
 #: lib/extensions/zip.py:62
 msgid "threadlist"
@@ -2005,7 +2005,7 @@ msgstr "Entfernt Bereiche, die kleiner sind als vom Schwellenwert festgelegt."
 
 #: templates/cleanup.xml:8
 msgid "Fill area threshold (px²)"
-msgstr ""
+msgstr "Minimale Größe für Füllstich-Objekte (px²)"
 
 #: templates/cleanup.xml:10
 msgid "Removes small strokes shorter than defined by threshold."
@@ -2013,7 +2013,7 @@ msgstr "Entfernt kleine Striche, die kleiner sind als vom Schwellenwert festgele
 
 #: templates/cleanup.xml:11
 msgid "Stroke threshold (px)"
-msgstr ""
+msgstr "Minimale Länge für Linien (px)"
 
 #: templates/convert_to_satin.xml:3
 msgid "Convert Line to Satin"
