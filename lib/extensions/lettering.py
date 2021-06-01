@@ -30,6 +30,11 @@ class LetteringFrame(wx.Frame):
     DEFAULT_FONT = "small_font"
 
     def __init__(self, *args, **kwargs):
+        # This is necessary because of https://github.com/inkstitch/inkstitch/issues/1186
+        if sys.platform.startswith('win'):
+            import locale
+            locale.setlocale(locale.LC_ALL, "C")
+
         # begin wxGlade: MyFrame.__init__
         self.group = kwargs.pop('group')
         self.cancel_hook = kwargs.pop('on_cancel', None)
