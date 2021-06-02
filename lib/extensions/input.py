@@ -4,12 +4,14 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import os
+import sys
 
 import inkex
 from lxml import etree
 
 import pyembroidery
 
+from ..i18n import _
 from ..stitch_plan import StitchPlan
 from ..svg import PIXELS_PER_MM, render_stitch_plan
 from ..svg.tags import INKSCAPE_LABEL
@@ -18,8 +20,9 @@ from ..svg.tags import INKSCAPE_LABEL
 class Input(object):
     def run(self, args):
         embroidery_file = args[0]
-        pattern = pyembroidery.read(embroidery_file)
+        self.validate_file_path(embroidery_file)
 
+        pattern = pyembroidery.read(embroidery_file)
         stitch_plan = StitchPlan()
         color_block = None
 
@@ -61,3 +64,9 @@ class Input(object):
         layer.set('transform', 'translate(%s,%s)' % (extents[0], extents[1]))
 
         print(etree.tostring(svg).decode('utf-8'))
+
+    def validate_file_path(self, path):
+        # Check if the file exists
+        if not os.path.isfile(path):
+            inkex.errormsg(_('File does not exist and cannot be opened. Please correct the file path and try again.\r%s') % path)
+            sys.exit(1)
