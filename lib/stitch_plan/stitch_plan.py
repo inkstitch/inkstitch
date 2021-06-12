@@ -3,6 +3,11 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
+import sys
+
+from inkex import errormsg
+
+from ..i18n import _
 from ..svg import PIXELS_PER_MM
 from ..threads import ThreadColor
 from ..utils.geometry import Point
@@ -18,6 +23,14 @@ def patches_to_stitch_plan(patches, collapse_len=None, disable_ties=False):  # n
     * adds tie-ins and tie-offs
     * adds jump-stitches between patches if necessary
     """
+
+    # empty d-objects will be passed through and can lead to an empty stitch plan
+    if len(patches) == 0:
+        msg = _('There is no embroiderable object in your selection or document.'
+                '\n\n'
+                'Please run "Extensions > Ink/Stitch > Troubleshoot > Troubleshoot Objects" to get more information.')
+        errormsg(msg)
+        sys.exit(1)
 
     if collapse_len is None:
         collapse_len = 3.0
