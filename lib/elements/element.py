@@ -197,7 +197,7 @@ class EmbroideryElement(object):
     def get_style(self, style_name, default=None):
         try:
             # try to use inkex styles, they also check for stylesheets
-            style = inkex.styles.AttrFallbackStyle(self.node).get(style_name, default)
+            style = inkex.Style(self.node.cascaded_style()).get(style_name, default)
         except AttributeError:
             # inkex styles will fail in case we read our elements on the fly
             # if an element defines the style only through css classes, ink/stitch will not be able to
