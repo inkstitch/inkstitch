@@ -287,14 +287,15 @@ def ensure_symbol(document, command):
 
 
 def add_group(document, node, command):
-    return etree.SubElement(
-        node.getparent(),
+    group = etree.Element(
         SVG_GROUP_TAG,
         {
             "id": generate_unique_id(document, "command_group"),
             INKSCAPE_LABEL: _("Ink/Stitch Command") + ": %s" % get_command_description(command),
             "transform": get_correction_transform(node)
         })
+    node.getparent().insert(node.getparent().index(node) + 1, group)
+    return group
 
 
 def add_connector(document, symbol, element):
