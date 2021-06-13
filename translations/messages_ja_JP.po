@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-05-30 02:00+0000\n"
-"PO-Revision-Date: 2021-06-01 02:36\n"
+"POT-Creation-Date: 2021-06-13 00:53+0000\n"
+"PO-Revision-Date: 2021-06-13 00:54\n"
 "Last-Translator: \n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -350,17 +350,17 @@ msgstr "エラー：ドキュメントに複数の%(command)sコマンドがあ�
 msgid "%(command)s: %(description)s"
 msgstr "%(command)s: %(description)s"
 
-#: lib/commands.py:295 lib/commands.py:406 lib/extensions/layer_commands.py:34
+#: lib/commands.py:294 lib/commands.py:407 lib/extensions/layer_commands.py:34
 msgid "Ink/Stitch Command"
 msgstr "インク/ステッチコマンド"
 
 #. : the name of the line that connects a command to the object it applies to
-#: lib/commands.py:320
+#: lib/commands.py:321
 msgid "connector"
 msgstr "コネクタ"
 
 #. : the name of a command symbol (example: scissors icon for trim command)
-#: lib/commands.py:337
+#: lib/commands.py:338
 msgid "command marker"
 msgstr "コマンドマーカー"
 
@@ -900,7 +900,7 @@ msgid "Legacy running stitch setting detected!\n\n"
 msgstr "レガシーランニングステッチの設定が検出されました！\n\n"
 "ランニングステッチを示すために0.5単位未満のストロークを使用しているようですが、これは非推奨です。代わりに、ランニングステッチを示すために、ストロークを破線に設定してください。どんな種類のダッシュでも機能します。"
 
-#: lib/elements/text.py:13 lib/extensions/lettering.py:68
+#: lib/elements/text.py:13 lib/extensions/lettering.py:73
 msgid "Text"
 msgstr "文字"
 
@@ -1005,31 +1005,36 @@ msgstr "「その他のスレッドリスト」としてインポートし、以
 msgid "Please chose an other color palette for your design."
 msgstr "デザインに他のカラーパレットを選択してください。"
 
+#: lib/extensions/input.py:71
+#, python-format
+msgid "File does not exist and cannot be opened. Please correct the file path and try again.\\r%s"
+msgstr ""
+
 #: lib/extensions/layer_commands.py:23
 msgid "Please choose one or more commands to add."
 msgstr "追加するコマンドを1つ以上選択してください。"
 
-#: lib/extensions/lettering.py:37 lib/extensions/lettering.py:414
+#: lib/extensions/lettering.py:42 lib/extensions/lettering.py:419
 msgid "Ink/Stitch Lettering"
 msgstr "インク/ステッチの文字配置"
 
-#: lib/extensions/lettering.py:44
+#: lib/extensions/lettering.py:49
 msgid "Font"
 msgstr "フォント"
 
-#: lib/extensions/lettering.py:56
+#: lib/extensions/lettering.py:61
 msgid "Options"
 msgstr "オプション"
 
-#: lib/extensions/lettering.py:61
+#: lib/extensions/lettering.py:66
 msgid "Stitch lines of text back and forth"
 msgstr "テキストの行を前後にステッチします。"
 
-#: lib/extensions/lettering.py:64
+#: lib/extensions/lettering.py:69
 msgid "Add trims"
 msgstr "トリムを追加"
 
-#: lib/extensions/lettering.py:73 lib/extensions/params.py:350
+#: lib/extensions/lettering.py:78 lib/extensions/params.py:355
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
 #: print/templates/custom-page.html:33 print/templates/ui.html:92
 #: print/templates/ui.html:96 print/templates/ui.html:102
@@ -1038,31 +1043,31 @@ msgstr "トリムを追加"
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: lib/extensions/lettering.py:77 lib/extensions/params.py:357
+#: lib/extensions/lettering.py:82 lib/extensions/params.py:362
 msgid "Apply and Quit"
 msgstr "適用して終了"
 
-#: lib/extensions/lettering.py:144
+#: lib/extensions/lettering.py:149
 msgid "Unable to find any fonts!  Please try reinstalling Ink/Stitch."
 msgstr "フォントが見つかりません。 インクステッチを再インストールしてください。"
 
-#: lib/extensions/lettering.py:218
+#: lib/extensions/lettering.py:223
 msgid "This font has no available font variant. Please update or remove the font."
 msgstr "このフォントには、使用可能なフォントバリアントがありません。フォントを更新または削除してください。"
 
 #. The user has chosen to scale the text by some percentage
 #. (50%, 200%, etc).  If you need to use the percentage symbol,
 #. make sure to double it (%%).
-#: lib/extensions/lettering.py:260
+#: lib/extensions/lettering.py:265
 #, python-format
 msgid "Text scale %s%%"
 msgstr "文字の大きさ %s%%"
 
-#: lib/extensions/lettering.py:403
+#: lib/extensions/lettering.py:408
 msgid "Please select only one block of text."
 msgstr "1ブロックのみ選択してください。"
 
-#: lib/extensions/lettering.py:406
+#: lib/extensions/lettering.py:411
 msgid "You've selected objects that were not created by the Lettering extension.  Please clear your selection or select different objects before running Lettering again."
 msgstr "レタリングエクステンションで作成されていないオブジェクトが選択されています。 選択を解除するか、別のオブジェクトを選択してから再度レタリングを実行してください。"
 
@@ -1121,11 +1126,11 @@ msgstr "適用して終了 \"をクリックしたときに、このパラメー
 msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr "このパラメータは、\"適応して終了 \"をクリックしたときに保存されます。"
 
-#: lib/extensions/params.py:337
+#: lib/extensions/params.py:342
 msgid "Embroidery Params"
 msgstr "刺繍パラメータ"
 
-#: lib/extensions/params.py:354
+#: lib/extensions/params.py:359
 msgid "Use Last Settings"
 msgstr "前回の設定を使う"
 

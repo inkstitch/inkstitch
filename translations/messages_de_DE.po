@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-05-30 02:00+0000\n"
-"PO-Revision-Date: 2021-06-01 02:35\n"
+"POT-Creation-Date: 2021-06-13 00:53+0000\n"
+"PO-Revision-Date: 2021-06-13 00:54\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -350,17 +350,17 @@ msgstr "Fehler: Es gibt mehr als einen %(command)s-Befehl in dem Dokument, aber 
 msgid "%(command)s: %(description)s"
 msgstr "%(command)s: %(description)s"
 
-#: lib/commands.py:295 lib/commands.py:406 lib/extensions/layer_commands.py:34
+#: lib/commands.py:294 lib/commands.py:407 lib/extensions/layer_commands.py:34
 msgid "Ink/Stitch Command"
 msgstr "Ink/Stitch Befehl"
 
 #. : the name of the line that connects a command to the object it applies to
-#: lib/commands.py:320
+#: lib/commands.py:321
 msgid "connector"
 msgstr "Verknüpfung"
 
 #. : the name of a command symbol (example: scissors icon for trim command)
-#: lib/commands.py:337
+#: lib/commands.py:338
 msgid "command marker"
 msgstr "Befehlszeichen"
 
@@ -568,7 +568,7 @@ msgstr "Es gibt ein ungültiges Pfadobjekt im Dokument, das d-Attribut fehlt."
 
 #: lib/elements/empty_d_object.py:15
 msgid "* Run Extensions > Ink/Stitch > Troubleshoot > Cleanup Document..."
-msgstr "*Erweiterung ausführen> Ink/Stitch> Fehlerbehebung> Bereinigungsdokument..."
+msgstr "* Führe die Funktion Erweiterungen > Ink/Stitch > Fehlerbehebung > Dokument bereinigen... aus"
 
 #: lib/elements/fill.py:22
 msgid "Unconnected"
@@ -898,7 +898,7 @@ msgid "Legacy running stitch setting detected!\n\n"
 msgstr "Veraltete Laufstich-Einstellung erkannt!\n\n"
 "Es sieht so aus, als ob für einen Laufstich eine Linie verwendet wurde, die schmaler als 0.5 Einheiten ist. Diese Methode ist veraltet. Bitte eine gestrichelte Linie für diesen Zweck benutzen. Die genaue Linienart spielt dabei keine Rolle, Hauptsache es ist keine durchgehende Linie."
 
-#: lib/elements/text.py:13 lib/extensions/lettering.py:68
+#: lib/elements/text.py:13 lib/extensions/lettering.py:73
 msgid "Text"
 msgstr "Text"
 
@@ -1003,31 +1003,36 @@ msgstr "Probiere die Option \"andere Garnliste\" und wähle die entsprechende Ga
 msgid "Please chose an other color palette for your design."
 msgstr "Wähle eine andere Garnpalette für das Design."
 
+#: lib/extensions/input.py:71
+#, python-format
+msgid "File does not exist and cannot be opened. Please correct the file path and try again.\\r%s"
+msgstr "Die Datei kann nicht geöffnet werden. Bitte überprüfe den Dateipfad und versuche es erneut.\\r%s"
+
 #: lib/extensions/layer_commands.py:23
 msgid "Please choose one or more commands to add."
 msgstr "Bitte wählen Sie einen oder mehrere Befehle um diese zu verknüpfen."
 
-#: lib/extensions/lettering.py:37 lib/extensions/lettering.py:414
+#: lib/extensions/lettering.py:42 lib/extensions/lettering.py:419
 msgid "Ink/Stitch Lettering"
 msgstr "Ink/Stitch Text"
 
-#: lib/extensions/lettering.py:44
+#: lib/extensions/lettering.py:49
 msgid "Font"
 msgstr "Schriftart"
 
-#: lib/extensions/lettering.py:56
+#: lib/extensions/lettering.py:61
 msgid "Options"
 msgstr "Optionen"
 
-#: lib/extensions/lettering.py:61
+#: lib/extensions/lettering.py:66
 msgid "Stitch lines of text back and forth"
 msgstr "Sticke Textzeilen vor und zurück"
 
-#: lib/extensions/lettering.py:64
+#: lib/extensions/lettering.py:69
 msgid "Add trims"
 msgstr "Schnittmarker hinzufügen"
 
-#: lib/extensions/lettering.py:73 lib/extensions/params.py:350
+#: lib/extensions/lettering.py:78 lib/extensions/params.py:355
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
 #: print/templates/custom-page.html:33 print/templates/ui.html:92
 #: print/templates/ui.html:96 print/templates/ui.html:102
@@ -1036,31 +1041,31 @@ msgstr "Schnittmarker hinzufügen"
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: lib/extensions/lettering.py:77 lib/extensions/params.py:357
+#: lib/extensions/lettering.py:82 lib/extensions/params.py:362
 msgid "Apply and Quit"
 msgstr "Anwenden und schließen"
 
-#: lib/extensions/lettering.py:144
+#: lib/extensions/lettering.py:149
 msgid "Unable to find any fonts!  Please try reinstalling Ink/Stitch."
 msgstr "Keine Schriftart gefunden! Bitte versuche Ink/Stitch erneut zu installieren."
 
-#: lib/extensions/lettering.py:218
+#: lib/extensions/lettering.py:223
 msgid "This font has no available font variant. Please update or remove the font."
 msgstr "Diese Schriftart hat keine verfügbare Schriftvariante. Bitte aktualisieren oder entfernen Sie die Schriftart."
 
 #. The user has chosen to scale the text by some percentage
 #. (50%, 200%, etc).  If you need to use the percentage symbol,
 #. make sure to double it (%%).
-#: lib/extensions/lettering.py:260
+#: lib/extensions/lettering.py:265
 #, python-format
 msgid "Text scale %s%%"
 msgstr "Text Skalierung %s%%"
 
-#: lib/extensions/lettering.py:403
+#: lib/extensions/lettering.py:408
 msgid "Please select only one block of text."
 msgstr "Bitte wähle nur einen Textabschnitt."
 
-#: lib/extensions/lettering.py:406
+#: lib/extensions/lettering.py:411
 msgid "You've selected objects that were not created by the Lettering extension.  Please clear your selection or select different objects before running Lettering again."
 msgstr "Du hast Objekte ausgewählt, die nicht von der Text-Erweiterung erstellt wurden. Bitte entferne deine Auswahl oder wähle andere Objekte aus, bevor du das Text-Modul erneut startest."
 
@@ -1119,11 +1124,11 @@ msgstr "Hier klicken, um die Speicherung dieses Parameters bei \"Anwenden und sc
 msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr "Dieser Parameter wird gespeichert, wenn man auf \"Übernehmen und beenden\" klickt"
 
-#: lib/extensions/params.py:337
+#: lib/extensions/params.py:342
 msgid "Embroidery Params"
 msgstr "Stickparameter"
 
-#: lib/extensions/params.py:354
+#: lib/extensions/params.py:359
 msgid "Use Last Settings"
 msgstr "Letzte Einstellungen verwenden"
 

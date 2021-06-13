@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-05-30 02:00+0000\n"
-"PO-Revision-Date: 2021-06-01 02:35\n"
+"POT-Creation-Date: 2021-06-13 00:53+0000\n"
+"PO-Revision-Date: 2021-06-13 00:54\n"
 "Last-Translator: \n"
 "Language-Team: Dutch\n"
 "MIME-Version: 1.0\n"
@@ -350,17 +350,17 @@ msgstr "Fout: er is meer dan één %(command)s in het document, maar er kan er s
 msgid "%(command)s: %(description)s"
 msgstr "%(command)s: %(description)s"
 
-#: lib/commands.py:295 lib/commands.py:406 lib/extensions/layer_commands.py:34
+#: lib/commands.py:294 lib/commands.py:407 lib/extensions/layer_commands.py:34
 msgid "Ink/Stitch Command"
 msgstr "Ink/Stitch Commando"
 
 #. : the name of the line that connects a command to the object it applies to
-#: lib/commands.py:320
+#: lib/commands.py:321
 msgid "connector"
 msgstr "verbinding"
 
 #. : the name of a command symbol (example: scissors icon for trim command)
-#: lib/commands.py:337
+#: lib/commands.py:338
 msgid "command marker"
 msgstr "commando symbool"
 
@@ -898,7 +898,7 @@ msgid "Legacy running stitch setting detected!\n\n"
 msgstr "Verouderde doorlopende steek instelling gedetecteerd!\n\n"
 "Het lijkt erop dat je een lijn smaller dan 0.5 eenheden gebruikt om een doorlopende steek mee aan te geven, dat is verouderd. Gebruik een streepjes/stippellijn voor een doorlopende steek. Elke soort streepjes voldoen."
 
-#: lib/elements/text.py:13 lib/extensions/lettering.py:68
+#: lib/elements/text.py:13 lib/extensions/lettering.py:73
 msgid "Text"
 msgstr "Tekst"
 
@@ -1002,31 +1002,36 @@ msgstr "Probeer als \"overige garenlijst\" te importeren en geef hieronder een k
 msgid "Please chose an other color palette for your design."
 msgstr "Kies een ander kleurpalet voor je ontwerp."
 
+#: lib/extensions/input.py:71
+#, python-format
+msgid "File does not exist and cannot be opened. Please correct the file path and try again.\\r%s"
+msgstr ""
+
 #: lib/extensions/layer_commands.py:23
 msgid "Please choose one or more commands to add."
 msgstr "Kies één of meer commando's om toe te voegen."
 
-#: lib/extensions/lettering.py:37 lib/extensions/lettering.py:414
+#: lib/extensions/lettering.py:42 lib/extensions/lettering.py:419
 msgid "Ink/Stitch Lettering"
 msgstr "Ink/Stitch Belettering"
 
-#: lib/extensions/lettering.py:44
+#: lib/extensions/lettering.py:49
 msgid "Font"
 msgstr ""
 
-#: lib/extensions/lettering.py:56
+#: lib/extensions/lettering.py:61
 msgid "Options"
 msgstr "Opties"
 
-#: lib/extensions/lettering.py:61
+#: lib/extensions/lettering.py:66
 msgid "Stitch lines of text back and forth"
 msgstr "Borduur regels tekst heen en terug"
 
-#: lib/extensions/lettering.py:64
+#: lib/extensions/lettering.py:69
 msgid "Add trims"
 msgstr "Afknippen toevoegen"
 
-#: lib/extensions/lettering.py:73 lib/extensions/params.py:350
+#: lib/extensions/lettering.py:78 lib/extensions/params.py:355
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
 #: print/templates/custom-page.html:33 print/templates/ui.html:92
 #: print/templates/ui.html:96 print/templates/ui.html:102
@@ -1035,31 +1040,31 @@ msgstr "Afknippen toevoegen"
 msgid "Cancel"
 msgstr "Annuleren"
 
-#: lib/extensions/lettering.py:77 lib/extensions/params.py:357
+#: lib/extensions/lettering.py:82 lib/extensions/params.py:362
 msgid "Apply and Quit"
 msgstr "Toepassen en Sluiten"
 
-#: lib/extensions/lettering.py:144
+#: lib/extensions/lettering.py:149
 msgid "Unable to find any fonts!  Please try reinstalling Ink/Stitch."
 msgstr "Geen lettertypen gevonden! Probeer Ink/Stitch opnieuw te installeren."
 
-#: lib/extensions/lettering.py:218
+#: lib/extensions/lettering.py:223
 msgid "This font has no available font variant. Please update or remove the font."
 msgstr ""
 
 #. The user has chosen to scale the text by some percentage
 #. (50%, 200%, etc).  If you need to use the percentage symbol,
 #. make sure to double it (%%).
-#: lib/extensions/lettering.py:260
+#: lib/extensions/lettering.py:265
 #, python-format
 msgid "Text scale %s%%"
 msgstr "Tekst schaling %s%%"
 
-#: lib/extensions/lettering.py:403
+#: lib/extensions/lettering.py:408
 msgid "Please select only one block of text."
 msgstr "Selecteer aub slechts een enkel blok tekst."
 
-#: lib/extensions/lettering.py:406
+#: lib/extensions/lettering.py:411
 msgid "You've selected objects that were not created by the Lettering extension.  Please clear your selection or select different objects before running Lettering again."
 msgstr "Er zijn objecten geselecteerd die niet met de Belettering uitbreiding zijn gemaakt. Wis de selectie of selecteer andere objecten alvorens Belettering opnieuw te starten."
 
@@ -1118,11 +1123,11 @@ msgstr "Klik om deze parameter op te slaan als je \"Toepassen en Afsluiten\" kie
 msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr "Deze parameter wordt opgeslagen als je \"Toepassen en Afsluiten\" klikt"
 
-#: lib/extensions/params.py:337
+#: lib/extensions/params.py:342
 msgid "Embroidery Params"
 msgstr "Borduur Parameters"
 
-#: lib/extensions/params.py:354
+#: lib/extensions/params.py:359
 msgid "Use Last Settings"
 msgstr "Gebruik Vorige Instellingen"
 

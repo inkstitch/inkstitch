@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-05-30 02:00+0000\n"
-"PO-Revision-Date: 2021-06-01 02:35\n"
+"POT-Creation-Date: 2021-06-13 00:53+0000\n"
+"PO-Revision-Date: 2021-06-13 00:54\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -350,17 +350,17 @@ msgstr "Erreur : il y a plus d’une commande de %(command)s dans le document, 
 msgid "%(command)s: %(description)s"
 msgstr "%(command)s: %(description)s"
 
-#: lib/commands.py:295 lib/commands.py:406 lib/extensions/layer_commands.py:34
+#: lib/commands.py:294 lib/commands.py:407 lib/extensions/layer_commands.py:34
 msgid "Ink/Stitch Command"
 msgstr "Commande Ink/Stitch"
 
 #. : the name of the line that connects a command to the object it applies to
-#: lib/commands.py:320
+#: lib/commands.py:321
 msgid "connector"
 msgstr "connecteur"
 
 #. : the name of a command symbol (example: scissors icon for trim command)
-#: lib/commands.py:337
+#: lib/commands.py:338
 msgid "command marker"
 msgstr "marqueur de commande"
 
@@ -898,7 +898,7 @@ msgid "Legacy running stitch setting detected!\n\n"
 msgstr "Détection d'un paramétrage de point droit obsolète !\n\n"
 "L'épaisseur de contour de votre chemin est inférieure à 0,5 unités, ce qui semble indiquer que vous souhaitez un point droit. Veuillez donc configurer votre style de contour avec des pointillés (n’importe quel genre de pointillés fonctionne)."
 
-#: lib/elements/text.py:13 lib/extensions/lettering.py:68
+#: lib/elements/text.py:13 lib/extensions/lettering.py:73
 msgid "Text"
 msgstr "Texte"
 
@@ -1003,31 +1003,36 @@ msgstr "Veuillez essayer d'importer comme \"autre liste de fils\" et spécifier 
 msgid "Please chose an other color palette for your design."
 msgstr "Veuillez choisir une autre palette de couleurs pour votre dessin."
 
+#: lib/extensions/input.py:71
+#, python-format
+msgid "File does not exist and cannot be opened. Please correct the file path and try again.\\r%s"
+msgstr ""
+
 #: lib/extensions/layer_commands.py:23
 msgid "Please choose one or more commands to add."
 msgstr "Veuillez choisir une ou plusieurs commandes à ajouter."
 
-#: lib/extensions/lettering.py:37 lib/extensions/lettering.py:414
+#: lib/extensions/lettering.py:42 lib/extensions/lettering.py:419
 msgid "Ink/Stitch Lettering"
 msgstr "Lettrage Ink/Stitch"
 
-#: lib/extensions/lettering.py:44
+#: lib/extensions/lettering.py:49
 msgid "Font"
 msgstr "Police"
 
-#: lib/extensions/lettering.py:56
+#: lib/extensions/lettering.py:61
 msgid "Options"
 msgstr "Options"
 
-#: lib/extensions/lettering.py:61
+#: lib/extensions/lettering.py:66
 msgid "Stitch lines of text back and forth"
 msgstr "Broder les lignes de texte en aller-retour"
 
-#: lib/extensions/lettering.py:64
+#: lib/extensions/lettering.py:69
 msgid "Add trims"
 msgstr "Ajouter des coupures"
 
-#: lib/extensions/lettering.py:73 lib/extensions/params.py:350
+#: lib/extensions/lettering.py:78 lib/extensions/params.py:355
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
 #: print/templates/custom-page.html:33 print/templates/ui.html:92
 #: print/templates/ui.html:96 print/templates/ui.html:102
@@ -1036,31 +1041,31 @@ msgstr "Ajouter des coupures"
 msgid "Cancel"
 msgstr "Quitter"
 
-#: lib/extensions/lettering.py:77 lib/extensions/params.py:357
+#: lib/extensions/lettering.py:82 lib/extensions/params.py:362
 msgid "Apply and Quit"
 msgstr "Appliquer et Quitter"
 
-#: lib/extensions/lettering.py:144
+#: lib/extensions/lettering.py:149
 msgid "Unable to find any fonts!  Please try reinstalling Ink/Stitch."
 msgstr "Impossible de trouver une police! S'il vous plait essayez de réinstaller Ink/Stitch."
 
-#: lib/extensions/lettering.py:218
+#: lib/extensions/lettering.py:223
 msgid "This font has no available font variant. Please update or remove the font."
 msgstr "Cette police n'a pas de variante de police disponible. Veuillez mettre à jour ou supprimer la police."
 
 #. The user has chosen to scale the text by some percentage
 #. (50%, 200%, etc).  If you need to use the percentage symbol,
 #. make sure to double it (%%).
-#: lib/extensions/lettering.py:260
+#: lib/extensions/lettering.py:265
 #, python-format
 msgid "Text scale %s%%"
 msgstr "Échelle du texte %s%%"
 
-#: lib/extensions/lettering.py:403
+#: lib/extensions/lettering.py:408
 msgid "Please select only one block of text."
 msgstr "Veuillez ne sélectionner qu’un seul bloc de texte."
 
-#: lib/extensions/lettering.py:406
+#: lib/extensions/lettering.py:411
 msgid "You've selected objects that were not created by the Lettering extension.  Please clear your selection or select different objects before running Lettering again."
 msgstr "Vous avez sélectionné des objets qui ne sont pas créées par l’extension de lettrage.  SVP, effacez votre sélection ou sélectionnez des objets différents avant d’exécuter le lettrage à nouveau."
 
@@ -1119,11 +1124,11 @@ msgstr "Cliquez pour forcer l’enregistrement de ce paramètre lorsque vous cli
 msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr "Ce paramètre sera enregistré lorsque vous cliquez sur « Appliquer et quitter »"
 
-#: lib/extensions/params.py:337
+#: lib/extensions/params.py:342
 msgid "Embroidery Params"
 msgstr "Paramètres de broderie"
 
-#: lib/extensions/params.py:354
+#: lib/extensions/params.py:359
 msgid "Use Last Settings"
 msgstr "Utiliser les derniers paramètres"
 
