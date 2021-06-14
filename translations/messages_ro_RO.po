@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-06-13 00:53+0000\n"
-"PO-Revision-Date: 2021-06-13 00:54\n"
+"PO-Revision-Date: 2021-06-14 00:50\n"
 "Last-Translator: \n"
 "Language-Team: Romanian\n"
 "MIME-Version: 1.0\n"
@@ -25,18 +25,18 @@ msgstr ""
 #. name of font in fonts/amita
 #: inkstitch-fonts-metadata.py:2
 msgid "Amita"
-msgstr ""
+msgstr "Amita"
 
 #. description of font in fonts/amita
 #: inkstitch-fonts-metadata.py:4
 #, python-format
 msgid "Amita bold. The capital M is 25.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 160%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Amita ingrosat. M mare este 25.3 milimetri lat la proportie de 100%. Procentul se ppate micsora la 80% sau se poate mari pana la 160%. Toate satinurile au dedesubturi in zigzag"
 
 #. name of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:6
 msgid "Apex Lake"
-msgstr ""
+msgstr "Apex Lake"
 
 #. description of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:8
@@ -46,50 +46,50 @@ msgstr ""
 #. name of font in fonts/baumans
 #: inkstitch-fonts-metadata.py:10
 msgid "Baumans"
-msgstr ""
+msgstr "Baumans"
 
 #. description of font in fonts/baumans
 #: inkstitch-fonts-metadata.py:12
 #, python-format
 msgid "The capital M is 22.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 150%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "M mare este 22.3 milimetri lat la proportie de 100%. Procentul se poate micsora la 80% sau se poate mari pana la 150%. Toate satinurile au dedesubturi in zigzag"
 
 #. name of font in fonts/chopin
 #: inkstitch-fonts-metadata.py:14
 msgid "Chopin Script"
-msgstr ""
+msgstr "Chopin Script"
 
 #. description of font in fonts/chopin
 #: inkstitch-fonts-metadata.py:16
 #, python-format
 msgid "The capital M is 38.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 120%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "M mare este 38.3 milimetri lat la proportie de 100%. Procentul se poate micsora la 80% sau se poate mari pana la 120%. Toate satinurile au dedesubturi in zigzag"
 
 #. name of font in fonts/coronaviral
 #: inkstitch-fonts-metadata.py:18
 msgid "Coronaviral"
-msgstr ""
+msgstr "Coronaviral"
 
 #. description of font in fonts/coronaviral
 #: inkstitch-fonts-metadata.py:20
 msgid "A font created with manual sitch. Do not change the size or very little. The capital em is 22mm wide at 100%"
-msgstr ""
+msgstr "Un font creat cu impunsatura manuala. Nu schimba marimea. M mare este 22mm lat la proportie de 100%"
 
 #. name of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:22
 msgid "Dejavu Serif"
-msgstr ""
+msgstr "Dejavu Serif"
 
 #. description of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:24
 #, python-format
 msgid "DejaVu Serif Condensed. The capital M is 19,8 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 150%.  Every satin has center-walk underlay."
-msgstr ""
+msgstr "DejaVu Serif inghesuit. M mare este 19,8 milimetri lat la proportie de 100%. Procentul se poate micsora la 80% sau se poate mari pana la 150%. Toate satinurile au dedesubturi in zigzag."
 
 #. name of font in fonts/digory_doodles_bean
 #: inkstitch-fonts-metadata.py:26
 msgid "Digory Doodles Bean"
-msgstr ""
+msgstr "Digory Doodles Bean"
 
 #. description of font in fonts/digory_doodles_bean
 #: inkstitch-fonts-metadata.py:28
@@ -99,7 +99,7 @@ msgstr ""
 #. name of font in fonts/emilio_20
 #: inkstitch-fonts-metadata.py:30
 msgid "Emilio 20"
-msgstr ""
+msgstr "Emilio 20"
 
 #. description of font in fonts/emilio_20
 #: inkstitch-fonts-metadata.py:32
@@ -110,7 +110,7 @@ msgstr ""
 #. name of font in fonts/espresso_dolce
 #: inkstitch-fonts-metadata.py:34
 msgid "Espresso Dolce"
-msgstr ""
+msgstr "Espresso Dolce"
 
 #. description of font in fonts/espresso_dolce
 #: inkstitch-fonts-metadata.py:36
@@ -120,27 +120,27 @@ msgstr ""
 #. name of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:38
 msgid "Geneva Simple Sans Rounded"
-msgstr ""
+msgstr "Geneva Simple Sans Rotunjit"
 
 #. description of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:40
 msgid "Suitable for small fonts (8 to 20 mm)"
-msgstr ""
+msgstr "Utilizabil pentru fonturi mici (8-20 mm)"
 
 #. name of font in fonts/geneva_simple
 #: inkstitch-fonts-metadata.py:42
 msgid "Geneva Simple Sans"
-msgstr ""
+msgstr "Geneva Simple Sans"
 
 #. description of font in fonts/geneva_simple
 #: inkstitch-fonts-metadata.py:44
 msgid "Suitable for small fonts (6 to 15mm)"
-msgstr ""
+msgstr "Utilizabil pentru fonturi mici (6-15 mm)"
 
 #. name of font in fonts/kaushan_script
 #: inkstitch-fonts-metadata.py:46
 msgid "Kaushan Script"
-msgstr ""
+msgstr "Kaushan Script"
 
 #. description of font in fonts/kaushan_script
 #: inkstitch-fonts-metadata.py:48
@@ -151,7 +151,7 @@ msgstr ""
 #. name of font in fonts/learning_curve
 #: inkstitch-fonts-metadata.py:50
 msgid "Learning curve"
-msgstr ""
+msgstr "Learning curve"
 
 #. description of font in fonts/learning_curve
 #: inkstitch-fonts-metadata.py:52
@@ -161,7 +161,7 @@ msgstr ""
 #. name of font in fonts/lobster
 #: inkstitch-fonts-metadata.py:54
 msgid "Lobster Two"
-msgstr ""
+msgstr "Lobster Two"
 
 #. description of font in fonts/lobster
 #: inkstitch-fonts-metadata.py:56
@@ -172,7 +172,7 @@ msgstr ""
 #. name of font in fonts/magnolia_ script
 #: inkstitch-fonts-metadata.py:58
 msgid "Magnolia Script"
-msgstr ""
+msgstr "Magnolia Script"
 
 #. description of font in fonts/magnolia_ script
 #: inkstitch-fonts-metadata.py:60
@@ -182,7 +182,7 @@ msgstr ""
 #. name of font in fonts/manuskript_gotisch
 #: inkstitch-fonts-metadata.py:62
 msgid "Manuskript Gothisch"
-msgstr ""
+msgstr "Manuskript Gothisch"
 
 #. description of font in fonts/manuskript_gotisch
 #: inkstitch-fonts-metadata.py:64
@@ -193,7 +193,7 @@ msgstr ""
 #. name of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:66
 msgid "Ink/Stitch Medium Font"
-msgstr ""
+msgstr "Ink/Stitch Font mediu"
 
 #. description of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:68
@@ -204,7 +204,7 @@ msgstr ""
 #. name of font in fonts/romanaugusa
 #: inkstitch-fonts-metadata.py:70
 msgid "Romanaugusa"
-msgstr ""
+msgstr "Romanaugusa"
 
 #. description of font in fonts/romanaugusa
 #: inkstitch-fonts-metadata.py:72
@@ -215,7 +215,7 @@ msgstr ""
 #. name of font in fonts/romanaugusa_bicolor
 #: inkstitch-fonts-metadata.py:74
 msgid "Romanaugusa bicolor"
-msgstr ""
+msgstr "Romanaugusa bicolore"
 
 #. description of font in fonts/romanaugusa_bicolor
 #: inkstitch-fonts-metadata.py:76
@@ -226,7 +226,7 @@ msgstr ""
 #. name of font in fonts/sacramarif
 #: inkstitch-fonts-metadata.py:78
 msgid "Sacramarif"
-msgstr ""
+msgstr "Sacramarif"
 
 #. description of font in fonts/sacramarif
 #: inkstitch-fonts-metadata.py:80
@@ -236,7 +236,7 @@ msgstr ""
 #. name of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:82
 msgid "Ink/Stitch Small Font"
-msgstr ""
+msgstr "Ink/Stitch Font mic"
 
 #. description of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:84
@@ -247,7 +247,7 @@ msgstr ""
 #. name of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:86
 msgid "TT Directors"
-msgstr ""
+msgstr "TT Directors"
 
 #. description of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:88
@@ -257,7 +257,7 @@ msgstr ""
 #. name of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:90
 msgid "TT Masters"
-msgstr ""
+msgstr "TT Masters"
 
 #. description of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:92
@@ -425,7 +425,7 @@ msgstr ""
 
 #: lib/elements/auto_fill.py:100
 msgid "Row spacing"
-msgstr ""
+msgstr "Distantarea randurilor"
 
 #: lib/elements/auto_fill.py:101
 msgid "default: 3x fill row spacing"
@@ -644,7 +644,7 @@ msgstr ""
 
 #: lib/elements/image.py:13
 msgid "Image"
-msgstr ""
+msgstr "Imagine"
 
 #: lib/elements/image.py:14
 msgid "Ink/Stitch can't work with objects like images."
@@ -850,7 +850,7 @@ msgstr ""
 
 #: lib/elements/stroke.py:20
 msgid "Stroke"
-msgstr ""
+msgstr "Chenar"
 
 #: lib/elements/stroke.py:23
 msgid "Running stitch along paths"
@@ -1016,11 +1016,11 @@ msgstr ""
 
 #: lib/extensions/lettering.py:49
 msgid "Font"
-msgstr ""
+msgstr "Font"
 
 #: lib/extensions/lettering.py:61
 msgid "Options"
-msgstr ""
+msgstr "Optiuni"
 
 #: lib/extensions/lettering.py:66
 msgid "Stitch lines of text back and forth"
@@ -1037,11 +1037,11 @@ msgstr ""
 #: electron/src/renderer/components/InstallPalettes.vue:25
 #: electron/src/renderer/components/InstallPalettes.vue:63
 msgid "Cancel"
-msgstr ""
+msgstr "Anulare"
 
 #: lib/extensions/lettering.py:82 lib/extensions/params.py:362
 msgid "Apply and Quit"
-msgstr ""
+msgstr "Aplica si iesi"
 
 #: lib/extensions/lettering.py:149
 msgid "Unable to find any fonts!  Please try reinstalling Ink/Stitch."
@@ -1057,7 +1057,7 @@ msgstr ""
 #: lib/extensions/lettering.py:265
 #, python-format
 msgid "Text scale %s%%"
-msgstr ""
+msgstr "Proportie text %s%%"
 
 #: lib/extensions/lettering.py:408
 msgid "Please select only one block of text."
@@ -1198,19 +1198,19 @@ msgstr ""
 
 #: lib/extensions/zip.py:102
 msgid "Title"
-msgstr ""
+msgstr "Titlu"
 
 #: lib/extensions/zip.py:103
 msgid "Size"
-msgstr ""
+msgstr "Marime"
 
 #: lib/extensions/zip.py:104
 msgid "Stitches"
-msgstr ""
+msgstr "Impunsaturi"
 
 #: lib/extensions/zip.py:105
 msgid "Colors"
-msgstr ""
+msgstr "Culori"
 
 #: lib/extensions/zip.py:107
 msgid "Thread Order"
@@ -1226,19 +1226,19 @@ msgstr ""
 
 #: lib/gui/presets.py:58
 msgid "Load"
-msgstr ""
+msgstr "Incarca"
 
 #: lib/gui/presets.py:61
 msgid "Add"
-msgstr ""
+msgstr "Adauga"
 
 #: lib/gui/presets.py:64
 msgid "Overwrite"
-msgstr ""
+msgstr "Rescrie"
 
 #: lib/gui/presets.py:67
 msgid "Delete"
-msgstr ""
+msgstr "Sterge"
 
 #: lib/gui/presets.py:126
 msgid "Please enter or select a preset name first."
@@ -1246,7 +1246,7 @@ msgstr ""
 
 #: lib/gui/presets.py:126 lib/gui/presets.py:132 lib/gui/presets.py:148
 msgid "Preset"
-msgstr ""
+msgstr "Presetare"
 
 #: lib/gui/presets.py:132
 #, python-format
@@ -1260,36 +1260,36 @@ msgstr ""
 
 #: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:140
 msgid "JUMP"
-msgstr ""
+msgstr "Sari"
 
 #: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:143
 msgid "TRIM"
-msgstr ""
+msgstr "Taie"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command label at bottom of simulator window
 #: lib/gui/simulator.py:18 templates/output_params_txt.xml:14
 #: electron/src/renderer/assets/js/simulator.js:137
 msgid "STITCH"
-msgstr ""
+msgstr "Inteapa"
 
 #: lib/gui/simulator.py:18 templates/output_params_txt.xml:16
 #: electron/src/renderer/assets/js/simulator.js:149
 msgid "COLOR CHANGE"
-msgstr ""
+msgstr "Schimba culoarea"
 
 #: lib/gui/simulator.py:18 templates/output_params_txt.xml:18
 #: electron/src/renderer/assets/js/simulator.js:146
 msgid "STOP"
-msgstr ""
+msgstr "STOP"
 
 #: lib/gui/simulator.py:50
 msgid "Slow down (arrow down)"
-msgstr ""
+msgstr "Incetineste ( sageata jos)"
 
 #: lib/gui/simulator.py:53
 msgid "Speed up (arrow up)"
-msgstr ""
+msgstr "Accelereaza ( sageata sus)"
 
 #: lib/gui/simulator.py:56
 msgid "Go on step backward (-)"
@@ -1416,11 +1416,11 @@ msgstr ""
 #: print/templates/color_swatch.html:8 print/templates/color_swatch.html:40
 #: print/templates/operator_detailedview.html:9
 msgid "Color"
-msgstr ""
+msgstr "Culoare"
 
 #: print/templates/color_swatch.html:11 print/templates/color_swatch.html:41
 msgid "rgb"
-msgstr ""
+msgstr "RGB"
 
 #: print/templates/color_swatch.html:15 print/templates/color_swatch.html:42
 msgid "thread"
@@ -1438,17 +1438,17 @@ msgstr ""
 #: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
 #: print/templates/operator_detailedview.html:68
 msgid "stop after?"
-msgstr ""
+msgstr "Opreste dupa?"
 
 #: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
 #: print/templates/operator_detailedview.html:68
 msgid "yes"
-msgstr ""
+msgstr "da"
 
 #: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
 #: print/templates/operator_detailedview.html:68
 msgid "no"
-msgstr ""
+msgstr "nu"
 
 #: print/templates/color_swatch.html:40
 #: print/templates/operator_detailedview.html:57
@@ -1464,11 +1464,11 @@ msgstr ""
 #: print/templates/custom-page.html:33 print/templates/ui.html:92
 #: print/templates/ui.html:96 print/templates/ui.html:102
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: print/templates/custom-page.html:26 print/templates/ui.html:95
 msgid "Enter E-Mail"
-msgstr ""
+msgstr "Introdu E-mail"
 
 #: print/templates/custom-page.html:29 print/templates/custom-page.html:36
 msgid "Custom Information Sheet"
@@ -1484,7 +1484,7 @@ msgstr ""
 
 #: print/templates/footer.html:2
 msgid "Page"
-msgstr ""
+msgstr "Pagina"
 
 #: print/templates/footer.html:3 print/templates/ui.html:98
 #: print/templates/ui.html:105
@@ -2031,7 +2031,7 @@ msgstr ""
 
 #: templates/duplicate_params.xml:10 templates/reorder.xml:10
 msgid "Edit"
-msgstr ""
+msgstr "Editeaza"
 
 #: templates/embroider.xml:3
 msgid "Embroider"
@@ -2080,7 +2080,7 @@ msgstr ""
 
 #: templates/global_commands.xml:3
 msgid "Add Commands"
-msgstr ""
+msgstr "Adauga comenzi"
 
 #: templates/global_commands.xml:5
 msgid "These commands affect the entire embroidery design."
@@ -2090,7 +2090,7 @@ msgstr ""
 #: templates/global_commands.xml:15 templates/layer_commands.xml:14
 #: templates/object_commands.xml:13
 msgid "Commands"
-msgstr ""
+msgstr "Comenzi"
 
 #: templates/import_threadlist.xml:3
 msgid "Import Threadlist"
@@ -2314,7 +2314,7 @@ msgstr ""
 
 #: templates/output_params_txt.xml:20
 msgid "START"
-msgstr ""
+msgstr "START"
 
 #: templates/output_params_txt.xml:21 templates/output_params_txt.xml:23
 msgid "Use '\\n' for a new line."
@@ -2322,7 +2322,7 @@ msgstr ""
 
 #: templates/output_params_txt.xml:22
 msgid "END"
-msgstr ""
+msgstr "Sfarsit"
 
 #: templates/output_params_txt.xml:26
 msgid "laser mode"
@@ -2382,7 +2382,7 @@ msgstr ""
 
 #: templates/print.xml:3
 msgid "PDF Export"
-msgstr ""
+msgstr "PDF Export"
 
 #: templates/remove_embroidery_settings.xml:3
 msgid "Remove embroidery settings"
@@ -2531,84 +2531,84 @@ msgstr ""
 
 #: electron/src/renderer/components/Simulator.vue:97
 msgid "Jump to previous command"
-msgstr ""
+msgstr "Sari la comanda precedenta"
 
 #: electron/src/renderer/components/Simulator.vue:199
 msgid "jumps"
-msgstr ""
+msgstr "sarituri"
 
 #. name for this keyboard key: -
 #: electron/src/renderer/components/Simulator.vue:76
 msgid "Minus"
-msgstr ""
+msgstr "Minus"
 
 #: electron/src/renderer/components/Simulator.vue:215
 msgid "needle points"
-msgstr ""
+msgstr "puncte ac"
 
 #. description of keyboard shortcut that moves one stitch backward in simulator
 #: electron/src/renderer/components/Simulator.vue:71
 msgid "One step backward"
-msgstr ""
+msgstr "Un pas in spate"
 
 #. description of keyboard shortcut that moves one stitch forward in simulator
 #: electron/src/renderer/components/Simulator.vue:84
 msgid "One step forward"
-msgstr ""
+msgstr "Un pas in fata"
 
 #. name for page down keyboard key
 #: electron/src/renderer/components/Simulator.vue:99
 msgid "Page down (PgDn)"
-msgstr ""
+msgstr "Page down (PgDn)"
 
 #. name for page up keyboard key
 #: electron/src/renderer/components/Simulator.vue:108
 msgid "Page up (PgUp)"
-msgstr ""
+msgstr "Page up (PgUp)"
 
 #: electron/src/renderer/components/Simulator.vue:40
 msgid "Play"
-msgstr ""
+msgstr "Ruleaza"
 
 #: electron/src/renderer/components/Simulator.vue:49
 msgid "Play backward"
-msgstr ""
+msgstr "Ruleaza in spate"
 
 #: electron/src/renderer/components/Simulator.vue:60
 msgid "Play forward"
-msgstr ""
+msgstr "Ruleaza in fata"
 
 #: electron/src/renderer/components/Simulator.vue:220
 msgid "realistic"
-msgstr ""
+msgstr "realistic"
 
 #: electron/src/renderer/components/Simulator.vue:260
 msgid "Rendering stitch-plan..."
-msgstr ""
+msgstr "Randare plan-coasere..."
 
 #: electron/src/renderer/components/Simulator.vue:21
 msgid "Shortcut Key"
-msgstr ""
+msgstr "Tasta scurtatura"
 
 #: electron/src/renderer/components/Simulator.vue:192
 msgid "Show"
-msgstr ""
+msgstr "Arata"
 
 #: electron/src/renderer/components/Simulator.vue:10
 msgid "Simulator Shortcut Keys"
-msgstr ""
+msgstr "Scurtaturi taste simulator"
 
 #: electron/src/renderer/components/Simulator.vue:115
 msgid "Slow down"
-msgstr ""
+msgstr "Incetineste"
 
 #: electron/src/renderer/components/Simulator.vue:32
 msgid "Space"
-msgstr ""
+msgstr "Spatiu"
 
 #: electron/src/renderer/components/Simulator.vue:126
 msgid "Speed up"
-msgstr ""
+msgstr "Accelereaza"
 
 #: electron/src/renderer/components/Simulator.vue:174
 msgid "Speed: %{speed} stitch/sec"
@@ -2619,9 +2619,9 @@ msgstr[2] ""
 
 #: electron/src/renderer/components/Simulator.vue:206
 msgid "stops"
-msgstr ""
+msgstr "opriri"
 
 #: electron/src/renderer/components/InstallPalettes.vue:60
 msgid "Try again"
-msgstr ""
+msgstr "Incearca din nou"
 
