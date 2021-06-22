@@ -12,7 +12,8 @@ from shapely import geometry as shgeo
 from shapely.ops import nearest_points
 
 from ..i18n import _
-from ..svg import line_strings_to_csp, point_lists_to_csp
+from ..svg import (PIXELS_PER_MM, apply_transforms, line_strings_to_csp,
+                   point_lists_to_csp)
 from ..utils import Point, cache, collapse_duplicate_point, cut
 from .element import EmbroideryElement, Patch, param
 from .validation import ValidationError, ValidationWarning
@@ -74,11 +75,30 @@ class SatinColumn(EmbroideryElement):
     def satin_column(self):
         return self.get_boolean_param("satin_column")
 
+    # I18N: Split stitch divides a satin column into equal with parts if the maximum stitch length is exceeded
+    @property
+    @param('split_stitch',
+           _('Split stitch'),
+           tooltip=_('Sets additional stitches if the satin column exceeds the maximum stitch length.'),
+           type='boolean',
+           default='false')
+    def split_stitch(self):
+        return self.get_boolean_param("split_stitch")
+
     # I18N: "E" stitch is so named because it looks like the letter E.
     @property
     @param('e_stitch', _('"E" stitch'), type='boolean', default='false')
     def e_stitch(self):
         return self.get_boolean_param("e_stitch")
+
+    @property
+    @param('max_stitch_length_mm',
+           _('Maximum stitch length'),
+           tooltip=_('Maximum stitch length for split stitches.'),
+           type='float', unit="mm",
+           default=12.1)
+    def max_stitch_length(self):
+        return max(self.get_float_param("max_stitch_length_mm", 12.4), 0.1 * PIXELS_PER_MM)
 
     @property
     def color(self):
@@ -556,6 +576,20 @@ class SatinColumn(EmbroideryElement):
 
         return SatinColumn(node)
 
+    def get_patterns(self):
+        xpath = ".//*[@inkstitch:pattern='%(id)s']" % dict(id=self.node.get('id'))
+        patterns = self.node.getroottree().getroot().xpath(xpath)
+        line_strings = []
+        for pattern in patterns:
+            d = pattern.get_path()
+            path = paths.Path(d).to_superpath()
+            path = apply_transforms(path, pattern)
+            path = self.flatten(path)
+            lines = [shgeo.LineString(p) for p in path]
+            for line in lines:
+                line_strings.append(line)
+        return shgeo.MultiLineString(line_strings)
+
     @property
     @cache
     def center_line(self):
@@ -787,6 +821,63 @@ class SatinColumn(EmbroideryElement):
 
         return patch
 
+    def do_pattern_satin(self, patterns):
+        # elements with the attribute 'inkstitch:pattern' set to this elements id will cause extra stitches to be added
+        patch = Patch(color=self.color)
+        sides = self.plot_points_on_rails(self.zigzag_spacing, self.pull_compensation)
+        for i, (left, right) in enumerate(zip(*sides)):
+            patch.add_stitch(left)
+            for point in self._get_pattern_points(left, right, patterns):
+                patch.add_stitch(point)
+            patch.add_stitch(right)
+            if not i+1 >= len(sides[0]):
+                for point in self._get_pattern_points(right, sides[0][i+1], patterns):
+                    patch.add_stitch(point)
+        return patch
+
+    def do_split_stitch(self):
+        # stitches exceeding the maximum stitch length will be divided into equal parts through additional stitches
+        patch = Patch(color=self.color)
+        sides = self.plot_points_on_rails(self.zigzag_spacing, self.pull_compensation)
+        for i, (left, right) in enumerate(zip(*sides)):
+            patch.add_stitch(left)
+            points, count = self._get_split_points(left, right)
+            for point in points:
+                patch.add_stitch(point)
+            patch.add_stitch(right)
+            # it is possible that the way back has a different length from the first
+            # but it looks ugly if the points differ too much
+            # so let's make sure they have at least the same amount of divisions
+            if not i+1 >= len(sides[0]):
+                points, count = self._get_split_points(right, sides[0][i+1], count)
+                for point in points:
+                    patch.add_stitch(point)
+
+        return patch
+
+    def _get_pattern_points(self, left, right, patterns):
+        points = []
+        for pattern in patterns:
+            intersection = shgeo.LineString([left, right]).intersection(pattern)
+            if isinstance(intersection, shgeo.Point):
+                points.append(Point(intersection.x, intersection.y))
+            if isinstance(intersection, shgeo.MultiPoint):
+                for point in intersection:
+                    points.append(Point(point.x, point.y))
+        # sort points after their distance to left
+        points.sort(key=lambda point: point.distance(left))
+        return points
+
+    def _get_split_points(self, left, right, count=None):
+        points = []
+        distance = left.distance(right)
+        split_count = count or int(distance / self.max_stitch_length)
+        for i in range(split_count):
+            line = shgeo.LineString((left, right))
+            split_point = line.interpolate((i+1)/split_count, normalized=True)
+            points.append(Point(split_point.x, split_point.y))
+        return [points, split_count]
+
     def to_patches(self, last_patch):
         # Stitch a variable-width satin column, zig-zagging between two paths.
 
@@ -807,8 +898,13 @@ class SatinColumn(EmbroideryElement):
             # zigzags sit on the contour walk underlay like rail ties on rails.
             patch += self.do_zigzag_underlay()
 
+        patterns = self.get_patterns()
         if self.e_stitch:
             patch += self.do_e_stitch()
+        elif self.split_stitch:
+            patch += self.do_split_stitch()
+        elif self.get_patterns():
+            patch += self.do_pattern_satin(patterns)
         else:
             patch += self.do_satin()
 

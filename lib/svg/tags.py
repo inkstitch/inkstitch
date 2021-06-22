@@ -86,6 +86,8 @@ inkstitch_attribs = [
                 'zigzag_underlay_inset_mm',
                 'zigzag_underlay_spacing_mm',
                 'e_stitch',
+                'pattern',
+                'split_stitch',
                 'pull_compensation_mm',
                 'stroke_first',
                 # Legacy
