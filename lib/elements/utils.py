@@ -4,14 +4,15 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 from ..commands import is_command
-from ..svg.tags import (EMBROIDERABLE_TAGS, SVG_IMAGE_TAG, SVG_PATH_TAG,
-                        SVG_POLYLINE_TAG, SVG_TEXT_TAG)
+from ..svg.tags import (EMBROIDERABLE_TAGS, INKSTITCH_ATTRIBS, SVG_IMAGE_TAG,
+                        SVG_PATH_TAG, SVG_POLYLINE_TAG, SVG_TEXT_TAG)
 from .auto_fill import AutoFill
 from .clone import Clone, is_clone
 from .element import EmbroideryElement
 from .empty_d_object import EmptyDObject
 from .fill import Fill
 from .image import ImageObject
+from .pattern import PatternObject
 from .polyline import Polyline
 from .satin_column import SatinColumn
 from .stroke import Stroke
@@ -27,6 +28,9 @@ def node_to_elements(node):  # noqa: C901
 
     elif node.tag == SVG_PATH_TAG and not node.get('d', ''):
         return [EmptyDObject(node)]
+
+    elif node.get(INKSTITCH_ATTRIBS['pattern']):
+        return [PatternObject(node)]
 
     elif node.tag in EMBROIDERABLE_TAGS:
         element = EmbroideryElement(node)

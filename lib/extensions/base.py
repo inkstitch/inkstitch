@@ -173,7 +173,7 @@ class InkstitchExtension(inkex.Effect):
                 pass
             elif (node.tag in EMBROIDERABLE_TAGS or is_clone(node)) and not node.get(INKSTITCH_ATTRIBS['pattern']):
                 nodes.append(node)
-            elif troubleshoot and node.tag in NOT_EMBROIDERABLE_TAGS:
+            elif troubleshoot and (node.tag in NOT_EMBROIDERABLE_TAGS or node.get(INKSTITCH_ATTRIBS['pattern'])):
                 nodes.append(node)
 
         return nodes
