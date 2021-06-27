@@ -3,7 +3,7 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from ..commands import is_command
+from ..commands import group_commands, is_command
 from ..svg.tags import (EMBROIDERABLE_TAGS, INKSTITCH_ATTRIBS, SVG_IMAGE_TAG,
                         SVG_PATH_TAG, SVG_POLYLINE_TAG, SVG_TEXT_TAG)
 from .auto_fill import AutoFill
@@ -17,7 +17,6 @@ from .polyline import Polyline
 from .satin_column import SatinColumn
 from .stroke import Stroke
 from .text import TextObject
-from ..commands import group_commands
 
 
 def node_to_elements(node):  # noqa: C901

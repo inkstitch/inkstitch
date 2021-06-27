@@ -14,6 +14,7 @@ from .duplicate_params import DuplicateParams
 from .embroider_settings import EmbroiderSettings
 from .flip import Flip
 from .global_commands import GlobalCommands
+from .group_commands import GroupCommands
 from .import_threadlist import ImportThreadlist
 from .input import Input
 from .install import Install
@@ -41,6 +42,7 @@ __all__ = extensions = [StitchPlanPreview,
                         Zip,
                         Flip,
                         ObjectCommands,
+                        GroupCommands,
                         LayerCommands,
                         GlobalCommands,
                         ConvertToSatin,

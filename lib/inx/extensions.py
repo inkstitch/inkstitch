@@ -5,8 +5,8 @@
 
 import pyembroidery
 
-from ..commands import (COMMANDS, GLOBAL_COMMANDS, LAYER_COMMANDS,
-                        OBJECT_COMMANDS)
+from ..commands import (COMMANDS, GLOBAL_COMMANDS, GROUP_COMMANDS,
+                        LAYER_COMMANDS, OBJECT_COMMANDS)
 from ..extensions import Input, Output, extensions
 from ..threads import ThreadCatalog
 from .outputs import pyembroidery_output_formats
@@ -22,6 +22,10 @@ def layer_commands():
 
 def global_commands():
     return [(command, COMMANDS[command]) for command in GLOBAL_COMMANDS]
+
+
+def group_commands():
+    return [(command, COMMANDS[command]) for command in GROUP_COMMANDS]
 
 
 def object_commands():
@@ -51,6 +55,7 @@ def generate_extension_inx_files():
         write_inx_file(name, template.render(formats=pyembroidery_output_formats(),
                                              debug_formats=pyembroidery_debug_formats(),
                                              threadcatalog=threadcatalog(),
+                                             group_commands=group_commands(),
                                              layer_commands=layer_commands(),
                                              object_commands=object_commands(),
                                              global_commands=global_commands()))

@@ -12,7 +12,7 @@ import inkex
 from lxml import etree
 from stringcase import snakecase
 
-from ..commands import is_command, layer_commands, group_commands
+from ..commands import group_commands, is_command, layer_commands
 from ..elements import EmbroideryElement, nodes_to_elements
 from ..elements.clone import is_clone
 from ..i18n import _
