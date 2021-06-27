@@ -17,6 +17,7 @@ from .polyline import Polyline
 from .satin_column import SatinColumn
 from .stroke import Stroke
 from .text import TextObject
+from ..commands import group_commands
 
 
 def node_to_elements(node):  # noqa: C901
@@ -29,7 +30,8 @@ def node_to_elements(node):  # noqa: C901
     elif node.tag == SVG_PATH_TAG and not node.get('d', ''):
         return [EmptyDObject(node)]
 
-    elif node.get(INKSTITCH_ATTRIBS['pattern']):
+    # TODO: exclude fills
+    elif group_commands(node, 'pattern_group') and not node.get(INKSTITCH_ATTRIBS['satin_column']):
         return [PatternObject(node)]
 
     elif node.tag in EMBROIDERABLE_TAGS:

@@ -46,9 +46,11 @@ COMMANDS = {
     # L10N command attached to an object
     "satin_cut_point": N_("Satin cut point (use with Cut Satin Column)"),
 
-
     # L10N command that affects a layer
     "ignore_layer": N_("Ignore layer (do not stitch any objects in this layer)"),
+
+    # L10N command that affects a group
+    "pattern_group": N_("Strokes in this group will be interpretet as a pattern"),
 
     # L10N command that affects entire document
     "origin": N_("Origin for exported embroidery files"),
@@ -58,6 +60,7 @@ COMMANDS = {
 }
 
 OBJECT_COMMANDS = ["fill_start", "fill_end", "satin_start", "satin_end", "stop", "trim", "ignore_object", "satin_cut_point"]
+GROUP_COMMANDS = ["pattern_group"]
 LAYER_COMMANDS = ["ignore_layer"]
 GLOBAL_COMMANDS = ["origin", "stop_position"]
 
@@ -182,6 +185,12 @@ def find_commands(node):
             pass
 
     return commands
+
+
+def group_commands(node, command):
+    xpath = "./ancestor::svg:g/svg:use[@xlink:href='#inkstitch_%(command)s']" % dict(id=node.get('id'), command=command)
+    group_command = node.xpath(xpath, namespaces=inkex.NSS)
+    return group_command
 
 
 def layer_commands(layer, command):

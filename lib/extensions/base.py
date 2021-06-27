@@ -12,7 +12,7 @@ import inkex
 from lxml import etree
 from stringcase import snakecase
 
-from ..commands import is_command, layer_commands
+from ..commands import is_command, layer_commands, group_commands
 from ..elements import EmbroideryElement, nodes_to_elements
 from ..elements.clone import is_clone
 from ..i18n import _
@@ -171,9 +171,12 @@ class InkstitchExtension(inkex.Effect):
         if selected:
             if node.tag == SVG_GROUP_TAG:
                 pass
-            elif (node.tag in EMBROIDERABLE_TAGS or is_clone(node)) and not node.get(INKSTITCH_ATTRIBS['pattern']):
+            elif ((node.tag in EMBROIDERABLE_TAGS or is_clone(node)) and not
+                  (len(list(group_commands(node, 'pattern_group'))) and not node.get(INKSTITCH_ATTRIBS['satin_column']))):
                 nodes.append(node)
-            elif troubleshoot and (node.tag in NOT_EMBROIDERABLE_TAGS or node.get(INKSTITCH_ATTRIBS['pattern'])):
+            # add images, text and patterns for the troubleshoot extension
+            elif (troubleshoot and (node.tag in NOT_EMBROIDERABLE_TAGS or
+                  (len(list(group_commands(node, 'pattern_group'))) and not node.get(INKSTITCH_ATTRIBS['satin_column'])))):
                 nodes.append(node)
 
         return nodes

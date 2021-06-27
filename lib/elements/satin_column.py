@@ -6,7 +6,7 @@
 from copy import deepcopy
 from itertools import chain
 
-from inkex import paths
+from inkex import paths, NSS
 from shapely import affinity as shaffinity
 from shapely import geometry as shgeo
 from shapely.ops import nearest_points
@@ -14,6 +14,7 @@ from shapely.ops import nearest_points
 from ..i18n import _
 from ..svg import (PIXELS_PER_MM, apply_transforms, line_strings_to_csp,
                    point_lists_to_csp)
+from ..svg.tags import EMBROIDERABLE_TAGS
 from ..utils import Point, cache, collapse_duplicate_point, cut
 from .element import EmbroideryElement, Patch, param
 from .validation import ValidationError, ValidationWarning
@@ -577,10 +578,13 @@ class SatinColumn(EmbroideryElement):
         return SatinColumn(node)
 
     def get_patterns(self):
-        xpath = ".//*[@inkstitch:pattern='%(id)s']" % dict(id=self.node.get('id'))
-        patterns = self.node.getroottree().getroot().xpath(xpath)
+        xpath = "./ancestor::svg:g[svg:use[@xlink:href='#inkstitch_pattern_group']]//*[not(@inkstitch:satin_column='true')]"
+        patterns = self.node.xpath(xpath, namespaces=NSS)
         line_strings = []
         for pattern in patterns:
+            # TODO: exclude fills in case we will want to use them with the pattern too
+            if pattern.tag not in EMBROIDERABLE_TAGS:
+                continue
             d = pattern.get_path()
             path = paths.Path(d).to_superpath()
             path = apply_transforms(path, pattern)
