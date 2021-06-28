@@ -49,9 +49,6 @@ COMMANDS = {
     # L10N command that affects a layer
     "ignore_layer": N_("Ignore layer (do not stitch any objects in this layer)"),
 
-    # L10N command that affects a group
-    "pattern_group": N_("Strokes in this group will be interpretet as a pattern"),
-
     # L10N command that affects entire document
     "origin": N_("Origin for exported embroidery files"),
 
