@@ -60,7 +60,6 @@ COMMANDS = {
 }
 
 OBJECT_COMMANDS = ["fill_start", "fill_end", "satin_start", "satin_end", "stop", "trim", "ignore_object", "satin_cut_point"]
-GROUP_COMMANDS = ["pattern_group"]
 LAYER_COMMANDS = ["ignore_layer"]
 GLOBAL_COMMANDS = ["origin", "stop_position"]
 
@@ -185,12 +184,6 @@ def find_commands(node):
             pass
 
     return commands
-
-
-def group_commands(node, command):
-    xpath = "./ancestor::svg:g/svg:use[@xlink:href='#inkstitch_%(command)s']" % dict(id=node.get('id'), command=command)
-    group_command = node.xpath(xpath, namespaces=inkex.NSS)
-    return group_command
 
 
 def layer_commands(layer, command):

@@ -30,3 +30,7 @@ class PatternObject(EmbroideryElement):
 
     def to_patches(self, last_patch):
         return []
+
+
+def is_pattern(node):
+    return "marker-start:url(#inkstitch-pattern-marker)" in node.get('style', '')

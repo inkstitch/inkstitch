@@ -578,11 +578,14 @@ class SatinColumn(EmbroideryElement):
         return SatinColumn(node)
 
     def get_patterns(self):
-        xpath = "./ancestor::svg:g[svg:use[@xlink:href='#inkstitch_pattern_group']]//*[not(@inkstitch:satin_column='true')]"
+        # TODO: which one is better?!?
+        # All child groups of pattern
+        # xpath = "./ancestor::svg:g//*[contains(@style, 'marker-start:url(#inkstitch-pattern-marker)')]"
+        # Only direct siblings of pattern
+        xpath = "./parent::svg:g/*[contains(@style, 'marker-start:url(#inkstitch-pattern-marker)')]"
         patterns = self.node.xpath(xpath, namespaces=NSS)
         line_strings = []
         for pattern in patterns:
-            # TODO: exclude fills in case we will want to use them with the pattern too
             if pattern.tag not in EMBROIDERABLE_TAGS:
                 continue
             d = pattern.get_path()
