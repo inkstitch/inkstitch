@@ -6,15 +6,13 @@
 from copy import deepcopy
 from itertools import chain
 
-from inkex import NSS, paths
+from inkex import paths
 from shapely import affinity as shaffinity
 from shapely import geometry as shgeo
 from shapely.ops import nearest_points
 
 from ..i18n import _
-from ..svg import (PIXELS_PER_MM, apply_transforms, line_strings_to_csp,
-                   point_lists_to_csp)
-from ..svg.tags import EMBROIDERABLE_TAGS
+from ..svg import PIXELS_PER_MM, line_strings_to_csp, point_lists_to_csp
 from ..utils import Point, cache, collapse_duplicate_point, cut
 from .element import EmbroideryElement, Patch, param
 from .validation import ValidationError, ValidationWarning
@@ -568,22 +566,6 @@ class SatinColumn(EmbroideryElement):
             del node.attrib["transform"]
 
         return SatinColumn(node)
-
-    def get_patterns(self):
-        xpath = "./parent::svg:g/*[contains(@style, 'marker-start:url(#inkstitch-pattern-marker)')]"
-        patterns = self.node.xpath(xpath, namespaces=NSS)
-        line_strings = []
-        for pattern in patterns:
-            if pattern.tag not in EMBROIDERABLE_TAGS:
-                continue
-            d = pattern.get_path()
-            path = paths.Path(d).to_superpath()
-            path = apply_transforms(path, pattern)
-            path = self.flatten(path)
-            lines = [shgeo.LineString(p) for p in path]
-            for line in lines:
-                line_strings.append(line)
-        return shgeo.MultiLineString(line_strings)
 
     @property
     @cache
