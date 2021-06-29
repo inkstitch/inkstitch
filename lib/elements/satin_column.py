@@ -76,16 +76,6 @@ class SatinColumn(EmbroideryElement):
     def satin_column(self):
         return self.get_boolean_param("satin_column")
 
-    # I18N: Split stitch divides a satin column into equal with parts if the maximum stitch length is exceeded
-    @property
-    @param('split_stitch',
-           _('Split stitch'),
-           tooltip=_('Sets additional stitches if the satin column exceeds the maximum stitch length.'),
-           type='boolean',
-           default='false')
-    def split_stitch(self):
-        return self.get_boolean_param("split_stitch")
-
     # I18N: "E" stitch is so named because it looks like the letter E.
     @property
     @param('e_stitch', _('"E" stitch'), type='boolean', default='false')
@@ -96,10 +86,12 @@ class SatinColumn(EmbroideryElement):
     @param('max_stitch_length_mm',
            _('Maximum stitch length'),
            tooltip=_('Maximum stitch length for split stitches.'),
-           type='float', unit="mm",
-           default=12.1)
+           type='float', unit="mm")
     def max_stitch_length(self):
-        return max(self.get_float_param("max_stitch_length_mm", 12.4), 0.1 * PIXELS_PER_MM)
+        max_stitch_length = self.get_float_param("max_stitch_length_mm") or None
+        if max_stitch_length:
+            max_stitch_length *= PIXELS_PER_MM
+        return self.get_float_param("max_stitch_length_mm") or None
 
     @property
     def color(self):
@@ -793,6 +785,9 @@ class SatinColumn(EmbroideryElement):
 
         # print >> dbg, "satin", self.zigzag_spacing, self.pull_compensation
 
+        if self.max_stitch_length:
+            return self.do_split_stitch()
+
         patch = Patch(color=self.color)
 
         sides = self.plot_points_on_rails(self.zigzag_spacing, self.pull_compensation)
@@ -846,7 +841,7 @@ class SatinColumn(EmbroideryElement):
     def _get_split_points(self, left, right, count=None):
         points = []
         distance = left.distance(right)
-        split_count = count or int(distance / self.max_stitch_length)
+        split_count = count or int(-(-distance // self.max_stitch_length))
         for i in range(split_count):
             line = shgeo.LineString((left, right))
             split_point = line.interpolate((i+1)/split_count, normalized=True)
@@ -875,8 +870,6 @@ class SatinColumn(EmbroideryElement):
 
         if self.e_stitch:
             patch += self.do_e_stitch()
-        elif self.split_stitch:
-            patch += self.do_split_stitch()
         else:
             patch += self.do_satin()
 
