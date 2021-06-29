@@ -578,10 +578,6 @@ class SatinColumn(EmbroideryElement):
         return SatinColumn(node)
 
     def get_patterns(self):
-        # TODO: which one is better?!?
-        # All child groups of pattern
-        # xpath = "./ancestor::svg:g//*[contains(@style, 'marker-start:url(#inkstitch-pattern-marker)')]"
-        # Only direct siblings of pattern
         xpath = "./parent::svg:g/*[contains(@style, 'marker-start:url(#inkstitch-pattern-marker)')]"
         patterns = self.node.xpath(xpath, namespaces=NSS)
         line_strings = []
@@ -828,20 +824,6 @@ class SatinColumn(EmbroideryElement):
 
         return patch
 
-    def do_pattern_satin(self, patterns):
-        # elements with the attribute 'inkstitch:pattern' set to this elements id will cause extra stitches to be added
-        patch = Patch(color=self.color)
-        sides = self.plot_points_on_rails(self.zigzag_spacing, self.pull_compensation)
-        for i, (left, right) in enumerate(zip(*sides)):
-            patch.add_stitch(left)
-            for point in self._get_pattern_points(left, right, patterns):
-                patch.add_stitch(point)
-            patch.add_stitch(right)
-            if not i+1 >= len(sides[0]):
-                for point in self._get_pattern_points(right, sides[0][i+1], patterns):
-                    patch.add_stitch(point)
-        return patch
-
     def do_split_stitch(self):
         # stitches exceeding the maximum stitch length will be divided into equal parts through additional stitches
         patch = Patch(color=self.color)
@@ -859,21 +841,7 @@ class SatinColumn(EmbroideryElement):
                 points, count = self._get_split_points(right, sides[0][i+1], count)
                 for point in points:
                     patch.add_stitch(point)
-
         return patch
-
-    def _get_pattern_points(self, left, right, patterns):
-        points = []
-        for pattern in patterns:
-            intersection = shgeo.LineString([left, right]).intersection(pattern)
-            if isinstance(intersection, shgeo.Point):
-                points.append(Point(intersection.x, intersection.y))
-            if isinstance(intersection, shgeo.MultiPoint):
-                for point in intersection:
-                    points.append(Point(point.x, point.y))
-        # sort points after their distance to left
-        points.sort(key=lambda point: point.distance(left))
-        return points
 
     def _get_split_points(self, left, right, count=None):
         points = []
@@ -905,13 +873,10 @@ class SatinColumn(EmbroideryElement):
             # zigzags sit on the contour walk underlay like rail ties on rails.
             patch += self.do_zigzag_underlay()
 
-        patterns = self.get_patterns()
         if self.e_stitch:
             patch += self.do_e_stitch()
         elif self.split_stitch:
             patch += self.do_split_stitch()
-        elif self.get_patterns():
-            patch += self.do_pattern_satin(patterns)
         else:
             patch += self.do_satin()
 
