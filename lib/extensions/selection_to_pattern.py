@@ -7,7 +7,7 @@ import inkex
 from lxml import etree
 
 from ..i18n import _
-from ..svg.tags import SVG_DEFS_TAG
+from ..svg.tags import EMBROIDERABLE_TAGS, SVG_DEFS_TAG
 from .base import InkstitchExtension
 
 
@@ -21,8 +21,9 @@ class SelectionToPattern(InkstitchExtension):
             inkex.errormsg(_("Please select at least one object to be marked as a pattern."))
             return
 
-        for pattern in self.svg.selected.values():
-            self.set_marker(pattern)
+        for pattern in self.get_nodes():
+            if pattern.tag in EMBROIDERABLE_TAGS:
+                self.set_marker(pattern)
 
     def set_marker(self, node):
         xpath = ".//marker[@id='inkstitch-pattern-marker']"
