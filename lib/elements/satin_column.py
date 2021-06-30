@@ -12,7 +12,7 @@ from shapely import geometry as shgeo
 from shapely.ops import nearest_points
 
 from ..i18n import _
-from ..svg import PIXELS_PER_MM, line_strings_to_csp, point_lists_to_csp
+from ..svg import line_strings_to_csp, point_lists_to_csp
 from ..utils import Point, cache, collapse_duplicate_point, cut
 from .element import EmbroideryElement, Patch, param
 from .validation import ValidationError, ValidationWarning
@@ -86,9 +86,6 @@ class SatinColumn(EmbroideryElement):
            tooltip=_('Maximum stitch length for split stitches.'),
            type='float', unit="mm")
     def max_stitch_length(self):
-        max_stitch_length = self.get_float_param("max_stitch_length_mm") or None
-        if max_stitch_length:
-            max_stitch_length *= PIXELS_PER_MM
         return self.get_float_param("max_stitch_length_mm") or None
 
     @property
