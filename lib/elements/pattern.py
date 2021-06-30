@@ -12,13 +12,14 @@ from .validation import ObjectTypeWarning
 
 class PatternWarning(ObjectTypeWarning):
     name = _("Pattern Element")
-    description = _("This element will only be stitched out as a pattern within the specified object.")
+    description = _("This element will not be embroidered. "
+                    "It will appear as a pattern in objects of it's group in the object panel. "
+                    "Sub-group objects will be ignored.")
     steps_to_solve = [
-        _("If you want to remove the pattern configuration for a pattern object follow these steps:"),
-        _("* Select pattern element(s)"),
-        _('* Run Extensions > Ink/Stitch > Troubleshoot > Remove embroidery settings...'),
-        _('* Make sure "Remove params" is enables'),
-        _('* Click "Apply"')
+        _("Turn the pattern marker off:"),
+        _('* Open the Fill and Stroke panel (Objects > Fill and Stroke)'),
+        _('* Go to the Stroke style tab'),
+        _('* Under "Markers" choose the first (empty) option in the first dropdown list.')
     ]
 
 
