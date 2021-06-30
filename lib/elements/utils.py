@@ -4,6 +4,7 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 from ..commands import is_command
+from ..patterns import is_pattern
 from ..svg.tags import (EMBROIDERABLE_TAGS, SVG_IMAGE_TAG, SVG_PATH_TAG,
                         SVG_POLYLINE_TAG, SVG_TEXT_TAG)
 from .auto_fill import AutoFill
@@ -12,7 +13,7 @@ from .element import EmbroideryElement
 from .empty_d_object import EmptyDObject
 from .fill import Fill
 from .image import ImageObject
-from .pattern import PatternObject, is_pattern
+from .pattern import PatternObject
 from .polyline import Polyline
 from .satin_column import SatinColumn
 from .stroke import Stroke

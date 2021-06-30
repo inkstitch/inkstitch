@@ -9,10 +9,10 @@ from copy import deepcopy
 import inkex
 import tinycss2
 from inkex import bezier
-from shapely import geometry as shgeo
 
 from ..commands import find_commands
 from ..i18n import _
+from ..patterns import apply_patterns
 from ..svg import (PIXELS_PER_MM, apply_transforms, convert_length,
                    get_node_transform)
 from ..svg.tags import (EMBROIDERABLE_TAGS, INKSCAPE_LABEL, INKSTITCH_ATTRIBS,
@@ -331,52 +331,6 @@ class EmbroideryElement(object):
         else:
             return None
 
-    @cache
-    def get_patterns(self):
-        xpath = "./parent::svg:g/*[contains(@style, 'marker-start:url(#inkstitch-pattern-marker)')]"
-        patterns = self.node.xpath(xpath, namespaces=inkex.NSS)
-        line_strings = []
-        for pattern in patterns:
-            if pattern.tag not in EMBROIDERABLE_TAGS:
-                continue
-            d = pattern.get_path()
-            path = inkex.paths.Path(d).to_superpath()
-            path = apply_transforms(path, pattern)
-            path = self.flatten(path)
-            lines = [shgeo.LineString(p) for p in path]
-            for line in lines:
-                line_strings.append(line)
-        return shgeo.MultiLineString(line_strings)
-
-    def _apply_patterns(self, patches):
-        patterns = self.get_patterns()
-        if not patterns:
-            return patches
-
-        patch_points = []
-        for patch in patches:
-            for i, stitch in enumerate(patch.stitches):
-                patch_points.append(stitch)
-                if i == len(patch.stitches) - 1:
-                    continue
-                intersection_points = self._get_pattern_points(stitch, patch.stitches[i+1], patterns)
-                for point in intersection_points:
-                    patch_points.append(point)
-        patch.stitches = patch_points
-
-    def _get_pattern_points(self, first, second, patterns):
-        points = []
-        for pattern in patterns:
-            intersection = shgeo.LineString([first, second]).intersection(pattern)
-            if isinstance(intersection, shgeo.Point):
-                points.append(Point(intersection.x, intersection.y))
-            if isinstance(intersection, shgeo.MultiPoint):
-                for point in intersection:
-                    points.append(Point(point.x, point.y))
-        # sort points after their distance to left
-        points.sort(key=lambda point: point.distance(first))
-        return points
-
     def strip_control_points(self, subpath):
         return [point for control_before, point, control_after in subpath]
 
@@ -409,7 +363,7 @@ class EmbroideryElement(object):
         self.validate()
 
         patches = self.to_patches(last_patch)
-        self._apply_patterns(patches)
+        apply_patterns(patches, self.node)
 
         for patch in patches:
             patch.tie_modus = self.ties

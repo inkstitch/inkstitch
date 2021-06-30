@@ -15,8 +15,8 @@ from stringcase import snakecase
 from ..commands import is_command, layer_commands
 from ..elements import EmbroideryElement, nodes_to_elements
 from ..elements.clone import is_clone
-from ..elements.pattern import is_pattern
 from ..i18n import _
+from ..patterns import is_pattern
 from ..svg import generate_unique_id
 from ..svg.tags import (CONNECTOR_TYPE, EMBROIDERABLE_TAGS, INKSCAPE_GROUPMODE,
                         NOT_EMBROIDERABLE_TAGS, SVG_DEFS_TAG, SVG_GROUP_TAG)

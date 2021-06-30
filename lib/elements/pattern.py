@@ -6,7 +6,6 @@
 import inkex
 
 from ..i18n import _
-from ..svg.tags import EMBROIDERABLE_TAGS
 from .element import EmbroideryElement
 from .validation import ObjectTypeWarning
 
@@ -31,9 +30,3 @@ class PatternObject(EmbroideryElement):
 
     def to_patches(self, last_patch):
         return []
-
-
-def is_pattern(node):
-    if node.tag not in EMBROIDERABLE_TAGS:
-        return False
-    return "marker-start:url(#inkstitch-pattern-marker)" in node.get('style', '')

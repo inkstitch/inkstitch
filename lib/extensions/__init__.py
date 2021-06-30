@@ -5,7 +5,6 @@
 
 from lib.extensions.troubleshoot import Troubleshoot
 
-from .apply_pattern import ApplyPattern
 from .auto_satin import AutoSatin
 from .break_apart import BreakApart
 from .cleanup import Cleanup
@@ -29,6 +28,7 @@ from .params import Params
 from .print_pdf import Print
 from .remove_embroidery_settings import RemoveEmbroiderySettings
 from .reorder import Reorder
+from .selection_to_pattern import SelectionToPattern
 from .simulator import Simulator
 from .stitch_plan_preview import StitchPlanPreview
 from .zip import Zip
@@ -41,7 +41,7 @@ __all__ = extensions = [StitchPlanPreview,
                         Output,
                         Zip,
                         Flip,
-                        ApplyPattern,
+                        SelectionToPattern,
                         ObjectCommands,
                         LayerCommands,
                         GlobalCommands,

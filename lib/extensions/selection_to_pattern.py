@@ -11,8 +11,7 @@ from ..svg.tags import SVG_DEFS_TAG
 from .base import InkstitchExtension
 
 
-class ApplyPattern(InkstitchExtension):
-    # This extension will mark selected
+class SelectionToPattern(InkstitchExtension):
 
     def effect(self):
         if not self.get_elements():
