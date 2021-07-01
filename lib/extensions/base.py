@@ -149,7 +149,8 @@ class InkstitchExtension(inkex.Effect):
             if len(list(layer_commands(node, "ignore_layer"))):
                 return []
 
-        if element.has_style('display') and element.get_style('display') is None:
+        if (node.tag in [EMBROIDERABLE_TAGS, SVG_GROUP_TAG] and
+                element.get_style('display', 'inline') is None):
             return []
 
         if node.tag == SVG_DEFS_TAG:

@@ -196,12 +196,9 @@ class EmbroideryElement(object):
 
     def get_style(self, style_name, default=None):
         try:
-            # try to use inkex styles, they also check for stylesheets
             style = inkex.Style(self.node.cascaded_style()).get(style_name, default)
         except AttributeError:
-            # inkex styles will fail in case we read our elements on the fly
-            # if an element defines the style only through css classes, ink/stitch will not be able to
-            # render the element with this method
+            # inkex styles will fail in the lettering module with fonts using auto-route satin
             style = self._get_style_raw(style_name) or default
         if style == 'none':
             style = None
