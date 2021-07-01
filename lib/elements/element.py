@@ -194,9 +194,13 @@ class EmbroideryElement(object):
             parent = parent.getparent()
         return style
 
+    @cache
+    def _get_cascaded_style(self):
+        return self.node.cascaded_style()
+
     def get_style(self, style_name, default=None):
         try:
-            style = inkex.Style(self.node.cascaded_style()).get(style_name, default)
+            style = self._get_cascaded_style().get(style_name, default)
         except AttributeError:
             # inkex styles will fail in the lettering module with fonts using auto-route satin
             style = self._get_style_raw(style_name) or default
