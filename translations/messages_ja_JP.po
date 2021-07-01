@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-06-13 00:53+0000\n"
-"PO-Revision-Date: 2021-06-14 00:50\n"
+"PO-Revision-Date: 2021-07-01 00:55\n"
 "Last-Translator: \n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -1008,7 +1008,7 @@ msgstr "デザインに他のカラーパレットを選択してください。
 #: lib/extensions/input.py:71
 #, python-format
 msgid "File does not exist and cannot be opened. Please correct the file path and try again.\\r%s"
-msgstr ""
+msgstr "ファイルが存在しないため開けません。ファイルパスを修正して再度お試しください。\\r%s"
 
 #: lib/extensions/layer_commands.py:23
 msgid "Please choose one or more commands to add."
@@ -2011,7 +2011,7 @@ msgstr "しきい値で指定された領域よりも小さい領域を削除し
 
 #: templates/cleanup.xml:8
 msgid "Fill area threshold (px²)"
-msgstr ""
+msgstr "塗りつぶし領域のしきい値(px²)"
 
 #: templates/cleanup.xml:10
 msgid "Removes small strokes shorter than defined by threshold."
@@ -2019,7 +2019,7 @@ msgstr "しきい値で定義された長さよりも短いストロークを削
 
 #: templates/cleanup.xml:11
 msgid "Stroke threshold (px)"
-msgstr ""
+msgstr "ストロークのしきい値（px)"
 
 #: templates/convert_to_satin.xml:3
 msgid "Convert Line to Satin"

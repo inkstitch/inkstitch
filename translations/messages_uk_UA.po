@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-06-13 00:53+0000\n"
-"PO-Revision-Date: 2021-06-14 00:50\n"
+"PO-Revision-Date: 2021-07-01 00:55\n"
 "Last-Translator: \n"
 "Language-Team: Ukrainian\n"
 "MIME-Version: 1.0\n"
@@ -25,7 +25,7 @@ msgstr ""
 #. name of font in fonts/amita
 #: inkstitch-fonts-metadata.py:2
 msgid "Amita"
-msgstr ""
+msgstr "Amita"
 
 #. description of font in fonts/amita
 #: inkstitch-fonts-metadata.py:4
@@ -36,17 +36,17 @@ msgstr ""
 #. name of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:6
 msgid "Apex Lake"
-msgstr ""
+msgstr "Apex Lake"
 
 #. description of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:8
 msgid "Police de lettrines 59.4 par 57.8mm. Majuscules, chiffres, ! et ?"
-msgstr ""
+msgstr "Шрифт для ініціалів. Размір 59,4 на 57.8 мм. Великі літери, цифри, знаки оклику і запитання"
 
 #. name of font in fonts/baumans
 #: inkstitch-fonts-metadata.py:10
 msgid "Baumans"
-msgstr ""
+msgstr "Baumans"
 
 #. description of font in fonts/baumans
 #: inkstitch-fonts-metadata.py:12
@@ -57,7 +57,7 @@ msgstr ""
 #. name of font in fonts/chopin
 #: inkstitch-fonts-metadata.py:14
 msgid "Chopin Script"
-msgstr ""
+msgstr "Chopin Script"
 
 #. description of font in fonts/chopin
 #: inkstitch-fonts-metadata.py:16
@@ -68,7 +68,7 @@ msgstr ""
 #. name of font in fonts/coronaviral
 #: inkstitch-fonts-metadata.py:18
 msgid "Coronaviral"
-msgstr ""
+msgstr "Coronaviral"
 
 #. description of font in fonts/coronaviral
 #: inkstitch-fonts-metadata.py:20
@@ -78,7 +78,7 @@ msgstr ""
 #. name of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:22
 msgid "Dejavu Serif"
-msgstr ""
+msgstr "Dejavu Serif"
 
 #. description of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:24
@@ -89,7 +89,7 @@ msgstr ""
 #. name of font in fonts/digory_doodles_bean
 #: inkstitch-fonts-metadata.py:26
 msgid "Digory Doodles Bean"
-msgstr ""
+msgstr "Digory Doodles Bean"
 
 #. description of font in fonts/digory_doodles_bean
 #: inkstitch-fonts-metadata.py:28
@@ -99,7 +99,7 @@ msgstr ""
 #. name of font in fonts/emilio_20
 #: inkstitch-fonts-metadata.py:30
 msgid "Emilio 20"
-msgstr ""
+msgstr "Emilio 20"
 
 #. description of font in fonts/emilio_20
 #: inkstitch-fonts-metadata.py:32
@@ -110,7 +110,7 @@ msgstr ""
 #. name of font in fonts/espresso_dolce
 #: inkstitch-fonts-metadata.py:34
 msgid "Espresso Dolce"
-msgstr ""
+msgstr "Espresso Dolce"
 
 #. description of font in fonts/espresso_dolce
 #: inkstitch-fonts-metadata.py:36
@@ -120,27 +120,27 @@ msgstr ""
 #. name of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:38
 msgid "Geneva Simple Sans Rounded"
-msgstr ""
+msgstr "Geneva Simple Sans Заокруглений"
 
 #. description of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:40
 msgid "Suitable for small fonts (8 to 20 mm)"
-msgstr ""
+msgstr "Маленькі символи (8 - 20мм)"
 
 #. name of font in fonts/geneva_simple
 #: inkstitch-fonts-metadata.py:42
 msgid "Geneva Simple Sans"
-msgstr ""
+msgstr "Geneva Simple Sans"
 
 #. description of font in fonts/geneva_simple
 #: inkstitch-fonts-metadata.py:44
 msgid "Suitable for small fonts (6 to 15mm)"
-msgstr ""
+msgstr "Маленькі символи (6 - 15мм)"
 
 #. name of font in fonts/kaushan_script
 #: inkstitch-fonts-metadata.py:46
 msgid "Kaushan Script"
-msgstr ""
+msgstr "Kaushan Script"
 
 #. description of font in fonts/kaushan_script
 #: inkstitch-fonts-metadata.py:48
@@ -151,7 +151,7 @@ msgstr ""
 #. name of font in fonts/learning_curve
 #: inkstitch-fonts-metadata.py:50
 msgid "Learning curve"
-msgstr ""
+msgstr "Learning curve"
 
 #. description of font in fonts/learning_curve
 #: inkstitch-fonts-metadata.py:52
@@ -161,7 +161,7 @@ msgstr ""
 #. name of font in fonts/lobster
 #: inkstitch-fonts-metadata.py:54
 msgid "Lobster Two"
-msgstr ""
+msgstr "Lobster Two"
 
 #. description of font in fonts/lobster
 #: inkstitch-fonts-metadata.py:56
@@ -172,7 +172,7 @@ msgstr ""
 #. name of font in fonts/magnolia_ script
 #: inkstitch-fonts-metadata.py:58
 msgid "Magnolia Script"
-msgstr ""
+msgstr "Magnolia Script"
 
 #. description of font in fonts/magnolia_ script
 #: inkstitch-fonts-metadata.py:60
@@ -182,7 +182,7 @@ msgstr ""
 #. name of font in fonts/manuskript_gotisch
 #: inkstitch-fonts-metadata.py:62
 msgid "Manuskript Gothisch"
-msgstr ""
+msgstr "Manuskript Gothisch"
 
 #. description of font in fonts/manuskript_gotisch
 #: inkstitch-fonts-metadata.py:64
@@ -204,7 +204,7 @@ msgstr "Основний шрифт підходить для символів �
 #. name of font in fonts/romanaugusa
 #: inkstitch-fonts-metadata.py:70
 msgid "Romanaugusa"
-msgstr ""
+msgstr "Romanaugusa"
 
 #. description of font in fonts/romanaugusa
 #: inkstitch-fonts-metadata.py:72
@@ -215,7 +215,7 @@ msgstr ""
 #. name of font in fonts/romanaugusa_bicolor
 #: inkstitch-fonts-metadata.py:74
 msgid "Romanaugusa bicolor"
-msgstr ""
+msgstr "Romanaugusa bicolor"
 
 #. description of font in fonts/romanaugusa_bicolor
 #: inkstitch-fonts-metadata.py:76
@@ -226,7 +226,7 @@ msgstr ""
 #. name of font in fonts/sacramarif
 #: inkstitch-fonts-metadata.py:78
 msgid "Sacramarif"
-msgstr ""
+msgstr "Sacramarif"
 
 #. description of font in fonts/sacramarif
 #: inkstitch-fonts-metadata.py:80
@@ -247,7 +247,7 @@ msgstr "Шрифт пасує до маленьких написів. Велик
 #. name of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:86
 msgid "TT Directors"
-msgstr ""
+msgstr "TT Directors"
 
 #. description of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:88
@@ -257,7 +257,7 @@ msgstr ""
 #. name of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:90
 msgid "TT Masters"
-msgstr ""
+msgstr "TT Masters"
 
 #. description of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:92
@@ -266,11 +266,11 @@ msgstr "Шрифт пасує до важкого тексту :)"
 
 #: inkstitch.py:56
 msgid "Ink/Stitch cannot read your SVG file. This is often the case when you use a file which has been created with Adobe Illustrator."
-msgstr ""
+msgstr "Ink/Stitch не може прочитати ваш SVG файл. Така ситуація часто виникає, коли файл було створено у програмі Adobe Illustrator."
 
 #: inkstitch.py:59
 msgid "Try to import the file into Inkscape through 'File > Import...' (Ctrl+I)"
-msgstr ""
+msgstr "Спробуйте імпортувати файл в Inkscape через меню 'Файл > Імпортувати...' (Ctrl+I)"
 
 #: inkstitch.py:70
 msgid "Ink/Stitch experienced an unexpected error."
@@ -313,7 +313,7 @@ msgstr ""
 #. command attached to an object
 #: lib/commands.py:44
 msgid "Ignore this object (do not stitch)"
-msgstr ""
+msgstr "Ігнорувати цей об'ект(не вишивати)"
 
 #. command attached to an object
 #: lib/commands.py:47
@@ -495,7 +495,7 @@ msgstr ""
 
 #: lib/elements/clone.py:38
 msgid "Clone is not embroiderable"
-msgstr ""
+msgstr "Клон не може бути вишитий"
 
 #: lib/elements/clone.py:39
 msgid "There are one ore more clone objects in this document. A clone must be a direct child of an embroiderable element. Ink/Stitch cannot embroider clones of groups or other not embroiderable elements (text or image)."
