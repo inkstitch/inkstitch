@@ -9,6 +9,7 @@ from .auto_satin import AutoSatin
 from .break_apart import BreakApart
 from .cleanup import Cleanup
 from .convert_to_satin import ConvertToSatin
+from .convert_to_stroke import ConvertToStroke
 from .cut_satin import CutSatin
 from .duplicate_params import DuplicateParams
 from .embroider_settings import EmbroiderSettings
@@ -44,6 +45,7 @@ __all__ = extensions = [StitchPlanPreview,
                         LayerCommands,
                         GlobalCommands,
                         ConvertToSatin,
+                        ConvertToStroke,
                         CutSatin,
                         AutoSatin,
                         Lettering,
