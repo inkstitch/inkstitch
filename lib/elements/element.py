@@ -195,12 +195,36 @@ class EmbroideryElement(object):
         return style
 
     @cache
-    def _get_cascaded_style(self):
-        return self.node.cascaded_style()
+    def _get_cascaded_and_composed_style(self):
+        """Gets all styles applied to this element, including style tags and parent styles.
+
+        The SVG spec says that we're supposed to apply styles from SVG tags and also inherit
+        some styles from parent tags.  The latest release of Inkscape has an inkex that does
+        not do this.  It provides cascaded_style() (which includes <style> tags) and
+        composed_style() (which includes parents' styles but not <style> tags), but not both.
+
+        Once we're able to use a newer inkex, we can replace all of this with specified_style().
+        """
+
+        def _cascaded_style_with_fallback(node):
+            try:
+                return node.cascaded_style()
+            except inkex.utils.FragmentError:
+                # This happens for nodes that exist outside a DOM, like the glyphs in Lettering.
+                return node.composed_style()
+
+        def _cascaded_composed_style(node):
+            parent = node.getparent()
+            if parent is not None and isinstance(parent, inkex.ShapeElement):
+                return _cascaded_composed_style(parent) + _cascaded_style_with_fallback(node)
+            else:
+                return _cascaded_style_with_fallback(node)
+
+        return _cascaded_composed_style(self.node)
 
     def get_style(self, style_name, default=None):
         try:
-            style = self._get_cascaded_style().get(style_name, default)
+            style = self._get_cascaded_and_composed_style().get(style_name, default)
         except AttributeError:
             # inkex styles will fail in the lettering module with fonts using auto-route satin
             style = self._get_style_raw(style_name) or default
