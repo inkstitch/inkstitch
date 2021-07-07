@@ -56,7 +56,8 @@ class SelectionToPattern(InkstitchExtension):
             defs.append(etree.fromstring(marker))
 
         # attach marker to node
-        style = node.get('style', '').split(";")
+        style = node.get('style') or ''
+        style = style.split(";")
         style = [i for i in style if not i.startswith('marker-start')]
         style.append('marker-start:url(#inkstitch-pattern-marker)')
         node.set('style', ";".join(style))
