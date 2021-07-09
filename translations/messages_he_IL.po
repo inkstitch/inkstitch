@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-06-13 00:53+0000\n"
-"PO-Revision-Date: 2021-07-01 00:55\n"
+"POT-Creation-Date: 2021-07-05 00:48+0000\n"
+"PO-Revision-Date: 2021-07-09 00:54\n"
 "Last-Translator: \n"
 "Language-Team: Hebrew\n"
 "MIME-Version: 1.0\n"
@@ -960,6 +960,13 @@ msgstr ""
 
 #: lib/extensions/convert_to_satin.py:135
 msgid "Ink/Stitch cannot convert your stroke into a satin column. Please break up your path and try again."
+msgstr ""
+
+#. : Convert To Satin extension, user selected one or more objects that were
+#. not lines.
+#: lib/extensions/convert_to_stroke.py:25
+#: lib/extensions/convert_to_stroke.py:30
+msgid "Please select at least one satin column to convert to a running stitch."
 msgstr ""
 
 #: lib/extensions/cut_satin.py:20
@@ -1973,7 +1980,8 @@ msgid "Preserve order of satin columns"
 msgstr ""
 
 #: templates/auto_satin.xml:12 templates/convert_to_satin.xml:10
-#: templates/cut_satin.xml:10 templates/flip.xml:10
+#: templates/convert_to_stroke.xml:13 templates/cut_satin.xml:10
+#: templates/flip.xml:10
 msgid "Satin Tools"
 msgstr ""
 
@@ -2019,6 +2027,18 @@ msgstr ""
 
 #: templates/convert_to_satin.xml:3
 msgid "Convert Line to Satin"
+msgstr ""
+
+#: templates/convert_to_stroke.xml:3
+msgid "Convert Satin to Stroke"
+msgstr ""
+
+#: templates/convert_to_stroke.xml:6
+msgid "Converts a satin column into a running stitch."
+msgstr ""
+
+#: templates/convert_to_stroke.xml:8
+msgid "Do not delete original satin column."
 msgstr ""
 
 #: templates/cut_satin.xml:3

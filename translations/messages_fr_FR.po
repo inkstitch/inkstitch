@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-06-13 00:53+0000\n"
-"PO-Revision-Date: 2021-07-01 00:55\n"
+"POT-Creation-Date: 2021-07-05 00:48+0000\n"
+"PO-Revision-Date: 2021-07-09 00:54\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -963,6 +963,13 @@ msgstr "Seulement les lignes simples peuvent être converties en colonnes satin�
 msgid "Ink/Stitch cannot convert your stroke into a satin column. Please break up your path and try again."
 msgstr "Inkstitch ne peut pas convertir votre trait en colonne satin. Veuillez briser votre chemin et réessayer."
 
+#. : Convert To Satin extension, user selected one or more objects that were
+#. not lines.
+#: lib/extensions/convert_to_stroke.py:25
+#: lib/extensions/convert_to_stroke.py:30
+msgid "Please select at least one satin column to convert to a running stitch."
+msgstr "Veuillez sélectionner au moins une colonne de satin à convertir en point droit."
+
 #: lib/extensions/cut_satin.py:20
 msgid "Please select one or more satin columns to cut."
 msgstr "Veuillez sélectionner une ou plusieurs colonnes satin à scinder."
@@ -1006,7 +1013,7 @@ msgstr "Veuillez choisir une autre palette de couleurs pour votre dessin."
 #: lib/extensions/input.py:71
 #, python-format
 msgid "File does not exist and cannot be opened. Please correct the file path and try again.\\r%s"
-msgstr ""
+msgstr "Le fichier n'existe pas et ne peut être ouvert. Veuillez corriger le chemin du fichier et réessayer.\\r%s"
 
 #: lib/extensions/layer_commands.py:23
 msgid "Please choose one or more commands to add."
@@ -1976,7 +1983,8 @@ msgid "Preserve order of satin columns"
 msgstr "Préserver l’ordre des colonnes satin"
 
 #: templates/auto_satin.xml:12 templates/convert_to_satin.xml:10
-#: templates/cut_satin.xml:10 templates/flip.xml:10
+#: templates/convert_to_stroke.xml:13 templates/cut_satin.xml:10
+#: templates/flip.xml:10
 msgid "Satin Tools"
 msgstr "Outils de satin"
 
@@ -2010,7 +2018,7 @@ msgstr "Supprime les zones plus petites que celles délimitées par le seuil."
 
 #: templates/cleanup.xml:8
 msgid "Fill area threshold (px²)"
-msgstr ""
+msgstr "Seuil de suppression de petites zones de remplissage (px²)"
 
 #: templates/cleanup.xml:10
 msgid "Removes small strokes shorter than defined by threshold."
@@ -2018,11 +2026,23 @@ msgstr "Supprime les petits traits plus courts que ceux définis par le seuil."
 
 #: templates/cleanup.xml:11
 msgid "Stroke threshold (px)"
-msgstr ""
+msgstr "Seuil de suppression de petits traits (px)"
 
 #: templates/convert_to_satin.xml:3
 msgid "Convert Line to Satin"
 msgstr "Convertir ligne en satin"
+
+#: templates/convert_to_stroke.xml:3
+msgid "Convert Satin to Stroke"
+msgstr "Convertir le satin en trait"
+
+#: templates/convert_to_stroke.xml:6
+msgid "Converts a satin column into a running stitch."
+msgstr "Convertit une colonne de satin en un point droit."
+
+#: templates/convert_to_stroke.xml:8
+msgid "Do not delete original satin column."
+msgstr "Ne pas supprimer la colonne de satin d'origine."
 
 #: templates/cut_satin.xml:3
 msgid "Cut Satin Column"

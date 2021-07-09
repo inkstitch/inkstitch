@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-06-13 00:53+0000\n"
-"PO-Revision-Date: 2021-07-01 00:55\n"
+"POT-Creation-Date: 2021-07-05 00:48+0000\n"
+"PO-Revision-Date: 2021-07-09 00:54\n"
 "Last-Translator: \n"
 "Language-Team: Ukrainian\n"
 "MIME-Version: 1.0\n"
@@ -31,7 +31,7 @@ msgstr "Amita"
 #: inkstitch-fonts-metadata.py:4
 #, python-format
 msgid "Amita bold. The capital M is 25.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 160%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Amita жирний. Велика М має ширину 25.3 мм при 100% масштабі. Може масштабуватися від 80% до 160%. Кожний сатин має попередню прострочку зигзагом"
 
 #. name of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:6
@@ -52,7 +52,7 @@ msgstr "Baumans"
 #: inkstitch-fonts-metadata.py:12
 #, python-format
 msgid "The capital M is 22.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 150%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Велика М має ширину 22.3 мм при 100% масштабі. Може масштабуватися від 80% до 150%. Кожний сатин має попередню прострочку зигзагом"
 
 #. name of font in fonts/chopin
 #: inkstitch-fonts-metadata.py:14
@@ -63,7 +63,7 @@ msgstr "Chopin Script"
 #: inkstitch-fonts-metadata.py:16
 #, python-format
 msgid "The capital M is 38.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 120%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Велика М має ширину 38.3 мм при 100% масштабі. Може масштабуватися від 80% до 120%. Кожний сатин має попередню прострочку зигзагом"
 
 #. name of font in fonts/coronaviral
 #: inkstitch-fonts-metadata.py:18
@@ -188,7 +188,7 @@ msgstr "Manuskript Gothisch"
 #: inkstitch-fonts-metadata.py:64
 #, python-format
 msgid "The capital M is 35 millimeter wide at 100% scale.  Can be scaled down to 70% or up to 140%.  Every satin has zigzag underlay"
-msgstr ""
+msgstr "Велика М має ширину 35 мм при 100% масштабі. Може масштабуватися від 70% до 140%. Кожний сатин має попередню прострочку зигзагом"
 
 #. name of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:66
@@ -274,7 +274,7 @@ msgstr "Спробуйте імпортувати файл в Inkscape чере�
 
 #: inkstitch.py:70
 msgid "Ink/Stitch experienced an unexpected error."
-msgstr ""
+msgstr "В Ink/Stitch сталася невідома помилка."
 
 #: inkstitch.py:71
 msgid "If you'd like to help, please file an issue at https://github.com/inkstitch/inkstitch/issues and include the entire error description below:"
@@ -475,7 +475,7 @@ msgstr "Якщо ви хочете допомогти нам зробити Ink/
 
 #: lib/elements/clone.py:27
 msgid "Clone Object"
-msgstr ""
+msgstr "Клонувати об'єкт"
 
 #: lib/elements/clone.py:28
 msgid "There are one or more clone objects in this document.  Ink/Stitch can work with single clones, but you are limited to set a very few parameters. "
@@ -487,11 +487,11 @@ msgstr ""
 
 #: lib/elements/clone.py:32
 msgid "* Select the clone"
-msgstr ""
+msgstr "* Виберіть клон"
 
 #: lib/elements/clone.py:33 lib/elements/clone.py:44
 msgid "* Run: Edit > Clone > Unlink Clone (Alt+Shift+D)"
-msgstr ""
+msgstr "* Виберіть: Правка > Клони > Від'єднати клона (Alt+Shift+D)"
 
 #: lib/elements/clone.py:38
 msgid "Clone is not embroiderable"
@@ -507,11 +507,11 @@ msgstr ""
 
 #: lib/elements/clone.py:43
 msgid "* Select the clone."
-msgstr ""
+msgstr "* Виберіть клон."
 
 #: lib/elements/clone.py:58
 msgid "Clone"
-msgstr ""
+msgstr "Клонувати"
 
 #: lib/elements/clone.py:64
 msgid "Custom fill angle"
@@ -962,6 +962,13 @@ msgstr ""
 msgid "Ink/Stitch cannot convert your stroke into a satin column. Please break up your path and try again."
 msgstr ""
 
+#. : Convert To Satin extension, user selected one or more objects that were
+#. not lines.
+#: lib/extensions/convert_to_stroke.py:25
+#: lib/extensions/convert_to_stroke.py:30
+msgid "Please select at least one satin column to convert to a running stitch."
+msgstr ""
+
 #: lib/extensions/cut_satin.py:20
 msgid "Please select one or more satin columns to cut."
 msgstr ""
@@ -982,7 +989,7 @@ msgstr ""
 
 #: lib/extensions/import_threadlist.py:33
 msgid "File not found."
-msgstr ""
+msgstr "Файл не знайдено."
 
 #: lib/extensions/import_threadlist.py:36
 msgid "The filepath specified is not a file but a dictionary.\n"
@@ -1973,7 +1980,8 @@ msgid "Preserve order of satin columns"
 msgstr "Зберегти порядок атласних колон"
 
 #: templates/auto_satin.xml:12 templates/convert_to_satin.xml:10
-#: templates/cut_satin.xml:10 templates/flip.xml:10
+#: templates/convert_to_stroke.xml:13 templates/cut_satin.xml:10
+#: templates/flip.xml:10
 msgid "Satin Tools"
 msgstr ""
 
@@ -2019,6 +2027,18 @@ msgstr ""
 
 #: templates/convert_to_satin.xml:3
 msgid "Convert Line to Satin"
+msgstr ""
+
+#: templates/convert_to_stroke.xml:3
+msgid "Convert Satin to Stroke"
+msgstr ""
+
+#: templates/convert_to_stroke.xml:6
+msgid "Converts a satin column into a running stitch."
+msgstr ""
+
+#: templates/convert_to_stroke.xml:8
+msgid "Do not delete original satin column."
 msgstr ""
 
 #: templates/cut_satin.xml:3
