@@ -206,9 +206,20 @@ class EmbroideryElement(object):
         Once we're able to use a newer inkex, we can replace all of this with specified_style().
         """
 
+        def _get_inline_style(node):
+            # inline styles seem to be ignored, let's add at least fill and stroke
+            style = ""
+            inline_fill = node.get('fill', None)
+            inline_stroke = node.get('stroke', None)
+            if inline_fill:
+                style += "fill:%s;" % inline_fill
+            if inline_stroke:
+                style += "stroke:%s;" % inline_stroke
+            return inkex.Style(style)
+
         def _cascaded_style_with_fallback(node):
             try:
-                return node.cascaded_style()
+                return _get_inline_style(node) + node.cascaded_style()
             except inkex.utils.FragmentError:
                 # This happens for nodes that exist outside a DOM, like the glyphs in Lettering.
                 return node.composed_style()
