@@ -180,9 +180,8 @@ class Troubleshoot(InkstitchExtension):
             elif problem_type == "type_warning":
                 text_color = "#ff9900"
                 problem_type_header = _("Object Type Warnings")
-                problem_type_description = _("Ink/Stitch only knows how to works with paths and ignores everything else. "
-                                             "You might want these shapes to be ignored, but if you don't, "
-                                             "follow the instructions to change this behaviour.")
+                problem_type_description = _("These objects may not work properly with Ink/Stitch. "
+                                             "Follow the instructions to correct unwanted behaviour.")
             if problems:
                 text.append([problem_type_header, "font-weight: bold; fill: %s; text-decoration: underline; font-size: 7px;" % text_color])
                 text.append(["", ""])
