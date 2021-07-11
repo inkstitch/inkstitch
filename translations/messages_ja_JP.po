@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-07-05 00:48+0000\n"
-"PO-Revision-Date: 2021-07-09 00:54\n"
+"POT-Creation-Date: 2021-07-11 00:56+0000\n"
+"PO-Revision-Date: 2021-07-11 00:58\n"
 "Last-Translator: \n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -1188,10 +1188,10 @@ msgid "Object Type Warnings"
 msgstr "オブジェクトタイプの警告"
 
 #: lib/extensions/troubleshoot.py:183
-msgid "Ink/Stitch only knows how to works with paths and ignores everything else. You might want these shapes to be ignored, but if you don't, follow the instructions to change this behaviour."
-msgstr "インクステッチはパスしか扱えず、それ以外は無視します。この図形を無視したくない場合は、指示に従って動作を変更してください。"
+msgid "These objects may not work properly with Ink/Stitch. Follow the instructions to correct unwanted behaviour."
+msgstr ""
 
-#: lib/extensions/troubleshoot.py:200
+#: lib/extensions/troubleshoot.py:199
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
 msgstr "1つのオブジェクトに複数のエラーが含まれている可能性がありますが、ポインタはオブジェクトごとに1つしかありません。 さらにエラーが発生した場合は、この関数を再度実行してください。 ポインタを削除するには、オブジェクトパネル（オブジェクト -> Objects...）で「Troubleshoot」というレイヤーを削除します。"
 

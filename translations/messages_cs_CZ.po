@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-07-05 00:48+0000\n"
-"PO-Revision-Date: 2021-07-09 00:54\n"
+"POT-Creation-Date: 2021-07-11 00:56+0000\n"
+"PO-Revision-Date: 2021-07-11 00:58\n"
 "Last-Translator: \n"
 "Language-Team: Czech\n"
 "MIME-Version: 1.0\n"
@@ -1184,10 +1184,10 @@ msgid "Object Type Warnings"
 msgstr ""
 
 #: lib/extensions/troubleshoot.py:183
-msgid "Ink/Stitch only knows how to works with paths and ignores everything else. You might want these shapes to be ignored, but if you don't, follow the instructions to change this behaviour."
+msgid "These objects may not work properly with Ink/Stitch. Follow the instructions to correct unwanted behaviour."
 msgstr ""
 
-#: lib/extensions/troubleshoot.py:200
+#: lib/extensions/troubleshoot.py:199
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
 msgstr ""
 
