@@ -7,15 +7,13 @@ import sys
 from copy import deepcopy
 
 import inkex
-import tinycss2
 from inkex import bezier
 
 from ..commands import find_commands
 from ..i18n import _
 from ..svg import (PIXELS_PER_MM, apply_transforms, convert_length,
                    get_node_transform)
-from ..svg.tags import (EMBROIDERABLE_TAGS, INKSCAPE_LABEL, INKSTITCH_ATTRIBS,
-                        SVG_GROUP_TAG, SVG_LINK_TAG, SVG_USE_TAG)
+from ..svg.tags import INKSCAPE_LABEL, INKSTITCH_ATTRIBS
 from ..utils import Point, cache
 
 
@@ -165,45 +163,21 @@ class EmbroideryElement(object):
         self.node.set(param, str(value))
 
     @cache
-    def parse_style(self, node=None):
-        if node is None:
-            node = self.node
-        element_style = node.get("style", "")
-        if element_style is None:
-            return None
-        declarations = tinycss2.parse_declaration_list(node.get("style", ""))
-        style = {declaration.lower_name: declaration.value[0].serialize() for declaration in declarations}
-        return style
-
-    @cache
-    def _get_style_raw(self, style_name):
-        if self.node is None:
-            return None
-        if self.node.tag not in [SVG_GROUP_TAG, SVG_LINK_TAG, SVG_USE_TAG] and self.node.tag not in EMBROIDERABLE_TAGS:
-            return None
-
-        style = self.parse_style()
-        if style:
-            style = style.get(style_name) or self.node.get(style_name)
-        parent = self.node.getparent()
-        # style not found, get inherited style elements
-        while not style and parent is not None:
-            style = self.parse_style(parent)
-            if style:
-                style = style.get(style_name) or parent.get(style_name)
-            parent = parent.getparent()
-        return style
-
-    @cache
     def _get_specified_style(self):
-        return self.node.specified_style()
+        try:
+            style = self.node.specified_style()
+        except AttributeError:
+            # specified style fails on elements outside the DOM
+            svg = inkex.SvgDocumentElement()
+            node = deepcopy(self.node)
+            node_id = node.get('id')
+            svg.insert(0, node)
+            node = svg.getElementById(node_id)
+            style = node.specified_style()
+        return style
 
     def get_style(self, style_name, default=None):
-        try:
-            style = self._get_specified_style().get(style_name, default)
-        except AttributeError:
-            # inkex styles will fail in the lettering module with fonts using auto-route satin
-            style = self._get_style_raw(style_name) or default
+        style = self._get_specified_style().get(style_name, default)
         if style == 'none':
             style = None
         return style

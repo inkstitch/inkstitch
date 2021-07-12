@@ -223,10 +223,9 @@ class RunningStitch(object):
         d = str(inkex.paths.CubicSuperPath(line_strings_to_csp([self.path])))
         node.set("d", d)
 
-        style = self.original_element.parse_style()
-        style['stroke-dasharray'] = "0.5,0.5"
-        style = str(inkex.Style(style))
-        node.set("style", style)
+        dasharray = inkex.Style("stroke-dasharray:0.5,0.5;")
+        style = inkex.Style(self.original_element.node.get('style', '')) + dasharray
+        node.set("style", str(style))
         node.set(INKSTITCH_ATTRIBS['running_stitch_length_mm'], self.running_stitch_length)
 
         stroke = Stroke(node)
