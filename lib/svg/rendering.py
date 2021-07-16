@@ -7,7 +7,6 @@ import math
 from math import pi
 
 import inkex
-from lxml import etree
 
 from .tags import (INKSCAPE_GROUPMODE, INKSCAPE_LABEL, INKSTITCH_ATTRIBS)
 from .units import PIXELS_PER_MM, get_viewbox_transform
@@ -243,4 +242,5 @@ def render_stitch_plan(svg, stitch_plan, realistic=False, visual_commands=True):
             color_block_to_paths(color_block, svg, group, visual_commands)
 
     if realistic:
-        svg.defs.append(etree.fromstring(realistic_filter, parser=inkex.SVG_PARSER))
+        filter_document = inkex.load_svg(realistic_filter)
+        svg.defs.append(filter_document.getroot())
