@@ -164,17 +164,8 @@ class EmbroideryElement(object):
 
     @cache
     def _get_specified_style(self):
-        try:
-            style = self.node.specified_style()
-        except AttributeError:
-            # specified style fails on elements outside the DOM
-            svg = inkex.SvgDocumentElement()
-            node = deepcopy(self.node)
-            node_id = node.get('id')
-            svg.insert(0, node)
-            node = svg.getElementById(node_id)
-            style = node.specified_style()
-        return style
+        # We want to cache this, because it's quite expensive to generate.
+        return self.node.specified_style()
 
     def get_style(self, style_name, default=None):
         style = self._get_specified_style().get(style_name, default)
