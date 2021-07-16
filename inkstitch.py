@@ -10,6 +10,12 @@ import traceback
 from argparse import ArgumentParser
 from io import StringIO
 
+if getattr(sys, 'frozen', None) is None:
+    # When running in development mode, we want to use the inkex installed by
+    # pip install, not the one bundled with Inkscape which is not new enough.
+    sys.path.remove('/usr/share/inkscape/extensions')
+    sys.path.append('/usr/share/inkscape/extensions')
+
 from inkex import errormsg
 from lxml.etree import XMLSyntaxError
 
@@ -26,7 +32,6 @@ ch.setLevel(logging.DEBUG)
 formatter = logging.Formatter('%(name)s - %(levelname)s - %(message)s')
 ch.setFormatter(formatter)
 logger.addHandler(ch)
-
 
 parser = ArgumentParser()
 parser.add_argument("--extension")
