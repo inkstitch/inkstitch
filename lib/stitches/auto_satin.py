@@ -8,7 +8,6 @@ from itertools import chain
 
 import inkex
 import networkx as nx
-from lxml import etree
 from shapely import geometry as shgeo
 from shapely.geometry import Point as ShapelyPoint
 
@@ -17,8 +16,7 @@ from ..elements import SatinColumn, Stroke
 from ..i18n import _
 from ..svg import (PIXELS_PER_MM, generate_unique_id, get_correction_transform,
                    line_strings_to_csp)
-from ..svg.tags import (INKSCAPE_LABEL, INKSTITCH_ATTRIBS, SVG_GROUP_TAG,
-                        SVG_PATH_TAG)
+from ..svg.tags import (INKSCAPE_LABEL, INKSTITCH_ATTRIBS)
 from ..utils import Point as InkstitchPoint
 from ..utils import cache, cut
 
@@ -219,7 +217,7 @@ class RunningStitch(object):
             original_element.node.get(INKSTITCH_ATTRIBS['contour_underlay_stitch_length_mm'], '')
 
     def to_element(self):
-        node = etree.Element(SVG_PATH_TAG)
+        node = inkex.PathElement()
         d = str(inkex.paths.CubicSuperPath(line_strings_to_csp([self.path])))
         node.set("d", d)
 
@@ -657,7 +655,7 @@ def preserve_original_groups(elements, original_parent_nodes):
 
 
 def create_new_group(parent, insert_index):
-    group = etree.Element(SVG_GROUP_TAG, {
+    group = inkex.Group(attrib={
         INKSCAPE_LABEL: _("Auto-Satin"),
         "transform": get_correction_transform(parent, child=True)
     })

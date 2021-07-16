@@ -5,18 +5,15 @@
 
 import textwrap
 
-from inkex import errormsg
-from lxml import etree
+import inkex
 
+from .base import InkstitchExtension
 from ..commands import add_layer_commands
 from ..elements.validation import (ObjectTypeWarning, ValidationError,
                                    ValidationWarning)
 from ..i18n import _
 from ..svg.path import get_correction_transform
-from ..svg.tags import (INKSCAPE_GROUPMODE, INKSCAPE_LABEL, SODIPODI_ROLE,
-                        SVG_GROUP_TAG, SVG_PATH_TAG, SVG_TEXT_TAG,
-                        SVG_TSPAN_TAG)
-from .base import InkstitchExtension
+from ..svg.tags import (INKSCAPE_GROUPMODE, INKSCAPE_LABEL, SODIPODI_ROLE)
 
 
 class Troubleshoot(InkstitchExtension):
@@ -49,7 +46,7 @@ class Troubleshoot(InkstitchExtension):
             message += "\n\n"
             message += _("If you are still having trouble with a shape not being embroidered, "
                          "check if it is in a layer with an ignore command.")
-            errormsg(message)
+            inkex.errormsg(message)
 
     def insert_pointer(self, problem):
         correction_transform = get_correction_transform(self.troubleshoot_layer)
@@ -67,31 +64,25 @@ class Troubleshoot(InkstitchExtension):
         pointer_style = "stroke:#000000;stroke-width:0.2;fill:%s;" % (fill_color)
         text_style = "fill:%s;stroke:#000000;stroke-width:0.2;font-size:8px;text-align:center;text-anchor:middle" % (fill_color)
 
-        path = etree.Element(
-            SVG_PATH_TAG,
-            {
-                "id": self.uniqueId("inkstitch__invalid_pointer__"),
-                "d": "m %s,%s 4,20 h -8 l 4,-20" % (problem.position.x, problem.position.y),
-                "style": pointer_style,
-                INKSCAPE_LABEL: _('Invalid Pointer'),
-                "transform": correction_transform
-            }
-        )
+        path = inkex.PathElement(attrib={
+            "id": self.uniqueId("inkstitch__invalid_pointer__"),
+            "d": "m %s,%s 4,20 h -8 l 4,-20" % (problem.position.x, problem.position.y),
+            "style": pointer_style,
+            INKSCAPE_LABEL: _('Invalid Pointer'),
+            "transform": correction_transform
+        })
         layer.insert(0, path)
 
-        text = etree.Element(
-            SVG_TEXT_TAG,
-            {
-                INKSCAPE_LABEL: _('Description'),
-                "x": str(problem.position.x),
-                "y": str(float(problem.position.y) + 30),
-                "transform": correction_transform,
-                "style": text_style
-            }
-        )
+        text = inkex.TextElement(attrib={
+            INKSCAPE_LABEL: _('Description'),
+            "x": str(problem.position.x),
+            "y": str(float(problem.position.y) + 30),
+            "transform": correction_transform,
+            "style": text_style
+        })
         layer.append(text)
 
-        tspan = etree.Element(SVG_TSPAN_TAG)
+        tspan = inkex.Tspan()
         tspan.text = problem.name
         text.append(tspan)
 
@@ -100,46 +91,34 @@ class Troubleshoot(InkstitchExtension):
         layer = svg.find(".//*[@id='__validation_layer__']")
 
         if layer is None:
-            layer = etree.Element(
-                SVG_GROUP_TAG,
-                {
-                    'id': '__validation_layer__',
-                    INKSCAPE_LABEL: _('Troubleshoot'),
-                    INKSCAPE_GROUPMODE: 'layer',
-                })
+            layer = inkex.Group(attrib={
+                'id': '__validation_layer__',
+                INKSCAPE_LABEL: _('Troubleshoot'),
+                INKSCAPE_GROUPMODE: 'layer',
+            })
             svg.append(layer)
-
         else:
             # Clear out everything from the last run
             del layer[:]
 
         add_layer_commands(layer, ["ignore_layer"])
 
-        error_group = etree.SubElement(
-            layer,
-            SVG_GROUP_TAG,
-            {
-                "id": '__validation_errors__',
-                INKSCAPE_LABEL: _("Errors"),
-            })
+        error_group = inkex.Group(attrib={
+            "id": '__validation_errors__',
+            INKSCAPE_LABEL: _("Errors"),
+        })
         layer.append(error_group)
 
-        warning_group = etree.SubElement(
-            layer,
-            SVG_GROUP_TAG,
-            {
-                "id": '__validation_warnings__',
-                INKSCAPE_LABEL: _("Warnings"),
-            })
+        warning_group = inkex.Group(attrib={
+            "id": '__validation_warnings__',
+            INKSCAPE_LABEL: _("Warnings"),
+        })
         layer.append(warning_group)
 
-        type_warning_group = etree.SubElement(
-            layer,
-            SVG_GROUP_TAG,
-            {
-                "id": '__validation_ignored__',
-                INKSCAPE_LABEL: _("Type Warnings"),
-            })
+        type_warning_group = inkex.Group(attrib={
+            "id": '__validation_ignored__',
+            INKSCAPE_LABEL: _("Type Warnings"),
+        })
         layer.append(type_warning_group)
 
         self.troubleshoot_layer = layer
@@ -151,14 +130,11 @@ class Troubleshoot(InkstitchExtension):
         svg = self.document.getroot()
         text_x = str(float(svg.get('viewBox', '0 0 800 0').split(' ')[2]) + 5.0)
 
-        text_container = etree.Element(
-            SVG_TEXT_TAG,
-            {
-                "x": text_x,
-                "y": str(5),
-                "style": "fill:#000000;font-size:5px;line-height:1;"
-            }
-        )
+        text_container = inkex.TextElement(attrib={
+            "x": text_x,
+            "y": str(5),
+            "style": "fill:#000000;font-size:5px;line-height:1;"
+        })
         self.troubleshoot_layer.append(text_container)
 
         text = [
@@ -207,13 +183,10 @@ class Troubleshoot(InkstitchExtension):
         text = self.split_text(text)
 
         for text_line in text:
-            tspan = etree.Element(
-                SVG_TSPAN_TAG,
-                {
-                    SODIPODI_ROLE: "line",
-                    "style": text_line[1]
-                }
-            )
+            tspan = inkex.Tspan(attrib={
+                SODIPODI_ROLE: "line",
+                "style": text_line[1]
+            })
             tspan.text = text_line[0]
             text_container.append(tspan)
 

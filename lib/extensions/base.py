@@ -49,19 +49,7 @@ class InkStitchMetadata(MutableMapping):
 
     def __init__(self, document):
         self.document = document
-        self.metadata = self._get_or_create_metadata()
-
-    def _get_or_create_metadata(self):
-        metadata = self.document.find(SVG_METADATA_TAG)
-
-        if metadata is None:
-            metadata = etree.SubElement(self.document.getroot(), SVG_METADATA_TAG)
-
-            # move it so that it goes right after the first element, sodipodi:namedview
-            self.document.getroot().remove(metadata)
-            self.document.getroot().insert(1, metadata)
-
-        return metadata
+        self.metadata = document.metadata
 
     # Because this class inherints from MutableMapping, all we have to do is
     # implement these five methods and we get a full dict-like interface.
@@ -212,7 +200,7 @@ class InkstitchExtension(inkex.Effect):
         return patches
 
     def get_inkstitch_metadata(self):
-        return InkStitchMetadata(self.document)
+        return InkStitchMetadata(self.svg)
 
     def get_base_file_name(self):
         svg_filename = self.document.getroot().get(inkex.addNS('docname', 'sodipodi'), "embroidery.svg")

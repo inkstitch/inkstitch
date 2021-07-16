@@ -12,8 +12,9 @@ import appdirs
 import inkex
 import wx
 import wx.adv
-from lxml import etree
 
+from .commands import CommandsExtension
+from .lettering_custom_font_dir import get_custom_font_dir
 from ..elements import nodes_to_elements
 from ..gui import PresetsPanel, SimulatorPreview, info_dialog
 from ..i18n import _
@@ -22,8 +23,6 @@ from ..svg import get_correction_transform
 from ..svg.tags import (INKSCAPE_LABEL, INKSTITCH_LETTERING, SVG_GROUP_TAG,
                         SVG_PATH_TAG)
 from ..utils import DotDict, cache, get_bundled_dir
-from .commands import CommandsExtension
-from .lettering_custom_font_dir import get_custom_font_dir
 
 
 class LetteringFrame(wx.Frame):
@@ -258,12 +257,13 @@ class LetteringFrame(wx.Frame):
         if self.settings.scale == 100:
             destination_group = self.group
         else:
-            destination_group = etree.SubElement(self.group, SVG_GROUP_TAG, {
+            destination_group = inkex.Group(attrib={
                 # L10N The user has chosen to scale the text by some percentage
                 # (50%, 200%, etc).  If you need to use the percentage symbol,
                 # make sure to double it (%%).
                 INKSCAPE_LABEL: _("Text scale %s%%") % self.settings.scale
             })
+            self.group.append(destination_group)
 
         font = self.fonts.get(self.font_chooser.GetValue(), self.default_font)
         try:
@@ -414,10 +414,12 @@ class Lettering(CommandsExtension):
             else:
                 return list(groups)[0]
         else:
-            return etree.SubElement(self.get_current_layer(), SVG_GROUP_TAG, {
+            group = inkex.Group(attrib={
                 INKSCAPE_LABEL: _("Ink/Stitch Lettering"),
                 "transform": get_correction_transform(self.get_current_layer(), child=True)
             })
+            self.get_current_layer().append(group)
+            return group
 
     def effect(self):
         app = wx.App()
