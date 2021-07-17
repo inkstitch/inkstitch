@@ -236,6 +236,7 @@ def render_stitch_plan(svg, stitch_plan, realistic=False, visual_commands=True):
             'id': '__color_block_%d__' % i,
             INKSCAPE_LABEL: "color block %d" % (i + 1)
         })
+        layer.append(group)
         if realistic:
             color_block_to_realistic_stitches(color_block, svg, group)
         else:
