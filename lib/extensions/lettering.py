@@ -414,7 +414,7 @@ class Lettering(CommandsExtension):
             else:
                 return list(groups)[0]
         else:
-            return etree.SubElement(self.svg.get_current_layer(), SVG_GROUP_TAG, {
+            return etree.SubElement(self.get_current_layer(), SVG_GROUP_TAG, {
                 INKSCAPE_LABEL: _("Ink/Stitch Lettering"),
                 "transform": get_correction_transform(self.get_current_layer(), child=True)
             })
