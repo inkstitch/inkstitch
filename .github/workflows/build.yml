@@ -152,7 +152,7 @@ jobs:
           pip install git+https://github.com/gtaylor/python-colormath
 
           pip install -r requirements.txt
-          pip install pyinstaller
+          pip install pyinstaller==4.3
 
           echo "${{ env.pythonLocation }}/bin" >> $GITHUB_PATH
       - shell: bash
