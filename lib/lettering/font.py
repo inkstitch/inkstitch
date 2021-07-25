@@ -7,16 +7,15 @@ import json
 import os
 from copy import deepcopy
 
-from inkex import styles
-from lxml import etree
+import inkex
 
+from .font_variant import FontVariant
 from ..elements import nodes_to_elements
 from ..exceptions import InkstitchException
 from ..i18n import _, get_languages
 from ..stitches.auto_satin import auto_satin
-from ..svg.tags import INKSCAPE_LABEL, SVG_GROUP_TAG, SVG_PATH_TAG
+from ..svg.tags import INKSCAPE_LABEL, SVG_PATH_TAG
 from ..utils import Point
-from .font_variant import FontVariant
 
 
 class FontError(InkstitchException):
@@ -190,7 +189,7 @@ class Font(object):
         for element in destination_group.iterdescendants(SVG_PATH_TAG):
             dash_array = ""
             stroke_width = ""
-            style = styles.Style(element.get('style'))
+            style = inkex.styles.Style(element.get('style'))
 
             if style.get('fill') == 'none':
                 stroke_width = ";stroke-width:1px"
@@ -224,7 +223,7 @@ class Font(object):
             An svg:g element containing the rendered text.
         """
 
-        group = etree.Element(SVG_GROUP_TAG, {
+        group = inkex.Group(attrib={
             INKSCAPE_LABEL: line
         })
 

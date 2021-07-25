@@ -47,7 +47,7 @@ class Input(object):
                     del stitch_plan.last_color_block[-1]
 
         extents = stitch_plan.extents
-        svg = etree.Element("svg", nsmap=inkex.NSS, attrib={
+        svg = inkex.SvgDocumentElement("svg", nsmap=inkex.NSS, attrib={
             "width": str(extents[0] * 2),
             "height": str(extents[1] * 2),
             "viewBox": "0 0 %s %s" % (extents[0] * 2, extents[1] * 2),

@@ -8,7 +8,6 @@ from copy import copy
 from inkex import paths, transforms
 
 from ..svg import get_guides
-from ..svg.path import get_correction_transform
 from ..svg.tags import SVG_GROUP_TAG, SVG_PATH_TAG
 
 
@@ -53,9 +52,7 @@ class Glyph(object):
                 node_copy = copy(node)
 
                 if "d" in node.attrib:
-                    transform = -transforms.Transform(get_correction_transform(node, True))
-                    path = paths.Path(node.get("d")).transform(transform).to_absolute()
-                    node_copy.set("d", str(path))
+                    node_copy.path = node.path.transform(node.composed_transform()).to_absolute()
 
                 # Delete transforms from paths and groups, since we applied
                 # them to the paths already.
