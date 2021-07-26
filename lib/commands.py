@@ -286,7 +286,6 @@ def add_group(document, node, command):
         "transform": get_correction_transform(node)
     })
     parent.insert(parent.index(node) + 1, group)
-    
     return group
 
 

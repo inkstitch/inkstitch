@@ -11,7 +11,8 @@ import time
 from threading import Thread
 
 import requests
-from flask import Flask, g, request
+from flask import Flask, g
+from werkzeug.serving import make_server
 
 from ..utils.json import InkStitchJSONEncoder
 from .install import install
@@ -24,13 +25,14 @@ class APIServer(Thread):
         self.extension = args[0]
         Thread.__init__(self, *args[1:], **kwargs)
         self.daemon = True
-        self.shutting_down = False
         self.app = None
         self.host = None
         self.port = None
         self.ready = False
 
         self.__setup_app()
+        self.flask_server = None
+        self.server_thread = None
 
     def __setup_app(self):  # noqa: C901
         # Disable warning about using a development server in a production environment
@@ -50,20 +52,13 @@ class APIServer(Thread):
             # this request
             g.extension = self.extension
 
-        @self.app.route('/shutdown', methods=['POST'])
-        def shutdown():
-            self.shutting_down = True
-            request.environ.get('werkzeug.server.shutdown')()
-            return "shutting down"
-
         @self.app.route('/ping')
         def ping():
             return "pong"
 
     def stop(self):
-        # for whatever reason, shutting down only seems possible in
-        # the context of a flask request, so we'll just make one
-        requests.post("http://%s:%s/shutdown" % (self.host, self.port))
+        self.flask_server.shutdown()
+        self.server_thread.join()
 
     def disable_logging(self):
         logging.getLogger('werkzeug').setLevel(logging.ERROR)
@@ -76,7 +71,9 @@ class APIServer(Thread):
 
         while True:
             try:
-                self.app.run(self.host, self.port, threaded=True)
+                self.flask_server = make_server(self.host, self.port, self.app)
+                self.server_thread = Thread(target=self.flask_server.serve_forever)
+                self.server_thread.start()
             except socket.error as e:
                 if e.errno == errno.EADDRINUSE:
                     self.port += 1
