@@ -9,13 +9,14 @@ from copy import deepcopy
 
 import inkex
 
-from .font_variant import FontVariant
 from ..elements import nodes_to_elements
 from ..exceptions import InkstitchException
+from ..extensions.lettering_custom_font_dir import get_custom_font_dir
 from ..i18n import _, get_languages
 from ..stitches.auto_satin import auto_satin
 from ..svg.tags import INKSCAPE_LABEL, SVG_PATH_TAG
 from ..utils import Point
+from .font_variant import FontVariant
 
 
 class FontError(InkstitchException):
@@ -156,6 +157,23 @@ class Font(object):
         if not font_variants:
             raise FontError(_("The font '%s' has no variants.") % self.name)
         return font_variants
+
+    @property
+    def marked_custom_font_id(self):
+        if not self.is_custom_font():
+            return self.id
+        else:
+            return self.id + '*'
+
+    @property
+    def marked_custom_font_name(self):
+        if not self.is_custom_font():
+            return self.name
+        else:
+            return self.name + '*'
+
+    def is_custom_font(self):
+        return get_custom_font_dir() in self.path
 
     def render_text(self, text, destination_group, variant=None, back_and_forth=True, trim=False):
         """Render text into an SVG group element."""
