@@ -15,10 +15,10 @@ from datetime import date
 from threading import Thread
 
 import appdirs
-import requests
 from flask import Flask, Response, jsonify, request, send_from_directory
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from lxml import etree
+from werkzeug.serving import make_server
 
 from ..gui import open_url
 from ..i18n import get_languages
@@ -66,7 +66,8 @@ class PrintPreviewServer(Thread):
         self.realistic_color_block_svgs = kwargs.pop('realistic_color_block_svgs')
         Thread.__init__(self, *args, **kwargs)
         self.daemon = True
-        self.shutting_down = False
+        self.flask_server = None
+        self.server_thread = None
 
         self.__setup_app()
 
@@ -89,15 +90,9 @@ class PrintPreviewServer(Thread):
         def index():
             return self.html
 
-        @self.app.route('/shutdown', methods=['POST'])
-        def shutdown():
-            self.shutting_down = True
-            request.environ.get('werkzeug.server.shutdown')()
-            return "shutting down"
-
         @self.app.route('/resources/<path:resource>', methods=['GET'])
         def resources(resource):
-            return send_from_directory(self.resources_path, resource, cache_timeout=1)
+            return send_from_directory(self.resources_path, resource, max_age=1)
 
         @self.app.route('/settings/<field_name>', methods=['POST'])
         def set_field(field_name):
@@ -158,9 +153,8 @@ class PrintPreviewServer(Thread):
             return Response(self.realistic_overview_svg, mimetype='image/svg+xml')
 
     def stop(self):
-        # for whatever reason, shutting down only seems possible in
-        # the context of a flask request, so we'll just make one
-        requests.post("http://%s:%s/shutdown" % (self.host, self.port))
+        self.flask_server.shutdown()
+        self.server_thread.join()
 
     def disable_logging(self):
         logging.getLogger('werkzeug').setLevel(logging.ERROR)
@@ -173,7 +167,9 @@ class PrintPreviewServer(Thread):
 
         while True:
             try:
-                self.app.run(self.host, self.port, threaded=True)
+                self.flask_server = make_server(self.host, self.port, self.app)
+                self.server_thread = Thread(target=self.flask_server.serve_forever)
+                self.server_thread.start()
             except socket.error as e:
                 if e.errno == errno.EADDRINUSE:
                     self.port += 1
