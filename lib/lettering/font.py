@@ -114,7 +114,7 @@ class Font(object):
     min_scale = font_metadata('min_scale', 1.0)
     max_scale = font_metadata('max_scale', 1.0)
 
-    # use values from SVG Font, exemple:
+    # use values from SVG Font, example:
     # <font horiz-adv-x="45" ...  <glyph .... horiz-adv-x="49" glyph-name="A" /> ... <hkern ... k="3"g1="A" g2="B" /> .... />
 
     # Example font.json : "horiz_adv_x": {"A":49},

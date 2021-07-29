@@ -75,7 +75,7 @@ class _ThreadCatalog(Sequence):
 
         Scans the catalog of color palettes and chooses one that seems most
         likely to be the one that the user used.  A palette will only be
-        chosen if more tha 80% of the thread colors in the stitch plan are
+        chosen if more than 80% of the thread colors in the stitch plan are
         exact matches for threads in the palette.
         """
         if not self.palettes:

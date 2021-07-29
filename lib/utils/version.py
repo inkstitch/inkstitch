@@ -18,5 +18,5 @@ def get_inkstitch_version():
         with open(version, 'r') as v:
             inkstitch_version = _("Ink/Stitch Version: %s") % v.readline()
     else:
-        inkstitch_version = _("Ink/Stitch Version: unkown")
+        inkstitch_version = _("Ink/Stitch Version: unknown")
     return inkstitch_version

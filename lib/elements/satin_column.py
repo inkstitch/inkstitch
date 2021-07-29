@@ -779,7 +779,7 @@ class SatinColumn(EmbroideryElement):
         sides = self.plot_points_on_rails(self.zigzag_spacing, self.pull_compensation)
 
         # "left" and "right" here are kind of arbitrary designations meaning
-        # a point from the first and second rail repectively
+        # a point from the first and second rail respectively
         for left, right in zip(*sides):
             patch.add_stitch(left)
             patch.add_stitch(right)
