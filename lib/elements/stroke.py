@@ -132,7 +132,7 @@ class Stroke(EmbroideryElement):
             # want to see if they set a running stitch length at all, and the property will apply
             # a default value.
             #
-            # Thsi is so tricky, and and intricate that's a major reason that we deprecated the
+            # This is so tricky, and and intricate that's a major reason that we deprecated the
             # 0.5 units rule.
 
             # Warn them the first time.
