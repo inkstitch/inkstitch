@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-07-11 00:56+0000\n"
-"PO-Revision-Date: 2021-07-12 00:52\n"
+"POT-Creation-Date: 2021-07-30 00:54+0000\n"
+"PO-Revision-Date: 2021-07-30 00:55\n"
 "Last-Translator: \n"
 "Language-Team: Dutch\n"
 "MIME-Version: 1.0\n"
@@ -264,78 +264,78 @@ msgstr ""
 msgid "A font suited for heavy typing :)"
 msgstr "Een lettertype geschikt voor het zware typewerk :)"
 
-#: inkstitch.py:56
+#: inkstitch.py:61
 msgid "Ink/Stitch cannot read your SVG file. This is often the case when you use a file which has been created with Adobe Illustrator."
 msgstr ""
 
-#: inkstitch.py:59
+#: inkstitch.py:64
 msgid "Try to import the file into Inkscape through 'File > Import...' (Ctrl+I)"
 msgstr ""
 
-#: inkstitch.py:70
+#: inkstitch.py:75
 msgid "Ink/Stitch experienced an unexpected error."
 msgstr "Er is een onbekende fout opgetreden in Ink/Stitch."
 
-#: inkstitch.py:71
+#: inkstitch.py:76
 msgid "If you'd like to help, please file an issue at https://github.com/inkstitch/inkstitch/issues and include the entire error description below:"
 msgstr "Als je wilt helpen, maak dan een melding aan op https://github.com/inkstitch/inkstitch/issues en plak daar onderstaande foutbeschrijving in:"
 
 #. command attached to an object
-#: lib/commands.py:26
+#: lib/commands.py:24
 msgid "Fill stitch starting position"
 msgstr "Opvulsteek startpositie"
 
 #. command attached to an object
-#: lib/commands.py:29
+#: lib/commands.py:27
 msgid "Fill stitch ending position"
 msgstr "Opvulsteek eindpositie"
 
 #. command attached to an object
-#: lib/commands.py:32
+#: lib/commands.py:30
 msgid "Auto-route satin stitch starting position"
 msgstr "Auto-routeer satijn steek startpositie"
 
 #. command attached to an object
-#: lib/commands.py:35
+#: lib/commands.py:33
 msgid "Auto-route satin stitch ending position"
 msgstr "Auto-routeer satijn steek eindpositie"
 
 #. command attached to an object
-#: lib/commands.py:38
+#: lib/commands.py:36
 msgid "Stop (pause machine) after sewing this object"
 msgstr "Stop (pauzeer machine) na het borduren van dit object"
 
 #. command attached to an object
-#: lib/commands.py:41
+#: lib/commands.py:39
 msgid "Trim thread after sewing this object"
 msgstr "Snij de draad af na borduren van dit object"
 
 #. command attached to an object
-#: lib/commands.py:44
+#: lib/commands.py:42
 msgid "Ignore this object (do not stitch)"
 msgstr "Negeer dit object (niet borduren)"
 
 #. command attached to an object
-#: lib/commands.py:47
+#: lib/commands.py:45
 msgid "Satin cut point (use with Cut Satin Column)"
 msgstr "Satijn snijpunt (gebruik met Snij Satijnbaan)"
 
 #. command that affects a layer
-#: lib/commands.py:51
+#: lib/commands.py:49
 msgid "Ignore layer (do not stitch any objects in this layer)"
 msgstr "Negeer laag (borduur geen objecten in deze laag)"
 
 #. command that affects entire document
-#: lib/commands.py:54
+#: lib/commands.py:52
 msgid "Origin for exported embroidery files"
 msgstr "Origine voor geëxporteerde borduurbestanden"
 
 #. command that affects entire document
-#: lib/commands.py:57
+#: lib/commands.py:55
 msgid "Jump destination for Stop commands (a.k.a. \"Frame Out position\")."
 msgstr "Sprong bestemming voor Stop commando's (Buiten raam positie)."
 
-#: lib/commands.py:215
+#: lib/commands.py:213
 #, python-format
 msgid "Error: there is more than one %(command)s command in the document, but there can only be one.  Please remove all but one."
 msgstr "Fout: er is meer dan één %(command)s in het document, maar er kan er slechts één zijn. Verwijder aub de overbodige."
@@ -345,131 +345,131 @@ msgstr "Fout: er is meer dan één %(command)s in het document, maar er kan er s
 #. command name to them.  Contents of %(description)s are in a separate
 #. translation
 #. string.
-#: lib/commands.py:222
+#: lib/commands.py:220
 #, python-format
 msgid "%(command)s: %(description)s"
 msgstr "%(command)s: %(description)s"
 
-#: lib/commands.py:294 lib/commands.py:407 lib/extensions/layer_commands.py:34
+#: lib/commands.py:285 lib/commands.py:398
 msgid "Ink/Stitch Command"
 msgstr "Ink/Stitch Commando"
 
 #. : the name of the line that connects a command to the object it applies to
-#: lib/commands.py:321
+#: lib/commands.py:311
 msgid "connector"
 msgstr "verbinding"
 
 #. : the name of a command symbol (example: scissors icon for trim command)
-#: lib/commands.py:338
+#: lib/commands.py:327
 msgid "command marker"
 msgstr "commando symbool"
 
-#: lib/elements/auto_fill.py:21
+#: lib/elements/auto_fill.py:22
 msgid "Small Fill"
 msgstr "Kleine Opvulling"
 
-#: lib/elements/auto_fill.py:22
+#: lib/elements/auto_fill.py:23
 msgid "This fill object is so small that it would probably look better as running stitch or satin column. For very small shapes, fill stitch is not possible, and Ink/Stitch will use running stitch around the outline instead."
 msgstr "Dit invulobject is zo klein dat het er waarschijnlijk beter uitziet als doorlopende steek of satijnbaan. Voor hele kleine vormen is invulsteek niet mogelijk, Ink/Stitch zal inplaats daarvan een doorlopende steek langs de rand maken."
 
-#: lib/elements/auto_fill.py:28 lib/elements/auto_fill.py:144
+#: lib/elements/auto_fill.py:29 lib/elements/auto_fill.py:145
 msgid "Expand"
 msgstr "Uitbreiden"
 
-#: lib/elements/auto_fill.py:29
+#: lib/elements/auto_fill.py:30
 msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use original size instead."
 msgstr ""
 
-#: lib/elements/auto_fill.py:34 lib/elements/auto_fill.py:121
+#: lib/elements/auto_fill.py:35 lib/elements/auto_fill.py:122
 msgid "Inset"
 msgstr "Inzet"
 
-#: lib/elements/auto_fill.py:35
+#: lib/elements/auto_fill.py:36
 msgid "The underlay inset parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use the original size instead."
 msgstr ""
 
-#: lib/elements/auto_fill.py:40
+#: lib/elements/auto_fill.py:41
 msgid "AutoFill"
 msgstr "AutoOpvullen"
 
-#: lib/elements/auto_fill.py:43
+#: lib/elements/auto_fill.py:44
 msgid "Automatically routed fill stitching"
 msgstr "Automatisch gerouteerde opvulsteken"
 
-#: lib/elements/auto_fill.py:63
+#: lib/elements/auto_fill.py:64
 msgid "Running stitch length (traversal between sections)"
 msgstr "Doorlopende steek lengte (afstand tussen secties)"
 
-#: lib/elements/auto_fill.py:64
+#: lib/elements/auto_fill.py:65
 msgid "Length of stitches around the outline of the fill region used when moving from section to section."
 msgstr "Lengte van steken rondom de rand van het opvulgebied dat wordt gebruikt bij de overgang tussen secties."
 
-#: lib/elements/auto_fill.py:72
+#: lib/elements/auto_fill.py:73
 msgid "Underlay"
 msgstr "Versteviging"
 
-#: lib/elements/auto_fill.py:72 lib/elements/auto_fill.py:81
-#: lib/elements/auto_fill.py:103 lib/elements/auto_fill.py:114
-#: lib/elements/auto_fill.py:124 lib/elements/auto_fill.py:136
-#: lib/elements/auto_fill.py:170
+#: lib/elements/auto_fill.py:73 lib/elements/auto_fill.py:82
+#: lib/elements/auto_fill.py:104 lib/elements/auto_fill.py:115
+#: lib/elements/auto_fill.py:125 lib/elements/auto_fill.py:137
+#: lib/elements/auto_fill.py:171
 msgid "AutoFill Underlay"
 msgstr "AutoOpvul versteviging"
 
-#: lib/elements/auto_fill.py:78
+#: lib/elements/auto_fill.py:79
 msgid "Fill angle"
 msgstr "Opvul hoek"
 
-#: lib/elements/auto_fill.py:79
+#: lib/elements/auto_fill.py:80
 msgid "Default: fill angle + 90 deg. Insert comma-seperated list for multiple layers."
 msgstr "Standaard: opvul hoek + 90 graden. Voer een kommagescheiden lijst in voor meerdere lagen."
 
-#: lib/elements/auto_fill.py:100
+#: lib/elements/auto_fill.py:101
 msgid "Row spacing"
 msgstr "Opvulrij afstand"
 
-#: lib/elements/auto_fill.py:101
+#: lib/elements/auto_fill.py:102
 msgid "default: 3x fill row spacing"
 msgstr "standaard: 3x opvulrij afstand"
 
-#: lib/elements/auto_fill.py:111
+#: lib/elements/auto_fill.py:112
 msgid "Max stitch length"
 msgstr "Max steek lengte"
 
-#: lib/elements/auto_fill.py:112
+#: lib/elements/auto_fill.py:113
 msgid "default: equal to fill max stitch length"
 msgstr "standaard: gelijk aan max steek lengte"
 
-#: lib/elements/auto_fill.py:122
+#: lib/elements/auto_fill.py:123
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
 msgstr "Verklein de vorm van de versteviging om te voorkomen dat de versteviging zichtbaar is aan de buitenkant van de opvulling."
 
-#: lib/elements/auto_fill.py:133 lib/elements/fill.py:74
+#: lib/elements/auto_fill.py:134 lib/elements/fill.py:74
 msgid "Skip last stitch in each row"
 msgstr "Sla de laatste steek in elke rij over"
 
-#: lib/elements/auto_fill.py:134 lib/elements/fill.py:75
+#: lib/elements/auto_fill.py:135 lib/elements/fill.py:75
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
 msgstr "De laatste steek in elke rij is vrij dicht op de eerste steek in de volgende rij. Door deze over te slaan wordt de dichtheid en het aantal steken verkleind."
 
-#: lib/elements/auto_fill.py:145
+#: lib/elements/auto_fill.py:146
 msgid "Expand the shape before fill stitching, to compensate for gaps between shapes."
 msgstr "Breidt de vorm uit voor de opvulsteken om te compenseren voor gaten tussen de vormen."
 
-#: lib/elements/auto_fill.py:154 lib/elements/auto_fill.py:166
+#: lib/elements/auto_fill.py:155 lib/elements/auto_fill.py:167
 msgid "Underpath"
 msgstr "Onderpad"
 
-#: lib/elements/auto_fill.py:155 lib/elements/auto_fill.py:167
+#: lib/elements/auto_fill.py:156 lib/elements/auto_fill.py:168
 msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
 msgstr "Beweeg binnen de vorm bij verplaatsen tussen secties. Onderpad steken vermijden de richting van de rijhoek zodat ze niet zichtbaar zijn. Dit geeft ze een gekarteld uiterlijk."
 
-#: lib/elements/auto_fill.py:253
+#: lib/elements/auto_fill.py:254
 msgid "Error during autofill!  This means that there is a problem with Ink/Stitch."
 msgstr "Fout tijdens auto-opvullen! Dit betekent dat er een probleem met Ink/Stitch is."
 
 #. this message is followed by a URL:
 #. https://github.com/inkstitch/inkstitch/issues/new
-#: lib/elements/auto_fill.py:256
+#: lib/elements/auto_fill.py:257
 msgid "If you'd like to help us make Ink/Stitch better, please paste this whole message into a new issue at: "
 msgstr "Als je wilt helpen om Ink/Stitch beter te maken, plak onderstaande tekst dan in een nieuwe melding op: "
 
@@ -521,32 +521,32 @@ msgstr "Aangepaste opvulhoek"
 msgid "This setting will apply a custom fill angle for the clone."
 msgstr "Deze instelling zet een aangepaste opvulhoek voor de kloon."
 
-#: lib/elements/element.py:252
+#: lib/elements/element.py:225
 msgid "Allow lock stitches"
 msgstr ""
 
-#: lib/elements/element.py:253
+#: lib/elements/element.py:226
 msgid "Tie thread at the beginning and/or end of this object. Manual stitch will not add lock stitches."
 msgstr ""
 
 #. options to allow lock stitch before and after objects
-#: lib/elements/element.py:257
+#: lib/elements/element.py:230
 msgid "Both"
 msgstr ""
 
-#: lib/elements/element.py:257
+#: lib/elements/element.py:230
 msgid "Before"
 msgstr ""
 
-#: lib/elements/element.py:257
+#: lib/elements/element.py:230
 msgid "After"
 msgstr ""
 
-#: lib/elements/element.py:257
+#: lib/elements/element.py:230
 msgid "Neither"
 msgstr ""
 
-#: lib/elements/element.py:299
+#: lib/elements/element.py:272
 #, python-format
 msgid "Object %(id)s has an empty 'd' attribute.  Please delete this object from your document."
 msgstr "Object %(id)s heeft een leeg 'd' attribuut. Verwijder het object uit het document."
@@ -554,19 +554,19 @@ msgstr "Object %(id)s heeft een leeg 'd' attribuut. Verwijder het object uit het
 #. used when showing an error message to the user such as
 #. "Some Path (path1234): error: satin column: One or more of the rungs doesn't
 #. intersect both rails."
-#: lib/elements/element.py:385
+#: lib/elements/element.py:358
 msgid "error:"
 msgstr "fout:"
 
-#: lib/elements/empty_d_object.py:12
+#: lib/elements/empty_d_object.py:13
 msgid "Empty D-Attribute"
 msgstr "Leeg D-Attribuut"
 
-#: lib/elements/empty_d_object.py:13
+#: lib/elements/empty_d_object.py:14
 msgid "There is an invalid path object in the document, the d-attribute is missing."
 msgstr "Er is een ongeldig pad object in het document, het d-attribuut mist."
 
-#: lib/elements/empty_d_object.py:15
+#: lib/elements/empty_d_object.py:16
 msgid "* Run Extensions > Ink/Stitch > Troubleshoot > Cleanup Document..."
 msgstr "* Kies Uitbreidingen > Ink/Stitch > Probleemoplossen > Document opschonen..."
 
@@ -898,7 +898,7 @@ msgid "Legacy running stitch setting detected!\n\n"
 msgstr "Verouderde doorlopende steek instelling gedetecteerd!\n\n"
 "Het lijkt erop dat je een lijn smaller dan 0.5 eenheden gebruikt om een doorlopende steek mee aan te geven, dat is verouderd. Gebruik een streepjes/stippellijn voor een doorlopende steek. Elke soort streepjes voldoen."
 
-#: lib/elements/text.py:13 lib/extensions/lettering.py:73
+#: lib/elements/text.py:13 lib/extensions/lettering.py:75
 msgid "Text"
 msgstr "Tekst"
 
@@ -928,17 +928,17 @@ msgid "Please select at least one satin column."
 msgstr "Selecteer minstens een satijn strook."
 
 #. This was previously: "No embroiderable paths selected."
-#: lib/extensions/base.py:133
+#: lib/extensions/base.py:123
 msgid "Ink/Stitch doesn't know how to work with any of the objects you've selected."
 msgstr "Ink/Stitch kan met geen enkel geselecteerd object omgaan."
 
-#: lib/extensions/base.py:135
+#: lib/extensions/base.py:125
 msgid "There are no objects in the entire document that Ink/Stitch knows how to work with."
 msgstr "In het gehele document zit geen enkel object waar Ink/Stitch mee kan omgaan."
 
-#: lib/extensions/base.py:137
-msgid "Tip: Select some objects and use Path -> Object to Path to convert them to paths."
-msgstr "Tip: Selecteer enkele objecten en gebruik Pad -> Object naar Pad om ze naar paden om te zetten."
+#: lib/extensions/base.py:127
+msgid "Tip: Run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot Objects"
+msgstr ""
 
 #: lib/extensions/break_apart.py:31
 msgid "Please select one or more fill areas to break apart."
@@ -949,17 +949,17 @@ msgstr "Selecteer een of meer vulgebieden om op te breken."
 msgid "%s elements removed"
 msgstr "%s elementen verwijderd"
 
-#: lib/extensions/convert_to_satin.py:36
+#: lib/extensions/convert_to_satin.py:35
 msgid "Please select at least one line to convert to a satin column."
 msgstr "Selecteer een of meer lijnen om naar satijnbaan om te zetten."
 
 #. : Convert To Satin extension, user selected one or more objects that were
 #. not lines.
-#: lib/extensions/convert_to_satin.py:41
+#: lib/extensions/convert_to_satin.py:40
 msgid "Only simple lines may be converted to satin columns."
 msgstr "Alleen eenvoudige lijnen kunnen worden omgezet naar satijnbanen."
 
-#: lib/extensions/convert_to_satin.py:135
+#: lib/extensions/convert_to_satin.py:134
 msgid "Ink/Stitch cannot convert your stroke into a satin column. Please break up your path and try again."
 msgstr ""
 
@@ -1014,31 +1014,43 @@ msgstr "Kies een ander kleurpalet voor je ontwerp."
 msgid "File does not exist and cannot be opened. Please correct the file path and try again.\\r%s"
 msgstr ""
 
-#: lib/extensions/layer_commands.py:23
+#: lib/extensions/install_custom_palette.py:24
+msgid "File does not exist."
+msgstr ""
+
+#: lib/extensions/install_custom_palette.py:28
+msgid "Wrong file type. Ink/Stitch only accepts gpl color palettes."
+msgstr ""
+
+#: lib/extensions/install_custom_palette.py:36
+msgid "Ink/Stitch cannot find your palette folder automatically. Please install your palette manually."
+msgstr ""
+
+#: lib/extensions/layer_commands.py:20
 msgid "Please choose one or more commands to add."
 msgstr "Kies één of meer commando's om toe te voegen."
 
-#: lib/extensions/lettering.py:42 lib/extensions/lettering.py:419
+#: lib/extensions/lettering.py:41 lib/extensions/lettering.py:418
 msgid "Ink/Stitch Lettering"
 msgstr "Ink/Stitch Belettering"
 
-#: lib/extensions/lettering.py:49
+#: lib/extensions/lettering.py:51
 msgid "Font"
 msgstr ""
 
-#: lib/extensions/lettering.py:61
+#: lib/extensions/lettering.py:63
 msgid "Options"
 msgstr "Opties"
 
-#: lib/extensions/lettering.py:66
+#: lib/extensions/lettering.py:68
 msgid "Stitch lines of text back and forth"
 msgstr "Borduur regels tekst heen en terug"
 
-#: lib/extensions/lettering.py:69
+#: lib/extensions/lettering.py:71
 msgid "Add trims"
 msgstr "Afknippen toevoegen"
 
-#: lib/extensions/lettering.py:78 lib/extensions/params.py:355
+#: lib/extensions/lettering.py:80 lib/extensions/params.py:359
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
 #: print/templates/custom-page.html:33 print/templates/ui.html:92
 #: print/templates/ui.html:96 print/templates/ui.html:102
@@ -1047,22 +1059,22 @@ msgstr "Afknippen toevoegen"
 msgid "Cancel"
 msgstr "Annuleren"
 
-#: lib/extensions/lettering.py:82 lib/extensions/params.py:362
+#: lib/extensions/lettering.py:84 lib/extensions/params.py:366
 msgid "Apply and Quit"
 msgstr "Toepassen en Sluiten"
 
-#: lib/extensions/lettering.py:149
+#: lib/extensions/lettering.py:151
 msgid "Unable to find any fonts!  Please try reinstalling Ink/Stitch."
 msgstr "Geen lettertypen gevonden! Probeer Ink/Stitch opnieuw te installeren."
 
-#: lib/extensions/lettering.py:223
+#: lib/extensions/lettering.py:222
 msgid "This font has no available font variant. Please update or remove the font."
 msgstr ""
 
 #. The user has chosen to scale the text by some percentage
 #. (50%, 200%, etc).  If you need to use the percentage symbol,
 #. make sure to double it (%%).
-#: lib/extensions/lettering.py:265
+#: lib/extensions/lettering.py:264
 #, python-format
 msgid "Text scale %s%%"
 msgstr "Tekst schaling %s%%"
@@ -1134,61 +1146,61 @@ msgstr "Deze parameter wordt opgeslagen als je \"Toepassen en Afsluiten\" klikt"
 msgid "Embroidery Params"
 msgstr "Borduur Parameters"
 
-#: lib/extensions/params.py:359
+#: lib/extensions/params.py:363
 msgid "Use Last Settings"
 msgstr "Gebruik Vorige Instellingen"
 
-#: lib/extensions/troubleshoot.py:48
+#: lib/extensions/troubleshoot.py:45
 msgid "All selected shapes are valid! "
 msgstr "Alle geselecteerde vormen zijn geldig! "
 
-#: lib/extensions/troubleshoot.py:50
+#: lib/extensions/troubleshoot.py:47
 msgid "If you are still having trouble with a shape not being embroidered, check if it is in a layer with an ignore command."
 msgstr "Als je nog steeds problemen hebt met een vorm die niet wordt geborduurd, controleer dan of er een laag is met een Negeer commando erin."
 
-#: lib/extensions/troubleshoot.py:76
+#: lib/extensions/troubleshoot.py:71
 msgid "Invalid Pointer"
 msgstr "Ongeldige Pointer"
 
-#: lib/extensions/troubleshoot.py:85 templates/lettering_generate_json.xml:26
+#: lib/extensions/troubleshoot.py:77 templates/lettering_generate_json.xml:26
 msgid "Description"
 msgstr "Beschrijving"
 
-#: lib/extensions/troubleshoot.py:107 lib/extensions/troubleshoot.py:165
+#: lib/extensions/troubleshoot.py:98 lib/extensions/troubleshoot.py:143
 #: templates/cleanup.xml:17 templates/remove_embroidery_settings.xml:16
 #: templates/troubleshoot.xml:10
 msgid "Troubleshoot"
 msgstr "Probleemoplossen"
 
-#: lib/extensions/troubleshoot.py:123 lib/extensions/troubleshoot.py:172
+#: lib/extensions/troubleshoot.py:110 lib/extensions/troubleshoot.py:150
 msgid "Errors"
 msgstr "Fouten"
 
-#: lib/extensions/troubleshoot.py:132 lib/extensions/troubleshoot.py:176
+#: lib/extensions/troubleshoot.py:116 lib/extensions/troubleshoot.py:154
 msgid "Warnings"
 msgstr "Waarschuwingen"
 
-#: lib/extensions/troubleshoot.py:141
+#: lib/extensions/troubleshoot.py:122
 msgid "Type Warnings"
 msgstr "Type Waarschuwingen"
 
-#: lib/extensions/troubleshoot.py:173
+#: lib/extensions/troubleshoot.py:151
 msgid "Problems that will prevent the shape from being embroidered."
 msgstr "Problemen die zullen verhinderen dat de vorm geborduurd wordt."
 
-#: lib/extensions/troubleshoot.py:177
+#: lib/extensions/troubleshoot.py:155
 msgid "These are problems that won't prevent the shape from being embroidered. You should consider to fix the warning, but if you don't, Ink/Stitch will do its best to process the object."
 msgstr "Dit zijn problemen die niet zullen verhinderen dat de vorm geborduurd wordt. Je kunt de waarschuwing proberen op te lossen, maar als dat niet lukt zal Ink/Stitch toch proberen het object te verwerken."
 
-#: lib/extensions/troubleshoot.py:182
+#: lib/extensions/troubleshoot.py:160
 msgid "Object Type Warnings"
 msgstr "Object Type Waarschuwingen"
 
-#: lib/extensions/troubleshoot.py:183
+#: lib/extensions/troubleshoot.py:161
 msgid "These objects may not work properly with Ink/Stitch. Follow the instructions to correct unwanted behaviour."
 msgstr ""
 
-#: lib/extensions/troubleshoot.py:199
+#: lib/extensions/troubleshoot.py:177
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
 msgstr "Het is mogelijk dat een object meer dan één fout bevat, er is echter slechts éé'n pointer per object. Voer de functie opnieuw uit als er meer fouten optreden. Verwijder pointers door de laag met naam \"Probleemoplossen\" te verwijderen via het objecten paneel (Object -> Objecten...)."
 
@@ -1385,25 +1397,25 @@ msgstr ""
 msgid "Error writing to %(path)s: %(error)s"
 msgstr "Fout bij schrijven naar %(path)s: %(error)s"
 
-#: lib/stitches/auto_satin.py:662
+#: lib/stitches/auto_satin.py:659
 msgid "Auto-Satin"
 msgstr "Auto-Satijn"
 
 #. Label for a satin column created by Auto-Route Satin Columns and Lettering
 #. extensions
-#: lib/stitches/auto_satin.py:709
+#: lib/stitches/auto_satin.py:706
 #, python-format
 msgid "AutoSatin %d"
 msgstr "AutoSatijn %d"
 
 #. Label for running stitch (underpathing) created by Auto-Route Satin Columns
 #. amd Lettering extensions
-#: lib/stitches/auto_satin.py:712
+#: lib/stitches/auto_satin.py:709
 #, python-format
 msgid "AutoSatin Running Stitch %d"
 msgstr "AutoSatijn Doorlopende Steek %d"
 
-#: lib/svg/rendering.py:224
+#: lib/svg/rendering.py:222
 msgid "Stitch Plan"
 msgstr "Stekenplan"
 
@@ -1418,7 +1430,7 @@ msgid "Ink/Stitch Version: %s"
 msgstr ""
 
 #: lib/utils/version.py:21
-msgid "Ink/Stitch Version: unkown"
+msgid "Ink/Stitch Version: unknown"
 msgstr ""
 
 #: print/templates/color_swatch.html:8 print/templates/color_swatch.html:40
@@ -2117,11 +2129,12 @@ msgstr "Commando's"
 msgid "Import Threadlist"
 msgstr "Importeer Garenlijst"
 
-#: templates/import_threadlist.xml:6
+#: templates/import_threadlist.xml:6 templates/install_custom_palette.xml:8
 msgid "Choose file"
 msgstr "Kies bestand"
 
 #: templates/import_threadlist.xml:20 templates/install.xml:10
+#: templates/install_custom_palette.xml:13
 msgid "Thread Color Management"
 msgstr ""
 
@@ -2133,6 +2146,18 @@ msgstr "converteer %(file_extension)s bestand naar Ink/Stitch handmatige steek p
 #: templates/install.xml:3
 msgid "Install thread color palettes for Inkscape"
 msgstr "Installeer draadkleurpaletten voor Inkscape"
+
+#: templates/install_custom_palette.xml:3
+msgid "Install custom palette"
+msgstr ""
+
+#: templates/install_custom_palette.xml:6
+msgid "Choose a .gpl color palette file to install into Inkscape."
+msgstr ""
+
+#: templates/install_custom_palette.xml:7
+msgid "Restart Inkscape to use."
+msgstr ""
 
 #: templates/layer_commands.xml:3
 msgid "Add Layer Commands"

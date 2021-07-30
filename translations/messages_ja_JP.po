@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-07-11 00:56+0000\n"
-"PO-Revision-Date: 2021-07-12 00:52\n"
+"POT-Creation-Date: 2021-07-30 00:54+0000\n"
+"PO-Revision-Date: 2021-07-30 00:56\n"
 "Last-Translator: \n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -264,78 +264,78 @@ msgstr "TT Masters"
 msgid "A font suited for heavy typing :)"
 msgstr "ヘビータイピングに適したフォント:)"
 
-#: inkstitch.py:56
+#: inkstitch.py:61
 msgid "Ink/Stitch cannot read your SVG file. This is often the case when you use a file which has been created with Adobe Illustrator."
 msgstr "インク/ステッチはこのSVGファイルを読み取りできません。これは、AdobeIllustratorで作成されたファイルを使用する場合によくあります。"
 
-#: inkstitch.py:59
+#: inkstitch.py:64
 msgid "Try to import the file into Inkscape through 'File > Import...' (Ctrl+I)"
 msgstr "「ファイル>インポート...」（Ctrl + I）を使用してファイルをInkscapeにインポートして下さい"
 
-#: inkstitch.py:70
+#: inkstitch.py:75
 msgid "Ink/Stitch experienced an unexpected error."
 msgstr "インク/ステッチで予期しないエラーが発生しました。"
 
-#: inkstitch.py:71
+#: inkstitch.py:76
 msgid "If you'd like to help, please file an issue at https://github.com/inkstitch/inkstitch/issues and include the entire error description below:"
 msgstr "ヘルプが必要な場合は https://github.com/inkstitch/inkstitch/issues でエラー全体の説明を含めて問題を報告してください。"
 
 #. command attached to an object
-#: lib/commands.py:26
+#: lib/commands.py:24
 msgid "Fill stitch starting position"
 msgstr "ステッチ開始位置を埋める"
 
 #. command attached to an object
-#: lib/commands.py:29
+#: lib/commands.py:27
 msgid "Fill stitch ending position"
 msgstr "ステッチ終了位置を埋める"
 
 #. command attached to an object
-#: lib/commands.py:32
+#: lib/commands.py:30
 msgid "Auto-route satin stitch starting position"
 msgstr "サテンステッチの開始位置を自動ルーティングします"
 
 #. command attached to an object
-#: lib/commands.py:35
+#: lib/commands.py:33
 msgid "Auto-route satin stitch ending position"
 msgstr "サテンステッチの終了位置を自動ルーティングします"
 
 #. command attached to an object
-#: lib/commands.py:38
+#: lib/commands.py:36
 msgid "Stop (pause machine) after sewing this object"
 msgstr "このオブジェクトを縫った後、停止（ミシンを一時停止）します"
 
 #. command attached to an object
-#: lib/commands.py:41
+#: lib/commands.py:39
 msgid "Trim thread after sewing this object"
 msgstr "このオブジェクトを縫った後、糸を切り取ります"
 
 #. command attached to an object
-#: lib/commands.py:44
+#: lib/commands.py:42
 msgid "Ignore this object (do not stitch)"
 msgstr "このオブジェクトを無視します(ステッチしない)"
 
 #. command attached to an object
-#: lib/commands.py:47
+#: lib/commands.py:45
 msgid "Satin cut point (use with Cut Satin Column)"
 msgstr "サテンカットポイント (カットサテンカラムで使用)"
 
 #. command that affects a layer
-#: lib/commands.py:51
+#: lib/commands.py:49
 msgid "Ignore layer (do not stitch any objects in this layer)"
 msgstr "レイヤーを無視します（このレイヤー内のオブジェクトをステッチしないでください）"
 
 #. command that affects entire document
-#: lib/commands.py:54
+#: lib/commands.py:52
 msgid "Origin for exported embroidery files"
 msgstr "エクスポートされた刺繡ファイルの元データ"
 
 #. command that affects entire document
-#: lib/commands.py:57
+#: lib/commands.py:55
 msgid "Jump destination for Stop commands (a.k.a. \"Frame Out position\")."
 msgstr "停止コマンドのジャンプ先（別名\"フレームアウト位置\"）"
 
-#: lib/commands.py:215
+#: lib/commands.py:213
 #, python-format
 msgid "Error: there is more than one %(command)s command in the document, but there can only be one.  Please remove all but one."
 msgstr "エラー：ドキュメントに複数の%(command)sコマンドがありますが、存在できるのは1つだけです。 1つを除いてすべて削除してください。"
@@ -345,133 +345,133 @@ msgstr "エラー：ドキュメントに複数の%(command)sコマンドがあ�
 #. command name to them.  Contents of %(description)s are in a separate
 #. translation
 #. string.
-#: lib/commands.py:222
+#: lib/commands.py:220
 #, python-format
 msgid "%(command)s: %(description)s"
 msgstr "%(command)s: %(description)s"
 
-#: lib/commands.py:294 lib/commands.py:407 lib/extensions/layer_commands.py:34
+#: lib/commands.py:285 lib/commands.py:398
 msgid "Ink/Stitch Command"
 msgstr "インク/ステッチコマンド"
 
 #. : the name of the line that connects a command to the object it applies to
-#: lib/commands.py:321
+#: lib/commands.py:311
 msgid "connector"
 msgstr "コネクタ"
 
 #. : the name of a command symbol (example: scissors icon for trim command)
-#: lib/commands.py:338
+#: lib/commands.py:327
 msgid "command marker"
 msgstr "コマンドマーカー"
 
-#: lib/elements/auto_fill.py:21
+#: lib/elements/auto_fill.py:22
 msgid "Small Fill"
 msgstr "スモールフィル"
 
-#: lib/elements/auto_fill.py:22
+#: lib/elements/auto_fill.py:23
 msgid "This fill object is so small that it would probably look better as running stitch or satin column. For very small shapes, fill stitch is not possible, and Ink/Stitch will use running stitch around the outline instead."
 msgstr "この塗りつぶしオブジェクトは非常に小さいので、ランニングステッチやサテンステッチのラインとした方が見栄えがよくなります。非常に小さい形状の場合、塗りつぶしステッチは不可能であり、インク/ステッチは代わりにアウトラインの周りにランニングステッチを使用します。"
 
-#: lib/elements/auto_fill.py:28 lib/elements/auto_fill.py:144
+#: lib/elements/auto_fill.py:29 lib/elements/auto_fill.py:145
 msgid "Expand"
 msgstr "展開"
 
-#: lib/elements/auto_fill.py:29
+#: lib/elements/auto_fill.py:30
 msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use original size instead."
 msgstr "この塗りつぶしオブジェクトの展開パラメータは適用できません。\n"
 "インク/ステッチはそれを無視し、代わりに元のサイズを使用します。"
 
-#: lib/elements/auto_fill.py:34 lib/elements/auto_fill.py:121
+#: lib/elements/auto_fill.py:35 lib/elements/auto_fill.py:122
 msgid "Inset"
 msgstr "挿入する"
 
-#: lib/elements/auto_fill.py:35
+#: lib/elements/auto_fill.py:36
 msgid "The underlay inset parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use the original size instead."
 msgstr "この塗りつぶしオブジェクトの展開パラメータは適用できません。\n"
 "インク/ステッチはそれを無視し、代わりに元のサイズを使用します。"
 
-#: lib/elements/auto_fill.py:40
+#: lib/elements/auto_fill.py:41
 msgid "AutoFill"
 msgstr "オートフィル"
 
-#: lib/elements/auto_fill.py:43
+#: lib/elements/auto_fill.py:44
 msgid "Automatically routed fill stitching"
 msgstr "自動的にルーティングされたフィルステッチ"
 
-#: lib/elements/auto_fill.py:63
+#: lib/elements/auto_fill.py:64
 msgid "Running stitch length (traversal between sections)"
 msgstr "ランニングステッチの長さ（セクション間の間隔）"
 
-#: lib/elements/auto_fill.py:64
+#: lib/elements/auto_fill.py:65
 msgid "Length of stitches around the outline of the fill region used when moving from section to section."
 msgstr "セクション間を移動するときに使用される塗りつぶし領域の輪郭の周りのステッチの長さ。"
 
-#: lib/elements/auto_fill.py:72
+#: lib/elements/auto_fill.py:73
 msgid "Underlay"
 msgstr "アンダーレイ"
 
-#: lib/elements/auto_fill.py:72 lib/elements/auto_fill.py:81
-#: lib/elements/auto_fill.py:103 lib/elements/auto_fill.py:114
-#: lib/elements/auto_fill.py:124 lib/elements/auto_fill.py:136
-#: lib/elements/auto_fill.py:170
+#: lib/elements/auto_fill.py:73 lib/elements/auto_fill.py:82
+#: lib/elements/auto_fill.py:104 lib/elements/auto_fill.py:115
+#: lib/elements/auto_fill.py:125 lib/elements/auto_fill.py:137
+#: lib/elements/auto_fill.py:171
 msgid "AutoFill Underlay"
 msgstr "オートフィルアンダーレイ"
 
-#: lib/elements/auto_fill.py:78
+#: lib/elements/auto_fill.py:79
 msgid "Fill angle"
 msgstr "塗りつぶし角度"
 
-#: lib/elements/auto_fill.py:79
+#: lib/elements/auto_fill.py:80
 msgid "Default: fill angle + 90 deg. Insert comma-seperated list for multiple layers."
 msgstr "デフォルト：塗りつぶし角度+90度。複数のレイヤーにコンマ区切りのリストを挿入します。"
 
-#: lib/elements/auto_fill.py:100
+#: lib/elements/auto_fill.py:101
 msgid "Row spacing"
 msgstr "行間隔"
 
-#: lib/elements/auto_fill.py:101
+#: lib/elements/auto_fill.py:102
 msgid "default: 3x fill row spacing"
 msgstr "デフォルト：3x塗りつぶし行間隔"
 
-#: lib/elements/auto_fill.py:111
+#: lib/elements/auto_fill.py:112
 msgid "Max stitch length"
 msgstr "最大ステッチ長さ"
 
-#: lib/elements/auto_fill.py:112
+#: lib/elements/auto_fill.py:113
 msgid "default: equal to fill max stitch length"
 msgstr "デフォルト：最大フィルステッチ長"
 
-#: lib/elements/auto_fill.py:122
+#: lib/elements/auto_fill.py:123
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
 msgstr "アンダーレイを行う前に形状を縮小して、アンダーレイが塗りつぶしの外側に表示されないようにします。"
 
-#: lib/elements/auto_fill.py:133 lib/elements/fill.py:74
+#: lib/elements/auto_fill.py:134 lib/elements/fill.py:74
 msgid "Skip last stitch in each row"
 msgstr "各行の最後のステッチをスキップします"
 
-#: lib/elements/auto_fill.py:134 lib/elements/fill.py:75
+#: lib/elements/auto_fill.py:135 lib/elements/fill.py:75
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
 msgstr "各行の最後のステッチは、次の行の最初のステッチに非常に近いです。スキップすると、ステッチ数と密度が減少します。"
 
-#: lib/elements/auto_fill.py:145
+#: lib/elements/auto_fill.py:146
 msgid "Expand the shape before fill stitching, to compensate for gaps between shapes."
 msgstr "形状間のギャップを補正するために、塗りつぶしステッチの前に形状を拡張します。"
 
-#: lib/elements/auto_fill.py:154 lib/elements/auto_fill.py:166
+#: lib/elements/auto_fill.py:155 lib/elements/auto_fill.py:167
 msgid "Underpath"
 msgstr "アンダーパス"
 
-#: lib/elements/auto_fill.py:155 lib/elements/auto_fill.py:167
+#: lib/elements/auto_fill.py:156 lib/elements/auto_fill.py:168
 msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
 msgstr "セクション間を移動するときは、シェイプ内を移動します。アンダーパスステッチは、列の角度の方向に移動しないようにして、非表示にします。ギザギザの外観を与えます。"
 
-#: lib/elements/auto_fill.py:253
+#: lib/elements/auto_fill.py:254
 msgid "Error during autofill!  This means that there is a problem with Ink/Stitch."
 msgstr "自動入力中にエラーが発生しました！インク/ステッチに問題があります。"
 
 #. this message is followed by a URL:
 #. https://github.com/inkstitch/inkstitch/issues/new
-#: lib/elements/auto_fill.py:256
+#: lib/elements/auto_fill.py:257
 msgid "If you'd like to help us make Ink/Stitch better, please paste this whole message into a new issue at: "
 msgstr "インク/ステッチの改善にご協力いただける場合は、このメッセージ全体を新しい Issue に貼り付けてください。 "
 
@@ -523,32 +523,32 @@ msgstr "カスタムフィル刺繍角度"
 msgid "This setting will apply a custom fill angle for the clone."
 msgstr "この設定は、クローンにカスタムの塗りつぶし角度を適用します。"
 
-#: lib/elements/element.py:252
+#: lib/elements/element.py:225
 msgid "Allow lock stitches"
 msgstr "ロックステッチを許可する"
 
-#: lib/elements/element.py:253
+#: lib/elements/element.py:226
 msgid "Tie thread at the beginning and/or end of this object. Manual stitch will not add lock stitches."
 msgstr "このオブジェクトの最初または最後、あるいはその両方でスレッドを結びます。手動ステッチはロックステッチを追加しません。"
 
 #. options to allow lock stitch before and after objects
-#: lib/elements/element.py:257
+#: lib/elements/element.py:230
 msgid "Both"
 msgstr "両方"
 
-#: lib/elements/element.py:257
+#: lib/elements/element.py:230
 msgid "Before"
 msgstr "前"
 
-#: lib/elements/element.py:257
+#: lib/elements/element.py:230
 msgid "After"
 msgstr "後"
 
-#: lib/elements/element.py:257
+#: lib/elements/element.py:230
 msgid "Neither"
 msgstr "どちらでもない"
 
-#: lib/elements/element.py:299
+#: lib/elements/element.py:272
 #, python-format
 msgid "Object %(id)s has an empty 'd' attribute.  Please delete this object from your document."
 msgstr "オブジェクト %(id)sには空の 'd' 属性があります。このオブジェクトをドキュメントから削除してください。"
@@ -556,19 +556,19 @@ msgstr "オブジェクト %(id)sには空の 'd' 属性があります。この
 #. used when showing an error message to the user such as
 #. "Some Path (path1234): error: satin column: One or more of the rungs doesn't
 #. intersect both rails."
-#: lib/elements/element.py:385
+#: lib/elements/element.py:358
 msgid "error:"
 msgstr "エラー"
 
-#: lib/elements/empty_d_object.py:12
+#: lib/elements/empty_d_object.py:13
 msgid "Empty D-Attribute"
 msgstr "空のD属性"
 
-#: lib/elements/empty_d_object.py:13
+#: lib/elements/empty_d_object.py:14
 msgid "There is an invalid path object in the document, the d-attribute is missing."
 msgstr "ドキュメントに無効なパスオブジェクトがあり、d属性がありません。"
 
-#: lib/elements/empty_d_object.py:15
+#: lib/elements/empty_d_object.py:16
 msgid "* Run Extensions > Ink/Stitch > Troubleshoot > Cleanup Document..."
 msgstr "*拡張機能の実行>インク/ステッチ>トラブルシューティング>ドキュメントのクリーンアップ..."
 
@@ -900,7 +900,7 @@ msgid "Legacy running stitch setting detected!\n\n"
 msgstr "レガシーランニングステッチの設定が検出されました！\n\n"
 "ランニングステッチを示すために0.5単位未満のストロークを使用しているようですが、これは非推奨です。代わりに、ランニングステッチを示すために、ストロークを破線に設定してください。どんな種類のダッシュでも機能します。"
 
-#: lib/elements/text.py:13 lib/extensions/lettering.py:73
+#: lib/elements/text.py:13 lib/extensions/lettering.py:75
 msgid "Text"
 msgstr "文字"
 
@@ -930,17 +930,17 @@ msgid "Please select at least one satin column."
 msgstr "少なくとも1つのサテンカラムを選択してください。"
 
 #. This was previously: "No embroiderable paths selected."
-#: lib/extensions/base.py:133
+#: lib/extensions/base.py:123
 msgid "Ink/Stitch doesn't know how to work with any of the objects you've selected."
 msgstr "インク/ステッチは、選択したオブジェクトの操作方法を認識していません。"
 
-#: lib/extensions/base.py:135
+#: lib/extensions/base.py:125
 msgid "There are no objects in the entire document that Ink/Stitch knows how to work with."
 msgstr "インクステッチが操作可能なオブジェクトがこのドキュメント全体にありません。"
 
-#: lib/extensions/base.py:137
-msgid "Tip: Select some objects and use Path -> Object to Path to convert them to paths."
-msgstr "ヒント：いくつかのオブジェクトを選択し、[パス]-> [オブジェクトをパスへ] を使用してそれらをパスに変換します。"
+#: lib/extensions/base.py:127
+msgid "Tip: Run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot Objects"
+msgstr ""
 
 #: lib/extensions/break_apart.py:31
 msgid "Please select one or more fill areas to break apart."
@@ -951,17 +951,17 @@ msgstr "分解する1つまたは複数の塗りつぶし領域を選択して�
 msgid "%s elements removed"
 msgstr "%s 要素が削除されました"
 
-#: lib/extensions/convert_to_satin.py:36
+#: lib/extensions/convert_to_satin.py:35
 msgid "Please select at least one line to convert to a satin column."
 msgstr "サテンの列に変換するには、少なくとも1行を選択してください。"
 
 #. : Convert To Satin extension, user selected one or more objects that were
 #. not lines.
-#: lib/extensions/convert_to_satin.py:41
+#: lib/extensions/convert_to_satin.py:40
 msgid "Only simple lines may be converted to satin columns."
 msgstr "単純な線のみをサテンの列に変換できます。"
 
-#: lib/extensions/convert_to_satin.py:135
+#: lib/extensions/convert_to_satin.py:134
 msgid "Ink/Stitch cannot convert your stroke into a satin column. Please break up your path and try again."
 msgstr "インク/ステッチでは、ストロークをサテンの列に変換できません。パスを分割して、もう一度やり直してください。"
 
@@ -1017,31 +1017,43 @@ msgstr "デザインに他のカラーパレットを選択してください。
 msgid "File does not exist and cannot be opened. Please correct the file path and try again.\\r%s"
 msgstr "ファイルが存在しないため開けません。ファイルパスを修正して再度お試しください。\\r%s"
 
-#: lib/extensions/layer_commands.py:23
+#: lib/extensions/install_custom_palette.py:24
+msgid "File does not exist."
+msgstr ""
+
+#: lib/extensions/install_custom_palette.py:28
+msgid "Wrong file type. Ink/Stitch only accepts gpl color palettes."
+msgstr ""
+
+#: lib/extensions/install_custom_palette.py:36
+msgid "Ink/Stitch cannot find your palette folder automatically. Please install your palette manually."
+msgstr ""
+
+#: lib/extensions/layer_commands.py:20
 msgid "Please choose one or more commands to add."
 msgstr "追加するコマンドを1つ以上選択してください。"
 
-#: lib/extensions/lettering.py:42 lib/extensions/lettering.py:419
+#: lib/extensions/lettering.py:41 lib/extensions/lettering.py:418
 msgid "Ink/Stitch Lettering"
 msgstr "インク/ステッチの文字配置"
 
-#: lib/extensions/lettering.py:49
+#: lib/extensions/lettering.py:51
 msgid "Font"
 msgstr "フォント"
 
-#: lib/extensions/lettering.py:61
+#: lib/extensions/lettering.py:63
 msgid "Options"
 msgstr "オプション"
 
-#: lib/extensions/lettering.py:66
+#: lib/extensions/lettering.py:68
 msgid "Stitch lines of text back and forth"
 msgstr "テキストの行を前後にステッチします。"
 
-#: lib/extensions/lettering.py:69
+#: lib/extensions/lettering.py:71
 msgid "Add trims"
 msgstr "トリムを追加"
 
-#: lib/extensions/lettering.py:78 lib/extensions/params.py:355
+#: lib/extensions/lettering.py:80 lib/extensions/params.py:359
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
 #: print/templates/custom-page.html:33 print/templates/ui.html:92
 #: print/templates/ui.html:96 print/templates/ui.html:102
@@ -1050,22 +1062,22 @@ msgstr "トリムを追加"
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: lib/extensions/lettering.py:82 lib/extensions/params.py:362
+#: lib/extensions/lettering.py:84 lib/extensions/params.py:366
 msgid "Apply and Quit"
 msgstr "適用して終了"
 
-#: lib/extensions/lettering.py:149
+#: lib/extensions/lettering.py:151
 msgid "Unable to find any fonts!  Please try reinstalling Ink/Stitch."
 msgstr "フォントが見つかりません。 インクステッチを再インストールしてください。"
 
-#: lib/extensions/lettering.py:223
+#: lib/extensions/lettering.py:222
 msgid "This font has no available font variant. Please update or remove the font."
 msgstr "このフォントには、使用可能なフォントバリアントがありません。フォントを更新または削除してください。"
 
 #. The user has chosen to scale the text by some percentage
 #. (50%, 200%, etc).  If you need to use the percentage symbol,
 #. make sure to double it (%%).
-#: lib/extensions/lettering.py:265
+#: lib/extensions/lettering.py:264
 #, python-format
 msgid "Text scale %s%%"
 msgstr "文字の大きさ %s%%"
@@ -1137,61 +1149,61 @@ msgstr "このパラメータは、\"適応して終了 \"をクリックした�
 msgid "Embroidery Params"
 msgstr "刺繍パラメータ"
 
-#: lib/extensions/params.py:359
+#: lib/extensions/params.py:363
 msgid "Use Last Settings"
 msgstr "前回の設定を使う"
 
-#: lib/extensions/troubleshoot.py:48
+#: lib/extensions/troubleshoot.py:45
 msgid "All selected shapes are valid! "
 msgstr "選択されたすべての形状が有効です。 "
 
-#: lib/extensions/troubleshoot.py:50
+#: lib/extensions/troubleshoot.py:47
 msgid "If you are still having trouble with a shape not being embroidered, check if it is in a layer with an ignore command."
 msgstr "形状が刺繍されない場合は、非表示設定のレイヤーにあるか確認してください。"
 
-#: lib/extensions/troubleshoot.py:76
+#: lib/extensions/troubleshoot.py:71
 msgid "Invalid Pointer"
 msgstr "無効なポインタ"
 
-#: lib/extensions/troubleshoot.py:85 templates/lettering_generate_json.xml:26
+#: lib/extensions/troubleshoot.py:77 templates/lettering_generate_json.xml:26
 msgid "Description"
 msgstr "説明"
 
-#: lib/extensions/troubleshoot.py:107 lib/extensions/troubleshoot.py:165
+#: lib/extensions/troubleshoot.py:98 lib/extensions/troubleshoot.py:143
 #: templates/cleanup.xml:17 templates/remove_embroidery_settings.xml:16
 #: templates/troubleshoot.xml:10
 msgid "Troubleshoot"
 msgstr "トラブルシューティング"
 
-#: lib/extensions/troubleshoot.py:123 lib/extensions/troubleshoot.py:172
+#: lib/extensions/troubleshoot.py:110 lib/extensions/troubleshoot.py:150
 msgid "Errors"
 msgstr "エラー"
 
-#: lib/extensions/troubleshoot.py:132 lib/extensions/troubleshoot.py:176
+#: lib/extensions/troubleshoot.py:116 lib/extensions/troubleshoot.py:154
 msgid "Warnings"
 msgstr "注意事項"
 
-#: lib/extensions/troubleshoot.py:141
+#: lib/extensions/troubleshoot.py:122
 msgid "Type Warnings"
 msgstr "タイプ別警告"
 
-#: lib/extensions/troubleshoot.py:173
+#: lib/extensions/troubleshoot.py:151
 msgid "Problems that will prevent the shape from being embroidered."
 msgstr "刺繍されない問題"
 
-#: lib/extensions/troubleshoot.py:177
+#: lib/extensions/troubleshoot.py:155
 msgid "These are problems that won't prevent the shape from being embroidered. You should consider to fix the warning, but if you don't, Ink/Stitch will do its best to process the object."
 msgstr "この形状を刺繍することを妨げない問題です。この警告を修正を検討する必要がありますが、そうしない場合、インクステッチはこのオブジェクトを処理するために最善を尽くします。"
 
-#: lib/extensions/troubleshoot.py:182
+#: lib/extensions/troubleshoot.py:160
 msgid "Object Type Warnings"
 msgstr "オブジェクトタイプの警告"
 
-#: lib/extensions/troubleshoot.py:183
+#: lib/extensions/troubleshoot.py:161
 msgid "These objects may not work properly with Ink/Stitch. Follow the instructions to correct unwanted behaviour."
 msgstr ""
 
-#: lib/extensions/troubleshoot.py:199
+#: lib/extensions/troubleshoot.py:177
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
 msgstr "1つのオブジェクトに複数のエラーが含まれている可能性がありますが、ポインタはオブジェクトごとに1つしかありません。 さらにエラーが発生した場合は、この関数を再度実行してください。 ポインタを削除するには、オブジェクトパネル（オブジェクト -> Objects...）で「Troubleshoot」というレイヤーを削除します。"
 
@@ -1388,25 +1400,25 @@ msgstr "フォント '％s'にはバリアントがありません。"
 msgid "Error writing to %(path)s: %(error)s"
 msgstr "%(path)sへの書き込みエラー:%(error)s"
 
-#: lib/stitches/auto_satin.py:662
+#: lib/stitches/auto_satin.py:659
 msgid "Auto-Satin"
 msgstr "自動サテン"
 
 #. Label for a satin column created by Auto-Route Satin Columns and Lettering
 #. extensions
-#: lib/stitches/auto_satin.py:709
+#: lib/stitches/auto_satin.py:706
 #, python-format
 msgid "AutoSatin %d"
 msgstr "自動サテン %d"
 
 #. Label for running stitch (underpathing) created by Auto-Route Satin Columns
 #. amd Lettering extensions
-#: lib/stitches/auto_satin.py:712
+#: lib/stitches/auto_satin.py:709
 #, python-format
 msgid "AutoSatin Running Stitch %d"
 msgstr "自動サテンランニングステッチ %d"
 
-#: lib/svg/rendering.py:224
+#: lib/svg/rendering.py:222
 msgid "Stitch Plan"
 msgstr "ステッチプラン"
 
@@ -1421,8 +1433,8 @@ msgid "Ink/Stitch Version: %s"
 msgstr "インク/ステッチバージョン：％s"
 
 #: lib/utils/version.py:21
-msgid "Ink/Stitch Version: unkown"
-msgstr "インク/ステッチバージョン：不明"
+msgid "Ink/Stitch Version: unknown"
+msgstr ""
 
 #: print/templates/color_swatch.html:8 print/templates/color_swatch.html:40
 #: print/templates/operator_detailedview.html:9
@@ -2120,11 +2132,12 @@ msgstr "コマンド"
 msgid "Import Threadlist"
 msgstr "スレッドリストの読み込み"
 
-#: templates/import_threadlist.xml:6
+#: templates/import_threadlist.xml:6 templates/install_custom_palette.xml:8
 msgid "Choose file"
 msgstr "ファイル選択"
 
 #: templates/import_threadlist.xml:20 templates/install.xml:10
+#: templates/install_custom_palette.xml:13
 msgid "Thread Color Management"
 msgstr "糸の色の管理"
 
@@ -2136,6 +2149,18 @@ msgstr "%(file_extension)s のファイルをインクステッチのマニュ�
 #: templates/install.xml:3
 msgid "Install thread color palettes for Inkscape"
 msgstr "Inkscapeのスレッドカラーパレットをインストールする"
+
+#: templates/install_custom_palette.xml:3
+msgid "Install custom palette"
+msgstr ""
+
+#: templates/install_custom_palette.xml:6
+msgid "Choose a .gpl color palette file to install into Inkscape."
+msgstr ""
+
+#: templates/install_custom_palette.xml:7
+msgid "Restart Inkscape to use."
+msgstr ""
 
 #: templates/layer_commands.xml:3
 msgid "Add Layer Commands"
