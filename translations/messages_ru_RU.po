@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-07-30 00:54+0000\n"
-"PO-Revision-Date: 2021-07-30 00:56\n"
+"PO-Revision-Date: 2021-07-31 00:53\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -938,7 +938,7 @@ msgstr "Во всем дизайне нет ни одного объекта с 
 
 #: lib/extensions/base.py:127
 msgid "Tip: Run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot Objects"
-msgstr ""
+msgstr "Совет: Попробуйте Расширения > Ink/Stitch > Решение ппроблем > Решение проблем с объектами"
 
 #: lib/extensions/break_apart.py:31
 msgid "Please select one or more fill areas to break apart."
@@ -968,7 +968,7 @@ msgstr "Ink/Stitch не может преобразовать вашу лини�
 #: lib/extensions/convert_to_stroke.py:25
 #: lib/extensions/convert_to_stroke.py:30
 msgid "Please select at least one satin column to convert to a running stitch."
-msgstr ""
+msgstr "Выберите хотябы одну сатиновую колонну для её преобразования в строчку."
 
 #: lib/extensions/cut_satin.py:20
 msgid "Please select one or more satin columns to cut."
@@ -1016,15 +1016,15 @@ msgstr "Файл не существует и не может быть откр�
 
 #: lib/extensions/install_custom_palette.py:24
 msgid "File does not exist."
-msgstr ""
+msgstr "Файл не существует."
 
 #: lib/extensions/install_custom_palette.py:28
 msgid "Wrong file type. Ink/Stitch only accepts gpl color palettes."
-msgstr ""
+msgstr "Неверный тип файла. Ink/Stitch понимает только цветовые палитры gpl."
 
 #: lib/extensions/install_custom_palette.py:36
 msgid "Ink/Stitch cannot find your palette folder automatically. Please install your palette manually."
-msgstr ""
+msgstr "Ink/Stitch не смог автоматически найти папку палитр. Установите вашу палитру вручную."
 
 #: lib/extensions/layer_commands.py:20
 msgid "Please choose one or more commands to add."
@@ -1198,7 +1198,7 @@ msgstr "Предупреждения о типе объекта"
 
 #: lib/extensions/troubleshoot.py:161
 msgid "These objects may not work properly with Ink/Stitch. Follow the instructions to correct unwanted behaviour."
-msgstr ""
+msgstr "Эти объекты могут некоректно работать в Ink/Stitch. Следуйте инструкциям, чтобы исправить возможные проблемы."
 
 #: lib/extensions/troubleshoot.py:177
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
@@ -2045,15 +2045,15 @@ msgstr "Преобразовать линию в Сатин"
 
 #: templates/convert_to_stroke.xml:3
 msgid "Convert Satin to Stroke"
-msgstr ""
+msgstr "Преобразовать Сатин в Строчку"
 
 #: templates/convert_to_stroke.xml:6
 msgid "Converts a satin column into a running stitch."
-msgstr ""
+msgstr "Преобразует сатиновую колонну в строчку."
 
 #: templates/convert_to_stroke.xml:8
 msgid "Do not delete original satin column."
-msgstr ""
+msgstr "Не удалять исходную сатиновую колонну."
 
 #: templates/cut_satin.xml:3
 msgid "Cut Satin Column"
@@ -2150,15 +2150,15 @@ msgstr "Установить цветовые палитры ниток для I
 
 #: templates/install_custom_palette.xml:3
 msgid "Install custom palette"
-msgstr ""
+msgstr "Установить пользовательскую палитру"
 
 #: templates/install_custom_palette.xml:6
 msgid "Choose a .gpl color palette file to install into Inkscape."
-msgstr ""
+msgstr "Выберите файл цветовой палитры .gpl для установки в Inkscape."
 
 #: templates/install_custom_palette.xml:7
 msgid "Restart Inkscape to use."
-msgstr ""
+msgstr "Перезапустите Inkscape для активации палитры."
 
 #: templates/layer_commands.xml:3
 msgid "Add Layer Commands"

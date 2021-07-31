@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-07-30 00:54+0000\n"
-"PO-Revision-Date: 2021-07-30 00:56\n"
+"PO-Revision-Date: 2021-07-31 00:54\n"
 "Last-Translator: \n"
 "Language-Team: Ukrainian\n"
 "MIME-Version: 1.0\n"
@@ -73,7 +73,7 @@ msgstr "Coronaviral"
 #. description of font in fonts/coronaviral
 #: inkstitch-fonts-metadata.py:20
 msgid "A font created with manual sitch. Do not change the size or very little. The capital em is 22mm wide at 100%"
-msgstr ""
+msgstr "Шрифт створено ручним прошиттям. Не міняйте розмір (чуть-чуть можна). Велика М має ширину 22 мм при 100% масштабі"
 
 #. name of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:22
@@ -94,7 +94,7 @@ msgstr "Digory Doodles Bean"
 #. description of font in fonts/digory_doodles_bean
 #: inkstitch-fonts-metadata.py:28
 msgid "All letteres have mixed satin and bean stitch; The capital M is 16mm tall. The small x is 7 mm"
-msgstr ""
+msgstr "Кожна буква складається із сатина і багатошовного прошиття. Велика М має висоту 16 мм. Маленька х - 7 мм"
 
 #. name of font in fonts/emilio_20
 #: inkstitch-fonts-metadata.py:30
@@ -105,7 +105,7 @@ msgstr "Emilio 20"
 #: inkstitch-fonts-metadata.py:32
 #, python-format
 msgid "Emilio 20 is a font with capital only ans numbers. M is 48.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 140%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Emilio 20 має тільки великі букви і цифри. М має ширину 48.5 мм при 100% масштабі. Може масштабуватися від 70% до 140%. Кожний сатин має попереднє прошиття зигзагом"
 
 #. name of font in fonts/espresso_dolce
 #: inkstitch-fonts-metadata.py:34
@@ -115,7 +115,7 @@ msgstr "Espresso Dolce"
 #. description of font in fonts/espresso_dolce
 #: inkstitch-fonts-metadata.py:36
 msgid "The capital M is 16.2 mm high at 100 scale. Every satin has zigzag underlay. x is 11.5 mm high, q is 17.5 mm high, l is 17.2 mm high."
-msgstr ""
+msgstr "Велика М має висоту 16.2 мм при 100% масштабі. Кожен сатин попередньо прошито зигзагом. Маленька х має висоту 11.5 мм, q - 17.5 мм, l - 17.2 мм."
 
 #. name of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:38
@@ -146,7 +146,7 @@ msgstr "Kaushan Script"
 #: inkstitch-fonts-metadata.py:48
 #, python-format
 msgid "The capital M is 29 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 200%.  Every satin has zigzag underlay"
-msgstr ""
+msgstr "Велика М має ширину 29 мм при 100% масштабі. Може масштабуватися від 80% до 200%. Кожний сатин має попередню прострочку зигзагом"
 
 #. name of font in fonts/learning_curve
 #: inkstitch-fonts-metadata.py:50
@@ -156,7 +156,7 @@ msgstr "Learning curve"
 #. description of font in fonts/learning_curve
 #: inkstitch-fonts-metadata.py:52
 msgid "Cursive italique en point triple pour des minuscules de 6 à 14mm"
-msgstr ""
+msgstr "Курсивный шрифт потрійного прошиття. Великі букви мають висоту від 6 до 14мм"
 
 #. name of font in fonts/lobster
 #: inkstitch-fonts-metadata.py:54
@@ -210,7 +210,7 @@ msgstr "Romanaugusa"
 #: inkstitch-fonts-metadata.py:72
 #, python-format
 msgid "Based on Latin Modern Roman 10 Bold italic. The capital M is 42.5 millimeter wide at 100% scale.  Can be scaled down to 70% or up to 130%.  Every satin has zigzag underlay"
-msgstr ""
+msgstr "Жирний курсив на основі Latin Modern Roman 10. Велика М має ширину 42.5 мм при 100% масштабі. Може масштабуватися від 70% до 130%. Кожний сатин має попередню прострочку зигзагом"
 
 #. name of font in fonts/romanaugusa_bicolor
 #: inkstitch-fonts-metadata.py:74
@@ -221,7 +221,7 @@ msgstr "Romanaugusa bicolor"
 #: inkstitch-fonts-metadata.py:76
 #, python-format
 msgid "Based on Latin Modern Roman 10 Bold italic. A font with capital letters with 2 colors. Very easy to use with letters from Romanaugusa. The capital M is 42.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 130%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Жирний курсив на основе Latin Modern Roman 10. Шрифт з двохколірними великими літерами. Можна використовувати з буквами із шрифта Romanaugusa. Велика М має ширину 42.5 мм при 100% масштабі. Може масштабуватися від 70% до 130%. Кожний сатин має прошиття зигзагом"
 
 #. name of font in fonts/sacramarif
 #: inkstitch-fonts-metadata.py:78
@@ -231,7 +231,7 @@ msgstr "Sacramarif"
 #. description of font in fonts/sacramarif
 #: inkstitch-fonts-metadata.py:80
 msgid "Based on Sacramento. Very small font with runstitch. It can be scaled from 80% to 150%"
-msgstr ""
+msgstr "Шрифт, який базується на Sacramento. Дуже маленький шрифт виконаний біжучою стрічкою. Може масштабуватися від 80% до 150%"
 
 #. name of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:82
@@ -252,7 +252,7 @@ msgstr "TT Directors"
 #. description of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:88
 msgid "A font suited for directing"
-msgstr ""
+msgstr "Шрифт для важливого"
 
 #. name of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:90
@@ -278,7 +278,7 @@ msgstr "В Ink/Stitch сталася невідома помилка."
 
 #: inkstitch.py:76
 msgid "If you'd like to help, please file an issue at https://github.com/inkstitch/inkstitch/issues and include the entire error description below:"
-msgstr ""
+msgstr "Якщо ви бажаєте допомогти, створіть повідомлення на вебсторінці https://github.com/inkstitch/inkstitch/issues та надайте повний опис помилки:"
 
 #. command attached to an object
 #: lib/commands.py:24
@@ -293,12 +293,12 @@ msgstr "Кінцева позиція заповнення"
 #. command attached to an object
 #: lib/commands.py:30
 msgid "Auto-route satin stitch starting position"
-msgstr ""
+msgstr "Початкове положення для автомаршрута сатинів"
 
 #. command attached to an object
 #: lib/commands.py:33
 msgid "Auto-route satin stitch ending position"
-msgstr ""
+msgstr "Позиція кінця автомаршрута сатинів"
 
 #. command attached to an object
 #: lib/commands.py:36
@@ -308,7 +308,7 @@ msgstr "Зупинити (поставити машину на паузу) пі�
 #. command attached to an object
 #: lib/commands.py:39
 msgid "Trim thread after sewing this object"
-msgstr ""
+msgstr "Обрізати нитку після вишивки цього объекта"
 
 #. command attached to an object
 #: lib/commands.py:42
@@ -318,12 +318,12 @@ msgstr "Ігнорувати цей об'ект(не вишивати)"
 #. command attached to an object
 #: lib/commands.py:45
 msgid "Satin cut point (use with Cut Satin Column)"
-msgstr ""
+msgstr "Точка разрива сатина (використовувати разом із Розділити Сатинову Колонку)"
 
 #. command that affects a layer
 #: lib/commands.py:49
 msgid "Ignore layer (do not stitch any objects in this layer)"
-msgstr ""
+msgstr "Ігнорувати шар (не вишивати об'єкти на цьому шарі)"
 
 #. command that affects entire document
 #: lib/commands.py:52
@@ -378,7 +378,7 @@ msgstr "Розширити"
 
 #: lib/elements/auto_fill.py:30
 msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use original size instead."
-msgstr ""
+msgstr "Параметр розширення не можна застосувати для цього об'єкта гладі. Замість нього Ink/Stitch буде використовувати оригінальний розмір."
 
 #: lib/elements/auto_fill.py:35 lib/elements/auto_fill.py:122
 msgid "Inset"
@@ -386,7 +386,7 @@ msgstr "Вставки"
 
 #: lib/elements/auto_fill.py:36
 msgid "The underlay inset parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use the original size instead."
-msgstr ""
+msgstr "Параметр відступу попереднього прошиття не можна застосувати для цього об'єкта гладі. Замість нього Ink/Stitch буде використовувати оригінальний розмір."
 
 #: lib/elements/auto_fill.py:41
 msgid "AutoFill"
@@ -421,7 +421,7 @@ msgstr "Кут заповнення"
 
 #: lib/elements/auto_fill.py:80
 msgid "Default: fill angle + 90 deg. Insert comma-seperated list for multiple layers."
-msgstr ""
+msgstr "По замовчуванню: кут заповнення +90°. Для кількох шарів вкажіть список через кому."
 
 #: lib/elements/auto_fill.py:101
 msgid "Row spacing"
@@ -457,11 +457,11 @@ msgstr "Розгорніть форму перед тим, як заповнит
 
 #: lib/elements/auto_fill.py:155 lib/elements/auto_fill.py:167
 msgid "Underpath"
-msgstr ""
+msgstr "Нижні переходи"
 
 #: lib/elements/auto_fill.py:156 lib/elements/auto_fill.py:168
 msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
-msgstr ""
+msgstr "Переміщення всередині контуру при переході від секції до секції. Рядок переходів під гладдю або прострочкою уникає напрямків рядів, тому її не видно. Це робить поверхню гладі трохи нерівною."
 
 #: lib/elements/auto_fill.py:254
 msgid "Error during autofill!  This means that there is a problem with Ink/Stitch."
@@ -479,11 +479,11 @@ msgstr "Клонувати об'єкт"
 
 #: lib/elements/clone.py:28
 msgid "There are one or more clone objects in this document.  Ink/Stitch can work with single clones, but you are limited to set a very few parameters. "
-msgstr ""
+msgstr "У дизайні присутні один або більше об'єктів-клонів. Ink/Stitch може працювати з простими клонами, але ви будет обмежені лише невеликим списком параметрів. "
 
 #: lib/elements/clone.py:31
 msgid "If you want to convert the clone into a real element, follow these steps:"
-msgstr ""
+msgstr "Якщо ви хочете перетворити клон в реальний об'єкт, виконайте наступні кроки:"
 
 #: lib/elements/clone.py:32
 msgid "* Select the clone"
@@ -499,11 +499,11 @@ msgstr "Клон не може бути вишитий"
 
 #: lib/elements/clone.py:39
 msgid "There are one ore more clone objects in this document. A clone must be a direct child of an embroiderable element. Ink/Stitch cannot embroider clones of groups or other not embroiderable elements (text or image)."
-msgstr ""
+msgstr "У дизайні присутні один або більше об'єктів-клонів. Клон повинен бути прямим нащадком елемента, який можна вишити. Ink/Stitch не може вишити клони груп чи інших невишиваємі елементи (текст або картинка)."
 
 #: lib/elements/clone.py:42
 msgid "Convert the clone into a real element:"
-msgstr ""
+msgstr "Перетворіть клон в реальний об'єкт:"
 
 #: lib/elements/clone.py:43
 msgid "* Select the clone."
@@ -519,15 +519,15 @@ msgstr "Свій кут гладі"
 
 #: lib/elements/clone.py:65
 msgid "This setting will apply a custom fill angle for the clone."
-msgstr ""
+msgstr "Ця настройка вказує свій кут гладі для клону."
 
 #: lib/elements/element.py:225
 msgid "Allow lock stitches"
-msgstr ""
+msgstr "Дозволити додавати закріпки"
 
 #: lib/elements/element.py:226
 msgid "Tie thread at the beginning and/or end of this object. Manual stitch will not add lock stitches."
-msgstr ""
+msgstr "Закріпки на початку і/або наприкінці цього об'єкта. Для ручних стібків закріпки додаватися не будуть."
 
 #. options to allow lock stitch before and after objects
 #: lib/elements/element.py:230
@@ -549,7 +549,7 @@ msgstr "Не додавати"
 #: lib/elements/element.py:272
 #, python-format
 msgid "Object %(id)s has an empty 'd' attribute.  Please delete this object from your document."
-msgstr ""
+msgstr "У об'єкта %(id)s атрибут 'd' порожній. Видаліть цей об'єкт з вашого дизайну."
 
 #. used when showing an error message to the user such as
 #. "Some Path (path1234): error: satin column: One or more of the rungs doesn't
@@ -560,15 +560,15 @@ msgstr "помилка:"
 
 #: lib/elements/empty_d_object.py:13
 msgid "Empty D-Attribute"
-msgstr ""
+msgstr "Пустий D-Атрибут"
 
 #: lib/elements/empty_d_object.py:14
 msgid "There is an invalid path object in the document, the d-attribute is missing."
-msgstr ""
+msgstr "У дизайні виявлена неправильна лінія, пропущений d-атрибут."
 
 #: lib/elements/empty_d_object.py:16
 msgid "* Run Extensions > Ink/Stitch > Troubleshoot > Cleanup Document..."
-msgstr ""
+msgstr "* Виберіть: Розширення > Ink/Stitch > Вирішення проблем > Очистка Дизайна..."
 
 #: lib/elements/fill.py:22
 msgid "Unconnected"
@@ -580,11 +580,11 @@ msgstr "Заповнення: Цей об'єкт складається з фі�
 
 #: lib/elements/fill.py:27 lib/elements/fill.py:35
 msgid "* Extensions > Ink/Stitch > Fill Tools > Break Apart Fill Objects"
-msgstr ""
+msgstr "* Розширення > Ink/Stitch > Інструменти гладі > Розбити об'єкти заливок"
 
 #: lib/elements/fill.py:32
 msgid "Border crosses itself"
-msgstr ""
+msgstr "Границі пересікають самі себе"
 
 #: lib/elements/fill.py:33
 msgid "Fill: Shape is not valid.  This can happen if the border crosses over itself."
@@ -640,7 +640,7 @@ msgstr "Повторний рядок це багато разів, перш н�
 
 #: lib/elements/fill.py:120
 msgid "Setting this dictates how many rows apart the stitches will be before they fall in the same column position."
-msgstr ""
+msgstr "Кількість рядків між стібками в одній і тій же позиції в колонці."
 
 #: lib/elements/image.py:13
 msgid "Image"
@@ -652,11 +652,11 @@ msgstr "Ink/Stitch не може працювати з об'єктами зоб�
 
 #: lib/elements/image.py:16
 msgid "* Convert your image into a path: Path > Trace Bitmap... (Shift+Alt+B) (further steps might be required)"
-msgstr ""
+msgstr "* Конвертуйте ваше зображення у вектор: Контур > Векторизувати растр... (Shift+Alt+B) (можуть бути потрібними додаткові дії)"
 
 #: lib/elements/image.py:18
 msgid "* Alternatively redraw the image with the pen (P) or bezier (B) tool"
-msgstr ""
+msgstr "* У якості альтернативи перемалюйте зображення за допомогою інструментів Ручка (P) або Криві (B)"
 
 #: lib/elements/polyline.py:17
 msgid "Polyline Object"
@@ -664,7 +664,7 @@ msgstr "Об'єкт полілінія"
 
 #: lib/elements/polyline.py:18
 msgid "This object is an SVG PolyLine.  Ink/Stitch can work with this shape, but you can't edit it in Inkscape.  Convert it to a manual stitch path to allow editing."
-msgstr ""
+msgstr "Цей об'єкт має тип SVG PolyLine. Ink/Stitch може працювати з такими формами, але ви не можете редагувати їх в Inkscape. Конвертуйте об'єкт в контур, щоб можна було його змінювати."
 
 #: lib/elements/polyline.py:22 lib/elements/satin_column.py:25
 msgid "* Select this object."
@@ -672,15 +672,15 @@ msgstr "* Позначте цей об'єкт."
 
 #: lib/elements/polyline.py:23
 msgid "* Do Path > Object to Path."
-msgstr ""
+msgstr "* Виконайте Контур > Обконтурити об'ект."
 
 #: lib/elements/polyline.py:24
 msgid "* Optional: Run the Params extension and check the \"manual stitch\" box."
-msgstr ""
+msgstr "* Не обов'язково: Запустіть Параметри і виберіть прапорець \"ручна прошивка\"."
 
 #: lib/elements/polyline.py:44
 msgid "Manual stitch along path"
-msgstr ""
+msgstr "Ручне прошиття вздовж лінії"
 
 #: lib/elements/satin_column.py:22
 msgid "Satin column has fill"
@@ -704,23 +704,23 @@ msgstr "* Вимкнута заповнення"
 
 #: lib/elements/satin_column.py:29
 msgid "* Alternative: open Params and switch this path to Stroke to disable Satin Column mode"
-msgstr ""
+msgstr "* Альтернативний варіант: відкрийте Параметри і переключіть цей об'єкт на Прострочення відключивши режим Сатинової колонки"
 
 #: lib/elements/satin_column.py:34
 msgid "Too few subpaths"
-msgstr ""
+msgstr "Занадто мало ліній"
 
 #: lib/elements/satin_column.py:35
 msgid "Satin column: Object has too few subpaths.  A satin column should have at least two subpaths (the rails)."
-msgstr ""
+msgstr "Сатинова колонка: в об'єкті замало ліній. У сатиновій колонці має бути принаймні дві лінії (напрямні)."
 
 #: lib/elements/satin_column.py:37
 msgid "* Add another subpath (select two rails and do Path > Combine)"
-msgstr ""
+msgstr "* Додайте ще одну лінію (виділіть дві направляючі і виконайте Контур > Об'єднати)"
 
 #: lib/elements/satin_column.py:38
 msgid "* Convert to running stitch or simple satin (Params extension)"
-msgstr ""
+msgstr "* Конвертуйте в стрічку або зигзаг (через Параметри)"
 
 #: lib/elements/satin_column.py:43
 msgid "Unequal number of points"
@@ -728,7 +728,7 @@ msgstr "Не рівна кількість точок"
 
 #: lib/elements/satin_column.py:44
 msgid "Satin column: There are no rungs and rails have an an unequal number of points."
-msgstr ""
+msgstr "Сатинова колонка: поперечин немає, але кількість точок на направляючих не дорівнює одна одній."
 
 #: lib/elements/satin_column.py:46
 msgid "The easiest way to solve this issue is to add one or more rungs. "
@@ -736,11 +736,11 @@ msgstr "Простіше додати одну чи більше попереч�
 
 #: lib/elements/satin_column.py:47
 msgid "Rungs control the stitch direction in satin columns."
-msgstr ""
+msgstr "Поперечини керують нахилом стібків в сатиновій колонці."
 
 #: lib/elements/satin_column.py:48
 msgid "* With the selected object press \"P\" to activate the pencil tool."
-msgstr ""
+msgstr "* Коли об'єкт вибрано, натисніть клавішу \"P\", щоб вибрати інструмент Олівець."
 
 #: lib/elements/satin_column.py:49
 msgid "* Hold \"Shift\" while drawing the rung."
@@ -752,7 +752,7 @@ msgstr "Кожна поперечка повинна пересікати оби
 
 #: lib/elements/satin_column.py:57
 msgid "Rung doesn't intersect rails"
-msgstr ""
+msgstr "Поперечка не пересекає направляючі"
 
 #: lib/elements/satin_column.py:58
 msgid "Satin column: A rung doesn't intersect both rails."
@@ -1002,24 +1002,24 @@ msgstr ""
 
 #: lib/extensions/import_threadlist.py:48
 msgid "Please try to import as \"other threadlist\" and specify a color palette below."
-msgstr ""
+msgstr "Спробуйте імпортувати як \"інший список ниток\" і вкажіть палітру нижче."
 
 #: lib/extensions/import_threadlist.py:50
 msgid "Please chose an other color palette for your design."
-msgstr ""
+msgstr "Выберіть іншу палітру для вашого дизайна."
 
 #: lib/extensions/input.py:71
 #, python-format
 msgid "File does not exist and cannot be opened. Please correct the file path and try again.\\r%s"
-msgstr ""
+msgstr "Файл не існує і не може бути відкритий. Перевірте правильність шляху і спробуйте знову.\\r%s"
 
 #: lib/extensions/install_custom_palette.py:24
 msgid "File does not exist."
-msgstr ""
+msgstr "Файл не існує."
 
 #: lib/extensions/install_custom_palette.py:28
 msgid "Wrong file type. Ink/Stitch only accepts gpl color palettes."
-msgstr ""
+msgstr "Неправильний тип файла. Ink/Stitch розуміє тільки кольорові палітри gpl."
 
 #: lib/extensions/install_custom_palette.py:36
 msgid "Ink/Stitch cannot find your palette folder automatically. Please install your palette manually."
