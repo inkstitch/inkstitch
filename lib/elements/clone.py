@@ -16,7 +16,7 @@ from ..svg.tags import (EMBROIDERABLE_TAGS, INKSTITCH_ATTRIBS,
 from ..utils import cache
 from .auto_fill import AutoFill
 from .element import EmbroideryElement, param
-from .fill import Fill
+#from .fill import Fill
 from .polyline import Polyline
 from .satin_column import SatinColumn
 from .stroke import Stroke
@@ -81,10 +81,10 @@ class Clone(EmbroideryElement):
         else:
             elements = []
             if element.get_style("fill", "black") and not element.get_style("stroke", 1) == "0":
-                if element.get_boolean_param("auto_fill", True):
-                    elements.append(AutoFill(node))
-                else:
-                    elements.append(Fill(node))
+                #if element.get_boolean_param("auto_fill", True):
+                elements.append(AutoFill(node))
+                #else:
+                #    elements.append(Fill(node))
             if element.get_style("stroke", self.node) is not None:
                 if not is_command(element.node):
                     elements.append(Stroke(node))

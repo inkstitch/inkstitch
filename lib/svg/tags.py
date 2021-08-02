@@ -51,6 +51,10 @@ inkstitch_attribs = [
                 # fill
                 'angle',
                 'auto_fill',
+                'fill_method',
+                'tangential_strategy',
+                'join_style',
+                'interlaced',
                 'expand_mm',
                 'fill_underlay',
                 'fill_underlay_angle',

@@ -25,12 +25,11 @@ class ValidationMessage(object):
     description = None
     steps_to_solve = []
 
-    def __init__(self, position=None, label=""):
+    def __init__(self, position=None):
         if isinstance(position, ShapelyPoint):
             position = (position.x, position.y)
 
         self.position = InkstitchPoint(*position)
-        self.label = label
 
 
 class ValidationError(ValidationMessage):

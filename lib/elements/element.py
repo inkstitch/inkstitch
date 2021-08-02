@@ -49,7 +49,7 @@ class Patch:
 
 class Param(object):
     def __init__(self, name, description, unit=None, values=[], type=None, group=None, inverse=False,
-                 options=[], default=None, tooltip=None, sort_index=0):
+                 options=[], default=None, tooltip=None, sort_index=0, select_items=None):
         self.name = name
         self.description = description
         self.unit = unit
@@ -61,6 +61,8 @@ class Param(object):
         self.default = default
         self.tooltip = tooltip
         self.sort_index = sort_index
+        self.select_items = select_items
+        #print("IN PARAM: ", self.values)
 
     def __repr__(self):
         return "Param(%s)" % vars(self)

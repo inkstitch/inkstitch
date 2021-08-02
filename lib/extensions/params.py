@@ -7,15 +7,15 @@
 
 import os
 import sys
-from collections import defaultdict
+from collections import defaultdict,namedtuple
 from copy import copy
-from itertools import groupby
+from itertools import groupby,zip_longest
 
 import wx
 from wx.lib.scrolledpanel import ScrolledPanel
 
 from ..commands import is_command, is_command_symbol
-from ..elements import (AutoFill, Clone, EmbroideryElement, Fill, Polyline,
+from ..elements import (AutoFill, Clone, EmbroideryElement, Polyline,
                         SatinColumn, Stroke)
 from ..elements.clone import is_clone
 from ..gui import PresetsPanel, SimulatorPreview, WarningPanel
@@ -24,6 +24,14 @@ from ..svg.tags import SVG_POLYLINE_TAG
 from ..utils import get_resource_dir
 from .base import InkstitchExtension
 
+
+#ChoiceWidgets = namedtuple("ChoiceWidgets", "param widget last_initialized_choice")
+
+
+
+def grouper(iterable_obj, count, fillvalue=None):
+    args = [iter(iterable_obj)] * count
+    return zip_longest(*args, fillvalue=fillvalue)
 
 class ParamsTab(ScrolledPanel):
     def __init__(self, *args, **kwargs):
@@ -38,6 +46,8 @@ class ParamsTab(ScrolledPanel):
         self.dependent_tabs = []
         self.parent_tab = None
         self.param_inputs = {}
+        self.choice_widgets = defaultdict(list)
+        self.dict_of_choices = {}
         self.paired_tab = None
         self.disable_notify_pair = False
 
@@ -109,6 +119,42 @@ class ParamsTab(ScrolledPanel):
 
         for tab in self.dependent_tabs:
             tab.dependent_enable(enable)
+
+        if event:
+            event.Skip()
+
+    def update_choice_state(self, event=None):
+        #selection = self.GetSelection()
+        #print("NEUES LAYOUT!")
+        input = event.GetEventObject()
+        selection = input.GetSelection()
+
+        #if selection == 1:
+        #    self.dummylabel = wx.StaticText(self)
+        #    self.dummylabel.SetLabel("Dummy label")
+        #
+        #    self.settings_grid.Insert(10,self.dummylabel)
+        #else:
+        #    sizer_item = self.settings_grid.GetItem(10)
+        #    widget = sizer_item.GetWindow()
+        #    self.settings_grid.Hide(widget)
+        #    widget.Destroy()
+        param = self.inputs_to_params[input]
+
+        self.update_choice_widgets((param, selection))
+        self.settings_grid.Layout()
+        self.Layout()
+
+        #self.settings_grid.Layout()
+        #for i in range(self.settings_grid.GetItemCount()):
+        #    self.settings_grid.Remove(0)
+        #    self.settings_grid.Clear(True)
+        #    
+        #self.settings_grid.Clear(True)
+        #self.settings_grid.Detach(0)
+       # self.settings_grid.Remove(0)
+        #print("Current SIze: ", self.settings_grid.GetItemCount())
+        #self.__do_layout(True)
 
         if event:
             event.Skip()
@@ -245,7 +291,34 @@ class ParamsTab(ScrolledPanel):
         # end wxGlade
         pass
 
-    def __do_layout(self):
+    #choice tuple is None or contains ("choice widget param name", "actual selection")
+    def update_choice_widgets(self, choice_tuple = None):
+        if choice_tuple == None: #update all choices
+            for choice in self.dict_of_choices.values():
+                self.update_choice_widgets((choice["param"].name, choice["widget"].GetSelection()))
+        else:
+            choice = self.dict_of_choices[choice_tuple[0]]
+            last_selection =  choice["last_initialized_choice"]
+            current_selection = choice["widget"].GetSelection()
+            if last_selection != -1 and last_selection != current_selection: #Hide the old widgets
+                for widget in self.choice_widgets[(choice["param"].name, last_selection)]:
+                    widget.Hide()
+                    #self.settings_grid.Detach(widget)
+            
+            #choice_index = self.settings_grid.GetChildren().index(self.settings_grid.GetItem(choice["widget"])) #TODO: is there a better way to get the index in the sizer?
+            for widgets in grouper(self.choice_widgets[choice_tuple], 4):
+                #self.settings_grid.Insert(choice_index+2,widgets[0], proportion=0, flag=wx.ALIGN_CENTER_VERTICAL)
+                #self.settings_grid.Insert(choice_index+3,widgets[1],proportion=1, flag=wx.EXPAND | wx.RIGHT | wx.ALIGN_CENTER_VERTICAL | wx.TOP, border=5)
+                #self.settings_grid.Insert(choice_index+4,widgets[2], proportion=1, flag=wx.ALIGN_CENTER_VERTICAL | wx.EXPAND | wx.LEFT, border=40)
+                #self.settings_grid.Insert(choice_index+5,widgets[3], proportion=1, flag=wx.ALIGN_CENTER_VERTICAL)
+                widgets[0].Show(True)
+                widgets[1].Show(True)
+                widgets[2].Show(True)
+                widgets[3].Show(True)
+            choice["last_initialized_choice"] = current_selection
+
+    def __do_layout(self, only_settings_grid=False):
+
         # just to add space around the settings
         box = wx.BoxSizer(wx.VERTICAL)
 
@@ -266,14 +339,21 @@ class ParamsTab(ScrolledPanel):
             box.Add(toggle_sizer, proportion=0, flag=wx.BOTTOM, border=10)
 
         for param in self.params:
-            self.settings_grid.Add(self.create_change_indicator(param.name), proportion=0, flag=wx.ALIGN_CENTER_VERTICAL)
-
+            col1 = self.create_change_indicator(param.name)
             description = wx.StaticText(self, label=param.description)
             description.SetToolTip(param.tooltip)
+
+            if param.select_items != None:
+                col1.Hide()
+                description.Hide()
+                for item in param.select_items:
+                    self.choice_widgets[item].extend([col1, description])
+            #else:
+            self.settings_grid.Add(col1, proportion=0, flag=wx.ALIGN_CENTER_VERTICAL)
             self.settings_grid.Add(description, proportion=1, flag=wx.EXPAND | wx.RIGHT | wx.ALIGN_CENTER_VERTICAL | wx.TOP, border=5)
 
             if param.type == 'boolean':
-
+                #print("HIER BEI BOOLEAN!")
                 if len(param.values) > 1:
                     input = wx.CheckBox(self, style=wx.CHK_3STATE)
                     input.Set3StateValue(wx.CHK_UNDETERMINED)
@@ -284,9 +364,14 @@ class ParamsTab(ScrolledPanel):
 
                 input.Bind(wx.EVT_CHECKBOX, self.changed)
             elif param.type == 'dropdown':
+                #print("HIER: ", param.values)
+                #print("HIER2: ", param.options)
                 input = wx.Choice(self, wx.ID_ANY, choices=param.options)
                 input.SetSelection(int(param.values[0]))
                 input.Bind(wx.EVT_CHOICE, self.changed)
+                input.Bind(wx.EVT_CHOICE, self.update_choice_state)
+                self.dict_of_choices[param.name] =  {"param": param, "widget": input, "last_initialized_choice": 1}
+  #ChoiceWidgets(param, input,-1) #parameter datastructure, widget, last initialized choice
             elif len(param.values) > 1:
                 input = wx.ComboBox(self, wx.ID_ANY, choices=sorted(str(value) for value in param.values), style=wx.CB_DROPDOWN)
                 input.Bind(wx.EVT_COMBOBOX, self.changed)
@@ -298,13 +383,22 @@ class ParamsTab(ScrolledPanel):
 
             self.param_inputs[param.name] = input
 
+            col4 = wx.StaticText(self, label=param.unit or "")
+
+            if param.select_items != None:
+                input.Hide()
+                col4.Hide()
+                for item in param.select_items:
+                    self.choice_widgets[item].extend([input, col4])
+            #else:
             self.settings_grid.Add(input, proportion=1, flag=wx.ALIGN_CENTER_VERTICAL | wx.EXPAND | wx.LEFT, border=40)
-            self.settings_grid.Add(wx.StaticText(self, label=param.unit or ""), proportion=1, flag=wx.ALIGN_CENTER_VERTICAL)
+            self.settings_grid.Add(col4, proportion=1, flag=wx.ALIGN_CENTER_VERTICAL)
 
         self.inputs_to_params = {v: k for k, v in self.param_inputs.items()}
 
         box.Add(self.settings_grid, proportion=1, flag=wx.ALL, border=10)
         self.SetSizer(box)
+        self.update_choice_widgets()
 
         self.Layout()
 
@@ -515,7 +609,7 @@ class Params(InkstitchExtension):
             else:
                 if element.get_style("fill", 'black') and not element.get_style("fill-opacity", 1) == "0":
                     classes.append(AutoFill)
-                    classes.append(Fill)
+                    #classes.append(Fill)
                 if element.get_style("stroke") is not None:
                     classes.append(Stroke)
                     if element.get_style("stroke-dasharray") is None:

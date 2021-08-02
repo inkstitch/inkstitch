@@ -141,7 +141,7 @@ class BreakApart(InkstitchExtension):
             el = copy(element.node)
 
             # Set fill-rule to evenodd
-            style = el.get('style', ' ').split(';')
+            style = el.get('style', '').split(';')
             style = [s for s in style if not s.startswith('fill-rule')]
             style.append('fill-rule:evenodd;')
             style = ';'.join(style)

@@ -93,8 +93,6 @@ class Troubleshoot(InkstitchExtension):
 
         tspan = etree.Element(SVG_TSPAN_TAG)
         tspan.text = problem.name
-        if problem.label:
-            tspan.text += " (%s)" % problem.label
         text.append(tspan)
 
     def create_troubleshoot_layer(self):

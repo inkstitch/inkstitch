@@ -61,7 +61,7 @@ def build_environment():
 
 def write_inx_file(name, contents):
     inx_locale_dir = os.path.join(inx_path, current_locale)
-
+    
     try:
         os.makedirs(inx_locale_dir)
     except OSError as e:
