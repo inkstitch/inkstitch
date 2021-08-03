@@ -388,7 +388,7 @@ def add_commands(element, commands):
 
 
 def add_layer_commands(layer, commands):
-    svg = layer.root()
+    svg = layer.root
     correction_transform = get_correction_transform(layer)
 
     for i, command in enumerate(commands):
