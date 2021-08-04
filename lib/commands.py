@@ -297,7 +297,7 @@ def add_connector(document, symbol, element):
 
     # Make sure the element's XML node has an id so that we can reference it.
     if element.node.get('id') is None:
-        element.node.set('id', generate_unique_id(document, "object"))
+        element.node.set('id', document.get_unique_id("object"))
 
     path = inkex.PathElement(attrib={
         "id": generate_unique_id(document, "command_connector"),
@@ -316,7 +316,7 @@ def add_connector(document, symbol, element):
 
 def add_symbol(document, group, command, pos):
     symbol = inkex.Use(attrib={
-        "id": generate_unique_id(document, "command_use"),
+        "id": document.get_unique_id("command_use"),
         XLINK_HREF: "#inkstitch_%s" % command,
         "height": "100%",
         "width": "100%",
