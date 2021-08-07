@@ -4,13 +4,25 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 from ..utils.geometry import Point
+from copy import deepcopy
 
 
 class Stitch(Point):
     """A stitch is a Point with extra information telling how to sew it."""
 
     def __init__(self, x, y=None, color=None, jump=False, stop=False, trim=False, color_change=False, tie_modus=0, no_ties=False, tags=None):
-        Point.__init__(self, x, y)
+        if isinstance(x, Stitch):
+            # Allow creating a Stitch from another Stitch.  Attributes passed as
+            # arguments will override any existing attributes.
+            vars(self).update(deepcopy(vars(x)))
+        elif isinstance(x, Point):
+            # Allow creating a Stitch from a Point
+            point = x
+            self.x = point.x
+            self.y = point.y
+        else:
+            Point.__init__(self, x, y)
+
         self.color = color
         self.jump = jump
         self.trim = trim
@@ -21,12 +33,6 @@ class Stitch(Point):
         self.tags = set()
 
         self.add_tags(tags or [])
-
-        # Allow creating a Stitch from a Point
-        if isinstance(x, Point):
-            point = x
-            self.x = point.x
-            self.y = point.y
 
     def __repr__(self):
         return "Stitch(%s, %s, %s, %s, %s, %s, %s, %s, %s)" % (self.x,

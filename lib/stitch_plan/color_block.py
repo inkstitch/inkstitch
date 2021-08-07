@@ -112,15 +112,11 @@ class ColorBlock(object):
                 args = (self.last_stitch.x, self.last_stitch.y)
             else:
                 raise ValueError("internal error: can't add a command to an empty stitch block")
-
+            self.stitches.append(Stitch(*args, **kwargs))
         if isinstance(args[0], Stitch):
             self.stitches.append(args[0])
         elif isinstance(args[0], Point):
             self.stitches.append(Stitch(args[0].x, args[0].y, *args[1:], **kwargs))
-        else:
-            if not args and self.last_stitch:
-                args = (self.last_stitch.x, self.last_stitch.y)
-            self.stitches.append(Stitch(*args, **kwargs))
 
     def add_stitches(self, stitches, *args, **kwargs):
         for stitch in stitches:
