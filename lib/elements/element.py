@@ -18,34 +18,6 @@ from ..svg.tags import INKSCAPE_LABEL, INKSTITCH_ATTRIBS
 from ..utils import Point, cache
 
 
-class StitchGroup:
-    """A raw collection of stitches with attached instructions."""
-
-    def __init__(self, color=None, stitches=None, trim_after=False, stop_after=False, tie_modus=0, stitch_as_is=False):
-        self.color = color
-        self.stitches = stitches or []
-        self.trim_after = trim_after
-        self.stop_after = stop_after
-        self.tie_modus = tie_modus
-        self.stitch_as_is = stitch_as_is
-
-    def __add__(self, other):
-        if isinstance(other, StitchGroup):
-            return StitchGroup(self.color, self.stitches + other.stitches)
-        else:
-            raise TypeError("StitchGroup can only be added to another StitchGroup")
-
-    def __len__(self):
-        # This method allows `len(patch)` and `if patch:
-        return len(self.stitches)
-
-    def add_stitch(self, stitch):
-        self.stitches.append(stitch)
-
-    def reverse(self):
-        return StitchGroup(self.color, self.stitches[::-1])
-
-
 class Param(object):
     def __init__(self, name, description, unit=None, values=[], type=None, group=None, inverse=False,
                  options=[], default=None, tooltip=None, sort_index=0):

@@ -7,11 +7,12 @@ import sys
 
 import shapely.geometry
 
+from .element import EmbroideryElement, param
 from ..i18n import _
+from ..stitch_plan import StitchGroup
 from ..stitches import bean_stitch, running_stitch
 from ..svg import parse_length_with_units
 from ..utils import Point, cache
-from .element import EmbroideryElement, StitchGroup, param
 
 warned_about_legacy_running_stitch = False
 

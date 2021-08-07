@@ -11,11 +11,12 @@ from shapely import affinity as shaffinity
 from shapely import geometry as shgeo
 from shapely.ops import nearest_points
 
+from .element import EmbroideryElement, param
+from .validation import ValidationError, ValidationWarning
 from ..i18n import _
+from ..stitch_plan import StitchGroup
 from ..svg import line_strings_to_csp, point_lists_to_csp
 from ..utils import Point, cache, collapse_duplicate_point, cut
-from .element import EmbroideryElement, StitchGroup, param
-from .validation import ValidationError, ValidationWarning
 
 
 class SatinHasFillError(ValidationError):

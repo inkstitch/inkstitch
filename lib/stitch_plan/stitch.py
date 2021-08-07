@@ -8,8 +8,7 @@ from ..utils.geometry import Point
 
 class Stitch(Point):
     def __init__(self, x, y=None, color=None, jump=False, stop=False, trim=False, color_change=False, tie_modus=0, no_ties=False):
-        self.x = x
-        self.y = y
+        Point.__init__(self, x, y)
         self.color = color
         self.jump = jump
         self.trim = trim

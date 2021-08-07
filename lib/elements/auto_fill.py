@@ -9,13 +9,14 @@ import traceback
 
 from shapely import geometry as shgeo
 
+from .element import param
+from .fill import Fill
+from .validation import ValidationWarning
 from ..i18n import _
+from ..stitch_plan import StitchGroup
 from ..stitches import auto_fill
 from ..svg.tags import INKSCAPE_LABEL
 from ..utils import cache, version
-from .element import StitchGroup, param
-from .fill import Fill
-from .validation import ValidationWarning
 
 
 class SmallShapeWarning(ValidationWarning):

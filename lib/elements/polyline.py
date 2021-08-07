@@ -6,11 +6,12 @@
 from inkex import Path
 from shapely import geometry as shgeo
 
+from .element import EmbroideryElement, param
+from .validation import ValidationWarning
 from ..i18n import _
+from ..stitch_plan import StitchGroup
 from ..utils import cache
 from ..utils.geometry import Point
-from .element import EmbroideryElement, StitchGroup, param
-from .validation import ValidationWarning
 
 
 class PolylineWarning(ValidationWarning):

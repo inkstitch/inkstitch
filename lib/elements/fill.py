@@ -10,12 +10,13 @@ import re
 from shapely import geometry as shgeo
 from shapely.validation import explain_validity
 
+from .element import EmbroideryElement, param
+from .validation import ValidationError
 from ..i18n import _
+from ..stitch_plan import StitchGroup
 from ..stitches import legacy_fill
 from ..svg import PIXELS_PER_MM
 from ..utils import cache
-from .element import EmbroideryElement, StitchGroup, param
-from .validation import ValidationError
 
 
 class UnconnectedError(ValidationError):
