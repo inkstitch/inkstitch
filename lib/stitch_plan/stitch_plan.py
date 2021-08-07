@@ -8,49 +8,49 @@ from .color_block import ColorBlock
 from ..svg import PIXELS_PER_MM
 
 
-def patches_to_stitch_plan(patches, collapse_len=None, disable_ties=False):  # noqa: C901
+def stitch_groups_to_stitch_plan(stitch_groups, collapse_len=None, disable_ties=False):  # noqa: C901
 
-    """Convert a collection of inkstitch.element.StitchGroup objects to a StitchPlan.
+    """Convert a collection of StitchGroups to a StitchPlan.
 
     * applies instructions embedded in the StitchGroup such as trim_after and stop_after
     * adds tie-ins and tie-offs
-    * adds jump-stitches between patches if necessary
+    * adds jump-stitches between stitch_group if necessary
     """
 
     if collapse_len is None:
         collapse_len = 3.0
     collapse_len = collapse_len * PIXELS_PER_MM
     stitch_plan = StitchPlan()
-    color_block = stitch_plan.new_color_block(color=patches[0].color)
+    color_block = stitch_plan.new_color_block(color=stitch_groups[0].color)
 
-    for patch in patches:
-        if not patch.stitches:
+    for stitch_group in stitch_groups:
+        if not stitch_group.stitches:
             continue
 
-        if color_block.color != patch.color:
+        if color_block.color != stitch_group.color:
             if len(color_block) == 0:
                 # We just processed a stop, which created a new color block.
                 # We'll just claim this new block as ours:
-                color_block.color = patch.color
+                color_block.color = stitch_group.color
             else:
                 # end the previous block with a color change
                 color_block.add_stitch(color_change=True)
 
                 # make a new block of our color
-                color_block = stitch_plan.new_color_block(color=patch.color)
+                color_block = stitch_plan.new_color_block(color=stitch_group.color)
 
                 # always start a color with a JUMP to the first stitch position
-                color_block.add_stitch(patch.stitches[0], jump=True)
+                color_block.add_stitch(stitch_group.stitches[0], jump=True)
         else:
-            if len(color_block) and (patch.stitches[0] - color_block.stitches[-1]).length() > collapse_len:
-                color_block.add_stitch(patch.stitches[0], jump=True)
+            if len(color_block) and (stitch_group.stitches[0] - color_block.stitches[-1]).length() > collapse_len:
+                color_block.add_stitch(stitch_group.stitches[0], jump=True)
 
-        color_block.add_stitches(stitches=patch.stitches, tie_modus=patch.tie_modus, no_ties=patch.stitch_as_is)
+        color_block.add_stitches(stitches=stitch_group.stitches, tie_modus=stitch_group.tie_modus, no_ties=stitch_group.stitch_as_is)
 
-        if patch.trim_after:
+        if stitch_group.trim_after:
             color_block.add_stitch(trim=True)
 
-        if patch.stop_after:
+        if stitch_group.stop_after:
             color_block.add_stitch(stop=True)
             color_block = stitch_plan.new_color_block(color_block.color)
 
