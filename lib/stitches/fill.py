@@ -7,6 +7,7 @@ import math
 
 import shapely
 
+from ..stitch_plan import Stitch
 from ..svg import PIXELS_PER_MM
 from ..utils import Point as InkstitchPoint
 from ..utils import cache
@@ -65,8 +66,8 @@ def stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, stagge
     # tile with each other.  That's important because we often get
     # abutting fill regions from pull_runs().
 
-    beg = InkstitchPoint(*beg)
-    end = InkstitchPoint(*end)
+    beg = Stitch(*beg, tags=('fill_row_start',))
+    end = Stitch(*end, tags=('fill_row_end'))
 
     row_direction = (end - beg).unit()
     segment_length = (end - beg).length()
@@ -85,11 +86,13 @@ def stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, stagge
     offset = (first_stitch - beg).length()
 
     while offset < segment_length:
-        stitches.append(beg + offset * row_direction)
+        stitches.append(Stitch(beg + offset * row_direction, tags=('fill_row')))
         offset += max_stitch_length
 
     if (end - stitches[-1]).length() > 0.1 * PIXELS_PER_MM and not skip_last:
         stitches.append(end)
+    else:
+        stitches[-1].add_tag('fill_row_end')
 
 
 def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing=None, flip=False):
