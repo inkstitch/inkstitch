@@ -50,19 +50,7 @@ class InkStitchMetadata(MutableMapping):
 
     def __init__(self, document):
         self.document = document
-        self.metadata = self._get_or_create_metadata()
-
-    def _get_or_create_metadata(self):
-        metadata = self.document.find(SVG_METADATA_TAG)
-
-        if metadata is None:
-            metadata = etree.SubElement(self.document.getroot(), SVG_METADATA_TAG)
-
-            # move it so that it goes right after the first element, sodipodi:namedview
-            self.document.getroot().remove(metadata)
-            self.document.getroot().insert(1, metadata)
-
-        return metadata
+        self.metadata = document.metadata
 
     # Because this class inherints from MutableMapping, all we have to do is
     # implement these five methods and we get a full dict-like interface.
@@ -118,15 +106,17 @@ class InkstitchExtension(inkex.Effect):
             if g.get(INKSCAPE_GROUPMODE) == "layer":
                 g.set("style", "display:none")
 
-    def ensure_current_layer(self):
+    def get_current_layer(self):
         # if no layer is selected, inkex defaults to the root, which isn't
         # particularly useful
-        if self.svg.get_current_layer() is self.document.getroot():
+        current_layer = self.svg.get_current_layer()
+        if current_layer is self.document.getroot():
             try:
-                self.current_layer = self.document.xpath(".//svg:g[@inkscape:groupmode='layer']", namespaces=inkex.NSS)[0]
+                current_layer = self.document.xpath(".//svg:g[@inkscape:groupmode='layer']", namespaces=inkex.NSS)[0]
             except IndexError:
                 # No layers at all??  Fine, we'll stick with the default.
                 pass
+        return current_layer
 
     def no_elements_error(self):
         if self.svg.selected:
@@ -135,7 +125,7 @@ class InkstitchExtension(inkex.Effect):
         else:
             inkex.errormsg(_("There are no objects in the entire document that Ink/Stitch knows how to work with.") + "\n")
 
-        inkex.errormsg(_("Tip: Select some objects and use Path -> Object to Path to convert them to paths.") + "\n")
+        inkex.errormsg(_("Tip: Run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot Objects") + "\n")
 
     def descendants(self, node, selected=False, troubleshoot=False):  # noqa: C901
         nodes = []
@@ -148,7 +138,7 @@ class InkstitchExtension(inkex.Effect):
             if len(list(layer_commands(node, "ignore_layer"))):
                 return []
 
-        if element.has_style('display') and element.get_style('display') is None:
+        if (node.tag in EMBROIDERABLE_TAGS or node.tag == SVG_GROUP_TAG) and element.get_style('display', 'inline') is None:
             return []
 
         if node.tag == SVG_DEFS_TAG:
@@ -211,7 +201,7 @@ class InkstitchExtension(inkex.Effect):
         return patches
 
     def get_inkstitch_metadata(self):
-        return InkStitchMetadata(self.document)
+        return InkStitchMetadata(self.svg)
 
     def get_base_file_name(self):
         svg_filename = self.document.getroot().get(inkex.addNS('docname', 'sodipodi'), "embroidery.svg")

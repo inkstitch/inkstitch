@@ -4,6 +4,7 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 from ..i18n import _
+from ..svg.tags import INKSCAPE_LABEL
 from .element import EmbroideryElement
 from .validation import ObjectTypeWarning
 
@@ -19,7 +20,8 @@ class EmptyD(ObjectTypeWarning):
 class EmptyDObject(EmbroideryElement):
 
     def validation_warnings(self):
-        yield EmptyD((0, 0))
+        label = self.node.get(INKSCAPE_LABEL) or self.node.get("id")
+        yield EmptyD((0, 0), label)
 
     def to_patches(self, last_patch):
         return []

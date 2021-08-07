@@ -9,15 +9,13 @@ from copy import deepcopy
 from random import random
 
 import inkex
-from lxml import etree
 from shapely import geometry as shgeo
 
 from .i18n import N_, _
 from .svg import (apply_transforms, generate_unique_id,
                   get_correction_transform, get_document, get_node_transform)
 from .svg.tags import (CONNECTION_END, CONNECTION_START, CONNECTOR_TYPE,
-                       INKSCAPE_LABEL, INKSTITCH_ATTRIBS, SVG_DEFS_TAG,
-                       SVG_GROUP_TAG, SVG_PATH_TAG, SVG_SYMBOL_TAG,
+                       INKSCAPE_LABEL, INKSTITCH_ATTRIBS, SVG_SYMBOL_TAG,
                        SVG_USE_TAG, XLINK_HREF)
 from .utils import Point, cache, get_bundled_dir
 
@@ -258,42 +256,35 @@ def symbols_path():
 @cache
 def symbols_svg():
     with open(symbols_path()) as symbols_file:
-        return etree.parse(symbols_file)
+        return inkex.load_svg(symbols_file).getroot()
 
 
 @cache
 def symbol_defs():
-    return get_defs(symbols_svg())
+    return symbols_svg().defs
 
 
 @cache
-def get_defs(document):
-    defs = document.find(SVG_DEFS_TAG)
-
-    if defs is None:
-        defs = etree.SubElement(document, SVG_DEFS_TAG)
-
-    return defs
-
-
-def ensure_symbol(document, command):
+def ensure_symbol(svg, command):
     """Make sure the command's symbol definition exists in the <svg:defs> tag."""
 
+    # using @cache really just makes sure that we don't bother ensuring the
+    # same symbol is there twice, which would be wasted work
+
     path = "./*[@id='inkstitch_%s']" % command
-    defs = get_defs(document)
+    defs = svg.defs
     if defs.find(path) is None:
         defs.append(deepcopy(symbol_defs().find(path)))
 
 
 def add_group(document, node, command):
-    group = etree.Element(
-        SVG_GROUP_TAG,
-        {
-            "id": generate_unique_id(document, "command_group"),
-            INKSCAPE_LABEL: _("Ink/Stitch Command") + ": %s" % get_command_description(command),
-            "transform": get_correction_transform(node)
-        })
-    node.getparent().insert(node.getparent().index(node) + 1, group)
+    parent = node.getparent()
+    group = inkex.Group(attrib={
+        "id": generate_unique_id(document, "command_group"),
+        INKSCAPE_LABEL: _("Ink/Stitch Command") + ": %s" % get_command_description(command),
+        "transform": get_correction_transform(node)
+    })
+    parent.insert(parent.index(node) + 1, group)
     return group
 
 
@@ -307,35 +298,36 @@ def add_connector(document, symbol, element):
     if element.node.get('id') is None:
         element.node.set('id', generate_unique_id(document, "object"))
 
-    path = etree.Element(SVG_PATH_TAG,
-                         {
-                          "id": generate_unique_id(document, "command_connector"),
-                          "d": "M %s,%s %s,%s" % (start_pos[0], start_pos[1], end_pos.x, end_pos.y),
-                          "style": "stroke:#000000;stroke-width:1px;stroke-opacity:0.5;fill:none;",
-                          CONNECTION_START: "#%s" % symbol.get('id'),
-                          CONNECTION_END: "#%s" % element.node.get('id'),
-                          CONNECTOR_TYPE: "polyline",
+    path = inkex.PathElement(attrib={
+        "id": generate_unique_id(document, "command_connector"),
+        "d": "M %s,%s %s,%s" % (start_pos[0], start_pos[1], end_pos.x, end_pos.y),
+        "style": "stroke:#000000;stroke-width:1px;stroke-opacity:0.5;fill:none;",
+        CONNECTION_START: "#%s" % symbol.get('id'),
+        CONNECTION_END: "#%s" % element.node.get('id'),
+        CONNECTOR_TYPE: "polyline",
 
-                          # l10n: the name of the line that connects a command to the object it applies to
-                          INKSCAPE_LABEL: _("connector")
-                         })
+        # l10n: the name of the line that connects a command to the object it applies to
+        INKSCAPE_LABEL: _("connector")
+    })
 
     symbol.getparent().insert(0, path)
 
 
 def add_symbol(document, group, command, pos):
-    return etree.SubElement(group, SVG_USE_TAG,
-                            {
-                             "id": generate_unique_id(document, "command_use"),
-                             XLINK_HREF: "#inkstitch_%s" % command,
-                             "height": "100%",
-                             "width": "100%",
-                             "x": str(pos.x),
-                             "y": str(pos.y),
+    symbol = inkex.Use(attrib={
+        "id": generate_unique_id(document, "command_use"),
+        XLINK_HREF: "#inkstitch_%s" % command,
+        "height": "100%",
+        "width": "100%",
+        "x": str(pos.x),
+        "y": str(pos.y),
 
-                             # l10n: the name of a command symbol (example: scissors icon for trim command)
-                             INKSCAPE_LABEL: _("command marker"),
-                            })
+        # l10n: the name of a command symbol (example: scissors icon for trim command)
+        INKSCAPE_LABEL: _("command marker"),
+    })
+    group.append(symbol)
+
+    return symbol
 
 
 def get_command_pos(element, index, total):
@@ -382,32 +374,31 @@ def remove_legacy_param(element, command):
 
 
 def add_commands(element, commands):
-    document = get_document(element.node)
+    svg = get_document(element.node)
 
     for i, command in enumerate(commands):
-        ensure_symbol(document, command)
+        ensure_symbol(svg, command)
         remove_legacy_param(element, command)
 
-        group = add_group(document, element.node, command)
+        group = add_group(svg, element.node, command)
         pos = get_command_pos(element, i, len(commands))
-        symbol = add_symbol(document, group, command, pos)
-        add_connector(document, symbol, element)
+        symbol = add_symbol(svg, group, command, pos)
+        add_connector(svg, symbol, element)
 
 
 def add_layer_commands(layer, commands):
-    document = get_document(layer)
+    svg = layer.root
     correction_transform = get_correction_transform(layer)
 
-    for command in commands:
-        ensure_symbol(document, command)
-        etree.SubElement(layer, SVG_USE_TAG,
-                         {
-                          "id": generate_unique_id(document, "use"),
-                          INKSCAPE_LABEL: _("Ink/Stitch Command") + ": %s" % get_command_description(command),
-                          XLINK_HREF: "#inkstitch_%s" % command,
-                          "height": "100%",
-                          "width": "100%",
-                          "x": "0",
-                          "y": "-10",
-                          "transform": correction_transform
-                         })
+    for i, command in enumerate(commands):
+        ensure_symbol(svg, command)
+        layer.append(inkex.Use(attrib={
+            "id": generate_unique_id(svg, "use"),
+            INKSCAPE_LABEL: _("Ink/Stitch Command") + ": %s" % get_command_description(command),
+            XLINK_HREF: "#inkstitch_%s" % command,
+            "height": "100%",
+            "width": "100%",
+            "x": str(i * 20),
+            "y": "-10",
+            "transform": correction_transform
+        }))

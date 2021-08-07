@@ -81,7 +81,6 @@ let webConfig = {
             options: {
               implementation: require('sass'),
               sassOptions: {
-                fiber: require('fibers'),
                 indentedSyntax: true // optional
               },
             },

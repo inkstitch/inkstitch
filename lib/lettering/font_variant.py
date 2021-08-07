@@ -6,7 +6,6 @@
 import os
 
 import inkex
-from lxml import etree
 
 from ..svg.tags import INKSCAPE_GROUPMODE, INKSCAPE_LABEL
 from .glyph import Glyph
@@ -61,8 +60,7 @@ class FontVariant(object):
 
     def _load_glyphs(self):
         svg_path = os.path.join(self.path, "%s.svg" % self.variant)
-        with open(svg_path, encoding="utf-8") as svg_file:
-            svg = etree.parse(svg_file)
+        svg = inkex.load_svg(svg_path)
 
         glyph_layers = svg.xpath(".//svg:g[starts-with(@inkscape:label, 'GlyphLayer-')]", namespaces=inkex.NSS)
         for layer in glyph_layers:
@@ -76,14 +74,10 @@ class FontVariant(object):
         # glyph.
         del group.attrib[INKSCAPE_GROUPMODE]
 
-        style_text = group.get('style')
-
-        if style_text:
-            # The layer may be marked invisible, so we'll clear the 'display'
-            # style.
-            style = dict(inkex.Style.parse_str(group.get('style')))
-            style.pop('display')
-            group.set('style', str(inkex.Style(style)))
+        # The layer may be marked invisible, so we'll clear the 'display'
+        # style and presentation attribute.
+        group.style.pop('display', None)
+        group.attrib.pop('display', None)
 
     def __getitem__(self, character):
         if character in self.glyphs:

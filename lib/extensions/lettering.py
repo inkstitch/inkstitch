@@ -12,7 +12,6 @@ import appdirs
 import inkex
 import wx
 import wx.adv
-from lxml import etree
 
 from ..elements import nodes_to_elements
 from ..gui import PresetsPanel, SimulatorPreview, info_dialog
@@ -21,7 +20,7 @@ from ..lettering import Font, FontError
 from ..svg import get_correction_transform
 from ..svg.tags import (INKSCAPE_LABEL, INKSTITCH_LETTERING, SVG_GROUP_TAG,
                         SVG_PATH_TAG)
-from ..utils import DotDict, cache, get_bundled_dir
+from ..utils import DotDict, cache, get_bundled_dir, get_resource_dir
 from .commands import CommandsExtension
 from .lettering_custom_font_dir import get_custom_font_dir
 
@@ -43,6 +42,9 @@ class LetteringFrame(wx.Frame):
         wx.Frame.__init__(self, None, wx.ID_ANY,
                           _("Ink/Stitch Lettering")
                           )
+
+        icon = wx.Icon(os.path.join(get_resource_dir("icons"), "inkstitch256x256.png"))
+        self.SetIcon(icon)
 
         self.preview = SimulatorPreview(self, target_duration=1)
         self.presets_panel = PresetsPanel(self)
@@ -142,10 +144,10 @@ class LetteringFrame(wx.Frame):
 
             for font_dir in font_dirs:
                 font = Font(os.path.join(font_path, font_dir))
-                if font.name == "" or font.id == "":
+                if font.marked_custom_font_name == "" or font.marked_custom_font_id == "":
                     continue
-                self.fonts[font.name] = font
-                self.fonts_by_id[font.id] = font
+                self.fonts[font.marked_custom_font_name] = font
+                self.fonts_by_id[font.marked_custom_font_id] = font
 
         if len(self.fonts) == 0:
             info_dialog(self, _("Unable to find any fonts!  Please try reinstalling Ink/Stitch."))
@@ -154,6 +156,7 @@ class LetteringFrame(wx.Frame):
     def set_font_list(self):
         for font in self.fonts.values():
             image = font.preview_image
+
             if image is not None:
                 image = wx.Image(font.preview_image)
                 """
@@ -169,15 +172,9 @@ class LetteringFrame(wx.Frame):
                 """
                 # Windows requires all images to have the exact same size
                 image.Rescale(300, 20, quality=wx.IMAGE_QUALITY_HIGH)
-                self.font_chooser.Append(font.name, wx.Bitmap(image))
+                self.font_chooser.Append(font.marked_custom_font_name, wx.Bitmap(image))
             else:
                 self.font_chooser.Append(font.name)
-
-    def get_font_names(self):
-        font_names = [font.name for font in self.fonts.values()]
-        font_names.sort()
-
-        return font_names
 
     def get_font_descriptions(self):
         return {font.name: font.description for font in self.fonts.values()}
@@ -189,9 +186,11 @@ class LetteringFrame(wx.Frame):
                           '''A default font will be substituted.'''
                 info_dialog(self, _(message) % font_id)
         try:
-            self.font_chooser.SetValue(self.fonts_by_id[font_id].name)
+            font = self.fonts_by_id[font_id].marked_custom_font_name
         except KeyError:
-            self.font_chooser.SetValue(self.default_font.name)
+            font = self.default_font.name
+        self.font_chooser.SetValue(font)
+
         self.on_font_changed()
 
     @property
@@ -208,7 +207,7 @@ class LetteringFrame(wx.Frame):
 
     def on_font_changed(self, event=None):
         font = self.fonts.get(self.font_chooser.GetValue(), self.default_font)
-        self.settings.font = font.id
+        self.settings.font = font.marked_custom_font_id
         self.scale_spinner.SetRange(int(font.min_scale * 100), int(font.max_scale * 100))
 
         font_variants = []
@@ -260,12 +259,13 @@ class LetteringFrame(wx.Frame):
         if self.settings.scale == 100:
             destination_group = self.group
         else:
-            destination_group = etree.SubElement(self.group, SVG_GROUP_TAG, {
+            destination_group = inkex.Group(attrib={
                 # L10N The user has chosen to scale the text by some percentage
                 # (50%, 200%, etc).  If you need to use the percentage symbol,
                 # make sure to double it (%%).
                 INKSCAPE_LABEL: _("Text scale %s%%") % self.settings.scale
             })
+            self.group.append(destination_group)
 
         font = self.fonts.get(self.font_chooser.GetValue(), self.default_font)
         try:
@@ -416,11 +416,12 @@ class Lettering(CommandsExtension):
             else:
                 return list(groups)[0]
         else:
-            self.ensure_current_layer()
-            return etree.SubElement(self.svg.get_current_layer(), SVG_GROUP_TAG, {
+            group = inkex.Group(attrib={
                 INKSCAPE_LABEL: _("Ink/Stitch Lettering"),
-                "transform": get_correction_transform(self.svg.get_current_layer(), child=True)
+                "transform": get_correction_transform(self.get_current_layer(), child=True)
             })
+            self.get_current_layer().append(group)
+            return group
 
     def effect(self):
         app = wx.App()

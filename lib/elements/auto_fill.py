@@ -11,6 +11,7 @@ from shapely import geometry as shgeo
 
 from ..i18n import _
 from ..stitches import auto_fill
+from ..svg.tags import INKSCAPE_LABEL
 from ..utils import cache, version
 from .element import StitchGroup, param
 from .fill import Fill
@@ -264,7 +265,8 @@ class AutoFill(Fill):
 
     def validation_warnings(self):
         if self.shape.area < 20:
-            yield SmallShapeWarning(self.shape.centroid)
+            label = self.node.get(INKSCAPE_LABEL) or self.node.get("id")
+            yield SmallShapeWarning(self.shape.centroid, label)
 
         if self.shrink_or_grow_shape(self.expand, True).is_empty:
             yield ExpandWarning(self.shape.centroid)

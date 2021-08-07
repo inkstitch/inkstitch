@@ -18,7 +18,7 @@ jobs:
           python-version: '3.9.x'
       - uses: actions/setup-node@v1
         with:
-          node-version: '15.x'
+          node-version: '16.x'
 
       - uses: actions/cache@v2
         id: pip-cache
@@ -91,7 +91,7 @@ jobs:
           submodules: recursive
       - uses: actions/setup-node@v1
         with:
-          node-version: '15.x'
+          node-version: '16.x'
       - uses: actions/setup-python@v2
         with:
           python-version: '3.8.x'
@@ -129,7 +129,7 @@ jobs:
           python-version: '3.9.x'
       - uses: actions/setup-node@v1
         with:
-          node-version: '15.x'
+          node-version: '16.x'
       - name: install dependencies
         shell: bash
         run: |
@@ -152,7 +152,7 @@ jobs:
           pip install git+https://github.com/gtaylor/python-colormath
 
           pip install -r requirements.txt
-          pip install pyinstaller
+          pip install pyinstaller==4.3
 
           echo "${{ env.pythonLocation }}/bin" >> $GITHUB_PATH
       - shell: bash

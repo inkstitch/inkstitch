@@ -9,16 +9,15 @@ from itertools import chain, groupby
 
 import inkex
 import numpy
-from lxml import etree
 from numpy import diff, setdiff1d, sign
 from shapely import geometry as shgeo
 
+from .base import InkstitchExtension
 from ..elements import Stroke
 from ..i18n import _
 from ..svg import PIXELS_PER_MM, get_correction_transform
-from ..svg.tags import INKSTITCH_ATTRIBS, SVG_PATH_TAG
+from ..svg.tags import INKSTITCH_ATTRIBS
 from ..utils import Point
-from .base import InkstitchExtension
 
 
 class SelfIntersectionError(Exception):
@@ -317,11 +316,10 @@ class ConvertToSatin(InkstitchExtension):
                 d += "%s,%s " % (x, y)
             d += " "
 
-        return etree.Element(SVG_PATH_TAG,
-                             {
-                              "id": self.uniqueId("path"),
-                              "style": path_style,
-                              "transform": correction_transform,
-                              "d": d,
-                              INKSTITCH_ATTRIBS['satin_column']: "true",
-                             })
+        return inkex.PathElement(attrib={
+            "id": self.uniqueId("path"),
+            "style": path_style,
+            "transform": correction_transform,
+            "d": d,
+            INKSTITCH_ATTRIBS['satin_column']: "true",
+        })

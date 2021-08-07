@@ -4,7 +4,6 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import inkex
-from lxml import etree
 
 from .tags import SVG_GROUP_TAG, SVG_LINK_TAG
 from .units import get_viewbox_transform
@@ -96,6 +95,6 @@ def point_lists_to_csp(point_lists):
 def line_strings_to_path(line_strings):
     csp = line_strings_to_csp(line_strings)
 
-    return etree.Element("path", {
+    return inkex.PathElement(attrib={
         "d": str(inkex.paths.CubicSuperPath(csp))
     })

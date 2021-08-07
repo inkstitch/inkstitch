@@ -9,6 +9,7 @@ from .auto_satin import AutoSatin
 from .break_apart import BreakApart
 from .cleanup import Cleanup
 from .convert_to_satin import ConvertToSatin
+from .convert_to_stroke import ConvertToStroke
 from .cut_satin import CutSatin
 from .duplicate_params import DuplicateParams
 from .embroider_settings import EmbroiderSettings
@@ -17,6 +18,7 @@ from .global_commands import GlobalCommands
 from .import_threadlist import ImportThreadlist
 from .input import Input
 from .install import Install
+from .install_custom_palette import InstallCustomPalette
 from .layer_commands import LayerCommands
 from .lettering import Lettering
 from .lettering_custom_font_dir import LetteringCustomFontDir
@@ -46,6 +48,7 @@ __all__ = extensions = [StitchPlanPreview,
                         LayerCommands,
                         GlobalCommands,
                         ConvertToSatin,
+                        ConvertToStroke,
                         CutSatin,
                         AutoSatin,
                         Lettering,
@@ -57,6 +60,7 @@ __all__ = extensions = [StitchPlanPreview,
                         Cleanup,
                         BreakApart,
                         ImportThreadlist,
+                        InstallCustomPalette,
                         Simulator,
                         Reorder,
                         DuplicateParams,

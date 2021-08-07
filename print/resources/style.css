@@ -1089,13 +1089,13 @@ body {
     width: calc(100% / 10);
   }
 
-  /* fourty items */
+  /* forty items */
     .color-swatch:first-child:nth-last-child(n+40),
     .color-swatch:first-child:nth-last-child(n+40) ~ .color-swatch {
       width: calc(100% / 12);
   }
 
-  /* fourty-nine items */
+  /* forty-nine items */
     .color-swatch:first-child:nth-last-child(n+49),
     .color-swatch:first-child:nth-last-child(n+40) ~ .color-swatch {
       height: calc(100% / 5);

@@ -7,14 +7,14 @@ import json
 import os
 from copy import deepcopy
 
-from inkex import styles
-from lxml import etree
+import inkex
 
 from ..elements import nodes_to_elements
 from ..exceptions import InkstitchException
+from ..extensions.lettering_custom_font_dir import get_custom_font_dir
 from ..i18n import _, get_languages
 from ..stitches.auto_satin import auto_satin
-from ..svg.tags import INKSCAPE_LABEL, SVG_GROUP_TAG, SVG_PATH_TAG
+from ..svg.tags import INKSCAPE_LABEL, SVG_PATH_TAG
 from ..utils import Point
 from .font_variant import FontVariant
 
@@ -114,7 +114,7 @@ class Font(object):
     min_scale = font_metadata('min_scale', 1.0)
     max_scale = font_metadata('max_scale', 1.0)
 
-    # use values from SVG Font, exemple:
+    # use values from SVG Font, example:
     # <font horiz-adv-x="45" ...  <glyph .... horiz-adv-x="49" glyph-name="A" /> ... <hkern ... k="3"g1="A" g2="B" /> .... />
 
     # Example font.json : "horiz_adv_x": {"A":49},
@@ -158,6 +158,23 @@ class Font(object):
             raise FontError(_("The font '%s' has no variants.") % self.name)
         return font_variants
 
+    @property
+    def marked_custom_font_id(self):
+        if not self.is_custom_font():
+            return self.id
+        else:
+            return self.id + '*'
+
+    @property
+    def marked_custom_font_name(self):
+        if not self.is_custom_font():
+            return self.name
+        else:
+            return self.name + '*'
+
+    def is_custom_font(self):
+        return get_custom_font_dir() in self.path
+
     def render_text(self, text, destination_group, variant=None, back_and_forth=True, trim=False):
         """Render text into an SVG group element."""
         self._load_variants()
@@ -190,7 +207,7 @@ class Font(object):
         for element in destination_group.iterdescendants(SVG_PATH_TAG):
             dash_array = ""
             stroke_width = ""
-            style = styles.Style(element.get('style'))
+            style = inkex.styles.Style(element.get('style'))
 
             if style.get('fill') == 'none':
                 stroke_width = ";stroke-width:1px"
@@ -224,7 +241,7 @@ class Font(object):
             An svg:g element containing the rendered text.
         """
 
-        group = etree.Element(SVG_GROUP_TAG, {
+        group = inkex.Group(attrib={
             INKSCAPE_LABEL: line
         })
 

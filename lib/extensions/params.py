@@ -343,6 +343,10 @@ class SettingsFrame(wx.Frame):
         wx.Frame.__init__(self, None, wx.ID_ANY,
                           _("Embroidery Params")
                           )
+
+        icon = wx.Icon(os.path.join(get_resource_dir("icons"), "inkstitch256x256.png"))
+        self.SetIcon(icon)
+
         self.notebook = wx.Notebook(self, wx.ID_ANY)
         self.tabs = self.tabs_factory(self.notebook)
 
