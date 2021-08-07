@@ -67,15 +67,12 @@ def stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, stagge
     # abutting fill regions from pull_runs().
 
     beg = Stitch(*beg, tags=('fill_row_start',))
-    end = Stitch(*end, tags=('fill_row_end'))
+    end = Stitch(*end, tags=('fill_row_end',))
 
     row_direction = (end - beg).unit()
     segment_length = (end - beg).length()
 
-    # only stitch the first point if it's a reasonable distance away from the
-    # last stitch
-    if not stitches or (beg - stitches[-1]).length() > 0.5 * PIXELS_PER_MM:
-        stitches.append(beg)
+    stitches.append(beg)
 
     first_stitch = adjust_stagger(beg, angle, row_spacing, max_stitch_length, staggers)
 
@@ -91,8 +88,6 @@ def stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, stagge
 
     if (end - stitches[-1]).length() > 0.1 * PIXELS_PER_MM and not skip_last:
         stitches.append(end)
-    else:
-        stitches[-1].add_tag('fill_row_end')
 
 
 def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing=None, flip=False):

@@ -3,10 +3,12 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-import inkex
-from shapely import geometry as shgeo
 import math
 
+import inkex
+from shapely import geometry as shgeo
+
+from .stitch_plan import Stitch
 from .svg.tags import EMBROIDERABLE_TAGS
 from .utils import Point
 
@@ -34,7 +36,7 @@ def _apply_stroke_patterns(patterns, patches):
                     continue
                 intersection_points = _get_pattern_points(stitch, patch.stitches[i+1], pattern)
                 for point in intersection_points:
-                    patch_points.append(point)
+                    patch_points.append(Stitch(point, tags=('pattern_point',)))
             patch.stitches = patch_points
 
 
@@ -43,16 +45,14 @@ def _apply_fill_patterns(patterns, patches):
         for patch in patches:
             patch_points = []
             for i, stitch in enumerate(patch.stitches):
-                # keep points outside the fill patter
                 if not shgeo.Point(stitch).within(pattern):
+                    # keep points outside the fill patter
                     patch_points.append(stitch)
-                # keep start and end points
                 elif i - 1 < 0 or i >= len(patch.stitches) - 1:
+                    # keep start and end points
                     patch_points.append(stitch)
-                # keep points if they have an angle
-                # the necessary angle can be variable with certain stitch types (later on)
-                # but they don't need to use filled patterns for those
-                elif not 179 < get_angle(patch.stitches[i-1], stitch, patch.stitches[i+1]) < 181:
+                elif stitch.has_tag('fill_row_start') or stitch.has_tag('fill_row_end'):
+                    # keep points if they are the start or end of a fill stitch row
                     patch_points.append(stitch)
             patch.stitches = patch_points
 
