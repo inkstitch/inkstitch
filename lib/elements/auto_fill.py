@@ -12,7 +12,7 @@ from shapely import geometry as shgeo
 from ..i18n import _
 from ..stitches import auto_fill
 from ..utils import cache, version
-from .element import Patch, param
+from .element import StitchGroup, param
 from .fill import Fill
 from .validation import ValidationWarning
 
@@ -260,7 +260,7 @@ class AutoFill(Fill):
 
             self.fatal(message)
 
-        return [Patch(stitches=stitches, color=self.color)]
+        return [StitchGroup(stitches=stitches, color=self.color)]
 
     def validation_warnings(self):
         if self.shape.area < 20:

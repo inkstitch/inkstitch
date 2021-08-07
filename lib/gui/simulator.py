@@ -733,7 +733,7 @@ class SimulatorPreview(Thread):
         The parent is expected to be a wx.Window and also implement the following methods:
 
             def generate_patches(self, abort_event):
-                Produce an list of Patch instances.  This method will be
+                Produce an list of StitchGroup instances.  This method will be
                 invoked in a background thread and it is expected that it may
                 take awhile.
 

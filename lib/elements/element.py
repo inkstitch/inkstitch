@@ -20,7 +20,7 @@ from ..svg.tags import (EMBROIDERABLE_TAGS, INKSCAPE_LABEL, INKSTITCH_ATTRIBS,
 from ..utils import Point, cache
 
 
-class Patch:
+class StitchGroup:
     """A raw collection of stitches with attached instructions."""
 
     def __init__(self, color=None, stitches=None, trim_after=False, stop_after=False, tie_modus=0, stitch_as_is=False):
@@ -32,10 +32,10 @@ class Patch:
         self.stitch_as_is = stitch_as_is
 
     def __add__(self, other):
-        if isinstance(other, Patch):
-            return Patch(self.color, self.stitches + other.stitches)
+        if isinstance(other, StitchGroup):
+            return StitchGroup(self.color, self.stitches + other.stitches)
         else:
-            raise TypeError("Patch can only be added to another Patch")
+            raise TypeError("StitchGroup can only be added to another StitchGroup")
 
     def __len__(self):
         # This method allows `len(patch)` and `if patch:
@@ -45,7 +45,7 @@ class Patch:
         self.stitches.append(stitch)
 
     def reverse(self):
-        return Patch(self.color, self.stitches[::-1])
+        return StitchGroup(self.color, self.stitches[::-1])
 
 
 class Param(object):

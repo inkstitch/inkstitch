@@ -9,7 +9,7 @@ from shapely import geometry as shgeo
 from ..i18n import _
 from ..utils import cache
 from ..utils.geometry import Point
-from .element import EmbroideryElement, Patch, param
+from .element import EmbroideryElement, StitchGroup, param
 from .validation import ValidationWarning
 
 
@@ -101,7 +101,7 @@ class Polyline(EmbroideryElement):
         yield PolylineWarning(self.points[0])
 
     def to_patches(self, last_patch):
-        patch = Patch(color=self.color)
+        patch = StitchGroup(color=self.color)
 
         for stitch in self.stitches:
             patch.add_stitch(Point(*stitch))

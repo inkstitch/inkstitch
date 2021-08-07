@@ -14,7 +14,7 @@ from ..i18n import _
 from ..stitches import legacy_fill
 from ..svg import PIXELS_PER_MM
 from ..utils import cache
-from .element import EmbroideryElement, Patch, param
+from .element import EmbroideryElement, StitchGroup, param
 from .validation import ValidationError
 
 
@@ -198,4 +198,4 @@ class Fill(EmbroideryElement):
                                    self.flip,
                                    self.staggers,
                                    self.skip_last)
-        return [Patch(stitches=stitch_list, color=self.color) for stitch_list in stitch_lists]
+        return [StitchGroup(stitches=stitch_list, color=self.color) for stitch_list in stitch_lists]

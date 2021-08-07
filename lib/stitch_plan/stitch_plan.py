@@ -12,9 +12,9 @@ from .ties import add_ties
 
 def patches_to_stitch_plan(patches, collapse_len=None, disable_ties=False):  # noqa: C901
 
-    """Convert a collection of inkstitch.element.Patch objects to a StitchPlan.
+    """Convert a collection of inkstitch.element.StitchGroup objects to a StitchPlan.
 
-    * applies instructions embedded in the Patch such as trim_after and stop_after
+    * applies instructions embedded in the StitchGroup such as trim_after and stop_after
     * adds tie-ins and tie-offs
     * adds jump-stitches between patches if necessary
     """
