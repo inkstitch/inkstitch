@@ -188,7 +188,7 @@ class InkstitchExtension(inkex.Effect):
                 selected.append(node)
         return selected
 
-    def elements_to_patches(self, elements):
+    def elements_to_stitch_groups(self, elements):
         patches = []
         for element in elements:
             if patches:

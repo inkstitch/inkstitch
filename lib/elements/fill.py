@@ -190,7 +190,7 @@ class Fill(EmbroideryElement):
             else:
                 yield InvalidShapeError((x, y))
 
-    def to_patches(self, last_patch):
+    def to_stitch_groups(self, last_patch):
         stitch_lists = legacy_fill(self.shape,
                                    self.angle,
                                    self.row_spacing,

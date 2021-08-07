@@ -193,7 +193,7 @@ class Stroke(EmbroideryElement):
 
         return StitchGroup(self.color, stitches)
 
-    def to_patches(self, last_patch):
+    def to_stitch_groups(self, last_patch):
         patches = []
 
         for path in self.paths:

@@ -828,7 +828,7 @@ class SatinColumn(EmbroideryElement):
             points.append(Point(split_point.x, split_point.y))
         return [points, split_count]
 
-    def to_patches(self, last_patch):
+    def to_stitch_groups(self, last_patch):
         # Stitch a variable-width satin column, zig-zagging between two paths.
 
         # The algorithm will draw zigzags between each consecutive pair of

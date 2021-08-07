@@ -29,5 +29,5 @@ class PatternObject(EmbroideryElement):
         repr_point = next(inkex.Path(self.parse_path()).end_points)
         yield PatternWarning(repr_point)
 
-    def to_patches(self, last_patch):
+    def to_stitch_groups(self, last_patch):
         return []

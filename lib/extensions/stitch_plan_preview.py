@@ -23,7 +23,7 @@ class StitchPlanPreview(InkstitchExtension):
         realistic = False
         self.metadata = self.get_inkstitch_metadata()
         collapse_len = self.metadata['collapse_len_mm']
-        patches = self.elements_to_patches(self.elements)
+        patches = self.elements_to_stitch_groups(self.elements)
         stitch_plan = stitch_groups_to_stitch_plan(patches, collapse_len=collapse_len)
         render_stitch_plan(svg, stitch_plan, realistic)
 

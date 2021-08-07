@@ -301,13 +301,13 @@ class EmbroideryElement(object):
     def stop_after(self):
         return self.get_boolean_param('stop_after', False)
 
-    def to_patches(self, last_patch):
-        raise NotImplementedError("%s must implement to_patches()" % self.__class__.__name__)
+    def to_stitch_groups(self, last_patch):
+        raise NotImplementedError("%s must implement to_stitch_groups()" % self.__class__.__name__)
 
     def embroider(self, last_patch):
         self.validate()
 
-        patches = self.to_patches(last_patch)
+        patches = self.to_stitch_groups(last_patch)
         apply_patterns(patches, self.node)
 
         for patch in patches:

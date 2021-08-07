@@ -213,7 +213,7 @@ class AutoFill(Fill):
         else:
             return None
 
-    def to_patches(self, last_patch):
+    def to_stitch_groups(self, last_patch):
         stitches = []
 
         starting_point = self.get_starting_point(last_patch)
