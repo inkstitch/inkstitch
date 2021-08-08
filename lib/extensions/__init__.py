@@ -24,6 +24,7 @@ from .lettering import Lettering
 from .lettering_custom_font_dir import LetteringCustomFontDir
 from .lettering_generate_json import LetteringGenerateJson
 from .lettering_remove_kerning import LetteringRemoveKerning
+from .letters_to_font import LettersToFont
 from .object_commands import ObjectCommands
 from .output import Output
 from .params import Params
@@ -55,6 +56,7 @@ __all__ = extensions = [StitchPlanPreview,
                         LetteringGenerateJson,
                         LetteringRemoveKerning,
                         LetteringCustomFontDir,
+                        LettersToFont,
                         Troubleshoot,
                         RemoveEmbroiderySettings,
                         Cleanup,

@@ -20,8 +20,11 @@ from ..svg.tags import INKSCAPE_LABEL
 class Input(object):
     def run(self, args):
         embroidery_file = args[0]
-        self.validate_file_path(embroidery_file)
+        stitch_plan = self.generate_stitch_plan(embroidery_file)
+        print(etree.tostring(stitch_plan).decode('utf-8'))
 
+    def generate_stitch_plan(self, embroidery_file):
+        self.validate_file_path(embroidery_file)
         pattern = pyembroidery.read(embroidery_file)
         stitch_plan = StitchPlan()
         color_block = None
@@ -63,7 +66,7 @@ class Input(object):
         # Note: this is NOT the same as centering the design in the canvas!
         layer.set('transform', 'translate(%s,%s)' % (extents[0], extents[1]))
 
-        print(etree.tostring(svg).decode('utf-8'))
+        return svg
 
     def validate_file_path(self, path):
         # Check if the file exists
