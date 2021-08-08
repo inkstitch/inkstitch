@@ -7,7 +7,7 @@ import logging
 from copy import copy
 
 import inkex
-from shapely.geometry import LineString, MultiPolygon, Polygon
+from shapely.geometry import LinearRing, MultiPolygon, Polygon
 from shapely.ops import polygonize, unary_union
 
 from ..elements import EmbroideryElement
@@ -63,10 +63,10 @@ class BreakApart(InkstitchExtension):
         for path in paths:
             if len(path) < 3:
                 continue
-            linestring = LineString(path)
-            if not linestring.is_simple:
-                linestring = unary_union(linestring)
-                for polygon in polygonize(linestring):
+            linearring = LinearRing(path)
+            if not linearring.is_simple:
+                linearring = unary_union(linearring)
+                for polygon in polygonize(linearring):
                     polygons.append(polygon)
             else:
                 polygon = Polygon(path).buffer(0)
