@@ -3,8 +3,6 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-import math
-
 import inkex
 from shapely import geometry as shgeo
 
@@ -46,7 +44,7 @@ def _apply_fill_patterns(patterns, patches):
             patch_points = []
             for i, stitch in enumerate(patch.stitches):
                 if not shgeo.Point(stitch).within(pattern):
-                    # keep points outside the fill patter
+                    # keep points outside the fill pattern
                     patch_points.append(stitch)
                 elif i - 1 < 0 or i >= len(patch.stitches) - 1:
                     # keep start and end points
@@ -97,8 +95,3 @@ def _get_pattern_points(first, second, pattern):
     # sort points after their distance to first
     points.sort(key=lambda point: point.distance(first))
     return points
-
-
-def get_angle(a, b, c):
-    ang = math.degrees(math.atan2(c[1]-b[1], c[0]-b[0]) - math.atan2(a[1]-b[1], a[0]-b[0]))
-    return ang + 360 if ang < 0 else ang
