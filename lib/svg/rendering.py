@@ -197,6 +197,7 @@ def color_block_to_paths(color_block, svg, destination, visual_commands):
             add_commands(Stroke(destination[-1]), ["trim"])
 
         color = color_block.color.visible_on_white.to_hex_str()
+
         path = inkex.PathElement(attrib={
             'id': svg.get_unique_id("object"),
             'style': "stroke: %s; stroke-width: 0.4; fill: none;" % color,

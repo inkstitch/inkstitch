@@ -11,9 +11,9 @@ import inkex
 import pyembroidery
 
 from ..i18n import _
-from ..stitch_plan import StitchPlan
 from ..svg import PIXELS_PER_MM, render_stitch_plan
 from ..svg.tags import INKSCAPE_LABEL
+from .stitch_plan import StitchPlan
 
 
 def generate_stitch_plan(embroidery_file):
