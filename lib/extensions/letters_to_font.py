@@ -11,10 +11,10 @@ from inkex import errormsg
 
 from ..commands import ensure_symbol
 from ..i18n import _
+from ..stitch_plan import generate_stitch_plan
 from ..svg import get_correction_transform
 from ..svg.tags import INKSCAPE_GROUPMODE, INKSCAPE_LABEL
 from .base import InkstitchExtension
-from .input import Input
 
 
 class LettersToFont(InkstitchExtension):
@@ -62,11 +62,10 @@ class LettersToFont(InkstitchExtension):
         self.insert_baseline(document)
 
     def get_glyph_element(self, glyph):
-        stitch_plan = Input()
-        test = stitch_plan.generate_stitch_plan(str(glyph))
+        stitch_plan = generate_stitch_plan(str(glyph))
         # we received a stitch plan wrapped in an svg document, we only need the last group
-        test = test.getchildren()
-        return test[-1]
+        stitch_plan = stitch_plan.getchildren()
+        return stitch_plan[-1]
 
     def insert_baseline(self, document):
         document.namedview.new_guide(position=0.0, name="baseline")
