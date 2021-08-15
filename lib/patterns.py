@@ -52,6 +52,12 @@ def _apply_fill_patterns(patterns, patches):
                 elif stitch.has_tag('fill_row_start') or stitch.has_tag('fill_row_end'):
                     # keep points if they are the start or end of a fill stitch row
                     patch_points.append(stitch)
+                elif stitch.has_tag('auto_fill') and not stitch.has_tag('auto_fill_top'):
+                    # keep auto-fill underlay
+                    patch_points.append(stitch)
+                elif stitch.has_tag('auto_fill_travel'):
+                    # keep travel stitches (underpath or travel around the border)
+                    patch_points.append(stitch)
             patch.stitches = patch_points
 
 

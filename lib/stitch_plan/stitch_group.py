@@ -17,7 +17,7 @@ class StitchGroup:
     between them by the stitch plan generation code.
     """
 
-    def __init__(self, color=None, stitches=None, trim_after=False, stop_after=False, tie_modus=0, stitch_as_is=False):
+    def __init__(self, color=None, stitches=None, trim_after=False, stop_after=False, tie_modus=0, stitch_as_is=False, tags=None):
         self.color = color
         self.trim_after = trim_after
         self.stop_after = stop_after
@@ -27,6 +27,9 @@ class StitchGroup:
 
         if stitches:
             self.add_stitches(stitches)
+
+        if tags:
+            self.add_tags(tags)
 
     def __add__(self, other):
         if isinstance(other, StitchGroup):
@@ -51,3 +54,11 @@ class StitchGroup:
 
     def reverse(self):
         return StitchGroup(self.color, self.stitches[::-1])
+
+    def add_tags(self, tags):
+        for stitch in self.stitches:
+            stitch.add_tags(tags)
+
+    def add_tag(self, tag):
+        for stitch in self.stitches:
+            stitch.add_tag(tag)
