@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-07-30 00:54+0000\n"
-"PO-Revision-Date: 2021-07-31 00:54\n"
+"PO-Revision-Date: 2021-08-16 00:53\n"
 "Last-Translator: \n"
 "Language-Team: Ukrainian\n"
 "MIME-Version: 1.0\n"
@@ -756,23 +756,23 @@ msgstr "Поперечка не пересекає направляючі"
 
 #: lib/elements/satin_column.py:58
 msgid "Satin column: A rung doesn't intersect both rails."
-msgstr ""
+msgstr "Сатинова колонка: Поперечка не пересікає обидві направляючі."
 
 #: lib/elements/satin_column.py:62
 msgid "Rungs intersects too many times"
-msgstr ""
+msgstr "Поперечки пересікаються забагато разів"
 
 #: lib/elements/satin_column.py:63
 msgid "Satin column: A rung intersects a rail more than once."
-msgstr ""
+msgstr "Сатинова колонка: поперечка пересікає направляючу більше одного разу."
 
 #: lib/elements/satin_column.py:67
 msgid "Satin Column"
-msgstr ""
+msgstr "Сатинова Колонка"
 
 #: lib/elements/satin_column.py:73
 msgid "Custom satin column"
-msgstr ""
+msgstr "Спеціальна сатинова колонка"
 
 #: lib/elements/satin_column.py:79
 msgid "\"E\" stitch"
@@ -780,11 +780,11 @@ msgstr "\"E\" стібок"
 
 #: lib/elements/satin_column.py:89 lib/elements/stroke.py:61
 msgid "Zig-zag spacing (peak-to-peak)"
-msgstr ""
+msgstr "Щільність зигзага (відстань між піками)"
 
 #: lib/elements/satin_column.py:90
 msgid "Peak-to-peak distance between zig-zags."
-msgstr ""
+msgstr "Відстань між піками зигзага."
 
 #: lib/elements/satin_column.py:101
 msgid "Pull compensation"
@@ -792,16 +792,16 @@ msgstr "Компенсації розтягування"
 
 #: lib/elements/satin_column.py:102
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape.  This setting expands each pair of needle penetrations outward from the center of the satin column."
-msgstr ""
+msgstr "Стіжки сатина стягують тканину в місці вишивки, в результаті колонка получается тоншою, ніж вказано в Inkscape. Ця настройка розсовує кожну пару проколів від центра сатиновой колонки."
 
 #: lib/elements/satin_column.py:114
 msgid "Contour underlay"
-msgstr ""
+msgstr "Попередня прострочка контура"
 
 #: lib/elements/satin_column.py:114 lib/elements/satin_column.py:121
 #: lib/elements/satin_column.py:130
 msgid "Contour Underlay"
-msgstr ""
+msgstr "Прострочка контура"
 
 #: lib/elements/satin_column.py:121 lib/elements/satin_column.py:145
 msgid "Stitch length"
@@ -809,60 +809,60 @@ msgstr "Довжина стібка"
 
 #: lib/elements/satin_column.py:127
 msgid "Contour underlay inset amount"
-msgstr ""
+msgstr "Відступ прострочки від краю"
 
 #: lib/elements/satin_column.py:128
 msgid "Shrink the outline, to prevent the underlay from showing around the outside of the satin column."
-msgstr ""
+msgstr "Звужує зовнішню границю прострочки, щоб вона не показувалася з-під сатинової колонки."
 
 #: lib/elements/satin_column.py:138
 msgid "Center-walk underlay"
-msgstr ""
+msgstr "Попередня прострочка по центру"
 
 #: lib/elements/satin_column.py:138 lib/elements/satin_column.py:145
 msgid "Center-Walk Underlay"
-msgstr ""
+msgstr "Прострочка по центру"
 
 #: lib/elements/satin_column.py:150
 msgid "Zig-zag underlay"
-msgstr ""
+msgstr "Попередня просточка зигзагом"
 
 #: lib/elements/satin_column.py:150 lib/elements/satin_column.py:159
 #: lib/elements/satin_column.py:170
 msgid "Zig-zag Underlay"
-msgstr ""
+msgstr "Прострочка зигзагом"
 
 #: lib/elements/satin_column.py:156
 msgid "Zig-Zag spacing (peak-to-peak)"
-msgstr ""
+msgstr "Щільність зигзага (відстань між піками)"
 
 #: lib/elements/satin_column.py:157
 msgid "Distance between peaks of the zig-zags."
-msgstr ""
+msgstr "Відстань між піками зигзага."
 
 #: lib/elements/satin_column.py:167
 msgid "Inset amount"
-msgstr ""
+msgstr "Величина відступа"
 
 #: lib/elements/satin_column.py:168
 msgid "default: half of contour underlay inset"
-msgstr ""
+msgstr "по замовчуванню: половина відступа прострочки контура"
 
 #: lib/elements/stroke.py:20
 msgid "Stroke"
-msgstr ""
+msgstr "Лінія"
 
 #: lib/elements/stroke.py:23
 msgid "Running stitch along paths"
-msgstr ""
+msgstr "Вишивка вздовж шляхів"
 
 #: lib/elements/stroke.py:37
 msgid "Running stitch length"
-msgstr ""
+msgstr "Довжина стіжка по лінії"
 
 #: lib/elements/stroke.py:38
 msgid "Length of stitches in running stitch mode."
-msgstr ""
+msgstr "Довжина стіжків в режимі прострочки."
 
 #: lib/elements/stroke.py:49
 msgid "Bean stitch number of repeats"
@@ -870,32 +870,33 @@ msgstr "Бобова вишивка кількість повторень"
 
 #: lib/elements/stroke.py:50
 msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.  Only applies to running stitch."
-msgstr ""
+msgstr "Проходити кожен стіжок вказану кількість разів. Значення 1 потроїть кількість ниток в стіжці (вперед, назад, вперед). Значення 2 - збільшить вп'ятеро. Застосовується тільки для просторочки."
 
 #: lib/elements/stroke.py:62
 msgid "Length of stitches in zig-zag mode."
-msgstr ""
+msgstr "Довжина стіжків у режимі прострочки зигзагом."
 
 #: lib/elements/stroke.py:73
 msgid "Repeats"
-msgstr ""
+msgstr "Повтори прострочки"
 
 #: lib/elements/stroke.py:74
 msgid "Defines how many times to run down and back along the path."
-msgstr ""
+msgstr "Визначає скільки разів потрібно пройти про стрічці вперед і назад."
 
 #: lib/elements/stroke.py:107
 msgid "Manual stitch placement"
-msgstr ""
+msgstr "Ручне розставлення стіжків"
 
 #: lib/elements/stroke.py:108
 msgid "Stitch every node in the path.  Stitch length and zig-zag spacing are ignored."
-msgstr ""
+msgstr "Кожен вузол на лінії буде місцем прокола. Довжина стіжка і щільність зигзага ігноруються."
 
 #: lib/elements/stroke.py:142
 msgid "Legacy running stitch setting detected!\n\n"
 "It looks like you're using a stroke smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set your stroke to be dashed to indicate running stitch.  Any kind of dash will work."
-msgstr ""
+msgstr "Виявлена застаріле налаштування!\n\n"
+"Схоже ви використовуєте лінії тонші 0.5 одиниць для відображення рядків. Такий підхід застарів. Замість цього просто зробіть вашу лінію пунктирною для того, щоб вишити її рядком. Будь-який тип пунктиру підійде."
 
 #: lib/elements/text.py:13 lib/extensions/lettering.py:75
 msgid "Text"
@@ -903,15 +904,15 @@ msgstr "Текст"
 
 #: lib/elements/text.py:14
 msgid "Ink/Stitch cannot work with objects like text."
-msgstr ""
+msgstr "Ink/Stitch не може працювати з об'єктами типу Текст."
 
 #: lib/elements/text.py:16
 msgid "* Text: Create your own letters or try the lettering tool:"
-msgstr ""
+msgstr "* Текст: Створіть власні букви або спробуйте інструмент Надписи:"
 
 #: lib/elements/text.py:17
 msgid "- Extensions > Ink/Stitch > Lettering"
-msgstr ""
+msgstr "- Розширення > Ink/Stitch > Надписи"
 
 #: lib/extensions/auto_satin.py:35
 msgid "Please ensure that at most one start and end command is attached to the selected satin columns."
@@ -924,68 +925,68 @@ msgstr "Виберіть один або декілька атласних ст�
 
 #: lib/extensions/auto_satin.py:54
 msgid "Please select at least one satin column."
-msgstr ""
+msgstr "Виберіть хоча би одну сатинову колонку."
 
 #. This was previously: "No embroiderable paths selected."
 #: lib/extensions/base.py:123
 msgid "Ink/Stitch doesn't know how to work with any of the objects you've selected."
-msgstr ""
+msgstr "Ink/Stitch не знає як працювати з жодним із вибраних об'єктів."
 
 #: lib/extensions/base.py:125
 msgid "There are no objects in the entire document that Ink/Stitch knows how to work with."
-msgstr ""
+msgstr "У всьому дизайні немає жодного об'єкта з яким Ink/Stitch міг би працювати."
 
 #: lib/extensions/base.py:127
 msgid "Tip: Run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot Objects"
-msgstr ""
+msgstr "Порада: Спробуйте Розширення > Ink/Stitch > Вирішення проблем > Вирішення проблем з об'єктами"
 
 #: lib/extensions/break_apart.py:31
 msgid "Please select one or more fill areas to break apart."
-msgstr ""
+msgstr "Щоб відокремити непов’язані області одну від одної, виберіть один або кілька об’єктів для заливки."
 
 #: lib/extensions/cleanup.py:37 lib/extensions/cleanup.py:49
 #, python-format
 msgid "%s elements removed"
-msgstr ""
+msgstr "%s елементів видалено"
 
 #: lib/extensions/convert_to_satin.py:35
 msgid "Please select at least one line to convert to a satin column."
-msgstr ""
+msgstr "Виберіть хоча б одну лінію для її конвертації в сатинову колонку."
 
 #. : Convert To Satin extension, user selected one or more objects that were
 #. not lines.
 #: lib/extensions/convert_to_satin.py:40
 msgid "Only simple lines may be converted to satin columns."
-msgstr ""
+msgstr "В сатинову колонку можна перетворити тільки прості линії."
 
 #: lib/extensions/convert_to_satin.py:134
 msgid "Ink/Stitch cannot convert your stroke into a satin column. Please break up your path and try again."
-msgstr ""
+msgstr "Ink/Stitch не може перетворити вашу лінію в сатинову колонку. Разділіть лінію і спробуйте знову."
 
 #. : Convert To Satin extension, user selected one or more objects that were
 #. not lines.
 #: lib/extensions/convert_to_stroke.py:25
 #: lib/extensions/convert_to_stroke.py:30
 msgid "Please select at least one satin column to convert to a running stitch."
-msgstr ""
+msgstr "Виберіть хоча б одну сатинову колонку для її перетворення в стрічку."
 
 #: lib/extensions/cut_satin.py:20
 msgid "Please select one or more satin columns to cut."
-msgstr ""
+msgstr "Виберіть одну або декілька сатинових колонок для розділу."
 
 #. will have the satin's id prepended, like this:
 #. path12345: error: this satin column does not ...
 #: lib/extensions/cut_satin.py:30
 msgid "this satin column does not have a \"satin column cut point\" command attached to it. Please use the \"Attach commands\" extension and attach the \"Satin Column cut point\" command first."
-msgstr ""
+msgstr "у цій сатиновій колонці немає команди \"вирізати сатинові колонки\". Будь ласка, використовуйте розширення \"Додати команди\" і спочатку додайте команду \"Розірвати сатинову колонку\"."
 
 #: lib/extensions/duplicate_params.py:19
 msgid "This function copies Ink/Stitch parameters from the first selected element to the rest of the selection. Please select at least two elements."
-msgstr ""
+msgstr "Ця функція копіює параметри Ink/Stitch з першого виділеного об'єкта в інші об'єкти у виділенні. Виберіть як мінімум два об'єкти."
 
 #: lib/extensions/flip.py:28
 msgid "Please select one or more satin columns to flip."
-msgstr ""
+msgstr "Виберіть одну або декілька сатинових колонок для розвороту."
 
 #: lib/extensions/import_threadlist.py:33
 msgid "File not found."
@@ -994,11 +995,11 @@ msgstr "Файл не знайдено."
 #: lib/extensions/import_threadlist.py:36
 msgid "The filepath specified is not a file but a dictionary.\n"
 "Please choose a threadlist file to import."
-msgstr ""
+msgstr "Вказаний файл являється словником. Будь-ласка вкажіть файл ниток для імпорта."
 
 #: lib/extensions/import_threadlist.py:46
 msgid "Couldn't find any matching colors in the file."
-msgstr ""
+msgstr "У файлі немає жодного відповідного кольору."
 
 #: lib/extensions/import_threadlist.py:48
 msgid "Please try to import as \"other threadlist\" and specify a color palette below."
@@ -1023,7 +1024,7 @@ msgstr "Неправильний тип файла. Ink/Stitch розуміє т
 
 #: lib/extensions/install_custom_palette.py:36
 msgid "Ink/Stitch cannot find your palette folder automatically. Please install your palette manually."
-msgstr ""
+msgstr "Ink/Stitch не зміг автоматично знайти папку палітр. Встановіть вашу палітру вручну."
 
 #: lib/extensions/layer_commands.py:20
 msgid "Please choose one or more commands to add."
@@ -1031,7 +1032,7 @@ msgstr "Виберіть одну або декілька команд, які �
 
 #: lib/extensions/lettering.py:41 lib/extensions/lettering.py:418
 msgid "Ink/Stitch Lettering"
-msgstr ""
+msgstr "Надписи Ink/Stitch"
 
 #: lib/extensions/lettering.py:51
 msgid "Font"
@@ -1096,7 +1097,7 @@ msgstr "Будь ласка, вкажіть назву файла шрифтів
 
 #: lib/extensions/object_commands.py:21
 msgid "Please select one or more objects to which to attach commands."
-msgstr ""
+msgstr "Будь-ласка, виберіть один або кілька об'єктів до яких потрібно прикріпити команди."
 
 #: lib/extensions/object_commands.py:29
 msgid "Please choose one or more commands to attach."
@@ -1113,21 +1114,21 @@ msgstr "Ці настройки буде застосовано до %d об'є�
 
 #: lib/extensions/params.py:213
 msgid "Some settings had different values across objects.  Select a value from the dropdown or enter a new one."
-msgstr ""
+msgstr "Деякі параметри мають різні значення у вибраних об'єктів. Виберіть значення зі списку або введіть нове."
 
 #: lib/extensions/params.py:217
 #, python-format
 msgid "Disabling this tab will disable the following %d tabs."
-msgstr ""
+msgstr "Відключення цієї вкладки також відключить наступні %d вкладок."
 
 #: lib/extensions/params.py:219
 msgid "Disabling this tab will disable the following tab."
-msgstr ""
+msgstr "Відключення цієї вкладки також відключить наступну вкладку."
 
 #: lib/extensions/params.py:222
 #, python-format
 msgid "Enabling this tab will disable %s and vice-versa."
-msgstr ""
+msgstr "Включення цієї вкладки відключить %s і навпаки."
 
 #: lib/extensions/params.py:252
 msgid "Inkscape objects"
@@ -1135,15 +1136,15 @@ msgstr "Об'єкти Inkscape"
 
 #: lib/extensions/params.py:313
 msgid "Click to force this parameter to be saved when you click \"Apply and Quit\""
-msgstr ""
+msgstr "Натисніть тут, щоб ці параметри були збережені, коли ви натиснете \"Застосувати і Вийти\""
 
 #: lib/extensions/params.py:321
 msgid "This parameter will be saved when you click \"Apply and Quit\""
-msgstr ""
+msgstr "Ці параметри будуть збережені, коли ви натиснете \"Застосувати і Вийти\""
 
 #: lib/extensions/params.py:342
 msgid "Embroidery Params"
-msgstr ""
+msgstr "Параметри вишивки"
 
 #: lib/extensions/params.py:363
 msgid "Use Last Settings"
@@ -1151,15 +1152,15 @@ msgstr "Використовувати останні налаштування"
 
 #: lib/extensions/troubleshoot.py:45
 msgid "All selected shapes are valid! "
-msgstr ""
+msgstr "Підходять всі вибрані форми! "
 
 #: lib/extensions/troubleshoot.py:47
 msgid "If you are still having trouble with a shape not being embroidered, check if it is in a layer with an ignore command."
-msgstr ""
+msgstr "Якщо у вас залишилися проблеми з фігурою, яка вишивається, перевірте чи не перебуває вона на шарі з командою ігнорування."
 
 #: lib/extensions/troubleshoot.py:71
 msgid "Invalid Pointer"
-msgstr ""
+msgstr "Неправильний вказівник"
 
 #: lib/extensions/troubleshoot.py:77 templates/lettering_generate_json.xml:26
 msgid "Description"
@@ -1181,39 +1182,39 @@ msgstr "Попередження"
 
 #: lib/extensions/troubleshoot.py:122
 msgid "Type Warnings"
-msgstr ""
+msgstr "Попередження про тип"
 
 #: lib/extensions/troubleshoot.py:151
 msgid "Problems that will prevent the shape from being embroidered."
-msgstr ""
+msgstr "Проблеми, які не дозволяють вишити цю форму."
 
 #: lib/extensions/troubleshoot.py:155
 msgid "These are problems that won't prevent the shape from being embroidered. You should consider to fix the warning, but if you don't, Ink/Stitch will do its best to process the object."
-msgstr ""
+msgstr "Ці проблеми не перешкоджатимуть вишивці фігури. Ви можете виправити ці попередження, але якщо ви цього не зробите - Ink/Stitch постарається обробити об'єкт якнайкраще."
 
 #: lib/extensions/troubleshoot.py:160
 msgid "Object Type Warnings"
-msgstr ""
+msgstr "Попередження про тип об'єкта"
 
 #: lib/extensions/troubleshoot.py:161
 msgid "These objects may not work properly with Ink/Stitch. Follow the instructions to correct unwanted behaviour."
-msgstr ""
+msgstr "Ці об'єкти можуть не коректно працювати з Ink/Stitch. Дотримуйтесь інструкцій, щоб виправити можливі проблеми."
 
 #: lib/extensions/troubleshoot.py:177
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
-msgstr ""
+msgstr "Можливо, що один об'єкт містить більше ніж одну помилку, але на кожен об'єкт встановлюється тільки один вказівник. Запустіть цю функцию знову, коли будуть виникати нові помилки. Видаліть вказівники шляхом видалення шару з іменем \"Вирішення проблем\" через панель об'єктів  (Об'бєкт -> Об'єкти...)."
 
 #: lib/extensions/zip.py:62
 msgid "threadlist"
-msgstr ""
+msgstr "список ниток"
 
 #: lib/extensions/zip.py:71
 msgid "No embroidery file formats selected."
-msgstr ""
+msgstr "Не вибрано формат файла вишивки."
 
 #: lib/extensions/zip.py:99
 msgid "Design Details"
-msgstr ""
+msgstr "Деталі дизайну"
 
 #: lib/extensions/zip.py:102
 msgid "Title"
@@ -1233,7 +1234,7 @@ msgstr "Кольори"
 
 #: lib/extensions/zip.py:107
 msgid "Thread Order"
-msgstr ""
+msgstr "Порядок ниток"
 
 #: lib/extensions/zip.py:120
 msgid "Thread Used"
@@ -1375,26 +1376,27 @@ msgstr "Симуляція вишивання"
 #: lib/gui/warnings.py:21
 msgid "Cannot load simulator.\n"
 "Close Params to get full error message."
-msgstr ""
+msgstr "Не вдалося запустити симулятор.\n"
+"Закрийте Параметри, щоб побачити повідомлення про помилку."
 
 #. If you translate this string, that will tell Ink/Stitch to
 #. generate menu items for this language in Inkscape's "Extensions"
 #. menu.
 #: lib/inx/utils.py:86
 msgid "Generate INX files"
-msgstr ""
+msgstr "Генерувати INX файли"
 
 #: lib/lettering/font.py:158
 #, python-format
 msgid "The font '%s' has no variants."
-msgstr ""
+msgstr "Для шрифта '%s' немає варіантів."
 
 #. low-level file error.  %(error)s is (hopefully?) translated by
 #. the user's system automatically.
 #: lib/output.py:101
 #, python-format
 msgid "Error writing to %(path)s: %(error)s"
-msgstr ""
+msgstr "Помилка при записі в %(path)s: %(error)s"
 
 #: lib/stitches/auto_satin.py:659
 msgid "Auto-Satin"
@@ -1412,43 +1414,43 @@ msgstr "АвтоСатин %d"
 #: lib/stitches/auto_satin.py:709
 #, python-format
 msgid "AutoSatin Running Stitch %d"
-msgstr ""
+msgstr "АвтоСатин Стрічка %d"
 
 #: lib/svg/rendering.py:222
 msgid "Stitch Plan"
-msgstr ""
+msgstr "План Стіжків"
 
 #: lib/svg/units.py:18
 #, python-format
 msgid "parseLengthWithUnits: unknown unit %s"
-msgstr ""
+msgstr "parseLengthWithUnits: невідома одиниця вимірювання %s"
 
 #: lib/utils/version.py:19
 #, python-format
 msgid "Ink/Stitch Version: %s"
-msgstr ""
+msgstr "Версія Ink/Stitch: %s"
 
 #: lib/utils/version.py:21
 msgid "Ink/Stitch Version: unknown"
-msgstr ""
+msgstr "Ink/Stitch Version: невідомо"
 
 #: print/templates/color_swatch.html:8 print/templates/color_swatch.html:40
 #: print/templates/operator_detailedview.html:9
 msgid "Color"
-msgstr ""
+msgstr "Колір"
 
 #: print/templates/color_swatch.html:11 print/templates/color_swatch.html:41
 msgid "rgb"
-msgstr ""
+msgstr "rgb"
 
 #: print/templates/color_swatch.html:15 print/templates/color_swatch.html:42
 msgid "thread"
-msgstr ""
+msgstr "нитка"
 
 #: print/templates/color_swatch.html:19 print/templates/color_swatch.html:43
 #: print/templates/operator_detailedview.html:63
 msgid "# stitches"
-msgstr ""
+msgstr "# скіжків"
 
 #: print/templates/color_swatch.html:23 print/templates/color_swatch.html:44
 msgid "# trims"
@@ -1457,7 +1459,7 @@ msgstr "№ обрізки"
 #: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
 #: print/templates/operator_detailedview.html:68
 msgid "stop after?"
-msgstr ""
+msgstr "зупинити після?"
 
 #: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
 #: print/templates/operator_detailedview.html:68
@@ -1508,11 +1510,11 @@ msgstr "Сторінка"
 #: print/templates/footer.html:3 print/templates/ui.html:98
 #: print/templates/ui.html:105
 msgid "Proudly generated with"
-msgstr ""
+msgstr "Створено за допомогою"
 
 #: print/templates/headline.html:5
 msgid "Click to choose another logo"
-msgstr ""
+msgstr "Виберіть інший логотип"
 
 #: print/templates/headline.html:10
 msgid "Enter job title..."
@@ -1520,7 +1522,7 @@ msgstr "Введіть назву роботи..."
 
 #: print/templates/headline.html:11
 msgid "CLIENT"
-msgstr ""
+msgstr "КЛІЄНТ"
 
 #: print/templates/headline.html:11
 msgid "Enter client name..."
@@ -1528,7 +1530,7 @@ msgstr "Введіть ім'я клієнта..."
 
 #: print/templates/headline.html:12
 msgid "PURCHASE ORDER #:"
-msgstr ""
+msgstr "НОМЕР ЗАМОВЛЕННЯ:"
 
 #: print/templates/headline.html:12
 msgid "Enter purchase order number..."
@@ -1537,11 +1539,11 @@ msgstr "Введіть номер замовлення..."
 #: print/templates/headline.html:15
 #, python-format
 msgid "%m/%d/%Y"
-msgstr ""
+msgstr "%d.%m.%Y"
 
 #: print/templates/operator_detailedview.html:10
 msgid "Thread Consumption"
-msgstr ""
+msgstr "Використання нитки"
 
 #: print/templates/operator_detailedview.html:11
 msgid "Stops and Trims"
@@ -1567,7 +1569,7 @@ msgstr "Кольорові блоки"
 #: print/templates/operator_overview.html:14
 #: print/templates/print_overview.html:14
 msgid "Design box size"
-msgstr ""
+msgstr "Розмір рамок дизайну"
 
 #: print/templates/operator_detailedview.html:29
 #: print/templates/operator_overview.html:16
@@ -1623,15 +1625,15 @@ msgstr "Орієнтовний час роботи"
 #: print/templates/operator_overview.html:28
 #: print/templates/print_detail.html:18 print/templates/print_overview.html:28
 msgid "Ctrl + Scroll to Zoom"
-msgstr ""
+msgstr "Ctrl + Scroll для збільшення"
 
 #: print/templates/print_detail.html:6
 msgid "COLOR"
-msgstr ""
+msgstr "Колір"
 
 #: print/templates/print_overview.html:42
 msgid "Client Signature"
-msgstr ""
+msgstr "Підпис Клієнта"
 
 #: print/templates/ui.html:2
 msgid "Ink/Stitch Print Preview"
@@ -1679,23 +1681,23 @@ msgstr "Розмір друку"
 
 #: print/templates/ui.html:39
 msgid "Print Layouts"
-msgstr ""
+msgstr "Макети друку"
 
 #: print/templates/ui.html:42 print/templates/ui.html:136
 msgid "Client Overview"
-msgstr ""
+msgstr "Огляд ля клієнта"
 
 #: print/templates/ui.html:46 print/templates/ui.html:137
 msgid "Client Detailed View"
-msgstr ""
+msgstr "Детальний вид для клієнта"
 
 #: print/templates/ui.html:50 print/templates/ui.html:138
 msgid "Operator Overview"
-msgstr ""
+msgstr "Вид для оператора"
 
 #: print/templates/ui.html:54 print/templates/ui.html:139
 msgid "Operator Detailed View"
-msgstr ""
+msgstr "Детальний вид для оператора"
 
 #: print/templates/ui.html:56
 msgid "Thumbnail size"
@@ -1716,19 +1718,19 @@ msgstr "Зберегти як типове"
 
 #: print/templates/ui.html:70
 msgid "Logo"
-msgstr ""
+msgstr "Логотип"
 
 #: print/templates/ui.html:80
 msgid "Footer: Operator contact information"
-msgstr ""
+msgstr "Нижній колонтитул: Контактна оперція для оператора"
 
 #: print/templates/ui.html:114
 msgid "Machine Settings"
-msgstr ""
+msgstr "Настройки машини"
 
 #: print/templates/ui.html:116
 msgid "Average Machine Speed"
-msgstr ""
+msgstr "Середня швидкість машини"
 
 #: print/templates/ui.html:117
 msgid "stitches per minute "
@@ -1736,43 +1738,43 @@ msgstr "стібків за хвилину "
 
 #: print/templates/ui.html:121
 msgid "Time Factors"
-msgstr ""
+msgstr "Настройки часу"
 
 #: print/templates/ui.html:124
 msgid "Includes average time for preparing the machine, thread breaks and/or bobbin changes, etc."
-msgstr ""
+msgstr "Включає середній час для підготовки машини, заміну порваних ниток і/або катушок, і т. п."
 
 #: print/templates/ui.html:124
 msgid "seconds to add to total time*"
-msgstr ""
+msgstr "секунд додати до загального часу*"
 
 #: print/templates/ui.html:128
 msgid "This will be added to the total time."
-msgstr ""
+msgstr "Буде додано до загального часу."
 
 #: print/templates/ui.html:128
 msgid "seconds needed for a color change*"
-msgstr ""
+msgstr "секунд потрібно для зміни кольору*"
 
 #: print/templates/ui.html:131
 msgid "seconds needed for trim"
-msgstr ""
+msgstr "секунд потрібно для обрізки"
 
 #: print/templates/ui.html:134
 msgid "Display Time On"
-msgstr ""
+msgstr "Ввімкнено відображення часу"
 
 #: print/templates/ui.html:142
 msgid "Includes page setup, estimated time and also the branding."
-msgstr ""
+msgstr "Включає макет, приблизний час, а також брендинг."
 
 #: print/templates/ui.html:147
 msgid "Thread Palette"
-msgstr ""
+msgstr "Палітра Ниток"
 
 #: print/templates/ui.html:150
 msgid "None"
-msgstr ""
+msgstr "Жоден"
 
 #: print/templates/ui.html:166
 msgid "Changing the thread palette will cause thread names and catalog numbers to be recalculated based on the new palette.  Any changes you have made to color or thread names will be lost.  Are you sure?"
@@ -1788,20 +1790,20 @@ msgstr "Ні"
 
 #: print/templates/ui_svg_action_buttons.html:1
 msgid "Scale"
-msgstr ""
+msgstr "Масштаб"
 
 #: print/templates/ui_svg_action_buttons.html:3
 msgid "Fit"
-msgstr ""
+msgstr "По рисунку"
 
 #: print/templates/ui_svg_action_buttons.html:5
 msgid "Apply to all"
-msgstr ""
+msgstr "Застосувати до всіх"
 
 #: print/templates/ui_svg_action_buttons.html:9
 #: print/templates/ui_svg_action_buttons.html:12
 msgid "Realistic"
-msgstr ""
+msgstr "Реалістично"
 
 #. description for pyembroidery file format: pec
 #. description for pyembroidery file format: pes
@@ -1915,47 +1917,47 @@ msgstr "Формат вишивки Eltac"
 #. description for pyembroidery file format: fxy
 #: pyembroidery-format-descriptions.py:42
 msgid "Fortron Embroidery Format"
-msgstr ""
+msgstr "Формат вишивки Fortron"
 
 #. description for pyembroidery file format: gt
 #: pyembroidery-format-descriptions.py:44
 msgid "Gold Thread Embroidery Format"
-msgstr ""
+msgstr "Формат вишивки Gold Thread"
 
 #. description for pyembroidery file format: inb
 #: pyembroidery-format-descriptions.py:46
 msgid "Inbro Embroidery Format"
-msgstr ""
+msgstr "Формат вишивки Inbro"
 
 #. description for pyembroidery file format: tap
 #: pyembroidery-format-descriptions.py:52
 msgid "Happy Embroidery Format"
-msgstr ""
+msgstr "Формат вишивки Happy"
 
 #. description for pyembroidery file format: stx
 #: pyembroidery-format-descriptions.py:54
 msgid "Data Stitch Embroidery Format"
-msgstr ""
+msgstr "Формат вишивки Data Stitch"
 
 #. description for pyembroidery file format: new
 #: pyembroidery-format-descriptions.py:60
 msgid "Ameco Embroidery Format"
-msgstr ""
+msgstr "Формат вишивки Ameco"
 
 #. description for pyembroidery file format: mit
 #: pyembroidery-format-descriptions.py:64
 msgid "Mitsubishi Embroidery Format"
-msgstr ""
+msgstr "Формат вишивки Mitsubishi"
 
 #. description for pyembroidery file format: stc
 #: pyembroidery-format-descriptions.py:76
 msgid "Gunold Embroidery Format"
-msgstr ""
+msgstr "Формат вишивки Gunold"
 
 #. description for pyembroidery file format: zxy
 #: pyembroidery-format-descriptions.py:78
 msgid "ZSK TC Embroidery Format"
-msgstr ""
+msgstr "Формат вишивки ZSK TC"
 
 #. description for pyembroidery file format: pmv
 #: pyembroidery-format-descriptions.py:80
@@ -1965,23 +1967,23 @@ msgstr "Формат вишивки Brother"
 #. description for pyembroidery file format: txt
 #: pyembroidery-format-descriptions.py:82
 msgid "G-code Format"
-msgstr ""
+msgstr "Формат G-code"
 
 #: templates/about.xml:3 templates/about.xml:6
 msgid "About"
-msgstr ""
+msgstr "Про програму"
 
 #: templates/about.xml:10
 msgid "An open-source machine embroidery design platform based on Inkscape."
-msgstr ""
+msgstr "Платформа для розробки дизайну машинної вишивки на базі Inkscape з відкритим вихідним кодом."
 
 #: templates/about.xml:15
 msgid "License"
-msgstr ""
+msgstr "Ліцензія"
 
 #: templates/auto_satin.xml:3
 msgid "Auto-Route Satin Columns"
-msgstr ""
+msgstr "Авто-Маршрут Сатинових Колонок"
 
 #: templates/auto_satin.xml:5
 msgid "Trim jump stitches"
@@ -1995,112 +1997,112 @@ msgstr "Зберегти порядок атласних колон"
 #: templates/convert_to_stroke.xml:13 templates/cut_satin.xml:10
 #: templates/flip.xml:10
 msgid "Satin Tools"
-msgstr ""
+msgstr "Інструменти Сатина"
 
 #: templates/break_apart.xml:3
 msgid "Break Apart Fill Objects"
-msgstr ""
+msgstr "Розділити об'єкти заливок"
 
 #: templates/break_apart.xml:10
 msgid "Fill Tools"
-msgstr ""
+msgstr "Інструменти Гладі"
 
 #: templates/break_apart.xml:15
 msgid "This extension will try to repair fill shapes and break them apart if necessary. Holes will be retained. Use on simple or overlapping shapes."
-msgstr ""
+msgstr "Цей інструмент постарається виправити заливки фігур і розділити їх при необхідності. Отвори будуть збережені. Використовуйте на простих фігурах або на фігурах, що перекриваються."
 
 #: templates/cleanup.xml:3
 msgid "Cleanup Document"
-msgstr ""
+msgstr "Очистка Дизайну"
 
 #: templates/cleanup.xml:5
 msgid "Use this extension to remove small objects from the document."
-msgstr ""
+msgstr "Використовуйте цей інструмент для видалення дрібних об'єктів із дизайну."
 
 #: templates/cleanup.xml:6
 msgid "Remove Small Fill Areas"
-msgstr ""
+msgstr "Видалити маленкі області заливок"
 
 #: templates/cleanup.xml:7
 msgid "Removes areas smaller than dedined by threshold."
-msgstr ""
+msgstr "Видаляє області, які менші вказаного порогу."
 
 #: templates/cleanup.xml:8
 msgid "Fill area threshold (px²)"
-msgstr ""
+msgstr "Поріг площі заливки (px²)"
 
 #: templates/cleanup.xml:10
 msgid "Removes small strokes shorter than defined by threshold."
-msgstr ""
+msgstr "Вмдаляє маленькі лінії, які коротші вказаного порога."
 
 #: templates/cleanup.xml:11
 msgid "Stroke threshold (px)"
-msgstr ""
+msgstr "Поріг довжини ліній (px)"
 
 #: templates/convert_to_satin.xml:3
 msgid "Convert Line to Satin"
-msgstr ""
+msgstr "Перетворити лінію в Сатин"
 
 #: templates/convert_to_stroke.xml:3
 msgid "Convert Satin to Stroke"
-msgstr ""
+msgstr "Перетворити Сатин в Стрічку"
 
 #: templates/convert_to_stroke.xml:6
 msgid "Converts a satin column into a running stitch."
-msgstr ""
+msgstr "Перетворює сатинову колонку на прямий стібок."
 
 #: templates/convert_to_stroke.xml:8
 msgid "Do not delete original satin column."
-msgstr ""
+msgstr "Не видаляти вихідну сатинову колонку."
 
 #: templates/cut_satin.xml:3
 msgid "Cut Satin Column"
-msgstr ""
+msgstr "Розділи Сатинову Колонку"
 
 #: templates/duplicate_params.xml:3
 msgid "Duplicate Params"
-msgstr ""
+msgstr "Дублювати параметри"
 
 #: templates/duplicate_params.xml:10 templates/reorder.xml:10
 msgid "Edit"
-msgstr ""
+msgstr "Правка"
 
 #: templates/embroider.xml:3
 msgid "Embroider"
-msgstr ""
+msgstr "Експорт вишивки"
 
 #: templates/embroider.xml:5
 msgid "Create a stitch file"
-msgstr ""
+msgstr "Створити файл вишивки"
 
 #: templates/embroider.xml:6
 msgid "Save your embroidery file through | File > Save a Copy ... |"
-msgstr ""
+msgstr "Збережіть ваш файл вишивки через | Файл > Зберегти копию ... |"
 
 #: templates/embroider.xml:7
 msgid "Choose from listed embroidery file formats and save."
-msgstr ""
+msgstr "Виберіть один із форматів файла вишивки і збережіть."
 
 #: templates/embroider.xml:9
 msgid "Multiple file formats can be saved by choosing the zip file format."
-msgstr ""
+msgstr "Зберегти одразу декілька форматів можна вибравши в списку формат zip."
 
 #: templates/embroider.xml:14 templates/print.xml:10 templates/simulator.xml:10
 #: templates/stitch_plan_preview.xml:10
 msgid "Visualise and Export"
-msgstr ""
+msgstr "Візуалізація і експорт"
 
 #: templates/embroider_settings.xml:3
 msgid "Preferences"
-msgstr ""
+msgstr "Налаштування"
 
 #: templates/embroider_settings.xml:13
 msgid "Output Settings"
-msgstr ""
+msgstr "Настройки виводу"
 
 #: templates/embroider_settings.xml:16
 msgid "Collapse length (mm)"
-msgstr ""
+msgstr "Максимальна відстань між двома об'єктами без шиття (мм)"
 
 #: templates/embroider_settings.xml:17
 msgid "Jump stitches smaller than this will be treated as normal stitches."
@@ -2108,370 +2110,371 @@ msgstr "Стрибкові стібки менші за це, трактуват
 
 #: templates/flip.xml:3
 msgid "Flip Satin Column Rails"
-msgstr ""
+msgstr "Розгорнути направляючі сатинової колонки"
 
 #: templates/global_commands.xml:3
 msgid "Add Commands"
-msgstr ""
+msgstr "Додати команди"
 
 #: templates/global_commands.xml:5
 msgid "These commands affect the entire embroidery design."
-msgstr ""
+msgstr "Ці команди впливають на весь дизайн вишивки."
 
 #. Inkscape submenu under Extensions -> Ink/Stitch
 #: templates/global_commands.xml:15 templates/layer_commands.xml:14
 #: templates/object_commands.xml:13
 msgid "Commands"
-msgstr ""
+msgstr "Команди"
 
 #: templates/import_threadlist.xml:3
 msgid "Import Threadlist"
-msgstr ""
+msgstr "Імпортувати список ниток"
 
 #: templates/import_threadlist.xml:6 templates/install_custom_palette.xml:8
 msgid "Choose file"
-msgstr ""
+msgstr "Вибрати файл"
 
 #: templates/import_threadlist.xml:20 templates/install.xml:10
 #: templates/install_custom_palette.xml:13
 msgid "Thread Color Management"
-msgstr ""
+msgstr "Управління кольором ниток"
 
 #: templates/input.xml:9
 #, python-format
 msgid "convert %(file_extension)s file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "конвертування файла %(file_extension)s в ручні стіжки Ink/Stitch"
 
 #: templates/install.xml:3
 msgid "Install thread color palettes for Inkscape"
-msgstr ""
+msgstr "Встановити кольорові палітри ниток для Inkscape"
 
 #: templates/install_custom_palette.xml:3
 msgid "Install custom palette"
-msgstr ""
+msgstr "Встановити користувацьку палітру"
 
 #: templates/install_custom_palette.xml:6
 msgid "Choose a .gpl color palette file to install into Inkscape."
-msgstr ""
+msgstr "Виберіть файл кольорової палітри .gpl для встановлення в Inkscape."
 
 #: templates/install_custom_palette.xml:7
 msgid "Restart Inkscape to use."
-msgstr ""
+msgstr "Перезапустіть Inkscape для активації палитри."
 
 #: templates/layer_commands.xml:3
 msgid "Add Layer Commands"
-msgstr ""
+msgstr "Добавити команди на шар"
 
 #: templates/layer_commands.xml:5
 msgid "Commands will be added to the currently-selected layer."
-msgstr ""
+msgstr "Команди будуть додані до поточного вибраного шару."
 
 #: templates/lettering.xml:3
 msgid "Lettering"
-msgstr ""
+msgstr "Надписи"
 
 #: templates/lettering_custom_font_dir.xml:3
 #: templates/lettering_custom_font_dir.xml:18
 msgid "Custom font directory"
-msgstr ""
+msgstr "Папка користувацьких шрифтів"
 
 #: templates/lettering_custom_font_dir.xml:10
 #: templates/lettering_generate_json.xml:10
 #: templates/lettering_remove_kerning.xml:10
 msgid "Font Management"
-msgstr ""
+msgstr "Керування шрифтами"
 
 #: templates/lettering_custom_font_dir.xml:15
 msgid "Set a custom directory for additional fonts to be used with the lettering tool."
-msgstr ""
+msgstr "Визначте папку для користувацьких шрифтів, які можуть бути використані в інструменті надписів."
 
 #: templates/lettering_custom_font_dir.xml:21
 msgid "Usage: The custom font directory must contain a subdirectory for each font."
-msgstr ""
+msgstr "Використання: папка користувацьких шрифтів повинна містити підпапки для кожного із шрифтів."
 
 #: templates/lettering_generate_json.xml:3
 msgid "Generate JSON"
-msgstr ""
+msgstr "Створити JSON"
 
 #: templates/lettering_generate_json.xml:15
 msgid "Generates font.json which can be used by the lettering tool."
-msgstr ""
+msgstr "Створює font.json, який може використовуватися інструментом надписів."
 
 #: templates/lettering_generate_json.xml:17
 msgid "The generated file can be viewed and updated with a standard text editor tool."
-msgstr ""
+msgstr "Отриманий файл може бути переглянутий і відредаговований у звичайному текстовому редакторі."
 
 #: templates/lettering_generate_json.xml:21
 msgid "SVG Font File"
-msgstr ""
+msgstr "Файл шрифта SVG"
 
 #: templates/lettering_generate_json.xml:25
 msgid "Name"
-msgstr ""
+msgstr "Ім'я"
 
 #: templates/lettering_generate_json.xml:32
 msgid "Autoroute Satin"
-msgstr ""
+msgstr "Автомаршрут Сатинів"
 
 #: templates/lettering_generate_json.xml:33
 msgid "Disable if you defined manual routing in your font."
-msgstr ""
+msgstr "Вимкність, якщо у вашому шрифті використовується ручний порядок."
 
 #: templates/lettering_generate_json.xml:34
 msgid "Reversible"
-msgstr ""
+msgstr "Зворотній"
 
 #: templates/lettering_generate_json.xml:35
 msgid "If disabled back and forth stitching will not be possile for this font."
-msgstr ""
+msgstr "При вимкненні вишивання вперед-назад буде неможливим для цього шрифта."
 
 #: templates/lettering_generate_json.xml:36
 msgid "Force letter case"
-msgstr ""
+msgstr "Примусово використовувати маленькі/великі літери"
 
 #: templates/lettering_generate_json.xml:38
 msgid "Upper"
-msgstr ""
+msgstr "Великі букви"
 
 #: templates/lettering_generate_json.xml:39
 msgid "Lower"
-msgstr ""
+msgstr "Малі букви"
 
 #: templates/lettering_generate_json.xml:43
 msgid "Min Scale"
-msgstr ""
+msgstr "Мінімальний масштаб"
 
 #: templates/lettering_generate_json.xml:44
 msgid "Max Scale"
-msgstr ""
+msgstr "Максимальний масштаб"
 
 #: templates/lettering_generate_json.xml:48
 msgid "Default Glyph"
-msgstr ""
+msgstr "Глиф за замовчуванням"
 
 #: templates/lettering_generate_json.xml:52
 msgid "Kerning"
-msgstr ""
+msgstr "Кернінг"
 
 #: templates/lettering_generate_json.xml:54
 msgid "If your font file contains kerning information, you can completely ignore the following settings (unless you want to overwrite them).\n"
 "                   If the kerning information cannot be found, these values will apply automatically."
-msgstr ""
+msgstr "Якщо у файлі шрифта є інформація про кернінг, можна пропустити ці налаштуваня (якщо не хочете їх змінити).\n"
+"                   Якщо інформацію про кернінг не буде знайдено, ці значення будуть використані автоматично."
 
 #: templates/lettering_generate_json.xml:59
 #: templates/lettering_generate_json.xml:66
 msgid "Force"
-msgstr ""
+msgstr "Перезаписати"
 
 #: templates/lettering_generate_json.xml:60
 msgid "Overwrite leading information from font file."
-msgstr ""
+msgstr "Перезаписати інформацію про відступи в файлі шрифта."
 
 #: templates/lettering_generate_json.xml:61
 msgid "Leading (px)"
-msgstr ""
+msgstr "Міжрядковий інтервал (пікс.)"
 
 #: templates/lettering_generate_json.xml:62
 msgid "Line height (default: 100)"
-msgstr ""
+msgstr "Висота стрічки (за замовчуванням: 100)"
 
 #: templates/lettering_generate_json.xml:67
 msgid "Overwrite word spacing information from font file."
-msgstr ""
+msgstr "Перезаписати інформацію про відступи між словами в файлі шрифта."
 
 #: templates/lettering_generate_json.xml:68
 msgid "Word spacing (px)"
-msgstr ""
+msgstr "Відстань між словами (пікс.)"
 
 #: templates/lettering_generate_json.xml:69
 msgid "Space character width (default: 20)"
-msgstr ""
+msgstr "Ширина символа пробіла (за замовчуванням: 20)"
 
 #: templates/lettering_remove_kerning.xml:3
 msgid "Remove Kerning"
-msgstr ""
+msgstr "Прибрати кернінг"
 
 #: templates/lettering_remove_kerning.xml:15
 msgid "Removes Kerning information from given SVG files"
-msgstr ""
+msgstr "Видалити інформацію про кернінг із SVG файлів"
 
 #: templates/lettering_remove_kerning.xml:19
 msgid "Make sure you keep a copy of the original file. After running this extension kerning information will be lost unrevertably from these files."
-msgstr ""
+msgstr "Переконайтеся, що зберегли копію оригінального файлу. Після запуску цього розширення всю інформацію про кернінг буде безповоротно видалено з цих файлів."
 
 #: templates/lettering_remove_kerning.xml:23
 msgid "Select Font Files"
-msgstr ""
+msgstr "Виберіть файли шрифтів"
 
 #: templates/object_commands.xml:3
 msgid "Attach Commands to Selected Objects"
-msgstr ""
+msgstr "Додати команди до вибраних об'єктів"
 
 #: templates/output.xml:9
 #, python-format
 msgid "Save design in %(file_extension)s format using Ink/Stitch"
-msgstr ""
+msgstr "Зберегти дизайн у формат %(file_extension)s використовуючи Ink/Stitch"
 
 #: templates/output_params_txt.xml:4
 msgid "negate X coordinate values"
-msgstr ""
+msgstr "інвертувати значення координати Х"
 
 #: templates/output_params_txt.xml:4
 msgid "Negate x coordinates"
-msgstr ""
+msgstr "Інвертувати координату X"
 
 #: templates/output_params_txt.xml:5
 msgid "negate Y coordinate values"
-msgstr ""
+msgstr "інвертувати значення координати Y"
 
 #: templates/output_params_txt.xml:5
 msgid "Negate y coordinates"
-msgstr ""
+msgstr "Інвертувати координату Y"
 
 #: templates/output_params_txt.xml:6
 msgid "Z coordinate value"
-msgstr ""
+msgstr "Значення координати Z"
 
 #: templates/output_params_txt.xml:6
 msgid "Either alternate Z value between 0 and 1 or travel custom value."
-msgstr ""
+msgstr "Введіть значення для Z між 0 і 1, або значення чи величину підйому."
 
 #: templates/output_params_txt.xml:7
 msgid "alternate Z value"
-msgstr ""
+msgstr "змінити значення Z"
 
 #: templates/output_params_txt.xml:8 templates/output_params_txt.xml:10
 msgid "Z travel per stitch"
-msgstr ""
+msgstr "Підйом (Z) на стіжок"
 
 #: templates/output_params_txt.xml:11
 msgid "increment z coordinate by this amount per stitch if \"Z travel per stitch\" is enabled"
-msgstr ""
+msgstr "збільшувати значення координати z на цю величину на кожному стіжку, якщо включений прапорець \"Підйом на стібок\""
 
 #: templates/output_params_txt.xml:15
 #, python-format
 msgid "Use '%X' for x-coordinate. Use '%Y' for y-coordinate and '%Z' for z-coordinate. Use '\\n' for a new line."
-msgstr ""
+msgstr "Використовувати '%X' для x координати. Використовувати '%Y' для y координати і '%Z' для z координати. Використовувати '\\n' для нової строки."
 
 #: templates/output_params_txt.xml:17 templates/output_params_txt.xml:19
 msgid "Use '\\n' for a new line. Leave empty to use default value. Use 'none' to remove."
-msgstr ""
+msgstr "Використовувати '\\n' для нового рядку. Залиште пустим для використання значения по замовчуванню. Або 'none' для видалення."
 
 #: templates/output_params_txt.xml:20
 msgid "START"
-msgstr ""
+msgstr "СТАРТ"
 
 #: templates/output_params_txt.xml:21 templates/output_params_txt.xml:23
 msgid "Use '\\n' for a new line."
-msgstr ""
+msgstr "Використовувати '\\n' для нового рядку."
 
 #: templates/output_params_txt.xml:22
 msgid "END"
-msgstr ""
+msgstr "КІНЕЦЬ"
 
 #: templates/output_params_txt.xml:26
 msgid "laser mode"
-msgstr ""
+msgstr "режим лазера"
 
 #: templates/output_params_txt.xml:27
 msgid "Laser mode (generate g-code for grbl laser mode)"
-msgstr ""
+msgstr "Режим лазера (генерувати g-code для Grbl режиму лазера)"
 
 #: templates/output_params_txt.xml:28
 msgid "dynamic laser power"
-msgstr ""
+msgstr "змінювана потужність лазера"
 
 #: templates/output_params_txt.xml:29
 msgid "Use Grbl's M4 dynamic laser power mode.  Ensures consistent laser cutting power regardless of motor speed.  Only for PWM-capable lasers."
-msgstr ""
+msgstr "Використовувати режим змінної потужності лазера GRBL M4. Забезпечує постійну потужність лазера враховуючи швидкость моторів. Тільки для PWM-сумісних лазерів."
 
 #: templates/output_params_txt.xml:31
 msgid "laser warm-up time"
-msgstr ""
+msgstr "час прогріву лазера"
 
 #: templates/output_params_txt.xml:32
 msgid "When turning on the laser, wait this many seconds for laser to warm up (G4 command)"
-msgstr ""
+msgstr "При включенні лазера очікувати вказану кількість секунд для його прогріву (команда G4)"
 
 #: templates/output_params_txt.xml:33
 msgid "spindle speed"
-msgstr ""
+msgstr "обороти шпинделя"
 
 #: templates/output_params_txt.xml:34
 msgid "spindle speed (laser power for laser mode, set to -1 to omit)"
-msgstr ""
+msgstr "швидкість обертання шпинделя (в режимі лазера - його потужність, встановіть -1 для пропуску)"
 
 #: templates/output_params_txt.xml:35
 msgid "min spindle speed"
-msgstr ""
+msgstr "мінімальна швидкість шпинделя"
 
 #: templates/output_params_txt.xml:36
 msgid "minimum spindle speed value (grbl $31 setting)"
-msgstr ""
+msgstr "мінімальне значення швидкості обертання шпинделя (параметр Grbl $31)"
 
 #: templates/output_params_txt.xml:37
 msgid "max spindle speed"
-msgstr ""
+msgstr "максимальна швидкість шпинделя"
 
 #: templates/output_params_txt.xml:38
 msgid "minimum spindle speed value (grbl $30 setting)"
-msgstr ""
+msgstr "максимальное значення швидкості обертання шпинделя (параметр Grbl $30)"
 
 #: templates/output_params_txt.xml:39
 msgid "feed rate (in mm/min, set to -1 to omit)"
-msgstr ""
+msgstr "швидкість подачі (в мм/хв, встановіть -1 для пропуска)"
 
 #: templates/params.xml:3
 msgid "Params"
-msgstr ""
+msgstr "Параметри"
 
 #: templates/print.xml:3
 msgid "PDF Export"
-msgstr ""
+msgstr "Експорт в PDF"
 
 #: templates/remove_embroidery_settings.xml:3
 msgid "Remove embroidery settings"
-msgstr ""
+msgstr "Видалити параметри вишивки"
 
 #: templates/remove_embroidery_settings.xml:5
 msgid "Use this extension to remove the information Ink/Stitch has stored in your document.  This can be especially useful if you copy and paste objects from an embroidery design into another document."
-msgstr ""
+msgstr "Використовуйте цей інструмент для видалення інформації, яку Ink/Stitch зберігає в вашому дизайні. Це може бути особливо корисним, коли ви копіюєте та вставляєте об'єкти з дизайну в інший документ."
 
 #: templates/remove_embroidery_settings.xml:6
 msgid "Remove Params"
-msgstr ""
+msgstr "Видалити Параметри"
 
 #: templates/remove_embroidery_settings.xml:7
 msgid "Removes params from selected objects or all objects if nothing is selected."
-msgstr ""
+msgstr "Прибирає параметри з вибраних об'єктів або з усіх об'єктів, якщо нічого не вибрано."
 
 #: templates/remove_embroidery_settings.xml:8
 msgid "Remove Commands"
-msgstr ""
+msgstr "Забрати команди"
 
 #: templates/remove_embroidery_settings.xml:9
 msgid "Removes visual commands from selected objects or all objects if nothing is selected."
-msgstr ""
+msgstr "Прибирає візуальні команди з вибраних об'єктів або з усіх об'єктів, якщо нічого не вибрано."
 
 #: templates/remove_embroidery_settings.xml:10
 msgid "Remove Print Settings from SVG metadata"
-msgstr ""
+msgstr "Прибрати налаштування друку з даних SVG"
 
 #: templates/reorder.xml:3
 msgid "Re-stack objects in order of selection"
-msgstr ""
+msgstr "Впорядкувати об'єкти в порядку виділення"
 
 #: templates/simulator.xml:3
 msgid "Simulator / Realistic Preview"
-msgstr ""
+msgstr "Симулятор / Реалістичний попередній перегляд"
 
 #: templates/stitch_plan_preview.xml:3
 msgid "Stitch Plan Preview"
-msgstr ""
+msgstr "Попередній перегляд плану вишивки"
 
 #: templates/troubleshoot.xml:3
 msgid "Troubleshoot Objects"
-msgstr ""
+msgstr "Вирішення проблем з об'єктами"
 
 #: templates/zip.xml:8
 msgid "Ink/Stitch: ZIP export multiple formats (.zip)"
@@ -2483,68 +2486,68 @@ msgstr "Створіть ZIP за допомогою декількох форм
 
 #: templates/zip.xml:17
 msgid "Scalable Vector Graphic"
-msgstr ""
+msgstr "Масштабована векторна графіка (SVG)"
 
 #: templates/zip.xml:18
 msgid "Threadlist"
-msgstr ""
+msgstr "Список ниток"
 
 #. name for left arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:52
 msgid "← Arrow left"
-msgstr ""
+msgstr "← Стрілка вліво"
 
 #. name for right arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:63
 msgid "→ Arrow right"
-msgstr ""
+msgstr "→ Стрілка направо"
 
 #. name for up arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:129
 msgid "↑ Arrow up"
-msgstr ""
+msgstr "↑ Стрілка вверх"
 
 #. name for down arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:118
 msgid "↓ Arrow down"
-msgstr ""
+msgstr "↓ Стрілка вниз"
 
 #. name for this keyboard key: +
 #: electron/src/renderer/components/Simulator.vue:89
 msgid "+ Plus"
-msgstr ""
+msgstr "+ Плюс"
 
 #: electron/src/renderer/components/Simulator.vue:15
 msgid "Button"
-msgstr ""
+msgstr "Кнопка"
 
 #: electron/src/renderer/components/Simulator.vue:203
 msgid "color changes"
-msgstr ""
+msgstr "зміна кольорів"
 
 #: electron/src/renderer/components/Simulator.vue:186
 msgid "Command"
-msgstr ""
+msgstr "Команда"
 
 #: electron/src/renderer/components/Simulator.vue:145
 msgid "Controls"
-msgstr ""
+msgstr "Керування"
 
 #: electron/src/renderer/components/Simulator.vue:223
 msgid "cursor"
-msgstr ""
+msgstr "курсор"
 
 #: electron/src/renderer/components/Simulator.vue:18
 msgid "Function"
-msgstr ""
+msgstr "Функція"
 
 #: electron/src/renderer/components/InstallPalettes.vue:16
 msgid "If you are not sure which file path to choose, click on install directly. In most cases Ink/Stitch will guess the correct path."
-msgstr ""
+msgstr "Якщо ви не впевнені який шлях потрібно ввести, тисніть відразу на Встановити. У більшості випадків Ink/Stitch вдасться вгадати правильну папку."
 
 #: electron/src/renderer/components/InstallPalettes.vue:9
 msgid "Ink/Stitch can install palettes for Inkscape matching the thread colors from popular machine embroidery thread manufacturers."
-msgstr ""
+msgstr "Ink/Stitch может встановити палитри для Inkscape, які відповідають кольорам ниток популярних виробників."
 
 #: electron/src/renderer/components/InstallPalettes.vue:53
 msgid "Inkscape add-on installation failed"
@@ -2552,7 +2555,7 @@ msgstr "Помилка встановлення додатка Inkscape"
 
 #: electron/src/renderer/components/InstallPalettes.vue:36
 msgid "Inkscape palettes have been installed. Please restart Inkscape to load the new palettes."
-msgstr ""
+msgstr "Палітри ниток для Inkscape встановлено. Перезапустіть Inkscape, щоб побачити нові палітри."
 
 #: electron/src/renderer/components/InstallPalettes.vue:22
 msgid "Install"
@@ -2560,7 +2563,7 @@ msgstr "Встановити"
 
 #: electron/src/renderer/components/InstallPalettes.vue:4
 msgid "Install Palettes"
-msgstr ""
+msgstr "Встановити палітри"
 
 #: electron/src/renderer/components/InstallPalettes.vue:31
 msgid "Installation Completed"
@@ -2572,102 +2575,102 @@ msgstr "Помилка встановлення"
 
 #: electron/src/renderer/components/Simulator.vue:106
 msgid "Jump to next command"
-msgstr ""
+msgstr "Перейти до наступної команди"
 
 #: electron/src/renderer/components/Simulator.vue:97
 msgid "Jump to previous command"
-msgstr ""
+msgstr "Перейти до попередньої команди"
 
 #: electron/src/renderer/components/Simulator.vue:199
 msgid "jumps"
-msgstr ""
+msgstr "переходи"
 
 #. name for this keyboard key: -
 #: electron/src/renderer/components/Simulator.vue:76
 msgid "Minus"
-msgstr ""
+msgstr "Мінус"
 
 #: electron/src/renderer/components/Simulator.vue:215
 msgid "needle points"
-msgstr ""
+msgstr "точки проколів"
 
 #. description of keyboard shortcut that moves one stitch backward in simulator
 #: electron/src/renderer/components/Simulator.vue:71
 msgid "One step backward"
-msgstr ""
+msgstr "На один крок назад"
 
 #. description of keyboard shortcut that moves one stitch forward in simulator
 #: electron/src/renderer/components/Simulator.vue:84
 msgid "One step forward"
-msgstr ""
+msgstr "На один крок вперед"
 
 #. name for page down keyboard key
 #: electron/src/renderer/components/Simulator.vue:99
 msgid "Page down (PgDn)"
-msgstr ""
+msgstr "Page down (PgDn)"
 
 #. name for page up keyboard key
 #: electron/src/renderer/components/Simulator.vue:108
 msgid "Page up (PgUp)"
-msgstr ""
+msgstr "Page up (PgUp)"
 
 #: electron/src/renderer/components/Simulator.vue:40
 msgid "Play"
-msgstr ""
+msgstr "Грати"
 
 #: electron/src/renderer/components/Simulator.vue:49
 msgid "Play backward"
-msgstr ""
+msgstr "Грати назад"
 
 #: electron/src/renderer/components/Simulator.vue:60
 msgid "Play forward"
-msgstr ""
+msgstr "Грати вперед"
 
 #: electron/src/renderer/components/Simulator.vue:220
 msgid "realistic"
-msgstr ""
+msgstr "реалістично"
 
 #: electron/src/renderer/components/Simulator.vue:260
 msgid "Rendering stitch-plan..."
-msgstr ""
+msgstr "Відмальовка плана вишивки..."
 
 #: electron/src/renderer/components/Simulator.vue:21
 msgid "Shortcut Key"
-msgstr ""
+msgstr "Комбінація клавиш"
 
 #: electron/src/renderer/components/Simulator.vue:192
 msgid "Show"
-msgstr ""
+msgstr "Показати"
 
 #: electron/src/renderer/components/Simulator.vue:10
 msgid "Simulator Shortcut Keys"
-msgstr ""
+msgstr "Клавіатурні комбінації в Симуляторі"
 
 #: electron/src/renderer/components/Simulator.vue:115
 msgid "Slow down"
-msgstr ""
+msgstr "Сповільнити"
 
 #: electron/src/renderer/components/Simulator.vue:32
 msgid "Space"
-msgstr ""
+msgstr "Пробіл"
 
 #: electron/src/renderer/components/Simulator.vue:126
 msgid "Speed up"
-msgstr ""
+msgstr "Пришвидшити"
 
 #: electron/src/renderer/components/Simulator.vue:174
 msgid "Speed: %{speed} stitch/sec"
 msgid_plural "Speed: %{speed} stitches/sec"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Швидкість: %{speed} стіжок/сек"
+msgstr[1] "Швидкість: %{speed} стіжків/сек"
+msgstr[2] "Швидкість: %{speed} стіжків/сек"
+msgstr[3] "Швидкість: %{speed} стіжків/сек"
 
 #: electron/src/renderer/components/Simulator.vue:206
 msgid "stops"
-msgstr ""
+msgstr "зупинки"
 
 #: electron/src/renderer/components/InstallPalettes.vue:60
 msgid "Try again"
-msgstr ""
+msgstr "Спробуйте ще раз"
 

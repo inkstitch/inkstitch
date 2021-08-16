@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-07-30 00:54+0000\n"
-"PO-Revision-Date: 2021-07-31 00:54\n"
+"PO-Revision-Date: 2021-08-16 00:53\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -266,19 +266,19 @@ msgstr ""
 
 #: inkstitch.py:61
 msgid "Ink/Stitch cannot read your SVG file. This is often the case when you use a file which has been created with Adobe Illustrator."
-msgstr ""
+msgstr "Ink/Stitch no puede leer su archivo SVG. Este suele ser el caso cuando utiliza un archivo que ha sido creado con Adobe Illustrator."
 
 #: inkstitch.py:64
 msgid "Try to import the file into Inkscape through 'File > Import...' (Ctrl+I)"
-msgstr ""
+msgstr "Intente importar el archivo a Inkscape a través de 'Archivo> Importar...' (Ctrl + I)"
 
 #: inkstitch.py:75
 msgid "Ink/Stitch experienced an unexpected error."
-msgstr ""
+msgstr "Ink/Stitch experimentó un error inesperado."
 
 #: inkstitch.py:76
 msgid "If you'd like to help, please file an issue at https://github.com/inkstitch/inkstitch/issues and include the entire error description below:"
-msgstr ""
+msgstr "Si desea ayudar, presente un problema en https://github.com/inkstitch/inkstitch/issues e incluya la descripción completa del error a continuación:"
 
 #. command attached to an object
 #: lib/commands.py:24
@@ -333,7 +333,7 @@ msgstr "Origen para archivos de bordado exportados"
 #. command that affects entire document
 #: lib/commands.py:55
 msgid "Jump destination for Stop commands (a.k.a. \"Frame Out position\")."
-msgstr ""
+msgstr "Destino de salto para los comandos de parada (también conocido como \"Posición de salida de marco\")."
 
 #: lib/commands.py:213
 #, python-format
@@ -378,7 +378,7 @@ msgstr "Expandir"
 
 #: lib/elements/auto_fill.py:30
 msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use original size instead."
-msgstr ""
+msgstr "No se puede aplicar el parámetro de expansión para este objeto de relleno. Ink/Stitch lo ignorará y utilizará el tamaño original en su lugar."
 
 #: lib/elements/auto_fill.py:35 lib/elements/auto_fill.py:122
 msgid "Inset"
@@ -386,7 +386,7 @@ msgstr "Recuadro"
 
 #: lib/elements/auto_fill.py:36
 msgid "The underlay inset parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use the original size instead."
-msgstr ""
+msgstr "No se puede aplicar el parámetro de inserción de refuerzo para este objeto de relleno. Ink/Stitch lo ignorará y utilizará el tamaño original en su lugar."
 
 #: lib/elements/auto_fill.py:41
 msgid "AutoFill"
@@ -394,15 +394,15 @@ msgstr "AutoRelleno"
 
 #: lib/elements/auto_fill.py:44
 msgid "Automatically routed fill stitching"
-msgstr ""
+msgstr "Bordado de relleno enrutado automáticamente"
 
 #: lib/elements/auto_fill.py:64
 msgid "Running stitch length (traversal between sections)"
-msgstr ""
+msgstr "Ejecución de la longitud de puntada (traversal entre secciones)"
 
 #: lib/elements/auto_fill.py:65
 msgid "Length of stitches around the outline of the fill region used when moving from section to section."
-msgstr ""
+msgstr "Longitud de las puntadas alrededor del contorno de la región de relleno utilizada al pasar de una sección a otra."
 
 #: lib/elements/auto_fill.py:73
 msgid "Underlay"
@@ -491,65 +491,65 @@ msgstr ""
 
 #: lib/elements/clone.py:33 lib/elements/clone.py:44
 msgid "* Run: Edit > Clone > Unlink Clone (Alt+Shift+D)"
-msgstr ""
+msgstr "* Ejecute: Editar > Clonar > Desvincular Clon (Alt+Shift+D)"
 
 #: lib/elements/clone.py:38
 msgid "Clone is not embroiderable"
-msgstr ""
+msgstr "El clon no se puede bordar"
 
 #: lib/elements/clone.py:39
 msgid "There are one ore more clone objects in this document. A clone must be a direct child of an embroiderable element. Ink/Stitch cannot embroider clones of groups or other not embroiderable elements (text or image)."
-msgstr ""
+msgstr "Hay uno o más objetos clon en este documento. Un clon debe ser hijo directo de un elemento bordado. Ink/Stitch no puede bordar clones de grupos u otros elementos no bordables (texto o imagen)."
 
 #: lib/elements/clone.py:42
 msgid "Convert the clone into a real element:"
-msgstr ""
+msgstr "Convertir el clon en un elemento real:"
 
 #: lib/elements/clone.py:43
 msgid "* Select the clone."
-msgstr ""
+msgstr "* Seleccione el clon."
 
 #: lib/elements/clone.py:58
 msgid "Clone"
-msgstr ""
+msgstr "Clon"
 
 #: lib/elements/clone.py:64
 msgid "Custom fill angle"
-msgstr ""
+msgstr "Personalizar ángulo de relleno"
 
 #: lib/elements/clone.py:65
 msgid "This setting will apply a custom fill angle for the clone."
-msgstr ""
+msgstr "Esta configuración aplicará un ángulo de relleno personalizado para el clon."
 
 #: lib/elements/element.py:225
 msgid "Allow lock stitches"
-msgstr ""
+msgstr "Permitir puntadas de remate"
 
 #: lib/elements/element.py:226
 msgid "Tie thread at the beginning and/or end of this object. Manual stitch will not add lock stitches."
-msgstr ""
+msgstr "Ate el hilo al principio y/o al final de este objeto. La puntada manual no agregará puntadas de remate."
 
 #. options to allow lock stitch before and after objects
 #: lib/elements/element.py:230
 msgid "Both"
-msgstr ""
+msgstr "Ambos"
 
 #: lib/elements/element.py:230
 msgid "Before"
-msgstr ""
+msgstr "Antes"
 
 #: lib/elements/element.py:230
 msgid "After"
-msgstr ""
+msgstr "Después"
 
 #: lib/elements/element.py:230
 msgid "Neither"
-msgstr ""
+msgstr "Ninguno"
 
 #: lib/elements/element.py:272
 #, python-format
 msgid "Object %(id)s has an empty 'd' attribute.  Please delete this object from your document."
-msgstr ""
+msgstr "El objeto %(id)s tiene un atributo 'd' vacío. Elimine este objeto de su documento."
 
 #. used when showing an error message to the user such as
 #. "Some Path (path1234): error: satin column: One or more of the rungs doesn't
@@ -560,15 +560,15 @@ msgstr "error:"
 
 #: lib/elements/empty_d_object.py:13
 msgid "Empty D-Attribute"
-msgstr ""
+msgstr "D-Atributo vacío"
 
 #: lib/elements/empty_d_object.py:14
 msgid "There is an invalid path object in the document, the d-attribute is missing."
-msgstr ""
+msgstr "Hay un objeto de ruta no válido en el documento, falta el D-atributo."
 
 #: lib/elements/empty_d_object.py:16
 msgid "* Run Extensions > Ink/Stitch > Troubleshoot > Cleanup Document..."
-msgstr ""
+msgstr "* Ejecutar Extensiones > Ink/Stitch > Solucionar problemas > Limpiar documento..."
 
 #: lib/elements/fill.py:22
 msgid "Unconnected"
@@ -576,131 +576,131 @@ msgstr "Desconectado"
 
 #: lib/elements/fill.py:23
 msgid "Fill: This object is made up of unconnected shapes.  This is not allowed because Ink/Stitch doesn't know what order to stitch them in.  Please break this object up into separate shapes."
-msgstr ""
+msgstr "Relleno: este objeto está formado por formas no conectadas. Esto no está permitido porque Ink/Stitch no sabe en qué orden coserlos. Divida este objeto en formas separadas."
 
 #: lib/elements/fill.py:27 lib/elements/fill.py:35
 msgid "* Extensions > Ink/Stitch > Fill Tools > Break Apart Fill Objects"
-msgstr ""
+msgstr "* Extensiones > Ink/Stitch > Herramientas de relleno > Separar objetos de relleno"
 
 #: lib/elements/fill.py:32
 msgid "Border crosses itself"
-msgstr ""
+msgstr "El borde se cruza a sí mismo"
 
 #: lib/elements/fill.py:33
 msgid "Fill: Shape is not valid.  This can happen if the border crosses over itself."
-msgstr ""
+msgstr "Relleno: la forma no es válida. Esto puede suceder si el borde se cruza sobre sí mismo."
 
 #: lib/elements/fill.py:40
 msgid "Fill"
-msgstr ""
+msgstr "Relleno"
 
 #: lib/elements/fill.py:47
 msgid "Manually routed fill stitching"
-msgstr ""
+msgstr "Costura de relleno enrutada manualmente"
 
 #: lib/elements/fill.py:48
 msgid "AutoFill is the default method for generating fill stitching."
-msgstr ""
+msgstr "AutoRellenar es el método predeterminado para generar costuras de relleno."
 
 #: lib/elements/fill.py:57
 msgid "Angle of lines of stitches"
-msgstr ""
+msgstr "Ángulo de líneas de puntadas"
 
 #: lib/elements/fill.py:58
 msgid "The angle increases in a counter-clockwise direction.  0 is horizontal.  Negative angles are allowed."
-msgstr ""
+msgstr "El ángulo aumenta en sentido antihorario. 0 es horizontal. Se permiten ángulos negativos."
 
 #: lib/elements/fill.py:85
 msgid "Flip fill (start right-to-left)"
-msgstr ""
+msgstr "Voltear relleno (comenzar de derecha a izquierda)"
 
 #: lib/elements/fill.py:86
 msgid "The flip option can help you with routing your stitch path.  When you enable flip, stitching goes from right-to-left instead of left-to-right."
-msgstr ""
+msgstr "La opción de voltear puede ayudarlo a enrutar su ruta de puntada. Cuando habilita el giro, la costura va de derecha a izquierda en lugar de izquierda a derecha."
 
 #: lib/elements/fill.py:95
 msgid "Spacing between rows"
-msgstr ""
+msgstr "Espaciamiento entre filas"
 
 #: lib/elements/fill.py:96
 msgid "Distance between rows of stitches."
-msgstr ""
+msgstr "Distancia entre filas de puntadas."
 
 #: lib/elements/fill.py:109
 msgid "Maximum fill stitch length"
-msgstr ""
+msgstr "Longitud máxima de puntada de relleno"
 
 #: lib/elements/fill.py:110
 msgid "The length of each stitch in a row.  Shorter stitch may be used at the start or end of a row."
-msgstr ""
+msgstr "La longitud de cada puntada en una fila. Se puede usar una puntada más corta al principio o al final de una fila."
 
 #: lib/elements/fill.py:119
 msgid "Stagger rows this many times before repeating"
-msgstr ""
+msgstr "Alterne las filas esto muchas veces antes de repetir"
 
 #: lib/elements/fill.py:120
 msgid "Setting this dictates how many rows apart the stitches will be before they fall in the same column position."
-msgstr ""
+msgstr "Establecer esto dicta cuántas filas de puntadas estarán separadas antes de que caigan en la misma posición de la columna."
 
 #: lib/elements/image.py:13
 msgid "Image"
-msgstr ""
+msgstr "Imagen"
 
 #: lib/elements/image.py:14
 msgid "Ink/Stitch can't work with objects like images."
-msgstr ""
+msgstr "Ink/Stitch no puede funcionar con objetos como imágenes."
 
 #: lib/elements/image.py:16
 msgid "* Convert your image into a path: Path > Trace Bitmap... (Shift+Alt+B) (further steps might be required)"
-msgstr ""
+msgstr "* Convierta su imagen en una ruta: Ruta > Trazar mapa de bits... (Mayús + Alt + B) (es posible que se requieran más pasos)"
 
 #: lib/elements/image.py:18
 msgid "* Alternatively redraw the image with the pen (P) or bezier (B) tool"
-msgstr ""
+msgstr "* Alternativamente, vuelva a dibujar la imagen con la herramienta lápiz (P) o bezier (B)"
 
 #: lib/elements/polyline.py:17
 msgid "Polyline Object"
-msgstr ""
+msgstr "Objeto Polilínea"
 
 #: lib/elements/polyline.py:18
 msgid "This object is an SVG PolyLine.  Ink/Stitch can work with this shape, but you can't edit it in Inkscape.  Convert it to a manual stitch path to allow editing."
-msgstr ""
+msgstr "Este objeto es una polilínea SVG. Ink/Stitch puede funcionar con esta forma, pero no puede editarla en Inkscape. Conviértalo en una ruta de puntada manual para permitir la edición."
 
 #: lib/elements/polyline.py:22 lib/elements/satin_column.py:25
 msgid "* Select this object."
-msgstr ""
+msgstr "* Seleccione este objeto."
 
 #: lib/elements/polyline.py:23
 msgid "* Do Path > Object to Path."
-msgstr ""
+msgstr "* Hacer Ruta> Objeto a Ruta."
 
 #: lib/elements/polyline.py:24
 msgid "* Optional: Run the Params extension and check the \"manual stitch\" box."
-msgstr ""
+msgstr "* Opcional: Ejecute la extensión Params y marque la casilla \"puntada manual\"."
 
 #: lib/elements/polyline.py:44
 msgid "Manual stitch along path"
-msgstr ""
+msgstr "Puntada Manual largo de la ruta"
 
 #: lib/elements/satin_column.py:22
 msgid "Satin column has fill"
-msgstr ""
+msgstr "La columna satinada tiene relleno"
 
 #: lib/elements/satin_column.py:23
 msgid "Satin column: Object has a fill (but should not)"
-msgstr ""
+msgstr "Columna satinada: el objeto tiene un relleno (pero no debería)"
 
 #: lib/elements/satin_column.py:26
 msgid "* Open the Fill and Stroke panel"
-msgstr ""
+msgstr "* Abra el panel de Relleno y Trazo"
 
 #: lib/elements/satin_column.py:27
 msgid "* Open the Fill tab"
-msgstr ""
+msgstr "* Abra la pestaña Relleno"
 
 #: lib/elements/satin_column.py:28
 msgid "* Disable the Fill"
-msgstr ""
+msgstr "* Deshabilitar el Relleno"
 
 #: lib/elements/satin_column.py:29
 msgid "* Alternative: open Params and switch this path to Stroke to disable Satin Column mode"
@@ -850,7 +850,7 @@ msgstr ""
 
 #: lib/elements/stroke.py:20
 msgid "Stroke"
-msgstr ""
+msgstr "Trazo"
 
 #: lib/elements/stroke.py:23
 msgid "Running stitch along paths"
@@ -899,7 +899,7 @@ msgstr ""
 
 #: lib/elements/text.py:13 lib/extensions/lettering.py:75
 msgid "Text"
-msgstr ""
+msgstr "Texto"
 
 #: lib/elements/text.py:14
 msgid "Ink/Stitch cannot work with objects like text."
@@ -915,139 +915,140 @@ msgstr ""
 
 #: lib/extensions/auto_satin.py:35
 msgid "Please ensure that at most one start and end command is attached to the selected satin columns."
-msgstr ""
+msgstr "Asegúrese de que se adjunta como máximo un comando de inicio y fin a las columnas satinadas seleccionadas."
 
 #. auto-route satin columns extension
 #: lib/extensions/auto_satin.py:49
 msgid "Please select one or more satin columns."
-msgstr ""
+msgstr "Seleccione una o más columnas satinadas."
 
 #: lib/extensions/auto_satin.py:54
 msgid "Please select at least one satin column."
-msgstr ""
+msgstr "Seleccione al menos una columna satinada."
 
 #. This was previously: "No embroiderable paths selected."
 #: lib/extensions/base.py:123
 msgid "Ink/Stitch doesn't know how to work with any of the objects you've selected."
-msgstr ""
+msgstr "Ink/Stitch no sabe cómo trabajar con ninguno de los objetos que ha seleccionado."
 
 #: lib/extensions/base.py:125
 msgid "There are no objects in the entire document that Ink/Stitch knows how to work with."
-msgstr ""
+msgstr "No hay objetos en todo el documento con los que Ink/Stitch sepa cómo trabajar."
 
 #: lib/extensions/base.py:127
 msgid "Tip: Run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot Objects"
-msgstr ""
+msgstr "Consejo: Ejecute Extensiones > Ink/Stitch > Solucionar problemas > Solucionar problemas de Objetos"
 
 #: lib/extensions/break_apart.py:31
 msgid "Please select one or more fill areas to break apart."
-msgstr ""
+msgstr "Seleccione una o más áreas de relleno para separarlas."
 
 #: lib/extensions/cleanup.py:37 lib/extensions/cleanup.py:49
 #, python-format
 msgid "%s elements removed"
-msgstr ""
+msgstr "%s elementos eliminados"
 
 #: lib/extensions/convert_to_satin.py:35
 msgid "Please select at least one line to convert to a satin column."
-msgstr ""
+msgstr "Seleccione al menos una línea para convertirla en una columna satinada."
 
 #. : Convert To Satin extension, user selected one or more objects that were
 #. not lines.
 #: lib/extensions/convert_to_satin.py:40
 msgid "Only simple lines may be converted to satin columns."
-msgstr ""
+msgstr "Sólo las líneas simples se pueden convertir en columnas satinadas."
 
 #: lib/extensions/convert_to_satin.py:134
 msgid "Ink/Stitch cannot convert your stroke into a satin column. Please break up your path and try again."
-msgstr ""
+msgstr "Ink/Stitch no puede convertir su trazo en una columna satinada. Interrumpa su ruta e inténtelo de nuevo."
 
 #. : Convert To Satin extension, user selected one or more objects that were
 #. not lines.
 #: lib/extensions/convert_to_stroke.py:25
 #: lib/extensions/convert_to_stroke.py:30
 msgid "Please select at least one satin column to convert to a running stitch."
-msgstr ""
+msgstr "Seleccione al menos una columna satinada para convertir en una puntada corriente."
 
 #: lib/extensions/cut_satin.py:20
 msgid "Please select one or more satin columns to cut."
-msgstr ""
+msgstr "Seleccione una o más columnas satinadas para cortar."
 
 #. will have the satin's id prepended, like this:
 #. path12345: error: this satin column does not ...
 #: lib/extensions/cut_satin.py:30
 msgid "this satin column does not have a \"satin column cut point\" command attached to it. Please use the \"Attach commands\" extension and attach the \"Satin Column cut point\" command first."
-msgstr ""
+msgstr "esta columna satinada no tiene un comando de \"punto de corte de columna satinada\" adjunto. Utilice la extensión \"Adjuntar comandos\" y adjunte primero el comando \"Punto de corte de columna satinada\"."
 
 #: lib/extensions/duplicate_params.py:19
 msgid "This function copies Ink/Stitch parameters from the first selected element to the rest of the selection. Please select at least two elements."
-msgstr ""
+msgstr "Esta función copia los parámetros de Ink/Stitch del primer elemento seleccionado al resto de la selección. Seleccione al menos dos elementos."
 
 #: lib/extensions/flip.py:28
 msgid "Please select one or more satin columns to flip."
-msgstr ""
+msgstr "Seleccione una o más columnas satinadas para voltear."
 
 #: lib/extensions/import_threadlist.py:33
 msgid "File not found."
-msgstr ""
+msgstr "Archivo no encontrado."
 
 #: lib/extensions/import_threadlist.py:36
 msgid "The filepath specified is not a file but a dictionary.\n"
 "Please choose a threadlist file to import."
-msgstr ""
+msgstr "La ruta de archivo especificada no es un archivo, sino un diccionario.\n"
+"Elija un archivo de lista de subprocesos para importar."
 
 #: lib/extensions/import_threadlist.py:46
 msgid "Couldn't find any matching colors in the file."
-msgstr ""
+msgstr "No se pudo encontrar ningún color coincidente en el archivo."
 
 #: lib/extensions/import_threadlist.py:48
 msgid "Please try to import as \"other threadlist\" and specify a color palette below."
-msgstr ""
+msgstr "Intente importar como \"otra lista de subprocesos\" y especifique una paleta de colores a continuación."
 
 #: lib/extensions/import_threadlist.py:50
 msgid "Please chose an other color palette for your design."
-msgstr ""
+msgstr "Elija otra paleta de colores para su diseño."
 
 #: lib/extensions/input.py:71
 #, python-format
 msgid "File does not exist and cannot be opened. Please correct the file path and try again.\\r%s"
-msgstr ""
+msgstr "El archivo no existe y no se puede abrir. Corrija la ruta del archivo y vuelva a intentarlo.\\r%s"
 
 #: lib/extensions/install_custom_palette.py:24
 msgid "File does not exist."
-msgstr ""
+msgstr "El archivo no existe."
 
 #: lib/extensions/install_custom_palette.py:28
 msgid "Wrong file type. Ink/Stitch only accepts gpl color palettes."
-msgstr ""
+msgstr "Tipo de archivo incorrecto. Ink/Stitch sólo acepta paletas de colores gpl."
 
 #: lib/extensions/install_custom_palette.py:36
 msgid "Ink/Stitch cannot find your palette folder automatically. Please install your palette manually."
-msgstr ""
+msgstr "Ink/Stitch no puede encontrar su carpeta de paleta automáticamente. Instale su paleta manualmente."
 
 #: lib/extensions/layer_commands.py:20
 msgid "Please choose one or more commands to add."
-msgstr ""
+msgstr "Elija uno o más comandos para agregar."
 
 #: lib/extensions/lettering.py:41 lib/extensions/lettering.py:418
 msgid "Ink/Stitch Lettering"
-msgstr ""
+msgstr "Letras de Ink/Stitch"
 
 #: lib/extensions/lettering.py:51
 msgid "Font"
-msgstr ""
+msgstr "Fuente"
 
 #: lib/extensions/lettering.py:63
 msgid "Options"
-msgstr ""
+msgstr "Opciones"
 
 #: lib/extensions/lettering.py:68
 msgid "Stitch lines of text back and forth"
-msgstr ""
+msgstr "Unir líneas de texto de un lado a otro"
 
 #: lib/extensions/lettering.py:71
 msgid "Add trims"
-msgstr ""
+msgstr "Agregar cortes"
 
 #: lib/extensions/lettering.py:80 lib/extensions/params.py:359
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
@@ -1056,19 +1057,19 @@ msgstr ""
 #: electron/src/renderer/components/InstallPalettes.vue:25
 #: electron/src/renderer/components/InstallPalettes.vue:63
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 #: lib/extensions/lettering.py:84 lib/extensions/params.py:366
 msgid "Apply and Quit"
-msgstr ""
+msgstr "Aplicar y Salir"
 
 #: lib/extensions/lettering.py:151
 msgid "Unable to find any fonts!  Please try reinstalling Ink/Stitch."
-msgstr ""
+msgstr "¡No se puede encontrar ninguna fuente! Intente reinstalar Ink/Stitch."
 
 #: lib/extensions/lettering.py:222
 msgid "This font has no available font variant. Please update or remove the font."
-msgstr ""
+msgstr "Esta fuente no tiene ninguna variante de fuente disponible. Actualice o elimine la fuente."
 
 #. The user has chosen to scale the text by some percentage
 #. (50%, 200%, etc).  If you need to use the percentage symbol,
@@ -1076,70 +1077,70 @@ msgstr ""
 #: lib/extensions/lettering.py:264
 #, python-format
 msgid "Text scale %s%%"
-msgstr ""
+msgstr "Escalar Texto %s%%"
 
 #: lib/extensions/lettering.py:408
 msgid "Please select only one block of text."
-msgstr ""
+msgstr "Por favor seleccione sólo un bloque de texto."
 
 #: lib/extensions/lettering.py:411
 msgid "You've selected objects that were not created by the Lettering extension.  Please clear your selection or select different objects before running Lettering again."
-msgstr ""
+msgstr "Ha seleccionado objetos que no fueron creados por la extensión Lettering. Borre su selección o seleccione diferentes objetos antes de ejecutar Lettering nuevamente."
 
 #: lib/extensions/lettering_custom_font_dir.py:27
 msgid "Please specify the directory of your custom fonts."
-msgstr ""
+msgstr "Especifique el directorio de sus fuentes personalizadas."
 
 #: lib/extensions/lettering_generate_json.py:41
 msgid "Please specify a font file."
-msgstr ""
+msgstr "Especifique un archivo de fuente."
 
 #: lib/extensions/object_commands.py:21
 msgid "Please select one or more objects to which to attach commands."
-msgstr ""
+msgstr "Seleccione uno o más objetos a los que adjuntar comandos."
 
 #: lib/extensions/object_commands.py:29
 msgid "Please choose one or more commands to attach."
-msgstr ""
+msgstr "Elija uno o más comandos para adjuntar."
 
 #: lib/extensions/params.py:208
 msgid "These settings will be applied to 1 object."
-msgstr ""
+msgstr "Esta configuración se aplicará a 1 objeto."
 
 #: lib/extensions/params.py:210
 #, python-format
 msgid "These settings will be applied to %d objects."
-msgstr ""
+msgstr "Esta configuración se aplicará a %d objetos."
 
 #: lib/extensions/params.py:213
 msgid "Some settings had different values across objects.  Select a value from the dropdown or enter a new one."
-msgstr ""
+msgstr "Algunas configuraciones tenían valores diferentes en los objetos. Seleccione un valor del menú desplegable o ingrese uno nuevo."
 
 #: lib/extensions/params.py:217
 #, python-format
 msgid "Disabling this tab will disable the following %d tabs."
-msgstr ""
+msgstr "La desactivación de esta pestaña desactivará las siguientes %d pestañas."
 
 #: lib/extensions/params.py:219
 msgid "Disabling this tab will disable the following tab."
-msgstr ""
+msgstr "La desactivación de esta pestaña desactivará la siguiente pestaña."
 
 #: lib/extensions/params.py:222
 #, python-format
 msgid "Enabling this tab will disable %s and vice-versa."
-msgstr ""
+msgstr "Habilitar esta pestaña deshabilitará %s y viceversa."
 
 #: lib/extensions/params.py:252
 msgid "Inkscape objects"
-msgstr ""
+msgstr "Objetos de Inkscape"
 
 #: lib/extensions/params.py:313
 msgid "Click to force this parameter to be saved when you click \"Apply and Quit\""
-msgstr ""
+msgstr "Haga clic para forzar que se guarde este parámetro cuando haga clic en \"Aplicar y salir\""
 
 #: lib/extensions/params.py:321
 msgid "This parameter will be saved when you click \"Apply and Quit\""
-msgstr ""
+msgstr "Este parámetro se guardará cuando haga clic en \"Aplicar y salir\""
 
 #: lib/extensions/params.py:342
 msgid "Embroidery Params"
@@ -1283,7 +1284,7 @@ msgstr ""
 
 #: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:143
 msgid "TRIM"
-msgstr ""
+msgstr "CORTE"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command label at bottom of simulator window
@@ -1353,111 +1354,112 @@ msgstr ""
 
 #: lib/gui/simulator.py:74
 msgid "Quit (Q)"
-msgstr ""
+msgstr "Salir (Q)"
 
 #: lib/gui/simulator.py:186
 #, python-format
 msgid "Speed: %d stitches/sec"
-msgstr ""
+msgstr "Velocidad: %d puntadas/seg"
 
 #: lib/gui/simulator.py:242 lib/gui/simulator.py:270
 msgid "Start"
-msgstr ""
+msgstr "Inicio"
 
 #: lib/gui/simulator.py:816 lib/gui/simulator.py:826
 msgid "Preview"
-msgstr ""
+msgstr "Prevista"
 
 #: lib/gui/simulator.py:857
 msgid "Embroidery Simulation"
-msgstr ""
+msgstr "Simulación de bordado"
 
 #: lib/gui/warnings.py:21
 msgid "Cannot load simulator.\n"
 "Close Params to get full error message."
-msgstr ""
+msgstr "No se puede cargar el simulador.\n"
+"Cierre Params para obtener el mensaje de error completo."
 
 #. If you translate this string, that will tell Ink/Stitch to
 #. generate menu items for this language in Inkscape's "Extensions"
 #. menu.
 #: lib/inx/utils.py:86
 msgid "Generate INX files"
-msgstr ""
+msgstr "Generar archivos INX"
 
 #: lib/lettering/font.py:158
 #, python-format
 msgid "The font '%s' has no variants."
-msgstr ""
+msgstr "La fuente '%s' no tiene variantes."
 
 #. low-level file error.  %(error)s is (hopefully?) translated by
 #. the user's system automatically.
 #: lib/output.py:101
 #, python-format
 msgid "Error writing to %(path)s: %(error)s"
-msgstr ""
+msgstr "Error escribiendo a %(path)s: %(error)s"
 
 #: lib/stitches/auto_satin.py:659
 msgid "Auto-Satin"
-msgstr ""
+msgstr "Auto-Satinado"
 
 #. Label for a satin column created by Auto-Route Satin Columns and Lettering
 #. extensions
 #: lib/stitches/auto_satin.py:706
 #, python-format
 msgid "AutoSatin %d"
-msgstr ""
+msgstr "AutoSatinado %d"
 
 #. Label for running stitch (underpathing) created by Auto-Route Satin Columns
 #. amd Lettering extensions
 #: lib/stitches/auto_satin.py:709
 #, python-format
 msgid "AutoSatin Running Stitch %d"
-msgstr ""
+msgstr "AutoSatinar Puntada corriente %d"
 
 #: lib/svg/rendering.py:222
 msgid "Stitch Plan"
-msgstr ""
+msgstr "Plan de puntada"
 
 #: lib/svg/units.py:18
 #, python-format
 msgid "parseLengthWithUnits: unknown unit %s"
-msgstr ""
+msgstr "parseLengthWithUnits: unidad desconocida %s"
 
 #: lib/utils/version.py:19
 #, python-format
 msgid "Ink/Stitch Version: %s"
-msgstr ""
+msgstr "Ink/Stitch Versión: %s"
 
 #: lib/utils/version.py:21
 msgid "Ink/Stitch Version: unknown"
-msgstr ""
+msgstr "Ink/Stitch Versión: desconocida"
 
 #: print/templates/color_swatch.html:8 print/templates/color_swatch.html:40
 #: print/templates/operator_detailedview.html:9
 msgid "Color"
-msgstr ""
+msgstr "Color"
 
 #: print/templates/color_swatch.html:11 print/templates/color_swatch.html:41
 msgid "rgb"
-msgstr ""
+msgstr "rgb"
 
 #: print/templates/color_swatch.html:15 print/templates/color_swatch.html:42
 msgid "thread"
-msgstr ""
+msgstr "hilo"
 
 #: print/templates/color_swatch.html:19 print/templates/color_swatch.html:43
 #: print/templates/operator_detailedview.html:63
 msgid "# stitches"
-msgstr ""
+msgstr "# puntadas"
 
 #: print/templates/color_swatch.html:23 print/templates/color_swatch.html:44
 msgid "# trims"
-msgstr ""
+msgstr "# cortes"
 
 #: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
 #: print/templates/operator_detailedview.html:68
 msgid "stop after?"
-msgstr ""
+msgstr "¿parar después?"
 
 #: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
 #: print/templates/operator_detailedview.html:68
@@ -1655,153 +1657,153 @@ msgstr "Cerrar"
 
 #: print/templates/ui.html:10
 msgid "⚠ lost connection to Ink/Stitch"
-msgstr ""
+msgstr "⚠ conexión perdida a Ink/Stitch"
 
 #: print/templates/ui.html:19 print/templates/ui.html:29
 msgid "Page Setup"
-msgstr ""
+msgstr "Ajuste de Página"
 
 #: print/templates/ui.html:20
 msgid "Branding"
-msgstr ""
+msgstr "Marca"
 
 #: print/templates/ui.html:21 print/templates/ui.html:112
 msgid "Estimated Time"
-msgstr ""
+msgstr "Tiempo estimado"
 
 #: print/templates/ui.html:22 print/templates/ui.html:146
 msgid "Design"
-msgstr ""
+msgstr "Diseño"
 
 #: print/templates/ui.html:31
 msgid "Printing Size"
-msgstr ""
+msgstr "Tamaño de impresión"
 
 #: print/templates/ui.html:39
 msgid "Print Layouts"
-msgstr ""
+msgstr "Diseños de impresión"
 
 #: print/templates/ui.html:42 print/templates/ui.html:136
 msgid "Client Overview"
-msgstr ""
+msgstr "Descripción general del cliente"
 
 #: print/templates/ui.html:46 print/templates/ui.html:137
 msgid "Client Detailed View"
-msgstr ""
+msgstr "Vista detallada del Cliente"
 
 #: print/templates/ui.html:50 print/templates/ui.html:138
 msgid "Operator Overview"
-msgstr ""
+msgstr "Descripción general del Operador"
 
 #: print/templates/ui.html:54 print/templates/ui.html:139
 msgid "Operator Detailed View"
-msgstr ""
+msgstr "Vista detallada del Operador"
 
 #: print/templates/ui.html:56
 msgid "Thumbnail size"
-msgstr ""
+msgstr "Tamaño de miniatura"
 
 #: print/templates/ui.html:62
 msgid "Custom information sheet"
-msgstr ""
+msgstr "Hoja de información personalizada"
 
 #: print/templates/ui.html:65 print/templates/ui.html:108
 msgid "Includes these Page Setup, estimated time settings and also the icon."
-msgstr ""
+msgstr "Incluye esta configuración de página, la configuración de tiempo estimado y también el ícono."
 
 #: print/templates/ui.html:65 print/templates/ui.html:108
 #: print/templates/ui.html:142
 msgid "Save as defaults"
-msgstr ""
+msgstr "Guardar como predeterminados"
 
 #: print/templates/ui.html:70
 msgid "Logo"
-msgstr ""
+msgstr "Logo"
 
 #: print/templates/ui.html:80
 msgid "Footer: Operator contact information"
-msgstr ""
+msgstr "Pie de página: información de contacto del operador"
 
 #: print/templates/ui.html:114
 msgid "Machine Settings"
-msgstr ""
+msgstr "Ajustes de Máquina"
 
 #: print/templates/ui.html:116
 msgid "Average Machine Speed"
-msgstr ""
+msgstr "Velocidad media de la máquina"
 
 #: print/templates/ui.html:117
 msgid "stitches per minute "
-msgstr ""
+msgstr "puntadas por minuto "
 
 #: print/templates/ui.html:121
 msgid "Time Factors"
-msgstr ""
+msgstr "Factores de tiempo"
 
 #: print/templates/ui.html:124
 msgid "Includes average time for preparing the machine, thread breaks and/or bobbin changes, etc."
-msgstr ""
+msgstr "Incluye el tiempo medio de preparación de la máquina, roturas de hilo y/o cambios de bobina, etc."
 
 #: print/templates/ui.html:124
 msgid "seconds to add to total time*"
-msgstr ""
+msgstr "segundos para agregar al tiempo total*"
 
 #: print/templates/ui.html:128
 msgid "This will be added to the total time."
-msgstr ""
+msgstr "Esto se sumará al tiempo total."
 
 #: print/templates/ui.html:128
 msgid "seconds needed for a color change*"
-msgstr ""
+msgstr "segundos necesarios para un cambio de color*"
 
 #: print/templates/ui.html:131
 msgid "seconds needed for trim"
-msgstr ""
+msgstr "segundos necesarios para recortar"
 
 #: print/templates/ui.html:134
 msgid "Display Time On"
-msgstr ""
+msgstr "Mostrar hora de activación"
 
 #: print/templates/ui.html:142
 msgid "Includes page setup, estimated time and also the branding."
-msgstr ""
+msgstr "Incluye la configuración de la página, el tiempo estimado y también la marca."
 
 #: print/templates/ui.html:147
 msgid "Thread Palette"
-msgstr ""
+msgstr "Paleta de hilos"
 
 #: print/templates/ui.html:150
 msgid "None"
-msgstr ""
+msgstr "Ninguno"
 
 #: print/templates/ui.html:166
 msgid "Changing the thread palette will cause thread names and catalog numbers to be recalculated based on the new palette.  Any changes you have made to color or thread names will be lost.  Are you sure?"
-msgstr ""
+msgstr "Cambiar la paleta de hilos hará que los nombres de los hilos y los números de catálogo se vuelvan a calcular en función de la nueva paleta. Se perderán todos los cambios que haya realizado en el color o en los nombres de los hilos. ¿Está seguro?"
 
 #: print/templates/ui.html:169
 msgid "Yes"
-msgstr ""
+msgstr "Si"
 
 #: print/templates/ui.html:170 templates/lettering_generate_json.xml:37
 msgid "No"
-msgstr ""
+msgstr "No"
 
 #: print/templates/ui_svg_action_buttons.html:1
 msgid "Scale"
-msgstr ""
+msgstr "Escala"
 
 #: print/templates/ui_svg_action_buttons.html:3
 msgid "Fit"
-msgstr ""
+msgstr "Ajustar"
 
 #: print/templates/ui_svg_action_buttons.html:5
 msgid "Apply to all"
-msgstr ""
+msgstr "Aplicar a todo"
 
 #: print/templates/ui_svg_action_buttons.html:9
 #: print/templates/ui_svg_action_buttons.html:12
 msgid "Realistic"
-msgstr ""
+msgstr "Realista"
 
 #. description for pyembroidery file format: pec
 #. description for pyembroidery file format: pes
@@ -1811,18 +1813,18 @@ msgstr ""
 #: pyembroidery-format-descriptions.py:56
 #: pyembroidery-format-descriptions.py:58
 msgid "Brother Embroidery Format"
-msgstr ""
+msgstr "Brother Embroidery Format"
 
 #. description for pyembroidery file format: exp
 #: pyembroidery-format-descriptions.py:6
 msgid "Melco Embroidery Format"
-msgstr ""
+msgstr "Melco Embroidery Format"
 
 #. description for pyembroidery file format: dst
 #. description for pyembroidery file format: tbf
 #: pyembroidery-format-descriptions.py:8 pyembroidery-format-descriptions.py:48
 msgid "Tajima Embroidery Format"
-msgstr ""
+msgstr "Tajima Embroidery Format"
 
 #. description for pyembroidery file format: jef
 #. description for pyembroidery file format: sew
@@ -1831,7 +1833,7 @@ msgstr ""
 #: pyembroidery-format-descriptions.py:20
 #: pyembroidery-format-descriptions.py:74
 msgid "Janome Embroidery Format"
-msgstr ""
+msgstr "Janome Embroidery Format"
 
 #. description for pyembroidery file format: vp3
 #. description for pyembroidery file format: ksm
@@ -1848,44 +1850,44 @@ msgstr ""
 #: pyembroidery-format-descriptions.py:70
 #: pyembroidery-format-descriptions.py:72
 msgid "Pfaff Embroidery Format"
-msgstr ""
+msgstr "Pfaff Embroidery Format"
 
 #. description for pyembroidery file format: svg
 #: pyembroidery-format-descriptions.py:14
 msgid "Scalable Vector Graphics"
-msgstr ""
+msgstr "Scalable Vector Graphics"
 
 #. description for pyembroidery file format: csv
 #: pyembroidery-format-descriptions.py:16
 msgid "Comma-separated values"
-msgstr ""
+msgstr "CSV Valores Separados por Comas"
 
 #. description for pyembroidery file format: xxx
 #: pyembroidery-format-descriptions.py:18
 msgid "Singer Embroidery Format"
-msgstr ""
+msgstr "Singer Embroidery Format"
 
 #. description for pyembroidery file format: u01
 #: pyembroidery-format-descriptions.py:22
 msgid "Barudan Embroidery Format"
-msgstr ""
+msgstr "Barudan Embroidery Format"
 
 #. description for pyembroidery file format: shv
 #: pyembroidery-format-descriptions.py:24
 msgid "Husqvarna Viking Embroidery Format"
-msgstr ""
+msgstr "Husqvarna Viking Embroidery Format"
 
 #. description for pyembroidery file format: 10o
 #. description for pyembroidery file format: 100
 #: pyembroidery-format-descriptions.py:26
 #: pyembroidery-format-descriptions.py:28
 msgid "Toyota Embroidery Format"
-msgstr ""
+msgstr "Toyota Embroidery Format"
 
 #. description for pyembroidery file format: bro
 #: pyembroidery-format-descriptions.py:30
 msgid "Bits & Volts Embroidery Format"
-msgstr ""
+msgstr "Bits & Volts Embroidery Format"
 
 #. description for pyembroidery file format: dat
 #: pyembroidery-format-descriptions.py:32
@@ -1969,11 +1971,11 @@ msgstr "Formato G-code"
 
 #: templates/about.xml:3 templates/about.xml:6
 msgid "About"
-msgstr ""
+msgstr "Acerca de"
 
 #: templates/about.xml:10
 msgid "An open-source machine embroidery design platform based on Inkscape."
-msgstr ""
+msgstr "Una plataforma de diseño de bordado a máquina de código abierto basada en Inkscape."
 
 #: templates/about.xml:15
 msgid "License"
@@ -1985,7 +1987,7 @@ msgstr ""
 
 #: templates/auto_satin.xml:5
 msgid "Trim jump stitches"
-msgstr ""
+msgstr "Recortar puntadas de salto"
 
 #: templates/auto_satin.xml:6
 msgid "Preserve order of satin columns"
@@ -2191,51 +2193,51 @@ msgstr ""
 
 #: templates/lettering_generate_json.xml:3
 msgid "Generate JSON"
-msgstr ""
+msgstr "Generar JSON"
 
 #: templates/lettering_generate_json.xml:15
 msgid "Generates font.json which can be used by the lettering tool."
-msgstr ""
+msgstr "Genera font.json que puede ser utilizado por la herramienta de letras."
 
 #: templates/lettering_generate_json.xml:17
 msgid "The generated file can be viewed and updated with a standard text editor tool."
-msgstr ""
+msgstr "El archivo generado se puede ver y actualizar con una herramienta de edición de texto estándar."
 
 #: templates/lettering_generate_json.xml:21
 msgid "SVG Font File"
-msgstr ""
+msgstr "Archivo Fuente SVG"
 
 #: templates/lettering_generate_json.xml:25
 msgid "Name"
-msgstr ""
+msgstr "Nombre"
 
 #: templates/lettering_generate_json.xml:32
 msgid "Autoroute Satin"
-msgstr ""
+msgstr "Autoruta Satinado"
 
 #: templates/lettering_generate_json.xml:33
 msgid "Disable if you defined manual routing in your font."
-msgstr ""
+msgstr "Desactive si definió el enrutamiento manual en su fuente."
 
 #: templates/lettering_generate_json.xml:34
 msgid "Reversible"
-msgstr ""
+msgstr "Reversible"
 
 #: templates/lettering_generate_json.xml:35
 msgid "If disabled back and forth stitching will not be possile for this font."
-msgstr ""
+msgstr "Si está desactivado, la costura de ida y vuelta no será posible para esta fuente."
 
 #: templates/lettering_generate_json.xml:36
 msgid "Force letter case"
-msgstr ""
+msgstr "Forzar mayúsculas y minúsculas"
 
 #: templates/lettering_generate_json.xml:38
 msgid "Upper"
-msgstr ""
+msgstr "Mayúsculas"
 
 #: templates/lettering_generate_json.xml:39
 msgid "Lower"
-msgstr ""
+msgstr "Minúsculas"
 
 #: templates/lettering_generate_json.xml:43
 msgid "Min Scale"
@@ -2371,7 +2373,7 @@ msgstr ""
 
 #: templates/output_params_txt.xml:26
 msgid "laser mode"
-msgstr ""
+msgstr "laser mode"
 
 #: templates/output_params_txt.xml:27
 msgid "Laser mode (generate g-code for grbl laser mode)"
@@ -2556,7 +2558,7 @@ msgstr ""
 
 #: electron/src/renderer/components/InstallPalettes.vue:22
 msgid "Install"
-msgstr ""
+msgstr "Instalar"
 
 #: electron/src/renderer/components/InstallPalettes.vue:4
 msgid "Install Palettes"

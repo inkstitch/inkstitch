@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-07-30 00:54+0000\n"
-"PO-Revision-Date: 2021-07-31 00:53\n"
+"PO-Revision-Date: 2021-08-16 00:53\n"
 "Last-Translator: \n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -940,7 +940,7 @@ msgstr "インクステッチが操作可能なオブジェクトがこのドキ
 
 #: lib/extensions/base.py:127
 msgid "Tip: Run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot Objects"
-msgstr ""
+msgstr "ヒント: 拡張機能 > インクステッチ > トラブルシューティング > オブジェクトのトラブルシューティングを実行"
 
 #: lib/extensions/break_apart.py:31
 msgid "Please select one or more fill areas to break apart."
@@ -970,7 +970,7 @@ msgstr "インク/ステッチでは、ストロークをサテンの列に変�
 #: lib/extensions/convert_to_stroke.py:25
 #: lib/extensions/convert_to_stroke.py:30
 msgid "Please select at least one satin column to convert to a running stitch."
-msgstr ""
+msgstr "ランニングステッチに変換するサテンの列を1つ以上選択してください"
 
 #: lib/extensions/cut_satin.py:20
 msgid "Please select one or more satin columns to cut."
@@ -1019,15 +1019,15 @@ msgstr "ファイルが存在しないため開けません。ファイルパス
 
 #: lib/extensions/install_custom_palette.py:24
 msgid "File does not exist."
-msgstr ""
+msgstr "ファイルが存在しません"
 
 #: lib/extensions/install_custom_palette.py:28
 msgid "Wrong file type. Ink/Stitch only accepts gpl color palettes."
-msgstr ""
+msgstr "ファイルタイプが違います。インクステッチはgplカラーパレットのみ対応しています。"
 
 #: lib/extensions/install_custom_palette.py:36
 msgid "Ink/Stitch cannot find your palette folder automatically. Please install your palette manually."
-msgstr ""
+msgstr "インクステッチはパレットフォルダを自動で見つける事ができません。手動でパレットをインストールしてください。"
 
 #: lib/extensions/layer_commands.py:20
 msgid "Please choose one or more commands to add."
@@ -1201,7 +1201,7 @@ msgstr "オブジェクトタイプの警告"
 
 #: lib/extensions/troubleshoot.py:161
 msgid "These objects may not work properly with Ink/Stitch. Follow the instructions to correct unwanted behaviour."
-msgstr ""
+msgstr "このオブジェクトはインクステッチで正しく動作しない場合があります。指示にしたがって動作を修正してください。"
 
 #: lib/extensions/troubleshoot.py:177
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
@@ -1434,7 +1434,7 @@ msgstr "インク/ステッチバージョン：％s"
 
 #: lib/utils/version.py:21
 msgid "Ink/Stitch Version: unknown"
-msgstr ""
+msgstr "インクステッチバージョン：不明"
 
 #: print/templates/color_swatch.html:8 print/templates/color_swatch.html:40
 #: print/templates/operator_detailedview.html:9
@@ -2047,15 +2047,15 @@ msgstr "ラインをサテンに変換"
 
 #: templates/convert_to_stroke.xml:3
 msgid "Convert Satin to Stroke"
-msgstr ""
+msgstr "サテンをストロークに変換"
 
 #: templates/convert_to_stroke.xml:6
 msgid "Converts a satin column into a running stitch."
-msgstr ""
+msgstr "サテンコラムをランニングステッチに変換"
 
 #: templates/convert_to_stroke.xml:8
 msgid "Do not delete original satin column."
-msgstr ""
+msgstr "オリジナルのサテン列は削除しないでください。"
 
 #: templates/cut_satin.xml:3
 msgid "Cut Satin Column"
@@ -2152,15 +2152,15 @@ msgstr "Inkscapeのスレッドカラーパレットをインストールする"
 
 #: templates/install_custom_palette.xml:3
 msgid "Install custom palette"
-msgstr ""
+msgstr "カスタムパレットの設置"
 
 #: templates/install_custom_palette.xml:6
 msgid "Choose a .gpl color palette file to install into Inkscape."
-msgstr ""
+msgstr "Inkscapeにインストールする.gplカラーパレットファイルを選択します。"
 
 #: templates/install_custom_palette.xml:7
 msgid "Restart Inkscape to use."
-msgstr ""
+msgstr "Inkscapeを再起動してご利用ください。"
 
 #: templates/layer_commands.xml:3
 msgid "Add Layer Commands"
