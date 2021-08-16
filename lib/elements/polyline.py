@@ -6,11 +6,12 @@
 from inkex import Path
 from shapely import geometry as shgeo
 
+from .element import EmbroideryElement, param
+from .validation import ValidationWarning
 from ..i18n import _
+from ..stitch_plan import StitchGroup
 from ..utils import cache
 from ..utils.geometry import Point
-from .element import EmbroideryElement, Patch, param
-from .validation import ValidationWarning
 
 
 class PolylineWarning(ValidationWarning):
@@ -100,8 +101,8 @@ class Polyline(EmbroideryElement):
     def validation_warnings(self):
         yield PolylineWarning(self.points[0])
 
-    def to_patches(self, last_patch):
-        patch = Patch(color=self.color)
+    def to_stitch_groups(self, last_patch):
+        patch = StitchGroup(color=self.color)
 
         for stitch in self.stitches:
             patch.add_stitch(Point(*stitch))

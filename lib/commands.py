@@ -44,7 +44,6 @@ COMMANDS = {
     # L10N command attached to an object
     "satin_cut_point": N_("Satin cut point (use with Cut Satin Column)"),
 
-
     # L10N command that affects a layer
     "ignore_layer": N_("Ignore layer (do not stitch any objects in this layer)"),
 

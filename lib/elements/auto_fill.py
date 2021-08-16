@@ -9,13 +9,14 @@ import traceback
 
 from shapely import geometry as shgeo
 
+from .element import param
+from .fill import Fill
+from .validation import ValidationWarning
 from ..i18n import _
+from ..stitch_plan import StitchGroup
 from ..stitches import auto_fill
 from ..svg.tags import INKSCAPE_LABEL
 from ..utils import cache, version
-from .element import Patch, param
-from .fill import Fill
-from .validation import ValidationWarning
 
 
 class SmallShapeWarning(ValidationWarning):
@@ -212,8 +213,8 @@ class AutoFill(Fill):
         else:
             return None
 
-    def to_patches(self, last_patch):
-        stitches = []
+    def to_stitch_groups(self, last_patch):
+        stitch_groups = []
 
         starting_point = self.get_starting_point(last_patch)
         ending_point = self.get_ending_point()
@@ -221,29 +222,40 @@ class AutoFill(Fill):
         try:
             if self.fill_underlay:
                 for i in range(len(self.fill_underlay_angle)):
-                    stitches.extend(auto_fill(self.underlay_shape,
-                                              self.fill_underlay_angle[i],
-                                              self.fill_underlay_row_spacing,
-                                              self.fill_underlay_row_spacing,
-                                              self.fill_underlay_max_stitch_length,
-                                              self.running_stitch_length,
-                                              self.staggers,
-                                              self.fill_underlay_skip_last,
-                                              starting_point,
-                                              underpath=self.underlay_underpath))
-                    starting_point = stitches[-1]
+                    underlay = StitchGroup(
+                        color=self.color,
+                        tags=("auto_fill", "auto_fill_underlay"),
+                        stitches=auto_fill(
+                            self.underlay_shape,
+                            self.fill_underlay_angle[i],
+                            self.fill_underlay_row_spacing,
+                            self.fill_underlay_row_spacing,
+                            self.fill_underlay_max_stitch_length,
+                            self.running_stitch_length,
+                            self.staggers,
+                            self.fill_underlay_skip_last,
+                            starting_point,
+                            underpath=self.underlay_underpath))
+                    stitch_groups.append(underlay)
 
-            stitches.extend(auto_fill(self.fill_shape,
-                                      self.angle,
-                                      self.row_spacing,
-                                      self.end_row_spacing,
-                                      self.max_stitch_length,
-                                      self.running_stitch_length,
-                                      self.staggers,
-                                      self.skip_last,
-                                      starting_point,
-                                      ending_point,
-                                      self.underpath))
+                    starting_point = underlay.stitches[-1]
+
+            stitch_group = StitchGroup(
+                color=self.color,
+                tags=("auto_fill", "auto_fill_top"),
+                stitches=auto_fill(
+                    self.fill_shape,
+                    self.angle,
+                    self.row_spacing,
+                    self.end_row_spacing,
+                    self.max_stitch_length,
+                    self.running_stitch_length,
+                    self.staggers,
+                    self.skip_last,
+                    starting_point,
+                    ending_point,
+                    self.underpath))
+            stitch_groups.append(stitch_group)
         except Exception:
             if hasattr(sys, 'gettrace') and sys.gettrace():
                 # if we're debugging, let the exception bubble up
@@ -261,18 +273,19 @@ class AutoFill(Fill):
 
             self.fatal(message)
 
-        return [Patch(stitches=stitches, color=self.color)]
+        return stitch_groups
 
-    def validation_warnings(self):
-        if self.shape.area < 20:
-            label = self.node.get(INKSCAPE_LABEL) or self.node.get("id")
-            yield SmallShapeWarning(self.shape.centroid, label)
 
-        if self.shrink_or_grow_shape(self.expand, True).is_empty:
-            yield ExpandWarning(self.shape.centroid)
+def validation_warnings(self):
+    if self.shape.area < 20:
+        label = self.node.get(INKSCAPE_LABEL) or self.node.get("id")
+        yield SmallShapeWarning(self.shape.centroid, label)
 
-        if self.shrink_or_grow_shape(-self.fill_underlay_inset, True).is_empty:
-            yield UnderlayInsetWarning(self.shape.centroid)
+    if self.shrink_or_grow_shape(self.expand, True).is_empty:
+        yield ExpandWarning(self.shape.centroid)
 
-        for warning in super(AutoFill, self).validation_warnings():
-            yield warning
+    if self.shrink_or_grow_shape(-self.fill_underlay_inset, True).is_empty:
+        yield UnderlayInsetWarning(self.shape.centroid)
+
+    for warning in super(AutoFill, self).validation_warnings():
+        yield warning

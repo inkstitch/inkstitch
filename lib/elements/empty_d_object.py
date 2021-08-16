@@ -23,5 +23,5 @@ class EmptyDObject(EmbroideryElement):
         label = self.node.get(INKSCAPE_LABEL) or self.node.get("id")
         yield EmptyD((0, 0), label)
 
-    def to_patches(self, last_patch):
+    def to_stitch_groups(self, last_patch):
         return []

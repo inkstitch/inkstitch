@@ -16,6 +16,7 @@ from ..commands import is_command, layer_commands
 from ..elements import EmbroideryElement, nodes_to_elements
 from ..elements.clone import is_clone
 from ..i18n import _
+from ..patterns import is_pattern
 from ..svg import generate_unique_id
 from ..svg.tags import (CONNECTOR_TYPE, EMBROIDERABLE_TAGS, INKSCAPE_GROUPMODE,
                         NOT_EMBROIDERABLE_TAGS, SVG_DEFS_TAG, SVG_GROUP_TAG)
@@ -160,9 +161,10 @@ class InkstitchExtension(inkex.Effect):
         if selected:
             if node.tag == SVG_GROUP_TAG:
                 pass
-            elif getattr(node, "get_path", None):
+            elif (node.tag in EMBROIDERABLE_TAGS or is_clone(node)) and not is_pattern(node):
                 nodes.append(node)
-            elif troubleshoot and (node.tag in NOT_EMBROIDERABLE_TAGS or node.tag in EMBROIDERABLE_TAGS or is_clone(node)):
+            # add images, text and patterns for the troubleshoot extension
+            elif troubleshoot and (node.tag in NOT_EMBROIDERABLE_TAGS or is_pattern(node)):
                 nodes.append(node)
 
         return nodes
@@ -186,7 +188,7 @@ class InkstitchExtension(inkex.Effect):
                 selected.append(node)
         return selected
 
-    def elements_to_patches(self, elements):
+    def elements_to_stitch_groups(self, elements):
         patches = []
         for element in elements:
             if patches:

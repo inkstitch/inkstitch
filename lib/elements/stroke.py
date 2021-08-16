@@ -7,11 +7,12 @@ import sys
 
 import shapely.geometry
 
+from .element import EmbroideryElement, param
 from ..i18n import _
+from ..stitch_plan import StitchGroup
 from ..stitches import bean_stitch, running_stitch
 from ..svg import parse_length_with_units
 from ..utils import Point, cache
-from .element import EmbroideryElement, Patch, param
 
 warned_about_legacy_running_stitch = False
 
@@ -190,15 +191,15 @@ class Stroke(EmbroideryElement):
 
         stitches = running_stitch(repeated_path, stitch_length)
 
-        return Patch(self.color, stitches)
+        return StitchGroup(self.color, stitches)
 
-    def to_patches(self, last_patch):
+    def to_stitch_groups(self, last_patch):
         patches = []
 
         for path in self.paths:
             path = [Point(x, y) for x, y in path]
             if self.manual_stitch_mode:
-                patch = Patch(color=self.color, stitches=path, stitch_as_is=True)
+                patch = StitchGroup(color=self.color, stitches=path, stitch_as_is=True)
             elif self.is_running_stitch():
                 patch = self.running_stitch(path, self.running_stitch_length)
 

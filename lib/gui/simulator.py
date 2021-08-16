@@ -11,7 +11,7 @@ import wx
 from wx.lib.intctrl import IntCtrl
 
 from ..i18n import _
-from ..stitch_plan import patches_to_stitch_plan, stitch_plan_from_file
+from ..stitch_plan import stitch_groups_to_stitch_plan, stitch_plan_from_file
 from ..svg import PIXELS_PER_MM
 
 # L10N command label at bottom of simulator window
@@ -733,7 +733,7 @@ class SimulatorPreview(Thread):
         The parent is expected to be a wx.Window and also implement the following methods:
 
             def generate_patches(self, abort_event):
-                Produce an list of Patch instances.  This method will be
+                Produce an list of StitchGroup instances.  This method will be
                 invoked in a background thread and it is expected that it may
                 take awhile.
 
@@ -789,7 +789,7 @@ class SimulatorPreview(Thread):
             return
 
         if patches and not self.refresh_needed.is_set():
-            stitch_plan = patches_to_stitch_plan(patches)
+            stitch_plan = stitch_groups_to_stitch_plan(patches)
 
             # GUI stuff needs to happen in the main thread, so we ask the main
             # thread to call refresh_simulator().

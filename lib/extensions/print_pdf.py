@@ -23,7 +23,7 @@ from werkzeug.serving import make_server
 from ..gui import open_url
 from ..i18n import get_languages
 from ..i18n import translation as inkstitch_translation
-from ..stitch_plan import patches_to_stitch_plan
+from ..stitch_plan import stitch_groups_to_stitch_plan
 from ..svg import render_stitch_plan
 from ..svg.tags import INKSCAPE_GROUPMODE
 from ..threads import ThreadCatalog
@@ -302,8 +302,8 @@ class Print(InkstitchExtension):
 
         self.metadata = self.get_inkstitch_metadata()
         collapse_len = self.metadata['collapse_len_mm']
-        patches = self.elements_to_patches(self.elements)
-        stitch_plan = patches_to_stitch_plan(patches, collapse_len=collapse_len)
+        patches = self.elements_to_stitch_groups(self.elements)
+        stitch_plan = stitch_groups_to_stitch_plan(patches, collapse_len=collapse_len)
         palette = ThreadCatalog().match_and_apply_palette(stitch_plan, self.get_inkstitch_metadata()['thread-palette'])
 
         overview_svg, color_block_svgs = self.render_svgs(stitch_plan, realistic=False)

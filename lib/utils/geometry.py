@@ -73,22 +73,22 @@ class Point:
         return vars(self)
 
     def __add__(self, other):
-        return Point(self.x + other.x, self.y + other.y)
+        return self.__class__(self.x + other.x, self.y + other.y)
 
     def __sub__(self, other):
-        return Point(self.x - other.x, self.y - other.y)
+        return self.__class__(self.x - other.x, self.y - other.y)
 
     def mul(self, scalar):
-        return Point(self.x * scalar, self.y * scalar)
+        return self.__class__(self.x * scalar, self.y * scalar)
 
     def __mul__(self, other):
         if isinstance(other, Point):
             # dot product
             return self.x * other.x + self.y * other.y
         elif isinstance(other, (int, float)):
-            return Point(self.x * other, self.y * other)
+            return self.__class__(self.x * other, self.y * other)
         else:
-            raise ValueError("cannot multiply Point by %s" % type(other))
+            raise ValueError("cannot multiply %s by %s" % (type(self), type(other)))
 
     def __neg__(self):
         return self * -1
@@ -97,16 +97,16 @@ class Point:
         if isinstance(other, (int, float)):
             return self.__mul__(other)
         else:
-            raise ValueError("cannot multiply Point by %s" % type(other))
+            raise ValueError("cannot multiply %s by %s" % (type(self), type(other)))
 
     def __div__(self, other):
         if isinstance(other, (int, float)):
             return self * (1.0 / other)
         else:
-            raise ValueError("cannot divide Point by %s" % type(other))
+            raise ValueError("cannot divide %s by %s" % (type(self), type(other)))
 
     def __repr__(self):
-        return "Point(%s,%s)" % (self.x, self.y)
+        return "%s(%s,%s)" % (type(self), self.x, self.y)
 
     def length(self):
         return math.sqrt(math.pow(self.x, 2.0) + math.pow(self.y, 2.0))
@@ -118,13 +118,13 @@ class Point:
         return self.mul(1.0 / self.length())
 
     def rotate_left(self):
-        return Point(-self.y, self.x)
+        return self.__class__(-self.y, self.x)
 
     def rotate(self, angle):
-        return Point(self.x * math.cos(angle) - self.y * math.sin(angle), self.y * math.cos(angle) + self.x * math.sin(angle))
+        return self.__class__(self.x * math.cos(angle) - self.y * math.sin(angle), self.y * math.cos(angle) + self.x * math.sin(angle))
 
     def as_int(self):
-        return Point(int(round(self.x)), int(round(self.y)))
+        return self.__class__(int(round(self.x)), int(round(self.y)))
 
     def as_tuple(self):
         return (self.x, self.y)

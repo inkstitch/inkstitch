@@ -93,7 +93,7 @@ class Clone(EmbroideryElement):
 
             return elements
 
-    def to_patches(self, last_patch=None):
+    def to_stitch_groups(self, last_patch=None):
         patches = []
 
         source_node = get_clone_source(self.node)
@@ -123,7 +123,7 @@ class Clone(EmbroideryElement):
         elements = self.clone_to_element(self.node)
 
         for element in elements:
-            patches.extend(element.to_patches(last_patch))
+            patches.extend(element.to_stitch_groups(last_patch))
 
         return patches
 

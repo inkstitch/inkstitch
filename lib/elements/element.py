@@ -11,38 +11,11 @@ from inkex import bezier
 
 from ..commands import find_commands
 from ..i18n import _
+from ..patterns import apply_patterns
 from ..svg import (PIXELS_PER_MM, apply_transforms, convert_length,
                    get_node_transform)
 from ..svg.tags import INKSCAPE_LABEL, INKSTITCH_ATTRIBS
 from ..utils import Point, cache
-
-
-class Patch:
-    """A raw collection of stitches with attached instructions."""
-
-    def __init__(self, color=None, stitches=None, trim_after=False, stop_after=False, tie_modus=0, stitch_as_is=False):
-        self.color = color
-        self.stitches = stitches or []
-        self.trim_after = trim_after
-        self.stop_after = stop_after
-        self.tie_modus = tie_modus
-        self.stitch_as_is = stitch_as_is
-
-    def __add__(self, other):
-        if isinstance(other, Patch):
-            return Patch(self.color, self.stitches + other.stitches)
-        else:
-            raise TypeError("Patch can only be added to another Patch")
-
-    def __len__(self):
-        # This method allows `len(patch)` and `if patch:
-        return len(self.stitches)
-
-    def add_stitch(self, stitch):
-        self.stitches.append(stitch)
-
-    def reverse(self):
-        return Patch(self.color, self.stitches[::-1])
 
 
 class Param(object):
@@ -328,13 +301,14 @@ class EmbroideryElement(object):
     def stop_after(self):
         return self.get_boolean_param('stop_after', False)
 
-    def to_patches(self, last_patch):
-        raise NotImplementedError("%s must implement to_patches()" % self.__class__.__name__)
+    def to_stitch_groups(self, last_patch):
+        raise NotImplementedError("%s must implement to_stitch_groups()" % self.__class__.__name__)
 
     def embroider(self, last_patch):
         self.validate()
 
-        patches = self.to_patches(last_patch)
+        patches = self.to_stitch_groups(last_patch)
+        apply_patterns(patches, self.node)
 
         for patch in patches:
             patch.tie_modus = self.ties

@@ -10,12 +10,13 @@ import re
 from shapely import geometry as shgeo
 from shapely.validation import explain_validity
 
+from .element import EmbroideryElement, param
+from .validation import ValidationError
 from ..i18n import _
+from ..stitch_plan import StitchGroup
 from ..stitches import legacy_fill
 from ..svg import PIXELS_PER_MM
 from ..utils import cache
-from .element import EmbroideryElement, Patch, param
-from .validation import ValidationError
 
 
 class UnconnectedError(ValidationError):
@@ -189,7 +190,7 @@ class Fill(EmbroideryElement):
             else:
                 yield InvalidShapeError((x, y))
 
-    def to_patches(self, last_patch):
+    def to_stitch_groups(self, last_patch):
         stitch_lists = legacy_fill(self.shape,
                                    self.angle,
                                    self.row_spacing,
@@ -198,4 +199,4 @@ class Fill(EmbroideryElement):
                                    self.flip,
                                    self.staggers,
                                    self.skip_last)
-        return [Patch(stitches=stitch_list, color=self.color) for stitch_list in stitch_lists]
+        return [StitchGroup(stitches=stitch_list, color=self.color) for stitch_list in stitch_lists]

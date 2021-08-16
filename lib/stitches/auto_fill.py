@@ -14,6 +14,7 @@ from shapely.ops import snap
 from shapely.strtree import STRtree
 
 from ..debug import debug
+from ..stitch_plan import Stitch
 from ..svg import PIXELS_PER_MM
 from ..utils.geometry import Point as InkstitchPoint
 from ..utils.geometry import line_string_to_point_list
@@ -592,8 +593,11 @@ def travel(travel_graph, start, end, running_stitch_length, skip_last):
     """Create stitches to get from one point on an outline of the shape to another."""
 
     path = networkx.shortest_path(travel_graph, start, end, weight='weight')
-    path = [InkstitchPoint(*p) for p in path]
+    path = [Stitch(*p) for p in path]
     stitches = running_stitch(path, running_stitch_length)
+
+    for stitch in stitches:
+        stitch.add_tag('auto_fill_travel')
 
     # The path's first stitch will start at the end of a row of stitches.  We
     # don't want to double that last stitch, so we'd like to skip it.
@@ -619,7 +623,7 @@ def path_to_stitches(path, travel_graph, fill_stitch_graph, angle, row_spacing, 
 
     # If the very first stitch is travel, we'll omit it in travel(), so add it here.
     if not path[0].is_segment():
-        stitches.append(InkstitchPoint(*path[0].nodes[0]))
+        stitches.append(Stitch(*path[0].nodes[0]))
 
     for edge in path:
         if edge.is_segment():
