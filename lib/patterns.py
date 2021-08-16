@@ -58,6 +58,9 @@ def _apply_fill_patterns(patterns, patches):
                 elif stitch.has_tag('auto_fill_travel'):
                     # keep travel stitches (underpath or travel around the border)
                     patch_points.append(stitch)
+                elif stitch.has_tag('satin_column') and not stitch.has_tag('satin_split_stitch'):
+                    # keep satin column stitches unless they are split stitches
+                    patch_points.append(stitch)
             patch.stitches = patch_points
 
 

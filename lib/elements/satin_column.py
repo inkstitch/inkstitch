@@ -717,7 +717,10 @@ class SatinColumn(EmbroideryElement):
         # other.
         forward, back = self.plot_points_on_rails(self.contour_underlay_stitch_length,
                                                   -self.contour_underlay_inset)
-        return StitchGroup(color=self.color, stitches=(forward + list(reversed(back))))
+        return StitchGroup(
+            color=self.color,
+            tags=("satin_column", "satin_column_underlay", "satin_contour_underlay"),
+            stitches=(forward + list(reversed(back))))
 
     def do_center_walk(self):
         # Center walk underlay is just a running stitch down and back on the
@@ -726,7 +729,10 @@ class SatinColumn(EmbroideryElement):
         # Do it like contour underlay, but inset all the way to the center.
         forward, back = self.plot_points_on_rails(self.center_walk_underlay_stitch_length,
                                                   -100000)
-        return StitchGroup(color=self.color, stitches=(forward + list(reversed(back))))
+        return StitchGroup(
+            color=self.color,
+            tags=("satin_column", "satin_column_underlay", "satin_center_walk"),
+            stitches=(forward + list(reversed(back))))
 
     def do_zigzag_underlay(self):
         # zigzag underlay, usually done at a much lower density than the
@@ -754,6 +760,7 @@ class SatinColumn(EmbroideryElement):
         for point in chain.from_iterable(zip(*sides)):
             patch.add_stitch(point)
 
+        patch.add_tags(("satin_column", "satin_column_underlay", "satin_zigzag_underlay"))
         return patch
 
     def do_satin(self):
@@ -776,6 +783,7 @@ class SatinColumn(EmbroideryElement):
         for point in chain.from_iterable(zip(*sides)):
             patch.add_stitch(point)
 
+        patch.add_tags(("satin_column", "satin_column_edge"))
         return patch
 
     def do_e_stitch(self):
@@ -797,6 +805,7 @@ class SatinColumn(EmbroideryElement):
             patch.add_stitch(right)
             patch.add_stitch(left)
 
+        patch.add_tags(("satin_column", "e_stitch"))
         return patch
 
     def do_split_stitch(self):
@@ -805,10 +814,13 @@ class SatinColumn(EmbroideryElement):
         sides = self.plot_points_on_rails(self.zigzag_spacing, self.pull_compensation)
         for i, (left, right) in enumerate(zip(*sides)):
             patch.add_stitch(left)
+            patch.stitches[-1].add_tags(("satin_column", "satin_column_edge"))
             points, count = self._get_split_points(left, right)
             for point in points:
                 patch.add_stitch(point)
+                patch.stitches[-1].add_tags(("satin_column", "satin_split_stitch"))
             patch.add_stitch(right)
+            patch.stitches[-1].add_tags(("satin_column", "satin_column_edge"))
             # it is possible that the way back has a different length from the first
             # but it looks ugly if the points differ too much
             # so let's make sure they have at least the same amount of divisions
@@ -816,6 +828,7 @@ class SatinColumn(EmbroideryElement):
                 points, count = self._get_split_points(right, sides[0][i+1], count)
                 for point in points:
                     patch.add_stitch(point)
+                    patch.stitches[-1].add_tags(("satin_column", "satin_split_stitch"))
         return patch
 
     def _get_split_points(self, left, right, count=None):
