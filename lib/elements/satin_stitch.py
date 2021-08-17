@@ -14,21 +14,10 @@ from shapely.ops import nearest_points
 from .element import EmbroideryElement, param
 from .validation import ValidationError, ValidationWarning
 from ..i18n import _
+from ..stitches.simple_satin import simple_satin
 from ..stitch_plan import StitchGroup
 from ..svg import line_strings_to_csp, point_lists_to_csp
 from ..utils import Point, cache, collapse_duplicate_point, cut
-
-
-class SatinHasFillError(ValidationError):
-    name = _("Satin column has fill")
-    description = _("Satin column: Object has a fill (but should not)")
-    steps_to_solve = [
-        _("* Select this object."),
-        _("* Open the Fill and Stroke panel"),
-        _("* Open the Fill tab"),
-        _("* Disable the Fill"),
-        _("* Alternative: open Params and switch this path to Stroke to disable Satin Column mode")
-    ]
 
 
 class TooFewPathsError(ValidationError):
@@ -64,15 +53,39 @@ class TooManyIntersectionsError(ValidationError):
     description = _("Satin column: A rung intersects a rail more than once.") + " " + rung_message
 
 
-class SatinColumn(EmbroideryElement):
+def satin_column_only(func):
+    """Decorator that ensures method can only be called with satin_column=True"""
+
+    def decorated(self, *args, **kwargs):
+        if not self.satin_column:
+            raise ValueError(_("Internal Error: this method can only be called on satin columns."))
+
+        return func(self, *args, **kwargs)
+
+    return decorated
+
+
+class SatinStitch(EmbroideryElement):
     element_name = _("Satin Column")
 
     def __init__(self, *args, **kwargs):
-        super(SatinColumn, self).__init__(*args, **kwargs)
+        super(SatinStitch, self).__init__(*args, **kwargs)
 
     @property
     @param('satin_column', _('Custom satin column'), type='toggle')
     def satin_column(self):
+        # If True, this is a Satin Column.  It will look a bit like this:
+        #
+        # | |
+        # |_|
+        # |_|
+        # |_|
+        # | |
+        #
+        # The smaller paths show where the zig-zag stitches should fall.
+        #
+        # If False, this is a "simple" satin, that is, zig-zags along a
+        # path, with the width of the zig-zags matching the stroke width.
         return self.get_boolean_param("satin_column")
 
     # I18N: "E" stitch is so named because it looks like the letter E.
@@ -392,27 +405,25 @@ class SatinColumn(EmbroideryElement):
                     yield DanglingRungWarning(rung.interpolate(0.5, normalized=True))
 
     def validation_errors(self):
-        # The node should have exactly two paths with no fill.  Each
-        # path should have the same number of points, meaning that they
-        # will both be made up of the same number of bezier curves.
-
-        if self.get_style("fill") is not None:
-            yield SatinHasFillError(self.shape.centroid)
-
-        if len(self.rails) < 2:
-            yield TooFewPathsError(self.shape.centroid)
-        elif len(self.csp) == 2:
-            if len(self.rails[0]) != len(self.rails[1]):
-                yield UnequalPointsError(self.flattened_rails[0].interpolate(0.5, normalized=True))
+        if self.satin_column:
+            if len(self.rails) < 2:
+                yield TooFewPathsError(self.shape.centroid)
+            elif len(self.csp) == 2:
+                if len(self.rails[0]) != len(self.rails[1]):
+                    yield UnequalPointsError(self.flattened_rails[0].interpolate(0.5, normalized=True))
+            else:
+                for rung in self._raw_rungs:
+                    for rail in self.flattened_rails:
+                        intersection = rung.intersection(rail)
+                        if not intersection.is_empty and not isinstance(intersection, shgeo.Point):
+                            yield TooManyIntersectionsError(rung.interpolate(0.5, normalized=True))
         else:
-            for rung in self._raw_rungs:
-                for rail in self.flattened_rails:
-                    intersection = rung.intersection(rail)
-                    if not intersection.is_empty and not isinstance(intersection, shgeo.Point):
-                        yield TooManyIntersectionsError(rung.interpolate(0.5, normalized=True))
+            # simple satin can handle any path
+            pass
 
+    @satin_column_only
     def reverse(self):
-        """Return a new SatinColumn like this one but in the opposite direction.
+        """Return a new SatinStitch like this one but in the opposite direction.
 
         The path will be flattened and the new satin will contain a new XML
         node that is not yet in the SVG.
@@ -432,14 +443,15 @@ class SatinColumn(EmbroideryElement):
         return self._csp_to_satin(point_lists_to_csp(point_lists))
 
     def apply_transform(self):
-        """Return a new SatinColumn like this one but with transforms applied.
+        """Return a new SatinStitch like this one but with transforms applied.
 
         This node's and all ancestor nodes' transforms will be applied.  The
-        new SatinColumn's node will not be in the SVG document.
+        new SatinStitch's node will not be in the SVG document.
         """
 
         return self._csp_to_satin(self.csp)
 
+    @satin_column_only
     def split(self, split_point):
         """Split a satin into two satins at the specified point
 
@@ -450,9 +462,9 @@ class SatinColumn(EmbroideryElement):
         split_point can also be a noramlized projection of a distance along the
         satin, in the range 0.0 to 1.0.
 
-        Returns two new SatinColumn instances: the part before and the part
+        Returns two new SatinStitch instances: the part before and the part
         after the split point.  All parameters are copied over to the new
-        SatinColumn instances.
+        SatinStitch instances.
         """
 
         cut_points = self._find_cut_points(split_point)
@@ -563,10 +575,11 @@ class SatinColumn(EmbroideryElement):
         if node.get("transform"):
             del node.attrib["transform"]
 
-        return SatinColumn(node)
+        return SatinStitch(node)
 
     @property
     @cache
+    @satin_column_only
     def center_line(self):
         # similar technique to do_center_walk()
         center_walk, _ = self.plot_points_on_rails(self.zigzag_spacing, -100000)
@@ -837,11 +850,20 @@ class SatinColumn(EmbroideryElement):
         split_count = count or int(-(-distance // self.max_stitch_length))
         for i in range(split_count):
             line = shgeo.LineString((left, right))
-            split_point = line.interpolate((i+1)/split_count, normalized=True)
+            split_point = line.interpolate((i + 1) / split_count, normalized=True)
             points.append(Point(split_point.x, split_point.y))
         return [points, split_count]
 
-    def to_stitch_groups(self, last_patch):
+    def do_simple_satin(self):
+        stitch_groups = []
+
+        for path in self.flatten(self.parse_path()):
+            path = [Point(x, y) for x, y in path]
+            stitch_groups.append(StitchGroup(color=self.color, stitches=simple_satin(path, self.zigzag_spacing, self.stroke_width)))
+
+        return stitch_groups
+
+    def do_satin_column(self):
         # Stitch a variable-width satin column, zig-zagging between two paths.
 
         # The algorithm will draw zigzags between each consecutive pair of
@@ -867,3 +889,9 @@ class SatinColumn(EmbroideryElement):
             patch += self.do_satin()
 
         return [patch]
+
+    def to_stitch_groups(self, last_patch):
+        if self.satin_column:
+            return self.do_satin_column()
+        else:
+            return self.do_simple_satin()
