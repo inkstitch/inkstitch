@@ -12,20 +12,19 @@ from shapely import geometry as shgeo
 from shapely.geometry import Point as ShapelyPoint
 
 from ..commands import add_commands
-from ..elements import SatinColumn, Stroke
+from ..elements import SatinStitch, RunningStitch
 from ..i18n import _
 from ..svg import (PIXELS_PER_MM, generate_unique_id, get_correction_transform,
                    line_strings_to_csp)
 from ..svg.tags import (INKSCAPE_LABEL, INKSTITCH_ATTRIBS)
-from ..utils import Point as InkstitchPoint
-from ..utils import cache, cut
+from ..utils import Point as InkstitchPoint, cache, cut
 
 
 class SatinSegment(object):
-    """A portion of SatinColumn.
+    """A portion of SatinStitch satin column.
 
     Attributes:
-        satin -- the SatinColumn instance
+        satin -- the SatinStitch instance
         start -- how far along the satin this graph edge starts (a float from 0.0 to 1.0)
         end -- how far along the satin this graph edge ends (a float from 0.0 to 1.0)
         reverse -- if True, reverse the direction of the satin
@@ -81,7 +80,7 @@ class SatinSegment(object):
     to_element = to_satin
 
     def to_running_stitch(self):
-        return RunningStitch(self.center_line, self.original_satin)
+        return RunSegment(self.center_line, self.original_satin)
 
     def break_up(self, segment_size):
         """Break this SatinSegment up into SatinSegments of the specified size."""
@@ -197,18 +196,18 @@ class JumpStitch(object):
         return self.start.distance(self.end)
 
 
-class RunningStitch(object):
+class RunSegment(object):
     """Running stitch along a path."""
 
-    def __init__(self, path_or_stroke, original_element=None):
-        if isinstance(path_or_stroke, Stroke):
-            # Technically a Stroke object's underlying path could have multiple
+    def __init__(self, path_or_run, original_element=None):
+        if isinstance(path_or_run, RunningStitch):
+            # Technically a RunningStitch object's underlying path could have multiple
             # subpaths.  We don't have a particularly good way of dealing with
             # that so we'll just use the first one.
-            self.path = shgeo.LineString(path_or_stroke.paths[0])
-            original_element = path_or_stroke
+            self.path = shgeo.LineString(path_or_run.paths[0])
+            original_element = path_or_run
         else:
-            self.path = path_or_stroke
+            self.path = path_or_run
 
         self.original_element = original_element
         self.running_stitch_length = \
@@ -226,7 +225,7 @@ class RunningStitch(object):
         node.set("style", str(style))
         node.set(INKSTITCH_ATTRIBS['running_stitch_length_mm'], self.running_stitch_length)
 
-        stroke = Stroke(node)
+        stroke = RunningStitch(node)
 
         return stroke
 
@@ -246,10 +245,10 @@ class RunningStitch(object):
 
     @cache
     def reversed(self):
-        return RunningStitch(shgeo.LineString(reversed(self.path.coords)), self.original_element)
+        return RunSegment(shgeo.LineString(reversed(self.path.coords)), self.original_element)
 
     def is_sequential(self, other):
-        if not isinstance(other, RunningStitch):
+        if not isinstance(other, RunSegment):
             return False
 
         if self.original_element is not other.original_element:
@@ -259,11 +258,11 @@ class RunningStitch(object):
 
     def __add__(self, other):
         new_path = shgeo.LineString(chain(self.path.coords, other.path.coords))
-        return RunningStitch(new_path, self.original_element)
+        return RunSegment(new_path, self.original_element)
 
 
 def auto_satin(elements, preserve_order=False, starting_point=None, ending_point=None, trim=False):
-    """Find an optimal order to stitch a list of SatinColumns.
+    """Find an optimal order to stitch a list of SatinStitch satin columns.
 
     Add running stitch and jump stitches as necessary to construct a stitch
     order.  Cut satins as necessary to minimize jump stitch length.
@@ -292,9 +291,10 @@ def auto_satin(elements, preserve_order=False, starting_point=None, ending_point
     satins in the same order they were in the original list.  It will only split
     them and add running stitch as necessary to achieve an optimal stitch path.
 
-    Elements should be primarily made up of SatinColumn instances.  Some Stroke
-    instances (that are running stitch) can be included to indicate how to travel
-    between two SatinColumns.  This works best when preserve_order is True.
+    Elements should be primarily made up of SatinStitch instances with
+    satin_column=true.  Some RunningStitch instances can be included to
+    indicate how to travel between two SatinStitches.  This works best when
+    preserve_order is True.
 
     If preserve_order is True, then the elements and any newly-created elements
     will be in the same position in the SVG DOM.  If preserve_order is False, then
@@ -349,9 +349,9 @@ def build_graph(elements, preserve_order=False):
 
     for element in elements:
         segments = []
-        if isinstance(element, Stroke):
+        if isinstance(element, RunningStitch):
             segments.append(RunningStitch(element))
-        elif isinstance(element, SatinColumn):
+        elif isinstance(element, SatinStitch):
             whole_satin = SatinSegment(element)
             segments = whole_satin.break_up(PIXELS_PER_MM)
 
@@ -612,10 +612,10 @@ def operations_to_elements_and_trims(operations, preserve_order):
     for operation in operations:
         # Ignore JumpStitch operations.  Jump stitches in Ink/Stitch are
         # implied and added by Embroider if needed.
-        if isinstance(operation, (SatinSegment, RunningStitch)):
+        if isinstance(operation, (SatinSegment, RunSegment)):
             elements.append(operation.to_element())
             original_parent_nodes.append(operation.original_node.getparent())
-        elif isinstance(operation, (JumpStitch)):
+        elif isinstance(operation, JumpStitch):
             if elements and operation.length > 0.75 * PIXELS_PER_MM:
                 trims.append(len(elements) - 1)
 
@@ -642,10 +642,10 @@ def remove_from_parent(node):
 def preserve_original_groups(elements, original_parent_nodes):
     """Ensure that all elements are contained in the original SVG group elements.
 
-    When preserve_order is True, no SatinColumn or Stroke elements will be
+    When preserve_order is True, no SatinStitch or RunningStitch elements will be
     reordered in the XML tree.  This makes it possible to preserve original SVG
     group membership.  We'll ensure that each newly-created Element is added
-    to the group that contained the original SatinColumn that spawned it.
+    to the group that contained the original SatinStitch that spawned it.
     """
 
     for element, parent in zip(elements, original_parent_nodes):
@@ -695,13 +695,13 @@ def name_elements(new_elements, preserve_order):
 
     index = 1
     for element in new_elements:
-        if isinstance(element, SatinColumn):
+        if isinstance(element, SatinStitch):
             element.node.set("id", generate_unique_id(element.node, "autosatin"))
         else:
             element.node.set("id", generate_unique_id(element.node, "autosatinrun"))
 
         if not (preserve_order and INKSCAPE_LABEL in element.node.attrib):
-            if isinstance(element, SatinColumn):
+            if isinstance(element, SatinStitch):
                 # L10N Label for a satin column created by Auto-Route Satin Columns and Lettering extensions
                 element.node.set(INKSCAPE_LABEL, _("AutoSatin %d") % index)
             else:
@@ -723,7 +723,7 @@ def add_trims(elements, trim_indices):
     new_elements = []
     just_trimmed = False
     for i, element in enumerate(elements):
-        if just_trimmed and isinstance(element, Stroke):
+        if just_trimmed and isinstance(element, RunningStitch):
             element.node.getparent().remove(element.node)
             continue
 

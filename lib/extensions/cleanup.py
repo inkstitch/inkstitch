@@ -5,7 +5,7 @@
 
 from inkex import NSS, Boolean, errormsg
 
-from ..elements import Fill, Stroke
+from ..elements import FillStitch, Polyline, RunningStitch, SatinStitch, ManualStitch
 from ..i18n import _
 from .base import InkstitchExtension
 
@@ -38,11 +38,11 @@ class Cleanup(InkstitchExtension):
             return
 
         for element in self.elements:
-            if (isinstance(element, Fill) and self.rm_fill and element.shape.area < self.fill_threshold):
+            if (isinstance(element, FillStitch) and self.rm_fill and element.shape.area < self.fill_threshold):
                 element.node.getparent().remove(element.node)
                 count += 1
-            if (isinstance(element, Stroke) and self.rm_stroke and
-               element.shape.length < self.stroke_threshold and element.node.getparent() is not None):
+            if (isinstance(element, (RunningStitch, SatinStitch, ManualStitch, Polyline)) and self.rm_stroke and
+                    element.shape.length < self.stroke_threshold and element.node.getparent() is not None):
                 element.node.getparent().remove(element.node)
                 count += 1
 

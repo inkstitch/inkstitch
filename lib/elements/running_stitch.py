@@ -38,7 +38,7 @@ class RunningStitch(EmbroideryElement):
         _('Bean stitch number of repeats'),
         tooltip=_('Backtrack each stitch this many times.  '
                   'A value of 1 would triple each stitch (forward, back, forward).  '
-                  'A value of 2 would quintuple each stitch, etc.  Only applies to running stitch.'),
+                  'A value of 2 would quintuple each stitch, etc.'),
         type='int',
         default=0,
         sort_index=2)
@@ -65,16 +65,6 @@ class RunningStitch(EmbroideryElement):
         # This especially happens when importing machine embroidery files.
         return shapely.geometry.MultiLineString(line_strings).convex_hull
 
-    @property
-    @param('manual_stitch',
-           _('Manual stitch placement'),
-           tooltip=_("Stitch every node in the path.  Stitch length is ignored."),
-           type='boolean',
-           default=False,
-           sort_index=0)
-    def manual_stitch_mode(self):
-        return self.get_boolean_param('manual_stitch')
-
     def handle_repeats(self, path):
         repeated_path = []
 
@@ -90,7 +80,7 @@ class RunningStitch(EmbroideryElement):
 
         return repeated_path
 
-    def to_patches(self, last_patch):
+    def to_stitch_groups(self, last_patch):
         patches = []
 
         for path in self.paths:

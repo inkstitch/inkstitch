@@ -6,11 +6,11 @@
 import inkex
 from lxml import etree
 
-from ..elements import SatinColumn
+from .base import InkstitchExtension
+from ..elements.utils import is_satin_column
 from ..i18n import _
 from ..svg import get_correction_transform
 from ..svg.tags import SVG_PATH_TAG
-from .base import InkstitchExtension
 
 
 class ConvertToStroke(InkstitchExtension):
@@ -25,13 +25,13 @@ class ConvertToStroke(InkstitchExtension):
             inkex.errormsg(_("Please select at least one satin column to convert to a running stitch."))
             return
 
-        if not any(isinstance(item, SatinColumn) for item in self.elements):
+        if not any(is_satin_column(item) for item in self.elements):
             # L10N: Convert To Satin extension, user selected one or more objects that were not lines.
             inkex.errormsg(_("Please select at least one satin column to convert to a running stitch."))
             return
 
         for element in self.elements:
-            if not isinstance(element, SatinColumn):
+            if not is_satin_column(element):
                 continue
 
             parent = element.node.getparent()

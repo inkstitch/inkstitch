@@ -78,7 +78,7 @@ class _ThreadCatalog(Sequence):
         chosen if more than 80% of the thread colors in the stitch plan are
         exact matches for threads in the palette.
         """
-        if not self.palettes:
+        if not self.palettes or len(stitch_plan) == 0:
             return None
 
         threads = [color_block.color for color_block in stitch_plan]

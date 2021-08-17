@@ -5,7 +5,7 @@
 
 import inkex
 
-from ..elements import SatinColumn
+from ..elements.utils import is_satin_column
 from ..i18n import _
 from ..svg import get_correction_transform
 from .base import InkstitchExtension
@@ -21,7 +21,7 @@ class CutSatin(InkstitchExtension):
             return
 
         for satin in self.elements:
-            if isinstance(satin, SatinColumn):
+            if is_satin_column(satin):
                 command = satin.get_command("satin_cut_point")
 
                 if command is None:

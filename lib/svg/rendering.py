@@ -184,7 +184,7 @@ def color_block_to_paths(color_block, svg, destination, visual_commands):
     # If we try to import these above, we get into a mess of circular
     # imports.
     from ..commands import add_commands
-    from ..elements.stroke import Stroke
+    from ..elements.running_stitch import RunningStitch
 
     # We could emit just a single path with one subpath per point list, but
     # emitting multiple paths makes it easier for the user to manipulate them.
@@ -194,7 +194,7 @@ def color_block_to_paths(color_block, svg, destination, visual_commands):
         if first:
             first = False
         elif visual_commands:
-            add_commands(Stroke(destination[-1]), ["trim"])
+            add_commands(RunningStitch(destination[-1]), ["trim"])
 
         color = color_block.color.visible_on_white.to_hex_str()
         path = inkex.PathElement(attrib={
@@ -208,10 +208,10 @@ def color_block_to_paths(color_block, svg, destination, visual_commands):
 
     if path is not None and visual_commands:
         if color_block.trim_after:
-            add_commands(Stroke(path), ["trim"])
+            add_commands(RunningStitch(path), ["trim"])
 
         if color_block.stop_after:
-            add_commands(Stroke(path), ["stop"])
+            add_commands(RunningStitch(path), ["stop"])
 
 
 def render_stitch_plan(svg, stitch_plan, realistic=False, visual_commands=True):

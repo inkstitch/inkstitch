@@ -66,8 +66,8 @@ def _apply_fill_patterns(patterns, patches):
 
 def _get_patterns(node):
     from .elements import EmbroideryElement
-    from .elements.fill import Fill
-    from .elements.stroke import Stroke
+    from .elements.fill_stitch import FillStitch
+    from .elements.running_stitch import RunningStitch
 
     fills = []
     strokes = []
@@ -82,11 +82,11 @@ def _get_patterns(node):
         stroke = element.get_style('stroke')
 
         if fill is not None:
-            fill_pattern = Fill(pattern).shape
+            fill_pattern = FillStitch(pattern).shape
             fills.append(fill_pattern)
 
         if stroke is not None:
-            stroke_pattern = Stroke(pattern).paths
+            stroke_pattern = RunningStitch(pattern).paths
             line_strings = [shgeo.LineString(path) for path in stroke_pattern]
             strokes.append(shgeo.MultiLineString(line_strings))
 

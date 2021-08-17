@@ -7,7 +7,8 @@ import sys
 
 import inkex
 
-from ..elements import SatinColumn, Stroke
+from ..elements import SatinStitch, RunningStitch
+from ..elements.utils import is_satin_column
 from ..i18n import _
 from ..stitches.auto_satin import auto_satin
 from .commands import CommandsExtension
@@ -40,6 +41,15 @@ class AutoSatin(CommandsExtension):
         if command is not None:
             return command.target_point
 
+    def is_acceptable_element(self, element):
+        if isinstance(element, RunningStitch):
+            return True
+
+        if is_satin_column(element):
+            return True
+
+        return False
+
     def check_selection(self):
         if not self.get_elements():
             return
@@ -49,7 +59,11 @@ class AutoSatin(CommandsExtension):
             inkex.errormsg(_("Please select one or more satin columns."))
             return False
 
-        satincolumns = [element for element in self.elements if isinstance(element, SatinColumn)]
+        if not all(self.is_acceptable_element(element) for element in self.elements):
+            inkex.errormsg(_("Please select only Satin Column or Running Stitch objects."))
+            return False
+
+        satincolumns = [element for element in self.elements if is_satin_column(element)]
         if len(satincolumns) == 0:
             inkex.errormsg(_("Please select at least one satin column."))
             return False
@@ -64,6 +78,6 @@ class AutoSatin(CommandsExtension):
         ending_point = self.get_ending_point()
 
         # Ignore fills
-        elements = [element for element in self.elements if isinstance(element, SatinColumn) or isinstance(element, Stroke)]
+        elements = [element for element in self.elements if isinstance(element, (SatinStitch, RunningStitch))]
 
         auto_satin(elements, self.options.preserve_order, starting_point, ending_point, self.options.trim)

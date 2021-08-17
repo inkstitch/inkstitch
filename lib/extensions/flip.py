@@ -5,7 +5,7 @@
 
 import inkex
 
-from ..elements import SatinColumn
+from ..elements.utils import is_satin_column
 from ..i18n import _
 from .base import InkstitchExtension
 
@@ -29,5 +29,5 @@ class Flip(InkstitchExtension):
             return
 
         for element in self.elements:
-            if isinstance(element, SatinColumn):
+            if is_satin_column(element):
                 self.flip(element)

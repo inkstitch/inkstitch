@@ -13,7 +13,7 @@ from numpy import diff, setdiff1d, sign
 from shapely import geometry as shgeo
 
 from .base import InkstitchExtension
-from ..elements import Stroke
+from ..elements import RunningStitch, SatinStitch
 from ..i18n import _
 from ..svg import PIXELS_PER_MM, get_correction_transform
 from ..svg.tags import INKSTITCH_ATTRIBS
@@ -35,7 +35,7 @@ class ConvertToSatin(InkstitchExtension):
             inkex.errormsg(_("Please select at least one line to convert to a satin column."))
             return
 
-        if not all(isinstance(item, Stroke) for item in self.elements):
+        if not all(isinstance(item, (RunningStitch, SatinStitch)) for item in self.elements):
             # L10N: Convert To Satin extension, user selected one or more objects that were not lines.
             inkex.errormsg(_("Only simple lines may be converted to satin columns."))
             return

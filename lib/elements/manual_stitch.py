@@ -5,7 +5,8 @@
 
 import shapely.geometry
 
-from .element import EmbroideryElement, StitchGroup
+from .element import EmbroideryElement
+from ..stitch_plan import StitchGroup
 from ..utils import Point, cache
 
 
