@@ -51,7 +51,7 @@ def get_object_types(node_id):
 
 @params.route('/thumbnail/<node_id>')
 def get_thumbnail(node_id):
-    node = g.extension.getElementById(node_id)
+    node = g.extension.svg.getElementById(node_id)
     png_data = thumbnail(node)
 
     if png_data is None:
