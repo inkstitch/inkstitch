@@ -4,6 +4,9 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import math
+import os
+import subprocess
+import tempfile
 from math import pi
 
 import inkex
@@ -245,3 +248,36 @@ def render_stitch_plan(svg, stitch_plan, realistic=False, visual_commands=True):
     if realistic:
         filter_document = inkex.load_svg(realistic_filter)
         svg.defs.append(filter_document.getroot())
+
+
+def thumbnail(node):
+    """Produce a PNG thumbnail of a given SVG node."""
+
+    svg_file = tempfile.NamedTemporaryFile(suffix=".svg", delete=False)
+    png_file = tempfile.NamedTemporaryFile(suffix=".png", delete=False)
+
+    node.getroottree().write(svg_file)
+
+    svg_file.close()
+    png_file.close()
+
+    try:
+        # using check_output so that we get the output in the exception handler
+        # NOTE: inkscape 1.0+ always puts itself in the PATH, so don't have to find where it is
+        subprocess.check_output(["inkscape",
+                                 "--export-png=" + png_file.name,
+                                 "--export-id=" + node.get('id'),
+                                 "--export-id-only",
+                                 "--export-background-opacity=0.0",
+                                 "--export-width=100",
+                                 svg_file.name],
+                                stderr=subprocess.STDOUT)
+        with open(png_file.name, "rb") as png:
+            return png.read()
+    except subprocess.CalledProcessError as err:
+        inkex.errormsg("error: " + str(err))
+        inkex.errormsg(err.output)
+        return None
+    finally:
+        os.unlink(svg_file.name)
+        os.unlink(png_file.name)
