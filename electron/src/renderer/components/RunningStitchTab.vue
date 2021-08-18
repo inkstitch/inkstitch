@@ -28,8 +28,11 @@
 </template>
 
 <script>
+import {ParamsTabMixin} from '../../lib/mixins'
+
 export default {
-  name: "RunningStitchTab",
+  name: 'RunningStitchTab',
+  mixins: [ParamsTabMixin],
   data: function () {
     return {
       manual_stitch_placement: null,

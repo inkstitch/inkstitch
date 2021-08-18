@@ -1,6 +1,6 @@
 from collections import Counter, defaultdict
 
-from flask import Blueprint, Response, g, jsonify
+from flask import Blueprint, Response, g, jsonify, request
 from stringcase import snakecase
 
 from ..elements.utils import node_to_elements
@@ -58,3 +58,29 @@ def get_thumbnail(node_id):
         return Response(status=500)
     else:
         return Response(png_data, mimetype="image/png")
+
+
+@params.route('/manual_stitch/enable', methods=["POST"])
+def enable_manual_stitch():
+    for element_type in ('satin_stitch', 'running_stitch'):
+        for element in elements_by_type[element_type]:
+            element.set_param('manual_stitch', True)
+
+    return Response(status=200)
+
+
+@params.route('/manual_stitch/disable', methods=["POST"])
+def disable_manual_stitch():
+    for element in elements_by_type['manual_stitch']:
+        element.set_param('manual_stitch', False)
+
+    return Response(status=200)
+
+
+@params.route('/apply/<element_type>', methods=['POST'])
+def apply(element_type):
+    for element in elements_by_type[element_type]:
+        for param, value in request.json.items():
+            element.set_param(param, value)
+
+    return Response(status=200)

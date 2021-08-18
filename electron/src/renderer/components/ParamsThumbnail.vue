@@ -14,24 +14,85 @@
     <v-img ref="thumbnail" class="checkerboard allow-hover align-end" contain :src="thumbnail_url" width="100px" height="100px">
     </v-img>
     <v-card-actions class="pa-0">
-      <v-img class="icon ml-1 my-1" v-if="running_stitch" :src="require('../assets/icons/running_stitch.png')" max-width="20px"></v-img>
-      <v-img class="icon ml-1 my-1" v-if="satin_stitch" :src="require('../assets/icons/satin_stitch.png')" max-width="20px"></v-img>
-      <v-img class="icon ml-1 my-1" v-if="fill_stitch" :src="require('../assets/icons/fill_stitch.png')" max-width="20px"></v-img>
-      <v-img class="icon ml-1 my-1" v-if="clone" :src="require('../assets/icons/clone.png')" max-width="20px"></v-img>
-      <v-img class="icon ml-1 my-1" v-if="polyline || manual_stitch" :src="require('../assets/icons/manual_stitch.png')" max-width="20px"></v-img>
+      <v-tooltip bottom v-if="running_stitch">
+        <template v-slot:activator="{on, attrs}">
+          <v-img class="icon ml-1 my-1 allow-hover"
+                 :alt="$gettext('Running Stitch')"
+                 :src="require('../assets/icons/running_stitch.png')"
+                 v-on="on"
+                 v-bind="attrs"
+                 max-width="20px"></v-img>
+        </template>
+        <span><translate>Running Stitch</translate></span>
+      </v-tooltip>
+      <v-tooltip bottom v-if="satin_stitch" :disabled="false">
+        <template v-slot:activator="{on, attrs}">
+          <v-img class="icon ml-1 my-1 allow-hover"
+                 :alt="$gettext('Satin Stitch')"
+                 :src="require('../assets/icons/satin_stitch.png')"
+                 v-on="on"
+                 v-bind="attrs"
+                 max-width="20px"></v-img>
+        </template>
+        <span><translate>Satin Stitch</translate></span>
+      </v-tooltip>
+      <v-tooltip bottom v-if="fill_stitch" :disabled="false">
+        <template v-slot:activator="{on, attrs}">
+          <v-img class="icon ml-1 my-1 allow-hover"
+                 :alt="$gettext('Fill Stitch')"
+                 :src="require('../assets/icons/fill_stitch.png')"
+                 v-on="on"
+                 v-bind="attrs"
+                 max-width="20px"></v-img>
+        </template>
+        <span><translate>Fill Stitch</translate></span>
+      </v-tooltip>
+      <v-tooltip bottom v-if="clone" :disabled="false">
+        <template v-slot:activator="{on, attrs}">
+          <v-img class="icon ml-1 my-1 allow-hover"
+                 :alt="$gettext('Clone')"
+                 :src="require('../assets/icons/clone.png')"
+                 v-on="on"
+                 v-bind="attrs"
+                 max-width="20px"></v-img>
+        </template>
+        <span><translate>Clone</translate></span>
+      </v-tooltip>
+      <v-tooltip bottom v-if="polyline" :disabled="false">
+        <template v-slot:activator="{on, attrs}">
+          <v-img class="icon ml-1 my-1 allow-hover"
+                 :alt="$gettext('Polyline')"
+                 :src="require('../assets/icons/manual_stitch.png')"
+                 v-on="on"
+                 v-bind="attrs"
+                 max-width="20px"></v-img>
+        </template>
+        <span><translate>Polyline</translate></span>
+      </v-tooltip>
+      <v-tooltip bottom v-if="manual_stitch" :disabled="false">
+        <template v-slot:activator="{on, attrs}">
+          <v-img class="icon ml-1 my-1 allow-hover"
+                 :alt="$gettext('Manual Stitch')"
+                 :src="require('../assets/icons/manual_stitch.png')"
+                 v-on="on"
+                 v-bind="attrs"
+                 max-width="20px"></v-img>
+        </template>
+        <span><translate>Manual Stitch</translate></span>
+      </v-tooltip>
     </v-card-actions>
   </v-card>
 </template>
 
 <script>
-const inkStitch = require("../../lib/api")
+const inkStitch = require('../../lib/api')
 
 export default {
-  name: "ParamsThumbnail",
+  name: 'ParamsThumbnail',
   props: {
     node_id: String,
     name: String,
-    selected: Array,
+    selected: String
   },
   data: function () {
     return {
@@ -49,11 +110,11 @@ export default {
       if (this.visible) {
         return `${inkStitch.url}/params/thumbnail/${this.node_id}`
       } else {
-        return ""
+        return ''
       }
     },
     is_selected() {
-      return this.selected.some(object_type => this[object_type])
+      return this[this.selected]
     }
   },
   created: function () {
@@ -96,5 +157,6 @@ export default {
 .allow-hover {
   pointer-events: auto;
   user-select: auto;
+  cursor: default;
 }
 </style>

@@ -5,8 +5,11 @@
 </template>
 
 <script>
+import {ParamsTabMixin} from '../../lib/mixins'
+
 export default {
-  name: "CloneTab"
+  name: "CloneTab",
+  mixins: [ParamsTabMixin]
 }
 </script>
 

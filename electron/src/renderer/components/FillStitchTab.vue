@@ -5,8 +5,11 @@
 </template>
 
 <script>
+import {ParamsTabMixin} from '../../lib/mixins'
+
 export default {
-  name: "FillStitchTab"
+  name: "FillStitchTab",
+  mixins: [ParamsTabMixin]
 }
 </script>
 
