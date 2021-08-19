@@ -47,7 +47,7 @@ class LettersToFont(InkstitchExtension):
                 INKSCAPE_GROUPMODE: "layer",
                 "transform": get_correction_transform(document, child=True)
             })
-            group.insert(0, letter[-1])
+            group.insert(0, letter)
             document.insert(0, group)
             group.set('style', 'display:none')
 
@@ -63,9 +63,10 @@ class LettersToFont(InkstitchExtension):
 
     def get_glyph_element(self, glyph):
         stitch_plan = generate_stitch_plan(str(glyph))
-        # we received a stitch plan wrapped in an svg document, we only need the last group
-        stitch_plan = stitch_plan.getchildren()
-        return stitch_plan[-1]
+        # we received a stitch plan wrapped in an svg document, we only need the stitch_plan group
+        # this group carries the name of the file, so we can search for it.
+        stitch_plan = stitch_plan.xpath('.//*[@inkscape:label="%s"]' % os.path.basename(glyph), namespaces=inkex.NSS)[0]
+        return stitch_plan
 
     def insert_baseline(self, document):
         document.namedview.new_guide(position=0.0, name="baseline")

@@ -13,6 +13,7 @@ import pyembroidery
 from ..i18n import _
 from ..svg import PIXELS_PER_MM, render_stitch_plan
 from ..svg.tags import INKSCAPE_LABEL
+from .stitch import Stitch
 from .stitch_plan import StitchPlan
 
 
@@ -26,7 +27,7 @@ def generate_stitch_plan(embroidery_file):
         color_block = stitch_plan.new_color_block(thread)
         for x, y, command in raw_stitches:
             if command == pyembroidery.STITCH:
-                color_block.add_stitch(x * PIXELS_PER_MM / 10.0, y * PIXELS_PER_MM / 10.0)
+                color_block.add_stitch(Stitch(x * PIXELS_PER_MM / 10.0, y * PIXELS_PER_MM / 10.0))
             if len(color_block) > 0:
                 if command == pyembroidery.TRIM:
                     color_block.add_stitch(trim=True)

@@ -12,7 +12,7 @@
         </effects-menu>
     </effect>
     <param name="header" type="description" appearance="header" indent="1" >
-        {% trans %}Includes all letters of an existing embroidery font (one file for each letter) into the document in order to make it available for the Ink/Stitch lettering system.{% endtrans %}
+        {% trans %}Includes all letters of a predigitized embroidery font (one file for each letter) into the document in order to make it available for the Ink/Stitch lettering system.{% endtrans %}
     </param>
     <param name="file-description" type="description" indent="1" >
         {% trans %}Embroidery files need to have the name of the letter right before the file extension. E.g. A.dst or Example_Font_A.dst will be recognized as the letter A.{% endtrans %}
