@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-08-17 00:51+0000\n"
-"PO-Revision-Date: 2021-08-19 00:47\n"
+"PO-Revision-Date: 2021-08-20 00:52\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -25,18 +25,18 @@ msgstr ""
 #. name of font in fonts/amita
 #: inkstitch-fonts-metadata.py:2
 msgid "Amita"
-msgstr ""
+msgstr "Amita"
 
 #. description of font in fonts/amita
 #: inkstitch-fonts-metadata.py:4
 #, python-format
 msgid "Amita bold. The capital M is 25.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 160%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Amita Negrita. La \"M\" mayúscula tiene 25,3 milímetros de ancho a una escala del 100%. Puede ser escalada entre el 80% y el 160%. Cada satinado tine un zigzag por debajo."
 
 #. name of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:6
 msgid "Apex Lake"
-msgstr ""
+msgstr "Apex Lake"
 
 #. description of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:8
@@ -46,55 +46,55 @@ msgstr ""
 #. name of font in fonts/baumans
 #: inkstitch-fonts-metadata.py:10
 msgid "Baumans"
-msgstr ""
+msgstr "Baumans"
 
 #. description of font in fonts/baumans
 #: inkstitch-fonts-metadata.py:12
 #, python-format
 msgid "The capital M is 22.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 150%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Amita Negrita. La \"M\" mayúscula tiene 22,3 milímetros de ancho a una escala del 100%. Puede ser escalada entre el 80% y el 150%. Cada satinado tine un zigzag por debajo."
 
 #. name of font in fonts/chopin
 #: inkstitch-fonts-metadata.py:14
 msgid "Chopin Script"
-msgstr ""
+msgstr "Chopin Script"
 
 #. description of font in fonts/chopin
 #: inkstitch-fonts-metadata.py:16
 #, python-format
 msgid "The capital M is 38.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 120%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "La \"M\" mayúscula tiene 38,3 milímetros de ancho a una escala del 100%. Puede ser escalada entre el 80% y el 120%. Cada satinado tiene un zigzag debajo."
 
 #. name of font in fonts/coronaviral
 #: inkstitch-fonts-metadata.py:18
 msgid "Coronaviral"
-msgstr ""
+msgstr "Coronaviral"
 
 #. description of font in fonts/coronaviral
 #: inkstitch-fonts-metadata.py:20
 msgid "A font created with manual sitch. Do not change the size or very little. The capital em is 22mm wide at 100%"
-msgstr ""
+msgstr "Está fuente es creada con puntada manual. No cambie el tamaño o si lo hace, muy poco. La \"M\" mayúscula tiene 22 mm de ancho a una escala del 100%"
 
 #. name of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:22
 msgid "Dejavu Serif"
-msgstr ""
+msgstr "Dejavu Serif"
 
 #. description of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:24
 #, python-format
 msgid "DejaVu Serif Condensed. The capital M is 19,8 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 150%.  Every satin has center-walk underlay."
-msgstr ""
+msgstr "DejaVu Serif Condensada. La letra M tiene 19,8 milímetros de ancho a una escala del 100%. Puede ser escalada entre el 80% y el 150%. Cada satinado tiene un base en el centro por debajo."
 
 #. name of font in fonts/digory_doodles_bean
 #: inkstitch-fonts-metadata.py:26
 msgid "Digory Doodles Bean"
-msgstr ""
+msgstr "Digory Doodles Bean"
 
 #. description of font in fonts/digory_doodles_bean
 #: inkstitch-fonts-metadata.py:28
 msgid "All letteres have mixed satin and bean stitch; The capital M is 16mm tall. The small x is 7 mm"
-msgstr ""
+msgstr "Todas las letras tienen una mezcla de puntada satinada y puntada triple. La letra M mayúscula mide 16 mm de alto. La x minúscula tiene 7 mm"
 
 #. name of font in fonts/emilio_20
 #: inkstitch-fonts-metadata.py:30
@@ -105,42 +105,42 @@ msgstr "Emilio 20"
 #: inkstitch-fonts-metadata.py:32
 #, python-format
 msgid "Emilio 20 is a font with capital only ans numbers. M is 48.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 140%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Emilio 20 es una fuente con mayúsculas y números. La letra M mayúscula, tiene 48,5 milímetros de ancho a una escala del 100%. Puede escalrse desde el 70% al 140%. Cada satén tiene una base en zigzag"
 
 #. name of font in fonts/espresso_dolce
 #: inkstitch-fonts-metadata.py:34
 msgid "Espresso Dolce"
-msgstr ""
+msgstr "Expresso Dolce"
 
 #. description of font in fonts/espresso_dolce
 #: inkstitch-fonts-metadata.py:36
 msgid "The capital M is 16.2 mm high at 100 scale. Every satin has zigzag underlay. x is 11.5 mm high, q is 17.5 mm high, l is 17.2 mm high."
-msgstr ""
+msgstr "La letra \"M\" mayúscula tiene 16,2 mm a una escala del 100%. Cada satén tiene un Zigzag debajo. La letra minúscula \"x\"tiene 11,5 mm de alto, \"q\" tiene 17,5 mm y \"l\" tiene 17,2 mm de alto."
 
 #. name of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:38
 msgid "Geneva Simple Sans Rounded"
-msgstr ""
+msgstr "Geneva Simple Sans Rounded"
 
 #. description of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:40
 msgid "Suitable for small fonts (8 to 20 mm)"
-msgstr ""
+msgstr "Adecuada para fuentes pequeñas (de 8 a 20mm)"
 
 #. name of font in fonts/geneva_simple
 #: inkstitch-fonts-metadata.py:42
 msgid "Geneva Simple Sans"
-msgstr ""
+msgstr "Geneva Simple Sans"
 
 #. description of font in fonts/geneva_simple
 #: inkstitch-fonts-metadata.py:44
 msgid "Suitable for small fonts (6 to 15mm)"
-msgstr ""
+msgstr "Adecuada para fuentes pequeñas ( de 6 a 15mm)"
 
 #. name of font in fonts/kaushan_script
 #: inkstitch-fonts-metadata.py:46
 msgid "Kaushan Script"
-msgstr ""
+msgstr "Kaushan Script"
 
 #. description of font in fonts/kaushan_script
 #: inkstitch-fonts-metadata.py:48
@@ -2466,11 +2466,11 @@ msgstr ""
 
 #: templates/print.xml:3
 msgid "PDF Export"
-msgstr ""
+msgstr "Exportar PDF"
 
 #: templates/remove_embroidery_settings.xml:3
 msgid "Remove embroidery settings"
-msgstr ""
+msgstr "Eliminar todos los ajustes del bordado"
 
 #: templates/remove_embroidery_settings.xml:5
 msgid "Use this extension to remove the information Ink/Stitch has stored in your document.  This can be especially useful if you copy and paste objects from an embroidery design into another document."
@@ -2623,80 +2623,80 @@ msgstr ""
 
 #: electron/src/renderer/components/Simulator.vue:199
 msgid "jumps"
-msgstr ""
+msgstr "saltos"
 
 #. name for this keyboard key: -
 #: electron/src/renderer/components/Simulator.vue:76
 msgid "Minus"
-msgstr ""
+msgstr "Menos"
 
 #: electron/src/renderer/components/Simulator.vue:215
 msgid "needle points"
-msgstr ""
+msgstr "puntos de la aguja"
 
 #. description of keyboard shortcut that moves one stitch backward in simulator
 #: electron/src/renderer/components/Simulator.vue:71
 msgid "One step backward"
-msgstr ""
+msgstr "Un paso atrás"
 
 #. description of keyboard shortcut that moves one stitch forward in simulator
 #: electron/src/renderer/components/Simulator.vue:84
 msgid "One step forward"
-msgstr ""
+msgstr "Un paso hacia delante"
 
 #. name for page down keyboard key
 #: electron/src/renderer/components/Simulator.vue:99
 msgid "Page down (PgDn)"
-msgstr ""
+msgstr "Página para abajo (PgDn)"
 
 #. name for page up keyboard key
 #: electron/src/renderer/components/Simulator.vue:108
 msgid "Page up (PgUp)"
-msgstr ""
+msgstr "Página para arriba (PgUp)"
 
 #: electron/src/renderer/components/Simulator.vue:40
 msgid "Play"
-msgstr ""
+msgstr "Play"
 
 #: electron/src/renderer/components/Simulator.vue:49
 msgid "Play backward"
-msgstr ""
+msgstr "Play marcha atrás"
 
 #: electron/src/renderer/components/Simulator.vue:60
 msgid "Play forward"
-msgstr ""
+msgstr "Empezar adelante"
 
 #: electron/src/renderer/components/Simulator.vue:220
 msgid "realistic"
-msgstr ""
+msgstr "realista"
 
 #: electron/src/renderer/components/Simulator.vue:260
 msgid "Rendering stitch-plan..."
-msgstr ""
+msgstr "Renderizando plan de bordado..."
 
 #: electron/src/renderer/components/Simulator.vue:21
 msgid "Shortcut Key"
-msgstr ""
+msgstr "Tecla de acceso rápido"
 
 #: electron/src/renderer/components/Simulator.vue:192
 msgid "Show"
-msgstr ""
+msgstr "Mostrar"
 
 #: electron/src/renderer/components/Simulator.vue:10
 msgid "Simulator Shortcut Keys"
-msgstr ""
+msgstr "Teclas de método abreviado del simulador"
 
 #: electron/src/renderer/components/Simulator.vue:115
 msgid "Slow down"
-msgstr ""
+msgstr "Despacio"
 
 #: electron/src/renderer/components/Simulator.vue:32
 msgid "Space"
-msgstr ""
+msgstr "Espacio"
 
 #: electron/src/renderer/components/Simulator.vue:126
 msgid "Speed up"
-msgstr ""
+msgstr "Acelerado"
 
 #: electron/src/renderer/components/Simulator.vue:174
 msgid "Speed: %{speed} stitch/sec"
@@ -2706,9 +2706,9 @@ msgstr[1] ""
 
 #: electron/src/renderer/components/Simulator.vue:206
 msgid "stops"
-msgstr ""
+msgstr "stop"
 
 #: electron/src/renderer/components/InstallPalettes.vue:60
 msgid "Try again"
-msgstr ""
+msgstr "Intentar de nuevo"
 
