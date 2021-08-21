@@ -7,7 +7,7 @@
           <translate>Stitch every node in the path. Stitch length and zig-zag spacing are ignored.</translate>
         </template>
       </param-row>
-      <param-row v-bind:value.sync="params.running_stitch_length" :changed.sync="changed.running_stitch_length" unit="mm">
+      <param-row v-bind:value.sync="params.running_stitch_length" :changed.sync="changed.running_stitch_length_mm" unit="mm">
         <translate>Running stitch length</translate>
       </param-row>
       <param-row v-bind:value.sync="params.bean_stitch_repeats" :changed.sync="changed.bean_stitch_repeats" type="checkbox">
@@ -22,37 +22,38 @@
           <p>
             <translate>A value of 2 would quintuple each stitch, etc.</translate>
           </p>
-          </translate>
         </template>
       </param-row>
-
+      <param-row v-bind:value.sync="params.repeats" :changed.sync="changed.repeats" type="text">
+        <translate>Repeats</translate>
+        <template v-slot:tooltip>
+          <translate>Defines how many times to run down and back along the path.</translate>
+        </template>
+      </param-row>
     </params-table>
   </v-card>
 </template>
 
 <script>
-import {ParamsTabMixin} from '../../lib/mixins'
-import ParamsTable from './ParamsTable.vue'
-import ParamRow from './ParamRow.vue'
+import {ParamsTabMixin} from '../lib/mixins'
 
 export default {
   name: 'RunningStitchTab',
-  components: {
-    ParamsTable,
-    ParamRow
-  },
+  element_type: "running_stitch",
   mixins: [ParamsTabMixin],
   data: function () {
     return {
       "params": {
         manual_stitch_placement: null,
-        running_stitch_length: null,
-        bean_stitch_repeats: null
+        running_stitch_length_mm: null,
+        bean_stitch_repeats: null,
+        repeats: null
       },
       changed: {
         manual_stitch_placement: false,
-        running_stitch_length: false,
-        bean_stitch_repeats: false
+        running_stitch_length_mm: false,
+        bean_stitch_repeats: false,
+        repeats: false
       }
     }
   },

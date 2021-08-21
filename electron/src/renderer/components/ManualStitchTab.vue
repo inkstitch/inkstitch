@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import {ParamsTabMixin} from '../../lib/mixins'
+import {ParamsTabMixin} from '../lib/mixins'
 
 export default {
   name: "ManualStitchTab",

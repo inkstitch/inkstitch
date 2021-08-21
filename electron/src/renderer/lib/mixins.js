@@ -6,10 +6,16 @@
  *
  */
 
-const inkStitch = require('./api')
+const inkStitch = require('../../lib/api')
+import ParamsTable from '../components/ParamsTable.vue'
+import ParamRow from '../components/ParamRow.vue'
 
 const ParamsTabMixin = {
-  element_type: null, // define this in the component
+  element_type: null, // define this in the component, example: running_stitch
+  components: {
+    ParamsTable,
+    ParamRow
+  },
   data: function () {
     return {
       params: {},
