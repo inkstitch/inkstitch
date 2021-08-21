@@ -1,18 +1,18 @@
 <template>
-  <v-container fluid>
-    <v-row no-gutters>
+  <v-container class="grow d-flex flex-column flex-nowrap container" style="min-height: 100vh; min-width: 100vw">
+    <v-row class="shrink">
       <v-col cols="12">
-        <v-card class="pa-2 ma-2">
+        <v-card class="pa-2">
           <div class="node-list material-scrollbar py-2">
             <params-thumbnail v-for="node in nodes" :key="node.id" class="thumbnail" :selected="selected" v-bind="node"></params-thumbnail>
           </div>
         </v-card>
       </v-col>
     </v-row>
-    <v-row no-gutters>
+    <v-row class="grow">
       <v-col cols="12">
-        <v-card class="pa-0 ma-2">
-          <v-tabs v-model="tab" class="main-tabs" vertical
+        <v-card class="pa-0 fill-height">
+          <v-tabs v-model="tab" class="main-tabs fill-height" vertical
                   background-color="grey lighten-5">
             <v-tab key="helper" style="display: none">
             </v-tab>
@@ -55,7 +55,9 @@
               <running-stitch-tab ref="runningStitchTab" class="params-tab"/>
             </v-tab-item>
             <v-tab-item v-if="num_nodes.satin_stitch" key="satin_stitch">
-              <satin-stitch-tab ref="satinStitchTab" v-on:enable-manual-stitch="enable_manual_stitch" class="params-tab"/>
+              <div class="params-tab-container">
+                <satin-stitch-tab ref="satinStitchTab" v-on:enable-manual-stitch="enable_manual_stitch" class="params-tab"/>
+              </div>
             </v-tab-item>
             <v-tab-item v-if="num_nodes.fill_stitch">
               <fill-stitch-tab ref="fillStitchTab" class="params-tab"/>
@@ -73,14 +75,14 @@
         </v-card>
       </v-col>
     </v-row>
-    <v-row no-gutters>
+    <v-row class="shrink">
       <v-col cols="12">
-        <presets-panel class="pa-0 ma-2"></presets-panel>
+        <presets-panel class="pa-0"></presets-panel>
       </v-col>
     </v-row>
-    <v-row no-gutters>
+    <v-row class="shrink">
       <v-col cols="12">
-        <v-card flat class="pa-0 ma-2">
+        <v-card flat class="pa-0">
           <v-card-actions>
             <v-spacer></v-spacer>
             <v-btn v-on:click="apply" text color="primary">
@@ -187,11 +189,6 @@ export default {
   white-space: nowrap;
 }
 
-.params-tab {
-  overflow-y: auto;
-  max-height: 50vh;
-}
-
 .node-list div.v-card {
   vertical-align: top;
   display: inline-block;
@@ -215,6 +212,26 @@ export default {
 
 .main-tabs .v-tab {
   justify-content: left;
+}
+
+/* These next two make it so that the params tab takes up all available height but doesn't cause
+   the whole page to scroll.  It gets a scrollbar when it has more content than will fit.
+ */
+.params-tab {
+  overflow-y: scroll;
+
+  /* I don't really understand this.  I found it on stack overflow.  Somehow this
+     works when max-height: 100% doesn't.
+   */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.main-tabs::v-deep .v-window__container {
+  height: 100% !important;
 }
 
 </style>
