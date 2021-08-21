@@ -3579,7 +3579,7 @@ detect-indent@^4.0.0:
   dependencies:
     repeating "^2.0.0"
 
-detect-libc@^1.0.2, detect-libc@^1.0.3:
+detect-libc@^1.0.2:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/detect-libc/-/detect-libc-1.0.3.tgz#fa137c4bd698edf55cd5cd02ac559f91a4c4ba9b"
   integrity sha1-+hN8S9aY7fVc1c0CrFWfkaTEups=
@@ -4657,13 +4657,6 @@ fd-slicer@~1.0.1:
   integrity sha1-i1vL2ewyfFBBv5qwI/1nUPEXfmU=
   dependencies:
     pend "~1.2.0"
-
-fibers@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/fibers/-/fibers-5.0.0.tgz#3a60e0695b3ee5f6db94e62726716fa7a59acc41"
-  integrity sha512-UpGv/YAZp7mhKHxDvC1tColrroGRX90sSvh8RMZV9leo+e5+EkRVgCEZPlmXeo3BUNQTZxUaVdLskq1Q2FyCPg==
-  dependencies:
-    detect-libc "^1.0.3"
 
 figgy-pudding@^3.5.1:
   version "3.5.1"
@@ -10589,6 +10582,11 @@ vue-loading-overlay@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/vue-loading-overlay/-/vue-loading-overlay-3.2.0.tgz#7896f195e26a8d915219139a096367c9ad2c3c61"
   integrity sha512-QBHa+vwcQ3k3oKp4pucP7RHWHSQvgVWFlDFqSaXLu+kCuEv1PZCoerAo1T04enF5y9yMFCqh7L9ChrWHy7HYvA==
+
+vue-multipane@^0.9.5:
+  version "0.9.5"
+  resolved "https://registry.yarnpkg.com/vue-multipane/-/vue-multipane-0.9.5.tgz#10ddaf9092e0a9e761edfd0d1f1db8bbb54b3e9c"
+  integrity sha512-4sr6POXY82VMzprQWGNMzTIBGGYEi7nG0uGQb6AYr8o0ngIsYCDPh/gmgms8NVsZzG28b7kn3tQhKP27cbbLdw==
 
 vue-property-decorator@^8.0.0:
   version "8.2.1"

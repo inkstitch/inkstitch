@@ -52,6 +52,7 @@
     "vue": "^2.5.16",
     "vue-gettext": "^2.1.5",
     "vue-loading-overlay": "^3.2.0",
+    "vue-multipane": "^0.9.5",
     "vue-router": "^3.0.1",
     "vue-slider-component": "^3.0.38",
     "vue2-transitions": "^0.3.0",
