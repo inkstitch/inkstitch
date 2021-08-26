@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-08-17 00:51+0000\n"
-"PO-Revision-Date: 2021-08-20 00:52\n"
+"PO-Revision-Date: 2021-08-26 00:51\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -660,27 +660,27 @@ msgstr "* Alternativement, redessinez l'image avec l'outil stylo (P) ou bézier 
 
 #: lib/elements/pattern.py:14
 msgid "Pattern Element"
-msgstr ""
+msgstr "Élément de motif"
 
 #: lib/elements/pattern.py:15
 msgid "This element will not be embroidered. It will appear as a pattern applied to objects in the same group as it.  Objects in sub-groups will be ignored."
-msgstr ""
+msgstr "Cet élément ne sera pas brodé. Il apparaîtra comme un motif appliqué aux objets du même groupe que lui.  Les objets des sous-groupes seront ignorés."
 
 #: lib/elements/pattern.py:19
 msgid "To disable pattern mode, remove the pattern marker:"
-msgstr ""
+msgstr "Pour désactiver le mode motif, retirez le marqueur de motif :"
 
 #: lib/elements/pattern.py:20
 msgid "* Open the Fill and Stroke panel (Objects > Fill and Stroke)"
-msgstr ""
+msgstr "* Ouvrez le panneau Fond et contour(Objet > Fond et contour)"
 
 #: lib/elements/pattern.py:21
 msgid "* Go to the Stroke style tab"
-msgstr ""
+msgstr "* Allez dans l'onglet Contour"
 
 #: lib/elements/pattern.py:22
 msgid "* Under \"Markers\" choose the first (empty) option in the first dropdown list."
-msgstr ""
+msgstr "* Sous \"Marqueurs\", choisissez la première option (vide) dans la première liste déroulante."
 
 #: lib/elements/polyline.py:18
 msgid "Polyline Object"
@@ -804,11 +804,11 @@ msgstr "Point « E »"
 
 #: lib/elements/satin_column.py:86
 msgid "Maximum stitch length"
-msgstr ""
+msgstr "Longueur maximale du point"
 
 #: lib/elements/satin_column.py:87
 msgid "Maximum stitch length for split stitches."
-msgstr ""
+msgstr "Longueur maximale du point pour les points brisés."
 
 #: lib/elements/satin_column.py:98 lib/elements/stroke.py:62
 msgid "Zig-zag spacing (peak-to-peak)"
@@ -970,7 +970,7 @@ msgstr "Il n'y a aucun objet dans tout le document sur lequel Ink/Stitch sait qu
 
 #: lib/extensions/base.py:128
 msgid "Tip: Run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot Objects"
-msgstr ""
+msgstr "Conseil : Exécutez Extensions > Ink/Stitch > Résolution de problèmes > Dépistage de problèmes avec des objets"
 
 #: lib/extensions/break_apart.py:31
 msgid "Please select one or more fill areas to break apart."
@@ -1049,15 +1049,15 @@ msgstr "Le fichier n'existe pas et ne peut être ouvert. Veuillez corriger le ch
 
 #: lib/extensions/install_custom_palette.py:24
 msgid "File does not exist."
-msgstr ""
+msgstr "Le fichier n'existe pas."
 
 #: lib/extensions/install_custom_palette.py:28
 msgid "Wrong file type. Ink/Stitch only accepts gpl color palettes."
-msgstr ""
+msgstr "Mauvais type de fichier. Ink/Stitch n'accepte que les palettes de couleurs de type gpl."
 
 #: lib/extensions/install_custom_palette.py:36
 msgid "Ink/Stitch cannot find your palette folder automatically. Please install your palette manually."
-msgstr ""
+msgstr "Ink/Stitch ne peut pas automatiquement trouver votre dossier de palette . Veuillez installer votre palette manuellement."
 
 #: lib/extensions/layer_commands.py:20
 msgid "Please choose one or more commands to add."
@@ -1185,7 +1185,7 @@ msgstr "Utiliser les derniers paramètres"
 
 #: lib/extensions/selection_to_pattern.py:21
 msgid "Please select at least one object to be marked as a pattern."
-msgstr ""
+msgstr "Veuillez sélectionner au moins un objet à marquer comme un motif."
 
 #: lib/extensions/troubleshoot.py:45
 msgid "All selected shapes are valid! "
@@ -1235,7 +1235,7 @@ msgstr "Avertissements sur les types d'objets"
 
 #: lib/extensions/troubleshoot.py:161
 msgid "These objects may not work properly with Ink/Stitch. Follow the instructions to correct unwanted behaviour."
-msgstr ""
+msgstr "Ces objets peuvent ne pas fonctionner correctement avec Ink/Stitch. Suivez les instructions pour corriger le comportement indésirable."
 
 #: lib/extensions/troubleshoot.py:177
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
@@ -1469,7 +1469,7 @@ msgstr "Ink/Stitch Version: %s"
 
 #: lib/utils/version.py:21
 msgid "Ink/Stitch Version: unknown"
-msgstr ""
+msgstr "Version de lnk/Stitch : inconnue"
 
 #: print/templates/color_swatch.html:8 print/templates/color_swatch.html:40
 #: print/templates/operator_detailedview.html:9
@@ -2188,15 +2188,15 @@ msgstr "Installer des palettes de couleurs de fils à broder pour Inkscape"
 
 #: templates/install_custom_palette.xml:3
 msgid "Install custom palette"
-msgstr ""
+msgstr "Installer une palette personnalisée"
 
 #: templates/install_custom_palette.xml:6
 msgid "Choose a .gpl color palette file to install into Inkscape."
-msgstr ""
+msgstr "Choisissez un fichier de palette de couleurs .gpl à installer dans Inkscape."
 
 #: templates/install_custom_palette.xml:7
 msgid "Restart Inkscape to use."
-msgstr ""
+msgstr "Redémarrez Inkscape pour l'utiliser."
 
 #: templates/layer_commands.xml:3
 msgid "Add Layer Commands"
@@ -2504,7 +2504,7 @@ msgstr "Réempiler les objets dans l'ordre de sélection"
 
 #: templates/selection_to_pattern.xml:3
 msgid "Selection to pattern"
-msgstr ""
+msgstr "Sélection vers motif"
 
 #: templates/simulator.xml:3
 msgid "Simulator / Realistic Preview"
