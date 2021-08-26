@@ -9,12 +9,13 @@ from copy import deepcopy
 
 import inkex
 
+from ..commands import ensure_symbol
 from ..elements import nodes_to_elements
 from ..exceptions import InkstitchException
 from ..extensions.lettering_custom_font_dir import get_custom_font_dir
 from ..i18n import _, get_languages
 from ..stitches.auto_satin import auto_satin
-from ..svg.tags import INKSCAPE_LABEL, SVG_PATH_TAG
+from ..svg.tags import INKSCAPE_LABEL, SVG_PATH_TAG, SVG_USE_TAG, XLINK_HREF
 from ..utils import Point
 from .font_variant import FontVariant
 
@@ -220,6 +221,8 @@ class Font(object):
 
                 element.set('style', '%s%s%s' % (style.to_str(), stroke_width, dash_array))
 
+        self.ensure_command_symbols(destination_group)
+
         return destination_group
 
     def get_variant(self, variant):
@@ -304,6 +307,18 @@ class Font(object):
         position.x += self.horiz_adv_x.get(character, horiz_adv_x_default) - glyph.min_x
 
         return node
+
+    def ensure_command_symbols(self, group):
+        # search commands
+        commands = set()
+        for element in group.iterdescendants(SVG_USE_TAG):
+            xlink = element.get(XLINK_HREF, ' ')
+            if xlink.startswith('#inkstitch_'):
+                commands.add(xlink[11:])
+
+        # insert commands
+        for command in commands:
+            ensure_symbol(group.getroottree().getroot(), command)
 
     def _apply_auto_satin(self, group, trim):
         """Apply Auto-Satin to an SVG XML node tree with an svg:g at its root.

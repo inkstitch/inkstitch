@@ -7,8 +7,8 @@ from copy import copy
 
 from inkex import paths, transforms
 
-from ..svg import get_guides
-from ..svg.tags import SVG_GROUP_TAG, SVG_PATH_TAG
+from ..svg import get_correction_transform, get_guides
+from ..svg.tags import SVG_GROUP_TAG, SVG_PATH_TAG, SVG_USE_TAG
 
 
 class Glyph(object):
@@ -52,7 +52,8 @@ class Glyph(object):
                 node_copy = copy(node)
 
                 if "d" in node.attrib:
-                    node_copy.path = node.path.transform(node.composed_transform()).to_absolute()
+                    transform = -transforms.Transform(get_correction_transform(node, True))
+                    node_copy.path = node.path.transform(transform).to_absolute()
 
                 # Delete transforms from paths and groups, since we applied
                 # them to the paths already.
@@ -87,3 +88,10 @@ class Glyph(object):
             path = path.transform(transform)
             node.set('d', str(path))
             node.attrib.pop('transform', None)
+
+        # Move commands as well
+        # TODO: if a glyph is inserted twice, commands will be broken (changed ids on duplicated elements)
+        for node in self.node.iter(SVG_USE_TAG):
+            x, y = transform.apply_to_point((node.get('x'), node.get('y')))
+            node.set('x', x)
+            node.set('y', y)
