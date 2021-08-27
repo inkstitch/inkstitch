@@ -6,6 +6,7 @@
 import json
 import os
 from copy import deepcopy
+from random import randint
 
 import inkex
 
@@ -15,7 +16,8 @@ from ..exceptions import InkstitchException
 from ..extensions.lettering_custom_font_dir import get_custom_font_dir
 from ..i18n import _, get_languages
 from ..stitches.auto_satin import auto_satin
-from ..svg.tags import INKSCAPE_LABEL, SVG_PATH_TAG, SVG_USE_TAG, XLINK_HREF
+from ..svg.tags import (CONNECTION_END, CONNECTION_START, INKSCAPE_LABEL,
+                        SVG_PATH_TAG, SVG_USE_TAG, XLINK_HREF)
 from ..utils import Point
 from .font_variant import FontVariant
 
@@ -221,7 +223,7 @@ class Font(object):
 
                 element.set('style', '%s%s%s' % (style.to_str(), stroke_width, dash_array))
 
-        self.ensure_command_symbols(destination_group)
+        self._ensure_command_symbols(destination_group)
 
         return destination_group
 
@@ -306,17 +308,36 @@ class Font(object):
 
         position.x += self.horiz_adv_x.get(character, horiz_adv_x_default) - glyph.min_x
 
+        self._update_commands(node, glyph)
+
         return node
 
-    def ensure_command_symbols(self, group):
-        # search commands
+    def _update_commands(self, node, glyph):
+        for element, connectors in glyph.commands.items():
+            # update element
+            el = node.find(".//*[@id='%s']" % element)
+            # we cannot get a unique id from the document at this point
+            # so let's create a random id which will most probably work as well
+            new_element_id = "%s_%s" % (element, randint(0, 9999))
+            el.set_id(new_element_id)
+            for connector, symbol in connectors:
+                # update symbol
+                new_symbol_id = "%s_%s" % (symbol, randint(0, 9999))
+                s = node.find(".//*[@id='%s']" % symbol)
+                s.set_id(new_symbol_id)
+                # update connector
+                c = node.find(".//*[@id='%s']" % connector)
+                c.set(CONNECTION_END, "#%s" % new_element_id)
+                c.set(CONNECTION_START, "#%s" % new_symbol_id)
+
+    def _ensure_command_symbols(self, group):
+        # collect commands
         commands = set()
         for element in group.iterdescendants(SVG_USE_TAG):
             xlink = element.get(XLINK_HREF, ' ')
             if xlink.startswith('#inkstitch_'):
                 commands.add(xlink[11:])
-
-        # insert commands
+        # make sure all necessary command symbols are in the document
         for command in commands:
             ensure_symbol(group.getroottree().getroot(), command)
 

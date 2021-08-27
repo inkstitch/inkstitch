@@ -8,7 +8,8 @@ from copy import copy
 from inkex import paths, transforms
 
 from ..svg import get_correction_transform, get_guides
-from ..svg.tags import SVG_GROUP_TAG, SVG_PATH_TAG, SVG_USE_TAG
+from ..svg.tags import (CONNECTION_END, SVG_GROUP_TAG, SVG_PATH_TAG,
+                        SVG_USE_TAG, XLINK_HREF)
 
 
 class Glyph(object):
@@ -38,6 +39,7 @@ class Glyph(object):
         self.node = self._process_group(group)
         self._process_bbox()
         self._move_to_origin()
+        self._process_commands()
 
     def _process_group(self, group):
         new_group = copy(group)
@@ -50,10 +52,15 @@ class Glyph(object):
                 new_group.append(self._process_group(node))
             else:
                 node_copy = copy(node)
+                transform = -transforms.Transform(get_correction_transform(node, True))
 
                 if "d" in node.attrib:
-                    transform = -transforms.Transform(get_correction_transform(node, True))
                     node_copy.path = node.path.transform(transform).to_absolute()
+
+                if node.tag == SVG_USE_TAG:
+                    x, y = transform.apply_to_point((node.get('x'), node.get('y')))
+                    node_copy.set('x', x)
+                    node_copy.set('y', y)
 
                 # Delete transforms from paths and groups, since we applied
                 # them to the paths already.
@@ -78,6 +85,25 @@ class Glyph(object):
         self.width = right - left
         self.min_x = left
 
+    def _process_commands(self):
+        # Save object ids with commmands in a dictionary: {object_id: [connector_id, symbol_id]}
+        self.commands = {}
+
+        for node in self.node.iter(SVG_USE_TAG):
+            xlink = node.get(XLINK_HREF, ' ')
+            if not xlink.startswith('#inkstitch_'):
+                continue
+
+            try:
+                connector = self.node.xpath(".//*[@inkscape:connection-start='#%s']" % node.get('id', ' '))[0]
+                command_object = connector.get(CONNECTION_END)[1:]
+                try:
+                    self.commands[command_object].append([connector.get_id(), node.get_id()])
+                except KeyError:
+                    self.commands[command_object] = [[connector.get_id(), node.get_id()]]
+            except IndexError:
+                pass
+
     def _move_to_origin(self):
         translate_x = -self.min_x
         translate_y = -self.baseline
@@ -90,7 +116,6 @@ class Glyph(object):
             node.attrib.pop('transform', None)
 
         # Move commands as well
-        # TODO: if a glyph is inserted twice, commands will be broken (changed ids on duplicated elements)
         for node in self.node.iter(SVG_USE_TAG):
             x, y = transform.apply_to_point((node.get('x'), node.get('y')))
             node.set('x', x)
