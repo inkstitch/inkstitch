@@ -1,25 +1,15 @@
 <template>
   <v-card flat>
     <v-card-text>
-      <v-radio-group v-model="params.satin_column" row hide-details>
-        <v-radio :label="$gettext('satin column')" :value="true"></v-radio>
-        <v-radio :label="$gettext('basic satin')" :value="false"></v-radio>
-      </v-radio-group>
-      <v-card flat v-if="params.satin_column" key="satin_column_settings">
+      <div class="flex-center">
+        <v-radio-group v-model="params.satin_column" class="my-4" row hide-details>
+          <v-radio :label="$gettext('satin column')" :value="true"></v-radio>
+          <v-radio :label="$gettext('basic satin')" :value="false"></v-radio>
+        </v-radio-group>
+      </div>
+      <v-card v-if="params.satin_column" key="satin_column_settings">
         <v-card-text class="pt-0">
           <params-table>
-            <param-row v-bind:value.sync="params.e_stitch" :changed.sync="changed.e_stitch" type="checkbox">
-              <translate>E stitch</translate>
-              <template v-slot:tooltip>
-                <translate translate-comment="&quot;E&quot; stitch is so named because it looks like the letter E.">"E" stitch</translate>
-              </template>
-            </param-row>
-            <param-row v-bind:value.sync="params.maximum_stitch_length_mm" :changed.sync="changed.maximum_stitch_length_mm" type="text">
-              <translate>Maximum stitch length</translate>
-              <template v-slot:tooltip>
-                <translate>Maximum stitch length for split stitches.</translate>
-              </template>
-            </param-row>
             <param-row v-bind:value.sync="params.zigzag_spacing_mm" :changed.sync="changed.zigzag_spacing_mm" type="text">
               <translate>Zig-zag spacing (peak-to-peak)</translate>
               <template v-slot:tooltip>
@@ -35,6 +25,18 @@
                 <p>
                   <translate>This setting expands each pair of needle penetrations outward from the center of the satin column.</translate>
                 </p>
+              </template>
+            </param-row>
+            <param-row v-bind:value.sync="params.maximum_stitch_length_mm" :changed.sync="changed.maximum_stitch_length_mm" type="text">
+              <translate>Maximum stitch length</translate>
+              <template v-slot:tooltip>
+                <translate>Maximum stitch length for split stitches.</translate>
+              </template>
+            </param-row>
+            <param-row v-bind:value.sync="params.e_stitch" :changed.sync="changed.e_stitch" type="checkbox">
+              <translate>E stitch</translate>
+              <template v-slot:tooltip>
+                <translate translate-comment="&quot;E&quot; stitch is so named because it looks like the letter E.">"E" stitch</translate>
               </template>
             </param-row>
             <param-row v-bind:value.sync="params.contour_underlay" :changed.sync="changed.contour_underlay" type="checkbox">
@@ -118,16 +120,23 @@
           </params-table>
         </v-card-text>
       </v-card>
-      <v-card flat v-else key="basic_satin_settings">
+      <v-card v-else key="basic_satin_settings">
         <v-card-text class="pt-0">
-          <v-checkbox v-model="params.setting2" :label="$gettext('setting2')" hide-details></v-checkbox>
+          <params-table>
+            <param-row v-bind:value.sync="params.zigzag_spacing_mm" :changed.sync="changed.zigzag_spacing_mm" type="text">
+              <translate>Zig-zag spacing (peak-to-peak)</translate>
+              <template v-slot:tooltip>
+                <translate>Peak-to-peak distance between zig-zags.</translate>
+              </template>
+            </param-row>
+          </params-table>
         </v-card-text>
       </v-card>
       <params-table>
         <param-row v-bind:value.sync="params.manual_stitch_placement" :changed.sync="changed.manual_stitch_placement" type="checkbox">
           <translate>Manual stitch placement</translate>
           <template v-slot:tooltip>
-            <translate>Stitch every node in the path. Stitch length and zig-zag spacing are ignored.</translate>
+            <translate>Stitch every node in the path. All settings above are ignored.</translate>
           </template>
         </param-row>
       </params-table>
@@ -145,7 +154,7 @@ export default {
   data: function () {
     return {
       params: {
-        satin_column: null,
+        satin_column: true,
         e_stitch: null,
         maximum_stitch_length_mm: null,
         zigzag_spacing_mm: null,
@@ -189,5 +198,11 @@ export default {
 <style scoped>
 .subtable {
   margin-left: 16px;
+}
+
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 </style>

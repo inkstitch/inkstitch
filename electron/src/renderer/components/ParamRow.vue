@@ -3,7 +3,8 @@
     <td>
       <v-tooltip right>
         <template v-slot:activator="{on, attrs}">
-          <v-btn text v-on:click="force_changed" v-on="on" v-bind="attrs">
+          <v-btn text v-on:click="force_changed" v-on="on"
+                 v-bind="attrs">
             <v-img v-if="changed"
                    :alt="$gettext('pencil icon')"
                    :src="require('../assets/icons/pencil.png')"
@@ -101,6 +102,10 @@ td.unit {
 .v-input {
   margin-top: 0px;
   padding-top: 0px;
+}
+
+tr:hover {
+  background-color: rgb(229, 238, 255);
 }
 
 </style>

@@ -14,4 +14,8 @@ export default {
 
 <style scoped>
 
+table {
+  border-spacing: 0px;
+}
+
 </style>
