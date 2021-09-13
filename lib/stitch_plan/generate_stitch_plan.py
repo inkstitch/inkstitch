@@ -17,7 +17,7 @@ from .stitch import Stitch
 from .stitch_plan import StitchPlan
 
 
-def generate_stitch_plan(embroidery_file):
+def generate_stitch_plan(embroidery_file, import_commands=True):  # noqa: C901
     validate_file_path(embroidery_file)
     pattern = pyembroidery.read(embroidery_file)
     stitch_plan = StitchPlan()
@@ -29,7 +29,11 @@ def generate_stitch_plan(embroidery_file):
             if command == pyembroidery.STITCH:
                 color_block.add_stitch(Stitch(x * PIXELS_PER_MM / 10.0, y * PIXELS_PER_MM / 10.0))
             if len(color_block) > 0:
-                if command == pyembroidery.TRIM:
+                if not import_commands and command in [pyembroidery.TRIM, pyembroidery.STOP]:
+                    # Importing commands is not wanted:
+                    # start a new color block without inserting the command
+                    color_block = stitch_plan.new_color_block(thread)
+                elif command == pyembroidery.TRIM:
                     color_block.add_stitch(trim=True)
                 elif command == pyembroidery.STOP:
                     color_block.add_stitch(stop=True)

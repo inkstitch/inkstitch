@@ -13,7 +13,7 @@ from ..commands import ensure_symbol
 from ..i18n import _
 from ..stitch_plan import generate_stitch_plan
 from ..svg import get_correction_transform
-from ..svg.tags import INKSCAPE_GROUPMODE, INKSCAPE_LABEL
+from ..svg.tags import INKSCAPE_GROUPMODE, INKSCAPE_LABEL, SVG_PATH_TAG
 from .base import InkstitchExtension
 
 
@@ -25,6 +25,7 @@ class LettersToFont(InkstitchExtension):
         InkstitchExtension.__init__(self, *args, **kwargs)
         self.arg_parser.add_argument("-d", "--font-dir", type=str, default="", dest="font_dir")
         self.arg_parser.add_argument("-f", "--file-format", type=str, default="", dest="file_format")
+        self.arg_parser.add_argument("-c", "--import-commands", type=inkex.Boolean, default=False, dest="import_commands")
 
     def effect(self):
         font_dir = self.options.font_dir
@@ -41,13 +42,20 @@ class LettersToFont(InkstitchExtension):
         for glyph in glyphs:
             letter = self.get_glyph_element(glyph)
             label = "GlyphLayer-%s" % letter.get(INKSCAPE_LABEL, ' ').split('.')[0][-1]
-
             group = inkex.Group(attrib={
                 INKSCAPE_LABEL: label,
                 INKSCAPE_GROUPMODE: "layer",
                 "transform": get_correction_transform(document, child=True)
             })
-            group.insert(0, letter)
+
+            # remove color block groups if we import without commands
+            # there will only be one object per color block anyway
+            if not self.options.import_commands:
+                for element in letter.iter(SVG_PATH_TAG):
+                    group.insert(0, element)
+            else:
+                group.insert(0, letter)
+
             document.insert(0, group)
             group.set('style', 'display:none')
 
@@ -62,7 +70,7 @@ class LettersToFont(InkstitchExtension):
         self.insert_baseline(document)
 
     def get_glyph_element(self, glyph):
-        stitch_plan = generate_stitch_plan(str(glyph))
+        stitch_plan = generate_stitch_plan(str(glyph), self.options.import_commands)
         # we received a stitch plan wrapped in an svg document, we only need the stitch_plan group
         # this group carries the name of the file, so we can search for it.
         stitch_plan = stitch_plan.xpath('.//*[@inkscape:label="%s"]' % os.path.basename(glyph), namespaces=inkex.NSS)[0]

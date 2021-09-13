@@ -5,7 +5,7 @@
 
 from copy import copy
 
-from inkex import paths, transforms
+from inkex import paths, transforms, units
 
 from ..svg import get_correction_transform, get_guides
 from ..svg.tags import (CONNECTION_END, SVG_GROUP_TAG, SVG_PATH_TAG,
@@ -57,14 +57,16 @@ class Glyph(object):
                 if "d" in node.attrib:
                     node_copy.path = node.path.transform(transform).to_absolute()
 
-                if node.tag == SVG_USE_TAG:
-                    x, y = transform.apply_to_point((node.get('x'), node.get('y')))
+                if not node.tag == SVG_USE_TAG:
+                    # Delete transforms from paths and groups, since we applied
+                    # them to the paths already.
+                    node_copy.attrib.pop('transform', None)
+                else:
+                    oldx = node.get('x', 0)
+                    oldy = node.get('y', 0)
+                    x, y = transform.apply_to_point((oldx, oldy))
                     node_copy.set('x', x)
                     node_copy.set('y', y)
-
-                # Delete transforms from paths and groups, since we applied
-                # them to the paths already.
-                node_copy.attrib.pop('transform', None)
 
                 new_group.append(node_copy)
 
@@ -80,7 +82,7 @@ class Glyph(object):
             self.baseline = 0
 
     def _process_bbox(self):
-        bbox = [paths.Path(node.get("d")).bounding_box() for node in self.node.iterdescendants(SVG_PATH_TAG)]
+        bbox = [paths.Path(node.get("d")).bounding_box() for node in self.node.iterdescendants(SVG_PATH_TAG) if not node.get(CONNECTION_END, None)]
         left, right = min([box.left for box in bbox]), max([box.right for box in bbox])
         self.width = right - left
         self.min_x = left
@@ -117,6 +119,8 @@ class Glyph(object):
 
         # Move commands as well
         for node in self.node.iter(SVG_USE_TAG):
-            x, y = transform.apply_to_point((node.get('x'), node.get('y')))
+            oldx = units.convert_unit(node.get("x", 0), 'px', node.unit)
+            oldy = units.convert_unit(node.get("y", 0), 'px', node.unit)
+            x, y = transform.apply_to_point((oldx, oldy))
             node.set('x', x)
             node.set('y', y)

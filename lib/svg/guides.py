@@ -6,8 +6,7 @@
 from inkex.units import convert_unit
 
 from ..utils import Point, cache, string_to_floats
-from .tags import (INKSCAPE_DOCUMENT_UNITS, INKSCAPE_LABEL, SODIPODI_GUIDE,
-                   SODIPODI_NAMEDVIEW)
+from .tags import INKSCAPE_LABEL, SODIPODI_GUIDE, SODIPODI_NAMEDVIEW
 
 
 class InkscapeGuide(object):
@@ -27,8 +26,7 @@ class InkscapeGuide(object):
         self.position.y = doc_size.y.size - self.position.y
 
         # convert units to px
-        namedview = _get_namedview(self.svg)
-        unit = namedview.get(INKSCAPE_DOCUMENT_UNITS) or namedview.get('units', 'px')
+        unit = self.svg.unit
         self.position.y = convert_unit(self.position.y, 'px', unit)
 
         # This one baffles me.  I think inkscape might have gotten the order of
@@ -41,13 +39,8 @@ class InkscapeGuide(object):
 def get_guides(svg):
     """Find all Inkscape guides and return as InkscapeGuide instances."""
 
-    namedview = _get_namedview(svg)
+    namedview = svg.find(SODIPODI_NAMEDVIEW)
     if namedview is None:
         return []
 
     return [InkscapeGuide(node) for node in namedview.findall(SODIPODI_GUIDE)]
-
-
-@cache
-def _get_namedview(svg):
-    return svg.find(SODIPODI_NAMEDVIEW)
