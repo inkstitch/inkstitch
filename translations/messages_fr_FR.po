@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-08-17 00:51+0000\n"
-"PO-Revision-Date: 2021-09-15 00:54\n"
+"PO-Revision-Date: 2021-09-16 00:57\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -1185,7 +1185,7 @@ msgstr "Utiliser les derniers paramètres"
 
 #: lib/extensions/selection_to_pattern.py:21
 msgid "Please select at least one object to be marked as a pattern."
-msgstr "Veuillez sélectionner au moins un objet à marquer comme un motif."
+msgstr "Veuillez sélectionner au moins un objet à marquer comme texture."
 
 #: lib/extensions/troubleshoot.py:45
 msgid "All selected shapes are valid! "
@@ -2504,7 +2504,7 @@ msgstr "Réempiler les objets dans l'ordre de sélection"
 
 #: templates/selection_to_pattern.xml:3
 msgid "Selection to pattern"
-msgstr "Sélection vers motif"
+msgstr "Sélection vers texture"
 
 #: templates/simulator.xml:3
 msgid "Simulator / Realistic Preview"
