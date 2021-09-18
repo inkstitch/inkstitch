@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <name>{% trans %}Preferences{% endtrans %}</name>
-    <id>org.inkstitch.embroider_settings.{{ locale }}</id>
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Preferences</name>
+    <id>org.inkstitch.embroider_settings</id>
     <param name="extension" type="string" gui-hidden="true">embroider_settings</param>
     <effect needs-live-preview="false">
         <object-type>all</object-type>
@@ -10,11 +10,11 @@
         </effects-menu>
     </effect>
     <param name="output_settings" type="description" appearance="header">
-        {% trans %}Output Settings{% endtrans %}
+        Output Settings
     </param>
     <param name="collapse_len_mm" type="float" precision="1" min="0" max="10" 
-           _gui-text="{% trans %}Collapse length (mm){% endtrans %}" 
-           _gui-description="{% trans %}Jump stitches smaller than this will be treated as normal stitches.{% endtrans %}">3</param>
+           _gui-text="Collapse length (mm)" 
+           _gui-description="Jump stitches smaller than this will be treated as normal stitches.">3</param>
     <script>
         {{ command_tag | safe }}
     </script>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <name>{% trans %}Troubleshoot Objects{% endtrans %}</name>
-    <id>org.inkstitch.troubleshoot.{{ locale }}</id>
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Troubleshoot Objects</name>
+    <id>org.inkstitch.troubleshoot</id>
     <param name="extension" type="string" gui-hidden="true">troubleshoot</param>
     <effect>
         <object-type>all</object-type>
         <effects-menu>
             <submenu name="Ink/Stitch">
-                <submenu name="{% trans %}Troubleshoot{% endtrans %}" />
+                <submenu name="Troubleshoot" />
             </submenu>
         </effects-menu>
     </effect>

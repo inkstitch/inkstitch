@@ -15,13 +15,14 @@ inx: version locales
 .PHONY: messages.po
 messages.po:
 	rm -f messages.po
+	xgettext inx/*.inx --its=its/inx.its -o messages-inx.po
 	bin/pyembroidery-gettext > pyembroidery-format-descriptions.py
 	bin/inkstitch-fonts-gettext > inkstitch-fonts-metadata.py
 	pybabel extract -o messages-babel.po -F babel.conf --add-location=full --add-comments=l10n,L10n,L10N --sort-by-file --strip-comments -k N_ -k '$$gettext' .
 	rm pyembroidery-format-descriptions.py inkstitch-fonts-metadata.py
 	cd electron && yarn --link-duplicates --pure-lockfile
 	find electron/src -name '*.html' -o -name '*.js' -o -name '*.vue' | xargs electron/node_modules/.bin/gettext-extract --quiet --attribute v-translate --output messages-vue.po
-	msgcat -o messages.po messages-babel.po messages-vue.po
+	msgcat -o messages.po messages-babel.po messages-vue.po messages-inx.po
 
 electron/src/renderer/assets/translations.json: $(wildcard translations/messages_*.po)
 	find translations -name '*.po' -a ! -empty | \
@@ -36,18 +37,7 @@ clean:
 
 .PHONY: locales
 locales:
-	# message files will look like this:
-	#   translations/messages_en_US.po
-	if ls translations/*.po > /dev/null 2>&1; then \
-		for po in translations/*.po; do \
-			lang=$${po%.*}; \
-			lang=$${lang#*_}; \
-			mkdir -p locales/$$lang/LC_MESSAGES/; \
-			msgfmt $$po -o locales/$$lang/LC_MESSAGES/inkstitch.mo; \
-		done; \
-	else \
-		mkdir -p locales; \
-	fi
+	bash bin/generate-translation-files
 
 .PHONY: version
 version:

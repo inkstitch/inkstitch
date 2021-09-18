@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <name>{% trans %}Install custom palette{% endtrans %}</name>
-    <id>org.inkstitch.install_custom_palette.{{ locale }}</id>
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Install custom palette</name>
+    <id>org.inkstitch.install_custom_palette</id>
     <param name="extension" type="string" gui-hidden="true">install_custom_palette</param>
-    <label indent="1">{% trans %}Choose a .gpl color palette file to install into Inkscape.{% endtrans %}</label>
-    <label indent="1">{% trans %}Restart Inkscape to use.{% endtrans %}</label>
+    <label indent="1">Choose a .gpl color palette file to install into Inkscape.</label>
+    <label indent="1">Restart Inkscape to use.</label>
     <param indent="1" name="filepath" type="path" gui-text="{{ _('Choose file') }}" mode="file" filetypes="gpl"/>
     <effect needs-live-preview="false">
         <object-type>all</object-type>
         <effects-menu>
             <submenu name="Ink/Stitch">
-                <submenu name="{% trans %}Thread Color Management{% endtrans %}" />
+                <submenu name="Thread Color Management" />
             </submenu>
         </effects-menu>
     </effect>

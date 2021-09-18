@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <name>{% trans %}Auto-Route Satin Columns{% endtrans %}</name>
-    <id>org.inkstitch.auto_satin.{{ locale }}</id>
-    <param name="trim" type="boolean" _gui-text="{% trans %}Trim jump stitches{% endtrans %}">true</param>
-    <param name="preserve_order" type="boolean" _gui-text="{% trans %}Preserve order of satin columns{% endtrans %}">false</param>
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Auto-Route Satin Columns</name>
+    <id>org.inkstitch.auto_satin</id>
+    <param name="trim" type="boolean" _gui-text="Trim jump stitches">true</param>
+    <param name="preserve_order" type="boolean" _gui-text="Preserve order of satin columns">false</param>
     <param name="extension" type="string" gui-hidden="true">auto_satin</param>
     <effect>
         <object-type>all</object-type>
         <effects-menu>
             <submenu name="Ink/Stitch">
-                <submenu name="{% trans %}Satin Tools{% endtrans %}" />
+                <submenu name="Satin Tools" />
             </submenu>
         </effects-menu>
     </effect>

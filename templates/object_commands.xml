@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <name>{% trans %}Attach Commands to Selected Objects{% endtrans %}</name>
-    <id>org.inkstitch.commands.{{ locale }}</id>
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Attach Commands to Selected Objects</name>
+    <id>org.inkstitch.commands</id>
     {% for command, description in object_commands %}
     <param name="{{ command }}" type="boolean" _gui-text="{{ _(description ) }}">false</param>
     {% endfor %}
@@ -10,7 +10,7 @@
         <object-type>all</object-type>
         <effects-menu>
             <submenu name="Ink/Stitch">
-                <submenu name="{% trans %}Commands{% endtrans %}" />
+                <submenu name="Commands" />
             </submenu>
         </effects-menu>
     </effect>

@@ -3,15 +3,12 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-import errno
-import gettext
 import os
 import sys
 from os.path import dirname
 
 from jinja2 import Environment, FileSystemLoader
 
-from ..i18n import N_, locale_dir
 from ..i18n import translation as default_translation
 
 _top_path = dirname(dirname(dirname(os.path.realpath(__file__))))
@@ -20,7 +17,6 @@ template_path = os.path.join(_top_path, "templates")
 version_path = _top_path
 
 current_translation = default_translation
-current_locale = "en_US"
 
 
 def build_environment():
@@ -31,7 +27,6 @@ def build_environment():
     )
 
     env.install_gettext_translations(current_translation)
-    env.globals["locale"] = current_locale
 
     with open(os.path.join(version_path, 'LICENSE'), 'r') as license:
         env.globals["inkstitch_license"] = "".join(license.readlines())
@@ -40,53 +35,26 @@ def build_environment():
         # building a ZIP release, with inkstitch packaged as a binary
         # About extension: add version information
         with open(os.path.join(version_path, 'VERSION'), 'r') as version:
-            env.globals["inkstitch_version"] = "%s %s" % (version.readline(), current_locale)
+            env.globals["inkstitch_version"] = "%s" % version.readline()
         # Command tag and icons path
         if sys.platform == "win32":
-            env.globals["command_tag"] = '<command location="inx">inkstitch/bin/inkstitch.exe</command>'
-            env.globals["image_path"] = 'inkstitch/bin/icons/'
+            env.globals["command_tag"] = '<command location="inx">../bin/inkstitch.exe</command>'
+            env.globals["image_path"] = '../bin/icons/'
         elif sys.platform == "darwin":
-            env.globals["command_tag"] = '<command location="inx">inkstitch.app/Contents/MacOS/inkstitch</command>'
-            env.globals["image_path"] = 'inkstitch.app/Contents/MacOS/icons/'
+            env.globals["command_tag"] = '<command location="inx">../MacOS/inkstitch</command>'
+            env.globals["image_path"] = '../MacOS/icons/'
         else:
-            env.globals["command_tag"] = '<command location="inx">inkstitch/bin/inkstitch</command>'
-            env.globals["image_path"] = 'inkstitch/bin/icons/'
+            env.globals["command_tag"] = '<command location="inx">../bin/inkstitch</command>'
+            env.globals["image_path"] = '../bin/icons/'
     else:
         # user is running inkstitch.py directly as a developer
-        env.globals["command_tag"] = '<command location="inx" interpreter="python">../../inkstitch.py</command>'
-        env.globals["image_path"] = '../../icons/'
+        env.globals["command_tag"] = '<command location="inx" interpreter="python">../inkstitch.py</command>'
+        env.globals["image_path"] = '../icons/'
         env.globals["inkstitch_version"] = "Manual Install"
     return env
 
 
 def write_inx_file(name, contents):
-    inx_locale_dir = os.path.join(inx_path, current_locale)
-
-    try:
-        os.makedirs(inx_locale_dir)
-    except OSError as e:
-        if e.errno != errno.EEXIST:
-            raise
-
     inx_file_name = "inkstitch_%s.inx" % name
-    with open(os.path.join(inx_locale_dir, inx_file_name), 'w', encoding="utf-8") as inx_file:
+    with open(os.path.join(inx_path, inx_file_name), 'w', encoding="utf-8") as inx_file:
         print(contents, file=inx_file)
-
-
-def iterate_inx_locales():
-    global current_translation, current_locale
-
-    locales = sorted(os.listdir(locale_dir))
-    for locale in locales:
-        translation = gettext.translation("inkstitch", locale_dir, languages=[locale], fallback=True)
-
-        # L10N If you translate this string, that will tell Ink/Stitch to
-        # generate menu items for this language in Inkscape's "Extensions"
-        # menu.
-        magic_string = N_("Generate INX files")
-        translated_magic_string = translation.gettext(magic_string)
-
-        if translated_magic_string != magic_string or locale == "en_US":
-            current_translation = translation
-            current_locale = locale
-            yield locale

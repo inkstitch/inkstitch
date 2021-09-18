@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <name>{% trans %}Custom font directory{% endtrans %}</name>
-    <id>org.inkstitch.lettering_custom_font_dir.{{ locale }}</id>
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Custom font directory</name>
+    <id>org.inkstitch.lettering_custom_font_dir</id>
     <param name="extension" type="string" gui-hidden="true">lettering_custom_font_dir</param>
     <effect needs-live-preview="false">
         <object-type>all</object-type>
         <effects-menu>
             <submenu name="Ink/Stitch">
-                <submenu name="{% trans %}Font Management{% endtrans %}" />
+                <submenu name="Font Management" />
             </submenu>
         </effects-menu>
     </effect>
     <param name="file-description" type="description" indent="1" >
-        {% trans %}Set a custom directory for additional fonts to be used with the lettering tool.{% endtrans %}
+        Set a custom directory for additional fonts to be used with the lettering tool.
     </param>
     <spacer />
-    <param name="path" type="path" mode="folder" gui-text="{% trans %}Custom font directory{% endtrans %}"  indent="1"></param>
+    <param name="path" type="path" mode="folder" gui-text="Custom font directory"  indent="1"></param>
     <spacer />
     <param name="file-description" type="description" indent="1" >
-        {% trans %}Usage: The custom font directory must contain a subdirectory for each font.{% endtrans %}
+        Usage: The custom font directory must contain a subdirectory for each font.
     </param>
     <script>
         {{ command_tag | safe }}

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <name>{% trans %}Remove embroidery settings{% endtrans %}</name>
-    <id>org.inkstitch.remove_embroidery_settings.{{ locale }}</id>
-    <param name="description" type="description">{% trans %}Use this extension to remove the information Ink/Stitch has stored in your document.  This can be especially useful if you copy and paste objects from an embroidery design into another document.{% endtrans %}</param>
-    <param name="del_params" type="boolean" _gui-text="{% trans %}Remove Params{% endtrans %}"
-           _gui-description="{% trans %}Removes params from selected objects or all objects if nothing is selected.{% endtrans %}">true</param>
-    <param name="del_commands" type="boolean" _gui-text="{% trans %}Remove Commands{% endtrans %}"
-           _gui-description="{% trans %}Removes visual commands from selected objects or all objects if nothing is selected.{% endtrans %}">false</param>
-    <param name="del_print" type="boolean" _gui-text="{% trans %}Remove Print Settings from SVG metadata{% endtrans %}">false</param>
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Remove embroidery settings</name>
+    <id>org.inkstitch.remove_embroidery_settings</id>
+    <param name="description" type="description">Use this extension to remove the information Ink/Stitch has stored in your document.  This can be especially useful if you copy and paste objects from an embroidery design into another document.</param>
+    <param name="del_params" type="boolean" _gui-text="Remove Params"
+           _gui-description="Removes params from selected objects or all objects if nothing is selected.">true</param>
+    <param name="del_commands" type="boolean" _gui-text="Remove Commands"
+           _gui-description="Removes visual commands from selected objects or all objects if nothing is selected.">false</param>
+    <param name="del_print" type="boolean" _gui-text="Remove Print Settings from SVG metadata">false</param>
     <param name="extension" type="string" gui-hidden="true">remove_embroidery_settings</param>
     <effect>
         <object-type>all</object-type>
         <effects-menu>
             <submenu name="Ink/Stitch">
-                <submenu name="{% trans %}Troubleshoot{% endtrans %}" />
+                <submenu name="Troubleshoot" />
             </submenu>
         </effects-menu>
     </effect>
