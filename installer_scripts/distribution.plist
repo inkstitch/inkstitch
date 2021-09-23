@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<installer-gui-script minSpecVersion="2">
+    <title>Inkstitch plugin for macOS</title>
+    <background file="inkstitch-installer-logo.png" alignment="bottomleft" mime-type="image/png" scaling="proportional"/>
+    <license file="License.rtf"/>
+    <pkg-ref id="org.inkstitch.inkstitch"/>
+    <options customize="never" require-scripts="true"/>
+    <allowed-os-versions>
+        <os-version min="10.10"/>
+    </allowed-os-versions>
+    <choices-outline>
+            <line choice="org.inkstitch.inkstitch"/>
+    </choices-outline>
+    <choice id="org.inkstitch.inkstitch" title="InkStich" enabled="false" description="Main files for inkstitch" selected="true">
+        <pkg-ref id="org.inkstitch.inkstitch"/>
+    </choice>
+    <pkg-ref id="org.inkstitch.inkstitch" version="2.0.0" onConclusion="none">installer.pkg</pkg-ref>
+</installer-gui-script>

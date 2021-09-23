@@ -1,0 +1,9 @@
+#!/bin/bash
+set -e
+if [ -d $HOME/Library/Application\ Support/org.inkscape.Inkscape/config/inkscape/extensions/inkstitch/ ]; then
+	rm -rf $HOME/Library/Application\ Support/org.inkscape.Inkscape/config/inkscape/extensions/inkstitch/
+	echo "Previous version of Inkstitch removed."
+else
+	echo "No Inkstitch found."
+fi
+exit 0

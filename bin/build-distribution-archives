@@ -3,25 +3,46 @@
 VERSION="$(echo ${GITHUB_REF} | sed -e 's|refs/heads/||' -e 's|refs/tags/||' -e 's|/|-|g')"
 OS="${BUILD:-$(uname)}"
 ARCH="$(uname -m)"
-
+mkdir artifacts
 if [ "$BUILD" = "osx" ]; then
     cp -a images/examples palettes symbols fonts inx LICENSE VERSION dist/inkstitch.app/Contents
     cp -a icons locales print dist/inkstitch.app/Contents/MacOS
     cp -a electron/build/mac dist/inkstitch.app/Contents/electron
     rm -rf dist/inkstitch/
+    temp_path="/tmp/inkstitch/"
+    mkdir mac/
+    # inside the scripts folder are:
+    # - preinstaller (checks for previously installed inkstitch and deletes it) and
+    # - postinstaller (moves inkstitch folder from /tmp to user Inkscape extensions folder in $HOME)
+    # The postinstaller is a workaround for a proper way to install in user $HOME space
+    pkgbuild --root dist/inkstitch.app --component-plist installer_scripts/inkstitch.plist --ownership recommended --identifier org.inkstitch.app --version ${VERSION} --scripts installer_scripts/scripts --install-location ${temp_path}inkstitch.app mac/installer.pkg
+    cp installer_scripts/distribution.plist mac
+    cd mac
+    # inside folder resource is inkstitch image for the installer background
+    productbuild --distribution distribution.plist --resources ../installer_scripts/resource --package-path installer.pkg ../artifacts/inkstitch-${VERSION}.pkg
 else
     cp -a images/examples palettes symbols fonts inx LICENSE VERSION dist/inkstitch
     cp -a icons locales print dist/inkstitch/bin
     cp -a electron/build/*-unpacked dist/inkstitch/electron
+
 fi
 
-mkdir artifacts
-cd dist
+if [ "$BUILD" = "windows" ]; then
+    mkdir win
+    cp installer_scripts/template.iss win/win_build.iss
+    # adds the year and version for the inno installer
+    info_year=$( date "+%Y" )
+    copyright_year="#define COPYRIGHT \""${info_year}"\" + URL"
+	version_block="#define VERSION \""${VERSION}"\""
+	sed -i'' -e '/;inkstitch-year/ a\'$'\n'"${copyright_year}"'' win/win_build.iss
+	sed -i'' -e '/;inkstitch-version/ a\'$'\n'"${version_block}"'' win/win_build.iss
 
-if [ "$$BUILD" = "windows" ]; then
-    # The python zipfile command line utility can't handle directories
-    # containing files with UTF-8 names on Windows, so we use 7-zip instead.
-    7z a ../artifacts/inkstitch-${VERSION}-${OS}.zip *;
-else
-	  python -m zipfile -c ../artifacts/inkstitch-${VERSION}-${OS}.zip *;
+    iscc win/win_build.iss
+	mv  win/inkstitch.exe artifacts/inkstitch-${VERSION}.exe
+fi
+
+if [ "$BUILD" = "linux" ]; then
+    cd dist
+    python -m zipfile -c ../artifacts/inkstitch-${VERSION}-${OS}.zip *;
+    cd ..
 fi
