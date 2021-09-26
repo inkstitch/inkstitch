@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!-- This is a copy of: https://gitlab.com/inkscape/inkscape/-/raw/master/po/its/inx.its -->
+<its:rules xmlns:its="http://www.w3.org/2005/11/its"
+           xmlns:inx="http://www.inkscape.org/namespace/inkscape/extension"
+           xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+           version="1.0">
+
+    <!-- common extraction preferences -->
+    <its:preserveSpaceRule selector="//*[contains(@xml:space, 'preserve')]" space="preserve"/>
+
+    <its:escapeRule selector="//*" escape="no"/>
+    <its:escapeRule selector="//*/@*" escape="no"/>
+
+    <its:contextRule selector="//*" contextPointer="@context"/>
+    <its:contextRule selector="//*/@*" contextPointer="../@context"/>
+
+
+    <!-- element-specific extraction rules -->
+    <its:translateRule selector="/inx:inkscape-extension" translate="no"/>
+
+    <its:translateRule selector="//inx:name" translate="yes"/>
+
+    <its:translateRule selector="//*[not(@translatable='no')]/@gui-text" translate="yes"/>
+    <its:translateRule selector="//*[not(@translatable='no')]/@gui-description" translate="yes"/>
+
+    <its:translateRule selector="//inx:label[not(@translatable='no')]" translate="yes"/>
+    <its:translateRule selector="//inx:option[not(@translatable='no')]" translate="yes"/>
+
+    <its:translateRule selector="//inx:param[@type='string'][@translatable='yes']" translate="yes"/>
+
+    <its:translateRule selector="//inx:submenu/@name" translate="yes"/>
+
+    <its:translateRule selector="//inx:filetypename" translate="yes"/>
+    <its:translateRule selector="//inx:filetypetooltip" translate="yes"/>
+
+    <its:translateRule selector="//inkscape:templateinfo/inkscape:name" translate="yes"/>
+    <its:translateRule selector="//inkscape:templateinfo/inkscape:shortdesc" translate="yes"/>
+    <its:translateRule selector="//inkscape:templateinfo/inkscape:keywords" translate="yes"/>
+
+</its:rules>

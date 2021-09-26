@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <name>{% trans %}Lettering{% endtrans %}</name>
-    <id>org.inkstitch.lettering.{{ locale }}</id>
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Lettering</name>
+    <id>org.inkstitch.lettering</id>
     <param name="extension" type="string" gui-hidden="true">lettering</param>
     <effect implements-custom-gui="true">
         <object-type>all</object-type>

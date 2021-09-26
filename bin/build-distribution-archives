@@ -5,30 +5,23 @@ OS="${BUILD:-$(uname)}"
 ARCH="$(uname -m)"
 
 if [ "$BUILD" = "osx" ]; then
-    cp -a images/examples palettes symbols fonts LICENSE VERSION dist/inkstitch.app/Contents
+    cp -a images/examples palettes symbols fonts inx LICENSE VERSION dist/inkstitch.app/Contents
     cp -a icons locales print dist/inkstitch.app/Contents/MacOS
     cp -a electron/build/mac dist/inkstitch.app/Contents/electron
     rm -rf dist/inkstitch/
 else
-    cp -a images/examples palettes symbols fonts LICENSE VERSION dist/inkstitch
+    cp -a images/examples palettes symbols fonts inx LICENSE VERSION dist/inkstitch
     cp -a icons locales print dist/inkstitch/bin
     cp -a electron/build/*-unpacked dist/inkstitch/electron
 fi
 
 mkdir artifacts
+cd dist
 
-for d in inx/*; do
-	lang=${d%.*}
-	lang=${lang#*/}
-	cp $d/*.inx dist
-
-    cd dist
-    if [ "$BUILD" = "windows" ]; then
-      # The python zipfile command line utility can't handle directories
-      # containing files with UTF-8 names on Windows, so we use 7-zip instead.
-      7z a ../artifacts/inkstitch-${VERSION}-${OS}-${lang}.zip *
-    else
-      python -m zipfile -c ../artifacts/inkstitch-${VERSION}-${OS}-${lang}.zip *
-    fi
-    cd ..
-done
+if [ "$$BUILD" = "windows" ]; then
+    # The python zipfile command line utility can't handle directories
+    # containing files with UTF-8 names on Windows, so we use 7-zip instead.
+    7z a ../artifacts/inkstitch-${VERSION}-${OS}.zip *;
+else
+	  python -m zipfile -c ../artifacts/inkstitch-${VERSION}-${OS}.zip *;
+fi

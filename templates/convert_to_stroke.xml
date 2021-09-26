@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <name>{% trans %}Convert Satin to Stroke{% endtrans %}</name>
-    <id>org.inkstitch.convert_to_stroke.{{ locale }}</id>
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Convert Satin to Stroke</name>
+    <id>org.inkstitch.convert_to_stroke</id>
     <param name="extension" type="string" gui-hidden="true">convert_to_stroke</param>
-    <param name="description" type="description">{% trans %}Converts a satin column into a running stitch.{% endtrans %}</param>
+    <param name="description" type="description">Converts a satin column into a running stitch.</param>
     <param name="keep_satin" type="boolean" _gui-text="Keep satin column"
-       _gui-description="{% trans %}Do not delete original satin column.{% endtrans %}">false</param>
+       _gui-description="Do not delete original satin column.">false</param>
     <effect>
         <object-type>all</object-type>
         <effects-menu>
             <submenu name="Ink/Stitch">
-                <submenu name="{% trans %}Satin Tools{% endtrans %}" />
+                <submenu name="Satin Tools" />
             </submenu>
         </effects-menu>
     </effect>

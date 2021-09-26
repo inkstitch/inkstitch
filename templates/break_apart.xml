@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <name>{% trans %}Break Apart Fill Objects{% endtrans %}</name>
-    <id>org.inkstitch.break_apart.{{ locale }}</id>
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Break Apart Fill Objects</name>
+    <id>org.inkstitch.break_apart</id>
     <param name="extension" type="string" gui-hidden="true">break_apart</param>
     <effect>
         <object-type>all</object-type>
         <effects-menu>
             <submenu name="Ink/Stitch">
-                <submenu name="{% trans %}Fill Tools{% endtrans %}" />
+                <submenu name="Fill Tools" />
             </submenu>
         </effects-menu>
     </effect>
     <param name="description" type="description">
-        {% trans %}This extension will try to repair fill shapes and break them apart if necessary. Holes will be retained. Use on simple or overlapping shapes.{% endtrans %}
+        This extension will try to repair fill shapes and break them apart if necessary. Holes will be retained. Use on simple or overlapping shapes.
     </param>
     <param name="method" type="optiongroup" _gui-text="Method">
        <option value="0">Simple</option>
