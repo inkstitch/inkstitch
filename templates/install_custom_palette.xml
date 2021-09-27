@@ -5,7 +5,7 @@
     <param name="extension" type="string" gui-hidden="true">install_custom_palette</param>
     <label indent="1">Choose a .gpl color palette file to install into Inkscape.</label>
     <label indent="1">Restart Inkscape to use.</label>
-    <param indent="1" name="filepath" type="path" gui-text="{{ _('Choose file') }}" mode="file" filetypes="gpl"/>
+    <param indent="1" name="filepath" type="path" gui-text="Choose file" mode="file" filetypes="gpl"/>
     <effect needs-live-preview="false">
         <object-type>all</object-type>
         <effects-menu>

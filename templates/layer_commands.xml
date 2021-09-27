@@ -4,7 +4,7 @@
     <id>org.inkstitch.layer_commands</id>
     <param name="description" type="description">Commands will be added to the currently-selected layer.</param>
     {% for command, description in layer_commands %}
-    <param name="{{ command }}" type="boolean" _gui-text="{{ _(description) }}">false</param>
+    <param name="{{ command }}" type="boolean" gui-text="{{ description }}">false</param>
     {% endfor %}
     <param name="extension" type="string" gui-hidden="true">layer_commands</param>
     <effect>

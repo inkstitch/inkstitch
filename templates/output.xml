@@ -5,8 +5,8 @@
     <output>
         <extension>.{{ format }}</extension>
         <mimetype>{{ mimetype }}</mimetype>
-        <_filetypename>Ink/Stitch: {{ _(description) }} (.{{ format }})</_filetypename>
-        <_filetypetooltip>{{ _("Save design in %(file_extension)s format using Ink/Stitch") % dict(file_extension=format.upper()) }}</_filetypetooltip>
+        <filetypename>Ink/Stitch: {{ description }} (.{{ format }})</filetypename>
+        <filetypetooltip>{{ "Save design in %(file_extension)s format using Ink/Stitch" % dict(file_extension=format.upper()) }}</filetypetooltip>
         <dataloss>true</dataloss>
     </output>
     <param name="extension" type="string" gui-hidden="true">output</param>

@@ -4,7 +4,7 @@
     <id>org.inkstitch.global_commands</id>
     <param name="description" type="description">These commands affect the entire embroidery design.</param>
     {% for command, description in global_commands %}
-    <param name="{{ command }}" type="boolean" _gui-text="{{ _(description) }}">false</param>
+    <param name="{{ command }}" type="boolean" gui-text="{{ description }}">false</param>
     {% endfor %}
     <param name="extension" type="string" gui-hidden="true">global_commands</param>
     <effect>

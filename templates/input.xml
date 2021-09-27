@@ -5,8 +5,8 @@
     <input>
         <extension>.{{ format }}</extension>
         <mimetype>application/x-embroidery-{{ format }}</mimetype>
-        <_filetypename>Ink/Stitch: {{ _(description) }} (.{{ format }})</_filetypename>
-        <_filetypetooltip>{{ _("convert %(file_extension)s file to Ink/Stitch manual-stitch paths") % dict(file_extension=format.upper()) }}</_filetypetooltip>
+        <filetypename>Ink/Stitch: {{ description }} (.{{ format }})</filetypename>
+        <filetypetooltip>{{ "convert %(file_extension)s file to Ink/Stitch manual-stitch paths" % dict(file_extension=format.upper()) }}</filetypetooltip>
     </input>
     <param name="extension" type="string" gui-hidden="true">input</param>
     <script>
