@@ -13,9 +13,11 @@ inx: version locales
 	python bin/generate-inx-files; \
 
 .PHONY: messages.po
-messages.po:
+messages.po: inx
 	rm -f messages.po
 	xgettext inx/*.inx --its=its/inx.its -o messages-inx.po
+	# There seems to be no propper way to set the charset to utf-8
+	sed -i 's/charset=CHARSET/charset=UTF-8/g' messages-inx.po
 	bin/pyembroidery-gettext > pyembroidery-format-descriptions.py
 	bin/inkstitch-fonts-gettext > inkstitch-fonts-metadata.py
 	pybabel extract -o messages-babel.po -F babel.conf --add-location=full --add-comments=l10n,L10n,L10N --sort-by-file --strip-comments -k N_ -k '$$gettext' .
