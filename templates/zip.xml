@@ -5,17 +5,17 @@
     <output>
         <extension>.zip</extension>
         <mimetype>application/zip</mimetype>
-        <_filetypename>{{ _("Ink/Stitch: ZIP export multiple formats (.zip)") }}</_filetypename>
-        <_filetypetooltip>{{ _("Create a ZIP with multiple embroidery file formats using Ink/Stitch") }}</_filetypetooltip>
+        <filetypename>Ink/Stitch: ZIP export multiple formats (.zip)</filetypename>
+        <filetypetooltip>Create a ZIP with multiple embroidery file formats using Ink/Stitch</filetypetooltip>
         <dataloss>true</dataloss>
     </output>
     {%- for format, description, mimetype, category in formats %}
     {%- if category == "embroidery" %}
-    <param name="format-{{ format }}" type="boolean" _gui-text=".{{ format | upper }}: {{ _(description) }}">false</param>
+    <param name="format-{{ format }}" type="boolean" _gui-text=".{{ format | upper }}: {{ description }}">false</param>
     {%- endif %}
     {%- endfor %}
-    <param name="format-svg" type="boolean" _gui-text=".SVG: {{ _("Scalable Vector Graphic") }}">false</param>
-    <param name="format-threadlist" type="boolean" _gui-text=".TXT: {{ _("Threadlist") }}">false</param>
+    <param name="format-svg" type="boolean" gui-text=".SVG: Scalable Vector Graphic">false</param>
+    <param name="format-threadlist" type="boolean" gui-text=".TXT: Threadlist">false</param>
     <param name="extension" type="string" gui-hidden="true">zip</param>
     <script>
         {{ command_tag | safe }}

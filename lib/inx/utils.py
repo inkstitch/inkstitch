@@ -9,14 +9,10 @@ from os.path import dirname
 
 from jinja2 import Environment, FileSystemLoader
 
-from ..i18n import translation as default_translation
-
 _top_path = dirname(dirname(dirname(os.path.realpath(__file__))))
 inx_path = os.path.join(_top_path, "inx")
 template_path = os.path.join(_top_path, "templates")
 version_path = _top_path
-
-current_translation = default_translation
 
 
 def build_environment():
@@ -25,8 +21,6 @@ def build_environment():
         autoescape=True,
         extensions=['jinja2.ext.i18n']
     )
-
-    env.install_gettext_translations(current_translation)
 
     with open(os.path.join(version_path, 'LICENSE'), 'r') as license:
         env.globals["inkstitch_license"] = "".join(license.readlines())

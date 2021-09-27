@@ -3,7 +3,7 @@
     <name>Import Threadlist</name>
     <id>org.inkstitch.import_threadlist</id>
     <param name="extension" type="string" gui-hidden="true">import_threadlist</param>
-    <param name="filepath" type="path" gui-text="{{ _('Choose file') }}" mode="file" filetypes="txt"/>
+    <param name="filepath" type="path" gui-text="Choose file" mode="file" filetypes="txt"/>
     <param name="method" type="optiongroup" _gui-text="Choose method">
        <option value="1">Import Ink/Stitch threadlist</option>
        <option value="2">Import other threadlist*</option>

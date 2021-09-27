@@ -1,41 +1,39 @@
     {# these parameters are for g-code files (*.txt) #}
 <param type="notebook" name="gcode-settings">
     <page name="embroidery" gui-text="Coordinate Settings">
-        <param name="flip_x" type="boolean" gui-text="{{ _("negate X coordinate values") }}" gui-description="{{ _("Negate x coordinates") }}">false</param>
-        <param name="flip_y" type="boolean" gui-text="{{ _("negate Y coordinate values") }}" gui-description="{{ _("Negate y coordinates") }}">false</param>
-        <param type="optiongroup" name="alternate_z" gui-text="{{ _("Z coordinate value") }}" gui-description="{{ _("Either alternate Z value between 0 and 1 or travel custom value.") }}">
-           <option value="true">{{ _("alternate Z value") }}</option>
-           <option value="false">{{ _("Z travel per stitch") }}</option>
+        <param name="flip_x" type="boolean" gui-text="negate X coordinate values" gui-description="Negate x coordinates">false</param>
+        <param name="flip_y" type="boolean" gui-text="negate Y coordinate values" gui-description="Negate y coordinates">false</param>
+        <param type="optiongroup" name="alternate_z" gui-text="Z coordinate value" gui-description="Either alternate Z value between 0 and 1 or travel custom value.">
+           <option value="true">alternate Z value</option>
+           <option value="false">Z travel per stitch</option>
         </param>
-        <param name="stitch_z_travel" type="float" gui-text="{{ _("Z travel per stitch") }}"
-            gui-description="{{ _('increment z coordinate by this amount per stitch if "Z travel per stitch" is enabled') }}">5.0</param>
+        <param name="stitch_z_travel" type="float" gui-text="Z travel per stitch"
+            gui-description='increment z coordinate by this amount per stitch if "Z travel per stitch" is enabled'>5.0</param>
     </page>
     <page name="custom-commands" gui-text="Custom Commands">
-        <param name="custom_stitch" type="string" appearance="multiline" gui-text="{{ _("STITCH") }}"
-            gui-description="{{ _("Use '%X' for x-coordinate. Use '%Y' for y-coordinate and '%Z' for z-coordinate. Use '\\n' for a new line.") }}"></param>
-        <param name="custom_color_change" type="string" appearance="multiline" gui-text="{{ _("COLOR CHANGE") }}"
-            gui-description="{{ _("Use '\\n' for a new line. Leave empty to use default value. Use 'none' to remove.") }}"></param>
-        <param name="custom_stop" type="string" appearance="multiline" gui-text="{{ _("STOP") }}"
-            gui-description="{{ _("Use '\\n' for a new line. Leave empty to use default value. Use 'none' to remove.") }}"></param>
-        <param name="custom_start" type="string" appearance="multiline" gui-text="{{ _("START") }}"
-            gui-description="{{ _("Use '\\n' for a new line.") }}"></param>
-        <param name="custom_end" type="string" appearance="multiline" gui-text="{{ _("END") }}"
-            gui-description="{{ _("Use '\\n' for a new line.") }}"></param>
+        <param name="custom_stitch" type="string" appearance="multiline" gui-text="STITCH"
+            gui-description="Use '%X' for x-coordinate. Use '%Y' for y-coordinate and '%Z' for z-coordinate."></param>
+        <param name="custom_color_change" type="string" appearance="multiline" gui-text="COLOR CHANGE"
+            gui-description="Leave empty to use default value. Use 'none' to remove."></param>
+        <param name="custom_stop" type="string" appearance="multiline" gui-text="STOP"
+            gui-description="Leave empty to use default value. Use 'none' to remove."></param>
+        <param name="custom_start" type="string" appearance="multiline" gui-text="START"></param>
+        <param name="custom_end" type="string" appearance="multiline" gui-text="END"></param>
     </page>
     <page name="laser" gui-text="Laser Settings">
-        <param name="laser_mode" type="boolean" gui-text="{{ _("laser mode") }}"
-            gui-description="{{ _("Laser mode (generate g-code for grbl laser mode)") }}">false</param>
-        <param name="dynamic_laser_power" type="boolean" gui-text="{{ _("dynamic laser power") }}"
-            gui-description="{{ _("Use Grbl's M4 dynamic laser power mode.  Ensures consistent laser cutting power regardless of motor speed.  Only for PWM-capable lasers.") }}"
+        <param name="laser_mode" type="boolean" gui-text="laser mode"
+            gui-description="Laser mode (generate g-code for grbl laser mode)">false</param>
+        <param name="dynamic_laser_power" type="boolean" gui-text="dynamic laser power"
+            gui-description="Use Grbl's M4 dynamic laser power mode.  Ensures consistent laser cutting power regardless of motor speed.  Only for PWM-capable lasers."
             min="0.0" max="5.0">true</param>
-        <param name="laser_warm_up_time" type="float" gui-text="{{ _("laser warm-up time") }}"
-            gui-description="{{ _("When turning on the laser, wait this many seconds for laser to warm up (G4 command)") }}">0.0</param>
-        <param name="spindle_speed" type="int" gui-text="{{ _("spindle speed") }}"
-            gui-description="{{ _("spindle speed (laser power for laser mode, set to -1 to omit)") }}" min="-1" max="1000000000">-1</param>
-        <param name="min_spindle_speed" type="int" gui-text="{{ _("min spindle speed") }}"
-            gui-description="{{ _("minimum spindle speed value (grbl $31 setting)") }}" min="-1" max="1000000000">-1</param>
-        <param name="max_spindle_speed" type="int" gui-text="{{ _("max spindle speed") }}"
-            gui-description="{{ _("minimum spindle speed value (grbl $30 setting)") }}" min="-1" max="1000000000">-1</param>
-        <param name="feed_rate" type="int" gui-text="{{ _("feed rate (in mm/min, set to -1 to omit)")}}" min="-1" max="1000000000">-1</param>
+        <param name="laser_warm_up_time" type="float" gui-text="laser warm-up time"
+            gui-description="When turning on the laser, wait this many seconds for laser to warm up (G4 command)">0.0</param>
+        <param name="spindle_speed" type="int" gui-text="spindle speed"
+            gui-description="spindle speed (laser power for laser mode, set to -1 to omit)" min="-1" max="1000000000">-1</param>
+        <param name="min_spindle_speed" type="int" gui-text="min spindle speed"
+            gui-description="minimum spindle speed value (grbl $31 setting)" min="-1" max="1000000000">-1</param>
+        <param name="max_spindle_speed" type="int" gui-text="max spindle speed"
+            gui-description="minimum spindle speed value (grbl $30 setting)" min="-1" max="1000000000">-1</param>
+        <param name="feed_rate" type="int" gui-text="feed rate (in mm/min, set to -1 to omit)" min="-1" max="1000000000">-1</param>
     </page>
 </param>
