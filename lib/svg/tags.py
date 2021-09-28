@@ -74,7 +74,6 @@ inkstitch_attribs = [
                 'running_stitch_length_mm',
                 # satin column
                 'satin_column',
-                'satin_column',
                 'running_stitch_length_mm',
                 'center_walk_underlay',
                 'center_walk_underlay_stitch_length_mm',
@@ -85,6 +84,7 @@ inkstitch_attribs = [
                 'zigzag_spacing_mm',
                 'zigzag_underlay_inset_mm',
                 'zigzag_underlay_spacing_mm',
+                'zigzag_underlay_max_stitch_length_mm',
                 'e_stitch',
                 'pull_compensation_mm',
                 'stroke_first',
