@@ -1,8 +1,5 @@
 #!/bin/bash
 set -e
-# set permissions for drag and drop deleting without password prompt
-chmod -R ugo+rwx /tmp/inkstitch/
-
 mv /tmp/inkstitch/ $HOME/Library/Application\ Support/org.inkscape.Inkscape/config/inkscape/extensions/
 echo "Inkstitch was moved!"
 exit 0

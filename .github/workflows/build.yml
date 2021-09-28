@@ -160,6 +160,11 @@ jobs:
           make dist
         env:
           BUILD: osx
+          MACOS_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE }}
+          MACOS_CERTIFICATE_PWD: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE_PASSWORD }}
+          KEYCHAIN_PWD: ${{ secrets.KEYCHAIN_PASSWORD }}
+          APPLE_USER: ${{ secrets.INKSTITCH_NOTARIZE_AC }}
+          APPLE_PASS: ${{ secrets.INKSTITCH_NOTARIZE_PASS }}
       - uses: actions/upload-artifact@v2
         with:
           name: inkstitch-mac
