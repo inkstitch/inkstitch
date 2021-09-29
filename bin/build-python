@@ -36,6 +36,11 @@ pyinstaller_args+="-p inkscape/share/extensions "
 # output useful debugging info that helps us trace library dependency issues
 pyinstaller_args+="--log-level DEBUG "
 
+# This adds bundle identifier in reverse DSN format for macos
+if [ "$BUILD" = "osx" ]; then
+    pyinstaller_args+="--osx-bundle-identifier org.inkstitch.app "
+fi
+
 if [ "$BUILD" = "windows" ]; then
     python -m PyInstaller $pyinstaller_args inkstitch.py
 else
