@@ -190,6 +190,17 @@ class SatinColumn(EmbroideryElement):
         return self.get_float_param("zigzag_underlay_inset_mm") or self.contour_underlay_inset / 2.0
 
     @property
+    @param('zigzag_underlay_max_stitch_length_mm',
+           _('Maximum stitch length'),
+           tooltip=_('Split stitch if distance of maximum stitch length is exceeded'),
+           unit='mm',
+           group=_('Zig-zag Underlay'),
+           type='float',
+           default="")
+    def zigzag_underlay_max_stitch_length(self):
+        return self.get_float_param("zigzag_underlay_max_stitch_length_mm") or None
+
+    @property
     @cache
     def shape(self):
         # This isn't used for satins at all, but other parts of the code
@@ -757,7 +768,14 @@ class SatinColumn(EmbroideryElement):
 
         # This fancy bit of iterable magic just repeatedly takes a point
         # from each side in turn.
+        last_point = None
         for point in chain.from_iterable(zip(*sides)):
+            if last_point and self.zigzag_underlay_max_stitch_length:
+                if last_point.distance(point) > self.zigzag_underlay_max_stitch_length:
+                    points, count = self._get_split_points(last_point, point, self.zigzag_underlay_max_stitch_length)
+                    for point in points:
+                        patch.add_stitch(point)
+            last_point = point
             patch.add_stitch(point)
 
         patch.add_tags(("satin_column", "satin_column_underlay", "satin_zigzag_underlay"))
@@ -815,7 +833,7 @@ class SatinColumn(EmbroideryElement):
         for i, (left, right) in enumerate(zip(*sides)):
             patch.add_stitch(left)
             patch.stitches[-1].add_tags(("satin_column", "satin_column_edge"))
-            points, count = self._get_split_points(left, right)
+            points, count = self._get_split_points(left, right, self.max_stitch_length)
             for point in points:
                 patch.add_stitch(point)
                 patch.stitches[-1].add_tags(("satin_column", "satin_split_stitch"))
@@ -825,16 +843,16 @@ class SatinColumn(EmbroideryElement):
             # but it looks ugly if the points differ too much
             # so let's make sure they have at least the same amount of divisions
             if not i+1 >= len(sides[0]):
-                points, count = self._get_split_points(right, sides[0][i+1], count)
+                points, count = self._get_split_points(right, sides[0][i+1], self.max_stitch_length, count)
                 for point in points:
                     patch.add_stitch(point)
                     patch.stitches[-1].add_tags(("satin_column", "satin_split_stitch"))
         return patch
 
-    def _get_split_points(self, left, right, count=None):
+    def _get_split_points(self, left, right, max_stitch_length, count=None):
         points = []
         distance = left.distance(right)
-        split_count = count or int(-(-distance // self.max_stitch_length))
+        split_count = count or int(-(-distance // max_stitch_length))
         for i in range(split_count):
             line = shgeo.LineString((left, right))
             split_point = line.interpolate((i+1)/split_count, normalized=True)
