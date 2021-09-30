@@ -158,10 +158,13 @@ class Fill(EmbroideryElement):
             message = re.match(r".+?(?=\[)", why)
             if message.group(0) == "Self-intersection":
                 buffered = polygon.buffer(0)
+                # if we receive a multipolygon, only use the first one of it
+                if type(buffered) == shgeo.MultiPolygon:
+                    buffered = buffered[0]
                 # we do not want to break apart into multiple objects (possibly in the future?!)
                 # best way to distinguish the resulting polygon is to compare the area size of the two
                 # and make sure users will not experience significantly altered shapes without a warning
-                if math.isclose(polygon.area, buffered.area):
+                if type(buffered) == shgeo.Polygon and math.isclose(polygon.area, buffered.area, abs_tol=0.5):
                     polygon = shgeo.MultiPolygon([buffered])
 
         return polygon
