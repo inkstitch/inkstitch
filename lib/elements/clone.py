@@ -100,7 +100,7 @@ class Clone(EmbroideryElement):
         if source_node.tag not in EMBROIDERABLE_TAGS:
             return []
 
-        self.node.style = source_node.composed_style()
+        self.node.style = source_node.specified_style()
 
         # a. a custom set fill angle
         # b. calculated rotation for the cloned fill element to look exactly as it's source
