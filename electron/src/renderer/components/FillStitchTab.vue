@@ -78,7 +78,7 @@
       <translate>Allow lock stitches</translate>
       <template v-slot:tooltip>
           <p>
-            <translate>Tie thread at the beginning and/or end of this object.</translare>
+            <translate>Tie thread at the beginning and/or end of this object.</translate>
           </p>
         </template>
       </param-row>
