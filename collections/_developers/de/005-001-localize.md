@@ -2,7 +2,7 @@
 title: "Übersetzungen"
 permalink: /de/developers/localize/
 excerpt: ""
-last_modified_at: 2021-01-31
+last_modified_at: 2021-10-03
 toc: true
 ---
 Das Ziel des Ink/Stitch-Projektes ist es, hochwertige Werkzeuge zur Erstellung von Stickdesigns in die Hände von Menschen zu geben, die sonst keinen Zugriff auf solche Werkzeuge hätten.
@@ -26,7 +26,7 @@ Um mit dem Übersetzen zu beginnen, besuche unsere [Projektseite bei CrowdIn](ht
 
 Bestätigte Teammitglieder können deine Übersetzung dann akzeptieren, womit sie dann innerhalb von 24 Stunden in das Ink/Stitch GitHub Repository übernommen werden.  Wenn du gerne vorhandene Übersetzungen bestätigen willst, wende dich an uns über [GitHub](https://github.com/inkstitch/inkstitch/issues/).
 
-**Bitte beachte, dass unsere [Verhaltensregeln](CODE_OF_CONDUCT.md) auch für Interaktionen auf unserer CrowdIn Seite gelten.**
+**Bitte beachte, dass unsere [Verhaltensregeln](https://github.com/inkstitch/inkstitch/blob/main/CODE_OF_CONDUCT.md) auch für Interaktionen auf unserer CrowdIn Seite gelten.**
 
 ### Kontinuierliche Übersetzungen
 
