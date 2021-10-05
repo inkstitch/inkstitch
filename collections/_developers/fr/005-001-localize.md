@@ -2,7 +2,7 @@
 title: "Localization"
 permalink: /fr/developers/localize/
 excerpt: ""
-last_modified_at: 2019-08-19
+last_modified_at: 2021-10-03
 toc: true
 ---
 The goal of the Ink/Stitch project is to put free, high-quality embroidery design tools in the hands of folks that might normally not have access to such tools.  To further that goal, we seek to support as many languages and locales as possible.
@@ -25,7 +25,7 @@ To start translating, visit our [project page on Crowdin](https://translate.inks
 
 Approved contributors can accept your translations, which causes them to be committed to this repository within 24 hours.  If you'd like to become an approver, please contact us on [GitHub](https://github.com/inkstitch/inkstitch/issues).
 
-**Please note that our [code of conduct](CODE_OF_CONDUCT.md) also covers contributions and interactions on our Crowdin page.**
+**Please note that our [code of conduct](https://github.com/inkstitch/inkstitch/blob/main/CODE_OF_CONDUCT.md) also covers contributions and interactions on our Crowdin page.**
 
 ### Continuous Translation
 
