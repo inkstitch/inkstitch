@@ -19,30 +19,6 @@ if [ "$BUILD" = "osx" ]; then
     # local builds will not be signed. They are run to produce releases for lecacy versions of macOS
     if [[ -z ${GITHUB_REF} ]]
     then
-        pkgbuild --root dist/inkstitch.app --component-plist installer_scripts/inkstitch.plist --ownership recommended --identifier org.inkstitch.installer --version ${VERSION} --scripts installer_scripts/scripts --install-location ${temp_path}inkstitch.app mac/installer.pkg
-        cp installer_scripts/distribution.plist mac
-        cd mac
-        # inside folder resource is inkstitch image for the installer background
-        productbuild --distribution distribution.plist --resources ../installer_scripts/resource --package-path installer.pkg ../artifacts/inkstitch-${VERSION}.pkg
-
-    else
-        # This code signs and notarize the inkstitch.app
-        echo "Running import-macos-keys"
-        bash bin/import-macos-keys
-        echo "Done import-macos-keys"
-        DEV_IDENT="Developer ID Application: Lex Neva (929A568N58)"
-        echo "Signing of inkstitch.app"
-        /usr/bin/codesign -s "$DEV_IDENT" \
-                        --deep \
-                        --force \
-                        --entitlements installer_scripts/entitlements.plist \
-                        --options runtime \
-                        --timestamp \
-                        dist/inkstitch.app -v
-        echo "Done signing inkstitch.app"
-        echo "App Signing Verification"
-        spctl -a -vv dist/inkstitch.app
-        echo "Running pkgbuild"
         pkgbuild --root dist/inkstitch.app \
                 --component-plist installer_scripts/inkstitch.plist \
                 --ownership recommended \
@@ -50,17 +26,36 @@ if [ "$BUILD" = "osx" ]; then
                 --version ${VERSION} \
                 --scripts installer_scripts/scripts \
                 --install-location ${temp_path}inkstitch.app \
-                mac/installer.pkg
-        echo "pkgbuild done."
-        cp installer_scripts/distribution.plist mac
-        cd mac
-        # inside folder resource is inkstitch image for the installer background
-        echo "Running productbuild"
-        productbuild --distribution distribution.plist \
-                    --resources ../installer_scripts/resource \
-                    --package-path \
-                    installer.pkg ../artifacts/inkstitch-${VERSION}.pkg
-        echo "productbuild done."
+                artifacts/inkstitch-${VERSION}.pkg
+    else
+        # This code signs and notarize the inkstitch.app
+        echo "Running import-macos-keys"
+        bash bin/import-macos-keys
+        echo "Identities in the keychain"
+        security find-identity -v
+        DEV_IDENT="Developer ID Application: Lex Neva (929A568N58)"
+        echo "Signing of inkstitch.app"
+        /usr/bin/codesign -s "${DEV_IDENT}" \
+                        --deep \
+                        --force \
+                        --entitlements installer_scripts/entitlements.plist \
+                        --options runtime \
+                        --timestamp \
+                        dist/inkstitch.app -v
+        echo "App Signing Verification"
+        codesign -dv --verbose=4  dist/inkstitch.app
+        echo "Running pkgbuild"
+        /usr/bin/pkgbuild --root dist/inkstitch.app \
+                        -s "${INSTALLER_CERTIFICATE}" \
+                        --component-plist installer_scripts/inkstitch.plist \
+                        --ownership recommended \
+                        --identifier org.inkstitch.installer \
+                        --version ${VERSION} \
+                        --scripts installer_scripts/scripts \
+                        --install-location ${temp_path}inkstitch.app \
+                        artifacts/inkstitch-${VERSION}.pkg -v
+        echo "Checking installer signing"
+        codesign -dv --verbose=4 artifacts/inkstitch-${VERSION}.pkg
     fi
 else
     cp -a images/examples palettes symbols fonts inx LICENSE VERSION dist/inkstitch
