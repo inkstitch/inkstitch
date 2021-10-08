@@ -102,7 +102,8 @@ class ConvertToSatin(InkstitchExtension):
         """Convert svg line join style to shapely parallel offset arguments."""
 
         args = {
-            'join_style': shgeo.JOIN_STYLE.round
+            # mitre is the default per SVG spec
+            'join_style': shgeo.JOIN_STYLE.mitre
         }
 
         element_join_style = element.get_style('stroke-linejoin')
@@ -116,6 +117,8 @@ class ConvertToSatin(InkstitchExtension):
                 args['mitre_limit'] = miter_limit
             elif element_join_style == "bevel":
                 args['join_style'] = shgeo.JOIN_STYLE.bevel
+            elif element_join_style == "round":
+                args['join_style'] = shgeo.JOIN_STYLE.round
 
         return args
 
