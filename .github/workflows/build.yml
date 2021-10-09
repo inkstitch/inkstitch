@@ -165,6 +165,10 @@ jobs:
           KEYCHAIN_PWD: ${{ secrets.KEYCHAIN_PASSWORD }}
           INSTALLER_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE }}
           INSTALLER_PWD: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE_PASSWORD }}
+          NOTARY_ACCOUNT: ${{ secrets.INKSTITCH_NOTARIZE_AC }}
+          NOTARY_PASSWORD: ${{ secrets.INKSTITCH_NOTARIZE_PASS }}
+
+
       - uses: actions/upload-artifact@v2
         with:
           name: inkstitch-mac

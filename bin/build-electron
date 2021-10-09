@@ -8,6 +8,7 @@ if [ "$BUILD" = "windows" ]; then
 elif [ "$BUILD" = "linux" ]; then
   args="-l --x64"
 elif [ "$BUILD" = "osx" ]; then
+  cp installer_scripts/electron-entitlements.plist electron/build/
   args="-m"
 fi
 

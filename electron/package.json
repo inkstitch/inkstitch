@@ -28,7 +28,11 @@
     },
     "mac": {
       "icon": "build/icons/mac/inkstitch.icns",
-      "target": "dir"
+      "target": "dir",
+      "hardenedRuntime": true,
+      "gatekeeperAssess": false,
+      "entitlements": "build/electron-entitlements.plist",
+      "entitlementsInherit": "build/electron-entitlements.plist"
     }
   },
   "keywords": [],
