@@ -20,7 +20,8 @@ from ..i18n import _
 from ..patterns import is_pattern
 from ..svg import generate_unique_id
 from ..svg.tags import (CONNECTOR_TYPE, EMBROIDERABLE_TAGS, INKSCAPE_GROUPMODE,
-                        NOT_EMBROIDERABLE_TAGS, SVG_DEFS_TAG, SVG_GROUP_TAG)
+                        NOT_EMBROIDERABLE_TAGS, SVG_CLIPPATH_TAG, SVG_DEFS_TAG,
+                        SVG_GROUP_TAG, SVG_MASK_TAG)
 
 SVG_METADATA_TAG = inkex.addNS("metadata", "svg")
 
@@ -147,6 +148,11 @@ class InkstitchExtension(inkex.Effect):
             return []
 
         if node.tag == SVG_DEFS_TAG:
+            return []
+
+        # masks and clippaths contain embroiderable elements
+        # but should never be rendered directly
+        if node.tag == SVG_MASK_TAG or node.tag == SVG_CLIPPATH_TAG:
             return []
 
         # command connectors with a fill color set, will glitch into the elements list
