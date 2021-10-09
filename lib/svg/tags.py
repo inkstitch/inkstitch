@@ -24,6 +24,7 @@ SVG_USE_TAG = inkex.addNS('use', 'svg')
 SVG_IMAGE_TAG = inkex.addNS('image', 'svg')
 SVG_CLIPPATH_TAG = inkex.addNS('clipPath', 'svg')
 SVG_MASK_TAG = inkex.addNS('mask', 'svg')
+
 INKSCAPE_LABEL = inkex.addNS('label', 'inkscape')
 INKSCAPE_GROUPMODE = inkex.addNS('groupmode', 'inkscape')
 CONNECTION_START = inkex.addNS('connection-start', 'inkscape')
