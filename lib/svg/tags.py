@@ -28,6 +28,7 @@ INKSCAPE_GROUPMODE = inkex.addNS('groupmode', 'inkscape')
 CONNECTION_START = inkex.addNS('connection-start', 'inkscape')
 CONNECTION_END = inkex.addNS('connection-end', 'inkscape')
 CONNECTOR_TYPE = inkex.addNS('connector-type', 'inkscape')
+INKSCAPE_DOCUMENT_UNITS = inkex.addNS('document-units', 'inkscape')
 
 XLINK_HREF = inkex.addNS('href', 'xlink')
 

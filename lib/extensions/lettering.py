@@ -174,7 +174,7 @@ class LetteringFrame(wx.Frame):
                 image.Rescale(300, 20, quality=wx.IMAGE_QUALITY_HIGH)
                 self.font_chooser.Append(font.marked_custom_font_name, wx.Bitmap(image))
             else:
-                self.font_chooser.Append(font.name)
+                self.font_chooser.Append(font.marked_custom_font_name)
 
     def get_font_descriptions(self):
         return {font.name: font.description for font in self.fonts.values()}
