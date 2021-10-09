@@ -1,5 +1,4 @@
 dist: version locales inx
-	bash bin/import-macos-keys
 	bash bin/build-python
 	bash bin/build-electron
 	bash bin/build-distribution-archives

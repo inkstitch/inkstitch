@@ -8,7 +8,6 @@ if [ "$BUILD" = "osx" ]; then
     cp -a icons locales print dist/inkstitch.app/Contents/MacOS
     rm -rf dist/inkstitch/
     temp_path="/tmp/inkstitch/"
-    mkdir mac/
     # inside the scripts folder are:
     # - preinstaller (checks for previously installed inkstitch and deletes it) and
     # - postinstaller (moves inkstitch folder from /tmp to user Inkscape extensions folder in $HOME)
