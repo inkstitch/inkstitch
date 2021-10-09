@@ -3,7 +3,7 @@
 # This installs inkex, the Inkscape python extension library.
 # We need the new style handling that was added after the inkex version bundled
 # with Inkscape 1.1.  That's why we're installing from Git.
--e git+https://gitlab.com/inkscape/extensions.git@139d71470e7d6bbe9fcd869f385fc73e3a8a8bea#egg=inkscape-core-extensions
+-e git+https://gitlab.com/inkscape/extensions.git@3796f912f666a0981917839c77eb94fdd6fc6a94#egg=inkscape-core-extensions
 
 backports.functools_lru_cache
 wxPython

@@ -10,6 +10,7 @@ from collections.abc import MutableMapping
 
 import inkex
 from lxml import etree
+from lxml.etree import Comment
 from stringcase import snakecase
 
 from ..commands import is_command, layer_commands
@@ -129,6 +130,10 @@ class InkstitchExtension(inkex.Effect):
 
     def descendants(self, node, selected=False, troubleshoot=False):  # noqa: C901
         nodes = []
+
+        if node.tag == Comment:
+            return []
+
         element = EmbroideryElement(node)
 
         if element.has_command('ignore_object'):
