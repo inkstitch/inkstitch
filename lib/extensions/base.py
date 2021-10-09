@@ -147,12 +147,9 @@ class InkstitchExtension(inkex.Effect):
         if (node.tag in EMBROIDERABLE_TAGS or node.tag == SVG_GROUP_TAG) and element.get_style('display', 'inline') is None:
             return []
 
-        if node.tag == SVG_DEFS_TAG:
-            return []
-
-        # masks and clippaths contain embroiderable elements
-        # but should never be rendered directly
-        if node.tag == SVG_MASK_TAG or node.tag == SVG_CLIPPATH_TAG:
+        # defs, masks and clippaths can contain embroiderable elements
+        # but should never be rendered directly.
+        if node.tag in [SVG_DEFS_TAG, SVG_MASK_TAG, SVG_CLIPPATH_TAG]:
             return []
 
         # command connectors with a fill color set, will glitch into the elements list
