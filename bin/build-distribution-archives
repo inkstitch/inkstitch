@@ -57,7 +57,7 @@ if [ "$BUILD" = "osx" ]; then
         echo "Notary starting"
         bash bin/notarize-app 929A568N58 \
                               '$NOTARY_ACCOUNT' \
-                              '@keychain:Developer-altool' \
+                              '$NOTARY_PASSWORD' \
                               'org.inkstitch.app' \
                               artifacts/inkstitch-${VERSION}.pkg
     fi
