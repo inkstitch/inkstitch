@@ -28,7 +28,8 @@ jobs:
 
           sudo apt-get install python2.7 gettext
           python -m pip install --upgrade pip
-          python -m pip install flask==0.* jinja2 Babel ./pyembroidery
+          python -m pip install -r requirements.txt
+          python -m pip install Babel
 
           make messages.po
           echo "uploading messages.po to crowdin"
