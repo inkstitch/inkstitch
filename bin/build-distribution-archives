@@ -25,7 +25,7 @@ if [ "$BUILD" = "osx" ]; then
                 --version ${VERSION} \
                 --scripts installer_scripts/scripts \
                 --install-location ${temp_path}inkstitch.app \
-                artifacts/inkstitch-${VERSION}.pkg
+                artifacts/inkstitch-localbuild.pkg
     else
         # This code signs and notarize the inkstitch.app
         ditto electron/build/mac dist/inkstitch.app/Contents/electron
@@ -51,15 +51,15 @@ if [ "$BUILD" = "osx" ]; then
                         --version ${VERSION} \
                         --scripts installer_scripts/scripts \
                         --install-location ${temp_path}inkstitch.app \
-                        artifacts/inkstitch-${VERSION}.pkg
+                        artifacts/inkstitch-${VERSION}-${OS}.pkg
         echo "Checking installer signing"
-        codesign -dv --verbose=4 artifacts/inkstitch-${VERSION}.pkg
+        pkgutil --check-signature artifacts/inkstitch-${VERSION}-${OS}.pkg
         echo "Notary starting"
-        bash bin/notarize-app 929A568N58 \
-                              '$NOTARY_ACCOUNT' \
-                              '$NOTARY_PASSWORD' \
-                              'org.inkstitch.app' \
-                              artifacts/inkstitch-${VERSION}.pkg
+        bash bin/notarize-app "929A568N58" \
+                              "${NOTARY_ACCOUNT}" \
+                              "${NOTARY_PASSWORD}" \
+                              "org.inkstitch.app" \
+                              artifacts/inkstitch-${VERSION}-${OS}.pkg
     fi
 else
     cp -a images/examples palettes symbols fonts inx LICENSE VERSION dist/inkstitch
@@ -79,7 +79,7 @@ if [ "$BUILD" = "windows" ]; then
 	sed -i'' -e '/;inkstitch-version/ a\'$'\n'"${version_block}"'' win/win_build.iss
 
     iscc win/win_build.iss
-	mv  win/inkstitch.exe artifacts/inkstitch-${VERSION}.exe
+	mv  win/inkstitch.exe artifacts/inkstitch-${VERSION}-${OS}.exe
 fi
 
 if [ "$BUILD" = "linux" ]; then
