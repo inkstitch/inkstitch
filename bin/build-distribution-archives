@@ -28,17 +28,19 @@ if [ "$BUILD" = "osx" ]; then
                 artifacts/inkstitch-localbuild.pkg
     else
         # This code signs and notarize the inkstitch.app
-        ditto electron/build/mac dist/inkstitch.app/Contents/electron
         DEV_IDENT="Developer ID Application: Lex Neva (929A568N58)"
+        echo "Signing of inkstitch.app"
+        /usr/bin/codesign -s "${DEV_IDENT}" \
+                        --deep \
+                        --force \
+                        --entitlements installer_scripts/entitlements.plist \
+                        -o runtime \
+                        --timestamp \
+                        dist/inkstitch.app -v
+        # Coyping inkstitch-gui.app into inkstitch
+        ditto electron/build/mac dist/inkstitch.app/Contents/electron
         echo "Checking electron inkstitch-gui.app"
         codesign -dv --verbose=4  dist/inkstitch.app/Contents/electron/inkstitch-gui.app
-#         echo "Signing of inkstitch.app"
-#         /usr/bin/codesign -s "${DEV_IDENT}" \
-#                         --deep \
-#                         --entitlements installer_scripts/entitlements.plist \
-#                         --options runtime \
-#                         --timestamp \
-#                         dist/inkstitch.app -v
         echo "App Signing Verification"
         codesign -dv --verbose=4  dist/inkstitch.app
         echo "Running pkgbuild"
