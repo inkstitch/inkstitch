@@ -32,13 +32,13 @@ if [ "$BUILD" = "osx" ]; then
         DEV_IDENT="Developer ID Application: Lex Neva (929A568N58)"
         echo "Checking electron inkstitch-gui.app"
         codesign -dv --verbose=4  dist/inkstitch.app/Contents/electron/inkstitch-gui.app
-        echo "Signing of inkstitch.app"
-        /usr/bin/codesign -s "${DEV_IDENT}" \
-                        --deep \
-                        --entitlements installer_scripts/entitlements.plist \
-                        --options runtime \
-                        --timestamp \
-                        dist/inkstitch.app -v
+#         echo "Signing of inkstitch.app"
+#         /usr/bin/codesign -s "${DEV_IDENT}" \
+#                         --deep \
+#                         --entitlements installer_scripts/entitlements.plist \
+#                         --options runtime \
+#                         --timestamp \
+#                         dist/inkstitch.app -v
         echo "App Signing Verification"
         codesign -dv --verbose=4  dist/inkstitch.app
         echo "Running pkgbuild"

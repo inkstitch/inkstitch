@@ -10,5 +10,3 @@ security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "$KEYCHAIN
 echo $INSTALLER_CERTIFICATE | base64 --decode > installer-certificate.p12
 security import installer-certificate.p12 -k build.keychain -P "$INSTALLER_PWD" -T /usr/bin/pkgbuild
 security set-key-partition-list -S apple-tool:,apple:,pkgbuild: -s -k "$KEYCHAIN_PWD" build.keychain
-# adding notary keyitem
-security add-generic-password -a "$NOTARY_ACCOUNT" -w "$NOTARY_PASSWORD" -s "Developer-altool"

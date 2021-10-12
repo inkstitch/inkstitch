@@ -39,6 +39,13 @@ pyinstaller_args+="--log-level DEBUG "
 # This adds bundle identifier in reverse DSN format for macos
 if [ "$BUILD" = "osx" ]; then
     pyinstaller_args+="--osx-bundle-identifier org.inkstitch.app "
+    if [[ -z ${GITHUB_REF} ]]
+        :
+     else
+        bash bin/import-macos-keys
+        pyinstaller_args+="--codesign-identity "Developer ID Application: Lex Neva (929A568N58)" "
+        pyinstaller_args+="--osx-entitlements-file installer_scripts/entitlements.plist "
+    fi
 fi
 
 if [ "$BUILD" = "windows" ]; then
