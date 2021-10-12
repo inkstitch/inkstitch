@@ -40,6 +40,7 @@ pyinstaller_args+="--log-level DEBUG "
 if [ "$BUILD" = "osx" ]; then
     pyinstaller_args+="--osx-bundle-identifier org.inkstitch.app "
     if [[ -z ${GITHUB_REF} ]]
+    then
         :
      else
         bash bin/import-macos-keys
