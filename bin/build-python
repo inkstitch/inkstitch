@@ -44,7 +44,7 @@ if [ "$BUILD" = "osx" ]; then
         :
      else
         bash bin/import-macos-keys
-        pyinstaller_args+="--codesign-identity "Developer ID Application: Lex Neva (929A568N58)" "
+        pyinstaller_args+="--codesign-identity Lex Neva "
         pyinstaller_args+="--osx-entitlements-file installer_scripts/entitlements.plist "
     fi
 fi
