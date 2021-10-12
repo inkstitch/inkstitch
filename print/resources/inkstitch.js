@@ -146,6 +146,14 @@ function writeEstimatedTime( selector, estimatedTime ) {
   $(selector).text( hours + ':' + minutes + ':' + seconds );
 }
 
+function setEstimatedThread() {
+  var multiplyThread = ($('#multiply-thread').val() == '') ? 0 : parseInt($('#multiply-thread').val());
+  var estimatedThread = (parseFloat($('#estimated-thread').text()) * multiplyThread).toFixed(2);
+  $('.total-estimated-thread').each(function(index, item) {
+    $(this).text(estimatedThread + "m");
+  })
+}
+
 // Scale SVG (fit || full size)
 function scaleSVG(element, scale = 'fit') {
 
@@ -594,6 +602,14 @@ $(function() {
     var select = $("select#thread-palette");
     select.find('[value="' + select.data('current-value') + '"]').prop('selected', true);
     $('.modal').hide();
+  });
+
+  // Estimated Thread
+  $('#multiply-thread').on('input initialize', function() {
+    setEstimatedThread();
+  }).on('change', function() {
+    var field_name = $(this).attr('data-field-name');
+    $.postJSON('/settings/' + field_name, {value: $(this).val()});
   });
 
   // View selection checkboxes
