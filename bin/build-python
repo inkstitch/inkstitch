@@ -4,12 +4,6 @@ set -e
 
 site_packages="$(python -c "import os; print(os.path.dirname(os.__file__) + '/site-packages')")"
 
-if [[ -z ${GITHUB_REF} ]]; then
-    :
-else
-    bash bin/import-macos-keys
-fi
-
 if [ "$BUILD" = "linux" ]; then
     # pyinstaller misses these
     pyinstaller_args+="--add-binary /usr/lib/x86_64-linux-gnu/gio/modules/libgiolibproxy.so:. "
@@ -45,6 +39,11 @@ pyinstaller_args+="--log-level DEBUG "
 # This adds bundle identifier in reverse DSN format for macos
 if [ "$BUILD" = "osx" ]; then
     pyinstaller_args+="--osx-bundle-identifier org.inkstitch.app "
+    if [[ -z ${GITHUB_REF} ]]; then
+        :
+    else
+        bash bin/import-macos-keys
+    fi
 fi
 
 if [ "$BUILD" = "windows" ]; then
