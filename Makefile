@@ -20,6 +20,9 @@ messages.po: inx
 	sed -i 's/charset=CHARSET/charset=UTF-8/g' messages-inx.po
 	bin/pyembroidery-gettext > pyembroidery-format-descriptions.py
 	bin/inkstitch-fonts-gettext > inkstitch-fonts-metadata.py
+	# After the inx files are finished building, we don't need the src/ folder anymore.
+	# We don't want babel to grab possible translation strings from that folder, so let's remove it
+	rm -rf src/
 	pybabel extract -o messages-babel.po -F babel.conf --add-location=full --add-comments=l10n,L10n,L10N --sort-by-file --strip-comments -k N_ -k '$$gettext' .
 	rm pyembroidery-format-descriptions.py inkstitch-fonts-metadata.py
 	cd electron && yarn --link-duplicates --pure-lockfile
