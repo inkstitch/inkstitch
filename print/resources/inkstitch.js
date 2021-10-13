@@ -147,7 +147,7 @@ function writeEstimatedTime( selector, estimatedTime ) {
 }
 
 function setEstimatedThread() {
-  var multiplyThread = ($('#multiply-thread').val() == '') ? 0 : parseInt($('#multiply-thread').val());
+  var multiplyThread = ($('#multiply-thread').val() == '') ? 2 : parseInt($('#multiply-thread').val());
   var estimatedThread = (parseFloat($('#estimated-thread').text()) * multiplyThread).toFixed(2);
   $('.total-estimated-thread').each(function(index, item) {
     $(this).text(estimatedThread + "m");
@@ -700,6 +700,7 @@ $(function() {
 
   setTimeout(function() {
     setEstimatedTime();
+    setEstimatedThread();
   }, 100);
 
   $('button.svg-realistic').click(function(e){
@@ -744,6 +745,8 @@ $(function() {
     settings["time-cld"] = $("[data-field-name='time-cld']").val();
     settings["time-opo"] = $("[data-field-name='time-opo']").val();
     settings["time-opd"] = $("[data-field-name='time-opd']").val();
+
+    settings["multiply-thread"] = $("[data-field-name='multiply-thread']").val();
 
     $.postJSON('/defaults', {'value': settings});
   });
