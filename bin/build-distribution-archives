@@ -30,6 +30,15 @@ if [ "$BUILD" = "osx" ]; then
         # This code signs and notarize the inkstitch.app
         DEV_IDENT="Developer ID Application: Lex Neva (929A568N58)"
         echo "Signing of inkstitch.app"
+        # signing the binary may fix notary issue
+        /usr/bin/codesign -s "${DEV_IDENT}" \
+                        --deep \
+                        --force \
+                        --entitlements installer_scripts/entitlements.plist \
+                        -o runtime \
+                        --timestamp \
+                        dist/inkstitch.app/Contents/MacOS/inkstitch -v
+        # last signing before packaging
         /usr/bin/codesign -s "${DEV_IDENT}" \
                         --deep \
                         --force \

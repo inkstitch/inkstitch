@@ -150,7 +150,9 @@ jobs:
           pip install wheel
           pip install PyGObject
           pip install git+https://github.com/gtaylor/python-colormath
-
+          # with --no-binary argument may fix notary issues as well shapely speedups error issue
+          pip install lxml --no-binary lxml
+          pip install shapely --no-binary shapely
           pip install -r requirements.txt
           pip install pyinstaller==4.3
 
