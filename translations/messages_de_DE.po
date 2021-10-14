@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-08-17 00:51+0000\n"
-"PO-Revision-Date: 2021-09-16 00:58\n"
+"POT-Creation-Date: 2021-10-14 01:30+0000\n"
+"PO-Revision-Date: 2021-10-14 01:31\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -14,13 +14,22 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: easygettext\n"
 "Project-Id-Version: \n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-14 01:30+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Crowdin-Project: inkstitch\n"
 "X-Crowdin-Project-ID: 299419\n"
 "X-Crowdin-Language: de\n"
 "X-Crowdin-File: /main/messages.po\n"
 "X-Crowdin-File-ID: 8\n"
-"Language: de_DE\n"
 
 #. name of font in fonts/amita
 #: inkstitch-fonts-metadata.py:2
@@ -280,58 +289,69 @@ msgstr "Ink/Stitch hat einen unerwarteten Fehler zurückgegeben."
 msgid "If you'd like to help, please file an issue at https://github.com/inkstitch/inkstitch/issues and include the entire error description below:"
 msgstr "Wenn du uns bei der Fehlerbehebung helfen willst, gehe auf https://github.com/inkstitch/inkstitch/issues. Klicke auf \"New Issue\" und füge unten stehende Fehlermeldung in das Textfeld ein:"
 
+#. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
-#: lib/commands.py:24
+#: lib/commands.py:24 inx/inkstitch_object_commands.inx:4
 msgid "Fill stitch starting position"
 msgstr "Füllstich Startposition"
 
+#. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
-#: lib/commands.py:27
+#: lib/commands.py:27 inx/inkstitch_object_commands.inx:5
 msgid "Fill stitch ending position"
 msgstr "Füllstich Endposition"
 
+#. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
-#: lib/commands.py:30
+#: lib/commands.py:30 inx/inkstitch_object_commands.inx:6
 msgid "Auto-route satin stitch starting position"
 msgstr "Startposition für automatisch geführte Satinkolumne"
 
+#. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
-#: lib/commands.py:33
+#: lib/commands.py:33 inx/inkstitch_object_commands.inx:7
 msgid "Auto-route satin stitch ending position"
 msgstr "Endposition für automatisch geführte Satinkolumne"
 
+#. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
-#: lib/commands.py:36
+#: lib/commands.py:36 inx/inkstitch_object_commands.inx:8
 msgid "Stop (pause machine) after sewing this object"
 msgstr "Stoppen (Pause) nach dem Nähen diesem Objekts"
 
+#. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
-#: lib/commands.py:39
+#: lib/commands.py:39 inx/inkstitch_object_commands.inx:9
 msgid "Trim thread after sewing this object"
 msgstr "Faden abschneiden nach diesem Objekt"
 
+#. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
-#: lib/commands.py:42
+#: lib/commands.py:42 inx/inkstitch_object_commands.inx:10
 msgid "Ignore this object (do not stitch)"
 msgstr "Ignoriere dieses Objekt (nicht nähen)"
 
+#. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
-#: lib/commands.py:45
+#: lib/commands.py:45 inx/inkstitch_object_commands.inx:11
 msgid "Satin cut point (use with Cut Satin Column)"
 msgstr "Satin Schnittpunkt (mit \"Satinkolumne schneiden\" benutzen)"
 
+#. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command that affects a layer
-#: lib/commands.py:48
+#: lib/commands.py:48 inx/inkstitch_layer_commands.inx:7
 msgid "Ignore layer (do not stitch any objects in this layer)"
 msgstr "Ebene ignorieren (keine Objekte in dieser Ebene nähen)"
 
+#. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command that affects entire document
-#: lib/commands.py:51
+#: lib/commands.py:51 inx/inkstitch_global_commands.inx:7
 msgid "Origin for exported embroidery files"
 msgstr "Nullpunkt für exportierte Stickdateien"
 
+#. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command that affects entire document
-#: lib/commands.py:54
+#: lib/commands.py:54 inx/inkstitch_global_commands.inx:9
 msgid "Jump destination for Stop commands (a.k.a. \"Frame Out position\")."
 msgstr "Rahmenposition nach Stop-Befehlen."
 
@@ -802,7 +822,7 @@ msgstr "Benutzerdefinierte Satinkolumne"
 msgid "\"E\" stitch"
 msgstr "\"E\" Stich"
 
-#: lib/elements/satin_column.py:86
+#: lib/elements/satin_column.py:86 lib/elements/satin_column.py:194
 msgid "Maximum stitch length"
 msgstr "Maximale Stichlänge"
 
@@ -860,7 +880,7 @@ msgid "Zig-zag underlay"
 msgstr "Zick-Zack Unterlage"
 
 #: lib/elements/satin_column.py:159 lib/elements/satin_column.py:168
-#: lib/elements/satin_column.py:179
+#: lib/elements/satin_column.py:179 lib/elements/satin_column.py:197
 msgid "Zig-zag Underlay"
 msgstr "Zick-Zack Unterlage"
 
@@ -879,6 +899,10 @@ msgstr "Einrückung"
 #: lib/elements/satin_column.py:177
 msgid "default: half of contour underlay inset"
 msgstr "Standard: Halbe Einrückung der Konturunterlage"
+
+#: lib/elements/satin_column.py:195
+msgid "Split stitch if distance of maximum stitch length is exceeded"
+msgstr ""
 
 #: lib/elements/stroke.py:21
 msgid "Stroke"
@@ -960,15 +984,15 @@ msgid "Please select at least one satin column."
 msgstr "Bitte mindestens eine Satinkolumne auswählen."
 
 #. This was previously: "No embroiderable paths selected."
-#: lib/extensions/base.py:124
+#: lib/extensions/base.py:126
 msgid "Ink/Stitch doesn't know how to work with any of the objects you've selected."
 msgstr "Ink/Stitch kann keines der ausgewählten Objekte interpretieren."
 
-#: lib/extensions/base.py:126
+#: lib/extensions/base.py:128
 msgid "There are no objects in the entire document that Ink/Stitch knows how to work with."
 msgstr "Es gibt im gesamten Dokument keine Objekte, mit denen Ink/Stitch arbeiten kann."
 
-#: lib/extensions/base.py:128
+#: lib/extensions/base.py:130
 msgid "Tip: Run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot Objects"
 msgstr "Tipp: Öffne Erweiterungen > Ink/Stitch > Fehlerbehebung > Fehlerbehebung an Objekten"
 
@@ -1041,11 +1065,6 @@ msgstr "Probiere die Option \"andere Garnliste\" und wähle die entsprechende Ga
 #: lib/extensions/import_threadlist.py:50
 msgid "Please chose an other color palette for your design."
 msgstr "Wähle eine andere Garnpalette für das Design."
-
-#: lib/extensions/input.py:71
-#, python-format
-msgid "File does not exist and cannot be opened. Please correct the file path and try again.\\r%s"
-msgstr "Die Datei kann nicht geöffnet werden. Bitte überprüfe den Dateipfad und versuche es erneut.\\r%s"
 
 #: lib/extensions/install_custom_palette.py:24
 msgid "File does not exist."
@@ -1128,6 +1147,10 @@ msgstr "Bitte den Ordner für die benutzerdefinierte Schriften angeben."
 msgid "Please specify a font file."
 msgstr "Bitte eine Schriftdatei auswählen."
 
+#: lib/extensions/letters_to_font.py:35
+msgid "Font directory not found. Please specify an existing directory."
+msgstr ""
+
 #: lib/extensions/object_commands.py:21
 msgid "Please select one or more objects to which to attach commands."
 msgstr "Bitte Objekte auswählen, die mit Befehlen verknüpft werden sollen."
@@ -1199,13 +1222,14 @@ msgstr "Wenn eine Form noch immer nicht nicht gestickt wird, bitte überprüfen,
 msgid "Invalid Pointer"
 msgstr "Fehlerzeiger"
 
-#: lib/extensions/troubleshoot.py:77 templates/lettering_generate_json.xml:26
+#: lib/extensions/troubleshoot.py:77
+#: inx/inkstitch_lettering_generate_json.inx:26
 msgid "Description"
 msgstr "Beschreibung"
 
 #: lib/extensions/troubleshoot.py:98 lib/extensions/troubleshoot.py:143
-#: templates/cleanup.xml:17 templates/remove_embroidery_settings.xml:16
-#: templates/troubleshoot.xml:10
+#: inx/inkstitch_cleanup.inx:17 inx/inkstitch_remove_embroidery_settings.inx:16
+#: inx/inkstitch_troubleshoot.inx:10
 msgid "Troubleshoot"
 msgstr "Fehlerbehebung"
 
@@ -1315,6 +1339,13 @@ msgstr "Einstellung \"%s\" nicht gefunden."
 msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
 msgstr "Einstellung \"%s\" bereits vorhanden. Bitte verwenden Sie einen anderen Namen oder drücken Sie \"Überschreiben\""
 
+#. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
+#. command label at bottom of simulator window
+#: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:137
+#: inx/inkstitch_output_TXT.inx:29
+msgid "STITCH"
+msgstr "STICH"
+
 #: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:140
 msgid "JUMP"
 msgstr "SPRUNG"
@@ -1323,22 +1354,15 @@ msgstr "SPRUNG"
 msgid "TRIM"
 msgstr "SCHNEIDEN"
 
-#. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
-#. command label at bottom of simulator window
-#: lib/gui/simulator.py:18 templates/output_params_txt.xml:14
-#: electron/src/renderer/assets/js/simulator.js:137
-msgid "STITCH"
-msgstr "STICH"
-
-#: lib/gui/simulator.py:18 templates/output_params_txt.xml:16
-#: electron/src/renderer/assets/js/simulator.js:149
-msgid "COLOR CHANGE"
-msgstr "FARBWECHSEL"
-
-#: lib/gui/simulator.py:18 templates/output_params_txt.xml:18
-#: electron/src/renderer/assets/js/simulator.js:146
+#: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:146
+#: inx/inkstitch_output_TXT.inx:33
 msgid "STOP"
 msgstr "STOP"
+
+#: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:149
+#: inx/inkstitch_output_TXT.inx:31
+msgid "COLOR CHANGE"
+msgstr "FARBWECHSEL"
 
 #: lib/gui/simulator.py:50
 msgid "Slow down (arrow down)"
@@ -1416,14 +1440,7 @@ msgid "Cannot load simulator.\n"
 msgstr "Die Stickvorschau kann nicht geladen werden.\n"
 "Für eine vollständige Fehlermeldung bitte das Parameter-Fenster schließen."
 
-#. If you translate this string, that will tell Ink/Stitch to
-#. generate menu items for this language in Inkscape's "Extensions"
-#. menu.
-#: lib/inx/utils.py:86
-msgid "Generate INX files"
-msgstr "Erzeuge INX Dateien"
-
-#: lib/lettering/font.py:158
+#: lib/lettering/font.py:161
 #, python-format
 msgid "The font '%s' has no variants."
 msgstr "Die Schrift '%s' hat keine Varianten."
@@ -1434,6 +1451,11 @@ msgstr "Die Schrift '%s' hat keine Varianten."
 #, python-format
 msgid "Error writing to %(path)s: %(error)s"
 msgstr "Fehler beim Schreiben in %(path)s: %(error)s"
+
+#: lib/stitch_plan/generate_stitch_plan.py:73
+#, python-format
+msgid "File does not exist and cannot be opened. Please correct the file path and try again.\\r%s"
+msgstr "Die Datei kann nicht geöffnet werden. Bitte überprüfe den Dateipfad und versuche es erneut.\\r%s"
 
 #: lib/stitches/auto_satin.py:659
 msgid "Auto-Satin"
@@ -1821,7 +1843,7 @@ msgstr "Bei einer Änderung der Garnpalette  werden die Garnnamen und Bestellnum
 msgid "Yes"
 msgstr "Ja"
 
-#: print/templates/ui.html:170 templates/lettering_generate_json.xml:37
+#: print/templates/ui.html:170 inx/inkstitch_lettering_generate_json.inx:37
 msgid "No"
 msgstr "Nein"
 
@@ -2006,533 +2028,6 @@ msgstr "Brother Stichformat"
 msgid "G-code Format"
 msgstr "G-Code Format"
 
-#: templates/about.xml:3 templates/about.xml:6
-msgid "About"
-msgstr "Über"
-
-#: templates/about.xml:10
-msgid "An open-source machine embroidery design platform based on Inkscape."
-msgstr "Eine quelloffene Digitalisierungssoftware für das Erstellen von Maschinenstickereien."
-
-#: templates/about.xml:15
-msgid "License"
-msgstr "Lizenz"
-
-#: templates/auto_satin.xml:3
-msgid "Auto-Route Satin Columns"
-msgstr "Automatisch geführte Satinkolumnen"
-
-#: templates/auto_satin.xml:5
-msgid "Trim jump stitches"
-msgstr "Schneide Faden bei Sprungstichen"
-
-#: templates/auto_satin.xml:6
-msgid "Preserve order of satin columns"
-msgstr "Behalte Reihenfolge der Satinkolumnen bei"
-
-#: templates/auto_satin.xml:12 templates/convert_to_satin.xml:10
-#: templates/convert_to_stroke.xml:13 templates/cut_satin.xml:10
-#: templates/flip.xml:10
-msgid "Satin Tools"
-msgstr "Satin Werkzeuge"
-
-#: templates/break_apart.xml:3
-msgid "Break Apart Fill Objects"
-msgstr "Aufteilen von Füllobjekten"
-
-#: templates/break_apart.xml:10
-msgid "Fill Tools"
-msgstr "Füllstitch Werkzeuge"
-
-#: templates/break_apart.xml:15
-msgid "This extension will try to repair fill shapes and break them apart if necessary. Holes will be retained. Use on simple or overlapping shapes."
-msgstr "Diese Erweiterung versucht, Füllformen zu reparieren und bei Bedarf auseinanderzubrechen. Löcher bleiben erhalten. Verwendung bei einfachen oder überlappenden Formen."
-
-#: templates/cleanup.xml:3
-msgid "Cleanup Document"
-msgstr "Dokument bereinigen"
-
-#: templates/cleanup.xml:5
-msgid "Use this extension to remove small objects from the document."
-msgstr "Diese Erweiterung entfernt kleine Objekte aus dem Dokument."
-
-#: templates/cleanup.xml:6
-msgid "Remove Small Fill Areas"
-msgstr "Kleine Füllbereiche entfernen"
-
-#: templates/cleanup.xml:7
-msgid "Removes areas smaller than dedined by threshold."
-msgstr "Entfernt Bereiche, die kleiner sind als vom Schwellenwert festgelegt."
-
-#: templates/cleanup.xml:8
-msgid "Fill area threshold (px²)"
-msgstr "Minimale Größe für Füllstich-Objekte (px²)"
-
-#: templates/cleanup.xml:10
-msgid "Removes small strokes shorter than defined by threshold."
-msgstr "Entfernt kleine Striche, die kleiner sind als vom Schwellenwert festgelegt."
-
-#: templates/cleanup.xml:11
-msgid "Stroke threshold (px)"
-msgstr "Minimale Länge für Linien (px)"
-
-#: templates/convert_to_satin.xml:3
-msgid "Convert Line to Satin"
-msgstr "Konvertierung Linie zu Satinstich"
-
-#: templates/convert_to_stroke.xml:3
-msgid "Convert Satin to Stroke"
-msgstr "Satinkolumne in Linie konvertieren"
-
-#: templates/convert_to_stroke.xml:6
-msgid "Converts a satin column into a running stitch."
-msgstr "Konvertiert eine Satinkolumne in einen Laufstich."
-
-#: templates/convert_to_stroke.xml:8
-msgid "Do not delete original satin column."
-msgstr "Satinkolumne behalten."
-
-#: templates/cut_satin.xml:3
-msgid "Cut Satin Column"
-msgstr "Satinkolumne schneiden"
-
-#: templates/duplicate_params.xml:3
-msgid "Duplicate Params"
-msgstr "Parameter duplizieren"
-
-#: templates/duplicate_params.xml:10 templates/reorder.xml:10
-#: templates/selection_to_pattern.xml:10
-msgid "Edit"
-msgstr "Bearbeiten"
-
-#: templates/embroider.xml:3
-msgid "Embroider"
-msgstr "Sticken"
-
-#: templates/embroider.xml:5
-msgid "Create a stitch file"
-msgstr "Stickdatei erstellen"
-
-#: templates/embroider.xml:6
-msgid "Save your embroidery file through | File > Save a Copy ... |"
-msgstr "Speichere deine Stickdatei über | Datei > Kopie speichern ... |"
-
-#: templates/embroider.xml:7
-msgid "Choose from listed embroidery file formats and save."
-msgstr "Wähle aus den dort aufgelisteten Dateiformaten und klicke auf \"Speichern\"."
-
-#: templates/embroider.xml:9
-msgid "Multiple file formats can be saved by choosing the zip file format."
-msgstr "Mehrere Dateiformate können über das zip-Format gleichzeitig gespeichert werden."
-
-#: templates/embroider.xml:14 templates/print.xml:10 templates/simulator.xml:10
-#: templates/stitch_plan_preview.xml:10
-msgid "Visualise and Export"
-msgstr "Visualisieren und exportieren"
-
-#: templates/embroider_settings.xml:3
-msgid "Preferences"
-msgstr "Einstellungen"
-
-#: templates/embroider_settings.xml:13
-msgid "Output Settings"
-msgstr "Ausgabeeinstellungen"
-
-#: templates/embroider_settings.xml:16
-msgid "Collapse length (mm)"
-msgstr "Maximaler Abstand zwischen zwei Objekten ohne vernähen (mm)"
-
-#: templates/embroider_settings.xml:17
-msgid "Jump stitches smaller than this will be treated as normal stitches."
-msgstr "Sprungstiche, die kleiner sind, werden als normale Stiche behandelt."
-
-#: templates/flip.xml:3
-msgid "Flip Satin Column Rails"
-msgstr "Konturen der Satinkolumne umkehren"
-
-#: templates/global_commands.xml:3
-msgid "Add Commands"
-msgstr "Befehle hinzufügen"
-
-#: templates/global_commands.xml:5
-msgid "These commands affect the entire embroidery design."
-msgstr "Diese Befehle wirken sich auf das gesamte Stickdesign aus."
-
-#. Inkscape submenu under Extensions -> Ink/Stitch
-#: templates/global_commands.xml:15 templates/layer_commands.xml:14
-#: templates/object_commands.xml:13
-msgid "Commands"
-msgstr "Befehle"
-
-#: templates/import_threadlist.xml:3
-msgid "Import Threadlist"
-msgstr "Garnliste importieren"
-
-#: templates/import_threadlist.xml:6 templates/install_custom_palette.xml:8
-msgid "Choose file"
-msgstr "Datei wählen"
-
-#: templates/import_threadlist.xml:20 templates/install.xml:10
-#: templates/install_custom_palette.xml:13
-msgid "Thread Color Management"
-msgstr "Garnfarben Verwaltung"
-
-#: templates/input.xml:9
-#, python-format
-msgid "convert %(file_extension)s file to Ink/Stitch manual-stitch paths"
-msgstr "Konvertierung der %(file_extension)s Datei in Ink/Stitch manuelle Stichpfade"
-
-#: templates/install.xml:3
-msgid "Install thread color palettes for Inkscape"
-msgstr "Garnfarbpaletten für Inkscape installieren"
-
-#: templates/install_custom_palette.xml:3
-msgid "Install custom palette"
-msgstr "Benutzerdefinierte Farbpalette installieren"
-
-#: templates/install_custom_palette.xml:6
-msgid "Choose a .gpl color palette file to install into Inkscape."
-msgstr "Wähle eine Farbpalettendatei im .gpl Format."
-
-#: templates/install_custom_palette.xml:7
-msgid "Restart Inkscape to use."
-msgstr "Inkscape benötigt einen Neustart um die Farbpalette verfügbar zu machen."
-
-#: templates/layer_commands.xml:3
-msgid "Add Layer Commands"
-msgstr "Ebenenbefehle hinzufügen"
-
-#: templates/layer_commands.xml:5
-msgid "Commands will be added to the currently-selected layer."
-msgstr "Befehle werden zur aktuell ausgewählten Ebene hinzugefügt."
-
-#: templates/lettering.xml:3
-msgid "Lettering"
-msgstr "Text"
-
-#: templates/lettering_custom_font_dir.xml:3
-#: templates/lettering_custom_font_dir.xml:18
-msgid "Custom font directory"
-msgstr "Benutzerdefinierter Ordner für Schriften"
-
-#: templates/lettering_custom_font_dir.xml:10
-#: templates/lettering_generate_json.xml:10
-#: templates/lettering_remove_kerning.xml:10
-msgid "Font Management"
-msgstr "Schriftverwaltung"
-
-#: templates/lettering_custom_font_dir.xml:15
-msgid "Set a custom directory for additional fonts to be used with the lettering tool."
-msgstr "Definiere einen Ordner mit zusätzliche Schriften für das Textwerkzeug."
-
-#: templates/lettering_custom_font_dir.xml:21
-msgid "Usage: The custom font directory must contain a subdirectory for each font."
-msgstr "Verwendung: Der benutzerdefinierte Ordner für Schriften muss für jede Schrift einen Unterordner enthalten."
-
-#: templates/lettering_generate_json.xml:3
-msgid "Generate JSON"
-msgstr "JSON erstellen"
-
-#: templates/lettering_generate_json.xml:15
-msgid "Generates font.json which can be used by the lettering tool."
-msgstr "Erstellt die font.json-Datei, um die Schrift für das Textwerkzeug nutzbar zu machen."
-
-#: templates/lettering_generate_json.xml:17
-msgid "The generated file can be viewed and updated with a standard text editor tool."
-msgstr "Die erstellte Datei kann mit einem Standard-Texteditor angeschaut und bearbeitet werden."
-
-#: templates/lettering_generate_json.xml:21
-msgid "SVG Font File"
-msgstr "SVG-Schriftdatei"
-
-#: templates/lettering_generate_json.xml:25
-msgid "Name"
-msgstr "Name"
-
-#: templates/lettering_generate_json.xml:32
-msgid "Autoroute Satin"
-msgstr "Automatisch geführte Satinkolumne"
-
-#: templates/lettering_generate_json.xml:33
-msgid "Disable if you defined manual routing in your font."
-msgstr "Deaktiviere diese Funktion, wenn du für eine manuelle Stichführung in deiner Schriftdatei angelegt hast."
-
-#: templates/lettering_generate_json.xml:34
-msgid "Reversible"
-msgstr "Umkehrbar"
-
-#: templates/lettering_generate_json.xml:35
-msgid "If disabled back and forth stitching will not be possile for this font."
-msgstr "Wenn diese Funktion deaktiviert ist, ist die Option \"Sticke Textzeilen vor und zurück\" für diese Schrift nicht verfügbar."
-
-#: templates/lettering_generate_json.xml:36
-msgid "Force letter case"
-msgstr "Klein-/Großbuchstaben erzwingen"
-
-#: templates/lettering_generate_json.xml:38
-msgid "Upper"
-msgstr "Großbuchstaben"
-
-#: templates/lettering_generate_json.xml:39
-msgid "Lower"
-msgstr "Kleinbuchstaben"
-
-#: templates/lettering_generate_json.xml:43
-msgid "Min Scale"
-msgstr "Minimale Skalierung"
-
-#: templates/lettering_generate_json.xml:44
-msgid "Max Scale"
-msgstr "Maximale Skalierung"
-
-#: templates/lettering_generate_json.xml:48
-msgid "Default Glyph"
-msgstr "Standard-Glyphe"
-
-#: templates/lettering_generate_json.xml:52
-msgid "Kerning"
-msgstr "Kerning"
-
-#: templates/lettering_generate_json.xml:54
-msgid "If your font file contains kerning information, you can completely ignore the following settings (unless you want to overwrite them).\n"
-"                   If the kerning information cannot be found, these values will apply automatically."
-msgstr "Wenn deine Schriftdatei Kerning-Informationen enthält, kannst du die nächsten Einstellungen ignorieren (es sei denn, sie sollen manuell gesetzt werden).                   Wenn keine Kerning-Informationen gefunden werden, werden die unten stehenden Werte automatisch genutzt."
-
-#: templates/lettering_generate_json.xml:59
-#: templates/lettering_generate_json.xml:66
-msgid "Force"
-msgstr "Erzwingen"
-
-#: templates/lettering_generate_json.xml:60
-msgid "Overwrite leading information from font file."
-msgstr "Information zur Zeilenhöhe aus der Schriftdatei überschreiben."
-
-#: templates/lettering_generate_json.xml:61
-msgid "Leading (px)"
-msgstr "Zeilenhöhe (px)"
-
-#: templates/lettering_generate_json.xml:62
-msgid "Line height (default: 100)"
-msgstr "Zeilenhöhe (Standard: 100)"
-
-#: templates/lettering_generate_json.xml:67
-msgid "Overwrite word spacing information from font file."
-msgstr "Information zum Wortabstand aus der Schriftdatei überschreiben."
-
-#: templates/lettering_generate_json.xml:68
-msgid "Word spacing (px)"
-msgstr "Wortabstand (px)"
-
-#: templates/lettering_generate_json.xml:69
-msgid "Space character width (default: 20)"
-msgstr "Breite des Leerzeichens (Standard: 20)"
-
-#: templates/lettering_remove_kerning.xml:3
-msgid "Remove Kerning"
-msgstr "Kerning entfernen"
-
-#: templates/lettering_remove_kerning.xml:15
-msgid "Removes Kerning information from given SVG files"
-msgstr "Entfernt die Kerning Information aus den ausgewählten SVG-Dateien"
-
-#: templates/lettering_remove_kerning.xml:19
-msgid "Make sure you keep a copy of the original file. After running this extension kerning information will be lost unrevertably from these files."
-msgstr "Stelle sicher, dass eine Kopie der Original-Dateien existiert. Nach dem Ausführen dieser Funktion, wird die Kerning Information unwiderbringlich aus den Dateien entfernt sein."
-
-#: templates/lettering_remove_kerning.xml:23
-msgid "Select Font Files"
-msgstr "Schriftdateien auswählen"
-
-#: templates/object_commands.xml:3
-msgid "Attach Commands to Selected Objects"
-msgstr "Befehle mit gewählten Objekten verknüpfen"
-
-#: templates/output.xml:9
-#, python-format
-msgid "Save design in %(file_extension)s format using Ink/Stitch"
-msgstr "Speichern des Designs ins %(file_extension)s Format mit Ink/Stitch"
-
-#: templates/output_params_txt.xml:4
-msgid "negate X coordinate values"
-msgstr "x-Koordinatenwerte negieren"
-
-#: templates/output_params_txt.xml:4
-msgid "Negate x coordinates"
-msgstr "X-Koordinaten negieren"
-
-#: templates/output_params_txt.xml:5
-msgid "negate Y coordinate values"
-msgstr "y-Koordinatenwerte negieren"
-
-#: templates/output_params_txt.xml:5
-msgid "Negate y coordinates"
-msgstr "Y-Koordinaten negieren"
-
-#: templates/output_params_txt.xml:6
-msgid "Z coordinate value"
-msgstr "Wert für Z-Koordinate"
-
-#: templates/output_params_txt.xml:6
-msgid "Either alternate Z value between 0 and 1 or travel custom value."
-msgstr "Nutze entweder alternierende Z Werte (0 und 1) oder addiere jeweils den vordefinierten Wert."
-
-#: templates/output_params_txt.xml:7
-msgid "alternate Z value"
-msgstr "alternierender Z Wert"
-
-#: templates/output_params_txt.xml:8 templates/output_params_txt.xml:10
-msgid "Z travel per stitch"
-msgstr "Z Wert pro Stich"
-
-#: templates/output_params_txt.xml:11
-msgid "increment z coordinate by this amount per stitch if \"Z travel per stitch\" is enabled"
-msgstr "Erhöhe die Z-Koordinate um diesen Wert pro Stitch, wenn \"Z Wert pro Stich\" aktiviert ist"
-
-#: templates/output_params_txt.xml:15
-#, python-format
-msgid "Use '%X' for x-coordinate. Use '%Y' for y-coordinate and '%Z' for z-coordinate. Use '\\n' for a new line."
-msgstr "Verwenden Sie '%X' für die x-Koordinate. Verwenden Sie '%Y' für die y-Koordinate und '%Z' für die z-Koordinate. Verwenden Sie '\\n' für eine neue Zeile."
-
-#: templates/output_params_txt.xml:17 templates/output_params_txt.xml:19
-msgid "Use '\\n' for a new line. Leave empty to use default value. Use 'none' to remove."
-msgstr "Verwenden Sie '\\n' für eine neue Zeile. Leer lassen, um den Standardwert zu verwenden. Verwenden Sie 'none' zum Entfernen."
-
-#: templates/output_params_txt.xml:20
-msgid "START"
-msgstr "START"
-
-#: templates/output_params_txt.xml:21 templates/output_params_txt.xml:23
-msgid "Use '\\n' for a new line."
-msgstr "Verwenden Sie '\\n' für eine neue Zeile."
-
-#: templates/output_params_txt.xml:22
-msgid "END"
-msgstr "ENDE"
-
-#: templates/output_params_txt.xml:26
-msgid "laser mode"
-msgstr "Lasermodus"
-
-#: templates/output_params_txt.xml:27
-msgid "Laser mode (generate g-code for grbl laser mode)"
-msgstr "Lasermodus (G-Code für den GRBL Lasermodus generieren)"
-
-#: templates/output_params_txt.xml:28
-msgid "dynamic laser power"
-msgstr "dynamische Kraft des Lasers"
-
-#: templates/output_params_txt.xml:29
-msgid "Use Grbl's M4 dynamic laser power mode.  Ensures consistent laser cutting power regardless of motor speed.  Only for PWM-capable lasers."
-msgstr "Verwende den dynamischen Laserleistungsmodus M4 von GRBL. Gewährleistet eine konstante Laserschneidleistung unabhängig von der Motordrehzahl. Nur für PWM-fähige Laser."
-
-#: templates/output_params_txt.xml:31
-msgid "laser warm-up time"
-msgstr "Laser Aufwärmzeit"
-
-#: templates/output_params_txt.xml:32
-msgid "When turning on the laser, wait this many seconds for laser to warm up (G4 command)"
-msgstr "Warte so viele Sekunden nach dem Einschalten des Lasers - Aufwärmphase (G4 Befehl)"
-
-#: templates/output_params_txt.xml:33
-msgid "spindle speed"
-msgstr "Spindeldrehzahl"
-
-#: templates/output_params_txt.xml:34
-msgid "spindle speed (laser power for laser mode, set to -1 to omit)"
-msgstr "Spindeldrehzahl (Laserpower für Lasermodus, setze auf -1 um es auszulassen)"
-
-#: templates/output_params_txt.xml:35
-msgid "min spindle speed"
-msgstr "minimale Spindeldrehzahl"
-
-#: templates/output_params_txt.xml:36
-msgid "minimum spindle speed value (grbl $31 setting)"
-msgstr "minimale Spindeldrehzahl Wert (grbl $31 setting)"
-
-#: templates/output_params_txt.xml:37
-msgid "max spindle speed"
-msgstr "maximale Spindeldrehzahl"
-
-#: templates/output_params_txt.xml:38
-msgid "minimum spindle speed value (grbl $30 setting)"
-msgstr "minimale Spindeldrehzahl Wert (grbl $30 setting)"
-
-#: templates/output_params_txt.xml:39
-msgid "feed rate (in mm/min, set to -1 to omit)"
-msgstr "Vorschubsrate (in mm/min, setzte auf -1 um es auszulassen)"
-
-#: templates/params.xml:3
-msgid "Params"
-msgstr "Parameter"
-
-#: templates/print.xml:3
-msgid "PDF Export"
-msgstr "PDF-Export"
-
-#: templates/remove_embroidery_settings.xml:3
-msgid "Remove embroidery settings"
-msgstr "Stickeinstellungen entfernen"
-
-#: templates/remove_embroidery_settings.xml:5
-msgid "Use this extension to remove the information Ink/Stitch has stored in your document.  This can be especially useful if you copy and paste objects from an embroidery design into another document."
-msgstr "Entfernt Informationen, die Ink/Stitch in diesem Dokument gespeichert hat.  Das kann besonders dann hilfreich sein, wenn du Objekte aus einem Stickdesign in ein anderes Dokument kopierst."
-
-#: templates/remove_embroidery_settings.xml:6
-msgid "Remove Params"
-msgstr "Parameter entfernen"
-
-#: templates/remove_embroidery_settings.xml:7
-msgid "Removes params from selected objects or all objects if nothing is selected."
-msgstr "Entfernt Parameter von ausgewählten Objekten oder allen Objekten, wenn keines ausgewählt ist."
-
-#: templates/remove_embroidery_settings.xml:8
-msgid "Remove Commands"
-msgstr "Befehle entfernen"
-
-#: templates/remove_embroidery_settings.xml:9
-msgid "Removes visual commands from selected objects or all objects if nothing is selected."
-msgstr "Entfernt Befehle von ausgewählten Objekten oder allen Objekten, wenn keines ausgewählt ist."
-
-#: templates/remove_embroidery_settings.xml:10
-msgid "Remove Print Settings from SVG metadata"
-msgstr "Druckeinstellungen aus den SVG Metadaten entfernen"
-
-#: templates/reorder.xml:3
-msgid "Re-stack objects in order of selection"
-msgstr "Objekte in Auswahlreihenfolge sortieren"
-
-#: templates/selection_to_pattern.xml:3
-msgid "Selection to pattern"
-msgstr "Auswahl zu Muster"
-
-#: templates/simulator.xml:3
-msgid "Simulator / Realistic Preview"
-msgstr "Simulator / Realistische Vorschau"
-
-#: templates/stitch_plan_preview.xml:3
-msgid "Stitch Plan Preview"
-msgstr "Stich-Plan Vorschau"
-
-#: templates/troubleshoot.xml:3
-msgid "Troubleshoot Objects"
-msgstr "Fehlerbehebung an Objekten"
-
-#: templates/zip.xml:8
-msgid "Ink/Stitch: ZIP export multiple formats (.zip)"
-msgstr "Ink/Stitch: Export von mehreren Formaten (.zip)"
-
-#: templates/zip.xml:9
-msgid "Create a ZIP with multiple embroidery file formats using Ink/Stitch"
-msgstr "Erstellen einer ZIP-Datei mit mehreren Stickformaten die Ink/Stitch unterstützt"
-
-#: templates/zip.xml:17
-msgid "Scalable Vector Graphic"
-msgstr "Skalierbare Vektorgrafik"
-
-#: templates/zip.xml:18
-msgid "Threadlist"
-msgstr "Garnliste"
-
 #. name for left arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:52
 msgid "← Arrow left"
@@ -2712,4 +2207,1048 @@ msgstr "Stopp-Befehle"
 #: electron/src/renderer/components/InstallPalettes.vue:60
 msgid "Try again"
 msgstr "Versuchen sie es erneut"
+
+#: inx/inkstitch_about.inx:3 inx/inkstitch_about.inx:6
+msgid "About"
+msgstr "Über"
+
+#: inx/inkstitch_about.inx:8
+msgid "Ink/Stitch - Manual Install"
+msgstr ""
+
+#: inx/inkstitch_about.inx:10
+msgid "An open-source machine embroidery design platform based on Inkscape."
+msgstr "Eine quelloffene Digitalisierungssoftware für das Erstellen von Maschinenstickereien."
+
+#: inx/inkstitch_about.inx:13
+msgid "https://inkstitch.org"
+msgstr ""
+
+#: inx/inkstitch_about.inx:15
+msgid "License"
+msgstr "Lizenz"
+
+#: inx/inkstitch_about.inx:698 inx/inkstitch_auto_satin.inx:11
+#: inx/inkstitch_break_apart.inx:9 inx/inkstitch_cleanup.inx:16
+#: inx/inkstitch_convert_to_satin.inx:9 inx/inkstitch_convert_to_stroke.inx:12
+#: inx/inkstitch_cut_satin.inx:9 inx/inkstitch_duplicate_params.inx:9
+#: inx/inkstitch_embroider.inx:13 inx/inkstitch_embroider_settings.inx:9
+#: inx/inkstitch_flip.inx:9 inx/inkstitch_global_commands.inx:15
+#: inx/inkstitch_import_threadlist.inx:86 inx/inkstitch_install.inx:9
+#: inx/inkstitch_install_custom_palette.inx:12
+#: inx/inkstitch_layer_commands.inx:13 inx/inkstitch_lettering.inx:9
+#: inx/inkstitch_lettering_custom_font_dir.inx:9
+#: inx/inkstitch_lettering_generate_json.inx:9
+#: inx/inkstitch_lettering_remove_kerning.inx:9
+#: inx/inkstitch_letters_to_font.inx:9 inx/inkstitch_object_commands.inx:17
+#: inx/inkstitch_params.inx:9 inx/inkstitch_print.inx:9
+#: inx/inkstitch_remove_embroidery_settings.inx:15 inx/inkstitch_reorder.inx:9
+#: inx/inkstitch_selection_to_pattern.inx:9 inx/inkstitch_simulator.inx:9
+#: inx/inkstitch_stitch_plan_preview.inx:9 inx/inkstitch_troubleshoot.inx:9
+msgid "Ink/Stitch"
+msgstr ""
+
+#: inx/inkstitch_auto_satin.inx:3
+msgid "Auto-Route Satin Columns"
+msgstr "Automatisch geführte Satinkolumnen"
+
+#: inx/inkstitch_auto_satin.inx:12 inx/inkstitch_convert_to_satin.inx:10
+#: inx/inkstitch_convert_to_stroke.inx:13 inx/inkstitch_cut_satin.inx:10
+#: inx/inkstitch_flip.inx:10
+msgid "Satin Tools"
+msgstr "Satin Werkzeuge"
+
+#: inx/inkstitch_break_apart.inx:3
+msgid "Break Apart Fill Objects"
+msgstr "Aufteilen von Füllobjekten"
+
+#: inx/inkstitch_break_apart.inx:10
+msgid "Fill Tools"
+msgstr "Füllstitch Werkzeuge"
+
+#: inx/inkstitch_break_apart.inx:18
+msgid "Simple"
+msgstr ""
+
+#: inx/inkstitch_break_apart.inx:19
+msgid "Complex"
+msgstr ""
+
+#: inx/inkstitch_cleanup.inx:3
+msgid "Cleanup Document"
+msgstr "Dokument bereinigen"
+
+#: inx/inkstitch_convert_to_satin.inx:3
+msgid "Convert Line to Satin"
+msgstr "Konvertierung Linie zu Satinstich"
+
+#: inx/inkstitch_convert_to_stroke.inx:3
+msgid "Convert Satin to Stroke"
+msgstr "Satinkolumne in Linie konvertieren"
+
+#: inx/inkstitch_cut_satin.inx:3
+msgid "Cut Satin Column"
+msgstr "Satinkolumne schneiden"
+
+#: inx/inkstitch_duplicate_params.inx:3
+msgid "Duplicate Params"
+msgstr "Parameter duplizieren"
+
+#: inx/inkstitch_duplicate_params.inx:10 inx/inkstitch_reorder.inx:10
+#: inx/inkstitch_selection_to_pattern.inx:10
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: inx/inkstitch_embroider.inx:3
+msgid "Embroider"
+msgstr "Sticken"
+
+#: inx/inkstitch_embroider.inx:14 inx/inkstitch_print.inx:10
+#: inx/inkstitch_simulator.inx:10 inx/inkstitch_stitch_plan_preview.inx:10
+msgid "Visualise and Export"
+msgstr "Visualisieren und exportieren"
+
+#: inx/inkstitch_embroider_settings.inx:3
+msgid "Preferences"
+msgstr "Einstellungen"
+
+#: inx/inkstitch_flip.inx:3
+msgid "Flip Satin Column Rails"
+msgstr "Konturen der Satinkolumne umkehren"
+
+#: inx/inkstitch_global_commands.inx:3
+msgid "Add Commands"
+msgstr "Befehle hinzufügen"
+
+#: inx/inkstitch_global_commands.inx:17 inx/inkstitch_layer_commands.inx:14
+#: inx/inkstitch_object_commands.inx:18
+msgid "Commands"
+msgstr "Befehle"
+
+#: inx/inkstitch_import_threadlist.inx:3
+msgid "Import Threadlist"
+msgstr "Garnliste importieren"
+
+#: inx/inkstitch_import_threadlist.inx:6
+#: inx/inkstitch_install_custom_palette.inx:8
+msgid "Choose file"
+msgstr "Datei wählen"
+
+#: inx/inkstitch_import_threadlist.inx:8
+msgid "Import Ink/Stitch threadlist"
+msgstr ""
+
+#: inx/inkstitch_import_threadlist.inx:9
+msgid "Import other threadlist*"
+msgstr ""
+
+#: inx/inkstitch_import_threadlist.inx:87 inx/inkstitch_install.inx:10
+#: inx/inkstitch_install_custom_palette.inx:13
+msgid "Thread Color Management"
+msgstr "Garnfarben Verwaltung"
+
+#: inx/inkstitch_input_100.inx:3
+msgid "100 file input"
+msgstr ""
+
+#: inx/inkstitch_input_100.inx:8
+msgid "Ink/Stitch: Toyota Embroidery Format (.100)"
+msgstr ""
+
+#: inx/inkstitch_input_100.inx:9
+msgid "convert 100 file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_10O.inx:3
+msgid "10O file input"
+msgstr ""
+
+#: inx/inkstitch_input_10O.inx:8
+msgid "Ink/Stitch: Toyota Embroidery Format (.10o)"
+msgstr ""
+
+#: inx/inkstitch_input_10O.inx:9
+msgid "convert 10O file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_BRO.inx:3
+msgid "BRO file input"
+msgstr ""
+
+#: inx/inkstitch_input_BRO.inx:8
+msgid "Ink/Stitch: Bits & Volts Embroidery Format (.bro)"
+msgstr ""
+
+#: inx/inkstitch_input_BRO.inx:9
+msgid "convert BRO file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_DAT.inx:3
+msgid "DAT file input"
+msgstr ""
+
+#: inx/inkstitch_input_DAT.inx:8
+msgid "Ink/Stitch: Sunstar or Barudan Embroidery Format (.dat)"
+msgstr ""
+
+#: inx/inkstitch_input_DAT.inx:9
+msgid "convert DAT file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_DSB.inx:3
+msgid "DSB file input"
+msgstr ""
+
+#: inx/inkstitch_input_DSB.inx:8
+msgid "Ink/Stitch: Tajima(Barudan) Embroidery Format (.dsb)"
+msgstr ""
+
+#: inx/inkstitch_input_DSB.inx:9
+msgid "convert DSB file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_DST.inx:3
+msgid "DST file input"
+msgstr ""
+
+#: inx/inkstitch_input_DST.inx:8 inx/inkstitch_output_DST.inx:8
+msgid "Ink/Stitch: Tajima Embroidery Format (.dst)"
+msgstr ""
+
+#: inx/inkstitch_input_DST.inx:9
+msgid "convert DST file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_DSZ.inx:3
+msgid "DSZ file input"
+msgstr ""
+
+#: inx/inkstitch_input_DSZ.inx:8
+msgid "Ink/Stitch: ZSK USA Embroidery Format (.dsz)"
+msgstr ""
+
+#: inx/inkstitch_input_DSZ.inx:9
+msgid "convert DSZ file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_EMD.inx:3
+msgid "EMD file input"
+msgstr ""
+
+#: inx/inkstitch_input_EMD.inx:8
+msgid "Ink/Stitch: Elna Embroidery Format (.emd)"
+msgstr ""
+
+#: inx/inkstitch_input_EMD.inx:9
+msgid "convert EMD file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_EXP.inx:3
+msgid "EXP file input"
+msgstr ""
+
+#: inx/inkstitch_input_EXP.inx:8 inx/inkstitch_output_EXP.inx:8
+msgid "Ink/Stitch: Melco Embroidery Format (.exp)"
+msgstr ""
+
+#: inx/inkstitch_input_EXP.inx:9
+msgid "convert EXP file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_EXY.inx:3
+msgid "EXY file input"
+msgstr ""
+
+#: inx/inkstitch_input_EXY.inx:8
+msgid "Ink/Stitch: Eltac Embroidery Format (.exy)"
+msgstr ""
+
+#: inx/inkstitch_input_EXY.inx:9
+msgid "convert EXY file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_FXY.inx:3
+msgid "FXY file input"
+msgstr ""
+
+#: inx/inkstitch_input_FXY.inx:8
+msgid "Ink/Stitch: Fortron Embroidery Format (.fxy)"
+msgstr ""
+
+#: inx/inkstitch_input_FXY.inx:9
+msgid "convert FXY file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_GT.inx:3
+msgid "GT file input"
+msgstr ""
+
+#: inx/inkstitch_input_GT.inx:8
+msgid "Ink/Stitch: Gold Thread Embroidery Format (.gt)"
+msgstr ""
+
+#: inx/inkstitch_input_GT.inx:9
+msgid "convert GT file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_INB.inx:3
+msgid "INB file input"
+msgstr ""
+
+#: inx/inkstitch_input_INB.inx:8
+msgid "Ink/Stitch: Inbro Embroidery Format (.inb)"
+msgstr ""
+
+#: inx/inkstitch_input_INB.inx:9
+msgid "convert INB file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_JEF.inx:3
+msgid "JEF file input"
+msgstr ""
+
+#: inx/inkstitch_input_JEF.inx:8 inx/inkstitch_output_JEF.inx:8
+msgid "Ink/Stitch: Janome Embroidery Format (.jef)"
+msgstr ""
+
+#: inx/inkstitch_input_JEF.inx:9
+msgid "convert JEF file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_JPX.inx:3
+msgid "JPX file input"
+msgstr ""
+
+#: inx/inkstitch_input_JPX.inx:8
+msgid "Ink/Stitch: Janome Embroidery Format (.jpx)"
+msgstr ""
+
+#: inx/inkstitch_input_JPX.inx:9
+msgid "convert JPX file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_KSM.inx:3
+msgid "KSM file input"
+msgstr ""
+
+#: inx/inkstitch_input_KSM.inx:8
+msgid "Ink/Stitch: Pfaff Embroidery Format (.ksm)"
+msgstr ""
+
+#: inx/inkstitch_input_KSM.inx:9
+msgid "convert KSM file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_MAX.inx:3
+msgid "MAX file input"
+msgstr ""
+
+#: inx/inkstitch_input_MAX.inx:8
+msgid "Ink/Stitch: Pfaff Embroidery Format (.max)"
+msgstr ""
+
+#: inx/inkstitch_input_MAX.inx:9
+msgid "convert MAX file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_MIT.inx:3
+msgid "MIT file input"
+msgstr ""
+
+#: inx/inkstitch_input_MIT.inx:8
+msgid "Ink/Stitch: Mitsubishi Embroidery Format (.mit)"
+msgstr ""
+
+#: inx/inkstitch_input_MIT.inx:9
+msgid "convert MIT file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_NEW.inx:3
+msgid "NEW file input"
+msgstr ""
+
+#: inx/inkstitch_input_NEW.inx:8
+msgid "Ink/Stitch: Ameco Embroidery Format (.new)"
+msgstr ""
+
+#: inx/inkstitch_input_NEW.inx:9
+msgid "convert NEW file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_PCD.inx:3
+msgid "PCD file input"
+msgstr ""
+
+#: inx/inkstitch_input_PCD.inx:8
+msgid "Ink/Stitch: Pfaff Embroidery Format (.pcd)"
+msgstr ""
+
+#: inx/inkstitch_input_PCD.inx:9
+msgid "convert PCD file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_PCM.inx:3
+msgid "PCM file input"
+msgstr ""
+
+#: inx/inkstitch_input_PCM.inx:8
+msgid "Ink/Stitch: Pfaff Embroidery Format (.pcm)"
+msgstr ""
+
+#: inx/inkstitch_input_PCM.inx:9
+msgid "convert PCM file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_PCQ.inx:3
+msgid "PCQ file input"
+msgstr ""
+
+#: inx/inkstitch_input_PCQ.inx:8
+msgid "Ink/Stitch: Pfaff Embroidery Format (.pcq)"
+msgstr ""
+
+#: inx/inkstitch_input_PCQ.inx:9
+msgid "convert PCQ file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_PCS.inx:3
+msgid "PCS file input"
+msgstr ""
+
+#: inx/inkstitch_input_PCS.inx:8
+msgid "Ink/Stitch: Pfaff Embroidery Format (.pcs)"
+msgstr ""
+
+#: inx/inkstitch_input_PCS.inx:9
+msgid "convert PCS file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_PEC.inx:3
+msgid "PEC file input"
+msgstr ""
+
+#: inx/inkstitch_input_PEC.inx:8 inx/inkstitch_output_PEC.inx:8
+msgid "Ink/Stitch: Brother Embroidery Format (.pec)"
+msgstr ""
+
+#: inx/inkstitch_input_PEC.inx:9
+msgid "convert PEC file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_PES.inx:3
+msgid "PES file input"
+msgstr ""
+
+#: inx/inkstitch_input_PES.inx:8 inx/inkstitch_output_PES.inx:8
+msgid "Ink/Stitch: Brother Embroidery Format (.pes)"
+msgstr ""
+
+#: inx/inkstitch_input_PES.inx:9
+msgid "convert PES file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_PHB.inx:3
+msgid "PHB file input"
+msgstr ""
+
+#: inx/inkstitch_input_PHB.inx:8
+msgid "Ink/Stitch: Brother Embroidery Format (.phb)"
+msgstr ""
+
+#: inx/inkstitch_input_PHB.inx:9
+msgid "convert PHB file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_PHC.inx:3
+msgid "PHC file input"
+msgstr ""
+
+#: inx/inkstitch_input_PHC.inx:8
+msgid "Ink/Stitch: Brother Embroidery Format (.phc)"
+msgstr ""
+
+#: inx/inkstitch_input_PHC.inx:9
+msgid "convert PHC file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_SEW.inx:3
+msgid "SEW file input"
+msgstr ""
+
+#: inx/inkstitch_input_SEW.inx:8
+msgid "Ink/Stitch: Janome Embroidery Format (.sew)"
+msgstr ""
+
+#: inx/inkstitch_input_SEW.inx:9
+msgid "convert SEW file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_SHV.inx:3
+msgid "SHV file input"
+msgstr ""
+
+#: inx/inkstitch_input_SHV.inx:8
+msgid "Ink/Stitch: Husqvarna Viking Embroidery Format (.shv)"
+msgstr ""
+
+#: inx/inkstitch_input_SHV.inx:9
+msgid "convert SHV file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_STC.inx:3
+msgid "STC file input"
+msgstr ""
+
+#: inx/inkstitch_input_STC.inx:8
+msgid "Ink/Stitch: Gunold Embroidery Format (.stc)"
+msgstr ""
+
+#: inx/inkstitch_input_STC.inx:9
+msgid "convert STC file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_STX.inx:3
+msgid "STX file input"
+msgstr ""
+
+#: inx/inkstitch_input_STX.inx:8
+msgid "Ink/Stitch: Data Stitch Embroidery Format (.stx)"
+msgstr ""
+
+#: inx/inkstitch_input_STX.inx:9
+msgid "convert STX file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_TAP.inx:3
+msgid "TAP file input"
+msgstr ""
+
+#: inx/inkstitch_input_TAP.inx:8
+msgid "Ink/Stitch: Happy Embroidery Format (.tap)"
+msgstr ""
+
+#: inx/inkstitch_input_TAP.inx:9
+msgid "convert TAP file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_TBF.inx:3
+msgid "TBF file input"
+msgstr ""
+
+#: inx/inkstitch_input_TBF.inx:8
+msgid "Ink/Stitch: Tajima Embroidery Format (.tbf)"
+msgstr ""
+
+#: inx/inkstitch_input_TBF.inx:9
+msgid "convert TBF file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_U01.inx:3
+msgid "U01 file input"
+msgstr ""
+
+#: inx/inkstitch_input_U01.inx:8 inx/inkstitch_output_U01.inx:8
+msgid "Ink/Stitch: Barudan Embroidery Format (.u01)"
+msgstr ""
+
+#: inx/inkstitch_input_U01.inx:9
+msgid "convert U01 file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_VP3.inx:3
+msgid "VP3 file input"
+msgstr ""
+
+#: inx/inkstitch_input_VP3.inx:8 inx/inkstitch_output_VP3.inx:8
+msgid "Ink/Stitch: Pfaff Embroidery Format (.vp3)"
+msgstr ""
+
+#: inx/inkstitch_input_VP3.inx:9
+msgid "convert VP3 file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_XXX.inx:3
+msgid "XXX file input"
+msgstr ""
+
+#: inx/inkstitch_input_XXX.inx:8
+msgid "Ink/Stitch: Singer Embroidery Format (.xxx)"
+msgstr ""
+
+#: inx/inkstitch_input_XXX.inx:9
+msgid "convert XXX file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_ZXY.inx:3
+msgid "ZXY file input"
+msgstr ""
+
+#: inx/inkstitch_input_ZXY.inx:8
+msgid "Ink/Stitch: ZSK TC Embroidery Format (.zxy)"
+msgstr ""
+
+#: inx/inkstitch_input_ZXY.inx:9
+msgid "convert ZXY file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_install.inx:3
+msgid "Install thread color palettes for Inkscape"
+msgstr "Garnfarbpaletten für Inkscape installieren"
+
+#: inx/inkstitch_install_custom_palette.inx:3
+msgid "Install custom palette"
+msgstr "Benutzerdefinierte Farbpalette installieren"
+
+#: inx/inkstitch_install_custom_palette.inx:6
+msgid "Choose a .gpl color palette file to install into Inkscape."
+msgstr "Wähle eine Farbpalettendatei im .gpl Format."
+
+#: inx/inkstitch_install_custom_palette.inx:7
+msgid "Restart Inkscape to use."
+msgstr "Inkscape benötigt einen Neustart um die Farbpalette verfügbar zu machen."
+
+#: inx/inkstitch_layer_commands.inx:3
+msgid "Add Layer Commands"
+msgstr "Ebenenbefehle hinzufügen"
+
+#: inx/inkstitch_lettering.inx:3
+msgid "Lettering"
+msgstr "Text"
+
+#: inx/inkstitch_lettering_custom_font_dir.inx:3
+#: inx/inkstitch_lettering_custom_font_dir.inx:18
+msgid "Custom font directory"
+msgstr "Benutzerdefinierter Ordner für Schriften"
+
+#: inx/inkstitch_lettering_custom_font_dir.inx:10
+#: inx/inkstitch_lettering_generate_json.inx:10
+#: inx/inkstitch_lettering_remove_kerning.inx:10
+#: inx/inkstitch_letters_to_font.inx:10
+msgid "Font Management"
+msgstr "Schriftverwaltung"
+
+#: inx/inkstitch_lettering_generate_json.inx:3
+msgid "Generate JSON"
+msgstr "JSON erstellen"
+
+#: inx/inkstitch_lettering_generate_json.inx:21
+msgid "SVG Font File"
+msgstr "SVG-Schriftdatei"
+
+#: inx/inkstitch_lettering_generate_json.inx:25
+msgid "Name"
+msgstr "Name"
+
+#: inx/inkstitch_lettering_generate_json.inx:33
+msgid "Autoroute Satin"
+msgstr "Automatisch geführte Satinkolumne"
+
+#: inx/inkstitch_lettering_generate_json.inx:33
+msgid "Disable if you defined manual routing in your font."
+msgstr "Deaktiviere diese Funktion, wenn du für eine manuelle Stichführung in deiner Schriftdatei angelegt hast."
+
+#: inx/inkstitch_lettering_generate_json.inx:35
+msgid "Reversible"
+msgstr "Umkehrbar"
+
+#: inx/inkstitch_lettering_generate_json.inx:35
+msgid "If disabled back and forth stitching will not be possile for this font."
+msgstr "Wenn diese Funktion deaktiviert ist, ist die Option \"Sticke Textzeilen vor und zurück\" für diese Schrift nicht verfügbar."
+
+#: inx/inkstitch_lettering_generate_json.inx:36
+msgid "Force letter case"
+msgstr "Klein-/Großbuchstaben erzwingen"
+
+#: inx/inkstitch_lettering_generate_json.inx:38
+msgid "Upper"
+msgstr "Großbuchstaben"
+
+#: inx/inkstitch_lettering_generate_json.inx:39
+msgid "Lower"
+msgstr "Kleinbuchstaben"
+
+#: inx/inkstitch_lettering_generate_json.inx:43
+msgid "Min Scale"
+msgstr "Minimale Skalierung"
+
+#: inx/inkstitch_lettering_generate_json.inx:44
+msgid "Max Scale"
+msgstr "Maximale Skalierung"
+
+#: inx/inkstitch_lettering_generate_json.inx:48
+msgid "Default Glyph"
+msgstr "Standard-Glyphe"
+
+#: inx/inkstitch_lettering_generate_json.inx:60
+#: inx/inkstitch_lettering_generate_json.inx:67
+msgid "Force"
+msgstr "Erzwingen"
+
+#: inx/inkstitch_lettering_generate_json.inx:60
+msgid "Overwrite leading information from font file."
+msgstr "Information zur Zeilenhöhe aus der Schriftdatei überschreiben."
+
+#: inx/inkstitch_lettering_generate_json.inx:62
+msgid "Leading (px)"
+msgstr "Zeilenhöhe (px)"
+
+#: inx/inkstitch_lettering_generate_json.inx:62
+msgid "Line height (default: 100)"
+msgstr "Zeilenhöhe (Standard: 100)"
+
+#: inx/inkstitch_lettering_generate_json.inx:67
+msgid "Overwrite word spacing information from font file."
+msgstr "Information zum Wortabstand aus der Schriftdatei überschreiben."
+
+#: inx/inkstitch_lettering_generate_json.inx:69
+msgid "Word spacing (px)"
+msgstr "Wortabstand (px)"
+
+#: inx/inkstitch_lettering_generate_json.inx:69
+msgid "Space character width (default: 20)"
+msgstr "Breite des Leerzeichens (Standard: 20)"
+
+#: inx/inkstitch_lettering_remove_kerning.inx:3
+msgid "Remove Kerning"
+msgstr "Kerning entfernen"
+
+#: inx/inkstitch_lettering_remove_kerning.inx:23
+msgid "Select Font Files"
+msgstr "Schriftdateien auswählen"
+
+#: inx/inkstitch_letters_to_font.inx:3
+msgid "Letters to font"
+msgstr ""
+
+#: inx/inkstitch_letters_to_font.inx:22
+msgid "File format"
+msgstr ""
+
+#: inx/inkstitch_letters_to_font.inx:24
+msgid "PEC"
+msgstr ""
+
+#: inx/inkstitch_letters_to_font.inx:26
+msgid "PES"
+msgstr ""
+
+#: inx/inkstitch_letters_to_font.inx:28
+msgid "EXP"
+msgstr ""
+
+#: inx/inkstitch_letters_to_font.inx:30
+msgid "DST"
+msgstr ""
+
+#: inx/inkstitch_letters_to_font.inx:32
+msgid "JEF"
+msgstr ""
+
+#: inx/inkstitch_letters_to_font.inx:34
+msgid "VP3"
+msgstr ""
+
+#: inx/inkstitch_letters_to_font.inx:36
+msgid "SVG"
+msgstr ""
+
+#: inx/inkstitch_letters_to_font.inx:38
+msgid "CSV"
+msgstr ""
+
+#: inx/inkstitch_letters_to_font.inx:40
+msgid "U01"
+msgstr ""
+
+#: inx/inkstitch_letters_to_font.inx:42
+msgid "PMV"
+msgstr ""
+
+#: inx/inkstitch_letters_to_font.inx:44
+msgid "TXT"
+msgstr ""
+
+#: inx/inkstitch_letters_to_font.inx:47
+msgid "Font directory"
+msgstr ""
+
+#: inx/inkstitch_letters_to_font.inx:49
+msgid "Import commands"
+msgstr ""
+
+#: inx/inkstitch_object_commands.inx:3
+msgid "Attach Commands to Selected Objects"
+msgstr "Befehle mit gewählten Objekten verknüpfen"
+
+#: inx/inkstitch_output_CSV.inx:3
+msgid "CSV file output"
+msgstr ""
+
+#: inx/inkstitch_output_CSV.inx:8
+msgid "Ink/Stitch: Comma-separated values [DEBUG] (.csv)"
+msgstr ""
+
+#: inx/inkstitch_output_CSV.inx:9
+msgid "Save design in CSV format using Ink/Stitch"
+msgstr ""
+
+#: inx/inkstitch_output_DST.inx:3
+msgid "DST file output"
+msgstr ""
+
+#: inx/inkstitch_output_DST.inx:9
+msgid "Save design in DST format using Ink/Stitch"
+msgstr ""
+
+#: inx/inkstitch_output_EXP.inx:3
+msgid "EXP file output"
+msgstr ""
+
+#: inx/inkstitch_output_EXP.inx:9
+msgid "Save design in EXP format using Ink/Stitch"
+msgstr ""
+
+#: inx/inkstitch_output_JEF.inx:3
+msgid "JEF file output"
+msgstr ""
+
+#: inx/inkstitch_output_JEF.inx:9
+msgid "Save design in JEF format using Ink/Stitch"
+msgstr ""
+
+#: inx/inkstitch_output_PEC.inx:3
+msgid "PEC file output"
+msgstr ""
+
+#: inx/inkstitch_output_PEC.inx:9
+msgid "Save design in PEC format using Ink/Stitch"
+msgstr ""
+
+#: inx/inkstitch_output_PES.inx:3
+msgid "PES file output"
+msgstr ""
+
+#: inx/inkstitch_output_PES.inx:9
+msgid "Save design in PES format using Ink/Stitch"
+msgstr ""
+
+#: inx/inkstitch_output_PMV.inx:3
+msgid "PMV file output"
+msgstr ""
+
+#: inx/inkstitch_output_PMV.inx:8
+msgid "Ink/Stitch: Brother Stitch Format [DEBUG] (.pmv)"
+msgstr ""
+
+#: inx/inkstitch_output_PMV.inx:9
+msgid "Save design in PMV format using Ink/Stitch"
+msgstr ""
+
+#: inx/inkstitch_output_SVG.inx:3
+msgid "SVG file output"
+msgstr ""
+
+#: inx/inkstitch_output_SVG.inx:8
+msgid "Ink/Stitch: Scalable Vector Graphics [DEBUG] (.svg)"
+msgstr ""
+
+#: inx/inkstitch_output_SVG.inx:9
+msgid "Save design in SVG format using Ink/Stitch"
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:3
+msgid "TXT file output"
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:8
+msgid "Ink/Stitch: G-code Format (.txt)"
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:9
+msgid "Save design in TXT format using Ink/Stitch"
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:17
+msgid "Coordinate Settings"
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:18
+msgid "negate X coordinate values"
+msgstr "x-Koordinatenwerte negieren"
+
+#: inx/inkstitch_output_TXT.inx:18
+msgid "Negate x coordinates"
+msgstr "X-Koordinaten negieren"
+
+#: inx/inkstitch_output_TXT.inx:19
+msgid "negate Y coordinate values"
+msgstr "y-Koordinatenwerte negieren"
+
+#: inx/inkstitch_output_TXT.inx:19
+msgid "Negate y coordinates"
+msgstr "Y-Koordinaten negieren"
+
+#: inx/inkstitch_output_TXT.inx:20
+msgid "Z coordinate value"
+msgstr "Wert für Z-Koordinate"
+
+#: inx/inkstitch_output_TXT.inx:20
+msgid "Either alternate Z value between 0 and 1 or travel custom value."
+msgstr "Nutze entweder alternierende Z Werte (0 und 1) oder addiere jeweils den vordefinierten Wert."
+
+#: inx/inkstitch_output_TXT.inx:21
+msgid "alternate Z value"
+msgstr "alternierender Z Wert"
+
+#: inx/inkstitch_output_TXT.inx:22 inx/inkstitch_output_TXT.inx:25
+msgid "Z travel per stitch"
+msgstr "Z Wert pro Stich"
+
+#: inx/inkstitch_output_TXT.inx:25
+msgid "increment z coordinate by this amount per stitch if \"Z travel per stitch\" is enabled"
+msgstr "Erhöhe die Z-Koordinate um diesen Wert pro Stitch, wenn \"Z Wert pro Stich\" aktiviert ist"
+
+#: inx/inkstitch_output_TXT.inx:27
+msgid "Custom Commands"
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:29
+msgid "Use '%X' for x-coordinate. Use '%Y' for y-coordinate and '%Z' for z-coordinate."
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:31 inx/inkstitch_output_TXT.inx:33
+msgid "Leave empty to use default value. Use 'none' to remove."
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:34
+msgid "START"
+msgstr "START"
+
+#: inx/inkstitch_output_TXT.inx:35
+msgid "END"
+msgstr "ENDE"
+
+#: inx/inkstitch_output_TXT.inx:37
+msgid "Laser Settings"
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:39
+msgid "laser mode"
+msgstr "Lasermodus"
+
+#: inx/inkstitch_output_TXT.inx:39
+msgid "Laser mode (generate g-code for grbl laser mode)"
+msgstr "Lasermodus (G-Code für den GRBL Lasermodus generieren)"
+
+#: inx/inkstitch_output_TXT.inx:42
+msgid "dynamic laser power"
+msgstr "dynamische Kraft des Lasers"
+
+#: inx/inkstitch_output_TXT.inx:42
+msgid "Use Grbl's M4 dynamic laser power mode. Ensures consistent laser cutting power regardless of motor speed. Only for PWM-capable lasers."
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:44
+msgid "laser warm-up time"
+msgstr "Laser Aufwärmzeit"
+
+#: inx/inkstitch_output_TXT.inx:44
+msgid "When turning on the laser, wait this many seconds for laser to warm up (G4 command)"
+msgstr "Warte so viele Sekunden nach dem Einschalten des Lasers - Aufwärmphase (G4 Befehl)"
+
+#: inx/inkstitch_output_TXT.inx:46
+msgid "spindle speed"
+msgstr "Spindeldrehzahl"
+
+#: inx/inkstitch_output_TXT.inx:46
+msgid "spindle speed (laser power for laser mode, set to -1 to omit)"
+msgstr "Spindeldrehzahl (Laserpower für Lasermodus, setze auf -1 um es auszulassen)"
+
+#: inx/inkstitch_output_TXT.inx:48
+msgid "min spindle speed"
+msgstr "minimale Spindeldrehzahl"
+
+#: inx/inkstitch_output_TXT.inx:48
+msgid "minimum spindle speed value (grbl $31 setting)"
+msgstr "minimale Spindeldrehzahl Wert (grbl $31 setting)"
+
+#: inx/inkstitch_output_TXT.inx:50
+msgid "max spindle speed"
+msgstr "maximale Spindeldrehzahl"
+
+#: inx/inkstitch_output_TXT.inx:50
+msgid "minimum spindle speed value (grbl $30 setting)"
+msgstr "minimale Spindeldrehzahl Wert (grbl $30 setting)"
+
+#: inx/inkstitch_output_TXT.inx:51
+msgid "feed rate (in mm/min, set to -1 to omit)"
+msgstr "Vorschubsrate (in mm/min, setzte auf -1 um es auszulassen)"
+
+#: inx/inkstitch_output_U01.inx:3
+msgid "U01 file output"
+msgstr ""
+
+#: inx/inkstitch_output_U01.inx:9
+msgid "Save design in U01 format using Ink/Stitch"
+msgstr ""
+
+#: inx/inkstitch_output_VP3.inx:3
+msgid "VP3 file output"
+msgstr ""
+
+#: inx/inkstitch_output_VP3.inx:9
+msgid "Save design in VP3 format using Ink/Stitch"
+msgstr ""
+
+#: inx/inkstitch_params.inx:3
+msgid "Params"
+msgstr "Parameter"
+
+#: inx/inkstitch_print.inx:3
+msgid "PDF Export"
+msgstr "PDF-Export"
+
+#: inx/inkstitch_remove_embroidery_settings.inx:3
+msgid "Remove embroidery settings"
+msgstr "Stickeinstellungen entfernen"
+
+#: inx/inkstitch_reorder.inx:3
+msgid "Re-stack objects in order of selection"
+msgstr "Objekte in Auswahlreihenfolge sortieren"
+
+#: inx/inkstitch_selection_to_pattern.inx:3
+msgid "Selection to pattern"
+msgstr "Auswahl zu Muster"
+
+#: inx/inkstitch_simulator.inx:3
+msgid "Simulator / Realistic Preview"
+msgstr "Simulator / Realistische Vorschau"
+
+#: inx/inkstitch_stitch_plan_preview.inx:3
+msgid "Stitch Plan Preview"
+msgstr "Stich-Plan Vorschau"
+
+#: inx/inkstitch_troubleshoot.inx:3
+msgid "Troubleshoot Objects"
+msgstr "Fehlerbehebung an Objekten"
+
+#: inx/inkstitch_zip.inx:3
+msgid "embroidery ZIP file output"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:8
+msgid "Ink/Stitch: ZIP export multiple formats (.zip)"
+msgstr "Ink/Stitch: Export von mehreren Formaten (.zip)"
+
+#: inx/inkstitch_zip.inx:9
+msgid "Create a ZIP with multiple embroidery file formats using Ink/Stitch"
+msgstr "Erstellen einer ZIP-Datei mit mehreren Stickformaten die Ink/Stitch unterstützt"
+
+#: inx/inkstitch_zip.inx:20
+msgid ".SVG: Scalable Vector Graphic"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:21
+msgid ".TXT: Threadlist"
+msgstr ""
 
