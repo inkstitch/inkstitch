@@ -28,7 +28,7 @@
 
     <its:translateRule selector="//inx:param[@type='string'][@translatable='yes']" translate="yes"/>
 
-    <its:translateRule selector="//inx:submenu/@name" translate="yes"/>
+    <its:translateRule selector="//inx:submenu[not(@translatable='no')]/@name" translate="yes"/>
 
     <its:translateRule selector="//inx:filetypename" translate="yes"/>
     <its:translateRule selector="//inx:filetypetooltip" translate="yes"/>

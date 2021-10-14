@@ -10,7 +10,7 @@
     <effect>
         <object-type>all</object-type>
         <effects-menu>
-            <submenu name="Ink/Stitch">
+            <submenu name="Ink/Stitch" translatable="no">
                 {# L10N Inkscape submenu under Extensions -> Ink/Stitch #}
                 <submenu name="Commands" />
             </submenu>

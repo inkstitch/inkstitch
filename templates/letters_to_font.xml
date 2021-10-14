@@ -6,7 +6,7 @@
     <effect needs-live-preview="false">
         <object-type>all</object-type>
         <effects-menu>
-            <submenu name="Ink/Stitch">
+            <submenu name="Ink/Stitch" translatable="no">
                 <submenu name="Font Management" />
             </submenu>
         </effects-menu>
@@ -21,7 +21,7 @@
     <spacer />
     <param name="file-format" type="optiongroup" appearance="combo" gui-text="File format" indent="1">
          {% for format, description, mimetype, category in formats %}
-         <option value="*.{{ format | upper }}">{{ format | upper }}</option>
+         <option value="*.{{ format | upper }}" translatable="no">{{ format | upper }}</option>
          {% endfor %}
     </param>
     <param type="path" name="font-dir" gui-text="Font directory" indent="1" mode="folder" filetypes="svg"/>

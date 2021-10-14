@@ -6,7 +6,7 @@
     <effect needs-live-preview="false">
         <object-type>all</object-type>
         <effects-menu>
-            <submenu name="Ink/Stitch" />
+            <submenu name="Ink/Stitch" translatable="no" />
         </effects-menu>
     </effect>
     <param name="output_settings" type="description" appearance="header">
