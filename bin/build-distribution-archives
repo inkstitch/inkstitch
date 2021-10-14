@@ -1,11 +1,9 @@
-#!/bin/bash
 VERSION="$(echo ${GITHUB_REF} | sed -e 's|refs/heads/||' -e 's|refs/tags/||' -e 's|/|-|g')"
 OS="${BUILD:-$(uname)}"
 ARCH="$(uname -m)"
 mkdir artifacts
 if [ "$BUILD" = "osx" ]; then
-    cp -a images/examples palettes symbols fonts inx LICENSE VERSION dist/inkstitch.app/Contents
-    cp -a icons locales print dist/inkstitch.app/Contents/Resources
+    cp -a icons locales print LICENSE VERSION images/examples palettes symbols fonts inx dist/inkstitch.app/Contents/Resources
     rm -rf dist/inkstitch/
     temp_path="/tmp/inkstitch/"
     # inside the scripts folder are:
@@ -17,7 +15,7 @@ if [ "$BUILD" = "osx" ]; then
     # local builds will not be signed. They are run to produce releases for lecacy versions of macOS
     if [[ -z ${GITHUB_REF} ]]
     then
-        cp -a electron/build/mac dist/inkstitch.app/Contents/electron
+        cp -a electron/build/mac dist/inkstitch.app/Contents/Frameworks/electron
         pkgbuild --root dist/inkstitch.app \
                 --component-plist installer_scripts/inkstitch.plist \
                 --ownership recommended \
@@ -47,9 +45,9 @@ if [ "$BUILD" = "osx" ]; then
                         --timestamp \
                         dist/inkstitch.app -v
         # Coyping inkstitch-gui.app into inkstitch
-        ditto electron/build/mac dist/inkstitch.app/Contents/electron
+        ditto electron/build/mac dist/inkstitch.app/Contents/Frameworks/electron
         echo "Checking electron inkstitch-gui.app"
-        codesign -dv --verbose=4  dist/inkstitch.app/Contents/electron/inkstitch-gui.app
+        codesign -dv --verbose=4  dist/inkstitch.app/Contents/Frameworks/electron/inkstitch-gui.app
         echo "App Signing Verification"
         codesign -dv --verbose=4  dist/inkstitch.app
         echo "Running pkgbuild"
