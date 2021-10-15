@@ -33,6 +33,7 @@ if [ "$BUILD" = "osx" ]; then
         # signing the binary may fix notary issue
         /usr/bin/codesign -s "${DEV_IDENT}" \
                         --deep \
+                        --force \
                         --entitlements installer_scripts/entitlements.plist \
                         -o runtime \
                         --timestamp \
@@ -40,6 +41,7 @@ if [ "$BUILD" = "osx" ]; then
         # last signing before packaging
         /usr/bin/codesign -s "${DEV_IDENT}" \
                         --deep \
+                        --force \
                         --entitlements installer_scripts/entitlements.plist \
                         -o runtime \
                         --timestamp \
