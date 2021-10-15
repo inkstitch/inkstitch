@@ -13,18 +13,7 @@ if [ "$BUILD" = "osx" ]; then
 
     # Build on GitHub will be handled differently from local builds
     # local builds will not be signed. They are run to produce releases for lecacy versions of macOS
-    if [[ -z ${GITHUB_REF} ]]
-    then
-        cp -a electron/build/mac dist/inkstitch.app/Contents/MacOS/electron
-        pkgbuild --root dist/inkstitch.app \
-                --component-plist installer_scripts/inkstitch.plist \
-                --ownership recommended \
-                --identifier org.inkstitch.installer \
-                --version ${VERSION} \
-                --scripts installer_scripts/scripts \
-                --install-location ${temp_path}inkstitch.app \
-                artifacts/inkstitch-localbuild.pkg
-    else
+    if [[ "${GITHUB_REF}" =~ ^refs/tags/v[0-9.]+$ ]]; then
         # This code signs and notarize the inkstitch.app
         DEV_IDENT="Developer ID Application: Lex Neva (929A568N58)"
         echo "Signing of inkstitch.app"
@@ -46,10 +35,6 @@ if [ "$BUILD" = "osx" ]; then
                         -o runtime \
                         --timestamp \
                         dist/inkstitch.app -v
-        echo "Checking electron inkstitch-gui.app"
-        codesign -dv --verbose=4  dist/inkstitch.app/Contents/MacOS/electron/inkstitch-gui.app
-        echo "App Signing Verification"
-        codesign -dv --verbose=4  dist/inkstitch.app
         echo "Running pkgbuild"
         INSTALLER_IDENT="Developer ID Installer: Lex Neva (929A568N58)"
         /usr/bin/pkgbuild --root dist/inkstitch.app \
@@ -61,14 +46,23 @@ if [ "$BUILD" = "osx" ]; then
                         --scripts installer_scripts/scripts \
                         --install-location ${temp_path}inkstitch.app \
                         artifacts/inkstitch-${VERSION}-${OS}.pkg
-        echo "Checking installer signing"
-        pkgutil --check-signature artifacts/inkstitch-${VERSION}-${OS}.pkg
         echo "Notary starting"
         bash bin/notarize-app "929A568N58" \
                               "${NOTARY_ACCOUNT}" \
                               "${NOTARY_PASSWORD}" \
                               "org.inkstitch.app" \
                               artifacts/inkstitch-${VERSION}-${OS}.pkg
+    else
+        # do not sign and notarize development builds
+        cp -a electron/build/mac dist/inkstitch.app/Contents/MacOS/electron
+        pkgbuild --root dist/inkstitch.app \
+                --component-plist installer_scripts/inkstitch.plist \
+                --ownership recommended \
+                --identifier org.inkstitch.installer \
+                --version ${VERSION} \
+                --scripts installer_scripts/scripts \
+                --install-location ${temp_path}inkstitch.app \
+                artifacts/inkstitch-${VERSION}-${OS}.pkg
     fi
 else
     cp -a images/examples palettes symbols fonts inx LICENSE VERSION dist/inkstitch
