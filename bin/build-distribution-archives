@@ -15,7 +15,7 @@ if [ "$BUILD" = "osx" ]; then
     # local builds will not be signed. They are run to produce releases for lecacy versions of macOS
     if [[ -z ${GITHUB_REF} ]]
     then
-        cp -a electron/build/mac dist/inkstitch.app/Contents/Frameworks/electron
+        cp -a electron/build/mac dist/inkstitch.app/Contents/MacOS/electron
         pkgbuild --root dist/inkstitch.app \
                 --component-plist installer_scripts/inkstitch.plist \
                 --ownership recommended \
@@ -45,9 +45,9 @@ if [ "$BUILD" = "osx" ]; then
                         --timestamp \
                         dist/inkstitch.app -v
         # Coyping inkstitch-gui.app into inkstitch
-        ditto electron/build/mac dist/inkstitch.app/Contents/Frameworks/electron
+        ditto electron/build/mac dist/inkstitch.app/Contents/MacOS/electron
         echo "Checking electron inkstitch-gui.app"
-        codesign -dv --verbose=4  dist/inkstitch.app/Contents/Frameworks/electron/inkstitch-gui.app
+        codesign -dv --verbose=4  dist/inkstitch.app/Contents/MacOS/electron/inkstitch-gui.app
         echo "App Signing Verification"
         codesign -dv --verbose=4  dist/inkstitch.app
         echo "Running pkgbuild"

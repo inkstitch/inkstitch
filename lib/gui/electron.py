@@ -22,7 +22,7 @@ def open_url(url):
         electron_path = os.path.join(get_bundled_dir("electron"), "inkstitch-gui")
 
         if sys.platform == "darwin":
-            electron_path = os.path.join(sys._MEIPASS, "..", "Frameworks", "electron", "inkstitch-gui.app", "Contents", "MacOS", "inkstitch-gui")
+            electron_path = os.path.join(sys._MEIPASS, "electron", "inkstitch-gui.app", "Contents", "MacOS", "inkstitch-gui")
             command = ["open", "-W", "-a", electron_path, "--args", url]
         else:
             command = [electron_path, url]
