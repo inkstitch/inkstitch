@@ -26,6 +26,7 @@ jobs:
           wget --quiet https://downloads.crowdin.com/cli/v2/crowdin-cli.zip
           unzip -j crowdin-cli.zip
 
+          sudo apt-get update
           sudo apt install gettext
           # for wxPython
           sudo apt install glib-networking libsdl1.2-dev
