@@ -28,24 +28,20 @@ if [ "$BUILD" = "osx" ]; then
         # This code signs and notarize the inkstitch.app
         DEV_IDENT="Developer ID Application: Lex Neva (929A568N58)"
         echo "Signing of inkstitch.app"
+        # Coyping inkstitch-gui.app into inkstitch
+        ditto electron/build/mac dist/inkstitch.app/Contents/MacOS/electron
         # signing the binary may fix notary issue
         /usr/bin/codesign -s "${DEV_IDENT}" \
-                        --deep \
-                        --force \
                         --entitlements installer_scripts/entitlements.plist \
                         -o runtime \
                         --timestamp \
                         dist/inkstitch.app/Contents/MacOS/inkstitch -v
         # last signing before packaging
         /usr/bin/codesign -s "${DEV_IDENT}" \
-                        --deep \
-                        --force \
                         --entitlements installer_scripts/entitlements.plist \
                         -o runtime \
                         --timestamp \
                         dist/inkstitch.app -v
-        # Coyping inkstitch-gui.app into inkstitch
-        ditto electron/build/mac dist/inkstitch.app/Contents/MacOS/electron
         echo "Checking electron inkstitch-gui.app"
         codesign -dv --verbose=4  dist/inkstitch.app/Contents/MacOS/electron/inkstitch-gui.app
         echo "App Signing Verification"
