@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-10-14 01:30+0000\n"
-"PO-Revision-Date: 2021-10-14 01:32\n"
+"POT-Creation-Date: 2021-10-16 01:45+0000\n"
+"PO-Revision-Date: 2021-10-16 01:47\n"
 "Last-Translator: \n"
 "Language-Team: Romanian\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-14 01:30+0000\n"
+"POT-Creation-Date: 2021-10-16 01:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2226,26 +2226,6 @@ msgstr ""
 msgid "License"
 msgstr ""
 
-#: inx/inkstitch_about.inx:698 inx/inkstitch_auto_satin.inx:11
-#: inx/inkstitch_break_apart.inx:9 inx/inkstitch_cleanup.inx:16
-#: inx/inkstitch_convert_to_satin.inx:9 inx/inkstitch_convert_to_stroke.inx:12
-#: inx/inkstitch_cut_satin.inx:9 inx/inkstitch_duplicate_params.inx:9
-#: inx/inkstitch_embroider.inx:13 inx/inkstitch_embroider_settings.inx:9
-#: inx/inkstitch_flip.inx:9 inx/inkstitch_global_commands.inx:15
-#: inx/inkstitch_import_threadlist.inx:86 inx/inkstitch_install.inx:9
-#: inx/inkstitch_install_custom_palette.inx:12
-#: inx/inkstitch_layer_commands.inx:13 inx/inkstitch_lettering.inx:9
-#: inx/inkstitch_lettering_custom_font_dir.inx:9
-#: inx/inkstitch_lettering_generate_json.inx:9
-#: inx/inkstitch_lettering_remove_kerning.inx:9
-#: inx/inkstitch_letters_to_font.inx:9 inx/inkstitch_object_commands.inx:17
-#: inx/inkstitch_params.inx:9 inx/inkstitch_print.inx:9
-#: inx/inkstitch_remove_embroidery_settings.inx:15 inx/inkstitch_reorder.inx:9
-#: inx/inkstitch_selection_to_pattern.inx:9 inx/inkstitch_simulator.inx:9
-#: inx/inkstitch_stitch_plan_preview.inx:9 inx/inkstitch_troubleshoot.inx:9
-msgid "Ink/Stitch"
-msgstr ""
-
 #: inx/inkstitch_auto_satin.inx:3
 msgid "Auto-Route Satin Columns"
 msgstr ""
@@ -2920,50 +2900,6 @@ msgstr ""
 
 #: inx/inkstitch_letters_to_font.inx:22
 msgid "File format"
-msgstr ""
-
-#: inx/inkstitch_letters_to_font.inx:24
-msgid "PEC"
-msgstr ""
-
-#: inx/inkstitch_letters_to_font.inx:26
-msgid "PES"
-msgstr ""
-
-#: inx/inkstitch_letters_to_font.inx:28
-msgid "EXP"
-msgstr ""
-
-#: inx/inkstitch_letters_to_font.inx:30
-msgid "DST"
-msgstr ""
-
-#: inx/inkstitch_letters_to_font.inx:32
-msgid "JEF"
-msgstr ""
-
-#: inx/inkstitch_letters_to_font.inx:34
-msgid "VP3"
-msgstr ""
-
-#: inx/inkstitch_letters_to_font.inx:36
-msgid "SVG"
-msgstr ""
-
-#: inx/inkstitch_letters_to_font.inx:38
-msgid "CSV"
-msgstr ""
-
-#: inx/inkstitch_letters_to_font.inx:40
-msgid "U01"
-msgstr ""
-
-#: inx/inkstitch_letters_to_font.inx:42
-msgid "PMV"
-msgstr ""
-
-#: inx/inkstitch_letters_to_font.inx:44
-msgid "TXT"
 msgstr ""
 
 #: inx/inkstitch_letters_to_font.inx:47
