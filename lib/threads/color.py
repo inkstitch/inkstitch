@@ -15,6 +15,10 @@ class ThreadColor(object):
     hex_str_re = re.compile('#([0-9a-z]{3}|[0-9a-z]{6})', re.I)
 
     def __init__(self, color, name=None, number=None, manufacturer=None):
+        # set colors with a gradient to black (avoiding an error message)
+        if type(color) == str and color.startswith('url'):
+            color = None
+
         if color is None:
             self.rgb = (0, 0, 0)
         elif isinstance(color, EmbThread):
