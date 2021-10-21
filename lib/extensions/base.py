@@ -10,7 +10,6 @@ from collections.abc import MutableMapping
 
 import inkex
 from lxml import etree
-from lxml.etree import Comment
 from stringcase import snakecase
 
 from ..commands import is_command, layer_commands
@@ -20,8 +19,7 @@ from ..i18n import _
 from ..patterns import is_pattern
 from ..svg import generate_unique_id
 from ..svg.tags import (CONNECTOR_TYPE, EMBROIDERABLE_TAGS, INKSCAPE_GROUPMODE,
-                        NOT_EMBROIDERABLE_TAGS, SVG_CLIPPATH_TAG, SVG_DEFS_TAG,
-                        SVG_GROUP_TAG, SVG_MASK_TAG)
+                        NOT_EMBROIDERABLE_TAGS, SVG_DEFS_TAG, SVG_GROUP_TAG)
 
 SVG_METADATA_TAG = inkex.addNS("metadata", "svg")
 
@@ -131,10 +129,6 @@ class InkstitchExtension(inkex.Effect):
 
     def descendants(self, node, selected=False, troubleshoot=False):  # noqa: C901
         nodes = []
-
-        if node.tag == Comment:
-            return []
-
         element = EmbroideryElement(node)
 
         if element.has_command('ignore_object'):
@@ -147,9 +141,7 @@ class InkstitchExtension(inkex.Effect):
         if (node.tag in EMBROIDERABLE_TAGS or node.tag == SVG_GROUP_TAG) and element.get_style('display', 'inline') is None:
             return []
 
-        # defs, masks and clippaths can contain embroiderable elements
-        # but should never be rendered directly.
-        if node.tag in [SVG_DEFS_TAG, SVG_MASK_TAG, SVG_CLIPPATH_TAG]:
+        if node.tag == SVG_DEFS_TAG:
             return []
 
         # command connectors with a fill color set, will glitch into the elements list

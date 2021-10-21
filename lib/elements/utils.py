@@ -11,7 +11,7 @@ from .auto_fill import AutoFill
 from .clone import Clone, is_clone
 from .element import EmbroideryElement
 from .empty_d_object import EmptyDObject
-from .fill import Fill
+#from .fill import Fill
 from .image import ImageObject
 from .pattern import PatternObject
 from .polyline import Polyline
@@ -41,10 +41,10 @@ def node_to_elements(node):  # noqa: C901
         else:
             elements = []
             if element.get_style("fill", "black") and not element.get_style('fill-opacity', 1) == "0":
-                if element.get_boolean_param("auto_fill", True):
-                    elements.append(AutoFill(node))
-                else:
-                    elements.append(Fill(node))
+                #if element.get_boolean_param("auto_fill", True):
+                elements.append(AutoFill(node))
+                #else:
+                #    elements.append(Fill(node))
             if element.get_style("stroke"):
                 if not is_command(element.node):
                     elements.append(Stroke(node))

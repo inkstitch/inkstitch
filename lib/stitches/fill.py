@@ -6,12 +6,11 @@
 import math
 
 import shapely
-
-from ..stitch_plan import Stitch
+from shapely.geometry.linestring import LineString
 from ..svg import PIXELS_PER_MM
 from ..utils import Point as InkstitchPoint
 from ..utils import cache
-
+from ..stitch_plan import Stitch
 
 def legacy_fill(shape, angle, row_spacing, end_row_spacing, max_stitch_length, flip, staggers, skip_last):
     rows_of_segments = intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing, flip)
@@ -88,6 +87,65 @@ def stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, stagge
 
     if (end - stitches[-1]).length() > 0.1 * PIXELS_PER_MM and not skip_last:
         stitches.append(end)
+
+def extend_line(line, minx,maxx,miny,maxy):
+    line = line.simplify(0.01, False)
+
+    upper_left = InkstitchPoint(minx, miny)
+    lower_right = InkstitchPoint(maxx, maxy)
+    length = (upper_left - lower_right).length()
+
+    point1 = InkstitchPoint(*line.coords[0])
+    point2 = InkstitchPoint(*line.coords[1])
+    new_starting_point = point1-(point2-point1).unit()*length
+
+    point3 = InkstitchPoint(*line.coords[-2])
+    point4 = InkstitchPoint(*line.coords[-1])
+    new_ending_point = point4+(point4-point3).unit()*length
+
+    line = LineString([new_starting_point.as_tuple()]+line.coords[1:-1]+[new_ending_point.as_tuple()])
+
+
+def intersect_region_with_grating_line(shape, line, row_spacing, end_row_spacing=None, flip=False):
+    
+    row_spacing = abs(row_spacing)
+    (minx, miny, maxx, maxy) = shape.bounds
+    upper_left = InkstitchPoint(minx, miny)
+    rows = []
+    extend_line(line, minx,maxx,miny,maxy) #extend the line towards the ends to increase probability that all offsetted curves cross the shape
+
+    line_offsetted = line
+    res = line_offsetted.intersection(shape)
+    while isinstance(res, (shapely.geometry.GeometryCollection, shapely.geometry.MultiLineString)) or (not res.is_empty and len(res.coords) > 1):
+        if isinstance(res, (shapely.geometry.GeometryCollection, shapely.geometry.MultiLineString)):
+            runs = [line_string.coords for line_string in res.geoms if (not line_string.is_empty and len(line_string.coords) > 1)]
+        else:
+            runs = [res.coords]
+
+        runs.sort(key=lambda seg: (InkstitchPoint(*seg[0]) - upper_left).length())
+        if flip:
+            runs.reverse()
+            runs = [tuple(reversed(run)) for run in runs]
+
+        if row_spacing > 0:
+            rows.append(runs)
+        else:
+            rows.insert(0,runs)
+        line_offsetted = line_offsetted.parallel_offset(row_spacing,'left',5)
+        if row_spacing < 0:
+            line_offsetted.coords = line_offsetted.coords[::-1]
+        line_offsetted = line_offsetted.simplify(0.01, False)
+        res = line_offsetted.intersection(shape)
+        if row_spacing > 0 and not isinstance(res, (shapely.geometry.GeometryCollection, shapely.geometry.MultiLineString)):
+            if (res.is_empty or len(res.coords) == 1):
+                row_spacing = -row_spacing
+                #print("Set to right")
+                line_offsetted = line.parallel_offset(row_spacing,'left',5)
+                line_offsetted.coords = line_offsetted.coords[::-1] #using negative row spacing leads as a side effect to reversed offsetted lines - here we undo this
+                line_offsetted = line_offsetted.simplify(0.01, False)
+                res = line_offsetted.intersection(shape)
+        
+    return rows
 
 
 def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing=None, flip=False):
