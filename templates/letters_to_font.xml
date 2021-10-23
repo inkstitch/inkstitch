@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
     <name>Letters to font</name>
     <id>org.inkstitch.letters_to_font</id>
     <param name="extension" type="string" gui-hidden="true">letters_to_font</param>
