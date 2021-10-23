@@ -7,30 +7,50 @@ toc: true
 ---
 ## Raccourcis Clavier
 
-vous pouvez accélérer votre travail en créant des raccourcis clavier.
-Aller à: `Edition > Préférences > Interface > Raccourcis clavier` et entrer les combinaisons clavier souhaitées. [Plus d'information](http://tavmjong.free.fr/INKSCAPE/MANUAL_v14/html_fr/Customize.html)
+You can speed up your work with Ink/Stitch, if you assign shortcut keys.
 
-La liste suivante est suggérée par lexelby:
+The following list shows shortcut keys provided in the downloadable file below.
 
-Raccourci&nbsp;clavier | Effet
+Some of the defined shortcut keys will replace others which are native to Inkscape. In the table you will see which they are and how you can still access these functions.
+{: .notice--warning }
+
+Shortcut&nbsp;Keys | Effect | Replaces
 -------- | --------
-<key>ctrl</key>+<key>shift</key>+<key>O</key> | Dialogue objets (Menu objet -> Objets)
-<key>ctrl</key>+<key>shift</key>+<key>P</key> | Paramètres de l'extension, sans le dialogue des préférences d'extension d'inkscape
-<key>ctrl</key>+<key>shift</key>+<key>L</key> | Simulation (mnemonic: Live simulation)
-<key>ctrl</key>+<key>shift</key>+<key>E</key> | Extension broder, sans le dialogue des préférences d'extension d'Inkscape
-<key>Page haut</key>                             | "Monter" (Inkscape version >= 0.92.2)*
-<key>Page bas</key>                           | "Descendre" (Inkscape version >= 0.92.2)*
-<key>ctrl</key>+<key>R</key>                  | Inverse la direction d'un chemin.**
+<key>PageUp</key>                             | Stack Up* | Object > Raise (see also toolbar buttons)
+<key>PageDown</key>                           | Stack Down* | Object > Lower (see also toolbar buttons)
+<key>ctrl</key>+<key>R</key>                  | Reverse the direction of a path.**
+<key>ctrl</key>+<key>shift</key>+<key>P</key> | Params | Edit > Preferences
+<key>ctrl</key>+<key>shift</key>+<key>L</key> | Simulator (Live simulation)
+<key>ctrl</key>+<key>shift</key>+<key>/</key> | Stitch plan preview (beside of the canvas) | Path > Division (use Strg+/ instead)
+<key>ctrl</key>+<key>shift</key>+<key>O</key> | Break apart fill objects... (O for Object) | Object > Object properties
+<key>ctrl</key>+<key>shift</key>+<key>I</key> | PDF Export
+<key>ctrl</key>+<key>shift</key>+<key>Q</key> | Lettering (Q for QWERTY) | Object > Selectors and CSS
+<key>ctrl</key>+<key>shift</key>+<key>Del</key> | Troubleshoot objects (remove errors)
+<key>ctrl</key>+<key>shift</key>+<key>+</key> | Attach commands to selected objects
+<key>ctrl</key>+<key>shift</key>+<key>U</key> | Convert line to satin column (U looks like two rails) | Object > Group (use Ctrl+G instead)
+<key>ctrl</key>+<key>shift</key>+<key>J</key> | Flip satin column rails (J looks like an arrow)
+<key>ctrl</key>+<key>shift</key>+<key>B</key> | Cut satin column (B is cut in half) | Path > Union (use Ctrl++ instead)
+<key>ctrl</key>+<key>shift</key>+<key>*</key> | Auto-route satin (puts everything in order)
 
-*Une nouvelle fonction dans Inkscape 0.92.2 qui vous permet de monter ou descendre un objet dans l'ordre d'empilement, même s'il n'y a pas de chevauchement. Monter et Descendre donne un contrôle précis sur l'ordre dans lequel les objets sont brodés. Très utile en combinaison avec le dialogue Objets (`Objet > Objets ...`). L'ordre d'empilement définit l'ordre dans lequel les éléments sont brodés (de bas en haut).).
+Dans Ink/Stitch la [simulation](/fr/docs/visualize/) inclut déjà le raccourci.
+
+\* Stack Up and Stack Down give precise control over the order that objects are stitched in. Very useful in combination with the Objects panel (`Objects > Objects ...`). The stacking order defines, in which order elements are stitched out (from bottom to top).<br><br>** For satins and running stitch, this changes the direction the stitches go in. Use with `Show path direction on outlines` selected in `Edit > Preferences > Tools > Node`. If you select just one vertex using the node editor and press `Ctrl+R`, Inkscape will reverse just one path in an object. This way you can make sure that both rails in a satin point the same direction.
+{: .notice--info }
 {: style="font-size: 70%" }
 
-**Pour le point satin et le point droit, cela change le sens des points. Activez ceci dans les préférences d'Inkscape dans les paramètres de l'outil Nœud, `Afficher le sens des chemins sur le contour`. Si vous sélectionnez un seul sommet à l'aide de l'éditeur de nœud et appuyez sur les touches `Ctrl+R`, Inkscape inversera un seul chemin dans un objet. De cette façon, vous pouvez vous assurer que les deux rails d'une colonne satin pointent dans la même direction.
-{: style="font-size: 70%" }
+#### Download and import custom shortcut keys
 
-### Simulation : Raccourci
+* [Download the Ink/Stitch shortcut key file](/assets/files/inkstitch.xml)
+* Go to `Edition > Préférences > Interface > Raccourcis clavier`
+* Click on `Import...`
+* Select your shortcut key file (inkstitch.xml)
+* Click open
 
-Dans Ink/Stitch la [simulation](/fr/docs/simulate) inclut déjà le raccourci.
+Now you will be able to use the shortcut keys described above.
+
+If you want to define your own custom shortcut keys simply enter your desired key combinations in the shortcut dialog.
+Use the search function to find the extensions quicker. [More information](http://wiki.inkscape.org/wiki/index.php/Customizing_Inkscape)
+{: .notice--info }
 
 ## Zoom correction factor
 

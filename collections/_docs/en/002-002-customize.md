@@ -28,14 +28,14 @@ Shortcut&nbsp;Keys | Effect | Replaces
 <key>ctrl</key>+<key>shift</key>+<key>Q</key> | Lettering (Q for QWERTY) | Object > Selectors and CSS
 <key>ctrl</key>+<key>shift</key>+<key>Del</key> | Troubleshoot objects (remove errors)
 <key>ctrl</key>+<key>shift</key>+<key>+</key> | Attach commands to selected objects
-<key>ctrl</key>+<key>shift</key>+<key>U</key> | Convert line to satin column (U looks like two rails) | Object > Group (use Strg+G instead)
-<key>ctrl</key>+<key>shift</key>+<key>J</key> | Konturen der Satinkolumne umkehren (Merkhilfe J, weil J wie ein Pfeil aussieht)
-<key>ctrl</key>+<key>shift</key>+<key>B</key> | Cut satin column (B is cut in half) | Path > Union (use Strg++ instead)
+<key>ctrl</key>+<key>shift</key>+<key>U</key> | Convert line to satin column (U looks like two rails) | Object > Group (use Ctrl+G instead)
+<key>ctrl</key>+<key>shift</key>+<key>J</key> | Flip satin column rails (J looks like an arrow)
+<key>ctrl</key>+<key>shift</key>+<key>B</key> | Cut satin column (B is cut in half) | Path > Union (use Ctrl++ instead)
 <key>ctrl</key>+<key>shift</key>+<key>*</key> | Auto-route satin (puts everything in order)
 
 The Ink/Stitch [simulator](/docs/visualize/#simulation-shortcut-keys) also provides shortcut keys.
 
-\* Stack Up and Stack Down give precise control over the order that objects are stitched in. Very useful in combination with the Objects panel (`Objects > Objects ...`). The stacking order defines, in which order elements are stitched out (from bottom to top).<br><br>** For satins and running stitch, this changes the direction the stitches go in. Use this with the Inkscape preference in the Node tool settings, `Show path direction on outlines`. If you select just one vertex using the node editor and press `Ctrl+R`, Inkscape will reverse just one path in an object. This way you can make sure that both rails in a satin point the same direction.
+\* Stack Up and Stack Down give precise control over the order that objects are stitched in. Very useful in combination with the Objects panel (`Objects > Objects ...`). The stacking order defines, in which order elements are stitched out (from bottom to top).<br><br>** For satins and running stitch, this changes the direction the stitches go in. Use with `Show path direction on outlines` selected in `Edit > Preferences > Tools > Node`. If you select just one vertex using the node editor and press `Ctrl+R`, Inkscape will reverse just one path in an object. This way you can make sure that both rails in a satin point the same direction.
 {: .notice--info }
 {: style="font-size: 70%" }
 

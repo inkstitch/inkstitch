@@ -2,35 +2,56 @@
 title: "Anpassung von Ink/Stitch"
 permalink: /de/docs/customize/
 excerpt: ""
-last_modified_at: 2021-04-11
+last_modified_at: 2021-10-23
 toc: true
 ---
 
 ## Tastenkürzel
 
-Tastenkürzel können die Arbeitsgeschwindigkeit erhebliche steigern. In Inkscape gibt es die Möglichkeit u.a. auch für Plugins Tastenkombinationen festzulegen. Die Bearbeitung der Kürzel ist im Menü unter `Bearbeiten > Einstellungen > Benutzeroberfläche > Tastenkürzel` möglich. [Inkscape anpassen (en)](http://wiki.inkscape.org/wiki/index.php/Customizing_Inkscape)
+Deine Arbeit mit Ink/Stitch kann sich erheblich beschleunigen, wenn du Tastenkürzel benutzt.
 
-Die folgende Liste wurde von @lexelby vorgeschlagen:
+Die folgende Liste zeigt Tastenkürzel, die über die unten zur Verfügung gestellte Datei schnell eingerichtet werden könne.
 
-Tastenkürzel | Effekt
------------- | ------
-<nobr><key>Strg</key>+<key>Umschalt</key>+<key>O</key></nobr> | Objektübersicht (Objekt -> Objekte...)
-<nobr><key>Strg</key>+<key>Umschalt</key>+<key>P</key></nobr> | Erweiterungen > Parameter (ohne Einstellungen)
-<nobr><key>Strg</key>+<key>Umschalt</key>+<key>L</key></nobr> | Erweiterungen > Simulierung (Live Simulation)
-<nobr><key>Strg</key>+<key>Umschalt</key>+<key>E</key></nobr> | Erweiterungen > Sticken (ohne Einstellungen)
-<nobr><key>Strg</key>+<key>Umschalt</key>+<key>Bild↑</key></nobr> | Auswahl > Objekt anheben (ab Inkscape Version 0.92.2)*
-<nobr><key>Strg</key>+<key>Umschalt</key>+<key>Bild↓</key></nobr> | Auswahl > Objekt absenken (ab Inkscape Version 0.92.2)*
-<nobr><key>Strg</key>+<key>R</key></nobr> | Auswahl > Richtung umkehren**
+Einige dieser Tastenkürzel werden andere Tastenkürzel, die bereits durch Inkscape verwendet werden, ersetzen. In der Tabelle kannst du sehen, welche das sind und wie diese Funktionen weiterhin erreichbar sind.
+{: .notice--warning }
 
-*Die Funktionen "Objekt anheben" und "Objekt absenken" gibt es seit der Inkscape Version 0.92.2. Sie ermöglichen es die Objektreihenfolge zu manipulieren, auch wenn sich die Objekte sich nicht überlappen. Das ist sehr nützlich in Kombination mit dem Objektfenster (`Objekte > Objekte ...`). Die Objektreihenfolge gibt an, in welcher Reihenfolge die Elemente gestickt werden (von unten nach oben).
+Tastenkürzel | Effekt | Ersetzt
+-------- | --------
+<key>Bild↑</key>                        | Anheben* | Objekt > Anheben (see also toolbar buttons)
+<key>Bild↑</key>                        | Absenken* | Objekt > Absenken (see also toolbar buttons)
+<key>Strg</key><key>R</key>             | Pfad > Richtung umkehren**
+<key>Strg</key><key>⇧</key><key>P</key> | Parameter | Bearbeiten > Einstellungen
+<key>Strg</key><key>⇧</key><key>L</key> | Simulator (Live Simulation)
+<key>Strg</key><key>⇧</key><key>/</key> | Stichplan Vorschau (neben der Leinwand) | Pfad > Division (nutze stattdessen Strg+/)
+<key>Strg</key><key>⇧</key><key>O</key> | Aufteilen von Füllobjekten... (O für Object) | Objekt > Objekteigenschaften
+<key>Strg</key><key>⇧</key><key>I</key> | PDF-Export
+<key>Strg</key><key>⇧</key><key>Q</key> | Text (Q für QWERTY) | Objekt > Selectoren und CSS
+<key>Strg</key><key>⇧</key><key>Entf</key> | Fehlerbehebung an Objekten (Fehler entfernen)
+<key>Strg</key><key>⇧</key><key>+</key> | Befehle mit gewählten Objekten verknüpfen
+<key>Strg</key><key>⇧</key><key>U</key> | Konvertierung Linie zu Satinstich (U sieht wie zwei Schienen aus) | Objekt > Gruppieren (benutze stattdessen Strg+G)
+<key>Strg</key><key>⇧</key><key>J</key> | Konturen der Satinkolumne umkehren (J sieht wie ein Pfeil aus)
+<key>Strg</key><key>⇧</key><key>B</key> | Satinkolumne schneiden (B ist in der Hälfte geschnitten) | Pfad > Vereinigen (nutze stattdessen Strg++)
+<key>Strg</key><key>⇧</key><key>*</key> | Automatisch geführte Satinkolumne (\* bringt Ordnung)
+
+The Ink/Stitch [simulator](/docs/visualize/#simulation-shortcut-keys) also provides shortcut keys.
+
+\* Anheben und Absenken gibt genaue Kontrolle darüber, in welcher Reihenfolge Objekte gestickt werden (von unten nach oben). Das ist sehr nützlich in Verbindung mit dem Objekt-Dialog (`Objekt > Objekte ...`).<br><br>** Für Satin- und Laufstiche ändert dies die Stickrichtung. Nutze dies mit der Einstellung `Zeige Pfadrichtung an Außenlinien` unter `Bearbeiten > Einstellungen > Werkzeuge > Knoten`. Wenn du nur einen Knoten mit dem Knotenwerkzeug auswählst und `Strg+R` drückst, kehrt sich nur der ausgewählte Unterpfad um. Auf diesem Wege kannst du sicherstellen, dass beide Schienen der Satinkolumne in die gleiche Richtung zeigen.
+{: .notice--info }
 {: style="font-size: 70%" }
 
-**Umkehr der Pfadrichtung. Bei Plattstich (Satinstich) und Laufstich kann die Stichrichtung geändert werden. Verwende dies mit der Inkscape-Einstellung und den Einstellung des Knoten-Tools `Pfadrichtung auf Konturen anzeigen`. Wenn man mit dem Knoteneditor nur ein Stützpunkt auswählt und Strg+R drückt, kehrt Inkscape nur einen Pfad in einem Objekt um. Dadurch wird sichergestellt, dass beide Ränder in einer Satinkolumne in die gleiche Richtung zeigen.
-{: style="font-size: 70%" }
+#### Download and import custom shortcut keys
 
-### Simulator Tastenkürzel
+* [Download the Ink/Stitch shortcut key file](/assets/files/inkstitch.xml)
+* Gehe zu `Bearbeiten > Einstellungen > Benutzeroberfläche > Tastenkürzel`
+* Klicke auf `Importieren...`
+* Wähle die Tastenkürzel-Datei (inkstitch.xml)
+* Klicke auf öffnen
 
-Der Ink/Stitch [Simulator](/de/docs/simulate/) hat bereits vordefinierte Tastenkürzel.
+Jetzt kannst du die oben genannten Tastenkürzel verwenden.
+
+Wenn du deine eigenen Tastenkürzel verwenden willst, füge sie in den Tastenkürzel-Dialog ein.
+Benutze die Suchfunktion um die Erweiterungen schneller zu finden. [Mehr informationen](http://wiki.inkscape.org/wiki/index.php/Customizing_Inkscape)
+{: .notice--info }
 
 ## Zoom correction factor
 
