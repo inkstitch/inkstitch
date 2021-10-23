@@ -32,6 +32,15 @@ Raccourci&nbsp;clavier | Effet
 
 Dans Ink/Stitch la [simulation](/fr/docs/simulate) inclut déjà le raccourci.
 
+## Zoom correction factor
+
+For embroidery it is essential to get a sense of the actual size of the design. Inkscape has a setting to adapt zoom levels to your display size.
+
+* Go to `Edit > Preferences > Interface`
+* Hold a ruler onto your display and adjust the slider until the length matches
+ 
+![Zoom correction](/assets/images/docs/fr/customize-zoom-correction.png)
+
 ## Grilles
 Pour aligner correctement vos formes vectorielles, vous pouvez utiliser la fonctionnalité de grille d’Inkscape. Aller à  `Affichage` et activer `Grille`. Dans la`Barre des magnétismes` vérifier que `Aimanter aux grilles` est activé. Il est également possible de régler l'espacement et l'origine de vos grilles dans `Fichier> Propriétés du document> Grilles`.
 

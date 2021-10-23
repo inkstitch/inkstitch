@@ -1,7 +1,7 @@
 ---
-title: "Manualle Installation"
+title: "Manuelle Installation"
 permalink: /de/developers/inkstitch/manual-setup/
-last_modified_at: 2021-03-04
+last_modified_at: 2021-10-23
 toc: false
 ---
 Eine manuelle Installation ermöglicht es am Quellcode zu arbeiten und die Änderungen
@@ -28,19 +28,13 @@ We recommend to use `pyenv` to avoid the need of root privileges for `pip`.
 ### 3.  Installiere Python Abhängigkeiten
 
 Es werden ein paar Python Module gebraucht. In einigen Fällen benutzt Ink/Stitch Funktionen, die nicht automatisch durch die Distributionen mit Python mitgeliefert werden.
-Deshalb empfehlen wir sie mit pip zu installieren:
+Deshalb empfehlen wir sie mit pip zu installieren.
+
+Da wir pyembroidery bereits installiert haben, diese Zeile für die Installation der Abhängigkeiten in `requirements.txt` bitte auskommentieren.
 
 ```
 pip install -r requirements.txt
 ```
-
-**Info:** Evtl. musst du auf einigen Plattformen wxPython entfernen und ein platform-spezifisches Paket [installieren](https://wiki.wxpython.org/How%20to%20install%20wxPython):<br />
-   ⚫ Debian `python-wxgtk3.0`<br />
-   ⚫ Ubuntu 16.04: `pip install -U -f https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-16.04 wxPython`
-{: .notice--info }
-
-**Info:** Wenn du nur Python 2 installiert hast, kannst du evtl. auch einfach `pip` anstelle von `pip2` benutzen.
-{: .notice--info }
 
 ### 4.  Installiere Abhängigkeiten für Electron
 
@@ -56,21 +50,11 @@ cd ..
 
 ### 4.  INX-Dateien vorbereiten
 
+Jetzt werden die Dateien für das Inkscape-Menü erstellt.
+
 ```
 make inx
 ```
-
-Das erstellt `*.inx` Dateien für jede Sprache in `inx/<locale>`.
-
-Navigiere zum neu erstellten inx-Ordner und lösche alle Sprachen, bis auf eine oder nutze folgenden Befehl:
-```
-find inx/ -mindepth 1 -maxdepth 1 -type d -not -name de_DE -exec rm -rf {} +
-```
-Ersetze `de_DE` mit deiner bevorzugten Sprache (sofern vorhanden).
-
-Die Wahl der Sprache der inx-Dateien beeinflusst lediglich die Sprache im Inkscape Menü.
-Für die Ink/Stitch Dialoge wird die Systemsprache genutzt.
-{: .notice--info }
 
 ### 5.  Symbolische Links in den Inkscape extensions-Order setzen
 
@@ -87,8 +71,7 @@ ln -s /path/to/inkstitch
 
 ### ImportError: No module named shapely
 
-Wenn Ink/Stitch `ImportError: No module named shapely` ausgibt, dann ist es gut möglich, dass Inkscape eine andere Python Version benutzt,
-als die in den installierten Abängigkeiten.
+Wenn Ink/Stitch `ImportError: No module named shapely` ausgibt, dann ist es gut möglich, dass Inkscape eine andere Python Version benutzt, als die in den installierten Abängigkeiten.
 
 * Schließe Inkscape, sonst werden alle Änderungen wieder überschrieben
 * Öffne `preferences.xml`.<br>

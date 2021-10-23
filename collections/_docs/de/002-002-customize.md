@@ -32,6 +32,15 @@ Tastenkürzel | Effekt
 
 Der Ink/Stitch [Simulator](/de/docs/simulate/) hat bereits vordefinierte Tastenkürzel.
 
+## Zoom correction factor
+
+For embroidery it is essential to get a sense of the actual size of the design. Inkscape has a setting to adapt zoom levels to your display size.
+
+* Go to `Edit > Preferences > Interface`
+* Hold a ruler onto your display and adjust the slider until the length matches
+ 
+![Zoom correction](/assets/images/docs/de/customize-zoom-correction.png)
+
 ## Gitter
 
 Um Vektoren richtig auszurichten, kann die Rasterfunktion von Inkscape verwendet werden. Gehe zu `Ansicht` und aktiviere das `Seitengitter`. Stelle in der `Einrasten-Kontrollleiste` sicher, dass `Am Gitter einrasten` aktiviert ist. Es ist auch möglich, den Abstand und den Ursprung der Gitter unter `Datei > Dokumenteinstellungen > Gitter` anzupassen.

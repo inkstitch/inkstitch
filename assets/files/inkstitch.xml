@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<keys
+   name="My custom shortcuts">
+  <!-- For Inkscape -->
+  <bind
+     key="Page_Down"
+     action="SelectionStackDown"
+     display="true" />
+  <bind
+     key="KP_Page_Down"
+     action="SelectionStackDown" />
+  <bind
+     key="Page_Up"
+     action="SelectionStackUp"
+     display="true" />
+  <bind
+     key="KP_Page_Up"
+     action="SelectionStackUp" />
+  <bind
+     key="r"
+     modifiers="Primary"
+     action="SelectionReverse" />
+  <bind
+     key="R"
+     modifiers="Primary"
+     action="SelectionReverse"
+     display="true" />
+  <!-- For Ink/Stitch -->
+  <bind
+     key="p"
+     modifiers="Primary,Shift"
+     action="org.inkstitch.params"
+     display="true" />
+  <bind
+     key="U"
+     modifiers="Primary,Shift"
+     action="org.inkstitch.convert_to_satin"
+     display="true" />
+  <bind
+     key="u"
+     modifiers="Primary,Shift"
+     action="org.inkstitch.convert_to_satin" />
+  <bind
+     key="J"
+     modifiers="Primary,Shift"
+     action="org.inkstitch.flip_satins"
+     display="true" />
+  <bind
+     key="j"
+     modifiers="Primary,Shift"
+     action="org.inkstitch.flip_satins" />
+  <bind
+     key="B"
+     modifiers="Primary,Shift"
+     action="org.inkstitch.cut_satin"
+     display="true" />
+  <bind
+     key="b"
+     modifiers="Primary,Shift"
+     action="org.inkstitch.cut_satin" />
+  <bind
+     key="asterisk"
+     modifiers="Primary,Shift"
+     action="org.inkstitch.auto_satin"
+     display="true" />
+  <bind
+     key="KP_Multiply"
+     modifiers="Primary,Shift"
+     action="org.inkstitch.auto_satin" />
+  <bind
+     key="I"
+     modifiers="Primary,Shift"
+     action="org.inkstitch.print"
+     display="true" />
+  <bind
+     key="i"
+     modifiers="Primary,Shift"
+     action="org.inkstitch.print" />
+  <bind
+     key="Q"
+     modifiers="Primary,Shift"
+     action="org.inkstitch.lettering"
+     display="true" />
+  <bind
+     key="BackSpace"
+     modifiers="Primary,Shift"
+     action="org.inkstitch.troubleshoot"
+     display="true" />
+  <bind
+     key="plus"
+     modifiers="Primary,Shift"
+     action="org.inkstitch.commands"
+     display="true" />
+  <bind
+     key="KP_Add"
+     modifiers="Primary,Shift"
+     action="org.inkstitch.commands" />
+  <bind
+     key="L"
+     modifiers="Primary,Shift"
+     action="org.inkstitch.simulator"
+     display="true" />
+  <bind
+     key="O"
+     modifiers="Primary,Shift"
+     action="org.inkstitch.break_apart"
+     display="true" />
+  <bind
+     key="slash"
+     modifiers="Primary,Shift"
+     action="org.inkstitch.stitch_plan_preview"
+     display="true" />
+  <bind
+     key="KP_Divide"
+     modifiers="Primary,Shift"
+     action="org.inkstitch.stitch_plan_preview" />
+</keys>

@@ -1,7 +1,7 @@
 ---
 title: "Manual Setup"
 permalink: /ru/developers/inkstitch/manual-setup/
-last_modified_at: 2021-03-04
+last_modified_at: 2021-10-14
 toc: true
 ---
 A manual setup will allow you to edit the code while running the extension.
@@ -28,17 +28,14 @@ We recommend to use `pyenv` to avoid the need of root privileges for `pip`.
 ### 3. Python Dependencies
 
 A few python more modules are needed.
-In some cases this extension uses features that aren’t available in the versions of the modules pre-packaged in distributions, so we recommend installing them directly with pip:
+In some cases this extension uses features that aren’t available in the versions of the modules pre-packaged in distributions, so we recommend installing them directly with pip.
+
+Since we already installed pyembroidery just temporarely comment it out before you run these commands.
 
 ```
 cd inkstitch
 pip install -r requirements.txt
 ```
-
-**Info:** You might need to remove wxPython and [install](https://wiki.wxpython.org/How%20to%20install%20wxPython) a platform specific package:<br />
-   ⚫ Debian uses `python-wxgtk3.0`<br />
-   ⚫ Ubuntu 16.04: `pip install -U -f https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-16.04 wxPython`
-{: .notice--info }
 
 ### 4. Install Electron dependencies
 
@@ -54,21 +51,11 @@ cd ..
 
 ### 5. Prepare INX files
 
+Now we need to create the files for the Inkscape menu.
+
 ```
 make inx
 ```
-
-This will create `*.inx` files for each locale in `inx/<locale>`.
-
-Navigate to the newly created inx folder and delete all languages except for one or type
-
-```
-find inx/ -mindepth 1 -maxdepth 1 -type d -not -name en_US -exec rm -rf {} +
-```
-
-Substitute `en_US` with your preferred language (if exists).
-
-The language chosen here will only have an effect on the Inkscape menu. Ink/Stitch dialogs use the system language.
 
 ### 6. Symbolically link into the Inkscape extensions directory
 

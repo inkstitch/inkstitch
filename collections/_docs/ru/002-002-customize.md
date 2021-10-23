@@ -2,7 +2,7 @@
 title: "Customize Ink/Stitch"
 permalink: /ru/docs/customize/
 excerpt: ""
-last_modified_at: 2021-04-11
+last_modified_at: 2021-10-14
 toc: true
 ---
 
@@ -10,29 +10,57 @@ toc: true
 
 You can speed up your work with Ink/Stitch, if you assign shortcut keys.
 
-Go to: `Edit > Preferences > Interface > Keyboard Shortcuts` and enter your desired key combinations. [More information](http://wiki.inkscape.org/wiki/index.php/Customizing_Inkscape)
+The following list shows shortcut keys provided in the downloadable file below.
 
-The following list was suggested by lexelby:
+Some of the defined shortcut keys will replace others which are native to Inkscape. In the table you will see which they are and how you can still access these functions.
+{: .notice--warning }
 
-Shortcut&nbsp;Keys | Effect
+Shortcut&nbsp;Keys | Effect | Replaces
 -------- | --------
-<key>ctrl</key>+<key>shift</key>+<key>O</key> | Objects panel (Object menu -> Objects)
-<key>ctrl</key>+<key>shift</key>+<key>P</key> | Params extension, without inkscape's extension preferences dialog
-<key>ctrl</key>+<key>shift</key>+<key>L</key> | Simulate (mnemonic: Live simulation)
-<key>ctrl</key>+<key>shift</key>+<key>E</key> | Embroider extension, without inkscape's extension preferences dialog
-<key>PageUp</key>                             | "Stack Up" (Inkscape version >= 0.92.2)*
-<key>PageDown</key>                           | "Stack Down" (Inkscape version >= 0.92.2)*
-<key>ctrl</key>+<key>R</key>                  | Reverse the direction of a path.** 
+<key>PageUp</key>                             | Stack Up* | Object > Raise (see also toolbar buttons)
+<key>PageDown</key>                           | Stack Down* | Object > Lower (see also toolbar buttons)
+<key>ctrl</key>+<key>R</key>                  | Reverse the direction of a path.**
+<key>ctrl</key>+<key>shift</key>+<key>P</key> | Params | Edit > Preferences
+<key>ctrl</key>+<key>shift</key>+<key>L</key> | Simulator (Live simulation)
+<key>ctrl</key>+<key>shift</key>+<key>/</key> | Stitch plan preview (beside of the canvas) | Path > Division (use Strg+/ instead)
+<key>ctrl</key>+<key>shift</key>+<key>O</key> | Break apart fill objects... (O for Object) | Object > Object properties
+<key>ctrl</key>+<key>shift</key>+<key>I</key> | PDF Export
+<key>ctrl</key>+<key>shift</key>+<key>Q</key> | Lettering (Q for QWERTY) | Object > Selectors and CSS
+<key>ctrl</key>+<key>shift</key>+<key>Del</key> | Troubleshoot objects (remove errors)
+<key>ctrl</key>+<key>shift</key>+<key>+</key> | Attach commands to selected objects
+<key>ctrl</key>+<key>shift</key>+<key>U</key> | Convert line to satin column (U looks like two rails) | Object > Group (use Strg+G instead)
+<key>ctrl</key>+<key>shift</key>+<key>J</key> | Konturen der Satinkolumne umkehren (Merkhilfe J, weil J wie ein Pfeil aussieht)
+<key>ctrl</key>+<key>shift</key>+<key>B</key> | Cut satin column (B is cut in half) | Path > Union (use Strg++ instead)
+<key>ctrl</key>+<key>shift</key>+<key>*</key> | Auto-route satin (puts everything in order)
 
-*A new feature in Inkscape 0.92.2 that allows you to move an object up or down in the stacking order, even if they don't overlap. Stack Up and Stack Down give precise control over the order that objects are stitch in. Very useful in combination with the Objects panel (`Objects > Objects ...`). The stacking order defines, in which order elements are stitched out (from bottom to top).
+The Ink/Stitch [simulator](/ru/docs/visualize/#simulation-shortcut-keys) also provides shortcut keys.
+
+\* Stack Up and Stack Down give precise control over the order that objects are stitched in. Very useful in combination with the Objects panel (`Objects > Objects ...`). The stacking order defines, in which order elements are stitched out (from bottom to top).<br><br>** For satins and running stitch, this changes the direction the stitches go in. Use this with the Inkscape preference in the Node tool settings, `Show path direction on outlines`. If you select just one vertex using the node editor and press `Ctrl+R`, Inkscape will reverse just one path in an object. This way you can make sure that both rails in a satin point the same direction.
+{: .notice--info }
 {: style="font-size: 70%" }
 
-**For satins and running stitch, this changes the direction the stitches go in. Use this with the Inkscape preference in the Node tool settings, `Show path direction on outlines`. If you select just one vertex using the node editor and press `Ctrl+R`, Inkscape will reverse just one path in an object. This way you can make sure that both rails in a satin point the same direction.
-{: style="font-size: 70%" }
+#### Download and import custom shortcut keys
 
-### Simulation Shortcut Keys
+* [Download the Ink/Stitch shortcut key file](/assets/files/inkstitch.xml)
+* Go to `Edit > Preferences > Interface > Keyboard`
+* Click on `Import...`
+* Select your shortcut key file (inkstitch.xml)
+* Click open
 
-Ink/Stitch [simulation](/docs/simulate) already comes with shortcut keys included.
+Now you will be able to use the shortcut keys described above.
+
+If you want to define your own custom shortcut keys simply enter your desired key combinations in the shortcut dialog.
+Use the search function to find the extensions quicker. [More information](http://wiki.inkscape.org/wiki/index.php/Customizing_Inkscape)
+{: .notice--info }
+
+## Zoom correction factor
+
+For embroidery it is essential to get a sense of the actual size of the design. Inkscape has a setting to adapt zoom levels to your display size.
+
+* Go to `Edit > Preferences > Interface`
+* Hold a ruler onto your display and adjust the slider until the length matches
+ 
+![Zoom correction](/assets/images/docs/ru/customize-zoom-correction.png)
 
 ## Grids
 
@@ -57,9 +85,9 @@ Operating system|Template Folder
 Linux|`~/.config/inkscape/templates`
 Windows|`C:\Users\%USERNAME%\AppData\Roaming\inkscape\templates`
 
-You should confirm the user folder in your inkscape preferences see the [FAQ](/docs/faq/#i-have-downloaded-and-unzipped-the-latest-release-where-do-i-put-it).
+You should confirm the user folder in your inkscape preferences see the [FAQ](/ru/docs/faq/#i-have-downloaded-and-unzipped-the-latest-release-where-do-i-put-it).
 
-**Tip:** Get [predefined templates](/tutorials/resources/templates/) from our tutorial section.
+**Tip:** Get [predefined templates](/fr/tutorials/resources/templates/) from our tutorial section.
 {: .notice--info }
 
 ## Install Thread Color Palettes
@@ -67,4 +95,4 @@ You should confirm the user folder in your inkscape preferences see the [FAQ](/d
 Ink/Stitch comes with a lot of thread manufacturer color palettes which can be installed into Inkscape. This allows to build the designs with the correct colors in mind.
 Colors will appear in the PDF-Output and will also be included into your embroidery file, if your file format supports it. 
 
-[Read more](/docs/thread-color/#install-thread-color-palettes-for-inkscape)
+[Read more](/fr/docs/thread-color/#install-thread-color-palettes-for-inkscape)

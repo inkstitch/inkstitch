@@ -2,12 +2,13 @@
 title: "Visuelle Befehle"
 permalink: /de/docs/commands/
 excerpt: ""
-last_modified_at: 2020-09-28
+last_modified_at: 2021-10-23
 toc: true
 ---
-## Installation
+Visuelle Befehle können genutzt werden, um zusätzliche Informationen darüber festzulegen, wie das Design gestickt werden soll. Sie können z.B. der Maschine mitteilen, dass der Faden nach einem Stickobjekt geschnitten werden soll oder definieren, wann und wo die Maschine pausieren soll, so dass man für eine Applikation bequem ein Stück Stoff hinzufügen kann.
 
-Vor Benutzung [visuelle Befehle installieren](/de/docs/addons/).
+Nicht jede Maschine kann diese zusätzliche Informationen umsetzen und verstehen. In diesem Fall wird ein Befehl einfach ignoriert.
+{: .notice--warning }
 
 ### Visuelle Befehle über die Erweiterung anhängen
 

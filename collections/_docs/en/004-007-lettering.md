@@ -36,4 +36,5 @@ An overview of available fonts can be found it the [font library](/fonts/font-li
 ## Create new fonts for Ink/Stitch
 
 Read the [font creation tutorial](/tutorials/font-creation/).
+
 Contact us if you are willing to publish your font in the Ink/Stitch lettering tool on [GitHub](https://github.com/inkstitch/inkstitch/issues).
