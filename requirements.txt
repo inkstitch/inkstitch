@@ -8,7 +8,7 @@
 backports.functools_lru_cache
 wxPython
 networkx
-shapely
+shapely<=1.7.1
 lxml
 appdirs
 numpy<=1.17.4
