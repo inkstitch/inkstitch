@@ -2,16 +2,16 @@
 title: "Satin Tools"
 permalink: /docs/satin-tools/
 excerpt: ""
-last_modified_at: 2018-07-15
+last_modified_at: 2021-10-27
 toc: true
 ---
 `Extensions > Ink/Stitch  > Satin Tools` include a number of useful helpers, making it easy to work with [satin columns](/docs/stitches/satin-column/).
 
 **Example:**
 * Create a path with the help of the bezier curves tool (`B`)
-* Run [Convert Line to Satin](/de/docs/satin-tools/#konvertierung-linie-zu-satinstich)
-* Use the [Params dialog](/de/docs/params/#satinkolumne) to set an underlay
-* Run [Auto-Route Satin](/de/docs/satin-tools/#automatische-satinkolumnenführung) to recieve nicely routed satin columns
+* Run [Convert Line to Satin](#convert-line-to-satin)
+* Use the [Params dialog](docs/params/#satin-params) to set an underlay
+* Run [Auto-Route Satin](#auto-route-satin-columns) to recieve nicely routed satin columns
 
 [![Convert Line to Satin](/assets/images/docs/en/satin-tools.svg)](/assets/images/docs/en/satin-tools.svg){: title="Download SVG File" download="satin-tools.svg" }
 
@@ -28,7 +28,7 @@ This tool will replace your satins with a new set of satin columns in logical st
 2. Run `Extensions > Ink/Stitch  > Satin Tools > Auto-Route Satin Columns...`
 3. Enable desired options and click apply
 
-**Tip:** By default, it will choose the left-most extreme as the starting point and the right-most extreme as the ending point (even if these occur partway through a satin such as the left edge of a letter "o"). You can override this by attaching the ["Auto-route satin stitch starting/ending position" commands](/de/docs/commands/#--anfangs--und-endposition-für-automatische-satinkolumnenführung).
+**Tip:** By default, it will choose the left-most extreme as the starting point and the right-most extreme as the ending point (even if these occur partway through a satin such as the left edge of a letter "o"). You can override this by attaching the ["Auto-route satin stitch starting/ending position" commands](/docs/commands/#--startingending-position-for-auto-route-satin).
 {: .notice--info }
 
 ### Options
