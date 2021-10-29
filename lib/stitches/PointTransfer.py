@@ -1,4 +1,4 @@
-from shapely.geometry import  Point, MultiPoint
+from shapely.geometry import Point, MultiPoint
 from shapely.geometry.polygon import LineString, LinearRing
 from collections import namedtuple
 from shapely.ops import nearest_points
@@ -6,11 +6,14 @@ import math
 from ..stitches import constants
 from ..stitches import LineStringSampling
 
-projected_point_tuple = namedtuple('projected_point_tuple', ['point', 'point_source'])
+projected_point_tuple = namedtuple(
+    'projected_point_tuple', ['point', 'point_source'])
 
-#Calculated the nearest interserction point of "bisectorline" with the coordinates of child (child.val). 
-#It returns the intersection point and its distance along the coordinates of the child or "None, None" if no
-#intersection was found.
+# Calculated the nearest interserction point of "bisectorline" with the coordinates of child (child.val).
+# It returns the intersection point and its distance along the coordinates of the child or "None, None" if no
+# intersection was found.
+
+
 def calc_transferred_point(bisectorline, child):
     result = bisectorline.intersection(child.val)
     if result.is_empty:
@@ -24,37 +27,44 @@ def calc_transferred_point(bisectorline, child):
         resultlist = list(result)
         desired_point = resultlist[0]
         if len(resultlist) > 1:
-             desired_point = nearest_points(result, Point(bisectorline.coords[0]))[0]
+            desired_point = nearest_points(
+                result, Point(bisectorline.coords[0]))[0]
 
     priority = child.val.project(desired_point)
     point = desired_point
     return point, priority
 
 
-#Takes the current tree item and its rastered points (to_transfer_points) and transfers these points to its parent, siblings and childs
-# To do so it calculates the current normal and determines its intersection with the neighbors which gives the transferred points.
-#Input:
-#-treenode: Tree node whose points stored in "to_transfer_points" shall be transferred to its neighbors.
-#-used_offset: The used offset when the curves where offsetted
-#-offset_by_half: True if the transferred points shall be interlaced with respect to the points in "to_transfer_points"
-#-max_stitching_distance: The maximum allowed stitch distance between two points
-#-to_transfer_points: List of points belonging to treenode which shall be transferred - it is assumed that to_transfer_points can be handled as closed ring
-#-to_transfer_points_origin: The origin tag of each point in to_transfer_points
-#-overnext_neighbor: Transfer the points to the overnext neighbor (gives a more stable interlacing)
-#-transfer_forbidden_points: Only allowed for interlacing (offset_by_half): Might be used to transfer points unshifted as forbidden points to the neighbor to avoid a point placing there
-#-transfer_to_parent: If True, points will be transferred to the parent
-#-transfer_to_sibling: If True, points will be transferred to the siblings
-#-transfer_to_child: If True, points will be transferred to the childs
-#Output:
-#-Fills the attribute "transferred_point_priority_deque" of the siblings and parent in the tree datastructure. An item of the deque
-#is setup as follows: ((projected point on line, LineStringSampling.PointSource), priority=distance along line)
-#index of point_origin is the index of the point in the neighboring line
-def transfer_points_to_surrounding(treenode, used_offset, offset_by_half, max_stitching_distance, to_transfer_points,  to_transfer_points_origin=[], 
-                                   overnext_neighbor = False, transfer_forbidden_points = False, transfer_to_parent=True, transfer_to_sibling=True, transfer_to_child=True):
+def transfer_points_to_surrounding(treenode, used_offset, offset_by_half, to_transfer_points,  to_transfer_points_origin=[],
+                                   overnext_neighbor=False, transfer_forbidden_points=False,
+                                   transfer_to_parent=True, transfer_to_sibling=True, transfer_to_child=True):
+    """
+    Takes the current tree item and its rastered points (to_transfer_points) and transfers these points to its parent, siblings and childs
+    To do so it calculates the current normal and determines its intersection with the neighbors which gives the transferred points.
+    Input:
+    -treenode: Tree node whose points stored in "to_transfer_points" shall be transferred to its neighbors.
+    -used_offset: The used offset when the curves where offsetted
+    -offset_by_half: True if the transferred points shall be interlaced with respect to the points in "to_transfer_points"
+    -to_transfer_points: List of points belonging to treenode which shall be transferred - it is assumed that to_transfer_points
+     can be handled as closed ring
+    -to_transfer_points_origin: The origin tag of each point in to_transfer_points
+    -overnext_neighbor: Transfer the points to the overnext neighbor (gives a more stable interlacing)
+    -transfer_forbidden_points: Only allowed for interlacing (offset_by_half): Might be used to transfer points unshifted as
+     forbidden points to the neighbor to avoid a point placing there
+    -transfer_to_parent: If True, points will be transferred to the parent
+    -transfer_to_sibling: If True, points will be transferred to the siblings
+    -transfer_to_child: If True, points will be transferred to the childs
+    Output:
+    -Fills the attribute "transferred_point_priority_deque" of the siblings and parent in the tree datastructure. An item of the deque
+    is setup as follows: ((projected point on line, LineStringSampling.PointSource), priority=distance along line)
+    index of point_origin is the index of the point in the neighboring line
+    """
 
-    assert(len(to_transfer_points)==len(to_transfer_points_origin) or len(to_transfer_points_origin) == 0)
+    assert(len(to_transfer_points) == len(to_transfer_points_origin)
+           or len(to_transfer_points_origin) == 0)
     assert((overnext_neighbor and not offset_by_half) or not overnext_neighbor)
-    assert(not transfer_forbidden_points or transfer_forbidden_points and (offset_by_half or not offset_by_half and overnext_neighbor))
+    assert(not transfer_forbidden_points or transfer_forbidden_points and (
+        offset_by_half or not offset_by_half and overnext_neighbor))
 
     if len(to_transfer_points) == 0:
         return
@@ -71,37 +81,37 @@ def transfer_points_to_surrounding(treenode, used_offset, offset_by_half, max_st
 
     if transfer_to_child:
         for child in childs_tuple:
-            if child.already_rastered == False:
+            if not child.already_rastered:
                 if not overnext_neighbor:
                     child_list.append(child)
                 if transfer_forbidden_points:
                     child_list_forbidden.append(child)
             if overnext_neighbor:
                 for subchild in child.children:
-                    if subchild.already_rastered == False:
+                    if not subchild.already_rastered:
                         child_list.append(subchild)
 
     if transfer_to_sibling:
         for sibling in siblings_tuple:
-            if sibling.already_rastered == False:
+            if not sibling.already_rastered:
                 if not overnext_neighbor:
                     neighbor_list.append(sibling)
                 if transfer_forbidden_points:
                     neighbor_list_forbidden.append(sibling)
             if overnext_neighbor:
                 for subchild in sibling.children:
-                    if subchild.already_rastered == False:
+                    if not subchild.already_rastered:
                         neighbor_list.append(subchild)
 
-    if transfer_to_parent and treenode.parent != None:
-        if treenode.parent.already_rastered == False:
+    if transfer_to_parent and treenode.parent is not None:
+        if not treenode.parent.already_rastered:
             if not overnext_neighbor:
-                    neighbor_list.append(treenode.parent)
+                neighbor_list.append(treenode.parent)
             if transfer_forbidden_points:
-                    neighbor_list_forbidden.append(treenode.parent)
+                neighbor_list_forbidden.append(treenode.parent)
         if overnext_neighbor:
-            if treenode.parent.parent != None:
-                if treenode.parent.parent.already_rastered == False:
+            if treenode.parent.parent is not None:
+                if not treenode.parent.parent.already_rastered:
                     neighbor_list.append(treenode.parent.parent)
 
     if not neighbor_list and not child_list:
@@ -126,19 +136,20 @@ def transfer_points_to_surrounding(treenode, used_offset, offset_by_half, max_st
         closed_line = LinearRing(to_transfer_points)
 
     bisectorline_length = abs(used_offset) * \
-        constants.transfer_point_distance_factor*(2.0 if overnext_neighbor else 1.0)
+        constants.transfer_point_distance_factor * \
+        (2.0 if overnext_neighbor else 1.0)
 
     bisectorline_length_forbidden_points = abs(used_offset) * \
         constants.transfer_point_distance_factor
 
     linesign_child = math.copysign(1, used_offset)
 
-
     i = 0
     currentDistance = 0
     while i < len(point_list):
-        assert(point_source_list[i] != LineStringSampling.PointSource.ENTER_LEAVING_POINT)
-        #if abs(point_list[i].coords[0][0]-47) < 0.3 and abs(point_list[i].coords[0][1]-4.5) < 0.3:
+        assert(point_source_list[i] !=
+               LineStringSampling.PointSource.ENTER_LEAVING_POINT)
+        # if abs(point_list[i].coords[0][0]-47) < 0.3 and abs(point_list[i].coords[0][1]-4.5) < 0.3:
         #    print("HIIIIIIIIIIIERRR")
 
         # We create a bisecting line through the current point
@@ -151,7 +162,6 @@ def transfer_points_to_surrounding(treenode, used_offset, offset_by_half, max_st
 
         normalized_vector_prev_x /= prev_spacing
         normalized_vector_prev_y /= prev_spacing
-
 
         normalized_vector_next_x = normalized_vector_next_y = 0
         next_spacing = 0
@@ -187,13 +197,15 @@ def transfer_points_to_surrounding(treenode, used_offset, offset_by_half, max_st
             vecy = -linesign_child*bisectorline_length*normalized_vector_next_x
 
             if transfer_forbidden_points:
-                vecx_forbidden_point = linesign_child*bisectorline_length_forbidden_points*normalized_vector_next_y
-                vecy_forbidden_point = -linesign_child*bisectorline_length_forbidden_points*normalized_vector_next_x
+                vecx_forbidden_point = linesign_child * \
+                    bisectorline_length_forbidden_points*normalized_vector_next_y
+                vecy_forbidden_point = -linesign_child * \
+                    bisectorline_length_forbidden_points*normalized_vector_next_x
 
         else:
             vecx *= bisectorline_length/vec_length
             vecy *= bisectorline_length/vec_length
-            
+
             if (vecx*normalized_vector_next_y-vecy * normalized_vector_next_x)*linesign_child < 0:
                 vecx = -vecx
                 vecy = -vecy
@@ -212,55 +224,66 @@ def transfer_points_to_surrounding(treenode, used_offset, offset_by_half, max_st
             originPoint = closed_line.interpolate(off)
 
         bisectorline_child = LineString([(originPoint.coords[0][0],
-                                  originPoint.coords[0][1]),
-                                   (originPoint.coords[0][0]+vecx,
-                                  originPoint.coords[0][1]+vecy)])
+                                          originPoint.coords[0][1]),
+                                         (originPoint.coords[0][0]+vecx,
+                                          originPoint.coords[0][1]+vecy)])
 
         bisectorline_neighbor = LineString([(originPoint.coords[0][0],
-                                  originPoint.coords[0][1]),
-                                   (originPoint.coords[0][0]-vecx,
-                                  originPoint.coords[0][1]-vecy)])
+                                             originPoint.coords[0][1]),
+                                            (originPoint.coords[0][0]-vecx,
+                                             originPoint.coords[0][1]-vecy)])
 
         bisectorline_forbidden_point_child = LineString([(originPoint_forbidden_point.coords[0][0],
-                                        originPoint_forbidden_point.coords[0][1]),
-                                        (originPoint_forbidden_point.coords[0][0]+vecx_forbidden_point,
-                                        originPoint_forbidden_point.coords[0][1]+vecy_forbidden_point)])
+                                                          originPoint_forbidden_point.coords[0][1]),
+                                                         (originPoint_forbidden_point.coords[0][0]+vecx_forbidden_point,
+                                                          originPoint_forbidden_point.coords[0][1]+vecy_forbidden_point)])
 
         bisectorline_forbidden_point_neighbor = LineString([(originPoint_forbidden_point.coords[0][0],
-                                        originPoint_forbidden_point.coords[0][1]),
-                                        (originPoint_forbidden_point.coords[0][0]-vecx_forbidden_point,
-                                        originPoint_forbidden_point.coords[0][1]-vecy_forbidden_point)])
+                                                             originPoint_forbidden_point.coords[0][1]),
+                                                            (originPoint_forbidden_point.coords[0][0]-vecx_forbidden_point,
+                                                             originPoint_forbidden_point.coords[0][1]-vecy_forbidden_point)])
 
         for child in child_list:
-            point, priority = calc_transferred_point(bisectorline_child,child)
-            if point==None:
+            point, priority = calc_transferred_point(bisectorline_child, child)
+            if point is None:
                 continue
-            child.transferred_point_priority_deque.insert(projected_point_tuple(point = point, point_source=LineStringSampling.PointSource.OVERNEXT if overnext_neighbor else LineStringSampling.PointSource.DIRECT), priority)
+            child.transferred_point_priority_deque.insert(projected_point_tuple(
+                point=point, point_source=LineStringSampling.PointSource.OVERNEXT if overnext_neighbor
+                else LineStringSampling.PointSource.DIRECT), priority)
         for child in child_list_forbidden:
-            point, priority = calc_transferred_point(bisectorline_forbidden_point_child,child)
-            if point == None:
+            point, priority = calc_transferred_point(
+                bisectorline_forbidden_point_child, child)
+            if point is None:
                 continue
-            child.transferred_point_priority_deque.insert(projected_point_tuple(point=point, point_source=LineStringSampling.PointSource.FORBIDDEN_POINT), priority)
-        
+            child.transferred_point_priority_deque.insert(projected_point_tuple(
+                point=point, point_source=LineStringSampling.PointSource.FORBIDDEN_POINT), priority)
+
         for neighbor in neighbor_list:
-            point, priority = calc_transferred_point(bisectorline_neighbor,neighbor)
-            if point==None:
+            point, priority = calc_transferred_point(
+                bisectorline_neighbor, neighbor)
+            if point is None:
                 continue
-            neighbor.transferred_point_priority_deque.insert(projected_point_tuple(point = point, point_source=LineStringSampling.PointSource.OVERNEXT if overnext_neighbor else LineStringSampling.PointSource.DIRECT), priority)
+            neighbor.transferred_point_priority_deque.insert(projected_point_tuple(
+                point=point, point_source=LineStringSampling.PointSource.OVERNEXT if overnext_neighbor
+                else LineStringSampling.PointSource.DIRECT), priority)
         for neighbor in neighbor_list_forbidden:
-            point, priority = calc_transferred_point(bisectorline_forbidden_point_neighbor,neighbor)
-            if point == None:
+            point, priority = calc_transferred_point(
+                bisectorline_forbidden_point_neighbor, neighbor)
+            if point is None:
                 continue
-            neighbor.transferred_point_priority_deque.insert(projected_point_tuple(point=point, point_source=LineStringSampling.PointSource.FORBIDDEN_POINT), priority)
+            neighbor.transferred_point_priority_deque.insert(projected_point_tuple(
+                point=point, point_source=LineStringSampling.PointSource.FORBIDDEN_POINT), priority)
 
         i += 1
         currentDistance += next_spacing
 
     assert(len(point_list) == len(point_source_list))
 
-#Calculated the nearest interserction point of "bisectorline" with the coordinates of child. 
-#It returns the intersection point and its distance along the coordinates of the child or "None, None" if no
-#intersection was found.
+# Calculated the nearest interserction point of "bisectorline" with the coordinates of child.
+# It returns the intersection point and its distance along the coordinates of the child or "None, None" if no
+# intersection was found.
+
+
 def calc_transferred_point_graph(bisectorline, edge_geometry):
     result = bisectorline.intersection(edge_geometry)
     if result.is_empty:
@@ -274,40 +297,43 @@ def calc_transferred_point_graph(bisectorline, edge_geometry):
         resultlist = list(result)
         desired_point = resultlist[0]
         if len(resultlist) > 1:
-             desired_point = nearest_points(result, Point(bisectorline.coords[0]))[0]
+            desired_point = nearest_points(
+                result, Point(bisectorline.coords[0]))[0]
 
     priority = edge_geometry.project(desired_point)
     point = desired_point
     return point, priority
 
 
-#Takes the current tree item and its rastered points (to_transfer_points) and transfers these points to its parent, siblings and childs
-# To do so it calculates the current normal and determines its intersection with the neighbors which gives the transferred points.
-#Input:
-#-treenode: Tree node whose points stored in "to_transfer_points" shall be transferred to its neighbors.
-#-used_offset: The used offset when the curves where offsetted
-#-offset_by_half: True if the transferred points shall be interlaced with respect to the points in "to_transfer_points"
-#-max_stitching_distance: The maximum allowed stitch distance between two points
-#-to_transfer_points: List of points belonging to treenode which shall be transferred - it is assumed that to_transfer_points can be handled as closed ring
-#-to_transfer_points_origin: The origin tag of each point in to_transfer_points
-#-overnext_neighbor: Transfer the points to the overnext neighbor (gives a more stable interlacing)
-#-transfer_forbidden_points: Only allowed for interlacing (offset_by_half): Might be used to transfer points unshifted as forbidden points to the neighbor to avoid a point placing there
-#-transfer_to_parent: If True, points will be transferred to the parent
-#-transfer_to_sibling: If True, points will be transferred to the siblings
-#-transfer_to_child: If True, points will be transferred to the childs
-#Output:
-#-Fills the attribute "transferred_point_priority_deque" of the siblings and parent in the tree datastructure. An item of the deque
-#is setup as follows: ((projected point on line, LineStringSampling.PointSource), priority=distance along line)
-#index of point_origin is the index of the point in the neighboring line
 def transfer_points_to_surrounding_graph(fill_stitch_graph, current_edge, used_offset, offset_by_half, to_transfer_points,
-                                   overnext_neighbor = False, transfer_forbidden_points = False, transfer_to_previous=True, transfer_to_next=True):
+                                         overnext_neighbor=False, transfer_forbidden_points=False, transfer_to_previous=True, transfer_to_next=True):
+    """
+    Takes the current graph edge and its rastered points (to_transfer_points) and transfers these points to its previous and next edges (if selected)
+    To do so it calculates the current normal and determines its intersection with the neighbors which gives the transferred points.
+    Input:
+    -fill_stitch_graph: Graph data structure of the stitching lines
+    -current_edge: Current graph edge whose neighbors in fill_stitch_graph shall be considered
+    -used_offset: The used offset when the curves where offsetted
+    -offset_by_half: True if the transferred points shall be interlaced with respect to the points in "to_transfer_points"
+    -to_transfer_points: List of points belonging to treenode which shall be transferred - it is assumed that to_transfer_points
+     can be handled as closed ring
+    -overnext_neighbor: Transfer the points to the overnext neighbor (gives a more stable interlacing)
+    -transfer_forbidden_points: Only allowed for interlacing (offset_by_half): Might be used to transfer points unshifted as
+     forbidden points to the neighbor to avoid a point placing there
+    -transfer_to_previous: If True, points will be transferred to the previous edge in the graph
+    -transfer_to_next: If True, points will be transferred to the next edge in the graph
+    Output:
+    -Fills the attribute "transferred_point_priority_deque" of the next/previous edges. An item of the deque
+    is setup as follows: ((projected point on line, LineStringSampling.PointSource), priority=distance along line)
+    index of point_origin is the index of the point in the neighboring line
+    """
 
     assert((overnext_neighbor and not offset_by_half) or not overnext_neighbor)
-    assert(not transfer_forbidden_points or transfer_forbidden_points and (offset_by_half or not offset_by_half and overnext_neighbor))
+    assert(not transfer_forbidden_points or transfer_forbidden_points and (
+        offset_by_half or not offset_by_half and overnext_neighbor))
 
     if len(to_transfer_points) == 0:
         return
-
 
     # Take only neighbors which have not rastered before
     # We need to distinguish between childs (project towards inner) and parent/siblings (project towards outer)
@@ -319,7 +345,8 @@ def transfer_points_to_surrounding_graph(fill_stitch_graph, current_edge, used_o
     if transfer_to_previous:
         previous_neighbors_tuples = current_edge['previous_neighbors']
         for neighbor in previous_neighbors_tuples:
-            neighbor_edge = fill_stitch_graph[neighbor[0]][neighbor[-1]]['segment']
+            neighbor_edge = fill_stitch_graph[neighbor[0]
+                                              ][neighbor[-1]]['segment']
             if not neighbor_edge['already_rastered']:
                 if not overnext_neighbor:
                     previous_edge_list.append(neighbor_edge)
@@ -328,14 +355,16 @@ def transfer_points_to_surrounding_graph(fill_stitch_graph, current_edge, used_o
             if overnext_neighbor:
                 overnext_previous_neighbors_tuples = neighbor_edge['previous_neighbors']
                 for overnext_neighbor in overnext_previous_neighbors_tuples:
-                    overnext_neighbor_edge = fill_stitch_graph[overnext_neighbor[0]][overnext_neighbor[-1]]['segment']
+                    overnext_neighbor_edge = fill_stitch_graph[overnext_neighbor[0]
+                                                               ][overnext_neighbor[-1]]['segment']
                     if not overnext_neighbor_edge['already_rastered']:
                         previous_edge_list.append(overnext_neighbor_edge)
 
     if transfer_to_next:
         next_neighbors_tuples = current_edge['next_neighbors']
         for neighbor in next_neighbors_tuples:
-            neighbor_edge = fill_stitch_graph[neighbor[0]][neighbor[-1]]['segment']
+            neighbor_edge = fill_stitch_graph[neighbor[0]
+                                              ][neighbor[-1]]['segment']
             if not neighbor_edge['already_rastered']:
                 if not overnext_neighbor:
                     next_edge_list.append(neighbor_edge)
@@ -344,10 +373,10 @@ def transfer_points_to_surrounding_graph(fill_stitch_graph, current_edge, used_o
             if overnext_neighbor:
                 overnext_next_neighbors_tuples = neighbor_edge['next_neighbors']
                 for overnext_neighbor in overnext_next_neighbors_tuples:
-                    overnext_neighbor_edge = fill_stitch_graph[overnext_neighbor[0]][overnext_neighbor[-1]]['segment']
+                    overnext_neighbor_edge = fill_stitch_graph[overnext_neighbor[0]
+                                                               ][overnext_neighbor[-1]]['segment']
                     if not overnext_neighbor_edge['already_rastered']:
                         next_edge_list.append(overnext_neighbor_edge)
-
 
     if not previous_edge_list and not next_edge_list:
         return
@@ -357,19 +386,19 @@ def transfer_points_to_surrounding_graph(fill_stitch_graph, current_edge, used_o
     line = LineString(to_transfer_points)
 
     bisectorline_length = abs(used_offset) * \
-        constants.transfer_point_distance_factor*(2.0 if overnext_neighbor else 1.0)
+        constants.transfer_point_distance_factor * \
+        (2.0 if overnext_neighbor else 1.0)
 
     bisectorline_length_forbidden_points = abs(used_offset) * \
         constants.transfer_point_distance_factor
 
     linesign_child = math.copysign(1, used_offset)
 
-
     i = 0
     currentDistance = 0
     while i < len(point_list):
-       
-        #if abs(point_list[i].coords[0][0]-47) < 0.3 and abs(point_list[i].coords[0][1]-4.5) < 0.3:
+
+        # if abs(point_list[i].coords[0][0]-47) < 0.3 and abs(point_list[i].coords[0][1]-4.5) < 0.3:
         #    print("HIIIIIIIIIIIERRR")
 
         # We create a bisecting line through the current point
@@ -382,7 +411,6 @@ def transfer_points_to_surrounding_graph(fill_stitch_graph, current_edge, used_o
 
         normalized_vector_prev_x /= prev_spacing
         normalized_vector_prev_y /= prev_spacing
-
 
         normalized_vector_next_x = normalized_vector_next_y = 0
         next_spacing = 0
@@ -416,13 +444,15 @@ def transfer_points_to_surrounding_graph(fill_stitch_graph, current_edge, used_o
             vecy = -linesign_child*bisectorline_length*normalized_vector_next_x
 
             if transfer_forbidden_points:
-                vecx_forbidden_point = linesign_child*bisectorline_length_forbidden_points*normalized_vector_next_y
-                vecy_forbidden_point = -linesign_child*bisectorline_length_forbidden_points*normalized_vector_next_x
+                vecx_forbidden_point = linesign_child * \
+                    bisectorline_length_forbidden_points*normalized_vector_next_y
+                vecy_forbidden_point = -linesign_child * \
+                    bisectorline_length_forbidden_points*normalized_vector_next_x
 
         else:
             vecx *= bisectorline_length/vec_length
             vecy *= bisectorline_length/vec_length
-            
+
             if (vecx*normalized_vector_next_y-vecy * normalized_vector_next_x)*linesign_child < 0:
                 vecx = -vecx
                 vecy = -vecy
@@ -446,22 +476,25 @@ def transfer_points_to_surrounding_graph(fill_stitch_graph, current_edge, used_o
                                   originPoint.coords[0][1]+vecy)])
 
         bisectorline_forbidden_point = LineString([(originPoint_forbidden_point.coords[0][0]-vecx_forbidden_point,
-                                        originPoint_forbidden_point.coords[0][1]-vecy_forbidden_point),
-                                        (originPoint_forbidden_point.coords[0][0]+vecx_forbidden_point,
-                                        originPoint_forbidden_point.coords[0][1]+vecy_forbidden_point)])
-
+                                                    originPoint_forbidden_point.coords[0][1]-vecy_forbidden_point),
+                                                   (originPoint_forbidden_point.coords[0][0]+vecx_forbidden_point,
+                                                    originPoint_forbidden_point.coords[0][1]+vecy_forbidden_point)])
 
         for edge in previous_edge_list+next_edge_list:
-            point, priority = calc_transferred_point_graph(bisectorline,edge['geometry'])
-            if point==None:
+            point, priority = calc_transferred_point_graph(
+                bisectorline, edge['geometry'])
+            if point is None:
                 continue
-            edge['projected_points'].insert(projected_point_tuple(point = point, point_source=LineStringSampling.PointSource.OVERNEXT if overnext_neighbor else LineStringSampling.PointSource.DIRECT), priority)
+            edge['projected_points'].insert(projected_point_tuple(
+                point=point, point_source=LineStringSampling.PointSource.OVERNEXT if overnext_neighbor
+                else LineStringSampling.PointSource.DIRECT), priority)
         for edge_forbidden in previous_edge_list_forbidden+next_edge_list_forbidden:
-            point, priority = calc_transferred_point_graph(bisectorline_forbidden_point,edge_forbidden['geometry'])
-            if point == None:
+            point, priority = calc_transferred_point_graph(
+                bisectorline_forbidden_point, edge_forbidden['geometry'])
+            if point is None:
                 continue
-            edge_forbidden['projected_points'].insert(projected_point_tuple(point=point, point_source=LineStringSampling.PointSource.FORBIDDEN_POINT), priority)
-        
-        
+            edge_forbidden['projected_points'].insert(projected_point_tuple(
+                point=point, point_source=LineStringSampling.PointSource.FORBIDDEN_POINT), priority)
+
         i += 1
         currentDistance += next_spacing

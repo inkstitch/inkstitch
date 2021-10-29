@@ -12,8 +12,10 @@ from ..utils import Point as InkstitchPoint
 from ..utils import cache
 from ..stitch_plan import Stitch
 
+
 def legacy_fill(shape, angle, row_spacing, end_row_spacing, max_stitch_length, flip, staggers, skip_last):
-    rows_of_segments = intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing, flip)
+    rows_of_segments = intersect_region_with_grating(
+        shape, angle, row_spacing, end_row_spacing, flip)
     groups_of_segments = pull_runs(rows_of_segments, shape, row_spacing)
 
     return [section_to_stitches(group, angle, row_spacing, max_stitch_length, staggers, skip_last)
@@ -73,7 +75,8 @@ def stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, stagge
 
     stitches.append(beg)
 
-    first_stitch = adjust_stagger(beg, angle, row_spacing, max_stitch_length, staggers)
+    first_stitch = adjust_stagger(
+        beg, angle, row_spacing, max_stitch_length, staggers)
 
     # we might have chosen our first stitch just outside this row, so move back in
     if (first_stitch - beg) * row_direction < 0:
@@ -82,13 +85,15 @@ def stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, stagge
     offset = (first_stitch - beg).length()
 
     while offset < segment_length:
-        stitches.append(Stitch(beg + offset * row_direction, tags=('fill_row')))
+        stitches.append(
+            Stitch(beg + offset * row_direction, tags=('fill_row')))
         offset += max_stitch_length
 
     if (end - stitches[-1]).length() > 0.1 * PIXELS_PER_MM and not skip_last:
         stitches.append(end)
 
-def extend_line(line, minx,maxx,miny,maxy):
+
+def extend_line(line, minx, maxx, miny, maxy):
     line = line.simplify(0.01, False)
 
     upper_left = InkstitchPoint(minx, miny)
@@ -103,26 +108,30 @@ def extend_line(line, minx,maxx,miny,maxy):
     point4 = InkstitchPoint(*line.coords[-1])
     new_ending_point = point4+(point4-point3).unit()*length
 
-    line = LineString([new_starting_point.as_tuple()]+line.coords[1:-1]+[new_ending_point.as_tuple()])
+    line = LineString([new_starting_point.as_tuple()] +
+                      line.coords[1:-1]+[new_ending_point.as_tuple()])
 
 
 def intersect_region_with_grating_line(shape, line, row_spacing, end_row_spacing=None, flip=False):
-    
+
     row_spacing = abs(row_spacing)
     (minx, miny, maxx, maxy) = shape.bounds
     upper_left = InkstitchPoint(minx, miny)
     rows = []
-    extend_line(line, minx,maxx,miny,maxy) #extend the line towards the ends to increase probability that all offsetted curves cross the shape
+    # extend the line towards the ends to increase probability that all offsetted curves cross the shape
+    extend_line(line, minx, maxx, miny, maxy)
 
     line_offsetted = line
     res = line_offsetted.intersection(shape)
     while isinstance(res, (shapely.geometry.GeometryCollection, shapely.geometry.MultiLineString)) or (not res.is_empty and len(res.coords) > 1):
         if isinstance(res, (shapely.geometry.GeometryCollection, shapely.geometry.MultiLineString)):
-            runs = [line_string.coords for line_string in res.geoms if (not line_string.is_empty and len(line_string.coords) > 1)]
+            runs = [line_string.coords for line_string in res.geoms if (
+                not line_string.is_empty and len(line_string.coords) > 1)]
         else:
             runs = [res.coords]
 
-        runs.sort(key=lambda seg: (InkstitchPoint(*seg[0]) - upper_left).length())
+        runs.sort(key=lambda seg: (
+            InkstitchPoint(*seg[0]) - upper_left).length())
         if flip:
             runs.reverse()
             runs = [tuple(reversed(run)) for run in runs]
@@ -130,8 +139,8 @@ def intersect_region_with_grating_line(shape, line, row_spacing, end_row_spacing
         if row_spacing > 0:
             rows.append(runs)
         else:
-            rows.insert(0,runs)
-        line_offsetted = line_offsetted.parallel_offset(row_spacing,'left',5)
+            rows.insert(0, runs)
+        line_offsetted = line_offsetted.parallel_offset(row_spacing, 'left', 5)
         if row_spacing < 0:
             line_offsetted.coords = line_offsetted.coords[::-1]
         line_offsetted = line_offsetted.simplify(0.01, False)
@@ -139,12 +148,13 @@ def intersect_region_with_grating_line(shape, line, row_spacing, end_row_spacing
         if row_spacing > 0 and not isinstance(res, (shapely.geometry.GeometryCollection, shapely.geometry.MultiLineString)):
             if (res.is_empty or len(res.coords) == 1):
                 row_spacing = -row_spacing
-                #print("Set to right")
-                line_offsetted = line.parallel_offset(row_spacing,'left',5)
-                line_offsetted.coords = line_offsetted.coords[::-1] #using negative row spacing leads as a side effect to reversed offsetted lines - here we undo this
+                # print("Set to right")
+                line_offsetted = line.parallel_offset(row_spacing, 'left', 5)
+                # using negative row spacing leads as a side effect to reversed offsetted lines - here we undo this
+                line_offsetted.coords = line_offsetted.coords[::-1]
                 line_offsetted = line_offsetted.simplify(0.01, False)
                 res = line_offsetted.intersection(shape)
-        
+
     return rows
 
 
@@ -174,7 +184,8 @@ def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing=Non
     # angle degrees clockwise and ask for the new bounding box.  The max
     # and min y tell me how far to go.
 
-    _, start, _, end = shapely.affinity.rotate(shape, angle, origin='center', use_radians=True).bounds
+    _, start, _, end = shapely.affinity.rotate(
+        shape, angle, origin='center', use_radians=True).bounds
 
     # convert start and end to be relative to center (simplifies things later)
     start -= center.y
@@ -211,7 +222,8 @@ def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing=Non
                 runs = [res.coords]
 
         if runs:
-            runs.sort(key=lambda seg: (InkstitchPoint(*seg[0]) - upper_left).length())
+            runs.sort(key=lambda seg: (
+                InkstitchPoint(*seg[0]) - upper_left).length())
 
             if flip:
                 runs.reverse()
@@ -220,7 +232,9 @@ def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing=Non
             rows.append(runs)
 
         if end_row_spacing:
-            current_row_y += row_spacing + (end_row_spacing - row_spacing) * ((current_row_y - start) / height)
+            current_row_y += row_spacing + \
+                (end_row_spacing - row_spacing) * \
+                ((current_row_y - start) / height)
         else:
             current_row_y += row_spacing
 
@@ -237,7 +251,8 @@ def section_to_stitches(group_of_segments, angle, row_spacing, max_stitch_length
         if (swap):
             (beg, end) = (end, beg)
 
-        stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, staggers, skip_last)
+        stitch_row(stitches, beg, end, angle, row_spacing,
+                   max_stitch_length, staggers, skip_last)
 
         swap = not swap
 

@@ -1,14 +1,11 @@
-
 import matplotlib.pyplot as plt
 from shapely.geometry import Polygon
-from shapely.ops import nearest_points, substring, polygonize
 
 from anytree import PreOrderIter
-from shapely.geometry.polygon import orient
-#import LineStringSampling as Sampler
+
+# import LineStringSampling as Sampler
 import numpy as np
 import matplotlib.collections as mcoll
-import matplotlib.path as mpath
 
 # def offset_polygons(polys, offset,joinstyle):
 #     if polys.geom_type == 'Polygon':
@@ -40,7 +37,7 @@ import matplotlib.path as mpath
 def plot_MultiPolygon(MultiPoly, plt, colorString):
     if MultiPoly.is_empty:
         return
-    if MultiPoly.geom_type == 'Polygon':
+    if MultiPoly.geom_type == "Polygon":
         x2, y2 = MultiPoly.exterior.xy
         plt.plot(x2, y2, colorString)
 
@@ -56,6 +53,7 @@ def plot_MultiPolygon(MultiPoly, plt, colorString):
                 x2, y2 = inners.coords.xy
                 plt.plot(x2, y2, colorString)
 
+
 # Test whether there are areas which would currently not be stitched but should be stitched
 
 
@@ -65,12 +63,13 @@ def subtractResult(poly, rootPoly, offsetThresh):
         poly2 = poly2.difference(node.val.buffer(offsetThresh, 5, 3, 3))
     return poly2
 
+
 # Used for debugging - plots all polygon exteriors within an AnyTree which is provided by the root node rootPoly.
 
 
 def drawPoly(rootPoly, colorString):
     fig, axs = plt.subplots(1, 1)
-    axs.axis('equal')
+    axs.axis("equal")
     plt.gca().invert_yaxis()
     for node in PreOrderIter(rootPoly):
         # if(node.id == "hole"):
@@ -84,15 +83,26 @@ def drawPoly(rootPoly, colorString):
 
 def drawresult(resultcoords, resultcoords_Origin, colorString):
     fig, axs = plt.subplots(1, 1)
-    axs.axis('equal')
+    axs.axis("equal")
     plt.gca().invert_yaxis()
     plt.plot(*zip(*resultcoords), colorString)
 
-    colormap = np.array(['r', 'g', 'b', 'c', 'm', 'y', 'k', 'gray', 'm'])
-    labelmap = np.array(['MUST_USE', 'REGULAR_SPACING', 'INITIAL_RASTERING', 'EDGE_NEEDED', 'NOT_NEEDED',
-                        'ALREADY_TRANSFERRED', 'ADDITIONAL_TRACKING_POINT_NOT_NEEDED', 'EDGE_RASTERING_ALLOWED', 'EDGE_PREVIOUSLY_SHIFTED'])
+    colormap = np.array(["r", "g", "b", "c", "m", "y", "k", "gray", "m"])
+    labelmap = np.array(
+        [
+            "MUST_USE",
+            "REGULAR_SPACING",
+            "INITIAL_RASTERING",
+            "EDGE_NEEDED",
+            "NOT_NEEDED",
+            "ALREADY_TRANSFERRED",
+            "ADDITIONAL_TRACKING_POINT_NOT_NEEDED",
+            "EDGE_RASTERING_ALLOWED",
+            "EDGE_PREVIOUSLY_SHIFTED",
+        ]
+    )
 
-    for i in range(0, 8+1):
+    for i in range(0, 8 + 1):
         # if i != Sampler.PointSource.EDGE_NEEDED and i != Sampler.PointSource.INITIAL_RASTERING:
         #    continue
         selection = []
@@ -102,8 +112,8 @@ def drawresult(resultcoords, resultcoords_Origin, colorString):
         if len(selection) > 0:
             plt.scatter(*zip(*selection), c=colormap[i], label=labelmap[i])
 
-  #  plt.scatter(*zip(*resultcoords),
-  #              c=colormap[resultcoords_Origin])
+    #  plt.scatter(*zip(*resultcoords),
+    #              c=colormap[resultcoords_Origin])
     axs.legend()
     plt.show(block=True)
 
@@ -112,8 +122,14 @@ def drawresult(resultcoords, resultcoords_Origin, colorString):
 
 
 def colorline(
-    x, y, z=None, cmap=plt.get_cmap('copper'), norm=plt.Normalize(0.0, 1.0),
-        linewidth=3, alpha=1.0):
+    x,
+    y,
+    z=None,
+    cmap=plt.get_cmap("copper"),
+    norm=plt.Normalize(0.0, 1.0),
+    linewidth=3,
+    alpha=1.0,
+):
     """
     http://nbviewer.ipython.org/github/dpsanders/matplotlib-examples/blob/master/colorline.ipynb
     http://matplotlib.org/examples/pylab_examples/multicolored_line.html
@@ -133,13 +149,15 @@ def colorline(
     z = np.asarray(z)
 
     segments = make_segments(x, y)
-    lc = mcoll.LineCollection(segments, array=z, cmap=cmap, norm=norm,
-                              linewidth=linewidth, alpha=alpha)
+    lc = mcoll.LineCollection(
+        segments, array=z, cmap=cmap, norm=norm, linewidth=linewidth, alpha=alpha
+    )
 
     ax = plt.gca()
     ax.add_collection(lc)
 
     return lc
+
 
 # Used by colorline
 

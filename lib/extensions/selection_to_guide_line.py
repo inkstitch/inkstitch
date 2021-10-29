@@ -18,11 +18,13 @@ class SelectionToGuideLine(InkstitchExtension):
             return
 
         if not self.svg.selected:
-            inkex.errormsg(_("Please select one object to be marked as a guide line."))
+            inkex.errormsg(
+                _("Please select one object to be marked as a guide line."))
             return
 
-        if len(self.get_nodes())!=1:
-            inkex.errormsg(_("Please select only one object to be marked as a guide line."))
+        if len(self.get_nodes()) != 1:
+            inkex.errormsg(
+                _("Please select only one object to be marked as a guide line."))
             return
 
         for guide_line in self.get_nodes():

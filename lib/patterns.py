@@ -19,7 +19,7 @@ def is_pattern(node):
 
 
 def apply_patterns(patches, node):
-    patterns = get_patterns(node,"#inkstitch-pattern-marker")
+    patterns = get_patterns(node, "#inkstitch-pattern-marker")
     _apply_fill_patterns(patterns['fill_patterns'], patches)
     _apply_stroke_patterns(patterns['stroke_patterns'], patches)
 
@@ -32,7 +32,8 @@ def _apply_stroke_patterns(patterns, patches):
                 patch_points.append(stitch)
                 if i == len(patch.stitches) - 1:
                     continue
-                intersection_points = _get_pattern_points(stitch, patch.stitches[i+1], pattern)
+                intersection_points = _get_pattern_points(
+                    stitch, patch.stitches[i+1], pattern)
                 for point in intersection_points:
                     patch_points.append(Stitch(point, tags=('pattern_point',)))
             patch.stitches = patch_points
