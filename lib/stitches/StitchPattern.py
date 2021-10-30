@@ -152,7 +152,8 @@ def offset_poly(
      at this position
     """
     ordered_poly = orient(poly, -1)
-    ordered_poly = ordered_poly.simplify(constants.simplification_threshold, False)
+    ordered_poly = ordered_poly.simplify(
+        constants.simplification_threshold, False)
     root = AnyNode(
         id="node",
         val=ordered_poly.exterior,
@@ -168,7 +169,8 @@ def offset_poly(
                 id="hole",
                 val=holes,
                 already_rastered=False,
-                transferred_point_priority_deque=DEPQ(iterable=None, maxlen=None),
+                transferred_point_priority_deque=DEPQ(
+                    iterable=None, maxlen=None),
             )
         )
 
@@ -182,7 +184,7 @@ def offset_poly(
             offset,
             "left",
             resolution=5,
-            joint_style=join_style,
+            join_style=join_style,
             mitre_limit=10,
         )
         outer = outer.simplify(constants.simplification_threshold, False)
@@ -194,7 +196,7 @@ def offset_poly(
                 offset,
                 "left",
                 resolution=5,
-                joint_style=join_style,
+                join_style=join_style,
                 mitre_limit=10,
             )
             inner = inner.simplify(constants.simplification_threshold, False)
@@ -209,9 +211,11 @@ def offset_poly(
                     result = MultiPolygon(polygonize(outer))
             else:
                 if outer.geom_type == "LineString":
-                    result = Polygon(outer).difference(MultiPolygon(poly_inners))
+                    result = Polygon(outer).difference(
+                        MultiPolygon(poly_inners))
                 else:
-                    result = MultiPolygon(outer).difference(MultiPolygon(poly_inners))
+                    result = MultiPolygon(outer).difference(
+                        MultiPolygon(poly_inners))
 
             if not result.is_empty and result.area > offset * offset / 10:
                 result_list = []

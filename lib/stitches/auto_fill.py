@@ -21,7 +21,7 @@ from ..utils.geometry import line_string_to_point_list
 from .fill import intersect_region_with_grating, intersect_region_with_grating_line, stitch_row
 from .running_stitch import running_stitch
 from .PointTransfer import transfer_points_to_surrounding_graph
-from .LineStringSampling import raster_line_string_with_priority_points_graph
+from .LineStringSampling import raster_line_string_with_priority_points
 
 
 class PathEdge(object):
@@ -666,8 +666,12 @@ def stitch_line(stitches, stitching_direction, geometry, projected_points, max_s
     # print(geometry[0])
     # if stitching_direction == -1:
     #    geometry.coords = geometry.coords[::-1]
-    stitched_line, stitched_line_origin = raster_line_string_with_priority_points_graph(
-        geometry, max_stitch_length, stitching_direction, projected_points, abs(row_spacing), offset_by_half)
+    if stitching_direction == 1:
+        stitched_line, _ = raster_line_string_with_priority_points(
+            geometry, 0.0, geometry.length, max_stitch_length, projected_points, abs(row_spacing), offset_by_half, True)
+    else:
+        stitched_line, _ = raster_line_string_with_priority_points(
+            geometry, geometry.length, 0.0, max_stitch_length, projected_points, abs(row_spacing), offset_by_half, True)
 
     stitches.append(Stitch(*stitched_line[0], tags=('fill_row_start',)))
     for i in range(1, len(stitched_line)):

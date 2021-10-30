@@ -139,9 +139,10 @@ def connect_raster_tree_nearest_neighbor(
         # points for start and end)
         end_distance,
         stitch_distance,
-        stitching_direction,
         tree.transferred_point_priority_deque,
         abs_offset,
+        offset_by_half,
+        False
     )
     assert len(own_coords) == len(own_coords_origin)
     own_coords_origin[0] = LineStringSampling.PointSource.ENTER_LEAVING_POINT
@@ -548,9 +549,10 @@ def connect_raster_tree_from_inner_to_outer(
             # and end)
             end_offset,
             stitch_distance,
-            stitching_direction,
             tree.transferred_point_priority_deque,
             abs_offset,
+            offset_by_half,
+            False
         )
     else:
         (
@@ -566,9 +568,10 @@ def connect_raster_tree_from_inner_to_outer(
             # and end)
             current_coords.length - end_offset,
             stitch_distance,
-            stitching_direction,
             tree.transferred_point_priority_deque,
             abs_offset,
+            offset_by_half,
+            False
         )
         current_coords.coords = current_coords.coords[::-1]
 
