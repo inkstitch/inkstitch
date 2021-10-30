@@ -13,8 +13,13 @@ from io import StringIO
 if getattr(sys, 'frozen', None) is None:
     # When running in development mode, we want to use the inkex installed by
     # pip install, not the one bundled with Inkscape which is not new enough.
-    sys.path.remove('/usr/share/inkscape/extensions')
-    sys.path.append('/usr/share/inkscape/extensions')
+    if sys.platform == "darwin":
+        extensions_path = "/Applications/Inkscape.app/Contents/Resources/share/inkscape/extensions"
+    else:
+        extensions_path = "/usr/share/inkscape/extensions"
+
+    sys.path.remove(extensions_path)
+    sys.path.append(extensions_path)
 
 from inkex import errormsg
 from lxml.etree import XMLSyntaxError
