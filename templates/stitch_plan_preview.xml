@@ -11,6 +11,15 @@
             </submenu>
         </effects-menu>
     </effect>
+    <param name="move-to-side" type="boolean" gui-text="Move stitch plan beside the canvas">true</param>
+    <param name="layer-visibility" type="optiongroup" appearance="combo" gui-text="Design layer visibity">
+        <option value="0">Unchanged</option>
+        <option value="1">Hidden</option>
+        <option value="2">Lower opacity</option>
+    </param>
+    <param name="needle-points" type="boolean" gui-text="Needle points">false</param>
+    <separator />
+    <label>Hit Ctrl+Z to undo this action after inspection.</label>
     <script>
         {{ command_tag | safe }}
     </script>
