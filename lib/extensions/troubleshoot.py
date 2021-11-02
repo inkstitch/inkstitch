@@ -130,7 +130,11 @@ class Troubleshoot(InkstitchExtension):
 
     def add_descriptions(self, problem_types):
         svg = self.document.getroot()
-        text_x = str(float(svg.get('viewBox', '0 0 800 0').split(' ')[2]) + 5.0)
+
+        # We could use svg.viewport_width, but then we would need to do unit conversions,
+        # so let's stay with parsing the viewbox by ourselves
+        # viewbox values are either separated through white space or commas
+        text_x = str(float(svg.get('viewBox', '0 0 800 0').replace(",", " ").split()[2]) + 5.0)
 
         text_container = inkex.TextElement(attrib={
             "x": text_x,
