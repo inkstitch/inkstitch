@@ -3,7 +3,7 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from inkex import Boolean
+from inkex import Boolean, Style
 from lxml import etree
 
 from ..stitch_plan import stitch_groups_to_stitch_plan
@@ -45,11 +45,15 @@ class StitchPlanPreview(InkstitchExtension):
         if self.options.layer_visibility == 1:
             self.hide_all_layers()
             layer.set('style', None)
-
-        if self.options.layer_visibility == 2:
+        elif self.options.layer_visibility == 2:
             for g in self.document.getroot().findall(SVG_GROUP_TAG):
-                if g.get(INKSCAPE_GROUPMODE) == "layer" and not g == layer:
-                    g.set("style", "opacity:0.4")
+                style = g.specified_style()
+                # check groupmode and exclude stitch_plan layer
+                # exclude objects which are not displayed at all or already have opacity < 0.4
+                if (g.get(INKSCAPE_GROUPMODE) == "layer" and not g == layer and
+                        float(style.get('opacity', 1)) > 0.4 and not style.get('display', 'inline') == 'none'):
+                    style += Style('opacity:0.4')
+                    g.set("style", style)
 
         # translate stitch plan to the right side of the canvas
         if self.options.move_to_side:
