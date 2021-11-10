@@ -65,7 +65,7 @@ def _apply_fill_patterns(patterns, patches):
             patch.stitches = patch_points
 
 
-def get_patterns(node, marker_id):
+def get_patterns(node, marker_id, get_fills=True, get_strokes=True):
     from .elements import EmbroideryElement
     from .elements.auto_fill import auto_fill
     from .elements.stroke import Stroke
@@ -88,7 +88,7 @@ def get_patterns(node, marker_id):
             for ring in linear_rings:
                 fills.append(shgeo.Polygon(ring))
 
-        if stroke is not None:
+        if get_strokes and stroke is not None:
             stroke_pattern = Stroke(pattern).paths
             line_strings = [shgeo.LineString(path) for path in stroke_pattern]
             strokes.append(shgeo.MultiLineString(line_strings))

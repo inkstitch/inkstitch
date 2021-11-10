@@ -456,7 +456,8 @@ class AutoFill(EmbroideryElement):
                         stitches=path)
                     stitch_groups.append(stitch_group)
             elif self.fill_method == 2:  # Guided Auto Fill
-                lines = get_patterns(self.node, "#inkstitch-guide-line-marker")
+                lines = get_patterns(
+                    self.node, "#inkstitch-guide-line-marker", False, True)
                 lines = lines['stroke_patterns']
                 if not lines or lines[0].is_empty:
                     inkex.errormsg(

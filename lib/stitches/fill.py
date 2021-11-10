@@ -7,6 +7,7 @@ import math
 
 import shapely
 from shapely.geometry.linestring import LineString
+from shapely.ops import linemerge
 from ..svg import PIXELS_PER_MM
 from ..utils import Point as InkstitchPoint
 from ..utils import cache
@@ -108,7 +109,7 @@ def extend_line(line, minx, maxx, miny, maxy):
     point4 = InkstitchPoint(*line.coords[-1])
     new_ending_point = point4+(point4-point3).unit()*length
 
-    line = LineString([new_starting_point.as_tuple()] +
+    return LineString([new_starting_point.as_tuple()] +
                       line.coords[1:-1]+[new_ending_point.as_tuple()])
 
 
@@ -119,7 +120,7 @@ def intersect_region_with_grating_line(shape, line, row_spacing, end_row_spacing
     upper_left = InkstitchPoint(minx, miny)
     rows = []
     # extend the line towards the ends to increase probability that all offsetted curves cross the shape
-    extend_line(line, minx, maxx, miny, maxy)
+    line = extend_line(line, minx, maxx, miny, maxy)
 
     line_offsetted = line
     res = line_offsetted.intersection(shape)
@@ -141,6 +142,17 @@ def intersect_region_with_grating_line(shape, line, row_spacing, end_row_spacing
         else:
             rows.insert(0, runs)
         line_offsetted = line_offsetted.parallel_offset(row_spacing, 'left', 5)
+        if line_offsetted.geom_type == 'MultiLineString':  # if we got multiple lines take the longest
+            lines = linemerge(line_offsetted)
+            lines = list(line_offsetted.geoms)
+            max_length = -1
+            max_length_idx = -1
+            for idx, subline in enumerate(lines):
+                if subline.length > max_length:
+                    max_length = subline.length
+                    max_length_idx = idx
+            line_offsetted = lines[max_length_idx]
+
         if row_spacing < 0:
             line_offsetted.coords = line_offsetted.coords[::-1]
         line_offsetted = line_offsetted.simplify(0.01, False)
