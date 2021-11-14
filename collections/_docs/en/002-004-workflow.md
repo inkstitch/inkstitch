@@ -116,7 +116,7 @@ When you're designing for embroidery machines that can't cut the thread mid-sew 
 
 The order of stitching also affects how the fabric pulls and pushes. Each stitch will distort the fabric, and you'll need to take this into account and compensate accordingly. [More Information](/tutorials/push-pull-compensation/)
 
-Once you've created all vectors, it's time to put everything in the right order. This is where the Inkscapes Objects tool (`Objects > Objects ...`) comes in useful. Optimize your order to minimize color changes and reduce or hide jump-stitches. Additionally you can make use of the Ink/Stitch [sorting function](/docs/edit/#re-stack-objects-in-order-of-selection) gebrauch machen.
+Once you've created all vectors, it's time to put everything in the right order. This is where the Inkscapes Objects tool (`Objects > Objects ...`) comes in useful. Optimize your order to minimize color changes and reduce or hide jump-stitches. Additionally you can make use of the Ink/Stitch [sorting function](/docs/edit/#re-stack-objects-in-order-of-selection).
 
 Ink/Stitch will stitch objects in exactly the order they appear in your SVG document, from lowest to highest in stacking order. If the distance between two objects is long, Ink/Stitch will add a jump-stitch between them automatically. It uses the color of the object to determine thread color, so changes in color from one object to the next will result in a thread-change instruction being added to the embroidery output file.
 
