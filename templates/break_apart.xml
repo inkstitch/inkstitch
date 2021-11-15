@@ -14,7 +14,7 @@
     <param name="description" type="description">
         This extension will try to repair fill shapes and break them apart if necessary. Holes will be retained. Use on simple or overlapping shapes.
     </param>
-    <param name="method" type="optiongroup" _gui-text="Method">
+    <param name="method" type="optiongroup" gui-text="Method">
        <option value="0">Simple</option>
        <option value="1">Complex</option>
     </param>
