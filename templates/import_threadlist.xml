@@ -4,11 +4,11 @@
     <id>org.inkstitch.import_threadlist</id>
     <param name="extension" type="string" gui-hidden="true">import_threadlist</param>
     <param name="filepath" type="path" gui-text="Choose file" mode="file" filetypes="txt"/>
-    <param name="method" type="optiongroup" _gui-text="Choose method">
+    <param name="method" type="optiongroup" gui-text="Choose method">
        <option value="1">Import Ink/Stitch threadlist</option>
        <option value="2">Import other threadlist*</option>
     </param>
-    <param name="palette" type="enum" _gui-text="*Choose color palette">
+    <param name="palette" type="enum" gui-text="*Choose color palette">
     {%- for item in threadcatalog %}
        <item value="{{ item }}">{{ item }}</item>
     {%- endfor %}
