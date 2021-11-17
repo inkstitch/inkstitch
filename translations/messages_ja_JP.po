@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-10-16 01:45+0000\n"
-"PO-Revision-Date: 2021-10-16 01:47\n"
+"POT-Creation-Date: 2021-11-17 01:36+0000\n"
+"PO-Revision-Date: 2021-11-17 01:37\n"
 "Last-Translator: \n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-16 01:45+0000\n"
+"POT-Creation-Date: 2021-11-17 01:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -273,19 +273,19 @@ msgstr "TT Masters"
 msgid "A font suited for heavy typing :)"
 msgstr "ヘビータイピングに適したフォント:)"
 
-#: inkstitch.py:61
+#: inkstitch.py:66
 msgid "Ink/Stitch cannot read your SVG file. This is often the case when you use a file which has been created with Adobe Illustrator."
 msgstr "インク/ステッチはこのSVGファイルを読み取りできません。これは、AdobeIllustratorで作成されたファイルを使用する場合によくあります。"
 
-#: inkstitch.py:64
+#: inkstitch.py:69
 msgid "Try to import the file into Inkscape through 'File > Import...' (Ctrl+I)"
 msgstr "「ファイル>インポート...」（Ctrl + I）を使用してファイルをInkscapeにインポートして下さい"
 
-#: inkstitch.py:75
+#: inkstitch.py:80
 msgid "Ink/Stitch experienced an unexpected error."
 msgstr "インク/ステッチで予期しないエラーが発生しました。"
 
-#: inkstitch.py:76
+#: inkstitch.py:81
 msgid "If you'd like to help, please file an issue at https://github.com/inkstitch/inkstitch/issues and include the entire error description below:"
 msgstr "ヘルプが必要な場合は https://github.com/inkstitch/inkstitch/issues でエラー全体の説明を含めて問題を報告してください。"
 
@@ -904,7 +904,7 @@ msgstr "デフォルト：等高線アンダーレイインセットの半分"
 
 #: lib/elements/satin_column.py:195
 msgid "Split stitch if distance of maximum stitch length is exceeded"
-msgstr ""
+msgstr "最大ステッチ長さを超えた場合のスプリットステッチ"
 
 #: lib/elements/stroke.py:21
 msgid "Stroke"
@@ -1151,7 +1151,7 @@ msgstr "フォントファイルを指定してください。"
 
 #: lib/extensions/letters_to_font.py:35
 msgid "Font directory not found. Please specify an existing directory."
-msgstr ""
+msgstr "フォントのディレクトリが見つかりません。既存のディレクトリを指定してください。"
 
 #: lib/extensions/object_commands.py:21
 msgid "Please select one or more objects to which to attach commands."
@@ -1229,17 +1229,17 @@ msgstr "無効なポインタ"
 msgid "Description"
 msgstr "説明"
 
-#: lib/extensions/troubleshoot.py:98 lib/extensions/troubleshoot.py:143
+#: lib/extensions/troubleshoot.py:98 lib/extensions/troubleshoot.py:147
 #: inx/inkstitch_cleanup.inx:17 inx/inkstitch_remove_embroidery_settings.inx:16
 #: inx/inkstitch_troubleshoot.inx:10
 msgid "Troubleshoot"
 msgstr "トラブルシューティング"
 
-#: lib/extensions/troubleshoot.py:110 lib/extensions/troubleshoot.py:150
+#: lib/extensions/troubleshoot.py:110 lib/extensions/troubleshoot.py:154
 msgid "Errors"
 msgstr "エラー"
 
-#: lib/extensions/troubleshoot.py:116 lib/extensions/troubleshoot.py:154
+#: lib/extensions/troubleshoot.py:116 lib/extensions/troubleshoot.py:158
 msgid "Warnings"
 msgstr "注意事項"
 
@@ -1247,23 +1247,23 @@ msgstr "注意事項"
 msgid "Type Warnings"
 msgstr "タイプ別警告"
 
-#: lib/extensions/troubleshoot.py:151
+#: lib/extensions/troubleshoot.py:155
 msgid "Problems that will prevent the shape from being embroidered."
 msgstr "刺繍されない問題"
 
-#: lib/extensions/troubleshoot.py:155
+#: lib/extensions/troubleshoot.py:159
 msgid "These are problems that won't prevent the shape from being embroidered. You should consider to fix the warning, but if you don't, Ink/Stitch will do its best to process the object."
 msgstr "この形状を刺繍することを妨げない問題です。この警告を修正を検討する必要がありますが、そうしない場合、インクステッチはこのオブジェクトを処理するために最善を尽くします。"
 
-#: lib/extensions/troubleshoot.py:160
+#: lib/extensions/troubleshoot.py:164
 msgid "Object Type Warnings"
 msgstr "オブジェクトタイプの警告"
 
-#: lib/extensions/troubleshoot.py:161
+#: lib/extensions/troubleshoot.py:165
 msgid "These objects may not work properly with Ink/Stitch. Follow the instructions to correct unwanted behaviour."
 msgstr "このオブジェクトはインクステッチで正しく動作しない場合があります。指示にしたがって動作を修正してください。"
 
-#: lib/extensions/troubleshoot.py:177
+#: lib/extensions/troubleshoot.py:181
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
 msgstr "1つのオブジェクトに複数のエラーが含まれている可能性がありますが、ポインタはオブジェクトごとに1つしかありません。 さらにエラーが発生した場合は、この関数を再度実行してください。 ポインタを削除するには、オブジェクトパネル（オブジェクト -> Objects...）で「Troubleshoot」というレイヤーを削除します。"
 
@@ -2214,7 +2214,7 @@ msgstr "Ink/stitchについて"
 
 #: inx/inkstitch_about.inx:8
 msgid "Ink/Stitch - Manual Install"
-msgstr ""
+msgstr "インク/ステッチ - マニュアルインストール"
 
 #: inx/inkstitch_about.inx:10
 msgid "An open-source machine embroidery design platform based on Inkscape."
@@ -2222,7 +2222,7 @@ msgstr "Inkscapeをベースにしたオープンソースのミシン刺繍デ�
 
 #: inx/inkstitch_about.inx:13
 msgid "https://inkstitch.org"
-msgstr ""
+msgstr "https://inkstitch.org"
 
 #: inx/inkstitch_about.inx:15
 msgid "License"
@@ -2231,6 +2231,14 @@ msgstr "ライセンス"
 #: inx/inkstitch_auto_satin.inx:3
 msgid "Auto-Route Satin Columns"
 msgstr "サテン自動ルーティング"
+
+#: inx/inkstitch_auto_satin.inx:5
+msgid "Trim jump stitches"
+msgstr ""
+
+#: inx/inkstitch_auto_satin.inx:6
+msgid "Preserve order of satin columns"
+msgstr ""
 
 #: inx/inkstitch_auto_satin.inx:12 inx/inkstitch_convert_to_satin.inx:10
 #: inx/inkstitch_convert_to_stroke.inx:13 inx/inkstitch_cut_satin.inx:10
@@ -2246,17 +2254,45 @@ msgstr "塗りつぶしオブジェクトの分割"
 msgid "Fill Tools"
 msgstr "塗り潰しツール"
 
+#: inx/inkstitch_break_apart.inx:17
+msgid "Method"
+msgstr ""
+
 #: inx/inkstitch_break_apart.inx:18
 msgid "Simple"
-msgstr ""
+msgstr "シンプル"
 
 #: inx/inkstitch_break_apart.inx:19
 msgid "Complex"
-msgstr ""
+msgstr "複雑"
 
 #: inx/inkstitch_cleanup.inx:3
 msgid "Cleanup Document"
 msgstr "クリーンアップドキュメント"
+
+#: inx/inkstitch_cleanup.inx:7
+msgid "Remove Small Fill Areas"
+msgstr ""
+
+#: inx/inkstitch_cleanup.inx:7
+msgid "Removes areas smaller than dedined by threshold."
+msgstr ""
+
+#: inx/inkstitch_cleanup.inx:8
+msgid "Fill area threshold (px²)"
+msgstr ""
+
+#: inx/inkstitch_cleanup.inx:10
+msgid "Remove Small strokes"
+msgstr ""
+
+#: inx/inkstitch_cleanup.inx:10
+msgid "Removes small strokes shorter than defined by threshold."
+msgstr ""
+
+#: inx/inkstitch_cleanup.inx:11
+msgid "Stroke threshold (px)"
+msgstr ""
 
 #: inx/inkstitch_convert_to_satin.inx:3
 msgid "Convert Line to Satin"
@@ -2265,6 +2301,14 @@ msgstr "ラインをサテンに変換"
 #: inx/inkstitch_convert_to_stroke.inx:3
 msgid "Convert Satin to Stroke"
 msgstr "サテンをストロークに変換"
+
+#: inx/inkstitch_convert_to_stroke.inx:8
+msgid "Keep satin column"
+msgstr ""
+
+#: inx/inkstitch_convert_to_stroke.inx:8
+msgid "Do not delete original satin column."
+msgstr ""
 
 #: inx/inkstitch_cut_satin.inx:3
 msgid "Cut Satin Column"
@@ -2292,6 +2336,14 @@ msgstr "ビジュアライズとエクスポート"
 msgid "Preferences"
 msgstr "環境設定"
 
+#: inx/inkstitch_embroider_settings.inx:17
+msgid "Collapse length (mm)"
+msgstr ""
+
+#: inx/inkstitch_embroider_settings.inx:17
+msgid "Jump stitches smaller than this will be treated as normal stitches."
+msgstr ""
+
 #: inx/inkstitch_flip.inx:3
 msgid "Flip Satin Column Rails"
 msgstr "フリップサテンコラムレール"
@@ -2314,12 +2366,20 @@ msgstr "スレッドリストの読み込み"
 msgid "Choose file"
 msgstr "ファイル選択"
 
+#: inx/inkstitch_import_threadlist.inx:7
+msgid "Choose method"
+msgstr ""
+
 #: inx/inkstitch_import_threadlist.inx:8
 msgid "Import Ink/Stitch threadlist"
-msgstr ""
+msgstr "インク/ステッチのスレッドリストのインポート"
 
 #: inx/inkstitch_import_threadlist.inx:9
 msgid "Import other threadlist*"
+msgstr "他のスレッドリストのインポート*"
+
+#: inx/inkstitch_import_threadlist.inx:11
+msgid "*Choose color palette"
 msgstr ""
 
 #: inx/inkstitch_import_threadlist.inx:87 inx/inkstitch_install.inx:10
@@ -2329,95 +2389,95 @@ msgstr "糸の色の管理"
 
 #: inx/inkstitch_input_100.inx:3
 msgid "100 file input"
-msgstr ""
+msgstr "100個のファイルをインプット"
 
 #: inx/inkstitch_input_100.inx:8
 msgid "Ink/Stitch: Toyota Embroidery Format (.100)"
-msgstr ""
+msgstr "インク／ステッチ トヨタエンブロイダリーフォーマット (.100)"
 
 #: inx/inkstitch_input_100.inx:9
 msgid "convert 100 file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "100ファイルをインクステッチのマニュアルステッチのパスに変換"
 
 #: inx/inkstitch_input_10O.inx:3
 msgid "10O file input"
-msgstr ""
+msgstr "10Oファイルをインプット"
 
 #: inx/inkstitch_input_10O.inx:8
 msgid "Ink/Stitch: Toyota Embroidery Format (.10o)"
-msgstr ""
+msgstr "Ink/Stitch: トヨタエ刺繍フォーマット (.10o)"
 
 #: inx/inkstitch_input_10O.inx:9
 msgid "convert 10O file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "10Oファイルをインクステッチのマニュアルステッチのパスに変換"
 
 #: inx/inkstitch_input_BRO.inx:3
 msgid "BRO file input"
-msgstr ""
+msgstr "BROファイルをインプット"
 
 #: inx/inkstitch_input_BRO.inx:8
 msgid "Ink/Stitch: Bits & Volts Embroidery Format (.bro)"
-msgstr ""
+msgstr "Ink/Stitch: Bits & Volts 刺繍フォーマット (.bro)"
 
 #: inx/inkstitch_input_BRO.inx:9
 msgid "convert BRO file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "BROファイルをインクステッチのマニュアルステッチパスに変換"
 
 #: inx/inkstitch_input_DAT.inx:3
 msgid "DAT file input"
-msgstr ""
+msgstr "DATファイルインプット"
 
 #: inx/inkstitch_input_DAT.inx:8
 msgid "Ink/Stitch: Sunstar or Barudan Embroidery Format (.dat)"
-msgstr ""
+msgstr "Ink/Stitch: サンスターまたはバルダン 刺繍フォーマット(.dat)"
 
 #: inx/inkstitch_input_DAT.inx:9
 msgid "convert DAT file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "DATファイルをインクステッチのマニュアルステッチのパスに変換する"
 
 #: inx/inkstitch_input_DSB.inx:3
 msgid "DSB file input"
-msgstr ""
+msgstr "DSBファイルのインプット"
 
 #: inx/inkstitch_input_DSB.inx:8
 msgid "Ink/Stitch: Tajima(Barudan) Embroidery Format (.dsb)"
-msgstr ""
+msgstr "Ink/Stitch: タジマ(バルダン)刺繍フォーマット(.dsb)"
 
 #: inx/inkstitch_input_DSB.inx:9
 msgid "convert DSB file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "DSBファイルをインクステッチのマニュアルステッチのパスに変換する"
 
 #: inx/inkstitch_input_DST.inx:3
 msgid "DST file input"
-msgstr ""
+msgstr "DSTファイルのインプット"
 
 #: inx/inkstitch_input_DST.inx:8 inx/inkstitch_output_DST.inx:8
 msgid "Ink/Stitch: Tajima Embroidery Format (.dst)"
-msgstr ""
+msgstr "Ink/Stitch: タジマ刺繍フォーマット (.dst)"
 
 #: inx/inkstitch_input_DST.inx:9
 msgid "convert DST file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "DSTファイルをインクステッチのマニュアルステッチパスに変換する"
 
 #: inx/inkstitch_input_DSZ.inx:3
 msgid "DSZ file input"
-msgstr ""
+msgstr "DSZファイルのインプット"
 
 #: inx/inkstitch_input_DSZ.inx:8
 msgid "Ink/Stitch: ZSK USA Embroidery Format (.dsz)"
-msgstr ""
+msgstr "Ink/Stitch: ZSK USA刺繍フォーマット(.dsz)"
 
 #: inx/inkstitch_input_DSZ.inx:9
 msgid "convert DSZ file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "DSZファイルをインクステッチのマニュアルステッチパスに変換"
 
 #: inx/inkstitch_input_EMD.inx:3
 msgid "EMD file input"
-msgstr ""
+msgstr "EMDファイルのインプット"
 
 #: inx/inkstitch_input_EMD.inx:8
 msgid "Ink/Stitch: Elna Embroidery Format (.emd)"
-msgstr ""
+msgstr "Ink/Stitch: エルナ刺繍フォーマット(.emd)"
 
 #: inx/inkstitch_input_EMD.inx:9
 msgid "convert EMD file to Ink/Stitch manual-stitch paths"
@@ -3148,6 +3208,26 @@ msgstr "PDFエクスポート"
 msgid "Remove embroidery settings"
 msgstr "刺繍設定を解除"
 
+#: inx/inkstitch_remove_embroidery_settings.inx:7
+msgid "Remove Params"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:7
+msgid "Removes params from selected objects or all objects if nothing is selected."
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:9
+msgid "Remove Commands"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:9
+msgid "Removes visual commands from selected objects or all objects if nothing is selected."
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:10
+msgid "Remove Print Settings from SVG metadata"
+msgstr ""
+
 #: inx/inkstitch_reorder.inx:3
 msgid "Re-stack objects in order of selection"
 msgstr "選択順にオブジェクトを再スタックします"
@@ -3163,6 +3243,34 @@ msgstr "シミュレータ／リアルプレビュー"
 #: inx/inkstitch_stitch_plan_preview.inx:3
 msgid "Stitch Plan Preview"
 msgstr "ステッチプランプレビュー"
+
+#: inx/inkstitch_stitch_plan_preview.inx:14
+msgid "Move stitch plan beside the canvas"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:15
+msgid "Design layer visibity"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:16
+msgid "Unchanged"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:17
+msgid "Hidden"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:18
+msgid "Lower opacity"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:20
+msgid "Needle points"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:22
+msgid "Hit Ctrl+Z to undo this action after inspection."
+msgstr ""
 
 #: inx/inkstitch_troubleshoot.inx:3
 msgid "Troubleshoot Objects"

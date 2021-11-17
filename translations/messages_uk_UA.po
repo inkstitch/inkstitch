@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-10-16 01:45+0000\n"
-"PO-Revision-Date: 2021-10-16 01:47\n"
+"POT-Creation-Date: 2021-11-17 01:36+0000\n"
+"PO-Revision-Date: 2021-11-17 01:38\n"
 "Last-Translator: \n"
 "Language-Team: Ukrainian\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-16 01:45+0000\n"
+"POT-Creation-Date: 2021-11-17 01:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -273,19 +273,19 @@ msgstr "TT Masters"
 msgid "A font suited for heavy typing :)"
 msgstr "Шрифт пасує до важкого тексту :)"
 
-#: inkstitch.py:61
+#: inkstitch.py:66
 msgid "Ink/Stitch cannot read your SVG file. This is often the case when you use a file which has been created with Adobe Illustrator."
 msgstr "Ink/Stitch не може прочитати ваш SVG файл. Така ситуація часто виникає, коли файл було створено у програмі Adobe Illustrator."
 
-#: inkstitch.py:64
+#: inkstitch.py:69
 msgid "Try to import the file into Inkscape through 'File > Import...' (Ctrl+I)"
 msgstr "Спробуйте імпортувати файл в Inkscape через меню 'Файл > Імпортувати...' (Ctrl+I)"
 
-#: inkstitch.py:75
+#: inkstitch.py:80
 msgid "Ink/Stitch experienced an unexpected error."
 msgstr "В Ink/Stitch сталася невідома помилка."
 
-#: inkstitch.py:76
+#: inkstitch.py:81
 msgid "If you'd like to help, please file an issue at https://github.com/inkstitch/inkstitch/issues and include the entire error description below:"
 msgstr "Якщо ви бажаєте допомогти, створіть повідомлення на вебсторінці https://github.com/inkstitch/inkstitch/issues та надайте повний опис помилки:"
 
@@ -1226,17 +1226,17 @@ msgstr "Неправильний вказівник"
 msgid "Description"
 msgstr "Опис"
 
-#: lib/extensions/troubleshoot.py:98 lib/extensions/troubleshoot.py:143
+#: lib/extensions/troubleshoot.py:98 lib/extensions/troubleshoot.py:147
 #: inx/inkstitch_cleanup.inx:17 inx/inkstitch_remove_embroidery_settings.inx:16
 #: inx/inkstitch_troubleshoot.inx:10
 msgid "Troubleshoot"
 msgstr "Виправлення неполадок"
 
-#: lib/extensions/troubleshoot.py:110 lib/extensions/troubleshoot.py:150
+#: lib/extensions/troubleshoot.py:110 lib/extensions/troubleshoot.py:154
 msgid "Errors"
 msgstr "Помилки"
 
-#: lib/extensions/troubleshoot.py:116 lib/extensions/troubleshoot.py:154
+#: lib/extensions/troubleshoot.py:116 lib/extensions/troubleshoot.py:158
 msgid "Warnings"
 msgstr "Попередження"
 
@@ -1244,23 +1244,23 @@ msgstr "Попередження"
 msgid "Type Warnings"
 msgstr "Попередження про тип"
 
-#: lib/extensions/troubleshoot.py:151
+#: lib/extensions/troubleshoot.py:155
 msgid "Problems that will prevent the shape from being embroidered."
 msgstr "Проблеми, які не дозволяють вишити цю форму."
 
-#: lib/extensions/troubleshoot.py:155
+#: lib/extensions/troubleshoot.py:159
 msgid "These are problems that won't prevent the shape from being embroidered. You should consider to fix the warning, but if you don't, Ink/Stitch will do its best to process the object."
 msgstr "Ці проблеми не перешкоджатимуть вишивці фігури. Ви можете виправити ці попередження, але якщо ви цього не зробите - Ink/Stitch постарається обробити об'єкт якнайкраще."
 
-#: lib/extensions/troubleshoot.py:160
+#: lib/extensions/troubleshoot.py:164
 msgid "Object Type Warnings"
 msgstr "Попередження про тип об'єкта"
 
-#: lib/extensions/troubleshoot.py:161
+#: lib/extensions/troubleshoot.py:165
 msgid "These objects may not work properly with Ink/Stitch. Follow the instructions to correct unwanted behaviour."
 msgstr "Ці об'єкти можуть не коректно працювати з Ink/Stitch. Дотримуйтесь інструкцій, щоб виправити можливі проблеми."
 
-#: lib/extensions/troubleshoot.py:177
+#: lib/extensions/troubleshoot.py:181
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
 msgstr "Можливо, що один об'єкт містить більше ніж одну помилку, але на кожен об'єкт встановлюється тільки один вказівник. Запустіть цю функцию знову, коли будуть виникати нові помилки. Видаліть вказівники шляхом видалення шару з іменем \"Вирішення проблем\" через панель об'єктів  (Об'бєкт -> Об'єкти...)."
 
@@ -2233,6 +2233,14 @@ msgstr "Ліцензія"
 msgid "Auto-Route Satin Columns"
 msgstr "Авто-Маршрут Сатинових Колонок"
 
+#: inx/inkstitch_auto_satin.inx:5
+msgid "Trim jump stitches"
+msgstr ""
+
+#: inx/inkstitch_auto_satin.inx:6
+msgid "Preserve order of satin columns"
+msgstr ""
+
 #: inx/inkstitch_auto_satin.inx:12 inx/inkstitch_convert_to_satin.inx:10
 #: inx/inkstitch_convert_to_stroke.inx:13 inx/inkstitch_cut_satin.inx:10
 #: inx/inkstitch_flip.inx:10
@@ -2247,6 +2255,10 @@ msgstr "Розділити об'єкти заливок"
 msgid "Fill Tools"
 msgstr "Інструменти Гладі"
 
+#: inx/inkstitch_break_apart.inx:17
+msgid "Method"
+msgstr ""
+
 #: inx/inkstitch_break_apart.inx:18
 msgid "Simple"
 msgstr ""
@@ -2259,6 +2271,30 @@ msgstr ""
 msgid "Cleanup Document"
 msgstr "Очистка Дизайну"
 
+#: inx/inkstitch_cleanup.inx:7
+msgid "Remove Small Fill Areas"
+msgstr ""
+
+#: inx/inkstitch_cleanup.inx:7
+msgid "Removes areas smaller than dedined by threshold."
+msgstr ""
+
+#: inx/inkstitch_cleanup.inx:8
+msgid "Fill area threshold (px²)"
+msgstr ""
+
+#: inx/inkstitch_cleanup.inx:10
+msgid "Remove Small strokes"
+msgstr ""
+
+#: inx/inkstitch_cleanup.inx:10
+msgid "Removes small strokes shorter than defined by threshold."
+msgstr ""
+
+#: inx/inkstitch_cleanup.inx:11
+msgid "Stroke threshold (px)"
+msgstr ""
+
 #: inx/inkstitch_convert_to_satin.inx:3
 msgid "Convert Line to Satin"
 msgstr "Перетворити лінію в Сатин"
@@ -2266,6 +2302,14 @@ msgstr "Перетворити лінію в Сатин"
 #: inx/inkstitch_convert_to_stroke.inx:3
 msgid "Convert Satin to Stroke"
 msgstr "Перетворити Сатин в Стрічку"
+
+#: inx/inkstitch_convert_to_stroke.inx:8
+msgid "Keep satin column"
+msgstr ""
+
+#: inx/inkstitch_convert_to_stroke.inx:8
+msgid "Do not delete original satin column."
+msgstr ""
 
 #: inx/inkstitch_cut_satin.inx:3
 msgid "Cut Satin Column"
@@ -2293,6 +2337,14 @@ msgstr "Візуалізація і експорт"
 msgid "Preferences"
 msgstr "Налаштування"
 
+#: inx/inkstitch_embroider_settings.inx:17
+msgid "Collapse length (mm)"
+msgstr ""
+
+#: inx/inkstitch_embroider_settings.inx:17
+msgid "Jump stitches smaller than this will be treated as normal stitches."
+msgstr ""
+
 #: inx/inkstitch_flip.inx:3
 msgid "Flip Satin Column Rails"
 msgstr "Розгорнути направляючі сатинової колонки"
@@ -2315,12 +2367,20 @@ msgstr "Імпортувати список ниток"
 msgid "Choose file"
 msgstr "Вибрати файл"
 
+#: inx/inkstitch_import_threadlist.inx:7
+msgid "Choose method"
+msgstr ""
+
 #: inx/inkstitch_import_threadlist.inx:8
 msgid "Import Ink/Stitch threadlist"
 msgstr ""
 
 #: inx/inkstitch_import_threadlist.inx:9
 msgid "Import other threadlist*"
+msgstr ""
+
+#: inx/inkstitch_import_threadlist.inx:11
+msgid "*Choose color palette"
 msgstr ""
 
 #: inx/inkstitch_import_threadlist.inx:87 inx/inkstitch_install.inx:10
@@ -3149,6 +3209,26 @@ msgstr "Експорт в PDF"
 msgid "Remove embroidery settings"
 msgstr "Видалити параметри вишивки"
 
+#: inx/inkstitch_remove_embroidery_settings.inx:7
+msgid "Remove Params"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:7
+msgid "Removes params from selected objects or all objects if nothing is selected."
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:9
+msgid "Remove Commands"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:9
+msgid "Removes visual commands from selected objects or all objects if nothing is selected."
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:10
+msgid "Remove Print Settings from SVG metadata"
+msgstr ""
+
 #: inx/inkstitch_reorder.inx:3
 msgid "Re-stack objects in order of selection"
 msgstr "Впорядкувати об'єкти в порядку виділення"
@@ -3164,6 +3244,34 @@ msgstr "Симулятор / Реалістичний попередній пе�
 #: inx/inkstitch_stitch_plan_preview.inx:3
 msgid "Stitch Plan Preview"
 msgstr "Попередній перегляд плану вишивки"
+
+#: inx/inkstitch_stitch_plan_preview.inx:14
+msgid "Move stitch plan beside the canvas"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:15
+msgid "Design layer visibity"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:16
+msgid "Unchanged"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:17
+msgid "Hidden"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:18
+msgid "Lower opacity"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:20
+msgid "Needle points"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:22
+msgid "Hit Ctrl+Z to undo this action after inspection."
+msgstr ""
 
 #: inx/inkstitch_troubleshoot.inx:3
 msgid "Troubleshoot Objects"

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-10-16 01:45+0000\n"
-"PO-Revision-Date: 2021-10-16 01:47\n"
+"POT-Creation-Date: 2021-11-17 01:36+0000\n"
+"PO-Revision-Date: 2021-11-17 01:37\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-16 01:45+0000\n"
+"POT-Creation-Date: 2021-11-17 01:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -273,19 +273,19 @@ msgstr "TT Meister"
 msgid "A font suited for heavy typing :)"
 msgstr "Eine Schrift geeignete für fett geschriebenes :)"
 
-#: inkstitch.py:61
+#: inkstitch.py:66
 msgid "Ink/Stitch cannot read your SVG file. This is often the case when you use a file which has been created with Adobe Illustrator."
 msgstr "Ink/Stitch can deine SVG-Datei nicht lesen. Das passiert häufig, wenn du die Datei mit Adobe Illustrator erstellt hast."
 
-#: inkstitch.py:64
+#: inkstitch.py:69
 msgid "Try to import the file into Inkscape through 'File > Import...' (Ctrl+I)"
 msgstr "Versuche die Datei über 'Datei > Importieren...' (Strg+I) in Inkscape zu öffnen"
 
-#: inkstitch.py:75
+#: inkstitch.py:80
 msgid "Ink/Stitch experienced an unexpected error."
 msgstr "Ink/Stitch hat einen unerwarteten Fehler zurückgegeben."
 
-#: inkstitch.py:76
+#: inkstitch.py:81
 msgid "If you'd like to help, please file an issue at https://github.com/inkstitch/inkstitch/issues and include the entire error description below:"
 msgstr "Wenn du uns bei der Fehlerbehebung helfen willst, gehe auf https://github.com/inkstitch/inkstitch/issues. Klicke auf \"New Issue\" und füge unten stehende Fehlermeldung in das Textfeld ein:"
 
@@ -1227,17 +1227,17 @@ msgstr "Fehlerzeiger"
 msgid "Description"
 msgstr "Beschreibung"
 
-#: lib/extensions/troubleshoot.py:98 lib/extensions/troubleshoot.py:143
+#: lib/extensions/troubleshoot.py:98 lib/extensions/troubleshoot.py:147
 #: inx/inkstitch_cleanup.inx:17 inx/inkstitch_remove_embroidery_settings.inx:16
 #: inx/inkstitch_troubleshoot.inx:10
 msgid "Troubleshoot"
 msgstr "Fehlerbehebung"
 
-#: lib/extensions/troubleshoot.py:110 lib/extensions/troubleshoot.py:150
+#: lib/extensions/troubleshoot.py:110 lib/extensions/troubleshoot.py:154
 msgid "Errors"
 msgstr "Fehler"
 
-#: lib/extensions/troubleshoot.py:116 lib/extensions/troubleshoot.py:154
+#: lib/extensions/troubleshoot.py:116 lib/extensions/troubleshoot.py:158
 msgid "Warnings"
 msgstr "Warnungen"
 
@@ -1245,23 +1245,23 @@ msgstr "Warnungen"
 msgid "Type Warnings"
 msgstr "Typ Warnungen"
 
-#: lib/extensions/troubleshoot.py:151
+#: lib/extensions/troubleshoot.py:155
 msgid "Problems that will prevent the shape from being embroidered."
 msgstr "Probleme, die verhindern, dass die Form gestickt wird."
 
-#: lib/extensions/troubleshoot.py:155
+#: lib/extensions/troubleshoot.py:159
 msgid "These are problems that won't prevent the shape from being embroidered. You should consider to fix the warning, but if you don't, Ink/Stitch will do its best to process the object."
 msgstr "Dies sind Probleme, die nicht verhindern, dass die Form gestickt wird. Es empfiehlt sich, die Warnung zu beheben. Wenn dies nicht geschieht, wird Ink/Stitch sein Bestes tun, um das Objekt trotzdem zu verarbeiten."
 
-#: lib/extensions/troubleshoot.py:160
+#: lib/extensions/troubleshoot.py:164
 msgid "Object Type Warnings"
 msgstr "Objekttypwarnungen"
 
-#: lib/extensions/troubleshoot.py:161
+#: lib/extensions/troubleshoot.py:165
 msgid "These objects may not work properly with Ink/Stitch. Follow the instructions to correct unwanted behaviour."
 msgstr "Diese Objekte funktionieren möglicherweise nicht gut mit Ink/Stitch. Folge den Anweisungen um unerwünschtes Verhalten zu vermeiden."
 
-#: lib/extensions/troubleshoot.py:177
+#: lib/extensions/troubleshoot.py:181
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
 msgstr "Es ist möglich, dass ein Objekt mehr als einen Fehler enthält. Trotzdem wird in einigen Fällen nur ein Fehler pro Objekt angezeigt. Tauchen noch weitere Fehlermeldungen auf, führe diese Funktion einfach erneut aus.  Entferne diese Hinweise durch das Löschen der Ebene \"Fehlerbehebung\" im Dialogfenster Objekte (Objekt > Objekte...)."
 
@@ -2232,6 +2232,14 @@ msgstr "Lizenz"
 msgid "Auto-Route Satin Columns"
 msgstr "Automatisch geführte Satinkolumnen"
 
+#: inx/inkstitch_auto_satin.inx:5
+msgid "Trim jump stitches"
+msgstr ""
+
+#: inx/inkstitch_auto_satin.inx:6
+msgid "Preserve order of satin columns"
+msgstr ""
+
 #: inx/inkstitch_auto_satin.inx:12 inx/inkstitch_convert_to_satin.inx:10
 #: inx/inkstitch_convert_to_stroke.inx:13 inx/inkstitch_cut_satin.inx:10
 #: inx/inkstitch_flip.inx:10
@@ -2246,6 +2254,10 @@ msgstr "Aufteilen von Füllobjekten"
 msgid "Fill Tools"
 msgstr "Füllstitch Werkzeuge"
 
+#: inx/inkstitch_break_apart.inx:17
+msgid "Method"
+msgstr ""
+
 #: inx/inkstitch_break_apart.inx:18
 msgid "Simple"
 msgstr "Einfach"
@@ -2258,13 +2270,45 @@ msgstr "Komplex"
 msgid "Cleanup Document"
 msgstr "Dokument bereinigen"
 
+#: inx/inkstitch_cleanup.inx:7
+msgid "Remove Small Fill Areas"
+msgstr ""
+
+#: inx/inkstitch_cleanup.inx:7
+msgid "Removes areas smaller than dedined by threshold."
+msgstr ""
+
+#: inx/inkstitch_cleanup.inx:8
+msgid "Fill area threshold (px²)"
+msgstr ""
+
+#: inx/inkstitch_cleanup.inx:10
+msgid "Remove Small strokes"
+msgstr ""
+
+#: inx/inkstitch_cleanup.inx:10
+msgid "Removes small strokes shorter than defined by threshold."
+msgstr ""
+
+#: inx/inkstitch_cleanup.inx:11
+msgid "Stroke threshold (px)"
+msgstr ""
+
 #: inx/inkstitch_convert_to_satin.inx:3
 msgid "Convert Line to Satin"
-msgstr "Konvertierung Linie zu Satinstich"
+msgstr "Linie zu Satin"
 
 #: inx/inkstitch_convert_to_stroke.inx:3
 msgid "Convert Satin to Stroke"
-msgstr "Satinkolumne in Linie konvertieren"
+msgstr "Satin zu Linie"
+
+#: inx/inkstitch_convert_to_stroke.inx:8
+msgid "Keep satin column"
+msgstr ""
+
+#: inx/inkstitch_convert_to_stroke.inx:8
+msgid "Do not delete original satin column."
+msgstr ""
 
 #: inx/inkstitch_cut_satin.inx:3
 msgid "Cut Satin Column"
@@ -2292,6 +2336,14 @@ msgstr "Visualisieren und exportieren"
 msgid "Preferences"
 msgstr "Einstellungen"
 
+#: inx/inkstitch_embroider_settings.inx:17
+msgid "Collapse length (mm)"
+msgstr ""
+
+#: inx/inkstitch_embroider_settings.inx:17
+msgid "Jump stitches smaller than this will be treated as normal stitches."
+msgstr ""
+
 #: inx/inkstitch_flip.inx:3
 msgid "Flip Satin Column Rails"
 msgstr "Konturen der Satinkolumne umkehren"
@@ -2314,6 +2366,10 @@ msgstr "Garnliste importieren"
 msgid "Choose file"
 msgstr "Datei wählen"
 
+#: inx/inkstitch_import_threadlist.inx:7
+msgid "Choose method"
+msgstr ""
+
 #: inx/inkstitch_import_threadlist.inx:8
 msgid "Import Ink/Stitch threadlist"
 msgstr "Ink/Stitch Garnliste importieren"
@@ -2321,6 +2377,10 @@ msgstr "Ink/Stitch Garnliste importieren"
 #: inx/inkstitch_import_threadlist.inx:9
 msgid "Import other threadlist*"
 msgstr "Andere Garnliste importieren*"
+
+#: inx/inkstitch_import_threadlist.inx:11
+msgid "*Choose color palette"
+msgstr ""
 
 #: inx/inkstitch_import_threadlist.inx:87 inx/inkstitch_install.inx:10
 #: inx/inkstitch_install_custom_palette.inx:13
@@ -3148,6 +3208,26 @@ msgstr "PDF-Export"
 msgid "Remove embroidery settings"
 msgstr "Stickeinstellungen entfernen"
 
+#: inx/inkstitch_remove_embroidery_settings.inx:7
+msgid "Remove Params"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:7
+msgid "Removes params from selected objects or all objects if nothing is selected."
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:9
+msgid "Remove Commands"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:9
+msgid "Removes visual commands from selected objects or all objects if nothing is selected."
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:10
+msgid "Remove Print Settings from SVG metadata"
+msgstr ""
+
 #: inx/inkstitch_reorder.inx:3
 msgid "Re-stack objects in order of selection"
 msgstr "Objekte in Auswahlreihenfolge sortieren"
@@ -3163,6 +3243,34 @@ msgstr "Simulator / Realistische Vorschau"
 #: inx/inkstitch_stitch_plan_preview.inx:3
 msgid "Stitch Plan Preview"
 msgstr "Stich-Plan Vorschau"
+
+#: inx/inkstitch_stitch_plan_preview.inx:14
+msgid "Move stitch plan beside the canvas"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:15
+msgid "Design layer visibity"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:16
+msgid "Unchanged"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:17
+msgid "Hidden"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:18
+msgid "Lower opacity"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:20
+msgid "Needle points"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:22
+msgid "Hit Ctrl+Z to undo this action after inspection."
+msgstr ""
 
 #: inx/inkstitch_troubleshoot.inx:3
 msgid "Troubleshoot Objects"
