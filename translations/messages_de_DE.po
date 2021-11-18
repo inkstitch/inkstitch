@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-11-17 01:36+0000\n"
-"PO-Revision-Date: 2021-11-17 01:37\n"
+"PO-Revision-Date: 2021-11-18 01:43\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -2234,11 +2234,11 @@ msgstr "Automatisch geführte Satinkolumnen"
 
 #: inx/inkstitch_auto_satin.inx:5
 msgid "Trim jump stitches"
-msgstr ""
+msgstr "Schneide Faden bei Sprungstichen"
 
 #: inx/inkstitch_auto_satin.inx:6
 msgid "Preserve order of satin columns"
-msgstr ""
+msgstr "Behalte Reihenfolge der Satinkolumnen bei"
 
 #: inx/inkstitch_auto_satin.inx:12 inx/inkstitch_convert_to_satin.inx:10
 #: inx/inkstitch_convert_to_stroke.inx:13 inx/inkstitch_cut_satin.inx:10
@@ -2256,7 +2256,7 @@ msgstr "Füllstitch Werkzeuge"
 
 #: inx/inkstitch_break_apart.inx:17
 msgid "Method"
-msgstr ""
+msgstr "Methode"
 
 #: inx/inkstitch_break_apart.inx:18
 msgid "Simple"
@@ -2272,27 +2272,27 @@ msgstr "Dokument bereinigen"
 
 #: inx/inkstitch_cleanup.inx:7
 msgid "Remove Small Fill Areas"
-msgstr ""
+msgstr "Kleine Füllbereiche entfernen"
 
 #: inx/inkstitch_cleanup.inx:7
 msgid "Removes areas smaller than dedined by threshold."
-msgstr ""
+msgstr "Entferne Bereiche, die kleiner sind als der Schwellenwert."
 
 #: inx/inkstitch_cleanup.inx:8
 msgid "Fill area threshold (px²)"
-msgstr ""
+msgstr "Minimale Größe für Füllstich-Objekte (px²)"
 
 #: inx/inkstitch_cleanup.inx:10
 msgid "Remove Small strokes"
-msgstr ""
+msgstr "Entferne kleine Linien"
 
 #: inx/inkstitch_cleanup.inx:10
 msgid "Removes small strokes shorter than defined by threshold."
-msgstr ""
+msgstr "Entferne Linien, die kleiner sind als der Schwellwert."
 
 #: inx/inkstitch_cleanup.inx:11
 msgid "Stroke threshold (px)"
-msgstr ""
+msgstr "Minimale Länge für Linien (px)"
 
 #: inx/inkstitch_convert_to_satin.inx:3
 msgid "Convert Line to Satin"
@@ -2304,11 +2304,11 @@ msgstr "Satin zu Linie"
 
 #: inx/inkstitch_convert_to_stroke.inx:8
 msgid "Keep satin column"
-msgstr ""
+msgstr "Satinkolumnen erhalten"
 
 #: inx/inkstitch_convert_to_stroke.inx:8
 msgid "Do not delete original satin column."
-msgstr ""
+msgstr "Originale Satinkolumnen nicht löschen."
 
 #: inx/inkstitch_cut_satin.inx:3
 msgid "Cut Satin Column"
@@ -2338,11 +2338,11 @@ msgstr "Einstellungen"
 
 #: inx/inkstitch_embroider_settings.inx:17
 msgid "Collapse length (mm)"
-msgstr ""
+msgstr "Maximaler Abstand zwischen zwei Objekten ohne vernähen (mm)"
 
 #: inx/inkstitch_embroider_settings.inx:17
 msgid "Jump stitches smaller than this will be treated as normal stitches."
-msgstr ""
+msgstr "Sprungstiche, die kleiner sind, werden als normale Stiche behandelt."
 
 #: inx/inkstitch_flip.inx:3
 msgid "Flip Satin Column Rails"
@@ -2368,7 +2368,7 @@ msgstr "Datei wählen"
 
 #: inx/inkstitch_import_threadlist.inx:7
 msgid "Choose method"
-msgstr ""
+msgstr "Methode wählen"
 
 #: inx/inkstitch_import_threadlist.inx:8
 msgid "Import Ink/Stitch threadlist"
@@ -2380,7 +2380,7 @@ msgstr "Andere Garnliste importieren*"
 
 #: inx/inkstitch_import_threadlist.inx:11
 msgid "*Choose color palette"
-msgstr ""
+msgstr "* Farbpalette auswählen"
 
 #: inx/inkstitch_import_threadlist.inx:87 inx/inkstitch_install.inx:10
 #: inx/inkstitch_install_custom_palette.inx:13
@@ -3210,23 +3210,23 @@ msgstr "Stickeinstellungen entfernen"
 
 #: inx/inkstitch_remove_embroidery_settings.inx:7
 msgid "Remove Params"
-msgstr ""
+msgstr "Parameter entfernen"
 
 #: inx/inkstitch_remove_embroidery_settings.inx:7
 msgid "Removes params from selected objects or all objects if nothing is selected."
-msgstr ""
+msgstr "Entferne Parameter von ausgewählten Objekten oder allen Objekten, wenn keines ausgewählt ist."
 
 #: inx/inkstitch_remove_embroidery_settings.inx:9
 msgid "Remove Commands"
-msgstr ""
+msgstr "Befehle entfernen"
 
 #: inx/inkstitch_remove_embroidery_settings.inx:9
 msgid "Removes visual commands from selected objects or all objects if nothing is selected."
-msgstr ""
+msgstr "Entferne Befehle von ausgewählten Objekten oder allen Objekten, wenn keines ausgewählt ist."
 
 #: inx/inkstitch_remove_embroidery_settings.inx:10
 msgid "Remove Print Settings from SVG metadata"
-msgstr ""
+msgstr "Druckeinstellungen aus den SVG Metadaten entfernen"
 
 #: inx/inkstitch_reorder.inx:3
 msgid "Re-stack objects in order of selection"
@@ -3246,31 +3246,31 @@ msgstr "Stich-Plan Vorschau"
 
 #: inx/inkstitch_stitch_plan_preview.inx:14
 msgid "Move stitch plan beside the canvas"
-msgstr ""
+msgstr "Stickplan an der Seite platzieren"
 
 #: inx/inkstitch_stitch_plan_preview.inx:15
 msgid "Design layer visibity"
-msgstr ""
+msgstr "Design Sichtbarkeit"
 
 #: inx/inkstitch_stitch_plan_preview.inx:16
 msgid "Unchanged"
-msgstr ""
+msgstr "Unverändert"
 
 #: inx/inkstitch_stitch_plan_preview.inx:17
 msgid "Hidden"
-msgstr ""
+msgstr "Versteckt"
 
 #: inx/inkstitch_stitch_plan_preview.inx:18
 msgid "Lower opacity"
-msgstr ""
+msgstr "Verringerte Deckkraft"
 
 #: inx/inkstitch_stitch_plan_preview.inx:20
 msgid "Needle points"
-msgstr ""
+msgstr "Nadeleinstichstellen"
 
 #: inx/inkstitch_stitch_plan_preview.inx:22
 msgid "Hit Ctrl+Z to undo this action after inspection."
-msgstr ""
+msgstr "Nach der Stickplanprüfung kann das Design mit Strg + Z wieder in den ursprünglichen Zustand zurückgeführt werden."
 
 #: inx/inkstitch_troubleshoot.inx:3
 msgid "Troubleshoot Objects"
