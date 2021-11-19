@@ -113,6 +113,19 @@ def extend_line(line, minx, maxx, miny, maxy):
                       line.coords[1:-1]+[new_ending_point.as_tuple()])
 
 
+def repair_multiple_parallel_offset_curves(multi_line):
+    lines = linemerge(multi_line)
+    lines = list(multi_line.geoms)
+    max_length = -1
+    max_length_idx = -1
+    for idx, subline in enumerate(lines):
+        if subline.length > max_length:
+            max_length = subline.length
+            max_length_idx = idx
+    # need simplify to avoid doubled points caused by linemerge
+    return lines[max_length_idx].simplify(0.01, False)
+
+
 def intersect_region_with_grating_line(shape, line, row_spacing, end_row_spacing=None, flip=False):
 
     row_spacing = abs(row_spacing)
@@ -141,17 +154,12 @@ def intersect_region_with_grating_line(shape, line, row_spacing, end_row_spacing
             rows.append(runs)
         else:
             rows.insert(0, runs)
+        # if len(runs) > 1:
+        #    print("HIERRRR!")
         line_offsetted = line_offsetted.parallel_offset(row_spacing, 'left', 5)
         if line_offsetted.geom_type == 'MultiLineString':  # if we got multiple lines take the longest
-            lines = linemerge(line_offsetted)
-            lines = list(line_offsetted.geoms)
-            max_length = -1
-            max_length_idx = -1
-            for idx, subline in enumerate(lines):
-                if subline.length > max_length:
-                    max_length = subline.length
-                    max_length_idx = idx
-            line_offsetted = lines[max_length_idx]
+            line_offsetted = repair_multiple_parallel_offset_curves(
+                line_offsetted)
 
         if row_spacing < 0:
             line_offsetted.coords = line_offsetted.coords[::-1]
@@ -162,10 +170,15 @@ def intersect_region_with_grating_line(shape, line, row_spacing, end_row_spacing
                 row_spacing = -row_spacing
                 # print("Set to right")
                 line_offsetted = line.parallel_offset(row_spacing, 'left', 5)
+                if line_offsetted.geom_type == 'MultiLineString':  # if we got multiple lines take the longest
+                    line_offsetted = repair_multiple_parallel_offset_curves(
+                        line_offsetted)
                 # using negative row spacing leads as a side effect to reversed offsetted lines - here we undo this
                 line_offsetted.coords = line_offsetted.coords[::-1]
                 line_offsetted = line_offsetted.simplify(0.01, False)
                 res = line_offsetted.intersection(shape)
+                # if res.geom_type != 'LineString':
+                #    print("HIER!!")
 
     return rows
 

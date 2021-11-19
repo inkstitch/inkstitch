@@ -165,6 +165,10 @@ def build_fill_stitch_graph(shape, line, angle, row_spacing, end_row_spacing, st
 
     for i in range(len(rows_of_segments)):
         for segment in rows_of_segments[i]:
+            if abs(segment[0][0]-396.5081896849414) < 0.01:
+                print("HIER") 
+            if segment[0][0] == segment[-1][0] and segment[0][1] == segment[-1][1]:
+                print("FEHLER HIER!")
             # First, add the grating segments as edges.  We'll use the coordinates
             # of the endpoints as nodes, which networkx will add automatically.
 
@@ -674,7 +678,7 @@ def stitch_line(stitches, stitching_direction, geometry, projected_points, max_s
             geometry, geometry.length, 0.0, max_stitch_length, projected_points, abs(row_spacing), offset_by_half, True)
 
     stitches.append(Stitch(*stitched_line[0], tags=('fill_row_start',)))
-    for i in range(1, len(stitched_line)):
+    for i in range(1, len(stitched_line)-1):
         stitches.append(Stitch(*stitched_line[i], tags=('fill_row')))
 
     if not skip_last:
@@ -684,6 +688,8 @@ def stitch_line(stitches, stitching_direction, geometry, projected_points, max_s
         else:
             stitches.append(
                 Stitch(*geometry.coords[0], tags=('fill_row_end',)))
+    if stitches[-1].x == stitches[-2].x and stitches[-1].y == stitches[-2].y:
+        print("FEHLER")
 
 
 @debug.time

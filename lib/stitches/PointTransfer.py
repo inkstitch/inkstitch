@@ -409,6 +409,9 @@ def transfer_points_to_surrounding_graph(fill_stitch_graph, current_edge, used_o
         prev_spacing = math.sqrt(normalized_vector_prev_x*normalized_vector_prev_x +
                                  normalized_vector_prev_y*normalized_vector_prev_y)
 
+        # if prev_spacing == 0:
+        #    print("HIER FEHLER")
+
         normalized_vector_prev_x /= prev_spacing
         normalized_vector_prev_y /= prev_spacing
 
