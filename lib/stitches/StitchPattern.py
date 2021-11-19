@@ -123,11 +123,11 @@ def make_tree_uniform_ccw(root):
 class StitchingStrategy(IntEnum):
     CLOSEST_POINT = 0
     INNER_TO_OUTER = 1
+    SPIRAL = 2
 
 
 def offset_poly(
-    poly, offset, join_style, stitch_distance, offset_by_half, strategy, starting_point
-):
+        poly, offset, join_style, stitch_distance, offset_by_half, strategy, starting_point):
     """
     Takes a polygon (which can have holes) as input and creates offsetted
     versions until the polygon is filled with these smaller offsets.
