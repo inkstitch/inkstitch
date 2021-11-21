@@ -3,7 +3,12 @@ from shapely.geometry import Point, MultiPoint
 from shapely.ops import nearest_points
 from collections import namedtuple
 from depq import DEPQ
+import trimesh
+import numpy as np
+from scipy import spatial
 import math
+from shapely.geometry import asLineString
+from anytree import PreOrderIter
 from ..stitches import LineStringSampling
 from ..stitches import PointTransfer
 from ..stitches import constants
@@ -48,8 +53,7 @@ def cut(line, distance):
 
 
 def connect_raster_tree_nearest_neighbor(
-    tree, used_offset, stitch_distance, close_point, offset_by_half
-):
+        tree, used_offset, stitch_distance, close_point, offset_by_half):
     """
     Takes the offsetted curves organized as tree, connects and samples them.
     Strategy: A connection from parent to child is made where both curves
@@ -338,8 +342,7 @@ def get_nearest_points_closer_than_thresh(travel_line, next_line, thresh):
 
 
 def create_nearest_points_list(
-    travel_line, children_list, threshold, threshold_hard, preferred_direction=0
-):
+        travel_line, children_list, threshold, threshold_hard, preferred_direction=0):
     """
     Takes a line and calculates the nearest distance along this line to
     enter the childs in children_list
@@ -456,8 +459,7 @@ def calculate_replacing_middle_point(line_segment, abs_offset, max_stitch_distan
 
 
 def connect_raster_tree_from_inner_to_outer(
-    tree, used_offset, stitch_distance, close_point, offset_by_half
-):
+        tree, used_offset, stitch_distance, close_point, offset_by_half):
     """
     Takes the offsetted curves organized as tree, connects and samples them.
     Strategy: A connection from parent to child is made as fast as possible to
@@ -769,6 +771,156 @@ def connect_raster_tree_from_inner_to_outer(
                 total_distance = current_coords.project(Point(own_coords[i]))
             else:
                 total_distance += next_distance
+
+    assert len(result_coords) == len(result_coords_origin)
+    return result_coords, result_coords_origin
+
+
+# Partly taken from https://github.com/mikedh/pocketing/blob/master/pocketing/polygons.py
+def interpolate_LinearRings(a, b, start=None, step=.005):
+    """
+    Interpolate between two LinearRings
+    Parameters
+    -------------
+    a : shapely.geometry.Polygon.LinearRing
+        LinearRing start point will lie on
+    b : shapely.geometry.Polygon.LinearRing
+        LinearRing end point will lie on
+    start : (2,) float, or None
+        Point to start at
+    step : float
+        How far apart should points on
+        the path be.
+    Returns
+    -------------
+    path : (n, 2) float
+       Path interpolated between two LinearRings
+    """
+
+    # resample the first LinearRing so every sample is spaced evenly
+    ra = trimesh.path.traversal.resample_path(
+        a, step=step)
+    if not a.is_ccw:
+        ra = ra[::-1]
+
+    assert trimesh.path.util.is_ccw(ra)
+    if start is not None:
+        # find the closest index on LinerRing 'a'
+        # by creating a KDTree
+        tree_a = spatial.cKDTree(ra)
+        index = tree_a.query(start)[1]
+        ra = np.roll(ra, -index, axis=0)
+
+    # resample the second LinearRing for even spacing
+    rb = trimesh.path.traversal.resample_path(b,
+                                              step=step)
+    if not b.is_ccw:
+        rb = rb[::-1]
+
+    # we want points on 'b' that correspond index- wise
+    # the resampled points on 'a'
+    tree_b = spatial.cKDTree(rb)
+    # points on b with corresponding indexes to ra
+    pb = rb[tree_b.query(ra)[1]]
+
+    # linearly interpolate between 'a' and 'b'
+    weights = np.linspace(0.0, 1.0, len(ra)).reshape((-1, 1))
+
+    # start on 'a' and end on 'b'
+    points = (ra * (1.0 - weights)) + (pb * weights)
+
+    result = LineString(points)
+
+    return result.simplify(constants.simplification_threshold, False)
+
+
+def connect_raster_tree_spiral(
+        tree, used_offset, stitch_distance, close_point, offset_by_half):
+    """
+    Takes the offsetted curves organized as tree, connects and samples them as a spiral.
+    It expects that each node in the tree has max. one child
+    Input:
+    -tree: contains the offsetted curves in a hierachical organized
+     data structure.
+    -used_offset: used offset when the offsetted curves were generated
+    -stitch_distance: maximum allowed distance between two points
+     after sampling
+    -close_point: defines the beginning point for stitching
+     (stitching starts always from the undisplaced curve)
+    -offset_by_half: If true the resulting points are interlaced otherwise not.
+    Returnvalues:
+    -All offsetted curves connected to one spiral and sampled with
+     points obeying stitch_distance and offset_by_half
+    -Tag (origin) of each point to analyze why a point was
+     placed at this position
+    """
+
+    abs_offset = abs(used_offset)
+    if tree.is_leaf:
+        return LineStringSampling.raster_line_string_with_priority_points(
+            tree.val,
+            0,
+            tree.val.length,
+            stitch_distance,
+            tree.transferred_point_priority_deque,
+            abs_offset,
+            offset_by_half,
+            False)
+
+    result_coords = []
+    result_coords_origin = []
+    starting_point = close_point.coords[0]
+    # iterate to the second last level
+    for node in PreOrderIter(tree, stop=lambda n: n.is_leaf):
+        ring1 = node.val
+        ring2 = node.children[0].val
+
+        part_spiral = interpolate_LinearRings(
+            ring1, ring2, starting_point)
+
+        (own_coords, own_coords_origin) = LineStringSampling.raster_line_string_with_priority_points(
+            part_spiral,
+            0,
+            part_spiral.length,
+            stitch_distance,
+            node.transferred_point_priority_deque,
+            abs_offset,
+            offset_by_half,
+            False)
+
+        PointTransfer.transfer_points_to_surrounding(
+            node,
+            used_offset,
+            offset_by_half,
+            own_coords,
+            own_coords_origin,
+            overnext_neighbor=False,
+            transfer_forbidden_points=False,
+            transfer_to_parent=False,
+            transfer_to_sibling=False,
+            transfer_to_child=True)
+
+        # We transfer also to the overnext child to get a more straight
+        # arrangement of points perpendicular to the stitching lines
+        if offset_by_half:
+            PointTransfer.transfer_points_to_surrounding(
+                node,
+                used_offset,
+                False,
+                own_coords,
+                own_coords_origin,
+                overnext_neighbor=True,
+                transfer_forbidden_points=False,
+                transfer_to_parent=False,
+                transfer_to_sibling=False,
+                transfer_to_child=True)
+
+        result_coords.extend(own_coords)
+        result_coords_origin.extend(own_coords_origin)
+
+        # make sure the next section starts where this
+        # section of the curve ends
+        starting_point = own_coords[-1]
 
     assert len(result_coords) == len(result_coords_origin)
     return result_coords, result_coords_origin

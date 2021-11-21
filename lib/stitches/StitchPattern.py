@@ -1,8 +1,9 @@
+from anytree.render import RenderTree
 from shapely.geometry.polygon import LinearRing, LineString
 from shapely.geometry import Polygon, MultiLineString
 from shapely.ops import polygonize
 from shapely.geometry import MultiPolygon
-from anytree import AnyNode, PreOrderIter
+from anytree import AnyNode, PreOrderIter, LevelOrderGroupIter
 from shapely.geometry.polygon import orient
 from depq import DEPQ
 from enum import IntEnum
@@ -126,6 +127,38 @@ class StitchingStrategy(IntEnum):
     SPIRAL = 2
 
 
+def check_and_prepare_tree_for_valid_spiral(root):
+    """
+    Takes a tree consisting of offsetted curves. If a parent has more than one child we
+    cannot create a spiral. However, to make the routine more robust, we allow more than
+    one child if only one of the childs has own childs. The other childs are removed in this
+    routine then. If the routine returns true, the tree will have been cleaned up from unwanted
+    childs. If the routine returns false even under the mentioned weaker conditions the
+    tree cannot be connected by one spiral.
+    """
+    for children in LevelOrderGroupIter(root):
+        if len(children) > 1:
+            count = 0
+            child_with_children = None
+            for child in children:
+                if not child.is_leaf:
+                    count += 1
+                    child_with_children = child
+            if count > 1:
+                return False
+            elif count == 1:
+                child_with_children.parent.children = [child_with_children]
+            else:  # count == 0 means all childs have no children so we take only the longest child
+                max_length = 0
+                longest_child = None
+                for child in children:
+                    if child.val.length > max_length:
+                        max_length = child.val.length
+                        longest_child = child
+                longest_child.parent.children = [longest_child]
+    return True
+
+
 def offset_poly(
         poly, offset, join_style, stitch_distance, offset_by_half, strategy, starting_point):
     """
@@ -144,13 +177,21 @@ def offset_poly(
     -stitch_distance maximum allowed stitch distance between two points
     -offset_by_half: True if the points shall be interlaced
     -strategy: According to StitchingStrategy enum class you can select between
-     different strategies for the connection between parent and childs
+     different strategies for the connection between parent and childs. In
+     addition it offers the option "SPIRAL" which creates a real spiral towards inner.
+     In contrast to the other two options, "SPIRAL" does not end at the starting point
+     but at the innermost point
     -starting_point: Defines the starting point for the stitching
     Output:
     -List of point coordinate tuples
     -Tag (origin) of each point to analyze why a point was placed
      at this position
     """
+
+    if strategy == StitchingStrategy.SPIRAL and len(poly.interiors) > 1:
+        raise ValueError(
+            "Single spiral geometry must not have more than one hole!")
+
     ordered_poly = orient(poly, -1)
     ordered_poly = ordered_poly.simplify(
         constants.simplification_threshold, False)
@@ -276,20 +317,105 @@ def offset_poly(
     make_tree_uniform_ccw(root)
     # print(RenderTree(root))
     if strategy == StitchingStrategy.CLOSEST_POINT:
-        (
-            connected_line,
-            connected_line_origin,
-        ) = ConnectAndSamplePattern.connect_raster_tree_nearest_neighbor(
-            root, offset, stitch_distance, starting_point, offset_by_half
-        )
+        (connected_line, connected_line_origin) = ConnectAndSamplePattern.connect_raster_tree_nearest_neighbor(
+            root, offset, stitch_distance, starting_point, offset_by_half)
     elif strategy == StitchingStrategy.INNER_TO_OUTER:
-        (
-            connected_line,
-            connected_line_origin,
-        ) = ConnectAndSamplePattern.connect_raster_tree_from_inner_to_outer(
-            root, offset, stitch_distance, starting_point, offset_by_half
-        )
+        (connected_line, connected_line_origin) = ConnectAndSamplePattern.connect_raster_tree_from_inner_to_outer(
+            root, offset, stitch_distance, starting_point, offset_by_half)
+    elif strategy == StitchingStrategy.SPIRAL:
+        if not check_and_prepare_tree_for_valid_spiral(root):
+            raise ValueError("Geometry cannot be filled with one spiral!")
+        (connected_line, connected_line_origin) = ConnectAndSamplePattern.connect_raster_tree_spiral(
+            root, offset, stitch_distance, starting_point, offset_by_half)
     else:
         raise ValueError("Invalid stitching stratety!")
 
     return connected_line, connected_line_origin
+
+
+if __name__ == "__main__":
+    line1 = LineString([(0, 0), (1, 0)])
+    line2 = LineString([(0, 0), (3, 0)])
+
+    root = AnyNode(
+        id="root",
+        val=line1)
+    child1 = AnyNode(
+        id="node",
+        val=line1,
+        parent=root)
+    child2 = AnyNode(
+        id="node",
+        val=line1,
+        parent=root)
+    child3 = AnyNode(
+        id="node",
+        val=line2,
+        parent=root)
+
+    print(RenderTree(root))
+    print(check_and_prepare_tree_for_valid_spiral(root))
+    print(RenderTree(root))
+    print("---------------------------")
+    root = AnyNode(
+        id="root",
+        val=line1)
+    child1 = AnyNode(
+        id="node",
+        val=line1,
+        parent=root)
+    child2 = AnyNode(
+        id="node",
+        val=line1,
+        parent=root)
+    child3 = AnyNode(
+        id="node",
+        val=line2,
+        parent=child1)
+    print(RenderTree(root))
+    print(check_and_prepare_tree_for_valid_spiral(root))
+    print(RenderTree(root))
+
+    print("---------------------------")
+    root = AnyNode(
+        id="root",
+        val=line1)
+    child1 = AnyNode(
+        id="node",
+        val=line1,
+        parent=root)
+    child2 = AnyNode(
+        id="node",
+        val=line1,
+        parent=child1)
+    child3 = AnyNode(
+        id="node",
+        val=line2,
+        parent=child2)
+    print(RenderTree(root))
+    print(check_and_prepare_tree_for_valid_spiral(root))
+    print(RenderTree(root))
+
+    print("---------------------------")
+    root = AnyNode(
+        id="root",
+        val=line1)
+    child1 = AnyNode(
+        id="node",
+        val=line1,
+        parent=root)
+    child2 = AnyNode(
+        id="node",
+        val=line1,
+        parent=root)
+    child3 = AnyNode(
+        id="node",
+        val=line2,
+        parent=child1)
+    child4 = AnyNode(
+        id="node",
+        val=line2,
+        parent=child2)
+    print(RenderTree(root))
+    print(check_and_prepare_tree_for_valid_spiral(root))
+    print(RenderTree(root))

@@ -7,7 +7,7 @@ import math
 
 import shapely
 from shapely.geometry.linestring import LineString
-from shapely.ops import linemerge
+from shapely.ops import linemerge, unary_union
 from ..svg import PIXELS_PER_MM
 from ..utils import Point as InkstitchPoint
 from ..utils import cache
@@ -126,12 +126,34 @@ def repair_multiple_parallel_offset_curves(multi_line):
     return lines[max_length_idx].simplify(0.01, False)
 
 
+def repair_non_simple_lines(line):
+    repaired = unary_union(line)
+    counter = 0
+    # Do several iterations since we might have several concatenated selfcrossings
+    while repaired.geom_type != 'LineString' and counter < 4:
+        line_segments = []
+        for line_seg in repaired.geoms:
+            if not line_seg.is_ring:
+                line_segments.append(line_seg)
+
+        repaired = unary_union(linemerge(line_segments))
+        counter += 1
+    if repaired.geom_type != 'LineString':
+        raise ValueError(
+            "Guide line (or offsetted instance) is self crossing!")
+    else:
+        return repaired
+
+
 def intersect_region_with_grating_line(shape, line, row_spacing, end_row_spacing=None, flip=False):
 
     row_spacing = abs(row_spacing)
     (minx, miny, maxx, maxy) = shape.bounds
     upper_left = InkstitchPoint(minx, miny)
     rows = []
+
+    if line.geom_type != 'LineString' or not line.is_simple:
+        line = repair_non_simple_lines(line)
     # extend the line towards the ends to increase probability that all offsetted curves cross the shape
     line = extend_line(line, minx, maxx, miny, maxy)
 
@@ -160,6 +182,8 @@ def intersect_region_with_grating_line(shape, line, row_spacing, end_row_spacing
         if line_offsetted.geom_type == 'MultiLineString':  # if we got multiple lines take the longest
             line_offsetted = repair_multiple_parallel_offset_curves(
                 line_offsetted)
+        if not line_offsetted.is_simple:
+            line_offsetted = repair_non_simple_lines(line_offsetted)
 
         if row_spacing < 0:
             line_offsetted.coords = line_offsetted.coords[::-1]
@@ -173,6 +197,8 @@ def intersect_region_with_grating_line(shape, line, row_spacing, end_row_spacing
                 if line_offsetted.geom_type == 'MultiLineString':  # if we got multiple lines take the longest
                     line_offsetted = repair_multiple_parallel_offset_curves(
                         line_offsetted)
+                if not line_offsetted.is_simple:
+                    line_offsetted = repair_non_simple_lines(line_offsetted)
                 # using negative row spacing leads as a side effect to reversed offsetted lines - here we undo this
                 line_offsetted.coords = line_offsetted.coords[::-1]
                 line_offsetted = line_offsetted.simplify(0.01, False)

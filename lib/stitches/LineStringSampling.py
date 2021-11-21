@@ -139,32 +139,35 @@ def raster_line_string_with_priority_points(line, start_distance, end_distance, 
     angles[0] = 1.1*constants.limiting_angle
     angles[-1] = 1.1*constants.limiting_angle
 
-    current_distance = start_distance
-
+    current_distance = 0
+    last_point = Point(path_coords.coords[0])
     # Next we merge the line points and the projected (deque) points into one list
     merged_point_list = []
     dq_iter = 0
-    for point, angle in zip(aligned_line.coords, angles):
-        # if abs(point[0]-52.9) < 0.2 and abs(point[1]-183.4)< 0.2:
+    for point, angle in zip(path_coords.coords, angles):
+        # if abs(point[0]-7) < 0.2 and abs(point[1]-3.3) < 0.2:
         #    print("GEFUNDEN")
-        current_distance = aligned_line.project(Point(point))
-        while dq_iter < len(deque_points) and deque_points[dq_iter][1] < current_distance:
+        current_distance += last_point.distance(Point(point))
+        last_point = Point(point)
+        while dq_iter < len(deque_points) and deque_points[dq_iter][1] < current_distance+start_distance:
             # We want to avoid setting points at soft edges close to forbidden points
             if deque_points[dq_iter][0].point_source == PointSource.FORBIDDEN_POINT:
                 # Check whether a previous added point is a soft edge close to the forbidden point
                 if (merged_point_list[-1][0].point_source == PointSource.SOFT_EDGE_INTERNAL and
-                   abs(merged_point_list[-1][1]-deque_points[dq_iter][1] < abs_offset*constants.factor_offset_forbidden_point)):
+                   abs(merged_point_list[-1][1]-deque_points[dq_iter][1]+start_distance < abs_offset*constants.factor_offset_forbidden_point)):
                     item = merged_point_list.pop()
                     merged_point_list.append((PointTransfer.projected_point_tuple(
-                        point=item[0].point, point_source=PointSource.FORBIDDEN_POINT), item[1]))
+                        point=item[0].point, point_source=PointSource.FORBIDDEN_POINT), item[1]-start_distance))
             else:
-                merged_point_list.append(deque_points[dq_iter])
+                merged_point_list.append(
+                    (deque_points[dq_iter][0], deque_points[dq_iter][1]-start_distance))
+                # merged_point_list.append(deque_points[dq_iter])
             dq_iter += 1
         # Check whether the current point is close to a forbidden point
         if (dq_iter < len(deque_points) and
             deque_points[dq_iter-1][0].point_source == PointSource.FORBIDDEN_POINT and
             angle < constants.limiting_angle and
-                abs(deque_points[dq_iter-1][1]-current_distance) < abs_offset*constants.factor_offset_forbidden_point):
+                abs(deque_points[dq_iter-1][1]-current_distance-start_distance) < abs_offset*constants.factor_offset_forbidden_point):
             point_source = PointSource.FORBIDDEN_POINT
         else:
             if angle < constants.limiting_angle:

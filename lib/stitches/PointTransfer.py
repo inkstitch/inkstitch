@@ -9,12 +9,13 @@ from ..stitches import LineStringSampling
 projected_point_tuple = namedtuple(
     'projected_point_tuple', ['point', 'point_source'])
 
-# Calculated the nearest interserction point of "bisectorline" with the coordinates of child (child.val).
-# It returns the intersection point and its distance along the coordinates of the child or "None, None" if no
-# intersection was found.
-
 
 def calc_transferred_point(bisectorline, child):
+    """
+    Calculates the nearest interserction point of "bisectorline" with the coordinates of child (child.val).
+    It returns the intersection point and its distance along the coordinates of the child or "None, None" if no
+    intersection was found.
+    """
     result = bisectorline.intersection(child.val)
     if result.is_empty:
         return None, None
@@ -279,11 +280,10 @@ def transfer_points_to_surrounding(treenode, used_offset, offset_by_half, to_tra
 
     assert(len(point_list) == len(point_source_list))
 
-# Calculated the nearest interserction point of "bisectorline" with the coordinates of child.
+
+# Calculates the nearest interserction point of "bisectorline" with the coordinates of child.
 # It returns the intersection point and its distance along the coordinates of the child or "None, None" if no
 # intersection was found.
-
-
 def calc_transferred_point_graph(bisectorline, edge_geometry):
     result = bisectorline.intersection(edge_geometry)
     if result.is_empty:
