@@ -114,6 +114,10 @@ jobs:
           make dist
         env:
           BUILD: windows
+      - uses: dlemstra/code-sign-action@v1
+        with:
+          certificate: '${{ secrets.INKSTITCH_CODE_SIGNING_CERTIFICATE }}'
+          folder: 'artifacts'
       - uses: actions/upload-artifact@v2
         with:
           name: inkstitch-windows
