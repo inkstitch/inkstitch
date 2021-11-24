@@ -877,11 +877,13 @@ def connect_raster_tree_spiral(
 
         part_spiral = interpolate_LinearRings(
             ring1, ring2, starting_point)
+        node.val = part_spiral
 
+    for node in PreOrderIter(tree, stop=lambda n: n.is_leaf):
         (own_coords, own_coords_origin) = LineStringSampling.raster_line_string_with_priority_points(
-            part_spiral,
+            node.val,
             0,
-            part_spiral.length,
+            node.val.length,
             stitch_distance,
             node.transferred_point_priority_deque,
             abs_offset,
@@ -890,7 +892,7 @@ def connect_raster_tree_spiral(
 
         PointTransfer.transfer_points_to_surrounding(
             node,
-            used_offset,
+            -used_offset,
             offset_by_half,
             own_coords,
             own_coords_origin,
@@ -905,7 +907,7 @@ def connect_raster_tree_spiral(
         if offset_by_half:
             PointTransfer.transfer_points_to_surrounding(
                 node,
-                used_offset,
+                -used_offset,
                 False,
                 own_coords,
                 own_coords_origin,
