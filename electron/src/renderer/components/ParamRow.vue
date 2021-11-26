@@ -32,7 +32,7 @@
     <td class="param-cell">
       <v-checkbox :id="param_id" :ripple="false" v-if="type === 'checkbox'" v-model="valueModel" hide-details></v-checkbox>
       <v-text-field :id="param_id" v-if="type === 'text'" v-model="valueModel" hide-details></v-text-field>
-      <v-select :id="param_id" :items="items" v-if="type === 'select'" hide-details></v-select>
+      <v-select :id="param_id" :items="items" v-if="type === 'select'" v-model="valueModel" hide-details></v-select>
     </td>
     <td class="unit">{{ unit }}</td>
   </tr>

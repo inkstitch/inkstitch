@@ -133,7 +133,7 @@
         </v-card-text>
       </v-card>
       <params-table>
-        <param-row v-bind:value.sync="params.manual_stitch_placement" :changed.sync="changed.manual_stitch_placement" type="checkbox">
+        <param-row :value.sync="manual_stitch" :changed="false" type="checkbox">
           <translate>Manual stitch placement</translate>
           <template v-slot:tooltip>
             <translate>Stitch every node in the path. All settings above are ignored.</translate>
@@ -182,13 +182,13 @@ export default {
         zigzag_underlay: false,
         zigzag_underlay_spacing_mm: false,
         zigzag_underlay_inset_mm: false,
-      }
+      },
+      manual_stitch: false
     }
   },
   watch: {
-    'params.manual_stitch_placement': function () {
+    manual_stitch() {
       /* Manual stitch is special (see Params.py) */
-      console.log("saw change")
       this.$emit('enable-manual-stitch')
     }
   }
