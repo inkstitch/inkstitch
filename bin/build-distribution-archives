@@ -12,8 +12,11 @@ if [ "$BUILD" = "osx" ]; then
     # The postinstaller is a workaround for a proper way to install in user $HOME space
 
     # Build on GitHub will be handled differently from local builds
-    # local builds will not be signed. They are run to produce releases for lecacy versions of macOS
-    if [[ "${GITHUB_REF}" =~ ^refs/tags/v[0-9.]+$ ]]; then
+    # development and local builds will not be signed. They are run to produce releases for lecacy versions of macOS
+    # Signing can be forced with this variable for test cases
+    SIGN_DEVELOPMENT_BUILDS=false
+
+    if [[ "${GITHUB_REF}" =~ ^refs/tags/v[0-9.]+$ || $SIGN_DEVELOPMENT_BUILDS == true ]]; then
         # This code signs and notarize the inkstitch.app
         DEV_IDENT="Developer ID Application: Lex Neva (929A568N58)"
         echo "Signing of inkstitch.app"

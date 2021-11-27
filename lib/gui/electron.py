@@ -32,5 +32,18 @@ def open_url(url):
         cwd = get_bundled_dir("electron")
 
     # Any output on stdout will crash inkscape.
-    with open(os.devnull, 'w') as null:
-        return subprocess.Popen(command, cwd=cwd, stdout=null)
+    # In macos manual install the python env paths are incomplete
+    # Adding the yarn path to the env paths fixes this issue
+    if sys.platform == "darwin" and getattr(sys, 'frozen', None) is None:
+        mac_dev_env = os.environ.copy()
+        # these are paths installed by brew or macports
+        yarn_path = "/usr/local/bin:/opt/local/bin:"
+        if yarn_path in mac_dev_env["PATH"]:
+            pass
+        else:
+            mac_dev_env["PATH"] = yarn_path + mac_dev_env["PATH"]
+        with open(os.devnull, 'w') as null:
+            return subprocess.Popen(command, cwd=cwd, stdout=null, env=mac_dev_env)
+    else:
+        with open(os.devnull, 'w') as null:
+            return subprocess.Popen(command, cwd=cwd, stdout=null)
