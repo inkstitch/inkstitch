@@ -11,12 +11,12 @@ if [ "$BUILD" = "osx" ]; then
     # - postinstaller (moves inkstitch folder from /tmp to user Inkscape extensions folder in $HOME)
     # The postinstaller is a workaround for a proper way to install in user $HOME space
 
-    # Build on GitHub will be handled differently from local builds
-    # development and local builds will not be signed. They are run to produce releases for lecacy versions of macOS
-    # Signing can be forced with this variable for test cases
-    SIGN_DEVELOPMENT_BUILDS=false
+    # Build on GitHub will be handled differently from local builds.
+    # Local builds will not be signed nor notarized. They are run to produce releases for legacy versions of macOS.
+    # Notarization for development branches can be forced with this variable set to true
+    NOTARIZE_DEVELOPMENT_BUILDS=false
 
-    if [[ "${GITHUB_REF}" =~ ^refs/tags/v[0-9.]+$ || $SIGN_DEVELOPMENT_BUILDS == true ]]; then
+    if [[ ! -z "${GITHUB_REF}" ]]; then
         # This code signs and notarize the inkstitch.app
         DEV_IDENT="Developer ID Application: Lex Neva (929A568N58)"
         echo "Signing of inkstitch.app"
@@ -49,14 +49,16 @@ if [ "$BUILD" = "osx" ]; then
                         --scripts installer_scripts/scripts \
                         --install-location ${temp_path}inkstitch.app \
                         artifacts/inkstitch-${VERSION}-${OS}.pkg
-        echo "Notary starting"
-        bash bin/notarize-app "929A568N58" \
-                              "${NOTARY_ACCOUNT}" \
-                              "${NOTARY_PASSWORD}" \
-                              "org.inkstitch.app" \
-                              artifacts/inkstitch-${VERSION}-${OS}.pkg
+        if [[ "${GITHUB_REF}" =~ ^refs/tags/v[0-9.]+$ || $NOTARIZE_DEVELOPMENT_BUILDS == true ]]; then
+            echo "Notary starting"
+            bash bin/notarize-app "929A568N58" \
+                                "${NOTARY_ACCOUNT}" \
+                                "${NOTARY_PASSWORD}" \
+                                "org.inkstitch.app" \
+                                artifacts/inkstitch-${VERSION}-${OS}.pkg
+        fi
     else
-        # do not sign and notarize development builds
+        # local builds will not be signed or notarized
         cp -a electron/build/mac dist/inkstitch.app/Contents/MacOS/electron
         pkgbuild --root dist/inkstitch.app \
                 --component-plist installer_scripts/inkstitch.plist \
