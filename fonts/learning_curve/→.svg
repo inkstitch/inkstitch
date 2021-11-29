@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
+   xmlns:inkstitch="http://inkstitch.org/namespace"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)"
    height="150"
    width="150"
    sodipodi:docname="→.svg"
    id="svg3178"
-   version="1.1"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:inkstitch="http://inkstitch.org/namespace">
+   version="1.1">
+	
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -23,15 +24,15 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1440"
-     inkscape:window-height="797"
+     inkscape:window-width="1904"
+     inkscape:window-height="1041"
      id="namedview3180"
      showgrid="false"
      inkscape:zoom="11.787255"
-     inkscape:cx="20.785162"
-     inkscape:cy="61.464692"
+     inkscape:cx="33.021008"
+     inkscape:cy="61.4887"
      inkscape:window-x="0"
-     inkscape:window-y="25"
+     inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:current-layer="g1172"
      inkscape:document-rotation="0"
@@ -39,8 +40,7 @@
      inkscape:snap-bbox="false"
      inkscape:snap-page="true"
      showguides="true"
-     inkscape:guide-bbox="true"
-     inkscape:pagecheckerboard="0">
+     inkscape:guide-bbox="true">
     <sodipodi:guide
        position="-12.157387,50.731"
        orientation="0,1"
@@ -590,7 +590,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      id="g1172">
     <path
        style="fill:none;stroke:#000000;stroke-width:2.48852px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 8.2529482,94.617261 18.633895,94.439447 13.467366,94.521147 13.503046,89.611575 V 99.267308 L 13.467366,94.521146 17.627874,91.051643 9.8224965,97.570986 13.467366,94.521146 16.798265,97.735083 9.6549152,90.818541"
+       d="m 8.2529482,94.617261 10.3809468,-0.177814 -5.166529,0.0817 0.03568,-4.909572 v 9.655733 l -0.03568,-4.746162 4.160508,-3.469503 -7.8053775,6.519343 3.6448695,-3.04984 3.330899,3.213937 -7.1433498,-6.916542"
        id="path1166"
        inkstitch:manual_stitch="True"
        inkstitch:ties="3"
@@ -2207,7 +2207,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      style="display:none">
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.88976;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 0.97487843,97.119138 -7.4384002,97.228501 8.5810637,97.223501 0.97487843,97.119107 1.0100271,105.38025 1.2864494,87.923658 Z"
+       d="m 0.97487843,97.119138 -8.41327863,0.109363 16.0194639,-0.005 -7.60618527,-0.104394 0.0351487,8.261143 0.2764223,-17.456592 z"
        id="path1339"
        sodipodi:nodetypes="ccccccc"
        inkstitch:manual_stitch="True" />
