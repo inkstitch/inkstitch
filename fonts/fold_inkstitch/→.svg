@@ -3,8 +3,8 @@
    version="1.1"
    id="svg560"
    sodipodi:docname="→.svg"
-   width="396"
-   height="396"
+   width="104.775mm"
+   height="104.775mm"
    viewBox="0 0 396 396"
    inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -28,14 +28,14 @@
      inkscape:window-height="798"
      id="namedview562"
      showgrid="false"
-     inkscape:zoom="2.0258316"
-     inkscape:cx="38.502707"
-     inkscape:cy="22.706724"
+     inkscape:zoom="0.71623963"
+     inkscape:cx="-254.1049"
+     inkscape:cy="357.42228"
      inkscape:window-x="28"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
      inkscape:current-layer="g863"
-     inkscape:document-units="px"
+     inkscape:document-units="mm"
      inkscape:document-rotation="0"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -43,7 +43,8 @@
      inkscape:snap-to-guides="true"
      inkscape:snap-grids="false"
      inkscape:snap-global="true"
-     inkscape:pagecheckerboard="0">
+     inkscape:pagecheckerboard="0"
+     units="mm">
     <sodipodi:guide
        position="0,0"
        orientation="0,1"
@@ -202,94 +203,6 @@ distributable and modifiable under the SIL
      orientation="0,1"
      inkscape:label="descender"
      id="guide753" />
-  <g
-     inkscape:groupmode="layer"
-     inkscape:label="GlyphLayer-!"
-     id="g863"
-     style="display:inline">
-    <path
-       style="font-variation-settings:normal;display:inline;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
-       d="M 12.294026,385 H 64.622443"
-       id="path1303"
-       inkstitch:bean_stitch_repeats="1"
-       inkstitch:running_stitch_length_mm="2.75"
-       inkstitch:ties="3"
-       inkscape:label="R" />
-    <path
-       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
-       d="M 64.622443,376 H 12.294026"
-       id="path1305"
-       inkstitch:bean_stitch_repeats="1"
-       inkstitch:running_stitch_length_mm="2.75"
-       inkstitch:ties="3"
-       inkscape:label="R" />
-    <path
-       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
-       d="M 12.294026,368 H 64.622443"
-       id="path1307"
-       inkstitch:bean_stitch_repeats="1"
-       inkstitch:running_stitch_length_mm="2.75"
-       inkstitch:ties="3"
-       inkscape:label="R" />
-    <path
-       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
-       d="M 64.622443,361 H 12.294026"
-       id="path1309"
-       inkstitch:bean_stitch_repeats="1"
-       inkstitch:running_stitch_length_mm="2.75"
-       inkstitch:ties="3"
-       inkscape:label="R" />
-    <path
-       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.32283;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.89, 0.945;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
-       d="M 12.294026,352 H 64.622443 V 396 H 12.294026 V 352"
-       id="path1311"
-       sodipodi:nodetypes="ccccc"
-       inkstitch:bean_stitch_repeats="2"
-       inkstitch:running_stitch_length_mm="2.75"
-       inkstitch:ties="2"
-       inkscape:label="contour" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 28,313 V 134"
-       id="path1317"
-       inkstitch:bean_stitch_repeats="1"
-       inkstitch:running_stitch_length_mm="2.75"
-       inkstitch:ties="3"
-       inkscape:label="R" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 36,134 V 313"
-       id="path1319"
-       inkstitch:bean_stitch_repeats="1"
-       inkstitch:running_stitch_length_mm="2.75"
-       inkstitch:ties="3"
-       inkscape:label="R" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 44,313 V 134"
-       id="path1321"
-       inkstitch:bean_stitch_repeats="1"
-       inkstitch:running_stitch_length_mm="2.75"
-       inkstitch:ties="3"
-       inkscape:label="R" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 52,134 V 313"
-       id="path1323"
-       inkstitch:bean_stitch_repeats="1"
-       inkstitch:running_stitch_length_mm="2.75"
-       inkstitch:ties="3"
-       inkscape:label="R" />
-    <path
-       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.32283;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.89, 0.945;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
-       d="M 61,313 V 134 H 18 V 313 H 61"
-       id="path1325"
-       sodipodi:nodetypes="ccccc"
-       inkstitch:bean_stitch_repeats="2"
-       inkstitch:running_stitch_length_mm="2.75"
-       inkstitch:ties="2"
-       inkscape:label="contour" />
-  </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-'"
@@ -6271,8 +6184,96 @@ distributable and modifiable under the SIL
   </g>
   <g
      inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-!"
+     id="g863"
+     style="display:none">
+    <path
+       style="font-variation-settings:normal;display:inline;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+       d="M 12.294026,385 H 64.622443"
+       id="path1303"
+       inkstitch:bean_stitch_repeats="1"
+       inkstitch:running_stitch_length_mm="2.75"
+       inkstitch:ties="3"
+       inkscape:label="R" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+       d="M 64.622443,376 H 12.294026"
+       id="path1305"
+       inkstitch:bean_stitch_repeats="1"
+       inkstitch:running_stitch_length_mm="2.75"
+       inkstitch:ties="3"
+       inkscape:label="R" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+       d="M 12.294026,368 H 64.622443"
+       id="path1307"
+       inkstitch:bean_stitch_repeats="1"
+       inkstitch:running_stitch_length_mm="2.75"
+       inkstitch:ties="3"
+       inkscape:label="R" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.32283;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+       d="M 64.622443,361 H 12.294026"
+       id="path1309"
+       inkstitch:bean_stitch_repeats="1"
+       inkstitch:running_stitch_length_mm="2.75"
+       inkstitch:ties="3"
+       inkscape:label="R" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.32283;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.89, 0.945;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+       d="M 12.294026,352 H 64.622443 V 396 H 12.294026 V 352"
+       id="path1311"
+       sodipodi:nodetypes="ccccc"
+       inkstitch:bean_stitch_repeats="2"
+       inkstitch:running_stitch_length_mm="2.75"
+       inkstitch:ties="2"
+       inkscape:label="contour" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 28,313 V 134"
+       id="path1317"
+       inkstitch:bean_stitch_repeats="1"
+       inkstitch:running_stitch_length_mm="2.75"
+       inkstitch:ties="3"
+       inkscape:label="R" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 36,134 V 313"
+       id="path1319"
+       inkstitch:bean_stitch_repeats="1"
+       inkstitch:running_stitch_length_mm="2.75"
+       inkstitch:ties="3"
+       inkscape:label="R" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 44,313 V 134"
+       id="path1321"
+       inkstitch:bean_stitch_repeats="1"
+       inkstitch:running_stitch_length_mm="2.75"
+       inkstitch:ties="3"
+       inkscape:label="R" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 52,134 V 313"
+       id="path1323"
+       inkstitch:bean_stitch_repeats="1"
+       inkstitch:running_stitch_length_mm="2.75"
+       inkstitch:ties="3"
+       inkscape:label="R" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.32283;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.89, 0.945;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+       d="M 61,313 V 134 H 18 V 313 H 61"
+       id="path1325"
+       sodipodi:nodetypes="ccccc"
+       inkstitch:bean_stitch_repeats="2"
+       inkstitch:running_stitch_length_mm="2.75"
+       inkstitch:ties="2"
+       inkscape:label="contour" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
      inkscape:label="GlyphLayer--"
-     style="display:none"
+     style="display:inline"
      id="g5213">
     <path
        style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
