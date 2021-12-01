@@ -1,24 +1,24 @@
 ---
-title: "Install Ink/Stitch on Windows"
+title: "Установка Ink/Stitch на Windows"
 permalink: /ru/docs/install-windows/
-excerpt: "How to quickly install Ink/Stitch."
+excerpt: "Быстрая установка Ink/Stitch."
 last_modified_at: 2021-05-03
 toc: true
 ---
-## Video Guide
+## Видео урок
 
-We also provide beginner tutorial videos on our <i class="fab fa-youtube"></i> [YouTube channel](https://www.youtube.com/channel/UCJCDCFuT_xQoI55e10HRiRw). Watch the installation process for <i class="fab fa-windows"></i> [Windows](https://www.youtube.com/watch?v=U5htzWZSjA8&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=4).
+У нас есть множество обучающих видео на нашем <i class="fab fa-youtube"></i> [YouTube канале](https://www.youtube.com/channel/UCJCDCFuT_xQoI55e10HRiRw). Посмотрите процесс установки расширения на <i class="fab fa-windows"></i> [Windows](https://www.youtube.com/watch?v=U5htzWZSjA8&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=4).
 
-## Requirements
+## Требования
 
-* [Inkscape](https://inkscape.org/release/) Version 1.0.2 or higher
+* [Inkscape](https://inkscape.org/release/) Версия 1.0.2 или выше
 
-That's it!  All python libraries and external dependencies are bundled (using the excellent [pyinstaller](http://www.pyinstaller.org)), so you shouldn't need to set anything else up.
+Это все что вам нужно. Все необходимые библиотеки и внешние зависимости поставляются вместе с расширением, благодаря прекрасной утилите [pyinstaller](http://www.pyinstaller.org).
 
-## Installation
+## Установка
 
-### Download
-Download the release archive in your prefered language:
+### Скачать
+Загрузите архив с расширением на нужном языке:
 
 * <i class="fa fa-download " ></i> [английский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-en_US.zip)
 * <i class="fa fa-download " ></i> [финский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-fi_FI.zip)
@@ -29,55 +29,55 @@ Download the release archive in your prefered language:
 * <i class="fa fa-download " ></i> [нидерландский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-nl_NL.zip)
 * <i class="fa fa-download " ></i> [русский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-ru_RU.zip)
 
-**Latest release:** {{ site.github.latest_release.published_at | date: "%Y-%m-%d"  }} [Ink/Stitch {{ site.github.latest_release.tag_name }}](https://github.com/inkstitch/inkstitch/releases/latest)
+**Последняя версия:** {{ site.github.latest_release.published_at | date: "%Y-%m-%d"  }} [Ink/Stitch {{ site.github.latest_release.tag_name }}](https://github.com/inkstitch/inkstitch/releases/latest)
 
-The `LOCALE` selected affects the menus shown inside Inkscape. Ink/Stitch dialogs are in the lanugage of your OS (if that language is supported).<br><br>Your language is not available? Help us to [translate the dialogs into your native language](/developers/localize/).
+Выбранная `LOCALE` на показ меню внутри Inkscape. Диалоги Ink/Stitch будут отображены на языке вашей ОС(если этот язык поддерживается).<br><br>Для вашего языка нет расширения? Помогите нам [перевести диалоги на ваш родной язык](/ru/developers/localize/).
 {: .notice--info }
 
 
-### Extract Files
+### Распаковка файлов
 
-Go to `Edit > Preferences > System` and check where your `User Extensions` folder is.
+Перейдите в `Правка > Параметры > Система` и найдите путь до вашей папки `Пользовательских расширений`.
 
 ![Preferences: Extensions Folder](/assets/images/docs/en/extensions-folder-location-win.jpg)
 
-Your folder will most likely look like this `C:\Users\%USERNAME%\AppData\Roaming\inkscape\extensions`
+Этот путь будет похож на `C:\Users\%USERNAME%\AppData\Roaming\inkscape\extensions`
 
-Extract the Ink/Stitch archive into this folder.
+Распакуйте архив с Ink/Stitch прямо в эту папку.
 
-### Run Ink/Stitch
+### Запуск Ink/Stitch
 
-Restart Inkscape.
+Перезапустите Inkscape.
 
-You will then find Ink/Stitch under `Extensions > Ink/Stitch`.
+Теперь Ink/Stitch будет доступен через меню `Расширения > Ink/Stitch`.
 
-## Upgrade
+## Обновление
 
-Delete the old extension files first. Go to the extension directory and remove each inkstitch* file and folder.
+Сначала нужно убрать все файлы расширения текущей версии. Зайдите в папку расширений и удалите все файлы и папки, которые начинаются с inkstitch*.
 
-Then, proceed as above.
+Затем повторите шаги как при установке расширения с нуля.
 
-**Tip:** Subscribe to a news feed channel to keep track on Ink/Stitch Updates:<br />
- <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [GitHub Feed on new Releases](https://github.com/inkstitch/inkstitch/releases.atom)<br>
- <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [Ink/Stitch News](/feed.xml)<br />
+**Совет:** Подпишитесь на канал новостей, чтобы быть в курсе обновлений Ink/Stitch:<br />
+ <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [Новые версии на GitHub](https://github.com/inkstitch/inkstitch/releases.atom)<br>
+ <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [Новости Ink/Stitch](/feed.xml)<br />
 {: .notice--info }
 
 <p class="notice--info" style="margin-top: -3.5em !important;">Or watch the project on GitHub:<br /><iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=inkstitch&repo=inkstitch&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe></p>
 
-## Troubleshoot
+## Решение проблем
 
-### Ink/Stitch doesn't show up / is greyed out
+### Ink/Stitch не отображается / не доступен
 
-**Confirm installation path**
+**Проверьте путь установки**
 
-Check if you extracted Ink/Stitch into the correct folder. If the `User extensions folder` doesn't work out correctly, you can also try to install into the `Inkscape extensions folder`.
-You can also look it up under `Edit > Preferences > System`.
+Проверьте что вы распаковали архив с Ink/Stitch в правильную папку. Если с папкой `Пользовательские расширения` не удается добиться работы расширения, попробуйте распаковать арзив в папку `Inkscape extensions`.
+Её тоже можно найти через меню `Правка > Параметры > Система`.
 
-**Antivirus Software**
+**Антивирусное ПО**
 
-Since Ink/Stitch is packed into a executable there are reports of anti-virus-software using heuristics that mark the extension as a false positive. The solution in this cases is to add the Ink/Stitch extension folder to the exception list on the av program and reinstall the extension and try again.
+Поскольку Ink/Stitch упакован в исполняемый файл, некоторые антивирусные программы могут пометить этот файл как потенциалььно опасный. В этом случае добавьте папку с расширением Ink/Stitch в список сисключений антивирусной программы, затем переустановите Ink/Stitch и попроуйте снова.
 
-If your antivirus software deleted files, you will receive an error message like this:
+Если ваше антивирусное ПО удалит какие-либо файлы расширения, то вы будете видеть сообщения об ошибке, похожие на это:
 
 ```
 Tried to launch: inkstitch\bin\inkstitch
@@ -92,26 +92,25 @@ Traceback (most recent call last):
 WindowsError: [Error 2] The system cannot find the file specified
 ```
 
-**Confirm Ink/Stitch Version**
+**Проверьте версию Ink/Stitch**
 
-Verify if you have downloaded Ink/Stitch for Windows ([Download](#download))
+Убедитесь, что вы скачали Ink/Stitch версию для Windows ([Скачать](#/ru/download))
 
-### I installed Ink/Stitch in my native language, but the dialogue windows are displayed in English
+### Я скачал Ink/Stitch на своем родном языке, но диалоговые окна отображаются на английском
 
-**Incomplete Translation**
+**Незавершенный перевод**
 
-It is possible, that not all strings have been translated. This is indicated by **some strings of text beeing in English and others in your native language**.
-If you like to complete the translation, have a look at our [description for translators](/developers/localize/).
+Возможно не все строки были переведены. В этом случае вы будете видеть **одновременно уже переведенные строки на вашем языке и некоторые строки на английском языке**.
+Если вы хотите дополнить или исправить перевод, посмотрите [описание для переводчиков](/ru/developers/localize/).
 
-**Language Settings**
+**Настройки языка**
 
-We have to distinguish between the Extension menu in Inkscape and the dialogue windows.
-The selection of the ZIP file causes only the Extension menu to be in a certain language.
-The dialgoue windows are build differently. They will use the language of your operating system.
-If Ink/Stitch is uncertain, which language to support, it will fallback on English.
-You can tell Inkscape explicitly to use your native language as follows:
-  * Go to Edit > Preferences > Interface (Ctrl + Shift + P)
-  * Set your language
-  * Restart Inkscape
+Есть некоторое различие между отображением языка в меню и в диалоговых окнах. Выбор нужного ZIP-архива влияет только на язык опций в меню.
+Диалоговые окна собираются по-другому. В них будет отображаться текст на языке вашей операционной системы.
+Если Ink/Stitch не поддерживает язык ОС, то будет выбран английский язык для отображения.
+Вы можете явно указать предпочитаемый язык в Inkscape:
+  * Перейдите в меню Правка > Параметры > Интерфейс (Ctrl + Shift + P)
+  * Установите нужный язык
+  * Перезапустите Inkscape
 
 ![Preferences > Interface](/assets/images/docs/en/preferences_language.png)

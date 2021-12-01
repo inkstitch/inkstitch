@@ -1,7 +1,7 @@
 ---
 title: "Установка Ink/Stitch"
 permalink: /ru/docs/install/
-excerpt: "Как быстро установить Ink/Stitch."
+excerpt: "Быстрая установка Ink/Stitch."
 last_modified_at: 2020-12-03
 toc: false
 ---
