@@ -1,52 +1,52 @@
 # main links
 main:
-  - title: "Features"
+  - title: "Возможности"
     url: /ru/features/
-  - title: "User Manual"
+  - title: "Руководство"
     url: /ru/docs/install/
-  - title: "Tutorials"
+  - title: "Уроки"
     url: /ru/tutorials/
-  - title: "Get Help"
+  - title: "FAQ"
     url: /ru/docs/faq/
-  - title: "Get Involved"
+  - title: "Принять участие"
     url: /ru/developers/introduction/
     
 # index + specific pages which have the sidebar option in the header
 pages:
-  - title: "Features"
+  - title: "Возможности"
     url: /ru/features/
-  - title: "User Manual"
+  - title: "Руководство"
     url: /ru/docs/install/
     children:
-      - title: "Installation"
+      - title: "Установка"
         url: /ru/docs/install/
-      - title: "Workflow"
+      - title: "Рабочий процесс"
         url: /ru/docs/workflow/
-      - title: Stitch Library
+      - title: Виды стежков
         url: /ru/docs/stitch-library/
       - title: "FAQ"
         url: /ru/docs/faq/
-  - title: "Tutorials"
+  - title: "Уроки"
     url: /ru/tutorials/
     children:
-      - title: "Artwork Galleries"
+      - title: "Галерея работ"
         url: /ru/tutorials/inspiration/
-      - title: "Sample Files"
+      - title: "Файлы образцов"
         url: /ru/tutorials/resources/samples/
-      - title: "Templates"
+      - title: "Шаблоны"
         url: /ru/tutorials/resources/templates/
-      - title: "Tutorials"
+      - title: "Уроки"
         url: /ru/tutorials/
-      - title: "DIY Embroidery Machine"
+      - title: "Самодельная машина"
         url: /ru/tutorials/embroidery-machine/
-  - title: "Get involved"
+  - title: "Принять участие"
     url: /ru/developers/introduction/
-  - title: "News"
+  - title: "Новости"
     url: /ru/news/
 
 # documentation links
 docs:
-  - title: Installation
+  - title: Установка
     url: /ru/docs/install/
     children:
       - title: "Windows"
@@ -55,146 +55,146 @@ docs:
         url: /ru/docs/install-macos/
       - title: "Linux"
         url: /ru/docs/install-linux/
-  - title: Getting Started
+  - title: Начало работы
     children:
-      - title: "Customize"
+      - title: "Настройка"
         url: /ru/docs/customize/
-      - title: "Basic Usage"
+      - title: "Основы"
         url: /ru/docs/basic-usage/
-      - title: "Workflow"
+      - title: "Рабочий процесс"
         url: /ru/docs/workflow/
-  - title: "Stitch Library"
+  - title: "Виды стежков"
     url: /ru/docs/stitch-library/
     children:
-      - title: "Manual Stitch"
+      - title: "Ручной стежок"
         url: /ru/docs/stitches/manual-stitch/
-      - title: "Running Stitch"
+      - title: "Строчка"
         url: /ru/docs/stitches/running-stitch/
-      - title: "Bean Stitch"
+      - title: "Многопроходная строчка"
         url: /ru/docs/stitches/bean-stitch/
-      - title: "Zig-Zag (Simple Satin)"
+      - title: "Зигзаг (Простой сатин)"
         url: /ru/docs/stitches/zigzag-stitch/
-      - title: "Satin Column"
+      - title: "Сатин"
         url: /ru/docs/stitches/satin-column/
-      - title: "E-Stitch"
+      - title: "E-стежок"
         url: /ru/docs/stitches/e-stitch/
-      - title: "Fill Stitch"
+      - title: "Заполнение"
         url: /ru/docs/stitches/fill-stitch/
-  - title: Interface
+  - title: Интерфейс
     children:
-    - title: "Commands"
+    - title: "Команды"
       url: /ru/docs/commands/
-    - title: "Edit"
+    - title: "Правка"
       url: /ru/docs/edit/
-    - title: "Fill Tools"
+    - title: "Инструменты Заполнения"
       url: /ru/docs/fill-tools/
-    - title: "Font Management"
+    - title: "Управление шрифтами"
       url: /ru/docs/font-tools/
-    - title: "Lettering"
+    - title: "Надписи"
       url: /ru/docs/lettering/
-    - title: "Params"
+    - title: "Параметры"
       url: /ru/docs/params/
-    - title: "Preferences"
+    - title: "Настройка"
       url: /ru/docs/preferences/
-    - title: "Satin Tools"
+    - title: "Инструменты Сатина"
       url: /ru/docs/satin-tools/
-    - title: "Thread Color Management"
+    - title: "Управление цветами нитей"
       url: /docs/thread-color/
-    - title: "Troubleshoot"
+    - title: "Решение проблем"
       url: /ru/docs/troubleshoot/
-    - title: "Visualize"
+    - title: "Визуализация"
       url: /ru/docs/visualize/
-  - title: "File Handling"
+  - title: "Работа с файлами"
     children:
-    - title: Supported File Formats
+    - title: Поддежка форматов файлов
       url: /ru/docs/file-formats/
-    - title: Export and Import Files
+    - title: Экспорт и импорт файлов
       url: /ru/docs/import-export/
-    - title: Print PDF
+    - title: Печать в PDF
       url: /ru/docs/print-pdf/
-    - title: Threadlist
+    - title: Список ниток
       url: /ru/docs/threadlist/
-  - title: Tips
+  - title: Советы
     children:
-      - title: "Fonts"
+      - title: "Шрифты"
         url: /ru/docs/fonts/
-      - title: "Hidden Features"
+      - title: "Скрытые возмодности"
         url: /ru/docs/features/
-      - title: Inkscape Tips
+      - title: Советы для Inkscape
         url: /ru/docs/inkscape-tips/
-      - title: Machine Database
+      - title: Список вышивальных машин
         url: /ru/docs/machine-database/
-  - title: Troubleshooting
+  - title: Решение проблем
     children:
       - title: "F.A.Q."
         url: /ru/docs/faq/
-      - title: Error Messages
+      - title: Сообщения об ошибках
         url: /ru/docs/error-messages/
-      - title: "Missing Translation"
+      - title: "Отсутствие перевода"
         url: /ru/docs/localization/
 
 # fonts
 fonts:
-  - title: Font Tutorials
+  - title: Уроки по шрифтам
     children:
-      - title: Create New Fonts
+      - title: Создание новых шрифтов
         url: /ru/tutorials/font-creation
-  - title: Font Library
+  - title: Библиотека шрифтов
     url: /ru/fonts/font-library/
     
 # tutorial links
 tutorials:
-  - title: Inspiration
+  - title: Вдохновение
     children:
-      - title: "Artwork Gallery"
+      - title: "Галерея работ"
         url: /ru/tutorials/inspiration/
-  - title: Hardware Projects
+  - title: Очумелые ручки 
     children:
-      - title: "DIY Embroidery Machine"
+      - title: "Самодельная машина"
         url: /ru/tutorials/embroidery-machine/
-      - title: "Sock Hoop"
+      - title: "Пяльце для носков"
         url: /ru/tutorials/sock-hoop/
-  - title: Resources
+  - title: Ресурсы
     children:
-    - title: "Branding Guide"
+    - title: "Брендинг"
       url: /ru/tutorials/resources/branding-guide/
-    - title: "Sample Files"
+    - title: "Файлы образцов"
       url: /ru/tutorials/resources/samples/
-    - title: "Templates"
+    - title: "Шаблоны"
       url: /ru/tutorials/resources/templates/
-  - title: Tutorials
+  - title: Уроки
     url: /ru/tutorials/
     children:
-    - title: "Tutorials A - Z"
+    - title: "Уроки А - Я"
       url: /ru/tutorials/
-    - title: "Video Tutorials"
+    - title: "Видеоуроки"
       url: /ru/tutorials/video/
-    - title: External Tutorials
+    - title: Уроки из интернета
       url: /ru/tutorials/external-tutorials/
   
 # developers links
 developers:
-  - title: Get involved
+  - title: Принять участие
     url: /ru/developers/introduction/
   - title: Ink/Stitch
     url: /ru/developers/inkstitch/
     children:
-    - title: Manual Setup (Linux/macOS)
+    - title: Ручная установка (Linux/macOS)
       url: /ru/developers/inkstitch/manual-setup/
-    - title: Manual Setup (Windows)
+    - title: Ручная установка (Windows)
       url: /ru/developers/inkstitch/windows-manual-setup/
-    - title: Python Modules
+    - title: Модули Python
       url: /ru/developers/inkstitch/python-modules/
     - title: Namespace
       url: /ru/developers/inkstitch/namespace/
   - title: Pyembroidery
     url: /ru/developers/pyembroidery
-  - title: Documentation
+  - title: Документация
     url: /ru/developers/documentation/
-  - title: Localization
+  - title: Локализация
     url: /ru/developers/localize/
-  - title: "Bug Reports"
+  - title: "Сообщения об ошибках"
     url: /ru/developers/report-bugs/
-  - title: "Statistics"
+  - title: "Статистика"
     url: /ru/statistics/
       
