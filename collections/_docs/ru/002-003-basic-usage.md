@@ -1,49 +1,48 @@
 ---
-title: "Basic Usage"
+title: "Основы Работы"
 permalink: /ru/docs/basic-usage/
 excerpt: ""
-last_modified_at: 2019-03-30
+last_modified_at: 2021-12-02
 toc: true
 ---
-Try the following steps in order to test the extension and to learn the basic functionality.
+Попробуйте пройти по следующим шагам для проверки расширения и изучения базовой функциональности.
 
-**Tip:** If you are new to Inkscape, have a look at their [Basic Tutorial](https://inkscape.org/en/doc/tutorials/basic/tutorial-basic.html) first.
+**Совет:** Если вы новичок в Inkscape, сначала посмотрите [Основы работы](https://inkscape.org/ru/doc/tutorials/basic/tutorial-basic.html) на их сайте.
 {: .notice--info }
 
-## Step 1 - Draw an Object
+## Шаг 1 - Нарисуйте Объект
 
-Create an object, e.g. a circle and make sure it has a fill.
+Создайте объект, например круг, и убедитесь, что у него есть заливка.
 
-![Circle with fill color](/assets/images/docs/en/basic-usage-circle-fill-color.png)
+![Круг с заливкой](/assets/images/docs/en/basic-usage-circle-fill-color.png)
 
-## Step 2 - Convert to Path (optional)
+## Шаг 2 - Преобразуйте в контур (необязательно)
 
-Ink/Stitch works best with path objects. We recommend to transform objects you want to stitch to paths:
+Ink/Stitch лучше работает с контурными объектами. Рекомендуем преобразовывать объекты для вышивки в контуры:
 
-* Select all objects (`Ctrl+A`)
-* `Path > Object to Path` or `Ctrl+Alt+C`.
+* Выделите все объекты (`Ctrl+A`)
+* `Контур > Оконтурить объект` или `Ctrl+Alt+C`.
 
-## Step 3 - Parametrize SVG Path for Embroidery
+## Шаг 3 - Укажите параметры SVG контура для вышивки
 
-* Select at least one object.
-* Open `Extensions > Ink/Stitch  > Params`.
-* Play with the values. The simulator will update whenever you change the settings.
-* For now, close without saving.
+* Выберите хотя бы один объект.
+* Откройте `Расширения > Ink/Stitch  > Параметры`.
+* Поиграйте со значениями. Симуляция будет обновляться каждый раз при изменении парметров.
+* После этого закройте диалог(значения применяются автоматически).
 
-## Step 4 - Create the Embroidery File
+## Шаг 4 - Создайте файл дизайна вышивки
 
-* Run `File > Save as...`
-* Navigate to the folder where you would like to save the file
-* Choose the correct file format for your machine
-* Click `Save`
-* Copy the file to your machine
+* Выберите `Файл > Сохранить как...`
+* Перейдите в папку, где вы хотите сохранить файл
+* Выберите верный формат для вашей машины
+* Нажмите `Сохранить`
+* Скопируйте файл на вашу машину
 
-**Tipp:** Make sure to save the file as an SVG file as well. Then you will always be able to modify it easily.
+**Совет:** Всегда сохраняйте копию как SVG файл. В этом случае будет легко вносить изменения в дизайн в будущем.
 {: .notice--info}
 
-## Workflow
+## Рабочий процесс
 
-If this worked well, we recommend to also read through the next page (workflow). Where you can get a deeper insight into Ink/Stitch and you can learn how to perform essential functions for embroidery files, like e.g. ordering objects, etc.
+Если все прошло успешно, рекомендуем прочесть следующий раздел (Рабочий процесс). Там вы сможете глубже изучить Ink/Stitch и узнаете как выполнять необходимые для вышивания операции, например упорядочивание объектов и прочее.
 
-If you run into trouble, contact us through [GitHub](https://github.com/inkstitch/inkstitch/issues/). We really like to hear about your problem, this way we can either improve the documentation or the programm itself.
-
+Если у вас возникли какие-либо проблемы, свяжитесь с нами в [GitHub](https://github.com/inkstitch/inkstitch/issues/). Нам очень нужны сообщения о проблемах, чтобы улучшить документацию или саму программу.

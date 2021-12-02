@@ -1,8 +1,8 @@
 ---
-title: "Localization"
+title: "Локализация"
 permalink: /ru/docs/localization/
 excerpt: ""
-last_modified_at: 2018-07-21
+last_modified_at: 2021-12-02
 toc: false
 ---
-If Ink/Stitch doesn't exist in your language or you discover a spelling error, inform us via [GitHub](https://github.com/inkstitch/inkstitch/issues) or read how to [translate](/developers/localize/) Ink/Stitch yourself.
+Если в Ink/Stitch нет вашего языка или вы обнаружили ошибку, подскажите нам в [GitHub](https://github.com/inkstitch/inkstitch/issues) или узнайте как помочь с [переводом](/ru/developers/localize/) Ink/Stitch.

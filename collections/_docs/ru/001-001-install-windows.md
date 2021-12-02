@@ -2,7 +2,7 @@
 title: "Установка Ink/Stitch на Windows"
 permalink: /ru/docs/install-windows/
 excerpt: "Быстрая установка Ink/Stitch."
-last_modified_at: 2021-05-03
+last_modified_at: 2021-12-02
 toc: true
 ---
 ## Видео урок
@@ -19,19 +19,19 @@ toc: true
 
 ### Скачать
 Загрузите архив с расширением на нужном языке:
-
-* <i class="fa fa-download " ></i> [английский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-en_US.zip)
-* <i class="fa fa-download " ></i> [финский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-fi_FI.zip)
+* <i class="fa fa-download " ></i> [Русский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-ru_RU.zip)
+* <i class="fa fa-download " ></i> [Английский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-en_US.zip)
+* <i class="fa fa-download " ></i> [Финский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-fi_FI.zip)
 * <i class="fa fa-download " ></i> [Французский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-fr_FR.zip)
 * <i class="fa fa-download " ></i> [Немецкий]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-de_DE.zip)
-* <i class="fa fa-download " ></i> [итальянский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-it_IT.zip)
+* <i class="fa fa-download " ></i> [Итальянский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-it_IT.zip)
 * <i class="fa fa-download " ></i> [Японский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-ja_JP.zip)
-* <i class="fa fa-download " ></i> [нидерландский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-nl_NL.zip)
-* <i class="fa fa-download " ></i> [русский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-ru_RU.zip)
+* <i class="fa fa-download " ></i> [Нидерландский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-nl_NL.zip)
+
 
 **Последняя версия:** {{ site.github.latest_release.published_at | date: "%Y-%m-%d"  }} [Ink/Stitch {{ site.github.latest_release.tag_name }}](https://github.com/inkstitch/inkstitch/releases/latest)
 
-Выбранная `LOCALE` на показ меню внутри Inkscape. Диалоги Ink/Stitch будут отображены на языке вашей ОС(если этот язык поддерживается).<br><br>Для вашего языка нет расширения? Помогите нам [перевести диалоги на ваш родной язык](/ru/developers/localize/).
+Выбранный выше язык влияет только на показ пунктов меню в Inkscape. Диалоги Ink/Stitch будут отображены на языке вашей ОС независимо от выбранного файла загрузки(если этот язык поддерживается).<br><br>Для вашего языка нет расширения? Помогите нам [перевести диалоги на ваш родной язык](/ru/developers/localize/).
 {: .notice--info }
 
 
@@ -62,7 +62,7 @@ toc: true
  <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [Новости Ink/Stitch](/feed.xml)<br />
 {: .notice--info }
 
-<p class="notice--info" style="margin-top: -3.5em !important;">Or watch the project on GitHub:<br /><iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=inkstitch&repo=inkstitch&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe></p>
+<p class="notice--info" style="margin-top: -3.5em !important;">Или следите за проектом на GitHub:<br /><iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=inkstitch&repo=inkstitch&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe></p>
 
 ## Решение проблем
 
@@ -70,7 +70,7 @@ toc: true
 
 **Проверьте путь установки**
 
-Проверьте что вы распаковали архив с Ink/Stitch в правильную папку. Если с папкой `Пользовательские расширения` не удается добиться работы расширения, попробуйте распаковать арзив в папку `Inkscape extensions`.
+Проверьте что вы распаковали архив с Ink/Stitch в правильную папку. Если с папкой `Пользовательские расширения` не удается добиться работы расширения, попробуйте распаковать архив в папку `Inkscape extensions`.
 Её тоже можно найти через меню `Правка > Параметры > Система`.
 
 **Антивирусное ПО**

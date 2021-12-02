@@ -1,98 +1,98 @@
 ---
-title: "Customize Ink/Stitch"
+title: "Настройка Ink/Stitch"
 permalink: /ru/docs/customize/
 excerpt: ""
-last_modified_at: 2021-10-14
+last_modified_at: 2021-12-02
 toc: true
 ---
 
-## Shortcut Keys
+## Сочетнаия клавиш
 
-You can speed up your work with Ink/Stitch, if you assign shortcut keys.
+Вы можете ускорить свою работу в Ink/Stitch, если создадите несколько сочетаний клавиш.
 
-The following list shows shortcut keys provided in the downloadable file below.
+Следующий список показывает сочетания клавиш, которые можно скачать в файле ниже.
 
-Some of the defined shortcut keys will replace others which are native to Inkscape. In the table you will see which they are and how you can still access these functions.
+Некоторые из этих сочетаний переопределяют те, что уже имеются в Inkscape по умолчанию. В таблице указаны какие именно и как к этим функциям можно обратиться по другому.
 {: .notice--warning }
 
-Shortcut&nbsp;Keys | Effect | Replaces
+Сочетание&nbsp;клавиш | Эфект | Заменяет
 -------- | --------
-<key>PageUp</key>                             | Stack Up* | Object > Raise (see also toolbar buttons)
-<key>PageDown</key>                           | Stack Down* | Object > Lower (see also toolbar buttons)
-<key>ctrl</key>+<key>R</key>                  | Reverse the direction of a path.**
-<key>ctrl</key>+<key>shift</key>+<key>P</key> | Params | Edit > Preferences
-<key>ctrl</key>+<key>shift</key>+<key>L</key> | Simulator (Live simulation)
-<key>ctrl</key>+<key>shift</key>+<key>/</key> | Stitch plan preview (beside of the canvas) | Path > Division (use Strg+/ instead)
-<key>ctrl</key>+<key>shift</key>+<key>O</key> | Break apart fill objects... (O for Object) | Object > Object properties
-<key>ctrl</key>+<key>shift</key>+<key>I</key> | PDF Export
-<key>ctrl</key>+<key>shift</key>+<key>Q</key> | Lettering (Q for QWERTY) | Object > Selectors and CSS
-<key>ctrl</key>+<key>shift</key>+<key>Del</key> | Troubleshoot objects (remove errors)
-<key>ctrl</key>+<key>shift</key>+<key>+</key> | Attach commands to selected objects
-<key>ctrl</key>+<key>shift</key>+<key>U</key> | Convert line to satin column (U looks like two rails) | Object > Group (use Ctrl+G instead)
-<key>ctrl</key>+<key>shift</key>+<key>J</key> | Flip satin column rails (J looks like an arrow)
-<key>ctrl</key>+<key>shift</key>+<key>B</key> | Cut satin column (B is cut in half) | Path > Union (use Ctrl++ instead)
-<key>ctrl</key>+<key>shift</key>+<key>*</key> | Auto-route satin (puts everything in order)
+<key>PageUp</key>                             | Передвинуть выше* | Объект > Поднять (также есть кнопка на панели)
+<key>PageDown</key>                           | Передвинуть ниже* | Объект > Опустить (также есть кнопка на панели)
+<key>ctrl</key>+<key>R</key>                  | Изменить направление контура.**
+<key>ctrl</key>+<key>shift</key>+<key>P</key> | Параметры | Правка > Параметры
+<key>ctrl</key>+<key>shift</key>+<key>L</key> | Симулятор (Живая симуляция)
+<key>ctrl</key>+<key>shift</key>+<key>/</key> | Предпросмотр плана вышивки (рядом с холстом) | Контур > Разделить (используйте Strg+/)
+<key>ctrl</key>+<key>shift</key>+<key>O</key> | Разделить объекты заливок... (O как в Object) | Объект > Свойства объекта
+<key>ctrl</key>+<key>shift</key>+<key>I</key> | Экспорт в PDF
+<key>ctrl</key>+<key>shift</key>+<key>Q</key> | Надписи (Q как в QWERTY) | Объект > Селекторы и CSS
+<key>ctrl</key>+<key>shift</key>+<key>Del</key> | Решение проблем с объектом (убрать ошибки)
+<key>ctrl</key>+<key>shift</key>+<key>+</key> | Добавить команды к выбранным объектам
+<key>ctrl</key>+<key>shift</key>+<key>U</key> | Преобразовать линию в сатин (U как две направляющих) | Объект > Группировать (используйте Ctrl+G)
+<key>ctrl</key>+<key>shift</key>+<key>J</key> | Поменять направляющие сатина (J как стрелка)
+<key>ctrl</key>+<key>shift</key>+<key>B</key> | Разделить сатин (B разделена пополам) | Контур > Объединить (используйте Ctrl++)
+<key>ctrl</key>+<key>shift</key>+<key>*</key> | Автомрашрут сатина (расположит все по порядку)
 
-The Ink/Stitch [simulator](/ru/docs/visualize/#simulation-shortcut-keys) also provides shortcut keys.
+В [симуляторе](/ru/docs/visualize/#simulation-shortcut-keys) Ink/Stitch есть свои дополнительные сочетания клавиш.
 
-\* Stack Up and Stack Down give precise control over the order that objects are stitched in. Very useful in combination with the Objects panel (`Objects > Objects ...`). The stacking order defines, in which order elements are stitched out (from bottom to top).<br><br>** For satins and running stitch, this changes the direction the stitches go in. Use with `Show path direction on outlines` selected in `Edit > Preferences > Tools > Node`. If you select just one vertex using the node editor and press `Ctrl+R`, Inkscape will reverse just one path in an object. This way you can make sure that both rails in a satin point the same direction.
+\* "Передвинуть выше" и "Передвинуть ниже" дают контроль над порядком вышивки объектов. Очень полезны в панели Объектов(`Объект > Объекты ...`). Порядок в группе определяет порядок вышивки(снизу вверх).<br><br>** Для сатинов и строчек, это сочетание меняет направление в котором они будут вышиваться. Используйте совместно с `Показывать направление контуров на абрисе` выбранном в `Правка > Параметры > Инструменты > Узлы`. Если вы выделите только одну вершину в редакторе узлов и нажмете `Ctrl+R`, Inkscape развернет только один контур в объекте. Таким образом можно добиться чтобы обе линии в сатине смотрели в одну сторону.
 {: .notice--info }
 {: style="font-size: 70%" }
 
-#### Download and import custom shortcut keys
+#### Загрузите и импортируйте клавиатурные сочетания
 
-* [Download the Ink/Stitch shortcut key file](/assets/files/inkstitch.xml)
-* Go to `Edit > Preferences > Interface > Keyboard`
-* Click on `Import...`
-* Select your shortcut key file (inkstitch.xml)
-* Click open
+* [Загрузите файл клавиатурных сочетаний Ink/Stitch](/assets/files/inkstitch.xml)
+* Перейдите в меню `Правка > Параметры > Интерфейс > Сочетания клавиш`
+* Нажмите `Импортировать...`
+* Выберите скаченный файл (inkstitch.xml)
+* Нажмите `Открыть`
 
-Now you will be able to use the shortcut keys described above.
+Теперь вам будут доступны сочетания из списка выше.
 
-If you want to define your own custom shortcut keys simply enter your desired key combinations in the shortcut dialog.
-Use the search function to find the extensions quicker. [More information](http://wiki.inkscape.org/wiki/index.php/Customizing_Inkscape)
+Если нужно определить свои собственные сочетания, просто введите их в диалоге "Сочетания клавиш".
+Используйте функцию поиска, чтобы найти нужную функцию в Расширениях. [Подробнее](http://wiki.inkscape.org/wiki/index.php/Customizing_Inkscape)
 {: .notice--info }
 
-## Zoom correction factor
+## Коэфициент масштаба просмотра
 
-For embroidery it is essential to get a sense of the actual size of the design. Inkscape has a setting to adapt zoom levels to your display size.
+Для вышивки важно иметь чувство реального размера дизайна. В Inkscape можно настроить уровне масштаба под ваш дисплей.
 
-* Go to `Edit > Preferences > Interface`
-* Hold a ruler onto your display and adjust the slider until the length matches
+* Откройте `Правка > Параметры > Интерфейс`
+* Приложите линейку к экрану и настройте слайдер пока деления не совпадут
  
-![Zoom correction](/assets/images/docs/ru/customize-zoom-correction.png)
+![Коррекция масштаба](/assets/images/docs/en/customize-zoom-correction.png)
 
-## Grids
+## Сетка
 
-To align your vector-shapes properly, you might want to make use of the grid functionality of Inkscape. Go to `View` and enable `Page Grid`. In `Snap Controls Bar` make sure `Snap to grids` is enabled. It is also possible to adjust spacing and origin of your grids in `File >  Document Properties > Grids`.
+Для более точного выравнивания объектов можно воспользоваться сеткой в Inkscape. Перейдите в меню `Вид` и включите `Сетка страницы`. Убедитесь что на панели справа включена кнопка `Snap to grids`. Можно настроить величину и расположение сетки  в `Файл >  Свойства документа > Сетки`.
 
-![Grids](https://user-images.githubusercontent.com/11083514/40359052-414d3554-5db9-11e8-8b49-3be75c5e9732.png)
+![Сетки](https://user-images.githubusercontent.com/11083514/40359052-414d3554-5db9-11e8-8b49-3be75c5e9732.png)
 
 ## Enabling Path Outlines & Direction
 
-Knowing path directions is important working with Ink/Stitch. Therefore we recommend to enable the checkboxes **Show path direction on outlines** and **Show temporary outline for selected paths** in `Edit > Preferences > Tools > Node`.
+Знание направлений контуров очень важно при работе в Ink/Stitch. Поэтому мы рекомендуем включить флажки **Показывать направление контуров на абрисе** и **Показывать временный абриз выделенных контуров** в `Правка > Параметры > Инструменты > Узлы`.
 
-Make sure that also **Show path outline** is enabled in `Tool Controls Bar` as you can see in the image below.
+Также убедитесь что на панели инструментов включена кнопка **Показать абрис контура** Как на картинке ниже.
 
 [![Path outlines & directions](https://user-images.githubusercontent.com/11083514/40360721-f294ef0a-5dbe-11e8-9d4d-98f469ff1fba.png)](https://user-images.githubusercontent.com/11083514/40360721-f294ef0a-5dbe-11e8-9d4d-98f469ff1fba.png)
 
-## Working with Templates
+## Работа с Шаблонами
 
-If you decided to use Ink/Stitch more frequently for your embroidery work, you might get tired of setting up the whole scene over and over again. In this case you are ready to create a template for your basic embroidery setup. Once you organised everything as desired, simply save your file in your templates folder. You can now access it by `File > New from template`.
+Если вы решите постоянно использовать Ink/Stitch для создания вышивок, то вам быстро надоест настраивать все эти параметры снова и снова. Для того чтобы избежать этого создайте Шаблон своих настроек Inkscape для вышивки. Когда вы всё настроите так как вам нужно, просто сохраните файл в папке шаблонов. Позднее вы сможете начинать создание вышивки через меню `Файл > Создать по шаблону`.
 
-Operating system|Template Folder
+Операционная система|Папка Шаблонов
 ---|---
 Linux|`~/.config/inkscape/templates`
 Windows|`C:\Users\%USERNAME%\AppData\Roaming\inkscape\templates`
 
-You should confirm the user folder in your inkscape preferences see the [FAQ](/ru/docs/faq/#i-have-downloaded-and-unzipped-the-latest-release-where-do-i-put-it).
+Удостоверьтесь, что путь до папки верный, для этого обратитесь в [FAQ](/docs/faq/#i-have-downloaded-and-unzipped-the-latest-release-where-do-i-put-it).
 
-**Tip:** Get [predefined templates](/fr/tutorials/resources/templates/) from our tutorial section.
+**Совет:** Найдите [готовые шаблоны](/ru/tutorials/resources/templates/) в наших уроках.
 {: .notice--info }
 
-## Install Thread Color Palettes
+## Устнаовка палитр цветных ниток
 
-Ink/Stitch comes with a lot of thread manufacturer color palettes which can be installed into Inkscape. This allows to build the designs with the correct colors in mind.
-Colors will appear in the PDF-Output and will also be included into your embroidery file, if your file format supports it. 
+Ink/Stitch поставляется со множеством палитр цветных нитей, которые могут быт установлены в Inkscape. Это позволяет создавать дизайны с правильными цветами.
+Цвета будут отобрадаться в PDF-отчете, а так же включены в файл вышивки, если формат это поддерживает. 
 
-[Read more](/fr/docs/thread-color/#install-thread-color-palettes-for-inkscape)
+[Узнать больше](/ru/docs/thread-color/#install-thread-color-palettes-for-inkscape)

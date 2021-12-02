@@ -1,134 +1,133 @@
 ---
-title: "Install Ink/Stitch on macOS"
+title: "Установка Ink/Stitch на macOS"
 permalink: /ru/docs/install-macos/
-excerpt: "How to quickly install Ink/Stitch."
-last_modified_at: 2021-05-03
+excerpt: "Быстрая установка Ink/Stitch."
+last_modified_at: 2021-12-02
 toc: true
 ---
-## Video Guide
+## Видео урок
 
-We also provide beginner tutorial videos on our <i class="fab fa-youtube"></i> [YouTube channel](https://www.youtube.com/channel/UCJCDCFuT_xQoI55e10HRiRw). Watch the installation process for <i class="fab fa-apple"></i> [macOS](https://www.youtube.com/watch?v=gmOVLNh9cu8&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=3).
+У нас есть множество обучающих видео на нашем <i class="fab fa-youtube"></i> [YouTube канале](https://www.youtube.com/channel/UCJCDCFuT_xQoI55e10HRiRw). Посмотрите процесс установки расширения на <i class="fab fa-apple"></i> [macOS](https://www.youtube.com/watch?v=gmOVLNh9cu8&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=3).
 
-**Warning:** The video for macOS users is outdated. Please read updated info ["Additional Steps for Catalina and Big Sur"](#addtitional-steps-for-catalina--big-sur)
+**Внимание:** Видео для пользователей macOS уже устарело. Прочтите актуальную информацию в разделе ["Дополнительные шаги для Catalina и Big Sur"](#дополнительные-шаги-для-catalina-и-big-sur)
 {: .notice--warning }
 
-## Requirements
+## Требования
 
-* [Inkscape](https://inkscape.org/release/) Version 1.0.2 or higher
+* [Inkscape](https://inkscape.org/release/) Версия 1.0.2 или выше
 
-That's it!  All python libraries and external dependencies are bundled (using the excellent [pyinstaller](http://www.pyinstaller.org)), so you shouldn't need to set anything else up.
+Это все что вам нужно. Все необходимые библиотеки и внешние зависимости поставляются вместе с расширением, благодаря прекрасной утилите [pyinstaller](http://www.pyinstaller.org).
 
-## Installation
+## Установка
 
-### Download
-Download the release archive.
+### Скачать
+Загрузите архив с расширением на нужном языке:
 
-язык| Catalina & Big Sur | High Sierra & Mojave | Sierra & El Capitan
+Язык| Catalina & Big Sur | High Sierra & Mojave | Sierra & El Capitan
 ---|---|---|---
-**английский** | <i class="fa fa-download " ></i> [Catalina / Big Sur]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-en_US.zip) | <i class="fa fa-download " ></i> [High Sierra / Mojave]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-mojave-en_US.zip)|<i class="fa fa-download " ></i> [Sierra / El Capitan]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-sierra-en_US.zip)|
-**финский** | <i class="fa fa-download " ></i> [Catalina / Big Sur]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-fi_FI.zip) | <i class="fa fa-download " ></i> [High Sierra / Mojave]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-mojave-fi_FI.zip)|<i class="fa fa-download " ></i> [Sierra / El Capitan]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-sierra-fi_FI.zip)|
+**Русский** | <i class="fa fa-download " ></i> [Catalina / Big Sur]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-ru_RU.zip) | <i class="fa fa-download " ></i> [High Sierra / Mojave]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-mojave-ru_RU.zip)|<i class="fa fa-download " ></i> [Sierra / El Capitan]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-sierra-ru_RU.zip)|
+{: .inline-table }
+**Английский** | <i class="fa fa-download " ></i> [Catalina / Big Sur]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-en_US.zip) | <i class="fa fa-download " ></i> [High Sierra / Mojave]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-mojave-en_US.zip)|<i class="fa fa-download " ></i> [Sierra / El Capitan]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-sierra-en_US.zip)|
+**Финский** | <i class="fa fa-download " ></i> [Catalina / Big Sur]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-fi_FI.zip) | <i class="fa fa-download " ></i> [High Sierra / Mojave]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-mojave-fi_FI.zip)|<i class="fa fa-download " ></i> [Sierra / El Capitan]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-sierra-fi_FI.zip)|
 **Французский** | <i class="fa fa-download " ></i> [Catalina / Big Sur]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-fr_FR.zip) | <i class="fa fa-download " ></i> [High Sierra / Mojave]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-mojave-fr_FR.zip)|<i class="fa fa-download " ></i> [Sierra / El Capitan]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-sierra-fr_FR.zip)|
-**итальянский** | <i class="fa fa-download " ></i> [Catalina / Big Sur]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-it_IT.zip) | <i class="fa fa-download " ></i> [High Sierra / Mojave]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-mojave-it_IT.zip)|<i class="fa fa-download " ></i> [Sierra / El Capitan]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-sierra-it_IT.zip)|
+**Итальянский** | <i class="fa fa-download " ></i> [Catalina / Big Sur]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-it_IT.zip) | <i class="fa fa-download " ></i> [High Sierra / Mojave]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-mojave-it_IT.zip)|<i class="fa fa-download " ></i> [Sierra / El Capitan]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-sierra-it_IT.zip)|
 **Японский** | <i class="fa fa-download " ></i> [Catalina / Big Sur]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-ja_JP.zip) | <i class="fa fa-download " ></i> [High Sierra / Mojave]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-mojave-ja_JP.zip)|<i class="fa fa-download " ></i> [Sierra / El Capitan]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-sierra-ja_JP.zip)|
 **Немецкий** | <i class="fa fa-download " ></i> [Catalina / Big Sur]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-de_DE.zip) | <i class="fa fa-download " ></i> [High Sierra / Mojave]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-mojave-de_DE.zip)|<i class="fa fa-download " ></i> [Sierra / El Capitan]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-sierra-de_DE.zip)|
-**нидерландский** | <i class="fa fa-download " ></i> [Catalina / Big Sur]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-nl_NL.zip) | <i class="fa fa-download " ></i> [High Sierra / Mojave]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-mojave-nl_NL.zip)|<i class="fa fa-download " ></i> [Sierra / El Capitan]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-sierra-nl_NL.zip)|
-**русский** | <i class="fa fa-download " ></i> [Catalina / Big Sur]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-ru_RU.zip) | <i class="fa fa-download " ></i> [High Sierra / Mojave]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-mojave-ru_RU.zip)|<i class="fa fa-download " ></i> [Sierra / El Capitan]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-sierra-ru_RU.zip)|
-{: .inline-table }
+**Нидерландский** | <i class="fa fa-download " ></i> [Catalina / Big Sur]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-nl_NL.zip) | <i class="fa fa-download " ></i> [High Sierra / Mojave]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-mojave-nl_NL.zip)|<i class="fa fa-download " ></i> [Sierra / El Capitan]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-sierra-nl_NL.zip)|
 
-**Latest release:** [Ink/Stitch {{ site.github.latest_release.tag_name }} ({{ site.github.latest_release.published_at | date: "%Y-%m-%d"  }})](https://github.com/inkstitch/inkstitch/releases/latest)
+**Последняя версия:**  [Ink/Stitch {{ site.github.latest_release.tag_name }} ({{ site.github.latest_release.published_at | date: "%Y-%m-%d"  }})](https://github.com/inkstitch/inkstitch/releases/latest)
 
-The `LOCALE` selected affects the menus shown inside Inkscape. Ink/Stitch dialogs are in the lanugage of your OS (if that language is supported).<br><br>Your language is not available? Help us to [translate the dialogs into your native language](/developers/localize/).
+Выбранный выше язык влияет только на показ пунктов меню в Inkscape. Диалоги Ink/Stitch будут отображены на языке вашей ОС независимо от выбранного файла загрузки(если этот язык поддерживается).<br><br>Для вашего языка нет расширения? Помогите нам [перевести диалоги на ваш родной язык](/ru/developers/localize/).
 {: .notice--info }
 
-### Extract Files
+### Распаковка файлов
 
-Go to `Edit > Preferences > System` and check where your `User Extensions` folder is.
+Перейдите в `Правка > Параметры > Система` и найдите путь до вашей папки `Пользовательских расширений`.
 
 ![Preferences: Extensions Folder](/assets/images/docs/en/extensions-folder-location-macos.jpg)
   
-Extract the Ink/Stitch archive into this folder.
+Распакуйте архив с Ink/Stitch прямо в эту папку.
 
-### Addtitional Steps for Catalina / Big Sur
+### Дополнительный шаги для Catalina и Big Sur
 
-Newer macOS versions will complain about Ink/Stitch if it is downloaded through your browser. You will receive an error message like this: `'xxxx' cannot be opened, because the developer cannot be verified`.
+Новые версии macOS блокируют Ink/Stitch, если он скачан браузером. Вы получите сообщение такого вида: `Приложение 'xxxx' нельзя открыть, так как не удалось проверить разработчика`.
 
-To avoid this error message open your Terminal App. Click on the small magnifying glass icon in your menu bar at the top right corner (or press <key>Command (⌘)</key>+<key>Space</key>). Search for `Terminal` and open the application.
+Для обхода этого сообщения запустите приложение Терминал. Кликинте по иконке с лупой на панели меню в правом верхнем углу (или нажмите <key>Command (⌘)</key>+<key>Пробел</key>). Найдите `Терминал` и откройте приложение.
 
-In the Terminal enter the following command:
+В терминале введите такую команду:
 
 ```
 xattr -r -d com.apple.quarantine ~/Library/Application\ Support/org.inkscape.Inkscape/config/inkscape/extensions/
 ```
 
-Replace `~/Library/Application\ Support/org.inkscape.Inkscape/config/inkscape/extensions/` if your Inkscape extension folder path has an other location (verify through `Inkscape > Preferences > System`).
+Замените `~/Library/Application\ Support/org.inkscape.Inkscape/config/inkscape/extensions/` на верный путь, если ваша папка расширений Inkscape находится в другом месте (можно уточнить в меню `Правка > Параметры > Система`).
 
-### Run Ink/Stitch
+### Запуск Ink/Stitch
 
-Restart Inkscape.
+Перезапустите Inkscape.
 
-You will then find Ink/Stitch under `Extensions > Ink/Stitch`.
+Теперь Ink/Stitch будет доступен через меню `Расширения > Ink/Stitch`.
 
-## Upgrade
+## Обновление
 
-Delete the old extension files first. Go to the extension directory and remove each inkstitch* file and folder.
+Сначала нужно убрать все файлы расширения текущей версии. Зайдите в папку расширений и удалите все файлы и папки, которые начинаются с inkstitch*.
 
-Then, proceed as above.
+Затем повторите шаги как при установке расширения с нуля.
 
-**Tip:** Subscribe to a news feed channel to keep track on Ink/Stitch Updates:<br />
- <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [GitHub Feed on new Releases](https://github.com/inkstitch/inkstitch/releases.atom)<br>
- <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [Ink/Stitch News](/feed.xml)<br />
+**Совет:** Подпишитесь на канал новостей, чтобы быть в курсе обновлений Ink/Stitch:<br />
+ <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [Новые версии на GitHub](https://github.com/inkstitch/inkstitch/releases.atom)<br>
+ <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [Новости Ink/Stitch](/feed.xml)<br />
 {: .notice--info }
 
-<p class="notice--info" style="margin-top: -3.5em !important;">Or watch the project on GitHub:<br /><iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=inkstitch&repo=inkstitch&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe></p>
+<p class="notice--info" style="margin-top: -3.5em !important;">Или следите за проектом на GitHub:<br /><iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=inkstitch&repo=inkstitch&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe></p>
 
-## Troubleshoot
+## Решение проблем
 
-### Ink/Stitch doesn't run / is greyed out
+### Ink/Stitch не отображается / не доступен
 
-**Confirm installation path**
+**Проверьте путь установки**
 
-Check if you extracted Ink/Stitch into the correct folder. If the `User extensions folder` doesn't work out correctly, you can also try to install into the `Inkscape extensions folder`.
-You can also look it up under `Inkscape > Preferences > System`.
+Проверьте что вы распаковали архив с Ink/Stitch в правильную папку. Если с папкой `Пользовательские расширения` не удается добиться работы расширения, попробуйте распаковать архив в папку `Inkscape extensions`.
+Её тоже можно найти через меню `Правка > Параметры > Система`.
 
-**Confirm version**
+**Проверьте версию Ink/Stitch**
 
-Please verify if you have downloaded Ink/Stitch for macOS ([Download](#download)).
+Убедитесь, что вы скачали Ink/Stitch версию для macOS ([Скачать](#/ru/download))
 
-### 'xxxx' cannot be opened, because the developer cannot be verified
+### Приложение 'xxxx' нельзя открыть, так как не удалось проверить разработчика
 
-Read ["Additional Steps for Catalina and Big Sur"](#addtitional-steps-for-catalina--big-sur).
+Прочтите ["Дополнительные шаги для Catalina и Big Sur"](#дополнительные-шаги-для-catalina-и-big-sur).
 
 ### ValueError: Null geometry supports no operations
 
-Ink/Stitch on macOS could raise the following error message:  `[...] ValueError: Null geometry supports no operations`.
+Ink/Stitch на macOS может показывать такую ошибку:  `[...] ValueError: Null geometry supports no operations`.
 
-This error is caused by an incompatibality of the shapely speedups library, which is inlcuded in the Ink/Stitch files.
-In order to bring Ink/Stitch back to work delete the library as follows:
+Эта ошибка вызвана несовместимостью встроенной библиотеки shapely speedups, которая включена в Ink/Stitch.
+Для возобновления работы Ink/Stitch, удалите библиотеку следующим образом:
 
-* Open the folder of your Ink/Stitch installation (usually this is: `~/Library/Application\ Support/org.inkscape.Inkscape/config/inkscape/extensions/`)
-* Open as well your Ink/Stitch subfolder if you have one
-* Press `Ctrl` while you click on the inkstitch application file and select Show `Package Contents` 
+* Откройте папку где установлен Ink/Stitch (обычно это: `~/Library/Application\ Support/org.inkscape.Inkscape/config/inkscape/extensions/`)
+* Если есть подпапка для Ink/Stitch откройте её
+* Зажмите `Ctrl` при клике на файле приложения inkstitch и выберите `Показать Содержимое Пакета` 
 
   ![Show Package Contents](/assets/images/docs/en/macOS-nogeometry.png)
 
-* Go into the Folder `Contents > MacOS` and delete the folder named `shapely`
+* Зайдите в папку `Contents > MacOS` и удалите папку с именем `shapely`
 
-### I installed Ink/Stitch in my native language, but the dialogue windows are displayed in English
+### Я скачал Ink/Stitch на своем родном языке, но диалоговые окна отображаются на английском
 
-**Incomplete Translation**
+**Незавершенный перевод**
 
-It is possible, that not all strings have been translated. This is indicated by **some strings of text beeing in English and others in your native language**.
-If you like to complete the translation, have a look at our [description for translators](/developers/localize/).
+Возможно не все строки были переведены. В этом случае вы будете видеть **одновременно уже переведенные строки на вашем языке и некоторые строки на английском языке**.
+Если вы хотите дополнить или исправить перевод, посмотрите [описание для переводчиков](/ru/developers/localize/).
 
-**Language Settings**
+**Настройки языка**
 
-We have to distinguish between the Extension menu in Inkscape and the dialogue windows.
-The selection of the ZIP file causes only the Extension menu to be in a certain language.
-The dialgoue windows are build differently. They will use the language of your operating system.
-If Ink/Stitch is uncertain, which language to support, it will fallback on English.
-You can tell Inkscape explicitly to use your native language as follows:
-  * Go to Edit > Preferences > Interface (Ctrl + Shift + P)
-  * Set your language
-  * Restart Inkscape
+Есть некоторое различие между отображением языка в меню и в диалоговых окнах. Выбор нужного ZIP-архива влияет только на язык опций в меню.
+Диалоговые окна собираются по-другому. В них будет отображаться текст на языке вашей операционной системы.
+Если Ink/Stitch не поддерживает язык ОС, то будет выбран английский язык для отображения.
+Вы можете явно указать предпочитаемый язык в Inkscape:
+  * Перейдите в меню Правка > Параметры > Интерфейс (Ctrl + Shift + P)
+  * Установите нужный язык
+  * Перезапустите Inkscape
 
 ![Preferences > Interface](/assets/images/docs/en/preferences_language.png)

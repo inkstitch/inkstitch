@@ -1,110 +1,116 @@
 ---
-title: "Install Ink/Stitch on Linux"
+title: "Установка Ink/Stitch на Linux"
 permalink: /ru/docs/install-linux/
-excerpt: "How to quickly install Ink/Stitch."
-last_modified_at: 2021-05-03
+excerpt: "Быстрая установка Ink/Stitch."
+last_modified_at: 2021-12-02
 toc: true
 ---
-## Video Guide
+## Видео урок
 
-We also provide beginner tutorial videos on our <i class="fab fa-youtube"></i> [YouTube channel](https://www.youtube.com/channel/UCJCDCFuT_xQoI55e10HRiRw). Watch the installation process for <i class="fab fa-linux"></i> [Linux](https://www.youtube.com/watch?v=Dkb5UvsZUNg&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=2).
+У нас есть множество обучающих видео на нашем <i class="fab fa-youtube"></i> [YouTube канале](https://www.youtube.com/channel/UCJCDCFuT_xQoI55e10HRiRw). Посмотрите процесс установки расширения на <i class="fab fa-linux"></i> [Linux](https://www.youtube.com/watch?v=Dkb5UvsZUNg&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=2).
 
-## Requirements
+## Требования
 
-* [Inkscape](https://inkscape.org/release/) Version 1.0.2 or higher
+* [Inkscape](https://inkscape.org/release/) Версия 1.0.2 или выше
 
-That's it!  All python libraries and external dependencies are bundled (using the excellent [pyinstaller](http://www.pyinstaller.org)), so you shouldn't need to set anything else up.
+Это все что вам нужно. Все необходимые библиотеки и внешние зависимости поставляются вместе с расширением, благодаря прекрасной утилите [pyinstaller](http://www.pyinstaller.org).
 
-## Installation
+## Установка
 
-### Download
-Download the release archive for your prefered language.
+### Скачать
+Загрузите архив с расширением на нужном языке:
 
-* <i class="fa fa-download " ></i> [английский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-en_US.zip)
-* <i class="fa fa-download " ></i> [финский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-fi_FI.zip)
+* <i class="fa fa-download " ></i> [Русский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-ru_RU.zip)
+* <i class="fa fa-download " ></i> [Английский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-en_US.zip)
+* <i class="fa fa-download " ></i> [Финский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-fi_FI.zip)
 * <i class="fa fa-download " ></i> [Французский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-fr_FR.zip)
 * <i class="fa fa-download " ></i> [Немецкий]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-de_DE.zip)
 * <i class="fa fa-download " ></i> [Японский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-ja_JP.zip)
-* <i class="fa fa-download " ></i> [итальянский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-it_IT.zip)
-* <i class="fa fa-download " ></i> [нидерландский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-nl_NL.zip)
-* <i class="fa fa-download " ></i> [русский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-ru_RU.zip)
+* <i class="fa fa-download " ></i> [Итальянский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-it_IT.zip)
+* <i class="fa fa-download " ></i> [Нидерландский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-nl_NL.zip)
 
-**Latest release:** {{ site.github.latest_release.published_at | date: "%d.%m.%Y"  }} [Ink/Stitch {{ site.github.latest_release.tag_name }}](https://github.com/inkstitch/inkstitch/releases/latest)
 
-### Extract Files
-Go to `Edit > Preferences > System` and check where your `User Extensions` folder is.
+**Последняя версия:** {{ site.github.latest_release.published_at | date: "%Y-%m-%d"  }} [Ink/Stitch {{ site.github.latest_release.tag_name }}](https://github.com/inkstitch/inkstitch/releases/latest)
+
+Выбранный выше язык влияет только на показ пунктов меню в Inkscape. Диалоги Ink/Stitch будут отображены на языке вашей ОС независимо от выбранного файла загрузки(если этот язык поддерживается).<br><br>Для вашего языка нет расширения? Помогите нам [перевести диалоги на ваш родной язык](/ru/developers/localize/).
+{: .notice--info }
+
+
+### Распаковка файлов
+
+Перейдите в `Правка > Параметры > Система` и найдите путь до вашей папки `Пользовательских расширений`.
 
 ![Extensions folder location](/assets/images/docs/en/extensions-folder-location-linux.jpg)
 
-Extract the Ink/Stitch archive into this folder.
+Распакуйте архив с Ink/Stitch прямо в эту папку.
 
 ```
 $ cd ~/.config/inkscape/extensions
 $ unzip ~/Downloads/inkstitch-{{ site.github.latest_release.tag_name }}-linux-en_US.zip
 ```
 
-### Run Ink/Stitch
-Restart Inkscape.
+### Запуск Ink/Stitch
 
-You will then find Ink/Stitch under `Extensions > Ink/Stitch`.
+Перезапустите Inkscape.
 
-## Upgrade
+Теперь Ink/Stitch будет доступен через меню `Расширения > Ink/Stitch`.
 
-Delete the old extension files first. Go to the extension directory and remove each inkstitch* file and folder.
+## Обновление
 
-Then, proceed as above.
+Сначала нужно убрать все файлы расширения текущей версии. Зайдите в папку расширений и удалите все файлы и папки, которые начинаются с inkstitch*.
 
-**Tip:** Subscribe to a news feed channel to keep track on Ink/Stitch Updates:<br />
- <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [GitHub Feed on new Releases](https://github.com/inkstitch/inkstitch/releases.atom)<br>
- <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [Ink/Stitch News](/feed.xml)<br />
+Затем повторите шаги как при установке расширения с нуля.
+
+**Совет:** Подпишитесь на канал новостей, чтобы быть в курсе обновлений Ink/Stitch:<br />
+ <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [Новые версии на GitHub](https://github.com/inkstitch/inkstitch/releases.atom)<br>
+ <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [Новости Ink/Stitch](/feed.xml)<br />
 {: .notice--info }
 
-<p class="notice--info" style="margin-top: -3.5em !important;">Or watch the project on GitHub:<br /><iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=inkstitch&repo=inkstitch&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe></p>
+<p class="notice--info" style="margin-top: -3.5em !important;">Или следите за проектом на GitHub:<br /><iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=inkstitch&repo=inkstitch&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe></p>
 
-## Troubleshoot
+## Решение проблем
 
-### Ink/Stitch doesn't run / is greyed out
+### Ink/Stitch не отображается / не доступен
 
-**Confirm installation path**
+**Проверьте путь установки**
 
-Check if you extracted Ink/Stitch into the correct folder. If the `User extensions folder` doesn't work out correctly, you can also try to install into the `Inkscape extensions folder`.
-You can also look it up under `Edit > Preferences > System`.
+Проверьте что вы распаковали архив с Ink/Stitch в правильную папку. Если с папкой `Пользовательские расширения` не удается добиться работы расширения, попробуйте распаковать архив в папку `Inkscape extensions`.
+Её тоже можно найти через меню `Правка > Параметры > Система`.
 
-**Confirm Ink/Stitch Version**
+**Проверьте версию Ink/Stitch**
 
-Verify if you have downloaded Ink/Stitch for Linux ([Download](#download))
+Убедитесь, что вы скачали Ink/Stitch версию для Linux ([Скачать](#/ru/download))
 
-**Confirm ownership/permissions**
+**Проверьте владельца/права**
 
-Some users report false ownership/permissions can cause this issue.
+Некоторые пользователи сообщали, что у файлов были неверные права, препятствующие запуску расширения.
 
 ### AttributeError: 'NoneType' object has no attribute 'title' in inkstitch.py
 
-This error has been reported to us by users who have installed Inkscape through snap. Snap is known to cause issues for Ink/Stitch to run with Inkscape.
-Please try an other installing method. Any described on [https://inkscape.org/](https://inkscape.org/releases/latest/) will be fine. 
+Такая ошибка может возникать у пользователей, которые установили Inkscape через snap. Работа Ink/Stitch в Inkscape из Snap это известная проблема и решения пока нет.
+Просто поробуйте другой метод установки Inkscape. Подойдет любой из лписанных на сайте [https://inkscape.org/](https://inkscape.org/releases/latest/). 
 
-### Ink/Stitch dialogs disappear after a few seconds
+### Диалоги Ink/Stitch пропадают через несколько секунд
 
-This issue can be caused by wayland. Start Inkscape with the following command: `export GDK_BACKEND=x11 && inkscape`.
+Эта проблема может быть вызвана wayland. Запустите Inkscape такой командой: `export GDK_BACKEND=x11 && inkscape`.
 
-This workaround has to be used until we moved all Ink/Stitch applications to the electron environment. 
+Это решение можно использовать до тех пор пока мы не переведем все приложения Ink/Stitch на electron. 
 
-### I installed Ink/Stitch in my native language, but the dialogue windows are displayed in English
+### Я скачал Ink/Stitch на своем родном языке, но диалоговые окна отображаются на английском
 
-**Incomplete Translation**
+**Незавершенный перевод**
 
-It is possible, that not all strings have been translated. This is indicated by **some strings of text beeing in English and others in your native language**.
-If you like to complete the translation, have a look at our [description for translators](/developers/localize/).
+Возможно не все строки были переведены. В этом случае вы будете видеть **одновременно уже переведенные строки на вашем языке и некоторые строки на английском языке**.
+Если вы хотите дополнить или исправить перевод, посмотрите [описание для переводчиков](/ru/developers/localize/).
 
-**Language Setting**
+**Настройки языка**
 
-We have to distinguish between the Extension menu in Inkscape and the dialogue windows.
-The selection of the ZIP file causes only the Extension menu to be in a certain language.
-The dialgoue windows are build differently. They will use the language of your operating system.
-If Ink/Stitch is uncertain, which language to support, it will fallback on English.
-You can tell Inkscape explicitly to use your native language as follows:
-  * Go to Edit > Preferences > Interface (Ctrl + Shift + P)
-  * Set your language
-  * Restart Inkscape
+Есть некоторое различие между отображением языка в меню и в диалоговых окнах. Выбор нужного ZIP-архива влияет только на язык опций в меню.
+Диалоговые окна собираются по-другому. В них будет отображаться текст на языке вашей операционной системы.
+Если Ink/Stitch не поддерживает язык ОС, то будет выбран английский язык для отображения.
+Вы можете явно указать предпочитаемый язык в Inkscape:
+  * Перейдите в меню Правка > Параметры > Интерфейс (Ctrl + Shift + P)
+  * Установите нужный язык
+  * Перезапустите Inkscape
 
 ![Preferences > Interface](/assets/images/docs/en/preferences_language.png)

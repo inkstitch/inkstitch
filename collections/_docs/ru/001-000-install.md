@@ -2,7 +2,7 @@
 title: "Установка Ink/Stitch"
 permalink: /ru/docs/install/
 excerpt: "Быстрая установка Ink/Stitch."
-last_modified_at: 2020-12-03
+last_modified_at: 2021-12-02
 toc: false
 ---
 * <i class="fab fa-linux"></i> [Linux](/ru/docs/install-linux/)
