@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-11-17 01:36+0000\n"
-"PO-Revision-Date: 2021-11-18 01:44\n"
+"POT-Creation-Date: 2021-11-24 01:44+0000\n"
+"PO-Revision-Date: 2021-12-02 01:47\n"
 "Last-Translator: \n"
 "Language-Team: Ukrainian\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-17 01:36+0000\n"
+"POT-Creation-Date: 2021-11-24 01:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1015,7 +1015,7 @@ msgstr "Виберіть хоча б одну лінію для її конве�
 msgid "Only simple lines may be converted to satin columns."
 msgstr "В сатинову колонку можна перетворити тільки прості линії."
 
-#: lib/extensions/convert_to_satin.py:134
+#: lib/extensions/convert_to_satin.py:137
 msgid "Ink/Stitch cannot convert your stroke into a satin column. Please break up your path and try again."
 msgstr "Ink/Stitch не може перетворити вашу лінію в сатинову колонку. Разділіть лінію і спробуйте знову."
 

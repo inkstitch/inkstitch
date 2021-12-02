@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-11-17 01:36+0000\n"
-"PO-Revision-Date: 2021-11-18 01:44\n"
+"POT-Creation-Date: 2021-11-24 01:44+0000\n"
+"PO-Revision-Date: 2021-12-02 01:47\n"
 "Last-Translator: \n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-17 01:36+0000\n"
+"POT-Creation-Date: 2021-11-24 01:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1017,7 +1017,7 @@ msgstr "サテンの列に変換するには、少なくとも1行を選択し�
 msgid "Only simple lines may be converted to satin columns."
 msgstr "単純な線のみをサテンの列に変換できます。"
 
-#: lib/extensions/convert_to_satin.py:134
+#: lib/extensions/convert_to_satin.py:137
 msgid "Ink/Stitch cannot convert your stroke into a satin column. Please break up your path and try again."
 msgstr "インク/ステッチでは、ストロークをサテンの列に変換できません。パスを分割して、もう一度やり直してください。"
 
@@ -2234,11 +2234,11 @@ msgstr "サテン自動ルーティング"
 
 #: inx/inkstitch_auto_satin.inx:5
 msgid "Trim jump stitches"
-msgstr ""
+msgstr "ジャンプスティッチのトリミング"
 
 #: inx/inkstitch_auto_satin.inx:6
 msgid "Preserve order of satin columns"
-msgstr ""
+msgstr "サテンカラムの順序を保持"
 
 #: inx/inkstitch_auto_satin.inx:12 inx/inkstitch_convert_to_satin.inx:10
 #: inx/inkstitch_convert_to_stroke.inx:13 inx/inkstitch_cut_satin.inx:10
@@ -2272,15 +2272,15 @@ msgstr "クリーンアップドキュメント"
 
 #: inx/inkstitch_cleanup.inx:7
 msgid "Remove Small Fill Areas"
-msgstr ""
+msgstr "小さな塗りつぶし部分の削除"
 
 #: inx/inkstitch_cleanup.inx:7
 msgid "Removes areas smaller than dedined by threshold."
-msgstr ""
+msgstr "しきい値で指定された領域よりも小さい領域を削除します。"
 
 #: inx/inkstitch_cleanup.inx:8
 msgid "Fill area threshold (px²)"
-msgstr ""
+msgstr "塗りつぶし領域のしきい値(px²)"
 
 #: inx/inkstitch_cleanup.inx:10
 msgid "Remove Small strokes"
@@ -2288,11 +2288,11 @@ msgstr ""
 
 #: inx/inkstitch_cleanup.inx:10
 msgid "Removes small strokes shorter than defined by threshold."
-msgstr ""
+msgstr "しきい値で定義された長さよりも短いストロークを削除します。"
 
 #: inx/inkstitch_cleanup.inx:11
 msgid "Stroke threshold (px)"
-msgstr ""
+msgstr "ストロークのしきい値（px)"
 
 #: inx/inkstitch_convert_to_satin.inx:3
 msgid "Convert Line to Satin"
@@ -2308,7 +2308,7 @@ msgstr ""
 
 #: inx/inkstitch_convert_to_stroke.inx:8
 msgid "Do not delete original satin column."
-msgstr ""
+msgstr "オリジナルのサテン列は削除しないでください。"
 
 #: inx/inkstitch_cut_satin.inx:3
 msgid "Cut Satin Column"
@@ -2338,11 +2338,11 @@ msgstr "環境設定"
 
 #: inx/inkstitch_embroider_settings.inx:17
 msgid "Collapse length (mm)"
-msgstr ""
+msgstr "切る長さ(mm)"
 
 #: inx/inkstitch_embroider_settings.inx:17
 msgid "Jump stitches smaller than this will be treated as normal stitches."
-msgstr ""
+msgstr "これより小さいジャンプステッチは、通常のステッチとして扱われます。"
 
 #: inx/inkstitch_flip.inx:3
 msgid "Flip Satin Column Rails"
