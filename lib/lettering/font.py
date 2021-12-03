@@ -208,20 +208,15 @@ class Font(object):
 
         # make sure font stroke styles have always a similar look
         for element in destination_group.iterdescendants(SVG_PATH_TAG):
-            dash_array = ""
-            stroke_width = ""
-            style = inkex.styles.Style(element.get('style'))
-
+            style = inkex.Style(element.get('style'))
             if style.get('fill') == 'none':
-                stroke_width = ";stroke-width:1px"
-                if style.get('stroke-width'):
-                    style.pop('stroke-width')
-
+                style += inkex.Style("stroke-width:1px")
                 if style.get('stroke-dasharray') and style.get('stroke-dasharray') != 'none':
-                    stroke_width = ";stroke-width:0.5px"
-                    dash_array = ";stroke-dasharray:3, 1"
-
-                element.set('style', '%s%s%s' % (style.to_str(), stroke_width, dash_array))
+                    style += inkex.Style("stroke-dasharray:3, 1")
+                    # Set a smaller width to auto-route running stitches
+                    if self.auto_satin or element.get_id().startswith("autosatinrun"):
+                        style += inkex.Style("stroke-width:0.5px")
+                element.set('style', '%s' % style.to_str())
 
         self._ensure_command_symbols(destination_group)
 
