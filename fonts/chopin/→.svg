@@ -26,12 +26,12 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1440"
-     inkscape:window-height="807"
+     inkscape:window-height="802"
      id="namedview245"
      showgrid="true"
      inkscape:zoom="8.0759517"
-     inkscape:cx="17.706891"
-     inkscape:cy="121.53366"
+     inkscape:cx="-3.0336982"
+     inkscape:cy="118.74761"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
@@ -56,9 +56,9 @@
        inkscape:color="rgb(0,0,255)"
        inkscape:locked="false"
        id="guide253"
-       inkscape:label="base line"
+       inkscape:label="baseline"
        orientation="0,1"
-       position="-17.740142,94.770904" />
+       position="-17.740142,94.7709" />
     <sodipodi:guide
        id="guide255"
        inkscape:label="decender"
