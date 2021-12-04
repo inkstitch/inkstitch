@@ -1,9 +1,11 @@
 #!/bin/bash
 set -e
-if [ -d $HOME/Library/Application\ Support/org.inkscape.Inkscape/config/inkscape/extensions/inkstitch/ ]; then
-	rm -rf $HOME/Library/Application\ Support/org.inkscape.Inkscape/config/inkscape/extensions/inkstitch/
-	echo "Previous version of Inkstitch removed."
+inkstitch_folder=($HOME/Library/Application\ Support/org.inkscape.Inkscape/config/inkscape/extensions/inkstitch)
+if [[ -L "${inkstitch_folder}" ]]; then
+	unlink "${inkstitch_folder}"
+	echo "Unlinking manual install, to avoid damaging user local repository."
 else
-	echo "No Inkstitch found."
+	rm -rf "${inkstitch_folder}"
+	echo "Removing previous Ink/Stitch installation."
 fi
 exit 0
