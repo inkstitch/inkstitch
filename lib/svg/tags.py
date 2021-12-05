@@ -49,6 +49,7 @@ SVG_OBJECT_TAGS = (SVG_ELLIPSE_TAG, SVG_CIRCLE_TAG, SVG_RECT_TAG)
 INKSTITCH_ATTRIBS = {}
 inkstitch_attribs = [
                 'ties',
+                'force_lock_stitches',
                 # clone
                 'clone',
                 # polyline

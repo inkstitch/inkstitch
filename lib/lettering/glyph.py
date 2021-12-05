@@ -88,7 +88,7 @@ class Glyph(object):
         self.min_x = left
 
     def _process_commands(self):
-        # Save object ids with commmands in a dictionary: {object_id: [connector_id, symbol_id]}
+        # Save object ids with commands in a dictionary: {object_id: [connector_id, symbol_id]}
         self.commands = {}
 
         for node in self.node.iter(SVG_USE_TAG):

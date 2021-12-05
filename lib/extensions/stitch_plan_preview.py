@@ -41,7 +41,7 @@ class StitchPlanPreview(InkstitchExtension):
         # apply options
         layer = svg.find(".//*[@id='__inkstitch_stitch_plan__']")
 
-        # update layer visibilty 0 = unchanged, 1 = hidden, 2 = lower opacity
+        # update layer visibility 0 = unchanged, 1 = hidden, 2 = lower opacity
         if self.options.layer_visibility == 1:
             self.hide_all_layers()
             layer.set('style', None)
