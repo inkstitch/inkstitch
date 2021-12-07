@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-12-06 01:44+0000\n"
-"PO-Revision-Date: 2021-12-06 01:45\n"
+"PO-Revision-Date: 2021-12-07 01:40\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -34,23 +34,23 @@ msgstr ""
 #. name of font in fonts/Brockscript
 #: inkstitch-fonts-metadata.py:2
 msgid "Brock Script"
-msgstr ""
+msgstr "Brock Script"
 
 #. description of font in fonts/Brockscript
 #: inkstitch-fonts-metadata.py:4
 msgid "Brock Script is a decorative satin column manuscript font of size approximatively 40mm. It can be enlarged up to 250%. It contains 118 glyphs, covering most western european languages needs.More decorative options are hidden in the µ glyph"
-msgstr ""
+msgstr "Brock Script ist eine dekorative Manuscript-Schrift aus Satinkolumnen mit einer Größe von annähernd 40mm. Eine Vergrößerung ist bis zu 250% möglich. Sie umfasst 118 Zeichen und deckt damit die Bedürfnisse der meisten westeuropäischen Sprachen ab. Weitere dekorative Optionen sind in dem µ Zeichen versteckt."
 
 #. name of font in fonts/amitaclo
 #: inkstitch-fonts-metadata.py:6
 msgid "Amitaclo"
-msgstr ""
+msgstr "Amitaclo"
 
 #. description of font in fonts/amitaclo
 #: inkstitch-fonts-metadata.py:8
 #, python-format
 msgid "The capital M is 25.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 160%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Der Großbuchstabe M ist bei einer Skalierung von 100% 25,3 mm breit. Die Schrift kann von 80% bis zu 160% skaliert werden. Jede Satinkolumne hat eine Zick-Zack-Unterlage."
 
 #. name of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:10
@@ -60,12 +60,12 @@ msgstr "Apex Lake"
 #. description of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:12
 msgid "Apex Lake is a large ornate capital letters font of size approximatively 60mm. It contains 38 glyphs : A-Z,0-9,! and ?. It can be reduced down to 80% and enlarged up to 130%"
-msgstr ""
+msgstr "Apex Lake ist eine Schrift mit großen, ornamentreichen Buchstaben. Die Größe beläuft sich auf annähernd 60mm. Sie enthält 38 Zeichen: A-Z,0-9,! und ?. Sie kann von 80% bis zu 130% skaliert werden."
 
 #. name of font in fonts/baumans_FI
 #: inkstitch-fonts-metadata.py:14
 msgid "Baumans FI"
-msgstr ""
+msgstr "Baumans FI"
 
 #. description of font in fonts/baumans_FI
 #: inkstitch-fonts-metadata.py:16
@@ -76,22 +76,22 @@ msgstr "Der Großbuchstabe M ist, bei einer Skalierung von 100%, 22,3 mm breit. 
 #. name of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:18
 msgid "Cherry for inkstitch"
-msgstr ""
+msgstr "Cherry for Ink/Stitch"
 
 #. description of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:20
 msgid "Cherry for inkstitch is a decorative satin column font of size approximatively 40mm. It can be reduced down to 80% and enlarged up to 180%. It contains 74 glyphs."
-msgstr ""
+msgstr "Cherry for Ink/Stitch ist eine dekorative Schrift aus Satinkolumnen. Die Größe beträgt in etwa 40mm. Sie kann von 80% auf bis zu 180% skaliert werden und umfasst 74 Zeichen."
 
 #. name of font in fonts/cherryforkaalleen
 #: inkstitch-fonts-metadata.py:22
 msgid "Cherry for Kaalleen"
-msgstr ""
+msgstr "Cherry for Kaalleen"
 
 #. description of font in fonts/cherryforkaalleen
 #: inkstitch-fonts-metadata.py:24
 msgid "Cherry for Kaalleen is a large decorative font of size approximatively 75mm. It contains 36 glyphs including the numbers and the 26 capitals  A-Z. It can be reduced down to 80% and enlarged up to 130%"
-msgstr ""
+msgstr "Cherry for Kaalleen ist eine große, dekorative Schrift. Die Größe beträgt in etwa 75mm. Sie umfasst 36 Zeichen, einschließlich Zahlen und 26 26 Großbuchstaben A-Z. Sie kann von 80% auf bis zu 130% skaliert werden."
 
 #. name of font in fonts/chopin
 #: inkstitch-fonts-metadata.py:26
@@ -133,7 +133,7 @@ msgstr "Digory Doodles Bean"
 #. description of font in fonts/digory_doodles_bean
 #: inkstitch-fonts-metadata.py:40
 msgid "All letters have mixed satin and bean stitch; The capital M is 16mm tall. The small x is 7 mm"
-msgstr ""
+msgstr "Alle Buchstaben sind eine Mischung aus Satinkolumnen und Bean-Stich. Der Großbuchstabe M ist 16mm hoch. Der Kleinbuchstabe x 7mm"
 
 #. name of font in fonts/emilio_20
 #: inkstitch-fonts-metadata.py:42
@@ -144,22 +144,22 @@ msgstr "Emilio 20"
 #: inkstitch-fonts-metadata.py:44
 #, python-format
 msgid "Emilio 20 is a font with capital only and numbers. M is 48.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 140%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Emilio 20 enthält nur Großbuchstaben und Zahlen. Das M ist, bei einer Skalierung von 100%, 48,5 mm breit. Eine Skalierung ist von 70% bis zu 140% möglich. Jede Satinkolumne hat eine Zick-Zack-Unterlage"
 
 #. name of font in fonts/emilio_20_tricolore
 #: inkstitch-fonts-metadata.py:46
 msgid "EMILIO 20 TRICOLORE"
-msgstr ""
+msgstr "EMILIO 20 TRICOLORE"
 
 #. description of font in fonts/emilio_20_tricolore
 #: inkstitch-fonts-metadata.py:48
 msgid "Emilio 20 tricolore is a large tricolor fill stitches and satin columns font of  size approximately 100mm. It contains 36 glyphs including the numbers and the 26 capitals  A-Z. It can be reduced down to 90% and enlarged up to 120%"
-msgstr ""
+msgstr "Emilio 20 tricolore ist eine große, dreifarbige Schrift, die aus Füllstichen und Satinkolumnen besteht. Die Größe beläuft sich auf annähernd 100mm. Sie umfasst 36 Zeichen, einschließlich Zahlen und 26 Großbuchstaben A-Z. Eine Skalierung ist von 90% bis zu 120% möglich."
 
 #. name of font in fonts/espresso_KOR
 #: inkstitch-fonts-metadata.py:50
 msgid "Espresso KOR"
-msgstr ""
+msgstr "Espresso KOR"
 
 #. description of font in fonts/espresso_KOR
 #: inkstitch-fonts-metadata.py:52
@@ -169,22 +169,22 @@ msgstr "Der Großbuchstabe M ist, bei einer Skalierung von 100%, 16,2 mm hoch. J
 #. name of font in fonts/excalibur_KOR
 #: inkstitch-fonts-metadata.py:54
 msgid "Excalibur KOR"
-msgstr ""
+msgstr "Excalibur KOR"
 
 #. description of font in fonts/excalibur_KOR
 #: inkstitch-fonts-metadata.py:56
 msgid "Excalibur KOR is a small satin column manuscript font of size approximatively 20mm. It can be reduced down to 80% and enlarged up to 140%. It contains 144 glyphs, covering most western European languages needs."
-msgstr ""
+msgstr "Excalibur KOR ist eine kleine Manuscript-Schrift aus Satinkolumnen, mit einer Größe von ca. 20mm. Eine Skalierung ist von 80% bis zu 140% möglich. Die Schrift umfasst 144 Zeichen und deckt damit die Bedürfnisse der meisten westeuropäischen Sprachen ab."
 
 #. name of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:58
 msgid "Fold Ink/Stitch"
-msgstr ""
+msgstr "Fold Ink/Stitch"
 
 #. description of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:60
 msgid "Fold Ink/Stitch is a large triple and quintuple running stitches capital font of size 100 mm. It contains 40 glyphs including all numbers and the 26 capitals  A-Z. It can be reduced down to 80% and enlarged up to 200%"
-msgstr ""
+msgstr "Fold Ink/Stitch ist eine Großbuchstaben-Schrift aus dreifachen und fünffachen Laufstichen, mit einer Größe von 100mm. Sie umfasst 40 Zeichen, einschließlich aller Zahlen und den Großbuchstaben A-Z. Eine Skalierung ist von 80% bis zu 200% möglich."
 
 #. name of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:62
@@ -209,17 +209,17 @@ msgstr "Geeignet für kleine Schriftarten (6 bis 15 mm)"
 #. name of font in fonts/infinipicto
 #: inkstitch-fonts-metadata.py:70
 msgid "InfiniPicto"
-msgstr ""
+msgstr "InfiniPicto"
 
 #. description of font in fonts/infinipicto
 #: inkstitch-fonts-metadata.py:72
 msgid "InfiniPicto is a fun font of size approximatively 60 mm containing only the 26 A-Z glyph. Each letter is a pictogram of an object whose name begins with that very letter..... in French"
-msgstr ""
+msgstr "InfiniPicto ist eine lustige Schriftart, mit einer Größe von ca. 60mm. Sie enthält nur die 26 Großbuchstaben. Jeder Buchstabe ist ein Piktogramm von einem Objekt, das mit diesem Buchstaben beginnt ... auf Französisch."
 
 #. name of font in fonts/kaushan_script_MAM
 #: inkstitch-fonts-metadata.py:74
 msgid "Kaushan Script MAM"
-msgstr ""
+msgstr "Kaushan Script MAM"
 
 #. description of font in fonts/kaushan_script_MAM
 #: inkstitch-fonts-metadata.py:76
@@ -235,28 +235,28 @@ msgstr "Learning curve"
 #. description of font in fonts/learning_curve
 #: inkstitch-fonts-metadata.py:80
 msgid "Small running stitch script font of size approximatively 12 mm.It can be reduced down to 90% and enlarged up to 200%"
-msgstr ""
+msgstr "Eine kleine Script-Schriftart aus Laufstichen, mit einer Größe von ca. 12mm. Sie kann von 90% bis zu 200% skaliert werden."
 
 #. name of font in fonts/lobster_AGS
 #: inkstitch-fonts-metadata.py:82
 msgid "Lobster AGS"
-msgstr ""
+msgstr "Lobster AGS"
 
 #. description of font in fonts/lobster_AGS
 #: inkstitch-fonts-metadata.py:84
 #, python-format
 msgid " The capital M is 19.8 millimeter wide at 100% scale. Can be scaled down to 80% or up to 150%. Every satin has zigzag underlay"
-msgstr ""
+msgstr " Der Großbuchstabe M ist, bei einer Skalierung von 100%, 19.8 mm breit. Die Schrift kann von 80% bis zu 150% skaliert werden. Jede Satinkolumne hat eine Zick-Zack-Unterlage"
 
 #. name of font in fonts/magnolia_ KOR
 #: inkstitch-fonts-metadata.py:86
 msgid "Magnolia KOR"
-msgstr ""
+msgstr "Magnolia KOR"
 
 #. description of font in fonts/magnolia_ KOR
 #: inkstitch-fonts-metadata.py:88
 msgid "Magnolia KOR is a script font of size approximatively 20mm. It can be scaled down to 80% and up to 120%"
-msgstr ""
+msgstr "Magnolia KOR ist eine Script-Schriftart mit einer Größe von annähernd 20mm. Sie kann von 80% bis zu 120% skaliert werden."
 
 #. name of font in fonts/manuskript_gotisch
 #: inkstitch-fonts-metadata.py:90
@@ -272,13 +272,13 @@ msgstr "Der Großbuchstabe M ist, bei einer Skalierung von 100%, 35 mm breit. Di
 #. name of font in fonts/marcelusSC_FI
 #: inkstitch-fonts-metadata.py:94
 msgid "MarcellusSC-FI"
-msgstr ""
+msgstr "MarcellusSC-FI"
 
 #. description of font in fonts/marcelusSC_FI
 #: inkstitch-fonts-metadata.py:96
 #, python-format
 msgid "MarcellusSC-FI is a small capital font of size 36 mm. It contains 107 glyphs covering most Western European languages. It can be reduced down to 70% and enlarged up to 200% or 500% using satin split"
-msgstr ""
+msgstr "MarcellusSC-FI ist eine kleine Großbuchstaben-Schrift mit einer Größe von 36mm. Sie umfasst 107 Zeichen und deckt damit die meisten westeuropäischen Sprachen ab. Eine Skalierung ist von 70% auf bis zu 200% möglich. Durch die Verwendung von geteilten Satinkolumnen kann sogar bis auf 500% skaliert werden."
 
 #. name of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:98
@@ -294,22 +294,22 @@ msgstr "Für mittelgroße Schriftgrößen geeignet. Der Großbuchstabe \"M\" ist
 #. name of font in fonts/namskout_AGS
 #: inkstitch-fonts-metadata.py:102
 msgid "Namskout"
-msgstr ""
+msgstr "Namskout"
 
 #. description of font in fonts/namskout_AGS
 #: inkstitch-fonts-metadata.py:104
 msgid "Namskout  is a large applique font of size approximatively 90mm. It contains 43 glyphs including all numbers and the 26 capitals  A-Z.  It can be reduced down to 50% and enlarged up to 150%  "
-msgstr ""
+msgstr "Namskout ist eine große Applikationsschrift mit einer Größe von ca. 90mm. Sie umfasst 43 Zeichen, darunter alle Zahlen und 26 Großbuchstaben. Eine Skalierung ist von 50% bis auf 150% möglich."
 
 #. name of font in fonts/pacificlo
 #: inkstitch-fonts-metadata.py:106
 msgid "Pacificlo"
-msgstr ""
+msgstr "Pacificlo"
 
 #. description of font in fonts/pacificlo
 #: inkstitch-fonts-metadata.py:108
 msgid "Pacificlo is a small satin column manuscript font of size approximatively 20mm. It can be reduced down to 80% and enlarged up to 140%. It contains 120 glyphs, covering most Western European Languages needs. "
-msgstr ""
+msgstr "Pacificlo ist eine kleine Manuscript-Schrift aus Satinkolumnen, mit einer Größe von ca. 20mm. Eine Skalierung ist von 80% bis zu 140% möglich. Die Schrift umfasst 120 Zeichen und deckt damit die Bedürfnisse der meisten westeuropäischen Sprachen ab. "
 
 #. name of font in fonts/romanaugusa
 #: inkstitch-fonts-metadata.py:110

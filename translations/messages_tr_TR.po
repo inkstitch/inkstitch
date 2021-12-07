@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-12-06 01:44+0000\n"
-"PO-Revision-Date: 2021-12-06 01:46\n"
+"PO-Revision-Date: 2021-12-07 01:41\n"
 "Last-Translator: \n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -194,7 +194,7 @@ msgstr ""
 #. description of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:64
 msgid "Suitable for small fonts (8 to 20 mm)"
-msgstr ""
+msgstr "Küçük yazı tipleri için uygun (8 mm den 20 mm kadar)"
 
 #. name of font in fonts/geneva_simple
 #: inkstitch-fonts-metadata.py:66
@@ -204,7 +204,7 @@ msgstr ""
 #. description of font in fonts/geneva_simple
 #: inkstitch-fonts-metadata.py:68
 msgid "Suitable for small fonts (6 to 15mm)"
-msgstr ""
+msgstr "Küçük yazı tipleri için uygun (6 mm den 15 mm kadar)"
 
 #. name of font in fonts/infinipicto
 #: inkstitch-fonts-metadata.py:70
@@ -1598,7 +1598,7 @@ msgstr "Renk"
 
 #: print/templates/color_swatch.html:11 print/templates/color_swatch.html:41
 msgid "rgb"
-msgstr ""
+msgstr "rgb"
 
 #: print/templates/color_swatch.html:15 print/templates/color_swatch.html:42
 msgid "thread"
