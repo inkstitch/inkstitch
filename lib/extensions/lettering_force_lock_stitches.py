@@ -82,7 +82,5 @@ class LetteringForceLockStitches(InkstitchExtension):
         layers = self.document.xpath(xpath, namespaces=inkex.NSS)
         for layer in layers:
             display_style = 'display:%s' % display
-            import sys
-            print(display_style, file=sys.stderr)
             style = inkex.Style(layer.get('style', '')) + inkex.Style(display_style)
             layer.set('style', style)
