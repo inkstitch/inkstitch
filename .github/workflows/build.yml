@@ -15,7 +15,7 @@ jobs:
           submodules: recursive
       - uses: actions/setup-python@v2
         with:
-          python-version: '3.9.x'
+          python-version: '3.8.5'
       - uses: actions/setup-node@v1
         with:
           node-version: '16.x'
@@ -114,6 +114,20 @@ jobs:
           make dist
         env:
           BUILD: windows
+      - uses: dlemstra/code-sign-action@v1
+        with:
+          certificate: '${{ secrets.INKSTITCH_CODE_SIGNING_CERTIFICATE }}'
+          folder: 'dist'
+          recursive: true
+      - shell: bash
+        run: |
+          bash bin/build-windows-installer
+        env:
+          BUILD: windows
+      - uses: dlemstra/code-sign-action@v1
+        with:
+          certificate: '${{ secrets.INKSTITCH_CODE_SIGNING_CERTIFICATE }}'
+          folder: 'artifacts'
       - uses: actions/upload-artifact@v2
         with:
           name: inkstitch-windows
@@ -150,9 +164,11 @@ jobs:
           pip install wheel
           pip install PyGObject
           pip install git+https://github.com/gtaylor/python-colormath
-
           pip install -r requirements.txt
-          pip install pyinstaller==4.3
+          # with --no-binary argument may fix notary issues as well shapely speedups error issue
+          pip install -U lxml --no-binary lxml
+          pip install -U Shapely==1.7.1 --no-binary Shapely
+          pip install pyinstaller
 
           echo "${{ env.pythonLocation }}/bin" >> $GITHUB_PATH
       - shell: bash
@@ -160,6 +176,15 @@ jobs:
           make dist
         env:
           BUILD: osx
+          MACOS_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE }}
+          MACOS_CERTIFICATE_PWD: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE_PASSWORD }}
+          KEYCHAIN_PWD: ${{ secrets.KEYCHAIN_PASSWORD }}
+          INSTALLER_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE }}
+          INSTALLER_PWD: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE_PASSWORD }}
+          NOTARY_ACCOUNT: ${{ secrets.INKSTITCH_NOTARIZE_AC }}
+          NOTARY_PASSWORD: ${{ secrets.INKSTITCH_NOTARIZE_PASS }}
+
+
       - uses: actions/upload-artifact@v2
         with:
           name: inkstitch-mac
@@ -212,3 +237,5 @@ jobs:
           title: "${{env.title}}"
           files: |
             artifacts/*.zip
+            artifacts/*.exe
+            artifacts/*.pkg

@@ -1,11 +1,10 @@
-
 dist: version locales inx
 	bash bin/build-python
 	bash bin/build-electron
 	bash bin/build-distribution-archives
 
 distclean:
-	rm -rf build dist inx locales *.spec *.tar.gz *.zip electron/node_modules electron/dist
+	rm -rf build dist inx locales artifacts win mac *.spec *.tar.gz *.zip electron/node_modules electron/dist
 
 .PHONY: inx
 inx: version locales
