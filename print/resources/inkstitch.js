@@ -149,8 +149,10 @@ function writeEstimatedTime( selector, estimatedTime ) {
 function setEstimatedThread() {
   var multiplyThread = ($('#multiply-thread').val() == '') ? 2 : parseInt($('#multiply-thread').val());
   var estimatedThread = (parseFloat($('#estimated-thread').text()) * multiplyThread).toFixed(2);
+  var multiplyBobbin = ($('#multiply-bobbin').val() == '') ? 1 : parseInt($('#multiply-bobbin').val());
+  var estimatedBobbin = (parseFloat($('#estimated-thread').text()) * multiplyBobbin).toFixed(2);
   $('.total-estimated-thread').each(function(index, item) {
-    $(this).text(estimatedThread + "m");
+    $(this).text(estimatedThread + "m / " + estimatedBobbin + "m");
   })
 }
 
@@ -604,8 +606,14 @@ $(function() {
     $('.modal').hide();
   });
 
-  // Estimated Thread
+  // Estimated thread and bobbin
   $('#multiply-thread').on('input initialize', function() {
+    setEstimatedThread();
+  }).on('change', function() {
+    var field_name = $(this).attr('data-field-name');
+    $.postJSON('/settings/' + field_name, {value: $(this).val()});
+  });
+  $('#multiply-bobbin').on('input initialize', function() {
     setEstimatedThread();
   }).on('change', function() {
     var field_name = $(this).attr('data-field-name');
