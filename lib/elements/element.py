@@ -208,6 +208,18 @@ class EmbroideryElement(object):
         return self.get_int_param("ties", 0)
 
     @property
+    @param('force_lock_stitches',
+           _('Force lock stitches'),
+           tooltip=_('Sew lock stitches after sewing this element, '
+                     'even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences.'),
+           type='boolean',
+           default=False,
+           sort_index=5)
+    @cache
+    def force_lock_stitches(self):
+        return self.get_boolean_param('force_lock_stitches', False)
+
+    @property
     def path(self):
         # A CSP is a  "cubic superpath".
         #
@@ -312,6 +324,7 @@ class EmbroideryElement(object):
 
         for patch in patches:
             patch.tie_modus = self.ties
+            patch.force_lock_stitches = self.force_lock_stitches
 
         if patches:
             patches[-1].trim_after = self.has_command("trim") or self.trim_after

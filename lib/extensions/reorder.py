@@ -7,7 +7,7 @@ from .base import InkstitchExtension
 
 
 class Reorder(InkstitchExtension):
-    # Remove selected objects from the document and readd them in the order they
+    # Remove selected objects from the document and re-add them in the order they
     # were selected.
 
     def effect(self):

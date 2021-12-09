@@ -15,7 +15,7 @@ inx: version locales
 messages.po: inx
 	rm -f messages.po
 	xgettext inx/*.inx --its=its/inx.its -o messages-inx.po
-	# There seems to be no propper way to set the charset to utf-8
+	# There seems to be no proper way to set the charset to utf-8
 	sed -i 's/charset=CHARSET/charset=UTF-8/g' messages-inx.po
 	bin/pyembroidery-gettext > pyembroidery-format-descriptions.py
 	bin/inkstitch-fonts-gettext > inkstitch-fonts-metadata.py
