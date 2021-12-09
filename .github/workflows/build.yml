@@ -63,8 +63,8 @@ jobs:
           python -m pip --version
           python -m pip debug
 
-          python -m pip install pycairo==1.11.1
-          python -m pip install PyGObject==3.30.5
+          python -m pip install pycairo
+          python -m pip install PyGObject
 
           # colormath - last official release: 3.0.0
           # we need already submitted fixes - so let's grab them from the github repository
