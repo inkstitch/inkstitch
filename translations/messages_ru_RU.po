@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-12-06 01:44+0000\n"
-"PO-Revision-Date: 2021-12-08 01:48\n"
+"POT-Creation-Date: 2021-12-10 01:42+0000\n"
+"PO-Revision-Date: 2021-12-10 01:44\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-06 01:44+0000\n"
+"POT-Creation-Date: 2021-12-10 01:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -667,7 +667,16 @@ msgstr "Конечная"
 msgid "Neither"
 msgstr "Не добавлять"
 
-#: lib/elements/element.py:245
+#: lib/elements/element.py:212
+#: inx/inkstitch_lettering_force_lock_stitches.inx:3
+msgid "Force lock stitches"
+msgstr ""
+
+#: lib/elements/element.py:213
+msgid "Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences."
+msgstr ""
+
+#: lib/elements/element.py:257
 #, python-format
 msgid "Object %(id)s has an empty 'd' attribute.  Please delete this object from your document."
 msgstr "У объекта %(id)s атрибут 'd' пуст.  Удалите этот объект из вашего дизайна."
@@ -675,7 +684,7 @@ msgstr "У объекта %(id)s атрибут 'd' пуст.  Удалите э
 #. used when showing an error message to the user such as
 #. "Some Path (path1234): error: satin column: One or more of the rungs doesn't
 #. intersect both rails."
-#: lib/elements/element.py:332
+#: lib/elements/element.py:345
 msgid "error:"
 msgstr "ошибка:"
 
@@ -1243,6 +1252,10 @@ msgstr "Вы выбрали объекты, которые не были соз�
 msgid "Please specify the directory of your custom fonts."
 msgstr "Укажите директорию пользовательских шрифтов."
 
+#: lib/extensions/lettering_force_lock_stitches.py:29
+msgid "The maximum value is smaller than the minimum value."
+msgstr ""
+
 #: lib/extensions/lettering_generate_json.py:41
 msgid "Please specify a font file."
 msgstr "Укажите имя файла шрифтов."
@@ -1584,12 +1597,12 @@ msgstr "План Стежков"
 msgid "parseLengthWithUnits: unknown unit %s"
 msgstr "parseLengthWithUnits: неизвестная единица измерения %s"
 
-#: lib/utils/version.py:19
+#: lib/utils/version.py:22
 #, python-format
 msgid "Ink/Stitch Version: %s"
 msgstr "Версия Ink/Stitch: %s"
 
-#: lib/utils/version.py:21
+#: lib/utils/version.py:24
 msgid "Ink/Stitch Version: unknown"
 msgstr "Версия Ink/Stitch: unknown"
 
@@ -2963,11 +2976,21 @@ msgid "Custom font directory"
 msgstr "Папка пользовательских шрифтов"
 
 #: inx/inkstitch_lettering_custom_font_dir.inx:10
+#: inx/inkstitch_lettering_force_lock_stitches.inx:10
 #: inx/inkstitch_lettering_generate_json.inx:10
 #: inx/inkstitch_lettering_remove_kerning.inx:10
 #: inx/inkstitch_letters_to_font.inx:10
 msgid "Font Management"
 msgstr "Управление шрифтами"
+
+#: inx/inkstitch_lettering_force_lock_stitches.inx:23
+#: inx/inkstitch_lettering_force_lock_stitches.inx:24
+msgid "Minimum distance (mm)"
+msgstr ""
+
+#: inx/inkstitch_lettering_force_lock_stitches.inx:26
+msgid "Add force lock stitches attribute to the last element of each glyph"
+msgstr ""
 
 #: inx/inkstitch_lettering_generate_json.inx:3
 msgid "Generate JSON"
@@ -3351,8 +3374,8 @@ msgid "Move stitch plan beside the canvas"
 msgstr "Расположить план вышивки рядом с холстом"
 
 #: inx/inkstitch_stitch_plan_preview.inx:15
-msgid "Design layer visibity"
-msgstr "Видимость слоя дизайна"
+msgid "Design layer visibility"
+msgstr ""
 
 #: inx/inkstitch_stitch_plan_preview.inx:16
 msgid "Unchanged"
