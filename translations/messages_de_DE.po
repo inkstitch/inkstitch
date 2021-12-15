@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-12-10 01:42+0000\n"
-"PO-Revision-Date: 2021-12-14 01:40\n"
+"PO-Revision-Date: 2021-12-15 01:42\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -670,11 +670,11 @@ msgstr "Nie"
 #: lib/elements/element.py:212
 #: inx/inkstitch_lettering_force_lock_stitches.inx:3
 msgid "Force lock stitches"
-msgstr ""
+msgstr "Vernähen erzwingen"
 
 #: lib/elements/element.py:213
 msgid "Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences."
-msgstr ""
+msgstr "Am Ende dieses Objektes vernähen, auch wenn die Distanz zum Folgeobjekt kleiner ist, als in den Ink/Stitch Einstellungen definiert."
 
 #: lib/elements/element.py:257
 #, python-format
@@ -1255,7 +1255,7 @@ msgstr "Bitte den Ordner für die benutzerdefinierte Schriften angeben."
 
 #: lib/extensions/lettering_force_lock_stitches.py:29
 msgid "The maximum value is smaller than the minimum value."
-msgstr ""
+msgstr "Der Maximalwert ist kleiner als der Minimalwert."
 
 #: lib/extensions/lettering_generate_json.py:41
 msgid "Please specify a font file."
@@ -2985,11 +2985,11 @@ msgstr "Schriftverwaltung"
 #: inx/inkstitch_lettering_force_lock_stitches.inx:23
 #: inx/inkstitch_lettering_force_lock_stitches.inx:24
 msgid "Minimum distance (mm)"
-msgstr ""
+msgstr "Minimale Distanz (mm)"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:26
 msgid "Add force lock stitches attribute to the last element of each glyph"
-msgstr ""
+msgstr "Füge das Attribut \"vernähen erzwingen\" dem jeweils letzten Element eines Schriftzeichens hinzu"
 
 #: inx/inkstitch_lettering_generate_json.inx:3
 msgid "Generate JSON"
@@ -3374,7 +3374,7 @@ msgstr "Stickplan an der Seite platzieren"
 
 #: inx/inkstitch_stitch_plan_preview.inx:15
 msgid "Design layer visibility"
-msgstr ""
+msgstr "Design-Layer Sichtbarkeit"
 
 #: inx/inkstitch_stitch_plan_preview.inx:16
 msgid "Unchanged"
