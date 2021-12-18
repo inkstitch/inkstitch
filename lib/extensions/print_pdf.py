@@ -287,7 +287,7 @@ class Print(InkstitchExtension):
                 'num_trims': stitch_plan.num_trims,
                 'dimensions': stitch_plan.dimensions_mm,
                 'num_stitches': stitch_plan.num_stitches,
-                'estimated_thread': '',  # TODO
+                'estimated_thread': stitch_plan.estimated_thread
             },
             svg_overview=overview_svg,
             color_blocks=stitch_plan.color_blocks,

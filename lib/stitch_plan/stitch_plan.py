@@ -113,7 +113,8 @@ class StitchPlan(object):
                     num_stops=self.num_stops,
                     num_trims=self.num_trims,
                     num_stitches=self.num_stitches,
-                    bounding_box=self.bounding_box
+                    bounding_box=self.bounding_box,
+                    estimated_thread=self.estimated_thread
                     )
 
     @property
@@ -146,6 +147,11 @@ class StitchPlan(object):
         maxy = max(bb[3] for bb in color_block_bounding_boxes)
 
         return minx, miny, maxx, maxy
+
+    @property
+    def estimated_thread(self):
+        thread_meter = sum(block.estimated_thread for block in self) / PIXELS_PER_MM / 1000
+        return round(thread_meter, 2)
 
     @property
     def dimensions(self):

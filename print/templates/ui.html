@@ -19,6 +19,7 @@
         <button class="tab active">{{ _('Page Setup') }}</button>
         <button class="tab" id="branding-tab">{{ _('Branding') }}</button>
         <button class="tab">{{ _('Estimated Time') }}</button>
+        <button class="tab">{{ _('Estimated Thread') }}</button>
         <button class="tab">{{ _('Design') }}</button>
       </div>
 
@@ -138,6 +139,27 @@
             <p><input type="checkbox" class="time-display" id="time-opo" data-field-name="time-opo" CHECKED /><label for="time-opo">{{ _('Operator Overview') }}</label></p>
             <p><input type="checkbox" class="time-display" id="time-opd" data-field-name="time-opd" CHECKED /><label for="time-opd">{{ _('Operator Detailed View') }}</label></p>
           </div>
+        </fieldset>
+        <button class="save-settings" title="{{ _('Includes page setup, estimated time and also the branding.') }}">{{ _("Save as defaults") }}</button>
+      </fieldset>
+
+      <fieldset id="ui-time" class="ui-tab">
+        <legend>{{ _('Estimated Thread') }}</legend>
+        <fieldset>
+          <legend>{{ _('Factors') }}</legend>
+          <p>{{ _('The thread length calculation depends on a lot of factors in embroidery designs. We will only get a very inacurate approximation.
+             Ink/Stitch simply calculates the path length, so the factor of 1 will always be much, much less than the real thread consumption.') }}</p>
+          <p>{{ _('Set a factor to multiply the path length with, depending on your standard setup or adapt it to your current design (tension, thread, fabric, stitch count, etc.).') }}</p>
+          <p><b>Upper thread</b></p>
+          <p>
+              <input type="number" id="multiply-thread" data-field-name="multiply-thread" min="1" value="2" />
+              <label for="multiply-thread" title="{{ _('Factor to multiply with thread length') }}">{{ _('* path length') }}</label>
+          </p>
+          <p><b>Bobbin</b></p>
+          <p>
+              <input type="number" id="multiply-bobbin" data-field-name="multiply-bobbin" min="1" value="1" />
+              <label for="multiply-bobbin" title="{{ _('Factor to multiply with thread length') }}">{{ _('* path length') }}</label>
+          </p>
         </fieldset>
         <button class="save-settings" title="{{ _('Includes page setup, estimated time and also the branding.') }}">{{ _("Save as defaults") }}</button>
       </fieldset>
