@@ -2,11 +2,11 @@
 <svg
    version="1.1"
    id="svg339"
-   sodipodi:docname="→.svg"
+   sodipodi:docname="BS→.svg"
    width="144"
    height="144"
    viewBox="0 0 144 144"
-   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -28,13 +28,13 @@
      inkscape:window-height="1017"
      id="namedview341"
      showgrid="true"
-     inkscape:zoom="5.656854"
-     inkscape:cx="115.87713"
-     inkscape:cy="42.33802"
+     inkscape:zoom="2.828427"
+     inkscape:cx="-10.429825"
+     inkscape:cy="15.02602"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g1539"
+     inkscape:current-layer="g1687"
      inkscape:document-units="px"
      inkscape:document-rotation="0"
      inkscape:snap-global="false"
@@ -196,6 +196,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
     <path
@@ -206,6 +207,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        sodipodi:nodetypes="cccccccc"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_underlay="False"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -241,6 +243,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 4" />
@@ -276,6 +279,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 8" />
@@ -429,6 +433,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 15" />
@@ -449,6 +454,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 17" />
@@ -467,6 +473,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
   </g>
@@ -510,6 +517,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 4" />
@@ -556,6 +564,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 4" />
@@ -593,6 +602,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 6" />
@@ -611,6 +621,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 3" />
@@ -628,6 +639,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        sodipodi:nodetypes="cccccccc"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_underlay="False"
        inkstitch:zigzag_underlay_inset_mm=".25" />
@@ -646,6 +658,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 1" />
@@ -665,6 +678,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 3" />
@@ -683,6 +697,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
     <path
@@ -697,6 +712,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        d="m 28,143 c -4.6667,0 -8,-2.333 -10,-7 -2,-3.333 -3,-7.667 -3,-13 0,-8.667 1.3333,-17.667 4,-27 6.6667,-23.3333 14.6667,-34.6667 24,-34 4.6667,0 8,2.6667 10,8 1.3333,3.3333 2,7.6667 2,13 0,14.6667 -2.6667,28.333 -8,41 -5.3333,12 -11.6667,18.333 -19,19"
        id="path1597-5"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="1" />
   </g>
   <g
@@ -767,6 +783,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 7" />
@@ -776,7 +793,8 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        id="path48478"
        sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -823,6 +841,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 4" />
@@ -832,7 +851,8 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        id="path39413"
        sodipodi:nodetypes="cccccccccccccccccccccccccccccccccsscscccccccccccccccccccccccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -905,6 +925,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 7" />
@@ -914,7 +935,8 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        id="autosatin181-2"
        sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1020,6 +1042,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 11"
@@ -1128,6 +1151,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 10" />
@@ -1144,7 +1168,8 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        id="path149066"
        sodipodi:nodetypes="ccscccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1187,6 +1212,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkstitch:contour_underlay="False"
@@ -1216,6 +1242,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        d="m 48,58 v 0 L 40.3125,64.625 36.7031,68.0313 33.25,71.5 29.9531,75.0313 26.8125,78.625 23.8281,82.2813 21,86 17.9531,90.7188 15.3125,95.375 13.0781,99.9688 11.25,104.5 9.82812,108.969 8.8125,113.375 8.20312,117.719 8,122 l 0.08594,2.445 0.25781,2.336 0.42969,2.227 0.60156,2.117 0.7734,2.008 0.9453,1.898 1.1172,1.789 1.2891,1.68 1.4453,1.523 1.586,1.321 1.7265,1.117 1.8672,0.914 2.0078,0.711 2.1484,0.508 2.2891,0.304 L 29,145 31.9375,144.828 34.75,144.312 37.4375,143.453 40,142.25 42.4375,140.703 44.75,138.812 46.9375,136.578 49,134 l 2.1094,-2.531 1.8281,-2.594 0.4205,-0.722"
        id="path138549"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="1" />
   </g>
   <g
@@ -1242,6 +1269,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        id="autosatinrun107"
        inkscape:label="Points droits pour auto-remplissage satin 2"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        sodipodi:nodetypes="cccccccc" />
     <path
        id="autosatin165"
@@ -1263,6 +1291,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        sodipodi:nodetypes="cccccccccccccccccccccccc" />
@@ -1305,7 +1334,8 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        d="m 16,144 1,-0.25 1,-0.75 1,-1 v -1 l 2.6931,-5.924 3.3162,-6.185 1.9798,-3.298"
        id="autosatin163-2"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1328,6 +1358,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 2" />
@@ -1348,6 +1379,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 4" />
@@ -1376,7 +1408,8 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        d="m 28,95 -8.5,8 -3.125,3.25 L 14,109 l -1.8458,2.467 -1.5451,2.404 -1.2561,2.34 -0.97873,2.277 -0.71301,2.217 -0.45895,2.157 L 6.98577,124.96 7,127 l 0.51535,3.871 0.4746,1.843 0.63481,1.782 0.80671,1.72 0.99033,1.658 1.1856,1.594 L 13,141 l 1.5457,1.142 1.6378,0.934 1.7308,0.738 1.825,0.555 1.92,0.384 2.0161,0.225 L 28,145 l 4.8086,-0.523 2.2655,-0.475 2.1724,-0.633 2.0792,-0.805 1.9855,-0.988 1.8915,-1.184 L 45,139 l 1.6406,-1.547 1.4219,-1.641 1.2031,-1.734 0.9844,-1.828 0.7656,-1.922 0.5469,-2.016 0.0604,-0.388"
        id="autosatin173-2"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1392,6 +1425,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 1" />
@@ -1411,6 +1445,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 3" />
@@ -1439,7 +1474,8 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        d="m 19.8011,146.779 0.6214,0.198 L 21,147 28.25,140.875 35,134.5 l 2.3061,-2.444"
        id="autosatin161-6"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1454,6 +1490,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        sodipodi:nodetypes="cccccccc"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_underlay="False"
        inkstitch:zigzag_underlay_inset_mm=".25" />
@@ -1465,6 +1502,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        sodipodi:nodetypes="cccccccc"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_underlay="False"
        inkstitch:zigzag_underlay_inset_mm=".25" />
@@ -1501,6 +1539,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        sodipodi:nodetypes="cccccccc"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_underlay="False"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -1533,6 +1572,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 6" />
@@ -1551,6 +1591,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 3" />
@@ -1563,6 +1604,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 3" />
@@ -1585,6 +1627,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
     <path
@@ -1595,6 +1638,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        sodipodi:nodetypes="cccccccc"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_underlay="False"
        inkstitch:zigzag_underlay_inset_mm=".25" />
@@ -1646,7 +1690,8 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        d="m 98,135 c 6,0 12,-2.66667 18,-8 10.66667,-9.33333 16,-21.66667 16,-37 C 132,74.666667 126.66667,62.666667 116,54 106.66667,46 94,42 78,42 60.666667,42 46,47.333333 34,58 18,71.333333 10.333333,87.333333 11,106 c 0,18.66667 7,33.33333 21,44 11.333333,8.66667 25.666667,13 43,13 16.666667,0 32,-5 46,-15 -13.86863,6.02458 -32.678824,12.84677 -46,13 C 59,161 45.666667,156.33333 35,147 23.666667,137 17.666667,124.33333 17,109 17,89 23.666667,73 37,61 48.333333,50.333333 62.333333,45 79,45 c 14.666667,0 26.33333,3.666667 35,11 10,8 15,19.333333 15,34 0,14 -4.66667,25.66667 -14,35 -5.33333,5.33333 -10.63707,7.35753 -16,7"
        id="path4356"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1742,6 +1787,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        sodipodi:nodetypes="csscscccsccccscscccssc"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkscape:label="path1665-4" />
     <path
        id="path2397-2-6-9-5-8-8-3"
@@ -1764,6 +1810,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -1790,6 +1837,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -1816,6 +1864,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -1827,6 +1876,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.076860718"
@@ -1840,6 +1890,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="1.7052197"
@@ -1853,6 +1904,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.66690244"
@@ -1874,7 +1926,8 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="False"
        inkstitch:pull_compensation_mm="0.2"
-       inkscape:label="path3899-7" />
+       inkscape:label="path3899-7"
+       inkstitch:center_walk_underlay="True" />
     <path
        id="path2427-1"
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.1px;line-height:1.25;font-family:'Brock Script';-inkscape-font-specification:'Brock Script';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.00157;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
@@ -1884,7 +1937,8 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="False"
-       inkstitch:pull_compensation_mm="0.2" />
+       inkstitch:pull_compensation_mm="0.2"
+       inkstitch:center_walk_underlay="True" />
     <path
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.1px;line-height:1.25;font-family:'Brock Script';-inkscape-font-specification:'Brock Script';display:inline;fill:none;fill-opacity:0.459016;stroke:#000000;stroke-width:0.999999;stroke-miterlimit:4;stroke-dasharray:0.999999, 0.999999;stroke-dashoffset:0"
        d="m 137.33661,46.98188 c -3.11471,12.856377 -15.3281,80.96195 -25.97272,91.99708"
@@ -1899,7 +1953,8 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="False"
-       inkstitch:pull_compensation_mm="0.2" />
+       inkstitch:pull_compensation_mm="0.2"
+       inkstitch:center_walk_underlay="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.1px;line-height:1.25;font-family:'Brock Script';-inkscape-font-specification:'Brock Script';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.00157;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.00157, 1.00157;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="m 136.09659,44.898794 c -8.10958,8.288893 -18.49174,38.944995 -19.74594,45.525304 -1.99744,10.479762 -3.80664,35.619162 -9.44252,48.767522 8.21302,-6.98459 14.45956,-38.93638 16.9937,-51.084462 1.85873,-8.910349 7.70222,-32.174173 12.22348,-43.202687"
@@ -1916,7 +1971,8 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="False"
-       inkstitch:pull_compensation_mm="0.2" />
+       inkstitch:pull_compensation_mm="0.2"
+       inkstitch:center_walk_underlay="True" />
     <path
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.1px;line-height:1.25;font-family:'Brock Script';-inkscape-font-specification:'Brock Script';display:inline;fill:none;fill-opacity:0.459016;stroke:#000000;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.944882, 0.944882;stroke-dashoffset:0"
        d="m 142.35425,33.923827 -0.43086,0.216519 -3.72499,2.350997 -1.879,1.424999 -1.836,1.596998 -1.752,1.772997 -1.62952,1.953975 c -5.63306,7.158254 -15.82356,22.568817 -19.88855,41.962215 -2.79614,13.339771 -4.30894,35.290423 -10.65878,50.921343 -3.87473,7.51283 -7.375709,12.38982 -15.987605,17.6018 2.302927,-0.85566 -10.057078,5.44621 -18.91682,5.44621 -15.264,0 -28.128,-6.048 -38.592,-18.144 -10.08,-11.52 -15.12,-25.056 -15.12,-40.608 0,-14.016004 3.181455,-27.886303 11.585234,-38.003645 C 37.83284,45.188982 50.3221,39.15923 67.106113,39.219861 c 10.410179,0.0378 19.152,3.696 26.831998,11.088 7.391999,7.296015 11.663999,16.848015 12.815999,28.656015 v 4.608 c -0.672,11.136001 -4.752,20.880004 -12.239999,29.232004 -7.775998,8.832 -12.735986,13.248 -23.679986,13.248 -8.256,0 -15.168,-2.88 -20.736,-8.64 -5.568,-5.856 -8.352,-12.864 -8.352,-21.024003 0,-2.4 0.576,-5.856 1.728,-10.368001 -3.00892,3.597053 -4.014652,7.567975 -4.032,10.368001 0,9.504003 3.168,17.328003 9.504,23.472003 6.432,6.144 14.352,9.216 23.76,9.216 11.616,0 17.151986,-4.56 25.407985,-13.68 7.776,-8.736 11.664,-19.104003 11.664,-31.104004 v -4.752 l -0.72,-4.032 c -2.016,-11.424 -6.864,-20.688 -14.543999,-27.792015 -7.967998,-7.2 -15.312225,-10.724394 -26.831998,-10.8 C 48.737079,36.791514 34.538075,42.832394 21.428632,58.175001 12.222194,68.949716 8.482125,82.947876 8.482125,98.115877 c 0,17.376003 5.568,32.208003 16.704,44.496003 11.424,12.576 25.728,18.864 42.912,18.864 7.536928,0 18.028654,-2.32734 24.769149,-4.88074 10.053546,-5.86205 11.487976,-6.07868 19.391736,-15.14146 9.88352,-12.11788 14.71289,-31.50021 17.79906,-46.924575 2.45791,-12.284258 8.11998,-42.805645 10.79891,-48.000487 1.76253,-2.851514 4.08389,-5.83894 6.4467,-7.697988"
@@ -1945,7 +2001,8 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="False"
-       inkstitch:pull_compensation_mm="0.2" />
+       inkstitch:pull_compensation_mm="0.2"
+       inkstitch:center_walk_underlay="True" />
     <path
        id="path5877-73"
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.1px;line-height:1.25;font-family:'Brock Script';-inkscape-font-specification:'Brock Script';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.944882;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.944882, 0.944882;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
@@ -1977,7 +2034,8 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="3"
        inkstitch:zigzag_underlay="False"
-       inkstitch:pull_compensation_mm="0.2" />
+       inkstitch:pull_compensation_mm="0.2"
+       inkstitch:center_walk_underlay="True" />
     <path
        id="path5033"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2012,6 +2070,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
     <path
@@ -2026,7 +2085,8 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        d="m 152.8021,118.21465 c -1.3406,11.31727 -6.47943,23.10093 -11.42472,30.37671 -2.92618,4.30514 -8.11393,7.84437 -12.67415,8.09359 -2.7255,0.14891 -4.88043,-0.37039 -6.48,-2.69707 -1.56877,-2.28181 -2.304,-4.848 -2.304,-7.632 0,-3.47728 2.17595,-10.02724 3.61685,-12.92685 2.28503,-4.59822 13.1729,-22.6966 29.71866,-15.07276 5.41553,2.49532 8.32909,8.18143 10.50066,15.03545"
        id="path7125-3-2"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
     <path
        id="path2397-2-6-9-5-8-8-9-5"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.1px;line-height:1.25;font-family:'Brock Script';-inkscape-font-specification:'Brock Script';display:inline;fill:none;fill-opacity:0.459016;stroke:#00ff00;stroke-width:0.999999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
@@ -2048,6 +2108,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -2074,6 +2135,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -2100,6 +2162,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -2111,6 +2174,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.069587251"
@@ -2124,6 +2188,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="1.8094718"
@@ -2137,6 +2202,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.49872439"
@@ -2154,6 +2220,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        id="path34879"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:ties="1"
+       inkstitch:force_lock_stitches="True"
        sodipodi:nodetypes="csccc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0"
@@ -2274,6 +2341,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 9" />
@@ -2306,6 +2374,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        sodipodi:nodetypes="cccccccccccccccccccccccssccsccccccccccccccccccccccc"
@@ -2334,6 +2403,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -2360,6 +2430,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -2386,6 +2457,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -2397,6 +2469,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.1064782"
@@ -2410,6 +2483,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="-0.50511219"
@@ -2423,6 +2497,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="-0.63647367"
@@ -2562,6 +2637,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        sodipodi:nodetypes="cscsccsscccccccc" />
@@ -2577,7 +2653,8 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        d="M 156.84022,116.79564 C 152.34015,128.89112 149.27043,137.48547 146,142 c -5.66789,7.82401 -19.14982,20.10964 -27.17895,10.45911 -2.51951,-3.17992 0.36678,-12.67489 4.01502,-17.93475 10.14121,-14.62114 33.91148,-27.50447 42.04756,-10.5723"
        id="path3866-2"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
     <path
        id="path2397-2-6-9-5-8-8"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.1px;line-height:1.25;font-family:'Brock Script';-inkscape-font-specification:'Brock Script';display:inline;fill:none;fill-opacity:0.459016;stroke:#00ff00;stroke-width:0.999998;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
@@ -2599,6 +2676,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -2625,6 +2703,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -2651,6 +2730,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -2662,6 +2742,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.076860718"
@@ -2675,6 +2756,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="1.7052197"
@@ -2688,6 +2770,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.66690244"
@@ -2933,7 +3016,8 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        d="m 111.63751,146.17884 c 22.50072,12.2404 58.66146,18.57204 65.30049,-9.58684"
        id="autosatin9-2"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
     <path
        id="path2397-2-6-9-5-8-8-4"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.1px;line-height:1.25;font-family:'Brock Script';-inkscape-font-specification:'Brock Script';display:inline;fill:none;fill-opacity:0.459016;stroke:#00ff00;stroke-width:0.999998;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
@@ -2955,6 +3039,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -2981,6 +3066,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -3007,6 +3093,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -3018,6 +3105,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.076860718"
@@ -3031,6 +3119,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="1.7052197"
@@ -3044,6 +3133,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.66690244"
@@ -3053,7 +3143,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-F"
-     style="display:none"
+     style="display:inline"
      id="g1687">
     <path
        id="autosatin1-8"
@@ -3239,7 +3329,8 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        id="path9883-0"
        sodipodi:nodetypes="cssc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
     <path
        id="path2397-2-6-9-5-8-8-4-8"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.1px;line-height:1.25;font-family:'Brock Script';-inkscape-font-specification:'Brock Script';display:inline;fill:none;fill-opacity:0.459016;stroke:#00ff00;stroke-width:0.999998;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
@@ -3261,6 +3352,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -3287,6 +3379,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -3313,6 +3406,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -3324,6 +3418,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.076860718"
@@ -3337,6 +3432,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="1.7052197"
@@ -3350,6 +3446,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.66690244"
@@ -3367,6 +3464,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0"
        sodipodi:nodetypes="csc"
        inkstitch:ties="1"
+       inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="0" />
     <path
        id="path8052-0"
@@ -3501,6 +3599,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
     <path
@@ -3509,7 +3608,8 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        id="path10218-9"
        sodipodi:nodetypes="cscccccccccsscsc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
     <path
        id="path2397-2-6-9-5-8-8-0"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.1px;line-height:1.25;font-family:'Brock Script';-inkscape-font-specification:'Brock Script';display:inline;fill:none;fill-opacity:0.459016;stroke:#00ff00;stroke-width:0.999998;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
@@ -3531,6 +3631,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -3557,6 +3658,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -3583,6 +3685,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -3594,6 +3697,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.063156545"
@@ -3607,6 +3711,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="1.875571"
@@ -3620,6 +3725,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.38797893"
@@ -3639,6 +3745,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="1"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
     <path
@@ -3729,6 +3836,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
     <path
@@ -3761,6 +3869,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -3787,6 +3896,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -3813,6 +3923,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -3824,6 +3935,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.080143765"
@@ -3837,6 +3949,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="1.5381894"
@@ -3850,6 +3963,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.7980102"
@@ -3867,7 +3981,8 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        id="path2289"
        sodipodi:nodetypes="cscsssccccscsccscccccssssc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="1" />
+       inkstitch:ties="1"
+       inkstitch:force_lock_stitches="True" />
     <path
        id="autosatin22"
        style="display:inline;fill:none;stroke:#000000"
@@ -4079,6 +4194,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 13"
@@ -4089,6 +4205,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        id="path21188"
        sodipodi:nodetypes="ccccccccc"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="1" />
     <path
        id="path2397-2-6-9-5-8-8-7-8"
@@ -4113,6 +4230,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -4139,6 +4257,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -4165,6 +4284,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -4176,6 +4296,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.10206585"
@@ -4189,6 +4310,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="2.2894625"
@@ -4202,6 +4324,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="-0.5391529"
@@ -4219,7 +4342,8 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        id="path2289-6"
        sodipodi:nodetypes="cscsssccccscsccssccccssssc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="1" />
+       inkstitch:ties="1"
+       inkstitch:force_lock_stitches="True" />
     <path
        id="autosatin22-8"
        style="display:inline;fill:none;stroke:#000000"
@@ -4438,6 +4562,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 13"
@@ -4455,6 +4580,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        id="path66952"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        sodipodi:nodetypes="cc" />
     <path
        id="path2397-2-6-9-5-8-8-7-8-0"
@@ -4479,6 +4605,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -4505,6 +4632,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -4531,6 +4659,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -4542,6 +4671,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.10206585"
@@ -4555,6 +4685,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="2.2894625"
@@ -4568,6 +4699,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="-0.5391529"
@@ -4585,7 +4717,8 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        id="path1026-8-5"
        sodipodi:nodetypes="ccssccscccsccssscccscccscc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="1" />
+       inkstitch:ties="1"
+       inkstitch:force_lock_stitches="True" />
     <path
        id="autosatin38"
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.1px;line-height:1.25;font-family:'Brock Script';-inkscape-font-specification:'Brock Script';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.00157;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
@@ -4739,6 +4872,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 12" />
@@ -4748,6 +4882,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        id="path95830"
        sodipodi:nodetypes="csccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="1" />
     <path
        id="path2397-2-6-9-5-8-8-7-81"
@@ -4772,6 +4907,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -4798,6 +4934,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -4824,6 +4961,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -4835,6 +4973,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.080143765"
@@ -4848,6 +4987,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="1.5381894"
@@ -4861,6 +5001,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.7980102"
@@ -4878,6 +5019,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        id="path22888"
        sodipodi:nodetypes="cccsccccccc"
        inkstitch:ties="1"
+       inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="1" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-dasharray:0.5, 0.5"
@@ -5036,7 +5178,8 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        d="m 78.9641,141.766 9.0993,4.568 4.2831,1.916 4.1355,1.633 4.011,1.32 3.908,0.979 3.828,0.609 3.771,0.209 4.438,-0.25 4.312,-0.75 4.188,-1.25 4.062,-1.75 2.344,-1.297 2.031,-1.39 1.719,-1.485 1.406,-1.578 1.094,-1.672 0.781,-1.766 0.469,-1.859 L 139,136 138.75,134.25 138.438,133.563 138,133 l -0.188,-0.5 -0.162,-0.144"
        id="path130301"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
     <path
        id="path2397-2-6-9-5-8-8-7-81-9"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.1px;line-height:1.25;font-family:'Brock Script';-inkscape-font-specification:'Brock Script';display:inline;fill:none;fill-opacity:0.459016;stroke:#00ff00;stroke-width:0.999998;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
@@ -5060,6 +5203,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -5086,6 +5230,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -5112,6 +5257,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -5123,6 +5269,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.078686167"
@@ -5136,6 +5283,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="1.6509565"
@@ -5149,6 +5297,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.7459053"
@@ -5169,6 +5318,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="1"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 1" />
@@ -5336,6 +5486,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        d="M 174.94548,153.04553 C 178.28266,155.25079 183.33333,155 186,151 l 1,1 c -2.66667,6 -10.53333,9 -17.2,9"
        id="path5844"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="1" />
     <path
        id="path2397-2-6-9-5-8-8-7-81-9-1"
@@ -5360,6 +5511,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -5386,6 +5538,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -5412,6 +5565,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -5423,6 +5577,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.078686167"
@@ -5436,6 +5591,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="1.6509565"
@@ -5449,6 +5605,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.7459053"
@@ -5627,7 +5784,8 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        id="path1717-4"
        sodipodi:nodetypes="ccsccscscsccccsc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
     <path
        id="path2397-2-6-9-5-8-8-7-81-9-1-2"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.1px;line-height:1.25;font-family:'Brock Script';-inkscape-font-specification:'Brock Script';display:inline;fill:none;fill-opacity:0.459016;stroke:#00ff00;stroke-width:0.999998;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
@@ -5651,6 +5809,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -5677,6 +5836,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -5703,6 +5863,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -5714,6 +5875,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.078686167"
@@ -5727,6 +5889,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="1.6509565"
@@ -5740,6 +5903,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.7459053"
@@ -5900,6 +6064,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        id="path20218"
        sodipodi:nodetypes="csssc"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="1" />
     <path
        id="path2397-2-6-9-5-8-8-7-81-9-1-2-5"
@@ -5924,6 +6089,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -5950,6 +6116,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -5976,6 +6143,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -5987,6 +6155,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.078686167"
@@ -6000,6 +6169,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="1.6509565"
@@ -6013,6 +6183,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.7459053"
@@ -6136,7 +6307,8 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        id="path2403-8-4-0-0"
        sodipodi:nodetypes="csssc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
     <path
        id="path2397-2-6-9-5-8-8-9-5-5-1"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.1px;line-height:1.25;font-family:'Brock Script';-inkscape-font-specification:'Brock Script';display:inline;fill:none;fill-opacity:0.459016;stroke:#00ff00;stroke-width:0.999999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
@@ -6158,6 +6330,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -6184,6 +6357,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -6210,6 +6384,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -6221,6 +6396,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.069587251"
@@ -6234,6 +6410,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="1.8094718"
@@ -6247,6 +6424,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.49872439"
@@ -6441,6 +6619,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
     <path
@@ -6452,6 +6631,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkstitch:bean_stitch_repeats="1" />
@@ -6478,6 +6658,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -6504,6 +6685,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -6530,6 +6712,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -6541,6 +6724,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.078686167"
@@ -6554,6 +6738,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="1.6509565"
@@ -6567,6 +6752,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.7459053"
@@ -6695,6 +6881,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
     <path
@@ -6710,7 +6897,8 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        id="path10111"
        sodipodi:nodetypes="ccccccccssc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
     <path
        id="path2397-2-6-9-5-8-8-9-5-5"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.1px;line-height:1.25;font-family:'Brock Script';-inkscape-font-specification:'Brock Script';display:inline;fill:none;fill-opacity:0.459016;stroke:#00ff00;stroke-width:0.999999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
@@ -6732,6 +6920,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -6758,6 +6947,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -6784,6 +6974,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -6795,6 +6986,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.069587251"
@@ -6808,6 +7000,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="1.8094718"
@@ -6821,6 +7014,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.49872439"
@@ -6838,6 +7032,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        id="path24257-5"
        inkstitch:bean_stitch_repeats="0"
        inkstitch:ties="1"
+       inkstitch:force_lock_stitches="True"
        sodipodi:nodetypes="cccc" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0"
@@ -6957,7 +7152,8 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        d="m 103.401,153.179 4.049,-2.696 3.782,-3.096 3.517,-3.494 L 118,140 l 3.339,-4.827 3.013,-5.028 2.68,-5.294 1.113,-2.677"
        id="path27622"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
     <path
        id="path2397-2-6-9-5-8-8-9-5-5-8"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.1px;line-height:1.25;font-family:'Brock Script';-inkscape-font-specification:'Brock Script';display:inline;fill:none;fill-opacity:0.459016;stroke:#00ff00;stroke-width:0.999999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
@@ -6979,6 +7175,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -7005,6 +7202,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -7031,6 +7229,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -7042,6 +7241,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.069587251"
@@ -7055,6 +7255,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="1.8094718"
@@ -7068,6 +7269,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.49872439"
@@ -7217,7 +7419,8 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        id="path9883-0-8"
        sodipodi:nodetypes="cssc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
     <path
        id="path2397-2-6-9-5-8-8-4-8-6"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.1px;line-height:1.25;font-family:'Brock Script';-inkscape-font-specification:'Brock Script';display:inline;fill:none;fill-opacity:0.459016;stroke:#00ff00;stroke-width:0.999998;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
@@ -7239,6 +7442,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -7265,6 +7469,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -7291,6 +7496,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -7302,6 +7508,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.076860718"
@@ -7315,6 +7522,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="1.7052197"
@@ -7328,6 +7536,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.66690244"
@@ -7440,7 +7649,8 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0"
        sodipodi:nodetypes="cccsccscscsssscsccsscsscsscscscsscccccsc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
     <path
        id="path2397-2-6-9-5-8-8-4-8-6-6"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.1px;line-height:1.25;font-family:'Brock Script';-inkscape-font-specification:'Brock Script';display:inline;fill:none;fill-opacity:0.459016;stroke:#00ff00;stroke-width:0.999998;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
@@ -7462,6 +7672,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -7488,6 +7699,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -7514,6 +7726,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -7525,6 +7738,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.076860718"
@@ -7538,6 +7752,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="1.7052197"
@@ -7551,6 +7766,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.66690244"
@@ -7678,7 +7894,8 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0"
        sodipodi:nodetypes="cccsccccscccscscscscscccssscssscccccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
     <path
        id="path2397-2-6-9-5-8-8-7-81-9-1-2-5-2"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.1px;line-height:1.25;font-family:'Brock Script';-inkscape-font-specification:'Brock Script';display:inline;fill:none;fill-opacity:0.459016;stroke:#00ff00;stroke-width:0.999998;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
@@ -7702,6 +7919,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -7728,6 +7946,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -7754,6 +7973,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -7765,6 +7985,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.078686167"
@@ -7778,6 +7999,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="1.6509565"
@@ -7791,6 +8013,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.7459053"
@@ -7938,7 +8161,8 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        id="path1749-8-9-4"
        sodipodi:nodetypes="ccccsccccsccccscccscscscscscccssscssscccccccccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
     <path
        id="path2397-2-6-9-5-8-8-7-81-9-1-2-5-2-1"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.1px;line-height:1.25;font-family:'Brock Script';-inkscape-font-specification:'Brock Script';display:inline;fill:none;fill-opacity:0.459016;stroke:#00ff00;stroke-width:0.999998;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
@@ -7962,6 +8186,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -7988,6 +8213,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -8014,6 +8240,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -8025,6 +8252,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.078686167"
@@ -8038,6 +8266,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="1.6509565"
@@ -8051,6 +8280,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.7459053"
@@ -8184,7 +8414,8 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        sodipodi:nodetypes="cccccssscccccscscccsssccccsssccscccsscssscsccssccccsc"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
     <path
        id="path2397-2-6-9-5-8-8-7-81-9-1-2-5-2-1-2"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.1px;line-height:1.25;font-family:'Brock Script';-inkscape-font-specification:'Brock Script';display:inline;fill:none;fill-opacity:0.459016;stroke:#00ff00;stroke-width:0.999998;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
@@ -8208,6 +8439,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -8234,6 +8466,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -8260,6 +8493,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -8271,6 +8505,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.078686167"
@@ -8284,6 +8519,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="1.6509565"
@@ -8297,6 +8533,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.7459053"
@@ -8453,6 +8690,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        id="path46749"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        sodipodi:nodetypes="cscsccscssssscc" />
     <path
        id="path2397-2-6-9-5-8-8-7-81-9-1-2-5-2-1-2-0"
@@ -8477,6 +8715,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -8503,6 +8742,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -8529,6 +8769,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -8540,6 +8781,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.078686167"
@@ -8553,6 +8795,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="1.6509565"
@@ -8566,6 +8809,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.7459053"
@@ -8583,6 +8827,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        id="path76658-7"
        inkstitch:bean_stitch_repeats="0"
        inkstitch:ties="1"
+       inkstitch:force_lock_stitches="True"
        sodipodi:nodetypes="cccc" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0"
@@ -8778,7 +9023,8 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        d="m 173.636,136.469 1.195,-2.515 0.815,-2.645 0.338,-2.714 -0.039,-1.363 -0.195,-1.357 -1.061,2.215 -1.362,1.71 -1.562,1.259 -1.662,0.862 -1.658,0.521 -1.554,0.233 -1.349,0.002 -1.042,-0.177 -2.035,-0.787 -1.54,-1.004 -1.108,-1.182 -0.741,-1.324 -0.438,-1.426 -0.199,-1.493 0.061,-3.034 0.314,-1.787 0.632,-1.684 0.924,-1.54 1.19,-1.354 1.429,-1.129 1.64,-0.862 1.827,-0.555 1.986,-0.206 1.272,0.068 1.257,0.23 1.224,0.388 1.176,0.548 1.109,0.705 1.028,0.862 0.929,1.018 0.813,1.173 0.649,1.288 0.468,1.349 0.508,2.8 0.133,2.801 L 179,129 l -0.156,2.953 -0.469,2.859 -0.2027,0.71787"
        id="path64203"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
     <path
        id="path2397-2-6-9-5-8-8-4-8-6-2"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.1px;line-height:1.25;font-family:'Brock Script';-inkscape-font-specification:'Brock Script';display:inline;fill:none;fill-opacity:0.459016;stroke:#00ff00;stroke-width:0.999998;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
@@ -8802,6 +9048,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -8828,6 +9075,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -8854,6 +9102,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -8865,6 +9114,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.076860718"
@@ -8878,6 +9128,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="1.7052197"
@@ -8891,6 +9142,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.66690244"
@@ -8931,6 +9183,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
@@ -9024,6 +9277,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
   </g>
@@ -9049,6 +9303,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
   </g>
@@ -9091,6 +9346,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        sodipodi:nodetypes="cscccscccsccsccccccccc"
@@ -9110,6 +9366,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
   </g>
@@ -9301,6 +9558,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 7" />
@@ -9379,6 +9637,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 8" />
@@ -9403,6 +9662,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        sodipodi:nodetypes="cccccccc"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_underlay="False"
        inkstitch:zigzag_underlay_inset_mm=".25" />
@@ -9415,6 +9675,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
   </g>
@@ -9438,6 +9699,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        sodipodi:nodetypes="cccccccc"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_underlay="False"
        inkstitch:zigzag_underlay_inset_mm=".25" />
@@ -9563,6 +9825,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 8" />
@@ -9597,6 +9860,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
   </g>
@@ -9676,6 +9940,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 7" />
@@ -9725,6 +9990,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 4" />
@@ -9759,6 +10025,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        sodipodi:nodetypes="cssscscccsssccccccccc"
@@ -9808,6 +10075,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 6"
@@ -9875,6 +10143,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 6" />
@@ -9893,6 +10162,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
   </g>
@@ -9946,6 +10216,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 5" />
@@ -10028,6 +10299,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        d="m 22,101 -9,30 -0.75,3 -0.25,3 0.625,1.75 0.875,1.25 1.125,0.75 1.375,0.25 1.1797,-0.141 1.2891,-0.421 1.3984,-0.704 1.5078,-0.984 3.3438,-2.812 L 28.5,132 l 4.2188,-5.062 4.6562,-6.188 5.0938,-7.312 3.5691,-5.445 L 48,105 m -35.0868,-3.848 -3.07069,9.445 -3.23522,9.814 -1.41707,4.644 -1.1435,4.253 L 3.28168,133.01 3,136 l 0.15625,2.109 0.46875,1.829 0.78125,1.546 1.09375,1.266 1.40625,0.984 1.71875,0.704 2.0312,0.421 L 13,145 l 2.7599,-0.232 2.725,-0.702 2.6814,-1.129 2.6287,-1.512 2.5672,-1.854 2.4968,-2.15 2.4175,-2.406 2.3294,-2.617 2.2323,-2.786 2.1263,-2.912 3.8993,-6.028 3.3689,-6.015 1.7674,-3.613 L 48,109 m -44.57545,19.78 11.11075,0.076 m 0.5327,11.187 -2.5874,6.24 m 10.3498,-9.665 h 7.6101 m 8.295,-19.101 h 6.012"
        sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -10072,6 +10344,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 4" />
@@ -10119,6 +10392,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
   </g>
@@ -10187,6 +10461,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
   </g>
@@ -10276,6 +10551,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 9" />
@@ -10342,6 +10618,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 7" />
@@ -10396,6 +10673,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 7" />
@@ -10474,6 +10752,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 7" />
@@ -10556,6 +10835,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 7" />
@@ -10574,6 +10854,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
   </g>
@@ -10621,6 +10902,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 4" />
@@ -10646,6 +10928,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        sodipodi:nodetypes="cccccccc"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_underlay="False"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -10659,6 +10942,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
   </g>
@@ -10679,6 +10963,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        sodipodi:nodetypes="cccccccc"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_underlay="False"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -10691,6 +10976,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        sodipodi:nodetypes="cccccccc"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_underlay="False"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -10731,6 +11017,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        sodipodi:nodetypes="cccccccc"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_underlay="False"
        inkstitch:zigzag_underlay_inset_mm=".25" />
@@ -10742,6 +11029,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        sodipodi:nodetypes="cscscccsssssssccccc" />
@@ -10785,6 +11073,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
     <path
@@ -10851,6 +11140,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        sodipodi:nodetypes="csscscccsccccscscccssc"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkscape:label="path1665-4" />
     <path
        id="path2397-2-6-9-5-8-8-3-8-0"
@@ -10873,6 +11163,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -10899,6 +11190,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -10925,6 +11217,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -10936,6 +11229,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.076860718"
@@ -10949,6 +11243,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="1.7052197"
@@ -10962,6 +11257,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.66690244"
@@ -11007,6 +11303,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
     <path
@@ -11073,6 +11370,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        sodipodi:nodetypes="csscscccsccccscscccssc"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkscape:label="path1665-4" />
     <path
        id="path2397-2-6-9-5-8-8-3-8"
@@ -11095,6 +11393,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -11121,6 +11420,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -11147,6 +11447,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -11158,6 +11459,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.076860718"
@@ -11171,6 +11473,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="1.7052197"
@@ -11184,6 +11487,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.66690244"
@@ -11273,6 +11577,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
     <path
@@ -11288,6 +11593,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        sodipodi:nodetypes="cccccccc"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_underlay="False"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -11328,6 +11634,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        sodipodi:nodetypes="csscscccsccccscscccssc"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkscape:label="path1665-4" />
     <path
        id="path2397-2-6-9-5-8-8-3-2"
@@ -11350,6 +11657,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -11376,6 +11684,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -11402,6 +11711,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -11413,6 +11723,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.076860718"
@@ -11426,6 +11737,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="1.7052197"
@@ -11439,6 +11751,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.66690244"
@@ -11567,6 +11880,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
     <path
@@ -11701,7 +12015,8 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        d="m 111.63751,146.17884 c 22.50072,12.2404 58.66146,18.57204 65.30049,-9.58684"
        id="autosatin9-2-1"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
     <path
        id="path2397-2-6-9-5-8-8-4-7"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.1px;line-height:1.25;font-family:'Brock Script';-inkscape-font-specification:'Brock Script';display:inline;fill:none;fill-opacity:0.459016;stroke:#00ff00;stroke-width:0.999998;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
@@ -11723,6 +12038,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -11749,6 +12065,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -11775,6 +12092,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -11786,6 +12104,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.076860718"
@@ -11799,6 +12118,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="1.7052197"
@@ -11812,6 +12132,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.66690244"
@@ -11908,6 +12229,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
     <path
@@ -12005,7 +12327,8 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        id="path1717-4-8"
        sodipodi:nodetypes="ccsccscscsccccsc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
     <path
        id="path2397-2-6-9-5-8-8-7-81-9-1-2-2"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.1px;line-height:1.25;font-family:'Brock Script';-inkscape-font-specification:'Brock Script';display:inline;fill:none;fill-opacity:0.459016;stroke:#00ff00;stroke-width:0.999998;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
@@ -12029,6 +12352,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -12055,6 +12379,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -12081,6 +12406,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -12092,6 +12418,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.078686167"
@@ -12105,6 +12432,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="1.6509565"
@@ -12118,6 +12446,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.7459053"
@@ -12170,6 +12499,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
     <path
@@ -12185,6 +12515,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        sodipodi:nodetypes="cccccccc"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_underlay="False"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -12311,6 +12642,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        id="path20218-2"
        sodipodi:nodetypes="csssc"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="1" />
     <path
        id="path2397-2-6-9-5-8-8-7-81-9-1-2-5-8"
@@ -12335,6 +12667,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -12361,6 +12694,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -12387,6 +12721,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -12398,6 +12733,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.078686167"
@@ -12411,6 +12747,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="1.6509565"
@@ -12424,6 +12761,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.7459053"
@@ -12539,6 +12877,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
     <path
@@ -12554,6 +12893,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        sodipodi:nodetypes="cccccccc"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_underlay="False"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -12580,7 +12920,8 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0"
        sodipodi:nodetypes="cccsccscscsssscsccsscsscsscscscsscccccsc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
     <path
        id="path2397-2-6-9-5-8-8-4-8-6-6-6"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.1px;line-height:1.25;font-family:'Brock Script';-inkscape-font-specification:'Brock Script';display:inline;fill:none;fill-opacity:0.459016;stroke:#00ff00;stroke-width:0.999998;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
@@ -12602,6 +12943,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -12628,6 +12970,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -12654,6 +12997,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        sodipodi:nodetypes="ccccccccccccc" />
@@ -12665,6 +13009,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.076860718"
@@ -12678,6 +13023,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="1.7052197"
@@ -12691,6 +13037,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:transform-center-x="0.66690244"
@@ -12760,6 +13107,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 8" />
@@ -12783,6 +13131,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
     <path
@@ -12811,6 +13160,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
   </g>
@@ -12833,6 +13183,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
     <path
@@ -12861,6 +13212,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
@@ -12884,6 +13236,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
     <path
@@ -12912,6 +13265,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
@@ -12935,6 +13289,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
     <path
@@ -12963,6 +13318,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
@@ -12997,6 +13353,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
     <path
@@ -13012,6 +13369,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        sodipodi:nodetypes="cccccccc"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_underlay="False"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -13042,6 +13400,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
@@ -13076,6 +13435,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
   </g>
@@ -13114,6 +13474,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
   </g>
@@ -13136,6 +13497,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
     <path
@@ -13152,6 +13514,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
   </g>
@@ -13174,6 +13537,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
     <path
@@ -13190,6 +13554,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
   </g>
@@ -13212,6 +13577,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
     <path
@@ -13228,6 +13594,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
   </g>
@@ -13261,6 +13628,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
     <path
@@ -13276,6 +13644,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        sodipodi:nodetypes="cccccccc"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_underlay="False"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -13294,6 +13663,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
   </g>
@@ -13316,6 +13686,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
     <path
@@ -13327,6 +13698,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
   </g>
@@ -13349,6 +13721,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
     <path
@@ -13360,6 +13733,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
   </g>
@@ -13382,6 +13756,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
     <path
@@ -13393,6 +13768,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
   </g>
@@ -13426,6 +13802,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
     <path
@@ -13441,6 +13818,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        sodipodi:nodetypes="cccccccc"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_underlay="False"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -13454,6 +13832,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
   </g>
@@ -13476,6 +13855,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
     <path
@@ -13523,6 +13903,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 4" />
@@ -13546,6 +13927,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
     <path
@@ -13572,6 +13954,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        sodipodi:nodetypes="cssscscccsssccccccccc"
@@ -13602,6 +13985,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
     <path
@@ -13628,6 +14012,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        sodipodi:nodetypes="cssscscccsssccccccccc"
@@ -13652,6 +14037,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
     <path
@@ -13679,6 +14065,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        sodipodi:nodetypes="cssscscccsssccccccccc"
@@ -13703,6 +14090,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
     <path
@@ -13729,6 +14117,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        sodipodi:nodetypes="cssscscccsssccccccccc"
@@ -13768,6 +14157,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
     <path
@@ -13783,6 +14173,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        sodipodi:nodetypes="cccccccc"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_underlay="False"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -13810,6 +14201,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        sodipodi:nodetypes="cssscscccsssccccccccc"
@@ -13859,6 +14251,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
     <path
@@ -13870,6 +14263,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 4" />
@@ -13893,6 +14287,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
     <path
@@ -13922,6 +14317,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 4" />
@@ -13963,6 +14359,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
     <path
@@ -13974,6 +14371,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 4" />
@@ -14033,6 +14431,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True" />
     <path
@@ -14048,6 +14447,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        sodipodi:nodetypes="cccccccc"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_underlay="False"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -14061,6 +14461,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.3"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="False"
        inkstitch:center_walk_underlay="True"
        inkscape:label="Auto-remplissage satin 4" />
@@ -14079,6 +14480,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="0"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="pointegrise" />
@@ -14093,6 +14495,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="0"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="arcbleu" />
@@ -14105,6 +14508,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="0"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="arcvert" />
@@ -14119,6 +14523,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="0"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="arcjaune" />
@@ -14159,6 +14564,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="0"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="arcrosevif" />
@@ -14204,6 +14610,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1" />
     <path
@@ -14248,6 +14655,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1" />
     <path
@@ -14292,6 +14700,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1" />
     <path
@@ -14303,6 +14712,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="oeilnoir1" />
@@ -14315,6 +14725,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="oeilnoir2" />
@@ -14450,6 +14861,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="0"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="tronc" />
@@ -14468,6 +14880,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        sodipodi:nodetypes="ccccccccccccccc" />
@@ -14488,6 +14901,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        sodipodi:nodetypes="ccccccccccccccc" />
@@ -14508,6 +14922,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        sodipodi:nodetypes="ccccccccccccccc" />
@@ -14528,6 +14943,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        sodipodi:nodetypes="cccsccccccccccccc" />
@@ -14548,6 +14964,7 @@ Copyright (c) Typographer Mediengestaltung, 2000. All rights reserved.
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        sodipodi:nodetypes="ccccccccccccccc" />
