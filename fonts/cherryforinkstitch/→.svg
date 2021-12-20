@@ -225,7 +225,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:transform-center-x="-10.24128"
@@ -341,7 +341,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkscape:transform-center-y="-23.440461"
        d="m 109.64627,157.38145 c 8.11931,21.71473 16.07582,43.49418 24.29678,65.1685 1.17584,2.61949 3.81541,4.26432 6.709,3.758 m -19.91089,-72.81661 24.46104,64.02462 c 0.83113,3.00107 0.26866,6.61511 -2.56474,7.97363 m -17.1094,-21.19562 c 5.60633,-1.98566 8.30082,-3.97132 13.90714,-5.95699"
        sodipodi:nodetypes="cccccccc"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
@@ -360,14 +360,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.377952;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.377952, 0.377952;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="m 54.987013,150.77161 c -0.207601,4.4365 -2.748537,9.54075 -5.949728,14.18624 -6.111991,8.8696 -17.353172,8.87122 -25.042879,3.77587 -7.68982,-5.09519 -13.584633,-15.98863 -7.421441,-25.5053 6.638428,-10.25052 18.602623,-17.20992 25.57092,-4.49485 l 1.489793,1.04494 c 8.685131,1.58435 11.594552,5.83788 11.353329,10.99311"
        id="path1104-5-1-1-0-3"
        sodipodi:nodetypes="cszsccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75" />
     <g
        id="command_group3"
@@ -420,7 +420,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1" />
     <path
@@ -547,7 +547,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 11" />
@@ -564,14 +564,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-4"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.377952;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.377952, 0.377952;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="M 46.021859,126.3976 C 45.814258,130.8341 43.273322,135.93835 40.072131,140.58384 33.96014,149.45344 22.718959,149.45506 15.029252,144.35971 7.3394316,139.26452 1.4446186,128.37108 7.6078106,118.85441 14.246239,108.60389 26.210434,101.64449 33.178731,114.35956 L 34.668524,115.4045 C 43.353655,116.98885 46.263076,121.24238 46.021853,126.39761"
        id="path1104-5-1-1-0-3-2"
        sodipodi:nodetypes="cszsccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75" />
   </g>
   <g
@@ -594,7 +594,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
+        inkstitch:ties="0" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1" />
     <path
@@ -612,7 +612,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
+        inkstitch:ties="0" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 2" />
@@ -629,7 +629,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
+        inkstitch:ties="0" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 4" />
@@ -646,7 +646,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
+        inkstitch:ties="0" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 6" />
@@ -665,7 +665,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
+        inkstitch:ties="0" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1" />
     <path
@@ -683,14 +683,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-4-0"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.377952;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.377952, 0.377952;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="m 42.616917,124.07721 c -0.207601,4.4365 -2.748537,9.54075 -5.949728,14.18624 -6.111991,8.8696 -17.353172,8.87122 -25.042879,3.77587 C 3.9344902,136.94413 -1.9603228,126.05069 4.2028692,116.53402 10.841297,106.2835 22.805492,99.324096 29.773789,112.03917 l 1.489793,1.04494 c 8.685131,1.58435 11.594552,5.83788 11.353329,10.99311"
        id="path1104-5-1-1-0-3-2-5"
        sodipodi:nodetypes="cszsccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75" />
   </g>
   <g
@@ -744,7 +744,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:zigzag_underlay="True"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:satin_column="True"
@@ -821,7 +821,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        sodipodi:nodetypes="cccccccccsscsccccscssccc"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:zigzag_underlay="True"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:satin_column="True"
@@ -843,14 +843,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-4-0-2"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="m 42.005387,123.14029 c 0.2412,-5.15499 -2.668196,-9.40899 -11.353285,-10.99299 l -1.489798,-1.04499 c -6.968292,-12.714989 -18.932476,-5.755 -25.5708979,4.49499 -6.1631822,9.51699 -0.2683796,20.40997 7.4214199,25.50497 7.689691,5.09599 18.930877,5.09399 25.042869,-3.776 3.201196,-4.64499 5.742093,-9.74898 5.949692,-14.18598"
        id="path1104-5-1-1-0-3-2-5-6"
        sodipodi:nodetypes="cccszsc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75" />
   </g>
   <g
@@ -902,7 +902,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1" />
     <path
@@ -1025,7 +1025,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
@@ -1046,14 +1046,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-4-0-2-8-8"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="m 48.233682,121.54692 c -0.2076,4.436 -2.748497,9.53999 -5.949693,14.18599 -6.111992,8.86999 -17.353178,8.87099 -25.042868,3.77599 C 9.5513206,134.41391 3.6565177,123.51992 9.8196996,114.00393 16.458122,103.75295 28.422307,96.793954 35.390598,109.50894 l 1.489798,1.045 c 8.685089,1.58399 11.594486,5.83699 11.353286,10.99298"
        id="path1104-5-1-1-0-3-2-5-6-6-6"
        sodipodi:nodetypes="cszsccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75" />
   </g>
   <g
@@ -1084,7 +1084,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        d="M 6.5707748,152.40585 C 4.9496768,138.26987 4.4821598,117.7609 12.434988,105.06892"
        id="path7057-61"
        sodipodi:nodetypes="cc"
-       inkstitch:ties="0"
+        inkstitch:ties="0" inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="1" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
@@ -1094,7 +1094,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1" />
     <path
@@ -1105,7 +1105,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1" />
     <path
@@ -1205,7 +1205,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
@@ -1225,14 +1225,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-4-0-4"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="m 44.802617,123.53189 c -0.2076,4.43699 -2.748496,9.54099 -5.949692,14.18598 -6.111993,8.86999 -17.353179,8.87199 -25.042869,3.776 C 6.1202858,136.39887 0.22548271,125.50589 6.3886658,115.9889 13.027087,105.73792 24.991242,98.778926 31.959533,111.4939 l 1.489798,1.045 c 8.685089,1.584 11.594486,5.838 11.353286,10.99299"
        id="path1104-5-1-1-0-3-2-5-5"
        sodipodi:nodetypes="cszsccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75" />
   </g>
   <g
@@ -1271,7 +1271,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        d="m 12.303423,98.25859 -0.6725,-0.073 -0.595399,-0.217999 -0.951619,-0.813999 -0.6205785,-1.237999 -0.274629,-1.558998 -0.03594,-21.499973 m 4.0622645,25.493968 0.725399,-0.111 0.652299,-0.244999 1.066798,-0.835999 0.7178,-1.191999 0.330999,-1.424998 0.1233,-19.811975 0.0071,-1.927998 m -7.6600095,21.554973 7.5395095,0.186"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
+        inkstitch:ties="0" inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -1289,7 +1289,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        d="m 12.671322,52.838647 -1.333398,0.252 -1.109749,0.629999 -0.7749685,0.930999 -0.328959,1.153999 0.02851,17.050978 m 4.7036635,-20.108974 1.268998,0.229999 0.960599,0.651999 0.607299,0.914999 0.209,1.014999 -0.0636,17.241978 m -7.7244595,-16.994978 7.7980595,-0.247"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -1386,7 +1386,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        d="m 116.55229,227.00943 -1.183,-0.131 -1.02999,-0.298 -0.875,-0.471 -0.72,-0.648 -0.562,-0.83 -0.403,-1.015 -0.244,-1.20599 -0.081,-1.401 v -0.95 m 6.77399,6.82099 1.145,-0.051 0.93,-0.249 0.736,-0.446 0.56,-0.641 0.402,-0.835 0.264,-1.026 0.18899,-2.62299 v -0.95 m 0.01,0.95 H 111.4443"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -1404,14 +1404,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-4-2"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="m 45.96768,119.33257 c -0.2051,4.22899 -2.715096,9.09398 -5.877292,13.52198 -6.037493,8.45499 -17.141779,8.45699 -24.737769,3.59999 C 7.7564285,131.59755 1.9334262,121.21356 8.0215385,112.14157 14.57912,102.37059 26.397505,95.736593 33.280996,107.85758 l 1.471598,0.996 c 8.57939,1.51 11.453286,5.56499 11.215086,10.47899"
        id="path1104-5-1-1-0-3-2-2"
        sodipodi:nodetypes="cszsccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75" />
   </g>
   <g
@@ -1425,7 +1425,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        d="m 12.229846,221.3308 0.1783,1.90499 0.2658,0.884 0.424699,0.794 0.614199,0.668 0.834499,0.508 1.085359,0.313 1.367298,0.085 4.95,0.026 m -9.720154,-6.78099 0.1783,-1.904 0.2658,-0.885 0.424699,-0.793 0.614199,-0.668 0.834499,-0.508 1.085359,-0.314 1.367298,-0.085 4.95,-0.025 M 17,226.49778 V 214.5658"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="1"
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -1443,7 +1443,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        d="m 55.934851,221.4598 -0.1702,1.073 -0.315499,1.00299 -0.4514,0.909 -0.577799,0.786 -0.694599,0.637 -0.801899,0.461 -0.899699,0.259 -0.987999,0.029 -29.085757,-0.103 m 33.984851,-6.90899 -0.1702,-1.073 -0.315499,-1.004 -0.4514,-0.908 -0.577799,-0.787 -0.694599,-0.637 -0.801899,-0.461 -0.899699,-0.25799 -0.987999,-0.029 -29.085757,0.103 m 29.085757,12.07598 v -12.18898"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -1456,7 +1456,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="1"
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -1474,7 +1474,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        d="m 21.888694,97.780956 c -1.894698,0.006 -2.985796,-1.652998 -3.114696,-3.901995 -0.0716,-13.972982 0.058,-8.650989 -0.0645,-24.150969 0.0919,-1.653998 1.669598,-2.918997 3.547096,-2.966997 m 0.543699,31.111961 c 2.027397,-0.099 3.326896,-1.809998 3.493295,-3.808995 0.0247,-14.822981 0.2394,-10.614987 0.194,-24.581969 0.007,-1.348998 -1.168398,-2.859997 -3.045896,-2.811997"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -1540,7 +1540,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        sodipodi:nodetypes="cssccssc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25" />
@@ -1557,14 +1557,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-4-2-7"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="m 45.753064,118.85493 c -0.2051,4.22899 -2.715097,9.09398 -5.877293,13.52198 -6.037492,8.45499 -17.141778,8.45699 -24.737728,3.59999 C 7.5418421,131.11991 1.7188394,120.73592 7.8069518,111.66394 14.364544,101.89295 26.182889,95.258959 33.06638,107.37994 l 1.471598,0.996 c 8.579289,1.51 11.453286,5.56499 11.214986,10.47899"
        id="path1104-5-1-1-0-3-2-2-0-6"
        sodipodi:nodetypes="cszsccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75" />
   </g>
   <g
@@ -1597,7 +1597,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        sodipodi:nodetypes="scccsccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -1616,7 +1616,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        sodipodi:nodetypes="ccscsccccscscccccccccccccccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -1635,7 +1635,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="1"
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -1653,7 +1653,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        d="m 70.29653,98.489 c -1.8946,0.006 -2.9858,-1.653 -3.1147,-3.902 -0.0716,-13.973 0.0581,-8.651 -0.0645,-24.151 0.0919,-1.654 1.6697,-2.919 3.5471,-2.967 m 0.5437,31.112 c 2.0274,-0.099 3.3269,-1.81 3.4933,-3.809 0.0248,-14.823 0.2395,-10.615 0.194,-24.582 0.007,-1.349 -1.1684,-2.86 -3.0459,-2.812"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -1712,7 +1712,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        d="m 86.420081,91.45967 0.229009,61.59686"
        id="path2183-8"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        sodipodi:nodetypes="cc" />
     <path
        style="display:inline;fill:none;stroke:#008000;stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 1;stroke-dashoffset:0;stroke-opacity:1"
@@ -1727,14 +1727,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-4-4"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 1;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="m 63.16763,120.712 c 0.2076,4.436 2.7485,9.541 5.9497,14.186 6.112,8.87 17.3532,8.871 25.0429,3.776 7.6894,-5.095 13.5846,-15.989 7.4214,-25.505 -6.6384,-10.251 -18.6026,-17.21 -25.5709,-4.495 l -1.4898,1.045 c -8.6851,1.584 -11.5945,5.838 -11.3533,10.993"
        id="path1104-5-1-1-0-3-2-8"
        sodipodi:nodetypes="cszsccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75" />
   </g>
   <g
@@ -1771,7 +1771,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:zigzag_underlay="True"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:satin_column="True"
@@ -1782,7 +1782,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:zigzag_underlay="True"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:satin_column="True"
@@ -1904,7 +1904,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:zigzag_underlay="True"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:satin_column="True"
@@ -1921,7 +1921,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        d="m 38.507095,105.02816 c 10.419787,-3.87899 20.850174,-14.564981 23.129871,-21.202973 0.633599,-1.844998 0.707399,-2.813996 0.2609,-4.241995 -0.0999,-0.317999 0.324499,2.083998 -0.2874,2.539997 0.1132,-1.829997 -0.4272,-2.407997 -0.4272,-2.407997 l 0.0685,3.999995 C 60.541567,86.868183 49.636581,100.66717 38.291095,104.43516"
        style="display:inline;fill:none;stroke:#008000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1" />
     <path
-       inkstitch:ties="1"
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True"
        inkstitch:running_stitch_length_mm="1.5"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        id="path1488-6-4-0-1"
@@ -1930,7 +1930,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        style="display:inline;fill:none;stroke:#ff0000;stroke-width:0.499999px;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1" />
     <path
        inkstitch:angle="75"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="1"
        sodipodi:nodetypes="cszsccc"
        id="path1104-5-1-1-0-3-2-5-9"
@@ -1975,7 +1975,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1" />
     <path
@@ -1986,7 +1986,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1" />
     <path
@@ -2036,7 +2036,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
@@ -2057,14 +2057,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-4-0-2-8-5"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="m 53.865817,121.01104 c -0.207599,4.436 -2.748596,9.53999 -5.949792,14.18599 -6.111892,8.86999 -17.353078,8.87099 -25.042769,3.77599 -7.68989,-5.09499 -13.5846516,-15.98898 -7.42149,-25.50497 6.638391,-10.25098 18.602576,-17.209968 25.570868,-4.49499 l 1.489798,1.045 c 8.685189,1.584 11.594585,5.83699 11.353385,10.99298"
        id="path1104-5-1-1-0-3-2-5-6-6-4"
        sodipodi:nodetypes="cszsccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75" />
   </g>
   <g
@@ -2101,7 +2101,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:zigzag_underlay="True"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:satin_column="True"
@@ -2117,7 +2117,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:zigzag_underlay="True"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:satin_column="True"
@@ -2262,7 +2262,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:zigzag_underlay="True"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:satin_column="True"
@@ -2279,7 +2279,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        d="m 36.281605,147.88023 c 10.419587,-3.88 17.724978,-13.06598 20.004775,-19.70398 0.633599,-1.84499 0.707299,-2.81399 0.2608,-4.24199 -0.0998,-0.318 0.3245,2.085 -0.2874,2.54 0.1133,-1.829 -0.427199,-2.407 -0.427199,-2.407 l 0.0686,3.99899 c -0.710299,3.153 -8.49019,15.45198 -19.835675,19.21998"
        style="display:inline;fill:none;stroke:#008000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1" />
     <path
-       inkstitch:ties="1"
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True"
        inkstitch:running_stitch_length_mm="1.5"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        id="path1488-6-4-0-2-8-5-0"
@@ -2288,7 +2288,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        style="display:inline;fill:none;stroke:#ff0000;stroke-width:0.499999px;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1" />
     <path
        inkstitch:angle="75"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="1"
        sodipodi:nodetypes="cszsccc"
        id="path1104-5-1-1-0-3-2-5-6-6-4-3"
@@ -2347,7 +2347,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        sodipodi:nodetypes="csscccscccccccccccc"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="False"
@@ -2384,7 +2384,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="False"
@@ -2403,7 +2403,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="False"
@@ -2422,7 +2422,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="False"
@@ -2441,10 +2441,10 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-6-4-1"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        inkstitch:angle="75"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="1"
        sodipodi:nodetypes="cszsccc"
        id="path1104-5-1-1-0-3-2-5-6-6-4-3-3"
@@ -2505,7 +2505,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1" />
     <path
@@ -2539,7 +2539,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        sodipodi:nodetypes="ccccccccccccccccc" />
@@ -2556,10 +2556,10 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-6-4-1-0"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        inkstitch:angle="75"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="1"
        sodipodi:nodetypes="cszsccc"
        id="path1104-5-1-1-0-3-2-5-6-6-4-3-2"
@@ -2688,7 +2688,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1" />
     <path
@@ -2704,10 +2704,10 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-6-4-1-0-5"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        inkstitch:angle="75"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="1"
        sodipodi:nodetypes="cszsccc"
        id="path1104-5-1-1-0-3-2-5-6-6-4-3-2-81"
@@ -2768,7 +2768,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1" />
     <path
@@ -2802,7 +2802,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        sodipodi:nodetypes="cccccccccccccccc" />
@@ -2821,7 +2821,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="False"
@@ -2842,10 +2842,10 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-6-4-1-0-8"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        inkstitch:angle="75"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="1"
        sodipodi:nodetypes="cszsccc"
        id="path1104-5-1-1-0-3-2-5-6-6-4-3-2-8"
@@ -2901,7 +2901,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1" />
     <path
@@ -3016,7 +3016,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
@@ -3030,7 +3030,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        d="m 35.822807,114.43888 c 10.419587,-3.87899 20.850173,-14.564983 23.129871,-21.203975 0.633599,-1.843997 0.707199,-2.812996 0.260799,-4.240994 -0.0998,-0.318 0.3244,2.083997 -0.287499,2.539996 0.1133,-1.829997 -0.4271,-2.407996 -0.4271,-2.407996 l 0.0685,3.999994 C 57.857179,96.278902 46.952293,110.07789 35.606807,113.84588"
        style="display:inline;fill:none;stroke:#008000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1" />
     <path
-       inkstitch:ties="1"
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True"
        inkstitch:running_stitch_length_mm="1.5"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        id="path1488-6-4-0-2-0"
@@ -3039,7 +3039,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        style="display:inline;fill:none;stroke:#ff0000;stroke-width:0.499999px;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1" />
     <path
        inkstitch:angle="75"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="1"
        sodipodi:nodetypes="cszsccc"
        id="path1104-5-1-1-0-3-2-5-6-2"
@@ -3058,7 +3058,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        sodipodi:nodetypes="cssccccssccccccccccccccccccccccccccccccccccccccccccccccccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -3076,7 +3076,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        d="m 34.817102,187.69632 c 1.711897,-1.194 3.832895,-0.305 5.027193,1.407 8.546489,12.25398 20.173575,13.05898 28.732364,8.38599 8.558689,-4.672 13.898683,-14.72398 8.21869,-27.49597 -0.848799,-1.907 -0.810999,-3.08599 0.862399,-4.52099 m -44.130745,23.16197 c -1.712398,1.194 -1.077398,3.07999 0.1161,4.79299 10.407887,14.92298 26.910666,17.05398 38.554651,10.69699 11.643986,-6.35699 18.580177,-21.29597 11.505786,-37.20295 -1.414198,-2.024 -2.709997,-2.625 -4.755594,-2.035"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="1"
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -3113,7 +3113,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        sodipodi:nodetypes="csssccccsccccccccccccccccccccccccccccccccccccccccccccccccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -3151,7 +3151,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        sodipodi:nodetypes="cssccccssccccccccccccccccccccccccccccccccccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -3169,14 +3169,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-4-2-5-0"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="m 46.517687,130.17039 c 6.557492,-9.77199 18.375977,-16.40498 25.259368,-4.28499 l 1.471698,0.996 c 8.579289,1.50999 11.453286,5.56499 11.214986,10.47898 -0.205,4.229 -2.714997,9.09399 -5.877193,13.52299 -6.037592,8.45398 -17.141778,8.45598 -24.737868,3.59899 -7.596091,-4.85699 -13.419083,-15.24098 -7.330991,-24.31197"
        id="path1104-5-1-1-0-3-2-2-3-2"
        sodipodi:nodetypes="ccccszc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75" />
   </g>
   <g
@@ -3197,7 +3197,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
+        inkstitch:ties="0" inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -3216,7 +3216,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        d="m 50.25681,105.58089 c -1.875298,0.007 -2.955197,-1.94699 -3.082796,-4.59599 -0.0709,-16.456981 0.0574,-10.188988 -0.0639,-28.444965 0.091,-1.947998 1.652498,-3.437996 3.510795,-3.494996 m 0.5382,36.643951 c 2.006597,-0.116 3.292795,-2.13099 3.457495,-4.48599 0.0245,-17.45898 0.2369,-12.501986 0.192,-28.952965 0.0069,-1.588998 -1.156399,-3.367996 -3.014696,-3.311996"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -3262,7 +3262,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        d="m 67.040688,63.349505 c 3.973595,0 5.320094,2.344997 5.320094,7.034991 V 101.8915 c 0,4.689 -1.218299,7.185 -5.191894,7.185 M 65.88809,63.349505 c -3.973595,0 -5.448093,2.344997 -5.448093,7.034991 V 101.8915 c 0,4.689 1.218398,7.034 5.191993,7.034"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
+        inkstitch:ties="0" inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -3284,7 +3284,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        sodipodi:nodetypes="cssccssc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
+        inkstitch:ties="0" inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -3303,7 +3303,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        sodipodi:nodetypes="cssccssc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -3321,14 +3321,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-4-2-4"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="m 76.713776,129.11068 c -0.205099,4.22899 -2.715096,9.09398 -5.877292,13.52198 -6.037493,8.45499 -17.141779,8.45699 -24.737769,3.59999 -7.596191,-4.85699 -13.419183,-15.24098 -7.331091,-24.31296 6.557592,-9.77099 18.376077,-16.40498 25.259468,-4.284 l 1.471598,0.996 c 8.57939,1.51 11.453286,5.56499 11.215086,10.47899"
        id="path1104-5-1-1-0-3-2-2-0"
        sodipodi:nodetypes="cszsccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75" />
   </g>
   <g
@@ -3372,7 +3372,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        sodipodi:nodetypes="ccccccccccccccc" />
@@ -3426,7 +3426,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 3" />
@@ -3443,14 +3443,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-4-2-4-6"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="m 42.396987,128.65892 c -0.2051,4.229 -2.715097,9.09399 -5.877293,13.52199 -6.037492,8.45499 -17.141778,8.45699 -24.737769,3.59999 -7.5961901,-4.85699 -13.4191831,-15.24098 -7.3311001,-24.31297 6.5575711,-9.77098 18.3760861,-16.40498 25.2594781,-4.28399 l 1.471598,0.996 c 8.579389,1.51 11.453285,5.56499 11.215086,10.47898"
        id="path1104-5-1-1-0-3-2-2-0-3"
        sodipodi:nodetypes="cszsccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75" />
   </g>
   <g
@@ -3513,7 +3513,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1" />
     <path
@@ -3602,7 +3602,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -3621,14 +3621,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-4-2-5"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="m 14.289287,111.99828 c 6.557492,-9.77098 18.375977,-16.404975 25.259368,-4.28399 l 1.471698,0.996 c 8.579289,1.51 11.453286,5.56499 11.214986,10.47899 -0.205,4.22899 -2.714996,9.09398 -5.877193,13.52198 -6.037592,8.45499 -17.141778,8.45699 -24.737868,3.59999 -7.596091,-4.85699 -13.4191132,-15.24098 -7.330991,-24.31297"
        id="path1104-5-1-1-0-3-2-2-3"
        sodipodi:nodetypes="ccccszc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75" />
   </g>
   <g
@@ -3660,7 +3660,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        d="M 10.4448,99.3376 9.7119,99.3985 9.05396,99.3089 8.47222,99.081 7.96794,98.7272 7.19677,97.6904 6.75043,96.2966 2.03847,70.4221 m 9.92343,28.5655 1.2667,-0.5995 0.756,-0.8809 0.3007,-1.1523 L 14.186,94.9416 9.47539,69.0685 M 6.7406,96.2983 14.1958,94.9398"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -3678,7 +3678,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        d="M 2.0517,55.3916 1.01832,56.1073 0.32024,57.0169 -0.0102718,58.154 0.0590371,59.5526 2.03847,70.4221 m 1.64704,-15.3805 0.53672,-0.0971 0.52306,0.0629 0.998,0.567 0.92186,1.09 0.83138,1.5352 1.97886,10.8689 M 7.50637,58.1978 0.0491986,59.5544"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -3696,7 +3696,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        d="m 17.596091,51.939611 c -2.677197,0.797999 -4.010895,3.207996 -3.669896,5.679993 l 5.732393,33.907958 c 0.5222,3.086996 3.798095,5.049993 6.885292,4.527994 M 18.996489,51.589612 c 3.019796,-0.492999 5.645193,1.392998 6.109392,4.140995 l 5.732393,33.907957 c 0.520899,3.086996 -0.391199,4.493994 -2.893996,6.066992"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="1"
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25" />
@@ -3762,7 +3762,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="1"
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25"
        sodipodi:nodetypes="cccccccc" />
@@ -3798,7 +3798,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25"
        inkscape:label="Auto-remplissage satin 4"
@@ -3816,14 +3816,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-4-2-5-2"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="m 9.3647809,112.06954 c 6.5575121,-9.77099 18.3759971,-16.404984 25.2593881,-4.284 l 1.471698,0.996 c 8.57929,1.51 11.453286,5.56499 11.214986,10.47899 -0.204999,4.22899 -2.714996,9.09398 -5.877192,13.52198 -6.037593,8.45499 -17.141779,8.45699 -24.737869,3.59999 C 9.0996709,131.52551 3.2766586,121.14152 9.3647809,112.06954"
        id="path1104-5-1-1-0-3-2-2-3-3"
        sodipodi:nodetypes="ccccszc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75" />
   </g>
   <g
@@ -3856,7 +3856,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:transform-center-x="0.22072984"
@@ -3870,7 +3870,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:transform-center-x="0.22073028"
@@ -3947,7 +3947,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 7" />
@@ -3970,7 +3970,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 19"
@@ -3988,14 +3988,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-6"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczcsc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="m 23.846004,111.69239 c 1.340994,-11.50562 8.198724,-21.698107 22.450507,-13.373944 l 1.773905,0.37159 c 8.696807,-1.816642 12.968473,0.865071 14.623604,5.509984 1.424483,3.99738 0.911065,9.44855 -0.386798,14.73912 -2.477786,10.10186 -12.98534,14.26684 -22.032644,12.612 -9.047299,-1.65484 -17.282318,-7.63452 -16.428574,-19.85875"
        id="path1104-5-1-1-0-3-2-2-3-9"
        sodipodi:nodetypes="ccccszc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75" />
   </g>
   <g
@@ -4044,7 +4044,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:transform-center-x="12.162429"
@@ -4120,7 +4120,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1" />
     <path
@@ -4137,14 +4137,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-6-4"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczcc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="m 83.211944,160.5277 c -2.959191,-11.19914 -11.193119,-20.31602 -24.1203,-10.05479 l -1.703279,0.61941 c -8.866534,-0.56488 -12.714703,2.69554 -13.694355,7.52823 -0.843165,4.159 0.43816,9.48225 2.473218,14.53528 3.885397,9.64836 14.877434,12.28104 23.598594,9.35982 8.72116,-2.92122 16.024893,-10.00836 13.446122,-21.98795"
        id="path1104-5-1-1-0-3-2-2-3-9-8"
        sodipodi:nodetypes="ccccszc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75" />
   </g>
   <g
@@ -4193,7 +4193,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:transform-center-x="-6.2927945"
@@ -4262,7 +4262,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        sodipodi:nodetypes="ccsccssccc" />
@@ -4279,14 +4279,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-6-4-5"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="M 84.905459,118.60449 C 81.946269,107.40535 73.712339,98.288467 60.78516,108.5497 l -1.703279,0.61941 c -8.866534,-0.56488 -12.714703,2.69554 -13.694355,7.52823 -0.843165,4.159 0.43816,9.48225 2.473218,14.53528 3.885397,9.64836 14.877435,12.28104 23.598595,9.35982 8.72116,-2.92122 16.02489,-10.00836 13.44612,-21.98795"
        id="path1104-5-1-1-0-3-2-2-3-9-8-7"
        sodipodi:nodetypes="ccccszc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75" />
   </g>
   <g
@@ -4298,7 +4298,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1"
        d="m 23.910765,208.28933 -5.446341,-35.99898 c -0.542587,-12.60616 2.33224,-24.05305 11.623289,-34.13926 0,0 35.268379,-23.91077 64.492648,19.65996"
        id="path1695"
-       inkstitch:ties="1"
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True"
        sodipodi:nodetypes="cccc" />
     <path
        id="path1372"
@@ -4361,14 +4361,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-2"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.377952;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.377952, 0.377952;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="m 33.374009,144.18441 c 2.534108,2.13157 4.408337,5.94787 5.712162,9.94767 2.489393,7.63676 -2.594334,14.29751 -9.090883,16.54655 -6.496507,2.24914 -15.615745,0.80976 -18.465276,-7.15028 -3.0692805,-8.57386 -1.7800354,-18.81303 8.903832,-17.18491 l 1.292856,-0.40956 c 4.867023,-4.42836 8.702659,-4.22636 11.647313,-1.74946"
        id="path1104-5-1-1-0-3-7"
        sodipodi:nodetypes="cszsccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75" />
   </g>
   <g
@@ -4456,7 +4456,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:zigzag_underlay="True"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:satin_column="True"
@@ -4470,7 +4470,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        d="M 82.206795,126.19948 C 83.415494,104.9995 65.136217,98.856507 63.01462,97.147507 c -1.212199,-0.976 -2.356997,-1.161 -3.543196,-1.296 -0.2646,-0.03 2.238997,0.478 2.373997,1.071 -1.564298,-0.212 -2.599397,-0.207 -2.599397,-0.207 l 3.646196,0.983 c 2.072497,1.536 19.604375,8.736993 18.811876,28.466973"
        style="display:inline;fill:none;stroke:#008000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1" />
     <path
-       inkstitch:ties="1"
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True"
        inkstitch:running_stitch_length_mm="1.5"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        id="path1488-6-2-0"
@@ -4479,7 +4479,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        style="display:inline;fill:none;stroke:#ff0000;stroke-width:0.499999px;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1" />
     <path
        inkstitch:angle="75"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="1"
        sodipodi:nodetypes="cszsccc"
        id="path1104-5-1-1-0-3-7-2"
@@ -4525,7 +4525,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:zigzag_underlay="True"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:satin_column="True"
@@ -4539,7 +4539,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        d="m 21.791411,138.47698 c -11.646686,-17.75598 1.112098,-32.21496 2.094897,-34.75595 0.561499,-1.452 1.460498,-2.184 2.420597,-2.894 0.2141,-0.158 -1.700398,1.533 -1.520498,2.115 1.248398,-0.967 2.147697,-1.479 2.147697,-1.479 l -2.666397,2.67399 c -1.026898,2.366 -12.609484,17.36798 -2.057797,34.05896"
        style="display:inline;fill:none;stroke:#008000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1" />
     <path
-       inkstitch:ties="1"
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True"
        inkstitch:running_stitch_length_mm="1.5"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        id="path1488-6-2-03"
@@ -4548,7 +4548,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        style="display:inline;fill:none;stroke:#ff0000;stroke-width:0.499999px;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1" />
     <path
        inkstitch:angle="75"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="1"
        sodipodi:nodetypes="cszsccc"
        id="path1104-5-1-1-0-3-7-0-7"
@@ -4639,7 +4639,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
@@ -4657,14 +4657,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-2-0-2"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="m 43.74652,128.01191 c 1.895998,2.715 2.718697,6.886 2.942796,11.08699 0.4281,8.02099 -6.206392,13.13898 -13.063583,13.62998 -6.857291,0.491 -15.293281,-3.25999 -15.98548,-11.68598 -0.745599,-9.07599 3.149796,-18.63298 13.048184,-14.29498 l 1.354798,-0.061 c 5.847392,-3.018 9.499988,-1.83 11.703285,1.32499"
        id="path1104-5-1-1-0-3-7-2-0"
        sodipodi:nodetypes="cszsccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75" />
   </g>
   <g
@@ -4676,7 +4676,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1"
        d="m 27.589746,205.59988 c -11.574663,-17.13667 -8.428389,-32.1085 -6.327523,-47.23407 4.666,-18.06114 20.836121,-25.71923 30.348441,-25.98831 17.738747,-3.65902 39.137076,3.31862 50.284286,20.36904 l -72.147633,32.99619"
        id="path1695-2"
-       inkstitch:ties="1"
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True"
        sodipodi:nodetypes="ccccc" />
     <path
        style="display:inline;fill:none;stroke:#000000"
@@ -4733,14 +4733,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-2-2"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.377952;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.377952, 0.377952;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="m 44.102465,132.24253 c 2.5341,2.13157 4.40833,5.94787 5.71216,9.94767 2.48939,7.63676 -2.59434,14.29751 -9.09088,16.54655 -6.49651,2.24914 -15.61575,0.80976 -18.46528,-7.15028 -3.06928,-8.57386 -1.78004,-18.81303 8.90383,-17.18491 l 1.29286,-0.40956 c 4.86702,-4.42836 8.70266,-4.22636 11.64731,-1.74946"
        id="path1104-5-1-1-0-3-7-0"
        sodipodi:nodetypes="cszsccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75" />
   </g>
   <g
@@ -4838,7 +4838,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:zigzag_underlay="True"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:satin_column="True"
@@ -4852,7 +4852,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        d="M 13.970804,104.88358 C 1.4451497,88.355604 12.917505,73.420623 13.706504,70.879626 c 0.4508,-1.450998 1.278088,-2.224997 2.166487,-2.979996 0.1982,-0.168 -1.555088,1.605998 -1.341188,2.160997 1.152289,-1.023999 1.994488,-1.582998 1.994488,-1.582998 l -2.420587,2.781996 c -0.843599,2.373997 -11.1338463,17.758978 0.254299,33.322955"
        style="display:inline;fill:none;stroke:#008000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1" />
     <path
-       inkstitch:ties="1"
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True"
        inkstitch:running_stitch_length_mm="1.5"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        id="path1488-6-2-0-2-2"
@@ -4861,7 +4861,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        style="display:inline;fill:none;stroke:#ff0000;stroke-width:0.499999px;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1" />
     <path
        inkstitch:angle="75"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="1"
        sodipodi:nodetypes="cszsccc"
        id="path1104-5-1-1-0-3-7-2-0-6"
@@ -4942,7 +4942,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:zigzag_underlay="True"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:satin_column="True"
@@ -4956,7 +4956,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        d="m 53.486919,265.49325 c 6.530292,-20.20597 -9.601388,-30.77096 -11.221786,-32.96096 -0.925899,-1.252 -1.986697,-1.72 -3.100396,-2.14999 -0.2484,-0.096 2.045598,1.02799 2.026098,1.63599 -1.459799,-0.601 -2.462597,-0.857 -2.462597,-0.857 l 3.279295,1.872 c 1.616798,2.01 16.757879,13.41099 11.001687,32.29996"
        style="display:inline;fill:none;stroke:#008000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1" />
     <path
-       inkstitch:ties="1"
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True"
        inkstitch:running_stitch_length_mm="1.5"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        id="path1488-6-2-0-8-9"
@@ -4965,7 +4965,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        style="display:inline;fill:none;stroke:#ff0000;stroke-width:0.499999px;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1" />
     <path
        inkstitch:angle="75"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="1"
        sodipodi:nodetypes="cszsccc"
        id="path1104-5-1-1-0-3-7-2-01-7"
@@ -5016,7 +5016,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        d="m 20.365306,126.51969 c 3.291896,0.38314 4.803194,2.49288 4.813794,5.59464 l 0.0839,20.74206 c -4.183695,8.57463 -7.95369,18.74122 -11.228456,30.28494 m 4.575465,-56.54243 c -3.131566,0.24849 -4.782864,2.45526 -4.770764,5.55603 l 0.0832,20.42128 0.112099,30.56512"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -5049,7 +5049,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        d="m 103.4664,227.25398 -1.104,-0.15048 -1.035,-0.35542 -0.94099,-0.54155 -0.819703,-0.70787 -0.6726,-0.85638 -0.499299,-0.98606 -0.2998,-1.09696 -2.163197,-12.06644 -0.569499,-2.75822 m 10.358088,19.15109 0.9959,-0.49402 0.865,-0.66629 0.715,-0.81084 0.54699,-0.93161 0.359,-1.02468 0.152,-1.092 -0.072,-1.13457 -2.20599,-12.33376 -0.658,-3.20274 m -8.333192,17.36507 11.207182,-1.83055"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -5070,7 +5070,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-2-5"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1"
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True"
        inkscape:transform-center-x="-0.28375695"
        inkscape:transform-center-y="1.2857063" />
     <path
@@ -5079,7 +5079,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1104-5-1-1-0-3-7-7"
        sodipodi:nodetypes="cszsccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75"
        inkscape:transform-center-x="-0.28997515"
        inkscape:transform-center-y="1.1002811" />
@@ -5117,7 +5117,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        sodipodi:nodetypes="cccccccc"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25" />
@@ -5145,7 +5145,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        d="m 22.250974,181.69448 c -2.522997,0.071 -4.360994,2.65099 -4.341194,5.78199 0.0683,10.93499 -0.0208,13.62798 -0.0385,22.83497 m 5.949892,-28.56596 c 3.131596,-0.02 5.407493,2.52899 5.426493,5.65999 0.0684,10.93999 -0.0186,13.62298 -0.0376,22.68997"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -5165,7 +5165,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-2-5-5"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1"
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True"
        inkscape:transform-center-x="-0.92234446"
        inkscape:transform-center-y="0.26219317" />
     <path
@@ -5174,7 +5174,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1104-5-1-1-0-3-7-7-5"
        sodipodi:nodetypes="cszsccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75"
        inkscape:transform-center-x="-0.83599576"
        inkscape:transform-center-y="0.21586087" />
@@ -5214,7 +5214,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        sodipodi:nodetypes="cccccccc"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25" />
@@ -5224,7 +5224,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        d="m 23.481304,121.36941 c 3.130096,-0.019 5.075194,2.528 5.095293,5.658 l 0.0703,19.15393 c 0.0198,3.13199 -2.503196,5.68699 -5.634693,5.70599 m -0.897898,-30.44192 c -2.834297,0.005 -4.895394,2.523 -4.875594,5.654 l 0.0703,19.15293 c 0.019,3.13099 2.572296,5.65299 5.703192,5.63499"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="1"
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -5242,7 +5242,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        d="m 22.218505,186.449 c -2.193697,0.021 -4.386294,2.57499 -4.366494,5.70599 0.0683,10.93499 -0.0208,8.22732 -0.0385,17.43431 m 5.949893,-23.1403 c 3.131596,-0.019 5.407493,2.50399 5.426493,5.63499 0.0684,10.93999 -0.0186,8.22232 -0.0376,17.28931"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -5263,7 +5263,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-2-5-5-8"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1"
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True"
        inkscape:transform-center-x="-0.92234446"
        inkscape:transform-center-y="0.26219317"
        inkscape:label="path1488-6-2-5-5-8" />
@@ -5273,7 +5273,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1104-5-1-1-0-3-7-7-5-7"
        sodipodi:nodetypes="cszsccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75"
        inkscape:transform-center-x="-0.83599576"
        inkscape:transform-center-y="0.21586087" />
@@ -5405,7 +5405,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:zigzag_underlay="True"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:satin_column="True"
@@ -5420,7 +5420,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        d="m 30.129004,94.809667 c 16.486379,-13.381983 8.718289,-31.031961 8.553189,-33.751958 -0.0944,-1.553998 -0.728599,-2.523996 -1.427998,-3.491995 -0.1561,-0.216 1.154898,1.976997 0.806899,2.476997 -0.896299,-1.299999 -1.597498,-2.061998 -1.597498,-2.061998 l 1.729297,3.356996 c 0.2603,2.566997 6.742792,20.376974 -8.377289,33.077958"
        style="display:inline;fill:none;stroke:#008000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1" />
     <path
-       inkstitch:ties="1"
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True"
        inkstitch:running_stitch_length_mm="1.5"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        id="path1488-6-2-0-8-1"
@@ -5429,7 +5429,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        style="display:inline;fill:none;stroke:#ff0000;stroke-width:0.499999px;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1" />
     <path
        inkstitch:angle="75"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="1"
        sodipodi:nodetypes="cszsccc"
        id="path1104-5-1-1-0-3-7-2-01-6"
@@ -5498,7 +5498,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
@@ -5517,14 +5517,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-2-0-8-1-2"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="m 17.96452,125.81095 c -3.22541,0.74934 -6.62719,3.30002 -9.6038371,6.27266 -5.6832654,5.67618 -4.1749731,13.91826 0.5940297,18.87 4.7689134,4.95174 13.5485834,7.80669 19.6995344,2.00656 6.625168,-6.24834 10.121837,-15.95766 -0.13781,-19.3546 l -0.966196,-0.95093 c -2.328104,-6.15457 -5.837867,-7.71541 -9.585721,-6.84369"
        id="path1104-5-1-1-0-3-7-2-01-6-1"
        sodipodi:nodetypes="cszsccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75" />
   </g>
   <g
@@ -5598,7 +5598,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
@@ -5617,14 +5617,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-2-0-8-9-0"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="m 31.110237,181.17831 c -1.125498,3.11399 -0.835899,7.35599 0.0393,11.47098 1.670998,7.85699 9.407488,11.07499 16.15678,9.76699 6.749291,-1.308 13.920782,-7.12199 12.399584,-15.43798 -1.638498,-8.95799 -7.88349,-17.17398 -16.314679,-10.41299 l -1.324098,0.293 c -6.430592,-1.39499 -9.649088,0.701 -10.956887,4.32"
        id="path1104-5-1-1-0-3-7-2-01-7-3"
        sodipodi:nodetypes="cszsccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75" />
   </g>
   <g
@@ -5669,7 +5669,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 5"
@@ -5700,7 +5700,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 8" />
@@ -5717,14 +5717,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-2-3-1"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="m 85.844622,131.97445 c 2.534196,2.131 4.408394,5.94799 5.712292,9.94799 2.489297,7.63599 -2.594296,14.29698 -9.090888,16.54598 -6.496492,2.24899 -15.61578,0.81 -18.465177,-7.14999 -3.069396,-8.57399 -1.780098,-18.81298 8.903689,-17.18498 l 1.292798,-0.41 c 4.867194,-4.428 8.702789,-4.226 11.647386,-1.749"
        id="path1104-5-1-1-0-3-7-2-5"
        sodipodi:nodetypes="cszsccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75" />
   </g>
   <g
@@ -5773,7 +5773,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1" />
     <path
@@ -5789,14 +5789,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-2-3-3"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="m 46.827501,135.14928 c 1.286499,3.05099 1.218699,7.30199 0.5595,11.45698 -1.258699,7.93299 -8.816689,11.55099 -15.624981,10.59699 -6.808391,-0.954 -14.273592,-6.38499 -13.188483,-14.76998 1.168798,-9.03099 6.976391,-17.56198 15.74888,-11.24999 l 1.337598,0.223 c 6.349092,-1.728 9.672688,0.197 11.167486,3.743"
        id="path1104-5-1-1-0-3-7-2-1"
        sodipodi:nodetypes="cszsccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75" />
   </g>
   <g
@@ -5902,7 +5902,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 10"
@@ -5920,14 +5920,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-2-3-0"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="m 26.194543,163.498 c 3.205196,0.83199 6.540492,3.46799 9.440088,6.51599 5.536193,5.81999 3.817495,14.02098 -1.076599,18.84897 -4.894093,4.828 -13.743882,7.45799 -19.744345,1.501 -6.4631716,-6.41499 -9.7102775,-16.21098 0.632899,-19.34397 l 0.990299,-0.926 c 2.484767,-6.09299 6.033263,-7.56299 9.757758,-6.59599"
        id="path1104-5-1-1-0-3-7-2-58"
        sodipodi:nodetypes="cszsccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75" />
   </g>
   <g
@@ -6018,7 +6018,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 10"
@@ -6036,14 +6036,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-2-3-6"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="m 51.353544,134.53432 c 0.4099,3.28599 -0.8094,7.35899 -2.5717,11.17898 -3.364791,7.29299 -11.620981,8.72299 -17.914773,5.957 -6.293792,-2.766 -12.004285,-10.01999 -8.683989,-17.79498 3.576396,-8.37499 11.481686,-15.00898 18.211477,-6.55299 l 1.226699,0.578 c 6.579896,0.06 9.255986,2.81499 9.732286,6.63399"
        id="path1104-5-1-1-0-3-7-2-6"
        sodipodi:nodetypes="cszsccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75" />
   </g>
   <g
@@ -6094,7 +6094,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 7"
@@ -6126,7 +6126,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 9"
@@ -6144,14 +6144,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-2-3-4"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="m 60.904723,147.81032 c 2.534097,2.131 4.408294,5.94699 5.712193,9.94699 2.489396,7.63699 -2.594397,14.29798 -9.090889,16.54698 -6.496492,2.24899 -15.61578,0.809 -18.465277,-7.15099 -3.069296,-8.57299 -1.779998,-18.81298 8.903789,-17.18398 l 1.292898,-0.41 c 4.866994,-4.428 8.702689,-4.226 11.647286,-1.749"
        id="path1104-5-1-1-0-3-7-2-7"
        sodipodi:nodetypes="cszsccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75" />
   </g>
   <g
@@ -6195,7 +6195,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 7" />
     <path
@@ -6214,7 +6214,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 10" />
@@ -6231,14 +6231,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-2-3-2-8"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="m 44.014027,124.95383 c 0.930399,3.17799 0.378599,7.39299 -0.749699,11.44598 -2.154297,7.73799 -10.075287,10.47099 -16.730579,8.74799 -6.655392,-1.72399 -13.453083,-7.96999 -11.419686,-16.17698 2.190098,-8.83899 8.931889,-16.65298 16.928179,-9.38298 l 1.303398,0.37499 c 6.504692,-0.99399 9.587188,1.298 10.668387,4.991"
        id="path1104-5-1-1-0-3-7-2-76-9"
        sodipodi:nodetypes="cszsccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75" />
   </g>
   <g
@@ -6266,7 +6266,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 4"
@@ -6352,7 +6352,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 12" />
@@ -6369,14 +6369,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-2-3-2"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="m 35.148221,85.424898 c 1.161398,3.100996 0.920998,7.345991 0.0936,11.469986 -1.579798,7.875986 -9.278388,11.182986 -16.042379,9.953986 -6.764093,-1.23 -14.0024937,-6.95999 -12.577776,-15.293979 1.534559,-8.975989 7.683881,-17.263979 16.19277,-10.600987 l 1.327498,0.278 c 6.413992,-1.469999 9.656588,0.588999 11.006287,4.192994"
        id="path1104-5-1-1-0-3-7-2-76"
        sodipodi:nodetypes="cszsccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75" />
   </g>
   <g
@@ -6398,7 +6398,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 3"
@@ -6466,14 +6466,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-2-3-18"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="m 36.095362,163.13159 c 0.994999,3.158 0.5293,7.38399 -0.516199,11.45899 -1.996198,7.77999 -9.859788,10.67398 -16.548879,9.08698 -6.689112,-1.58699 -13.6126824,-7.69399 -11.7469764,-15.94098 2.009559,-8.88198 8.5907604,-16.83097 16.7334704,-9.72498 l 1.310798,0.348 c 6.483092,-1.126 9.611588,1.10199 10.767786,4.77199"
        id="path1104-5-1-1-0-3-7-2-2"
        sodipodi:nodetypes="cszsccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75" />
   </g>
   <g
@@ -6549,7 +6549,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25"
        inkscape:label="Auto-remplissage satin 4" />
@@ -6568,7 +6568,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-2-5-8"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1"
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True"
        inkscape:transform-center-x="-0.70907464"
        inkscape:transform-center-y="0.65617807" />
     <path
@@ -6577,7 +6577,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1104-5-1-1-0-3-7-7-1"
        sodipodi:nodetypes="cszsccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75"
        inkscape:transform-center-x="-0.79744946"
        inkscape:transform-center-y="0.57486763" />
@@ -6652,7 +6652,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        sodipodi:nodetypes="csssccccssscccccccccccccccccccccccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25"
@@ -6672,7 +6672,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-2-5-8-8"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1"
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True"
        inkscape:transform-center-x="0.81401859"
        inkscape:transform-center-y="-0.11494689" />
     <path
@@ -6681,7 +6681,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1104-5-1-1-0-3-7-7-1-8"
        sodipodi:nodetypes="cszsccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75"
        inkscape:transform-center-x="0.76923911"
        inkscape:transform-center-y="-0.21448773" />
@@ -6704,7 +6704,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1" />
     <path
@@ -6802,14 +6802,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-2-3-8"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="m 35.155321,161.91554 c 2.190838,2.48244 3.48036,6.53425 4.178341,10.68285 1.332455,7.92032 -4.679942,13.75674 -11.437777,15.0203 -6.75775,1.26351 -15.564037,-1.50889 -17.204891,-9.80219 -1.767826,-8.93377 1.021188,-18.87008 11.34699,-15.67976 l 1.339275,-0.21356 c 5.46831,-3.66017 9.232022,-2.89286 11.778062,-0.008"
        id="path1104-5-1-1-0-3-7-2-70"
        sodipodi:nodetypes="cszsccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75" />
   </g>
   <g
@@ -6830,7 +6830,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        sodipodi:nodetypes="cccccccccc" />
@@ -6866,7 +6866,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 6"
@@ -6883,7 +6883,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 4"
@@ -6901,14 +6901,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-2-3-48"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="m 21.3953,158.68549 c -3.066096,1.24999 -6.021233,4.30699 -8.48993,7.71399 -4.713374,6.50399 -1.919597,14.40298 3.572896,18.53797 5.492533,4.135 14.613322,5.564 19.768715,-1.137 5.552893,-7.21799 7.468891,-17.35797 -3.198996,-19.08797 l -1.104699,-0.787 c -3.272695,-5.70899 -6.985191,-6.69399 -10.547986,-5.23999"
        id="path1104-5-1-1-0-3-7-2-8"
        sodipodi:nodetypes="cszsccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75" />
   </g>
   <g
@@ -6949,7 +6949,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 9"
@@ -7029,14 +7029,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-2-3-89"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="m 44.292833,145.9911 c 2.534097,2.132 3.259346,3.82668 4.563145,7.82667 2.489397,7.63699 -1.710414,15.71219 -8.207006,17.96119 -6.496492,2.249 -17.118282,1.42772 -19.967878,-6.53227 -3.069197,-8.57399 -0.277396,-19.4317 10.40649,-17.8037 l 1.292799,-0.409 c 4.867094,-4.42799 8.967854,-3.51888 11.91245,-1.04289"
        id="path1104-5-1-1-0-3-7-2-588"
        sodipodi:nodetypes="cszsccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75" />
   </g>
   <g
@@ -7125,7 +7125,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 9" />
@@ -7142,14 +7142,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-2-3-9"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="m 36.549814,152.57099 c 0.671302,3.24256 -0.218357,7.39993 -1.669701,11.3484 -2.770981,7.53886 -10.886172,9.62517 -17.381097,7.37092 -6.49496,-2.25422 -12.7670215,-9.02796 -10.0790742,-17.04419 2.8954092,-8.63374 10.2447902,-15.87885 17.6292652,-7.9878 l 1.269011,0.47828 c 6.563446,-0.46686 9.4514,2.066 10.231596,5.83439"
        id="path1104-5-1-1-0-3-7-2-9"
        sodipodi:nodetypes="cszsccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75" />
   </g>
   <g
@@ -7215,7 +7215,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkscape:label="Auto-remplissage satin 6"
@@ -7233,14 +7233,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-2-3-9-5"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="m 60.680167,129.13762 c -0.348,-3.29299 -0.69373,-6.98199 -3.278527,-10.30198 -4.934994,-6.337 -15.06785,-5.852 -20.567843,-1.728 -5.500093,4.12499 -9.411488,12.48798 -4.410195,19.30397 5.387094,7.343 14.593682,12.00599 19.224476,2.241 l 1.063099,-0.842 c 6.393792,-1.555 8.373289,-4.84599 7.96899,-8.67299"
        id="path1104-5-1-1-0-3-7-2-9-4"
        sodipodi:nodetypes="cszsccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75" />
   </g>
   <g
@@ -7333,7 +7333,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
@@ -7346,7 +7346,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        d="m 65.323698,147.5702 c 10.778986,-18.29498 29.388762,-13.24098 32.102462,-13.48298 1.5505,-0.138 2.60489,0.345 3.66549,0.892 0.237,0.123 -2.12639,-0.847 -2.56859,-0.429 1.41859,0.693 2.27559,1.273 2.27559,1.273 l -3.57679,-1.21 c -2.5765,0.125 -21.153276,-3.634 -31.461663,13.20898"
        style="display:inline;fill:none;stroke:#008000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1" />
     <path
-       inkstitch:ties="1"
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True"
        inkstitch:running_stitch_length_mm="1.5"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        id="path1488-6-2-0-2-2-8"
@@ -7355,7 +7355,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        style="display:inline;fill:none;stroke:#ff0000;stroke-width:0.499999px;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1" />
     <path
        inkstitch:angle="75"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="1"
        sodipodi:nodetypes="cszsccc"
        id="path1104-5-1-1-0-3-7-2-0-6-1"
@@ -7458,7 +7458,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
@@ -7476,14 +7476,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-2-0-8-9-0-0"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="m 42.424427,117.87332 c 0.0837,3.30999 1.895497,7.15699 4.206694,10.67198 4.412695,6.712 12.789784,6.897 18.601877,3.225 5.812093,-3.672 10.379487,-11.69499 5.938992,-18.88998 -4.782994,-7.74899 -13.587382,-13.13298 -18.983876,-3.76899 l -1.126998,0.754 c -6.497592,1.039 -8.733889,4.16099 -8.636689,8.00799"
        id="path1104-5-1-1-0-3-7-2-01-7-3-5"
        sodipodi:nodetypes="cszsccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75" />
   </g>
   <g
@@ -7565,7 +7565,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:zigzag_underlay="True"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:satin_column="True"
@@ -7585,14 +7585,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-2-0-2-2-8-2"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="m 63.844008,138.26707 c 2.258597,2.422 3.659095,6.43599 4.471294,10.56399 1.550598,7.88099 -4.298995,13.87998 -11.019286,15.32998 -6.720292,1.449 -15.599481,-1.079 -17.468578,-9.32399 -2.013398,-8.88199 0.500799,-18.89098 10.910486,-15.98698 l 1.332798,-0.25 c 5.365294,-3.80999 9.148689,-3.14699 11.773186,-0.333"
        id="path1104-5-1-1-0-3-7-2-0-6-1-3"
        sodipodi:nodetypes="cszsccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75" />
   </g>
   <g
@@ -7656,7 +7656,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
@@ -7669,7 +7669,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        d="M 56.38189,106.45551 C 44.780905,88.669534 28.901925,93.555528 26.180128,93.437528 c -1.555298,-0.067 -2.586596,0.463 -3.621385,1.057999 -0.2307,0.133 2.085787,-0.942999 2.546587,-0.544999 -1.385498,0.755999 -2.215487,1.374998 -2.215487,1.374998 l 3.518085,-1.371998 c 2.579597,0.007 18.484477,-3.582996 29.549163,12.771982"
        style="display:inline;fill:none;stroke:#008000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1" />
     <path
-       inkstitch:ties="1"
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True"
        inkstitch:running_stitch_length_mm="1.5"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        id="path1488-6-2-0-8-9-0-0-3"
@@ -7678,7 +7678,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        style="display:inline;fill:none;stroke:#ff0000;stroke-width:0.499999px;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1" />
     <path
        inkstitch:angle="75"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="1"
        sodipodi:nodetypes="cszsccc"
        id="path1104-5-1-1-0-3-7-2-01-7-3-5-9"
@@ -7770,7 +7770,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
@@ -7785,7 +7785,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        style="display:inline;fill:none;stroke:#008000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1" />
     <path
        inkscape:label="path1488"
-       inkstitch:ties="1"
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True"
        inkstitch:running_stitch_length_mm="1.5"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        id="path1488-6-2-0-2-2-8-2-4"
@@ -7795,7 +7795,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        inkscape:label="path1104"
        inkstitch:angle="75"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="1"
        sodipodi:nodetypes="cszsccc"
        id="path1104-5-1-1-0-3-7-2-0-6-1-3-1"
@@ -7819,7 +7819,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:zigzag_underlay="True"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:satin_column="True"
@@ -7860,7 +7860,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
@@ -7879,14 +7879,14 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        id="path1488-6-2-0-2-2-8-9"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        inkstitch:running_stitch_length_mm="1.5"
-       inkstitch:ties="1" />
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True" />
     <path
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:'Cherry Ai';-inkscape-font-specification:'Cherry Ai';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
        d="m 28.09012,136.70093 c 1.97349,2.65899 2.91589,6.80499 3.26089,10.99698 0.6588,8.00599 -5.82549,13.31298 -12.66578,14.00098 -6.840294,0.688 -15.380703,-2.81799 -16.315274,-11.22098 -1.006639,-9.05099 2.611989,-18.71598 12.631174,-14.66498 l 1.3525,-0.1 c 5.75799,-3.185 9.44329,-2.102 11.73649,0.988"
        id="path1104-5-1-1-0-3-7-2-0-6-1-8"
        sodipodi:nodetypes="cszsccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:angle="75" />
   </g>
   <g
@@ -7947,7 +7947,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
@@ -7959,7 +7959,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        d="M 51.13768,92.720069 C 53.027177,71.570096 37.309897,69.183099 35.2444,67.407101 c -1.180199,-1.014999 -2.318498,-1.236998 -3.499796,-1.408998 -0.2635,-0.039 2.222597,0.548999 2.338397,1.145998 -1.556698,-0.261999 -2.591397,-0.289999 -2.591397,-0.289999 L 35.1044,67.9531 c 2.022197,1.600998 16.958278,5.021994 15.53208,24.716969"
        style="display:inline;fill:none;stroke:#008000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1" />
     <path
-       inkstitch:ties="1"
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True"
        inkstitch:running_stitch_length_mm="1.5"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        id="path1488-6-2-0-8-9-0-0-9"
@@ -7968,7 +7968,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        style="display:inline;fill:none;stroke:#ff0000;stroke-width:0.499999px;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1" />
     <path
        inkstitch:angle="75"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="1"
        sodipodi:nodetypes="cszsccc"
        id="path1104-5-1-1-0-3-7-2-01-7-3-5-95"
@@ -8024,7 +8024,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
@@ -8037,7 +8037,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        d="m 25.211235,98.26538 c -6.939991,-20.067973 8.973489,-30.958959 10.549087,-33.181956 0.900199,-1.269999 1.951297,-1.759998 3.055996,-2.212997 0.2466,-0.1 -2.024198,1.069998 -1.992298,1.677998 1.447099,-0.631 2.444597,-0.906999 2.444597,-0.906999 l -3.240396,1.937997 C 34.452623,67.622421 19.546642,79.328406 25.685734,98.09638"
        style="display:inline;fill:none;stroke:#008000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1" />
     <path
-       inkstitch:ties="1"
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True"
        inkstitch:running_stitch_length_mm="1.5"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        id="path1488-6-2-0-2-2-8-9-5"
@@ -8046,7 +8046,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        style="display:inline;fill:none;stroke:#ff0000;stroke-width:0.499999px;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1" />
     <path
        inkstitch:angle="75"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="1"
        sodipodi:nodetypes="cszsccc"
        id="path1104-5-1-1-0-3-7-2-0-6-1-8-7"
@@ -8063,7 +8063,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:zigzag_underlay="True"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:satin_column="True"
@@ -8082,7 +8082,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:zigzag_underlay="True"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:satin_column="True"
@@ -8095,7 +8095,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:zigzag_underlay="True"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:satin_column="True"
@@ -8114,7 +8114,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:zigzag_underlay="True"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:satin_column="True"
@@ -8145,7 +8145,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:zigzag_underlay="True"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:satin_column="True"
@@ -8182,7 +8182,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:zigzag_underlay="True"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:satin_column="True"
@@ -8209,7 +8209,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        sodipodi:nodetypes="ccssssccccsssscc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25" />
@@ -8220,7 +8220,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        sodipodi:nodetypes="csccsc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
+        inkstitch:ties="0" inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25" />
@@ -8242,7 +8242,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        sodipodi:nodetypes="cccccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25" />
@@ -8253,7 +8253,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        sodipodi:nodetypes="csccsc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
+        inkstitch:ties="0" inkstitch:force_lock_stitches="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm=".25" />
@@ -8295,7 +8295,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:center_walk_underlay="False"
@@ -8336,7 +8336,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:zigzag_underlay="True"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:satin_column="True"
@@ -8354,7 +8354,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:zigzag_underlay="True"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:satin_column="True"
@@ -8372,7 +8372,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:zigzag_underlay="True"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:satin_column="True"
@@ -8384,7 +8384,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:zigzag_underlay="True"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:satin_column="True"
@@ -8402,7 +8402,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:zigzag_underlay="True"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:satin_column="True"
@@ -8464,7 +8464,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
     <path
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:zigzag_underlay="True"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:satin_column="True"
@@ -8595,7 +8595,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay_inset_mm="0.1"
        inkstitch:zigzag_underlay="True"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:satin_column="True"
@@ -8611,7 +8611,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        d="M 33.453589,112.01315 C 43.873276,108.13316 54.303663,97.447168 56.58346,90.809177 57.217059,88.964179 57.290759,87.99518 56.84426,86.568182 56.74446,86.249182 57.168759,88.652179 56.55686,89.107179 56.67016,87.278181 56.129661,86.700182 56.129661,86.700182 L 56.198261,90.699177 C 55.487961,93.852173 44.583075,107.65116 33.237489,111.42015"
        style="display:inline;fill:none;stroke:#008000;stroke-width:0.499999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1" />
     <path
-       inkstitch:ties="1"
+        inkstitch:ties="1" inkstitch:force_lock_stitches="True"
        inkstitch:running_stitch_length_mm="1.5"
        sodipodi:nodetypes="czczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczc"
        id="path1488-6-4-0-2-8"
@@ -8620,7 +8620,7 @@ Created by FontForge 20200314 at Wed Apr 14 00:12:23 2021
        style="display:inline;fill:none;stroke:#ff0000;stroke-width:0.499999px;stroke-miterlimit:4;stroke-dasharray:3, 0.999999;stroke-dashoffset:0;stroke-opacity:1" />
     <path
        inkstitch:angle="75"
-       inkstitch:ties="2"
+        inkstitch:ties="2" inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="1"
        sodipodi:nodetypes="cszsccc"
        id="path1104-5-1-1-0-3-2-5-6-6"
