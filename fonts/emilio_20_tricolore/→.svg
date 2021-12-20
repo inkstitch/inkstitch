@@ -414,8 +414,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        style="display:inline;fill:#4f2f4f;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-opacity:1"
        d="M 51,78.999987 75,46.99999 H 218 L 243,79.99999 V 327.99999 L 218,361.99999 H 75 L 51,328.99999 Z M 87,325.99999 H 204 V 83.999989 H 87.999999 Z"
        inkstitch:fill_underlay_inset_mm="0.1"
-       inkstitch:ties="2"
-       inkscape:label="Couleur 1-0" />
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkscape:label="Couleur 1-0" />
     <path
        id="path1845-6"
        style="display:inline;fill:none;stroke:#ffff00;stroke-width:2.51339;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -464,8 +463,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
   </g>
   <g
@@ -480,8 +478,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        id="path2693"
        sodipodi:nodetypes="ccccccccccc"
        inkstitch:fill_underlay_inset_mm="0.1"
-       inkstitch:ties="2"
-       inkscape:label="Couleur 1-1" />
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkscape:label="Couleur 1-1" />
     <path
        id="path2691-6"
        style="display:inline;fill:none;stroke:#ffff00;stroke-opacity:1"
@@ -490,8 +487,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25"
        inkstitch:contour_underlay="False"
        inkscape:label="Couleur 2-1" />
@@ -503,8 +499,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25"
        inkstitch:contour_underlay="False"
        inkscape:label="Couleur 3-1" />
@@ -520,8 +515,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        d="M 88,84 V 131 H 51 V 80 L 76,47 H 218 L 243,80 V 189 L 218,223 H 89 V 326 H 148 206 V 278 H 243 V 362 H 218 206 51 V 220 L 76,186 H 206 V 84 Z"
        id="path3518"
        inkstitch:fill_underlay_inset_mm="0.1"
-       inkstitch:ties="2"
-       inkscape:label="Couleur 1-2" />
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkscape:label="Couleur 1-2" />
     <path
        inkstitch:contour_underlay="False"
        inkstitch:zigzag_underlay_inset_mm="0.25"
@@ -556,8 +550,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
      inkscape:groupmode="layer">
     <path
        inkstitch:angle="45"
-       inkstitch:ties="2"
-       inkstitch:fill_underlay_inset_mm="0.1"
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:fill_underlay_inset_mm="0.1"
        sodipodi:nodetypes="cccccccccccccccccccccccc"
        id="path1570"
        d="M 218,47 243,80 V 189 L 231,204 243,220 V 328 L 218,362 H 76 L 51,328 V 278 H 88 V 326 H 204 V 223 H 113 V 186 H 204 V 84 H 88 V 131 H 51 V 80 L 76,47 Z"
@@ -580,8 +573,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:contour_underlay="False"
        inkstitch:zigzag_underlay_inset_mm="0.25"
        inkstitch:zigzag_underlay="True"
-       inkstitch:ties="0"
-       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:satin_column="True"
        sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
@@ -597,8 +589,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
      inkscape:groupmode="layer">
     <path
        inkstitch:angle="45"
-       inkstitch:ties="2"
-       inkstitch:fill_underlay_inset_mm="0.1"
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:fill_underlay_inset_mm="0.1"
        sodipodi:nodetypes="cccccccccccccccccccc"
        d="M 243,326 H 267 V 362 H 180 V 326 H 205 V 274 H 47 V 243 L 186,47 H 243 V 238 H 267 V 274 H 243 Z M 95,238 H 205 V 84 Z"
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#4f2f4f;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
@@ -622,8 +613,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:contour_underlay="False"
        inkstitch:zigzag_underlay_inset_mm="0.25"
        inkstitch:zigzag_underlay="True"
-       inkstitch:ties="0"
-       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:satin_column="True"
        sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
        d="M 267,349.9 V 362 H 180 V 326 H 205 V 274 H 47 V 243 L 186,47 H 243 V 238 H 267 V 274 H 243 V 326 L 267,325.9 Z M 277,349.9 V 372 H 171 V 315 H 195 V 284 H 37 V 240 L 181,37 H 252 V 228 H 277 V 284 H 252 V 315 L 277,314.9 Z M 206.18289,287.17466 H 193.73989 M 191.17094,313.71853 V 327.38004 M 170.01426,329.92766 H 182.11881 M 170.21141,358.43104 H 181.38004 M 277.88717,358.43104 H 264.57123 M 277.88717,329.92766 H 265.81711 M 263.48773,328.1255 V 313.61954 M 263.48773,273.21099 V 284.78817 M 277.98574,269.78334 H 265.16268 M 263.48773,227.01386 V 239.47822 M 252.88717,224.23629 H 242.11283 M 238.87519,35.817108 V 49.80883 M 180.6057,35.915682 186.69002,48.281467 M 35.619959,239.50713 47.985744,243.3943 M 36.112831,270.26237 H 49.597446 M 183.94977,359.53818 183.75974,374.55061 M 262.81253,359.34815 V 374.36058 M 253.88108,310.51025 H 240.00884 M 207.13352,310.51025 H 192.50115 M 184.1398,328.37314 V 312.60059 M 191.17094,285.80625 V 271.36391 M 254.64121,285.99628 254.83124,272.31407 M 255.02127,313.17068 254.83124,328.7532 M 254.83124,225.75653 254.45118,239.81881 M 265.28293,242.28921 H 278.39505 M 240.57893,52.448487 H 254.07111 M 51.498334,271.74397 V 285.80625"
@@ -720,8 +710,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        id="path1558"
        inkstitch:angle="45"
        inkstitch:fill_underlay_inset_mm="1"
-       inkstitch:ties="2"
-       inkscape:label="Couleur 1-5" />
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkscape:label="Couleur 1-5" />
     <path
        id="path1579"
        style="fill:none;stroke:#ffff00;stroke-opacity:1"
@@ -730,8 +719,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25"
        inkscape:label="Couleur 2-5" />
     <path
@@ -742,8 +730,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25"
        inkscape:label="Couleur 3-5" />
   </g>
@@ -758,8 +745,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        d="M 76,47 H 218 L 243,80 V 131 H 206 V 84 H 90 V 186 H 218 L 243,220 V 328 L 218,362 H 206 76 L 51,328 V 80 Z M 206,223 H 90 V 326 H 206 Z"
        inkstitch:angle="45"
        inkstitch:fill_underlay_inset_mm="1"
-       inkstitch:ties="2"
-       inkscape:label="Couleur 1-6" />
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkscape:label="Couleur 1-6" />
     <path
        id="path10489"
        style="fill:none;stroke:#ffff00"
@@ -768,8 +754,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25"
        inkscape:label="Couleur 2-6" />
     <path
@@ -779,8 +764,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25"
        inkscape:label="Couleur 2-6" />
     <path
@@ -791,8 +775,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25"
        inkscape:label="Couleur 3-6" />
     <path
@@ -803,8 +786,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25"
        inkscape:label="Couleur 3-6" />
   </g>
@@ -818,8 +800,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        d="M 243,93 142,326 H 164 V 362 H 127 86 79 V 326 H 102 L 204,87 H 88 V 131 H 51 V 47 H 243 Z"
        id="path3139"
        inkstitch:angle="45"
-       inkstitch:ties="2"
-       inkstitch:fill_underlay_inset_mm="1"
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:fill_underlay_inset_mm="1"
        inkscape:label="Couleur 1-7" />
     <path
        id="path6615"
@@ -836,8 +817,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
   </g>
   <g
@@ -851,8 +831,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        d="M 218,47 243,80 V 189 L 231,204 243,220 V 328 L 218,362 H 76 L 51,328 V 220 L 63,204 51,189 V 131 80 L 76,47 Z M 90,326 H 204 V 223 H 90 Z M 204,186 V 84 H 90 V 186 Z"
        inkscape:label="Couleur 1-8"
        inkstitch:angle="45"
-       inkstitch:ties="2"
-       inkstitch:fill_underlay_inset_mm="1" />
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:fill_underlay_inset_mm="1" />
     <path
        id="path2187"
        style="display:inline;fill:none;stroke:#ffff00;stroke-width:1.75748;stroke-miterlimit:4;stroke-dasharray:none"
@@ -873,8 +852,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="1"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="1" inkstitch:force_lock_stitches="True"    inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        style="fill:none;stroke:#ffff00;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1"
@@ -892,8 +870,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path2541"
@@ -904,8 +881,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path1029"
@@ -916,8 +892,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path14629"
@@ -925,8 +900,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        d="M 149.9,248 H 114 V 300 H 180 V 290 M 149.9,233 H 100 V 315 H 194 V 290 M 117.17241,250.20072 116.90367,231.1199 M 116.36618,251.54445 97.016608,251.81319 M 115.82869,296.69345 97.82284,296.96219 M 116.90367,297.76842 116.63492,316.58051 M 177.10234,298.03717 177.37108,317.65549 M 178.17732,296.15596 195.64568,296.4247"
        sodipodi:nodetypes="cccccccccc"
        inkscape:label="Couleur 3-8"
-       inkstitch:ties="1"
-       inkstitch:satin_column="True"
+       inkstitch:ties="1" inkstitch:force_lock_stitches="True"    inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:zigzag_underlay="True"
@@ -947,8 +921,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path2152"
@@ -959,8 +932,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
   </g>
   <g
@@ -973,8 +945,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        style="fill:#4f2f4f;stroke:none;stroke-width:2.26772;stroke-miterlimit:4;stroke-dasharray:none"
        d="M 76,47 51,80 V 189 L 76,223 H 204 V 326 H 88 V 278 H 51 V 328 L 76,362 H 218 L 243,328 V 80 L 218,47 H 88 Z M 88,84 H 204 V 186 H 88 Z"
        inkstitch:angle="45"
-       inkstitch:ties="2"
-       inkstitch:fill_underlay_inset_mm="1"
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:fill_underlay_inset_mm="1"
        inkscape:label="Couleur 1-9" />
     <path
        id="path18331"
@@ -985,8 +956,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path18333"
@@ -997,8 +967,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path1025"
@@ -1009,8 +978,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1"
@@ -1029,8 +997,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
   </g>
   <g
@@ -1052,8 +1019,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="1"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="1" inkstitch:force_lock_stitches="True"    inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25"
        sodipodi:nodetypes="ccccccccc" />
     <path
@@ -1064,8 +1030,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25"
        sodipodi:nodetypes="cccccccccccccccccccc" />
     <path
@@ -1077,8 +1042,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path25922"
@@ -1089,8 +1053,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1"
@@ -1107,8 +1070,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="1"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="1" inkstitch:force_lock_stitches="True"    inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path13374"
@@ -1128,8 +1090,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25"
        inkscape:label="Couleur 3-A" />
   </g>
@@ -1144,8 +1105,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        d="M 244,47 269,80 V 189 L 257,204 269,220 V 328 L 244,362 H 52 V 326 H 74 V 84 H 52 V 47 Z M 111,186 H 229 V 84 H 111 Z M 229,223 H 111 V 326 H 229 Z"
        inkscape:label="Couleur 1-B"
        inkstitch:angle="45"
-       inkstitch:ties="2"
-       inkstitch:fill_underlay_inset_mm="1" />
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:fill_underlay_inset_mm="1" />
     <path
        id="path18358"
        style="display:inline;fill:none;stroke:#ffff00;stroke-width:2.51339;stroke-miterlimit:4;stroke-dasharray:none"
@@ -1155,8 +1115,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        style="fill:none;stroke:#ffff00;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1"
@@ -1174,8 +1133,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path18362"
@@ -1186,8 +1144,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="1"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="1" inkstitch:force_lock_stitches="True"    inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path18336"
@@ -1198,8 +1155,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1"
@@ -1217,8 +1173,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path18338"
@@ -1229,8 +1184,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
   </g>
   <g
@@ -1252,8 +1206,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path1089"
@@ -1279,8 +1232,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        d="M 244,47 269,80 V 328 L 244,362 H 52 V 326 H 74 V 84 H 52 V 47 Z M 111,326 H 229 V 84 H 111 Z"
        inkscape:label="Couleur 1-D"
        inkstitch:angle="45"
-       inkstitch:ties="2"
-       inkstitch:fill_underlay_inset_mm="1" />
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:fill_underlay_inset_mm="1" />
     <path
        id="path43796"
        style="fill:none;stroke:#ffff00;stroke-width:2.51339;stroke-miterlimit:4;stroke-dasharray:none"
@@ -1290,8 +1242,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path43798"
@@ -1302,8 +1253,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path1109"
@@ -1314,8 +1264,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path43668"
@@ -1326,8 +1275,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
   </g>
   <g
@@ -1341,8 +1289,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        id="path48577"
        inkscape:label="Couleur 1-E"
        inkstitch:angle="45"
-       inkstitch:ties="2"
-       inkstitch:fill_underlay_inset_mm="1" />
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:fill_underlay_inset_mm="1" />
     <path
        id="path48638"
        style="display:inline;fill:none;stroke:#ffff00;stroke-width:2.26772;stroke-miterlimit:4;stroke-dasharray:none"
@@ -1352,8 +1299,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path53450"
@@ -1363,8 +1309,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="1"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="1" inkstitch:force_lock_stitches="True"    inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1"
@@ -1446,8 +1391,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25"
        inkscape:label="Couleur 3-E" />
   </g>
@@ -1461,8 +1405,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        d="M 269,131 H 229 V 84 H 111 V 186 H 176 205 V 159 H 240 V 250 H 205 V 223 H 164 111 V 326 H 133 V 362 H 52 V 326 H 74 V 84 H 52 V 47 H 269 Z"
        id="path61984"
        inkstitch:angle="45"
-       inkstitch:ties="2"
-       inkstitch:fill_underlay_inset_mm="1"
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:fill_underlay_inset_mm="1"
        inkscape:label="Couleur 1-F" />
     <path
        id="path62045"
@@ -1473,8 +1416,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path61980"
@@ -1484,8 +1426,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="1"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="1" inkstitch:force_lock_stitches="True"    inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25"
        inkscape:label="Couleur 3-F" />
     <path
@@ -1526,8 +1467,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25"
        inkstitch:contour_underlay="False"
        inkscape:label="Couleur 3-F" />
@@ -1544,8 +1484,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        sodipodi:nodetypes="ccccccccccccccccccc"
        inkscape:label="Couleur 1-G"
        inkstitch:angle="45"
-       inkstitch:ties="2"
-       inkstitch:fill_underlay_inset_mm="1" />
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:fill_underlay_inset_mm="1" />
     <path
        id="path7763"
        style="display:inline;fill:none;stroke:#ffff00;stroke-width:2.51339;stroke-miterlimit:4;stroke-dasharray:none"
@@ -1555,8 +1494,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path1129"
@@ -1567,8 +1505,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
   </g>
   <g
@@ -1582,8 +1519,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        id="path12191"
        inkscape:label="Couleur 1-H"
        inkstitch:angle="45"
-       inkstitch:ties="2"
-       inkstitch:fill_underlay_inset_mm="1" />
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:fill_underlay_inset_mm="1" />
     <path
        id="path12290"
        style="fill:none;stroke:#ffff00;stroke-width:2.51339;stroke-miterlimit:4;stroke-dasharray:none"
@@ -1593,8 +1529,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path1077"
@@ -1605,8 +1540,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
   </g>
   <g
@@ -1620,8 +1554,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        id="path17889"
        inkscape:label="Couleur 1-I"
        inkstitch:angle="45"
-       inkstitch:ties="2"
-       inkstitch:fill_underlay_inset_mm="1" />
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:fill_underlay_inset_mm="1" />
     <path
        id="path17950"
        style="fill:none;stroke:#ffff00;stroke-width:2.51339;stroke-miterlimit:4;stroke-dasharray:none"
@@ -1631,8 +1564,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path1081"
@@ -1643,8 +1575,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
   </g>
   <g
@@ -1658,8 +1589,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        id="path5952"
        inkscape:label="Couleur 1-J"
        inkstitch:angle="45"
-       inkstitch:ties="2"
-       inkstitch:fill_underlay_inset_mm="1" />
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:fill_underlay_inset_mm="1" />
     <path
        id="path5975"
        style="fill:none;stroke:#ffff00;stroke-width:2.51339;stroke-miterlimit:4;stroke-dasharray:none"
@@ -1681,8 +1611,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
   </g>
   <g
@@ -1695,8 +1624,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        d="M 141,47 V 84 H 116 V 184 H 184 L 236,84 H 214 V 47 H 302 V 84 H 280 L 218,204 278,326 H 302 V 362 H 214 V 326 H 234 L 184,224 H 116 V 326 H 141 V 362 H 53 V 326 H 78 V 84 H 53 V 47 Z"
        id="path13899"
        inkstitch:angle="45"
-       inkstitch:ties="2"
-       inkstitch:fill_underlay_inset_mm="1"
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:fill_underlay_inset_mm="1"
        inkscape:label="Couleur 1-K" />
     <path
        id="path13922"
@@ -1707,8 +1635,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path1073"
@@ -1719,8 +1646,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
   </g>
   <g
@@ -1733,8 +1659,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        d="M 136,84 V 47 H 51 V 84 H 76 V 326 H 51 V 362 H 248 V 278 H 211 V 326 H 112 V 84 Z"
        id="path19105"
        inkstitch:angle="45"
-       inkstitch:ties="2"
-       inkstitch:fill_underlay_inset_mm="1"
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:fill_underlay_inset_mm="1"
        inkscape:label="Couleur 1-L" />
     <path
        id="path19128"
@@ -1745,8 +1670,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path1137"
@@ -1757,8 +1681,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
   </g>
   <g
@@ -1772,8 +1695,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        id="path24798"
        inkscape:label="Couleur 1-M"
        inkstitch:angle="45"
-       inkstitch:ties="2"
-       inkstitch:fill_underlay_inset_mm="1" />
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:fill_underlay_inset_mm="1" />
     <path
        id="path26653"
        style="fill:none;stroke:#ffff00;stroke-width:2.51339;stroke-miterlimit:4;stroke-dasharray:none"
@@ -1782,8 +1704,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="1"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="1" inkstitch:force_lock_stitches="True"    inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path26655"
@@ -1804,8 +1725,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path29988"
@@ -1816,8 +1736,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="1"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="1" inkstitch:force_lock_stitches="True"    inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path1141"
@@ -1840,8 +1759,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
   </g>
   <g
@@ -1854,8 +1772,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        d="M 116,119 238,362 H 278 V 84 H 302 V 47 H 214 V 84 H 238 V 277 L 124,47 H 53 V 84 H 78 V 326 H 53 V 362 H 141 V 326 H 116 Z"
        id="path5112"
        inkstitch:angle="45"
-       inkstitch:ties="2"
-       inkstitch:fill_underlay_inset_mm="1"
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:fill_underlay_inset_mm="1"
        inkscape:label="Couleur 1-N" />
     <path
        id="path5135"
@@ -1866,8 +1783,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="1"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="1" inkstitch:force_lock_stitches="True"    inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path6461"
@@ -1890,8 +1806,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path1069"
@@ -1902,8 +1817,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="1"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="1" inkstitch:force_lock_stitches="True"    inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path11671"
@@ -1925,8 +1839,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
   </g>
   <g
@@ -1940,8 +1853,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        style="display:inline;fill:#4f2f4f;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-opacity:1"
        d="M 51,78.999987 75,46.99999 H 218 L 243,79.99999 V 327.99999 L 218,361.99999 H 75 L 51,328.99999 Z M 87,325.99999 H 204 V 83.999989 H 87.999999 Z"
        inkstitch:fill_underlay_inset_mm="0.1"
-       inkstitch:ties="2"
-       inkscape:label="Couleur 1-0" />
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkscape:label="Couleur 1-0" />
     <path
        id="path1845-6-9"
        style="display:inline;fill:none;stroke:#ffff00;stroke-width:2.51339;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -1990,8 +1902,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
   </g>
   <g
@@ -2005,8 +1916,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        d="M 52,47 V 84 H 76 V 326 H 52 V 362 H 76 114 139 V 326 H 114 V 240 H 248 L 272,208 V 80 L 248,47 Z M 114,84 H 232 V 204 H 114 Z"
        inkscape:label="Couleur 1-P"
        inkstitch:angle="45"
-       inkstitch:ties="2"
-       inkstitch:fill_underlay_inset_mm="1" />
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:fill_underlay_inset_mm="1" />
     <path
        id="path16580"
        style="display:inline;fill:none;stroke:#ffff00;stroke-width:2.51339;stroke-miterlimit:4;stroke-dasharray:none"
@@ -2016,8 +1926,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path16442"
@@ -2028,8 +1937,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path21121"
@@ -2039,8 +1947,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path1085"
@@ -2051,8 +1958,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path16373"
@@ -2062,8 +1968,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
   </g>
   <g
@@ -2076,8 +1981,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        style="fill:#4f2f4f;stroke:none;stroke-width:2.51339;stroke-miterlimit:4;stroke-dasharray:none"
        d="M 51,328 75,362 H 130 L 165,425 197,404 174,361 H 218 L 243,327 V 81 L 218,46 H 75 L 51,79 Z M 88,84 H 204 V 324 H 87 Z"
        inkstitch:angle="45"
-       inkstitch:ties="2"
-       inkstitch:fill_underlay_inset_mm="1"
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:fill_underlay_inset_mm="1"
        inkscape:label="Couleur 1-Q" />
     <path
        id="path24601"
@@ -2088,8 +1992,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path24501"
@@ -2100,8 +2003,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path1145"
@@ -2112,8 +2014,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path24356"
@@ -2124,8 +2025,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
   </g>
   <g
@@ -2139,8 +2039,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        d="M 248,47 272,80 V 208 L 248,240 H 234 L 247,326 H 272 V 362 H 252 212 186 V 326 H 207 L 194,240 H 114 V 326 H 139 V 362 H 52 V 326 H 76 V 84 H 52 V 47 Z M 114,204 H 232 V 84 H 114 Z"
        inkscape:label="Couleur 1-R"
        inkstitch:angle="45"
-       inkstitch:ties="2"
-       inkstitch:fill_underlay_inset_mm="1" />
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:fill_underlay_inset_mm="1" />
     <path
        id="path33742"
        style="display:inline;fill:none;stroke:#ffff00;stroke-width:2.51339;stroke-miterlimit:4;stroke-dasharray:none"
@@ -2150,8 +2049,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path33642"
@@ -2162,8 +2060,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path33571"
@@ -2174,8 +2071,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.623622;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.623622, 0.623622;stroke-dashoffset:0;stroke-opacity:1"
@@ -2193,8 +2089,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
   </g>
   <g
@@ -2207,8 +2102,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        d="M 206,84 H 88 V 186 H 218 L 243,220 V 328 L 218,362 H 76 L 51,328 V 278 H 88 V 326 H 146 204 V 223 H 76 L 51,189 V 80 L 76,47 H 218 L 243,80 V 131 H 206 Z"
        id="path48076"
        inkstitch:angle="45"
-       inkstitch:ties="2"
-       inkstitch:fill_underlay_inset_mm="1"
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:fill_underlay_inset_mm="1"
        inkscape:label="Couleur 1-S" />
     <path
        id="path48175"
@@ -2219,8 +2113,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path1149"
@@ -2231,8 +2124,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
   </g>
   <g
@@ -2245,8 +2137,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        d="M 250,47 V 131 H 216 V 84 H 161 V 326 H 185 V 362 H 99 V 326 H 123 V 84 H 68 V 131 H 34 V 47 Z"
        id="path53226"
        inkstitch:angle="45"
-       inkstitch:ties="2"
-       inkstitch:fill_underlay_inset_mm="1"
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:fill_underlay_inset_mm="1"
        inkscape:label="Couleur 1-T" />
     <path
        id="path53401"
@@ -2257,8 +2148,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path1153"
@@ -2269,8 +2159,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
   </g>
   <g
@@ -2283,8 +2172,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        d="M 143,84 V 47 H 55 V 84 H 80 V 329 L 104,362 H 254 L 279,328 V 84 H 303 V 47 H 215 V 84 H 238 V 240 326 H 118 V 84 Z"
        id="path58664"
        inkstitch:angle="45"
-       inkstitch:ties="2"
-       inkstitch:fill_underlay_inset_mm="1"
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:fill_underlay_inset_mm="1"
        inkscape:label="Couleur 1-U" />
     <path
        id="path58725"
@@ -2295,8 +2183,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path1157"
@@ -2307,8 +2194,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
   </g>
   <g
@@ -2321,8 +2207,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        d="M 275,84 H 300 V 47 H 211 V 84 H 234 L 166,304 99,84 H 122 V 47 H 33 V 84 H 58 L 144,362 H 190 Z"
        id="path6771"
        inkstitch:angle="45"
-       inkstitch:ties="2"
-       inkstitch:fill_underlay_inset_mm="1"
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:fill_underlay_inset_mm="1"
        inkscape:label="Couleur 1-V" />
     <path
        id="path6794"
@@ -2333,8 +2218,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="1"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="1" inkstitch:force_lock_stitches="True"    inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path10025"
@@ -2345,8 +2229,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path1101"
@@ -2357,8 +2240,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="1"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="1" inkstitch:force_lock_stitches="True"    inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path12691"
@@ -2369,8 +2251,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
   </g>
   <g
@@ -2384,8 +2265,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        id="path3175"
        inkscape:label="Couleur 1-W"
        inkstitch:angle="45"
-       inkstitch:ties="2"
-       inkstitch:fill_underlay_inset_mm="1" />
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:fill_underlay_inset_mm="1" />
     <path
        id="path3179"
        style="fill:none;stroke:#ffff00;stroke-width:2.51339;stroke-miterlimit:4;stroke-dasharray:none"
@@ -2395,8 +2275,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="1"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="1" inkstitch:force_lock_stitches="True"    inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path5824"
@@ -2431,8 +2310,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path1161"
@@ -2443,8 +2321,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="1"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="1" inkstitch:force_lock_stitches="True"    inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path11115"
@@ -2479,8 +2356,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="2"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
   </g>
   <g
@@ -2494,8 +2370,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        id="path18609"
        sodipodi:nodetypes="ccccccccccccccccccccccccccccc"
        inkstitch:angle="45"
-       inkstitch:ties="2"
-       inkstitch:fill_underlay_inset_mm="1"
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:fill_underlay_inset_mm="1"
        inkscape:label="Couleur 1-X" />
     <path
        id="path18632"
@@ -2506,8 +2381,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path1065"
@@ -2518,8 +2392,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
   </g>
   <g
@@ -2533,8 +2406,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        id="path28920"
        sodipodi:nodetypes="cccccccccccccccccccccc"
        inkstitch:angle="45"
-       inkstitch:ties="2"
-       inkstitch:fill_underlay_inset_mm="1"
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:fill_underlay_inset_mm="1"
        inkscape:label="Couleur 1-Y" />
     <path
        id="path28943"
@@ -2545,8 +2417,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path1061"
@@ -2560,8 +2431,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay_inset_mm="0.25" />
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay_inset_mm="0.25" />
   </g>
   <g
      id="g1059"
@@ -2574,8 +2444,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        id="path37508"
        sodipodi:nodetypes="ccccccccccccccc"
        inkstitch:angle="45"
-       inkstitch:ties="2"
-       inkstitch:fill_underlay_inset_mm="1"
+       inkstitch:ties="2" inkstitch:force_lock_stitches="True"    inkstitch:fill_underlay_inset_mm="1"
        inkscape:label="Couleur 1-Z" />
     <path
        id="path37531"
@@ -2589,8 +2458,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay_inset_mm="0.25" />
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay_inset_mm="0.25" />
     <path
        id="path1057"
        style="display:inline;fill:none;stroke:#000000;stroke-width:2.51339;stroke-miterlimit:4;stroke-dasharray:none"
@@ -2600,8 +2468,7 @@ Created by FontForge 20190801 at Sun Mar 28 13:58:07 2021
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.15"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0"
-       inkstitch:zigzag_underlay="True"
+       inkstitch:ties="0" inkstitch:force_lock_stitches="True"   inkstitch:zigzag_underlay="True"
        inkstitch:zigzag_underlay_inset_mm="0.25" />
   </g>
 </svg>
