@@ -84,6 +84,13 @@ if [ "$BUILD" = "windows" ]; then
 fi
 
 if [ "$BUILD" = "linux" ]; then
+    gem install fpm
+
+    fpm -s dir -t deb -n inkstitch -v "$VERSION" --after-install bin/after-install --before-remove bin/before-remove dist/inkstitch=/opt
+    fpm -s dir -t rpm -n inkstitch -v "$VERSION" --after-install bin/after-install --before-remove bin/before-remove dist/inkstitch=/opt
+
+    mv *.deb *.rpm artifacts/
+
     cd dist
     python -m zipfile -c ../artifacts/inkstitch-${VERSION}-${OS}.zip *;
     cd ..

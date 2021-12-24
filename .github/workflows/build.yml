@@ -19,7 +19,9 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '16.x'
-
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1
       - uses: actions/cache@v2
         id: pip-cache
         with:
@@ -239,3 +241,6 @@ jobs:
             artifacts/*.zip
             artifacts/*.exe
             artifacts/*.pkg
+            artifacts/*.deb
+            artifacts/*.rpm
+            artifacts/*.sh
