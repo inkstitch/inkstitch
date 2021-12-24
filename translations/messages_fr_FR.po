@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-12-10 01:42+0000\n"
-"PO-Revision-Date: 2021-12-15 01:42\n"
+"POT-Creation-Date: 2021-12-19 01:47+0000\n"
+"PO-Revision-Date: 2021-12-24 01:44\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-10 01:42+0000\n"
+"POT-Creation-Date: 2021-12-19 01:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,23 +34,23 @@ msgstr ""
 #. name of font in fonts/Brockscript
 #: inkstitch-fonts-metadata.py:2
 msgid "Brock Script"
-msgstr ""
+msgstr "Brock Script"
 
 #. description of font in fonts/Brockscript
 #: inkstitch-fonts-metadata.py:4
 msgid "Brock Script is a decorative satin column manuscript font of size approximatively 40mm. It can be enlarged up to 250%. It contains 118 glyphs, covering most western european languages needs.More decorative options are hidden in the µ glyph"
-msgstr ""
+msgstr "Brock Script est une police manuscrite décorative à colonnes satinées de taille approximative de 40 mm. Elle peut être agrandie jusqu'à 250%. Elle contient 118 glyphes, couvrant les besoins de la plupart des langues de l'Europe occidentale. Des options plus décoratives sont cachées dans le glyphe µ"
 
 #. name of font in fonts/amitaclo
 #: inkstitch-fonts-metadata.py:6
 msgid "Amitaclo"
-msgstr ""
+msgstr "Amitaclo"
 
 #. description of font in fonts/amitaclo
 #: inkstitch-fonts-metadata.py:8
 #, python-format
 msgid "The capital M is 25.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 160%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "La majuscule M a une largeur de 25.3 millimètres à l'échelle 100 %. Peut être réduite à 80 % ou augmentée à 160 %. Chaque satin a une sous-couche centrale"
 
 #. name of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:10
@@ -60,12 +60,12 @@ msgstr "Apex Lake"
 #. description of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:12
 msgid "Apex Lake is a large ornate capital letters font of size approximatively 60mm. It contains 38 glyphs : A-Z,0-9,! and ?. It can be reduced down to 80% and enlarged up to 130%"
-msgstr ""
+msgstr "Apex Lake est une police de lettrines d'environ 60mm. Il y a 38 glyphes : A-Z, 0-9, ! et ?. Peut être réduite jusqu'à 80% et agrandie jusqu'à 130%"
 
 #. name of font in fonts/baumans_FI
 #: inkstitch-fonts-metadata.py:14
 msgid "Baumans FI"
-msgstr ""
+msgstr "Baumans FI"
 
 #. description of font in fonts/baumans_FI
 #: inkstitch-fonts-metadata.py:16
@@ -76,22 +76,22 @@ msgstr "La majuscule M a une largeur de 22.3 millimètres à l'échelle 100 %. P
 #. name of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:18
 msgid "Cherry for inkstitch"
-msgstr ""
+msgstr "Cherry pour inkstitch"
 
 #. description of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:20
 msgid "Cherry for inkstitch is a decorative satin column font of size approximatively 40mm. It can be reduced down to 80% and enlarged up to 180%. It contains 74 glyphs."
-msgstr ""
+msgstr "Cherry for Inkstitch est une police décorative en colonne satin d'environ 40mm. Peut être réduite jusqu'à 80% ou agrandie jusqu'à 180%. Il y a 74 glyphes."
 
 #. name of font in fonts/cherryforkaalleen
 #: inkstitch-fonts-metadata.py:22
 msgid "Cherry for Kaalleen"
-msgstr ""
+msgstr "Cherry for Kaalleen"
 
 #. description of font in fonts/cherryforkaalleen
 #: inkstitch-fonts-metadata.py:24
 msgid "Cherry for Kaalleen is a large decorative font of size approximatively 75mm. It contains 36 glyphs including the numbers and the 26 capitals  A-Z. It can be reduced down to 80% and enlarged up to 130%"
-msgstr ""
+msgstr "Cherry for Kaalleen est une grande police décorative d'environ 75mm. Il y a 36 glyphes dont les chiffres et les 26 majuscules A-Z. Peut être réduite jusqu'à 80% et agrandie jusqu'à 130%"
 
 #. name of font in fonts/chopin
 #: inkstitch-fonts-metadata.py:26
@@ -133,7 +133,7 @@ msgstr "Digory Doodles Bean"
 #. description of font in fonts/digory_doodles_bean
 #: inkstitch-fonts-metadata.py:40
 msgid "All letters have mixed satin and bean stitch; The capital M is 16mm tall. The small x is 7 mm"
-msgstr ""
+msgstr "Les lettres sont toutes constituées de point satin et de point triple. La majuscule M a 16mm de hauteur. La minuscule x, 7mm"
 
 #. name of font in fonts/emilio_20
 #: inkstitch-fonts-metadata.py:42
@@ -144,22 +144,22 @@ msgstr "Emilio 20"
 #: inkstitch-fonts-metadata.py:44
 #, python-format
 msgid "Emilio 20 is a font with capital only and numbers. M is 48.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 140%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Emilio 20 est une police de majuscules uniquement et de chiffres. Le M a 48,5 millimètres de large à l'échelle 100%. Peut être diminuée jusqu'à 70% et agrandie jusqu'à 140%. Les points satin ont une sous-couche zigzag"
 
 #. name of font in fonts/emilio_20_tricolore
 #: inkstitch-fonts-metadata.py:46
 msgid "EMILIO 20 TRICOLORE"
-msgstr ""
+msgstr "EMILIO 20 TRICOLORE"
 
 #. description of font in fonts/emilio_20_tricolore
 #: inkstitch-fonts-metadata.py:48
 msgid "Emilio 20 tricolore is a large tricolor fill stitches and satin columns font of  size approximately 100mm. It contains 36 glyphs including the numbers and the 26 capitals  A-Z. It can be reduced down to 90% and enlarged up to 120%"
-msgstr ""
+msgstr "Emilio 20 tricolore est une grande police tricolore en remplissage et colonne satin d'environ 100mm. Il y a 36 glyphes dont les chiffres et les 26 majuscules A-Z. Peut être réduite jusqu'à 90% et agrandie jusqu'à 120%"
 
 #. name of font in fonts/espresso_KOR
 #: inkstitch-fonts-metadata.py:50
 msgid "Espresso KOR"
-msgstr ""
+msgstr "Espresso KOR"
 
 #. description of font in fonts/espresso_KOR
 #: inkstitch-fonts-metadata.py:52
@@ -169,22 +169,22 @@ msgstr "La majuscule M a une hauteur de 16.2 millimètres à l'échelle 100 %. P
 #. name of font in fonts/excalibur_KOR
 #: inkstitch-fonts-metadata.py:54
 msgid "Excalibur KOR"
-msgstr ""
+msgstr "Excalibur KOR"
 
 #. description of font in fonts/excalibur_KOR
 #: inkstitch-fonts-metadata.py:56
 msgid "Excalibur KOR is a small satin column manuscript font of size approximatively 20mm. It can be reduced down to 80% and enlarged up to 140%. It contains 144 glyphs, covering most western European languages needs."
-msgstr ""
+msgstr "Excalibur KOR est une petite police en colonnes satin d'environ 20mm. Peut être réduite jusqu'à 80% et agrandie jusqu'à 140%. Il y a 144 glyphes couvrant la majorité des langues d'Europe de l'Ouest."
 
 #. name of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:58
 msgid "Fold Ink/Stitch"
-msgstr ""
+msgstr "Fold Ink/Stitch"
 
 #. description of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:60
 msgid "Fold Ink/Stitch is a large triple and quintuple running stitches capital font of size 100 mm. It contains 40 glyphs including all numbers and the 26 capitals  A-Z. It can be reduced down to 80% and enlarged up to 200%"
-msgstr ""
+msgstr "Fold Ink/Stitch est une grande police de majuscules au point droit triple ou quintuple de 100mm. Il y a 40 glyphes dont les chiffres et les 26 majuscules A-Z. Peut être réduite jusqu'à 80% et agrandie jusqu'à 200%"
 
 #. name of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:62
@@ -209,17 +209,17 @@ msgstr "Convient aux petites polices (6 à 15 mm)"
 #. name of font in fonts/infinipicto
 #: inkstitch-fonts-metadata.py:70
 msgid "InfiniPicto"
-msgstr ""
+msgstr "InfiniPicto"
 
 #. description of font in fonts/infinipicto
 #: inkstitch-fonts-metadata.py:72
 msgid "InfiniPicto is a fun font of size approximatively 60 mm containing only the 26 A-Z glyph. Each letter is a pictogram of an object whose name begins with that very letter..... in French"
-msgstr ""
+msgstr "InfiniPicto est une police amusante d'une taille d'environ 60 mm contenant uniquement les 26 glyphes  A-Z. Chaque lettre est le pictogramme d'un objet dont le nom commence par cette même lettre..... en français."
 
 #. name of font in fonts/kaushan_script_MAM
 #: inkstitch-fonts-metadata.py:74
 msgid "Kaushan Script MAM"
-msgstr ""
+msgstr "Kaushan Script MAM"
 
 #. description of font in fonts/kaushan_script_MAM
 #: inkstitch-fonts-metadata.py:76
@@ -235,28 +235,28 @@ msgstr "Learning curve"
 #. description of font in fonts/learning_curve
 #: inkstitch-fonts-metadata.py:80
 msgid "Small running stitch script font of size approximatively 12 mm.It can be reduced down to 90% and enlarged up to 200%"
-msgstr ""
+msgstr "Petite police scripte au point droit d'environ 12mm. Peut être diminuée jusqu'à 90% et agrandie jusqu'à 200%"
 
 #. name of font in fonts/lobster_AGS
 #: inkstitch-fonts-metadata.py:82
 msgid "Lobster AGS"
-msgstr ""
+msgstr "Lobster AGS"
 
 #. description of font in fonts/lobster_AGS
 #: inkstitch-fonts-metadata.py:84
 #, python-format
 msgid " The capital M is 19.8 millimeter wide at 100% scale. Can be scaled down to 80% or up to 150%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "La majuscule M a 19,8mm de large à l'échelle 100%. Peut être réduite jusqu'à 80% et agrandie jusqu'à 150%. Chaque satin a une sous-couche zigzag."
 
 #. name of font in fonts/magnolia_ KOR
 #: inkstitch-fonts-metadata.py:86
 msgid "Magnolia KOR"
-msgstr ""
+msgstr "Magnolia KOR"
 
 #. description of font in fonts/magnolia_ KOR
 #: inkstitch-fonts-metadata.py:88
 msgid "Magnolia KOR is a script font of size approximatively 20mm. It can be scaled down to 80% and up to 120%"
-msgstr ""
+msgstr "Magnolia KOR est une police scripte d'environ 20mm. Peut être diminuée jusqu'à 80% et agrandie jusqu'à 120%"
 
 #. name of font in fonts/manuskript_gotisch
 #: inkstitch-fonts-metadata.py:90
@@ -272,13 +272,13 @@ msgstr "La majuscule M a une largeur de 35 millimètres à l'échelle 100 %. Peu
 #. name of font in fonts/marcelusSC_FI
 #: inkstitch-fonts-metadata.py:94
 msgid "MarcellusSC-FI"
-msgstr ""
+msgstr "MarcellusSC-FI"
 
 #. description of font in fonts/marcelusSC_FI
 #: inkstitch-fonts-metadata.py:96
 #, python-format
 msgid "MarcellusSC-FI is a small capital font of size 36 mm. It contains 107 glyphs covering most Western European languages. It can be reduced down to 70% and enlarged up to 200% or 500% using satin split"
-msgstr ""
+msgstr "MarcellusSC-FI est une police en petites majuscules de 36mm. Il y a 107 glyphes couvrant la majorité des langues d'Europe de l'Ouest. Peut être réduite jusqu'à 70% et agrandie jusqu'à 200% voire 500% en utilisant les colonnes satin partagées."
 
 #. name of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:98
@@ -294,22 +294,22 @@ msgstr "Une fonte idéale pour des caractères de taille moyenne. La lettre \"M\
 #. name of font in fonts/namskout_AGS
 #: inkstitch-fonts-metadata.py:102
 msgid "Namskout"
-msgstr ""
+msgstr "Namskout"
 
 #. description of font in fonts/namskout_AGS
 #: inkstitch-fonts-metadata.py:104
 msgid "Namskout  is a large applique font of size approximatively 90mm. It contains 43 glyphs including all numbers and the 26 capitals  A-Z.  It can be reduced down to 50% and enlarged up to 150%  "
-msgstr ""
+msgstr "Namskout est une grande police en appliqué d'environ 90mm. Il y a 43 glyphes dont les chiffres, 30 majuscules A-Z, Ä, Ü, Ö, È, !,?,&. Peut être diminuée jusqu'à 50% et agrandie jusqu'à 150%."
 
 #. name of font in fonts/pacificlo
 #: inkstitch-fonts-metadata.py:106
 msgid "Pacificlo"
-msgstr ""
+msgstr "Pacificlo"
 
 #. description of font in fonts/pacificlo
 #: inkstitch-fonts-metadata.py:108
 msgid "Pacificlo is a small satin column manuscript font of size approximatively 20mm. It can be reduced down to 80% and enlarged up to 140%. It contains 120 glyphs, covering most Western European Languages needs. "
-msgstr ""
+msgstr "La majuscule M a 19,8mm de large à l'échelle 100%. Peut être réduite jusqu'à 80% et agrandie jusqu'à 150%. Chaque satin a une sous-couche zigzag"
 
 #. name of font in fonts/romanaugusa
 #: inkstitch-fonts-metadata.py:110
@@ -670,11 +670,11 @@ msgstr "Jamais"
 #: lib/elements/element.py:212
 #: inx/inkstitch_lettering_force_lock_stitches.inx:3
 msgid "Force lock stitches"
-msgstr ""
+msgstr "Forcer des points d'arrêt"
 
 #: lib/elements/element.py:213
 msgid "Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences."
-msgstr ""
+msgstr "Créer des points de verrouillage après avoir cousu cet élément, même si la distance jusqu'à l'objet suivant est plus courte que le paramètre 'saut de fils' défini dans les préférences Ink/Stitch."
 
 #: lib/elements/element.py:257
 #, python-format
@@ -1214,8 +1214,8 @@ msgstr "Ajouter des coupures"
 
 #: lib/extensions/lettering.py:82 lib/extensions/params.py:361
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
-#: print/templates/custom-page.html:33 print/templates/ui.html:92
-#: print/templates/ui.html:96 print/templates/ui.html:102
+#: print/templates/custom-page.html:33 print/templates/ui.html:93
+#: print/templates/ui.html:97 print/templates/ui.html:103
 #: electron/src/renderer/components/InstallPalettes.vue:25
 #: electron/src/renderer/components/InstallPalettes.vue:63
 msgid "Cancel"
@@ -1255,7 +1255,7 @@ msgstr "Spécifiez le répertoire de vos polices personnalisées."
 
 #: lib/extensions/lettering_force_lock_stitches.py:29
 msgid "The maximum value is smaller than the minimum value."
-msgstr ""
+msgstr "La valeur maximale est inférieure à la valeur minimale."
 
 #: lib/extensions/lettering_generate_json.py:41
 msgid "Please specify a font file."
@@ -1650,17 +1650,17 @@ msgstr "non"
 msgid "Enter thread name..."
 msgstr "Entrez le nom du fil..."
 
-#: print/templates/custom-page.html:22 print/templates/ui.html:91
+#: print/templates/custom-page.html:22 print/templates/ui.html:92
 msgid "Enter URL"
 msgstr "Entrez l’URL"
 
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
-#: print/templates/custom-page.html:33 print/templates/ui.html:92
-#: print/templates/ui.html:96 print/templates/ui.html:102
+#: print/templates/custom-page.html:33 print/templates/ui.html:93
+#: print/templates/ui.html:97 print/templates/ui.html:103
 msgid "OK"
 msgstr "OK"
 
-#: print/templates/custom-page.html:26 print/templates/ui.html:95
+#: print/templates/custom-page.html:26 print/templates/ui.html:96
 msgid "Enter E-Mail"
 msgstr "Entrez votre adresse E-Mail"
 
@@ -1668,11 +1668,11 @@ msgstr "Entrez votre adresse E-Mail"
 msgid "Custom Information Sheet"
 msgstr "Fiche d'information personnalisée"
 
-#: print/templates/custom-page.html:31 print/templates/ui.html:100
+#: print/templates/custom-page.html:31 print/templates/ui.html:101
 msgid "This will reset your custom text to the default."
 msgstr "Cela réinitialisera votre texte personnalisé au défaut."
 
-#: print/templates/custom-page.html:32 print/templates/ui.html:101
+#: print/templates/custom-page.html:32 print/templates/ui.html:102
 msgid "All changes will be lost."
 msgstr "Toutes les modifications seront perdues."
 
@@ -1680,8 +1680,8 @@ msgstr "Toutes les modifications seront perdues."
 msgid "Page"
 msgstr "Page"
 
-#: print/templates/footer.html:3 print/templates/ui.html:98
-#: print/templates/ui.html:105
+#: print/templates/footer.html:3 print/templates/ui.html:99
+#: print/templates/ui.html:106
 msgid "Proudly generated with"
 msgstr "Fièrement généré avec"
 
@@ -1790,12 +1790,12 @@ msgstr "coupures"
 msgid "Enter operator notes..."
 msgstr "Entrez des notes d'utilisation..."
 
-#: print/templates/operator_overview.html:21
+#: print/templates/operator_overview.html:22
 #: print/templates/print_overview.html:21
 msgid "Job estimated time"
 msgstr "Durée estimée du Job"
 
-#: print/templates/operator_overview.html:28
+#: print/templates/operator_overview.html:29
 #: print/templates/print_detail.html:18 print/templates/print_overview.html:28
 msgid "Ctrl + Scroll to Zoom"
 msgstr "Ctrl + Scroll (molette) pour zoomer"
@@ -1832,7 +1832,7 @@ msgstr "Fermer"
 msgid "⚠ lost connection to Ink/Stitch"
 msgstr "⚠ Connexion perdu avec Ink/Stitch"
 
-#: print/templates/ui.html:19 print/templates/ui.html:29
+#: print/templates/ui.html:19 print/templates/ui.html:30
 msgid "Page Setup"
 msgstr "Mise en page"
 
@@ -1840,124 +1840,150 @@ msgstr "Mise en page"
 msgid "Branding"
 msgstr "Image de marque"
 
-#: print/templates/ui.html:21 print/templates/ui.html:112
+#: print/templates/ui.html:21 print/templates/ui.html:113
 msgid "Estimated Time"
 msgstr "Durée estimée"
 
-#: print/templates/ui.html:22 print/templates/ui.html:146
+#: print/templates/ui.html:22 print/templates/ui.html:147
+msgid "Estimated Thread"
+msgstr "Fil estimé"
+
+#: print/templates/ui.html:23 print/templates/ui.html:168
 msgid "Design"
 msgstr "Conception"
 
-#: print/templates/ui.html:31
+#: print/templates/ui.html:32
 msgid "Printing Size"
 msgstr "Taille d’impression"
 
-#: print/templates/ui.html:39
+#: print/templates/ui.html:40
 msgid "Print Layouts"
 msgstr "Mises en page d’impression"
 
-#: print/templates/ui.html:42 print/templates/ui.html:136
+#: print/templates/ui.html:43 print/templates/ui.html:137
 msgid "Client Overview"
 msgstr "Vue d’ensemble du client"
 
-#: print/templates/ui.html:46 print/templates/ui.html:137
+#: print/templates/ui.html:47 print/templates/ui.html:138
 msgid "Client Detailed View"
 msgstr "Vue détaillée de client"
 
-#: print/templates/ui.html:50 print/templates/ui.html:138
+#: print/templates/ui.html:51 print/templates/ui.html:139
 msgid "Operator Overview"
 msgstr "Vue d’ensemble de l’exécution"
 
-#: print/templates/ui.html:54 print/templates/ui.html:139
+#: print/templates/ui.html:55 print/templates/ui.html:140
 msgid "Operator Detailed View"
 msgstr "Vue détaillée de l'exécution"
 
-#: print/templates/ui.html:56
+#: print/templates/ui.html:57
 msgid "Thumbnail size"
 msgstr "Taille de la miniature"
 
-#: print/templates/ui.html:62
+#: print/templates/ui.html:63
 msgid "Custom information sheet"
 msgstr "Fiche d'information personnalisée"
 
-#: print/templates/ui.html:65 print/templates/ui.html:108
+#: print/templates/ui.html:66 print/templates/ui.html:109
 msgid "Includes these Page Setup, estimated time settings and also the icon."
 msgstr "Comprend ces paramètres de mise en page, le réglage de l'heure et l’icône."
 
-#: print/templates/ui.html:65 print/templates/ui.html:108
-#: print/templates/ui.html:142
+#: print/templates/ui.html:66 print/templates/ui.html:109
+#: print/templates/ui.html:143 print/templates/ui.html:164
 msgid "Save as defaults"
 msgstr "Enregistrer comme valeurs par défaut"
 
-#: print/templates/ui.html:70
+#: print/templates/ui.html:71
 msgid "Logo"
 msgstr "Logo"
 
-#: print/templates/ui.html:80
+#: print/templates/ui.html:81
 msgid "Footer: Operator contact information"
 msgstr "Pied de page : Coordonnées de l'opérateur"
 
-#: print/templates/ui.html:114
+#: print/templates/ui.html:115
 msgid "Machine Settings"
 msgstr "Réglages de la machine"
 
-#: print/templates/ui.html:116
+#: print/templates/ui.html:117
 msgid "Average Machine Speed"
 msgstr "Vitesse moyenne de la machine"
 
-#: print/templates/ui.html:117
+#: print/templates/ui.html:118
 msgid "stitches per minute "
 msgstr "Points par minute "
 
-#: print/templates/ui.html:121
+#: print/templates/ui.html:122
 msgid "Time Factors"
 msgstr "Facteurs de temps"
 
-#: print/templates/ui.html:124
+#: print/templates/ui.html:125
 msgid "Includes average time for preparing the machine, thread breaks and/or bobbin changes, etc."
 msgstr "Comprend le temps moyen de préparation de la machine, coupures de fils et/ou changement de canette, etc."
 
-#: print/templates/ui.html:124
+#: print/templates/ui.html:125
 msgid "seconds to add to total time*"
 msgstr "secondes à ajouter à la durée totale *"
 
-#: print/templates/ui.html:128
+#: print/templates/ui.html:129
 msgid "This will be added to the total time."
 msgstr "Cela s’ajoutera à la durée totale."
 
-#: print/templates/ui.html:128
+#: print/templates/ui.html:129
 msgid "seconds needed for a color change*"
 msgstr "secondes nécessaires pour un changement de couleur *"
 
-#: print/templates/ui.html:131
+#: print/templates/ui.html:132
 msgid "seconds needed for trim"
 msgstr "secondes nécessaires pour une coupure de fil"
 
-#: print/templates/ui.html:134
+#: print/templates/ui.html:135
 msgid "Display Time On"
 msgstr "Affichage de l’heure sur"
 
-#: print/templates/ui.html:142
+#: print/templates/ui.html:143 print/templates/ui.html:164
 msgid "Includes page setup, estimated time and also the branding."
 msgstr "Comprend la mise en page, temps estimé et aussi l’image de marque."
 
-#: print/templates/ui.html:147
+#: print/templates/ui.html:149
+msgid "Factors"
+msgstr "Facteurs"
+
+#: print/templates/ui.html:150
+msgid "The thread length calculation depends on a lot of factors in embroidery designs. We will only get a very inacurate approximation.\n"
+"             Ink/Stitch simply calculates the path length, so the factor of 1 will always be much, much less than the real thread consumption."
+msgstr "Le calcul de la longueur du fil dépend d'un grand nombre de facteurs dans les motifs de broderie. Nous n'obtiendrons qu'une approximation très imprécise.\n"
+"             Ink/Stitch calcule simplement la longueur du chemin, donc le facteur de 1 sera toujours beaucoup, beaucoup moins que la consommation réelle de fil."
+
+#: print/templates/ui.html:152
+msgid "Set a factor to multiply the path length with, depending on your standard setup or adapt it to your current design (tension, thread, fabric, stitch count, etc.)."
+msgstr "Définissez un facteur pour multiplier la longueur de la trajectoire, en fonction de votre configuration standard ou adaptez-le à votre conception actuelle (tension, fil, tissu, nombre de points, etc.)."
+
+#: print/templates/ui.html:156 print/templates/ui.html:161
+msgid "Factor to multiply with thread length"
+msgstr "Facteur à multiplier avec la longueur du fil"
+
+#: print/templates/ui.html:156 print/templates/ui.html:161
+msgid "* path length"
+msgstr "* longueur du chemin"
+
+#: print/templates/ui.html:169
 msgid "Thread Palette"
 msgstr "Palette de fil"
 
-#: print/templates/ui.html:150
+#: print/templates/ui.html:172
 msgid "None"
 msgstr "Aucune"
 
-#: print/templates/ui.html:166
+#: print/templates/ui.html:188
 msgid "Changing the thread palette will cause thread names and catalog numbers to be recalculated based on the new palette.  Any changes you have made to color or thread names will be lost.  Are you sure?"
 msgstr "Changer la palette de fil recalculera les noms de fils et les numéros de catalogue, basé sur la nouvelle palette.  Toutes les modifications apportées aux couleurs ou noms de fils seront perdues.  Êtes-vous sûr/e ?"
 
-#: print/templates/ui.html:169
+#: print/templates/ui.html:191
 msgid "Yes"
 msgstr "Oui"
 
-#: print/templates/ui.html:170 inx/inkstitch_lettering_generate_json.inx:37
+#: print/templates/ui.html:192 inx/inkstitch_lettering_generate_json.inx:37
 msgid "No"
 msgstr "Non"
 
@@ -2985,11 +3011,11 @@ msgstr "Gestion des polices"
 #: inx/inkstitch_lettering_force_lock_stitches.inx:23
 #: inx/inkstitch_lettering_force_lock_stitches.inx:24
 msgid "Minimum distance (mm)"
-msgstr ""
+msgstr "Distance minimale (mm)"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:26
 msgid "Add force lock stitches attribute to the last element of each glyph"
-msgstr ""
+msgstr "Ajout de l'attribut \"force lock stitches\" (forcer des points d'arrêt) au dernier élément de chaque glyphe"
 
 #: inx/inkstitch_lettering_generate_json.inx:3
 msgid "Generate JSON"
@@ -3374,7 +3400,7 @@ msgstr "Positionner le plan de broderie à côté du canevas"
 
 #: inx/inkstitch_stitch_plan_preview.inx:15
 msgid "Design layer visibility"
-msgstr ""
+msgstr "Visibilité du calque de conception"
 
 #: inx/inkstitch_stitch_plan_preview.inx:16
 msgid "Unchanged"

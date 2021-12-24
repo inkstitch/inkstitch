@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-12-10 01:42+0000\n"
-"PO-Revision-Date: 2021-12-15 01:42\n"
+"POT-Creation-Date: 2021-12-19 01:47+0000\n"
+"PO-Revision-Date: 2021-12-24 01:44\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-10 01:42+0000\n"
+"POT-Creation-Date: 2021-12-19 01:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1213,8 +1213,8 @@ msgstr "Добавить обрез нитей"
 
 #: lib/extensions/lettering.py:82 lib/extensions/params.py:361
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
-#: print/templates/custom-page.html:33 print/templates/ui.html:92
-#: print/templates/ui.html:96 print/templates/ui.html:102
+#: print/templates/custom-page.html:33 print/templates/ui.html:93
+#: print/templates/ui.html:97 print/templates/ui.html:103
 #: electron/src/renderer/components/InstallPalettes.vue:25
 #: electron/src/renderer/components/InstallPalettes.vue:63
 msgid "Cancel"
@@ -1649,17 +1649,17 @@ msgstr "нет"
 msgid "Enter thread name..."
 msgstr "Введите имя нити..."
 
-#: print/templates/custom-page.html:22 print/templates/ui.html:91
+#: print/templates/custom-page.html:22 print/templates/ui.html:92
 msgid "Enter URL"
 msgstr "Введите URL"
 
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
-#: print/templates/custom-page.html:33 print/templates/ui.html:92
-#: print/templates/ui.html:96 print/templates/ui.html:102
+#: print/templates/custom-page.html:33 print/templates/ui.html:93
+#: print/templates/ui.html:97 print/templates/ui.html:103
 msgid "OK"
 msgstr "OK"
 
-#: print/templates/custom-page.html:26 print/templates/ui.html:95
+#: print/templates/custom-page.html:26 print/templates/ui.html:96
 msgid "Enter E-Mail"
 msgstr "Введите E-Mail"
 
@@ -1667,11 +1667,11 @@ msgstr "Введите E-Mail"
 msgid "Custom Information Sheet"
 msgstr "Страница дополнительных сведений"
 
-#: print/templates/custom-page.html:31 print/templates/ui.html:100
+#: print/templates/custom-page.html:31 print/templates/ui.html:101
 msgid "This will reset your custom text to the default."
 msgstr "Это заменит ваш текст на текст по умолчанию."
 
-#: print/templates/custom-page.html:32 print/templates/ui.html:101
+#: print/templates/custom-page.html:32 print/templates/ui.html:102
 msgid "All changes will be lost."
 msgstr "Все изменения будут утрачены."
 
@@ -1679,8 +1679,8 @@ msgstr "Все изменения будут утрачены."
 msgid "Page"
 msgstr "Страница"
 
-#: print/templates/footer.html:3 print/templates/ui.html:98
-#: print/templates/ui.html:105
+#: print/templates/footer.html:3 print/templates/ui.html:99
+#: print/templates/ui.html:106
 msgid "Proudly generated with"
 msgstr "Создано с помощью"
 
@@ -1789,12 +1789,12 @@ msgstr "обрезки"
 msgid "Enter operator notes..."
 msgstr "Заметки для оператора..."
 
-#: print/templates/operator_overview.html:21
+#: print/templates/operator_overview.html:22
 #: print/templates/print_overview.html:21
 msgid "Job estimated time"
 msgstr "Время вышивки"
 
-#: print/templates/operator_overview.html:28
+#: print/templates/operator_overview.html:29
 #: print/templates/print_detail.html:18 print/templates/print_overview.html:28
 msgid "Ctrl + Scroll to Zoom"
 msgstr "Ctrl + скролл для увеличения"
@@ -1831,7 +1831,7 @@ msgstr "Закрыть"
 msgid "⚠ lost connection to Ink/Stitch"
 msgstr "⚠ потеряна связь с Ink/Stitch"
 
-#: print/templates/ui.html:19 print/templates/ui.html:29
+#: print/templates/ui.html:19 print/templates/ui.html:30
 msgid "Page Setup"
 msgstr "Настройка Страницы"
 
@@ -1839,124 +1839,149 @@ msgstr "Настройка Страницы"
 msgid "Branding"
 msgstr "Брендирование"
 
-#: print/templates/ui.html:21 print/templates/ui.html:112
+#: print/templates/ui.html:21 print/templates/ui.html:113
 msgid "Estimated Time"
 msgstr "Ожидаемое Время"
 
-#: print/templates/ui.html:22 print/templates/ui.html:146
+#: print/templates/ui.html:22 print/templates/ui.html:147
+msgid "Estimated Thread"
+msgstr ""
+
+#: print/templates/ui.html:23 print/templates/ui.html:168
 msgid "Design"
 msgstr "Дизайн"
 
-#: print/templates/ui.html:31
+#: print/templates/ui.html:32
 msgid "Printing Size"
 msgstr "Размер Печати"
 
-#: print/templates/ui.html:39
+#: print/templates/ui.html:40
 msgid "Print Layouts"
 msgstr "Макеты Печати"
 
-#: print/templates/ui.html:42 print/templates/ui.html:136
+#: print/templates/ui.html:43 print/templates/ui.html:137
 msgid "Client Overview"
 msgstr "Обзор для клиента"
 
-#: print/templates/ui.html:46 print/templates/ui.html:137
+#: print/templates/ui.html:47 print/templates/ui.html:138
 msgid "Client Detailed View"
 msgstr "Детальный вид для клиента"
 
-#: print/templates/ui.html:50 print/templates/ui.html:138
+#: print/templates/ui.html:51 print/templates/ui.html:139
 msgid "Operator Overview"
 msgstr "Обзор для оператора"
 
-#: print/templates/ui.html:54 print/templates/ui.html:139
+#: print/templates/ui.html:55 print/templates/ui.html:140
 msgid "Operator Detailed View"
 msgstr "Детальный вид для оператора"
 
-#: print/templates/ui.html:56
+#: print/templates/ui.html:57
 msgid "Thumbnail size"
 msgstr "Размер превьюшек"
 
-#: print/templates/ui.html:62
+#: print/templates/ui.html:63
 msgid "Custom information sheet"
 msgstr "Страница дополнительных сведений"
 
-#: print/templates/ui.html:65 print/templates/ui.html:108
+#: print/templates/ui.html:66 print/templates/ui.html:109
 msgid "Includes these Page Setup, estimated time settings and also the icon."
 msgstr "Будут сохранены эти Настройки Страницы, Ожидаемое время, а также логотип."
 
-#: print/templates/ui.html:65 print/templates/ui.html:108
-#: print/templates/ui.html:142
+#: print/templates/ui.html:66 print/templates/ui.html:109
+#: print/templates/ui.html:143 print/templates/ui.html:164
 msgid "Save as defaults"
 msgstr "Сохранить по умолчанию"
 
-#: print/templates/ui.html:70
+#: print/templates/ui.html:71
 msgid "Logo"
 msgstr "Логотип"
 
-#: print/templates/ui.html:80
+#: print/templates/ui.html:81
 msgid "Footer: Operator contact information"
 msgstr "Нижний колонтитул: Контактная информация оператора"
 
-#: print/templates/ui.html:114
+#: print/templates/ui.html:115
 msgid "Machine Settings"
 msgstr "Настройки Машины"
 
-#: print/templates/ui.html:116
+#: print/templates/ui.html:117
 msgid "Average Machine Speed"
 msgstr "Средняя скорость машины"
 
-#: print/templates/ui.html:117
+#: print/templates/ui.html:118
 msgid "stitches per minute "
 msgstr "стежков в минуту "
 
-#: print/templates/ui.html:121
+#: print/templates/ui.html:122
 msgid "Time Factors"
 msgstr "Настройки Времени"
 
-#: print/templates/ui.html:124
+#: print/templates/ui.html:125
 msgid "Includes average time for preparing the machine, thread breaks and/or bobbin changes, etc."
 msgstr "Включает среднее время подготовки машины, замену порванных нитей и/или катушек, и т. д."
 
-#: print/templates/ui.html:124
+#: print/templates/ui.html:125
 msgid "seconds to add to total time*"
 msgstr "секунд добавить к общему времени*"
 
-#: print/templates/ui.html:128
+#: print/templates/ui.html:129
 msgid "This will be added to the total time."
 msgstr "Будет добавлено к общему времени."
 
-#: print/templates/ui.html:128
+#: print/templates/ui.html:129
 msgid "seconds needed for a color change*"
 msgstr "секунд нужно для смены цвета*"
 
-#: print/templates/ui.html:131
+#: print/templates/ui.html:132
 msgid "seconds needed for trim"
 msgstr "секунд нужно для обрезки"
 
-#: print/templates/ui.html:134
+#: print/templates/ui.html:135
 msgid "Display Time On"
 msgstr "Показывать время на"
 
-#: print/templates/ui.html:142
+#: print/templates/ui.html:143 print/templates/ui.html:164
 msgid "Includes page setup, estimated time and also the branding."
 msgstr "Сохранит настройки страницы, ожидаемое время, а также брендинг."
 
-#: print/templates/ui.html:147
+#: print/templates/ui.html:149
+msgid "Factors"
+msgstr ""
+
+#: print/templates/ui.html:150
+msgid "The thread length calculation depends on a lot of factors in embroidery designs. We will only get a very inacurate approximation.\n"
+"             Ink/Stitch simply calculates the path length, so the factor of 1 will always be much, much less than the real thread consumption."
+msgstr ""
+
+#: print/templates/ui.html:152
+msgid "Set a factor to multiply the path length with, depending on your standard setup or adapt it to your current design (tension, thread, fabric, stitch count, etc.)."
+msgstr ""
+
+#: print/templates/ui.html:156 print/templates/ui.html:161
+msgid "Factor to multiply with thread length"
+msgstr ""
+
+#: print/templates/ui.html:156 print/templates/ui.html:161
+msgid "* path length"
+msgstr ""
+
+#: print/templates/ui.html:169
 msgid "Thread Palette"
 msgstr "Палитра Ниток"
 
-#: print/templates/ui.html:150
+#: print/templates/ui.html:172
 msgid "None"
 msgstr "Нет"
 
-#: print/templates/ui.html:166
+#: print/templates/ui.html:188
 msgid "Changing the thread palette will cause thread names and catalog numbers to be recalculated based on the new palette.  Any changes you have made to color or thread names will be lost.  Are you sure?"
 msgstr "Изменение палитры ниток приведет к пересчету названий и каталожных номеров согласно новой палитре. Любые изменения, которые вы вносили в имена цветов и нитей будут утрачены. Продолжить?"
 
-#: print/templates/ui.html:169
+#: print/templates/ui.html:191
 msgid "Yes"
 msgstr "Да"
 
-#: print/templates/ui.html:170 inx/inkstitch_lettering_generate_json.inx:37
+#: print/templates/ui.html:192 inx/inkstitch_lettering_generate_json.inx:37
 msgid "No"
 msgstr "Нет"
 
