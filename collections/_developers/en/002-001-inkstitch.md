@@ -5,7 +5,7 @@ last_modified_at: 2019-05-02
 toc: true
 ---
 ## Ink/Stitch Organization
-The [plugin code](https://github.com/inkstitch/inkstitch) as well as the [pyembroidery repository](https://github.com/inkstitch/pyembroidery) can be found within the [Ink/Stitch organization](https://github.com/inkstitch/) on github. Additionaly you will find some other useful things like [embroidery fonts](https://github.com/inkstitch/embroidery-fonts).
+The [plugin code](https://github.com/inkstitch/inkstitch) as well as the [pyembroidery repository](https://github.com/inkstitch/pyembroidery) can be found within the [Ink/Stitch organization](https://github.com/inkstitch/) on github. Additionally, you will find some other useful things like [embroidery fonts](https://github.com/inkstitch/embroidery-fonts).
 
 ## Inkscape Plugin
 Ink/Stitch is an [Inkscape](https://inkscape.org/) plugin. See their website to read a short introduction about [how to write Inkscape plugins](https://inkscape.org/en/develop/extensions/).
