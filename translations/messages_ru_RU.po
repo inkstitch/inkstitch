@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-12-19 01:47+0000\n"
-"PO-Revision-Date: 2021-12-24 01:44\n"
+"PO-Revision-Date: 2021-12-30 01:38\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -1845,7 +1845,7 @@ msgstr "Ожидаемое Время"
 
 #: print/templates/ui.html:22 print/templates/ui.html:147
 msgid "Estimated Thread"
-msgstr ""
+msgstr "Расход нити"
 
 #: print/templates/ui.html:23 print/templates/ui.html:168
 msgid "Design"
@@ -1946,24 +1946,24 @@ msgstr "Сохранит настройки страницы, ожидаемое
 
 #: print/templates/ui.html:149
 msgid "Factors"
-msgstr ""
+msgstr "Коэффициенты"
 
 #: print/templates/ui.html:150
 msgid "The thread length calculation depends on a lot of factors in embroidery designs. We will only get a very inacurate approximation.\n"
 "             Ink/Stitch simply calculates the path length, so the factor of 1 will always be much, much less than the real thread consumption."
-msgstr ""
+msgstr "Расчет длины нити зависит от множества факторов в дизайне вышивки. Можно получить лишь очень приблизительную оценку.             Ink/Stitch просто вычисляет путь иглы, так что при коэффициенте равным 1 реальное потребление нити будет сильно больше."
 
 #: print/templates/ui.html:152
 msgid "Set a factor to multiply the path length with, depending on your standard setup or adapt it to your current design (tension, thread, fabric, stitch count, etc.)."
-msgstr ""
+msgstr "Укажите коэффициент для умножения на путь иглы в зависимости от ваших стандартных настроек или адаптируйте к текущему дизайну(натяжение, нить, ткань, число стежков и т.п.)."
 
 #: print/templates/ui.html:156 print/templates/ui.html:161
 msgid "Factor to multiply with thread length"
-msgstr ""
+msgstr "Коэффициент умножения для длины нити"
 
 #: print/templates/ui.html:156 print/templates/ui.html:161
 msgid "* path length"
-msgstr ""
+msgstr "* путь иглы"
 
 #: print/templates/ui.html:169
 msgid "Thread Palette"
