@@ -88,10 +88,8 @@ if [ "$BUILD" = "linux" ]; then
 
     fpm -s dir -t deb -n inkstitch -v "$VERSION" --after-install bin/after-install --before-remove bin/before-remove dist/inkstitch=/opt
     fpm -s dir -t rpm -n inkstitch -v "$VERSION" --after-install bin/after-install --before-remove bin/before-remove dist/inkstitch=/opt
+    mv inkstitch*.deb inkstitch*.rpm artifacts/
 
-    mv *.deb *.rpm artifacts/
-
-    cd dist
-    python -m zipfile -c ../artifacts/inkstitch-${VERSION}-${OS}.zip *;
-    cd ..
+    tar -C dist -Jcf artifacts/inkstitch-${VERSION}-${OS}.tar.xz inkstitch
+    cat "$(dirname "$0")/linux-sh-installer" artifacts/inkstitch-${VERSION}-${OS}.tar.xz > artifacts/inkstitch-${VERSION}-${OS}.sh
 fi

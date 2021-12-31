@@ -238,9 +238,9 @@ jobs:
           prerelease: "${{env.prerelease}}"
           title: "${{env.title}}"
           files: |
-            artifacts/*.zip
             artifacts/*.exe
             artifacts/*.pkg
             artifacts/*.deb
             artifacts/*.rpm
+            artifacts/*.tar.xz
             artifacts/*.sh
