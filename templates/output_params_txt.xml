@@ -8,7 +8,7 @@
            <option value="false">Z travel per stitch</option>
         </param>
         <param name="stitch_z_travel" type="float" gui-text="Z travel per stitch"
-            gui-description='increment z coordinate by this amount per stitch if "Z travel per stitch" is enabled'>5.0</param>
+            gui-description='increment z coordinate by this amount per stitch if "Z travel per stitch" is enabled' min="0" max="999">5.0</param>
     </page>
     <page name="custom-commands" gui-text="Custom Commands">
         <param name="custom_stitch" type="string" appearance="multiline" gui-text="STITCH"
