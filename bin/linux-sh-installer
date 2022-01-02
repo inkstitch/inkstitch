@@ -19,11 +19,11 @@
 # extensions automatically.  If it gets it wrong, you can set one of these
 # environment variables:
 #
-#   INKSCAPE_PATH 
+#   INKSCAPE_PATH (ex: /usr/bin/inkscape)
 #     The path to the inkscape executable program.  This script will ask that program 
 #     where to install extensions by passing it the --user-data-directory argument.
 #
-#   INKSCAPE_EXTENSIONS_PATH
+#   INKSCAPE_EXTENSIONS_PATH (ex: $HOME/.config/inkscape/extensions)
 #     The path to the inkscape extensions directory.  Use this to bypass the
 #     --user-data-directory method and specify a directory yourself.
 
@@ -66,7 +66,7 @@ find_extensions_dir() {
   inkscape="$(find_inkscape)"
 
   if [ -x "$inkscape" ]; then
-    extensions_dir="$(inkscape --user-data-directory)"
+    extensions_dir="$(inkscape --user-data-directory)/inkstitch"
   fi
 
   if [ -z "$extensions_dir" ]; then
