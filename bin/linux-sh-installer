@@ -66,7 +66,7 @@ find_extensions_dir() {
   inkscape="$(find_inkscape)"
 
   if [ -x "$inkscape" ]; then
-    extensions_dir="$(inkscape --user-data-directory)/inkstitch"
+    extensions_dir="$(inkscape --user-data-directory)/extensions"
   fi
 
   if [ -z "$extensions_dir" ]; then
