@@ -81,6 +81,7 @@ jobs:
           make dist
         env:
           BUILD: linux
+          INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
       - uses: actions/upload-artifact@v2
         with:
           name: inkstitch-linux
