@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-12-19 01:47+0000\n"
-"PO-Revision-Date: 2021-12-30 01:38\n"
+"POT-Creation-Date: 2022-01-01 01:46+0000\n"
+"PO-Revision-Date: 2022-01-03 01:46\n"
 "Last-Translator: \n"
 "Language-Team: Polish\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-19 01:47+0000\n"
+"POT-Creation-Date: 2022-01-01 01:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,12 +34,12 @@ msgstr ""
 #. name of font in fonts/Brockscript
 #: inkstitch-fonts-metadata.py:2
 msgid "Brock Script"
-msgstr ""
+msgstr "Scrypt Brocka"
 
 #. description of font in fonts/Brockscript
 #: inkstitch-fonts-metadata.py:4
 msgid "Brock Script is a decorative satin column manuscript font of size approximatively 40mm. It can be enlarged up to 250%. It contains 118 glyphs, covering most western european languages needs.More decorative options are hidden in the µ glyph"
-msgstr ""
+msgstr "Skrypt Brocka to ozdobna, satynowa, kolumnowa czcionka rękopisu o rozmiarze około 40mm. Można ją powiększyć do 250%. Zawiera 118 glifów, obejmujących większość wymagań w językach zachodnioeuropejskich. Więcej opcji dekoracyjnych jest ukrytych w glifie µ"
 
 #. name of font in fonts/amitaclo
 #: inkstitch-fonts-metadata.py:6
@@ -50,7 +50,7 @@ msgstr ""
 #: inkstitch-fonts-metadata.py:8
 #, python-format
 msgid "The capital M is 25.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 160%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Wielka litera M o szerokości 25,5milimetrów w 100% skali, może być pomniejszona do 80% lub powiększona do160%. Podszycie jest zygzakowate"
 
 #. name of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:10
@@ -60,7 +60,7 @@ msgstr ""
 #. description of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:12
 msgid "Apex Lake is a large ornate capital letters font of size approximatively 60mm. It contains 38 glyphs : A-Z,0-9,! and ?. It can be reduced down to 80% and enlarged up to 130%"
-msgstr ""
+msgstr "Apex Lake to duża, ozdobna czcionka o wymiarze około 60 mm. Zawiera 38 glifów: A-Z,0-9,! oraz?. Można ją pomniejszyć do 80% i powiększyć do 130%"
 
 #. name of font in fonts/baumans_FI
 #: inkstitch-fonts-metadata.py:14
@@ -71,17 +71,17 @@ msgstr ""
 #: inkstitch-fonts-metadata.py:16
 #, python-format
 msgid "The capital M is 22.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 150%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Wielka litera M o szerokości 22,3 milimetrów w 100% skali, może być pomniejszona do 80% lub powiększona do150%. Podszycie ma zygzakowate"
 
 #. name of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:18
 msgid "Cherry for inkstitch"
-msgstr ""
+msgstr "Czereśnia w Inkstitch"
 
 #. description of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:20
 msgid "Cherry for inkstitch is a decorative satin column font of size approximatively 40mm. It can be reduced down to 80% and enlarged up to 180%. It contains 74 glyphs."
-msgstr ""
+msgstr "Nazwa czereśnia w inkstitchu odnosi się do ozdobnej satynowej czcionki kolumnowej o rozmiarze ok. 40mm. Można ja pomniejszyć do 80% i powiększyć do 180%. Zawiera 74 glify."
 
 #. name of font in fonts/cherryforkaalleen
 #: inkstitch-fonts-metadata.py:22
@@ -91,18 +91,18 @@ msgstr ""
 #. description of font in fonts/cherryforkaalleen
 #: inkstitch-fonts-metadata.py:24
 msgid "Cherry for Kaalleen is a large decorative font of size approximatively 75mm. It contains 36 glyphs including the numbers and the 26 capitals  A-Z. It can be reduced down to 80% and enlarged up to 130%"
-msgstr ""
+msgstr "Cherry dla Kaalleen to duża ozdobna czcionka o wielkości około 75mm. Zawiera 36 glifów, w tym cyfry i 26 wielkich liter od A do Z. Można ją pomniejszyć do 80% i powiększyć do 130%"
 
 #. name of font in fonts/chopin
 #: inkstitch-fonts-metadata.py:26
 msgid "Chopin Script"
-msgstr ""
+msgstr "Skrypt Chopina"
 
 #. description of font in fonts/chopin
 #: inkstitch-fonts-metadata.py:28
 #, python-format
 msgid "The capital M is 38.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 120%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Wielka litera M o szerokości 38,3 milimetrów w 100% skali, może być pomniejszona do 80% lub powiększona do120%. Podszycie ma zygzakowate"
 
 #. name of font in fonts/coronaviral
 #: inkstitch-fonts-metadata.py:30
@@ -112,7 +112,7 @@ msgstr ""
 #. description of font in fonts/coronaviral
 #: inkstitch-fonts-metadata.py:32
 msgid "A font created with manual sitch. Do not change the size or very little. The capital em is 22mm wide at 100%"
-msgstr ""
+msgstr "Czcionka zaprojektowana za pomocą ściegu ręcznego. W niewielkim stopniu można zmienić jej rozmiar. Wielka litera M ma szerokość 22 milimetrów w 100% skali"
 
 #. name of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:34
@@ -123,7 +123,7 @@ msgstr ""
 #: inkstitch-fonts-metadata.py:36
 #, python-format
 msgid "DejaVu Serif Condensed. The capital M is 19,8 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 150%.  Every satin has center-walk underlay."
-msgstr ""
+msgstr "Wielka litera M ma szerokość 19,8 milimetrów w 100% skali, może być pomniejszana do 80% oraz powiększana do150%. Podszycie ma zygzakowate umieszczone w środku kolumny."
 
 #. name of font in fonts/digory_doodles_bean
 #: inkstitch-fonts-metadata.py:38
@@ -133,7 +133,7 @@ msgstr ""
 #. description of font in fonts/digory_doodles_bean
 #: inkstitch-fonts-metadata.py:40
 msgid "All letters have mixed satin and bean stitch; The capital M is 16mm tall. The small x is 7 mm"
-msgstr ""
+msgstr "Wszystkie litery mają ściegi mieszane satynowo stebnowe. Wielka litera M ma wysokośc 17 milimetrów a mała litera x ma wysokośc 7 milimetrów"
 
 #. name of font in fonts/emilio_20
 #: inkstitch-fonts-metadata.py:42
@@ -144,7 +144,7 @@ msgstr ""
 #: inkstitch-fonts-metadata.py:44
 #, python-format
 msgid "Emilio 20 is a font with capital only and numbers. M is 48.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 140%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Emilio 20 są to trzcionki złożone tylki z wielkich liter i cyfr. Litera M ma szerokośc 48,5 milimetrów w 100% skali, może być pomniejszana do 70% oraz powiększana do 140%. pod ściegiem satynowym jest zygzakowate podszycie"
 
 #. name of font in fonts/emilio_20_tricolore
 #: inkstitch-fonts-metadata.py:46
@@ -154,7 +154,7 @@ msgstr ""
 #. description of font in fonts/emilio_20_tricolore
 #: inkstitch-fonts-metadata.py:48
 msgid "Emilio 20 tricolore is a large tricolor fill stitches and satin columns font of  size approximately 100mm. It contains 36 glyphs including the numbers and the 26 capitals  A-Z. It can be reduced down to 90% and enlarged up to 120%"
-msgstr ""
+msgstr "Emilio 20 ticolore  to duże trójkolorowe ściegi wypełniające i satynowe kolumny trzcionek o rozmiarze około 100 mm. Zawiera 36 glifów, w tym liczby i 26 wielkich liter od A do Z. Można go zmniejszyć do 90% i powiększyć do 120%"
 
 #. name of font in fonts/espresso_KOR
 #: inkstitch-fonts-metadata.py:50
@@ -2823,7 +2823,7 @@ msgstr ""
 
 #: inx/inkstitch_input_PES.inx:9
 msgid "convert PES file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "przekonwertowanie, formatu plików Hafciarskich Brother PES na ścieżki ręcznego ściegu w Ink/Stitch"
 
 #: inx/inkstitch_input_PHB.inx:3
 msgid "PHB file input"
@@ -2991,7 +2991,7 @@ msgstr ""
 
 #: inx/inkstitch_lettering.inx:3
 msgid "Lettering"
-msgstr ""
+msgstr "Liternictwo"
 
 #: inx/inkstitch_lettering_custom_font_dir.inx:3
 #: inx/inkstitch_lettering_custom_font_dir.inx:18
@@ -3021,7 +3021,7 @@ msgstr ""
 
 #: inx/inkstitch_lettering_generate_json.inx:21
 msgid "SVG Font File"
-msgstr ""
+msgstr "SVG plik trzcionek"
 
 #: inx/inkstitch_lettering_generate_json.inx:25
 msgid "Name"
@@ -3037,7 +3037,7 @@ msgstr ""
 
 #: inx/inkstitch_lettering_generate_json.inx:35
 msgid "Reversible"
-msgstr ""
+msgstr "Odwracalny, dwustronny"
 
 #: inx/inkstitch_lettering_generate_json.inx:35
 msgid "If disabled back and forth stitching will not be possile for this font."
@@ -3110,7 +3110,7 @@ msgstr ""
 
 #: inx/inkstitch_letters_to_font.inx:22
 msgid "File format"
-msgstr ""
+msgstr "Format pliku"
 
 #: inx/inkstitch_letters_to_font.inx:47
 msgid "Font directory"
@@ -3118,15 +3118,15 @@ msgstr ""
 
 #: inx/inkstitch_letters_to_font.inx:49
 msgid "Import commands"
-msgstr ""
+msgstr "Komendy importu"
 
 #: inx/inkstitch_object_commands.inx:3
 msgid "Attach Commands to Selected Objects"
-msgstr ""
+msgstr "Załączone komendy przy wybranych obiektah"
 
 #: inx/inkstitch_output_CSV.inx:3
 msgid "CSV file output"
-msgstr ""
+msgstr "Przesyłanie plików w formacie CVS"
 
 #: inx/inkstitch_output_CSV.inx:8
 msgid "Ink/Stitch: Comma-separated values [DEBUG] (.csv)"
@@ -3134,51 +3134,51 @@ msgstr ""
 
 #: inx/inkstitch_output_CSV.inx:9
 msgid "Save design in CSV format using Ink/Stitch"
-msgstr ""
+msgstr "W programie Ink/Stitch możliwe jest zapisanie plików projektu w formacie CSV"
 
 #: inx/inkstitch_output_DST.inx:3
 msgid "DST file output"
-msgstr ""
+msgstr "Przesyłanie plików w formacie DST"
 
 #: inx/inkstitch_output_DST.inx:9
 msgid "Save design in DST format using Ink/Stitch"
-msgstr ""
+msgstr "W programie Ink/Stitch możliwe jest zapisanie plików projektu w formacie DST"
 
 #: inx/inkstitch_output_EXP.inx:3
 msgid "EXP file output"
-msgstr ""
+msgstr "Przesyłanie plików w formacie DST"
 
 #: inx/inkstitch_output_EXP.inx:9
 msgid "Save design in EXP format using Ink/Stitch"
-msgstr ""
+msgstr "W programie Ink/Stitch możliwe jest zapisanie plików w formacie EXP"
 
 #: inx/inkstitch_output_JEF.inx:3
 msgid "JEF file output"
-msgstr ""
+msgstr "Przesyłanie plików w formacie JEF"
 
 #: inx/inkstitch_output_JEF.inx:9
 msgid "Save design in JEF format using Ink/Stitch"
-msgstr ""
+msgstr "W programie Ink/Stitch możliwe jest zapisanie plików projektu w formacie JEF"
 
 #: inx/inkstitch_output_PEC.inx:3
 msgid "PEC file output"
-msgstr ""
+msgstr "Przesyłanie plików w formacie PEC"
 
 #: inx/inkstitch_output_PEC.inx:9
 msgid "Save design in PEC format using Ink/Stitch"
-msgstr ""
+msgstr "W programie Ink/Stitch możliwe jest zapisanie plików projektu w formacie PEC"
 
 #: inx/inkstitch_output_PES.inx:3
 msgid "PES file output"
-msgstr ""
+msgstr "Przesyłanie plików w formacie PES"
 
 #: inx/inkstitch_output_PES.inx:9
 msgid "Save design in PES format using Ink/Stitch"
-msgstr ""
+msgstr "W programie Ink/Stitch możliwe jest zapisanie plików projektu w formacie PES"
 
 #: inx/inkstitch_output_PMV.inx:3
 msgid "PMV file output"
-msgstr ""
+msgstr "Przesyłanie plików w formacie PMV"
 
 #: inx/inkstitch_output_PMV.inx:8
 msgid "Ink/Stitch: Brother Stitch Format [DEBUG] (.pmv)"
@@ -3186,11 +3186,11 @@ msgstr ""
 
 #: inx/inkstitch_output_PMV.inx:9
 msgid "Save design in PMV format using Ink/Stitch"
-msgstr ""
+msgstr "W programie Ink/Stitch możliwe jest zapisanie plików projektu w formacie PMV"
 
 #: inx/inkstitch_output_SVG.inx:3
 msgid "SVG file output"
-msgstr ""
+msgstr "Przesyłanie plików w formacie SVG"
 
 #: inx/inkstitch_output_SVG.inx:8
 msgid "Ink/Stitch: Scalable Vector Graphics [DEBUG] (.svg)"
@@ -3198,11 +3198,11 @@ msgstr ""
 
 #: inx/inkstitch_output_SVG.inx:9
 msgid "Save design in SVG format using Ink/Stitch"
-msgstr ""
+msgstr "W programie Ink/Stitch możliwe jest zapisanie plików projektu w formacie SVG"
 
 #: inx/inkstitch_output_TXT.inx:3
 msgid "TXT file output"
-msgstr ""
+msgstr "Przesyłanie pliku tekstowego"
 
 #: inx/inkstitch_output_TXT.inx:8
 msgid "Ink/Stitch: G-code Format (.txt)"
@@ -3210,11 +3210,11 @@ msgstr ""
 
 #: inx/inkstitch_output_TXT.inx:9
 msgid "Save design in TXT format using Ink/Stitch"
-msgstr ""
+msgstr "W programie Ink/Stitch możliwe jest zapisanie plików tekstowych"
 
 #: inx/inkstitch_output_TXT.inx:17
 msgid "Coordinate Settings"
-msgstr ""
+msgstr "Ustawienia współrzędnych"
 
 #: inx/inkstitch_output_TXT.inx:18
 msgid "negate X coordinate values"
@@ -3382,11 +3382,11 @@ msgstr ""
 
 #: inx/inkstitch_selection_to_pattern.inx:3
 msgid "Selection to pattern"
-msgstr ""
+msgstr "Zaznaczenie, wybór, selekcja wzoru, lub we wzorze"
 
 #: inx/inkstitch_simulator.inx:3
 msgid "Simulator / Realistic Preview"
-msgstr ""
+msgstr "Symulator/podgląd realistyczny"
 
 #: inx/inkstitch_stitch_plan_preview.inx:3
 msgid "Stitch Plan Preview"
@@ -3402,15 +3402,15 @@ msgstr ""
 
 #: inx/inkstitch_stitch_plan_preview.inx:16
 msgid "Unchanged"
-msgstr ""
+msgstr "Niezmienny"
 
 #: inx/inkstitch_stitch_plan_preview.inx:17
 msgid "Hidden"
-msgstr ""
+msgstr "Ukryty, schowany"
 
 #: inx/inkstitch_stitch_plan_preview.inx:18
 msgid "Lower opacity"
-msgstr ""
+msgstr "Mniejsza, niższa objętość lub pojemność"
 
 #: inx/inkstitch_stitch_plan_preview.inx:20
 msgid "Needle points"
@@ -3426,7 +3426,7 @@ msgstr "Znajdź problematyczne obiekty"
 
 #: inx/inkstitch_zip.inx:3
 msgid "embroidery ZIP file output"
-msgstr ""
+msgstr "przesyłanie plików do haftowania spakowanych programem ZIP"
 
 #: inx/inkstitch_zip.inx:8
 msgid "Ink/Stitch: ZIP export multiple formats (.zip)"
@@ -3438,9 +3438,9 @@ msgstr "Stwórz ZIP z wieloma plikami ściegu dla różnych hafciarek używając
 
 #: inx/inkstitch_zip.inx:20
 msgid ".SVG: Scalable Vector Graphic"
-msgstr ""
+msgstr "SVG skalowalna grafika wektorowa"
 
 #: inx/inkstitch_zip.inx:21
 msgid ".TXT: Threadlist"
-msgstr ""
+msgstr "Lista nici"
 

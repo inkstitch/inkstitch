@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-12-19 01:47+0000\n"
-"PO-Revision-Date: 2021-12-30 01:38\n"
+"POT-Creation-Date: 2022-01-01 01:46+0000\n"
+"PO-Revision-Date: 2022-01-03 01:46\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-19 01:47+0000\n"
+"POT-Creation-Date: 2022-01-01 01:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1846,7 +1846,7 @@ msgstr "Voraussichtliche Dauer"
 
 #: print/templates/ui.html:22 print/templates/ui.html:147
 msgid "Estimated Thread"
-msgstr ""
+msgstr "Garnverbrauch"
 
 #: print/templates/ui.html:23 print/templates/ui.html:168
 msgid "Design"
@@ -1947,24 +1947,24 @@ msgstr "Enthält Seiteneinrichtung, geschätzte Zeit und auch das Branding."
 
 #: print/templates/ui.html:149
 msgid "Factors"
-msgstr ""
+msgstr "Faktoren"
 
 #: print/templates/ui.html:150
 msgid "The thread length calculation depends on a lot of factors in embroidery designs. We will only get a very inacurate approximation.\n"
 "             Ink/Stitch simply calculates the path length, so the factor of 1 will always be much, much less than the real thread consumption."
-msgstr ""
+msgstr "Die Berechnung der Garnlänge hängt von vielen verschiedenen Faktoren im Stickdesign ab. Wir werden nur eine sehr ungefähre Annäherung erreichen.             Ink/Stitch berechnet die Länge des Pfades und multipliziert den Wert mit dem unten angegeben Faktor. Faktor 1 wird immer ein deutlich geringeres Ergebnis liefern, als den realen Garnverbrauch."
 
 #: print/templates/ui.html:152
 msgid "Set a factor to multiply the path length with, depending on your standard setup or adapt it to your current design (tension, thread, fabric, stitch count, etc.)."
-msgstr ""
+msgstr "Setze einen Faktor mit dem die Pfadlänge multipliziert werden soll. Suche einen Wert, der zu deinen Standardeinstellungen passt oder passe ihn an das aktuelle Design an (Fadenspannung, Garn, Stoff, Anzahl der Stiche, etc.)."
 
 #: print/templates/ui.html:156 print/templates/ui.html:161
 msgid "Factor to multiply with thread length"
-msgstr ""
+msgstr "Faktor"
 
 #: print/templates/ui.html:156 print/templates/ui.html:161
 msgid "* path length"
-msgstr ""
+msgstr "* Pfadlänge"
 
 #: print/templates/ui.html:169
 msgid "Thread Palette"
