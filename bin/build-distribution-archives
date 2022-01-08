@@ -100,8 +100,8 @@ if [ "$BUILD" = "linux" ]; then
 %_signature gpg
 EOF
 
-    fpm -s dir -t deb -n inkstitch -v "$VERSION" --after-install bin/after-install --before-remove bin/before-remove --verbose dist/inkstitch=/opt
-    fpm -s dir -t rpm -n inkstitch -v "$VERSION" --after-install bin/after-install --before-remove bin/before-remove --verbose dist/inkstitch=/opt
+    fpm -s dir -t deb -n inkstitch -v "$VERSION" -d "inkscape >= 1.0.0" --after-install bin/after-install --before-remove bin/before-remove --verbose dist/inkstitch=/opt
+    fpm -s dir -t rpm -n inkstitch -v "$VERSION" -d "inkscape >= 1.0.0" --after-install bin/after-install --before-remove bin/before-remove --verbose dist/inkstitch=/opt
     rpmsign --addsign inkstitch*.rpm
     mv inkstitch*.deb inkstitch*.rpm artifacts/
 
