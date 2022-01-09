@@ -108,9 +108,11 @@ EOF
         --license "GPL-3.0" \
         --description "An open-source machine embroidery design platform based on Inkscape" \
         --url "https://inkstitch.org" \
+        --maintainer "maintainer@inkstitch.org" \
         --after-install bin/after-install \
         --before-remove bin/before-remove \
-        --verbose dist/inkstitch=/opt
+        --verbose \
+        dist/inkstitch=/opt
 
     fpm -s dir \
         -t rpm \
@@ -120,9 +122,11 @@ EOF
         --license "GPL-3.0" \
         --description "An open-source machine embroidery design platform based on Inkscape" \
         --url "https://inkstitch.org"  \
+        --maintainer "maintainer@inkstitch.org" \
         --after-install bin/after-install \
         --before-remove bin/before-remove \
-        --verbose dist/inkstitch=/opt
+        --verbose \
+        dist/inkstitch=/opt
 
     rpmsign --addsign inkstitch*.rpm
     mv inkstitch*.deb inkstitch*.rpm artifacts/
