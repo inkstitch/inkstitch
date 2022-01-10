@@ -19,7 +19,9 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '16.x'
-
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1
       - uses: actions/cache@v2
         id: pip-cache
         with:
@@ -79,6 +81,7 @@ jobs:
           make dist
         env:
           BUILD: linux
+          INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
       - uses: actions/upload-artifact@v2
         with:
           name: inkstitch-linux
@@ -236,6 +239,9 @@ jobs:
           prerelease: "${{env.prerelease}}"
           title: "${{env.title}}"
           files: |
-            artifacts/*.zip
             artifacts/*.exe
             artifacts/*.pkg
+            artifacts/*.deb
+            artifacts/*.rpm
+            artifacts/*.tar.xz
+            artifacts/*.sh

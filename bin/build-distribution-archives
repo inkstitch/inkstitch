@@ -84,7 +84,53 @@ if [ "$BUILD" = "windows" ]; then
 fi
 
 if [ "$BUILD" = "linux" ]; then
-    cd dist
-    python -m zipfile -c ../artifacts/inkstitch-${VERSION}-${OS}.zip *;
-    cd ..
+    gem install fpm
+
+    if [[ "$VERSION" =~ ^v[0-9][.0-9]+$ ]]; then
+        VERSION=${VERSION#v}
+    else
+        # dpkg requires versions to start with a number, so we have to add
+        # 0.0.1 for development builds
+        VERSION="0.0.1-${VERSION}"
+    fi
+
+    echo -n "$INKSTITCH_GPG_KEY" | base64 -d | gpg --import
+    cat <<EOF > $HOME/.rpmmacros
+%_gpg_name EA93BCE2CCD0FB2E77B2CC29E8120E50709E5C44
+%_signature gpg
+EOF
+
+    fpm -s dir \
+        -t deb \
+        -n inkstitch \
+        -v "$VERSION" \
+        -d "inkscape >= 1.0.0" \
+        --license "GPL-3.0" \
+        --description "An open-source machine embroidery design platform based on Inkscape" \
+        --url "https://inkstitch.org" \
+        --maintainer "maintainer@inkstitch.org" \
+        --after-install bin/after-install \
+        --before-remove bin/before-remove \
+        --verbose \
+        dist/inkstitch=/opt
+
+    fpm -s dir \
+        -t rpm \
+        -n inkstitch \
+        -v "$VERSION" \
+        -d "inkscape >= 1.0.0" \
+        --license "GPL-3.0" \
+        --description "An open-source machine embroidery design platform based on Inkscape" \
+        --url "https://inkstitch.org"  \
+        --maintainer "maintainer@inkstitch.org" \
+        --after-install bin/after-install \
+        --before-remove bin/before-remove \
+        --verbose \
+        dist/inkstitch=/opt
+
+    rpmsign --addsign inkstitch*.rpm
+    mv inkstitch*.deb inkstitch*.rpm artifacts/
+
+    tar -C dist -Jcf artifacts/inkstitch-${VERSION}-${OS}.tar.xz inkstitch
+    cat "$(dirname "$0")/linux-sh-installer" artifacts/inkstitch-${VERSION}-${OS}.tar.xz > artifacts/inkstitch-${VERSION}-${OS}.sh
 fi
