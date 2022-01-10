@@ -2,7 +2,7 @@
 title: "Satinkolumne"
 permalink: /de/docs/stitches/satin-column/
 excerpt: ""
-last_modified_at: 2020-03-29
+last_modified_at: 2021-10-23
 toc: true
 ---
 ## Beschreibung
@@ -12,6 +12,14 @@ Satinkolumnen werden meistens für Ränder, Buchstaben oder sehr kleine Füllber
 ![Stitch Types - Satin Column](/assets/images/docs/stitch-type-satincolumn.jpg)
 
 ## Funktionsweise
+
+* Füge einem Pfadobjekt eine Kontur hinzu (ohne Füllung).
+* Stelle die Konturenbreite auf die Größe ein, die der Satinstich haben soll.
+* Starte `Erweiterungen > Ink/Stitch > Satin Werkzeuge > Konvertierung Linie zu Satinstich`
+* Optional kann auch noch die Funktion `Erweiterungen > Ink/Stitch > Satin Werkzeuge > Automatisch geführte Satinkolumnen` ausgeführt werden
+* Anschließend können auf Wunsch Sprossen und Holme angepasst werden
+
+## Manuelles Erstellen von Satinkolumnen
 Eine Satinkolumne wird aus zwei **meist parallel verlaufenden Linien** gebildet. Ink/Stitch zeichnet ein Zick-Zack Muster zwischen den beiden Linien hin und her. Die Breite der Kolumne kann beliebig variiert werden.
 
 * Kombiniere zwei Linien mit `Pfad > Kombinieren` oder benutze `Strg + K`.
@@ -48,14 +56,6 @@ Original Design von [Liv Iko](https://thenounproject.com/liv_iko/collection/bird
 **Info:** Wir empfehlen dringend mindestens drei "Sprossen" zu nutzen.
 Wenn du genau zwei Sprossen (und zwei Holme) nutzt, ist es schwer für Ink/Stitch zu entscheiden, was Sprosse und was Holm ist.
 {: .notice--warning }
-
-### Automatisch generierte Satinkolumne
-
-* Füge einem Pfadobjekt eine Kontur hinzu (ohne Füllung).
-* Stelle die Konturenbreite auf die Größe ein, die der Satinstich haben soll.
-* Starte `Erweiterungen > Ink/Stitch > Satin Werkzeuge > Konvertierung Linie zu Satinstich`
-* Optional kann auch noch die Funktion `Erweiterungen > Ink/Stitch > Satin Werkzeuge > Automatisch geführte Satinkolumnen` ausgeführt werden
-* Anschließend können auf Wunsch Sprossen und Holme angepasst werden
 
 ## Parameter
 

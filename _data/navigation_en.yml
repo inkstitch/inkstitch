@@ -80,6 +80,8 @@ docs:
         url: /docs/stitches/e-stitch/
       - title: "Fill Stitch"
         url: /docs/stitches/fill-stitch/
+      - title: "Stitch patterns"
+        url: /docs/stitches/patterns/
   - title: Interface
     children:
     - title: "Commands"

@@ -26,7 +26,7 @@ Shortcut&nbsp;Keys | Effect | Replaces
 <key>ctrl</key>+<key>shift</key>+<key>O</key> | Break apart fill objects... (O for Object) | Object > Object properties
 <key>ctrl</key>+<key>shift</key>+<key>I</key> | PDF Export
 <key>ctrl</key>+<key>shift</key>+<key>Q</key> | Lettering (Q for QWERTY) | Object > Selectors and CSS
-<key>ctrl</key>+<key>shift</key>+<key>Del</key> | Troubleshoot objects (remove errors)
+<span style="white-space: nowrap;"><key>ctrl</key>+<key>shift</key>+<key>Del</key></span> | Troubleshoot objects (remove errors)
 <key>ctrl</key>+<key>shift</key>+<key>+</key> | Attach commands to selected objects
 <key>ctrl</key>+<key>shift</key>+<key>U</key> | Convert line to satin column (U looks like two rails) | Object > Group (use Ctrl+G instead)
 <key>ctrl</key>+<key>shift</key>+<key>J</key> | Flip satin column rails (J looks like an arrow)
@@ -39,7 +39,7 @@ The Ink/Stitch [simulator](/docs/visualize/#simulation-shortcut-keys) also provi
 {: .notice--info }
 {: style="font-size: 70%" }
 
-#### Download and import custom shortcut keys
+### Download and import custom shortcut keys
 
 * [Download the Ink/Stitch shortcut key file](/assets/files/inkstitch.xml)
 * Go to `Edit > Preferences > Interface > Keyboard`
@@ -47,7 +47,7 @@ The Ink/Stitch [simulator](/docs/visualize/#simulation-shortcut-keys) also provi
 * Select your shortcut key file (inkstitch.xml)
 * Click open
 
-Now you will be able to use the shortcut keys described above.
+You will now be able to use the shortcut keys described above. They are included into the standard default.xml shortcut file.
 
 If you want to define your own custom shortcut keys simply enter your desired key combinations in the shortcut dialog.
 Use the search function to find the extensions quicker. [More information](http://wiki.inkscape.org/wiki/index.php/Customizing_Inkscape)

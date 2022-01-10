@@ -2,7 +2,7 @@
 title: "Colonne Satin"
 permalink: /fr/docs/stitches/satin-column/
 excerpt: ""
-last_modified_at: 2020-03-29
+last_modified_at: 2021-10-23
 toc: true
 ---
 ## Qu’est-ce que c’est
@@ -12,6 +12,15 @@ Le point satin est principalement utilisé pour les bordures, les lettres ou les
 ![Stitch Types - Satin Column](/assets/images/docs/stitch-type-satincolumn.jpg)
 
 ## Comment le créer
+
+* Ajouter un contour à un objet chemin (sans remplissage).
+* Définissez la largeur du contour à la taille souhaitée pour votre point satin.
+* Lancer `Extensions > Ink/Stitch > Outils de satin > Convertir ligne en satin`
+* En option lancer `Extensions > Ink/stitch > Outils de satin > Remplissage automatique de colonnes satin...`
+* Utilisez tel quel ou modifier les traverses ou les rails
+
+## Colonne Satin manuelle
+
 Vous définissez une colonne satin à l'aide d'une forme composée de **deux lignes presque parallèles**. Ink/Stitch va dessiner des zig-zags entre les deux lignes. Vous pouvez faire varier l'épaisseur de la colonne à votre guise.
 * Combinez deux traits avec `Chemin > Combiner` ou taper `Ctrl+K`.
 * [Vérifier les directions de chemin](/fr/docs/customize/#activation-de-la-direction-des-chemins). Pour que la colonne satin fonctionne, elles doivent être égales.<br />Si ce n'est pas le cas Sélectionnez avec l' *Outil Editer les noeuds* (`N`) un point du sous-chemin et faites `Chemin > Inverser`. Cela n'inversera que le sous-chemin sélectionné.
@@ -46,14 +55,6 @@ La méthode des traverses vous donnera plus de contrôle sur le rendu de la colo
 
 **Info:** Nous recommandons fortement d'utiliser au moins trois traverses. Si vous utilisez exactement deux traverses (et deux rails), il est difficile pour Ink/stitch de décider qui est qui.
 {: .notice--warning }
-
-### Colonnes Satin auto-générées
-
-* Ajouter un contour à un objet chemin (sans remplissage).
-* Définissez la largeur du contour à la taille souhaitée pour votre point satin.
-* Lancer `Extensions > Ink/Stitch > Outils de satin > Convertir ligne en satin`
-* En option lancer `Extensions > Ink/stitch > Outils de satin > Remplissage automatique de colonnes satin...`
-* Utilisez tel quel ou modifier les traverses ou les rails
 
 ## Paramètres
 

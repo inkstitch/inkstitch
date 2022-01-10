@@ -2,20 +2,20 @@
 title: "Satin Tools"
 permalink: /ru/docs/satin-tools/
 excerpt: ""
-last_modified_at: 2018-07-15
+last_modified_at: 2021-10-30
 toc: true
 ---
 `Extensions > Ink/Stitch  > Satin Tools` include a number of useful helpers, making it easy to work with [satin columns](/docs/stitches/satin-column/).
 
 **Example:**
 * Create a path with the help of the bezier curves tool (`B`)
-* Run [Convert Line to Satin](/de/docs/satin-tools/#konvertierung-linie-zu-satinstich)
-* Use the [Params dialog](/de/docs/params/#satinkolumne) to set an underlay
-* Run [Auto-Route Satin](/de/docs/satin-tools/#automatische-satinkolumnenführung) to recieve nicely routed satin columns
+* Run [Convert Line to Satin](#convert-line-to-satin)
+* Use the [Params dialog](/ru/docs/params/#satin-params) to set an underlay
+* Run [Auto-Route Satin](#auto-route-satin-columns) to recieve nicely routed satin columns
 
 [![Convert Line to Satin](/assets/images/docs/en/satin-tools.svg)](/assets/images/docs/en/satin-tools.svg){: title="Download SVG File" download="satin-tools.svg" }
 
-**Tip:** For faster access [set shortcuts](/docs/customize/) on specific satin tools.
+**Tip:** For faster access [set shortcuts](/ru/docs/customize/) on specific satin tools.
 {: .notice--info}
 
 ## Auto-Route Satin Columns...
@@ -28,7 +28,7 @@ This tool will replace your satins with a new set of satin columns in logical st
 2. Run `Extensions > Ink/Stitch  > Satin Tools > Auto-Route Satin Columns...`
 3. Enable desired options and click apply
 
-**Tip:** By default, it will choose the left-most extreme as the starting point and the right-most extreme as the ending point (even if these occur partway through a satin such as the left edge of a letter "o"). You can override this by attaching the ["Auto-route satin stitch starting/ending position" commands](/de/docs/commands/#--anfangs--und-endposition-für-automatische-satinkolumnenführung).
+**Tip:** By default, it will choose the left-most extreme as the starting point and the right-most extreme as the ending point (even if these occur partway through a satin such as the left edge of a letter "o"). You can override this by attaching the ["Auto-route satin stitch starting/ending position" commands](/ru/docs/commands/#--startingending-position-for-auto-route-satin).
 {: .notice--info }
 
 ### Options
@@ -46,6 +46,21 @@ This extension will convert a stroke into a satin column with a specified width.
 1. Draw a bezier curve (`B`)
 2. Set the stroke width in the "Fill and Stroke" panel ("Stroke style" tab), which you can access with `Shift+Ctrl+F`
 2. Run `Extensions > Ink/Stitch  > Satin Tools > Convert Line to Satin`
+
+## Convert Satin to Stroke
+
+Satin to stroke will convert a satin column to it's centerline. This can be useful, when you decide later in the designing process to turn a satin column into a running stitch. You can also use it to alter the thickness of your satin column, when pull compensation isn't satisfying. In that case use this function to convert your satin column into a running stitch, set stroke width in the fill and stroke panel and run the ["Connvert line to to satin"](#convert-line-to-satin) function. 
+
+This works best on evenly spaced satin columns.
+
+![Satin to Stroke example](/assets/images/docs/en/satin_to_stroke.png)
+
+### Usage
+
+1. Select the satin column(s) you want to convert into a running stitch
+2. Run `Extensions > Ink/Stitch > Satin Tools > Convert satin to stroke...`
+3. Choose wether you want to keep selected satin column(s) or if you want to replace them
+4. Click apply
 
 ## Cut Satin Column
 

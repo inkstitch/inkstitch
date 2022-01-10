@@ -1,5 +1,5 @@
 ---
-title: "Anpassung von Ink/Stitch"
+title: "Ink/Stitch personalisieren"
 permalink: /de/docs/customize/
 excerpt: ""
 last_modified_at: 2021-10-23
@@ -26,9 +26,9 @@ Tastenkürzel | Effekt | Ersetzt
 <key>Strg</key><key>⇧</key><key>O</key> | Aufteilen von Füllobjekten... (O für Object) | Objekt > Objekteigenschaften
 <key>Strg</key><key>⇧</key><key>I</key> | PDF-Export
 <key>Strg</key><key>⇧</key><key>Q</key> | Text (Q für QWERTY) | Objekt > Selectoren und CSS
-<key>Strg</key><key>⇧</key><key>Entf</key> | Fehlerbehebung an Objekten (Fehler entfernen)
+<span style="white-space: nowrap;"><key>Strg</key><key>⇧</key><key>Entf</key></span> | Fehlerbehebung an Objekten (Fehler entfernen)
 <key>Strg</key><key>⇧</key><key>+</key> | Befehle mit gewählten Objekten verknüpfen
-<key>Strg</key><key>⇧</key><key>U</key> | Konvertierung Linie zu Satinstich (U sieht wie zwei Schienen aus) | Objekt > Gruppieren (benutze stattdessen Strg+G)
+<key>Strg</key><key>⇧</key><key>U</key> | Linie zu Satin (U sieht wie zwei Schienen aus) | Objekt > Gruppieren (benutze stattdessen Strg+G)
 <key>Strg</key><key>⇧</key><key>J</key> | Konturen der Satinkolumne umkehren (J sieht wie ein Pfeil aus)
 <key>Strg</key><key>⇧</key><key>B</key> | Satinkolumne schneiden (B ist in der Hälfte geschnitten) | Pfad > Vereinigen (nutze stattdessen Strg++)
 <key>Strg</key><key>⇧</key><key>*</key> | Automatisch geführte Satinkolumne (\* bringt Ordnung)
@@ -39,9 +39,9 @@ The Ink/Stitch [simulator](/docs/visualize/#simulation-shortcut-keys) also provi
 {: .notice--info }
 {: style="font-size: 70%" }
 
-#### Download and import custom shortcut keys
+### Download and import custom shortcut keys
 
-* [Download the Ink/Stitch shortcut key file](/assets/files/inkstitch.xml)
+* [Ink/Stitch Tastenkürzel herunterladen](/assets/files/inkstitch.xml)
 * Gehe zu `Bearbeiten > Einstellungen > Benutzeroberfläche > Tastenkürzel`
 * Klicke auf `Importieren...`
 * Wähle die Tastenkürzel-Datei (inkstitch.xml)

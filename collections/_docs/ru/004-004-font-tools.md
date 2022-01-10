@@ -8,6 +8,7 @@ toc: true
 A collection of tools suitable for font creators or those who want to add additional fonts to the Ink/Stitch [lettering tool](/docs/lettering).
 
 Read the [Ink/Stitch font creation tutorial](/tutorials/font-creation) for in-depth instrustions.
+{: .notice--info }
 
 ## Custom Font Directory
 
@@ -64,3 +65,24 @@ Ink/Stitch comes with a tool to clean up your svg font.
 2. Run `Extensions > Ink/Stitch > Font Tools > Remove Kerning`
 3. Choose your font file(s)
 4. Click on apply
+
+## Letters to font
+
+"Letters to font" is a tool to convert predigitized embroidery letters into a font for use with the Ink/Stitch lettering tool.
+
+The digitized font needs to meet certain **conditions** to be imported:
+* One file for each glyph in an embroidery format that Ink/Stitch can read
+* The glyph name needs to be positioned at the end of the file name. A valid file name for the capital A would be e.g. `A.pes` or `Example_Font_A.pes`.
+
+You will often see, that bought fonts are organized in subfolders, because each letter comes in various embroidery file formats. You don't need to change the file structure in this case. Letters to font will search the font files also within the subfolders.
+{: .notice--info }
+
+### Usage
+
+* Set the embroidery file format from which you want to import the letters (ideally choose a file format which is capable to store color information)
+* Select the font folder in which the letters are stored. If they are organiszed in subfolders, choose the main folder.
+* Choose wether you want to import commands or not (warning: imported commands on a large scale will cause a slow down)
+* Click on apply - and wait ...
+* After the import move the baseline to the correct place and position the letters accordingly. The left border of the canvas will also influence the positioning of the letters through the lettering tool.
+* Save your font as `→.svg` in a new folder within your [custom font directory](#custom-font-directory)
+* Run [`Generate JSON`](#generate-json) to make the font available for the lettering tool and save the json file into the same folder as your font. Do not check "AutoRoute Satin" for predigitized fonts and leave scaling to 1.

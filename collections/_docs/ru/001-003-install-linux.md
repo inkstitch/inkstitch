@@ -7,7 +7,7 @@ toc: true
 ---
 ## Видео урок
 
-У нас есть множество обучающих видео на нашем <i class="fab fa-youtube"></i> [YouTube канале](https://www.youtube.com/channel/UCJCDCFuT_xQoI55e10HRiRw). Посмотрите процесс установки расширения на <i class="fab fa-linux"></i> [Linux](https://www.youtube.com/watch?v=Dkb5UvsZUNg&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=2).
+У нас есть множество обучающих видео на нашем <i class="fab fa-youtube"></i> [YouTube канале](https://www.youtube.com/c/InkStitch). Посмотрите процесс установки расширения на <i class="fab fa-linux"></i> [Linux](https://www.youtube.com/watch?v=Dkb5UvsZUNg&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=2).
 
 ## Требования
 
@@ -18,23 +18,11 @@ toc: true
 ## Установка
 
 ### Скачать
-Загрузите архив с расширением на нужном языке:
+Download the latest release archive.
 
-* <i class="fa fa-download " ></i> [Русский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-ru_RU.zip)
-* <i class="fa fa-download " ></i> [Английский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-en_US.zip)
-* <i class="fa fa-download " ></i> [Финский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-fi_FI.zip)
-* <i class="fa fa-download " ></i> [Французский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-fr_FR.zip)
-* <i class="fa fa-download " ></i> [Немецкий]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-de_DE.zip)
-* <i class="fa fa-download " ></i> [Японский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-ja_JP.zip)
-* <i class="fa fa-download " ></i> [Итальянский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-it_IT.zip)
-* <i class="fa fa-download " ></i> [Нидерландский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux-nl_NL.zip)
-
+<p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-linux.zip" class="btn btn--info btn--large">Download Ink/Stitch {{ site.github.latest_release.tag_name }} for Linux</a></p>
 
 **Последняя версия:** {{ site.github.latest_release.published_at | date: "%Y-%m-%d"  }} [Ink/Stitch {{ site.github.latest_release.tag_name }}](https://github.com/inkstitch/inkstitch/releases/latest)
-
-Выбранный выше язык влияет только на показ пунктов меню в Inkscape. Диалоги Ink/Stitch будут отображены на языке вашей ОС независимо от выбранного файла загрузки(если этот язык поддерживается).<br><br>Для вашего языка нет расширения? Помогите нам [перевести диалоги на ваш родной язык](/ru/developers/localize/).
-{: .notice--info }
-
 
 ### Распаковка файлов
 

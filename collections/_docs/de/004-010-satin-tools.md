@@ -2,14 +2,14 @@
 title: "Satin Werkzeuge"
 permalink: /de/docs/satin-tools/
 excerpt: ""
-last_modified_at: 2019-03-16
+last_modified_at: 2021-10-30
 toc: true
 ---
 Unter `Erweiterungen > Ink/Stitch  > Satin Tools` befindet sich eine kleine Anzahl nützlicher Helfer, die das Arbeiten mit [Satinkolumnen](/docs/stitches/satin-column/) erleichtern sollen.
 
 **Beispiel:**
 * Erzeuge einen Pfad mit dem Beziér-Kurven Werkzeug (`B`)
-* Benutze "[Konvertierung Linie zu Satinstich](/de/docs/satin-tools/#konvertierung-linie-zu-satinstich)"
+* Benutze "[Linie zu Satin](/de/docs/satin-tools/#linie-zu-satin)"
 * Aktiviere im [Parameter Dialogfenster](/de/docs/params/#satinkolumne) eine oder mehrere Unterlagen
 * Führe "[Automatische Satinkolumnenführung](/docs/satin-tools/#automatische-satinkolumnenführung)" aus, um optimal geführte Satinkolumnen zu erhalten
 
@@ -37,7 +37,7 @@ Dieses Werkzeug ersetzt deine Satinkolumnen mit einem Set von neuen Satinkolumne
 
 * Solltest du es bevorzugen die vorher gesetzte Objekt-Reihenfolge beizubehalten (das könnte der Fall sein, wenn sich die Satinkolumnen überschneiden), benutze die Option **Preserve order of Satin Columns**.
 
-## Konvertierung Linie zu Satinstich
+## Linie zu Satin
 
 Diese Erweiterung konvertiert einen einfachen Pfad in eine Satinkolumnen. Dabei wird die Linienbreite übernommen. Nach der Konvertierung wirst du zwei "Holme" und (möglicherweise) viele Sprossen (wie bei einer Leiter). Wieviele Sprossen es gibt hängt ganz von der Form der Linie ab.
 
@@ -45,7 +45,22 @@ Diese Erweiterung konvertiert einen einfachen Pfad in eine Satinkolumnen. Dabei 
 
 1. Zeichne eine Beziér-Kurve (`B`)
 2. Stelle die Linienbreite ein (`Ctrl+Shift+F)
-2. Führe `Erweiterungen > Ink/Stitch  > Satin Tools > Konvertierung Linie zu Satinstich` aus
+2. Führe `Erweiterungen > Ink/Stitch  > Satin Tools > Linie zu Satin` aus
+
+## Satin zu Linie
+
+Satinkolumne zu Linie konvertiert eine Satinkolumne in ihre Mittellinie. Das ist besonders dann hilfreich, wenn du während des Designprozesses eine Satinkolumne in einen Laufstich abändern willst. Du kannst diese Funktion auch benutzen, wenn du die Breite der Satinkolumne ändern willst, aber der Parameter Zugausgleich nicht zum gewünschten Ergebnis (oder zu Überschneidungen) führt. In diesem Fall kannst du die Satinkolumne in einen Laufstich ändern, um im Anschluss die Weite im "Füllung und Kontur"-Panel anzupassen. Die Funktion ["Linie zu Satin"](#linie-zu-satin) führt den Laufstich wieder in eine Satinkolumne zurück. 
+
+Das funktioniert am Besten mit Satinkolumnen gleicher Breite.
+
+![Satin to Stroke example](/assets/images/docs/en/satin_to_stroke.png)
+
+### Funktionsweise
+
+1. Wähle eine oder mehrere Satinkolumnen aus, die in einen Laufstich umgewandelt werden sollen
+2. Öffne `Erweiterungen > Ink/Stitch > Satinwerkzeuge > Satin zu Linie...`
+3. Wähle, ob die ursprünglichen Satinkolumnen beibehalten oder gelöscht werden sollen
+4. Klicke auf "Anwenden"
 
 ## Satinkolumne schneiden
 

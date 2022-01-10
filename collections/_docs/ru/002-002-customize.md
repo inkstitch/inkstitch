@@ -26,7 +26,7 @@ toc: true
 <key>ctrl</key>+<key>shift</key>+<key>O</key> | Разделить объекты заливок... (O как в Object) | Объект > Свойства объекта
 <key>ctrl</key>+<key>shift</key>+<key>I</key> | Экспорт в PDF
 <key>ctrl</key>+<key>shift</key>+<key>Q</key> | Надписи (Q как в QWERTY) | Объект > Селекторы и CSS
-<key>ctrl</key>+<key>shift</key>+<key>Del</key> | Решение проблем с объектом (убрать ошибки)
+<span style="white-space: nowrap;"><key>ctrl</key>+<key>shift</key>+<key>Del</key></span> | Решение проблем с объектом (убрать ошибки)
 <key>ctrl</key>+<key>shift</key>+<key>+</key> | Добавить команды к выбранным объектам
 <key>ctrl</key>+<key>shift</key>+<key>U</key> | Преобразовать линию в сатин (U как две направляющих) | Объект > Группировать (используйте Ctrl+G)
 <key>ctrl</key>+<key>shift</key>+<key>J</key> | Поменять направляющие сатина (J как стрелка)
@@ -39,7 +39,7 @@ toc: true
 {: .notice--info }
 {: style="font-size: 70%" }
 
-#### Загрузите и импортируйте клавиатурные сочетания
+### Загрузите и импортируйте клавиатурные сочетания
 
 * [Загрузите файл клавиатурных сочетаний Ink/Stitch](/assets/files/inkstitch.xml)
 * Перейдите в меню `Правка > Параметры > Интерфейс > Сочетания клавиш`

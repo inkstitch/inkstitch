@@ -2,7 +2,7 @@
 title: "Fonctionnalités d'Ink/Stitch"
 permalink: /fr/features/
 excerpt: "Ink/Stitch features"
-last_modified_at: 2019-10-24
+last_modified_at: 2021-10-23
 sidebar:
   nav: pages
 toc: true
@@ -36,6 +36,7 @@ toc: true
 * remplir automatiquement des formes arbitraires avec des points
 * ajuster la longueur de point, l'espacement des rangées et l'angle des rangées
 * sous-couche
+* Point programmable
 
 ### Point Satin
 * personnaliser votre colonne satin avec une largeur variable
@@ -44,7 +45,10 @@ toc: true
    * centrée
    * contour
    * zig-zag
-Point E
+* Point E
+* Fractionnement satins
+* Point programmable
+
 ### Type de points en ligne 
 * point droit
 * point triple
@@ -64,11 +68,8 @@ CSV, **DST**, **EXP**, **JEF**, PEC, **PES**, SVG, TXT (G-CODE), U01, **VP3**
 Voici les fonctionnalités que nous espérons ajouter, mais pas nécessairement dans cet ordre:
 
 * Remplissage avec dégradé (déjà réalisé en tant que [fonction cachée](https://github.com/inkstitch/inkstitch/pull/108#issuecomment-369444197))
-* Point programmable [#33](https://github.com/inkstitch/inkstitch/issues/33)
 * Multi-Decoration Support [#371](https://github.com/inkstitch/inkstitch/issues/371)
 * Fractionnement automatique des dessins pour petites machines [#182](https://github.com/inkstitch/inkstitch/issues/182)
 * Sous-couches multiples pour le remplissage [#110](https://github.com/inkstitch/inkstitch/issues/110)
-* Fractionnement satins [#77](https://github.com/inkstitch/inkstitch/issues/77)
 * Gestion automatique des points droits [#373](https://github.com/inkstitch/inkstitch/issues/373)
-* 32-bit Linux support (build engineers needed!)
 

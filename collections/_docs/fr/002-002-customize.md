@@ -25,7 +25,7 @@ Shortcut&nbsp;Keys | Effect | Replaces
 <key>ctrl</key>+<key>shift</key>+<key>O</key> | Break apart fill objects... (O for Object) | Object > Object properties
 <key>ctrl</key>+<key>shift</key>+<key>I</key> | PDF Export
 <key>ctrl</key>+<key>shift</key>+<key>Q</key> | Lettering (Q for QWERTY) | Object > Selectors and CSS
-<key>ctrl</key>+<key>shift</key>+<key>Del</key> | Troubleshoot objects (remove errors)
+<span style="white-space: nowrap;"><key>ctrl</key>+<key>shift</key>+<key>Del</key></span> | Troubleshoot objects (remove errors)
 <key>ctrl</key>+<key>shift</key>+<key>+</key> | Attach commands to selected objects
 <key>ctrl</key>+<key>shift</key>+<key>U</key> | Convert line to satin column (U looks like two rails) | Object > Group (use Ctrl+G instead)
 <key>ctrl</key>+<key>shift</key>+<key>J</key> | Flip satin column rails (J looks like an arrow)
@@ -38,7 +38,7 @@ Dans Ink/Stitch la [simulation](/fr/docs/visualize/) inclut déjà le raccourci.
 {: .notice--info }
 {: style="font-size: 70%" }
 
-#### Download and import custom shortcut keys
+### Download and import custom shortcut keys
 
 * [Download the Ink/Stitch shortcut key file](/assets/files/inkstitch.xml)
 * Go to `Edition > Préférences > Interface > Raccourcis clavier`

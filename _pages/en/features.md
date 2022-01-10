@@ -2,7 +2,7 @@
 title: "Ink/Stitch Features"
 permalink: /features/
 excerpt: "Ink/Stitch features"
-last_modified_at: 2019-03-15
+last_modified_at: 2021-10-23
 sidebar:
   nav: pages
 toc: true
@@ -36,6 +36,7 @@ toc: true
 * automatically fill arbitrary shapes with stitches
 * adjust the stitch length, row spacing, and row angle
 * underlay
+* custom pattern
 
 ### Satin Stitch
 * custom-design your satin column with varying width
@@ -46,6 +47,8 @@ toc: true
   * zig-zag
 
 * e stitch
+* split stitch
+* custom patterned satin
 
 ### Stroke Type Stitches
 * running stitch
@@ -66,11 +69,8 @@ CSV, **DST**, **EXP**, **JEF**, PEC, **PES**, SVG, TXT (G-CODE), U01, **VP3**
 Here are features we're hoping to add, though not necessarily in this order:
 
 * Gradient Fill (already realised as a [hidden feature](https://github.com/inkstitch/inkstitch/pull/108#issuecomment-369444197))
-* Pattern fill [#33](https://github.com/inkstitch/inkstitch/issues/33)
 * Multi-Decoration Support [#371](https://github.com/inkstitch/inkstitch/issues/371)
 * Automatic splitting of designs for small machines [#182](https://github.com/inkstitch/inkstitch/issues/182)
 * Multiple Underlay for Fill [#110](https://github.com/inkstitch/inkstitch/issues/110)
-* Split satins [#77](https://github.com/inkstitch/inkstitch/issues/77)
 * Running Stitch Autoroute [#373](https://github.com/inkstitch/inkstitch/issues/373)
-* 32-bit Linux support (build engineers needed!)
 

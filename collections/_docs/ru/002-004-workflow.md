@@ -1,152 +1,153 @@
 ---
-title: "Рабочийй процесс"
+title: "Workflow"
 permalink: /ru/docs/workflow/
 excerpt: ""
-last_modified_at: 2021-12-07
+last_modified_at: 2021-04-11
 toc: true
 ---
 ![Ink/Stitch workflow](/assets/images/docs/en/workflow-chart.svg)
 
-## ![Create Icon](/assets/images/docs/workflow-icon-create.png) Шаг 1: Создать векторное изображение
+## ![Create Icon](/assets/images/docs/workflow-icon-create.png) Step 1: Create a Vector Image
 
-Для начала вам нужна идея или изображение, которое будет переносится в файл вышивки. Вы можете нарисовать его с нуля или использовать уже готовое изображение.
+At first you need an idea or an image that you want to transfer into an embroidery file. You can either paint it from scratch or use an existing image.
 
-### Рисование в Inkscape
+### Draw in Inkscape
 
-#### Создание контуров
+#### Create Paths
 
-В Inkscape есть несколько инструментов для создания векторных изображений, напрмер:
+Inkscape offers various tools to create vector images. You can use e.g.
 
-* ![freehand lines icon](/assets/images/docs/inkscape-tools-freehand.png) Произвольные контуры (<key>P</key>)
-* ![freehand lines icon](/assets/images/docs/inkscape-tools-bezier.png) Кривые Безье (<key>B</key>)
+* ![freehand lines icon](/assets/images/docs/inkscape-tools-freehand.png) Freehand lines (<key>P</key>)
+* ![freehand lines icon](/assets/images/docs/inkscape-tools-bezier.png) Bezier curves (<key>B</key>)
 
-Также попробуйте другие инструменты на панели. Например, готовые формы:
+Try also the other tools in the toolbar. For example specific shapes like
 
-* ![square icon](/assets/images/docs/inkscape-tools-square.png) Прямоугольник
-* ![circle icon](/assets/images/docs/inkscape-tools-circle.png) Круг
-* ![polygon icon](/assets/images/docs/inkscape-tools-polygon.png) Звезда/Полигон
-* ![spiral icon](/assets/images/docs/inkscape-tools-spiral.png) Спираль
+* ![square icon](/assets/images/docs/inkscape-tools-square.png) Rectangle
+* ![circle icon](/assets/images/docs/inkscape-tools-circle.png) Circle
+* ![polygon icon](/assets/images/docs/inkscape-tools-polygon.png) Star/Polygon
+* ![spiral icon](/assets/images/docs/inkscape-tools-spiral.png) Spiral
 
-#### Редактирование контуров
+#### Edit Paths
 
-Используйте для изменения объектов и контуров следующие инструменты:
-* ![node tool icon](/assets/images/docs/inkscape-tools-select.png) Выделение и трансформация (<key>S</key>)
-* ![node tool icon](/assets/images/docs/inkscape-tools-node.png) Изменение узлов (<key>N</key>)
+Edit objects and paths with:
+* ![node tool icon](/assets/images/docs/inkscape-tools-select.png) Select tool (<key>S</key>) and
+* ![node tool icon](/assets/images/docs/inkscape-tools-node.png) Node editor tool (<key>N</key>)
 
-Инструмент выделения и трансформации позволяет масштабировать, вращать и перемещать объекты. А инструмент изменениия узлов, позволяет работать с отдельными узлами контуров.
+Scale, rotate and move the whole object with the select tool. The node editor tool serves to manipulate selected nodes, etc.
 
-Также вы можете использовать контурные эффекты (`Контур > Контурные эффекты...`). Не забывайте всегда преобразовывать получившиеся объекты обратно в контуры (`Контур > Оконтурить объект`).
+Additionally you could use path effects (`Path > Path Effects...`). Remember to always convert the resulting object back into a path (`Path > Convert object to path`).
 
-### Использование существующих изображений
+### Use Existing Picture/Graphic
 
-Когда дизайн изготавливается по существующему изображению, загрузите его в Inkscape на отдельный слой. Некоторые изображения хорошо подходят для конвертации в векторы при помощи [функции автотрейсинга](https://inkscape.org/ru/doc/tutorials/tracing/tutorial-tracing.html) в Inkscape  (`Контур > Векторизировать растр` или `Shift+Alt+B`), особенно если предварительно изображение обработать и упростить в графческом редакторе (например в [GIMP](https://www.gimp.org/)).
+When basing a design off an existing picture or graphic, load it into Inkscape in its own layer. Some graphics are amenable to Inkscape's [auto-tracing feature](https://inkscape.org/en/doc/tutorials/tracing/tutorial-tracing.html) (`Path > Trace Bitmap` or `Shift+Alt+B`), especially if you simplify the image in a graphic editor first (e.g. with [GIMP](https://www.gimp.org/)).
 
-После векторизации подчистите получившиеся формы, используя инструмент `Контур > Упростить` (`Ctrl+L`), а так же, при возможности, вручную удалите лишние узлы. Нужно добиться максимально похожего на оригинал изображения выполненого минимальным количеством кривых Безье.
+After tracing, clean up the vector shapes, using `Path > Simplify` (`Ctrl+L`) and deleting nodes by hand when possible. The goal is to use as few Bezier curves as reasonably possible to represent the image.
+Often the tracing function will produce very little objekts which are impossible to embroider. Therefore it is advisable to cleanup your document with `Extensions > Ink/Stitch > Troubleshoot > Cleanup document...`.
 
-Часто при векторизации получаются очень маленькие формы, которые невозможно вышить. Советуется удалить их при помощи `Расширения > Ink/Stitch > Решение проблем > Очистка Дизайна...`.
+When the image is needed to be traced by hand, use the freehand drawing tool. This tool creates paths with a lot of Beziér nodes, so again, simplify the curves as much as possible.
 
-Если изображение нужно векторизировать вручную используйте инструмент произвольных контуров. Этот инструмент создает контуры с большим количестовм узлов, поэтому требуется также максимально упростить линии в последствии.
-
-**Совет:** Работа с существующими SVG изображениями может сэкономить много времени. При поиске изображений, отдавайте предпочтение файлам в формате SVG.
+**Tip:** Working with an existing SVG image can save a ton of time, so consider using your search engine with image search filter set to SVG.
 {: .notice--info }
 
-### Текст
+### Text
 
-Для текста выбирайте шрифт аккуратно. Очень сложно получить хороший сатин, когда его толщина будет 1мм или даже тоньше. Шрифты семейства Sans-serif(без засечек) обычно проще. Для надписей менее 4мм высотой сложно заставить строчные буквы выглядеть хорошо, лучше использовать только прописные. Курсивные и рукописные шрифты могут выглядеть отлично, но их вышивка не столь проста, как кажется.
+For text, choose a font carefully. It's quite hard to make satin look good when it's 1mm wide or narrower. Sans-serif fonts tend to be the easiest. For text smaller than 4mm tall, you'll have a very difficult time making lowercase letters look good, so consider block-caps. Cursive/script fonts can work well, but it's not going to be as easy as you think.
 
-В Ink/Stitch встроено несколько готовых шрифтов, которые могут быть вставлены в дизайн при помои команды `Расширения > Ink/Stitch > Надписи`
+Ink/Stitch offers ready to use fonts which can be inserted into your document through `Extensions > Ink/Stitch > Lettering`
 
-## ![Векторизация](/assets/images/docs/workflow-icon-vectorize.png) Шаг 2: Преобразуйте в контур для вышивку и настройте его
+## ![Vectorize](/assets/images/docs/workflow-icon-vectorize.png) Step 2: Convert to Embroidery Vectors & Parametrize
 
-Сейчас у нас есть векторное представление нужного изображения. Теперь нужно преобразовать контуры в специально подготовленые контуры для вышивки, которые понимает Ink/Stitch.
+At this point, you'll have a vector graphic representation of your image. The next thing to do is to convert your vectors into the kind that Ink/Stitch understands.
 
-### Панель объектов
+### The Object Panel
 
-Мы рекомендуем постоянно использовать слои и группы. На панели Объекты (ожно открыть комбинацией <key>Ctrl</key><key>Shift</key><key>O</key>) можно управлять слоями, группами и объектами.
+We recommend to make heavy use of layers and groups at this point.
 
-Вы можете сохранить оригинальное изображение на дублированном слое:
+In the object panel (open with <key>Ctrl</key><key>Shift</key><key>O</key>) you can manage layers, groups and objects.
 
-* Правый клик на первом слое(если вы еще не переименовывали слои, он будет называться `Слой 1`)
-* Нажмите на `Дублировать`
-* Кликните по глазу напротив имени первого слоя.
+You can save the original image by duplicating the layer:
 
-Это сделает первый слой невилимым. Любой слой, группа или форма, которые сделаны невидимыми, игнорируются в Ink/Stitch. Теперь мы будем работать с копией.
+* Right click on the layer (if you didn't rename the layer it will be called `Layer 1`)
+* Click on `Duplicate`
+* Close the eye by clicking on it.
 
-![Панель объект](/assets/images/docs/en/objects-panel.png)
+This will make the first layer invisible. Any layer, group, or vector shape that is set invisible will be ignored by Ink/Stitch. We will now work with the copy.
 
-### Группы
+![Objects panel](/assets/images/docs/en/objects-panel.png)
 
-Используйте группы, чтобы структурировать ваш дизайн:
+### Groups
 
-* Выделите объекты мышкой
-* Добавляйте или удаляйте объекты из выделения кликая с зажатым <key>shift</key>
-* Нажмите <key>Ctrl</key><key>G</key>
+Use groups to structure your document:
 
-Разгруппировать объекты проще:
+* Select objects with your mouse
+* Add or remove objects with <key>shift</key><key>click</key>
+* Hit <key>Ctrl</key><key>G</key>
 
-* Выберите группу(ы)
-* Нажмите <key>Ctrl</key><key>Shift</key><key>G</key>
+Ungrouping objects works as follows:
 
-### Типы стежков
+* Select the group(s)
+* Hit <key>Ctrl</key><key>Shift</key><key>G</key>
 
-Ink/Stitch умеет создавать различные типы стежков. В зависимости от того какой тип стежков вы собираетесь использовать, вам нужно задать цвет заливки или парметры контура на панели `Объект > Заливка и обводка...` (<key>Ctrl</key><key>Shift</key><key>F</key>).
+### Stitch Types
 
-Изучите таблицу ниже и пройдите по ссылкам, чтобы понять как создавать каждый из типов стежков:
+Ink/Stitch offers various stitch types. Depending on which stitch type you are willing to use, you have to set the fill color, or stroke parameters with `Object > Fill and Stroke...` (<key>Ctrl</key><key>Shift</key><key>F</key>).
 
-Объект контура | Тип стежка
+Have a look at this table and follow the links to understand how to create a specific stitch type:
+
+Path Object | Stitch Type
 ---|---|---
-Пунктирная линия |[строчка](/ru/docs/stitches/running-stitch/), [ручная строчка](/ru/docs/stitches/manual-stitch/), [строчка зигзагом](/ru/docs/stitches/zigzag-stitch/), [многопроходная строчка](/ru/docs/stitches/bean-stitch/)
-Две объединенные линии | [сатин](/ru/docs/stitches/satin-column), [Е-строчка](/ru/docs/stitches/e-stitch)
-Замкнутый контур с заливкой | [заполнение](/ru/docs/stitches/fill-stitch/)
+(Dashed) stroke |[running stitch](/docs/stitches/running-stitch/), [manual stitch](/docs/stitches/manual-stitch/), [zig-zag stitch](/docs/stitches/zigzag-stitch/), [bean stitch](/docs/stitches/bean-stitch/)
+Two combined strokes (with optional rungs) | [satin column](/docs/stitches/satin-column), [e-stitch](/docs/stitches/e-stitch)
+Closed path with a fill color | [fill stitch](/docs/stitches/fill-stitch/)
 {: .equal-tables }
 
-### Параметры
+### Parametrize
 
-Настройет праметры вышивания для каждого контура в меню `Расширения > Ink/Stitch  > Параметры`. Вы можете найти описание для каждого праметра в разделе [Параметры](/ru/docs/params/) этой документации. Всякий раз при изменнии значения  какого-либо параметра вы сможете увидеть результат симуляции вышивки в окне предпросмотра. Как только результат вам понравится, нажмите кнопку `Применить и закрыть`, чтобы сохранить результат внутри SVG-файла.
+Set parameters using `Extensions > Ink/Stitch  > Params`. You find a description for each parameter in the [Params](/docs/params/) section of this documentation. Each time you change parameter values, you'll be able to see the simulated result in a preview window. Once you are satisfied with the result, click `Apply and close` to save the values into your SVG-file.
 
-Теперь сохраните ваш SVG-файл. Если после этого Inkscape начнет "тормозить" (из-за некотрых проблем с утечкой памяти в самом Inkscape) - перезапустите его, перед тем как продолжить работу.
+At this point, save your SVG file. If Inkscape is starting to become sluggish (due to an Inkscape memory leak), restart it before continuing.
 
 
-## ![Create Icon](/assets/images/docs/workflow-icon-order.png) Шаг 3: Порядок вышивания и добавление команд
+## ![Create Icon](/assets/images/docs/workflow-icon-order.png) Step 3: Plan Stitch Order & Attach Commands
 
-### Порядок вышивания
+### Stitch Order
 
-Когда вы изготавливаете дизайн с прицелом на машины, которые не умеют обрезать нить в середине вышивки или автоматически менять цвета, нужно оптимизировать путь следования вышивания для уменьшения или маскирования стежков перехода и уменьшения количества смен нитей. Также постарайтесь избегать вышивания поверх стежков перехода, поскольку в этом случае очень сложно обрезать их руками.
+When you're designing for embroidery machines that can't cut the thread mid-sew or switch colors automatically, you're going to want to optimize your stitch path to reduce or hide jump stitches and make minimal color changes. Also try to avoid stitching over jump stitches when possible, because it's a total pain to trim them by hand when you do.
 
-Порядок вышивания влияет также и на то как ткань тянется и стягивается. Каждый стежок искажает ткань и вы должны это учитывать и компенсировать соответствующим образом. [Подробнее..](/ru/tutorials/push-pull-compensation/)
+The order of stitching also affects how the fabric pulls and pushes. Each stitch will distort the fabric, and you'll need to take this into account and compensate accordingly. [More Information](/tutorials/push-pull-compensation/)
 
-Как только вы создали все векторы можно расположить их в нужном порядке. Панель Объектов (`Объект > Объекты ...`) тут очень пригодится.  Оптимизируйте порядок таким образом, чтобы сократить количество смены цвета и стежков перхода. В дополнение вы можете воспользоваться [функцией сортировки](/ru/docs/edit/#re-stack-objects-in-order-of-selection) Ink/Stitch.
+Once you've created all vectors, it's time to put everything in the right order. This is where the Inkscapes Objects tool (`Objects > Objects ...`) comes in useful. Optimize your order to minimize color changes and reduce or hide jump-stitches. Additionally you can make use of the Ink/Stitch [sorting function](/docs/edit/#re-stack-objects-in-order-of-selection) gebrauch machen.
 
-Ink/Stitch будет вышивать объекты именно в том порядке, в каком они находятся в текущем SVG файле, от низших к высшим в порядке расположения. Если расстояние между объектами велико, Ink/Stitch  добавит стежок перехода между ними автоматически. Для определения цвета нити используется цвет объекта. Так что, при переходе к другму объекту, цвет которого отличается от предыдущего, в файл вышивки будет добавлена инструкция для смены нити. 
+Ink/Stitch will stitch objects in exactly the order they appear in your SVG document, from lowest to highest in stacking order. If the distance between two objects is long, Ink/Stitch will add a jump-stitch between them automatically. It uses the color of the object to determine thread color, so changes in color from one object to the next will result in a thread-change instruction being added to the embroidery output file.
 
-**Совет:** В Inkscape есть возможность поднимать и опускать объекты в порядке наложения используя клавиши PageUp и PageDown. Новые функции "Stack Up" и "Stack Down" дают лучший контроль в порядке наложения, поэтому мы рекомендуем назначить эти клавиши на эти функции. [Подробнее...](/ru/docs/customize/#shortcut-keys)
+**Tip:** Inkscape gives you the ability to "raise" and "lower" objects in the stacking order using the PageUp and PageDown keys. The new functions "Stack Up" and "Stack Down" will give you much better control over the stacking order. So we recommend to rather bind PageUp and Page Down to them. [More Information](/docs/customize/#shortcut-keys)
 {: .notice--info }
 
-**Информация:** Можно вручную манипулировать порядком структур SVG XML используя панель XML редактора в Inkscape(`CTRL-SHIFT-X`). Его кнопки "Поднять" и "Опустить" напрямую управляют порядком XML тегов внутри SVG файла и не имеют ограничений, которые присущи клавшам PageUp и PageDown при обычном управлении порядком наложения. Обратите внимание, что порядок XML тегов в XML Редакторе является _обратным_ тому, что вы видите на панели Объекты.
+**Info:** You can also manually manipulate the underlying SVG XML structure by using Inkscape's XML Editor pane (`CTRL-SHIFT-X`). Its "Raise" and "Lower" buttons directly manipulate the order of XML tags in the SVG file and are not subject to the same limitations as the original PageUp and PageDown. Note that the ordering of XML tags in the XML Editor tool is the _reverse_ of the order of objects in the Objects tool.
 {: .notice--info }
 
-### Команды
+### Commands
 
-[Команды](/ru/docs/commands/) также способствуют оптимизации пути вышивки. Вы может установить точки старта и конца, передвинуть рамку в поределенное место, установить команды обрезки и тп.
+[Commands](/docs/commands/) also help to optimize your stitch path. You can set start and ending points, push the frame into defined positions or set trim and cut commands, etc.
 
-## ![Create Icon](/assets/images/docs/workflow-icon-visualize.png)  Шаг 4: Визуализация
+## ![Create Icon](/assets/images/docs/workflow-icon-visualize.png)  Step 4: Visualize
 
-В Ink/Stitch есть три способа предпросмотра вашего дизайна:
+Ink/Stitch supports three ways to preview your design:
 
-* [Симулятор с реалистичным просмотром](/ru/docs/visualize/#simulator--realistic-preview)
-* [Экспорт в PDF](/ru/docs/print-pdf/)
-* [Предпросмотр плана вышивки](/ru/docs/visualize/#stitch-plan-preview) (Убрать можно комбинацией <key>Ctrl</key><key>Z</key>)
+* [Simulator with (optional) realistic preview](/docs/visualize/#simulator--realistic-preview)
+* [Print Preview](/docs/print-pdf/)
+* [Stitch Plan Preview](/docs/visualize/#stitch-plan-preview) (Undo with <key>Ctrl</key><key>Z</key>)
 
-## ![Create Icon](/assets/images/docs/workflow-icon-export.png) Шаг 5: Сохрнанить файл вышивки
+## ![Create Icon](/assets/images/docs/workflow-icon-export.png) Step 5: Save the Embroidery File
 
-Как только вы расположите все в нужном порядке, выберите в меню опцию `Файл > Сохранить копию ...`, чтобы [экспортировать](/ru/docs/import-export/) вышивку в файл формата, который поддерживается вашей вышивальной машиной. Большинство машин поддерживают формат DST, некоторые машины Brother предпочитают формат PES. Не забудьте также сохранить файл в формате SVG, иначе в дальнейшем будут трудности с изменением дизайна.
+Once you've got everything in the right order, run `File > Save a copy...` to [export](/docs/import-export/) to a file format supported by your machine. Most machines can support DST, and some Brother machines prefer PES. Do not forget to also save your file in the SVG-format. Otherwise it's going to be difficult to change details later.
 
-## ![Create Icon](/assets/images/docs/workflow-icon-testsew.png) Шаг 7: Тестовая вышивка
+## ![Create Icon](/assets/images/docs/workflow-icon-testsew.png) Step 7: Test-sew
 
-Всегда есть что можно улучшить! Для тестовой вышивки вашего дизайна подготовьте кусок тестовой ткани, который как можно ближе соответствует ткани на которой будет выполнятся финальная вышивка. Используйте одинаковый стабилизатор и ткань если возможно. Для футболок постарайтесь найти похожую ткань(обычно трикотаж). Трикотажу требуется сильная стабилизация.
+There's always room for improvement! To test out your design, prepare a test piece of fabric that matches your final fabric as closely as possible. Use the same stabilizer and the exact same fabric if possible. For t-shirts, try to find a similar fabric (usually knit). Knits need a lot of stabilization.
 
-Начните вышивку дизайна, наблюдайте за ней, чтобы не появилось каких-либо сюрпризов. Следите за пробелами, которые показывают, что ткань была сильно искажена. Также проверьте области, где стежки накладываются друг на друга и у машины могут быть сложности с протыканием ткани.
+Sew out the design, watching the machine to make sure that there aren't any surprises. Watch out for gaps that indicate that the fabric has been distorted. Also search for areas where stitches are piling up too closely and the machine is having trouble sewing, which indicates that the stitch density is too high.
 
-## ![Create Icon](/assets/images/docs/workflow-icon-optimize.png) Шаг 8+: Оптимизируйте
+## ![Create Icon](/assets/images/docs/workflow-icon-optimize.png) Step 8+: Optimize
 
-Вернитесь и отредактируйте ваш дизайн. Надеемся понадопится лишь пара попыток, чтобы получить вышивку как она задумывалась.
+Then go back and tweak your design. Hopefully it only takes a few tries to get it how you want it.

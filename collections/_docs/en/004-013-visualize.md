@@ -33,6 +33,15 @@ It is also possible to **zoom** and **pan** the simulation with the mouse.
 
 ## Stitch Plan Preview
 
-Run `Extensions > Ink/Stitch > Visualize and Export > Stitch Plan Preview`. This will insert the stitch plan directly into your document to the right side of your canvas.
-You can inspect it from there and delete it afterwards.
+Run `Extensions > Ink/Stitch > Visualize and Export > Stitch Plan Preview...`. This will insert the stitch plan directly into your document.
+You can inspect it from there and delete it with `Ctrl+Z` afterwards.
 
+You have the following display options:
+* **Move stitch plan beside the canvas** Displays the preview on the right side of the canvas. If not enabled, the stitch plan will be placed on top of your design. In that case you may want to update your design visibility to eather hidden or lower opacity.
+* **Display layer visibility** defines the visibility of the original design layer.
+  * **unchanged** leave it as is
+  * **hidden** hide the original design
+  * **lower opacity** display original design with lower opacity
+* **Needle points** displays needle points if enabled
+
+{% include folder-galleries path="stitch-plan/" captions="1:Stitch plan beside canvas;2:Layer visibility set to hidden;3:Layer visibility set to lower opacity;4:Needle points enabled | disabled" caption="<i>Example image from [OpenClipart](https://openclipart.org/detail/334596)</i>" %}

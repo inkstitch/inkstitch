@@ -80,6 +80,8 @@ docs:
         url: /ru/docs/stitches/e-stitch/
       - title: "Заполнение"
         url: /ru/docs/stitches/fill-stitch/
+      - title: "Stitch patterns"
+        url: /ru/docs/stitches/patterns/
   - title: Интерфейс
     children:
     - title: "Команды"

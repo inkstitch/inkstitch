@@ -46,6 +46,21 @@ Cette extension convertira un trait en une colonne satin avec une largeur spéci
 2. Définir une largeur de trait
 2. Lancer `Extensions > Ink/Stitch  > Satin Tools > Convert Line to Satin`
 
+## Convert Satin to Stroke
+
+Satin to stroke will convert a satin column to it's centerline. This can be useful, when you decide later in the designing process to turn a satin column into a running stitch. You can also use it to alter the thickness of your satin column, when pull compensation isn't satisfying. In that case use this function to convert your satin column into a running stitch, set stroke width in the fill and stroke panel and run the ["Convertir des Lignes en Satin"](#convertir-des-Lignes-en-atin) function. 
+
+This works best on evenly spaced satin columns.
+
+![Satin to Stroke example](/assets/images/docs/en/satin_to_stroke.png)
+
+### Usage
+
+1. Select the satin column(s) you want to convert into a running stitch
+2. Run `Extensions > Ink/Stitch > Satin Tools > Convert satin to stroke...`
+3. Choose wether you want to keep selected satin column(s) or if you want to replace them
+4. Click apply
+
 ## Scinder une colonne Satin
 
 Scinder une colonne Satin à un point précisé. La coupure a lieu à la limite d'un point pour que les deux satins résultants soient cousus exactement comme l'original. Tous les paramètres définis sur le satin d'origine restent sur les deux nouveaux satins et toutes les traverses sont conservées. Si l'un des satins n'a plus de traverse, de nouvelles sont ajoutées.

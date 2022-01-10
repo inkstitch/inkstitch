@@ -22,7 +22,13 @@ If you want to import any other threadlist from a txt-file, choose the option "I
 
 ### Export
 
-Threadlists can only be exported through a zip-file ([batch export](/docs/import-export/#batch-export)).
+Threadlists can only be exported through a zip-file ([batch export](/ru/docs/import-export/#batch-export)).
+
+## Install Custom Palette
+
+In case you own a `.gpl` color list of the threads you are actually using. Make it available in Inkscape with this extension: `Extensions > Ink/Stitch > Thread Color Management > Install custom palette...`. You will need to restart Inkscape after this process.
+
+The .gpl color palettes can be generated with GIMP. 
 
 ## Install Thread Color Palettes for Inkscape
 

@@ -5,64 +5,112 @@ excerpt: "Быстрая установка Ink/Stitch."
 last_modified_at: 2021-12-02
 toc: true
 ---
+{% comment %}
 ## Видео урок
 
-У нас есть множество обучающих видео на нашем <i class="fab fa-youtube"></i> [YouTube канале](https://www.youtube.com/channel/UCJCDCFuT_xQoI55e10HRiRw). Посмотрите процесс установки расширения на <i class="fab fa-windows"></i> [Windows](https://www.youtube.com/watch?v=U5htzWZSjA8&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=4).
+У нас есть множество обучающих видео на нашем <i class="fab fa-youtube"></i> [YouTube канале](https://www.youtube.com/c/InkStitch). Посмотрите процесс установки расширения на <i class="fab fa-windows"></i> [Windows](https://www.youtube.com/watch?v=U5htzWZSjA8&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=4).
+{% endcomment %}
 
 ## Требования
 
-* [Inkscape](https://inkscape.org/release/) Версия 1.0.2 или выше
+Ink/Stitch is an Inkscape extension. Download and install [Inkscape](https://inkscape.org/release/) Версия 1.0.2 или выше before you install Ink/Stitch.
 
-Это все что вам нужно. Все необходимые библиотеки и внешние зависимости поставляются вместе с расширением, благодаря прекрасной утилите [pyinstaller](http://www.pyinstaller.org).
+## Скачать
 
-## Установка
+Download the latest release.
 
-### Скачать
-Загрузите архив с расширением на нужном языке:
-* <i class="fa fa-download " ></i> [Русский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-ru_RU.zip)
-* <i class="fa fa-download " ></i> [Английский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-en_US.zip)
-* <i class="fa fa-download " ></i> [Финский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-fi_FI.zip)
-* <i class="fa fa-download " ></i> [Французский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-fr_FR.zip)
-* <i class="fa fa-download " ></i> [Немецкий]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-de_DE.zip)
-* <i class="fa fa-download " ></i> [Итальянский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-it_IT.zip)
-* <i class="fa fa-download " ></i> [Японский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-ja_JP.zip)
-* <i class="fa fa-download " ></i> [Нидерландский]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-nl_NL.zip)
-
+<p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows.exe" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Download Ink/Stitch {{ site.github.latest_release.tag_name }} for Windows</a></p>
 
 **Последняя версия:** {{ site.github.latest_release.published_at | date: "%Y-%m-%d"  }} [Ink/Stitch {{ site.github.latest_release.tag_name }}](https://github.com/inkstitch/inkstitch/releases/latest)
 
-Выбранный выше язык влияет только на показ пунктов меню в Inkscape. Диалоги Ink/Stitch будут отображены на языке вашей ОС независимо от выбранного файла загрузки(если этот язык поддерживается).<br><br>Для вашего языка нет расширения? Помогите нам [перевести диалоги на ваш родной язык](/ru/developers/localize/).
-{: .notice--info }
+## Запуск Ink/Stitch
 
+If you have Ink/Stitch previously installed, [remove the old installation](#uninstall-inkstitch) first.
 
-### Распаковка файлов
+Double click to execute the downloaded file.
 
-Перейдите в `Правка > Параметры > Система` и найдите путь до вашей папки `Пользовательских расширений`.
+Until our windows certificate gained enough trust, you will need to allow the installer script to run.
 
-![Preferences: Extensions Folder](/assets/images/docs/en/extensions-folder-location-win.jpg)
+Click on `More info`.
 
-Этот путь будет похож на `C:\Users\%USERNAME%\AppData\Roaming\inkscape\extensions`
+![Ink/Stitch installer](/assets/images/docs/en/windows-install/installer01.png)
 
-Распакуйте архив с Ink/Stitch прямо в эту папку.
+Now click on the additional option `Run anyway`.
 
-### Запуск Ink/Stitch
+![Ink/Stitch installer](/assets/images/docs/en/windows-install/installer02.png)
 
-Перезапустите Inkscape.
+Ink/Stitch needs to be installed into the Inkscape extensions folder. The path is already set for you. Click on `Next`.
 
-Теперь Ink/Stitch будет доступен через меню `Расширения > Ink/Stitch`.
+![Ink/Stitch installer](/assets/images/docs/en/windows-install/installer03.png)
+
+Since you have Inkscape installed, the extensions folder already exists. Confirm that you want to install into this folder and click on `Yes`.
+
+![Ink/Stitch installer](/assets/images/docs/en/windows-install/installer04.png)
+
+The installer will show you a summary of the installation settings. Click on `Install`.
+
+![Ink/Stitch installer](/assets/images/docs/en/windows-install/installer05.png)
+
+Ink/Stitch is now installed on your computer.
+
+![Ink/Stitch installer](/assets/images/docs/en/windows-install/installer06.png)
+
+## Run Ink/Stitch
+
+Open Inkscape. You will find Ink/Stitch under `Extensions > Ink/Stitch`.
+
+![Ink/Stitch menu](/assets/images/docs/en/windows-install/inkstitch-extensions-menu.png)
+
+## Uninstall Ink/Stitch
+
+### Uninstall Ink/Stitch versions up from v2.1.0
+
+Open the start menu in Windows. Click on `Settings`.
+
+![Uninstall Ink/Stitch](/assets/images/docs/en/windows-install/uninstall01.png)
+
+Click on `Apps`.
+
+![Uninstall Ink/Stitch](/assets/images/docs/en/windows-install/uninstall02.png)
+
+In `Apps & features` scroll down until you find Ink/Stitch.
+Click on `Ink/Stitch` and an uninstall button appears. Click on `Uninstall`.
+
+![Uninstall Ink/Stitch](/assets/images/docs/en/windows-install/uninstall03.png)
+
+Confirm that you want to uninstall Ink/Stitch.
+
+![Uninstall Ink/Stitch](/assets/images/docs/en/windows-install/uninstall04.png)
+
+Ink/Stitch has been removed from your computer. Click `Ok`.
+
+![Uninstall Ink/Stitch](/assets/images/docs/en/windows-install/uninstall05.png)
+
+### Uninstall Ink/Stitch versions older than v2.1.0
+
+Go to `Edit > Preferences > System` and open your extensions folder.
+
+![Inkscape extensions folder](/assets/images/docs/en/extensions-folder-location-win.jpg)
+
+Remove each inkstitch* file and folder.
+
+## Get informed about Ink/Stitch updates
+
+Subscribe to a news feed channel to keep track on Ink/Stitch Updates.
+
+* <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [Ink/Stitch News (Website)](/feed.xml)<br />
+* <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [New Releases on GitHub](https://github.com/inkstitch/inkstitch/releases.atom)<br>
+
+<p>Alternatively watch all project activity on GitHub: <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=inkstitch&repo=inkstitch&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe></p>
 
 ## Обновление
 
-Сначала нужно убрать все файлы расширения текущей версии. Зайдите в папку расширений и удалите все файлы и папки, которые начинаются с inkstitch*.
+Subscribe to a news feed channel to keep track on Ink/Stitch Updates.
 
-Затем повторите шаги как при установке расширения с нуля.
+* <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [Новости Ink/Stitch](/feed.xml)
+* <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [Новые версии на GitHub](https://github.com/inkstitch/inkstitch/releases.atom)
 
-**Совет:** Подпишитесь на канал новостей, чтобы быть в курсе обновлений Ink/Stitch:<br />
- <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [Новые версии на GitHub](https://github.com/inkstitch/inkstitch/releases.atom)<br>
- <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [Новости Ink/Stitch](/feed.xml)<br />
-{: .notice--info }
-
-<p class="notice--info" style="margin-top: -3.5em !important;">Или следите за проектом на GitHub:<br /><iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=inkstitch&repo=inkstitch&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe></p>
+<p>Или следите за проектом на GitHub:<br /><iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=inkstitch&repo=inkstitch&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe></p>
 
 ## Решение проблем
 

@@ -80,6 +80,8 @@ docs:
         url: /fr/docs/stitches/e-stitch/
       - title: "Point de remplissage"
         url: /fr/docs/stitches/fill-stitch/
+      - title: "Stitch patterns"
+        url: /fr/docs/stitches/patterns/
   - title: Interface
     children:
     - title: "Commandes"

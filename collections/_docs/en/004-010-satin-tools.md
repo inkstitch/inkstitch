@@ -2,7 +2,7 @@
 title: "Satin Tools"
 permalink: /docs/satin-tools/
 excerpt: ""
-last_modified_at: 2021-10-27
+last_modified_at: 2021-10-30
 toc: true
 ---
 `Extensions > Ink/Stitch  > Satin Tools` include a number of useful helpers, making it easy to work with [satin columns](/docs/stitches/satin-column/).
@@ -10,7 +10,7 @@ toc: true
 **Example:**
 * Create a path with the help of the bezier curves tool (`B`)
 * Run [Convert Line to Satin](#convert-line-to-satin)
-* Use the [Params dialog](docs/params/#satin-params) to set an underlay
+* Use the [Params dialog](/docs/params/#satin-params) to set an underlay
 * Run [Auto-Route Satin](#auto-route-satin-columns) to recieve nicely routed satin columns
 
 [![Convert Line to Satin](/assets/images/docs/en/satin-tools.svg)](/assets/images/docs/en/satin-tools.svg){: title="Download SVG File" download="satin-tools.svg" }
@@ -46,6 +46,21 @@ This extension will convert a stroke into a satin column with a specified width.
 1. Draw a bezier curve (`B`)
 2. Set the stroke width in the "Fill and Stroke" panel ("Stroke style" tab), which you can access with `Shift+Ctrl+F`
 2. Run `Extensions > Ink/Stitch  > Satin Tools > Convert Line to Satin`
+
+## Convert Satin to Stroke
+
+Satin to stroke will convert a satin column to it's centerline. This can be useful, when you decide later in the designing process to turn a satin column into a running stitch. You can also use it to alter the thickness of your satin column, when pull compensation isn't satisfying. In that case use this function to convert your satin column into a running stitch, set stroke width in the fill and stroke panel and run the ["Connvert line to to satin"](#convert-line-to-satin) function. 
+
+This works best on evenly spaced satin columns.
+
+![Satin to Stroke example](/assets/images/docs/en/satin_to_stroke.png)
+
+### Usage
+
+1. Select the satin column(s) you want to convert into a running stitch
+2. Run `Extensions > Ink/Stitch > Satin Tools > Convert satin to stroke...`
+3. Choose wether you want to keep selected satin column(s) or if you want to replace them
+4. Click apply
 
 ## Cut Satin Column
 

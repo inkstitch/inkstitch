@@ -8,6 +8,7 @@ toc: true
 Eine Sammunlung von Werkzeugen für Schriftarten Entwickler oder Personen, die dem [Text-Werkzeug](/de/docs/lettering/) von Ink/Stitch zusätzliche Schriften hinzufügen wollen.
 
 Ein Blick in das [Schriften für Ink/Stitch erstellen Tutorial](/de/tutorials/font-creation) lohnt sich auf jeden Fall, wenn du neue Schriften erstellen willst.
+{: .notice--info }
 
 ## Benutzerdefinierter Ordner für Schriften
 
@@ -66,3 +67,24 @@ Deine Schrift ist bereits einsatzbereit. Aber wenn du sie mit FontForge erstellt
 2. Öffne `Erweiterungen > Ink/Stitch > Font Tools > Remove Kerning`
 3. Die die zu bereinigende(n) Datei(en)
 4. Klicke auf `Anwenden`
+
+## Buchstaben zu Schrift
+
+"Buchstaben zu Schrift" ist ein Werkzeug, um bereits digitalisierte Buchstaben zu einer mit Ink/Stitch nutzbaren Schrift zusammenzufügen.
+
+Die digitalisierte Schrift muss für den Import folgende **Bedingungen** erfüllen:
+* Eine Datei pro Buchstabe in einem Stickformat, das Ink/Stitch lesen kann
+* Der Buchstabenname muss am Ende des Dateinamens stehen. Eine gültiger Dateiname für den Großbuchstaben A könnte z.B. sein `A.pes` oder `Beispielschrift_A.pes`
+
+Bei gekauften Schriften kommt es häufig vor, dass die Buchstaben in Unterordnern organisiert sind, da jeder Buchstabe in mehreren Dateiformaten geliefert wird. Diese Struktur muss nicht geändert werden. Ink/Stitch durchsucht auch die Unterordner nach den Buchstabendateien.
+{: .notice--info }
+
+### Funktionsweise
+
+* Wähle das Dateiformat aus dem du die Buchstaben importieren willst (idealerweise ein Format, dass Farbinformationen speichert)
+* Wähle den Ordner in dem sich die Buchstaben befinden. Wenn es Unterordner gibt, wähle den Hauptordner der Schrift.
+* Wähle, ob du Befehle importieren willst oder nicht (Warnung: importierte Befehle in großem Ausmaß verlangsamen das System erheblich)
+* Klicke auf Anwenden - und warte ...
+* Nach dem Import muss die Grundlinie (`baseline`) an die richtige Stelle gerückt werden und die Buchstaben entsprechend positioniert. Der linke Dokumentenrand wirkt sich ebenfalls auf die Positionierung der Buchstaben durch das Textwerkzeug aus
+* Speichere die Datei als `→.svg` in einem neuen Ordner in dem [Benutzerdefinierten Ordner für Schriften](#benutzerdefinierter-ordner-für-schriften)
+* Erstelle mit [JSON-Datei erstellen](#json-datei-erstellen) eine JSON-Datei, die die Schrift für das Textwerkzeug von Ink/Stitch nutzbar macht. "Automatisch geführte Satinkolumne" sollte für digitalisierte Schriften nicht ausgewählt sein. Die Skalierung bleibt bei 1.

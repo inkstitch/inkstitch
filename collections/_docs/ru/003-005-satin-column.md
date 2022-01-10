@@ -11,13 +11,21 @@ Satin stitch is mostly used for borders, letters or small fill areas.
 
 ![Stitch Types - Satin Column](/assets/images/docs/stitch-type-satincolumn.jpg)
 
-## How to Create
+## How to create
+
+* Add a contour to a path object (with no filling).
+* Set contour width to the size you want your satin stitch to be.
+* Run `Extensions > Ink/Stitch > Satin Tools > Convert Line to Satin`
+* Optionally run `Extensions > Ink/stitch > Satin Tools > Auto-route Satin...`
+* Use as-is or customize rungs or rails
+
+## Manual Satin Column
 You define a satin column using a shape made of **two mostly-parallel lines**. Ink/Stitch will draw zig-zags back and forth between the two lines. You can vary the thickness of the column as you like.
 
 * Combine two strokes with `Path > Combine` or hit `Ctrl+K`.
-* [Check path directions](/docs/customize/#enabling-path-outlines--direction). For the satin column to work, they have to be equal.<br />If they are not, with the *Node Editor Tool* (`N`) select one point of one sub-path and run `Path > Reverse`. This will reverse only the selected sub-path.
+* [Check path directions](/ru/docs/customize/#enabling-path-outlines--direction). For the satin column to work, they have to be equal.<br />If they are not, with the *Node Editor Tool* (`N`) select one point of one sub-path and run `Path > Reverse`. This will reverse only the selected sub-path.
 * Use node or rung method as described below.
-* Then select your satin column and run params through `Extensions > Ink/Stitch  > Params` or a [custom shortcut key](/docs/customize/).
+* Then select your satin column and run params through `Extensions > Ink/Stitch  > Params` or a [custom shortcut key](/ru/docs/customize/).
 
 ### Node Method
 
@@ -50,25 +58,17 @@ The rung method will give you more control over the way the satin column is rend
 **Info:** We strongly recommend to use at least three rungs. If you use exactly two rungs (and two rails) it is hard for Ink/stitch to decide which is which.
 {: .notice--warning }
 
-### Auto generated Satin Columns
-
-* Add a contour to a path object (with no filling).
-* Set contour width to the size you want your satin stitch to be.
-* Run `Extensions > Ink/Stitch > Satin Tools > Convert Line to Satin`
-* Optionally run `Extensions > Ink/stitch > Satin Tools > Auto-route Satin...`
-* Use as-is or customize rungs or rails
-
 ## Params
 
 Running `Extensions > Ink/Stitch  > Params` will give you the possibility to fine-tune your satin column and to use underlay.
 
-For detailed information read through the [Satin Params](/docs/params/#satin-params) section.
+For detailed information read through the [Satin Params](/ru/docs/params/#satin-params) section.
 
 Read also [this excellent article](https://www.mrxstitch.com/underlay/) on satin column design.
 
 ## Satin Tools
 
-Make sure to have a look at the [Satin Tools](/docs/satin-tools/). They will make your life with Satin Columns a lot easier.
+Make sure to have a look at the [Satin Tools](/ru/docs/satin-tools/). They will make your life with Satin Columns a lot easier.
 
 ## Sample Files Including Satin Column
 {% include tutorials/tutorial_list key="stitch-type" value="Satin Stitch" %}

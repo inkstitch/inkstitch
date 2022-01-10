@@ -76,6 +76,8 @@ docs:
         url: /de/docs/stitches/e-stitch/
       - title: "Füllstich"
         url: /de/docs/stitches/fill-stitch/
+      - title: Stichmuster
+        url: /de/docs/stitches/patterns
   - title: Benutzeroberfläche
     children:
     - title: "Befehle"

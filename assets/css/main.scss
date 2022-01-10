@@ -392,6 +392,63 @@ table.inline-table {
     .tutorial__item > p { display: none; }
 }
 
+/* Linux install */
+
+.instructions p.headline {
+    font-weight: bold;
+    font-size: 1rem;
+    border-bottom: 1px solid lightgray;
+}
+
+.instructions input {
+    display: none;
+}
+
+.instructions label, .instructions .download-button,
+.instructions p.down, .instructions p.up {
+    display: inline-block;
+}
+
+.instructions label {
+    font-size: 0.8rem;
+    color: #002673;
+    text-decoration: underline;
+}
+
+.instructions label:hover {
+    color: #ffd555
+}
+
+.instructions section {
+  background: rgb(250,250,250);
+  border: 1px solid rgb(230,230,230);
+  padding: 10px;
+  margin-bottom: 1em;
+  border-radius: 5px;
+}
+
+.instructions input:not(:checked) ~ section,
+.instructions input:not(:checked) ~ label p.up, .instructions input:checked ~ label p.down {
+    display: none;
+}
+
+.instructions input:checked ~ section {
+    display: block;
+}
+
+.instructions input:not(:checked) ~ label p.down, .instructions input:checked ~ label p.up {
+    display: inline-block;
+}
+
+.instructions h3 {
+    margin-top: 0;
+}
+
+.instructions p.down, .instructions p.up {
+    padding: 0 5px;
+    margin-left: 5px;
+}
+
 /* Compare languages */
 .lang-headline {
     display: inline-block;

@@ -2,7 +2,7 @@
 title: "Garnfarben-Verwaltung"
 permalink: /de/docs/thread-color/
 excerpt: ""
-last_modified_at: 2021-04-11
+last_modified_at: 2021-10-23
 toc: true
 ---
 ## Garnliste importieren
@@ -23,13 +23,19 @@ Willst du eine andere Garnliste aus einer Textdatei (txt) importieren, wähle di
 
 Garnlisten können nur über eine ZIP-Datei exportiert werden ([batch export](/de/docs/import-export/#batch-export))
 
+## Benutzerdefinierte Farbpalette installieren
+
+Wenn du eine `.gpl` Liste hast, die deine Garnfarben abbildet, kannst du sie mit dieser Erweiterung einfach in Inkscape verfügbar machen: `Erweiterungen > Ink/Stitch > Garnfarben Verwaltung > Benutzerdefinierte Farbpalette installieren`. Inkscape muss nach diesem Vorgang neu gestartet werden.
+
+.gpl-Farbpaletten können mit GIMP erstellt werden.
+
 ## Farbpaletten für Insckape installieren
 
 Ink/Stitch enthält viele Farbpaletten der üblichen Garnhersteller. Diese können installiert werden, damit sie in Inkscape nutzbar sind.
 Das erlaubt dir dein Design mit den richtigen Farben zu planen. Die Farben werden in die PDF-Ausgabe übernommen und auch in der Stickdatei abgespeichert, sofern dein Stickformat dies unterstützt.
 
 **Installation**
-* Gehe zu `Erweiterungen -> Ink/Stitch -> Installiere Erweiterungen für Inkscape`
+* Gehe zu `Erweiterungen -> Ink/Stitch -> Garnfarben Verwaltung > Installiere Erweiterungen für Inkscape`
 * Wähle "Installieren"
 * Starte Inkscape neu
 

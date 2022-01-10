@@ -2,66 +2,106 @@
 title: "Install Ink/Stitch on Windows"
 permalink: /docs/install-windows/
 excerpt: "How to quickly install Ink/Stitch."
-last_modified_at: 2021-05-03
+last_modified_at: 2021-11-28
 toc: true
 ---
+{% comment %}
 ## Video Guide
 
-We also provide beginner tutorial videos on our <i class="fab fa-youtube"></i> [YouTube channel](https://www.youtube.com/channel/UCJCDCFuT_xQoI55e10HRiRw). Watch the installation process for <i class="fab fa-windows"></i> [Windows](https://www.youtube.com/watch?v=U5htzWZSjA8&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=4).
+We also provide beginner tutorial videos on our <i class="fab fa-youtube"></i> [YouTube channel](https://www.youtube.com/c/InkStitch). Watch the installation process for <i class="fab fa-windows"></i> [Windows](https://www.youtube.com/watch?v=U5htzWZSjA8&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=4).
+{% endcomment %}
 
 ## Requirements
 
-* [Inkscape](https://inkscape.org/release/) Version 1.0.2 or higher
+Ink/Stitch is an Inkscape extension. Download and install [Inkscape](https://inkscape.org/release/) Version 1.0.2 or higher before you install Ink/Stitch.
 
-That's it!  All python libraries and external dependencies are bundled (using the excellent [pyinstaller](http://www.pyinstaller.org)), so you shouldn't need to set anything else up.
+## Download
 
-## Installation
+Download the latest release.
 
-### Download
-Download the release archive in your prefered language:
-
-* <i class="fa fa-download " ></i> [Dutch]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-nl_NL.zip)
-* <i class="fa fa-download " ></i> [English]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-en_US.zip)
-* <i class="fa fa-download " ></i> [Finnish]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-fi_FI.zip)
-* <i class="fa fa-download " ></i> [French]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-fr_FR.zip)
-* <i class="fa fa-download " ></i> [German]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-de_DE.zip)
-* <i class="fa fa-download " ></i> [Italian]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-it_IT.zip)
-* <i class="fa fa-download " ></i> [Japanese]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-ja_JP.zip)
-* <i class="fa fa-download " ></i> [Russian]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-ru_RU.zip)
+<p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows.exe" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Download Ink/Stitch {{ site.github.latest_release.tag_name }} for Windows</a></p>
 
 **Latest release:** {{ site.github.latest_release.published_at | date: "%Y-%m-%d"  }} [Ink/Stitch {{ site.github.latest_release.tag_name }}](https://github.com/inkstitch/inkstitch/releases/latest)
 
-The `LOCALE` selected affects the menus shown inside Inkscape. Ink/Stitch dialogs are in the lanugage of your OS (if that language is supported).<br><br>Your language is not available? Help us to [translate the dialogs into your native language](/developers/localize/).
-{: .notice--info }
+## Installation
 
-### Extract Files
+If you have Ink/Stitch previously installed, [remove the old installation](#uninstall-inkstitch) first.
 
-Go to `Edit > Preferences > System` and check where your `User Extensions` folder is.
+Double click to execute the downloaded file.
 
-![Preferences: Extensions Folder](/assets/images/docs/en/extensions-folder-location-win.jpg)
+Until our windows certificate gained enough trust, you will need to allow the installer script to run.
 
-Your folder will most likely look like this `C:\Users\%USERNAME%\AppData\Roaming\inkscape\extensions`
+Click on `More info`.
 
-Extract the Ink/Stitch archive into this folder.
+![Ink/Stitch installer](/assets/images/docs/en/windows-install/installer01.png)
 
-### Run Ink/Stitch
+Now click on the additional option `Run anyway`.
 
-Restart Inkscape.
+![Ink/Stitch installer](/assets/images/docs/en/windows-install/installer02.png)
 
-You will then find Ink/Stitch under `Extensions > Ink/Stitch`.
+Ink/Stitch needs to be installed into the Inkscape extensions folder. The path is already set for you. Click on `Next`.
 
-## Upgrade
+![Ink/Stitch installer](/assets/images/docs/en/windows-install/installer03.png)
 
-Delete the old extension files first. Go to the extension directory and remove each inkstitch* file and folder.
+Since you have Inkscape installed, the extensions folder already exists. Confirm that you want to install into this folder and click on `Yes`.
 
-Then, proceed as above.
+![Ink/Stitch installer](/assets/images/docs/en/windows-install/installer04.png)
 
-**Tip:** Subscribe to a news feed channel to keep track on Ink/Stitch Updates:<br />
- <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [GitHub Feed on new Releases](https://github.com/inkstitch/inkstitch/releases.atom)<br>
- <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [Ink/Stitch News](/feed.xml)<br />
-{: .notice--info }
+The installer will show you a summary of the installation settings. Click on `Install`.
 
-<p class="notice--info" style="margin-top: -3.5em !important;">Or watch the project on GitHub:<br /><iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=inkstitch&repo=inkstitch&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe></p>
+![Ink/Stitch installer](/assets/images/docs/en/windows-install/installer05.png)
+
+Ink/Stitch is now installed on your computer.
+
+![Ink/Stitch installer](/assets/images/docs/en/windows-install/installer06.png)
+
+## Run Ink/Stitch
+
+Open Inkscape. You will find Ink/Stitch under `Extensions > Ink/Stitch`.
+
+![Ink/Stitch menu](/assets/images/docs/en/windows-install/inkstitch-extensions-menu.png)
+
+## Uninstall Ink/Stitch
+
+### Uninstall Ink/Stitch versions up from v2.1.0
+
+Open the start menu in Windows. Click on `Settings`.
+
+![Uninstall Ink/Stitch](/assets/images/docs/en/windows-install/uninstall01.png)
+
+Click on `Apps`.
+
+![Uninstall Ink/Stitch](/assets/images/docs/en/windows-install/uninstall02.png)
+
+In `Apps & features` scroll down until you find Ink/Stitch.
+Click on `Ink/Stitch` and an uninstall button appears. Click on `Uninstall`.
+
+![Uninstall Ink/Stitch](/assets/images/docs/en/windows-install/uninstall03.png)
+
+Confirm that you want to uninstall Ink/Stitch.
+
+![Uninstall Ink/Stitch](/assets/images/docs/en/windows-install/uninstall04.png)
+
+Ink/Stitch has been removed from your computer. Click `Ok`.
+
+![Uninstall Ink/Stitch](/assets/images/docs/en/windows-install/uninstall05.png)
+
+### Uninstall Ink/Stitch versions older than v2.1.0
+
+Go to `Edit > Preferences > System` and open your extensions folder.
+
+![Inkscape extensions folder](/assets/images/docs/en/extensions-folder-location-win.jpg)
+
+Remove each inkstitch* file and folder.
+
+## Get informed about Ink/Stitch updates
+
+Subscribe to a news feed channel to keep track on Ink/Stitch Updates.
+
+* <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [Ink/Stitch News (Website)](/feed.xml)<br />
+* <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [New Releases on GitHub](https://github.com/inkstitch/inkstitch/releases.atom)<br>
+
+<p>Alternatively watch all project activity on GitHub: <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=inkstitch&repo=inkstitch&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe></p>
 
 ## Troubleshoot
 
@@ -95,7 +135,7 @@ WindowsError: [Error 2] The system cannot find the file specified
 
 Verify if you have downloaded Ink/Stitch for Windows ([Download](#download))
 
-### I installed Ink/Stitch in my native language, but the dialogue windows are displayed in English
+### Ink/Stitch is displayed in English
 
 **Incomplete Translation**
 
@@ -104,9 +144,6 @@ If you like to complete the translation, have a look at our [description for tra
 
 **Language Settings**
 
-We have to distinguish between the Extension menu in Inkscape and the dialogue windows.
-The selection of the ZIP file causes only the Extension menu to be in a certain language.
-The dialgoue windows are build differently. They will use the language of your operating system.
 If Ink/Stitch is uncertain, which language to support, it will fallback on English.
 You can tell Inkscape explicitly to use your native language as follows:
   * Go to Edit > Preferences > Interface (Ctrl + Shift + P)
