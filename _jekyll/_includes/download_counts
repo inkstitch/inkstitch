@@ -10,8 +10,7 @@
 
 {% for asset in assets %}
 
-{%- if asset.name contains "linux" -%}
-{%- if asset.name contains ".tar.gz" -%}
+{%- if asset.name contains ".tar.xz" -%}
 {%- assign linuxtarxz = linuxtarxz | plus: asset.download_count %}
 {%- endif -%}
 {%- if asset.name contains ".sh" -%}
@@ -22,8 +21,6 @@
 {%- endif -%}
 {%- if asset.name contains ".deb" -%}
 {%- assign linuxdeb = linuxdeb | plus: asset.download_count %}
-{%- endif -%}
-{%- assign linux = linux | plus: asset.download_count %}
 {%- endif -%}
 
 {%- if asset.name contains "osx" -%}
@@ -39,6 +36,8 @@
 {%- endif -%}
 
 {% endfor %}
+
+{%- assign linux = linuxtarxz | plus: linuxsh | plus: linuxrpm | plus: linuxdeb %}
 
 ## Ink/Stitch {{ site.github.latest_release.name }}
 
