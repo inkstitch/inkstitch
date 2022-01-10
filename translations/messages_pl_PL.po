@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-01-01 01:46+0000\n"
-"PO-Revision-Date: 2022-01-03 01:46\n"
+"PO-Revision-Date: 2022-01-10 18:45\n"
 "Last-Translator: \n"
 "Language-Team: Polish\n"
 "MIME-Version: 1.0\n"
@@ -164,7 +164,7 @@ msgstr ""
 #. description of font in fonts/espresso_KOR
 #: inkstitch-fonts-metadata.py:52
 msgid "The capital M is 16.2 mm high at 100 scale. Every satin has zigzag underlay. x is 11.5 mm high, q is 17.5 mm high, l is 17.2 mm high."
-msgstr ""
+msgstr "Wielka litera M ma wysokośc 16,2 milimetra w 100% skali. Pod ściegiem satynowym jest zygzakowate podszycie. Mała litera x ma 11,5 milimetra wysokości, litera q ma 17,5 milimetra wysokości, litera l ma 17,2 wysokości."
 
 #. name of font in fonts/excalibur_KOR
 #: inkstitch-fonts-metadata.py:54
@@ -174,7 +174,7 @@ msgstr ""
 #. description of font in fonts/excalibur_KOR
 #: inkstitch-fonts-metadata.py:56
 msgid "Excalibur KOR is a small satin column manuscript font of size approximatively 20mm. It can be reduced down to 80% and enlarged up to 140%. It contains 144 glyphs, covering most western European languages needs."
-msgstr ""
+msgstr "Excalibur KOR to mała ozdobna, satynowa, kolumnowa czcionka rękopisu o rozmiarze około 20mm. Można ją pomniejszyć do 80% i powiększyć do 140%.. Zawiera 144 glify obejmujących większość wymagań w językach zachodnioeuropejskich."
 
 #. name of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:58
@@ -184,17 +184,17 @@ msgstr ""
 #. description of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:60
 msgid "Fold Ink/Stitch is a large triple and quintuple running stitches capital font of size 100 mm. It contains 40 glyphs including all numbers and the 26 capitals  A-Z. It can be reduced down to 80% and enlarged up to 200%"
-msgstr ""
+msgstr "Fold Ink/Stitch to duża czcionka o rozmiarze 100 milimetrów, stebnowana potrójnie i pięciokrotnie.  Zawiera 40 glifów, w tym wszystkie cyfry i 26 wielkich liter od A do Z. Można ją zmniejszyć do 80% i powiększyć do 200%"
 
 #. name of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:62
 msgid "Geneva Simple Sans Rounded"
-msgstr ""
+msgstr "Geneva Simple Sans zaokrąglona"
 
 #. description of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:64
 msgid "Suitable for small fonts (8 to 20 mm)"
-msgstr ""
+msgstr "Nadaje się do małych czcionek (8 do 20 mm)"
 
 #. name of font in fonts/geneva_simple
 #: inkstitch-fonts-metadata.py:66
@@ -204,7 +204,7 @@ msgstr ""
 #. description of font in fonts/geneva_simple
 #: inkstitch-fonts-metadata.py:68
 msgid "Suitable for small fonts (6 to 15mm)"
-msgstr ""
+msgstr "Nadaje się do małych czcionek (6 do 15 mm)"
 
 #. name of font in fonts/infinipicto
 #: inkstitch-fonts-metadata.py:70
@@ -214,7 +214,7 @@ msgstr ""
 #. description of font in fonts/infinipicto
 #: inkstitch-fonts-metadata.py:72
 msgid "InfiniPicto is a fun font of size approximatively 60 mm containing only the 26 A-Z glyph. Each letter is a pictogram of an object whose name begins with that very letter..... in French"
-msgstr ""
+msgstr "InfiniPicto to zabawna czcionka o rozmiarze około 60 mm, zawierająca tylko glify 26 A-Z. Każda litera jest piktogramem przedmiotu, którego nazwa zaczyna się od tej samej litery.... po francusku"
 
 #. name of font in fonts/kaushan_script_MAM
 #: inkstitch-fonts-metadata.py:74
@@ -225,7 +225,7 @@ msgstr ""
 #: inkstitch-fonts-metadata.py:76
 #, python-format
 msgid "The capital M is 29 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 200%.  Every satin has zigzag underlay"
-msgstr ""
+msgstr "Wielka litera M o szerokości 29 milimetrów w 100% skali, może być pomniejszona do 80% lub powiększona do200%. Podszycie  pod ściegiem satynowym jest zygzakowate"
 
 #. name of font in fonts/learning_curve
 #: inkstitch-fonts-metadata.py:78
@@ -235,7 +235,7 @@ msgstr ""
 #. description of font in fonts/learning_curve
 #: inkstitch-fonts-metadata.py:80
 msgid "Small running stitch script font of size approximatively 12 mm.It can be reduced down to 90% and enlarged up to 200%"
-msgstr ""
+msgstr "Mała czcionka skryptu o wielkości około 12 mm haftowana ściegiem prostym. Można ją pomniejszyć do 90% i powiększyć do 200%"
 
 #. name of font in fonts/lobster_AGS
 #: inkstitch-fonts-metadata.py:82
@@ -246,7 +246,7 @@ msgstr ""
 #: inkstitch-fonts-metadata.py:84
 #, python-format
 msgid " The capital M is 19.8 millimeter wide at 100% scale. Can be scaled down to 80% or up to 150%. Every satin has zigzag underlay"
-msgstr ""
+msgstr " Wielka litera M o szerokości 19.8 milimetrów w 100% skali, może być pomniejszona do 80% lub powiększona do150%. Podszycie pod ściegiem satynowym jest zygzakowate"
 
 #. name of font in fonts/magnolia_ KOR
 #: inkstitch-fonts-metadata.py:86
@@ -256,18 +256,18 @@ msgstr ""
 #. description of font in fonts/magnolia_ KOR
 #: inkstitch-fonts-metadata.py:88
 msgid "Magnolia KOR is a script font of size approximatively 20mm. It can be scaled down to 80% and up to 120%"
-msgstr ""
+msgstr "Magnolia Kor jest to czcionka rękopisu o rozmiarze około 20 milimetrów. Może być pomniejszana do 80% i powiększana do 120%"
 
 #. name of font in fonts/manuskript_gotisch
 #: inkstitch-fonts-metadata.py:90
 msgid "Manuskript Gothisch"
-msgstr ""
+msgstr "Rękopis Gothisch"
 
 #. description of font in fonts/manuskript_gotisch
 #: inkstitch-fonts-metadata.py:92
 #, python-format
 msgid "The capital M is 35 millimeter wide at 100% scale.  Can be scaled down to 70% or up to 140%.  Every satin has zigzag underlay"
-msgstr ""
+msgstr "Wielka litera M o szerokości 35 milimetrów w 100% skali, może być pomniejszona do 70% lub powiększona do140%. Podszycie  pod ściegiem satynowym jest zygzakowate"
 
 #. name of font in fonts/marcelusSC_FI
 #: inkstitch-fonts-metadata.py:94
@@ -278,7 +278,7 @@ msgstr ""
 #: inkstitch-fonts-metadata.py:96
 #, python-format
 msgid "MarcellusSC-FI is a small capital font of size 36 mm. It contains 107 glyphs covering most Western European languages. It can be reduced down to 70% and enlarged up to 200% or 500% using satin split"
-msgstr ""
+msgstr "MarcellusSC-FI to mała czcionka o rozmiarze 36 mm. Zawiera 107 glifów obejmujących większość języków zachodnioeuropejskich. Można ją zmniejszyć do 70% i powiększyć do 200% lub 500% przy pomocy rozdzielonego ściegu satynowego"
 
 #. name of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:98
@@ -299,7 +299,7 @@ msgstr ""
 #. description of font in fonts/namskout_AGS
 #: inkstitch-fonts-metadata.py:104
 msgid "Namskout  is a large applique font of size approximatively 90mm. It contains 43 glyphs including all numbers and the 26 capitals  A-Z.  It can be reduced down to 50% and enlarged up to 150%  "
-msgstr ""
+msgstr "Namscoutto duża czcionka używana do tworzenia aplikacji o wielkości około 75mm. Zawiera 43 glify, w tym wszystkie cyfry i 26 wielkich liter od A do Z. Można ją pomniejszyć do 50% i powiększyć do 150%  "
 
 #. name of font in fonts/pacificlo
 #: inkstitch-fonts-metadata.py:106
@@ -309,7 +309,7 @@ msgstr ""
 #. description of font in fonts/pacificlo
 #: inkstitch-fonts-metadata.py:108
 msgid "Pacificlo is a small satin column manuscript font of size approximatively 20mm. It can be reduced down to 80% and enlarged up to 140%. It contains 120 glyphs, covering most Western European Languages needs. "
-msgstr ""
+msgstr "Pacificlo to mała satynowa, kolumnowa czcionka rękopisu o rozmiarze około 20mm. Można ją pomniejszyć do 80% i powiększyć do 140%.. Zawiera 120 glify obejmujących większość wymagań w językach zachodnioeuropejskich. "
 
 #. name of font in fonts/romanaugusa
 #: inkstitch-fonts-metadata.py:110
@@ -320,7 +320,7 @@ msgstr ""
 #: inkstitch-fonts-metadata.py:112
 #, python-format
 msgid "Based on Latin Modern Roman 10 Bold italic. The capital M is 42.5 millimeter wide at 100% scale.  Can be scaled down to 70% or up to 130%.  Every satin has zigzag underlay"
-msgstr ""
+msgstr "Oparta na łacińskim współczesnej Roman 10 Bold kursywie. Wielka litera M ma 42,5 milimetra szerokości w 100% skali. Można ją skalować w dół do 70% lub w góre do 130%. Scieg satynowy ma podszycie zygzakowate"
 
 #. name of font in fonts/romanaugusa_bicolor
 #: inkstitch-fonts-metadata.py:114
@@ -331,7 +331,7 @@ msgstr ""
 #: inkstitch-fonts-metadata.py:116
 #, python-format
 msgid "Based on Latin Modern Roman 10 Bold italic. A font with capital letters with 2 colors. Very easy to use with letters from Romanaugusa. The capital M is 42.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 130%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Oparta na łacińskim współczesnym Roman 10 o pogrubionej kursywie. Czcionka z dużymi literami w 2 kolorach. Bardzo łatwa w użyciu z literami od Romanaugusy. Wielka litera M ma 42,5 milimetra szerokości w 100% skali. Można skalować w dół do 70% lub do 130%. Scieg satynowy ma podszycie zygzakowate"
 
 #. name of font in fonts/sacramarif
 #: inkstitch-fonts-metadata.py:118
@@ -341,7 +341,7 @@ msgstr ""
 #. description of font in fonts/sacramarif
 #: inkstitch-fonts-metadata.py:120
 msgid "Based on Sacramento. Very small font with runstitch. It can be scaled from 80% to 150%"
-msgstr ""
+msgstr "Na podstawie Sacramento. Bardzo mała czcionka ze ściegiem stebnowym. Można ją skalować od 80% do 150%"
 
 #. name of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:122
@@ -362,7 +362,7 @@ msgstr ""
 #. description of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:128
 msgid "A font suited for directing"
-msgstr ""
+msgstr "Czcionka dostosowana do częstego pisania"
 
 #. name of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:130
@@ -376,19 +376,19 @@ msgstr "Czcionka dostosowana do ciężkiego pisania :)"
 
 #: inkstitch.py:66
 msgid "Ink/Stitch cannot read your SVG file. This is often the case when you use a file which has been created with Adobe Illustrator."
-msgstr ""
+msgstr "Ink/Stitch nie może odczytać pliku SVG. Dzieje się tak często w przypadku korzystania z pliku utworzonego w programie Adobe Illustrator."
 
 #: inkstitch.py:69
 msgid "Try to import the file into Inkscape through 'File > Import...' (Ctrl+I)"
-msgstr ""
+msgstr "Spróbuj zaimportować plik do Inkscape poprzez „Plik > Importuj...” (Ctrl+I)"
 
 #: inkstitch.py:80
 msgid "Ink/Stitch experienced an unexpected error."
-msgstr ""
+msgstr "Ink/Stitch napotkał nieoczekiwany błąd."
 
 #: inkstitch.py:81
 msgid "If you'd like to help, please file an issue at https://github.com/inkstitch/inkstitch/issues and include the entire error description below:"
-msgstr ""
+msgstr "Jeśli chcesz pomóc, zgłoś problem na https://github.com/inkstitch/inkstitch/issues i dołącz pełny opis błędu:"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
@@ -436,30 +436,30 @@ msgstr "Ignoruj ten obiekt (nie wyszywaj)"
 #. command attached to an object
 #: lib/commands.py:45 inx/inkstitch_object_commands.inx:11
 msgid "Satin cut point (use with Cut Satin Column)"
-msgstr ""
+msgstr "Cięcie punktu Sciegu satynowego (używaj z Cut Satin Column)"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command that affects a layer
 #: lib/commands.py:48 inx/inkstitch_layer_commands.inx:7
 msgid "Ignore layer (do not stitch any objects in this layer)"
-msgstr ""
+msgstr "Ignoruj ​​warstwę (nie wyszywaj żadnych obiektów na tej warstwie)"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command that affects entire document
 #: lib/commands.py:51 inx/inkstitch_global_commands.inx:7
 msgid "Origin for exported embroidery files"
-msgstr ""
+msgstr "Żródło eksportowanych plików hafciarskich"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command that affects entire document
 #: lib/commands.py:54 inx/inkstitch_global_commands.inx:9
 msgid "Jump destination for Stop commands (a.k.a. \"Frame Out position\")."
-msgstr ""
+msgstr "Skokowe miejsce docelowe dla poleceń Stop (znane również jako „Pozycja poza ramką”)."
 
 #: lib/commands.py:212
 #, python-format
 msgid "Error: there is more than one %(command)s command in the document, but there can only be one.  Please remove all but one."
-msgstr ""
+msgstr "Błąd: w dokumencie jest więcej niż jedno %(command)s, polecenie może być tylko jedno. Usuń wszystkie oprócz jednego."
 
 #. This is a continuation of the previous error message, letting the user know
 #. what command we're talking about since we don't normally expose the actual
@@ -469,7 +469,7 @@ msgstr ""
 #: lib/commands.py:219
 #, python-format
 msgid "%(command)s: %(description)s"
-msgstr ""
+msgstr "%(command)s: %(description)s"
 
 #: lib/commands.py:284 lib/commands.py:397
 msgid "Ink/Stitch Command"
@@ -478,7 +478,7 @@ msgstr "Komenda Ink/Stitch"
 #. : the name of the line that connects a command to the object it applies to
 #: lib/commands.py:310
 msgid "connector"
-msgstr ""
+msgstr "łącznik"
 
 #. : the name of a command symbol (example: scissors icon for trim command)
 #: lib/commands.py:326
@@ -653,116 +653,116 @@ msgstr ""
 #. options to allow lock stitch before and after objects
 #: lib/elements/element.py:203
 msgid "Both"
-msgstr ""
+msgstr "Obydwa"
 
 #: lib/elements/element.py:203
 msgid "Before"
-msgstr ""
+msgstr "Przedtem, zanim"
 
 #: lib/elements/element.py:203
 msgid "After"
-msgstr ""
+msgstr "Po, później"
 
 #: lib/elements/element.py:203
 msgid "Neither"
-msgstr ""
+msgstr "Żaden"
 
 #: lib/elements/element.py:212
 #: inx/inkstitch_lettering_force_lock_stitches.inx:3
 msgid "Force lock stitches"
-msgstr ""
+msgstr "Blokowanie ściegu"
 
 #: lib/elements/element.py:213
 msgid "Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences."
-msgstr ""
+msgstr "Blokuj ścieg po uszyciu tego elementu, nawet jeśli odległość do następnego obiektu jest mniejsza niż określona wartość w preferencjach Ink/Stitch."
 
 #: lib/elements/element.py:257
 #, python-format
 msgid "Object %(id)s has an empty 'd' attribute.  Please delete this object from your document."
-msgstr ""
+msgstr "Obiekt %(id)s ma pusty atrybut „d”. Usuń ten obiekt ze swojego dokumentu."
 
 #. used when showing an error message to the user such as
 #. "Some Path (path1234): error: satin column: One or more of the rungs doesn't
 #. intersect both rails."
 #: lib/elements/element.py:345
 msgid "error:"
-msgstr ""
+msgstr "błąd:"
 
 #: lib/elements/empty_d_object.py:13
 msgid "Empty D-Attribute"
-msgstr ""
+msgstr "D-atrybut jest pusty"
 
 #: lib/elements/empty_d_object.py:14
 msgid "There is an invalid path object in the document, the d-attribute is missing."
-msgstr ""
+msgstr "W dokumencie znajduje się nieprawidłowy obiekt ścieżki, brakuje atrybutu d."
 
 #: lib/elements/empty_d_object.py:16
 msgid "* Run Extensions > Ink/Stitch > Troubleshoot > Cleanup Document..."
-msgstr ""
+msgstr "* Uruchom rozszerzenia > Ink/Stitch > Rozwiązywanie problemów > wyczyść dokument..."
 
 #: lib/elements/fill.py:23
 msgid "Unconnected"
-msgstr ""
+msgstr "Niepodłączony"
 
 #: lib/elements/fill.py:24
 msgid "Fill: This object is made up of unconnected shapes.  This is not allowed because Ink/Stitch doesn't know what order to stitch them in.  Please break this object up into separate shapes."
-msgstr ""
+msgstr "Wypełnienie: ten obiekt składa się z niepołączonych kształtów. Nie jest to dozwolone, ponieważ tusz/ścieg nie wie, w jakiej kolejności je łączyć. Proszę podzielić ten obiekt na osobne kształty."
 
 #: lib/elements/fill.py:28 lib/elements/fill.py:36
 msgid "* Extensions > Ink/Stitch > Fill Tools > Break Apart Fill Objects"
-msgstr ""
+msgstr "* Rozszerzenia > Atrament/Ścieg > Narzędzia do wypełniania > Rozdziel wypełnienie obiektów"
 
 #: lib/elements/fill.py:33
 msgid "Border crosses itself"
-msgstr ""
+msgstr "Samoistne przecięcie się granicy"
 
 #: lib/elements/fill.py:34
 msgid "Fill: Shape is not valid.  This can happen if the border crosses over itself."
-msgstr ""
+msgstr "Wypełnienie: nieprawidłowy kształt. Może się to zdarzyć, jeśli nastąpiło samoistne przecięcie się granicy."
 
 #: lib/elements/fill.py:41
 msgid "Fill"
-msgstr ""
+msgstr "Wypełnienie"
 
 #: lib/elements/fill.py:48
 msgid "Manually routed fill stitching"
-msgstr ""
+msgstr "Ręczne rozdzielenie lub usunięcie ściegu wypełniającego"
 
 #: lib/elements/fill.py:49
 msgid "AutoFill is the default method for generating fill stitching."
-msgstr ""
+msgstr "AutoFill jest domyślną metodą generowania Sciegu wypełniającego."
 
 #: lib/elements/fill.py:58
 msgid "Angle of lines of stitches"
-msgstr ""
+msgstr "Kąt nachylenia linii ściegów"
 
 #: lib/elements/fill.py:59
 msgid "The angle increases in a counter-clockwise direction.  0 is horizontal.  Negative angles are allowed."
-msgstr ""
+msgstr "Kąt rośnie w kierunku przeciwnym do ruchu wskazówek zegara. 0 jest w poziomie. Dozwolone są kąty ujemne."
 
 #: lib/elements/fill.py:86
 msgid "Flip fill (start right-to-left)"
-msgstr ""
+msgstr "Odwróć wypełnienie (rozpocznij od prawej do lewej)"
 
 #: lib/elements/fill.py:87
 msgid "The flip option can help you with routing your stitch path.  When you enable flip, stitching goes from right-to-left instead of left-to-right."
-msgstr ""
+msgstr "Opcja odwracania może być pomocna przy wyznaczniu ścieżki ściegu. Po włączeniu funkcji odwracania, ściegi są wykonywane od prawej do lewej strony zamiast od lewej do prawej."
 
 #: lib/elements/fill.py:96
 msgid "Spacing between rows"
-msgstr ""
+msgstr "Odstępy między rzędami"
 
 #: lib/elements/fill.py:97
 msgid "Distance between rows of stitches."
-msgstr ""
+msgstr "Odległość między rzędami ściegów."
 
 #: lib/elements/fill.py:110
 msgid "Maximum fill stitch length"
-msgstr ""
+msgstr "Maksymalna długość ściegu wypełniającego"
 
 #: lib/elements/fill.py:111
 msgid "The length of each stitch in a row.  Shorter stitch may be used at the start or end of a row."
-msgstr ""
+msgstr "Długość każdego ściegu w rzędzie. Krótszy ścieg może być użyty na początku lub na końcu rzędu."
 
 #: lib/elements/fill.py:120
 msgid "Stagger rows this many times before repeating"
@@ -770,91 +770,91 @@ msgstr ""
 
 #: lib/elements/fill.py:121
 msgid "Setting this dictates how many rows apart the stitches will be before they fall in the same column position."
-msgstr ""
+msgstr "Ustawienie to określa, ile osobnych rzędów będą miały ściegi, zanim znajdą się w tej samej pozycji w kolumnie."
 
 #: lib/elements/image.py:13
 msgid "Image"
-msgstr ""
+msgstr "Obraz"
 
 #: lib/elements/image.py:14
 msgid "Ink/Stitch can't work with objects like images."
-msgstr ""
+msgstr "Funkcja tuszu/ściegu nie działa z obiektami, takimi jak obrazy."
 
 #: lib/elements/image.py:16
 msgid "* Convert your image into a path: Path > Trace Bitmap... (Shift+Alt+B) (further steps might be required)"
-msgstr ""
+msgstr "* Przekształć obraz w ścieżkę: Ścieżka > kopiuj bitmapę... (Shift+Alt+B) (mogą być wymagane dalsze kroki)"
 
 #: lib/elements/image.py:18
 msgid "* Alternatively redraw the image with the pen (P) or bezier (B) tool"
-msgstr ""
+msgstr "* Alternatywnie przerysuj obraz za pomocą pióra (P) lub narzędzia Beziera (B)"
 
 #: lib/elements/pattern.py:14
 msgid "Pattern Element"
-msgstr ""
+msgstr "*Element wzoru"
 
 #: lib/elements/pattern.py:15
 msgid "This element will not be embroidered. It will appear as a pattern applied to objects in the same group as it.  Objects in sub-groups will be ignored."
-msgstr ""
+msgstr "Ten element nie będzie haftowany. Pojawi się on jako wzór zastosowany do obiektów w tej samej grupie. Obiekty w podgrupach będą ignorowane."
 
 #: lib/elements/pattern.py:19
 msgid "To disable pattern mode, remove the pattern marker:"
-msgstr ""
+msgstr "Aby wyłączyć tryb wzoru, należy usunąć znacznik wzoru:"
 
 #: lib/elements/pattern.py:20
 msgid "* Open the Fill and Stroke panel (Objects > Fill and Stroke)"
-msgstr ""
+msgstr "* Otwórz panel Wypełnij i obrysuj (Obiekty > Wypełnij i obrysuj)"
 
 #: lib/elements/pattern.py:21
 msgid "* Go to the Stroke style tab"
-msgstr ""
+msgstr "* Przejdź do zakładki Styl obrysu"
 
 #: lib/elements/pattern.py:22
 msgid "* Under \"Markers\" choose the first (empty) option in the first dropdown list."
-msgstr ""
+msgstr "W sekcji „Znaczniki” wybierz pierwszą (pustą) opcję z pierwszej rozwijanej listy."
 
 #: lib/elements/polyline.py:18
 msgid "Polyline Object"
-msgstr ""
+msgstr "Obiekt polilinii"
 
 #: lib/elements/polyline.py:19
 msgid "This object is an SVG PolyLine.  Ink/Stitch can work with this shape, but you can't edit it in Inkscape.  Convert it to a manual stitch path to allow editing."
-msgstr ""
+msgstr "Ten obiekt to polilinia (łamana) SVG. Ink/Stitch może pracować z tym kształtem, ale nie możesz go edytować w Inkscape. Przekształć go w ręczną ścieżkę ściegu, aby umożliwić edycję."
 
 #: lib/elements/polyline.py:23 lib/elements/satin_column.py:26
 msgid "* Select this object."
-msgstr ""
+msgstr "* Wybierz ten obiekt."
 
 #: lib/elements/polyline.py:24
 msgid "* Do Path > Object to Path."
-msgstr ""
+msgstr "* Wykonaj ścieżkę > Obiekt do ścieżki."
 
 #: lib/elements/polyline.py:25
 msgid "* Optional: Run the Params extension and check the \"manual stitch\" box."
-msgstr ""
+msgstr "* Opcjonalnie: Uruchom rozszerzenie Params i zaznacz pole „ścieg ręczny”."
 
 #: lib/elements/polyline.py:45
 msgid "Manual stitch along path"
-msgstr ""
+msgstr "Ręczny ścieg wzdłuż ścieżki"
 
 #: lib/elements/satin_column.py:23
 msgid "Satin column has fill"
-msgstr ""
+msgstr "Satynowa kolumna ma wypełnienie"
 
 #: lib/elements/satin_column.py:24
 msgid "Satin column: Object has a fill (but should not)"
-msgstr ""
+msgstr "Kolumna satynowa: obiekt ma wypełnienie (ale nie powinien)"
 
 #: lib/elements/satin_column.py:27
 msgid "* Open the Fill and Stroke panel"
-msgstr ""
+msgstr "* Otwórz panel wypełnij i obrysuj"
 
 #: lib/elements/satin_column.py:28
 msgid "* Open the Fill tab"
-msgstr ""
+msgstr "* Otwórz zakładkę Wypełnij"
 
 #: lib/elements/satin_column.py:29
 msgid "* Disable the Fill"
-msgstr ""
+msgstr "* Wyłącz wypełnienie"
 
 #: lib/elements/satin_column.py:30
 msgid "* Alternative: open Params and switch this path to Stroke to disable Satin Column mode"
@@ -3414,11 +3414,11 @@ msgstr "Mniejsza, niższa objętość lub pojemność"
 
 #: inx/inkstitch_stitch_plan_preview.inx:20
 msgid "Needle points"
-msgstr ""
+msgstr "Ostrze igły"
 
 #: inx/inkstitch_stitch_plan_preview.inx:22
 msgid "Hit Ctrl+Z to undo this action after inspection."
-msgstr ""
+msgstr "Naciśnij Ctrl + Z, aby cofnąć tę akcję po inspekcji."
 
 #: inx/inkstitch_troubleshoot.inx:3
 msgid "Troubleshoot Objects"

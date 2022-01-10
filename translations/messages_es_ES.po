@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-01-01 01:46+0000\n"
-"PO-Revision-Date: 2022-01-03 01:46\n"
+"PO-Revision-Date: 2022-01-10 18:45\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -34,7 +34,7 @@ msgstr ""
 #. name of font in fonts/Brockscript
 #: inkstitch-fonts-metadata.py:2
 msgid "Brock Script"
-msgstr ""
+msgstr "Brock Script"
 
 #. description of font in fonts/Brockscript
 #: inkstitch-fonts-metadata.py:4
@@ -44,13 +44,13 @@ msgstr ""
 #. name of font in fonts/amitaclo
 #: inkstitch-fonts-metadata.py:6
 msgid "Amitaclo"
-msgstr ""
+msgstr "Amitaclo"
 
 #. description of font in fonts/amitaclo
 #: inkstitch-fonts-metadata.py:8
 #, python-format
 msgid "The capital M is 25.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 160%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "La \"M\" mayúscula mide 25,3 milímetros de ancho a escala 100%. Se puede reducir al 80% o aumentar al 160%. Cada punto relleno tiene una puntada zigzag por debajo"
 
 #. name of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:10
@@ -65,18 +65,18 @@ msgstr ""
 #. name of font in fonts/baumans_FI
 #: inkstitch-fonts-metadata.py:14
 msgid "Baumans FI"
-msgstr ""
+msgstr "Baumans FI"
 
 #. description of font in fonts/baumans_FI
 #: inkstitch-fonts-metadata.py:16
 #, python-format
 msgid "The capital M is 22.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 150%. Every satin has zigzag underlay"
-msgstr "Amita Negrita. La \"M\" mayúscula tiene 22,3 milímetros de ancho a una escala del 100%. Puede ser escalada entre el 80% y el 150%. Cada satinado tine un zigzag por debajo."
+msgstr "La \"M\" mayúscula mide 22,3 milímetros de ancho a escala 100%. Se puede reducir al 80% y aumentar al 150%. Cada punto relleno tiene zigzag por debajo"
 
 #. name of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:18
 msgid "Cherry for inkstitch"
-msgstr ""
+msgstr "Cherry inkstitch"
 
 #. description of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:20
@@ -86,12 +86,12 @@ msgstr ""
 #. name of font in fonts/cherryforkaalleen
 #: inkstitch-fonts-metadata.py:22
 msgid "Cherry for Kaalleen"
-msgstr ""
+msgstr "Cherry Kaalleen"
 
 #. description of font in fonts/cherryforkaalleen
 #: inkstitch-fonts-metadata.py:24
 msgid "Cherry for Kaalleen is a large decorative font of size approximatively 75mm. It contains 36 glyphs including the numbers and the 26 capitals  A-Z. It can be reduced down to 80% and enlarged up to 130%"
-msgstr ""
+msgstr "Cherry Kaalleen es una fuente grande y decorativa de unos 75 mm aproximadamente. Contiene 36 glifos que incluyen los números y 26 letras mayúsculas de la A-Z. Se puede reducir hasta 80% o aumentar hasta 130%"
 
 #. name of font in fonts/chopin
 #: inkstitch-fonts-metadata.py:26
@@ -112,7 +112,7 @@ msgstr "Coronaviral"
 #. description of font in fonts/coronaviral
 #: inkstitch-fonts-metadata.py:32
 msgid "A font created with manual sitch. Do not change the size or very little. The capital em is 22mm wide at 100%"
-msgstr "Está fuente es creada con puntada manual. No cambie el tamaño o si lo hace, muy poco. La \"M\" mayúscula tiene 22 mm de ancho a una escala del 100%"
+msgstr "Fuente creada con puntada manual. Mantener el tamaño o cambiarlo muy poco. La \"M\" mayúscula mide 22 mm de ancho a escala 100%"
 
 #. name of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:34
@@ -149,7 +149,7 @@ msgstr ""
 #. name of font in fonts/emilio_20_tricolore
 #: inkstitch-fonts-metadata.py:46
 msgid "EMILIO 20 TRICOLORE"
-msgstr ""
+msgstr "EMILIO 20 TRICOLORE"
 
 #. description of font in fonts/emilio_20_tricolore
 #: inkstitch-fonts-metadata.py:48
@@ -159,7 +159,7 @@ msgstr ""
 #. name of font in fonts/espresso_KOR
 #: inkstitch-fonts-metadata.py:50
 msgid "Espresso KOR"
-msgstr ""
+msgstr "Espresso KOR"
 
 #. description of font in fonts/espresso_KOR
 #: inkstitch-fonts-metadata.py:52
@@ -169,7 +169,7 @@ msgstr "La letra \"M\" mayúscula tiene 16,2 mm a una escala del 100%. Cada sat�
 #. name of font in fonts/excalibur_KOR
 #: inkstitch-fonts-metadata.py:54
 msgid "Excalibur KOR"
-msgstr ""
+msgstr "Excalibur KOR"
 
 #. description of font in fonts/excalibur_KOR
 #: inkstitch-fonts-metadata.py:56
@@ -179,7 +179,7 @@ msgstr ""
 #. name of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:58
 msgid "Fold Ink/Stitch"
-msgstr ""
+msgstr "Fold Ink/Stitch"
 
 #. description of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:60
@@ -209,7 +209,7 @@ msgstr "Adecuada para fuentes pequeñas ( de 6 a 15mm)"
 #. name of font in fonts/infinipicto
 #: inkstitch-fonts-metadata.py:70
 msgid "InfiniPicto"
-msgstr ""
+msgstr "InfiniPicto"
 
 #. description of font in fonts/infinipicto
 #: inkstitch-fonts-metadata.py:72
@@ -219,7 +219,7 @@ msgstr ""
 #. name of font in fonts/kaushan_script_MAM
 #: inkstitch-fonts-metadata.py:74
 msgid "Kaushan Script MAM"
-msgstr ""
+msgstr "Kaushan Script MAM"
 
 #. description of font in fonts/kaushan_script_MAM
 #: inkstitch-fonts-metadata.py:76
@@ -240,18 +240,18 @@ msgstr ""
 #. name of font in fonts/lobster_AGS
 #: inkstitch-fonts-metadata.py:82
 msgid "Lobster AGS"
-msgstr ""
+msgstr "Lobster AGS"
 
 #. description of font in fonts/lobster_AGS
 #: inkstitch-fonts-metadata.py:84
 #, python-format
 msgid " The capital M is 19.8 millimeter wide at 100% scale. Can be scaled down to 80% or up to 150%. Every satin has zigzag underlay"
-msgstr ""
+msgstr " La M mayúscula tiene 19.8 milímetros de ancho a una escala del 100%. Se puede reducir hasta una escala de 80% o aumentarse a una escala del 150%. Cada puntada tiene una base en zigzag"
 
 #. name of font in fonts/magnolia_ KOR
 #: inkstitch-fonts-metadata.py:86
 msgid "Magnolia KOR"
-msgstr ""
+msgstr "Magnolia KOR"
 
 #. description of font in fonts/magnolia_ KOR
 #: inkstitch-fonts-metadata.py:88
@@ -272,7 +272,7 @@ msgstr "La M mayúscula tiene 35 milímetros de ancho a una escala del 100%. Se 
 #. name of font in fonts/marcelusSC_FI
 #: inkstitch-fonts-metadata.py:94
 msgid "MarcellusSC-FI"
-msgstr ""
+msgstr "MarcellusSC-FI"
 
 #. description of font in fonts/marcelusSC_FI
 #: inkstitch-fonts-metadata.py:96
@@ -294,7 +294,7 @@ msgstr "Una fuente básica adecuada para caracteres de tamaño medio. La \"M\", 
 #. name of font in fonts/namskout_AGS
 #: inkstitch-fonts-metadata.py:102
 msgid "Namskout"
-msgstr ""
+msgstr "Namskout"
 
 #. description of font in fonts/namskout_AGS
 #: inkstitch-fonts-metadata.py:104
@@ -304,7 +304,7 @@ msgstr ""
 #. name of font in fonts/pacificlo
 #: inkstitch-fonts-metadata.py:106
 msgid "Pacificlo"
-msgstr ""
+msgstr "Pacificlo"
 
 #. description of font in fonts/pacificlo
 #: inkstitch-fonts-metadata.py:108
@@ -1255,7 +1255,7 @@ msgstr "Especifique el directorio de sus fuentes personalizadas."
 
 #: lib/extensions/lettering_force_lock_stitches.py:29
 msgid "The maximum value is smaller than the minimum value."
-msgstr ""
+msgstr "El valor máximo es inferior al valor mínimo."
 
 #: lib/extensions/lettering_generate_json.py:41
 msgid "Please specify a font file."
@@ -1846,7 +1846,7 @@ msgstr "Tiempo estimado"
 
 #: print/templates/ui.html:22 print/templates/ui.html:147
 msgid "Estimated Thread"
-msgstr ""
+msgstr "Cantidad de hilo estimada"
 
 #: print/templates/ui.html:23 print/templates/ui.html:168
 msgid "Design"
@@ -1947,24 +1947,24 @@ msgstr "Incluye la configuración de la página, el tiempo estimado y también l
 
 #: print/templates/ui.html:149
 msgid "Factors"
-msgstr ""
+msgstr "Factores"
 
 #: print/templates/ui.html:150
 msgid "The thread length calculation depends on a lot of factors in embroidery designs. We will only get a very inacurate approximation.\n"
 "             Ink/Stitch simply calculates the path length, so the factor of 1 will always be much, much less than the real thread consumption."
-msgstr ""
+msgstr "Calcular la cantidad de hilo varía según el diseño del bordado. Es posible hacer una estimación errónea.             Ink/Stitch calcula la longitud para que el factor 1 sea siempre inferior a la cantidad de consumo real de hilo."
 
 #: print/templates/ui.html:152
 msgid "Set a factor to multiply the path length with, depending on your standard setup or adapt it to your current design (tension, thread, fabric, stitch count, etc.)."
-msgstr ""
+msgstr "Establezca un factor con el que multiplicar la longitud del trayecto, despendiendo de su configuración estándar o adáptelo a su actual diseño (tensión, hilo, tejido, número de puntadas, etc.)."
 
 #: print/templates/ui.html:156 print/templates/ui.html:161
 msgid "Factor to multiply with thread length"
-msgstr ""
+msgstr "Factor con el que multiplicar la longitud del hilo"
 
 #: print/templates/ui.html:156 print/templates/ui.html:161
 msgid "* path length"
-msgstr ""
+msgstr "* longitud del trayecto"
 
 #: print/templates/ui.html:169
 msgid "Thread Palette"
@@ -2373,11 +2373,11 @@ msgstr "Columnas de satén de enrutamiento automático"
 
 #: inx/inkstitch_auto_satin.inx:5
 msgid "Trim jump stitches"
-msgstr ""
+msgstr "Recortar puntadas de salto"
 
 #: inx/inkstitch_auto_satin.inx:6
 msgid "Preserve order of satin columns"
-msgstr ""
+msgstr "Conservar el orden de las columnas de raso"
 
 #: inx/inkstitch_auto_satin.inx:12 inx/inkstitch_convert_to_satin.inx:10
 #: inx/inkstitch_convert_to_stroke.inx:13 inx/inkstitch_cut_satin.inx:10
@@ -2395,7 +2395,7 @@ msgstr "Herramientas de rellenado"
 
 #: inx/inkstitch_break_apart.inx:17
 msgid "Method"
-msgstr ""
+msgstr "Método"
 
 #: inx/inkstitch_break_apart.inx:18
 msgid "Simple"
@@ -2411,27 +2411,27 @@ msgstr "Limpiar documento"
 
 #: inx/inkstitch_cleanup.inx:7
 msgid "Remove Small Fill Areas"
-msgstr ""
+msgstr "Eliminar áreas de relleno pequeñas"
 
 #: inx/inkstitch_cleanup.inx:7
 msgid "Removes areas smaller than dedined by threshold."
-msgstr ""
+msgstr "Elimina áreas más pequeñas que sobresalen del borde."
 
 #: inx/inkstitch_cleanup.inx:8
 msgid "Fill area threshold (px²)"
-msgstr ""
+msgstr "Umbral del área de relleno (px²)"
 
 #: inx/inkstitch_cleanup.inx:10
 msgid "Remove Small strokes"
-msgstr ""
+msgstr "Eliminar Trazos pequeños"
 
 #: inx/inkstitch_cleanup.inx:10
 msgid "Removes small strokes shorter than defined by threshold."
-msgstr ""
+msgstr "Elimina pequeños trazos más cortos que los definidos por el umbral."
 
 #: inx/inkstitch_cleanup.inx:11
 msgid "Stroke threshold (px)"
-msgstr ""
+msgstr "Umbral de trazo (px)"
 
 #: inx/inkstitch_convert_to_satin.inx:3
 msgid "Convert Line to Satin"
@@ -2443,11 +2443,11 @@ msgstr "Convertir Raso en trazo"
 
 #: inx/inkstitch_convert_to_stroke.inx:8
 msgid "Keep satin column"
-msgstr ""
+msgstr "Mantener la columna de raso"
 
 #: inx/inkstitch_convert_to_stroke.inx:8
 msgid "Do not delete original satin column."
-msgstr ""
+msgstr "No elimine la columna de raso original."
 
 #: inx/inkstitch_cut_satin.inx:3
 msgid "Cut Satin Column"
@@ -2477,11 +2477,11 @@ msgstr "Preferencias"
 
 #: inx/inkstitch_embroider_settings.inx:17
 msgid "Collapse length (mm)"
-msgstr ""
+msgstr "Longitud de colapso (mm)"
 
 #: inx/inkstitch_embroider_settings.inx:17
 msgid "Jump stitches smaller than this will be treated as normal stitches."
-msgstr ""
+msgstr "Los saltos de puntada más pequeños que este se tratarán como puntadas normales."
 
 #: inx/inkstitch_flip.inx:3
 msgid "Flip Satin Column Rails"
@@ -2507,7 +2507,7 @@ msgstr "Elegir archivo"
 
 #: inx/inkstitch_import_threadlist.inx:7
 msgid "Choose method"
-msgstr ""
+msgstr "Elegir método"
 
 #: inx/inkstitch_import_threadlist.inx:8
 msgid "Import Ink/Stitch threadlist"
@@ -2519,7 +2519,7 @@ msgstr "Importar otra lista de hilos*"
 
 #: inx/inkstitch_import_threadlist.inx:11
 msgid "*Choose color palette"
-msgstr ""
+msgstr "*Elegir paleta de color"
 
 #: inx/inkstitch_import_threadlist.inx:87 inx/inkstitch_install.inx:10
 #: inx/inkstitch_install_custom_palette.inx:13
@@ -2528,7 +2528,7 @@ msgstr "Gestión del color del hilo"
 
 #: inx/inkstitch_input_100.inx:3
 msgid "100 file input"
-msgstr ""
+msgstr "Entrada de archivo 100"
 
 #: inx/inkstitch_input_100.inx:8
 msgid "Ink/Stitch: Toyota Embroidery Format (.100)"
@@ -2540,7 +2540,7 @@ msgstr "convertir fichero 100 a trayectos Ink/Stitch manuales"
 
 #: inx/inkstitch_input_10O.inx:3
 msgid "10O file input"
-msgstr ""
+msgstr "Entrada de archivo 10O"
 
 #: inx/inkstitch_input_10O.inx:8
 msgid "Ink/Stitch: Toyota Embroidery Format (.10o)"
@@ -2552,7 +2552,7 @@ msgstr "convertir fichero 10O a trayectos Ink/Stitch manuales"
 
 #: inx/inkstitch_input_BRO.inx:3
 msgid "BRO file input"
-msgstr ""
+msgstr "Entrada de archivo BRO"
 
 #: inx/inkstitch_input_BRO.inx:8
 msgid "Ink/Stitch: Bits & Volts Embroidery Format (.bro)"
@@ -2564,7 +2564,7 @@ msgstr "convertir fichero BRO a trayectos Ink/Stitch manuales"
 
 #: inx/inkstitch_input_DAT.inx:3
 msgid "DAT file input"
-msgstr ""
+msgstr "Entrada de archivo DAT"
 
 #: inx/inkstitch_input_DAT.inx:8
 msgid "Ink/Stitch: Sunstar or Barudan Embroidery Format (.dat)"
@@ -2576,7 +2576,7 @@ msgstr "convertir fichero DAT a trayectos Ink/Stitch manuales"
 
 #: inx/inkstitch_input_DSB.inx:3
 msgid "DSB file input"
-msgstr ""
+msgstr "Entrada de archivo DSB"
 
 #: inx/inkstitch_input_DSB.inx:8
 msgid "Ink/Stitch: Tajima(Barudan) Embroidery Format (.dsb)"
@@ -2588,7 +2588,7 @@ msgstr "convertir fichero DSB a trayectos Ink/Stitch manuales"
 
 #: inx/inkstitch_input_DST.inx:3
 msgid "DST file input"
-msgstr ""
+msgstr "Entrada de archivo DST"
 
 #: inx/inkstitch_input_DST.inx:8 inx/inkstitch_output_DST.inx:8
 msgid "Ink/Stitch: Tajima Embroidery Format (.dst)"
@@ -2600,7 +2600,7 @@ msgstr "convertir fichero DST a trayectos Ink/Stitch manuales"
 
 #: inx/inkstitch_input_DSZ.inx:3
 msgid "DSZ file input"
-msgstr ""
+msgstr "Entrada de archivo DSZ"
 
 #: inx/inkstitch_input_DSZ.inx:8
 msgid "Ink/Stitch: ZSK USA Embroidery Format (.dsz)"
@@ -2612,7 +2612,7 @@ msgstr "convertir fichero DZS a trayectos Ink/Stitch manuales"
 
 #: inx/inkstitch_input_EMD.inx:3
 msgid "EMD file input"
-msgstr ""
+msgstr "Entrada de archivo EMD"
 
 #: inx/inkstitch_input_EMD.inx:8
 msgid "Ink/Stitch: Elna Embroidery Format (.emd)"
@@ -2624,7 +2624,7 @@ msgstr "convertir fichero EMD a trayectos Ink/Stitch manuales"
 
 #: inx/inkstitch_input_EXP.inx:3
 msgid "EXP file input"
-msgstr ""
+msgstr "Entrada de archivo EXP"
 
 #: inx/inkstitch_input_EXP.inx:8 inx/inkstitch_output_EXP.inx:8
 msgid "Ink/Stitch: Melco Embroidery Format (.exp)"
@@ -2636,7 +2636,7 @@ msgstr "convertir fichero EXP a trayectos Ink/Stitch manuales"
 
 #: inx/inkstitch_input_EXY.inx:3
 msgid "EXY file input"
-msgstr ""
+msgstr "Entrada de archivo EXY"
 
 #: inx/inkstitch_input_EXY.inx:8
 msgid "Ink/Stitch: Eltac Embroidery Format (.exy)"
@@ -2648,7 +2648,7 @@ msgstr "convertir fichero EXY a trayectos Ink/Stitch manuales"
 
 #: inx/inkstitch_input_FXY.inx:3
 msgid "FXY file input"
-msgstr ""
+msgstr "Entrada de archivo FXY"
 
 #: inx/inkstitch_input_FXY.inx:8
 msgid "Ink/Stitch: Fortron Embroidery Format (.fxy)"
@@ -2660,7 +2660,7 @@ msgstr "convertir fichero FXY a trayectos Ink/Stitch manuales"
 
 #: inx/inkstitch_input_GT.inx:3
 msgid "GT file input"
-msgstr ""
+msgstr "Entrada de archivo GT"
 
 #: inx/inkstitch_input_GT.inx:8
 msgid "Ink/Stitch: Gold Thread Embroidery Format (.gt)"
@@ -2672,7 +2672,7 @@ msgstr "convertir fichero GT a trayectos Ink/Stitch manuales"
 
 #: inx/inkstitch_input_INB.inx:3
 msgid "INB file input"
-msgstr ""
+msgstr "Entrada de archivo INB"
 
 #: inx/inkstitch_input_INB.inx:8
 msgid "Ink/Stitch: Inbro Embroidery Format (.inb)"
@@ -2684,7 +2684,7 @@ msgstr "convertir fichero INB a trayectos Ink/Stitch manuales"
 
 #: inx/inkstitch_input_JEF.inx:3
 msgid "JEF file input"
-msgstr ""
+msgstr "Entrada de archivo JEF"
 
 #: inx/inkstitch_input_JEF.inx:8 inx/inkstitch_output_JEF.inx:8
 msgid "Ink/Stitch: Janome Embroidery Format (.jef)"
@@ -2696,279 +2696,279 @@ msgstr "convertir fichero JEF a trayectos Ink/Stitch manuales"
 
 #: inx/inkstitch_input_JPX.inx:3
 msgid "JPX file input"
-msgstr ""
+msgstr "Entrada de archivo JPX"
 
 #: inx/inkstitch_input_JPX.inx:8
 msgid "Ink/Stitch: Janome Embroidery Format (.jpx)"
-msgstr ""
+msgstr "Ink/Stitch: Formato de bordado Janome (.jpx)"
 
 #: inx/inkstitch_input_JPX.inx:9
 msgid "convert JPX file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "convertir fichero JPX a trayectos manuales Ink/Stitch"
 
 #: inx/inkstitch_input_KSM.inx:3
 msgid "KSM file input"
-msgstr ""
+msgstr "Entrada de archivo KSM"
 
 #: inx/inkstitch_input_KSM.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.ksm)"
-msgstr ""
+msgstr "Ink/Stitch: Formato de bordado Pfaff (.ksm)"
 
 #: inx/inkstitch_input_KSM.inx:9
 msgid "convert KSM file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "convertir fichero KSM a trayectos manuales Ink/Stitch"
 
 #: inx/inkstitch_input_MAX.inx:3
 msgid "MAX file input"
-msgstr ""
+msgstr "Entrada de archivo MAX"
 
 #: inx/inkstitch_input_MAX.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.max)"
-msgstr ""
+msgstr "Ink/Stitch: Formato de bordado Pfaff (.max)"
 
 #: inx/inkstitch_input_MAX.inx:9
 msgid "convert MAX file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "convertir fichero MAX a trayectos manuales Ink/Stitch"
 
 #: inx/inkstitch_input_MIT.inx:3
 msgid "MIT file input"
-msgstr ""
+msgstr "Entrada de archivo MIT"
 
 #: inx/inkstitch_input_MIT.inx:8
 msgid "Ink/Stitch: Mitsubishi Embroidery Format (.mit)"
-msgstr ""
+msgstr "Ink/Stitch: Formato de bordado Mitsubishi (.mit)"
 
 #: inx/inkstitch_input_MIT.inx:9
 msgid "convert MIT file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "convertir fichero MIT a trayectos manuales Ink/Stitch"
 
 #: inx/inkstitch_input_NEW.inx:3
 msgid "NEW file input"
-msgstr ""
+msgstr "Entrada de archivo NEW"
 
 #: inx/inkstitch_input_NEW.inx:8
 msgid "Ink/Stitch: Ameco Embroidery Format (.new)"
-msgstr ""
+msgstr "Ink/Stitch: Formato de bordado Ameco (.new)"
 
 #: inx/inkstitch_input_NEW.inx:9
 msgid "convert NEW file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "convertir fichero NEW a trayectos manuales Ink/Stitch"
 
 #: inx/inkstitch_input_PCD.inx:3
 msgid "PCD file input"
-msgstr ""
+msgstr "Entrada de archivo PCD"
 
 #: inx/inkstitch_input_PCD.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.pcd)"
-msgstr ""
+msgstr "Ink/Stitch: Formato de bordado Pfaff (.pcd)"
 
 #: inx/inkstitch_input_PCD.inx:9
 msgid "convert PCD file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "convertir fichero PCD a trayectos manuales Ink/Stitch"
 
 #: inx/inkstitch_input_PCM.inx:3
 msgid "PCM file input"
-msgstr ""
+msgstr "Entrada de archivo PCM"
 
 #: inx/inkstitch_input_PCM.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.pcm)"
-msgstr ""
+msgstr "Ink/Stitch: Formato de bordado Pfaff (.pcm)"
 
 #: inx/inkstitch_input_PCM.inx:9
 msgid "convert PCM file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "convertir fichero PCM a trayectos manuales Ink/Stitch"
 
 #: inx/inkstitch_input_PCQ.inx:3
 msgid "PCQ file input"
-msgstr ""
+msgstr "Entrada de archivo PCQ"
 
 #: inx/inkstitch_input_PCQ.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.pcq)"
-msgstr ""
+msgstr "Ink/Stitch: Formato de bordado Pfaff (.pcq)"
 
 #: inx/inkstitch_input_PCQ.inx:9
 msgid "convert PCQ file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "convertir fichero PCQ a trayectos manuales Ink/Stitch"
 
 #: inx/inkstitch_input_PCS.inx:3
 msgid "PCS file input"
-msgstr ""
+msgstr "Entrada de archivo PCS"
 
 #: inx/inkstitch_input_PCS.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.pcs)"
-msgstr ""
+msgstr "Ink/Stitch: Formato de bordado Pfaff (.pcs)"
 
 #: inx/inkstitch_input_PCS.inx:9
 msgid "convert PCS file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "convertir fichero PCS a trayectos manuales Ink/Stitch"
 
 #: inx/inkstitch_input_PEC.inx:3
 msgid "PEC file input"
-msgstr ""
+msgstr "Entrada de archivo PEC"
 
 #: inx/inkstitch_input_PEC.inx:8 inx/inkstitch_output_PEC.inx:8
 msgid "Ink/Stitch: Brother Embroidery Format (.pec)"
-msgstr ""
+msgstr "Ink/Stitch: Formato de bordado Brother (.pec)"
 
 #: inx/inkstitch_input_PEC.inx:9
 msgid "convert PEC file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "convertir fichero PEC a trayectos manuales Ink/Stitch"
 
 #: inx/inkstitch_input_PES.inx:3
 msgid "PES file input"
-msgstr ""
+msgstr "Entrada de archivo PES"
 
 #: inx/inkstitch_input_PES.inx:8 inx/inkstitch_output_PES.inx:8
 msgid "Ink/Stitch: Brother Embroidery Format (.pes)"
-msgstr ""
+msgstr "Ink/Stitch: Formato de bordado Brother (.pes)"
 
 #: inx/inkstitch_input_PES.inx:9
 msgid "convert PES file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "convertir fichero PES a trayectos manuales Ink/Stitch"
 
 #: inx/inkstitch_input_PHB.inx:3
 msgid "PHB file input"
-msgstr ""
+msgstr "Entrada de archivo PHB"
 
 #: inx/inkstitch_input_PHB.inx:8
 msgid "Ink/Stitch: Brother Embroidery Format (.phb)"
-msgstr ""
+msgstr "Ink/Stitch: Formato de bordado Brother (.phb)"
 
 #: inx/inkstitch_input_PHB.inx:9
 msgid "convert PHB file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "convertir fichero PHB a trayectos manuales Ink/Stitch"
 
 #: inx/inkstitch_input_PHC.inx:3
 msgid "PHC file input"
-msgstr ""
+msgstr "Entrada de archivo PHC"
 
 #: inx/inkstitch_input_PHC.inx:8
 msgid "Ink/Stitch: Brother Embroidery Format (.phc)"
-msgstr ""
+msgstr "Ink/Stitch: Formato de bordado Brother (.phc)"
 
 #: inx/inkstitch_input_PHC.inx:9
 msgid "convert PHC file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "convertir fichero PHC a trayectos manuales Ink/Stitch"
 
 #: inx/inkstitch_input_SEW.inx:3
 msgid "SEW file input"
-msgstr ""
+msgstr "Entrada de archivo SEW"
 
 #: inx/inkstitch_input_SEW.inx:8
 msgid "Ink/Stitch: Janome Embroidery Format (.sew)"
-msgstr ""
+msgstr "Ink/Stitch: Formato de bordado Janome (.sew)"
 
 #: inx/inkstitch_input_SEW.inx:9
 msgid "convert SEW file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "convertir fichero SEW a trayectos manuales Ink/Stitch"
 
 #: inx/inkstitch_input_SHV.inx:3
 msgid "SHV file input"
-msgstr ""
+msgstr "Entrada de archivo SHV"
 
 #: inx/inkstitch_input_SHV.inx:8
 msgid "Ink/Stitch: Husqvarna Viking Embroidery Format (.shv)"
-msgstr ""
+msgstr "Ink/Stitch: Formato de bordado Husqvarna Viking (.shv)"
 
 #: inx/inkstitch_input_SHV.inx:9
 msgid "convert SHV file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "convertir fichero SHV a trayectos manuales Ink/Stitch"
 
 #: inx/inkstitch_input_STC.inx:3
 msgid "STC file input"
-msgstr ""
+msgstr "Entrada de archivo STC"
 
 #: inx/inkstitch_input_STC.inx:8
 msgid "Ink/Stitch: Gunold Embroidery Format (.stc)"
-msgstr ""
+msgstr "Ink/Stitch: Formato de bordado Gunold (.stc)"
 
 #: inx/inkstitch_input_STC.inx:9
 msgid "convert STC file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "convertir fichero STC a trayectos manuales Ink/Stitch"
 
 #: inx/inkstitch_input_STX.inx:3
 msgid "STX file input"
-msgstr ""
+msgstr "Archivo de entrada STX"
 
 #: inx/inkstitch_input_STX.inx:8
 msgid "Ink/Stitch: Data Stitch Embroidery Format (.stx)"
-msgstr ""
+msgstr "Ink/Stitch: Formato de bordado Data Stitch (.stx)"
 
 #: inx/inkstitch_input_STX.inx:9
 msgid "convert STX file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "convertir fichero STX a trayectos manuales Ink/Stitch"
 
 #: inx/inkstitch_input_TAP.inx:3
 msgid "TAP file input"
-msgstr ""
+msgstr "Archivo de entrada TAP"
 
 #: inx/inkstitch_input_TAP.inx:8
 msgid "Ink/Stitch: Happy Embroidery Format (.tap)"
-msgstr ""
+msgstr "Ink/Stitch: Formato de bordado Happy (.tap)"
 
 #: inx/inkstitch_input_TAP.inx:9
 msgid "convert TAP file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "convertir fichero TAP a trayectos manuales Ink/Stitch"
 
 #: inx/inkstitch_input_TBF.inx:3
 msgid "TBF file input"
-msgstr ""
+msgstr "Archivo de entrada TBF"
 
 #: inx/inkstitch_input_TBF.inx:8
 msgid "Ink/Stitch: Tajima Embroidery Format (.tbf)"
-msgstr ""
+msgstr "Ink/Stitch: Formato de bordado Tajima (.tbf)"
 
 #: inx/inkstitch_input_TBF.inx:9
 msgid "convert TBF file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "convertir fichero TBF a trayectos manuales Ink/Stitch"
 
 #: inx/inkstitch_input_U01.inx:3
 msgid "U01 file input"
-msgstr ""
+msgstr "Archivo de entrada U01"
 
 #: inx/inkstitch_input_U01.inx:8 inx/inkstitch_output_U01.inx:8
 msgid "Ink/Stitch: Barudan Embroidery Format (.u01)"
-msgstr ""
+msgstr "Ink/Stitch: Formato de bordado Barudan (.u01)"
 
 #: inx/inkstitch_input_U01.inx:9
 msgid "convert U01 file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "convertir fichero U01 a trayectos manuales Ink/Stitch"
 
 #: inx/inkstitch_input_VP3.inx:3
 msgid "VP3 file input"
-msgstr ""
+msgstr "Archivo de entrada VP3"
 
 #: inx/inkstitch_input_VP3.inx:8 inx/inkstitch_output_VP3.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.vp3)"
-msgstr ""
+msgstr "Ink/Stitch: Formato de bordado Pfaff (.vp3)"
 
 #: inx/inkstitch_input_VP3.inx:9
 msgid "convert VP3 file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "convertir fichero VP3 a trayectos manuales Ink/Stitch"
 
 #: inx/inkstitch_input_XXX.inx:3
 msgid "XXX file input"
-msgstr ""
+msgstr "Importar archivo XXX"
 
 #: inx/inkstitch_input_XXX.inx:8
 msgid "Ink/Stitch: Singer Embroidery Format (.xxx)"
-msgstr ""
+msgstr "Ink/Stitch: Formato de bordado Singer (.xxx)"
 
 #: inx/inkstitch_input_XXX.inx:9
 msgid "convert XXX file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "convertir fichero XXX a trayectos manuales Ink/Stitch"
 
 #: inx/inkstitch_input_ZXY.inx:3
 msgid "ZXY file input"
-msgstr ""
+msgstr "Importar archivo ZXY"
 
 #: inx/inkstitch_input_ZXY.inx:8
 msgid "Ink/Stitch: ZSK TC Embroidery Format (.zxy)"
-msgstr ""
+msgstr "Ink/Stitch: Formato de bordado ZSK TC (.zxy)"
 
 #: inx/inkstitch_input_ZXY.inx:9
 msgid "convert ZXY file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "convertir fichero ZXY a trayectos manuales Ink/Stitch"
 
 #: inx/inkstitch_install.inx:3
 msgid "Install thread color palettes for Inkscape"
@@ -3010,11 +3010,11 @@ msgstr "Gestión de fuentes"
 #: inx/inkstitch_lettering_force_lock_stitches.inx:23
 #: inx/inkstitch_lettering_force_lock_stitches.inx:24
 msgid "Minimum distance (mm)"
-msgstr ""
+msgstr "Distancia mínima (mm)"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:26
 msgid "Add force lock stitches attribute to the last element of each glyph"
-msgstr ""
+msgstr "Añadir el atributo \"force lock stitches\"(puntadas de bloqueo de fuerza) al último elemento de cada símbolo"
 
 #: inx/inkstitch_lettering_generate_json.inx:3
 msgid "Generate JSON"
@@ -3111,15 +3111,15 @@ msgstr ""
 
 #: inx/inkstitch_letters_to_font.inx:22
 msgid "File format"
-msgstr ""
+msgstr "Formato de Archivo"
 
 #: inx/inkstitch_letters_to_font.inx:47
 msgid "Font directory"
-msgstr ""
+msgstr "Carpeta de Fuentes"
 
 #: inx/inkstitch_letters_to_font.inx:49
 msgid "Import commands"
-msgstr ""
+msgstr "Importar comandos"
 
 #: inx/inkstitch_object_commands.inx:3
 msgid "Attach Commands to Selected Objects"
@@ -3127,95 +3127,95 @@ msgstr "Adjuntar comandos a los objetos seleccionados"
 
 #: inx/inkstitch_output_CSV.inx:3
 msgid "CSV file output"
-msgstr ""
+msgstr "Archivo de salida CSV"
 
 #: inx/inkstitch_output_CSV.inx:8
 msgid "Ink/Stitch: Comma-separated values [DEBUG] (.csv)"
-msgstr ""
+msgstr "Ink/Stitch: Valores separados por comas [DEBUG] (.csv)"
 
 #: inx/inkstitch_output_CSV.inx:9
 msgid "Save design in CSV format using Ink/Stitch"
-msgstr ""
+msgstr "Guardar el diseño en formato CSV usando Ink/Stitch"
 
 #: inx/inkstitch_output_DST.inx:3
 msgid "DST file output"
-msgstr ""
+msgstr "Archivo de salida DST"
 
 #: inx/inkstitch_output_DST.inx:9
 msgid "Save design in DST format using Ink/Stitch"
-msgstr ""
+msgstr "Guardar el diseño en formato DST usando Ink/Stitch"
 
 #: inx/inkstitch_output_EXP.inx:3
 msgid "EXP file output"
-msgstr ""
+msgstr "Archivo de salida EXP"
 
 #: inx/inkstitch_output_EXP.inx:9
 msgid "Save design in EXP format using Ink/Stitch"
-msgstr ""
+msgstr "Guardar el diseño en formato EXP usando Ink/Stitch"
 
 #: inx/inkstitch_output_JEF.inx:3
 msgid "JEF file output"
-msgstr ""
+msgstr "Archivo de salida JEF"
 
 #: inx/inkstitch_output_JEF.inx:9
 msgid "Save design in JEF format using Ink/Stitch"
-msgstr ""
+msgstr "Guardar el diseño en formato JEF usando Ink/Stitch"
 
 #: inx/inkstitch_output_PEC.inx:3
 msgid "PEC file output"
-msgstr ""
+msgstr "Archivo de salida PEC"
 
 #: inx/inkstitch_output_PEC.inx:9
 msgid "Save design in PEC format using Ink/Stitch"
-msgstr ""
+msgstr "Guardar el diseño en formato PEC usando Ink/Stitch"
 
 #: inx/inkstitch_output_PES.inx:3
 msgid "PES file output"
-msgstr ""
+msgstr "Archivo de salida PES"
 
 #: inx/inkstitch_output_PES.inx:9
 msgid "Save design in PES format using Ink/Stitch"
-msgstr ""
+msgstr "Guardar el diseño en formato PES usando Ink/Stitch"
 
 #: inx/inkstitch_output_PMV.inx:3
 msgid "PMV file output"
-msgstr ""
+msgstr "Archivo de salida PMW"
 
 #: inx/inkstitch_output_PMV.inx:8
 msgid "Ink/Stitch: Brother Stitch Format [DEBUG] (.pmv)"
-msgstr ""
+msgstr "Ink/Stitch: Formato Brother Stitch [DEBUG] (.pmv)"
 
 #: inx/inkstitch_output_PMV.inx:9
 msgid "Save design in PMV format using Ink/Stitch"
-msgstr ""
+msgstr "Guardar el diseño en formato PMV usando Ink/Stitch"
 
 #: inx/inkstitch_output_SVG.inx:3
 msgid "SVG file output"
-msgstr ""
+msgstr "Archivo de salida SVG"
 
 #: inx/inkstitch_output_SVG.inx:8
 msgid "Ink/Stitch: Scalable Vector Graphics [DEBUG] (.svg)"
-msgstr ""
+msgstr "Ink/Stitch: Scalable Vector Graphics [DEBUG] (.svg)"
 
 #: inx/inkstitch_output_SVG.inx:9
 msgid "Save design in SVG format using Ink/Stitch"
-msgstr ""
+msgstr "Guardar el diseño en formato SVG usando Ink/Stitch"
 
 #: inx/inkstitch_output_TXT.inx:3
 msgid "TXT file output"
-msgstr ""
+msgstr "Archivo de salida TXT"
 
 #: inx/inkstitch_output_TXT.inx:8
 msgid "Ink/Stitch: G-code Format (.txt)"
-msgstr ""
+msgstr "Ink/Stitch: Formato G-code (.txt)"
 
 #: inx/inkstitch_output_TXT.inx:9
 msgid "Save design in TXT format using Ink/Stitch"
-msgstr ""
+msgstr "Guardar el diseño en formato TXT usando Ink/Stitch"
 
 #: inx/inkstitch_output_TXT.inx:17
 msgid "Coordinate Settings"
-msgstr ""
+msgstr "Ajuste de Coordenadas"
 
 #: inx/inkstitch_output_TXT.inx:18
 msgid "negate X coordinate values"
@@ -3255,15 +3255,15 @@ msgstr "incrementar la coordenada Z en esta cantidad por cada puntada si \"Movim
 
 #: inx/inkstitch_output_TXT.inx:27
 msgid "Custom Commands"
-msgstr ""
+msgstr "Comandos personalizados"
 
 #: inx/inkstitch_output_TXT.inx:29
 msgid "Use '%X' for x-coordinate. Use '%Y' for y-coordinate and '%Z' for z-coordinate."
-msgstr ""
+msgstr "Usar '%X' para la coordenada X. Usar '%Y' par la coordenada Y, y '%Z' para la coordenada Z."
 
 #: inx/inkstitch_output_TXT.inx:31 inx/inkstitch_output_TXT.inx:33
 msgid "Leave empty to use default value. Use 'none' to remove."
-msgstr ""
+msgstr "Dejar en blanco para usar los valores por defecto. Usar 'none' para eliminarlo."
 
 #: inx/inkstitch_output_TXT.inx:34
 msgid "START"
@@ -3275,7 +3275,7 @@ msgstr "FIN"
 
 #: inx/inkstitch_output_TXT.inx:37
 msgid "Laser Settings"
-msgstr ""
+msgstr "Ajustes del Laser"
 
 #: inx/inkstitch_output_TXT.inx:39
 msgid "laser mode"
@@ -3291,7 +3291,7 @@ msgstr "potencia dinámica del Láser"
 
 #: inx/inkstitch_output_TXT.inx:42
 msgid "Use Grbl's M4 dynamic laser power mode. Ensures consistent laser cutting power regardless of motor speed. Only for PWM-capable lasers."
-msgstr ""
+msgstr "Utilice el modo de potencia láser dinámico M4 de Grbl. Garantiza una potencia de corte láser constante independientemente de la velocidad del motor. Solo para láseres con capacidad PWM."
 
 #: inx/inkstitch_output_TXT.inx:44
 msgid "laser warm-up time"
@@ -3331,19 +3331,19 @@ msgstr "velocidad de alimentación (en mm/min, ajustar en -1 para omitirlo)"
 
 #: inx/inkstitch_output_U01.inx:3
 msgid "U01 file output"
-msgstr ""
+msgstr "Archivo de salida U01"
 
 #: inx/inkstitch_output_U01.inx:9
 msgid "Save design in U01 format using Ink/Stitch"
-msgstr ""
+msgstr "Guardar el diseño en formato U01 usando Ink/Stitch"
 
 #: inx/inkstitch_output_VP3.inx:3
 msgid "VP3 file output"
-msgstr ""
+msgstr "Archivo de salida VP3"
 
 #: inx/inkstitch_output_VP3.inx:9
 msgid "Save design in VP3 format using Ink/Stitch"
-msgstr ""
+msgstr "Guardar el diseño en formato VP3 usando Ink/Stitch"
 
 #: inx/inkstitch_params.inx:3
 msgid "Params"
@@ -3359,23 +3359,23 @@ msgstr "Eliminar todos los ajustes del bordado"
 
 #: inx/inkstitch_remove_embroidery_settings.inx:7
 msgid "Remove Params"
-msgstr ""
+msgstr "Eliminar parámetros"
 
 #: inx/inkstitch_remove_embroidery_settings.inx:7
 msgid "Removes params from selected objects or all objects if nothing is selected."
-msgstr ""
+msgstr "Elimina los parámetros de los objetos seleccionados o de todos los objetos si no se selecciona nada."
 
 #: inx/inkstitch_remove_embroidery_settings.inx:9
 msgid "Remove Commands"
-msgstr ""
+msgstr "Eliminar Comandos"
 
 #: inx/inkstitch_remove_embroidery_settings.inx:9
 msgid "Removes visual commands from selected objects or all objects if nothing is selected."
-msgstr ""
+msgstr "Elimina los comandos visuales de los objetos seleccionados o de todos si no se ha seleccionado ninguno."
 
 #: inx/inkstitch_remove_embroidery_settings.inx:10
 msgid "Remove Print Settings from SVG metadata"
-msgstr ""
+msgstr "Eliminar la configuración de impresión de los metadatos del SVG"
 
 #: inx/inkstitch_reorder.inx:3
 msgid "Re-stack objects in order of selection"
@@ -3395,31 +3395,31 @@ msgstr "Vista previa del plan de Bordado"
 
 #: inx/inkstitch_stitch_plan_preview.inx:14
 msgid "Move stitch plan beside the canvas"
-msgstr ""
+msgstr "Mover el plano de la puntada al lado del lienzo"
 
 #: inx/inkstitch_stitch_plan_preview.inx:15
 msgid "Design layer visibility"
-msgstr ""
+msgstr "Visibilidad del diseño de capa"
 
 #: inx/inkstitch_stitch_plan_preview.inx:16
 msgid "Unchanged"
-msgstr ""
+msgstr "Sin cambios"
 
 #: inx/inkstitch_stitch_plan_preview.inx:17
 msgid "Hidden"
-msgstr ""
+msgstr "Oculto"
 
 #: inx/inkstitch_stitch_plan_preview.inx:18
 msgid "Lower opacity"
-msgstr ""
+msgstr "Baja opacidad"
 
 #: inx/inkstitch_stitch_plan_preview.inx:20
 msgid "Needle points"
-msgstr ""
+msgstr "Puntos de aguja"
 
 #: inx/inkstitch_stitch_plan_preview.inx:22
 msgid "Hit Ctrl+Z to undo this action after inspection."
-msgstr ""
+msgstr "Presiona Ctrl+Z para deshacer esta acción después de la inspección."
 
 #: inx/inkstitch_troubleshoot.inx:3
 msgid "Troubleshoot Objects"
@@ -3427,7 +3427,7 @@ msgstr "Solucionar problemas de Objetos"
 
 #: inx/inkstitch_zip.inx:3
 msgid "embroidery ZIP file output"
-msgstr ""
+msgstr "exportar archivo de bordado ZIP"
 
 #: inx/inkstitch_zip.inx:8
 msgid "Ink/Stitch: ZIP export multiple formats (.zip)"
@@ -3439,7 +3439,7 @@ msgstr "Crear un archivo ZIP con múltiples formatos de archivos de bordado usan
 
 #: inx/inkstitch_zip.inx:20
 msgid ".SVG: Scalable Vector Graphic"
-msgstr ""
+msgstr ".SVG: Scalable Vector Graphic"
 
 #: inx/inkstitch_zip.inx:21
 msgid ".TXT: Threadlist"
