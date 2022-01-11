@@ -22,7 +22,7 @@ AppUpdatesURL={#URL}
 DefaultDirName={userappdata}\inkscape\extensions\
 DefaultGroupName={#PROGRAMNAME}
 ; Remove the following line to run in administrative install mode (install for all users.)
-ArchitecturesAllowed=x64
+ArchitecturesAllowed=x64 x86
 PrivilegesRequired=lowest
 OutputBaseFilename=inkstitch
 OutputDir=.
