@@ -29,6 +29,11 @@ from lib import extensions
 from lib.i18n import _
 from lib.utils import restore_stderr, save_stderr, version
 
+# ignore warnings in releases
+if getattr(sys, 'frozen', None):
+    import warnings
+    warnings.filterwarnings('ignore')
+
 logger = logging.getLogger('shapely.geos')
 logger.setLevel(logging.DEBUG)
 shapely_errors = StringIO()
