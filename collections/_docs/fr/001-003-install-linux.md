@@ -19,12 +19,8 @@ Ink/Stitch est une extension pour Inkscape. Téléchargez et installez  [Inkscap
 
 ## Installation
 
-### Télécharger
-Téléchargez la dernière version disponible pour Linux.
-
-
 {% assign tag_name = site.github.latest_release.tag_name %}
-Download the latest release (Ink/Stitch {{ tag_name }}) for Linux
+Téléchargez la dernière version disponible pour Linux (Ink/Stitch {{ tag_name }}).
 
 {% assign tag_name = tag_name | slice: 1,tag_name.size %}
 
@@ -82,7 +78,7 @@ Download the latest release (Ink/Stitch {{ tag_name }}) for Linux
   <label for="archive-instructions">Installation instructions <p class="down">▿</p><p class="up">▵</p></label>
   <section>
   <p class="headline">Install with tar.xz archive</p>
-  <p>Dans Inkscape, allez à  <code class="language-plaintext highlighter-rouge">Edition > Préferences > Systeme</code> et cherchez dans ce tableau où se trouve votre dossier <code class="language-plaintext highlighter-rouge">Extensions utilisateur</code>.
+  <p>Go to <code class="language-plaintext highlighter-rouge">Edit > Preferences > System</code> and check where your <code class="language-plaintext highlighter-rouge">User Extensions</code> folder is.</p>
   <p><img alt="Extensions folder location" src="/assets/images/docs/fr/extensions-folder-location-linux.jpg" /></p>
   <p>Décompressez l'archive Ink/Stitch dans ce dossier.</p>
   <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd ~/.config/inkscape/extensions
