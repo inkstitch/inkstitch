@@ -20,8 +20,8 @@ def is_pattern(node):
 
 def apply_patterns(patches, node):
     patterns = _get_patterns(node)
-    _apply_stroke_patterns(patterns['stroke_patterns'], patches)
     _apply_fill_patterns(patterns['fill_patterns'], patches)
+    _apply_stroke_patterns(patterns['stroke_patterns'], patches)
 
 
 def _apply_stroke_patterns(patterns, patches):
@@ -66,7 +66,6 @@ def _apply_fill_patterns(patterns, patches):
 
 def _get_patterns(node):
     from .elements import EmbroideryElement
-    from .elements.fill import Fill
     from .elements.stroke import Stroke
 
     fills = []
@@ -82,8 +81,10 @@ def _get_patterns(node):
         stroke = element.get_style('stroke')
 
         if fill is not None:
-            fill_pattern = Fill(pattern).shape
-            fills.append(fill_pattern)
+            fill_pattern = Stroke(pattern).paths
+            linear_rings = [shgeo.LinearRing(path) for path in fill_pattern]
+            for ring in linear_rings:
+                fills.append(shgeo.Polygon(ring))
 
         if stroke is not None:
             stroke_pattern = Stroke(pattern).paths
