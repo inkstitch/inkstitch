@@ -20,8 +20,8 @@ def is_pattern(node):
 
 def apply_patterns(patches, node):
     patterns = _get_patterns(node)
-    _apply_stroke_patterns(patterns['stroke_patterns'], patches)
     _apply_fill_patterns(patterns['fill_patterns'], patches)
+    _apply_stroke_patterns(patterns['stroke_patterns'], patches)
 
 
 def _apply_stroke_patterns(patterns, patches):
