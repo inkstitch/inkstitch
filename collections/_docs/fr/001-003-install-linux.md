@@ -1,7 +1,7 @@
 ---
-title: "Install Ink/Stitch"
+title: "Installer Ink/Stitch"
 permalink: /fr/docs/install-linux/
-excerpt: "How to quickly install Ink/Stitch."
+excerpt: "Comment installer rapidement Ink/Stitch."
 last_modified_at: 2021-12-03
 toc: true
 ---
@@ -25,60 +25,60 @@ Téléchargez la dernière version disponible pour Linux (Ink/Stitch {{ tag_name
 {% assign tag_name = tag_name | slice: 1,tag_name.size %}
 
 <div class="instructions">
-  <p class="download-button"><a href="{{ site.github.releases_url }}/latest/download/inkstitch_{{ tag_name }}_amd64.deb" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Download DEB package</a></p>
+  <p class="download-button"><a href="{{ site.github.releases_url }}/latest/download/inkstitch_{{ tag_name }}_amd64.deb" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Télécharger le paquet DEB </a></p>
   <input type="checkbox" id="deb-instructions" />
-  <label for="deb-instructions">Installation instructions <p class="down">▿</p><p class="up">▵</p></label>
+  <label for="deb-instructions"> Instructions  d'installation<p class="down">▿</p><p class="up">▵</p></label>
   <section>
-    <p class="headline">Install deb package</p>
-    <p>Double click on the downloaded deb file and follow the installation process.</p>
+    <p class="headline">Installation du paquet deb </p>
+    <p>Double cliquez sur le fichier deb téléchargé et suivez le processus d'installation.</p>
   </section>
 </div>
 
 <div class="instructions">
   <p class="download-button"><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-1.x86_64.rpm" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Download RPM package</a></p>
   <input type="checkbox" id="rpm-instructions" />
-  <label for="rpm-instructions">Installation instructions <p class="down">▿</p><p class="up">▵</p></label>
+  <label for="rpm-instructions">Instructions d'installation <p class="down">▿</p><p class="up">▵</p></label>
   <section>
-    <p class="headline">Install rpm package</p>
-    <p>Double click on the downloaded rpm file and follow the installation process.</p>
+    <p class="headline">Installer le paquet rpm </p>
+    <p>Double cliquez sur le fichier rpm téléchargé et suivez le processus d'installation.</p>
     <p><a href="/assets/files/inkstitch.gpg">GPG-Key</a></p>
   </section>
 </div>
 
 <div class="instructions">
-  <p class="download-button"><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-linux.sh" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Download installer script</a></p>
+  <p class="download-button"><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-linux.sh" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Télécharger le script d'installation </a></p>
   <input type="checkbox" id="installer-instructions" />
-  <label for="installer-instructions">Installation instructions <p class="down">▿</p><p class="up">▵</p></label>
+  <label for="installer-instructions">Instructions  d'installation <p class="down">▿</p><p class="up">▵</p></label>
   <section>
-    <p class="headline"> Install with the installer script</p>
-    <p>Use this version if you are using the AppImage version of Inkscape or if you just want to install Ink/Stitch only for your own user. This script is also useful if your system doesn't support deb or rpm packages.</p>
-    <p>Open your terminal and navigate to the folder where the downloaded script is located, e.g.</p>
+    <p class="headline"> Installer avec le script d'installation</p>
+    <p>Utilisez cette version si vous uriliser la version AppImage version d'Inkscape ou si vous voulez installer  Ink/Stitch uniquement pour votre propre utilisateur. Ce script est aussi utile si votre système ne supporte pas les paquets deb ou rpm.</p>
+    <p>OUvrez votre terminal et naviguez jusqu'au répertoire qui contient le script que vous avez téléchargé, par exemple</p>
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd Downloads</code></pre></div></div>
-    <p>Run the following command</p>
+    <p>Exécutez la commande suivante</p>
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sh inkstitch-{{ tag_name }}-linux.sh</code></pre></div></div>
-    <p><b>Expert options</b></p>
-    <p>This script will attempt to determine where to install Inkscape user extensions automatically.  If it gets it wrong, you can set one of these environment variables:</p>
+    <p><b>Option pour les experts</b></p>
+    <p> Ce script va tentr de déterminer automatiquement où installer les extensions utilisateurs d'Inkscape. S'il se trompe, vous pouvez modifier une de ces variables d'environnement:</p>
     <ul>
       <li>
         <p><code class="language-plaintext highlighter-rouge">INKSCAPE_PATH (ex: /usr/bin/inkscape)</code></p>
-        <p>The path to the inkscape executable program.  This script will ask that program where to install extensions by passing it the --user-data-directory argument.</p>
+        <p> Le chemin vers l'exécutable inkscape.  Le script demandera à ce programme où installer les extensions en lui transmettant l'argument. --user-data-directory.</p>
       </li>
       <li>
         <p><code class="language-plaintext highlighter-rouge">INKSCAPE_EXTENSIONS_PATH (ex: $HOME/.config/inkscape/extensions)</code></p>
-        <p>The path to the inkscape extensions directory.  Use this to bypass the --user-data-directory method and specify a directory yourself.</p>
+        <p>Le chemin vers le repertoire d'extensions inkscape.  Utilisez cela pour contourner la methode  --user-data-directory method et specifier vous même le repertoire.</p>
       </li>
     </ul>
-    <p>If you'd rather install it yourself, run this script with <code class="language-plaintext highlighter-rouge">--extract</code> to produce the original inkstitch-&lt;version&gt;.tar.xz file in the current directory.</p>
+    <p>Si vous preferrez l'installer vous même, exécutez ce script avec  <code class="language-plaintext highlighter-rouge">--extract</code> pour produire le. fichier original inkstitch-&lt;version&gt;.tar.xz dans le répertoire courant.</p>
   </section>
 </div>
 
 <div class="instructions">
   <p class="download-button"><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-linux.tar.xz" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Download tar.xz archive</a></p>
   <input type="checkbox" id="archive-instructions" />
-  <label for="archive-instructions">Installation instructions <p class="down">▿</p><p class="up">▵</p></label>
+  <label for="archive-instructions">Instructions d'installation <p class="down">▿</p><p class="up">▵</p></label>
   <section>
-  <p class="headline">Install with tar.xz archive</p>
-  <p>Go to <code class="language-plaintext highlighter-rouge">Edit > Preferences > System</code> and check where your <code class="language-plaintext highlighter-rouge">User Extensions</code> folder is.</p>
+  <p class="headline">Installer avec l'archive  tar.xz </p>
+  <p>Allez à  <code class="language-plaintext highlighter-rouge">Edition > Préferences > Système</code> et vérifiez où se trouve votre dossier <code class="language-plaintext highlighter-rouge"> Extensions utilisateur</code>.</p>
   <p><img alt="Extensions folder location" src="/assets/images/docs/fr/extensions-folder-location-linux.jpg" /></p>
   <p>Décompressez l'archive Ink/Stitch dans ce dossier.</p>
   <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd ~/.config/inkscape/extensions
@@ -98,18 +98,20 @@ Vous trouverez alors Ink/Stitch sous `Extensions > Ink/Stitch`.
 
 ### Recent Versions
 
-If you want to update a `deb` or `rpm` install, just download the new package and run the installation as described above. It will replace the old installation.
-The `installer script` will also remove the previously installed Ink/Stitch version before it installs Ink/Stitch.
+Si vous voulez mettre à jour un paquet `deb` ou `rpm` install, vous n'avez qu'à télécharger le nouveau paquet et exécuter l'installation comme décrit ci-dessus. Cela remplacera l'ancienne installation.
+Le `script d'installation` lui aussi supprime les anciennes versions d'Ink/Stitch avant d'installer la nouvelle.
 
-This is only true for previous installation which used the same method. If you installed Ink/Stitch in an other way please follow the instructions for older updates first.
+Attention, ceci n'est vraie que pour les installations précédentes qui ont été éxécutées par la même méthode. Si vous vez installer autrement, suivez d'abord  les instructions de mise à jour pour les anciennes versions:
 
-### Versions older than Ink/Stitch v2.1.0 or tar.xz version
 
-Delete the old extension files first. Go to the extension directory and remove each inkstitch* file and folder.
 
-Then, proceed as above.
+### Versions plus anciennes que  Ink/Stitch v2.1.0 ou  version tar.xz
 
-The extensions directories can be seen in Inkscape under <code class="language-plaintext highlighter-rouge">Edit > Preferences > System</code>.
+Supprimez d'abord les anciens fichiers d'extension : allez au repertoire d'extension et supprimez tous les fichiers ou repertoires inkstitch*
+
+Puis, suivre la procédure ci-dessus.
+
+Les répertoires d'extension peuvent être trouvés dans Inkscape sous <code class="language-plaintext highlighter-rouge">Edition > Préférences > Système</code>.
 
 ## Getting informed about Updates
 
@@ -134,27 +136,28 @@ Si vous avez des signes diacritiques dans votre nom d'utilisateur, essayez le ch
 
 **Confirmer le chemin d'installation**<br>
 
-Check if you extracted Ink/Stitch into the correct folder. If the `User extensions folder` doesn't work out correctly, you can also try to install into the `Inkscape extensions folder`.
-You can also look it up under `Edit > Preferences > System`.
+Vérifiez que vous avez bien extrait Ink/Stitch dans le bon répertoire. Si le  `dossier extensions utilisateur` ne fonctionne pas correctement, vous pouvez aussi d'installer dans le `dossier extensions Inkscape er`.
+Vous pouvez retrouvé l'adresse de ses dossiers sous  `Edition > Préférences > Système`.
 
-**Confirm Ink/Stitch Version**
+**Confirmer la version d'Ink/Stitch **
 
-Verify if you have downloaded Ink/Stitch for Linux ([Download](#download))
+Verifiez si vous avez bien téléchargé Ink/Stitch pour Linux ([Download](#download))
 
-**Confirm ownership/permissions**
+**Confirmer  propriétaire/droits**
 
-Some users report false ownership/permissions can cause this issue.
+Certains utilisateurs ont signaler des problèmes dus à un mauvais propriétaire ou de mauvais droits
+
 
 ### AttributeError: 'NoneType' object has no attribute 'title' in inkstitch.py
 
-This error has been reported to us by users who have installed Inkscape through snap. Snap is known to cause issues for Ink/Stitch to run with Inkscape.
-Please try an other installing method. Any described on [https://inkscape.org/](https://inkscape.org/releases/latest/) will be fine. 
+Cette erruer a été signalée par des utilisateus qui ont installé Inkscape via snap. Snap est connu pour causer des problème d'installation d'Ink/Stitch dans Inkscape. Merci d'essayer une autre méthode d'installation. N'importe quelle méthode décrite dans [https://inkscape.org/](https://inkscape.org/releases/latest/) convient. 
 
-### Ink/Stitch dialogues disappear after a few seconds
+### Les dialogues Ink/Stitch disparaissent après quelques secondes
 
-This issue can be caused by wayland. Start Inkscape with the following command: `export GDK_BACKEND=x11 && inkscape`.
+Ce problème peut être causé par wayland. Démarrez Inkscape avec la commande suivante: `export GDK_BACKEND=x11 && inkscape`.
 
-This workaround has to be used until we moved all Ink/Stitch applications to the electron environment. 
+Cette solution de contournement doit être utilisé jusqu'à ce que nous ayons déployés toutes les applications Ink/Stitch dans l'environement electron
+
 
 ### J'ai installé Ink / Stitch dans ma langue maternelle, mais les fenêtres de dialogue sont affichées en anglais!
 
@@ -167,7 +170,7 @@ La sélection du fichier ZIP a pour seule conséquuence la traduction du menu Ex
 Les fenêtres de dialogue sont construites différemment. Elles utiliseront la langue de votre système d'exploitation.
 Si Ink/Stitch n'est pas sûr de la langue à prendre en charge, il retombera sur l'anglais.
 Vous pouvez indiquer explicitement à Inkscape d'utiliser votre langue maternelle comme suit:
-  * Aller à Edition > Preferences > Interface (Ctrl + Shift + P)
+  * Aller à Edition > Préférences > Interface (Ctrl + Shift + P)
   * choisissez votre langue
   * Redémarrer Inkscape
 
