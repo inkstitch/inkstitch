@@ -10,5 +10,5 @@ last_modified_at: 2020-03-01
 
 ## Installation manuelle
 
-C'est possible d'installer Ink/Stitch manuellemnt. Ce n'est cependant pas recommandé - A moins que vous vouliez participer au développement de l'extension.
+C'est possible d'installer Ink/Stitch manuellement. Ce n'est cependant pas recommandé - A moins que vous vouliez participer au développement de l'extension.
 Dans ce cas jetez un coup d'oeil à la section [documentation développeur](/fr/developers/inkstitch/manual-setup/).
