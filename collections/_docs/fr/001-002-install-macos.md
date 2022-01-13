@@ -66,8 +66,7 @@ Ouvrez Inkscape. Vous trouverez alors Ink/Stitch dans `Extensions > Ink/Stitch`.
 ## Mise à jour
 
 Quand une nouvelle version d'Ink/Stitch est disponible, téléchargez là et lancez l'installateur comme décrit ci-dessus. Cela supprimera aussi l'ancienne version.
-
-Installs older than 2.1.0 need to be removed manually. Go to the extensions folder and remove your inkstitch installation before running the installer script.
+Les installations antérieures à 2.1.0 doivent être supprimées manuellement. Il faut supprimer les fichiers et dossiers inkstitch* du dossier d'extensions.
 
 **Astuce:** Inscrivez-vous aux news pour avoir connaissance des mises à jour d'Ink/Stitch:<br />
  <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [GitHub Feed on new Releases](https://github.com/inkstitch/inkstitch/releases.atom)<br>
@@ -91,9 +90,7 @@ Merci de vérifier que vous avez bien téléchargé la version d'Ink/Stitch comp
 
 ### 'xxxx' ne peut pas être ouvert, car l'identité du développeur ne peut pas être confirmée
 
-This can happen, if you run a development build release.
-
-`Ctrl+Click` on the downloaded file and click on `Open`.
+Ceci peut arriver si vous avez installé une version de developpement. Faites `Ctrl+Click` sur le fichier téléchargé et cliquez sur `Ouvrir`.
 
 ### J'ai installé Ink/Stitch mais le menu est grisé (désactivé)
 
@@ -108,9 +105,9 @@ Si vous souhaitez terminer la traduction, consultez notre [description pour les 
 
 Si Ink/Stitch n'est pas sûr de la langue à prendre en charge, il choisira l'anglais.
 Vous pouvez indiquer explicitement à Inkscape d'utiliser votre langue maternelle comme suit:
-  * Aller à Inkscape > Preferences > Interface (Ctrl + Shift + P)
+  * Allez à Inkscape > Preferences > Interface (Ctrl + Shift + P)
   * Choisissez votre langue
-  * Redémarrer Inkscape
+  * Redémarrez Inkscape
 
 ![Preferences > Interface](/assets/images/docs/fr/preferences_language.png)
 
@@ -120,4 +117,4 @@ Dans Inkscape, allez à  `Inkscape > Préférences > Système` et cherchez dans 
 
 ![Extensions Utilisateur](/assets/images/docs/fr/extensions-folder-location-macos.jpg)
 
-Supprimez chaque dossier ou fichier inkstitch.
+Supprimez chaque dossier ou fichier inkstitch*.
