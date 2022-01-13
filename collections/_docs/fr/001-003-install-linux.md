@@ -170,8 +170,8 @@ La sélection du fichier ZIP a pour seule conséquence la traduction du menu Ext
 Les fenêtres de dialogue sont construites différemment. Elles utiliseront la langue de votre système d'exploitation.
 Si Ink/Stitch n'est pas sûr de la langue à prendre en charge, il retombera sur l'anglais.
 Vous pouvez indiquer explicitement à Inkscape d'utiliser votre langue maternelle comme suit:
-  * Aller à Edition > Préférences > Interface (Ctrl + Shift + P)
+  * Allez à Edition > Préférences > Interface (Ctrl + Shift + P)
   * choisissez votre langue
-  * Redémarrer Inkscape
+  * Redémarrez Inkscape
 
 ![Preferences > Interface](/assets/images/docs/fr/preferences_language.png)
