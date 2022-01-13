@@ -113,7 +113,7 @@ Puis, suivre la procédure ci-dessus.
 
 Les répertoires d'extension peuvent être trouvés dans Inkscape sous <code class="language-plaintext highlighter-rouge">Edition > Préférences > Système</code>.
 
-## Avoir des informations sur les pmises à jour
+## Avoir des informations sur les mises à jour
 
 Inscrivez-vous aux news pour avoir connaissance des mises à jour d'Ink/Stitch
 * <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [GitHub Feed on new Releases](https://github.com/inkstitch/inkstitch/releases.atom)
