@@ -58,7 +58,7 @@ Utiliser la fonction de recherche pour trouver les extensions plus rapidement. [
 Pour broder il est essentiel d'avoir une bonne idée de la véritable taille du dessin. Inkscape a un réglage pour adapter le niveau de zoom à votre écran:
 
 * Allez à `Edition > Préférences > Interface`
-* Tenez une régle sur votre ecran et ajuster la glissière jusqu'à ce que les longueurs correspondent.
+* Tenez une régle sur votre ecran et ajuster le curseur jusqu'à ce que les longueurs correspondent.
  
 ![Correction de zoom](/assets/images/docs/fr/customize-zoom-correction.png)
 
