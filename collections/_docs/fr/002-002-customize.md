@@ -7,62 +7,63 @@ toc: true
 ---
 ## Raccourcis Clavier
 
-You can speed up your work with Ink/Stitch, if you assign shortcut keys.
+Vous pouvez accelerer votre travail sous INk/Stitch en utilisant des raccourcis clavier.
 
-The following list shows shortcut keys provided in the downloadable file below.
+La liste suivante décrit les raccourcis claviers qui sont définis dans le fichier à télécharger ci-dessous.
 
-Some of the defined shortcut keys will replace others which are native to Inkscape. In the table you will see which they are and how you can still access these functions.
+Certains de ces raccourcis remplacent des raccourcis natifs à Inkscape. Dans la table vous pouvez voir ceux dont il sagit et comment dontinuer à acceder à ces fonctionsK
+
+
 {: .notice--warning }
 
-Shortcut&nbsp;Keys | Effect | Replaces
+Raccourcis&nbsp;Clavier | Effet | Remplace
 -------- | --------
-<key>PageUp</key>                             | Stack Up* | Object > Raise (see also toolbar buttons)
-<key>PageDown</key>                           | Stack Down* | Object > Lower (see also toolbar buttons)
-<key>ctrl</key>+<key>R</key>                  | Reverse the direction of a path.**
-<key>ctrl</key>+<key>shift</key>+<key>P</key> | Params | Edit > Preferences
-<key>ctrl</key>+<key>shift</key>+<key>L</key> | Simulator (Live simulation)
-<key>ctrl</key>+<key>shift</key>+<key>/</key> | Stitch plan preview (beside of the canvas) | Path > Division (use Strg+/ instead)
-<key>ctrl</key>+<key>shift</key>+<key>O</key> | Break apart fill objects... (O for Object) | Object > Object properties
-<key>ctrl</key>+<key>shift</key>+<key>I</key> | PDF Export
-<key>ctrl</key>+<key>shift</key>+<key>Q</key> | Lettering (Q for QWERTY) | Object > Selectors and CSS
+<key>PageUp</key>                             | Monter dans la pile d'objets* | Objet > Monter (voir aussi les boutons de la barre d'outils)
+<key>PageDown</key>                           | Descendre dans la pile d'objetsn* | Objet > Descendre (voir aussi les boutons de la barre d'outils)
+<key>ctrl</key>+<key>R</key>                  | Reverser la direction d'un chemin.**
+<key>ctrl</key>+<key>shift</key>+<key>P</key> | Paramètres | Edition > Préférences
+<key>ctrl</key>+<key>shift</key>+<key>L</key> | Simulateur/apperçu réaliste 
+<key>ctrl</key>+<key>shift</key>+<key>/</key> | Prévisualisation du plan de broderie  | Chemin > Division (use Strg+/ instead)
+<key>ctrl</key>+<key>shift</key>+<key>O</key> | Séparer les objets de remplissage... (O  pour Objet) | Objet > Propriétés de l'objet
+<key>ctrl</key>+<key>shift</key>+<key>I</key> | Export PDF 
+<key>ctrl</key>+<key>shift</key>+<key>Q</key> | Lettrage (Q pour QWERTY) | Objet > Selecteurs et CSS
 <span style="white-space: nowrap;"><key>ctrl</key>+<key>shift</key>+<key>Del</key></span> | Troubleshoot objects (remove errors)
-<key>ctrl</key>+<key>shift</key>+<key>+</key> | Attach commands to selected objects
-<key>ctrl</key>+<key>shift</key>+<key>U</key> | Convert line to satin column (U looks like two rails) | Object > Group (use Ctrl+G instead)
-<key>ctrl</key>+<key>shift</key>+<key>J</key> | Flip satin column rails (J looks like an arrow)
-<key>ctrl</key>+<key>shift</key>+<key>B</key> | Cut satin column (B is cut in half) | Path > Union (use Ctrl++ instead)
-<key>ctrl</key>+<key>shift</key>+<key>*</key> | Auto-route satin (puts everything in order)
+<key>ctrl</key>+<key>shift</key>+<key>+</key> | Attacher des commandes aux objets selectionnés
+<key>ctrl</key>+<key>shift</key>+<key>U</key> | Convertir la ligne en colonne satin  (U ressemble à deux rails) | Objet > Groupe (utiliser Ctrl+G à la place)
+<key>ctrl</key>+<key>shift</key>+<key>J</key> | Echanger les rails de la colonne satin  (J ressemble à une flèche)
+<key>ctrl</key>+<key>shift</key>+<key>B</key> | Couper la colonne satin  (B est coupé en deux parties) | Chemin > Union (utiliser Ctrl++ à la place )
+<key>ctrl</key>+<key>shift</key>+<key>*</key> | Satin automatique (ordonne tout)
 
 Dans Ink/Stitch la [simulation](/fr/docs/visualize/) inclut déjà le raccourci.
 
-\* Stack Up and Stack Down give precise control over the order that objects are stitched in. Very useful in combination with the Objects panel (`Objects > Objects ...`). The stacking order defines, in which order elements are stitched out (from bottom to top).<br><br>** For satins and running stitch, this changes the direction the stitches go in. Use with `Show path direction on outlines` selected in `Edit > Preferences > Tools > Node`. If you select just one vertex using the node editor and press `Ctrl+R`, Inkscape will reverse just one path in an object. This way you can make sure that both rails in a satin point the same direction.
+\* Monter et Descenddre dans la pile d'objets donne un controle précis de l'ordre dans lequel les objets sont brodés. Très ut!oe en combinaison aec le panneau Objet (`Objet > Objets ...`).  L'ordre de la pile défini l'ordre dans lequel les éléments sont brodés (le bas de la pile en premier, pour finir par le haut de la pile).<br><br>** Pour les colonnes satin et les points droits, ceci change la direction des points. A utiliser avec `Afficher le sens des chemins sur le contour` selectionné dans `Edition > Préférences > Outils > Noeud`. Si vous selectionnez un seul sommet en utilisant l'éditeur de noeud et que vous effectuez un `Ctrl+R`, Inkscape renverse seulement un chemin dans un objet. Vous pouvez de cette manière vous assurez que les deux rails d'une colonne satin sont orientés dans le même sens.
 {: .notice--info }
 {: style="font-size: 70%" }
 
-### Download and import custom shortcut keys
+### Télécharger et importer des raccourcis clavier
 
-* [Download the Ink/Stitch shortcut key file](/assets/files/inkstitch.xml)
-* Go to `Edition > Préférences > Interface > Raccourcis clavier`
-* Click on `Import...`
-* Select your shortcut key file (inkstitch.xml)
-* Click open
+* [Téléchargez le fichier de raccourcis clavier](/assets/files/inkstitch.xml)
+* Allez à  `Edition > Préférences > Interface > Raccourcis clavier`
+* Cliquez sur  `Imporert...`
+* Selectionnez votre fichier de raccourcis e (inkstitch.xml)
+* Cliquez sur ouvrir 
 
-Now you will be able to use the shortcut keys described above.
+Vous pouvez maintenant utiliser les raccourcis claviers décrits ci dessus.
 
-If you want to define your own custom shortcut keys simply enter your desired key combinations in the shortcut dialog.
-Use the search function to find the extensions quicker. [More information](http://wiki.inkscape.org/wiki/index.php/Customizing_Inkscape)
+Si vous voulez définir vos propres raccourcis, entrez simplement la combinaison de touches dans le dialogue de raccourci.
+Utiliser la fonction de recherche pour trouver les extensions plus rapidement. [Plus d'informations](http://wiki.inkscape.org/wiki/index.php/Customizing_Inkscape)
 {: .notice--info }
 
-## Zoom correction factor
+## Correction du facteur de zoom
+Pour broder il est essential d'avoir une bonne idée de la véritable taille du dessin. Inkscape a un réglae pour adapter le niveau de zoom à votre écran.
 
-For embroidery it is essential to get a sense of the actual size of the design. Inkscape has a setting to adapt zoom levels to your display size.
-
-* Go to `Edit > Preferences > Interface`
-* Hold a ruler onto your display and adjust the slider until the length matches
+* Allez à `Edition > Préférences > Interface`
+* Tenez une régle sur votre ecran et ajuster la glissière jusqu'à ce que les longueurs correspondent.
  
-![Zoom correction](/assets/images/docs/fr/customize-zoom-correction.png)
+![Correction de zoom](/assets/images/docs/fr/customize-zoom-correction.png)
 
 ## Grilles
-Pour aligner correctement vos formes vectorielles, vous pouvez utiliser la fonctionnalité de grille d’Inkscape. Aller à  `Affichage` et activer `Grille`. Dans la`Barre des magnétismes` vérifier que `Aimanter aux grilles` est activé. Il est également possible de régler l'espacement et l'origine de vos grilles dans `Fichier> Propriétés du document> Grilles`.
+Pour aligner correctement vos formes vectorielles, vous pouvez utiliser la fonctionnalité de grille d’Inkscape. Aller à  `Affichage` et activer  la `Grille`. Dans la`Barre des magnétismes` vérifier que `Aimanter aux grilles` est activé. Il est également possible de régler l'espacement et l'origine de vos grilles dans `Fichier> Propriétés du document> Grilles`.
 
 ![Grids](https://user-images.githubusercontent.com/11083514/40359052-414d3554-5db9-11e8-8b49-3be75c5e9732.png)
 
@@ -75,7 +76,7 @@ Vérifier aussi que **Afficher le contour du chemin** est activé dans la  `Barr
 
 ## Travailler avec des modèles
 
-Si vous décidez d'utiliser plus fréquemment Ink / Stitch pour vos travaux de broderie, vous en aurez peut-être assez de mettre tout en scène à chaque fois. Dans ce cas, vous êtes prêt à créer un modèle pour votre configuration de broderie de base. Une fois que vous avez tout organisé comme vous le souhaitez, enregistrez simplement votre fichier dans votre dossier de modèles. Vous pouvez maintenant y accéder par `Fichier > Nouveau à partir d'un modèle`.
+Si vous décidez d'utiliser plus fréquemment Ink Stitch pour vos travaux de broderie, vous en aurez peut-être assez de mettre tout en scène à chaque fois. Dans ce cas, vous êtes prêt à créer un modèle pour votre configuration de broderie de base. Une fois que vous avez tout organisé comme vous le souhaitez, enregistrez simplement votre fichier dans votre dossier de modèles. Vous pouvez maintenant y accéder par `Fichier > Nouveau à partir d'un modèle`.
 
 Système|Dossier des modèles
 ---|---
