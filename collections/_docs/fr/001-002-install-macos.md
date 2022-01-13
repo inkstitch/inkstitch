@@ -29,7 +29,7 @@ Téléchargez la dernière version d'Ink/Stitch pour votre version de macOS :
 
 **Mojave - Monterey:** Lancez l'installateur en cliquant sur le fichier que vous avez téléchargé.
 
-**El Capitan - High Sierra:** `Ctrl+Click` on the downloaded file and click on `Open`.
+**El Capitan - High Sierra:** `Ctrl+Click` sur le fichier téléchargé et cliquez sur  `ouvrir`.
 
 Cliquez sur `Continuer`.
 
