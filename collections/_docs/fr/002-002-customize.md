@@ -82,7 +82,7 @@ Système|Dossier des modèles
 ---|---
 Linux|`~/.config/inkscape/templates`
 Windows|`C:\Users\%USERNAME%\AppData\Roaming\inkscape\templates`
-Mac|`/Users/%USERNAME%/Library/Application Support/org.inkscape.Inkscape/config/inkscape/templatess`
+Mac|`/Users/%USERNAME%/Library/Application\ Support/org.inkscape.Inkscape/config/inkscape/templates`
 Retrouvez le dossier utilisateur dans vos préférences inkscape. Voir [FAQ](/fr/docs/faq/#jai-t%C3%A9l%C3%A9charg%C3%A9-et-d%C3%A9compress%C3%A9-la-derni%C3%A8re-version-o%C3%B9-je-la-mets).
 
 **Astuce:** Obtenez des [modèles prédéfinis](/fr/tutorials/resources/templates/) dans notre section tutoriel.
