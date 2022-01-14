@@ -18,25 +18,25 @@ Certains de ces raccourcis remplacent des raccourcis natifs d'Inkscape. Dans le 
 
 Raccourcis&nbsp;Clavier | Effet | Remplace
 -------- | --------
-<key>PageUp</key>                             | Monter dans la pile d'objets* | Objet > Monter (voir aussi les boutons de la barre d'outils)
-<key>PageDown</key>                           | Descendre dans la pile d'objetsn* | Objet > Descendre (voir aussi les boutons de la barre d'outils)
+<key>Page Haut</key>                             | Monter dans la pile d'objets* | Objet > Monter (voir aussi les boutons de la barre d'outils)
+<key>Page Pas </key>                           | Descendre dans la pile d'objetsn* | Objet > Descendre (voir aussi les boutons de la barre d'outils)
 <key>ctrl</key>+<key>R</key>                  | Renverser la direction d'un chemin.**
 <key>ctrl</key>+<key>shift</key>+<key>P</key> | Paramètres | Edition > Préférences
-<key>ctrl</key>+<key>shift</key>+<key>L</key> | Simulateur/apperçu réaliste 
+<key>ctrl</key>+<key>shift</key>+<key>L</key> | Simulateur en direct
 <key>ctrl</key>+<key>shift</key>+<key>/</key> | Prévisualisation du plan de broderie  | Chemin > Division (use Strg+/ instead)
 <key>ctrl</key>+<key>shift</key>+<key>O</key> | Séparer les objets de remplissage... (O  pour Objet) | Objet > Propriétés de l'objet
 <key>ctrl</key>+<key>shift</key>+<key>I</key> | Export PDF 
 <key>ctrl</key>+<key>shift</key>+<key>Q</key> | Lettrage (Q pour QWERTY) | Objet > Selecteurs et CSS
-<span style="white-space: nowrap;"><key>ctrl</key>+<key>shift</key>+<key>Del</key></span> | Troubleshoot objects (remove errors)
+<span style="white-space: nowrap;"><key>ctrl</key>+<key>shift</key>+<key>Del</key></span> | Dépistage de problèmes avec les objets
 <key>ctrl</key>+<key>shift</key>+<key>+</key> | Attacher des commandes aux objets selectionnés
 <key>ctrl</key>+<key>shift</key>+<key>U</key> | Convertir la ligne en colonne satin  (U ressemble à deux rails) | Objet > Grouper (utiliser Ctrl+G à la place)
-<key>ctrl</key>+<key>shift</key>+<key>J</key> | Echanger les rails de la colonne satin  (J ressemble à une flèche)
+<key>ctrl</key>+<key>shift</key>+<key>J</key> | Intervertir les rails de la colonne satin  (J ressemble à une flèche)
 <key>ctrl</key>+<key>shift</key>+<key>B</key> | Couper la colonne satin  (B est coupé en deux parties) | Chemin > Union (utiliser Ctrl++ à la place )
-<key>ctrl</key>+<key>shift</key>+<key>*</key> | Satin automatique (ordonne tout)
+<key>ctrl</key>+<key>shift</key>+<key>*</key> |Remplissage automatique de colonnes satin (ordonne tout)
 
 Dans Ink/Stitch la [simulation](/fr/docs/visualize/) inclut déjà le raccourci.
 
-\* Monter et Descendre dans la pile d'objets permet de controler précisement l'ordre dans lequel les objets sont brodés. Très utile en combinaison avec le panneau Objet (`Objet > Objets ...`).  L'ordre de la pile défini l'ordre dans lequel les éléments sont brodés (le bas de la pile en premier, pour finir par le haut de la pile).<br><br>** Pour les colonnes satin et les points droits, ceci change la direction des points. A utiliser avec `Afficher le sens des chemins sur le contour` selectionné dans `Edition > Préférences > Outils > Noeuds`. Si vous selectionnez un seul sommet en utilisant l'éditeur de noeuds et que vous effectuez un `Ctrl+R`, Inkscape renverse seulement le chemin qui contient ce noeud dans l'objet. Vous pouvez de cette manière vous assurer que les deux rails d'une colonne satin sont orientés dans le même sens.
+\* Monter et Descendre dans la pile d'objets permet de contrôler précisement l'ordre dans lequel les objets sont brodés. Très utile en combinaison avec le panneau Objet (`Objet > Objets ...`).  L'ordre de la pile défini l'ordre dans lequel les éléments sont brodés (le bas de la pile en premier, pour finir par le haut de la pile).<br><br>** Pour les colonnes satin et les points droits, ceci change la direction des points. A utiliser avec `Afficher le sens des chemins sur le contour` selectionné dans `Edition > Préférences > Outils > Noeuds`. Si vous selectionnez un seul sommet en utilisant l'éditeur de noeuds et que vous effectuez un `Ctrl+R`, Inkscape renverse seulement le chemin qui contient ce noeud dans l'objet. Vous pouvez de cette manière vous assurer que les deux rails d'une colonne satin sont orientés dans le même sens.
 {: .notice--info }
 {: style="font-size: 70%" }
 
@@ -82,6 +82,7 @@ Système|Dossier des modèles
 ---|---
 Linux|`~/.config/inkscape/templates`
 Windows|`C:\Users\%USERNAME%\AppData\Roaming\inkscape\templates`
+Mac|`/Users/%USERNAME%/Library/Application Support/org.inkscape.Inkscape/config/inkscape/templatess`
 Retrouvez le dossier utilisateur dans vos préférences inkscape. Voir [FAQ](/fr/docs/faq/#jai-t%C3%A9l%C3%A9charg%C3%A9-et-d%C3%A9compress%C3%A9-la-derni%C3%A8re-version-o%C3%B9-je-la-mets).
 
 **Astuce:** Obtenez des [modèles prédéfinis](/fr/tutorials/resources/templates/) dans notre section tutoriel.
