@@ -49,7 +49,6 @@ Lorsque l’image doit être tracée à la main, utilisez l’outil de dessin à
 
 Pour le texte, choisissez une police avec soin. Il est assez difficile de faire en sorte que le satin soit beau quand il fait 1mm de large ou moins. Les polices sans empattement (sans serif) ont tendance à être les plus faciles. Pour un texte de moins de 4 mm de hauteur, il vous sera très difficile de donner une belle apparence aux lettres minuscules. Par conséquent, envisagez des majuscules. Les polices Cursive / Script peuvent bien fonctionner, mais ce ne sera pas aussi facile que vous le pensez.
 
-* Faites un clic droit sur le calque (si vous n'avez pas renommé le calque, il s'appellera `Calque 1`)
 Ink/Stitch vous offre la possibilité d'utiliser des fontes prêtes à broder qui peuvent être inserrées dans votre document via `Extensions > Ink/Stitch > Lettrage`
 
 ## ![Vectorize](/assets/images/docs/workflow-icon-vectorize.png) Etape 2: Convertir en vecteur de broderie et paramétrer
