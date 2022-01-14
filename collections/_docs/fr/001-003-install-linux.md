@@ -150,7 +150,7 @@ Certains utilisateurs ont signaler des problèmes dus à un mauvais propriétair
 
 ### AttributeError: 'NoneType' object has no attribute 'title' in inkstitch.py
 
-Cette erreur a été signalée par des utilisateurs qui ont installé Inkscape via snap. Snap est connu pour causer des problème d'installation d'Ink/Stitch dans Inkscape. Merci d'essayer une autre méthode d'installation. N'importe quelle méthode décrite ici [https://inkscape.org/](https://inkscape.org/releases/latest/) convient. 
+Cette erreur a été signalée par des utilisateurs qui ont installé Inkscape via snap. Snap est connu pour causer des problèmes d'installation d'Ink/Stitch dans Inkscape. Merci d'essayer une autre méthode d'installation. N'importe quelle méthode décrite ici [https://inkscape.org/](https://inkscape.org/releases/latest/) convient. 
 
 ### Les dialogues Ink/Stitch disparaissent après quelques secondes
 
