@@ -146,4 +146,4 @@ Il y a toujours place à l'amélioration! Pour tester votre conception, prépare
 Brodez le motif en regardant la machine pour vous assurer qu'il n'y a pas de surprises. Faites attention aux espaces entre des zones qui indiquent que le tissu a été déformé. Recherchez également les zones où les points se superposent trop et où la machine a du mal à coudre, ce qui indique que la densité de points est trop élevée.
 ## ![Create Icon](/assets/images/docs/workflow-icon-optimize.png) Etape 7+: Optimisation
 
-Revenez ensuite et ajustez votre motif. Espérons que cela ne prendra que quelques essais pour l'obtenir comme vous le souhaitez. Une fois que vous avez terminé, copiez le fichier de broderie final à partir de votre répertoire de sortie afin d'éviter tout écrasement accidentel à l'avenir.
+Revenez ensuite et ajustez votre motif. Espérons que cela ne prendra que quelques essais pour obtenir ce que vous souhaitez. 
