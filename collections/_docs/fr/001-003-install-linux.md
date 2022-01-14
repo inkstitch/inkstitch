@@ -139,7 +139,7 @@ Si vous avez des signes diacritiques dans votre nom d'utilisateur, essayez le ch
 Vérifiez que vous avez bien extrait Ink/Stitch dans le bon répertoire. Si le  `dossier extensions utilisateur` ne fonctionne pas correctement, vous pouvez aussi essayer d'installer dans le `dossier extensions Inkscape`.
 Vous pouvez retrouver l'adresse de ces dossiers sous  `Edition > Préférences > Système`.
 
-**Confirmer la version d'Ink/Stitch **
+**Confirmer la version d'Ink/Stitch**
 
 Verifiez si vous avez bien téléchargé Ink/Stitch pour Linux ([Download](#download))
 
