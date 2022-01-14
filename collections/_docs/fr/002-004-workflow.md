@@ -40,7 +40,7 @@ Lorsque vous basez un dessin sur une image ou un graphique existant, chargez-le 
 
 Après le traçage, nettoyez les formes vectorielles en utilisant `Chemin> Simplifier` (` Ctrl + L`) et en supprimant les nœuds à la main lorsque cela est possible. Le but est d’utiliser le moins de courbes de Bézier possible pour représenter l’image. Souvent la vectorisation va produire des objets très petits qu'il n'est pas possible de broder. En conséquence, il est préférable de nettoyer votre document en utilisant `Extensions > Ink/Stitch > Résolution de problèmes > Nettoyer le document`.
 
-Lorsque l’image doit être tracée à la main, utilisez l’outil de dessin à main levée. Cet outil crée des chemins avec beaucoup de noeuds de Beziér, simplifiez donc autant que possible les courbes.
+Lorsque l’image doit être tracée à la main, utilisez l’outil de dessin à main levée. Cet outil crée des chemins avec beaucoup de noeuds, simplifiez donc autant que possible les courbes.
 
 **Astuce:** Travailler avec une image SVG existante peut vous faire gagner beaucoup de temps. Songez donc à utiliser votre moteur de recherche avec le filtre de recherche d'image défini sur SVG.
 {: .notice--info }
