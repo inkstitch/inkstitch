@@ -2,7 +2,7 @@
 title: "Installer Ink/Stitch"
 permalink: /fr/docs/install-linux/
 excerpt: "Comment installer rapidement Ink/Stitch."
-last_modified_at: 2021-12-03
+last_modified_at: 2022-01-12
 toc: true
 ---
 {% comment %}
@@ -35,7 +35,7 @@ Téléchargez la dernière version disponible pour Linux (Ink/Stitch {{ tag_name
 </div>
 
 <div class="instructions">
-  <p class="download-button"><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-1.x86_64.rpm" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Download RPM package</a></p>
+  <p class="download-button"><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-1.x86_64.rpm" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Télécharger le paquet RPM </a></p>
   <input type="checkbox" id="rpm-instructions" />
   <label for="rpm-instructions">Instructions d'installation <p class="down">▿</p><p class="up">▵</p></label>
   <section>
