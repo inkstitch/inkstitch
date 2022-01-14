@@ -1,5 +1,5 @@
 ---
-title: "Installer Ink/Stitch"
+title: "Installer Ink/Stitch pour linux"
 permalink: /fr/docs/install-linux/
 excerpt: "Comment installer rapidement Ink/Stitch."
 last_modified_at: 2022-01-12
