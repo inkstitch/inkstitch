@@ -59,14 +59,16 @@ Ink/Stitch vous offre la possibilité d'utiliser des fontes prêtes à broder qu
 
 Nous vous recommandons de faire un usage intensif des calques et des groupes à ce stade.
 
-Dans le panneau des objets (ouvert avec <key>Ctrl</key><key>Shift</key><key>O</key>, vous pouvez gérer des calques, des groupes et des objets.
+Dans le panneau des objets (ouvert avec <key>Ctrl</key> <key>Shift</key> <key>O</key>, vous pouvez gérer des calques, des groupes et des objets.
 Vous pouvez enregistrer l'image d'origine en dupliquant le calque:
 
 * Faites un clic droit sur le calque (si vous n'avez pas renommé le calque, il s'appellera `Calque 1`)
 * Cliquez sur `Dupliquer`
 * Fermez l'oeil en cliquant dessus.
 
-Cela rendra le premier calque invisible. Tout calque, groupe ou forme vectorielle défini comme invisible sera ignoré par Ink/Stitch. Nous allons maintenant travailler avec la copie.
+Cela rendra le premier calque invisible. Tout calque, groupe ou forme vectorielle défini comme invisible sera ignoré par Ink/Stitch.
+
+Nous allons maintenant travailler avec la copie.
 
 ![Dialogue objet](/assets/images/docs/en/objects-panel.png)
 
