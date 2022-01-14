@@ -32,7 +32,7 @@ Modifier les objets et les chemins avec:
 * ![outil noeud icon](/assets/images/docs/inkscape-tools-node.png) Outil d'édition de noeuds (<key>N</key>)
 
 Mettez à l'échelle, faites pivoter et déplacez tout l'objet avec l'outil de sélection. L'éditeur de nœuds sert à manipuler les nœuds sélectionnés, etc.
-De plus, vous pouvez utiliser les effets de chemin (`Chemin> Effets de chemin ... '). N'oubliez pas de toujours reconvertir l'objet résultant en un chemin, (`Chemin> Objet en chemin').
+De plus, vous pouvez utiliser les effets de chemin (`Chemin> Effets de chemin`). N'oubliez pas de toujours reconvertir l'objet résultant en un chemin, (`Chemin> Objet en chemin`).
 
 ### Utiliser une image / un graphique existant
 
