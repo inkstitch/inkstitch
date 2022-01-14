@@ -77,14 +77,14 @@ Nous allons maintenant travailler avec la copie.
 Utilisez les groupes pour structurer votre document:
 
 * Sélectionnez des objets avec votre souris
-* Ajoutez ou supprimez des objets avec <key>shift</key><key>click</key>
-* Appuyez sur <key>Ctrl</key><key>G</key>
+* Ajoutez ou supprimez des objets avec <key>shift</key> <key>click</key>
+* Appuyez sur <key>Ctrl</key> <key>G</key>
 
 
 Dégrouper des objets fonctionne comme suit:
 
 *Sélectionnez le(s) groupe(s)
-* Appuyez sur <key>Ctrl</key><key>Shift</key><key>G</key>-----
+* Appuyez sur <key>Ctrl</key> <key>Shift</key> <key>G</key>-----
 
 
 ### Types de point
