@@ -89,7 +89,7 @@ Dégrouper des objets fonctionne comme suit:
 
 ### Types de point
 
-Ink/Stitch propose différents types de points. Selon le type de point que vous souhaitez utiliser, vous devez définir la couleur de remplissage ou les paramètres de trait avec`Objet > Fond et forme...` (<key>Ctrl</key><key>Shift</key><key>F</key>).
+Ink/Stitch propose différents types de points. Selon le type de point que vous souhaitez utiliser, vous devez définir la couleur de remplissage ou les paramètres de trait avec`Objet > Fond et forme...` (<key>Ctrl</key> <key>Shift</key> <key>F</key>).
 Regardez ce tableau et suivez les liens pour comprendre comment créer un type de point spécifique:
 
 Objet chemin | Type de point
