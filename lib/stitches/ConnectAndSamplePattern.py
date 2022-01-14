@@ -443,7 +443,7 @@ def calculate_replacing_middle_point(line_segment, abs_offset, max_stitch_distan
     """
     Takes a line segment (consisting of 3 points!)
     and calculates a new middle point if the line_segment is
-    straight enough to be resampled by points max_stitch_distance apart.
+    straight enough to be resampled by points max_stitch_distance apart FROM THE END OF line_segment.
     Returns None if the middle point is not needed.
     """
     angles = LineStringSampling.calculate_line_angles(line_segment)
@@ -840,7 +840,7 @@ def connect_raster_tree_spiral(
     Takes the offsetted curves organized as tree, connects and samples them as a spiral.
     It expects that each node in the tree has max. one child
     Input:
-    -tree: contains the offsetted curves in a hierachical organized
+    -tree: contains the offsetted curves in a hierarchical organized
      data structure.
     -used_offset: used offset when the offsetted curves were generated
     -stitch_distance: maximum allowed distance between two points
@@ -917,12 +917,35 @@ def connect_raster_tree_spiral(
                 transfer_to_sibling=False,
                 transfer_to_child=True)
 
-        result_coords.extend(own_coords)
-        result_coords_origin.extend(own_coords_origin)
-
-        # make sure the next section starts where this
-        # section of the curve ends
-        starting_point = own_coords[-1]
+        # Check whether starting of own_coords or end of result_coords can be removed
+        if not result_coords:
+            result_coords.extend(own_coords)
+            result_coords_origin.extend(own_coords_origin)
+        elif len(own_coords) > 0:
+            if Point(result_coords[-1]).distance(Point(own_coords[0])) > constants.line_lengh_seen_as_one_point:
+                lineseg = LineString(
+                    [result_coords[-2], result_coords[-1], own_coords[0], own_coords[1]])
+            else:
+                lineseg = LineString(
+                    [result_coords[-2], result_coords[-1], own_coords[1]])
+            (temp_coords, _) = LineStringSampling.raster_line_string_with_priority_points(lineseg, 0, lineseg.length, stitch_distance,
+                                                                                          DEPQ(), abs_offset, offset_by_half, False)
+            if len(temp_coords) == 2:  # only start and end point of lineseg was needed
+                result_coords.pop()
+                result_coords_origin.pop()
+                result_coords.extend(own_coords[1:])
+                result_coords_origin.extend(own_coords_origin[1:])
+            elif len(temp_coords) == 3:  # one middle point within lineseg was needed
+                result_coords.pop()
+                result_coords.append(temp_coords[1])
+                result_coords.extend(own_coords[1:])
+                result_coords_origin.extend(own_coords_origin[1:])
+            else:  # all points were needed
+                result_coords.extend(own_coords)
+                result_coords_origin.extend(own_coords_origin)
+                # make sure the next section starts where this
+                # section of the curve ends
+        starting_point = result_coords[-1]
 
     assert len(result_coords) == len(result_coords_origin)
     return result_coords, result_coords_origin
