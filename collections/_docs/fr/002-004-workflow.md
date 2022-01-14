@@ -9,7 +9,7 @@ toc: true
 
 ## ![Create Icon](/assets/images/docs/workflow-icon-create.png) Etape 1: Créer une image vectorielle
 
-Au début, vous avez besoin d’une idée ou d’une image à transférer dans un fichier de broderie. Vous pouvez le peindre à partir de zéro ou utiliser une image existante.
+Au début, vous avez besoin d’une idée ou d’une image à transférer dans un fichier de broderie. Vous pouvez la dessiner vous même à partir de zéro ou utiliser une image existante.
 
 ### Dessiner avec Inkscape
 
@@ -32,16 +32,13 @@ Modifier les objets et les chemins avec:
 * ![outil noeud icon](/assets/images/docs/inkscape-tools-node.png) Outil d'édition de noeuds (<key>N</key>)
 
 Mettez à l'échelle, faites pivoter et déplacez tout l'objet avec l'outil de sélection. L'éditeur de nœuds sert à manipuler les nœuds sélectionnés, etc.
-De plus, vous pouvez utiliser les effets de chemin (`Chemin> Effets de chemin ... '). N'oubliez pas de toujours reconvertir l'objet résultant en un chemin, comme décrit ci-dessus.
+De plus, vous pouvez utiliser les effets de chemin (`Chemin> Effets de chemin ... '). N'oubliez pas de toujours reconvertir l'objet résultant en un chemin, (`Chemin> Objet en chemin').
 
 ### Utiliser une image / un graphique existant
 
 Lorsque vous basez un dessin sur une image ou un graphique existant, chargez-le dans Inkscape dans son propre calque. Certains graphiques sont compatibles avec Inkscape [fonction de traçage automatique](https://inkscape.org/fr/doc/tutorials/tracing/tutorial-tracing.html) (`Chemin > Vectoriser une image matricielle` ou `Shift+Alt+B`), surtout si vous simplifiez d’abord l’image dans un éditeur graphique (par exemple avec[GIMP](https://www.gimp.org/)).
 
-**Astuce:** Si vous avez besoin de vectoriser un trait, vous pouvez utiliser un autre plugin Inkscape, qui a pour but de faire [traçage du trait d'axe](https://github.com/fablabnbg/inkscape-centerline-trace). Pour la broderie, il vaut mieux ne l'appliquer qu'aux formes simples.
-{: .notice--info }
-
-Après le traçage, nettoyez les formes vectorielles en utilisant `Chemin> Simplifier` (` Ctrl + L`) et en supprimant les nœuds à la main lorsque cela est possible. Le but est d’utiliser le moins de courbes de Bézier possible pour représenter l’image.
+Après le traçage, nettoyez les formes vectorielles en utilisant `Chemin> Simplifier` (` Ctrl + L`) et en supprimant les nœuds à la main lorsque cela est possible. Le but est d’utiliser le moins de courbes de Bézier possible pour représenter l’image. Souvent la vectorisation va produire des objets très petits qu'il n'est pas possible de broder. En conséquence, il est préférable de nettoyer votre document en utilisant `Extensions > Ink/Stitch > Résolution de problèmes > Nettoyer le document`.
 
 Lorsque l’image doit être tracée à la main, utilisez l’outil de dessin à main levée. Cet outil crée des chemins avec beaucoup de noeuds de Beziér, simplifiez donc autant que possible les courbes.
 
@@ -50,7 +47,10 @@ Lorsque l’image doit être tracée à la main, utilisez l’outil de dessin à
 
 ### Texte
 
-Pour le texte, choisissez une police avec soin. Il est assez difficile de faire en sorte que le satin soit beau quand il fait 1mm de large ou moins. Les polices sans empattement ont tendance à être les plus faciles. Pour un texte de moins de 4 mm de hauteur, il vous sera très difficile de donner une belle apparence aux lettres minuscules. Par conséquent, envisagez des majuscules. Les polices Cursive / Script peuvent bien fonctionner, mais ce ne sera pas aussi facile que vous le pensez.
+Pour le texte, choisissez une police avec soin. Il est assez difficile de faire en sorte que le satin soit beau quand il fait 1mm de large ou moins. Les polices sans empattement (sans serif) ont tendance à être les plus faciles. Pour un texte de moins de 4 mm de hauteur, il vous sera très difficile de donner une belle apparence aux lettres minuscules. Par conséquent, envisagez des majuscules. Les polices Cursive / Script peuvent bien fonctionner, mais ce ne sera pas aussi facile que vous le pensez.
+
+* Faites un clic droit sur le calque (si vous n'avez pas renommé le calque, il s'appellera `Calque 1`)
+Ink/Stitch vous offre la possibilité d'utiliser des fontes prêtes à broder qui peuvent être inserrées dans votre document via `Extensions > Ink/Stitch > Lettrage`
 
 ## ![Vectorize](/assets/images/docs/workflow-icon-vectorize.png) Etape 2: Convertir en vecteur de broderie et paramétrer
 
@@ -67,31 +67,24 @@ Vous pouvez enregistrer l'image d'origine en dupliquant le calque:
 * Cliquez sur `Dupliquer`
 * Fermez l'oeil en cliquant dessus.
 
-Cela rendra le premier calque invisible. Tout calque, groupe ou forme vectorielle défini comme invisible sera ignoré par Ink/ Stitch. Nous allons maintenant travailler avec la copie.
+Cela rendra le premier calque invisible. Tout calque, groupe ou forme vectorielle défini comme invisible sera ignoré par Ink/Stitch. Nous allons maintenant travailler avec la copie.
 
 ![Dialogue objet](/assets/images/docs/en/objects-panel.png)
 
 ### Groupes
 
-Use groups to structure your document:
+Utilisez les groupes pour structurer votre document:
 
 * Sélectionnez des objets avec votre souris
-* Ajouter ou supprimer des objets avec <key>shift</key><key>click</key>
+* Ajoutez ou supprimez des objets avec <key>shift</key><key>click</key>
 * Appuyez sur <key>Ctrl</key><key>G</key>
 
 
 Dégrouper des objets fonctionne comme suit:
 
 *Sélectionnez le(s) groupe(s)
-* Appuyez sur <key>Ctrl</key><key>Shift</key><key>G</key>
+* Appuyez sur <key>Ctrl</key><key>Shift</key><key>G</key>-----
 
-### Convertir en chemin
-
-Transformez ** tous les objets ** que vous souhaitez broder en chemins:
-* Sélectionner tous les objets (`Ctrl+A`)
-* Cliquer sur ![convertir en chemin](/assets/images/docs/inkscape-tools-convert-to-path.png) ou appuyer <key>Ctrl</key><key>Alt</key><key>C</key>.
-**Info:** Les objets qui ne sont pas de type "chemin" sont ignorés par Ink/Stitch.
-{: .notice--warning }
 
 ### Types de point
 
@@ -101,7 +94,7 @@ Regardez ce tableau et suivez les liens pour comprendre comment créer un type d
 Objet chemin | Type de point
 ---|---|---
 Trait(pointillé) |[point droit](/fr/docs/stitches/running-stitch/), [point manuel](/fr/docs/stitches/manual-stitch/), [point zig-zag](/fr/docs/stitches/zigzag-stitch/), [point triple](/fr/docs/stitches/bean-stitch/)
-Deux traits combinés (avec échelons optionnels) | [colonne satin](/fr/docs/stitches/satin-column), [point en E](/fr/docs/stitches/e-stitch)
+Deux traits combinés (avec traverses optionnelles) | [colonne satin](/fr/docs/stitches/satin-column), [point en E](/fr/docs/stitches/e-stitch)
 Chemin fermé avec une couleur de remplissage | [point de remplissage](/fr/docs/stitches/fill-stitch/)
 {: .equal-tables }
 
@@ -112,7 +105,7 @@ Définir les paramètres en utilisant `Extensions > Ink/Stitch  > Paramètres`. 
 
 A ce stade, enregistrez votre fichier SVG. Si Inkscape commence à ralentir (en raison d'une fuite de mémoire Inkscape), redémarrez-le avant de continuer.
 
-## ![Create Icon](/assets/images/docs/workflow-icon-order.png) Etape 3: Mettre le plan de broderie en ordre & Mettre des commandes
+## ![Create Icon](/assets/images/docs/workflow-icon-order.png) Etape 3: Ordonner le plan de broderie  & Mettre des commandes
 
 ### Ordre de broderie
 
@@ -121,6 +114,8 @@ Lorsque vous concevez des motifs pour des machines à broder qui ne peuvent pas 
 L'ordre des points affecte également la façon dont le tissu est étiré et rétréci. Chaque point déformera le tissu et vous devrez en tenir compte et compenser en conséquence. [Voir plus](/tutorials/push-pull-compensation/)
 
 Une fois que vous avez créé tous les vecteurs, il est temps de tout mettre dans le bon ordre. C'est ici que l'outil Objets d'Inkscapes (`Objets> Objets ...`) est utile. Optimisez votre ordre pour minimiser les changements de couleur et réduire ou masquer les sauts de points.
+Vous pouvez aussi utiliser la fonction de tri d'Ink/Stitch.
+
 Ink/Stitch brodera les objets dans l'ordre exact dans lequel ils apparaissent dans votre document SVG, du plus bas au plus élevé dans l'ordre d'empilement. Si la distance entre deux objets est longue, Ink/Stitch ajoutera automatiquement un point de saut entre eux. Il utilise la couleur de l'objet pour déterminer la couleur du fil. Par conséquent, si vous changez de couleur d'un objet à l'autre, une instruction de changement de fil sera ajoutée au fichier de sortie de la broderie.
 
 **Astuce:** Inkscape vous permet de "monter" et "descendre" des objets dans l'ordre d'empilement à l'aide des touches Page haut et Page bas. Les nouvelles fonctions "Monter" et "Descendre" vous donneront un bien meilleur contrôle de l'ordre d'empilement. Nous recommandons donc de leur lier Page haut et Page bas. [Plus d'Information](/fr/docs/customize/#shortcut-keys)
@@ -130,7 +125,7 @@ Ink/Stitch brodera les objets dans l'ordre exact dans lequel ils apparaissent da
 {: .notice--info }
 
 ### Commandes
-[Commandes](/fr/docs/commands/) aide également à optimiser votre chemin de point. Vous pouvez définir les points de début et de fin, déplacer le cadre dans des positions définies ou définir les commandes de découpage et de coupe, etc.
+[Commandes](/fr/docs/commands/) aide également à optimiser votre chemin de point. Vous pouvez définir les points de début et de fin, déplacer le cadre dans des positions définies ou définir les commandes de coupe, etc.
 
 ## ![Create Icon](/assets/images/docs/workflow-icon-visualize.png)  Etape 4: Visualiser
 
