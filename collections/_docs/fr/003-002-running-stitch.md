@@ -2,7 +2,7 @@
 title: "Point droit"
 permalink: /fr/docs/stitches/running-stitch/
 excerpt: ""
-last_modified_at: 2019-10-17
+last_modified_at: 2022-01-14
 toc: true
 ---
 ## Qu'est-ce que c'est
