@@ -14,7 +14,7 @@ L'outil de lettrage génère un texte multiligne sous la forme de colonnes satin
 * Faire `Extensions > Ink/Stitch  > Lettrage
 * Entrez votre texte (multi-ligne possible)
 * Définir la police et l'échelle
-* Cliquer sur `Apply and Quit`
+* Cliquer sur `Appliquer et Quittert`
 
 ## Options
 
