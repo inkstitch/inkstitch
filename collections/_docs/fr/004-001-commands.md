@@ -40,8 +40,6 @@ Ces commandes seront ajoutées au calque sélectionné.
 
 ![ignore-layer](/assets/images/docs/visual-commands-ignore-layer.jpg) [Ignorer le calque](#-ignore-layer)
 
-All objects in this layer will not be exported to embroidery files. A common usage of this command would be in tutorial files where you want Ink/Stitch not to render explainatory text.
-
 Aucun objet de ce calque ne sera exporté dans les fichiers de broderie. Cette commande est couramment utilisée dans les fichiers des tutoriels lorsqu'on ne veut pas que Ink/Stitch brode les textes explicatifs.
 
 #### Attacher des commandes aux objets sélectionnés ...
@@ -49,7 +47,7 @@ Aucun objet de ce calque ne sera exporté dans les fichiers de broderie. Cette c
 Ces commandes seront attachées aux objets actuellement sélectionnés.
 ![starting point symbol](/assets/images/docs/visual-commands-start.jpg) ![ending point symbol](/assets/images/docs/visual-commands-end.jpg)Position de départ/de fin pour un remplissage 
 
-Définnit  (1) le point de départ  (2) le point d'arrivée d'un remplissage.
+Définit  (1) le point de départ  (2) le point d'arrivée d'un remplissage.
 
 
 ![symbole de coupe](/assets/images/docs/visual-commands-trim.jpg) [Coupe](#-coupe-le-fil) le fil après avoir brodé l'objet
