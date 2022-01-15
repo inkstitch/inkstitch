@@ -2,7 +2,7 @@
 title: "Organisation du travail"
 permalink: /fr/docs/workflow/
 excerpt: ""
-last_modified_at: 2019-10-19
+last_modified_at: 2022-01-14
 toc: true
 ---
 ![Ink/Stitch workflow](/assets/images/docs/en/workflow-chart.svg)
@@ -28,17 +28,21 @@ Essayer aussi d'autres outils de la barre des outils. Par exemple des formes sp�
 
 ####  Modifier les chemins
 Modifier les objets et les chemins avec:
-* ![outil de sélectionicon](/assets/images/docs/inkscape-tools-select.png) Outil de sélection (<key>S</key>) and 
+* ![outil de sélectionicon](/assets/images/docs/inkscape-tools-select.png) Outil de sélection (<key>S</key>) et 
 * ![outil noeud icon](/assets/images/docs/inkscape-tools-node.png) Outil d'édition de noeuds (<key>N</key>)
 
 Mettez à l'échelle, faites pivoter et déplacez tout l'objet avec l'outil de sélection. L'éditeur de nœuds sert à manipuler les nœuds sélectionnés, etc.
-De plus, vous pouvez utiliser les effets de chemin (`Chemin> Effets de chemin`). N'oubliez pas de toujours reconvertir l'objet résultant en un chemin, (`Chemin> Objet en chemin`).
+
+De plus, vous pouvez utiliser les effets de chemin (`Chemin> Effets de chemin`). 
+N'oubliez pas de toujours reconvertir l'objet résultant en un chemin, (`Chemin> Objet en chemin`).
 
 ### Utiliser une image / un graphique existant
 
 Lorsque vous basez un dessin sur une image ou un graphique existant, chargez-le dans Inkscape dans son propre calque. Certains graphiques sont compatibles avec [la fonction de traçage automatique](https://inkscape.org/fr/doc/tutorials/tracing/tutorial-tracing.html) d'Inkscape (`Chemin > Vectoriser une image matricielle` ou `Shift+Alt+B`), surtout si vous simplifiez d’abord l’image dans un éditeur graphique (par exemple avec [GIMP](https://www.gimp.org/)).
 
-Après le traçage, nettoyez les formes vectorielles en utilisant `Chemin> Simplifier` (` Ctrl + L`) et en supprimant les nœuds à la main lorsque cela est possible. Le but est d’utiliser le moins de courbes de Bézier possible pour représenter l’image. Souvent la vectorisation va produire des objets très petits qu'il n'est pas possible de broder. En conséquence, il est préférable de nettoyer votre document en utilisant `Extensions > Ink/Stitch > Résolution de problèmes > Nettoyer le document`.
+Après le traçage, nettoyez les formes vectorielles en utilisant `Chemin> Simplifier` (` Ctrl + L`) et en supprimant les nœuds à la main lorsque cela est possible. Le but est d’utiliser le moins de courbes de Bézier possible pour représenter l’image. 
+
+Souvent la vectorisation va produire des objets très petits qu'il n'est pas possible de broder. En conséquence, il est préférable de nettoyer votre document en utilisant `Extensions > Ink/Stitch > Résolution de problèmes > Nettoyer le document`.
 
 Lorsque l’image doit être tracée à la main, utilisez l’outil de dessin à main levée. Cet outil crée des chemins avec beaucoup de noeuds, simplifiez donc autant que possible les courbes.
 
@@ -47,7 +51,7 @@ Lorsque l’image doit être tracée à la main, utilisez l’outil de dessin à
 
 ### Texte
 
-Pour le texte, choisissez une police avec soin. Il est assez difficile de faire en sorte que le satin soit beau quand il fait 1mm de large ou moins. Les polices sans empattement (sans serif) ont tendance à être les plus faciles. Pour un texte de moins de 4 mm de hauteur, il vous sera très difficile de donner une belle apparence aux lettres minuscules. Par conséquent, envisagez des majuscules. Les polices Cursive / Script peuvent bien fonctionner, mais ce ne sera pas aussi facile que vous le pensez.
+Pour le texte, choisissez une police avec soin. Il est assez difficile de faire en sorte que le satin soit beau quand il fait 1mm de large ou moins. Les polices sans empattement (sans serif) ont tendance à être les plus faciles à numériser. Pour un texte de moins de 4 mm de hauteur, il vous sera très difficile de donner une belle apparence aux lettres minuscules. Par conséquent, envisagez des majuscules. Les polices Cursive / Script peuvent bien fonctionner, mais ce ne sera pas aussi facile que vous le pensez.
 
 Ink/Stitch vous offre la possibilité d'utiliser des fontes prêtes à broder qui peuvent être inserrées dans votre document via `Extensions > Ink/Stitch > Lettrage`
 
@@ -59,7 +63,7 @@ Ink/Stitch vous offre la possibilité d'utiliser des fontes prêtes à broder qu
 
 Nous vous recommandons de faire un usage intensif des calques et des groupes à ce stade.
 
-Dans le panneau des objets (ouvert avec <key>Ctrl</key> <key>Shift</key> <key>O</key>, vous pouvez gérer des calques, des groupes et des objets.
+Dans le panneau des objets (ouvert avec <key>Ctrl</key> <key>Shift</key> <key>O</key>), vous pouvez gérer des calques, des groupes et des objets.
 Vous pouvez enregistrer l'image d'origine en dupliquant le calque:
 
 * Faites un clic droit sur le calque (si vous n'avez pas renommé le calque, il s'appellera `Calque 1`)
@@ -78,18 +82,18 @@ Utilisez les groupes pour structurer votre document:
 
 * Sélectionnez des objets avec votre souris
 * Ajoutez ou supprimez des objets avec <key>shift</key> <key>click</key>
-* Appuyez sur <key>Ctrl</key> <key>G</key>
+* Appuyez sur <key>Ctrl</key><key>G</key>
 
 
 Dégrouper des objets fonctionne comme suit:
 
 *Sélectionnez le(s) groupe(s)
-* Appuyez sur <key>Ctrl</key> <key>Shift</key> <key>G</key>-----
+* Appuyez sur <key>Ctrl</key <key>Shift</key><key>G</key>-----
 
 
 ### Types de point
 
-Ink/Stitch propose différents types de points. Selon le type de point que vous souhaitez utiliser, vous devez définir la couleur de remplissage ou les paramètres de trait avec`Objet > Fond et forme...` (<key>Ctrl</key> <key>Shift</key> <key>F</key>).
+Ink/Stitch propose différents types de points. Selon le type de point que vous souhaitez utiliser, vous devez définir la couleur de remplissage ou les paramètres de trait avec`Objet > Fond et forme...` (<key>Ctrl</key><key>Shift</key><key>F</key>).
 Regardez ce tableau et suivez les liens pour comprendre comment créer un type de point spécifique:
 
 Objet chemin | Type de point
