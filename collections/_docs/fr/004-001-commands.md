@@ -18,7 +18,7 @@ Il est recommandé d’ajouter des commandes via les extensions:
 * Sélectionnez un ou plusieurs objets
 * Lancez `Extensions > Ink/Stitch  > Commandes > Attacher commandes ...`
 * Activez les commandes souhaitées et cliquez sur appliquer
-* Commandes Départ/Stop/découpage: Le noeud final du connecteur le plus proche de l'objet est le point auquel l'effet sera effectué.
+* Commandes Départ/Stop/découpage: Le noeud final du connecteur le plus proche de l'objet est le point auquel l'effet sera appliqué.
 
 Dans `Extensions > Ink/Stitch  > Commandes` vous trouverez trois options: ajouter des commandes, ajouter des commandes de calque et attacher des commandes à l'objet sélectionné.
 ### Ajouter des Commandes ...
