@@ -64,13 +64,13 @@ Les objets auxquels cette commande est associée seront exclus du plan de broder
 
 ![symbole de découpage de point satin](/assets/images/docs/visual-commands-satin-cut-point.jpg) [Point de partage de la colonne satin](#-point-de-partage-de-colonne-satin)
 
-Fractionner une colonne satin au point spécifié par cette commande. Après le placement de la commande, exécutez la commande "[Cut Satin Column] (/fr/docs/satin-tools/#scinder-une-colonne-satin)".
+Fractionner une colonne satin au point spécifié par cette commande. Après le placement de la commande, exécutez la commande "[Scinder une colonne satin] (/fr/docs/satin-tools/#scinder-une-colonne-satin)".
 
 
 ![symbole de position de départ de auto route satin](/assets/images/docs/visual-commands-auto-route-satin-stitch-start.jpg) ![symbole de position de fin de auto route satin](/assets/images/docs/visual-commands-auto-route-satin-stitch-end.jpg) symbole de position de départ/de fin de auto route satin
 
 
-Définit le point de départ (1) ou le point final (2) de la colonne auto route satin. Exécutez ensuite "[Colonne satin de routage automatique ...](/fr/docs/satin-tools/#auto-route-satin-columns)".
+Définit le point de départ (1) ou le point final (2) de la colonne auto route satin. Exécutez ensuite "[Remplissage automatique de Colonne Satin. ...](/fr/docs/satin-tools/#auto-route-satin-columns)".
 
 
   [Télécharger le fichier exemple](/assets/images/docs/visual-commands-fill-stitch.svg){: download="visual-commands-fill-stitch.svg" title="Télécharger le fichier exemple"}
