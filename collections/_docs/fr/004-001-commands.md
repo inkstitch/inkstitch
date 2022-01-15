@@ -38,7 +38,7 @@ Spécifie l'origine (point (0,0)) du fichier de broderie. Particulièrement util
 
 Ces commandes seront ajoutées au calque sélectionné.
 
-![symbole ignorer le calque ](/assets/images/docs/visual-commands-ignore-layer.jpg) Ignorer le calque
+![symbole ignorer le calque ](/assets/images/docs/visual-commands-ignore-layer.jpg) Ignorer le calque (#-symbole ignorer le calque)
 
 All objects in this layer will not be exported to embroidery files. A common usage of this command would be in tutorial files where you want Ink/Stitch not to render explainatory text.
 
