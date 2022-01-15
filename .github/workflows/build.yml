@@ -170,7 +170,7 @@ jobs:
           pip install -r requirements.txt
           # with --no-binary argument may fix notary issues as well shapely speedups error issue
           pip install -U lxml --no-binary lxml
-          pip uninstall shapely
+          pip uninstall --yes shapely
           pip install -U Shapely==1.8.0 --no-binary Shapely
           pip install pyinstaller
 
