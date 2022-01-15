@@ -45,7 +45,7 @@ Aucun objet de ce calque ne sera exporté dans les fichiers de broderie. Cette c
 
 Ces commandes seront attachées aux objets actuellement sélectionnés.
 
-![starting point symbol](/assets/images/docs/visual-commands-start.jpg) ![ending point symbol](/assets/images/docs/visual-commands-end.jpg)Position de départ/de fin pour un remplissage 
+![starting-point-symbol](/assets/images/docs/visual-commands-start.jpg) ![ending point symbol](/assets/images/docs/visual-commands-end.jpg)   [Position de départ/de fin pour un remplissage](#-starting-point-symbol)
 
 Définit  (1) le point de départ  (2) le point d'arrivée d'un remplissage.
 
@@ -54,7 +54,7 @@ Définit  (1) le point de départ  (2) le point d'arrivée d'un remplissage.
 
 "Couper après" indique à la machine à broder de couper le fil une fois que l'objet désigné a été brodé. Toutes les machines domestiques ne prennent pas en charge la fonction de coupe dans un bloc de couleur. Principalement utilisé pour empêcher le saut de fil entre les objets de broderie et pour éviter la coupe des fils après la broderie par l'opérateur.
 
-![symbole de stop ](/assets/images/docs/visual-commands-stop.jpg) [Stop](#-stop) (pause) la machine parès avoir brodé cet objet (pour les appliqués, etc)
+![symbole de stop ](/assets/images/docs/visual-commands-stop.jpg) [Stop](#-stop) (pause) la machine après avoir brodé cet objet (pour les appliqués, etc)
 
 Les machines à broder commerciales qui ont plusieurs aiguilles passent normalement d’une couleur à l’autre sans pause entre elles. Parfois, vous * voulez * une pause (par exemple pour couper le tissu appliqué), donc "STOP après" ajoute un changement de couleur supplémentaire qui peut être affecté à une instruction d'arrêt spéciale à l'aide de l'interface utilisateur de la machine (par exemple C00 sur les machines Barudan). Les utilisations courantes de cette méthode sont l’application de mousse feuilletée après une broderie régulière. Appliquer du tissu appliqué et / ou même vouloir ralentir la machine à un certain endroit pour certains types de broderie sans avoir à surveiller la machine.
 
