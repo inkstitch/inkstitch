@@ -118,7 +118,7 @@ Lorsque vous concevez des motifs pour des machines à broder qui ne peuvent pas 
 
 L'ordre des points affecte également la façon dont le tissu est étiré et rétréci. Chaque point déformera le tissu et vous devrez en tenir compte et compenser en conséquence. [Voir plus](/tutorials/push-pull-compensation/)
 
-Une fois que vous avez créé tous les vecteurs, il est temps de tout mettre dans le bon ordre. C'est ici que l'outil Objets d'Inkscapes (`Objets> Objets ...`) est utile. Optimisez votre ordre pour minimiser les changements de couleur et réduire ou masquer les sauts de points.
+Une fois que vous avez créé tous les vecteurs, il est temps de tout mettre dans le bon ordre. C'est ici que l'outil Objets d'Inkscapes (`Objet> Objets ...`) est utile. Optimisez votre ordre pour minimiser les changements de couleur et réduire ou masquer les sauts de points.
 Vous pouvez aussi utiliser la fonction de tri d'Ink/Stitch.
 
 Ink/Stitch brodera les objets dans l'ordre exact dans lequel ils apparaissent dans votre document SVG, du plus bas au plus élevé dans l'ordre d'empilement. Si la distance entre deux objets est longue, Ink/Stitch ajoutera automatiquement un point de saut entre eux. Il utilise la couleur de l'objet pour déterminer la couleur du fil. Par conséquent, si vous changez de couleur d'un objet à l'autre, une instruction de changement de fil sera ajoutée au fichier de sortie de la broderie.
@@ -130,7 +130,7 @@ Ink/Stitch brodera les objets dans l'ordre exact dans lequel ils apparaissent da
 {: .notice--info }
 
 ### Commandes
-[Commandes](/fr/docs/commands/) aide également à optimiser votre chemin de point. Vous pouvez définir les points de début et de fin, déplacer le cadre dans des positions définies ou définir les commandes de coupe, etc.
+[Commandes](/fr/docs/commands/) aide également à optimiser votre chemin de points. Vous pouvez définir les points de début et de fin, déplacer le cadre dans des positions définies ou définir les commandes de coupe, etc.
 
 ## ![Create Icon](/assets/images/docs/workflow-icon-visualize.png)  Etape 4: Visualiser
 
@@ -138,7 +138,7 @@ Ink/Stitch prend en charge trois façons de prévisualiser votre conception:
 
 * [Simulateur](/fr/docs/simulate/)
 * [Aperçu d'impression](/fr/docs/print/)
-* [Affichage du plan de broderie](/fr/docs/import-export/#method-2-display-stitch-plan) (Undo with <key>Ctrl</key><key>Z</key>)
+* [Affichage du plan de broderie](/fr/docs/import-export/#method-2-display-stitch-plan) 
 
 ## ![Create Icon](/assets/images/docs/workflow-icon-export.png) Etape 5: Enregistrer le fichier broderie
 
