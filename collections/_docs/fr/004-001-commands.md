@@ -33,7 +33,7 @@ La machine à broder déplace l'aiguille jusqu'à ce point avant chaque commande
 Spécifie l'origine (point (0,0)) du fichier de broderie. Particulièrement utile pour les personnes qui ont accès à tout l'espace de broderie possible pour leur machine, indépendement du cadre utilisé.
 
 
-#### Ajouter des commandes de calque ...
+### Ajouter des commandes de calque ...
 
 Ces commandes seront ajoutées au calque sélectionné.
 
@@ -41,7 +41,7 @@ Ces commandes seront ajoutées au calque sélectionné.
 
 Aucun objet de ce calque ne sera exporté dans les fichiers de broderie. Cette commande est couramment utilisée dans les fichiers des tutoriels lorsqu'on ne veut pas que Ink/Stitch brode les textes explicatifs.
 
-#### Attacher des commandes aux objets sélectionnés ...
+### Attacher des commandes aux objets sélectionnés ...
 
 Ces commandes seront attachées aux objets actuellement sélectionnés.
 
