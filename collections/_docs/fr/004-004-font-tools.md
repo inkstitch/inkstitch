@@ -37,48 +37,51 @@ Si vous avez généré votre fichier svg sans informations de crénage, cette ex
 * **Reversible**: si votre police peut être brodée vers l'avant et vers l'arrière ou seulement vers l'avant
 * **Forcer la casse**:
   * Non: choisissez cette option si votre police contient des lettres majuscules et minuscules (par défaut).
-  * Upper: Choisissez cette option si votre police ne contient que des majuscules.
-  * Lower: Choisissez cette option si votre police ne contient que des minuscules.
+  * Majuscule: Choisissez cette option si votre police ne contient que des majuscules.
+  * Minuscule: Choisissez cette option si votre police ne contient que des minuscules.
 * **Glyphe par défaut**: le glyphe à afficher si le glyphe demandé par l'utilisateur n'est pas disponible dans le fichier de police (glyphe manquant)
 * **Min Scale / Max Scale**: Définit dans quelle mesure vos glyphes peuvent être agrandis ou diminués sans perdre en qualité une fois brodés
 
 Les champs suivants sont facultatifs, uniquement nécessaires lorsque votre fichier svg ne contient pas d'informations de crénage.
 Si les informations de crénage ne peuvent être trouvées, ces valeurs seront utilisées en remplacement.
 
-* **Force custom values**: Do not use the kerning information from the svg file, but use the given values instead.
+* **Forcer des valeurs de crénage**:  Ne pas utiliser l'information de crénage du fichier svg, mais utiliser plutôt ces valeurs:
 
-* **Leading (px)**: Defines the line height of your font. Leave to `0` to let Ink/Stitch read it from your font file (defaults to 100 if the information cannot be found).
-* **Word spacing (px)**: The width of the "space" character
+* **Hauteur de ligne (px)**:  Défini la hauteur d'une ligne de vote fonte. Si vous laissez à 0, Ink/Stitch lit la valeur dans votre fichier de fonte svg (si aucune info ne peut être trouvé,  100 est la valeur par défaut).
+* **Espacement des mots (px)**: La largeur du caractère "espace"
 
-A file `font.json` will be saved into the folder of your svg font file.
+Un fichier `font.json` sera enregistré dans le dossier de votre fichier de fonte svg.
 
-## Remove Kerning
+## Supprimer les informations de crénage
 
-**⚠ Warning**: Changes made by this tool cannot be reverted. Make sure to save a **copy** of your file before performing these steps.
+**⚠ Attention**: Les modifications effectuées par cet outil sont irréversibles. N'oubliez pas de faire **une copie** de votre fichier svg avant d'utiliser cet outil.
 {: .notice--warning }
 
-Your font is ready to be used. But when you created your font with FontForge it now contains a lot information which isn't necessary for your font to work and could possibly slow it down a little.
-Ink/Stitch comes with a tool to clean up your svg font.
+Votre fonte est prête pour l'utilisation. Toutefois lorsque vous avez créer votre fichier de fonte avec Fontforge, il contient beaucoup d'informations qui ne sont plus nécssaires et qui peuvent ralentir légérement le travail
 
-1. Make sure you save a **copy** of your font. The additional information may not be necessary for the font to be used, but it can become handy when you want to add additional glyphs.
-2. Run `Extensions > Ink/Stitch > Font Tools > Remove Kerning`
-3. Choose your font file(s)
-4. Click on apply
 
-## Letters to font
+Ink/Stitch contient un outil de nettoyage de votre fichier de fonte.
 
-"Letters to font" is a tool to convert predigitized embroidery letters into a font for use with the Ink/Stitch lettering tool.
+1. Faites une **copie** de votre fonte. Les informations additionnelles ne sont pas utiles pour se servir de la fonte, mais peuvent être utiles si vous souhaitez ajouter de nouveaux glypes.
+2. Exécutez `Extensions > Ink/Stitch > Gestion des polices > Supprimer les informations de crènage`
+3. Sélectionnez votre fichier de fonte
+4. Clicquez sur `Appliquer`
 
-The digitized font needs to meet certain **conditions** to be imported:
-* One file for each glyph in an embroidery format that Ink/Stitch can read
-* The glyph name needs to be positioned at the end of the file name. A valid file name for the capital A would be e.g. `A.pes` or `Example_Font_A.pes`.
+## Lettres vers police
 
-You will often see, that bought fonts are organized in subfolders, because each letter comes in various embroidery file formats. You don't need to change the file structure in this case. Letters to font will search the font files also within the subfolders.
+"Lettres vers police" est un outil pour convertir un ensemble de lettres prédigitalisées en broderie en une police utilisable par l'outil Lettrage d'Ink/Stitch.
+
+La font prédigitalisée doit remplir certaines **conditions** pour être importée:
+
+* A chaque glyphe doit correspondre un fichier dans un format de broderie que  Ink/Stitch peut lire
+* Le nom du fichier doit terminer par le nom du glyphe. Par exemple un nom de fichier valide pour la majuscule A pourraît être  `A.pes` ou `Example_Font_A.pes`.
+
+Souvent les fontes de broderie achetées sont organisées en sous dossiers car chaque lettre est fournie dans différent format de broderie. Vous n'avez pas besoin de modifier la structure des fichiers. "Lettres vers police" cherchera les lettres dans les sous-dossiers.
 {: .notice--info }
 
 ### Usage
 
-* Set the embroidery file format from which you want to import the letters (ideally choose a file format which is capable to store color information)
+* Choisissez le format de broderie des lettres que vous souhaitez importer (idéalement choisissez un format qui contient les informations de couleur)S
 * Select the font folder in which the letters are stored. If they are organiszed in subfolders, choose the main folder.
 * Choose wether you want to import commands or not (warning: imported commands on a large scale will cause a slow down)
 * Click on apply - and wait ...
