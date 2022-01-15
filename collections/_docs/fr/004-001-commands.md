@@ -67,8 +67,8 @@ Les objets auxquels cette commande est associée seront exclus du plan de broder
 Fractionner une colonne satin au point spécifié par cette commande. Après le placement de la commande, exécutez la commande "[Scinder une colonne satin] (/fr/docs/satin-tools/#scinder-une-colonne-satin)".
 
 
-![symbole-depart-auto-route-satin](/assets/images/docs/visual-commands-auto-route-satin-stitch-start.jpg) ![symbole de position de fin de auto route satin](/assets/images/docs/visual-commands-auto-route-satin-stitch-end.jpg) [symbole de position de départ/de fin de auto route satin] (#-symbole-depart-auto-route-satin)
 
+![auto-route-satin-stitch-start](/assets/images/docs/visual-commands-auto-route-satin-stitch-start.jpg) ![auto-route-satin-stitch-end](/assets/images/docs/visual-commands-auto-route-satin-stitch-end.jpg)   [Position de départ/de fin pour auto route colonne satin](#-auto-route-satin-stitch-start)
 
 Définit le point de départ (1) ou le point final (2) de la colonne auto route satin. Exécutez ensuite "[Remplissage automatique de Colonne Satin. ...](/fr/docs/satin-tools/#auto-route-satin-columns)".
 
