@@ -1,45 +1,46 @@
 ---
-title: "Thread Color Manager"
+title: "Gestion des couleurs de fil"
 permalink: /fr/docs/thread-color/
 excerpt: ""
 last_modified_at: 2021-09-27
 toc: true
 ---
-## Import Threadlist
+## Importer une liste de fils
 
-Ink/Stitch can apply custom threadlists to an embroidery design. This is especially useful, if you want to work on existing embroidery files which do not support color information (e.g. DST).
+Ink/Stitch peut appliquer des listes de fil personnalisées à une broderie. Ceci est particulièrement utile si vous souhaitez utiliser un fichier de broderie qui ne comporte pas d'information de couleur (par exemple DST).
 
-It could also be helpful, if you are wanting to test different color settings. You can export and import them as you like. But be careful not to change the amount and order of colors. In case you are planing to change these, you'd prefer to save the entire SVG instead.
+Ce peut être aussi utile si vous souhaitez essayer différents réglages de couleurs. Vous pouvez exporter et importer ces listes de fils à votre convenance, mais faites attention à ne changer ni le nombre ni l'ordre des couleurs Si vous souhaitez les changer, sauvegardez le svg entièrement dans une copie.
 
-## Import
-Run `Extensions > Ink/Stitch > Import Threadlist ...` to apply a threadlist exported by Ink/Stitch.
+## Importation
 
-If you want to import any other threadlist from a txt-file, choose the option "Import other threadlist" and pick a threadlist from the dropdown menu before clicking on apply.
+Exécutez  `Extensions > Ink/Stitch > Importer une liste de fils ...` pour appliquer une liste de fils exportée par  Ink/Stitch.
 
-**Tipp:** Install Add-Ons for Ink/Stitch to have more threadlists available.
+Si vous souhaitez importer une autre liste de fils en provenance d'un fichier txt, choisissez l'option "importer une autre liste de fils ", et choisissez une liste de fil à partir du menu déroulant avant de cliquer sur "Appliquer"
+
+
+**Astuce:** Installez des  Add-Ons pour Ink/Stitch pour avoir plus de liste de fils disponible.
 {: .notice--info }
 
-## Export
+## Exportation
 
-Threadlists can only be exported through a zip-file ([batch export](/fr/docs/import-export/#export-par-lot)).
+Les listes de fils ne peuvent être exportées que via un fichier zip e ([export par lot](/fr/docs/import-export/#export-par-lot)).
 
-[Read more about this function](/fr/docs/threadlist/)
+[Lire plus a propos de cette fonction](/fr/docs/threadlist/)
 
-## Install Custom Palette
+## Installer une Palette personnalisée 
 
-In case you own a `.gpl` color list of the threads you are actually using. Make it available in Inkscape with this extension: `Extensions > Ink/Stitch > Thread Color Management > Install custom palette...`. You will need to restart Inkscape after this process.
+Si vous disposez d'un fichier `.gpl` qui contient la liste des fils que vous utilisez, vous pouvez la rendre disponible dans Ink/Stitch via cette extension: `Extensions > Ink/Stitch > Gestion des couleurs de fil > Installer une palette personnalité...`. You will need to restart Inkscape after this process.
 
-The .gpl color palettes can be generated with GIMP.
+Les fichiers `.gpl` de palettes peuvent être générés par GIMP.
 
-## Install Thread Color Palettes for Inkscape
+## Installer des Palettes de fils pour  Inkscape
 
-Ink/Stitch comes with a lot of thread manufacturer color palettes which can be installed into Inkscape. This allows to build the designs with the correct colors in mind.
-Colors will appear in the PDF-Output and will also be included into your embroidery file, if your file format supports it. 
-
+Ink/Stitch est fourni avec de nombreuses palettes de fils de fabricants qui peuvent être installées dans Inkscape. Ceci permet de construire de broderies avec les bonnes couleurs à l'esprit.
+Les couleurs apparaîtrons dans la sortie pdf et seront aussi inclueses dans votre fichier de broderie si son format le permet.
 **Installer**
-* Aller à `Extensions > Ink/Stitch  > Installer add-ons pour Inkscape`
-* Cliquer sur `Install`
-* Redémarrer Inkscape
+* Allez à `Extensions > Ink/Stitch  > Installer add-ons pour Inkscape`
+* Cliquez sur `Instalerl`
+* Redémarrez Inkscape
 
 ## Palettes de couleurs du fabricant de fil
 
