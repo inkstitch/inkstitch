@@ -1,8 +1,8 @@
 ---
 title: "Imprimer"
-permalink: /fr/docs/print/
+permalink: /fr/docs/print-pdf/
 excerpt: ""
-last_modified_at: 2019-10-24
+last_modified_at: 2018-01-16
 toc: true
 ---
 ## Accéder à l'aperçu avant impression
