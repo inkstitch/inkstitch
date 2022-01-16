@@ -33,7 +33,7 @@ Si vous disposez d'un fichier `.gpl` qui contient la liste des fils que vous uti
 
 Les fichiers `.gpl` de palettes peuvent être générés par GIMP.
 
-## Installer des Palettes de fils pour Inkscape
+## Installer des Palettes de fils de fabricants pour Inkscape
 
 Ink/Stitch est fourni avec de nombreuses palettes de fils de fabricants qui peuvent être installées dans Inkscape. Ceci permet de construire des broderies avec les bonnes couleurs à l'esprit.
 Les couleurs apparaîtront dans la sortie pdf et seront aussi incluses dans votre fichier de broderie si son format le permet.
@@ -43,9 +43,9 @@ Les couleurs apparaîtront dans la sortie pdf et seront aussi incluses dans votr
 * Cliquez sur `Installer`
 * Redémarrez Inkscape
 
-## Palettes de couleurs du fabricant de fils
+## Utiliser les Palettes de couleurs du fabricant de fils
 
-Les palettes Inkscape se trouvent dans la partie inférieure droite des nuanciers.
+Une fois installées, les palettes Inkscape se trouvent dans la partie inférieure droite des nuanciers.
 
 ![Inkscape Color Palettes](/assets/images/docs/palettes-location.png)
 
