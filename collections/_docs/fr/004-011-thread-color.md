@@ -9,40 +9,41 @@ toc: true
 
 Ink/Stitch peut appliquer des listes de fil personnalisées à une broderie. Ceci est particulièrement utile si vous souhaitez utiliser un fichier de broderie qui ne comporte pas d'information de couleur (par exemple DST).
 
-Ce peut être aussi utile si vous souhaitez essayer différents réglages de couleurs. Vous pouvez exporter et importer ces listes de fils à votre convenance, mais faites attention à ne changer ni le nombre ni l'ordre des couleurs Si vous souhaitez les changer, sauvegardez le svg entièrement dans une copie.
+Ce peut être aussi utile si vous souhaitez essayer différents réglages de couleurs. Vous pouvez exporter et importer ces listes de fils à votre convenance, mais faites attention à ne changer ni le nombre ni l'ordre des couleurs. Si vous souhaitez les changer, faites le dans une copie du fichier svg.
 
 ## Importation
 
-Exécutez  `Extensions > Ink/Stitch > Importer une liste de fils ...` pour appliquer une liste de fils exportée par  Ink/Stitch.
+Exécutez `Extensions > Ink/Stitch > Importer une liste de fils ...` pour appliquer une liste de fils exportée par  Ink/Stitch.
 
 Si vous souhaitez importer une autre liste de fils en provenance d'un fichier txt, choisissez l'option "importer une autre liste de fils ", et choisissez une liste de fil à partir du menu déroulant avant de cliquer sur "Appliquer"
 
 
-**Astuce:** Installez des  Add-Ons pour Ink/Stitch pour avoir plus de liste de fils disponible.
+**Astuce:** Installez des  Add-Ons pour Ink/Stitch pour avoir plus de listes de fils disponibles.
 {: .notice--info }
 
 ## Exportation
 
-Les listes de fils ne peuvent être exportées que via un fichier zip e ([export par lot](/fr/docs/import-export/#export-par-lot)).
+Les listes de fils ne peuvent être exportées que via un fichier zip  ([export par lot](/fr/docs/import-export/#export-par-lot)).
 
-[Lire plus a propos de cette fonction](/fr/docs/threadlist/)
+[Lire plus à propos de cette fonction](/fr/docs/threadlist/)
 
 ## Installer une Palette personnalisée 
 
-Si vous disposez d'un fichier `.gpl` qui contient la liste des fils que vous utilisez, vous pouvez la rendre disponible dans Ink/Stitch via cette extension: `Extensions > Ink/Stitch > Gestion des couleurs de fil > Installer une palette personnalité...`. You will need to restart Inkscape after this process.
+Si vous disposez d'un fichier `.gpl` qui contient la liste des fils que vous utilisez, vous pouvez la rendre disponible dans Ink/Stitch via cette extension: `Extensions > Ink/Stitch > Gestion des couleurs de fil > Installer une palette personnalisée...`. Vous devrez ensuite redémarrer Inkscape.
 
 Les fichiers `.gpl` de palettes peuvent être générés par GIMP.
 
-## Installer des Palettes de fils pour  Inkscape
+## Installer des Palettes de fils pour Inkscape
 
-Ink/Stitch est fourni avec de nombreuses palettes de fils de fabricants qui peuvent être installées dans Inkscape. Ceci permet de construire de broderies avec les bonnes couleurs à l'esprit.
-Les couleurs apparaîtrons dans la sortie pdf et seront aussi inclueses dans votre fichier de broderie si son format le permet.
+Ink/Stitch est fourni avec de nombreuses palettes de fils de fabricants qui peuvent être installées dans Inkscape. Ceci permet de construire des broderies avec les bonnes couleurs à l'esprit.
+Les couleurs apparaîtront dans la sortie pdf et seront aussi incluses dans votre fichier de broderie si son format le permet.
+
 **Installer**
 * Allez à `Extensions > Ink/Stitch  > Installer add-ons pour Inkscape`
-* Cliquez sur `Instalerl`
+* Cliquez sur `Installer`
 * Redémarrez Inkscape
 
-## Palettes de couleurs du fabricant de fil
+## Palettes de couleurs du fabricant de fils
 
 Les palettes Inkscape se trouvent dans la partie inférieure droite des nuanciers.
 
