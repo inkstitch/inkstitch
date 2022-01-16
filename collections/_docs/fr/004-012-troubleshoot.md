@@ -9,7 +9,7 @@ toc: true
 
 Ink/Stitch peut parfois être déroutant. Surtout pour les débutants. Mais également si vous utilisez Ink/Stitch pendant un certain temps, vous recevrez des messages d'erreur, indiquant que quelque chose s'est mal passé et que votre forme ne peut pas être affichée pour une raison quelconque.
 
-Ink/Stitch est livré avec une extension de dépannage, conçue pour vous aider à comprendre l'erreur tout en vous indiquant la position exacte du problème. Elle vous indiquera comment résoudre chaque type d'erreur et donnera des conseils utiles sur les formes présentant des problèmes, même si elles ne causent pas d'erreur dans Ink/Stitch.
+Ink/Stitch est livré avec une extension de dépannage, conçue pour vous aider à comprendre les erreurs tout en vous indiquant la position exacte du problème. Elle vous indiquera comment résoudre chaque type d'erreur et donnera des conseils utiles sur les formes présentant des problèmes, même si elles ne causent pas d'erreur dans Ink/Stitch.
 
 ## Usage
 
@@ -35,11 +35,12 @@ The extensions will remove embroidery settings from your entire design or from s
 
 ![Remove embroidery settings - GUI](/assets/images/docs/en/remove-embroidery-settings.png)
 
-## Cleanup Document
+## Nettoyer le document
 
-Sometimes you will find very small shapes and leftover objects from various operations during your designing process in your SVG file. Ink/Stitch offers a function to clean up your document and prevent those objects from causing trouble.
+Parfois vous trouverez de très petites formes et des objets laissés par les différentes opération effectuées pendant la conception de votre fichier svg.
+Ink/Stitch  offre une fonction de nettoyage de votre document qui empêche ces objets de causer des problèmes.
 
-* Run `Extensions > Ink/Stitch > Troubleshoot > Cleanup Document...`
-* Choose which types of objects should be removed and define a threshold
-* Click apply
+* Exécutez `Extensions > Ink/Stitch > Résolution de problèmes > Nettoyer le document...`
+* Choisissez quels types d'objets doivent être supprimés et définissez un seuil
+* Cliquez sur "Appliquer"
 
