@@ -35,7 +35,7 @@ De plus, le fichier de police sera utilisé pour déterminer le chemin de sortie
 * **Agencement automatique des colonnes Satin**:
     * activé: Ink/Stitch générera une organisation raisonnable pour les colonnes de satin de votre police lorsqu'elle est utilisée dans l'outil de lettrage. [Plus d'information sur Agencement automatique des colonnes Satin](/fr/docs/satin-tools/#auto-route-satin-columns)
     * désactivé: Ink/Stitch utilisera les glyphes tels quels. Désactivez l'option, si vous vous avez créé vous-même l'agencement des colonnes satin dans votre police.
-* **Reversible**: si votre police peut être brodée vers l'avant et vers l'arrière ou seulement vers l'avant
+* **Réversible**: si votre police peut être brodée vers l'avant et vers l'arrière ou seulement vers l'avant
 * **Forcer la casse**:
   * Non: choisissez cette option si votre police contient des lettres majuscules et minuscules (par défaut).
   * Majuscule: Choisissez cette option si votre police ne contient que des majuscules.
@@ -48,7 +48,7 @@ Si les informations de crénage ne peuvent être trouvées, ces valeurs seront u
 
 * **Forcer des valeurs de crénage**:  Ne pas utiliser l'information de crénage du fichier svg, mais utiliser plutôt ces valeurs:
 
-* **Hauteur de ligne (px)**:  Défini la hauteur d'une ligne de vote fonte. Si vous laissez à 0, Ink/Stitch lit la valeur dans votre fichier de fonte svg (si aucune info ne peut être trouvé,  100 est la valeur par défaut).
+* **Hauteur de ligne (px)**:  Défini la hauteur d'une ligne de votre fonte. Si vous laissez à 0, Ink/Stitch lit la valeur dans votre fichier de fonte svg (si aucune info ne peut être trouvé,  100 est la valeur par défaut).
 * **Espacement des mots (px)**: La largeur du caractère "espace"
 
 Un fichier `font.json` sera enregistré dans le dossier de votre fichier de fonte svg.
@@ -58,23 +58,23 @@ Un fichier `font.json` sera enregistré dans le dossier de votre fichier de font
 **⚠ Attention**: Les modifications effectuées par cet outil sont irréversibles. N'oubliez pas de faire **une copie** de votre fichier svg avant d'utiliser cet outil.
 {: .notice--warning }
 
-Votre fonte est prête pour l'utilisation. Toutefois lorsque vous avez créé votre fichier de fonte avec Fontforge, il contient beaucoup d'informations qui ne sont plus nécssaires et qui peuvent ralentir légérement le travail.
+Votre fonte est prête pour l'utilisation. Toutefois lorsque vous avez créé votre fichier de fonte avec Fontforge, il contient beaucoup d'informations qui ne sont plus nécessaires et qui peuvent ralentir légèrement le travail.
 
 Ink/Stitch contient un outil de nettoyage de votre fichier de fonte.
 
-1. Faites une **copie** de votre fonte. Les informations additionnelles ne sont pas utiles pour se servir de la fonte, mais pourront vouq être utiles si vous souhaitez ajouter de nouveaux glypes.
-2. Exécutez `Extensions > Ink/Stitch > Gestion des polices > Supprimer les informations de crènage`
+1. Faites une **copie** de votre fonte. Les informations additionnelles ne sont pas utiles pour se servir de la fonte, mais pourront vous être utiles si vous souhaitez ajouter de nouveaux glyphes.
+2. Exécutez `Extensions > Ink/Stitch > Gestion des polices > Supprimer les informations de crénage`
 3. Sélectionnez votre fichier de fonte
 4. Cliquez sur `Appliquer`
 
 ## Lettres vers police
 
-"Lettres vers police" est un outil pour convertir un ensemble de lettres prédigitalisées en broderie en une police utilisable par l'outil Lettrage d'Ink/Stitch.
+"Lettres vers police" est un outil pour convertir un ensemble de lettres pré-digitalisées en broderie en une police utilisable par l'outil Lettrage d'Ink/Stitch.
 
-La fonte prédigitalisée doit remplir certaines **conditions** pour être importée:
+La fonte pré-digitalisée doit remplir certaines **conditions** pour être importée:
 
 * A chaque glyphe doit correspondre un fichier dans un format de broderie que Ink/Stitch peut lire
-* Le nom du fichier doit terminer par le nom du glyphe. Par exemple un nom de fichier valide pour la majuscule A pourraît être  `A.pes` ou `Example_Font_A.pes`.
+* Le nom du fichier doit terminer par le nom du glyphe. Par exemple un nom de fichier valide pour la majuscule A pourrait être  `A.pes` ou `Example_Font_A.pes`.
 
 Souvent les fontes de broderie achetées sont organisées en sous dossiers car chaque lettre est fournie dans différenst formats de broderie. Vous n'avez pas besoin de modifier la structure des fichiers. "Lettres vers police" cherchera les lettres dans les sous-dossiers.
 {: .notice--info }
@@ -86,5 +86,5 @@ Souvent les fontes de broderie achetées sont organisées en sous dossiers car c
 * Choisissez si vous souhaitez importez les commandes (coupe par exemple) ou pas (attention :importer les commandes lorsqu'elles sont nombreuses va causer un très fort ralentissement
 * Cliquez sur "appliquer" et..... attendre.....
 * Après l'importation déplacez la ligne de base à un endroit correct et positionnez les lettres en fonction. La position des lettres par rapport au  bord gauche de la page influence aussi le positionnement des lettres par l'outil de lettrage.
-* Sauvegarer votre fonte dans un fichier  `→.svg` dans un nouveau repertoire de votre  [répertoire personnalisé de polices](#custom-font-directory)
-* Exécutez  [`Génerer JSON`](#generate-json) pour rendre la police disponible dans l'outi de Lettrage et sauvegrder le fichier json dans le même dossier que votre fonte.  Ne pas cocher  "Agencement automatique de colonnes satin" pour les fontes pré digtalisées et laisser l'échelle à 1.
+* Sauvegardez votre fonte dans un fichier  `→.svg` dans un nouveau répertoire de votre  [répertoire personnalisé de polices](#custom-font-directory)
+* Exécutez  [`Génerer JSON`](#generate-json) pour rendre la police disponible dans l'outil de Lettrage et sauvegarder le fichier json dans le même dossier que votre fonte.  Ne pas cocher  "Agencement automatique de colonnes satin" pour les fontes pré-digitalisées et laisser l'échelle à 1.
