@@ -25,6 +25,7 @@ Le fichier json doit inclure au minimum le nom des polices.
 Cette extension est destinée à vous aider à créer le fichier json.
 Selon la façon dont vous avez généré votre fichier de police, il peut permettre d'inclure des informations de crénage supplémentaires dans le fichier json.
 Lire [**comment générer une police svg avec des informations de crénage**](/tutorials/font-creation).
+
 Si vous avez généré votre fichier svg sans informations de crénage, cette extension peut quand même vous aider à configurer votre fichier json avec des informations de base.
 
 * **Nom**: le nom de votre police (obligatoire).
