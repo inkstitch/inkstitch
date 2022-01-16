@@ -14,7 +14,7 @@ L'outil de lettrage génère un texte multiligne sous la forme de colonnes satin
 * Faire `Extensions > Ink/Stitch  > Lettrage
 * Entrez votre texte (multi-ligne possible)
 * Définir la police et l'échelle
-* Cliquer sur `Appliquer et Quittert`
+* Cliquer sur `Appliquer et Quitter`
 
 ## Options
 
@@ -29,11 +29,11 @@ L'outil de lettrage génère un texte multiligne sous la forme de colonnes satin
 
 Vous pouvez enregistrer et rouvrir vos paramètres de police préférés.
 
-## Font library
+## Bibliothèque de polices
 
-An overview of available fonts can be found it the [font library](/fr/fonts/font-library/).
+Un apperçu de toutes les polices disponibles peut être trouver dans la [bibliothèque de polices](/fr/fonts/font-library/).
 
-## Create new fonts for Ink/Stitch
+## Créer de nouvelle polices pour Ink/Stitch
+Lire le [tutoriel de création de police](/fr/tutorials/font-creation/).
 
-Read the [font creation tutorial](/fr/tutorials/font-creation/).
-Contact us if you are willing to publish your font in the Ink/Stitch lettering tool on [GitHub](https://github.com/inkstitch/inkstitch/issues).
+Contactez nous  sur  [GitHub](https://github.com/inkstitch/inkstitch/issues) si vous souhaitez publier votre police dans l'outil de lettrage d'Ink/Stitch.
