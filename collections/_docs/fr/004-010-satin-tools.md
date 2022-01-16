@@ -11,20 +11,21 @@ toc: true
 * Créer un chemin à l'aide de l'outil courbes de Bézier (`B`)
 * Faire [Convertir les lignes Satin](#convertir-des-lignes-en-satin)
 * Utiliser le [Dialogue de Paramètres ](/fr/docs/params/#paramètres-satin) pour choisir une sous-couche
-* Lancer [Remplissage automatique de colonne satin](#auto-route-satin-colonnes) pour obtenir des colonnes de satin bien organisées
+* Lancer [Agencement automatique des colonnes satin](#auto-route-satin-colonnes) pour obtenir des colonnes de satin bien organisées
 
 [![Convertir Ligne en Satin](/assets/images/docs/en/satin-tools.svg)](/assets/images/docs/en/satin-tools.svg){: title="Télécharger le fichier SVG" download="satin-tools.svg" }
 
 **Astuce** Pour un accès plus rapide [activer les raccourcis](/fr/docs/customize/) des outils satin spécifiques.
 {: .notice--info}
 
-## Remplissage automatique de Colonnes Satin...
+## Agencement automatique de Colonnes Satin...
 
 Cet outil remplacera vos colonnes satin par un nouvel ensemble de colonnes satin dans un ordre d'assemblage logique. Des sous-chemins et les sauts de points seront ajoutés si nécessaire et les colonnes seront scindées pour faciliter les sauts. Les points satins résultants conserveront tous les paramètres que vous avez définis sur les points satins originaux, y compris la sous-couche, l’espacement en zigzag, etc.
+
 ### Usage
 
 1. Sélectionnez les colonnes satin (préparées avec sous-couche, etc.)
-2. Lancer `Extensions > Ink/Stitch  > Ouils Satin > Remplissage automatique de Colonnes Satin...`
+2. Lancer `Extensions > Ink/Stitch  > Ouils Satin > Agencement automatique de Colonnes Satin...`
 3. Activer les options souhaitées et cliquez sur Appliquer
 
 **Astuce:** Par défaut, le point à l'extrême gauche sera choisi comme départ et celui à l'extrême droite comme fin (même s'ils se trouvent à mi-chemin dans un satin, tel que le bord gauche de la lettre "o"). Vous pouvez le remplacer en activant les [commandes de "Position de départ/fin pour points satin autogénérés"](/fr/docs/commands/).
@@ -46,20 +47,18 @@ Cette extension convertira un trait en une colonne satin avec une largeur spéci
 2. Définir une largeur de trait
 2. Lancer `Extensions > Ink/Stitch  > Satin Tools > Convert Line to Satin`
 
-## Convert Satin to Stroke
+## Convertir Satin en ligne
 
-Satin to stroke will convert a satin column to it's centerline. This can be useful, when you decide later in the designing process to turn a satin column into a running stitch. You can also use it to alter the thickness of your satin column, when pull compensation isn't satisfying. In that case use this function to convert your satin column into a running stitch, set stroke width in the fill and stroke panel and run the ["Convertir des Lignes en Satin"](#convertir-des-Lignes-en-atin) function. 
-
-This works best on evenly spaced satin columns.
+Satin en ligne converti une colonne satin en sa ligne centrale. Cette fonction peut être utile si vous décidez tardivement dans le processus de remplacer une colonne satin par un point droit. Vous pouvez aussi l'utiliser pour modifier l'épaisseur de votre colonne satin lorsqu'un étirement n'est pas satisfaisant.  Dans ce cas, convertissez votre colonne satin en point droit, modifiez la largeur du trait dans le panneau `Fond et Contour` puis exécutez  ["Convertir des Lignes en Satin"](#convertir-des-Lignes-en-atin) function. Ce processus fonctionne bien si les colonnes satin ont une épaisseur constante.
 
 ![Satin to Stroke example](/assets/images/docs/en/satin_to_stroke.png)
 
 ### Usage
 
-1. Select the satin column(s) you want to convert into a running stitch
-2. Run `Extensions > Ink/Stitch > Satin Tools > Convert satin to stroke...`
-3. Choose wether you want to keep selected satin column(s) or if you want to replace them
-4. Click apply
+1. Sélectionner la ou les colonne(s) satin que vous souhaitez convertir en point droit 
+2. Exécutez  `Extensions > Ink/Stitch > Outils de satin > Convertir satin en ligne...`
+3. Choisissez si vous souhaitez conserver les colonnes satin selectionnées ou les remplacer.
+4. Cliquez sur `Appliquer`
 
 ## Scinder une colonne Satin
 
