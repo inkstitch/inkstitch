@@ -2,7 +2,7 @@
 title: "Personnaliser Ink/Stitch"
 permalink: /fr/docs/customize/
 excerpt: ""
-last_modified_at: 2022-01-13
+last_modified_at: 2022-01-16
 toc: true
 ---
 ## Raccourcis Clavier
@@ -18,21 +18,21 @@ Certains de ces raccourcis remplacent des raccourcis natifs d'Inkscape. Dans le 
 
 Raccourcis&nbsp;Clavier | Effet | Remplace
 -------- | --------
-<key>Page Haut</key>                             | Monter dans la pile d'objets* | Objet > Monter (voir aussi les boutons de la barre d'outils)
-<key>Page Pas </key>                           | Descendre dans la pile d'objetsn* | Objet > Descendre (voir aussi les boutons de la barre d'outils)
+<key>Page Haut</key>                          | Monter dans la pile d'objets* | Objet > Monter (voir aussi les boutons de la barre d'outils)
+<key>Page Pas </key>                          | Descendre dans la pile d'objets* | Objet > Descendre (voir aussi les boutons de la barre d'outils)
 <key>ctrl</key>+<key>R</key>                  | Renverser la direction d'un chemin.**
 <key>ctrl</key>+<key>shift</key>+<key>P</key> | Paramètres | Edition > Préférences
 <key>ctrl</key>+<key>shift</key>+<key>L</key> | Simulateur en direct
 <key>ctrl</key>+<key>shift</key>+<key>/</key> | Prévisualisation du plan de broderie  | Chemin > Division (use Strg+/ instead)
-<key>ctrl</key>+<key>shift</key>+<key>O</key> | Séparer les objets de remplissage... (O  pour Objet) | Objet > Propriétés de l'objet
+<key>ctrl</key>+<key>shift</key>+<key>O</key> | Briser des objets de remplissage... (O  pour Objet) | Objet > Propriétés de l'objet
 <key>ctrl</key>+<key>shift</key>+<key>I</key> | Export PDF 
 <key>ctrl</key>+<key>shift</key>+<key>Q</key> | Lettrage (Q pour QWERTY) | Objet > Selecteurs et CSS
 <span style="white-space: nowrap;"><key>ctrl</key>+<key>shift</key>+<key>Del</key></span> | Dépistage de problèmes avec les objets
 <key>ctrl</key>+<key>shift</key>+<key>+</key> | Attacher des commandes aux objets selectionnés
-<key>ctrl</key>+<key>shift</key>+<key>U</key> | Convertir la ligne en colonne satin  (U ressemble à deux rails) | Objet > Grouper (utiliser Ctrl+G à la place)
-<key>ctrl</key>+<key>shift</key>+<key>J</key> | Intervertir les rails de la colonne satin  (J ressemble à une flèche)
-<key>ctrl</key>+<key>shift</key>+<key>B</key> | Couper la colonne satin  (B est coupé en deux parties) | Chemin > Union (utiliser Ctrl++ à la place )
-<key>ctrl</key>+<key>shift</key>+<key>*</key> |Remplissage automatique de colonnes satin (ordonne tout)
+<key>ctrl</key>+<key>shift</key>+<key>U</key> | Convertir ligne en satin  (U ressemble à deux rails) | Objet > Grouper (utiliser Ctrl+G à la place)
+<key>ctrl</key>+<key>shift</key>+<key>J</key> | Intervertir les rails satin  (J ressemble à une flèche)
+<key>ctrl</key>+<key>shift</key>+<key>B</key> | Scinder colonne satin  (B est coupé en deux parties) | Chemin > Union (utiliser Ctrl++ à la place )
+<key>ctrl</key>+<key>shift</key>+<key>*</key> | Agendement automatique de colonnes satin (ordonne tout)
 
 Dans Ink/Stitch la [simulation](/fr/docs/visualize/) inclut déjà le raccourci.
 
