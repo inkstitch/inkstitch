@@ -2,7 +2,7 @@
 title: "Outil lettrage"
 permalink: /fr/docs/lettering/
 excerpt: ""
-last_modified_at: 2019-10-23
+last_modified_at: 2022-01-15
 toc: true
 ---
 L'outil de lettrage génère un texte multiligne sous la forme de colonnes satin et génère de manière dynamique les points, divisant éventuellement les points satins et ajoutant du point droit.
