@@ -34,7 +34,7 @@ Si vous avez généré votre fichier svg sans informations de crénage, cette ex
 De plus, le fichier de police sera utilisé pour déterminer le chemin de sortie.
 * **Agencement automatique des colonnes Satin**:
     * activé: Ink/Stitch générera une organisation raisonnable pour les colonnes de satin de votre police lorsqu'elle est utilisée dans l'outil de lettrage. [Plus d'information sur Agencement automatique des colonnes Satin](/fr/docs/satin-tools/#auto-route-satin-columns)
-    * désactivé: Ink / Stitch utilisera les glyphes tels quels. Désactivez cette option, si vous vous avez créé vous-même l'agencement des colonnes satin dans votre police.
+    * désactivé: Ink/Stitch utilisera les glyphes tels quels. Désactivez cette option, si vous vous avez créé vous-même l'agencement des colonnes satin dans votre police.
 * **Reversible**: si votre police peut être brodée vers l'avant et vers l'arrière ou seulement vers l'avant
 * **Forcer la casse**:
   * Non: choisissez cette option si votre police contient des lettres majuscules et minuscules (par défaut).
