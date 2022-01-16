@@ -26,12 +26,11 @@ Vous recevrez soit un message indiquant qu'aucune erreur ne peut être trouvée,
 ## Supprimer les réglages de broderie
 
 Utilisez cette fonction si vous souhaitez supprimer les informations qu'Ink/Stitch a enregistré dans votre document.
-Ceci peut être particulierement utie lorsque vous copier/coller des broderies en provenance d'un autre docment.
-The extensions will remove embroidery settings from your entire design or from selected objects:
-* select objects
-  (skip this step if you want to clear all embroidery information)
-* Run `Extensions > Ink/Stitch > Remove embroidery settings...`
-* Select one or all of the given options and click apply
+Ceci peut être particulierement utie lorsque vous copier/coller des broderies en provenance d'un autre document.
+Cette extension supprimera les paramètres de broderie de votre broderie toute entière ou bien uniquement des objets selectionnés:
+* Sélectionnez des objets (sautez cette étape si vous voulez supprimer toutes les informations de broderie-
+* Exécutez `Extensions > Ink/Stitch > Supprimez les réglages de broderie...`
+* Selectionnez une ou plusieurs des options proposées et cliquez sur "Appliquer" 
 
 ![Remove embroidery settings - GUI](/assets/images/docs/en/remove-embroidery-settings.png)
 
