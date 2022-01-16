@@ -31,7 +31,7 @@ Vous pouvez enregistrer et rouvrir vos paramètres de police préférés.
 
 ## Bibliothèque de polices
 
-Un apperçu de toutes les polices disponibles peut être trouver dans la [bibliothèque de polices](/fr/fonts/font-library/).
+Un aperçu de toutes les polices disponibles se trouve dans la [bibliothèque de polices](/fr/fonts/font-library/).
 
 ## Créer de nouvelle polices pour Ink/Stitch
 Lire le [tutoriel de création de police](/fr/tutorials/font-creation/).
