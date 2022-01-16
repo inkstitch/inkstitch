@@ -1,13 +1,13 @@
 ---
-title: "Preferences"
+title: "Préférences"
 permalink: /fr/docs/preferences/
 excerpt: ""
-last_modified_at: 2021-03-06
+last_modified_at: 2022-01-15
 toc: false
 ---
-## Output Settings
+## Réglages de sortie
 
-* Collapse lenght (mm): Jump stitches smaller than this will be treated as normal stitches (without ties).
+* Sauts de fil (mm): Un saut de fil plus court que cette valeur sera traité comme un point normal (sans point d'arrêt)
 
-**Info**: This is not a general standard setting, it will only apply to the document on which you have run this function.
+**Info**: Ce réglage n'est pas général : il ne sera appliqué que pour le document sur lequel cette fonction aura été exécutée.
 {: .notice--info }
