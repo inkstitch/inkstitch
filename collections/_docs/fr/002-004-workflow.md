@@ -87,8 +87,8 @@ Utilisez les groupes pour structurer votre document:
 
 Dégrouper des objets fonctionne comme suit:
 
-*Sélectionnez le(s) groupe(s)
-* Appuyez sur <key>Ctrl</key <key>Shift</key><key>G</key>-----
+* Sélectionnez le(s) groupe(s)
+* Appuyez sur <key>Ctrl</key><key>Shift</key><key>G</key>-----
 
 
 ### Types de point
