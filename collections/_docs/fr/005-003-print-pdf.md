@@ -2,7 +2,7 @@
 title: "Imprimer"
 permalink: /fr/docs/print-pdf/
 excerpt: ""
-last_modified_at: 2018-01-16
+last_modified_at: 2020-09-30
 toc: true
 ---
 ## Accéder à l'aperçu avant impression
