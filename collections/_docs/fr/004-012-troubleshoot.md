@@ -14,20 +14,19 @@ Ink/Stitch est livré avec une extension de dépannage, conçue pour vous aider 
 ## Usage
 
 * (Optionel) Sélectionnez les objets que vous souhaitez tester. Si vous n'en sélectionnez aucun, l'ensemble du document sera testé.
-* Lancer `Extensions > Ink/Stitch > Troubleshoot Objects`
+* Lancer `Extensions > Ink/Stitch > Résolution de problèmes`
 
-Vous recevrez soit un message indiquant qu'aucune erreur ne peut être trouvée, soit un nouveau calque contenant les informations de dépannage sera ajouté à votre document SVG. Utilisez le panneau des objets(Ctrl + Shift + O) supprimer le calque une fois que vous avez terminé.
+Vous recevrez soit un message indiquant qu'aucune erreur ne peut être trouvée, soit un nouveau calque contenant les informations de dépannage sera ajouté à votre document SVG. Utilisez le panneau des objets(Ctrl + Shift + O) pour supprimer le calque une fois que vous avez terminé.
 
 ![Troubleshoot Example](/assets/images/docs/en/troubleshoot.jpg)
 
 **Astuce:** Il est possible qu'un objet contienne plus d'une erreur. Les formes de remplissage affichent uniquement la première erreur qui apparaîtra. Exécutez l'extension à nouveau si vous recevez encore des messages d'erreur.
 {: .notice--info }
 
-## Remove Embroidery Settings
+## Supprimer les réglages de broderie
 
-Use this function to remove the information Ink/Stitch has stored in your document.
-This can be especially useful if you copy and paste objects from an embroidery design into another document.
-
+Utilisez cette fonction si vous souhaitez supprimer les informations qu'Ink/Stitch a enregistré dans votre document.
+Ceci peut être particulierement utie lorsque vous copier/coller des broderies en provenance d'un autre docment.
 The extensions will remove embroidery settings from your entire design or from selected objects:
 * select objects
   (skip this step if you want to clear all embroidery information)
