@@ -102,7 +102,7 @@ docs:
       url: /fr/docs/satin-tools/
     - title: "Dépannage pour objets"
       url: /fr/docs/troubleshoot/
-    - title: "Thread Color Management"  
+    - title: "Gestion des couleurs de fil"  
       url: /fr/docs/thread-color/
     - title: Visualize
       url: /fr/docs/visualize/
