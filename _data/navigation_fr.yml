@@ -101,9 +101,9 @@ docs:
     - title: "Outils Satin"
       url: /fr/docs/satin-tools/
     - title: "Dépannage pour objets"
-    - title: "Thread Color Management"
-      url: /fr/docs/thread-color/
       url: /fr/docs/troubleshoot/
+    - title: "Thread Color Management"  
+      url: /fr/docs/thread-color/
     - title: Visualize
       url: /fr/docs/visualize/
   - title: "File Handling"
