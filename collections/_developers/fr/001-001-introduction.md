@@ -1,16 +1,17 @@
 ---
-title: "Get Involved"
+title: "Rejoignez Nous"
 permalink: /fr/developers/introduction/
-last_modified_at: 2018-10-12
+last_modified_at: 2022-01-16
 toc: false
 ---
-This section will provide information for developers, translators and documenters.
-Please visit the particular sections to get more informations.
 
-* [Developing Ink/Stitch](/developers/inkstitch/)
-* [Developing Pyembroidery](/developers/pyembroidery/)
+Cette section fournira des informations aux développeurs, traducteurs et documenteurs.
+Veuillez visiter les sections particulières pour obtenir plus d'informations.
+
+* [Developper Ink/Stitch](/developers/inkstitch/)
+* [Developper Pyembroidery](/developers/pyembroidery/)
 * [Documentation](/developers/documentation/)
-* [Localization](/developers/localize/)
-* [Bug Reports](/developers/report-bugs/)
+* [Localisation](/developers/localize/)
+* [Rapports d'erreurs](/developers/report-bugs/)
 
-Whenever you have questions or remark, please don't hesitate to get in touch with us through the [github issues](https://github.com/inkstitch/inkstitch/issues).
+Si vous avez des questions ou des remarques, n'hésitez pas à prendre contact avec nous via  [github issues](https://github.com/inkstitch/inkstitch/issues).
