@@ -2,10 +2,10 @@
 title: "Outils Satin"
 permalink: /fr/docs/satin-tools/
 excerpt: ""
-last_modified_at: 2019-10-21
+last_modified_at: 2022-01-16
 toc: true
 ---
-`Extensions > Ink/Stitch  > Satin Tools`inclut un certain nombre d’aides utiles, facilitant le travail avec [les colonnes satin](/fr/docs/stitches/satin-column/).
+`Extensions > Ink/Stitch  > Outils de satin` inclut un certain nombre d’aides utiles, facilitant le travail avec [les colonnes satin](/fr/docs/stitches/satin-column/).
 
 **Exemple:**
 * Créer un chemin à l'aide de l'outil courbes de Bézier (`B`)
@@ -25,7 +25,7 @@ Cet outil remplacera vos colonnes satin par un nouvel ensemble de colonnes satin
 ### Usage
 
 1. Sélectionnez les colonnes satin (préparées avec sous-couche, etc.)
-2. Lancer `Extensions > Ink/Stitch  > Ouils Satin > Agencement automatique de Colonnes Satin...`
+2. Lancer `Extensions > Ink/Stitch  > Outils de Satin > Agencement automatique de Colonnes Satin...`
 3. Activer les options souhaitées et cliquez sur Appliquer
 
 **Astuce:** Par défaut, le point à l'extrême gauche sera choisi comme départ et celui à l'extrême droite comme fin (même s'ils se trouvent à mi-chemin dans un satin, tel que le bord gauche de la lettre "o"). Vous pouvez le remplacer en activant les [commandes de "Position de départ/fin pour points satin autogénérés"](/fr/docs/commands/).
@@ -47,22 +47,24 @@ Cette extension convertira un trait en une colonne satin avec une largeur spéci
 2. Définir une largeur de trait
 2. Lancer `Extensions > Ink/Stitch  > Satin Tools > Convert Line to Satin`
 
-## Convertir Satin en ligne
+## Convertir le satin en trait
 
-Satin en ligne converti une colonne satin en sa ligne centrale. Cette fonction peut être utile si vous décidez tardivement dans le processus de remplacer une colonne satin par un point droit. Vous pouvez aussi l'utiliser pour modifier l'épaisseur de votre colonne satin lorsqu'un étirement n'est pas satisfaisant.  Dans ce cas, convertissez votre colonne satin en point droit, modifiez la largeur du trait dans le panneau `Fond et Contour` puis exécutez  ["Convertir des Lignes en Satin"](#convertir-des-Lignes-en-atin) function. Ce processus fonctionne bien si les colonnes satin ont une épaisseur constante.
+Satin en trait converti une colonne satin en sa ligne centrale. Cette fonction peut être utile si vous décidez, tardivement dans le processus, de remplacer une colonne satin par un point droit. Vous pouvez aussi l'utiliser pour modifier l'épaisseur de votre colonne satin lorsqu'un étirement n'est pas satisfaisant.  
+
+Dans ce cas, convertissez votre colonne satin en point droit, modifiez la largeur du trait dans le panneau `Fond et Contour` puis exécutez  ["Convertir des lignes en Satin"](#convertir-des-Lignes-en-atin) function. Ce processus fonctionne bien si les colonnes satin ont une épaisseur constante.
 
 ![Satin to Stroke example](/assets/images/docs/en/satin_to_stroke.png)
 
 ### Usage
 
-1. Sélectionner la ou les colonne(s) satin que vous souhaitez convertir en point droit 
-2. Exécutez  `Extensions > Ink/Stitch > Outils de satin > Convertir satin en ligne...`
+1. Sélectionner la ou les colonne(s) satin que vous souhaitez convertir en point droit.
+2. Exécutez  `Extensions > Ink/Stitch > Outils de satin > Convertir satin en trait...`
 3. Choisissez si vous souhaitez conserver les colonnes satin selectionnées ou les remplacer.
 4. Cliquez sur `Appliquer`
 
 ## Scinder une colonne Satin
 
-Scinder une colonne Satin à un point précisé. La coupure a lieu à la limite d'un point pour que les deux satins résultants soient cousus exactement comme l'original. Tous les paramètres définis sur le satin d'origine restent sur les deux nouveaux satins et toutes les traverses sont conservées. Si l'un des satins n'a plus de traverse, de nouvelles sont ajoutées.
+Scinder une colonne Satin à un point précis. La coupure a lieu à la limite d'un point pour que les deux satins résultants soient cousus exactement comme l'original. Tous les paramètres définis sur le satin d'origine restent sur les deux nouveaux satins et toutes les traverses sont conservées. Si l'un des satins n'a plus de traverse, de nouvelles sont ajoutées.
 
 ### Usage
 
@@ -70,11 +72,12 @@ Scinder une colonne Satin à un point précisé. La coupure a lieu à la limite 
 2. Ajouter la commande "Point de partage..." avec `Extensions > Ink/Stitch  > Commandes > Attacher des Commandes à un objet sélectionné`.
 3. Déplacez le symbole (ou simplement l'extrémité de la ligne de connexion) pour pointer sur l'endroit exact où vous souhaitez diviser le satin.
 4. Sélectionnez à nouveau la colonne satin.
-5. Faire `Extensions > Ink/Stitch  > Outils Satin > Scinder colonne Satin`.
+5. Faire `Extensions > Ink/Stitch  > Outils de Satin > Scinder colonne Satin`.
 6. La commande de point de partage et la ligne de connexion disparaissent et il ne semble plus rien s'être passé. Sélectionnez votre satin et vous verrez qu'il a été divisé.
+7. 
 ## Intervertir les rails des colonnes satin
 
-C'est un petit outil pour vous aider à planifier votre chemin de points avec précision. Par exemple. retourner les colonnes satin pour raccourcir les connexions entre deux sections.
+C'est un petit outil pour vous aider à planifier votre chemin de points avec précision: par exemple, retourner les colonnes satin pour raccourcir les connexions entre deux sections.
 
 Une colonne satin qui commence à l'origine sur le rail de gauche et se termine à droite commence sur le rail de droite et se termine à gauche.
 ![Retourner la colonne satin](/assets/images/docs/en/flip-satin-column.jpg)
