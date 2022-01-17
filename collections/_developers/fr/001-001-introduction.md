@@ -8,8 +8,8 @@ toc: false
 Cette section fournira des informations aux développeurs, traducteurs et documenteurs.
 Veuillez visiter les sections particulières pour obtenir plus d'informations.
 
-* [Developper Ink/Stitch](/developers/inkstitch/)
-* [Developper Pyembroidery](/developers/pyembroidery/)
+* [Développer Ink/Stitch](/developers/inkstitch/)
+* [Développer Pyembroidery](/developers/pyembroidery/)
 * [Documentation](/developers/documentation/)
 * [Localisation](/developers/localize/)
 * [Rapports d'erreurs](/developers/report-bugs/)
