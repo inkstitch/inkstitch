@@ -1,21 +1,22 @@
 ---
-title: "Developing Ink/Stitch"
+title: "DévelopperInk/Stitch"
 permalink: /fr/developers/inkstitch/
-last_modified_at: 2019-05-01
+last_modified_at: 2022-01-16
 toc: true
 ---
 ## Ink/Stitch Organization
-The [plugin code](https://github.com/inkstitch/inkstitch) as well as the [pyembroidery repository](https://github.com/inkstitch/pyembroidery) can be found within the [Ink/Stitch organization](https://github.com/inkstitch/) on github. Additionaly you will find some other useful things like [embroidery fonts](https://github.com/inkstitch/embroidery-fonts).
+Le [code du plugin](https://github.com/inkstitch/inkstitch) ainsi que le [dépôt de pyembroidery](https://github.com/inkstitch/pyembroidery) peuvent être trouvés dans  [l'organisation d'Ink/Stitch](https://github.com/inkstitch/) sur github.   De plus, vous y trouverez d'autres choses utiles telles que des [polices de broderie](https://github.com/inkstitch/embroidery-fonts).
 
-## Inkscape Plugin
-Ink/Stitch is an [Inkscape](https://inkscape.org/) plugin. See their website to read a short introduction about [how to write Inkscape plugins](https://inkscape.org/en/develop/extensions/).
+## Plugin Inkscape 
+Ink/Stitch est un plugin [Inkscape](https://inkscape.org/). Voir leur site web pour une courte introduction sur [la manière d'écrire des plugins Inkscape](https://inkscape.org/en/develop/extensions/).
 
-## Ink/Stitch Languages
+## Les Langages d'Ink/Stitch 
 
-Ink/Stitch and pyembroidery are written in [Python](https://www.python.org/) 2.<br />We cannot use Python 3 because inkex.py, the extension framework for Inkscape, is in Python 2 only.
+Ink/Stitch et pyembroidery sont écrits en  [Python](https://www.python.org/) 2.<br /> Nous ne pouvons pas utiliser Python 3 car inkex.py, le framework d'extension for Inkscape, existe seulement en Python 2.
 
-Print PDF uses Electron. Which will lead the whole GUI to be displayed with the help of web languages such as HTML5, CSS and Javascript. The print preview uses the [Jinja Template Framework](http://jinja.pocoo.org/), which might be converted to be using vue.js in future versions.
+L'impression PDF utilise Electron. Ce qui conduira tout l'interface graphique a être affiché à l'aide des langages du web tels que  HTML5, CSS  et Javascript.
+La prévisualisation utilise [Jinja Template Framework](http://jinja.pocoo.org/), qui pourrait être remplacé par l'utilisation de vue.js dans des futures versions.
 
-## Developers Documentation
-* [Manual Setup](/developers/inkstitch/manual-setup/)
-* [Python Modules](/developers/inkstitch/python-modules/)
+## Documentation pour les développeurs
+* [Installation manuelle](/developers/inkstitch/manual-setup/)
+* [Modules Python](/developers/inkstitch/python-modules/)
