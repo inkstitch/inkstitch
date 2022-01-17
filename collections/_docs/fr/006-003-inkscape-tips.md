@@ -1,13 +1,17 @@
 ---
-title: "Inkscape Astuces"
+title: "Astuces Inkscape"
 permalink: /fr/docs/inkscape-tips/
 excerpt: ""
 last_modified_at: 2019-10-23
 toc: true
 ---
-Beaucoup de ces outils ne créent pas de chemins. Pour les utiliser avec Ink / Stitch, vous devez les convertir en chemin. `Shift + Ctrl + C` et éventuellement les modifier encore plus.
+Beaucoup de ces outils ne créent pas de chemins. Pour les utiliser avec Ink/Stitch, vous devez les convertir en chemin. `Shift + Ctrl + C` et éventuellement les modifier encore plus.
+
+Inkstitch peut ête utilisé avec Inkscape 0.92 ou Inkscape 1. La plupart des tutoriels listés sur cette page utilisent Inkscape 0.92.
 
 ## Inkscape : Tutoriels Basiques
+
+Plusieurs tutoriaux interactifs sont disponibles dans Inkscape lui même en sélectionnant Aide> Didacticiels` dans le menu dont le tutoriel basique ci-dessous:
 
  * [Tutoriel basique sur inkscape.org](https://inkscape.org/fr/doc/basic/tutorial-basic.fr.html)
  * [Bases at tavmjong.free.fr](http://tavmjong.free.fr/INKSCAPE/MANUAL_v14/html_fr/Basics.html)
