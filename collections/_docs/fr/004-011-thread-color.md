@@ -2,7 +2,7 @@
 title: "Gestion des couleurs de fil"
 permalink: /fr/docs/thread-color/
 excerpt: ""
-last_modified_at: 2021-09-27
+last_modified_at: 2022-01-16
 toc: true
 ---
 ## Importer une liste de fils
@@ -13,7 +13,7 @@ Ce peut être aussi utile si vous souhaitez essayer différents réglages de cou
 
 ## Importation
 
-Exécutez `Extensions > Ink/Stitch > Importer une liste de fils ...` pour appliquer une liste de fils exportée par  Ink/Stitch.
+Exécutez `Extensions > Ink/Stitch > Importer liste de fils ...` pour appliquer une liste de fils exportée par  Ink/Stitch.
 
 Si vous souhaitez importer une autre liste de fils en provenance d'un fichier txt, choisissez l'option "importer une autre liste de fils ", et choisissez une liste de fil à partir du menu déroulant avant de cliquer sur "Appliquer"
 
@@ -33,13 +33,13 @@ Si vous disposez d'un fichier `.gpl` qui contient la liste des fils que vous uti
 
 Les fichiers `.gpl` de palettes peuvent être générés par GIMP.
 
-## Installer des Palettes de fils de fabricants pour Inkscape
+## Installer des Palettes de couleurs de fils à broder pour Inkscape
 
 Ink/Stitch est fourni avec de nombreuses palettes de fils de fabricants qui peuvent être installées dans Inkscape. Ceci permet de construire des broderies avec les bonnes couleurs à l'esprit.
 Les couleurs apparaîtront dans la sortie pdf et seront aussi incluses dans votre fichier de broderie si son format le permet.
 
 **Installer**
-* Allez à `Extensions > Ink/Stitch  > Installer add-ons pour Inkscape`
+* Allez à `Extensions > Ink/Stitch  > Gestion des couleurs de fil > Installer des palettes de couleurs de fils à broder pour Inkscape`
 * Cliquez sur `Installer`
 * Redémarrez Inkscape
 
