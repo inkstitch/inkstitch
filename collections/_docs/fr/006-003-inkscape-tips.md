@@ -22,56 +22,61 @@ Plusieurs tutoriaux interactifs sont disponibles dans Inkscape lui même en sél
 
 Les éléments de votre fichier Inkscape sont des _images vectorielles_, qui utilisent des fonctions mathématiques pour définir des formes.  Ils utilisent des points appellés  _noeuds_,  et des _segments_  qui connectent les noeuds. Il est possible d'éditer des formes vectorielles en déplaçant des noeuds et en modifiant les angles des segments à l'aide de l'éditeur de noeuds ou en utilisant d'autres outils Inkscape. Quand vous utilisez d'autres outils, comme par exemple en agrandissant une forme avec l'outil de Sélection, de nombreux noeuds sont modifiés derrière la scène par Inkscape.
 
-Une forme vectoriell est _fermée_  quand elle fait un tour complet  (comme un cercle ou un carré) et chaque noeud est connecté à deux autres noeuds. Une forme est _ouverte_ quand elle a deux extrémités libres, (comme (une spirale ou une ligne droitee). La bordure de la forme est appelée le _trait_ et la surface à l'intérieur d'une forme fermée est appellée le  _remplissage_. 
+Une forme vectoriell est _fermée_  quand elle fait un tour complet  (comme un cercle ou un carré) et chaque noeud est connecté à deux autres noeuds. Une forme est _ouverte_ quand elle a deux extrémités libres, (une spirale ou une ligne droitee). La bordure de la forme est appelée le _contour_ et la surface à l'intérieur d'une forme fermée est appellée le  _fond_. 
 
 [Lire plus sur le fonctinonnement des formes vectorielles à Sketchpad.net](http://sketchpad.net/drawing1.htm)
 
 
 ### Dessiner et Sélectionner
 
-Les icônes du côté gauche de votre fenêtre montrent tous les outils pour créer et interragir avec votre dessin. 
+Les icônes du côté gauche de votre fenêtre montrent tous les outils pour créer et interagir avec votre dessin. 
 Inkscape dispose de plusieurs outils pour créer divers types d'objets, tels que l'outil rectangle (`F4`), l'outil elipse (`F5`), l'outil étoile (`*`), l'outil spirale (`F9`), l'outil crayon (`F6`), et l'outil texte (`F8`).  
 La plupart de ces outils s'utilisent en glissant sur le canevas pour placer les coins de votre forme. Chaque outil de dessin a ses propres options (montrées dans la barre d'outils Contrôles au dessus du canevas) que vous pouvez utiliser pour obtenir différnts résultats. En savoir plus sur la création de  [Formes](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Shapes.html), [Cheminss](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Paths.html), ou [Texte](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Text.html).
 
-The top icon in the Toolbox panel is the Select Tool, which you can also activate by pressing `F1`. Click an object with the Select tool to drag it around the canvas and to display handles for transforming it. Clicking the object once shows handles for resizing it, and clicking it a second time switches to handles for rotating it. Hold down `Shift` to select multiple objects at once. You can also select many objects at once by dragging around them. [Learn more about transforming objects here.](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Transforms.html)
+La première icône en haut du panneau Outils est l'outil de Sélection. que vous pouvez aussi activer en tappant `F1`. 
+Cliquez sur un objet avec l'outil de sélection pour le déplacer sur le canevs et pour faire apparaître des poignées qui permettent de le transformer. Cliquer une fois sur un objet fait apparaître les poignées de redimensionnement, cliquer une deuxième fois les remplace par des poignées de rotation. Garder la touche Majuscule enfoncée pour sélectionner plusieurs objets en même temps. Vous pouvez aussi sélectionner plusieurs objets simultanément en glissant l'outil autour d'eux. [En savoir plus sur les transformations d'objets.](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Transforms.html)
 
-Another way to select objects is to open the Objects panel (`Object > Objects...` in the menu) and click on a name in the list. You can select objects this way no matter what tool is active.
+Les objets peuvent aussi être sélectionnés en ouvrant le panneau Objets (`Objet > Objets...` dans le menu) et en cliquant sur un des noms de la liste. Vous pouvez selectionner des objets de cette manière quelque soit l'outil actif.
 
-In order to use a menu command on an object (e.g. to convert it to a path), you must select the object first.
+Pour utiliser une commande de menu sur un objet (par exemple pour le convertir en chemin) vous devez préalablement le sélectionner.
 
-### Objects and Paths
-An _object_ is any piece of your file that you can manipulate individually. You can see a list of all the objects in your file by selecting `Object > Objects...` in the menu. Knowing how your objects are defined is very important to your embroidery files, so it's a good idea to keep this window open when working with Ink/Stitch.
 
-There are many types of objects in Inkscape, such as paths, rectangles, circles, polygons, spirals, and, text. Different tools create different types of objects, which each have different rules about how to work with them. 
+### Objets et Chemins
+Un _objet_  est un élément de votre fichier qui peut être manipulé individuellement. Vous pouvez voir la liste de tous les objets de votre fichiers en exécutant `Objet > Objets...`  dans le menu. Savoir comment vos objets sont définis est très important pour vos fihiers de broderie, c'est donc une bonne idée de garder ce panneau ouvert quand vous travaillez avec Ink/Stitch.
 
-A _path_ is the most basic representation of a vector shape: it is just a series of nodes and segments that describes the shape. Once a path has been made, you can only use basic tools to edit it, and it works the same way no matter what the path looks like. Other object types store the information about the shape in more specific way that allows you to change it easily. For example, after drawing a polygon object with the Star Tool, you can use the tool controls to quickly change the number of corners on the shape. If you drew the same shape as a path instead, you would need to manually move each point in order to add more corners. However, paths can be altered into any shape you like, whereas other types of objects have constraints on their shape.
+Il y a de nombreux types d'objets dans Inkscape, tels que chemins, rectanbles, cercles, polygones, spirales et textes. Des outils différents créent des objets de type différents, chaque type ayant ses propres règles d'usage.
 
-Paths are the most important type of object for Ink/Stitch. Your design **must be formatted as a path** for Ink/Stitch to work on it.
+Un _chemin_ est la représentation la plus basique d'une forme vectorielle : il s'agit juste d'une série de noeuds et de segments qui décrivent une forme. Une fois un chemin créé, seuls les outils de base permettent de l'éditer, et ces outils fonctionnent de la même manière quelque soit l'apparance du chemin.  D'autres objets mémorisent l'informtion sur leur forme de manière plus spécifique ce qui permet de les modifier facilement. Par eemple, après avoir dessiné un polygone avec l'outil étoile, vous pouvez utiliser les contrôles de l'outil pour changer rapidement le nombre de sommets de la forme. Si vous aviez dessiné la même forme comme un chemin, vous devriiez déplacer chaque sommet manuellement pour en ajouter d'autres. Toutefois, vous pouvez modifier un chemin pour obtenir n'importe quelle forme, tandis que les autres types d'objets ont des contraintes sur leur forme.
 
-You can convert any object to a path by selecting that object (either by clicking on it with the Select Tool or clicking its name in the Objects panel) and then pressing `Shift + Ctrl + C` or selecting `Path > Object to Path` in the menu. Once it becomes a path, you can use the Node Tool to make precise changes to the points and curves. 
+Le chemin est le type d'objet le plus important pour Ink/Stitch. Votre dessin  **doit être sous forme de chemin** pour qu'Ink/Stitch puisse l'utiliser.
 
-Be careful when you convert objects to paths, because there is no way to convert paths back to objects. For this reason, you may want to duplicate your object first and convert the copy into a path, saving the original shape in case you decide that you want to edit it later.
+Tout objet peut être converti en chemin en le selection (soit en cliquant avec l'outil Sélection, soit en cliquant son nom dans le panneau Objets) puis en tappant `Shift + Ctrl + C` ou en exécutant  `Chemin > Objet en Chemin` dans le menu.  Une fois l'objet converti en chemin, vous pouvez utiliser l'outils Noeuds pour faire des changements précis sur les noeuds et les segments.
 
-Special objects are good for:
- * Text or simple geometric shapes
- * Changing the geometry of a whole shape
- * Starting point for a new design
+Attention, lorsque vous convertissez des objets en chemins, car on ne peut pas inverserment reconvertir ces chemins en objets. Pour cette raison, vous pouvez préferrer dupliquer d'abord votre objet avant de convertir la copie en chemin, tout en gardant la forme originale pour le cas où vous souhaiteriez l'éditer ultérIeurement.
 
-Paths are good for:
- * Making precise changes to a small section of a shape
- * Drawing unique freehand shapes
- * Preparing your finished design for embroidery
 
-You can check an object's type in the description that appears in the status bar at the bottom of the screen when it's selected. Note that you _cannot_ tell whether something is a path by looking at its name in the Objects panel, because Inkscape gives names like "path1234" to circles and spirals as well as to actual paths.
+Ces objets particuliers sont adaptés pour:
+ * du texte ou des formes géométriques simples
+ * modifier la géométrie d'une forme en son entier
+ * comme point de départ d'un nouveau dessin
 
-### Stroke and Fill
-Bring up the Fill and Stroke panel by pressing `Shift+Ctrl+F` or selecting `Object > Fill and Stroke...` from the menu to control the color and style of a path's fill and stroke. The exact color and style of your path are mostly irrelevant to the embroidery file, but you do need to know how to edit them because Ink/Stitch uses stroke style to determine what kind of stitch to use and inserts thread change prompts based on whether paths are the same color.
+Les chemins sont adaptés pour:
+ * Faire des changements précis sur une petite section d'une forme
+ * Dessiner des formes à main levée
+ * Préparer votre dessin terminé pour la broderie
+ 
+Vous pouvez verifier le type d'un objet dans la description qui apparait dans la barre de statut en bas de l'écran lorsque l'objet est selectionné. Notez que vous ne _pouvez pas_ dire si un objet est un chemin rien qu'en regardant son nom dans le panneau Objets car Inkscape donne des noms commee "path1234" à des cercles ou des spirales aussi bien qu'à de véritables chemins.
 
-This panel is rather straightforward. For paths that Ink/Stitch will make into fill stitch areas, the Fill tab should be set to "flat color" (second square) and the Stroke Paint tab should have the X selected (first square). For all other kinds of stitch, select the X on the Fill tab and select "flat color" on the Stroke Paint tab. Use the Stroke Style tab to choose a solid or dashed stroke, depending on what kind of stitch you want. 
+### Fond et Contour
+Faites apparaître le panneau "Fond et Contour" en tappant `Shift+Ctrl+F` ou en sélectionnant `Objet > Fond et COBTOUR...`  à partir du menu pour contrôler la couleur et le style du fond et du contour du chemin.
+La couleur exacte et le style de votre chemin n'ont globalement rien à voir avec votre fichier de broderie, mais vous devez savoir comment les éditer car Ink/Stitch utilise le style du contour pour décider du type de point de broderie à utiliser, et insérre ou non des changements de fils selon si les chemins sont ou non de la même couleur.
 
-Color can also be set using the palette at the bottom of the screen; click a color to use it for the fill or shift click to use it for the stroke.
+Ce panneau est assez simple. Pour des chemins qu'Ik/Stitch transformera en point de remplissage, l'onglet Fond doit choisir Aplat (le deuxième choix), et l'onglet Cntour doit avoir la croix X sélectionnée (premier choix). Pour tous les autres points, sélectionnez le X dans l'onglet Fond et Aplat dans l'onglet COntour. Utilisez l'onglet "Style de contour" pour choisir soit une ligne pleine soit un pointillé selon le style de point désiré.
 
-### Working with Paths
+Les couleurs peuvent aussi être choisies en utilisant la palette en bas de l'ecra, : cliquez sur une couleur pour l'utiliser comme une couleur de font, et faites un clic majuscue pour l'utiliser pour le contour.
+
+
+### Travailler avec des chemins
 Use the second tool from the top, the Node Tool (also activated with `F2`), to directly edit the points and lines in a path. Select a path with the Node Tool to display markers on all of its nodes. These node markers can then be dragged around with the cursor, added, removed, and more. You will also see handles coming off each node, which you can drag to adjust the angles of the line segments. This tool only works on _path_ objects, explained below--if you do not see gray points appear along the object after you select it, then it is not a path. [Learn more about the Node Tool here.](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Paths-Editing.html)
 
 Two important commands when preparing paths for Ink/Stitch are Combine (`Ctrl+K` or `Path > Combine`) and Break Apart (`Shift+Ctrl+K` or `Path > Break Apart`). For example, creating satin columns in Ink/Stitch requires two lines that are combined into one path. These commands don't make any changes to the actual shape or to the nodes within a path; instead, they alter the way that Inkscape classifies it. 
