@@ -1,32 +1,32 @@
 ---
-title: "Stichmuster"
+title: "Textures"
 permalink: /fr/docs/stitches/patterns/
 excerpt: ""
 last_modified_at: 2021-09-27
 toc: true
 ---
-Patterns are created by special stitch positioning.
+Il est possible de créer des textures en forçant la position de certains points.
 
 ![Pattern](/assets/images/docs/stitch-type-pattern.png)
 
-[Download sample file](/assets/images/docs/pattern.svg)
+[Télécharger un fichier d'exemple](/assets/images/docs/pattern.svg)
 
-## Generate Patterns
+## Generer des textures 
+Dans Ink/Stitch il est possible de générer des textures en ajoutant ou en supprimant des points à un élément de broderie existant.
 
-In Ink/Stitch you can generate patterns by either adding stitches or removing stitches from any existing embroidery element.
 
-1. **Create embroidery element(s).** This can be either a satin column or fill area. Patterns will also work on strokes, but they may not be the best target for patterns.
+1. **Créez un ou des élément(s) de broderie** Ces éléments peuvent être des remplissages ou des colonnes satin.  Les textures vont aussi fonctionner sur des traits, mais ce n'est peut-être pas la meilleure option....
 
-2. **Create pattern path(s).** A pattern consists of strokes or fill areas (or both at the same time). Strokes will be used to add stitches, while patterns with a fill will remove stitches from the embroidery element.
+2. **Créez un ou des élément(s) de texture.** Une texture est consitutées de traits et/ou d'aires de remplissage. Les traits seront utilisés pour ajouter des points, tandis que les remplissages serviront à supprimer des points des éléments de broderie
 
-3. Select both, the embroidery element and the pattern and hit `Ctrl+G` to **group them together**.
+3. Sélectionnez à la fois les éléments de broderies et les éléments de textures, faire  `Ctrl+G` pour **grouper le tout**.
 
-4. **Convert to pattern.** Select only the pattern and run `Extensions > Ink/Stitch > Edit > Selection to pattern`. This will add a start marker to the pattern element to indicate, that it will not be embroidered but will be used as a pattern for all elements in the same group. Elements in subgroups of the very same group will not be affected.
+4. **Convertissez en texture.** Sélectionnez uniquement les éléments de texture et exécutez  `Extensions > Ink/Stitch > Edition > Selection vers texture`. Ceci ajoutera un marqueur au début de l'élément de texture pour indiquer qu'il ne sera pas brodé mais qu'il sera utilisé comme élément de texture pour tous les éléments de son groupe. Des éléments appartenant à des sous-groupe de ce même groupe ne seront pas affectés.
 
    ![Pattern groups](/assets/images/docs/en/pattern.png)
 
-## Remove Pattern Marker
+## Supprimer le marqueur de texture
 
-The pattern marker can be removed in the fill and stroke panel (`Ctrl+Shift+F`). Open the Stroke style tab and set the first dropdown list in "Markers" to  the very first (empty) option.
+Le marqueur de texture peut être supprimé dans le panneau "Fond et Contour" (`Ctrl+Shift+F`). Ouvrez l'onglet "Style de contour" et choisissez la toute premiere option (vide) dans le premier menu déroulant.
 
 ![Remove pattern](/assets/images/docs/fr/stitch-type-remove-pattern.png)
