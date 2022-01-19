@@ -27,7 +27,7 @@ Une forme vectoriell est _fermée_  quand elle fait un tour complet  (comme un c
 [Lire plus sur le fonctinonnement des formes vectorielles à Sketchpad.net](http://sketchpad.net/drawing1.htm)
 
 
-### Dessinner et Sélectionner
+### Dessiner et Sélectionner
 
 Les icônes du côté gauhe de votre fenêtre montrent tous les outils pour créer et interragir avec votre dessin. 
 Inkscape dispose de plusieurs outils pour créer divers types d'objets, tels que l'outil rectangle (`F4`), l'outil elipse (`F5`), l'outil étoile (`*`), l'outil spirale (`F9`), l'outil crayon (`F6`), et l'outil texte (`F8`).  
