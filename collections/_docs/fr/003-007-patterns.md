@@ -11,7 +11,7 @@ Il est possible de créer des textures en forçant la position de certains point
 
 [Télécharger un fichier d'exemple](/assets/images/docs/pattern.svg)
 
-## Generer des textures 
+## Générer des textures 
 Dans Ink/Stitch il est possible de générer des textures en ajoutant ou en supprimant des points à un élément de broderie existant.
 
 
