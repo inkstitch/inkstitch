@@ -29,9 +29,9 @@ Une forme vectoriell est _fermée_  quand elle fait un tour complet  (comme un c
 
 ### Dessiner et Sélectionner
 
-Les icônes du côté gauhe de votre fenêtre montrent tous les outils pour créer et interragir avec votre dessin. 
+Les icônes du côté gauche de votre fenêtre montrent tous les outils pour créer et interragir avec votre dessin. 
 Inkscape dispose de plusieurs outils pour créer divers types d'objets, tels que l'outil rectangle (`F4`), l'outil elipse (`F5`), l'outil étoile (`*`), l'outil spirale (`F9`), l'outil crayon (`F6`), et l'outil texte (`F8`).  
-Most of them are used by dragging across the canvas where you want to place the corners of your shape. Each drawing tool has unique options (shown in the Tool Controls bar above the canvas) that you can play around with to get different results. Learn more about creating [Shapes](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Shapes.html), [Paths](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Paths.html), or [Text](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Text.html) at these links.
+La plupart de ces outils s'utilisent en glissant sur le canevas pour placer les coins de votre forme. Chaque outil de dessin a ses propres options (montrées dans la barre d'outils Contrôles au dessus du canevas) que vous pouvez utiliser pour obtenir différnts résultats. En savoir plus sur la création de  [Formes](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Shapes.html), [Cheminss](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Paths.html), ou [Texte](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Text.html).
 
 The top icon in the Toolbox panel is the Select Tool, which you can also activate by pressing `F1`. Click an object with the Select tool to drag it around the canvas and to display handles for transforming it. Clicking the object once shows handles for resizing it, and clicking it a second time switches to handles for rotating it. Hold down `Shift` to select multiple objects at once. You can also select many objects at once by dragging around them. [Learn more about transforming objects here.](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Transforms.html)
 
