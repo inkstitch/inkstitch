@@ -13,7 +13,8 @@ It could also be helpful, if you are wanting to test different color settings. Y
 Run `Extensions > Ink/Stitch > Thread Color Management > Import Threadlist ...` to apply a threadlist exported by Ink/Stitch.
 
 If you want to import any other threadlist from a txt-file, choose the option "Import other threadlist" and pick a threadlist from the dropdown menu before clicking on apply.
-**Tipp:** Run  `Extensions > Ink/Stitch > Thread Color Management > Install thread color palettes for Inkscape` to have more threadlists available.
+
+**Tip:** Run  `Extensions > Ink/Stitch > Thread Color Management > Install thread color palettes for Inkscape` to have more threadlists available.
 {: .notice--info }
 
 ## Export
