@@ -2,7 +2,7 @@
 title: "Textures"
 permalink: /fr/docs/stitches/patterns/
 excerpt: ""
-last_modified_at: 2021-09-27
+last_modified_at: 2022-01-18
 toc: true
 ---
 Il est possible de créer des textures en forçant la position de certains points.
