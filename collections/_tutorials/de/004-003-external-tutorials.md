@@ -14,7 +14,6 @@ Kennt ihr deutsche Tutorials? Immer her damit. Wir setzen gerne einen Link.
 
 ### Englisch
 
-* [Evan West Ink/Stitch Tutorials - Youtube](https://www.youtube.com/playlist?list=PLMNtO24YQeCzjclRoMFO-fZFu4TrZUKs3)
 * [EduTech Wiki](https://edutechwiki.unige.ch/en/InkStitch)
 
 * Tyrosinase
