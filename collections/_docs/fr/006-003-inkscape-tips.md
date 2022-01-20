@@ -163,15 +163,15 @@ Lire plus sur les [pavages sur tavmjong.free.fr](http://tavmjong.free.fr/INKSCAP
 ## Effets de chemin en temps réel
 
 * [Effets de chemin en temps réel (tavmjong.free.fr)](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Paths-LivePathEffects.html)
-  * [Bend Tool (tavmjong.free.fr)](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Paths-LivePathEffects-BendTool.html)
-  * [Envelope Deformation (tavmjong.free.fr)](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Paths-LivePathEffects-EnvelopeDeformation.html)<br>
+  * [Courber (tavmjong.free.fr)](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Paths-LivePathEffects-BendTool.html)
+  * [Deformation par enveloppe (tavmjong.free.fr)](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Paths-LivePathEffects-EnvelopeDeformation.html)<br>
     [Youtube Example](https://www.youtube.com/watch?v=8XbIsw48vTk)
-  * [Interpolate Sub Paths (tavmjong.free.fr)](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Paths-LivePathEffects-InterpolateSubPaths.html)
-  * [PatternAlongPath (tavmjong.free.fr)](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Paths-LivePathEffects-PatternAlongPath.html)<br>
+  * [Interpoler les sous-chemins (tavmjong.free.fr)](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Paths-LivePathEffects-InterpolateSubPaths.html)
+  * [Motif suivant un chemin (tavmjong.free.fr)](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Paths-LivePathEffects-PatternAlongPath.html)<br>
     [Youtube Example](https://www.youtube.com/watch?v=3Bhg727wYMc)
-  * [Sketch (tavmjong.free.fr)](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Paths-LivePathEffects-Sketch.html)
-  * [StitchSubPaths (tavmjong.free.fr)](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Paths-LivePathEffects-StitchSubPaths.html)
-  * [Roughen (Youtube)](https://www.youtube.com/watch?v=130Dbt0juvY)
+  * [Croquis (tavmjong.free.fr)](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Paths-LivePathEffects-Sketch.html)
+  * [Relier les sous-chemins (tavmjong.free.fr)](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Paths-LivePathEffects-StitchSubPaths.html)
+  * [Agitation (Youtube)](https://www.youtube.com/watch?v=130Dbt0juvY)
 
 
 
