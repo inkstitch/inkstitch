@@ -77,39 +77,53 @@ Les couleurs peuvent aussi être choisies en utilisant la palette en bas de l'ec
 
 
 ### Travailler avec des chemins
-Use the second tool from the top, the Node Tool (also activated with `F2`), to directly edit the points and lines in a path. Select a path with the Node Tool to display markers on all of its nodes. These node markers can then be dragged around with the cursor, added, removed, and more. You will also see handles coming off each node, which you can drag to adjust the angles of the line segments. This tool only works on _path_ objects, explained below--if you do not see gray points appear along the object after you select it, then it is not a path. [Learn more about the Node Tool here.](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Paths-Editing.html)
+Utilisez le second outil à partir du haut , l'outil noeud (aussi activé par  `F2`), pour editer directement les noeuds et les segments d'un chemin.
+Sélectionnez un chemin avec l'éditeur de noeuds cause l'apparition de marqueurs sur tous les noeuds. Ces marqueurs peuvent etre déplacé à la souris, il est possible aussi d'ajouter des noeuds, d'en supprimer et autre. Vous verrez aussi des poignées sur les noeuds, que vous pouvez déplacer pour ajuster l'angle des segments. 
+Cet outil ne fonctionne qu'avec des objet _chemin_ comme expliqué ci-dessous -- si vous ne voyez pas de points gris apparaitre au long de l'objet quand vous le selectionner avec l'editeur de noeuds, c'est qu'il ne s'agit pas d'un chemin.
+to directly edit the points and lines in a path. Select a path with the Node Tool to display markers on all of its nodes. These node markers can then be dragged [En savoir plus sur l'éditeur de noeuds.](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Paths-Editing.html)
 
-Two important commands when preparing paths for Ink/Stitch are Combine (`Ctrl+K` or `Path > Combine`) and Break Apart (`Shift+Ctrl+K` or `Path > Break Apart`). For example, creating satin columns in Ink/Stitch requires two lines that are combined into one path. These commands don't make any changes to the actual shape or to the nodes within a path; instead, they alter the way that Inkscape classifies it. 
+Deux commandes sont importantes pour préparer les chemins pour  Ink/Stitch:  Combinre (`Ctrl+K` or `Chemin > Combiner`)  et Séparer  (`Shift+Ctrl+K` or `Chemin > Séparer`).  Par exemple, pour créer des colonnes satin dans  Ink/Stitch  il faut combiner deux lignes en un seul chemin. Ces commandes ne font aucune modification sur la forme ou les noeuds d'un chemin, elles ne font que modifier la manière dont Inkscape classifie le chemin.
 
-The _Combine_ command takes all the paths currently selected and merges them into a single path object. Inkscape will now treat those paths as one unit for selecting and transforming. You can see in the Objects panel that the list contains fewer objects after a Combine. The result of combining is a _compound path_, which contains more than one line.
+La commande  _Combiner_  prend tous les chemins selectionnés et les fusionne en un seul objet chemin. Inkscape traite alors ces chemins comme une seule unité pour la selection et la transformation. On peut voir dans le panneau objets que la liste est plus courte après un Combiner. Le résultat de combiner est un _chemin composite_, qui comporte plus qu'une ligne
 
-The _Break Apart_ command takes a compound path and isolates each continuous line into a separate object. It splits up the compound path into as many separate paths as possible without deleting any segments. After using Break Apart, the Objects list will be longer. 
+La commande _Séparer_ , appliquée à un chemin composite , isole chaque ligne continue dans un objet séparer. Elle sépare le chemin composite en autant de chemins que possible sans perdre de segment. Après son utilisation, la liste des objets sera plus longue.
 
-There are other commands for combining or dividing the actual nodes in a path, in a way that changes the shape itself instead of just the way Inkscape manages it. [Read about path operations here.](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Paths-Combining.html)
+il y a d'autres commandes pour combiner ou diviser au niveau des noeuds d'un chemin, d'une manière qui change la forme elle même, et pas seulement lamanière dont Inkscape la gère.
+[lire plus sur les opérations de chemin.](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Paths-Combining.html)
 
-### Layering
-All objects in Inkscape are stacked on top of each other in a specific order. Ink/Stitch will use this order to determine what should be stitched first. You can view the order in the Objects panel (`Object > Objects...` in the menu). Ink/Stitch makes the path at the bottom of the list into the first instruction, and proceeds upward through the list. You can change the order by dragging around the names inside the Objects panel, or pressing `Page Up` and `Page Down`.  
+### Calques
+Dans Inkscape, tous les objets sont empilés dans un ordre spécifique. Ink/Stitch utilise cer ordre pour déterminer l'ordre dans lequel ces objets seront brodés.
+Vous pouvez voir cet ordre dans le panneau Objets (`Objet > Objets...` dans le menu). 
+L'ordre des objets peut être modifié, en faisant glisser les noms dans le panneau Objets , ou en tappant  `Page Haut` et `Page Bas`.  
 
-You can double click an object name to rename it, which may help you keep track of your layering. You will also see three icons to the left of each object name in this panel. Click the eye icon to hide something from view, and click the lock icon to prevent it from being edited. 
+Il est possible de renommer un objet en doulbe cliquant sur son nom, ce qui peut vous aider à organiser votre empilement. Vous verrez aussi trois icônes à la gauche de chaque nom d'objet dans ce panneau. Cliquez sur l'icône oeil pour cacher un obet, et cliquez sur l'icône verrou pour empecher un objet d'être éditer.
 
-_Groups_ and _layers_ can make it easier to manage your objects and their order. Once a group is formed, clicking one item in the group selects the entire group, allowing you to alter all elements of the group at once. To group objects together, select all of them with `Shift+click`, then press `Ctrl+G` or click `Object > Group` in the menu. The group also appears as a collapsible item in the Objects list, and objects can be moved in and out of the group (or from one group to another) by dragging them around the Objects panel. A group can contain other groups. However the safest way seems to be to `Edit > Cut` an object out of one group and then `Edit > Paste` it into another. You have to select an object in the destination group so that the pasted object goes into that group.
 
-Layers function similarly to groups, but their main purpose is to more easily control how your objects are ordered. A new layer is created with the + button below the Objects list, or by pressing `Shift+Ctrl+N`. Objects can be moved from one layer to another by dragging in the Objects list, just like groups, but they can also be quickly moved to the layer above or below by pressing `Ctrl+Page Up` or `Ctrl+Page Down`. 
+Les _Groupes_ et les  _Calques_  rendent plus facile la gestion de vos objets et de leur ordre.
+Une fois un groupe formé, cliquer sur un objet du groupe selectionne le groupe tout entier, vosu permettant de modifier tous les éléments d'un groupe en une seule opération.
+Pour grouper des objets, selectionnez les tous avec `Majuscule+clic`, puis tappez `Ctrl+G` ou exécutez `Objet > Grouper` dans le menu.
+Le groupe eapparait aussi comme un élément repliable dans la liste d'Objets, et les objets peuvent être déplacé dans et en dehors d'un groupe en les faisant glisser dans le paanneau Objets. Toutefois, il est plus sûr d'utiliser `Ediiont > Couper` pour enlever un objet d'un groupe, puis  `Edition > Collere` dans un autre groupe. Vous devez sélectionner un objet dans le groupe de destination pour que l'objet collé aille bien dans ce groupe. 
+Un groupe peut contenir d'autres groupes. 
 
-[Read more about layers in Roy Torley's tutorial here.](https://roy-torley.github.io/Inkscape_Tutorial/Tutorial06/Tutorial06.html)
+Les calques fonctionnent de manière similaire aux groupes, mais leur principale raison d'être est de permettre de controler plus facilement l'ordre des objets.
+Un nouveau calque est créé avec le bouton + sous la liste d'objets ou en tappant `Shift+Ctrl+N`. 
+Les objets peuvent être déplacés d'un calque à l'autre en les faisant glisser dans la liste d'objets , exactement comme les groupes, mais ils peuvent aussi être rapidement déplacé un calque au dessus ou en dessous en tappant 
+ `Ctrl+Page Haut` or `Ctrl+Page Bas`. 
 
-## General Inkscape Tutorials
- * [Shapes Tutorial on inkscape.org](https://inkscape.org/doc/tutorials/shapes/tutorial-shapes.html) - How to draw and modify geometric shape objects
- * [Advanced Tutorial on inkscape.org](https://inkscape.org/doc/tutorials/advanced/tutorial-advanced.html) - Drawing and editing paths and text
- * [Inkscape Guide Index on tavmjong.free.fr](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/index.html) - In-depth guide to all aspects of Inkscape
- * [Inkscape Tutorial by TJ Free on Youtube](https://www.youtube.com/playlist?list=PLqazFFzUAPc5lOQwDoZ4Dw2YSXtO7lWNv) - Video tutorial series covering a wide range of uses
+[En savoir plus sur les calques dans le tutoriel de Roy Torley.](https://roy-torley.github.io/Inkscape_Tutorial/Tutorial06/Tutorial06.html)
 
-## Specific Tool Tutorials
+## Tutoriels généraux sur  Inkscape 
+ * [Tutoriel sur les formes sur inkscape.org](https://inkscape.org/doc/tutorials/shapes/tutorial-shapes.html) - Comment dessiner et modifier des objets selon des formes géométriques. 
+ * [Tutoriel avancé suroninkscape.org](https://inkscape.org/doc/tutorials/advanced/tutorial-advanced.html) - Dessiner et modifier chemins et texes
+ * [Index des guides Inkscape sur tavmjong.free.fr](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/index.html) - GUide en profondeur sur tous les aspects d'Inkscape
+ * [Tutoriel inkscape par TJ Free sur Youtube](https://www.youtube.com/playlist?list=PLqazFFzUAPc5lOQwDoZ4Dw2YSXtO7lWNv) -Série de tutoriels video couvrant un large usage 
 
-### Tracing an Image
-You can convert a raster image (such as a JPEG or PNG) into a path by importing/pasting an image, then using `Path > Trace Bitmap...`. This is a finicky process that usually requires a lot of trial and error. It works best on images with hard edges and few colors.
- * [Tracing Tutorial on inkscape.org](https://inkscape.org/doc/tutorials/tracing/tutorial-tracing.html)
- * [Video tutorial by TJ Free on Youtube](https://www.youtube.com/watch?v=E7HwLTQu2FI)
+## Tutoriels sur des outils spécifiques
+
+### Digitaliser une Image
+Vous pouvez convertir une image bitmap (telle que JPEG ou PNG) en une image vectorielle en important l'image, puis en utilisant  `Chemin > Vectoriser un objet matriciel...`. C'est un processus fastidieux qui demande généralement beaucoup d'essais et d'erreurs. Cela marche mieux sur des images aux traits prononcés ayant peu de couleur
+ * [Tutoriel sur la digitalisation dsur inkscape.org](https://inkscape.org/doc/tutorials/tracing/tutorial-tracing.html)
+ * [Tutoriel video par TJ Free sur Youtube](https://www.youtube.com/watch?v=E7HwLTQu2FI)
 
 
 ## Pavage
