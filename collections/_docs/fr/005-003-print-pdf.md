@@ -42,10 +42,7 @@ Save as defaults|*Page Setup* settings can be saved as defaults. Next time you o
 Réglage|Description
 ---|---
 Taille d'impression|Vous avez le choix entre `Letter` et `A4`.
-Disposition d'impression|Il y a deux types de disposition différents:<br />⚬ 
-**Mise en page pour l'opérateur de la machine à broder** avec  blocs de couleur, nom des fils, nombre de points, et notes personnelles<br />⚬ 
-**Mise en page orientée client** conçu pour que vous puissiez l'envoyer à votre client<br />⚬ 
-**Custom page** offre un espace pour le texte libre (par exemple, instructions pour les projets tout-dans-le cadre)
+Disposition d'impression|Il y a deux types de disposition différents:<br />⚬ **Mise en page pour l'opérateur de la machine à broder** avec  blocs de couleur, nom des fils, nombre de points, et notes personnelles<br />⚬ **Mise en page orientée client** conçu pour que vous puissiez l'envoyer à votre client<br />⚬ **Custom page** offre un espace pour le texte libre (par exemple, instructions pour les projets tout-dans-le cadre)
 Enregistrer par défaut|*Les paramètres de mise en page* peuvent être enregistrés comme paramètres par défaut.La prochaine fois que vous ouvrirez un aperçu avant impression, il utilisera vos paramètres par défaut. Linux, par exemple enregistrera les paramètres d'impression par défaut à `~/.config/inkstitch/print_settings.json`.
 
 #### Motif
