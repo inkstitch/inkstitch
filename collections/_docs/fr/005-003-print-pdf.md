@@ -39,11 +39,11 @@ Disposition d'impression|Il y a deux types de disposition différents:<br />⚬ 
 Enregistrer par défaut|*Les paramètres de mise en page* peuvent être enregistrés comme paramètres par défaut. La prochaine fois que vous ouvrirez un aperçu avant impression, il utilisera vos paramètres par défaut. Linux, par exemple enregistrera les paramètres d'impression par défaut à `~/.config/inkstitch/print_settings.json`.
 
 #### Durée estimée
-Vous pouvez renseigner la vitesse de la machine (points/minute), la durée d'un changement de fil, la durée d'une coupe de fil. Vous pouvez aussi choisir sur quelles vues, la durée estimée doit être affichée
+Vous pouvez renseigner la vitesse de la machine (points/minute), la durée d'un changement de fil, la durée d'une coupe de fil. Vous pouvez aussi choisir sur quelles vues la durée estimée doit être affichée.
 
 
 #### Fil Estimé
-Vous pouvez affiner cette estimation en modifiant les valeurs longueur de fil supérieur sur longueur du trajet effecté, et longueur du fil de bobine sur longueur du trajet effectué
+Vous pouvez affiner cette estimation en modifiant les valeurs longueur de fil supérieur sur longueur du trajet effecté, et longueur du fil de bobine sur longueur du trajet effectué.
 
 #### Conception
 
