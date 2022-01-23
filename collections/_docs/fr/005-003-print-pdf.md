@@ -32,27 +32,27 @@ Cliquer sur `Paramètres` pour accéder aux options suivantes.
 #### Mise en page
 
 
-Setting|Description
----|---
-Printing Size|You can choose between `Letter` and `A4`.
-Print Layouts|There are two different layout types:<br />⚬ **Embroidery machine operator layout** with color blocks, thread names, stitch counts, and custom notes<br />⚬ **Client oriented layout** designed for you to send to your customer<br />⚬ **Custom page** offers space for free text (e.g. instructions for in-the-hoop projects)
-Save as defaults|*Page Setup* settings can be saved as defaults. Next time you open a print preview it will use your default settings. Linux e.g. would save it default print settings to `~/.config/inkstitch/print_settings.json`.
-
-
 Réglage|Description
 ---|---
 Taille d'impression|Vous avez le choix entre `Letter` et `A4`.
 Disposition d'impression|Il y a deux types de disposition différents:<br />⚬ **Mise en page pour l'opérateur de la machine à broder** avec  blocs de couleur, nom des fils, nombre de points, et notes personnelles<br />⚬ **Mise en page orientée client** conçu pour que vous puissiez l'envoyer à votre client<br />⚬ **Custom page** offre un espace pour le texte libre (par exemple, instructions pour les projets tout-dans-le cadre)
-Enregistrer par défaut|*Les paramètres de mise en page* peuvent être enregistrés comme paramètres par défaut.La prochaine fois que vous ouvrirez un aperçu avant impression, il utilisera vos paramètres par défaut. Linux, par exemple enregistrera les paramètres d'impression par défaut à `~/.config/inkstitch/print_settings.json`.
+Enregistrer par défaut|*Les paramètres de mise en page* peuvent être enregistrés comme paramètres par défaut. La prochaine fois que vous ouvrirez un aperçu avant impression, il utilisera vos paramètres par défaut. Linux, par exemple enregistrera les paramètres d'impression par défaut à `~/.config/inkstitch/print_settings.json`.
 
-#### Motif
+#### Durée estimée
+Vous pouvez renseigner la vitesse de la machine (points/minute), la durée d'un changement de fil, la durée d'une coupe de fil. Vous pouvez aussi choisir sur quelles vues, la durée estimée doit être affichée
 
-Patramètre|Description
+
+#### Fil Estimé
+Vous pouvez affiner cette estimation en modifiant les valeurs longueur de fil supérieur sur longueur du trajet effecté, et longueur du fil de bobine sur longueur du trajet effectué
+
+#### Conception
+
+Paramètre|Description
 ---|---
-Thread Palette|Change la palette de fabricant. Ink/Stitch choisira les noms de couleurs correspondants à votre choix. Il supprimera toutes les modifications que vous avez peut-être déjà effectuées.
-## Imprimer / Exporter en PDF
+Palette de fil|Change la palette de fabricant. Ink/Stitch choisira les noms de couleurs correspondants à votre choix. Il supprimera toutes les modifications que vous avez peut-être déjà effectuées.
+## Imprimer / Enregistrer ePDF
 
-Cliquez sur `Print` pour ouvrir la page dans votre visionneuse PDF à partir de laquelle vous pouvez imprimer vos documents. Assurez-vous que le format d'impression correspond à vos paramètres.  Vous pouvez également cliquer sur `Save PDF`. Cela enregistrera en PDF.
+Cliquez sur `Print` pour ouvrir la page dans votre visionneuse PDF à partir de laquelle vous pouvez imprimer vos documents. Assurez-vous que le format d'impression correspond à vos paramètres.  Vous pouvez également cliquer sur `Enregistrer PDF`. Cela enregistrera en PDF.
 
 ## Retour dans Inkscape
 
