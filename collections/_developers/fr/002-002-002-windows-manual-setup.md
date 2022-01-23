@@ -1,107 +1,124 @@
 ---
-title: "Windows Manual Setup"
+title: "Installation manuelle sous Windows"
 permalink: /fr/developers/inkstitch/windows-manual-setup/
 last_modified_at: 2019-08-16
 toc: false
 ---
+
+Ceci décrit l'installation manuelle pour qui souhaite debuguer des extentions Ink/Stitch sous Windows.
 This describes the manual setup for those who want to debug Ink/Stitch extensions on Windows.
-A generic and more complete description for such debug environments is given on [manual-setup](/developers/inkstitch/manual-setup/).
-This description focus only on the python part for the Windows environment.
-The setup described will allow you to debug the code while running the extension, then edit in and run the extension again.
+Une description générique et plus complète de ces environements est disponible sur [installation manuelle](/developers/inkstitch/manual-setup/).
+Cette description ne concerne que la partie python dans un environement Windows.
+L'installation décrite vous permettra de debuguer le code en exécutant l'extensionn puis d'editer le code et de ré-executer le code.
 
-#### 1. You will need a Python environment (2.7 recommended).
+#### 1. Vous devez avoir un environnement Python (2.7 est recommandé).
 
-Inkscape, which is the base application within which Ink/Stitch runs, does install a Python environment.
-That environment does not contain all parts needed for Ink/Stitch extensions.
-Using it as base to create a virtual environment on Windows is currently (inkscape 0.92.4) not a simple solution.
-Easier than getting the Windows environment to use the one from inkscape, is to install a new Python and make a virtual environment from it.
+Inkscape, qui est l'application de base à l'intérieur de laquelle Ink/Stitch est exécutée installe un environement Python.
+Cet environnement ne contient pas tout ce qui est necessaire pour les extensions Ink/Stitch
+Utilser cet environnement pour créer un environement virtuel sous Windows n'est pas une solution simple (pour inkscape 0.92.4).  Il est plus facile d'installer un nouveau python à partir duquel creer un environement virtuel.
 
-In same way, extending the existing python packaged with inkscape, is giving some issues why this is the suggested method.
+Il vous est sufféré d'utiliser python 2.7. S'i n'est pas déjà installé, téléchargez le et installez le.
 
-The python you are suggested to use is python 2.7. If you do not already have it installed, download and install it.
-When it is installed, check your environment path variable. When the virtual environment runs,
-the path variable is nbo longer important. Until you are there, the easiest plan is to see to that the python 2.7 paths (exe, lib, DLL) are first in the path.
+Une fois installé, vérifiez votre variable de chemin d'environnement. Lorsque l'environnement virtuel s'exécute,
+la variable de chemin n'est plus importante. Jusqu'à ce que vous y soyez, le plan le plus simple est de veiller à ce que les chemins python 2.7 (exe, lib, DLL) soient en premier dans le chemin.
 
-#### 2. You will possibly want a git client
-A git client is needed if you want to participate on github.
-In that case, download a git client, and clone the inkstitch main directory.
-A possible location would be c:\inkstitch, which is the directory used in the examples.
-However, no Windows specific description of neither how to get a client or how to install the clone is given.
-An easy way is to use PyCharm
 
-#### 3. You need to create a virtual Python 2.7 environment for Ink/Stitch
-This is the key. This environment will be used by inkscape when running extensions.
-Again, no Windows specific description of how to download and set up this virtual environment is given.
-Again, an easy way is to use PyCharm, and use the "requirements.txt" file which comes with Ink/Stitch
+#### 2. Vous souhaiterez peut être un client git
 
-#### 4. Special actions needed for the virtual Python environment
-The requirements.txt file which comes with Ink/Stitch does nto tell the whole story. There are a number of things left to do.
-In Linux, more tools exist in the environment than is standard in Windows.
-Normally you do not compile modules in Windows, which creates some specific issues for certain packages.
-To solve them, we reside to downloading readymade wheel files (".whl" files). Files which can be installed by python, but come readymade for a specific environment.
-For Windows 64, running a Python 64 bit, download below (later versions may exist, so use them, however, "cp27" and "amd64" is the name to look for:
+Un client git est necessaire si vous souhaitez participer sur gith
+Dans ce cas, téléchargez un client git, et clonez le repertoire principal d'inkstitch, par exemple dans c:\inkstitch, qui est le répertoire utilisé dans les exemples.
+Aucune description specifique de comment obtenir le client, ou installer le clone n'est donné. Une manière simple est d'utiliser PyCharm.
+
+
+#### 3. Vous devez créer un environement virtuel Python 2.7 pour Ink/Stitch
+Ce point est clé. Cet environement sera utilisé par inkscape pour excuter les extensions. A nouveau, aucune description specifique de comment télécharger et installer cet environement virtuel ne sont donnés. A nouveau une manière simple de faire  est d'utiliser PyCharm et le fichier  "requirements.txt" qui vient avec Ink/Stitch
+
+#### 4. Actions spéciales nécéssaires pour l'environnement virtuel Python
+
+Le fichier requirements.txt qui vient avec  Ink/Stitch ne dit pas tout, il reste des choses à faireThere are a number of things left to do.
+Sous Linus, il y a plus d'outisl dans l'environement que ce qu'il est standard d'avoir sous Windows.
+
+Normalement, vus ne comilez pas de module sous Windows, ce qui crée des problèmes spécifiques pour certain paquets.
+Pour résoudre cela, nous proposons de télécharger des fichiers wheel tout prêt (".whl" files). 
+Ces fichiers peuvent être installés par python, mais sont prêts pour un environement spécifique.
+Pour  Windows 64, avec un  Python 64 bit,  téléchargez les fichiers suivants (il peut y avoir des fichiers plus récents, utilisez les, mais  "cp27" and "amd64" sont les noms à rechercher:
 
     libxml2_python-2.9.3-cp27-none-win_amd64.whl
     lxml-4.4.1-cp27-cp27m-win_amd64.whl
-
-Install the lixxml2 wheel file, into the virtual environment, any way you are used to. After that install the lxml file.
-The lxml file require a specific way to install. This is due to the need to ensure it does not collide with libxml2 which it uses.
-The pip command has to be the pip for the virtual environment, thus the assumption is that you issue the command from the command line,
-with the working directory being the directory where that pip command resides.
+Installez le fichier wheel lixxml2 dans l'environement virtuel de la manière qui vous est habituelle.
+Puis installez le fichier lxml.
+Le fichier lxml necessite une installation particulière pour s'assurer qu'il n'y a pas de collision avec libxml2 qu'il utilise.
+La commande pip, doit être le pip de l'ennvironement virtuel, d'où l'hypothese que vous lancez cette commande en ligne de commande, depuis le repertoire qui contient cette commande pip.
 
     SET STATIC_DEPS=true
     .\pip install lxml-4.4.1-cp27-cp27m-win_amd64.whl
     set STATIC_DEPS=
+    
+Vous ne pouvez pas installer wx, à la place installez wxPython normalement. Pour plus de sécurité, installez aussi scour.
 
-You cannot install wx, instead install wxPython in normal way. To be on the safe side, install scour as well.
+ide, install scour as well.
 
-#### 5. shapely is a special difficulty
-If you do not have OSGeo4W64 installed, you need to install it. Shapely requires two DLLs which come from that program (geos_c.dll and geos.dll).
-After you have installed it, with the right path declarations, it will work. However, OSGeo4W64 may interfere with other programs (like illustrator).
-Thus, a solution can be to copy those two file into a suitable path within your virtual environment. 
-If you aim to use pyinstaller, that location need to be D:\Temp\BoxIssue\inkstitch-master\Lib\site-packages\shapely\DLLs.
+#### 5. shapely est spécialement difficile
+Si OSGeo4W64 n'est pas installé, vous devrez le faire.
+Shapely necessite deux DLLS qui proviennent de ce programme  (geos_c.dll and geos.dll).
+Après l'installation, avec les bonnes déclaration de chemins, cela va marcher. Cependant, OSGeo4W64 peut interferrer avec d'autre programmes (comme illustrator).
+Une solution peut être d'installer ces deux fichiers au bon endroit dans votre environement virtuel.
+SI vous utilisez pyinstaller, cet endroit doit être D:\Temp\BoxIssue\inkstitch-master\Lib\site-packages\shapely\DLLs.
 
-With the DLLs in place, you can install shapely.
+Une fois ces DLLS en place, vous pouvez installer shapely.
 
-#### 6. To be able to execute Ink/Stitch from the virtual environment, you need to set PYTHONPATH
-Ink/Stitch contain a submodule, pyembroidery, whose location is not automatically picked up. you thus need to declare it.
-This is done by setting PYTHONPATH to the path where pyembroidery is placed. The top directory of pyembroidery.
-Without using the "" ampersands around the path even if it contains spaces. Unusual in Windows environments.
-If you want more directories in the path, for example inkstitch, add a semicolon and that path. I do not use it like that, but it should work.
+
+
+#### 6. Pour pouvoir exécuter Inks/Stitch dans l'environement virtuel, vous devez définir  PYTHONPATH
+
+Ink/Stitch contient un sous-module, pyembroidery, dont la localisation n'est pas automatiquement reconnue.Vous devez donc la déclarer.
+Ceci se fait en donnant à PYTHONPATH la valeur du chemin où se trouve  pyembroidery (le repertoire racine de pyembroidery).
+Sans utiliser les "" autour du chemin, même s'il contient des espaces, ce qui est inhabituel dans les environnements Windows.
+
+Si vous voulez plus de repertoires dans le chemin, par exemple inkstitch, ajoutez un point virgule et le chemin. Je n'ai pas fait cela, mais ça devrait marcher.
 
     SET PYTHONPATH=D:\Path\To\pyembroidery
 
-#### 7. Avoiding to have to run Ink/Stitch make files
-In theory, you could now prepare inx-files using make. Instead download and install the latest Ink/Stitch release.
-It will install all inx-files and locale files needed.
-When done, copy your whole Ink/Stitch clone to where the inkstitch extension is.
-In such a way that inkstitch.py from your clone overwrites inkstitch.py in the extension directory.
-This means that when inkscape runs and Ink/Stitch extension, it will start your inkstitch.py file.
+#### 7. Pour eviter d'exécuter les make files d'Ink/Stitch 
+Théoriquement, vous pouriez maintenant prépare les fichiers inx à l'aide de make. A la place téléchargez et installez la dernière release d'Ink/Stitch.
+Cela installera tous les fichiers inx et fichiers locaux nécessaires.
+Une fois cela fait, copiez l'ensemble de votre clone Ink/Stitch là ou se trouve l'extension inkstitch.
+Ainsi le fichier inkstitch.py de votre clone écrase le fichier inkstitch.py dans le répertoire de l'extension.
 
-It also means whenever you change the code, you need to copy those code changes there.
+Ceci signifie que lorsque inkscape lance l'extension Ink/Stitch, c'est votre fichier inkstitch.py qui est utilisé.
 
-#### 8. Set up inkscape to run your virtual Python:
-This is done by going to the inkscape preferences file (preferences.xml) which is in your Roaming directory (C:\Users\xxxxxx\AppData\Roaming\inkscape).
-xxxxxx is in this case your Windows user name. Exit incscape, and edit the file. 
-Look for a group with id="extensions", and directly beneath add your python path, explicitly stating the python.exe file:
+Cela signifie aussi que chaque fois que vous changez le code, vous devez copier ces changements là.
+
+
+#### 8. Réglages  inkscape  pour utiliser votre environement virtuel Python:
+Cela se fait en allant dans le fichier de préférences inkscape (preferences.xml) qui est dans votre dossier de Roaming (C:\Users\xxxxxx\AppData\Roaming\inkscape).
+
+xxxxxx est dans ce cas votre nom d'utilisateur Windows.  Fermez  inkscape, et éditez ce fichier. 
+Recherchez un groupe avec id="extensions", et ajoutez votre chemin python directement dessous, en donnant explicitement le chemin d'accès du fichier
+python.exe :
 
      id="extensions"
      python-interpreter="d:/path/to/virtualenv/Scripts/python.exe"
      
+Chaque fois que inkscape lancera une extensionn il utilisera votre environement virtuel.
+Si votre version d'inkscape est trop ancienne, cela peut poser un problème. Téléchargez et installez une version plus récentes
+     
 Whenever inkscape is now running an extension, it will use your python virtual environment.
 If your inkscape installation is too old, it may get problems with your newere python environment. Then download and update inkscape.
 
-#### 9. Tell Ink/Stitch to activate remote debugging
-pydev is the suggested debugger to use. Again, no instruction is given here on how to install it. It is activated any time an Ink/Stitch extension is run assuming that you have a file named "DEBUG" in the same directory as the Ink/Stitch extension is installed for incscape. 
-Thus goto the inkscape extension directory, and create the file (or a folder) named "DEBUG" in same directory as inkstitch.py
+#### 9. Dire à  Ink/Stitch d'activer le debugage à distance
+Il est suggérré d'utiliser pydev comme debuggeur. A nouveau nous ne donons ici aucune instruction sur la manière de l'installer.
+Il est activé chaque fois qu'une extension Ink/Stitch est éxécutée, à condition que vous ayez un fichier nommé "DEBUG" dans le répertoire où l'exension Ink/Stitch est installée.
+Donc allez dans le répertoire d'extensions inkscape et créez un fichier (ou un dossier) nommé  "DEBUG" dans le même dossier que inkstitch.py
 
-#### 10. Debugging now requires running a remote debugger
-Start your remote debugger. Listen to port 5678. Start inkscape, from a place where the PYTHONPATH you set is active.
+#### 10.   Debuger necessite maintenant un debugeur à distance.
+Démarrez votre debugueur à distance. Ecoutez le port 5678. Démarrez inkscape, depuis un endroit où votre PYTHONPATH est actif.
+Je fais cela en ligne de commande. Depuis inkscape, appellez l'extension Ink/Stitch que vous voulez debuger. Ink/Stitch appelera le debugger.
 The way I do it is from the command line. From inside inkscape, call the Ink/Stitch exntesion you want to debug.
-Ink/Stitch will call the debugger.
 
-Any errors you may see before that is coming from inkscape, and then the import chain called by Ink/Stitch.
-Install whatever modules are claimed as missing. 
-If something is still amiss, best way to debug until the remote debugger starts is likely to go to inkscapes directory where inkex.py is, and edit that file.
+Toutes les erreurs que vous pourriez voir avant cela proviennent d'inkscape et de la chain d'import appelée par by Ink/Stitch.
+
+Installez tout module dit manquant.
+Si quelque chose ne va tounours pas, la meilleure manière de débuger en attendant que le debugger à distance fonctionne est probablement d'éditer le fichier inkex.py du dossier d'extension d'inkscape:
 
     C.\Program Files\inkscape\share\extensions\inkex.py
