@@ -31,7 +31,15 @@ Cliquer sur `Paramètres` pour accéder aux options suivantes.
 
 #### Mise en page
 
+
 Setting|Description
+---|---
+Printing Size|You can choose between `Letter` and `A4`.
+Print Layouts|There are two different layout types:<br />⚬ **Embroidery machine operator layout** with color blocks, thread names, stitch counts, and custom notes<br />⚬ **Client oriented layout** designed for you to send to your customer<br />⚬ **Custom page** offers space for free text (e.g. instructions for in-the-hoop projects)
+Save as defaults|*Page Setup* settings can be saved as defaults. Next time you open a print preview it will use your default settings. Linux e.g. would save it default print settings to `~/.config/inkstitch/print_settings.json`.
+
+
+Réglage|Description
 ---|---
 Taille d'impression|Vous avez le choix entre `Letter` et `A4`.
 Disposition d'impression|Il y a deux types de disposition différents:<br />⚬ 
