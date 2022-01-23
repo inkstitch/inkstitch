@@ -50,9 +50,9 @@ Vous pouvez affiner cette estimation en modifiant les valeurs longueur de fil su
 Paramètre|Description
 ---|---
 Palette de fil|Change la palette de fabricant. Ink/Stitch choisira les noms de couleurs correspondants à votre choix. Il supprimera toutes les modifications que vous avez peut-être déjà effectuées.
-## Imprimer / Enregistrer ePDF
+## Imprimer / Enregistrer PDF
 
-Cliquez sur `Print` pour ouvrir la page dans votre visionneuse PDF à partir de laquelle vous pouvez imprimer vos documents. Assurez-vous que le format d'impression correspond à vos paramètres.  Vous pouvez également cliquer sur `Enregistrer PDF`. Cela enregistrera en PDF.
+Cliquez sur `Imprimer` pour ouvrir la page dans votre visionneuse PDF à partir de laquelle vous pouvez imprimer vos documents. Assurez-vous que le format d'impression correspond à vos paramètres.  Vous pouvez également cliquer sur `Enregistrer PDF`. Cela enregistrera en PDF.
 
 ## Retour dans Inkscape
 
