@@ -12,7 +12,7 @@ Exécuter `Extensions > Ink/Stitch  > Visualiser et exporter > Export pdf` pour 
 
 ### Champs modifiables et logo personnalisé
 Vous remarquerez de nombreux champs modifiables dans l'aperçu avant impression. Cliquez avec votre souris sur les champs et entrez votre texte. Les personnalisations des champs d'en-tête seront automatiquement renseignées sur chaque page.
-N'oubliez pas de choisir votre propre logo en cliquant sur le logo Ink/Stitch. Cela ouvrira un sélecteur de fichiers, choisissez votre logo et cliquez sur `Ouvrin`.
+N'oubliez pas de choisir votre propre logo en cliquant sur le logo Ink/Stitch. Cela ouvrira un sélecteur de fichiers, choisissez votre logo et cliquez sur `Ouvrir`.
 
 **Astuce:** Si vous modifiez l'ordre des objets après avoir rempli les notes de l'opérateur, utilisez couper (`Ctrl+X`) et coller (`Ctrl+V`) pour les déplacer aux bons endroits.
 {: .notice--warning }
