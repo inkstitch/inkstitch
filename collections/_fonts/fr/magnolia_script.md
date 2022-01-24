@@ -7,4 +7,4 @@ preview_image: /assets/images/fonts/magnolia_script.png
 ---
 ![Baumans](/assets/images/fonts/magnolia_script.png)
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/magnolia_KOR/LICENSE)
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/magnolia_ KOR/LICENSE)
