@@ -1,7 +1,7 @@
 ---
 title: "Baumans FI"
-permalink: /fonts/baumans/
-last_modified_at: 2020-12-31
+permalink: /fr/fonts/baumans/
+last_modified_at: 2022-01-23
 toc: false
 preview_image: /assets/images/fonts/baumans.png
 ---
