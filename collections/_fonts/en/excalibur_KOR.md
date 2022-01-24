@@ -7,4 +7,4 @@ preview_image: /assets/images/fonts/excalibur_kor.png
 ---
 ![ExcaliburKOR](/assets/images/fonts/excalibur_kor.png)
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/excalibur_kor/LICENSE)
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/excalibur_KOR/LICENSE)
