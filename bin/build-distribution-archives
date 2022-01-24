@@ -1,8 +1,11 @@
 VERSION="$(echo ${GITHUB_REF} | sed -e 's|refs/heads/||' -e 's|refs/tags/||' -e 's|/|-|g')"
 OS="${BUILD:-$(uname)}"
 mkdir artifacts
+
 if [ "$BUILD" = "osx" ]; then
     cp -a icons locales print LICENSE VERSION images/examples palettes symbols fonts inx dist/inkstitch.app/Contents/Resources
+    # adding version to Info.plist
+    sed -i '' 's/0.0.0/'${VERSION}'/' dist/inkstitch.app/Contents/Info.plist
     rm -rf dist/inkstitch/
     temp_path="/tmp/inkstitch/"
     # inside the scripts folder are:
@@ -68,6 +71,10 @@ if [ "$BUILD" = "osx" ]; then
                 --install-location ${temp_path}inkstitch.app \
                 artifacts/inkstitch-${VERSION}-${OS}.pkg
     fi
+    # Creating the zip for Drag n' Drop install
+    cd dist
+    python -m zipfile -c ../artifacts/inkstitch-${VERSION}-${OS}.zip *
+    cd ..
 else
     cp -a images/examples palettes symbols fonts inx LICENSE VERSION dist/inkstitch
     cp -a icons locales print dist/inkstitch/bin
