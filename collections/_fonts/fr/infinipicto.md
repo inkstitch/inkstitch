@@ -1,6 +1,6 @@
 ---
 title: "InfiniPicto"
-permalink: /fonts/infinipicto/
+permalink: /fr/fonts/infinipicto/
 last_modified_at: 2022-01-22
 toc: false
 preview_image: /assets/images/fonts/infinipicto.png
