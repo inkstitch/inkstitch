@@ -1,6 +1,6 @@
 ---
 title: "Cherry for Ink/Stitch"
-permalink: /en/fonts/cherryforinkstitch/
+permalink: /fonts/cherryforinkstitch/
 last_modified_at: 2022-01-22
 toc: false
 preview_image: /assets/images/fonts/cherryforinkstitch.png
