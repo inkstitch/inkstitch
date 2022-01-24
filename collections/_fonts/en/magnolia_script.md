@@ -1,5 +1,5 @@
 ---
-title: "Magnolia Script"
+title: "Magnolia KOR"
 permalink: /fonts/magnolia-script/
 last_modified_at: 2022-01-23
 toc: false
