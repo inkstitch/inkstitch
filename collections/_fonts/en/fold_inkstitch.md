@@ -7,4 +7,4 @@ preview_image: /assets/images/fonts/fold_inkstitch.png
 ---
 ![FoldInkstitch](/assets/images/fonts/fold_inkstitch.png)
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/fold_inkstitch/LICENSE)
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/fold_inkstitch/license)
