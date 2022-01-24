@@ -246,3 +246,4 @@ jobs:
             artifacts/*.rpm
             artifacts/*.tar.xz
             artifacts/*.sh
+            artifacts/*.zip
