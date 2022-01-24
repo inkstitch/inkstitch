@@ -7,4 +7,4 @@ preview_image: /assets/images/fonts/espresso_dolce.png
 ---
 ![EspressoDolce](/assets/images/fonts/espresso_dolce.png)
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/espresso_dolce/LICENSE)
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/espresso_KOR/LICENSE)
