@@ -7,4 +7,4 @@ preview_image: /assets/images/fonts/emilio20tricolore.png
 ---
 ![FoldInkstitch](/assets/images/fonts/emilio20tricolore.png)
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio20tricolore/LICENSE)
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20_tricolore/LICENSE)
