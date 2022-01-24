@@ -7,4 +7,4 @@ preview_image: /assets/images/fonts/marcellus_sc_fi.png
 ---
 ![MarcellusSCFI](/assets/images/fonts/marcellus_sc_fi.png)
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/marcellusSC_FI/LICENSE)
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/marcelusSC_FI/LICENSE)
