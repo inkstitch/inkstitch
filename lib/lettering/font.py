@@ -15,6 +15,7 @@ from ..elements import nodes_to_elements
 from ..exceptions import InkstitchException
 from ..extensions.lettering_custom_font_dir import get_custom_font_dir
 from ..i18n import _, get_languages
+from ..marker import MARKER, ensure_marker
 from ..stitches.auto_satin import auto_satin
 from ..svg.tags import (CONNECTION_END, CONNECTION_START, INKSCAPE_LABEL,
                         SVG_PATH_TAG, SVG_USE_TAG, XLINK_HREF)
@@ -218,7 +219,9 @@ class Font(object):
                         style += inkex.Style("stroke-width:0.5px")
                 element.set('style', '%s' % style.to_str())
 
+        # make sure necessary marker and command symbols are in the defs section
         self._ensure_command_symbols(destination_group)
+        self._ensure_marker_symbols(destination_group)
 
         return destination_group
 
@@ -335,6 +338,12 @@ class Font(object):
         # make sure all necessary command symbols are in the document
         for command in commands:
             ensure_symbol(group.getroottree().getroot(), command)
+
+    def _ensure_marker_symbols(self, group):
+        for marker in MARKER:
+            xpath = ".//*[contains(@style, 'marker-start:url(#inkstitch-%s-marker)')]" % marker
+            if group.xpath(xpath, namespaces=inkex.NSS):
+                ensure_marker(group.getroottree().getroot(), marker)
 
     def _apply_auto_satin(self, group, trim):
         """Apply Auto-Satin to an SVG XML node tree with an svg:g at its root.
