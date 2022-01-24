@@ -1,5 +1,5 @@
 ---
-title: "Amitaclo
+title: "Amitaclo"
 permalink: /fr/fonts/amita/
 last_modified_at: 2022-01-23
 toc: false
