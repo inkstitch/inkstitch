@@ -7,4 +7,4 @@ preview_image: /assets/images/fonts/namskout_ags.png
 ---
 ![NamskoutAGS](/assets/images/fonts/namskout_ags.png)
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/namskout_ags/LICENSE)
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/namskout_AGS/LICENSE)
