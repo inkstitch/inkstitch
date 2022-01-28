@@ -33,5 +33,5 @@ def set_marker(node, position, marker):
     style = node.get('style') or ''
     style = style.split(";")
     style = [i for i in style if not i.startswith('marker-%s' % position)]
-    style.append('marker-%s:url(#inkstitch-pattern-marker)' % position)
+    style.append('marker-%s:url(#inkstitch-%s-marker)' % (position, marker))
     node.set('style', ";".join(style))
