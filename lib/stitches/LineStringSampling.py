@@ -70,7 +70,7 @@ def calculate_line_angles(line):
     return Angles
 
 
-def raster_line_string_with_priority_points(line, start_distance, end_distance, maxstitch_distance,
+def raster_line_string_with_priority_points(line, start_distance, end_distance, maxstitch_distance,  # noqa: C901
                                             must_use_points_deque, abs_offset, offset_by_half, replace_forbidden_points):
     """
     Rasters a line between start_distance and end_distance.

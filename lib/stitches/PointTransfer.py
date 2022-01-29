@@ -36,7 +36,7 @@ def calc_transferred_point(bisectorline, child):
     return point, priority
 
 
-def transfer_points_to_surrounding(treenode, used_offset, offset_by_half, to_transfer_points,  to_transfer_points_origin=[],
+def transfer_points_to_surrounding(treenode, used_offset, offset_by_half, to_transfer_points,  to_transfer_points_origin=[],  # noqa: C901
                                    overnext_neighbor=False, transfer_forbidden_points=False,
                                    transfer_to_parent=True, transfer_to_sibling=True, transfer_to_child=True):
     """
@@ -305,7 +305,7 @@ def calc_transferred_point_graph(bisectorline, edge_geometry):
     return point, priority
 
 
-def transfer_points_to_surrounding_graph(fill_stitch_graph, current_edge, used_offset, offset_by_half, to_transfer_points,
+def transfer_points_to_surrounding_graph(fill_stitch_graph, current_edge, used_offset, offset_by_half, to_transfer_points,  # noqa: C901
                                          overnext_neighbor=False, transfer_forbidden_points=False, transfer_to_previous=True, transfer_to_next=True):
     """
     Takes the current graph edge and its rastered points (to_transfer_points) and transfers these points to its previous and next edges (if selected)

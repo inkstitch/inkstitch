@@ -7,7 +7,6 @@ import trimesh
 import numpy as np
 from scipy import spatial
 import math
-from shapely.geometry import asLineString
 from anytree import PreOrderIter
 from ..stitches import LineStringSampling
 from ..stitches import PointTransfer
@@ -52,7 +51,7 @@ def cut(line, distance):
                 return LineString([(cp.x, cp.y)] + coords[i:] + coords[:i])
 
 
-def connect_raster_tree_nearest_neighbor(
+def connect_raster_tree_nearest_neighbor(  # noqa: C901
         tree, used_offset, stitch_distance, close_point, offset_by_half):
     """
     Takes the offsetted curves organized as tree, connects and samples them.
@@ -458,8 +457,7 @@ def calculate_replacing_middle_point(line_segment, abs_offset, max_stitch_distan
         return line_segment.coords[1]
 
 
-def connect_raster_tree_from_inner_to_outer(
-        tree, used_offset, stitch_distance, close_point, offset_by_half):
+def connect_raster_tree_from_inner_to_outer(tree, used_offset, stitch_distance, close_point, offset_by_half):  # noqa: C901
     """
     Takes the offsetted curves organized as tree, connects and samples them.
     Strategy: A connection from parent to child is made as fast as possible to

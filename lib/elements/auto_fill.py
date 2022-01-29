@@ -3,27 +3,26 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
+import logging
 import math
+import re
 import sys
 import traceback
-import re
-import logging
-import inkex
 
+import inkex
 from shapely import geometry as shgeo
 from shapely.validation import explain_validity
+
 from ..i18n import _
+from ..marker import get_marker_elements
 from ..stitch_plan import StitchGroup
-from ..stitches import auto_fill, fill
-from ..stitches import StitchPattern
-from ..utils import cache, version
-from .element import param
-from .element import EmbroideryElement
-from ..patterns import get_patterns
-from .validation import ValidationWarning
-from ..utils import Point as InkstitchPoint
+from ..stitches import StitchPattern, auto_fill, fill
 from ..svg import PIXELS_PER_MM
 from ..svg.tags import INKSCAPE_LABEL
+from ..utils import Point as InkstitchPoint
+from ..utils import cache, version
+from .element import EmbroideryElement, param
+from .validation import ValidationWarning
 
 
 class SmallShapeWarning(ValidationWarning):
@@ -393,7 +392,8 @@ class AutoFill(EmbroideryElement):
         else:
             return None
 
-    def to_stitch_groups(self, last_patch):
+    def to_stitch_groups(self, last_patch):  # noqa: C901
+        # TODO: split this up do_legacy_fill() etc.
         stitch_groups = []
 
         starting_point = self.get_starting_point(last_patch)
@@ -458,9 +458,8 @@ class AutoFill(EmbroideryElement):
                         stitches=path)
                     stitch_groups.append(stitch_group)
             elif self.fill_method == 2:  # Guided Auto Fill
-                lines = get_patterns(
-                    self.node, "#inkstitch-guide-line-marker", False, True)
-                lines = lines['stroke_patterns']
+                lines = get_marker_elements(self.node, "guide-line", False, True)
+                lines = lines['stroke']
                 if not lines or lines[0].is_empty:
                     inkex.errormsg(
                         _("No line marked as guide line found within the same group as patch"))

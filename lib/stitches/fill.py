@@ -145,7 +145,7 @@ def repair_non_simple_lines(line):
         return repaired
 
 
-def intersect_region_with_grating_line(shape, line, row_spacing, end_row_spacing=None, flip=False):
+def intersect_region_with_grating_line(shape, line, row_spacing, end_row_spacing=None, flip=False):  # noqa: C901
 
     row_spacing = abs(row_spacing)
     (minx, miny, maxx, maxy) = shape.bounds

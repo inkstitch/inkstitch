@@ -296,7 +296,7 @@ class ParamsTab(ScrolledPanel):
                 widgets[3].Show(True)
             choice["last_initialized_choice"] = current_selection
 
-    def __do_layout(self, only_settings_grid=False):
+    def __do_layout(self, only_settings_grid=False):  # noqa: C901
 
         # just to add space around the settings
         box = wx.BoxSizer(wx.VERTICAL)

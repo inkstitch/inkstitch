@@ -159,8 +159,7 @@ def check_and_prepare_tree_for_valid_spiral(root):
     return True
 
 
-def offset_poly(
-        poly, offset, join_style, stitch_distance, offset_by_half, strategy, starting_point):
+def offset_poly(poly, offset, join_style, stitch_distance, offset_by_half, strategy, starting_point):  # noqa: C901
     """
     Takes a polygon (which can have holes) as input and creates offsetted
     versions until the polygon is filled with these smaller offsets.
