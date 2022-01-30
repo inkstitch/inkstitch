@@ -9,20 +9,20 @@ import re
 import sys
 import traceback
 
-import inkex
 from shapely import geometry as shgeo
 from shapely.validation import explain_validity
 
 from ..i18n import _
 from ..marker import get_marker_elements
 from ..stitch_plan import StitchGroup
-from ..stitches import StitchPattern, auto_fill, fill
+from ..stitches import StitchPattern, auto_fill, legacy_fill
 from ..svg import PIXELS_PER_MM
 from ..svg.tags import INKSCAPE_LABEL
 from ..utils import Point as InkstitchPoint
 from ..utils import cache, version
 from .element import EmbroideryElement, param
-from .validation import ValidationWarning
+from .validation import ValidationError, ValidationWarning
+from shapely.ops import nearest_points
 
 
 class SmallShapeWarning(ValidationWarning):
@@ -43,13 +43,53 @@ class UnderlayInsetWarning(ValidationWarning):
     description = _("The underlay inset parameter for this fill object cannot be applied. "
                     "Ink/Stitch will ignore it and will use the original size instead.")
 
+class MissingGuideLineWarning(ValidationWarning):
+    name = _("Missing Guideline")
+    description = _('This object is set to "Guided AutoFill", but has no guide line.')
+    steps_to_solve = [
+        _('* Create a stroke object'),
+        _('* Select this object and run Extensions > Ink/Stitch > Edit > Selection to guide line')
+    ]
 
-class AutoFill(EmbroideryElement):
-    element_name = _("AutoFill")
+class DisjointGuideLineWarning(ValidationWarning):
+    name = _("Disjointed Guide Line")
+    description = _("The guide line of this object isn't within the object borders. "
+                    "The guide line works best, if it is within the target element.")
+    steps_to_solve = [
+        _('* Move the guide line into the element')
+    ]
+
+class MultipleGuideLineWarning(ValidationWarning):
+    name = _("Multiple Guide Lines")
+    description = _("This object has multiple guide lines, but only the first one will be used.")
+    steps_to_solve = [
+        _("* Remove all guide lines, except for one.")
+    ]
+
+class UnconnectedError(ValidationError):
+    name = _("Unconnected")
+    description = _("Fill: This object is made up of unconnected shapes.  This is not allowed because "
+                    "Ink/Stitch doesn't know what order to stitch them in.  Please break this "
+                    "object up into separate shapes.")
+    steps_to_solve = [
+        _('* Extensions > Ink/Stitch > Fill Tools > Break Apart Fill Objects'),
+    ]
+
+
+class InvalidShapeError(ValidationError):
+    name = _("Border crosses itself")
+    description = _("Fill: Shape is not valid.  This can happen if the border crosses over itself.")
+    steps_to_solve = [
+        _('* Extensions > Ink/Stitch > Fill Tools > Break Apart Fill Objects')
+    ]
+
+
+class FillStitch(EmbroideryElement):
+    element_name = _("FillStitch")
 
     @property
     @param('auto_fill', _('Automatically routed fill stitching'), type='toggle', default=True, sort_index=1)
-    def auto_fill2(self):
+    def auto_fill(self):
         return self.get_boolean_param('auto_fill', True)
 
     @property
@@ -168,9 +208,92 @@ class AutoFill(EmbroideryElement):
         # ensure path length
         for i, path in enumerate(paths):
             if len(path) < 3:
-                paths[i] = [(path[0][0], path[0][1]), (path[0][0] +
-                                                       1.0, path[0][1]), (path[0][0], path[0][1]+1.0)]
+                paths[i] = [(path[0][0], path[0][1]), (path[0][0]+1.0, path[0][1]), (path[0][0], path[0][1]+1.0)]
         return paths
+
+    @property
+    @cache
+    def shape(self):
+        # shapely's idea of "holes" are to subtract everything in the second set
+        # from the first. So let's at least make sure the "first" thing is the
+        # biggest path.
+        paths = self.paths
+        paths.sort(key=lambda point_list: shgeo.Polygon(point_list).area, reverse=True)
+        # Very small holes will cause a shape to be rendered as an outline only
+        # they are too small to be rendered and only confuse the auto_fill algorithm.
+        # So let's ignore them
+        if shgeo.Polygon(paths[0]).area > 5 and shgeo.Polygon(paths[-1]).area < 5:
+            paths = [path for path in paths if shgeo.Polygon(path).area > 3]
+
+        polygon = shgeo.MultiPolygon([(paths[0], paths[1:])])
+
+        # There is a great number of "crossing border" errors on fill shapes
+        # If the polygon fails, we can try to run buffer(0) on the polygon in the
+        # hope it will fix at least some of them
+        if not self.shape_is_valid(polygon):
+            why = explain_validity(polygon)
+            message = re.match(r".+?(?=\[)", why)
+            if message.group(0) == "Self-intersection":
+                buffered = polygon.buffer(0)
+                # if we receive a multipolygon, only use the first one of it
+                if type(buffered) == shgeo.MultiPolygon:
+                    buffered = buffered[0]
+                # we do not want to break apart into multiple objects (possibly in the future?!)
+                # best way to distinguish the resulting polygon is to compare the area size of the two
+                # and make sure users will not experience significantly altered shapes without a warning
+                if type(buffered) == shgeo.Polygon and math.isclose(polygon.area, buffered.area, abs_tol=0.5):
+                    polygon = shgeo.MultiPolygon([buffered])
+
+        return polygon
+
+    def shape_is_valid(self, shape):
+        # Shapely will log to stdout to complain about the shape unless we make
+        # it shut up.
+        logger = logging.getLogger('shapely.geos')
+        level = logger.level
+        logger.setLevel(logging.CRITICAL)
+
+        valid = shape.is_valid
+
+        logger.setLevel(level)
+
+        return valid
+
+    def validation_errors(self):
+        if not self.shape_is_valid(self.shape):
+            why = explain_validity(self.shape)
+            message, x, y = re.findall(r".+?(?=\[)|-?\d+(?:\.\d+)?", why)
+
+            # I Wish this weren't so brittle...
+            if "Hole lies outside shell" in message:
+                yield UnconnectedError((x, y))
+            else:
+                yield InvalidShapeError((x, y))
+
+    def validation_warnings(self):
+        if self.shape.area < 20:
+            label = self.node.get(INKSCAPE_LABEL) or self.node.get("id")
+            yield SmallShapeWarning(self.shape.centroid, label)
+
+        if self.shrink_or_grow_shape(self.expand, True).is_empty:
+            yield ExpandWarning(self.shape.centroid)
+
+        if self.shrink_or_grow_shape(-self.fill_underlay_inset, True).is_empty:
+            yield UnderlayInsetWarning(self.shape.centroid)
+
+        # guided fill warnings
+        if self.fill_method == 2:
+            guide_lines = self._get_guide_lines(True)
+            if not guide_lines or guide_lines[0].is_empty:
+                yield MissingGuideLineWarning(self.shape.centroid)
+            elif len(guide_lines) > 1:
+                yield MultipleGuideLineWarning(self.shape.centroid)
+            elif guide_lines[0].disjoint(self.shape):
+                yield DisjointGuideLineWarning(self.shape.centroid)
+            return None
+
+        for warning in super(FillStitch, self).validation_warnings():
+            yield warning
 
     @property
     @cache
@@ -308,52 +431,6 @@ class AutoFill(EmbroideryElement):
     def underlay_underpath(self):
         return self.get_boolean_param('underlay_underpath', True)
 
-    @property
-    @cache
-    def shape(self):
-        # shapely's idea of "holes" are to subtract everything in the second set
-        # from the first. So let's at least make sure the "first" thing is the
-        # biggest path.
-        paths = self.paths
-        paths.sort(key=lambda point_list: shgeo.Polygon(
-            point_list).area, reverse=True)
-        # Very small holes will cause a shape to be rendered as an outline only
-        # they are too small to be rendered and only confuse the auto_fill algorithm.
-        # So let's ignore them
-        if shgeo.Polygon(paths[0]).area > 5 and shgeo.Polygon(paths[-1]).area < 5:
-            paths = [path for path in paths if shgeo.Polygon(path).area > 3]
-
-        polygon = shgeo.MultiPolygon([(paths[0], paths[1:])])
-
-        # There is a great number of "crossing border" errors on fill shapes
-        # If the polygon fails, we can try to run buffer(0) on the polygon in the
-        # hope it will fix at least some of them
-        if not self.shape_is_valid(polygon):
-            why = explain_validity(polygon)
-            message = re.match(r".+?(?=\[)", why)
-            if message.group(0) == "Self-intersection":
-                buffered = polygon.buffer(0)
-                # we do not want to break apart into multiple objects (possibly in the future?!)
-                # best way to distinguish the resulting polygon is to compare the area size of the two
-                # and make sure users will not experience significantly altered shapes without a warning
-                if math.isclose(polygon.area, buffered.area):
-                    polygon = shgeo.MultiPolygon([buffered])
-
-        return polygon
-
-    def shape_is_valid(self, shape):
-        # Shapely will log to stdout to complain about the shape unless we make
-        # it shut up.
-        logger = logging.getLogger('shapely.geos')
-        level = logger.level
-        logger.setLevel(logging.CRITICAL)
-
-        valid = shape.is_valid
-
-        logger.setLevel(level)
-
-        return valid
-
     def shrink_or_grow_shape(self, amount, validate=False):
         if amount:
             shape = self.shape.buffer(amount)
@@ -392,142 +469,156 @@ class AutoFill(EmbroideryElement):
         else:
             return None
 
-    def to_stitch_groups(self, last_patch):  # noqa: C901
-        # TODO: split this up do_legacy_fill() etc.
+    def to_stitch_groups(self, last_patch):
+        # backwards compatibility: legacy_fill used to be inkstitch:auto_fill == False
+        if not self.auto_fill or self.fill_method == 3:
+            return self.do_legacy_fill()
+        else:
+            stitch_groups = []
+            start = self.get_starting_point(last_patch)
+            end = self.get_ending_point()
+
+            try:
+                if self.fill_underlay:
+                    underlay_stitch_groups, start = self.do_underlay(start)
+                    stitch_groups.extend(underlay_stitch_groups)
+                if self.fill_method == 0:
+                    stitch_groups.extend(self.do_auto_fill(last_patch, start, end))
+                if self.fill_method == 1:
+                    stitch_groups.extend(self.do_tangential_fill(last_patch, start))
+                elif self.fill_method == 2:
+                    stitch_groups.extend(self.do_guided_fill(last_patch, start, end))
+            except Exception:
+                self.fatal_fill_error()
+
+            return stitch_groups
+
+    def do_legacy_fill(self):
+        stitch_lists = legacy_fill(self.shape,
+                                   self.angle,
+                                   self.row_spacing,
+                                   self.end_row_spacing,
+                                   self.max_stitch_length,
+                                   self.flip,
+                                   self.staggers,
+                                   self.skip_last)
+        return [StitchGroup(stitches=stitch_list, color=self.color) for stitch_list in stitch_lists]
+
+    def do_underlay(self, starting_point):
         stitch_groups = []
+        for i in range(len(self.fill_underlay_angle)):
+            underlay = StitchGroup(
+                color=self.color,
+                tags=("auto_fill", "auto_fill_underlay"),
+                stitches=auto_fill(
+                    self.underlay_shape,
+                    None,
+                    self.fill_underlay_angle[i],
+                    self.fill_underlay_row_spacing,
+                    self.fill_underlay_row_spacing,
+                    self.fill_underlay_max_stitch_length,
+                    self.running_stitch_length,
+                    self.staggers,
+                    self.fill_underlay_skip_last,
+                    starting_point,
+                    underpath=self.underlay_underpath))
+            stitch_groups.append(underlay)
 
-        starting_point = self.get_starting_point(last_patch)
-        ending_point = self.get_ending_point()
+        starting_point = underlay.stitches[-1]
+        return [stitch_groups, starting_point]
 
-        try:
-            if self.fill_underlay:
-                for i in range(len(self.fill_underlay_angle)):
-                    underlay = StitchGroup(
-                        color=self.color,
-                        tags=("auto_fill", "auto_fill_underlay"),
-                        stitches=auto_fill(
-                            self.underlay_shape,
-                            None,
-                            self.fill_underlay_angle[i],
-                            self.fill_underlay_row_spacing,
-                            self.fill_underlay_row_spacing,
-                            self.fill_underlay_max_stitch_length,
-                            self.running_stitch_length,
-                            self.staggers,
-                            self.fill_underlay_skip_last,
-                            starting_point,
-                            underpath=self.underlay_underpath))
-                    stitch_groups.append(underlay)
-                starting_point = underlay.stitches[-1]
+    def do_auto_fill(self, last_patch, starting_point, ending_point):
+        stitch_group = StitchGroup(
+            color=self.color,
+            tags=("auto_fill", "auto_fill_top"),
+            stitches=auto_fill(
+                self.fill_shape,
+                None,
+                self.angle,
+                self.row_spacing,
+                self.end_row_spacing,
+                self.max_stitch_length,
+                self.running_stitch_length,
+                self.staggers,
+                self.skip_last,
+                starting_point,
+                ending_point,
+                self.underpath))
+        return [stitch_group]
 
-            if self.fill_method == 0:  # Auto Fill
-                stitch_group = StitchGroup(
-                    color=self.color,
-                    tags=("auto_fill", "auto_fill_top"),
-                    stitches=auto_fill(
-                        self.fill_shape,
-                        None,
-                        self.angle,
-                        self.row_spacing,
-                        self.end_row_spacing,
-                        self.max_stitch_length,
-                        self.running_stitch_length,
-                        self.staggers,
-                        self.skip_last,
-                        starting_point,
-                        ending_point,
-                        self.underpath))
-                stitch_groups.append(stitch_group)
-            elif self.fill_method == 1:  # Tangential Fill
-                polygons = list(self.fill_shape)
-                if not starting_point:
-                    starting_point = (0, 0)
-                for poly in polygons:
-                    connectedLine, connectedLineOrigin = StitchPattern.offset_poly(
-                        poly,
-                        -self.row_spacing,
-                        self.join_style+1,
-                        self.max_stitch_length,
-                        self.interlaced,
-                        self.tangential_strategy,
-                        shgeo.Point(starting_point))
-                    path = [InkstitchPoint(*p) for p in connectedLine]
-                    stitch_group = StitchGroup(
-                        color=self.color,
-                        tags=("auto_fill", "auto_fill_top"),
-                        stitches=path)
-                    stitch_groups.append(stitch_group)
-            elif self.fill_method == 2:  # Guided Auto Fill
-                lines = get_marker_elements(self.node, "guide-line", False, True)
-                lines = lines['stroke']
-                if not lines or lines[0].is_empty:
-                    inkex.errormsg(
-                        _("No line marked as guide line found within the same group as patch"))
-                else:
-                    stitch_group = StitchGroup(
-                        color=self.color,
-                        tags=("auto_fill", "auto_fill_top"),
-                        stitches=auto_fill(
-                            self.fill_shape,
-                            lines[0].geoms[0],
-                            self.angle,
-                            self.row_spacing,
-                            self.end_row_spacing,
-                            self.max_stitch_length,
-                            self.running_stitch_length,
-                            0,
-                            self.skip_last,
-                            starting_point,
-                            ending_point,
-                            self.underpath,
-                            self.interlaced))
-                    stitch_groups.append(stitch_group)
-            elif self.fill_method == 3:  # Legacy Fill
-                stitch_lists = fill.legacy_fill(self.shape,
-                                                self.angle,
-                                                self.row_spacing,
-                                                self.end_row_spacing,
-                                                self.max_stitch_length,
-                                                self.flip,
-                                                self.staggers,
-                                                self.skip_last)
-                for stitch_list in stitch_lists:
-                    stitch_group = StitchGroup(
-                        color=self.color,
-                        tags=("auto_fill", "auto_fill_top"),
-                        stitches=stitch_list)
-                    stitch_groups.append(stitch_group)
-
-        except Exception:
-            if hasattr(sys, 'gettrace') and sys.gettrace():
-                # if we're debugging, let the exception bubble up
-                raise
-
-            # for an uncaught exception, give a little more info so that they can create a bug report
-            message = ""
-            message += _("Error during autofill!  This means that there is a problem with Ink/Stitch.")
-            message += "\n\n"
-            # L10N this message is followed by a URL: https://github.com/inkstitch/inkstitch/issues/new
-            message += _("If you'd like to help us make Ink/Stitch better, please paste this whole message into a new issue at: ")
-            message += "https://github.com/inkstitch/inkstitch/issues/new\n\n"
-            message += version.get_inkstitch_version() + "\n\n"
-            message += traceback.format_exc()
-
-            self.fatal(message)
+    def do_tangential_fill(self, last_patch, starting_point):
+        stitch_groups = []
+        polygons = list(self.fill_shape)
+        if not starting_point:
+            starting_point = (0, 0)
+        for poly in polygons:
+            connectedLine, connectedLineOrigin = StitchPattern.offset_poly(
+                poly,
+                -self.row_spacing,
+                self.join_style+1,
+                self.max_stitch_length,
+                self.interlaced,
+                self.tangential_strategy,
+                shgeo.Point(starting_point))
+            path = [InkstitchPoint(*p) for p in connectedLine]
+            stitch_group = StitchGroup(
+                color=self.color,
+                tags=("auto_fill", "auto_fill_top"),
+                stitches=path)
+            stitch_groups.append(stitch_group)
 
         return stitch_groups
 
+    def do_guided_fill(self, last_patch, starting_point, ending_point):
+        guide_line = self._get_guide_lines()
 
-def validation_warnings(self):
-    if self.shape.area < 20:
-        label = self.node.get(INKSCAPE_LABEL) or self.node.get("id")
-        yield SmallShapeWarning(self.shape.centroid, label)
+        # No guide line: fallback to normal autofill
+        if not guide_line:
+            return self.do_auto_fill(last_patch, starting_point, ending_point)
 
-    if self.shrink_or_grow_shape(self.expand, True).is_empty:
-        yield ExpandWarning(self.shape.centroid)
+        stitch_group = StitchGroup(
+            color=self.color,
+            tags=("auto_fill", "auto_fill_top"),
+            stitches=auto_fill(
+                self.fill_shape,
+                guide_line.geoms[0],
+                self.angle,
+                self.row_spacing,
+                self.end_row_spacing,
+                self.max_stitch_length,
+                self.running_stitch_length,
+                0,
+                self.skip_last,
+                starting_point,
+                ending_point,
+                self.underpath,
+                self.interlaced))
+        return [stitch_group]
 
-    if self.shrink_or_grow_shape(-self.fill_underlay_inset, True).is_empty:
-        yield UnderlayInsetWarning(self.shape.centroid)
+    @cache
+    def _get_guide_lines(self, multiple=False):
+        guide_lines = get_marker_elements(self.node, "guide-line", False, True)
+        # No or empty guide line
+        if not guide_lines or guide_lines['stroke'][0].is_empty:
+            return None
+        if multiple:
+            return guide_lines['stroke']
+        else:
+            return guide_lines['stroke'][0]
 
-    for warning in super(AutoFill, self).validation_warnings():
-        yield warning
+    def fatal_fill_error(self):
+        if hasattr(sys, 'gettrace') and sys.gettrace():
+            # if we're debugging, let the exception bubble up
+            raise
+
+        # for an uncaught exception, give a little more info so that they can create a bug report
+        message = ""
+        message += _("Error during autofill!  This means that there is a problem with Ink/Stitch.")
+        message += "\n\n"
+        # L10N this message is followed by a URL: https://github.com/inkstitch/inkstitch/issues/new
+        message += _("If you'd like to help us make Ink/Stitch better, please paste this whole message into a new issue at: ")
+        message += "https://github.com/inkstitch/inkstitch/issues/new\n\n"
+        message += version.get_inkstitch_version() + "\n\n"
+        message += traceback.format_exc()
+
+        self.fatal(message)

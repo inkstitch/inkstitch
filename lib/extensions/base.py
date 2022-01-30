@@ -161,10 +161,10 @@ class InkstitchExtension(inkex.Effect):
         if selected:
             if node.tag == SVG_GROUP_TAG:
                 pass
-            elif (node.tag in EMBROIDERABLE_TAGS or is_clone(node)) and not has_marker(node, 'pattern'):
+            elif (node.tag in EMBROIDERABLE_TAGS or is_clone(node)) and not has_marker(node):
                 nodes.append(node)
-            # add images, text and patterns for the troubleshoot extension
-            elif troubleshoot and (node.tag in NOT_EMBROIDERABLE_TAGS or has_marker(node, 'pattern')):
+            # add images, text and elements with a marker for the troubleshoot extension
+            elif troubleshoot and (node.tag in NOT_EMBROIDERABLE_TAGS or has_marker(node)):
                 nodes.append(node)
 
         return nodes

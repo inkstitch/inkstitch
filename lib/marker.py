@@ -69,8 +69,11 @@ def get_marker_elements(node, marker, get_fills=True, get_strokes=True):
     return {'fill': fills, 'stroke': strokes}
 
 
-def has_marker(node, marker):
-    if node.tag not in EMBROIDERABLE_TAGS:
-        return False
-    style = node.get('style') or ''
-    return "marker-start:url(#inkstitch-%s-marker)" % marker in style
+def has_marker(node, marker=list()):
+    if not marker:
+        marker = MARKER
+    for m in marker:
+        style = node.get('style') or ''
+        if "marker-start:url(#inkstitch-%s-marker)" % m in style:
+            return True
+    return False

@@ -87,8 +87,11 @@ class EmbroideryElement(object):
         return params
 
     def replace_legacy_param(self, param):
-        value = self.node.get(param, "").strip()
-        self.set_param(param[10:], value)
+        # remove "embroider_" prefix
+        new_param = param[10:]
+        if new_param in INKSTITCH_ATTRIBS:
+            value = self.node.get(param, "").strip()
+            self.set_param(param[10:], value)
         del self.node.attrib[param]
 
     @cache
@@ -265,6 +268,11 @@ class EmbroideryElement(object):
     @cache
     def parse_path(self):
         return apply_transforms(self.path, self.node)
+
+    @property
+    @cache
+    def paths(self):
+        return self.flatten(self.parse_path())
 
     @property
     def shape(self):

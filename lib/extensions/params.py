@@ -15,7 +15,7 @@ import wx
 from wx.lib.scrolledpanel import ScrolledPanel
 
 from ..commands import is_command, is_command_symbol
-from ..elements import (AutoFill, Clone, EmbroideryElement, Polyline,
+from ..elements import (FillStitch, Clone, EmbroideryElement, Polyline,
                         SatinColumn, Stroke)
 from ..elements.clone import is_clone
 from ..gui import PresetsPanel, SimulatorPreview, WarningPanel
@@ -606,8 +606,7 @@ class Params(InkstitchExtension):
                 classes.append(Clone)
             else:
                 if element.get_style("fill", 'black') and not element.get_style("fill-opacity", 1) == "0":
-                    classes.append(AutoFill)
-                    # classes.append(Fill)
+                    classes.append(FillStitch)
                 if element.get_style("stroke") is not None:
                     classes.append(Stroke)
                     if element.get_style("stroke-dasharray") is None:
