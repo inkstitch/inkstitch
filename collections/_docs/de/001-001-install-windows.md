@@ -117,6 +117,15 @@ Es ist wichtig, dass die Ink/Stitch-Dateien **direkt** in dem Ordner "Benutzerer
 Bitte überprüfe noch einmal, ob du die richtige Ink/Stitch Version für dein Betriebssytsem heruntergeladen hast.
 Für Windows findest du den Download-Link unter [Herunterladen](#herunterladen) oben auf dieser Seite.
 
+### Windows 8: Fehlermeldung
+
+![The program can't start because api-ms-win-crt-math-l1-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem](/assets/images/docs/en/windows-install/win8.png)
+{: .img-half }
+![Error loading Python DLL 'C:\Users\...\AppData\Roaming\inkscape\extensions\inkstitch\inkstitch\bin\python38.dll'. LoadLibrary: The specified module could not be found.](/assets/images/docs/en/windows-install/win8a.png)
+{: .img-half }
+
+Wenn du diesen beiden Fehlermeldungen auf Windows 8 begegnest, lade die [Microsoft Visual C++ Redistributable packages](https://docs.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-2017-2019-and-2022) herunter und installiere sie. Wähle die richtige Version für deine Systemarchitektur.
+
 **Virus-Software**
 
 Windows-Nutzer haben oft das Problem, dass Anti-Viren-Programme die Datei `inkstitch/inkstitch.py` als Virus erkennen und dementsprechend vom System entfernen.

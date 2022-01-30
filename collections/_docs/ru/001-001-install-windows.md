@@ -144,6 +144,15 @@ WindowsError: [Error 2] The system cannot find the file specified
 
 Убедитесь, что вы скачали Ink/Stitch версию для Windows ([Скачать](#/ru/download))
 
+### Windows 8: Error message
+
+![The program can't start because api-ms-win-crt-math-l1-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem](/assets/images/docs/en/windows-install/win8.png)
+{: .img-half }
+![Error loading Python DLL 'C:\Users\...\AppData\Roaming\inkscape\extensions\inkstitch\inkstitch\bin\python38.dll'. LoadLibrary: The specified module could not be found.](/assets/images/docs/en/windows-install/win8a.png)
+{: .img-half }
+
+If you come across these two error messages on Windows 8, download and install [Microsoft Visual C++ Redistributable packages](https://docs.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-2017-2019-and-2022). Choose the file for your system architecture.
+
 ### Я скачал Ink/Stitch на своем родном языке, но диалоговые окна отображаются на английском
 
 **Незавершенный перевод**
