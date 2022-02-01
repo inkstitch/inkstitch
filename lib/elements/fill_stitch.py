@@ -43,13 +43,16 @@ class UnderlayInsetWarning(ValidationWarning):
     description = _("The underlay inset parameter for this fill object cannot be applied. "
                     "Ink/Stitch will ignore it and will use the original size instead.")
 
+
 class MissingGuideLineWarning(ValidationWarning):
     name = _("Missing Guideline")
-    description = _('This object is set to "Guided AutoFill", but has no guide line.')
+    description = _(
+        'This object is set to "Guided AutoFill", but has no guide line.')
     steps_to_solve = [
         _('* Create a stroke object'),
         _('* Select this object and run Extensions > Ink/Stitch > Edit > Selection to guide line')
     ]
+
 
 class DisjointGuideLineWarning(ValidationWarning):
     name = _("Disjointed Guide Line")
@@ -59,12 +62,15 @@ class DisjointGuideLineWarning(ValidationWarning):
         _('* Move the guide line into the element')
     ]
 
+
 class MultipleGuideLineWarning(ValidationWarning):
     name = _("Multiple Guide Lines")
-    description = _("This object has multiple guide lines, but only the first one will be used.")
+    description = _(
+        "This object has multiple guide lines, but only the first one will be used.")
     steps_to_solve = [
         _("* Remove all guide lines, except for one.")
     ]
+
 
 class UnconnectedError(ValidationError):
     name = _("Unconnected")
@@ -78,7 +84,8 @@ class UnconnectedError(ValidationError):
 
 class InvalidShapeError(ValidationError):
     name = _("Border crosses itself")
-    description = _("Fill: Shape is not valid.  This can happen if the border crosses over itself.")
+    description = _(
+        "Fill: Shape is not valid.  This can happen if the border crosses over itself.")
     steps_to_solve = [
         _('* Extensions > Ink/Stitch > Fill Tools > Break Apart Fill Objects')
     ]
@@ -208,7 +215,8 @@ class FillStitch(EmbroideryElement):
         # ensure path length
         for i, path in enumerate(paths):
             if len(path) < 3:
-                paths[i] = [(path[0][0], path[0][1]), (path[0][0]+1.0, path[0][1]), (path[0][0], path[0][1]+1.0)]
+                paths[i] = [(path[0][0], path[0][1]), (path[0][0] +
+                                                       1.0, path[0][1]), (path[0][0], path[0][1]+1.0)]
         return paths
 
     @property
@@ -218,7 +226,8 @@ class FillStitch(EmbroideryElement):
         # from the first. So let's at least make sure the "first" thing is the
         # biggest path.
         paths = self.paths
-        paths.sort(key=lambda point_list: shgeo.Polygon(point_list).area, reverse=True)
+        paths.sort(key=lambda point_list: shgeo.Polygon(
+            point_list).area, reverse=True)
         # Very small holes will cause a shape to be rendered as an outline only
         # they are too small to be rendered and only confuse the auto_fill algorithm.
         # So let's ignore them
@@ -483,11 +492,14 @@ class FillStitch(EmbroideryElement):
                     underlay_stitch_groups, start = self.do_underlay(start)
                     stitch_groups.extend(underlay_stitch_groups)
                 if self.fill_method == 0:
-                    stitch_groups.extend(self.do_auto_fill(last_patch, start, end))
+                    stitch_groups.extend(
+                        self.do_auto_fill(last_patch, start, end))
                 if self.fill_method == 1:
-                    stitch_groups.extend(self.do_tangential_fill(last_patch, start))
+                    stitch_groups.extend(
+                        self.do_tangential_fill(last_patch, start))
                 elif self.fill_method == 2:
-                    stitch_groups.extend(self.do_guided_fill(last_patch, start, end))
+                    stitch_groups.extend(
+                        self.do_guided_fill(last_patch, start, end))
             except Exception:
                 self.fatal_fill_error()
 
@@ -599,8 +611,9 @@ class FillStitch(EmbroideryElement):
     def _get_guide_lines(self, multiple=False):
         guide_lines = get_marker_elements(self.node, "guide-line", False, True)
         # No or empty guide line
-        if not guide_lines or guide_lines['stroke'][0].is_empty:
+        if not guide_lines or not guide_lines['stroke']:
             return None
+
         if multiple:
             return guide_lines['stroke']
         else:
