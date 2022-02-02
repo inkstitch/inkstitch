@@ -185,6 +185,8 @@ developers:
       url: /developers/inkstitch/manual-setup/
     - title: Manual Setup (Windows)
       url: /developers/inkstitch/windows-manual-setup/
+    - title: Manual Build (Windows)
+      url: /developers/inkstitch/windows-manual-build
     - title: Python Modules
       url: /developers/inkstitch/python-modules/
     - title: Namespace
