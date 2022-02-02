@@ -44,7 +44,7 @@ Install these dependancies to build a local build of inkstitch for windows.
   This provides make to run the build scripts.
   * Download make-3.82.90-20111115.zip
   * unzip
-  * Create a folder in C:\Make\bin
+  * Create the folder C:\Make\bin
   * Copy `make.exe` from `Downloads\make-3.82.90-20111115\make-3.82.90-20111115\bin_ix86` to `C:\Make\bin`
 
   ![Make folder with make.exe](/assets/images/developers/windows-manual-build/make-path.png)
