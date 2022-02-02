@@ -176,8 +176,7 @@ def intersect_region_with_grating_line(shape, line, row_spacing, end_row_spacing
             rows.append(runs)
         else:
             rows.insert(0, runs)
-        # if len(runs) > 1:
-        #    print("HIERRRR!")
+
         line_offsetted = line_offsetted.parallel_offset(row_spacing, 'left', 5)
         if line_offsetted.geom_type == 'MultiLineString':  # if we got multiple lines take the longest
             line_offsetted = repair_multiple_parallel_offset_curves(
@@ -192,7 +191,7 @@ def intersect_region_with_grating_line(shape, line, row_spacing, end_row_spacing
         if row_spacing > 0 and not isinstance(res, (shapely.geometry.GeometryCollection, shapely.geometry.MultiLineString)):
             if (res.is_empty or len(res.coords) == 1):
                 row_spacing = -row_spacing
-                # print("Set to right")
+
                 line_offsetted = line.parallel_offset(row_spacing, 'left', 5)
                 if line_offsetted.geom_type == 'MultiLineString':  # if we got multiple lines take the longest
                     line_offsetted = repair_multiple_parallel_offset_curves(
@@ -203,8 +202,7 @@ def intersect_region_with_grating_line(shape, line, row_spacing, end_row_spacing
                 line_offsetted.coords = line_offsetted.coords[::-1]
                 line_offsetted = line_offsetted.simplify(0.01, False)
                 res = line_offsetted.intersection(shape)
-                # if res.geom_type != 'LineString':
-                #    print("HIER!!")
+
 
     return rows
 

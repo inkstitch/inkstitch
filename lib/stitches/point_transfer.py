@@ -4,7 +4,10 @@ from collections import namedtuple
 from shapely.ops import nearest_points
 import math
 from ..stitches import constants
-from ..stitches import LineStringSampling
+from ..stitches import sample_linestring
+
+"""This file contains routines which shall project already selected points for stitching to remaining
+unstitched lines in the neighborhood to create a regular pattern of points."""
 
 projected_point_tuple = namedtuple(
     'projected_point_tuple', ['point', 'point_source'])
@@ -136,12 +139,9 @@ def transfer_points_to_surrounding(treenode, used_offset, offset_by_half, to_tra
         # length including the closing segment
         closed_line = LinearRing(to_transfer_points)
 
-    bisectorline_length = abs(used_offset) * \
-        constants.transfer_point_distance_factor * \
-        (2.0 if overnext_neighbor else 1.0)
+    bisectorline_length = abs(used_offset) * constants.transfer_point_distance_factor * (2.0 if overnext_neighbor else 1.0)
 
-    bisectorline_length_forbidden_points = abs(used_offset) * \
-        constants.transfer_point_distance_factor
+    bisectorline_length_forbidden_points = abs(used_offset) * constants.transfer_point_distance_factor
 
     linesign_child = math.copysign(1, used_offset)
 
@@ -149,9 +149,7 @@ def transfer_points_to_surrounding(treenode, used_offset, offset_by_half, to_tra
     currentDistance = 0
     while i < len(point_list):
         assert(point_source_list[i] !=
-               LineStringSampling.PointSource.ENTER_LEAVING_POINT)
-        # if abs(point_list[i].coords[0][0]-47) < 0.3 and abs(point_list[i].coords[0][1]-4.5) < 0.3:
-        #    print("HIIIIIIIIIIIERRR")
+               sample_linestring.PointSource.ENTER_LEAVING_POINT)
 
         # We create a bisecting line through the current point
         normalized_vector_prev_x = (
@@ -249,15 +247,15 @@ def transfer_points_to_surrounding(treenode, used_offset, offset_by_half, to_tra
             if point is None:
                 continue
             child.transferred_point_priority_deque.insert(projected_point_tuple(
-                point=point, point_source=LineStringSampling.PointSource.OVERNEXT if overnext_neighbor
-                else LineStringSampling.PointSource.DIRECT), priority)
+                point=point, point_source=sample_linestring.PointSource.OVERNEXT if overnext_neighbor
+                else sample_linestring.PointSource.DIRECT), priority)
         for child in child_list_forbidden:
             point, priority = calc_transferred_point(
                 bisectorline_forbidden_point_child, child)
             if point is None:
                 continue
             child.transferred_point_priority_deque.insert(projected_point_tuple(
-                point=point, point_source=LineStringSampling.PointSource.FORBIDDEN_POINT), priority)
+                point=point, point_source=sample_linestring.PointSource.FORBIDDEN_POINT), priority)
 
         for neighbor in neighbor_list:
             point, priority = calc_transferred_point(
@@ -265,15 +263,15 @@ def transfer_points_to_surrounding(treenode, used_offset, offset_by_half, to_tra
             if point is None:
                 continue
             neighbor.transferred_point_priority_deque.insert(projected_point_tuple(
-                point=point, point_source=LineStringSampling.PointSource.OVERNEXT if overnext_neighbor
-                else LineStringSampling.PointSource.DIRECT), priority)
+                point=point, point_source=sample_linestring.PointSource.OVERNEXT if overnext_neighbor
+                else sample_linestring.PointSource.DIRECT), priority)
         for neighbor in neighbor_list_forbidden:
             point, priority = calc_transferred_point(
                 bisectorline_forbidden_point_neighbor, neighbor)
             if point is None:
                 continue
             neighbor.transferred_point_priority_deque.insert(projected_point_tuple(
-                point=point, point_source=LineStringSampling.PointSource.FORBIDDEN_POINT), priority)
+                point=point, point_source=sample_linestring.PointSource.FORBIDDEN_POINT), priority)
 
         i += 1
         currentDistance += next_spacing
@@ -398,9 +396,6 @@ def transfer_points_to_surrounding_graph(fill_stitch_graph, current_edge, used_o
     currentDistance = 0
     while i < len(point_list):
 
-        # if abs(point_list[i].coords[0][0]-47) < 0.3 and abs(point_list[i].coords[0][1]-4.5) < 0.3:
-        #    print("HIIIIIIIIIIIERRR")
-
         # We create a bisecting line through the current point
         normalized_vector_prev_x = (
             point_list[i].coords[0][0]-point_list[i-1].coords[0][0])  # makes use of closed shape
@@ -408,9 +403,6 @@ def transfer_points_to_surrounding_graph(fill_stitch_graph, current_edge, used_o
             point_list[i].coords[0][1]-point_list[i-1].coords[0][1])
         prev_spacing = math.sqrt(normalized_vector_prev_x*normalized_vector_prev_x +
                                  normalized_vector_prev_y*normalized_vector_prev_y)
-
-        # if prev_spacing == 0:
-        #    print("HIER FEHLER")
 
         normalized_vector_prev_x /= prev_spacing
         normalized_vector_prev_y /= prev_spacing
@@ -489,15 +481,15 @@ def transfer_points_to_surrounding_graph(fill_stitch_graph, current_edge, used_o
             if point is None:
                 continue
             edge['projected_points'].insert(projected_point_tuple(
-                point=point, point_source=LineStringSampling.PointSource.OVERNEXT if overnext_neighbor
-                else LineStringSampling.PointSource.DIRECT), priority)
+                point=point, point_source=sample_linestring.PointSource.OVERNEXT if overnext_neighbor
+                else sample_linestring.PointSource.DIRECT), priority)
         for edge_forbidden in previous_edge_list_forbidden+next_edge_list_forbidden:
             point, priority = calc_transferred_point_graph(
                 bisectorline_forbidden_point, edge_forbidden['geometry'])
             if point is None:
                 continue
             edge_forbidden['projected_points'].insert(projected_point_tuple(
-                point=point, point_source=LineStringSampling.PointSource.FORBIDDEN_POINT), priority)
+                point=point, point_source=sample_linestring.PointSource.FORBIDDEN_POINT), priority)
 
         i += 1
         currentDistance += next_spacing

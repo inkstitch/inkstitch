@@ -5,7 +5,7 @@ import math
 import numpy as np
 from enum import IntEnum
 from ..stitches import constants
-from ..stitches import PointTransfer
+from ..stitches import point_transfer
 
 
 class PointSource(IntEnum):
@@ -53,19 +53,12 @@ def calculate_line_angles(line):
         vec2 = np.array(line.coords[i+1])-np.array(line.coords[i])
         vec1length = np.linalg.norm(vec1)
         vec2length = np.linalg.norm(vec2)
-        # if vec1length <= 0:
-        #    print("HIER FEHLER")
 
-        # if vec2length <=0:
-        #    print("HIER FEHLEr")
         assert(vec1length > 0)
         assert(vec2length > 0)
         scalar_prod = np.dot(vec1, vec2)/(vec1length*vec2length)
         scalar_prod = min(max(scalar_prod, -1), 1)
-        # if scalar_prod > 1.0:
-        #    scalar_prod = 1.0
-        # elif scalar_prod < -1.0:
-        #    scalar_prod = -1.0
+
         Angles[i] = math.acos(scalar_prod)
     return Angles
 
@@ -145,8 +138,6 @@ def raster_line_string_with_priority_points(line, start_distance, end_distance, 
     merged_point_list = []
     dq_iter = 0
     for point, angle in zip(path_coords.coords, angles):
-        # if abs(point[0]-7) < 0.2 and abs(point[1]-3.3) < 0.2:
-        #    print("GEFUNDEN")
         current_distance += last_point.distance(Point(point))
         last_point = Point(point)
         while dq_iter < len(deque_points) and deque_points[dq_iter][1] < current_distance+start_distance:
@@ -156,7 +147,7 @@ def raster_line_string_with_priority_points(line, start_distance, end_distance, 
                 if (merged_point_list[-1][0].point_source == PointSource.SOFT_EDGE_INTERNAL and
                    abs(merged_point_list[-1][1]-deque_points[dq_iter][1]+start_distance < abs_offset*constants.factor_offset_forbidden_point)):
                     item = merged_point_list.pop()
-                    merged_point_list.append((PointTransfer.projected_point_tuple(
+                    merged_point_list.append((point_transfer.projected_point_tuple(
                         point=item[0].point, point_source=PointSource.FORBIDDEN_POINT), item[1]-start_distance))
             else:
                 merged_point_list.append(
@@ -174,7 +165,7 @@ def raster_line_string_with_priority_points(line, start_distance, end_distance, 
                 point_source = PointSource.SOFT_EDGE_INTERNAL
             else:
                 point_source = PointSource.HARD_EDGE_INTERNAL
-        merged_point_list.append((PointTransfer.projected_point_tuple(
+        merged_point_list.append((point_transfer.projected_point_tuple(
             point=Point(point), point_source=point_source), current_distance))
 
     result_list = [merged_point_list[0]]
@@ -188,10 +179,6 @@ def raster_line_string_with_priority_points(line, start_distance, end_distance, 
     segment_end_index = 1
     forbidden_point_list = []
     while segment_end_index < len(merged_point_list):
-        # if abs(merged_point_list[segment_end_index-1][0].point.coords[0][0]-67.9) < 0.2 and
-        #    abs(merged_point_list[segment_end_index-1][0].point.coords[0][1]-161.0)< 0.2:
-        #    print("GEFUNDEN")
-
         # Collection of points for the current segment
         current_point_list = [merged_point_list[segment_start_index][0].point]
 
@@ -201,16 +188,10 @@ def raster_line_string_with_priority_points(line, start_distance, end_distance, 
             if segment_length > maxstitch_distance+constants.point_spacing_to_be_considered_equal:
                 new_distance = merged_point_list[segment_start_index][1] + \
                     maxstitch_distance
-                merged_point_list.insert(segment_end_index, (PointTransfer.projected_point_tuple(
+                merged_point_list.insert(segment_end_index, (point_transfer.projected_point_tuple(
                     point=aligned_line.interpolate(new_distance), point_source=PointSource.REGULAR_SPACING_INTERNAL), new_distance))
-                # if (abs(merged_point_list[segment_end_index][0].point.coords[0][0]-12.2) < 0.2 and
-                #   abs(merged_point_list[segment_end_index][0].point.coords[0][1]-0.9) < 0.2):
-                #    print("GEFUNDEN")
                 segment_end_index += 1
                 break
-            # if abs(merged_point_list[segment_end_index][0].point.coords[0][0]-93.6) < 0.2 and
-            #    abs(merged_point_list[segment_end_index][0].point.coords[0][1]-122.7)< 0.2:
-            #    print("GEFUNDEN")
 
             current_point_list.append(
                 merged_point_list[segment_end_index][0].point)
@@ -291,8 +272,6 @@ def raster_line_string_with_priority_points(line, start_distance, end_distance, 
     # Finally we create the final return_point_list and return_point_source_list
     for i in range(len(result_list)):
         return_point_list.append(result_list[i][0].point.coords[0])
-        # if abs(result_list[i][0].point.coords[0][0]-91.7) < 0.2 and abs(result_list[i][0].point.coords[0][1]-106.15)< 0.2:
-        #    print("GEFUNDEN")
         if result_list[i][0].point_source == PointSource.HARD_EDGE_INTERNAL:
             point_source = PointSource.HARD_EDGE
         elif result_list[i][0].point_source == PointSource.SOFT_EDGE_INTERNAL:
@@ -316,8 +295,6 @@ def _replace_forbidden_points(line, result_list, forbidden_point_list_indices, a
     # since we add and remove points in the result_list, we need to adjust the indices stored in forbidden_point_list_indices
     current_index_shift = 0
     for index in forbidden_point_list_indices:
-        # if abs(result_list[index][0].point.coords[0][0]-40.7) < 0.2 and abs(result_list[index][0].point.coords[0][1]-1.3)< 0.2:
-        #    print("GEFUNDEN")
         index += current_index_shift
         distance_left = result_list[index][0].point.distance(
             result_list[index-1][0].point)/2.0
@@ -336,9 +313,9 @@ def _replace_forbidden_points(line, result_list, forbidden_point_list_indices, a
                 LineString([point_left, point_right]))
             if forbidden_point_distance < constants.factor_offset_remove_dense_points*abs_offset:
                 del result_list[index]
-                result_list.insert(index, (PointTransfer.projected_point_tuple(
+                result_list.insert(index, (point_transfer.projected_point_tuple(
                     point=point_right, point_source=PointSource.REPLACED_FORBIDDEN_POINT), new_point_right_proj))
-                result_list.insert(index, (PointTransfer.projected_point_tuple(
+                result_list.insert(index, (point_transfer.projected_point_tuple(
                     point=point_left, point_source=PointSource.REPLACED_FORBIDDEN_POINT), new_point_left_proj))
                 current_index_shift += 1
                 break
@@ -346,9 +323,3 @@ def _replace_forbidden_points(line, result_list, forbidden_point_list_indices, a
                 distance_left /= 2.0
                 distance_right /= 2.0
     return result_list
-
-
-if __name__ == "__main__":
-    line = LineString([(0, 0), (1, 0), (2, 1), (3, 0), (4, 0)])
-
-    print(calculate_line_angles(line)*180.0/math.pi)

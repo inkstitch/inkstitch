@@ -3,10 +3,6 @@ import math
 # Used in the simplify routine of shapely
 simplification_threshold = 0.01
 
-# If a transferred point is closer than this value to one of its neighbors,
-# it will be checked whether it can be removed
-distance_thresh_remove_transferred_point = 0.15
-
 # If a line segment is shorter than this threshold it is handled as a single point
 line_lengh_seen_as_one_point = 0.05
 
@@ -34,12 +30,6 @@ factor_offset_starting_points = 0.5
 
 # if points are closer than abs_offset*factor_offset_remove_points one of it is removed
 factor_offset_remove_points = 0.5
-
-# if an unshifted relevant edge is closer than
-# abs_offset*fac_offset_edge_shift
-# to the line segment created by the shifted edge,
-# the shift is allowed - otherwise the edge must not be shifted.
-fac_offset_edge_shift = 0.25
 
 # decides whether the point belongs to a hard edge (must use this point during sampling)
 # or soft edge (do not necessarily need to use this point)

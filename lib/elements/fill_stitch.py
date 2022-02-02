@@ -15,14 +15,13 @@ from shapely.validation import explain_validity
 from ..i18n import _
 from ..marker import get_marker_elements
 from ..stitch_plan import StitchGroup
-from ..stitches import StitchPattern, auto_fill, legacy_fill
+from ..stitches import tangential_fill_stitch_line_creator, auto_fill, legacy_fill
 from ..svg import PIXELS_PER_MM
 from ..svg.tags import INKSCAPE_LABEL
 from ..utils import Point as InkstitchPoint
 from ..utils import cache, version
 from .element import EmbroideryElement, param
 from .validation import ValidationError, ValidationWarning
-from shapely.ops import nearest_points
 
 
 class SmallShapeWarning(ValidationWarning):
@@ -46,8 +45,7 @@ class UnderlayInsetWarning(ValidationWarning):
 
 class MissingGuideLineWarning(ValidationWarning):
     name = _("Missing Guideline")
-    description = _(
-        'This object is set to "Guided AutoFill", but has no guide line.')
+    description = _('This object is set to "Guided AutoFill", but has no guide line.')
     steps_to_solve = [
         _('* Create a stroke object'),
         _('* Select this object and run Extensions > Ink/Stitch > Edit > Selection to guide line')
@@ -65,8 +63,7 @@ class DisjointGuideLineWarning(ValidationWarning):
 
 class MultipleGuideLineWarning(ValidationWarning):
     name = _("Multiple Guide Lines")
-    description = _(
-        "This object has multiple guide lines, but only the first one will be used.")
+    description = _("This object has multiple guide lines, but only the first one will be used.")
     steps_to_solve = [
         _("* Remove all guide lines, except for one.")
     ]
@@ -84,8 +81,7 @@ class UnconnectedError(ValidationError):
 
 class InvalidShapeError(ValidationError):
     name = _("Border crosses itself")
-    description = _(
-        "Fill: Shape is not valid.  This can happen if the border crosses over itself.")
+    description = _("Fill: Shape is not valid.  This can happen if the border crosses over itself.")
     steps_to_solve = [
         _('* Extensions > Ink/Stitch > Fill Tools > Break Apart Fill Objects')
     ]
@@ -125,8 +121,7 @@ class FillStitch(EmbroideryElement):
     @property
     @param('angle',
            _('Angle of lines of stitches'),
-           tooltip=_(
-               'The angle increases in a counter-clockwise direction.  0 is horizontal.  Negative angles are allowed.'),
+           tooltip=_('The angle increases in a counter-clockwise direction.  0 is horizontal.  Negative angles are allowed.'),
            unit='deg',
            type='float',
            sort_index=4,
@@ -199,8 +194,7 @@ class FillStitch(EmbroideryElement):
     @property
     @param('staggers',
            _('Stagger rows this many times before repeating'),
-           tooltip=_(
-               'Setting this dictates how many rows apart the stitches will be before they fall in the same column position.'),
+           tooltip=_('Setting this dictates how many rows apart the stitches will be before they fall in the same column position.'),
            type='int',
            sort_index=4,
            select_items=[('fill_method', 0), ('fill_method', 3)],
@@ -317,8 +311,7 @@ class FillStitch(EmbroideryElement):
     @property
     @param('running_stitch_length_mm',
            _('Running stitch length (traversal between sections)'),
-           tooltip=_(
-               'Length of stitches around the outline of the fill region used when moving from section to section.'),
+           tooltip=_('Length of stitches around the outline of the fill region used when moving from section to section.'),
            unit='mm',
            type='float',
            default=1.5,
@@ -335,8 +328,7 @@ class FillStitch(EmbroideryElement):
     @property
     @param('fill_underlay_angle',
            _('Fill angle'),
-           tooltip=_(
-               'Default: fill angle + 90 deg. Insert comma-seperated list for multiple layers.'),
+           tooltip=_('Default: fill angle + 90 deg. Insert comma-seperated list for multiple layers.'),
            unit='deg',
            group=_('AutoFill Underlay'),
            type='float')
@@ -380,8 +372,7 @@ class FillStitch(EmbroideryElement):
     @property
     @param('fill_underlay_inset_mm',
            _('Inset'),
-           tooltip=_(
-               'Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill.'),
+           tooltip=_('Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill.'),
            unit='mm',
            group=_('AutoFill Underlay'),
            type='float',
@@ -404,8 +395,7 @@ class FillStitch(EmbroideryElement):
     @property
     @param('expand_mm',
            _('Expand'),
-           tooltip=_(
-               'Expand the shape before fill stitching, to compensate for gaps between shapes.'),
+           tooltip=_('Expand the shape before fill stitching, to compensate for gaps between shapes.'),
            unit='mm',
            type='float',
            default=0,
@@ -564,7 +554,7 @@ class FillStitch(EmbroideryElement):
         if not starting_point:
             starting_point = (0, 0)
         for poly in polygons:
-            connectedLine, connectedLineOrigin = StitchPattern.offset_poly(
+            connectedLine, _ = tangential_fill_stitch_line_creator.offset_poly(
                 poly,
                 -self.row_spacing,
                 self.join_style+1,
