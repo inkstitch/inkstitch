@@ -18,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-01 01:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: \n"
+"Last-Translator: Masaya Kondo\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ja_JP\n"
 "MIME-Version: 1.0\n"
@@ -39,7 +39,7 @@ msgstr ""
 #. description of font in fonts/Brockscript
 #: inkstitch-fonts-metadata.py:4
 msgid "Brock Script is a decorative satin column manuscript font of size approximatively 40mm. It can be enlarged up to 250%. It contains 118 glyphs, covering most western european languages needs.More decorative options are hidden in the µ glyph"
-msgstr ""
+msgstr "Brock Script はオシャレな手描き文字です.最大40mm,拡大250%まで可能.118文字収録.主に西ヨーロッパ言語に対応. µ の文字には多くの装飾オプションがあります"
 
 #. name of font in fonts/amitaclo
 #: inkstitch-fonts-metadata.py:6
@@ -50,7 +50,7 @@ msgstr ""
 #: inkstitch-fonts-metadata.py:8
 #, python-format
 msgid "The capital M is 25.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 160%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "大文字〈 M 〉は100%スケールで幅25.3mm.拡大縮小は80~120%まで.ジグザクの下地があります"
 
 #. name of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:10
@@ -60,7 +60,7 @@ msgstr "Apex Lake"
 #. description of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:12
 msgid "Apex Lake is a large ornate capital letters font of size approximatively 60mm. It contains 38 glyphs : A-Z,0-9,! and ?. It can be reduced down to 80% and enlarged up to 130%"
-msgstr ""
+msgstr "Apex Lakeは最大60mmの大きなオシャレな大文字フォントです.A-Z,0-9,!,? 38文字収録.拡大縮小80~130%まで可能"
 
 #. name of font in fonts/baumans_FI
 #: inkstitch-fonts-metadata.py:14
@@ -71,27 +71,27 @@ msgstr ""
 #: inkstitch-fonts-metadata.py:16
 #, python-format
 msgid "The capital M is 22.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 150%. Every satin has zigzag underlay"
-msgstr "大文字のMは100％の縮尺で22.3ミリ幅。80%～150%まで拡大縮小可能です。すべてのサテンにはジグザグの下地があります。"
+msgstr "大文字のMは100%の縮尺で22.3ミリ幅。80%～150%まで拡大縮小可能です。すべてのサテンにはジグザグの下地があります。"
 
 #. name of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:18
 msgid "Cherry for inkstitch"
-msgstr ""
+msgstr "Cherry(inkstitch版)"
 
 #. description of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:20
 msgid "Cherry for inkstitch is a decorative satin column font of size approximatively 40mm. It can be reduced down to 80% and enlarged up to 180%. It contains 74 glyphs."
-msgstr ""
+msgstr "Cherry(inkstitch版)は最大40mmのオシャレなフォントです.拡大縮小80~180%まで可能.74文字収録"
 
 #. name of font in fonts/cherryforkaalleen
 #: inkstitch-fonts-metadata.py:22
 msgid "Cherry for Kaalleen"
-msgstr ""
+msgstr "Cherry(Kaalleen版)"
 
 #. description of font in fonts/cherryforkaalleen
 #: inkstitch-fonts-metadata.py:24
 msgid "Cherry for Kaalleen is a large decorative font of size approximatively 75mm. It contains 36 glyphs including the numbers and the 26 capitals  A-Z. It can be reduced down to 80% and enlarged up to 130%"
-msgstr ""
+msgstr "Cherry(Kaalleen版)は最大約75mmの大型フォントです.数字,大文字A-Zの36文字収録.拡大縮小80~120%まで可能"
 
 #. name of font in fonts/chopin
 #: inkstitch-fonts-metadata.py:26
@@ -102,7 +102,7 @@ msgstr "Chopin Script"
 #: inkstitch-fonts-metadata.py:28
 #, python-format
 msgid "The capital M is 38.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 120%. Every satin has zigzag underlay"
-msgstr "大文字のMは100％の縮尺で38.3ミリ幅。80%～120%まで拡大縮小可能です。すべてのサテンにはジグザグの下地があります。"
+msgstr "大文字のMは100%の縮尺で38.3ミリ幅。80%～120%まで拡大縮小可能です。すべてのサテンにはジグザグの下地があります。"
 
 #. name of font in fonts/coronaviral
 #: inkstitch-fonts-metadata.py:30
@@ -112,7 +112,7 @@ msgstr "Coronaviral"
 #. description of font in fonts/coronaviral
 #: inkstitch-fonts-metadata.py:32
 msgid "A font created with manual sitch. Do not change the size or very little. The capital em is 22mm wide at 100%"
-msgstr "マニュアルシッチで作成したフォントです。サイズは変更しないか、ほぼ変更なし。大文字のemは100%で22mm幅"
+msgstr "マニュアルステッチで作成したフォントです。サイズ変更はほとんどできません。大文字のemは100%表示で幅22mm"
 
 #. name of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:34
@@ -123,7 +123,7 @@ msgstr "Dejavu Serif"
 #: inkstitch-fonts-metadata.py:36
 #, python-format
 msgid "DejaVu Serif Condensed. The capital M is 19,8 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 150%.  Every satin has center-walk underlay."
-msgstr "DejaVu Serif Condensed。大文字のMは100％の縮尺で幅19,8ミリです。 80%～150%に拡大縮小可能です。 すべてのサテンには中心線に下縫いがあります。"
+msgstr "DejaVu Serif Condensed。大文字のMは100%表示で幅19,8ミリです。 80%～150%に拡大縮小可能です。 すべてのサテンには中心線に下縫いがあります。"
 
 #. name of font in fonts/digory_doodles_bean
 #: inkstitch-fonts-metadata.py:38
@@ -133,7 +133,7 @@ msgstr "Digory Doodles Bean"
 #. description of font in fonts/digory_doodles_bean
 #: inkstitch-fonts-metadata.py:40
 msgid "All letters have mixed satin and bean stitch; The capital M is 16mm tall. The small x is 7 mm"
-msgstr ""
+msgstr "全文字はサテンステッチとビーンステッチのミックスです.大文字 M は高さ16mm,小文字 x は7mm"
 
 #. name of font in fonts/emilio_20
 #: inkstitch-fonts-metadata.py:42
@@ -144,7 +144,7 @@ msgstr "Emilio 20"
 #: inkstitch-fonts-metadata.py:44
 #, python-format
 msgid "Emilio 20 is a font with capital only and numbers. M is 48.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 140%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Emilio 20 大文字と数字のみのフォントです. M は100%表示で幅48.5mm.拡大縮小70~140まで可能.すべてのサテンにはジグザクの下縫いがあります"
 
 #. name of font in fonts/emilio_20_tricolore
 #: inkstitch-fonts-metadata.py:46
@@ -3335,15 +3335,15 @@ msgstr ""
 
 #: inx/inkstitch_output_U01.inx:9
 msgid "Save design in U01 format using Ink/Stitch"
-msgstr ""
+msgstr "Ink/StitchでデザインをU01形式で保存する"
 
 #: inx/inkstitch_output_VP3.inx:3
 msgid "VP3 file output"
-msgstr ""
+msgstr "VP3ファイル出力"
 
 #: inx/inkstitch_output_VP3.inx:9
 msgid "Save design in VP3 format using Ink/Stitch"
-msgstr ""
+msgstr "Ink/StitchでデザインをVP3形式で保存する"
 
 #: inx/inkstitch_params.inx:3
 msgid "Params"
@@ -3359,7 +3359,7 @@ msgstr "刺繍設定を解除"
 
 #: inx/inkstitch_remove_embroidery_settings.inx:7
 msgid "Remove Params"
-msgstr ""
+msgstr "パラメータを取り除く"
 
 #: inx/inkstitch_remove_embroidery_settings.inx:7
 msgid "Removes params from selected objects or all objects if nothing is selected."
@@ -3367,7 +3367,7 @@ msgstr ""
 
 #: inx/inkstitch_remove_embroidery_settings.inx:9
 msgid "Remove Commands"
-msgstr ""
+msgstr "コマンドを除く"
 
 #: inx/inkstitch_remove_embroidery_settings.inx:9
 msgid "Removes visual commands from selected objects or all objects if nothing is selected."
@@ -3387,11 +3387,11 @@ msgstr "パターンの選択"
 
 #: inx/inkstitch_simulator.inx:3
 msgid "Simulator / Realistic Preview"
-msgstr "シミュレータ／リアルプレビュー"
+msgstr "シミュレータ/リアルプレビュー"
 
 #: inx/inkstitch_stitch_plan_preview.inx:3
 msgid "Stitch Plan Preview"
-msgstr "ステッチプランプレビュー"
+msgstr "刺繡プランのプレビュー"
 
 #: inx/inkstitch_stitch_plan_preview.inx:14
 msgid "Move stitch plan beside the canvas"
@@ -3411,27 +3411,27 @@ msgstr ""
 
 #: inx/inkstitch_stitch_plan_preview.inx:18
 msgid "Lower opacity"
-msgstr ""
+msgstr "不透明度を下げる"
 
 #: inx/inkstitch_stitch_plan_preview.inx:20
 msgid "Needle points"
-msgstr ""
+msgstr "針の位置"
 
 #: inx/inkstitch_stitch_plan_preview.inx:22
 msgid "Hit Ctrl+Z to undo this action after inspection."
-msgstr ""
+msgstr "確認後、この操作を取り消すには Ctrl+Z"
 
 #: inx/inkstitch_troubleshoot.inx:3
 msgid "Troubleshoot Objects"
-msgstr "オブジェクトのトラブルシューティング"
+msgstr "トラブルシューティングオブジェクト"
 
 #: inx/inkstitch_zip.inx:3
 msgid "embroidery ZIP file output"
-msgstr ""
+msgstr "刺繍ZIPファイルを出力"
 
 #: inx/inkstitch_zip.inx:8
 msgid "Ink/Stitch: ZIP export multiple formats (.zip)"
-msgstr "インク／スティッチ ZIPで複数のフォーマットを書き出し（.zip"
+msgstr "インク/スティッチ ZIPで複数のフォーマットを書き出し（.zip"
 
 #: inx/inkstitch_zip.inx:9
 msgid "Create a ZIP with multiple embroidery file formats using Ink/Stitch"
