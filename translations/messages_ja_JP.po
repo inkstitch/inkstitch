@@ -214,7 +214,7 @@ msgstr ""
 #. description of font in fonts/infinipicto
 #: inkstitch-fonts-metadata.py:72
 msgid "InfiniPicto is a fun font of size approximatively 60 mm containing only the 26 A-Z glyph. Each letter is a pictogram of an object whose name begins with that very letter..... in French"
-msgstr ""
+msgstr "InfiniPictoはA-Zの26文字のみ,約60mmの楽しげなフォントです.各文字はフランス語のピクトグラムになっています"
 
 #. name of font in fonts/kaushan_script_MAM
 #: inkstitch-fonts-metadata.py:74
@@ -225,7 +225,7 @@ msgstr ""
 #: inkstitch-fonts-metadata.py:76
 #, python-format
 msgid "The capital M is 29 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 200%.  Every satin has zigzag underlay"
-msgstr "大文字のMは100％の縮尺で29ミリ幅。 80%～200%まで拡大縮小可能です。 すべてのサテンにはジグザグの下地があります。"
+msgstr "大文字のMは100%の縮尺で29ミリ幅。 80%～200%まで拡大縮小可能です。 すべてのサテンにはジグザグの下地があります。"
 
 #. name of font in fonts/learning_curve
 #: inkstitch-fonts-metadata.py:78
@@ -235,7 +235,7 @@ msgstr "Learning curve"
 #. description of font in fonts/learning_curve
 #: inkstitch-fonts-metadata.py:80
 msgid "Small running stitch script font of size approximatively 12 mm.It can be reduced down to 90% and enlarged up to 200%"
-msgstr ""
+msgstr "最大約12mmの小さいフォントです,拡大縮小90%~200%まで可能"
 
 #. name of font in fonts/lobster_AGS
 #: inkstitch-fonts-metadata.py:82
@@ -246,7 +246,7 @@ msgstr ""
 #: inkstitch-fonts-metadata.py:84
 #, python-format
 msgid " The capital M is 19.8 millimeter wide at 100% scale. Can be scaled down to 80% or up to 150%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "大文字'M'は100%表示で幅19.8mm.拡大縮小80~150%まで可能.すべての刺繍はジグザクの下縫いがあります"
 
 #. name of font in fonts/magnolia_ KOR
 #: inkstitch-fonts-metadata.py:86
@@ -256,7 +256,7 @@ msgstr ""
 #. description of font in fonts/magnolia_ KOR
 #: inkstitch-fonts-metadata.py:88
 msgid "Magnolia KOR is a script font of size approximatively 20mm. It can be scaled down to 80% and up to 120%"
-msgstr ""
+msgstr "Magnolia KORは最大20mmのフォントです.拡大縮小80~120%まで可能"
 
 #. name of font in fonts/manuskript_gotisch
 #: inkstitch-fonts-metadata.py:90
@@ -267,7 +267,7 @@ msgstr "Manuskript Gothisch"
 #: inkstitch-fonts-metadata.py:92
 #, python-format
 msgid "The capital M is 35 millimeter wide at 100% scale.  Can be scaled down to 70% or up to 140%.  Every satin has zigzag underlay"
-msgstr "大文字のMは100％の縮尺で35ミリ幅。 70%～140%まで拡大縮小可能です。 すべてのサテンにはジグザグの下地があります。"
+msgstr "大文字のMは100%表示で幅35ミリ.70%～140%まで拡大縮小可能です。 すべてのサテンにはジグザグの下地があります。"
 
 #. name of font in fonts/marcelusSC_FI
 #: inkstitch-fonts-metadata.py:94
@@ -278,18 +278,18 @@ msgstr ""
 #: inkstitch-fonts-metadata.py:96
 #, python-format
 msgid "MarcellusSC-FI is a small capital font of size 36 mm. It contains 107 glyphs covering most Western European languages. It can be reduced down to 70% and enlarged up to 200% or 500% using satin split"
-msgstr ""
+msgstr "MarcellusSC-FIは36mmの小さい大文字です.西ヨーロッパ言語のほとんどに対応した107文字収録.拡大縮小70~200%(刺繍分割すれば500%)まで可能,"
 
 #. name of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:98
 msgid "Ink/Stitch Medium Font"
-msgstr "Ink/Stitch Medium Font"
+msgstr "Ink/Stitch 中サイズ Font"
 
 #. description of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:100
 #, python-format
 msgid "A basic font suited for medium-sized characters.  The capital em is 0.6 inches wide at 100% scale.  Can be scaled down to 75% or up to 150%.  Every satin has contour underlay."
-msgstr "中型文字に適した基本フォント。大文字のemは、100％スケールで幅0.6インチです。 75％または最大150％に縮小できます。すべてのサテンには輪郭の下縫いがあります。"
+msgstr "中サイズ文字に適した基本フォント。大文字のemは100%表示で幅0.6インチです.拡大縮小75~150%まで可能。すべての刺繍には輪郭の下縫いがあります。"
 
 #. name of font in fonts/namskout_AGS
 #: inkstitch-fonts-metadata.py:102
@@ -299,7 +299,7 @@ msgstr ""
 #. description of font in fonts/namskout_AGS
 #: inkstitch-fonts-metadata.py:104
 msgid "Namskout  is a large applique font of size approximatively 90mm. It contains 43 glyphs including all numbers and the 26 capitals  A-Z.  It can be reduced down to 50% and enlarged up to 150%  "
-msgstr ""
+msgstr "Namskoutは最大サイズ90mm,アップリケ風のフォントです.数字,英語26文字など計43文字収録.拡大縮小50~150%まで可能"
 
 #. name of font in fonts/pacificlo
 #: inkstitch-fonts-metadata.py:106
@@ -309,7 +309,7 @@ msgstr ""
 #. description of font in fonts/pacificlo
 #: inkstitch-fonts-metadata.py:108
 msgid "Pacificlo is a small satin column manuscript font of size approximatively 20mm. It can be reduced down to 80% and enlarged up to 140%. It contains 120 glyphs, covering most Western European Languages needs. "
-msgstr ""
+msgstr "Pacificloは最大約20mmの小さな文字フォントです,拡大縮小80~140%まで可能.西ヨーロッパ言語に対応した120文字収録"
 
 #. name of font in fonts/romanaugusa
 #: inkstitch-fonts-metadata.py:110
@@ -320,7 +320,7 @@ msgstr "Romanaugusa"
 #: inkstitch-fonts-metadata.py:112
 #, python-format
 msgid "Based on Latin Modern Roman 10 Bold italic. The capital M is 42.5 millimeter wide at 100% scale.  Can be scaled down to 70% or up to 130%.  Every satin has zigzag underlay"
-msgstr "Latin Modern Roman 10 Bold italicをベースにしています。大文字のMは100％の縮尺で42.5ミリ幅。 70%～130%に拡大縮小可能です。 すべてのサテンにはジグザグの下地があります。"
+msgstr "Latin Modern Roman 10 Bold italicをベースにしています。大文字のMは100%表示で幅42.5ミリ.70%～130%に拡大縮小可能です.すべてのサテンにはジグザグの下地があります。"
 
 #. name of font in fonts/romanaugusa_bicolor
 #: inkstitch-fonts-metadata.py:114
@@ -352,7 +352,7 @@ msgstr "Ink/Stitch Small Font"
 #: inkstitch-fonts-metadata.py:124
 #, python-format
 msgid "A font suited for small characters.  The capital em is 0.2 inches wide at 100% scale.  Can be scaled up to 300%."
-msgstr "小さい文字に適したフォント。大文字のemは、100％スケールで幅0.2インチです。 300％までスケールアップできます。"
+msgstr "小さい文字に適したフォント。大文字のemは、100%スケールで幅0.2インチです。 300%までスケールアップできます。"
 
 #. name of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:126
@@ -372,11 +372,11 @@ msgstr "TT Masters"
 #. description of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:132
 msgid "A font suited for heavy typing :)"
-msgstr "ヘビータイピングに適したフォント:)"
+msgstr "ヘビーなタイピングに適したフォント:)"
 
 #: inkstitch.py:66
 msgid "Ink/Stitch cannot read your SVG file. This is often the case when you use a file which has been created with Adobe Illustrator."
-msgstr "インク/ステッチはこのSVGファイルを読み取りできません。これは、AdobeIllustratorで作成されたファイルを使用する場合によくあります。"
+msgstr "Ink/StitchはこのSVGファイルを読み取りできません。このエラーはAdobe Illustratorで作成されたファイルを使用した場合によく発生します。"
 
 #: inkstitch.py:69
 msgid "Try to import the file into Inkscape through 'File > Import...' (Ctrl+I)"
@@ -384,11 +384,11 @@ msgstr "「ファイル>インポート...」（Ctrl + I）を使用してファ
 
 #: inkstitch.py:80
 msgid "Ink/Stitch experienced an unexpected error."
-msgstr "インク/ステッチで予期しないエラーが発生しました。"
+msgstr "Ink/Stitchで予期しないエラーが発生しました。"
 
 #: inkstitch.py:81
 msgid "If you'd like to help, please file an issue at https://github.com/inkstitch/inkstitch/issues and include the entire error description below:"
-msgstr "ヘルプが必要な場合は https://github.com/inkstitch/inkstitch/issues でエラー全体の説明を含めて問題を報告してください。"
+msgstr "ヘルプが必要な場合は https://github.com/inkstitch/inkstitch/issues にエラー全体の説明文を書いて問題を報告してください。"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
@@ -436,7 +436,7 @@ msgstr "このオブジェクトを無視します(ステッチしない)"
 #. command attached to an object
 #: lib/commands.py:45 inx/inkstitch_object_commands.inx:11
 msgid "Satin cut point (use with Cut Satin Column)"
-msgstr "サテンカットポイント (カットサテンカラムで使用)"
+msgstr "刺繍カットポイント (カットサテンカラムで使用)"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command that affects a layer
@@ -459,7 +459,7 @@ msgstr "停止コマンドのジャンプ先（別名\"フレームアウト位�
 #: lib/commands.py:212
 #, python-format
 msgid "Error: there is more than one %(command)s command in the document, but there can only be one.  Please remove all but one."
-msgstr "エラー：ドキュメントに複数の%(command)sコマンドがありますが、存在できるのは1つだけです。 1つを除いてすべて削除してください。"
+msgstr "エラー:ドキュメントに複数の%(command)sコマンドがありますが、存在できるのは1つだけです。 1つを除いてすべて削除してください。"
 
 #. This is a continuation of the previous error message, letting the user know
 #. what command we're talking about since we don't normally expose the actual
@@ -473,12 +473,12 @@ msgstr "%(command)s: %(description)s"
 
 #: lib/commands.py:284 lib/commands.py:397
 msgid "Ink/Stitch Command"
-msgstr "インク/ステッチコマンド"
+msgstr "Ink/Stitchコマンド"
 
 #. : the name of the line that connects a command to the object it applies to
 #: lib/commands.py:310
 msgid "connector"
-msgstr "コネクタ"
+msgstr "コネクタ-"
 
 #. : the name of a command symbol (example: scissors icon for trim command)
 #: lib/commands.py:326
@@ -491,7 +491,7 @@ msgstr "スモールフィル"
 
 #: lib/elements/auto_fill.py:24
 msgid "This fill object is so small that it would probably look better as running stitch or satin column. For very small shapes, fill stitch is not possible, and Ink/Stitch will use running stitch around the outline instead."
-msgstr "この塗りつぶしオブジェクトは非常に小さいので、ランニングステッチやサテンステッチのラインとした方が見栄えがよくなります。非常に小さい形状の場合、塗りつぶしステッチは不可能であり、インク/ステッチは代わりにアウトラインの周りにランニングステッチを使用します。"
+msgstr "この塗りつぶしオブジェクトは非常に小さいので、ランニングステッチやサテンステッチのラインとした方が見栄えがよくなります。非常に小さい形状の場合、塗りつぶしステッチは不可能で、Ink/Stitchは代わりにアウトラインの周りにランニングステッチを使用します。"
 
 #: lib/elements/auto_fill.py:30 lib/elements/auto_fill.py:146
 msgid "Expand"
@@ -708,7 +708,7 @@ msgstr "接続されていません"
 
 #: lib/elements/fill.py:24
 msgid "Fill: This object is made up of unconnected shapes.  This is not allowed because Ink/Stitch doesn't know what order to stitch them in.  Please break this object up into separate shapes."
-msgstr "塗りつぶし：このオブジェクトは、接続されていないシェイプで構成されています。インク/ステッチはそれらをステッチする順序がわからないため、これは許可されていません。このオブジェクトを別々の形状に分割してください。"
+msgstr "塗りつぶし：このオブジェクトは、接続されていないシェイプで構成されています。インク/ステッチはそれらを刺繍する順序がわからないため、これは許可されていません。このオブジェクトを別々の形状に分割してください。"
 
 #: lib/elements/fill.py:28 lib/elements/fill.py:36
 msgid "* Extensions > Ink/Stitch > Fill Tools > Break Apart Fill Objects"
@@ -720,7 +720,7 @@ msgstr "境界を横切る"
 
 #: lib/elements/fill.py:34
 msgid "Fill: Shape is not valid.  This can happen if the border crosses over itself."
-msgstr "塗りつぶし：形状が無効です。これは、境界がそれ自体を越える場合に発生する可能性があります。"
+msgstr "塗りつぶし：形状が無効です。このエラーは、境界が自身を越える場合に発生する可能性があります。"
 
 #: lib/elements/fill.py:41
 msgid "Fill"
@@ -780,11 +780,11 @@ msgstr "画像"
 
 #: lib/elements/image.py:14
 msgid "Ink/Stitch can't work with objects like images."
-msgstr "インク/ステッチは、画像などのオブジェクトでは機能しません。"
+msgstr "Ink/Stitchは、画像などのオブジェクトでは機能しません。"
 
 #: lib/elements/image.py:16
 msgid "* Convert your image into a path: Path > Trace Bitmap... (Shift+Alt+B) (further steps might be required)"
-msgstr "*画像をパスに変換します：パス>ビットマップのトレース...（Shift + Alt + B）（さらに手順が必要になる場合があります）"
+msgstr "*画像をパスに変換します:パス>ビットマップのトレース...（Shift + Alt + B）（さらに手順が必要になる場合があります）"
 
 #: lib/elements/image.py:18
 msgid "* Alternatively redraw the image with the pen (P) or bezier (B) tool"
@@ -832,7 +832,7 @@ msgstr "*パス>オブジェクトをパスへを実行します。"
 
 #: lib/elements/polyline.py:25
 msgid "* Optional: Run the Params extension and check the \"manual stitch\" box."
-msgstr "*オプション：パラメーター拡張機能を実行し、[手動ステッチ] チェックボックスをオンにします。"
+msgstr "*オプション:パラメーター拡張機能を実行し、[手動ステッチ] チェックボックスをオンにします。"
 
 #: lib/elements/polyline.py:45
 msgid "Manual stitch along path"
@@ -844,7 +844,7 @@ msgstr "サテンの列がいっぱいです"
 
 #: lib/elements/satin_column.py:24
 msgid "Satin column: Object has a fill (but should not)"
-msgstr "サテンの列：オブジェクトに塗りつぶしがあります（表示されるべきではありません）"
+msgstr "サテンの列:オブジェクトに塗りつぶしがあります（表示されるべきではありません）"
 
 #: lib/elements/satin_column.py:27
 msgid "* Open the Fill and Stroke panel"
@@ -860,7 +860,7 @@ msgstr "*フィルを無効にする"
 
 #: lib/elements/satin_column.py:30
 msgid "* Alternative: open Params and switch this path to Stroke to disable Satin Column mode"
-msgstr "*代替方法：パラメータを開き、このパスをストロークに切り替えて、サテンカラムモードを無効にします"
+msgstr "*代替方法:パラメータを開き、このパスをストロークに切り替えて、サテンカラムモードを無効にします"
 
 #: lib/elements/satin_column.py:35
 msgid "Too few subpaths"
@@ -868,7 +868,7 @@ msgstr "サブパスが少なすぎます"
 
 #: lib/elements/satin_column.py:36
 msgid "Satin column: Object has too few subpaths.  A satin column should have at least two subpaths (the rails)."
-msgstr "サテンの列：オブジェクトのサブパスが少なすぎます。サテンの柱には、少なくとも2つのサブパス（レール）が必要です。"
+msgstr "サテンの列:オブジェクトのサブパスが少なすぎます。サテンの柱には、少なくとも2つのサブパス（レール）が必要です。"
 
 #: lib/elements/satin_column.py:38
 msgid "* Add another subpath (select two rails and do Path > Combine)"
@@ -884,7 +884,7 @@ msgstr "ポイント数が等しくありません"
 
 #: lib/elements/satin_column.py:45
 msgid "Satin column: There are no rungs and rails have an an unequal number of points."
-msgstr "サテンの柱：横木はなく、パスのポイント数は等しくありません。"
+msgstr "サテンの柱:横木はなく、パスのポイント数は等しくありません。"
 
 #: lib/elements/satin_column.py:47
 msgid "The easiest way to solve this issue is to add one or more rungs. "
@@ -912,7 +912,7 @@ msgstr "ラングはレールと交差しません"
 
 #: lib/elements/satin_column.py:59
 msgid "Satin column: A rung doesn't intersect both rails."
-msgstr "サテンの柱：ラングは両方のパスと交差しません。"
+msgstr "サテンカラム:ラングは両方のパスと交差しません。"
 
 #: lib/elements/satin_column.py:63
 msgid "Rungs intersects too many times"
@@ -920,7 +920,7 @@ msgstr "ラングが何度も交差する"
 
 #: lib/elements/satin_column.py:64
 msgid "Satin column: A rung intersects a rail more than once."
-msgstr "サテンの柱：ラングがパスと複数回交差します。"
+msgstr "サテンカラム:ラングがパスと複数回交差します。"
 
 #: lib/elements/satin_column.py:68
 msgid "Satin Column"
@@ -1063,7 +1063,7 @@ msgstr "パス内のすべてのノードをステッチします。ステッチ
 #: lib/elements/stroke.py:143
 msgid "Legacy running stitch setting detected!\n\n"
 "It looks like you're using a stroke smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set your stroke to be dashed to indicate running stitch.  Any kind of dash will work."
-msgstr "レガシーランニングステッチの設定が検出されました！\n\n"
+msgstr "レガシーランニングステッチの設定が検出されました!\n\n"
 "ランニングステッチを示すために0.5単位未満のストロークを使用しているようですが、これは非推奨です。代わりに、ランニングステッチを示すために、ストロークを破線に設定してください。どんな種類のダッシュでも機能します。"
 
 #: lib/elements/text.py:13 lib/extensions/lettering.py:77
@@ -1076,7 +1076,7 @@ msgstr "インク/ステッチは、テキストなどのオブジェクトで�
 
 #: lib/elements/text.py:16
 msgid "* Text: Create your own letters or try the lettering tool:"
-msgstr "*テキスト：独自の文字を作成するか、レタリングツールを試してください："
+msgstr "*テキスト:独自の文字を作成するか、レタリングツールを試してください:"
 
 #: lib/elements/text.py:17
 msgid "- Extensions > Ink/Stitch > Lettering"
@@ -1229,7 +1229,7 @@ msgstr "適用して終了"
 
 #: lib/extensions/lettering.py:153
 msgid "Unable to find any fonts!  Please try reinstalling Ink/Stitch."
-msgstr "フォントが見つかりません。 インクステッチを再インストールしてください。"
+msgstr "フォントが見つかりません。 Ink/Stitchを再インストールしてください。"
 
 #: lib/extensions/lettering.py:224
 msgid "This font has no available font variant. Please update or remove the font."
@@ -1257,7 +1257,7 @@ msgstr "カスタムフォントのディレクトリを指定してください
 
 #: lib/extensions/lettering_force_lock_stitches.py:29
 msgid "The maximum value is smaller than the minimum value."
-msgstr ""
+msgstr "最大値が最小値以下になっています"
 
 #: lib/extensions/lettering_generate_json.py:41
 msgid "Please specify a font file."
@@ -1304,7 +1304,7 @@ msgstr "このタブを有効にすると %s が無効になり、その逆も�
 
 #: lib/extensions/params.py:252
 msgid "Inkscape objects"
-msgstr "Inkscapeオブジェクト"
+msgstr "Ink/scapeオブジェクト"
 
 #: lib/extensions/params.py:313
 msgid "Click to force this parameter to be saved when you click \"Apply and Quit\""
@@ -1375,7 +1375,7 @@ msgstr "オブジェクトタイプの警告"
 
 #: lib/extensions/troubleshoot.py:165
 msgid "These objects may not work properly with Ink/Stitch. Follow the instructions to correct unwanted behaviour."
-msgstr "このオブジェクトはインクステッチで正しく動作しない場合があります。指示にしたがって動作を修正してください。"
+msgstr "このオブジェクトはInk/Stitchで正しく動作しない場合があります。指示にしたがって動作を修正してください。"
 
 #: lib/extensions/troubleshoot.py:181
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
@@ -1387,7 +1387,7 @@ msgstr "スレッド一覧"
 
 #: lib/extensions/zip.py:71
 msgid "No embroidery file formats selected."
-msgstr "刺繍ファイルのフォーマットが選択されていません。"
+msgstr "刺繍ファイルの形式が選択されていません。"
 
 #: lib/extensions/zip.py:99
 msgid "Design Details"
@@ -1536,7 +1536,7 @@ msgstr "終了（Q）"
 #: lib/gui/simulator.py:186
 #, python-format
 msgid "Speed: %d stitches/sec"
-msgstr "速度： %d ステッチ/秒"
+msgstr "速度: %d ステッチ/秒"
 
 #: lib/gui/simulator.py:242 lib/gui/simulator.py:270
 msgid "Start"
@@ -1558,7 +1558,7 @@ msgstr "完全なエラーメッセージを表示するには、Paramsを閉じ
 #: lib/lettering/font.py:161
 #, python-format
 msgid "The font '%s' has no variants."
-msgstr "フォント '％s'にはバリアントがありません。"
+msgstr "フォント '%s'にはバリアントがありません。"
 
 #. low-level file error.  %(error)s is (hopefully?) translated by
 #. the user's system automatically.
@@ -1570,7 +1570,7 @@ msgstr "%(path)sへの書き込みエラー:%(error)s"
 #: lib/stitch_plan/generate_stitch_plan.py:73
 #, python-format
 msgid "File does not exist and cannot be opened. Please correct the file path and try again.\\r%s"
-msgstr "ファイルが存在しないため開けません。ファイルパスを修正して再度お試しください。\\r%s"
+msgstr "ファイルが存在しないため開けません。ファイルの場所を修正して再度お試しください。\\r%s"
 
 #: lib/stitches/auto_satin.py:659
 msgid "Auto-Satin"
@@ -1597,16 +1597,16 @@ msgstr "ステッチプラン"
 #: lib/svg/units.py:18
 #, python-format
 msgid "parseLengthWithUnits: unknown unit %s"
-msgstr "parseLengthWithUnits：不明なユニット %s"
+msgstr "parseLengthWithUnits:不明なユニット %s"
 
 #: lib/utils/version.py:22
 #, python-format
 msgid "Ink/Stitch Version: %s"
-msgstr "インク/ステッチバージョン：％s"
+msgstr "インク/ステッチバージョン: %s"
 
 #: lib/utils/version.py:24
 msgid "Ink/Stitch Version: unknown"
-msgstr "インクステッチバージョン：不明"
+msgstr "インクステッチバージョン:不明"
 
 #: print/templates/color_swatch.html:8 print/templates/color_swatch.html:40
 #: print/templates/operator_detailedview.html:9
@@ -1624,11 +1624,11 @@ msgstr "糸"
 #: print/templates/color_swatch.html:19 print/templates/color_swatch.html:43
 #: print/templates/operator_detailedview.html:63
 msgid "# stitches"
-msgstr "＃ステッチ"
+msgstr "# ステッチ"
 
 #: print/templates/color_swatch.html:23 print/templates/color_swatch.html:44
 msgid "# trims"
-msgstr "＃トリム"
+msgstr "#トリム"
 
 #: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
 #: print/templates/operator_detailedview.html:68
@@ -1721,7 +1721,7 @@ msgstr "糸の消費量"
 
 #: print/templates/operator_detailedview.html:11
 msgid "Stops and Trims"
-msgstr "ストップ＆トリム"
+msgstr "ストップ&トリム"
 
 #: print/templates/operator_detailedview.html:12
 msgid "Notes"
@@ -1811,7 +1811,7 @@ msgstr "お客様署名"
 
 #: print/templates/ui.html:2
 msgid "Ink/Stitch Print Preview"
-msgstr "インク/ステッチの印刷プレビュー"
+msgstr "Ink/Stitchの印刷プレビュー"
 
 #: print/templates/ui.html:4
 msgid "Print"
@@ -1900,7 +1900,7 @@ msgstr "ロゴ"
 
 #: print/templates/ui.html:81
 msgid "Footer: Operator contact information"
-msgstr "フッター：オペレーターの連絡先"
+msgstr "フッター:オペレーターの連絡先"
 
 #: print/templates/ui.html:115
 msgid "Machine Settings"
@@ -3010,7 +3010,7 @@ msgstr "フォント管理"
 #: inx/inkstitch_lettering_force_lock_stitches.inx:23
 #: inx/inkstitch_lettering_force_lock_stitches.inx:24
 msgid "Minimum distance (mm)"
-msgstr ""
+msgstr "間隔最小値(mm)"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:26
 msgid "Add force lock stitches attribute to the last element of each glyph"
@@ -3050,7 +3050,7 @@ msgstr "大文字と小文字を強制する"
 
 #: inx/inkstitch_lettering_generate_json.inx:38
 msgid "Upper"
-msgstr "アッパー"
+msgstr "上"
 
 #: inx/inkstitch_lettering_generate_json.inx:39
 msgid "Lower"
@@ -3066,7 +3066,7 @@ msgstr "最大スケール"
 
 #: inx/inkstitch_lettering_generate_json.inx:48
 msgid "Default Glyph"
-msgstr "デフォルトのグリフ"
+msgstr "デフォルトの文字"
 
 #: inx/inkstitch_lettering_generate_json.inx:60
 #: inx/inkstitch_lettering_generate_json.inx:67
@@ -3111,7 +3111,7 @@ msgstr ""
 
 #: inx/inkstitch_letters_to_font.inx:22
 msgid "File format"
-msgstr ""
+msgstr "ファイル形式"
 
 #: inx/inkstitch_letters_to_font.inx:47
 msgid "Font directory"
@@ -3119,7 +3119,7 @@ msgstr ""
 
 #: inx/inkstitch_letters_to_font.inx:49
 msgid "Import commands"
-msgstr ""
+msgstr "コマンドインポート"
 
 #: inx/inkstitch_object_commands.inx:3
 msgid "Attach Commands to Selected Objects"
@@ -3127,7 +3127,7 @@ msgstr "選択したオブジェクトにコマンドを付加"
 
 #: inx/inkstitch_output_CSV.inx:3
 msgid "CSV file output"
-msgstr ""
+msgstr "CSVファイル出力"
 
 #: inx/inkstitch_output_CSV.inx:8
 msgid "Ink/Stitch: Comma-separated values [DEBUG] (.csv)"
@@ -3135,83 +3135,83 @@ msgstr ""
 
 #: inx/inkstitch_output_CSV.inx:9
 msgid "Save design in CSV format using Ink/Stitch"
-msgstr ""
+msgstr "Ink/Stitchを使用してCSV形式でデザインを保存する"
 
 #: inx/inkstitch_output_DST.inx:3
 msgid "DST file output"
-msgstr ""
+msgstr "DSTファイル出力"
 
 #: inx/inkstitch_output_DST.inx:9
 msgid "Save design in DST format using Ink/Stitch"
-msgstr ""
+msgstr "Ink/Stitchを使用してDST形式でデザインを保存する"
 
 #: inx/inkstitch_output_EXP.inx:3
 msgid "EXP file output"
-msgstr ""
+msgstr "EXPファイル出力"
 
 #: inx/inkstitch_output_EXP.inx:9
 msgid "Save design in EXP format using Ink/Stitch"
-msgstr ""
+msgstr "Ink/Stitchを使用してEXP形式でデザインを保存する"
 
 #: inx/inkstitch_output_JEF.inx:3
 msgid "JEF file output"
-msgstr ""
+msgstr "JEFファイル出力"
 
 #: inx/inkstitch_output_JEF.inx:9
 msgid "Save design in JEF format using Ink/Stitch"
-msgstr ""
+msgstr "Ink/Stitchを使用してJEF形式でデザインを保存する"
 
 #: inx/inkstitch_output_PEC.inx:3
 msgid "PEC file output"
-msgstr ""
+msgstr "PECファイル出力"
 
 #: inx/inkstitch_output_PEC.inx:9
 msgid "Save design in PEC format using Ink/Stitch"
-msgstr ""
+msgstr "Ink/Stitchを使用してPEC形式でデザインを保存する"
 
 #: inx/inkstitch_output_PES.inx:3
 msgid "PES file output"
-msgstr ""
+msgstr "PESファイル出力"
 
 #: inx/inkstitch_output_PES.inx:9
 msgid "Save design in PES format using Ink/Stitch"
-msgstr ""
+msgstr "Ink/Stitchを使用してPES形式でデザインを保存する"
 
 #: inx/inkstitch_output_PMV.inx:3
 msgid "PMV file output"
-msgstr ""
+msgstr "PMVファイル出力"
 
 #: inx/inkstitch_output_PMV.inx:8
 msgid "Ink/Stitch: Brother Stitch Format [DEBUG] (.pmv)"
-msgstr ""
+msgstr "Ink/Stitch: Brother 刺繡データ形式 [デバッグ] (.pmv)"
 
 #: inx/inkstitch_output_PMV.inx:9
 msgid "Save design in PMV format using Ink/Stitch"
-msgstr ""
+msgstr "Ink/Stitchを使用してPMV形式でデザインを保存する"
 
 #: inx/inkstitch_output_SVG.inx:3
 msgid "SVG file output"
-msgstr ""
+msgstr "SVGファイル出力"
 
 #: inx/inkstitch_output_SVG.inx:8
 msgid "Ink/Stitch: Scalable Vector Graphics [DEBUG] (.svg)"
-msgstr ""
+msgstr "Ink/Stitch: Scalable Vector Graphics [デバッグ] (.svg)"
 
 #: inx/inkstitch_output_SVG.inx:9
 msgid "Save design in SVG format using Ink/Stitch"
-msgstr ""
+msgstr "Ink/Stitchを使用してSVG形式でデザインを保存する"
 
 #: inx/inkstitch_output_TXT.inx:3
 msgid "TXT file output"
-msgstr ""
+msgstr "TXTファイル出力"
 
 #: inx/inkstitch_output_TXT.inx:8
 msgid "Ink/Stitch: G-code Format (.txt)"
-msgstr ""
+msgstr "Ink/Stitch: G-code フォーマット (.txt)"
 
 #: inx/inkstitch_output_TXT.inx:9
 msgid "Save design in TXT format using Ink/Stitch"
-msgstr ""
+msgstr "Ink/Stitchを使用してTXT形式でデザインを保存する"
 
 #: inx/inkstitch_output_TXT.inx:17
 msgid "Coordinate Settings"
@@ -3259,11 +3259,11 @@ msgstr ""
 
 #: inx/inkstitch_output_TXT.inx:29
 msgid "Use '%X' for x-coordinate. Use '%Y' for y-coordinate and '%Z' for z-coordinate."
-msgstr ""
+msgstr "X座標には'%X'を使用する.同様にY座標は'%Y',Z座標は'%Z'を使用"
 
 #: inx/inkstitch_output_TXT.inx:31 inx/inkstitch_output_TXT.inx:33
 msgid "Leave empty to use default value. Use 'none' to remove."
-msgstr ""
+msgstr "デフォルト値を使用する場合は空白.削除するには'none'."
 
 #: inx/inkstitch_output_TXT.inx:34
 msgid "START"
@@ -3275,7 +3275,7 @@ msgstr "終了"
 
 #: inx/inkstitch_output_TXT.inx:37
 msgid "Laser Settings"
-msgstr ""
+msgstr "レーザー設定"
 
 #: inx/inkstitch_output_TXT.inx:39
 msgid "laser mode"
@@ -3303,35 +3303,35 @@ msgstr "レーザー電源オン時、レーザーが温まるまでの秒数（
 
 #: inx/inkstitch_output_TXT.inx:46
 msgid "spindle speed"
-msgstr "主軸回転数"
+msgstr "スピンドル回転数"
 
 #: inx/inkstitch_output_TXT.inx:46
 msgid "spindle speed (laser power for laser mode, set to -1 to omit)"
-msgstr "主軸回転数（レーザーモードの場合はレーザー出力、省略する場合は-1を設定)"
+msgstr "スピンドル回転数（レーザーモードの場合はレーザー出力、省略する場合は-1を設定)"
 
 #: inx/inkstitch_output_TXT.inx:48
 msgid "min spindle speed"
-msgstr "最小主軸回転数"
+msgstr "スピンドル最小回転数"
 
 #: inx/inkstitch_output_TXT.inx:48
 msgid "minimum spindle speed value (grbl $31 setting)"
-msgstr "主軸回転数最小値（grbl $31設定)"
+msgstr "スピンドル回転数最小値（grbl $31設定)"
 
 #: inx/inkstitch_output_TXT.inx:50
 msgid "max spindle speed"
-msgstr "主軸最高回転速度"
+msgstr "スピンドル最高回転速度"
 
 #: inx/inkstitch_output_TXT.inx:50
 msgid "minimum spindle speed value (grbl $30 setting)"
-msgstr "主軸回転速度の最小値（grbl $31設定)"
+msgstr "スピンドル回転速度の最小値（grbl $31設定)"
 
 #: inx/inkstitch_output_TXT.inx:51
 msgid "feed rate (in mm/min, set to -1 to omit)"
-msgstr "送り速度（単位：mm/min、省略する場合は-1を設定)"
+msgstr "送り速度（単位:mm/min、省略する場合は-1を設定)"
 
 #: inx/inkstitch_output_U01.inx:3
 msgid "U01 file output"
-msgstr ""
+msgstr "U01ファイル出力"
 
 #: inx/inkstitch_output_U01.inx:9
 msgid "Save design in U01 format using Ink/Stitch"
