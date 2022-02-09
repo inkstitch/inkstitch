@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Cutwork tiling</name>
+    <id>org.inkstitch.cutwork_tiling</id>
+    <param name="extension" type="string" gui-hidden="true">cutwork_tiling</param>
+    <effect>
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu name="Ink/Stitch" translatable="no" />
+        </effects-menu>
+    </effect>
+    <param name="description" type="description">
+        This extension separates a path depending on the angle.
+    </param>
+    <separator />
+    <param name="angle_calculation" type="description">
+        A horizontal line has an angle of 0 degrees.
+    </param>
+    <separator />
+    <hbox>
+      <param name="a_description" type="description">1.</param>
+      <param name="a_start" type="int" appearance="full" gui-text="start" precision="1" min="0" max="180">158</param>
+      <param name="a_end" type="int" appearance="full" gui-text="end" precision="1" min="0" max="180">23</param>
+      <param name="a_color" type="color" gui-text="color" appearance="colorbutton">0x990000ff</param>
+    </hbox>
+    <hbox>
+      <param name="a_description" type="description">2.</param>
+      <param name="b_start" type="int" appearance="full" gui-text="start" precision="1" min="0" max="180">22</param>
+      <param name="b_end" type="int" appearance="full" gui-text="end" precision="1" min="0" max="180">68</param>
+      <param name="b_color" type="color" gui-text="color" appearance="colorbutton">0x009900ff</param>
+    </hbox>
+    <hbox>
+      <param name="a_description" type="description">3.</param>
+      <param name="c_start" type="int" appearance="full" gui-text="start" precision="1" min="0" max="180">67</param>
+      <param name="c_end" type="int" appearance="full" gui-text="end" precision="1" min="0" max="180">113</param>
+      <param name="c_color" type="color" gui-text="color" appearance="colorbutton">0x000099ff</param>
+    </hbox>
+    <hbox>
+      <param name="a_description" type="description">4.</param>
+      <param name="d_start" type="int" appearance="full" gui-text="start" precision="1" min="0" max="180">112</param>
+      <param name="d_end" type="int" appearance="full" gui-text="end" precision="1" min="0" max="180">157</param>
+      <param name="d_color" type="color" gui-text="color" appearance="colorbutton">0xe5a50aff</param>
+    </hbox>
+    <separator />
+    <param name="sort_by_color" type="boolean" gui-text="Sort elements by color">true</param>
+    <param name="keep_original" type="boolean" gui-text="Keep original">false</param>
+    <script>
+        {{ command_tag | safe }}
+    </script>
+</inkscape-extension>
