@@ -16,7 +16,7 @@ from ..svg.tags import INKSCAPE_LABEL, SVG_PATH_TAG
 from .base import InkstitchExtension
 
 
-class CutworkTiling(InkstitchExtension):
+class CutworkSegmentation(InkstitchExtension):
     '''
     This will split up stroke elements according to their direction.
     Overlapping angle definitions (user input) will result in overlapping paths.
