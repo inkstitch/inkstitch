@@ -7,19 +7,20 @@ from math import atan2, degrees
 
 import inkex
 from lxml import etree
-from shapely.geometry import LineString, MultiPoint, Point
-from shapely.ops import split
+from shapely.geometry import LineString, Point
 
 from ..elements import Stroke
 from ..i18n import _
 from ..svg import get_correction_transform
-from ..svg.tags import SVG_PATH_TAG, INKSCAPE_LABEL
+from ..svg.tags import INKSCAPE_LABEL, SVG_PATH_TAG
 from .base import InkstitchExtension
 
 
 class CutworkTiling(InkstitchExtension):
     '''
-    This will split up stroke elements according to their direction. This is useful for cutwork.
+    This will split up stroke elements according to their direction.
+    Overlapping angle definitions (user input) will result in overlapping paths.
+    This is wanted behaviour if the needles have a hard time to cut edges at the border of their specific angle capability.
     '''
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
@@ -39,18 +40,22 @@ class CutworkTiling(InkstitchExtension):
         self.arg_parser.add_argument("-k", "--keep_original", type=inkex.Boolean, default=False, dest="keep_original")
 
     def effect(self):
-        self.sectors = []
-        self.sectors.append([self.options.a_start, self.options.a_end, self.options.a_color, 1])
-        self.sectors.append([self.options.b_start, self.options.b_end, self.options.b_color, 2])
-        self.sectors.append([self.options.c_start, self.options.c_end, self.options.c_color, 3])
-        self.sectors.append([self.options.d_start, self.options.d_end, self.options.d_color, 4])
-
         if not self.svg.selected:
             inkex.errormsg(_("Please select one or more stroke elements."))
             return
 
         if not self.get_elements():
             return
+
+        self.sectors = {
+                        1: {'id': 1, 'start': self.options.a_start, 'end': self.options.a_end, 'color': self.options.a_color, 'point_list': []},
+                        2: {'id': 2, 'start': self.options.b_start, 'end': self.options.b_end, 'color': self.options.b_color, 'point_list': []},
+                        3: {'id': 3, 'start': self.options.c_start, 'end': self.options.c_end, 'color': self.options.c_color, 'point_list': []},
+                        4: {'id': 4, 'start': self.options.d_start, 'end': self.options.d_end, 'color': self.options.d_color, 'point_list': []}
+                       }
+
+        # remove sectors where the start angle equals the end angle (some setups only work with two needles instead of four)
+        self.sectors = {index: sector for index, sector in self.sectors.items() if sector['start'] != sector['end']}
 
         self.new_elements = []
         for element in self.elements:
@@ -61,49 +66,27 @@ class CutworkTiling(InkstitchExtension):
                 index = parent.index(element.node)
 
                 for path in element.paths:
-                    points = []
                     linestring = LineString(path)
-                    prev_point = None
-                    current_sector = None
+                    # fill self.new_elements list with line segments
+                    self._prepare_line_sections(element, linestring.coords)
 
-                    # collect the split points by angle sections and apply them to each path (split)
-                    for point in linestring.coords:
-                        point = Point(*point)
-                        if prev_point is None:
-                            prev_point = point
-                            continue
+        self._insert_elements(parent, element, index)
 
-                        angle = self._get_angle(point, prev_point)
-                        if current_sector:
-                            if not self._in_sector(angle, current_sector):
-                                points.append(prev_point)
-                                current_sector = self._get_sector(angle)
-                        else:
-                            current_sector = self._get_sector(angle)
+        self._remove_originals()
 
-                        prev_point = point
-
-                    lines = self.split_line(linestring, points)
-                    self._prepare_line_elements(element, lines)
-
-                self._remove_originals(parent, element.node)
-
-        self._insert_elements(parent, index)
-
-    def split_line(self, line, points):
-        return split(line, MultiPoint(points))
-
-    def _get_sector(self, angle):
-        for sector in self.sectors:
+    def _get_sectors(self, angle):
+        sectors = []
+        for sector in self.sectors.values():
             if self._in_sector(angle, sector):
-                return sector
+                sectors.append(sector)
+        return sectors
 
     def _in_sector(self, angle, sector):
-        stop = sector[1] + 1
-        if sector[0] > sector[1]:
-            return angle in range(sector[0], 360) or angle in range(0, stop)
+        stop = sector['end'] + 1
+        if sector['start'] > stop:
+            return angle in range(sector['start'], 360) or angle in range(0, stop)
         else:
-            return angle in range(sector[0], stop)
+            return angle in range(sector['start'], stop)
 
     def _get_angle(self, p1, p2):
         angle = round(degrees(atan2(p2.y - p1.y, p2.x - p1.x)) % 360)
@@ -111,7 +94,58 @@ class CutworkTiling(InkstitchExtension):
             angle -= 180
         return angle
 
-    def _insert_elements(self, parent, index):
+    def _prepare_line_sections(self, element, coords):
+        prev_point = None
+        current_sectors = []
+
+        for index, point in enumerate(coords):
+            point = Point(*point)
+            if prev_point is None:
+                prev_point = point
+                continue
+
+            angle = self._get_angle(point, prev_point)
+            sectors = self._get_sectors(angle)
+
+            for sector in sectors:
+                self.sectors[sector['id']]['point_list'].append(prev_point)
+                # don't miss the last point
+                if index == len(coords) - 1:
+                    self.sectors[sector['id']]['point_list'].append(point)
+                    self._prepare_element(self.sectors[sector['id']], element)
+
+            # if a segment ends, prepare the element and clear point_lists
+            for current in current_sectors:
+                if current not in sectors:
+                    # add last point
+                    self.sectors[current['id']]['point_list'].append(prev_point)
+                    self._prepare_element(self.sectors[current['id']], element)
+                    # clear point list
+                    self.sectors[current['id']].update({'point_list': []})
+
+            prev_point = point
+            current_sectors = sectors
+
+    def _prepare_element(self, sector, element):
+        point_list = sector['point_list']
+        if len(point_list) < 2:
+            return
+
+        color = str(self.path_style(element, str(sector['color'])))
+
+        d = "M "
+        for point in point_list:
+            d += "%s,%s " % (point.x, point.y)
+
+        stroke_element = etree.Element(SVG_PATH_TAG,
+                                       {
+                                        "style": color,
+                                        "transform": get_correction_transform(element.node),
+                                        "d": d
+                                       })
+        self.new_elements.append([stroke_element, sector['id']])
+
+    def _insert_elements(self, parent, element, index):
         if self.options.sort_by_color is True:
             self.new_elements = sorted(self.new_elements, key=lambda x: x[1])
 
@@ -124,35 +158,14 @@ class CutworkTiling(InkstitchExtension):
         for element, section_id in self.new_elements:
             group.insert(0, element)
 
-    def _remove_originals(self, parent, element):
-        if not self.options.keep_original:
-            parent.remove(element)
+    def _remove_originals(self):
+        if self.options.keep_original:
+            return
 
-    def _prepare_line_elements(self, element, lines):
-        for line in lines:
-            if len(line.coords) < 2:
-                continue
-
-            try:
-                sector = self._get_sector(self._get_angle(Point(line.coords[0]), Point(line.coords[1])))
-                color = sector[2]
-                section_id = sector[3]
-            except TypeError:
-                color = "black"
-                section_id = 0
-
-            d = "M"
-            for x, y in line.coords:
-                d += "%s,%s " % (x, y)
-                d += " "
-
-            stroke_element = etree.Element(SVG_PATH_TAG,
-                                           {
-                                            "style": str(self.path_style(element, str(color))),
-                                            "transform": get_correction_transform(element.node),
-                                            "d": d
-                                           })
-            self.new_elements.append([stroke_element, section_id])
+        for element in self.elements:
+            if isinstance(element, Stroke):
+                parent = element.node.getparent()
+                parent.remove(element.node)
 
     def path_style(self, element, color):
         return inkex.Style(element.node.get('style', '')) + inkex.Style('stroke:%s' % color)
