@@ -65,7 +65,7 @@ msgstr "Apex Lakeは最大60mmの大きなオシャレな大文字フォント�
 #. name of font in fonts/baumans_FI
 #: inkstitch-fonts-metadata.py:14
 msgid "Baumans FI"
-msgstr ""
+msgstr "Baumans FI"
 
 #. description of font in fonts/baumans_FI
 #: inkstitch-fonts-metadata.py:16
@@ -123,7 +123,7 @@ msgstr "Dejavu Serif"
 #: inkstitch-fonts-metadata.py:36
 #, python-format
 msgid "DejaVu Serif Condensed. The capital M is 19,8 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 150%.  Every satin has center-walk underlay."
-msgstr "DejaVu Serif Condensed。大文字の'M'は100%表示で幅19,8ミリです。 80%～150%に拡大縮小可能です。 すべてのサテンには中心線に下縫いがあります。"
+msgstr "大文字の'M'は100%表示で幅19,8ミリです。 80%～150%に拡大縮小可能です。 すべてのサテンには中心線に下縫いがあります。"
 
 #. name of font in fonts/digory_doodles_bean
 #: inkstitch-fonts-metadata.py:38
@@ -149,12 +149,12 @@ msgstr "Emilio 20 大文字と数字のみのフォントです. M は100%表示
 #. name of font in fonts/emilio_20_tricolore
 #: inkstitch-fonts-metadata.py:46
 msgid "EMILIO 20 TRICOLORE"
-msgstr ""
+msgstr "EMILIO 20 トリコロール"
 
 #. description of font in fonts/emilio_20_tricolore
 #: inkstitch-fonts-metadata.py:48
 msgid "Emilio 20 tricolore is a large tricolor fill stitches and satin columns font of  size approximately 100mm. It contains 36 glyphs including the numbers and the 26 capitals  A-Z. It can be reduced down to 90% and enlarged up to 120%"
-msgstr ""
+msgstr "Emilio 20 トリコロールは最大100mmの大きなトリコロールのフィルステッチとサテンステッチです.数字,A-Zの26文字の計36文字収録."
 
 #. name of font in fonts/espresso_KOR
 #: inkstitch-fonts-metadata.py:50
@@ -163,8 +163,8 @@ msgstr ""
 
 #. description of font in fonts/espresso_KOR
 #: inkstitch-fonts-metadata.py:52
-msgid "The capital M is 16.2 mm high at 100 scale. Every satin has zigzag underlay. x is 11.5 mm high, q is 17.5 mm high, l is 17.2 mm high."
-msgstr "大文字のMは100目盛で16.2mmの高さです。xは高さ11.5mm、qは高さ17.5mm、lは高さ17.2mm、すべてのサテンにはジグザグの下地があります。"
+msgid "The capital M is 16.2 mm high at 100% scale. Every satin has zigzag underlay. x is 11.5 mm high, q is 17.5 mm high, l is 17.2 mm high."
+msgstr "大文字のMは100%表示で16.2mmの高さです。xは高さ11.5mm、qは高さ17.5mm、lは高さ17.2mm、すべてのサテンにはジグザグの下地があります。"
 
 #. name of font in fonts/excalibur_KOR
 #: inkstitch-fonts-metadata.py:54
@@ -174,7 +174,7 @@ msgstr ""
 #. description of font in fonts/excalibur_KOR
 #: inkstitch-fonts-metadata.py:56
 msgid "Excalibur KOR is a small satin column manuscript font of size approximatively 20mm. It can be reduced down to 80% and enlarged up to 140%. It contains 144 glyphs, covering most western European languages needs."
-msgstr ""
+msgstr "Excalibur KORは最大20mmの刺繍フォントです.拡大縮小80~140％まで可能."
 
 #. name of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:58
@@ -184,7 +184,7 @@ msgstr ""
 #. description of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:60
 msgid "Fold Ink/Stitch is a large triple and quintuple running stitches capital font of size 100 mm. It contains 40 glyphs including all numbers and the 26 capitals  A-Z. It can be reduced down to 80% and enlarged up to 200%"
-msgstr ""
+msgstr "Fold Ink/Stitchは大文字のサイズ100mmで3,4文字に適しています.数字,A-Z26文字を含む計40文字収録.拡大縮小80~200%&まで可能"
 
 #. name of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:62
@@ -3131,7 +3131,7 @@ msgstr "CSVファイル出力"
 
 #: inx/inkstitch_output_CSV.inx:8
 msgid "Ink/Stitch: Comma-separated values [DEBUG] (.csv)"
-msgstr ""
+msgstr "Ink/Stitch: コンマ区切りの値 [DEBUG] (.csv)"
 
 #: inx/inkstitch_output_CSV.inx:9
 msgid "Save design in CSV format using Ink/Stitch"
