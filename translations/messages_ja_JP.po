@@ -39,7 +39,7 @@ msgstr ""
 #. description of font in fonts/Brockscript
 #: inkstitch-fonts-metadata.py:4
 msgid "Brock Script is a decorative satin column manuscript font of size approximatively 40mm. It can be enlarged up to 250%. It contains 118 glyphs, covering most western european languages needs.More decorative options are hidden in the µ glyph"
-msgstr "Brock Script はオシャレな手描き文字です.最大40mm,拡大250%まで可能.118文字収録.主に西ヨーロッパ言語に対応. µ の文字には多くの装飾オプションがあります"
+msgstr "Brock Script はオシャレな手描き文字です.最大40mm,拡大250%まで可能.118文字収録.主に西ヨーロッパ言語に対応.'µ'の文字には多くの装飾オプションがあります"
 
 #. name of font in fonts/amitaclo
 #: inkstitch-fonts-metadata.py:6
@@ -50,7 +50,7 @@ msgstr ""
 #: inkstitch-fonts-metadata.py:8
 #, python-format
 msgid "The capital M is 25.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 160%. Every satin has zigzag underlay"
-msgstr "大文字〈 M 〉は100%スケールで幅25.3mm.拡大縮小は80~120%まで.ジグザクの下地があります"
+msgstr "大文字'M'は100%スケールで幅25.3mm.拡大縮小は80~120%まで.ジグザクの下地があります"
 
 #. name of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:10
@@ -71,7 +71,7 @@ msgstr ""
 #: inkstitch-fonts-metadata.py:16
 #, python-format
 msgid "The capital M is 22.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 150%. Every satin has zigzag underlay"
-msgstr "大文字のMは100%の縮尺で22.3ミリ幅。80%～150%まで拡大縮小可能です。すべてのサテンにはジグザグの下地があります。"
+msgstr "大文字の'M'は100%の縮尺で22.3ミリ幅。80%～150%まで拡大縮小可能です。すべてのサテンにはジグザグの下地があります。"
 
 #. name of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:18
@@ -123,7 +123,7 @@ msgstr "Dejavu Serif"
 #: inkstitch-fonts-metadata.py:36
 #, python-format
 msgid "DejaVu Serif Condensed. The capital M is 19,8 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 150%.  Every satin has center-walk underlay."
-msgstr "DejaVu Serif Condensed。大文字のMは100%表示で幅19,8ミリです。 80%～150%に拡大縮小可能です。 すべてのサテンには中心線に下縫いがあります。"
+msgstr "DejaVu Serif Condensed。大文字の'M'は100%表示で幅19,8ミリです。 80%～150%に拡大縮小可能です。 すべてのサテンには中心線に下縫いがあります。"
 
 #. name of font in fonts/digory_doodles_bean
 #: inkstitch-fonts-metadata.py:38
@@ -2049,12 +2049,12 @@ msgstr "ジャノメ刺繍フォーマット"
 #: pyembroidery-format-descriptions.py:70
 #: pyembroidery-format-descriptions.py:72
 msgid "Pfaff Embroidery Format"
-msgstr "パフ刺繍　フォーマット"
+msgstr "パフ刺繍 フォーマット"
 
 #. description for pyembroidery file format: svg
 #: pyembroidery-format-descriptions.py:14
 msgid "Scalable Vector Graphics"
-msgstr "メルコスケーラブルベクターグラフィックス"
+msgstr "スケーラブルベクター画像"
 
 #. description for pyembroidery file format: csv
 #: pyembroidery-format-descriptions.py:16
@@ -2308,7 +2308,7 @@ msgstr "リアル"
 
 #: electron/src/renderer/components/Simulator.vue:260
 msgid "Rendering stitch-plan..."
-msgstr "ステッチプランのレンダリング..."
+msgstr "ステッチプランのレンダリング中..."
 
 #: electron/src/renderer/components/Simulator.vue:21
 msgid "Shortcut Key"
@@ -2337,7 +2337,7 @@ msgstr "速度アップ"
 #: electron/src/renderer/components/Simulator.vue:174
 msgid "Speed: %{speed} stitch/sec"
 msgid_plural "Speed: %{speed} stitches/sec"
-msgstr[0] "速度： %{speed} ステッチ/秒"
+msgstr[0] "速度: %{speed} ステッチ/秒"
 
 #: electron/src/renderer/components/Simulator.vue:206
 msgid "stops"
@@ -2423,7 +2423,7 @@ msgstr "塗りつぶし領域のしきい値(px²)"
 
 #: inx/inkstitch_cleanup.inx:10
 msgid "Remove Small strokes"
-msgstr ""
+msgstr "小さいストロークを削除"
 
 #: inx/inkstitch_cleanup.inx:10
 msgid "Removes small strokes shorter than defined by threshold."
@@ -2443,7 +2443,7 @@ msgstr "サテンをストロークに変換"
 
 #: inx/inkstitch_convert_to_stroke.inx:8
 msgid "Keep satin column"
-msgstr ""
+msgstr "サテン列を保持"
 
 #: inx/inkstitch_convert_to_stroke.inx:8
 msgid "Do not delete original satin column."
@@ -2507,7 +2507,7 @@ msgstr "ファイル選択"
 
 #: inx/inkstitch_import_threadlist.inx:7
 msgid "Choose method"
-msgstr ""
+msgstr "メソッド選択"
 
 #: inx/inkstitch_import_threadlist.inx:8
 msgid "Import Ink/Stitch threadlist"
@@ -2519,7 +2519,7 @@ msgstr "他のスレッドリストのインポート*"
 
 #: inx/inkstitch_import_threadlist.inx:11
 msgid "*Choose color palette"
-msgstr ""
+msgstr "*カラーパレットを選択"
 
 #: inx/inkstitch_import_threadlist.inx:87 inx/inkstitch_install.inx:10
 #: inx/inkstitch_install_custom_palette.inx:13
@@ -2532,7 +2532,7 @@ msgstr "100個のファイルをインプット"
 
 #: inx/inkstitch_input_100.inx:8
 msgid "Ink/Stitch: Toyota Embroidery Format (.100)"
-msgstr "インク／ステッチ トヨタエンブロイダリーフォーマット (.100)"
+msgstr "Ink/Stitch:トヨタエンブロイダリーフォーマット (.100)"
 
 #: inx/inkstitch_input_100.inx:9
 msgid "convert 100 file to Ink/Stitch manual-stitch paths"
@@ -2608,7 +2608,7 @@ msgstr "Ink/Stitch: ZSK USA刺繍フォーマット(.dsz)"
 
 #: inx/inkstitch_input_DSZ.inx:9
 msgid "convert DSZ file to Ink/Stitch manual-stitch paths"
-msgstr "DSZファイルをインクステッチのマニュアルステッチパスに変換"
+msgstr "DSZファイルをInk/Stitchマニュアルパスに変換する"
 
 #: inx/inkstitch_input_EMD.inx:3
 msgid "EMD file input"
@@ -2620,35 +2620,35 @@ msgstr "Ink/Stitch: エルナ刺繍フォーマット(.emd)"
 
 #: inx/inkstitch_input_EMD.inx:9
 msgid "convert EMD file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "EDMファイルをInk/Stitchマニュアルパスに変換する"
 
 #: inx/inkstitch_input_EXP.inx:3
 msgid "EXP file input"
-msgstr ""
+msgstr "EXPファイルのインプット"
 
 #: inx/inkstitch_input_EXP.inx:8 inx/inkstitch_output_EXP.inx:8
 msgid "Ink/Stitch: Melco Embroidery Format (.exp)"
-msgstr ""
+msgstr "Ink/Stitch:Melco 刺繍フォーマット (.exp)"
 
 #: inx/inkstitch_input_EXP.inx:9
 msgid "convert EXP file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "EXPファイルをInk/Stitchマニュアルパスに変換する"
 
 #: inx/inkstitch_input_EXY.inx:3
 msgid "EXY file input"
-msgstr ""
+msgstr "EXYファイルのインプット"
 
 #: inx/inkstitch_input_EXY.inx:8
 msgid "Ink/Stitch: Eltac Embroidery Format (.exy)"
-msgstr ""
+msgstr "Ink/Stitch: Eltac 刺繍フォーマット (.exy)"
 
 #: inx/inkstitch_input_EXY.inx:9
 msgid "convert EXY file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "EXYファイルをInk/Stitchマニュアルパスに変換する"
 
 #: inx/inkstitch_input_FXY.inx:3
 msgid "FXY file input"
-msgstr ""
+msgstr "FXYファイルのインプット"
 
 #: inx/inkstitch_input_FXY.inx:8
 msgid "Ink/Stitch: Fortron Embroidery Format (.fxy)"
