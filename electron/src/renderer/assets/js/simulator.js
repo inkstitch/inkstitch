@@ -297,7 +297,11 @@ export default {
       while (this.renderedStitch < this.currentStitch) {
         this.renderedStitch += 1
         if (!this.renderJumps && this.stitches[this.renderedStitch].jump){
-          this.stitchPaths[this.renderedStitch].hide();
+          if (this.showRealisticPreview) {
+              this.realisticPaths[this.renderedStitch].hide();
+          } else {
+              this.stitchPaths[this.renderedStitch].hide();
+          }
           continue;
         }
         if (this.showRealisticPreview) {
