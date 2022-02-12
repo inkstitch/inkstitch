@@ -84,7 +84,7 @@ class CutworkSegmentation(InkstitchExtension):
     def _in_sector(self, angle, sector):
         stop = sector['end'] + 1
         if sector['start'] > stop:
-            return angle in range(sector['start'], 360) or angle in range(0, stop)
+            return angle in range(sector['start'], 181) or angle in range(0, stop)
         else:
             return angle in range(sector['start'], stop)
 
@@ -120,8 +120,6 @@ class CutworkSegmentation(InkstitchExtension):
                     # add last point
                     self.sectors[current['id']]['point_list'].append(prev_point)
                     self._prepare_element(self.sectors[current['id']], element)
-                    # clear point list
-                    self.sectors[current['id']].update({'point_list': []})
 
             prev_point = point
             current_sectors = sectors
@@ -144,19 +142,35 @@ class CutworkSegmentation(InkstitchExtension):
                                         "d": d
                                        })
         self.new_elements.append([stroke_element, sector['id']])
+        # clear point_list in self.sectors
+        self.sectors[sector['id']].update({'point_list': []})
 
     def _insert_elements(self, parent, element, index):
+        self.new_elements.reverse()
         if self.options.sort_by_color is True:
-            self.new_elements = sorted(self.new_elements, key=lambda x: x[1])
+            self.new_elements = sorted(self.new_elements, key=lambda x: x[1], reverse=True)
 
+        group = self._insert_group(parent, _("Cutwork Group"), "__inkstitch_cutwork_group__", index)
+
+        section = 0
+        for element, section_id in self.new_elements:
+            # if sorted by color, add a subgroup for each knife
+            if self.options.sort_by_color:
+                if section_id != section:
+                    section = section_id
+                    section_group = self._insert_group(group, _("Knife %s") % section, "__inkstitch_cutwork_knife_group__")
+            else:
+                section_group = group
+
+            section_group.insert(0, element)
+
+    def _insert_group(self, parent, label, group_id, index=0):
         group = etree.Element("g", {
-            INKSCAPE_LABEL: _("Cutwork Group"),
-            "id": self.uniqueId("__inkstitch_cutwork_group__")
+            INKSCAPE_LABEL: "%s" % label,
+            "id": self.uniqueId("%s" % group_id)
         })
         parent.insert(index, group)
-
-        for element, section_id in self.new_elements:
-            group.insert(0, element)
+        return group
 
     def _remove_originals(self):
         if self.options.keep_original:
@@ -168,4 +182,5 @@ class CutworkSegmentation(InkstitchExtension):
                 parent.remove(element.node)
 
     def path_style(self, element, color):
-        return inkex.Style(element.node.get('style', '')) + inkex.Style('stroke:%s' % color)
+        # set stroke color and make it a running stitch - they don't want to cut zigzags
+        return inkex.Style(element.node.get('style', '')) + inkex.Style('stroke:%s;stroke-dasharray:6.00000008,1.00000001;' % color)
