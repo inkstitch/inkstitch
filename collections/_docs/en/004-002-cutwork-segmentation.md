@@ -18,19 +18,20 @@ Ink/Stitch comes with a tool that will help you to split your elements according
 
 Here is a small list of common needle setups.
 
-Needle position|Angle
---|--
-<span class="cwd">&#124;</span>   | 67 - 113
-<span class="cwd">/</span>        | 22 - 68
-<span class="cwd">&#8213;</span>  | 158 - 23
-<span class="cwd">&#x5c;</span>   | 112 - 157
+Needle|Angle|Start|End
+--|--|--
+<span class="cwd">&#124;</span>   | 90°  | 67  | 113
+<span class="cwd">/</span>        | 45°  | 22  | 68
+<span class="cwd">&#8213;</span>  | 0°   | 158 | 23
+<span class="cwd">&#x5c;</span>   | 135° | 112 | 157
 
 
-Brand | 1  | 2 | 3 | 4
+Brand | #1  | #2 | #3 | #4
 --|--|--|--
-Pfaff, Husqvarna Viking, Inspira | Red <span class="cwd" style="background:red;">/</span>       | Yellow <span class="cwd" style="background: yellow">&#8213;</span>| Green <span class="cwd" style="background: green;">&#x5c;</span>   | Blue <span class="cwd" style="background: blue">&#124;</span>
-Brother, Janome                  | Red <span class="cwd" style="background: red;">&#124;</span> | Green <span class="cwd" style="background: green;">&#x5c;</span>  | Purple <span class="cwd" style="background: purple;">&#8213;</span>| Blue <span class="cwd" style="background: blue;">/</span>
-Bernina                          | <span class="cwd">&#124;</span>                              | <span class="cwd">/</span>                                        | <span class="cwd">&#8213;</span>                                   | <span class="cwd">&#x5c;</span>
+Bernina                  | <span class="cwd">&#124;</span>                                | <span class="cwd">/</span>                                        | <span class="cwd">&#8213;</span>                                   | <span class="cwd">&#x5c;</span>
+Pfaff, Husqvarna Viking, Inspira | Red <span class="cwd" style="background:red;">/</span> | Yellow <span class="cwd" style="background: yellow">&#8213;</span>| Green <span class="cwd" style="background: green;">&#x5c;</span>   | Blue <span class="cwd" style="background: blue">&#124;</span>
+Brother                  | Red <span class="cwd" style="background: red;">&#124;</span>   | Green <span class="cwd" style="background: green;">&#x5c;</span>  | Purple <span class="cwd" style="background: purple;">&#8213;</span>| Blue <span class="cwd" style="background: blue;">/</span>
+Janome                   | Red <span class="cwd" style="background: red;">&#8213;</span>  | Blue <span class="cwd" style="background: blue;">/</span>         | Black <span class="cwd" style="background: black; color: white;">&#124;</span>| Green <span class="cwd" style="background: green;">&#x5c;</span>
 
 
 Note, that sometimes it would make sense to not fully cut the hole to prevent that the machine will pull in small pieces of fabric.
