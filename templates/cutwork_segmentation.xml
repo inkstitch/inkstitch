@@ -12,30 +12,30 @@
     <param name="options" type="notebook">
       <page name="options" gui-text="Cutwork Options">
         <hbox>
-          <param name="a_description" type="description">#1 </param>
-          <param name="a_start" type="int" appearance="full" gui-text="start" precision="1" min="0" max="180">112</param>
-          <param name="a_end" type="int" appearance="full" gui-text="end" precision="1" min="0" max="180">157</param>
+          <label>#1</label><spacer />
+          <param name="a_start" type="int" appearance="full" gui-text="start" precision="1" min="0" max="180">112</param><spacer />
+          <param name="a_end" type="int" appearance="full" gui-text="end" precision="1" min="0" max="180">157</param><spacer />
           <param name="a_color" type="color" gui-text="color" appearance="colorbutton">0x990000ff</param>
         </hbox>
         <hbox>
-          <param name="b_description" type="description">#2 </param>
-          <param name="b_start" type="int" appearance="full" gui-text="start" precision="1" min="0" max="180">158</param>
-          <param name="b_end" type="int" appearance="full" gui-text="end" precision="1" min="0" max="180">23</param>
+          <label>#2 </label><spacer />
+          <param name="b_start" type="int" appearance="full" gui-text="start" precision="1" min="0" max="180">158</param><spacer />
+          <param name="b_end" type="int" appearance="full" gui-text="end" precision="1" min="0" max="180">23</param><spacer />
           <param name="b_color" type="color" gui-text="color" appearance="colorbutton">0xe5a50aff</param>
         </hbox>
         <hbox>
-          <param name="c_description" type="description">#3 </param>
-          <param name="c_start" type="int" appearance="full" gui-text="start" precision="1" min="0" max="180">22</param>
-          <param name="c_end" type="int" appearance="full" gui-text="end" precision="1" min="0" max="180">68</param>
+          <label>#3 </label><spacer />
+          <param name="c_start" type="int" appearance="full" gui-text="start" precision="1" min="0" max="180">22</param><spacer />
+          <param name="c_end" type="int" appearance="full" gui-text="end" precision="1" min="0" max="180">68</param><spacer />
           <param name="c_color" type="color" gui-text="color" appearance="colorbutton">0x009900ff</param>
         </hbox>
         <hbox>
-          <param name="d_description" type="description">#4 </param>
-          <param name="d_start" type="int" appearance="full" gui-text="start" precision="1" min="0" max="180">67</param>
-          <param name="d_end" type="int" appearance="full" gui-text="end" precision="1" min="0" max="180">113</param>
+          <label>#4 </label><spacer />
+          <param name="d_start" type="int" appearance="full" gui-text="start" precision="1" min="0" max="180">67</param><spacer />
+          <param name="d_end" type="int" appearance="full" gui-text="end" precision="1" min="0" max="180">113</param><spacer />
           <param name="d_color" type="color" gui-text="color" appearance="colorbutton">0x000099ff</param>
         </hbox>
-        <separator />
+        <spacer />
         <param name="sort_by_color" type="boolean" gui-text="Sort elements by color">true</param>
         <param name="keep_original" type="boolean" gui-text="Keep original">false</param>
       </page>
