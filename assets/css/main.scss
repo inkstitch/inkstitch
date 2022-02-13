@@ -480,3 +480,14 @@ table.inline-table {
 /* Machine Database */
 
 .machine-fileformat:hover { background: #ccc; }
+
+/* Cutwork */
+.cwd {
+    background: lightgray;
+    border: 1px solid gray;
+    border-radius: 20px;
+    display: block;
+    width: 2em;
+    height: 2em;
+    text-align: center;
+}

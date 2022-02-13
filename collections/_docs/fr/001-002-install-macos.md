@@ -13,10 +13,6 @@ Nous fournissons aussi aux débutants des tutoriels vidéo sur notre <i class="f
 * <i class="fab fa-apple"></i> [macOS](https://www.youtube.com/watch?v=gmOVLNh9cu8&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=3)
 {% endcomment %}
 
-## Prérequis
-
-Ink/Stitch est une extension pour Inkscape. Téléchargez et installez  [Inkscape](https://inkscape.org/release/) Version 1.0.2 ou supérieure avant d'installer Ink/Stitch.
-
 ## Télécharger
 Téléchargez la dernière version d'Ink/Stitch pour votre version de macOS :
 
@@ -26,6 +22,10 @@ Téléchargez la dernière version d'Ink/Stitch pour votre version de macOS :
 **Dernière version:** [Ink/Stitch {{ site.github.latest_release.tag_name }} ({{ site.github.latest_release.published_at | date: "%Y-%m-%d" }})](https://github.com/inkstitch/inkstitch/releases/latest)
 
 ## Installation
+
+**Important:** Ink/Stitch est une extension pour Inkscape. Téléchargez et installez  [Inkscape](https://inkscape.org/release/) Version 1.0.2 ou supérieure avant d'installer Ink/Stitch.
+Make sure, that you have **installed and run Inkscape** before installing Ink/Stitch. Otherwise the installation will fail.
+{: .notice--warning}
 
 **Mojave - Monterey:** Lancez l'installateur en cliquant sur le fichier que vous avez téléchargé.
 

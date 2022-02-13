@@ -12,15 +12,7 @@ toc: true
 **Внимание:** Видео для пользователей macOS уже устарело. Прочтите актуальную информацию в разделе ["Дополнительные шаги для Catalina и Big Sur"](#дополнительные-шаги-для-catalina-и-big-sur)
 {: .notice--warning }
 
-## Требования
-
-* [Inkscape](https://inkscape.org/release/) Версия 1.0.2 или выше
-
-Это все что вам нужно. Все необходимые библиотеки и внешние зависимости поставляются вместе с расширением, благодаря прекрасной утилите [pyinstaller](http://www.pyinstaller.org).
-
-## Установка
-
-### Скачать
+## Скачать
 
 Download the latest release for your macOS version.
 
@@ -29,7 +21,11 @@ Download the latest release for your macOS version.
 
 **Последняя версия:**  [Ink/Stitch {{ site.github.latest_release.tag_name }} ({{ site.github.latest_release.published_at | date: "%Y-%m-%d"  }})](https://github.com/inkstitch/inkstitch/releases/latest)
 
-### Запуск Ink/Stitch
+## Запуск Ink/Stitch
+
+**Important:** Ink/Stitch is an Inkscape extension. Download and install [Inkscape](https://inkscape.org/release/) Версия 1.0.2 или выше before you install Ink/Stitch.
+Make sure, that you have **installed and run Inkscape** before installing Ink/Stitch. Otherwise the installation will fail.
+{: .notice--warning}
 
 **Mojave - Monterey:** Click on the downloaded file to run the installer.
 

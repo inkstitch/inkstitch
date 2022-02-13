@@ -2,7 +2,7 @@
 title: "Installation von Ink/Stitch für macOS"
 permalink: /de/docs/install-macos/
 excerpt: "Wie wird Ink/Stitch installiert."
-last_modified_at: 2021-11-28
+last_modified_at: 2022-02-13
 toc: true
 ---
 {% comment %}
@@ -13,10 +13,6 @@ Wir stellen Anfänger-Tutorials auf unserem <i class="fab fa-youtube"></i> [YouT
 Schaue den Installationsprozess für <i class="fab fa-apple"></i> [macOS](https://www.youtube.com/watch?v=gmOVLNh9cu8&list=PLvlbfDmZyXG1ORmeqHdp4aP7J71e7icJP&index=3) an.
 {% endcomment %}
 
-## Vorraussetzung
-
-Ink/Stitch ist eine Inkscape Erweiterung. Installiere [Inkscape](https://inkscape.org/release/) Version 1.0.2 oder höher, bevor du Ink/Stitch installierst.
-
 ## Herunterladen
 Lade die aktuelle Version für dein macOS System herunter.
 
@@ -26,6 +22,10 @@ Lade die aktuelle Version für dein macOS System herunter.
 **Aktuelle Version:** [Ink/Stitch {{ site.github.latest_release.tag_name }} ({{ site.github.latest_release.published_at | date: "%Y-%m-%d"  }})](https://github.com/inkstitch/inkstitch/releases/latest)
 
 ## Installation
+
+**Wichtig:** Ink/Stitch ist eine Inkscape Erweiterung. Installiere [Inkscape](https://inkscape.org/release/) Version 1.0.2 oder höher, bevor du Ink/Stitch installierst.
+Vor der Ink/Stitch Installation muss **Inkscape installiert und geöffnet** worden sein, sonst schlägt die Installation fehl.
+{: .notice--warning}
 
 **Mojave - Monterey:** Öffne die heruntergeladene Datei mit Klick.
 
