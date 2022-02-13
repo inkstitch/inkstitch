@@ -33,8 +33,8 @@ It is also possible to **zoom** and **pan** the simulation with the mouse.
 
 ## Stitch Plan Preview
 
-Run `Extensions > Ink/Stitch > Visualize and Export > Stitch Plan Preview...`. This will insert the stitch plan directly into your document.
-You can inspect it from there and delete it with `Ctrl+Z` afterwards.
+Run `Extensions > Ink/Stitch > Visualize and Export > Stitch Plan Preview...`.
+Instead of apllying the stitch plan, you can also use the `Live preview` option. Then you don't need to undo your changes afterwards.
 
 You have the following display options:
 * **Move stitch plan beside the canvas** Displays the preview on the right side of the canvas. If not enabled, the stitch plan will be placed on top of your design. In that case you may want to update your design visibility to eather hidden or lower opacity.
