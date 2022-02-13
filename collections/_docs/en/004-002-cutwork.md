@@ -30,8 +30,8 @@ Brand | #1  | #2 | #3 | #4
 --|--|--|--
 Bernina                  | <span class="cwd">&#124;</span>                                | <span class="cwd">/</span>                                        | <span class="cwd">&#8213;</span>                                   | <span class="cwd">&#x5c;</span>
 Pfaff, Husqvarna Viking, Inspira | Red <span class="cwd" style="background:red;">/</span> | Yellow <span class="cwd" style="background: yellow">&#8213;</span>| Green <span class="cwd" style="background: green;">&#x5c;</span>   | Blue <span class="cwd" style="background: blue">&#124;</span>
-Brother                  | Red <span class="cwd" style="background: red;">&#124;</span>   | Green <span class="cwd" style="background: green;">&#x5c;</span>  | Purple <span class="cwd" style="background: purple;">&#8213;</span>| Blue <span class="cwd" style="background: blue;">/</span>
-Janome                   | Red <span class="cwd" style="background: red;">&#8213;</span>  | Blue <span class="cwd" style="background: blue;">/</span>         | Black <span class="cwd" style="background: black; color: white;">&#124;</span>| Green <span class="cwd" style="background: green;">&#x5c;</span>
+Brother, Babylock        | Blue <span class="cwd" style="background: blue;">/</span>      | Purple <span class="cwd" style="background: purple;">&#8213;</span>| Green <span class="cwd" style="background: green;">&#x5c;</span>  | Orange <span class="cwd" style="background: #ff6000;">&#124;</span>
+Janome                   | Red <span class="cwd" style="background: #ff3f7e;">&#8213;</span>  | Blue <span class="cwd" style="background: #00abff;">/</span>          | Black <span class="cwd" style="background: #413f57; color: white;">&#124;</span>| Green <span class="cwd" style="background: green;">&#x5c;</span>
 
 
 Note, that sometimes it would make sense to not fully cut the hole to prevent that the machine will pull in small pieces of fabric.
