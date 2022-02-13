@@ -9,44 +9,47 @@
             <submenu name="Ink/Stitch" translatable="no" />
         </effects-menu>
     </effect>
-    <param name="description" type="description">
-        This extension separates a path depending on the angle.
+    <param name="options" type="notebook">
+      <page name="options" gui-text="Cutwork Options">
+        <hbox>
+          <param name="a_description" type="description">#1 </param>
+          <param name="a_start" type="int" appearance="full" gui-text="start" precision="1" min="0" max="180">112</param>
+          <param name="a_end" type="int" appearance="full" gui-text="end" precision="1" min="0" max="180">157</param>
+          <param name="a_color" type="color" gui-text="color" appearance="colorbutton">0x990000ff</param>
+        </hbox>
+        <hbox>
+          <param name="b_description" type="description">#2 </param>
+          <param name="b_start" type="int" appearance="full" gui-text="start" precision="1" min="0" max="180">158</param>
+          <param name="b_end" type="int" appearance="full" gui-text="end" precision="1" min="0" max="180">23</param>
+          <param name="b_color" type="color" gui-text="color" appearance="colorbutton">0xe5a50aff</param>
+        </hbox>
+        <hbox>
+          <param name="c_description" type="description">#3 </param>
+          <param name="c_start" type="int" appearance="full" gui-text="start" precision="1" min="0" max="180">22</param>
+          <param name="c_end" type="int" appearance="full" gui-text="end" precision="1" min="0" max="180">68</param>
+          <param name="c_color" type="color" gui-text="color" appearance="colorbutton">0x009900ff</param>
+        </hbox>
+        <hbox>
+          <param name="d_description" type="description">#4 </param>
+          <param name="d_start" type="int" appearance="full" gui-text="start" precision="1" min="0" max="180">67</param>
+          <param name="d_end" type="int" appearance="full" gui-text="end" precision="1" min="0" max="180">113</param>
+          <param name="d_color" type="color" gui-text="color" appearance="colorbutton">0x000099ff</param>
+        </hbox>
+        <separator />
+        <param name="sort_by_color" type="boolean" gui-text="Sort elements by color">true</param>
+        <param name="keep_original" type="boolean" gui-text="Keep original">false</param>
+      </page>
+      <page name="info" gui-text="Help">
+        <label appearance="header">This extension separates a path depending on the angle.</label>
+        <label>* If you don't want to use 4 needles, set both angle values to 0 for the rest of the rows.</label>
+        <label>* A horizontal line has an angle of 0 degrees.</label>
+        <label>* After the conversion through this extension, don't rotate your design again.</label>
+        <separator />
+        <label appearance="header">Please adjust angle and color options to your specific needle kit.</label>
+        <label>On our website we have collected some common setups.</label>
+        <label appearance="url">https://inkstitch.org/docs/cutwork/</label>
+      </page>
     </param>
-    <separator />
-    <param name="angle_calculation" type="description">
-        A horizontal line has an angle of 0 degrees.
-    </param>
-    <param name="angle_calculation" type="description">
-        If you don't want to use 4 needles, set both angle values to 0 for the rest of the rows.
-    </param>
-    <separator />
-    <hbox>
-      <param name="a_description" type="description">1.</param>
-      <param name="a_start" type="int" appearance="full" gui-text="start" precision="1" min="0" max="180">158</param>
-      <param name="a_end" type="int" appearance="full" gui-text="end" precision="1" min="0" max="180">23</param>
-      <param name="a_color" type="color" gui-text="color" appearance="colorbutton">0x990000ff</param>
-    </hbox>
-    <hbox>
-      <param name="a_description" type="description">2.</param>
-      <param name="b_start" type="int" appearance="full" gui-text="start" precision="1" min="0" max="180">22</param>
-      <param name="b_end" type="int" appearance="full" gui-text="end" precision="1" min="0" max="180">68</param>
-      <param name="b_color" type="color" gui-text="color" appearance="colorbutton">0x009900ff</param>
-    </hbox>
-    <hbox>
-      <param name="a_description" type="description">3.</param>
-      <param name="c_start" type="int" appearance="full" gui-text="start" precision="1" min="0" max="180">67</param>
-      <param name="c_end" type="int" appearance="full" gui-text="end" precision="1" min="0" max="180">113</param>
-      <param name="c_color" type="color" gui-text="color" appearance="colorbutton">0x000099ff</param>
-    </hbox>
-    <hbox>
-      <param name="a_description" type="description">4.</param>
-      <param name="d_start" type="int" appearance="full" gui-text="start" precision="1" min="0" max="180">112</param>
-      <param name="d_end" type="int" appearance="full" gui-text="end" precision="1" min="0" max="180">157</param>
-      <param name="d_color" type="color" gui-text="color" appearance="colorbutton">0xe5a50aff</param>
-    </hbox>
-    <separator />
-    <param name="sort_by_color" type="boolean" gui-text="Sort elements by color">true</param>
-    <param name="keep_original" type="boolean" gui-text="Keep original">false</param>
     <script>
         {{ command_tag | safe }}
     </script>

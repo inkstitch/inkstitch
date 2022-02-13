@@ -24,6 +24,8 @@ class CutworkSegmentation(InkstitchExtension):
     '''
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
+        self.arg_parser.add_argument("-o", "--options", type=str, default=None, dest="page_1")
+        self.arg_parser.add_argument("-i", "--info", type=str, default=None, dest="page_2")
         self.arg_parser.add_argument("-as", "--a_start", type=int, default=0, dest="a_start")
         self.arg_parser.add_argument("-ae", "--a_end", type=int, default=0, dest="a_end")
         self.arg_parser.add_argument("-ac", "--a_color", type=inkex.Color, default=inkex.Color(0x808080FF), dest="a_color")
@@ -158,7 +160,7 @@ class CutworkSegmentation(InkstitchExtension):
             if self.options.sort_by_color:
                 if section_id != section:
                     section = section_id
-                    section_group = self._insert_group(group, _("Knife %s") % section, "__inkstitch_cutwork_knife_group__")
+                    section_group = self._insert_group(group, _("Needle #%s") % section, "__inkstitch_cutwork_needle_group__")
             else:
                 section_group = group
 
@@ -183,4 +185,4 @@ class CutworkSegmentation(InkstitchExtension):
 
     def path_style(self, element, color):
         # set stroke color and make it a running stitch - they don't want to cut zigzags
-        return inkex.Style(element.node.get('style', '')) + inkex.Style('stroke:%s;stroke-dasharray:6.00000008,1.00000001;' % color)
+        return inkex.Style(element.node.get('style', '')) + inkex.Style('stroke:%s;stroke-dasharray:6,1;' % color)
