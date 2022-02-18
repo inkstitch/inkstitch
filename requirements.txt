@@ -22,7 +22,7 @@ fonttools
 anytree
 depq
 trimesh
-scipy
+scipy==1.7.3
 
 pywinutils; sys.platform == 'win32'
 pywin32; sys.platform == 'win32'
