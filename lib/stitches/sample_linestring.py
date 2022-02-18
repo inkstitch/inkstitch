@@ -1,11 +1,11 @@
-from shapely.geometry.polygon import LineString
-from shapely.geometry import Point
-from shapely.ops import substring
 import math
-import numpy as np
 from enum import IntEnum
-from ..stitches import constants
-from ..stitches import point_transfer
+
+import numpy as np
+from shapely.geometry import LineString, Point
+from shapely.ops import substring
+
+from ..stitches import constants, point_transfer
 
 
 class PointSource(IntEnum):

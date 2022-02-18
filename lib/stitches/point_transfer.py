@@ -1,10 +1,10 @@
-from shapely.geometry import Point, MultiPoint
-from shapely.geometry.polygon import LineString, LinearRing
-from collections import namedtuple
-from shapely.ops import nearest_points
 import math
-from ..stitches import constants
-from ..stitches import sample_linestring
+from collections import namedtuple
+
+from shapely.geometry import LinearRing, LineString, MultiPoint, Point
+from shapely.ops import nearest_points
+
+from ..stitches import constants, sample_linestring
 
 """This file contains routines which shall project already selected points for stitching to remaining
 unstitched lines in the neighborhood to create a regular pattern of points."""

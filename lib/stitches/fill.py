@@ -6,8 +6,8 @@
 import math
 
 import shapely
-from shapely.geometry.linestring import LineString
-from shapely.ops import linemerge, unary_union
+
+from ..stitch_plan import Stitch
 from ..svg import PIXELS_PER_MM
 from ..utils import Point as InkstitchPoint
 from ..utils import cache
@@ -92,119 +92,6 @@ def stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, stagge
 
     if (end - stitches[-1]).length() > 0.1 * PIXELS_PER_MM and not skip_last:
         stitches.append(end)
-
-
-def extend_line(line, minx, maxx, miny, maxy):
-    line = line.simplify(0.01, False)
-
-    upper_left = InkstitchPoint(minx, miny)
-    lower_right = InkstitchPoint(maxx, maxy)
-    length = (upper_left - lower_right).length()
-
-    point1 = InkstitchPoint(*line.coords[0])
-    point2 = InkstitchPoint(*line.coords[1])
-    new_starting_point = point1-(point2-point1).unit()*length
-
-    point3 = InkstitchPoint(*line.coords[-2])
-    point4 = InkstitchPoint(*line.coords[-1])
-    new_ending_point = point4+(point4-point3).unit()*length
-
-    return LineString([new_starting_point.as_tuple()] +
-                      line.coords[1:-1]+[new_ending_point.as_tuple()])
-
-
-def repair_multiple_parallel_offset_curves(multi_line):
-    lines = linemerge(multi_line)
-    lines = list(multi_line.geoms)
-    max_length = -1
-    max_length_idx = -1
-    for idx, subline in enumerate(lines):
-        if subline.length > max_length:
-            max_length = subline.length
-            max_length_idx = idx
-    # need simplify to avoid doubled points caused by linemerge
-    return lines[max_length_idx].simplify(0.01, False)
-
-
-def repair_non_simple_lines(line):
-    repaired = unary_union(line)
-    counter = 0
-    # Do several iterations since we might have several concatenated selfcrossings
-    while repaired.geom_type != 'LineString' and counter < 4:
-        line_segments = []
-        for line_seg in repaired.geoms:
-            if not line_seg.is_ring:
-                line_segments.append(line_seg)
-
-        repaired = unary_union(linemerge(line_segments))
-        counter += 1
-    if repaired.geom_type != 'LineString':
-        raise ValueError(
-            "Guide line (or offsetted instance) is self crossing!")
-    else:
-        return repaired
-
-
-def intersect_region_with_grating_line(shape, line, row_spacing, end_row_spacing=None, flip=False):  # noqa: C901
-
-    row_spacing = abs(row_spacing)
-    (minx, miny, maxx, maxy) = shape.bounds
-    upper_left = InkstitchPoint(minx, miny)
-    rows = []
-
-    if line.geom_type != 'LineString' or not line.is_simple:
-        line = repair_non_simple_lines(line)
-    # extend the line towards the ends to increase probability that all offsetted curves cross the shape
-    line = extend_line(line, minx, maxx, miny, maxy)
-
-    line_offsetted = line
-    res = line_offsetted.intersection(shape)
-    while isinstance(res, (shapely.geometry.GeometryCollection, shapely.geometry.MultiLineString)) or (not res.is_empty and len(res.coords) > 1):
-        if isinstance(res, (shapely.geometry.GeometryCollection, shapely.geometry.MultiLineString)):
-            runs = [line_string.coords for line_string in res.geoms if (
-                not line_string.is_empty and len(line_string.coords) > 1)]
-        else:
-            runs = [res.coords]
-
-        runs.sort(key=lambda seg: (
-            InkstitchPoint(*seg[0]) - upper_left).length())
-        if flip:
-            runs.reverse()
-            runs = [tuple(reversed(run)) for run in runs]
-
-        if row_spacing > 0:
-            rows.append(runs)
-        else:
-            rows.insert(0, runs)
-
-        line_offsetted = line_offsetted.parallel_offset(row_spacing, 'left', 5)
-        if line_offsetted.geom_type == 'MultiLineString':  # if we got multiple lines take the longest
-            line_offsetted = repair_multiple_parallel_offset_curves(
-                line_offsetted)
-        if not line_offsetted.is_simple:
-            line_offsetted = repair_non_simple_lines(line_offsetted)
-
-        if row_spacing < 0:
-            line_offsetted.coords = line_offsetted.coords[::-1]
-        line_offsetted = line_offsetted.simplify(0.01, False)
-        res = line_offsetted.intersection(shape)
-        if row_spacing > 0 and not isinstance(res, (shapely.geometry.GeometryCollection, shapely.geometry.MultiLineString)):
-            if (res.is_empty or len(res.coords) == 1):
-                row_spacing = -row_spacing
-
-                line_offsetted = line.parallel_offset(row_spacing, 'left', 5)
-                if line_offsetted.geom_type == 'MultiLineString':  # if we got multiple lines take the longest
-                    line_offsetted = repair_multiple_parallel_offset_curves(
-                        line_offsetted)
-                if not line_offsetted.is_simple:
-                    line_offsetted = repair_non_simple_lines(line_offsetted)
-                # using negative row spacing leads as a side effect to reversed offsetted lines - here we undo this
-                line_offsetted.coords = line_offsetted.coords[::-1]
-                line_offsetted = line_offsetted.simplify(0.01, False)
-                res = line_offsetted.intersection(shape)
-
-
-    return rows
 
 
 def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing=None, flip=False):

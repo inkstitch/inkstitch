@@ -15,7 +15,7 @@ from shapely.validation import explain_validity
 from ..i18n import _
 from ..marker import get_marker_elements
 from ..stitch_plan import StitchGroup
-from ..stitches import tangential_fill_stitch_line_creator, auto_fill, legacy_fill
+from ..stitches import tangential_fill_stitch_line_creator, auto_fill, legacy_fill, guided_fill
 from ..svg import PIXELS_PER_MM
 from ..svg.tags import INKSCAPE_LABEL
 from ..utils import Point as InkstitchPoint
@@ -45,7 +45,7 @@ class UnderlayInsetWarning(ValidationWarning):
 
 class MissingGuideLineWarning(ValidationWarning):
     name = _("Missing Guideline")
-    description = _('This object is set to "Guided AutoFill", but has no guide line.')
+    description = _('This object is set to "Guided Fill", but has no guide line.')
     steps_to_solve = [
         _('* Create a stroke object'),
         _('* Select this object and run Extensions > Ink/Stitch > Edit > Selection to guide line')
@@ -97,7 +97,7 @@ class FillStitch(EmbroideryElement):
 
     @property
     @param('fill_method', _('Fill method'), type='dropdown', default=0,
-           options=[_("Auto Fill"), _("Tangential"), _("Guided Auto Fill"), _("Legacy Fill")], sort_index=2)
+           options=[_("Auto Fill"), _("Tangential"), _("Guided Fill"), _("Legacy Fill")], sort_index=2)
     def fill_method(self):
         return self.get_int_param('fill_method', 0)
 
@@ -514,7 +514,6 @@ class FillStitch(EmbroideryElement):
                 tags=("auto_fill", "auto_fill_underlay"),
                 stitches=auto_fill(
                     self.underlay_shape,
-                    None,
                     self.fill_underlay_angle[i],
                     self.fill_underlay_row_spacing,
                     self.fill_underlay_row_spacing,
@@ -535,7 +534,6 @@ class FillStitch(EmbroideryElement):
             tags=("auto_fill", "auto_fill_top"),
             stitches=auto_fill(
                 self.fill_shape,
-                None,
                 self.angle,
                 self.row_spacing,
                 self.end_row_spacing,
@@ -580,16 +578,14 @@ class FillStitch(EmbroideryElement):
 
         stitch_group = StitchGroup(
             color=self.color,
-            tags=("auto_fill", "auto_fill_top"),
-            stitches=auto_fill(
+            tags=("guided_fill", "auto_fill_top"),
+            stitches=guided_fill(
                 self.fill_shape,
                 guide_line.geoms[0],
                 self.angle,
                 self.row_spacing,
-                self.end_row_spacing,
                 self.max_stitch_length,
                 self.running_stitch_length,
-                0,
                 self.skip_last,
                 starting_point,
                 ending_point,
