@@ -143,7 +143,7 @@ jobs:
           submodules: recursive
       - uses: actions/setup-python@v2
         with:
-          python-version: '3.9.x'
+          python-version: '3.8.x'
       - uses: actions/setup-node@v1
         with:
           node-version: '16.x'
