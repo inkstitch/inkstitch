@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-01-01 01:46+0000\n"
-"PO-Revision-Date: 2022-01-10 18:46\n"
+"POT-Creation-Date: 2022-01-26 01:53+0000\n"
+"PO-Revision-Date: 2022-02-20 01:54\n"
 "Last-Translator: \n"
 "Language-Team: Ukrainian\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-01 01:46+0000\n"
+"POT-Creation-Date: 2022-01-26 01:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -374,19 +374,19 @@ msgstr "TT Masters"
 msgid "A font suited for heavy typing :)"
 msgstr "Шрифт пасує до важкого тексту :)"
 
-#: inkstitch.py:66
+#: inkstitch.py:71
 msgid "Ink/Stitch cannot read your SVG file. This is often the case when you use a file which has been created with Adobe Illustrator."
 msgstr "Ink/Stitch не може прочитати ваш SVG файл. Така ситуація часто виникає, коли файл було створено у програмі Adobe Illustrator."
 
-#: inkstitch.py:69
+#: inkstitch.py:74
 msgid "Try to import the file into Inkscape through 'File > Import...' (Ctrl+I)"
 msgstr "Спробуйте імпортувати файл в Inkscape через меню 'Файл > Імпортувати...' (Ctrl+I)"
 
-#: inkstitch.py:80
+#: inkstitch.py:85
 msgid "Ink/Stitch experienced an unexpected error."
 msgstr "В Ink/Stitch сталася невідома помилка."
 
-#: inkstitch.py:81
+#: inkstitch.py:86
 msgid "If you'd like to help, please file an issue at https://github.com/inkstitch/inkstitch/issues and include the entire error description below:"
 msgstr "Якщо ви бажаєте допомогти, створіть повідомлення на вебсторінці https://github.com/inkstitch/inkstitch/issues та надайте повний опис помилки:"
 
@@ -1553,7 +1553,7 @@ msgid "Cannot load simulator.\n"
 msgstr "Не вдалося запустити симулятор.\n"
 "Закрийте Параметри, щоб побачити повідомлення про помилку."
 
-#: lib/lettering/font.py:161
+#: lib/lettering/font.py:162
 #, python-format
 msgid "The font '%s' has no variants."
 msgstr "Для шрифта '%s' немає варіантів."

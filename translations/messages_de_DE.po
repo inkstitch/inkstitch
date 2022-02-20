@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-01-01 01:46+0000\n"
-"PO-Revision-Date: 2022-01-10 18:45\n"
+"POT-Creation-Date: 2022-01-26 01:53+0000\n"
+"PO-Revision-Date: 2022-02-20 01:54\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-01 01:46+0000\n"
+"POT-Creation-Date: 2022-01-26 01:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -374,19 +374,19 @@ msgstr "TT Meister"
 msgid "A font suited for heavy typing :)"
 msgstr "Eine Schrift geeignete für fett geschriebenes :)"
 
-#: inkstitch.py:66
+#: inkstitch.py:71
 msgid "Ink/Stitch cannot read your SVG file. This is often the case when you use a file which has been created with Adobe Illustrator."
 msgstr "Ink/Stitch can deine SVG-Datei nicht lesen. Das passiert häufig, wenn du die Datei mit Adobe Illustrator erstellt hast."
 
-#: inkstitch.py:69
+#: inkstitch.py:74
 msgid "Try to import the file into Inkscape through 'File > Import...' (Ctrl+I)"
 msgstr "Versuche die Datei über 'Datei > Importieren...' (Strg+I) in Inkscape zu öffnen"
 
-#: inkstitch.py:80
+#: inkstitch.py:85
 msgid "Ink/Stitch experienced an unexpected error."
 msgstr "Ink/Stitch hat einen unerwarteten Fehler zurückgegeben."
 
-#: inkstitch.py:81
+#: inkstitch.py:86
 msgid "If you'd like to help, please file an issue at https://github.com/inkstitch/inkstitch/issues and include the entire error description below:"
 msgstr "Wenn du uns bei der Fehlerbehebung helfen willst, gehe auf https://github.com/inkstitch/inkstitch/issues. Klicke auf \"New Issue\" und füge unten stehende Fehlermeldung in das Textfeld ein:"
 
@@ -1554,7 +1554,7 @@ msgid "Cannot load simulator.\n"
 msgstr "Die Stickvorschau kann nicht geladen werden.\n"
 "Für eine vollständige Fehlermeldung bitte das Parameter-Fenster schließen."
 
-#: lib/lettering/font.py:161
+#: lib/lettering/font.py:162
 #, python-format
 msgid "The font '%s' has no variants."
 msgstr "Die Schrift '%s' hat keine Varianten."

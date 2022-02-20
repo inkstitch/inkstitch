@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-01-01 01:46+0000\n"
-"PO-Revision-Date: 2022-01-10 18:45\n"
+"POT-Creation-Date: 2022-01-26 01:53+0000\n"
+"PO-Revision-Date: 2022-02-20 01:54\n"
 "Last-Translator: \n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-01 01:46+0000\n"
+"POT-Creation-Date: 2022-01-26 01:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,23 +34,23 @@ msgstr ""
 #. name of font in fonts/Brockscript
 #: inkstitch-fonts-metadata.py:2
 msgid "Brock Script"
-msgstr ""
+msgstr "Brock Script"
 
 #. description of font in fonts/Brockscript
 #: inkstitch-fonts-metadata.py:4
 msgid "Brock Script is a decorative satin column manuscript font of size approximatively 40mm. It can be enlarged up to 250%. It contains 118 glyphs, covering most western european languages needs.More decorative options are hidden in the µ glyph"
-msgstr ""
+msgstr "Brock Script はオシャレな手描き文字です.最大40mm,拡大250%まで可能.118文字収録.主に西ヨーロッパ言語に対応.'µ'の文字には多くの装飾オプションがあります"
 
 #. name of font in fonts/amitaclo
 #: inkstitch-fonts-metadata.py:6
 msgid "Amitaclo"
-msgstr ""
+msgstr "Amitaclo"
 
 #. description of font in fonts/amitaclo
 #: inkstitch-fonts-metadata.py:8
 #, python-format
 msgid "The capital M is 25.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 160%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "大文字'M'は100%スケールで幅25.3mm. 拡大縮小は80~120%まで. ジグザクの下地があります"
 
 #. name of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:10
@@ -60,7 +60,7 @@ msgstr "Apex Lake"
 #. description of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:12
 msgid "Apex Lake is a large ornate capital letters font of size approximatively 60mm. It contains 38 glyphs : A-Z,0-9,! and ?. It can be reduced down to 80% and enlarged up to 130%"
-msgstr ""
+msgstr "Apex Lakeは最大60mmの大きなオシャレな大文字フォントです.A-Z,0-9,!,? 38文字収録.拡大縮小80~130%まで可能"
 
 #. name of font in fonts/baumans_FI
 #: inkstitch-fonts-metadata.py:14
@@ -76,22 +76,22 @@ msgstr "大文字のMは100％の縮尺で22.3ミリ幅。80%～150%まで拡大
 #. name of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:18
 msgid "Cherry for inkstitch"
-msgstr ""
+msgstr "Cherry_inkstitch版"
 
 #. description of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:20
 msgid "Cherry for inkstitch is a decorative satin column font of size approximatively 40mm. It can be reduced down to 80% and enlarged up to 180%. It contains 74 glyphs."
-msgstr ""
+msgstr "Cherry_inkstitch版 は最大40mmのオシャレなフォントです. 拡大縮小80~180%まで可能. 74文字収録"
 
 #. name of font in fonts/cherryforkaalleen
 #: inkstitch-fonts-metadata.py:22
 msgid "Cherry for Kaalleen"
-msgstr ""
+msgstr "Cherry_Kaalleen版"
 
 #. description of font in fonts/cherryforkaalleen
 #: inkstitch-fonts-metadata.py:24
 msgid "Cherry for Kaalleen is a large decorative font of size approximatively 75mm. It contains 36 glyphs including the numbers and the 26 capitals  A-Z. It can be reduced down to 80% and enlarged up to 130%"
-msgstr ""
+msgstr "Cherry_Kaalleen版は最大約75mmの大型フォントです. 数字, 大文字A-Zの36文字収録. 拡大縮小80~120%まで可能"
 
 #. name of font in fonts/chopin
 #: inkstitch-fonts-metadata.py:26
@@ -133,7 +133,7 @@ msgstr "Digory Doodles Bean"
 #. description of font in fonts/digory_doodles_bean
 #: inkstitch-fonts-metadata.py:40
 msgid "All letters have mixed satin and bean stitch; The capital M is 16mm tall. The small x is 7 mm"
-msgstr ""
+msgstr "全文字はサテンステッチとビーンステッチのミックスです. 大文字 M は高さ16mm, 小文字 x は7mm"
 
 #. name of font in fonts/emilio_20
 #: inkstitch-fonts-metadata.py:42
@@ -144,17 +144,17 @@ msgstr "Emilio 20"
 #: inkstitch-fonts-metadata.py:44
 #, python-format
 msgid "Emilio 20 is a font with capital only and numbers. M is 48.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 140%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Emilio 20 は大文字と数字のみのフォントです. M は100%表示で幅48.5mm. 拡大縮小70~140%まで可能. すべてのサテンにはジグザクの下縫いがあります"
 
 #. name of font in fonts/emilio_20_tricolore
 #: inkstitch-fonts-metadata.py:46
 msgid "EMILIO 20 TRICOLORE"
-msgstr ""
+msgstr "EMILIO 20 トリコロール"
 
 #. description of font in fonts/emilio_20_tricolore
 #: inkstitch-fonts-metadata.py:48
 msgid "Emilio 20 tricolore is a large tricolor fill stitches and satin columns font of  size approximately 100mm. It contains 36 glyphs including the numbers and the 26 capitals  A-Z. It can be reduced down to 90% and enlarged up to 120%"
-msgstr ""
+msgstr "Emilio 20 トリコロールは最大100mmの大きなトリコロールのフィルステッチとサテンステッチです. 数字, A-Zの26文字の計36文字収録."
 
 #. name of font in fonts/espresso_KOR
 #: inkstitch-fonts-metadata.py:50
@@ -174,7 +174,7 @@ msgstr ""
 #. description of font in fonts/excalibur_KOR
 #: inkstitch-fonts-metadata.py:56
 msgid "Excalibur KOR is a small satin column manuscript font of size approximatively 20mm. It can be reduced down to 80% and enlarged up to 140%. It contains 144 glyphs, covering most western European languages needs."
-msgstr ""
+msgstr "Excalibur KORは最大20mmの小さな刺繍フォントです. 拡大縮小80~140％まで可能. 西ヨーロッパ言語に適した144文字収録."
 
 #. name of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:58
@@ -184,7 +184,7 @@ msgstr ""
 #. description of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:60
 msgid "Fold Ink/Stitch is a large triple and quintuple running stitches capital font of size 100 mm. It contains 40 glyphs including all numbers and the 26 capitals  A-Z. It can be reduced down to 80% and enlarged up to 200%"
-msgstr ""
+msgstr "Fold Ink/Stitchは大文字のサイズ100mmで3,4文字に適しています. 数字, A-Z26文字を含む計40文字収録. 拡大縮小80~200%&まで可能"
 
 #. name of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:62
@@ -214,7 +214,7 @@ msgstr ""
 #. description of font in fonts/infinipicto
 #: inkstitch-fonts-metadata.py:72
 msgid "InfiniPicto is a fun font of size approximatively 60 mm containing only the 26 A-Z glyph. Each letter is a pictogram of an object whose name begins with that very letter..... in French"
-msgstr ""
+msgstr "InfiniPictoはA-Zの26文字のみ, 約60mmの楽しげなフォントです. 各文字はフランス語のピクトグラムになっています"
 
 #. name of font in fonts/kaushan_script_MAM
 #: inkstitch-fonts-metadata.py:74
@@ -235,7 +235,7 @@ msgstr "Learning curve"
 #. description of font in fonts/learning_curve
 #: inkstitch-fonts-metadata.py:80
 msgid "Small running stitch script font of size approximatively 12 mm.It can be reduced down to 90% and enlarged up to 200%"
-msgstr ""
+msgstr "最大約12mmの小さいフォントです,拡大縮小90%~200%まで可能"
 
 #. name of font in fonts/lobster_AGS
 #: inkstitch-fonts-metadata.py:82
@@ -246,7 +246,7 @@ msgstr ""
 #: inkstitch-fonts-metadata.py:84
 #, python-format
 msgid " The capital M is 19.8 millimeter wide at 100% scale. Can be scaled down to 80% or up to 150%. Every satin has zigzag underlay"
-msgstr ""
+msgstr " 大文字'M'は100%表示で幅19.8mm. 拡大縮小80~150%まで可能. すべての刺繍はジグザクの下縫いがあります"
 
 #. name of font in fonts/magnolia_ KOR
 #: inkstitch-fonts-metadata.py:86
@@ -256,7 +256,7 @@ msgstr ""
 #. description of font in fonts/magnolia_ KOR
 #: inkstitch-fonts-metadata.py:88
 msgid "Magnolia KOR is a script font of size approximatively 20mm. It can be scaled down to 80% and up to 120%"
-msgstr ""
+msgstr "Magnolia KORは最大20mmのフォントです. 拡大縮小80~120%まで可能"
 
 #. name of font in fonts/manuskript_gotisch
 #: inkstitch-fonts-metadata.py:90
@@ -278,7 +278,7 @@ msgstr ""
 #: inkstitch-fonts-metadata.py:96
 #, python-format
 msgid "MarcellusSC-FI is a small capital font of size 36 mm. It contains 107 glyphs covering most Western European languages. It can be reduced down to 70% and enlarged up to 200% or 500% using satin split"
-msgstr ""
+msgstr "MarcellusSC-FIは36mmの小さい大文字です. 西ヨーロッパ言語に対応した107文字収録. 拡大縮小70~200%[刺繍分割すれば500%] まで可能."
 
 #. name of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:98
@@ -299,7 +299,7 @@ msgstr ""
 #. description of font in fonts/namskout_AGS
 #: inkstitch-fonts-metadata.py:104
 msgid "Namskout  is a large applique font of size approximatively 90mm. It contains 43 glyphs including all numbers and the 26 capitals  A-Z.  It can be reduced down to 50% and enlarged up to 150%  "
-msgstr ""
+msgstr "Namskoutは最大サイズ90mm, アップリケ風のフォントです. 数字, 英語26文字など計43文字収録. 拡大縮小50~150%まで可能  "
 
 #. name of font in fonts/pacificlo
 #: inkstitch-fonts-metadata.py:106
@@ -309,7 +309,7 @@ msgstr ""
 #. description of font in fonts/pacificlo
 #: inkstitch-fonts-metadata.py:108
 msgid "Pacificlo is a small satin column manuscript font of size approximatively 20mm. It can be reduced down to 80% and enlarged up to 140%. It contains 120 glyphs, covering most Western European Languages needs. "
-msgstr ""
+msgstr "Pacificloは最大20mmの小さな文字フォントです, 拡大縮小80~140%まで可能. 西ヨーロッパ言語に対応した120文字収録 "
 
 #. name of font in fonts/romanaugusa
 #: inkstitch-fonts-metadata.py:110
@@ -374,19 +374,19 @@ msgstr "TT Masters"
 msgid "A font suited for heavy typing :)"
 msgstr "ヘビータイピングに適したフォント:)"
 
-#: inkstitch.py:66
+#: inkstitch.py:71
 msgid "Ink/Stitch cannot read your SVG file. This is often the case when you use a file which has been created with Adobe Illustrator."
 msgstr "インク/ステッチはこのSVGファイルを読み取りできません。これは、AdobeIllustratorで作成されたファイルを使用する場合によくあります。"
 
-#: inkstitch.py:69
+#: inkstitch.py:74
 msgid "Try to import the file into Inkscape through 'File > Import...' (Ctrl+I)"
 msgstr "「ファイル>インポート...」（Ctrl + I）を使用してファイルをInkscapeにインポートして下さい"
 
-#: inkstitch.py:80
+#: inkstitch.py:85
 msgid "Ink/Stitch experienced an unexpected error."
 msgstr "インク/ステッチで予期しないエラーが発生しました。"
 
-#: inkstitch.py:81
+#: inkstitch.py:86
 msgid "If you'd like to help, please file an issue at https://github.com/inkstitch/inkstitch/issues and include the entire error description below:"
 msgstr "ヘルプが必要な場合は https://github.com/inkstitch/inkstitch/issues でエラー全体の説明を含めて問題を報告してください。"
 
@@ -1257,7 +1257,7 @@ msgstr "カスタムフォントのディレクトリを指定してください
 
 #: lib/extensions/lettering_force_lock_stitches.py:29
 msgid "The maximum value is smaller than the minimum value."
-msgstr ""
+msgstr "最大値が最小値以下になっています"
 
 #: lib/extensions/lettering_generate_json.py:41
 msgid "Please specify a font file."
@@ -1555,7 +1555,7 @@ msgid "Cannot load simulator.\n"
 "Close Params to get full error message."
 msgstr "完全なエラーメッセージを表示するには、Paramsを閉じます。"
 
-#: lib/lettering/font.py:161
+#: lib/lettering/font.py:162
 #, python-format
 msgid "The font '%s' has no variants."
 msgstr "フォント '％s'にはバリアントがありません。"
@@ -2423,7 +2423,7 @@ msgstr "塗りつぶし領域のしきい値(px²)"
 
 #: inx/inkstitch_cleanup.inx:10
 msgid "Remove Small strokes"
-msgstr ""
+msgstr "小さいストロークを削除"
 
 #: inx/inkstitch_cleanup.inx:10
 msgid "Removes small strokes shorter than defined by threshold."
@@ -2507,7 +2507,7 @@ msgstr "ファイル選択"
 
 #: inx/inkstitch_import_threadlist.inx:7
 msgid "Choose method"
-msgstr ""
+msgstr "メソッド選択"
 
 #: inx/inkstitch_import_threadlist.inx:8
 msgid "Import Ink/Stitch threadlist"
@@ -2519,7 +2519,7 @@ msgstr "他のスレッドリストのインポート*"
 
 #: inx/inkstitch_import_threadlist.inx:11
 msgid "*Choose color palette"
-msgstr ""
+msgstr "*カラーパレットを選択"
 
 #: inx/inkstitch_import_threadlist.inx:87 inx/inkstitch_install.inx:10
 #: inx/inkstitch_install_custom_palette.inx:13
@@ -2624,31 +2624,31 @@ msgstr ""
 
 #: inx/inkstitch_input_EXP.inx:3
 msgid "EXP file input"
-msgstr ""
+msgstr "EXPファイルのインプット"
 
 #: inx/inkstitch_input_EXP.inx:8 inx/inkstitch_output_EXP.inx:8
 msgid "Ink/Stitch: Melco Embroidery Format (.exp)"
-msgstr ""
+msgstr "Ink/Stitch:Melco 刺繍フォーマット (.exp)"
 
 #: inx/inkstitch_input_EXP.inx:9
 msgid "convert EXP file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "EXPファイルをInk/Stitchマニュアルパスに変換する"
 
 #: inx/inkstitch_input_EXY.inx:3
 msgid "EXY file input"
-msgstr ""
+msgstr "EXYファイルのインプット"
 
 #: inx/inkstitch_input_EXY.inx:8
 msgid "Ink/Stitch: Eltac Embroidery Format (.exy)"
-msgstr ""
+msgstr "Ink/Stitch: Eltac 刺繍フォーマット (.exy)"
 
 #: inx/inkstitch_input_EXY.inx:9
 msgid "convert EXY file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "EXYファイルをInk/Stitchマニュアルパスに変換する"
 
 #: inx/inkstitch_input_FXY.inx:3
 msgid "FXY file input"
-msgstr ""
+msgstr "FXYファイルのインプット"
 
 #: inx/inkstitch_input_FXY.inx:8
 msgid "Ink/Stitch: Fortron Embroidery Format (.fxy)"
@@ -2664,7 +2664,7 @@ msgstr ""
 
 #: inx/inkstitch_input_GT.inx:8
 msgid "Ink/Stitch: Gold Thread Embroidery Format (.gt)"
-msgstr ""
+msgstr "Ink/Stitch: Gold Thread 刺繍フォーマット (.gt)"
 
 #: inx/inkstitch_input_GT.inx:9
 msgid "convert GT file to Ink/Stitch manual-stitch paths"
@@ -2672,43 +2672,43 @@ msgstr ""
 
 #: inx/inkstitch_input_INB.inx:3
 msgid "INB file input"
-msgstr ""
+msgstr "INBファイルのインプット"
 
 #: inx/inkstitch_input_INB.inx:8
 msgid "Ink/Stitch: Inbro Embroidery Format (.inb)"
-msgstr ""
+msgstr "Ink/Stitch: Inbro 刺繍フォーマット (.inb)"
 
 #: inx/inkstitch_input_INB.inx:9
 msgid "convert INB file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "INBファイルをInk/Stitchマニュアルパスに変換する"
 
 #: inx/inkstitch_input_JEF.inx:3
 msgid "JEF file input"
-msgstr ""
+msgstr "JEFファイルのインプット"
 
 #: inx/inkstitch_input_JEF.inx:8 inx/inkstitch_output_JEF.inx:8
 msgid "Ink/Stitch: Janome Embroidery Format (.jef)"
-msgstr ""
+msgstr "Ink/Stitch: ジャノメ刺繍フォーマット (.jef)"
 
 #: inx/inkstitch_input_JEF.inx:9
 msgid "convert JEF file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "JEFファイルをInk/Stitchマニュアルパスに変換する"
 
 #: inx/inkstitch_input_JPX.inx:3
 msgid "JPX file input"
-msgstr ""
+msgstr "JPXファイルのインプット"
 
 #: inx/inkstitch_input_JPX.inx:8
 msgid "Ink/Stitch: Janome Embroidery Format (.jpx)"
-msgstr ""
+msgstr "Ink/Stitch: ジャノメ刺繡フォーマット (.jpx)"
 
 #: inx/inkstitch_input_JPX.inx:9
 msgid "convert JPX file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "JPXファイルをInk/Stitchマニュアルパスに変換する"
 
 #: inx/inkstitch_input_KSM.inx:3
 msgid "KSM file input"
-msgstr ""
+msgstr "KSMファイルのインプット"
 
 #: inx/inkstitch_input_KSM.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.ksm)"
