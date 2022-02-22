@@ -147,7 +147,7 @@ This workaround has to be used until we moved all Ink/Stitch applications to the
 
 **Incomplete Translation**
 
-It is possible, that not all strings have been translated. This is indicated by **some strings of text beeing in English and others in your native language**.
+It is possible, that not all strings have been translated. This is indicated by **some strings of text being in English and others in your native language**.
 If you like to complete the translation, have a look at our [description for translators](/developers/localize/).
 
 **Language Setting**
