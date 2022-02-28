@@ -45,5 +45,5 @@ Ink/Stitch works best with path objects. We recommend to transform objects you w
 
 If this worked well, we recommend to also read through the next page (workflow). Where you can get a deeper insight into Ink/Stitch and you can learn how to perform essential functions for embroidery files, like e.g. ordering objects, etc.
 
-If you run into trouble, contact us through [GitHub](https://github.com/inkstitch/inkstitch/issues/). We really like to hear about your problem, this way we can either improve the documentation or the programm itself.
+If you run into trouble, contact us through [GitHub](https://github.com/inkstitch/inkstitch/issues/). We really like to hear about your problem, this way we can either improve the documentation or the program itself.
 
