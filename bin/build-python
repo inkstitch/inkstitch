@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -e
-
+info_year=$( date "+%Y" )
 site_packages="$(python -c "import os; print(os.path.dirname(os.__file__) + '/site-packages')")"
 
 if [ "$BUILD" = "linux" ]; then
@@ -39,6 +39,7 @@ pyinstaller_args+="--log-level DEBUG "
 # This adds bundle identifier in reverse DSN format for macos
 if [ "$BUILD" = "osx" ]; then
     pyinstaller_args+="--osx-bundle-identifier org.inkstitch.app "
+    pyinstaller_args+="-i electron/build/icons/mac/inkstitch.icns"
     if [[ -z ${GITHUB_REF} ]]; then
         :
     else
@@ -47,6 +48,24 @@ if [ "$BUILD" = "osx" ]; then
 fi
 
 if [ "$BUILD" = "windows" ]; then
+	if [[ "$VERSION" =~ ^v[0-9][.0-9]+$ ]]; then
+		# setting the file and product version for release
+		# Code to remove the periods in the version number
+		ENT=.
+		SAL=${VERSION#v}$ENT
+		INFO_VERSION=()
+		while [[ $SAL ]]; do
+			INFO_VERSION+=( "${SAL%%"$ENT"*}" );
+			SAL=${SAL#*"$ENT"};
+		done;
+		sed -i'' 's/3, 2, 1,/'"${INFO_VERSION[0]}, ${INFO_VERSION[1]}, ${INFO_VERSION[2]},"'/' installer_scripts/file_version_info.txt
+	fi
+	 # set year and version in version_info
+	sed -i'' 's/1.1.1/'"${VERSION#v}"'/' installer_scripts/file_version_info.txt
+	sed -i'' 's/1234/'"${info_year}"'/' installer_scripts/file_version_info.txt
+    # sets icon to inkstitch.exe
+	pyinstaller_args+="--i electron/build/icons/win/inkstitch.ico "
+	pyinstaller_args+="--version-file  installer_scripts/file_version_info.txt "
     python -m PyInstaller $pyinstaller_args inkstitch.py
 else
     # without the LD_LIBRARY_PATH, it seems that pyinstaller can't find all of

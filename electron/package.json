@@ -1,7 +1,7 @@
 {
   "name": "inkstitch-gui",
   "productName": "inkstitch-gui",
-  "version": "1.0.0",
+  "version": "11.99.11",
   "description": "Ink/Stitch GUI",
   "main": "./dist/electron/main.js",
   "scripts": {

@@ -12,6 +12,10 @@ elif [ "$BUILD" = "osx" ]; then
   args="-m"
 fi
 
+# electron version setting on release
+if [[ "$VERSION" =~ ^v[0-9][.0-9]+$ ]]; then
+    sed -i'' -e 's/11.99.11/'"${VERSION#v}"'/' electron/package.json
+fi
 cd electron
 which yarn > /dev/null 2>&1 || npm install -g yarn
 yarn --link-duplicates --pure-lockfile
