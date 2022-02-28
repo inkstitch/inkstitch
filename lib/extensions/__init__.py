@@ -11,6 +11,7 @@ from .cleanup import Cleanup
 from .convert_to_satin import ConvertToSatin
 from .convert_to_stroke import ConvertToStroke
 from .cut_satin import CutSatin
+from .cutwork_segmentation import CutworkSegmentation
 from .duplicate_params import DuplicateParams
 from .embroider_settings import EmbroiderSettings
 from .flip import Flip
@@ -68,4 +69,5 @@ __all__ = extensions = [StitchPlanPreview,
                         Simulator,
                         Reorder,
                         DuplicateParams,
-                        EmbroiderSettings]
+                        EmbroiderSettings,
+                        CutworkSegmentation]

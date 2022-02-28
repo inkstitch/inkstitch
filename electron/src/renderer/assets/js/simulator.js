@@ -49,6 +49,7 @@ export default {
       showColorChanges: false,
       showStops: false,
       showNeedlePenetrationPoints: false,
+      renderJumps: true,
       showRealisticPreview: false,
       showCursor: true
     }
@@ -69,6 +70,10 @@ export default {
           npp.hide()
         }
       })
+    },
+    renderJumps() {
+      this.renderedStitch = 1
+      this.renderFrame()
     },
     showRealisticPreview() {
       let animating = this.animating
@@ -291,6 +296,14 @@ export default {
     renderFrame() {
       while (this.renderedStitch < this.currentStitch) {
         this.renderedStitch += 1
+        if (!this.renderJumps && this.stitches[this.renderedStitch].jump){
+          if (this.showRealisticPreview) {
+              this.realisticPaths[this.renderedStitch].hide();
+          } else {
+              this.stitchPaths[this.renderedStitch].hide();
+          }
+          continue;
+        }
         if (this.showRealisticPreview) {
           this.realisticPaths[this.renderedStitch].show()
         } else {

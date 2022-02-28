@@ -172,10 +172,6 @@ fieldset.show-commands span {
   vertical-align: top;
 }
 
-fieldset.show-commands span.npp {
-  text-align: right;
-}
-
 fieldset.show-commands span:first-of-type {
   padding: 0 5px;
 }

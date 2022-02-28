@@ -353,4 +353,6 @@ class Font(object):
         """
 
         elements = nodes_to_elements(group.iterdescendants(SVG_PATH_TAG))
-        auto_satin(elements, preserve_order=True, trim=trim)
+
+        if elements:
+            auto_satin(elements, preserve_order=True, trim=trim)
