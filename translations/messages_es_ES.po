@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-01-26 01:53+0000\n"
-"PO-Revision-Date: 2022-02-20 01:54\n"
+"POT-Creation-Date: 2022-03-01 02:01+0000\n"
+"PO-Revision-Date: 2022-03-20 02:01\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-26 01:53+0000\n"
+"POT-Creation-Date: 2022-03-01 02:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,7 +39,7 @@ msgstr "Brock Script"
 #. description of font in fonts/Brockscript
 #: inkstitch-fonts-metadata.py:4
 msgid "Brock Script is a decorative satin column manuscript font of size approximatively 40mm. It can be enlarged up to 250%. It contains 118 glyphs, covering most western european languages needs.More decorative options are hidden in the µ glyph"
-msgstr ""
+msgstr "Brock Script es una fuente manuscrita de columna satinada decorativa de un tamaño aproximado de 40 mm. Se puede ampliar hasta un 250%. Contiene 118 glifos, que cubren la mayoría de las necesidades de los idiomas de Europa occidental. Hay más opciones decorativas ocultas en el glifo"
 
 #. name of font in fonts/amitaclo
 #: inkstitch-fonts-metadata.py:6
@@ -60,7 +60,7 @@ msgstr "Apex Lake"
 #. description of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:12
 msgid "Apex Lake is a large ornate capital letters font of size approximatively 60mm. It contains 38 glyphs : A-Z,0-9,! and ?. It can be reduced down to 80% and enlarged up to 130%"
-msgstr ""
+msgstr "Apex Lake es una fuente grande de letras mayúsculas adornadas de un tamaño aproximado de 60 mm. Contiene 38 glifos: A-Z,0-9,! y ?. Puede reducirse hasta un 80% y ampliarse hasta un 130%"
 
 #. name of font in fonts/baumans_FI
 #: inkstitch-fonts-metadata.py:14
@@ -81,7 +81,7 @@ msgstr "Cherry inkstitch"
 #. description of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:20
 msgid "Cherry for inkstitch is a decorative satin column font of size approximatively 40mm. It can be reduced down to 80% and enlarged up to 180%. It contains 74 glyphs."
-msgstr ""
+msgstr "Cherry for inkstitch es una fuente de columna satinada decorativa de un tamaño aproximado de 40 mm. Puede reducirse hasta un 80% y ampliarse hasta un 180%. Contiene 74 glifos."
 
 #. name of font in fonts/cherryforkaalleen
 #: inkstitch-fonts-metadata.py:22
@@ -133,7 +133,7 @@ msgstr "Digory Doodles Bean"
 #. description of font in fonts/digory_doodles_bean
 #: inkstitch-fonts-metadata.py:40
 msgid "All letters have mixed satin and bean stitch; The capital M is 16mm tall. The small x is 7 mm"
-msgstr ""
+msgstr "Todas las letras tienen una mezcla de puntada plana y abultada; La M mayúscula mide 16 mm de alto. La x minúscula es de 7 mm"
 
 #. name of font in fonts/emilio_20
 #: inkstitch-fonts-metadata.py:42
@@ -144,7 +144,7 @@ msgstr "Emilio 20"
 #: inkstitch-fonts-metadata.py:44
 #, python-format
 msgid "Emilio 20 is a font with capital only and numbers. M is 48.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 140%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Emilio 20 es una fuente con mayúsculas y números. La M tiene 48,5 milímetros de ancho en una escala del 100%. Puede escalarse desde un 70% hasta un 140%. Cada satinado tiene una base en zigzag"
 
 #. name of font in fonts/emilio_20_tricolore
 #: inkstitch-fonts-metadata.py:46
@@ -154,7 +154,7 @@ msgstr "EMILIO 20 TRICOLORE"
 #. description of font in fonts/emilio_20_tricolore
 #: inkstitch-fonts-metadata.py:48
 msgid "Emilio 20 tricolore is a large tricolor fill stitches and satin columns font of  size approximately 100mm. It contains 36 glyphs including the numbers and the 26 capitals  A-Z. It can be reduced down to 90% and enlarged up to 120%"
-msgstr ""
+msgstr "Emilio 20 tricolore es una fuente tricolor grande con puntadas de relleno y columnas satinadas de un tamaño aproximado de 100 mm.  Contiene 36 glifos incluidos los números y las 26 mayúsculas A-Z.  Puede reducirse hasta un 90% y ampliarse hasta un 120%"
 
 #. name of font in fonts/espresso_KOR
 #: inkstitch-fonts-metadata.py:50
@@ -174,7 +174,7 @@ msgstr "Excalibur KOR"
 #. description of font in fonts/excalibur_KOR
 #: inkstitch-fonts-metadata.py:56
 msgid "Excalibur KOR is a small satin column manuscript font of size approximatively 20mm. It can be reduced down to 80% and enlarged up to 140%. It contains 144 glyphs, covering most western European languages needs."
-msgstr ""
+msgstr "Excalibur KOR es una pequeña fuente manuscrita de columna satinada de un tamaño aproximado de 20 mm. Puede reducirse hasta un 80% y ampliarse hasta un 140%. Contiene 144 glifos, que cubren las necesidades de la mayoría de los idiomas de Europa occidental."
 
 #. name of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:58
@@ -184,7 +184,7 @@ msgstr "Fold Ink/Stitch"
 #. description of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:60
 msgid "Fold Ink/Stitch is a large triple and quintuple running stitches capital font of size 100 mm. It contains 40 glyphs including all numbers and the 26 capitals  A-Z. It can be reduced down to 80% and enlarged up to 200%"
-msgstr ""
+msgstr "Fold Ink/Stitch es una fuente grande en mayúscula de puntadas continuas triples y quíntuples de 100 mm de tamaño.  Contiene 40 glifos que incluyen todos los números y las 26 mayúsculas A-Z.  Puede reducirse hasta un 80% y ampliarse hasta un 200%"
 
 #. name of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:62
@@ -214,7 +214,7 @@ msgstr "InfiniPicto"
 #. description of font in fonts/infinipicto
 #: inkstitch-fonts-metadata.py:72
 msgid "InfiniPicto is a fun font of size approximatively 60 mm containing only the 26 A-Z glyph. Each letter is a pictogram of an object whose name begins with that very letter..... in French"
-msgstr ""
+msgstr "InfiniPicto es una fuente divertida de un tamaño aproximado de 60 mm que contiene sólo los 26 glifos A-Z. Cada letra es un pictograma de un objeto cuyo nombre comienza con esa misma letra... en francés"
 
 #. name of font in fonts/kaushan_script_MAM
 #: inkstitch-fonts-metadata.py:74
@@ -235,7 +235,7 @@ msgstr "Curva de Aprendizaje"
 #. description of font in fonts/learning_curve
 #: inkstitch-fonts-metadata.py:80
 msgid "Small running stitch script font of size approximatively 12 mm.It can be reduced down to 90% and enlarged up to 200%"
-msgstr ""
+msgstr "Fuente pequeña de script de puntada continua de un tamaño aproximado de 12 mm. Puede reducirse hasta un 90% y ampliarse hasta un 200%"
 
 #. name of font in fonts/lobster_AGS
 #: inkstitch-fonts-metadata.py:82
@@ -256,7 +256,7 @@ msgstr "Magnolia KOR"
 #. description of font in fonts/magnolia_ KOR
 #: inkstitch-fonts-metadata.py:88
 msgid "Magnolia KOR is a script font of size approximatively 20mm. It can be scaled down to 80% and up to 120%"
-msgstr ""
+msgstr "Magnolia KOR es una fuente de script de un tamaño aproximado de 20 mm. Se puede reducir hasta un 80% y hasta un 120%"
 
 #. name of font in fonts/manuskript_gotisch
 #: inkstitch-fonts-metadata.py:90
@@ -278,7 +278,7 @@ msgstr "MarcellusSC-FI"
 #: inkstitch-fonts-metadata.py:96
 #, python-format
 msgid "MarcellusSC-FI is a small capital font of size 36 mm. It contains 107 glyphs covering most Western European languages. It can be reduced down to 70% and enlarged up to 200% or 500% using satin split"
-msgstr ""
+msgstr "MarcellusSC-FI es una letra mayúscula pequeña de 36 mm de tamaño. Contiene 107 glifos que cubren la mayoría de los idiomas de Europa occidental. Puede reducirse hasta un 70% y ampliarse hasta un 200% o un 500% mediante el uso de satin split"
 
 #. name of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:98
@@ -299,7 +299,7 @@ msgstr "Namskout"
 #. description of font in fonts/namskout_AGS
 #: inkstitch-fonts-metadata.py:104
 msgid "Namskout  is a large applique font of size approximatively 90mm. It contains 43 glyphs including all numbers and the 26 capitals  A-Z.  It can be reduced down to 50% and enlarged up to 150%  "
-msgstr ""
+msgstr "Namskout es una fuente de aplicación grande de un tamaño aproximado de 90 mm.  Contiene 43 glifos que incluyen todos los números y las 26 mayúsculas A-Z.  Puede reducirse hasta un 50% y ampliarse hasta un 150%  "
 
 #. name of font in fonts/pacificlo
 #: inkstitch-fonts-metadata.py:106
@@ -309,7 +309,7 @@ msgstr "Pacificlo"
 #. description of font in fonts/pacificlo
 #: inkstitch-fonts-metadata.py:108
 msgid "Pacificlo is a small satin column manuscript font of size approximatively 20mm. It can be reduced down to 80% and enlarged up to 140%. It contains 120 glyphs, covering most Western European Languages needs. "
-msgstr ""
+msgstr "Pacificlo es una pequeña fuente manuscrita de columna satinada de un tamaño aproximado de 20 mm. Puede reducirse hasta un 80% y ampliarse hasta un 140%. Contiene 120 glifos, que cubren la mayoría de las necesidades de los idiomas de Europa Occidental. "
 
 #. name of font in fonts/romanaugusa
 #: inkstitch-fonts-metadata.py:110
@@ -670,11 +670,11 @@ msgstr "Ninguno"
 #: lib/elements/element.py:212
 #: inx/inkstitch_lettering_force_lock_stitches.inx:3
 msgid "Force lock stitches"
-msgstr ""
+msgstr "Forzar las puntadas de refuerzo"
 
 #: lib/elements/element.py:213
 msgid "Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences."
-msgstr ""
+msgstr "Cosa puntadas de bloqueo después de coser este elemento, incluso si la distancia al siguiente objeto es más corta que la definida por el valor de longitud de contracción en las preferencias de Ink/Stitch."
 
 #: lib/elements/element.py:257
 #, python-format
@@ -1146,6 +1146,19 @@ msgstr "Seleccione una o más columnas satinadas para cortar."
 msgid "this satin column does not have a \"satin column cut point\" command attached to it. Please use the \"Attach commands\" extension and attach the \"Satin Column cut point\" command first."
 msgstr "esta columna satinada no tiene un comando de \"punto de corte de columna satinada\" adjunto. Utilice la extensión \"Adjuntar comandos\" y adjunte primero el comando \"Punto de corte de columna satinada\"."
 
+#: lib/extensions/cutwork_segmentation.py:46
+msgid "Please select one or more stroke elements."
+msgstr "Porfavor selecione uno o mas trazados."
+
+#: lib/extensions/cutwork_segmentation.py:155
+msgid "Cutwork Group"
+msgstr "Grupo Cutwork"
+
+#: lib/extensions/cutwork_segmentation.py:163
+#, python-format
+msgid "Needle #%s"
+msgstr "Aguja #%s"
+
 #: lib/extensions/duplicate_params.py:19
 msgid "This function copies Ink/Stitch parameters from the first selected element to the rest of the selection. Please select at least two elements."
 msgstr "Esta función copia los parámetros de Ink/Stitch del primer elemento seleccionado al resto de la selección. Seleccione al menos dos elementos."
@@ -1455,25 +1468,25 @@ msgstr "El preajuste %s ya existe. Utilice otro nombre o presione \"Sobrescribir
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command label at bottom of simulator window
-#: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:137
+#: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:142
 #: inx/inkstitch_output_TXT.inx:29
 msgid "STITCH"
 msgstr "PUNTADA"
 
-#: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:140
+#: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:145
 msgid "JUMP"
 msgstr "SALTAR"
 
-#: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:143
+#: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:148
 msgid "TRIM"
 msgstr "CORTE"
 
-#: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:146
+#: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:151
 #: inx/inkstitch_output_TXT.inx:33
 msgid "STOP"
 msgstr "PARAR"
 
-#: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:149
+#: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:154
 #: inx/inkstitch_output_TXT.inx:31
 msgid "COLOR CHANGE"
 msgstr "Cambio de Color"
@@ -2208,7 +2221,7 @@ msgstr "Comando"
 msgid "Controls"
 msgstr "Controles"
 
-#: electron/src/renderer/components/Simulator.vue:223
+#: electron/src/renderer/components/Simulator.vue:226
 msgid "cursor"
 msgstr "cursor"
 
@@ -2301,11 +2314,15 @@ msgstr "Play marcha atrás"
 msgid "Play forward"
 msgstr "Empezar adelante"
 
-#: electron/src/renderer/components/Simulator.vue:220
+#: electron/src/renderer/components/Simulator.vue:223
 msgid "realistic"
 msgstr "realista"
 
-#: electron/src/renderer/components/Simulator.vue:260
+#: electron/src/renderer/components/Simulator.vue:219
+msgid "render jumps"
+msgstr "saltos renderizados"
+
+#: electron/src/renderer/components/Simulator.vue:263
 msgid "Rendering stitch-plan..."
 msgstr "Renderizando plan de bordado..."
 
@@ -2452,6 +2469,91 @@ msgstr "No elimine la columna de raso original."
 #: inx/inkstitch_cut_satin.inx:3
 msgid "Cut Satin Column"
 msgstr "Cortar columnas de raso"
+
+#: inx/inkstitch_cutwork_segmentation.inx:3
+msgid "Cutwork segmentation"
+msgstr "Segmentación Cutwork"
+
+#: inx/inkstitch_cutwork_segmentation.inx:13
+msgid "Cutwork Options"
+msgstr "Opciones de Cutwork"
+
+#: inx/inkstitch_cutwork_segmentation.inx:15
+msgid "#1"
+msgstr "#1"
+
+#: inx/inkstitch_cutwork_segmentation.inx:16
+#: inx/inkstitch_cutwork_segmentation.inx:22
+#: inx/inkstitch_cutwork_segmentation.inx:28
+#: inx/inkstitch_cutwork_segmentation.inx:34
+msgid "start"
+msgstr "inicio"
+
+#: inx/inkstitch_cutwork_segmentation.inx:17
+#: inx/inkstitch_cutwork_segmentation.inx:23
+#: inx/inkstitch_cutwork_segmentation.inx:29
+#: inx/inkstitch_cutwork_segmentation.inx:35
+msgid "end"
+msgstr "fin"
+
+#: inx/inkstitch_cutwork_segmentation.inx:18
+#: inx/inkstitch_cutwork_segmentation.inx:24
+#: inx/inkstitch_cutwork_segmentation.inx:30
+#: inx/inkstitch_cutwork_segmentation.inx:36
+msgid "color"
+msgstr "color"
+
+#: inx/inkstitch_cutwork_segmentation.inx:21
+msgid "#2"
+msgstr "#2"
+
+#: inx/inkstitch_cutwork_segmentation.inx:27
+msgid "#3"
+msgstr "#3"
+
+#: inx/inkstitch_cutwork_segmentation.inx:33
+msgid "#4"
+msgstr "#4"
+
+#: inx/inkstitch_cutwork_segmentation.inx:39
+msgid "Sort elements by color"
+msgstr "Ordenar elementos por color"
+
+#: inx/inkstitch_cutwork_segmentation.inx:40
+msgid "Keep original"
+msgstr "Mantener el original"
+
+#: inx/inkstitch_cutwork_segmentation.inx:42
+msgid "Help"
+msgstr "Ayuda"
+
+#: inx/inkstitch_cutwork_segmentation.inx:43
+msgid "This extension separates a path depending on the angle."
+msgstr "Esta extension separa un trayecto dependiendo del angulo."
+
+#: inx/inkstitch_cutwork_segmentation.inx:44
+msgid "* If you don't want to use 4 needles, set both angle values to 0 for the rest of the rows."
+msgstr "*Si no deseas usar 4 agujas, configura ambos angulos con un valor de 0 para el resto de las filas."
+
+#: inx/inkstitch_cutwork_segmentation.inx:45
+msgid "* A horizontal line has an angle of 0 degrees."
+msgstr "*Una linea horizontal tiene un angulo de 0 grados."
+
+#: inx/inkstitch_cutwork_segmentation.inx:46
+msgid "* After the conversion through this extension, don't rotate your design again."
+msgstr "*Despues de convertirlo con la extension, asegurate de no volver a rotar tu diseño."
+
+#: inx/inkstitch_cutwork_segmentation.inx:48
+msgid "Please adjust angle and color options to your specific needle kit."
+msgstr "Porfavor ajuste las opciones del angulo y el color para su aguja en especifico."
+
+#: inx/inkstitch_cutwork_segmentation.inx:49
+msgid "On our website we have collected some common setups."
+msgstr "En nuestro sitio web, hemos recopilado algunas de las configuraciones mas comunes."
+
+#: inx/inkstitch_cutwork_segmentation.inx:50
+msgid "https://inkstitch.org/docs/cutwork/"
+msgstr "https://inkstitch.org/docs/cutwork/"
 
 #: inx/inkstitch_duplicate_params.inx:3
 msgid "Duplicate Params"
@@ -3107,7 +3209,7 @@ msgstr "Seleccionar archivos de fuentes"
 
 #: inx/inkstitch_letters_to_font.inx:3
 msgid "Letters to font"
-msgstr ""
+msgstr "Letras fuente"
 
 #: inx/inkstitch_letters_to_font.inx:22
 msgid "File format"

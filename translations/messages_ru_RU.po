@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-01-26 01:53+0000\n"
-"PO-Revision-Date: 2022-02-20 01:54\n"
+"POT-Creation-Date: 2022-03-01 02:01+0000\n"
+"PO-Revision-Date: 2022-03-20 02:01\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-26 01:53+0000\n"
+"POT-Creation-Date: 2022-03-01 02:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1146,6 +1146,19 @@ msgstr "Выберите одну или несколько сатиновых �
 msgid "this satin column does not have a \"satin column cut point\" command attached to it. Please use the \"Attach commands\" extension and attach the \"Satin Column cut point\" command first."
 msgstr "эта сатиновая колонна не имеет команды \"точка разрыва сатиновой колонны\" прикрепленной к ней. Используйте \"Добавить команды\" из меню и прикрепите команду \"Точка разрыва сатиновой колонны\"."
 
+#: lib/extensions/cutwork_segmentation.py:46
+msgid "Please select one or more stroke elements."
+msgstr ""
+
+#: lib/extensions/cutwork_segmentation.py:155
+msgid "Cutwork Group"
+msgstr ""
+
+#: lib/extensions/cutwork_segmentation.py:163
+#, python-format
+msgid "Needle #%s"
+msgstr ""
+
 #: lib/extensions/duplicate_params.py:19
 msgid "This function copies Ink/Stitch parameters from the first selected element to the rest of the selection. Please select at least two elements."
 msgstr "Эта функция копирует параметры Ink/Stitch из первого выделенного объекта в остальные объекты в выделении. Выберите как минимум два объекта."
@@ -1454,25 +1467,25 @@ msgstr "Предустановка с именем \"%s\" уже существ�
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command label at bottom of simulator window
-#: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:137
+#: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:142
 #: inx/inkstitch_output_TXT.inx:29
 msgid "STITCH"
 msgstr "СТЕЖОК"
 
-#: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:140
+#: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:145
 msgid "JUMP"
 msgstr "ПРЫЖОК"
 
-#: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:143
+#: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:148
 msgid "TRIM"
 msgstr "ОБРЕЗКА"
 
-#: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:146
+#: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:151
 #: inx/inkstitch_output_TXT.inx:33
 msgid "STOP"
 msgstr "СТОП"
 
-#: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:149
+#: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:154
 #: inx/inkstitch_output_TXT.inx:31
 msgid "COLOR CHANGE"
 msgstr "СМЕНА ЦВЕТА"
@@ -2207,7 +2220,7 @@ msgstr "Команда"
 msgid "Controls"
 msgstr "Управление"
 
-#: electron/src/renderer/components/Simulator.vue:223
+#: electron/src/renderer/components/Simulator.vue:226
 msgid "cursor"
 msgstr "курсор"
 
@@ -2300,11 +2313,15 @@ msgstr "Проиграть назад"
 msgid "Play forward"
 msgstr "Проиграть вперёд"
 
-#: electron/src/renderer/components/Simulator.vue:220
+#: electron/src/renderer/components/Simulator.vue:223
 msgid "realistic"
 msgstr "реалистично"
 
-#: electron/src/renderer/components/Simulator.vue:260
+#: electron/src/renderer/components/Simulator.vue:219
+msgid "render jumps"
+msgstr ""
+
+#: electron/src/renderer/components/Simulator.vue:263
 msgid "Rendering stitch-plan..."
 msgstr "Отрисовка плана вышивки..."
 
@@ -2453,6 +2470,91 @@ msgstr "Не удалять исходную сатиновую колонну."
 #: inx/inkstitch_cut_satin.inx:3
 msgid "Cut Satin Column"
 msgstr "Разделить Сатиновую Колонну"
+
+#: inx/inkstitch_cutwork_segmentation.inx:3
+msgid "Cutwork segmentation"
+msgstr ""
+
+#: inx/inkstitch_cutwork_segmentation.inx:13
+msgid "Cutwork Options"
+msgstr ""
+
+#: inx/inkstitch_cutwork_segmentation.inx:15
+msgid "#1"
+msgstr ""
+
+#: inx/inkstitch_cutwork_segmentation.inx:16
+#: inx/inkstitch_cutwork_segmentation.inx:22
+#: inx/inkstitch_cutwork_segmentation.inx:28
+#: inx/inkstitch_cutwork_segmentation.inx:34
+msgid "start"
+msgstr ""
+
+#: inx/inkstitch_cutwork_segmentation.inx:17
+#: inx/inkstitch_cutwork_segmentation.inx:23
+#: inx/inkstitch_cutwork_segmentation.inx:29
+#: inx/inkstitch_cutwork_segmentation.inx:35
+msgid "end"
+msgstr ""
+
+#: inx/inkstitch_cutwork_segmentation.inx:18
+#: inx/inkstitch_cutwork_segmentation.inx:24
+#: inx/inkstitch_cutwork_segmentation.inx:30
+#: inx/inkstitch_cutwork_segmentation.inx:36
+msgid "color"
+msgstr ""
+
+#: inx/inkstitch_cutwork_segmentation.inx:21
+msgid "#2"
+msgstr ""
+
+#: inx/inkstitch_cutwork_segmentation.inx:27
+msgid "#3"
+msgstr ""
+
+#: inx/inkstitch_cutwork_segmentation.inx:33
+msgid "#4"
+msgstr ""
+
+#: inx/inkstitch_cutwork_segmentation.inx:39
+msgid "Sort elements by color"
+msgstr ""
+
+#: inx/inkstitch_cutwork_segmentation.inx:40
+msgid "Keep original"
+msgstr ""
+
+#: inx/inkstitch_cutwork_segmentation.inx:42
+msgid "Help"
+msgstr ""
+
+#: inx/inkstitch_cutwork_segmentation.inx:43
+msgid "This extension separates a path depending on the angle."
+msgstr ""
+
+#: inx/inkstitch_cutwork_segmentation.inx:44
+msgid "* If you don't want to use 4 needles, set both angle values to 0 for the rest of the rows."
+msgstr ""
+
+#: inx/inkstitch_cutwork_segmentation.inx:45
+msgid "* A horizontal line has an angle of 0 degrees."
+msgstr ""
+
+#: inx/inkstitch_cutwork_segmentation.inx:46
+msgid "* After the conversion through this extension, don't rotate your design again."
+msgstr ""
+
+#: inx/inkstitch_cutwork_segmentation.inx:48
+msgid "Please adjust angle and color options to your specific needle kit."
+msgstr ""
+
+#: inx/inkstitch_cutwork_segmentation.inx:49
+msgid "On our website we have collected some common setups."
+msgstr ""
+
+#: inx/inkstitch_cutwork_segmentation.inx:50
+msgid "https://inkstitch.org/docs/cutwork/"
+msgstr ""
 
 #: inx/inkstitch_duplicate_params.inx:3
 msgid "Duplicate Params"
