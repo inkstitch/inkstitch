@@ -63,7 +63,7 @@ def calculate_line_angles(line):
     return Angles
 
 
-def raster_line_string_with_priority_points(line, start_distance, end_distance, maxstitch_distance,  # noqa: C901
+def raster_line_string_with_priority_points(line, start_distance, end_distance, maxstitch_distance, minstitch_distance, # noqa: C901
                                             must_use_points_deque, abs_offset, offset_by_half, replace_forbidden_points):
     """
     Rasters a line between start_distance and end_distance.
@@ -72,6 +72,7 @@ def raster_line_string_with_priority_points(line, start_distance, end_distance, 
     -start_distance: The distance along the line from which the rastering should start
     -end_distance: The distance along the line until which the rastering should be done
     -maxstitch_distance: The maximum allowed stitch distance
+    -minstitch_distance: The minimum allowed stitch distance
     -Note that start_distance > end_distance for stitching_direction = -1
     -must_use_points_deque: deque with projected points on line from its neighbors. An item of the deque
      is setup as follows: ((projected point on line, LineStringSampling.PointSource), priority=distance along line)
@@ -84,7 +85,7 @@ def raster_line_string_with_priority_points(line, start_distance, end_distance, 
     -List which defines the point origin for each point according to the PointSource enum.
     """
 
-    if (abs(end_distance-start_distance) < constants.line_lengh_seen_as_one_point):
+    if (abs(end_distance-start_distance) < max(minstitch_distance, constants.line_lengh_seen_as_one_point)):
         return [line.interpolate(start_distance).coords[0]], [PointSource.HARD_EDGE]
 
     deque_points = list(must_use_points_deque)
@@ -103,9 +104,9 @@ def raster_line_string_with_priority_points(line, start_distance, end_distance, 
         deque_points = deque_points[::-1]
 
     # Remove all points from the deque which do not fall in the segment [start_distance; end_distance]
-    while (len(deque_points) > 0 and deque_points[0][1] <= start_distance+min(maxstitch_distance/20, constants.point_spacing_to_be_considered_equal)):
+    while (len(deque_points) > 0 and deque_points[0][1] <= start_distance+min(maxstitch_distance/20, minstitch_distance, constants.point_spacing_to_be_considered_equal)):
         deque_points.pop(0)
-    while (len(deque_points) > 0 and deque_points[-1][1] >= end_distance-min(maxstitch_distance/20, constants.point_spacing_to_be_considered_equal)):
+    while (len(deque_points) > 0 and deque_points[-1][1] >= end_distance-min(maxstitch_distance/20, minstitch_distance, constants.point_spacing_to_be_considered_equal)):
         deque_points.pop()
 
 
@@ -185,6 +186,9 @@ def raster_line_string_with_priority_points(line, start_distance, end_distance, 
         while segment_end_index < len(merged_point_list):
             segment_length = merged_point_list[segment_end_index][1] - \
                 merged_point_list[segment_start_index][1]
+            if segment_length < minstitch_distance:
+                segment_end_index += 1
+                continue
             if segment_length > maxstitch_distance+constants.point_spacing_to_be_considered_equal:
                 new_distance = merged_point_list[segment_start_index][1] + \
                     maxstitch_distance
@@ -214,6 +218,13 @@ def raster_line_string_with_priority_points(line, start_distance, end_distance, 
 
         iter = segment_start_index+1
         while (iter <= segment_end_index):
+            segment_length = merged_point_list[iter][1] - \
+                merged_point_list[segment_start_index][1]
+            if segment_length < minstitch_distance and merged_point_list[iter][0].point_source != PointSource.HARD_EDGE_INTERNAL:
+                #We need to create this hard edge exception - otherwise there are some too large deviations posible
+                iter += 1
+                continue
+
             if merged_point_list[iter][0].point_source == PointSource.OVERNEXT:
                 index_overnext = iter
             elif merged_point_list[iter][0].point_source == PointSource.DIRECT:

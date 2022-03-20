@@ -52,7 +52,7 @@ def cut(line, distance):
 
 
 def connect_raster_tree_nearest_neighbor(  # noqa: C901
-        tree, used_offset, stitch_distance, close_point, offset_by_half):
+        tree, used_offset, stitch_distance, min_stitch_distance, close_point, offset_by_half):
     """
     Takes the offsetted curves organized as tree, connects and samples them.
     Strategy: A connection from parent to child is made where both curves
@@ -63,6 +63,8 @@ def connect_raster_tree_nearest_neighbor(  # noqa: C901
     -used_offset: used offset when the offsetted curves were generated
     -stitch_distance: maximum allowed distance between two points
      after sampling
+    -min_stitch_distance stitches within a row shall be at least min_stitch_distance apart. Stitches connecting
+     offsetted paths might be shorter.
     -close_point: defines the beginning point for stitching
      (stitching starts always from the undisplaced curve)
     -offset_by_half: If true the resulting points are interlaced otherwise not.
@@ -136,6 +138,7 @@ def connect_raster_tree_nearest_neighbor(  # noqa: C901
         # points for start and end)
         end_distance,
         stitch_distance,
+        min_stitch_distance,
         tree.transferred_point_priority_deque,
         abs_offset,
         offset_by_half,
@@ -230,6 +233,7 @@ def connect_raster_tree_nearest_neighbor(  # noqa: C901
                     item.child_node,
                     used_offset,
                     stitch_distance,
+                    min_stitch_distance,
                     item.nearest_point_child,
                     offset_by_half,
                 )
@@ -432,7 +436,7 @@ def calculate_replacing_middle_point(line_segment, abs_offset, max_stitch_distan
         return line_segment.coords[1]
 
 
-def connect_raster_tree_from_inner_to_outer(tree, used_offset, stitch_distance, close_point, offset_by_half):  # noqa: C901
+def connect_raster_tree_from_inner_to_outer(tree, used_offset, stitch_distance, min_stitch_distance, close_point, offset_by_half):  # noqa: C901
     """
     Takes the offsetted curves organized as tree, connects and samples them.
     Strategy: A connection from parent to child is made as fast as possible to
@@ -444,6 +448,8 @@ def connect_raster_tree_from_inner_to_outer(tree, used_offset, stitch_distance, 
     -used_offset: used offset when the offsetted curves were generated
     -stitch_distance: maximum allowed distance between two points
      after sampling
+    -min_stitch_distance stitches within a row shall be at least min_stitch_distance apart. Stitches connecting
+     offsetted paths might be shorter.
     -close_point: defines the beginning point for stitching
      (stitching starts always from the undisplaced curve)
     -offset_by_half: If true the resulting points are interlaced otherwise not.
@@ -514,11 +520,12 @@ def connect_raster_tree_from_inner_to_outer(tree, used_offset, stitch_distance, 
     if stitching_direction == 1:
         (own_coords, own_coords_origin) = sample_linestring.raster_line_string_with_priority_points(
             current_coords,
-            start_offset,  # We add start_offset to not sample the same
-            # point again (avoid double points for start
+            start_offset,  # We add start_offset to not sample the initial/end
+            # point twice (avoid double points for start
             # and end)
             end_offset,
             stitch_distance,
+            min_stitch_distance,
             tree.transferred_point_priority_deque,
             abs_offset,
             offset_by_half,
@@ -529,12 +536,13 @@ def connect_raster_tree_from_inner_to_outer(tree, used_offset, stitch_distance, 
             current_coords,
             current_coords.length - start_offset,  # We subtract
             # start_offset to not
-            # sample the same point
-            # again (avoid double
+            # sample the initial/end point
+            # twice (avoid double
             # points for start
             # and end)
             current_coords.length - end_offset,
             stitch_distance,
+            min_stitch_distance,
             tree.transferred_point_priority_deque,
             abs_offset,
             offset_by_half,
@@ -639,6 +647,7 @@ def connect_raster_tree_from_inner_to_outer(tree, used_offset, stitch_distance, 
                     item.child_node,
                     used_offset,
                     stitch_distance,
+                    min_stitch_distance,
                     item.nearest_point_child,
                     offset_by_half,
                 )
@@ -683,19 +692,12 @@ def connect_raster_tree_from_inner_to_outer(tree, used_offset, stitch_distance, 
                 if cur_item < len(nearest_points_list) - 1:
                     d = min(
                         d,
-                        abs(
-                            nearest_points_list[cur_item +
-                                                1].proj_distance_parent
-                            - item.proj_distance_parent
-                        ),
+                        abs(nearest_points_list[cur_item + 1].proj_distance_parent - item.proj_distance_parent),
                     )
 
                 if d > constants.factor_offset_starting_points * abs_offset:
                     result_coords.append(
-                        current_coords.interpolate(
-                            item.proj_distance_parent
-                            + 2 * constants.factor_offset_starting_points * abs_offset
-                        ).coords[0]
+                        current_coords.interpolate(item.proj_distance_parent + 2 * constants.factor_offset_starting_points * abs_offset).coords[0]
                     )
                     result_coords_origin.append(
                         sample_linestring.PointSource.ENTER_LEAVING_POINT
@@ -792,7 +794,7 @@ def interpolate_LinearRings(a, b, start=None, step=.005):
 
 
 def connect_raster_tree_spiral(
-        tree, used_offset, stitch_distance, close_point, offset_by_half):
+        tree, used_offset, stitch_distance, min_stitch_distance, close_point, offset_by_half):
     """
     Takes the offsetted curves organized as tree, connects and samples them as a spiral.
     It expects that each node in the tree has max. one child
@@ -802,6 +804,8 @@ def connect_raster_tree_spiral(
     -used_offset: used offset when the offsetted curves were generated
     -stitch_distance: maximum allowed distance between two points
      after sampling
+    -min_stitch_distance stitches within a row shall be at least min_stitch_distance apart. Stitches connecting
+     offsetted paths might be shorter.
     -close_point: defines the beginning point for stitching
      (stitching starts always from the undisplaced curve)
     -offset_by_half: If true the resulting points are interlaced otherwise not.
@@ -819,6 +823,7 @@ def connect_raster_tree_spiral(
             0,
             tree.val.length,
             stitch_distance,
+            min_stitch_distance,
             tree.transferred_point_priority_deque,
             abs_offset,
             offset_by_half,
@@ -842,6 +847,7 @@ def connect_raster_tree_spiral(
             0,
             node.val.length,
             stitch_distance,
+            min_stitch_distance,
             node.transferred_point_priority_deque,
             abs_offset,
             offset_by_half,
@@ -883,7 +889,7 @@ def connect_raster_tree_spiral(
                 lineseg = LineString([result_coords[-2], result_coords[-1], own_coords[0], own_coords[1]])
             else:
                 lineseg = LineString([result_coords[-2], result_coords[-1], own_coords[1]])
-            (temp_coords, _) = sample_linestring.raster_line_string_with_priority_points(lineseg, 0, lineseg.length, stitch_distance,
+            (temp_coords, _) = sample_linestring.raster_line_string_with_priority_points(lineseg, 0, lineseg.length, stitch_distance, min_stitch_distance,
                                                                                          DEPQ(), abs_offset, offset_by_half, False)
             if len(temp_coords) == 2:  # only start and end point of lineseg was needed
                 result_coords.pop()

@@ -24,6 +24,7 @@ def guided_fill(shape,
                 angle,
                 row_spacing,
                 max_stitch_length,
+                min_stitch_length,
                 running_stitch_length,
                 skip_last,
                 starting_point,
@@ -45,7 +46,7 @@ def guided_fill(shape,
     travel_graph = build_travel_graph(fill_stitch_graph, shape, angle, underpath)
     path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point)
     result = path_to_stitches(path, travel_graph, fill_stitch_graph, angle, row_spacing,
-                              max_stitch_length, running_stitch_length, skip_last, offset_by_half)
+                              max_stitch_length, min_stitch_length, running_stitch_length, skip_last, offset_by_half)
 
     return result
 
@@ -187,13 +188,13 @@ def process_travel_edges(graph, fill_stitch_graph, shape, travel_edges):
     del strtree
 
 
-def stitch_line(stitches, stitching_direction, geometry, projected_points, max_stitch_length, row_spacing, skip_last, offset_by_half):
+def stitch_line(stitches, stitching_direction, geometry, projected_points, max_stitch_length, min_stitch_length, row_spacing, skip_last, offset_by_half):
     if stitching_direction == 1:
         stitched_line, _ = raster_line_string_with_priority_points(
-            geometry, 0.0, geometry.length, max_stitch_length, projected_points, abs(row_spacing), offset_by_half, True)
+            geometry, 0.0, geometry.length, max_stitch_length, min_stitch_length, projected_points, abs(row_spacing), offset_by_half, True)
     else:
         stitched_line, _ = raster_line_string_with_priority_points(
-            geometry, geometry.length, 0.0, max_stitch_length, projected_points, abs(row_spacing), offset_by_half, True)
+            geometry, geometry.length, 0.0, max_stitch_length, min_stitch_length, projected_points, abs(row_spacing), offset_by_half, True)
 
     stitches.append(Stitch(*stitched_line[0], tags=('fill_row_start',)))
     for i in range(1, len(stitched_line)-1):
@@ -209,7 +210,7 @@ def stitch_line(stitches, stitching_direction, geometry, projected_points, max_s
 
 
 @debug.time
-def path_to_stitches(path, travel_graph, fill_stitch_graph, angle, row_spacing, max_stitch_length,
+def path_to_stitches(path, travel_graph, fill_stitch_graph, angle, row_spacing, max_stitch_length, min_stitch_length,
                      running_stitch_length, skip_last, offset_by_half):
     path = collapse_sequential_outline_edges(path)
 
@@ -230,7 +231,7 @@ def path_to_stitches(path, travel_graph, fill_stitch_graph, angle, row_spacing, 
                     abs(edge[0][0]-path_geometry.coords[-1][0])+abs(edge[0][1]-path_geometry.coords[-1][1])):
                 stitching_direction = -1
             stitch_line(new_stitches, stitching_direction, path_geometry, projected_points,
-                        max_stitch_length, row_spacing, skip_last, offset_by_half)
+                        max_stitch_length, min_stitch_length, row_spacing, skip_last, offset_by_half)
             current_edge['already_rastered'] = True
             transfer_points_to_surrounding_graph(
                 fill_stitch_graph, current_edge, row_spacing, False, new_stitches, overnext_neighbor=True)
@@ -264,9 +265,8 @@ def extend_line(line, minx, maxx, miny, maxy):
 
 
 def repair_multiple_parallel_offset_curves(multi_line):
-    # TODO: linemerge is overritten by the very next line?!?
     lines = linemerge(multi_line)
-    lines = list(multi_line.geoms)
+    lines = list(lines.geoms)
     max_length = -1
     max_length_idx = -1
     for idx, subline in enumerate(lines):

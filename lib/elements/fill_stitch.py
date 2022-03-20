@@ -192,6 +192,19 @@ class FillStitch(EmbroideryElement):
         return max(self.get_float_param("max_stitch_length_mm", 3.0), 0.1 * PIXELS_PER_MM)
 
     @property
+    @param('min_stitch_length_mm',
+           _('Minimum fill stitch length'),
+           tooltip=_(
+               'The minimum length of a stitch in a row. Larger values might introduce deviations from the desired path. Shorter stitch may be used at the start or end of a row.'),
+           unit='mm',
+           sort_index=4,
+           select_items=[('fill_method', 1), ('fill_method', 2)],
+           type='float',
+           default=0.0)
+    def min_stitch_length(self):
+        return self.get_float_param("min_stitch_length_mm", 0.0)
+
+    @property
     @param('staggers',
            _('Stagger rows this many times before repeating'),
            tooltip=_('Setting this dictates how many rows apart the stitches will be before they fall in the same column position.'),
@@ -557,6 +570,7 @@ class FillStitch(EmbroideryElement):
                 -self.row_spacing,
                 self.join_style+1,
                 self.max_stitch_length,
+                min(self.min_stitch_length, self.max_stitch_length),
                 self.interlaced,
                 self.tangential_strategy,
                 shgeo.Point(starting_point))
@@ -585,6 +599,7 @@ class FillStitch(EmbroideryElement):
                 self.angle,
                 self.row_spacing,
                 self.max_stitch_length,
+                min(self.min_stitch_length,self.max_stitch_length),
                 self.running_stitch_length,
                 self.skip_last,
                 starting_point,

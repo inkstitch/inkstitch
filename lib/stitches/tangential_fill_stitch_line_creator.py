@@ -158,7 +158,7 @@ def check_and_prepare_tree_for_valid_spiral(root):
     return True
 
 
-def offset_poly(poly, offset, join_style, stitch_distance, offset_by_half, strategy, starting_point):  # noqa: C901
+def offset_poly(poly, offset, join_style, stitch_distance, min_stitch_distance, offset_by_half, strategy, starting_point):  # noqa: C901
     """
     Takes a polygon (which can have holes) as input and creates offsetted
     versions until the polygon is filled with these smaller offsets.
@@ -173,6 +173,8 @@ def offset_poly(poly, offset, join_style, stitch_distance, offset_by_half, strat
      For examples look at
      https://shapely.readthedocs.io/en/stable/_images/parallel_offset.png
     -stitch_distance maximum allowed stitch distance between two points
+    -min_stitch_distance stitches within a row shall be at least min_stitch_distance apart. Stitches connecting
+     offsetted paths might be shorter.
     -offset_by_half: True if the points shall be interlaced
     -strategy: According to StitchingStrategy enum class you can select between
      different strategies for the connection between parent and childs. In
@@ -315,15 +317,15 @@ def offset_poly(poly, offset, join_style, stitch_distance, offset_by_half, strat
 
     if strategy == StitchingStrategy.CLOSEST_POINT:
         (connected_line, connected_line_origin) = tangential_fill_stitch_pattern_creator.connect_raster_tree_nearest_neighbor(
-            root, offset, stitch_distance, starting_point, offset_by_half)
+            root, offset, stitch_distance, min_stitch_distance, starting_point, offset_by_half)
     elif strategy == StitchingStrategy.INNER_TO_OUTER:
         (connected_line, connected_line_origin) = tangential_fill_stitch_pattern_creator.connect_raster_tree_from_inner_to_outer(
-            root, offset, stitch_distance, starting_point, offset_by_half)
+            root, offset, stitch_distance, min_stitch_distance, starting_point, offset_by_half)
     elif strategy == StitchingStrategy.SPIRAL:
         if not check_and_prepare_tree_for_valid_spiral(root):
             raise ValueError("Geometry cannot be filled with one spiral!")
         (connected_line, connected_line_origin) = tangential_fill_stitch_pattern_creator.connect_raster_tree_spiral(
-            root, offset, stitch_distance, starting_point, offset_by_half)
+            root, offset, stitch_distance, min_stitch_distance, starting_point, offset_by_half)
     else:
         raise ValueError("Invalid stitching stratety!")
 

@@ -70,7 +70,7 @@ def transfer_points_to_surrounding(treenode, used_offset, offset_by_half, to_tra
     assert(not transfer_forbidden_points or transfer_forbidden_points and (
         offset_by_half or not offset_by_half and overnext_neighbor))
 
-    if len(to_transfer_points) == 0:
+    if len(to_transfer_points) < 3:
         return
 
     # Get a list of all possible adjacent nodes which will be considered for transferring the points of treenode:

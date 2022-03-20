@@ -64,6 +64,7 @@ inkstitch_attribs = [
                 'fill_underlay_row_spacing_mm',
                 'fill_underlay_skip_last',
                 'max_stitch_length_mm',
+                'min_stitch_length_mm',
                 'row_spacing_mm',
                 'end_row_spacing_mm',
                 'skip_last',
