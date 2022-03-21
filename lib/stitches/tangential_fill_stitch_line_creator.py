@@ -2,7 +2,7 @@ from shapely.geometry.polygon import LinearRing, LineString
 from shapely.geometry import Polygon, MultiLineString
 from shapely.ops import polygonize
 from shapely.geometry import MultiPolygon
-from anytree import AnyNode, PreOrderIter, LevelOrderGroupIter
+from anytree import AnyNode, PreOrderIter, LevelOrderGroupIter, RenderTree
 from shapely.geometry.polygon import orient
 from depq import DEPQ
 from enum import IntEnum
@@ -10,77 +10,92 @@ from ..stitches import tangential_fill_stitch_pattern_creator
 from ..stitches import constants
 
 
-def offset_linear_ring(ring, offset, side, resolution, join_style, mitre_limit):
-    """
-    Solves following problem: When shapely offsets a LinearRing the
-    start/end point might be handled wrongly since they
-    are only treated as LineString.
-    (See e.g. https://i.stack.imgur.com/vVh56.png as a problematic example)
-    This method checks first whether the start/end point form a problematic
-    edge with respect to the offset side. If it is not a problematic
-    edge we can use the normal offset_routine. Otherwise we need to
-    perform two offsets:
-    -offset the ring
-    -offset the start/end point + its two neighbors left and right
-    Finally both offsets are merged together to get the correct
-    offset of a LinearRing
-    """
+def offset_linear_ring(ring, offset, resolution, join_style, mitre_limit):
+    result = Polygon(ring).buffer(offset, resolution, cap_style=2, join_style=join_style, mitre_limit=mitre_limit, single_sided=True)
 
-    coords = ring.coords[:]
-    # check whether edge at index 0 is concave or convex. Only for
-    # concave edges we need to spend additional effort
-    dx_seg1 = dy_seg1 = 0
-    if coords[0] != coords[-1]:
-        dx_seg1 = coords[0][0] - coords[-1][0]
-        dy_seg1 = coords[0][1] - coords[-1][1]
+    if result.geom_type == 'Polygon':
+        return result.exterior
     else:
-        dx_seg1 = coords[0][0] - coords[-2][0]
-        dy_seg1 = coords[0][1] - coords[-2][1]
-    dx_seg2 = coords[1][0] - coords[0][0]
-    dy_seg2 = coords[1][1] - coords[0][1]
-    # use cross product:
-    crossvalue = dx_seg1 * dy_seg2 - dy_seg1 * dx_seg2
-    sidesign = 1
-    if side == "left":
-        sidesign = -1
-
-    # We do not need to take care of the joint n-0 since we
-    # offset along a concave edge:
-    if sidesign * offset * crossvalue <= 0:
-        return ring.parallel_offset(offset, side, resolution, join_style, mitre_limit)
-
-    # We offset along a convex edge so we offset the joint n-0 separately:
-    if coords[0] != coords[-1]:
-        coords.append(coords[0])
-    offset_ring1 = ring.parallel_offset(
-        offset, side, resolution, join_style, mitre_limit
-    )
-    offset_ring2 = LineString((coords[-2], coords[0], coords[1])).parallel_offset(
-        offset, side, resolution, join_style, mitre_limit
-    )
-
-    # Next we need to merge the results:
-    if offset_ring1.geom_type == "LineString":
-        return LinearRing(offset_ring2.coords[:] + offset_ring1.coords[1:-1])
-    else:
-        # We have more than one resulting LineString for offset of
-        # the geometry (ring) = offset_ring1.
-        # Hence we need to find the LineString which belongs to the
-        # offset of element 0 in coords =offset_ring2
-        # in order to add offset_ring2 geometry to it:
         result_list = []
-        thresh = constants.offset_factor_for_adjacent_geometry * abs(offset)
-        for offsets in offset_ring1:
-            if (
-                abs(offsets.coords[0][0] - coords[0][0]) < thresh
-                and abs(offsets.coords[0][1] - coords[0][1]) < thresh
-            ):
-                result_list.append(
-                    LinearRing(offset_ring2.coords[:] + offsets.coords[1:-1])
-                )
-            else:
-                result_list.append(LinearRing(offsets))
+        for poly in result:
+            result_list.append(poly.exterior)
         return MultiLineString(result_list)
+
+
+# """
+#     Solves following problem: When shapely offsets a LinearRing the
+#     start/end point might be handled wrongly since they
+#     are only treated as LineString.
+#     (See e.g. https://i.stack.imgur.com/vVh56.png as a problematic example)
+#     This method checks first whether the start/end point form a problematic
+#     edge with respect to the offset side. If it is not a problematic
+#     edge we can use the normal offset_routine. Otherwise we need to
+#     perform two offsets:
+#     -offset the ring
+#     -offset the start/end point + its two neighbors left and right
+#     Finally both offsets are merged together to get the correct
+#     offset of a LinearRing
+#     """
+
+#PROBLEM: Did not work in rare cases since it expects the point order be maintained after offsetting the curve 
+#(e.g. the first point in the offsetted curve shall belong to the first point in the original curve). However, this
+#assumption seems to be not always true that is why this code was replaced by the buffer routine.
+
+#     coords = ring.coords[:]
+#     # check whether edge at index 0 is concave or convex. Only for
+#     # concave edges we need to spend additional effort
+#     dx_seg1 = dy_seg1 = 0
+#     if coords[0] != coords[-1]:
+#         dx_seg1 = coords[0][0] - coords[-1][0]
+#         dy_seg1 = coords[0][1] - coords[-1][1]
+#     else:
+#         dx_seg1 = coords[0][0] - coords[-2][0]
+#         dy_seg1 = coords[0][1] - coords[-2][1]
+#     dx_seg2 = coords[1][0] - coords[0][0]
+#     dy_seg2 = coords[1][1] - coords[0][1]
+#     # use cross product:
+#     crossvalue = dx_seg1 * dy_seg2 - dy_seg1 * dx_seg2
+#     sidesign = 1
+#     if side == "left":
+#         sidesign = -1
+
+#     # We do not need to take care of the joint n-0 since we
+#     # offset along a concave edge:
+#     if sidesign * offset * crossvalue <= 0:
+#         return ring.parallel_offset(offset, side, resolution, join_style, mitre_limit)
+
+#     # We offset along a convex edge so we offset the joint n-0 separately:
+#     if coords[0] != coords[-1]:
+#         coords.append(coords[0])
+#     offset_ring1 = ring.parallel_offset(
+#         offset, side, resolution, join_style, mitre_limit
+#     )
+#     offset_ring2 = LineString((coords[-2], coords[0], coords[1])).parallel_offset(
+#         offset, side, resolution, join_style, mitre_limit
+#     )
+
+#     # Next we need to merge the results:
+#     if offset_ring1.geom_type == "LineString":
+#         return LinearRing(offset_ring2.coords[:] + offset_ring1.coords[1:-1])
+#     else:
+#         # We have more than one resulting LineString for offset of
+#         # the geometry (ring) = offset_ring1.
+#         # Hence we need to find the LineString which belongs to the
+#         # offset of element 0 in coords =offset_ring2
+#         # in order to add offset_ring2 geometry to it:
+#         result_list = []
+#         thresh = constants.offset_factor_for_adjacent_geometry * abs(offset)
+#         for offsets in offset_ring1:
+#             if (
+#                 abs(offsets.coords[0][0] - coords[0][0]) < thresh
+#                 and abs(offsets.coords[0][1] - coords[0][1]) < thresh
+#             ):
+#                 result_list.append(
+#                     LinearRing(offset_ring2.coords[:] + offsets.coords[1:-1])
+#                 )
+#             else:
+#                 result_list.append(LinearRing(offsets))
+#         return MultiLineString(result_list)
 
 
 def take_only_valid_linear_rings(rings):
@@ -99,13 +114,15 @@ def take_only_valid_linear_rings(rings):
             return LinearRing(new_list[0])
         else:
             return MultiLineString(new_list)
-    else:
+    elif rings.geom_type == "LineString" or rings.geom_type == "LinearRing":
         if len(rings.coords) <= 2:
             return LinearRing()
         elif len(rings.coords) == 3 and rings.coords[0] == rings.coords[-1]:
             return LinearRing()
         else:
             return rings
+    else:
+        return LinearRing()
 
 
 def make_tree_uniform_ccw(root):
@@ -223,7 +240,6 @@ def offset_poly(poly, offset, join_style, stitch_distance, min_stitch_distance, 
         outer = offset_linear_ring(
             current_poly.val,
             offset,
-            "left",
             resolution=5,
             join_style=join_style,
             mitre_limit=10,
@@ -234,8 +250,7 @@ def offset_poly(poly, offset, join_style, stitch_distance, min_stitch_distance, 
         for j in range(len(current_holes)):
             inner = offset_linear_ring(
                 current_holes[j].val,
-                offset,
-                "left",
+                -offset,  #take negative offset for holes
                 resolution=5,
                 join_style=join_style,
                 mitre_limit=10,
@@ -246,12 +261,12 @@ def offset_poly(poly, offset, join_style, stitch_distance, min_stitch_distance, 
                 poly_inners.append(Polygon(inner))
         if not outer.is_empty:
             if len(poly_inners) == 0:
-                if outer.geom_type == "LineString":
+                if outer.geom_type == "LineString" or outer.geom_type == "LinearRing":
                     result = Polygon(outer)
                 else:
                     result = MultiPolygon(polygonize(outer))
             else:
-                if outer.geom_type == "LineString":
+                if outer.geom_type == "LineString" or outer.geom_type == "LinearRing":
                     result = Polygon(outer).difference(
                         MultiPolygon(poly_inners))
                 else:
@@ -312,7 +327,7 @@ def offset_poly(poly, offset, join_style, stitch_distance, min_stitch_distance, 
             if previous_hole.parent is None:
                 previous_hole.parent = current_poly
 
-
+    #print(RenderTree(root))
     make_tree_uniform_ccw(root)
 
     if strategy == StitchingStrategy.CLOSEST_POINT:
