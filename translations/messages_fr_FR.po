@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-03-01 02:01+0000\n"
-"PO-Revision-Date: 2022-03-20 02:01\n"
+"PO-Revision-Date: 2022-03-23 02:07\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -1148,16 +1148,16 @@ msgstr "cette colonne satinée n’a pas de commande « point de partage satin�
 
 #: lib/extensions/cutwork_segmentation.py:46
 msgid "Please select one or more stroke elements."
-msgstr ""
+msgstr "Veuillez sélectionner un ou plusieurs éléments de trait."
 
 #: lib/extensions/cutwork_segmentation.py:155
 msgid "Cutwork Group"
-msgstr ""
+msgstr "Groupe cutwork"
 
 #: lib/extensions/cutwork_segmentation.py:163
 #, python-format
 msgid "Needle #%s"
-msgstr ""
+msgstr "Aiguille #%s"
 
 #: lib/extensions/duplicate_params.py:19
 msgid "This function copies Ink/Stitch parameters from the first selected element to the rest of the selection. Please select at least two elements."
@@ -2321,7 +2321,7 @@ msgstr "réaliste"
 
 #: electron/src/renderer/components/Simulator.vue:219
 msgid "render jumps"
-msgstr ""
+msgstr "visualiser les sauts"
 
 #: electron/src/renderer/components/Simulator.vue:263
 msgid "Rendering stitch-plan..."
@@ -2473,88 +2473,88 @@ msgstr "Scinder colonne satin"
 
 #: inx/inkstitch_cutwork_segmentation.inx:3
 msgid "Cutwork segmentation"
-msgstr ""
+msgstr "Segmentation cutwork"
 
 #: inx/inkstitch_cutwork_segmentation.inx:13
 msgid "Cutwork Options"
-msgstr ""
+msgstr "Options cutwork"
 
 #: inx/inkstitch_cutwork_segmentation.inx:15
 msgid "#1"
-msgstr ""
+msgstr "#1"
 
 #: inx/inkstitch_cutwork_segmentation.inx:16
 #: inx/inkstitch_cutwork_segmentation.inx:22
 #: inx/inkstitch_cutwork_segmentation.inx:28
 #: inx/inkstitch_cutwork_segmentation.inx:34
 msgid "start"
-msgstr ""
+msgstr "début"
 
 #: inx/inkstitch_cutwork_segmentation.inx:17
 #: inx/inkstitch_cutwork_segmentation.inx:23
 #: inx/inkstitch_cutwork_segmentation.inx:29
 #: inx/inkstitch_cutwork_segmentation.inx:35
 msgid "end"
-msgstr ""
+msgstr "fin"
 
 #: inx/inkstitch_cutwork_segmentation.inx:18
 #: inx/inkstitch_cutwork_segmentation.inx:24
 #: inx/inkstitch_cutwork_segmentation.inx:30
 #: inx/inkstitch_cutwork_segmentation.inx:36
 msgid "color"
-msgstr ""
+msgstr "couleur"
 
 #: inx/inkstitch_cutwork_segmentation.inx:21
 msgid "#2"
-msgstr ""
+msgstr "#2"
 
 #: inx/inkstitch_cutwork_segmentation.inx:27
 msgid "#3"
-msgstr ""
+msgstr "#3"
 
 #: inx/inkstitch_cutwork_segmentation.inx:33
 msgid "#4"
-msgstr ""
+msgstr "#4"
 
 #: inx/inkstitch_cutwork_segmentation.inx:39
 msgid "Sort elements by color"
-msgstr ""
+msgstr "Trier les éléments par couleur"
 
 #: inx/inkstitch_cutwork_segmentation.inx:40
 msgid "Keep original"
-msgstr ""
+msgstr "Garder l'original"
 
 #: inx/inkstitch_cutwork_segmentation.inx:42
 msgid "Help"
-msgstr ""
+msgstr "Aide"
 
 #: inx/inkstitch_cutwork_segmentation.inx:43
 msgid "This extension separates a path depending on the angle."
-msgstr ""
+msgstr "Cette extension sépare un chemin en fonction de l'angle."
 
 #: inx/inkstitch_cutwork_segmentation.inx:44
 msgid "* If you don't want to use 4 needles, set both angle values to 0 for the rest of the rows."
-msgstr ""
+msgstr "* Si vous ne voulez pas utiliser 4 aiguilles, mettez les deux valeurs d'angle à 0 pour le reste des étapes."
 
 #: inx/inkstitch_cutwork_segmentation.inx:45
 msgid "* A horizontal line has an angle of 0 degrees."
-msgstr ""
+msgstr "* Une ligne horizontale a un angle de 0 degré."
 
 #: inx/inkstitch_cutwork_segmentation.inx:46
 msgid "* After the conversion through this extension, don't rotate your design again."
-msgstr ""
+msgstr "* Après la conversion par cette extension, ne tournez plus votre motif."
 
 #: inx/inkstitch_cutwork_segmentation.inx:48
 msgid "Please adjust angle and color options to your specific needle kit."
-msgstr ""
+msgstr "Veuillez adapter les options d'angle et de couleur à votre kit d'aiguilles spécifique."
 
 #: inx/inkstitch_cutwork_segmentation.inx:49
 msgid "On our website we have collected some common setups."
-msgstr ""
+msgstr "Sur notre site web, nous avons rassemblé quelques configurations courantes."
 
 #: inx/inkstitch_cutwork_segmentation.inx:50
 msgid "https://inkstitch.org/docs/cutwork/"
-msgstr ""
+msgstr "https://inkstitch.org/docs/cutwork/"
 
 #: inx/inkstitch_duplicate_params.inx:3
 msgid "Duplicate Params"
