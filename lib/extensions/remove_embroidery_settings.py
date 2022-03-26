@@ -46,22 +46,21 @@ class RemoveEmbroiderySettings(InkstitchExtension):
 
     def remove_commands(self):
         if not self.svg.selected:
-            # we are not able to grab commands by a specific id
-            # so let's move through every object instead and see if it has a command
-            xpath = ".//svg:path|.//svg:circle|.//svg:rect|.//svg:ellipse"
-            elements = find_elements(self.svg, xpath)
+            # remove intact command groups
+            xpath = ".//svg:g[starts-with(@id,'command_group')]"
+            groups = find_elements(self.svg, xpath)
+            for group in groups:
+                group.getparent().remove(group)
         else:
             elements = self.get_selected_elements()
-
-        if elements:
             for element in elements:
                 for command in find_commands(element):
                     group = command.connector.getparent()
                     group.getparent().remove(group)
 
         if not self.svg.selected:
-            # remove standalone commands
-            standalone_commands = ".//svg:use[starts-with(@xlink:href, '#inkstitch_')]"
+            # remove standalone commands and ungrouped object commands
+            standalone_commands = ".//svg:use[starts-with(@xlink:href, '#inkstitch_')]|.//svg:path[starts-with(@id, 'command_connector')]"
             self.remove_elements(standalone_commands)
 
             # let's remove the symbols (defs), we won't need them in the document

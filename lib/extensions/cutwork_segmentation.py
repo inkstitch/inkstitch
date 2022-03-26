@@ -12,7 +12,7 @@ from shapely.geometry import LineString, Point
 from ..elements import Stroke
 from ..i18n import _
 from ..svg import get_correction_transform
-from ..svg.tags import INKSCAPE_LABEL, SVG_PATH_TAG
+from ..svg.tags import INKSCAPE_LABEL, INKSTITCH_ATTRIBS, SVG_PATH_TAG
 from .base import InkstitchExtension
 
 
@@ -141,6 +141,7 @@ class CutworkSegmentation(InkstitchExtension):
                                        {
                                         "style": color,
                                         "transform": get_correction_transform(element.node),
+                                        INKSTITCH_ATTRIBS["ties"]: "3",
                                         "d": d
                                        })
         self.new_elements.append([stroke_element, sector['id']])
