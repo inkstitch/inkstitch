@@ -15,6 +15,7 @@ from .cutwork_segmentation import CutworkSegmentation
 from .duplicate_params import DuplicateParams
 from .embroider_settings import EmbroiderSettings
 from .flip import Flip
+from .generate_palette import GeneratePalette
 from .global_commands import GlobalCommands
 from .import_threadlist import ImportThreadlist
 from .input import Input
@@ -23,9 +24,9 @@ from .install_custom_palette import InstallCustomPalette
 from .layer_commands import LayerCommands
 from .lettering import Lettering
 from .lettering_custom_font_dir import LetteringCustomFontDir
+from .lettering_force_lock_stitches import LetteringForceLockStitches
 from .lettering_generate_json import LetteringGenerateJson
 from .lettering_remove_kerning import LetteringRemoveKerning
-from .lettering_force_lock_stitches import LetteringForceLockStitches
 from .letters_to_font import LettersToFont
 from .object_commands import ObjectCommands
 from .output import Output
@@ -66,6 +67,7 @@ __all__ = extensions = [StitchPlanPreview,
                         BreakApart,
                         ImportThreadlist,
                         InstallCustomPalette,
+                        GeneratePalette,
                         Simulator,
                         Reorder,
                         DuplicateParams,
