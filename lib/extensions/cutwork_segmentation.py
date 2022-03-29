@@ -5,9 +5,10 @@
 
 from math import atan2, degrees
 
-import inkex
 from lxml import etree
 from shapely.geometry import LineString, Point
+
+import inkex
 
 from ..elements import Stroke
 from ..i18n import _
@@ -142,6 +143,7 @@ class CutworkSegmentation(InkstitchExtension):
                                         "style": color,
                                         "transform": get_correction_transform(element.node),
                                         INKSTITCH_ATTRIBS["ties"]: "3",
+                                        INKSTITCH_ATTRIBS["running_stitch_length_mm"]: "1",
                                         "d": d
                                        })
         self.new_elements.append([stroke_element, sector['id']])
