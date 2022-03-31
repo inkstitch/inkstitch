@@ -7,7 +7,9 @@
         <object-type>all</object-type>
         <effects-menu>
           <submenu name="Ink/Stitch" translatable="no">
-            <submenu name="Thread Color Management" />
+            <submenu name="Thread Color Management">
+              <submenu name="Generate Palette"/>
+            </submenu>
           </submenu>
         </effects-menu>
     </effect>
@@ -21,11 +23,12 @@
       </page>
       <page name="info" gui-text="Help">
         <label appearance="header">Generate a custom color palette for Ink/Stitch</label>
-        <label>Sadly we can not sort color swatches in Inkscape. With this extension color
-        swatches will be exported in the stacking order of selected objects.</label>
+        <label>Sadly we can not sort color swatches in Inkscape.
+               With this extension you can export colors from text elements in their stacking order.
+               The text will be used as the color name and number.</label>
         <separator />
         <label>On our website we describe all necessaty steps to generate a color palette for Ink/Stitch.</label>
-        <label appearance="url">https://inkstitch.org/docs/generate-color-palette/</label>
+        <label appearance="url">https://inkstitch.org/docs/thread-color#generate-color-palette</label>
       </page>
     </param>
     <script>

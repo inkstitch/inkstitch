@@ -30,6 +30,7 @@ from .lettering_remove_kerning import LetteringRemoveKerning
 from .letters_to_font import LettersToFont
 from .object_commands import ObjectCommands
 from .output import Output
+from .palette_split_text import PaletteSplitText
 from .params import Params
 from .print_pdf import Print
 from .remove_embroidery_settings import RemoveEmbroiderySettings
@@ -68,6 +69,7 @@ __all__ = extensions = [StitchPlanPreview,
                         ImportThreadlist,
                         InstallCustomPalette,
                         GeneratePalette,
+                        PaletteSplitText,
                         Simulator,
                         Reorder,
                         DuplicateParams,

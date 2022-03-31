@@ -9,7 +9,6 @@ import sys
 import inkex
 
 from ..i18n import _
-from ..svg.tags import XLINK_HREF
 from ..utils import guess_inkscape_config_path
 from .base import InkstitchExtension
 
@@ -40,52 +39,43 @@ class GeneratePalette(InkstitchExtension):
         else:
             path = os.path.join(guess_inkscape_config_path(), 'palettes')
             if not os.path.isdir(path):
-                inkex.errormsg(_("Ink/Stitch cannot find your palette folder automatically. Please install your palette manually."))
+                inkex.errormsg(_("Ink/Stitch cannot find your palette folder automatically. Please enter the path manually."))
                 sys.exit()
 
-        elements = self.svg.selected
+        elements = self.svg.selected.rendering_order()
 
         if not elements:
-            inkex.errormsg(_("No element selected.\n\nPlease select at least one element with a color swatch fill."))
+            inkex.errormsg(_("No element selected.\n\nPlease select at least one text element with a fill color."))
             sys.exit()
 
-        colors = self._get_swatch_color_from_elements(elements)
+        colors = self._get_color_from_elements(elements)
 
         if not colors:
-            inkex.errormsg(_("We couldn't find any colors in the Inkscape auto-color palette. Please read the instructions on our website."))
+            inkex.errormsg(_("We couldn't find any fill colors on your text elements. Please read the instructions on our website."))
             sys.exit()
 
-        colors = ['GIMP Palette', color_palette_name, '\nColumns: 4', '\n# RGB Value\t\tColor Name   Number'] + colors
+        colors = ['GIMP Palette', color_palette_name, '\nColumns: 4', '\n# RGB Value\t                    Color Name   Number'] + colors
 
         file_path = os.path.join(path, file_name)
         with open(file_path, 'w', encoding='utf-8') as gpl:
             gpl.writelines(colors)
 
-    def _get_swatch_color_from_elements(self, elements):
+    def _get_color_from_elements(self, elements):
         colors = []
         for element in elements:
-            fill = element.style['fill']
-            if not fill.startswith("url"):
+            if 'fill' not in element.style.keys() or type(element) != inkex.TextElement:
                 continue
 
-            # I hope there will be a better way, but for now we seem to have to
-            # grab the first gradient element, which contains a link to the next gradient element
-            # which contains a stop element which reveals the actual color info
-            linear_gradient = inkex.properties.match_url_and_return_element(fill, self.svg)
-            color_name = linear_gradient.get(XLINK_HREF)[1:]
-            xpath = "(.//svg:linearGradient[@id='%s']/svg:stop)[1]" % color_name
-            color = self.document.xpath(xpath, namespaces=inkex.NSS)
-            if color:
-                color = inkex.Color(color[0].style["stop-color"]).to_rgb()
-                color_name = color_name.split("_")
-                if len(color_name) > 1 and color_name[-1].isdigit():
-                    number = color_name[-1]
-                    name = ' '.join(color_name[:-1])
-                else:
-                    name = color_name[0]
-                    number = 0
-                color = "\n%s\t%s\t%s\t%s   %s" % (color[0], color[1], color[2], name, number)
-                colors.append(color)
+            color = inkex.Color(element.style['fill']).to_rgb()
+            color_name = element.get_text().split(' ')
+            if len(color_name) > 1 and color_name[-1].isdigit():
+                number = color_name[-1]
+                name = ' '.join(color_name[:-1])
+            else:
+                number = 0
+                name = ' '.join(color_name)
+            color = "\n%s\t%s\t%s\t%s   %s" % (str(color[0]).rjust(3), str(color[1]).rjust(3), str(color[2]).rjust(3), name.rjust(30), number)
+            colors.append(color)
 
         return colors
 
