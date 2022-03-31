@@ -3,7 +3,7 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from inkex import NSS
+from inkex import NSS, Transform
 
 from .base import InkstitchExtension
 
@@ -19,5 +19,5 @@ class CommandsScaleSymbols(InkstitchExtension):
         svg = self.document.getroot()
         command_symbols = svg.xpath(".//svg:symbol[starts-with(@id,'inkstitch_')]", namespaces=NSS)
         for symbol in command_symbols:
-            transform = "scale(%s, %s)" % (size, size)
-            symbol.set('transform', transform)
+            transform = Transform(symbol.get('transform')).add_scale(size)
+            symbol.set('transform', str(transform))
