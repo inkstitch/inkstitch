@@ -5,10 +5,6 @@ excerpt: ""
 last_modified_at: 2020-10-07
 toc: true
 ---
-## Tips for Ink/Stitch
-Ink/Stitch can work best with designs that are formatted as _paths_. However, many Inkscape tools (such as text and shapes) create _objects_ instead of paths. To use them with Ink/Stitch, you have to convert them by pressing `Shift + Ctrl + C` or selecting `Path > Object to Path` in the menu.
-
-Either Inkscape 0.92 or Inkscape 1 may be used with Ink/Stitch. Most tutorials on this page are based on Inkscape 0.92.
 
 ## Inkscape Basics
 These are the basics you should understand in order to use Ink/Stitch. If you have never used Inkscape before, we recommend following an Inkscape tutorial before using Ink/Stitch.  

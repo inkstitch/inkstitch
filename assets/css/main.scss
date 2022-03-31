@@ -94,6 +94,10 @@ key {
   white-space: nowrap;
 }
 
+code::selection {
+  background: #4300a6;
+}
+
 /* type scale */
 $type-size-1 : 1.3em;
 $type-size-2 : 1.2em;

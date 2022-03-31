@@ -2,7 +2,7 @@
 title: "Thread Color Management"
 permalink: /docs/thread-color/
 excerpt: ""
-last_modified_at: 2021-09-28
+last_modified_at: 2022-03-31
 toc: true
 ---
 ## Import Threadlist
@@ -28,7 +28,7 @@ Threadlists can only be exported through a zip-file ([batch export](/docs/import
 
 In case you own a `.gpl` color list of the threads you are actually using. Make it available in Inkscape with this extension: `Extensions > Ink/Stitch > Thread Color Management > Install custom palette...`. You will need to restart Inkscape after this process.
 
-The .gpl color palettes can be generated with GIMP. 
+The .gpl color palettes can be generated with [Generate Color Palette](#generate-color-palette). 
 
 ## Install Thread Color Palettes for Inkscape
 
@@ -52,3 +52,22 @@ Inkscape palettes are found on the bottom to the right of the color swatches.
 Click on the little arrow to open a list of installed palettes and choose the manufacturer color palette depending on the thread you are willing to use.
 
 The choice will also take effect on the thread names to appear in the print preview.
+
+## Generate Color Palette
+
+This is not a part of an upcoming Ink/Stitch version and not available in Ink/Stitch v2.1.2
+{: .notice--warning }
+
+Inkscape allows to generate `.gpl` color palette files. But it doesn't allow us to order color swatches properly.
+
+This extension will export colors of text elements while using the text as color names and numbers.
+
+1. Import an image with the thread colors you want to use for the color palette.
+2. Activate the text tool and copy & paste the color names (if you have them) or type them in.
+   Use one line for each color.
+   If the last part of a color name is a number, it will be used as the catalog number.
+3. Use `Extensions > Ink/Stitch > Thread Color Management > Generate Palette > Split Text` extension to split a text block with multiple lines into separate text elements.
+4. Activate the color picker tool (D) and color the text elements, while using tab to select one after the other.
+5. Select the text elements and run `Extensions > Ink/Stitch > Thread Color Management > Generate Palette > Generate Color Palette ...`
+6. Specify the name for your color palette and click on apply
+7. Restart Inkscape to activate the new color palette
