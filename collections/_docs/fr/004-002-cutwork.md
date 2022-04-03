@@ -13,19 +13,17 @@ En broderie machine "Cutwork" (ou broderie Richelieu) décrit une  technique où
 
 Ink/Stitch vient avec un outil qui va vous aider à découper vos éléménts selon les angles des aiguilles. c
 
-* Selectionnez un ou plusieusr objets contour. 
-* Opuvrir `Extensions > Ink/Stitch > Segmentation Cutwork`
+* Selectionnez un ou plusieurs objets contour. 
+* Ouvrir `Extensions > Ink/Stitch > Segmentation Cutwork`
   ![Cutwork segmentation window](/assets/images/docs/en/cutwork-segmentation.png)
-* Définir les angles et les colours selon les besoins de votre ensemble d'aiguilles.
-* Appliquer
+* Définir les angles et les couleurs selon les besoins de votre ensemble d'aiguilles.
+* Appliquer.
 
-![Un cercle découpé en morceau par la segmentation Cutwork](/assets/images/docs/cutwork-segmentation.png)
+![Un cercle découpé en morceaux par la segmentation Cutwork](/assets/images/docs/cutwork-segmentation.png)
 
-Il sera parfois necessaire de laisser des espaces sur le périmètre du trou, afin que le tissu découpé reste connecté à la pièce principale. Cela va empecher
+Il sera parfois necessaire de laisser des espaces sur le périmètre du trou, afin que le tissu découpé reste connecté à la pièce principale. Cela empechera la machine de  tirer sur des petits morceaux de tissu découpés.
 
-Sometimes it will be necessary to leave gaps in the border of the hole, so that the cutout fabric stays connected to the main piece. Cela empechera la machie de  tirer sur des petits morceaux de tissu découpés.
-
-**Attention:** Ne pas tourner votre dessin après avoir appliqué cette instruction.
+**Attention:** Ne pas tourner votre dessin après la segmentation.
 {: .notice--warning }
 
 ## Réglages classiques  des aiguilles
