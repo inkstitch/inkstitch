@@ -2,7 +2,7 @@
 title: "Install Ink/Stitch"
 permalink: /fr/docs/install-macos/
 excerpt: "How to quickly install Ink/Stitch."
-last_modified_at: 2022-01-12
+last_modified_at: 2022-04-03
 toc: true
 ---
 {% comment %}
@@ -19,12 +19,20 @@ Téléchargez la dernière version d'Ink/Stitch pour votre version de macOS :
 <p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx.pkg" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Télécharger Ink/Stitch {{ site.github.latest_release.tag_name }} pour macOS<br /><span style="color:lightblue;">Mojave / Catalina / Big Sur / Monterey</span></a></p>
 <p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-sierra-osx.pkg" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Télécharger Ink/Stitch {{ site.github.latest_release.tag_name }} pour macOS<br /><span style="color:lightblue;">El Capitan / Sierra / High Sierra</span></a></p>
 
+Mojave - Monterey: Click on the downloaded file to run the installer.
+
+El Capitan - High Sierra: Ctrl+Click on the downloaded file and click on Open.
+
+Click on Continue.
+
+
+
 **Dernière version:** [Ink/Stitch {{ site.github.latest_release.tag_name }} ({{ site.github.latest_release.published_at | date: "%Y-%m-%d" }})](https://github.com/inkstitch/inkstitch/releases/latest)
 
 ## Installation
 
-**Important:** Ink/Stitch est une extension pour Inkscape. Téléchargez et installez  [Inkscape](https://inkscape.org/release/) Version 1.0.2 ou supérieure avant d'installer Ink/Stitch.
-Make sure, that you have **installed and run Inkscape** before installing Ink/Stitch. Otherwise the installation will fail.
+**Important:** Ink/Stitch est une extension pour Inkscape. Téléchargez et installez  [Inkscape](https://inkscape.org/release/) Version 1.0.2 ou supérieure avant d'installer Ink/Stitch. Vérifiez que vous avez bien **installé et la lancé Inkscape** avant d'installer Ink/Stitch. Sinon l'installation va échouer.
+
 {: .notice--warning}
 
 **Mojave - Monterey:** Lancez l'installateur en cliquant sur le fichier que vous avez téléchargé.
@@ -39,7 +47,7 @@ Cliquez sur `Installer`.
 
 ![Install Ink/Stitch](/assets/images/docs/fr/macos-install/installer02.png)
 
- A l'invitation de saisir votre mot de passe, entrez votre mot de passe utilisateur et  cliquez sur `Installer le logiciel`.
+ A l'invitation de saisir votre mot de passe, entrez votre mot de passe utilisateur et cliquez sur `Installer le logiciel`.
 
 ![Install Ink/Stitch](/assets/images/docs/fr/macos-install/installer03.png)
 
