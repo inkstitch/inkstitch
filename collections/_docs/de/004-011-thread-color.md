@@ -48,3 +48,24 @@ Die Inkscape Farbpaletten befinden sich unten rechts neben den Farbfeldern.
 Klicke auf den kleinen Pfeil, um eine Liste der installierten Paletten zu öffnen und wähle die Herstellerfarbpalette abhängig von dem Garn, das verwendet werden soll.
 
 Die Auswahl wirkt sich auch auf die in der Druckvorschau angezeigten Garnnamen aus.
+
+## Farbpalette generieren
+
+Dieses Feature ist Teil der kommenden Ink/Stitch Version und in Ink/Stitch v2.1.2 noch nicht enthalten.
+{: .notice--warning }
+
+Inkscape kann `.gpl` Farbpaletten erstellen. Aber es ist nicht möglich, die Farben zu sortieren.
+
+Diese Erweiterung exportiert die Farben von Textelementen, während der Text selbst als Farbname und Nummer abgespeichert wird.
+
+1. Import an image with the thread colors you want to use for the color palette.
+2. Activate the text tool and copy & paste the color names (if you have them) or type them in.
+   Use one line for each color.
+   If the last part of a color name is a number, it will be used as the catalog number.
+3. Use `Extensions > Ink/Stitch > Thread Color Management > Generate Palette > Split Text` extension to split a text block with multiple lines into separate text elements.
+4. Activate the color picker tool (D) and color the text elements, while using tab to select the text elements.
+5. Select the text elements and run `Extensions > Ink/Stitch > Thread Color Management > Generate Palette > Generate Color Palette ...`
+6. Specify the name for your color palette and click on apply
+7. Restart Inkscape to activate the new color palette
+
+{% include video id="I5BjjG5T7qo" provider="youtube" %}

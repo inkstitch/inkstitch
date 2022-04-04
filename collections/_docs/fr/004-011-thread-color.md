@@ -71,3 +71,5 @@ Cette extension exportera les couleur d'éléments textuels tout en utilisant le
 4. Activez l'outil pipette (D) et colorez les éléments textuels, en utilisant les tabulation pour passer de l'un à l'autre.
 5. Selectionnez les éléments textuels et  `Extensions > Ink/Stitch > Gestion des couleurs de fil > Generer une palette de couleurs > Generer une palette de couleurs...`
 6. Specifiez le nom de votre palette de couleurs et cliquez sur Appliquer
+
+{% include video id="I5BjjG5T7qo" provider="youtube" %}

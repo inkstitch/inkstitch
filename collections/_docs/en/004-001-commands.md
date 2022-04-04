@@ -2,7 +2,7 @@
 title: "Visual Commands"
 permalink: /docs/commands/
 excerpt: ""
-last_modified_at: 2021-09-28
+last_modified_at: 2022-04-04
 toc: true
 ---
 Visual commands can be used to specify additional information on how to embroider your design. They can be used e.g. to tell the machine to trim the thread after finishing a specific embroidery element or when to pause and where to stop, so you can add a fabric layer to your appliqué design more conventiently.
@@ -68,3 +68,20 @@ Split a Satin Column at the point specified by this command. After attaching run
 Defines the (1) starting or (2) ending point for satin auto route columns. Run "[Auto-route Satin Column...](/docs/satin-tools/#auto-route-satin-columns)" afterwards.
 Use only one starting and one ending point per auto-route operation.
 
+## Display Hide Object Commands
+
+This is part of an upcoming Ink/Stitch version and not available in Ink/Stitch v2.1.2
+{: .notice--warning }
+
+Toggle visibility of object commands. Commands will still be functional when hidden.
+
+`Extensions > Ink/Stitch > Commands > Display|Hide Object Commands`
+
+## Scale Command Symbols
+
+This is part of an upcoming Ink/Stitch version and not available in Ink/Stitch v2.1.2
+{: .notice--warning }
+
+Set the size of command symbols in the entire document: `Extensions > Ink/Stitch > Commands > Scale Command Symbols...`
+
+Use live preview to see the effect while scaling.

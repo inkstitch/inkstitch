@@ -32,7 +32,6 @@ Click on Continue.
 ## Installation
 
 **Important:** Ink/Stitch est une extension pour Inkscape. Téléchargez et installez  [Inkscape](https://inkscape.org/release/) Version 1.0.2 ou supérieure avant d'installer Ink/Stitch. Vérifiez que vous avez bien **installé et la lancé Inkscape** avant d'installer Ink/Stitch. Sinon l'installation va échouer.
-
 {: .notice--warning}
 
 **Mojave - Monterey:** Lancez l'installateur en cliquant sur le fichier que vous avez téléchargé.
