@@ -4,7 +4,6 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import os
-import sys
 
 import inkex
 
@@ -30,29 +29,29 @@ class GeneratePalette(InkstitchExtension):
 
         if not brand:
             inkex.errormsg(_("Please specify a name for your color palette."))
-            sys.exit()
+            return
 
         if path:
             if not os.path.isdir(path):
                 inkex.errormsg(_("Unkown directory path."))
-                sys.exit()
+                return
         else:
             path = os.path.join(guess_inkscape_config_path(), 'palettes')
             if not os.path.isdir(path):
                 inkex.errormsg(_("Ink/Stitch cannot find your palette folder automatically. Please enter the path manually."))
-                sys.exit()
+                return
 
-        elements = self.svg.selected.rendering_order()
+        elements = self.svg.selection.rendering_order()
 
         if not elements:
             inkex.errormsg(_("No element selected.\n\nPlease select at least one text element with a fill color."))
-            sys.exit()
+            return
 
         colors = self._get_color_from_elements(elements)
 
         if not colors:
             inkex.errormsg(_("We couldn't find any fill colors on your text elements. Please read the instructions on our website."))
-            sys.exit()
+            return
 
         colors = ['GIMP Palette', color_palette_name, '\nColumns: 4', '\n# RGB Value\t                    Color Name   Number'] + colors
 
