@@ -9,9 +9,10 @@ import sys
 from base64 import b64decode
 
 import appdirs
-import inkex
 import wx
 import wx.adv
+
+import inkex
 
 from ..elements import nodes_to_elements
 from ..gui import PresetsPanel, SimulatorPreview, info_dialog
@@ -272,12 +273,13 @@ class LetteringFrame(wx.Frame):
             font.render_text(self.settings.text, destination_group, back_and_forth=self.settings.back_and_forth, trim=self.settings.trim)
         except FontError as e:
             if raise_error:
-                inkex.errormsg("Error: Text cannot be applied to the document.\n%s" % e)
+                inkex.errormsg(_("Error: Text cannot be applied to the document.\n%s") % e)
                 return
             else:
                 pass
 
-        if self.settings.scale != 100:
+        # destination_group isn't always the text scaling group (but also the parent group)
+        if self.settings.scale != 100 and destination_group.get(INKSCAPE_LABEL, 'None').startswith("Text scale"):
             destination_group.attrib['transform'] = 'scale(%s)' % (self.settings.scale / 100.0)
 
     def generate_patches(self, abort_early=None):
