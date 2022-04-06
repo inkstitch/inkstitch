@@ -155,7 +155,7 @@ def build_fill_stitch_graph(shape, angle, row_spacing, end_row_spacing, starting
     for segment in segments:
         # networkx allows us to label nodes with arbitrary data.  We'll
         # mark this one as a grating segment.
-        graph.add_edge(*segment, key="segment", underpath_edges=[])
+        graph.add_edge(*segment, key="segment", underpath_edges=[], geometry=shgeo.LineString(segment))
 
     tag_nodes_with_outline_and_projection(graph, shape, graph.nodes())
     add_edges_between_outline_nodes(graph, duplicate_every_other=True)
@@ -334,7 +334,7 @@ def get_segments(graph):
     segments = []
     for start, end, key, data in graph.edges(keys=True, data=True):
         if key == 'segment':
-            segments.append(shgeo.LineString((start, end)))
+            segments.append(data["geometry"])
 
     return segments
 
@@ -373,7 +373,8 @@ def process_travel_edges(graph, fill_stitch_graph, shape, travel_edges):
             # segments that _might_ intersect ls.  Refining the result is
             # necessary but the STRTree still saves us a ton of time.
             if segment.crosses(ls):
-                start, end = segment.coords
+                start = segment.coords[0]
+                end = segment.coords[-1]
                 fill_stitch_graph[start][end]['segment']['underpath_edges'].append(edge)
 
         # The weight of a travel edge is the length of the line segment.
