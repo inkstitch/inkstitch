@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-03-01 02:01+0000\n"
-"PO-Revision-Date: 2022-03-23 02:07\n"
+"POT-Creation-Date: 2022-04-06 01:58+0000\n"
+"PO-Revision-Date: 2022-04-06 02:00\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-01 02:01+0000\n"
+"POT-Creation-Date: 2022-04-06 01:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1167,6 +1167,27 @@ msgstr "Эта функция копирует параметры Ink/Stitch и�
 msgid "Please select one or more satin columns to flip."
 msgstr "Выберите одну или несколько сатиновых колонн для разворота."
 
+#: lib/extensions/generate_palette.py:32
+msgid "Please specify a name for your color palette."
+msgstr ""
+
+#: lib/extensions/generate_palette.py:37
+msgid "Unkown directory path."
+msgstr ""
+
+#: lib/extensions/generate_palette.py:42
+msgid "Ink/Stitch cannot find your palette folder automatically. Please enter the path manually."
+msgstr ""
+
+#: lib/extensions/generate_palette.py:48
+msgid "No element selected.\n\n"
+"Please select at least one text element with a fill color."
+msgstr ""
+
+#: lib/extensions/generate_palette.py:54
+msgid "We couldn't find any fill colors on your text elements. Please read the instructions on our website."
+msgstr ""
+
 #: lib/extensions/import_threadlist.py:33
 msgid "File not found."
 msgstr "Файл не найден."
@@ -1284,6 +1305,10 @@ msgstr "Выберите один или несколько объектов к 
 #: lib/extensions/object_commands.py:29
 msgid "Please choose one or more commands to attach."
 msgstr "Выберите одну или несколько команд для прикрепления."
+
+#: lib/extensions/palette_split_text.py:20
+msgid "Please select one or more text elements to split lines."
+msgstr ""
 
 #: lib/extensions/params.py:208
 msgid "These settings will be applied to 1 object."
@@ -2525,6 +2550,7 @@ msgid "Keep original"
 msgstr ""
 
 #: inx/inkstitch_cutwork_segmentation.inx:42
+#: inx/inkstitch_generate_palette.inx:24
 msgid "Help"
 msgstr ""
 
@@ -2590,6 +2616,53 @@ msgstr "Стежки переходов, меньше указанного зн�
 msgid "Flip Satin Column Rails"
 msgstr "Развернуть направляющие Сатиновой колонны"
 
+#: inx/inkstitch_generate_palette.inx:3
+msgid "Generate Color Palette"
+msgstr ""
+
+#: inx/inkstitch_generate_palette.inx:10 inx/inkstitch_import_threadlist.inx:87
+#: inx/inkstitch_install.inx:10 inx/inkstitch_install_custom_palette.inx:13
+#: inx/inkstitch_palette_split_text.inx:10
+msgid "Thread Color Management"
+msgstr "Управление цветами нитей"
+
+#: inx/inkstitch_generate_palette.inx:11
+#: inx/inkstitch_palette_split_text.inx:11
+msgid "Generate Palette"
+msgstr ""
+
+#: inx/inkstitch_generate_palette.inx:17
+msgid "Generate Palette Options"
+msgstr ""
+
+#: inx/inkstitch_generate_palette.inx:18
+msgid "Palette name"
+msgstr ""
+
+#: inx/inkstitch_generate_palette.inx:20
+msgid "Folder (optional):"
+msgstr ""
+
+#: inx/inkstitch_generate_palette.inx:22
+msgid "⚠ Restart Inkscape to use your color palette."
+msgstr ""
+
+#: inx/inkstitch_generate_palette.inx:25
+msgid "Generate a custom color palette for Ink/Stitch"
+msgstr ""
+
+#: inx/inkstitch_generate_palette.inx:26
+msgid "Sadly we can not sort color swatches in Inkscape. With this extension you can export colors from text elements in their stacking order. The text will be used as the color name and number."
+msgstr ""
+
+#: inx/inkstitch_generate_palette.inx:30
+msgid "On our website we describe all necessaty steps to generate a color palette for Ink/Stitch."
+msgstr ""
+
+#: inx/inkstitch_generate_palette.inx:31
+msgid "https://inkstitch.org/docs/thread-color#generate-color-palette"
+msgstr ""
+
 #: inx/inkstitch_global_commands.inx:3
 msgid "Add Commands"
 msgstr "Добавить команды"
@@ -2623,11 +2696,6 @@ msgstr "Импорт другого списка нитей*"
 #: inx/inkstitch_import_threadlist.inx:11
 msgid "*Choose color palette"
 msgstr "*Выберите палитру цветов"
-
-#: inx/inkstitch_import_threadlist.inx:87 inx/inkstitch_install.inx:10
-#: inx/inkstitch_install_custom_palette.inx:13
-msgid "Thread Color Management"
-msgstr "Управление цветами нитей"
 
 #: inx/inkstitch_input_100.inx:3
 msgid "100 file input"
@@ -3447,6 +3515,14 @@ msgstr "Выходной файл VP3"
 #: inx/inkstitch_output_VP3.inx:9
 msgid "Save design in VP3 format using Ink/Stitch"
 msgstr "Сохранить дизайн в формат VP3 используя Ink/Stitch"
+
+#: inx/inkstitch_palette_split_text.inx:3
+msgid "Split text"
+msgstr ""
+
+#: inx/inkstitch_palette_split_text.inx:16
+msgid "Line Height"
+msgstr ""
 
 #: inx/inkstitch_params.inx:3
 msgid "Params"
