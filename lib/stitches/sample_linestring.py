@@ -63,8 +63,15 @@ def calculate_line_angles(line):
     return Angles
 
 
-def raster_line_string_with_priority_points(line, start_distance, end_distance, maxstitch_distance, minstitch_distance, # noqa: C901
-                                            must_use_points_deque, abs_offset, offset_by_half, replace_forbidden_points):
+def raster_line_string_with_priority_points(line,  # noqa: C901
+                                            start_distance,
+                                            end_distance,
+                                            maxstitch_distance,
+                                            minstitch_distance,
+                                            must_use_points_deque,
+                                            abs_offset,
+                                            offset_by_half,
+                                            replace_forbidden_points):
     """
     Rasters a line between start_distance and end_distance.
     Input:
@@ -94,24 +101,25 @@ def raster_line_string_with_priority_points(line, start_distance, end_distance, 
 
     if start_distance > end_distance:
         start_distance, end_distance = line.length - \
-            start_distance, line.length-end_distance
+                                       start_distance, line.length - end_distance
         linecoords = linecoords[::-1]
         for i in range(len(deque_points)):
             deque_points[i] = (deque_points[i][0],
-                               line.length-deque_points[i][1])
+                               line.length - deque_points[i][1])
     else:
         # Since points with highest priority (=distance along line) are first (descending sorted)
         deque_points = deque_points[::-1]
 
     # Remove all points from the deque which do not fall in the segment [start_distance; end_distance]
-    while (len(deque_points) > 0 and deque_points[0][1] <= start_distance+min(maxstitch_distance/20, minstitch_distance, constants.point_spacing_to_be_considered_equal)):
+    while (len(deque_points) > 0 and
+           deque_points[0][1] <= start_distance + min(maxstitch_distance / 20, minstitch_distance, constants.point_spacing_to_be_considered_equal)):
         deque_points.pop(0)
-    while (len(deque_points) > 0 and deque_points[-1][1] >= end_distance-min(maxstitch_distance/20, minstitch_distance, constants.point_spacing_to_be_considered_equal)):
+    while (len(deque_points) > 0 and
+           deque_points[-1][1] >= end_distance - min(maxstitch_distance / 20, minstitch_distance, constants.point_spacing_to_be_considered_equal)):
         deque_points.pop()
 
-
-# Ordering in priority queue:
-#   (point, LineStringSampling.PointSource), priority)
+    # Ordering in priority queue:
+    #   (point, LineStringSampling.PointSource), priority)
     # might be different from line for stitching_direction=-1
     aligned_line = LineString(linecoords)
     path_coords = substring(aligned_line,
@@ -121,17 +129,17 @@ def raster_line_string_with_priority_points(line, start_distance, end_distance, 
     # I had the strange situation in which the offset "start_distance" from the line beginning
     # resulted in a starting point which was already present in aligned_line causing a doubled point.
     # A double point is not allowed in the following calculations so we need to remove it:
-    if (abs(path_coords.coords[0][0]-path_coords.coords[1][0]) < constants.eps and
-       abs(path_coords.coords[0][1]-path_coords.coords[1][1]) < constants.eps):
+    if (abs(path_coords.coords[0][0] - path_coords.coords[1][0]) < constants.eps and
+            abs(path_coords.coords[0][1] - path_coords.coords[1][1]) < constants.eps):
         path_coords.coords = path_coords.coords[1:]
-    if (abs(path_coords.coords[-1][0]-path_coords.coords[-2][0]) < constants.eps and
-       abs(path_coords.coords[-1][1]-path_coords.coords[-2][1]) < constants.eps):
+    if (abs(path_coords.coords[-1][0] - path_coords.coords[-2][0]) < constants.eps and
+            abs(path_coords.coords[-1][1] - path_coords.coords[-2][1]) < constants.eps):
         path_coords.coords = path_coords.coords[:-1]
 
     angles = calculate_line_angles(path_coords)
     # For the first and last point we cannot calculate an angle. Set it to above the limit to make it a hard edge
-    angles[0] = 1.1*constants.limiting_angle
-    angles[-1] = 1.1*constants.limiting_angle
+    angles[0] = 1.1 * constants.limiting_angle
+    angles[-1] = 1.1 * constants.limiting_angle
 
     current_distance = 0
     last_point = Point(path_coords.coords[0])
@@ -221,7 +229,7 @@ def raster_line_string_with_priority_points(line, start_distance, end_distance, 
             segment_length = merged_point_list[iter][1] - \
                 merged_point_list[segment_start_index][1]
             if segment_length < minstitch_distance and merged_point_list[iter][0].point_source != PointSource.HARD_EDGE_INTERNAL:
-                #We need to create this hard edge exception - otherwise there are some too large deviations posible
+                # We need to create this hard edge exception - otherwise there are some too large deviations posible
                 iter += 1
                 continue
 

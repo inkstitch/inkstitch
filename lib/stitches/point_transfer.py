@@ -1,7 +1,7 @@
 import math
 from collections import namedtuple
 
-from shapely.geometry import LinearRing, LineString, MultiPoint, Point
+from shapely.geometry import LineString, LinearRing, MultiPoint, Point
 from shapely.ops import nearest_points
 
 from ..stitches import constants, sample_linestring

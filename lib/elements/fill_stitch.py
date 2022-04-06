@@ -195,7 +195,8 @@ class FillStitch(EmbroideryElement):
     @param('min_stitch_length_mm',
            _('Minimum fill stitch length'),
            tooltip=_(
-               'The minimum length of a stitch in a row. Larger values might introduce deviations from the desired path. Shorter stitch may be used at the start or end of a row.'),
+               'The minimum length of a stitches in a row. Larger values might introduce deviations from the desired path.'
+               'Shorter stitch may be used at the start or end of a row.'),
            unit='mm',
            sort_index=4,
            select_items=[('fill_method', 1), ('fill_method', 2)],
@@ -599,7 +600,7 @@ class FillStitch(EmbroideryElement):
                 self.angle,
                 self.row_spacing,
                 self.max_stitch_length,
-                min(self.min_stitch_length,self.max_stitch_length),
+                min(self.min_stitch_length, self.max_stitch_length),
                 self.running_stitch_length,
                 self.skip_last,
                 starting_point,

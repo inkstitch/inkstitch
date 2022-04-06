@@ -2,20 +2,17 @@ import networkx
 from depq import DEPQ
 from shapely.geometry import GeometryCollection, LineString, MultiLineString
 from shapely.ops import linemerge, unary_union
-from shapely.strtree import STRtree
 
-from ..debug import debug
-from ..i18n import _
-from ..stitch_plan import Stitch
-from ..svg import PIXELS_PER_MM
-from ..utils.geometry import Point as InkstitchPoint
 from .auto_fill import (add_edges_between_outline_nodes, build_travel_graph,
                         collapse_sequential_outline_edges, fallback,
                         find_stitch_path, graph_is_valid, insert_node,
-                        tag_nodes_with_outline_and_projection, travel,
-                        weight_edges_by_length)
+                        tag_nodes_with_outline_and_projection, travel)
 from .point_transfer import transfer_points_to_surrounding_graph
 from .sample_linestring import raster_line_string_with_priority_points
+from ..debug import debug
+from ..i18n import _
+from ..stitch_plan import Stitch
+from ..utils.geometry import Point as InkstitchPoint
 
 
 @debug.time
@@ -124,7 +121,15 @@ def build_guided_fill_stitch_graph(shape, guideline, row_spacing, starting_point
     return graph
 
 
-def stitch_line(stitches, stitching_direction, geometry, projected_points, max_stitch_length, min_stitch_length, row_spacing, skip_last, offset_by_half):
+def stitch_line(stitches,
+                stitching_direction,
+                geometry,
+                projected_points,
+                max_stitch_length,
+                min_stitch_length,
+                row_spacing,
+                skip_last,
+                offset_by_half):
     if stitching_direction == 1:
         stitched_line, _ = raster_line_string_with_priority_points(
             geometry, 0.0, geometry.length, max_stitch_length, min_stitch_length, projected_points, abs(row_spacing), offset_by_half, True)
@@ -133,7 +138,7 @@ def stitch_line(stitches, stitching_direction, geometry, projected_points, max_s
             geometry, geometry.length, 0.0, max_stitch_length, min_stitch_length, projected_points, abs(row_spacing), offset_by_half, True)
 
     stitches.append(Stitch(*stitched_line[0], tags=('fill_row_start',)))
-    for i in range(1, len(stitched_line)-1):
+    for i in range(1, len(stitched_line) - 1):
         stitches.append(Stitch(*stitched_line[i], tags=('fill_row')))
 
     if not skip_last:

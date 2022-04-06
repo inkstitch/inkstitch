@@ -1,16 +1,18 @@
-from shapely.geometry.polygon import LineString, LinearRing
-from shapely.geometry import Point, MultiPoint
-from shapely.ops import nearest_points
-from collections import namedtuple
-from depq import DEPQ
-import trimesh
-import numpy as np
-from scipy import spatial
 import math
+from collections import namedtuple
+
+import numpy as np
+import trimesh
 from anytree import PreOrderIter
-from ..stitches import sample_linestring
-from ..stitches import point_transfer
+from depq import DEPQ
+from scipy import spatial
+from shapely.geometry import MultiPoint, Point
+from shapely.geometry.polygon import LineString, LinearRing
+from shapely.ops import nearest_points
+
 from ..stitches import constants
+from ..stitches import point_transfer
+from ..stitches import sample_linestring
 
 nearest_neighbor_tuple = namedtuple(
     "nearest_neighbor_tuple",
@@ -889,8 +891,15 @@ def connect_raster_tree_spiral(
                 lineseg = LineString([result_coords[-2], result_coords[-1], own_coords[0], own_coords[1]])
             else:
                 lineseg = LineString([result_coords[-2], result_coords[-1], own_coords[1]])
-            (temp_coords, _) = sample_linestring.raster_line_string_with_priority_points(lineseg, 0, lineseg.length, stitch_distance, min_stitch_distance,
-                                                                                         DEPQ(), abs_offset, offset_by_half, False)
+            (temp_coords, _) = sample_linestring.raster_line_string_with_priority_points(lineseg,
+                                                                                         0,
+                                                                                         lineseg.length,
+                                                                                         stitch_distance,
+                                                                                         min_stitch_distance,
+                                                                                         DEPQ(),
+                                                                                         abs_offset,
+                                                                                         offset_by_half,
+                                                                                         False)
             if len(temp_coords) == 2:  # only start and end point of lineseg was needed
                 result_coords.pop()
                 result_coords_origin.pop()
