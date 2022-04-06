@@ -5,11 +5,11 @@ import numpy as np
 import trimesh
 from anytree import PreOrderIter
 from depq import DEPQ
-from scipy import spatial
 from shapely.geometry import MultiPoint, Point
 from shapely.geometry.polygon import LineString, LinearRing
 from shapely.ops import nearest_points
 
+from ..debug import debug
 from ..stitches import constants
 from ..stitches import point_transfer
 from ..stitches import sample_linestring
@@ -737,61 +737,62 @@ def connect_raster_tree_from_inner_to_outer(tree, used_offset, stitch_distance, 
     return result_coords, result_coords_origin
 
 
-# Partly taken from https://github.com/mikedh/pocketing/blob/master/pocketing/polygons.py
-def interpolate_LinearRings(a, b, start=None, step=.005):
+def orient_linear_ring(ring):
+    if not ring.is_ccw:
+        debug.log("reversing a ring")
+        return LinearRing(reversed(ring.coords))
+    else:
+        return ring
+
+
+def reorder_linear_ring(ring, start):
+    start_index = np.argmin(np.linalg.norm(ring, axis=1))
+    return np.roll(ring, -start_index, axis=0)
+
+
+@debug.time
+def interpolate_linear_rings(ring1, ring2, max_stitch_length, start=None):
     """
     Interpolate between two LinearRings
-    Parameters
-    -------------
-    a : shapely.geometry.Polygon.LinearRing
-        LinearRing start point will lie on
-    b : shapely.geometry.Polygon.LinearRing
-        LinearRing end point will lie on
-    start : (2,) float, or None
-        Point to start at
-    step : float
-        How far apart should points on
-        the path be.
-    Returns
-    -------------
-    path : (n, 2) float
-       Path interpolated between two LinearRings
+
+    Creates a path from start_point on ring1 and around the rings, ending at a
+    nearby point on ring2.  The path will smoothly transition from ring1 to
+    ring2 as it travels around the rings.
+
+    Inspired by interpolate() from https://github.com/mikedh/pocketing/blob/master/pocketing/polygons.py
+
+    Arguments:
+        ring1 -- LinearRing start point will lie on
+        ring2 -- LinearRing end point will lie on
+        max_stitch_length -- maximum stitch length (used to calculate resampling accuracy)
+        start -- Point on ring1 to start at, as a tuple
+
+    Return value: Path interpolated between two LinearRings, as a LineString.
     """
 
-    # resample the first LinearRing so every sample is spaced evenly
-    ra = trimesh.path.traversal.resample_path(
-        a, step=step)
-    if not a.is_ccw:
-        ra = ra[::-1]
+    ring1 = orient_linear_ring(ring1)
+    ring2 = orient_linear_ring(ring2)
 
-    assert trimesh.path.util.is_ccw(ra)
+    # Resample the two LinearRings so that they are the same number of points
+    # long.  Then take the corresponding points in each ring and interpolate
+    # between them, gradually going more toward ring2.
+    #
+    # This is a little less accurate than the method in interpolate(), but several
+    # orders of magnitude faster because we're not building and querying a KDTree.
+
+    num_points = int(20 * ring1.length / max_stitch_length)
+    ring1_resampled = trimesh.path.traversal.resample_path(ring1, count=num_points)
+    ring2_resampled = trimesh.path.traversal.resample_path(ring2, count=num_points)
+
     if start is not None:
-        # find the closest index on LinerRing 'a'
-        # by creating a KDTree
-        tree_a = spatial.cKDTree(ra)
-        index = tree_a.query(start)[1]
-        ra = np.roll(ra, -index, axis=0)
+        ring1_resampled = reorder_linear_ring(ring1_resampled, start)
+        ring2_resampled = reorder_linear_ring(ring2_resampled, start)
 
-    # resample the second LinearRing for even spacing
-    rb = trimesh.path.traversal.resample_path(b,
-                                              step=step)
-    if not b.is_ccw:
-        rb = rb[::-1]
-
-    # we want points on 'b' that correspond index- wise
-    # the resampled points on 'a'
-    tree_b = spatial.cKDTree(rb)
-    # points on b with corresponding indexes to ra
-    pb = rb[tree_b.query(ra)[1]]
-
-    # linearly interpolate between 'a' and 'b'
-    weights = np.linspace(0.0, 1.0, len(ra)).reshape((-1, 1))
-
-    # start on 'a' and end on 'b'
-    points = (ra * (1.0 - weights)) + (pb * weights)
-
+    weights = np.linspace(0.0, 1.0, num_points).reshape((-1, 1))
+    points = (ring1_resampled * (1.0 - weights)) + (ring2_resampled * weights)
     result = LineString(points)
 
+    # TODO: remove when rastering is cheaper
     return result.simplify(constants.simplification_threshold, False)
 
 
@@ -811,7 +812,7 @@ def connect_raster_tree_spiral(
     -close_point: defines the beginning point for stitching
      (stitching starts always from the undisplaced curve)
     -offset_by_half: If true the resulting points are interlaced otherwise not.
-    Returnvalues:
+    Return values:
     -All offsetted curves connected to one spiral and sampled with
      points obeying stitch_distance and offset_by_half
     -Tag (origin) of each point to analyze why a point was
@@ -839,8 +840,7 @@ def connect_raster_tree_spiral(
         ring1 = node.val
         ring2 = node.children[0].val
 
-        part_spiral = interpolate_LinearRings(
-            ring1, ring2, starting_point)
+        part_spiral = interpolate_linear_rings(ring1, ring2, stitch_distance, starting_point)
         node.val = part_spiral
 
     for node in PreOrderIter(tree, stop=lambda n: n.is_leaf):
