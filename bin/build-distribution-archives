@@ -1,5 +1,6 @@
 VERSION="$(echo ${GITHUB_REF} | sed -e 's|refs/heads/||' -e 's|refs/tags/||' -e 's|/|-|g')"
 OS="${BUILD:-$(uname)}"
+ARCH="$(uname -m)"
 mkdir artifacts
 
 if [ "$BUILD" = "osx" ]; then
@@ -7,9 +8,19 @@ if [ "$BUILD" = "osx" ]; then
     # adding version to Info.plist
     sed -i '' 's/0.0.0/'${VERSION}'/' dist/inkstitch.app/Contents/Info.plist
     rm -rf dist/inkstitch/
-    temp_path="/tmp/inkstitch/"
+    # Install location for pkgbuild
+    PKG_INSTALL_PATH="/tmp/inkstitch/"
+    # Checking arch of macos and setting path of electron for arm64 or intel
+    echo "Checking for macOS arch."
+    if [ "${ARCH}" = "arm64" ]; then
+        ELECTRON_BUILD_PATH="electron/build/mac-arm64"
+        echo "found arm64"
+    else
+        ELECTRON_BUILD_PATH="electron/build/mac"
+        echo "found intel"
+    fi
     # inside the scripts folder are:
-    # - preinstaller (checks for previously installed inkstitch and deletes it) and
+    # - preinstaller (checks for previously installed inkstitch and deletes it, Inkscape check with error message) and
     # - postinstaller (moves inkstitch folder from /tmp to user Inkscape extensions folder in $HOME)
     # The postinstaller is a workaround for a proper way to install in user $HOME space
 
@@ -23,7 +34,7 @@ if [ "$BUILD" = "osx" ]; then
         DEV_IDENT="Developer ID Application: Lex Neva (929A568N58)"
         echo "Signing of inkstitch.app"
         # Coyping inkstitch-gui.app into inkstitch
-        ditto electron/build/mac dist/inkstitch.app/Contents/MacOS/electron
+        ditto "${ELECTRON_BUILD_PATH}" dist/inkstitch.app/Contents/MacOS/electron
         # signing the binary may fix notary issue
         /usr/bin/codesign -s "${DEV_IDENT}" \
                         --deep \
@@ -49,7 +60,7 @@ if [ "$BUILD" = "osx" ]; then
                         --identifier org.inkstitch.installer \
                         --version ${VERSION} \
                         --scripts installer_scripts/scripts \
-                        --install-location ${temp_path}inkstitch.app \
+                        --install-location ${PKG_INSTALL_PATH}inkstitch.app \
                         artifacts/inkstitch-${VERSION}-${OS}.pkg
         if [[ "${GITHUB_REF}" =~ ^refs/tags/v[0-9.]+$ || $NOTARIZE_DEVELOPMENT_BUILDS == true ]]; then
             echo "Notary starting"
@@ -61,14 +72,14 @@ if [ "$BUILD" = "osx" ]; then
         fi
     else
         # local builds will not be signed or notarized
-        cp -a electron/build/mac dist/inkstitch.app/Contents/MacOS/electron
+        cp -a "${ELECTRON_BUILD_PATH}" dist/inkstitch.app/Contents/MacOS/electron
         pkgbuild --root dist/inkstitch.app \
                 --component-plist installer_scripts/inkstitch.plist \
                 --ownership recommended \
                 --identifier org.inkstitch.installer \
                 --version ${VERSION} \
                 --scripts installer_scripts/scripts \
-                --install-location ${temp_path}inkstitch.app \
+                --install-location ${PKG_INSTALL_PATH}inkstitch.app \
                 artifacts/inkstitch-${VERSION}-${OS}.pkg
     fi
     # Creating the zip for Drag n' Drop install
