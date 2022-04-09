@@ -2,7 +2,7 @@
 title: "Thread Color Management"
 permalink: /docs/thread-color/
 excerpt: ""
-last_modified_at: 2022-03-31
+last_modified_at: 2022-04-09
 toc: true
 ---
 ## Import Threadlist
@@ -72,4 +72,16 @@ This extension will export colors of text elements while using the text as color
 6. Specify the name for your color palette and click on apply
 7. Restart Inkscape to activate the new color palette
 
-{% include video id="I5BjjG5T7qo" provider="youtube" %}
+{% include video id="4bcRVoKvzAw" provider="youtube" %}
+
+## Palette to Text
+
+This is part of an upcoming Ink/Stitch version and not available in Ink/Stitch v2.1.2
+{: .notice--warning }
+
+Existing palettes can be edited with Ink/Stitch as text.
+
+* Import colors and color names with `Extensions > Ink/Stitch > Thread Color Management > Palette to Text`
+* Change colors, update color names or catalog numbers or add more colors.
+* Export your palette with `Extensions > Ink/Stitch > Thread Color Management > Generate Palette > Generate Color Palette ...`
+* Restart Inkscape

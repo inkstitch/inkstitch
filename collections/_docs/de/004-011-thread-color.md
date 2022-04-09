@@ -58,14 +58,27 @@ Inkscape kann `.gpl` Farbpaletten erstellen. Aber es ist nicht möglich, die Far
 
 Diese Erweiterung exportiert die Farben von Textelementen, während der Text selbst als Farbname und Nummer abgespeichert wird.
 
-1. Import an image with the thread colors you want to use for the color palette.
-2. Activate the text tool and copy & paste the color names (if you have them) or type them in.
-   Use one line for each color.
-   If the last part of a color name is a number, it will be used as the catalog number.
-3. Use `Extensions > Ink/Stitch > Thread Color Management > Generate Palette > Split Text` extension to split a text block with multiple lines into separate text elements.
-4. Activate the color picker tool (D) and color the text elements, while using tab to select the text elements.
-5. Select the text elements and run `Extensions > Ink/Stitch > Thread Color Management > Generate Palette > Generate Color Palette ...`
-6. Specify the name for your color palette and click on apply
-7. Restart Inkscape to activate the new color palette
+1. Importiere ein Bild mit den Garnfarben, die die neue Farbpalette enthalten soll.
+2. Aktiviere das Text-Werkzeug und füge die Farbnamen ein (wenn vorhanden) oder tippe sie ein.
+   Benutze eine Zeile pro Farbe.
+   Wenn der letzte Teil des Farbnamens eine Nummer ist, wird er als Katalognummer interpretiert und abgespeichert.
+3. `Erweiterungen > Ink/Stitch > Garnfarben Verwaltung > Palette generieren > Text aufteilen` teilt den Text in einzelne Textelemente.
+4. Aktiviere das Farbwahl-Werkzeug (D) und färbe die einzelnen Textelemente ein.
+   Nutze dabei die Tabulator-Taste um das jeweils nachfolgende Textelement auszuwählen.
+5. Wähle alle Text-Elemente aus und führe die Funktion `Erweiterungen > Ink/Stitch > Garnfarben Verwaltung > Palette generieren > Farbpalette generieren ...` aus.
+6. Gib einen Namen für die Farbpalette ein und klicke auf Anwenden.
+7. Inkscape neu starten um die neue Farbpalette verfügbar zu machen
 
-{% include video id="I5BjjG5T7qo" provider="youtube" %}
+{% include video id="4bcRVoKvzAw" provider="youtube" %}
+
+## Farbpalette zu Text
+
+Dieses Feature ist Teil der kommenden Ink/Stitch Version und in Ink/Stitch v2.1.2 noch nicht enthalten.
+{: .notice--warning }
+
+Bereits bestehende Farbpaletten können mit Ink/Stitch als Text bearbeitet werden.
+
+* Importiere Farben und Farbnamen mit `Erweiterungen > Ink/Stitch > Garnfarben verwalten > Palette zu Text`
+* Ändere Farben, Farbnamen, Katalognummern oder füge weitere Farben hinzu.
+* Exportiere die Palette mit `Erweiterungen > Ink/Stitch > Garnfarben Verwaltung > Palette generieren > Farbpalette generieren ...`
+* Inkscape neu starten

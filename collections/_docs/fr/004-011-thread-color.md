@@ -72,4 +72,16 @@ Cette extension exportera les couleur d'éléments textuels tout en utilisant le
 5. Selectionnez les éléments textuels et  `Extensions > Ink/Stitch > Gestion des couleurs de fil > Generer une palette de couleurs > Generer une palette de couleurs...`
 6. Specifiez le nom de votre palette de couleurs et cliquez sur Appliquer
 
-{% include video id="I5BjjG5T7qo" provider="youtube" %}
+{% include video id="4bcRVoKvzAw" provider="youtube" %}
+
+## Palette to Text
+
+This is part of an upcoming Ink/Stitch version and not available in Ink/Stitch v2.1.2
+{: .notice--warning }
+
+Existing palettes can be edited with Ink/Stitch as text.
+
+* Import colors and color names with `Extensions > Ink/Stitch > Thread Color Management > Palette to Text`
+* Change colors, update color names or catalog numbers or add more colors.
+* Export your palette with `Extensions > Ink/Stitch > Thread Color Management > Generate Palette > Generate Color Palette ...`
+* Restart Inkscape
