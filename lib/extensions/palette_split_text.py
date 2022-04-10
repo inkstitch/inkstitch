@@ -16,7 +16,7 @@ class PaletteSplitText(InkstitchExtension):
         self.arg_parser.add_argument("-l", "--line-height", type=int, default=6, dest="line_height")
 
     def effect(self):
-        if not self.svg.selected:
+        if not self.svg.selection:
             inkex.errormsg(_("Please select one or more text elements to split lines."))
             return
 

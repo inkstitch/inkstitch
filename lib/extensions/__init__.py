@@ -31,6 +31,7 @@ from .letters_to_font import LettersToFont
 from .object_commands import ObjectCommands
 from .output import Output
 from .palette_split_text import PaletteSplitText
+from .palette_to_text import PaletteToText
 from .params import Params
 from .print_pdf import Print
 from .remove_embroidery_settings import RemoveEmbroiderySettings
@@ -70,6 +71,7 @@ __all__ = extensions = [StitchPlanPreview,
                         InstallCustomPalette,
                         GeneratePalette,
                         PaletteSplitText,
+                        PaletteToText,
                         Simulator,
                         Reorder,
                         DuplicateParams,

@@ -27,7 +27,7 @@
                With this extension you can export colors from text elements in their stacking order.
                The text will be used as the color name and number.</label>
         <separator />
-        <label>On our website we describe all necessaty steps to generate a color palette for Ink/Stitch.</label>
+        <label>On our website we describe all necessary steps to generate a color palette for Ink/Stitch.</label>
         <label appearance="url">https://inkstitch.org/docs/thread-color#generate-color-palette</label>
       </page>
     </param>
