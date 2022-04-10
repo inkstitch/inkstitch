@@ -8,6 +8,7 @@ from lib.extensions.troubleshoot import Troubleshoot
 from .auto_satin import AutoSatin
 from .break_apart import BreakApart
 from .cleanup import Cleanup
+from .commands_scale_symbols import CommandsScaleSymbols
 from .convert_to_satin import ConvertToSatin
 from .convert_to_stroke import ConvertToStroke
 from .cut_satin import CutSatin
@@ -29,6 +30,7 @@ from .lettering_generate_json import LetteringGenerateJson
 from .lettering_remove_kerning import LetteringRemoveKerning
 from .letters_to_font import LettersToFont
 from .object_commands import ObjectCommands
+from .object_commands_toggle_visibility import ObjectCommandsToggleVisibility
 from .output import Output
 from .palette_split_text import PaletteSplitText
 from .palette_to_text import PaletteToText
@@ -51,8 +53,10 @@ __all__ = extensions = [StitchPlanPreview,
                         Flip,
                         SelectionToPattern,
                         ObjectCommands,
+                        ObjectCommandsToggleVisibility,
                         LayerCommands,
                         GlobalCommands,
+                        CommandsScaleSymbols,
                         ConvertToSatin,
                         ConvertToStroke,
                         CutSatin,
