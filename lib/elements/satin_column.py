@@ -6,17 +6,18 @@
 from copy import deepcopy
 from itertools import chain
 
-from inkex import paths
 from shapely import affinity as shaffinity
 from shapely import geometry as shgeo
 from shapely.ops import nearest_points
 
-from .element import EmbroideryElement, param
-from .validation import ValidationError, ValidationWarning
+from inkex import paths
+
 from ..i18n import _
 from ..stitch_plan import StitchGroup
 from ..svg import line_strings_to_csp, point_lists_to_csp
 from ..utils import Point, cache, collapse_duplicate_point, cut
+from .element import EmbroideryElement, param
+from .validation import ValidationError, ValidationWarning
 
 
 class SatinHasFillError(ValidationError):
@@ -48,6 +49,15 @@ class UnequalPointsError(ValidationError):
         _('Rungs control the stitch direction in satin columns.'),
         _('* With the selected object press "P" to activate the pencil tool.'),
         _('* Hold "Shift" while drawing the rung.')
+    ]
+
+
+class NotStitchableError(ValidationError):
+    name = _("Not stitchable satin column")
+    description = _("A satin column consists out of two rails and one or more rungs. This satin column may have a different setup.")
+    steps_to_solve = [
+        _('Make sure your satin column is not a combination of multiple satin columns.'),
+        _('Go to our website and read how a satin column should look like https://inkstitch.org/docs/stitches/satin-column/'),
     ]
 
 
@@ -421,6 +431,9 @@ class SatinColumn(EmbroideryElement):
                     intersection = rung.intersection(rail)
                     if not intersection.is_empty and not isinstance(intersection, shgeo.Point):
                         yield TooManyIntersectionsError(rung.interpolate(0.5, normalized=True))
+
+        if not self.to_stitch_groups():
+            yield NotStitchableError(self.shape.centroid)
 
     def reverse(self):
         """Return a new SatinColumn like this one but in the opposite direction.
@@ -859,7 +872,7 @@ class SatinColumn(EmbroideryElement):
             points.append(Point(split_point.x, split_point.y))
         return [points, split_count]
 
-    def to_stitch_groups(self, last_patch):
+    def to_stitch_groups(self, last_patch=None):
         # Stitch a variable-width satin column, zig-zagging between two paths.
 
         # The algorithm will draw zigzags between each consecutive pair of
@@ -883,5 +896,8 @@ class SatinColumn(EmbroideryElement):
             patch += self.do_e_stitch()
         else:
             patch += self.do_satin()
+
+        if not patch.stitches:
+            return []
 
         return [patch]

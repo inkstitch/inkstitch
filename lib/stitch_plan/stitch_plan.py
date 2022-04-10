@@ -3,9 +3,14 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from .ties import add_ties
-from .color_block import ColorBlock
+from sys import exit
+
+from inkex import errormsg
+
+from ..i18n import _
 from ..svg import PIXELS_PER_MM
+from .color_block import ColorBlock
+from .ties import add_ties
 
 
 def stitch_groups_to_stitch_plan(stitch_groups, collapse_len=None, disable_ties=False):  # noqa: C901
@@ -16,6 +21,11 @@ def stitch_groups_to_stitch_plan(stitch_groups, collapse_len=None, disable_ties=
     * adds tie-ins and tie-offs
     * adds jump-stitches between stitch_group if necessary
     """
+
+    if not stitch_groups:
+        errormsg(_("There is no selected stitchable element. Please run "
+                   "Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects in case you have expected a stitchout."))
+        exit(1)
 
     if collapse_len is None:
         collapse_len = 3.0
