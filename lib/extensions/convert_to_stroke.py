@@ -21,7 +21,7 @@ class ConvertToStroke(InkstitchExtension):
         self.arg_parser.add_argument("-k", "--keep_satin", type=inkex.Boolean, default=False, dest="keep_satin")
 
     def effect(self):
-        if not self.svg.selected or not self.get_elements():
+        if not self.svg.selection or not self.get_elements():
             inkex.errormsg(_("Please select at least one satin column to convert to a running stitch."))
             return
 

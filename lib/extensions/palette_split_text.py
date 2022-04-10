@@ -22,22 +22,21 @@ class PaletteSplitText(InkstitchExtension):
 
         line_height = self.options.line_height
 
-        for text in self.svg.selected:
-            if type(text) == inkex.elements.TextElement:
-                parent = text.getparent()
-                content = text.get_text()
-                lines = content.split('\n')
-                lines.reverse()
-                style = text.get('style')
-                x = text.get('x')
-                y = text.get('y')
-                y = float(y) + (len(lines) - 1) * line_height
-                for line in lines:
-                    element = inkex.TextElement()
-                    element.text = line
-                    element.set('style', style)
-                    element.set('x', x)
-                    element.set('y', str(y))
-                    y = float(y) - line_height
-                    parent.insert(0, element)
-                parent.remove(text)
+        for text in self.svg.selection.get(inkex.elements.TextElement):
+            parent = text.getparent()
+            content = text.get_text()
+            lines = content.split('\n')
+            lines.reverse()
+            style = text.get('style')
+            x = text.get('x')
+            y = text.get('y')
+            y = float(y) + (len(lines) - 1) * line_height
+            for line in lines:
+                element = inkex.TextElement()
+                element.text = line
+                element.set('style', style)
+                element.set('x', x)
+                element.set('y', str(y))
+                y = float(y) - line_height
+                parent.insert(0, element)
+            parent.remove(text)

@@ -7,7 +7,9 @@
         <object-type>all</object-type>
         <effects-menu>
             <submenu name="Ink/Stitch" translatable="no">
-                <submenu name="Commands" />
+                <submenu name="Commands">
+                    <submenu name="View" />
+                </submenu>
             </submenu>
         </effects-menu>
     </effect>

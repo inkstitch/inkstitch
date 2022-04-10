@@ -31,7 +31,7 @@ class ConvertToSatin(InkstitchExtension):
         if not self.get_elements():
             return
 
-        if not self.svg.selected:
+        if not self.svg.selection:
             inkex.errormsg(_("Please select at least one line to convert to a satin column."))
             return
 

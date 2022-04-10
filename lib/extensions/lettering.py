@@ -279,7 +279,9 @@ class LetteringFrame(wx.Frame):
                 pass
 
         # destination_group isn't always the text scaling group (but also the parent group)
-        if self.settings.scale != 100 and destination_group.get(INKSCAPE_LABEL, 'None').startswith("Text scale"):
+        # the text scaling group label is dependend on the user language, so it would break in international file exchange if we used it
+        # scaling (correction transform) on the parent group is already applied, so let's use that for recognition
+        if self.settings.scale != 100 and not destination_group.get('transform', None):
             destination_group.attrib['transform'] = 'scale(%s)' % (self.settings.scale / 100.0)
 
     def generate_patches(self, abort_early=None):
@@ -397,10 +399,10 @@ class Lettering(CommandsExtension):
         self.cancelled = True
 
     def get_or_create_group(self):
-        if self.svg.selected:
+        if self.svg.selection:
             groups = set()
 
-            for node in self.svg.selected.values():
+            for node in self.svg.selection:
                 if node.tag == SVG_GROUP_TAG and INKSTITCH_LETTERING in node.attrib:
                     groups.add(node)
 

@@ -5,8 +5,6 @@
 
 from math import atan, degrees
 
-import inkex
-
 from ..commands import is_command, is_command_symbol
 from ..i18n import _
 from ..svg.path import get_node_transform
@@ -128,7 +126,7 @@ class Clone(EmbroideryElement):
         return patches
 
     def get_clone_style(self, style_name, node, default=None):
-        style = inkex.styles.AttrFallbackStyle(node).get(style_name) or default
+        style = node.style[style_name] or default
         return style
 
     def center(self, source_node):
