@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-04-06 01:58+0000\n"
-"PO-Revision-Date: 2022-04-06 02:00\n"
+"POT-Creation-Date: 2022-04-11 02:02+0000\n"
+"PO-Revision-Date: 2022-04-11 02:04\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-06 01:58+0000\n"
+"POT-Creation-Date: 2022-04-11 02:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1146,15 +1146,15 @@ msgstr "Veuillez sélectionner une ou plusieurs colonnes satin à scinder."
 msgid "this satin column does not have a \"satin column cut point\" command attached to it. Please use the \"Attach commands\" extension and attach the \"Satin Column cut point\" command first."
 msgstr "cette colonne satinée n’a pas de commande « point de partage satin » attachée à elle. Utilisez l’extension « ajouter des commandes » et attachez d’abord la commande « point de partage satin »."
 
-#: lib/extensions/cutwork_segmentation.py:46
+#: lib/extensions/cutwork_segmentation.py:47
 msgid "Please select one or more stroke elements."
 msgstr "Veuillez sélectionner un ou plusieurs éléments de trait."
 
-#: lib/extensions/cutwork_segmentation.py:155
+#: lib/extensions/cutwork_segmentation.py:158
 msgid "Cutwork Group"
 msgstr "Groupe cutwork"
 
-#: lib/extensions/cutwork_segmentation.py:163
+#: lib/extensions/cutwork_segmentation.py:166
 #, python-format
 msgid "Needle #%s"
 msgstr "Aiguille #%s"
@@ -1167,24 +1167,24 @@ msgstr "Cette fonction copie les paramètres de Ink/Stitch du premier élément 
 msgid "Please select one or more satin columns to flip."
 msgstr "Veuillez sélectionner une ou plusieurs colonnes satin pour intervertir leur rails."
 
-#: lib/extensions/generate_palette.py:32
+#: lib/extensions/generate_palette.py:31
 msgid "Please specify a name for your color palette."
 msgstr ""
 
-#: lib/extensions/generate_palette.py:37
+#: lib/extensions/generate_palette.py:36
 msgid "Unkown directory path."
 msgstr ""
 
-#: lib/extensions/generate_palette.py:42
+#: lib/extensions/generate_palette.py:41
 msgid "Ink/Stitch cannot find your palette folder automatically. Please enter the path manually."
 msgstr ""
 
-#: lib/extensions/generate_palette.py:48
+#: lib/extensions/generate_palette.py:47
 msgid "No element selected.\n\n"
 "Please select at least one text element with a fill color."
 msgstr ""
 
-#: lib/extensions/generate_palette.py:54
+#: lib/extensions/generate_palette.py:53
 msgid "We couldn't find any fill colors on your text elements. Please read the instructions on our website."
 msgstr ""
 
@@ -1211,6 +1211,7 @@ msgid "Please chose an other color palette for your design."
 msgstr "Veuillez choisir une autre palette de couleurs pour votre dessin."
 
 #: lib/extensions/install_custom_palette.py:24
+#: lib/extensions/palette_to_text.py:26
 msgid "File does not exist."
 msgstr "Le fichier n'existe pas."
 
@@ -1234,7 +1235,7 @@ msgstr "Lettrage Ink/Stitch"
 msgid "Font"
 msgstr "Police"
 
-#: lib/extensions/lettering.py:65
+#: lib/extensions/lettering.py:65 inx/inkstitch_palette_to_text.inx:15
 msgid "Options"
 msgstr "Options"
 
@@ -1433,7 +1434,7 @@ msgstr "Détails du design"
 msgid "Title"
 msgstr "Titre"
 
-#: lib/extensions/zip.py:103
+#: lib/extensions/zip.py:103 inx/inkstitch_commands_scale_symbols.inx:6
 msgid "Size"
 msgstr "Taille"
 
@@ -2476,6 +2477,17 @@ msgstr "Supprimer les petits points plus courts que le seuil défini."
 msgid "Stroke threshold (px)"
 msgstr "Seuil de suppression de petits traits (px)"
 
+#: inx/inkstitch_commands_scale_symbols.inx:3
+msgid "Scale Command Symbols"
+msgstr ""
+
+#: inx/inkstitch_commands_scale_symbols.inx:11
+#: inx/inkstitch_global_commands.inx:17 inx/inkstitch_layer_commands.inx:14
+#: inx/inkstitch_object_commands.inx:18
+#: inx/inkstitch_object_commands_toggle_visibility.inx:10
+msgid "Commands"
+msgstr "Commandes"
+
 #: inx/inkstitch_convert_to_satin.inx:3
 msgid "Convert Line to Satin"
 msgstr "Convertir ligne en satin"
@@ -2550,7 +2562,7 @@ msgid "Keep original"
 msgstr "Garder l'original"
 
 #: inx/inkstitch_cutwork_segmentation.inx:42
-#: inx/inkstitch_generate_palette.inx:24
+#: inx/inkstitch_generate_palette.inx:24 inx/inkstitch_palette_to_text.inx:19
 msgid "Help"
 msgstr "Aide"
 
@@ -2622,7 +2634,7 @@ msgstr ""
 
 #: inx/inkstitch_generate_palette.inx:10 inx/inkstitch_import_threadlist.inx:87
 #: inx/inkstitch_install.inx:10 inx/inkstitch_install_custom_palette.inx:13
-#: inx/inkstitch_palette_split_text.inx:10
+#: inx/inkstitch_palette_split_text.inx:10 inx/inkstitch_palette_to_text.inx:9
 msgid "Thread Color Management"
 msgstr "Gestion des couleurs de fil"
 
@@ -2656,7 +2668,7 @@ msgid "Sadly we can not sort color swatches in Inkscape. With this extension you
 msgstr ""
 
 #: inx/inkstitch_generate_palette.inx:30
-msgid "On our website we describe all necessaty steps to generate a color palette for Ink/Stitch."
+msgid "On our website we describe all necessary steps to generate a color palette for Ink/Stitch."
 msgstr ""
 
 #: inx/inkstitch_generate_palette.inx:31
@@ -2667,17 +2679,13 @@ msgstr ""
 msgid "Add Commands"
 msgstr "Ajouter des commandes"
 
-#: inx/inkstitch_global_commands.inx:17 inx/inkstitch_layer_commands.inx:14
-#: inx/inkstitch_object_commands.inx:18
-msgid "Commands"
-msgstr "Commandes"
-
 #: inx/inkstitch_import_threadlist.inx:3
 msgid "Import Threadlist"
 msgstr "Importer liste de fils"
 
 #: inx/inkstitch_import_threadlist.inx:6
 #: inx/inkstitch_install_custom_palette.inx:8
+#: inx/inkstitch_palette_to_text.inx:17
 msgid "Choose file"
 msgstr "Choisir fils"
 
@@ -3296,6 +3304,10 @@ msgstr "Importer des commandes"
 msgid "Attach Commands to Selected Objects"
 msgstr "Attacher des commandes à des objets sélectionnés"
 
+#: inx/inkstitch_object_commands_toggle_visibility.inx:3
+msgid "Display|Hide Object Commands"
+msgstr ""
+
 #: inx/inkstitch_output_CSV.inx:3
 msgid "CSV file output"
 msgstr "Sortie en fichier CSV"
@@ -3522,6 +3534,26 @@ msgstr ""
 
 #: inx/inkstitch_palette_split_text.inx:16
 msgid "Line Height"
+msgstr ""
+
+#: inx/inkstitch_palette_to_text.inx:3 inx/inkstitch_palette_to_text.inx:20
+msgid "Palette to text"
+msgstr ""
+
+#: inx/inkstitch_palette_to_text.inx:16
+msgid "Choose a .gpl color palette file to import colors as text elements."
+msgstr ""
+
+#: inx/inkstitch_palette_to_text.inx:21
+msgid "Import a .gpl palette into Inkscape as text elements to edit color entries."
+msgstr ""
+
+#: inx/inkstitch_palette_to_text.inx:23
+msgid "Read more on our webiste:"
+msgstr ""
+
+#: inx/inkstitch_palette_to_text.inx:24
+msgid "https://inkstitch.org/docs/thread-color#palette-to-text"
 msgstr ""
 
 #: inx/inkstitch_params.inx:3
