@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-04-11 02:02+0000\n"
-"PO-Revision-Date: 2022-04-11 02:04\n"
+"PO-Revision-Date: 2022-04-16 01:58\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -2479,7 +2479,7 @@ msgstr "Minimale Länge für Linien (px)"
 
 #: inx/inkstitch_commands_scale_symbols.inx:3
 msgid "Scale Command Symbols"
-msgstr ""
+msgstr "Befehlsymbole skalieren"
 
 #: inx/inkstitch_commands_scale_symbols.inx:11
 #: inx/inkstitch_global_commands.inx:17 inx/inkstitch_layer_commands.inx:14
@@ -2669,7 +2669,7 @@ msgstr "Leider können Farbmuster in Inkscape nicht sortiert werden. Mit dieser 
 
 #: inx/inkstitch_generate_palette.inx:30
 msgid "On our website we describe all necessary steps to generate a color palette for Ink/Stitch."
-msgstr ""
+msgstr "Auf unserer Webseite beschreiben wir alle benötigten Schritte für die Erstellung von Ink/Stitch Farbpaletten."
 
 #: inx/inkstitch_generate_palette.inx:31
 msgid "https://inkstitch.org/docs/thread-color#generate-color-palette"
@@ -3306,7 +3306,7 @@ msgstr "Befehle mit gewählten Objekten verknüpfen"
 
 #: inx/inkstitch_object_commands_toggle_visibility.inx:3
 msgid "Display|Hide Object Commands"
-msgstr ""
+msgstr "Objektbefehle anzeigen|verbergen"
 
 #: inx/inkstitch_output_CSV.inx:3
 msgid "CSV file output"
@@ -3538,23 +3538,23 @@ msgstr "Zeilenhöhe"
 
 #: inx/inkstitch_palette_to_text.inx:3 inx/inkstitch_palette_to_text.inx:20
 msgid "Palette to text"
-msgstr ""
+msgstr "Palette zu Text"
 
 #: inx/inkstitch_palette_to_text.inx:16
 msgid "Choose a .gpl color palette file to import colors as text elements."
-msgstr ""
+msgstr ".gpl-Datei auswählen um Farben als Textelemente zu importieren."
 
 #: inx/inkstitch_palette_to_text.inx:21
 msgid "Import a .gpl palette into Inkscape as text elements to edit color entries."
-msgstr ""
+msgstr "Importiert eine .gpl Farbpalette als bearbeitbare Textelemente."
 
 #: inx/inkstitch_palette_to_text.inx:23
 msgid "Read more on our webiste:"
-msgstr ""
+msgstr "Mehr Infos auf unserer Webseite:"
 
 #: inx/inkstitch_palette_to_text.inx:24
 msgid "https://inkstitch.org/docs/thread-color#palette-to-text"
-msgstr ""
+msgstr "https://inkstitch.org/de/docs/thread-color/#farbpalette-zu-text"
 
 #: inx/inkstitch_params.inx:3
 msgid "Params"
