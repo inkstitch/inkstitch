@@ -4,22 +4,11 @@ set -e
 info_year=$( date "+%Y" )
 site_packages="$(python -c "import os; print(os.path.dirname(os.__file__) + '/site-packages')")"
 arch=$(uname -m)
-if [ "$BUILD" = "linux" ] && [ "$arch" = "x86_64" ]; then
-    # pyinstaller misses these
-    pyinstaller_args+="--add-binary /usr/lib/x86_64-linux-gnu/gio/modules/libgiolibproxy.so:. "
-    pyinstaller_args+="--add-binary  /usr/lib/x86_64-linux-gnu/libproxy.so.1:. "
-    pyinstaller_args+="--add-binary  /lib/x86_64-linux-gnu/libnsl.so.1:. "
-    pyinstaller_args+="--add-binary  /usr/lib/x86_64-linux-gnu/libxcb.so.1:. "
-    echo "adding linux missing binary on x86_64"
-fi
 
-if [ "$BUILD" = "linux" ] && [ "$arch" = "aarch64" ]; then
-	pyinstaller_args+="--add-binary /usr/lib/aarch64-linux-gnu/gio/modules/libgiolibproxy.so:. "
-    pyinstaller_args+="--add-binary  /usr/lib/aarch64-linux-gnu/libproxy.so.1:. "
-    pyinstaller_args+="--add-binary  /lib/aarch64-linux-gnu/libnsl.so.1:. "
-    pyinstaller_args+="--add-binary  /usr/lib/aarch64-linux-gnu/libxcb.so.1:. "
-    echo "adding linux missing binary on aarch64"
-fi
+pyinstaller_args+="--add-binary /usr/lib/"$arch"-linux-gnu/gio/modules/libgiolibproxy.so:. "
+pyinstaller_args+="--add-binary  /usr/lib/"$arch"-linux-gnu/libproxy.so.1:. "
+pyinstaller_args+="--add-binary  /lib/"$arch"-linux-gnu/libnsl.so.1:. "
+pyinstaller_args+="--add-binary  /usr/lib/"$arch"-linux-gnu/libxcb.so.1:. "
 
 # This one's tricky.  ink/stitch doesn't actually _use_ gi.repository.Gtk,
 # but it does use GTK (through wxPython).  pyinstaller has some special
