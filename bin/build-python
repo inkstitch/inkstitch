@@ -4,7 +4,7 @@ set -e
 info_year=$( date "+%Y" )
 site_packages="$(python -c "import os; print(os.path.dirname(os.__file__) + '/site-packages')")"
 arch=$(uname -m)
-if [ "$BUILD" = "linux" ] then
+if [ "$BUILD" = "linux" ]; then
     pyinstaller_args+="--add-binary /usr/lib/"$arch"-linux-gnu/gio/modules/libgiolibproxy.so:. "
     pyinstaller_args+="--add-binary  /usr/lib/"$arch"-linux-gnu/libproxy.so.1:. "
     pyinstaller_args+="--add-binary  /lib/"$arch"-linux-gnu/libnsl.so.1:. "
