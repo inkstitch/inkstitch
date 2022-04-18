@@ -174,6 +174,8 @@ class Troubleshoot(InkstitchExtension):
                 text.append([problem.name, "font-weight: bold; fill: %s;" % text_color])
                 text.append([problem.description, "font-size: 3px;"])
                 text.append(["", ""])
+                if problem.steps_to_solve:
+                    text.append([_("Possible solutions"), "font-weight: bold; text-decoration: underline; font-size: 4px;"])
                 for step in problem.steps_to_solve:
                     text.append([step, "font-size: 4px;"])
                 text.append(["", ""])

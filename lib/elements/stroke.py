@@ -77,7 +77,8 @@ class Stroke(EmbroideryElement):
            default="1",
            sort_index=1)
     def repeats(self):
-        return self.get_int_param("repeats", 1)
+        repeats = self.get_int_param("repeats", 1)
+        return max(1, repeats)
 
     @property
     def paths(self):
