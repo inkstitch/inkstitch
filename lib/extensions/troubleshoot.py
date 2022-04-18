@@ -128,7 +128,7 @@ class Troubleshoot(InkstitchExtension):
         self.warning_group = warning_group
         self.type_warning_group = type_warning_group
 
-    def add_descriptions(self, problem_types):
+    def add_descriptions(self, problem_types):  # noqa: C901
         svg = self.document.getroot()
 
         # We could use svg.viewport_width, but then we would need to do unit conversions,
