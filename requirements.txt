@@ -19,7 +19,6 @@ stringcase
 tinycss2
 flask
 fonttools
-anytree
 depq
 trimesh
 scipy==1.7.3

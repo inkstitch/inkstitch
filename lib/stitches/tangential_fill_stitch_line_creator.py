@@ -1,6 +1,6 @@
 from enum import IntEnum
 
-from anytree import AnyNode, LevelOrderGroupIter, PreOrderIter
+import networkx as nx
 from depq import DEPQ
 from shapely.geometry import MultiLineString, Polygon
 from shapely.geometry import MultiPolygon
@@ -10,6 +10,13 @@ from shapely.ops import polygonize
 
 from ..stitches import constants
 from ..stitches import tangential_fill_stitch_pattern_creator
+from ..utils import DotDict
+
+
+class Tree(nx.DiGraph):
+    # This lets us do tree.nodes['somenode'].parent instead of the default
+    # tree.nodes['somenode']['parent'].
+    node_attr_dict_factory = DotDict
 
 
 def offset_linear_ring(ring, offset, resolution, join_style, mitre_limit):
@@ -126,15 +133,15 @@ def take_only_valid_linear_rings(rings):
         return LinearRing()
 
 
-def make_tree_uniform_ccw(root):
+def make_tree_uniform_ccw(tree):
     """
     Since naturally holes have the opposite point ordering than non-holes we
     make all lines within the tree "root" uniform (having all the same
     ordering direction)
     """
-    for node in PreOrderIter(root):
-        if node.id == "hole":
-            node.val.coords = list(node.val.coords)[::-1]
+    for node in nx.dfs_preorder_nodes(tree, 'root'):
+        if tree.nodes[node].type == "hole":
+            tree.nodes[node].val = LinearRing(reversed(tree.nodes[node].val.coords))
 
 
 # Used to define which stitching strategy shall be used
@@ -144,7 +151,7 @@ class StitchingStrategy(IntEnum):
     SPIRAL = 2
 
 
-def check_and_prepare_tree_for_valid_spiral(root):
+def check_and_prepare_tree_for_valid_spiral(tree):
     """
     Takes a tree consisting of offsetted curves. If a parent has more than one child we
     cannot create a spiral. However, to make the routine more robust, we allow more than
@@ -153,27 +160,34 @@ def check_and_prepare_tree_for_valid_spiral(root):
     childs. If the routine returns false even under the mentioned weaker conditions the
     tree cannot be connected by one spiral.
     """
-    for children in LevelOrderGroupIter(root):
-        if len(children) > 1:
-            count = 0
-            child_with_children = None
-            for child in children:
-                if not child.is_leaf:
-                    count += 1
-                    child_with_children = child
-            if count > 1:
+
+    def process_node(node):
+        children = set(tree[node])
+
+        if len(children) == 0:
+            return True
+        elif len(children) == 1:
+            child = children.pop()
+            return process_node(child)
+        else:
+            children_with_children = {child for child in children if tree[child]}
+            if len(children_with_children) > 1:
+                # Node has multiple children with children, so a perfect spiral is not possible.
+                # This False value will be returned all the way up the stack.
                 return False
-            elif count == 1:
-                child_with_children.parent.children = [child_with_children]
-            else:  # count == 0 means all childs have no children so we take only the longest child
-                max_length = 0
-                longest_child = None
-                for child in children:
-                    if child.val.length > max_length:
-                        max_length = child.val.length
-                        longest_child = child
-                longest_child.parent.children = [longest_child]
-    return True
+            elif len(children_with_children) == 1:
+                children_without_children = children - children_with_children
+                child = children_with_children.pop()
+                tree.remove_nodes_from(children_without_children)
+                return process_node(child)
+            else:
+                # None of the children has its own children, so we'll just take the longest.
+                longest = max(children, key=lambda child: tree[child]['val'].length)
+                shorter_children = children - {longest}
+                tree.remove_nodes_from(shorter_children)
+                return process_node(longest)
+
+    return process_node('root')
 
 
 def offset_poly(poly, offset, join_style, stitch_distance, min_stitch_distance, offset_by_half, strategy, starting_point):  # noqa: C901
@@ -213,25 +227,29 @@ def offset_poly(poly, offset, join_style, stitch_distance, min_stitch_distance, 
     ordered_poly = orient(poly, -1)
     ordered_poly = ordered_poly.simplify(
         constants.simplification_threshold, False)
-    root = AnyNode(
-        id="node",
-        val=ordered_poly.exterior,
-        already_rastered=False,
-        transferred_point_priority_deque=DEPQ(iterable=None, maxlen=None),
-    )
-    active_polys = [root]
+    tree = Tree()
+    tree.add_node('root',
+                  type='node',
+                  parent=None,
+                  val=ordered_poly.exterior,
+                  already_rastered=False,
+                  transferred_point_priority_deque=DEPQ(iterable=None, maxlen=None),
+                  )
+    active_polys = ['root']
     active_holes = [[]]
 
-    for holes in ordered_poly.interiors:
-        active_holes[0].append(
-            AnyNode(
-                id="hole",
-                val=holes,
-                already_rastered=False,
-                transferred_point_priority_deque=DEPQ(
-                    iterable=None, maxlen=None),
-            )
-        )
+    # We don't care about the names of the nodes, we just need them to be unique.
+    node_num = 0
+
+    for hole in ordered_poly.interiors:
+        tree.add_node(node_num,
+                      type="hole",
+                      val=hole,
+                      already_rastered=False,
+                      transferred_point_priority_deque=DEPQ(iterable=None, maxlen=None),
+                      )
+        active_holes[0].append(node_num)
+        node_num += 1
 
     while len(active_polys) > 0:
         current_poly = active_polys.pop()
@@ -239,7 +257,7 @@ def offset_poly(poly, offset, join_style, stitch_distance, min_stitch_distance, 
         poly_inners = []
 
         outer = offset_linear_ring(
-            current_poly.val,
+            tree.nodes[current_poly].val,
             offset,
             resolution=5,
             join_style=join_style,
@@ -248,9 +266,9 @@ def offset_poly(poly, offset, join_style, stitch_distance, min_stitch_distance, 
         outer = outer.simplify(constants.simplification_threshold, False)
         outer = take_only_valid_linear_rings(outer)
 
-        for j in range(len(current_holes)):
+        for hole in current_holes:
             inner = offset_linear_ring(
-                current_holes[j].val,
+                tree.nodes[hole].val,
                 -offset,  # take negative offset for holes
                 resolution=5,
                 join_style=join_style,
@@ -275,11 +293,10 @@ def offset_poly(poly, offset, join_style, stitch_distance, min_stitch_distance, 
                         MultiPolygon(poly_inners))
 
             if not result.is_empty and result.area > offset * offset / 10:
-                result_list = []
                 if result.geom_type == "Polygon":
                     result_list = [result]
                 else:
-                    result_list = list(result)
+                    result_list = list(result.geoms)
 
                 for polygon in result_list:
                     polygon = orient(polygon, -1)
@@ -295,29 +312,31 @@ def offset_poly(poly, offset, join_style, stitch_distance, min_stitch_distance, 
                     if poly_coords.is_empty:
                         continue
 
-                    node = AnyNode(
-                        id="node",
-                        parent=current_poly,
-                        val=poly_coords,
-                        already_rastered=False,
-                        transferred_point_priority_deque=DEPQ(
-                            iterable=None, maxlen=None
-                        ),
-                    )
+                    node = node_num
+                    node_num += 1
+                    tree.add_node(node,
+                                  type='node',
+                                  parent=current_poly,
+                                  val=poly_coords,
+                                  already_rastered=False,
+                                  transferred_point_priority_deque=DEPQ(iterable=None, maxlen=None),
+                                  )
+                    tree.add_edge(current_poly, node)
                     active_polys.append(node)
                     hole_node_list = []
                     for hole in polygon.interiors:
-                        hole_node = AnyNode(
-                            id="hole",
-                            val=hole,
-                            already_rastered=False,
-                            transferred_point_priority_deque=DEPQ(
-                                iterable=None, maxlen=None
-                            ),
-                        )
+                        hole_node = node_num
+                        node_num += 1
+                        tree.add_node(hole_node,
+                                      type="hole",
+                                      val=hole,
+                                      already_rastered=False,
+                                      transferred_point_priority_deque=DEPQ(iterable=None, maxlen=None),
+                                      )
                         for previous_hole in current_holes:
-                            if Polygon(hole).contains(Polygon(previous_hole.val)):
-                                previous_hole.parent = hole_node
+                            if Polygon(hole).contains(Polygon(tree.nodes[previous_hole].val)):
+                                tree.nodes[previous_hole].parent = hole_node
+                                tree.add_edge(hole_node, previous_hole)
                         hole_node_list.append(hole_node)
                     active_holes.append(hole_node_list)
         for previous_hole in current_holes:
@@ -325,23 +344,23 @@ def offset_poly(poly, offset, join_style, stitch_distance, min_stitch_distance, 
             # contained in the new holes they
             # have been merged with the
             # outer polygon
-            if previous_hole.parent is None:
-                previous_hole.parent = current_poly
+            if tree.nodes[previous_hole].parent is None:
+                tree.nodes[previous_hole].parent = current_poly
+                tree.add_edge(current_poly, previous_hole)
 
-    # print(RenderTree(root))
-    make_tree_uniform_ccw(root)
+    make_tree_uniform_ccw(tree)
 
     if strategy == StitchingStrategy.CLOSEST_POINT:
         (connected_line, connected_line_origin) = tangential_fill_stitch_pattern_creator.connect_raster_tree_nearest_neighbor(
-            root, offset, stitch_distance, min_stitch_distance, starting_point, offset_by_half)
+            tree, 'root', offset, stitch_distance, min_stitch_distance, starting_point, offset_by_half)
     elif strategy == StitchingStrategy.INNER_TO_OUTER:
         (connected_line, connected_line_origin) = tangential_fill_stitch_pattern_creator.connect_raster_tree_from_inner_to_outer(
-            root, offset, stitch_distance, min_stitch_distance, starting_point, offset_by_half)
+            tree, 'root', offset, stitch_distance, min_stitch_distance, starting_point, offset_by_half)
     elif strategy == StitchingStrategy.SPIRAL:
-        if not check_and_prepare_tree_for_valid_spiral(root):
+        if not check_and_prepare_tree_for_valid_spiral(tree):
             raise ValueError("Geometry cannot be filled with one spiral!")
         (connected_line, connected_line_origin) = tangential_fill_stitch_pattern_creator.connect_raster_tree_spiral(
-            root, offset, stitch_distance, min_stitch_distance, starting_point, offset_by_half)
+            tree, offset, stitch_distance, min_stitch_distance, starting_point, offset_by_half)
     else:
         raise ValueError("Invalid stitching stratety!")
 

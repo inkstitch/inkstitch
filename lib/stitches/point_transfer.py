@@ -15,7 +15,7 @@ projected_point_tuple = namedtuple(
 
 def calc_transferred_point(bisectorline, child):
     """
-    Calculates the nearest interserction point of "bisectorline" with the coordinates of child (child.val).
+    Calculates the nearest intersection point of "bisectorline" with the coordinates of child (child.val).
     It returns the intersection point and its distance along the coordinates of the child or "None, None" if no
     intersection was found.
     """
@@ -39,7 +39,7 @@ def calc_transferred_point(bisectorline, child):
     return point, priority
 
 
-def transfer_points_to_surrounding(treenode, used_offset, offset_by_half, to_transfer_points,  to_transfer_points_origin=[],  # noqa: C901
+def transfer_points_to_surrounding(tree, node, used_offset, offset_by_half, to_transfer_points, to_transfer_points_origin=[],  # noqa: C901
                                    overnext_neighbor=False, transfer_forbidden_points=False,
                                    transfer_to_parent=True, transfer_to_sibling=True, transfer_to_child=True):
     """
@@ -64,18 +64,24 @@ def transfer_points_to_surrounding(treenode, used_offset, offset_by_half, to_tra
     index of point_origin is the index of the point in the neighboring line
     """
 
-    assert(len(to_transfer_points) == len(to_transfer_points_origin)
-           or len(to_transfer_points_origin) == 0)
-    assert((overnext_neighbor and not offset_by_half) or not overnext_neighbor)
-    assert(not transfer_forbidden_points or transfer_forbidden_points and (
-        offset_by_half or not offset_by_half and overnext_neighbor))
+    assert (len(to_transfer_points) == len(to_transfer_points_origin)
+            or len(to_transfer_points_origin) == 0)
+    assert ((overnext_neighbor and not offset_by_half) or not overnext_neighbor)
+    assert (not transfer_forbidden_points or transfer_forbidden_points and (
+            offset_by_half or not offset_by_half and overnext_neighbor))
 
     if len(to_transfer_points) < 3:
         return
 
+    current_node = tree.nodes[node]
+
     # Get a list of all possible adjacent nodes which will be considered for transferring the points of treenode:
-    childs_tuple = treenode.children
-    siblings_tuple = treenode.siblings
+    childs_tuple = tuple(tree.successors(node))
+    if current_node.parent:
+        siblings_tuple = tuple(child for child in tree[current_node.parent] if child != node)
+    else:
+        siblings_tuple = ()
+
     # Take only neighbors which have not rastered before
     # We need to distinguish between childs (project towards inner) and parent/siblings (project towards outer)
     child_list = []
@@ -85,38 +91,39 @@ def transfer_points_to_surrounding(treenode, used_offset, offset_by_half, to_tra
 
     if transfer_to_child:
         for child in childs_tuple:
-            if not child.already_rastered:
+            if not tree.nodes[child].already_rastered:
                 if not overnext_neighbor:
                     child_list.append(child)
                 if transfer_forbidden_points:
                     child_list_forbidden.append(child)
             if overnext_neighbor:
-                for subchild in child.children:
-                    if not subchild.already_rastered:
-                        child_list.append(subchild)
+                for grandchild in tree[child]:
+                    if not tree.nodes[grandchild].already_rastered:
+                        child_list.append(grandchild)
 
     if transfer_to_sibling:
         for sibling in siblings_tuple:
-            if not sibling.already_rastered:
+            if not tree.nodes[sibling].already_rastered:
                 if not overnext_neighbor:
                     neighbor_list.append(sibling)
                 if transfer_forbidden_points:
                     neighbor_list_forbidden.append(sibling)
             if overnext_neighbor:
-                for subchild in sibling.children:
-                    if not subchild.already_rastered:
-                        neighbor_list.append(subchild)
+                for nibling in tree[sibling]:
+                    if not tree.nodes[nibling].already_rastered:
+                        neighbor_list.append(nibling)
 
-    if transfer_to_parent and treenode.parent is not None:
-        if not treenode.parent.already_rastered:
+    if transfer_to_parent and current_node.parent is not None:
+        if not tree.nodes[current_node.parent].already_rastered:
             if not overnext_neighbor:
-                neighbor_list.append(treenode.parent)
+                neighbor_list.append(current_node.parent)
             if transfer_forbidden_points:
-                neighbor_list_forbidden.append(treenode.parent)
+                neighbor_list_forbidden.append(current_node.parent)
         if overnext_neighbor:
-            if treenode.parent.parent is not None:
-                if not treenode.parent.parent.already_rastered:
-                    neighbor_list.append(treenode.parent.parent)
+            grandparent = tree.nodes[current_node].parent
+            if grandparent is not None:
+                if not tree.nodes[grandparent].already_rastered:
+                    neighbor_list.append(grandparent)
 
     if not neighbor_list and not child_list:
         return
@@ -130,7 +137,7 @@ def transfer_points_to_surrounding(treenode, used_offset, offset_by_half, to_tra
     closed_line = LineString(to_transfer_points)
     if point_list[0].distance(point_list[-1]) < constants.point_spacing_to_be_considered_equal:
         point_list.pop()
-        if(point_source_list):
+        if point_source_list:
             point_source_list.pop()
         if len(point_list) == 0:
             return
@@ -243,34 +250,35 @@ def transfer_points_to_surrounding(treenode, used_offset, offset_by_half, to_tra
                                                              originPoint_forbidden_point.coords[0][1]-vecy_forbidden_point)])
 
         for child in child_list:
-            point, priority = calc_transferred_point(bisectorline_child, child)
+            current_child = tree.nodes[child]
+            point, priority = calc_transferred_point(bisectorline_child, current_child)
             if point is None:
                 continue
-            child.transferred_point_priority_deque.insert(projected_point_tuple(
+            current_child.transferred_point_priority_deque.insert(projected_point_tuple(
                 point=point, point_source=sample_linestring.PointSource.OVERNEXT if overnext_neighbor
                 else sample_linestring.PointSource.DIRECT), priority)
         for child in child_list_forbidden:
-            point, priority = calc_transferred_point(
-                bisectorline_forbidden_point_child, child)
+            current_child = tree.nodes[child]
+            point, priority = calc_transferred_point(bisectorline_forbidden_point_child, current_child)
             if point is None:
                 continue
-            child.transferred_point_priority_deque.insert(projected_point_tuple(
+            current_child.transferred_point_priority_deque.insert(projected_point_tuple(
                 point=point, point_source=sample_linestring.PointSource.FORBIDDEN_POINT), priority)
 
         for neighbor in neighbor_list:
-            point, priority = calc_transferred_point(
-                bisectorline_neighbor, neighbor)
+            current_neighbor = tree.nodes[neighbor]
+            point, priority = calc_transferred_point(bisectorline_neighbor, current_neighbor)
             if point is None:
                 continue
-            neighbor.transferred_point_priority_deque.insert(projected_point_tuple(
+            current_neighbor.transferred_point_priority_deque.insert(projected_point_tuple(
                 point=point, point_source=sample_linestring.PointSource.OVERNEXT if overnext_neighbor
                 else sample_linestring.PointSource.DIRECT), priority)
         for neighbor in neighbor_list_forbidden:
-            point, priority = calc_transferred_point(
-                bisectorline_forbidden_point_neighbor, neighbor)
+            current_neighbor = tree.nodes[neighbor]
+            point, priority = calc_transferred_point(bisectorline_forbidden_point_neighbor, current_neighbor)
             if point is None:
                 continue
-            neighbor.transferred_point_priority_deque.insert(projected_point_tuple(
+            current_neighbor.transferred_point_priority_deque.insert(projected_point_tuple(
                 point=point, point_source=sample_linestring.PointSource.FORBIDDEN_POINT), priority)
 
         i += 1
