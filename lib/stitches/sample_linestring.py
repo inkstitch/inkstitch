@@ -1,4 +1,3 @@
-import math
 from enum import IntEnum
 
 import numpy as np
@@ -47,20 +46,19 @@ def calculate_line_angles(line):
     Note that the first and last values in the return array are zero since for the boundary points no
     angle calculations were possible
     """
-    Angles = np.zeros(len(line.coords))
-    for i in range(1, len(line.coords)-1):
-        vec1 = np.array(line.coords[i])-np.array(line.coords[i-1])
-        vec2 = np.array(line.coords[i+1])-np.array(line.coords[i])
-        vec1length = np.linalg.norm(vec1)
-        vec2length = np.linalg.norm(vec2)
+    angles = np.zeros(len(line.coords))
 
-        assert(vec1length > 0)
-        assert(vec2length > 0)
-        scalar_prod = np.dot(vec1, vec2)/(vec1length*vec2length)
-        scalar_prod = min(max(scalar_prod, -1), 1)
+    # approach from https://stackoverflow.com/a/50772253/4249120
+    vectors = np.diff(line.coords, axis=0)
+    v1 = vectors[:-1]
+    v2 = vectors[1:]
+    dot = np.einsum('ij,ij->i', v1, v2)
+    mag1 = np.linalg.norm(v1, axis=1)
+    mag2 = np.linalg.norm(v2, axis=1)
+    cosines = dot / (mag1 * mag2)
+    angles[1:-1] = np.arccos(np.clip(cosines, -1, 1))
 
-        Angles[i] = math.acos(scalar_prod)
-    return Angles
+    return angles
 
 
 def raster_line_string_with_priority_points(line,  # noqa: C901
