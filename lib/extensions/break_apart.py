@@ -27,7 +27,7 @@ class BreakApart(InkstitchExtension):
         self.minimum_size = 5
 
     def effect(self):  # noqa: C901
-        if not self.svg.selected:
+        if not self.svg.selection:
             inkex.errormsg(_("Please select one or more fill areas to break apart."))
             return
 

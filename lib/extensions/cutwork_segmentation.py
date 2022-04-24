@@ -43,7 +43,7 @@ class CutworkSegmentation(InkstitchExtension):
         self.arg_parser.add_argument("-k", "--keep_original", type=inkex.Boolean, default=False, dest="keep_original")
 
     def effect(self):
-        if not self.svg.selected:
+        if not self.svg.selection:
             inkex.errormsg(_("Please select one or more stroke elements."))
             return
 

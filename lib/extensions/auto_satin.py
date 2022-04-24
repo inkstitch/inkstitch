@@ -44,7 +44,7 @@ class AutoSatin(CommandsExtension):
         if not self.get_elements():
             return
 
-        if not self.svg.selected:
+        if not self.svg.selection:
             # L10N auto-route satin columns extension
             inkex.errormsg(_("Please select one or more satin columns."))
             return False

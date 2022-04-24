@@ -87,14 +87,14 @@ class Font(object):
 
     def _load_metadata(self):
         try:
-            with open(os.path.join(self.path, "font.json"), encoding="utf-8") as metadata_file:
+            with open(os.path.join(self.path, "font.json"), encoding="utf-8-sig") as metadata_file:
                 self.metadata = json.load(metadata_file)
         except IOError:
             pass
 
     def _load_license(self):
         try:
-            with open(os.path.join(self.path, "LICENSE"), encoding="utf-8") as license_file:
+            with open(os.path.join(self.path, "LICENSE"), encoding="utf-8-sig") as license_file:
                 self.license = license_file.read()
         except IOError:
             pass

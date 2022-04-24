@@ -24,7 +24,7 @@ class Cleanup(InkstitchExtension):
         self.fill_threshold = self.options.fill_threshold
         self.stroke_threshold = self.options.stroke_threshold
 
-        self.svg.selected.clear()
+        self.svg.selection.clear()
 
         count = 0
         svg = self.document.getroot()

@@ -301,7 +301,7 @@ class Print(InkstitchExtension):
         # objects.  It's almost certain they meant to print the whole design.
         # If they really wanted to print just a few objects, they could set
         # the rest invisible temporarily.
-        self.svg.selected.clear()
+        self.svg.selection.clear()
 
         if not self.get_elements():
             return

@@ -121,7 +121,7 @@ class InkstitchExtension(inkex.Effect):
         return current_layer
 
     def no_elements_error(self):
-        if self.svg.selected:
+        if self.svg.selection:
             # l10n This was previously: "No embroiderable paths selected."
             inkex.errormsg(_("Ink/Stitch doesn't know how to work with any of the objects you've selected.") + "\n")
         else:
@@ -156,8 +156,8 @@ class InkstitchExtension(inkex.Effect):
         if is_command(node) or node.get(CONNECTOR_TYPE):
             return []
 
-        if self.svg.selected:
-            if node.get("id") in self.svg.selected:
+        if self.svg.selection:
+            if node.get("id") in self.svg.selection:
                 selected = True
         else:
             # if the user didn't select anything that means we process everything
@@ -187,14 +187,6 @@ class InkstitchExtension(inkex.Effect):
         if not troubleshoot:
             self.no_elements_error()
         return False
-
-    def get_selected_in_order(self):
-        selected = []
-        for i in self.options.ids:
-            path = '//*[@id="%s"]' % i
-            for node in self.document.xpath(path, namespaces=inkex.NSS):
-                selected.append(node)
-        return selected
 
     def elements_to_stitch_groups(self, elements):
         patches = []

@@ -5,6 +5,7 @@
 
 from lib.extensions.troubleshoot import Troubleshoot
 
+from .apply_threadlist import ApplyThreadlist
 from .auto_satin import AutoSatin
 from .break_apart import BreakApart
 from .cleanup import Cleanup
@@ -18,7 +19,6 @@ from .embroider_settings import EmbroiderSettings
 from .flip import Flip
 from .generate_palette import GeneratePalette
 from .global_commands import GlobalCommands
-from .import_threadlist import ImportThreadlist
 from .input import Input
 from .install import Install
 from .install_custom_palette import InstallCustomPalette
@@ -71,7 +71,7 @@ __all__ = extensions = [StitchPlanPreview,
                         RemoveEmbroiderySettings,
                         Cleanup,
                         BreakApart,
-                        ImportThreadlist,
+                        ApplyThreadlist,
                         InstallCustomPalette,
                         GeneratePalette,
                         PaletteSplitText,
