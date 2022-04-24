@@ -2,21 +2,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-04-11 02:02+0000\n"
-"PO-Revision-Date: 2022-04-16 01:58\n"
+"POT-Creation-Date: 2022-04-21 02:28+0000\n"
+"PO-Revision-Date: 2022-04-24 02:03\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.1\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: easygettext\n"
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-11 02:02+0000\n"
+"POT-Creation-Date: 2022-04-21 02:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1169,24 +1169,25 @@ msgstr "Veuillez sélectionner une ou plusieurs colonnes satin pour intervertir 
 
 #: lib/extensions/generate_palette.py:31
 msgid "Please specify a name for your color palette."
-msgstr ""
+msgstr "Veuillez spécifier un nom pour votre palette de couleurs."
 
 #: lib/extensions/generate_palette.py:36
 msgid "Unkown directory path."
-msgstr ""
+msgstr "Chemin de répertoire inconnu."
 
 #: lib/extensions/generate_palette.py:41
 msgid "Ink/Stitch cannot find your palette folder automatically. Please enter the path manually."
-msgstr ""
+msgstr "Ink/Stitch ne peut pas trouver automatiquement votre dossier de palette. Veuillez entrer le chemin manuellement."
 
 #: lib/extensions/generate_palette.py:47
 msgid "No element selected.\n\n"
 "Please select at least one text element with a fill color."
-msgstr ""
+msgstr "Aucun élément n'a été choisi.\n\n"
+"Veuillez sélectionner au moins un élément de texte avec une couleur de fond."
 
 #: lib/extensions/generate_palette.py:53
 msgid "We couldn't find any fill colors on your text elements. Please read the instructions on our website."
-msgstr ""
+msgstr "Nous n'avons pas trouvé de couleurs de remplissage sur vos éléments de texte. Veuillez lire les instructions sur notre site Web."
 
 #: lib/extensions/import_threadlist.py:33
 msgid "File not found."
@@ -1310,7 +1311,7 @@ msgstr "Veuillez choisir une ou plusieurs commandes à attacher."
 
 #: lib/extensions/palette_split_text.py:20
 msgid "Please select one or more text elements to split lines."
-msgstr ""
+msgstr "Veuillez sélectionner un ou plusieurs éléments de texte pour diviser les lignes."
 
 #: lib/extensions/params.py:208
 msgid "These settings will be applied to 1 object."
@@ -2479,7 +2480,7 @@ msgstr "Seuil de suppression de petits traits (px)"
 
 #: inx/inkstitch_commands_scale_symbols.inx:3
 msgid "Scale Command Symbols"
-msgstr ""
+msgstr "Mise à l'échelle des symboles de commande"
 
 #: inx/inkstitch_commands_scale_symbols.inx:11
 #: inx/inkstitch_global_commands.inx:17 inx/inkstitch_layer_commands.inx:14
@@ -2630,7 +2631,7 @@ msgstr "Intervertir les rails satin"
 
 #: inx/inkstitch_generate_palette.inx:3
 msgid "Generate Color Palette"
-msgstr ""
+msgstr "Générer palette de couleurs"
 
 #: inx/inkstitch_generate_palette.inx:10 inx/inkstitch_import_threadlist.inx:87
 #: inx/inkstitch_install.inx:10 inx/inkstitch_install_custom_palette.inx:13
@@ -2641,39 +2642,39 @@ msgstr "Gestion des couleurs de fil"
 #: inx/inkstitch_generate_palette.inx:11
 #: inx/inkstitch_palette_split_text.inx:11
 msgid "Generate Palette"
-msgstr ""
+msgstr "Générer palette"
 
 #: inx/inkstitch_generate_palette.inx:17
 msgid "Generate Palette Options"
-msgstr ""
+msgstr "Options pour générer des palettes"
 
 #: inx/inkstitch_generate_palette.inx:18
 msgid "Palette name"
-msgstr ""
+msgstr "Nom de palette"
 
 #: inx/inkstitch_generate_palette.inx:20
 msgid "Folder (optional):"
-msgstr ""
+msgstr "Dossier (facultatif) :"
 
 #: inx/inkstitch_generate_palette.inx:22
 msgid "⚠ Restart Inkscape to use your color palette."
-msgstr ""
+msgstr "⚠ Redémarrez Inkscape pour utiliser votre palette de couleurs."
 
 #: inx/inkstitch_generate_palette.inx:25
 msgid "Generate a custom color palette for Ink/Stitch"
-msgstr ""
+msgstr "Générer une palette de couleurs personnalisée pour Ink/Stitch"
 
 #: inx/inkstitch_generate_palette.inx:26
 msgid "Sadly we can not sort color swatches in Inkscape. With this extension you can export colors from text elements in their stacking order. The text will be used as the color name and number."
-msgstr ""
+msgstr "Malheureusement, nous ne pouvons pas trier les échantillons de couleurs dans Inkscape. Avec cette extension, vous pouvez exporter les couleurs des éléments de texte dans leur ordre d'empilement. Le texte sera utilisé comme nom et numéro de couleur."
 
 #: inx/inkstitch_generate_palette.inx:30
 msgid "On our website we describe all necessary steps to generate a color palette for Ink/Stitch."
-msgstr ""
+msgstr "Sur notre site web, nous décrivons toutes les étapes nécessaires pour générer une palette de couleurs pour Ink/Stitch."
 
 #: inx/inkstitch_generate_palette.inx:31
 msgid "https://inkstitch.org/docs/thread-color#generate-color-palette"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/thread-color#generate-color-palette"
 
 #: inx/inkstitch_global_commands.inx:3
 msgid "Add Commands"
@@ -3306,7 +3307,7 @@ msgstr "Attacher des commandes à des objets sélectionnés"
 
 #: inx/inkstitch_object_commands_toggle_visibility.inx:3
 msgid "Display|Hide Object Commands"
-msgstr ""
+msgstr "Afficher / masquer les commandes des objets"
 
 #: inx/inkstitch_output_CSV.inx:3
 msgid "CSV file output"
@@ -3530,31 +3531,31 @@ msgstr "Enregistrez le dessin au format VP3 à l'aide d'Ink/Stitch"
 
 #: inx/inkstitch_palette_split_text.inx:3
 msgid "Split text"
-msgstr ""
+msgstr "Séparer le texte"
 
 #: inx/inkstitch_palette_split_text.inx:16
 msgid "Line Height"
-msgstr ""
+msgstr "Hauteur de ligne"
 
 #: inx/inkstitch_palette_to_text.inx:3 inx/inkstitch_palette_to_text.inx:20
 msgid "Palette to text"
-msgstr ""
+msgstr "Palette vers texte"
 
 #: inx/inkstitch_palette_to_text.inx:16
 msgid "Choose a .gpl color palette file to import colors as text elements."
-msgstr ""
+msgstr "Choisissez un fichier de palette de couleurs .gpl pour importer des couleurs comme éléments de texte."
 
 #: inx/inkstitch_palette_to_text.inx:21
 msgid "Import a .gpl palette into Inkscape as text elements to edit color entries."
-msgstr ""
+msgstr "Importez une palette .gpl dans Inkscape en tant qu'éléments de texte pour modifier les entrées de couleur."
 
 #: inx/inkstitch_palette_to_text.inx:23
 msgid "Read more on our webiste:"
-msgstr ""
+msgstr "Plus d'informations sur notre site web :"
 
 #: inx/inkstitch_palette_to_text.inx:24
 msgid "https://inkstitch.org/docs/thread-color#palette-to-text"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/thread-color#palette-to-text"
 
 #: inx/inkstitch_params.inx:3
 msgid "Params"
