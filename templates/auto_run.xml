@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <name>Cut Satin Column</name>
-    <id>org.inkstitch.cut_satin</id>
-    <param name="extension" type="string" gui-hidden="true">cut_satin</param>
+    <name>Autoroute Running Stitch</name>
+    <id>org.inkstitch.auto_run</id>
+    <param name="extension" type="string" gui-hidden="true">auto_run</param>
     <effect>
         <object-type>all</object-type>
         <effects-menu>
             <submenu name="Ink/Stitch" translatable="no">
-                <submenu name="Tools: Satin" />
+                <submenu name="Tools: Stroke" />
             </submenu>
         </effects-menu>
     </effect>
+    <param name="preserve_order" type="boolean" gui-text="Preserve order of running stitches">false</param>
     <script>
         {{ command_tag | safe }}
     </script>

@@ -10,7 +10,7 @@
         <object-type>all</object-type>
         <effects-menu>
             <submenu name="Ink/Stitch" translatable="no">
-                <submenu name="Satin Tools" />
+                <submenu name="Tools: Satin" />
             </submenu>
         </effects-menu>
     </effect>
