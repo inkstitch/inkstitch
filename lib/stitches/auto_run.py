@@ -41,15 +41,9 @@ def autorun(elements, preserve_order=False, starting_point=None, ending_point=No
         parent = elements[0].node.getparent()
         insert_index = parent.index(elements[0].node)
         group = create_new_group(parent, insert_index, _("Auto-Run"))
-        write_elements(group, new_elements)
+        insert_elements(group, new_elements)
 
     remove_original_elements(elements)
-
-
-def write_elements(group, elements):
-    elements.reverse()
-    for element in elements:
-        group.insert(0, element)
 
 
 def build_graph(elements, preserve_order):
@@ -66,6 +60,7 @@ def build_graph(elements, preserve_order):
         for segment in segments:
             start = Point(segment.coords[0])
             end = Point(segment.coords[-1])
+
             graph.add_node(str(start), point=start)
             graph.add_node(str(end), point=end)
             graph.add_edge(str(start), str(end), element=element)
@@ -80,23 +75,11 @@ def build_graph(elements, preserve_order):
 
 def break_up_segments(paths):
     # chunk up segments into 1 mm substrings and add to graph
-    for path in paths:
-        segments = list(zip(path[:-1], path[1:]))
-
     segment_list = []
-    for segment in segments:
-        segment_start = Point(segment[0])
-        segment_end = Point(segment[1])
-        line = LineString([segment_start, segment_end])
+    line_strings = [LineString(path) for path in paths]
+    for line in line_strings:
         num_segments = int(math.ceil(line.length / PIXELS_PER_MM))
-        first = 0
-        second = PIXELS_PER_MM
-        for i in range(num_segments):
-            sub = substring(line, start_dist=first, end_dist=second)
-            segment_list.append(sub)
-            first += PIXELS_PER_MM
-            second += PIXELS_PER_MM
-
+        segment_list.extend([substring(line, start_dist=i*PIXELS_PER_MM, end_dist=(i+1)*PIXELS_PER_MM) for i in range(num_segments)])
     return segment_list
 
 
@@ -188,3 +171,9 @@ def create_element(path, position, direction, element):
         node.set(INKSTITCH_ATTRIBS['repeats'], str(repeats))
 
     return node
+
+
+def insert_elements(group, elements):
+    elements.reverse()
+    for element in elements:
+        group.insert(0, element)

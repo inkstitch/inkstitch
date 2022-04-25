@@ -17,7 +17,7 @@ class Reorder(InkstitchExtension):
         objects = self.svg.selection
 
         if not objects:
-            errormsg(_("Please select at least to elements to reorder."))
+            errormsg(_("Please select at least two elements to reorder."))
             return
 
         for obj in objects:
