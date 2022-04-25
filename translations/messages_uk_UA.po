@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-04-21 02:28+0000\n"
-"PO-Revision-Date: 2022-04-24 02:04\n"
+"POT-Creation-Date: 2022-04-25 02:19+0000\n"
+"PO-Revision-Date: 2022-04-25 02:21\n"
 "Last-Translator: \n"
 "Language-Team: Ukrainian\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-21 02:28+0000\n"
+"POT-Creation-Date: 2022-04-25 02:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -594,51 +594,51 @@ msgstr "Помилка під час автозаповнення! Це озна
 msgid "If you'd like to help us make Ink/Stitch better, please paste this whole message into a new issue at: "
 msgstr "Якщо ви хочете допомогти нам зробити Ink/Stitch краще, будь ласка, вставте все це повідомлення в нову проблему за адресою: "
 
-#: lib/elements/clone.py:27
+#: lib/elements/clone.py:25
 msgid "Clone Object"
 msgstr "Клонувати об'єкт"
 
-#: lib/elements/clone.py:28
+#: lib/elements/clone.py:26
 msgid "There are one or more clone objects in this document.  Ink/Stitch can work with single clones, but you are limited to set a very few parameters. "
 msgstr "У дизайні присутні один або більше об'єктів-клонів. Ink/Stitch може працювати з простими клонами, але ви будет обмежені лише невеликим списком параметрів. "
 
-#: lib/elements/clone.py:31
+#: lib/elements/clone.py:29
 msgid "If you want to convert the clone into a real element, follow these steps:"
 msgstr "Якщо ви хочете перетворити клон в реальний об'єкт, виконайте наступні кроки:"
 
-#: lib/elements/clone.py:32
+#: lib/elements/clone.py:30
 msgid "* Select the clone"
 msgstr "* Виберіть клон"
 
-#: lib/elements/clone.py:33 lib/elements/clone.py:44
+#: lib/elements/clone.py:31 lib/elements/clone.py:42
 msgid "* Run: Edit > Clone > Unlink Clone (Alt+Shift+D)"
 msgstr "* Виберіть: Правка > Клони > Від'єднати клона (Alt+Shift+D)"
 
-#: lib/elements/clone.py:38
+#: lib/elements/clone.py:36
 msgid "Clone is not embroiderable"
 msgstr "Клон не може бути вишитий"
 
-#: lib/elements/clone.py:39
+#: lib/elements/clone.py:37
 msgid "There are one ore more clone objects in this document. A clone must be a direct child of an embroiderable element. Ink/Stitch cannot embroider clones of groups or other not embroiderable elements (text or image)."
 msgstr "У дизайні присутні один або більше об'єктів-клонів. Клон повинен бути прямим нащадком елемента, який можна вишити. Ink/Stitch не може вишити клони груп чи інших невишиваємі елементи (текст або картинка)."
 
-#: lib/elements/clone.py:42
+#: lib/elements/clone.py:40
 msgid "Convert the clone into a real element:"
 msgstr "Перетворіть клон в реальний об'єкт:"
 
-#: lib/elements/clone.py:43
+#: lib/elements/clone.py:41
 msgid "* Select the clone."
 msgstr "* Виберіть клон."
 
-#: lib/elements/clone.py:58
+#: lib/elements/clone.py:56
 msgid "Clone"
 msgstr "Клонувати"
 
-#: lib/elements/clone.py:64
+#: lib/elements/clone.py:62
 msgid "Custom fill angle"
 msgstr "Свій кут гладі"
 
-#: lib/elements/clone.py:65
+#: lib/elements/clone.py:63
 msgid "This setting will apply a custom fill angle for the clone."
 msgstr "Ця настройка вказує свій кут гладі для клону."
 
@@ -820,7 +820,7 @@ msgstr "Об'єкт полілінія"
 msgid "This object is an SVG PolyLine.  Ink/Stitch can work with this shape, but you can't edit it in Inkscape.  Convert it to a manual stitch path to allow editing."
 msgstr "Цей об'єкт має тип SVG PolyLine. Ink/Stitch може працювати з такими формами, але ви не можете редагувати їх в Inkscape. Конвертуйте об'єкт в контур, щоб можна було його змінювати."
 
-#: lib/elements/polyline.py:23 lib/elements/satin_column.py:26
+#: lib/elements/polyline.py:23 lib/elements/satin_column.py:27
 msgid "* Select this object."
 msgstr "* Позначте цей об'єкт."
 
@@ -836,181 +836,197 @@ msgstr "* Не обов'язково: Запустіть Параметри і �
 msgid "Manual stitch along path"
 msgstr "Ручне прошиття вздовж лінії"
 
-#: lib/elements/satin_column.py:23
+#: lib/elements/satin_column.py:24
 msgid "Satin column has fill"
 msgstr "Атласні стовпці мають заповнення"
 
-#: lib/elements/satin_column.py:24
+#: lib/elements/satin_column.py:25
 msgid "Satin column: Object has a fill (but should not)"
 msgstr "Атласні стовпці: Об’єкт має заповнення (але не повинен)"
 
-#: lib/elements/satin_column.py:27
+#: lib/elements/satin_column.py:28
 msgid "* Open the Fill and Stroke panel"
 msgstr "* Відкрити панель Заповнення та Обведення"
 
-#: lib/elements/satin_column.py:28
+#: lib/elements/satin_column.py:29
 msgid "* Open the Fill tab"
 msgstr "Відкрити вкладку Заповнення"
 
-#: lib/elements/satin_column.py:29
+#: lib/elements/satin_column.py:30
 msgid "* Disable the Fill"
 msgstr "* Вимкнута заповнення"
 
-#: lib/elements/satin_column.py:30
+#: lib/elements/satin_column.py:31
 msgid "* Alternative: open Params and switch this path to Stroke to disable Satin Column mode"
 msgstr "* Альтернативний варіант: відкрийте Параметри і переключіть цей об'єкт на Прострочення відключивши режим Сатинової колонки"
 
-#: lib/elements/satin_column.py:35
+#: lib/elements/satin_column.py:36
 msgid "Too few subpaths"
 msgstr "Занадто мало ліній"
 
-#: lib/elements/satin_column.py:36
+#: lib/elements/satin_column.py:37
 msgid "Satin column: Object has too few subpaths.  A satin column should have at least two subpaths (the rails)."
 msgstr "Сатинова колонка: в об'єкті замало ліній. У сатиновій колонці має бути принаймні дві лінії (напрямні)."
 
-#: lib/elements/satin_column.py:38
+#: lib/elements/satin_column.py:39
 msgid "* Add another subpath (select two rails and do Path > Combine)"
 msgstr "* Додайте ще одну лінію (виділіть дві направляючі і виконайте Контур > Об'єднати)"
 
-#: lib/elements/satin_column.py:39
+#: lib/elements/satin_column.py:40
 msgid "* Convert to running stitch or simple satin (Params extension)"
 msgstr "* Конвертуйте в стрічку або зигзаг (через Параметри)"
 
-#: lib/elements/satin_column.py:44
+#: lib/elements/satin_column.py:45
 msgid "Unequal number of points"
 msgstr "Не рівна кількість точок"
 
-#: lib/elements/satin_column.py:45
+#: lib/elements/satin_column.py:46
 msgid "Satin column: There are no rungs and rails have an an unequal number of points."
 msgstr "Сатинова колонка: поперечин немає, але кількість точок на направляючих не дорівнює одна одній."
 
-#: lib/elements/satin_column.py:47
+#: lib/elements/satin_column.py:48
 msgid "The easiest way to solve this issue is to add one or more rungs. "
 msgstr "Простіше додати одну чи більше поперечок. "
 
-#: lib/elements/satin_column.py:48
+#: lib/elements/satin_column.py:49
 msgid "Rungs control the stitch direction in satin columns."
 msgstr "Поперечини керують нахилом стібків в сатиновій колонці."
 
-#: lib/elements/satin_column.py:49
+#: lib/elements/satin_column.py:50
 msgid "* With the selected object press \"P\" to activate the pencil tool."
 msgstr "* Коли об'єкт вибрано, натисніть клавішу \"P\", щоб вибрати інструмент Олівець."
 
-#: lib/elements/satin_column.py:50
+#: lib/elements/satin_column.py:51
 msgid "* Hold \"Shift\" while drawing the rung."
 msgstr "* Утримуючи клавішу Shift намалюйте поперечку."
 
-#: lib/elements/satin_column.py:54
+#: lib/elements/satin_column.py:56
+msgid "Not stitchable satin column"
+msgstr ""
+
+#: lib/elements/satin_column.py:57
+msgid "A satin column consists out of two rails and one or more rungs. This satin column may have a different setup."
+msgstr ""
+
+#: lib/elements/satin_column.py:59
+msgid "Make sure your satin column is not a combination of multiple satin columns."
+msgstr ""
+
+#: lib/elements/satin_column.py:60
+msgid "Go to our website and read how a satin column should look like https://inkstitch.org/docs/stitches/satin-column/"
+msgstr ""
+
+#: lib/elements/satin_column.py:64
 msgid "Each rung should intersect both rails once."
 msgstr "Кожна поперечка повинна пересікати обидві направляючі."
 
-#: lib/elements/satin_column.py:58
+#: lib/elements/satin_column.py:68
 msgid "Rung doesn't intersect rails"
 msgstr "Поперечка не пересекає направляючі"
 
-#: lib/elements/satin_column.py:59
+#: lib/elements/satin_column.py:69
 msgid "Satin column: A rung doesn't intersect both rails."
 msgstr "Сатинова колонка: Поперечка не пересікає обидві направляючі."
 
-#: lib/elements/satin_column.py:63
+#: lib/elements/satin_column.py:73
 msgid "Rungs intersects too many times"
 msgstr "Поперечки пересікаються забагато разів"
 
-#: lib/elements/satin_column.py:64
+#: lib/elements/satin_column.py:74
 msgid "Satin column: A rung intersects a rail more than once."
 msgstr "Сатинова колонка: поперечка пересікає направляючу більше одного разу."
 
-#: lib/elements/satin_column.py:68
+#: lib/elements/satin_column.py:78
 msgid "Satin Column"
 msgstr "Сатинова Колонка"
 
-#: lib/elements/satin_column.py:74
+#: lib/elements/satin_column.py:84
 msgid "Custom satin column"
 msgstr "Спеціальна сатинова колонка"
 
-#: lib/elements/satin_column.py:80
+#: lib/elements/satin_column.py:90
 msgid "\"E\" stitch"
 msgstr "\"E\" стібок"
 
-#: lib/elements/satin_column.py:86 lib/elements/satin_column.py:194
+#: lib/elements/satin_column.py:96 lib/elements/satin_column.py:204
 msgid "Maximum stitch length"
 msgstr "Максимальна довжина стібка"
 
-#: lib/elements/satin_column.py:87
+#: lib/elements/satin_column.py:97
 msgid "Maximum stitch length for split stitches."
 msgstr "Максимальна довжина стібка для роздільних стібків."
 
-#: lib/elements/satin_column.py:98 lib/elements/stroke.py:62
+#: lib/elements/satin_column.py:108 lib/elements/stroke.py:62
 msgid "Zig-zag spacing (peak-to-peak)"
 msgstr "Щільність зигзага (відстань між піками)"
 
-#: lib/elements/satin_column.py:99
+#: lib/elements/satin_column.py:109
 msgid "Peak-to-peak distance between zig-zags."
 msgstr "Відстань між піками зигзага."
 
-#: lib/elements/satin_column.py:110
+#: lib/elements/satin_column.py:120
 msgid "Pull compensation"
 msgstr "Компенсації розтягування"
 
-#: lib/elements/satin_column.py:111
+#: lib/elements/satin_column.py:121
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape.  This setting expands each pair of needle penetrations outward from the center of the satin column."
 msgstr "Стіжки сатина стягують тканину в місці вишивки, в результаті колонка получается тоншою, ніж вказано в Inkscape. Ця настройка розсовує кожну пару проколів від центра сатиновой колонки."
 
-#: lib/elements/satin_column.py:123
+#: lib/elements/satin_column.py:133
 msgid "Contour underlay"
 msgstr "Попередня прострочка контура"
 
-#: lib/elements/satin_column.py:123 lib/elements/satin_column.py:130
-#: lib/elements/satin_column.py:139
+#: lib/elements/satin_column.py:133 lib/elements/satin_column.py:140
+#: lib/elements/satin_column.py:149
 msgid "Contour Underlay"
 msgstr "Прострочка контура"
 
-#: lib/elements/satin_column.py:130 lib/elements/satin_column.py:154
+#: lib/elements/satin_column.py:140 lib/elements/satin_column.py:164
 msgid "Stitch length"
 msgstr "Довжина стібка"
 
-#: lib/elements/satin_column.py:136
+#: lib/elements/satin_column.py:146
 msgid "Contour underlay inset amount"
 msgstr "Відступ прострочки від краю"
 
-#: lib/elements/satin_column.py:137
+#: lib/elements/satin_column.py:147
 msgid "Shrink the outline, to prevent the underlay from showing around the outside of the satin column."
 msgstr "Звужує зовнішню границю прострочки, щоб вона не показувалася з-під сатинової колонки."
 
-#: lib/elements/satin_column.py:147
+#: lib/elements/satin_column.py:157
 msgid "Center-walk underlay"
 msgstr "Попередня прострочка по центру"
 
-#: lib/elements/satin_column.py:147 lib/elements/satin_column.py:154
+#: lib/elements/satin_column.py:157 lib/elements/satin_column.py:164
 msgid "Center-Walk Underlay"
 msgstr "Прострочка по центру"
 
-#: lib/elements/satin_column.py:159
+#: lib/elements/satin_column.py:169
 msgid "Zig-zag underlay"
 msgstr "Попередня просточка зигзагом"
 
-#: lib/elements/satin_column.py:159 lib/elements/satin_column.py:168
-#: lib/elements/satin_column.py:179 lib/elements/satin_column.py:197
+#: lib/elements/satin_column.py:169 lib/elements/satin_column.py:178
+#: lib/elements/satin_column.py:189 lib/elements/satin_column.py:207
 msgid "Zig-zag Underlay"
 msgstr "Прострочка зигзагом"
 
-#: lib/elements/satin_column.py:165
+#: lib/elements/satin_column.py:175
 msgid "Zig-Zag spacing (peak-to-peak)"
 msgstr "Щільність зигзага (відстань між піками)"
 
-#: lib/elements/satin_column.py:166
+#: lib/elements/satin_column.py:176
 msgid "Distance between peaks of the zig-zags."
 msgstr "Відстань між піками зигзага."
 
-#: lib/elements/satin_column.py:176
+#: lib/elements/satin_column.py:186
 msgid "Inset amount"
 msgstr "Величина відступа"
 
-#: lib/elements/satin_column.py:177
+#: lib/elements/satin_column.py:187
 msgid "default: half of contour underlay inset"
 msgstr "по замовчуванню: половина відступа прострочки контура"
 
-#: lib/elements/satin_column.py:195
+#: lib/elements/satin_column.py:205
 msgid "Split stitch if distance of maximum stitch length is exceeded"
 msgstr ""
 
@@ -1050,21 +1066,21 @@ msgstr "Повтори прострочки"
 msgid "Defines how many times to run down and back along the path."
 msgstr "Визначає скільки разів потрібно пройти про стрічці вперед і назад."
 
-#: lib/elements/stroke.py:108
+#: lib/elements/stroke.py:109
 msgid "Manual stitch placement"
 msgstr "Ручне розставлення стіжків"
 
-#: lib/elements/stroke.py:109
+#: lib/elements/stroke.py:110
 msgid "Stitch every node in the path.  Stitch length and zig-zag spacing are ignored."
 msgstr "Кожен вузол на лінії буде місцем прокола. Довжина стіжка і щільність зигзага ігноруються."
 
-#: lib/elements/stroke.py:143
+#: lib/elements/stroke.py:144
 msgid "Legacy running stitch setting detected!\n\n"
 "It looks like you're using a stroke smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set your stroke to be dashed to indicate running stitch.  Any kind of dash will work."
 msgstr "Виявлена застаріле налаштування!\n\n"
 "Схоже ви використовуєте лінії тонші 0.5 одиниць для відображення рядків. Такий підхід застарів. Замість цього просто зробіть вашу лінію пунктирною для того, щоб вишити її рядком. Будь-який тип пунктиру підійде."
 
-#: lib/elements/text.py:13 lib/extensions/lettering.py:77
+#: lib/elements/text.py:13 lib/extensions/lettering.py:78
 msgid "Text"
 msgstr "Текст"
 
@@ -1079,6 +1095,27 @@ msgstr "* Текст: Створіть власні букви або спроб
 #: lib/elements/text.py:17
 msgid "- Extensions > Ink/Stitch > Lettering"
 msgstr "- Розширення > Ink/Stitch > Надписи"
+
+#: lib/extensions/apply_threadlist.py:38
+msgid "File not found."
+msgstr "Файл не знайдено."
+
+#: lib/extensions/apply_threadlist.py:41
+msgid "The filepath specified is not a file but a dictionary.\n"
+"Please choose a threadlist file to import."
+msgstr "Вказаний файл являється словником. Будь-ласка вкажіть файл ниток для імпорта."
+
+#: lib/extensions/apply_threadlist.py:51
+msgid "Couldn't find any matching colors in the file."
+msgstr "У файлі немає жодного відповідного кольору."
+
+#: lib/extensions/apply_threadlist.py:53
+msgid "Please try to import as \"other threadlist\" and specify a color palette below."
+msgstr "Спробуйте імпортувати як \"інший список ниток\" і вкажіть палітру нижче."
+
+#: lib/extensions/apply_threadlist.py:55
+msgid "Please chose an other color palette for your design."
+msgstr "Выберіть іншу палітру для вашого дизайна."
 
 #: lib/extensions/auto_satin.py:35
 msgid "Please ensure that at most one start and end command is attached to the selected satin columns."
@@ -1159,7 +1196,7 @@ msgstr ""
 msgid "Needle #%s"
 msgstr ""
 
-#: lib/extensions/duplicate_params.py:19
+#: lib/extensions/duplicate_params.py:18
 msgid "This function copies Ink/Stitch parameters from the first selected element to the rest of the selection. Please select at least two elements."
 msgstr "Ця функція копіює параметри Ink/Stitch з першого виділеного об'єкта в інші об'єкти у виділенні. Виберіть як мінімум два об'єкти."
 
@@ -1188,27 +1225,6 @@ msgstr ""
 msgid "We couldn't find any fill colors on your text elements. Please read the instructions on our website."
 msgstr ""
 
-#: lib/extensions/import_threadlist.py:33
-msgid "File not found."
-msgstr "Файл не знайдено."
-
-#: lib/extensions/import_threadlist.py:36
-msgid "The filepath specified is not a file but a dictionary.\n"
-"Please choose a threadlist file to import."
-msgstr "Вказаний файл являється словником. Будь-ласка вкажіть файл ниток для імпорта."
-
-#: lib/extensions/import_threadlist.py:46
-msgid "Couldn't find any matching colors in the file."
-msgstr "У файлі немає жодного відповідного кольору."
-
-#: lib/extensions/import_threadlist.py:48
-msgid "Please try to import as \"other threadlist\" and specify a color palette below."
-msgstr "Спробуйте імпортувати як \"інший список ниток\" і вкажіть палітру нижче."
-
-#: lib/extensions/import_threadlist.py:50
-msgid "Please chose an other color palette for your design."
-msgstr "Выберіть іншу палітру для вашого дизайна."
-
 #: lib/extensions/install_custom_palette.py:24
 #: lib/extensions/palette_to_text.py:26
 msgid "File does not exist."
@@ -1226,27 +1242,27 @@ msgstr "Ink/Stitch не зміг автоматично знайти папку 
 msgid "Please choose one or more commands to add."
 msgstr "Виберіть одну або декілька команд, які потрібно додати."
 
-#: lib/extensions/lettering.py:43 lib/extensions/lettering.py:420
+#: lib/extensions/lettering.py:44 lib/extensions/lettering.py:424
 msgid "Ink/Stitch Lettering"
 msgstr "Надписи Ink/Stitch"
 
-#: lib/extensions/lettering.py:53
+#: lib/extensions/lettering.py:54
 msgid "Font"
 msgstr "Шрифт"
 
-#: lib/extensions/lettering.py:65 inx/inkstitch_palette_to_text.inx:15
+#: lib/extensions/lettering.py:66 inx/inkstitch_palette_to_text.inx:15
 msgid "Options"
 msgstr "Параметри"
 
-#: lib/extensions/lettering.py:70
+#: lib/extensions/lettering.py:71
 msgid "Stitch lines of text back and forth"
 msgstr "Прошийте рядки тексту вперед і назад"
 
-#: lib/extensions/lettering.py:73
+#: lib/extensions/lettering.py:74
 msgid "Add trims"
 msgstr "Додати обрізку"
 
-#: lib/extensions/lettering.py:82 lib/extensions/params.py:361
+#: lib/extensions/lettering.py:83 lib/extensions/params.py:361
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
 #: print/templates/custom-page.html:33 print/templates/ui.html:93
 #: print/templates/ui.html:97 print/templates/ui.html:103
@@ -1255,31 +1271,37 @@ msgstr "Додати обрізку"
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: lib/extensions/lettering.py:86 lib/extensions/params.py:368
+#: lib/extensions/lettering.py:87 lib/extensions/params.py:368
 msgid "Apply and Quit"
 msgstr "Застосувати і закрити"
 
-#: lib/extensions/lettering.py:153
+#: lib/extensions/lettering.py:154
 msgid "Unable to find any fonts!  Please try reinstalling Ink/Stitch."
 msgstr "Неможливо знайти жодних шрифтів! Спробуйте перевстановити Ink/Stitch."
 
-#: lib/extensions/lettering.py:224
+#: lib/extensions/lettering.py:225
 msgid "This font has no available font variant. Please update or remove the font."
 msgstr "Для цього шрифта немає доступного варіанта. Оновіть або видаліть цей шрифт."
 
 #. The user has chosen to scale the text by some percentage
 #. (50%, 200%, etc).  If you need to use the percentage symbol,
 #. make sure to double it (%%).
-#: lib/extensions/lettering.py:266
+#: lib/extensions/lettering.py:267
 #, python-format
 msgid "Text scale %s%%"
 msgstr "Масштаб тексту %s%%"
 
-#: lib/extensions/lettering.py:410
+#: lib/extensions/lettering.py:276
+#, python-format
+msgid "Error: Text cannot be applied to the document.\n"
+"%s"
+msgstr ""
+
+#: lib/extensions/lettering.py:414
 msgid "Please select only one block of text."
 msgstr "Виберіть лише один блок тексту."
 
-#: lib/extensions/lettering.py:413
+#: lib/extensions/lettering.py:417
 msgid "You've selected objects that were not created by the Lettering extension.  Please clear your selection or select different objects before running Lettering again."
 msgstr "Ви вибрали об'єкти, які не були створені розширенням Lettering. Будь ласка, очистіть свій вибір або виберіть інші об'єкти, перш ніж знову запустити Lettering."
 
@@ -1358,6 +1380,10 @@ msgstr "Параметри вишивки"
 msgid "Use Last Settings"
 msgstr "Використовувати останні налаштування"
 
+#: lib/extensions/reorder.py:20
+msgid "Please select at least to elements to reorder."
+msgstr ""
+
 #: lib/extensions/selection_to_pattern.py:21
 msgid "Please select at least one object to be marked as a pattern."
 msgstr "Виберіть принаймні один об’єкт, який буде позначено як шаблон."
@@ -1413,7 +1439,11 @@ msgstr "Попередження про тип об'єкта"
 msgid "These objects may not work properly with Ink/Stitch. Follow the instructions to correct unwanted behaviour."
 msgstr "Ці об'єкти можуть не коректно працювати з Ink/Stitch. Дотримуйтесь інструкцій, щоб виправити можливі проблеми."
 
-#: lib/extensions/troubleshoot.py:181
+#: lib/extensions/troubleshoot.py:178
+msgid "Possible solutions"
+msgstr ""
+
+#: lib/extensions/troubleshoot.py:183
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
 msgstr "Можливо, що один об'єкт містить більше ніж одну помилку, але на кожен об'єкт встановлюється тільки один вказівник. Запустіть цю функцию знову, коли будуть виникати нові помилки. Видаліть вказівники шляхом видалення шару з іменем \"Вирішення проблем\" через панель об'єктів  (Об'бєкт -> Об'єкти...)."
 
@@ -1608,6 +1638,10 @@ msgstr "Помилка при записі в %(path)s: %(error)s"
 #, python-format
 msgid "File does not exist and cannot be opened. Please correct the file path and try again.\\r%s"
 msgstr "Файл не існує і не може бути відкритий. Перевірте правильність шляху і спробуйте знову.\\r%s"
+
+#: lib/stitch_plan/stitch_plan.py:26
+msgid "There is no selected stitchable element. Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects in case you have expected a stitchout."
+msgstr ""
 
 #: lib/stitches/auto_satin.py:659
 msgid "Auto-Satin"
@@ -2411,6 +2445,38 @@ msgstr ""
 msgid "License"
 msgstr "Ліцензія"
 
+#: inx/inkstitch_apply_threadlist.inx:3
+msgid "Apply Threadlist"
+msgstr ""
+
+#: inx/inkstitch_apply_threadlist.inx:6
+#: inx/inkstitch_install_custom_palette.inx:8
+#: inx/inkstitch_palette_to_text.inx:17
+msgid "Choose file"
+msgstr "Вибрати файл"
+
+#: inx/inkstitch_apply_threadlist.inx:7
+msgid "Choose method"
+msgstr ""
+
+#: inx/inkstitch_apply_threadlist.inx:8
+msgid "Apply Ink/Stitch threadlist"
+msgstr ""
+
+#: inx/inkstitch_apply_threadlist.inx:9
+msgid "Apply other threadlist*"
+msgstr ""
+
+#: inx/inkstitch_apply_threadlist.inx:11
+msgid "*Choose color palette"
+msgstr ""
+
+#: inx/inkstitch_apply_threadlist.inx:87 inx/inkstitch_generate_palette.inx:10
+#: inx/inkstitch_install.inx:10 inx/inkstitch_install_custom_palette.inx:13
+#: inx/inkstitch_palette_split_text.inx:10 inx/inkstitch_palette_to_text.inx:9
+msgid "Thread Color Management"
+msgstr "Управління кольором ниток"
+
 #: inx/inkstitch_auto_satin.inx:3
 msgid "Auto-Route Satin Columns"
 msgstr "Авто-Маршрут Сатинових Колонок"
@@ -2487,6 +2553,11 @@ msgstr ""
 #: inx/inkstitch_object_commands_toggle_visibility.inx:10
 msgid "Commands"
 msgstr "Команди"
+
+#: inx/inkstitch_commands_scale_symbols.inx:12
+#: inx/inkstitch_object_commands_toggle_visibility.inx:11
+msgid "View"
+msgstr ""
 
 #: inx/inkstitch_convert_to_satin.inx:3
 msgid "Convert Line to Satin"
@@ -2632,12 +2703,6 @@ msgstr "Розгорнути направляючі сатинової коло�
 msgid "Generate Color Palette"
 msgstr ""
 
-#: inx/inkstitch_generate_palette.inx:10 inx/inkstitch_import_threadlist.inx:87
-#: inx/inkstitch_install.inx:10 inx/inkstitch_install_custom_palette.inx:13
-#: inx/inkstitch_palette_split_text.inx:10 inx/inkstitch_palette_to_text.inx:9
-msgid "Thread Color Management"
-msgstr "Управління кольором ниток"
-
 #: inx/inkstitch_generate_palette.inx:11
 #: inx/inkstitch_palette_split_text.inx:11
 msgid "Generate Palette"
@@ -2678,32 +2743,6 @@ msgstr ""
 #: inx/inkstitch_global_commands.inx:3
 msgid "Add Commands"
 msgstr "Додати команди"
-
-#: inx/inkstitch_import_threadlist.inx:3
-msgid "Import Threadlist"
-msgstr "Імпортувати список ниток"
-
-#: inx/inkstitch_import_threadlist.inx:6
-#: inx/inkstitch_install_custom_palette.inx:8
-#: inx/inkstitch_palette_to_text.inx:17
-msgid "Choose file"
-msgstr "Вибрати файл"
-
-#: inx/inkstitch_import_threadlist.inx:7
-msgid "Choose method"
-msgstr ""
-
-#: inx/inkstitch_import_threadlist.inx:8
-msgid "Import Ink/Stitch threadlist"
-msgstr ""
-
-#: inx/inkstitch_import_threadlist.inx:9
-msgid "Import other threadlist*"
-msgstr ""
-
-#: inx/inkstitch_import_threadlist.inx:11
-msgid "*Choose color palette"
-msgstr ""
 
 #: inx/inkstitch_input_100.inx:3
 msgid "100 file input"
