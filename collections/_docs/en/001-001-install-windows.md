@@ -2,7 +2,7 @@
 title: "Install Ink/Stitch on Windows"
 permalink: /docs/install-windows/
 excerpt: "How to quickly install Ink/Stitch."
-last_modified_at: 2021-11-28
+last_modified_at: 2022-04-25
 toc: true
 ---
 {% comment %}
@@ -107,11 +107,6 @@ Subscribe to a news feed channel to keep track on Ink/Stitch Updates.
 
 ### Ink/Stitch doesn't show up / is greyed out
 
-**Confirm installation path**
-
-Check if you extracted Ink/Stitch into the correct folder. If the `User extensions folder` doesn't work out correctly, you can also try to install into the `Inkscape extensions folder`.
-You can also look it up under `Edit > Preferences > System`.
-
 **Antivirus Software**
 
 Since Ink/Stitch is packed into a executable there are reports of anti-virus-software using heuristics that mark the extension as a false positive. The solution in this cases is to add the Ink/Stitch extension folder to the exception list on the av program and reinstall the extension and try again.
@@ -134,6 +129,41 @@ WindowsError: [Error 2] The system cannot find the file specified
 **Confirm Ink/Stitch Version**
 
 Verify if you have downloaded Ink/Stitch for Windows ([Download](#download))
+
+**Confirm installation path**
+
+Check if you extracted Ink/Stitch into the correct folder. If the `User extensions folder` doesn't work out correctly, you can also try to install into the `Inkscape extensions folder`.
+You can also look it up under `Edit > Preferences > System`.
+
+### PYTHONPATH
+
+There have been reports about an error message starting like this:
+
+```
+Python path configuration:
+PYTHONHOME = 'C:\Users\{username}\AppData\Roaming\inkscape\extensions\inkstitch\bin'
+PYTHONPATH = (not set)
+```
+
+Reinstall Inkscape. Make sure that "Add to path" is checked, when the PYTHONPATH question pops up during the installation.
+
+### Windows 7: Error message
+
+When you see the following error message please install Microsoft Windows security updates on your computer.
+
+```
+Traceback (most recent call last):
+File "Lib\site-packages\PyInstaller\hooks\rthooks\pyi_rth_multiprocessing.py", line 12, in
+File "PyInstaller\loader\pyimod03_importers.py", line 495, in exec_module
+File "multiprocessing_init_.py", line 16, in
+File "PyInstaller\loader\pyimod03_importers.py", line 495, in exec_module
+File "multiprocessing\context.py", line 6, in
+File "PyInstaller\loader\pyimod03_importers.py", line 495, in exec_module
+File "multiprocessing\reduction.py", line 16, in
+File "PyInstaller\loader\pyimod03_importers.py", line 495, in exec_module
+File "socket.py", line 49, in
+ImportError: DLL load failed while importing _socket: Paramètre incorrect.
+```
 
 ### Windows 8: Error message
 

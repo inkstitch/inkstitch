@@ -66,24 +66,26 @@ Les objets auxquels cette commande est associée seront exclus du plan de broder
 
 Fractionner une colonne satin au point spécifié par cette commande. Après le placement de la commande, exécutez la commande "[Scinder une colonne satin] (/fr/docs/satin-tools/#scinder-une-colonne-satin)".
 
-
-
 ![auto-route-satin-stitch-start](/assets/images/docs/visual-commands-auto-route-satin-stitch-start.jpg) ![auto-route-satin-stitch-end](/assets/images/docs/visual-commands-auto-route-satin-stitch-end.jpg)   [Position de départ/de fin pour auto route colonne satin](#-auto-route-satin-stitch-start)
 
 Définit le point de départ (1) ou le point final (2) de la colonne auto route satin. Exécutez ensuite "[Remplissage automatique de Colonne Satin. ...](/fr/docs/satin-tools/#auto-route-satin-columns)".
 
+[Télécharger le fichier exemple](/assets/images/docs/visual-commands-fill-stitch.svg){: download="visual-commands-fill-stitch.svg" title="Télécharger le fichier exemple"}
 
-  [Télécharger le fichier exemple](/assets/images/docs/visual-commands-fill-stitch.svg){: download="visual-commands-fill-stitch.svg" title="Télécharger le fichier exemple"}
+## Display Hide Object Commands
 
+This is part of an upcoming Ink/Stitch version and not available in Ink/Stitch v2.1.2
+{: .notice--warning }
 
+Toggle visibility of object commands. Commands will still be functional when hidden.
 
+`Extensions > Ink/Stitch > Commands > View > Display|Hide Object Commands`
 
+## Scale Command Symbols
 
+This is part of an upcoming Ink/Stitch version and not available in Ink/Stitch v2.1.2
+{: .notice--warning }
 
+Set the size of command symbols in the entire document: `Extensions > Ink/Stitch > Commands > View > Scale Command Symbols...`
 
-
-
-
-
-
-
+Use live preview to see the effect while scaling.

@@ -18,7 +18,7 @@ Ink/Stitch hat ein Hilfsmittel diese Fehler verständlicher zu machen. Es zeigt 
 
 Entweder erhälst du eine nun Nachricht, dass kein Fehler gefunden wurde oder es wird eine neue Ebene mit den Fehlerinformationen in das Dokument eingefügt. Nutze das Objekt-Panel (Strg + Shift + O) um diese Ebene nach der Fehlerbehebung wieder zu löschen.
 
-![Troubleshoot Example](/assets/images/docs/en/troubleshoot.jpg)
+![Troubleshoot Example](/assets/images/docs/de/troubleshoot.jpg)
 
 **Tipp:** Es ist möglich, dass ein Objekt mehrere Fehler enthält. Objekte mit Füllstich zeigen aber in der Regel nur den zuerst aufgetretenen Fehler an. Nutze das Troubleshoot-Werkzeug erneut, wenn du weitere Fehlermeldungen erhälst.
 {: .notice--info }

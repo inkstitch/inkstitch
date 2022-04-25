@@ -68,3 +68,21 @@ Dieser Befehlt definiert an welchem Punkt die Satinkolumne geschnitten werden so
 Definiert (1) die Start- und (2) die Endposition für automatish geführte Satinkolumnen. Benutze anschließend die Funktion “[Automatische Satinkolumnenführung](/de/docs/satin-tools/#automatische-satinkolumnenführung)”.
 
 Nutze immer nur einen Anfangs- und einen Endpunkt für jede Auto-Route Operation.
+
+## Objektbefehle anzeigen/verbergen
+
+Dies ist Teil einer kommenden Ink/Stitch Version und in Ink/Stitch v2.1.2 nicht verfügbar.
+{: .notice--warning }
+
+Schalte die Sichtbarkeit von Objekt-Befehlen an und aus. Befehle funktionieren auch, wenn sie nicht angezeigt werden.
+
+`Erweiterungen > Ink/Stitch > Befehle > Ansicht > Objektbefehle anzeigen|vergergen`
+
+## Befehlsymbole skalieren
+
+Dies ist Teil einer kommenden Ink/Stitch Version und in Ink/Stitch v2.1.2 nicht verfügbar.
+{: .notice--warning }
+
+Anpassen der Größe der Befehlsymbole im gesamten Dokument: `Erweiterungen > Ink/Stitch > Befehle > Ansicht > Befehlsymbole skalieren...`
+
+Use live preview to see the effect while scaling.

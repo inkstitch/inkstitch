@@ -481,6 +481,11 @@ table.inline-table {
     float: left;
 }
 
+h2 img {
+    float:right;
+    max-height: 50px;
+}
+
 /* Machine Database */
 
 .machine-fileformat:hover { background: #ccc; }

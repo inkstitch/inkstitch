@@ -2,7 +2,7 @@
 title: "Installation von Ink/Stitch für Windows"
 permalink: /de/docs/install-windows/
 excerpt: "Wie wird Ink/Stitch installiert."
-last_modified_at: 2021-11-28
+last_modified_at: 2022-04-25
 toc: true
 ---
 {% comment %}
@@ -107,11 +107,6 @@ Abonniere den News-Feed-Kanal um über Ink/Stitch updates informiert zu werden.
 
 ### Ink/Stitch startet nicht / Menüpunkte sind grau
 
-**Installationspfad überprüfen**
-
-Überprüfe, ob die Dateien evtl. in einen *Unterordner* extrahiert wurden.
-Es ist wichtig, dass die Ink/Stitch-Dateien **direkt** in dem Ordner "Benutzererweiterungen" sind.
-
 **Ink/Stitch-Version überprüfen**
 
 Bitte überprüfe noch einmal, ob du die richtige Ink/Stitch Version für dein Betriebssytsem heruntergeladen hast.
@@ -147,6 +142,50 @@ File "C:\Program Files\Inkscape\lib\python2.7/subprocess.py", line 575, in _exec
 startupinfo)
 WindowsError: [Error 2] The system cannot find the file specified
 ```
+
+**Installationspfad überprüfen**
+
+Überprüfe, ob die Dateien evtl. in einen *Unterordner* extrahiert wurden.
+Es ist wichtig, dass die Ink/Stitch-Dateien **direkt** in dem Ordner "Benutzererweiterungen" sind.
+
+### PYTHONPATH
+
+Es gab einige Bericht über Fehlermeldungen die so wie diese hier beginnen:
+
+```
+Python path configuration:
+PYTHONHOME = 'C:\Users\{username}\AppData\Roaming\inkscape\extensions\inkstitch\bin'
+PYTHONPATH = (not set)
+```
+
+Installiere Inkscape erneut. Stelle sicher, dass die Checkbox "Zu Pfad hinzufügen" (Add to path) aktiviert ist, wenn die Frage nach PYTHONPATH während der Installation auftaucht.
+
+### Windows 7: Fehlermeldung
+
+Wenn du die folgende Fehlermeldung erhälst, installiere bitte die Microsoft Windows Sicherheitsupdates auf deinem Computer.
+
+```
+Traceback (most recent call last):
+File "Lib\site-packages\PyInstaller\hooks\rthooks\pyi_rth_multiprocessing.py", line 12, in
+File "PyInstaller\loader\pyimod03_importers.py", line 495, in exec_module
+File "multiprocessing_init_.py", line 16, in
+File "PyInstaller\loader\pyimod03_importers.py", line 495, in exec_module
+File "multiprocessing\context.py", line 6, in
+File "PyInstaller\loader\pyimod03_importers.py", line 495, in exec_module
+File "multiprocessing\reduction.py", line 16, in
+File "PyInstaller\loader\pyimod03_importers.py", line 495, in exec_module
+File "socket.py", line 49, in
+ImportError: DLL load failed while importing _socket: Paramètre incorrect.
+```
+
+### Windows 8: Fehlermeldung
+
+![The program can't start because api-ms-win-crt-math-l1-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem](/assets/images/docs/en/windows-install/win8.png)
+{: .img-half }
+![Error loading Python DLL 'C:\Users\...\AppData\Roaming\inkscape\extensions\inkstitch\inkstitch\bin\python38.dll'. LoadLibrary: The specified module could not be found.](/assets/images/docs/en/windows-install/win8a.png)
+{: .img-half }
+
+Wenn diese beiden Fehlermeldungen bei einer Windows 8 installation auftauchen, bitte [Microsoft Visual C++ Redistributable packages](https://docs.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-2017-2019-and-2022) herunterladen und installieren. Wähle die passende Datei für dein System.
 
 ### Ink/Stitch wird auf englisch angezeigt
 

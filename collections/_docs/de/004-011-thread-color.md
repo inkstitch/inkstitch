@@ -49,7 +49,7 @@ Klicke auf den kleinen Pfeil, um eine Liste der installierten Paletten zu öffne
 
 Die Auswahl wirkt sich auch auf die in der Druckvorschau angezeigten Garnnamen aus.
 
-## Farbpalette generieren
+## Farbpalette erstellen
 
 Dieses Feature ist Teil der kommenden Ink/Stitch Version und in Ink/Stitch v2.1.2 noch nicht enthalten.
 {: .notice--warning }
@@ -62,10 +62,10 @@ Diese Erweiterung exportiert die Farben von Textelementen, während der Text sel
 2. Aktiviere das Text-Werkzeug und füge die Farbnamen ein (wenn vorhanden) oder tippe sie ein.
    Benutze eine Zeile pro Farbe.
    Wenn der letzte Teil des Farbnamens eine Nummer ist, wird er als Katalognummer interpretiert und abgespeichert.
-3. `Erweiterungen > Ink/Stitch > Garnfarben Verwaltung > Palette generieren > Text aufteilen` teilt den Text in einzelne Textelemente.
+3. `Erweiterungen > Ink/Stitch > Garnfarben Verwaltung > Palette erstellen > Text zerlegen` teilt den Text in einzelne Textelemente.
 4. Aktiviere das Farbwahl-Werkzeug (D) und färbe die einzelnen Textelemente ein.
    Nutze dabei die Tabulator-Taste um das jeweils nachfolgende Textelement auszuwählen.
-5. Wähle alle Text-Elemente aus und führe die Funktion `Erweiterungen > Ink/Stitch > Garnfarben Verwaltung > Palette generieren > Farbpalette generieren ...` aus.
+5. Wähle alle Text-Elemente aus und führe die Funktion `Erweiterungen > Ink/Stitch > Garnfarben Verwaltung > Palette erstellen > Farbpalette erstellen ...` aus.
 6. Gib einen Namen für die Farbpalette ein und klicke auf Anwenden.
 7. Inkscape neu starten um die neue Farbpalette verfügbar zu machen
 
@@ -80,5 +80,5 @@ Bereits bestehende Farbpaletten können mit Ink/Stitch als Text bearbeitet werde
 
 * Importiere Farben und Farbnamen mit `Erweiterungen > Ink/Stitch > Garnfarben verwalten > Palette zu Text`
 * Ändere Farben, Farbnamen, Katalognummern oder füge weitere Farben hinzu.
-* Exportiere die Palette mit `Erweiterungen > Ink/Stitch > Garnfarben Verwaltung > Palette generieren > Farbpalette generieren ...`
+* Exportiere die Palette mit `Erweiterungen > Ink/Stitch > Garnfarben Verwaltung > Palette erstellen > Farbpalette erstellen ...`
 * Inkscape neu starten

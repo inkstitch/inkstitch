@@ -18,7 +18,7 @@ Ink/Stitch est livré avec une extension de dépannage, conçue pour vous aider 
 
 Vous recevrez soit un message indiquant qu'aucune erreur ne peut être trouvée, soit un nouveau calque contenant les informations de dépannage sera ajouté à votre document SVG. Utilisez le panneau des objets(Ctrl + Shift + O) pour supprimer le calque une fois que vous avez terminé.
 
-![Troubleshoot Example](/assets/images/docs/en/troubleshoot.jpg)
+![Troubleshoot Example](/assets/images/docs/fr/troubleshoot.jpg)
 
 **Astuce:** Il est possible qu'un objet contienne plus d'une erreur. Les formes de remplissage affichent uniquement la première erreur qui apparaîtra. Exécutez l'extension à nouveau si vous recevez encore des messages d'erreur.
 {: .notice--info }

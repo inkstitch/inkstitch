@@ -109,33 +109,65 @@ Inscrivez-vous aux news pour avoir connaissance des mises à jour d'Ink/Stitch.
 
 ### Ink/Stitch ne fonctionne pas!
 
-*   **Confirmer le chemin d'installation**<br>
-    Vérifiez si vous avez bien installé Ink/Stitch dans le bon dossier.  Si le  dossier `Extensions utilisateur` ne fonctionne pas correctement, vous pouvez aussi essayer d'installer dans le dossier `extensions Inkscape`.
-    Vous pouvez trouver leur localisation dans  `Edition > Préferences > Système`.
+**Windows Anti-Virus**
+C'est le cas le plus probable sous Windows, car python est compressé dans un exécutable, et des rapports de logiciels antivirus utilisant des méthodes heuristiques peuvent marquer l'extension comme un faux positif.
+Dans ce cas, la solution consiste à ajouter le dossier d’extensions Ink/Stitch à la liste des exceptions de l'antivirus. Puis réinstaller l’extension et réessayer.
 
-*   **Windows Anti-Virus**<br>
-	C'est le cas le plus probable sous Windows, car python est compressé dans un exécutable, et
-    des rapports de logiciels antivirus utilisant des méthodes heuristiques peuvent marquer l'extension comme un faux positif.
-    Dans ce cas, la solution consiste à ajouter le dossier d’extensions Ink/Stitch à la liste des exceptions de l'antivirus. Puis réinstaller l’extension et réessayer.
+Si votre logiciel antivirus a supprimé des fichiers, vous recevrez le message d'erreur suivant:
 
-    Si votre logiciel antivirus a supprimé des fichiers, vous recevrez le message d'erreur suivant:
-    ```
-    Tried to launch: inkstitch\bin\inkstitch
-    Arguments: ['inkstitch\bin\inkstitch', '--id=XXX', '--extension=XXX', 'C:\Users\XXX\AppData\Local\Temp\ink_ext_XXXXXX.svgXXXXX']
-    Debugging information:
+```
+Tried to launch: inkstitch\bin\inkstitch
+Arguments: ['inkstitch\bin\inkstitch', '--id=XXX', '--extension=XXX', 'C:\Users\XXX\AppData\Local\Temp\ink_ext_XXXXXX.svgXXXXX']
+Debugging information:
 
-    Traceback (most recent call last):
-      File "inkstitch.py", line 35, in <module>
-        extension = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-      File "C:\Program Files\Inkscape\lib\python2.7/subprocess.py", line 325, in __init__
-        errread, errwrite)
-      File "C:\Program Files\Inkscape\lib\python2.7/subprocess.py", line 575, in _execute_child
-        startupinfo)
-    WindowsError: [Error 2] The system cannot find the file specified
-    ```
+Traceback (most recent call last):
+  File "inkstitch.py", line 35, in <module>
+    extension = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+  File "C:\Program Files\Inkscape\lib\python2.7/subprocess.py", line 325, in __init__
+    errread, errwrite)
+  File "C:\Program Files\Inkscape\lib\python2.7/subprocess.py", line 575, in _execute_child
+    startupinfo)
+WindowsError: [Error 2] The system cannot find the file specified
+```
+
 **Confirm Ink/Stitch Version**
 
 Verify if you have downloaded Ink/Stitch for Windows ([Download](#download))
+
+**Confirmer le chemin d'installation**
+
+Vérifiez si vous avez bien installé Ink/Stitch dans le bon dossier.  Si le  dossier `Extensions utilisateur` ne fonctionne pas correctement, vous pouvez aussi essayer d'installer dans le dossier `extensions Inkscape`.
+Vous pouvez trouver leur localisation dans  `Edition > Préferences > Système`.
+
+### PYTHONPATH
+
+There have been reports about an error message starting like this:
+
+```
+Python path configuration:
+PYTHONHOME = 'C:\Users\{username}\AppData\Roaming\inkscape\extensions\inkstitch\bin'
+PYTHONPATH = (not set)
+```
+
+Reinstall Inkscape. Make sure that "Add to path" is checked, when the PYTHONPATH question pops up during the installation.
+
+### Windows 7: Error message
+
+When you see the following error message please install Microsoft Windows security updates on your computer.
+
+```
+Traceback (most recent call last):
+File "Lib\site-packages\PyInstaller\hooks\rthooks\pyi_rth_multiprocessing.py", line 12, in
+File "PyInstaller\loader\pyimod03_importers.py", line 495, in exec_module
+File "multiprocessing_init_.py", line 16, in
+File "PyInstaller\loader\pyimod03_importers.py", line 495, in exec_module
+File "multiprocessing\context.py", line 6, in
+File "PyInstaller\loader\pyimod03_importers.py", line 495, in exec_module
+File "multiprocessing\reduction.py", line 16, in
+File "PyInstaller\loader\pyimod03_importers.py", line 495, in exec_module
+File "socket.py", line 49, in
+ImportError: DLL load failed while importing _socket: Paramètre incorrect.
+```
 
 ### Windows 8: Error message
 
