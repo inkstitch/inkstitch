@@ -19,8 +19,8 @@ from .utils.autoroute import (add_jumps, create_new_group, find_path,
                               remove_original_elements)
 
 
-def autorun(elements, preserve_order=False, subdivide=None, starting_point=None, ending_point=None):
-    graph = build_graph(elements, preserve_order, subdivide)
+def autorun(elements, preserve_order=False, break_up=None, subdivide=None, starting_point=None, ending_point=None):
+    graph = build_graph(elements, preserve_order, break_up, subdivide)
     graph = add_jumps(graph, elements, preserve_order)
 
     starting_point, ending_point = get_starting_and_ending_nodes(
@@ -45,7 +45,7 @@ def autorun(elements, preserve_order=False, subdivide=None, starting_point=None,
     remove_original_elements(elements)
 
 
-def build_graph(elements, preserve_order, subdivide):
+def build_graph(elements, preserve_order, break_up, subdivide):
     if preserve_order:
         graph = nx.DiGraph()
     else:
@@ -55,7 +55,10 @@ def build_graph(elements, preserve_order, subdivide):
         if not isinstance(element, Stroke):
             continue
 
-        segments = break_up_segments(element, elements, subdivide)
+        if not break_up:
+            segments = [LineString(path) for path in element.paths]
+        else:
+            segments = break_up_segments(element, elements, subdivide)
 
         for segment in segments:
             for c1, c2 in zip(segment.coords[:-1], segment.coords[1:]):
