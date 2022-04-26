@@ -4,7 +4,7 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import networkx as nx
-from shapely.geometry import LineString, Point, MultiPoint, MultiLineString
+from shapely.geometry import LineString, MultiLineString, MultiPoint, Point
 
 import inkex
 
@@ -56,7 +56,7 @@ def build_graph(elements, preserve_order):
         segments = break_up_segments(element, elements)
 
         for segment in segments:
-            for c1, c2 in zip(segment.coords[1:], segment.coords[:-1]):
+            for c1, c2 in zip(segment.coords[:-1], segment.coords[1:]):
                 start = Point(*c1)
                 end = Point(*c2)
 
@@ -163,6 +163,10 @@ def path_to_elements(graph, path):
             original_parents.append(el.node.getparent())
             d = ""
             position += 1
+        elif el and d:
+            end = graph.nodes[end]['point']
+            # small jumps: use as normal stitches
+            d += ", %s %s" % (end.x, end.y)
 
     element_list.append(create_element(d, position, path_direction, el))
     original_parents.append(el.node.getparent())
