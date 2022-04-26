@@ -17,6 +17,7 @@ class AutoRun(CommandsExtension):
     def __init__(self, *args, **kwargs):
         CommandsExtension.__init__(self, *args, **kwargs)
 
+        self.arg_parser.add_argument("-s", "--subdivide", dest="subdivide", type=float, default=0)
         self.arg_parser.add_argument("-p", "--preserve_order", dest="preserve_order", type=inkex.Boolean, default=False)
 
     def get_starting_point(self):
@@ -57,4 +58,6 @@ class AutoRun(CommandsExtension):
         starting_point = self.get_starting_point()
         ending_point = self.get_ending_point()
 
-        autorun(elements, self.options.preserve_order, starting_point, ending_point)
+        subdivide = self.options.subdivide or None
+
+        autorun(elements, self.options.preserve_order, subdivide, starting_point, ending_point)

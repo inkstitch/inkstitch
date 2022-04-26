@@ -11,6 +11,8 @@
             </submenu>
         </effects-menu>
     </effect>
+    <param name="subdivide" type="float" gui-text="Subdivide path (mm)"
+           gui-descriptio="Subdivision slow down the process. Set to 0 to add additional nodes at intersections only">0</param>
     <param name="preserve_order" type="boolean" gui-text="Preserve order of running stitches">false</param>
     <script>
         {{ command_tag | safe }}

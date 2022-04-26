@@ -3,6 +3,8 @@
 # Copyright (c) 2022 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
+import math
+
 import networkx as nx
 from shapely.geometry import LineString, MultiLineString, MultiPoint, Point
 
@@ -17,8 +19,8 @@ from .utils.autoroute import (add_jumps, create_new_group, find_path,
                               remove_original_elements)
 
 
-def autorun(elements, preserve_order=False, starting_point=None, ending_point=None):
-    graph = build_graph(elements, preserve_order)
+def autorun(elements, preserve_order=False, subdivide=None, starting_point=None, ending_point=None):
+    graph = build_graph(elements, preserve_order, subdivide)
     graph = add_jumps(graph, elements, preserve_order)
 
     starting_point, ending_point = get_starting_and_ending_nodes(
@@ -43,7 +45,7 @@ def autorun(elements, preserve_order=False, starting_point=None, ending_point=No
     remove_original_elements(elements)
 
 
-def build_graph(elements, preserve_order):
+def build_graph(elements, preserve_order, subdivide):
     if preserve_order:
         graph = nx.DiGraph()
     else:
@@ -53,7 +55,7 @@ def build_graph(elements, preserve_order):
         if not isinstance(element, Stroke):
             continue
 
-        segments = break_up_segments(element, elements)
+        segments = break_up_segments(element, elements, subdivide)
 
         for segment in segments:
             for c1, c2 in zip(segment.coords[:-1], segment.coords[1:]):
@@ -72,16 +74,28 @@ def build_graph(elements, preserve_order):
     return graph
 
 
-def break_up_segments(element, elements):
+def break_up_segments(element, elements, subdivide):
+    '''
+    Depending on user input, this function will either subdivide the paths in given length
+    or it will break up the paths at intersections only (subivide = 0).  User will still
+    have control over the precision by adding nodes where they think good breaking points are.
+    '''
     segment_list = []
     line_strings = [LineString(path) for path in element.paths]
     for line in line_strings:
         points = []
-        # add points at intersections with other elements (not at self intersections, sorry)
-        intersection_points = get_intersections(line, element, elements)
-        if intersection_points:
-            points.extend(intersection_points)
-        # maybe that are already enough points
+        if subdivide:
+            # do not subdivide in smaller pieces than 0.4
+            subdivide = max(0.4, subdivide)
+            # break up according to user subdivision setting
+            subdivide = subdivide * PIXELS_PER_MM
+            num_segments = int(math.ceil(line.length / subdivide))
+            points.extend([line.interpolate(i/num_segments, normalized=True) for i in range(1, num_segments)])
+        else:
+            # add points at intersections with other elements (not at self intersections, sorry)
+            intersection_points = get_intersections(line, element, elements)
+            if intersection_points:
+                points.extend(intersection_points)
         # split at points
         points = MultiPoint(points)
         # split line at points, trouble: split() doesn't seem to work on small lines at all
