@@ -1,13 +1,10 @@
 # Authors: see git history
 #
-# Copyright (c) 2010 Authors
+# Copyright (c) 2022 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-import math
-
 import networkx as nx
-from shapely.geometry import LineString, Point
-from shapely.ops import substring
+from shapely.geometry import LineString, Point, MultiPoint, MultiLineString
 
 import inkex
 
@@ -56,31 +53,65 @@ def build_graph(elements, preserve_order):
         if not isinstance(element, Stroke):
             continue
 
-        segments = break_up_segments(element.paths)
+        segments = break_up_segments(element, elements)
+
         for segment in segments:
-            start = Point(segment.coords[0])
-            end = Point(segment.coords[-1])
+            for c1, c2 in zip(segment.coords[1:], segment.coords[:-1]):
+                start = Point(*c1)
+                end = Point(*c2)
 
-            graph.add_node(str(start), point=start)
-            graph.add_node(str(end), point=end)
-            graph.add_edge(str(start), str(end), element=element)
+                graph.add_node(str(start), point=start)
+                graph.add_node(str(end), point=end)
+                graph.add_edge(str(start), str(end), element=element)
 
-            if preserve_order:
-                # The graph is a directed graph, but we want to allow travel in
-                # any direction, so we add the edge in the opposite direction too.
-                graph.add_edge(str(end), str(start), element=element)
+                if preserve_order:
+                    # The graph is a directed graph, but we want to allow travel in
+                    # any direction, so we add the edge in the opposite direction too.
+                    graph.add_edge(str(end), str(start), element=element)
 
     return graph
 
 
-def break_up_segments(paths):
-    # chunk up segments into 1 mm substrings and add to graph
+def break_up_segments(element, elements):
     segment_list = []
-    line_strings = [LineString(path) for path in paths]
+    line_strings = [LineString(path) for path in element.paths]
     for line in line_strings:
-        num_segments = int(math.ceil(line.length / PIXELS_PER_MM))
-        segment_list.extend([substring(line, start_dist=i*PIXELS_PER_MM, end_dist=(i+1)*PIXELS_PER_MM) for i in range(num_segments)])
+        points = []
+        # add points at intersections with other elements (not at self intersections, sorry)
+        intersection_points = get_intersections(line, element, elements)
+        if intersection_points:
+            points.extend(intersection_points)
+        # maybe that are already enough points
+        # split at points
+        points = MultiPoint(points)
+        # split line at points, trouble: split() doesn't seem to work on small lines at all
+        # but differene with buffer seems to do the trick
+        # source: https://gis.stackexchange.com/questions/297134/shapely-floating-problems-with-split/327287#327287
+        seg = line.difference(points.buffer(1e-13))
+        if isinstance(seg, LineString):
+            segment_list.append(seg)
+        else:
+            segment_list.extend(seg.geoms)
+
     return segment_list
+
+
+def get_intersections(line, element, elements):
+    points = []
+    for e in elements:
+        if element == e:
+            continue
+        intersections = line.intersection(e.shape)
+        if intersections.is_empty:
+            continue
+        if isinstance(intersections, Point):
+            points.append(intersections)
+        elif isinstance(intersections, LineString):
+            points.extend([Point(*c) for c in intersections.coords])
+        elif isinstance(intersections, MultiLineString):
+            for line in intersections.geoms:
+                points.extend([Point(*c) for c in line.coords])
+    return points
 
 
 def add_path_attribs(path):
