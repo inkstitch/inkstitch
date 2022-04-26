@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-04-25 02:19+0000\n"
-"PO-Revision-Date: 2022-04-25 02:20\n"
+"PO-Revision-Date: 2022-04-26 02:26\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -902,19 +902,19 @@ msgstr "* Halte die Shift-Taste gedrückt, während du die Stichlagen zeichnest.
 
 #: lib/elements/satin_column.py:56
 msgid "Not stitchable satin column"
-msgstr ""
+msgstr "Nicht stickbare Satinkolumne"
 
 #: lib/elements/satin_column.py:57
 msgid "A satin column consists out of two rails and one or more rungs. This satin column may have a different setup."
-msgstr ""
+msgstr "Eine Satinkolumne besteht aus zwei seitlichen Begrenzungslinien und einer beliebigen Anzahl an Richtungslinien. Die fehlerhafte Satinkolumne hat wahrscheinlich einen anderen Aufbau."
 
 #: lib/elements/satin_column.py:59
 msgid "Make sure your satin column is not a combination of multiple satin columns."
-msgstr ""
+msgstr "Stelle sicher, dass die Satinkolumne keine Kombination aus mehreren Satinkolumnen ist."
 
 #: lib/elements/satin_column.py:60
 msgid "Go to our website and read how a satin column should look like https://inkstitch.org/docs/stitches/satin-column/"
-msgstr ""
+msgstr "Gehe auf unsere Webseite und informiere dich, wie Satinkolumnen aufgebaut sind: https://inkstitch.org/de/docs/stitches/satin-column/"
 
 #: lib/elements/satin_column.py:64
 msgid "Each rung should intersect both rails once."
@@ -1297,7 +1297,8 @@ msgstr "Text Skalierung %s%%"
 #, python-format
 msgid "Error: Text cannot be applied to the document.\n"
 "%s"
-msgstr ""
+msgstr "Fehler: Der Text kann nicht in das Dokument eingefügt werden.\n"
+"%s"
 
 #: lib/extensions/lettering.py:414
 msgid "Please select only one block of text."
@@ -1384,7 +1385,7 @@ msgstr "Letzte Einstellungen verwenden"
 
 #: lib/extensions/reorder.py:20
 msgid "Please select at least to elements to reorder."
-msgstr ""
+msgstr "Zum Sortieren bitte mindestens zwei Elemente auswählen."
 
 #: lib/extensions/selection_to_pattern.py:21
 msgid "Please select at least one object to be marked as a pattern."
@@ -1443,7 +1444,7 @@ msgstr "Diese Objekte funktionieren möglicherweise nicht gut mit Ink/Stitch. Fo
 
 #: lib/extensions/troubleshoot.py:178
 msgid "Possible solutions"
-msgstr ""
+msgstr "Mögliche Lösungen"
 
 #: lib/extensions/troubleshoot.py:183
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
@@ -1643,7 +1644,7 @@ msgstr "Die Datei kann nicht geöffnet werden. Bitte überprüfe den Dateipfad u
 
 #: lib/stitch_plan/stitch_plan.py:26
 msgid "There is no selected stitchable element. Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects in case you have expected a stitchout."
-msgstr ""
+msgstr "Es wurde kein stickbares Element ausgewählt. Bitte führe die Funktion Erweiterungen > Ink/Stitch > Fehlerbehebung > Fehlerbehebung an Objekten aus, um Hinweise zu Fehlern in der Stickplanerstellung zu erhalten."
 
 #: lib/stitches/auto_satin.py:659
 msgid "Auto-Satin"
@@ -2447,7 +2448,7 @@ msgstr "Lizenz"
 
 #: inx/inkstitch_apply_threadlist.inx:3
 msgid "Apply Threadlist"
-msgstr ""
+msgstr "Garnliste anwenden"
 
 #: inx/inkstitch_apply_threadlist.inx:6
 #: inx/inkstitch_install_custom_palette.inx:8
@@ -2461,11 +2462,11 @@ msgstr "Methode wählen"
 
 #: inx/inkstitch_apply_threadlist.inx:8
 msgid "Apply Ink/Stitch threadlist"
-msgstr ""
+msgstr "Ink/Stitch Garnliste anwenden"
 
 #: inx/inkstitch_apply_threadlist.inx:9
 msgid "Apply other threadlist*"
-msgstr ""
+msgstr "Andere Garnliste andwenden*"
 
 #: inx/inkstitch_apply_threadlist.inx:11
 msgid "*Choose color palette"
@@ -2557,7 +2558,7 @@ msgstr "Befehle"
 #: inx/inkstitch_commands_scale_symbols.inx:12
 #: inx/inkstitch_object_commands_toggle_visibility.inx:11
 msgid "View"
-msgstr ""
+msgstr "Ansicht"
 
 #: inx/inkstitch_convert_to_satin.inx:3
 msgid "Convert Line to Satin"
