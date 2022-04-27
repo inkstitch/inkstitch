@@ -18,4 +18,8 @@ classes: wide
 
 ### French
 
-* [Augusa](http://lyogau.over-blog.com/tag/inkscape%20inkstitch/) (French)
+* [Augusa](http://lyogau.over-blog.com/tag/inkscape%20inkstitch/)
+
+### Russian
+
+* [Ink/Stitch forum by Сергей Демин](https://inkstitch.ru/)
