@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-04-25 02:19+0000\n"
-"PO-Revision-Date: 2022-04-26 02:26\n"
+"PO-Revision-Date: 2022-04-28 02:52\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -902,19 +902,19 @@ msgstr "*Maintenir la touche \"Majuscule\" enfoncée en traçant la traverse de 
 
 #: lib/elements/satin_column.py:56
 msgid "Not stitchable satin column"
-msgstr ""
+msgstr "Colonne de satin non brodable"
 
 #: lib/elements/satin_column.py:57
 msgid "A satin column consists out of two rails and one or more rungs. This satin column may have a different setup."
-msgstr ""
+msgstr "Une colonne satinée est constituée de deux rails et d'une ou plusieurs traverses. Cette colonne satinée peut avoir une configuration différente."
 
 #: lib/elements/satin_column.py:59
 msgid "Make sure your satin column is not a combination of multiple satin columns."
-msgstr ""
+msgstr "Assurez-vous que votre colonne satin n'est pas une combinaison de plusieurs colonnes satin."
 
 #: lib/elements/satin_column.py:60
 msgid "Go to our website and read how a satin column should look like https://inkstitch.org/docs/stitches/satin-column/"
-msgstr ""
+msgstr "Allez sur notre site web et lisez à quoi une colonne de satin devrait ressembler: https://inkstitch.org/fr/docs/stitches/satin-column/"
 
 #: lib/elements/satin_column.py:64
 msgid "Each rung should intersect both rails once."
@@ -1297,7 +1297,8 @@ msgstr "Échelle du texte %s%%"
 #, python-format
 msgid "Error: Text cannot be applied to the document.\n"
 "%s"
-msgstr ""
+msgstr "Erreur : Le texte ne peut pas être appliqué au document.\n"
+"%s"
 
 #: lib/extensions/lettering.py:414
 msgid "Please select only one block of text."
@@ -1384,7 +1385,7 @@ msgstr "Utiliser les derniers paramètres"
 
 #: lib/extensions/reorder.py:20
 msgid "Please select at least to elements to reorder."
-msgstr ""
+msgstr "Veuillez sélectionner au moins deux éléments à retrier."
 
 #: lib/extensions/selection_to_pattern.py:21
 msgid "Please select at least one object to be marked as a pattern."
@@ -1443,7 +1444,7 @@ msgstr "Ces objets peuvent ne pas fonctionner correctement avec Ink/Stitch. Suiv
 
 #: lib/extensions/troubleshoot.py:178
 msgid "Possible solutions"
-msgstr ""
+msgstr "Solutions possibles"
 
 #: lib/extensions/troubleshoot.py:183
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
@@ -1643,7 +1644,7 @@ msgstr "Le fichier n'existe pas et ne peut être ouvert. Veuillez corriger le ch
 
 #: lib/stitch_plan/stitch_plan.py:26
 msgid "There is no selected stitchable element. Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects in case you have expected a stitchout."
-msgstr ""
+msgstr "Aucun d'élément brodable est sélectionné. Veuillez exécuter Extensions > Ink/Stitch > Résolution de problèmes > Dépistage d'objets au cas où vous auriez attendu une sortie brodable."
 
 #: lib/stitches/auto_satin.py:659
 msgid "Auto-Satin"
@@ -2448,7 +2449,7 @@ msgstr "Licence"
 
 #: inx/inkstitch_apply_threadlist.inx:3
 msgid "Apply Threadlist"
-msgstr ""
+msgstr "Appliquer la liste de fils"
 
 #: inx/inkstitch_apply_threadlist.inx:6
 #: inx/inkstitch_install_custom_palette.inx:8
@@ -2462,11 +2463,11 @@ msgstr "Choisir la méthode"
 
 #: inx/inkstitch_apply_threadlist.inx:8
 msgid "Apply Ink/Stitch threadlist"
-msgstr ""
+msgstr "Appliquer la liste de fils Ink/Stitch"
 
 #: inx/inkstitch_apply_threadlist.inx:9
 msgid "Apply other threadlist*"
-msgstr ""
+msgstr "Appliquer une autre liste de fils*"
 
 #: inx/inkstitch_apply_threadlist.inx:11
 msgid "*Choose color palette"
@@ -2558,7 +2559,7 @@ msgstr "Commandes"
 #: inx/inkstitch_commands_scale_symbols.inx:12
 #: inx/inkstitch_object_commands_toggle_visibility.inx:11
 msgid "View"
-msgstr ""
+msgstr "Vue"
 
 #: inx/inkstitch_convert_to_satin.inx:3
 msgid "Convert Line to Satin"
@@ -2664,7 +2665,7 @@ msgstr "Sur notre site web, nous avons rassemblé quelques configurations couran
 
 #: inx/inkstitch_cutwork_segmentation.inx:50
 msgid "https://inkstitch.org/docs/cutwork/"
-msgstr "https://inkstitch.org/docs/cutwork/"
+msgstr "https://inkstitch.org/fr/docs/cutwork/"
 
 #: inx/inkstitch_duplicate_params.inx:3
 msgid "Duplicate Params"
