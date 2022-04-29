@@ -3,11 +3,15 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
+from ..debug import debug
+import math
 from copy import copy
+from shapely.geometry import LineString
 
 """ Utility functions to produce running stitches. """
 
 
+@debug.time
 def running_stitch(points, stitch_length):
     """Generate running stitch along a path.
 
@@ -23,56 +27,50 @@ def running_stitch(points, stitch_length):
     if len(points) < 2:
         return []
 
+    # simplify will remove as many points as possible while ensuring that the
+    # resulting path stays within 0.75 pixels (0.2mm) of the original path.
+    path = LineString(points)
+    simplified = path.simplify(0.75, preserve_topology=False)
+
+    # save the points that simplify picked and make sure we stitch them
+    important_points = set(simplified.coords)
+    important_point_indices = [i for i, point in enumerate(points) if point.as_tuple() in important_points]
+
     output = []
-    segment_start = points[0]
-    last_segment_direction = None
+    for start, end in zip(important_point_indices[:-1], important_point_indices[1:]):
+        # consider sections of the original path, each one starting and ending
+        # with an important point
+        section = points[start:end + 1]
+        output.append(section[0])
 
-    # This tracks the distance we've traveled along the current segment so
-    # far.  Each time we make a stitch, we add the stitch_length to this
-    # value.  If we fall off the end of the current segment, we carry over
-    # the remainder to the next segment.
-    distance = 0.0
+        # Now split each section up evenly into stitches, each with a length no
+        # greater than the specified stitch_length.
+        section_ls = LineString(section)
+        section_length = section_ls.length
+        if section_length > stitch_length:
+            # a fractional stitch needs to be rounded up, which will make all
+            # of the stitches shorter
+            num_stitches = math.ceil(section_length / stitch_length)
+            actual_stitch_length = section_length / num_stitches
 
-    for segment_end in points[1:]:
-        segment = segment_end - segment_start
-        segment_length = segment.length()
+            distance = actual_stitch_length
 
-        if segment_length == 0:
-            continue
+            segment_start = section[0]
+            for segment_end in section[1:]:
+                segment = segment_end - segment_start
+                segment_length = segment.length()
 
-        segment_direction = segment.unit()
+                if distance < segment_length:
+                    segment_direction = segment.unit()
 
-        # corner detection
-        if last_segment_direction:
-            cos_angle_between = segment_direction * last_segment_direction
+                    while distance < segment_length:
+                        output.append(segment_start + distance * segment_direction)
+                        distance += actual_stitch_length
 
-            # This checks whether the corner is sharper than 45 degrees.
-            if cos_angle_between < 0.5:
-                # Only add the corner point if it's more than 0.1mm away to
-                # avoid a double-stitch.
-                if (segment_start - output[-1]).length() > 0.1:
-                    # add a stitch at the corner
-                    output.append(segment_start)
+                distance -= segment_length
+                segment_start = segment_end
 
-                    # next stitch needs to be stitch_length along this segment
-                    distance = stitch_length
-
-        while distance < segment_length:
-            output.append(segment_start + distance * segment_direction)
-            distance += stitch_length
-
-        # prepare for the next segment
-        segment_start = segment_end
-        last_segment_direction = segment_direction
-        distance -= segment_length
-
-    # stitch a single point if the path has a length of zero
-    if not output:
-        output.append(segment_start)
-
-    # stitch the last point unless we're already almost there
-    if (segment_start - output[-1]).length() > 0.1 or len(output) == 0:
-        output.append(segment_start)
+    output.append(points[-1])
 
     return output
 
