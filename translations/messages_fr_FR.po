@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-04-25 02:19+0000\n"
-"PO-Revision-Date: 2022-04-28 02:52\n"
+"PO-Revision-Date: 2022-04-29 02:28\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -1186,7 +1186,7 @@ msgstr "cette colonne satinée n’a pas de commande « point de partage satin�
 
 #: lib/extensions/cutwork_segmentation.py:47
 msgid "Please select one or more stroke elements."
-msgstr "Veuillez sélectionner un ou plusieurs éléments de trait."
+msgstr "Veuillez sélectionner un ou plusieurs traits."
 
 #: lib/extensions/cutwork_segmentation.py:158
 msgid "Cutwork Group"
@@ -1644,7 +1644,7 @@ msgstr "Le fichier n'existe pas et ne peut être ouvert. Veuillez corriger le ch
 
 #: lib/stitch_plan/stitch_plan.py:26
 msgid "There is no selected stitchable element. Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects in case you have expected a stitchout."
-msgstr "Aucun d'élément brodable est sélectionné. Veuillez exécuter Extensions > Ink/Stitch > Résolution de problèmes > Dépistage d'objets au cas où vous auriez attendu une sortie brodable."
+msgstr "Aucun d'élément brodable est sélectionné. Veuillez exécuter Extensions > Ink/Stitch > Résolution de problèmes > Dépistage d'objets au cas où vous auriez attendu un résultat brodable."
 
 #: lib/stitches/auto_satin.py:659
 msgid "Auto-Satin"
