@@ -9,14 +9,9 @@
 
 cd $(dirname "$0")/../..
 
-IFS=$'\n'
-files=( $(git diff-index --cached --name-only --diff-filter=AMCR HEAD) )
+errors=$(git diff --cached | bin/style-check --diff 2>&1)
 
-if [ "${#files}" -gt 0 ]; then
-    errors=$(bin/style-check "${files[@]}" 2>&1)
-
-    if [ "$?" != "0" ]; then
-        echo "$errors"
-        exit 1
-    fi
+if [ "$?" != "0" ]; then
+    echo "$errors"
+    exit 1
 fi
