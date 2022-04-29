@@ -103,7 +103,7 @@ class FillStitch(EmbroideryElement):
 
     @property
     @param('tangential_strategy', _('Tangential strategy'), type='dropdown', default=1,
-           options=[_("Closest point"), _("Inner to Outer"), _("Single spiral")], select_items=[('fill_method', 1)], sort_index=2)
+           options=[_("Inner to Outer"), _("Single spiral")], select_items=[('fill_method', 1)], sort_index=2)
     def tangential_strategy(self):
         return self.get_int_param('tangential_strategy', 1)
 

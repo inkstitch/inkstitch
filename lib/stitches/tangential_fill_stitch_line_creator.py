@@ -146,9 +146,8 @@ def make_tree_uniform_ccw(tree):
 
 # Used to define which stitching strategy shall be used
 class StitchingStrategy(IntEnum):
-    CLOSEST_POINT = 0
-    INNER_TO_OUTER = 1
-    SPIRAL = 2
+    INNER_TO_OUTER = 0
+    SPIRAL = 1
 
 
 def check_and_prepare_tree_for_valid_spiral(tree):
@@ -350,10 +349,7 @@ def offset_poly(poly, offset, join_style, stitch_distance, min_stitch_distance, 
 
     make_tree_uniform_ccw(tree)
 
-    if strategy == StitchingStrategy.CLOSEST_POINT:
-        (connected_line, connected_line_origin) = tangential_fill_stitch_pattern_creator.connect_raster_tree_nearest_neighbor(
-            tree, 'root', offset, stitch_distance, min_stitch_distance, starting_point, offset_by_half)
-    elif strategy == StitchingStrategy.INNER_TO_OUTER:
+    if strategy == StitchingStrategy.INNER_TO_OUTER:
         (connected_line, connected_line_origin) = tangential_fill_stitch_pattern_creator.connect_raster_tree_from_inner_to_outer(
             tree, 'root', offset, stitch_distance, min_stitch_distance, starting_point, offset_by_half)
     elif strategy == StitchingStrategy.SPIRAL:
