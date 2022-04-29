@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# copy (DO NOT SYMLINK) this file to .git/hooks/pre-commit
+# to check style on all modified files before allowing the commit to complete
+#
+# DO NOT SYMLINK
+# DO NOT SYMLINK
+# DO NOT SYMLINK (why? security risk)
+
+cd $(dirname "$0")/../..
+
+IFS=$'\n'
+files=( $(git diff-index --cached --name-only --diff-filter=AMCR HEAD) )
+
+if [ "${#files}" -gt 0 ]; then
+    errors=$(bin/style-check "${files[@]}" 2>&1)
+
+    if [ "$?" != "0" ]; then
+        echo "$errors"
+        exit 1
+    fi
+fi
