@@ -5,7 +5,7 @@
 
 import math
 
-from shapely.geometry import LineString
+from shapely.geometry import LineString, LinearRing
 from shapely.geometry import Point as ShapelyPoint
 
 
@@ -37,6 +37,33 @@ def cut(line, distance, normalized=False):
             return [
                 LineString(coords[:i] + [(cp.x, cp.y)]),
                 LineString([(cp.x, cp.y)] + coords[i:])]
+
+
+def roll_linear_ring(ring, distance, normalized=False):
+    """Make a linear ring start at a different point.
+
+    Example: A B C D E F G A -> D E F G A B C
+
+    Same linear ring, different ordering of the coordinates.
+    """
+
+    if not isinstance(ring, LinearRing):
+        # In case they handed us a LineString
+        ring = LinearRing(ring)
+
+    pieces = cut(LinearRing(ring), distance, normalized=False)
+
+    if None in pieces:
+        # We cut exactly at the start or end.
+        return ring
+
+    # The first and last point in a linear ring are duplicated, so we omit one
+    # copy
+    return LinearRing(pieces[1].coords[:] + pieces[0].coords[1:])
+
+
+def reverse_line_string(line_string):
+    return LineString(line_string.coords[::-1])
 
 
 def cut_path(points, length):

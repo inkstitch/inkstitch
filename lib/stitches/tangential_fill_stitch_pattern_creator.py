@@ -14,6 +14,7 @@ from ..stitches import constants
 from ..stitches import point_transfer
 from ..stitches import sample_linestring
 from ..stitch_plan import Stitch
+from ..utils.geometry import cut, reverse_line_string, roll_linear_ring
 
 nearest_neighbor_tuple = namedtuple(
     "nearest_neighbor_tuple",
@@ -24,34 +25,6 @@ nearest_neighbor_tuple = namedtuple(
         "child_node",
     ],
 )
-
-
-def cut(line, distance):
-    """
-    Cuts a closed line so that the new closed line starts at the
-    point with "distance" to the beginning of the old line.
-    """
-    if distance <= 0.0 or distance >= line.length:
-        return [LineString(line)]
-    coords = list(line.coords)
-    for i, p in enumerate(coords):
-        if i > 0 and p == coords[0]:
-            pd = line.length
-        else:
-            pd = line.project(Point(p))
-        if pd == distance:
-            if coords[0] == coords[-1]:
-                return LineString(coords[i:] + coords[1: i + 1])
-            else:
-                return LineString(coords[i:] + coords[:i])
-        if pd > distance:
-            cp = line.interpolate(distance)
-            if coords[0] == coords[-1]:
-                return LineString(
-                    [(cp.x, cp.y)] + coords[i:] + coords[1:i] + [(cp.x, cp.y)]
-                )
-            else:
-                return LineString([(cp.x, cp.y)] + coords[i:] + coords[:i])
 
 
 def get_nearest_points_closer_than_thresh(travel_line, next_line, thresh):
@@ -237,7 +210,7 @@ def connect_raster_tree_from_inner_to_outer(tree, node, used_offset, stitch_dist
     start_distance = current_coords.project(close_point)
     # We cut the current path so that its index 0 is closest to close_point
     if start_distance > 0:
-        current_coords = cut(current_coords, start_distance)
+        current_coords = roll_linear_ring(current_coords, start_distance)
         current_node.val = current_coords
 
         if not current_node.transferred_point_priority_deque.is_empty():
@@ -254,6 +227,7 @@ def connect_raster_tree_from_inner_to_outer(tree, node, used_offset, stitch_dist
 
     # We try to use always the opposite stitching direction with respect to the
     # parent to avoid crossings when entering and leaving the child
+    # LEX: this seems like a lie ^^
     parent_stitching_direction = -1
     if current_node.parent is not None:
         parent_stitching_direction = tree.nodes[current_node.parent].stitching_direction
