@@ -343,7 +343,7 @@ def offset_poly(poly, offset, join_style, stitch_distance, min_stitch_distance, 
             # contained in the new holes they
             # have been merged with the
             # outer polygon
-            if tree.nodes[previous_hole].parent is None:
+            if not tree.nodes[previous_hole].parent:
                 tree.nodes[previous_hole].parent = current_poly
                 tree.add_edge(current_poly, previous_hole)
 
