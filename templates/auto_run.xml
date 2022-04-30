@@ -15,9 +15,9 @@
       <page name="options" gui-text="Autoroute Running Stitch Options">
           <spacer />
           <param name="break_up" type="optiongroup" appearance="combo" gui-text="Subdivide mode">
-              <option value="">Off</option>
               <option value="intersections">Intersections</option>
               <option value="subdivide">Length</option>
+              <option value="">Off</option>
           </param>
           <param name="subdivide" type="float" gui-text="Subdivide length (mm)" min="0.4" max="5.0"
                  gui-description="Applies to subdivide mode length only. Use with care (slow).">1.0</param>

@@ -157,10 +157,10 @@ def path_to_elements(graph, path):
     el = None
     for start, end, direction in path:
         element = graph[start][end].get('element')
+        end_coord = graph.nodes[end]['point']
         if element:
             el = element
-            end = graph.nodes[end]['point']
-            # create a new element if direction (prupose) changes
+            # create a new element if direction (purpose) changes
             if direction != path_direction:
                 if d:
                     element_list.append(create_element(d, position, path_direction, el))
@@ -170,20 +170,19 @@ def path_to_elements(graph, path):
                 path_direction = direction
 
             if d == "":
-                start = graph.nodes[start]['point']
-                d = "M %s %s, %s %s" % (start.x, start.y, end.x, end.y)
+                start_coord = graph.nodes[start]['point']
+                d = "M %s %s, %s %s" % (start_coord.x, start_coord.y, end_coord.x, end_coord.y)
             else:
-                d += ", %s %s" % (end.x, end.y)
-        # exclude jump stitches bigger than 1 mm
+                d += ", %s %s" % (end_coord.x, end_coord.y)
+        # exclude jump stitches bigger than 1 mm from the path
         elif el and d and graph.nodes[start]['point'].distance(graph.nodes[end]['point']) > PIXELS_PER_MM:
             element_list.append(create_element(d, position, path_direction, el))
             original_parents.append(el.node.getparent())
             d = ""
             position += 1
         elif el and d:
-            end = graph.nodes[end]['point']
             # small jumps: use as normal stitches
-            d += ", %s %s" % (end.x, end.y)
+            d += ", %s %s" % (end_coord.x, end_coord.y)
 
     element_list.append(create_element(d, position, path_direction, el))
     original_parents.append(el.node.getparent())
@@ -196,7 +195,7 @@ def create_element(path, position, direction, element):
         return
 
     style = inkex.Style(element.node.get("style"))
-    style = style + inkex.Style("stroke-dasharray:0.5,0.5;fill:none;")
+    style = style + inkex.Style("stroke-dasharray:0.5,0.5;fill:none;marker-start:none;marker-end:none;")
     el_id = "%s_" % direction
 
     index = position + 1

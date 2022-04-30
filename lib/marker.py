@@ -7,10 +7,12 @@ from copy import deepcopy
 from os import path
 
 import inkex
+from shapely import geometry as shgeo
 
+from .svg.tags import EMBROIDERABLE_TAGS
 from .utils import cache, get_bundled_dir
 
-MARKER = ['pattern']
+MARKER = ['pattern', 'guide-line']
 
 
 def ensure_marker(svg, marker):
@@ -33,5 +35,45 @@ def set_marker(node, position, marker):
     style = node.get('style') or ''
     style = style.split(";")
     style = [i for i in style if not i.startswith('marker-%s' % position)]
-    style.append('marker-%s:url(#inkstitch-pattern-marker)' % position)
+    style.append('marker-%s:url(#inkstitch-%s-marker)' % (position, marker))
     node.set('style', ";".join(style))
+
+
+def get_marker_elements(node, marker, get_fills=True, get_strokes=True):
+    from .elements import EmbroideryElement
+    from .elements.stroke import Stroke
+
+    fills = []
+    strokes = []
+    xpath = "./parent::svg:g/*[contains(@style, 'marker-start:url(#inkstitch-%s-marker)')]" % marker
+    markers = node.xpath(xpath, namespaces=inkex.NSS)
+    for marker in markers:
+        if marker.tag not in EMBROIDERABLE_TAGS:
+            continue
+
+        element = EmbroideryElement(marker)
+        fill = element.get_style('fill')
+        stroke = element.get_style('stroke')
+
+        if get_fills and fill is not None:
+            fill = Stroke(marker).paths
+            linear_rings = [shgeo.LinearRing(path) for path in fill]
+            for ring in linear_rings:
+                fills.append(shgeo.Polygon(ring))
+
+        if get_strokes and stroke is not None:
+            stroke = Stroke(marker).paths
+            line_strings = [shgeo.LineString(path) for path in stroke]
+            strokes.append(shgeo.MultiLineString(line_strings))
+
+    return {'fill': fills, 'stroke': strokes}
+
+
+def has_marker(node, marker=list()):
+    if not marker:
+        marker = MARKER
+    for m in marker:
+        style = node.get('style') or ''
+        if "marker-start:url(#inkstitch-%s-marker)" % m in style:
+            return True
+    return False

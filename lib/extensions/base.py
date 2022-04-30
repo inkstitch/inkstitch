@@ -17,7 +17,7 @@ from ..commands import is_command, layer_commands
 from ..elements import EmbroideryElement, nodes_to_elements
 from ..elements.clone import is_clone
 from ..i18n import _
-from ..patterns import is_pattern
+from ..marker import has_marker
 from ..svg import generate_unique_id
 from ..svg.tags import (CONNECTOR_TYPE, EMBROIDERABLE_TAGS, INKSCAPE_GROUPMODE,
                         NOT_EMBROIDERABLE_TAGS, SVG_CLIPPATH_TAG, SVG_DEFS_TAG,
@@ -169,10 +169,10 @@ class InkstitchExtension(inkex.Effect):
         if selected:
             if node.tag == SVG_GROUP_TAG:
                 pass
-            elif (node.tag in EMBROIDERABLE_TAGS or is_clone(node)) and not is_pattern(node):
+            elif (node.tag in EMBROIDERABLE_TAGS or is_clone(node)) and not has_marker(node):
                 nodes.append(node)
-            # add images, text and patterns for the troubleshoot extension
-            elif troubleshoot and (node.tag in NOT_EMBROIDERABLE_TAGS or is_pattern(node)):
+            # add images, text and elements with a marker for the troubleshoot extension
+            elif troubleshoot and (node.tag in NOT_EMBROIDERABLE_TAGS or has_marker(node)):
                 nodes.append(node)
 
         return nodes
