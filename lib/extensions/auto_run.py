@@ -18,7 +18,6 @@ class AutoRun(CommandsExtension):
         CommandsExtension.__init__(self, *args, **kwargs)
 
         self.arg_parser.add_argument("-b", "--break_up", dest="break_up", type=str, default="")
-        self.arg_parser.add_argument("-s", "--subdivide", dest="subdivide", type=float, default=0)
         self.arg_parser.add_argument("-p", "--preserve_order", dest="preserve_order", type=inkex.Boolean, default=False)
         self.arg_parser.add_argument("-o", "--options", dest="options", type=str, default="")
         self.arg_parser.add_argument("-i", "--info", dest="help", type=str, default="")
@@ -32,9 +31,8 @@ class AutoRun(CommandsExtension):
         ending_point = self.get_ending_point()
 
         break_up = self.options.break_up
-        subdivide = self.options.subdivide if self.options.break_up == "subdivide" else None
 
-        autorun(elements, self.options.preserve_order, break_up, subdivide, starting_point, ending_point)
+        autorun(elements, self.options.preserve_order, break_up, starting_point, ending_point)
 
     def get_starting_point(self):
         point = self.get_marker_point("marker-start", "autorun_start", 0)

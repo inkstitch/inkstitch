@@ -16,23 +16,19 @@
           <spacer />
           <param name="break_up" type="optiongroup" appearance="combo" gui-text="Subdivide mode">
               <option value="intersections">Intersections</option>
-              <option value="subdivide">Length</option>
               <option value="">Off</option>
           </param>
-          <param name="subdivide" type="float" gui-text="Subdivide length (mm)" min="0.4" max="5.0"
-                 gui-description="Applies to subdivide mode length only. Use with care (slow).">1.0</param>
           <spacer />
           <param name="preserve_order" type="boolean" gui-text="Preserve order of running stitches">false</param>
       </page>
       <page name="help" gui-text="Help">
           <label appearance="header">Autoroute Running Stitch</label>
-          <label>Subdivide mode provides three options:</label>
+          <label>Subdivide mode provides two options:</label>
           <spacer />
-          <label indent="1">1. Off (fastest). Selected paths will not be subdivided (unless to preserve curves). Choose this option if you have manually set nodes at crucial spots.</label>
+          <label indent="1" xml:space="preserve">- Intersections (slower). Ink/Stitch will add nodes at intersections only.</label>
           <spacer />
-          <label indent="1">2. Intersections (slower). Ink/Stitch will add nodes at intersections only.</label>
-          <spacer />
-          <label indent="1">3. Length (slow). Ink/Stitch will subdivide each path in the length definded by "Subdivide length (mm)". Do not use on large designs.</label>
+          <label indent="1" xml:space="preserve">- Off (faster). Selected paths will not be subdivided (unless to preserve curves).
+   Choose this option if you have manually set nodes at crucial spots.</label>
       </page>
     </param>
     <script>
