@@ -89,27 +89,17 @@ def create_nearest_points_list(
        distance along travel_line, belonging child)
     """
 
-    result_list_in_order = []
-    result_list_reversed_order = []
+    children_nearest_points = []
 
-    travel_line_reversed = LinearRing(travel_line.coords[::-1])
-
-    weight_in_order = 0
-    weight_reversed_order = 0
     for child in children_list:
-        result = get_nearest_points_closer_than_thresh(
-            travel_line, tree.nodes[child].val, threshold
-        )
+        result = get_nearest_points_closer_than_thresh(travel_line, tree.nodes[child].val, threshold)
         if result is None:
             # where holes meet outer borders a distance
-            # up to 2*used offset can arise
-            result = get_nearest_points_closer_than_thresh(
-                travel_line, tree.nodes[child].val, threshold_hard
-            )
-            assert result is not None
+            # up to 2 * used offset can arise
+            result = get_nearest_points_closer_than_thresh(travel_line, tree.nodes[child].val, threshold_hard)
+
         proj = travel_line.project(result[0])
-        weight_in_order += proj
-        result_list_in_order.append(
+        children_nearest_points.append(
             nearest_neighbor_tuple(
                 nearest_point_parent=result[0],
                 nearest_point_child=result[1],
@@ -118,48 +108,7 @@ def create_nearest_points_list(
             )
         )
 
-        result = get_nearest_points_closer_than_thresh(
-            travel_line_reversed, tree.nodes[child].val, threshold
-        )
-        if result is None:
-            # where holes meet outer borders a distance
-            # up to 2*used offset can arise
-            result = get_nearest_points_closer_than_thresh(
-                travel_line_reversed, tree.nodes[child].val, threshold_hard
-            )
-            assert result is not None
-        proj = travel_line_reversed.project(result[0])
-        weight_reversed_order += proj
-        result_list_reversed_order.append(
-            nearest_neighbor_tuple(
-                nearest_point_parent=result[0],
-                nearest_point_child=result[1],
-                proj_distance_parent=proj,
-                child_node=child,
-            )
-        )
-
-    if preferred_direction == 1:
-        # Reduce weight_in_order to make in order stitching more preferred
-        weight_in_order = min(
-            weight_in_order / 2, max(0, weight_in_order - 10 * threshold)
-        )
-        if weight_in_order == weight_reversed_order:
-            return 1, result_list_in_order
-    elif preferred_direction == -1:
-        # Reduce weight_reversed_order to make reversed
-        # stitching more preferred
-        weight_reversed_order = min(
-            weight_reversed_order /
-            2, max(0, weight_reversed_order - 10 * threshold)
-        )
-        if weight_in_order == weight_reversed_order:
-            return (-1, result_list_reversed_order)
-
-    if weight_in_order < weight_reversed_order:
-        return (1, result_list_in_order)
-    else:
-        return (-1, result_list_reversed_order)
+    return (1, children_nearest_points)
 
 
 def calculate_replacing_middle_point(line_segment, abs_offset, max_stitch_distance):
