@@ -1,20 +1,20 @@
 import math
 from collections import namedtuple
-
 import networkx as nx
 import numpy as np
 import trimesh
 from depq import DEPQ
-from shapely.geometry import MultiPoint, Point
-from shapely.geometry.polygon import LineString, LinearRing
+from shapely.geometry import Point, LineString, LinearRing, MultiLineString
 from shapely.ops import nearest_points
 
 from .running_stitch import running_stitch
+
+from ..debug import debug
 from ..stitches import constants
 from ..stitches import point_transfer
 from ..stitches import sample_linestring
 from ..stitch_plan import Stitch
-from ..utils.geometry import cut, reverse_line_string, roll_linear_ring
+from ..utils.geometry import roll_linear_ring
 
 nearest_neighbor_tuple = namedtuple(
     "nearest_neighbor_tuple",
@@ -27,38 +27,41 @@ nearest_neighbor_tuple = namedtuple(
 )
 
 
-def get_nearest_points_closer_than_thresh(travel_line, next_line, thresh):
+@debug.time
+def get_nearest_points_closer_than_thresh(travel_line, next_line, threshold):
     """
-    Takes a line and calculates the nearest distance along this
-    line to enter the next_line
+    Find the first point along travel_line that is within threshold of next_line.
+
     Input:
     -travel_line: The "parent" line for which the distance should
      be minimized to enter next_line
     -next_line: contains the next_line which need to be entered
-    -thresh: The distance between travel_line and next_line needs
-     to below thresh to be a valid point for entering
+    -threshold: The distance between travel_line and next_line needs
+     to below threshold to be a valid point for entering
+
     Output:
-    -tuple - the tuple structure is:
-     (nearest point in travel_line, nearest point in next_line)
+    -tuple or None
+      - the tuple structure is:
+        (nearest point in travel_line, nearest point in next_line)
+      - None is returned if there is no point that satisfies the threshold.
     """
-    point_list = list(MultiPoint(travel_line.coords))
 
-    if point_list[0].distance(next_line) < thresh:
-        return nearest_points(point_list[0], next_line)
+    # We'll buffer next_line and find the intersection with travel_line.
+    # Then we'll return the very first point in the intersection,
+    # matched with a corresponding point on next_line.  Fortunately for
+    # us, intersection of a Polygon with a LineString yields pieces of
+    # the LineString in the same order as the input LineString.
+    threshold_area = next_line.buffer(threshold)
+    portion_within_threshold = travel_line.intersection(threshold_area)
 
-    for i in range(len(point_list) - 1):
-        line_segment = LineString([point_list[i], point_list[i + 1]])
-        result = nearest_points(line_segment, next_line)
-
-        if result[0].distance(result[1]) < thresh:
-            return result
-    line_segment = LineString([point_list[-1], point_list[0]])
-    result = nearest_points(line_segment, next_line)
-
-    if result[0].distance(result[1]) < thresh:
-        return result
-    else:
+    if portion_within_threshold.is_empty:
         return None
+    else:
+        if isinstance(portion_within_threshold, MultiLineString):
+            portion_within_threshold = portion_within_threshold.geoms[0]
+
+        parent_point = Point(portion_within_threshold.coords[0])
+        return nearest_points(parent_point, next_line)
 
 
 def create_nearest_points_list(
