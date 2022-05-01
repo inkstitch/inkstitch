@@ -17,7 +17,7 @@ class AutoRun(CommandsExtension):
     def __init__(self, *args, **kwargs):
         CommandsExtension.__init__(self, *args, **kwargs)
 
-        self.arg_parser.add_argument("-b", "--break_up", dest="break_up", type=str, default="")
+        self.arg_parser.add_argument("-b", "--break_up", dest="break_up", type=inkex.Boolean, default=True)
         self.arg_parser.add_argument("-p", "--preserve_order", dest="preserve_order", type=inkex.Boolean, default=False)
         self.arg_parser.add_argument("-o", "--options", dest="options", type=str, default="")
         self.arg_parser.add_argument("-i", "--info", dest="help", type=str, default="")

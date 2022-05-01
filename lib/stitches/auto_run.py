@@ -192,7 +192,7 @@ def create_element(path, position, direction, element):
 
     style = inkex.Style(element.node.get("style"))
     style = style + inkex.Style("stroke-dasharray:0.5,0.5;fill:none;marker-start:none;marker-end:none;")
-    el_id = "%s_" % direction
+    el_id = "%s_%s_" % (direction, position)
 
     index = position + 1
     if direction == "autorun":

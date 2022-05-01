@@ -14,21 +14,17 @@
     <param name="options" type="notebook">
       <page name="options" gui-text="Autoroute Running Stitch Options">
           <spacer />
-          <param name="break_up" type="optiongroup" appearance="combo" gui-text="Subdivide mode">
-              <option value="intersections">Intersections</option>
-              <option value="">Off</option>
-          </param>
+          <param name="break_up" type="boolean" gui-text="Add nodes at intersections">true</param>
           <spacer />
           <param name="preserve_order" type="boolean" gui-text="Preserve order of running stitches">false</param>
       </page>
       <page name="help" gui-text="Help">
           <label appearance="header">Autoroute Running Stitch</label>
-          <label>Subdivide mode provides two options:</label>
+          <label>Add nodes at intersections:</label>
           <spacer />
-          <label indent="1" xml:space="preserve">- Intersections (slower). Ink/Stitch will add nodes at intersections only.</label>
+          <label indent="1">- Enabled (slower). Ink/Stitch will add some nodes for better routing.</label>
           <spacer />
-          <label indent="1" xml:space="preserve">- Off (faster). Selected paths will not be subdivided (unless to preserve curves).
-   Choose this option if you have manually set nodes at crucial spots.</label>
+          <label indent="1">- Disabled (faster). Choose this option if you have manually set nodes at crucial spots.</label>
       </page>
     </param>
     <script>
