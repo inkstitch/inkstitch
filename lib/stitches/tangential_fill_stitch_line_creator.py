@@ -10,7 +10,10 @@ from shapely.ops import polygonize
 
 from ..stitches import constants
 from ..stitches import tangential_fill_stitch_pattern_creator
+from ..stitch_plan import Stitch
 from ..utils import DotDict
+
+from .running_stitch import running_stitch
 
 
 class Tree(nx.DiGraph):
@@ -350,8 +353,10 @@ def offset_poly(poly, offset, join_style, stitch_distance, min_stitch_distance, 
     make_tree_uniform_ccw(tree)
 
     if strategy == StitchingStrategy.INNER_TO_OUTER:
-        (connected_line, connected_line_origin) = tangential_fill_stitch_pattern_creator.connect_raster_tree_from_inner_to_outer(
-            tree, 'root', offset, stitch_distance, min_stitch_distance, starting_point, offset_by_half)
+        connected_line = tangential_fill_stitch_pattern_creator.connect_raster_tree_from_inner_to_outer(
+            tree, 'root', abs(offset), stitch_distance, min_stitch_distance, starting_point, offset_by_half)
+        path = [Stitch(*point) for point in connected_line.coords]
+        return running_stitch(path, stitch_distance), "whatever"
     elif strategy == StitchingStrategy.SPIRAL:
         if not check_and_prepare_tree_for_valid_spiral(tree):
             raise ValueError("Geometry cannot be filled with one spiral!")
