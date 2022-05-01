@@ -214,8 +214,9 @@ def create_element(path, position, direction, element):
     if stitch_length:
         node.set(INKSTITCH_ATTRIBS['running_stitch_length_mm'], stitch_length)
     if direction == "autorun":
-        node.set(INKSTITCH_ATTRIBS['bean_stitch_repeats'], bean)
         node.set(INKSTITCH_ATTRIBS['repeats'], str(repeats))
+        if bean:
+            node.set(INKSTITCH_ATTRIBS['bean_stitch_repeats'], bean)
 
     return node
 
