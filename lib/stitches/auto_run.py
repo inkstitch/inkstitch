@@ -7,6 +7,7 @@ import math
 
 import networkx as nx
 from shapely.geometry import LineString, MultiLineString, MultiPoint, Point
+from shapely.ops import nearest_points
 
 import inkex
 
@@ -118,16 +119,21 @@ def get_intersections(line, element, elements):
     for e in elements:
         if element == e:
             continue
-        intersections = line.intersection(e.shape)
-        if intersections.is_empty:
-            continue
-        if isinstance(intersections, Point):
-            points.append(intersections)
-        elif isinstance(intersections, LineString):
-            points.extend([Point(*c) for c in intersections.coords])
-        elif isinstance(intersections, MultiLineString):
-            for line in intersections.geoms:
-                points.extend([Point(*c) for c in line.coords])
+        if line.distance(e.shape) < 10:
+            # add nearest points
+            near = nearest_points(line, e.shape)
+            points.extend(near)
+            # add intersections
+            intersections = line.intersection(e.shape)
+            if intersections.is_empty:
+                continue
+            if isinstance(intersections, Point):
+                points.append(intersections)
+            elif isinstance(intersections, LineString):
+                points.extend([Point(*c) for c in intersections.coords])
+            elif isinstance(intersections, MultiLineString):
+                for line in intersections.geoms:
+                    points.extend([Point(*c) for c in line.coords])
     return points
 
 
