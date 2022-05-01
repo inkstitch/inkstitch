@@ -98,7 +98,9 @@ def break_up_segments(element, elements):
         if isinstance(seg, LineString):
             segment_list.append(seg)
         else:
-            segment_list.extend(seg.geoms)
+            for geom in seg.geoms:
+                if isinstance(geom, LineString) and geom.length > 1:
+                    segment_list.append(geom)
 
     return segment_list
 
