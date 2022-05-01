@@ -90,7 +90,7 @@ def which_outline(shape, coords):
     # fail sometimes.
 
     point = shgeo.Point(*coords)
-    outlines = list(shape.boundary)
+    outlines = list(shape.boundary.geoms)
     outline_indices = list(range(len(outlines)))
     closest = min(outline_indices,
                   key=lambda index: outlines[index].distance(point))
@@ -104,7 +104,7 @@ def project(shape, coords, outline_index):
     This returns the distance along the outline at which the point resides.
     """
 
-    outline = list(shape.boundary)[outline_index]
+    outline = list(shape.boundary.geoms)[outline_index]
     return outline.project(shgeo.Point(*coords))
 
 
@@ -204,7 +204,7 @@ def tag_nodes_with_outline_and_projection(graph, shape, nodes):
 
 
 def add_boundary_travel_nodes(graph, shape):
-    for outline_index, outline in enumerate(shape.boundary):
+    for outline_index, outline in enumerate(shape.boundary.geoms):
         prev = None
         for point in outline.coords:
             point = shgeo.Point(point)

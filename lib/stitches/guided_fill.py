@@ -12,7 +12,7 @@ from .sample_linestring import raster_line_string_with_priority_points
 from ..debug import debug
 from ..i18n import _
 from ..stitch_plan import Stitch
-from ..utils.geometry import Point as InkstitchPoint
+from ..utils.geometry import Point as InkstitchPoint, reverse_line_string
 
 
 @debug.time
@@ -276,7 +276,7 @@ def intersect_region_with_grating_guideline(shape, line, row_spacing, flip=False
             line_offsetted = repair_non_simple_lines(line_offsetted)
 
         if row_spacing < 0:
-            line_offsetted.coords = line_offsetted.coords[::-1]
+            line_offsetted = reverse_line_string(line_offsetted)
         line_offsetted = line_offsetted.simplify(0.01, False)
         res = line_offsetted.intersection(shape)
         if row_spacing > 0 and not isinstance(res, (GeometryCollection, MultiLineString)):
@@ -290,7 +290,7 @@ def intersect_region_with_grating_guideline(shape, line, row_spacing, flip=False
                 if not line_offsetted.is_simple:
                     line_offsetted = repair_non_simple_lines(line_offsetted)
                 # using negative row spacing leads as a side effect to reversed offsetted lines - here we undo this
-                line_offsetted.coords = line_offsetted.coords[::-1]
+                line_offsetted = reverse_line_string(line_offsetted)
                 line_offsetted = line_offsetted.simplify(0.01, False)
                 res = line_offsetted.intersection(shape)
     return rows
