@@ -288,7 +288,7 @@ def offset_poly(poly, offset, join_style, stitch_distance, min_stitch_distance, 
                     result = Polygon(outer).difference(
                         MultiPolygon(poly_inners))
                 else:
-                    result = MultiPolygon(outer).difference(
+                    result = MultiPolygon(polygonize(outer)).difference(
                         MultiPolygon(poly_inners))
 
             if not result.is_empty and result.area > offset * offset / 10:
