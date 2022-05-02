@@ -29,7 +29,7 @@ def offset_linear_ring(ring, offset, resolution, join_style, mitre_limit):
         return result.exterior
     else:
         result_list = []
-        for poly in result:
+        for poly in result.geoms:
             result_list.append(poly.exterior)
         return MultiLineString(result_list)
 
@@ -41,10 +41,8 @@ def take_only_valid_linear_rings(rings):
     """
     if rings.geom_type == "MultiLineString":
         new_list = []
-        for ring in rings:
-            if len(ring.coords) > 3 or (
-                len(ring.coords) == 3 and ring.coords[0] != ring.coords[-1]
-            ):
+        for ring in rings.geoms:
+            if len(ring.coords) > 3 or (len(ring.coords) == 3 and ring.coords[0] != ring.coords[-1]):
                 new_list.append(ring)
         if len(new_list) == 1:
             return LinearRing(new_list[0])

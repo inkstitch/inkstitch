@@ -562,7 +562,7 @@ class FillStitch(EmbroideryElement):
 
     def do_tangential_fill(self, last_patch, starting_point):
         stitch_groups = []
-        polygons = list(self.fill_shape)
+        polygons = self.fill_shape.geoms
         if not starting_point:
             starting_point = (0, 0)
         for poly in polygons:
