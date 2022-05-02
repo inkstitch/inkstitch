@@ -10,7 +10,6 @@ from .running_stitch import running_stitch
 
 from ..debug import debug
 from ..stitches import constants
-from ..stitches import sample_linestring
 from ..stitch_plan import Stitch
 from ..utils.geometry import cut, roll_linear_ring, reverse_line_string
 
@@ -107,23 +106,6 @@ def create_nearest_points_list(
         )
 
     return children_nearest_points
-
-
-def calculate_replacing_middle_point(line_segment, abs_offset, max_stitch_distance):
-    """
-    Takes a line segment (consisting of 3 points!)
-    and calculates a new middle point if the line_segment is
-    straight enough to be resampled by points max_stitch_distance apart FROM THE END OF line_segment.
-    Returns None if the middle point is not needed.
-    """
-    angles = sample_linestring.calculate_line_angles(line_segment)
-    if angles[1] < abs_offset * constants.limiting_angle_straight:
-        if line_segment.length < max_stitch_distance:
-            return None
-        else:
-            return line_segment.interpolate(line_segment.length - max_stitch_distance).coords[0]
-    else:
-        return line_segment.coords[1]
 
 
 @debug.time
