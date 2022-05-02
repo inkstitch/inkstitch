@@ -115,7 +115,8 @@ def check_and_prepare_tree_for_valid_spiral(tree):
     return process_node('root')
 
 
-def offset_poly(poly, offset, join_style, stitch_distance, min_stitch_distance, offset_by_half, strategy, starting_point):  # noqa: C901
+def offset_poly(poly, offset, join_style, stitch_distance, min_stitch_distance, offset_by_half, strategy, starting_point,  # noqa: C901
+                avoid_self_crossing):
     """
     Takes a polygon (which can have holes) as input and creates offsetted
     versions until the polygon is filled with these smaller offsets.
@@ -139,6 +140,7 @@ def offset_poly(poly, offset, join_style, stitch_distance, min_stitch_distance, 
      In contrast to the other two options, "SPIRAL" does not end at the starting point
      but at the innermost point
     -starting_point: Defines the starting point for the stitching
+    -avoid_self_crossing: don't let the path cross itself when using the Inner to Outer strategy
     Output:
     -List of point coordinate tuples
     -Tag (origin) of each point to analyze why a point was placed
@@ -277,7 +279,7 @@ def offset_poly(poly, offset, join_style, stitch_distance, min_stitch_distance, 
 
     if strategy == StitchingStrategy.INNER_TO_OUTER:
         connected_line = tangential_fill_stitch_pattern_creator.connect_raster_tree_from_inner_to_outer(
-            tree, 'root', abs(offset), stitch_distance, min_stitch_distance, starting_point, offset_by_half)
+            tree, 'root', abs(offset), stitch_distance, min_stitch_distance, starting_point, offset_by_half, avoid_self_crossing)
         path = [Stitch(*point) for point in connected_line.coords]
         return running_stitch(path, stitch_distance), "whatever"
     elif strategy == StitchingStrategy.SPIRAL:

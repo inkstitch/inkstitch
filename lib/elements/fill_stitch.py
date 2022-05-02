@@ -119,6 +119,11 @@ class FillStitch(EmbroideryElement):
         return self.get_boolean_param('interlaced', True)
 
     @property
+    @param('avoid_self_crossing', _('Avoid self-crossing'), type='boolean', default=False, select_items=[('fill_method', 1)], sort_index=2)
+    def avoid_self_crossing(self):
+        return self.get_boolean_param('avoid_self_crossing', False)
+
+    @property
     @param('angle',
            _('Angle of lines of stitches'),
            tooltip=_('The angle increases in a counter-clockwise direction.  0 is horizontal.  Negative angles are allowed.'),
@@ -569,12 +574,14 @@ class FillStitch(EmbroideryElement):
             connectedLine, _ = tangential_fill_stitch_line_creator.offset_poly(
                 poly,
                 -self.row_spacing,
-                self.join_style+1,
+                self.join_style + 1,
                 self.max_stitch_length,
                 min(self.min_stitch_length, self.max_stitch_length),
                 self.interlaced,
                 self.tangential_strategy,
-                shgeo.Point(starting_point))
+                shgeo.Point(starting_point),
+                self.avoid_self_crossing
+            )
             path = [InkstitchPoint(*p) for p in connectedLine]
             stitch_group = StitchGroup(
                 color=self.color,

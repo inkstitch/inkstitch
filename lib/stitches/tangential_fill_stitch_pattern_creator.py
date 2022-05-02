@@ -110,7 +110,7 @@ def create_nearest_points_list(
 
 @debug.time
 def connect_raster_tree_from_inner_to_outer(tree, node, offset, stitch_distance, min_stitch_distance, starting_point,
-                                            offset_by_half):  # noqa: C901
+                                            offset_by_half, avoid_self_crossing, forward=True):
     """
     Takes the offset curves organized as a tree, connects and samples them.
     Strategy: A connection from parent to child is made as fast as possible to
@@ -137,6 +137,9 @@ def connect_raster_tree_from_inner_to_outer(tree, node, offset, stitch_distance,
     current_node = tree.nodes[node]
     current_ring = current_node.val
 
+    if not forward and avoid_self_crossing:
+        current_ring = reverse_line_string(current_ring)
+
     # reorder the coordinates of this ring so that it starts with
     # a point nearest the starting_point
     start_distance = current_ring.project(starting_point)
@@ -157,7 +160,8 @@ def connect_raster_tree_from_inner_to_outer(tree, node, offset, stitch_distance,
     if not nearest_points_list:
         # We have no children, so we're at the center of a spiral.  Reversing
         # the ring gives a nicer visual appearance.
-        current_ring = reverse_line_string(current_ring)
+        # current_ring = reverse_line_string(current_ring)
+        pass
     else:
         # This is a recursive algorithm.  We'll stitch along this ring, pausing
         # to jump to each child ring in turn and sew it before continuing on
@@ -184,6 +188,8 @@ def connect_raster_tree_from_inner_to_outer(tree, node, offset, stitch_distance,
                 min_stitch_distance,
                 child_connection.nearest_point_child,
                 offset_by_half,
+                avoid_self_crossing,
+                not forward
             )
             result_coords.extend(child_path.coords)
 
