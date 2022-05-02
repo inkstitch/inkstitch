@@ -59,9 +59,9 @@ def auto_fill(shape,
               starting_point,
               ending_point=None,
               underpath=True):
-    fill_stitch_graph = []
     try:
-        fill_stitch_graph = build_fill_stitch_graph(shape, angle, row_spacing, end_row_spacing, starting_point, ending_point)
+        segments = intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing)
+        fill_stitch_graph = build_fill_stitch_graph(shape, segments, starting_point, ending_point)
     except ValueError:
         # Small shapes will cause the graph to fail - min() arg is an empty sequence through insert node
         return fallback(shape, running_stitch_length)
@@ -109,7 +109,7 @@ def project(shape, coords, outline_index):
 
 
 @debug.time
-def build_fill_stitch_graph(shape, angle, row_spacing, end_row_spacing, starting_point=None, ending_point=None):
+def build_fill_stitch_graph(shape, segments, starting_point=None, ending_point=None):
     """build a graph representation of the grating segments
 
     This function builds a specialized graph (as in graph theory) that will
@@ -144,10 +144,6 @@ def build_fill_stitch_graph(shape, angle, row_spacing, end_row_spacing, starting
 
     debug.add_layer("auto-fill fill stitch")
 
-    # Convert the shape into a set of parallel line segments.
-    rows_of_segments = intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing)
-    segments = [segment for row in rows_of_segments for segment in row]
-
     graph = networkx.MultiGraph()
 
     # First, add the grating segments as edges.  We'll use the coordinates
@@ -155,7 +151,7 @@ def build_fill_stitch_graph(shape, angle, row_spacing, end_row_spacing, starting
     for segment in segments:
         # networkx allows us to label nodes with arbitrary data.  We'll
         # mark this one as a grating segment.
-        graph.add_edge(*segment, key="segment", underpath_edges=[], geometry=shgeo.LineString(segment))
+        graph.add_edge(segment[0], segment[-1], key="segment", underpath_edges=[], geometry=shgeo.LineString(segment))
 
     tag_nodes_with_outline_and_projection(graph, shape, graph.nodes())
     add_edges_between_outline_nodes(graph, duplicate_every_other=True)
@@ -177,7 +173,7 @@ def insert_node(graph, shape, point):
     point = tuple(point)
     outline = which_outline(shape, point)
     projection = project(shape, point, outline)
-    projected_point = list(shape.boundary)[outline].interpolate(projection)
+    projected_point = list(shape.boundary.geoms)[outline].interpolate(projection)
     node = (projected_point.x, projected_point.y)
 
     edges = []
@@ -395,10 +391,9 @@ def process_travel_edges(graph, fill_stitch_graph, shape, travel_edges):
 
 
 def travel_grating(shape, angle, row_spacing):
-    rows_of_segments = intersect_region_with_grating(shape, angle, row_spacing)
-    segments = list(chain(*rows_of_segments))
+    segments = intersect_region_with_grating(shape, angle, row_spacing)
 
-    return shgeo.MultiLineString(segments)
+    return shgeo.MultiLineString(list(segments))
 
 
 def ensure_multi_line_string(thing):
@@ -457,7 +452,7 @@ def build_travel_edges(shape, fill_angle):
     debug.log_line_strings(grating3, "grating3")
 
     endpoints = [coord for mls in (grating1, grating2, grating3)
-                 for ls in mls
+                 for ls in mls.geoms
                  for coord in ls.coords]
 
     diagonal_edges = ensure_multi_line_string(
@@ -467,7 +462,7 @@ def build_travel_edges(shape, fill_angle):
     vertical_edges = ensure_multi_line_string(
         snap(grating3.difference(grating1), diagonal_edges, 0.005))
 
-    return endpoints, chain(diagonal_edges, vertical_edges)
+    return endpoints, chain(diagonal_edges.geoms, vertical_edges.geoms)
 
 
 def nearest_node(nodes, point, attr=None):

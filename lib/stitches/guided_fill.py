@@ -1,14 +1,10 @@
-import networkx
-from depq import DEPQ
-from shapely.geometry import GeometryCollection, LineString, MultiLineString
+from shapely import geometry as shgeo
 from shapely.ops import linemerge, unary_union
 
-from .auto_fill import (add_edges_between_outline_nodes, build_travel_graph,
-                        collapse_sequential_outline_edges, fallback,
-                        find_stitch_path, graph_is_valid, insert_node,
-                        tag_nodes_with_outline_and_projection, travel)
-from .point_transfer import transfer_points_to_surrounding_graph
-from .sample_linestring import raster_line_string_with_priority_points
+from .auto_fill import (build_fill_stitch_graph,
+                        build_travel_graph, collapse_sequential_outline_edges, fallback,
+                        find_stitch_path, graph_is_valid, travel)
+from .running_stitch import running_stitch
 from ..debug import debug
 from ..i18n import _
 from ..stitch_plan import Stitch
@@ -28,11 +24,9 @@ def guided_fill(shape,
                 ending_point=None,
                 underpath=True,
                 offset_by_half=True):
-
-    fill_stitch_graph = []
     try:
-        fill_stitch_graph = build_guided_fill_stitch_graph(
-            shape, guideline, row_spacing, starting_point, ending_point)
+        segments = intersect_region_with_grating_guideline(shape, guideline, row_spacing)
+        fill_stitch_graph = build_fill_stitch_graph(shape, segments, starting_point, ending_point)
     except ValueError:
         # Small shapes will cause the graph to fail - min() arg is an empty sequence through insert node
         return fallback(shape, running_stitch_length)
@@ -49,108 +43,6 @@ def guided_fill(shape,
 
 
 @debug.time
-def build_guided_fill_stitch_graph(shape, guideline, row_spacing, starting_point=None, ending_point=None):
-    """build a graph representation of the grating segments
-
-    This function builds a specialized graph (as in graph theory) that will
-    help us determine a stitching path.  The idea comes from this paper:
-
-    http://www.sciencedirect.com/science/article/pii/S0925772100000158
-
-    The goal is to build a graph that we know must have an Eulerian Path.
-    An Eulerian Path is a path from edge to edge in the graph that visits
-    every edge exactly once and ends at the node it started at.  Algorithms
-    exist to build such a path, and we'll use Hierholzer's algorithm.
-
-    A graph must have an Eulerian Path if every node in the graph has an
-    even number of edges touching it.  Our goal here is to build a graph
-    that will have this property.
-
-    Based on the paper linked above, we'll build the graph as follows:
-
-        * nodes are the endpoints of the grating segments, where they meet
-        with the outer outline of the region the outlines of the interior
-        holes in the region.
-        * edges are:
-        * each section of the outer and inner outlines of the region,
-            between nodes
-        * double every other edge in the outer and inner hole outlines
-
-    Doubling up on some of the edges seems as if it will just mean we have
-    to stitch those spots twice.  This may be true, but it also ensures
-    that every node has 4 edges touching it, ensuring that a valid stitch
-    path must exist.
-    """
-
-    debug.add_layer("auto-fill fill stitch")
-
-    rows_of_segments = intersect_region_with_grating_guideline(shape, guideline, row_spacing)
-
-    # segments = [segment for row in rows_of_segments for segment in row]
-
-    graph = networkx.MultiGraph()
-
-    for i in range(len(rows_of_segments)):
-        for segment in rows_of_segments[i]:
-            # First, add the grating segments as edges.  We'll use the coordinates
-            # of the endpoints as nodes, which networkx will add automatically.
-
-            # networkx allows us to label nodes with arbitrary data.  We'll
-            # mark this one as a grating segment.
-            # graph.add_edge(*segment, key="segment", underpath_edges=[])
-            previous_neighbors = [(seg[0], seg[-1])
-                                  for seg in rows_of_segments[i-1] if i > 0]
-            next_neighbors = [(seg[0], seg[-1]) for seg in rows_of_segments[(i+1) %
-                              len(rows_of_segments)] if i < len(rows_of_segments)-1]
-
-            graph.add_edge(segment[0], segment[-1], key="segment", underpath_edges=[],
-                           geometry=LineString(segment), previous_neighbors=previous_neighbors, next_neighbors=next_neighbors,
-                           projected_points=DEPQ(iterable=None, maxlen=None), already_rastered=False)
-
-    tag_nodes_with_outline_and_projection(graph, shape, graph.nodes())
-    add_edges_between_outline_nodes(graph, duplicate_every_other=True)
-
-    if starting_point:
-        insert_node(graph, shape, starting_point)
-
-    if ending_point:
-        insert_node(graph, shape, ending_point)
-
-    debug.log_graph(graph, "graph")
-
-    return graph
-
-
-def stitch_line(stitches,
-                stitching_direction,
-                geometry,
-                projected_points,
-                max_stitch_length,
-                min_stitch_length,
-                row_spacing,
-                skip_last,
-                offset_by_half):
-    if stitching_direction == 1:
-        stitched_line, _ = raster_line_string_with_priority_points(
-            geometry, 0.0, geometry.length, max_stitch_length, min_stitch_length, projected_points, abs(row_spacing), offset_by_half, True)
-    else:
-        stitched_line, _ = raster_line_string_with_priority_points(
-            geometry, geometry.length, 0.0, max_stitch_length, min_stitch_length, projected_points, abs(row_spacing), offset_by_half, True)
-
-    stitches.append(Stitch(*stitched_line[0], tags=('fill_row_start',)))
-    for i in range(1, len(stitched_line) - 1):
-        stitches.append(Stitch(*stitched_line[i], tags=('fill_row')))
-
-    if not skip_last:
-        if stitching_direction == 1:
-            stitches.append(
-                Stitch(*geometry.coords[-1], tags=('fill_row_end',)))
-        else:
-            stitches.append(
-                Stitch(*geometry.coords[0], tags=('fill_row_end',)))
-
-
-@debug.time
 def path_to_stitches(path, travel_graph, fill_stitch_graph, angle, row_spacing, max_stitch_length, min_stitch_length,
                      running_stitch_length, skip_last, offset_by_half):
     path = collapse_sequential_outline_edges(path)
@@ -163,23 +55,23 @@ def path_to_stitches(path, travel_graph, fill_stitch_graph, angle, row_spacing, 
 
     for edge in path:
         if edge.is_segment():
-            new_stitches = []
             current_edge = fill_stitch_graph[edge[0]][edge[-1]]['segment']
             path_geometry = current_edge['geometry']
-            projected_points = current_edge['projected_points']
-            stitching_direction = 1
-            if (abs(edge[0][0]-path_geometry.coords[0][0])+abs(edge[0][1]-path_geometry.coords[0][1]) >
-                    abs(edge[0][0]-path_geometry.coords[-1][0])+abs(edge[0][1]-path_geometry.coords[-1][1])):
-                stitching_direction = -1
-            stitch_line(new_stitches, stitching_direction, path_geometry, projected_points,
-                        max_stitch_length, min_stitch_length, row_spacing, skip_last, offset_by_half)
-            current_edge['already_rastered'] = True
-            transfer_points_to_surrounding_graph(
-                fill_stitch_graph, current_edge, row_spacing, False, new_stitches, overnext_neighbor=True)
-            transfer_points_to_surrounding_graph(fill_stitch_graph, current_edge, row_spacing, offset_by_half,
-                                                 new_stitches, overnext_neighbor=False, transfer_forbidden_points=offset_by_half)
+
+            if edge[0] != path_geometry.coords[0]:
+                path_geometry = reverse_line_string(path_geometry)
+
+            point_list = [Stitch(*point) for point in path_geometry.coords]
+            new_stitches = running_stitch(point_list, max_stitch_length)
+
+            # need to tag stitches
+
+            if skip_last:
+                del new_stitches[-1]
 
             stitches.extend(new_stitches)
+
+            travel_graph.remove_edges_from(fill_stitch_graph[edge[0]][edge[1]]['segment'].get('underpath_edges', []))
         else:
             stitches.extend(travel(travel_graph, edge[0], edge[1], running_stitch_length, skip_last))
 
@@ -195,14 +87,14 @@ def extend_line(line, minx, maxx, miny, maxy):
 
     point1 = InkstitchPoint(*line.coords[0])
     point2 = InkstitchPoint(*line.coords[1])
-    new_starting_point = point1-(point2-point1).unit()*length
+    new_starting_point = point1 - (point2 - point1).unit() * length
 
     point3 = InkstitchPoint(*line.coords[-2])
     point4 = InkstitchPoint(*line.coords[-1])
-    new_ending_point = point4+(point4-point3).unit()*length
+    new_ending_point = point4 + (point4 - point3).unit() * length
 
-    return LineString([new_starting_point.as_tuple()] +
-                      line.coords[1:-1]+[new_ending_point.as_tuple()])
+    return shgeo.LineString([new_starting_point.as_tuple()] +
+                            line.coords[1:-1] + [new_ending_point.as_tuple()])
 
 
 def repair_multiple_parallel_offset_curves(multi_line):
@@ -251,15 +143,15 @@ def intersect_region_with_grating_guideline(shape, line, row_spacing, flip=False
 
     line_offsetted = line
     res = line_offsetted.intersection(shape)
-    while isinstance(res, (GeometryCollection, MultiLineString)) or (not res.is_empty and len(res.coords) > 1):
-        if isinstance(res, (GeometryCollection, MultiLineString)):
+    while isinstance(res, (shgeo.GeometryCollection, shgeo.MultiLineString)) or (not res.is_empty and len(res.coords) > 1):
+        if isinstance(res, (shgeo.GeometryCollection, shgeo.MultiLineString)):
             runs = [line_string.coords for line_string in res.geoms if (
-                not line_string.is_empty and len(line_string.coords) > 1)]
+                    not line_string.is_empty and len(line_string.coords) > 1)]
         else:
             runs = [res.coords]
 
         runs.sort(key=lambda seg: (
-            InkstitchPoint(*seg[0]) - upper_left).length())
+                InkstitchPoint(*seg[0]) - upper_left).length())
         if flip:
             runs.reverse()
             runs = [tuple(reversed(run)) for run in runs]
@@ -279,7 +171,7 @@ def intersect_region_with_grating_guideline(shape, line, row_spacing, flip=False
             line_offsetted = reverse_line_string(line_offsetted)
         line_offsetted = line_offsetted.simplify(0.01, False)
         res = line_offsetted.intersection(shape)
-        if row_spacing > 0 and not isinstance(res, (GeometryCollection, MultiLineString)):
+        if row_spacing > 0 and not isinstance(res, (shgeo.GeometryCollection, shgeo.MultiLineString)):
             if (res.is_empty or len(res.coords) == 1):
                 row_spacing = -row_spacing
 
@@ -293,4 +185,6 @@ def intersect_region_with_grating_guideline(shape, line, row_spacing, flip=False
                 line_offsetted = reverse_line_string(line_offsetted)
                 line_offsetted = line_offsetted.simplify(0.01, False)
                 res = line_offsetted.intersection(shape)
-    return rows
+
+    for row in rows:
+        yield from row

@@ -74,6 +74,12 @@ def get_correction_transform(node, child=False):
 
 
 def line_strings_to_csp(line_strings):
+    try:
+        # This lets us accept a MultiLineString or a list.
+        line_strings = line_strings.geoms
+    except AttributeError:
+        pass
+
     return point_lists_to_csp(ls.coords for ls in line_strings)
 
 
