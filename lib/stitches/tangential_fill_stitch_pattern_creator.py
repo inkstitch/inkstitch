@@ -107,8 +107,8 @@ def create_nearest_points_list(
     return children_nearest_points
 
 
-def connect_raster_tree_from_inner_to_outer(tree, node, offset, stitch_distance, min_stitch_distance, starting_point,
-                                            offset_by_half, avoid_self_crossing, forward=True):
+def connect_raster_tree_from_inner_to_outer(tree, node, offset, stitch_distance, starting_point,
+                                            avoid_self_crossing, forward=True):
     """
     Takes the offset curves organized as a tree, connects and samples them.
     Strategy: A connection from parent to child is made as fast as possible to
@@ -183,9 +183,7 @@ def connect_raster_tree_from_inner_to_outer(tree, node, offset, stitch_distance,
                 child_connection.child_node,
                 offset,
                 stitch_distance,
-                min_stitch_distance,
                 child_connection.nearest_point_child,
-                offset_by_half,
                 avoid_self_crossing,
                 not forward
             )
@@ -259,7 +257,7 @@ def interpolate_linear_rings(ring1, ring2, max_stitch_length, start=None):
     return result.simplify(constants.simplification_threshold, False)
 
 
-def connect_raster_tree_single_spiral(tree, used_offset, stitch_distance, min_stitch_distance, close_point, offset_by_half):  # noqa: C901
+def connect_raster_tree_single_spiral(tree, used_offset, stitch_distance, close_point):  # noqa: C901
     """
     Takes the offsetted curves organized as tree, connects and samples them as a spiral.
     It expects that each node in the tree has max. one child
@@ -288,10 +286,10 @@ def connect_raster_tree_single_spiral(tree, used_offset, stitch_distance, min_st
     path = make_spiral(rings, stitch_distance, starting_point)
     path = [Stitch(*stitch) for stitch in path]
 
-    return running_stitch(path, stitch_distance), None
+    return running_stitch(path, stitch_distance)
 
 
-def connect_raster_tree_double_spiral(tree, used_offset, stitch_distance, min_stitch_distance, close_point, offset_by_half):  # noqa: C901
+def connect_raster_tree_double_spiral(tree, used_offset, stitch_distance, close_point):  # noqa: C901
     """
     Takes the offsetted curves organized as tree, connects and samples them as a spiral.
     It expects that each node in the tree has max. one child
@@ -320,7 +318,7 @@ def connect_raster_tree_double_spiral(tree, used_offset, stitch_distance, min_st
     path = make_fermat_spiral(rings, stitch_distance, starting_point)
     path = [Stitch(*stitch) for stitch in path]
 
-    return running_stitch(path, stitch_distance), None
+    return running_stitch(path, stitch_distance)
 
 
 def make_fermat_spiral(rings, stitch_distance, starting_point):

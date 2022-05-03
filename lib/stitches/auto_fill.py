@@ -16,8 +16,7 @@ from shapely.strtree import STRtree
 from ..debug import debug
 from ..stitch_plan import Stitch
 from ..svg import PIXELS_PER_MM
-from ..utils.geometry import Point as InkstitchPoint
-from ..utils.geometry import line_string_to_point_list
+from ..utils.geometry import Point as InkstitchPoint, line_string_to_point_list, ensure_multi_line_string
 from .fill import intersect_region_with_grating, stitch_row
 from .running_stitch import running_stitch
 
@@ -394,15 +393,6 @@ def travel_grating(shape, angle, row_spacing):
     segments = intersect_region_with_grating(shape, angle, row_spacing)
 
     return shgeo.MultiLineString(list(segments))
-
-
-def ensure_multi_line_string(thing):
-    """Given either a MultiLineString or a single LineString, return a MultiLineString"""
-
-    if isinstance(thing, shgeo.LineString):
-        return shgeo.MultiLineString([thing])
-    else:
-        return thing
 
 
 def build_travel_edges(shape, fill_angle):

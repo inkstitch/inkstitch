@@ -5,7 +5,7 @@
 
 import math
 
-from shapely.geometry import LineString, LinearRing
+from shapely.geometry import LineString, LinearRing, MultiLineString, Polygon, MultiPolygon, GeometryCollection
 from shapely.geometry import Point as ShapelyPoint
 
 
@@ -64,6 +64,35 @@ def roll_linear_ring(ring, distance, normalized=False):
 
 def reverse_line_string(line_string):
     return LineString(line_string.coords[::-1])
+
+
+def ensure_multi_line_string(thing):
+    """Given either a MultiLineString or a single LineString, return a MultiLineString"""
+
+    if isinstance(thing, LineString):
+        return MultiLineString([thing])
+    else:
+        return thing
+
+
+def ensure_geometry_collection(thing):
+    """Given either some kind of geometry or a GeometryCollection, return a GeometryCollection"""
+
+    if isinstance(thing, (MultiLineString, MultiPolygon)):
+        return GeometryCollection(thing.geoms)
+    elif isinstance(thing, GeometryCollection):
+        return thing
+    else:
+        return GeometryCollection([thing])
+
+
+def ensure_multi_polygon(thing):
+    """Given either a MultiPolygon or a single Polygon, return a MultiPolygon"""
+
+    if isinstance(thing, Polygon):
+        return MultiPolygon([thing])
+    else:
+        return thing
 
 
 def cut_path(points, length):

@@ -576,19 +576,17 @@ class FillStitch(EmbroideryElement):
         if not starting_point:
             starting_point = (0, 0)
         for poly in polygons:
-            connectedLine, _ = tangential_fill_stitch_line_creator.offset_poly(
+            connected_line = tangential_fill_stitch_line_creator.tangential_fill(
                 poly,
-                -self.row_spacing,
-                self.join_style + 1,
-                self.max_stitch_length,
-                min(self.min_stitch_length, self.max_stitch_length),
-                self.interlaced,
                 self.tangential_strategy,
+                self.row_spacing,
+                self.max_stitch_length,
+                self.join_style + 1,
+                self.clockwise,
                 shgeo.Point(starting_point),
                 self.avoid_self_crossing,
-                self.clockwise
             )
-            path = [InkstitchPoint(*p) for p in connectedLine]
+            path = [InkstitchPoint(*p) for p in connected_line]
             stitch_group = StitchGroup(
                 color=self.color,
                 tags=("auto_fill", "auto_fill_top"),

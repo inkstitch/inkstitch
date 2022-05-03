@@ -1,10 +1,7 @@
 from enum import IntEnum
 
 import networkx as nx
-from depq import DEPQ
-from shapely.geometry import MultiLineString, Polygon
-from shapely.geometry import MultiPolygon
-from shapely.geometry.polygon import LinearRing
+from shapely.geometry import Polygon, MultiPolygon, GeometryCollection
 from shapely.geometry.polygon import orient
 from shapely.ops import polygonize
 
@@ -13,7 +10,7 @@ from ..stitch_plan import Stitch
 from ..stitches import constants
 from ..stitches import tangential_fill_stitch_pattern_creator
 from ..utils import DotDict
-from ..utils.geometry import reverse_line_string
+from ..utils.geometry import reverse_line_string, ensure_geometry_collection, ensure_multi_polygon
 
 
 class Tree(nx.DiGraph):
@@ -23,15 +20,13 @@ class Tree(nx.DiGraph):
 
 
 def offset_linear_ring(ring, offset, resolution, join_style, mitre_limit):
-    result = Polygon(ring).buffer(offset, resolution, cap_style=2, join_style=join_style, mitre_limit=mitre_limit, single_sided=True)
+    result = Polygon(ring).buffer(-offset, resolution, cap_style=2, join_style=join_style, mitre_limit=mitre_limit, single_sided=True)
+    result = ensure_multi_polygon(result)
 
-    if result.geom_type == 'Polygon':
-        return result.exterior
-    else:
-        result_list = []
-        for poly in result.geoms:
-            result_list.append(poly.exterior)
-        return MultiLineString(result_list)
+    rings = GeometryCollection([poly.exterior for poly in result.geoms])
+    rings = rings.simplify(constants.simplification_threshold, False)
+
+    return take_only_valid_linear_rings(rings)
 
 
 def take_only_valid_linear_rings(rings):
@@ -39,24 +34,14 @@ def take_only_valid_linear_rings(rings):
     Removes all geometries which do not form a "valid" LinearRing
     (meaning a ring which does not form a straight line)
     """
-    if rings.geom_type == "MultiLineString":
-        new_list = []
-        for ring in rings.geoms:
-            if len(ring.coords) > 3 or (len(ring.coords) == 3 and ring.coords[0] != ring.coords[-1]):
-                new_list.append(ring)
-        if len(new_list) == 1:
-            return LinearRing(new_list[0])
-        else:
-            return MultiLineString(new_list)
-    elif rings.geom_type == "LineString" or rings.geom_type == "LinearRing":
-        if len(rings.coords) <= 2:
-            return LinearRing()
-        elif len(rings.coords) == 3 and rings.coords[0] == rings.coords[-1]:
-            return LinearRing()
-        else:
-            return rings
-    else:
-        return LinearRing()
+
+    valid_rings = []
+
+    for ring in ensure_geometry_collection(rings).geoms:
+        if len(ring.coords) > 3 or (len(ring.coords) == 3 and ring.coords[0] != ring.coords[-1]):
+            valid_rings.append(ring)
+
+    return GeometryCollection(valid_rings)
 
 
 def orient_linear_ring(ring, clockwise=True):
@@ -127,8 +112,7 @@ def check_and_prepare_tree_for_valid_spiral(tree):
     return process_node('root')
 
 
-def offset_poly(poly, offset, join_style, stitch_distance, min_stitch_distance, offset_by_half, strategy, starting_point,  # noqa: C901
-                avoid_self_crossing, clockwise):
+def offset_poly(poly, offset, join_style, clockwise):
     """
     Takes a polygon (which can have holes) as input and creates offsetted
     versions until the polygon is filled with these smaller offsets.
@@ -159,21 +143,9 @@ def offset_poly(poly, offset, join_style, stitch_distance, min_stitch_distance, 
      at this position
     """
 
-    if strategy in (StitchingStrategy.SINGLE_SPIRAL, StitchingStrategy.DOUBLE_SPIRAL) and len(poly.interiors) > 1:
-        raise ValueError(
-            "Single spiral geometry must not have more than one hole!")
-
     ordered_poly = orient(poly, -1)
-    ordered_poly = ordered_poly.simplify(
-        constants.simplification_threshold, False)
     tree = Tree()
-    tree.add_node('root',
-                  type='node',
-                  parent=None,
-                  val=ordered_poly.exterior,
-                  already_rastered=False,
-                  transferred_point_priority_deque=DEPQ(iterable=None, maxlen=None),
-                  )
+    tree.add_node('root', type='node', parent=None, val=ordered_poly.exterior)
     active_polys = ['root']
     active_holes = [[]]
 
@@ -181,103 +153,26 @@ def offset_poly(poly, offset, join_style, stitch_distance, min_stitch_distance, 
     node_num = 0
 
     for hole in ordered_poly.interiors:
-        tree.add_node(node_num,
-                      type="hole",
-                      val=hole,
-                      already_rastered=False,
-                      transferred_point_priority_deque=DEPQ(iterable=None, maxlen=None),
-                      )
+        tree.add_node(node_num, type="hole", val=hole)
         active_holes[0].append(node_num)
         node_num += 1
 
     while len(active_polys) > 0:
         current_poly = active_polys.pop()
         current_holes = active_holes.pop()
-        poly_inners = []
+        outer, inners = offset_polygon_and_holes(tree, current_poly, current_holes, offset, join_style)
 
-        outer = offset_linear_ring(
-            tree.nodes[current_poly].val,
-            offset,
-            resolution=5,
-            join_style=join_style,
-            mitre_limit=10,
-        )
-        outer = outer.simplify(constants.simplification_threshold, False)
-        outer = take_only_valid_linear_rings(outer)
-
-        for hole in current_holes:
-            inner = offset_linear_ring(
-                tree.nodes[hole].val,
-                -offset,  # take negative offset for holes
-                resolution=5,
-                join_style=join_style,
-                mitre_limit=10,
-            )
-            inner = inner.simplify(constants.simplification_threshold, False)
-            inner = take_only_valid_linear_rings(inner)
-            if not inner.is_empty:
-                poly_inners.append(Polygon(inner))
         if not outer.is_empty:
-            if len(poly_inners) == 0:
-                if outer.geom_type == "LineString" or outer.geom_type == "LinearRing":
-                    result = Polygon(outer)
-                else:
-                    result = MultiPolygon(polygonize(outer))
-            else:
-                if outer.geom_type == "LineString" or outer.geom_type == "LinearRing":
-                    result = Polygon(outer).difference(
-                        MultiPolygon(poly_inners))
-                else:
-                    result = MultiPolygon(polygonize(outer)).difference(
-                        MultiPolygon(poly_inners))
+            polygons = match_polygons_and_holes(outer, inners)
 
-            if not result.is_empty and result.area > offset * offset / 10:
-                if result.geom_type == "Polygon":
-                    result_list = [result]
-                else:
-                    result_list = list(result.geoms)
+            if not polygons.is_empty:
+                for polygon in polygons.geoms:
+                    new_polygon, new_holes = convert_polygon_to_nodes(tree, polygon, parent_polygon=current_poly, child_holes=current_holes)
 
-                for polygon in result_list:
-                    polygon = orient(polygon, -1)
+                    if new_polygon:
+                        active_polys.append(new_polygon)
+                        active_holes.append(new_holes)
 
-                    if polygon.area < offset * offset / 10:
-                        continue
-
-                    polygon = polygon.simplify(
-                        constants.simplification_threshold, False
-                    )
-                    poly_coords = polygon.exterior
-                    poly_coords = take_only_valid_linear_rings(poly_coords)
-                    if poly_coords.is_empty:
-                        continue
-
-                    node = node_num
-                    node_num += 1
-                    tree.add_node(node,
-                                  type='node',
-                                  parent=current_poly,
-                                  val=poly_coords,
-                                  already_rastered=False,
-                                  transferred_point_priority_deque=DEPQ(iterable=None, maxlen=None),
-                                  )
-                    tree.add_edge(current_poly, node)
-                    active_polys.append(node)
-                    hole_node_list = []
-                    for hole in polygon.interiors:
-                        hole_node = node_num
-                        node_num += 1
-                        tree.add_node(hole_node,
-                                      type="hole",
-                                      val=hole,
-                                      already_rastered=False,
-                                      transferred_point_priority_deque=DEPQ(iterable=None, maxlen=None),
-                                      )
-                        for previous_hole in current_holes:
-                            if Polygon(hole).contains(Polygon(tree.nodes[previous_hole].val)):
-                                tree.nodes[previous_hole].parent = hole_node
-                                tree.add_edge(hole_node, previous_hole)
-                        hole_node_list.append(hole_node)
-                    active_holes.append(hole_node_list)
         for previous_hole in current_holes:
             # If the previous holes are not
             # contained in the new holes they
@@ -289,22 +184,96 @@ def offset_poly(poly, offset, join_style, stitch_distance, min_stitch_distance, 
 
     make_tree_uniform(tree, clockwise)
 
+    return tree
+
+
+def offset_polygon_and_holes(tree, poly, holes, offset, join_style):
+    outer = offset_linear_ring(
+        tree.nodes[poly].val,
+        offset,
+        resolution=5,
+        join_style=join_style,
+        mitre_limit=10,
+    )
+
+    inners = []
+    for hole in holes:
+        inner = offset_linear_ring(
+            tree.nodes[hole].val,
+            -offset,  # take negative offset for holes
+            resolution=5,
+            join_style=join_style,
+            mitre_limit=10,
+        )
+        if not inner.is_empty:
+            inners.append(Polygon(inner.geoms[0]))
+
+    return outer, inners
+
+
+def match_polygons_and_holes(outer, inners):
+    result = MultiPolygon(polygonize(outer))
+    if len(inners) > 0:
+        result = ensure_geometry_collection(result.difference(MultiPolygon(inners)))
+
+    return result
+
+
+def convert_polygon_to_nodes(tree, polygon, parent_polygon, child_holes):
+    polygon = orient(polygon, -1)
+
+    if polygon.area < 0.1:
+        return None, None
+
+    polygon = polygon.simplify(constants.simplification_threshold, False)
+    valid_rings = take_only_valid_linear_rings(polygon.exterior)
+
+    try:
+        exterior = valid_rings.geoms[0]
+    except IndexError:
+        return None, None
+
+    node = id(polygon)  # just needs to be unique
+
+    tree.add_node(node, type='node', parent=parent_polygon, val=exterior)
+    tree.add_edge(parent_polygon, node)
+
+    hole_node_list = []
+    for hole in polygon.interiors:
+        hole_node = id(hole)
+        tree.add_node(hole_node, type="hole", val=hole)
+        for previous_hole in child_holes:
+            if Polygon(hole).contains(Polygon(tree.nodes[previous_hole].val)):
+                tree.nodes[previous_hole].parent = hole_node
+                tree.add_edge(hole_node, previous_hole)
+        hole_node_list.append(hole_node)
+
+    return node, hole_node_list
+
+
+def tangential_fill(poly, strategy, offset, stitch_distance, join_style, clockwise, starting_point, avoid_self_crossing):
+    if strategy in (StitchingStrategy.SINGLE_SPIRAL, StitchingStrategy.DOUBLE_SPIRAL) and len(poly.interiors) > 1:
+        raise ValueError(
+            "Single spiral geometry must not have more than one hole!")
+
+    tree = offset_poly(poly, offset, join_style, clockwise)
+
     if strategy == StitchingStrategy.INNER_TO_OUTER:
         connected_line = tangential_fill_stitch_pattern_creator.connect_raster_tree_from_inner_to_outer(
-            tree, 'root', abs(offset), stitch_distance, min_stitch_distance, starting_point, offset_by_half, avoid_self_crossing)
+            tree, 'root', offset, stitch_distance, starting_point, avoid_self_crossing)
         path = [Stitch(*point) for point in connected_line.coords]
-        return running_stitch(path, stitch_distance), "whatever"
+        return running_stitch(path, stitch_distance)
     elif strategy == StitchingStrategy.SINGLE_SPIRAL:
         if not check_and_prepare_tree_for_valid_spiral(tree):
             raise ValueError("Geometry cannot be filled with one spiral!")
-        (connected_line, connected_line_origin) = tangential_fill_stitch_pattern_creator.connect_raster_tree_single_spiral(
-            tree, offset, stitch_distance, min_stitch_distance, starting_point, offset_by_half)
+        connected_line = tangential_fill_stitch_pattern_creator.connect_raster_tree_single_spiral(
+            tree, offset, stitch_distance, starting_point)
     elif strategy == StitchingStrategy.DOUBLE_SPIRAL:
         if not check_and_prepare_tree_for_valid_spiral(tree):
             raise ValueError("Geometry cannot be filled with a double spiral!")
-        (connected_line, connected_line_origin) = tangential_fill_stitch_pattern_creator.connect_raster_tree_double_spiral(
-            tree, offset, stitch_distance, min_stitch_distance, starting_point, offset_by_half)
+        connected_line = tangential_fill_stitch_pattern_creator.connect_raster_tree_double_spiral(
+            tree, offset, stitch_distance, starting_point)
     else:
         raise ValueError("Invalid stitching stratety!")
 
-    return connected_line, connected_line_origin
+    return connected_line
