@@ -221,8 +221,8 @@ def orient_linear_ring(ring):
 
 
 def reorder_linear_ring(ring, start):
-    # TODO: actually use start?
-    start_index = np.argmin(np.linalg.norm(ring, axis=1))
+    distances = ring - start
+    start_index = np.argmin(np.linalg.norm(distances, axis=1))
     return np.roll(ring, -start_index, axis=0)
 
 
