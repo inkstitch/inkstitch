@@ -1,5 +1,5 @@
-import math
 from collections import namedtuple
+from itertools import chain
 import networkx as nx
 import numpy as np
 import trimesh
@@ -259,7 +259,7 @@ def interpolate_linear_rings(ring1, ring2, max_stitch_length, start=None):
     return result.simplify(constants.simplification_threshold, False)
 
 
-def connect_raster_tree_spiral(tree, used_offset, stitch_distance, min_stitch_distance, close_point, offset_by_half):  # noqa: C901
+def connect_raster_tree_single_spiral(tree, used_offset, stitch_distance, min_stitch_distance, close_point, offset_by_half):  # noqa: C901
     """
     Takes the offsetted curves organized as tree, connects and samples them as a spiral.
     It expects that each node in the tree has max. one child
@@ -281,21 +281,61 @@ def connect_raster_tree_spiral(tree, used_offset, stitch_distance, min_stitch_di
      placed at this position
     """
 
-    if not tree['root']:  # if node has no children
-        stitches = [Stitch(*point) for point in tree.nodes['root'].val.coords]
-        return running_stitch(stitches, stitch_distance)
-
     starting_point = close_point.coords[0]
-    path = []
-    for node in nx.dfs_preorder_nodes(tree, 'root'):
-        if tree[node]:
-            ring1 = tree.nodes[node].val
-            child = list(tree.successors(node))[0]
-            ring2 = tree.nodes[child].val
 
-            spiral_part = interpolate_linear_rings(ring1, ring2, stitch_distance, starting_point)
-            path.extend(spiral_part.coords)
+    rings = [tree.nodes[node].val for node in nx.dfs_preorder_nodes(tree, 'root')]
 
+    path = make_spiral(rings, stitch_distance, starting_point)
     path = [Stitch(*stitch) for stitch in path]
 
     return running_stitch(path, stitch_distance), None
+
+
+def connect_raster_tree_double_spiral(tree, used_offset, stitch_distance, min_stitch_distance, close_point, offset_by_half):  # noqa: C901
+    """
+    Takes the offsetted curves organized as tree, connects and samples them as a spiral.
+    It expects that each node in the tree has max. one child
+    Input:
+    -tree: contains the offsetted curves in a hierarchical organized
+     data structure.
+    -used_offset: used offset when the offsetted curves were generated
+    -stitch_distance: maximum allowed distance between two points
+     after sampling
+    -min_stitch_distance stitches within a row shall be at least min_stitch_distance apart. Stitches connecting
+     offsetted paths might be shorter.
+    -close_point: defines the beginning point for stitching
+     (stitching starts always from the undisplaced curve)
+    -offset_by_half: If true the resulting points are interlaced otherwise not.
+    Return values:
+    -All offsetted curves connected to one spiral and sampled with
+     points obeying stitch_distance and offset_by_half
+    -Tag (origin) of each point to analyze why a point was
+     placed at this position
+    """
+
+    starting_point = close_point.coords[0]
+
+    rings = [tree.nodes[node].val for node in nx.dfs_preorder_nodes(tree, 'root')]
+
+    path = make_fermat_spiral(rings, stitch_distance, starting_point)
+    path = [Stitch(*stitch) for stitch in path]
+
+    return running_stitch(path, stitch_distance), None
+
+
+def make_fermat_spiral(rings, stitch_distance, starting_point):
+    forward = make_spiral(rings[::2], stitch_distance, starting_point)
+    back = make_spiral(rings[1::2], stitch_distance, starting_point)
+    back.reverse()
+
+    return chain(forward, back)
+
+
+def make_spiral(rings, stitch_distance, starting_point):
+    path = []
+
+    for ring1, ring2 in zip(rings[:-1], rings[1:]):
+        spiral_part = interpolate_linear_rings(ring1, ring2, stitch_distance, starting_point)
+        path.extend(spiral_part.coords)
+
+    return path

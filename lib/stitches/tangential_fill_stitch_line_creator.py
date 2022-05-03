@@ -84,7 +84,8 @@ def make_tree_uniform(tree, clockwise=True):
 # Used to define which stitching strategy shall be used
 class StitchingStrategy(IntEnum):
     INNER_TO_OUTER = 0
-    SPIRAL = 1
+    SINGLE_SPIRAL = 1
+    DOUBLE_SPIRAL = 2
 
 
 def check_and_prepare_tree_for_valid_spiral(tree):
@@ -158,7 +159,7 @@ def offset_poly(poly, offset, join_style, stitch_distance, min_stitch_distance, 
      at this position
     """
 
-    if strategy == StitchingStrategy.SPIRAL and len(poly.interiors) > 1:
+    if strategy in (StitchingStrategy.SINGLE_SPIRAL, StitchingStrategy.DOUBLE_SPIRAL) and len(poly.interiors) > 1:
         raise ValueError(
             "Single spiral geometry must not have more than one hole!")
 
@@ -293,10 +294,15 @@ def offset_poly(poly, offset, join_style, stitch_distance, min_stitch_distance, 
             tree, 'root', abs(offset), stitch_distance, min_stitch_distance, starting_point, offset_by_half, avoid_self_crossing)
         path = [Stitch(*point) for point in connected_line.coords]
         return running_stitch(path, stitch_distance), "whatever"
-    elif strategy == StitchingStrategy.SPIRAL:
+    elif strategy == StitchingStrategy.SINGLE_SPIRAL:
         if not check_and_prepare_tree_for_valid_spiral(tree):
             raise ValueError("Geometry cannot be filled with one spiral!")
-        (connected_line, connected_line_origin) = tangential_fill_stitch_pattern_creator.connect_raster_tree_spiral(
+        (connected_line, connected_line_origin) = tangential_fill_stitch_pattern_creator.connect_raster_tree_single_spiral(
+            tree, offset, stitch_distance, min_stitch_distance, starting_point, offset_by_half)
+    elif strategy == StitchingStrategy.DOUBLE_SPIRAL:
+        if not check_and_prepare_tree_for_valid_spiral(tree):
+            raise ValueError("Geometry cannot be filled with a double spiral!")
+        (connected_line, connected_line_origin) = tangential_fill_stitch_pattern_creator.connect_raster_tree_double_spiral(
             tree, offset, stitch_distance, min_stitch_distance, starting_point, offset_by_half)
     else:
         raise ValueError("Invalid stitching stratety!")
