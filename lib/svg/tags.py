@@ -57,6 +57,7 @@ inkstitch_attribs = [
     'join_style',
     'interlaced',
     'avoid_self_crossing',
+    'clockwise',
     'expand_mm',
     'fill_underlay',
     'fill_underlay_angle',

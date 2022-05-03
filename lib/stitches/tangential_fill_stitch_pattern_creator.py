@@ -24,7 +24,6 @@ nearest_neighbor_tuple = namedtuple(
 )
 
 
-@debug.time
 def get_nearest_points_closer_than_thresh(travel_line, next_line, threshold):
     """
     Find the first point along travel_line that is within threshold of next_line.
@@ -108,7 +107,6 @@ def create_nearest_points_list(
     return children_nearest_points
 
 
-@debug.time
 def connect_raster_tree_from_inner_to_outer(tree, node, offset, stitch_distance, min_stitch_distance, starting_point,
                                             offset_by_half, avoid_self_crossing, forward=True):
     """
@@ -213,13 +211,6 @@ def connect_raster_tree_from_inner_to_outer(tree, node, offset, stitch_distance,
     return LineString(result_coords)
 
 
-def orient_linear_ring(ring):
-    if not ring.is_ccw:
-        return LinearRing(reversed(ring.coords))
-    else:
-        return ring
-
-
 def reorder_linear_ring(ring, start):
     distances = ring - start
     start_index = np.argmin(np.linalg.norm(distances, axis=1))
@@ -244,9 +235,6 @@ def interpolate_linear_rings(ring1, ring2, max_stitch_length, start=None):
 
     Return value: Path interpolated between two LinearRings, as a LineString.
     """
-
-    ring1 = orient_linear_ring(ring1)
-    ring2 = orient_linear_ring(ring2)
 
     # Resample the two LinearRings so that they are the same number of points
     # long.  Then take the corresponding points in each ring and interpolate

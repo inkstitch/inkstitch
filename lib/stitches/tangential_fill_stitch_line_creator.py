@@ -8,12 +8,12 @@ from shapely.geometry.polygon import LinearRing
 from shapely.geometry.polygon import orient
 from shapely.ops import polygonize
 
+from .running_stitch import running_stitch
+from ..stitch_plan import Stitch
 from ..stitches import constants
 from ..stitches import tangential_fill_stitch_pattern_creator
-from ..stitch_plan import Stitch
 from ..utils import DotDict
-
-from .running_stitch import running_stitch
+from ..utils.geometry import reverse_line_string
 
 
 class Tree(nx.DiGraph):
@@ -59,15 +59,26 @@ def take_only_valid_linear_rings(rings):
         return LinearRing()
 
 
-def make_tree_uniform_ccw(tree):
+def orient_linear_ring(ring, clockwise=True):
+    # Unfortunately for us, Inkscape SVGs have an inverted Y coordinate.
+    # Normally we don't have to care about that, but in this very specific
+    # case, the meaning of is_ccw is flipped.  It actually tests whether
+    # a ring is clockwise.  That makes this logic super-confusing.
+    if ring.is_ccw != clockwise:
+        return reverse_line_string(ring)
+    else:
+        return ring
+
+
+def make_tree_uniform(tree, clockwise=True):
     """
     Since naturally holes have the opposite point ordering than non-holes we
     make all lines within the tree "root" uniform (having all the same
     ordering direction)
     """
-    for node in nx.dfs_preorder_nodes(tree, 'root'):
-        if tree.nodes[node].type == "hole":
-            tree.nodes[node].val = LinearRing(reversed(tree.nodes[node].val.coords))
+
+    for node in tree.nodes.values():
+        node.val = orient_linear_ring(node.val, clockwise)
 
 
 # Used to define which stitching strategy shall be used
@@ -116,7 +127,7 @@ def check_and_prepare_tree_for_valid_spiral(tree):
 
 
 def offset_poly(poly, offset, join_style, stitch_distance, min_stitch_distance, offset_by_half, strategy, starting_point,  # noqa: C901
-                avoid_self_crossing):
+                avoid_self_crossing, clockwise):
     """
     Takes a polygon (which can have holes) as input and creates offsetted
     versions until the polygon is filled with these smaller offsets.
@@ -275,7 +286,7 @@ def offset_poly(poly, offset, join_style, stitch_distance, min_stitch_distance, 
                 tree.nodes[previous_hole].parent = current_poly
                 tree.add_edge(current_poly, previous_hole)
 
-    make_tree_uniform_ccw(tree)
+    make_tree_uniform(tree, clockwise)
 
     if strategy == StitchingStrategy.INNER_TO_OUTER:
         connected_line = tangential_fill_stitch_pattern_creator.connect_raster_tree_from_inner_to_outer(

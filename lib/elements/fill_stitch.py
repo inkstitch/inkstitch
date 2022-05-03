@@ -124,6 +124,11 @@ class FillStitch(EmbroideryElement):
         return self.get_boolean_param('avoid_self_crossing', False)
 
     @property
+    @param('clockwise', _('Clockwise'), type='boolean', default=True, select_items=[('fill_method', 1), ('fill_method', 2)], sort_index=2)
+    def clockwise(self):
+        return self.get_boolean_param('clockwise', True)
+
+    @property
     @param('angle',
            _('Angle of lines of stitches'),
            tooltip=_('The angle increases in a counter-clockwise direction.  0 is horizontal.  Negative angles are allowed.'),
@@ -580,7 +585,8 @@ class FillStitch(EmbroideryElement):
                 self.interlaced,
                 self.tangential_strategy,
                 shgeo.Point(starting_point),
-                self.avoid_self_crossing
+                self.avoid_self_crossing,
+                self.clockwise
             )
             path = [InkstitchPoint(*p) for p in connectedLine]
             stitch_group = StitchGroup(
