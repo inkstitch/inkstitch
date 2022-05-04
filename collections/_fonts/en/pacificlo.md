@@ -7,4 +7,10 @@ preview_image: /assets/images/fonts/pacificlo.png
 ---
 ![Pacificlo](/assets/images/fonts/pacificlo.png)
 
+
+Latin is Pacificlo while French is Learning curve
+![Pacificlo2](/assets/images/fonts/pacificlolearning.jpg)
+
+
+
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/pacificlo/LICENSE)
