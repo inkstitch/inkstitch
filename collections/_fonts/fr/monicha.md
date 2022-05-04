@@ -71,5 +71,7 @@ il existe un o a queue droite
 
 ⓞ
 
+![monicha2](/assets/images/fonts/monicha2.jpg)
+
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/monicha/LICENSE)
