@@ -5,6 +5,9 @@ last_modified_at: 2021-05-02
 toc: false
 preview_image: /assets/images/fonts/emilio_20.png
 ---
-![Baumans](/assets/images/fonts/emilio_20.png)
+![Emilio20](/assets/images/fonts/emilio_20.png)
+
+Emilio 20  on an pencil case :
+![Emilio20_2](/assets/images/fonts/emilio20_2.jpg)
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20/LICENSE)
