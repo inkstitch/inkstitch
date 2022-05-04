@@ -7,4 +7,6 @@ preview_image: /assets/images/fonts/amita.png
 ---
 ![Amita](/assets/images/fonts/amita.png)
 
+![Amita3](/assets/images/fonts/amita3.jpg)
+
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/amitaclo/LICENSE)
