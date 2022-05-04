@@ -9,8 +9,10 @@ preview_image: /assets/images/fonts/lobster_two_bold_italic.png
 
 ![Lobster AGS](/assets/images/fonts/lobster_two_bold_italic.png)
 
-Lobster AGS on a plushie:
+Lobster AGS  has many uses:
 
 ![Lobster 2](/assets/images/fonts/lobster2.jpg)
+![Lobster 3](/assets/images/fonts/lobster3.jpg)
+![Lobster 4](/assets/images/fonts/lobster4.jpg)
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/lobster_AGS/LICENSE)
