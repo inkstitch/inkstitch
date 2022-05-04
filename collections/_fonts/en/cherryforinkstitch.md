@@ -5,6 +5,12 @@ last_modified_at: 2022-01-22
 toc: false
 preview_image: /assets/images/fonts/cherryforinkstitch.png
 ---
+
 ![Cherryforinkstitch](/assets/images/fonts/cherryforinkstitch.png)
+
+On this sample, Cherry for Ink/Stitch meets Cherry for Ink/Stitch.
+
+![CherryforKaalleen3](/assets/images/fonts/cherry2.jpg)
+
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/cherryforinkstitch/LICENSE)
