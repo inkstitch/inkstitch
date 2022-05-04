@@ -7,48 +7,61 @@ preview_image: /assets/images/fonts/monicha.png
 ---
 ![monicha](/assets/images/fonts/monicha.png)
 
+Cette fonte sera dans une prochaine version d'Ink/Stitch version et n'est pas disponible dans Ink/Stitch v2.1.2.
+
 MONICHA est notre première police à lettres multiformes.
 
 Elle contient les majuscules, minuscules, lettres à accent, chiffre et ponctuation
 comme bon nombre des polices proposées jusqu'à présent.
 
-Cette fonte sera dans une prochaine version d'Ink/Stitch version et n'est pas disponible dans Ink/Stitch v2.1.2.
 
 
 Mais MONICHA contient aussi 50 lettres minuscules à écharpes de plusieurs types pour certaines lettres.
+
 Il vous faudra donc apprendre à coder ces lettres pour les utiliser.
-Pour faciliter l'usage de ces lettres ce mode d'emploi répertorie les codes 
-et il suffira de copier le code et de le coller dans le module lettrage.
+
+Pour faciliter l'usage de ces lettres ce mode d'emploi répertorie les codes et il suffira de copier le code et de le coller dans le module lettrage.
 afin de ne pas perdre ce code je vous conseille d'archiver un double de secours de ce mode d'emploi
 
-Les 26 lettres minuscules à petites écharpes sont codées
+Les 26 lettres minuscules à petites écharpes sont codées:
 
 ⒜	⒝	⒞	⒟	⒠	⒡
+
 ⒢	⒣	⒤	⒥	⒦	
+
 ⒧	⒨	⒩	⒪	⒫
+
 ⒬	⒭	⒮	⒯	⒰
+
 ⒱	⒲	⒳	⒴	⒵
 
-Il existe 11 lettres à longue écharpe soulignante a-d-h-i-k-l-m-n-r-t-u
+Il existe 11 lettres à longue écharpe soulignante a-d-h-i-k-l-m-n-r-t-u.
+
 Elles ne doivent pas être suivies, sur deux lettres, par des lettres à jambage descendant (comme g-j-p-q-y-z) 
 pour des raisons de superpositions de colonnes de satin.
 
 Ⓐ			Ⓓ
+
 	Ⓗ	Ⓘ		Ⓚ
+	
 Ⓛ	Ⓜ	Ⓝ
+
 	Ⓡ		Ⓣ	Ⓤ
 
-Il existe 3 lettres à moyenne écharpe soulignante g-j-y
-Elles ne doivent pas être suivie d'une lettre à jambage descendant
+Il existe 3 lettres à moyenne écharpe soulignante g-j-y.
+
+Elles ne doivent pas être suivie d'une lettre à jambage descendant.
 
 Ⓖ	Ⓙ	Ⓨ
 
-ces trois lettres disposent d'une version à écharpes basse bouclée
+Ces trois lettres disposent d'une version à écharpes basse bouclée.
+
 Elles ne doivent pas être suivie d'une lettre à jambage descendant sur deux lettres
 
 ⓖ	ⓙ	ⓨ
 
-il existe 6 lettres à écharpe supérieure bouclée et rétrograde b-d-h-k-l-t
+Il existe 6 lettres à écharpe supérieure bouclée et rétrograde b-d-h-k-l-t.
+
 Elles ne doivent pas suivre deux lettres montantes, ni une majuscule sur ces deux poisitions 
 pour des raisons de superpositions de colonnes de satin
 
