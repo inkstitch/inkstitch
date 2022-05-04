@@ -8,6 +8,6 @@ preview_image: /assets/images/fonts/emilio_20.png
 ![Emilio20](/assets/images/fonts/emilio_20.png)
 
 Emilio 20 sur une trousse :
-![Emilio20_2](/assets/images/fonts/emilio_20_2./jpg)
+![Emilio20_2](/assets/images/fonts/emilio20_2.jpg)
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20/LICENSE)
