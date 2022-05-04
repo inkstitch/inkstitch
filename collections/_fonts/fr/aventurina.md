@@ -7,7 +7,7 @@ preview_image: /assets/images/fonts/aventurina.png
 ---
 ![Aventurina](/assets/images/fonts/aventurina.png)
 
-Cette fonte ne fait pas encore partie de la version courante d'Ink/Stitch.
+Cette fonte sera dans une prochaine version d'Ink/Stitch version and n'est pas disponible dans Ink/Stitch v2.1.2.
 
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/aventurina/LICENSE)
