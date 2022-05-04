@@ -11,5 +11,10 @@ Learning curve en situation:
 
 ![LearningCurve2](/assets/images/fonts/learningcurve2.jpg)
 
+Le nom latin est brodé avec Pacificlo tandis que le nom français utilise  Learning curve
+
+![LearningCurve3](/assets/images/fonts/pacificlolearning.jpg)
+
+
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/learning_curve/LICENSE)
