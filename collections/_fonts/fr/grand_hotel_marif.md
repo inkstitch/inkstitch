@@ -9,6 +9,10 @@ preview_image: /assets/images/fonts/grand_hotel_marif.png
 
 Cette fonte sera dans une prochaine version d'Ink/Stitch version et n'est pas disponible dans Ink/Stitch v2.1.2.
 
+Cette fonte n'est elle pas parfaite sur une etiquette ?
 
+![grand_hotel_marif2](/assets/images/fonts/grandhotel2.jpg)
+
+mais à vous de trouver ses autres usages.....
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/grand_hotel_marif/LICENSE)
