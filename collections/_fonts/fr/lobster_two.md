@@ -8,9 +8,11 @@ preview_image: /assets/images/fonts/lobster_two_bold_italic.png
 ## Bold Italic
 ![Lobster AGS](/assets/images/fonts/lobster_two_bold_italic.png)
 
-Lobster AGS sur un petit poulpe:
+Lobster AGS  a de nombreux usages:
 
 ![Lobster 2](/assets/images/fonts/lobster2.jpg)
+![Lobster 3](/assets/images/fonts/lobster3.jpg)
+![Lobster 4](/assets/images/fonts/lobster4.jpg)
 
 
 
