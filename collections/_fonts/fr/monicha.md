@@ -11,6 +11,10 @@ Cette fonte sera dans une prochaine version d'Ink/Stitch version et n'est pas di
 
 MONICHA est notre première police à lettres multiformes.
 
+Par exemple, voici des variations sur le prénom Sasha
+
+![monicha7](/assets/images/fonts/monicha7.jpg)
+
 Elle contient les majuscules, minuscules, lettres à accent, chiffre et ponctuation
 comme bon nombre des polices proposées jusqu'à présent.
 
@@ -71,10 +75,14 @@ il existe un o a queue droite
 
 ⓞ
 
+Utilisations diverses de Monicha :
+
 ![monicha2](/assets/images/fonts/monicha2.jpg)
 ![monicha3](/assets/images/fonts/monicha3.jpg)
 ![monicha4](/assets/images/fonts/monicha4.jpg)
 ![monicha5](/assets/images/fonts/monicha5.jpg)
+![monicha6](/assets/images/fonts/monicha6.jpg)
+
 
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/monicha/LICENSE)
