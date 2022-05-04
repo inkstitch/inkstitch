@@ -9,5 +9,7 @@ preview_image: /assets/images/fonts/glacial_tiny.png
 
 Cette fonte sera dans une prochaine version d'Ink/Stitch version et n'est pas disponible dans Ink/Stitch v2.1.2.
 
+Cette fonte est extrêmement petite. Sa toute petite taille n'est possible que parce qu'elle est conçue pour être brodée avec des aiguilles fines (60 en europe, 8 aux USA) et du fil fin (60 wt)et non pas avec le fil de broderie usuel (40 wt) . Passer outre ces recommandations risque de causer de gros problèmes à la broderie.
+
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/glacial_tiny/LICENSE)
