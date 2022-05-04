@@ -8,4 +8,10 @@ preview_image: /assets/images/fonts/lobster_two_bold_italic.png
 ## Bold Italic
 ![Lobster AGS](/assets/images/fonts/lobster_two_bold_italic.png)
 
+Lobster AGS sur un petit poulpe:
+
+![Lobster 2](/assets/images/fonts/lobster2.jpg)
+
+
+
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/lobster_AGS/LICENSE)
