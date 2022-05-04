@@ -11,4 +11,8 @@ Chopin Script used on a deckchair cushion.
 
 ![Chopin Script_2](/assets/images/fonts/chopin2.jpg)
 
+Another cushion:
+
+![Chopin Script_3](/assets/images/fonts/chopin3.jpg)
+
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/chopin/LICENSE)
