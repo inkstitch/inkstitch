@@ -8,11 +8,11 @@ preview_image: /assets/images/fonts/apex_lake.png
 ![Apex](/assets/images/fonts/apex_lake.png)
 
 
-Why not use Apex Lake on a T shirt
+Et pourquoi pas sur un T shirt ?
 
 ![Apex2](/assets/images/fonts/apex2.jpg)
 
-or on a fabric case ?
+ou sur un panier en tissu ?
 
 ![Apex3](/assets/images/fonts/apex3.jpg)
 
