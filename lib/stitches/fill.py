@@ -11,7 +11,6 @@ from ..stitch_plan import Stitch
 from ..svg import PIXELS_PER_MM
 from ..utils import Point as InkstitchPoint
 from ..utils import cache
-from ..stitch_plan import Stitch
 
 
 def legacy_fill(shape, angle, row_spacing, end_row_spacing, max_stitch_length, flip, staggers, skip_last):

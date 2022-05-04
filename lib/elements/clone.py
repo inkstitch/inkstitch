@@ -5,13 +5,7 @@
 
 from math import atan, degrees
 
-<<<<<<< HEAD
-from ..commands import is_command, is_command_symbol
-=======
-import inkex
-
 from ..commands import is_command_symbol
->>>>>>> c69b6f5a (* autofill to fillstitch)
 from ..i18n import _
 from ..svg.path import get_node_transform
 from ..svg.svg import find_elements
