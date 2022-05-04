@@ -11,19 +11,16 @@ from ..stitch_plan import Stitch
 from ..utils.geometry import Point as InkstitchPoint, reverse_line_string
 
 
-@debug.time
 def guided_fill(shape,
                 guideline,
                 angle,
                 row_spacing,
                 max_stitch_length,
-                min_stitch_length,
                 running_stitch_length,
                 skip_last,
                 starting_point,
                 ending_point=None,
-                underpath=True,
-                offset_by_half=True):
+                underpath=True):
     try:
         segments = intersect_region_with_grating_guideline(shape, guideline, row_spacing)
         fill_stitch_graph = build_fill_stitch_graph(shape, segments, starting_point, ending_point)
@@ -36,15 +33,12 @@ def guided_fill(shape,
 
     travel_graph = build_travel_graph(fill_stitch_graph, shape, angle, underpath)
     path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point)
-    result = path_to_stitches(path, travel_graph, fill_stitch_graph, angle, row_spacing,
-                              max_stitch_length, min_stitch_length, running_stitch_length, skip_last, offset_by_half)
+    result = path_to_stitches(path, travel_graph, fill_stitch_graph, max_stitch_length, running_stitch_length, skip_last)
 
     return result
 
 
-@debug.time
-def path_to_stitches(path, travel_graph, fill_stitch_graph, angle, row_spacing, max_stitch_length, min_stitch_length,
-                     running_stitch_length, skip_last, offset_by_half):
+def path_to_stitches(path, travel_graph, fill_stitch_graph, stitch_length, running_stitch_length, skip_last):
     path = collapse_sequential_outline_edges(path)
 
     stitches = []
@@ -62,7 +56,7 @@ def path_to_stitches(path, travel_graph, fill_stitch_graph, angle, row_spacing, 
                 path_geometry = reverse_line_string(path_geometry)
 
             point_list = [Stitch(*point) for point in path_geometry.coords]
-            new_stitches = running_stitch(point_list, max_stitch_length)
+            new_stitches = running_stitch(point_list, stitch_length)
 
             # need to tag stitches
 
@@ -124,7 +118,7 @@ def repair_non_simple_lines(line):
         counter += 1
     if repaired.geom_type != 'LineString':
         raise ValueError(
-            _("Guide line (or offsetted instance) is self crossing!"))
+            _("Guide line (or offset copy) is self crossing!"))
     else:
         return repaired
 

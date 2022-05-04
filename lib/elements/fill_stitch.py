@@ -15,10 +15,9 @@ from shapely.validation import explain_validity
 from ..i18n import _
 from ..marker import get_marker_elements
 from ..stitch_plan import StitchGroup
-from ..stitches import tangential_fill_stitch_line_creator, auto_fill, legacy_fill, guided_fill
+from ..stitches import tangential_fill, auto_fill, legacy_fill, guided_fill
 from ..svg import PIXELS_PER_MM
 from ..svg.tags import INKSCAPE_LABEL
-from ..utils import Point as InkstitchPoint
 from ..utils import cache, version
 from .element import EmbroideryElement, param
 from .validation import ValidationError, ValidationWarning
@@ -571,26 +570,40 @@ class FillStitch(EmbroideryElement):
         return [stitch_group]
 
     def do_tangential_fill(self, last_patch, starting_point):
-        stitch_groups = []
-        polygons = self.fill_shape.geoms
         if not starting_point:
             starting_point = (0, 0)
-        for poly in polygons:
-            connected_line = tangential_fill_stitch_line_creator.tangential_fill(
-                poly,
-                self.tangential_strategy,
-                self.row_spacing,
-                self.max_stitch_length,
-                self.join_style + 1,
-                self.clockwise,
-                shgeo.Point(starting_point),
-                self.avoid_self_crossing,
-            )
-            path = [InkstitchPoint(*p) for p in connected_line]
+        starting_point = shgeo.Point(starting_point)
+
+        stitch_groups = []
+        for polygon in self.fill_shape.geoms:
+            tree = tangential_fill.offset_polygon(polygon, self.row_spacing, self.join_style + 1, self.clockwise)
+
+            stitches = []
+            if self.tangential_strategy == 0:
+                stitches = tangential_fill.inner_to_outer(
+                    tree,
+                    self.row_spacing,
+                    self.max_stitch_length,
+                    starting_point,
+                    self.avoid_self_crossing
+                )
+            elif self.tangential_strategy == 1:
+                stitches = tangential_fill.single_spiral(
+                    tree,
+                    self.max_stitch_length,
+                    starting_point
+                )
+            elif self.tangential_strategy == 2:
+                stitches = tangential_fill.double_spiral(
+                    tree,
+                    self.max_stitch_length,
+                    starting_point
+                )
+
             stitch_group = StitchGroup(
                 color=self.color,
                 tags=("auto_fill", "auto_fill_top"),
-                stitches=path)
+                stitches=stitches)
             stitch_groups.append(stitch_group)
 
         return stitch_groups
@@ -611,13 +624,11 @@ class FillStitch(EmbroideryElement):
                 self.angle,
                 self.row_spacing,
                 self.max_stitch_length,
-                min(self.min_stitch_length, self.max_stitch_length),
                 self.running_stitch_length,
                 self.skip_last,
                 starting_point,
                 ending_point,
-                self.underpath,
-                self.interlaced))
+                self.underpath))
         return [stitch_group]
 
     @cache
