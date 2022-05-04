@@ -5,7 +5,6 @@ from .auto_fill import (build_fill_stitch_graph,
                         build_travel_graph, collapse_sequential_outline_edges, fallback,
                         find_stitch_path, graph_is_valid, travel)
 from .running_stitch import running_stitch
-from ..debug import debug
 from ..i18n import _
 from ..stitch_plan import Stitch
 from ..utils.geometry import Point as InkstitchPoint, reverse_line_string

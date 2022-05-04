@@ -19,11 +19,12 @@ from .stroke import Stroke
 from .text import TextObject
 
 
-def node_to_elements(node):  # noqa: C901
+def node_to_elements(node, clone_to_element=False):  # noqa: C901
     if node.tag == SVG_POLYLINE_TAG:
         return [Polyline(node)]
 
-    elif is_clone(node):
+    elif is_clone(node) and not clone_to_element:
+        # clone_to_element: get an actual embroiderable element once a clone has been defined as a clone
         return [Clone(node)]
 
     elif node.tag == SVG_PATH_TAG and not node.get('d', ''):
@@ -32,7 +33,7 @@ def node_to_elements(node):  # noqa: C901
     elif has_marker(node):
         return [MarkerObject(node)]
 
-    elif node.tag in EMBROIDERABLE_TAGS:
+    elif node.tag in EMBROIDERABLE_TAGS or is_clone(node):
         element = EmbroideryElement(node)
 
         if element.get_boolean_param("satin_column") and element.get_style("stroke"):

@@ -70,7 +70,7 @@ class Clone(EmbroideryElement):
 
     def clone_to_element(self, node):
         from .utils import node_to_elements
-        return node_to_elements(node)
+        return node_to_elements(node, True)
 
     def to_stitch_groups(self, last_patch=None):
         patches = []
