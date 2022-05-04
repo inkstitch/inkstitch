@@ -6,5 +6,7 @@ toc: false
 ---
 {% include font_list %}
 
-![muultifont1](/assets/images/fonts/multifont1.jpg)
+Ink/Stitch fonts in action:
+
+![multifont](/assets/images/fonts/multifont.jpg)
 ![multifont2](/assets/images/fonts/multifont2.jpg)
