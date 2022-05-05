@@ -76,6 +76,7 @@ Finally there is a straight tail o:
 Monicha  in situation:
 
 ![monicha2](/assets/images/fonts/monicha2.jpg)
+![monicha8](/assets/images/fonts/monicha8.jpg)
 ![monicha3](/assets/images/fonts/monicha3.jpg)
 ![monicha4](/assets/images/fonts/monicha4.jpg)
 ![monicha5](/assets/images/fonts/monicha5.jpg)
