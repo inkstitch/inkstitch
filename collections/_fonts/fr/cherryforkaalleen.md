@@ -1,7 +1,7 @@
 ---
 title: "Cherry for Kaalleen"
 permalink: /fr/fonts/cherryforkaalleen/
-last_modified_at: 2022-01-23
+last_modified_at: 2022-05-05
 toc: false
 preview_image: /assets/images/fonts/cherryforkaalleen.png
 ---
