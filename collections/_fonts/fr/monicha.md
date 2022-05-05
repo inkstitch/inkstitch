@@ -65,6 +65,7 @@ On les obtient en utilisant ces codes :
 	Ⓡ		Ⓣ	Ⓤ
 
 ### Echarpe soulignant moyenne : g-j-y.
+![Echarpe Moyenne Soulignante](/assets/images/fonts/monichamediumswash.png)
 
 Ces trois lettres disposent d'une écharpe soulignante moyenne.
 
@@ -72,21 +73,27 @@ Elles ne doivent pas être suivie d'une lettre à jambage descendant.
 
 Ⓖ	Ⓙ	Ⓨ
 
-### Ces trois lettres disposent d'une version à écharpes basse bouclée.
+### Echarpe basse bouclée : g-j-y 
+![Echarpe Basse Bouclée](/assets/images/fonts/monichacurly.png)
+Ces trois lettres disposent  aussi d'une version à écharpes basse bouclée.
 
-Elles ne doivent pas être suivie d'une lettre à jambage descendant sur deux lettres
+Elles ne doivent pas être suivies d'une lettre à jambage descendant sur deux lettres
 
 ⓖ	ⓙ	ⓨ
 
-### Il existe 6 lettres à écharpe supérieure bouclée et rétrograde b-d-h-k-l-t.
+### Echarpe supérieure bouclée et rétrograde: b-d-h-k-l-t
+
+![Echarpe Superieure Bouclée](/assets/images/fonts/monichacurlyup.png)
+Il existe 6 lettres à écharpe supérieure bouclée et rétrograde b-d-h-k-l-t.
 
 Elles ne doivent pas suivre deux lettres montantes, ni une majuscule sur ces deux poisitions 
 pour des raisons de superpositions de colonnes de satin
 
 ⓑ	ⓓ	ⓗ	ⓚ	ⓛ	ⓣ
 
-### il existe un o a queue droite
-
+### Le petit dernnier : o
+Il existe un o a queue droite
+![Echarpe Queue Droite](/assets/images/fonts/monichap.png)
 ⓞ
 
 ## Utilisations diverses de Monicha :
