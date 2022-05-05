@@ -1,17 +1,19 @@
 ---
 title: "Espresso Tiny"
 permalink: /fr/fonts/espresso_tiny/
-last_modified_at: 2022-01-23
+last_modified_at: 2022-05-05
 toc: false
 preview_image: /assets/images/fonts/espresso_dolce.png
 ---
 
 
-Cette fonte sera dans une prochaine version d'Ink/Stitch version et n'est pas disponible dans Ink/Stitch v2.1.2.
+Cette fonte sera dans une prochaine version d'Ink/Stitch  et n'est pas disponible dans Ink/Stitch v2.1.2.
 
 ## Description
 
-Cette fonte est une variation d'espresso KOR. Le dessin des lettres n'a pas été modifié, mais les paramètres de broderie sont différents. La densité, la compensation et les sous couches ont été modifiés pour permettre de broder cette fonte en plus petite taille que la taille initiale.
+Cette fonte est une variation d'espresso KOR.
+Le dessin des lettres n'a pas été modifié, mais les paramètres de broderie sont différents. 
+La densité, la compensation et les sous couches ont été modifiés pour permettre de broder cette fonte en plus petite taille que ce qui est préconnisé pour la taille  de la fonte espresso KOR initiale.
 
 ## Usage
 ### Redimensionnement
