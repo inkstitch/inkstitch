@@ -1,17 +1,17 @@
 ---
 title: "Namskout AGS"
 permalink: /fonts/namskout_ags/
-last_modified_at: 2022-01-23
+last_modified_at: 2022-05-05
 toc: false
 preview_image: /assets/images/fonts/namskout_ags.png
 ---
 ![NamskoutAGS](/assets/images/fonts/namskout_ags.png)
 
-or you may use a different applique fabric for  each letter
+You may use a different applique fabric for  each letter
 
 ![NamskoutAGS2](/assets/images/fonts/namskout2.jpg)
 
-or you may use the same applique fabric for all letters
+or use the same applique fabric for all the letters
 
 
 ![NamskoutAGS3](/assets/images/fonts/namskout3.jpg)
