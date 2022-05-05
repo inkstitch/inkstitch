@@ -23,8 +23,7 @@ Density, pull compensation and underlays have been modified to allow a smaller s
 That's why in the lettering dialog window, you will have to pick up a scale between 25 and 55%. 
 That percentage is  relatively to the original Pacificlo font, going from 20mm letters to anything between 5 and 12mm.
 
-
-## Materiel à utiliser
+### Thread and Needle
 
 This smallified font **MUST** be embroidered with thread and needle smaller than usual.
 A USA 8 (EUR 60) size needle, and 60WT thread **MUST** be used.
