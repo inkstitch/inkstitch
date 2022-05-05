@@ -1,7 +1,7 @@
 ---
 title: "Chopin Script"
 permalink: /fr/fonts/chopin/
-last_modified_at: 2020-05-05
+last_modified_at: 2022-05-05
 toc: false
 preview_image: /assets/images/fonts/chopin_script.png
 ---
@@ -14,5 +14,10 @@ Chopin Script en action sur un coussin de transat :
 et sur un autre coussin:
 
 ![Chopin Script_3](/assets/images/fonts/chopin3.jpg)
+
+mais aussi sur serviette, T Shirt: 
+
+![Chopin Script_4](/assets/images/fonts/chopin4.jpg)
+
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/chopin/LICENSE)
