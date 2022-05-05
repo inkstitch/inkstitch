@@ -1,7 +1,7 @@
 ---
 title: "Romanaugusa bicolor"
 permalink: /fr/fonts/romanaugusa-bicolor/
-last_modified_at: 2021-05-02
+last_modified_at: 2021-05-05
 toc: false
 preview_image: /assets/images/fonts/romanaugusa_bicolor.png
 ---
