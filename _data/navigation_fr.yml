@@ -80,23 +80,23 @@ docs:
         url: /fr/docs/stitches/e-stitch/
       - title: "Point de remplissage"
         url: /fr/docs/stitches/fill-stitch/
-      - title: "Stitch patterns"
+      - title: "Textures"
         url: /fr/docs/stitches/patterns/
   - title: Interface
     children:
     - title: "Commandes"
       url: /fr/docs/commands/
-    - title: "Edit"
+    - title: "Edition"
       url: /fr/docs/edit/
     - title: "Outils de remplissage"
       url: /fr/docs/fill-tools/
-    - title: "Font Management"
+    - title: "Gestion des fontes"
       url: /fr/docs/font-tools/
     - title: "Lettrage"
       url: /fr/docs/lettering/
     - title: "Paramètres"
       url: /fr/docs/params/
-    - title: "Preferences"
+    - title: "Préferences"
       url: /fr/docs/preferences/
     - title: "Outils Satin"
       url: /fr/docs/satin-tools/
@@ -104,17 +104,17 @@ docs:
       url: /fr/docs/troubleshoot/
     - title: "Gestion des couleurs de fil"  
       url: /fr/docs/thread-color/
-    - title: Visualize
+    - title: "Visualiser"
       url: /fr/docs/visualize/
-  - title: "File Handling"
+  - title: "Gestion des Fichiers"
     children:
-    - title: "Supported File Formats"
+    - title: "Formats de fichiers reconnus "
       url: /fr/docs/file-formats/
     - title: "Import / Export"
       url: /fr/docs/import-export/
     - title: "PDF"
       url: /fr/docs/print-pdf/
-    - title: "Threadlist"
+    - title: "Liste de fils"
       url: /fr/docs/threadlist/
   - title: Astuces
     children:
@@ -122,7 +122,7 @@ docs:
         url: /fr/docs/fonts/
       - title: "Fonctions cachées"
         url: /fr/docs/features/
-      - title: Astuces pour Inkscape
+      - title: "Astuces pour Inkscape"
         url: /fr/docs/inkscape-tips/
   - title: Dépannage
     children:
