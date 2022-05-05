@@ -33,6 +33,7 @@ Cadre|Caractère
 
 ![SortefaxXL2](/assets/images/fonts/sortefax2.jpg)
 ![SortefaxXL3](/assets/images/fonts/sortefax3.jpg)
+![SortefaxXL4](/assets/images/fonts/sortefaxXL4.jpg)
 
 
 
