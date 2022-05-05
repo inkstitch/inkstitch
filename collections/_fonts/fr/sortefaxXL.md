@@ -13,6 +13,8 @@ A 100% les lettres font a peu près 15cm.
 
 Elle comprend les 26 lettres A_Z, les 10 chiffres 0-9 et le &. 
 
+Les lettres :;,.(){}[] sont utilisées pour stocker des cadres.
+
 
 Pour obtenir une lettre encadrée, simplement taper la lettre et une des "lettres cadres" dans la fenêtre de lettrage, sur la même ligne, sans espace entre les deux. 
 
