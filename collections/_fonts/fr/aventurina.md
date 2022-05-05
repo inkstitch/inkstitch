@@ -1,7 +1,7 @@
 ---
 title: "Aventurina"
 permalink: /fr/fonts/aventurina/
-last_modified_at: 2022-05-04
+last_modified_at: 2022-05-05
 toc: false
 preview_image: /assets/images/fonts/aventurina.png
 ---
