@@ -10,17 +10,18 @@ preview_image: /assets/images/fonts/sortefax_medium.png
 
 ## Description
 
-Sortefax Médium Initials is 50% smaller that the Sortefax XL Initials.It is also simplier.
+Sortefax Médium Initials is 50% smaller that the Sortefax XL Initials. It is also simplier.
 
 It is still possible to use frame, but the arranging of the frame and the letter is  not as good as for the XL font.
 But this font may be used to write whole words and not only single letters.
 
 
-As Sortefax XL, only includes the 26 upper letters A-Z, the 10 digits 0-9 plus the &.
+As Sortefax XL, it only includes the 26 upper letters A-Z, the 10 digits 0-9 and  the &.
 
 The letters  :;,.(){}[]  are used to store some frames.
 
 To get a framed letter, simply type the letter and any "frame" letter in the lettering dialog (same line, no space).
+If you do use the frames, you will have to refine the position manually in Inkscape.
 
 
 
