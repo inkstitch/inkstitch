@@ -12,8 +12,8 @@ La fonte Sortefax XL Initials est prévue pour être utilisée une seule lettre 
 Attention : tous les cadres ne conviennent pas à toutes les lettres, en particulier aux lettres très larges comme le M ou le W, ou les lettres très hautes comme le J.
 
 Il est bien sur très facile dans Inkscape de modifier le positionnement de la lettre par rapport au cadre si elle ne convient pas. Ou de modifier la forme d'un cadre, par exemple transformer un cercle en ellipse pour accueillir un J récalcitrant.
-
-Pour acceder aux cadres, utilisez le tableau de correspondance suivant:
+ 
+## Pour acceder aux cadres, utilisez le tableau de correspondance suivant:
 
 Cadre|Caractère 
 ---|---
@@ -27,6 +27,14 @@ Cadre|Caractère
 ![fermantecarre](/assets/images/fonts/sortefax/].png)|]
 ![accolade_ouvrante](/assets/images/fonts/sortefax/{.png)|{
 ![accolade_fermante](/assets/images/fonts/sortefax/}.png)|}
+
+
+## Exemples d'utilisation:
+
+![SortefaxXL2](/assets/images/fonts/sortefax2.jpg)
+![SortefaxXL3](/assets/images/fonts/sortefax3.jpg)
+
+
 
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/sortefaxXL/LICENSE)
