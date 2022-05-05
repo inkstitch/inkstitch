@@ -1,7 +1,7 @@
 ---
 title: "Amitaclo"
 permalink: /fonts/amita/
-last_modified_at: 2022-056-05
+last_modified_at: 2022-05-05
 toc: false
 preview_image: /assets/images/fonts/amita.png
 ---
