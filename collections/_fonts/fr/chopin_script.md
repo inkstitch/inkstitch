@@ -15,9 +15,12 @@ et sur un autre coussin:
 
 ![Chopin Script_3](/assets/images/fonts/chopin3.jpg)
 
-mais aussi sur serviette, T Shirt: 
+mais aussi sur serviette, polos,  Shirt: 
 
 ![Chopin Script_4](/assets/images/fonts/chopin4.jpg)
 
+et même sur polaire
+
+![Chopin Script_5](/assets/images/fonts/chopin5.jpg)
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/chopin/LICENSE)
