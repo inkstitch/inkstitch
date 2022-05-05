@@ -1,7 +1,7 @@
 ---
 title: "Learning Curve"
 permalink: /fr/fonts/learning-curve/
-last_modified_at: 2021-05-02
+last_modified_at: 2022-05-05
 toc: false
 preview_image: /assets/images/fonts/learning_curve.png
 ---
