@@ -13,5 +13,8 @@ Isn't it nice as a label font ?
 
 ![grand_hotel_marif2](/assets/images/fonts/grandhotel2.jpg)
 
+or on this apron, with the help of glacial tinu ?
+
+![grand_hotel_marif3](/assets/images/fonts/glacialgrandhotel.jpg)
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/grand_hotel_marif/LICENSE)
