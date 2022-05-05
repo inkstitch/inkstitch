@@ -5,7 +5,7 @@ last_modified_at: 2022-01-23
 toc: false
 preview_image: /assets/images/fonts/espresso_dolce.png
 ---
-![EspressoDolce](/assets/images/fonts/espresso_dolce.png)
+
 
 Cette fonte sera dans une prochaine version d'Ink/Stitch version et n'est pas disponible dans Ink/Stitch v2.1.2.
 
