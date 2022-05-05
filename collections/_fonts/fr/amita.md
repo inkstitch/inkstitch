@@ -1,7 +1,7 @@
 ---
 title: "Amitaclo"
 permalink: /fr/fonts/amita/
-last_modified_at: 2022-01-23
+last_modified_at: 2022-05-05
 toc: false
 preview_image: /assets/images/fonts/amita.png
 ---
@@ -9,7 +9,7 @@ preview_image: /assets/images/fonts/amita.png
 
 ![Amita3](/assets/images/fonts/amita3.jpg)
 
-En compagnie de Déjà Vu et Magnolia KOR
+En compagnie de Déjà Vu et de Magnolia KOR
 
 ![Amita2](/assets/images/fonts/amitadejavumagnolia.jpg)
 
