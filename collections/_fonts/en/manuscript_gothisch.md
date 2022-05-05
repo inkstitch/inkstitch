@@ -15,7 +15,11 @@ on bookmarks:
 
 ![ManuscriptGothisch3](/assets/images/fonts/manuscript_gothisch3.jpg)
 
-and used to draw a cat (chat in French)
+used to draw a cat (chat in French): 
 ![ManuscriptGothisch4](/assets/images/fonts/manuscript_gothisch4.jpg)
+
+or with its friend RomanAugusa Bicolor
+![ManuscriptGothisch5](/assets/images/fonts/gothicromanaugusa1.jpg)
+![ManuscriptGothisch6](/assets/images/fonts/gothicromanaugusa2.jpg)
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/manuskript_gotisch/LICENSE)
