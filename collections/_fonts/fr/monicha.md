@@ -1,7 +1,7 @@
 ---
 title: "monicha"
 permalink: /fr/fonts/monicha/
-last_modified_at: 2022-05-04
+last_modified_at: 2022-05-05
 toc: false
 preview_image: /assets/images/fonts/monicha.png
 ---
@@ -18,13 +18,18 @@ Par exemple, voici des variations sur le prénom Sasha
 Elle contient les majuscules, minuscules, lettres à accent, chiffre et ponctuation
 comme bon nombre des polices proposées jusqu'à présent.
 
+## Les parentheses
+
+Les deux parentheses ( et ) permettent d'acceder à ces deux ornements:
+
+![monica parentheses](/assets/images/fonts/monicaparentheses.png)
 
 
 Mais MONICHA contient aussi 50 lettres minuscules à écharpes de plusieurs types pour certaines lettres. 
 
 ## Il vous faudra donc apprendre à coder ces lettres pour les utiliser.
 
-Vous ne pouvez pas acceder directement à ces variations en utilisant une simple touche du clavier. Des caractères unicodes particuliers ont été utilisés pour stocker ces variations. Pour utiliser ces variations il faut donc connaître leur codeL
+Vous ne pouvez pas acceder directement à ces variations en utilisant une simple touche du clavier. Des caractères unicodes particuliers ont été utilisés pour stocker ces variations. Pour utiliser ces variations il faut donc connaître leur code.
 
 Pour faciliter l'usage de ces lettres ce mode d'emploi répertorie les codes et il suffira de copier le code et de le coller dans le module lettrage.
 
@@ -99,7 +104,7 @@ On les obtient en utilisant ces codes :
 
 ⓑ	ⓓ	ⓗ	ⓚ	ⓛ	ⓣ
 
-### Le petit dernnier : o
+### Le petit dernier : o
 Il existe un o a queue droite
 ![Echarpe Queue Droite](/assets/images/fonts/monichap.png)
 
