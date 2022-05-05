@@ -3,7 +3,7 @@ title: "Sorterfax XL"
 permalink: /fr/fonts/sortefaxXL/
 last_modified_at: 2022-01-23
 toc: false
-preview_image: /assets/images/fonts/amita.png
+preview_image: /assets/images/fonts/sortefaxXL.png
 ---
 ![SortefaxXL](/assets/images/fonts/sortefaxXL.png)
 
