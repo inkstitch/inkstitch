@@ -1,7 +1,7 @@
 ---
 title: "Espresso KOR"
 permalink: /fonts/espresso_dolce/
-last_modified_at: 2022-01-23
+last_modified_at: 2022-05-05
 toc: false
 preview_image: /assets/images/fonts/espresso_dolce.png
 ---
