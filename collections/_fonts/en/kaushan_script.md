@@ -1,7 +1,7 @@
 ---
 title: "Kaushan Script MAM"
 permalink: /fonts/kaushan_script_mam/
-last_modified_at: 2021-05-02
+last_modified_at: 2022-05-05
 toc: false
 preview_image: /assets/images/fonts/kaushan_script.png
 ---
