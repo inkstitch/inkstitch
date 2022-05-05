@@ -1,7 +1,7 @@
 ---
 title: "Manuskript Gothisch"
 permalink: /fonts/manuscript_gothisch/
-last_modified_at: 2020-12-31
+last_modified_at: 2022-05-05
 toc: false
 preview_image: /assets/images/fonts/manuscript_gothisch.png
 ---
