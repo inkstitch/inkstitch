@@ -7,7 +7,7 @@ preview_image: /assets/images/fonts/glacial_tiny.png
 ---
 ![glacial_tiny](/assets/images/fonts/glacial_tiny.png)
 
-Cette fonte sera dans une prochaine version d'Ink/Stitch version et n'est pas disponible dans Ink/Stitch v2.1.2.
+Cette fonte sera dans une prochaine version d'Ink/Stitch et n'est pas disponible dans Ink/Stitch v2.1.2.
 
 ## Avertissement:
 
