@@ -18,7 +18,7 @@ Cette fonte est une variation d'espresso KOR. Le dessin des lettres n'a pas ét�
 
 C'est pourquoi dans la fenêtre de dialogue du lettrage, il vous sera demandé d'indiquer un redimensionnement entre 25 et 55% de la taille de la fonte espresso KOR initiale, passant ainsi de lettres d'environ 20mm de haut à des lettres entre 5 et 12mm.
 
-## Materiel à utiliser
+### Materiel à utiliser
 
 Cette fonte diminuée **DOIT** être brodée avec un fil et une aiguille plus fins que d'ordinaire. Une aiguille de taille 8 (USA), 60(EUR) et un fil 60WT **DOIVENT** être utilisés.
 
