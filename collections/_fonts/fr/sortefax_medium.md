@@ -8,13 +8,15 @@ preview_image: /assets/images/fonts/sortefax_medium.png
 ![Sortefax_medium](/assets/images/fonts/sortefax_medium.png)
 
 
+## Description
+
 La fonte Sortefax Médium Initials est réduite de 50% par rapport à la fonte Sortefax XL Initials. 
 
 On garde la possibilité d'encadrer une lettre, mais le positionnement de la lettre par rapport au cadre est plus approximatif que dans la fonte XL. 
 En revanche il est tout au fait possible d'écrire des mots avec des lettres correctement positionnées, ce qui n'est pas le cas de la fonte XL.
 
 
-Pour accéder aux cadres, utilisez le tableau de correspondance suivant:
+## Pour accéder aux cadres, utilisez le tableau de correspondance suivant:
 
 Cadre|Caractère 
 ---|---
@@ -28,6 +30,11 @@ Cadre|Caractère
 ![fermantecarre](/assets/images/fonts/sortefax/].png)|]
 ![accolade_ouvrante](/assets/images/fonts/sortefax/{.png)|{
 ![accolade_fermante](/assets/images/fonts/sortefax/}.png)|}
+
+## Broderies utilisant Sortefax Medium
+
+![Sortefax_medium2](/assets/images/fonts/sortefaxmedium2.jpg)
+![Sortefax_medium3](/assets/images/fonts/sortefaxmedium3.jpg)
 
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/sortefaxXL/LICENSE)
