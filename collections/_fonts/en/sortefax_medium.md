@@ -16,7 +16,7 @@ It is still possible to use frame, but the arranging of the frame and the letter
 But this font may be used to write whole words and not only single letters.
 
 
-As Sortefax XL only includes the 26 upper letters, the 10 digits 0-9 pls the &.
+As Sortefax XL, only includes the 26 upper letters A-Z, the 10 digits 0-9 plus the &.
 
 The letters  :;,.(){}[]  are used to store some frames.
 
@@ -38,7 +38,7 @@ Frame|Key
 ![accolade_ouvrante](/assets/images/fonts/sortefax/{.png)|{
 ![accolade_fermante](/assets/images/fonts/sortefax/}.png)|}
 
-## BEmbroidering with  Sortefax Medium
+## Embroidering with  Sortefax Medium
 
 ![Sortefax_medium2](/assets/images/fonts/sortefaxmedium2.jpg)
 ![Sortefax_medium3](/assets/images/fonts/sortefaxmedium3.jpg)
