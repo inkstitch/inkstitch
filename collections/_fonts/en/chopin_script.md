@@ -15,4 +15,8 @@ Another cushion:
 
 ![Chopin Script_3](/assets/images/fonts/chopin3.jpg)
 
+but so nice also on towel and  T-shirt
+
+![Chopin Script_4](/assets/images/fonts/chopin4.jpg)
+
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/chopin/LICENSE)
