@@ -9,6 +9,8 @@ preview_image: /assets/images/fonts/learning_curve.png
 
 Learning curve in action : 
 
+![LearningCurve3](/assets/images/fonts/learning_curve3.jpg)
+
 ![LearningCurve2](/assets/images/fonts/learningcurve2.jpg)
 
 Here Latin is Pacificlo while French is Learning curve
