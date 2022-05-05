@@ -7,6 +7,8 @@ preview_image: /assets/images/fonts/sortefaxXL.png
 ---
 ![SortefaxXL](/assets/images/fonts/sortefaxXL.png)
 
+## Description
+
 Sortefax XL Initials is meant to be used opne letter at a time.
 
 When used at 100% size, each letter is roughly 150mm (6 inches) high.
@@ -24,8 +26,8 @@ Beware,not all frame can directly be used all letters, in particular large lette
 Of course, using Inkscape,  you may easily reposition the frame or resize it or even transform a circle into an ellipse for such a high letter.
 
 
+## To access the frames, use the corresponding keys:
 
-To acces the frames, use the corresponding keys:
 
 Frame|Key
 ---|---
@@ -39,6 +41,12 @@ Frame|Key
 ![fermantecarre](/assets/images/fonts/sortefax/].png)|]
 ![accolade_ouvrante](/assets/images/fonts/sortefax/{.png)|{
 ![accolade_fermante](/assets/images/fonts/sortefax/}.png)|}
+
+## Embroidering with Sàrtefax XL
+
+![SortefaxXL2](/assets/images/fonts/sortefax2.jpg)
+![SortefaxXL3](/assets/images/fonts/sortefax3.jpg)
+![SortefaxXL4](/assets/images/fonts/sortefaxXL4.jpg)
 
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/sortefaxXL/LICENSE)
