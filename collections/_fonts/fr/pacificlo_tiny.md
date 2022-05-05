@@ -1,13 +1,13 @@
 ---
 title: "Pacificlo Tiny"
 permalink: /fr/fonts/pacificlo_tiny/
-last_modified_at: 2022-01-23
+last_modified_at: 2022-05-05
 toc: false
 preview_image: /assets/images/fonts/pacificlo.png
 ---
 
 
-Cette fonte sera dans une prochaine version d'Ink/Stitch version et n'est pas disponible dans Ink/Stitch v2.1.2.
+Cette fonte sera dans une prochaine version d'Ink/Stitch et n'est pas disponible dans Ink/Stitch v2.1.2.
 
 ## Description
 
