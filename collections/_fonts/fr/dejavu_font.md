@@ -9,4 +9,12 @@ preview_image: /assets/images/fonts/dejavu_serif.png
 
 ![Deja Vue Serif Semi-condensed](/assets/images/fonts/dejavu_serif.png)
 
+Utilisée seule
+
+![DejaVu2](/assets/images/fonts/dejavu2.jpg)
+
+Ou en compagnie d'Amita  et  de Magnolia KOR
+
+![DejaVu3](/assets/images/fonts/amitadejavumagnolia.jpg)
+
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/dejavufont/LICENSE)
