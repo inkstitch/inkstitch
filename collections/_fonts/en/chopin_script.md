@@ -19,4 +19,8 @@ but so nice also on towel and  T-shirt
 
 ![Chopin Script_4](/assets/images/fonts/chopin4.jpg)
 
+or on fleece
+
+![Chopin Script_5](/assets/images/fonts/chopin5.jpg)
+
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/chopin/LICENSE)
