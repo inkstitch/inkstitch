@@ -1,7 +1,7 @@
 ---
 title: "Cherry for Ink/Stitch"
 permalink: /fr/fonts/cherryforinkstitch/
-last_modified_at: 2022-01-22
+last_modified_at: 2022-05-05
 toc: false
 preview_image: /assets/images/fonts/cherryforinkstitch.png
 ---
