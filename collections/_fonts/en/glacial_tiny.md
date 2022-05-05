@@ -1,7 +1,7 @@
 ---
 title: "Glacial tiny 60 AGS"
 permalink: /en/fonts/glacial_tiny/
-last_modified_at: 2022-05-04
+last_modified_at: 2022-05-05
 toc: false
 preview_image: /assets/images/fonts/glacial_tiny.png
 ---
@@ -24,7 +24,7 @@ On a cushion
 
 ![glacial_tiny2](/assets/images/fonts/glacial3.jpg)
 
-Used in conjunction wiyh Grand Hotel Marif on an apron :
+Used in conjunction with Grand Hotel Marif on an apron :
 
 ![glacial_tiny2](/assets/images/fonts/glacialgrandhotel.jpg)
 
