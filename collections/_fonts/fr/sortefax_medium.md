@@ -1,7 +1,7 @@
 ---
 title: "Sorterfax Medium"
 permalink: /fr/fonts/sortefax_medium/
-last_modified_at: 2022-01-23
+last_modified_at: 2022-05-05
 toc: false
 preview_image: /assets/images/fonts/sortefax_medium.png
 ---
@@ -15,9 +15,9 @@ La fonte Sortefax Médium Initials est réduite de 50% par rapport à la fonte S
 On garde la possibilité d'encadrer une lettre, mais le positionnement de la lettre par rapport au cadre est plus approximatif que dans la fonte XL. 
 En revanche il est tout au fait possible d'écrire des mots avec des lettres correctement positionnées, ce qui n'est pas le cas de la fonte XL.
 
-Comme Sortefax XL, cette fonte ne contient que  les 26  majuscules A-Z, the 10 chiffres 0-9 plus  &.
+Comme Sortefax XL, cette fonte ne contient que  les 26  majuscules A-Z, the 10 chiffres 0-9 et le  &.
 
-Les letteres :;,.(){}[]   sont utilisées pour stocker des cadres.
+Les lettres :;,.(){}[]   sont utilisées pour stocker des cadres.
 
 Pour obtenir une lettre encadrée, tappez simplement la lettte et n'importe quelle lettre "cadre" dans la fenêtre de dialogue du lettrage.
 
