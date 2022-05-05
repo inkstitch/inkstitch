@@ -9,6 +9,9 @@ preview_image: /assets/images/fonts/learning_curve.png
 
 Learning curve en situation: 
 
+
+![LearningCurve3](/assets/images/fonts/learning_curve3.jpg)
+
 ![LearningCurve2](/assets/images/fonts/learningcurve2.jpg)
 
 Le nom latin est brodé avec Pacificlo tandis que le nom français utilise  Learning curve
