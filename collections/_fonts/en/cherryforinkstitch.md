@@ -12,5 +12,8 @@ On this sample, Cherry for Ink/Stitch meets Cherry for Ink/Stitch.
 
 ![CherryforKaalleen3](/assets/images/fonts/cherry2.jpg)
 
+Here it meets some addition cherries:
+
+![Cherryforinkstitch4](/assets/images/fonts/cherryforinkstitch4.jpg)
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/cherryforinkstitch/LICENSE)
