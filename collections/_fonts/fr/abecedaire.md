@@ -1,7 +1,7 @@
 ---
 title: "Abecedaire"
 permalink: /fr/fonts/abecedaire/
-last_modified_at: 2022-05-05
+last_modified_at: 2022-05-06
 toc: false
 preview_image: /assets/images/fonts/abecedaire.png
 ---
