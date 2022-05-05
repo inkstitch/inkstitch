@@ -251,10 +251,9 @@ def _get_nearest_points_closer_than_thresh(travel_line, next_line, threshold):
     if portion_within_threshold.is_empty:
         return None
     else:
-        if isinstance(portion_within_threshold, MultiLineString):
-            portion_within_threshold = portion_within_threshold.geoms[0]
-
-        parent_point = Point(portion_within_threshold.coords[0])
+        # Projecting with 0 lets us avoid distinguishing between LineString and
+        # MultiLineString.
+        parent_point = Point(portion_within_threshold.interpolate(0))
         return nearest_points(parent_point, next_line)
 
 
@@ -347,9 +346,9 @@ def _find_path_inner_to_outer(tree, node, offset, starting_point,
     result_coords = []
     if not nearest_points_list:
         # We have no children, so we're at the center of a spiral.  Reversing
-        # the ring gives a nicer visual appearance.
-        # current_ring = reverse_line_string(current_ring)
-        pass
+        # the innermost ring gives a nicer visual appearance.
+        if not avoid_self_crossing:
+            current_ring = reverse_line_string(current_ring)
     else:
         # This is a recursive algorithm.  We'll stitch along this ring, pausing
         # to jump to each child ring in turn and sew it before continuing on
@@ -360,7 +359,7 @@ def _find_path_inner_to_outer(tree, node, offset, starting_point,
         for child_connection in nearest_points_list:
             # Cut this ring into pieces before and after where this child will connect.
             before, after = cut(current_ring, child_connection.proj_distance_parent - distance_so_far)
-            distance_so_far += child_connection.proj_distance_parent
+            distance_so_far = child_connection.proj_distance_parent
 
             # Stitch the part leading up to this child.
             if before is not None:
