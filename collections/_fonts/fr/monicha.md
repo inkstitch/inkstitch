@@ -20,14 +20,20 @@ comme bon nombre des polices proposées jusqu'à présent.
 
 
 
-Mais MONICHA contient aussi 50 lettres minuscules à écharpes de plusieurs types pour certaines lettres.
+Mais MONICHA contient aussi 50 lettres minuscules à écharpes de plusieurs types pour certaines lettres. 
 
-Il vous faudra donc apprendre à coder ces lettres pour les utiliser.
+## Il vous faudra donc apprendre à coder ces lettres pour les utiliser.
+
+Vous ne pouvez pas acceder directement à ces variations en utilisant une simple touche du clavier. Des caractères unicodes particuliers ont été utilisés pour stocker ces variations. Pour utiliser ces variations il faut donc connaître leur codeL
 
 Pour faciliter l'usage de ces lettres ce mode d'emploi répertorie les codes et il suffira de copier le code et de le coller dans le module lettrage.
-afin de ne pas perdre ce code je vous conseille d'archiver un double de secours de ce mode d'emploi
 
-Les 26 lettres minuscules à petites écharpes sont codées:
+### Petites echarpes
+
+Toutes les minuscules disposent d'une version à petite echarpe :
+![Petite Echarpe](/assets/images/fonts/monichasmallswash.png)
+
+Que l'on obtient en utilisant un de ces codes  :
 
 ⒜	⒝	⒞	⒟	⒠	⒡
 
@@ -39,10 +45,16 @@ Les 26 lettres minuscules à petites écharpes sont codées:
 
 ⒱	⒲	⒳	⒴	⒵
 
-Il existe 11 lettres à longue écharpe soulignante a-d-h-i-k-l-m-n-r-t-u.
+###  Echarpes longues soulignantes: a-d-h-i-k-l-m-n-r-t-u
+![Echarpe Longue Soulignante](/assets/images/fonts/monichalongswash.png)
+
+Ces  11 lettres disposent de plus d'une longue écharpe soulignante.
+
 
 Elles ne doivent pas être suivies, sur deux lettres, par des lettres à jambage descendant (comme g-j-p-q-y-z) 
 pour des raisons de superpositions de colonnes de satin.
+
+On les obtient en utilisant ces codes :
 
 Ⓐ			Ⓓ
 
@@ -52,32 +64,35 @@ pour des raisons de superpositions de colonnes de satin.
 
 	Ⓡ		Ⓣ	Ⓤ
 
-Il existe 3 lettres à moyenne écharpe soulignante g-j-y.
+### Echarpe soulignant moyenne : g-j-y.
+
+Ces trois lettres disposent d'une écharpe soulignante moyenne.
 
 Elles ne doivent pas être suivie d'une lettre à jambage descendant.
 
 Ⓖ	Ⓙ	Ⓨ
 
-Ces trois lettres disposent d'une version à écharpes basse bouclée.
+### Ces trois lettres disposent d'une version à écharpes basse bouclée.
 
 Elles ne doivent pas être suivie d'une lettre à jambage descendant sur deux lettres
 
 ⓖ	ⓙ	ⓨ
 
-Il existe 6 lettres à écharpe supérieure bouclée et rétrograde b-d-h-k-l-t.
+### Il existe 6 lettres à écharpe supérieure bouclée et rétrograde b-d-h-k-l-t.
 
 Elles ne doivent pas suivre deux lettres montantes, ni une majuscule sur ces deux poisitions 
 pour des raisons de superpositions de colonnes de satin
 
 ⓑ	ⓓ	ⓗ	ⓚ	ⓛ	ⓣ
 
-il existe un o a queue droite
+### il existe un o a queue droite
 
 ⓞ
 
-Utilisations diverses de Monicha :
+## Utilisations diverses de Monicha :
 
 ![monicha2](/assets/images/fonts/monicha2.jpg)
+![monicha8](/assets/images/fonts/monicha8.jpg)
 ![monicha3](/assets/images/fonts/monicha3.jpg)
 ![monicha4](/assets/images/fonts/monicha4.jpg)
 ![monicha5](/assets/images/fonts/monicha5.jpg)
