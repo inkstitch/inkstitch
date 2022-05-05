@@ -7,15 +7,27 @@ preview_image: /assets/images/fonts/sortefaxXL.png
 ---
 ![SortefaxXL](/assets/images/fonts/sortefaxXL.png)
 
-La fonte Sortefax XL Initials est prévue pour être utilisée une seule lettre à la fois. A 100% les lettres font a peu près 15cm. Elle comprend les 26 lettres A_Z, les 10 chiffres 0-9 et le &. Les lettres :;,.(){}[] sont utilisées pour stocker des cadres. Pour obtenir une lettre encadrée, simplement taper la lettre et une des "lettres cadres" dans la fenêtre de lettrage, sur la même ligne, sans espace entre les deux. 
+Sortefax XL Initials is meant to be used opne letter at a time.
 
-Attention : tous les cadres ne conviennent pas à toutes les lettres, en particulier aux lettres très larges comme le M ou le W, ou les lettres très hautes comme le J.
+When used at 100% size, each letter is roughly 150mm (6 inches) high.
 
-Il est bien sur très facile dans Inkscape de modifier le positionnement de la lettre par rapport au cadre si elle ne convient pas. Ou de modifier la forme d'un cadre, par exemple transformer un cercle en ellipse pour accueillir un J récalcitrant.
 
-Pour acceder aux cadres, utilisez le tableau de correspondance suivant:
+It only includs the 26 upper letters, the 10 digits 0-9 pls the &.
 
-Cadre|Caractère 
+The letters  :;,.(){}[]  are used to store some frames.
+
+To get a framed letter, simplyu tyupe the letter and any "frame" letter in the lettering dialog (same line, no space).
+
+
+Beware,not all frame can directly be used all letters, in particular large letters such as M or W, or high letters such as J.
+
+Of course, using Inkscape,  you may easily reposition the frame or resize it or even transform a circle into an ellipse for such a high letter.
+
+
+
+To acces the frames, use the corresponding keys:
+
+Frame|Key
 ---|---
 ![Point](/assets/images/fonts/sortefax/point.png)|.
 ![Virgule](/assets/images/fonts/sortefax/virgule.png)|,
