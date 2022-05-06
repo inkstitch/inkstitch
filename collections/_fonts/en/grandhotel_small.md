@@ -10,7 +10,7 @@ This is part of an upcoming Ink/Stitch version and not available in Ink/Stitch v
 
 ## Description
 
-This font is a variation of Grand Hotel Marif. 
+This font is a variation of [Grand Hotel Marif.](https://inkstitch.org/fr/fonts/grand_hotel_marif/) 
 
 The letters appear to be the same, but embroidery parameters are different. 
 
