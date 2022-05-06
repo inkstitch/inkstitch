@@ -34,7 +34,7 @@ Elle peut être agrandie jusqu'a 200% (env 40 mm) ou diminuée jusqu'à 80% (env
 
 N'essayez pas de broder cette fonte à une dimension inférieure, vous auriez beaucoup de problèmes. 
 
-La fonte [Espresso Tiny](https://inkstitch.org/fr/fonts/espresso_tiny/) est une déclinaison de cette fonte avec des paramètres de broderie différents qui permet une utilisation entre 55% (12 mm) et 25% (5mm). Elle necessite l'sage d'une aiguille plus fine (EUR 60 USA 8)  et d'un fil plus fin (60WT) que Espresso KOR
+La fonte [Espresso Tiny](https://inkstitch.org/fr/fonts/espresso_tiny/) est une déclinaison de cette fonte avec des paramètres de broderie différents qui permet une utilisation entre 55% (12 mm) et 25% (5mm). Elle necessite l'usage d'une aiguille plus fine (EUR 60 USA 8)  et d'un fil plus fin (60WT) que Espresso KOR
 
 ![Dimensions Espresso](/assets/images/fonts/Sizing/espressosizing.jpg)
 
