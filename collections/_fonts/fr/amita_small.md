@@ -12,13 +12,13 @@ Cette fonte sera dans une prochaine version d'Ink/Stitch et n'est pas disponible
 ## Description
 
 
-Cette fonte est une variation de Amitaclo. Le dessin des lettres n'a pas été modifié, mais les paramètres de broderies sont différent. 
+Cette fonte est une variation de Amitaclo. Le dessin des lettres n'a pas été modifié, mais les paramètres de broderies sont différents. 
 
 
 La densité, la compensation et les sous couches ont été modifiés pour permettre de broder cette fonte en plus petite taille que la taille initiale.
 En plus de ces modifications sur le fichier de broderie, la petite taille impose l'utilisation d'aiguille fine (EUR 60, US 8) et de fil fin (60WT).
 
-![Dimensions Amitaclo](/assets/images/fonts/Sizing/amitasizing.jpg)
+![Dimensions Amitaclo](/assets/images/fonts/Sizing/amitaclosizing.jpg)
 
 ## Glyphes
 Amitaclo small contient les 109 glyphes :
@@ -36,10 +36,10 @@ BA@?=;:987
 ,+*)('@"!
 
 
-
 ## Usage
 ### Redimensionnement
-Dans la fenêtre de dialogue du lettrage, il vous sera demandé d'indiquer un redimensionnement entre 25 et 55% de la taille de la fonte amitaclo initiale, passant ainsi de lettres d'environ 30 mm de haut à des lettres entre 7 et 16mm.
+
+Cans la fenêtre de dialogue du lettrage, il vous sera demandé d'indiquer un redimensionnement entre 25 et 55% de la taille de la fonte amitaclo initiale, passant ainsi de lettres d'environ 30mm de haut à des lettres entre 7 et 16 mm.
 
 ### Materiel à utiliser
 
