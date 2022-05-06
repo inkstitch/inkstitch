@@ -1,7 +1,7 @@
 ---
 title: "Grand Hotel small"
 permalink: /en/fonts/grandhotel_small/
-last_modified_at: 2022-01-23
+last_modified_at: 2022-05-05
 toc: false
 preview_image: /assets/images/fonts/grand_hotel_marif.png
 ---
