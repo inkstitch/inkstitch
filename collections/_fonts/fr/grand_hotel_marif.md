@@ -9,6 +9,23 @@ preview_image: /assets/images/fonts/grand_hotel_marif.png
 
 Cette fonte sera dans une prochaine version d'Ink/Stitch version et n'est pas disponible dans Ink/Stitch v2.1.2.
 
+## Glyphes
+Cette fonte contient les 132 Glyphes suivants :
+
+!?"''()+,-
+.012345678
+9:;=?ABCDE
+FGHIJKLMNO
+PQRSTUVWXY
+Zabcdefghi
+jklmnopqrs
+tuvwxyz«»À
+ÁÂÃÆÇÈÉÊËÌ
+ÍÎÏÑÔÕÖÚÛÜ
+ßàáâãæçèéê
+ëìíîïñôõöù
+úûüĨĩĽľŒœŨ
+ũ’
 
 
 ## Dimensions:
