@@ -14,7 +14,7 @@ This font is a variation of Grand Hotel Marif.
 
 The letters appear to be the same, but embroidery parameters are different. 
 
-Density, pull compensation and underlays have been modified to allow a smaller size than the initial font smallest allowed size.
+Density, pull compensation and underlays have been modified to allow for  a smaller size than the initial font smallest recommanded size.
 
 In addition to the software modification, you will need to use smaller thread and needle to successfully embroider this font.
 
