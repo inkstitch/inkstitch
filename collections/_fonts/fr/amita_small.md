@@ -39,7 +39,7 @@ BA@?=;:987
 ## Usage
 ### Redimensionnement
 
-Cans la fenêtre de dialogue du lettrage, il vous sera demandé d'indiquer un redimensionnement entre 25 et 55% de la taille de la fonte amitaclo initiale, passant ainsi de lettres d'environ 30mm de haut à des lettres entre 7 et 16 mm.
+Dans la fenêtre de dialogue du lettrage, il vous sera demandé d'indiquer un redimensionnement entre 25 et 55% de la taille de la fonte amitaclo initiale, passant ainsi de lettres d'environ 30mm de haut à des lettres entre 7 et 16 mm.
 
 ### Materiel à utiliser
 
