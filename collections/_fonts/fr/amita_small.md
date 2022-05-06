@@ -1,9 +1,9 @@
 ---
-title: "Pacificlo Tiny"
-permalink: /fr/fonts/pacificlo_tiny/
+title: "Amitaclo Small"
+permalink: /fr/fonts/amitaclo_small/
 last_modified_at: 2022-05-05
 toc: false
-preview_image: /assets/images/fonts/pacificlo.png
+preview_image: /assets/images/fonts/amita.png
 ---
 
 
@@ -12,29 +12,29 @@ Cette fonte sera dans une prochaine version d'Ink/Stitch et n'est pas disponible
 ## Description
 
 
-Cette fonte est une variation de Pacificlo. Le dessin des lettres n'a pas été modifié, mais les paramètres de broderies sont différent. 
+Cette fonte est une variation de Amitaclo. Le dessin des lettres n'a pas été modifié, mais les paramètres de broderies sont différent. 
 
 
 La densité, la compensation et les sous couches ont été modifiés pour permettre de broder cette fonte en plus petite taille que la taille initiale.
 En plus de ces modifications sur le fichier de broderie, la petite taille impose l'utilisation d'aiguille fine (EUR 60, US 8) et de fil fin (60WT).
 
-![Dimensions Pacificlo](/assets/images/fonts/Sizing/pacificlosizing.jpg)
+![Dimensions Amitaclo](/assets/images/fonts/Sizing/amitaclosizing.jpg)
 
 ## Glyphes
-Pacificlo tiny contient les 120 glyphes :
+Amitaclo small contient les 109 glyphes :
+	
+œıüûúùöôóñ
+ïîíëêéèçæä
+âáàßÜÖÆÄ|z
+yxwvutsrqp
+onmlkjihgf
+edcba\ZYXW
+VUTSRQPONM
+LKJIHGFEDC
+BA@?=;:987
+6543210/.-
+,+*)('@"!
 
-AÆBCDEÈFGH
-IJKLMNÑOÔÖ
-ÕŒPQRSTUÜV
-WXYZaáâäàã
-æbcçdeéêëè
-fghiıíîïìj
-klmnñoóôöò
-õœpqrsßtuú
-ûüùvwxyz01
-23456789*\
-·:,!¡.?¿"'
-';/()-+=@&
 
 
 ## Usage
@@ -46,8 +46,8 @@ C'est pourquoi dans la fenêtre de dialogue du lettrage, il vous sera demandé d
 
 Cette fonte diminuée **DOIT** être brodée avec un fil et une aiguille plus fins que d'ordinaire. Une aiguille de taille 8 (USA), 60(EUR) et un fil 60WT **DOIVENT** être utilisés.
 
-Pour décorer un pot de confiture:
 
-![Pacificlotiny jam covers](/assets/images/fonts/pacificlotiny1.jpg)
+
+
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/pacificlo_tiny/LICENSE)
