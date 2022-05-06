@@ -14,7 +14,7 @@ Cette fonte sera dans une prochaine version d'Ink/Stitch et n'est pas disponible
 
 Cette fonte est une variation de [Grand Hotel Marif](https://inkstitch.org/fr/fonts/grand_hotel_marif/). Le dessin des lettres n'a pas été modifié, mais les paramètres de broderie sont différents. La densité, la compensation et les sous couches ont été modifiés pour permettre de broder cette fonte en plus petite taille que ce qui est préconisé comme taille pour  la fonte initiale Grand Hotel Marif. En plus de ces modifications sur le fichier de broderie, la petite taille impose l'utilisation d'aiguille fine (EUR 60, US 8) et de fil fin (60WT).
 
-![Dimensions Grand Hotel](/assets/images/fonts/grandhotelsizing.jpg)
+![Dimensions Grand Hotel](/assets/images/fonts/Sizing/grandhotelsizing.jpg)
 
 ## Glyphes
 Cette fonte contient les 132 Glyphes suivants :
