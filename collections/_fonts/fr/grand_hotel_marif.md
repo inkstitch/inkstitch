@@ -17,7 +17,7 @@ Utilisée à 100%, cette fonte fait environ 35 mm.
 
 Elle peut être agrandie jusqu'a 140% (env 48 mm) ou diminuée jusqu'à 60% (env 20mm).
 
-Il existe une déclinaison de cette fonte   [Grand Hotel Small](/fr/fonts/grandhotel_small), qui permet une utilisation entre 55% (18 mm) et 25% (9mm). 
+Il existe une déclinaison de cette fonte   [Grand Hotel Small](https://inkstitch.org/fr/fonts/grandhotel_small/), qui permet une utilisation entre 55% (18 mm) et 25% (9mm). 
 Attention cette version necessite fil et aiguille plus fins.
 
 ![Dimensions Grand Hotel](/assets/images/fonts/grandhotelsizing.jpg)
