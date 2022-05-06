@@ -8,7 +8,7 @@ preview_image: /assets/images/fonts/espresso_dolce.png
 ![Espresso KOR](/assets/images/fonts/espresso_dolce.png)
 
 ## Glyphes
-Cette fonte contient les 112 Glyphes suivants :
+Cette fonte contient les 112 glyphes suivants :
 
 !%@()*+,-.
 /012345678
