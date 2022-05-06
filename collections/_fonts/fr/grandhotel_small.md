@@ -1,7 +1,7 @@
 ---
 title: "Grand Hotel small"
 permalink: /fr/fonts/grandhotel_small/
-last_modified_at: 2022-05-05
+last_modified_at: 2022-05-06
 toc: false
 preview_image: /assets/images/fonts/grand_hotel_marif.png
 ---
@@ -12,9 +12,13 @@ Cette fonte sera dans une prochaine version d'Ink/Stitch et n'est pas disponible
 ## Description
 
 
-Cette fonte est une variation de Grand Hotel Marif. Le dessin des lettres n'a pas été modifié, mais les paramètres de broderie sont différents. La densité, la compensation et les sous couches ont été modifiés pour permettre de broder cette fonte en plus petite taille que ce qui est préconisé comme taille poir  la fonte initiale Grand Hotel Matif.
+Cette fonte est une variation de [Grand Hotel Marif](https://inkstitch.org/fr/fonts/grand_hotel_marif/). Le dessin des lettres n'a pas été modifié, mais les paramètres de broderie sont différents. La densité, la compensation et les sous couches ont été modifiés pour permettre de broder cette fonte en plus petite taille que ce qui est préconisé comme taille poir  la fonte initiale Grand Hotel Matif.
+
+![Dimensions Grand Hotel](/assets/images/fonts/grandhotelsizing.jpg)
 
 ## Usage
+
+
 ### Redimensionnement
 
 C'est pourquoi dans la fenêtre de dialogue du lettrage, il vous sera demandé d'indiquer un redimensionnement entre 25 et 55% de la taille de la fonte 
