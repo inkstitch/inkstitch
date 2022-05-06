@@ -30,9 +30,9 @@ tuvwxyz«»À
 
 ## Dimensions:
 
-Utilisée à 100%, cette fonte fait environ 35 mm.
+Utilisée à 100%, cette fonte fait environ 20 mm.
 
-Elle peut être agrandie jusqu'a 140% (env 48 mm) ou diminuée jusqu'à 60% (env 20mm).
+Elle peut être agrandie jusqu'a 140% (env 28 mm) ou diminuée jusqu'à 60% (env 12mm).
 
 N'essayez pas de broder cette fonte à une dimension inférieure, vous auriez beaucoup de problèmes. 
 
