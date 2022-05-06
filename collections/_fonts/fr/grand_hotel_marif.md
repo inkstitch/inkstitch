@@ -30,13 +30,13 @@ tuvwxyz«»À
 
 ## Dimensions:
 
-Utilisée à 100%, cette fonte fait environ 20 mm.
+Utilisée à 100%, cette fonte fait environ 35 mm.
 
 Elle peut être agrandie jusqu'a 140% (env 48 mm) ou diminuée jusqu'à 60% (env 20 mm).
 
 N'essayez pas de broder cette fonte à une dimension inférieure, vous auriez beaucoup de problèmes. 
 
-La fonte [Grand Hotel Small](https://inkstitch.org/fr/fonts/grandhotel_small/) est une déclinaison de cette fonte avec des paramètres de broderie différents qui permet une utilisation entre 55% (18 mm) et 25 (EUR 60 USA 8)  plus fins que Grand Hotel Marif.
+La fonte [Grand Hotel Small](https://inkstitch.org/fr/fonts/grandhotel_small/) est une déclinaison de cette fonte avec des paramètres de broderie différents qui permet une utilisation entre 55% (18 mm) et 25% (5mm). Cette variante necessite une aiguille plus fine  (EUR 60 USA 8) et un fil plus fin(60WT)  que Grand Hotel Marif.
 
 ![Dimensions Grand Hotel](/assets/images/fonts/Sizing/grandhotelsizing.jpg)
 
