@@ -24,8 +24,6 @@ vwxyz«'°»×
 ÖÄ
 
 
-	
-
 
 
 ## Dimensions:
