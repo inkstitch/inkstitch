@@ -35,7 +35,7 @@ It may be scaled up to 140% (48 mm)  or scaled down to  60% .
 Don't try to embroider it smaller or larger, you would get many problems.
 
 However [Grand Hotel Small](https://inkstitch.org/en/fonts/grandhotel_small/) is a modification of Grand Hotel Marif with different embroidery parameters to allow to scale down between  55% (18 mm) and 25% (9mm). Note that this variation require a thiner thread and a thiner needle.
-![Dimensions Grand Hotel](/assets/images/fonts/grandhotelsizing.jpg)
+![Dimensions Grand Hotel](/assets/images/fonts/Sizing/grandhotelsizing.jpg)
 
 ## Realisations
 
