@@ -18,7 +18,7 @@ La densité, la compensation et les sous couches ont été modifiés pour permet
 ![Dimensions Espresso](/assets/images/fonts/Sizing/espressosizing.jpg)
 
 ## Glyphes
-Cette fonte contient les 112 Glyphes suivants :
+Cette fonte contient les 112 glyphes suivants :
 
 !%@()*+,-.
 /012345678
