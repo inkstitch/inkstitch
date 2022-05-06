@@ -13,12 +13,31 @@ Cette fonte sera dans une prochaine version d'Ink/Stitch  et n'est pas disponibl
 
 Cette fonte est une variation d'espresso KOR.
 Le dessin des lettres n'a pas été modifié, mais les paramètres de broderie sont différents. 
-La densité, la compensation et les sous couches ont été modifiés pour permettre de broder cette fonte en plus petite taille que ce qui est préconnisé pour la taille  de la fonte espresso KOR initiale.
+La densité, la compensation et les sous couches ont été modifiés pour permettre de broder cette fonte en plus petite taille que ce qui est préconnisé pour la taille  de la fonte espresso KOR initiale. En plus de ces modifications sur le fichier de broderie, la petite taille impose l'utilisation d'aiguille fine (EUR 60, US 8) et de fil fin (60WT).
+
+![Dimensions Espresso](/assets/images/fonts/Sizing/espressosizing.jpg)
+
+## Glyphes
+Cette fonte contient les 112 Glyphes suivants :
+
+!%@()*+,-.
+/012345678
+9:;<=>?@AB
+CDEFGHIJKL
+MNOPQRSTUV
+WXYZ[\]^_a
+bcdefghijk
+lmnopqrstu
+vwxyz«'°»×
+àâäæçèéêëî
+ïôö÷ùûüœßÜ
+ÖÄ
+
 
 ## Usage
 ### Redimensionnement
 
-C'est pourquoi dans la fenêtre de dialogue du lettrage, il vous sera demandé d'indiquer un redimensionnement entre 25 et 55% de la taille de la fonte espresso KOR initiale, passant ainsi de lettres d'environ 20mm de haut à des lettres entre 5 et 12mm.
+Dans la fenêtre de dialogue du lettrage, il vous sera demandé d'indiquer un redimensionnement entre 25 et 55% de la taille de la fonte espresso KOR initiale, passant ainsi de lettres d'environ 20mm de haut à des lettres entre 5 et 12mm.
 
 ### Materiel à utiliser
 
