@@ -28,4 +28,8 @@ That percentage is  relatively to the original Pacificlo font, going from 20mm l
 This smallified font **MUST** be embroidered with thread and needle smaller than usual.
 A USA 8 (EUR 60) size needle, and 60WT thread **MUST** be used.
 
+As a jam cover:
+
+![Pacificlotiny jam covers](/assets/images/fonts/pacificlotiny1.jpg)
+
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/pacificlo_tiny/LICENSE)
