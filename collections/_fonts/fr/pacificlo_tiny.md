@@ -25,4 +25,8 @@ C'est pourquoi dans la fenêtre de dialogue du lettrage, il vous sera demandé d
 
 Cette fonte diminuée **DOIT** être brodée avec un fil et une aiguille plus fins que d'ordinaire. Une aiguille de taille 8 (USA), 60(EUR) et un fil 60WT **DOIVENT** être utilisés.
 
+Pour décorer un pot de confiture:
+
+![Pacificlotiny jam covers](/assets/images/fonts/pacificlotiny1.jpg)
+
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/pacificlo_tiny/LICENSE)
