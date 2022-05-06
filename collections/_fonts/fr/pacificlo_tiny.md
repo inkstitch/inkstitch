@@ -14,7 +14,28 @@ Cette fonte sera dans une prochaine version d'Ink/Stitch et n'est pas disponible
 
 Cette fonte est une variation de Pacificlo. Le dessin des lettres n'a pas été modifié, mais les paramètres de broderies sont différent. 
 
+
 La densité, la compensation et les sous couches ont été modifiés pour permettre de broder cette fonte en plus petite taille que la taille initiale.
+En plus de ces modifications sur le fichier de broderie, la petite taille impose l'utilisation d'aiguille fine (EUR 60, US 8) et de fil fin (60WT).
+
+![Dimensions Pacificlo](/assets/images/fonts/Sizing/pacificlosizing.jpg)
+
+## Glyphes
+Pacificlo tiny contient les 120 glyphes :
+
+AÆBCDEÈFGH
+IJKLMNÑOÔÖ
+ÕŒPQRSTUÜV
+WXYZaáâäàã
+æbcçdeéêëè
+fghiıíîïìj
+klmnñoóôöò
+õœpqrsßtuú
+ûüùvwxyz01
+23456789*\
+·:,!¡.?¿"'
+';/()-+=@&
+
 
 ## Usage
 ### Redimensionnement
