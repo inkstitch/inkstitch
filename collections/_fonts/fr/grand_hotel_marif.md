@@ -38,7 +38,7 @@ N'essayez pas de broder cette fonte à une dimension inférieure, vous auriez be
 
 La fonte [Grand Hotel Small](https://inkstitch.org/fr/fonts/grandhotel_small/) est une déclinaison de cette fonte avec des paramètres de broderie différents qui permet une utilisation entre 55% (18 mm) et 25 (EUR 60 USA 8)  plus fins que Grand Hotel Marif.
 
-![Dimensions Grand Hotel](/assets/images/fonts/grandhotelsizing.jpg)
+![Dimensions Grand Hotel](/assets/images/fonts/Sizing/grandhotelsizing.jpg)
 
 ## Réalisations:
 
