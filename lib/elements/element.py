@@ -208,7 +208,7 @@ class EmbroideryElement(object):
            # L10N options to allow lock stitch before and after objects
            options=[_("Both"), _("Before"), _("After"), _("Neither")],
            default=0,
-           sort_index=4)
+           sort_index=10)
     @cache
     def ties(self):
         return self.get_int_param("ties", 0)
@@ -220,7 +220,7 @@ class EmbroideryElement(object):
                      'even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences.'),
            type='boolean',
            default=False,
-           sort_index=5)
+           sort_index=10)
     @cache
     def force_lock_stitches(self):
         return self.get_boolean_param('force_lock_stitches', False)

@@ -162,7 +162,7 @@ def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing=Non
                 runs.reverse()
                 runs = [tuple(reversed(run)) for run in runs]
 
-            yield from runs
+            yield runs
 
         if end_row_spacing:
             current_row_y += row_spacing + \
@@ -225,6 +225,7 @@ def pull_runs(rows, shape, row_spacing):
 
     # print >>sys.stderr, "\n".join(str(len(row)) for row in rows)
 
+    rows = list(rows)
     runs = []
     count = 0
     while (len(rows) > 0):

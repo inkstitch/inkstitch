@@ -15,7 +15,7 @@ from shapely.validation import explain_validity
 from ..i18n import _
 from ..marker import get_marker_elements
 from ..stitch_plan import StitchGroup
-from ..stitches import tangential_fill, auto_fill, legacy_fill, guided_fill
+from ..stitches import contour_fill, auto_fill, legacy_fill, guided_fill
 from ..svg import PIXELS_PER_MM
 from ..svg.tags import INKSCAPE_LABEL
 from ..utils import cache, version
@@ -96,34 +96,29 @@ class FillStitch(EmbroideryElement):
 
     @property
     @param('fill_method', _('Fill method'), type='dropdown', default=0,
-           options=[_("Auto Fill"), _("Tangential"), _("Guided Fill"), _("Legacy Fill")], sort_index=2)
+           options=[_("Auto Fill"), _("Contour Fill"), _("Guided Fill"), _("Legacy Fill")], sort_index=2)
     def fill_method(self):
         return self.get_int_param('fill_method', 0)
 
     @property
-    @param('tangential_strategy', _('Tangential strategy'), type='dropdown', default=1,
-           options=[_("Inner to Outer"), _("Single spiral"), _("Double spiral")], select_items=[('fill_method', 1)], sort_index=2)
-    def tangential_strategy(self):
-        return self.get_int_param('tangential_strategy', 1)
+    @param('contour_strategy', _('Contour Fill Strategy'), type='dropdown', default=1,
+           options=[_("Inner to Outer"), _("Single spiral"), _("Double spiral")], select_items=[('fill_method', 1)], sort_index=3)
+    def contour_strategy(self):
+        return self.get_int_param('contour_strategy', 1)
 
     @property
     @param('join_style', _('Join Style'), type='dropdown', default=0,
-           options=[_("Round"), _("Mitered"), _("Beveled")], select_items=[('fill_method', 1)], sort_index=2)
+           options=[_("Round"), _("Mitered"), _("Beveled")], select_items=[('fill_method', 1)], sort_index=4)
     def join_style(self):
         return self.get_int_param('join_style', 0)
 
     @property
-    @param('interlaced', _('Interlaced'), type='boolean', default=True, select_items=[('fill_method', 1), ('fill_method', 2)], sort_index=2)
-    def interlaced(self):
-        return self.get_boolean_param('interlaced', True)
-
-    @property
-    @param('avoid_self_crossing', _('Avoid self-crossing'), type='boolean', default=False, select_items=[('fill_method', 1)], sort_index=2)
+    @param('avoid_self_crossing', _('Avoid self-crossing'), type='boolean', default=False, select_items=[('fill_method', 1)], sort_index=5)
     def avoid_self_crossing(self):
         return self.get_boolean_param('avoid_self_crossing', False)
 
     @property
-    @param('clockwise', _('Clockwise'), type='boolean', default=True, select_items=[('fill_method', 1), ('fill_method', 2)], sort_index=2)
+    @param('clockwise', _('Clockwise'), type='boolean', default=True, select_items=[('fill_method', 1)], sort_index=5)
     def clockwise(self):
         return self.get_boolean_param('clockwise', True)
 
@@ -133,7 +128,7 @@ class FillStitch(EmbroideryElement):
            tooltip=_('The angle increases in a counter-clockwise direction.  0 is horizontal.  Negative angles are allowed.'),
            unit='deg',
            type='float',
-           sort_index=4,
+           sort_index=6,
            select_items=[('fill_method', 0), ('fill_method', 3)],
            default=0)
     @cache
@@ -152,7 +147,7 @@ class FillStitch(EmbroideryElement):
         tooltip=_('The last stitch in each row is quite close to the first stitch in the next row.  '
                   'Skipping it decreases stitch count and density.'),
         type='boolean',
-        sort_index=4,
+        sort_index=6,
         select_items=[('fill_method', 0), ('fill_method', 2),
                       ('fill_method', 3)],
         default=False)
@@ -166,7 +161,7 @@ class FillStitch(EmbroideryElement):
         tooltip=_('The flip option can help you with routing your stitch path.  '
                   'When you enable flip, stitching goes from right-to-left instead of left-to-right.'),
         type='boolean',
-        sort_index=4,
+        sort_index=7,
         select_items=[('fill_method', 0), ('fill_method', 2),
                       ('fill_method', 3)],
         default=False)
@@ -178,7 +173,7 @@ class FillStitch(EmbroideryElement):
            _('Spacing between rows'),
            tooltip=_('Distance between rows of stitches.'),
            unit='mm',
-           sort_index=4,
+           sort_index=6,
            type='float',
            default=0.25)
     def row_spacing(self):
@@ -194,32 +189,18 @@ class FillStitch(EmbroideryElement):
            tooltip=_(
                'The length of each stitch in a row.  Shorter stitch may be used at the start or end of a row.'),
            unit='mm',
-           sort_index=4,
+           sort_index=6,
            type='float',
            default=3.0)
     def max_stitch_length(self):
         return max(self.get_float_param("max_stitch_length_mm", 3.0), 0.1 * PIXELS_PER_MM)
 
     @property
-    @param('min_stitch_length_mm',
-           _('Minimum fill stitch length'),
-           tooltip=_(
-               'The minimum length of a stitches in a row. Larger values might introduce deviations from the desired path.'
-               'Shorter stitch may be used at the start or end of a row.'),
-           unit='mm',
-           sort_index=4,
-           select_items=[('fill_method', 1), ('fill_method', 2)],
-           type='float',
-           default=0.0)
-    def min_stitch_length(self):
-        return self.get_float_param("min_stitch_length_mm", 0.0)
-
-    @property
     @param('staggers',
            _('Stagger rows this many times before repeating'),
            tooltip=_('Setting this dictates how many rows apart the stitches will be before they fall in the same column position.'),
            type='int',
-           sort_index=4,
+           sort_index=6,
            select_items=[('fill_method', 0), ('fill_method', 3)],
            default=4)
     def staggers(self):
@@ -339,7 +320,7 @@ class FillStitch(EmbroideryElement):
            type='float',
            default=1.5,
            select_items=[('fill_method', 0), ('fill_method', 2)],
-           sort_index=4)
+           sort_index=6)
     def running_stitch_length(self):
         return max(self.get_float_param("running_stitch_length_mm", 1.5), 0.01)
 
@@ -505,14 +486,11 @@ class FillStitch(EmbroideryElement):
                     underlay_stitch_groups, start = self.do_underlay(start)
                     stitch_groups.extend(underlay_stitch_groups)
                 if self.fill_method == 0:
-                    stitch_groups.extend(
-                        self.do_auto_fill(last_patch, start, end))
+                    stitch_groups.extend(self.do_auto_fill(last_patch, start, end))
                 if self.fill_method == 1:
-                    stitch_groups.extend(
-                        self.do_tangential_fill(last_patch, start))
+                    stitch_groups.extend(self.do_contour_fill(last_patch, start))
                 elif self.fill_method == 2:
-                    stitch_groups.extend(
-                        self.do_guided_fill(last_patch, start, end))
+                    stitch_groups.extend(self.do_guided_fill(last_patch, start, end))
             except Exception:
                 self.fatal_fill_error()
 
@@ -569,32 +547,32 @@ class FillStitch(EmbroideryElement):
                 self.underpath))
         return [stitch_group]
 
-    def do_tangential_fill(self, last_patch, starting_point):
+    def do_contour_fill(self, last_patch, starting_point):
         if not starting_point:
             starting_point = (0, 0)
         starting_point = shgeo.Point(starting_point)
 
         stitch_groups = []
         for polygon in self.fill_shape.geoms:
-            tree = tangential_fill.offset_polygon(polygon, self.row_spacing, self.join_style + 1, self.clockwise)
+            tree = contour_fill.offset_polygon(polygon, self.row_spacing, self.join_style + 1, self.clockwise)
 
             stitches = []
-            if self.tangential_strategy == 0:
-                stitches = tangential_fill.inner_to_outer(
+            if self.contour_strategy == 0:
+                stitches = contour_fill.inner_to_outer(
                     tree,
                     self.row_spacing,
                     self.max_stitch_length,
                     starting_point,
                     self.avoid_self_crossing
                 )
-            elif self.tangential_strategy == 1:
-                stitches = tangential_fill.single_spiral(
+            elif self.contour_strategy == 1:
+                stitches = contour_fill.single_spiral(
                     tree,
                     self.max_stitch_length,
                     starting_point
                 )
-            elif self.tangential_strategy == 2:
-                stitches = tangential_fill.double_spiral(
+            elif self.contour_strategy == 2:
+                stitches = contour_fill.double_spiral(
                     tree,
                     self.max_stitch_length,
                     starting_point

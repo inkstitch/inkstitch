@@ -451,7 +451,6 @@ def _interpolate_linear_rings(ring1, ring2, max_stitch_length, start=None):
     points = (ring1_resampled * (1.0 - weights)) + (ring2_resampled * weights)
     result = LineString(points)
 
-    # TODO: remove when rastering is cheaper
     return result.simplify(constants.simplification_threshold, False)
 
 

@@ -59,7 +59,8 @@ def auto_fill(shape,
               ending_point=None,
               underpath=True):
     try:
-        segments = intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing)
+        rows = intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing)
+        segments = [segment for row in rows for segment in row]
         fill_stitch_graph = build_fill_stitch_graph(shape, segments, starting_point, ending_point)
     except ValueError:
         # Small shapes will cause the graph to fail - min() arg is an empty sequence through insert node
@@ -390,7 +391,8 @@ def process_travel_edges(graph, fill_stitch_graph, shape, travel_edges):
 
 
 def travel_grating(shape, angle, row_spacing):
-    segments = intersect_region_with_grating(shape, angle, row_spacing)
+    rows = intersect_region_with_grating(shape, angle, row_spacing)
+    segments = [segment for row in rows for segment in row]
 
     return shgeo.MultiLineString(list(segments))
 
