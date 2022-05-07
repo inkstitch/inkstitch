@@ -8,6 +8,7 @@ preview_image: /assets/images/fonts/aventurina.png
 ![Aventurina](/assets/images/fonts/aventurina.png)
 
 Cette fonte sera dans une prochaine version d'Ink/Stitch version et n'est pas disponible dans Ink/Stitch v2.1.2.
+
 ## Glyphes :
 Aventurina contient les 142 glyphes : 
 
