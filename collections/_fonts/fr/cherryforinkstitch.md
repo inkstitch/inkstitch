@@ -23,12 +23,13 @@ z123456789
 ## Dimensions
 Utilisée à 100%, cette fonte fait environ 50 mm.
 
-Elle peut être agrandie jusqu'a 180% (env 90 mm) ou diminuée jusqu'à 80% (env 40 mm).
+Elle peut être agrandie jusqu'à 180% (env 90 mm) ou diminuée jusqu'à 80% (env 40 mm).
 
 
 
 ## Réalisations
-Ici, Cherry for Ink/Stitch est accommpagnée par une lettre de la police d'initiales cherry for Ink/Stitch
+Ici, Cherry for Ink/Stitch est accommpagnée par une lettre de la police d'initiales [Cherry for  Kaalleen](https://inkstitch.org/fr/fonts/cherryforkaalleen/)
+
 
 
 
