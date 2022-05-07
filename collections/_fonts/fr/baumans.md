@@ -7,7 +7,27 @@ preview_image: /assets/images/fonts/baumans.png
 ---
 ![Baumans](/assets/images/fonts/baumans.png)
 
-Quelques exemples d'utilisation de Baumans :
+## Glyphes
+
+Baumans contient les 102 glyphes:
+
+	
+@'()+,-.01
+23456789:;
+=?@ABCDEFG
+HIJKLMNOPQ
+RSTUVWXYZ`
+abcdefghij
+klmnopqrst
+uvwxyz¨«´’
+»ÄÖÜßàáâäç
+èéêëîïôöùû
+üˆ
+ 
+## Particularités
+
+Baumans  peut être brodé  dans les deux sens. 
+
 ![Baumans2](/assets/images/fonts/baumans2.jpg)
 ![Baumans3](/assets/images/fonts/baumans3.jpg)
 ![Baumans4](/assets/images/fonts/baumans4.jpg)
