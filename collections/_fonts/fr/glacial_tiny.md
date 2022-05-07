@@ -9,6 +9,27 @@ preview_image: /assets/images/fonts/glacial_tiny.png
 
 Cette fonte sera dans une prochaine version d'Ink/Stitch et n'est pas disponible dans Ink/Stitch v2.1.2.
 
+## Glyphes
+
+Cette fonte contient les 159 glyphes:
+	
+!"»Øø#$€%@
+'’()*+,-./
+0123456789
+:;<=>?@ABC
+DEFGHIJKLM
+NOPQRSTUVW
+XYZ^`abcde
+fghijklmno
+pqrstuvwxy
+z~ÀÁÂÃÄÅÆŒ
+ÇÈÉÊËÌÍÎÏÑ
+ÒÓÔÕÖ×ÙÚÛÜ
+Ýßàáâãäåæœ
+çèéêëìíîïñ
+òóôõöúùûüč
+ČřŘŠšŽžÐÞ
+
 ## Avertissement:
 
 Cette fonte est extrêmement petite. Sa toute petite taille n'est possible que parce qu'elle est conçue pour être brodée avec des aiguilles fines (60 en europe, 8 aux USA) et du fil fin (60 wt)et non pas avec le fil de broderie usuel (40 wt) . Passer outre ces recommandations risque de causer de gros problèmes à la broderie.
