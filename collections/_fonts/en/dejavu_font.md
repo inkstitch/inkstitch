@@ -9,11 +9,39 @@ preview_image: /assets/images/fonts/dejavu_serif.png
 
 ![Deja Vue Serif Semi-condensed](/assets/images/fonts/dejavu_serif.png)
 
+## Glyphe 
+DejaVu Serif contains  92 glyphs :
+
+	
+012345678
+9AÄBCDEFGH
+IJKLMNOÖPQ
+RSTUÜVWXYZ
+aâàäbcçdeé
+èêëfghiîïj
+klmnoöôpqr
+stuùüûvwxy
+z@ß.'")(!;
+,?
+
+## Dimensions
+
+Used at  100%, this font is approximatively 18 mm  (2/3 inch) high.
+
+It can be scaled up to  150% (env 27 mm, 1 inch)  or scaled down to 80% (env 14 mm, 1/2 inch).
+
+
+## Remark
+
+Déja Vu may be embroidered left to right, right to left,  top to bottom orbottom to top.
+
+## In real life
+
 Used by itself
 
 ![DejaVu2](/assets/images/fonts/dejavu2.jpg)
 
-or with Amita  and Magnolia KOR
+or with Amitaclo  and Magnolia KOR
 
 ![DejaVu3](/assets/images/fonts/amitadejavumagnolia.jpg)
 
