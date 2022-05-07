@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
 <svg
-   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
+   inkscape:version="1.1.2 (b8e25be8, 2022-02-05)"
    height="150"
    width="150"
    sodipodi:docname="→.svg"
@@ -29,12 +28,12 @@
      id="namedview3180"
      showgrid="false"
      inkscape:zoom="11.787255"
-     inkscape:cx="30.28695"
+     inkscape:cx="30.329368"
      inkscape:cy="85.94028"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g1172"
+     inkscape:current-layer="g6293"
      inkscape:document-rotation="0"
      inkscape:snap-global="false"
      inkscape:snap-bbox="false"
@@ -2363,7 +2362,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-'"
-     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4;"
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g3344">
     <path
        d="M 9.3064203,50 16.447215,36.28159 Z"
@@ -2371,7 +2370,20 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
        sodipodi:nodetypes="cc"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
-       style="stroke-dasharray:0.5, 0.5;" />
+       style="stroke-dasharray:0.5, 0.5" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-’"
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     id="g6293">
+    <path
+       d="M 9.3064203,50 16.447215,36.28159 Z"
+       id="path6291"
+       sodipodi:nodetypes="cc"
+       inkstitch:ties="3"
+       inkstitch:running_stitch_length_mm="2"
+       style="stroke-dasharray:0.5, 0.5" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -2426,7 +2438,7 @@ Copyright (c) 2016 by Jess Latham. All rights reserved.
      style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g1172">
     <path
-       d="M 8.2529482,94.617261 18.633895,94.439447 13.467366,94.521147 13.503046,89.611575 V 99.267308 L 13.467366,94.521146 17.627874,91.051643 9.8224965,97.570986 13.467366,94.521146 16.798265,97.735083 9.6549152,90.818541"
+       d="m 8.2529482,94.617261 10.3809468,-0.177814 -5.166529,0.0817 0.03568,-4.909572 v 9.655733 l -0.03568,-4.746162 4.160508,-3.469503 -7.8053775,6.519343 3.6448695,-3.04984 3.330899,3.213937 -7.1433498,-6.916542"
        id="path1166"
        inkstitch:manual_stitch="True"
        inkstitch:ties="3"
