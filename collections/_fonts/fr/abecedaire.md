@@ -37,7 +37,7 @@ Utilisée à 100%, cette fonte fait environ 14 mm.
 
 Elle peut être agrandie jusqu'a 200% (env 28 mm) ou diminuée jusqu'à 75% (env 9 mm).
 
-## Réalisations :
+## Dans la vraie vie :
 ![Abecedaire](/assets/images/fonts/abecedaire1.jpg)
 
 ![Abecedaire](/assets/images/fonts/abecedaire2.jpg)
