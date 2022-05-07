@@ -8,7 +8,7 @@ preview_image: /assets/images/fonts/espresso_dolce.png
 ![Espresso KOR](/assets/images/fonts/espresso_dolce.png)
 
 ## Glyphes
-Cette fonte contient les 112 glyphes suivants :
+Cette fonte contient les 113 glyphes suivants :
 
 !%@()*+,-.
 /012345678
@@ -18,12 +18,10 @@ MNOPQRSTUV
 WXYZ[\]^_a
 bcdefghijk
 lmnopqrstu
-vwxyz«'°»×
+vwxyz«'°’»×
 àâäæçèéêëî
 ïôö÷ùûüœßÜ
 ÖÄ
-
-
 
 
 ## Dimensions:
@@ -38,10 +36,10 @@ La fonte [Espresso Tiny](https://inkstitch.org/fr/fonts/espresso_tiny/) est une 
 
 ![Dimensions Espresso](/assets/images/fonts/Sizing/espressosizing.jpg)
 
-## Réalisations:
+## Dans la vraie vie
 
 Espresso KOR  sur un T shirt  enfant
-![EspressoDolce2](/assets/images/fonts/espresso2.jpg)
+![T Shirt](/assets/images/fonts/espresso2.jpg)
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/espresso_KOR/LICENSE)
 
