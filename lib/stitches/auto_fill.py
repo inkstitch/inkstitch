@@ -90,7 +90,7 @@ def which_outline(shape, coords):
     # fail sometimes.
 
     point = shgeo.Point(*coords)
-    outlines = list(shape.boundary.geoms)
+    outlines = ensure_multi_line_string(shape.boundary).geoms
     outline_indices = list(range(len(outlines)))
     closest = min(outline_indices,
                   key=lambda index: outlines[index].distance(point))
@@ -104,7 +104,7 @@ def project(shape, coords, outline_index):
     This returns the distance along the outline at which the point resides.
     """
 
-    outline = list(shape.boundary.geoms)[outline_index]
+    outline = ensure_multi_line_string(shape.boundary).geoms[outline_index]
     return outline.project(shgeo.Point(*coords))
 
 
@@ -173,7 +173,7 @@ def insert_node(graph, shape, point):
     point = tuple(point)
     outline = which_outline(shape, point)
     projection = project(shape, point, outline)
-    projected_point = list(shape.boundary.geoms)[outline].interpolate(projection)
+    projected_point = ensure_multi_line_string(shape.boundary).geoms[outline].interpolate(projection)
     node = (projected_point.x, projected_point.y)
 
     edges = []
@@ -200,7 +200,8 @@ def tag_nodes_with_outline_and_projection(graph, shape, nodes):
 
 
 def add_boundary_travel_nodes(graph, shape):
-    for outline_index, outline in enumerate(shape.boundary.geoms):
+    outlines = ensure_multi_line_string(shape.boundary).geoms
+    for outline_index, outline in enumerate(outlines):
         prev = None
         for point in outline.coords:
             point = shgeo.Point(point)
@@ -265,7 +266,10 @@ def fallback(shape, running_stitch_length):
     matter.
     """
 
-    return running_stitch(line_string_to_point_list(shape.boundary[0]), running_stitch_length)
+    boundary = ensure_multi_line_string(shape.boundary)
+    outline = boundary.geoms[0]
+
+    return running_stitch(line_string_to_point_list(outline), running_stitch_length)
 
 
 @debug.time
