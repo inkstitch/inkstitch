@@ -1,7 +1,7 @@
 ---
 title: "Brockscript"
 permalink: /fr/fonts/brockscript/
-last_modified_at: 2022-05-05
+last_modified_at: 2022-05-07
 toc: false
 preview_image: /assets/images/fonts/brockscript.png
 ---
