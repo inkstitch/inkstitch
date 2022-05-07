@@ -10,7 +10,7 @@ preview_image: /assets/images/fonts/amita.png
 
 
 ## Glyphes
-Amitaclo small contient les 109 glyphes :
+Amitaclo  contient les 109 glyphes :
 	
 œıüûúùöôóñ
 ïîíëêéèçæä
@@ -28,7 +28,7 @@ BA@?=;:987
 
 ![Dimensions Amitaclo](/assets/images/fonts/Sizing/amitaclosizing.jpg)
 
-## Dimensions:
+## Dimensions
 
 Utilisée à 100%, cette fonte fait environ 30 mm.
 
@@ -38,12 +38,12 @@ N'essayez pas de broder cette fonte à une dimension inférieure, vous auriez be
 
 La fonte [Amitaclo small](https://inkstitch.org/fr/fonts/amitaclo_small/) est une déclinaison de cette fonte avec des paramètres de broderie différents qui permet une utilisation entre 55% (16 mm) et 25% (7mm). Elle necessite l'usage d'une aiguille plus fine (EUR 60 USA 8)  et d'un fil plus fin (60WT) que Amitaclo
 
-## Réalisations:
+## Dans la vraie vie
 
-![Amita3](/assets/images/fonts/amita3.jpg)
+![Chouette](/assets/images/fonts/amita3.jpg)
 
 En compagnie de Déjà Vu et de Magnolia KOR
 
-![Amita2](/assets/images/fonts/amitadejavumagnolia.jpg)
+![Confiture](/assets/images/fonts/amitadejavumagnolia.jpg)
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/amitaclo/LICENSE)
