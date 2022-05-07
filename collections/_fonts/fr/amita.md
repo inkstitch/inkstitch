@@ -38,6 +38,8 @@ N'essayez pas de broder cette fonte à une dimension inférieure, vous auriez be
 
 La fonte [Amitaclo small](https://inkstitch.org/fr/fonts/amitaclo_small/) est une déclinaison de cette fonte avec des paramètres de broderie différents qui permet une utilisation entre 55% (16 mm) et 25% (7mm). Elle necessite l'usage d'une aiguille plus fine (EUR 60 USA 8)  et d'un fil plus fin (60WT) que Amitaclo
 
+## Réalisations:
+
 ![Amita3](/assets/images/fonts/amita3.jpg)
 
 En compagnie de Déjà Vu et de Magnolia KOR
