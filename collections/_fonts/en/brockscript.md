@@ -35,25 +35,25 @@ that contain 4 alternative images.
 
 The replacement is up to you, but it is easy in inkscape.
 
-You can also juste skip the holly or replace it by any small drawing of your choice.
+You could also just skip the holly or replace it by any small drawing of your choice.
 
-And if you do not know how to access µ from your keyboard,  copy it from here and paste it in th lettering  dialog window.
+And if you do not know how to access µ from your keyboard,  copy it from here and paste it in the lettering  dialog window.
 
 
 
-## Réalisations
+## In real life
 
 Brockscript may be used on a Towel
 
-![Brockscript2](/assets/images/fonts/brockscript2.jpg)
+![Towel](/assets/images/fonts/brockscript2.jpg)
 
 or a  T shirt
 
-![Brockscript3](/assets/images/fonts/brockscript3.jpg)
+![TShirt](/assets/images/fonts/brockscript3.jpg)
 
 or as an ornament:
 
-![Brockscript4](/assets/images/fonts/brockscript4.jpg)
+![Ornament](/assets/images/fonts/brockscript4.jpg)
 
 but we're sure you will find many other uses...
 
