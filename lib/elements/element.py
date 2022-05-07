@@ -166,8 +166,7 @@ class EmbroideryElement(object):
         # Of course, transforms may also involve rotation, skewing, and translation.
         # All except translation can affect how wide the stroke appears on the screen.
 
-        node_transform = inkex.transforms.Transform(
-            get_node_transform(self.node))
+        node_transform = inkex.transforms.Transform(get_node_transform(self.node))
 
         # First, figure out the translation component of the transform.  Using a zero
         # vector completely cancels out the rotation, scale, and skew components.
@@ -201,8 +200,7 @@ class EmbroideryElement(object):
     @property
     @param('ties',
            _('Allow lock stitches'),
-           tooltip=_(
-               'Tie thread at the beginning and/or end of this object. Manual stitch will not add lock stitches.'),
+           tooltip=_('Tie thread at the beginning and/or end of this object. Manual stitch will not add lock stitches.'),
            type='dropdown',
            # Ties: 0 = Both | 1 = Before | 2 = After | 3 = Neither
            # L10N options to allow lock stitch before and after objects
@@ -260,8 +258,7 @@ class EmbroideryElement(object):
             d = self.node.get("d", "")
 
         if not d:
-            self.fatal(_("Object %(id)s has an empty 'd' attribute.  Please delete this object from your document.") % dict(
-                id=self.node.get("id")))
+            self.fatal(_("Object %(id)s has an empty 'd' attribute.  Please delete this object from your document.") % dict(id=self.node.get("id")))
 
         return inkex.paths.Path(d).to_superpath()
 
@@ -276,8 +273,7 @@ class EmbroideryElement(object):
 
     @property
     def shape(self):
-        raise NotImplementedError(
-            "INTERNAL ERROR: %s must implement shape()", self.__class__)
+        raise NotImplementedError("INTERNAL ERROR: %s must implement shape()", self.__class__)
 
     @property
     @cache
@@ -327,8 +323,7 @@ class EmbroideryElement(object):
         return self.get_boolean_param('stop_after', False)
 
     def to_stitch_groups(self, last_patch):
-        raise NotImplementedError(
-            "%s must implement to_stitch_groups()" % self.__class__.__name__)
+        raise NotImplementedError("%s must implement to_stitch_groups()" % self.__class__.__name__)
 
     def embroider(self, last_patch):
         self.validate()
@@ -341,10 +336,8 @@ class EmbroideryElement(object):
             patch.force_lock_stitches = self.force_lock_stitches
 
         if patches:
-            patches[-1].trim_after = self.has_command(
-                "trim") or self.trim_after
-            patches[-1].stop_after = self.has_command(
-                "stop") or self.stop_after
+            patches[-1].trim_after = self.has_command("trim") or self.trim_after
+            patches[-1].stop_after = self.has_command("stop") or self.stop_after
 
         return patches
 

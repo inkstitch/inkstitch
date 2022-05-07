@@ -14,8 +14,7 @@ from ..utils import cache
 
 
 def legacy_fill(shape, angle, row_spacing, end_row_spacing, max_stitch_length, flip, staggers, skip_last):
-    rows_of_segments = intersect_region_with_grating(
-        shape, angle, row_spacing, end_row_spacing, flip)
+    rows_of_segments = intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing, flip)
     groups_of_segments = pull_runs(rows_of_segments, shape, row_spacing)
 
     return [section_to_stitches(group, angle, row_spacing, max_stitch_length, staggers, skip_last)
@@ -75,8 +74,7 @@ def stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, stagge
 
     stitches.append(beg)
 
-    first_stitch = adjust_stagger(
-        beg, angle, row_spacing, max_stitch_length, staggers)
+    first_stitch = adjust_stagger(beg, angle, row_spacing, max_stitch_length, staggers)
 
     # we might have chosen our first stitch just outside this row, so move back in
     if (first_stitch - beg) * row_direction < 0:
@@ -85,8 +83,7 @@ def stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, stagge
     offset = (first_stitch - beg).length()
 
     while offset < segment_length:
-        stitches.append(
-            Stitch(beg + offset * row_direction, tags=('fill_row')))
+        stitches.append(Stitch(beg + offset * row_direction, tags=('fill_row')))
         offset += max_stitch_length
 
     if (end - stitches[-1]).length() > 0.1 * PIXELS_PER_MM and not skip_last:
@@ -119,8 +116,7 @@ def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing=Non
     # angle degrees clockwise and ask for the new bounding box.  The max
     # and min y tell me how far to go.
 
-    _, start, _, end = shapely.affinity.rotate(
-        shape, angle, origin='center', use_radians=True).bounds
+    _, start, _, end = shapely.affinity.rotate(shape, angle, origin='center', use_radians=True).bounds
 
     # convert start and end to be relative to center (simplifies things later)
     start -= center.y
@@ -155,8 +151,7 @@ def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing=Non
                 runs = [res.coords]
 
         if runs:
-            runs.sort(key=lambda seg: (
-                InkstitchPoint(*seg[0]) - upper_left).length())
+            runs.sort(key=lambda seg: (InkstitchPoint(*seg[0]) - upper_left).length())
 
             if flip:
                 runs.reverse()
@@ -165,9 +160,7 @@ def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing=Non
             yield runs
 
         if end_row_spacing:
-            current_row_y += row_spacing + \
-                (end_row_spacing - row_spacing) * \
-                ((current_row_y - start) / height)
+            current_row_y += row_spacing + (end_row_spacing - row_spacing) * ((current_row_y - start) / height)
         else:
             current_row_y += row_spacing
 
@@ -182,8 +175,7 @@ def section_to_stitches(group_of_segments, angle, row_spacing, max_stitch_length
         if (swap):
             (beg, end) = (end, beg)
 
-        stitch_row(stitches, beg, end, angle, row_spacing,
-                   max_stitch_length, staggers, skip_last)
+        stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, staggers, skip_last)
 
         swap = not swap
 
