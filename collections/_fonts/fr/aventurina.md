@@ -9,7 +9,7 @@ preview_image: /assets/images/fonts/aventurina.png
 
 Cette fonte sera dans une prochaine version d'Ink/Stitch version et n'est pas disponible dans Ink/Stitch v2.1.2.
 
-## Glyphes :
+## Glyphes 
 Aventurina contient les 142 glyphes : 
 
 	
@@ -30,21 +30,21 @@ rstuvwxyz~
 Œœ
 
 
-## Dimensions:
+## Dimensions
 
 Utilisée à 100%, cette fonte fait environ 20 mm.
 
 Elle peut être agrandie jusqu'a 150% (env 30 mm) ou diminuée jusqu'à 60% (env 12 mm).
 
-## Réalisations: 
+## Dans la vraie vie
 
 Marque page : 
 
 ![Marque page](/assets/images/fonts/aventurina3.jpg)
 
-Aventurina sur un essui main.
+Aventurina sur un essuie main.
 
-![Aventurina2](/assets/images/fonts/aventurina2.jpg)
+![Essuie Main](/assets/images/fonts/aventurina2.jpg)
 
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/aventurina/LICENSE)
