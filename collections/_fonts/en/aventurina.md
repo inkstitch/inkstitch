@@ -10,6 +10,23 @@ preview_image: /assets/images/fonts/aventurina.png
 
 This is part of an upcoming Ink/Stitch version and not available in Ink/Stitch v2.1.2
 
+## Glyphs
+
+Aventurina contains 142 glyphs :
+
+!"#@'()+,- ./01234567 89:;=?@ABC DEFGHIJKLM NOPQRSTUVW XYZabcdefg hijklmnopq rstuvwxyz~ ¡¿ÀÁÂÃÄÅÆÇ ÈÉÊËÌÍÎÏÑÒ ÓÔÕÖØÙÚÛÜÝ Þßàáâãäåæç èéêëìíîïñò óôõöùúûüýÿ Œœ
+
+## Dimensions:
+At 100%, Aventurina is approximatively  20 mm high (3/4 inches)
+
+It may be scaled up to 150% (aprox. 30mm , 1.25 in) or scaled down to 60% (approx 12mm, 0.5 in)
+
+
+## Réalisations:
+On a bookmark: 
+
+![Bookmark ](/assets/images/fonts/aventurina3.jpg)
+
 Aventurina on a hand towel
 
 ![Aventurina2](/assets/images/fonts/aventurina2.jpg)
