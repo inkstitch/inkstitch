@@ -1,7 +1,7 @@
 ---
 title: "Amitaclo Small"
 permalink: /fr/fonts/amitaclo_small/
-last_modified_at: 2022-05-05
+last_modified_at: 2022-05-06
 toc: false
 preview_image: /assets/images/fonts/amita.png
 ---
@@ -49,4 +49,4 @@ Cette fonte diminuée **DOIT** être brodée avec un fil et une aiguille plus fi
 
 
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/pacificlo_tiny/LICENSE)
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/amitaclo_small/LICENSE)
