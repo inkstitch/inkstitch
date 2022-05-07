@@ -42,19 +42,18 @@ Ou vous pouvez aussi juste remplacer par rien, ou par une de vos créations.
 Et si vous ne savez pas tapper un µ depuis votre clavier vers la fenêtre de dialogue du lettrage, faites un couper/coller....
 
 
-## Réalisations
+## Dans la vraie vie
 
 Brockscript peut par exemple être utilisée sur une serviette
-
-![Brockscript2](/assets/images/fonts/brockscript2.jpg)
+![Tshirt](/assets/images/fonts/brockscript2.jpg)
 
 ou sur un T shirt
 
-![Brockscript3](/assets/images/fonts/brockscript3.jpg)
+![Serviette](/assets/images/fonts/brockscript3.jpg)
 
 ou pour décorer le sapin de Noël:
 
-![Brockscript4](/assets/images/fonts/brockscript4.jpg)
+![0rnement](/assets/images/fonts/brockscript4.jpg)
 
 mais ces usages ne sont certainement pas les seuls....
 
