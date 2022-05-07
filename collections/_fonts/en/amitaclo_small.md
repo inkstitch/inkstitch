@@ -1,0 +1,50 @@
+---
+title: "Amitaclo Small"
+permalink: /en/fonts/amitaclo_small/
+last_modified_at: 2022-05-05
+toc: false
+preview_image: /assets/images/fonts/amita.png
+---
+
+
+This is part of an upcoming Ink/Stitch version and not available in Ink/Stitch v2.1.2
+
+
+Cette fonte est une variation de Amitaclo. Le dessin des lettres n'a pas été modifié, mais les paramètres de broderies sont différents. 
+
+
+La densité, la compensation et les sous couches ont été modifiés pour permettre de broder cette fonte en plus petite taille que la taille initiale.
+En plus de ces modifications sur le fichier de broderie, la petite taille impose l'utilisation d'aiguille fine (EUR 60, US 8) et de fil fin (60WT).
+
+![Dimensions Amitaclo](/assets/images/fonts/Sizing/amitaclosizing.jpg)
+
+## Glyphes
+Amitaclo small contient les 109 glyphes :
+	
+œıüûúùöôóñ
+ïîíëêéèçæä
+âáàßÜÖÆÄ|z
+yxwvutsrqp
+onmlkjihgf
+edcba\ZYXW
+VUTSRQPONM
+LKJIHGFEDC
+BA@?=;:987
+6543210/.-
+,+*)('@"!
+
+
+## Usage
+### Redimensionnement
+
+Dans la fenêtre de dialogue du lettrage, il vous sera demandé d'indiquer un redimensionnement entre 25 et 55% de la taille de la fonte amitaclo initiale, passant ainsi de lettres d'environ 30mm de haut à des lettres entre 7 et 16 mm.
+
+### Materiel à utiliser
+
+Cette fonte diminuée **DOIT** être brodée avec un fil et une aiguille plus fins que d'ordinaire. Une aiguille de taille 8 (USA), 60(EUR) et un fil 60WT **DOIVENT** être utilisés.
+
+
+
+
+
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/amitaclo_small/LICENSE)
