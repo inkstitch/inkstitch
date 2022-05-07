@@ -13,6 +13,15 @@ Cette fonte sera dans une prochaine version d'Ink/Stitch et n'est pas disponible
 
 Cette fonte est extrêmement petite. Sa toute petite taille n'est possible que parce qu'elle est conçue pour être brodée avec des aiguilles fines (60 en europe, 8 aux USA) et du fil fin (60 wt)et non pas avec le fil de broderie usuel (40 wt) . Passer outre ces recommandations risque de causer de gros problèmes à la broderie.
 
+## Dimensions
+
+Utilisée à 100%, cette fonte fait environ 13 mm.
+
+Elle peut être agrandie jusqu'a 140% (env 9 mm) ou diminuée jusqu'à 60% (env 5 mm).
+
+
+![Dimensions Glacialtiny](/assets/images/fonts/Sizing/glacialsizing.jpg)
+
 ## Glacial en situation:
 
 Sur un coussin
