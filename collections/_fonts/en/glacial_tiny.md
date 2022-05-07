@@ -8,6 +8,26 @@ preview_image: /assets/images/fonts/glacial_tiny.png
 ![glacial_tiny](/assets/images/fonts/glacial_tiny.png)
 
 This is part of an upcoming Ink/Stitch version and not available in Ink/Stitch v2.1.2
+## Glyphes
+
+This font contains 159 glyphs:
+	
+!"»Øø#$€%@
+'’()*+,-./
+0123456789
+:;<=>?@ABC
+DEFGHIJKLM
+NOPQRSTUVW
+XYZ^`abcde
+fghijklmno
+pqrstuvwxy
+z~ÀÁÂÃÄÅÆŒ
+ÇÈÉÊËÌÍÎÏÑ
+ÒÓÔÕÖ×ÙÚÛÜ
+Ýßàáâãäåæœ
+çèéêëìíîïñ
+òóôõöúùûüč
+ČřŘŠšŽžÐÞ
 
 ## Warning:
 
@@ -18,15 +38,26 @@ Do not use the regular 40wt embroidery thread.
 
 If you do not follow these recommendations, you will probably have lots of embroidering problems.
 
-## Glacial insituation:
+## Dimensions
+
+At 100%, this font is approximatively 7 mm (1/4 inch) high.
+
+It can be scaled up to 140% (approx 11 mm, 0.4 inch) or scaled down to 60% (env 4.5 mm, 1/6  inch).
+
+
+![Dimensions Glacialtiny](/assets/images/fonts/Sizing/glacialsizing2.jpg)
+
+
+
+## In real life
 
 On a cushion
 
-![glacial_tiny2](/assets/images/fonts/glacial3.jpg)
+![Cushion](/assets/images/fonts/glacial3.jpg)
 
 Used in conjunction with Grand Hotel Marif on an apron :
 
-![glacial_tiny2](/assets/images/fonts/glacialgrandhotel.jpg)
+![Apron](/assets/images/fonts/glacialgrandhotel.jpg)
 
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/glacial_tiny/LICENSE)
