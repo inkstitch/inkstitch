@@ -34,7 +34,7 @@ It can be scaled up to 200% (approx 60 mm, 2.4 inches ) or scaled down to 80% (a
 
 Don't try to scale it further down. 
 
-[Amitaclo small font](https://inkstitch.org/fr/fonts/amitaclo_small/) is a variation of this font with different embroidery settings that allows to scale down between 55% (16mm,2/3 inch) and 25% (7mm ,1/4 inch). It requires the use of a finer needle (EUR 60 USA 8) and a finer thread (60WT).
+[Amitaclo small font](https://inkstitch.org/fr/fonts/amitaclo_small/) is a variation of this font with different embroidery settings that allow to scale down between 55% (16mm,2/3 inch) and 25% (7mm ,1/4 inch). It requires the use of a finer needle (EUR 60 USA 8) and a finer thread (60WT).
 
 ## In real life
 
