@@ -8,7 +8,7 @@ preview_image: /assets/images/fonts/amita.png
 ![Amita](/assets/images/fonts/amita.png)
 
 ## Glyphs
-Amitaclo  contains 109 glyphs :
+Amitaclo  contains 110 glyphs :
 	
 œıüûúùöôóñ
 ïîíëêéèçæä
@@ -20,7 +20,7 @@ VUTSRQPONM
 LKJIHGFEDC
 BA@?=;:987
 6543210/.-
-,+*)('@"!
+,+*)('’@"!
 
 
 
