@@ -8,11 +8,37 @@ preview_image: /assets/images/fonts/cherryforinkstitch.png
 
 ![Cherryforinkstitch](/assets/images/fonts/cherryforinkstitch.png)
 
-On this sample, Cherry for Ink/Stitch meets Cherry for Ink/Stitch.
+## Glyphs
+
+This font contains these 74	glyphes:
+
+ABCDEFGHIJK
+LMNOPQRSTU
+VWXYZabcde
+fghijklmno
+pqrstuvwxy
+z123456789
+0.:;,?!()'
+"-`
+
+## Dimensions
+
+At 100%, this font is approwimatively  50 mm (2 inches) high.
+ 
+It can be scaled up to 180% ( approx 90mm 3.5 inches) or scaled down to 80% (approx 1.5 inch)
+
+
+
+
+
+## Réalisations
+ 
+
+On this sample, Cherry for Ink/Stitch meets [Cherry for  Kaalleen](https://inkstitch.org/fr/fonts/cherryforkaalleen/)
 
 ![CherryforKaalleen3](/assets/images/fonts/cherry2.jpg)
 
-Here it meets some addition cherries:
+Here it meets some additional cherries:
 
 ![Cherryforinkstitch4](/assets/images/fonts/cherryforinkstitch4.jpg)
 
