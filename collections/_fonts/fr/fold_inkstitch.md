@@ -7,6 +7,24 @@ preview_image: /assets/images/fonts/fold_inkstitch.png
 ---
 ![FoldInkstitch](/assets/images/fonts/fold_inkstitch.png)
 
+## Glyphes
+
+Cette fonte contient les 40 glyphes
+
+
+!'01234567
+89?ABCDEFG
+HIJKLMNOPQ
+RSTUVWXYZ-
+
+## Dimensions
+
+Utilisée à 100%, cette fonte fait environ 63 mm.
+
+Elle peut être agrandie jusqu'a 200% (env 125 mm) ou diminuée jusqu'à 80% (env 50 mm).
+
+## Dans la vraie vie :
+
 Sur un sac à pain :
 
 ![FoldInkstitch2](/assets/images/fonts/folded2.png)
