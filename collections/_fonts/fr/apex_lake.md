@@ -1,7 +1,7 @@
 ---
 title: "Apex Lake"
 permalink: /fr/fonts/apex-lake/
-last_modified_at: 2022-05-05
+last_modified_at: 2022-05-07
 toc: false
 preview_image: /assets/images/fonts/apex_lake.png
 ---
@@ -26,19 +26,19 @@ Apex Lake est une grande fonte, elle est faite pour être utilisée une lettre o
 Utilisée à 100% elle mesure environ 60mm de haut. Elle peut être réduite jusqu'à 80% (50mm) et agrandie jusqu'à 130% (110mm).
 
 ## Tri des couleurs 
-Si vous brodez plusieurs lettrines, vous pouvez souhaiter trier les couleurs. C'est possible à condition de respecter leur ordre relatif à l'interieur de chaque lettre. [Voici comment faire](https://inkstitch.org/fr/docs/lettering/#tri-des-couleurs)
+Si vous brodez plusieurs lettrines, vous pouvez souhaiter trier les couleurs. C'est possible à condition de respecter leur ordre relatif à l'intérieur de chaque lettre. [Voici comment faire](https://inkstitch.org/fr/docs/lettering/#tri-des-couleurs)
 
 
 
 
-## Réalisations
+## Dans la vraie vie
 
 Et pourquoi pas sur un T shirt ?
 
-![Apex2](/assets/images/fonts/apex2.jpg)
+![TShirt](/assets/images/fonts/apex2.jpg)
 
 ou sur un panier en tissu ?
 
-![Apex3](/assets/images/fonts/apex3.jpg)
+![Panier](/assets/images/fonts/apex3.jpg)
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/apex_lake/LICENSE)
