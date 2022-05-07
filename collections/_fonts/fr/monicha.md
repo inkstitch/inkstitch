@@ -7,33 +7,65 @@ preview_image: /assets/images/fonts/monicha.png
 ---
 ![monicha](/assets/images/fonts/monicha.png)
 
+
 Cette fonte sera dans une prochaine version d'Ink/Stitch version et n'est pas disponible dans Ink/Stitch v2.1.2.
+
+## Glyphes 
+Monicha contains 195 glyphs :
+	
+!#%@'(’)+,-
+./01234567
+89:;<=>?@A
+BCDEFGHIJK
+LMNOPQRSTU
+VWXYZabcde
+fghijklmno
+pqrstuvwxy
+z§«±»¿ÀÁÂÃ
+ÄÅÆÇÈÉÊËÌÍ
+ÎÏÑÒÓÔÕÖ×Ù
+ÚÛÜÝàáâãäå
+æçèéêëìíîï
+ñòóôõöùúûü
+ýÿŒœ⒜⒝⒞⒟⒠⒡
+⒢⒣⒤⒥⒦⒧⒨⒩⒪⒫
+⒬⒭⒮⒯⒰⒱⒲⒳⒴⒵
+ⒶⒹⒼⒽⒾⒿⓀⓁⓂⓃ
+ⓇⓉⓊⓎⓑⓓⓖⓗⓙⓚ
+ⓛⓞⓣⓨ
+
+
+## Dimensions
+
+Utilisée à 100%, cette fonte fait environ 28 mm. Elle peut être agrandie jusqu'a 150% (env 42 mm) mais ne doit pas être diminuée.
+
+## Particularités
 
 MONICHA est notre première police à lettres multiformes.
 
 Par exemple, voici des variations sur le prénom Sasha
 
-![monicha7](/assets/images/fonts/monicha7.jpg)
+![Alternatives](/assets/images/fonts/monicha7.jpg)
 
 Elle contient les majuscules, minuscules, lettres à accent, chiffre et ponctuation
-comme bon nombre des polices proposées jusqu'à présent.
+comme bon nombre des polices proposées jusqu'à présent. Les derniers glyphes de la liste servent à stocker les lettres alternatives.
 
-## Les parentheses
+### Les parentheses
 
 Les deux parentheses ( et ) permettent d'acceder à ces deux ornements:
 
 ![monica parentheses](/assets/images/fonts/monicaparentheses.png)
 
 
-Mais MONICHA contient aussi 50 lettres minuscules à écharpes de plusieurs types pour certaines lettres. 
+Mais MONICHA contient aussi 50 lettres minuscules à écharpes de plusieurs types pour certaines lettres stockés dans les derniers glyphes de la liste.
 
-## Il vous faudra donc apprendre à coder ces lettres pour les utiliser.
+### Il vous faudra donc apprendre à coder ces lettres pour les utiliser.
 
 Vous ne pouvez pas acceder directement à ces variations en utilisant une simple touche du clavier. Des caractères unicodes particuliers ont été utilisés pour stocker ces variations. Pour utiliser ces variations il faut donc connaître leur code.
 
 Pour faciliter l'usage de ces lettres ce mode d'emploi répertorie les codes et il suffira de copier le code et de le coller dans le module lettrage.
 
-### Petites echarpes
+#### Petites echarpes
 
 Toutes les minuscules disposent d'une version à petite echarpe :
 ![Petite Echarpe](/assets/images/fonts/monichasmallswash.png)
@@ -50,7 +82,7 @@ Que l'on obtient en utilisant un de ces codes  :
 
 ⒱	⒲	⒳	⒴	⒵
 
-###  Echarpes longues soulignantes: a-d-h-i-k-l-m-n-r-t-u
+####  Echarpes longues soulignantes: a-d-h-i-k-l-m-n-r-t-u
 ![Echarpe Longue Soulignante](/assets/images/fonts/monichalongswash.png)
 
 Ces  11 lettres disposent de plus d'une longue écharpe soulignante.
@@ -69,7 +101,7 @@ On les obtient en utilisant ces codes :
 
 	Ⓡ		Ⓣ	Ⓤ
 
-### Echarpe soulignant moyenne : g-j-y.
+#### Echarpe soulignant moyenne : g-j-y.
 ![Echarpe Moyenne Soulignante](/assets/images/fonts/monichamediumswash.png)
 
 Ces trois lettres disposent d'une écharpe soulignante moyenne.
@@ -81,7 +113,7 @@ On les obtient en utilisant ces codes :
 
 Ⓖ	Ⓙ	Ⓨ
 
-### Echarpe basse bouclée : g-j-y 
+#### Echarpe basse bouclée : g-j-y 
 ![Echarpe Basse Bouclée](/assets/images/fonts/monichacurly.png)
 Ces trois lettres disposent  aussi d'une version à écharpes basse bouclée.
 
@@ -91,7 +123,7 @@ On les obtient en utilisant ces codes :
 
 ⓖ	ⓙ	ⓨ
 
-### Echarpe supérieure bouclée et rétrograde: b-d-h-k-l-t
+#### Echarpe supérieure bouclée et rétrograde: b-d-h-k-l-t
 
 ![Echarpe Superieure Bouclée](/assets/images/fonts/monichacurlyup.png)
 Il existe 6 lettres à écharpe supérieure bouclée et rétrograde b-d-h-k-l-t.
@@ -104,7 +136,7 @@ On les obtient en utilisant ces codes :
 
 ⓑ	ⓓ	ⓗ	ⓚ	ⓛ	ⓣ
 
-### Le petit dernier : o
+#### Le petit dernier : o
 Il existe un o a queue droite
 ![Echarpe Queue Droite](/assets/images/fonts/monichap.png)
 
@@ -112,14 +144,13 @@ On l'obtient en utilisant ce code :
 
 ⓞ
 
-## Utilisations diverses de Monicha :
-
-![monicha2](/assets/images/fonts/monicha2.jpg)
-![monicha8](/assets/images/fonts/monicha8.jpg)
-![monicha3](/assets/images/fonts/monicha3.jpg)
-![monicha4](/assets/images/fonts/monicha4.jpg)
-![monicha5](/assets/images/fonts/monicha5.jpg)
-![monicha6](/assets/images/fonts/monicha6.jpg)
+##  Dans la vraie vie
+![Gelee](/assets/images/fonts/monicha2.jpg)
+![Rockabilly](/assets/images/fonts/monicha8.jpg)
+![Temps perdu](/assets/images/fonts/monicha3.jpg)
+![Ourson](/assets/images/fonts/monicha4.jpg)
+![Serviette](/assets/images/fonts/monicha5.jpg)
+![Serviette](/assets/images/fonts/monicha6.jpg)
 
 
 
