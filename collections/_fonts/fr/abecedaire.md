@@ -35,7 +35,7 @@ vwxyz¡«´¸»
 
 Utilisée à 100%, cette fonte fait environ 14 mm.
 
-Elle peut être agrandie jusqu'a 200% (env 18 mm) ou diminuée jusqu'à 75% (env 5 mm).
+Elle peut être agrandie jusqu'a 200% (env 28 mm) ou diminuée jusqu'à 75% (env 9 mm).
 
 ## Réalisations :
 ![Abecedaire](/assets/images/fonts/abecedaire1.jpg)
