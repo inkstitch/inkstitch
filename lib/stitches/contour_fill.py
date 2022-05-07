@@ -507,15 +507,36 @@ def double_spiral(tree, stitch_length, starting_point):
 
 
 def _spiral_fill(tree, stitch_length, close_point, spiral_maker):
-    if not _check_and_prepare_tree_for_valid_spiral(tree):
-        raise ValueError(_("Shape cannot be filled with single or double spiral!"))
-
     starting_point = close_point.coords[0]
-    rings = [tree.nodes[node].val for node in nx.dfs_preorder_nodes(tree, 'root')]
+
+    rings = _get_spiral_rings(tree)
     path = spiral_maker(rings, stitch_length, starting_point)
     path = [Stitch(*stitch) for stitch in path]
 
     return running_stitch(path, stitch_length)
+
+
+def _get_spiral_rings(tree):
+    rings = []
+
+    node = 'root'
+    while True:
+        rings.append(tree.nodes[node].val)
+
+        children = tree[node]
+        if len(children) == 0:
+            break
+        elif len(children) == 1:
+            node = list(children)[0]
+        else:
+            # We can only really fill a shape with a single spiral if each
+            # parent has only one child.  We'll do our best though, because
+            # that is probably more helpful to the user than just refusing
+            # entirely.  We'll pick the child that's closest to the center.
+            parent_center = rings[-1].centroid
+            node = min(children, key=lambda child: parent_center.distance(tree.nodes[child].val.centroid))
+
+    return rings
 
 
 def _make_fermat_spiral(rings, stitch_length, starting_point):
