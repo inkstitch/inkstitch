@@ -7,6 +7,32 @@ preview_image: /assets/images/fonts/chopin_script.png
 ---
 ![Chopin Script](/assets/images/fonts/chopin_script.png)
 
+## Glyphes
+
+Chopin contient les 107 glyphes 
+
+	
+!"@'’,-0123
+456789:;?@
+ABCDEFGHIJ
+KLMNOPQRST
+UVWXYZ^`ab
+cdefghijkl
+mnopqrstuv
+wxyz¡¿àáâã
+äåæçèéêëìí
+îïñòóôõöùú
+ûüýÿŒœ
+ 
+
+## Dimensions:
+
+Utilisée à 100%, cette fonte fait environ 50 mm.
+
+Elle peut être agrandie jusqu'a 120% (env 60 mm) ou diminuée jusqu'à 80% (env 40 mm).
+
+## Réalisations
+
 Chopin Script en action sur un coussin de transat :
 
 ![Chopin Script_2](/assets/images/fonts/chopin2.jpg)
