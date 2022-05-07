@@ -10,9 +10,7 @@ from shapely.ops import nearest_points
 from shapely.ops import polygonize
 
 from .running_stitch import running_stitch
-from ..i18n import _
 from ..stitch_plan import Stitch
-from ..stitches import constants
 from ..utils import DotDict
 from ..utils.geometry import cut, reverse_line_string, roll_linear_ring
 from ..utils.geometry import ensure_geometry_collection, ensure_multi_polygon
@@ -48,9 +46,8 @@ nearest_neighbor_tuple = namedtuple(
 def _offset_linear_ring(ring, offset, resolution, join_style, mitre_limit):
     result = Polygon(ring).buffer(-offset, resolution, cap_style=2, join_style=join_style, mitre_limit=mitre_limit, single_sided=True)
     result = ensure_multi_polygon(result)
-
     rings = GeometryCollection([poly.exterior for poly in result.geoms])
-    rings = rings.simplify(constants.simplification_threshold, False)
+    rings = rings.simplify(0.01, False)
 
     return _take_only_valid_linear_rings(rings)
 
@@ -197,7 +194,6 @@ def _convert_polygon_to_nodes(tree, polygon, parent_polygon, child_holes):
     if polygon.area < 0.1:
         return None, None
 
-    polygon = polygon.simplify(constants.simplification_threshold, False)
     valid_rings = _take_only_valid_linear_rings(polygon.exterior)
 
     try:
@@ -257,8 +253,7 @@ def _get_nearest_points_closer_than_thresh(travel_line, next_line, threshold):
         return nearest_points(parent_point, next_line)
 
 
-def _create_nearest_points_list(
-        travel_line, tree, children, threshold, threshold_hard):
+def _create_nearest_points_list(travel_line, tree, children, threshold, threshold_hard):
     """Determine the best place to enter each of parent's children
 
     Arguments:
@@ -297,8 +292,7 @@ def _create_nearest_points_list(
     return children_nearest_points
 
 
-def _find_path_inner_to_outer(tree, node, offset, starting_point,
-                              avoid_self_crossing, forward=True):
+def _find_path_inner_to_outer(tree, node, offset, starting_point, avoid_self_crossing, forward=True):
     """Find a stitch path for this ring and its children.
 
     Strategy: A connection from parent to child is made as fast as possible to
@@ -338,8 +332,8 @@ def _find_path_inner_to_outer(tree, node, offset, starting_point,
         current_ring,
         tree,
         tree[node],
-        constants.offset_factor_for_adjacent_geometry * offset,
-        2.05 * offset
+        threshold=1.5 * offset,
+        threshold_hard=2.05 * offset
     )
     nearest_points_list.sort(key=lambda tup: tup.proj_distance_parent)
 
@@ -451,7 +445,7 @@ def _interpolate_linear_rings(ring1, ring2, max_stitch_length, start=None):
     points = (ring1_resampled * (1.0 - weights)) + (ring2_resampled * weights)
     result = LineString(points)
 
-    return result.simplify(constants.simplification_threshold, False)
+    return result.simplify(0.1, False)
 
 
 def _check_and_prepare_tree_for_valid_spiral(tree):
