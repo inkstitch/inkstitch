@@ -28,16 +28,16 @@ uvwxyz¨«´’
 
 Si la broderie fait plusieurs lignes, elle peut  être brodée  alternativement dans les deux sens pour éviter les longs sauts de fil.
 
-## Dimensions:
+## Dimensions
 
 Utilisée à 100%, cette fonte fait environ 32 mm.
 
 Elle peut être agrandie jusqu'a 150% (env 48 mm) ou diminuée jusqu'à 80% (env 25 mm).
 
-## Réalisations
+## Dans la vraie vie
 
-![Baumans2](/assets/images/fonts/baumans2.jpg)
-![Baumans3](/assets/images/fonts/baumans3.jpg)
-![Baumans4](/assets/images/fonts/baumans4.jpg)
+![Tshirt](/assets/images/fonts/baumans2.jpg)
+![Sample](/assets/images/fonts/baumans3.jpg)
+![Hoop](/assets/images/fonts/baumans4.jpg)
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/baumans_FI/LICENSE)
