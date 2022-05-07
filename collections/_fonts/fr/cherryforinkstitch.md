@@ -27,16 +27,16 @@ Elle peut être agrandie jusqu'à 180% (env 90 mm) ou diminuée jusqu'à 80% (en
 
 
 
-## Réalisations
+## Dans la vraie vie
 Ici, Cherry for Ink/Stitch est accommpagnée par une lettre de la police d'initiales [Cherry for  Kaalleen](https://inkstitch.org/fr/fonts/cherryforkaalleen/)
 
 
 
 
-![CherryforKaalleen3](/assets/images/fonts/cherry2.jpg)
+![Sac](/assets/images/fonts/cherry2.jpg)
 
 Là, la police a rencontré quelques cerises.... 
 
-![Cherryforinkstitch4](/assets/images/fonts/cherryforinkstitch4.jpg)
+![Serviette](/assets/images/fonts/cherryforinkstitch4.jpg)
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/cherryforinkstitch/LICENSE)
