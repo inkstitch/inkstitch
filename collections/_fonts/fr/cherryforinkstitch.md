@@ -7,7 +7,30 @@ preview_image: /assets/images/fonts/cherryforinkstitch.png
 ---
 ![Cherryforinkstitch](/assets/images/fonts/cherryforinkstitch.png)
 
+## Glyphes
+
+Cette fonte contient ces 74	glyphes:
+
+ABCDEFGHIJK
+LMNOPQRSTU
+VWXYZabcde
+fghijklmno
+pqrstuvwxy
+z123456789
+0.:;,?!()'
+"-`
+
+## Dimensions
+Utilisée à 100%, cette fonte fait environ 50 mm.
+
+Elle peut être agrandie jusqu'a 180% (env 90 mm) ou diminuée jusqu'à 80% (env 40 mm).
+
+
+
+## Réalisations
 Ici, Cherry for Ink/Stitch est accommpagnée par une lettre de la police d'initiales cherry for Ink/Stitch
+
+
 
 ![CherryforKaalleen3](/assets/images/fonts/cherry2.jpg)
 
