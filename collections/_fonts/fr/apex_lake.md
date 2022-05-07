@@ -26,7 +26,7 @@ Apex Lake est une grande fonte, elle est faite pour être utilisée une lettre o
 Utilisée à 100% elle mesure environ 60mm de haut. Elle peut être réduite jusqu'à 80% (50mm) et agrandie jusqu'à 130% (110mm).
 
 ## Tri des couleurs 
-Si vous brodez plusieurs lettrines, vous pouvez souhaiter trier les couleurs. C'est possible à condition de respecter leur ordre relatif à l'interieur de chaque lettre. [Voici comment faire] (https://inkstitch.org/fr/docs/lettering/#tri-des-couleurs)
+Si vous brodez plusieurs lettrines, vous pouvez souhaiter trier les couleurs. C'est possible à condition de respecter leur ordre relatif à l'interieur de chaque lettre. [Voici comment faire](https://inkstitch.org/fr/docs/lettering/#tri-des-couleurs)
 
 
 
