@@ -40,6 +40,8 @@ Why not use Apex Lake on a T shirt
 
 ![T Shirt](/assets/images/fonts/apex2.jpg)
 
+![TShirt](/assets/images/fonts/apex4.jpg)
+
 or on a fabric basket ?
 
 ![Basket](/assets/images/fonts/apex3.jpg)
