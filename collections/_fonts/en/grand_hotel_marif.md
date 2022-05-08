@@ -7,6 +7,8 @@ preview_image: preview_image:
   - /assets/images/fonts/grand_hotel_marif.png
   - /assets/images/fonts/grandhotel_small.png
 ---
+
+
 ![grand_hotel_marif](/assets/images/fonts/grand_hotel_marif.png)
 ![grand_hotel_marif](/assets/images/fonts/grandhotel_small.png)
 
@@ -57,5 +59,9 @@ Isn't it nice as a label font ?
 or on this apron, with the help of glacial tiny ?
 
 ![grand_hotel_marif3](/assets/images/fonts/glacialgrandhotel.jpg)
+
+Grand Hotel Small 25%
+
+![Tshirt ](/assets/images/fonts/grandhotel_small_3.jpg)
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/grand_hotel_marif/LICENSE)
