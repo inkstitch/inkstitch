@@ -28,7 +28,7 @@ Used at 100% it is approximatively 60mm  high (2.2 inches) .
 It can be scaled down to 80% (approx. 50mm,  2 inches) and scaled up to 130% (approx 110mm, 5 inches).
 
 ## Color sorting
-If you embroider several letters, you may wish to color sort. It is possible, providing the sorting respects the relative order inside each letter. [Voici comment faire](https://inkstitch.org/fr/docs/lettering/#tri-des-couleurs)
+If you embroider several letters, you may wish to color sort. It is possible, providing the sorting respects the relative order inside each letter. [This is a way to do it](https://inkstitch.org/en/docs/lettering/#color-sorting)
 
 
 
