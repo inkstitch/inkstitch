@@ -26,6 +26,9 @@ Cette fonte utilise l'arangement automatique des colonnes satin.
 Pour un texte multiligne il est possible de broder alternativement de la gauche vers la droite  et de la droite vers la gauche.
 Il est possible d'ajouter des commandes de coupe de fil.
 
+## Dans la vraie vie 
+![Etiquettes](/assets/images/fonts/TTmaster2.jpg)
+
 	
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/tt_masters/LICENSE)
