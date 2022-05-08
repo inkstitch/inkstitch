@@ -37,6 +37,8 @@ Et pourquoi pas sur un T shirt ?
 
 ![TShirt](/assets/images/fonts/apex2.jpg)
 
+![TShirt](/assets/images/fonts/apex4.jpg)
+
 ou sur un panier en tissu ?
 
 ![Panier](/assets/images/fonts/apex3.jpg)
