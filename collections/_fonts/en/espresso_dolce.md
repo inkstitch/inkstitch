@@ -41,7 +41,7 @@ Don't try to scale it further down.
 
 Espresso tiny  (it is part of an upcoming Ink/Stitch version and not available in Ink/Stitch v2.1.2) is a variation of this font with different embroidery settings. Pull compensation, density and underlays are different to allow to scale down between 55% (12 mm, 0.4 inch) and 25% (5mm ,1/5 inch). 
 
-That's why in the lettering dialog window, if using Pacificlo tiny, you will have to pick up a scale between 25 and 55%. 
+That's why in the lettering dialog window, if using Espresso tiny, you will have to pick up a scale between 25 and 55%. 
 
 Contrarly to Espresso KOR, Espresso tiny   **MUST** be embroidered with thread and needle smaller than usual.
 A USA 8 (EUR 60) size needle, and 60WT thread **MUST** be used.
