@@ -43,16 +43,16 @@ Cette fonte est réduite et simplifiée. On garde la possibilité d'encadrer une
 
 Cadre|Caractère 
 ---|---
-![Point](/assets/images/fonts/sortefax/point.png)|.
-![Virgule](/assets/images/fonts/sortefax/virgule.png)|,
-![DeuxPoints](/assets/images/fonts/sortefax/deuxpoints.png)|:
-![PointVirgule](/assets/images/fonts/sortefax/pointvirgule.png)|;
 ![ouvrante](/assets/images/fonts/sortefax/ouvrante.png)|(
 ![fermante](/assets/images/fonts/sortefax/fermante.png)|)
 ![ouvrantecarre](/assets/images/fonts/sortefax/[.png)|[
 ![fermantecarre](/assets/images/fonts/sortefax/].png)|]
 ![accolade_ouvrante](/assets/images/fonts/sortefax/{.png)|{
 ![accolade_fermante](/assets/images/fonts/sortefax/}.png)|}
+![Point](/assets/images/fonts/sortefax/point.png)|.
+![Virgule](/assets/images/fonts/sortefax/virgule.png)|,
+![DeuxPoints](/assets/images/fonts/sortefax/deuxpoints.png)|:
+![PointVirgule](/assets/images/fonts/sortefax/pointvirgule.png)|;
 
 
 ## Dans la vraie vie
