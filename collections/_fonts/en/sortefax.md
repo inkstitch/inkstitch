@@ -38,7 +38,7 @@ Of course, using Inkscape,  you may easily reposition the frame or resize it or 
 ### Sortefax Medium Initials
 Sortefax Médium Initials is  smaller but  also simplier.
 
-It is still possible to use frame, but the arranging of the frame and the letter is  not as good as for the XL font.
+It is still possible to use frames, but the arranging of the frame and the letter is  not as good as for the XL font.
 But this font may be used to write whole words with a correct kerning and not only single letters.
 
 
