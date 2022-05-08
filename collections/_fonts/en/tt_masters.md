@@ -9,7 +9,7 @@ preview_image: /assets/images/fonts/tt_masters.png
 
 ## Glyphes
 
-This fontcontains 103 glyphs :
+This font contains 103 glyphs :
 
 1234567890§!+"^*-:.;,|<>/}][{€$@=()@%'AaSsDdFfGgHhJjKkLlÖöÄäQqWwEeRrTtYyUuIiOoPpZzXxCcVvBbNnMm?_‰~©«»±°®´Üü
 
