@@ -6,10 +6,32 @@ toc: false
 preview_image: /assets/images/fonts/infinipicto.png
 ---
 ![InfiniPicto](/assets/images/fonts/infinipicto.png)
+## Glyphes
 
-InfiniPicto used on a T shirt :
+Cette fonte contient les 26 glyphes
 
-![InfiniPicto2](/assets/images/fonts/infinipicto2.jpg)
+	ABCDEFGHIJKLMNOPQRSTUVWXYZ
+
+## Description
+Infinipicto est une collection de pictogrammes. Chaque lettre représente un objet stylisé dont elle est l'initiale en Français: A pour arrosoir, B pour Bateau.....
+![Sample ](/assets/images/fonts/infinipicto2.png)
+
+## Dimensions
+
+
+Utilisée à 100%, cette fonte fait environ 70 mm.
+
+Elle peut être agrandie jusqu'a 200% (env 140 mm) ou diminuée jusqu'à 70% (env 50 mm).
+
+## Tri des couleurs
+
+A cause de la variété de lettres, rien ne garantie que les couleurs puissent être facilement triées. Faire attention, donc.
+
+## Dans la vraie vie 
+
+InfiniPicto sur un T shirt :
+
+![T Shirt](/assets/images/fonts/infinipicto2.jpg)
 
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/infinipicto/LICENSE)
