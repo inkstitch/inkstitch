@@ -3,12 +3,16 @@ title: "Espresso KOR"
 permalink: /fonts/espresso_dolce/
 last_modified_at: 2022-05-05
 toc: false
-preview_image: /assets/images/fonts/espresso_dolce.png
+preview_image:
+  - /assets/images/fonts/espresso_dolce.png
+  - /assets/images/fonts/espresso_tiny.png
 ---
-![EspressoDolce](/assets/images/fonts/espresso_dolce.png)
+![Espresso KOR](/assets/images/fonts/espresso_dolce.png)
+![Espresso tiny](/assets/images/fonts/espresso_tiny.png)
+
 
 ## Glyphs
-This font contains 113 glyphes:
+This font  contains  113 glyphes :
 
 !%@()*+,-.
 /012345678
@@ -23,19 +27,24 @@ vwxyz«'°’»×
 ïôö÷ùûüœßÜ
 ÖÄ
 
-### Dimensions
+## Remark
+Multiline text may be embroidered alternatively from left to right and  right to left.
+## Dimensions
 
-At 100%, this font is approximatively 20 mm high (0.8 inches)
+At 100%, this font is approximatively  20 mm  (0.8 inch) tall.
 
-It can be scaled up to 200% (approx 40 mm, 1.5 inches ) or scaled down to 80% (approx 14  mm, 0.6 inch).
-
-Don't try to scale it further down. 
+It may be scaled up to  200% (approx 40 mm, 1.5 inch) or down to 80% (approx 16mm 0.7 inch).
 
 ![Dimensions Espresso](/assets/images/fonts/Sizing/espressosizing.jpg)
 
-[Espresso Tiny](https://inkstitch.org/fr/fonts/espresso_tiny/) is a variation of this font with different embroidery settings that allow to scale down between 55% (16mm,2/3 inch) and 25% (7mm ,1/4 inch). It requires the use of a finer needle (EUR 60 USA 8) and a finer thread (60WT).
+Don't try to scale it further down.
 
+Espresso tiny  (it is part of an upcoming Ink/Stitch version and not available in Ink/Stitch v2.1.2) is a variation of this font with different embroidery settings. Pull compensation, density and underlays are different to allow to scale down between 55% (12 mm, 0.4 inch) and 25% (5mm ,1/5 inch). 
 
+That's why in the lettering dialog window, if using Pacificlo tiny, you will have to pick up a scale between 25 and 55%. 
+
+Contrarly to Espresso KOR, Espresso tiny   **MUST** be embroidered with thread and needle smaller than usual.
+A USA 8 (EUR 60) size needle, and 60WT thread **MUST** be used.
 
 
 ## In real life
