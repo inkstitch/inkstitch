@@ -12,7 +12,7 @@ preview_image:
 
 ![Geneva Simple Sans](/assets/images/fonts/geneva_simple_sans.png)
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/geneva_simple/LICENSE)
+
 
 ### Glyphs
 
@@ -36,7 +36,6 @@ xyz0123456
 
 ![Geneva Simple Sans](/assets/images/fonts/geneva_simple_sans_rounded.png)
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/geneva_rounded/LICENSE)
 
 ### Glyphes
 
@@ -61,3 +60,6 @@ At 100%, these fonts are approximatively  14 mm (1/2 inch) tall.
 
 They can be scaled up to  200% (approx 28 mm, 1 inch) or scaled down to 75% (approx 9 mm, 1/3 inch).
 
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/geneva_simple/LICENSE)
+
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/geneva_rounded/LICENSE)
