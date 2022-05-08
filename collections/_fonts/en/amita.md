@@ -3,9 +3,12 @@ title: "Amitaclo"
 permalink: /fonts/amita/
 last_modified_at: 2022-05-05
 toc: false
-preview_image: /assets/images/fonts/amita.png
+preview_image: 
+- /assets/images/fonts/amita.png
+- /assets/images/fonts/amitaclo_small.png
 ---
-![Amita](/assets/images/fonts/amita.png)
+![Amitaclo](/assets/images/fonts/amita.png)
+![Amitaclo small](/assets/images/fonts/amita_small.png)
 
 ## Glyphs
 Amitaclo  contains 110 glyphs :
@@ -34,7 +37,15 @@ It can be scaled up to 200% (approx 60 mm, 2.4 inches ) or scaled down to 80% (a
 
 Don't try to scale it further down. 
 
-[Amitaclo small font](https://inkstitch.org/fr/fonts/amitaclo_small/) is a variation of this font with different embroidery settings that allow to scale down between 55% (16mm,2/3 inch) and 25% (7mm ,1/4 inch). It requires the use of a finer needle (EUR 60 USA 8) and a finer thread (60WT).
+Amitaclo small (his is part of an upcoming Ink/Stitch version and not available in Ink/Stitch v2.1.2) is a variation of this font with different embroidery settings that allow to scale down between 55% (16mm,2/3 inch) and 25% (7mm ,1/4 inch). 
+
+That's why in the lettering dialog window, if using amitaclo small, you will have to pick up a scale between 25 and 55%. 
+
+
+### Thread and Needle
+
+The smallified font **MUST** be embroidered with thread and needle smaller than usual.
+A USA 8 (EUR 60) size needle, and 60WT thread **MUST** be used.
 
 ## In real life
 
