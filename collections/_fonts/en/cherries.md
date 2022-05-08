@@ -28,6 +28,8 @@ It can be scaled up to 180% ( approx 90mm 3.5 inches) or scaled down to 80% (app
 At 100%, this font is approximatively 75 mm high (3 inches)
 It can be scaled up to 130% (approx 100 mm, 4 inches ) or scaled down to 80% (approx 60 mm, 2 inches).
 
+## Color sorting
+If you embroider several letters, you may wish to color sort. It is possible, providing the sorting respects the relative order inside each letter. [This is a way to do it](https://inkstitch.org/en/docs/lettering/#color-sorting)
 
 
 ## In real life
