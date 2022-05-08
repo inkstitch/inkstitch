@@ -27,8 +27,8 @@ At 100%, this font is approximatively 100mm (4 inches)
 It may be scaled  up to 120% (approx. 120 mm, 5 inches) or scaled down to 90% (approx.en 90 mm, 3.5 inches).
 
 
-## Color sorting for Emilio 20 Tricolore
-If you embroider several letters, you may wish to color sort. It is possible, providing the sorting respects the relative order inside each letter. [Voici comment faire](https://inkstitch.org/fr/docs/lettering/#tri-des-couleurs)
+## Color sorting
+If you embroider several letters, you may wish to color sort. It is possible, providing the sorting respects the relative order inside each letter. [This is a way to do it](https://inkstitch.org/en/docs/lettering/#color-sorting)
 
 ## In real life
 
