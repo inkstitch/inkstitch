@@ -6,6 +6,29 @@ toc: false
 preview_image: /assets/images/fonts/magnolia_script.png
 ---
 ![Magnolia](/assets/images/fonts/magnolia_script.png)
+## Glyphes
+
+Cette fonte contient les 109 glyphes :
+
+!"%@'’()+,-
+./01234567
+89:;<=>?@\
+_{}°×àâäæç
+èéêëîïôöùû
+üÄÖÜßœabcd
+efghijklmn
+opqrstuvwx
+yzABCDEFGH
+IJKLMNOPQR
+STUVWXYZ
+
+## Dimensions
+
+Utilisée à 100%, cette fonte fait environ 22 mm.
+
+Elle peut être agrandie jusqu'a 120% (env 25 mm) ou diminuée jusqu'à 80% (env  18 mm).
+
+## Dans la vraie vie
 
 ![Magnolia2](/assets/images/fonts/magnolia2.jpg)
 
