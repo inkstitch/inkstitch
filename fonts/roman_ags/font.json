@@ -1,10 +1,9 @@
 {
-    "name": "Romanaugusa bicolor",
-    "description": "Based on Latin Modern Roman 10 Bold italic. A font with capital letters with 2 colors. Very easy to use with letters from Romanaugusa. The capital M is 42.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 130%. Every satin has zigzag underlay",
+    "name": "Roman AGS",
+    "description": "Based on Latin Modern Roman 10 Bold italic. The capital M is 42.5 millimeter wide at 100% scale.  Can be scaled down to 70% or up to 130%.  Every satin has zigzag underlay",
     "leading": 150,
     "auto_satin": false,
     "reversible": true,
-	"letter_case": "upper",
     "default_glyph": " ",
     "min_scale": 0.8,
     "max_scale": 1.3,

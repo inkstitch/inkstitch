@@ -34,7 +34,7 @@
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g1696"
+     inkscape:current-layer="g5483"
      inkscape:document-units="px"
      inkscape:document-rotation="0"
      showguides="true"
@@ -1779,10 +1779,25 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-'"
-     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-opacity:1;stroke-miterlimit:4;"
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g1304">
     <path
        id="path1855"
+       d="M 5.6910568,32.215446 19.918699,32.317073 M 12,26 C 24.464112,29.762932 10.230833,42.082492 4,40 M 9,26 c -2.6110435,2.874633 0.7287939,9.051316 -2,12 -1,1 -2,1 -3,1"
+       inkstitch:satin_column="True"
+       inkstitch:ties="2"
+       inkstitch:zigzag_underlay="True"
+       sodipodi:nodetypes="ccccccc"
+       inkstitch:pull_compensation_mm="0.1"
+       inkstitch:zigzag_underlay_inset_mm="0.1" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-’"
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     id="g5483">
+    <path
+       id="path5481"
        d="M 5.6910568,32.215446 19.918699,32.317073 M 12,26 C 24.464112,29.762932 10.230833,42.082492 4,40 M 9,26 c -2.6110435,2.874633 0.7287939,9.051316 -2,12 -1,1 -2,1 -3,1"
        inkstitch:satin_column="True"
        inkstitch:ties="2"
