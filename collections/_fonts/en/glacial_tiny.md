@@ -8,7 +8,7 @@ preview_image: /assets/images/fonts/glacial_tiny.png
 ![glacial_tiny](/assets/images/fonts/glacial_tiny.png)
 
 This is part of an upcoming Ink/Stitch version and not available in Ink/Stitch v2.1.2
-## Glyphes
+## Glyphs
 
 This font contains 159 glyphs:
 	
