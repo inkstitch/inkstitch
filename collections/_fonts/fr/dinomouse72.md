@@ -21,7 +21,7 @@ Utilisée à 100%, cette fonte fait environ 20 mm.
 Elle peut être agrandie jusqu'a 300% (env 60 mm) et reduite jusqu'à  50% (env 10 mm)
 
 ## Dans la vraie vie
-![Porte Clés](/assets/images/fonts/nick_hainley2.jpg)
+![Sample](/assets/images/fonts/dinomouse72_2.jpeg)
 
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/dinompuse72/LICENSE)
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/dinomouse72/LICENSE)
