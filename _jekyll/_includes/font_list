@@ -1,9 +1,9 @@
 {% assign fonts = site.fonts | where: "lang", page.lang %}
 
 {%- for font in fonts -%}
+[{{ font.title }}]({{ font.permalink }})
   {%- for image in font.preview_image -%}
 ![{{font.title}} Preview]({{ image }})
-[{{ font.title }}]({{ font.permalink }})
 <br><br>
   {%- endfor -%}
 {%- endfor -%}
