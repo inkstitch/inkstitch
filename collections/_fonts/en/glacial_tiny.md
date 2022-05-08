@@ -29,10 +29,11 @@ z~ÀÁÂÃÄÅÆŒ
 òóôõöúùûüč
 ČřŘŠšŽžÐÞ
 
+## Remark 
 This font allows  multiline text to be embroidered alternatively from left to right and from right to left.
 
 
-## Warning:
+## Warning
 
 This font is very very tiny.
 
