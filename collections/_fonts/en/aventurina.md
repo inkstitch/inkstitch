@@ -30,6 +30,7 @@ On a bookmark:
 Aventurina on a hand towel
 
 ![Towel](/assets/images/fonts/aventurina2.jpg)
+![Maxence](/assets/images/fonts/aventurina4.jpg)
 
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/aventurina/LICENSE)
