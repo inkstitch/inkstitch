@@ -42,7 +42,7 @@ If you do not follow these recommendations, you will probably have lots of embro
 
 At 100%, this font is approximatively 7 mm (1/4 inch) high.
 
-It can be scaled up to 140% (approx 11 mm, 0.4 inch) or scaled down to 60% (env 4.5 mm, 1/6  inch).
+It can be scaled up to 140% (approx 11 mm, 0.4 inch) or scaled down to 60% (approx 4.5 mm, 1/6  inch).
 
 
 ![Dimensions Glacialtiny](/assets/images/fonts/Sizing/glacialsizing2.jpg)
@@ -55,7 +55,7 @@ On a cushion
 
 ![Cushion](/assets/images/fonts/glacial3.jpg)
 
-Used in conjunction with Grand Hotel Marif on an apron :
+Used in conjunction with Grand Hotel Marif on an apron 
 
 ![Apron](/assets/images/fonts/glacialgrandhotel.jpg)
 
