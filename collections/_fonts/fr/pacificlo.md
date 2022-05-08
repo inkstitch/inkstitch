@@ -26,7 +26,7 @@ klmnñoóôöò
 ·:,!¡.?¿"'
 ';/()-+=@&
 
-## Dimensions:
+## Dimensions
 
 Utilisée à 100%, cette fonte fait environ 20 mm.
 
@@ -36,9 +36,9 @@ Elle peut être agrandie jusqu'a 200% (env 40 mm) ou diminuée jusqu'à 60% (env
 
 N'essayez pas de broder cette fonte à une dimension inférieure, vous auriez beaucoup de problèmes. 
 
-La fonte Pacificlo tiny est une déclinaison de cette fonte avec des paramètres de broderie différents qui permet une utilisation entre 55% (11 mm) et 25% (5mm). La densité, la compensation et les sous couches ont été modifiés pour permettre de broder cette fonte en plus petite taille que la taille initiale.
+La fonte Pacificlo tiny est une déclinaison de cette fonte avec des paramètres de broderie différents. La densité, la compensation et les sous couches ont été modifiés pour permettre de broder cette fonte en plus petite taille que la taille initiale.
 
-C'est pourquoi dans la fenêtre de dialogue du lettrage, il vous sera demandé  si vous utilisez Pacificlo tiny d'indiquer un redimensionnement entre 25 et 55% de la taille de la fonte pacificlo  initiale, passant ainsi de lettres d'environ 20mm de haut à des lettres entre 5 et 12mm.
+C'est pourquoi dans la fenêtre de dialogue du lettrage, il vous sera demandé  si vous utilisez Pacificlo tiny d'indiquer un redimensionnement entre 25 et 55% de la taille de la fonte pacificlo  initiale, passant ainsi de lettres d'environ 20mm de haut à des lettres entre 5 et 11 mm.
 
 
 Contrairement à Pacificlo, Pacificlo tiny **DOIT** être brodée avec un fil et une aiguille plus fins que d'ordinaire. Une aiguille de taille 8 (USA), 60(EUR) et un fil 60WT **DOIVENT** être utilisés.
