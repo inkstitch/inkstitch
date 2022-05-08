@@ -16,7 +16,7 @@ contient ces 74	glyphes:
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890.:;,?!()'"-`
 
 ### Cherry for Kaalleen
-contient  ces 36 glyphs :
+contient  ces 36 glyphes :
 ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890
 
 
