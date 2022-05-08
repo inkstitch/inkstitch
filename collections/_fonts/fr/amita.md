@@ -5,7 +5,7 @@ last_modified_at: 2022-05-05
 toc: false
 preview_image: 
 - /assets/images/fonts/amita.png
-- /assets/images/fonts/amita_small.png
+- /assets/images/fonts/amitaclo_small.png
 ---
 ![Amitaclo](/assets/images/fonts/amita.png)
 ![Amitaclo small](/assets/images/fonts/amitaclo_small.png)
