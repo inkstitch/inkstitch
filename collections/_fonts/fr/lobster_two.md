@@ -5,10 +5,32 @@ last_modified_at: 2022-05-05
 toc: false
 preview_image: /assets/images/fonts/lobster_two_bold_italic.png
 ---
-## Bold Italic
+# Bold Italic
 ![Lobster AGS](/assets/images/fonts/lobster_two_bold_italic.png)
 
-Lobster AGS  a de nombreux usages:
+## Glyphes
+
+Cette fonte contient les 97 glyphes :
+
+
+0123456789
+ABCDEFGHIJ
+KLMNOPQRST
+UVWXYZaáâä
+æàbcçdeéêë
+èfghiîïjkl
+mnoôöœpqrs
+tuûüùvwxyz
+ß@@-;'’+.?(
+),=:!"
+
+## Dimensions
+
+Utilisée à 100%, cette fonte fait environ 22 mm.
+
+Elle peut être agrandie jusqu'a 150% (env 33 mm) ou diminuée jusqu'à 80% (env  18 mm).
+
+## Dans la vraie vie
 
 ![Lobster 2](/assets/images/fonts/lobster2.jpg)
 ![Lobster 3](/assets/images/fonts/lobster3.jpg)
