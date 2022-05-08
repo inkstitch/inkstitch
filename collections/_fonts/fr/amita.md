@@ -3,14 +3,17 @@ title: "Amitaclo"
 permalink: /fr/fonts/amita/
 last_modified_at: 2022-05-05
 toc: false
-preview_image: /assets/images/fonts/amita.png
+preview_image: 
+- /assets/images/fonts/amita.png
+- /assets/images/fonts/amita_small.png
 ---
-![Amita](/assets/images/fonts/amita.png)
+![Amitaclo](/assets/images/fonts/amita.png)
+![Amitaclo small](/assets/images/fonts/amitaclo_small.png)
 
 
 
 ## Glyphes
-Amitaclo  contient les 110 glyphes :
+Amitaclo contient les 110 glyphes :
 	
 œıüûúùöôóñ
 ïîíëêéèçæä
@@ -36,7 +39,11 @@ Elle peut être agrandie jusqu'a 200% (env 60 mm) ou diminuée jusqu'à 80% (env
 
 N'essayez pas de broder cette fonte à une dimension inférieure, vous auriez beaucoup de problèmes. 
 
-La fonte [Amitaclo small](https://inkstitch.org/fr/fonts/amitaclo_small/) est une déclinaison de cette fonte avec des paramètres de broderie différents qui permet une utilisation entre 55% (16 mm) et 25% (7mm). Elle necessite l'usage d'une aiguille plus fine (EUR 60 USA 8)  et d'un fil plus fin (60WT) que Amitaclo
+La fonte Amitaclo small (Cette fonte sera dans une prochaine version d'Ink/Stitch et n'est pas disponible dans Ink/Stitch v2.1.2.) est une déclinaison de cette fonte avec des paramètres de broderie différents qui permet une utilisation entre 55% (16 mm) et 25% (7mm).
+
+Dans la fenêtre de dialogue du lettrage si vous choisissez Amitaclo small , il vous sera demandé d'indiquer un redimensionnement entre 25 et 55% de la taille de la fonte amitaclo initiale, passant ainsi de lettres d'environ 30mm de haut à des lettres entre 7 et 16 mm.
+
+Cette fonte diminuée DOIT être brodée avec un fil et une aiguille plus fins que d'ordinaire. Une aiguille de taille 8 (USA), 60(EUR) et un fil 60WT DOIVENT être utilisés.
 
 ## Dans la vraie vie
 
