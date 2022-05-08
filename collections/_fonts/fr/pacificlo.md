@@ -50,7 +50,7 @@ Le nom latin est brodé avec Pacificlo tandis que le nom français utilise  Lear
 
 ![Pacificlo2](/assets/images/fonts/pacificlolearning.jpg)
 
-Pour décorer un pot de confiture:
+Version tiny, pour décorer un pot de confiture:
 
 ![Pacificlotiny jam covers](/assets/images/fonts/pacificlotiny1.jpg)
 
