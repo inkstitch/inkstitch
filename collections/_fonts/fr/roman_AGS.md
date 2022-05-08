@@ -25,10 +25,16 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZÄÆÖÜŒ
 
 ## Dimensions
 
-Utilisée à 100%, cette fonte fait environ 20 mm.
 
-Elle peut être agrandie jusqu'a 140% (env 28 mm) ou diminuée jusqu'à 80% (env 16mm).
+Utilisées à 100%, ces fontes font environ 28 mm de haut .
+Elles peuvent être agrandies jusqu'a 130% (env 37 mm) ou diminuées jusqu'à 80% (env  22 mm).
+
+
+
 
 ## Dans la vraie vie
+![ManuscriptGothisch5](/assets/images/fonts/gothicromanaugusa1.jpg)
+![ManuscriptGothisch6](/assets/images/fonts/gothicromanaugusa2.jpg)
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/romanaugusa/LICENSE)
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/roman_ags_bicolor/LICENSE)
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/roman_ags/LICENSE)
