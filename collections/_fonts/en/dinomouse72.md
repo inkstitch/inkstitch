@@ -8,6 +8,8 @@ preview_image: /assets/images/fonts/dinomouse72.png
 ---
 ![DinoMouse 72](/assets/images/fonts/dinomouse72.png)
 
+This font will be part of next Ink/Stitch version and is not yet available in Ink/Stitch v2.1.2.
+
 ## Glyphs
 
 This font contains 106 glyphs :
