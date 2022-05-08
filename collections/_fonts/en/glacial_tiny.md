@@ -29,6 +29,9 @@ z~ÀÁÂÃÄÅÆŒ
 òóôõöúùûüč
 ČřŘŠšŽžÐÞ
 
+This font allows  multiline text to be embroidered alternatively from left to right and from right to left.
+
+
 ## Warning:
 
 This font is very very tiny.
