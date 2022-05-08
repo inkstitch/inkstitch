@@ -10,17 +10,7 @@ preview_image: /assets/images/fonts/magnolia_script.png
 
 Cette fonte contient les 109 glyphes :
 
-!"%@'’()+,-
-./01234567
-89:;<=>?@\
-_{}°×àâäæç
-èéêëîïôöùû
-üÄÖÜßœabcd
-efghijklmn
-opqrstuvwx
-yzABCDEFGH
-IJKLMNOPQR
-STUVWXYZ
+!"%@'’()+,-./0123456789:;<=>?@\_{}°×àâäæçèéêëîïôöùûüÄÖÜßœabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
 
 ## Dimensions
 
