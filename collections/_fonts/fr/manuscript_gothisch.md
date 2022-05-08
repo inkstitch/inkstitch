@@ -6,6 +6,21 @@ toc: false
 preview_image: /assets/images/fonts/manuscript_gothisch.png
 ---
 ![ManuscriptGothisch](/assets/images/fonts/manuscript_gothisch.png)
+## Glyphes
+
+Cette fonte contient les 105 glyphes :
+
+
+!"@'’(),-./0123456789:;<=>?@ACBDEFGHIJKLMNOPQRSTUVWXYZ\abcdefghijkmnopqrstuvwxyzÄÆÔÖÜßàâäæçèéêëîïôöùûüŒœl
+
+## Dimensions
+
+Utilisée à 100%, cette fonte fait environ 30 mm de haut.
+
+Elle peut être agrandie jusqu'a 140% (env 42 mm) ou diminuée jusqu'à 70% (env  21 mm).
+
+## Dans la vraie vie
+
 
 Manuscript Gothish  sur une serviette:
 
