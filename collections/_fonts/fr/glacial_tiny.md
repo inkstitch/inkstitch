@@ -57,4 +57,7 @@ Glacial utilisée avec Grand Hotel Marif sur un tablier:
 
 ![Tablier](/assets/images/fonts/glacialgrandhotel.jpg)
 
+Sur un T Shirt
+![TShirt](/assets/images/fonts/glacial_5.jpg)
+
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/glacial_tiny/LICENSE)
