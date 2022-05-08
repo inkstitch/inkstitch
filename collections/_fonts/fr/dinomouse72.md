@@ -6,7 +6,10 @@ toc: false
 preview_image: /assets/images/fonts/dinomouse72.png
 
 ---
+
 ![DinoMouse 72](/assets/images/fonts/dinomouse72.png)
+
+Cette fonte sera dans une prochaine version d'Ink/Stitch version et n'est pas disponible dans Ink/Stitch v2.1.2.
 
 ## Glyphes
 
