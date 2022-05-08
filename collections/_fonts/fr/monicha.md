@@ -59,15 +59,16 @@ Les deux parentheses ( et ) permettent d'acceder à ces deux ornements:
 
 Mais MONICHA contient aussi 50 lettres minuscules à écharpes de plusieurs types pour certaines lettres stockés dans les derniers glyphes de la liste.
 
-### Il vous faudra donc apprendre à coder ces lettres pour les utiliser.
+### Comment utiliser les lettres alternatives.
 
 Vous ne pouvez pas acceder directement à ces variations en utilisant une simple touche du clavier. Des caractères unicodes particuliers ont été utilisés pour stocker ces variations. Pour utiliser ces variations il faut donc connaître leur code.
 
 Pour faciliter l'usage de ces lettres ce mode d'emploi répertorie les codes et il suffira de copier le code et de le coller dans le module lettrage.
 
-#### Petites echarpes
+####  Petites echarpes
+<details><summary>Toutes les minuscules disposent d'une version à petite echarpe</summary>
 
-Toutes les minuscules disposent d'une version à petite echarpe :
+
 ![Petite Echarpe](/assets/images/fonts/monichasmallswash.png)
 
 Que l'on obtient en utilisant un de ces codes  :
@@ -81,8 +82,11 @@ Que l'on obtient en utilisant un de ces codes  :
 ⒬	⒭	⒮	⒯	⒰
 
 ⒱	⒲	⒳	⒴	⒵
+	
+</details>
 
-####  Echarpes longues soulignantes: a-d-h-i-k-l-m-n-r-t-u
+####  Echarpes longues soulignantes
+<details><summary>  a-d-h-i-k-l-m-n-r-t-u </summary>
 ![Echarpe Longue Soulignante](/assets/images/fonts/monichalongswash.png)
 
 Ces  11 lettres disposent de plus d'une longue écharpe soulignante.
@@ -101,7 +105,12 @@ On les obtient en utilisant ces codes :
 
 	Ⓡ		Ⓣ	Ⓤ
 
-#### Echarpe soulignant moyenne : g-j-y.
+</details>
+
+#### Echarpe soulignante moyenne 
+
+<details><summary>  g-j-y </summary>
+
 ![Echarpe Moyenne Soulignante](/assets/images/fonts/monichamediumswash.png)
 
 Ces trois lettres disposent d'une écharpe soulignante moyenne.
@@ -113,7 +122,11 @@ On les obtient en utilisant ces codes :
 
 Ⓖ	Ⓙ	Ⓨ
 
-#### Echarpe basse bouclée : g-j-y 
+
+</details>
+
+#### Echarpe basse bouclée 
+<details><summary>  g-j-y </summary>
 ![Echarpe Basse Bouclée](/assets/images/fonts/monichacurly.png)
 Ces trois lettres disposent  aussi d'une version à écharpes basse bouclée.
 
@@ -122,8 +135,13 @@ Elles ne doivent pas être suivies d'une lettre à jambage descendant sur deux l
 On les obtient en utilisant ces codes :
 
 ⓖ	ⓙ	ⓨ
+	
+</details>
 
-#### Echarpe supérieure bouclée et rétrograde: b-d-h-k-l-t
+#### Echarpe supérieure bouclée et rétrograde
+<details><summary> b-d-h-k-l-t </summary>
+
+
 
 ![Echarpe Superieure Bouclée](/assets/images/fonts/monichacurlyup.png)
 Il existe 6 lettres à écharpe supérieure bouclée et rétrograde b-d-h-k-l-t.
@@ -135,14 +153,20 @@ On les obtient en utilisant ces codes :
 
 
 ⓑ	ⓓ	ⓗ	ⓚ	ⓛ	ⓣ
+	
+</details>
 
-#### Le petit dernier : o
+#### Le petit dernier 
+<details><summary> o</summary>
+
 Il existe un o a queue droite
 ![Echarpe Queue Droite](/assets/images/fonts/monichap.png)
 
 On l'obtient en utilisant ce code :
 
 ⓞ
+</details>
+
 
 ##  Dans la vraie vie
 ![Gelee](/assets/images/fonts/monicha2.jpg)
