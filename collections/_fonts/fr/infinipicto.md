@@ -1,7 +1,7 @@
 ---
 title: "InfiniPicto"
 permalink: /fr/fonts/infinipicto/
-last_modified_at: 2022-05-05
+last_modified_at: 2022-05-08
 toc: false
 preview_image: /assets/images/fonts/infinipicto.png
 ---
