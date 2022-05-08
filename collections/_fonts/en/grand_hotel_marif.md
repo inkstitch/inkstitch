@@ -3,9 +3,12 @@ title: "Grand Hotel Marif"
 permalink: /en/fonts/grand_hotel_marif/
 last_modified_at: 2022-05-04
 toc: false
-preview_image: /assets/images/fonts/grand_hotel_marif.png
+preview_image: preview_image: 
+  - /assets/images/fonts/grand_hotel_marif.png
+  - /assets/images/fonts/grandhotel_small.png
 ---
 ![grand_hotel_marif](/assets/images/fonts/grand_hotel_marif.png)
+![grand_hotel_marif](/assets/images/fonts/grandhotel_small.png)
 
 This is part of an upcoming Ink/Stitch version and not available in Ink/Stitch v2.1.2
 
@@ -32,12 +35,20 @@ At 100%, this font is roughtly 35 mm high.
 
 It may be scaled up to 140% (48 mm)  or scaled down to  60% .
 
-Don't try to embroider it smaller or larger, you would get many problems.
-
-However [Grand Hotel Small](https://inkstitch.org/en/fonts/grandhotel_small/) is a modification of Grand Hotel Marif with different embroidery parameters to allow to scale down between  55% (18 mm) and 25% (9mm). Note that this variation require a thiner thread and a thiner needle.
 ![Dimensions Grand Hotel](/assets/images/fonts/Sizing/grandhotelsizing.jpg)
 
-## Realisations
+Don't try to scale it further down. 
+
+Grand Hotell small  is a variation of this font with different embroidery settings. Pull compensation, density and underlays are different to allow to scale down between 55% (18mm, 2/3 inch) and 25% (9mm ,1/3 inch). 
+
+
+That's why in the lettering dialog window, if using Grand Hotel small, you will have to pick up a scale between 25 and 55%. 
+
+Contrarly to Grand Hotel Matif, Grand Hotel small font **MUST** be embroidered with thread and needle smaller than usual.
+A USA 8 (EUR 60) size needle, and 60WT thread **MUST** be used.
+
+## In real life
+
 
 Isn't it nice as a label font ?
 
