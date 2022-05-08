@@ -27,7 +27,6 @@ BA@?=;:987
 
 
 
-![Dimensions Amitaclo](/assets/images/fonts/Sizing/amitaclosizing.jpg)
 
 ## Dimensions
 
@@ -35,16 +34,15 @@ At 100%, this font is approximatively 30 mm high (1.2 inches)
 
 It can be scaled up to 200% (approx 60 mm, 2.4 inches ) or scaled down to 80% (approx 24  mm, 1 inch).
 
+![Dimensions Amitaclo](/assets/images/fonts/Sizing/amitaclosizing.jpg)
+
 Don't try to scale it further down. 
 
 Amitaclo small (his is part of an upcoming Ink/Stitch version and not available in Ink/Stitch v2.1.2) is a variation of this font with different embroidery settings that allow to scale down between 55% (16mm,2/3 inch) and 25% (7mm ,1/4 inch). 
 
 That's why in the lettering dialog window, if using amitaclo small, you will have to pick up a scale between 25 and 55%. 
 
-
-### Thread and Needle
-
-The smallified font **MUST** be embroidered with thread and needle smaller than usual.
+Contrarly to Amitaclo, Amitaclo small font **MUST** be embroidered with thread and needle smaller than usual.
 A USA 8 (EUR 60) size needle, and 60WT thread **MUST** be used.
 
 ## In real life
