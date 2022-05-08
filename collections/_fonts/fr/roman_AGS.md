@@ -1,7 +1,7 @@
 ---
 title: "Roman AGS"
 permalink: /fr/fonts/roman_ags/
-last_modified_at: 2021-05-02
+last_modified_at: 2022-05-07
 toc: false
 preview_image: 
   -/assets/images/fonts/roman_ags.png  
@@ -12,15 +12,11 @@ preview_image:
 
 ## Glyphes
 ### Roman AGS 
-
-Cette fonte contient les 102 glyphes :
-	
+Cette fonte contient les 102 glyphes :	
 !"@'()+,-./0123456789:;?@ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzÄÆÖÜßàáâäæçèéêëîïôöùûüŒœ
 
 ### Roman AGS Bicolor
-
-Cette fonte contient les 31 glyphes :
-	
+Cette fonte contient les 31 glyphes :	
 ABCDEFGHIJKLMNOPQRSTUVWXYZÄÆÖÜŒ
 
 ## Dimensions
