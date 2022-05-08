@@ -8,34 +8,19 @@ preview_image: /assets/images/fonts/nick_ainley.png
 ---
 ![Nick Ainley](/assets/images/fonts/nick_ainley.png)
 
-## Glyphe
+## Glyphes
 
-Cette fonte contient les 144 glyphes :
-
-•„”“’‘—–œŒ
-üûúùøöõôóò
-ñïîíìëêéèç
-æåäãâáàßÜÛ
-ÚÙØÖÕÔÓÒÑÏ
-ÎÍÌËÊÉÈÇÆÅ
-ÄÃÂÁÀ»«zyx
-wvutsrqpon
-mlkjihgfed
-cbaZYXWVUT
-SRQPONMLKJ
-IHGFEDCBA?
-;:98765432
-10/.-,*)('
-&%"!
+Cette fonte contient les 63 glyphes :
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@
 
 ## Dimensions
 
-Utilisée à 100%, cette fonte fait environ 20 mm.
+Utilisée à 100%, cette fonte fait environ 7 mm.
 
-Elle peut être agrandie jusqu'a 140% (env 28 mm) ou diminuée jusqu'à 80% (env 16mm).
+Elle peut être agrandie jusqu'a 300% (env 21 mm) mais ne doit pas être réduite.
 
 ## Dans la vraie vie
-![MarquePage](/assets/images/fonts/excalibur2.jpg)
+![Porte Clés](/assets/images/fonts/nick_hainley2.jpg)
 
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/excalibur_KOR/LICENSE)
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/nick_ainley/LICENSE)
