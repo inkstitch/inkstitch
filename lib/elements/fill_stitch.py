@@ -101,10 +101,10 @@ class FillStitch(EmbroideryElement):
         return self.get_int_param('fill_method', 0)
 
     @property
-    @param('contour_strategy', _('Contour Fill Strategy'), type='dropdown', default=1,
+    @param('contour_strategy', _('Contour Fill Strategy'), type='dropdown', default=0,
            options=[_("Inner to Outer"), _("Single spiral"), _("Double spiral")], select_items=[('fill_method', 1)], sort_index=3)
     def contour_strategy(self):
-        return self.get_int_param('contour_strategy', 1)
+        return self.get_int_param('contour_strategy', 0)
 
     @property
     @param('join_style', _('Join Style'), type='dropdown', default=0,
