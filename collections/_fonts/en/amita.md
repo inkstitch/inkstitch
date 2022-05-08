@@ -8,7 +8,7 @@ preview_image:
 - /assets/images/fonts/amitaclo_small.png
 ---
 ![Amitaclo](/assets/images/fonts/amita.png)
-![Amitaclo small](/assets/images/fonts/amita_small.png)
+![Amitaclo small](/assets/images/fonts/amitaclo_small.png)
 
 ## Glyphs
 Amitaclo  contains 110 glyphs :
