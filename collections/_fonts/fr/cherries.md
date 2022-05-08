@@ -30,6 +30,10 @@ Elle peut être agrandie jusqu'à 180% (env 90 mm) ou diminuée jusqu'à 80% (en
 Utilisée à  100%, cette fonte fait environ 75 mm  de haut.
 Elle peut être agrandie jusqu'à 130% (env 100 mm) ou réduite jusqu'à 80% (env 60  mm).
 
+## Tri des couleurs 
+Si vous brodez plusieurs lettrines, vous pouvez souhaiter trier les couleurs. C'est possible à condition de respecter leur ordre relatif à l'intérieur de chaque lettre. [Voici comment faire](https://inkstitch.org/fr/docs/lettering/#tri-des-couleurs)
+
+
 
 ## Dans la vraie vie
 Elles peuvent être utilisées ensemble 
