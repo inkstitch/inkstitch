@@ -1,6 +1,6 @@
 {
     "name": "Roman AGS",
-    "description": "Based on Latin Modern Roman 10 Bold italic. The capital M is 42.5 millimeter wide at 100% scale.  Can be scaled down to 70% or up to 130%.  Every satin has zigzag underlay",
+    "description": "Based on Latin Modern Roman 10 Bold italic. The capital M is 42.5 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 130%.  Every satin has zigzag underlay",
     "leading": 150,
     "auto_satin": false,
     "reversible": true,
