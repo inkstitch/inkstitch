@@ -38,7 +38,8 @@ It can be scaled up to 200% (approx 60 mm, 2.4 inches ) or scaled down to 80% (a
 
 Don't try to scale it further down. 
 
-Amitaclo small (his is part of an upcoming Ink/Stitch version and not available in Ink/Stitch v2.1.2) is a variation of this font with different embroidery settings that allow to scale down between 55% (16mm,2/3 inch) and 25% (7mm ,1/4 inch). 
+Amitaclo small (it is part of an upcoming Ink/Stitch version and not available in Ink/Stitch v2.1.2) is a variation of this font with different embroidery settings. Pull compensation, density and underlays are different to allow to scale down between 55% (16mm,2/3 inch) and 25% (7mm ,1/4 inch). 
+
 
 That's why in the lettering dialog window, if using amitaclo small, you will have to pick up a scale between 25 and 55%. 
 
