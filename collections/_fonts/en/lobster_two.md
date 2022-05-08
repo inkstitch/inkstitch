@@ -28,9 +28,9 @@ tuûüùvwxyz
 
 ## Dimensions
 
-At 100%, this font is approximatively 22 mm (0.8 inch) high.
+At 100%, this font is approximatively 22 mm (0.9 inch) high.
 
-It can be scaled up to 150% (approx. 33 mm, 1 1/4 inches) or scaled down to  80% (approx.  24 mm, 2/3 inch).
+It can be scaled up to 150% (approx. 33 mm, 1 1/4 inches) or scaled down to  80% (approx.  20 mm, 0.8 inch).
 
 
 ## In real life
