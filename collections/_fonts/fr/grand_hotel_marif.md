@@ -63,6 +63,4 @@ dans sa version small à 25%
 
 
 
-mais à vous de trouver ses autres usages.....
-
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/grand_hotel_marif/LICENSE)
