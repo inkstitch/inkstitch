@@ -56,6 +56,12 @@ Cette fonte n'est elle pas parfaite sur une etiquette ?
 ou associée à Glacial tiny 60 sur ce tablier :
 ![Tablier](/assets/images/fonts/glacialgrandhotel.jpg)
 
+dans sa version small à 25%
+
+![Tshirt ](/assets/images/fonts/grandhotel_small_3.jpg)
+
+
+
 
 mais à vous de trouver ses autres usages.....
 
