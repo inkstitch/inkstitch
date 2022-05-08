@@ -12,13 +12,7 @@ preview_image: /assets/images/fonts/kaushan_script.png
 Cette fonte contient les 62 glyphes :
 
 
-0123456789
-ABCDEFGHIJ
-KLMNOPQRST
-UVWXYZabcd
-efghijklmn
-opqrstuvwx
-yz
+0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
 
 ## Dimensions
 
@@ -28,7 +22,7 @@ Elle peut être agrandie jusqu'a 200% (env 60 mm) ou diminuée jusqu'à 80% (env
 
 ## Dans la vraie vie
 
-Ici, la date est brodée avec Kaushan Script
+Ici, la date est brodée avec Kaushan Script, le reste avec Cherry for Ink/Stitch et Cherry for Kaalleen
 
 ![KaushanScript](/assets/images/fonts/cherry2.jpg)
 
