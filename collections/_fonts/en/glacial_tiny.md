@@ -62,6 +62,9 @@ On a cushion
 Used in conjunction with Grand Hotel Marif on an apron 
 
 ![Apron](/assets/images/fonts/glacialgrandhotel.jpg)
+On a T Shirt
+![TShirt](/assets/images/fonts/glacial_5.jpg)
+
 
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/glacial_tiny/LICENSE)
