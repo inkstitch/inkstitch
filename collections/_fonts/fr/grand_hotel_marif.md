@@ -3,7 +3,9 @@ title: "Grand Hotel Marif"
 permalink: /fr/fonts/grand_hotel_marif/
 last_modified_at: 2022-05-05
 toc: false
-preview_image: /assets/images/fonts/grand_hotel_marif.png
+preview_image: 
+  - /assets/images/fonts/grand_hotel_marif.png
+  - /assets/images/fonts/grand_hotel_small.png
 ---
 ![grand_hotel_marif](/assets/images/fonts/grand_hotel_marif.png)
 
@@ -27,6 +29,7 @@ tuvwxyz«»À
 úûüĨĩĽľŒœŨ
 ũ’
 
+![Dimensions Grand Hotel](/assets/images/fonts/Sizing/grandhotelsizing.jpg)
 
 ## Dimensions:
 
@@ -36,11 +39,15 @@ Elle peut être agrandie jusqu'a 140% (env 48 mm) ou diminuée jusqu'à 60% (env
 
 N'essayez pas de broder cette fonte à une dimension inférieure, vous auriez beaucoup de problèmes. 
 
-La fonte [Grand Hotel Small](https://inkstitch.org/fr/fonts/grandhotel_small/) est une déclinaison de cette fonte avec des paramètres de broderie différents qui permet une utilisation entre 55% (18 mm) et 25% (5mm). Cette variante necessite une aiguille plus fine  (EUR 60 USA 8) et un fil plus fin(60WT)  que Grand Hotel Marif.
+La fonte Grand Hotel Small (Cette fonte sera dans une prochaine version d'Ink/Stitch et n'est pas disponible dans Ink/Stitch v2.1.2.) est une déclinaison de cette fonte avec des paramètres de broderie différents qui permet une utilisation entre 55% (18 mm) et 25% (5mm)
 
-![Dimensions Grand Hotel](/assets/images/fonts/Sizing/grandhotelsizing.jpg)
+Dans la fenêtre de dialogue du lettrage si vous choisissez Grand Hotel small , il vous sera demandé d'indiquer un redimensionnement entre 25 et 55% de la taille de la fonte Grand Hotel Marif, passant ainsi de lettres d'environ 35mm de haut à des lettres entre 9et 20 mm.
 
-## Réalisations:
+Cette fonte diminuée DOIT être brodée avec un fil et une aiguille plus fins que d'ordinaire. Une aiguille de taille 8 (USA), 60(EUR) et un fil 60WT DOIVENT être utilisés.
+
+
+
+## Dans la vraie vie
 
 Cette fonte n'est elle pas parfaite sur une etiquette ?
 ![Etiquette](/assets/images/fonts/grandhotel2.jpg)
