@@ -27,6 +27,8 @@ vwxyz«'°’»×
 ïôö÷ùûüœßÜ
 ÖÄ
 
+## Remarque 
+Cette fonte permet de broder des textes multilignes alternativement de la gauche vers  la droite et de la droite vers la gauche.
 
 ## Dimensions:
 
