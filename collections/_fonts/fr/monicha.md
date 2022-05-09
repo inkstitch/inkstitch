@@ -1,5 +1,5 @@
 ---
-title: "monicha"
+title: "Monicha"
 permalink: /fr/fonts/monicha/
 last_modified_at: 2022-05-05
 toc: false
