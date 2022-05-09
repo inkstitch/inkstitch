@@ -4,19 +4,93 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import networkx as nx
-from shapely.geometry import LineString, MultiLineString, MultiPoint, Point
+from shapely.geometry import LineString, Point
 from shapely.ops import nearest_points
 
 import inkex
 
-from ..debug import debug
-from ..elements import Stroke
 from ..i18n import _
-from ..svg import PIXELS_PER_MM, generate_unique_id, get_correction_transform
+from ..svg import generate_unique_id, get_correction_transform
 from ..svg.tags import INKSCAPE_LABEL, INKSTITCH_ATTRIBS
 from .utils.autoroute import (add_jumps, create_new_group, find_path,
                               get_starting_and_ending_nodes,
                               remove_original_elements)
+from shapely.ops import substring
+
+
+class LineSegments:
+    '''
+    Takes elements and splits them into segments.
+
+    Attributes:
+        elements -- a list of selected stroke elements
+        intersection_points -- a dictionary with intersection points {element_index: [intersection_points]}
+        segments -- a list of segments and corresponding elements [[segment, element]]
+    '''
+    def __init__(self, elements):
+        self.elements = elements
+        self._get_intersection_points()
+        self._get_segments()
+
+    def _get_intersection_points(self):
+        self.intersection_points = {}
+        num_elements = len(self.elements)
+        for i, element in enumerate(self.elements):
+            element_shape = element.as_multi_line_string()
+            for j in range(i + 1, num_elements):
+                e = self.elements[j]
+                shape = e.as_multi_line_string()
+                distance = element_shape.distance(shape)
+                if distance > 50:
+                    continue
+                if not distance == 0:
+                    # add nearest points
+                    near = nearest_points(element_shape, shape)
+                    self._add_point(i, near[0])
+                    self._add_point(j, near[1])
+                # add intersections
+                intersections = element_shape.intersection(shape)
+                if isinstance(intersections, Point):
+                    self._add_point(i, intersections)
+                    self._add_point(j, intersections)
+                elif isinstance(intersections, LineString):
+                    for point in intersections.coords:
+                        self._add_point(i, Point(*point))
+                        self._add_point(j, Point(*point))
+
+    def _add_point(self, element, point):
+        if element in self.intersection_points:
+            self.intersection_points[element] += [point]
+        else:
+            self.intersection_points[element] = [point]
+
+    def _get_segments(self):
+        '''
+        Splits elements into segments at intersection and "almost intersecions".
+        The split method would make this very easy (it can split a MultiString with
+        MultiPoints) but sadly it fails too often, while snap moves the points away
+        from where we want them.  So we need to calculate the distance along the line
+        and finally split it into segments with shapelys substring method.
+        '''
+        self.segments = []
+        for i, element in enumerate(self.elements):
+            line_strings = element.as_multi_line_string()
+            points = self.intersection_points[i]
+            for line in line_strings.geoms:
+                length = line.length
+                points = self.intersection_points[i]
+                distances = [0, length]
+                for point in points:
+                    distance = line.project(point, normalized=True)
+                    if distance < length:
+                        distances.append(distance)
+                distances = sorted(set(distances))
+                for i in range(len(distances) - 1):
+                    start = distances[i]
+                    end = distances[i + 1]
+                    seg = substring(line, start, end, normalized=True)
+                    if seg.length > 0.1:
+                        self.segments.append([seg, element])
 
 
 def autorun(elements, preserve_order=False, break_up=None, starting_point=None, ending_point=None):
@@ -51,83 +125,29 @@ def build_graph(elements, preserve_order, break_up):
     else:
         graph = nx.Graph()
 
-    for element in elements:
-        if not isinstance(element, Stroke):
-            continue
+    if not break_up:
+        segments = []
+        for element in elements:
+            line_strings = [[line, element] for line in element.as_multi_line_string().geoms]
+            segments.extend(line_strings)
+    else:
+        segments = LineSegments(elements).segments
 
-        if not break_up:
-            segments = [LineString(path) for path in element.paths]
-        else:
-            segments = break_up_segments(element, elements)
+    for segment, element in segments:
+        for c1, c2 in zip(segment.coords[:-1], segment.coords[1:]):
+            start = Point(*c1)
+            end = Point(*c2)
 
-        for segment in segments:
-            for c1, c2 in zip(segment.coords[:-1], segment.coords[1:]):
-                start = Point(*c1)
-                end = Point(*c2)
+            graph.add_node(str(start), point=start)
+            graph.add_node(str(end), point=end)
+            graph.add_edge(str(start), str(end), element=element)
 
-                graph.add_node(str(start), point=start)
-                graph.add_node(str(end), point=end)
-                graph.add_edge(str(start), str(end), element=element)
-
-                if preserve_order:
-                    # The graph is a directed graph, but we want to allow travel in
-                    # any direction, so we add the edge in the opposite direction too.
-                    graph.add_edge(str(end), str(start), element=element)
+            if preserve_order:
+                # The graph is a directed graph, but we want to allow travel in
+                # any direction, so we add the edge in the opposite direction too.
+                graph.add_edge(str(end), str(start), element=element)
 
     return graph
-
-
-def break_up_segments(element, elements):
-    '''
-    Add extra nodes at intersections and nearest points.  Users will still have control
-    over the precision by adding nodes where they think good breaking points are.
-    '''
-    segment_list = []
-    line_strings = [LineString(path) for path in element.paths]
-    for line in line_strings:
-        points = []
-        # add points at intersections with other elements (not at self intersections, sorry)
-        intersection_points = get_intersections(line, element, elements)
-        if intersection_points:
-            points.extend(intersection_points)
-        # split at points
-        points = MultiPoint(points)
-        # split line at points, trouble: split() doesn't seem to work on small lines at all
-        # but differene with buffer seems to do the trick
-        # source: https://gis.stackexchange.com/questions/297134/shapely-floating-problems-with-split/327287#327287
-        seg = line.difference(points.buffer(1e-13))
-        if isinstance(seg, LineString):
-            segment_list.append(seg)
-        else:
-            for geom in seg.geoms:
-                if isinstance(geom, LineString) and geom.length > 1:
-                    segment_list.append(geom)
-
-    return segment_list
-
-
-def get_intersections(line, element, elements):
-    points = []
-    for e in elements:
-        if element == e:
-            continue
-        if line.distance(e.shape) > 50:
-            continue
-        # add nearest points
-        near = nearest_points(line, e.as_multi_line_string())
-        points.extend(near)
-        # add intersections
-        intersections = line.intersection(e.as_multi_line_string())
-        if intersections.is_empty:
-            continue
-        if isinstance(intersections, Point):
-            points.append(intersections)
-        elif isinstance(intersections, LineString):
-            points.extend([Point(*c) for c in intersections.coords])
-        elif isinstance(intersections, MultiLineString):
-            for line in intersections.geoms:
-                points.extend([Point(*c) for c in line.coords])
-    return points
 
 
 def add_path_attribs(path):
@@ -174,14 +194,11 @@ def path_to_elements(graph, path):
             else:
                 d += ", %s %s" % (end_coord.x, end_coord.y)
         # exclude jump stitches bigger than 1 mm from the path
-        elif el and d and graph.nodes[start]['point'].distance(graph.nodes[end]['point']) > PIXELS_PER_MM:
+        elif el and d:
             element_list.append(create_element(d, position, path_direction, el))
             original_parents.append(el.node.getparent())
             d = ""
             position += 1
-        elif el and d:
-            # small jumps: use as normal stitches
-            d += ", %s %s" % (end_coord.x, end_coord.y)
 
     element_list.append(create_element(d, position, path_direction, el))
     original_parents.append(el.node.getparent())
