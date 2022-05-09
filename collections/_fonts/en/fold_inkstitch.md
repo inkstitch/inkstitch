@@ -26,6 +26,6 @@ It can be scaled up to 200% (approx 125 mm 5 inches) or scaled down  to 80% (app
 
 Used on a bread bag
 
-![Bread Bag](/assets/images/fonts/folded2.png)
+![Bread Bag](/assets/images/fonts/folded2.jpg)
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/fold_inkstitch/license)
