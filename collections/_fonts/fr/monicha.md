@@ -39,7 +39,7 @@ z§«±»¿ÀÁÂÃ
 
 Utilisée à 100%, cette fonte fait environ 28 mm. Elle peut être agrandie jusqu'a 150% (env 42 mm) mais ne doit pas être diminuée.
 
-## Particularités
+## Description
 
 MONICHA est notre première police à lettres multiformes.
 
@@ -69,7 +69,7 @@ Pour faciliter l'usage de ces lettres ce mode d'emploi répertorie les codes et 
 <details><summary>Toutes les minuscules disposent d'une version à petite echarpe</summary>
 
 
-![Petite Echarpe](/assets/images/fonts/monichasmallswash.png)
+![Petite Echarpe](/assets/images/fonts/monichasmallswash.jpg)
 
 Que l'on obtient en utilisant un de ces codes  :
 
@@ -87,7 +87,8 @@ Que l'on obtient en utilisant un de ces codes  :
 
 ####  Echarpes longues soulignantes
 <details><summary>  a-d-h-i-k-l-m-n-r-t-u </summary>
-![Echarpe Longue Soulignante](/assets/images/fonts/monichalongswash.png)
+	
+![Echarpe Longue Soulignante](/assets/images/fonts/monichalongswash.jpg)
 
 Ces  11 lettres disposent de plus d'une longue écharpe soulignante.
 
