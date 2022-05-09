@@ -45,7 +45,7 @@ Utilisée à 100%, cette fonte fait environ 7 mm.
 Elle peut être agrandie jusqu'a 140% (env 11 mm) ou diminuée jusqu'à 60% (env 4.5 mm).
 
 
-![Dimensions Glacialtiny](/assets/images/fonts/Sizing/glacialsizing2.jpg)
+![Dimensions Glacialtiny](/assets/images/fonts/Sizing/glacialsizing.jpg)
 
 ## Dans la vraie vie
 
