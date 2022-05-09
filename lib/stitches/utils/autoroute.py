@@ -3,8 +3,11 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
+from itertools import combinations
+
 import networkx as nx
-from shapely.geometry import Point
+from shapely.geometry import Point, MultiPoint
+from shapely.ops import nearest_points
 
 import inkex
 
@@ -114,14 +117,13 @@ def possible_jumps(graph):
     Returns: a generator of tuples: (node1, node2, length)
     """
 
-    # We'll take the easy approach and list all edges that aren't already in
-    # the graph.  networkx's algorithm is pretty efficient at ignoring
-    # pointless options like jumping between two points on the same element.
+    for component1, component2 in combinations(nx.connected_components(graph), 2):
+        points1 = MultiPoint([graph.nodes[node]['point'] for node in component1])
+        points2 = MultiPoint([graph.nodes[node]['point'] for node in component2])
 
-    for start, end in nx.complement(graph).edges():
-        start_point = graph.nodes[start]['point']
-        end_point = graph.nodes[end]['point']
-        yield (start, end, start_point.distance(end_point))
+        start_point, end_point = nearest_points(points1, points2)
+
+        yield (str(start_point), str(end_point), start_point.distance(end_point))
 
 
 def get_starting_and_ending_nodes(graph, elements, preserve_order, starting_point, ending_point):
