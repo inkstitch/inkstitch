@@ -30,7 +30,7 @@ It can be scaled up to 200% (approx 36 mm, 1.5 inches) or scaled down to  90% (a
 
 ## In real life 
 
-![Mask Extension ](/assets/images/fonts/learningcurve5.jpeg)
+![Mask Extension ](/assets/images/fonts/learningcurve5.jpe)
 
 
 ![Green Mouse](/assets/images/fonts/learning_curve3.jpg)
@@ -38,6 +38,7 @@ It can be scaled up to 200% (approx 36 mm, 1.5 inches) or scaled down to  90% (a
 ![Miss](/assets/images/fonts/learningcurve2.jpg)
 
 Here Latin is Pacificlo while French is Learning curve
+
 ![Botanical](/assets/images/fonts/pacificlolearning.jpg)
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/learning_curve/LICENSE)
