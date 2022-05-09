@@ -68,7 +68,7 @@ Instead some unusual unicode characters have been used to store them. You will h
 <details> <summary>
 	All lower case letters </summary>
 	
-![Petite Echarpe](/assets/images/fonts/monichasmallswash.png)
+![Petite Echarpe](/assets/images/fonts/monichasmallswash.jpg)
 
 To use these alternative letters, you will need to cut  their code from here and paste it in the lettering dialog.
 
@@ -88,10 +88,13 @@ To use these alternative letters, you will need to cut  their code from here and
 ####  Long underscoring swashes
 
 <details> <summary> a-d-h-i-k-l-m-n-r-t-u </summary>
-![Echarpe Longue Soulignante](/assets/images/fonts/monichalongswash.png)
+		
+
+	
+![Echarpe Longue Soulignante](/assets/images/fonts/monichalongswash.jpg)
 
 
-There are also 11 lower case letters with long underscoring swash a-d-h-i-k-l-m-n-r-t-u :
+There are also 11 lower case letters with long underscoring swashes a-d-h-i-k-l-m-n-r-t-u :
 
 They must not be followed, over two letters, by downslope letters (such as g-j-p-q-y-z)
 to avoid satin columns overlays. To access use one of these codes:
