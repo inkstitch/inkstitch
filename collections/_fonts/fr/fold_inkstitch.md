@@ -27,7 +27,7 @@ Elle peut être agrandie jusqu'a 200% (env 125 mm) ou diminuée jusqu'à 80% (en
 
 Sur un sac à pain :
 
-![Sac à pain](/assets/images/fonts/folded2.png)
+![Sac à pain](/assets/images/fonts/folded2.jpg)
 
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/fold_inkstitch/license)
