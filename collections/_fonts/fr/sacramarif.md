@@ -32,7 +32,7 @@ Elle peut être agrandie jusqu'a 150% (env 42 mm) ou diminuée jusqu'à 80% (env
 ## Dans la vraie vie
 
 
-![Attache](/assets/images/fonts/sacramaraif2.png)
+![Attache](/assets/images/fonts/sacramaraif2.jpg)
 
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/sacramarif/LICENSE)
