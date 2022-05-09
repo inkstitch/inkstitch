@@ -9,6 +9,7 @@ toc: false
 Ink/Stitch fonts in action:
 
 ![multifont](/assets/images/fonts/multifont.jpg)
-![multifont2](/assets/images/fonts/multifont2.jpg)
-![multifont3](/assets/images/fonts/multifont3.jpg)
 
+![multifont2](/assets/images/fonts/multifont2.jpg)
+
+![multifont3](/assets/images/fonts/multifont3.jpg)

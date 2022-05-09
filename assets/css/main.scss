@@ -486,6 +486,18 @@ h2 img {
     max-height: 50px;
 }
 
+a img:hover {
+    box-shadow: none !important;
+}
+
+/* Font Library */
+
+span.font-separator {
+    border-bottom: 2px solid lightgray;
+    display: block;
+    margin-bottom: 2em;
+}
+
 /* Machine Database */
 
 .machine-fileformat:hover { background: #ccc; }

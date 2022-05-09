@@ -2,8 +2,8 @@
 
 {%- for font in fonts -%}
   {%- for image in font.preview_image -%}
-![{{font.title}} Preview]({{ image }})
+[![{{font.title}} Preview]({{ image }})]({{ font.permalink }})
   {%- endfor -%}
 [{{ font.title }}]({{ font.permalink }})
-<br><br>
+<span class="font-separator"></span>
 {%- endfor -%}
