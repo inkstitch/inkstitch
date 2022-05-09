@@ -49,7 +49,7 @@ At 100%, this font is approximatively 7 mm (1/4 inch) high.
 It can be scaled up to 140% (approx 11 mm, 0.4 inch) or scaled down to 60% (approx 4.5 mm, 1/6  inch).
 
 
-![Dimensions Glacialtiny](/assets/images/fonts/Sizing/glacialsizing2.jpg)
+![Dimensions Glacialtiny](/assets/images/fonts/Sizing/glacialsizing.jpg)
 
 
 
