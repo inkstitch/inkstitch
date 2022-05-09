@@ -4,8 +4,8 @@ permalink: /fr/fonts/roman_ags/
 last_modified_at: 2022-05-07
 toc: false
 preview_image: 
-  -/assets/images/fonts/roman_ags.png  
-  -/assets/images/fonts/roman_ags_bicolor.png
+  - /assets/images/fonts/roman_ags.png  
+  - /assets/images/fonts/roman_ags_bicolor.png
   
 ---
 ![Roman AGS](/assets/images/fonts/roman_ags.png)
