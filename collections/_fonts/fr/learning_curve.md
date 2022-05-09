@@ -28,7 +28,7 @@ Elle peut être agrandie jusqu'a 200% (env 36 mm) ou diminuée jusqu'à 90% (env
 
 ## Dans la vraie vie
 
-![Extension de masque](/assets/images/fonts/learningcurve5.jpeg)
+![Extension de masque](/assets/images/fonts/learningcurve5.jpg)
 [![Souris Vert](/assets/images/fonts/learning_curve3.jpg)
 
 
