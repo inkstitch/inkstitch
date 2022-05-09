@@ -33,7 +33,7 @@ it can be scaled up to 150% (approx 42 mm, 1.5 inch) or down  to  80% (approx 22
 ## In real life
 
 
-![Attache](/assets/images/fonts/sacramaraif2.png)
+![Attache](/assets/images/fonts/sacramaraif2.jpg)
 
 
 
