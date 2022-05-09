@@ -9,6 +9,7 @@ from shapely.ops import nearest_points
 
 import inkex
 
+from ..debug import debug
 from ..elements import Stroke
 from ..i18n import _
 from ..svg import PIXELS_PER_MM, generate_unique_id, get_correction_transform
@@ -113,10 +114,10 @@ def get_intersections(line, element, elements):
         if line.distance(e.shape) > 50:
             continue
         # add nearest points
-        near = nearest_points(line, e.shape)
+        near = nearest_points(line, e.as_multi_line_string())
         points.extend(near)
         # add intersections
-        intersections = line.intersection(e.shape)
+        intersections = line.intersection(e.as_multi_line_string())
         if intersections.is_empty:
             continue
         if isinstance(intersections, Point):

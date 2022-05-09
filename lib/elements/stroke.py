@@ -87,7 +87,7 @@ class Stroke(EmbroideryElement):
 
         # manipulate invalid path
         if len(flattened[0]) == 1:
-            return [[[flattened[0][0][0], flattened[0][0][1]], [flattened[0][0][0]+1.0, flattened[0][0][1]]]]
+            return [[[flattened[0][0][0], flattened[0][0][1]], [flattened[0][0][0] + 1.0, flattened[0][0][1]]]]
 
         if self.manual_stitch_mode:
             return [self.strip_control_points(subpath) for subpath in path]
@@ -97,12 +97,13 @@ class Stroke(EmbroideryElement):
     @property
     @cache
     def shape(self):
+        return self.as_multi_line_string().convex_hull
+
+    @cache
+    def as_multi_line_string(self):
         line_strings = [shapely.geometry.LineString(path) for path in self.paths]
 
-        # Using convex_hull here is an important optimization.  Otherwise
-        # complex paths cause operations on the shape to take a long time.
-        # This especially happens when importing machine embroidery files.
-        return shapely.geometry.MultiLineString(line_strings).convex_hull
+        return shapely.geometry.MultiLineString(line_strings)
 
     @property
     @param('manual_stitch',
