@@ -14,7 +14,7 @@ Cette fonte contient les 26 glyphes
 
 ## Description
 Infinipicto est une collection de pictogrammes. Chaque lettre représente un objet stylisé dont elle est l'initiale en Français: A pour arrosoir, B pour Bateau.....
-![Sample ](/assets/images/fonts/infinipicto2.png)
+![Sample ](/assets/images/fonts/infinipicto3.jpg)
 
 ## Dimensions
 
