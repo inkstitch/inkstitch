@@ -3,6 +3,8 @@
 # Copyright (c) 2022 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
+from collections import defaultdict
+
 import networkx as nx
 from shapely.geometry import LineString, Point
 from shapely.ops import nearest_points
@@ -23,33 +25,44 @@ class LineSegments:
     Takes elements and splits them into segments.
 
     Attributes:
-        elements -- a list of selected stroke elements
-        intersection_points -- a dictionary with intersection points {element_index: [intersection_points]}
-        segments -- a list of segments and corresponding elements [[segment, element]]
+        _lines   -- a list of LineStrings from the subpaths of the Stroke elements
+        _elements -- a list of Stroke elements for each corresponding line in _lines
+        _intersection_points -- a dictionary with intersection points {line_index: [intersection_points]}
+        segments -- (public) a list of segments and corresponding elements [[segment, element], ...]
     '''
+
     def __init__(self, elements):
-        self.elements = elements
+        self._lines = []
+        self._elements = []
+        self._intersection_points = defaultdict(list)
+        self.segments = []
+
+        self._process_elements(elements)
         self._get_intersection_points()
         self._get_segments()
 
+    def _process_elements(self, elements):
+        for element in elements:
+            lines = element.as_multi_line_string().geoms
+
+            for line in lines:
+                self._lines.append(line)
+                self._elements.append(element)
+
     def _get_intersection_points(self):
-        self.intersection_points = {}
-        num_elements = len(self.elements)
-        for i, element in enumerate(self.elements):
-            element_shape = element.as_multi_line_string()
-            for j in range(i + 1, num_elements):
-                e = self.elements[j]
-                shape = e.as_multi_line_string()
-                distance = element_shape.distance(shape)
+        for i, line1 in enumerate(self._lines):
+            for j in range(i + 1, len(self._lines)):
+                line2 = self._lines[j]
+                distance = line1.distance(line2)
                 if distance > 50:
                     continue
                 if not distance == 0:
                     # add nearest points
-                    near = nearest_points(element_shape, shape)
+                    near = nearest_points(line1, line2)
                     self._add_point(i, near[0])
                     self._add_point(j, near[1])
                 # add intersections
-                intersections = element_shape.intersection(shape)
+                intersections = line1.intersection(line2)
                 if isinstance(intersections, Point):
                     self._add_point(i, intersections)
                     self._add_point(j, intersections)
@@ -59,10 +72,7 @@ class LineSegments:
                         self._add_point(j, Point(*point))
 
     def _add_point(self, element, point):
-        if element in self.intersection_points:
-            self.intersection_points[element] += [point]
-        else:
-            self.intersection_points[element] = [point]
+        self._intersection_points[element].append(point)
 
     def _get_segments(self):
         '''
@@ -73,26 +83,22 @@ class LineSegments:
         and finally split it into segments with shapelys substring method.
         '''
         self.segments = []
-        for i, element in enumerate(self.elements):
-            line_strings = element.as_multi_line_string()
-            points = self.intersection_points[i]
-            for line in line_strings.geoms:
-                length = line.length
-                points = self.intersection_points[i]
+        for i, line in enumerate(self._lines):
+            length = line.length
+            points = self._intersection_points[i]
 
-                distances = [0, length]
-                for point in points:
-                    if point.distance(line) < 1e-13:
-                        distances.append(line.project(point))
-                distances = sorted(set(distances))
+            distances = [0, length]
+            for point in points:
+                distances.append(line.project(point))
+            distances = sorted(set(distances))
 
-                for i in range(len(distances) - 1):
-                    start = distances[i]
-                    end = distances[i + 1]
+            for j in range(len(distances) - 1):
+                start = distances[j]
+                end = distances[j + 1]
 
-                    if end - start > 0.1:
-                        seg = substring(line, start, end)
-                        self.segments.append([seg, element])
+                if end - start > 0.1:
+                    seg = substring(line, start, end)
+                    self.segments.append([seg, self._elements[i]])
 
 
 def autorun(elements, preserve_order=False, break_up=None, starting_point=None, ending_point=None):
@@ -202,7 +208,8 @@ def path_to_elements(graph, path):
             d = ""
             position += 1
 
-    element_list.append(create_element(d, position, path_direction, el))
+    if d:
+        element_list.append(create_element(d, position, path_direction, el))
     original_parents.append(el.node.getparent())
 
     return [element_list, original_parents]
