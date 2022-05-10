@@ -31,7 +31,10 @@ Cette fonte étant réalisée en points manuels, sa taille ne doit pas être mod
 
 ## Dans la vraie vie
 
+![Etiquettes](/assets/images/fonts/coronaviral.jpg)
+
 ![Serviette](/assets/images/fonts/coronaviral3.jpg)
+
 ![Serviette](/assets/images/fonts/coronaviral2.jpg)
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/coronaviral/LICENSE)
