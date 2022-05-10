@@ -79,17 +79,19 @@ class LineSegments:
             for line in line_strings.geoms:
                 length = line.length
                 points = self.intersection_points[i]
+
                 distances = [0, length]
                 for point in points:
-                    distance = line.project(point, normalized=True)
-                    if distance < length:
-                        distances.append(distance)
+                    if point.distance(line) < 1e-13:
+                        distances.append(line.project(point))
                 distances = sorted(set(distances))
+
                 for i in range(len(distances) - 1):
                     start = distances[i]
                     end = distances[i + 1]
-                    seg = substring(line, start, end, normalized=True)
-                    if seg.length > 0.1:
+
+                    if end - start > 0.1:
+                        seg = substring(line, start, end)
                         self.segments.append([seg, element])
 
 
