@@ -28,6 +28,8 @@ It may be scaled up to 200% (approx 44 mm, 2 inches) but may not be reduced.
 
 ## In real life
 
+![Health Pass](/assets/images/fonts/digorydoodle2.jpg)
+
 ![Serviette](/assets/images/fonts/digory2.jpg)
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/digory_doodles_bean/LICENSE)
