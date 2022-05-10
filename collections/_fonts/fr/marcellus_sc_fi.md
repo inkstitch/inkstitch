@@ -13,7 +13,7 @@ Cette fonte contient les 109 glyphes :
 	
 !@'’(),-./0123456789:;=?@ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz¡¿ÄÆÈÖÜàáâäæçèéêëìíîïñòóôöùúûüŒœ
 
-Notez que les minuscules sont ici en fait des petites minuscules
+Notez que les minuscules sont ici en fait des petites majuscules.
 
 ## Dimensions
 
