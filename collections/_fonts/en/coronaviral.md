@@ -31,7 +31,10 @@ Because this font uses manual stitches, it should not be rescaled, or only a tin
 
 ## In real life
 
+![Tags](/assets/images/fonts/coronaviral.jpg)
+
 ![Serviette](/assets/images/fonts/coronaviral3.jpg)
+
 ![Serviette](/assets/images/fonts/coronaviral2.jpg)
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/coronaviral/LICENSE)
