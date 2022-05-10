@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-04-25 02:19+0000\n"
-"PO-Revision-Date: 2022-04-29 02:28\n"
+"PO-Revision-Date: 2022-05-10 02:08\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -726,7 +726,7 @@ msgstr "Remplir"
 
 #: lib/elements/fill.py:48
 msgid "Manually routed fill stitching"
-msgstr "Remplir automatiquement la couture"
+msgstr "Remplir automatiquement avec des points de broderie"
 
 #: lib/elements/fill.py:49
 msgid "AutoFill is the default method for generating fill stitching."
