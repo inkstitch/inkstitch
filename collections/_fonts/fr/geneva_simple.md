@@ -56,7 +56,12 @@ yz01234567
 
 ## Dimensions
 
-Utilisée à 100%, ces deux fontes font environ 8 mm.
+Utilisée à 100%, ces deux fontes mesurent environ 8 mm de haut.
 
-Elles peut être agrandies jusqu'a 200% (env 16 mm) ou diminuéesejusqu'à 70% (env 6 mm).
+Elles peut être agrandies jusqu'a 200% (env 16 mm) ou diminuées jusqu'à 70% (env 6 mm).
+
+## Dans la vraie vie
+
+![Geneva ](/assets/images/fonts/geneva.jpg)
+
 
