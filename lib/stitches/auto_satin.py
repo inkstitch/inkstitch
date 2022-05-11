@@ -8,7 +8,7 @@ from itertools import chain
 
 import networkx as nx
 from shapely import geometry as shgeo
-from shapely.geometry import Point as ShapelyPoint
+from shapely.geometry import Point as ShapelyPoint, MultiPolygon
 
 import inkex
 
@@ -181,7 +181,7 @@ class SatinSegment(object):
 class JumpStitch(object):
     """A jump stitch between two points."""
 
-    def __init__(self, start, end):
+    def __init__(self, start, end, source_element, destination_element):
         """Initialize a JumpStitch.
 
         Arguments:
@@ -190,6 +190,8 @@ class JumpStitch(object):
 
         self.start = start
         self.end = end
+        self.source_element = source_element
+        self.destination_element = destination_element
 
     def is_sequential(self, other):
         # Don't bother joining jump stitches.
@@ -199,6 +201,15 @@ class JumpStitch(object):
     @cache
     def length(self):
         return self.start.distance(self.end)
+
+    def as_line_string(self):
+        return shgeo.LineString((self.start, self.end))
+
+    def should_trim(self):
+        actual_jump = self.as_line_string().difference(self.source_element.shape)
+        actual_jump = actual_jump.difference(self.destination_element.shape)
+
+        return actual_jump.length > PIXELS_PER_MM
 
 
 class RunningStitch(object):
@@ -362,8 +373,8 @@ def build_graph(elements, preserve_order=False):
         for segment in segments:
             # This is necessary because shapely points aren't hashable and thus
             # can't be used as nodes directly.
-            graph.add_node(str(segment.start_point), point=segment.start_point)
-            graph.add_node(str(segment.end_point), point=segment.end_point)
+            graph.add_node(str(segment.start_point), point=segment.start_point, element=element)
+            graph.add_node(str(segment.end_point), point=segment.end_point, element=element)
             graph.add_edge(str(segment.start_point), str(
                 segment.end_point), segment=segment, element=element)
 
@@ -405,7 +416,10 @@ def path_to_operations(graph, path):
                 segment = segment.reversed()
             operations.append(segment)
         else:
-            operations.append(JumpStitch(graph.nodes[start]['point'], graph.nodes[end]['point']))
+            operations.append(JumpStitch(graph.nodes[start]['point'],
+                                         graph.nodes[end]['point'],
+                                         graph.nodes[start]['element'],
+                                         graph.nodes[end]['element']))
 
     # find_path() will have duplicated some of the edges in the graph.  We don't
     # want to sew the same satin twice.  If a satin section appears twice in the
@@ -458,7 +472,7 @@ def operations_to_elements_and_trims(operations, preserve_order):
             elements.append(operation.to_element())
             original_parent_nodes.append(operation.original_node.getparent())
         elif isinstance(operation, (JumpStitch)):
-            if elements and operation.length > 0.75 * PIXELS_PER_MM:
+            if elements and operation.should_trim():
                 trims.append(len(elements) - 1)
 
     return elements, list(set(trims)), original_parent_nodes
