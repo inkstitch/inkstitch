@@ -6,22 +6,21 @@
 from collections import defaultdict
 
 import networkx as nx
-from shapely.geometry import LineString, Point
-from shapely.ops import nearest_points
+from shapely.geometry import LineString, MultiLineString, MultiPoint, Point
+from shapely.ops import nearest_points, substring, unary_union
 
 import inkex
 
 from ..commands import add_commands
 from ..elements import Stroke
 from ..i18n import _
-from ..svg import generate_unique_id, get_correction_transform
+from ..svg import PIXELS_PER_MM, generate_unique_id
 from ..svg.tags import INKSCAPE_LABEL, INKSTITCH_ATTRIBS
-from .utils.autoroute import (add_jumps, create_new_group, find_path,
+from .utils.autoroute import (add_elements_to_group, add_jumps,
+                              create_new_group, find_path,
                               get_starting_and_ending_nodes,
-                              remove_original_elements,
                               preserve_original_groups,
-                              add_elements_to_group)
-from shapely.ops import substring
+                              remove_original_elements)
 
 
 class LineSegments:
@@ -50,8 +49,15 @@ class LineSegments:
             lines = element.as_multi_line_string().geoms
 
             for line in lines:
-                self._lines.append(line)
-                self._elements.append(element)
+                # split at self-intersections if necessary
+                unary_lines = unary_union(line)
+                if isinstance(unary_lines, MultiLineString):
+                    for unary_line in unary_lines.geoms:
+                        self._lines.append(unary_line)
+                        self._elements.append(element)
+                else:
+                    self._lines.append(line)
+                    self._elements.append(element)
 
     def _get_intersection_points(self):
         for i, line1 in enumerate(self._lines):
@@ -70,6 +76,10 @@ class LineSegments:
                 if isinstance(intersections, Point):
                     self._add_point(i, intersections)
                     self._add_point(j, intersections)
+                elif isinstance(intersections, MultiPoint):
+                    for point in intersections.geoms:
+                        self._add_point(i, point)
+                        self._add_point(j, point)
                 elif isinstance(intersections, LineString):
                     for point in intersections.coords:
                         self._add_point(i, Point(*point))
@@ -178,7 +188,7 @@ def add_path_attribs(path):
     return path
 
 
-def path_to_elements(graph, path, trim):
+def path_to_elements(graph, path, trim):  # noqa: C901
     element_list = []
     original_parents = []
     trims = []
@@ -190,6 +200,7 @@ def path_to_elements(graph, path, trim):
     el = None
     for start, end, direction in path:
         element = graph[start][end].get('element')
+        start_coord = graph.nodes[start]['point']
         end_coord = graph.nodes[end]['point']
         if element:
             el = element
@@ -211,7 +222,6 @@ def path_to_elements(graph, path, trim):
                 path_direction = direction
 
             if d == "":
-                start_coord = graph.nodes[start]['point']
                 d = "M %s %s, %s %s" % (start_coord.x, start_coord.y, end_coord.x, end_coord.y)
             else:
                 d += ", %s %s" % (end_coord.x, end_coord.y)
@@ -221,7 +231,7 @@ def path_to_elements(graph, path, trim):
             original_parents.append(el.node.getparent())
             d = ""
 
-            if trim:
+            if trim and start_coord.distance(end_coord) > 0.75 * PIXELS_PER_MM:
                 trims.append(position)
                 just_trimmed = True
 

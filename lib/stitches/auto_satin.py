@@ -8,23 +8,22 @@ from itertools import chain
 
 import networkx as nx
 from shapely import geometry as shgeo
-from shapely.geometry import Point as ShapelyPoint, MultiPolygon
+from shapely.geometry import Point as ShapelyPoint
 
 import inkex
 
 from ..commands import add_commands
 from ..elements import SatinColumn, Stroke
 from ..i18n import _
-from ..svg import (PIXELS_PER_MM, generate_unique_id, get_correction_transform,
-                   line_strings_to_csp)
+from ..svg import PIXELS_PER_MM, generate_unique_id, line_strings_to_csp
 from ..svg.tags import INKSCAPE_LABEL, INKSTITCH_ATTRIBS
 from ..utils import Point as InkstitchPoint
 from ..utils import cache, cut
-from .utils.autoroute import (add_jumps, create_new_group, find_path,
+from .utils.autoroute import (add_elements_to_group, add_jumps,
+                              create_new_group, find_path,
                               get_starting_and_ending_nodes,
-                              remove_original_elements,
                               preserve_original_groups,
-                              add_elements_to_group)
+                              remove_original_elements)
 
 
 class SatinSegment(object):
