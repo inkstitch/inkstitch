@@ -11,12 +11,16 @@ from shapely.ops import nearest_points
 
 import inkex
 
+from ..commands import add_commands
+from ..elements import Stroke
 from ..i18n import _
 from ..svg import generate_unique_id, get_correction_transform
 from ..svg.tags import INKSCAPE_LABEL, INKSTITCH_ATTRIBS
 from .utils.autoroute import (add_jumps, create_new_group, find_path,
                               get_starting_and_ending_nodes,
-                              remove_original_elements)
+                              remove_original_elements,
+                              preserve_original_groups,
+                              add_elements_to_group)
 from shapely.ops import substring
 
 
@@ -101,7 +105,7 @@ class LineSegments:
                     self.segments.append([seg, self._elements[i]])
 
 
-def autorun(elements, preserve_order=False, break_up=None, starting_point=None, ending_point=None):
+def autorun(elements, preserve_order=False, break_up=None, starting_point=None, ending_point=None, trim=False):
     graph = build_graph(elements, preserve_order, break_up)
     graph = add_jumps(graph, elements, preserve_order)
 
@@ -111,18 +115,18 @@ def autorun(elements, preserve_order=False, break_up=None, starting_point=None, 
     path = find_path(graph, starting_point, ending_point)
     path = add_path_attribs(path)
 
-    new_elements, original_parents = path_to_elements(graph, path)
+    new_elements, trims, original_parents = path_to_elements(graph, path, trim)
 
     if preserve_order:
-        for element, parent in zip(new_elements, original_parents):
-            if parent is not None:
-                parent.append(element)
-                element.set('transform', get_correction_transform(parent, child=True))
+        preserve_original_groups(new_elements, original_parents)
     else:
         parent = elements[0].node.getparent()
         insert_index = parent.index(elements[0].node)
         group = create_new_group(parent, insert_index, _("Auto-Run"))
-        insert_elements(group, new_elements)
+        add_elements_to_group(new_elements, group)
+
+    if trim:
+        add_trims(new_elements, trims)
 
     remove_original_elements(elements)
 
@@ -174,19 +178,29 @@ def add_path_attribs(path):
     return path
 
 
-def path_to_elements(graph, path):
+def path_to_elements(graph, path, trim):
     element_list = []
     original_parents = []
+    trims = []
 
     d = ""
     position = 0
     path_direction = "autorun"
+    just_trimmed = False
     el = None
     for start, end, direction in path:
         element = graph[start][end].get('element')
         end_coord = graph.nodes[end]['point']
         if element:
             el = element
+
+            if just_trimmed:
+                if direction == "underpath":
+                    # no sense in doing underpath after we trim
+                    continue
+                else:
+                    just_trimmed = False
+
             # create a new element if direction (purpose) changes
             if direction != path_direction:
                 if d:
@@ -201,18 +215,23 @@ def path_to_elements(graph, path):
                 d = "M %s %s, %s %s" % (start_coord.x, start_coord.y, end_coord.x, end_coord.y)
             else:
                 d += ", %s %s" % (end_coord.x, end_coord.y)
-        # exclude jump stitches bigger than 1 mm from the path
         elif el and d:
+            # this is a jump, so complete the element whose path we've been building
             element_list.append(create_element(d, position, path_direction, el))
             original_parents.append(el.node.getparent())
             d = ""
+
+            if trim:
+                trims.append(position)
+                just_trimmed = True
+
             position += 1
 
     if d:
         element_list.append(create_element(d, position, path_direction, el))
     original_parents.append(el.node.getparent())
 
-    return [element_list, original_parents]
+    return element_list, trims, original_parents
 
 
 def create_element(path, position, direction, element):
@@ -247,10 +266,9 @@ def create_element(path, position, direction, element):
         if bean:
             node.set(INKSTITCH_ATTRIBS['bean_stitch_repeats'], bean)
 
-    return node
+    return Stroke(node)
 
 
-def insert_elements(group, elements):
-    elements.reverse()
-    for element in elements:
-        group.insert(0, element)
+def add_trims(elements, trim_indices):
+    for i in trim_indices:
+        add_commands(elements[i], ["trim"])

@@ -199,3 +199,23 @@ def create_new_group(parent, insert_index, label):
     parent.insert(insert_index, group)
 
     return group
+
+
+def preserve_original_groups(elements, original_parent_nodes):
+    """Ensure that all elements are contained in the original SVG group elements.
+
+    When preserve_order is True, no elements will be reordered in the XML tree.
+    This makes it possible to preserve original SVG group membership.  We'll
+    ensure that each newly-created element is added to the group that contained
+    the original element that spawned it.
+    """
+
+    for element, parent in zip(elements, original_parent_nodes):
+        if parent is not None:
+            parent.append(element.node)
+            element.node.set('transform', get_correction_transform(parent, child=True))
+
+
+def add_elements_to_group(elements, group):
+    for element in elements:
+        group.append(element.node)

@@ -17,6 +17,8 @@
           <param name="break_up" type="boolean" gui-text="Add nodes at intersections">true</param>
           <spacer />
           <param name="preserve_order" type="boolean" gui-text="Preserve order of running stitches">false</param>
+          <spacer />
+          <param name="trim" type="boolean" gui-text="Trim jump stitches">false</param>
       </page>
       <page name="help" gui-text="Help">
           <label appearance="header">Autoroute Running Stitch</label>

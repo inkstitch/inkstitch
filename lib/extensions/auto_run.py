@@ -32,7 +32,7 @@ class AutoRun(CommandsExtension):
 
         break_up = self.options.break_up
 
-        autorun(elements, self.options.preserve_order, break_up, starting_point, ending_point)
+        autorun(elements, self.options.preserve_order, break_up, starting_point, ending_point, self.options.trim)
 
     def get_starting_point(self):
         point = self.get_marker_point("marker-start", "autorun_start", 0)

@@ -22,7 +22,9 @@ from ..utils import Point as InkstitchPoint
 from ..utils import cache, cut
 from .utils.autoroute import (add_jumps, create_new_group, find_path,
                               get_starting_and_ending_nodes,
-                              remove_original_elements)
+                              remove_original_elements,
+                              preserve_original_groups,
+                              add_elements_to_group)
 
 
 class SatinSegment(object):
@@ -476,26 +478,6 @@ def operations_to_elements_and_trims(operations, preserve_order):
                 trims.append(len(elements) - 1)
 
     return elements, list(set(trims)), original_parent_nodes
-
-
-def preserve_original_groups(elements, original_parent_nodes):
-    """Ensure that all elements are contained in the original SVG group elements.
-
-    When preserve_order is True, no SatinColumn or Stroke elements will be
-    reordered in the XML tree.  This makes it possible to preserve original SVG
-    group membership.  We'll ensure that each newly-created Element is added
-    to the group that contained the original SatinColumn that spawned it.
-    """
-
-    for element, parent in zip(elements, original_parent_nodes):
-        if parent is not None:
-            parent.append(element.node)
-            element.node.set('transform', get_correction_transform(parent, child=True))
-
-
-def add_elements_to_group(elements, group):
-    for element in elements:
-        group.append(element.node)
 
 
 def name_elements(new_elements, preserve_order):
