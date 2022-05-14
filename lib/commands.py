@@ -27,6 +27,12 @@ COMMANDS = {
     "fill_end": N_("Fill stitch ending position"),
 
     # L10N command attached to an object
+    "run_start": N_("Auto-route running stitch starting position"),
+
+    # L10N command attached to an object
+    "run_end": N_("Auto-route running stitch ending position"),
+
+    # L10N command attached to an object
     "satin_start": N_("Auto-route satin stitch starting position"),
 
     # L10N command attached to an object
@@ -54,7 +60,8 @@ COMMANDS = {
     "stop_position": N_("Jump destination for Stop commands (a.k.a. \"Frame Out position\")."),
 }
 
-OBJECT_COMMANDS = ["fill_start", "fill_end", "satin_start", "satin_end", "stop", "trim", "ignore_object", "satin_cut_point"]
+OBJECT_COMMANDS = ["fill_start", "fill_end", "run_start", "run_end", "satin_start", "satin_end", "stop", "trim", "ignore_object", "satin_cut_point"]
+CONNECTORLESS_OBJECT_COMMANDS = ["run_start", "run_end", "satin_start", "satin_end"]
 LAYER_COMMANDS = ["ignore_layer"]
 GLOBAL_COMMANDS = ["origin", "stop_position"]
 
@@ -101,7 +108,15 @@ class Command(BaseCommand):
         self.connector = connector
         self.svg = self.connector.getroottree().getroot()
 
-        self.parse_command()
+        # object commands without a connector
+        xlink = self.connector.get(XLINK_HREF, None)
+        if xlink and xlink[11:] in CONNECTORLESS_OBJECT_COMMANDS:
+            self.command = xlink[11:]
+            self.use = self.connector
+            self.symbol = self.connector
+            self.target_point = StandaloneCommand(self.connector).point
+        else:
+            self.parse_command()
 
     def parse_connector_path(self):
         path = inkex.paths.Path(self.connector.get('d')).to_superpath()
@@ -313,6 +328,11 @@ def add_connector(document, symbol, element):
     symbol.getparent().insert(0, path)
 
 
+def connect_symbol(symbol, element):
+    connection_end = "#%s" % element.node.get('id')
+    symbol.set(CONNECTION_END, connection_end)
+
+
 def add_symbol(document, group, command, pos):
     symbol = inkex.Use(attrib={
         "id": document.get_unique_id("command_use"),
@@ -383,7 +403,10 @@ def add_commands(element, commands):
         group = add_group(svg, element.node, command)
         pos = get_command_pos(element, i, len(commands))
         symbol = add_symbol(svg, group, command, pos)
-        add_connector(svg, symbol, element)
+        if command not in CONNECTORLESS_OBJECT_COMMANDS:
+            add_connector(svg, symbol, element)
+        else:
+            connect_symbol(symbol, element)
 
 
 def add_layer_commands(layer, commands):

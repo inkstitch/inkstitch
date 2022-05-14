@@ -15,6 +15,3 @@ class CommandsExtension(InkstitchExtension):
         InkstitchExtension.__init__(self, *args, **kwargs)
         for command in self.COMMANDS:
             self.arg_parser.add_argument("--%s" % command, type=Boolean)
-
-        self.arg_parser.add_argument("--autorun_start", dest="autorun_start", type=Boolean, default=False)
-        self.arg_parser.add_argument("--autorun_end", dest="autorun_end", type=Boolean, default=False)

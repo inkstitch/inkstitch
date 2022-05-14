@@ -35,16 +35,10 @@ class AutoRun(CommandsExtension):
         autorun(elements, self.options.preserve_order, break_up, starting_point, ending_point, self.options.trim)
 
     def get_starting_point(self):
-        point = self.get_marker_point("marker-start", "autorun_start", 0)
-        if not point:
-            point = self.get_command_point("satin_start")
-        return point
+        return self.get_command_point("run_start")
 
     def get_ending_point(self):
-        point = self.get_marker_point("marker-end", "autorun_end", -1)
-        if not point:
-            point = self.get_command_point("satin_end")
-        return point
+        return self.get_command_point("run_end")
 
     def get_command_point(self, command_type):
         command = None
@@ -53,15 +47,6 @@ class AutoRun(CommandsExtension):
             # return the first occurence directly
             if command:
                 return command.target_point
-
-    def get_marker_point(self, style_key, marker_id, path_position):
-        for stroke in self.elements:
-            marker = stroke.node.style(style_key)
-            if marker is not None:
-                stroke_marker_id = marker.get_id()
-                if stroke_marker_id == "inkstitch-%s-marker" % marker_id:
-                    # return on first occurence
-                    return stroke.paths[path_position][path_position]
 
     def check_selection(self):
         if not self.get_elements():

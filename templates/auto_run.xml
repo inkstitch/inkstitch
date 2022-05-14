@@ -24,9 +24,15 @@
           <label appearance="header">Autoroute Running Stitch</label>
           <label>Add nodes at intersections:</label>
           <spacer />
-          <label indent="1">- Enabled (slower). Ink/Stitch will add some nodes for better routing.</label>
+          <label indent="1">- Enabled (automatic). Ink/Stitch will add some nodes for better routing. This is the default setting.</label>
           <spacer />
-          <label indent="1">- Disabled (faster). Choose this option if you have manually set nodes at crucial spots.</label>
+          <label indent="1">- Disabled (manual). Choose this option if you have manually set nodes at crucial spots.</label>
+          <spacer />
+          <separator />
+          <label>Use Start- end end commands to define where auto-routing for running stitch should start and end.</label>
+          <separator />
+          <label>More info on our website:</label>
+          <label appearance="url">https://inkstitch.org/docs/stroke-tools#auto-route-running-stitch</label>
       </page>
     </param>
     <script>

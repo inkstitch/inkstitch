@@ -5,8 +5,6 @@
     {%- for command, description in object_commands -%}
     <param name="{{ command }}" type="boolean" gui-text="{{ description }}">false</param>
     {% endfor %}
-    <param name="autorun_start" type="boolean" gui-text="Auto-route running stitch starting position">false</param>
-    <param name="autorun_end" type="boolean" gui-text="Auto-route running stitch ending position">false</param>
     <param name="extension" type="string" gui-hidden="true">object_commands</param>
     <effect>
         <object-type>all</object-type>
