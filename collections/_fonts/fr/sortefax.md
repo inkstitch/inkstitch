@@ -38,29 +38,31 @@ Attention : tous les cadres ne conviennent pas à toutes les lettres, en particu
 
 Cette fonte est réduite et simplifiée. On garde la possibilité d'encadrer une lettre, mais le positionnement de la lettre par rapport au cadre est plus approximatif que dans la fonte XL. En revanche il est tout au fait possible d'écrire des mots avec des lettres correctement positionnées, ce qui n'est pas le cas de la fonte XL.
 
- 
 ## Pour acceder aux cadres, utilisez le tableau de correspondance suivant:
 
 Cadre|Caractère 
 ---|---
-![ouvrante](/assets/images/fonts/sortefax/ouvrante.png)|(
-![fermante](/assets/images/fonts/sortefax/fermante.png)|)
-![ouvrantecarre](/assets/images/fonts/sortefax/[.png)|[
-![fermantecarre](/assets/images/fonts/sortefax/].png)|]
-![accolade_ouvrante](/assets/images/fonts/sortefax/{.png)|{
-![accolade_fermante](/assets/images/fonts/sortefax/}.png)|}
-![Point](/assets/images/fonts/sortefax/point.png)|.
-![Virgule](/assets/images/fonts/sortefax/virgule.png)|,
-![DeuxPoints](/assets/images/fonts/sortefax/deuxpoints.png)|:
-![PointVirgule](/assets/images/fonts/sortefax/pointvirgule.png)|;
-
+![ouvrante](/assets/images/fonts/sortefax/ouvrante.png)|<key>(</key>
+![fermante](/assets/images/fonts/sortefax/fermante.png)|<key>)</key>
+![ouvrantecarre](/assets/images/fonts/sortefax/square-bracket-open.png)|<key>[</key>
+![fermantecarre](/assets/images/fonts/sortefax/square-bracket-close.png)|<key>]</key>
+![accolade_ouvrante](/assets/images/fonts/sortefax/curly-bracket-open.png)|<key>{</key>
+![accolade_fermante](/assets/images/fonts/sortefax/curly-bracket-close.png)|<key>}</key>
+![Point](/assets/images/fonts/sortefax/point.png)|<key>.</key>
+![Virgule](/assets/images/fonts/sortefax/virgule.png)|<key>,</key>
+![DeuxPoints](/assets/images/fonts/sortefax/deuxpoints.png)|<key>:</key>
+![PointVirgule](/assets/images/fonts/sortefax/pointvirgule.png)|<key>;</key>
 
 ## Dans la vraie vie
 
 ![SortefaxXL2](/assets/images/fonts/sortefax2.jpg)
+
 ![SortefaxXL3](/assets/images/fonts/sortefax3.jpg)
+
 ![SortefaxXL4](/assets/images/fonts/sortefaxXL4.jpg)
+
 ![Sortefax_medium2](/assets/images/fonts/sortefaxmedium2.jpg)
+
 ![Sortefax_medium3](/assets/images/fonts/sortefaxmedium3.jpg)
 
 

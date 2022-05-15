@@ -69,42 +69,42 @@ Pour faciliter l'usage de ces lettres ce mode d'emploi répertorie les codes et 
 <details><summary>Toutes les minuscules disposent d'une version à petite echarpe</summary>
 
 
-![Petite Echarpe](/assets/images/fonts/monichasmallswash.jpg)
+<img src="/assets/images/fonts/monichasmallswash.jpg" alt="Petite Echarpe" title="Petite Echarpe"><br>
 
-Que l'on obtient en utilisant un de ces codes  :
+Que l'on obtient en utilisant un de ces codes:<br><br>
 
-⒜	⒝	⒞	⒟	⒠	⒡
+⒜	⒝	⒞	⒟	⒠	⒡<br>
 
-⒢	⒣	⒤	⒥	⒦	
+⒢	⒣	⒤	⒥	⒦	<br>
 
-⒧	⒨	⒩	⒪	⒫
+⒧	⒨	⒩	⒪	⒫<br>
 
-⒬	⒭	⒮	⒯	⒰
+⒬	⒭	⒮	⒯	⒰<br>
 
-⒱	⒲	⒳	⒴	⒵
+⒱	⒲	⒳	⒴	⒵<br>
 	
 </details>
 
 ####  Echarpes longues soulignantes
 <details><summary>  a-d-h-i-k-l-m-n-r-t-u </summary>
 	
-![Echarpe Longue Soulignante](/assets/images/fonts/monichalongswash.jpg)
+<img src="/assets/images/fonts/monichalongswash.jpg" alt="Echarpe Longue Soulignante" title="Echarpe Longue Soulignante"><br>
 
-Ces  11 lettres disposent de plus d'une longue écharpe soulignante.
+Ces  11 lettres disposent de plus d'une longue écharpe soulignante.<br><br>
 
 
 Elles ne doivent pas être suivies, sur deux lettres, par des lettres à jambage descendant (comme g-j-p-q-y-z) 
-pour des raisons de superpositions de colonnes de satin.
+pour des raisons de superpositions de colonnes de satin.<br><br>
 
-On les obtient en utilisant ces codes :
+On les obtient en utilisant ces codes:<br>
 
-Ⓐ			Ⓓ
+<pre>Ⓐ			Ⓓ
 
 	Ⓗ	Ⓘ		Ⓚ
 	
 Ⓛ	Ⓜ	Ⓝ
 
-	Ⓡ		Ⓣ	Ⓤ
+	Ⓡ		Ⓣ	Ⓤ</pre>
 
 </details>
 
@@ -112,28 +112,28 @@ On les obtient en utilisant ces codes :
 
 <details><summary>  g-j-y </summary>
 
-![Echarpe Moyenne Soulignante](/assets/images/fonts/monichamediumswash.png)
+<img src="/assets/images/fonts/monichamediumswash.png" alt="Echarpe Moyenne Soulignante" title="Echarpe Moyenne Soulignante"><br>
 
-Ces trois lettres disposent d'une écharpe soulignante moyenne.
+Ces trois lettres disposent d'une écharpe soulignante moyenne.<br><br>
 
-Elles ne doivent pas être suivie d'une lettre à jambage descendant.
+Elles ne doivent pas être suivie d'une lettre à jambage descendant.<br><br>
 
-On les obtient en utilisant ces codes :
-
+On les obtient en utilisant ces codes:<br>
 
 Ⓖ	Ⓙ	Ⓨ
-
 
 </details>
 
 #### Echarpe basse bouclée 
 <details><summary>  g-j-y </summary>
-![Echarpe Basse Bouclée](/assets/images/fonts/monichacurly.png)
-Ces trois lettres disposent  aussi d'une version à écharpes basse bouclée.
 
-Elles ne doivent pas être suivies d'une lettre à jambage descendant sur deux lettres.
+<img src="/assets/images/fonts/monichacurly.png" alt="Echarpe Basse Bouclée" title="Echarpe Basse Bouclée"><br>
 
-On les obtient en utilisant ces codes :
+Ces trois lettres disposent  aussi d'une version à écharpes basse bouclée.<br><br>
+
+Elles ne doivent pas être suivies d'une lettre à jambage descendant sur deux lettres.<br><br>
+
+On les obtient en utilisant ces codes:<br>
 
 ⓖ	ⓙ	ⓨ
 	
@@ -142,15 +142,14 @@ On les obtient en utilisant ces codes :
 #### Echarpe supérieure bouclée et rétrograde
 <details><summary> b-d-h-k-l-t </summary>
 
+<img src="/assets/images/fonts/monichacurlyup.png" alt="Echarpe Superieure Bouclée" title="Echarpe Superieure Bouclée"><br>
 
-
-![Echarpe Superieure Bouclée](/assets/images/fonts/monichacurlyup.png)
-Il existe 6 lettres à écharpe supérieure bouclée et rétrograde b-d-h-k-l-t.
+Il existe 6 lettres à écharpe supérieure bouclée et rétrograde b-d-h-k-l-t.<br><br>
 
 Elles ne doivent pas suivre deux lettres montantes, ni une majuscule sur ces deux poisitions 
-pour des raisons de superpositions de colonnes de satin.
+pour des raisons de superpositions de colonnes de satin.<br><br>
 
-On les obtient en utilisant ces codes :
+On les obtient en utilisant ces codes:<br>
 
 
 ⓑ	ⓓ	ⓗ	ⓚ	ⓛ	ⓣ
@@ -160,23 +159,28 @@ On les obtient en utilisant ces codes :
 #### Le petit dernier 
 <details><summary> o</summary>
 
-Il existe un o a queue droite
-![Echarpe Queue Droite](/assets/images/fonts/monichap.png)
+Il existe un o a queue droite<br>
 
-On l'obtient en utilisant ce code :
+<img src="/assets/images/fonts/monichao.png" alt="Echarpe Queue Droite" title="Echarpe Queue Droite"><br>
+
+On l'obtient en utilisant ce code:<br>
 
 ⓞ
 </details>
 
 
 ##  Dans la vraie vie
+
 ![Gelee](/assets/images/fonts/monicha2.jpg)
+
 ![Rockabilly](/assets/images/fonts/monicha8.jpg)
+
 ![Temps perdu](/assets/images/fonts/monicha3.jpg)
+
 ![Ourson](/assets/images/fonts/monicha4.jpg)
+
 ![Serviette](/assets/images/fonts/monicha5.jpg)
+
 ![Serviette](/assets/images/fonts/monicha6.jpg)
-
-
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/monicha/LICENSE)

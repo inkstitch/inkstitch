@@ -65,21 +65,19 @@ Instead some unusual unicode characters have been used to store them. You will h
 
 #### Small swashes
 
-<details> <summary>
-	All lower case letters </summary>
-	
-![Petite Echarpe](/assets/images/fonts/monichasmallswash.jpg)
+<details> <summary>All lower case letters </summary>
 
-To use these alternative letters, you will need to cut  their code from here and paste it in the lettering dialog.
+<img src="/assets/images/fonts/monichasmallswash.jpg" alt="Petite Echarpe" title="Petite Echarpe"><br>
 
+To use these alternative letters, you will need to cut  their code from here and paste it in the lettering dialog.<br><br>
 
-⒜	⒝	⒞	⒟	⒠	⒡
+⒜	⒝	⒞	⒟	⒠	⒡<br>
 
-⒢	⒣	⒤	⒥	⒦	
+⒢	⒣	⒤	⒥	⒦	<br>
 
-⒧	⒨	⒩	⒪	⒫
+⒧	⒨	⒩	⒪	⒫<br>
 
-⒬	⒭	⒮	⒯	⒰
+⒬	⒭	⒮	⒯	⒰<br>
 
 ⒱	⒲	⒳	⒴	⒵
 	
@@ -88,38 +86,35 @@ To use these alternative letters, you will need to cut  their code from here and
 ####  Long underscoring swashes
 
 <details> <summary> a-d-h-i-k-l-m-n-r-t-u </summary>
-		
 
-	
-![Echarpe Longue Soulignante](/assets/images/fonts/monichalongswash.jpg)
+<img src="/assets/images/fonts/monichalongswash.jpg" alt="Echarpe Longue Soulignante" title="Echarpe Longue Soulignante"><br>
 
-
-There are also 11 lower case letters with long underscoring swashes a-d-h-i-k-l-m-n-r-t-u :
+There are also 11 lower case letters with long underscoring swashes a-d-h-i-k-l-m-n-r-t-u.<br><br>
 
 They must not be followed, over two letters, by downslope letters (such as g-j-p-q-y-z)
-to avoid satin columns overlays. To access use one of these codes:
+to avoid satin columns overlays. To access use one of these codes:<br>
 
-Ⓐ			Ⓓ
+<pre>Ⓐ			Ⓓ
 
 	Ⓗ	Ⓘ		Ⓚ
 	
 Ⓛ	Ⓜ	Ⓝ
 
-	Ⓡ		Ⓣ	Ⓤ
-	
+	Ⓡ		Ⓣ	Ⓤ</pre>
+
 </details>
 
 ####  Medium length swashes 
 
 <details> <summary> g-j-y </summary>
 
-![Echarpe Moyenne Soulignante](/assets/images/fonts/monichamediumswash.png)
+<img src="/assets/images/fonts/monichamediumswash.png" alt="Echarpe Moyenne Soulignante" title="Echarpe Moyenne Soulignante"><br>
 
-There are 3 underscore medium length swash letters :g-j-y.
+There are 3 underscore medium length swash letters: g-j-y.<br><br>
 
-They must not be followed by a downslope letter.
+They must not be followed by a downslope letter.<br><br>
 
-To access use one of these codes:
+To access use one of these codes:<br>
 
 Ⓖ	Ⓙ	Ⓨ
 	
@@ -129,12 +124,13 @@ To access use one of these codes:
 
 <details> <summary> g-j-y </summary>
 
-![Echarpe Basse Bouclée](/assets/images/fonts/monichacurly.png)
-These three letters feature a curly low swash version.
+<img src="/assets/images/fonts/monichacurly.png" alt="Echarpe Basse Bouclée" title="Echarpe Basse Bouclée"><br>
 
-They must not be followed by a downstroke letter over two letters.
+These three letters feature a curly low swash version.<br><br>
 
-To access use one of these codes:
+They must not be followed by a downstroke letter over two letters.<br><br>
+
+To access use one of these codes:<br>
 
 ⓖ ⓙ ⓨ
 	
@@ -144,16 +140,13 @@ To access use one of these codes:
 
 <details> <summary> b-d-h-k-l-t </summary>
 
+<img src="/assets/images/fonts/monichacurlyup.png" alt="Echarpe Superieure Bouclée" title="Echarpe Superieure Bouclée"><br>
 
-![Echarpe Superieure Bouclée](/assets/images/fonts/monichacurlyup.png)
+There are 6 retrograde curly upper swash letters b-d-h-k-l-t.<br><br>
 
-There are 6 retrograde curly upper swash letters b-d-h-k-l-t.
+The two previous letters should not  be rising letters, nor capital letter to avoid satin columns overlays.<br>
 
-The two previous letters should not  be rising letters, nor capital letter to avoid 
-satin columns overlays.
-
-To access use one of these codes:
-
+To access use one of these codes:<br><br>
 
 ⓑ	ⓓ	ⓗ	ⓚ	ⓛ	ⓣ
 	
@@ -163,25 +156,28 @@ To access use one of these codes:
 
 <details> <summary> o</summary>
 
+<img src="/assets/images/fonts/monichao.png" alt="Echarpe Queue Droite" title="Echarpe Queue Droite"><br>
 
-![Echarpe Queue Droite](/assets/images/fonts/monichao.png)
+Finally there is also  a straight tail o:<br><br>
 
-Finally there is also  a straight tail o:
+To access use this code:<br>
 
-To access use one of this code:
 ⓞ
 
 </details>
 	
 ## In real life
 
-![monicha2](/assets/images/fonts/monicha2.jpg)
-![monicha8](/assets/images/fonts/monicha8.jpg)
-![monicha3](/assets/images/fonts/monicha3.jpg)
-![monicha4](/assets/images/fonts/monicha4.jpg)
-![monicha5](/assets/images/fonts/monicha5.jpg)
-![monicha6](/assets/images/fonts/monicha6.jpg)
+![Gelee](/assets/images/fonts/monicha2.jpg)
 
+![Rockabilly](/assets/images/fonts/monicha8.jpg)
 
+![Temps perdu](/assets/images/fonts/monicha3.jpg)
+
+![Ourson](/assets/images/fonts/monicha4.jpg)
+
+![Serviette](/assets/images/fonts/monicha5.jpg)
+
+![Serviette](/assets/images/fonts/monicha6.jpg)
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/monicha/LICENSE)

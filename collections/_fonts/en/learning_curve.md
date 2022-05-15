@@ -30,7 +30,7 @@ It can be scaled up to 200% (approx 36 mm, 1.5 inches) or scaled down to  90% (a
 
 ## In real life 
 
-![Mask Extension ](/assets/images/fonts/learningcurve5.jpe)
+![Mask Extension ](/assets/images/fonts/learningcurve5.jpg)
 
 
 ![Green Mouse](/assets/images/fonts/learning_curve3.jpg)
