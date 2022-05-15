@@ -61,7 +61,7 @@ COMMANDS = {
 }
 
 OBJECT_COMMANDS = ["fill_start", "fill_end", "run_start", "run_end", "satin_start", "satin_end", "stop", "trim", "ignore_object", "satin_cut_point"]
-CONNECTORLESS_OBJECT_COMMANDS = ["run_start", "run_end", "satin_start", "satin_end"]
+FREE_MOVEMENT_OBJECT_COMMANDS = ["run_start", "run_end", "satin_start", "satin_end"]
 LAYER_COMMANDS = ["ignore_layer"]
 GLOBAL_COMMANDS = ["origin", "stop_position"]
 
@@ -108,15 +108,7 @@ class Command(BaseCommand):
         self.connector = connector
         self.svg = self.connector.getroottree().getroot()
 
-        # object commands without a connector
-        xlink = self.connector.get(XLINK_HREF, None)
-        if xlink and xlink[11:] in CONNECTORLESS_OBJECT_COMMANDS:
-            self.command = xlink[11:]
-            self.use = self.connector
-            self.symbol = self.connector
-            self.target_point = StandaloneCommand(self.connector).point
-        else:
-            self.parse_command()
+        self.parse_command()
 
     def parse_connector_path(self):
         path = inkex.paths.Path(self.connector.get('d')).to_superpath()
@@ -303,7 +295,7 @@ def add_group(document, node, command):
     return group
 
 
-def add_connector(document, symbol, element):
+def add_connector(document, symbol, command, element):
     # I'd like it if I could position the connector endpoint nicely but inkscape just
     # moves it to the element's center immediately after the extension runs.
     start_pos = (symbol.get('x'), symbol.get('y'))
@@ -319,18 +311,15 @@ def add_connector(document, symbol, element):
         "style": "stroke:#000000;stroke-width:1px;stroke-opacity:0.5;fill:none;",
         CONNECTION_START: "#%s" % symbol.get('id'),
         CONNECTION_END: "#%s" % element.node.get('id'),
-        CONNECTOR_TYPE: "polyline",
 
         # l10n: the name of the line that connects a command to the object it applies to
         INKSCAPE_LABEL: _("connector")
     })
 
+    if command not in FREE_MOVEMENT_OBJECT_COMMANDS:
+        path.attrib[CONNECTOR_TYPE] = "polyline"
+
     symbol.getparent().insert(0, path)
-
-
-def connect_symbol(symbol, element):
-    connection_end = "#%s" % element.node.get('id')
-    symbol.set(CONNECTION_END, connection_end)
 
 
 def add_symbol(document, group, command, pos):
@@ -403,10 +392,7 @@ def add_commands(element, commands):
         group = add_group(svg, element.node, command)
         pos = get_command_pos(element, i, len(commands))
         symbol = add_symbol(svg, group, command, pos)
-        if command not in CONNECTORLESS_OBJECT_COMMANDS:
-            add_connector(svg, symbol, element)
-        else:
-            connect_symbol(symbol, element)
+        add_connector(svg, symbol, command, element)
 
 
 def add_layer_commands(layer, commands):
