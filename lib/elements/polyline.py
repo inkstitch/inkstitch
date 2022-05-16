@@ -58,9 +58,12 @@ class Polyline(EmbroideryElement):
         # svg transforms that is in our superclass, we'll convert the polyline
         # to a degenerate cubic superpath in which the bezier handles are on
         # the segment endpoints.
-        path = self.node.get_path()
+        if self.node.get('points', None):
+            path = self.node.get_path()
+        else:
+            # Set path to (0, 0) for empty polylines
+            path = 'M 0 0'
         path = Path(path).to_superpath()
-
         return path
 
     @property
