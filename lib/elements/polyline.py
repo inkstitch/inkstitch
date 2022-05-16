@@ -47,19 +47,9 @@ class Polyline(EmbroideryElement):
         return self.get_boolean_param("polyline")
 
     @property
-    def points(self):
-        # example: "1,2 0,0 1.5,3 4,2"
-
-        points = self.node.get('points').strip()
-        points = points.split(" ")
-        points = [[float(coord) for coord in point.split(",")] for point in points]
-
-        return points
-
-    @property
     @cache
     def shape(self):
-        return shgeo.LineString(self.points)
+        return shgeo.LineString(self.path)
 
     @property
     def path(self):
@@ -99,7 +89,7 @@ class Polyline(EmbroideryElement):
         return stitches
 
     def validation_warnings(self):
-        yield PolylineWarning(self.points[0])
+        yield PolylineWarning(self.path[0][0][0])
 
     def to_stitch_groups(self, last_patch):
         patch = StitchGroup(color=self.color)
