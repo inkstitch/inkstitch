@@ -62,7 +62,7 @@ def _get_pattern_points(first, second, pattern):
     if isinstance(intersection, shgeo.Point):
         points.append(Point(intersection.x, intersection.y))
     if isinstance(intersection, shgeo.MultiPoint):
-        for point in intersection:
+        for point in intersection.geoms:
             points.append(Point(point.x, point.y))
     # sort points after their distance to first
     points.sort(key=lambda point: point.distance(first))
