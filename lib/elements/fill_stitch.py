@@ -162,8 +162,7 @@ class FillStitch(EmbroideryElement):
                   'When you enable flip, stitching goes from right-to-left instead of left-to-right.'),
         type='boolean',
         sort_index=7,
-        select_items=[('fill_method', 0), ('fill_method', 2),
-                      ('fill_method', 3)],
+        select_items=[('fill_method', 3)],
         default=False)
     def flip(self):
         return self.get_boolean_param("flip", False)
@@ -324,7 +323,7 @@ class FillStitch(EmbroideryElement):
         return max(self.get_float_param("running_stitch_length_mm", 1.5), 0.01)
 
     @property
-    @param('fill_underlay', _('Underlay'), type='toggle', group=_('AutoFill Underlay'), default=True)
+    @param('fill_underlay', _('Underlay'), type='toggle', group=_('Fill Underlay'), default=True)
     def fill_underlay(self):
         return self.get_boolean_param("fill_underlay", default=True)
 
@@ -333,7 +332,7 @@ class FillStitch(EmbroideryElement):
            _('Fill angle'),
            tooltip=_('Default: fill angle + 90 deg. Insert comma-seperated list for multiple layers.'),
            unit='deg',
-           group=_('AutoFill Underlay'),
+           group=_('Fill Underlay'),
            type='float')
     @cache
     def fill_underlay_angle(self):
@@ -356,7 +355,7 @@ class FillStitch(EmbroideryElement):
            _('Row spacing'),
            tooltip=_('default: 3x fill row spacing'),
            unit='mm',
-           group=_('AutoFill Underlay'),
+           group=_('Fill Underlay'),
            type='float')
     @cache
     def fill_underlay_row_spacing(self):
@@ -367,7 +366,7 @@ class FillStitch(EmbroideryElement):
            _('Max stitch length'),
            tooltip=_('default: equal to fill max stitch length'),
            unit='mm',
-           group=_('AutoFill Underlay'), type='float')
+           group=_('Fill Underlay'), type='float')
     @cache
     def fill_underlay_max_stitch_length(self):
         return self.get_float_param("fill_underlay_max_stitch_length_mm") or self.max_stitch_length
@@ -377,7 +376,7 @@ class FillStitch(EmbroideryElement):
            _('Inset'),
            tooltip=_('Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill.'),
            unit='mm',
-           group=_('AutoFill Underlay'),
+           group=_('Fill Underlay'),
            type='float',
            default=0)
     def fill_underlay_inset(self):
@@ -389,7 +388,7 @@ class FillStitch(EmbroideryElement):
         _('Skip last stitch in each row'),
         tooltip=_('The last stitch in each row is quite close to the first stitch in the next row.  '
                   'Skipping it decreases stitch count and density.'),
-        group=_('AutoFill Underlay'),
+        group=_('Fill Underlay'),
         type='boolean',
         default=False)
     def fill_underlay_skip_last(self):
@@ -427,7 +426,7 @@ class FillStitch(EmbroideryElement):
         tooltip=_('Travel inside the shape when moving from section to section.  Underpath '
                   'stitches avoid traveling in the direction of the row angle so that they '
                   'are not visible.  This gives them a jagged appearance.'),
-        group=_('AutoFill Underlay'),
+        group=_('Fill Underlay'),
         type='boolean',
         default=True)
     def underlay_underpath(self):

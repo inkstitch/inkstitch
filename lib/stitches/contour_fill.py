@@ -4,7 +4,7 @@ from itertools import chain
 import networkx as nx
 import numpy as np
 import trimesh
-from shapely.geometry import GeometryCollection, MultiPolygon, Polygon, LineString, MultiLineString, Point
+from shapely.geometry import GeometryCollection, MultiPolygon, Polygon, LineString, Point
 from shapely.geometry.polygon import orient
 from shapely.ops import nearest_points
 from shapely.ops import polygonize
