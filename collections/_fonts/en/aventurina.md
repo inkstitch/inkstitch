@@ -23,14 +23,12 @@ It may be scaled up to 150% (aprox. 30mm , 1.25 in) or scaled down to 60% (appro
 
 
 ## In real life:
-On a bookmark: 
 
-![Bookmark ](/assets/images/fonts/aventurina3.jpg)
+Bookmark, Hand towel.....
 
-Aventurina on a hand towel
+{% include folder-galleries path="fonts/aventurina/" %}
 
-![Towel](/assets/images/fonts/aventurina2.jpg)
-![Maxence](/assets/images/fonts/aventurina4.jpg)
+
 
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/aventurina/LICENSE)
