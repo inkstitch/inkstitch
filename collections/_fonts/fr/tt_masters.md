@@ -27,8 +27,6 @@ Pour un texte multiligne il est possible de broder alternativement de la gauche 
 Il est possible d'ajouter des commandes de coupe de fil.
 
 ## Dans la vraie vie 
-![Etiquettes](/assets/images/fonts/TTmaster2.jpg)
-
-	
+{% include folder-galleries path="fonts/TT_masters/" %}
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/tt_masters/LICENSE)
