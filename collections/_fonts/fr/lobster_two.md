@@ -31,11 +31,6 @@ Utilisée à 100%, cette fonte fait environ 22 mm.
 Elle peut être agrandie jusqu'a 150% (env 33 mm) ou diminuée jusqu'à 80% (env  18 mm).
 
 ## Dans la vraie vie
-
-![Lobster 2](/assets/images/fonts/lobster2.jpg)
-![Lobster 3](/assets/images/fonts/lobster3.jpg)
-![Lobster 4](/assets/images/fonts/lobster4.jpg)
-
-
+{% include folder-galleries path="fonts/lobster_ags/" %}
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/lobster_AGS/LICENSE)
