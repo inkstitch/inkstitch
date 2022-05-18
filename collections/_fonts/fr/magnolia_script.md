@@ -20,8 +20,6 @@ Elle peut être agrandie jusqu'a 120% (env 25 mm) ou diminuée jusqu'à 80% (env
 
 ## Dans la vraie vie
 
-![Magnolia2](/assets/images/fonts/magnolia2.jpg)
-
-![Tablier](/assets/images/fonts/magnolia4.jpg)
+{% include folder-galleries path="fonts/magnolia_KOR/" %}
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/magnolia_%20KOR/LICENSE)
