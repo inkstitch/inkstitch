@@ -33,20 +33,10 @@ It can be scaled up to 120% (approx. 60 mm, 2.4 inches) or scaled down to 80% (a
 
 ## In real life
 
-Chopin Script used on a deckchair cushion.
+On cushions, towels, T shirt, fleece
 
-![Chopin Script_2](/assets/images/fonts/chopin2.jpg)
+{% include folder-galleries path="fonts/chopin/" %}
 
-Another cushion:
 
-![Chopin Script_3](/assets/images/fonts/chopin3.jpg)
-
-but so nice also on towel and  T-shirt
-
-![Chopin Script_4](/assets/images/fonts/chopin4.jpg)
-
-or on fleece
-
-![Chopin Script_5](/assets/images/fonts/chopin5.jpg)
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/chopin/LICENSE)
