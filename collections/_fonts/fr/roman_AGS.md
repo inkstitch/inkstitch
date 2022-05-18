@@ -30,8 +30,8 @@ Elles peuvent être agrandies jusqu'a 130% (env 37 mm) ou diminuées jusqu'à 80
 
 
 ## Dans la vraie vie
-![ManuscriptGothisch5](/assets/images/fonts/gothicromanaugusa1.jpg)
-![ManuscriptGothisch6](/assets/images/fonts/gothicromanaugusa2.jpg)
+{% include folder-galleries path="fonts/roman_AGS/" %}
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/roman_ags_bicolor/LICENSE)
+
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/roman_ags/LICENSE)
