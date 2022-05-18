@@ -50,18 +50,9 @@ Contrarly to Grand Hotel Matif, Grand Hotel small font **MUST** be embroidered w
 A USA 8 (EUR 60) size needle, and 60WT thread **MUST** be used.
 
 ## In real life
+From 25% on the T shirt to full size on the apron and the label
 
+{% include folder-galleries path="fonts/glacial_tiny/" %}
 
-Isn't it nice as a label font ?
-
-![grand_hotel_marif2](/assets/images/fonts/grandhotel2.jpg)
-
-or on this apron, with the help of glacial tiny ?
-
-![grand_hotel_marif3](/assets/images/fonts/glacialgrandhotel.jpg)
-
-Grand Hotel Small 25%
-
-![Tshirt ](/assets/images/fonts/grandhotel_small_3.jpg)
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/grand_hotel_marif/LICENSE)
