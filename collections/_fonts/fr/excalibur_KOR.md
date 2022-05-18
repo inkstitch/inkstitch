@@ -36,7 +36,4 @@ Elle peut être agrandie jusqu'a 140% (env 28 mm) ou diminuée jusqu'à 80% (env
 ## Dans la vraie vie
 {% include folder-galleries path="fonts/excalibur_KOR/" %}
 
-![MarquePage](/assets/images/fonts/excalibur2.jpg)
-
-
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/excalibur_KOR/LICENSE)
