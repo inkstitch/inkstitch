@@ -51,6 +51,7 @@ A USA 8 (EUR 60) size needle, and 60WT thread **MUST** be used.
 
 Espresso KOR used  on a child T shirt
 
-![EspressoDolce2](/assets/images/fonts/espresso2.jpg)
+{% include folder-galleries path="fonts/espresso_KOR/" %}
+
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/espresso_KOR/LICENSE)
