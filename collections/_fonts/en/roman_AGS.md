@@ -26,8 +26,8 @@ They may be scaled up to 130% (approx. 37 mm, 1.5 inches) or down to 80% (approx
 
 
 ## In real life
-![ManuscriptGothisch5](/assets/images/fonts/gothicromanaugusa1.jpg)
-![ManuscriptGothisch6](/assets/images/fonts/gothicromanaugusa2.jpg)
+{% include folder-galleries path="fonts/roman_AGS/" %}
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/roman_ags_bicolor/LICENSE)
+
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/roman_ags/LICENSE)
