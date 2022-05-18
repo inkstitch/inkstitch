@@ -48,15 +48,7 @@ Brockscript peut par exemple être utilisée sur une serviette, un T shirt, pour
 
 {% include folder-galleries path="fonts/brockscript/" %}
 
-![Tshirt](/assets/images/fonts/brockscript2.jpg)
 
-
-
-![Serviette](/assets/images/fonts/brockscript3.jpg)
-
-
-
-![0rnement](/assets/images/fonts/brockscript4.jpg)
 
 
 
