@@ -24,6 +24,6 @@ Elle peut être agrandie jusqu'a 200% (env 60 mm) ou diminuée jusqu'à 80% (env
 
 Ici, la date est brodée avec Kaushan Script, le reste avec Cherry for Ink/Stitch et Cherry for Kaalleen
 
-![KaushanScript](/assets/images/fonts/cherry2.jpg)
+{% include folder-galleries path="fonts/kaushan_script/" %}
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/kaushan_script_MAM/LICENSE)
