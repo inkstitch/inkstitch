@@ -23,12 +23,6 @@ Elle peut être agrandie jusqu'a 150% (env 150 mm) ou diminuée jusqu'à 50% (en
 
 ## Dans la vraie vie
 
-Cette police en appliqué peut être utilisée avec des tissus différents pour chaque lettre
-
-![NamskoutAGS2](/assets/images/fonts/namskout2.jpg)
-
-ou en utilisant toujours le même tissu: 
-
-![NamskoutAGS3](/assets/images/fonts/namskout3.jpg)
+{% include folder-galleries path="fonts/namskout_ags/" %}
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/namskout_AGS/LICENSE)
