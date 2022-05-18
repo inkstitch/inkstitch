@@ -45,15 +45,6 @@ Contrairement à Pacificlo, Pacificlo tiny **DOIT** être brodée avec un fil et
 
 
 ## Réalisations
-
-Le nom latin est brodé avec Pacificlo tandis que le nom français utilise  Learning curve
-
-![Pacificlo2](/assets/images/fonts/pacificlolearning.jpg)
-
-Version tiny, pour décorer un pot de confiture:
-
-![Pacificlotiny jam covers](/assets/images/fonts/pacificlotiny1.jpg)
-
-
+{% include folder-galleries path="fonts/pacificlo/" %}
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/pacificlo/LICENSE)
