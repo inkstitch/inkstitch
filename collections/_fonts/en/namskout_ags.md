@@ -22,13 +22,6 @@ It may be scaled up to 150% (approx. 150mm , 6 inches) or scaled down to 50% (ap
 
 ## In real life:
 
-You may use a different applique fabric for  each letter
-
-![NamskoutAGS2](/assets/images/fonts/namskout2.jpg)
-
-or use the same applique fabric for all the letters
-
-
-![NamskoutAGS3](/assets/images/fonts/namskout3.jpg)
+{% include folder-galleries path="fonts/namskout_ags/" %}
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/namskout_AGS/LICENSE)
