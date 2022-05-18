@@ -37,12 +37,9 @@ Déja Vu may be embroidered left to right, right to left,  top to bottom orbotto
 
 ## In real life
 
-Used by itself
+Used by itself or with Amitaclo  and Magnolia KOR on conserve jars
 
-![DejaVu2](/assets/images/fonts/dejavu2.jpg)
+{% include folder-galleries path="fonts/dejavu/" %}
 
-or with Amitaclo  and Magnolia KOR
-
-![DejaVu3](/assets/images/fonts/amitadejavumagnolia.jpg)
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/dejavufont/LICENSE)
