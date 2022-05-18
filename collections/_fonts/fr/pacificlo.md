@@ -44,7 +44,7 @@ C'est pourquoi dans la fenêtre de dialogue du lettrage, il vous sera demandé  
 Contrairement à Pacificlo, Pacificlo tiny **DOIT** être brodée avec un fil et une aiguille plus fins que d'ordinaire. Une aiguille de taille 8 (USA), 60(EUR) et un fil 60WT **DOIVENT** être utilisés.
 
 
-## Réalisations
+## Dans la vraie vie
 {% include folder-galleries path="fonts/pacificlo/" %}
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/pacificlo/LICENSE)
