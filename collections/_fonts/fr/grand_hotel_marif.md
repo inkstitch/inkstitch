@@ -51,6 +51,6 @@ Contrairement à Grand Hotel, cette fonte diminuée DOIT être brodée avec un f
 ## Dans la vraie vie
 De 25% sur le T shirt  à 100% sur le tablier
 
-{% include folder-galleries path="fonts/glacial_tiny/" %}
+{% include folder-galleries path="fonts/grand_hotel_marif/" %}
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/grand_hotel_marif/LICENSE)
