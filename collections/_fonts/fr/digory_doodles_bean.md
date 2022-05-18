@@ -29,10 +29,6 @@ Elle peut être agrandie jusqu'a 200% (env 44 mm) mais ne doit pas être diminu�
 ## Dans la vraie vie
 {% include folder-galleries path="fonts/digory-doodles-bean/" %}
 
-![Health Pass](/assets/images/fonts/digorydoodle2.jpg)
-
-![Serviette](/assets/images/fonts/digory2.jpg)
-
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/digory_doodles_bean/LICENSE)
 
