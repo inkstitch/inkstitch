@@ -48,11 +48,13 @@ Elle peut être agrandie jusqu'a 140% (env 11 mm) ou diminuée jusqu'à 60% (env
 
 ## Dans la vraie vie
 
-Sur un coussin
+Sur un coussin, un T Shirt et avec Grand Hotel Marif sur un tablier:
+
+{% include folder-galleries path="fonts/glacial_tiny/" %}
 
 ![Coussin](/assets/images/fonts/glacial3.jpg)
 
-Glacial utilisée avec Grand Hotel Marif sur un tablier:
+
 
 ![Tablier](/assets/images/fonts/glacialgrandhotel.jpg)
 
