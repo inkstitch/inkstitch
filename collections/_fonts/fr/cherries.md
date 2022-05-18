@@ -36,11 +36,11 @@ Si vous brodez plusieurs lettrines, vous pouvez souhaiter trier les couleurs. C'
 
 
 ## Dans la vraie vie
-Elles peuvent être utilisées ensemble 
+Elles peuvent être utilisées ensemble  ou séparement/
 
+
+{% include folder-galleries path="fonts/cherries/" %}
 ![Sac](/assets/images/fonts/cherry2.jpg)
-
-Ou séparément
 
 ![Serviette](/assets/images/fonts/cherryforinkstitch4.jpg)
 
