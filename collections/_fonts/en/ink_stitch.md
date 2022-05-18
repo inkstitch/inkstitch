@@ -14,15 +14,7 @@ preview_image:
 ## Glyphs
 
 Both fonts  contains  the 89 glyphs :
-ABCDEFGHI
-JKLMNOPQRS
-TUVWXYZabc
-defghijklm
-nopqrstuvw
-xyz0123456
-789@<>:,'"
-“”.+-=()_/
-�#ÄÖÜäößü
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@<>:,'"“”.+-=()_/�#ÄÖÜäößü
 
 ## Dimensions
 
@@ -41,7 +33,7 @@ Both fonts are reversible : a multi line embroidery  may be  embroidered in alte
 
 ## In real life
 
-![Labels](/assets/images/fonts/ingstitchsmall.jpg)
+{% include folder-galleries path="fonts/inkstitch/" %}
 
 [Download Ink/Stitch Small Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/small_font/LICENSE)
 
