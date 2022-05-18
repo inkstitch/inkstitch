@@ -28,16 +28,6 @@ Elle peut être agrandie jusqu'a 200% (env 36 mm) ou diminuée jusqu'à 90% (env
 
 ## Dans la vraie vie
 
-![Extension de masque](/assets/images/fonts/learningcurve5.jpg)
-[![Souris Vert](/assets/images/fonts/learning_curve3.jpg)
-
-
-![Demoiselle](/assets/images/fonts/learningcurve2.jpg)
-
-Le nom latin est brodé avec Pacificlo tandis que le nom français utilise  Learning curve
-
-![Botanique](/assets/images/fonts/pacificlolearning.jpg)
-
-
+{% include folder-galleries path="fonts/learning_curve/" %}
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/learning_curve/LICENSE)
