@@ -41,15 +41,6 @@ Marque page, essuie main.....
 
 {% include folder-galleries path="fonts/aventurina/" %}
 
-Marque page : 
-
-![Marque page](/assets/images/fonts/aventurina3.jpg)
-
-Aventurina sur un essuie main.
-
-![Essuie Main](/assets/images/fonts/aventurina2.jpg)
-
-![Maxence](/assets/images/fonts/aventurina4.jpg)
 
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/aventurina/LICENSE)
