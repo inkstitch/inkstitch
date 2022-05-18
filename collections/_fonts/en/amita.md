@@ -43,15 +43,13 @@ Amitaclo small (it is part of an upcoming Ink/Stitch version and not available i
 
 That's why in the lettering dialog window, if using amitaclo small, you will have to pick up a scale between 25 and 55%. 
 
-Contrarly to Amitaclo, Amitaclo small font **MUST** be embroidered with thread and needle smaller than usual.
+Contrarily to Amitaclo, Amitaclo small font **MUST** be embroidered with thread and needle smaller than usual.
 A USA 8 (EUR 60) size needle, and 60WT thread **MUST** be used.
 
 ## In real life
 
-![Owl](/assets/images/fonts/amita3.jpg)
+Used in conjunction with  Déjà Vu and  Magnolia KOR on the preserve jars
 
-Used in conjunction with  Déjà Vu and  Magnolia KOR
-
-![Jam](/assets/images/fonts/amitadejavumagnolia.jpg)
+{%include folder-galleries path="fonts/amitaclo/" %}
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/amitaclo/LICENSE)
