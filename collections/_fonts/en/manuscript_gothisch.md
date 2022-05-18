@@ -23,19 +23,7 @@ It can be scaled up to 140% (approx. 42 mm, 1 2/3  inches) or scaled down to  70
 
 ## In real life
 
-Manuscript Gothish on a towel:
 
-![ManuscriptGothisch2](/assets/images/fonts/manuscript_gothisch2.jpg)
-
-on bookmarks:
-
-![ManuscriptGothisch3](/assets/images/fonts/manuscript_gothisch3.jpg)
-
-used to draw a cat (chat in French): 
-![ManuscriptGothisch4](/assets/images/fonts/manuscript_gothisch4.jpg)
-
-or with its friend RomanAugusa Bicolor
-![ManuscriptGothisch5](/assets/images/fonts/gothicromanaugusa1.jpg)
-![ManuscriptGothisch6](/assets/images/fonts/gothicromanaugusa2.jpg)
+{% include folder-galleries path="fonts/manuscript_gothisch/" %}
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/manuskript_gotisch/LICENSE)
