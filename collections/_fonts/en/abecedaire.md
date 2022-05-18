@@ -41,9 +41,9 @@ It can be scaled up to 200%  (28mm, 1 inch) and scalled to 75% (9mm  1/3 inch)
 
 
 ## In real life
-![Abecedaire](/assets/images/fonts/abecedaire1.jpg)
 
-![Abecedaire](/assets/images/fonts/abecedaire2.jpg)
+{% include folder-galleries path="fonts/abecedaire/" %}
+
 
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/abecedaire/LICENSE)
