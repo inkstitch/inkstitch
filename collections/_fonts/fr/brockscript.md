@@ -46,7 +46,7 @@ Et si vous ne savez pas tapper un µ depuis votre clavier vers la fenêtre de di
 
 Brockscript peut par exemple être utilisée sur une serviette, un T shirt, pour décorer le sapin de Noël....
 
-{% include folder-galleries path="fonts/abecedaire/" %}
+{% include folder-galleries path="fonts/brockscript/" %}
 
 ![Tshirt](/assets/images/fonts/brockscript2.jpg)
 
