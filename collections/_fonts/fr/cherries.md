@@ -36,15 +36,10 @@ Si vous brodez plusieurs lettrines, vous pouvez souhaiter trier les couleurs. C'
 
 
 ## Dans la vraie vie
-Elles peuvent être utilisées ensemble  ou séparement/
-
+Elles peuvent être utilisées ensemble  ou séparement
 
 {% include folder-galleries path="fonts/cherries/" %}
-![Sac](/assets/images/fonts/cherry2.jpg)
 
-![Serviette](/assets/images/fonts/cherryforinkstitch4.jpg)
-
-![CherryforKaalleen2](/assets/images/fonts/cherryforinkstitch2.jpg)
 
 [Download Cherry for inkstitch Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/cherryforinkstitch/LICENSE)
 
