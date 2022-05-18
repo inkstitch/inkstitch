@@ -33,7 +33,8 @@ Elle peut être agrandie jusqu'a 120% (env 60 mm) ou diminuée jusqu'à 80% (env
 
 ## Dans la vraie vie
 
-Chopin Script en action sur un coussin de transat :
+Chopin Script en action sur des coussins mais aussi sur serviette, polos, T Shirt, polaire
+{% include folder-galleries path="fonts/chopin/" %}
 
 ![Chopin Script_2](/assets/images/fonts/chopin2.jpg)
 
