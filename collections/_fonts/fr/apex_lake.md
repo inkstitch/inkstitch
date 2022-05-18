@@ -28,20 +28,9 @@ Utilisée à 100% elle mesure environ 60mm de haut. Elle peut être réduite jus
 ## Tri des couleurs 
 Si vous brodez plusieurs lettrines, vous pouvez souhaiter trier les couleurs. C'est possible à condition de respecter leur ordre relatif à l'intérieur de chaque lettre. [Voici comment faire](https://inkstitch.org/fr/docs/lettering/#tri-des-couleurs)
 
-
-
-
 ## Dans la vraie vie
 Et pourquoi pas sur un T shirt ? ou sur un panier en tissu ?
 
-
 {%include folder-galleries path="fonts/apex-lake/" %}
-
-![TShirt](/assets/images/fonts/apex2.jpg)
-
-![TShirt](/assets/images/fonts/apex4.jpg)
-
-
-![Panier](/assets/images/fonts/apex3.jpg)
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/apex_lake/LICENSE)
