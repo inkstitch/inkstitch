@@ -52,7 +52,7 @@ A USA 8 (EUR 60) size needle, and 60WT thread **MUST** be used.
 ## In real life
 From 25% on the T shirt to full size on the apron and the label
 
-{% include folder-galleries path="fonts/glacial_tiny/" %}
+{% include folder-galleries path="fonts/grand_hotel_marif/" %}
 
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/grand_hotel_marif/LICENSE)
