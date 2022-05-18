@@ -27,6 +27,7 @@ Utilisée à 100%, cette fonte fait environ 22 mm.
 Elle peut être agrandie jusqu'a 200% (env 44 mm) mais ne doit pas être diminuée.
 
 ## Dans la vraie vie
+{% include folder-galleries path="fonts/digory-doodles-bean/" %}
 
 ![Health Pass](/assets/images/fonts/digorydoodle2.jpg)
 
