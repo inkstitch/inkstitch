@@ -36,8 +36,7 @@ It may be scaled up to 150% (approx. 48 mm, 2 inches) or down to 80% (approx. 25
 
 
 ## In real life
-![Tshirt](/assets/images/fonts/baumans2.jpg)
-![Sample](/assets/images/fonts/baumans3.jpg)
-![Hoop](/assets/images/fonts/baumans4.jpg)
+
+{% include folder-galleries path="fonts/baumans/" %}
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/baumans_FI/LICENSE)
