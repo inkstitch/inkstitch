@@ -38,8 +38,5 @@ Elle peut être agrandie jusqu'a 150% (env 48 mm) ou diminuée jusqu'à 80% (env
 
 {% include folder-galleries path="fonts/baumans/" %}
 
-![Tshirt](/assets/images/fonts/baumans2.jpg)
-![Sample](/assets/images/fonts/baumans3.jpg)
-![Hoop](/assets/images/fonts/baumans4.jpg)
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/baumans_FI/LICENSE)
