@@ -35,15 +35,10 @@ If you embroider several letters, you may wish to color sort. It is possible, pr
 
 ## In real life 
 
+Why not use Apex Lake on a T shirt ? or on a fabric basket ?
 
-Why not use Apex Lake on a T shirt
+{%include folder-galleries path="fonts/apex-lake/" %}
 
-![T Shirt](/assets/images/fonts/apex2.jpg)
 
-![TShirt](/assets/images/fonts/apex4.jpg)
-
-or on a fabric basket ?
-
-![Basket](/assets/images/fonts/apex3.jpg)
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/apex_lake/LICENSE)
