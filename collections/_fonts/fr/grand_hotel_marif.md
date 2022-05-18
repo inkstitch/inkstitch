@@ -49,18 +49,8 @@ Contrairement à Grand Hotel, cette fonte diminuée DOIT être brodée avec un f
 
 
 ## Dans la vraie vie
+De 25% sur le T shirt  à 100% sur le tablier
 
-Cette fonte n'est elle pas parfaite sur une etiquette ?
-![Etiquette](/assets/images/fonts/grandhotel2.jpg)
-
-ou associée à Glacial tiny 60 sur ce tablier :
-![Tablier](/assets/images/fonts/glacialgrandhotel.jpg)
-
-dans sa version small à 25%
-
-![Tshirt ](/assets/images/fonts/grandhotel_small_3.jpg)
-
-
-
+{% include folder-galleries path="fonts/glacial_tiny/" %}
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/grand_hotel_marif/LICENSE)
