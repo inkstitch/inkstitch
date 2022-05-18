@@ -38,11 +38,13 @@ Déja Vu peut être brodé de gauche à droite, de droite à gauche, de haut en 
 
 ## Dans la vraie vie
 
-Utilisée seule
+Utilisée seule Ou en compagnie d'Amitaclo et  de Magnolia KOR sur les pots de conserve.
+
+{% include folder-galleries path="fonts/dejavu/" %}
 
 ![DejaVu2](/assets/images/fonts/dejavu2.jpg)
 
-Ou en compagnie d'Amitaclo et  de Magnolia KOR
+
 
 ![DejaVu3](/assets/images/fonts/amitadejavumagnolia.jpg)
 
