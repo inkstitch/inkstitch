@@ -33,16 +33,11 @@ If you embroider several letters, you may wish to color sort. It is possible, pr
 
 
 ## In real life
- 
-They may be used together
 
-![Sac](/assets/images/fonts/cherry2.jpg)
+They may be used together or independantly
 
-Or independantly
+{% include folder-galleries path="fonts/cherries/" %}
 
-![Serviette](/assets/images/fonts/cherryforinkstitch4.jpg)
-
-![CherryforKaalleen2](/assets/images/fonts/cherryforinkstitch2.jpg)
 
 [Download Cherry for inkstitch Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/cherryforinkstitch/LICENSE)
 
