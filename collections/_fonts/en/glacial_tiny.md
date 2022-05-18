@@ -55,16 +55,9 @@ It can be scaled up to 140% (approx 11 mm, 0.4 inch) or scaled down to 60% (appr
 
 ## In real life
 
-On a cushion
+On a cushion, a T shirt and  in conjunction with Grand Hotel Marif on an apron 
 
-![Cushion](/assets/images/fonts/glacial3.jpg)
-
-Used in conjunction with Grand Hotel Marif on an apron 
-
-![Apron](/assets/images/fonts/glacialgrandhotel.jpg)
-On a T Shirt
-![TShirt](/assets/images/fonts/glacial_5.jpg)
-
+{% include folder-galleries path="fonts/glacial_tiny/" %}
 
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/glacial_tiny/LICENSE)
