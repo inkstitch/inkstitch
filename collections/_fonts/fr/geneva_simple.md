@@ -62,6 +62,8 @@ Elles peut être agrandies jusqu'a 200% (env 16 mm) ou diminuées jusqu'à 70% (
 
 ## Dans la vraie vie
 
+{% include folder-galleries path="fonts/geneva/" %}
+
 ![Geneva ](/assets/images/fonts/geneva.jpg)
 
 
