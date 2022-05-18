@@ -26,7 +26,7 @@ It is possible to add trim commands
 
 
 ## In real life 
-![Labels](/assets/images/fonts/TTmaster2.jpg)
+{% include folder-galleries path="fonts/TT_masters/" %}
 
 
 
