@@ -34,6 +34,8 @@ Utilisée à 100%, cette fonte fait environ 20 mm.
 Elle peut être agrandie jusqu'a 140% (env 28 mm) ou diminuée jusqu'à 80% (env 16mm).
 
 ## Dans la vraie vie
+{% include folder-galleries path="fonts/excalibur_KOR/" %}
+
 ![MarquePage](/assets/images/fonts/excalibur2.jpg)
 
 
