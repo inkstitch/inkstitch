@@ -33,12 +33,7 @@ At 100%, this font is approximatively 20 mm (3/4 inch) high.
 
 It can be scaled up to 140% (approx. 28 mm, 1 inch) or scaled down to  80% (approx.  16mm, 0.6 inch).
 
-
 ## In real life
-![MarquePage](/assets/images/fonts/excalibur2.jpg)
-
-
-
-
+{% include folder-galleries path="fonts/excalibur_KOR/" %}
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/excalibur_KOR/LICENSE)
