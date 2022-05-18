@@ -21,9 +21,6 @@ It can be scaled up to 120% (approx. 33 mm, 1.1  inches) or scaled down to  80% 
 
 ## In real life
 
----
-![Magnolia2](/assets/images/fonts/magnolia2.jpg)
-
-![Tablier](/assets/images/fonts/magnolia4.jpg)
+{% include folder-galleries path="fonts/magnolia_KOR/" %}
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/magnolia_%20KOR/LICENSE)
