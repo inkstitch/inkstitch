@@ -30,6 +30,7 @@ Utilisée à  100%, Coronaviral  fait environ 27 mm.
 Cette fonte étant réalisée en points manuels, sa taille ne doit pas être modifiée, ou alors très très peu.
 
 ## Dans la vraie vie
+{% include folder-galleries path="fonts/coronaviral/" %}
 
 ![Etiquettes](/assets/images/fonts/coronaviral.jpg)
 
