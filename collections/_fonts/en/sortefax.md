@@ -59,17 +59,8 @@ Frame|Key
 ![DeuxPoints](/assets/images/fonts/sortefax/deuxpoints.png)|<key>:</key>
 ![PointVirgule](/assets/images/fonts/sortefax/pointvirgule.png)|<key>;</key>
 
-## Embroidering with Sàrtefax XL
+## In real life 
 
-![SortefaxXL2](/assets/images/fonts/sortefax2.jpg)
-
-![SortefaxXL3](/assets/images/fonts/sortefax3.jpg)
-
-![SortefaxXL4](/assets/images/fonts/sortefaxXL4.jpg)
-
-![Sortefax_medium2](/assets/images/fonts/sortefaxmedium2.jpg)
-
-![Sortefax_medium3](/assets/images/fonts/sortefaxmedium3.jpg)
-
+{% include folder-galleries path="fonts/sortefax/" %}
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/sortefaxXL/LICENSE)
