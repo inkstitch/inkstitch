@@ -48,9 +48,13 @@ Contrairement à Amitaclo, cette fonte diminuée DOIT être brodée avec un fil 
 
 ## Dans la vraie vie
 
-![Chouette](/assets/images/fonts/amita3.jpg)
+{%include folder-galleries path="fonts/amitaclo/" %}
 
-En compagnie de Déjà Vu et de Magnolia KOR
+
+
+En compagnie de Déjà Vu et de Magnolia KOR sur le pot de confiture
+
+![Chouette](/assets/images/fonts/amita3.jpg)
 
 ![Confiture](/assets/images/fonts/amitadejavumagnolia.jpg)
 
