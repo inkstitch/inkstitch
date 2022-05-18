@@ -49,6 +49,9 @@ Contrairement à Espresso KOR, ette fonte diminuée **DOIT** être brodée avec 
 ## Dans la vraie vie
 
 Espresso KOR  sur un T shirt  enfant
+
+{% include folder-galleries path="fonts/espresso_KOR/" %}
+
 ![T Shirt](/assets/images/fonts/espresso2.jpg)
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/espresso_KOR/LICENSE)
