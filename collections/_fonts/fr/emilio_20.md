@@ -26,9 +26,10 @@ Elle peut être agrandie jusqu'a 120% (env 120 mm) ou diminuée jusqu'à 90% (en
 ## Tri des couleurs pour la version tricolore
 Si vous brodez plusieurs lettes, vous pouvez souhaiter trier les couleurs. C'est possible à condition de respecter leur ordre relatif à l'intérieur de chaque lettre. [Voici comment faire](https://inkstitch.org/fr/docs/lettering/#tri-des-couleurs)
 
-## Dans la vraie vie
 
-Emilio 20 sur une trousse :
+## Dans la vraie vie
+{% include folder-galleries path="fonts/emilio-20/" %}
+
 ![Emilio20_2](/assets/images/fonts/emilio20_2.jpg)
 
 [Download Emilio 20 Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20/LICENSE)
