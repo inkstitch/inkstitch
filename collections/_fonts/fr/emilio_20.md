@@ -30,10 +30,7 @@ Si vous brodez plusieurs lettes, vous pouvez souhaiter trier les couleurs. C'est
 ## Dans la vraie vie
 {% include folder-galleries path="fonts/emilio-20/" %}
 
-![Emilio20_2](/assets/images/fonts/emilio20_2.jpg)
-
 [Download Emilio 20 Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20/LICENSE)
-
 
 [Download Emilio 20 Tricolore Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20_tricolore/LICENSE)
 
