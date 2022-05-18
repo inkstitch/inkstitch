@@ -17,20 +17,7 @@ preview_image:
 ### Glyphs
 
 This font contains 102 glyphs:
-	
-ABCDEFGHI
-JKLMNOPQRS
-TUVWXYZabc
-defghijklm
-nopqrstuvw
-xyz0123456
-789@#<>:;,
-'"“”.+@%$*
-~-=(){}][_
-/\|!?�ÄÖÜä
-öü
-
-
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#<>:;,'"“”.+@%$*~-=(){}][_/\|!?�ÄÖÜäöü
 
 ## Sans Rounded
 
@@ -40,19 +27,8 @@ xyz0123456
 ### Glyphes
 
 This font contains 107 glyphs:
+AÄBCDEFGHIJKLMNOÖPQRSTUÜVWXYZaâäbcdeéèfghijklmnoöpqrstuüvwxyz0123456789@<>`^|\*~}{][$%@#!?:,'"“”.;+-=()_/�
 
-	
-AÄBCDEFGH
-IJKLMNOÖPQ
-RSTUÜVWXYZ
-aâäbcdeéèf
-ghijklmnoö
-pqrstuüvwx
-yz01234567
-89@<>`^|\*
-~}{][$%@#!
-?:,'"“”.;+
--=()_/�
 
 ## Dimensions
 
@@ -62,7 +38,8 @@ They can be scaled up to  200% (approx 28 mm, 1 inch) or scaled down to 75% (app
 
 ## In real life
 
-![Geneva ](/assets/images/fonts/geneva.jpg)
+{% include folder-galleries path="fonts/geneva/" %}
+
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/geneva_simple/LICENSE)
 
