@@ -30,6 +30,6 @@ It can be scaled up to 200% (approx. 60 mm, 2.5 inches) or scaled down to  80% (
 
 Here the date is embroidered with Kaushan Script, with  Cherry for Ink/Stitch and Cherry for Kaalleen as merry companions.
 
-![KaushanScript](/assets/images/fonts/cherry2.jpg)
+{% include folder-galleries path="fonts/kaushan_script/" %}
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/kaushan_script_MAM/LICENSE)
