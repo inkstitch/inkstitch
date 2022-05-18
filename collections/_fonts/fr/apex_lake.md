@@ -32,14 +32,15 @@ Si vous brodez plusieurs lettrines, vous pouvez souhaiter trier les couleurs. C'
 
 
 ## Dans la vraie vie
+Et pourquoi pas sur un T shirt ? ou sur un panier en tissu ?
 
-Et pourquoi pas sur un T shirt ?
+
+{%include folder-galleries path="fonts/apex-lake/" %}
 
 ![TShirt](/assets/images/fonts/apex2.jpg)
 
 ![TShirt](/assets/images/fonts/apex4.jpg)
 
-ou sur un panier en tissu ?
 
 ![Panier](/assets/images/fonts/apex3.jpg)
 
