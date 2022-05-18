@@ -11,48 +11,22 @@ preview_image:
 
 ![Geneva Simple Sans](/assets/images/fonts/geneva_simple_sans.png)
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/geneva_simple/LICENSE)
+
 ### Glyphes
 
 Cette fonte contient les 102 glyphes:
-
-	
-ABCDEFGHI
-JKLMNOPQRS
-TUVWXYZabc
-defghijklm
-nopqrstuvw
-xyz0123456
-789@#<>:;,
-'"“”.+@%$*
-~-=(){}][_
-/\|!?�ÄÖÜä
-öü
-
-
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#<>:;,'"“”.+@%$*~-=(){}][_/\|!?�ÄÖÜäöü
 
 ## Sans Rounded
 
 ![Geneva Simple Sans](/assets/images/fonts/geneva_simple_sans_rounded.png)
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/geneva_rounded/LICENSE)
+
 
 ### Glyphes
 
-Cette fonte contient les 107 glyphes:
-
-	
-AÄBCDEFGH
-IJKLMNOÖPQ
-RSTUÜVWXYZ
-aâäbcdeéèf
-ghijklmnoö
-pqrstuüvwx
-yz01234567
-89@<>`^|\*
-~}{][$%@#!
-?:,'"“”.;+
--=()_/�
+Cette fonte contient les 107 glyphes:	
+AÄBCDEFGHIJKLMNOÖPQRSTUÜVWXYZaâäbcdeéèfghijklmnoöpqrstuüvwxyz0123456789@<>`^|\*~}{][$%@#!?:,'"“”.;+-=()_/�
 
 ## Dimensions
 
@@ -64,6 +38,8 @@ Elles peut être agrandies jusqu'a 200% (env 16 mm) ou diminuées jusqu'à 70% (
 
 {% include folder-galleries path="fonts/geneva/" %}
 
-![Geneva ](/assets/images/fonts/geneva.jpg)
+[Download Font License Geneva Simple](https://github.com/inkstitch/inkstitch/tree/main/fonts/geneva_simple/LICENSE)
+
+[Download Font License Geneva Rounded](https://github.com/inkstitch/inkstitch/tree/main/fonts/geneva_rounded/LICENSE)
 
 
