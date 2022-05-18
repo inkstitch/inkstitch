@@ -168,16 +168,6 @@ To access use this code:<br>
 	
 ## In real life
 
-![Gelee](/assets/images/fonts/monicha2.jpg)
-
-![Rockabilly](/assets/images/fonts/monicha8.jpg)
-
-![Temps perdu](/assets/images/fonts/monicha3.jpg)
-
-![Ourson](/assets/images/fonts/monicha4.jpg)
-
-![Serviette](/assets/images/fonts/monicha5.jpg)
-
-![Serviette](/assets/images/fonts/monicha6.jpg)
+{% include folder-galleries path="fonts/monicha/" %}
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/monicha/LICENSE)
