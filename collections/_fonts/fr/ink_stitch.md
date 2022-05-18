@@ -13,17 +13,8 @@ preview_image:
 
 
 ## Glyphes
-
-Les deux fontes  contiennent  les 89 glyphse :
-ABCDEFGHI
-JKLMNOPQRS
-TUVWXYZabc
-defghijklm
-nopqrstuvw
-xyz0123456
-789@<>:,'"
-“”.+-=()_/
-�#ÄÖÜäößü
+Les deux fontes  contiennent  les 89 glyphes :
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@<>:,'"“”.+-=()_/�#ÄÖÜäößü
 
 ## Dimensions
 
@@ -42,7 +33,7 @@ Les deux fontes sont reversibles: une broderie sur plusieurs lignes peut être b
 
 ## Dans la vraie vie
 
-![Labels](/assets/images/fonts/ingstitchsmall.jpg)
+{% include folder-galleries path="fonts/inkstitch/" %}
 
 [Download Ink/Stitch Small Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/small_font/LICENSE)
 
