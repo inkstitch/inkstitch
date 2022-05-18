@@ -35,8 +35,7 @@ It can be scaled up to 150% (approx. 33 mm, 1 1/4 inches) or scaled down to  80%
 
 ## In real life
 
-![Lobster 2](/assets/images/fonts/lobster2.jpg)
-![Lobster 3](/assets/images/fonts/lobster3.jpg)
-![Lobster 4](/assets/images/fonts/lobster4.jpg)
+{% include folder-galleries path="fonts/lobster_ags/" %}
+
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/lobster_AGS/LICENSE)
