@@ -47,18 +47,7 @@ A USA 8 (EUR 60) size needle, and 60WT thread **MUST** be used.
 
 ## In real life
 
-Latin is Pacificlo while  French is  Learning Curve
-
-![Pacificlo2](/assets/images/fonts/pacificlolearning.jpg)
-
-Pacificlo tiny, for a jam jar covering.
-
-![Pacificlotiny jam covers](/assets/images/fonts/pacificlotiny1.jpg)
-
-
-
-Latin is Pacificlo while French is Learning curve
-![Pacificlo2](/assets/images/fonts/pacificlolearning.jpg)
+{% include folder-galleries path="fonts/pacificlo/" %}
 
 
 
