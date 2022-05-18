@@ -31,7 +31,7 @@ A cause de la variété de lettres, rien ne garantie que les couleurs puissent �
 
 InfiniPicto sur un T shirt :
 
-![T Shirt](/assets/images/fonts/infinipicto2.jpg)
+{% include folder-galleries path="fonts/infinipicto/" %}
 
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/infinipicto/LICENSE)
