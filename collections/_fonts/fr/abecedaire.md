@@ -39,13 +39,7 @@ Elle peut être agrandie jusqu'a 200% (env 28 mm) ou diminuée jusqu'à 75% (env
 
 ## Dans la vraie vie :
 
-inclusion gallerie
-
 {% include folder-galleries path="fonts/abecedaire/" %}
-
-![Abecedaire](/assets/images/fonts/abecedaire1.jpg)
-
-![Abecedaire](/assets/images/fonts/abecedaire2.jpg)
 
 
 
