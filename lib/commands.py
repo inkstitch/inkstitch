@@ -27,6 +27,12 @@ COMMANDS = {
     "fill_end": N_("Fill stitch ending position"),
 
     # L10N command attached to an object
+    "run_start": N_("Auto-route running stitch starting position"),
+
+    # L10N command attached to an object
+    "run_end": N_("Auto-route running stitch ending position"),
+
+    # L10N command attached to an object
     "satin_start": N_("Auto-route satin stitch starting position"),
 
     # L10N command attached to an object
@@ -54,7 +60,8 @@ COMMANDS = {
     "stop_position": N_("Jump destination for Stop commands (a.k.a. \"Frame Out position\")."),
 }
 
-OBJECT_COMMANDS = ["fill_start", "fill_end", "satin_start", "satin_end", "stop", "trim", "ignore_object", "satin_cut_point"]
+OBJECT_COMMANDS = ["fill_start", "fill_end", "run_start", "run_end", "satin_start", "satin_end", "stop", "trim", "ignore_object", "satin_cut_point"]
+FREE_MOVEMENT_OBJECT_COMMANDS = ["run_start", "run_end", "satin_start", "satin_end"]
 LAYER_COMMANDS = ["ignore_layer"]
 GLOBAL_COMMANDS = ["origin", "stop_position"]
 
@@ -288,7 +295,7 @@ def add_group(document, node, command):
     return group
 
 
-def add_connector(document, symbol, element):
+def add_connector(document, symbol, command, element):
     # I'd like it if I could position the connector endpoint nicely but inkscape just
     # moves it to the element's center immediately after the extension runs.
     start_pos = (symbol.get('x'), symbol.get('y'))
@@ -304,11 +311,13 @@ def add_connector(document, symbol, element):
         "style": "stroke:#000000;stroke-width:1px;stroke-opacity:0.5;fill:none;",
         CONNECTION_START: "#%s" % symbol.get('id'),
         CONNECTION_END: "#%s" % element.node.get('id'),
-        CONNECTOR_TYPE: "polyline",
 
         # l10n: the name of the line that connects a command to the object it applies to
         INKSCAPE_LABEL: _("connector")
     })
+
+    if command not in FREE_MOVEMENT_OBJECT_COMMANDS:
+        path.attrib[CONNECTOR_TYPE] = "polyline"
 
     symbol.getparent().insert(0, path)
 
@@ -383,7 +392,7 @@ def add_commands(element, commands):
         group = add_group(svg, element.node, command)
         pos = get_command_pos(element, i, len(commands))
         symbol = add_symbol(svg, group, command, pos)
-        add_connector(svg, symbol, element)
+        add_connector(svg, symbol, command, element)
 
 
 def add_layer_commands(layer, commands):
