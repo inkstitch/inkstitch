@@ -52,13 +52,4 @@ Sur un coussin, un T Shirt et avec Grand Hotel Marif sur un tablier:
 
 {% include folder-galleries path="fonts/glacial_tiny/" %}
 
-![Coussin](/assets/images/fonts/glacial3.jpg)
-
-
-
-![Tablier](/assets/images/fonts/glacialgrandhotel.jpg)
-
-Sur un T Shirt
-![TShirt](/assets/images/fonts/glacial_5.jpg)
-
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/glacial_tiny/LICENSE)
