@@ -31,13 +31,9 @@ It may be scaled  up to 120% (approx. 120 mm, 5 inches) or scaled down to 90% (a
 If you embroider several letters, you may wish to color sort. It is possible, providing the sorting respects the relative order inside each letter. [This is a way to do it](https://inkstitch.org/en/docs/lettering/#color-sorting)
 
 ## In real life
-
-
-Emilio 20  on an pencil case :
-![Emilio20_2](/assets/images/fonts/emilio20_2.jpg)
+{% include folder-galleries path="fonts/emilio-20/" %}
 
 
 [Download Emilio 20 Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20/LICENSE)
-
 
 [Download Emilio 20 Tricolore Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20_tricolore/LICENSE)
