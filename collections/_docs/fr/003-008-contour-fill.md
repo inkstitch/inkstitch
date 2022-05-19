@@ -2,7 +2,7 @@
 title: "Remplissage selon le contour"
 permalink: /fr/docs/stitches/contour-fill/
 excerpt: ""
-last_modified_at: 2022-05-18
+last_modified_at: 2022-05-20
 toc: true
 ---
 {% include upcoming_release.html %}
