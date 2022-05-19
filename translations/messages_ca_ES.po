@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-04-25 02:19+0000\n"
-"PO-Revision-Date: 2022-05-10 02:07\n"
+"POT-Creation-Date: 2022-05-19 02:28+0000\n"
+"PO-Revision-Date: 2022-05-19 02:29\n"
 "Last-Translator: \n"
 "Language-Team: Catalan\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-25 02:19+0000\n"
+"POT-Creation-Date: 2022-05-19 02:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -405,58 +405,70 @@ msgstr ""
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:30 inx/inkstitch_object_commands.inx:6
-msgid "Auto-route satin stitch starting position"
+msgid "Auto-route running stitch starting position"
 msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:33 inx/inkstitch_object_commands.inx:7
-msgid "Auto-route satin stitch ending position"
+msgid "Auto-route running stitch ending position"
 msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:36 inx/inkstitch_object_commands.inx:8
-msgid "Stop (pause machine) after sewing this object"
+msgid "Auto-route satin stitch starting position"
 msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:39 inx/inkstitch_object_commands.inx:9
-msgid "Trim thread after sewing this object"
+msgid "Auto-route satin stitch ending position"
 msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:42 inx/inkstitch_object_commands.inx:10
-msgid "Ignore this object (do not stitch)"
+msgid "Stop (pause machine) after sewing this object"
 msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:45 inx/inkstitch_object_commands.inx:11
+msgid "Trim thread after sewing this object"
+msgstr ""
+
+#. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
+#. command attached to an object
+#: lib/commands.py:48 inx/inkstitch_object_commands.inx:12
+msgid "Ignore this object (do not stitch)"
+msgstr ""
+
+#. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
+#. command attached to an object
+#: lib/commands.py:51 inx/inkstitch_object_commands.inx:13
 msgid "Satin cut point (use with Cut Satin Column)"
 msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command that affects a layer
-#: lib/commands.py:48 inx/inkstitch_layer_commands.inx:7
+#: lib/commands.py:54 inx/inkstitch_layer_commands.inx:7
 msgid "Ignore layer (do not stitch any objects in this layer)"
 msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command that affects entire document
-#: lib/commands.py:51 inx/inkstitch_global_commands.inx:7
+#: lib/commands.py:57 inx/inkstitch_global_commands.inx:7
 msgid "Origin for exported embroidery files"
 msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command that affects entire document
-#: lib/commands.py:54 inx/inkstitch_global_commands.inx:9
+#: lib/commands.py:60 inx/inkstitch_global_commands.inx:9
 msgid "Jump destination for Stop commands (a.k.a. \"Frame Out position\")."
 msgstr ""
 
-#: lib/commands.py:212
+#: lib/commands.py:219
 #, python-format
 msgid "Error: there is more than one %(command)s command in the document, but there can only be one.  Please remove all but one."
 msgstr ""
@@ -466,22 +478,22 @@ msgstr ""
 #. command name to them.  Contents of %(description)s are in a separate
 #. translation
 #. string.
-#: lib/commands.py:219
+#: lib/commands.py:226
 #, python-format
 msgid "%(command)s: %(description)s"
 msgstr ""
 
-#: lib/commands.py:284 lib/commands.py:397
+#: lib/commands.py:291 lib/commands.py:406
 msgid "Ink/Stitch Command"
 msgstr ""
 
 #. : the name of the line that connects a command to the object it applies to
-#: lib/commands.py:310
+#: lib/commands.py:316
 msgid "connector"
 msgstr ""
 
 #. : the name of a command symbol (example: scissors icon for trim command)
-#: lib/commands.py:326
+#: lib/commands.py:335
 msgid "command marker"
 msgstr ""
 
@@ -788,27 +800,27 @@ msgstr ""
 msgid "* Alternatively redraw the image with the pen (P) or bezier (B) tool"
 msgstr ""
 
-#: lib/elements/pattern.py:14
-msgid "Pattern Element"
+#: lib/elements/marker.py:14
+msgid "Marker Element"
 msgstr ""
 
-#: lib/elements/pattern.py:15
-msgid "This element will not be embroidered. It will appear as a pattern applied to objects in the same group as it.  Objects in sub-groups will be ignored."
+#: lib/elements/marker.py:15
+msgid "This element will not be embroidered. It will be applied to objects in the same group. Objects in sub-groups will be ignored."
 msgstr ""
 
-#: lib/elements/pattern.py:19
-msgid "To disable pattern mode, remove the pattern marker:"
+#: lib/elements/marker.py:18
+msgid "Turn back to normal embroidery element mode, remove the marker:"
 msgstr ""
 
-#: lib/elements/pattern.py:20
+#: lib/elements/marker.py:19
 msgid "* Open the Fill and Stroke panel (Objects > Fill and Stroke)"
 msgstr ""
 
-#: lib/elements/pattern.py:21
+#: lib/elements/marker.py:20
 msgid "* Go to the Stroke style tab"
 msgstr ""
 
-#: lib/elements/pattern.py:22
+#: lib/elements/marker.py:21
 msgid "* Under \"Markers\" choose the first (empty) option in the first dropdown list."
 msgstr ""
 
@@ -1066,15 +1078,15 @@ msgstr ""
 msgid "Defines how many times to run down and back along the path."
 msgstr ""
 
-#: lib/elements/stroke.py:109
+#: lib/elements/stroke.py:110
 msgid "Manual stitch placement"
 msgstr ""
 
-#: lib/elements/stroke.py:110
+#: lib/elements/stroke.py:111
 msgid "Stitch every node in the path.  Stitch length and zig-zag spacing are ignored."
 msgstr ""
 
-#: lib/elements/stroke.py:144
+#: lib/elements/stroke.py:145
 msgid "Legacy running stitch setting detected!\n\n"
 "It looks like you're using a stroke smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set your stroke to be dashed to indicate running stitch.  Any kind of dash will work."
 msgstr ""
@@ -1114,6 +1126,15 @@ msgstr ""
 
 #: lib/extensions/apply_threadlist.py:55
 msgid "Please chose an other color palette for your design."
+msgstr ""
+
+#. auto-route running stitch columns extension
+#: lib/extensions/auto_run.py:57 lib/extensions/cutwork_segmentation.py:47
+msgid "Please select one or more stroke elements."
+msgstr ""
+
+#: lib/extensions/auto_run.py:62
+msgid "Please select at least one stroke element."
 msgstr ""
 
 #: lib/extensions/auto_satin.py:35
@@ -1180,10 +1201,6 @@ msgstr ""
 #. path12345: error: this satin column does not ...
 #: lib/extensions/cut_satin.py:30
 msgid "this satin column does not have a \"satin column cut point\" command attached to it. Please use the \"Attach commands\" extension and attach the \"Satin Column cut point\" command first."
-msgstr ""
-
-#: lib/extensions/cutwork_segmentation.py:47
-msgid "Please select one or more stroke elements."
 msgstr ""
 
 #: lib/extensions/cutwork_segmentation.py:158
@@ -1380,7 +1397,7 @@ msgid "Use Last Settings"
 msgstr ""
 
 #: lib/extensions/reorder.py:20
-msgid "Please select at least to elements to reorder."
+msgid "Please select at least two elements to reorder."
 msgstr ""
 
 #: lib/extensions/selection_to_pattern.py:21
@@ -1641,20 +1658,34 @@ msgstr ""
 msgid "There is no selected stitchable element. Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects in case you have expected a stitchout."
 msgstr ""
 
-#: lib/stitches/auto_satin.py:659
-msgid "Auto-Satin"
+#: lib/stitches/auto_run.py:135
+msgid "Auto-Run"
+msgstr ""
+
+#: lib/stitches/auto_run.py:257
+#, python-format
+msgid "AutoRun %d"
+msgstr ""
+
+#: lib/stitches/auto_run.py:259
+#, python-format
+msgid "AutoRun Underpath %d"
+msgstr ""
+
+#: lib/stitches/auto_satin.py:345
+msgid "Auto-Route"
 msgstr ""
 
 #. Label for a satin column created by Auto-Route Satin Columns and Lettering
 #. extensions
-#: lib/stitches/auto_satin.py:706
+#: lib/stitches/auto_satin.py:516
 #, python-format
 msgid "AutoSatin %d"
 msgstr ""
 
 #. Label for running stitch (underpathing) created by Auto-Route Satin Columns
 #. amd Lettering extensions
-#: lib/stitches/auto_satin.py:709
+#: lib/stitches/auto_satin.py:519
 #, python-format
 msgid "AutoSatin Running Stitch %d"
 msgstr ""
@@ -2473,12 +2504,61 @@ msgstr ""
 msgid "Thread Color Management"
 msgstr ""
 
-#: inx/inkstitch_auto_satin.inx:3
-msgid "Auto-Route Satin Columns"
+#: inx/inkstitch_auto_run.inx:3 inx/inkstitch_auto_run.inx:24
+msgid "Autoroute Running Stitch"
 msgstr ""
 
-#: inx/inkstitch_auto_satin.inx:5
+#: inx/inkstitch_auto_run.inx:10
+msgid "Tools: Stroke"
+msgstr ""
+
+#: inx/inkstitch_auto_run.inx:15
+msgid "Autoroute Running Stitch Options"
+msgstr ""
+
+#: inx/inkstitch_auto_run.inx:17
+msgid "Add nodes at intersections"
+msgstr ""
+
+#: inx/inkstitch_auto_run.inx:19
+msgid "Preserve order of running stitches"
+msgstr ""
+
+#: inx/inkstitch_auto_run.inx:21 inx/inkstitch_auto_satin.inx:5
 msgid "Trim jump stitches"
+msgstr ""
+
+#: inx/inkstitch_auto_run.inx:23 inx/inkstitch_cutwork_segmentation.inx:42
+#: inx/inkstitch_generate_palette.inx:24 inx/inkstitch_palette_to_text.inx:19
+msgid "Help"
+msgstr ""
+
+#: inx/inkstitch_auto_run.inx:25
+msgid "Add nodes at intersections:"
+msgstr ""
+
+#: inx/inkstitch_auto_run.inx:27
+msgid "- Enabled (automatic). Ink/Stitch will add some nodes for better routing. This is the default setting."
+msgstr ""
+
+#: inx/inkstitch_auto_run.inx:29
+msgid "- Disabled (manual). Choose this option if you have manually set nodes at crucial spots."
+msgstr ""
+
+#: inx/inkstitch_auto_run.inx:32
+msgid "Use Start- end end commands to define where auto-routing for running stitch should start and end."
+msgstr ""
+
+#: inx/inkstitch_auto_run.inx:34
+msgid "More info on our website:"
+msgstr ""
+
+#: inx/inkstitch_auto_run.inx:35
+msgid "https://inkstitch.org/docs/stroke-tools#auto-route-running-stitch"
+msgstr ""
+
+#: inx/inkstitch_auto_satin.inx:3
+msgid "Auto-Route Satin Columns"
 msgstr ""
 
 #: inx/inkstitch_auto_satin.inx:6
@@ -2488,7 +2568,7 @@ msgstr ""
 #: inx/inkstitch_auto_satin.inx:12 inx/inkstitch_convert_to_satin.inx:10
 #: inx/inkstitch_convert_to_stroke.inx:13 inx/inkstitch_cut_satin.inx:10
 #: inx/inkstitch_flip.inx:10
-msgid "Satin Tools"
+msgid "Tools: Satin"
 msgstr ""
 
 #: inx/inkstitch_break_apart.inx:3
@@ -2496,7 +2576,7 @@ msgid "Break Apart Fill Objects"
 msgstr ""
 
 #: inx/inkstitch_break_apart.inx:10
-msgid "Fill Tools"
+msgid "Tools: Fill"
 msgstr ""
 
 #: inx/inkstitch_break_apart.inx:17
@@ -2545,7 +2625,7 @@ msgstr ""
 
 #: inx/inkstitch_commands_scale_symbols.inx:11
 #: inx/inkstitch_global_commands.inx:17 inx/inkstitch_layer_commands.inx:14
-#: inx/inkstitch_object_commands.inx:18
+#: inx/inkstitch_object_commands.inx:20
 #: inx/inkstitch_object_commands_toggle_visibility.inx:10
 msgid "Commands"
 msgstr ""
@@ -2626,11 +2706,6 @@ msgstr ""
 
 #: inx/inkstitch_cutwork_segmentation.inx:40
 msgid "Keep original"
-msgstr ""
-
-#: inx/inkstitch_cutwork_segmentation.inx:42
-#: inx/inkstitch_generate_palette.inx:24 inx/inkstitch_palette_to_text.inx:19
-msgid "Help"
 msgstr ""
 
 #: inx/inkstitch_cutwork_segmentation.inx:43
