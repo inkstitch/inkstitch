@@ -1,7 +1,7 @@
 ---
 title: "Amitaclo"
-permalink: /fr/fonts/amita/
-last_modified_at: 2022-05-05
+permalink: /de/fonts/amita/
+last_modified_at: 2022-05-19
 toc: false
 preview_image: 
 - /assets/images/fonts/amita.png
