@@ -167,6 +167,10 @@ class Stroke(EmbroideryElement):
         for i in range(len(patch) - 1):
             start = patch.stitches[i]
             end = patch.stitches[i + 1]
+            # sometimes the stitch results into zero length which cause a division by zero error
+            # ignoring this leads to a slightly bad result, but that is better than no output
+            if (end - start).length() == 0:
+                continue
             segment_direction = (end - start).unit()
             zigzag_direction = segment_direction.rotate_left()
 
