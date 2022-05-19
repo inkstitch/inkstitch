@@ -175,7 +175,7 @@ fr: &DEFAULT_FR
   downloads                  : "Téléchargements"
   operating_system           : "Système d'exploitation"
   total_downloads            : "Total des téléchargements"
-  upcoming_release           : "This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+  upcoming_release           : "Ceci fera  partie d'une prochaine version d'Ink/Stitch release. Ce n'est pas encore intégré dans la version courante."
 fr-FR:
   <<: *DEFAULT_FR
 fr-BE:
