@@ -21,7 +21,7 @@ Créez une **forme fermée avec une couleur de remplissage**
 
 
 ## Définir le point de départ et d'arrivée
-Définir le point de départ et d'arriver pour les remplissages automatiques avec les [commandes visuelles](/fr/docs/commands/).
+Définir le point de départ et d'arrivée pour les remplissages automatiques avec les [commandes visuelles](/fr/docs/commands/).
 
 ## Paramètres
 
