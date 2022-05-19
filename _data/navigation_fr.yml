@@ -135,11 +135,11 @@ docs:
 
 # fonts
 fonts:
-  - title: Font Tutorials
+  - title: Tutoriaux sur les polices
     children:
-      - title: Create New Fonts
+      - title: Créer de nouvelles polices
         url: /fr/tutorials/font-creation
-  - title: Font Library
+  - title: Bibliothèque de polices
     url: /fr/fonts/font-library/
     
 # tutorial links
@@ -148,15 +148,15 @@ tutorials:
     children:
       - title: "Galeries de réalisations"
         url: /fr/tutorials/inspiration/
-  - title: Hardware Projects
+  - title: Projets Hardware
     children:
       - title: "Fabriquer sa machine à broder"
         url: /fr/tutorials/embroidery-machine/
       - title: Broder sur une chaussette
         url: /fr/tutorials/sock-hoop/
-  - title: Resources
+  - title: Ressources
     children:
-    - title: "Branding Guide"
+    - title: "Guide d'utilisation de la marque"
       url: /fr/tutorials/resources/branding-guide/
     - title: "Fichiers exemples"
       url: /fr/tutorials/resources/samples/
@@ -169,7 +169,7 @@ tutorials:
       url: /fr/tutorials/
     - title: "Tutoriels Video"
       url: /fr/tutorials/video/
-    - title: External Tutorials
+    - title: Tutoriels extérieurs
       url: /fr/tutorials/external-tutorials/
   
 # developers links
@@ -179,21 +179,21 @@ developers:
   - title: Ink/Stitch
     url: /fr/developers/inkstitch/
     children:
-    - title: Manual Setup (Linux/macOS)
+    - title: Installation Manuelle (Linux/macOS)
       url: /fr/developers/inkstitch/manual-setup/
-    - title: Manual Setup (Windows)
+    - title: Installation Manuelle (Windows)
       url: /fr/developers/inkstitch/windows-manual-setup/
-    - title: Python Modules
+    - title: Modules Python
       url: /fr/developers/inkstitch/python-modules/
-    - title: Namespace
+    - title: Espace de nommage
       url: /fr/developers/inkstitch/namespace/
   - title: Pyembroidery
     url: /fr/developers/pyembroidery
   - title: Documentation
     url: /fr/developers/documentation/
-  - title: Localization
+  - title: Traductions
     url: /fr/developers/localize/
-  - title: "Bug Reports"
+  - title: "Rapports de bugs"
     url: /fr/developers/report-bugs/
   - title: "Statistiques"
     url: /fr/statistics/
