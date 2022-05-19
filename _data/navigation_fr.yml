@@ -84,7 +84,7 @@ docs:
         url: /fr/docs/stitches/fill-stitch/
       - title: "Remplissage selon contour"
         url: /fr/docs/stitches/contour-fill/
-      - title: "Remplissage guidé"
+      - title: "Remplissage guidé par un chemin"
         url: /fr/docs/stitches/guided-fill/
       - title: "Textures"
         url: /fr/docs/stitches/patterns/
