@@ -46,7 +46,7 @@ Wenn Sie Amitaclo small wählen, werden Sie im Dialogfenster für die Beschriftu
 
 Im Gegensatz zu Amitaclo MUSS diese verkleinerte Schrift mit einem dünneren Faden und einer dünneren Nadel als üblich gestickt werden. Es MUSS eine Nadel der Größe 8 (USA), 60(EUR) und ein Garn 60WT verwendet werden.
 
-## Beispiele aus dem Echten Leben
+## Beispiele aus dem echten Leben
 
 {%include folder-galleries path="fonts/amitaclo/" %}
 
