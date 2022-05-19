@@ -2,34 +2,33 @@
 title: "Cutwork"
 permalink: /de/docs/cutwork/
 excerpt: ""
-last_modified_at: 2022-02-17
+last_modified_at: 2022-05-19
 toc: true
 ---
-This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch v2.1.2
-{: .notice--info }
+{% include upcoming_release.html %}
 
-Cutwork in machine embroidery describes a technique, where specific needles are used to cut holes into the fabric. These needles come mostly in a set of four. Each needle is capable to cut in a specific angle range. Therefore it is necessary to split an element into the angle sections of your needles.
+Cutwork beschreibt eine Technick im Maschinensticken bei der mit speziellen Nadeln Löcher in den Stoff geschnitten werden. Meistens sind diese Nadeln in einem Vierer-Set erhältich, wobei jede Nadel nur in eine bestimmte Richtung schneiden kann. Daher ist es nötig, Elemente in Winkel-Segmente zu unterteilen.
 
-## Usage
+## Anwendung
 
-Ink/Stitch comes with a tool that will help you to split your elements according to the needle angles.
+Ink/Stitch hält ein Werkzeug bereit, um die Elemente entsprechend der Nadelwinkel zu zerteilen.
 
-* Select one or more stroke objects
-* Open `Extensions > Ink/Stitch > Cutwork segmentation`
+* Wähle ein oder mehrere Pfade mit einer Kontur aus.
+* Öffne `Erweiterungen > Ink/Stitch > Cutwork Segmentierung ...`
   ![Cutwork segmentation window](/assets/images/docs/en/cutwork-segmentation.png)
-* Set the angles and colors as you need them for your specific needle kit
-* Apply
+* Passe die Winkel und Farben dem vorhandenen Nadelset entsprechend an
+* Anwenden
 
 ![A circle cut into pieces by cutwork segmentation](/assets/images/docs/cutwork-segmentation.png)
 
-Sometimes it will be necessary to leave gaps in the border of the hole, so that the cutout fabric stays connected to the main piece. This will prevent that the machine pulls in small cutout pieces of fabric.
+Bei kleinen Elementen kann es nötig sein, Lücken am Rand des Loches zu lassen, so dass der herausgeschnittene Stoff mit dem Reststoff verbunden bleibt. Andernfalls könnte es passieren, dass die Maschine kleine Stoffstücke nach unten zieht.
 
-**Attention:** Do not rotate your design after applying this feature.
+**Achtung:** Das Design sollte nach Anwendung dieser Funktion nicht mehr rotiert werden.
 {: .notice--warning }
 
-## Common needle setups
+## Beispiele für Nadeleinstellungen
 
-Needle|Angle|Start|End
+Nadel|Winkel|Anfang|Ende
 --|--|--
 <span class="cwd">&#124;</span>   | 90°  | 67  | 113
 <span class="cwd">/</span>        | 45°  | 22  | 68
@@ -37,9 +36,9 @@ Needle|Angle|Start|End
 <span class="cwd">&#x5c;</span>   | 135° | 112 | 157
 
 
-Brand | #1  | #2 | #3 | #4
+Firma | #1  | #2 | #3 | #4
 --|--|--|--
 Bernina                  | <span class="cwd">&#124;</span>                                | <span class="cwd">/</span>                                        | <span class="cwd">&#8213;</span>                                   | <span class="cwd">&#x5c;</span>
-Pfaff, Husqvarna Viking, Inspira | Red <span class="cwd" style="background:red;">/</span> | Yellow <span class="cwd" style="background: yellow">&#8213;</span>| Green <span class="cwd" style="background: green;">&#x5c;</span>   | Blue <span class="cwd" style="background: blue">&#124;</span>
-Brother, Babylock        | Blue <span class="cwd" style="background: blue;">/</span>      | Purple <span class="cwd" style="background: purple;">&#8213;</span>| Green <span class="cwd" style="background: green;">&#x5c;</span>  | Orange <span class="cwd" style="background: #ff6000;">&#124;</span>
-Janome                   | Red <span class="cwd" style="background: #ff3f7e;">&#8213;</span>  | Blue <span class="cwd" style="background: #00abff;">/</span>          | Black <span class="cwd" style="background: #413f57; color: white;">&#124;</span>| Green <span class="cwd" style="background: green;">&#x5c;</span>
+Pfaff, Husqvarna Viking, Inspira | Rot <span class="cwd" style="background:red;">/</span> | Gelb <span class="cwd" style="background: yellow">&#8213;</span>| Grün <span class="cwd" style="background: green;">&#x5c;</span>   | Blau <span class="cwd" style="background: blue">&#124;</span>
+Brother, Babylock        | Blau <span class="cwd" style="background: blue;">/</span>      | Lila <span class="cwd" style="background: purple;">&#8213;</span>| Grün <span class="cwd" style="background: green;">&#x5c;</span>  | Orange <span class="cwd" style="background: #ff6000;">&#124;</span>
+Janome                   | Rot <span class="cwd" style="background: #ff3f7e;">&#8213;</span>  | Blau <span class="cwd" style="background: #00abff;">/</span>          | Schwarz <span class="cwd" style="background: #413f57; color: white;">&#124;</span>| Grün <span class="cwd" style="background: green;">&#x5c;</span>

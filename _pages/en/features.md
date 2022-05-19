@@ -1,62 +1,73 @@
 ---
-title: "Ink/Stitch Features"
+title: "Noticeable Ink/Stitch Features"
 permalink: /features/
 excerpt: "Ink/Stitch features"
-last_modified_at: 2021-10-23
+last_modified_at: 2022-05-16
 sidebar:
   nav: pages
 toc: true
 ---
-## Noticeable Features
-* Digitize machine embroidery designs using Inkscape (SVG)
-* Cross Platform
-  * all code libraries built in, no need to install anything else!
-* User interface translated to several languages ([translation help appreciated](https://crowdin.com/project/inkstitch)!)
-* Import and Export many popular machine embroidery formats
-  * including batch export 
-* Add Trims and Stops
-* Edit Stitch Order
-* Set custom origin point as (0, 0) in the design file
-* Animated stitch-out preview
-  * including live-preview as you adjust settings like row spacing underlay, etc.
-* Print to PDF
-  * realistic rendering
-    * line-drawing mode available as well
+Ink/Stitch: digitize machine embroidery designs using Inkscape (SVG)
+
+## Accessability
+
+* Cross Platform (Linux, Windows, macOS)
+* User interface translated to several languages ([translation help appreciated](https://translate.inkstitch.org))
+
+## Stitch Types
+
+* Various [stitch types](/docs/stitch-library/): Fill stitch, satin stitch, stroke type stitches
+* Custom [Patterns](/docs/stitches/patterns/) can be applied to all available stitch types.
+
+### Fill Stitch
+
+* Automatically [fill](/docs/stitches/fill-stitch/) arbitrary shapes with stitches
+* Adjust stitch length, row spacing and row angle
+* Underlay
+* [Contour fill](/docs/stitches/contour-fill/)
+* [Guided fill](/docs/stitches/guided-fill/)
+
+### Satin Stitch
+* Design your [satin column](/docs/stitches/satin-column/) with varying width
+* Mix and match 3 kinds of underlay (center-walk underlay, contour underlay, zig-zag underlay)
+* [E-stitch](/docs/stitches/e-stitch/)
+* Split stitch (through maximum stitch length)
+* [Automatic routing](/docs/satin-tools/) (with underpathing running stitch if needed)
+
+### Stroke Type Stitches
+
+* [Running stitch](/docs/stitches/running-stitch/)
+* [Bean stitch](/docs/stitches/bean-stitch/)
+* [Manual stitch](/docs/stitches/manual-stitch/) (each stitch exactly where you want it)
+* [Cutwork](/docs/cutwork/)
+* [Automatic routing](/docs/stroke-tools/) to avoid jump stitches
+
+## Text
+
+* [Lettering module](/docs/lettering/) with many [fonts](/fonts/font-library/) ready to use
+
+## Stitch Preview
+
+* Animated stitch-out preview (including live-preview as you adjust settings like row spacing underlay, etc.)
+* [Simulator and in canvas stitch plan preview](/docs/visualize/)
+* [Print to PDF](/docs/print-pdf/)
+  * realistic rendering and line-drawing mode
   * embroidery machine operator layout with color blocks, thread names, stitch counts, and custom notes
   * client-oriented layout designed for you to send to your customer
-  * highly customizable through your web browser
+  * highly customizable
+
+## Thread management
+
+Ink/Stitch has a [thread management](/docs/thread-color/) section in the menu.
+
 * Thread manufacturer palettes (over 60 manufacturers included)
   * automated installation of Inkscape palettes for use in your designs
   * thread names and catalog numbers included in PDF printouts
-* Lettering
+* Tools to create your own thread palettes easily
 
-## Supported Stitch Types
+## Import and Export
 
-### Fill Stitch
-* automatically fill arbitrary shapes with stitches
-* adjust the stitch length, row spacing, and row angle
-* underlay
-* custom pattern
-
-### Satin Stitch
-* custom-design your satin column with varying width
-* automatic routing (with underpathing running stitch if needed)
-* mix and match 3 kinds of underlay
-  * center-walk
-  * contour
-  * zig-zag
-
-* e stitch
-* split stitch
-* custom patterned satin
-
-### Stroke Type Stitches
-* running stitch
-* bean stitch
-* manual stitch
-  * each stitch exactly where you want it
-
-## Supported File Formats
+[Import and Export](/docs/import-export/) many popular machine embroidery formats (including batch export)
 
 ### Writing
 CSV, **DST**, **EXP**, **JEF**, PEC, **PES**, SVG, TXT (G-CODE), U01, **VP3**
@@ -64,13 +75,7 @@ CSV, **DST**, **EXP**, **JEF**, PEC, **PES**, SVG, TXT (G-CODE), U01, **VP3**
 ### Reading
 100, 10o, BRO, DAT, DSB, **DST**, DSZ, EMD, **EXP**, EXY, FXY, GT, INB, **JEF**, JPX, KSM, MAX, MIT, NEW, PCD, PCM, PCQ, PCS, PEC, **PES**, PHB, PHC, SEW, SHV, STC, STX, TAP, TBF, TXT (G-CODE), U01, **VP3**, XXX, ZXY
 
-## Roadmap
+### Machine Commands
 
-Here are features we're hoping to add, though not necessarily in this order:
-
-* Gradient Fill (already realised as a [hidden feature](https://github.com/inkstitch/inkstitch/pull/108#issuecomment-369444197))
-* Multi-Decoration Support [#371](https://github.com/inkstitch/inkstitch/issues/371)
-* Automatic splitting of designs for small machines [#182](https://github.com/inkstitch/inkstitch/issues/182)
-* Multiple Underlay for Fill [#110](https://github.com/inkstitch/inkstitch/issues/110)
-* Running Stitch Autoroute [#373](https://github.com/inkstitch/inkstitch/issues/373)
-
+* Add [Trims and Stops](/docs/commands/)
+* Set custom [origin point](/docs/commands/) as (0, 0) in the design file

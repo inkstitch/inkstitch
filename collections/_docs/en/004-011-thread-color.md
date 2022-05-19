@@ -5,7 +5,7 @@ excerpt: ""
 last_modified_at: 2022-04-09
 toc: true
 ---
-## Import Threadlist
+## Apply Threadlist
 
 Ink/Stitch can apply a threadlists to an embroidery design. This is especially useful, if you want to work on existing embroidery files which do not support color information (e.g. DST).
 
@@ -55,8 +55,7 @@ The choice will also take effect on the thread names to appear in the print prev
 
 ## Generate Color Palette
 
-This is part of an upcoming Ink/Stitch version and not available in Ink/Stitch v2.1.2
-{: .notice--warning }
+{% include upcoming_release.html %}
 
 Inkscape allows to generate `.gpl` color palette files. But it doesn't allow us to order color swatches properly.
 
@@ -76,8 +75,7 @@ This extension will export colors of text elements while using the text as color
 
 ## Palette to Text
 
-This is part of an upcoming Ink/Stitch version and not available in Ink/Stitch v2.1.2
-{: .notice--warning }
+{% include upcoming_release.html %}
 
 Existing palettes can be edited with Ink/Stitch as text.
 

@@ -20,18 +20,19 @@ Shortcut&nbsp;Keys | Effect | Replaces
 <key>PageUp</key>                             | Stack Up* | Object > Raise (see also toolbar buttons)
 <key>PageDown</key>                           | Stack Down* | Object > Lower (see also toolbar buttons)
 <key>ctrl</key>+<key>R</key>                  | Reverse the direction of a path.**
+<key>ctrl</key>+<key>shift</key>+<key>'</key> | Re-stack objects in order of selection 
 <key>ctrl</key>+<key>shift</key>+<key>P</key> | Params | Edit > Preferences
 <key>ctrl</key>+<key>shift</key>+<key>L</key> | Simulator (Live simulation)
-<key>ctrl</key>+<key>shift</key>+<key>/</key> | Stitch plan preview (beside of the canvas) | Path > Division (use Strg+/ instead)
+<key>ctrl</key>+<key>shift</key>+<key>></key> | Stitch plan preview (beside of the canvas) | Path > Division (use Strg+/ instead)
 <key>ctrl</key>+<key>shift</key>+<key>O</key> | Break apart fill objects... (O for Object) | Object > Object properties
 <key>ctrl</key>+<key>shift</key>+<key>I</key> | PDF Export
 <key>ctrl</key>+<key>shift</key>+<key>Q</key> | Lettering (Q for QWERTY) | Object > Selectors and CSS
 <span style="white-space: nowrap;"><key>ctrl</key>+<key>shift</key>+<key>Del</key></span> | Troubleshoot objects (remove errors)
-<key>ctrl</key>+<key>shift</key>+<key>+</key> | Attach commands to selected objects
+<key>ctrl</key>+<key>shift</key>+<key>!</key> | Attach commands to selected objects
 <key>ctrl</key>+<key>shift</key>+<key>U</key> | Convert line to satin column (U looks like two rails) | Object > Group (use Ctrl+G instead)
 <key>ctrl</key>+<key>shift</key>+<key>J</key> | Flip satin column rails (J looks like an arrow)
 <key>ctrl</key>+<key>shift</key>+<key>B</key> | Cut satin column (B is cut in half) | Path > Union (use Ctrl++ instead)
-<key>ctrl</key>+<key>shift</key>+<key>*</key> | Auto-route satin (puts everything in order)
+<key>ctrl</key>+<key>shift</key>+<key>=</key> | Auto-route satin (puts everything in order)
 
 The Ink/Stitch [simulator](/docs/visualize/#simulation-shortcut-keys) also provides shortcut keys.
 
@@ -44,8 +45,7 @@ The Ink/Stitch [simulator](/docs/visualize/#simulation-shortcut-keys) also provi
 * [Download the Ink/Stitch shortcut key file](/assets/files/inkstitch.xml)
 * Go to `Edit > Preferences > Interface > Keyboard`
 * Click on `Import...`
-* Select your shortcut key file (inkstitch.xml)
-* Click open
+* Select the downloaded file and open
 
 You will now be able to use the shortcut keys described above. They are included into the standard default.xml shortcut file.
 

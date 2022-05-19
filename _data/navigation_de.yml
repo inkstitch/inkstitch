@@ -4,6 +4,8 @@ main:
     url: /de/features/
   - title: "Benutzerhandbuch"
     url: /de/docs/install/
+  - title: "Schriften"
+    url: /de/fonts/font-library/
   - title: "Tutorials"
     url: /de/tutorials/
   - title: "Hilfe"
@@ -76,12 +78,18 @@ docs:
         url: /de/docs/stitches/e-stitch/
       - title: "Füllstich"
         url: /de/docs/stitches/fill-stitch/
+      - title: "Konturfüllung"
+        url: /de/docs/stitches/contour-fill/
+      - title: "Kurvenfüllung"
+        url: /de/docs/stitches/guided-fill/
       - title: Stichmuster
         url: /de/docs/stitches/patterns
   - title: Benutzeroberfläche
     children:
     - title: "Befehle"
       url: /de/docs/commands/
+    - title: "Cutwork"
+      url: /de/docs/cutwork/
     - title: "Bearbeiten"
       url: /de/docs/edit/
     - title: Füllstich Werkzeuge

@@ -1,5 +1,5 @@
 ---
-title: "Satin Tools"
+title: "Tools: Satin"
 permalink: /docs/satin-tools/
 excerpt: ""
 last_modified_at: 2021-10-30

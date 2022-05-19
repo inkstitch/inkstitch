@@ -4,6 +4,8 @@ main:
     url: /features/
   - title: "User Manual"
     url: /docs/install/
+  - title: "Fonts"
+    url: /fonts/font-library/
   - title: "Tutorials"
     url: /tutorials/
   - title: "Get Help"
@@ -80,15 +82,21 @@ docs:
         url: /docs/stitches/e-stitch/
       - title: "Fill Stitch"
         url: /docs/stitches/fill-stitch/
+      - title: "Contour Fill"
+        url: /docs/stitches/contour-fill/
+      - title: "Guided Fill"
+        url: /docs/stitches/guided-fill/
       - title: "Stitch patterns"
         url: /docs/stitches/patterns/
   - title: Interface
     children:
     - title: "Commands"
       url: /docs/commands/
+    - title: "Cutwork"
+      url: /docs/cutwork/
     - title: "Edit"
       url: /docs/edit/
-    - title: "Fill Tools"
+    - title: "Tools: Fill"
       url: /docs/fill-tools/
     - title: "Font Management"
       url: /docs/font-tools/
@@ -98,8 +106,10 @@ docs:
       url: /docs/params/
     - title: "Preferences"
       url: /docs/preferences/
-    - title: "Satin Tools"
+    - title: "Tools: Satin"
       url: /docs/satin-tools/
+    - title: "Tools: Stroke"
+      url: /docs/stroke-tools/
     - title: "Thread Color Management"
       url: /docs/thread-color/
     - title: "Troubleshoot"

@@ -9,12 +9,12 @@ Ink/Stitch can apply custom threadlists to an embroidery design. This is especia
 
 It could also be helpful, if you are wanting to test different color settings. You can export and import them as you like. But be careful not to change the amount and order of colors. In case you are planing to change these, you'd prefer to save the entire SVG instead.
 
-## Import
-Run `Extensions > Ink/Stitch > Thread Color Management > Import Threadlist ...` to apply a threadlist exported by Ink/Stitch.
+## Apply colors of a colorlist (threadlist) to a design
+Run `Extensions > Ink/Stitch > Thread Color Management > Apply Threadlist ...` to apply a threadlist exported by Ink/Stitch.
 
-If you want to import any other threadlist from a txt-file, choose the option "Import other threadlist" and pick a threadlist from the dropdown menu before clicking on apply.
+If you want to apply an other threadlist from a txt-file, choose the option "Apply other threadlist" and pick a threadlist from the dropdown menu before clicking on apply.
 
-**Tip:** Run  `Extensions > Ink/Stitch > Thread Color Management > Install thread color palettes for Inkscape` to have more threadlists available.
+**Tip:** Run  `Extensions > Ink/Stitch > Thread Color Management > Install thread color palettes for Inkscape` to have more thread palettes available.
 {: .notice--info }
 
 ## Export

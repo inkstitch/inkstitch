@@ -4,6 +4,8 @@ main:
     url: /fr/features/
   - title: "Manuel de l'Utilisateur"
     url: /fr/docs/install/
+  - title: "Polices"
+    url: /fr/fonts/font-library/
   - title: "Tutoriels"
     url: /fr/tutorials/
   - title: "Aide"
@@ -80,12 +82,18 @@ docs:
         url: /fr/docs/stitches/e-stitch/
       - title: "Point de remplissage"
         url: /fr/docs/stitches/fill-stitch/
+      - title: "Contour Fill"
+        url: /fr/docs/stitches/contour-fill/
+      - title: "Guided Fill"
+        url: /fr/docs/stitches/guided-fill/
       - title: "Textures"
         url: /fr/docs/stitches/patterns/
   - title: Interface
     children:
     - title: "Commandes"
       url: /fr/docs/commands/
+    - title: "Cutwork"
+      url: /fr/docs/cutwork/
     - title: "Edition"
       url: /fr/docs/edit/
     - title: "Outils de remplissage"

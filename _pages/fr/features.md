@@ -1,5 +1,5 @@
 ---
-title: "Fonctionnalités d'Ink/Stitch"
+title: "## Caractéristiques notables"
 permalink: /fr/features/
 excerpt: "Ink/Stitch features"
 last_modified_at: 2021-10-23
@@ -7,69 +7,75 @@ sidebar:
   nav: pages
 toc: true
 ---
-## Caractéristiques notables
-* Numérisez des motifs de broderie à la machine avec Inkscape (SVG)
-* Cross Platform
-  * toutes les bibliothèques de code intégrées, pas besoin d'installer autre chose!
-* Interface utilisateur traduite en plusieurs langues (aide appréciée de la traduction](https://crowdin.com/project/inkstitch)!)
-* Importer et exporter de nombreux formats de broderie à la machine populaires
-  * y compris l'exportation par lots
-* Ajoute des commande de coupe et de Stop
-* Modifier l'ordre des points
-* Définir le point d'origine personnalisé comme (0, 0) dans le fichier de dessin
-* Aperçu de broderie animée
-  * y compris la prévisualisation en direct lorsque vous ajustez les paramètres tels que la sous-couche d'espacement des lignes, etc.
-* Imprimer en PDF
-  * rendu réaliste
-    * mode tracé disponible également
-  * Le mode de dessin au trait est également disponible ainsi que le schéma de broderie avec les blocs de couleur, les noms de fil, le nombre de points et les notes personnalisées
-  * mise en page orientée client conçue pour que vous puissiez l'envoyer à votre client
-  * hautement personnalisable via votre navigateur web
-* Palettes de fil (plus de 60 fabricants inclus)
-  * installation automatisée des palettes Inkscape à utiliser dans vos motifs
-  * noms de fil et numéros de catalogue inclus dans les impressions PDF
-* Lettrage
+Ink/Stitch: digitize machine embroidery designs using Inkscape (SVG)
 
-## Types de points pris en charge
+## Accessability
 
-### Point de remplissage
-* remplir automatiquement des formes arbitraires avec des points
-* ajuster la longueur de point, l'espacement des rangées et l'angle des rangées
-* sous-couche
-* Point programmable
+* Cross Platform (Linux, Windows, macOS)
+* User interface translated to several languages ([translation help appreciated](https://translate.inkstitch.org))
 
-### Point Satin
-* personnaliser votre colonne satin avec une largeur variable
-* routage automatique (avec sous-chemi en point droit si nécessaire)
-* mélanger et assortir 3 types de sous-couches
-   * centrée
-   * contour
-   * zig-zag
-* Point E
-* Fractionnement satins
-* Point programmable
+## Stitch Types
 
-### Type de points en ligne 
-* point droit
-* point triple
-* point manuel
-  * chaque point exactement où vous le voulez
+* Various [stitch types](/docs/stitch-library/): Fill stitch, satin stitch, stroke type stitches
+* Custom [Patterns](/docs/stitches/patterns/) can be applied to all available stitch types.
 
-## Formats de fichiers pris en charge
+### Fill Stitch
 
-### Ecriture
+* Automatically [fill](/docs/stitches/fill-stitch/) arbitrary shapes with stitches
+* Adjust stitch length, row spacing and row angle
+* Underlay
+* [Contour fill](/docs/stitches/contour-fill/)
+* [Guided fill](/docs/stitches/guided-fill/)
+
+### Satin Stitch
+* Design your [satin column](/docs/stitches/satin-column/) with varying width
+* Mix and match 3 kinds of underlay (center-walk underlay, contour underlay, zig-zag underlay)
+* [E-stitch](/docs/stitches/e-stitch/)
+* Split stitch (through maximum stitch length)
+* [Automatic routing](/docs/satin-tools/) (with underpathing running stitch if needed)
+
+### Stroke Type Stitches
+
+* [Running stitch](/docs/stitches/running-stitch/)
+* [Bean stitch](/docs/stitches/bean-stitch/)
+* [Manual stitch](/docs/stitches/manual-stitch/) (each stitch exactly where you want it)
+* [Cutwork](/docs/cutwork/)
+* [Automatic routing](/docs/stroke-tools/) to avoid jump stitches
+
+## Text
+
+* [Lettering module](/docs/lettering/) with many [fonts](/fonts/font-library/) ready to use
+
+## Stitch Preview
+
+* Animated stitch-out preview (including live-preview as you adjust settings like row spacing underlay, etc.)
+* [Simulator and in canvas stitch plan preview](/docs/visualize/)
+* [Print to PDF](/docs/print-pdf/)
+  * realistic rendering and line-drawing mode
+  * embroidery machine operator layout with color blocks, thread names, stitch counts, and custom notes
+  * client-oriented layout designed for you to send to your customer
+  * highly customizable
+
+## Thread management
+
+Ink/Stitch has a [thread management](/docs/thread-color/) section in the menu.
+
+* Thread manufacturer palettes (over 60 manufacturers included)
+  * automated installation of Inkscape palettes for use in your designs
+  * thread names and catalog numbers included in PDF printouts
+* Tools to create your own thread palettes easily
+
+## Import and Export
+
+[Import and Export](/docs/import-export/) many popular machine embroidery formats (including batch export)
+
+### Writing
 CSV, **DST**, **EXP**, **JEF**, PEC, **PES**, SVG, TXT (G-CODE), U01, **VP3**
 
-### Lecture
+### Reading
 100, 10o, BRO, DAT, DSB, **DST**, DSZ, EMD, **EXP**, EXY, FXY, GT, INB, **JEF**, JPX, KSM, MAX, MIT, NEW, PCD, PCM, PCQ, PCS, PEC, **PES**, PHB, PHC, SEW, SHV, STC, STX, TAP, TBF, TXT (G-CODE), U01, **VP3**, XXX, ZXY
 
-## Feuille de route
+### Machine Commands
 
-Voici les fonctionnalités que nous espérons ajouter, mais pas nécessairement dans cet ordre:
-
-* Remplissage avec dégradé (déjà réalisé en tant que [fonction cachée](https://github.com/inkstitch/inkstitch/pull/108#issuecomment-369444197))
-* Multi-Decoration Support [#371](https://github.com/inkstitch/inkstitch/issues/371)
-* Fractionnement automatique des dessins pour petites machines [#182](https://github.com/inkstitch/inkstitch/issues/182)
-* Sous-couches multiples pour le remplissage [#110](https://github.com/inkstitch/inkstitch/issues/110)
-* Gestion automatique des points droits [#373](https://github.com/inkstitch/inkstitch/issues/373)
-
+* Add [Trims and Stops](/docs/commands/)
+* Set custom [origin point](/docs/commands/) as (0, 0) in the design file

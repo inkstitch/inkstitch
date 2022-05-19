@@ -81,12 +81,12 @@ hr {
 }
 
 key {
-  border: 1px solid #b6b6b6;
+  border: 1px solid #e6e3e3;
   padding: 0 0.3em;
   margin: 0.1em 0.3em;
   border-radius: 5px;
   background: #f2f3f3;
-  background: radial-gradient(#f2f3f3 60%, #cecece);
+  background: linear-gradient(#f2f3f3 60%, #cecece);
   display: inline-block;
   min-width: 2em;
   text-align: center;
@@ -270,7 +270,7 @@ table.inline-table {
       margin: 0.2em;
   }
 
-  .masthead__menu-item:nth-child(2) {
+  .masthead__menu-item:nth-child(2), .masthead__menu-item:nth-child(6) {
     border:1px solid rgb(50,132,50);
   }
 
@@ -286,7 +286,7 @@ table.inline-table {
       background: #ffb400;
   }
 
-  .masthead__menu-item:nth-child(2):hover {
+  .masthead__menu-item:nth-child(2):hover, .masthead__menu-item:nth-child(6):hover {
     background: rgb(50,132,50);
   }
 

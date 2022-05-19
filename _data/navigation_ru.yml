@@ -4,6 +4,8 @@ main:
     url: /ru/features/
   - title: "Руководство"
     url: /ru/docs/install/
+  - title: "Fonts"
+    url: /ru/fonts/font-library/
   - title: "Уроки"
     url: /ru/tutorials/
   - title: "FAQ"
@@ -80,12 +82,18 @@ docs:
         url: /ru/docs/stitches/e-stitch/
       - title: "Заполнение"
         url: /ru/docs/stitches/fill-stitch/
+      - title: "Contour Fill"
+        url: /ru/docs/stitches/contour-fill/
+      - title: "Guided Fill"
+        url: /ru/docs/stitches/guided-fill/
       - title: "Stitch patterns"
         url: /ru/docs/stitches/patterns/
   - title: Интерфейс
     children:
     - title: "Команды"
       url: /ru/docs/commands/
+    - title: "Cutwork"
+      url: /ru/docs/cutwork/
     - title: "Правка"
       url: /ru/docs/edit/
     - title: "Инструменты Заполнения"

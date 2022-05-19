@@ -1,62 +1,72 @@
 ---
-title: "Ink/Stitch Features"
+title: "Besondere Ink/Stitch Features"
 permalink: /de/features/
 excerpt: "Ink/Stitch features"
-last_modified_at: 2021-10-23
+last_modified_at: 2022-05-16
 sidebar:
   nav: pages
 toc: true
 ---
-## Features
-* Digitalisiere Motive für Maschinenstickerei mit Inkscape (SVG)
-* Platformübergreifen
-  * alle Code-Bibliotheken werden mitgeliefert, es muss nichts weiter installiert werden!
-* Benutzeroberfläche in verschiedenen Sprachen ([Übersetzungsvorschläge willkommen](https://crowdin.com/project/inkstitch)!)
-* Unterstützung vieler Dateiformate
-    * einschließlich Batch-Export (viele Dateiformate gleichzeitig exportieren)
-* Fadenschneide- und Stop-Befehle
-* Stickreihenfolge ändern
-* Nullpunkt (0, 0) in der Stickdatei festlegen
-* Animierte Vorschau
-  * Inklusive einer Live-Vorschau während Stick-Parameter geändert werden wie z.B. Unterlage, Zeilenabstand, etc.
-* PDF-Ausdruck
-  * realistische und schematische Vorschau
-  * Layout für den Nutzer mit Farbblock, Garnnamen, Stichanzahl und individuellen Notizen
-  * Layout für Klienten
-  * im Webbrowser individuell anpassbar
-* Garnhersteller Paletten von über 60 Herstellern
-  * automatische Installation der Inkscape-Paletten für den Gebrauch in deinen Motiven
-  * Garnnamen und Katalog-Nummern im PDF-Ausdruck
-* Lettering
+Ink/Stitch: digitalisiere Designs für Maschinenstickerei mit Inkscape (SVG)
 
-## Unterstützte Sticharten
+## Zugänglichkeit
 
-### Füllstitch
-* automatische Füllung von ausgefallenen Formen mit Stichen
-* Anpassung von Stichlänge, Zeilenabstand und Winkel
+* Plattformübergreifend (Linux, Windows, macOS)
+* Nutzeroberfläche in viele Sprachen übersetzt ([Hilf mit Ink/Stitch zu übersetzen](https://translate.inkstitch.org))
+
+## Sticharten
+
+* [Sticharten](/de/docs/stitch-library/): Füllung, Satin, Linien
+* Nutzergenerierte [Muster](/de/docs/stitches/patterns/) können auf jeden Stichtyp angewandt werden.
+
+### Füllung
+
+* Automatische [Füllung](/de/docs/stitches/fill-stitch/) komplizierter Formen mit Füllstich
+* Stichlänge, Reihenabstand und Stickrichtung anpassen
 * Unterlage
-* Benutzerdefinierte Muster
+* [Konturfüllung](/de/docs/stitches/contour-fill/)
+* [Kurvenfüllung](/de/docs/stitches/guided-fill/)
 
-### Satinstich
-* Individuelle Satinkolumnen mit variierender Breite
-* Automatische Führung (mit verstecktem Laufstich, falls nötig)
-* verwende von bis zu 3 verschiedenen Arten von Unterlage
-    * Mitellinie
-    * Kontur
-    * Zick-Zack
+### Satin
+* [Satinkolumne](/de/docs/stitches/satin-column/) mit variabler Breite
+* 3 anpassbare und gleichzeitig nutzbare Unterlagen (Mittellinien-, Kontur- und Zick-Zack-Unterlage)
+* [E-stitch](/de/docs/stitches/e-stitch/)
+* Geteilte Satinstiche (durch nutzerdefinierte maximale Stichlänge)
+* [Automatisch geführte Satinkolumnen]](/de/docs/satin-tools/) zur Vermeidung von Sprungstichen (mit verstecktem Laufstich sofern notwendig)
 
-* E-Stich
-* Split-Stich
-* Muster
+### Linienartige Stiche
 
-### Linienförmige Stiche
+* [Laufstich](/de/docs/stitches/running-stitch/)
+* [Bohnenstich](/de/docs/stitches/bean-stitch/)
+* [Manuelle Stichführung](/de/docs/stitches/manual-stitch/) (each stitch exactly where you want it)
+* [Cutwork](/de/docs/cutwork/)
+* [Automatisch geführter Laufstich](/de/docs/stroke-tools/) zur Vermeidung von Sprungstichen
 
-* Laufstitch
-* Bohnenstich
-* Manueller Stich
-  * jeder Stitch genau dort, wo du ihn haben willst
+## Text
 
-## Unterstützte Datei-Formate
+* [Textmodul](/de/docs/lettering/) mit vielen einsatzbereiten [Schriften](/de/fonts/font-library/)
+
+## Stichvorschau
+
+* Animierte Stichvorschau (einschließlich einer Live-Vorschau während der Parameteranpassung wie z.B. Reihenabstand, Stichlänge, etc.)
+* [Simulator mit realistischer Vorschau](/de/docs/visualize/) und [Stickvorschau direkt auf der Arbeitsfläche](/de/docs/visualize/)
+* [PDF-Export](/de/docs/print-pdf/)
+  * Realistische Ausgabe, sowie Liniendarstellung
+  * Layout für die Bedienung der Stickmaschine mit Farbblöcken, Garnnamen, Stichanzahl und Notizen
+  * Layout für die Präsentation beim Kunden
+  * Anpassbares Layout
+
+## Garnmanagement
+
+Ink/Stitch hat eine Sektion "[Garnfarben Verwaltung](/de/docs/thread-color/)" mit verschiedenen Funktionen
+
+* Importiere über 60 geläufige Farbpaletten verschiedener Hersteller
+  * Farbnamen und Katalognummern können über den PDF-Export ausgegeben werden
+* Werkzeuge zur einfachen Erstellung eigener Farbpaletten
+
+## Importieren und Exportieren
+
+[Importieren and Speichern](/de/docs/import-export/) vieler beliebter Dateiformate für Stickmaschinen (einschließlich Batch-Export)
 
 ### Schreiben
 CSV, **DST**, **EXP**, **JEF**, PEC, **PES**, SVG, TXT (G-CODE), U01, **VP3**
@@ -64,12 +74,7 @@ CSV, **DST**, **EXP**, **JEF**, PEC, **PES**, SVG, TXT (G-CODE), U01, **VP3**
 ### Lesen
 100, 10o, BRO, DAT, DSB, **DST**, DSZ, EMD, **EXP**, EXY, FXY, GT, INB, **JEF**, JPX, KSM, MAX, MIT, NEW, PCD, PCM, PCQ, PCS, PEC, **PES**, PHB, PHC, SEW, SHV, STC, STX, TAP, TBF, TXT (G-CODE), U01, **VP3**, XXX, ZXY
 
-## Ausschau
+### Machinenbefehle
 
-Hier sind Funktionen, die wir hoffen hinzufügen zu können (nicht unbedingt in dieser Reihenfolge):
-
-* Gradient Fill (already realised as a [hidden feature](https://github.com/inkstitch/inkstitch/pull/108#issuecomment-369444197))
-* Multi-Decoration Support [#371](https://github.com/inkstitch/inkstitch/issues/371)
-* Automatic splitting of designs for small machines [#182](https://github.com/inkstitch/inkstitch/issues/182)
-* Multiple Underlay for Fill [#110](https://github.com/inkstitch/inkstitch/issues/110)
-* Running Stitch Autoroute [#373](https://github.com/inkstitch/inkstitch/issues/373)
+* [Fadenschnitt und Stopp](/de/docs/commands/)
+* Benutzerdefinierter [Nullpunkt](/de/docs/commands/) (0, 0)

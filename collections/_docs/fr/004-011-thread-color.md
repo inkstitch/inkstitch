@@ -55,8 +55,7 @@ Le choix s'appliquera également aux noms de fil à afficher dans l'aperçu avan
 
 ## Generer une palette de couleur
 
-Ceci fait partie d'une prochaine version d'Ink/Stitch et n'est pas disponible dans Ink/Stitch v2.1.2
-{: .notice--warning }
+{% include upcoming_release.html %}
 
 
 Inkscape permet de générer des fichiers `.gpl`  de palette de couleurs. Mais il ne permet pas d'ordonner correctement les échantillons de couleur.
@@ -76,8 +75,7 @@ Cette extension exportera les couleur d'éléments textuels tout en utilisant le
 
 ## Palette to Text
 
-This is part of an upcoming Ink/Stitch version and not available in Ink/Stitch v2.1.2
-{: .notice--warning }
+{% include upcoming_release.html %}
 
 Existing palettes can be edited with Ink/Stitch as text.
 

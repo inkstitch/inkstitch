@@ -5,7 +5,7 @@ excerpt: ""
 last_modified_at: 2022-04-03
 toc: true
 ---
-Ceci fera partie d'une prochaine version d 'Ink/Stith. Ce n'est pas encore intégré à  Ink/Stitvh v2.1.2 {: .notice--info }
+{% include upcoming_release.html %}
 
 En broderie machine "Cutwork" (ou broderie Richelieu) décrit une  technique où des aiguilles spécifiques sont utilisées pour découper des trous dans le tissu. Ces aiguilles sont généralement vendues par quatre. Chaque aiguille peut couper selon un angle qui est dans un intervalle spécifique. Il est donc necessaire de diviser un élément selon les sections d'angle de nos aiguilles.
 
