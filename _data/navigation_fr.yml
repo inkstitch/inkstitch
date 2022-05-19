@@ -82,9 +82,9 @@ docs:
         url: /fr/docs/stitches/e-stitch/
       - title: "Point de remplissage"
         url: /fr/docs/stitches/fill-stitch/
-      - title: "Contour Fill"
+      - title: "Remplissage selon contour"
         url: /fr/docs/stitches/contour-fill/
-      - title: "Guided Fill"
+      - title: "Remplissage guidé"
         url: /fr/docs/stitches/guided-fill/
       - title: "Textures"
         url: /fr/docs/stitches/patterns/
