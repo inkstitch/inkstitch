@@ -9,20 +9,19 @@ toc: true
 
 ## De quoi s'agit-il ?
 
-Generate curved fill with guide lines.
+
 
 ![Fill stitch detail](/assets/images/docs/guided-fill-detail.jpg)
 
-Le remplissage guidé par un chemin remplit les objets parallèlement au chemin guide.
-
+Le remplissage guidé par un chemin remplit les objets parallèlement au chemin de guidage.
 
 ## Comment le créer
 
 * Créez une **forme fermée avec une couleur de remplissage**
 
 * Créez un chemin de guidage pour définir la direction des points :
-    * dessiner un trait avec une couleur de contour et sans couleur de remplissage
-    * selectionner ce trait
+    * dessiner un chemin avec une couleur de contour et sans couleur de remplissage
+    * selectionner ce chemin
     * Lancez `Extensions > Ink/Stitch > Edition > Selection vers chemin de guidage`
 * Sélectionnez les deux et groupez les ensemble (`Ctrl + G`).
   Chaque groupe peut contenir plusieurs objets de remplissage, mais un seul chemin de guidage.
@@ -30,7 +29,7 @@ Le remplissage guidé par un chemin remplit les objets parallèlement au chemin 
 * Ouvrir le dialogue de paramètrage (`Extensions > Ink/Stitch > Paramètres`) et sélectionner `Remplissage guidé par un chemin` comme méthode de remplissage.
 
 ## Définir le point de départ et d'arrivée
-Définir le point de départ et d'arriver pour les remplissages automatiques avec les [commandes visuelles](/fr/docs/commands/).
+Définir le point de départ et d'arrivée pour les remplissages automatiques avec les [commandes visuelles](/fr/docs/commands/).
 
 ## Paramètres
 
