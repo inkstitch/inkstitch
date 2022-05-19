@@ -1,4 +1,4 @@
-2022-05-152022-05-15---
+---
 title: "Amitaclo"
 permalink: /fonts/amita/
 last_modified_at: 2022-05-05
