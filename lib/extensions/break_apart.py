@@ -83,7 +83,7 @@ class BreakApart(InkstitchExtension):
                     if diff.geom_type == 'MultiPolygon':
                         polygons.remove(other)
                         polygons.remove(polygon)
-                        for p in diff:
+                        for p in diff.geoms:
                             polygons.append(p)
                         # it is possible, that a polygons overlap with multiple
                         # polygons, this means, we need to start all over again

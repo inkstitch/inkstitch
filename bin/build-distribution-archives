@@ -118,10 +118,11 @@ if [ "$BUILD" = "linux" ]; then
 %_signature gpg
 EOF
 
+    deb_version="$(sed -E 's/[^a-zA-Z0-9.+]/./g' <<< "$VERSION")"
     fpm -s dir \
         -t deb \
         -n inkstitch \
-        -v "$VERSION" \
+        -v "$deb_version" \
         -d "inkscape >= 1.0.0" \
         --license "GPL-3.0" \
         --description "An open-source machine embroidery design platform based on Inkscape" \

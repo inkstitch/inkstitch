@@ -19,6 +19,8 @@ stringcase
 tinycss2
 flask
 fonttools
+trimesh
+scipy
 
 pywinutils; sys.platform == 'win32'
 pywin32; sys.platform == 'win32'

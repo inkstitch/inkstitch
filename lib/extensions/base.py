@@ -8,10 +8,11 @@ import os
 import re
 from collections.abc import MutableMapping
 
-import inkex
 from lxml import etree
 from lxml.etree import Comment
 from stringcase import snakecase
+
+import inkex
 
 from ..commands import is_command, layer_commands
 from ..elements import EmbroideryElement, nodes_to_elements
