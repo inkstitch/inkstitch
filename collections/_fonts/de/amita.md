@@ -10,8 +10,8 @@ preview_image:
 ![Amitaclo](/assets/images/fonts/amita.png)
 ![Amitaclo small](/assets/images/fonts/amitaclo_small.png)
 
-## Zeichen
-Amitaclo enthält folgende 110 Zeichen :
+## Schriftzeichen
+Amitaclo enthält folgende 110 Schriftzeichen :
 
 œıüûúùöôóñ
 ïîíëêéèçæä
