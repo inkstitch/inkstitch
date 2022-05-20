@@ -152,13 +152,13 @@ Das kann man unmöglich von Hand machen. Jetzt kommt uns die Methode zu Gute, di
 
 Ink/Stitch bietet ein Werkzeug an, mit dem die JSON-Datei mit der richtigen Kerning-Information befüllt werdeb kann.
 
-1. `Erweiterungen > Ink/Stitch > Font Tools > Generate JSON ...`
+1. `Erweiterungen > Ink/Stitch > Schriftverwaltung > JSON erstellen ...`
    ![Generate JSON](/assets/images/fonts/augusa_tutorial/en_generate_JSON.png)
 
 2. Fülle die gewünschten Felder aus:
    * **Name** Pflichfeld. Der Name der Schrift.
    * **Beschreibung** eine kurze Beschreibung deiner Schrift (wie z.B. Informationen zur Größe der Schrift, etc.)
-   * **Schriftdatei** Pflichtfeld. Wenn du deine Schrift mit Hilfe von FontForge erstellt hast, wird Ink/Stitch die Kerning informationen aus dieser Datei lesen und in die JSON-Datei einfügen.
+   * **Schriftdatei** Pflichtfeld. Wenn du deine Schrift mit Hilfe von FontForge erstellt hast, wird Ink/Stitch die Kerning Informationen aus dieser Datei lesen und in die JSON-Datei einfügen.
      Außerdem legt der Dateipfad den Speicherort für die neue JSON-Datei fest.
    * **Automatisch geführte Satinkolumne**:
      * aktiviert: Ink/Stitch generiert automatisch geführte Satinkolumnen, wenn die Schrift mit dem Text Werkzeug von Ink/Stitch benutzt wird. [Mehr Informationen über automatisch geführte Satinkolumnen](/de/docs/satin-tools/#auto-route-satin-columns)
