@@ -1,30 +1,29 @@
 ---
 title: "Aventurina"
 permalink: /de/fonts/aventurina/
-last_modified_at: 2022-05-03
+last_modified_at: 2022-05-20
 toc: false
 preview_image: /assets/images/fonts/aventurina.png
 ---
 ![Aventurina](/assets/images/fonts/aventurina.png)
 
+Dies ist Teil einer kommenden Ink/Stitch-Version und nicht in Ink/Stitch v2.1.2 verfügbar.
 
-This is part of an upcoming Ink/Stitch version and not available in Ink/Stitch v2.1.2
+## Schriftzeichen
 
-## Glyphs
-
-Aventurina contains 142 glyphs :
+Diese Schrift enthält 142 Schriftzeichen:
 
 !"#@'()+,- ./01234567 89:;=?@ABC DEFGHIJKLM NOPQRSTUVW XYZabcdefg hijklmnopq rstuvwxyz~ ¡¿ÀÁÂÃÄÅÆÇ ÈÉÊËÌÍÎÏÑÒ ÓÔÕÖØÙÚÛÜÝ Þßàáâãäåæç èéêëìíîïñò óôõöùúûüýÿ Œœ
 
-## Dimensions:
-At 100%, Aventurina is approximatively  20 mm tall (3/4 inches)
+## Maße
 
-It may be scaled up to 150% (aprox. 30mm , 1.25 in) or scaled down to 60% (approx 12mm, 0.5 in)
+Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 20 mm hoch (3/4 Zoll)
+Sie kann bis zu 150% (~30mm, 1.25 Zoll) und bis zu 60% (~12mm, 0.5 Zoll) skaliert werden.
 
 
-## In real life:
+## Gestickte Beispiele
 
-Bookmark, Hand towel.....
+Lesezeichen, Handtuch...
 
 {% include folder-galleries path="fonts/aventurina/" %}
 
