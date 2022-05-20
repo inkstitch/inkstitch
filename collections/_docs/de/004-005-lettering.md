@@ -42,7 +42,7 @@ Wenn die Farben innerhalb eines Buchstabens nur auf aufeinanderfolgenden Pfaden 
 Wählen Sie im Objektfenster einen Buchstaben, egal welchen:
 
 * Den Pfad auswählen, der zuerst gestickt werden soll (der letzte des Buchstabens in diesem Fenster also...).
-* `Bearbeiten/Auswahl Gleiche/Umrissfarbe` (dies wählt alles in dieser Farbe in allen Buchstaben aus, es gibt wahrscheinlich viele Pfade pro Buchstabe).
+* `Bearbeiten/Das Gleiche auswählen/Konturfarbe` (dies wählt alles in dieser Farbe in allen Buchstaben aus, es gibt wahrscheinlich viele Pfade pro Buchstabe).
 * Gruppieren: Diese Gruppe wird in dem letzten Buchstaben angelegt, der gestickt werden soll, bei Bedarf kann man dieser Gruppe den Namen der Farbe geben.
 * Nun hebt man die Gruppe auf die oberste Ebene des letzen Buchstabens an.
 dieser Vorgang wird wiederholt, bis nur noch Farbgruppen vorhanden sind.
