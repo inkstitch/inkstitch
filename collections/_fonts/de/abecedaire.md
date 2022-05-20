@@ -1,7 +1,7 @@
 ---
 title: "Abecedaire"
 permalink: /de/fonts/abecedaire/
-last_modified_at: 2022-05-03
+last_modified_at: 2022-05-20
 toc: false
 preview_image: /assets/images/fonts/abecedaire.png
 
@@ -9,41 +9,39 @@ preview_image: /assets/images/fonts/abecedaire.png
 
 ![Abecedaire](/assets/images/fonts/abecedaire.png)
 
-This is part of an upcoming Ink/Stitch version and not available in Ink/Stitch v2.1.2
+Dies ist Teil einer kommenden Ink/Stitch-Version und nicht in Ink/Stitch v2.1.2 verfügbar.
 
-## Glyphs
+## Glyphen
 
-This font contains  154 glyph:s
+Diese Schrift enthält 154 Schriftzeichen:
 
 	
-!"@'(),012
-3456789:;=
-?@ABCDEFGH
-IJKLMNOPQR
-STUVWXYZ`a
-bcdefghijk
-lmnopqrstu
-vwxyz¡«´¸»
-¿ÀÁÂÃÄÅÆŒÇ
-ÈÉÊËÌÍÎÏÐÑ
-ÒÓÔÕÖØÙÚÛÜ
-ÝŸÞßàáâãäå
-æœçèéêëìíî
-ïðñòóôõöøù
-úûüýþÿčČřŘ
+!"@'(),012 <br>
+3456789:;= <br>
+?@ABCDEFGH <br>
+IJKLMNOPQR<br>
+STUVWXYZ`a<br>
+bcdefghijk<br>
+lmnopqrstu<br>
+vwxyz¡«´¸»<br>
+¿ÀÁÂÃÄÅÆŒÇ<br>
+ÈÉÊËÌÍÎÏÐÑ<br>
+ÒÓÔÕÖØÙÚÛÜ<br>
+ÝŸÞßàáâãäå<br>
+æœçèéêëìíî<br>
+ïðñòóôõöøù<br>
+úûüýþÿčČřŘ<br>
 šŠžŽ
 
-## Dimensions
+## Maße
 
-Used at 100%, this font is approximatively 14mm high (1/2 inch). 
+Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 14 mm hoch (1/2 Zoll). 
 
-It can be scaled up to 200%  (28mm, 1 inch) and scalled to 75% (9mm  1/3 inch)
-
-
-## In real life
-
-{% include folder-galleries path="fonts/abecedaire/" %}
+Sie kann bis zu 200% (28mm, 1 Zoll) und bis zu 75% (9mm, 1/3 Zoll) skaliert werden.
 
 
+## Gestickte Beispiele
+
+{%include folder-galleries path="fonts/abecedaire/" %}
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/abecedaire/LICENSE)
