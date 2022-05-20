@@ -5,7 +5,7 @@ excerpt: ""
 last_modified_at: 2022-05-22
 toc: true
 ---
-Das Lettering-Werkzeug erzeugt mehrzeiligen Text in Form von Satinsäulen. Die hinterlegten Schriftarten wurden von Community-Mitgliedern zur direkten Verwendung digitalisiert. 
+Das Lettering-Werkzeug erzeugt mehrzeiligen Text. Die hinterlegten Schriftarten wurden von Community-Mitgliedern zur direkten Verwendung digitalisiert. Es gibt  bisher Schriftarten die auf Satinsäulen beruhen, Applikationsschriften und Geradstichschriften. 
 
 ![Lettrage Extensions](/assets/images/docs/lettering.jpg)
 
@@ -34,7 +34,7 @@ Man kann bevorzugte Schriftarteinstellungen speichern und wieder öffnen.
 
 Eine Übersicht über alle verfügbaren Schriftarten finden Sie in der [Schrift-Bibliothek](/de/fonts/font-library/)
 
-## Sortierung der Farben
+## Sortierung von Farben
 Wenn man mehrere Buchstaben einer mehrfarbigen Schrift verwenden möchte, kann man die Farben sortieren, um mehrmaliges Wechseln des Garns zu vermeiden. Diese Sortierung darf jedoch nicht die Reihenfolge der Farben in einem Buchstaben ändern, da sonst die Stickerei verändert wird. 
 
 Wenn die Farben innerhalb eines Buchstabens nur auf aufeinanderfolgenden Pfaden und immer in der gleichen Reihenfolge verwendet werden (was bei den mehrfarbigen Schriften, die derzeit in Ink/Stitch vorhanden sind, der Fall ist, außer vielleicht bei Infinipicto), können Sie die Farben schnell sortieren, wenn Ihre Datei nur die Buchstaben enthält:
