@@ -34,6 +34,6 @@ class ObjectCommands(CommandsExtension):
         seen_nodes = set()
 
         for element in self.elements:
-            if element.node not in seen_nodes and element.shape():
+            if element.node not in seen_nodes and element.shape:
                 add_commands(element, commands)
                 seen_nodes.add(element.node)
