@@ -17,8 +17,8 @@ Einige dieser Tastenkürzel werden andere Tastenkürzel, die bereits durch Inksc
 
 Tastenkürzel | Effekt | Ersetzt
 -------- | --------
-<key>Bild↑</key>                        | Anheben* | Objekt > Anheben (see also toolbar buttons)
-<key>Bild↑</key>                        | Absenken* | Objekt > Absenken (see also toolbar buttons)
+<key>Bild↑</key>                        | Anheben* | Objekt > Anheben (siehe Werkzeugleisten)
+<key>Bild↑</key>                        | Absenken* | Objekt > Absenken (siehe Werkzeugleisten)
 <key>Strg</key><key>R</key>             | Pfad > Richtung umkehren**
 <key>Strg</key><key>⇧</key><key>P</key> | Parameter | Bearbeiten > Einstellungen
 <key>Strg</key><key>⇧</key><key>L</key> | Simulator (Live Simulation)
@@ -39,13 +39,13 @@ The Ink/Stitch [simulator](/docs/visualize/#simulation-shortcut-keys) also provi
 {: .notice--info }
 {: style="font-size: 70%" }
 
-### Download and import custom shortcut keys
+### Download und Import von benutzerdefinierten Tastenkürzeln
 
 * [Ink/Stitch Tastenkürzel herunterladen](/assets/files/inkstitch.xml)
 * Gehe zu `Bearbeiten > Einstellungen > Benutzeroberfläche > Tastenkürzel`
 * Klicke auf `Importieren...`
 * Wähle die Tastenkürzel-Datei (inkstitch.xml)
-* Klicke auf öffnen
+* Klicke auf `öffnen`
 
 Jetzt kannst du die oben genannten Tastenkürzel verwenden.
 
@@ -53,12 +53,12 @@ Wenn du deine eigenen Tastenkürzel verwenden willst, füge sie in den Tastenkü
 Benutze die Suchfunktion um die Erweiterungen schneller zu finden. [Mehr informationen](http://wiki.inkscape.org/wiki/index.php/Customizing_Inkscape)
 {: .notice--info }
 
-## Zoom correction factor
+## Zoomkorrektur
 
-For embroidery it is essential to get a sense of the actual size of the design. Inkscape has a setting to adapt zoom levels to your display size.
+Beim Sticken ist es wichtig, ein Gefühl für die tatsächliche Größe des Entwurfs zu bekommen. Inkscape verfügt über eine Einstellung, mit der man die Zoomstufen die Bildschirmgröße anpassen kann.
 
-* Go to `Edit > Preferences > Interface`
-* Hold a ruler onto your display and adjust the slider until the length matches
+* Navigiere zu `Bearbeiten > Einstellungen > Benutzeroberfläche`
+* Nun hält man ein Lineal auf das Display und passt den Schieberegler an, bis die Länge übereinstimmt.
  
 ![Zoom correction](/assets/images/docs/de/customize-zoom-correction.png)
 
@@ -72,7 +72,7 @@ Um Vektoren richtig auszurichten, kann die Rasterfunktion von Inkscape verwendet
 
 Bei der Arbeit mit Ink/Stitch ist es wichtig, erkennen zu können, in welche Richtung ein Pfad verläuft. Wir empfehlen daher, die Kontrollkästchen `Umriss zeigen` und `Zeige temporär Umrandung für ausgewählte Pfade` unter `Bearbeiten > Einstellungen > Werkzeuge > Knoten` zu aktivieren.
 
-Damit die Pfadrichtungen auch wirklich angezeigt werden, aktiviere außerdem die Option `Zeige Entwurfspfad` in der Werkzeugleiste. In der Abbildung kannst du sehen, wo du die Option findest.
+Damit die Pfadrichtungen auch wirklich angezeigt werden, aktiviere außerdem die Option `Zeige die Pfadrichtung an Außenlinie` in der Werkzeugleiste. In der Abbildung kannst du sehen, wo du die Option findest.
 
 [![Path outlines & directions](https://user-images.githubusercontent.com/11083514/40360721-f294ef0a-5dbe-11e8-9d4d-98f469ff1fba.png)](https://user-images.githubusercontent.com/11083514/40360721-f294ef0a-5dbe-11e8-9d4d-98f469ff1fba.png)
 
