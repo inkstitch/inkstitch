@@ -13,7 +13,7 @@ This is part of an upcoming Ink/Stitch version and not available in Ink/Stitch v
 
 ## Glyphs
 
-This font contains  154 glyph:s
+This font contains  154 glyphs:
 
 	
 !"@'(),012
