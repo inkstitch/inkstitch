@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-05-19 02:28+0000\n"
-"PO-Revision-Date: 2022-05-19 02:29\n"
+"PO-Revision-Date: 2022-05-20 02:21\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -406,13 +406,13 @@ msgstr "Füllstich Endposition"
 #. command attached to an object
 #: lib/commands.py:30 inx/inkstitch_object_commands.inx:6
 msgid "Auto-route running stitch starting position"
-msgstr ""
+msgstr "Automatisch geführter Laufstich: Startposition"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:33 inx/inkstitch_object_commands.inx:7
 msgid "Auto-route running stitch ending position"
-msgstr ""
+msgstr "Automatisch geführter Laufstich: Endposition"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
@@ -802,15 +802,15 @@ msgstr "* Alternativ kann das Bild auch mit dem Stift (P) oder dem Bezier (B) We
 
 #: lib/elements/marker.py:14
 msgid "Marker Element"
-msgstr ""
+msgstr "Element mit Knotenmarkierung"
 
 #: lib/elements/marker.py:15
 msgid "This element will not be embroidered. It will be applied to objects in the same group. Objects in sub-groups will be ignored."
-msgstr ""
+msgstr "Dieses Element wird nicht gestickt. Es wird auf Stickobjekte, die sich in der gleichen Gruppe befinden, angewandt. Auf Objekte in weiteren Untergruppen werden nicht einbezogen."
 
 #: lib/elements/marker.py:18
 msgid "Turn back to normal embroidery element mode, remove the marker:"
-msgstr ""
+msgstr "Marker entfernen um dieses Objekt zu sticken:"
 
 #: lib/elements/marker.py:19
 msgid "* Open the Fill and Stroke panel (Objects > Fill and Stroke)"
@@ -1137,7 +1137,7 @@ msgstr "Bitte wähle ein oder mehrere Elemente mit einer Kontur (Linie)."
 
 #: lib/extensions/auto_run.py:62
 msgid "Please select at least one stroke element."
-msgstr ""
+msgstr "Bitte mindestens ein Element mit Kontur auswählen."
 
 #: lib/extensions/auto_satin.py:35
 msgid "Please ensure that at most one start and end command is attached to the selected satin columns."
@@ -1402,7 +1402,7 @@ msgstr "Letzte Einstellungen verwenden"
 
 #: lib/extensions/reorder.py:20
 msgid "Please select at least two elements to reorder."
-msgstr ""
+msgstr "Zum Sortieren bitte mindestens zwei Elemente auswählen."
 
 #: lib/extensions/selection_to_pattern.py:21
 msgid "Please select at least one object to be marked as a pattern."
@@ -1665,21 +1665,21 @@ msgstr "Es wurde kein stickbares Element ausgewählt. Bitte führe die Funktion 
 
 #: lib/stitches/auto_run.py:135
 msgid "Auto-Run"
-msgstr ""
+msgstr "Automatischer Laufstich"
 
 #: lib/stitches/auto_run.py:257
 #, python-format
 msgid "AutoRun %d"
-msgstr ""
+msgstr "Auto-Laufstich %d"
 
 #: lib/stitches/auto_run.py:259
 #, python-format
 msgid "AutoRun Underpath %d"
-msgstr ""
+msgstr "Auto-Laufstich Verbindungslinie %d"
 
 #: lib/stitches/auto_satin.py:345
 msgid "Auto-Route"
-msgstr ""
+msgstr "Auto-Führung"
 
 #. Label for a satin column created by Auto-Route Satin Columns and Lettering
 #. extensions
@@ -2511,23 +2511,23 @@ msgstr "Garnfarben Verwaltung"
 
 #: inx/inkstitch_auto_run.inx:3 inx/inkstitch_auto_run.inx:24
 msgid "Autoroute Running Stitch"
-msgstr ""
+msgstr "Automatische Führung Laufstich"
 
 #: inx/inkstitch_auto_run.inx:10
 msgid "Tools: Stroke"
-msgstr ""
+msgstr "Werkzeuge: Linie"
 
 #: inx/inkstitch_auto_run.inx:15
 msgid "Autoroute Running Stitch Options"
-msgstr ""
+msgstr "Optionen für automatisch geführte Laufstiche"
 
 #: inx/inkstitch_auto_run.inx:17
 msgid "Add nodes at intersections"
-msgstr ""
+msgstr "Knoten an Überschneidungen hinzufügen"
 
 #: inx/inkstitch_auto_run.inx:19
 msgid "Preserve order of running stitches"
-msgstr ""
+msgstr "Reihenfolge der Laufstiche beibehalten"
 
 #: inx/inkstitch_auto_run.inx:21 inx/inkstitch_auto_satin.inx:5
 msgid "Trim jump stitches"
@@ -2540,27 +2540,27 @@ msgstr "Hilfe"
 
 #: inx/inkstitch_auto_run.inx:25
 msgid "Add nodes at intersections:"
-msgstr ""
+msgstr "Knoten an Überschneidungen hinzufügen:"
 
 #: inx/inkstitch_auto_run.inx:27
 msgid "- Enabled (automatic). Ink/Stitch will add some nodes for better routing. This is the default setting."
-msgstr ""
+msgstr "- Aktiviert (automatisch). Ink/Stitch fügt Knoten für eine bessere Führung hinzu. Dies ist die Standardeinstellung."
 
 #: inx/inkstitch_auto_run.inx:29
 msgid "- Disabled (manual). Choose this option if you have manually set nodes at crucial spots."
-msgstr ""
+msgstr "- Deaktiviert (manuell). Diese Option wählen, sollten bereits manuell Knoten an wichtigen Schnittstellen hinzugefügt worden sein."
 
 #: inx/inkstitch_auto_run.inx:32
 msgid "Use Start- end end commands to define where auto-routing for running stitch should start and end."
-msgstr ""
+msgstr "Start- und Endbefehle legen die Start- und Endpunkte der automatisch geführten Laufstiche fest."
 
 #: inx/inkstitch_auto_run.inx:34
 msgid "More info on our website:"
-msgstr ""
+msgstr "Weitere Informationen auf unserer Webseite:"
 
 #: inx/inkstitch_auto_run.inx:35
 msgid "https://inkstitch.org/docs/stroke-tools#auto-route-running-stitch"
-msgstr ""
+msgstr "https://inkstitch.org/docs/stroke-tools#automatisch-geführter-laufstich"
 
 #: inx/inkstitch_auto_satin.inx:3
 msgid "Auto-Route Satin Columns"
@@ -2574,7 +2574,7 @@ msgstr "Behalte Reihenfolge der Satinkolumnen bei"
 #: inx/inkstitch_convert_to_stroke.inx:13 inx/inkstitch_cut_satin.inx:10
 #: inx/inkstitch_flip.inx:10
 msgid "Tools: Satin"
-msgstr ""
+msgstr "Werkzeuge: Satin"
 
 #: inx/inkstitch_break_apart.inx:3
 msgid "Break Apart Fill Objects"
@@ -2582,7 +2582,7 @@ msgstr "Aufteilen von Füllobjekten"
 
 #: inx/inkstitch_break_apart.inx:10
 msgid "Tools: Fill"
-msgstr ""
+msgstr "Werkzeuge: Füllung"
 
 #: inx/inkstitch_break_apart.inx:17
 msgid "Method"
