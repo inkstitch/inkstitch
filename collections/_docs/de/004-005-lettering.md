@@ -1,34 +1,34 @@
 ---
-title: "Text"
+title: "Text-Modul"
 permalink: /de/docs/lettering/
 excerpt: ""
 last_modified_at: 2022-05-22
 toc: true
 ---
-Das Text-Modul erzeugt mehrzeiligen Text. Die hinterlegten Schriftarten wurden von Community-Mitgliedern zur direkten Verwendung digitalisiert. Es gibt  bisher Schriftarten die auf Satinsäulen beruhen, Applikationsschriften und Geradstichschriften. 
+Das Text-Modul erzeugt mehrzeiligen Text. Die hinterlegten Schriftarten wurden von Community-Mitgliedern zur direkten Verwendung digitalisiert. Es gibt bisher Schriftarten die auf Satinsäulen beruhen, Applikationsschriften und Geradstichschriften. 
 
 ![Lettrage Extensions](/assets/images/docs/lettering.jpg)
 
 ## Nutzung
 
-* Gehe zu `Erweiterungen > Ink/Stitch > Lettering`.
+* Gehe zu `Erweiterungen > Ink/Stitch > Text`.
 * Geben Sie Ihren Text ein (mehrzeilig möglich).
 * Legen Sie die Schriftart und die Skalierung fest.
 * Beachten sie die angegebenen Limitierungen auch bei späteren manuellen Skalierungen!
-* Klicken Sie auf `Anwenden und Beenden`.
+* Klicken Sie auf `Anwenden und schließen`.
 
 ## Optionen
 
-* **Textzeilen hin und her sticken**<br>
+* **Sticke Textzeilen vor und zurück**<br>
 Wenn diese Option aktiviert ist, wird die erste Zeile von links nach rechts gestickt und die zweite von rechts nach links usw.
   Dadurch muss die Stickmaschine weniger hin und herspringen, und die Laufzeit der Datei verkürzt sich.
 
-* **Schnittmarken hinzufügen**<br>
+* **Schnittmarker hinzufügen**<br>
    Wenn diese Option aktiviert ist, fügt Ink/Stitch für jeden Buchstaben Schnittbefehle hinzu.
 
 ## Voreinstellungen
 
-Man kann bevorzugte Schriftarteinstellungen speichern und wieder öffnen.
+Hier kann man sich eine Liste mit den beliebtesten Schriftarten speichern und wieder öffnen.
 
 ## Schrift-Bibliothek
 
