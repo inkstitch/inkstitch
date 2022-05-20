@@ -2,38 +2,52 @@
 title: "Lettering"
 permalink: /de/docs/lettering/
 excerpt: ""
-last_modified_at: 2019-08-12
+last_modified_at: 2022-05-22
 toc: true
 ---
-Das Lettering-Werkzeug generiert mehrzeiligen Text und fügt diesen als dynamisch geführte Satinkolumne in das Dokument ein.
+Das Lettering-Werkzeug erzeugt mehrzeiligen Text in Form von Satinsäulen. Die hinterlegten Schriftarten wurden von Community-Mitgliedern zur direkten Verwendung digitalisiert. 
 
-![Lettering Extensions](/assets/images/docs/lettering.jpg)
+![Lettrage Extensions](/assets/images/docs/lettering.jpg)
 
-## Funktionsweise
+## Nutzung
 
-* Öffne `Erweiterungen > Ink/Stitch  > Lettering`
-* Schreibe einen Text (mehrzeilig ist möglich)
-* Wähle Schriftart und Schriftgröße
-* Klicke auf `Anwenden und schließen`
+* Gehe zu `Erweiterungen > Ink/Stitch > Lettering`.
+* Geben Sie Ihren Text ein (mehrzeilig möglich).
+* Legen Sie die Schriftart und die Skalierung fest.
+* Beachten sie die angegebenen Limitierungen auch bei späteren manuellen Skalierungen!
+* Klicken Sie auf `Anwenden und Beenden`.
 
 ## Optionen
 
-* **Stitch lines of text back and forth**<br>
-  Ist diese Option aktiviert, wird die erste Zeile von links nach rechts und die zweite von rechts nach links gestickt, etc.
-  So kannst du lange Wege für deine Maschine vermeiden.
+* **Textzeilen hin und her sticken**<br>
+Wenn diese Option aktiviert ist, wird die erste Zeile von links nach rechts gestickt und die zweite von rechts nach links usw.
+  Dadurch muss die Stickmaschine weniger hin und herspringen, und die Laufzeit der Datei verkürzt sich.
 
-* **Add trims**<br>
-  Ist diese Option aktiviert, fügt Ink/Stitch Fadenschneide-Befehle für jeden Buchstaben hinzu.
+* **Schnittmarken hinzufügen**<br>
+   Wenn diese Option aktiviert ist, fügt Ink/Stitch für jeden Buchstaben Schnittbefehle hinzu.
 
 ## Voreinstellungen
 
-Du kannst deine bevorzugten Schrifteinstellungen speichern und laden.
+Man kann bevorzugte Schriftarteinstellungen speichern und wieder öffnen.
 
 ## Schrift-Bibliothek
 
-Eine Übersicht über die verfügbaren Schriftarten befindet sich in der [Schrift-Bibliothek](/de/fonts/font-library/).
+Eine Übersicht über alle verfügbaren Schriftarten finden Sie in der [Schrift-Bibliothek](/de/fonts/font-library/)
 
-## Schriften erstellen
+## Sortierung der Farben
+Wenn man mehrere Buchstaben einer mehrfarbigen Schrift verwenden möchte, kann man die Farben sortieren, um mehrmaliges Wechseln des Garns zu vermeiden. Diese Sortierung darf jedoch nicht die Reihenfolge der Farben in einem Buchstaben ändern, da sonst die Stickerei verändert wird. 
 
-Mehr Infos im[Schriftartenerstellung Tutorial](/de/tutorials/font-creation/).
-Kontaktiere uns über [GitHub](https://github.com/inkstitch/inkstitch/issues), wenn du deine Schriftart in der offizielle Ink/Stitch Version im Text Werkzeug einfügen willst.
+Wenn die Farben innerhalb eines Buchstabens nur auf aufeinanderfolgenden Pfaden und immer in der gleichen Reihenfolge verwendet werden (was bei den mehrfarbigen Schriften, die derzeit in Ink/Stitch vorhanden sind, der Fall ist, außer vielleicht bei Infinipicto), können Sie die Farben schnell sortieren, wenn Ihre Datei nur die Buchstaben enthält:
+
+Wählen Sie im Objektfenster einen Buchstaben, egal welchen:
+
+* Den Pfad auswählen, der zuerst gestickt werden soll (der letzte des Buchstabens in diesem Fenster also...).
+* `Bearbeiten/Auswahl Gleiche/Umrissfarbe` (dies wählt alles in dieser Farbe in allen Buchstaben aus, es gibt wahrscheinlich viele Pfade pro Buchstabe).
+* Gruppieren: Diese Gruppe wird in dem letzten Buchstaben angelegt, der gestickt werden soll, bei Bedarf kann man dieser Gruppe den Namen der Farbe geben.
+* Nun hebt man die Gruppe auf die oberste Ebene des letzen Buchstabens an.
+dieser Vorgang wird wiederholt, bis nur noch Farbgruppen vorhanden sind.
+
+## Neue Schriftarten für Ink/Stitch erstellen
+Hier gibt es eine [Anleitung zur Schrift-Erstellung](/de/tutorials/font-creation/).
+
+Kontaktieren Sie uns auf [GitHub](https://github.com/inkstitch/inkstitch/issues), wenn Sie Ihre Schriftart im Lettering-Tool von Ink/Stitch veröffentlichen möchten.
