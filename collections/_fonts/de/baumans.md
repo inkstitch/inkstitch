@@ -7,9 +7,9 @@ preview_image: /assets/images/fonts/baumans.png
 ---
 ![Baumans](/assets/images/fonts/baumans.png)
 
-## Glyphs
+## Schriftzeichen
 
-Baumans contains  102 glyphs:
+Diese Schrift enthält 102 Schriftzeichen:
 
 	
 @'()+,-.01
@@ -24,18 +24,16 @@ uvwxyz¨«´’
 èéêëîïôöùû
 üˆ
  
-## Remark
+## Anmerkung
 
-Baumans FI is reversible : a multi line embroidery  may be  embroidered in alternate directions
+Baumans FI kann mit der [Option](https://inkstitch.org/de/docs/lettering/#optionen) 'Sticke Textzeilen vor und zurück" verwendet werden: eine mehrzeilige Stickerei kann von links nach rechts, rechts nach links usw. gestickt werden.
 
-## Dimensions
+## Maße
 
-At 100%, this font is roughly 32 mm high (1.25 in).
+Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 32 mm hoch (1.25 Zoll)
+Sie kann bis auf 150% (~48mm, 2 Zoll) hochskaliert und bis zu 80% (~25mm, 1 Zoll) herunterskaliert werden.
 
-It may be scaled up to 150% (approx. 48 mm, 2 inches) or down to 80% (approx. 25mm , 1 inch)
-
-
-## In real life
+## Gestickte Beispiele
 
 {% include folder-galleries path="fonts/baumans/" %}
 
