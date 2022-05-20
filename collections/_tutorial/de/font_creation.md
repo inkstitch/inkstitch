@@ -186,7 +186,7 @@ Ink/Stitch bietet ein Werkzeug an, mit dem die JSON-Datei mit der richtigen Kern
 
 Ink/Stitch kann Schriften aus verschiedenen Speicherorten lesen, aber der beste Weg ist einen eigenen Ordner für deine Schriftarten zu bestimmen.
 
-1. Öffne `Erweiterungen > Font Tools > Custom Font Directory ...`
+1. Öffne `Erweiterungen > Schriftverwaltung > Benutzerdefinierter Ordner für Schriften ...`
 2. Wähle den Ordner aus, in dem du deine Schriften speichern willst
 3. Klicke auf `Anwenden`
 
@@ -207,6 +207,6 @@ Deine Schrift ist bereits einsatzbereit. Aber wenn du sie mit FontForge erstellt
 
 1. Stelle sicher, dass du eine **Kopie** deiner Schriftdatei erstellt hast. Die zusätzlichen Informationen werden zwar nicht für den Gebrauch der Schrift benötigt,
    könnten aber nützlich werden, wenn du z.B. weitere Buchstaben zu der Schrift hinzufügen willst.
-2. Öffne `Erweiterungen > Ink/Stitch > Font Tools > Remove Kerning`
+2. Öffne `Erweiterungen > Ink/Stitch > Schriftverwaltung > Kerning entfernen `
 3. Die die zu bereinigende(n) Datei(en)
 4. Klicke auf `Anwenden`
