@@ -11,7 +11,7 @@ preview_image: /assets/images/fonts/abecedaire.png
 
 Dies ist Teil einer kommenden Ink/Stitch-Version und nicht in Ink/Stitch v2.1.2 verfügbar.
 
-## Glyphen
+## Schriftzeichen
 
 Diese Schrift enthält 154 Schriftzeichen:
 
