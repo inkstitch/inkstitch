@@ -92,7 +92,7 @@ docs:
     children:
     - title: "Commandes"
       url: /fr/docs/commands/
-    - title: "Cutwork"
+    - title: "Richelieu"
       url: /fr/docs/cutwork/
     - title: "Edition"
       url: /fr/docs/edit/
