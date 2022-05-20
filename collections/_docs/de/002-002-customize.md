@@ -35,7 +35,7 @@ Tastenkürzel | Effekt | Ersetzt
 
 The Ink/Stitch [simulator](/docs/visualize/#simulation-shortcut-keys) also provides shortcut keys.
 
-\* Anheben und Absenken gibt genaue Kontrolle darüber, in welcher Reihenfolge Objekte gestickt werden (von unten nach oben). Das ist sehr nützlich in Verbindung mit dem Objekt-Dialog (`Objekt > Objekte ...`).<br><br>** Für Satin- und Laufstiche ändert dies die Stickrichtung. Nutze dies mit der Einstellung `Zeige Pfadrichtung an Außenlinien` unter `Bearbeiten > Einstellungen > Werkzeuge > Knoten`. Wenn du nur einen Knoten mit dem Knotenwerkzeug auswählst und `Strg+R` drückst, kehrt sich nur der ausgewählte Unterpfad um. Auf diesem Wege kannst du sicherstellen, dass beide Schienen der Satinkolumne in die gleiche Richtung zeigen.
+\* Anheben und Absenken gibt genaue Kontrolle darüber, in welcher Reihenfolge Objekte gestickt werden (von unten nach oben). Das ist sehr nützlich in Verbindung mit dem Objekt-Dialog (`Objekt > Ebenen und Objekte ...`).<br><br>** Für Satin- und Laufstiche ändert dies die Stickrichtung. Nutze dies mit der Einstellung `Zeige Pfadrichtung an Außenlinien` unter `Bearbeiten > Einstellungen > Werkzeuge > Knoten`. Wenn du nur einen Knoten mit dem Knotenwerkzeug auswählst und `Strg+R` drückst, kehrt sich nur der ausgewählte Unterpfad um. Auf diesem Wege kannst du sicherstellen, dass beide Schienen der Satinkolumne in die gleiche Richtung zeigen.
 {: .notice--info }
 {: style="font-size: 70%" }
 
