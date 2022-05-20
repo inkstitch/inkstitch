@@ -16,6 +16,8 @@ Das Text-Modul erzeugt mehrzeiligen Text. Die hinterlegten Schriftarten wurden v
 * Legen Sie die Schriftart und die Skalierung fest.
 * Beachten sie die angegebenen Limitierungen auch bei späteren manuellen Skalierungen!
 * Klicken Sie auf `Anwenden und schließen`.
+* Der eingegebene Text erscheint über der Seite.
+* Freie Positionierung ist nun möglich.
 
 ## Optionen
 
@@ -50,4 +52,4 @@ dieser Vorgang wird wiederholt, bis nur noch Farbgruppen vorhanden sind.
 ## Neue Schriftarten für Ink/Stitch erstellen
 Hier gibt es eine [Anleitung zur Schrift-Erstellung](/de/tutorials/font-creation/).
 
-Kontaktieren Sie uns auf [GitHub](https://github.com/inkstitch/inkstitch/issues), wenn Sie Ihre Schriftart im Lettering-Tool von Ink/Stitch veröffentlichen möchten.
+Wenn die so erstellte Schriftart im Text-Modul für andere Nutzer verfügbar gemacht werden soll, können sie uns via  [GitHub](https://github.com/inkstitch/inkstitch/issues) erreichen. Zusätzlich muss die Lizenz der genutzten Schrift beachtet werden.
