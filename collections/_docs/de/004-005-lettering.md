@@ -1,11 +1,11 @@
 ---
-title: "Lettering"
+title: "Text"
 permalink: /de/docs/lettering/
 excerpt: ""
 last_modified_at: 2022-05-22
 toc: true
 ---
-Das Lettering-Werkzeug erzeugt mehrzeiligen Text. Die hinterlegten Schriftarten wurden von Community-Mitgliedern zur direkten Verwendung digitalisiert. Es gibt  bisher Schriftarten die auf Satinsäulen beruhen, Applikationsschriften und Geradstichschriften. 
+Das Text-Modul erzeugt mehrzeiligen Text. Die hinterlegten Schriftarten wurden von Community-Mitgliedern zur direkten Verwendung digitalisiert. Es gibt  bisher Schriftarten die auf Satinsäulen beruhen, Applikationsschriften und Geradstichschriften. 
 
 ![Lettrage Extensions](/assets/images/docs/lettering.jpg)
 
