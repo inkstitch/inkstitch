@@ -10,9 +10,9 @@ preview_image:
 ![Amitaclo](/assets/images/fonts/amita.png)
 ![Amitaclo small](/assets/images/fonts/amitaclo_small.png)
 
-## Glyphs
-Amitaclo  contains 110 glyphs :
-	
+## Zeichen
+Amitaclo enthält folgende 110 Zeichen :
+
 œıüûúùöôóñ
 ïîíëêéèçæä
 âáàßÜÖÆÄ|z
@@ -28,27 +28,27 @@ BA@?=;:987
 
 
 
-## Dimensions
+## Maße
 
-At 100%, this font is approximatively 30 mm high (1.2 inches)
+Wenn man die Schrift auf 100% nutzt, ist sie ca. 30 mm groß.
 
-It can be scaled up to 200% (approx 60 mm, 2.4 inches ) or scaled down to 80% (approx 24  mm, 1 inch).
+Man kann sie bis zu 200% (ca. 60 mm) vergrößern oder auf 80% (ca. 24  mm) verkleinern.
 
 ![Dimensions Amitaclo](/assets/images/fonts/Sizing/amitaclosizing.jpg)
 
-Don't try to scale it further down. 
+Bitte nicht versuchen die Schrift kleiner zu Sticken, das kann zu Nadelbrüchen, Fadennestern, hässlichem Stickbild und anderen Unannehmlichkeiten führen. 
 
-Amitaclo small (it is part of an upcoming Ink/Stitch version and not available in Ink/Stitch v2.1.2) is a variation of this font with different embroidery settings. Pull compensation, density and underlays are different to allow to scale down between 55% (16mm,2/3 inch) and 25% (7mm ,1/4 inch). 
+Die Schrift Amitaclo small (Diese Schrift wird in einer zukünftigen Version von Ink/Stitch erscheinen und ist in Ink/Stitch v2.1.2 nicht verfügbar.) ist eine Abwandlung dieser Schrift mit anderen Stickparametern. Die Dichte, die Kompensation und die Unterlage wurden geändert, damit diese Schrift in kleineren Größen gestickt werden kann.
 
+Wenn Sie Amitaclo small wählen, werden Sie im Dialogfenster für die Beschriftung aufgefordert, eine Größenänderung zwischen 25 und 55 % der ursprünglichen Amitaclo-Größe anzugeben, also von Buchstaben mit einer Höhe von etwa 30 mm auf Buchstaben mit einer Höhe zwischen 7 und 16 mm.
 
-That's why in the lettering dialog window, if using amitaclo small, you will have to pick up a scale between 25 and 55%. 
+Im Gegensatz zu Amitaclo MUSS diese verkleinerte Schrift mit einem dünneren Faden und einer dünneren Nadel als üblich gestickt werden. Es MUSS eine Nadel der Größe 8 (USA), 60(EUR) und ein Garn 60WT verwendet werden.
 
-Contrarily to Amitaclo, Amitaclo small font **MUST** be embroidered with thread and needle smaller than usual.
-A USA 8 (EUR 60) size needle, and 60WT thread **MUST** be used.
+## Beispiele aus dem Echten Leben
 
-## In real life
+## Gestickte Beispiele
 
-Used in conjunction with  Déjà Vu and  Magnolia KOR on the preserve jars
+Gemeinsam mit Déjà Vu und Magnolia KOR auf Einmachgläsern verwendet
 
 {%include folder-galleries path="fonts/amitaclo/" %}
 
