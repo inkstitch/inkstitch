@@ -42,7 +42,7 @@ class Stroke(EmbroideryElement):
            _('Method'),
            type='dropdown',
            default=0,
-           # 0: run, 1: manual, 2: ripple, 3: zig_zag
+           # 0: run/simple satin, 1: manual, 2: ripple
            options=[_("Running Stitch"), _("Manual stitch placement"), _("Ripple")],
            sort_index=0)
     def stroke_method(self):
@@ -54,7 +54,8 @@ class Stroke(EmbroideryElement):
            tooltip=_('Defines how many times to run down and back along the path.'),
            type='int',
            default="1",
-           sort_index=1)
+           select_items=[('stroke_method', 0), ('stroke_method', 2)],
+           sort_index=4)
     def repeats(self):
         return max(1, self.get_int_param("repeats", 1))
 
@@ -67,7 +68,8 @@ class Stroke(EmbroideryElement):
                   'A value of 2 would quintuple each stitch, etc.  Only applies to running stitch.'),
         type='int',
         default=0,
-        sort_index=2)
+        select_items=[('stroke_method', 0), ('stroke_method', 2)],
+        sort_index=5)
     def bean_stitch_repeats(self):
         return self.get_int_param("bean_stitch_repeats", 0)
 
@@ -78,7 +80,8 @@ class Stroke(EmbroideryElement):
            unit='mm',
            type='float',
            default=1.5,
-           sort_index=3)
+           select_items=[('stroke_method', 0), ('stroke_method', 2)],
+           sort_index=2)
     def running_stitch_length(self):
         return max(self.get_float_param("running_stitch_length_mm", 1.5), 0.01)
 
@@ -89,7 +92,7 @@ class Stroke(EmbroideryElement):
            type='int',
            default=10,
            select_items=[('stroke_method', 2)],
-           sort_index=3)
+           sort_index=1)
     @cache
     def line_count(self):
         return max(self.get_int_param("line_count", 10), 1)
@@ -101,7 +104,7 @@ class Stroke(EmbroideryElement):
            unit='mm',
            type='float',
            default=0.4,
-           select_items=[('stroke_method', 3)],
+           select_items=[('stroke_method', 0)],
            sort_index=3)
     @cache
     def zigzag_spacing(self):
@@ -132,7 +135,7 @@ class Stroke(EmbroideryElement):
         return shapely.geometry.MultiLineString(line_strings)
 
     def get_ripple_target(self):
-        command = self.get_command('ripple_center')
+        command = self.get_command('ripple_target')
         if command:
             pos = [float(command.use.get("x", 0)), float(command.use.get("y", 0))]
             transform = get_node_transform(command.use)
