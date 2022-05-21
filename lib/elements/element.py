@@ -67,6 +67,12 @@ class EmbroideryElement(object):
         elif legacy_tie == "False":
             self.set_param('ties', 3)
 
+        # convert legacy manual_stitch
+        manual_stitch = self.get_param('manual_stitch', None)
+        if manual_stitch == "True":
+            self.set_param('stroke_method', 1)
+            del self.node.attrib[INKSTITCH_ATTRIBS['manual_stitch']]
+
         # default setting for fill_underlay has changed
         if legacy_attribs and not self.get_param('fill_underlay', ""):
             self.set_param('fill_underlay', False)

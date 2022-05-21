@@ -7,12 +7,16 @@ import sys
 
 import shapely.geometry
 
-from .element import EmbroideryElement, param
+from inkex import Transform
+
 from ..i18n import _
 from ..stitch_plan import StitchGroup
 from ..stitches import bean_stitch, running_stitch
-from ..svg import parse_length_with_units
+from ..stitches.ripple_stitch import ripple_stitch
+from ..svg import get_node_transform, parse_length_with_units
 from ..utils import Point, cache
+from .element import EmbroideryElement, param
+from .satin_column import SatinColumn
 
 warned_about_legacy_running_stitch = False
 
@@ -34,15 +38,25 @@ class Stroke(EmbroideryElement):
         return self.get_style("stroke-dasharray") is not None
 
     @property
-    @param('running_stitch_length_mm',
-           _('Running stitch length'),
-           tooltip=_('Length of stitches in running stitch mode.'),
-           unit='mm',
-           type='float',
-           default=1.5,
-           sort_index=3)
-    def running_stitch_length(self):
-        return max(self.get_float_param("running_stitch_length_mm", 1.5), 0.01)
+    @param('stroke_method',
+           _('Method'),
+           type='dropdown',
+           default=0,
+           # 0: run, 1: manual, 2: ripple, 3: zig_zag
+           options=[_("Running Stitch"), _("Manual stitch placement"), _("Ripple")],
+           sort_index=0)
+    def stroke_method(self):
+        return self.get_int_param('stroke_method', 0)
+
+    @property
+    @param('repeats',
+           _('Repeats'),
+           tooltip=_('Defines how many times to run down and back along the path.'),
+           type='int',
+           default="1",
+           sort_index=1)
+    def repeats(self):
+        return max(1, self.get_int_param("repeats", 1))
 
     @property
     @param(
@@ -58,27 +72,40 @@ class Stroke(EmbroideryElement):
         return self.get_int_param("bean_stitch_repeats", 0)
 
     @property
+    @param('running_stitch_length_mm',
+           _('Running stitch length'),
+           tooltip=_('Length of stitches in running stitch mode.'),
+           unit='mm',
+           type='float',
+           default=1.5,
+           sort_index=3)
+    def running_stitch_length(self):
+        return max(self.get_float_param("running_stitch_length_mm", 1.5), 0.01)
+
+    @property
+    @param('line_count',
+           _('Number of lines'),
+           tooltip=_('Number of lines from start to finish'),
+           type='int',
+           default=10,
+           select_items=[('stroke_method', 2)],
+           sort_index=3)
+    @cache
+    def line_count(self):
+        return max(self.get_int_param("line_count", 10), 1)
+
+    @property
     @param('zigzag_spacing_mm',
            _('Zig-zag spacing (peak-to-peak)'),
            tooltip=_('Length of stitches in zig-zag mode.'),
            unit='mm',
            type='float',
            default=0.4,
+           select_items=[('stroke_method', 3)],
            sort_index=3)
     @cache
     def zigzag_spacing(self):
         return max(self.get_float_param("zigzag_spacing_mm", 0.4), 0.01)
-
-    @property
-    @param('repeats',
-           _('Repeats'),
-           tooltip=_('Defines how many times to run down and back along the path.'),
-           type='int',
-           default="1",
-           sort_index=1)
-    def repeats(self):
-        repeats = self.get_int_param("repeats", 1)
-        return max(1, repeats)
 
     @property
     def paths(self):
@@ -89,7 +116,7 @@ class Stroke(EmbroideryElement):
         if len(flattened[0]) == 1:
             return [[[flattened[0][0][0], flattened[0][0][1]], [flattened[0][0][0] + 1.0, flattened[0][0][1]]]]
 
-        if self.manual_stitch_mode:
+        if self.stroke_method == 1:
             return [self.strip_control_points(subpath) for subpath in path]
         else:
             return flattened
@@ -102,18 +129,17 @@ class Stroke(EmbroideryElement):
     @cache
     def as_multi_line_string(self):
         line_strings = [shapely.geometry.LineString(path) for path in self.paths]
-
         return shapely.geometry.MultiLineString(line_strings)
 
-    @property
-    @param('manual_stitch',
-           _('Manual stitch placement'),
-           tooltip=_("Stitch every node in the path.  Stitch length and zig-zag spacing are ignored."),
-           type='boolean',
-           default=False,
-           sort_index=0)
-    def manual_stitch_mode(self):
-        return self.get_boolean_param('manual_stitch')
+    def get_ripple_target(self):
+        command = self.get_command('ripple_center')
+        if command:
+            pos = [float(command.use.get("x", 0)), float(command.use.get("y", 0))]
+            transform = get_node_transform(command.use)
+            pos = Transform(transform).apply_to_point(pos)
+            return Point(*pos)
+        else:
+            return self.shape.centroid
 
     def is_running_stitch(self):
         # using stroke width <= 0.5 pixels to indicate running stitch is deprecated in favor of dashed lines
@@ -199,21 +225,48 @@ class Stroke(EmbroideryElement):
 
         return StitchGroup(self.color, stitches)
 
+    def do_bean_repeats(self, stitches):
+        return bean_stitch(stitches, self.bean_stitch_repeats)
+
     def to_stitch_groups(self, last_patch):
         patches = []
 
-        for path in self.paths:
-            path = [Point(x, y) for x, y in path]
-            if self.manual_stitch_mode:
-                patch = StitchGroup(color=self.color, stitches=path, stitch_as_is=True)
-            elif self.is_running_stitch():
-                patch = self.running_stitch(path, self.running_stitch_length)
-
+        # ripple stitch
+        if self.stroke_method == 2:
+            lines = self.as_multi_line_string()
+            points = []
+            if len(lines.geoms) > 1:
+                # use satin column points for satin like build ripple stitches
+                points = SatinColumn(self.node).plot_points_on_rails(self.running_stitch_length, 0)
+            point_target = self.get_ripple_target()
+            patch = StitchGroup(
+                color=self.color,
+                tags=["ripple_stitch"],
+                stitches=ripple_stitch(
+                    self.as_multi_line_string(),
+                    point_target,
+                    self.line_count,
+                    points,
+                    self.running_stitch_length,
+                    self.repeats))
+            if patch:
                 if self.bean_stitch_repeats > 0:
-                    patch.stitches = bean_stitch(patch.stitches, self.bean_stitch_repeats)
+                    patch.stitches = self.do_bean_repeats(patch.stitches)
+                patches.append(patch)
+        else:
+            for path in self.paths:
+                path = [Point(x, y) for x, y in path]
+                # manual stitch
+                if self.stroke_method == 1:
+                    patch = StitchGroup(color=self.color, stitches=path, stitch_as_is=True)
+                # running stitch
+                elif self.is_running_stitch():
+                    patch = self.running_stitch(path, self.running_stitch_length)
 
-            else:
-                patch = self.simple_satin(path, self.zigzag_spacing, self.stroke_width)
+                    if self.bean_stitch_repeats > 0:
+                        patch.stitches = self.do_bean_repeats(patch.stitches)
+                else:
+                    patch = self.simple_satin(path, self.zigzag_spacing, self.stroke_width)
 
             if patch:
                 patches.append(patch)
