@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-05-19 02:28+0000\n"
-"PO-Revision-Date: 2022-05-20 02:20\n"
+"POT-Creation-Date: 2022-05-21 01:55+0000\n"
+"PO-Revision-Date: 2022-05-21 01:56\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-19 02:28+0000\n"
+"POT-Creation-Date: 2022-05-21 01:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -497,198 +497,89 @@ msgstr ""
 msgid "command marker"
 msgstr ""
 
-#: lib/elements/auto_fill.py:23
-msgid "Small Fill"
-msgstr ""
-
-#: lib/elements/auto_fill.py:24
-msgid "This fill object is so small that it would probably look better as running stitch or satin column. For very small shapes, fill stitch is not possible, and Ink/Stitch will use running stitch around the outline instead."
-msgstr ""
-
-#: lib/elements/auto_fill.py:30 lib/elements/auto_fill.py:146
-msgid "Expand"
-msgstr ""
-
-#: lib/elements/auto_fill.py:31
-msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use original size instead."
-msgstr ""
-
-#: lib/elements/auto_fill.py:36 lib/elements/auto_fill.py:123
-msgid "Inset"
-msgstr ""
-
-#: lib/elements/auto_fill.py:37
-msgid "The underlay inset parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use the original size instead."
-msgstr ""
-
-#: lib/elements/auto_fill.py:42
-msgid "AutoFill"
-msgstr ""
-
-#: lib/elements/auto_fill.py:45
-msgid "Automatically routed fill stitching"
-msgstr ""
-
-#: lib/elements/auto_fill.py:65
-msgid "Running stitch length (traversal between sections)"
-msgstr ""
-
-#: lib/elements/auto_fill.py:66
-msgid "Length of stitches around the outline of the fill region used when moving from section to section."
-msgstr ""
-
-#: lib/elements/auto_fill.py:74
-msgid "Underlay"
-msgstr ""
-
-#: lib/elements/auto_fill.py:74 lib/elements/auto_fill.py:83
-#: lib/elements/auto_fill.py:105 lib/elements/auto_fill.py:116
-#: lib/elements/auto_fill.py:126 lib/elements/auto_fill.py:138
-#: lib/elements/auto_fill.py:172
-msgid "AutoFill Underlay"
-msgstr ""
-
-#: lib/elements/auto_fill.py:80
-msgid "Fill angle"
-msgstr ""
-
-#: lib/elements/auto_fill.py:81
-msgid "Default: fill angle + 90 deg. Insert comma-seperated list for multiple layers."
-msgstr ""
-
-#: lib/elements/auto_fill.py:102
-msgid "Row spacing"
-msgstr ""
-
-#: lib/elements/auto_fill.py:103
-msgid "default: 3x fill row spacing"
-msgstr ""
-
-#: lib/elements/auto_fill.py:113
-msgid "Max stitch length"
-msgstr ""
-
-#: lib/elements/auto_fill.py:114
-msgid "default: equal to fill max stitch length"
-msgstr ""
-
-#: lib/elements/auto_fill.py:124
-msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
-msgstr ""
-
-#: lib/elements/auto_fill.py:135 lib/elements/fill.py:75
-msgid "Skip last stitch in each row"
-msgstr ""
-
-#: lib/elements/auto_fill.py:136 lib/elements/fill.py:76
-msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
-msgstr ""
-
-#: lib/elements/auto_fill.py:147
-msgid "Expand the shape before fill stitching, to compensate for gaps between shapes."
-msgstr ""
-
-#: lib/elements/auto_fill.py:156 lib/elements/auto_fill.py:168
-msgid "Underpath"
-msgstr ""
-
-#: lib/elements/auto_fill.py:157 lib/elements/auto_fill.py:169
-msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
-msgstr ""
-
-#: lib/elements/auto_fill.py:266
-msgid "Error during autofill!  This means that there is a problem with Ink/Stitch."
-msgstr ""
-
-#. this message is followed by a URL:
-#. https://github.com/inkstitch/inkstitch/issues/new
-#: lib/elements/auto_fill.py:269
-msgid "If you'd like to help us make Ink/Stitch better, please paste this whole message into a new issue at: "
-msgstr ""
-
-#: lib/elements/clone.py:25
+#: lib/elements/clone.py:20
 msgid "Clone Object"
 msgstr ""
 
-#: lib/elements/clone.py:26
+#: lib/elements/clone.py:21
 msgid "There are one or more clone objects in this document.  Ink/Stitch can work with single clones, but you are limited to set a very few parameters. "
 msgstr ""
 
-#: lib/elements/clone.py:29
+#: lib/elements/clone.py:24
 msgid "If you want to convert the clone into a real element, follow these steps:"
 msgstr ""
 
-#: lib/elements/clone.py:30
+#: lib/elements/clone.py:25
 msgid "* Select the clone"
 msgstr ""
 
-#: lib/elements/clone.py:31 lib/elements/clone.py:42
+#: lib/elements/clone.py:26 lib/elements/clone.py:37
 msgid "* Run: Edit > Clone > Unlink Clone (Alt+Shift+D)"
 msgstr ""
 
-#: lib/elements/clone.py:36
+#: lib/elements/clone.py:31
 msgid "Clone is not embroiderable"
 msgstr ""
 
-#: lib/elements/clone.py:37
+#: lib/elements/clone.py:32
 msgid "There are one ore more clone objects in this document. A clone must be a direct child of an embroiderable element. Ink/Stitch cannot embroider clones of groups or other not embroiderable elements (text or image)."
 msgstr ""
 
-#: lib/elements/clone.py:40
+#: lib/elements/clone.py:35
 msgid "Convert the clone into a real element:"
 msgstr ""
 
-#: lib/elements/clone.py:41
+#: lib/elements/clone.py:36
 msgid "* Select the clone."
 msgstr ""
 
-#: lib/elements/clone.py:56
+#: lib/elements/clone.py:51
 msgid "Clone"
 msgstr ""
 
-#: lib/elements/clone.py:62
+#: lib/elements/clone.py:57
 msgid "Custom fill angle"
 msgstr ""
 
-#: lib/elements/clone.py:63
+#: lib/elements/clone.py:58
 msgid "This setting will apply a custom fill angle for the clone."
 msgstr ""
 
-#: lib/elements/element.py:198
+#: lib/elements/element.py:202
 msgid "Allow lock stitches"
 msgstr ""
 
-#: lib/elements/element.py:199
+#: lib/elements/element.py:203
 msgid "Tie thread at the beginning and/or end of this object. Manual stitch will not add lock stitches."
 msgstr ""
 
 #. options to allow lock stitch before and after objects
-#: lib/elements/element.py:203
+#: lib/elements/element.py:207
 msgid "Both"
 msgstr ""
 
-#: lib/elements/element.py:203
+#: lib/elements/element.py:207
 msgid "Before"
 msgstr ""
 
-#: lib/elements/element.py:203
+#: lib/elements/element.py:207
 msgid "After"
 msgstr ""
 
-#: lib/elements/element.py:203
+#: lib/elements/element.py:207
 msgid "Neither"
 msgstr ""
 
-#: lib/elements/element.py:212
+#: lib/elements/element.py:216
 #: inx/inkstitch_lettering_force_lock_stitches.inx:3
 msgid "Force lock stitches"
 msgstr ""
 
-#: lib/elements/element.py:213
+#: lib/elements/element.py:217
 msgid "Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences."
 msgstr ""
 
-#: lib/elements/element.py:257
+#: lib/elements/element.py:261
 #, python-format
 msgid "Object %(id)s has an empty 'd' attribute.  Please delete this object from your document."
 msgstr ""
@@ -696,7 +587,7 @@ msgstr ""
 #. used when showing an error message to the user such as
 #. "Some Path (path1234): error: satin column: One or more of the rungs doesn't
 #. intersect both rails."
-#: lib/elements/element.py:345
+#: lib/elements/element.py:354
 msgid "error:"
 msgstr ""
 
@@ -712,76 +603,273 @@ msgstr ""
 msgid "* Run Extensions > Ink/Stitch > Troubleshoot > Cleanup Document..."
 msgstr ""
 
-#: lib/elements/fill.py:23
+#: lib/elements/fill_stitch.py:27
+msgid "Small Fill"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:28
+msgid "This fill object is so small that it would probably look better as running stitch or satin column. For very small shapes, fill stitch is not possible, and Ink/Stitch will use running stitch around the outline instead."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:34 lib/elements/fill_stitch.py:399
+msgid "Expand"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:35
+msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use original size instead."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:40 lib/elements/fill_stitch.py:376
+msgid "Inset"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:41
+msgid "The underlay inset parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use the original size instead."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:46
+msgid "Missing Guideline"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:47
+msgid "This object is set to \"Guided Fill\", but has no guide line."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:49
+msgid "* Create a stroke object"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:50
+msgid "* Select this object and run Extensions > Ink/Stitch > Edit > Selection to guide line"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:55
+msgid "Disjointed Guide Line"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:56
+msgid "The guide line of this object isn't within the object borders. The guide line works best, if it is within the target element."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:59
+msgid "* Move the guide line into the element"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:64
+msgid "Multiple Guide Lines"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:65
+msgid "This object has multiple guide lines, but only the first one will be used."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:67
+msgid "* Remove all guide lines, except for one."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:72
 msgid "Unconnected"
 msgstr ""
 
-#: lib/elements/fill.py:24
+#: lib/elements/fill_stitch.py:73
 msgid "Fill: This object is made up of unconnected shapes.  This is not allowed because Ink/Stitch doesn't know what order to stitch them in.  Please break this object up into separate shapes."
 msgstr ""
 
-#: lib/elements/fill.py:28 lib/elements/fill.py:36
+#: lib/elements/fill_stitch.py:77 lib/elements/fill_stitch.py:85
 msgid "* Extensions > Ink/Stitch > Fill Tools > Break Apart Fill Objects"
 msgstr ""
 
-#: lib/elements/fill.py:33
+#: lib/elements/fill_stitch.py:82
 msgid "Border crosses itself"
 msgstr ""
 
-#: lib/elements/fill.py:34
+#: lib/elements/fill_stitch.py:83
 msgid "Fill: Shape is not valid.  This can happen if the border crosses over itself."
 msgstr ""
 
-#: lib/elements/fill.py:41
-msgid "Fill"
+#: lib/elements/fill_stitch.py:90
+msgid "FillStitch"
 msgstr ""
 
-#: lib/elements/fill.py:48
-msgid "Manually routed fill stitching"
+#: lib/elements/fill_stitch.py:93
+msgid "Automatically routed fill stitching"
 msgstr ""
 
-#: lib/elements/fill.py:49
-msgid "AutoFill is the default method for generating fill stitching."
+#: lib/elements/fill_stitch.py:98
+msgid "Fill method"
 msgstr ""
 
-#: lib/elements/fill.py:58
+#: lib/elements/fill_stitch.py:99
+msgid "Auto Fill"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:99
+msgid "Contour Fill"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:99
+msgid "Guided Fill"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:99
+msgid "Legacy Fill"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:104
+msgid "Contour Fill Strategy"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:105
+msgid "Inner to Outer"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:105
+msgid "Single spiral"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:105
+msgid "Double spiral"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:110
+msgid "Join Style"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:111
+msgid "Round"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:111
+msgid "Mitered"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:111
+msgid "Beveled"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:116
+msgid "Avoid self-crossing"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:121
+msgid "Clockwise"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:127
 msgid "Angle of lines of stitches"
 msgstr ""
 
-#: lib/elements/fill.py:59
+#: lib/elements/fill_stitch.py:128
 msgid "The angle increases in a counter-clockwise direction.  0 is horizontal.  Negative angles are allowed."
 msgstr ""
 
-#: lib/elements/fill.py:86
+#: lib/elements/fill_stitch.py:146 lib/elements/fill_stitch.py:388
+msgid "Skip last stitch in each row"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:147 lib/elements/fill_stitch.py:389
+msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:160
 msgid "Flip fill (start right-to-left)"
 msgstr ""
 
-#: lib/elements/fill.py:87
+#: lib/elements/fill_stitch.py:161
 msgid "The flip option can help you with routing your stitch path.  When you enable flip, stitching goes from right-to-left instead of left-to-right."
 msgstr ""
 
-#: lib/elements/fill.py:96
+#: lib/elements/fill_stitch.py:172
 msgid "Spacing between rows"
 msgstr ""
 
-#: lib/elements/fill.py:97
+#: lib/elements/fill_stitch.py:173
 msgid "Distance between rows of stitches."
 msgstr ""
 
-#: lib/elements/fill.py:110
+#: lib/elements/fill_stitch.py:187
 msgid "Maximum fill stitch length"
 msgstr ""
 
-#: lib/elements/fill.py:111
+#: lib/elements/fill_stitch.py:188
 msgid "The length of each stitch in a row.  Shorter stitch may be used at the start or end of a row."
 msgstr ""
 
-#: lib/elements/fill.py:120
+#: lib/elements/fill_stitch.py:199
 msgid "Stagger rows this many times before repeating"
 msgstr ""
 
-#: lib/elements/fill.py:121
+#: lib/elements/fill_stitch.py:200
 msgid "Setting this dictates how many rows apart the stitches will be before they fall in the same column position."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:315
+msgid "Running stitch length (traversal between sections)"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:316
+msgid "Length of stitches around the outline of the fill region used when moving from section to section."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:326
+msgid "Underlay"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:326 lib/elements/fill_stitch.py:335
+#: lib/elements/fill_stitch.py:358 lib/elements/fill_stitch.py:369
+#: lib/elements/fill_stitch.py:379 lib/elements/fill_stitch.py:391
+#: lib/elements/fill_stitch.py:429
+msgid "Fill Underlay"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:332
+msgid "Fill angle"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:333
+msgid "Default: fill angle + 90 deg. Insert comma-seperated list for multiple layers."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:355
+msgid "Row spacing"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:356
+msgid "default: 3x fill row spacing"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:366
+msgid "Max stitch length"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:367
+msgid "default: equal to fill max stitch length"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:377
+msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:400
+msgid "Expand the shape before fill stitching, to compensate for gaps between shapes."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:411 lib/elements/fill_stitch.py:425
+msgid "Underpath"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:412 lib/elements/fill_stitch.py:426
+msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:629
+msgid "Error during autofill!  This means that there is a problem with Ink/Stitch."
+msgstr ""
+
+#. this message is followed by a URL:
+#. https://github.com/inkstitch/inkstitch/issues/new
+#: lib/elements/fill_stitch.py:632
+msgid "If you'd like to help us make Ink/Stitch better, please paste this whole message into a new issue at: "
 msgstr ""
 
 #: lib/elements/image.py:13
@@ -1151,15 +1239,15 @@ msgid "Please select at least one satin column."
 msgstr ""
 
 #. This was previously: "No embroiderable paths selected."
-#: lib/extensions/base.py:126
+#: lib/extensions/base.py:127
 msgid "Ink/Stitch doesn't know how to work with any of the objects you've selected."
 msgstr ""
 
-#: lib/extensions/base.py:128
+#: lib/extensions/base.py:129
 msgid "There are no objects in the entire document that Ink/Stitch knows how to work with."
 msgstr ""
 
-#: lib/extensions/base.py:130
+#: lib/extensions/base.py:131
 msgid "Tip: Run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot Objects"
 msgstr ""
 
@@ -1278,7 +1366,7 @@ msgstr ""
 msgid "Add trims"
 msgstr ""
 
-#: lib/extensions/lettering.py:83 lib/extensions/params.py:361
+#: lib/extensions/lettering.py:83 lib/extensions/params.py:441
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
 #: print/templates/custom-page.html:33 print/templates/ui.html:93
 #: print/templates/ui.html:97 print/templates/ui.html:103
@@ -1287,7 +1375,7 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-#: lib/extensions/lettering.py:87 lib/extensions/params.py:368
+#: lib/extensions/lettering.py:87 lib/extensions/params.py:449
 msgid "Apply and Quit"
 msgstr ""
 
@@ -1349,55 +1437,59 @@ msgstr ""
 msgid "Please select one or more text elements to split lines."
 msgstr ""
 
-#: lib/extensions/params.py:208
+#: lib/extensions/params.py:227
 msgid "These settings will be applied to 1 object."
 msgstr ""
 
-#: lib/extensions/params.py:210
+#: lib/extensions/params.py:229
 #, python-format
 msgid "These settings will be applied to %d objects."
 msgstr ""
 
-#: lib/extensions/params.py:213
+#: lib/extensions/params.py:234
 msgid "Some settings had different values across objects.  Select a value from the dropdown or enter a new one."
 msgstr ""
 
-#: lib/extensions/params.py:217
+#: lib/extensions/params.py:239
 #, python-format
 msgid "Disabling this tab will disable the following %d tabs."
 msgstr ""
 
-#: lib/extensions/params.py:219
+#: lib/extensions/params.py:243
 msgid "Disabling this tab will disable the following tab."
 msgstr ""
 
-#: lib/extensions/params.py:222
+#: lib/extensions/params.py:247
 #, python-format
 msgid "Enabling this tab will disable %s and vice-versa."
 msgstr ""
 
-#: lib/extensions/params.py:252
+#: lib/extensions/params.py:301
 msgid "Inkscape objects"
 msgstr ""
 
-#: lib/extensions/params.py:313
+#: lib/extensions/params.py:390
 msgid "Click to force this parameter to be saved when you click \"Apply and Quit\""
 msgstr ""
 
-#: lib/extensions/params.py:321
+#: lib/extensions/params.py:400
 msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr ""
 
-#: lib/extensions/params.py:344
+#: lib/extensions/params.py:423
 msgid "Embroidery Params"
 msgstr ""
 
-#: lib/extensions/params.py:365
+#: lib/extensions/params.py:446
 msgid "Use Last Settings"
 msgstr ""
 
 #: lib/extensions/reorder.py:20
 msgid "Please select at least two elements to reorder."
+msgstr ""
+
+#: lib/extensions/selection_to_guide_line.py:21
+msgid "Please select at least one object to be marked as a guide line."
 msgstr ""
 
 #: lib/extensions/selection_to_pattern.py:21
@@ -1688,6 +1780,10 @@ msgstr ""
 #: lib/stitches/auto_satin.py:519
 #, python-format
 msgid "AutoSatin Running Stitch %d"
+msgstr ""
+
+#: lib/stitches/guided_fill.py:120
+msgid "Guide line (or offset copy) is self crossing!"
 msgstr ""
 
 #: lib/svg/rendering.py:222
@@ -2740,6 +2836,7 @@ msgid "Duplicate Params"
 msgstr ""
 
 #: inx/inkstitch_duplicate_params.inx:10 inx/inkstitch_reorder.inx:10
+#: inx/inkstitch_selection_to_guide_line.inx:10
 #: inx/inkstitch_selection_to_pattern.inx:10
 msgid "Edit"
 msgstr ""
@@ -3699,6 +3796,14 @@ msgstr ""
 
 #: inx/inkstitch_reorder.inx:3
 msgid "Re-stack objects in order of selection"
+msgstr ""
+
+#: inx/inkstitch_selection_to_guide_line.inx:3
+msgid "Selection to guide line"
+msgstr ""
+
+#: inx/inkstitch_selection_to_guide_line.inx:9
+msgid "Ink/Stitch"
 msgstr ""
 
 #: inx/inkstitch_selection_to_pattern.inx:3
