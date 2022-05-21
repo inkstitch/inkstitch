@@ -7,15 +7,23 @@ from .running_stitch import running_stitch
 
 
 def ripple_stitch(lines, target, line_count, points, max_stitch_length, repeats):
-    # ripple stitch fills and area with an interpolated spiral
-    # the spiral is allowed to cross itself and doesn't care about an equal distance of lines
-    # it will ignore holes in a fill shape
-    outline = lines.geoms[0]
+    '''
+    Ripple stitch is allowed to cross itself and doesn't care about an equal distance of lines
+    It is meant to be used with light (not dense) stitching
+    It will ignore holes in a closed shape. Closed shapes will be filled with a spiral
+    Open shapes will be stitched back and forth.
+    If there is only one (open) line or a closed shape the target point will be used.
+    If more sublines are present interpolation will take place between the first two.
+    '''
+
+    # sort geoms by size
+    lines = sorted(lines.geoms, key=lambda linestring: linestring.length, reverse=True)
+    outline = lines[0]
 
     if is_closed(outline):
         rippled_line = do_circular_ripple(outline, target, line_count, repeats)
     else:
-        rippled_line = do_linear_ripple(lines, points, target, line_count, repeats)
+        rippled_line = do_linear_ripple(lines, points, target, line_count - 1, repeats)
 
     return running_stitch(line_string_to_point_list(rippled_line), max_stitch_length)
 
@@ -39,8 +47,8 @@ def do_circular_ripple(outline, target, line_count, repeats):
 
 
 def do_linear_ripple(lines, points, target, line_count, repeats):
-    if len(lines.geoms) == 1:
-        lines = target_point_lines(lines.geoms[0], target)
+    if len(lines) == 1:
+        lines = target_point_lines(lines[0], target)
     else:
         lines = []
         for start, end in zip(points[0], points[1]):
@@ -57,6 +65,12 @@ def do_linear_ripple(lines, points, target, line_count, repeats):
             if i % 2 != 0:
                 k = len(lines) - j - 1
             coords.append(Point(points[k][i].x, points[k][i].y))
+
+    # add last line
+    if line_count % 2 != 0:
+        lines = reversed(lines)
+    for line in lines:
+        coords.append(line.coords[-1])
 
     coords = repeat_coords(coords, repeats)
 
@@ -82,7 +96,6 @@ def target_point_lines(outline, target):
 def get_interpolation_points(lines, line_count, method="linear"):
     new_points = defaultdict(list)
     count = len(lines)
-    line_count += 1
     for i, line in enumerate(lines):
         segment_length = line.length / line_count
         distance = 0
