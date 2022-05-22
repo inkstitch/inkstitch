@@ -21,16 +21,16 @@ def ripple_stitch(lines, target, line_count, points, max_stitch_length, repeats)
     outline = lines[0]
 
     if is_closed(outline):
-        rippled_line = do_circular_ripple(outline, target, line_count, repeats)
+        rippled_line = do_circular_ripple(outline, target, line_count, repeats, max_stitch_length)
     else:
         rippled_line = do_linear_ripple(lines, points, target, line_count - 1, repeats)
 
     return running_stitch(line_string_to_point_list(rippled_line), max_stitch_length)
 
 
-def do_circular_ripple(outline, target, line_count, repeats):
+def do_circular_ripple(outline, target, line_count, repeats, max_stitch_length):
     # for each point generate a line going to the target point
-    lines = target_point_lines(outline, target)
+    lines = target_point_lines_normalized_distances(outline, target, max_stitch_length)
 
     # create a list of points for each line
     points = get_interpolation_points(lines, line_count, "circular")
@@ -93,22 +93,28 @@ def target_point_lines(outline, target):
     return lines
 
 
+def target_point_lines_normalized_distances(outline, target, max_stitch_length):
+    lines = []
+    outline = running_stitch(line_string_to_point_list(outline), max_stitch_length)
+    for point in outline:
+        lines.append(LineString([point, target]))
+    return lines
+
+
 def get_interpolation_points(lines, line_count, method="linear"):
     new_points = defaultdict(list)
-    count = len(lines)
+    count = len(lines) - 1
     for i, line in enumerate(lines):
         segment_length = line.length / line_count
-        distance = 0
+        distance = -1
         points = []
         for j in range(line_count):
-            if distance == 0 and method == "circular":
+            if distance == -1 and method == "circular":
                 # the first line makes sure, it is going to be a spiral
                 distance = segment_length - (segment_length * ((count - i) / count))
-                if distance == 0:
-                    distance = 0.0001
-            elif distance == 0:
+            elif distance == -1:
                 # first line along the outline
-                distance = 0.0001
+                distance = 0
             else:
                 distance += segment_length
             points.append(line.interpolate(distance))
