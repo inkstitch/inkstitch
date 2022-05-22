@@ -72,18 +72,17 @@ Définit le point de départ (1) ou le point final (2) de la colonne auto route 
 
 [Télécharger le fichier exemple](/assets/images/docs/visual-commands-fill-stitch.svg){: download="visual-commands-fill-stitch.svg" title="Télécharger le fichier exemple"}
 
-## Display Hide Object Commands
-
+## Afficher Masquer les commandes des objets 
 {% include upcoming_release.html %}
 
-Toggle visibility of object commands. Commands will still be functional when hidden.
+Bascule la visibilité des commandes. Les commandes restent fonctionnelles même si elles sont masquées.
+`Extensions > Ink/Stitch > Commandes > Vue > Afficher/Masquer les commandes  des objets`
 
-`Extensions > Ink/Stitch > Commands > View > Display|Hide Object Commands`
-
-## Scale Command Symbols
-
+## Mise à l'echelle des symboles de commande
 {% include upcoming_release.html %}
 
-Set the size of command symbols in the entire document: `Extensions > Ink/Stitch > Commands > View > Scale Command Symbols...`
+Défini la taille des symboles de commande dans le document tout entier
 
-Use live preview to see the effect while scaling.
+Set the size of command symbols in the entire document: `Extensions > Ink/Stitch > Commandes > Vue > Mise à l'echelle des symboles de commande.`
+
+Il est possible d'utiliser le "live preview" pour visualiser la nouvelle  taille des symboles pendant la mise à l'echelle.
