@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-05-21 01:55+0000\n"
-"PO-Revision-Date: 2022-05-21 01:56\n"
+"PO-Revision-Date: 2022-05-22 02:21\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -629,43 +629,43 @@ msgstr "Die \"Einzug\"-Einstellung für die Unterlage für dieses Füll-Objekt k
 
 #: lib/elements/fill_stitch.py:46
 msgid "Missing Guideline"
-msgstr ""
+msgstr "Fehlende Führungslinie"
 
 #: lib/elements/fill_stitch.py:47
 msgid "This object is set to \"Guided Fill\", but has no guide line."
-msgstr ""
+msgstr "Dieses Objekt ist auf \"Kurvenfüllung\" gesetzt, aber die Führungslinie fehlt."
 
 #: lib/elements/fill_stitch.py:49
 msgid "* Create a stroke object"
-msgstr ""
+msgstr "* Erstelle ein Objekt mit einer Kontur"
 
 #: lib/elements/fill_stitch.py:50
 msgid "* Select this object and run Extensions > Ink/Stitch > Edit > Selection to guide line"
-msgstr ""
+msgstr "* Wähle dieses aus und führe die Funktion Erweiterungen > Ink/Stitch > Bearbeiten > Auswahl zu Führungslinie aus"
 
 #: lib/elements/fill_stitch.py:55
 msgid "Disjointed Guide Line"
-msgstr ""
+msgstr "Unzusammenhängende Führungslinie"
 
 #: lib/elements/fill_stitch.py:56
 msgid "The guide line of this object isn't within the object borders. The guide line works best, if it is within the target element."
-msgstr ""
+msgstr "Die Führungslinie dieses Objekts liegt nicht innerhalb des Objektes. Führungslinien funktionieren am Besten, wenn sie innerhalb des Zielobjektes liegen."
 
 #: lib/elements/fill_stitch.py:59
 msgid "* Move the guide line into the element"
-msgstr ""
+msgstr "* Bewege die Führungslinie in das Objekt"
 
 #: lib/elements/fill_stitch.py:64
 msgid "Multiple Guide Lines"
-msgstr ""
+msgstr "Mehrere Führungslinien"
 
 #: lib/elements/fill_stitch.py:65
 msgid "This object has multiple guide lines, but only the first one will be used."
-msgstr ""
+msgstr "Dieses Objekt hat mehrere Führungslinien, aber nur die erste wird verwendet."
 
 #: lib/elements/fill_stitch.py:67
 msgid "* Remove all guide lines, except for one."
-msgstr ""
+msgstr "* Entferne alle Führungslinien bis auf eine."
 
 #: lib/elements/fill_stitch.py:72
 msgid "Unconnected"
@@ -689,7 +689,7 @@ msgstr "Füllung: Form ist ungültig. Das kann passieren, wenn sich die Außenli
 
 #: lib/elements/fill_stitch.py:90
 msgid "FillStitch"
-msgstr ""
+msgstr "Füllstitch"
 
 #: lib/elements/fill_stitch.py:93
 msgid "Automatically routed fill stitching"
@@ -697,63 +697,63 @@ msgstr "Automatisch geführte Füllstiche"
 
 #: lib/elements/fill_stitch.py:98
 msgid "Fill method"
-msgstr ""
+msgstr "Füllmethode"
 
 #: lib/elements/fill_stitch.py:99
 msgid "Auto Fill"
-msgstr ""
+msgstr "Automatische Füllung"
 
 #: lib/elements/fill_stitch.py:99
 msgid "Contour Fill"
-msgstr ""
+msgstr "Konturfüllung"
 
 #: lib/elements/fill_stitch.py:99
 msgid "Guided Fill"
-msgstr ""
+msgstr "Kurvenfüllung"
 
 #: lib/elements/fill_stitch.py:99
 msgid "Legacy Fill"
-msgstr ""
+msgstr "Veraltete Füllung"
 
 #: lib/elements/fill_stitch.py:104
 msgid "Contour Fill Strategy"
-msgstr ""
+msgstr "Methode"
 
 #: lib/elements/fill_stitch.py:105
 msgid "Inner to Outer"
-msgstr ""
+msgstr "Von Innen nach Außen"
 
 #: lib/elements/fill_stitch.py:105
 msgid "Single spiral"
-msgstr ""
+msgstr "Einfache Spirale"
 
 #: lib/elements/fill_stitch.py:105
 msgid "Double spiral"
-msgstr ""
+msgstr "Doppelte Spirale"
 
 #: lib/elements/fill_stitch.py:110
 msgid "Join Style"
-msgstr ""
+msgstr "Stil der Verbindungen"
 
 #: lib/elements/fill_stitch.py:111
 msgid "Round"
-msgstr ""
+msgstr "Rund"
 
 #: lib/elements/fill_stitch.py:111
 msgid "Mitered"
-msgstr ""
+msgstr "Spitz"
 
 #: lib/elements/fill_stitch.py:111
 msgid "Beveled"
-msgstr ""
+msgstr "Abgeschrägt"
 
 #: lib/elements/fill_stitch.py:116
 msgid "Avoid self-crossing"
-msgstr ""
+msgstr "Selbstüberschneidung vermeiden"
 
 #: lib/elements/fill_stitch.py:121
 msgid "Clockwise"
-msgstr ""
+msgstr "Uhrzeigersinn"
 
 #: lib/elements/fill_stitch.py:127
 msgid "Angle of lines of stitches"
@@ -820,7 +820,7 @@ msgstr "Unterlage"
 #: lib/elements/fill_stitch.py:379 lib/elements/fill_stitch.py:391
 #: lib/elements/fill_stitch.py:429
 msgid "Fill Underlay"
-msgstr ""
+msgstr "Füllung Unterlage"
 
 #: lib/elements/fill_stitch.py:332
 msgid "Fill angle"
@@ -1494,7 +1494,7 @@ msgstr "Zum Sortieren bitte mindestens zwei Elemente auswählen."
 
 #: lib/extensions/selection_to_guide_line.py:21
 msgid "Please select at least one object to be marked as a guide line."
-msgstr ""
+msgstr "Bitte mindestens ein Objekt auswählen um es als Führungslinie zu markieren."
 
 #: lib/extensions/selection_to_pattern.py:21
 msgid "Please select at least one object to be marked as a pattern."
@@ -1789,7 +1789,7 @@ msgstr "AutoSatin Laufstich %d"
 
 #: lib/stitches/guided_fill.py:120
 msgid "Guide line (or offset copy) is self crossing!"
-msgstr ""
+msgstr "Die Führungslinie (oder eine verschobene Kopie) überschneidet sich selbst!"
 
 #: lib/svg/rendering.py:222
 msgid "Stitch Plan"
@@ -3806,7 +3806,7 @@ msgstr "Objekte in Auswahlreihenfolge sortieren"
 
 #: inx/inkstitch_selection_to_guide_line.inx:3
 msgid "Selection to guide line"
-msgstr ""
+msgstr "Auswahl zu Führungslinie"
 
 #: inx/inkstitch_selection_to_guide_line.inx:9
 msgid "Ink/Stitch"
