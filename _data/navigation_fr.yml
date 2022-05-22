@@ -108,6 +108,8 @@ docs:
       url: /fr/docs/params/
     - title: "Préferences"
       url: /fr/docs/preferences/
+    - title: "Outils: Trait"
+      url: /docs/stroke-tools/
     - title: "Outils Satin"
       url: /fr/docs/satin-tools/
     - title: "Dépannage pour objets"
