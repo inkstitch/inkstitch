@@ -52,7 +52,7 @@ Ces commandes seront attachées aux objets actuellement sélectionnés.
 
 Définit  (1) le point de départ  (2) le point d'arrivée d'un remplissage.
 
-### ![ripple stitch target symbol](/assets/images/docs/visual-commands-ripple-target.png) Cible de la broderie ondulée
+### ![ripple-stitch-target-symbol](/assets/images/docs/visual-commands-ripple-target.png) [Cible de la broderie ondulée](ripple-stitch-target-symbol)
 
 Défini la position cible d'une broderie ondulée
 
