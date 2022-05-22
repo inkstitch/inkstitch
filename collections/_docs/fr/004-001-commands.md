@@ -2,7 +2,7 @@
 title: "Commandes visuelles"
 permalink: /fr/docs/commands/
 excerpt: ""
-last_modified_at: 2022-01-14
+last_modified_at: 2022-05-22
 ---
 Les commandes visuelles peuvent être utilisées pour spécifier des informations complémentaires sur la manière de broder. Elles peuvent par exemple être utilisées pour dire à la machine de couper le fil après avoir brodé un élément ou pour spécifier un arrêt par exemple pour ajouter le tissu d'un appliqué plus facilement.
 
@@ -56,33 +56,32 @@ Définit  (1) le point de départ  (2) le point d'arrivée d'un remplissage.
 
 Défini la position cible d'une broderie ondulée
 
-###  ![auto route starting position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-start.jpg) ![auto route  ending position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-end.jpg)  [Position de départ/de fin pour l'agencement automatique de points droits]
+###  ![auto-route-runing-starting-position-symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-start.jpg) ![auto route  ending position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-end.jpg)  [Position de départ/de fin pour l'agencement automatique de points droits](#auto-route-runing-starting-position-symbol)
 {% include upcoming_release.html %}
 
 Définit le point de départ (1) ou le point final (2) de l'agencement automatique. Exécutez ensuite "[Outils: Trait /Agencement automatique de points droits. ...](/fr/docs/strole-tools)"  
 N'utiliser qu'un point de départ et qu'un point d'arrivée par agencement automatique.
 
-###  ![auto route starting position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-start.jpg) ![auto route  ending position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-end.jpg)  [Position de départ/de fin pour l'agencement automatique  de colonnes satin]
+###  ![auto-route-satin-starting-position-symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-start.jpg) ![auto route  ending position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-end.jpg)  [Position de départ/de fin pour l'agencement automatique  de colonnes satin](#auto-route-satin-starting-position-symbol)
 
 Définit le point de départ (1) ou le point final (2) de l'agencement automatique. Exécutez ensuite "[Outils: Satin/ Agencement automatique de Colonne Satin](/fr/docs/satin-tools/#auto-route-satin-columns)" 
 
 N'utiliser qu'un point de départ et qu'un point d'arrivée par agencement automatique.
 
 
-### ![stop symbol](/assets/images/docs/visual-commands-stop.jpg) Stop
+### ![stop-symbol](/assets/images/docs/visual-commands-stop.jpg) [Stop](#stop-symbol)
 
 Les machines à broder commerciales qui ont plusieurs aiguilles passent normalement d’une couleur à l’autre sans pause e. Parfois, vous *voulez* une pause (par exemple pour couper le tissu appliqué), donc "STOP après" ajoute un changement de couleur supplémentaire qui peut être affecté à une instruction d'arrêt spéciale à l'aide de l'interface utilisateur de la machine (par exemple C00 sur les machines Barudan). Les utilisations courantes de cette méthode sont l’application de mousse , l'appliquer du tissu appliqué et / ou même vouloir ralentir la machine à un certain endroit pour certains types de broderie sans avoir à surveiller la machine.
 
 ![ignore](/assets/images/docs/visual-commands-ignore.jpg) [Ignorer l'objet](#-ignore)
 
 
-### 
-![symbole de coupe](/assets/images/docs/visual-commands-trim.jpg) [Coupe](#-coupe-le-fil) le fil après avoir brodé l'objet
+### ![trim-symbol](/assets/images/docs/visual-commands-trim.jpg) [Couper le fil après avoir brodé cet objet](#trim-symbol)
 
 "Couper après" indique à la machine à broder de couper le fil une fois que l'objet désigné a été brodé. Toutes les machines domestiques ne prennent pas en charge la fonction de coupe dans un bloc de couleur. Principalement utilisé pour empêcher le saut de fil entre les objets de broderie et pour éviter la coupe des fils après la broderie par l'opérateur.
 
 
-### ![ignore symbol](/assets/images/docs/visual-commands-ignore.jpg) Ignorer cet object (ne pas le broder)
+### ![ignore symbol](/assets/images/docs/visual-commands-ignore.jpg) [Ignorer cet object (ne pas le broder)](#ignore-symbol)
 
 Les objets auxquels cette commande est associée seront exclus du plan de broderie.
 
