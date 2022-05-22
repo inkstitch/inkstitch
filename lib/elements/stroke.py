@@ -278,13 +278,12 @@ class Stroke(EmbroideryElement):
                 # running stitch
                 elif self.is_running_stitch():
                     patch = self.running_stitch(path, self.running_stitch_length)
-
                     if self.bean_stitch_repeats > 0:
                         patch.stitches = self.do_bean_repeats(patch.stitches)
                 else:
                     patch = self.simple_satin(path, self.zigzag_spacing, self.stroke_width)
 
-            if patch:
-                patches.append(patch)
+                if patch:
+                    patches.append(patch)
 
         return patches
