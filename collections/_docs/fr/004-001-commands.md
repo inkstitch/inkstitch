@@ -100,7 +100,7 @@ Split a Satin Column at the point specified by this command. After attaching run
 Bascule la visibilité des commandes. Les commandes restent fonctionnelles même si elles sont masquées.
 `Extensions > Ink/Stitch > Commandes > Vue > Afficher/Masquer les commandes  des objets`
 
-### Mise à l'echelle des symboles de commande
+#### Mise à l'echelle des symboles de commande
 {% include upcoming_release.html %}
 
 Défini la taille des symboles de commande dans le document tout entier : `Extensions > Ink/Stitch > Commandes > Vue > Mise à l'echelle des symboles de commande.`
