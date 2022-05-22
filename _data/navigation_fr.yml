@@ -74,6 +74,8 @@ docs:
         url: /fr/docs/stitches/running-stitch/
       - title: "Point triple"
         url: /fr/docs/stitches/bean-stitch/
+      - title: "Broderie ondulée"
+        url: /fr/docs/stitches/ripple/
       - title: "Zig-Zag (Satin Simple)"
         url: /fr/docs/stitches/zigzag-stitch/
       - title: "Colonne Satin"
