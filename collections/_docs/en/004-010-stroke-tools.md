@@ -2,7 +2,7 @@
 title: "Tools: Stroke"
 permalink: /docs/stroke-tools/
 excerpt: ""
-last_modified_at: 2022-05-19
+last_modified_at: 2022-05-21
 toc: true
 ---
 ## Autoroute Running Stitch
