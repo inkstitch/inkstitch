@@ -45,7 +45,7 @@ This extension will convert a stroke into a satin column with a specified width.
 
 1. Draw a bezier curve (`B`)
 2. Set the stroke width in the "Fill and Stroke" panel ("Stroke style" tab), which you can access with `Shift+Ctrl+F`
-2. Run `Extensions > Ink/Stitch  > Satin Tools > Convert Line to Satin`
+2. Run `Extensions > Ink/Stitch  >  Tools: Satin > Convert Line to Satin`
 
 ## Convert Satin to Stroke
 
@@ -72,7 +72,7 @@ Split a satin column at a specified point. The split happens at a stitch boundar
 2. Attach the "Satin split point" command using `Extensions > Ink/Stitch  > Commands > Attach Commands to Selected Objects`.
 3. Move the symbol (or just the connector line's endpoint) to point to the exact spot you want the satin to be split at.
 4. Select the satin column again.
-5. Run `Extensions > Ink/Stitch  > Satin Tools > Split Satin Column`.
+5. Run `Extensions > Ink/Stitch  > Tools: Satin > Split Satin Column`.
 6. The split point command and connector line disappear, and nothing else appears to have happened. Select your satin and you'll see that it's been split.
 
 ## Flip Satin Column Rails
@@ -86,5 +86,5 @@ A satin column which originally starts on the left rail and ends on the right, w
 ### Usage
 
 * Select one or more satin column(s)
-* Run `Extensions > Ink/Stitch  > Satin Tools > Flip Satin Columns`
+* Run `Extensions > Ink/Stitch  > Tools: Satin > Flip Satin Columns`
 
