@@ -26,4 +26,8 @@ Le paramètrage de la broderie vous permet d'aller au delà de 200%, mais alors 
 ## Dans la vraie vie
 
 
+{% include folder-galleries path="fonts/marcellus/" %}
+
+
+
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/marcelusSC_FI/LICENSE)
