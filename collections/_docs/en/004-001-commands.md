@@ -2,7 +2,7 @@
 title: "Visual Commands"
 permalink: /docs/commands/
 excerpt: ""
-last_modified_at: 2022-04-04
+last_modified_at: 2022-05-21
 toc: true
 ---
 Visual commands can be used to specify additional information on how to embroider your design. They can be used e.g. to tell the machine to trim the thread after finishing a specific embroidery element or when to pause and where to stop, so you can add a fabric layer to your appliqué design more conventiently.
@@ -47,13 +47,24 @@ These commands will be attached to the currently selected objects.
 
 Defines the (1) starting or (2) ending point of an fill stitch area.
 
-### ![trim symbol](/assets/images/docs/visual-commands-trim.jpg) Trim
+### ![ripple stitch target symbol](/assets/images/docs/visual-commands-ripple-target.png) Ripple stitch target positiopn
 
-"Trim after" tells the embroidery machine to cut the thread after the assigned object has been stitched.  Not all home machines support the trim function within a color block.  Mainly used to prevent long jump stitched between embroidery objects and to avoid post embroidery trimming by the operator.
+Defines the target point of a ripple stitch area.
+
+###  ![auto route starting position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-start.jpg) ![auto route  ending position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-end.jpg) Starting/Ending Position for Auto Route of running stitch and for Auto Route of satin stitch
+
+Defines the (1) starting or (2) ending point for auto route runnning stitches or for auto route satin stitch. Run "[Tools: Satin/ Auto-route satin column ](/docs/satin-tools/#auto-route-satin-columns)"  or "[Tools: Stroke/ Auto-route running stitch](https://inkstitch.org/docs/stroke-tools/)" afterwards.
+Use only one starting and one ending point per auto-route operation.
 
 ### ![stop symbol](/assets/images/docs/visual-commands-stop.jpg) Stop
 
 Commercial embroidery machines that have multiple needles normally proceed from one color to the next without pausing in between. Sometimes you *want* a pause (e.g. to trim applique fabric), so "STOP after" adds an extra color change which can be assigned to a special stop instruction using the machine's user interface (e.g. C00 on Barudan machines). Common uses for this would be to apply puff foam after doing regular embroidery.  Applying applique fabric and/or even wanting to slow down the machine at a certain spot for certain types of embroidery without having to babysit the machine.
+
+### ![trim symbol](/assets/images/docs/visual-commands-trim.jpg) Trim
+
+"Trim after" tells the embroidery machine to cut the thread after the assigned object has been stitched.  Not all home machines support the trim function within a color block.  Mainly used to prevent long jump stitched between embroidery objects and to avoid post embroidery trimming by the operator.
+
+
 
 ### ![ignore symbol](/assets/images/docs/visual-commands-ignore.jpg) Ignore object
 
@@ -63,12 +74,9 @@ Objects with this command will be excluded from the stitch plan output.
 
 Split a Satin Column at the point specified by this command. After attaching run "[Cut Satin Column](/docs/satin-tools/#cut-satin-column)".
 
-###  ![auto route satin starting position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-start.jpg) ![auto route satin ending position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-end.jpg) Starting/Ending Position for Auto Route Satin
+##View
 
-Defines the (1) starting or (2) ending point for satin auto route columns. Run "[Auto-route Satin Column...](/docs/satin-tools/#auto-route-satin-columns)" afterwards.
-Use only one starting and one ending point per auto-route operation.
-
-## Display Hide Object Commands
+### Display Hide Object Commands
 
 {% include upcoming_release.html %}
 
@@ -76,7 +84,7 @@ Toggle visibility of object commands. Commands will still be functional when hid
 
 `Extensions > Ink/Stitch > Commands > View > Display|Hide Object Commands`
 
-## Scale Command Symbols
+### Scale Command Symbols
 
 {% include upcoming_release.html %}
 
