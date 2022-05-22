@@ -27,5 +27,6 @@ The embroidering parameters allow you to scale up further, but then too long sti
 
 ## In real life
 
+{% include folder-galleries path="fonts/marcellus/" %}
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/marcelusSC_FI/LICENSE)
