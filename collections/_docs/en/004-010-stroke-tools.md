@@ -23,9 +23,10 @@ Tip: By default, it will choose the left-most extreme node as the starting point
 
 {: .notice--info }
 ### Options
-    Enable "Add nodes at intersections" will normally yield a better routing as under-path will preferably start/end at intersections.  You should only disable this optionif you have manually added nodes where you want the paths to be split
+    Enable "Add nodes at intersections" will normally yield a better routing as under-path will preferably start/end at intersections.  
+    You should only disable this option if you have manually added nodes where you want the paths to be split.
 
     Enable Trim jump stitches to use trims instead of jump stitches. Trim commands are added to the SVG, so you can modify/delete as you see fit.
 
-    If you prefer to keep your former order , enable the option Preserve order of running stitches.
+    If you prefer to keep your former order , enable the option Preserve order of running stitches. 
 
