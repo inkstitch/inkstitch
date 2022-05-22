@@ -6,7 +6,7 @@ from ..utils.geometry import line_string_to_point_list
 from .running_stitch import running_stitch
 
 
-def ripple_stitch(lines, target, line_count, points, max_stitch_length, repeats, flip):
+def ripple_stitch(lines, target, line_count, points, max_stitch_length, repeats, flip, skip_start, skip_end, render_grid):
     '''
     Ripple stitch is allowed to cross itself and doesn't care about an equal distance of lines
     It is meant to be used with light (not dense) stitching
@@ -20,15 +20,19 @@ def ripple_stitch(lines, target, line_count, points, max_stitch_length, repeats,
     lines = sorted(lines.geoms, key=lambda linestring: linestring.length, reverse=True)
     outline = lines[0]
 
+    # ignore skip_start and skip_end if both toghether are greater or equal to line_count
+    if skip_start + skip_end >= line_count:
+        skip_start = skip_end = 0
+
     if is_closed(outline):
-        rippled_line = do_circular_ripple(outline, target, line_count, repeats, flip, max_stitch_length)
+        rippled_line = do_circular_ripple(outline, target, line_count, repeats, flip, max_stitch_length, skip_start, skip_end)
     else:
-        rippled_line = do_linear_ripple(lines, points, target, line_count - 1, repeats, flip)
+        rippled_line = do_linear_ripple(lines, points, target, line_count - 1, repeats, flip, skip_start, skip_end, render_grid)
 
     return running_stitch(line_string_to_point_list(rippled_line), max_stitch_length)
 
 
-def do_circular_ripple(outline, target, line_count, repeats, flip, max_stitch_length):
+def do_circular_ripple(outline, target, line_count, repeats, flip, max_stitch_length, skip_start, skip_end):
     # for each point generate a line going to the target point
     lines = target_point_lines_normalized_distances(outline, target, flip, max_stitch_length)
 
@@ -37,8 +41,8 @@ def do_circular_ripple(outline, target, line_count, repeats, flip, max_stitch_le
 
     # connect the lines to a spiral towards the target
     coords = []
-    for i in range(line_count):
-        for j in range(len(points)):
+    for i in range(skip_start, line_count - skip_end):
+        for j in range(len(lines)):
             coords.append(Point(points[j][i].x, points[j][i].y))
 
     coords = repeat_coords(coords, repeats)
@@ -46,38 +50,50 @@ def do_circular_ripple(outline, target, line_count, repeats, flip, max_stitch_le
     return LineString(coords)
 
 
-def do_linear_ripple(lines, points, target, line_count, repeats, flip):
+def do_linear_ripple(lines, points, target, line_count, repeats, flip, skip_start, skip_end, render_grid):
     if len(lines) == 1:
-        lines = target_point_lines(lines[0], target, flip)
+        helper_lines = target_point_lines(lines[0], target, flip)
     else:
-        lines = []
+        helper_lines = []
         for start, end in zip(points[0], points[1]):
             if flip:
-                lines.append(LineString([end, start]))
+                helper_lines.append(LineString([end, start]))
             else:
-                lines.append(LineString([start, end]))
+                helper_lines.append(LineString([start, end]))
 
     # get linear points along the lines
-    points = get_interpolation_points(lines, line_count)
+    points = get_interpolation_points(helper_lines, line_count)
 
     # go back and forth along the lines - flip direction of every second line
     coords = []
-    for i in range(line_count):
-        for j in range(len(lines)):
+    for i in range(skip_start, len(points[0]) - skip_end):
+        for j in range(len(helper_lines)):
             k = j
             if i % 2 != 0:
-                k = len(lines) - j - 1
+                k = len(helper_lines) - j - 1
             coords.append(Point(points[k][i].x, points[k][i].y))
 
-    # add last line
-    if line_count % 2 != 0:
-        lines = reversed(lines)
-    for line in lines:
-        coords.append(line.coords[-1])
+    # add helper lines as a grid
+    # for now only add this to satin type ripples, otherwise it could become to dense at the target point
+    if len(lines) > 1 and render_grid:
+        coords.extend(do_grid(helper_lines, line_count - skip_end))
 
     coords = repeat_coords(coords, repeats)
 
     return LineString(coords)
+
+
+def do_grid(lines, num_lines):
+    coords = []
+    if num_lines % 2 == 0:
+        lines = reversed(lines)
+    for i, line in enumerate(lines):
+        line_coords = list(line.coords)
+        if (i % 2 == 0 and num_lines % 2 == 0) or (i % 2 != 0 and num_lines % 2 != 0):
+            coords.extend(reversed(line_coords))
+        else:
+            coords.extend(line_coords)
+    return coords
 
 
 def line_length(line):
@@ -127,6 +143,8 @@ def get_interpolation_points(lines, line_count, method="linear"):
             else:
                 distance += segment_length
             points.append(line.interpolate(distance))
+        if method == "linear":
+            points.append(Point(*line.coords[-1]))
         new_points[i] = points
     return new_points
 

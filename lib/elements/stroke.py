@@ -17,8 +17,18 @@ from ..svg import get_node_transform, parse_length_with_units
 from ..utils import Point, cache
 from .element import EmbroideryElement, param
 from .satin_column import SatinColumn
+from .validation import ValidationWarning
 
 warned_about_legacy_running_stitch = False
+
+
+class IgnoreSkipValues(ValidationWarning):
+    name = _("Ignore skip")
+    description = _("Skip values are ignored, because there was no line left to embroider.")
+    steps_to_solve = [
+        _('* Reduce values of Skip first and last lines or'),
+        _('* Increase number of lines accordinly in the params dialog.'),
+    ]
 
 
 class Stroke(EmbroideryElement):
@@ -43,10 +53,21 @@ class Stroke(EmbroideryElement):
            type='dropdown',
            default=0,
            # 0: run/simple satin, 1: manual, 2: ripple
-           options=[_("Running Stitch"), _("Manual stitch placement"), _("Ripple")],
+           options=[_("Running Stitch"), _("Ripple")],
            sort_index=0)
     def stroke_method(self):
         return self.get_int_param('stroke_method', 0)
+
+    @property
+    @param('manual_stitch',
+           _('Manual stitch placement'),
+           tooltip=_("Stitch every node in the path.  All other options are ignored."),
+           type='boolean',
+           default=False,
+           select_items=[('stroke_method', 0)],
+           sort_index=1)
+    def manual_stitch_mode(self):
+        return self.get_boolean_param('manual_stitch')
 
     @property
     @param('repeats',
@@ -54,8 +75,7 @@ class Stroke(EmbroideryElement):
            tooltip=_('Defines how many times to run down and back along the path.'),
            type='int',
            default="1",
-           select_items=[('stroke_method', 0), ('stroke_method', 2)],
-           sort_index=4)
+           sort_index=2)
     def repeats(self):
         return max(1, self.get_int_param("repeats", 1))
 
@@ -68,8 +88,7 @@ class Stroke(EmbroideryElement):
                   'A value of 2 would quintuple each stitch, etc.  Only applies to running stitch.'),
         type='int',
         default=0,
-        select_items=[('stroke_method', 0), ('stroke_method', 2)],
-        sort_index=5)
+        sort_index=3)
     def bean_stitch_repeats(self):
         return self.get_int_param("bean_stitch_repeats", 0)
 
@@ -80,8 +99,7 @@ class Stroke(EmbroideryElement):
            unit='mm',
            type='float',
            default=1.5,
-           select_items=[('stroke_method', 0), ('stroke_method', 2)],
-           sort_index=2)
+           sort_index=4)
     def running_stitch_length(self):
         return max(self.get_float_param("running_stitch_length_mm", 1.5), 0.01)
 
@@ -91,23 +109,59 @@ class Stroke(EmbroideryElement):
            tooltip=_('Number of lines from start to finish'),
            type='int',
            default=10,
-           select_items=[('stroke_method', 2)],
-           sort_index=1)
+           select_items=[('stroke_method', 1)],
+           sort_index=5)
     @cache
     def line_count(self):
         return max(self.get_int_param("line_count", 10), 1)
 
     @property
+    @param('skip_start',
+           _('Skip first lines'),
+           tooltip=_('Skip this number of lines at the beginning.'),
+           type='int',
+           default=0,
+           select_items=[('stroke_method', 1)],
+           sort_index=6)
+    @cache
+    def skip_start(self):
+        return abs(self.get_int_param("skip_start", 0))
+
+    @property
+    @param('skip_end',
+           _('Skip last lines'),
+           tooltip=_('Skip this number of lines at the end'),
+           type='int',
+           default=0,
+           select_items=[('stroke_method', 1)],
+           sort_index=7)
+    @cache
+    def skip_end(self):
+        return abs(self.get_int_param("skip_end", 0))
+
+    @property
     @param('flip',
-           _('Flip direction'),
+           _('Flip'),
            tooltip=_('Flip outer to inner'),
            type='boolean',
            default=False,
-           select_items=[('stroke_method', 2)],
-           sort_index=6)
+           select_items=[('stroke_method', 1)],
+           sort_index=8)
     @cache
     def flip(self):
         return self.get_boolean_param("flip", False)
+
+    @property
+    @param('render_grid',
+           _('Grid distance'),
+           tooltip=_('Render as grid. Works only with satin type ripple stitches.'),
+           type='float',
+           default=0,
+           select_items=[('stroke_method', 1)],
+           sort_index=8)
+    @cache
+    def render_grid(self):
+        return abs(self.get_float_param("render_grid", 0))
 
     @property
     @param('zigzag_spacing_mm',
@@ -117,7 +171,7 @@ class Stroke(EmbroideryElement):
            type='float',
            default=0.4,
            select_items=[('stroke_method', 0)],
-           sort_index=3)
+           sort_index=5)
     @cache
     def zigzag_spacing(self):
         return max(self.get_float_param("zigzag_spacing_mm", 0.4), 0.01)
@@ -131,7 +185,7 @@ class Stroke(EmbroideryElement):
         if len(flattened[0]) == 1:
             return [[[flattened[0][0][0], flattened[0][0][1]], [flattened[0][0][0] + 1.0, flattened[0][0][1]]]]
 
-        if self.stroke_method == 1:
+        if self.manual_stitch_mode:
             return [self.strip_control_points(subpath) for subpath in path]
         else:
             return flattened
@@ -247,12 +301,14 @@ class Stroke(EmbroideryElement):
         patches = []
 
         # ripple stitch
-        if self.stroke_method == 2:
+        if self.stroke_method == 1:
             lines = self.as_multi_line_string()
             points = []
             if len(lines.geoms) > 1:
+                # if render_grid has a number use this, otherwise use running_stitch_length
+                length = self.render_grid or self.running_stitch_length
                 # use satin column points for satin like build ripple stitches
-                points = SatinColumn(self.node).plot_points_on_rails(self.running_stitch_length, 0)
+                points = SatinColumn(self.node).plot_points_on_rails(length, 0)
             point_target = self.get_ripple_target()
             patch = StitchGroup(
                 color=self.color,
@@ -264,7 +320,10 @@ class Stroke(EmbroideryElement):
                     points,
                     self.running_stitch_length,
                     self.repeats,
-                    self.flip))
+                    self.flip,
+                    self.skip_start,
+                    self.skip_end,
+                    self.render_grid))
             if patch:
                 if self.bean_stitch_repeats > 0:
                     patch.stitches = self.do_bean_repeats(patch.stitches)
@@ -273,13 +332,14 @@ class Stroke(EmbroideryElement):
             for path in self.paths:
                 path = [Point(x, y) for x, y in path]
                 # manual stitch
-                if self.stroke_method == 1:
+                if self.manual_stitch_mode:
                     patch = StitchGroup(color=self.color, stitches=path, stitch_as_is=True)
                 # running stitch
                 elif self.is_running_stitch():
                     patch = self.running_stitch(path, self.running_stitch_length)
                     if self.bean_stitch_repeats > 0:
                         patch.stitches = self.do_bean_repeats(patch.stitches)
+                # simple satin
                 else:
                     patch = self.simple_satin(path, self.zigzag_spacing, self.stroke_width)
 
@@ -287,3 +347,7 @@ class Stroke(EmbroideryElement):
                     patches.append(patch)
 
         return patches
+
+    def validation_warnings(self):
+        if self.stroke_method == 1 and self.skip_start + self.skip_end >= self.line_count:
+            yield IgnoreSkipValues(self.shape.centroid)
