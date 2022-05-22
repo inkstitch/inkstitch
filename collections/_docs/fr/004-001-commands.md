@@ -86,11 +86,10 @@ Les objets auxquels cette commande est associée seront exclus du plan de broder
 
 #### ![Point de partage de colonne satin](/assets/images/docs/visual-commands-satin-cut-point.jpg) [Point de partage de la colonne satin](#-point-de-partage-de-colonne-satin)
 
-Fractionner une colonne satin au point spécifié par cette commande. Après le placement de la commande, exécutez la commande "[Scinder une colonne satin] (/fr/docs/satin-tools/#scinder-une-colonne-satin)".
+Fractionner une colonne satin au point spécifié par cette commande. Après le placement de la commande, exécutez la commande "[Scinder une colonne satin](/fr/docs/satin-tools/#scinder-une-colonne-satin)".
 
 
 
-Split a Satin Column at the point specified by this command. After attaching run "[Cut Satin Column](/docs/satin-tools/#cut-satin-column)".
 
 ### Vue
 
