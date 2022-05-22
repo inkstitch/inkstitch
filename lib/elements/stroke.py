@@ -98,6 +98,18 @@ class Stroke(EmbroideryElement):
         return max(self.get_int_param("line_count", 10), 1)
 
     @property
+    @param('flip',
+           _('Flip direction'),
+           tooltip=_('Flip outer to inner'),
+           type='boolean',
+           default=False,
+           select_items=[('stroke_method', 2)],
+           sort_index=6)
+    @cache
+    def flip(self):
+        return self.get_boolean_param("flip", False)
+
+    @property
     @param('zigzag_spacing_mm',
            _('Zig-zag spacing (peak-to-peak)'),
            tooltip=_('Length of stitches in zig-zag mode.'),
@@ -251,7 +263,8 @@ class Stroke(EmbroideryElement):
                     self.line_count,
                     points,
                     self.running_stitch_length,
-                    self.repeats))
+                    self.repeats,
+                    self.flip))
             if patch:
                 if self.bean_stitch_repeats > 0:
                     patch.stitches = self.do_bean_repeats(patch.stitches)

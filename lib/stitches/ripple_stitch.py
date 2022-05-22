@@ -6,7 +6,7 @@ from ..utils.geometry import line_string_to_point_list
 from .running_stitch import running_stitch
 
 
-def ripple_stitch(lines, target, line_count, points, max_stitch_length, repeats):
+def ripple_stitch(lines, target, line_count, points, max_stitch_length, repeats, flip):
     '''
     Ripple stitch is allowed to cross itself and doesn't care about an equal distance of lines
     It is meant to be used with light (not dense) stitching
@@ -21,16 +21,16 @@ def ripple_stitch(lines, target, line_count, points, max_stitch_length, repeats)
     outline = lines[0]
 
     if is_closed(outline):
-        rippled_line = do_circular_ripple(outline, target, line_count, repeats, max_stitch_length)
+        rippled_line = do_circular_ripple(outline, target, line_count, repeats, flip, max_stitch_length)
     else:
-        rippled_line = do_linear_ripple(lines, points, target, line_count - 1, repeats)
+        rippled_line = do_linear_ripple(lines, points, target, line_count - 1, repeats, flip)
 
     return running_stitch(line_string_to_point_list(rippled_line), max_stitch_length)
 
 
-def do_circular_ripple(outline, target, line_count, repeats, max_stitch_length):
+def do_circular_ripple(outline, target, line_count, repeats, flip, max_stitch_length):
     # for each point generate a line going to the target point
-    lines = target_point_lines_normalized_distances(outline, target, max_stitch_length)
+    lines = target_point_lines_normalized_distances(outline, target, flip, max_stitch_length)
 
     # create a list of points for each line
     points = get_interpolation_points(lines, line_count, "circular")
@@ -46,13 +46,16 @@ def do_circular_ripple(outline, target, line_count, repeats, max_stitch_length):
     return LineString(coords)
 
 
-def do_linear_ripple(lines, points, target, line_count, repeats):
+def do_linear_ripple(lines, points, target, line_count, repeats, flip):
     if len(lines) == 1:
-        lines = target_point_lines(lines[0], target)
+        lines = target_point_lines(lines[0], target, flip)
     else:
         lines = []
         for start, end in zip(points[0], points[1]):
-            lines.append(LineString([start, end]))
+            if flip:
+                lines.append(LineString([end, start]))
+            else:
+                lines.append(LineString([start, end]))
 
     # get linear points along the lines
     points = get_interpolation_points(lines, line_count)
@@ -86,18 +89,24 @@ def is_closed(line):
     return Point(*coords[0]).distance(Point(*coords[-1])) < 0.05
 
 
-def target_point_lines(outline, target):
+def target_point_lines(outline, target, flip):
     lines = []
     for point in outline.coords:
-        lines.append(LineString([point, target]))
+        if flip:
+            lines.append(LineString([point, target]))
+        else:
+            lines.append(LineString([target, point]))
     return lines
 
 
-def target_point_lines_normalized_distances(outline, target, max_stitch_length):
+def target_point_lines_normalized_distances(outline, target, flip, max_stitch_length):
     lines = []
     outline = running_stitch(line_string_to_point_list(outline), max_stitch_length)
     for point in outline:
-        lines.append(LineString([point, target]))
+        if flip:
+            lines.append(LineString([target, point]))
+        else:
+            lines.append(LineString([point, target]))
     return lines
 
 
