@@ -25,11 +25,11 @@ Dans `Extensions > Ink/Stitch  > Commandes` vous trouverez quatre options: ajout
 
 Ces commandes affectent l’ensemble du motif de broderie.
 
-![origine](/assets/images/docs/visual-commands-origin.jpg) [Origine](#-origine)
+#### ![origine](/assets/images/docs/visual-commands-origin.jpg) [Origine](#-origine)
 
 Spécifie l'origine (point (0,0)) du fichier de broderie. Particulièrement utile pour les personnes qui ont accès à tout l'espace de broderie possible pour leur machine, indépendement du cadre utilisé.
 
-![stop position](/assets/images/docs/visual-commands-stop-position.jpg) [Position d'arrêt](#-stop-position)
+#### ![stop position](/assets/images/docs/visual-commands-stop-position.jpg) [Position d'arrêt](#-stop-position)
 
 La machine à broder déplace l'aiguille jusqu'à ce point avant chaque commande d'attêt. Cela permet entre autre de déplacer le cadre de broderie vers l'utilisateur pour faciliter les étapes d'un appliqué.
 
@@ -37,7 +37,7 @@ La machine à broder déplace l'aiguille jusqu'à ce point avant chaque commande
 
 Ces commandes seront ajoutées au calque sélectionné.
 
-![ignore-layer](/assets/images/docs/visual-commands-ignore-layer.jpg) [Ignorer le calque](#-ignore-layer)
+#### ![ignore-layer](/assets/images/docs/visual-commands-ignore-layer.jpg) [Ignorer le calque](#-ignore-layer)
 
 Aucun objet de ce calque ne sera exporté dans les fichiers de broderie. Cette commande est couramment utilisée dans les fichiers des tutoriels lorsqu'on ne veut pas que Ink/Stitch brode les textes explicatifs.
 
