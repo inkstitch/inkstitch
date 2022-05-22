@@ -1,5 +1,5 @@
 ---
-title: "Cutwork"
+title: "Richelieu"
 permalink: /fr/docs/cutwork/
 excerpt: ""
 last_modified_at: 2022-04-03
