@@ -23,13 +23,15 @@ In `Extensions > Ink/Stitch  > Commands` you will find three options: add comman
 
 These commands effect the entire embroidery design.
 
+### ![origin](/assets/images/docs/visual-commands-origin.jpg) Origin
+
+Specifies the origin (0,0) point for embroidery files. Setting up origins is especially useful for people that have full access to the entire sewing field that their machine is capable of regardless of what hoop they use.
+
+
 ### ![stop position](/assets/images/docs/visual-commands-stop-position.jpg) Stop position
 
 The embroidery machine jumps to this point before every stop command. This allows for pushing the embroidery frame out toward the user to make applique steps easier.
 
-### ![origin](/assets/images/docs/visual-commands-origin.jpg) Origin
-
-Specifies the origin (0,0) point for embroidery files. Setting up origins is especially useful for people that have full access to the entire sewing field that their machine is capable of regardless of what hoop they use.
 
 ## Add Layer Commands ...
 
