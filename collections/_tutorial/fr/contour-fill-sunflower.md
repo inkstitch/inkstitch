@@ -1,9 +1,9 @@
 ---
-title: Remplissage selon contour
+title: Tournesol en Remplissage selon contour
 permalink: /fr/tutorials/contour-fill-sunflower/
 last_modified_at: 2022-05-23
 language: fr
-excerpt: "Fichier exemple pour le remplissage selon contour"
+excerpt: "Utilisation du remplissage par contour pour un tournesol"
 image: "/assets/images/tutorials/tutorial-preview-images/sunflower.jpg"
 
 tutorial-type:
