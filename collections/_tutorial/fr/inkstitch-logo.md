@@ -44,7 +44,7 @@ user-level:
   </div>
 </div>
 
-## Logo  Ink/Stitch digitalisé
+## Logo  Ink/Stitch digitalisé pour la broderie
 <div class="feature__wrapper logo__gallery">
   <div class="feature__item">
     <div class="archive__item-teaser">
