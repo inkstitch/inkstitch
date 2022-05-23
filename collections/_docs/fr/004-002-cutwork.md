@@ -22,7 +22,7 @@ Ink/Stitch contient un outil qui va vous aider à découper vos éléménts selo
 
 * Selectionnez un ou plusieurs objets contour (sans remplissage). 
 * Ouvrir `Extensions > Ink/Stitch > Segmentation Richelieu`
-  ![Cutwork segmentation window](/assets/images/docs/en/cutwork-segmentation.png)
+  ![Cutwork segmentation window](/assets/images/docs/fr/cutwork-segmentation.png)
 * Définir les angles et les couleurs selon les caractéristiques de votre ensemble d'aiguilles.
 * Appliquer.
 
