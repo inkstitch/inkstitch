@@ -9,7 +9,7 @@ image: "/assets/images/tutorials/tutorial-preview-images/contour-fill.jpg"
 tutorial-type:
   - Sample File
 stitch-type: 
-  - ContourFill
+  - Contour Fill
 techniques:
 field-of-use:
 user-level: 
