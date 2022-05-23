@@ -2,26 +2,28 @@
 title: "Richelieu"
 permalink: /fr/docs/cutwork/
 excerpt: ""
-last_modified_at: 2022-04-03
+last_modified_at: 2022-05-23
 toc: true
 ---
 {% include upcoming_release.html %}
 
-En broderie machine "Cutwork" (ou broderie Richelieu) décrit une  technique où des aiguilles spécifiques sont utilisées pour découper des trous dans le tissu. Ces aiguilles sont généralement vendues par quatre. Chaque aiguille peut couper selon un angle qui est dans un intervalle spécifique. Il est donc necessaire de diviser un élément selon les sections d'angle de nos aiguilles.
+En broderie machine Richelieu (cutwork en anglais) décrit une  technique où des aiguilles spécifiques sont utilisées pour découper des trous dans le tissu. Ces aiguilles sont généralement vendues par quatre. Chaque aiguille peut couper selon un angle qui est dans un intervalle spécifique. Il est donc nécessaire de diviser un élément selon les sections d'angle de vos aiguilles.
 
 ## Usage
 
-Ink/Stitch vient avec un outil qui va vous aider à découper vos éléménts selon les angles des aiguilles. c
+Ink/Stitch contient un outil qui va vous aider à découper vos éléménts selon les angles des aiguilles.
 
 * Selectionnez un ou plusieurs objets contour. 
-* Ouvrir `Extensions > Ink/Stitch > Segmentation Cutwork`
+* Ouvrir `Extensions > Ink/Stitch > Segmentation Richelieu`
   ![Cutwork segmentation window](/assets/images/docs/en/cutwork-segmentation.png)
-* Définir les angles et les couleurs selon les besoins de votre ensemble d'aiguilles.
+* Définir les angles et les couleurs selon les caractéristiques de votre ensemble d'aiguilles.
 * Appliquer.
+
+## Exemple de segmentation
 
 ![Un cercle découpé en morceaux par la segmentation Cutwork](/assets/images/docs/cutwork-segmentation.png)
 
-Il sera parfois necessaire de laisser des espaces sur le périmètre du trou, afin que le tissu découpé reste connecté à la pièce principale. Cela empechera la machine de  tirer sur des petits morceaux de tissu découpés.
+Il sera parfois nécessaire de laisser des espaces sur le périmètre du trou, afin que le tissu découpé reste connecté à la pièce principale. Cela empêchera la machine de  tirer sur des petits morceaux de tissu découpés.
 
 **Attention:** Ne pas tourner votre dessin après la segmentation.
 {: .notice--warning }
