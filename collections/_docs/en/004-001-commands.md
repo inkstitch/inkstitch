@@ -50,6 +50,7 @@ These commands will be attached to the currently selected objects.
 Defines the (1) starting or (2) ending point of an fill stitch area.
 
 #### ![ripple stitch target symbol](/assets/images/docs/visual-commands-ripple-target.png) Ripple stitch target position
+{% include upcoming_release.html %}
 
 Defines the target point of a ripple stitch area.
 
