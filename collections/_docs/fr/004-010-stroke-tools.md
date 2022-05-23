@@ -18,7 +18,7 @@ Cette extension cherche à minimiser la longueur des sauts de fil inévitables.
 
 
 ### Usage
-- Sélectionnez des chemins paramétrés en points droits
+- Sélectionnez tous les chemins paramétrés en points droits que vous souhaiter organiser
 - Excutez 'Extensions > Ink/Stitch > Outils : Trait > Agencement automatique  de points droits'
 - Choisir les options désirées et cliquer sur "Appliquer et quitter"
   
