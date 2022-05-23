@@ -15,7 +15,7 @@ This tool will **replace** your set of running stitches  with a new set of runni
 
 ### Usage
 - Select all the running stitches (prepared with parameters)that you wish to organize
-- Run 'Extensions > Ink/Stitch > Tools : Stroke > Auto-Route Running stitch...'
+- Run `Extensions > Ink/Stitch > Tools : Stroke > Auto-Route Running stitch...`
 - Enable desired options and click apply
 
 Tip: By default, it will choose the left-most extreme node as the starting point and the right-most extreme node  as the ending point (even if these are not terminal nodes). You can override this by attaching the "Auto-route running stitch starting/ending position" commands.
