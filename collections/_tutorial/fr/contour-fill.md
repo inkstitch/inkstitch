@@ -22,8 +22,8 @@ Si vous souhaitez remplir une forme de broderie avec un remplissage suivant le c
 <hr>
 Télécharger le [fichier exemple](/assets/images/tutorials/samples/contour-fill.svg){: download="Inkstitch-Contour-Fill.svg" }. 
 
-![Contour Fill File](/assets/images/tutorials/samples/coutour-fill.svg)
- inkstitch/assets/images/tutorials/samples/contour-fill.svg 
+![Contour Fill File](/assets/images/tutorials/samples/contour-fill.svg)
+
 
 
 
