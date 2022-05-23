@@ -2,7 +2,7 @@
 title: Contour Fill
 permalink: /en/tutorials/contour-fill/
 last_modified_at: 2022-05-22
-language: fr
+language: en
 excerpt: "Fichier exemple pour le remplissage selon contour"
 image: "/assets/images/tutorials/tutorial-preview-images/contour-fill.jpg"
 
