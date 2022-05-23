@@ -2,7 +2,7 @@
 title: "Outils: Trait"
 permalink: /fr/docs/stroke-tools/
 excerpt: ""
-last_modified_at: 2022-05-20
+last_modified_at: 2022-05-23
 toc: true
 ---
 
