@@ -52,37 +52,37 @@ user-level:
     </div>
     <div class="archive__item-body">
       <div class="archive__item-excerpt">
-        <p><a href="/assets/images/tutorials/logo/InkStitch_Multi_Color.svg">Ink/Stitch multi color</a></p>
+        <p><a href="/assets/images/tutorials/logo/InkStitch_Multi_Color.svg">Ink/Stitch multicolore</a></p>
       </div>
     </div>
   </div>
   <div class="feature__item">
     <div class="archive__item-teaser">
-      <img src="/assets/images/tutorials/logo/InkStitch_1_Color.svg" alt="Ink/Stitch 1 color">
+      <img src="/assets/images/tutorials/logo/InkStitch_1_Color.svg" alt="Ink/Stitch monochrome">
     </div>
     <div class="archive__item-body">
       <div class="archive__item-excerpt">
-        <p><a href="/assets/images/tutorials/logo/InkStitch_1_Color.svg">Ink/Stitch 1 color</a></p>
+        <p><a href="/assets/images/tutorials/logo/InkStitch_1_Color.svg">Ink/Stitch monochrome</a></p>
       </div>
     </div>
   </div>
   <div class="feature__item">
     <div class="archive__item-teaser">
-      <img src="/assets/images/tutorials/logo/InkStitch_1_Color_Top_Left_Origin.svg" alt="Ink/Stitch 1 color top left origin">
+      <img src="/assets/images/tutorials/logo/InkStitch_1_Color_Top_Left_Origin.svg" alt="Ink/Stitch monochrome, origine en haut à gauche">
     </div>
     <div class="archive__item-body">
       <div class="archive__item-excerpt">
-        <p><a href="/assets/images/tutorials/logo/InkStitch_1_Color_Top_Left_Origin.svg">Ink/Stitch 1 color top left origin</a></p>
+        <p><a href="/assets/images/tutorials/logo/InkStitch_1_Color_Top_Left_Origin.svg">Ink/Stitch monochrome, origine en haut à gauche</a></p>
       </div>
     </div>
   </div>
   <div class="feature__item">
     <div class="archive__item-teaser">
-      <img src="/assets/images/tutorials/logo/InkStitch_Logo_QR_Code_Patch.svg" alt="Ink/Stitch multi color">
+      <img src="/assets/images/tutorials/logo/InkStitch_Logo_QR_Code_Patch.svg" alt="Ink/Stitch QR code">
     </div>
     <div class="archive__item-body">
       <div class="archive__item-excerpt">
-        <p><a href="/assets/images/tutorials/logo/logo/InkStitch_Logo_QR_Code_Patch.svg">Ink/Stitch QR Code</a></p>
+        <p><a href="/assets/images/tutorials/logo/logo/InkStitch_Logo_QR_Code_Patch.svg"> QR Code Ink/Stitch</a></p>
       </div>
     </div>
   </div>
@@ -98,7 +98,7 @@ user-level:
   </div>
 </div>
 
-## Ink/Stitch Branding Quickguide
+## Chartre graphique Ink/Stitch 
 
 ![1 Color](/assets/images/tutorials/logo/inkstitch_branding_quickguide.svg)
 
