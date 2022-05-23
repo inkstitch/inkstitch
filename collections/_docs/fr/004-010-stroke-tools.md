@@ -24,7 +24,6 @@ Cette extension cherche à minimiser la longueur des sauts de fil inévitables.
   
 Par défaut, l'extension choisira de commencer par le noeud le plus à gauche et de terminer par le noeud le plus à droite même si ces noeuds ne sont pas des noeuds terminaux. Vous pouvez attacher les commandes " Début/Fin d'agencement automatique de point droit" pour forcer les positions de début et de fin.
 
-{: .notice--info }
 
 ### Options
 
