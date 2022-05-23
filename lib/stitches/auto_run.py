@@ -132,7 +132,7 @@ def autorun(elements, preserve_order=False, break_up=None, starting_point=None, 
     else:
         parent = elements[0].node.getparent()
         insert_index = parent.index(elements[0].node)
-        group = create_new_group(parent, insert_index, _("Auto-Run"))
+        group = create_new_group(parent, insert_index, _("Auto-Route"))
         add_elements_to_group(new_elements, group)
 
     if trim:

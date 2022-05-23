@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <name>Autoroute Running Stitch</name>
+    <name>Auto-Route Running Stitch</name>
     <id>org.inkstitch.auto_run</id>
     <param name="extension" type="string" gui-hidden="true">auto_run</param>
     <effect>
@@ -12,7 +12,7 @@
         </effects-menu>
     </effect>
     <param name="options" type="notebook">
-      <page name="options" gui-text="Autoroute Running Stitch Options">
+      <page name="options" gui-text="Auto-Route Running Stitch Options">
           <spacer />
           <param name="break_up" type="boolean" gui-text="Add nodes at intersections">true</param>
           <spacer />
@@ -21,7 +21,7 @@
           <param name="trim" type="boolean" gui-text="Trim jump stitches">false</param>
       </page>
       <page name="help" gui-text="Help">
-          <label appearance="header">Autoroute Running Stitch</label>
+          <label appearance="header">Auto-Route Running Stitch</label>
           <label>Add nodes at intersections:</label>
           <spacer />
           <label indent="1">- Enabled (automatic). Ink/Stitch will add some nodes for better routing. This is the default setting.</label>
