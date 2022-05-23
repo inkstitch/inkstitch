@@ -37,9 +37,9 @@ Lancez `Extensions > Ink/Stitch  > Paramètres`. Choisir "Remplissage selon le c
 
 Lisez les informations détaillées dans la section  [Guided Fill Params](/docs/params/#guided-fill-params).
 
-## Underlay
+## Sous couche
 
-La sous-couche de remplissage guidé par un chemin n'est pas guidé par le chemin, mais utilise l'angle de remplissage qui peut être défini dans les 
+La sous-couche du remplissage guidé par un chemin n'est pas guidé par le chemin, mais utilise l'angle de remplissage qui peut être défini dans les 
 [paramètres](/docs/params/#fill-underlay) de la sous-couche.
 ##  Exemple de fichiers qui utilisent le remplissage guidé par un chemin
 {% include tutorials/tutorial_list key="stitch-type" value="Guided Fill" %}
