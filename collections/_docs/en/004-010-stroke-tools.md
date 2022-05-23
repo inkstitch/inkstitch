@@ -14,7 +14,7 @@ Auto-Route Running Stitch..
 This tool will **replace** your set of running stitches  with a new set of running stitches in logical stitching order avoiding as many jumps as possible . Under-pathing  will be added as necessary  . The resulting running stitches will retain all of the parameters you had set on the original stitches including stitch length, number of repeats, bean stitch number of repeats, etc. Underpaths will only retain the stitch length, but will be set to only one  repeat and no bean stitch number of repeats.
 
 ### Usage
-- Select running stitches (prepared with parameters)
+- Select all the running stitches (prepared with parameters)that you wish to organize
 - Run 'Extensions > Ink/Stitch > Tools : Stroke > Auto-Route Running stitch...'
 - Enable desired options and click apply
 
