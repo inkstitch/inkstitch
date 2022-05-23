@@ -34,5 +34,5 @@ Lisez les informations détaillées dans la section  [Paramètres de remplissage
 La sous-couche de remplissage selon le contour ne suit pas le contour, mais utilise l'angle de remplissage qui peut être défini dans les 
 [paramètres](/docs/params/#fill-underlay) de la sous-couche.
 
-## Exemple de fichiers qui utilisent le remplissage suivant le contour
+## Exemples de fichier qui utilisent le remplissage suivant le contour
 {% include tutorials/tutorial_list key="stitch-type" value="Contour Fill" %}
