@@ -1,6 +1,6 @@
 {
     "name": "Sortefax XL Initials",
-    "description": " Sortefax is a very large satin stitch Capital font of size 150mm.  It can be reduced down to 75% and enlarged up to 200% . It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten  glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; )to obtain a framed Capital or Number. Warning : for a few large letters you will need to manually enlarge the frame",
+    "description": " Sortefax is a very large satin stitch Capital font of size 150mm.  It can be reduced down to 75% and enlarged up to 200%  It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; )  to obtain a framed Capital or Number. Warning: for a few large letters you will need to manually enlarge the frame",
 	"leading": 950,
     "auto_satin": false,
     "reversible": false,
