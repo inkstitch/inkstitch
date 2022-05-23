@@ -18,7 +18,7 @@ Il sera parfois nécessaire de laisser des espaces sur le périmètre du trou, a
 
 ## Usage
 
-Ink/Stitch contient un outil qui va vous aider à découper vos éléménts selon les angles des aiguilles.
+Ink/Stitch contient un outil qui va vous aider à découper vos éléments selon les angles des aiguilles.
 
 * Selectionnez un ou plusieurs objets contour (sans remplissage). 
 * Ouvrir `Extensions > Ink/Stitch > Segmentation Richelieu`
