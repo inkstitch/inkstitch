@@ -1,7 +1,7 @@
 ---
 title: "Ink/Stitch Logo & Branding Guide"
 permalink: /fr/tutorials/resources/inkstitch-logo/
-last_modified_at: 2018-06-20
+last_modified_at: 2022-05-23
 language: fr
 excerpt: "Ink/Stitch logo as SVG file, digitized version and branding guide."
 toc: true
@@ -19,7 +19,7 @@ techniques:
 field-of-use:
 user-level: 
 ---
-## Ink/Stitch Logo
+## Logo Ink/Stitch 
 
 <div class="feature__wrapper logo__gallery">
   <div class="feature__item">
@@ -44,8 +44,7 @@ user-level:
   </div>
 </div>
 
-## Digitized Ink/Stitch Logo
-
+## Logo  Ink/Stitch digitalisé
 <div class="feature__wrapper logo__gallery">
   <div class="feature__item">
     <div class="archive__item-teaser">
