@@ -67,6 +67,7 @@ inkstitch_attribs = [
     'skip_start',
     'skip_end',
     'render_grid',
+    'exponent',
     'expand_mm',
     'fill_underlay',
     'fill_underlay_angle',

@@ -164,6 +164,18 @@ class Stroke(EmbroideryElement):
         return abs(self.get_float_param("render_grid", 0))
 
     @property
+    @param('exponent',
+           _('Line distance exponent'),
+           tooltip=_('Increse density towards one side.'),
+           type='float',
+           default=1,
+           select_items=[('stroke_method', 1)],
+           sort_index=9)
+    @cache
+    def exponent(self):
+        return max(self.get_float_param("exponent", 1), 0.1)
+
+    @property
     @param('zigzag_spacing_mm',
            _('Zig-zag spacing (peak-to-peak)'),
            tooltip=_('Length of stitches in zig-zag mode.'),
@@ -323,7 +335,8 @@ class Stroke(EmbroideryElement):
                     self.flip,
                     self.skip_start,
                     self.skip_end,
-                    self.render_grid))
+                    self.render_grid,
+                    self.exponent))
             if patch:
                 if self.bean_stitch_repeats > 0:
                     patch.stitches = self.do_bean_repeats(patch.stitches)

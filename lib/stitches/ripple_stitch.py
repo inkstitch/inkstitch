@@ -6,7 +6,7 @@ from ..utils.geometry import line_string_to_point_list
 from .running_stitch import running_stitch
 
 
-def ripple_stitch(lines, target, line_count, points, max_stitch_length, repeats, flip, skip_start, skip_end, render_grid):
+def ripple_stitch(lines, target, line_count, points, max_stitch_length, repeats, flip, skip_start, skip_end, render_grid, exponent):
     '''
     Ripple stitch is allowed to cross itself and doesn't care about an equal distance of lines
     It is meant to be used with light (not dense) stitching
@@ -25,19 +25,19 @@ def ripple_stitch(lines, target, line_count, points, max_stitch_length, repeats,
         skip_start = skip_end = 0
 
     if is_closed(outline):
-        rippled_line = do_circular_ripple(outline, target, line_count, repeats, flip, max_stitch_length, skip_start, skip_end)
+        rippled_line = do_circular_ripple(outline, target, line_count, repeats, flip, max_stitch_length, skip_start, skip_end, exponent)
     else:
-        rippled_line = do_linear_ripple(lines, points, target, line_count - 1, repeats, flip, skip_start, skip_end, render_grid)
+        rippled_line = do_linear_ripple(lines, points, target, line_count - 1, repeats, flip, skip_start, skip_end, render_grid, exponent)
 
     return running_stitch(line_string_to_point_list(rippled_line), max_stitch_length)
 
 
-def do_circular_ripple(outline, target, line_count, repeats, flip, max_stitch_length, skip_start, skip_end):
+def do_circular_ripple(outline, target, line_count, repeats, flip, max_stitch_length, skip_start, skip_end, exponent):
     # for each point generate a line going to the target point
     lines = target_point_lines_normalized_distances(outline, target, flip, max_stitch_length)
 
     # create a list of points for each line
-    points = get_interpolation_points(lines, line_count, "circular")
+    points = get_interpolation_points(lines, line_count, exponent, "circular")
 
     # connect the lines to a spiral towards the target
     coords = []
@@ -50,7 +50,7 @@ def do_circular_ripple(outline, target, line_count, repeats, flip, max_stitch_le
     return LineString(coords)
 
 
-def do_linear_ripple(lines, points, target, line_count, repeats, flip, skip_start, skip_end, render_grid):
+def do_linear_ripple(lines, points, target, line_count, repeats, flip, skip_start, skip_end, render_grid, exponent):
     if len(lines) == 1:
         helper_lines = target_point_lines(lines[0], target, flip)
     else:
@@ -62,7 +62,7 @@ def do_linear_ripple(lines, points, target, line_count, repeats, flip, skip_star
                 helper_lines.append(LineString([start, end]))
 
     # get linear points along the lines
-    points = get_interpolation_points(helper_lines, line_count)
+    points = get_interpolation_points(helper_lines, line_count, exponent)
 
     # go back and forth along the lines - flip direction of every second line
     coords = []
@@ -126,27 +126,38 @@ def target_point_lines_normalized_distances(outline, target, flip, max_stitch_le
     return lines
 
 
-def get_interpolation_points(lines, line_count, method="linear"):
+def get_interpolation_points(lines, line_count, exponent, method="linear"):
     new_points = defaultdict(list)
     count = len(lines) - 1
     for i, line in enumerate(lines):
-        segment_length = line.length / line_count
+        steps = get_steps(line, line_count, exponent)
         distance = -1
         points = []
         for j in range(line_count):
-            if distance == -1 and method == "circular":
-                # the first line makes sure, it is going to be a spiral
-                distance = segment_length - (segment_length * ((count - i) / count))
-            elif distance == -1:
-                # first line along the outline
-                distance = 0
+            length = line.length * steps[j]
+            if method == "circular":
+                if distance == -1:
+                    # the first line makes sure, it is going to be a spiral
+                    distance = (line.length * steps[j+1]) * (i / count)
+                else:
+                    distance += length - (line.length * steps[j-1])
             else:
-                distance += segment_length
+                distance = line.length * steps[j]
             points.append(line.interpolate(distance))
         if method == "linear":
             points.append(Point(*line.coords[-1]))
         new_points[i] = points
     return new_points
+
+
+def get_steps(line, total_lines, exponent):
+    # get_steps is scribbled from the inkscape interpolate extension
+    # (https://gitlab.com/inkscape/extensions/-/blob/master/interp.py)
+    steps = [
+        ((i + 1) / (total_lines)) ** exponent
+        for i in range(total_lines - 1)
+    ]
+    return [0] + steps + [1]
 
 
 def repeat_coords(coords, repeats):
