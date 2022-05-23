@@ -9,21 +9,23 @@ toc: true
 
 En broderie machine Richelieu (cutwork en anglais) décrit une  technique où des aiguilles spécifiques sont utilisées pour découper des trous dans le tissu. Ces aiguilles sont généralement vendues par quatre. Chaque aiguille peut couper selon un angle qui est dans un intervalle spécifique. Il est donc nécessaire de diviser un élément selon les sections d'angle de vos aiguilles.
 
+## Exemple de segmentation
+
+![Un cercle découpé en morceaux par la segmentation Cutwork](/assets/images/docs/cutwork-segmentation.png)
+
+Il sera parfois nécessaire de laisser des espaces sur le périmètre du trou, afin que le tissu découpé reste connecté à la pièce principale. Cela empêchera la machine de  tirer sur des petits morceaux de tissu découpés, causant des problèmes à l'exécution.
+
+
 ## Usage
 
 Ink/Stitch contient un outil qui va vous aider à découper vos éléménts selon les angles des aiguilles.
 
-* Selectionnez un ou plusieurs objets contour. 
+* Selectionnez un ou plusieurs objets contour (sans remplissage). 
 * Ouvrir `Extensions > Ink/Stitch > Segmentation Richelieu`
   ![Cutwork segmentation window](/assets/images/docs/en/cutwork-segmentation.png)
 * Définir les angles et les couleurs selon les caractéristiques de votre ensemble d'aiguilles.
 * Appliquer.
 
-## Exemple de segmentation
-
-![Un cercle découpé en morceaux par la segmentation Cutwork](/assets/images/docs/cutwork-segmentation.png)
-
-Il sera parfois nécessaire de laisser des espaces sur le périmètre du trou, afin que le tissu découpé reste connecté à la pièce principale. Cela empêchera la machine de  tirer sur des petits morceaux de tissu découpés.
 
 **Attention:** Ne pas tourner votre dessin après la segmentation.
 {: .notice--warning }
