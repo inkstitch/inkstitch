@@ -16,13 +16,13 @@ user-level:
 ---
 
 Si vous souhaitez remplir une forme de broderie avec un remplissage suivant le contour, vous avez plusieurs solutions de remplissage.
-![Satin Edges Real](/assets/images/tutorials/tutorial-preview-images/contour-fill.jpg)
+![Contour Fill](/assets/images/tutorials/tutorial-preview-images/contour-fill.jpg)
+
 
 <hr>
 Télécharger le [fichier exemple](/assets/images/tutorials/samples/contour-fill.svg){: download="Inkstitch-Contour-Fill.svg" }. 
 
-
-![Contour Fill](/assets/images/tutorials/samples/contour-fill.svg)
+![Contour Fill File](/assets/images/tutorials/samples/contour-fill.svg)
 
 <hr>
 
