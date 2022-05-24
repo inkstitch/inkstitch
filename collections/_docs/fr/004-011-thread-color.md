@@ -2,7 +2,7 @@
 title: "Gestion des couleurs de fil"
 permalink: /fr/docs/thread-color/
 excerpt: ""
-last_modified_at: 2022-04-03
+last_modified_at: 2022-05-24
 toc: true
 ---
 ## Importer une liste de fils
@@ -66,20 +66,21 @@ Cette extension exportera les couleur d'éléments textuels tout en utilisant le
 2. Activezl'outil texte et copier/collet les noms de couleurs (si vous les avez) ou saisissez les.
    Utilisez une ligne par couleur.
    Si un nom de couleur se termine par un nombre, ce nombre sera utilisé pour cette couleur dans le catalogue.
-3. Utilisez `Extensions > Ink/Stitch > Gestion des couleurs de fils > Generer une palette de couleurs > Diviser le texte` pour diviser un bloc de texte avec plusieurs lignes en plusieurs éléments textuels séparés. 
+3. Utilisez `Extensions > Ink/Stitch > Gestion des couleurs de fil > Generer  palette  > Séparer le texte` pour séparer un bloc de texte avec plusieurs lignes en plusieurs éléments textuels séparés. 
 4. Activez l'outil pipette (D) et colorez les éléments textuels, en utilisant les tabulation pour passer de l'un à l'autre.
-5. Selectionnez les éléments textuels et  `Extensions > Ink/Stitch > Gestion des couleurs de fil > Generer une palette de couleurs > Generer une palette de couleurs...`
+5. Selectionnez les éléments textuels et  `Extensions > Ink/Stitch > Gestion des couleurs de fil > Generer palette  > Generer  palette de couleurs...`
 6. Specifiez le nom de votre palette de couleurs et cliquez sur Appliquer
 
 {% include video id="4bcRVoKvzAw" provider="youtube" %}
 
-## Palette to Text
+## Palette vers texte
 
 {% include upcoming_release.html %}
 
-Existing palettes can be edited with Ink/Stitch as text.
+Ink/Stitch peut éditer des palettes existantes comme du texte.
 
-* Import colors and color names with `Extensions > Ink/Stitch > Thread Color Management > Palette to Text`
-* Change colors, update color names or catalog numbers or add more colors.
-* Export your palette with `Extensions > Ink/Stitch > Thread Color Management > Generate Palette > Generate Color Palette ...`
-* Restart Inkscape
+- Importer les couleurs et les noms de couleurs avec `Extensions > Ink/Stitch > Gestion des couleurs de fil > Palette vers Texte`
+- Changer les couleurs, mettre à jour les noms de couleurs ou les numeros de couleus ou ajouter des couleurs
+- Exporter votre pallette avec  `Extensions > Ink/Stitch >  Gestion des couleurs de fil > Generer palette > Generate palette de couleurs...`
+- Redémarrer Inkscape
+
