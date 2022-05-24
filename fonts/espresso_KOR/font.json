@@ -1,11 +1,11 @@
 {
     "name": "Espresso KOR",
-    "description": "The capital M is 16.2 mm high at 100 scale. Every satin has zigzag underlay. x is 11.5 mm high, q is 17.5 mm high, l is 17.2 mm high.",
+    "description": "The capital M is 16.2 mm high at 100 scale. Every satin has zigzag underlay. x is 11.5 mm high, q is 17.5 mm high, l is 17.2 mm high. The font may be scaled up to 200% and down to 80%",
     "leading": 100,
     "auto_satin": false,
     "reversible": true,
     "default_glyph": " ",
-    "min_scale": 1.0,
+    "min_scale": 0.8,
     "max_scale": 2.0,
     "horiz_adv_x_default": 45,
     "horiz_adv_x_space": 22,
