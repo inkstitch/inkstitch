@@ -741,13 +741,15 @@ class SatinColumn(EmbroideryElement):
     def do_contour_underlay(self):
         # "contour walk" underlay: do stitches up one side and down the
         # other.
-        forward, back = self.plot_points_on_rails(self.contour_underlay_stitch_length,
-                                                  -self.contour_underlay_inset)
+        forward, back = self.plot_points_on_rails(self.contour_underlay_stitch_length, -self.contour_underlay_inset)
+        stitches = (forward + list(reversed(back)))
+        if self.center_walk_underlay_repeats % 2 == 1:
+            stitches = (list(reversed(back)) + forward)
 
         return StitchGroup(
             color=self.color,
             tags=("satin_column", "satin_column_underlay", "satin_contour_underlay"),
-            stitches=(forward + list(reversed(back))))
+            stitches=stitches)
 
     def do_center_walk(self):
         # Center walk underlay is just a running stitch down and back on the
@@ -783,6 +785,9 @@ class SatinColumn(EmbroideryElement):
 
         sides = self.plot_points_on_rails(self.zigzag_underlay_spacing / 2.0,
                                           -self.zigzag_underlay_inset)
+
+        if self.center_walk_underlay_repeats % 2:
+            sides = [list(reversed(sides[0])), list(reversed(sides[1]))]
 
         # This organizes the points in each side in the order that they'll be
         # visited.
