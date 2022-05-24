@@ -1,15 +1,15 @@
 ---
 title: "Brockscript"
 permalink: /de/fonts/brockscript/
-last_modified_at: 2022-05-04
+last_modified_at: 2022-05-24
 toc: false
 preview_image: /assets/images/fonts/brockscript.png
 ---
 ![Brockscript](/assets/images/fonts/brockscript.png)
 
-## Glyphs
+## Schriftzeichen
 
-This font contains the 119	glyphs :
+Diese Schrift enthält 119 Schriftzeichen:
 !"&'(),-./
 0123456789
 :;=?@ABCDE
@@ -23,27 +23,25 @@ tuvwxyz{}~
 èéêëìíîïñò
 óôõöùúûüµ
 
-## Dimensions
+## Maße
 
-At 100%, this font  is  approximatively 40 mm (1.5  inch) high.
-
-It may be  scaled up to 250% (approx:  100 mm 4 inches)  but may not be scaled down.
-
-## Too  christmassy for you ?
-The µ  glyph has been hacked to store this embroidery ![Brockscript](/assets/images/fonts/brockscriptmu.png)
-that contain 4 alternatives to the holly. 
-
-The replacement is up to you, but it is easy in inkscape.
-
-You could also just skip the holly or replace it by any small drawing of your choice.
-
-And if you do not know how to access µ from your keyboard,  copy it from here and paste it in the lettering  dialog window.
+Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 40 mm hoch (1.5 Zoll)
+Sie kann bis auf 250% (~100mm, 4 Zoll) hochskaliert werden, aber NICHT herunterskaliert.
 
 
+## Zu Weihnachtlich?
+Das µ-Zeichen wurde gehackt, um diese 4 Alternativen Mini-Motive zur Stechpalme zu speichern ![Brockscript](/assets/images/fonts/brockscriptmu.png). 
 
-## In real life
+Der Austausch ist beliebig möglich, und mit etwas Inkscape-Übung gut zu meistern.
 
-Brockscript may be used on a Towel ,or a  T shirt, or as an ornament:
+Du könntest die Stechpalme auch einfach weglassen oder durch eine beliebige kleine Zeichnung deiner Wahl ersetzen.
+
+Und wenn du nicht weißt wie man per Tastatur zum µ kommt, kopiere es von hier in das Inkstitch-Textmodul Dialogfenster.
+
+
+
+## Gestickte Beispiele
+Hier wurde Brockscript auf einem Handtuch, einem T-Shirt oder als Verzierung verwendet:
 
 {% include folder-galleries path="fonts/brockscript/" %}
 
