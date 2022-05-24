@@ -1,7 +1,7 @@
 ---
 title: "Espresso KOR"
 permalink: /de/fonts/espresso_dolce/
-last_modified_at: 2022-05-04
+last_modified_at: 2022-05-24
 toc: false
 preview_image:
   - /assets/images/fonts/espresso_dolce.png
@@ -11,8 +11,8 @@ preview_image:
 ![Espresso tiny](/assets/images/fonts/espresso_tiny.png)
 
 
-## Glyphs
-This font  contains  113 glyphes :
+## Schriftzeichen
+Diese Schrift enthält folgende 113 Schriftzeichen:
 
 !%@()*+,-.
 /012345678
@@ -27,29 +27,29 @@ vwxyz«'°’»×
 ïôö÷ùûüœßÜ
 ÖÄ
 
-## Remark
-Multiline text may be embroidered alternatively from left to right and  right to left.
-## Dimensions
+## Anmerkung
+Diese Schrift kann mit der [Option](https://inkstitch.org/de/docs/lettering/#optionen) 'Sticke Textzeilen vor und zurück" verwendet werden: eine mehrzeilige Stickerei kann von links nach rechts, rechts nach links usw. gestickt werden.
 
-At 100%, this font is approximatively  20 mm  (0.8 inch) tall.
+## Maße
 
-It may be scaled up to  200% (approx 40 mm, 1.5 inch) or down to 80% (approx 16mm 0.7 inch).
+Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 20 mm hoch (0.8 Zoll).
+Sie kann bis auf 200% (~40mm, 1.5 Zoll) hochskaliert und bis zu 80% (~16mm, 0.7 Zoll) herunterskaliert werden.
+
 
 ![Dimensions Espresso](/assets/images/fonts/Sizing/espressosizing.jpg)
 
-Don't try to scale it further down.
+Bitte nicht versuchen die Schrift kleiner zu Sticken, das kann zu Nadelbrüchen, Fadennestern, hässlichem Stickbild und anderen Unannehmlichkeiten führen. 
 
-Espresso tiny  (it is part of an upcoming Ink/Stitch version and not available in Ink/Stitch v2.1.2) is a variation of this font with different embroidery settings. Pull compensation, density and underlays are different to allow to scale down between 55% (12 mm, 0.4 inch) and 25% (5mm ,1/5 inch). 
+Espresso tiny (ist Teil einer kommenden Ink/Stitch-Version und in Ink/Stitch v2.1.2 nicht verfügbar) ist eine Variante dieser Schriftart mit unterschiedlichen Stickeinstellungen. Zugausgleich, Dichte und Unterlage sind unterschiedlich, um eine Skalierung zwischen 55% (12 mm, 0.4 inch) und 25% (5mm, 1/5 inch) zu ermöglichen.
 
-That's why in the lettering dialog window, if using Espresso tiny, you will have to pick up a scale between 25 and 55%. 
+Deshalb müssen Sie im Dialogfenster des Text-Moduls für die Nutzung von Espresso tiny eine Skalierung zwischen 25 und 55% wählen.
 
-Contrarly to Espresso KOR, Espresso tiny   **MUST** be embroidered with thread and needle smaller than usual.
-A USA 8 (EUR 60) size needle, and 60WT thread **MUST** be used.
+Im Gegensatz zu Espresso KOR **MUSS** diese verkleinerte Schrift mit einem dünneren Faden und einer dünneren Nadel als üblich gestickt werden. Es **MUSS** eine Nadel der Größe 8 (USA), 60(EUR) und ein Garn 60WT verwendet werden.
 
 
-## In real life
+## Gestickte Beispiele
 
-Espresso KOR used  on a child T shirt
+Espresso KOR auf einem Kinder-T-shirt
 
 {% include folder-galleries path="fonts/espresso_KOR/" %}
 
