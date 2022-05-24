@@ -882,6 +882,8 @@ class SatinColumn(EmbroideryElement):
                 for point in points:
                     patch.add_stitch(point)
                     patch.stitches[-1].add_tags(("satin_column", "satin_split_stitch"))
+        if self.center_walk_underlay_repeats % 2 == 1:
+            patch.stitches = list(reversed(patch.stitches))
         return patch
 
     def _get_split_points(self, left, right, max_stitch_length, count=None):
