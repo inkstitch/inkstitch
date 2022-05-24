@@ -96,7 +96,7 @@ docs:
       url: /de/docs/fill-tools/
     - title: "Schriftverwaltung"
       url: /de/docs/font-tools/
-    - title: Lettering
+    - title: Text-Modul
       url: /de/docs/lettering/
     - title: Parameter
       url: /de/docs/params/
