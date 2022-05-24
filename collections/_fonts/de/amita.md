@@ -36,7 +36,7 @@ Man kann sie bis zu 200% (ca. 60 mm) vergrößern oder auf 80% (ca. 24  mm) verk
 
 ![Dimensions Amitaclo](/assets/images/fonts/Sizing/amitaclosizing.jpg)
 
-Bitte nicht versuchen die Schrift kleiner zu Sticken, das kann zu Nadelbrüchen, Fadennestern, hässlichem Stickbild und anderen Unannehmlichkeiten führen. 
+Bitte nicht versuchen die Schrift kleiner zu Sticken, dass kann zu Nadelbrüchen, Fadennestern, hässlichem Stickbild und anderen Unannehmlichkeiten führen. 
 
 Die Schrift Amitaclo small (Diese Schrift wird in einer zukünftigen Version von Ink/Stitch erscheinen und ist in Ink/Stitch v2.1.2 nicht verfügbar.) ist eine Abwandlung dieser Schrift mit anderen Stickparametern. Die Dichte, die Kompensation und die Unterlage wurden geändert, damit diese Schrift in kleineren Größen gestickt werden kann.
 
