@@ -1,7 +1,7 @@
 ---
 title: "Chopin Script"
 permalink: /de/fonts/chopin/
-last_modified_at: 2022-05-04
+last_modified_at: 2022-05-24
 toc: false
 preview_image: /assets/images/fonts/chopin_script.png
 ---
