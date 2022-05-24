@@ -11,10 +11,7 @@ Vous pouvez accelerer votre travail sous Ink/Stitch en utilisant des raccourcis 
 
 La liste suivante décrit les raccourcis claviers qui sont définis dans le fichier à télécharger ci-dessous.
 
-Certains de ces raccourcis remplacent des raccourcis natifs d'Inkscape. Dans le tableau ci dessous vous pouvez voir quels sont ces raccourcis et  comment continuer à acceder à ces fonctions.
-
-
-{: .notice--warning }
+Certains de ces raccourcis remplacent des raccourcis natifs d'Inkscape. Dans le tableau ci dessous vous pouvez voir quels sont ces raccourcis et  comment continuer à acceder à ces fonctions. {: .notice--warning }
 
 Raccourcis&nbsp;Clavier | Effet | Remplace
 -------- | --------
