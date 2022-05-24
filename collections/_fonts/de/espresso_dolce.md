@@ -38,7 +38,7 @@ Sie kann bis auf 200% (~40mm, 1.5 Zoll) hochskaliert und bis zu 80% (~16mm, 0.7 
 
 ![Dimensions Espresso](/assets/images/fonts/Sizing/espressosizing.jpg)
 
-Bitte nicht versuchen die Schrift kleiner zu Sticken, das kann zu Nadelbrüchen, Fadennestern, hässlichem Stickbild und anderen Unannehmlichkeiten führen. 
+Bitte nicht versuchen die Schrift kleiner zu Sticken, dass kann zu Nadelbrüchen, Fadennestern, hässlichem Stickbild und anderen Unannehmlichkeiten führen. 
 
 Espresso tiny (ist Teil einer kommenden Ink/Stitch-Version und in Ink/Stitch v2.1.2 nicht verfügbar) ist eine Variante dieser Schriftart mit unterschiedlichen Stickeinstellungen. Zugausgleich, Dichte und Unterlage sind unterschiedlich, um eine Skalierung zwischen 55% (12 mm, 0.4 inch) und 25% (5mm, 1/5 inch) zu ermöglichen.
 
