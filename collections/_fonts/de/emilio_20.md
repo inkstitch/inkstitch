@@ -1,7 +1,7 @@
 ---
 title: "Emilio 20"
 permalink: /de/fonts/emilio-20/
-last_modified_at: 2022-05-04
+last_modified_at: 2022-05-24
 toc: false
 preview_image: 
   - /assets/images/fonts/emilio_20.png
@@ -10,27 +10,26 @@ preview_image:
 ![Emilio 20](/assets/images/fonts/emilio_20.png)
 ![Emilio 20 Tricolore](/assets/images/fonts/emilio20tricolore.png)
 
-## Glyphs
-Both fonts contains 36 glyphs:
+## Schriftzeichen
+
+Beide Schriften enthalten 36 Schriftzeichen:
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
 
-## Dimensions
+## Maße
 
 ###  Emilio 20
-
-At 100%, this font is approximatively  50 mm (2 inches) high.
-It can be scaled up to  140% (approx. 70mm, 2.8 inches)  or scaled  jusqu'à 70% (approx. 35 mm , 1.5 inchs).
+Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 50 mm hoch (2 Zoll)
+Sie kann bis auf 140% (~70mm, 2.8 Zoll) hochskaliert und bis zu 70% (~35mm, 1.5 Zoll) herunterskaliert werden.
 
 ### Emilio 20 Tricolore
+Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 100 mm hoch (4 Zoll)
+Sie kann bis auf 120% (~120mm, 5 Zoll) hochskaliert und bis zu 90% (~90mm, 3.5 Zoll) herunterskaliert werden.
 
-At 100%, this font is approximatively 100mm (4 inches)
-It may be scaled  up to 120% (approx. 120 mm, 5 inches) or scaled down to 90% (approx.en 90 mm, 3.5 inches).
 
+## Sortieren der Farben 
+Wenn man mehrere Buchstaben sticken möchte, kann man die Farben sortieren. Das ist möglich, man muss aber die relative Reihenfolge innerhalb der einzelnen Buchstaben beachten. [So geht's](https://inkstitch.org/de/docs/lettering/#sortierung-von-farben)
 
-## Color sorting
-If you embroider several letters, you may wish to color sort. It is possible, providing the sorting respects the relative order inside each letter. [This is a way to do it](https://inkstitch.org/en/docs/lettering/#color-sorting)
-
-## In real life
+## Gestickte Beispiele
 {% include folder-galleries path="fonts/emilio-20/" %}
 
 
