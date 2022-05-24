@@ -33,7 +33,7 @@ Tastenkürzel | Effekt | Ersetzt
 <key>Strg</key><key>⇧</key><key>B</key> | Satinkolumne schneiden (B ist in der Hälfte geschnitten) | Pfad > Vereinigen (nutze stattdessen Strg++)
 <key>Strg</key><key>⇧</key><key>*</key> | Automatisch geführte Satinkolumne (\* bringt Ordnung)
 
-The Ink/Stitch [simulator](/docs/visualize/#simulation-shortcut-keys) also provides shortcut keys.
+Im Ink/Stitch [simulator](/docs/visualize/#simulation-shortcut-keys) gibt es auch Tastenkürzel.
 
 \* Anheben und Absenken gibt genaue Kontrolle darüber, in welcher Reihenfolge Objekte gestickt werden (von unten nach oben). Das ist sehr nützlich in Verbindung mit dem Objekt-Dialog (`Objekt > Ebenen und Objekte ...`).<br><br>** Für Satin- und Laufstiche ändert dies die Stickrichtung. Nutze dies mit der Einstellung `Zeige Pfadrichtung an Außenlinien` unter `Bearbeiten > Einstellungen > Werkzeuge > Knoten`. Wenn du nur einen Knoten mit dem Knotenwerkzeug auswählst und `Strg+R` drückst, kehrt sich nur der ausgewählte Unterpfad um. Auf diesem Wege kannst du sicherstellen, dass beide Schienen der Satinkolumne in die gleiche Richtung zeigen.
 {: .notice--info }
@@ -90,7 +90,7 @@ Das Benutzerverzeichnis für Erweiterungen kann in den Inkscape Einstellungen ü
 **Tip:** Hier gibt es [Vorlagen](/de/tutorials/resources/templates/) die du nutzen kannst.
 {: .notice--info }
 
-## Farbpaletten für Insckape installieren
+## Farbpaletten für Inscape installieren
 
 Ink/Stitch enthält viele Farbpaletten der üblichen Garnhersteller. Diese können installiert werden, damit sie in Inkscape nutzbar sind.
 Das erlaubt dir dein Design mit den richtigen Farben zu planen. Die Farben werden in die PDF-Ausgabe übernommen und auch in der Stickdatei abgespeichert, sofern dein Stickformat dies unterstützt.
