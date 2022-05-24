@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-05-21 01:55+0000\n"
-"PO-Revision-Date: 2022-05-22 02:21\n"
+"PO-Revision-Date: 2022-05-24 02:25\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -629,43 +629,43 @@ msgstr "Le paramètre Décalage de sous-couche pour le remplissage de cet objet 
 
 #: lib/elements/fill_stitch.py:46
 msgid "Missing Guideline"
-msgstr ""
+msgstr "Ligne de guidage manquante"
 
 #: lib/elements/fill_stitch.py:47
 msgid "This object is set to \"Guided Fill\", but has no guide line."
-msgstr ""
+msgstr "Cet objet est paramétré à \"Remplissage Guidé\", mais il n'y a aucune ligne de guidage."
 
 #: lib/elements/fill_stitch.py:49
 msgid "* Create a stroke object"
-msgstr ""
+msgstr "Créez une ligne de guidage (objet de trait/contour)"
 
 #: lib/elements/fill_stitch.py:50
 msgid "* Select this object and run Extensions > Ink/Stitch > Edit > Selection to guide line"
-msgstr ""
+msgstr "* Sélectionnez cet objet et exécutez Extensions > Ink/Stitch > Édition > Sélection vers ligne de guidage"
 
 #: lib/elements/fill_stitch.py:55
 msgid "Disjointed Guide Line"
-msgstr ""
+msgstr "Ligne de guidage disjointe"
 
 #: lib/elements/fill_stitch.py:56
 msgid "The guide line of this object isn't within the object borders. The guide line works best, if it is within the target element."
-msgstr ""
+msgstr "La ligne de guidage de cet objet n'est pas dans les limites de l'objet. La ligne de guidage fonctionne mieux si elle se trouve à l'intérieur de l'élément cible."
 
 #: lib/elements/fill_stitch.py:59
 msgid "* Move the guide line into the element"
-msgstr ""
+msgstr "* Déplacer la ligne de guidage à l'intérieur de l'élément"
 
 #: lib/elements/fill_stitch.py:64
 msgid "Multiple Guide Lines"
-msgstr ""
+msgstr "Multiples lignes de guidage"
 
 #: lib/elements/fill_stitch.py:65
 msgid "This object has multiple guide lines, but only the first one will be used."
-msgstr ""
+msgstr "Cet objet possède plusieurs lignes de guidage, mais seule la première sera utilisée."
 
 #: lib/elements/fill_stitch.py:67
 msgid "* Remove all guide lines, except for one."
-msgstr ""
+msgstr "* Supprimer toutes les lignes de guidage, sauf une."
 
 #: lib/elements/fill_stitch.py:72
 msgid "Unconnected"
@@ -689,7 +689,7 @@ msgstr "Remplissage: La forme n'est pas valide. Cela peut arriver si la bordure 
 
 #: lib/elements/fill_stitch.py:90
 msgid "FillStitch"
-msgstr ""
+msgstr "Point de remplissage"
 
 #: lib/elements/fill_stitch.py:93
 msgid "Automatically routed fill stitching"
@@ -697,63 +697,63 @@ msgstr "Auto-remplissage avec des points de broderie"
 
 #: lib/elements/fill_stitch.py:98
 msgid "Fill method"
-msgstr ""
+msgstr "Méthode de remplissage"
 
 #: lib/elements/fill_stitch.py:99
 msgid "Auto Fill"
-msgstr ""
+msgstr "Remplissage automatique"
 
 #: lib/elements/fill_stitch.py:99
 msgid "Contour Fill"
-msgstr ""
+msgstr "Remplissage de contour"
 
 #: lib/elements/fill_stitch.py:99
 msgid "Guided Fill"
-msgstr ""
+msgstr "Remplissage guidé"
 
 #: lib/elements/fill_stitch.py:99
 msgid "Legacy Fill"
-msgstr ""
+msgstr "Remplissage legacy (ancien)"
 
 #: lib/elements/fill_stitch.py:104
 msgid "Contour Fill Strategy"
-msgstr ""
+msgstr "Stratégie de remplissage des contours"
 
 #: lib/elements/fill_stitch.py:105
 msgid "Inner to Outer"
-msgstr ""
+msgstr "De l'intérieur vers l'extérieur"
 
 #: lib/elements/fill_stitch.py:105
 msgid "Single spiral"
-msgstr ""
+msgstr "Spirale unique"
 
 #: lib/elements/fill_stitch.py:105
 msgid "Double spiral"
-msgstr ""
+msgstr "Double spirale"
 
 #: lib/elements/fill_stitch.py:110
 msgid "Join Style"
-msgstr ""
+msgstr "Style pour les joints"
 
 #: lib/elements/fill_stitch.py:111
 msgid "Round"
-msgstr ""
+msgstr "Rond"
 
 #: lib/elements/fill_stitch.py:111
 msgid "Mitered"
-msgstr ""
+msgstr "En onglet"
 
 #: lib/elements/fill_stitch.py:111
 msgid "Beveled"
-msgstr ""
+msgstr "Biseauté"
 
 #: lib/elements/fill_stitch.py:116
 msgid "Avoid self-crossing"
-msgstr ""
+msgstr "Éviter l'auto-croisement"
 
 #: lib/elements/fill_stitch.py:121
 msgid "Clockwise"
-msgstr ""
+msgstr "Dans le sens des aiguilles d'une montre"
 
 #: lib/elements/fill_stitch.py:127
 msgid "Angle of lines of stitches"
@@ -820,7 +820,7 @@ msgstr "Sous-couche"
 #: lib/elements/fill_stitch.py:379 lib/elements/fill_stitch.py:391
 #: lib/elements/fill_stitch.py:429
 msgid "Fill Underlay"
-msgstr ""
+msgstr "Sous-couche de remplissage"
 
 #: lib/elements/fill_stitch.py:332
 msgid "Fill angle"
@@ -1376,7 +1376,7 @@ msgstr "Ajouter des coupures"
 #: electron/src/renderer/components/InstallPalettes.vue:25
 #: electron/src/renderer/components/InstallPalettes.vue:63
 msgid "Cancel"
-msgstr "Quitter"
+msgstr "Annuler"
 
 #: lib/extensions/lettering.py:87 lib/extensions/params.py:449
 msgid "Apply and Quit"
@@ -1494,7 +1494,7 @@ msgstr "Veuillez sélectionner au moins deux éléments à ré-ordonner."
 
 #: lib/extensions/selection_to_guide_line.py:21
 msgid "Please select at least one object to be marked as a guide line."
-msgstr ""
+msgstr "Veuillez sélectionner au moins un objet à marquer comme ligne de guidage."
 
 #: lib/extensions/selection_to_pattern.py:21
 msgid "Please select at least one object to be marked as a pattern."
@@ -1789,7 +1789,7 @@ msgstr "Points droits pour auto-remplissage satin %d"
 
 #: lib/stitches/guided_fill.py:120
 msgid "Guide line (or offset copy) is self crossing!"
-msgstr ""
+msgstr "La ligne de guidage (ou la copie dilatée) se croise toute seule !"
 
 #: lib/svg/rendering.py:222
 msgid "Stitch Plan"
@@ -2735,7 +2735,7 @@ msgstr "Commandes"
 #: inx/inkstitch_commands_scale_symbols.inx:12
 #: inx/inkstitch_object_commands_toggle_visibility.inx:11
 msgid "View"
-msgstr "Vue"
+msgstr "Affichage"
 
 #: inx/inkstitch_convert_to_satin.inx:3
 msgid "Convert Line to Satin"
@@ -3807,11 +3807,11 @@ msgstr "Réempiler les objets dans l'ordre de sélection"
 
 #: inx/inkstitch_selection_to_guide_line.inx:3
 msgid "Selection to guide line"
-msgstr ""
+msgstr "Sélection vers ligne de guidage"
 
 #: inx/inkstitch_selection_to_guide_line.inx:9
 msgid "Ink/Stitch"
-msgstr ""
+msgstr "Ink/Stitch"
 
 #: inx/inkstitch_selection_to_pattern.inx:3
 msgid "Selection to pattern"
