@@ -1,16 +1,15 @@
 ---
 title: "Excalibur KOR"
 permalink: /de/fonts/excalibur_kor/
-last_modified_at: 2022-05-04
+last_modified_at: 2022-05-24
 toc: false
 preview_image: /assets/images/fonts/excalibur_kor.png
 ---
 ![ExcaliburKOR](/assets/images/fonts/excalibur_kor.png)
 
-## Glyphs
+## Schriftzeichen
 
-This font contains 144 glyphs:
-
+Diese Schrift enthält 144 Schriftzeichen:
 •„”“’‘—–œŒ
 üûúùøöõôóò
 ñïîíìëêéèç
@@ -27,13 +26,12 @@ IHGFEDCBA?
 10/.-,*)('
 &%"!
 
-## Dimensions
+## Maße
 
-At 100%, this font is approximatively 20 mm (3/4 inch) high.
+Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 20 mm hoch (3/4 Zoll).
+Sie kann bis auf 140% (~28mm, 1 Zoll) hochskaliert werden, und bis zu 80% (~16mm, 0.6 Zoll) herunterskaliert werden.
 
-It can be scaled up to 140% (approx. 28 mm, 1 inch) or scaled down to  80% (approx.  16mm, 0.6 inch).
-
-## In real life
+## Gestickte Beispiele
 {% include folder-galleries path="fonts/excalibur_KOR/" %}
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/excalibur_KOR/LICENSE)
