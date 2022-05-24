@@ -60,7 +60,7 @@ Beim Sticken ist es wichtig, ein Gefühl für die tatsächliche Größe des Entw
 * Navigiere zu `Bearbeiten > Einstellungen > Benutzeroberfläche`
 * Nun hält man ein Lineal auf das Display und passt den Schieberegler an, bis die Länge übereinstimmt.
  
-![Zoom correction](/assets/images/docs/de/customize-zoom-correction.png)
+![Zoom correction](/assets/images/docs/de/customize-zoom-correction_ruler.jpg)
 
 ## Gitter
 
