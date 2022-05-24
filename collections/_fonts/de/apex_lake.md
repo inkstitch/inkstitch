@@ -26,7 +26,7 @@ Apex Lake ist eine große Schrift, sie ist dafür gedacht, einen Buchstaben oder
 Wenn man die Schrift auf 100% nutzt, ist sie ca. 60 mm hoch. Sie kann bis zu 80% verkleinert (50mm) und bis zu 130% vergrößert (110mm) werden.
 
 ## Sortieren der Farben 
-Wenn Sie mehrere Buchstaben sticken, möchten Sie vielleicht die Farben sortieren. Das ist möglich, sofern Sie ihre relative Reihenfolge innerhalb der einzelnen Buchstaben beachten. [So geht's](https://inkstitch.org/de/docs/lettering/#sortierung-von-farben)
+Wenn man mehrere Buchstaben sticken möchte, kann man die Farben sortieren. Das ist möglich, man muss aber die relative Reihenfolge innerhalb der einzelnen Buchstaben beachten. [So geht's](https://inkstitch.org/de/docs/lettering/#sortierung-von-farben)
 
 ## Gestickte Beispiele
 Wie wäre es auf einem schicken T-Shirt? Oder auf einem Stoffkorb?
