@@ -89,18 +89,18 @@ Fractionner une colonne satin au point spécifié par cette commande. Après le 
 
 
 
-### Vue
+### Affichage
 
 #### Afficher Masquer les commandes des objets 
 {% include upcoming_release.html %}
 
 Bascule la visibilité des commandes. Les commandes restent fonctionnelles même si elles sont masquées.
-`Extensions > Ink/Stitch > Commandes > Vue > Afficher/Masquer les commandes  des objets`
+`Extensions > Ink/Stitch > Commandes > Affichage > Afficher/Masquer les commandes  des objets`
 
 #### Mise à l'echelle des symboles de commande
 {% include upcoming_release.html %}
 
-Défini la taille des symboles de commande dans le document tout entier : `Extensions > Ink/Stitch > Commandes > Vue > Mise à l'echelle des symboles de commande.`
+Défini la taille des symboles de commande dans le document tout entier : `Extensions > Ink/Stitch > Commandes > Affichage> Mise à l'echelle des symboles de commande.`
 
 Il est possible d'utiliser le "live preview" pour visualiser la nouvelle  taille des symboles pendant la mise à l'echelle.
 ## Quelques remarques :
