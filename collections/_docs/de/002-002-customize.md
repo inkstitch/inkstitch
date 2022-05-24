@@ -2,7 +2,7 @@
 title: "Ink/Stitch personalisieren"
 permalink: /de/docs/customize/
 excerpt: ""
-last_modified_at: 2021-10-23
+last_modified_at: 2022-05-24
 toc: true
 ---
 
