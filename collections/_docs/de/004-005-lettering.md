@@ -12,10 +12,10 @@ Das Text-Modul erzeugt mehrzeiligen Text. Die hinterlegten Schriftarten wurden v
 ## Nutzung
 
 * Gehe zu `Erweiterungen > Ink/Stitch > Text`.
-* Geben Sie Ihren Text ein (mehrzeilig möglich).
-* Legen Sie die Schriftart und die Skalierung fest.
-* Beachten sie die angegebenen Limitierungen auch bei späteren manuellen Skalierungen!
-* Klicken Sie auf `Anwenden und schließen`.
+* Gib deinen Text ein (mehrzeilig möglich).
+* Lege die Schriftart und die Skalierung fest.
+* Beachte die angegebenen Limitierungen auch bei späteren manuellen Skalierungen!
+* Klicke auf `Anwenden und schließen`.
 * Der eingegebene Text erscheint über der Seite.
 * Freie Positionierung ist nun möglich.
 
@@ -34,14 +34,14 @@ Hier kann man sich eine Liste mit den beliebtesten Schriftarten speichern und wi
 
 ## Schrift-Bibliothek
 
-Eine Übersicht über alle verfügbaren Schriftarten finden Sie in der [Schrift-Bibliothek](/de/fonts/font-library/)
+Eine Übersicht über alle verfügbaren Schriftarten findet sich hier [Schrift-Bibliothek](/de/fonts/font-library/)
 
 ## Sortierung von Farben
 Wenn man mehrere Buchstaben einer mehrfarbigen Schrift verwenden möchte, kann man die Farben sortieren, um mehrmaliges Wechseln des Garns zu vermeiden. Diese Sortierung darf jedoch nicht die Reihenfolge der Farben in einem Buchstaben ändern, da sonst die Stickerei verändert wird. 
 
-Wenn die Farben innerhalb eines Buchstabens nur auf aufeinanderfolgenden Pfaden und immer in der gleichen Reihenfolge verwendet werden (was bei den mehrfarbigen Schriften, die derzeit in Ink/Stitch vorhanden sind, der Fall ist, außer vielleicht bei Infinipicto), können Sie die Farben schnell sortieren, wenn Ihre Datei nur die Buchstaben enthält:
+Wenn die Farben innerhalb eines Buchstabens nur auf aufeinanderfolgenden Pfaden und immer in der gleichen Reihenfolge verwendet werden (was bei den mehrfarbigen Schriften, die derzeit in Ink/Stitch vorhanden sind, der Fall ist, außer vielleicht bei Infinipicto), kann man die Farben schnell sortieren, wenn die Datei nur die Buchstaben enthält:
 
-Wählen Sie im Objektfenster einen Buchstaben, egal welchen:
+Wähle im Objektfenster einen Buchstaben, egal welchen:
 
 * Den Pfad auswählen, der zuerst gestickt werden soll (der letzte des Buchstabens in diesem Fenster also...).
 * `Bearbeiten/Das Gleiche auswählen/Konturfarbe` (dies wählt alles in dieser Farbe in allen Buchstaben aus, es gibt wahrscheinlich viele Pfade pro Buchstabe).
