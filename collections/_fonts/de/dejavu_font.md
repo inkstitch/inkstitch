@@ -1,16 +1,17 @@
 ---
 title: "DejaVu Serif"
 permalink: /de/fonts/dejavu_font/
-last_modified_at: 2022-05-04
+last_modified_at: 2022-05-24
 toc: false
 preview_image: /assets/images/fonts/dejavu_serif.png
 ---
-## Serif Semi-condensed
+## DejaVu Serif Semi-condensed
 
 ![Deja Vue Serif Semi-condensed](/assets/images/fonts/dejavu_serif.png)
 
-## Glyphe 
-DejaVu Serif contains  92 glyphs :
+## Schriftzeichen
+
+Diese Schrift enthält 92 Schriftzeichen:
 
 	
 012345678
@@ -24,20 +25,20 @@ stuùüûvwxy
 z@ß.'")(!;
 ,?
 
-## Dimensions
+## Maße
 
-Used at  100%, this font is approximatively 18 mm  (2/3 inch) high.
+Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 18 mm hoch (2/3 Zoll).
+Sie kann bis auf 150% (~27mm, 1 Zoll) hochskaliert werden, und bis zu 80% (~14mm, 1/2 Zoll) herunterskaliert werden.
 
-It can be scaled up to  150% (env 27 mm, 1 inch)  or scaled down to 80% (env 14 mm, 1/2 inch).
 
+ 
+## Anmerkung
 
-## Remark
+Deja Vu kann mit der [Option](https://inkstitch.org/de/docs/lettering/#optionen) 'Sticke Textzeilen vor und zurück" verwendet werden: eine mehrzeilige Stickerei kann von links nach rechts, von rechts nach links, von oben nach unten und von unten nach oben gestickt werden.
 
-Déja Vu may be embroidered left to right, right to left,  top to bottom orbottom to top.
+## Gestickte Beispiele
 
-## In real life
-
-Used by itself or with Amitaclo  and Magnolia KOR on conserve jars
+Alleine, mit Amitaclo und Magnolia KOR auf Marmeladengläsern genutzt
 
 {% include folder-galleries path="fonts/dejavu/" %}
 
