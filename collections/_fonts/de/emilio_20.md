@@ -18,11 +18,11 @@ Beide Schriften enthalten 36 Schriftzeichen:
 ## Maße
 
 ###  Emilio 20
-Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 50 mm hoch (2 Zoll)
+Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 50 mm hoch (2 Zoll).
 Sie kann bis auf 140% (~70mm, 2.8 Zoll) hochskaliert und bis zu 70% (~35mm, 1.5 Zoll) herunterskaliert werden.
 
 ### Emilio 20 Tricolore
-Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 100 mm hoch (4 Zoll)
+Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 100 mm hoch (4 Zoll).
 Sie kann bis auf 120% (~120mm, 5 Zoll) hochskaliert und bis zu 90% (~90mm, 3.5 Zoll) herunterskaliert werden.
 
 
