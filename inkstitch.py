@@ -82,10 +82,13 @@ else:
             errormsg(shapely_errors.getvalue())
 
     if exception:
-        errormsg(_("Ink/Stitch experienced an unexpected error.") + "\n")
-        errormsg(_("If you'd like to help, please file an issue at "
-                   "https://github.com/inkstitch/inkstitch/issues "
-                   "and include the entire error description below:") + "\n")
+        errormsg(_("Ink/Stitch experienced an unexpected error. This means it is a bug in Ink/Stitch.") + "\n")
+        errormsg(_("If you'd like to help please\n"
+                   "- copy the entire error message below\n"
+                   "- save your SVG file and\n"
+                   "- create a new issue at https://github.com/inkstitch/inkstitch/issues") + "\n")
+        errormsg(_("Include the error description and also (if possible) "
+                   "the svg file.") + "\n")
         errormsg(version.get_inkstitch_version() + "\n")
         errormsg(exception)
         sys.exit(1)
