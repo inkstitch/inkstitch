@@ -7,9 +7,9 @@ preview_image: /assets/images/fonts/chopin_script.png
 ---
 ![Chopin Script](/assets/images/fonts/chopin_script.png)
 
-## Glyphs
+## Schriftzeichen
 
-Chopin contains  107 glyphs 
+Diese Schrift enthält 107 Schriftzeichen:
 
 	
 !"@'’,-0123
@@ -24,16 +24,15 @@ wxyz¡¿àáâã
 îïñòóôõöùú
 ûüýÿŒœ
  
+## Maße
 
-## Dimensions
+Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 50 mm hoch (2 Zoll).
+Sie kann bis auf 120% (~60mm, 2.4 Zoll) hochskaliert werden, und bis zu 80% (~40mm, 1.5 Zoll) herunterskaliert werden.
 
-At 100%, this font is roughly  50 mm high (2 inches)
 
-It can be scaled up to 120% (approx. 60 mm, 2.4 inches) or scaled down to 80% (approx. 40 mm, 1.5 inch).
+## Gestickte Beispiele
 
-## In real life
-
-On cushions, towels, T shirt, fleece
+Kissen, Handtücher, T-shirt, Fleece
 
 {% include folder-galleries path="fonts/chopin/" %}
 
