@@ -30,7 +30,7 @@ Baumans FI kann mit der [Option](https://inkstitch.org/de/docs/lettering/#option
 
 ## Maße
 
-Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 32 mm hoch (1.25 Zoll)
+Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 32 mm hoch (1.25 Zoll).
 Sie kann bis auf 150% (~48mm, 2 Zoll) hochskaliert und bis zu 80% (~25mm, 1 Zoll) herunterskaliert werden.
 
 ## Gestickte Beispiele
