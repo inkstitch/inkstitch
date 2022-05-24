@@ -27,6 +27,9 @@ COMMANDS = {
     "fill_end": N_("Fill stitch ending position"),
 
     # L10N command attached to an object
+    "ripple_target": N_("Ripple stitch target position"),
+
+    # L10N command attached to an object
     "run_start": N_("Auto-route running stitch starting position"),
 
     # L10N command attached to an object
@@ -60,7 +63,8 @@ COMMANDS = {
     "stop_position": N_("Jump destination for Stop commands (a.k.a. \"Frame Out position\")."),
 }
 
-OBJECT_COMMANDS = ["fill_start", "fill_end", "run_start", "run_end", "satin_start", "satin_end", "stop", "trim", "ignore_object", "satin_cut_point"]
+OBJECT_COMMANDS = ["fill_start", "fill_end", "ripple_target", "run_start", "run_end", "satin_start", "satin_end",
+                   "stop", "trim", "ignore_object", "satin_cut_point"]
 FREE_MOVEMENT_OBJECT_COMMANDS = ["run_start", "run_end", "satin_start", "satin_end"]
 LAYER_COMMANDS = ["ignore_layer"]
 GLOBAL_COMMANDS = ["origin", "stop_position"]

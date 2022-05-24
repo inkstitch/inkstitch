@@ -63,6 +63,11 @@ inkstitch_attribs = [
     'join_style',
     'avoid_self_crossing',
     'clockwise',
+    'line_count',
+    'skip_start',
+    'skip_end',
+    'render_grid',
+    'exponent',
     'expand_mm',
     'fill_underlay',
     'fill_underlay_angle',
@@ -80,7 +85,7 @@ inkstitch_attribs = [
     'flip',
     'expand_mm',
     # stroke
-    'manual_stitch',
+    'stroke_method',
     'bean_stitch_repeats',
     'repeats',
     'running_stitch_length_mm',
@@ -102,7 +107,8 @@ inkstitch_attribs = [
     'stroke_first',
     # Legacy
     'trim_after',
-    'stop_after'
+    'stop_after',
+    'manual_stitch',
 ]
 for attrib in inkstitch_attribs:
     INKSTITCH_ATTRIBS[attrib] = inkex.addNS(attrib, 'inkstitch')

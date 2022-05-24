@@ -129,6 +129,7 @@ class ParamsTab(ScrolledPanel):
 
         self.update_choice_widgets((param, selection))
         self.settings_grid.Layout()
+        self.Fit()
         self.Layout()
 
         if event:
