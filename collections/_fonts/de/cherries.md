@@ -1,7 +1,7 @@
 ---
 title: "Cherries"
 permalink: /de/fonts/cherries/
-last_modified_at: 2022-05-04
+last_modified_at: 2022-05-24
 toc: false
 preview_image: 
   - /assets/images/fonts/cherryforinkstitch.png
@@ -10,31 +10,33 @@ preview_image:
 ![Cherryforinkstitch](/assets/images/fonts/cherryforinkstitch.png)
 ![CherryForKaalleen](/assets/images/fonts/cherryforkaalleen.png)
 
-## Glyphes
+## Schriftzeichen
 ### Cherry for Ink/Stitch
-contains these 74	glyphs:
+enthält folgende 74	Schriftzeichen:
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890.:;,?!()'"-`
 
 ### Cherry for Kaalleen
-contains these 36 glyphs :
+enthält folgende 36	Schriftzeichen:
 ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890
 
 
-## Dimensions
+## Maße
 ### Cherry for Ink/Stitch
-At 100%, this font is approximatively  50 mm (2 inches) high. 
-It can be scaled up to 180% ( approx 90mm 3.5 inches) or scaled down to 80% (approx 1.5 inch)
+Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 50 mm hoch (2 Zoll)
+Sie kann bis auf 180% (~90mm, 3.5 Zoll) hochskaliert und bis zu 80% (~38mm, ~1.5 Zoll) herunterskaliert werden.
+
+
 ### Cherry for Kaalleen
-At 100%, this font is approximatively 75 mm high (3 inches)
-It can be scaled up to 130% (approx 100 mm, 4 inches ) or scaled down to 80% (approx 60 mm, 2 inches).
-
-## Color sorting
-If you embroider several letters, you may wish to color sort. It is possible, providing the sorting respects the relative order inside each letter. [This is a way to do it](https://inkstitch.org/en/docs/lettering/#color-sorting)
+Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 75 mm hoch (3 Zoll)
+Sie kann bis auf 130% (~100mm, 4 Zoll) hochskaliert und bis zu 80% (~60mm, 2 Zoll) herunterskaliert werden.
 
 
-## In real life
+## Sortieren der Farben 
+Wenn man mehrere Buchstaben sticken möchte, kann man die Farben sortieren. Das ist möglich, man muss aber die relative Reihenfolge innerhalb der einzelnen Buchstaben beachten. [So geht's](https://inkstitch.org/de/docs/lettering/#sortierung-von-farben)
 
-They may be used together or independantly
+
+## Gestickte Beispiele
+Man kann die Schriften gemeinsam oder einzeln benutzen:
 
 {% include folder-galleries path="fonts/cherries/" %}
 
