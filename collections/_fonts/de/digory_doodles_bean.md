@@ -1,16 +1,15 @@
 ---
 title: "Digory Doodles Bean"
 permalink: /de/fonts/digory-doodles-bean/
-last_modified_at: 2021-05-01
+last_modified_at: 2022-05-24
 toc: false
 preview_image: /assets/images/fonts/digory_doodles_bean.png
 ---
 ![Digory Doodles Bean](/assets/images/fonts/digory_doodles_bean.png)
 
-## Glyphs
+## Schriftzeichen
 
-This font contains 85 glyphs :
-
+Diese Schrift enthält 85 Schriftzeichen:
 	
 !"@'(’),-./
 0123456789
@@ -22,11 +21,10 @@ fghijklmno
 pqrstuvwxy
 z{}~
 
-## Dimensions
-At 100%, this font is approximatively 22 mm (1 inch).
-It may be scaled up to 200% (approx 44 mm, 2 inches) but may not be reduced.
-
-## In real life
+## Maße
+Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 22 mm hoch (1 Zoll)
+Sie kann bis auf 200% (~44mm, 2 Zoll) hochskaliert, aber NICHT herunterskaliert werden.
+## Gestickte Beispiele
 
 {% include folder-galleries path="fonts/digory-doodles-bean/" %}
 
