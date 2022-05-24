@@ -507,6 +507,7 @@ def name_elements(new_elements, preserve_order):
     for element in new_elements:
         if isinstance(element, SatinColumn):
             element.node.set("id", generate_unique_id(element.node, "autosatin"))
+            _ensure_even_repeats(element)
         else:
             element.node.set("id", generate_unique_id(element.node, "autosatinrun"))
 
@@ -514,11 +515,20 @@ def name_elements(new_elements, preserve_order):
             if isinstance(element, SatinColumn):
                 # L10N Label for a satin column created by Auto-Route Satin Columns and Lettering extensions
                 element.node.set(INKSCAPE_LABEL, _("AutoSatin %d") % index)
+                _ensure_even_repeats(element)
             else:
                 # L10N Label for running stitch (underpathing) created by Auto-Route Satin Columns amd Lettering extensions
                 element.node.set(INKSCAPE_LABEL, _("AutoSatin Running Stitch %d") % index)
 
             index += 1
+
+
+def _ensure_even_repeats(element):
+    # center underlay can have an odd number of repeats, this would cause jumps in auto route satin
+    # so let's set it to an even number of repeats, but not lower than 2
+    if int(element.node.get(INKSTITCH_ATTRIBS['center_walk_underlay_repeats'], 2)) % 2 == 1:
+        repeats = max(int(element.node.get(INKSTITCH_ATTRIBS['center_walk_underlay_repeats'])) - 1, 2)
+        element.node.set(INKSTITCH_ATTRIBS['center_walk_underlay_repeats'], repeats)
 
 
 def add_trims(elements, trim_indices):
