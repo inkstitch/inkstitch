@@ -10,7 +10,7 @@ The trickiest part to sewing a patch is to separate it from the background fabri
 
 Instead of using tear- or cut-away stabilizer, you can use a strong water-soluble stabilizer like Sulky Ultra Solvy.  You stack a layer of fabric on top of the soluble stabilizer, possibly with a tear-away stabilizer in between.  When you create your design, you add a "die line", which is an outline of running stitch with a 2-3mm stitch length, followed by a pause (a color change).
 
-The sewing machine stops after sewing the die line (due to the color change), and you take that opportunity to cut away the fabric around your patch using embroidery scissors.  Embroidery scissors are bent slighty at the end, allowing you to cut the fabric while it is still in the hoop.  The goal is to cut as close as possible to the die-line without nicking it many times and without cutting the soluble stabilizer.
+The sewing machine stops after sewing the die line (due to the color change), and you take that opportunity to cut away the fabric around your patch using embroidery scissors.  Embroidery scissors are bent slightly at the end, allowing you to cut the fabric while it is still in the hoop.  The goal is to cut as close as possible to the die-line without nicking it many times and without cutting the soluble stabilizer.
 
 Then you continue sewing the design.  Usually the die-line is followed by satin stitch that follows the same path, covering up the raw fabric edge that you've just cut.
 
