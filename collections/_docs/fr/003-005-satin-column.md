@@ -48,7 +48,7 @@ Si ce n'est pas le cas Sélectionnez avec l' *Outil Editer les noeuds* (`N`) un 
 [![Bateau en colonne satin](/assets/images/docs/satin-column.jpg){: width="200x"}](/assets/images/docs/satin-column.svg){: title="Télécharger le fichier SVG" .align-left download="satin-column.svg" }
 Selon la complexité de votre conception, cette méthode peut prendre beaucoup de temps, car les deux rails doivent avoir exactement le **même nombre de noeuds** (Cela signifie que chaque rail sera composé d'un nombre égal de courbes de Bézier). 
 
-Chaque paire de noeuds (une paire de noeud est constituée d'un noeud sur chaque rail, en commençant par la paire des  noeuds initiaux des deux rails, puis la paire des deuxième noeuds de chaque rail, etc....) agit comme un "point de contrôle": Ink/Stitch garantira qu'un "zag" finisse par aller d'un noeud  à l'autre.
+Chaque paire de noeuds (une paire de noeud est constituée d'un noeud sur chaque rail, en commençant par la paire des  noeuds initiaux des deux rails, puis la paire des deuxième noeuds de chaque rail, etc....) agit comme un "point de contrôle": Ink/Stitch garantira qu'un "zag" finisse par aller d'un noeud  de chaque paire à l'autre noeud de la paire.
 
 ### Méthode des traverses
 
