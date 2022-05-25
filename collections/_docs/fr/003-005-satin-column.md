@@ -85,7 +85,9 @@ Lisez aussi [cet excellent article](https://www.mrxstitch.com/underlay/) sur les
 
 ## Outils Satin
 
-Assurez-vous de regarder [Satin Tools](/fr/docs/params/#paramètres-satin/). Cela vous facilitera grandement la vie avec les colonnes en satin.
+Assurez-vous de regarder [Paramètrage des colonnes satin](/fr/docs/params/#paramètres-satin/) et 
+[Outils: Satin](/fr/docs/params/satin-tools/);
+Cela vous facilitera grandement la vie avec les colonnes en satin.
 
 ## Fichiers exemple avec des colonnes satin
 {% include tutorials/tutorial_list key="stitch-type" value="Satin Stitch" %}
