@@ -32,7 +32,7 @@ Vous obtenez un chemin composite composé de
 
 * Commencez par définir les rails de votre colonne satin : dessinez  **deux traits presque parallèles**. La future colonne satin se brodera en zigzag entre les deux rails, vous pouvez faire varier l'épaisseur de la colonne à votre guise, en faisant varier la distance entre les deux rails.
 
-* Combinez deux traits avec `Chemin > Combiner` ou taper `Ctrl+K`.
+* Combinez ces deux traits avec `Chemin > Combiner` ou taper `Ctrl+K`.
 
 * [Vérifier les directions de chemin](/fr/docs/customize/#activation-de-la-direction-des-chemins). Pour que la colonne satin fonctionne comme attendu, les deux rails doivent avoir la même direction.
 
