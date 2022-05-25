@@ -92,8 +92,6 @@ docs:
       url: /de/docs/cutwork/
     - title: "Bearbeiten"
       url: /de/docs/edit/
-    - title: Füllstich Werkzeuge
-      url: /de/docs/fill-tools/
     - title: "Schriftverwaltung"
       url: /de/docs/font-tools/
     - title: Text-Modul
@@ -102,8 +100,12 @@ docs:
       url: /de/docs/params/
     - title: "Einstellungen"
       url: /de/docs/preferences/
-    - title: Satin Werkzeuge
+    - title: "Werkzeuge: Füllstich"
+      url: /de/docs/fill-tools/
+    - title: "Werkzeuge: Satin"
       url: /de/docs/satin-tools/
+    - title: "Werkzeuge: Laufstich"
+      url: /de/docs/stroke-tools/
     - title: "Thread Color Management"
       url: /de/docs/thread-color/
     - title: "Fehlerbehebung"

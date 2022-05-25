@@ -98,8 +98,6 @@ docs:
       url: /fr/docs/cutwork/
     - title: "Edition"
       url: /fr/docs/edit/
-    - title: "Outils de remplissage"
-      url: /fr/docs/fill-tools/
     - title: "Gestion des fontes"
       url: /fr/docs/font-tools/
     - title: "Lettrage"
@@ -108,6 +106,8 @@ docs:
       url: /fr/docs/params/
     - title: "Préferences"
       url: /fr/docs/preferences/
+    - title: "Outils de remplissage"
+      url: /fr/docs/fill-tools/
     - title: "Outils: Trait"
       url: /fr/docs/stroke-tools/
     - title: "Outils: Satin"

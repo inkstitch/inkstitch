@@ -4,8 +4,10 @@ permalink: /fonts/ink_stitch/
 last_modified_at: 2020-12-31
 toc: false
 preview_image:
-  - /assets/images/fonts/ink_stitch_small.png
-  - /assets/images/fonts/ink_stitch_medium.png
+  - url: /assets/images/fonts/ink_stitch_small.png
+    height: 6
+  - url: /assets/images/fonts/ink_stitch_medium.png
+    height: 19
 ---
 ![Ink/Stitch Small](/assets/images/fonts/ink_stitch_small.png)
 ![Ink/Stitch Medium](/assets/images/fonts/ink_stitch_medium.png)
@@ -14,7 +16,12 @@ preview_image:
 ## Glyphs
 
 Both fonts  contains  the 89 glyphs :
-ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@<>:,'"“”.+-=()_/�#ÄÖÜäößü
+
+- ABCDEFGHIJKLMNOPQRSTUVWXYZ
+- abcdefghijklmnopqrstuvwxyz
+- 0123456789
+- ÄÖÜäößü
+- @<>:,'"“”.+-=()_/�#
 
 ## Dimensions
 

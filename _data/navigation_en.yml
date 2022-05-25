@@ -96,8 +96,6 @@ docs:
       url: /docs/cutwork/
     - title: "Edit"
       url: /docs/edit/
-    - title: "Tools: Fill"
-      url: /docs/fill-tools/
     - title: "Font Management"
       url: /docs/font-tools/
     - title: "Lettering"
@@ -106,6 +104,8 @@ docs:
       url: /docs/params/
     - title: "Preferences"
       url: /docs/preferences/
+    - title: "Tools: Fill"
+      url: /docs/fill-tools/
     - title: "Tools: Satin"
       url: /docs/satin-tools/
     - title: "Tools: Stroke"

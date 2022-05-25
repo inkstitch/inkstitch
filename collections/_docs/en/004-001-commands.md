@@ -17,7 +17,7 @@ Not every embroidery machine will be able to read and process the information gi
 * Enable desired commands and apply
 * Start/Stop/Cut commands: The connector's endpoint nearest to the object is the point at which the effect will be performed.
 
-In `Extensions > Ink/Stitch  > Commands` you will find fur options: add commands, add layer commands, attach commands and view.
+In `Extensions > Ink/Stitch  > Commands` you will find four options: add commands, add layer commands, attach commands and view.
 
 ### Add Commands ...
 
