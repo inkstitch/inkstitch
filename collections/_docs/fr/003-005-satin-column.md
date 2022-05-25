@@ -53,6 +53,7 @@ Chaque paire de noeuds (une paire de noeud est constituée d'un noeud sur chaque
 ### Méthode des traverses
 
 [![Chapeau du chef en colonne satin](/assets/images/docs/satin-column-rungs-example.jpg){: width="200x"}](/assets/images/docs/satin-column-rungs.svg){: title="Télécharger le fichier SVG" .align-left download="satin-column-rungs.svg" }
+
 La méthode des traverses vous donnera plus de contrôle sur le rendu de la colonne satin. Un bon positionnement des points sur chacun des deux rails aide à bien orienter les points. 
 
 Cependant, il existe des situations dans lesquelles vous devez ajouter manuellement des lignes de direction ("traverses") pour les colonnes satin:
@@ -78,8 +79,8 @@ Cependant, il existe des situations dans lesquelles vous devez ajouter manuellem
 
 ## Paramètres
 
-Utiliser `Extensions > Ink/Stitch  > Params` vous donnera la possibilité de parfaire votre colonne de satin et d’utiliser une sous-couche.
-Pour des informations détaillées, lisez [Satin Paramètres](/fr/docs/params/#paramètres-satin) section.
+Utiliser `Extensions > Ink/Stitch  > Paramètres` vous donne la possibilité de parfaire votre colonne de satin et d’utiliser une sous-couche.
+Pour des informations détaillées, lisez la section Satin Paramètres](/fr/docs/params/#paramètres-satin).
 Lisez aussi [cet excellent article](https://www.mrxstitch.com/underlay/) sur les motifs en colonnes satin.
 
 ## Outils Satin
