@@ -44,7 +44,7 @@ Définir le point de départ et d'arrivée pour les remplissages automatiques av
 
 Lancez `Extensions > Ink/Stitch  > Paramètres`. Choisir "Remplissage guidé" dans la méthode de remplissage et ajustez les réglages selon vos besoins
 
-Lisez les informations détaillées dans la section  [Guided Fill Params](/docs/params/#guided-fill-params).
+Lisez les informations détaillées dans la section  [Guided Fill Params](/docs/fr/params/).
 
 ## Sous couche
 
