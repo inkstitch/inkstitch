@@ -80,13 +80,12 @@ Cependant, il existe des situations dans lesquelles vous devez ajouter manuellem
 ## Paramètres
 
 Utiliser `Extensions > Ink/Stitch  > Paramètres` vous donne la possibilité de parfaire votre colonne de satin et d’utiliser une sous-couche.
-Pour des informations détaillées, lisez la section Satin Paramètres](/fr/docs/params/#paramètres-satin).
+Pour des informations détaillées, lisez la section [Satin Paramètres](/fr/docs/params/#paramètres-satin).
 Lisez aussi [cet excellent article](https://www.mrxstitch.com/underlay/) sur les motifs en colonnes satin.
 
 ## Outils Satin
 
-Assurez-vous de regarder [Paramètrage des colonnes satin](/fr/docs/params/#paramètres-satin/) et 
-[Outils: Satin](/fr/docs/params/satin-tools/);
+Assurez-vous de regarder [Outils: Satin](/fr/docs/params/satin-tools/);
 Cela vous facilitera grandement la vie avec les colonnes en satin.
 
 ## Fichiers exemple avec des colonnes satin
