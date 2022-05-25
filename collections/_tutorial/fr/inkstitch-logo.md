@@ -1,9 +1,9 @@
 ---
-title: "Ink/Stitch Logo & Branding Guide"
+title: "Logo Ink/Stitch  & Charte Graphique"
 permalink: /fr/tutorials/resources/inkstitch-logo/
 last_modified_at: 2022-05-23
 language: fr
-excerpt: "Logo Ink/Stitch en SVG version pour impression et version pour la broderie et chartre graphique."
+excerpt: "Logo Ink/Stitch en SVG version pour impression et version pour la broderie et charte graphique."
 toc: true
 image: /assets/images/tutorials/logo/InkStitch_Multi_Color.svg
 
@@ -92,13 +92,13 @@ user-level:
     </div>
     <div class="archive__item-body">
       <div class="archive__item-excerpt">
-        <p><a href="/assets/images/tutorials/logo/Logo_Hat_Embroidery.svg">Ink/Stitch Hat</a></p>
+        <p><a href="/assets/images/tutorials/logo/Logo_Hat_Embroidery.svg">Casquette Ink/Stitch Hat</a></p>
       </div>
     </div>
   </div>
 </div>
 
-## Chartre graphique Ink/Stitch 
+## Charte graphique Ink/Stitch 
 
 ![1 Color](/assets/images/tutorials/logo/inkstitch_branding_quickguide.svg)
 
