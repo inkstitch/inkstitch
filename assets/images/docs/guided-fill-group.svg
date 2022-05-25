@@ -42,46 +42,6 @@
   <defs
      id="defs2">
     <marker
-       style="overflow:visible"
-       id="marker18903"
-       refX="0"
-       refY="0"
-       orient="auto-start-reverse"
-       inkscape:stockid="Arrow3"
-       markerWidth="4.20710657"
-       markerHeight="6.99999965"
-       viewBox="0 0 4.20710678 7"
-       inkscape:isstock="true"
-       inkscape:collect="always"
-       preserveAspectRatio="xMidYMid">
-      <path
-         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:round"
-         d="M 3,-3 0,0 3,3"
-         id="path18901"
-         transform="rotate(180,0.125,0)"
-         sodipodi:nodetypes="ccc" />
-    </marker>
-    <marker
-       style="overflow:visible"
-       id="Arrow1"
-       refX="0"
-       refY="0"
-       orient="auto-start-reverse"
-       inkscape:stockid="Arrow1"
-       markerWidth="4.0606599"
-       markerHeight="6.7071061"
-       viewBox="0 0 4.0606602 6.7071068"
-       inkscape:isstock="true"
-       inkscape:collect="always"
-       preserveAspectRatio="xMidYMid">
-      <path
-         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:butt"
-         d="M 3,-3 0,0 3,3"
-         id="path5057"
-         transform="rotate(180,0.125,0)"
-         sodipodi:nodetypes="ccc" />
-    </marker>
-    <marker
        markerWidth="25.28585692"
        markerHeight="25.28585692"
        refX="0.5"
@@ -576,34 +536,6 @@
          sodipodi:nodetypes="csssssccssccc"
          inkscape:label="guide" />
     </g>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:7.15113;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1)"
-       d="m 161.97916,143.58764 h 64.49655"
-       id="path5624"
-       sodipodi:nodetypes="cc" />
-    <g
-       id="command_group9"
-       inkscape:label="Commande Ink/Stitch: Ignore this object (do not stitch)"
-       transform="matrix(0.63069 0 0 0.63069 -24.0109 -23.6534)"
-       style="display:none">
-      <path
-         id="command_connector9"
-         d="m 336.24581,235.20716 15.21138,29.96438"
-         style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
-         inkscape:connection-start="#command_use8074"
-         inkscape:connection-end="#path5624"
-         inkscape:label="connecteur"
-         inkscape:connector-type="polyline"
-         inkscape:connector-curvature="0" />
-      <use
-         id="command_use8074"
-         xlink:href="#inkstitch_ignore_object"
-         height="100%"
-         width="100%"
-         x="336.24323"
-         y="235.17151"
-         inkscape:label="marqueur de commande" />
-    </g>
   </g>
   <g
      inkscape:label="Calque 2"
@@ -692,11 +624,6 @@
          inkstitch:fill_underlay="False"
          inkstitch:row_spacing_mm="1" />
     </g>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:4.76742135;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker18903)"
-       d="m 200.83703,386.8001 55.10196,-0.60748"
-       id="path18151"
-       sodipodi:nodetypes="cc" />
   </g>
   <g
      id="__inkstitch_stitch_plan__"
