@@ -38,7 +38,7 @@
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="g7404" />
   <defs
      id="defs2">
     <marker
@@ -48,9 +48,9 @@
        refY="0"
        orient="auto-start-reverse"
        inkscape:stockid="Arrow1"
-       markerWidth="4.06065975"
-       markerHeight="6.70710609"
-       viewBox="0 0 4.06066017 6.70710678"
+       markerWidth="4.0606599"
+       markerHeight="6.7071061"
+       viewBox="0 0 4.0606602 6.7071068"
        inkscape:isstock="true"
        inkscape:collect="always"
        preserveAspectRatio="xMidYMid">
@@ -681,7 +681,7 @@
        id="command_group11"
        inkscape:label="Commande Ink/Stitch: Ignore this object (do not stitch)"
        transform="matrix(0.63069,0,0,0.63069,-24.0109,-23.6534)"
-       style="display:none">
+       style="display:inline">
       <path
          id="command_connector11"
          d="m 353.69073,649.01746 7.27934,29.96439"
