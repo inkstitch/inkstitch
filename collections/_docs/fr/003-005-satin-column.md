@@ -25,7 +25,7 @@ Vous obtenez un chemin composite composé de
 * Utilisez tel quel ou modifier les traverses ou les rails en déplaçant leur noeuds.
 
 
-* En option lancer `Extensions > Ink/stitch > Outils : Satin > Agencement automatique de colonnes satin...` après avoir sélectionner une ou plusieurs colonnes satins
+* En option lancer `Extensions > Ink/stitch > Outils : Satin > Agencement automatique de colonnes satin...` après avoir sélectionné une ou plusieurs colonnes satins
 
 
 ## Création manuelle  de colonne Satin
