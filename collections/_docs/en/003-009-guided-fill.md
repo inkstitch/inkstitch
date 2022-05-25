@@ -2,7 +2,7 @@
 title: "Guided Fill"
 permalink: /docs/stitches/guided-fill/
 excerpt: ""
-last_modified_at: 2022-05-19
+last_modified_at: 2022-05-24
 toc: true
 ---
 {% include upcoming_release.html %}
