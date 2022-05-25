@@ -30,7 +30,7 @@ Vous obtenez un chemin composite composé de
 
 ## Création manuelle  de colonne Satin
 
-* Commencez par définir les rails de votre colonne satin :dessinez  **deux traits presque parallèles**. La future colonne satin se brodera en zigzag entre les deux rails, vous pouvez faire varier l'épaisseur de la colonne à votre guise, en faisant varier la distance entre les deux rails.
+* Commencez par définir les rails de votre colonne satin : dessinez  **deux traits presque parallèles**. La future colonne satin se brodera en zigzag entre les deux rails, vous pouvez faire varier l'épaisseur de la colonne à votre guise, en faisant varier la distance entre les deux rails.
 
 * Combinez deux traits avec `Chemin > Combiner` ou taper `Ctrl+K`.
 
