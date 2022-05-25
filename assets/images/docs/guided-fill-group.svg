@@ -32,7 +32,7 @@
      showgrid="false"
      inkscape:zoom="0.5946522"
      inkscape:cx="309.42457"
-     inkscape:cy="475.06761"
+     inkscape:cy="504.49658"
      inkscape:window-width="1332"
      inkscape:window-height="675"
      inkscape:window-x="0"
@@ -43,22 +43,23 @@
      id="defs2">
     <marker
        style="overflow:visible"
-       id="Arrow5"
+       id="Arrow1"
        refX="0"
        refY="0"
        orient="auto-start-reverse"
-       inkscape:stockid="Arrow5"
-       markerWidth="5.8874264"
-       markerHeight="6.6094756"
-       viewBox="0 0 5.8874262 6.6094758"
+       inkscape:stockid="Arrow1"
+       markerWidth="4.06065975"
+       markerHeight="6.70710609"
+       viewBox="0 0 4.06066017 6.70710678"
        inkscape:isstock="true"
        inkscape:collect="always"
        preserveAspectRatio="xMidYMid">
       <path
-         transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
-         d="m 6,0 c -3,1 -7,3 -9,5 0,0 0,-4 2,-5 -2,-1 -2,-5 -2,-5 2,2 6,4 9,5 z"
-         id="path8893" />
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:butt"
+         d="M 3,-3 0,0 3,3"
+         id="path5057"
+         transform="rotate(180,0.125,0)"
+         sodipodi:nodetypes="ccc" />
     </marker>
     <marker
        markerWidth="25.28585692"
@@ -556,7 +557,7 @@
          inkscape:label="guide" />
     </g>
     <path
-       style="fill:none;stroke:#000000;stroke-width:7.15113;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow5)"
+       style="fill:none;stroke:#000000;stroke-width:7.15113;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1)"
        d="m 161.97916,143.58764 h 64.49655"
        id="path5624"
        sodipodi:nodetypes="cc" />
@@ -567,7 +568,7 @@
        style="display:none">
       <path
          id="command_connector9"
-         d="m 336.24581,235.20716 32.76909,29.96438"
+         d="m 336.24581,235.20716 15.21138,29.96438"
          style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
          inkscape:connection-start="#command_use8074"
          inkscape:connection-end="#path5624"
@@ -672,7 +673,7 @@
          inkstitch:row_spacing_mm="1" />
     </g>
     <path
-       style="fill:none;stroke:#000000;stroke-width:7.15113;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow5)"
+       style="fill:none;stroke:#000000;stroke-width:7.15113;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1)"
        d="m 167.97884,404.57366 h 64.49655"
        id="path7396"
        sodipodi:nodetypes="cc" />
@@ -683,7 +684,7 @@
        style="display:none">
       <path
          id="command_connector11"
-         d="m 353.69073,649.01746 24.83705,29.96439"
+         d="m 353.69073,649.01746 7.27934,29.96439"
          style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
          inkscape:connection-start="#command_use1463"
          inkscape:connection-end="#path7396"
