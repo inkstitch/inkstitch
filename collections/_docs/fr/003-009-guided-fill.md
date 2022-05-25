@@ -29,7 +29,7 @@ chaque forme utilisant la portion de la ligne-guide qui l'intersecte. Dans ce ca
 
 Si plusieurs lignes-guide sont présentes, une seule d'entre elles est prise en compte. Sur le canevas, un marqueur permet de distinguer les lignes-guide des éléments de broderie standard.
 
-![Guided Fill Group](/assets/images/docs/guided-fill-group.svg)
+![Guided Fill Group](/assets/images/docs/guided-fill-group.png)
 
 
 ## Définir le point de départ et d'arrivée
