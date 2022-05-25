@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-05-24 18:25+0000\n"
-"PO-Revision-Date: 2022-05-24 18:26\n"
+"PO-Revision-Date: 2022-05-25 02:36\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -691,7 +691,7 @@ msgstr "A la fin"
 
 #: lib/elements/element.py:207
 msgid "Neither"
-msgstr "Jamais"
+msgstr "Ni"
 
 #: lib/elements/element.py:216
 #: inx/inkstitch_lettering_force_lock_stitches.inx:3
@@ -700,7 +700,7 @@ msgstr "Forcer des points d'arrêt"
 
 #: lib/elements/element.py:217
 msgid "Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences."
-msgstr "Créer des points de verrouillage après avoir cousu cet élément, même si la distance jusqu'à l'objet suivant est plus courte que le paramètre 'saut de fils' défini dans les préférences Ink/Stitch."
+msgstr "Créer des points d'arrêt après avoir cousu cet élément, même si la distance jusqu'à l'objet suivant est plus courte que le paramètre 'saut de fils' défini dans les préférences Ink/Stitch."
 
 #: lib/elements/element.py:261
 #, python-format
@@ -752,43 +752,43 @@ msgstr "Le paramètre Décalage de sous-couche pour le remplissage de cet objet 
 
 #: lib/elements/fill_stitch.py:46
 msgid "Missing Guideline"
-msgstr "Ligne de guidage manquante"
+msgstr "Ligne guide manquante"
 
 #: lib/elements/fill_stitch.py:47
 msgid "This object is set to \"Guided Fill\", but has no guide line."
-msgstr "Cet objet est paramétré à \"Remplissage Guidé\", mais il n'y a aucune ligne de guidage."
+msgstr "Cet objet est paramétré à \"Remplissage Guidé\", mais il n'y a aucune ligne-guide."
 
 #: lib/elements/fill_stitch.py:49
 msgid "* Create a stroke object"
-msgstr "Créez une ligne de guidage (objet de trait/contour)"
+msgstr "Créez une ligne-guide (objet de trait/contour)"
 
 #: lib/elements/fill_stitch.py:50
 msgid "* Select this object and run Extensions > Ink/Stitch > Edit > Selection to guide line"
-msgstr "* Sélectionnez cet objet et exécutez Extensions > Ink/Stitch > Édition > Sélection vers ligne de guidage"
+msgstr "* Sélectionnez cet objet et exécutez Extensions > Ink/Stitch > Édition > Sélection vers ligne-guide"
 
 #: lib/elements/fill_stitch.py:55
 msgid "Disjointed Guide Line"
-msgstr "Ligne de guidage disjointe"
+msgstr "Ligne-guide disjointe"
 
 #: lib/elements/fill_stitch.py:56
 msgid "The guide line of this object isn't within the object borders. The guide line works best, if it is within the target element."
-msgstr "La ligne de guidage de cet objet n'est pas dans les limites de l'objet. La ligne de guidage fonctionne mieux si elle se trouve à l'intérieur de l'élément cible."
+msgstr "La ligne-guide de cet objet n'est pas dans les limites de l'objet. La ligne-guide fonctionne mieux si elle se trouve à l'intérieur de l'élément ciblé."
 
 #: lib/elements/fill_stitch.py:59
 msgid "* Move the guide line into the element"
-msgstr "* Déplacer la ligne de guidage à l'intérieur de l'élément"
+msgstr "* Déplacer la ligne-guide à l'intérieur de l'élément"
 
 #: lib/elements/fill_stitch.py:64
 msgid "Multiple Guide Lines"
-msgstr "Multiples lignes de guidage"
+msgstr "Multiples lignes-guide"
 
 #: lib/elements/fill_stitch.py:65
 msgid "This object has multiple guide lines, but only the first one will be used."
-msgstr "Cet objet possède plusieurs lignes de guidage, mais seule la première sera utilisée."
+msgstr "Cet objet possède plusieurs lignes-guide, mais seule la première sera utilisée."
 
 #: lib/elements/fill_stitch.py:67
 msgid "* Remove all guide lines, except for one."
-msgstr "* Supprimer toutes les lignes de guidage, sauf une."
+msgstr "* Supprimer toutes les lignes-guide, sauf une."
 
 #: lib/elements/fill_stitch.py:72
 msgid "Unconnected"
@@ -800,7 +800,7 @@ msgstr "Remplissage: Cet objet est constitué de formes non connectées. Ce n'es
 
 #: lib/elements/fill_stitch.py:77 lib/elements/fill_stitch.py:85
 msgid "* Extensions > Ink/Stitch > Fill Tools > Break Apart Fill Objects"
-msgstr "* Extensions > Ink/Stitch > Outils de remplissage > Briser des objets de remplissage"
+msgstr "* Extensions > Ink/Stitch > Outils : Remplissage > Briser des objets de remplissage"
 
 #: lib/elements/fill_stitch.py:82
 msgid "Border crosses itself"
@@ -828,7 +828,7 @@ msgstr "Remplissage automatique"
 
 #: lib/elements/fill_stitch.py:99
 msgid "Contour Fill"
-msgstr "Remplissage de contour"
+msgstr "Remplissage selon contour"
 
 #: lib/elements/fill_stitch.py:99
 msgid "Guided Fill"
@@ -856,11 +856,11 @@ msgstr "Double spirale"
 
 #: lib/elements/fill_stitch.py:110
 msgid "Join Style"
-msgstr "Style pour les joints"
+msgstr "Style de jointure"
 
 #: lib/elements/fill_stitch.py:111
 msgid "Round"
-msgstr "Rond"
+msgstr "Ronde"
 
 #: lib/elements/fill_stitch.py:111
 msgid "Mitered"
@@ -868,7 +868,7 @@ msgstr "En onglet"
 
 #: lib/elements/fill_stitch.py:111
 msgid "Beveled"
-msgstr "Biseauté"
+msgstr "Biseautée"
 
 #: lib/elements/fill_stitch.py:116
 msgid "Avoid self-crossing"
@@ -916,7 +916,7 @@ msgstr "Longueur maximale du point de remplissage"
 
 #: lib/elements/fill_stitch.py:188
 msgid "The length of each stitch in a row.  Shorter stitch may be used at the start or end of a row."
-msgstr "La longueur de points dans une rangée.  Des point plus courts peuvent être utilisés au début ou à la fin d’une ligne."
+msgstr "La longueur de points dans une rangée.  Des point plus courts peuvent être utilisés au début ou à la fin d’une rangée."
 
 #: lib/elements/fill_stitch.py:199
 msgid "Stagger rows this many times before repeating"
@@ -924,7 +924,7 @@ msgstr "Décaler les rangées autant de fois avant de répéter"
 
 #: lib/elements/fill_stitch.py:200
 msgid "Setting this dictates how many rows apart the stitches will be before they fall in the same column position."
-msgstr "Ce paramétrage définit l’écart entre les points en tant que nombre de rangs, avant de se retrouver dans la même position de colonne."
+msgstr "Ce paramétrage définit le nombre de rangées nécessaires pour que les points retrouvent une même position de colonne."
 
 #: lib/elements/fill_stitch.py:315
 msgid "Running stitch length (traversal between sections)"
@@ -971,11 +971,11 @@ msgstr "défaut : égal à longueur max des points de remplissage"
 
 #: lib/elements/fill_stitch.py:377
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
-msgstr "Rétrécir la forme avant de faire la sous-couche, pour empêcher que la sous-couche se montre en dehors du remplissage."
+msgstr "Rétrécit la forme avant de faire la sous-couche, pour empêcher que la sous-couche se montre en dehors du remplissage."
 
 #: lib/elements/fill_stitch.py:400
 msgid "Expand the shape before fill stitching, to compensate for gaps between shapes."
-msgstr "Elargir la forme avant le remplissage, pour compenser les écarts entre les formes."
+msgstr "Élargit la forme avant le remplissage, pour compenser les écarts entre les formes."
 
 #: lib/elements/fill_stitch.py:411 lib/elements/fill_stitch.py:425
 msgid "Underpath"
@@ -983,7 +983,7 @@ msgstr "Chemin de dessous"
 
 #: lib/elements/fill_stitch.py:412 lib/elements/fill_stitch.py:426
 msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
-msgstr "Les points qui relient les sections sont à l'intérieur de l'objet. Les points des chemins de dessous évitent d'aller dans la même direction que le dessus. Cela leur donne une apparence déchiquetée."
+msgstr "Les points qui relient les sections à l'intérieur de l'objet. Les points des chemins de dessous évitent d'aller dans la même direction que ceux de dessus pour ne pas être visibles. Cela leur donne une apparence déchiquetée."
 
 #: lib/elements/fill_stitch.py:629
 msgid "Error during autofill!  This means that there is a problem with Ink/Stitch."
@@ -1005,7 +1005,7 @@ msgstr "Ink/Stitch ne peut pas fonctionner avec des objets comme les images."
 
 #: lib/elements/image.py:16
 msgid "* Convert your image into a path: Path > Trace Bitmap... (Shift+Alt+B) (further steps might be required)"
-msgstr "* Convertissez votre image en un chemin : Chemin > Vectoriser un objet matriciel... (Shift+Alt+B) (d'autres mesures pourraient être nécessaires)"
+msgstr "* Convertissez votre image en un chemin : Chemin > Vectoriser un objet matriciel... (Shift+Alt+B) (d'autres étapes pourraient être nécessaires)"
 
 #: lib/elements/image.py:18
 msgid "* Alternatively redraw the image with the pen (P) or bezier (B) tool"
@@ -1025,11 +1025,11 @@ msgstr "Revenir au mode d'élément de broderie normal, supprimer le marqueur:"
 
 #: lib/elements/marker.py:19
 msgid "* Open the Fill and Stroke panel (Objects > Fill and Stroke)"
-msgstr "* Ouvrez le panneau Fond et contour(Objet > Fond et contour)"
+msgstr "* Ouvrez le panneau Fond et contour (Objet > Fond et contour)"
 
 #: lib/elements/marker.py:20
 msgid "* Go to the Stroke style tab"
-msgstr "* Allez dans l'onglet Contour"
+msgstr "* Allez dans l'onglet Style du contour"
 
 #: lib/elements/marker.py:21
 msgid "* Under \"Markers\" choose the first (empty) option in the first dropdown list."
@@ -1041,19 +1041,19 @@ msgstr "Objet poly-ligne"
 
 #: lib/elements/polyline.py:19
 msgid "This object is an SVG PolyLine.  Ink/Stitch can work with this shape, but you can't edit it in Inkscape.  Convert it to a manual stitch path to allow editing."
-msgstr "Cet objet est un SVG Polyline. Ink/Stitch ne peut pas traiter cette forme, mais vous pouvez la modifier dans Inkscape. Convertissez la en chemin de points manuels."
+msgstr "Cet objet est un  Polyline SVG. Ink/Stitch ne peut pas traiter cette forme, mais vous pouvez la modifier dans Inkscape. Convertissez-la en chemin de points manuels."
 
 #: lib/elements/polyline.py:23 lib/elements/satin_column.py:27
 msgid "* Select this object."
-msgstr "* Sélectionner cet objet."
+msgstr "* Sélectionnez cet objet."
 
 #: lib/elements/polyline.py:24
 msgid "* Do Path > Object to Path."
-msgstr "* Faire Chemin > Objet en chemin."
+msgstr "* Faites Chemin > Objet en chemin."
 
 #: lib/elements/polyline.py:25
 msgid "* Optional: Run the Params extension and check the \"manual stitch\" box."
-msgstr "* A option: Exécuter l'extension Params et cocher la boite \"points manuels\"."
+msgstr "* Optionnel : Exécutez l'extension Paramètres et cochez la boite \"points manuels\"."
 
 #: lib/elements/polyline.py:45
 msgid "Manual stitch along path"
@@ -1081,7 +1081,7 @@ msgstr "* Désactiver le Fond"
 
 #: lib/elements/satin_column.py:31
 msgid "* Alternative: open Params and switch this path to Stroke to disable Satin Column mode"
-msgstr "* Alternative: Ouvrir Paramètres et basculer ce chemin vers Contour pour désactiver le mode colonne satin"
+msgstr "* Alternative: Ouvrir Paramètres et basculer ce chemin vers Trait pour désactiver le mode colonne satin"
 
 #: lib/elements/satin_column.py:36
 msgid "Too few subpaths"
@@ -1129,7 +1129,7 @@ msgstr "Colonne de satin non brodable"
 
 #: lib/elements/satin_column.py:57
 msgid "A satin column consists out of two rails and one or more rungs. This satin column may have a different setup."
-msgstr "Une colonne satinée est constituée de deux rails et d'une ou plusieurs traverses. Cette colonne satinée peut avoir une configuration différente."
+msgstr "Une colonne Satin est constituée de deux rails et d'une ou plusieurs traverses. Cette colonne Satin peut avoir une configuration différente."
 
 #: lib/elements/satin_column.py:59
 msgid "Make sure your satin column is not a combination of multiple satin columns."
@@ -1141,7 +1141,7 @@ msgstr "Allez sur notre site web et lisez à quoi une colonne de satin devrait r
 
 #: lib/elements/satin_column.py:64
 msgid "Each rung should intersect both rails once."
-msgstr "Chaque traverse de direction doit couper les deux rails une fois."
+msgstr "Chaque traverse de direction doit couper chacun des deux rails une fois."
 
 #: lib/elements/satin_column.py:68
 msgid "Rung doesn't intersect rails"
@@ -1149,7 +1149,7 @@ msgstr "La traverse de direction ne coupe pas les rails"
 
 #: lib/elements/satin_column.py:69
 msgid "Satin column: A rung doesn't intersect both rails."
-msgstr "Colonne satin: Une traverse de direction ne coupe pas les deux rails."
+msgstr "Colonne satin : Une traverse de direction ne coupe pas les deux rails."
 
 #: lib/elements/satin_column.py:73
 msgid "Rungs intersects too many times"
@@ -1226,12 +1226,12 @@ msgstr "Sous-couche centrale"
 
 #: lib/elements/satin_column.py:169
 msgid "Zig-zag underlay"
-msgstr "Sous-couche Zig-zag"
+msgstr "Sous-couche Zig-Zag"
 
 #: lib/elements/satin_column.py:169 lib/elements/satin_column.py:178
 #: lib/elements/satin_column.py:189 lib/elements/satin_column.py:207
 msgid "Zig-zag Underlay"
-msgstr "Sous-couche Zig-zag"
+msgstr "Sous-couche Zig-Zag"
 
 #: lib/elements/satin_column.py:175
 msgid "Zig-Zag spacing (peak-to-peak)"
@@ -1251,7 +1251,7 @@ msgstr "par défaut: la moitié du décalage du contour de la sous-couche"
 
 #: lib/elements/satin_column.py:205
 msgid "Split stitch if distance of maximum stitch length is exceeded"
-msgstr "Couper le point en deux si sa longueur dépasse la longueur maximale définie"
+msgstr "Découper le point en plusieurs si sa longueur dépasse la longueur maximale définie"
 
 #: lib/elements/stroke.py:26
 msgid "Ignore skip"
@@ -1407,7 +1407,7 @@ msgstr "Le chemin de fichier spécifié n'est pas un fichier mais un dictionnair
 
 #: lib/extensions/apply_threadlist.py:51
 msgid "Couldn't find any matching colors in the file."
-msgstr "Je n'ai trouvé aucune couleur correspondante dans le fichier."
+msgstr "Il n'y a aucune couleur correspondante dans le fichier."
 
 #: lib/extensions/apply_threadlist.py:53
 msgid "Please try to import as \"other threadlist\" and specify a color palette below."
@@ -1428,12 +1428,12 @@ msgstr "Veuillez sélectionner un ou plusieurs traits."
 
 #: lib/extensions/auto_satin.py:35
 msgid "Please ensure that at most one start and end command is attached to the selected satin columns."
-msgstr "Veuillez vous assurer qu’au plus une seule commande début et fin soit attachée aux colonnes de satin sélectionnées."
+msgstr "Veuillez vous assurer qu’au plus une seule commande début et fin est attachée aux colonnes de satin sélectionnées."
 
 #. auto-route satin columns extension
 #: lib/extensions/auto_satin.py:49
 msgid "Please select one or more satin columns."
-msgstr "Veuillez sélection une ou plusieurs colonnes satin."
+msgstr "Veuillez sélectionner une ou plusieurs colonnes satin."
 
 #: lib/extensions/auto_satin.py:54
 msgid "Please select at least one satin column."
@@ -1463,24 +1463,24 @@ msgstr "%s éléments supprimés"
 
 #: lib/extensions/convert_to_satin.py:35
 msgid "Please select at least one line to convert to a satin column."
-msgstr "Veuillez sélectionner au moins une ligne pour convertir en colonne satinée."
+msgstr "Veuillez sélectionner au moins une ligne pour convertir en colonne Satin."
 
 #. : Convert To Satin extension, user selected one or more objects that were
 #. not lines.
 #: lib/extensions/convert_to_satin.py:40
 msgid "Only simple lines may be converted to satin columns."
-msgstr "Seules les lignes simples peuvent être converties en colonnes satinées."
+msgstr "Seules les lignes simples peuvent être converties en colonnes Satin."
 
 #: lib/extensions/convert_to_satin.py:137
 msgid "Ink/Stitch cannot convert your stroke into a satin column. Please break up your path and try again."
-msgstr "Inkstitch ne peut pas convertir votre trait en colonne satin. Veuillez briser votre chemin et réessayer."
+msgstr "Inkstitch ne peut pas convertir votre trait en colonne satin. Veuillez séparer votre chemin et réessayer."
 
 #. : Convert To Satin extension, user selected one or more objects that were
 #. not lines.
 #: lib/extensions/convert_to_stroke.py:25
 #: lib/extensions/convert_to_stroke.py:30
 msgid "Please select at least one satin column to convert to a running stitch."
-msgstr "Veuillez sélectionner au moins une colonne de satin à convertir en point droit."
+msgstr "Veuillez sélectionner au moins une colonne satin à convertir en point droit."
 
 #: lib/extensions/cut_satin.py:20
 msgid "Please select one or more satin columns to cut."
@@ -1490,11 +1490,11 @@ msgstr "Veuillez sélectionner une ou plusieurs colonnes satin à scinder."
 #. path12345: error: this satin column does not ...
 #: lib/extensions/cut_satin.py:30
 msgid "this satin column does not have a \"satin column cut point\" command attached to it. Please use the \"Attach commands\" extension and attach the \"Satin Column cut point\" command first."
-msgstr "cette colonne satinée n’a pas de commande « point de partage satin » attachée à elle. Utilisez l’extension « ajouter des commandes » et attachez d’abord la commande « point de partage satin »."
+msgstr "cette colonne satin n’a pas de commande « point de partage satin » attachée à elle. Utilisez l’extension « ajouter des commandes » et attachez d’abord la commande « point de partage satin »."
 
 #: lib/extensions/cutwork_segmentation.py:158
 msgid "Cutwork Group"
-msgstr "Groupe cutwork"
+msgstr "Groupe Richelieu"
 
 #: lib/extensions/cutwork_segmentation.py:166
 #, python-format
@@ -1562,11 +1562,11 @@ msgstr "Options"
 
 #: lib/extensions/lettering.py:71
 msgid "Stitch lines of text back and forth"
-msgstr "Broder les lignes de texte en aller-retour"
+msgstr "Brode les lignes de texte en aller-retour"
 
 #: lib/extensions/lettering.py:74
 msgid "Add trims"
-msgstr "Ajouter des coupures"
+msgstr "Ajouter des coupures de fil"
 
 #: lib/extensions/lettering.py:83 lib/extensions/params.py:442
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
@@ -1693,7 +1693,7 @@ msgstr "Veuillez sélectionner au moins deux éléments à ré-ordonner."
 
 #: lib/extensions/selection_to_guide_line.py:21
 msgid "Please select at least one object to be marked as a guide line."
-msgstr "Veuillez sélectionner au moins un objet à marquer comme ligne de guidage."
+msgstr "Veuillez sélectionner au moins un objet à marquer comme ligne-guide."
 
 #: lib/extensions/selection_to_pattern.py:21
 msgid "Please select at least one object to be marked as a pattern."
@@ -1701,7 +1701,7 @@ msgstr "Veuillez sélectionner au moins un objet à marquer comme texture."
 
 #: lib/extensions/troubleshoot.py:45
 msgid "All selected shapes are valid! "
-msgstr "Toutes les formes sélectionnées sont valables ! "
+msgstr "Toutes les formes sélectionnées sont valides! "
 
 #: lib/extensions/troubleshoot.py:47
 msgid "If you are still having trouble with a shape not being embroidered, check if it is in a layer with an ignore command."
@@ -1709,7 +1709,7 @@ msgstr "Si vous avez toujours des difficultés avec une forme qui n'est pas brod
 
 #: lib/extensions/troubleshoot.py:71
 msgid "Invalid Pointer"
-msgstr "Curseur invalide"
+msgstr "Pointeur invalide"
 
 #: lib/extensions/troubleshoot.py:77
 #: inx/inkstitch_lettering_generate_json.inx:26
@@ -1768,7 +1768,7 @@ msgstr "Aucun format de fichier broderie sélectionné."
 
 #: lib/extensions/zip.py:99
 msgid "Design Details"
-msgstr "Détails du design"
+msgstr "Détails du dessin"
 
 #: lib/extensions/zip.py:102
 msgid "Title"
@@ -1788,7 +1788,7 @@ msgstr "Couleurs"
 
 #: lib/extensions/zip.py:107
 msgid "Thread Order"
-msgstr "Ordre de fils"
+msgstr "Ordre des fils"
 
 #: lib/extensions/zip.py:120
 msgid "Thread Used"
@@ -1796,7 +1796,7 @@ msgstr "Fils utilisés"
 
 #: lib/gui/presets.py:52
 msgid "Presets"
-msgstr "Présélection"
+msgstr "Préréglage"
 
 #: lib/gui/presets.py:58
 msgid "Load"
@@ -1816,7 +1816,7 @@ msgstr "Effacer"
 
 #: lib/gui/presets.py:126
 msgid "Please enter or select a preset name first."
-msgstr "Veuillez entrer ou sélectionner un nom prédéfini en premier."
+msgstr "Veuillez d'abord entrer ou sélectionner un nom de préréglage."
 
 #: lib/gui/presets.py:126 lib/gui/presets.py:132 lib/gui/presets.py:148
 msgid "Preset"
@@ -1900,7 +1900,7 @@ msgstr "O"
 
 #: lib/gui/simulator.py:71
 msgid "Display needle penetration point (O)"
-msgstr "Afficher points de pénétration de l'aiguille (O)"
+msgstr "Afficher les points de pénétration de l'aiguille (O)"
 
 #: lib/gui/simulator.py:72
 msgid "Quit"
@@ -1961,12 +1961,12 @@ msgstr "Agencement automatique"
 #: lib/stitches/auto_run.py:257
 #, python-format
 msgid "AutoRun %d"
-msgstr "Exécution automatique %d"
+msgstr "Agencement automatique %d"
 
 #: lib/stitches/auto_run.py:259
 #, python-format
 msgid "AutoRun Underpath %d"
-msgstr "Chemin de dessous pour l'exécution automatique %d"
+msgstr "Chemin de dessous %d"
 
 #. Label for a satin column created by Auto-Route Satin Columns and Lettering
 #. extensions
@@ -1984,7 +1984,7 @@ msgstr "Points droits pour auto-remplissage satin %d"
 
 #: lib/stitches/guided_fill.py:120
 msgid "Guide line (or offset copy) is self crossing!"
-msgstr "La ligne de guidage (ou la copie dilatée) se croise toute seule !"
+msgstr "La ligne-guide (ou la copie dilatée) se croise toute seule !"
 
 #: lib/svg/rendering.py:222
 msgid "Stitch Plan"
@@ -2067,7 +2067,7 @@ msgstr "Fiche d'information personnalisée"
 
 #: print/templates/custom-page.html:31 print/templates/ui.html:101
 msgid "This will reset your custom text to the default."
-msgstr "Cela réinitialisera votre texte personnalisé au défaut."
+msgstr "Cela réinitialisera votre texte personnalisé à la valeur par défaut."
 
 #: print/templates/custom-page.html:32 print/templates/ui.html:102
 msgid "All changes will be lost."
@@ -2088,7 +2088,7 @@ msgstr "Cliquez pour choisir un autre logo"
 
 #: print/templates/headline.html:10
 msgid "Enter job title..."
-msgstr "Entrez le titre du Job..."
+msgstr "Entrez le titre du travail..."
 
 #: print/templates/headline.html:11
 msgid "CLIENT"
@@ -2104,7 +2104,7 @@ msgstr "BON DE COMMANDE #:"
 
 #: print/templates/headline.html:12
 msgid "Enter purchase order number..."
-msgstr "Entrez le numéro de commande..."
+msgstr "Entrez le numéro du bon de commande..."
 
 #: print/templates/headline.html:15
 #, python-format
@@ -2156,7 +2156,7 @@ msgstr "Nombre de points total"
 #: print/templates/operator_detailedview.html:31
 #: print/templates/print_detail.html:11
 msgid "Estimated time"
-msgstr "Durée estimée du Job"
+msgstr "Durée estimée"
 
 #: print/templates/operator_detailedview.html:34
 #: print/templates/operator_overview.html:8
@@ -2190,7 +2190,7 @@ msgstr "Entrez des notes d'utilisation..."
 #: print/templates/operator_overview.html:22
 #: print/templates/print_overview.html:21
 msgid "Job estimated time"
-msgstr "Durée estimée du Job"
+msgstr "Durée estimée du travail"
 
 #: print/templates/operator_overview.html:29
 #: print/templates/print_detail.html:18 print/templates/print_overview.html:28
@@ -2661,7 +2661,7 @@ msgstr "sauts"
 #. name for this keyboard key: -
 #: electron/src/renderer/components/Simulator.vue:76
 msgid "Minus"
-msgstr "- Minus"
+msgstr "- Moins"
 
 #: electron/src/renderer/components/Simulator.vue:215
 msgid "needle points"
@@ -2713,7 +2713,7 @@ msgstr "Calcul du rendu du plan de broderie ..."
 
 #: electron/src/renderer/components/Simulator.vue:21
 msgid "Shortcut Key"
-msgstr "Clé de raccourci"
+msgstr "Raccourci clavier"
 
 #: electron/src/renderer/components/Simulator.vue:192
 msgid "Show"
@@ -2721,7 +2721,7 @@ msgstr "Montrer"
 
 #: electron/src/renderer/components/Simulator.vue:10
 msgid "Simulator Shortcut Keys"
-msgstr "Clés de raccourci du simulateur"
+msgstr "Raccourci clavier du simulateur"
 
 #: electron/src/renderer/components/Simulator.vue:115
 msgid "Slow down"
@@ -2844,7 +2844,7 @@ msgstr "-Interdit (manuel). Choisir cette option si vous avez positionné manuel
 
 #: inx/inkstitch_auto_run.inx:32
 msgid "Use Start- end end commands to define where auto-routing for running stitch should start and end."
-msgstr "Utiliser des commandes Départ-Fin pour définir les positions de départ et de fin de l'agencement automatique de points droits."
+msgstr "Utiliser des commandes Débutt-Fin pour définir les positions de début et la fin de l'agencement automatique de points droits."
 
 #: inx/inkstitch_auto_run.inx:34
 msgid "More info on our website:"
@@ -2882,7 +2882,7 @@ msgstr "Simple"
 
 #: inx/inkstitch_break_apart.inx:19
 msgid "Complex"
-msgstr "Complex"
+msgstr "Complexe"
 
 #: inx/inkstitch_cleanup.inx:3
 msgid "Cleanup Document"
@@ -2950,11 +2950,11 @@ msgstr "Scinder colonne satin"
 
 #: inx/inkstitch_cutwork_segmentation.inx:3
 msgid "Cutwork segmentation"
-msgstr "Segmentation cutwork"
+msgstr "Segmentation Richelieu"
 
 #: inx/inkstitch_cutwork_segmentation.inx:13
 msgid "Cutwork Options"
-msgstr "Options cutwork"
+msgstr "Options Richelieu"
 
 #: inx/inkstitch_cutwork_segmentation.inx:15
 msgid "#1"
@@ -3007,7 +3007,7 @@ msgstr "Cette extension sépare un chemin en fonction de l'angle."
 
 #: inx/inkstitch_cutwork_segmentation.inx:44
 msgid "* If you don't want to use 4 needles, set both angle values to 0 for the rest of the rows."
-msgstr "* Si vous ne voulez pas utiliser 4 aiguilles, mettez les deux valeurs d'angle à 0 pour le reste des étapes."
+msgstr "* Si vous ne voulez pas utiliser 4 aiguilles, mettez les deux valeurs d'angle à 0 pour le reste des lignes."
 
 #: inx/inkstitch_cutwork_segmentation.inx:45
 msgid "* A horizontal line has an angle of 0 degrees."
@@ -3075,7 +3075,7 @@ msgstr "Générer palette"
 
 #: inx/inkstitch_generate_palette.inx:17
 msgid "Generate Palette Options"
-msgstr "Options pour générer des palettes"
+msgstr "Options de génération des palettes"
 
 #: inx/inkstitch_generate_palette.inx:18
 msgid "Palette name"
@@ -3580,7 +3580,7 @@ msgstr "Lettrage"
 #: inx/inkstitch_lettering_custom_font_dir.inx:3
 #: inx/inkstitch_lettering_custom_font_dir.inx:18
 msgid "Custom font directory"
-msgstr "Répertoire de police personnalisée"
+msgstr "Répertoire de police personnalisé"
 
 #: inx/inkstitch_lettering_custom_font_dir.inx:10
 #: inx/inkstitch_lettering_force_lock_stitches.inx:10
@@ -3806,7 +3806,7 @@ msgstr "Paramètres des coordonnées"
 
 #: inx/inkstitch_output_TXT.inx:18
 msgid "negate X coordinate values"
-msgstr "intervertir les valeurs des coordonnées X"
+msgstr "négativer les coordonnées X"
 
 #: inx/inkstitch_output_TXT.inx:18
 msgid "Negate x coordinates"
@@ -3814,7 +3814,7 @@ msgstr "Négativer coordonnés x"
 
 #: inx/inkstitch_output_TXT.inx:19
 msgid "negate Y coordinate values"
-msgstr "intervertir les valeurs des coordonnées Y"
+msgstr "négativer les coordonnées Y"
 
 #: inx/inkstitch_output_TXT.inx:19
 msgid "Negate y coordinates"
@@ -3826,7 +3826,7 @@ msgstr "Valeur de la coordonnée Z"
 
 #: inx/inkstitch_output_TXT.inx:20
 msgid "Either alternate Z value between 0 and 1 or travel custom value."
-msgstr "Soit alterner la valeur Z entre 0 et 1, soit une valeur personnalisée de déplacement."
+msgstr "Soit une valeur de Z alternative entre 0 et 1, soit une valeur personnalisée de déplacement."
 
 #: inx/inkstitch_output_TXT.inx:21
 msgid "alternate Z value"
@@ -3958,7 +3958,7 @@ msgstr "Plus d'informations sur notre site web :"
 
 #: inx/inkstitch_palette_to_text.inx:24
 msgid "https://inkstitch.org/docs/thread-color#palette-to-text"
-msgstr "https://inkstitch.org/fr/docs/thread-color#palette-to-text"
+msgstr "https://inkstitch.org/fr/docs/thread-color#palette-vers-texte"
 
 #: inx/inkstitch_params.inx:3
 msgid "Params"
@@ -3974,7 +3974,7 @@ msgstr "Supprimer tous les paramètres de broderie"
 
 #: inx/inkstitch_remove_embroidery_settings.inx:7
 msgid "Remove Params"
-msgstr "Supprimer paramètres"
+msgstr "Supprimer les paramètres"
 
 #: inx/inkstitch_remove_embroidery_settings.inx:7
 msgid "Removes params from selected objects or all objects if nothing is selected."
@@ -3994,11 +3994,11 @@ msgstr "Supprimer les paramètres d'impression des métadonnées SVG"
 
 #: inx/inkstitch_reorder.inx:3
 msgid "Re-stack objects in order of selection"
-msgstr "Réempiler les objets dans l'ordre de sélection"
+msgstr "Réempiler les objets dans l'ordre de leur sélection"
 
 #: inx/inkstitch_selection_to_guide_line.inx:3
 msgid "Selection to guide line"
-msgstr "Sélection vers ligne de guidage"
+msgstr "Sélection vers ligne-guide"
 
 #: inx/inkstitch_selection_to_pattern.inx:3
 msgid "Selection to pattern"
@@ -4054,7 +4054,7 @@ msgstr "Ink/Stitch : ZIP exporter plusieurs formats (.zip)"
 
 #: inx/inkstitch_zip.inx:9
 msgid "Create a ZIP with multiple embroidery file formats using Ink/Stitch"
-msgstr "Créer un ZIP avec des formats de fichiers de broderie multiples à l’aide d’Ink/Stitch"
+msgstr "Créer un ZIP avec des formats multiples de fichiers de broderie à l’aide d’Ink/Stitch"
 
 #: inx/inkstitch_zip.inx:20
 msgid ".SVG: Scalable Vector Graphic"
