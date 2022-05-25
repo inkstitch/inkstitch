@@ -12,12 +12,12 @@ toc: true
 
 
 ![Fill stitch detail](/assets/images/docs/guided-fill-detail.jpg)
-Tout comme le remplissage usuel, le remplissage guidé est composé de rangées parallèles, mais au lieu de suivre des lignes droites chaque rangée suit   une ligne-guide.
+Tout comme le remplissage usuel, le remplissage guidé est composé de rangées décalées parallèles, mais au lieu de suivre des lignes droites,  les rangées peuvent être courbées par une ligne-guide.
 
 ## Comment le créer
 
 * Créez une **forme fermée avec une couleur de remplissage**. Cette forme  peut comporter des trous.
-* Créez une ligne-guide pour définir la direction des points :
+* Créez une ligne-guide pour définir la forme des rangées de points :
     * Dessinez un trait (chemin avec une couleur de contour et sans couleur de remplissage)
     * Selectionnez ce trait
     * Lancez `Extensions > Ink/Stitch > Edition > Selection vers ligne-guide`
