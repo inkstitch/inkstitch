@@ -12,7 +12,7 @@ toc: true
 
 
 ![Fill stitch detail](/assets/images/docs/guided-fill-detail.jpg)
-Tout comme le remplissage nonrmal, le remplissage guidé est composé de rangées parallèles, mais au lieu de suivre des lignes droites chaque rangée suit   une ligne-guide.
+Tout comme le remplissage usuel, le remplissage guidé est composé de rangées parallèles, mais au lieu de suivre des lignes droites chaque rangée suit   une ligne-guide.
 
 ## Comment le créer
 
