@@ -4,30 +4,40 @@ permalink: /en/fonts/sortefax/
 last_modified_at: 2022-05-05
 toc: false
 preview_image: 
-- /assets/images/fonts/sortefaxXL.png
-- /assets/images/fonts/sortefax_medium.png
+  - url: /assets/images/fonts/sortefaxXL.png
+    height: 150
+  - url: /assets/images/fonts/sortefax_medium.png
+    height: 90
 ---
 ![SortefaxXL](/assets/images/fonts/sortefaxXL.png)
 ![Sortefax_medium](/assets/images/fonts/sortefax_medium.png)
 
 ## Glyphes
 This fonts contains  47 glyphs:
-	
-?.:;,([{)]}&ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
 
-Remark: :;,.(){}[]  are used to store frames.
+- ABCDEFGHIJKLMNOPQRSTUVWXYZ
+- 0123456789
+- ?.:;,([{)]}&
+
+**Remark:** :;,.(){}[]  are used to store frames.
+{: .notice--info }
 
 ## Dimensions
+
 ### Sortefax XL Initials
+
 At 100%, this font is approximatively 150 mm (6 inches) tall.
 It can been scaled up to 200% (approx 300 mm, 12 inches) or down to 70% (approx 100 mm, 4 inches).
+
 ### Sortefax Medium Initials
+
 At 100%, this font is approximatively 90 mm (3.5 inches) tall.
 It can be scaled up to 200% (approx 180 mm, 7 inches) or down to 70% (approx 60 mm, 2.5 inches).
 
 ## Description
 
 ### Sortefax XL Initials
+
 Sortefax XL Initials is meant to be used one letter at a time.
 To get a framed letter, simply type the letter and any "frame" letter in the lettering dialog window (same line, no space).
 
@@ -41,10 +51,7 @@ Sortefax Médium Initials is  smaller but  also simplier.
 It is still possible to use frames, but the arranging of the frame and the letter is  not as good as for the XL font.
 But this font may be used to write whole words with a correct kerning and not only single letters.
 
-
-
 ## To access the frames, use the corresponding keys:
-
 
 Frame|Key
 ---|---

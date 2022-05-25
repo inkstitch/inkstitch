@@ -498,6 +498,14 @@ span.font-separator {
     margin-bottom: 2em;
 }
 
+.fonts p {
+    overflow: hidden;
+}
+
+.fonts p a img {
+    max-width: none;
+}
+
 /* Machine Database */
 
 .machine-fileformat:hover { background: #ccc; }

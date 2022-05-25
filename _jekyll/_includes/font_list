@@ -6,7 +6,7 @@
   {%- if urlsize < 15 -%}
 [![{{font.title}} Preview]({{ image }})]({{ font.permalink }})
   {%- else -%}
-<img src="{{ image.url }}" style="height:{{ image.height }}mm" alt="{{font.title}} Preview">
+<a href="{{ font.permalink }}"><img src="{{ image.url }}" style="height:{{ image.height }}mm" alt="{{font.title}} Preview"></a>
   {%- endif -%}
   {%- endfor -%}
 [{{ font.title }}]({{ font.permalink }})
