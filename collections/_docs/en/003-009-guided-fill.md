@@ -32,9 +32,11 @@ Each group is allowed to contain more than one fill object, but only one guide l
 Additional guide lines will be ignored.
   
 
+### Several fill shapes in a group 
+![Guided Fill Group](/assets/images/docs/guided-fill-group.png)
 
-  
-  ![Guided Fill Group](/assets/images/docs/guided-fill-group.png)
+### A single fill shape  in a group
+![Guided Fill One in a Group](/assets/images/docs/en/guided-fill-single-en.png)
 
 ## Set Start and End Point
 
