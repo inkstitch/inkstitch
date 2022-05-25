@@ -29,8 +29,13 @@ chaque forme utilisant la portion de la ligne-guide qui l'intersecte. Dans ce ca
 
 Si plusieurs lignes-guide sont présentes, une seule d'entre elles est prise en compte. Sur le canevas, un marqueur permet de distinguer les lignes-guide des éléments de broderie standard.
 
+### Plusieurs formes de remplissage dans un même groupe
+
 ![Guided Fill Group](/assets/images/docs/guided-fill-group.png)
 
+### Une seule forme de remplissage dans le groupe
+
+![Guided Fill One in a Group](/assets/images/docs/fr/guided-fill-single-fr.png)
 
 ## Définir le point de départ et d'arrivée
 Définir le point de départ et d'arrivée pour les remplissages automatiques avec les [commandes visuelles](/fr/docs/commands/).
