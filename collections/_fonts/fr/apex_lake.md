@@ -1,11 +1,14 @@
 ---
 title: "Apex Lake"
 permalink: /fr/fonts/apex-lake/
-last_modified_at: 2022-05-07
+last_modified_at: 2022-05-27
 toc: false
-preview_image: /assets/images/fonts/apex_lake.png
+preview_image:
+ - url: /assets/images/fonts/apex_lake.png
+   height: 60
 ---
-![Apex](/assets/images/fonts/apex_lake.png)
+![Apex Lake](/assets/images/fonts/apex_lake.png)
+
 
 ## Glyphes
 Apex lake contient les 38 glyphes:
