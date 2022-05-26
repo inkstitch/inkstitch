@@ -4,12 +4,12 @@ permalink: /fonts/emilio-20/
 last_modified_at: 2022-05-05
 toc: false
 preview_image:
-  - url: /assets/images/fonts/emilio_20.png
-    height: 50
+  - url: /assets/images/fonts/emilio_20.jpg
+    height: 48
   - url: /assets/images/fonts/emilio20tricolore.png
     height: 100
 ---
-![Emilio 20](/assets/images/fonts/emilio_20.png)
+![Emilio 20](/assets/images/fonts/emilio_20.jpg)
 ![Emilio 20 Tricolore](/assets/images/fonts/emilio20tricolore.png)
 
 ## Glyphs
