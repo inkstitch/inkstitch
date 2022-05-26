@@ -4,16 +4,16 @@ permalink: /en/fonts/grand_hotel_marif/
 last_modified_at: 2022-05-04
 toc: false
 preview_image:
-  - url: /assets/images/fonts/grandhotel_small.png
-    height: 13
-  - url: /assets/images/fonts/grand_hotel_marif.png
-    height: 35
+  - url: /assets/images/fonts/grand_hotel_small.jpg
+    height: 20
+  - url: /assets/images/fonts/grand_hotel_marif.jpg
+    height: 53
 
 ---
 
 
-![grand_hotel_marif](/assets/images/fonts/grand_hotel_marif.png)
-![grand_hotel_marif](/assets/images/fonts/grandhotel_small.png)
+![grand_hotel_marif](/assets/images/fonts/grand_hotel_marif.jpg)
+![grand_hotel_marif](/assets/images/fonts/grand_hotel_small.jpg)
 
 {% include upcoming_release.html %}
 
