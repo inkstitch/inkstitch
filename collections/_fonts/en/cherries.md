@@ -1,7 +1,7 @@
 ---
 title: "Cherries"
 permalink: /en/fonts/cherries/
-last_modified_at: 2022-05-05
+last_modified_at: 2022-05-26
 toc: false
 preview_image:
   - url: /assets/images/fonts/cherry_for_inkstitch.jpg
@@ -10,6 +10,7 @@ preview_image:
     height: 75
 ---
 ![Cherryforinkstitch](/assets/images/fonts/cherry_for_inkstitch.jpg)
+
 ![CherryForKaalleen](/assets/images/fonts/cherryforkaalleen.png)
 
 ## Glyphes
