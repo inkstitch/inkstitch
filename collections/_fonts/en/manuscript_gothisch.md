@@ -4,10 +4,10 @@ permalink: /fonts/manuscript_gothisch/
 last_modified_at: 2022-05-05
 toc: false
 preview_image:
-  - url: /assets/images/fonts/manuscript_gothisch.png
+  - url: /assets/images/fonts/manuscript_gothisch.jpg
     height: 30
 ---
-![ManuscriptGothisch](/assets/images/fonts/manuscript_gothisch.png)
+![ManuscriptGothisch](/assets/images/fonts/manuscript_gothisch.jpg)
 
 ## Glyphs
 This font contains 105 glyphs:
