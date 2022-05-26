@@ -3,8 +3,9 @@ title: "Abecedaire"
 permalink: /en/fonts/abecedaire/
 last_modified_at: 2022-05-04
 toc: false
-preview_image: /assets/images/fonts/abecedaire.png
-
+preview_image:
+  - url: /assets/images/fonts/ink_stitch_small.png
+    height: 14
 ---
 
 ![Abecedaire](/assets/images/fonts/abecedaire.png)
