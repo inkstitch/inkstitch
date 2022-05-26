@@ -1,11 +1,14 @@
 ---
 title: "Aventurina"
 permalink: /de/fonts/aventurina/
-last_modified_at: 2022-05-20
+last_modified_at: 2022-05-27
 toc: false
-preview_image: /assets/images/fonts/aventurina.png
+preview_image:
+  - url: /assets/images/fonts/aventurina.jpg
+    height: 20
 ---
-![Aventurina](/assets/images/fonts/aventurina.png)
+![Aventurina](/assets/images/fonts/aventurina.jpg)
+
 
 Dies ist Teil einer kommenden Ink/Stitch-Version und nicht in Ink/Stitch v2.1.2 verfügbar.
 
