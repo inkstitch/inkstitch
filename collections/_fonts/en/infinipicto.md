@@ -3,7 +3,9 @@ title: "InfiniPicto"
 permalink: /fonts/infinipicto/
 last_modified_at: 2022-05-07
 toc: false
-preview_image: /assets/images/fonts/infinipicto.png
+preview_image:
+  - url: /assets/images/fonts/infinipicto.png
+    height: 70
 ---
 ![InfiniPicto](/assets/images/fonts/infinipicto.png)
 ## Glyphs
