@@ -4,14 +4,14 @@ permalink: /fonts/espresso_dolce/
 last_modified_at: 2022-05-05
 toc: false
 preview_image:
-  - url: /assets/images/fonts/espresso_tiny.png
-    height: 8
-  - url: /assets/images/fonts/espresso_dolce.png
-    height: 20
+  - url: /assets/images/fonts/espresso_tiny.jpg
+    height: 9
+  - url: /assets/images/fonts/espresso_KOR.jpng
+    height: 22
 
 ---
-![Espresso KOR](/assets/images/fonts/espresso_dolce.png)
-![Espresso tiny](/assets/images/fonts/espresso_tiny.png)
+![Espresso KOR](/assets/images/fonts/espresso_KOR.jpg)
+![Espresso tiny](/assets/images/fonts/espresso_tiny.jpg)
 
 
 ## Glyphs
