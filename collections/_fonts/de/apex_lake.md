@@ -1,9 +1,11 @@
 ---
 title: "Apex Lake"
 permalink: /de/fonts/apex-lake/
-last_modified_at: 2022-05-20
+last_modified_at: 2022-05-27
 toc: false
-preview_image: /assets/images/fonts/apex_lake.png
+preview_image:
+ - url: /assets/images/fonts/apex_lake.png
+   height: 60
 ---
 ![Apex Lake](/assets/images/fonts/apex_lake.png)
 
