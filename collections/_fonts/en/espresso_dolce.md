@@ -6,7 +6,7 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/espresso_tiny.jpg
     height: 9
-  - url: /assets/images/fonts/espresso_KOR.jpng
+  - url: /assets/images/fonts/espresso_KOR.jpg
     height: 22
 
 ---
