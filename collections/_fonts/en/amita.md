@@ -6,7 +6,7 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/amitaclo_small.png
     height: 12
-  - url: /assets/images/fonts/amita.png
+  - url: /assets/images/fonts/amita.jpg
     height: 30
 ---
 ![Amitaclo](/assets/images/fonts/amita.png)
