@@ -3,9 +3,11 @@ title: "Brockscript"
 permalink: /ru/fonts/brockscript/
 last_modified_at: 2022-05-04
 toc: false
-preview_image: /assets/images/fonts/brockscript.png
+preview_image:
+  - url: /assets/images/fonts/brockscript.jpg
+    height: 45
 ---
-![Brockscript](/assets/images/fonts/brockscript.png)
+![Brockscript](/assets/images/fonts/brockscript.jpg)
 
 ## Glyphs
 
