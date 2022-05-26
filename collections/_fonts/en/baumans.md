@@ -4,10 +4,10 @@ permalink: /en/fonts/baumans/
 last_modified_at: 2022-05-05
 toc: false
 preview_image:
-  - url: /assets/images/fonts/baumans.png
+  - url: /assets/images/fonts/baumans_fi.jpg
     height: 32
 ---
-![Baumans](/assets/images/fonts/baumans.png)
+![Baumans](/assets/images/fonts/baumans_fi.jpg)
 
 ## Glyphs
 
