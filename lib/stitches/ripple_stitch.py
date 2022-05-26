@@ -28,7 +28,8 @@ def ripple_stitch(lines, target, line_count, points, max_stitch_length, repeats,
     if is_closed(outline):
         rippled_line = do_circular_ripple(outline, target, line_count, repeats, flip, max_stitch_length, skip_start, skip_end, exponent, guide_line)
     else:
-        rippled_line = do_linear_ripple(lines, points, target, line_count - 1, repeats, flip, skip_start, skip_end, render_grid, exponent)
+        rippled_line = do_linear_ripple(lines, points, target, line_count - 1, repeats, flip, max_stitch_length,
+                                        skip_start, skip_end, render_grid, exponent, guide_line)
 
     return running_stitch(line_string_to_point_list(rippled_line), max_stitch_length)
 
@@ -55,9 +56,12 @@ def do_circular_ripple(outline, target, line_count, repeats, flip, max_stitch_le
     return LineString(coords)
 
 
-def do_linear_ripple(lines, points, target, line_count, repeats, flip, skip_start, skip_end, render_grid, exponent):
+def do_linear_ripple(lines, points, target, line_count, repeats, flip, max_stitch_length, skip_start, skip_end, render_grid, exponent, guide_line):
     if len(lines) == 1:
-        helper_lines = target_point_lines(lines[0], target, flip)
+        if guide_line:
+            helper_lines = guided_helper_lines(lines[0], flip, max_stitch_length, guide_line.geoms[0])
+        else:
+            helper_lines = target_point_lines(lines[0], target, flip)
     else:
         helper_lines = []
         for start, end in zip(points[0], points[1]):
