@@ -5,7 +5,7 @@ last_modified_at: 2022-05-04
 toc: false
 preview_image:
   - url: /assets/images/fonts/aventurina.png
-    height: 12
+    height: 20
 ---
 ![Aventurina](/assets/images/fonts/aventurina.png)
 
