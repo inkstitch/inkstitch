@@ -4,10 +4,10 @@ permalink: /en/fonts/monicha/
 last_modified_at: 2022-05-05
 toc: false
 preview_image:
-  - url: /assets/images/fonts/monicha.png
-    height: 28
+  - url: /assets/images/fonts/monicha.jpg
+    height: 24
 ---
-![monicha](/assets/images/fonts/monicha.png)
+![monicha](/assets/images/fonts/monicha.jpg)
 
 {% include upcoming_release.html %}
 
