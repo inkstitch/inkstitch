@@ -12,6 +12,8 @@ preview_image:
 ![SortefaxXL](/assets/images/fonts/sortefaxXL.png)
 ![Sortefax_medium](/assets/images/fonts/sortefax_medium.png)
 
+{% include upcoming_release.html %}
+
 ## Glyphes
 This fonts contains  47 glyphs:
 
