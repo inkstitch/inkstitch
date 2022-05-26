@@ -3,7 +3,9 @@ title: "Namskout AGS"
 permalink: /fonts/namskout_ags/
 last_modified_at: 2022-05-05
 toc: false
-preview_image: /assets/images/fonts/namskout_ags.png
+preview_image:
+  - url: /assets/images/fonts/namskout_ags.png
+    height: 100
 ---
 ![NamskoutAGS](/assets/images/fonts/namskout_ags.png)
 
