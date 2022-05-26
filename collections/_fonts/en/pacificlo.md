@@ -4,8 +4,10 @@ permalink: /fonts/pacificlo/
 last_modified_at: 2022-05-05
 toc: false
 preview_image:
-  - /assets/images/fonts/pacificlo.png
-  - /assets/images/fonts/pacificlo_tiny.png
+  - url: /assets/images/fonts/pacificlo_tiny.png
+    height: 8
+  - url: /assets/images/fonts/pacificlo.png
+    height: 20
 ---
 ![Pacificlo](/assets/images/fonts/pacificlo.png)
 ![Pacificlo tiny](/assets/images/fonts/pacificlo_tiny.png)
