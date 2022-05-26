@@ -3,11 +3,13 @@ title: "Glacial tiny 60 AGS"
 permalink: /en/fonts/glacial_tiny/
 last_modified_at: 2022-05-05
 toc: false
-preview_image: /assets/images/fonts/glacial_tiny.png
+preview_image:
+  - url: /assets/images/fonts/glacial_tiny.png
+    height: 7
 ---
 ![glacial_tiny](/assets/images/fonts/glacial_tiny.png)
 
-This is part of an upcoming Ink/Stitch version and not available in Ink/Stitch v2.1.2
+{% include upcoming_release.html %}
 ## Glyphs
 
 This font contains 159 glyphs:
