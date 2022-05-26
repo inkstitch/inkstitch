@@ -4,10 +4,10 @@ permalink: /fonts/brockscript/
 last_modified_at: 2022-05-05
 toc: false
 preview_image:
-  - url: /assets/images/fonts/brockscript.png
+  - url: /assets/images/fonts/brockscript.jpg
     height: 45
 ---
-![Brockscript](/assets/images/fonts/brockscript.png)
+![Brockscript](/assets/images/fonts/brockscript.jpg)
 
 ## Glyphs
 
