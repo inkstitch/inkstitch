@@ -1,13 +1,15 @@
 ---
 title: "Aventurina"
 permalink: /fr/fonts/aventurina/
-last_modified_at: 2022-05-06
+last_modified_at: 2022-05-27
 toc: false
-preview_image: /assets/images/fonts/aventurina.png
+preview_image:
+  - url: /assets/images/fonts/aventurina.jpg
+    height: 20
 ---
-![Aventurina](/assets/images/fonts/aventurina.png)
+![Aventurina](/assets/images/fonts/aventurina.jpg)
 
-Cette fonte sera dans une prochaine version d'Ink/Stitch version et n'est pas disponible dans Ink/Stitch v2.1.2.
+{% include upcoming_release.html %}
 
 ## Glyphes 
 Aventurina contient les 142 glyphes : 
