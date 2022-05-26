@@ -5,7 +5,7 @@ last_modified_at: 2022-05-05
 toc: false
 preview_image:
   - url: /assets/images/fonts/brockscript.png
-    height: 40
+    height: 45
 ---
 ![Brockscript](/assets/images/fonts/brockscript.png)
 
