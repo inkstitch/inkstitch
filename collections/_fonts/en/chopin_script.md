@@ -4,10 +4,10 @@ permalink: /fonts/chopin/
 last_modified_at: 2022-05-05
 toc: false
 preview_image:
-  - url: /assets/images/fonts/chopin_script.png
-    height: 50
+  - url: /assets/images/fonts/chopin_script.jpg
+    height: 59
 ---
-![Chopin Script](/assets/images/fonts/chopin_script.png)
+![Chopin Script](/assets/images/fonts/chopin_script.jpg)
 
 ## Glyphs
 
