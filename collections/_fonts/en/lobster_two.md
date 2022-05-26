@@ -3,7 +3,9 @@ title: "Lobster AGS"
 permalink: /fonts/lobster_ags/
 last_modified_at: 2022-05-05
 toc: false
-preview_image: /assets/images/fonts/lobster_two_bold_italic.png
+preview_image:
+  - url: /assets/images/fonts/lobster_two_bold_italic.png
+    height: 22
 ---
 ## Bold Italic
 
