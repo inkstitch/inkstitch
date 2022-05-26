@@ -4,7 +4,7 @@ permalink: /en/fonts/abecedaire/
 last_modified_at: 2022-05-04
 toc: false
 preview_image:
-  - url: /assets/images/fonts/ink_stitch_small.png
+  - url: /assets/images/fonts/abecedaire.png
     height: 14
 ---
 
