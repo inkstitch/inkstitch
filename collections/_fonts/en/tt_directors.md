@@ -3,7 +3,9 @@ title: "TT Directors"
 permalink: /fonts/tt_directors/
 last_modified_at: 2020-12-31
 toc: false
-preview_image: /assets/images/fonts/tt_directors.png
+preview_image:
+  - url: /assets/images/fonts/tt_directors.png
+    height: 20
 ---
 ![TT Directors](/assets/images/fonts/tt_directors.png)
 
