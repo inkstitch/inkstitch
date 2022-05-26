@@ -3,9 +3,11 @@ title: "Roman AGS"
 permalink: /en/fonts/roman_ags/
 last_modified_at: 2022-05-05
 toc: false
-preview_image: 
-  - /assets/images/fonts/roman_ags.png
-  - /assets/images/fonts/roman_ags_bicolor.png
+preview_image:
+  - url: /assets/images/fonts/roman_ags.png
+    height: 28
+  - url: /assets/images/fonts/roman_ags_bicolor.png
+    height: 28
  
 ---
 ![Roman AGS](/assets/images/fonts/roman_ags.png)
