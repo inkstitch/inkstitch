@@ -10,6 +10,7 @@ import shapely.geometry
 from inkex import Transform
 
 from ..i18n import _
+from ..marker import get_marker_elements
 from ..stitch_plan import StitchGroup
 from ..stitches import bean_stitch, running_stitch
 from ..stitches.ripple_stitch import ripple_stitch
@@ -28,6 +29,14 @@ class IgnoreSkipValues(ValidationWarning):
     steps_to_solve = [
         _('* Reduce values of Skip first and last lines or'),
         _('* Increase number of lines accordinly in the params dialog.'),
+    ]
+
+
+class MultipleGuideLineWarning(ValidationWarning):
+    name = _("Multiple Guide Lines")
+    description = _("This object has multiple guide lines, but only the first one will be used.")
+    steps_to_solve = [
+        _("* Remove all guide lines, except for one.")
     ]
 
 
@@ -157,6 +166,7 @@ class Stroke(EmbroideryElement):
            tooltip=_('Render as grid. Works only with satin type ripple stitches.'),
            type='float',
            default=0,
+           unit='mm',
            select_items=[('stroke_method', 1)],
            sort_index=8)
     @cache
@@ -315,6 +325,7 @@ class Stroke(EmbroideryElement):
         # ripple stitch
         if self.stroke_method == 1:
             lines = self.as_multi_line_string()
+            guide_line = self._get_guide_lines()
             points = []
             if len(lines.geoms) > 1:
                 # if render_grid has a number use this, otherwise use running_stitch_length
@@ -336,7 +347,8 @@ class Stroke(EmbroideryElement):
                     self.skip_start,
                     self.skip_end,
                     self.render_grid,
-                    self.exponent))
+                    self.exponent,
+                    guide_line))
             if patch:
                 if self.bean_stitch_repeats > 0:
                     patch.stitches = self.do_bean_repeats(patch.stitches)
@@ -361,6 +373,25 @@ class Stroke(EmbroideryElement):
 
         return patches
 
+    @cache
+    def _get_guide_lines(self, multiple=False):
+        guide_lines = get_marker_elements(self.node, "guide-line", False, True)
+        # No or empty guide line
+        if not guide_lines or not guide_lines['stroke']:
+            return None
+
+        if multiple:
+            return guide_lines['stroke']
+        else:
+            return guide_lines['stroke'][0]
+
     def validation_warnings(self):
         if self.stroke_method == 1 and self.skip_start + self.skip_end >= self.line_count:
             yield IgnoreSkipValues(self.shape.centroid)
+
+        # guided fill warnings
+        if self.stroke == 1:
+            guide_lines = self._get_guide_lines(True)
+            if len(guide_lines) > 1:
+                yield MultipleGuideLineWarning(self.shape.centroid)
+            return None
