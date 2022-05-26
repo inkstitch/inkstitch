@@ -5,10 +5,10 @@ last_modified_at: 2020-12-31
 toc: false
 
 preview_image:
-  - url: /assets/images/fonts/tt_masters.png
+  - url: /assets/images/fonts/tt_masters.jpg
     height: 20
 ---
-![TT Masters](/assets/images/fonts/tt_masters.png)
+![TT Masters](/assets/images/fonts/tt_masters.jpg)
 
 ## Glyphes
 
