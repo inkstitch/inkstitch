@@ -7,7 +7,7 @@ preview_image: /assets/images/fonts/monicha.png
 ---
 ![monicha](/assets/images/fonts/monicha.png)
 
-This font will be part of next Ink/Stitch version and is not yet available in Ink/Stitch v2.1.2.
+{% include upcoming_release.html %}
 
 ## Glyphs 
 Monicha contains 195 glyphs :
