@@ -4,10 +4,10 @@ permalink: /fonts/coronaviral/
 last_modified_at: 2021-05-02
 toc: false
 preview_image:
-  - url: /assets/images/fonts/coronaviral.png
+  - url: /assets/images/fonts/coronaviral.jpg
     height: 27
 ---
-![Coronaviral](/assets/images/fonts/coronaviral.png)
+![Coronaviral](/assets/images/fonts/coronaviral.jpg)
 
 ## Glyphs
 
