@@ -3,7 +3,9 @@ title: "Fold Ink/Stitch"
 permalink: /fonts/fold_inkstitch/
 last_modified_at: 2022-05-05
 toc: false
-preview_image: /assets/images/fonts/fold_inkstitch.png
+preview_image:
+  - url: /assets/images/fonts/fold_inkstitch.png
+    height: 63
 ---
 ![FoldInkstitch](/assets/images/fonts/fold_inkstitch.png)
 
