@@ -3,10 +3,13 @@ title: "Baumans FI"
 permalink: /ru/fonts/baumans/
 last_modified_at: 2022-05-04
 toc: false
-preview_image: /assets/images/fonts/baumans.png
+preview_image:
+  - url: /assets/images/fonts/baumans_fi.jpg
+    height: 32
 ---
-![Baumans](/assets/images/fonts/baumans.png)
+![Baumans](/assets/images/fonts/baumans_fi.jpg)
 
+## Glyphs
 ## Glyphs
 
 Baumans contains  102 glyphs:
