@@ -4,12 +4,12 @@ permalink: /fonts/lobster_ags/
 last_modified_at: 2022-05-05
 toc: false
 preview_image:
-  - url: /assets/images/fonts/lobster_two_bold_italic.png
-    height: 22
+  - url: /assets/images/fonts/lobster_AGS.jpg
+    height: 27
 ---
 ## Bold Italic
 
-![Lobster AGS](/assets/images/fonts/lobster_two_bold_italic.png)
+![Lobster AGS](/assets/images/fonts/lobster_AGS.jpg)
 ## Glyphs
 
 This font contains 97 glyphs:
