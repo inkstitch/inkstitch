@@ -1,13 +1,13 @@
 ---
 title: "Abecedaire"
 permalink: /de/fonts/abecedaire/
-last_modified_at: 2022-05-20
-toc: false
-preview_image: /assets/images/fonts/abecedaire.png
-
+last_modified_at: 2022-05-27
+preview_image:
+  - url: /assets/images/fonts/abecedaire.jpg
+    height: 14
 ---
 
-![Abecedaire](/assets/images/fonts/abecedaire.png)
+![Abecedaire](/assets/images/fonts/abecedaire.jpg)
 
 Dies ist Teil einer kommenden Ink/Stitch-Version und nicht in Ink/Stitch v2.1.2 verfügbar.
 
