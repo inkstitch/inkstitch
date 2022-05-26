@@ -4,15 +4,15 @@ permalink: /fonts/geneva_simple/
 last_modified_at: 2020-12-31
 toc: false
 preview_image:
-  - url: /assets/images/fonts/geneva_simple_sans.png
-    height: 14
-  - url: /assets/images/fonts/geneva_simple_sans_rounded.png
-    height: 14
+  - url: /assets/images/fonts/geneva_simple_sans.jpg
+    height: 13
+  - url: /assets/images/fonts/geneva_simple_sans_rounded.jpg
+    height: 13
 ---
 
 ## Sans
 
-![Geneva Simple Sans](/assets/images/fonts/geneva_simple_sans.png)
+![Geneva Simple Sans](/assets/images/fonts/geneva_simple_sans.jpg)
 
 
 
@@ -23,7 +23,7 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#<>:;,'"“”.+@
 
 ## Sans Rounded
 
-![Geneva Simple Sans](/assets/images/fonts/geneva_simple_sans_rounded.png)
+![Geneva Simple Sans](/assets/images/fonts/geneva_simple_sans_rounded.jpg)
 
 
 ### Glyphes
