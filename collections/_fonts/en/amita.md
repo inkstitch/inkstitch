@@ -6,10 +6,10 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/amitaclo_small.png
     height: 12
-  - url: /assets/images/fonts/amita.jpg
+  - url: /assets/images/fonts/amitaclo.jpg
     height: 30
 ---
-![Amitaclo](/assets/images/fonts/amita.png)
+![Amitaclo](/assets/images/fonts/amita.jpg)
 ![Amitaclo small](/assets/images/fonts/amitaclo_small.png)
 
 ## Glyphs
