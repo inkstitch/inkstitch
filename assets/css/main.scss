@@ -492,18 +492,45 @@ a img:hover {
 
 /* Font Library */
 
-span.font-separator {
-    border-bottom: 2px solid lightgray;
-    display: block;
-    margin-bottom: 2em;
-}
-
-.fonts p {
-    overflow: hidden;
-}
-
-.fonts p a img {
+.fonts #main {
     max-width: none;
+    margin-left: 3em;
+}
+
+@media (max-width: 1370px) {
+    .fonts #main {
+        margin-left:  auto;
+    }
+}
+
+div.font-separator {
+    border-bottom: 2px solid lightgrey;
+    margin-bottom: 1em;
+}
+
+div.font-separator img {
+    max-width: none;
+}
+
+div.font-separator-test {
+  border: 2px solid lightgray;
+  position: relative;
+  float: left;
+  height: 170mm;
+  overflow: hidden;
+  width: 110mm;
+  margin: 1mm;
+}
+
+.fonts p.font-preview {
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.fonts p.font-preview a img {
+    max-width: none;
+    box-shadow: none !important;
 }
 
 /* Machine Database */

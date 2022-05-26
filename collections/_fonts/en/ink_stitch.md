@@ -6,8 +6,10 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/ink_stitch_small.png
     height: 6
+    title: "Ink/Stitch small"
   - url: /assets/images/fonts/ink_stitch_medium.png
     height: 19
+    title: "Ink/Stitch Medium"
 ---
 ![Ink/Stitch Small](/assets/images/fonts/ink_stitch_small.png)
 ![Ink/Stitch Medium](/assets/images/fonts/ink_stitch_medium.png)

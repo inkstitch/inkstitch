@@ -1,14 +1,17 @@
 {% assign fonts = site.fonts | where: "lang", page.lang %}
 
 {%- for font in fonts -%}
+<div class="font-separator">
   {%- for image in font.preview_image -%}
   {%- assign urlsize = image.url | size -%}
-  {% if urlsize < 15 %}
-[![{{font.title}} Preview]({{ image }})]({{ font.permalink }})
+  {%- if urlsize < 15 -%}
+  <p><a href="{{ font.permalink }}"><img src="{{ font.preview_image }}" alt="{{font.title}} Preview"></a></p>
   {%- else -%}
-<a href="{{ font.permalink }}"><img src="{{ image.url }}" style="height:{{ image.height }}mm" alt="{{font.title}} Preview"></a>
+  <p>
+      <a href="{{ font.permalink }}"><img src="{{ image.url }}" alt="{{font.title}} Preview" style="height:{{ image.height }}mm"></a>
+  </p>
   {%- endif -%}
-  {%- endfor -%}
-[{{ font.title }}]({{ font.permalink }})
-<span class="font-separator"></span>
-{%- endfor -%}
+  {% endfor %}
+  <p><a href="{{ font.permalink }}">{{ font.title }}</a></p>
+</div>
+{% endfor %}
