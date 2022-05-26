@@ -3,7 +3,9 @@ title: "Baumans FI"
 permalink: /en/fonts/baumans/
 last_modified_at: 2022-05-05
 toc: false
-preview_image: /assets/images/fonts/baumans.png
+preview_image:
+  - url: /assets/images/fonts/baumans.png
+    height: 32
 ---
 ![Baumans](/assets/images/fonts/baumans.png)
 
@@ -12,17 +14,7 @@ preview_image: /assets/images/fonts/baumans.png
 Baumans contains  102 glyphs:
 
 	
-@'()+,-.01
-23456789:;
-=?@ABCDEFG
-HIJKLMNOPQ
-RSTUVWXYZ`
-abcdefghij
-klmnopqrst
-uvwxyz¨«´’
-»ÄÖÜßàáâäç
-èéêëîïôöùû
-üˆ
+@'()+,-.0123456789:;=?@ABCDEFGHIJKLMNOPQRSTUVWXYZ`abcdefghijklmnopqrstuvwxyz¨«´’»ÄÖÜßàáâäçèéêëîïôöùûüˆ
  
 ## Remark
 
