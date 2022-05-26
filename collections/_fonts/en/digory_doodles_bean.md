@@ -1,7 +1,7 @@
 ---
 title: "Digory Doodles Bean"
 permalink: /en/fonts/digory-doodles-bean/
-last_modified_at: 2021-05-02
+last_modified_at: 2021-05-26
 toc: false
 preview_image:
   - url: /assets/images/fonts/digory_doodles_bean.jpg
