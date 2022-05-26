@@ -4,10 +4,10 @@ permalink: /fonts/fold_inkstitch/
 last_modified_at: 2022-05-05
 toc: false
 preview_image:
-  - url: /assets/images/fonts/fold_inkstitch.png
+  - url: /assets/images/fonts/fold_inkstitch.jpg
     height: 63
 ---
-![FoldInkstitch](/assets/images/fonts/fold_inkstitch.png)
+![FoldInkstitch](/assets/images/fonts/fold_inkstitch.jpg)
 
 ## Glyphs
 This font contains 40 glyphs
