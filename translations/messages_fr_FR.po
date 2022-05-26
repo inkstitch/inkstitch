@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-05-24 18:25+0000\n"
-"PO-Revision-Date: 2022-05-25 02:36\n"
+"PO-Revision-Date: 2022-05-26 02:28\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -39,7 +39,7 @@ msgstr "Brock Script"
 #. description of font in fonts/Brockscript
 #: inkstitch-fonts-metadata.py:4
 msgid "Brock Script is a decorative satin column manuscript font of size approximatively 40mm. It can be enlarged up to 250%. It contains 118 glyphs, covering most western european languages needs.More decorative options are hidden in the µ glyph"
-msgstr "Brock Script est une police manuscrite décorative à colonnes satinées de taille approximative de 40 mm. Elle peut être agrandie jusqu'à 250%. Elle contient 118 glyphes, couvrant les besoins de la plupart des langues de l'Europe occidentale. Des options plus décoratives sont cachées dans le glyphe µ"
+msgstr "Brock Script est une police manuscrite décorative enn colonne satin de taille approximative de 40 mm. Elle peut être agrandie jusqu'à 250%. Elle contient 118 glyphes, couvrant les besoins de la plupart des langues de l'Europe occidentale. Des options plus décoratives sont cachées dans le glyphe µ"
 
 #. name of font in fonts/abecedaire
 #: inkstitch-fonts-metadata.py:6
@@ -840,7 +840,7 @@ msgstr "Remplissage legacy (ancien)"
 
 #: lib/elements/fill_stitch.py:104
 msgid "Contour Fill Strategy"
-msgstr "Stratégie de remplissage des contours"
+msgstr "Stratégie de remplissage selon les contours"
 
 #: lib/elements/fill_stitch.py:105
 msgid "Inner to Outer"
@@ -1129,7 +1129,7 @@ msgstr "Colonne de satin non brodable"
 
 #: lib/elements/satin_column.py:57
 msgid "A satin column consists out of two rails and one or more rungs. This satin column may have a different setup."
-msgstr "Une colonne Satin est constituée de deux rails et d'une ou plusieurs traverses. Cette colonne Satin peut avoir une configuration différente."
+msgstr "Une colonne satin est constituée de deux rails et d'une ou plusieurs traverses. Cette colonne satin peut avoir une configuration différente."
 
 #: lib/elements/satin_column.py:59
 msgid "Make sure your satin column is not a combination of multiple satin columns."
@@ -1214,7 +1214,7 @@ msgstr "Montant du décalage de la sous-couche de contour"
 
 #: lib/elements/satin_column.py:147
 msgid "Shrink the outline, to prevent the underlay from showing around the outside of the satin column."
-msgstr "Rétrécir le contour, pour empêcher que la sous-couche se montre autour de la colonne satinée."
+msgstr "Rétrécir le contour, pour empêcher que la sous-couche ne se voit autour de la colonne satin."
 
 #: lib/elements/satin_column.py:157
 msgid "Center-walk underlay"
@@ -1437,7 +1437,7 @@ msgstr "Veuillez sélectionner une ou plusieurs colonnes satin."
 
 #: lib/extensions/auto_satin.py:54
 msgid "Please select at least one satin column."
-msgstr "Veuillez sélectionner une ou plusieurs colonnes satinées."
+msgstr "Veuillez sélectionner une ou plusieurs colonnes satin."
 
 #. This was previously: "No embroiderable paths selected."
 #: lib/extensions/base.py:127
@@ -1469,7 +1469,7 @@ msgstr "Veuillez sélectionner au moins une ligne pour convertir en colonne Sati
 #. not lines.
 #: lib/extensions/convert_to_satin.py:40
 msgid "Only simple lines may be converted to satin columns."
-msgstr "Seules les lignes simples peuvent être converties en colonnes Satin."
+msgstr "Seules les lignes simples peuvent être converties en colonnes satin."
 
 #: lib/extensions/convert_to_satin.py:137
 msgid "Ink/Stitch cannot convert your stroke into a satin column. Please break up your path and try again."
@@ -1490,7 +1490,7 @@ msgstr "Veuillez sélectionner une ou plusieurs colonnes satin à scinder."
 #. path12345: error: this satin column does not ...
 #: lib/extensions/cut_satin.py:30
 msgid "this satin column does not have a \"satin column cut point\" command attached to it. Please use the \"Attach commands\" extension and attach the \"Satin Column cut point\" command first."
-msgstr "cette colonne satin n’a pas de commande « point de partage satin » attachée à elle. Utilisez l’extension « ajouter des commandes » et attachez d’abord la commande « point de partage satin »."
+msgstr "cette colonne satin n’a pas de commande « point de partage » attachée. Utilisez l’extension « ajouter des commandes » et attachez d’abord la commande « point de partage  »."
 
 #: lib/extensions/cutwork_segmentation.py:158
 msgid "Cutwork Group"
@@ -1984,7 +1984,7 @@ msgstr "Points droits pour auto-remplissage satin %d"
 
 #: lib/stitches/guided_fill.py:120
 msgid "Guide line (or offset copy) is self crossing!"
-msgstr "La ligne-guide (ou la copie dilatée) se croise toute seule !"
+msgstr ""
 
 #: lib/svg/rendering.py:222
 msgid "Stitch Plan"
@@ -4014,7 +4014,7 @@ msgstr "Prévisualisation du plan de broderie"
 
 #: inx/inkstitch_stitch_plan_preview.inx:14
 msgid "Move stitch plan beside the canvas"
-msgstr "Positionner le plan de broderie à côté du canevas"
+msgstr "Positionner le plan de broderie hors du canevas"
 
 #: inx/inkstitch_stitch_plan_preview.inx:15
 msgid "Design layer visibility"
