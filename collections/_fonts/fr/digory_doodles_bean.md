@@ -3,9 +3,11 @@ title: "Digory Doodles Bean"
 permalink: /fr/fonts/digory-doodles-bean/
 last_modified_at: 2021-05-02
 toc: false
-preview_image: /assets/images/fonts/digory_doodles_bean.png
+preview_image:
+  - url: /assets/images/fonts/digory_doodles_bean.jpg
+    height: 28
 ---
-![Digory Doodles Bean](/assets/images/fonts/digory_doodles_bean.png)
+![Digory Doodles Bean](/assets/images/fonts/digory_doodles_bean.jpg)
 
 ## Glyphes
 
