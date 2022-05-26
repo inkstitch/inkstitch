@@ -3,7 +3,9 @@ title: "Monicha"
 permalink: /en/fonts/monicha/
 last_modified_at: 2022-05-05
 toc: false
-preview_image: /assets/images/fonts/monicha.png
+preview_image:
+  - url: /assets/images/fonts/monicha.png
+    height: 28
 ---
 ![monicha](/assets/images/fonts/monicha.png)
 
@@ -42,7 +44,7 @@ It can be scaled up to  150% (approx 42 mm, 1.5 inch) but can not be scaled down
 .
 ## Description
 
-MONICHA is our first font with alternative characters.
+Monicha is our first font with alternative characters.
 
 For instance, these are different ways to write the firstname Sasha.
 
