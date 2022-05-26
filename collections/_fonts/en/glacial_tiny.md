@@ -4,10 +4,10 @@ permalink: /en/fonts/glacial_tiny/
 last_modified_at: 2022-05-05
 toc: false
 preview_image:
-  - url: /assets/images/fonts/glacial_tiny.png
-    height: 7
+  - url: /assets/images/fonts/glacial_tiny_60_AGS.jpg
+    height: 8
 ---
-![glacial_tiny](/assets/images/fonts/glacial_tiny.png)
+![glacial_tiny](/assets/images/fonts/glacial_tiny_60_AGS.jpg)
 
 {% include upcoming_release.html %}
 ## Glyphs
