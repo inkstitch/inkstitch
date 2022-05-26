@@ -4,10 +4,10 @@ permalink: /en/fonts/aventurina/
 last_modified_at: 2022-05-04
 toc: false
 preview_image:
-  - url: /assets/images/fonts/aventurina.png
+  - url: /assets/images/fonts/aventurina.jpg
     height: 20
 ---
-![Aventurina](/assets/images/fonts/aventurina.png)
+![Aventurina](/assets/images/fonts/aventurina.jpg)
 
 
 {% include upcoming_release.html %}
