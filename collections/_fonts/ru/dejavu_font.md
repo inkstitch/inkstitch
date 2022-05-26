@@ -3,11 +3,13 @@ title: "DejaVu Serif"
 permalink: /ru/fonts/dejavu_font/
 last_modified_at: 2022-05-04
 toc: false
-preview_image: /assets/images/fonts/dejavu_serif.png
+preview_image:
+  - url: /assets/images/fonts/dejavu_serif.jpg
+    height: 22
 ---
 ## Serif Semi-condensed
 
-![Deja Vue Serif Semi-condensed](/assets/images/fonts/dejavu_serif.png)
+![Deja Vue Serif Semi-condensed](/assets/images/fonts/dejavu_serif.jpg)
 
 ## Glyphe 
 DejaVu Serif contains  92 glyphs :
