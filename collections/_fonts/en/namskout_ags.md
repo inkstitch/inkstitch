@@ -4,10 +4,10 @@ permalink: /fonts/namskout_ags/
 last_modified_at: 2022-05-05
 toc: false
 preview_image:
-  - url: /assets/images/fonts/namskout_ags.png
+  - url: /assets/images/fonts/namskout_AGS.jpg
     height: 100
 ---
-![NamskoutAGS](/assets/images/fonts/namskout_ags.png)
+![NamskoutAGS](/assets/images/fonts/namskout_AGS.jpg)
 
 ## Glyphs
 This font contains 43 glyphs :
