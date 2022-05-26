@@ -3,7 +3,7 @@
 {%- for font in fonts -%}
   {%- for image in font.preview_image -%}
   {%- assign urlsize = image.url | size -%}
-  {%- if urlsize < 15 -%}
+  {% if urlsize < 15 %}
 [![{{font.title}} Preview]({{ image }})]({{ font.permalink }})
   {%- else -%}
 <a href="{{ font.permalink }}"><img src="{{ image.url }}" style="height:{{ image.height }}mm" alt="{{font.title}} Preview"></a>
