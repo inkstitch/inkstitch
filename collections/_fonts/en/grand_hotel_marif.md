@@ -12,7 +12,7 @@ preview_image:
 ![grand_hotel_marif](/assets/images/fonts/grand_hotel_marif.png)
 ![grand_hotel_marif](/assets/images/fonts/grandhotel_small.png)
 
-This is part of an upcoming Ink/Stitch version and not available in Ink/Stitch v2.1.2
+{% include upcoming_release.html %}
 
 ## Glyphs
 
