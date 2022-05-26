@@ -1,14 +1,18 @@
 ---
 title: "Amitaclo"
 permalink: /fonts/amita/
-last_modified_at: 2022-05-05
+last_modified_at: 2022-05-27
 toc: false
-preview_image: 
-- /assets/images/fonts/amita.png
-- /assets/images/fonts/amitaclo_small.png
+preview_image:
+  - url: /assets/images/fonts/amitaclo-small.jpg
+    height: 12
+  - url: /assets/images/fonts/amitaclo.jpg
+    height: 30
 ---
-![Amitaclo](/assets/images/fonts/amita.png)
-![Amitaclo small](/assets/images/fonts/amitaclo_small.png)
+![Amitaclo](/assets/images/fonts/amitaclo.jpg)
+
+![Amitaclo small](/assets/images/fonts/amitaclo-small.jpg)
+
 
 ## Glyphs
 Amitaclo  contains 110 glyphs :
