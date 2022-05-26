@@ -1,13 +1,15 @@
 ---
 title: "Cherries"
 permalink: /de/fonts/cherries/
-last_modified_at: 2022-05-24
+last_modified_at: 2022-05-27
 toc: false
-preview_image: 
-  - /assets/images/fonts/cherryforinkstitch.png
-  - /assets/images/fonts/cherryforkaalleen.png
+  - url: /assets/images/fonts/cherry_for_inkstitch.jpg
+    height: 65
+  - url: /assets/images/fonts/cherryforkaalleen.png
+    height: 75
 ---
-![Cherryforinkstitch](/assets/images/fonts/cherryforinkstitch.png)
+![Cherryforinkstitch](/assets/images/fonts/cherry_for_inkstitch.jpg)
+
 ![CherryForKaalleen](/assets/images/fonts/cherryforkaalleen.png)
 
 ## Schriftzeichen
