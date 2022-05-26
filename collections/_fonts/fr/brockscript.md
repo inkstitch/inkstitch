@@ -1,11 +1,13 @@
 ---
 title: "Brockscript"
 permalink: /fr/fonts/brockscript/
-last_modified_at: 2022-05-07
+last_modified_at: 2022-05-27
 toc: false
-preview_image: /assets/images/fonts/brockscript.png
+preview_image:
+  - url: /assets/images/fonts/brockscript.jpg
+    height: 45
 ---
-![Brockscript](/assets/images/fonts/brockscript.png)
+![Brockscript](/assets/images/fonts/brockscript.jpg)
 
 ## Glyphes
 
