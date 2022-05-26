@@ -3,7 +3,10 @@ title: "TT Masters"
 permalink: /fonts/tt_masters/
 last_modified_at: 2020-12-31
 toc: false
-preview_image: /assets/images/fonts/tt_masters.png
+
+preview_image:
+  - url: /assets/images/fonts/tt_masters.png
+    height: 20
 ---
 ![TT Masters](/assets/images/fonts/tt_masters.png)
 
