@@ -3,11 +3,11 @@ title: "Coronaviral"
 permalink: /ru/fonts/coronaviral/
 last_modified_at: 2021-05-01
 toc: false
-preview_image: /assets/images/fonts/coronaviral.png
+preview_image:
+  - url: /assets/images/fonts/coronaviral.jpg
+    height: 27
 ---
-![Coronaviral](/assets/images/fonts/coronaviral.png)
-
-## Glyphs
+![Coronaviral](/assets/images/fonts/coronaviral.jpg)
 
 Coronaviral contains 107 glyphs :
 !"@()*,-./0123456789:;?@AÄBCDEÈFGHIJKLMNOÖPQRSTUVWXYZ\_`aäâáàbcçdeëêéèfghiïîíìjklmnñoöôóòpqrstuüûúùvwxyz|Üß
