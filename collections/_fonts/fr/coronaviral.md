@@ -3,9 +3,11 @@ title: "Coronaviral"
 permalink: /fr/fonts/coronaviral/
 last_modified_at: 2022-05-05
 toc: false
-preview_image: /assets/images/fonts/coronaviral.png
+preview_image:
+  - url: /assets/images/fonts/coronaviral.jpg
+    height: 27
 ---
-![Coronaviral](/assets/images/fonts/coronaviral.png)
+![Coronaviral](/assets/images/fonts/coronaviral.jpg)
 
 ## Glyphes
 
