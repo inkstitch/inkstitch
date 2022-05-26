@@ -3,7 +3,9 @@ title: "DejaVu Serif"
 permalink: /fonts/dejavu_font/
 last_modified_at: 2022-05-05
 toc: false
-preview_image: /assets/images/fonts/dejavu_serif.png
+preview_image:
+  - url: /assets/images/fonts/dejavu_serif.png
+    height: 18
 ---
 ## Serif Semi-condensed
 
