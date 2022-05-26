@@ -9,8 +9,8 @@ preview_image:
   - url: /assets/images/fonts/sortefax_medium.png
     height: 90
 ---
-![SortefaxXL](/assets/images/fonts/sortefaxXL.jpg
-)
+![SortefaxXL](/assets/images/fonts/sortefaxXL.jpg)
+
 ![Sortefax_medium](/assets/images/fonts/sortefax_medium.png)
 
 {% include upcoming_release.html %}
