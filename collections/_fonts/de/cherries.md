@@ -3,6 +3,7 @@ title: "Cherries"
 permalink: /de/fonts/cherries/
 last_modified_at: 2022-05-27
 toc: false
+preview:
   - url: /assets/images/fonts/cherry_for_inkstitch.jpg
     height: 65
   - url: /assets/images/fonts/cherryforkaalleen.png
