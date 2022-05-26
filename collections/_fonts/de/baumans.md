@@ -1,12 +1,15 @@
 ---
 title: "Baumans FI"
 permalink: /de/fonts/baumans/
-last_modified_at: 2022-05-04
+last_modified_at: 2022-05-27
 toc: false
-preview_image: /assets/images/fonts/baumans.png
+preview_image:
+  - url: /assets/images/fonts/baumans_fi.jpg
+    height: 32
 ---
-![Baumans](/assets/images/fonts/baumans.png)
+![Baumans](/assets/images/fonts/baumans_fi.jpg)
 
+## Glyphs
 ## Schriftzeichen
 
 Diese Schrift enthält 102 Schriftzeichen:
