@@ -1,7 +1,7 @@
 ---
 title: "Amitaclo"
 permalink: /fonts/amita/
-last_modified_at: 2022-05-05
+last_modified_at: 2022-05-26
 toc: false
 preview_image:
   - url: /assets/images/fonts/amitaclo-small.jpg
@@ -10,6 +10,7 @@ preview_image:
     height: 30
 ---
 ![Amitaclo](/assets/images/fonts/amitaclo.jpg)
+
 ![Amitaclo small](/assets/images/fonts/amitaclo-small.jpg)
 
 ## Glyphs
