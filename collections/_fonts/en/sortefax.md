@@ -4,12 +4,13 @@ permalink: /en/fonts/sortefax/
 last_modified_at: 2022-05-05
 toc: false
 preview_image: 
-  - url: /assets/images/fonts/sortefaxXL.png
+  - url: /assets/images/fonts/sortefaxXL.jpg
     height: 150
   - url: /assets/images/fonts/sortefax_medium.png
     height: 90
 ---
-![SortefaxXL](/assets/images/fonts/sortefaxXL.png)
+![SortefaxXL](/assets/images/fonts/sortefaxXL.jpg
+)
 ![Sortefax_medium](/assets/images/fonts/sortefax_medium.png)
 
 {% include upcoming_release.html %}
