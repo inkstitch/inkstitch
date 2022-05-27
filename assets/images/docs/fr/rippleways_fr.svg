@@ -38,7 +38,7 @@
      inkscape:window-x="2"
      inkscape:window-y="26"
      inkscape:window-maximized="0"
-     inkscape:current-layer="__inkstitch_stitch_plan__" />
+     inkscape:current-layer="layer2" />
   <defs
      id="defs3541">
     <symbol
@@ -292,21 +292,22 @@
      inkscape:highlight-color="#2d7f35">
     <g
        id="g8341"
-       inkscape:label="French">
+       inkscape:label="French"
+       style="display:inline">
       <text
          xml:space="preserve"
          style="font-size:4.23333px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;text-anchor:middle;stroke-width:0.264583"
-         x="-16.61569"
+         x="-16.148781"
          y="29.360914"
          id="text8260"><tspan
            sodipodi:role="line"
            style="font-size:4.23333px;text-align:center;text-anchor:middle;stroke-width:0.264583"
-           x="-16.61569"
+           x="-16.148781"
            y="29.360914"
-           id="tspan8262">Ondulatin </tspan><tspan
+           id="tspan8262">Ondulation </tspan><tspan
            sodipodi:role="line"
            style="font-size:4.23333px;text-align:center;text-anchor:middle;stroke-width:0.264583"
-           x="-16.61569"
+           x="-16.148781"
            y="34.652576"
            id="tspan8381">avec cible</tspan></text>
       <text
