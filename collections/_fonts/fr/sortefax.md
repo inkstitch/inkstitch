@@ -41,7 +41,7 @@ Cette fonte est réduite et simplifiée. On garde la possibilité d'encadrer une
 
 ## Pour acceder aux cadres, utilisez le tableau de correspondance suivant:
 
-Cadre|Caractère 
+Frame|Key
 ---|---
 ![ouvrante](/assets/images/fonts/sortefax/ouvrante.png)|<key>(</key>
 ![fermante](/assets/images/fonts/sortefax/fermante.png)|<key>)</key>
