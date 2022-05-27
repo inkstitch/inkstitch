@@ -8,7 +8,6 @@ preview_image:
     height: 20
   - url: /assets/images/fonts/grand_hotel_marif.jpg
     height: 53
-
 ---
 
 
