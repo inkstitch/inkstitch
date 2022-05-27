@@ -8,10 +8,17 @@ preview_image:
     height: 28
   - url: /assets/images/fonts/roman_AGS_bicolor.jpg
     height: 28
- 
 ---
-![Roman AGS](/assets/images/fonts/roman_AGS.jpg)
-![Roman AGS_bicolor](/assets/images/fonts/roman_AGS_bicolor.jpg)
+
+<img 
+     src="/assets/images/fonts/roman_AGS.jpg"
+     alt="Roman AGS" height="60">
+     
+<img 
+     src="/assets/images/fonts/roman_AGS_bicolor.jpg"
+     alt="Roman AGS_bicolor" height="60">
+
+
 
 ## Glyphes
 ### Roman AGS 
@@ -27,6 +34,14 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZÄÆÖÜŒ
 
 Utilisées à 100%, ces fontes font environ 28 mm de haut .
 Elles peuvent être agrandies jusqu'a 130% (env 37 mm) ou diminuées jusqu'à 80% (env  22 mm).
+
+## Mélanger les deux polices
+
+Les contours des glyphes  des deux fontes étant exactement identiques pour les glyphes communs , il est très facile  d'utiliser les deux fontes conjointement :
+- Faire un lettrage en Roman AGS avec l'ensemble du texte
+- Faire un lettrage en Roman AGS bicolore avec  uniquement les glyphes que l'on souhaite bicolores
+- Superposer exactement  chaque lettre colorée sur la lettre monochrome correspondante 
+- Cacher les lettres monochromes concernées
 
 
 
