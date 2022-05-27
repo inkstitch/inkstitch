@@ -3,12 +3,13 @@ title: "Monicha"
 permalink: /fr/fonts/monicha/
 last_modified_at: 2022-05-05
 toc: false
-preview_image: /assets/images/fonts/monicha.png
+preview_image:
+  - url: /assets/images/fonts/monicha.jpg
+    height: 24
 ---
-![monicha](/assets/images/fonts/monicha.png)
+![monicha](/assets/images/fonts/monicha.jpg)
 
-
-Cette fonte sera dans une prochaine version d'Ink/Stitch version et n'est pas disponible dans Ink/Stitch v2.1.2.
+{% include upcoming_release.html %}
 
 ## Glyphes 
 Monicha contains 195 glyphs :
