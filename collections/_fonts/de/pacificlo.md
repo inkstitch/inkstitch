@@ -4,11 +4,14 @@ permalink: /de/fonts/pacificlo/
 last_modified_at: 2022-05-04
 toc: false
 preview_image:
-  - /assets/images/fonts/pacificlo.png
-  - /assets/images/fonts/pacificlo_tiny.png
+  - url: /assets/images/fonts/pacificlo_tiny.jpg
+    height: 11
+  - url: /assets/images/fonts/pacificlo.jpg
+    height: 26
 ---
-![Pacificlo](/assets/images/fonts/pacificlo.png)
-![Pacificlo tiny](/assets/images/fonts/pacificlo_tiny.png)
+![Pacificlo](/assets/images/fonts/pacificlo.jpg)
+
+![Pacificlo tiny](/assets/images/fonts/pacificlo_tiny.jpg)
 
 ## Glyphs
 Pacificlo contains 120 glyphs :
