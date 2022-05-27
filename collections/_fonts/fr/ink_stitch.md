@@ -1,7 +1,7 @@
 ---
 title: "Ink/Stitch"
 permalink: /fr/fonts/ink_stitch/
-last_modified_at: 2022-12-31
+last_modified_at: 2022-05-27
 toc: false
 preview_image:
   - url: /assets/images/fonts/inkstitch_small.jpg
