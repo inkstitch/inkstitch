@@ -1,14 +1,15 @@
 ---
 title: "Sortefax"
 permalink: /fr/fonts/sortefax/
-last_modified_at: 2022-05-05
+last_modified_at: 2022-05-27
 toc: false
 preview_image: 
-- /assets/images/fonts/sortefaxXL.png
-- /assets/images/fonts/sortefax_medium.png
+  - url: /assets/images/fonts/sortefaxXL.jpg
+    height: 150
+  - url: /assets/images/fonts/sortefax_medium.png
+    height: 90
 ---
-![SortefaxXL](/assets/images/fonts/sortefaxXL.png)
-![Sortefax_medium](/assets/images/fonts/sortefax_medium.png)
+![SortefaxXL](/assets/images/fonts/sortefaxXL.jpg)
 
 ## Glyphes
 Ces fontes comportent 47 glyphes
