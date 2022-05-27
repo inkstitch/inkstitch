@@ -1,11 +1,13 @@
 ---
 title: "Magnolia KOR"
 permalink: /fr/fonts/magnolia-script/
-last_modified_at: 2022-05-05
+last_modified_at: 2022-05-27
 toc: false
-preview_image: /assets/images/fonts/magnolia_script.png
+preview_image:
+  - url: /assets/images/fonts/magnolia_KOR.jpg
+    height: 31
 ---
-![Magnolia](/assets/images/fonts/magnolia_script.png)
+![Magnolia](/assets/images/fonts/magnolia_KOR.jpg)
 ## Glyphes
 
 Cette fonte contient les 109 glyphes :
