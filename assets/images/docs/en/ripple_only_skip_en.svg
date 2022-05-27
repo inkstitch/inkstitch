@@ -31,14 +31,14 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.84096521"
-     inkscape:cx="222.95809"
-     inkscape:cy="308.574"
+     inkscape:cx="137.93674"
+     inkscape:cy="277.65715"
      inkscape:window-width="1350"
      inkscape:window-height="765"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="__inkstitch_stitch_plan__" />
+     inkscape:current-layer="layer3" />
   <defs
      id="defs10302">
     <symbol
@@ -490,7 +490,7 @@
          id="tspan35549" /></text>
     <text
        xml:space="preserve"
-       style="font-size:10.5833px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.264583"
+       style="font-size:10.5833px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';display:none;stroke-width:0.264583"
        x="13.962681"
        y="-3.9558721"
        id="text68775"><tspan
@@ -501,7 +501,7 @@
          y="-3.9558721" /></text>
     <text
        xml:space="preserve"
-       style="font-size:10.5833px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';display:inline;fill:#ed171f;stroke:none;stroke-width:0.264583"
+       style="font-size:10.5833px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';display:none;fill:#ed171f;stroke:none;stroke-width:0.264583"
        x="83.808014"
        y="6.4265437"
        id="text68779"
@@ -509,11 +509,23 @@
          sodipodi:role="line"
          id="tspan68777"
          style="fill:#ed171f;stroke:none;stroke-width:0.264583"
-         x="0"
-         y="0">Flip enabled</tspan></text>
+         x="83.808014"
+         y="6.4265437">Flip ☑ </tspan></text>
     <text
        xml:space="preserve"
        style="font-size:10.5833px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';display:none;fill:#ed171f;stroke:none;stroke-width:0.264583"
+       x="11.760345"
+       y="6.7411623"
+       id="text91603"
+       inkscape:label="Unflipped"><tspan
+         sodipodi:role="line"
+         id="tspan91601"
+         style="fill:#ed171f;stroke:none;stroke-width:0.264583"
+         x="11.760345"
+         y="6.7411623">Flip  ▢ </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10.5833px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';display:inline;fill:#ed171f;stroke:none;stroke-width:0.264583"
        x="64.61628"
        y="6.4265437"
        id="text69800"
@@ -522,12 +534,29 @@
          style="fill:#ed171f;stroke:none;stroke-width:0.264583"
          x="64.61628"
          y="6.4265437"
-         id="tspan69806">Intervertir coché</tspan><tspan
+         id="tspan69806">Intervertir ☑</tspan><tspan
          sodipodi:role="line"
          style="fill:#ed171f;stroke:none;stroke-width:0.264583"
          x="64.61628"
-         y="19.655668"
+         y="20.030281"
          id="tspan69804" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10.5833px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';display:inline;fill:#ed171f;stroke:none;stroke-width:0.264583"
+       x="2.9510255"
+       y="6.4265437"
+       id="text91609"
+       inkscape:label="Intervertir décoché"><tspan
+         sodipodi:role="line"
+         style="fill:#770176;stroke:none;stroke-width:0.264583"
+         x="2.9510255"
+         y="6.4265437"
+         id="tspan91605">Intervertir ▢</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#ed171f;stroke:none;stroke-width:0.264583"
+         x="2.9510255"
+         y="19.655668"
+         id="tspan91607" /></text>
   </g>
   <g
      id="__inkstitch_stitch_plan__"
