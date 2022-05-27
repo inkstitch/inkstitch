@@ -6,8 +6,9 @@
 from copy import deepcopy
 from os import path
 
-import inkex
 from shapely import geometry as shgeo
+
+import inkex
 
 from .svg.tags import EMBROIDERABLE_TAGS
 from .utils import cache, get_bundled_dir
@@ -39,12 +40,14 @@ def set_marker(node, position, marker):
     node.set('style', ";".join(style))
 
 
-def get_marker_elements(node, marker, get_fills=True, get_strokes=True):
+def get_marker_elements(node, marker, get_fills=True, get_strokes=True, get_satins=False):
     from .elements import EmbroideryElement
+    from .elements.satin_column import SatinColumn
     from .elements.stroke import Stroke
 
     fills = []
     strokes = []
+    satins = []
     xpath = "./parent::svg:g/*[contains(@style, 'marker-start:url(#inkstitch-%s-marker)')]" % marker
     markers = node.xpath(xpath, namespaces=inkex.NSS)
     for marker in markers:
@@ -66,7 +69,12 @@ def get_marker_elements(node, marker, get_fills=True, get_strokes=True):
             line_strings = [shgeo.LineString(path) for path in stroke]
             strokes.append(shgeo.MultiLineString(line_strings))
 
-    return {'fill': fills, 'stroke': strokes}
+        if get_satins and stroke is not None:
+            satin = SatinColumn(marker)
+            if len(satin.rails) == 2:
+                satins.append(satin)
+
+    return {'fill': fills, 'stroke': strokes, 'satin': satins}
 
 
 def has_marker(node, marker=list()):

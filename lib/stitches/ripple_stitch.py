@@ -1,8 +1,11 @@
 from collections import defaultdict
+from math import atan2, pi
 
-from shapely.geometry import LineString, Point
+from shapely.affinity import rotate, scale, translate
+from shapely.geometry import LineString, MultiLineString, Point
 from shapely.ops import substring
 
+from ..utils import Point as InkstitchPoint
 from ..utils.geometry import line_string_to_point_list
 from .running_stitch import running_stitch
 
@@ -36,8 +39,7 @@ def ripple_stitch(lines, target, line_count, points, max_stitch_length, repeats,
 
 def do_circular_ripple(outline, target, line_count, repeats, flip, max_stitch_length, skip_start, skip_end, exponent, guide_line):
     if guide_line:
-        # for each point generate a line going along and pointing to the guide line
-        lines = guided_helper_lines(outline, flip, max_stitch_length, guide_line.geoms[0])
+        lines = _get_guided_helper_lines(outline, max_stitch_length, guide_line)
     else:
         # for each point generate a line going to the target point
         lines = target_point_lines_normalized_distances(outline, target, flip, max_stitch_length)
@@ -59,7 +61,7 @@ def do_circular_ripple(outline, target, line_count, repeats, flip, max_stitch_le
 def do_linear_ripple(lines, points, target, line_count, repeats, flip, max_stitch_length, skip_start, skip_end, render_grid, exponent, guide_line):
     if len(lines) == 1:
         if guide_line:
-            helper_lines = guided_helper_lines(lines[0], flip, max_stitch_length, guide_line.geoms[0])
+            helper_lines = _get_guided_helper_lines(lines[0], max_stitch_length, guide_line)
         else:
             helper_lines = target_point_lines(lines[0], target, flip)
     else:
@@ -135,7 +137,17 @@ def target_point_lines_normalized_distances(outline, target, flip, max_stitch_le
     return lines
 
 
-def guided_helper_lines(outline, flip, max_stitch_length, guide_line):
+def _get_guided_helper_lines(lines, max_stitch_length, guide_line):
+    # for each point generate a line going along and pointing to the guide line
+    if isinstance(guide_line, MultiLineString):
+        # simple guide line
+        return _generate_guided_helper_lines(lines, max_stitch_length, guide_line.geoms[0])
+    # satin type guide line
+    rail_points = guide_line.plot_points_on_rails(max_stitch_length, 0)
+    return _generate_satin_guide_helper_lines(lines, max_stitch_length, rail_points)
+
+
+def _generate_guided_helper_lines(outline, max_stitch_length, guide_line):
     # generates lines along the guide line tapering off towards to top
     line_point_dict = defaultdict(list)
     outline = running_stitch(line_string_to_point_list(outline), max_stitch_length)
@@ -158,9 +170,68 @@ def guided_helper_lines(outline, flip, max_stitch_length, guide_line):
                 points.append(Point(point))
         line_point_dict[j] = points
 
+    return _point_dict_to_linestring(len(outline), line_point_dict)
+
+
+def _generate_satin_guide_helper_lines(outline, max_stitch_length, rail_points):
+    first, last = [Point(i) for i in outline.coords[::len(outline.coords)-1]]
+    if is_closed(outline):
+        minx, miny, maxx, maxy = outline.bounds
+        first = _get_extended_points(minx, outline.coords)
+        last = _get_extended_points(maxx, outline.coords)
+
+    outline_width = last.x - first.x
+
+    # flip rails if they are the wrong way around
+    rail_start_width = rail_points[0][0].x - rail_points[1][0].x
+    if (outline_width * rail_start_width > 0):
+        rail_points = list(reversed(rail_points))
+
+    outline_width = abs(outline_width)
+    outline = LineString(running_stitch(line_string_to_point_list(outline), max_stitch_length))
+    outline_center = InkstitchPoint((last.x + first.x) / 2, (last.y + first.y) / 2)
+
+    rotation = atan2(first.y - last.y, first.x - last.x)
+
+    line_point_dict = defaultdict(list)
+    # add original line
+    for j, point in enumerate(outline.coords):
+        line_point_dict[j].append(point)
+
+    # add scaled and rotated outlines along the satin column guide line
+    for i, (point1, point2) in enumerate(zip(*rail_points)):
+        # translate
+        guide_center = InkstitchPoint((point2.x + point1.x) / 2, (point2.y + point1.y) / 2)
+        guide_transform = guide_center - outline_center
+        translated_outline = translate(outline, guide_transform.x, guide_transform.y)
+        # rotate
+        guide_rotation = atan2(point1.y - point2.y, point1.x - point2.x)
+        angle = (guide_rotation - rotation) * 360 / (2 * pi)
+        rotated_outline = rotate(translated_outline, angle, origin=Point(guide_center))
+        # scale
+        distance = (point2 - point1).length()
+        scale_factor = abs(distance / outline_width)
+        scaled_outline = scale(rotated_outline, scale_factor, scale_factor, origin=Point(guide_center))
+        # outline to helper line points
+        for j, point in enumerate(scaled_outline.coords):
+            line_point_dict[j].append(point)
+
+    return _point_dict_to_linestring(len(outline.coords), line_point_dict)
+
+
+def _get_extended_points(x, coords):
+    point = [point for point in coords if point[0] == x]
+    if len(point) > 1:
+        point = LineString(point).centroid
+    if not isinstance(point, Point):
+        point = Point(point)
+    return point
+
+
+def _point_dict_to_linestring(line_count, point_dict):
     lines = []
-    for i in range(len(outline)):
-        lines.append(LineString(line_point_dict[i]))
+    for i in range(line_count):
+        lines.append(LineString(point_dict[i]))
     return lines
 
 

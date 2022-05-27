@@ -375,15 +375,20 @@ class Stroke(EmbroideryElement):
 
     @cache
     def _get_guide_lines(self, multiple=False):
-        guide_lines = get_marker_elements(self.node, "guide-line", False, True)
+        guide_lines = get_marker_elements(self.node, "guide-line", False, True, True)
         # No or empty guide line
-        if not guide_lines or not guide_lines['stroke']:
+        if not guide_lines or (not guide_lines['stroke'] and not guide_lines['satins']):
             return None
 
         if multiple:
-            return guide_lines['stroke']
-        else:
-            return guide_lines['stroke'][0]
+            if sum(len(x) for x in guide_lines.values()) > 1:
+                return True
+            else:
+                return False
+
+        if len(guide_lines['satin']) >= 1:
+            return guide_lines['satin'][0]
+        return guide_lines['stroke'][0]
 
     def validation_warnings(self):
         if self.stroke_method == 1 and self.skip_start + self.skip_end >= self.line_count:
@@ -391,7 +396,7 @@ class Stroke(EmbroideryElement):
 
         # guided fill warnings
         if self.stroke == 1:
-            guide_lines = self._get_guide_lines(True)
-            if len(guide_lines) > 1:
+            is_multiple_guide_line = self._get_guide_lines(True)
+            if is_multiple_guide_line:
                 yield MultipleGuideLineWarning(self.shape.centroid)
             return None
