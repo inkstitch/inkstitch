@@ -3,9 +3,12 @@ title: "TT Directors"
 permalink: /de/fonts/tt_directors/
 last_modified_at: 2020-12-30
 toc: false
-preview_image: /assets/images/fonts/tt_directors.png
+preview_image:
+  - url: /assets/images/fonts/tt_directors.jpg
+    height: 20
 ---
-![TT Directors](/assets/images/fonts/tt_directors.png)
+![TT Directors](/assets/images/fonts/tt_directors.jpg)
+
 
 ## Glyphes
 
