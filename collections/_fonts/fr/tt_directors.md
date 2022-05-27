@@ -1,7 +1,7 @@
 ---
 title: "TT Directors"
 permalink: /fr/fonts/tt_directors/
-last_modified_at: 2020-12-31
+last_modified_at: 2022-05-27
 toc: false
 preview_image:
   - url: /assets/images/fonts/tt_directors.jpg
