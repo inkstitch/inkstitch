@@ -3,14 +3,20 @@ title: "Cherries"
 permalink: /ru/fonts/cherries/
 last_modified_at: 2022-05-04
 toc: false
+preview_image:
   - url: /assets/images/fonts/cherry_for_inkstitch.jpg
     height: 65
-  - url: /assets/images/fonts/cherryforkaalleen.png
+  - url: /assets/images/fonts/cherryforkaalleen.jpg
     height: 75
 ---
-![Cherryforinkstitch](/assets/images/fonts/cherry_for_inkstitch.jpg)
+<img 
+     src="/assets/images/fonts/cherry_for_inkstitch.jpg"
+     alt="Roman AGS" height="48">
+     
+<img 
+     src="/assets/images/fonts/cherryforkaalleen.jpg"
+     alt="Roman AGS_bicolor" height="72">
 
-![CherryForKaalleen](/assets/images/fonts/cherryforkaalleen.png)
 
 ## Glyphes
 ### Cherry for Ink/Stitch
