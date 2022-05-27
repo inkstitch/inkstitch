@@ -3,9 +3,12 @@ title: "Kaushan Script MAM"
 permalink: /de/fonts/kaushan_script_mam/
 last_modified_at: 2022-05-04
 toc: false
-preview_image: /assets/images/fonts/kaushan_script.png
+preview_image:
+  - url: /assets/images/fonts/kaushan_script_MAM.jpg
+    height: 36
 ---
-![KaushanScript](/assets/images/fonts/kaushan_script.png)
+![KaushanScript](/assets/images/fonts/kaushan_script_MAM.jpg)
+
 
 ## Glyphs
 
