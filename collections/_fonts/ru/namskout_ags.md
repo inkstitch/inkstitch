@@ -3,9 +3,12 @@ title: "Namskout AGS"
 permalink: /ru/fonts/namskout_ags/
 last_modified_at: 2022-05-04
 toc: false
-preview_image: /assets/images/fonts/namskout_ags.png
+preview_image:
+  - url: /assets/images/fonts/namskout_AGS.jpg
+    height: 100
 ---
-![NamskoutAGS](/assets/images/fonts/namskout_ags.png)
+![NamskoutAGS](/assets/images/fonts/namskout_AGS.jpg)
+
 
 ## Glyphs
 This font contains 43 glyphs :
