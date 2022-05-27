@@ -3,9 +3,11 @@ title: "TT Masters"
 permalink: /fr/fonts/tt_masters/
 last_modified_at: 2020-12-31
 toc: false
-preview_image: /assets/images/fonts/tt_masters.png
+preview_image:
+  - url: /assets/images/fonts/tt_masters.jpg
+    height: 20
 ---
-![TT Masters](/assets/images/fonts/tt_masters.png)
+![TT Masters](/assets/images/fonts/tt_masters.jpg)
 # Glyphes
 
 Cette fonte contient les 109 glyphes :
