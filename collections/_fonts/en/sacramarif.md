@@ -1,7 +1,7 @@
 ---
 title: "Sacramarif"
 permalink: /fonts/sacramarif/
-last_modified_at: 2021-05-05
+last_modified_at: 2021-05-26
 toc: false
 preview_image:
   - url: /assets/images/fonts/sacramarif.jpg
