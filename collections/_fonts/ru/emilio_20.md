@@ -3,13 +3,14 @@ title: "Emilio 20"
 permalink: /ru/fonts/emilio-20/
 last_modified_at: 2022-05-04
 toc: false
-preview_image: 
-  - /assets/images/fonts/emilio_20.png
-  - /assets/images/fonts/emilio20tricolore.png
+preview_image:
+  - url: /assets/images/fonts/emilio_20.jpg
+    height: 48
+  - url: /assets/images/fonts/emilio20tricolore.png
+    height: 100
 ---
-![Emilio 20](/assets/images/fonts/emilio_20.png)
+![Emilio 20](/assets/images/fonts/emilio_20.jpg)
 ![Emilio 20 Tricolore](/assets/images/fonts/emilio20tricolore.png)
-
 ## Glyphs
 Both fonts contains 36 glyphs:
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
