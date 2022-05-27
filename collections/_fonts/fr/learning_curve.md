@@ -3,9 +3,11 @@ title: "Learning Curve"
 permalink: /fr/fonts/learning-curve/
 last_modified_at: 2022-05-05
 toc: false
-preview_image: /assets/images/fonts/learning_curve.png
+preview_image:
+  - url: /assets/images/fonts/learning_curve.jpg
+    height: 25
 ---
-![LearningCurve](/assets/images/fonts/learning_curve.png)
+![LearningCurve](/assets/images/fonts/learning_curve.jpg)
 
 ## Glyphes
 
