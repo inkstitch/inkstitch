@@ -1,15 +1,18 @@
 ---
 title: "Ink/Stitch"
 permalink: /fr/fonts/ink_stitch/
-last_modified_at: 2020-12-31
+last_modified_at: 2022-12-31
 toc: false
 preview_image:
-  - /assets/images/fonts/ink_stitch_small.png
-  - /assets/images/fonts/ink_stitch_medium.png
+  - url: /assets/images/fonts/inkstitch_small.jpg
+    height: 6
+    title: "Ink/Stitch small"
+  - url: /assets/images/fonts/inkstitch_medium.jpg
+    height: 19
+    title: "Ink/Stitch Medium"
 ---
-
-![Ink/Stitch Small](/assets/images/fonts/ink_stitch_small.png)
-![Ink/Stitch Medium](/assets/images/fonts/ink_stitch_medium.png)
+![Ink/Stitch Small](/assets/images/fonts/inkstitch_small.jpg)
+![Ink/Stitch Medium](/assets/images/fonts/inkstitch_medium.jpg)
 
 
 ## Glyphes
