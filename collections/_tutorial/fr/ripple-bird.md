@@ -9,7 +9,7 @@ tutorial-type:
   - Sample File
 stitch-type:
   - Guided Stitch
-  - Ripple Stitch
+  - Ripple
 techniques:
 field-of-use:
 user-level:
