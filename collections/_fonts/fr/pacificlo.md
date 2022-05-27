@@ -1,7 +1,7 @@
 ---
 title: "Pacificlo"
 permalink: /fr/fonts/pacificlo/
-last_modified_at: 2022-05-05
+last_modified_at: 2022-05-27
 toc: false
 preview_image:
   - url: /assets/images/fonts/pacificlo_tiny.jpg
