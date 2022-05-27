@@ -44,7 +44,7 @@ Les contours des glyphes  des deux fontes étant exactement identiques pour les 
 - Cacher les lettres monochromes concernées
 
 ## Tri des couleurs 
-Si vous utilisées des lettres bicolores  vous pouvez souhaiter trier les couleurs. C'est possible à condition de respecter leur ordre relatif à l'intérieur de chaque lettre. [Voici comment faire](https://inkstitch.org/fr/docs/lettering/#tri-des-couleurs)
+Si vous utilisez des lettres bicolores  vous pouvez souhaiter trier les couleurs. C'est possible à condition de respecter leur ordre relatif à l'intérieur de chaque lettre. [Voici comment faire](https://inkstitch.org/fr/docs/lettering/#tri-des-couleurs)
 
 
 
