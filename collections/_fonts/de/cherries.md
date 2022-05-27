@@ -11,11 +11,11 @@ preview_image:
 ---
 <img 
      src="/assets/images/fonts/cherry_for_inkstitch.jpg"
-     alt="Roman AGS" height="48">
+     alt="Cherry for Inkstitch" height="48">
      
 <img 
      src="/assets/images/fonts/cherryforkaalleen.jpg"
-     alt="Roman AGS_bicolor" height="72">
+     alt="Cherry for Kaalleen" height="72">
 
 
 ## Schriftzeichen
