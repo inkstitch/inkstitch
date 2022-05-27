@@ -3,13 +3,15 @@ title: "Roman AGS"
 permalink: /ru/fonts/roman_ags/
 last_modified_at: 2022-05-04
 toc: false
-preview_image: 
-  - /assets/images/fonts/roman_ags.png
-  - /assets/images/fonts/roman_ags_bicolor.png
+preview_image:
+  - url: /assets/images/fonts/roman_AGS.jpg
+    height: 28
+  - url: /assets/images/fonts/roman_AGS_bicolor.jpg
+    height: 28
  
 ---
-![Roman AGS](/assets/images/fonts/roman_ags.png)
-![Roman AGS_bicolor](/assets/images/fonts/roman_ags_bicolor.png)
+![Roman AGS](/assets/images/fonts/roman_AGS.jpg)
+![Roman AGS_bicolor](/assets/images/fonts/roman_AGS_bicolor.jpg)
 
 ## Glyphs
 ### Roman AGS 
