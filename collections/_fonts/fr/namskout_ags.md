@@ -1,11 +1,13 @@
 ---
 title: "Namskout AGS"
 permalink: /fr/fonts/namskout_ags/
-last_modified_at: 2022-05-05
+last_modified_at: 2022-05-27
 toc: false
-preview_image: /assets/images/fonts/namskout_ags.png
+preview_image:
+  - url: /assets/images/fonts/namskout_AGS.jpg
+    height: 100
 ---
-![NamskoutAGS](/assets/images/fonts/namskout_ags.png)
+![NamskoutAGS](/assets/images/fonts/namskout_AGS.jpg)
 
 ## Glyphes
 
