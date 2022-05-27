@@ -18,7 +18,7 @@ user-level:
 
 Le corps de l'oiseau est en remplissage guidé, les plumes en broderie ondulée
 
-![Exemple brodé](/assets/images/tutorials/tutorial-preview-images/paon.jpg)
+![Exemple brodé](/assets/images/tutorials/tutorial-preview-images/paons.jpg)
 
 ![Exemple de frange](/assets/images/tutorials/samples/paon.svg)
 
