@@ -46,13 +46,14 @@ Cadre|Caractère
 ![ouvrante](/assets/images/fonts/sortefax/ouvrante.png)|<key>(</key>
 ![fermante](/assets/images/fonts/sortefax/fermante.png)|<key>)</key>
 ![ouvrantecarre](/assets/images/fonts/sortefax/square-bracket-open.png)|<key>[</key>
-![fermantecarre](/assets/images/fonts/sortefax/square-bracket-close.png)|<key>]</key>
+![fermantecarre](/assets/images/fonts/sortefax/square-bracket-open.png)|<key>]</key>
 ![accolade_ouvrante](/assets/images/fonts/sortefax/curly-bracket-open.png)|<key>{</key>
 ![accolade_fermante](/assets/images/fonts/sortefax/curly-bracket-close.png)|<key>}</key>
 ![Point](/assets/images/fonts/sortefax/point.png)|<key>.</key>
 ![Virgule](/assets/images/fonts/sortefax/virgule.png)|<key>,</key>
 ![DeuxPoints](/assets/images/fonts/sortefax/deuxpoints.png)|<key>:</key>
 ![PointVirgule](/assets/images/fonts/sortefax/pointvirgule.png)|<key>;</key>
+
 
 ## Dans la vraie vie
 
