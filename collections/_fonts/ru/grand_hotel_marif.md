@@ -4,15 +4,20 @@ permalink: /ru/fonts/grand_hotel_marif/
 last_modified_at: 2022-05-03
 toc: false
 preview_image:
-  - /assets/images/fonts/grand_hotel_marif.png
-  - /assets/images/fonts/grandhotel_small.png
+  - url: /assets/images/fonts/grand_hotel_small.jpg
+    height: 20
+  - url: /assets/images/fonts/grand_hotel_marif.jpg
+    height: 53
+
 ---
 
 
-![grand_hotel_marif](/assets/images/fonts/grand_hotel_marif.png)
-![grand_hotel_marif](/assets/images/fonts/grandhotel_small.png)
+![grand_hotel_marif](/assets/images/fonts/grand_hotel_marif.jpg)
 
-This is part of an upcoming Ink/Stitch version and not available in Ink/Stitch v2.1.2
+![grand_hotel_marif](/assets/images/fonts/grand_hotel_small.jpg)
+
+{% include upcoming_release.html %}
+
 
 ## Glyphs
 
