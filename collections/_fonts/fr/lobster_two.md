@@ -1,12 +1,17 @@
 ---
 title: "Lobster AGS"
 permalink: /fr/fonts/lobster_ags/
-last_modified_at: 2022-05-05
+last_modified_at: 2022-05-27
 toc: false
 preview_image: /assets/images/fonts/lobster_two_bold_italic.png
+preview_image:
+  - url: /assets/images/fonts/lobster_AGS.jpg
+    height: 27
 ---
-# Bold Italic
-![Lobster AGS](/assets/images/fonts/lobster_two_bold_italic.png)
+## Bold Italic
+
+![Lobster AGS](/assets/images/fonts/lobster_AGS.jpg)
+## Glyphs
 
 ## Glyphes
 
