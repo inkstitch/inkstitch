@@ -3,9 +3,11 @@ title: "TT Masters"
 permalink: /ru/fonts/tt_masters/
 last_modified_at: 2020-12-30
 toc: false
-preview_image: /assets/images/fonts/tt_masters.png
+preview_image:
+  - url: /assets/images/fonts/tt_masters.jpg
+    height: 20
 ---
-![TT Masters](/assets/images/fonts/tt_masters.png)
+![TT Masters](/assets/images/fonts/tt_masters.jpg)
 
 ## Glyphes
 
