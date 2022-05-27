@@ -1,7 +1,7 @@
 ---
 title: "Grand Hotel Marif"
 permalink: /en/fonts/grand_hotel_marif/
-last_modified_at: 2022-05-04
+last_modified_at: 2022-05-26
 toc: false
 preview_image:
   - url: /assets/images/fonts/grand_hotel_small.jpg
@@ -13,9 +13,10 @@ preview_image:
 
 
 ![grand_hotel_marif](/assets/images/fonts/grand_hotel_marif.jpg)
+
 ![grand_hotel_marif](/assets/images/fonts/grand_hotel_small.jpg)
 
-{% include upcoming_release.html %}
+
 
 ## Glyphs
 
@@ -43,13 +44,14 @@ It may be scaled up to 140% (48 mm)  or scaled down to  60% .
 ![Dimensions Grand Hotel](/assets/images/fonts/Sizing/grandhotelsizing.jpg)
 
 Don't try to scale it further down. 
+{% include upcoming_release.html %}
 
-Grand Hotell small  is a variation of this font with different embroidery settings. Pull compensation, density and underlays are different to allow to scale down between 55% (18mm, 2/3 inch) and 25% (9mm ,1/3 inch). 
+Grand Hotel small  is a variation of this font with different embroidery settings. Pull compensation, density and underlays are different to allow to scale down between 55% (18mm, 2/3 inch) and 25% (9mm ,1/3 inch). 
 
 
 That's why in the lettering dialog window, if using Grand Hotel small, you will have to pick up a scale between 25 and 55%. 
 
-Contrarly to Grand Hotel Marif, Grand Hotel small font **MUST** be embroidered with thread and needle smaller than usual.
+Contrarily to Grand Hotel Marif, Grand Hotel small font **MUST** be embroidered with thread and needle smaller than usual.
 A USA 8 (EUR 60) size needle, and 60WT thread **MUST** be used.
 
 ## In real life
