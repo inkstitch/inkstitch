@@ -1,8 +1,7 @@
 ---
 title: "Geneva Simple"
 permalink: /fonts/geneva_simple/
-last_modified_at: 2020-12-31
-toc: false
+last_modified_at: 2022-05-26
 preview_image:
   - url: /assets/images/fonts/geneva_simple_sans.jpg
     height: 13
