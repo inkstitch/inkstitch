@@ -3,9 +3,13 @@ title: "Monicha"
 permalink: /de/fonts/monicha/
 last_modified_at: 2022-05-04
 toc: false
-preview_image: /assets/images/fonts/monicha.png
+preview_image:
+  - url: /assets/images/fonts/monicha.jpg
+    height: 24
 ---
-![monicha](/assets/images/fonts/monicha.png)
+![monicha](/assets/images/fonts/monicha.jpg)
+
+{% include upcoming_release.html %}
 
 This font will be part of next Ink/Stitch version and is not yet available in Ink/Stitch v2.1.2.
 
