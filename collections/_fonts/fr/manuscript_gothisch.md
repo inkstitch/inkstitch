@@ -3,9 +3,12 @@ title: "Manuskript Gothisch"
 permalink: /fr/fonts/manuscript_gothisch/
 last_modified_at: 2022-05-05
 toc: false
-preview_image: /assets/images/fonts/manuscript_gothisch.png
+preview_image:
+  - url: /assets/images/fonts/manuscript_gothisch.jpg
+    height: 30
 ---
-![ManuscriptGothisch](/assets/images/fonts/manuscript_gothisch.png)
+![ManuscriptGothisch](/assets/images/fonts/manuscript_gothisch.jpg)
+
 ## Glyphes
 
 Cette fonte contient les 105 glyphes :
