@@ -1,12 +1,13 @@
 ---
 title: "Sacramarif"
 permalink: /fr/fonts/sacramarif/
-last_modified_at: 2022-05-05
+last_modified_at: 2022-05-27
 toc: false
-preview_image: /assets/images/fonts/sacramarif.png
-
+preview_image:
+  - url: /assets/images/fonts/sacramarif.jpg
+    height: 26
 ---
-![Sacramarif](/assets/images/fonts/sacramarif.png)
+![Sacramarif](/assets/images/fonts/sacramarif.jpg)
 
 ## Glyphes
 
