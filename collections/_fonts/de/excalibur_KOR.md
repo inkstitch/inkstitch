@@ -1,7 +1,7 @@
 ---
 title: "Excalibur KOR"
 permalink: /de/fonts/excalibur_kor/
-last_modified_at: 2022-05-24
+last_modified_at: 2022-05-27
 toc: false
 preview_image:
   - url: /assets/images/fonts/excalibur_KOR.jpg
