@@ -1,7 +1,7 @@
 ---
 title: "Grand Hotel Marif"
 permalink: /fr/fonts/grand_hotel_marif/
-last_modified_at: 2022-05-15
+last_modified_at: 2022-05-27
 toc: false
 preview_image:
   - url: /assets/images/fonts/grand_hotel_small.jpg
