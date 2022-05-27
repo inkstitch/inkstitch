@@ -12,7 +12,6 @@ preview_image:
 ![Emilio 20](/assets/images/fonts/emilio_20.jpg)
 ![Emilio 20 Tricolore](/assets/images/fonts/emilio20tricolore.png)
 
-
 ## Glyphes
 Les deux fontes contiennent les 36 glyphes:
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
