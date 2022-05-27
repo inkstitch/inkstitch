@@ -3,9 +3,12 @@ title: "Sacramarif"
 permalink: /ru/fonts/sacramarif/
 last_modified_at: 2021-05-04
 toc: false
-preview_image: /assets/images/fonts/sacramarif.png
+preview_image:
+  - url: /assets/images/fonts/sacramarif.jpg
+    height: 26
 ---
-![Sacramarif](/assets/images/fonts/sacramarif.png)
+![Sacramarif](/assets/images/fonts/sacramarif.jpg)
+
 
 
 
