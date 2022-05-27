@@ -1,11 +1,13 @@
 ---
 title: "Excalibur KOR"
 permalink: /fr/fonts/excalibur_kor/
-last_modified_at: 2022-05-07
+last_modified_at: 2022-05-27
 toc: false
-preview_image: /assets/images/fonts/excalibur_kor.png
+preview_image:
+  - url: /assets/images/fonts/excalibur_KOR.jpg
+    height: 19
 ---
-![ExcaliburKOR](/assets/images/fonts/excalibur_kor.png)
+![ExcaliburKOR](/assets/images/fonts/excalibur_KOR.jpg)
 
 ## Glyphes
 
