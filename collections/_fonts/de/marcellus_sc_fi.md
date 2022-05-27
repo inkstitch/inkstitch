@@ -3,9 +3,11 @@ title: "Marcellus SC FI "
 permalink: /de/fonts/marcellus_sc_fi/
 last_modified_at: 2022-01-22
 toc: false
-preview_image: /assets/images/fonts/marcellus_sc_fi.png
+preview_image:
+  - url: /assets/images/fonts/marcellus_sc_fi.jpg
+    height: 29
 ---
-![MarcellusSCFI](/assets/images/fonts/marcellus_sc_fi.png)
+![MarcellusSCFI](/assets/images/fonts/marcellus_sc_fi.jpg)
 
 # Glyphes
 
