@@ -12,7 +12,7 @@ preview_image:
 {% include upcoming_release.html %}
 
 ## Glyphes 
-Monicha contains 195 glyphs :
+Monicha contient 195 glyphes :
 	
 !#%@'(’)+,-
 ./01234567
