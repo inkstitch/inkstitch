@@ -1,7 +1,7 @@
 ---
 title: "TT Masters"
 permalink: /fr/fonts/tt_masters/
-last_modified_at: 2020-12-31
+last_modified_at: 2022-05-27
 toc: false
 preview_image:
   - url: /assets/images/fonts/tt_masters.jpg
