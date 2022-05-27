@@ -4,10 +4,10 @@ permalink: /ru/fonts/magnolia-script/
 last_modified_at: 2022-05-04
 toc: false
 preview_image:
-  - url: /assets/images/fonts/magnolia_KOR.jpg
-    height: 31
+  - url: /assets/images/fonts/manuscript_gothisch.jpg
+    height: 30
 ---
-![Magnolia](/assets/images/fonts/magnolia_KOR.jpg)
+![ManuscriptGothisch](/assets/images/fonts/manuscript_gothisch.jpg)
 ## Glyphs
 
 This font contains 109 glyphs:
