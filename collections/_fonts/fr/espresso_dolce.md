@@ -8,7 +8,6 @@ preview_image:
     height: 9
   - url: /assets/images/fonts/espresso_KOR.jpg
     height: 22
-
 ---
 ![Espresso KOR](/assets/images/fonts/espresso_KOR.jpg)
 
