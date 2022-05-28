@@ -2,7 +2,7 @@
 permalink: /fr/tutorials/autoroute_sashiko/
 title: "Sashiko "
 language: fr
-last_modified_at: 2022-05-27
+last_modified_at: 2022-05-28
 excerpt: "Agencement automatique de points droits et extension Sashiko"
 image: "/assets/images/tutorials/sashiko/sashiko.jpg"
 tutorial-type:
