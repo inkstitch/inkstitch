@@ -9,7 +9,7 @@ tutorial-type:
   - Sample File
 stitch-type:
   - "Guided Fill"
-  - ripple
+  - "Ripple Fill"
 techniques:
 field-of-use:
 user-level:
