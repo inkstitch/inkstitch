@@ -164,7 +164,7 @@ class Stroke(EmbroideryElement):
     @property
     @param('exponent',
            _('Line distance exponent'),
-           tooltip=_('Increse density towards one side.'),
+           tooltip=_('Increase density towards one side.'),
            type='float',
            default=1,
            select_items=[('stroke_method', 1)],
