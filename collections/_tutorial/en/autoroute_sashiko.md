@@ -4,7 +4,7 @@ title: "Sashiko "
 language: fr
 last_modified_at: 2022-05-27
 excerpt: "Using Sashiko extension  with autoroute  runningstitch"
-image: "/assets/images/tutorials/samples/ripple-lady.svg"
+image: "/assets/images/tutorials/sashiko/sashiko.jpg"
 tutorial-type:
   - Sample File
 stitch-type:
@@ -18,7 +18,7 @@ user-level:
 ![Sample](/assets/images/tutorials/sashiko/sashiko.jpg)
 
 
-![Sashiko Inkscape extension](https://inkscape.org/~FractalLotus/%E2%98%85sashiko-stitching-patterns) combined with running stitch autoroute 
+![Sashiko Inkscape extension](https://inkscape.org/~FractalLotus/%E2%98%85sashiko-stitching-patterns) combined with "Auto-Route Running Stitch"  
 makes it possible to produce sashiko style triple stitch embroidery files in a way so easy it's almost indecent.
 
 First install the Sashiko extension.
@@ -40,10 +40,10 @@ To change from design to triple stitch embroidery
 * Select all the paths that the extension just created (there are many)
   * Set all stroke style to dashed
   * `Extensions > Ink/Stitch > Params'
-    * Set the length of the running stitch (2 mm for the embroidered example)
-     * Choose the bean stitch number of repeats (1 for the embroidered example)
+    * Set the length of the running stitch (2 mm for the embroidered sample)
+     * Choose the bean stitch number of repeats (1 for the embroidered sample)
   * `Extensions > Ink/Stitch > Tools:Stroke > Auto-Route Running Stitch`
-    * Enable "Add node at intersections
+    * Enable "Add node at intersections"
     * Disable "Preserve order of running stitch"
    * Click Apply
 
