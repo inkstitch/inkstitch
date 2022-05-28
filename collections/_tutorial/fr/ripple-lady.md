@@ -16,13 +16,13 @@ field-of-use:
 user-level:
 ---
 
-## Tinkerbell woman as sample of Pattern Stitch and Ripple Stitch
+## Femme clochette en remplissage texturée et broderie ondulée
 
-Cup flower is Pattern Stitch
+La cupule de la fleur est en remplissage texturé
 
-Flower Hat is Ripple  Stitch
+Le chapeau/fleur est constitué de 4 copies du même chemin, simplement tourné et redimensionné, tous en broderie ondulée simple.
 
-Face is Bean  Stitch
+Le visage est un point triple
 
 ![SVG](/assets/images/tutorials/samples/ripple-lady.svg)
 
