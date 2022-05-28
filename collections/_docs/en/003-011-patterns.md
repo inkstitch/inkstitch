@@ -30,3 +30,8 @@ In Ink/Stitch you can generate patterns by either adding stitches or removing st
 The pattern marker can be removed in the fill and stroke panel (`Ctrl+Shift+F`). Open the Stroke style tab and set the first dropdown list in "Markers" to  the very first (empty) option.
 
 ![Remove pattern](/assets/images/docs/en/stitch-type-remove-pattern.png)
+
+### Samples Files Including Pattern Stitches
+
+{% include tutorials/tutorial_list key="stitch-type" value="Pattern Stitch" %}
+
