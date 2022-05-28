@@ -30,6 +30,7 @@ There are many ways to exploit all the possibilities:
 
 
 ![Many ripples](/assets/images/docs/en/rippleways_en.svg)
+[Download](/assets/images/docs/en/rippleways_en.svg){: download="paon.svg" }
 
 
 
