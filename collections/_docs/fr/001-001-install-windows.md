@@ -15,7 +15,8 @@ Nous fournissons aussi aux débutants des tutoriels vidéo sur notre <i class="f
 
 ## Prérequis
 
-Ink/Stitch est une extension pour Inkscape. Téléchargez et installez  [Inkscape](https://inkscape.org/release/) Version 1.0.2 ou supérieure avant d'installer Ink/Stitch.
+Ink/Stitch est une extension pour Inkscape.
+Vous deve **Téléchargez et installez  [Inkscape](https://inkscape.org/release/) Version 1.0.2 ou supérieure** avant d'installer Ink/Stitch. 
 
 ## Télécharger
 Téléchargez la dernière version disponible pour windows.
