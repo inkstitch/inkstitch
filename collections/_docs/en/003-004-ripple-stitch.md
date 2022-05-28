@@ -34,6 +34,7 @@ There are many ways to exploit all the possibilities:
 
 ## Params
 ### Params if starting from a simple path
+
 Params||Description
 ---|---|---
 Running stitch along paths      |  ☑ |Must be enabled for these settings to take effect.
