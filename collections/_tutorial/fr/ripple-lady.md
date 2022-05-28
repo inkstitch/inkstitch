@@ -4,7 +4,7 @@ title: "Femme Clochette en broderie ondulée"
 language: fr
 last_modified_at: 2022-05-27
 excerpt: "fichier exemple Femme Clochette en broderie ondulée"
-image: "/assets/images/tutorials/samples/paon.svg"
+image: "/assets/images/tutorials/samples/ripple-lady.svg"
 tutorial-type:
   - Sample File
 stitch-type:
@@ -15,12 +15,10 @@ field-of-use:
 user-level:
 ---
 
-## Exemple de broderie ondulée 
+## Tinkerbell woman as ample of Pattern Stitch and Ripple Stitch
 
-Le corps de l'oiseau est en remplissage guidé, les plumes en broderie ondulée
+Cup flower is Patter Stitch, Flower Hat is Ripple  Stitch
 
-![Exemple brodé](/assets/images/tutorials/tutorial-preview-images/paons.jpg)
+SVG](/assets/images/tutorials/samples/ripple-lady.svg)
 
-![Exemple de frange](/assets/images/tutorials/samples/paon.svg)
-
-[Télécharger](/assets/images/tutorials/samples/paon.svg){: download="paon.svg" }
+[Télécharger](/assets/images/tutorials/samples/paon.svg){: download="ripple-lady.svg.svg" }
