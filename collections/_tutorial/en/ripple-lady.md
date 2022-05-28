@@ -1,6 +1,7 @@
 ---
 permalink: /en/tutorials/ripple-lady/
 title: "Ripple Tinkerbell woman"
+language: en
 last_modified_at: 2022-05-26
 excerpt: "Sample file:  Tinkerbell woman as sample of Pattern Stitch and Ripple Stitch"
 image: "/assets/images/tutorials/samples/ripple-lady.svg"
