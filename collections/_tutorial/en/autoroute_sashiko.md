@@ -1,7 +1,7 @@
 ---
 permalink: /fr/tutorials/autoroute_sashiko/
 title: "Sashiko "
-language: fr
+language: en
 last_modified_at: 2022-05-27
 excerpt: "Using Sashiko extension  with autoroute  runningstitch"
 image: "/assets/images/tutorials/sashiko/sashiko.jpg"
