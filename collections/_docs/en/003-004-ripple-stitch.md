@@ -61,7 +61,7 @@ Grid distance |<img src="/assets/images/docs/ripple_only_grid.svg" alt="Distance
 
 ### Samples Files Including Ripple Stitches
 
-{% include tutorials/tutorial_list key="stitch-type" value="Ripple stitch" %}
+{% include tutorials/tutorial_list key="stitch-type" value="Ripple Stitch" %}
 
 
 
