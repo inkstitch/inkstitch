@@ -3,7 +3,7 @@ permalink: /fr/tutorials/autoroute_sashiko/
 title: "Sashiko "
 language: fr
 last_modified_at: 2022-05-27
-excerpt: "Using Sashiko extension  with autoroute  runningstitch"
+excerpt: "Agencement automatique de points droits et extension Sashiko"
 image: "/assets/images/tutorials/sashiko/sashiko.jpg"
 tutorial-type:
   - Sample File
