@@ -50,7 +50,7 @@ Forcer les points d'arrêts | ☑ ou ▢| Force un point d'arrêt après l'objet
 
 
 ### Paramètre additionnel uniquement en partant d'un chemin composé de deux sous chemins
-Ces deux chemins, vont  se comporter un peu comme les rails d'une colonne satin. Il est possible d'ailleurs d'avoir plus de deux sous-chemins si on leur adjoint des traverses,  ![plus loin](#traverses)
+Ces deux chemins, vont  se comporter un peu comme les rails d'une colonne satin. Il est possible d'ailleurs d'avoir plus de deux sous-chemins si on leur adjoint des traverses,  ![plus loin](/fr/docs/stitches/ripple/#traverses)
 Paramètre additionnel||Description
 ---|---|---
 Distance grille |<img src="/assets/images/docs/ripple_only_grid.svg" alt="Distance"/>| Si une distance positive est spécifiée, les ondulations de la broderie sont complétées  en une "grille", par un chemin "perpendiculaire" aux ondulations. Le paramètre contrôle l'écart de ces perpendiculaires. Intervertir  n'a pas  d'influence sur ce paramètre.
