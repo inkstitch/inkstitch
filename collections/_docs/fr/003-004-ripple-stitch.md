@@ -37,12 +37,12 @@ Paramètres||Description
 ---|---|---
 Points droits le long des chemins   |  ☑  |Doit être activé pour que ces paramètres prennent effet.
 Méthode      || Choisir Broderie Ondulée
-Répéter                      || Définir combien de fois la broderie complète va et vient le long du parcours <br />◦ par défaut: 1 (aller une fois du début à la fin du chemin)<br />◦ Nombre impair: les points se termineront à la fin du chemin<br />◦ Nombre pair: la couture va revenir au début du chemin
+Répéter                      || Définir combien de fois le chemin final de broderie est excuté en va et vient le long du parcours <br />◦ par défaut: 1 (aller une fois du début à la fin du chemin)<br />◦ Nombre impair: les points se termineront à la fin du chemin<br />◦ Nombre pair: la couture va revenir au début du chemin
 Nombre de répétitions du point triple || Activer [Mode point triple](/fr/docs/stitches/bean-stitch/)<br />◦ Repasse sur chaque point le nombre de fois indiqué.<br />◦ Une valeur de 1 triplera chaque point (avant, arrière, avant).<br />◦ Une valeur de 2 permettra de quintupler chaque point, etc..<br />
 Longueur du point droit||Longueur des points dans le [Mode Point Droit](/fr/docs/stitches/running-stitch/)
 Nombre de lignes|<img src="/assets/images/docs/ripple_only_lines.svg" alt="Nombre de lignes"/>|Choisir le nombre de réplications de l'ondulation dans la broderie. La valeur par défaut est 10.
 ◦Sauter les premières lignes <br /> ◦Sauter les dernières lignes  |<img src="/assets/images/docs/fr/ripple_only_skip_fr.svg" alt="Sauter"/>| Permet de sauter (ne pas broder)  ce nombre de réplications au début et/ou à la fin
-Intervertir |☑  ou ▢|  Si toute les lignes sont brodées, revient à parcours le plan de broderie à l'envers. Si des lignes sont sautées, les deux paramètres de saut de lignes sont a aussi interversés. A aussi un effet sur l'exposant
+Intervertir |☑  ou ▢|  Si toute les lignes sont brodées, revient à parcours le chemin final de broderie à l'envers. Si des lignes sont sautées, les deux paramètres de saut de lignes sont  aussi intervertis. A aussi un effet sur l'exposant
 Distance grille || Inopérant dans ce cas
 Exposant de la distance entre les lignes|<img src="/assets/images/docs/fr/ripple_only_exponent_fr.svg" alt="Exposant"/>| ◦ La valeur par défaut de 1 espace les ondulations de manière constante<br />◦ Avec une valeur supérieure à  1 espace l'espace  entre deux ondulations consécutives augmente au fur et à mesure qu'on s'éloigne du chemin qui définit l'ondulation  <br />◦ Avec une valeur inférieure à  1 espace l'espace  entre deux ondulations consécutives diminue au fur et à mesure qu'on s'éloigne du chemin qui définit l'ondulation
 Autoriser les points d'arrêts | ☑  ou ▢|Choix de l'ajout d' un point d'arrêt en début et en fin de broderie.
