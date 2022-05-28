@@ -852,16 +852,15 @@ class SatinColumn(EmbroideryElement):
 
         # "left" and "right" here are kind of arbitrary designations meaning
         # a point from the first and second rail respectively
-        stitches = []
         for left, right in zip(*sides):
-            stitches.append(Stitch(left, tags=("satin_column", "e_stitch")))
-            stitches.append(Stitch(right, tags=("satin_column", "e_stitch")))
-            stitches.append(Stitch(left, tags=("satin_column", "e_stitch")))
+            patch.add_stitch(left)
+            patch.add_stitch(right)
+            patch.add_stitch(left)
 
         if self._center_walk_is_odd():
-            stitches = list(reversed(stitches))
-        patch.stitches = stitches
+            patch.stitches = list(reversed(patch.stitches))
 
+        patch.add_tags(("satin_column", "e_stitch"))
         return patch
 
     def do_split_stitch(self):
