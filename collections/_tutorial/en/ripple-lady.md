@@ -1,9 +1,9 @@
 ---
 permalink: /en/tutorials/ripple-lady/
-title: "Ripple Tinkerbell woman"
+title: "Ripple Tinkerbell Woman"
 language: en
 last_modified_at: 2022-05-26
-excerpt: "Sample file:  Tinkerbell woman as sample of Pattern Stitch and Ripple Stitch"
+excerpt: "Sample file:  Tinkerbell Woman as sample of Pattern Stitch and Ripple Stitch"
 image: "/assets/images/tutorials/samples/ripple-lady.svg"
 tutorial-type:
   - Sample File
@@ -24,10 +24,9 @@ Flower Hat is Ripple  Stitch : 5 copies of the same path simply rotated and resi
 
 Face is Bean  Stitch
 
-assets/images/tutorials/tutorial-preview-images/
 
 ![SVG](/assets/images/tutorials/samples/ripple-lady.svg)
 
-![Embroidered](assets/images/tutorials/tutorial-preview-images/ripple-lady.jpg)
+![Embroidered](/assets/images/tutorials/tutorial-preview-images/ripple-lady.jpg)
 
 [Télécharger](/assets/images/tutorials/samples/ripple-lady.svg){: download="ripple-lady.svg" }
