@@ -50,9 +50,9 @@ Number of line|<img src="/assets/images/docs/ripple_only_lines.svg" alt="Nombre 
 ◦Skip first lines <br /> ◦Skip last lines  |<img src="/assets/images/docs/ripple_only_skip.svg" alt="Sauter"/>| Skip (do not embroider)  that number of replications at start and/or end of the embroidery.
 Reverse |☑  or ▢|  Reverse the final embroidery path.  Has no effect on the other  parameters.
 Grid distance|| ineffective when starting from a single path
-Line distance exponent|<img src="/assets/images/docs/en/ripple_only_exponent_en.svg" alt="Exposant"/>| ◦ With default value of 1 space between replications is constante<br />◦ With a value greater than 1, the space between two consecutive replications increases as one moves away from the original ripple   <br />◦ With a value smaller than 1, the space between two consecutive replications decreases as one moves away from the original ripple 
-Allow lock stitches| ☑  ou ▢||Enables lock stitches in only desired positions
-Force lock stitches| ☑  ou ▢||Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences.
+Line distance exponent|<img src="/assets/images/docs/ripple_only_exponent.svg" alt="Exposant"/>| ◦ With default value of 1 space between replications is constante<br />◦ With a value greater than 1, the space between two consecutive replications increases as one moves away from the original ripple   <br />◦ With a value smaller than 1, the space between two consecutive replications decreases as one moves away from the original ripple 
+Allow lock stitches| ☑  ou ▢|Enables lock stitches in only desired positions
+Force lock stitches| ☑  ou ▢|Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences.
 
 ### Grid distance  (only when starting from a path with two subpaths)
 The two subpaths are going to play similarly to the satin colomn rails,  and it is even possible to add rungs 
