@@ -10,7 +10,7 @@ toc: true
 
 [![Ripple butterfly](/assets/images/docs/ripplefly.jpg){: width="200x"}](/assets/images/docs/ripplefly.svg){: title="Download SVG File" .align-left download="ripplefly.svg" }La broderie ondulée tient à la fois du point droit et du remplissage : elle se comporte comme un point droit (on peut l'exécuter  en point triple par exemple), elle est définie à partir d'un trait, mais elle produit à l'arrivée une broderie qui s'étend sur une surface. Utilisée de manière lâche, le résultat ressemble à des ondes, d'où son nom. 
 
-
+Regardez cette video attirante: {% include video id="cyvby3KJM10" provider="youtube" %}
 
 ##  Comment la créer
 A partir d'un  **trait (couleur de contour mais pas de remplissage)** qui peut être un  chemin  simple (la décomposition n'a aucun effet sur lui), ou un  chemin  combinant deux sous chemins (assimilable  aux  deux rails d'une colonne satin) 
@@ -50,9 +50,10 @@ Forcer les points d'arrêts | ☑ ou ▢| Force un point d'arrêt après l'objet
 
 
 ### Paramètre additionnel uniquement en partant d'un chemin composé de deux sous chemins
-Ces deux chemins, vont  se comporter un peu comme les rails d'une colonne satin. Il est possible d'ailleurs d'avoir plus de deux sous-chemins si on leur adjoint des traverses,  ![plus loin](/fr/docs/stitches/ripple/#traverses)
+Ces deux chemins, vont  se comporter un peu comme les rails d'une colonne satin. Il est possible d'ailleurs d'avoir plus de deux sous-chemins si on leur adjoint des traverses.
 
 Avec ou sans traverses, il est dans ce cas possible de compléter le chemin final de  broderie pour produire un effet de grille.
+
 Paramètre additionnel||Description
 ---|---|---
 Distance grille |<img src="/assets/images/docs/ripple_only_grid.svg" alt="Distance"/>| Si une distance positive est spécifiée, les ondulations de la broderie sont complétées  en une "grille", par un chemin "perpendiculaire" aux ondulations. Le paramètre contrôle l'écart de ces perpendiculaires. Intervertir  n'a pas  d'influence sur ce paramètre.
