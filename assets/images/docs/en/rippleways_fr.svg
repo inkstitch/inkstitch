@@ -2,7 +2,7 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   sodipodi:docname="rippleways_en.svg"
+   sodipodi:docname="rippleways_fr.svg"
    inkscape:version="1.2 (dc2aeda, 2022-05-15)"
    id="svg3544"
    version="1.1"
@@ -766,7 +766,7 @@
     <g
        id="g8341"
        inkscape:label="French"
-       style="display:none">
+       style="display:inline">
       <text
          xml:space="preserve"
          style="font-size:4.23333px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:start;text-anchor:start;stroke-width:0.264583"
@@ -1055,7 +1055,7 @@
        id="g47702"
        inkscape:label="English"
        transform="translate(-1.2979766,-0.64898831)"
-       style="display:inline">
+       style="display:none">
       <text
          xml:space="preserve"
          style="font-size:4.23333px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.264583"
