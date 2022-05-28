@@ -1,6 +1,6 @@
 ---
 permalink: /fr/tutorials/ripple-bird/
-title: Oiseau en broderie ondulée
+title: "Oiseau en broderie ondulée"
 language: fr
 last_modified_at: 2022-05-27
 excerpt: "fichier exemple d'utilisation du point ondulé pour un oiseau"
@@ -9,7 +9,7 @@ tutorial-type:
   - Sample File
 stitch-type:
   - "Guided Fill"
-  - ripple
+  - "Ripple Stitch"
 techniques:
 field-of-use:
 user-level:
