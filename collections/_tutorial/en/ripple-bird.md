@@ -1,15 +1,15 @@
 ---
 permalink: /tutorials/ripple-bird/
 title: Ripple bird
-language: fr
+language: en
 last_modified_at: 2022-05-22
 excerpt: "sample file of ripple stitch bird and "
 image: "/assets/images/tutorials/samples/paon.svg"
 tutorial-type:
   - Sample File
 stitch-type:
-  - Guided Stitch
-  - Ripple
+  - guided 
+  - ripple
 techniques:
 field-of-use:
 user-level:
