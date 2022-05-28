@@ -10,15 +10,20 @@ tutorial-type:
 stitch-type:
   - "Ripple Stitch"
   - "Pattern Stitch"
+  - "Bean Stitch"
 techniques:
 field-of-use:
 user-level:
 ---
 
-## Tinkerbell woman as ample of Pattern Stitch and Ripple Stitch
+## Tinkerbell woman as sample of Pattern Stitch and Ripple Stitch
 
-Cup flower is Patter Stitch, Flower Hat is Ripple  Stitch
+Cup flower is Pattern Stitch
 
-SVG](/assets/images/tutorials/samples/ripple-lady.svg)
+Flower Hat is Ripple  Stitch
 
-[Télécharger](/assets/images/tutorials/samples/paon.svg){: download="ripple-lady.svg.svg" }
+Face is Bean  Stitch
+
+![SVG](/assets/images/tutorials/samples/ripple-lady.svg)
+
+[Télécharger](/assets/images/tutorials/samples/ripple-lady.svg){: download="ripple-lady.svg" }
