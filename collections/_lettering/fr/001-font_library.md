@@ -7,5 +7,8 @@ toc: false
 {% include font_list %}
 
 ## Meli Melo de polices Ink/Stitch en pleine action
+
+De nombreux exemples de polices brodées sont inclus dans les fiches de détails sur les polices. Certains brodés par des experts, d'autres par de presque complets débutants. Utiliser le lettrage est très simple, beaucoup plus facile que de digitaliser soit même un texte pour la broderie.
+
 {% include folder-galleries path="fonts/multiple/" %}
 
