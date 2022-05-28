@@ -26,4 +26,6 @@ Le visage est un point triple
 
 ![SVG](/assets/images/tutorials/samples/ripple-lady.svg)
 
+![Brodé](/assets/images/tutorials/tutorial-preview-images/ripple-lady.jpg)
+
 [Télécharger](/assets/images/tutorials/samples/ripple-lady.svg){: download="ripple-lady.svg" }
