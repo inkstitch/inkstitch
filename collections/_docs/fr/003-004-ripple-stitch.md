@@ -79,4 +79,4 @@ Fonctionne de manière analogue aux traverses des colonnes satin
 
 
 ##  Exemples de fichiers qui utilisent la broderie ondulée 
-{% include tutorials/tutorial_list key="stitch-type" value="ripple" %}
+{% include tutorials/tutorial_list key="stitch-type" value="Ripple Stitch" %}
