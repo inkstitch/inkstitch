@@ -19,7 +19,7 @@ A partir d'un  **trait (couleur de contour mais pas de remplissage)** qui peut �
 * Sélectionner ce chemin
 * Ouvrir le dialogue de paramètrage (`Extensions > Ink/Stitch > Paramètres`) et sélectionner `Broderie ondulée` comme méthode.
 
-Une  fois le chemin créé, il sera possible de lui ajouter un guidage pour influencer la manière dont les ondulations remplissent la forme.
+Une  fois le chemin créé, il sera possible d'influencer la manière dont les ondulations sont répliquées pour remplir une forme.
 
 
 
