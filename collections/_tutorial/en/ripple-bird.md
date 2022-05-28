@@ -8,7 +8,7 @@ image: "/assets/images/tutorials/samples/paon.svg"
 tutorial-type:
   - Sample File
 stitch-type:
-  - guided 
+  - "Guided Fill"
   - ripple
 techniques:
 field-of-use:
