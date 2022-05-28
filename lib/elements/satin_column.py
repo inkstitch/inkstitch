@@ -13,7 +13,7 @@ from shapely.ops import nearest_points
 from inkex import paths
 
 from ..i18n import _
-from ..stitch_plan import Stitch, StitchGroup
+from ..stitch_plan import StitchGroup
 from ..svg import line_strings_to_csp, point_lists_to_csp
 from ..utils import Point, cache, collapse_duplicate_point, cut
 from .element import EmbroideryElement, param
@@ -829,13 +829,13 @@ class SatinColumn(EmbroideryElement):
         sides = self.plot_points_on_rails(self.zigzag_spacing, self.pull_compensation)
 
         # Like in zigzag_underlay(): take a point from each side in turn.
-        stitches = []
         for point in chain.from_iterable(zip(*sides)):
-            stitches.append(Stitch(point, tags=("satin_column", "satin_column_edge")))
-        if self._center_walk_is_odd():
-            stitches = list(reversed(stitches))
-        patch.stitches = stitches
+            patch.add_stitch(point)
 
+        if self._center_walk_is_odd():
+            patch.stitches = list(reversed(patch.stitches))
+
+        patch.add_tags(("satin_column", "satin_column_edge"))
         return patch
 
     def do_e_stitch(self):
