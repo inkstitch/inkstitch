@@ -3,7 +3,7 @@ permalink: /tutorials/ripple-bird/
 title: Ripple bird
 language: en
 last_modified_at: 2022-05-22
-excerpt: "sample file of ripple stitch bird and "
+excerpt: "Sample file of ripple stitch and guided fill bird"
 image: "/assets/images/tutorials/samples/paon.svg"
 tutorial-type:
   - Sample File
