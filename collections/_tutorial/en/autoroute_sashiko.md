@@ -1,5 +1,5 @@
 ---
-permalink: /fr/tutorials/autoroute_sashiko/
+permalink: /en/tutorials/autoroute_sashiko/
 title: "Sashiko "
 language: en
 last_modified_at: 2022-05-27
