@@ -31,8 +31,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.84096521"
-     inkscape:cx="137.93674"
-     inkscape:cy="277.65715"
+     inkscape:cx="132.58575"
+     inkscape:cy="221.76898"
      inkscape:window-width="1350"
      inkscape:window-height="765"
      inkscape:window-x="0"
@@ -501,7 +501,7 @@
          y="-3.9558721" /></text>
     <text
        xml:space="preserve"
-       style="font-size:10.5833px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';display:none;fill:#ed171f;stroke:none;stroke-width:0.264583"
+       style="font-size:10.5833px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';display:inline;fill:#ed171f;stroke:none;stroke-width:0.264583"
        x="83.808014"
        y="6.4265437"
        id="text68779"
@@ -510,22 +510,24 @@
          id="tspan68777"
          style="fill:#ed171f;stroke:none;stroke-width:0.264583"
          x="83.808014"
-         y="6.4265437">Flip ☑ </tspan></text>
+         y="6.4265437">Flip <tspan
+   style="font-size:16.9333px"
+   id="tspan1304">☑</tspan> </tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:10.5833px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';display:none;fill:#ed171f;stroke:none;stroke-width:0.264583"
+       style="font-size:10.5833px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';display:inline;fill:#4e2990;stroke:none;stroke-width:0.264583"
        x="11.760345"
-       y="6.7411623"
+       y="6.4265437"
        id="text91603"
        inkscape:label="Unflipped"><tspan
          sodipodi:role="line"
          id="tspan91601"
-         style="fill:#ed171f;stroke:none;stroke-width:0.264583"
+         style="fill:#4e2990;stroke:none;stroke-width:0.264583"
          x="11.760345"
-         y="6.7411623">Flip  ▢ </tspan></text>
+         y="6.4265437">Flip  ▢ </tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:10.5833px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';display:inline;fill:#ed171f;stroke:none;stroke-width:0.264583"
+       style="font-size:10.5833px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';display:none;fill:#ed171f;stroke:none;stroke-width:0.264583"
        x="64.61628"
        y="6.4265437"
        id="text69800"
@@ -542,7 +544,7 @@
          id="tspan69804" /></text>
     <text
        xml:space="preserve"
-       style="font-size:10.5833px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';display:inline;fill:#ed171f;stroke:none;stroke-width:0.264583"
+       style="font-size:10.5833px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';display:none;fill:#ed171f;stroke:none;stroke-width:0.264583"
        x="2.9510255"
        y="6.4265437"
        id="text91609"
