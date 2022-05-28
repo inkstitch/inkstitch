@@ -27,8 +27,8 @@ class IgnoreSkipValues(ValidationWarning):
     name = _("Ignore skip")
     description = _("Skip values are ignored, because there was no line left to embroider.")
     steps_to_solve = [
-        _('* Reduce values of Skip first and last lines or'),
-        _('* Increase number of lines accordinly in the params dialog.'),
+        _('* Open the params dialog with this object selected'),
+        _('* Reduce Skip values or increase number of lines'),
     ]
 
 
@@ -149,18 +149,6 @@ class Stroke(EmbroideryElement):
         return abs(self.get_int_param("skip_end", 0))
 
     @property
-    @param('flip',
-           _('Flip'),
-           tooltip=_('Flip outer to inner'),
-           type='boolean',
-           default=False,
-           select_items=[('stroke_method', 1)],
-           sort_index=8)
-    @cache
-    def flip(self):
-        return self.get_boolean_param("flip", False)
-
-    @property
     @param('render_grid',
            _('Grid distance'),
            tooltip=_('Render as grid. Works only with satin type ripple stitches.'),
@@ -184,6 +172,30 @@ class Stroke(EmbroideryElement):
     @cache
     def exponent(self):
         return max(self.get_float_param("exponent", 1), 0.1)
+
+    @property
+    @param('flip_exponent',
+           _('Flip exponent'),
+           tooltip=_('Reverse exponent effect.'),
+           type='boolean',
+           default=False,
+           select_items=[('stroke_method', 1)],
+           sort_index=10)
+    @cache
+    def flip_exponent(self):
+        return self.get_boolean_param("flip_exponent", False)
+
+    @property
+    @param('reverse',
+           _('Reverse'),
+           tooltip=_('Flip start and end point'),
+           type='boolean',
+           default=False,
+           select_items=[('stroke_method', 1)],
+           sort_index=11)
+    @cache
+    def reverse(self):
+        return self.get_boolean_param("reverse", False)
 
     @property
     @param('zigzag_spacing_mm',
@@ -343,11 +355,12 @@ class Stroke(EmbroideryElement):
                     points,
                     self.running_stitch_length,
                     self.repeats,
-                    self.flip,
+                    self.reverse,
                     self.skip_start,
                     self.skip_end,
                     self.render_grid,
                     self.exponent,
+                    self.flip_exponent,
                     guide_line))
             if patch:
                 if self.bean_stitch_repeats > 0:
@@ -398,7 +411,7 @@ class Stroke(EmbroideryElement):
             yield IgnoreSkipValues(self.shape.centroid)
 
         # guided fill warnings
-        if self.stroke == 1:
+        if self.stroke_method == 1:
             is_multiple_guide_line = self._get_guide_lines(True)
             if is_multiple_guide_line:
                 yield MultipleGuideLineWarning(self.shape.centroid)

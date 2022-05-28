@@ -10,7 +10,8 @@ from ..utils.geometry import line_string_to_point_list
 from .running_stitch import running_stitch
 
 
-def ripple_stitch(lines, target, line_count, points, max_stitch_length, repeats, flip, skip_start, skip_end, render_grid, exponent, guide_line):
+def ripple_stitch(lines, target, line_count, points, max_stitch_length, repeats, reverse, skip_start, skip_end,
+                  render_grid, exponent, flip_exponent, guide_line):
     '''
     Ripple stitch is allowed to cross itself and doesn't care about an equal distance of lines
     It is meant to be used with light (not dense) stitching
@@ -29,20 +30,24 @@ def ripple_stitch(lines, target, line_count, points, max_stitch_length, repeats,
         skip_start = skip_end = 0
 
     if is_closed(outline):
-        rippled_line = do_circular_ripple(outline, target, line_count, repeats, flip, max_stitch_length, skip_start, skip_end, exponent, guide_line)
+        rippled_line = do_circular_ripple(outline, target, line_count, repeats, max_stitch_length, skip_start, skip_end,
+                                          exponent, flip_exponent, guide_line)
     else:
-        rippled_line = do_linear_ripple(lines, points, target, line_count - 1, repeats, flip, max_stitch_length,
-                                        skip_start, skip_end, render_grid, exponent, guide_line)
+        rippled_line = do_linear_ripple(lines, points, target, line_count - 1, repeats, max_stitch_length, skip_start, skip_end, render_grid,
+                                        exponent, flip_exponent, guide_line)
+
+    if reverse != flip_exponent:
+        rippled_line = LineString(list(reversed(rippled_line.coords)))
 
     return running_stitch(line_string_to_point_list(rippled_line), max_stitch_length)
 
 
-def do_circular_ripple(outline, target, line_count, repeats, flip, max_stitch_length, skip_start, skip_end, exponent, guide_line):
+def do_circular_ripple(outline, target, line_count, repeats, max_stitch_length, skip_start, skip_end, exponent, flip_exponent, guide_line):
     if guide_line:
-        lines = _get_guided_helper_lines(outline, max_stitch_length, guide_line)
+        lines = _get_guided_helper_lines(outline, max_stitch_length, flip_exponent, guide_line)
     else:
         # for each point generate a line going to the target point
-        lines = target_point_lines_normalized_distances(outline, target, flip, max_stitch_length)
+        lines = target_point_lines_normalized_distances(outline, target, flip_exponent, max_stitch_length)
 
     # create a list of points for each line
     points = get_interpolation_points(lines, line_count, exponent, "circular")
@@ -58,19 +63,20 @@ def do_circular_ripple(outline, target, line_count, repeats, flip, max_stitch_le
     return LineString(coords)
 
 
-def do_linear_ripple(lines, points, target, line_count, repeats, flip, max_stitch_length, skip_start, skip_end, render_grid, exponent, guide_line):
+def do_linear_ripple(lines, points, target, line_count, repeats, max_stitch_length, skip_start, skip_end, render_grid,
+                     exponent, flip_exponent, guide_line):
+
     if len(lines) == 1:
         if guide_line:
-            helper_lines = _get_guided_helper_lines(lines[0], max_stitch_length, guide_line)
+            helper_lines = _get_guided_helper_lines(lines[0], max_stitch_length, flip_exponent, guide_line)
         else:
-            helper_lines = target_point_lines(lines[0], target, flip)
+            helper_lines = target_point_lines(lines[0], target, flip_exponent)
     else:
         helper_lines = []
         for start, end in zip(points[0], points[1]):
-            if flip:
-                helper_lines.append(LineString([end, start]))
-            else:
-                helper_lines.append(LineString([start, end]))
+            if flip_exponent:
+                end, start = [start, end]
+            helper_lines.append(LineString([start, end]))
 
     # get linear points along the lines
     points = get_interpolation_points(helper_lines, line_count, exponent)
@@ -116,38 +122,40 @@ def is_closed(line):
     return Point(*coords[0]).distance(Point(*coords[-1])) < 0.05
 
 
-def target_point_lines(outline, target, flip):
+def target_point_lines(outline, target, flip_exponent):
     lines = []
     for point in outline.coords:
-        if flip:
+        if flip_exponent:
             lines.append(LineString([point, target]))
         else:
             lines.append(LineString([target, point]))
     return lines
 
 
-def target_point_lines_normalized_distances(outline, target, flip, max_stitch_length):
+def target_point_lines_normalized_distances(outline, target, flip_exponent, max_stitch_length):
     lines = []
     outline = running_stitch(line_string_to_point_list(outline), max_stitch_length)
     for point in outline:
-        if flip:
+        if flip_exponent:
             lines.append(LineString([target, point]))
         else:
             lines.append(LineString([point, target]))
     return lines
 
 
-def _get_guided_helper_lines(lines, max_stitch_length, guide_line):
+def _get_guided_helper_lines(lines, max_stitch_length, flip_exponent, guide_line):
     # for each point generate a line going along and pointing to the guide line
     if isinstance(guide_line, MultiLineString):
         # simple guide line
-        return _generate_guided_helper_lines(lines, max_stitch_length, guide_line.geoms[0])
-    # satin type guide line
-    rail_points = guide_line.plot_points_on_rails(max_stitch_length, 0)
-    return _generate_satin_guide_helper_lines(lines, max_stitch_length, rail_points)
+        lines = _generate_guided_helper_lines(lines, max_stitch_length, flip_exponent, guide_line.geoms[0])
+    else:
+        # satin type guide line
+        rail_points = guide_line.plot_points_on_rails(max_stitch_length, 0)
+        lines = _generate_satin_guide_helper_lines(lines, max_stitch_length, flip_exponent, rail_points)
+    return lines
 
 
-def _generate_guided_helper_lines(outline, max_stitch_length, guide_line):
+def _generate_guided_helper_lines(outline, max_stitch_length, flip_exponent, guide_line):
     # generates lines along the guide line tapering off towards to top
     line_point_dict = defaultdict(list)
     outline = running_stitch(line_string_to_point_list(outline), max_stitch_length)
@@ -170,10 +178,10 @@ def _generate_guided_helper_lines(outline, max_stitch_length, guide_line):
                 points.append(Point(point))
         line_point_dict[j] = points
 
-    return _point_dict_to_linestring(len(outline), line_point_dict)
+    return _point_dict_to_linestring(len(outline), line_point_dict, flip_exponent)
 
 
-def _generate_satin_guide_helper_lines(outline, max_stitch_length, rail_points):
+def _generate_satin_guide_helper_lines(outline, max_stitch_length, flip_exponent, rail_points):
     first, last = [Point(i) for i in outline.coords[::len(outline.coords)-1]]
     if is_closed(outline):
         minx, miny, maxx, maxy = outline.bounds
@@ -216,7 +224,7 @@ def _generate_satin_guide_helper_lines(outline, max_stitch_length, rail_points):
         for j, point in enumerate(scaled_outline.coords):
             line_point_dict[j].append(point)
 
-    return _point_dict_to_linestring(len(outline.coords), line_point_dict)
+    return _point_dict_to_linestring(len(outline.coords), line_point_dict, flip_exponent)
 
 
 def _get_extended_points(x, coords):
@@ -228,10 +236,13 @@ def _get_extended_points(x, coords):
     return point
 
 
-def _point_dict_to_linestring(line_count, point_dict):
+def _point_dict_to_linestring(line_count, point_dict, flip_exponent):
     lines = []
     for i in range(line_count):
-        lines.append(LineString(point_dict[i]))
+        points = point_dict[i]
+        if flip_exponent:
+            points = list(reversed(points))
+        lines.append(LineString(points))
     return lines
 
 
