@@ -24,6 +24,10 @@ Flower Hat is Ripple  Stitch : 5 copies of the same path simply rotated and resi
 
 Face is Bean  Stitch
 
+assets/images/tutorials/tutorial-preview-images/
+
 ![SVG](/assets/images/tutorials/samples/ripple-lady.svg)
+
+![Embroidered](assets/images/tutorials/tutorial-preview-images/ripple-lady.jpg)
 
 [Télécharger](/assets/images/tutorials/samples/ripple-lady.svg){: download="ripple-lady.svg" }
