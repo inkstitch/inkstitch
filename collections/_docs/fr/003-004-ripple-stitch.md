@@ -50,8 +50,7 @@ Forcer les points d'arrêts | ☑ ou ▢| Force un point d'arrêt après l'objet
 
 
 ### Paramètre additionnel uniquement en partant d'un chemin composé de deux sous chemins
-Ces deux chemins, vont  se comporter un peu comme les rails d'une colonne satin. Il est possible d'ailleurs d'avoir plus de deux sous-chemins si on leur adjoint des traverses, voir plus loin
-
+Ces deux chemins, vont  se comporter un peu comme les rails d'une colonne satin. Il est possible d'ailleurs d'avoir plus de deux sous-chemins si on leur adjoint des traverses,  ![plus loin](#traverses)
 Paramètre additionnel||Description
 ---|---|---
 Distance grille |<img src="/assets/images/docs/ripple_only_grid.svg" alt="Distance"/>| Si une distance positive est spécifiée, les ondulations de la broderie sont complétées  en une "grille", par un chemin "perpendiculaire" aux ondulations. Le paramètre contrôle l'écart de ces perpendiculaires. Intervertir  n'a pas  d'influence sur ce paramètre.
@@ -73,9 +72,8 @@ La position des centre des réplications de l'ondulation initale est alors déte
 ### Pour les  broderies ondulées définies à partir d'un chemin simple: Guidage par cible
 Il est possible de définir le point cible de l'ondulation grace aux [commandes visuelles](/fr/docs/commands/). En l'absence de  toute information de guidage,c'est le centre de l'ondulation première qui  tient lieu de point cible
 
-### Pour les  broderies ondulées définies à partir d'un chemin simple composée de deux rails : Guidage par traverses
+### [Pour les  broderies ondulées définies à partir d'un chemin simple composée de deux rails : Guidage par traverses](#traverses)
 Fonctionne de manière analogue aux traverses des colonnes satin
-
 
 
 ##  Exemples de fichiers qui utilisent la broderie ondulée 
