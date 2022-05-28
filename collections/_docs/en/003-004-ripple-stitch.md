@@ -49,4 +49,17 @@ Line distance exponent|<img src="/assets/images/docs/en/ripple_only_exponent_en.
 Allow lock stitches| ☑  ou ▢||Enables lock stitches in only desired positions
 Force lock stitches| ☑  ou ▢||Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences.
 
+### Grid distance  (only when starting from a path with two subpaths)
+The two subpaths are going to play similarly to the satin colomn rails,  and it is even possible to add rungs 
+With or without rungs it is not possible to add to the final embroidery path to get a grid effect
+
+Additional parameter||Description
+---|---|---
+Grid distance |<img src="/assets/images/docs/ripple_only_grid.svg" alt="Distance"/>| If the distance is strictly positive a grid effect is added. The distance controls how far apart the new  lines are. Flip has no effect on this parameter.  
+
+### Samples Files Including Ripple Stitches
+
+{% include tutorials/tutorial_list key="stitch-type" value="Ripple stitch" %}
+
+
 
