@@ -18,7 +18,7 @@ user-level:
 ![Sample](/assets/images/tutorials/sashiko/sashiko.jpg)
 
 
-![Sashiko Inkscape extension](https://inkscape.org/~FractalLotus/%E2%98%85sashiko-stitching-patterns) combined with "Auto-Route Running Stitch"  
+[Sashiko Inkscape extension](https://inkscape.org/~FractalLotus/%E2%98%85sashiko-stitching-patterns) combined with "Auto-Route Running Stitch"  
 makes it possible to produce sashiko style triple stitch embroidery files in a way so easy it's almost indecent.
 
 First install the Sashiko extension.
