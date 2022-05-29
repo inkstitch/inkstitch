@@ -18,7 +18,7 @@ user-level:
 ![Sample](/assets/images/tutorials/sashiko/sashiko.jpg)
 
 
-![L'extension inkscape Sashiko](https://inkscape.org/~FractalLotus/%E2%98%85sashiko-stitching-patterns) associée à l'agencement automatique de points droits
+[L'extension inkscape Sashiko](https://inkscape.org/~FractalLotus/%E2%98%85sashiko-stitching-patterns) associée à l'agencement automatique de points droits
 permet de produire des fichiers de broderie style sashiko en point triple d'une manière si simple que cela en est presque indécent.
 
 Il convient bien sur d'installer l'extension Sashiko. 
