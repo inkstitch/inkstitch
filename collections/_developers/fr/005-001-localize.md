@@ -22,7 +22,7 @@ Vous voulez aider à traduire ? Nous apprécierions vraiment vos contributions !
 Pour commencer à traduire, visitez notre [page de projet sur Crowdin](https://translate.inkstitch.org). Il est facile de se connecter à l'aide de votre compte GitHub. Choisissez une langue et commencez à suggérer des traductions !
 
 **Info :** Si vous souhaitez que votre langue apparaisse dans la section des versions d'Ink/Stitch, assurez vous que   `""Generate INX files""` est bien traduit dans votre langue. C'est déterminant  pour qu'Ink/Stitch crée les fichiers de menu dans votre langue.
-{: .notice--avertissement }
+{: .notice--warning}
 
 Les contributeurs approuvés peuvent accepter vos traductions, ce qui les rentra visible dans ce dépôt dans les 24 heures. Si vous souhaitez devenir approbateur, veuillez nous contacter sur [GitHub](https://github.com/inkstitch/inkstitch/issues).
 
