@@ -52,4 +52,4 @@ Vous avez maintenant un groupe Agencement automatique qui contient un mélange d
 * chemins en  point triple dont les noms commencent par "Agencement automatique", qui correspondent au dessin choisi
 * chemins en point droit simple dont les noms commencent par "Chemin de dessous", qui ont été ajouté pour vous permettre d'obtenir un résultat sans sauts de fils
 
-Vous pourriez aussi essayer avec cette  extension : https://tesselace.com/tools/inkscape-extension/
+Vous pourriez aussi essayer avec cette  [extension](https://tesselace.com/tools/inkscape-extension/)
