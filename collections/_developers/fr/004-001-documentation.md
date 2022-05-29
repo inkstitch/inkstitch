@@ -2,51 +2,54 @@
 title: "Documentation"
 permalink: /fr/developers/documentation/
 excerpt: ""
-last_modified_at: 2018-09-22
+last_modified_at: 2022-05-29
 toc: true
 ---
-We want to describe every possible function with text, images and/or videos. Also provide instructions about the installation process and give an overview of the best workflow. Additionally we want to provide sample files which other users can make use of. It also would be nice to get some example images of embroidered designs to prove what Ink/Stitch is able to do.
+Nous voulons décrire toutes les fonctions possibles avec du texte, des images et/ou des vidéos. Egalement fournir des instructions sur le processus d'installation et donnez un aperçu du meilleur flux de travail. De plus, nous souhaitons fournir des exemples de fichiers que d'autres utilisateurs peuvent utiliser. Il serait également agréable d'obtenir des exemples d'images de motifs brodés pour prouver ce que Ink/Stitch est capable de faire.
 
-An other and yet quiet incomplete part of the documentation will be, to help other developers to get started diving into the code. Enable them to introduce new functionalities to Ink/Stitch or whatever they might come up with.
+Une autre partie encore incomplète de la documentation concerne  l'aide aux nouveaux développeurs qui commencent à plonger dans le code:  nous  souhaiterions  leur  permettre  d'introduire de nouvelles fonctionnalités dans Ink/Stitch ou tout ce qu'ils pourraient proposer.
 
-## Get involved
-This website needs a lot of care. Generating new content and updating existing content with the ongoing developement of Ink/Stitch. We could use any helping hand.
+## S'impliquer
 
-You do not need to know how to build a website, since we use [Markdown](https://help.github.com/articles/basic-writing-and-formatting-syntax/) for text formatting. All files needed to build the website can be found in the [gh-pages-branch](https://github.com/inkstitch/inkstitch/tree/gh-pages) GitHub.
+Ce site web a besoin de beaucoup de soins pour la  génération de nouveau contenu et la mise à jour de contenu existant pour suivre le développement continu d'Ink/Stitch. Nous pourrions utiliser n'importe quel coup de main.
 
-If you have interest to help with the documentation, file an issue on [github](https://github.com/inkstitch/inkstitch/issues) and tell us, that you are willing to help.
+Vous n'avez pas besoin de savoir comment créer un site Web, car nous utilisons [Markdown](https://help.github.com/articles/basic-writing-and-formatting-syntax/) pour la mise en forme du texte. Tous les fichiers nécessaires à la création du site Web se trouvent dans le [gh-pages-branch](https://github.com/inkstitch/inkstitch/tree/gh-pages) GitHub.
 
-## Working with Github-Pages
+Si vous souhaitez aider avec la documentation, déposez un rapport d'erreur (issue) sur [github](https://github.com/inkstitch/inkstitch/issues) et dites-nous que vous êtes prêt à aider.
 
-Github-Pages make use of [Jekyll](https://jekyllrb.com/), a static page generator. It is also possible to install it locally for test purposes. For instructions see their website.
-We are using the [Minimal Mistakes Theme](https://mmistakes.github.io/minimal-mistakes/), with very little customizations.
+## Travailler sur les pages Github
 
-### Basic File Structure
+Les pages Github utilisent [Jekyll](https://jekyllrb.com/), un générateur de pages statiques. Il est également possible de l'installer localement à des fins de test. Pour obtenir des instructions, consultez leur site Web.
+Nous utilisons le [Thème Minimal Mistake] (https://mmistakes.github.io/minimal-mistakes/), avec très peu de personnalisation.
 
-* `_collections/_posts/language` news
-* `_collections/_docs/language` documentation
-* `_collections/_tutorials/language` tutorial main pages
-* `_collections/_tutorial/language` specific tutorials
-* `_collections/_developers/language` developers documentation
-* `_pages/language` static pages such as about, terms or sitemap
-* `assets/language` media files (images) and website styling (css)
-* `_data/navigation_language.yml` data for every navigation found in the website
+### Structure de base des fichiers 
+* `_collections/_posts/langue`   actualités
+* `_collections/_docs/langue` documentation 
+* `_collections/_tutorials/language` pages principales du tutoriel
+* `_collections/_tutorial/language` tutoriels spécifiques  
+*  _collections/_developers/language` documentation pour les développeurs
+* `_pages/langue` pages statiques telles que les informations, les termes ou le plan du site
+*  `assets/language` fichiers multimédias(images) et style de site Web (css)
+* `_data/navigation_language.yml` données de navigation  sur le site Web
 
-### Changing Existing Files
-Change the content as you wish. Style your text with [markdown](https://help.github.com/articles/basic-writing-and-formatting-syntax/), which is also used with github issues, etc.
+### Modification des fichiers existants
+Modifiez le contenu comme vous le souhaitez. Stylez votre texte avec [markdown](https://help.github.com/articles/basic-writing-and-formatting-syntax/), qui est également utilisé pour les rapports d'erreur (issue) de github, etc.
 
-Before saving the file, please also change the date on top of the page.
+Avant d'enregistrer le fichier, veuillez également modifier la date en haut de la page.
 
-### Adding New Files
+### Ajout de nouveaux fichiers
 
-#### Docs, Tutorials, Developers
-When adding new pages please be aware of the file name numbering (docs and tutorials).
 
-Numbers are set to be able to use previous/next links below the article. They also fit to the sidebar menu structure, which you also should update when adding new sites.
+#### Documents, Tutoriels, Développeurs
 
-Changing file names will not prevent the website from finding the files, since they use permalinks. So you can go ahead and change the numbers to your needs.
+Lors de l'ajout de nouvelles pages, faites attention à la numérotation des noms de fichiers (docs et tutoriels).
 
-Every page should start with something like this:
+Les nombres sont définis pour pouvoir utiliser les liens précédents/suivants sous l'article. Ils s'adaptent également à la structure du menu de la barre latérale, que vous devez également mettre à jour lors de l'ajout de nouvelles pages.
+
+La modification des noms de fichiers n'empêchera pas le site Web de trouver les fichiers, car ils utilisent des permaliens. Vous pouvez donc modifier les chiffres selon vos besoins.
+
+Chaque page doit commencer par quelque chose comme ceci :
+
 
 ```
 ---
@@ -58,11 +61,11 @@ toc: true # set to false or delete if you don't wish to display a table of conte
 ---
 ```
 
-#### Posts (News)
+#### Posts (Actualités)
 
-Post file names follow a certain structure, they should be named like this: yyyy-mm-dd-title.md
+Les noms des fichiers d'actualité suivent une certaine structure, ils doivent être nommés comme suit : aaaa-mm-jj-titre.md
 
-Every post should start with the following entry:
+Chaque message doit commencer par l'entrée suivante :
 
 ```
 ---
@@ -71,26 +74,26 @@ date:   yyy-mm-dd
 categories: news-category
 ---
 ```
+### Fonctions supplémentaires
 
-### Additional Functions
+#### Galeries
 
-#### Galleries
-
-Adding galleries has become really simple: upload files into a new folder within `/assets/images/galleries/`.
-Then add: 
+L'ajout de galeries est devenu très simple :  creer un nouveau dossier dans `/assets/images/galleries/` et ytélécharger des fichiers.
+Puis ajouter:
 
 {% raw %}
 ```
 {% include folder-galleries path="new-folder-name/" %}
 ```
 {% endraw %}
-where ever you want to display a gallery containing `new-folder-name`s content.
+là  où  souhaitez afficher une galerie contenant le contenu de `new-folder-name`.
 
-If you want to provide preview images for faster loading, add -th to filename. E.g. `image.jpg` would use `image-th.jpg` as it's preview. Both files have to be in the same folder as specified in the include statement.
+Si vous souhaitez fournir des images d'aperçu pour un chargement plus rapide, ajoutez -th au nom du fichier. Par exemple `image.jpg` utiliserait `image-th.jpg` comme aperçu. Les deux fichiers doivent se trouver dans le même dossier que celui spécifié dans l'instruction d'inclusion.
 
-#### Categorising tutorials
+#### Catégorisation des tutoriels
 
-Tutorial files in `_tutorial` folder should contain some keywords in the header to describe the particular tutorial. This could look like this:
+Les tutoriels  du dossier `_tutorial` doivent contenir dans leur en-tête des mots-clés qui les caractèrisent. 
+Cela pourrait ressembler à ceci :
 
 
 ```
@@ -114,16 +117,19 @@ field-of-use:
 user-level: Beginner
 ---
 ```
-
-These categories then can be used to list tutorials with a specific keyword, e.g. 
+Ces catégories peuvent ensuite être utilisées pour lister les tutoriels avec un mot-clé spécifique, par exemple
 {% raw %}
 ```
 {% include tutorials/tutorial_list key="stitch-type" value="Fill Stitch" %}
 ```
 {% endraw %}
-would display a list of all tutorial files which have fill stitch specified in their header.
+afficherait une liste de tous les  tutoriels  qui listent  "Fill Stitch" parmi  les types  de points de leur en-tête.
 
-They can also be used to display a full list of categories. In this case categories need to be specified by every call of tutorial lists. Example:
+Ils peuvent également être utilisés pour afficher une liste complète des catégories. 
+Dans ce cas, les catégories doivent être spécifiées par chaque appel de listes de didacticiels. 
+
+Exemple:
+
 
 {% raw %}
 ```
