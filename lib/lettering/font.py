@@ -352,6 +352,8 @@ class Font(object):
         satin operation.  Any nested svg:g elements will be removed.
         """
 
+        # TODO: trim option for non-auto-route
+
         elements = nodes_to_elements(group.iterdescendants(SVG_PATH_TAG))
 
         if elements:

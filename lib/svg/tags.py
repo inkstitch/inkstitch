@@ -70,6 +70,8 @@ inkstitch_attribs = [
     'reverse',
     'exponent',
     'flip_exponent',
+    'scale_axis',
+    'rotate_ripples',
     'expand_mm',
     'fill_underlay',
     'fill_underlay_angle',

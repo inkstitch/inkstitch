@@ -113,6 +113,19 @@ class Stroke(EmbroideryElement):
         return max(self.get_float_param("running_stitch_length_mm", 1.5), 0.01)
 
     @property
+    @param('zigzag_spacing_mm',
+           _('Zig-zag spacing (peak-to-peak)'),
+           tooltip=_('Length of stitches in zig-zag mode.'),
+           unit='mm',
+           type='float',
+           default=0.4,
+           select_items=[('stroke_method', 0)],
+           sort_index=5)
+    @cache
+    def zigzag_spacing(self):
+        return max(self.get_float_param("zigzag_spacing_mm", 0.4), 0.01)
+
+    @property
     @param('line_count',
            _('Number of lines'),
            tooltip=_('Number of lines from start to finish'),
@@ -149,26 +162,13 @@ class Stroke(EmbroideryElement):
         return abs(self.get_int_param("skip_end", 0))
 
     @property
-    @param('render_grid',
-           _('Grid distance'),
-           tooltip=_('Render as grid. Works only with satin type ripple stitches.'),
-           type='float',
-           default=0,
-           unit='mm',
-           select_items=[('stroke_method', 1)],
-           sort_index=8)
-    @cache
-    def render_grid(self):
-        return abs(self.get_float_param("render_grid", 0))
-
-    @property
     @param('exponent',
            _('Line distance exponent'),
            tooltip=_('Increase density towards one side.'),
            type='float',
            default=1,
            select_items=[('stroke_method', 1)],
-           sort_index=9)
+           sort_index=8)
     @cache
     def exponent(self):
         return max(self.get_float_param("exponent", 1), 0.1)
@@ -180,7 +180,7 @@ class Stroke(EmbroideryElement):
            type='boolean',
            default=False,
            select_items=[('stroke_method', 1)],
-           sort_index=10)
+           sort_index=9)
     @cache
     def flip_exponent(self):
         return self.get_boolean_param("flip_exponent", False)
@@ -192,23 +192,48 @@ class Stroke(EmbroideryElement):
            type='boolean',
            default=False,
            select_items=[('stroke_method', 1)],
-           sort_index=11)
+           sort_index=10)
     @cache
     def reverse(self):
         return self.get_boolean_param("reverse", False)
 
     @property
-    @param('zigzag_spacing_mm',
-           _('Zig-zag spacing (peak-to-peak)'),
-           tooltip=_('Length of stitches in zig-zag mode.'),
-           unit='mm',
+    @param('render_grid',
+           _('Grid max distance'),
+           tooltip=_('Render as grid. Use with care and watch your stitch density.'),
            type='float',
-           default=0.4,
-           select_items=[('stroke_method', 0)],
-           sort_index=5)
+           default=0,
+           unit='mm',
+           select_items=[('stroke_method', 1)],
+           sort_index=11)
     @cache
-    def zigzag_spacing(self):
-        return max(self.get_float_param("zigzag_spacing_mm", 0.4), 0.01)
+    def render_grid(self):
+        return abs(self.get_float_param("render_grid", 0))
+
+    @property
+    @param('scale_axis',
+           _('Scale axis'),
+           tooltip=_('Scale axis for satin guided ripple stitches.'),
+           type='dropdown',
+           default=0,
+           # 0: xy, 1: x, 2: y, 3: none
+           options=[_("X Y"), _("X"), _("Y"), _("None")],
+           select_items=[('stroke_method', 1)],
+           sort_index=12)
+    def scale_axis(self):
+        return self.get_int_param('scale_axis', 0)
+
+    @property
+    @param('rotate_ripples',
+           _('Rotate'),
+           tooltip=_('Rotate satin guided ripple stitches'),
+           type='boolean',
+           default=True,
+           select_items=[('stroke_method', 1)],
+           sort_index=13)
+    @cache
+    def rotate_ripples(self):
+        return self.get_boolean_param("rotate_ripples", True)
 
     @property
     def paths(self):
@@ -361,6 +386,8 @@ class Stroke(EmbroideryElement):
                     self.render_grid,
                     self.exponent,
                     self.flip_exponent,
+                    self.scale_axis,
+                    self.rotate_ripples,
                     guide_line))
             if patch:
                 if self.bean_stitch_repeats > 0:
