@@ -11,10 +11,12 @@ toc: true
 [![Ripple butterfly](/assets/images/docs/ripplefly.jpg){: width="200x"}](/assets/images/docs/ripplefly.svg){: title="Download SVG File" .align-left download="ripplefly.svg" }La broderie ondulée tient à la fois du point droit et du remplissage : elle se comporte comme un point droit (on peut l'exécuter  en point triple par exemple), elle est définie à partir d'un trait, mais elle produit à l'arrivée une broderie qui s'étend sur une surface. Utilisée de manière lâche, le résultat ressemble à des ondes, d'où son nom. 
 
 
-Regardez cette video titillante: {% include video id="cyvby3KJM10" provider="youtube" %}
+Regardez cette alléchante video: {% include video id="cyvby3KJM10" provider="youtube" %}
 
 ##  Comment la créer
 A partir d'un  **trait (couleur de contour mais pas de remplissage)** qui peut être un  chemin  simple (la décomposition n'a aucun effet sur lui), ou un  chemin  combinant deux sous chemins (assimilable  aux  deux rails d'une colonne satin) 
+
+Le trait peut  avoir un style en pointillé ou pas, cela n'a aucune importance ici.{: .notice--warning}
 
 * Créer **un chemin avec une couleur de contour et sans couleur de remplissage** simple ou composé de deux sous chemins 
 * Sélectionner ce chemin
