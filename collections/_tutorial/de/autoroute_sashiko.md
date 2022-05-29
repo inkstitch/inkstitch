@@ -8,8 +8,8 @@ image: "/assets/images/tutorials/sashiko/sashiko.jpg"
 tutorial-type: "tutorial-type":
   - Beispieldatei
 stitch-type: "stitch-type":
-  - "Bean Stitch".
-technische Verfahren:
+  - "Dreifach-Geradstich".
+techniques:
 field-of-use:
 user-level: 
 ---
