@@ -3,12 +3,12 @@ permalink: /de/tutorials/autoroute_sashiko/
 title: "Sashiko "
 language: de
 last_modified_at: 2022-05-29
-excerpt: "Automatische Anordnung von Geradstichen und Sashiko-Erweiterung".
+excerpt: "Automatische Anordnung von Geradstichen und Sashiko-Erweiterung"
 image: "/assets/images/tutorials/sashiko/sashiko.jpg"
 tutorial-type: "tutorial-type":
   - Beispieldatei
 stitch-type: "stitch-type":
-  - "Dreifach-Geradstich".
+  - "Dreifach-Geradstich"
 techniques:
 field-of-use:
 user-level: 
