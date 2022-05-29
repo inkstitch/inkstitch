@@ -23,7 +23,7 @@ makes it possible to produce sashiko style triple stitch embroidery files in a w
 
 First install the Sashiko extension.
 
-Once this extension is installed, access it by
+Once this extension is installed, run it:
 
 
 `Extensions > Render > Sashiko' 
