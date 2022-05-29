@@ -18,6 +18,9 @@ Have a look at this video teasing: {% include video id="cyvby3KJM10" provider="y
 
 From a **stroke (stroke color is set and no fill color)** that may be either a simple path (decomposition applied to it has no effect) or a composed path with exactly two subpaths, just like the rails of a satin column.
 
+
+Le stroke may be dashed or not, here it does not matter.{: .notice--warning}
+
 * Create a **stroke (stroke color is set and no fill color)** that may be either a simple path (decomposition applied to it has no effect) or a composed path with exactly two subpaths.
 * Select this stroke
 * Open params dialog (`Extensions > Ink/Stitch > Params`) and select `Ripple stitch` as method.
