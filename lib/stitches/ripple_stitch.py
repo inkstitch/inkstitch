@@ -238,7 +238,7 @@ def _generate_satin_guide_helper_lines(outline, max_stitch_length, flip_exponent
         translation = guide_center - outline_center
         if rotate_ripples:
             rotation = atan2(point1.y - point2.y, point1.x - point2.x)
-            rotation = abs((rotation - outline_rotation) * 360 / (2 * pi))
+            rotation = (rotation - outline_rotation) * 360 / (2 * pi)
         else:
             rotation = 0
         scaling = abs((point2 - point1).length() / outline_width)
