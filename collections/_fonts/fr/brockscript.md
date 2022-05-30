@@ -27,26 +27,27 @@ tuvwxyz{}~
 
 ## Dimensions
 
-Utilisée à 100%, cette fonte fait environ 40 mm.
+Utilisée à 100%, cette fonte mesure environ 40 mm de haut.
 
-Elle peut être agrandie jusqu'a 250% (env 100 mm)  mais ne peut pas être diminuée.
+Elle peut être agrandie jusqu'à 250% (env 100 mm)  mais ne peut pas être diminuée.
 
-## Ce n'est pas noël ?
-Le glyphe µ est détourné pour stocker cette broderie ![Brockscript](/assets/images/fonts/brockscriptmu.png)
+## Ce n'est pas Noël ?
+Le glyphe µ est détourné pour stocker cette broderie 
 qui contient quatre ornements alternatifs au houx. 
+![Brockscript](/assets/images/fonts/brockscriptmu.png)
 
-A vous de remplacer le houx par l'une de ses options. 
-Ou vous pouvez aussi juste remplacer par rien, ou par une de vos créations.
+À vous de remplacer le houx par l'une de ses options. 
+Ou vous pouvez aussi juste le remplacer par rien, ou par une de vos créations.
 
 
 
 
-Et si vous ne savez pas tapper un µ depuis votre clavier vers la fenêtre de dialogue du lettrage, faites un couper/coller....
+Et si vous ne savez pas tapper un µ depuis votre clavier vers la fenêtre de dialogue du lettrage, faites un couper/coller...
 
 
 ## Dans la vraie vie
 
-Brockscript peut par exemple être utilisée sur une serviette, un T shirt, pour décorer le sapin de Noël....
+Brockscript peut par exemple être utilisée sur une serviette, un T shirt, pour décorer le sapin de Noël...
 
 {% include folder-galleries path="fonts/brockscript/" %}
 
