@@ -36,7 +36,7 @@ rstuvwxyz~
 
 Utilisée à 100%, cette fonte fait environ 20 mm.
 
-Elle peut être agrandie jusqu'a 150% (env 30 mm) ou diminuée jusqu'à 60% (env 12 mm).
+Elle peut être agrandie jusqu'à 150% (env 30 mm) ou diminuée jusqu'à 60% (env 12 mm).
 
 ## Dans la vraie vie
 Marque page, essuie-mains...
