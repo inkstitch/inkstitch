@@ -40,7 +40,7 @@ Lorsqu'à l'interieur d'une seule lettre les couleurs ne sont utilisées que sur
 
 Dans la fenêtre objet , choisir une lettre  peu importe laquelle:
 * Sélectionner le chemin qui sera brodé en premier (le dernier de la lettre dans cette fenêtre donc...)
-* Edition/Selectionner Même/Couleur de contour (ceci va selectionner tout ce qui est de cette couleur dans toutes les lettres, il y a probablement beaucoup de chemins par lettre)
+* Edition/Sélectionner même/Couleur de contour (ceci va selectionner tout ce qui est de cette couleur dans toutes les lettres, il y a probablement beaucoup de chemins par lettre)
 * Grouper: ce groupe va se trouver dans ce qui etait la dernière lettre à broder, eventuellement donner à ce groupe le nom de la couleur
 * Faites monter ce groupe le plus haut possible dans cette dernière lettre
 et recommencer jusqu'a qu'il n'y ait plus que des groupes de couleurs, en partant à chaque fois du dernier chemin d'une lettre.
