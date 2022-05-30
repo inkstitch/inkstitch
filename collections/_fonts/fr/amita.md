@@ -37,7 +37,7 @@ BA@?=;:987
 
 Utilisée à 100%, cette fonte fait environ 30 mm.
 
-Elle peut être agrandie jusqu'a 200% (env 60 mm) ou diminuée jusqu'à 80% (env 24  mm).
+Elle peut être agrandie jusqu'à 200% (env 60 mm) ou diminuée jusqu'à 80% (env 24  mm).
 
 ![Dimensions Amitaclo](/assets/images/fonts/Sizing/amitaclosizing.jpg)
 
