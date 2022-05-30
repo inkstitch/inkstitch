@@ -12,8 +12,6 @@ preview_image:
 ## Glyphes
 
 Cette fonte contient les 105 glyphes :
-
-
 !"@'’(),-./0123456789:;<=>?@ACBDEFGHIJKLMNOPQRSTUVWXYZ\abcdefghijkmnopqrstuvwxyzÄÆÔÖÜßàâäæçèéêëîïôöùûüŒœl
 
 ## Dimensions
