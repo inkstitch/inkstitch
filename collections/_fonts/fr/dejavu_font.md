@@ -35,11 +35,11 @@ Elle peut être agrandie jusqu'a 150% (env 27 mm) ou diminuée jusqu'à 80% (env
 
 ## Particularité
 
-Déja Vu peut être brodé de gauche à droite, de droite à gauche, de haut en bas, de bas en haut.
+Déja Vu peut être brodée de gauche à droite, de droite à gauche, de haut en bas, de bas en haut.
 
 ## Dans la vraie vie
 
-Utilisée seule ou en compagnie d'Amitaclo et de Magnolia KOR sur les pots de conserve.
+Utilisée seule ou en compagnie d'*Amitaclo* et de *Magnolia KOR* sur les pots de conserves.
 
 {% include folder-galleries path="fonts/dejavu/" %}
 
