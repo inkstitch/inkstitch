@@ -19,7 +19,7 @@ preview_image:
 
 ## Glyphes
 ### Cherry for Ink/Stitch
-contient ces 74	glyphes:
+contient ces 74	glyphes :
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890.:;,?!()'"-`
 
 ### Cherry for Kaalleen
@@ -43,7 +43,7 @@ Si vous brodez plusieurs lettrines, vous pouvez souhaiter trier les couleurs. C'
 
 
 ## Dans la vraie vie
-Elles peuvent être utilisées ensemble  ou séparement
+Elles peuvent être utilisées ensemble  ou séparement.
 
 {% include folder-galleries path="fonts/cherries/" %}
 
