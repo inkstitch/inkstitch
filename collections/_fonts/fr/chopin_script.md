@@ -12,9 +12,7 @@ preview_image:
 
 ## Glyphes
 
-Chopin contient les 107 glyphes 
-
-	
+Chopin contient les 107 glyphes:
 !"@'’,-0123
 456789:;?@
 ABCDEFGHIJ
@@ -36,7 +34,7 @@ Elle peut être agrandie jusqu'a 120% (env 60 mm) ou diminuée jusqu'à 80% (env
 
 ## Dans la vraie vie
 
-Sur des coussins mais aussi sur serviette, polos, T Shirt, polaire
+Sur des coussins, mais aussi sur serviette, polo, T Shirt, polaire.
 
 {% include folder-galleries path="fonts/chopin/" %}
 
