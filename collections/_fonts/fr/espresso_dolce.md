@@ -38,7 +38,7 @@ Cette fonte permet de broder des textes multilignes alternativement de la gauche
 
 Utilisée à 100%, cette fonte fait environ 20 mm.
 
-Elle peut être agrandie jusqu'a 200% (env 40 mm) ou diminuée jusqu'à 80% (env 16 mm).
+Elle peut être agrandie jusqu'à 200% (env 40 mm) ou diminuée jusqu'à 80% (env 16 mm).
 
 N'essayez pas de broder cette fonte à une dimension inférieure, vous auriez beaucoup de problèmes.
 
