@@ -20,8 +20,7 @@ preview_image:
 
 
 ## Glyphes
-Cette fonte contient les 132 Glyphes suivants :
-
+Cette fonte contient les 132 Glyphes :
 !?"''()+,-
 .012345678
 9:;=?ABCDE
@@ -50,16 +49,16 @@ N'essayez pas de broder cette fonte à une dimension inférieure, vous auriez be
 
 {% include upcoming_release.html %}
 
-La fonte Grand Hotel Small (Cette fonte sera dans une prochaine version d'Ink/Stitch et n'est pas disponible dans Ink/Stitch v2.1.2.) est une déclinaison de cette fonte avec des paramètres de broderie différents . La densité, la compensation et les sous couches ont été modifiés pour permettre de broder cette fonte en plus petite taille.
+La fonte Grand Hotel Small (elle sera dans une prochaine version d'Ink/Stitch et n'est pas disponible dans Ink/Stitch v2.1.2.) est une déclinaison de Grand Hotel Marif avec des paramètres de broderie différents . La densité, la compensation et les sous couches ont été modifiés pour permettre de broder cette fonte en plus petite taille.
 
-Dans la fenêtre de dialogue du lettrage si vous choisissez Grand Hotel small , il vous sera demandé d'indiquer un redimensionnement entre 25 et 55% de la taille de la fonte Grand Hotel Marif, passant ainsi de lettres d'environ 35mm de haut à des lettres entre 9 et 18 mm.
+Dans la fenêtre de dialogue du lettrage si vous choisissez Grand Hotel Small , il vous sera demandé d'indiquer un redimensionnement entre 25 et 55% de la taille de la fonte Grand Hotel Marif, passant ainsi de lettres d'environ 35 mm de haut à des lettres entre 9 et 18 mm.
 
-Contrairement à Grand Hotel, cette fonte diminuée DOIT être brodée avec un fil et une aiguille plus fins que d'ordinaire. Une aiguille de taille 8 (USA), 60(EUR) et un fil 60WT DOIVENT être utilisés.
+Contrairement à Grand Hotel Marif, cette fonte diminuée **DOIT** être brodée avec un fil et une aiguille plus fins que d'ordinaire. Une aiguille de taille 8 (USA), 60(EUR) et un fil 60 WT **DOIVENT** être utilisés.
 
 
 
 ## Dans la vraie vie
-De 25% sur le T shirt  à 100% sur le tablier
+De 25% sur le T shirt  à 100% sur le tablier.
 
 {% include folder-galleries path="fonts/grand_hotel_marif/" %}
 
