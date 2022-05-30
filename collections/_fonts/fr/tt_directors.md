@@ -22,7 +22,7 @@ Utilisée à 100%, cette fonte fait environ 20 mm.
 Elle peut être agrandie jusqu'à 500% (env 100 mm) et ne doit pas être diminuée.
 
 ## Remarque
-Cette fonte utilise l'arangement automatique des colonnes satin. 
+Cette fonte utilise l'arrangement automatique des colonnes satin. 
 Pour un texte multiligne il est possible de broder alternativement de la gauche vers la droite  et de la droite vers la gauche.
 Il est possible d'ajouter des commandes de coupe de fil.
 
