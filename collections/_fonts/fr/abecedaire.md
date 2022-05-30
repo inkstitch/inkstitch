@@ -1,5 +1,5 @@
 ---
-title: "Abécédaire"
+title: "Abecedaire"
 permalink: /fr/fonts/abecedaire/
 last_modified_at: 2022-05-27
 toc: false
@@ -14,9 +14,7 @@ Cette fonte sera dans une prochaine version d'Ink/Stitch et n'est pas disponible
 
 ## Glyphes
 
-Cette fonte contient les 154 glyphes
-
-	
+Cette fonte contient les 154 glyphes :
 !"@'(),012
 3456789:;=
 ?@ABCDEFGH
