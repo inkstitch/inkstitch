@@ -13,7 +13,7 @@ preview_image:
 
 ## Glyphes
 
-Baumans contient les 102 glyphes:
+Baumans contient les 102 glyphes :
 
 	
 @'()+,-.01
