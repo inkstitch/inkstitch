@@ -17,34 +17,34 @@ preview_image:
 
 
 ## Glyphes
-Ces fontes comportent 47 glyphes
+Ces fontes comportent 47 glyphes :
 	
 ?.:;,([{)]}&ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
 
-Remarque : Les glyphes :;,.(){}[] sont utilisées pour stocker des cadres.
+Remarque : Les glyphes ;:,.(){}[] sont utilisés pour stocker des cadres.
 
 ## Dimensions
 ### Sortefax XL Initials
 Utilisée à 100%, cette fonte fait environ 150 mm.
-Elle peut être agrandie jusqu'a 200% (env 300 mm) ou diminuée jusqu'à 70% (env 100 mm).
+Elle peut être agrandie jusqu'à 200% (env 300 mm) ou diminuée jusqu'à 70% (env 100 mm).
 ### Sortefax Medium Initials
 Utilisée à 100%, cette fonte fait environ 90 mm.
-Elle peut être agrandie jusqu'a 200% (env 180 mm) ou diminuée jusqu'à 70% (env 60 mm).
+Elle peut être agrandie jusqu'à 200% (env 180 mm) ou diminuée jusqu'à 70% (env 60 mm).
 
 ## Description
 
 ### Sortefax XL Initials
 
-La fonte Sortefax XL Initials est prévue pour être utilisée une seule lettre à la fois
-Pour obtenir une lettre encadrée, simplement taper la lettre et une des "lettres cadres" dans la fenêtre de lettrage, sur la même ligne, sans espace entre les deux. 
+La fonte Sortefax XL Initials est prévue pour être utilisée une seule lettre à la fois.
+Pour obtenir une lettre encadrée,  taper cette lettre et une des "lettres cadres" dans la fenêtre de lettrage, sur la même ligne, sans espace entre les deux. 
 
-Attention : tous les cadres ne conviennent pas à toutes les lettres, en particulier aux lettres très larges comme le M ou le W, ou les lettres très hautes comme le J. Il est bien sur très facile dans Inkscape de modifier le positionnement de la lettre par rapport au cadre si elle ne convient pas. Ou de modifier la forme d'un cadre, par exemple transformer un cercle en ellipse pour accueillir un J récalcitrant.
+Attention : tous les cadres ne conviennent pas à toutes les lettres, en particulier aux lettres très larges comme le M ou le W, ou aux lettres très hautes comme le J. Il est bien sûr très facile dans Inkscape de modifier le positionnement de la lettre par rapport au cadre si elle ne convient pas, ou de modifier la forme d'un cadre, par exemple en transformant un cercle en ellipse pour accueillir un J récalcitrant.
 
 ### Sortefax Medium Initials
 
-Cette fonte est réduite et simplifiée. On garde la possibilité d'encadrer une lettre, mais le positionnement de la lettre par rapport au cadre est plus approximatif que dans la fonte XL. En revanche il est tout au fait possible d'écrire des mots avec des lettres correctement positionnées, ce qui n'est pas le cas de la fonte XL.
+Cette fonte est réduite et simplifiée. On garde la possibilité d'encadrer une lettre, mais le positionnement de la lettre par rapport au cadre est plus approximatif que dans la fonte XL. En revanche il est tout à fait possible d'écrire des mots avec des lettres correctement positionnées, ce qui n'est pas le cas avec la fonte XL.
 
-## Pour acceder aux cadres, utilisez le tableau de correspondance suivant:
+## Tableau de correspondance des cadres
 
 Frame|Key
 ---|---
