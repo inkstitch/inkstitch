@@ -11,8 +11,7 @@ preview_image:
 
 ## Glyphes
 
-Learning curve contient 101 glyphes:
-	
+Learning curve contient 101 glyphes :
 üûùôïîëêéè
 çâàßÎÊÉÈÇÀ
 »«zyxwvuts
@@ -25,8 +24,8 @@ DCBA@?>=<9
 .-,+)’('@%!
 
 ## Dimensions
-Utilisée à 100%, cette fonte fait environ  18mm.
-Elle peut être agrandie jusqu'a 200% (env 36 mm) ou diminuée jusqu'à 90% (env 16 mm).
+Utilisée à 100%, cette fonte fait environ  18 mm.
+Elle peut être agrandie jusqu'à 200% (env 36 mm) ou diminuée jusqu'à 90% (env 16 mm).
 
 ## Dans la vraie vie
 
