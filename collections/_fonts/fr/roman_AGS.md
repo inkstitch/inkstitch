@@ -31,20 +31,19 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZÄÆÖÜŒ
 
 ## Dimensions
 
-
 Utilisées à 100%, ces fontes font environ 28 mm de haut .
-Elles peuvent être agrandies jusqu'a 130% (env 37 mm) ou diminuées jusqu'à 80% (env  22 mm).
+Elles peuvent être agrandies jusqu'à 130% (env 37 mm) ou diminuées jusqu'à 80% (env  22 mm).
 
 ## Mélanger les deux polices
 
-Les contours des glyphes  des deux fontes étant exactement identiques pour les glyphes communs , il est très facile  d'utiliser les deux fontes conjointement :
+Les contours des glyphes des deux fontes étant exactement identiques pour les glyphes communs, il est très facile  d'utiliser les deux fontes conjointement :
 - Faire un lettrage en Roman AGS avec l'ensemble du texte
 - Faire un lettrage en Roman AGS bicolore avec  uniquement les glyphes que l'on souhaite bicolores
 - Superposer exactement  chaque lettre colorée sur la lettre monochrome correspondante 
-- Cacher les lettres monochromes concernées
+- Supprimer les lettres monochromes cachées par les bicolores
 
 ## Tri des couleurs 
-Si vous utilisez des lettres bicolores  vous pouvez souhaiter trier les couleurs. C'est possible à condition de respecter leur ordre relatif à l'intérieur de chaque lettre. [Voici comment faire](https://inkstitch.org/fr/docs/lettering/#tri-des-couleurs)
+Si vous utilisez des lettres bicolores, vous pouvez souhaiter trier les couleurs. C'est possible à condition de respecter leur ordre relatif à l'intérieur de chaque lettre. [Voici comment faire](https://inkstitch.org/fr/docs/lettering/#tri-des-couleurs)
 
 
 
