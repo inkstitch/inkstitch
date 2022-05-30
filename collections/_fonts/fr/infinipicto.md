@@ -11,12 +11,12 @@ preview_image:
 
 ## Glyphes
 
-Cette fonte contient les 26 glyphes
-
-	ABCDEFGHIJKLMNOPQRSTUVWXYZ
+Cette fonte contient les 26 glyphes :
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
 
 ## Description
-Infinipicto est une collection de pictogrammes. Chaque lettre représente un objet stylisé dont elle est l'initiale en Français: A pour arrosoir, B pour Bateau.....
+Infinipicto est une collection de pictogrammes. Chaque lettre représente un objet stylisé dont elle est l'initiale en français : A pour Arrosoir, B pour Bateau...
+
 ![Sample ](/assets/images/fonts/infinipicto3.jpg)
 
 ## Dimensions
@@ -28,11 +28,11 @@ Elle peut être agrandie jusqu'a 200% (env 140 mm) ou diminuée jusqu'à 70% (en
 
 ## Tri des couleurs
 
-A cause de la variété de lettres, rien ne garantie que les couleurs puissent être facilement triées. Faire attention, donc.
+À cause de la variété de lettres, rien ne garantit que les couleurs puissent être facilement triées. Faire attention, donc.
 
 ## Dans la vraie vie 
 
-InfiniPicto sur un T shirt :
+InfiniPicto sur un T shirt.
 
 {% include folder-galleries path="fonts/infinipicto/" %}
 
