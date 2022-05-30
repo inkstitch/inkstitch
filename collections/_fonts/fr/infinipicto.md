@@ -24,7 +24,7 @@ Infinipicto est une collection de pictogrammes. Chaque lettre représente un obj
 
 Utilisée à 100%, cette fonte fait environ 70 mm.
 
-Elle peut être agrandie jusqu'a 200% (env 140 mm) ou diminuée jusqu'à 70% (env 50 mm).
+Elle peut être agrandie jusqu'à 200% (env 140 mm) ou diminuée jusqu'à 70% (env 50 mm).
 
 ## Tri des couleurs
 
