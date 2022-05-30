@@ -21,7 +21,7 @@ Cette fonte contient les 109 glyphes :
 
 Utilisée à 100%, cette fonte fait environ 20 mm.
 
-Elle peut être agrandie jusqu'a 300% (env 60 mm) et ne doit pas être diminuée
+Elle peut être agrandie jusqu'à 300% (env 60 mm) et ne doit pas être diminuée.
 
 ## Remarque
 Cette fonte utilise l'arangement automatique des colonnes satin. 
