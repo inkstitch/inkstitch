@@ -47,7 +47,7 @@ La fonte Amitaclo small (Elle sera dans une prochaine version d'Ink/Stitch et n'
 
 Dans la fenêtre de dialogue du lettrage si vous choisissez Amitaclo small , il vous sera demandé d'indiquer un redimensionnement entre 25 et 55% de la taille de la fonte Amitaclo initiale, passant ainsi de lettres d'environ 30 mm de haut à des lettres mesurant entre 7 et 16 mm.
 
-Contrairement à Amitaclo, cette fonte diminuée DOIT être brodée avec un fil et une aiguille plus fins que d'ordinaire. Une aiguille de taille 8 (USA), 60 (EUR) et un fil 60 WT DOIVENT être utilisés.
+Contrairement à Amitaclo, cette fonte diminuée **DOIT** être brodée avec un fil et une aiguille plus fins que d'ordinaire. Une aiguille de taille 8 (USA), 60 (EUR) et un fil 60 WT **DOIVENT** être utilisés.
 
 ## Dans la vraie vie
 
