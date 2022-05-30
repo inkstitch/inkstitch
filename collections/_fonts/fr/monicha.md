@@ -38,36 +38,36 @@ z§«±»¿ÀÁÂÃ
 
 ## Dimensions
 
-Utilisée à 100%, cette fonte fait environ 28 mm. Elle peut être agrandie jusqu'a 150% (env 42 mm) mais ne doit pas être diminuée.
+Utilisée à 100%, cette fonte fait environ 28 mm. Elle peut être agrandie jusqu'à 150% (env 42 mm) mais ne doit pas être diminuée.
 
 ## Description
 
-MONICHA est notre première police à lettres multiformes.
+Monicha est notre première police à lettres multiformes.
 
-Par exemple, voici des variations sur le prénom Sasha
+Par exemple, voici des variations sur le prénom Sasha :
 
 ![Alternatives](/assets/images/fonts/monicha7.jpg)
 
-Elle contient les majuscules, minuscules, lettres à accent, chiffre et ponctuation
-comme bon nombre des polices proposées jusqu'à présent. Les derniers glyphes de la liste servent à stocker les lettres alternatives.
+Elle contient les majuscules, minuscules, lettres à accent, chiffres et ponctuations comme bon nombre des polices proposées jusqu'à présent. Les derniers glyphes de la liste servent à stocker les lettres alternatives.
 
 ### Les parentheses
 
-Les deux parentheses ( et ) permettent d'acceder à ces deux ornements:
+Les deux parentheses "(" et ")" permettent d'accéder à ces deux ornements :
 
 ![monica parentheses](/assets/images/fonts/monicaparentheses.png)
 
 
-Mais MONICHA contient aussi 50 lettres minuscules à écharpes de plusieurs types pour certaines lettres stockés dans les derniers glyphes de la liste.
+Mais Monicha contient aussi 50 lettres minuscules à écharpes de plusieurs types stockées dans les derniers glyphes de la liste.
 
-### Comment utiliser les lettres alternatives.
+### Comment utiliser les lettres alternatives
 
-Vous ne pouvez pas acceder directement à ces variations en utilisant une simple touche du clavier. Des caractères unicodes particuliers ont été utilisés pour stocker ces variations. Pour utiliser ces variations il faut donc connaître leur code.
+Vous ne pouvez pas accéder directement à ces variations en utilisant une simple touche du clavier. Des caractères unicodes particuliers ont été utilisés pour stocker ces variations. Pour les utiliser il faut donc connaître leur code.
 
-Pour faciliter l'usage de ces lettres ce mode d'emploi répertorie les codes et il suffira de copier le code et de le coller dans le module lettrage.
+Pour faciliter l'usage de ces lettres, ce mode d'emploi répertorie les codes et il suffira de copier le code et de le coller dans le module lettrage.
 
-####  Petites echarpes
-<details><summary>Toutes les minuscules disposent d'une version à petite echarpe</summary>
+####  Petite écharpe
+
+<details><summary>Toutes les minuscules disposent d'une version à petite écharpe</summary>
 
 
 <img src="/assets/images/fonts/monichasmallswash.jpg" alt="Petite Echarpe" title="Petite Echarpe"><br>
@@ -86,7 +86,7 @@ Que l'on obtient en utilisant un de ces codes:<br><br>
 	
 </details>
 
-####  Echarpes longues soulignantes
+####  Écharpe longue soulignante
 <details><summary>  a-d-h-i-k-l-m-n-r-t-u </summary>
 	
 <img src="/assets/images/fonts/monichalongswash.jpg" alt="Echarpe Longue Soulignante" title="Echarpe Longue Soulignante"><br>
@@ -109,7 +109,7 @@ On les obtient en utilisant ces codes:<br>
 
 </details>
 
-#### Echarpe soulignante moyenne 
+#### Écharpe soulignante moyenne 
 
 <details><summary>  g-j-y </summary>
 
@@ -125,7 +125,7 @@ On les obtient en utilisant ces codes:<br>
 
 </details>
 
-#### Echarpe basse bouclée 
+#### Écharpe basse bouclée 
 <details><summary>  g-j-y </summary>
 
 <img src="/assets/images/fonts/monichacurly.png" alt="Echarpe Basse Bouclée" title="Echarpe Basse Bouclée"><br>
@@ -140,7 +140,7 @@ On les obtient en utilisant ces codes:<br>
 	
 </details>
 
-#### Echarpe supérieure bouclée et rétrograde
+#### Écharpe supérieure bouclée et rétrograde
 <details><summary> b-d-h-k-l-t </summary>
 
 <img src="/assets/images/fonts/monichacurlyup.png" alt="Echarpe Superieure Bouclée" title="Echarpe Superieure Bouclée"><br>
