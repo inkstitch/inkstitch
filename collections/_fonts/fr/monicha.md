@@ -72,7 +72,7 @@ Pour faciliter l'usage de ces lettres, ce mode d'emploi répertorie les codes et
 
 <img src="/assets/images/fonts/monichasmallswash.jpg" alt="Petite Echarpe" title="Petite Echarpe"><br>
 
-Que l'on obtient en utilisant un de ces codes:<br><br>
+Que l'on obtient en utilisant un de ces codes :<br><br>
 
 ⒜	⒝	⒞	⒟	⒠	⒡<br>
 
@@ -91,13 +91,12 @@ Que l'on obtient en utilisant un de ces codes:<br><br>
 	
 <img src="/assets/images/fonts/monichalongswash.jpg" alt="Echarpe Longue Soulignante" title="Echarpe Longue Soulignante"><br>
 
-Ces  11 lettres disposent de plus d'une longue écharpe soulignante.<br><br>
-
+Ces  11 lettres disposent de surcroît d'une longue écharpe soulignante.<br><br>
 
 Elles ne doivent pas être suivies, sur deux lettres, par des lettres à jambage descendant (comme g-j-p-q-y-z) 
 pour des raisons de superpositions de colonnes de satin.<br><br>
 
-On les obtient en utilisant ces codes:<br>
+On les obtient en utilisant ces codes :<br>
 
 <pre>Ⓐ			Ⓓ
 
@@ -117,9 +116,9 @@ On les obtient en utilisant ces codes:<br>
 
 Ces trois lettres disposent d'une écharpe soulignante moyenne.<br><br>
 
-Elles ne doivent pas être suivie d'une lettre à jambage descendant.<br><br>
+Elles ne doivent pas être suivies d'une lettre à jambage descendant.<br><br>
 
-On les obtient en utilisant ces codes:<br>
+On les obtient en utilisant ces codes :<br>
 
 Ⓖ	Ⓙ	Ⓨ
 
@@ -130,11 +129,11 @@ On les obtient en utilisant ces codes:<br>
 
 <img src="/assets/images/fonts/monichacurly.png" alt="Echarpe Basse Bouclée" title="Echarpe Basse Bouclée"><br>
 
-Ces trois lettres disposent  aussi d'une version à écharpes basse bouclée.<br><br>
+Ces trois lettres disposent aussi d'une version à écharpe basse bouclée.<br><br>
 
-Elles ne doivent pas être suivies d'une lettre à jambage descendant sur deux lettres.<br><br>
+Elles ne doivent pas, sur deux lettres, être suivies d'une lettre à jambage descendant.<br><br>
 
-On les obtient en utilisant ces codes:<br>
+On les obtient en utilisant ces codes :<br>
 
 ⓖ	ⓙ	ⓨ
 	
@@ -147,10 +146,9 @@ On les obtient en utilisant ces codes:<br>
 
 Il existe 6 lettres à écharpe supérieure bouclée et rétrograde b-d-h-k-l-t.<br><br>
 
-Elles ne doivent pas suivre deux lettres montantes, ni une majuscule sur ces deux poisitions 
-pour des raisons de superpositions de colonnes de satin.<br><br>
+Les deux lettres précédentes ne doivent être ni une majuscule ni une lettre montante.<br><br>
 
-On les obtient en utilisant ces codes:<br>
+On les obtient en utilisant ces codes :<br>
 
 
 ⓑ	ⓓ	ⓗ	ⓚ	ⓛ	ⓣ
@@ -160,11 +158,11 @@ On les obtient en utilisant ces codes:<br>
 #### Le petit dernier 
 <details><summary> o</summary>
 
-Il existe un o a queue droite<br>
+Il existe un o à queue droite<br>
 
 <img src="/assets/images/fonts/monichao.png" alt="Echarpe Queue Droite" title="Echarpe Queue Droite"><br>
 
-On l'obtient en utilisant ce code:<br>
+On l'obtient en utilisant ce code :<br>
 
 ⓞ
 </details>
