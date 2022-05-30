@@ -14,13 +14,13 @@ preview_image:
 ![Emilio 20 Tricolore](/assets/images/fonts/emilio20tricolore.png)
 
 ## Glyphes
-Les deux fontes contiennent les 36 glyphes:
+Les deux fontes contiennent les 36 glyphes :
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
 
 ## Dimensions
 ### Emilio 20
 Utilisée à 100%, cette fonte fait environ 50 mm de haut.
-Elle peut être agrandie jusqu'a 140% (env 70mm) ou diminuée jusqu'à 70% (env 35 mm).
+Elle peut être agrandie jusqu'a 140% (env 70 mm) ou diminuée jusqu'à 70% (env 35 mm).
 ### Emilio 20 Tricolore
 Utilisée à 100%, cette fonte fait environ  100 mm de haut.
 Elle peut être agrandie jusqu'a 120% (env 120 mm) ou diminuée jusqu'à 90% (env 90 mm).
