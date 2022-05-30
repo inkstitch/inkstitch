@@ -41,7 +41,7 @@ tuvwxyz«»À
 
 Utilisée à 100%, cette fonte fait environ 35 mm.
 
-Elle peut être agrandie jusqu'a 140% (env 48 mm) ou diminuée jusqu'à 60% (env 20 mm).
+Elle peut être agrandie jusqu'à 140% (env 48 mm) ou diminuée jusqu'à 60% (env 20 mm).
 
 ![Dimensions Grand Hotel](/assets/images/fonts/Sizing/grandhotelsizing.jpg)
 
