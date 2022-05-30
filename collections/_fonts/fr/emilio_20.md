@@ -23,7 +23,7 @@ Utilisée à 100%, cette fonte fait environ 50 mm de haut.
 Elle peut être agrandie jusqu'a 140% (env 70 mm) ou diminuée jusqu'à 70% (env 35 mm).
 ### Emilio 20 Tricolore
 Utilisée à 100%, cette fonte fait environ  100 mm de haut.
-Elle peut être agrandie jusqu'a 120% (env 120 mm) ou diminuée jusqu'à 90% (env 90 mm).
+Elle peut être agrandie jusqu'à 120% (env 120 mm) ou diminuée jusqu'à 90% (env 90 mm).
 
 ## Tri des couleurs pour la version tricolore
 Si vous brodez plusieurs lettes, vous pouvez souhaiter trier les couleurs. C'est possible à condition de respecter leur ordre relatif à l'intérieur de chaque lettre. [Voici comment faire](https://inkstitch.org/fr/docs/lettering/#tri-des-couleurs)
