@@ -11,9 +11,7 @@ preview_image:
 
 ## Glyphes
 
-Cette fonte contient les 40 glyphes
-
-
+Cette fonte contient les 40 glyphes :
 !'01234567
 89?ABCDEFG
 HIJKLMNOPQ
