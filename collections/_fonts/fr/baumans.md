@@ -36,7 +36,7 @@ Si la broderie fait plusieurs lignes, elle peut  être brodée  alternativement 
 
 Utilisée à 100%, cette fonte fait environ 32 mm.
 
-Elle peut être agrandie jusqu'a 150% (env 48 mm) ou diminuée jusqu'à 80% (env 25 mm).
+Elle peut être agrandie jusqu'à 150% (env 48 mm) ou diminuée jusqu'à 80% (env 25 mm).
 
 ## Dans la vraie vie
 
