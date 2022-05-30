@@ -16,8 +16,6 @@ preview_image:
 ## Glyphes
 
 Cette fonte contient les 97 glyphes :
-
-
 0123456789
 ABCDEFGHIJ
 KLMNOPQRST
