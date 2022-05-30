@@ -30,7 +30,7 @@ z@ß.'")(!;
 
 Utilisée à 100%, cette fonte fait environ 18 mm.
 
-Elle peut être agrandie jusqu'a 150% (env 27 mm) ou diminuée jusqu'à 80% (env 14 mm).
+Elle peut être agrandie jusqu'à 150% (env 27 mm) ou diminuée jusqu'à 80% (env 14 mm).
 
 
 ## Particularité
