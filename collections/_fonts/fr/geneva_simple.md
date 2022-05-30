@@ -18,7 +18,7 @@ preview_image:
 
 ### Glyphes
 
-Cette fonte contient les 102 glyphes:
+Cette fonte contient les 102 glyphes :
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#<>:;,'"“”.+@%$*~-=(){}][_/\|!?�ÄÖÜäöü
 
 ## Sans Rounded
@@ -29,14 +29,14 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#<>:;,'"“”.+@
 
 ### Glyphes
 
-Cette fonte contient les 107 glyphes:	
+Cette fonte contient les 107 glyphes :	
 AÄBCDEFGHIJKLMNOÖPQRSTUÜVWXYZaâäbcdeéèfghijklmnoöpqrstuüvwxyz0123456789@<>`^|\*~}{][$%@#!?:,'"“”.;+-=()_/�
 
 ## Dimensions
 
 Utilisée à 100%, ces deux fontes mesurent environ 8 mm de haut.
 
-Elles peut être agrandies jusqu'a 200% (env 16 mm) ou diminuées jusqu'à 70% (env 6 mm).
+Elles peuvent être agrandies jusqu'a 200% (env 16 mm) ou diminuées jusqu'à 70% (env 6 mm).
 
 ## Dans la vraie vie
 
