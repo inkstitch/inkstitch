@@ -36,7 +36,7 @@ AÄBCDEFGHIJKLMNOÖPQRSTUÜVWXYZaâäbcdeéèfghijklmnoöpqrstuüvwxyz0123456789
 
 Utilisée à 100%, ces deux fontes mesurent environ 8 mm de haut.
 
-Elles peuvent être agrandies jusqu'a 200% (env 16 mm) ou diminuées jusqu'à 70% (env 6 mm).
+Elles peuvent être agrandies jusqu'à 200% (env 16 mm) ou diminuées jusqu'à 70% (env 6 mm).
 
 ## Dans la vraie vie
 
