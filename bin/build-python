@@ -69,7 +69,13 @@ if [ "$BUILD" = "windows" ]; then
 else
     # without the LD_LIBRARY_PATH, it seems that pyinstaller can't find all of
     # wxpython's shared libraries
-    LD_LIBRARY_PATH="${site_packages}/wx" python -m PyInstaller $pyinstaller_args --strip inkstitch.py;
+    LD_LIBRARY_PATH="${site_packages}/wx" python -m PyInstaller $pyinstaller_args inkstitch.py;
+
+    # We've found that stripping the _fblas library in scipy/linalg causes a bizarre
+    # error:
+    #
+    #   ELF load command address/offset not properly aligned
+    find dist/inkstitch -type f | grep -E '.so($|\.)' | grep -v _fblas | xargs strip
 fi
 
 # pyinstaller put a whole mess of libraries under dist/inkstitch.  We'd like
