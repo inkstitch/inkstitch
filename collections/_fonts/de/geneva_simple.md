@@ -3,6 +3,7 @@ title: "Geneva Simple"
 permalink: /de/fonts/geneva_simple/
 last_modified_at: 2020-12-30
 toc: false
+preview_image:
   - url: /assets/images/fonts/geneva_simple_sans.jpg
     height: 13
   - url: /assets/images/fonts/geneva_simple_sans_rounded.jpg
