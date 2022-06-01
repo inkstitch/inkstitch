@@ -6,11 +6,18 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/emilio_20.jpg
     height: 48
-  - url: /assets/images/fonts/emilio20tricolore.png
-    height: 100
+  - url: /assets/images/fonts/emilio_tricolore.jpg
+    height: 100  
 ---
-![Emilio 20](/assets/images/fonts/emilio_20.jpg)
-![Emilio 20 Tricolore](/assets/images/fonts/emilio20tricolore.png)
+
+<img 
+     src="/assets/images/fonts/emilio_20.jpg"
+     alt="Emilio20" height="24">
+     
+<img 
+     src="/assets/images/fonts/emilio_tricolore.jpg"
+     alt="Emilio 20 Tricolore" height="50">
+
 ## Glyphs
 Both fonts contains 36 glyphs:
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
