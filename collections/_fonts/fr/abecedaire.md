@@ -1,5 +1,5 @@
 ---
-title: "Abecedaire"
+title: "Abécédaire"
 permalink: /fr/fonts/abecedaire/
 last_modified_at: 2022-05-27
 toc: false
