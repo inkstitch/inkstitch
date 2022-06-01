@@ -6,12 +6,12 @@ toc: false
 preview_image: 
   - url: /assets/images/fonts/sortefaxXL.jpg
     height: 150
-  - url: /assets/images/fonts/sortefax_medium.png
+  - url: /assets/images/fonts/sortefax_medium.jpg
     height: 90
 ---
 ![SortefaxXL](/assets/images/fonts/sortefaxXL.jpg)
 
-![Sortefax_medium](/assets/images/fonts/sortefax_medium.png)
+![Sortefax_medium](/assets/images/fonts/sortefax_medium.jpg)
 
 {% include upcoming_release.html %}
 
