@@ -23,7 +23,7 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@<>:,'"“”.+-=(
 
 ### Ink/Stitch Small
 Utilisée à 100%, Ink/Stitch Small mesure environ 6 mm de haut.
-La fonte peut être agrandie jusqu'à 00% (env 18 mm), mais ne doit pas être réduite.
+La fonte peut être agrandie jusqu'à 300% (env 18 mm), mais ne doit pas être réduite.
 
 ### Ink/Stitch Medium
 Utilisée a  100%, Ink/Stitch Medium mesure environ  19 mm de haut.
