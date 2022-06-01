@@ -42,7 +42,7 @@ Ou vous pouvez aussi juste le remplacer par rien, ou par une de vos créations.
 
 
 
-Et si vous ne savez pas tapper un µ depuis votre clavier vers la fenêtre de dialogue du lettrage, faites un couper/coller...
+Et si vous ne savez pas taper un µ depuis votre clavier vers la fenêtre de dialogue du lettrage, faites un couper/coller...
 
 
 ## Dans la vraie vie
