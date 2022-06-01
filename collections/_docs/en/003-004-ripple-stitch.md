@@ -47,7 +47,7 @@ Params||Description
 Running stitch along paths      |  ☑ |Must be enabled for these settings to take effect.
 Methode     || Chose Ripple stitch 
 Repeats                        ||◦ Defines how many times to run down and back along the final embroidery path<br />◦ Default: 1 (traveling once from the start to the end of the path)<br />◦ Odd number: stitches will end at the end of the path<br />◦ Even number: stitching will return to the start of the path
-Bean stitch number of repeats C||◦ Enable [Bean Stitch Mode](/docs/stitches/bean-stitch/)<br />◦ Backtrack each stitch this many times.<br />◦ A value of 1 would triple each stitch (forward, back, forward).<br />◦ A value of 2 would quintuple each stitch, etc.<br />◦ Only applies to running stitch.
+Bean stitch number of repeats ||◦ Enable [Bean Stitch Mode](/docs/stitches/bean-stitch/)<br />◦ Backtrack each stitch this many times.<br />◦ A value of 1 would triple each stitch (forward, back, forward).<br />◦ A value of 2 would quintuple each stitch, etc.<br />◦ Only applies to running stitch.
 Running stitch length||Length of stitches in [Running Stitch Mode](/docs/stitches/running-stitch/)
 Number of line|<img src="/assets/images/docs/ripple_only_lines.svg" alt="Nombre de lignes"/>|Chose how many times the ripple replicates. Default value is 10.
 ◦Skip first lines <br /> ◦Skip last lines  |<img src="/assets/images/docs/ripple_only_skip.svg" alt="Sauter"/>| Skip (do not embroider)  that number of replications at start and/or end of the embroidery.
