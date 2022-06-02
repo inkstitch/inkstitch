@@ -32,7 +32,7 @@ klmnñoóôöò
 
 Utilisée à 100%, cette fonte fait environ 20 mm.
 
-Elle peut être agrandie jusqu'a 200% (env 40 mm) ou diminuée jusqu'à 60% (env 16 mm).
+Elle peut être agrandie jusqu'à 200% (env 40 mm) ou diminuée jusqu'à 60% (env 16 mm).
 
 ![Dimensions Pacificlo](/assets/images/fonts/Sizing/pacificlosizing.jpg)
 
