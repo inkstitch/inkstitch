@@ -31,7 +31,7 @@ tuûüùvwxyz
 
 Utilisée à 100%, cette fonte fait environ 22 mm.
 
-Elle peut être agrandie jusqu'a 150% (env 33 mm) ou diminuée jusqu'à 80% (env  18 mm).
+Elle peut être agrandie jusqu'à 150% (env 33 mm) ou diminuée jusqu'à 80% (env  18 mm).
 
 ## Dans la vraie vie
 {% include folder-galleries path="fonts/lobster_ags/" %}
