@@ -17,7 +17,7 @@ Cette fonte contient les 109 glyphes :
 
 Utilisée à 100%, cette fonte fait environ 22 mm.
 
-Elle peut être agrandie jusqu'a 120% (env 25 mm) ou diminuée jusqu'à 80% (env  18 mm).
+Elle peut être agrandie jusqu'à 120% (env 25 mm) ou diminuée jusqu'à 80% (env  18 mm).
 
 ## Dans la vraie vie
 
