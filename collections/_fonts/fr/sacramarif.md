@@ -11,7 +11,7 @@ preview_image:
 
 ## Glyphes
 
-Sacramarif contient 112 glyphes :
+Sacramarif contient les 112 glyphes :
 	
 ABCDEFGHIJ
 KLMNOPQRST
@@ -27,7 +27,7 @@ yzßÀàáâäæÇ
 »-
 
 ## Dimensions
-Utilisée à 100%, cette fonte fait environ 28 mm.
+Utilisée à 100%, cette fonte mesure environ 28 mm.
 Elle peut être agrandie jusqu'à 150% (env 42 mm) ou diminuée jusqu'à 80% (env 22 mm).
 
 ## Dans la vraie vie
