@@ -4,7 +4,7 @@
     "leading": 232,
     "auto_satin": false,
     "reversible": false,
-	"letter_case": "upper",
+    "letter_case": "upper",
     "default_glyph": " ",
     "min_scale": 0.8,
     "max_scale": 1.3,
