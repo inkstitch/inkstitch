@@ -18,7 +18,7 @@ Apex Lake contient les 38 glyphes :
 ## Particularités
 Apex Lake est une police de lettrines. 
 
-Si vous ne souhaitez pas broder le cadre, sautez les deux dernières étapes.  
+Si vous ne souhaitez pas broder le cadre, ignorez les deux dernières étapes.  
 
 Si vous souhaitez appliquer un tissu dans le cadre, utilisez une copie de l'avant-dernier chemin pour placer votre tissu.
 
