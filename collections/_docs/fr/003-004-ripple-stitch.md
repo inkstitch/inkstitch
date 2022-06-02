@@ -33,6 +33,7 @@ Si  le chemin initial est fermé, ses eventuels trous seront ignorés et la form
 Il existe de nombreuses manières d'exploiter toutes les possibilitéss :
 
 ![Ondulations diverses](/assets/images/docs/fr/rippleways_fr.svg)
+[Download](/assets/images/docs/en/rippleways_fr.svg){: download="rippleways.svg" }
 
 ## Comment la paramètrer
 
