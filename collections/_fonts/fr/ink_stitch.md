@@ -31,7 +31,7 @@ La fonte peut être agrandie jusqu'à 150% (env 29 mm) ou réduite jusqu'à 75% 
 
 ## Remarque
 
-Les deux fontes sont réversibles: une broderie sur plusieurs lignes peut être brodée alternativement dans les deux sens.
+Les deux fontes sont réversibles : une broderie sur plusieurs lignes peut être brodée alternativement dans les deux sens.
 
 
 ## Dans la vraie vie
