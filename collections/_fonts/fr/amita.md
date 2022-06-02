@@ -43,7 +43,7 @@ Elle peut être agrandie jusqu'à 200% (env 60 mm) ou diminuée jusqu'à 80% (en
 
 N'essayez pas de broder cette fonte à une dimension inférieure, vous auriez beaucoup de problèmes. 
 
-La fonte Amitaclo small (Elle sera dans une prochaine version d'Ink/Stitch et n'est pas disponible dans Ink/Stitch v2.1.2.) est une déclinaison d'Amitavlo avec des paramètres de broderie différents. La densité, la compensation et les sous-couches ont été modifiées pour permettre de broder cette fonte en plus petite taille.
+La fonte Amitaclo small (Elle sera dans une prochaine version d'Ink/Stitch et n'est pas disponible dans Ink/Stitch v2.1.2.) est une déclinaison d'Amitaclo avec des paramètres de broderie différents. La densité, la compensation et les sous-couches ont été modifiées pour permettre de broder cette fonte en plus petite taille.
 
 Dans la fenêtre de dialogue du lettrage si vous choisissez Amitaclo small , il vous sera demandé d'indiquer un redimensionnement entre 25 et 55% de la taille de la fonte Amitaclo initiale, passant ainsi de lettres d'environ 30 mm de haut à des lettres mesurant entre 7 et 16 mm.
 
