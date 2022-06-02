@@ -19,11 +19,11 @@ preview_image:
 
 ## Glyphes
 ### Cherry for Ink/Stitch
-contient ces 74	glyphes :
+contient les 74	glyphes :
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890.:;,?!()'"-`
 
 ### Cherry for Kaalleen
-contient  ces 36 glyphes :
+contient  les 36 glyphes :
 ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890
 
 
