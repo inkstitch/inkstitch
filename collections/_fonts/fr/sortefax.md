@@ -17,7 +17,7 @@ preview_image:
 
 
 ## Glyphes
-Ces fontes comportent 47 glyphes :
+Ces fontes comportent les 47 glyphes :
 	
 ?.:;,([{)]}&ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
 
