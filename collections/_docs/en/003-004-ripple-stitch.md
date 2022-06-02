@@ -10,22 +10,25 @@ toc: true
 [![Ripple butterfly](/assets/images/docs/ripplefly.jpg){: width="200x"}](/assets/images/docs/ripplefly.svg){: title="Download SVG File" .align-left download="ripplefly.svg" }
 Ripple stitch is part running stitch and part filling: it behaves like a running stitch (it can be done in triple stitch for example), it is defined from a stroke, but the embroidery result stretches over a surface. Used loosely, the result looks like ripples, hence the name.
 
-
-
-Have a look at this video teasing: {% include video id="cyvby3KJM10" provider="youtube" %}
+Have a look at this teasing video: {% include video id="cyvby3KJM10" provider="youtube" %}
 
 ## How to Create
 
 From a **stroke (stroke color is set and no fill color)** that may be either a simple path (decomposition applied to it has no effect) or a composed path with exactly two subpaths, just like the rails of a satin column.
 
 
-Le stroke may be dashed or not, here it does not matter.{: .notice--warning}
+Le stroke may be dashed or not, here it does not matter.
+{: .notice--warning }
 
 * Create a **stroke (stroke color is set and no fill color)** that may be either a simple path (decomposition applied to it has no effect) or a composed path with exactly two subpaths.
 * Select this stroke
 * Open params dialog (`Extensions > Ink/Stitch > Params`) and select `Ripple stitch` as method.
 
-Once the path has been created, it becomes possible to influence the way the ripples replicate to fill a shape.
+If the stroke is closed, any hole  will be ignored and the shape  will be filled with a spiral. Open shapes will be stitched back and forth.
+
+
+
+Once the path has been created, it becomes possible to guide the way the ripples replicate to fill a shape.
 
 
 
@@ -35,12 +38,12 @@ There are many ways to exploit all the possibilities:
 
 
 ![Many ripples](/assets/images/docs/en/rippleways_en.svg)
-[Download](/assets/images/docs/en/rippleways_en.svg){: download="paon.svg" }
+[Download](/assets/images/docs/en/rippleways_en.svg){: download="rippleways.svg" }
 
 
 
 ## Params
-### Params if starting from a simple path
+
 
 Params||Description
 ---|---|---
@@ -51,19 +54,40 @@ Bean stitch number of repeats ||◦ Enable [Bean Stitch Mode](/docs/stitches/bea
 Running stitch length||Length of stitches in [Running Stitch Mode](/docs/stitches/running-stitch/)
 Number of line|<img src="/assets/images/docs/ripple_only_lines.svg" alt="Nombre de lignes"/>|Chose how many times the ripple replicates. Default value is 10.
 ◦Skip first lines <br /> ◦Skip last lines  |<img src="/assets/images/docs/ripple_only_skip.svg" alt="Sauter"/>| Skip (do not embroider)  that number of replications at start and/or end of the embroidery.
+Line distance exponent|<img src="/assets/images/docs/ripple_only_exponent.svg" alt="Exposant"/>| ◦ With default value of 1 space between replications is constant<br />◦ With a value greater than 1, the space between two consecutive replications increases as one moves away from the original ripple   <br />◦ With a value smaller than 1, the space between two consecutive replications decreases as one moves away from the original ripple.
+Flip exponent |☑  or ▢| exchange role of first and last line in the computation of  line distance
 Reverse |☑  or ▢|  Reverse the final embroidery path.  Has no effect on the other  parameters.
-Grid distance|| ineffective when starting from a single path
-Line distance exponent|<img src="/assets/images/docs/ripple_only_exponent.svg" alt="Exposant"/>| ◦ With default value of 1 space between replications is constante<br />◦ With a value greater than 1, the space between two consecutive replications increases as one moves away from the original ripple   <br />◦ With a value smaller than 1, the space between two consecutive replications decreases as one moves away from the original ripple 
-Allow lock stitches| ☑  ou ▢|Enables lock stitches in only desired positions
-Force lock stitches| ☑  ou ▢|Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences.
+Grid  max distance |<img src="/assets/images/docs/ripple_only_grid.svg" alt="Distance"/>| If the distance is strictly positive a grid effect is added. The distance controls how far apart the new  lines are. 
+Scale axes|XY or X or Y or None | for guided ripple only
+Rotate| ☑  or ▢| for guided ripple only
+Enables lock stitches in only desired positions| ☑  ou ▢| Enables lock stitches in only desired positions
+Force lock stitches| ☑  or ▢|Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences.
+{: .params-table }
 
-### Grid distance  (only when starting from a path with two subpaths)
-The two subpaths are going to play similarly to the satin colomn rails,  and it is even possible to add rungs 
-With or without rungs it is not possible to add to the final embroidery path to get a grid effect
+##  Guiding 
 
-Additional parameter||Description
----|---|---
-Grid distance |<img src="/assets/images/docs/ripple_only_grid.svg" alt="Distance"/>| If the distance is strictly positive a grid effect is added. The distance controls how far apart the new  lines are. Flip has no effect on this parameter.  
+
+### For any ripple : guide line
+It is always possible to add a guide line to a ripple: 
+
+- Create a ripple
+- Create a stroke
+- Turn the stroke into guide line :`Extensions > Ink/Stitch  > Edit > Selection to Guide`
+- Group the ripple and the guide
+
+
+The centers of the replications follow  the guide.
+
+If the guide has two sub-paths, distance between the sub-paths determine replications sizes
+
+
+
+### For ripple defined from a simple path : target 
+It is possible to define a ripple stitch target position using  [visual command] (/docs/commands/). If no guiding information is provided, the center of the path is the target.
+
+### [For satin ripple (two subpaths) : rungs](#traverses)
+
+Works similarly to  Satin Columns rungs
 
 ### Samples Files Including Ripple Stitches
 
