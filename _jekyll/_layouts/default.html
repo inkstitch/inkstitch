@@ -3,10 +3,10 @@
 
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.13.0 by Michael Rose
-  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
-  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
 <html lang="{{ page.lang | slice: 0,2 | default: "en" }}" class="no-js">
   <head>
@@ -15,8 +15,7 @@
   </head>
 
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
-
-    {% include_cached browser-upgrade.html %}
+    {% include_cached skip-links.html %}
     {% include masthead.html %}
 
     <div class="initial-content">
@@ -29,11 +28,17 @@
       </div>
     {% endif %}
 
-    <div class="page__footer">
+    <div id="footer" class="page__footer">
       <footer>
         {% include footer/custom.html %}
         {% include footer.html %}
       </footer>
+    </div>
+
+    {% include_cached scripts.html %}
+
+  </body>
+</html>
     </div>
 
     {% include_cached scripts.html %}
