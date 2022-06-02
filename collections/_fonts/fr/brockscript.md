@@ -34,15 +34,16 @@ Elle peut être agrandie jusqu'à 250% (env 100 mm)  mais ne peut pas être dimi
 ## Ce n'est pas Noël ?
 Le glyphe µ est détourné pour stocker cette broderie 
 qui contient quatre ornements alternatifs au houx. 
+
 ![Brockscript](/assets/images/fonts/brockscriptmu.png)
 
-À vous de remplacer le houx par l'une de ses options. 
+À vous de remplacer le houx par l'une de ces options. 
 Ou vous pouvez aussi juste le remplacer par rien, ou par une de vos créations.
 
 
 
 
-Et si vous ne savez pas taper un µ depuis votre clavier vers la fenêtre de dialogue du lettrage, faites un couper/coller...
+Et si vous ne savez pas taper un µ depuis votre clavier vers la fenêtre de dialogue du lettrage, faites un copier/coller...
 
 
 ## Dans la vraie vie
