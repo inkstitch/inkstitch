@@ -1,7 +1,7 @@
 ---
 title: "Sortefax"
 permalink: /fr/fonts/sortefax/
-last_modified_at: 2022-05-27
+last_modified_at: 2022-06-01
 toc: false
 preview_image: 
   - url: /assets/images/fonts/sortefaxXL.jpg
