@@ -11,12 +11,14 @@ toc: true
 [![Ripple butterfly](/assets/images/docs/ripplefly.jpg){: width="200x"}](/assets/images/docs/ripplefly.svg){: title="Download SVG File" .align-left download="ripplefly.svg" }La broderie ondulée tient à la fois du point droit et du remplissage : elle se comporte comme un point droit (on peut l'exécuter  en point triple par exemple), elle est définie à partir d'un trait, mais elle produit à l'arrivée une broderie qui s'étend sur une surface. Utilisée de manière lâche, le résultat ressemble à des ondes, d'où son nom. 
 
 
-Regardez cette alléchante video: {% include video id="cyvby3KJM10" provider="youtube" %}
+
+Regardez cette  appétissante video: {% include video id="cyvby3KJM10" provider="youtube" %}
 
 ##  Comment la créer
 A partir d'un  **trait (couleur de contour mais pas de remplissage)** qui peut être un  chemin  simple (la décomposition n'a aucun effet sur lui), ou un  chemin  combinant deux sous chemins (assimilable  aux  deux rails d'une colonne satin) 
 
-Le trait peut  avoir un style en pointillé ou pas, cela n'a aucune importance ici.{: .notice--warning}
+Le trait peut  avoir un style en pointillé ou pas, cela n'a aucune importance ici.
+{: .notice--warning }
 
 * Créer **un chemin avec une couleur de contour et sans couleur de remplissage** simple ou composé de deux sous chemins 
 * Sélectionner ce chemin
@@ -24,6 +26,7 @@ Le trait peut  avoir un style en pointillé ou pas, cela n'a aucune importance i
 
 Une  fois le chemin créé, il sera possible d'influencer la manière dont les ondulations sont répliquées pour remplir une forme.
 
+Si  le chemin initial est fermé, ses eventuels trous seront ignorés et la forme sera remplie par une spirale. S'il est ouvert, la broderie se fera en va et vient.
 
 
 
@@ -32,9 +35,6 @@ Il existe de nombreuses manières d'exploiter toutes les possibilitéss :
 ![Ondulations diverses](/assets/images/docs/fr/rippleways_fr.svg)
 
 ## Comment la paramètrer
-
-
-### Paramètrage en partant d'un chemin simple (ne peut pas être décomposé)
 
 Paramètres||Description
 ---|---|---
@@ -45,24 +45,23 @@ Nombre de répétitions du point triple || Activer [Mode point triple](/fr/docs/
 Longueur du point droit||Longueur des points dans le [Mode Point Droit](/fr/docs/stitches/running-stitch/)
 Nombre de lignes|<img src="/assets/images/docs/ripple_only_lines.svg" alt="Nombre de lignes"/>|Choisir le nombre de réplications de l'ondulation dans la broderie. La valeur par défaut est 10.
 ◦Sauter les premières lignes <br /> ◦Sauter les dernières lignes  |<img src="/assets/images/docs/ripple_only_skip.svg" alt="Sauter"/>| Permet de sauter (ne pas broder)  ce nombre de réplications au début et/ou à la fin
-Intervertir |☑  ou ▢|  Renverse le  chemin final de broderie . N'a pas d'effet sur les autres paramètres
-Distance grille || Inopérant dans ce cas
 Exposant de la distance entre les lignes|<img src="/assets/images/docs/ripple_only_exponent.svg" alt="Exposant"/>| ◦ La valeur par défaut de 1 espace les réplications de manière constante<br />◦ Avec une valeur supérieure à  1 l'espace  entre deux réplications consécutives augmente au fur et à mesure qu'on s'éloigne du chemin qui définit l'ondulation  <br />◦ Avec une valeur inférieure à  1 l'espace  entre deux réplications consécutives diminue au fur et à mesure qu'on s'éloigne du chemin qui définit l'ondulation
+Inverser effet exposant |☑  ou ▢| Èchange le rôle de la  première et de la dernière réplication pour le calcul de la distance entre les réplications
+Renverser |☑  ou ▢|  Renverse le  chemin final de broderie . N'a pas d'effet sur les autres paramètres
+Distance grille  maximum |<img src="/assets/images/docs/ripple_only_grid.svg" alt="Distance"/>| Si une distance positive est spécifiée, les ondulations de la broderie sont complétées  en une "grille", par un chemin "perpendiculaire" aux ondulations. Le paramètre contrôle l'écart de ces perpendiculaires. Intervertir  n'a pas  d'influence sur ce paramètre.
+Mettre les axes à l'echelle|XY or X or Y or None | for guided ripple only
+Tourner| ☑  or ▢| for guided ripple only
 Autoriser les points d'arrêts | ☑  ou ▢|Choix de l'ajout d' un point d'arrêt en début et en fin de broderie.
 Forcer les points d'arrêts | ☑ ou ▢| Force un point d'arrêt après l'objet indépendament de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitch.
+{: .params-table }
 
 
-### Paramètre additionnel uniquement en partant d'un chemin composé de deux sous chemins
-Ces deux chemins, vont  se comporter un peu comme les rails d'une colonne satin. Il est possible d'ailleurs d'avoir plus de deux sous-chemins si on leur adjoint des traverses.
 
-Avec ou sans traverses, il est dans ce cas possible de compléter le chemin final de  broderie pour produire un effet de grille.
 
-Paramètre additionnel||Description
----|---|---
-Distance grille |<img src="/assets/images/docs/ripple_only_grid.svg" alt="Distance"/>| Si une distance positive est spécifiée, les ondulations de la broderie sont complétées  en une "grille", par un chemin "perpendiculaire" aux ondulations. Le paramètre contrôle l'écart de ces perpendiculaires. Intervertir  n'a pas  d'influence sur ce paramètre.
+
 
 ## Guidage additionnel
-Il existe trois  méthodes pour guidage additionnel de déplacement des ondulations
+Il existe trois méthodes pour guidage additionnel de déplacement des ondulations
 
 ### Pour toutes les broderies ondulées : Guidage selon un chemin
 Il  est possible d'ajouter une chemin de guidage à une broderie ondulée.
@@ -72,7 +71,9 @@ Pour cela
 - Transformer ce trait en guide en effectuant: `Extensions > Ink/Stitch  > Edition > Selection en Guide`
 - Grouper la broderie ondulée et le guide dans un même groupe
 
-La position des centre des réplications de l'ondulation initale est alors déterminée par le guide
+La position des centres des réplications de l'ondulation initale est alors déterminée par le guide
+
+Le chemin guide peut avoir  deux sous-chemin, dans ce cas la distance entre les deux sous-chemins determinent la taille des réplications.
 
 
 ### Pour les  broderies ondulées définies à partir d'un chemin simple: Guidage par cible
