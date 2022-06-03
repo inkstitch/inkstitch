@@ -18,15 +18,17 @@ user-level:
 
 ## Iris en broderie ondulée
 
-- Les pétales sont obtenus comme  des broderies ondulées en point droit simple appliquées sur des chemins composés de deux rails.
-- Les sépales sont obtenus comme  des broderies ondulées en point triple appliquées sur des chemins composés de deux rails.
+![Brodé](/assets/images/tutorials/tutorial-preview-images/ripple-iris.jpg)
+
+- Les pétales sont obtenus comme  des broderies ondulées, en point droit simple, appliquées sur des chemins composés de deux rails.
+- Les sépales sont obtenus comme  des broderies ondulées, en point triple, appliquées sur des chemins composés de deux rails.
 - Les contours des pétales sont en point triple.
 - La tige est une colonne satin partagée.
-- Le lettrage est obtenu par des broderies ondulées appliquées à des chemins composés de deux rails.
+- Le lettrage est composé  de broderies ondulées appliquées à des chemins composés de deux rails.
 
 
 ![SVG](/assets/images/tutorials/samples/ripple-iris.svg)
 
-![Brodé](/assets/images/tutorials/tutorial-preview-images/ripple-iris.jpg)
+
 
 [Télécharger](/assets/images/tutorials/samples/ripple-iris.svg){: download="ripple-iris.svg" }
