@@ -161,6 +161,18 @@ class Stroke(EmbroideryElement):
     def skip_end(self):
         return abs(self.get_int_param("skip_end", 0))
 
+    def _adjust_skip(self, skip):
+        if self.skip_start + self.skip_end >= self.line_count:
+            return 0
+        else:
+            return skip
+
+    def get_skip_start(self):
+        return self._adjust_skip(self.skip_start)
+
+    def get_skip_end(self):
+        return self._adjust_skip(self.skip_end)
+
     @property
     @param('exponent',
            _('Line distance exponent'),
@@ -224,13 +236,35 @@ class Stroke(EmbroideryElement):
         return self.get_int_param('scale_axis', 0)
 
     @property
+    @param('scale_start',
+           _('Starting scale'),
+           tooltip=_('How big the first copy of the line should be, in percent.') + " " + _('Used only for ripple stitch with a guide line.'),
+           type='float',
+           default=100,
+           select_items=[('stroke_method', 1)],
+           sort_index=13)
+    def scale_start(self):
+        return self.get_float_param('scale_start', 100.0)
+
+    @property
+    @param('scale_end',
+           _('Ending scale'),
+           tooltip=_('How big the last copy of the line should be, in percent.') + " " + _('Used only for ripple stitch with a guide line.'),
+           type='float',
+           default=0.0,
+           select_items=[('stroke_method', 1)],
+           sort_index=14)
+    def scale_end(self):
+        return self.get_float_param('scale_end', 0.0)
+
+    @property
     @param('rotate_ripples',
            _('Rotate'),
            tooltip=_('Rotate satin guided ripple stitches'),
            type='boolean',
            default=True,
            select_items=[('stroke_method', 1)],
-           sort_index=13)
+           sort_index=15)
     @cache
     def rotate_ripples(self):
         return self.get_boolean_param("rotate_ripples", True)

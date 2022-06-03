@@ -71,6 +71,8 @@ inkstitch_attribs = [
     'exponent',
     'flip_exponent',
     'scale_axis',
+    'scale_start',
+    'scale_end',
     'rotate_ripples',
     'expand_mm',
     'fill_underlay',
