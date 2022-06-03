@@ -1,6 +1,7 @@
 from collections import defaultdict
 from math import atan2
 
+import numpy as np
 from shapely.affinity import rotate, scale, translate
 from shapely.geometry import LineString, Point
 
@@ -31,7 +32,7 @@ def ripple_stitch(stroke):
     is_linear, helper_lines = _get_helper_lines(stroke)
     ripple_points = _do_ripple(stroke, helper_lines, is_linear)
 
-    if stroke.reverse != stroke.flip_exponent:
+    if stroke.reverse:
         ripple_points.reverse()
 
     if stroke.grid_size != 0:
@@ -78,15 +79,11 @@ def _get_satin_ripple_helper_lines(stroke):
     # use satin column points for satin like build ripple stitches
     rail_points = SatinColumn(stroke.node).plot_points_on_rails(length, 0)
 
-    steps = _get_steps(stroke.line_count, stroke.exponent)
+    steps = _get_steps(stroke.line_count, stroke.exponent, stroke.flip_exponent)
 
     helper_lines = []
     for point0, point1 in zip(*rail_points):
         helper_lines.append([])
-
-        if stroke.flip_exponent:
-            point0, point1 = point1, point0
-
         helper_line = LineString((point0, point1))
         for step in steps:
             helper_lines[-1].append(InkstitchPoint.from_shapely_point(helper_line.interpolate(step, normalized=True)))
@@ -99,7 +96,7 @@ def _get_circular_ripple_helper_lines(stroke, outline):
 
     # Now we want to adjust the helper lines to make a spiral.
     num_lines = len(helper_lines)
-    steps = _get_steps(num_lines, 1)
+    steps = _get_steps(num_lines)
     for i, line in enumerate(helper_lines):
         points = []
         for j in range(len(line) - 1):
@@ -122,12 +119,9 @@ def _get_linear_ripple_helper_lines(stroke, outline):
 def _target_point_helper_lines(stroke, outline):
     helper_lines = [[] for i in range(len(outline.coords))]
     target = stroke.get_ripple_target()
-    steps = _get_steps(stroke.line_count, stroke.exponent)
+    steps = _get_steps(stroke.line_count, stroke.exponent, stroke.flip_exponent)
     for i, point in enumerate(outline.coords):
-        if stroke.flip_exponent:
-            line = LineString([target, point])
-        else:
-            line = LineString([point, target])
+        line = LineString([point, target])
 
         for step in steps:
             helper_lines[i].append(InkstitchPoint.from_shapely_point(line.interpolate(step, normalized=True)))
@@ -167,8 +161,8 @@ def _generate_guided_helper_lines(stroke, outline, max_distance, guide_line):
     center = outline.centroid
     center = InkstitchPoint(center.x, center.y)
 
-    outline_steps = _get_steps(stroke.line_count, stroke.exponent)
-    scale_steps = _get_steps(stroke.line_count, 1)
+    outline_steps = _get_steps(stroke.line_count, stroke.exponent, stroke.flip_exponent)
+    scale_steps = _get_steps(stroke.line_count)
     scale_steps.reverse()
 
     start_point = InkstitchPoint(*(guide_line.coords[0]))
@@ -191,7 +185,7 @@ def _generate_guided_helper_lines(stroke, outline, max_distance, guide_line):
 
         previous_guide_point = guide_point
 
-    return _point_dict_to_linestring(len(outline.coords), line_point_dict, stroke.flip_exponent)
+    return _point_dict_to_helper_lines(len(outline.coords), line_point_dict)
 
 
 def _get_start_rotation(line):
@@ -229,7 +223,7 @@ def _generate_satin_guide_helper_lines(stroke, outline, guide_line):
         for j, point in enumerate(transformed_outline.coords):
             line_point_dict[j].append(InkstitchPoint(point[0], point[1]))
 
-    return _point_dict_to_linestring(len(outline.coords), line_point_dict, stroke.flip_exponent)
+    return _point_dict_to_helper_lines(len(outline.coords), line_point_dict)
 
 
 def _transform_outline(translation, rotation, scaling, outline, origin, scale_axis):
@@ -248,24 +242,22 @@ def _transform_outline(translation, rotation, scaling, outline, origin, scale_ax
     return transformed_outline
 
 
-def _point_dict_to_linestring(line_count, point_dict, flip_exponent):
+def _point_dict_to_helper_lines(line_count, point_dict):
     lines = []
     for i in range(line_count):
         points = point_dict[i]
-        if flip_exponent:
-            points.reverse()
         lines.append(points)
     return lines
 
 
-def _get_steps(total_lines, exponent):
-    # get_steps is scribbled from the inkscape interpolate extension
-    # (https://gitlab.com/inkscape/extensions/-/blob/master/interp.py)
-    steps = [
-        ((i + 1) / (total_lines)) ** exponent
-        for i in range(total_lines - 1)
-    ]
-    return [0] + steps + [1]
+def _get_steps(num_steps, exponent=1, flip=False):
+    steps = np.linspace(0, 1, num_steps)
+    steps = steps ** exponent
+
+    if flip:
+        steps = 1.0 - np.flip(steps)
+
+    return list(steps)
 
 
 def _repeat_coords(coords, repeats):
