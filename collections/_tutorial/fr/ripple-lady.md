@@ -16,7 +16,7 @@ field-of-use:
 user-level:
 ---
 
-## Femme clochette en remplissage texturée et broderie ondulée
+## Femme clochette en remplissage texturé et broderie ondulée
 
 La cupule de la fleur est en remplissage texturé.
 
