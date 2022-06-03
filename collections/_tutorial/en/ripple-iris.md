@@ -2,7 +2,7 @@
 permalink: /en/tutorials/ripple-iris/
 title: "Ripple Iris"
 language: en
-last_modified_at: 2022-06-0S
+last_modified_at: 2022-06-02
 excerpt: "Sample file: Ripple Iris"
 image: "/assets/images/tutorials/samples/ripple-iris.jpg"
 tutorial-type:
