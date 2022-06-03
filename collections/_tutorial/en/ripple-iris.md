@@ -4,7 +4,7 @@ title: "Ripple Iris"
 language: en
 last_modified_at: 2022-06-02
 excerpt: "Sample file: Ripple Iris"
-image: "/assets/images/tutorials/samples/ripple-iris.jpg"
+image: "/assets/images/tutorials/tutorial-preview-images/ripple-iris.jpg"
 tutorial-type:
   - Sample File
 stitch-type:
