@@ -4,7 +4,7 @@ title: "Iris en broderie ondulée"
 language: fr
 last_modified_at: 2022-06-03
 excerpt: "fichier exemple Irise en broderie ondulée"
-image: "/assets/images/tutorials/samples/ripple-iris.jpg"
+image: "/assets/images/tutorials/tutorial-preview-images/ripple-iris.jpg"
 tutorial-type:
   - Sample File
 stitch-type:
