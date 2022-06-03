@@ -18,11 +18,11 @@ user-level:
 
 ## Femme clochette en remplissage texturée et broderie ondulée
 
-La cupule de la fleur est en remplissage texturé
+La cupule de la fleur est en remplissage texturé.
 
-Le chapeau/fleur est constitué de 4 copies du même chemin, simplement tourné et redimensionné, tous en broderie ondulée simple.
+Le chapeau/fleur est constitué de 4 copies du même chemin fermé, simplement tourné et redimensionné, tous en broderie ondulée simple.
 
-Le visage est un point triple
+Le visage est un point triple.
 
 ![SVG](/assets/images/tutorials/samples/ripple-lady.svg)
 
