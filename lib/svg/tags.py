@@ -66,7 +66,7 @@ inkstitch_attribs = [
     'line_count',
     'skip_start',
     'skip_end',
-    'render_grid',
+    'grid_size',
     'reverse',
     'exponent',
     'flip_exponent',

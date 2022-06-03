@@ -198,8 +198,8 @@ class Stroke(EmbroideryElement):
         return self.get_boolean_param("reverse", False)
 
     @property
-    @param('render_grid',
-           _('Grid max distance'),
+    @param('grid_size',
+           _('Grid size'),
            tooltip=_('Render as grid. Use with care and watch your stitch density.'),
            type='float',
            default=0,
@@ -207,8 +207,8 @@ class Stroke(EmbroideryElement):
            select_items=[('stroke_method', 1)],
            sort_index=11)
     @cache
-    def render_grid(self):
-        return abs(self.get_float_param("render_grid", 0))
+    def grid_size(self):
+        return abs(self.get_float_param("grid_size", 0))
 
     @property
     @param('scale_axis',
@@ -353,6 +353,12 @@ class Stroke(EmbroideryElement):
 
         return StitchGroup(self.color, stitches)
 
+    def ripple_stitch(self):
+        return StitchGroup(
+            color=self.color,
+            tags=["ripple_stitch"],
+            stitches=ripple_stitch(self))
+
     def do_bean_repeats(self, stitches):
         return bean_stitch(stitches, self.bean_stitch_repeats)
 
@@ -361,34 +367,7 @@ class Stroke(EmbroideryElement):
 
         # ripple stitch
         if self.stroke_method == 1:
-            lines = self.as_multi_line_string()
-            guide_line = self._get_guide_lines()
-            points = []
-            if len(lines.geoms) > 1:
-                # if render_grid has a number use this, otherwise use running_stitch_length
-                length = self.render_grid or self.running_stitch_length
-                # use satin column points for satin like build ripple stitches
-                points = SatinColumn(self.node).plot_points_on_rails(length, 0)
-            point_target = self.get_ripple_target()
-            patch = StitchGroup(
-                color=self.color,
-                tags=["ripple_stitch"],
-                stitches=ripple_stitch(
-                    self.as_multi_line_string(),
-                    point_target,
-                    self.line_count,
-                    points,
-                    self.running_stitch_length,
-                    self.repeats,
-                    self.reverse,
-                    self.skip_start,
-                    self.skip_end,
-                    self.render_grid,
-                    self.exponent,
-                    self.flip_exponent,
-                    self.scale_axis,
-                    self.rotate_ripples,
-                    guide_line))
+            patch = self.ripple_stitch()
             if patch:
                 if self.bean_stitch_repeats > 0:
                     patch.stitches = self.do_bean_repeats(patch.stitches)
@@ -414,18 +393,12 @@ class Stroke(EmbroideryElement):
         return patches
 
     @cache
-    def _get_guide_lines(self, multiple=False):
+    def get_guide_line(self):
         guide_lines = get_marker_elements(self.node, "guide-line", False, True, True)
         # No or empty guide line
         # if there is a satin guide line, it will also be in stroke, so no need to check for satin here
         if not guide_lines or not guide_lines['stroke']:
             return None
-
-        if multiple:
-            if sum(len(x) for x in guide_lines.values()) > 1:
-                return True
-            else:
-                return False
 
         # use the satin guide line if there is one, else use stroke
         # ignore multiple guide lines
@@ -439,7 +412,6 @@ class Stroke(EmbroideryElement):
 
         # guided fill warnings
         if self.stroke_method == 1:
-            is_multiple_guide_line = self._get_guide_lines(True)
-            if is_multiple_guide_line:
+            guide_lines = get_marker_elements(self.node, "guide-line", False, True, True)
+            if sum(len(x) for x in guide_lines.values()) > 1:
                 yield MultipleGuideLineWarning(self.shape.centroid)
-            return None
