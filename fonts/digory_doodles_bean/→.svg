@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   xmlns:inkstitch="http://inkstitch.org/namespace"
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
    id="svg199"
    sodipodi:docname="→.svg"
    width="113.38583"
    height="113.38583"
-   inkscape:version="1.0.2 (e86c870, 2021-01-15)">
+   inkscape:version="1.1.2 (b8e25be8, 2022-02-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:inkstitch="http://inkstitch.org/namespace">
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -23,17 +23,17 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="3840"
-     inkscape:window-height="2097"
+     inkscape:window-width="1440"
+     inkscape:window-height="808"
      id="namedview201"
      showgrid="true"
      inkscape:zoom="8.6750578"
-     inkscape:cx="22.56482"
-     inkscape:cy="75.700377"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:cx="22.535873"
+     inkscape:cy="75.734366"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g443"
+     inkscape:current-layer="g1476"
      inkscape:document-rotation="0"
      inkscape:lockguides="true"
      inkscape:snap-global="false"
@@ -42,7 +42,8 @@
      inkscape:object-paths="true"
      inkscape:snap-bbox="true"
      showguides="true"
-     inkscape:guide-bbox="true">
+     inkscape:guide-bbox="true"
+     inkscape:pagecheckerboard="0">
     <sodipodi:guide
        position="0,113.38583"
        orientation="0,1"
@@ -89,7 +90,6 @@ SIL Open Font License (OFL)
     <dc:format>image/svg+xml</dc:format>
     <dc:type
        rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-    <dc:title />
   </cc:Work>
 </rdf:RDF>
 <inkstitch:collapse_len_mm />
@@ -224,7 +224,8 @@ SIL Open Font License (OFL)
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:force_lock_stitches="True" />
     <path
        id="autosatinrun2"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5"
@@ -243,7 +244,8 @@ SIL Open Font License (OFL)
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -262,7 +264,8 @@ SIL Open Font License (OFL)
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
        inkscape:label="AutoSatin 1"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:force_lock_stitches="True" />
     <path
        id="autosatin4"
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:none"
@@ -275,7 +278,8 @@ SIL Open Font License (OFL)
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
        inkscape:label="AutoSatin 2"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -410,7 +414,8 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_underlay="False"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -428,7 +433,8 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -446,7 +452,8 @@ SIL Open Font License (OFL)
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
        sodipodi:nodetypes="ccccccccccccc"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1156,7 +1163,8 @@ SIL Open Font License (OFL)
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
        sodipodi:nodetypes="cccccccccccccc"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:force_lock_stitches="True" />
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:0.378;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.378, 0.378;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
        d="M 4.846921,69.56902 6.565967,63.55511"
@@ -1173,7 +1181,8 @@ SIL Open Font License (OFL)
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
        sodipodi:nodetypes="cccccccccccccc"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1191,7 +1200,8 @@ SIL Open Font License (OFL)
        inkstitch:zigzag_underlay="False"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:force_lock_stitches="True" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:0.378;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.378, 0.378;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        d="M 4.846921,69.56902 6.565967,63.55511"
@@ -1208,7 +1218,8 @@ SIL Open Font License (OFL)
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
        sodipodi:nodetypes="cccccccccccccc"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1226,7 +1237,8 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:force_lock_stitches="True" />
     <path
        id="path361-0"
        style="display:inline;fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:none"
@@ -1238,7 +1250,8 @@ SIL Open Font License (OFL)
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1256,6 +1269,7 @@ SIL Open Font License (OFL)
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="0"
+       inkstitch:force_lock_stitches="True"
        sodipodi:nodetypes="ccccccccccccccccc" />
     <path
        id="autosatinrun42"
@@ -1274,6 +1288,7 @@ SIL Open Font License (OFL)
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="0"
+       inkstitch:force_lock_stitches="True"
        inkscape:label="AutoSatin 2"
        sodipodi:nodetypes="ccccccccccccccssccccccccccccccc" />
   </g>
@@ -1579,6 +1594,7 @@ SIL Open Font License (OFL)
        sodipodi:nodetypes="csc"
        inkstitch:running_stitch_length_mm=""
        inkstitch:ties="1"
+       inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:manual_stitch="False" />
     <path
@@ -1626,6 +1642,7 @@ SIL Open Font License (OFL)
        sodipodi:nodetypes="csc"
        inkstitch:running_stitch_length_mm=""
        inkstitch:ties="1"
+       inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:manual_stitch="False" />
     <path
@@ -1713,6 +1730,7 @@ SIL Open Font License (OFL)
        sodipodi:nodetypes="ccssc"
        inkstitch:running_stitch_length_mm=""
        inkstitch:ties="1"
+       inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:manual_stitch="False" />
     <path
@@ -1782,6 +1800,7 @@ SIL Open Font License (OFL)
        sodipodi:nodetypes="cc"
        inkstitch:running_stitch_length_mm=""
        inkstitch:ties="1"
+       inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:manual_stitch="False" />
     <path
@@ -1971,6 +1990,7 @@ SIL Open Font License (OFL)
        sodipodi:nodetypes="ccccc"
        inkstitch:running_stitch_length_mm=""
        inkstitch:ties="1"
+       inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:manual_stitch="False" />
     <path
@@ -1980,6 +2000,7 @@ SIL Open Font License (OFL)
        sodipodi:nodetypes="cc"
        inkstitch:running_stitch_length_mm=""
        inkstitch:ties="1"
+       inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:manual_stitch="False" />
     <path
@@ -2106,6 +2127,7 @@ SIL Open Font License (OFL)
        sodipodi:nodetypes="csc"
        inkstitch:running_stitch_length_mm=""
        inkstitch:ties="1"
+       inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:manual_stitch="False" />
     <path
@@ -2150,6 +2172,7 @@ SIL Open Font License (OFL)
        sodipodi:nodetypes="cc"
        inkstitch:running_stitch_length_mm=""
        inkstitch:ties="1"
+       inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:manual_stitch="False" />
     <path
@@ -2246,6 +2269,7 @@ SIL Open Font License (OFL)
        sodipodi:nodetypes="cscc"
        inkstitch:running_stitch_length_mm=""
        inkstitch:ties="1"
+       inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:manual_stitch="False" />
     <path
@@ -2579,6 +2603,7 @@ SIL Open Font License (OFL)
        sodipodi:nodetypes="cc"
        inkstitch:running_stitch_length_mm=""
        inkstitch:ties="1"
+       inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:manual_stitch="False" />
     <path
@@ -2676,6 +2701,7 @@ SIL Open Font License (OFL)
        sodipodi:nodetypes="cc"
        inkstitch:running_stitch_length_mm=""
        inkstitch:ties="1"
+       inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:manual_stitch="False" />
     <path
@@ -2758,6 +2784,7 @@ SIL Open Font License (OFL)
        sodipodi:nodetypes="cscc"
        inkstitch:running_stitch_length_mm=""
        inkstitch:ties="1"
+       inkstitch:force_lock_stitches="True"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:manual_stitch="False" />
     <path
@@ -3449,7 +3476,8 @@ SIL Open Font License (OFL)
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="False"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:force_lock_stitches="True" />
     <path
        style="fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:none"
        d="m 20.478657,28.05702 c 0.914401,0 1.371602,0.4572 1.371602,1.3716 0,0.6096 0.1524,1.219203 0.457201,1.82881 0.304801,0.9144 0.609601,1.6764 0.914402,2.286 l 1.371603,1.3716 c 0.304801,0.6096 0.609601,1.066803 0.914402,1.37161 0.609601,1.2192 1.371602,2.286 2.286004,3.2004 0.609601,1.219207 1.371603,2.28601 2.286005,3.20041 0.914401,0.9144 1.828803,1.9812 2.743205,3.2004 0.914402,0.914407 1.981204,1.82881 3.200406,2.74321 0.609601,0.3048 1.219203,0.762 1.828804,1.3716 0.793978,1.023421 1.612125,1.575299 1.689064,2.713981 l -0.137821,0.998222 m -18.924882,-25.657849 -0.05795,-0.0064 c -0.677428,-0.07488 -1.066802,-0.09227 -1.33566,0.885027 l -0.435189,4.150589 v 4.11481 c 0,1.8288 0.609601,3.505203 1.828804,5.02921 1.219202,1.524 2.286004,2.895603 3.200406,4.11481 0.914402,1.2192 1.981204,2.4384 3.200406,3.6576 1.524003,1.524007 2.895606,2.74321 4.114808,3.65761 0.914402,0.9144 2.133605,1.524 3.657608,1.8288 1.325121,0.264752 3.604617,0.324438 4.62097,-1.411115 m -0.181156,-5.146814 -5.309641,8.115928 m -5.665323,-18.570944 -7.248487,5.874431 m -3.37093,-14.020298 5.617357,-0.524269"
@@ -3461,7 +3489,8 @@ SIL Open Font License (OFL)
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_underlay="False"
        inkstitch:zigzag_spacing_mm="0.3"
-       inkstitch:ties="0" />
+       inkstitch:ties="0"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -3494,6 +3523,30 @@ SIL Open Font License (OFL)
        inkstitch:running_stitch_length_mm="" />
     <path
        id="path337-6-2-0"
+       style="display:inline;fill:none;stroke:#28292a;stroke-width:0.439652;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 1.1720018,29.557627 c -1.98619095,1.688121 -1.55652562,3.642948 -0.1322368,5.244587 2.1630533,1.900923 3.7785774,4.107914 5.7586284,5.339442 3.2755616,1.474965 4.2203466,2.682977 7.2776426,3.834056 1.325719,0.28533 3.819825,0.754973 3.99833,0.27763 M 1.4933924,29.177645 c 0.6746491,-0.751088 0.9552463,-0.681331 2.2239392,-0.74308 1.092664,0.02848 1.1163195,0.284767 1.8007726,0.411008 0.6237487,0.772463 1.3838538,1.644101 2.013197,2.291854 0.7519435,0.773939 0.8156577,1.388519 1.0599367,1.808356 1.4296111,2.457042 1.5663831,3.176237 4.6643241,6.174946 1.578674,2.517127 5.427575,2.705562 5.26416,4.264437 0.02801,0.352187 -0.127977,0.53763 -0.321388,0.739047 M 9.0075894,29.307257 -1.6204366,35.253732 M 20.417398,35.145767 11.939075,45.461343"
+       sodipodi:nodetypes="ccccccccssccccccc"
+       inkstitch:satin_column="True"
+       inkstitch:contour_underlay="True"
+       inkstitch:center_walk_underlay="False"
+       inkstitch:zigzag_underlay="False"
+       inkstitch:pull_compensation_mm="0.2"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:ties="3" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-’"
+     style="display:none"
+     id="g1476">
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#28292a;stroke-width:0.378;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.500062, 0.500062;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+       d="M 17.670357,43.819572 9.3820815,39.459698 1.5786118,29.88642"
+       id="path1472"
+       inkstitch:ties="3"
+       inkstitch:running_stitch_length_mm="" />
+    <path
+       id="path1474"
        style="display:inline;fill:none;stroke:#28292a;stroke-width:0.439652;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 1.1720018,29.557627 c -1.98619095,1.688121 -1.55652562,3.642948 -0.1322368,5.244587 2.1630533,1.900923 3.7785774,4.107914 5.7586284,5.339442 3.2755616,1.474965 4.2203466,2.682977 7.2776426,3.834056 1.325719,0.28533 3.819825,0.754973 3.99833,0.27763 M 1.4933924,29.177645 c 0.6746491,-0.751088 0.9552463,-0.681331 2.2239392,-0.74308 1.092664,0.02848 1.1163195,0.284767 1.8007726,0.411008 0.6237487,0.772463 1.3838538,1.644101 2.013197,2.291854 0.7519435,0.773939 0.8156577,1.388519 1.0599367,1.808356 1.4296111,2.457042 1.5663831,3.176237 4.6643241,6.174946 1.578674,2.517127 5.427575,2.705562 5.26416,4.264437 0.02801,0.352187 -0.127977,0.53763 -0.321388,0.739047 M 9.0075894,29.307257 -1.6204366,35.253732 M 20.417398,35.145767 11.939075,45.461343"
        sodipodi:nodetypes="ccccccccssccccccc"
@@ -4083,7 +4136,8 @@ SIL Open Font License (OFL)
        d="M 5.616949,71.320106 C 13.463887,61.901605 21.533748,51.723925 24.023183,39.411947 24.757774,34.633029 21.381935,28.652519 16.025017,28.547617"
        sodipodi:nodetypes="ccc"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:ties="1" />
+       inkstitch:ties="1"
+       inkstitch:force_lock_stitches="True" />
     <path
        id="path3758-8"
        style="display:inline;fill:none;stroke:#28292a;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -4903,6 +4957,7 @@ SIL Open Font License (OFL)
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:ties="0"
+       inkstitch:force_lock_stitches="True"
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_underlay="False" />

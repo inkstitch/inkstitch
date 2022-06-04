@@ -1,6 +1,6 @@
 {
     "name": "Learning curve",
-    "description": "Cursive italique en point triple pour des minuscules de 6 à 14mm",
+    "description": "Small running stitch script font of size approximatively 12 mm. It can be reduced down to 90% and enlarged up to 200%",
     "leading": 100,
     "auto_satin": false,
     "reversible": false,
@@ -325,7 +325,7 @@
         "Δ": 49,
         "∆": 49,
         "Ω": 68,
-        "Ω": 68,
+        "Ω": 68,
         "π": 41,
         "–": 50,
         "—": 100,
