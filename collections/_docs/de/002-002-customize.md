@@ -29,13 +29,13 @@ Tastenkürzel | Effekt | Ersetzt
 <span style="white-space: nowrap;"><key>Strg</key><key>⇧</key><key>Entf</key></span> | Fehlerbehebung an Objekten (Fehler entfernen)
 <key>Strg</key><key>⇧</key><key>+</key> | Befehle mit gewählten Objekten verknüpfen
 <key>Strg</key><key>⇧</key><key>U</key> | Linie zu Satin (U sieht wie zwei Schienen aus) | Objekt > Gruppieren (benutze stattdessen Strg+G)
-<key>Strg</key><key>⇧</key><key>J</key> | Konturen der Satinkolumne umkehren (J sieht wie ein Pfeil aus)
-<key>Strg</key><key>⇧</key><key>B</key> | Satinkolumne schneiden (B ist in der Hälfte geschnitten) | Pfad > Vereinigen (nutze stattdessen Strg++)
-<key>Strg</key><key>⇧</key><key>*</key> | Automatisch geführte Satinkolumne (\* bringt Ordnung)
+<key>Strg</key><key>⇧</key><key>J</key> | Konturen der Satinsäule umkehren (J sieht wie ein Pfeil aus)
+<key>Strg</key><key>⇧</key><key>B</key> | Satinsäule schneiden (B ist in der Hälfte geschnitten) | Pfad > Vereinigen (nutze stattdessen Strg++)
+<key>Strg</key><key>⇧</key><key>*</key> | Automatisch geführte Satinsäulen (\* bringt Ordnung)
 
 Wenn man den Ink/Stitch Simulator öffnet, hat man weitere Tastenkürzel zur Verfügung. [Hier](/docs/visualize/#simulation-shortcut-keys) ist verlinkt wie man diese verwendet.
 
-\* Anheben und Absenken gibt genaue Kontrolle darüber, in welcher Reihenfolge Objekte gestickt werden (von unten nach oben). Das ist sehr nützlich in Verbindung mit dem Objekt-Dialog (`Objekt > Ebenen und Objekte ...`).<br><br>** Für Satin- und Laufstiche ändert dies die Stickrichtung. Nutze dies mit der Einstellung `Zeige Pfadrichtung an Außenlinien` unter `Bearbeiten > Einstellungen > Werkzeuge > Knoten`. Wenn du nur einen Knoten mit dem Knotenwerkzeug auswählst und `Strg+R` drückst, kehrt sich nur der ausgewählte Unterpfad um. Auf diesem Wege kannst du sicherstellen, dass beide Schienen der Satinkolumne in die gleiche Richtung zeigen.
+\* Anheben und Absenken gibt genaue Kontrolle darüber, in welcher Reihenfolge Objekte gestickt werden (von unten nach oben). Das ist sehr nützlich in Verbindung mit dem Objekt-Dialog (`Objekt > Ebenen und Objekte ...`).<br><br>** Für Satin- und Geradstiche ändert dies die Stickrichtung. Nutze dies mit der Einstellung `Zeige Pfadrichtung an Außenlinien` unter `Bearbeiten > Einstellungen > Werkzeuge > Knoten`. Wenn du nur einen Knoten mit dem Knotenwerkzeug auswählst und `Strg+R` drückst, kehrt sich nur der ausgewählte Unterpfad um. Auf diesem Wege kannst du sicherstellen, dass beide Schienen der Satinsäule in die gleiche Richtung zeigen.
 {: .notice--info }
 {: style="font-size: 70%" }
 

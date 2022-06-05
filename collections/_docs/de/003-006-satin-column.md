@@ -1,5 +1,5 @@
 ---
-title: "Satinkolumne"
+title: "Satinsäule"
 permalink: /de/docs/stitches/satin-column/
 excerpt: ""
 last_modified_at: 2021-10-23
@@ -7,7 +7,7 @@ toc: true
 ---
 ## Beschreibung
 
-Satinkolumnen werden meistens für Ränder, Buchstaben oder sehr kleine Füllbereiche verwendet.
+Satinsäulen werden meistens für Ränder, Buchstaben oder sehr kleine Füllbereiche verwendet.
 
 ![Stitch Types - Satin Column](/assets/images/docs/stitch-type-satincolumn.jpg)
 
@@ -16,25 +16,25 @@ Satinkolumnen werden meistens für Ränder, Buchstaben oder sehr kleine Füllber
 * Füge einem Pfadobjekt eine Kontur hinzu (ohne Füllung).
 * Stelle die Konturenbreite auf die Größe ein, die der Satinstich haben soll.
 * Starte `Erweiterungen > Ink/Stitch > Satin Werkzeuge > Konvertierung Linie zu Satinstich`
-* Optional kann auch noch die Funktion `Erweiterungen > Ink/Stitch > Satin Werkzeuge > Automatisch geführte Satinkolumnen` ausgeführt werden
+* Optional kann auch noch die Funktion `Erweiterungen > Ink/Stitch > Satin Werkzeuge > Automatisch geführte Satinsäulen` ausgeführt werden
 * Anschließend können auf Wunsch Sprossen und Holme angepasst werden
 
-## Manuelles Erstellen von Satinkolumnen
-Eine Satinkolumne wird aus zwei **meist parallel verlaufenden Linien** gebildet. Ink/Stitch zeichnet ein Zick-Zack Muster zwischen den beiden Linien hin und her. Die Breite der Kolumne kann beliebig variiert werden.
+## Manuelles Erstellen von Satinsäulen
+Eine Satinsäule wird aus zwei **meist parallel verlaufenden Linien** gebildet. Ink/Stitch zeichnet ein Zick-Zack Muster zwischen den beiden Linien hin und her. Die Breite der Säule kann beliebig variiert werden.
 
 * Kombiniere zwei Linien mit `Pfad > Kombinieren` oder benutze `Strg + K`.
-* [Überprüfe die Pfad-Richtungen](/docs/customize/#enabling-path-outlines--direction). Damit die Satinkolumne erzeugt werden kann, müssen sie gleich sein.<br />Wenn dies nicht der Fall ist, wähle mit dem *Knoten-Werkzeug* (`N`) einen Punkt eines Unterpfads und führe ein `Pfad -> Richtung umkehren` durch. Dadurch wird nur der ausgewählte Unterpfad umgekehrt.
+* [Überprüfe die Pfad-Richtungen](/docs/customize/#enabling-path-outlines--direction). Damit die Satinsäule erzeugt werden kann, müssen sie gleich sein.<br />Wenn dies nicht der Fall ist, wähle mit dem *Knoten-Werkzeug* (`N`) einen Punkt eines Unterpfads und führe ein `Pfad -> Richtung umkehren` durch. Dadurch wird nur der ausgewählte Unterpfad umgekehrt.
 * Benutze die Knoten- oder die Sprossenmethode wie unten beschrieben.
-* Wähle dann die Satinkolumne und führe `Erweiterungen > Ink/Stitch > Paramter`, oder eine [Benutzerdefinierte Tastenkombination](/docs/customize/) aus.
+* Wähle dann die Satinsäule und führe `Erweiterungen > Ink/Stitch > Paramter`, oder eine [Benutzerdefinierte Tastenkombination](/docs/customize/) aus.
 
 ### Die Knoten Methode
-[![Satinkolumne Boat](/assets/images/docs/satin-column.jpg){: width="200x"}](/assets/images/docs/satin-column.svg){: title="Download SVG-Datei" .align-left download="satin-column.svg" }
+[![Satinsäule Boat](/assets/images/docs/satin-column.jpg){: width="200x"}](/assets/images/docs/satin-column.svg){: title="Download SVG-Datei" .align-left download="satin-column.svg" }
 
 Abhängig von der Komplexität des Entwurfs kann diese Methode zeitaufwendig sein, da die beiden Pfade die **gleiche Anzahl an Knoten** aufweisen müssen. Dies bedeutet, dass jeder Pfad aus einer gleichen Anzahl von Bezierkurven bestehen muss. Jedes Knotenpaar fungiert als "Kontrollpunkt": Ink/Stich sorgt dafür, dass ein "Zacken" von einem Punkt zum anderen führt.
 
 ### Die Sprossen Methode
 
-Die Sprossenmethode gibt mehr Kontrolle darüber, wie die Satinkolumne erstellt wird. Eine gute Positionierung der Punkte auf jeder der beiden Linien hilft, die Stichrichtungen festzulegen. Es gibt jedoch Situationen, in denen Richtungslinien ("Sprossen") für Satinkolumnen hinzugefügt werden müssen:
+Die Sprossenmethode gibt mehr Kontrolle darüber, wie die Satinsäule erstellt wird. Eine gute Positionierung der Punkte auf jeder der beiden Linien hilft, die Stichrichtungen festzulegen. Es gibt jedoch Situationen, in denen Richtungslinien ("Sprossen") für Satinsäulen hinzugefügt werden müssen:
 
 * Einige knifflige Eckareale
 * Komplizierte Zeichnungen, bei denen das Positionieren von den Knoten schwierig und zeitaufwendig ist
@@ -59,15 +59,15 @@ Wenn du genau zwei Sprossen (und zwei Holme) nutzt, ist es schwer für Ink/Stitc
 
 ## Parameter
 
-Der Dialog `Erweiterungen > Ink/Stitch  > Parameter` gibt dir die Möglichkeit die Satinkolumne genau zu justieren und entsprechende Unterlagen zu aktivieren.
+Der Dialog `Erweiterungen > Ink/Stitch  > Parameter` gibt dir die Möglichkeit die Satinsäule genau zu justieren und entsprechende Unterlagen zu aktivieren.
 
-Mehr Details gibt es unter [Parameter (Satinkolumne)](/de/docs/params/#satinkolumne).
+Mehr Details gibt es unter [Parameter (Satinsäule)](/de/docs/params/#satinsäule).
 
-Empfehlenswert ist auch [dieser Artikel (englisch)](https://www.mrxstitch.com/underlay/) der sich ausführlich mit dem Thema Satinkolumne und Unterlagen befasst.
+Empfehlenswert ist auch [dieser Artikel (englisch)](https://www.mrxstitch.com/underlay/) der sich ausführlich mit dem Thema Satinsäule und Unterlagen befasst.
 
 ## Satin Werkzeuge
 
-Für Satinkolumnen stellt Ink/Stitch einige hilfreiche [Werkzeuge](/de/docs/satin-tools/) bereit, die dir das Arbeiten mit Satinkolumnen erheblich erleichtern können.
+Für Satinsäulen stellt Ink/Stitch einige hilfreiche [Werkzeuge](/de/docs/satin-tools/) bereit, die dir das Arbeiten mit Satinsäulen erheblich erleichtern können.
 
-## Beispieldateien, die Satinkolumnen enthalten
+## Beispieldateien, die Satinsäulen enthalten
 {% include tutorials/tutorial_list key="stitch-type" value="Satin Stitch" %}

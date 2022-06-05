@@ -66,13 +66,13 @@ docs:
     children:
       - title: "Manueller Stich"
         url: /de/docs/stitches/manual-stitch/
-      - title: "Laufstich"
+      - title: "Geradstich"
         url: /de/docs/stitches/running-stitch/
-      - title: "Bohnen-Stich"
+      - title: "Mehrfach Geradstich"
         url: /de/docs/stitches/bean-stitch/
       - title: "Zick-Zack-Stich"
         url: /de/docs/stitches/zigzag-stitch/
-      - title: "Satinkolumne"
+      - title: "Satinsäule"
         url: /de/docs/stitches/satin-column/
       - title: "E-Stich"
         url: /de/docs/stitches/e-stitch/

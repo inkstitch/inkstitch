@@ -6,7 +6,9 @@ last_modified_at: 2022-05-20
 toc: true
 ---
 {% include upcoming_release.html %}
+
 ## What it is
+
 [![Ripple butterfly](/assets/images/docs/ripplefly.jpg){: width="200x"}](/assets/images/docs/ripplefly.svg){: title="Download SVG File" .align-left download="ripplefly.svg" }
 Ripple stitch is part running stitch and part filling: it behaves like a running stitch (it can be done in triple stitch for example), it is defined from a stroke, but the embroidery result stretches over a surface. Used loosely, the result looks like ripples, hence the name.
 
@@ -15,7 +17,6 @@ Have a look at this teasing video: {% include video id="cyvby3KJM10" provider="y
 ## How to Create
 
 From a **stroke (stroke color is set and no fill color)** that may be either a simple path (decomposition applied to it has no effect) or a composed path with exactly two subpaths, just like the rails of a satin column.
-
 
 Le stroke may be dashed or not, here it does not matter.
 {: .notice--warning }
@@ -26,24 +27,14 @@ Le stroke may be dashed or not, here it does not matter.
 
 If the stroke is closed, any hole  will be ignored and the shape  will be filled with a spiral. Open shapes will be stitched back and forth.
 
-
-
 Once the path has been created, it becomes possible to guide the way the ripples replicate to fill a shape.
 
-
-
-
 There are many ways to exploit all the possibilities:
-
-
 
 ![Many ripples](/assets/images/docs/en/rippleways_en.svg)
 [Download](/assets/images/docs/en/rippleways_en.svg){: download="rippleways.svg" }
 
-
-
 ## Params
-
 
 Params||Description
 ---|---|---
@@ -75,14 +66,12 @@ It is always possible to add a guide line to a ripple:
 - Turn the stroke into guide line :`Extensions > Ink/Stitch  > Edit > Selection to Guide`
 - Group the ripple and the guide
 
-
 The centers of the replications follow  the guide.
 
 If the guide has two sub-paths, distance between the sub-paths determine replications sizes
 
+### For ripple defined from a simple path : target
 
-
-### For ripple defined from a simple path : target 
 It is possible to define a ripple stitch target position using  [visual command] (/docs/commands/). If no guiding information is provided, the center of the path is the target.
 
 ### [For satin ripple (two subpaths) : rungs](#traverses)

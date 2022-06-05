@@ -61,11 +61,11 @@ Objekte mit diesem Befehl werden nicht exportiert.
 
 ### ![satin cut point symbol](/assets/images/docs/visual-commands-satin-cut-point.jpg) Satin-Schnittstelle
 
-Dieser Befehlt definiert an welchem Punkt die Satinkolumne geschnitten werden soll. Benutze anschließend die Funktion “[Satinkolumne schneiden](/de/docs/satin-tools/#satin-schnittstelle)”.
+Dieser Befehlt definiert an welchem Punkt die Satinsäule geschnitten werden soll. Benutze anschließend die Funktion “[Satinsäule schneiden](/de/docs/satin-tools/#satin-schnittstelle)”.
 
-###  ![auto route satin starting position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-start.jpg) ![auto route satin ending position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-end.jpg) Anfangs- und Endposition für automatische Satinkolumnenführung
+###  ![auto route satin starting position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-start.jpg) ![auto route satin ending position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-end.jpg) Anfangs- und Endposition für automatische Satinsäulenführung
 
-Definiert (1) die Start- und (2) die Endposition für automatish geführte Satinkolumnen. Benutze anschließend die Funktion “[Automatische Satinkolumnenführung](/de/docs/satin-tools/#automatische-satinkolumnenführung)”.
+Definiert (1) die Start- und (2) die Endposition für automatish geführte Satinsäulen. Benutze anschließend die Funktion “[Automatische Satinsäulenführung](/de/docs/satin-tools/#automatische-satinsäulenführung)”.
 
 Nutze immer nur einen Anfangs- und einen Endpunkt für jede Auto-Route Operation.
 

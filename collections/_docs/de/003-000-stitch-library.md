@@ -13,9 +13,9 @@ Linienartige Sticharten können benutzt werden für: Umrandungen, Strichkunst-St
 
 {% include video id="S_NiFiI6cPY" provider="youtube" %}
 
-### Laufstich
+### Geradstich
 
-Der Laufstich produziert eine Serie von kleinen Stichen entlang eines Pfades.
+Der Geradstich produziert eine Serie von kleinen Stichen entlang eines Pfades.
 
 ![Running Stitch Detail](/assets/images/docs/running-stitch-detail.jpg)
 
@@ -23,7 +23,7 @@ Der Laufstich produziert eine Serie von kleinen Stichen entlang eines Pfades.
 
 ### Bohnenstich
 
-“Bean stitch” beschreibt eine Wiederholung von Laufstichen (vor und zurück). Durch die Wiederholungen wird der Faden dicker und die Linie deutlicher.
+“Bean stitch” beschreibt eine Wiederholung von Geradstichen (vor und zurück). Durch die Wiederholungen wird der Faden dicker und die Linie deutlicher.
 
 ![Bean Stitch Detail](/assets/images/docs/bean-stitch-detail.jpg){: width="350x" }
 
@@ -39,7 +39,7 @@ Im manuellen Stichmodus stellt jeder Knoten des Pfades einen Nadeleinstich dar. 
 
 ### Zick-Zack Stich
 
-Zick-Zack-Stiche sind eine sehr einfache Version für Zick-Zack-Linien. Wir empfehlen sie nur für gerade Linien zu nutzen, da sie sich nicht schön um eine Kurve legen. In den meisten Fällen ist eine Satinkolumne zu bevorzugen.
+Zick-Zack-Stiche sind eine sehr einfache Version für Zick-Zack-Linien. Wir empfehlen sie nur für gerade Linien zu nutzen, da sie sich nicht schön um eine Kurve legen. In den meisten Fällen ist eine Satinsäule zu bevorzugen.
 
 ![Zigzag Stitch Detail](/assets/images/docs/zigzag-stitch-detail.png)
 
@@ -50,11 +50,11 @@ Zick-Zack-Stiche sind eine sehr einfache Version für Zick-Zack-Linien. Wir empf
 
 {% include video id="U7YtajKlftQ" provider="youtube" %}
 
-### Satinkolumne
+### Satinsäule
 
-Satinkolumnen werden meistens für Ränder, Buchstaben oder sehr kleine Füllbereiche verwendet.
+Satinsäulen werden meistens für Ränder, Buchstaben oder sehr kleine Füllbereiche verwendet.
 
-Ink/Stitch produziert Zick-Zack-Linien zwischen zwei Randlinien. Dabei ist es möglich die Breite der Kolumne zu variieren.
+Ink/Stitch produziert Zick-Zack-Linien zwischen zwei Randlinien. Dabei ist es möglich die Breite der Säule zu variieren.
 
 ![Satin Column Detail](/assets/images/docs/satin-column-detail.png)
 

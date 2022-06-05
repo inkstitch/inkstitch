@@ -92,8 +92,8 @@ Schau die in der untenstehenden Tabelle die einzelnen Sticharten an. Klicke auf 
 
 Pfad Objekt | Stichart
 ---|---|---
-(Gestrichelte) Linie |[Laufstich](/de/docs/stitches/running-stitch/), [Manueller Stich](/de/docs/stitches/manual-stitch/), [Zick-Zack-Stich](/de/docs/stitches/zigzag-stitch/), [Bohnen-Stich](/de/docs/stitches/bean-stitch/)
-Zwei kombinierte Linien (mit optionalen Querstreben) | [Satinkolumne](/de/docs/stitches/satin-column), [E-Stitch](/de/docs/stitches/e-stitch)
+(Gestrichelte) Linie |[Geradstich](/de/docs/stitches/running-stitch/), [Manueller Stich](/de/docs/stitches/manual-stitch/), [Zick-Zack-Stich](/de/docs/stitches/zigzag-stitch/), [Bohnen-Stich](/de/docs/stitches/bean-stitch/)
+Zwei kombinierte Linien (mit optionalen Querstreben) | [Satinsäule](/de/docs/stitches/satin-column), [E-Stitch](/de/docs/stitches/e-stitch)
 Pfad mit Füllung | [Füllstich](/de/docs/stitches/fill-stitch/)
 {: .equal-tables }
 

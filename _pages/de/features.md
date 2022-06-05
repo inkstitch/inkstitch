@@ -28,7 +28,7 @@ Ink/Stitch: digitalisiere Designs für Maschinenstickerei mit Inkscape (SVG)
 * [Kurvenfüllung](/de/docs/stitches/guided-fill/)
 
 ### Satin
-* [Satinkolumne](/de/docs/stitches/satin-column/) mit variabler Breite
+* [Satinsäule](/de/docs/stitches/satin-column/) mit variabler Breite
 * 3 anpassbare und gleichzeitig nutzbare Unterlagen (Mittellinien-, Kontur- und Zick-Zack-Unterlage)
 * [E-stitch](/de/docs/stitches/e-stitch/)
 * Geteilte Satinstiche (durch nutzerdefinierte maximale Stichlänge)
@@ -36,11 +36,11 @@ Ink/Stitch: digitalisiere Designs für Maschinenstickerei mit Inkscape (SVG)
 
 ### Linienartige Stiche
 
-* [Laufstich](/de/docs/stitches/running-stitch/)
-* [Bohnenstich](/de/docs/stitches/bean-stitch/)
+* [Geradstich](/de/docs/stitches/running-stitch/)
+* [Mehrfach Geradstich](/de/docs/stitches/bean-stitch/)
 * [Manuelle Stichführung](/de/docs/stitches/manual-stitch/) (each stitch exactly where you want it)
 * [Cutwork](/de/docs/cutwork/)
-* [Automatisch geführter Laufstich](/de/docs/stroke-tools/) zur Vermeidung von Sprungstichen
+* [Automatisch geführter Geradstich](/de/docs/stroke-tools/) zur Vermeidung von Sprungstichen
 
 ## Text
 
