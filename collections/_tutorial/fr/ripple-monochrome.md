@@ -4,7 +4,7 @@ title: "fleur monochrome en broderie ondulée et remplissage selon contour"
 language: fr
 last_modified_at: 2022-06-05
 excerpt: "fichier exemple fleur monochrome"
-image: "/assets/images/tutorials/tutorial-preview-images/ripple-monochrome.jpg"
+image: "/assets/images/tutorials/tutorial-preview-images/ripple_monochrome.jpg"
 tutorial-type:
   - Sample File
 stitch-type:
