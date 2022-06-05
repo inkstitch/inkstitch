@@ -10,7 +10,6 @@ tutorial-type:
 stitch-type:
   - "Ripple Stitch"
   - "Contour Fill"
-  
 techniques:
 field-of-use:
 user-level:
