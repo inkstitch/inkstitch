@@ -25,7 +25,7 @@ user-level:
 - Calque Step 2
    -  Objets/ objet en chemin a été appliqué sur le petale 
 - Calque Step 3
-   -  Chemin /Séparé a été appliqué sur le pétale, puis les chemins recombinés deux par deux  pour obtenir les 9 pétales, ensuite regroupés
+   -  Chemin /Séparer a été appliqué sur le pétale, puis les chemins recombinés deux par deux  pour obtenir les 9 pétales, ensuite regroupés
 - Calque Step 4
   -  Tous les pétales sont paramétrés en simple broderie ondulée 
    
