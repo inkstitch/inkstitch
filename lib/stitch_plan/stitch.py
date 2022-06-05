@@ -10,7 +10,8 @@ from copy import deepcopy
 class Stitch(Point):
     """A stitch is a Point with extra information telling how to sew it."""
 
-    def __init__(self, x, y=None, color=None, jump=False, stop=False, trim=False, color_change=False, tie_modus=0, no_ties=False, tags=None):
+    def __init__(self, x, y=None, color=None, jump=False, stop=False, trim=False, color_change=False,
+                 tie_modus=0, force_lock_stitches=False, no_ties=False, tags=None):
         if isinstance(x, Stitch):
             # Allow creating a Stitch from another Stitch.  Attributes passed as
             # arguments will override any existing attributes.
@@ -28,6 +29,7 @@ class Stitch(Point):
         self.trim = trim
         self.stop = stop
         self.color_change = color_change
+        self.force_lock_stitches = force_lock_stitches
         self.tie_modus = tie_modus
         self.no_ties = no_ties
         self.tags = set()
@@ -35,15 +37,16 @@ class Stitch(Point):
         self.add_tags(tags or [])
 
     def __repr__(self):
-        return "Stitch(%s, %s, %s, %s, %s, %s, %s, %s, %s)" % (self.x,
-                                                               self.y,
-                                                               self.color,
-                                                               "JUMP" if self.jump else " ",
-                                                               "TRIM" if self.trim else " ",
-                                                               "STOP" if self.stop else " ",
-                                                               "TIE MODUS" if self.tie_modus else " ",
-                                                               "NO TIES" if self.no_ties else " ",
-                                                               "COLOR CHANGE" if self.color_change else " ")
+        return "Stitch(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)" % (self.x,
+                                                                   self.y,
+                                                                   self.color,
+                                                                   "JUMP" if self.jump else " ",
+                                                                   "TRIM" if self.trim else " ",
+                                                                   "STOP" if self.stop else " ",
+                                                                   "TIE MODUS" if self.tie_modus else " ",
+                                                                   "FORCE LOCK STITCHES" if self.force_lock_stitches else " ",
+                                                                   "NO TIES" if self.no_ties else " ",
+                                                                   "COLOR CHANGE" if self.color_change else " ")
 
     def add_tags(self, tags):
         for tag in tags:
@@ -68,7 +71,8 @@ class Stitch(Point):
         return tag in self.tags
 
     def copy(self):
-        return Stitch(self.x, self.y, self.color, self.jump, self.stop, self.trim, self.color_change, self.tie_modus, self.no_ties, self.tags)
+        return Stitch(self.x, self.y, self.color, self.jump, self.stop, self.trim, self.color_change,
+                      self.tie_modus, self.force_lock_stitches, self.no_ties, self.tags)
 
     def __json__(self):
         attributes = dict(vars(self))

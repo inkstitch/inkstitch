@@ -5,10 +5,11 @@
 
 from copy import copy
 
-from inkex import paths, transforms
+from inkex import paths, transforms, units
 
-from ..svg import get_guides
-from ..svg.tags import SVG_GROUP_TAG, SVG_PATH_TAG
+from ..svg import get_correction_transform, get_guides
+from ..svg.tags import (CONNECTION_END, SVG_GROUP_TAG, SVG_PATH_TAG,
+                        SVG_USE_TAG, XLINK_HREF)
 
 
 class Glyph(object):
@@ -38,6 +39,7 @@ class Glyph(object):
         self.node = self._process_group(group)
         self._process_bbox()
         self._move_to_origin()
+        self._process_commands()
 
     def _process_group(self, group):
         new_group = copy(group)
@@ -50,13 +52,21 @@ class Glyph(object):
                 new_group.append(self._process_group(node))
             else:
                 node_copy = copy(node)
+                transform = -transforms.Transform(get_correction_transform(node, True))
 
                 if "d" in node.attrib:
-                    node_copy.path = node.path.transform(node.composed_transform()).to_absolute()
+                    node_copy.path = node.path.transform(transform).to_absolute()
 
-                # Delete transforms from paths and groups, since we applied
-                # them to the paths already.
-                node_copy.attrib.pop('transform', None)
+                if not node.tag == SVG_USE_TAG:
+                    # Delete transforms from paths and groups, since we applied
+                    # them to the paths already.
+                    node_copy.attrib.pop('transform', None)
+                else:
+                    oldx = node.get('x', 0)
+                    oldy = node.get('y', 0)
+                    x, y = transform.apply_to_point((oldx, oldy))
+                    node_copy.set('x', x)
+                    node_copy.set('y', y)
 
                 new_group.append(node_copy)
 
@@ -72,10 +82,29 @@ class Glyph(object):
             self.baseline = 0
 
     def _process_bbox(self):
-        bbox = [paths.Path(node.get("d")).bounding_box() for node in self.node.iterdescendants(SVG_PATH_TAG)]
+        bbox = [paths.Path(node.get("d")).bounding_box() for node in self.node.iterdescendants(SVG_PATH_TAG) if not node.get(CONNECTION_END, None)]
         left, right = min([box.left for box in bbox]), max([box.right for box in bbox])
         self.width = right - left
         self.min_x = left
+
+    def _process_commands(self):
+        # Save object ids with commands in a dictionary: {object_id: [connector_id, symbol_id]}
+        self.commands = {}
+
+        for node in self.node.iter(SVG_USE_TAG):
+            xlink = node.get(XLINK_HREF, ' ')
+            if not xlink.startswith('#inkstitch_'):
+                continue
+
+            try:
+                connector = self.node.xpath(".//*[@inkscape:connection-start='#%s']" % node.get('id', ' '))[0]
+                command_object = connector.get(CONNECTION_END)[1:]
+                try:
+                    self.commands[command_object].append([connector.get_id(), node.get_id()])
+                except KeyError:
+                    self.commands[command_object] = [[connector.get_id(), node.get_id()]]
+            except IndexError:
+                pass
 
     def _move_to_origin(self):
         translate_x = -self.min_x
@@ -87,3 +116,11 @@ class Glyph(object):
             path = path.transform(transform)
             node.set('d', str(path))
             node.attrib.pop('transform', None)
+
+        # Move commands as well
+        for node in self.node.iter(SVG_USE_TAG):
+            oldx = units.convert_unit(node.get("x", 0), 'px', node.unit)
+            oldy = units.convert_unit(node.get("y", 0), 'px', node.unit)
+            x, y = transform.apply_to_point((oldx, oldy))
+            node.set('x', x)
+            node.set('y', y)

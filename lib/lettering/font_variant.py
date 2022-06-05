@@ -7,7 +7,8 @@ import os
 
 import inkex
 
-from ..svg.tags import INKSCAPE_GROUPMODE, INKSCAPE_LABEL
+from ..svg.tags import (INKSCAPE_GROUPMODE, INKSCAPE_LABEL, SVG_GROUP_TAG,
+                        SVG_PATH_TAG, SVG_USE_TAG)
 from .glyph import Glyph
 
 
@@ -60,7 +61,8 @@ class FontVariant(object):
 
     def _load_glyphs(self):
         svg_path = os.path.join(self.path, "%s.svg" % self.variant)
-        svg = inkex.load_svg(svg_path)
+        svg = inkex.load_svg(svg_path).getroot()
+        svg = self._apply_transforms(svg)
 
         glyph_layers = svg.xpath(".//svg:g[starts-with(@inkscape:label, 'GlyphLayer-')]", namespaces=inkex.NSS)
         for layer in glyph_layers:
@@ -78,6 +80,29 @@ class FontVariant(object):
         # style and presentation attribute.
         group.style.pop('display', None)
         group.attrib.pop('display', None)
+
+    def _apply_transforms(self, svg):
+        # apply transforms to paths and use tags
+        for element in svg.iterdescendants((SVG_PATH_TAG, SVG_USE_TAG)):
+            transform = element.composed_transform()
+            if element.tag == SVG_PATH_TAG:
+                path = element.path.transform(transform)
+                element.set_path(path)
+                element.attrib.pop("transform", None)
+
+            if element.tag == SVG_USE_TAG:
+                oldx = element.get('x', 0)
+                oldy = element.get('y', 0)
+                newx, newy = transform.apply_to_point((oldx, oldy))
+                element.set('x', newx)
+                element.set('y', newy)
+                element.attrib.pop("transform", None)
+
+        # remove transforms after they have been applied
+        for group in svg.iterdescendants(SVG_GROUP_TAG):
+            group.attrib.pop('transform', None)
+
+        return svg
 
     def __getitem__(self, character):
         if character in self.glyphs:

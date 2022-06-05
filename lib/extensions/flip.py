@@ -24,7 +24,7 @@ class Flip(InkstitchExtension):
         if not self.get_elements():
             return
 
-        if not self.svg.selected:
+        if not self.svg.selection:
             inkex.errormsg(_("Please select one or more satin columns to flip."))
             return
 

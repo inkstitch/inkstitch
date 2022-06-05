@@ -63,6 +63,15 @@ class ColorBlock(object):
         return len(self.stitches)
 
     @property
+    def estimated_thread(self):
+        previous_stitch = self.stitches[0]
+        length = 0
+        for stitch in self.stitches[1:]:
+            length += (stitch - previous_stitch).length()
+            previous_stitch = stitch
+        return length
+
+    @property
     def num_trims(self):
         """Number of trims in this color block."""
 

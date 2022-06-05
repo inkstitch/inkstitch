@@ -7,6 +7,7 @@
    height="250"
    viewBox="0 0 62.5 250"
    inkscape:version="1.2 (dc2aeda, 2022-05-15)"
+
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +24,7 @@
      showgrid="true"
      inkscape:zoom="2.8284271"
      inkscape:cx="122.8598"
-     inkscape:cy="90.156115"
+     inkscape:cy="90.1561
      inkscape:window-width="1440"
      inkscape:window-height="796"
      inkscape:window-x="0"
@@ -41,6 +42,7 @@
        inkscape:label="caps"
        id="guide934"
        inkscape:locked="false"
+
        inkscape:color="rgb(0,0,255)" />
     <sodipodi:guide
        position="0,800"
@@ -59,6 +61,7 @@
        orientation="0,1"
        inkscape:label="baseline"
        id="guide1055"
+
        inkscape:locked="false"
        inkscape:color="rgb(0,0,255)" />
     <inkscape:grid
@@ -1144,6 +1147,7 @@ Sandrine Nugue
        inkstitch:running_stitch_length_mm="2"
        inkstitch:staggers="1"
        inkstitch:ties="1" />
+
     <path
        style="fill:#c87137;stroke-width:0.25"
        d="M 149.85137,94.25 C 153.10137,94.75 156.60137,95.25 160.10137,95.25 176.85137,95.25 186.85137,92.25 188.60137,73.75 L 191.10137,46.5 H 205.85137 C 207.10137,57 209.85137,78.75 209.85137,92.25 209.85137,120.75 186.10137,133.5 159.85137,133.5 148.35137,133.5 141.85137,132.75 133.60137,131 Z"
@@ -1179,6 +1183,7 @@ Sandrine Nugue
        inkstitch:running_stitch_length_mm="2"
        inkstitch:staggers="1"
        inkstitch:ties="1" />
+
     <path
        style="display:inline;fill:#000000;stroke-width:0.25"
        d="M -33.148633,218.25 C -33.148633,236.75 -19.898633,252.5 1.6013667,252.5 23.351367,252.5 36.601367,237.25 37.101367,218.25 Z"
@@ -1278,7 +1283,9 @@ Sandrine Nugue
        inkstitch:running_stitch_length_mm="2"
        inkstitch:expand_mm="0.3"
        inkstitch:staggers="1"
+
        inkstitch:ties="1" />
+
     <path
        id="path5044"
        style="display:inline;fill:#ff0000;stroke-width:0.25"
@@ -1319,7 +1326,9 @@ Sandrine Nugue
        id="path15821"
        sodipodi:nodetypes="sssss"
        inkstitch:expand_mm="0.3"
+
        inkstitch:ties="1" />
+
     <path
        style="fill:#0000ff;stroke:none;stroke-width:0.25"
        d="M 129.35137,168 C 126.10137,168 123.60137,165.5 123.60137,162.5 123.60137,159.25 126.10137,156.75 129.35137,156.75 132.35137,156.75 134.85137,159.25 134.85137,162.5 134.85137,165.5 132.35137,168 129.35137,168 Z"

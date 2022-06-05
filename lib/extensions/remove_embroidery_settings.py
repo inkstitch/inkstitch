@@ -3,11 +3,10 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from inkex import NSS, Boolean
+from inkex import NSS, Boolean, ShapeElement
 
 from ..commands import find_commands
 from ..svg.svg import find_elements
-from ..svg.tags import EMBROIDERABLE_TAGS, SVG_GROUP_TAG
 from .base import InkstitchExtension
 
 
@@ -36,7 +35,7 @@ class RemoveEmbroiderySettings(InkstitchExtension):
                 self.remove_element(print_setting)
 
     def remove_params(self):
-        if not self.svg.selected:
+        if not self.svg.selection:
             xpath = ".//svg:path|.//svg:circle|.//svg:rect|.//svg:ellipse"
             elements = find_elements(self.svg, xpath)
             self.remove_inkstitch_attributes(elements)
@@ -45,23 +44,22 @@ class RemoveEmbroiderySettings(InkstitchExtension):
             self.remove_inkstitch_attributes(elements)
 
     def remove_commands(self):
-        if not self.svg.selected:
-            # we are not able to grab commands by a specific id
-            # so let's move through every object instead and see if it has a command
-            xpath = ".//svg:path|.//svg:circle|.//svg:rect|.//svg:ellipse"
-            elements = find_elements(self.svg, xpath)
+        if not self.svg.selection:
+            # remove intact command groups
+            xpath = ".//svg:g[starts-with(@id,'command_group')]"
+            groups = find_elements(self.svg, xpath)
+            for group in groups:
+                group.getparent().remove(group)
         else:
             elements = self.get_selected_elements()
-
-        if elements:
             for element in elements:
                 for command in find_commands(element):
                     group = command.connector.getparent()
                     group.getparent().remove(group)
 
-        if not self.svg.selected:
-            # remove standalone commands
-            standalone_commands = ".//svg:use[starts-with(@xlink:href, '#inkstitch_')]"
+        if not self.svg.selection:
+            # remove standalone commands and ungrouped object commands
+            standalone_commands = ".//svg:use[starts-with(@xlink:href, '#inkstitch_')]|.//svg:path[starts-with(@id, 'command_connector')]"
             self.remove_elements(standalone_commands)
 
             # let's remove the symbols (defs), we won't need them in the document
@@ -69,14 +67,7 @@ class RemoveEmbroiderySettings(InkstitchExtension):
             self.remove_elements(symbols)
 
     def get_selected_elements(self):
-        elements = []
-        for node in self.svg.selected.values():
-            if node.tag == SVG_GROUP_TAG:
-                for child in node.iterdescendants(EMBROIDERABLE_TAGS):
-                    elements.append(child)
-            else:
-                elements.append(node)
-        return elements
+        return self.svg.selection.get(ShapeElement)
 
     def remove_elements(self, xpath):
         elements = find_elements(self.svg, xpath)

@@ -29,17 +29,17 @@
 
 button {
   color: rgb(0, 51, 153);
-    align-items: flex-start;
-    text-align: center;
-    cursor: default;
-    background-color: buttonface;
-    box-sizing: border-box;
-    padding: 2px 6px 3px;
-    border-width: 2px;
-    border-style: outset;
-    border-color: buttonface;
-    border-image: initial;
-    margin-bottom: 5px;
+  align-items: flex-start;
+  text-align: center;
+  cursor: default;
+  background-color: buttonface;
+  box-sizing: border-box;
+  padding: 2px 6px 3px;
+  border-width: 2px;
+  border-style: outset;
+  border-color: buttonface;
+  border-image: initial;
+  margin-bottom: 5px;
 }
 
 .fa-spin-fast {
@@ -84,7 +84,8 @@ button {
 fieldset {
   border: 2px solid rgb(0, 51, 153);
   position: relative;
-  padding: 0 5px
+  padding: 0 5px;
+  font-size: 90%;
 }
 
 .window-controls {
@@ -172,10 +173,6 @@ fieldset.show-commands span {
   vertical-align: top;
 }
 
-fieldset.show-commands span.npp {
-  text-align: right;
-}
-
 fieldset.show-commands span:first-of-type {
   padding: 0 5px;
 }
@@ -186,6 +183,7 @@ button.pressed {
 
 .vue-slider {
   height: 25px !important;
+  margin-bottom: 14px;
 }
 
 .slider-container {

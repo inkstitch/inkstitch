@@ -3,17 +3,17 @@
     <name>Cleanup Document</name>
     <id>org.inkstitch.cleanup</id>
     <param name="description" type="description">Use this extension to remove small objects from the document.</param>
-    <param name="rm_fill" type="boolean" _gui-text="Remove Small Fill Areas"
-           _gui-description="Removes areas smaller than dedined by threshold.">true</param>
-    <param name="fill_threshold" type="int" _gui-text="Fill area threshold (px²)" min="1" max="800">20</param>
-    <param name="rm_stroke" type="boolean" _gui-text="Remove Small strokes"
-           _gui-description="Removes small strokes shorter than defined by threshold.">true</param>
-    <param name="stroke_threshold" type="int" _gui-text="Stroke threshold (px)" min="2" max="800">5</param>
+    <param name="rm_fill" type="boolean" gui-text="Remove Small Fill Areas"
+           gui-description="Removes areas smaller than dedined by threshold.">true</param>
+    <param name="fill_threshold" type="int" gui-text="Fill area threshold (px²)" min="1" max="800">20</param>
+    <param name="rm_stroke" type="boolean" gui-text="Remove Small strokes"
+           gui-description="Removes small strokes shorter than defined by threshold.">true</param>
+    <param name="stroke_threshold" type="int" gui-text="Stroke threshold (px)" min="2" max="800">5</param>
     <param name="extension" type="string" gui-hidden="true">cleanup</param>
     <effect>
         <object-type>all</object-type>
         <effects-menu>
-            <submenu name="Ink/Stitch">
+            <submenu name="Ink/Stitch" translatable="no">
                 <submenu name="Troubleshoot" />
             </submenu>
         </effects-menu>

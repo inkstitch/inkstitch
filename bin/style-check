@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Checks Python coding style based on our project's preferences.  Checks the
+# files passed on the command-line or everything if no files are passed.
+# Instead of files, "--diff" may be passed to check only the lines changed
+# by a diff piped to standard input.
+
+flake8 --count --max-complexity=10 --max-line-length=150 --statistics --exclude=pyembroidery,__init__.py,electron,build,src,dist "${@:-.}"

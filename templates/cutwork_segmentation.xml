@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Cutwork segmentation</name>
+    <id>org.inkstitch.cutwork_segmentation</id>
+    <param name="extension" type="string" gui-hidden="true">cutwork_segmentation</param>
+    <effect>
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu name="Ink/Stitch" translatable="no" />
+        </effects-menu>
+    </effect>
+    <param name="options" type="notebook">
+      <page name="options" gui-text="Cutwork Options">
+        <hbox>
+          <label>#1</label><spacer />
+          <param name="a_start" type="int" appearance="full" gui-text="start" precision="1" min="0" max="180">112</param><spacer />
+          <param name="a_end" type="int" appearance="full" gui-text="end" precision="1" min="0" max="180">157</param><spacer />
+          <param name="a_color" type="color" gui-text="color" appearance="colorbutton">0x990000ff</param>
+        </hbox>
+        <hbox>
+          <label>#2 </label><spacer />
+          <param name="b_start" type="int" appearance="full" gui-text="start" precision="1" min="0" max="180">158</param><spacer />
+          <param name="b_end" type="int" appearance="full" gui-text="end" precision="1" min="0" max="180">23</param><spacer />
+          <param name="b_color" type="color" gui-text="color" appearance="colorbutton">0xe5a50aff</param>
+        </hbox>
+        <hbox>
+          <label>#3 </label><spacer />
+          <param name="c_start" type="int" appearance="full" gui-text="start" precision="1" min="0" max="180">22</param><spacer />
+          <param name="c_end" type="int" appearance="full" gui-text="end" precision="1" min="0" max="180">68</param><spacer />
+          <param name="c_color" type="color" gui-text="color" appearance="colorbutton">0x009900ff</param>
+        </hbox>
+        <hbox>
+          <label>#4 </label><spacer />
+          <param name="d_start" type="int" appearance="full" gui-text="start" precision="1" min="0" max="180">67</param><spacer />
+          <param name="d_end" type="int" appearance="full" gui-text="end" precision="1" min="0" max="180">113</param><spacer />
+          <param name="d_color" type="color" gui-text="color" appearance="colorbutton">0x000099ff</param>
+        </hbox>
+        <spacer />
+        <param name="sort_by_color" type="boolean" gui-text="Sort elements by color">true</param>
+        <param name="keep_original" type="boolean" gui-text="Keep original">false</param>
+      </page>
+      <page name="info" gui-text="Help">
+        <label appearance="header">This extension separates a path depending on the angle.</label>
+        <label>* If you don't want to use 4 needles, set both angle values to 0 for the rest of the rows.</label>
+        <label>* A horizontal line has an angle of 0 degrees.</label>
+        <label>* After the conversion through this extension, don't rotate your design again.</label>
+        <separator />
+        <label appearance="header">Please adjust angle and color options to your specific needle kit.</label>
+        <label>On our website we have collected some common setups.</label>
+        <label appearance="url">https://inkstitch.org/docs/cutwork/</label>
+      </page>
+    </param>
+    <script>
+        {{ command_tag | safe }}
+    </script>
+</inkscape-extension>

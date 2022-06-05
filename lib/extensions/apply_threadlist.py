@@ -14,7 +14,12 @@ from ..threads import ThreadCatalog
 from .base import InkstitchExtension
 
 
-class ImportThreadlist(InkstitchExtension):
+class ApplyThreadlist(InkstitchExtension):
+    '''
+    Applies colors of a thread list to elements
+    Count of colors and elements should fit together
+    Use case: reapply colors to e.g. a dst file
+    '''
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
         self.arg_parser.add_argument("-f", "--filepath", type=str, default="", dest="filepath")
@@ -23,7 +28,7 @@ class ImportThreadlist(InkstitchExtension):
 
     def effect(self):
         # Remove selection, we want all the elements in the document
-        self.svg.selected.clear()
+        self.svg.selection.clear()
 
         if not self.get_elements():
             return

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Split text</name>
+    <id>org.inkstitch.palette_split_text</id>
+    <param name="extension" type="string" gui-hidden="true">palette_split_text</param>
+    <effect needs-live-preview="false">
+        <object-type>all</object-type>
+        <effects-menu>
+          <submenu name="Ink/Stitch" translatable="no">
+            <submenu name="Thread Color Management">
+              <submenu name="Generate Palette"/>
+            </submenu>
+          </submenu>
+        </effects-menu>
+    </effect>
+    <param name="line-height" type="int" min="1" max="100" gui-text="Line Height">6</param>
+    <script>
+        {{ command_tag | safe }}
+    </script>
+</inkscape-extension>

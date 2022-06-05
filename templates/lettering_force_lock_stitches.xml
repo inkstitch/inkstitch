@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Force lock stitches</name>
+    <id>org.inkstitch.force_lock_stitches</id>
+    <param name="extension" type="string" gui-hidden="true">lettering_force_lock_stitches</param>
+    <effect needs-live-preview="false">
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu name="Ink/Stitch" translatable="no">
+                <submenu name="Font Management" />
+            </submenu>
+        </effects-menu>
+    </effect>
+    <param name="force-lock-stitches" type="description" indent="1" >
+        Small fonts will sometimes unravel if threads are cut after the embroidery machine has finished the work.
+        Therefore it is important that also diacritics with a smaller distance to the font body than defined by the collapse length value (default: 3mm) have lock stitches.
+        This can be achieved by adding a forced lock stitch attribute to them.
+    </param>
+    <separator />
+    <param name="extension-description" type="description" indent="1">
+        This extension has been build to help font authors to define "force lock stitches"-attributes automatically if they are placed in a predefined distance to the next object.
+    </param>
+    <param indent="1" name="min_distance" type="float" gui-text="Minimum distance (mm)" min="0" max="3">1</param>
+    <param indent="1" name="max_distance" type="float" gui-text="Minimum distance (mm)" min="1" max="10">3</param>
+    <separator />
+    <param indent="1" name="last_element" type="boolean" gui-text="Add force lock stitches attribute to the last element of each glyph">false</param>
+    <script>
+        {{ command_tag | safe }}
+    </script>
+</inkscape-extension>

@@ -24,7 +24,7 @@ def compose_parent_transforms(node, mat):
 
     trans = node.get('transform')
     if trans:
-        mat = inkex.transforms.Transform(trans) * mat
+        mat = inkex.transforms.Transform(trans) @ mat
     if node.getparent() is not None:
         if node.getparent().tag in [SVG_GROUP_TAG, SVG_LINK_TAG]:
             mat = compose_parent_transforms(node.getparent(), mat)
@@ -47,7 +47,7 @@ def get_node_transform(node):
 
     # add in the transform implied by the viewBox
     viewbox_transform = get_viewbox_transform(node.getroottree().getroot())
-    transform = viewbox_transform * transform
+    transform = viewbox_transform @ transform
 
     return transform
 
@@ -74,6 +74,12 @@ def get_correction_transform(node, child=False):
 
 
 def line_strings_to_csp(line_strings):
+    try:
+        # This lets us accept a MultiLineString or a list.
+        line_strings = line_strings.geoms
+    except AttributeError:
+        pass
+
     return point_lists_to_csp(ls.coords for ls in line_strings)
 
 

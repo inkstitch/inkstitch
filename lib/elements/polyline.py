@@ -47,19 +47,9 @@ class Polyline(EmbroideryElement):
         return self.get_boolean_param("polyline")
 
     @property
-    def points(self):
-        # example: "1,2 0,0 1.5,3 4,2"
-
-        points = self.node.get('points').strip()
-        points = points.split(" ")
-        points = [[float(coord) for coord in point.split(",")] for point in points]
-
-        return points
-
-    @property
     @cache
     def shape(self):
-        return shgeo.LineString(self.points)
+        return shgeo.LineString(self.path)
 
     @property
     def path(self):
@@ -68,9 +58,12 @@ class Polyline(EmbroideryElement):
         # svg transforms that is in our superclass, we'll convert the polyline
         # to a degenerate cubic superpath in which the bezier handles are on
         # the segment endpoints.
-        path = self.node.get_path()
+        if self.node.get('points', None):
+            path = self.node.get_path()
+        else:
+            # Set path to (0, 0) for empty polylines
+            path = 'M 0 0'
         path = Path(path).to_superpath()
-
         return path
 
     @property
@@ -99,7 +92,7 @@ class Polyline(EmbroideryElement):
         return stitches
 
     def validation_warnings(self):
-        yield PolylineWarning(self.points[0])
+        yield PolylineWarning(self.path[0][0][0])
 
     def to_stitch_groups(self, last_patch):
         patch = StitchGroup(color=self.color)

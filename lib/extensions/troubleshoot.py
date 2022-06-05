@@ -128,9 +128,13 @@ class Troubleshoot(InkstitchExtension):
         self.warning_group = warning_group
         self.type_warning_group = type_warning_group
 
-    def add_descriptions(self, problem_types):
+    def add_descriptions(self, problem_types):  # noqa: C901
         svg = self.document.getroot()
-        text_x = str(float(svg.get('viewBox', '0 0 800 0').split(' ')[2]) + 5.0)
+
+        # We could use svg.viewport_width, but then we would need to do unit conversions,
+        # so let's stay with parsing the viewbox by ourselves
+        # viewbox values are either separated through white space or commas
+        text_x = str(float(svg.get('viewBox', '0 0 800 0').replace(",", " ").split()[2]) + 5.0)
 
         text_container = inkex.TextElement(attrib={
             "x": text_x,
@@ -170,6 +174,8 @@ class Troubleshoot(InkstitchExtension):
                 text.append([problem.name, "font-weight: bold; fill: %s;" % text_color])
                 text.append([problem.description, "font-size: 3px;"])
                 text.append(["", ""])
+                if problem.steps_to_solve:
+                    text.append([_("Possible solutions"), "font-weight: bold; text-decoration: underline; font-size: 4px;"])
                 for step in problem.steps_to_solve:
                     text.append([step, "font-size: 4px;"])
                 text.append(["", ""])

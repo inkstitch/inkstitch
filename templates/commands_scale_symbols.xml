@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Scale Command Symbols</name>
+    <id>org.inkstitch.commands_scale_symbols</id>
+    <param name="extension" type="string" gui-hidden="true">commands_scale_symbols</param>
+    <param name="size" type="float" precision="1" min="0" max="2" gui-text="Size" appearance="full">1.0</param>
+    <effect>
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu name="Ink/Stitch" translatable="no">
+                <submenu name="Commands">
+                    <submenu name="View" />
+                </submenu>
+            </submenu>
+        </effects-menu>
+    </effect>
+    <script>
+        {{ command_tag | safe }}
+    </script>
+</inkscape-extension>

@@ -11,7 +11,10 @@ from ..i18n import _
 
 def get_inkstitch_version():
     if getattr(sys, 'frozen', False) and hasattr(sys, '_MEIPASS'):
-        version = realpath(join(sys._MEIPASS, "..", "VERSION"))
+        if sys.platform == "darwin":
+            version = realpath(join(sys._MEIPASS, "..", 'Resources', "VERSION"))
+        else:
+            version = realpath(join(sys._MEIPASS, "..", "VERSION"))
     else:
         version = realpath(join(realpath(__file__), "..", "..", "..", 'VERSION'))
     if isfile(version):

@@ -35,8 +35,8 @@ def build_environment():
             env.globals["command_tag"] = '<command location="inx">../bin/inkstitch.exe</command>'
             env.globals["image_path"] = '../bin/icons/'
         elif sys.platform == "darwin":
-            env.globals["command_tag"] = '<command location="inx">../MacOS/inkstitch</command>'
-            env.globals["image_path"] = '../MacOS/icons/'
+            env.globals["command_tag"] = '<command location="inx">../../MacOS/inkstitch</command>'
+            env.globals["image_path"] = '../../Resources/icons/'
         else:
             env.globals["command_tag"] = '<command location="inx">../bin/inkstitch</command>'
             env.globals["image_path"] = '../bin/icons/'

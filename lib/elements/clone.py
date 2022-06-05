@@ -5,21 +5,14 @@
 
 from math import atan, degrees
 
-import inkex
-
-from ..commands import is_command, is_command_symbol
+from ..commands import is_command_symbol
 from ..i18n import _
 from ..svg.path import get_node_transform
 from ..svg.svg import find_elements
-from ..svg.tags import (EMBROIDERABLE_TAGS, INKSTITCH_ATTRIBS,
-                        SVG_POLYLINE_TAG, SVG_USE_TAG, XLINK_HREF)
+from ..svg.tags import (EMBROIDERABLE_TAGS, INKSTITCH_ATTRIBS, SVG_USE_TAG,
+                        XLINK_HREF)
 from ..utils import cache
-from .auto_fill import AutoFill
 from .element import EmbroideryElement, param
-from .fill import Fill
-from .polyline import Polyline
-from .satin_column import SatinColumn
-from .stroke import Stroke
 from .validation import ObjectTypeWarning, ValidationWarning
 
 
@@ -70,28 +63,8 @@ class Clone(EmbroideryElement):
         return self.get_float_param('angle', 0)
 
     def clone_to_element(self, node):
-        # we need to determine if the source element is polyline, stroke, fill or satin
-        element = EmbroideryElement(node)
-
-        if node.tag == SVG_POLYLINE_TAG:
-            return [Polyline(node)]
-
-        elif element.get_boolean_param("satin_column") and self.get_clone_style("stroke", self.node):
-            return [SatinColumn(node)]
-        else:
-            elements = []
-            if element.get_style("fill", "black") and not element.get_style("stroke", 1) == "0":
-                if element.get_boolean_param("auto_fill", True):
-                    elements.append(AutoFill(node))
-                else:
-                    elements.append(Fill(node))
-            if element.get_style("stroke", self.node) is not None:
-                if not is_command(element.node):
-                    elements.append(Stroke(node))
-            if element.get_boolean_param("stroke_first", False):
-                elements.reverse()
-
-            return elements
+        from .utils import node_to_elements
+        return node_to_elements(node, True)
 
     def to_stitch_groups(self, last_patch=None):
         patches = []
@@ -128,7 +101,7 @@ class Clone(EmbroideryElement):
         return patches
 
     def get_clone_style(self, style_name, node, default=None):
-        style = inkex.styles.AttrFallbackStyle(node).get(style_name) or default
+        style = node.style[style_name] or default
         return style
 
     def center(self, source_node):

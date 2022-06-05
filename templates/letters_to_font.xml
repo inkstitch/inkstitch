@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Letters to font</name>
+    <id>org.inkstitch.letters_to_font</id>
+    <param name="extension" type="string" gui-hidden="true">letters_to_font</param>
+    <effect needs-live-preview="false">
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu name="Ink/Stitch" translatable="no">
+                <submenu name="Font Management" />
+            </submenu>
+        </effects-menu>
+    </effect>
+    <param name="header" type="description" appearance="header" indent="1" >
+        Includes all letters of a predigitized embroidery font (one file for each letter) into the document in order to make it available for the Ink/Stitch lettering system.
+    </param>
+    <param name="file-description" type="description" indent="1" >
+        Embroidery files need to have the name of the letter right before the file extension. E.g. A.dst or Example_Font_A.dst will be recognized as the letter A.
+    </param>
+    <separator />
+    <spacer />
+    <param name="file-format" type="optiongroup" appearance="combo" gui-text="File format" indent="1">
+         {% for format, description, mimetype, category in formats %}
+         <option value="*.{{ format | upper }}" translatable="no">{{ format | upper }}</option>
+         {% endfor %}
+    </param>
+    <param type="path" name="font-dir" gui-text="Font directory" indent="1" mode="folder" filetypes="svg"/>
+    <spacer />
+    <param type="boolean" name="import-commands" gui-text="Import commands" indent="1">false</param>
+    <spacer />
+    <separator />
+    <param name="file-description" type="description" indent="1" >
+        &#9888; After running this function, drag the baseline into the desired position and place the letters accordingly.
+                           Save your font in a separate folder. Then generate the json file (with "Autoroute Satin" unchecked).
+    </param>
+    <separator />
+    <script>
+        {{ command_tag | safe }}
+    </script>
+</inkscape-extension>

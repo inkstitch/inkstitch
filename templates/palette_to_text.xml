@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Palette to text</name>
+    <id>org.inkstitch.palette_to_text</id>
+    <effect needs-live-preview="false">
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu name="Ink/Stitch" translatable="no">
+                <submenu name="Thread Color Management" />
+            </submenu>
+        </effects-menu>
+    </effect>
+    <param name="extension" type="string" gui-hidden="true">palette_to_text</param>
+    <param name="notebook" type="notebook">
+      <page name="options" gui-text="Options">
+        <label>Choose a .gpl color palette file to import colors as text elements.</label>
+        <param name="file" type="path" gui-text="Choose file" mode="file" filetypes="gpl"/>
+      </page>
+      <page name="info" gui-text="Help">
+        <label appearance="header">Palette to text</label>
+        <label>Import a .gpl palette into Inkscape as text elements to edit color entries.</label>
+        <separator />
+        <label>Read more on our webiste:</label>
+        <label appearance="url">https://inkstitch.org/docs/thread-color#palette-to-text</label>
+      </page>
+    </param>
+    <script>
+        {{ command_tag | safe }}
+    </script>
+</inkscape-extension>

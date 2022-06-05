@@ -4,13 +4,13 @@
     <id>org.inkstitch.convert_to_stroke</id>
     <param name="extension" type="string" gui-hidden="true">convert_to_stroke</param>
     <param name="description" type="description">Converts a satin column into a running stitch.</param>
-    <param name="keep_satin" type="boolean" _gui-text="Keep satin column"
-       _gui-description="Do not delete original satin column.">false</param>
+    <param name="keep_satin" type="boolean" gui-text="Keep satin column"
+       gui-description="Do not delete original satin column.">false</param>
     <effect>
         <object-type>all</object-type>
         <effects-menu>
-            <submenu name="Ink/Stitch">
-                <submenu name="Satin Tools" />
+            <submenu name="Ink/Stitch" translatable="no">
+                <submenu name="Tools: Satin" />
             </submenu>
         </effects-menu>
     </effect>

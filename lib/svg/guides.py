@@ -3,11 +3,10 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from inkex import transforms
+from inkex.units import convert_unit
 
 from ..utils import Point, cache, string_to_floats
 from .tags import INKSCAPE_LABEL, SODIPODI_GUIDE, SODIPODI_NAMEDVIEW
-from .units import get_doc_size, get_viewbox_transform
 
 
 class InkscapeGuide(object):
@@ -20,16 +19,15 @@ class InkscapeGuide(object):
     def _parse(self):
         self.label = self.node.get(INKSCAPE_LABEL, "")
 
-        doc_size = list(get_doc_size(self.svg))
-
-        # convert the size from viewbox-relative to real-world pixels
-        viewbox_transform = get_viewbox_transform(self.svg)
-        viewbox_transform = transforms.Transform(-transforms.Transform(viewbox_transform)).apply_to_point(doc_size)
-
-        self.position = Point(*string_to_floats(self.node.get('position')))
+        doc_size = self.svg.get_page_bbox()
 
         # inkscape's Y axis is reversed from SVG's, and the guide is in inkscape coordinates
-        self.position.y = doc_size[1] - self.position.y
+        self.position = Point(*string_to_floats(self.node.get('position')))
+        self.position.y = doc_size.y.size - self.position.y
+
+        # convert units to px
+        unit = self.svg.unit
+        self.position.y = convert_unit(self.position.y, 'px', unit)
 
         # This one baffles me.  I think inkscape might have gotten the order of
         # their vector wrong?

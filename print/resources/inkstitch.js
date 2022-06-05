@@ -146,6 +146,16 @@ function writeEstimatedTime( selector, estimatedTime ) {
   $(selector).text( hours + ':' + minutes + ':' + seconds );
 }
 
+function setEstimatedThread() {
+  var multiplyThread = ($('#multiply-thread').val() == '') ? 2 : parseInt($('#multiply-thread').val());
+  var estimatedThread = (parseFloat($('#estimated-thread').text()) * multiplyThread).toFixed(2);
+  var multiplyBobbin = ($('#multiply-bobbin').val() == '') ? 1 : parseInt($('#multiply-bobbin').val());
+  var estimatedBobbin = (parseFloat($('#estimated-thread').text()) * multiplyBobbin).toFixed(2);
+  $('.total-estimated-thread').each(function(index, item) {
+    $(this).text(estimatedThread + "m / " + estimatedBobbin + "m");
+  })
+}
+
 // Scale SVG (fit || full size)
 function scaleSVG(element, scale = 'fit') {
 
@@ -596,6 +606,20 @@ $(function() {
     $('.modal').hide();
   });
 
+  // Estimated thread and bobbin
+  $('#multiply-thread').on('input initialize', function() {
+    setEstimatedThread();
+  }).on('change', function() {
+    var field_name = $(this).attr('data-field-name');
+    $.postJSON('/settings/' + field_name, {value: $(this).val()});
+  });
+  $('#multiply-bobbin').on('input initialize', function() {
+    setEstimatedThread();
+  }).on('change', function() {
+    var field_name = $(this).attr('data-field-name');
+    $.postJSON('/settings/' + field_name, {value: $(this).val()});
+  });
+
   // View selection checkboxes
   $(':checkbox.view').on('change initialize', function() {
     var field_name = $(this).attr('data-field-name');
@@ -684,6 +708,7 @@ $(function() {
 
   setTimeout(function() {
     setEstimatedTime();
+    setEstimatedThread();
   }, 100);
 
   $('button.svg-realistic').click(function(e){
@@ -728,6 +753,8 @@ $(function() {
     settings["time-cld"] = $("[data-field-name='time-cld']").val();
     settings["time-opo"] = $("[data-field-name='time-opo']").val();
     settings["time-opd"] = $("[data-field-name='time-opd']").val();
+
+    settings["multiply-thread"] = $("[data-field-name='multiply-thread']").val();
 
     $.postJSON('/defaults', {'value': settings});
   });

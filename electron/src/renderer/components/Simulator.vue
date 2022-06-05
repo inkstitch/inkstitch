@@ -215,7 +215,7 @@
               <input id="stop-checkbox" type="checkbox" v-model="showStops"/>
               <label for="stop-checkbox"><font-awesome-icon icon="pause"/> <translate>stops</translate></label>
             </span>
-            <span class="npp">
+            <span>
               <input id="npp-checkbox" type="checkbox" v-model="showNeedlePenetrationPoints"/>
               <label for="npp-checkbox">
                 <font-awesome-layers>
@@ -224,6 +224,9 @@
                 </font-awesome-layers>
                 <span v-translate>needle points</span>
               </label>
+              <br />
+              <input id="render-jumps-checkbox" type="checkbox" v-model="renderJumps"/>
+              <label for="render-jumps-checkbox"><font-awesome-icon icon="link"/><span v-translate>render jumps</span></label>
             </span>
             <span>
               <input id="realistic-checkbox" type="checkbox" v-model="showRealisticPreview"/>

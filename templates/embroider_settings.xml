@@ -6,15 +6,15 @@
     <effect needs-live-preview="false">
         <object-type>all</object-type>
         <effects-menu>
-            <submenu name="Ink/Stitch" />
+            <submenu name="Ink/Stitch" translatable="no" />
         </effects-menu>
     </effect>
     <param name="output_settings" type="description" appearance="header">
         Output Settings
     </param>
-    <param name="collapse_len_mm" type="float" precision="1" min="0" max="10" 
-           _gui-text="Collapse length (mm)" 
-           _gui-description="Jump stitches smaller than this will be treated as normal stitches.">3</param>
+    <param name="collapse_len_mm" type="float" precision="1" min="0" max="10"
+           gui-text="Collapse length (mm)"
+           gui-description="Jump stitches smaller than this will be treated as normal stitches.">3</param>
     <script>
         {{ command_tag | safe }}
     </script>

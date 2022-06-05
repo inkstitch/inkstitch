@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Generate Color Palette</name>
+    <id>org.inkstitch.generate_palette</id>
+    <param name="extension" type="string" gui-hidden="true">generate_palette</param>
+    <effect needs-live-preview="false">
+        <object-type>all</object-type>
+        <effects-menu>
+          <submenu name="Ink/Stitch" translatable="no">
+            <submenu name="Thread Color Management">
+              <submenu name="Generate Palette"/>
+            </submenu>
+          </submenu>
+        </effects-menu>
+    </effect>
+    <param name="options" type="notebook">
+      <page name="options" gui-text="Generate Palette Options">
+        <param name="palette_name" type="string" gui-text="Palette name"></param>
+        <spacer />
+        <param name="palette_folder" type="path" mode="folder" gui-text="Folder (optional):"></param>
+        <spacer />
+        <label appearance="header">⚠ Restart Inkscape to use your color palette.</label>
+      </page>
+      <page name="info" gui-text="Help">
+        <label appearance="header">Generate a custom color palette for Ink/Stitch</label>
+        <label>Sadly we can not sort color swatches in Inkscape.
+               With this extension you can export colors from text elements in their stacking order.
+               The text will be used as the color name and number.</label>
+        <separator />
+        <label>On our website we describe all necessary steps to generate a color palette for Ink/Stitch.</label>
+        <label appearance="url">https://inkstitch.org/docs/thread-color#generate-color-palette</label>
+      </page>
+    </param>
+    <script>
+        {{ command_tag | safe }}
+    </script>
+</inkscape-extension>

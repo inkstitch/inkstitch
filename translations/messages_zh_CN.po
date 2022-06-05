@@ -2,340 +2,596 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-08-17 00:51+0000\n"
-"PO-Revision-Date: 2021-09-16 00:57\n"
+"POT-Creation-Date: 2022-05-24 18:25+0000\n"
+"PO-Revision-Date: 2022-06-01 02:43\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.1\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: easygettext\n"
 "Project-Id-Version: \n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-24 18:25+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Crowdin-Project: inkstitch\n"
 "X-Crowdin-Project-ID: 299419\n"
 "X-Crowdin-Language: zh-CN\n"
 "X-Crowdin-File: /main/messages.po\n"
 "X-Crowdin-File-ID: 8\n"
-"Language: zh_CN\n"
 
-#. name of font in fonts/amita
+#. name of font in fonts/Brockscript
 #: inkstitch-fonts-metadata.py:2
-msgid "Amita"
+msgid "Brock Script"
 msgstr ""
 
-#. description of font in fonts/amita
+#. description of font in fonts/Brockscript
 #: inkstitch-fonts-metadata.py:4
+msgid "Brock Script is a decorative satin column manuscript font of size approximatively 40mm. It can be enlarged up to 250%. It contains 118 glyphs, covering most western european languages needs.More decorative options are hidden in the µ glyph"
+msgstr ""
+
+#. name of font in fonts/abecedaire
+#: inkstitch-fonts-metadata.py:6
+msgid "Abécédaire AGS"
+msgstr ""
+
+#. description of font in fonts/abecedaire
+#: inkstitch-fonts-metadata.py:8
+msgid "Abécédaire AGS is a crossstitch font of size 14mm. The font can be scaled down to 75% and up to 200%"
+msgstr ""
+
+#. name of font in fonts/amitaclo
+#: inkstitch-fonts-metadata.py:10
+msgid "Amitaclo"
+msgstr ""
+
+#. description of font in fonts/amitaclo
+#: inkstitch-fonts-metadata.py:12
 #, python-format
-msgid "Amita bold. The capital M is 25.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 160%. Every satin has zigzag underlay"
+msgid "The capital M is 25.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 160%. Every satin has zigzag underlay"
+msgstr ""
+
+#. name of font in fonts/amitaclo_small
+#: inkstitch-fonts-metadata.py:14
+msgid "Amitaclo small"
+msgstr ""
+
+#. description of font in fonts/amitaclo_small
+#: inkstitch-fonts-metadata.py:16
+msgid "This font is an altered version  of Amitaclo, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Amitaclo font between 25% (for a 7 mm font ) and 55 % (for a 16mm font)."
 msgstr ""
 
 #. name of font in fonts/apex_lake
-#: inkstitch-fonts-metadata.py:6
+#: inkstitch-fonts-metadata.py:18
 msgid "Apex Lake"
 msgstr ""
 
 #. description of font in fonts/apex_lake
-#: inkstitch-fonts-metadata.py:8
-msgid "Police de lettrines 59.4 par 57.8mm. Majuscules, chiffres, ! et ?"
+#: inkstitch-fonts-metadata.py:20
+msgid "Apex Lake is a large ornate capital letters font of size approximatively 60mm. It contains 38 glyphs : A-Z,0-9,! and ?. It can be reduced down to 80% and enlarged up to 130%"
 msgstr ""
 
-#. name of font in fonts/baumans
-#: inkstitch-fonts-metadata.py:10
-msgid "Baumans"
+#. name of font in fonts/aventurina
+#: inkstitch-fonts-metadata.py:22
+msgid "Aventurina"
 msgstr ""
 
-#. description of font in fonts/baumans
-#: inkstitch-fonts-metadata.py:12
+#. description of font in fonts/aventurina
+#: inkstitch-fonts-metadata.py:24
+msgid "Aventurina is a script satin font of size approximatively 20mm. The glyphs cover most Western European languages. The font can be scaled down to 60% and up to 150% "
+msgstr ""
+
+#. name of font in fonts/baumans_FI
+#: inkstitch-fonts-metadata.py:26
+msgid "Baumans FI"
+msgstr ""
+
+#. description of font in fonts/baumans_FI
+#: inkstitch-fonts-metadata.py:28
 #, python-format
 msgid "The capital M is 22.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 150%. Every satin has zigzag underlay"
 msgstr ""
 
+#. name of font in fonts/cherryforinkstitch
+#: inkstitch-fonts-metadata.py:30
+msgid "Cherry for inkstitch"
+msgstr ""
+
+#. description of font in fonts/cherryforinkstitch
+#: inkstitch-fonts-metadata.py:32
+msgid "Cherry for inkstitch is a decorative satin column font of size approximatively 40mm. It can be reduced down to 80% and enlarged up to 180%. It contains 74 glyphs."
+msgstr ""
+
+#. name of font in fonts/cherryforkaalleen
+#: inkstitch-fonts-metadata.py:34
+msgid "Cherry for Kaalleen"
+msgstr ""
+
+#. description of font in fonts/cherryforkaalleen
+#: inkstitch-fonts-metadata.py:36
+msgid "Cherry for Kaalleen is a large decorative font of size approximatively 75mm. It contains 36 glyphs including the numbers and the 26 capitals  A-Z. It can be reduced down to 80% and enlarged up to 130%"
+msgstr ""
+
 #. name of font in fonts/chopin
-#: inkstitch-fonts-metadata.py:14
+#: inkstitch-fonts-metadata.py:38
 msgid "Chopin Script"
 msgstr ""
 
 #. description of font in fonts/chopin
-#: inkstitch-fonts-metadata.py:16
+#: inkstitch-fonts-metadata.py:40
 #, python-format
 msgid "The capital M is 38.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 120%. Every satin has zigzag underlay"
 msgstr ""
 
 #. name of font in fonts/coronaviral
-#: inkstitch-fonts-metadata.py:18
+#: inkstitch-fonts-metadata.py:42
 msgid "Coronaviral"
 msgstr ""
 
 #. description of font in fonts/coronaviral
-#: inkstitch-fonts-metadata.py:20
+#: inkstitch-fonts-metadata.py:44
 msgid "A font created with manual sitch. Do not change the size or very little. The capital em is 22mm wide at 100%"
 msgstr ""
 
 #. name of font in fonts/dejavufont
-#: inkstitch-fonts-metadata.py:22
+#: inkstitch-fonts-metadata.py:46
 msgid "Dejavu Serif"
 msgstr ""
 
 #. description of font in fonts/dejavufont
-#: inkstitch-fonts-metadata.py:24
+#: inkstitch-fonts-metadata.py:48
 #, python-format
 msgid "DejaVu Serif Condensed. The capital M is 19,8 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 150%.  Every satin has center-walk underlay."
 msgstr ""
 
 #. name of font in fonts/digory_doodles_bean
-#: inkstitch-fonts-metadata.py:26
+#: inkstitch-fonts-metadata.py:50
 msgid "Digory Doodles Bean"
 msgstr ""
 
 #. description of font in fonts/digory_doodles_bean
-#: inkstitch-fonts-metadata.py:28
-msgid "All letteres have mixed satin and bean stitch; The capital M is 16mm tall. The small x is 7 mm"
+#: inkstitch-fonts-metadata.py:52
+msgid "All letters have mixed satin and bean stitch. The capital M is 16mm tall. The small x is 7 mm."
 msgstr ""
 
 #. name of font in fonts/emilio_20
-#: inkstitch-fonts-metadata.py:30
+#: inkstitch-fonts-metadata.py:54
 msgid "Emilio 20"
 msgstr ""
 
 #. description of font in fonts/emilio_20
-#: inkstitch-fonts-metadata.py:32
+#: inkstitch-fonts-metadata.py:56
 #, python-format
-msgid "Emilio 20 is a font with capital only ans numbers. M is 48.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 140%. Every satin has zigzag underlay"
+msgid "Emilio 20 is a font with capital only and numbers. M is 48.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 140%. Every satin has zigzag underlay"
 msgstr ""
 
-#. name of font in fonts/espresso_dolce
-#: inkstitch-fonts-metadata.py:34
-msgid "Espresso Dolce"
+#. name of font in fonts/emilio_20_tricolore
+#: inkstitch-fonts-metadata.py:58
+msgid "EMILIO 20 TRICOLORE"
 msgstr ""
 
-#. description of font in fonts/espresso_dolce
-#: inkstitch-fonts-metadata.py:36
-msgid "The capital M is 16.2 mm high at 100 scale. Every satin has zigzag underlay. x is 11.5 mm high, q is 17.5 mm high, l is 17.2 mm high."
+#. description of font in fonts/emilio_20_tricolore
+#: inkstitch-fonts-metadata.py:60
+msgid "Emilio 20 tricolore is a large tricolor fill stitches and satin columns font of  size approximately 100mm. It contains 36 glyphs including the numbers and the 26 capitals  A-Z. It can be reduced down to 90% and enlarged up to 120%"
+msgstr ""
+
+#. name of font in fonts/espresso_KOR
+#: inkstitch-fonts-metadata.py:62
+msgid "Espresso KOR"
+msgstr ""
+
+#. description of font in fonts/espresso_KOR
+#: inkstitch-fonts-metadata.py:64
+msgid "The capital M is 16.2 mm high at 100 scale. Every satin has zigzag underlay. x is 11.5 mm high, q is 17.5 mm high, l is 17.2 mm high. The font may be scaled up to 200% and down to 80%"
+msgstr ""
+
+#. name of font in fonts/espresso_tiny
+#: inkstitch-fonts-metadata.py:66
+msgid "Espresso tiny"
+msgstr ""
+
+#. description of font in fonts/espresso_tiny
+#: inkstitch-fonts-metadata.py:68
+msgid "This font is an altered version  of Espresso KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Espresso font between 25% (for a 5mm font ) and 55 % (for a 11mm font)."
+msgstr ""
+
+#. name of font in fonts/excalibur_KOR
+#: inkstitch-fonts-metadata.py:70
+msgid "Excalibur KOR"
+msgstr ""
+
+#. description of font in fonts/excalibur_KOR
+#: inkstitch-fonts-metadata.py:72
+msgid "Excalibur KOR is a small satin column manuscript font of size approximatively 20mm. It can be reduced down to 80% and enlarged up to 140%. It contains 144 glyphs, covering most western European languages needs."
+msgstr ""
+
+#. name of font in fonts/fold_inkstitch
+#: inkstitch-fonts-metadata.py:74
+msgid "Fold Ink/Stitch"
+msgstr ""
+
+#. description of font in fonts/fold_inkstitch
+#: inkstitch-fonts-metadata.py:76
+msgid "Fold Ink/Stitch is a large triple and quintuple running stitches capital font of size 100 mm. It contains 40 glyphs including all numbers and the 26 capitals  A-Z. It can be reduced down to 80% and enlarged up to 200%"
 msgstr ""
 
 #. name of font in fonts/geneva_rounded
-#: inkstitch-fonts-metadata.py:38
+#: inkstitch-fonts-metadata.py:78
 msgid "Geneva Simple Sans Rounded"
 msgstr ""
 
 #. description of font in fonts/geneva_rounded
-#: inkstitch-fonts-metadata.py:40
+#: inkstitch-fonts-metadata.py:80
 msgid "Suitable for small fonts (8 to 20 mm)"
 msgstr ""
 
 #. name of font in fonts/geneva_simple
-#: inkstitch-fonts-metadata.py:42
+#: inkstitch-fonts-metadata.py:82
 msgid "Geneva Simple Sans"
 msgstr ""
 
 #. description of font in fonts/geneva_simple
-#: inkstitch-fonts-metadata.py:44
+#: inkstitch-fonts-metadata.py:84
 msgid "Suitable for small fonts (6 to 15mm)"
 msgstr ""
 
-#. name of font in fonts/kaushan_script
-#: inkstitch-fonts-metadata.py:46
-msgid "Kaushan Script"
+#. name of font in fonts/glacial_tiny
+#: inkstitch-fonts-metadata.py:86
+msgid "Glacial Tiny 60 AGS"
 msgstr ""
 
-#. description of font in fonts/kaushan_script
-#: inkstitch-fonts-metadata.py:48
+#. description of font in fonts/glacial_tiny
+#: inkstitch-fonts-metadata.py:88
+msgid "Glacial is a very tiny font: at 100%,  M stands at 5.6mm. Thin thread (60 wt ) and thin needle (8/60) are mandatory. The glyphs cover many European languages. It can be reduced down to 40% and enlarged up to 150% "
+msgstr ""
+
+#. name of font in fonts/grand_hotel_marif
+#: inkstitch-fonts-metadata.py:90
+msgid "Grand Hotel Marif"
+msgstr ""
+
+#. description of font in fonts/grand_hotel_marif
+#: inkstitch-fonts-metadata.py:92
+msgid "Grand Hotel Marif a is a script satin font of size approximatively 35 mm. The glyphs cover most Western European languages. The font can be scaled down to 60% and up to 140%."
+msgstr ""
+
+#. name of font in fonts/grandhotel_small
+#: inkstitch-fonts-metadata.py:94
+msgid "Grand Hotel small"
+msgstr ""
+
+#. description of font in fonts/grandhotel_small
+#: inkstitch-fonts-metadata.py:96
+msgid "This font is an altered version  of Grand Hotel, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory. The altered embroidery parameters of this font allow to scale down the original Grand Hotel font between 25% (for a 9mm font ) and 55 % (for a  20 mm font)."
+msgstr ""
+
+#. name of font in fonts/infinipicto
+#: inkstitch-fonts-metadata.py:98
+msgid "InfiniPicto"
+msgstr ""
+
+#. description of font in fonts/infinipicto
+#: inkstitch-fonts-metadata.py:100
+msgid "InfiniPicto is a fun font of size approximatively 70 mm containing only the 26 A-Z glyph. Each letter is a pictogram of an object whose name begins with that very letter..... in French"
+msgstr ""
+
+#. name of font in fonts/kaushan_script_MAM
+#: inkstitch-fonts-metadata.py:102
+msgid "Kaushan Script MAM"
+msgstr ""
+
+#. description of font in fonts/kaushan_script_MAM
+#: inkstitch-fonts-metadata.py:104
 #, python-format
 msgid "The capital M is 29 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 200%.  Every satin has zigzag underlay"
 msgstr ""
 
 #. name of font in fonts/learning_curve
-#: inkstitch-fonts-metadata.py:50
+#: inkstitch-fonts-metadata.py:106
 msgid "Learning curve"
 msgstr ""
 
 #. description of font in fonts/learning_curve
-#: inkstitch-fonts-metadata.py:52
-msgid "Cursive italique en point triple pour des minuscules de 6 à 14mm"
+#: inkstitch-fonts-metadata.py:108
+msgid "Small running stitch script font of size approximatively 12 mm. It can be reduced down to 90% and enlarged up to 200%"
 msgstr ""
 
-#. name of font in fonts/lobster
-#: inkstitch-fonts-metadata.py:54
-msgid "Lobster Two"
+#. name of font in fonts/lobster_AGS
+#: inkstitch-fonts-metadata.py:110
+msgid "Lobster AGS"
 msgstr ""
 
-#. description of font in fonts/lobster
-#: inkstitch-fonts-metadata.py:56
+#. description of font in fonts/lobster_AGS
+#: inkstitch-fonts-metadata.py:112
 #, python-format
-msgid "Lobster Two Bold Italic. The capital M is 19.8 millimeter wide at 100% scale. Can be scaled down to 80% or up to 150%. Every satin has zigzag underlay"
+msgid " The capital M is 19.8 millimeter wide at 100% scale. Can be scaled down to 80% or up to 150%. Every satin has zigzag underlay"
 msgstr ""
 
-#. name of font in fonts/magnolia_ script
-#: inkstitch-fonts-metadata.py:58
-msgid "Magnolia Script"
+#. name of font in fonts/magnolia_ KOR
+#: inkstitch-fonts-metadata.py:114
+msgid "Magnolia KOR"
 msgstr ""
 
-#. description of font in fonts/magnolia_ script
-#: inkstitch-fonts-metadata.py:60
-msgid "The Capital M is a bit less than 2 cm high. It can be scaled down to 80% and up to 120%"
+#. description of font in fonts/magnolia_ KOR
+#: inkstitch-fonts-metadata.py:116
+msgid "Magnolia KOR is a script font of size approximatively 20mm. It can be scaled down to 80% and up to 120%"
 msgstr ""
 
 #. name of font in fonts/manuskript_gotisch
-#: inkstitch-fonts-metadata.py:62
+#: inkstitch-fonts-metadata.py:118
 msgid "Manuskript Gothisch"
 msgstr ""
 
 #. description of font in fonts/manuskript_gotisch
-#: inkstitch-fonts-metadata.py:64
+#: inkstitch-fonts-metadata.py:120
 #, python-format
 msgid "The capital M is 35 millimeter wide at 100% scale.  Can be scaled down to 70% or up to 140%.  Every satin has zigzag underlay"
 msgstr ""
 
+#. name of font in fonts/marcelusSC_FI
+#: inkstitch-fonts-metadata.py:122
+msgid "MarcellusSC-FI"
+msgstr ""
+
+#. description of font in fonts/marcelusSC_FI
+#: inkstitch-fonts-metadata.py:124
+#, python-format
+msgid "MarcellusSC-FI is a small capital font of size 36 mm. It contains 107 glyphs covering most Western European languages. It can be reduced down to 70% and enlarged up to 200% or 500% using satin split"
+msgstr ""
+
 #. name of font in fonts/medium_font
-#: inkstitch-fonts-metadata.py:66
+#: inkstitch-fonts-metadata.py:126
 msgid "Ink/Stitch Medium Font"
 msgstr ""
 
 #. description of font in fonts/medium_font
-#: inkstitch-fonts-metadata.py:68
+#: inkstitch-fonts-metadata.py:128
 #, python-format
 msgid "A basic font suited for medium-sized characters.  The capital em is 0.6 inches wide at 100% scale.  Can be scaled down to 75% or up to 150%.  Every satin has contour underlay."
 msgstr ""
 
-#. name of font in fonts/romanaugusa
-#: inkstitch-fonts-metadata.py:70
-msgid "Romanaugusa"
+#. name of font in fonts/monicha
+#: inkstitch-fonts-metadata.py:130
+msgid "MONICHA"
 msgstr ""
 
-#. description of font in fonts/romanaugusa
-#: inkstitch-fonts-metadata.py:72
+#. description of font in fonts/monicha
+#: inkstitch-fonts-metadata.py:132
+msgid "Monicha is a script satin font of size approximatively 20mm. In addition to the glyphs covering most Western European languages it contains additional ornemental letters with swashes. These ornemental letters should be used with caution to avoid overlays. In particular do not use two ornemental letters in a row. Please consult the documentation for information on how to access the ornemental letters. The font can not be scaled down but can be scaled up to 150%. "
+msgstr ""
+
+#. name of font in fonts/namskout_AGS
+#: inkstitch-fonts-metadata.py:134
+msgid "Namskout"
+msgstr ""
+
+#. description of font in fonts/namskout_AGS
+#: inkstitch-fonts-metadata.py:136
+msgid "Namskout  is a large applique font of size approximatively 90mm. It contains 43 glyphs including all numbers and the 26 capitals  A-Z.  It can be reduced down to 50% and enlarged up to 150%  "
+msgstr ""
+
+#. name of font in fonts/pacificlo
+#: inkstitch-fonts-metadata.py:138
+msgid "Pacificlo"
+msgstr ""
+
+#. description of font in fonts/pacificlo
+#: inkstitch-fonts-metadata.py:140
+msgid "Pacificlo is a small satin column manuscript font of size approximatively 20mm. It can be reduced down to 80% and enlarged up to 140%. It contains 120 glyphs, covering most Western European Languages needs. "
+msgstr ""
+
+#. name of font in fonts/pacificlo_tiny
+#: inkstitch-fonts-metadata.py:142
+msgid "Pacificlo tiny"
+msgstr ""
+
+#. description of font in fonts/pacificlo_tiny
+#: inkstitch-fonts-metadata.py:144
+msgid "This font is an altered version  of Pacificlo, to allow a greater scaling down. Both thin thread (60) and thin needle (60) are mandatory. The altered embroidery parameters of this font allow to scale down the original Pacificlo font between 25% (for a 5mm font ) and 55 % (for a 11mm font)."
+msgstr ""
+
+#. name of font in fonts/roman_ags
+#: inkstitch-fonts-metadata.py:146
+msgid "Roman AGS"
+msgstr ""
+
+#. description of font in fonts/roman_ags
+#: inkstitch-fonts-metadata.py:148
 #, python-format
-msgid "Based on Latin Modern Roman 10 Bold italic. The capital M is 42.5 millimeter wide at 100% scale.  Can be scaled down to 70% or up to 130%.  Every satin has zigzag underlay"
+msgid "Based on Latin Modern Roman 10 Bold italic. The capital M is 42.5 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 130%.  Every satin has zigzag underlay"
 msgstr ""
 
-#. name of font in fonts/romanaugusa_bicolor
-#: inkstitch-fonts-metadata.py:74
-msgid "Romanaugusa bicolor"
+#. name of font in fonts/roman_ags_bicolor
+#: inkstitch-fonts-metadata.py:150
+msgid "Roman bicolor AGS"
 msgstr ""
 
-#. description of font in fonts/romanaugusa_bicolor
-#: inkstitch-fonts-metadata.py:76
+#. description of font in fonts/roman_ags_bicolor
+#: inkstitch-fonts-metadata.py:152
 #, python-format
 msgid "Based on Latin Modern Roman 10 Bold italic. A font with capital letters with 2 colors. Very easy to use with letters from Romanaugusa. The capital M is 42.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 130%. Every satin has zigzag underlay"
 msgstr ""
 
 #. name of font in fonts/sacramarif
-#: inkstitch-fonts-metadata.py:78
+#: inkstitch-fonts-metadata.py:154
 msgid "Sacramarif"
 msgstr ""
 
 #. description of font in fonts/sacramarif
-#: inkstitch-fonts-metadata.py:80
+#: inkstitch-fonts-metadata.py:156
 msgid "Based on Sacramento. Very small font with runstitch. It can be scaled from 80% to 150%"
 msgstr ""
 
 #. name of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:82
+#: inkstitch-fonts-metadata.py:158
 msgid "Ink/Stitch Small Font"
 msgstr ""
 
 #. description of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:84
+#: inkstitch-fonts-metadata.py:160
 #, python-format
 msgid "A font suited for small characters.  The capital em is 0.2 inches wide at 100% scale.  Can be scaled up to 300%."
 msgstr ""
 
+#. name of font in fonts/sortefaxXL
+#: inkstitch-fonts-metadata.py:162
+msgid "Sortefax XL Initials"
+msgstr ""
+
+#. description of font in fonts/sortefaxXL
+#: inkstitch-fonts-metadata.py:164
+msgid " Sortefax is a very large satin stitch Capital font of size 150mm.  It can be reduced down to 75% and enlarged up to 200%  It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; )  to obtain a framed Capital or Number. Warning: for a few large letters you will need to manually enlarge the frame"
+msgstr ""
+
+#. name of font in fonts/sortefax_medium
+#: inkstitch-fonts-metadata.py:166
+msgid "Sortefax Medium Initials"
+msgstr ""
+
+#. description of font in fonts/sortefax_medium
+#: inkstitch-fonts-metadata.py:168
+msgid "Sortefax  Medium Initials is a  satin stitch Capital font of size 90 mm.  It can be reduced down to 70% and enlarged up to 200%. It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; or 7, ) to obtain a framed Capital or Number. Some manual arranging of the frame around the letter may be required"
+msgstr ""
+
 #. name of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:86
+#: inkstitch-fonts-metadata.py:170
 msgid "TT Directors"
 msgstr ""
 
 #. description of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:88
+#: inkstitch-fonts-metadata.py:172
 msgid "A font suited for directing"
 msgstr ""
 
 #. name of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:90
+#: inkstitch-fonts-metadata.py:174
 msgid "TT Masters"
 msgstr ""
 
 #. description of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:92
+#: inkstitch-fonts-metadata.py:176
 msgid "A font suited for heavy typing :)"
 msgstr ""
 
-#: inkstitch.py:61
+#: inkstitch.py:71
 msgid "Ink/Stitch cannot read your SVG file. This is often the case when you use a file which has been created with Adobe Illustrator."
 msgstr ""
 
-#: inkstitch.py:64
+#: inkstitch.py:74
 msgid "Try to import the file into Inkscape through 'File > Import...' (Ctrl+I)"
 msgstr ""
 
-#: inkstitch.py:75
-msgid "Ink/Stitch experienced an unexpected error."
+#: inkstitch.py:85
+msgid "Ink/Stitch experienced an unexpected error. This means it is a bug in Ink/Stitch."
 msgstr ""
 
-#: inkstitch.py:76
-msgid "If you'd like to help, please file an issue at https://github.com/inkstitch/inkstitch/issues and include the entire error description below:"
+#: inkstitch.py:86
+msgid "If you'd like to help please\n"
+"- copy the entire error message below\n"
+"- save your SVG file and\n"
+"- create a new issue at https://github.com/inkstitch/inkstitch/issues"
 msgstr ""
 
+#: inkstitch.py:90
+msgid "Include the error description and also (if possible) the svg file."
+msgstr ""
+
+#. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
-#: lib/commands.py:24
+#: lib/commands.py:24 inx/inkstitch_object_commands.inx:4
 msgid "Fill stitch starting position"
 msgstr ""
 
+#. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
-#: lib/commands.py:27
+#: lib/commands.py:27 inx/inkstitch_object_commands.inx:5
 msgid "Fill stitch ending position"
 msgstr ""
 
+#. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
-#: lib/commands.py:30
+#: lib/commands.py:30 inx/inkstitch_object_commands.inx:6
+msgid "Ripple stitch target position"
+msgstr ""
+
+#. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
+#. command attached to an object
+#: lib/commands.py:33 inx/inkstitch_object_commands.inx:7
+msgid "Auto-route running stitch starting position"
+msgstr ""
+
+#. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
+#. command attached to an object
+#: lib/commands.py:36 inx/inkstitch_object_commands.inx:8
+msgid "Auto-route running stitch ending position"
+msgstr ""
+
+#. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
+#. command attached to an object
+#: lib/commands.py:39 inx/inkstitch_object_commands.inx:9
 msgid "Auto-route satin stitch starting position"
 msgstr ""
 
+#. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
-#: lib/commands.py:33
+#: lib/commands.py:42 inx/inkstitch_object_commands.inx:10
 msgid "Auto-route satin stitch ending position"
 msgstr ""
 
+#. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
-#: lib/commands.py:36
+#: lib/commands.py:45 inx/inkstitch_object_commands.inx:11
 msgid "Stop (pause machine) after sewing this object"
 msgstr ""
 
+#. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
-#: lib/commands.py:39
+#: lib/commands.py:48 inx/inkstitch_object_commands.inx:12
 msgid "Trim thread after sewing this object"
 msgstr ""
 
+#. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
-#: lib/commands.py:42
+#: lib/commands.py:51 inx/inkstitch_object_commands.inx:13
 msgid "Ignore this object (do not stitch)"
 msgstr ""
 
+#. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
-#: lib/commands.py:45
+#: lib/commands.py:54 inx/inkstitch_object_commands.inx:14
 msgid "Satin cut point (use with Cut Satin Column)"
 msgstr ""
 
+#. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command that affects a layer
-#: lib/commands.py:48
+#: lib/commands.py:57 inx/inkstitch_layer_commands.inx:7
 msgid "Ignore layer (do not stitch any objects in this layer)"
 msgstr ""
 
+#. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command that affects entire document
-#: lib/commands.py:51
+#: lib/commands.py:60 inx/inkstitch_global_commands.inx:7
 msgid "Origin for exported embroidery files"
 msgstr ""
 
+#. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command that affects entire document
-#: lib/commands.py:54
+#: lib/commands.py:63 inx/inkstitch_global_commands.inx:9
 msgid "Jump destination for Stop commands (a.k.a. \"Frame Out position\")."
 msgstr ""
 
-#: lib/commands.py:212
+#: lib/commands.py:223
 #, python-format
 msgid "Error: there is more than one %(command)s command in the document, but there can only be one.  Please remove all but one."
 msgstr ""
@@ -345,208 +601,108 @@ msgstr ""
 #. command name to them.  Contents of %(description)s are in a separate
 #. translation
 #. string.
-#: lib/commands.py:219
+#: lib/commands.py:230
 #, python-format
 msgid "%(command)s: %(description)s"
 msgstr ""
 
-#: lib/commands.py:284 lib/commands.py:397
+#: lib/commands.py:295 lib/commands.py:410
 msgid "Ink/Stitch Command"
 msgstr ""
 
 #. : the name of the line that connects a command to the object it applies to
-#: lib/commands.py:310
+#: lib/commands.py:320
 msgid "connector"
 msgstr ""
 
 #. : the name of a command symbol (example: scissors icon for trim command)
-#: lib/commands.py:326
+#: lib/commands.py:339
 msgid "command marker"
 msgstr ""
 
-#: lib/elements/auto_fill.py:23
-msgid "Small Fill"
-msgstr ""
-
-#: lib/elements/auto_fill.py:24
-msgid "This fill object is so small that it would probably look better as running stitch or satin column. For very small shapes, fill stitch is not possible, and Ink/Stitch will use running stitch around the outline instead."
-msgstr ""
-
-#: lib/elements/auto_fill.py:30 lib/elements/auto_fill.py:146
-msgid "Expand"
-msgstr ""
-
-#: lib/elements/auto_fill.py:31
-msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use original size instead."
-msgstr ""
-
-#: lib/elements/auto_fill.py:36 lib/elements/auto_fill.py:123
-msgid "Inset"
-msgstr ""
-
-#: lib/elements/auto_fill.py:37
-msgid "The underlay inset parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use the original size instead."
-msgstr ""
-
-#: lib/elements/auto_fill.py:42
-msgid "AutoFill"
-msgstr ""
-
-#: lib/elements/auto_fill.py:45
-msgid "Automatically routed fill stitching"
-msgstr ""
-
-#: lib/elements/auto_fill.py:65
-msgid "Running stitch length (traversal between sections)"
-msgstr ""
-
-#: lib/elements/auto_fill.py:66
-msgid "Length of stitches around the outline of the fill region used when moving from section to section."
-msgstr ""
-
-#: lib/elements/auto_fill.py:74
-msgid "Underlay"
-msgstr ""
-
-#: lib/elements/auto_fill.py:74 lib/elements/auto_fill.py:83
-#: lib/elements/auto_fill.py:105 lib/elements/auto_fill.py:116
-#: lib/elements/auto_fill.py:126 lib/elements/auto_fill.py:138
-#: lib/elements/auto_fill.py:172
-msgid "AutoFill Underlay"
-msgstr ""
-
-#: lib/elements/auto_fill.py:80
-msgid "Fill angle"
-msgstr ""
-
-#: lib/elements/auto_fill.py:81
-msgid "Default: fill angle + 90 deg. Insert comma-seperated list for multiple layers."
-msgstr ""
-
-#: lib/elements/auto_fill.py:102
-msgid "Row spacing"
-msgstr ""
-
-#: lib/elements/auto_fill.py:103
-msgid "default: 3x fill row spacing"
-msgstr ""
-
-#: lib/elements/auto_fill.py:113
-msgid "Max stitch length"
-msgstr ""
-
-#: lib/elements/auto_fill.py:114
-msgid "default: equal to fill max stitch length"
-msgstr ""
-
-#: lib/elements/auto_fill.py:124
-msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
-msgstr ""
-
-#: lib/elements/auto_fill.py:135 lib/elements/fill.py:75
-msgid "Skip last stitch in each row"
-msgstr ""
-
-#: lib/elements/auto_fill.py:136 lib/elements/fill.py:76
-msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
-msgstr ""
-
-#: lib/elements/auto_fill.py:147
-msgid "Expand the shape before fill stitching, to compensate for gaps between shapes."
-msgstr ""
-
-#: lib/elements/auto_fill.py:156 lib/elements/auto_fill.py:168
-msgid "Underpath"
-msgstr ""
-
-#: lib/elements/auto_fill.py:157 lib/elements/auto_fill.py:169
-msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
-msgstr ""
-
-#: lib/elements/auto_fill.py:266
-msgid "Error during autofill!  This means that there is a problem with Ink/Stitch."
-msgstr ""
-
-#. this message is followed by a URL:
-#. https://github.com/inkstitch/inkstitch/issues/new
-#: lib/elements/auto_fill.py:269
-msgid "If you'd like to help us make Ink/Stitch better, please paste this whole message into a new issue at: "
-msgstr ""
-
-#: lib/elements/clone.py:27
+#: lib/elements/clone.py:20
 msgid "Clone Object"
 msgstr ""
 
-#: lib/elements/clone.py:28
+#: lib/elements/clone.py:21
 msgid "There are one or more clone objects in this document.  Ink/Stitch can work with single clones, but you are limited to set a very few parameters. "
 msgstr ""
 
-#: lib/elements/clone.py:31
+#: lib/elements/clone.py:24
 msgid "If you want to convert the clone into a real element, follow these steps:"
 msgstr ""
 
-#: lib/elements/clone.py:32
+#: lib/elements/clone.py:25
 msgid "* Select the clone"
 msgstr ""
 
-#: lib/elements/clone.py:33 lib/elements/clone.py:44
+#: lib/elements/clone.py:26 lib/elements/clone.py:37
 msgid "* Run: Edit > Clone > Unlink Clone (Alt+Shift+D)"
 msgstr ""
 
-#: lib/elements/clone.py:38
+#: lib/elements/clone.py:31
 msgid "Clone is not embroiderable"
 msgstr ""
 
-#: lib/elements/clone.py:39
+#: lib/elements/clone.py:32
 msgid "There are one ore more clone objects in this document. A clone must be a direct child of an embroiderable element. Ink/Stitch cannot embroider clones of groups or other not embroiderable elements (text or image)."
 msgstr ""
 
-#: lib/elements/clone.py:42
+#: lib/elements/clone.py:35
 msgid "Convert the clone into a real element:"
 msgstr ""
 
-#: lib/elements/clone.py:43
+#: lib/elements/clone.py:36
 msgid "* Select the clone."
 msgstr ""
 
-#: lib/elements/clone.py:58
+#: lib/elements/clone.py:51
 msgid "Clone"
 msgstr ""
 
-#: lib/elements/clone.py:64
+#: lib/elements/clone.py:57
 msgid "Custom fill angle"
 msgstr ""
 
-#: lib/elements/clone.py:65
+#: lib/elements/clone.py:58
 msgid "This setting will apply a custom fill angle for the clone."
 msgstr ""
 
-#: lib/elements/element.py:198
+#: lib/elements/element.py:202
 msgid "Allow lock stitches"
 msgstr ""
 
-#: lib/elements/element.py:199
+#: lib/elements/element.py:203
 msgid "Tie thread at the beginning and/or end of this object. Manual stitch will not add lock stitches."
 msgstr ""
 
 #. options to allow lock stitch before and after objects
-#: lib/elements/element.py:203
+#: lib/elements/element.py:207
 msgid "Both"
 msgstr ""
 
-#: lib/elements/element.py:203
+#: lib/elements/element.py:207
 msgid "Before"
 msgstr ""
 
-#: lib/elements/element.py:203
+#: lib/elements/element.py:207
 msgid "After"
 msgstr ""
 
-#: lib/elements/element.py:203
+#: lib/elements/element.py:207
 msgid "Neither"
 msgstr ""
 
-#: lib/elements/element.py:245
+#: lib/elements/element.py:216
+#: inx/inkstitch_lettering_force_lock_stitches.inx:3
+msgid "Force lock stitches"
+msgstr ""
+
+#: lib/elements/element.py:217
+msgid "Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences."
+msgstr ""
+
+#: lib/elements/element.py:261
 #, python-format
 msgid "Object %(id)s has an empty 'd' attribute.  Please delete this object from your document."
 msgstr ""
@@ -554,7 +710,7 @@ msgstr ""
 #. used when showing an error message to the user such as
 #. "Some Path (path1234): error: satin column: One or more of the rungs doesn't
 #. intersect both rails."
-#: lib/elements/element.py:332
+#: lib/elements/element.py:354
 msgid "error:"
 msgstr ""
 
@@ -570,76 +726,273 @@ msgstr ""
 msgid "* Run Extensions > Ink/Stitch > Troubleshoot > Cleanup Document..."
 msgstr ""
 
-#: lib/elements/fill.py:23
+#: lib/elements/fill_stitch.py:27
+msgid "Small Fill"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:28
+msgid "This fill object is so small that it would probably look better as running stitch or satin column. For very small shapes, fill stitch is not possible, and Ink/Stitch will use running stitch around the outline instead."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:34 lib/elements/fill_stitch.py:399
+msgid "Expand"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:35
+msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use original size instead."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:40 lib/elements/fill_stitch.py:376
+msgid "Inset"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:41
+msgid "The underlay inset parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use the original size instead."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:46
+msgid "Missing Guideline"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:47
+msgid "This object is set to \"Guided Fill\", but has no guide line."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:49
+msgid "* Create a stroke object"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:50
+msgid "* Select this object and run Extensions > Ink/Stitch > Edit > Selection to guide line"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:55
+msgid "Disjointed Guide Line"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:56
+msgid "The guide line of this object isn't within the object borders. The guide line works best, if it is within the target element."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:59
+msgid "* Move the guide line into the element"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:64
+msgid "Multiple Guide Lines"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:65
+msgid "This object has multiple guide lines, but only the first one will be used."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:67
+msgid "* Remove all guide lines, except for one."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:72
 msgid "Unconnected"
 msgstr ""
 
-#: lib/elements/fill.py:24
+#: lib/elements/fill_stitch.py:73
 msgid "Fill: This object is made up of unconnected shapes.  This is not allowed because Ink/Stitch doesn't know what order to stitch them in.  Please break this object up into separate shapes."
 msgstr ""
 
-#: lib/elements/fill.py:28 lib/elements/fill.py:36
+#: lib/elements/fill_stitch.py:77 lib/elements/fill_stitch.py:85
 msgid "* Extensions > Ink/Stitch > Fill Tools > Break Apart Fill Objects"
 msgstr ""
 
-#: lib/elements/fill.py:33
+#: lib/elements/fill_stitch.py:82
 msgid "Border crosses itself"
 msgstr ""
 
-#: lib/elements/fill.py:34
+#: lib/elements/fill_stitch.py:83
 msgid "Fill: Shape is not valid.  This can happen if the border crosses over itself."
 msgstr ""
 
-#: lib/elements/fill.py:41
-msgid "Fill"
+#: lib/elements/fill_stitch.py:90
+msgid "FillStitch"
 msgstr ""
 
-#: lib/elements/fill.py:48
-msgid "Manually routed fill stitching"
+#: lib/elements/fill_stitch.py:93
+msgid "Automatically routed fill stitching"
 msgstr ""
 
-#: lib/elements/fill.py:49
-msgid "AutoFill is the default method for generating fill stitching."
+#: lib/elements/fill_stitch.py:98
+msgid "Fill method"
 msgstr ""
 
-#: lib/elements/fill.py:58
+#: lib/elements/fill_stitch.py:99
+msgid "Auto Fill"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:99
+msgid "Contour Fill"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:99
+msgid "Guided Fill"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:99
+msgid "Legacy Fill"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:104
+msgid "Contour Fill Strategy"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:105
+msgid "Inner to Outer"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:105
+msgid "Single spiral"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:105
+msgid "Double spiral"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:110
+msgid "Join Style"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:111
+msgid "Round"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:111
+msgid "Mitered"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:111
+msgid "Beveled"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:116
+msgid "Avoid self-crossing"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:121
+msgid "Clockwise"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:127
 msgid "Angle of lines of stitches"
 msgstr ""
 
-#: lib/elements/fill.py:59
+#: lib/elements/fill_stitch.py:128
 msgid "The angle increases in a counter-clockwise direction.  0 is horizontal.  Negative angles are allowed."
 msgstr ""
 
-#: lib/elements/fill.py:86
+#: lib/elements/fill_stitch.py:146 lib/elements/fill_stitch.py:388
+msgid "Skip last stitch in each row"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:147 lib/elements/fill_stitch.py:389
+msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:160
 msgid "Flip fill (start right-to-left)"
 msgstr ""
 
-#: lib/elements/fill.py:87
+#: lib/elements/fill_stitch.py:161
 msgid "The flip option can help you with routing your stitch path.  When you enable flip, stitching goes from right-to-left instead of left-to-right."
 msgstr ""
 
-#: lib/elements/fill.py:96
+#: lib/elements/fill_stitch.py:172
 msgid "Spacing between rows"
 msgstr ""
 
-#: lib/elements/fill.py:97
+#: lib/elements/fill_stitch.py:173
 msgid "Distance between rows of stitches."
 msgstr ""
 
-#: lib/elements/fill.py:110
+#: lib/elements/fill_stitch.py:187
 msgid "Maximum fill stitch length"
 msgstr ""
 
-#: lib/elements/fill.py:111
+#: lib/elements/fill_stitch.py:188
 msgid "The length of each stitch in a row.  Shorter stitch may be used at the start or end of a row."
 msgstr ""
 
-#: lib/elements/fill.py:120
+#: lib/elements/fill_stitch.py:199
 msgid "Stagger rows this many times before repeating"
 msgstr ""
 
-#: lib/elements/fill.py:121
+#: lib/elements/fill_stitch.py:200
 msgid "Setting this dictates how many rows apart the stitches will be before they fall in the same column position."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:315
+msgid "Running stitch length (traversal between sections)"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:316
+msgid "Length of stitches around the outline of the fill region used when moving from section to section."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:326
+msgid "Underlay"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:326 lib/elements/fill_stitch.py:335
+#: lib/elements/fill_stitch.py:358 lib/elements/fill_stitch.py:369
+#: lib/elements/fill_stitch.py:379 lib/elements/fill_stitch.py:391
+#: lib/elements/fill_stitch.py:429
+msgid "Fill Underlay"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:332
+msgid "Fill angle"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:333
+msgid "Default: fill angle + 90 deg. Insert comma-seperated list for multiple layers."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:355
+msgid "Row spacing"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:356
+msgid "default: 3x fill row spacing"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:366
+msgid "Max stitch length"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:367
+msgid "default: equal to fill max stitch length"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:377
+msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:400
+msgid "Expand the shape before fill stitching, to compensate for gaps between shapes."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:411 lib/elements/fill_stitch.py:425
+msgid "Underpath"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:412 lib/elements/fill_stitch.py:426
+msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:629
+msgid "Error during autofill!  This means that there is a problem with Ink/Stitch."
+msgstr ""
+
+#. this message is followed by a URL:
+#. https://github.com/inkstitch/inkstitch/issues/new
+#: lib/elements/fill_stitch.py:632
+msgid "If you'd like to help us make Ink/Stitch better, please paste this whole message into a new issue at: "
 msgstr ""
 
 #: lib/elements/image.py:13
@@ -658,27 +1011,27 @@ msgstr ""
 msgid "* Alternatively redraw the image with the pen (P) or bezier (B) tool"
 msgstr ""
 
-#: lib/elements/pattern.py:14
-msgid "Pattern Element"
+#: lib/elements/marker.py:14
+msgid "Marker Element"
 msgstr ""
 
-#: lib/elements/pattern.py:15
-msgid "This element will not be embroidered. It will appear as a pattern applied to objects in the same group as it.  Objects in sub-groups will be ignored."
+#: lib/elements/marker.py:15
+msgid "This element will not be embroidered. It will be applied to objects in the same group. Objects in sub-groups will be ignored."
 msgstr ""
 
-#: lib/elements/pattern.py:19
-msgid "To disable pattern mode, remove the pattern marker:"
+#: lib/elements/marker.py:18
+msgid "Turn back to normal embroidery element mode, remove the marker:"
 msgstr ""
 
-#: lib/elements/pattern.py:20
+#: lib/elements/marker.py:19
 msgid "* Open the Fill and Stroke panel (Objects > Fill and Stroke)"
 msgstr ""
 
-#: lib/elements/pattern.py:21
+#: lib/elements/marker.py:20
 msgid "* Go to the Stroke style tab"
 msgstr ""
 
-#: lib/elements/pattern.py:22
+#: lib/elements/marker.py:21
 msgid "* Under \"Markers\" choose the first (empty) option in the first dropdown list."
 msgstr ""
 
@@ -690,7 +1043,7 @@ msgstr ""
 msgid "This object is an SVG PolyLine.  Ink/Stitch can work with this shape, but you can't edit it in Inkscape.  Convert it to a manual stitch path to allow editing."
 msgstr ""
 
-#: lib/elements/polyline.py:23 lib/elements/satin_column.py:26
+#: lib/elements/polyline.py:23 lib/elements/satin_column.py:27
 msgid "* Select this object."
 msgstr ""
 
@@ -706,206 +1059,242 @@ msgstr ""
 msgid "Manual stitch along path"
 msgstr ""
 
-#: lib/elements/satin_column.py:23
+#: lib/elements/satin_column.py:24
 msgid "Satin column has fill"
 msgstr ""
 
-#: lib/elements/satin_column.py:24
+#: lib/elements/satin_column.py:25
 msgid "Satin column: Object has a fill (but should not)"
 msgstr ""
 
-#: lib/elements/satin_column.py:27
+#: lib/elements/satin_column.py:28
 msgid "* Open the Fill and Stroke panel"
 msgstr ""
 
-#: lib/elements/satin_column.py:28
+#: lib/elements/satin_column.py:29
 msgid "* Open the Fill tab"
 msgstr ""
 
-#: lib/elements/satin_column.py:29
+#: lib/elements/satin_column.py:30
 msgid "* Disable the Fill"
 msgstr ""
 
-#: lib/elements/satin_column.py:30
+#: lib/elements/satin_column.py:31
 msgid "* Alternative: open Params and switch this path to Stroke to disable Satin Column mode"
 msgstr ""
 
-#: lib/elements/satin_column.py:35
+#: lib/elements/satin_column.py:36
 msgid "Too few subpaths"
 msgstr ""
 
-#: lib/elements/satin_column.py:36
+#: lib/elements/satin_column.py:37
 msgid "Satin column: Object has too few subpaths.  A satin column should have at least two subpaths (the rails)."
 msgstr ""
 
-#: lib/elements/satin_column.py:38
+#: lib/elements/satin_column.py:39
 msgid "* Add another subpath (select two rails and do Path > Combine)"
 msgstr ""
 
-#: lib/elements/satin_column.py:39
+#: lib/elements/satin_column.py:40
 msgid "* Convert to running stitch or simple satin (Params extension)"
 msgstr ""
 
-#: lib/elements/satin_column.py:44
+#: lib/elements/satin_column.py:45
 msgid "Unequal number of points"
 msgstr ""
 
-#: lib/elements/satin_column.py:45
+#: lib/elements/satin_column.py:46
 msgid "Satin column: There are no rungs and rails have an an unequal number of points."
 msgstr ""
 
-#: lib/elements/satin_column.py:47
+#: lib/elements/satin_column.py:48
 msgid "The easiest way to solve this issue is to add one or more rungs. "
 msgstr ""
 
-#: lib/elements/satin_column.py:48
+#: lib/elements/satin_column.py:49
 msgid "Rungs control the stitch direction in satin columns."
 msgstr ""
 
-#: lib/elements/satin_column.py:49
+#: lib/elements/satin_column.py:50
 msgid "* With the selected object press \"P\" to activate the pencil tool."
 msgstr ""
 
-#: lib/elements/satin_column.py:50
+#: lib/elements/satin_column.py:51
 msgid "* Hold \"Shift\" while drawing the rung."
 msgstr ""
 
-#: lib/elements/satin_column.py:54
-msgid "Each rung should intersect both rails once."
+#: lib/elements/satin_column.py:56
+msgid "Not stitchable satin column"
 msgstr ""
 
-#: lib/elements/satin_column.py:58
-msgid "Rung doesn't intersect rails"
+#: lib/elements/satin_column.py:57
+msgid "A satin column consists out of two rails and one or more rungs. This satin column may have a different setup."
 msgstr ""
 
 #: lib/elements/satin_column.py:59
-msgid "Satin column: A rung doesn't intersect both rails."
+msgid "Make sure your satin column is not a combination of multiple satin columns."
 msgstr ""
 
-#: lib/elements/satin_column.py:63
-msgid "Rungs intersects too many times"
+#: lib/elements/satin_column.py:60
+msgid "Go to our website and read how a satin column should look like https://inkstitch.org/docs/stitches/satin-column/"
 msgstr ""
 
 #: lib/elements/satin_column.py:64
-msgid "Satin column: A rung intersects a rail more than once."
+msgid "Each rung should intersect both rails once."
 msgstr ""
 
 #: lib/elements/satin_column.py:68
-msgid "Satin Column"
+msgid "Rung doesn't intersect rails"
+msgstr ""
+
+#: lib/elements/satin_column.py:69
+msgid "Satin column: A rung doesn't intersect both rails."
+msgstr ""
+
+#: lib/elements/satin_column.py:73
+msgid "Rungs intersects too many times"
 msgstr ""
 
 #: lib/elements/satin_column.py:74
+msgid "Satin column: A rung intersects a rail more than once."
+msgstr ""
+
+#: lib/elements/satin_column.py:78
+msgid "Satin Column"
+msgstr ""
+
+#: lib/elements/satin_column.py:84
 msgid "Custom satin column"
 msgstr ""
 
-#: lib/elements/satin_column.py:80
+#: lib/elements/satin_column.py:90
 msgid "\"E\" stitch"
 msgstr ""
 
-#: lib/elements/satin_column.py:86
+#: lib/elements/satin_column.py:96 lib/elements/satin_column.py:204
 msgid "Maximum stitch length"
 msgstr ""
 
-#: lib/elements/satin_column.py:87
+#: lib/elements/satin_column.py:97
 msgid "Maximum stitch length for split stitches."
 msgstr ""
 
-#: lib/elements/satin_column.py:98 lib/elements/stroke.py:62
+#: lib/elements/satin_column.py:108 lib/elements/stroke.py:180
 msgid "Zig-zag spacing (peak-to-peak)"
 msgstr ""
 
-#: lib/elements/satin_column.py:99
+#: lib/elements/satin_column.py:109
 msgid "Peak-to-peak distance between zig-zags."
 msgstr ""
 
-#: lib/elements/satin_column.py:110
+#: lib/elements/satin_column.py:120
 msgid "Pull compensation"
 msgstr ""
 
-#: lib/elements/satin_column.py:111
+#: lib/elements/satin_column.py:121
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape.  This setting expands each pair of needle penetrations outward from the center of the satin column."
 msgstr ""
 
-#: lib/elements/satin_column.py:123
+#: lib/elements/satin_column.py:133
 msgid "Contour underlay"
 msgstr ""
 
-#: lib/elements/satin_column.py:123 lib/elements/satin_column.py:130
-#: lib/elements/satin_column.py:139
+#: lib/elements/satin_column.py:133 lib/elements/satin_column.py:140
+#: lib/elements/satin_column.py:149
 msgid "Contour Underlay"
 msgstr ""
 
-#: lib/elements/satin_column.py:130 lib/elements/satin_column.py:154
+#: lib/elements/satin_column.py:140 lib/elements/satin_column.py:164
 msgid "Stitch length"
 msgstr ""
 
-#: lib/elements/satin_column.py:136
+#: lib/elements/satin_column.py:146
 msgid "Contour underlay inset amount"
 msgstr ""
 
-#: lib/elements/satin_column.py:137
+#: lib/elements/satin_column.py:147
 msgid "Shrink the outline, to prevent the underlay from showing around the outside of the satin column."
 msgstr ""
 
-#: lib/elements/satin_column.py:147
+#: lib/elements/satin_column.py:157
 msgid "Center-walk underlay"
 msgstr ""
 
-#: lib/elements/satin_column.py:147 lib/elements/satin_column.py:154
+#: lib/elements/satin_column.py:157 lib/elements/satin_column.py:164
 msgid "Center-Walk Underlay"
 msgstr ""
 
-#: lib/elements/satin_column.py:159
+#: lib/elements/satin_column.py:169
 msgid "Zig-zag underlay"
 msgstr ""
 
-#: lib/elements/satin_column.py:159 lib/elements/satin_column.py:168
-#: lib/elements/satin_column.py:179
+#: lib/elements/satin_column.py:169 lib/elements/satin_column.py:178
+#: lib/elements/satin_column.py:189 lib/elements/satin_column.py:207
 msgid "Zig-zag Underlay"
 msgstr ""
 
-#: lib/elements/satin_column.py:165
+#: lib/elements/satin_column.py:175
 msgid "Zig-Zag spacing (peak-to-peak)"
 msgstr ""
 
-#: lib/elements/satin_column.py:166
+#: lib/elements/satin_column.py:176
 msgid "Distance between peaks of the zig-zags."
 msgstr ""
 
-#: lib/elements/satin_column.py:176
+#: lib/elements/satin_column.py:186
 msgid "Inset amount"
 msgstr ""
 
-#: lib/elements/satin_column.py:177
+#: lib/elements/satin_column.py:187
 msgid "default: half of contour underlay inset"
 msgstr ""
 
-#: lib/elements/stroke.py:21
+#: lib/elements/satin_column.py:205
+msgid "Split stitch if distance of maximum stitch length is exceeded"
+msgstr ""
+
+#: lib/elements/stroke.py:26
+msgid "Ignore skip"
+msgstr ""
+
+#: lib/elements/stroke.py:27
+msgid "Skip values are ignored, because there was no line left to embroider."
+msgstr ""
+
+#: lib/elements/stroke.py:29
+msgid "* Reduce values of Skip first and last lines or"
+msgstr ""
+
+#: lib/elements/stroke.py:30
+msgid "* Increase number of lines accordinly in the params dialog."
+msgstr ""
+
+#: lib/elements/stroke.py:35
 msgid "Stroke"
 msgstr ""
 
-#: lib/elements/stroke.py:24
+#: lib/elements/stroke.py:38
 msgid "Running stitch along paths"
 msgstr ""
 
-#: lib/elements/stroke.py:38
-msgid "Running stitch length"
+#: lib/elements/stroke.py:52 inx/inkstitch_break_apart.inx:17
+msgid "Method"
 msgstr ""
 
-#: lib/elements/stroke.py:39
-msgid "Length of stitches in running stitch mode."
+#: lib/elements/stroke.py:56
+msgid "Running Stitch"
 msgstr ""
 
-#: lib/elements/stroke.py:50
-msgid "Bean stitch number of repeats"
-msgstr ""
-
-#: lib/elements/stroke.py:51
-msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.  Only applies to running stitch."
+#: lib/elements/stroke.py:56
+msgid "Ripple"
 msgstr ""
 
 #: lib/elements/stroke.py:63
-msgid "Length of stitches in zig-zag mode."
+msgid "Manual stitch placement"
+msgstr ""
+
+#: lib/elements/stroke.py:64
+msgid "Stitch every node in the path.  All other options are ignored."
 msgstr ""
 
 #: lib/elements/stroke.py:74
@@ -916,20 +1305,80 @@ msgstr ""
 msgid "Defines how many times to run down and back along the path."
 msgstr ""
 
+#: lib/elements/stroke.py:85
+msgid "Bean stitch number of repeats"
+msgstr ""
+
+#: lib/elements/stroke.py:86
+msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.  Only applies to running stitch."
+msgstr ""
+
+#: lib/elements/stroke.py:97
+msgid "Running stitch length"
+msgstr ""
+
+#: lib/elements/stroke.py:98
+msgid "Length of stitches in running stitch mode."
+msgstr ""
+
 #: lib/elements/stroke.py:108
-msgid "Manual stitch placement"
+msgid "Number of lines"
 msgstr ""
 
 #: lib/elements/stroke.py:109
-msgid "Stitch every node in the path.  Stitch length and zig-zag spacing are ignored."
+msgid "Number of lines from start to finish"
 msgstr ""
 
-#: lib/elements/stroke.py:143
+#: lib/elements/stroke.py:120
+msgid "Skip first lines"
+msgstr ""
+
+#: lib/elements/stroke.py:121
+msgid "Skip this number of lines at the beginning."
+msgstr ""
+
+#: lib/elements/stroke.py:132
+msgid "Skip last lines"
+msgstr ""
+
+#: lib/elements/stroke.py:133
+msgid "Skip this number of lines at the end"
+msgstr ""
+
+#: lib/elements/stroke.py:144
+msgid "Flip"
+msgstr ""
+
+#: lib/elements/stroke.py:145
+msgid "Flip outer to inner"
+msgstr ""
+
+#: lib/elements/stroke.py:156
+msgid "Grid distance"
+msgstr ""
+
+#: lib/elements/stroke.py:157
+msgid "Render as grid. Works only with satin type ripple stitches."
+msgstr ""
+
+#: lib/elements/stroke.py:168
+msgid "Line distance exponent"
+msgstr ""
+
+#: lib/elements/stroke.py:169
+msgid "Increse density towards one side."
+msgstr ""
+
+#: lib/elements/stroke.py:181
+msgid "Length of stitches in zig-zag mode."
+msgstr ""
+
+#: lib/elements/stroke.py:252
 msgid "Legacy running stitch setting detected!\n\n"
 "It looks like you're using a stroke smaller than 0.5 units to indicate a running stitch, which is deprecated.  Instead, please set your stroke to be dashed to indicate running stitch.  Any kind of dash will work."
 msgstr ""
 
-#: lib/elements/text.py:13 lib/extensions/lettering.py:77
+#: lib/elements/text.py:13 lib/extensions/lettering.py:78
 msgid "Text"
 msgstr ""
 
@@ -943,6 +1392,36 @@ msgstr ""
 
 #: lib/elements/text.py:17
 msgid "- Extensions > Ink/Stitch > Lettering"
+msgstr ""
+
+#: lib/extensions/apply_threadlist.py:38
+msgid "File not found."
+msgstr ""
+
+#: lib/extensions/apply_threadlist.py:41
+msgid "The filepath specified is not a file but a dictionary.\n"
+"Please choose a threadlist file to import."
+msgstr ""
+
+#: lib/extensions/apply_threadlist.py:51
+msgid "Couldn't find any matching colors in the file."
+msgstr ""
+
+#: lib/extensions/apply_threadlist.py:53
+msgid "Please try to import as \"other threadlist\" and specify a color palette below."
+msgstr ""
+
+#: lib/extensions/apply_threadlist.py:55
+msgid "Please chose an other color palette for your design."
+msgstr ""
+
+#. auto-route running stitch columns extension
+#: lib/extensions/auto_run.py:57 lib/extensions/cutwork_segmentation.py:47
+msgid "Please select one or more stroke elements."
+msgstr ""
+
+#: lib/extensions/auto_run.py:62
+msgid "Please select at least one stroke element."
 msgstr ""
 
 #: lib/extensions/auto_satin.py:35
@@ -959,15 +1438,15 @@ msgid "Please select at least one satin column."
 msgstr ""
 
 #. This was previously: "No embroiderable paths selected."
-#: lib/extensions/base.py:124
+#: lib/extensions/base.py:127
 msgid "Ink/Stitch doesn't know how to work with any of the objects you've selected."
 msgstr ""
 
-#: lib/extensions/base.py:126
+#: lib/extensions/base.py:129
 msgid "There are no objects in the entire document that Ink/Stitch knows how to work with."
 msgstr ""
 
-#: lib/extensions/base.py:128
+#: lib/extensions/base.py:131
 msgid "Tip: Run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot Objects"
 msgstr ""
 
@@ -990,7 +1469,7 @@ msgstr ""
 msgid "Only simple lines may be converted to satin columns."
 msgstr ""
 
-#: lib/extensions/convert_to_satin.py:134
+#: lib/extensions/convert_to_satin.py:137
 msgid "Ink/Stitch cannot convert your stroke into a satin column. Please break up your path and try again."
 msgstr ""
 
@@ -1011,7 +1490,16 @@ msgstr ""
 msgid "this satin column does not have a \"satin column cut point\" command attached to it. Please use the \"Attach commands\" extension and attach the \"Satin Column cut point\" command first."
 msgstr ""
 
-#: lib/extensions/duplicate_params.py:19
+#: lib/extensions/cutwork_segmentation.py:158
+msgid "Cutwork Group"
+msgstr ""
+
+#: lib/extensions/cutwork_segmentation.py:166
+#, python-format
+msgid "Needle #%s"
+msgstr ""
+
+#: lib/extensions/duplicate_params.py:18
 msgid "This function copies Ink/Stitch parameters from the first selected element to the rest of the selection. Please select at least two elements."
 msgstr ""
 
@@ -1019,33 +1507,29 @@ msgstr ""
 msgid "Please select one or more satin columns to flip."
 msgstr ""
 
-#: lib/extensions/import_threadlist.py:33
-msgid "File not found."
+#: lib/extensions/generate_palette.py:31
+msgid "Please specify a name for your color palette."
 msgstr ""
 
-#: lib/extensions/import_threadlist.py:36
-msgid "The filepath specified is not a file but a dictionary.\n"
-"Please choose a threadlist file to import."
+#: lib/extensions/generate_palette.py:36
+msgid "Unkown directory path."
 msgstr ""
 
-#: lib/extensions/import_threadlist.py:46
-msgid "Couldn't find any matching colors in the file."
+#: lib/extensions/generate_palette.py:41
+msgid "Ink/Stitch cannot find your palette folder automatically. Please enter the path manually."
 msgstr ""
 
-#: lib/extensions/import_threadlist.py:48
-msgid "Please try to import as \"other threadlist\" and specify a color palette below."
+#: lib/extensions/generate_palette.py:47
+msgid "No element selected.\n\n"
+"Please select at least one text element with a fill color."
 msgstr ""
 
-#: lib/extensions/import_threadlist.py:50
-msgid "Please chose an other color palette for your design."
-msgstr ""
-
-#: lib/extensions/input.py:71
-#, python-format
-msgid "File does not exist and cannot be opened. Please correct the file path and try again.\\r%s"
+#: lib/extensions/generate_palette.py:53
+msgid "We couldn't find any fill colors on your text elements. Please read the instructions on our website."
 msgstr ""
 
 #: lib/extensions/install_custom_palette.py:24
+#: lib/extensions/palette_to_text.py:26
 msgid "File does not exist."
 msgstr ""
 
@@ -1061,60 +1545,66 @@ msgstr ""
 msgid "Please choose one or more commands to add."
 msgstr ""
 
-#: lib/extensions/lettering.py:43 lib/extensions/lettering.py:420
+#: lib/extensions/lettering.py:44 lib/extensions/lettering.py:424
 msgid "Ink/Stitch Lettering"
 msgstr ""
 
-#: lib/extensions/lettering.py:53
+#: lib/extensions/lettering.py:54
 msgid "Font"
 msgstr ""
 
-#: lib/extensions/lettering.py:65
+#: lib/extensions/lettering.py:66 inx/inkstitch_palette_to_text.inx:15
 msgid "Options"
 msgstr ""
 
-#: lib/extensions/lettering.py:70
+#: lib/extensions/lettering.py:71
 msgid "Stitch lines of text back and forth"
 msgstr ""
 
-#: lib/extensions/lettering.py:73
+#: lib/extensions/lettering.py:74
 msgid "Add trims"
 msgstr ""
 
-#: lib/extensions/lettering.py:82 lib/extensions/params.py:361
+#: lib/extensions/lettering.py:83 lib/extensions/params.py:442
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
-#: print/templates/custom-page.html:33 print/templates/ui.html:92
-#: print/templates/ui.html:96 print/templates/ui.html:102
+#: print/templates/custom-page.html:33 print/templates/ui.html:93
+#: print/templates/ui.html:97 print/templates/ui.html:103
 #: electron/src/renderer/components/InstallPalettes.vue:25
 #: electron/src/renderer/components/InstallPalettes.vue:63
 msgid "Cancel"
 msgstr ""
 
-#: lib/extensions/lettering.py:86 lib/extensions/params.py:368
+#: lib/extensions/lettering.py:87 lib/extensions/params.py:450
 msgid "Apply and Quit"
 msgstr ""
 
-#: lib/extensions/lettering.py:153
+#: lib/extensions/lettering.py:154
 msgid "Unable to find any fonts!  Please try reinstalling Ink/Stitch."
 msgstr ""
 
-#: lib/extensions/lettering.py:224
+#: lib/extensions/lettering.py:225
 msgid "This font has no available font variant. Please update or remove the font."
 msgstr ""
 
 #. The user has chosen to scale the text by some percentage
 #. (50%, 200%, etc).  If you need to use the percentage symbol,
 #. make sure to double it (%%).
-#: lib/extensions/lettering.py:266
+#: lib/extensions/lettering.py:267
 #, python-format
 msgid "Text scale %s%%"
 msgstr ""
 
-#: lib/extensions/lettering.py:410
+#: lib/extensions/lettering.py:276
+#, python-format
+msgid "Error: Text cannot be applied to the document.\n"
+"%s"
+msgstr ""
+
+#: lib/extensions/lettering.py:414
 msgid "Please select only one block of text."
 msgstr ""
 
-#: lib/extensions/lettering.py:413
+#: lib/extensions/lettering.py:417
 msgid "You've selected objects that were not created by the Lettering extension.  Please clear your selection or select different objects before running Lettering again."
 msgstr ""
 
@@ -1122,8 +1612,16 @@ msgstr ""
 msgid "Please specify the directory of your custom fonts."
 msgstr ""
 
+#: lib/extensions/lettering_force_lock_stitches.py:29
+msgid "The maximum value is smaller than the minimum value."
+msgstr ""
+
 #: lib/extensions/lettering_generate_json.py:41
 msgid "Please specify a font file."
+msgstr ""
+
+#: lib/extensions/letters_to_font.py:35
+msgid "Font directory not found. Please specify an existing directory."
 msgstr ""
 
 #: lib/extensions/object_commands.py:21
@@ -1134,51 +1632,63 @@ msgstr ""
 msgid "Please choose one or more commands to attach."
 msgstr ""
 
-#: lib/extensions/params.py:208
+#: lib/extensions/palette_split_text.py:20
+msgid "Please select one or more text elements to split lines."
+msgstr ""
+
+#: lib/extensions/params.py:228
 msgid "These settings will be applied to 1 object."
 msgstr ""
 
-#: lib/extensions/params.py:210
+#: lib/extensions/params.py:230
 #, python-format
 msgid "These settings will be applied to %d objects."
 msgstr ""
 
-#: lib/extensions/params.py:213
+#: lib/extensions/params.py:235
 msgid "Some settings had different values across objects.  Select a value from the dropdown or enter a new one."
 msgstr ""
 
-#: lib/extensions/params.py:217
+#: lib/extensions/params.py:240
 #, python-format
 msgid "Disabling this tab will disable the following %d tabs."
 msgstr ""
 
-#: lib/extensions/params.py:219
+#: lib/extensions/params.py:244
 msgid "Disabling this tab will disable the following tab."
 msgstr ""
 
-#: lib/extensions/params.py:222
+#: lib/extensions/params.py:248
 #, python-format
 msgid "Enabling this tab will disable %s and vice-versa."
 msgstr ""
 
-#: lib/extensions/params.py:252
+#: lib/extensions/params.py:302
 msgid "Inkscape objects"
 msgstr ""
 
-#: lib/extensions/params.py:313
+#: lib/extensions/params.py:391
 msgid "Click to force this parameter to be saved when you click \"Apply and Quit\""
 msgstr ""
 
-#: lib/extensions/params.py:321
+#: lib/extensions/params.py:401
 msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr ""
 
-#: lib/extensions/params.py:344
+#: lib/extensions/params.py:424
 msgid "Embroidery Params"
 msgstr ""
 
-#: lib/extensions/params.py:365
+#: lib/extensions/params.py:447
 msgid "Use Last Settings"
+msgstr ""
+
+#: lib/extensions/reorder.py:20
+msgid "Please select at least two elements to reorder."
+msgstr ""
+
+#: lib/extensions/selection_to_guide_line.py:21
+msgid "Please select at least one object to be marked as a guide line."
 msgstr ""
 
 #: lib/extensions/selection_to_pattern.py:21
@@ -1197,21 +1707,22 @@ msgstr ""
 msgid "Invalid Pointer"
 msgstr ""
 
-#: lib/extensions/troubleshoot.py:77 templates/lettering_generate_json.xml:26
+#: lib/extensions/troubleshoot.py:77
+#: inx/inkstitch_lettering_generate_json.inx:26
 msgid "Description"
 msgstr ""
 
-#: lib/extensions/troubleshoot.py:98 lib/extensions/troubleshoot.py:143
-#: templates/cleanup.xml:17 templates/remove_embroidery_settings.xml:16
-#: templates/troubleshoot.xml:10
+#: lib/extensions/troubleshoot.py:98 lib/extensions/troubleshoot.py:147
+#: inx/inkstitch_cleanup.inx:17 inx/inkstitch_remove_embroidery_settings.inx:16
+#: inx/inkstitch_troubleshoot.inx:10
 msgid "Troubleshoot"
 msgstr ""
 
-#: lib/extensions/troubleshoot.py:110 lib/extensions/troubleshoot.py:150
+#: lib/extensions/troubleshoot.py:110 lib/extensions/troubleshoot.py:154
 msgid "Errors"
 msgstr ""
 
-#: lib/extensions/troubleshoot.py:116 lib/extensions/troubleshoot.py:154
+#: lib/extensions/troubleshoot.py:116 lib/extensions/troubleshoot.py:158
 msgid "Warnings"
 msgstr ""
 
@@ -1219,23 +1730,27 @@ msgstr ""
 msgid "Type Warnings"
 msgstr ""
 
-#: lib/extensions/troubleshoot.py:151
+#: lib/extensions/troubleshoot.py:155
 msgid "Problems that will prevent the shape from being embroidered."
 msgstr ""
 
-#: lib/extensions/troubleshoot.py:155
+#: lib/extensions/troubleshoot.py:159
 msgid "These are problems that won't prevent the shape from being embroidered. You should consider to fix the warning, but if you don't, Ink/Stitch will do its best to process the object."
 msgstr ""
 
-#: lib/extensions/troubleshoot.py:160
+#: lib/extensions/troubleshoot.py:164
 msgid "Object Type Warnings"
 msgstr ""
 
-#: lib/extensions/troubleshoot.py:161
+#: lib/extensions/troubleshoot.py:165
 msgid "These objects may not work properly with Ink/Stitch. Follow the instructions to correct unwanted behaviour."
 msgstr ""
 
-#: lib/extensions/troubleshoot.py:177
+#: lib/extensions/troubleshoot.py:178
+msgid "Possible solutions"
+msgstr ""
+
+#: lib/extensions/troubleshoot.py:183
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
 msgstr ""
 
@@ -1255,7 +1770,7 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
-#: lib/extensions/zip.py:103
+#: lib/extensions/zip.py:103 inx/inkstitch_commands_scale_symbols.inx:6
 msgid "Size"
 msgstr ""
 
@@ -1313,29 +1828,29 @@ msgstr ""
 msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
 msgstr ""
 
-#: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:140
-msgid "JUMP"
-msgstr ""
-
-#: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:143
-msgid "TRIM"
-msgstr ""
-
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command label at bottom of simulator window
-#: lib/gui/simulator.py:18 templates/output_params_txt.xml:14
-#: electron/src/renderer/assets/js/simulator.js:137
+#: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:142
+#: inx/inkstitch_output_TXT.inx:29
 msgid "STITCH"
 msgstr ""
 
-#: lib/gui/simulator.py:18 templates/output_params_txt.xml:16
-#: electron/src/renderer/assets/js/simulator.js:149
-msgid "COLOR CHANGE"
+#: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:145
+msgid "JUMP"
 msgstr ""
 
-#: lib/gui/simulator.py:18 templates/output_params_txt.xml:18
-#: electron/src/renderer/assets/js/simulator.js:146
+#: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:148
+msgid "TRIM"
+msgstr ""
+
+#: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:151
+#: inx/inkstitch_output_TXT.inx:33
 msgid "STOP"
+msgstr ""
+
+#: lib/gui/simulator.py:18 electron/src/renderer/assets/js/simulator.js:154
+#: inx/inkstitch_output_TXT.inx:31
+msgid "COLOR CHANGE"
 msgstr ""
 
 #: lib/gui/simulator.py:50
@@ -1413,14 +1928,7 @@ msgid "Cannot load simulator.\n"
 "Close Params to get full error message."
 msgstr ""
 
-#. If you translate this string, that will tell Ink/Stitch to
-#. generate menu items for this language in Inkscape's "Extensions"
-#. menu.
-#: lib/inx/utils.py:86
-msgid "Generate INX files"
-msgstr ""
-
-#: lib/lettering/font.py:158
+#: lib/lettering/font.py:162
 #, python-format
 msgid "The font '%s' has no variants."
 msgstr ""
@@ -1432,22 +1940,45 @@ msgstr ""
 msgid "Error writing to %(path)s: %(error)s"
 msgstr ""
 
-#: lib/stitches/auto_satin.py:659
-msgid "Auto-Satin"
+#: lib/stitch_plan/generate_stitch_plan.py:73
+#, python-format
+msgid "File does not exist and cannot be opened. Please correct the file path and try again.\\r%s"
+msgstr ""
+
+#: lib/stitch_plan/stitch_plan.py:26
+msgid "There is no selected stitchable element. Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects in case you have expected a stitchout."
+msgstr ""
+
+#: lib/stitches/auto_run.py:135 lib/stitches/auto_satin.py:345
+msgid "Auto-Route"
+msgstr ""
+
+#: lib/stitches/auto_run.py:257
+#, python-format
+msgid "AutoRun %d"
+msgstr ""
+
+#: lib/stitches/auto_run.py:259
+#, python-format
+msgid "AutoRun Underpath %d"
 msgstr ""
 
 #. Label for a satin column created by Auto-Route Satin Columns and Lettering
 #. extensions
-#: lib/stitches/auto_satin.py:706
+#: lib/stitches/auto_satin.py:516
 #, python-format
 msgid "AutoSatin %d"
 msgstr ""
 
 #. Label for running stitch (underpathing) created by Auto-Route Satin Columns
 #. amd Lettering extensions
-#: lib/stitches/auto_satin.py:709
+#: lib/stitches/auto_satin.py:519
 #, python-format
 msgid "AutoSatin Running Stitch %d"
+msgstr ""
+
+#: lib/stitches/guided_fill.py:120
+msgid "Guide line (or offset copy) is self crossing!"
 msgstr ""
 
 #: lib/svg/rendering.py:222
@@ -1459,12 +1990,12 @@ msgstr ""
 msgid "parseLengthWithUnits: unknown unit %s"
 msgstr ""
 
-#: lib/utils/version.py:19
+#: lib/utils/version.py:22
 #, python-format
 msgid "Ink/Stitch Version: %s"
 msgstr ""
 
-#: lib/utils/version.py:21
+#: lib/utils/version.py:24
 msgid "Ink/Stitch Version: unknown"
 msgstr ""
 
@@ -1511,17 +2042,17 @@ msgstr ""
 msgid "Enter thread name..."
 msgstr ""
 
-#: print/templates/custom-page.html:22 print/templates/ui.html:91
+#: print/templates/custom-page.html:22 print/templates/ui.html:92
 msgid "Enter URL"
 msgstr ""
 
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
-#: print/templates/custom-page.html:33 print/templates/ui.html:92
-#: print/templates/ui.html:96 print/templates/ui.html:102
+#: print/templates/custom-page.html:33 print/templates/ui.html:93
+#: print/templates/ui.html:97 print/templates/ui.html:103
 msgid "OK"
 msgstr ""
 
-#: print/templates/custom-page.html:26 print/templates/ui.html:95
+#: print/templates/custom-page.html:26 print/templates/ui.html:96
 msgid "Enter E-Mail"
 msgstr ""
 
@@ -1529,11 +2060,11 @@ msgstr ""
 msgid "Custom Information Sheet"
 msgstr ""
 
-#: print/templates/custom-page.html:31 print/templates/ui.html:100
+#: print/templates/custom-page.html:31 print/templates/ui.html:101
 msgid "This will reset your custom text to the default."
 msgstr ""
 
-#: print/templates/custom-page.html:32 print/templates/ui.html:101
+#: print/templates/custom-page.html:32 print/templates/ui.html:102
 msgid "All changes will be lost."
 msgstr ""
 
@@ -1541,8 +2072,8 @@ msgstr ""
 msgid "Page"
 msgstr ""
 
-#: print/templates/footer.html:3 print/templates/ui.html:98
-#: print/templates/ui.html:105
+#: print/templates/footer.html:3 print/templates/ui.html:99
+#: print/templates/ui.html:106
 msgid "Proudly generated with"
 msgstr ""
 
@@ -1651,12 +2182,12 @@ msgstr ""
 msgid "Enter operator notes..."
 msgstr ""
 
-#: print/templates/operator_overview.html:21
+#: print/templates/operator_overview.html:22
 #: print/templates/print_overview.html:21
 msgid "Job estimated time"
 msgstr ""
 
-#: print/templates/operator_overview.html:28
+#: print/templates/operator_overview.html:29
 #: print/templates/print_detail.html:18 print/templates/print_overview.html:28
 msgid "Ctrl + Scroll to Zoom"
 msgstr ""
@@ -1693,7 +2224,7 @@ msgstr ""
 msgid "⚠ lost connection to Ink/Stitch"
 msgstr ""
 
-#: print/templates/ui.html:19 print/templates/ui.html:29
+#: print/templates/ui.html:19 print/templates/ui.html:30
 msgid "Page Setup"
 msgstr ""
 
@@ -1701,124 +2232,149 @@ msgstr ""
 msgid "Branding"
 msgstr ""
 
-#: print/templates/ui.html:21 print/templates/ui.html:112
+#: print/templates/ui.html:21 print/templates/ui.html:113
 msgid "Estimated Time"
 msgstr ""
 
-#: print/templates/ui.html:22 print/templates/ui.html:146
+#: print/templates/ui.html:22 print/templates/ui.html:147
+msgid "Estimated Thread"
+msgstr ""
+
+#: print/templates/ui.html:23 print/templates/ui.html:168
 msgid "Design"
 msgstr ""
 
-#: print/templates/ui.html:31
+#: print/templates/ui.html:32
 msgid "Printing Size"
 msgstr ""
 
-#: print/templates/ui.html:39
+#: print/templates/ui.html:40
 msgid "Print Layouts"
 msgstr ""
 
-#: print/templates/ui.html:42 print/templates/ui.html:136
+#: print/templates/ui.html:43 print/templates/ui.html:137
 msgid "Client Overview"
 msgstr ""
 
-#: print/templates/ui.html:46 print/templates/ui.html:137
+#: print/templates/ui.html:47 print/templates/ui.html:138
 msgid "Client Detailed View"
 msgstr ""
 
-#: print/templates/ui.html:50 print/templates/ui.html:138
+#: print/templates/ui.html:51 print/templates/ui.html:139
 msgid "Operator Overview"
 msgstr ""
 
-#: print/templates/ui.html:54 print/templates/ui.html:139
+#: print/templates/ui.html:55 print/templates/ui.html:140
 msgid "Operator Detailed View"
 msgstr ""
 
-#: print/templates/ui.html:56
+#: print/templates/ui.html:57
 msgid "Thumbnail size"
 msgstr ""
 
-#: print/templates/ui.html:62
+#: print/templates/ui.html:63
 msgid "Custom information sheet"
 msgstr ""
 
-#: print/templates/ui.html:65 print/templates/ui.html:108
+#: print/templates/ui.html:66 print/templates/ui.html:109
 msgid "Includes these Page Setup, estimated time settings and also the icon."
 msgstr ""
 
-#: print/templates/ui.html:65 print/templates/ui.html:108
-#: print/templates/ui.html:142
+#: print/templates/ui.html:66 print/templates/ui.html:109
+#: print/templates/ui.html:143 print/templates/ui.html:164
 msgid "Save as defaults"
 msgstr ""
 
-#: print/templates/ui.html:70
+#: print/templates/ui.html:71
 msgid "Logo"
 msgstr ""
 
-#: print/templates/ui.html:80
+#: print/templates/ui.html:81
 msgid "Footer: Operator contact information"
 msgstr ""
 
-#: print/templates/ui.html:114
+#: print/templates/ui.html:115
 msgid "Machine Settings"
 msgstr ""
 
-#: print/templates/ui.html:116
+#: print/templates/ui.html:117
 msgid "Average Machine Speed"
 msgstr ""
 
-#: print/templates/ui.html:117
+#: print/templates/ui.html:118
 msgid "stitches per minute "
 msgstr ""
 
-#: print/templates/ui.html:121
+#: print/templates/ui.html:122
 msgid "Time Factors"
 msgstr ""
 
-#: print/templates/ui.html:124
+#: print/templates/ui.html:125
 msgid "Includes average time for preparing the machine, thread breaks and/or bobbin changes, etc."
 msgstr ""
 
-#: print/templates/ui.html:124
+#: print/templates/ui.html:125
 msgid "seconds to add to total time*"
 msgstr ""
 
-#: print/templates/ui.html:128
+#: print/templates/ui.html:129
 msgid "This will be added to the total time."
 msgstr ""
 
-#: print/templates/ui.html:128
+#: print/templates/ui.html:129
 msgid "seconds needed for a color change*"
 msgstr ""
 
-#: print/templates/ui.html:131
+#: print/templates/ui.html:132
 msgid "seconds needed for trim"
 msgstr ""
 
-#: print/templates/ui.html:134
+#: print/templates/ui.html:135
 msgid "Display Time On"
 msgstr ""
 
-#: print/templates/ui.html:142
+#: print/templates/ui.html:143 print/templates/ui.html:164
 msgid "Includes page setup, estimated time and also the branding."
 msgstr ""
 
-#: print/templates/ui.html:147
-msgid "Thread Palette"
+#: print/templates/ui.html:149
+msgid "Factors"
 msgstr ""
 
 #: print/templates/ui.html:150
-msgid "None"
+msgid "The thread length calculation depends on a lot of factors in embroidery designs. We will only get a very inacurate approximation.\n"
+"             Ink/Stitch simply calculates the path length, so the factor of 1 will always be much, much less than the real thread consumption."
 msgstr ""
 
-#: print/templates/ui.html:166
-msgid "Changing the thread palette will cause thread names and catalog numbers to be recalculated based on the new palette.  Any changes you have made to color or thread names will be lost.  Are you sure?"
+#: print/templates/ui.html:152
+msgid "Set a factor to multiply the path length with, depending on your standard setup or adapt it to your current design (tension, thread, fabric, stitch count, etc.)."
+msgstr ""
+
+#: print/templates/ui.html:156 print/templates/ui.html:161
+msgid "Factor to multiply with thread length"
+msgstr ""
+
+#: print/templates/ui.html:156 print/templates/ui.html:161
+msgid "* path length"
 msgstr ""
 
 #: print/templates/ui.html:169
+msgid "Thread Palette"
+msgstr ""
+
+#: print/templates/ui.html:172
+msgid "None"
+msgstr ""
+
+#: print/templates/ui.html:188
+msgid "Changing the thread palette will cause thread names and catalog numbers to be recalculated based on the new palette.  Any changes you have made to color or thread names will be lost.  Are you sure?"
+msgstr ""
+
+#: print/templates/ui.html:191
 msgid "Yes"
 msgstr ""
 
-#: print/templates/ui.html:170 templates/lettering_generate_json.xml:37
+#: print/templates/ui.html:192 inx/inkstitch_lettering_generate_json.inx:37
 msgid "No"
 msgstr ""
 
@@ -2003,533 +2559,6 @@ msgstr ""
 msgid "G-code Format"
 msgstr ""
 
-#: templates/about.xml:3 templates/about.xml:6
-msgid "About"
-msgstr ""
-
-#: templates/about.xml:10
-msgid "An open-source machine embroidery design platform based on Inkscape."
-msgstr ""
-
-#: templates/about.xml:15
-msgid "License"
-msgstr ""
-
-#: templates/auto_satin.xml:3
-msgid "Auto-Route Satin Columns"
-msgstr ""
-
-#: templates/auto_satin.xml:5
-msgid "Trim jump stitches"
-msgstr ""
-
-#: templates/auto_satin.xml:6
-msgid "Preserve order of satin columns"
-msgstr ""
-
-#: templates/auto_satin.xml:12 templates/convert_to_satin.xml:10
-#: templates/convert_to_stroke.xml:13 templates/cut_satin.xml:10
-#: templates/flip.xml:10
-msgid "Satin Tools"
-msgstr ""
-
-#: templates/break_apart.xml:3
-msgid "Break Apart Fill Objects"
-msgstr ""
-
-#: templates/break_apart.xml:10
-msgid "Fill Tools"
-msgstr ""
-
-#: templates/break_apart.xml:15
-msgid "This extension will try to repair fill shapes and break them apart if necessary. Holes will be retained. Use on simple or overlapping shapes."
-msgstr ""
-
-#: templates/cleanup.xml:3
-msgid "Cleanup Document"
-msgstr ""
-
-#: templates/cleanup.xml:5
-msgid "Use this extension to remove small objects from the document."
-msgstr ""
-
-#: templates/cleanup.xml:6
-msgid "Remove Small Fill Areas"
-msgstr ""
-
-#: templates/cleanup.xml:7
-msgid "Removes areas smaller than dedined by threshold."
-msgstr ""
-
-#: templates/cleanup.xml:8
-msgid "Fill area threshold (px²)"
-msgstr ""
-
-#: templates/cleanup.xml:10
-msgid "Removes small strokes shorter than defined by threshold."
-msgstr ""
-
-#: templates/cleanup.xml:11
-msgid "Stroke threshold (px)"
-msgstr ""
-
-#: templates/convert_to_satin.xml:3
-msgid "Convert Line to Satin"
-msgstr ""
-
-#: templates/convert_to_stroke.xml:3
-msgid "Convert Satin to Stroke"
-msgstr ""
-
-#: templates/convert_to_stroke.xml:6
-msgid "Converts a satin column into a running stitch."
-msgstr ""
-
-#: templates/convert_to_stroke.xml:8
-msgid "Do not delete original satin column."
-msgstr ""
-
-#: templates/cut_satin.xml:3
-msgid "Cut Satin Column"
-msgstr ""
-
-#: templates/duplicate_params.xml:3
-msgid "Duplicate Params"
-msgstr ""
-
-#: templates/duplicate_params.xml:10 templates/reorder.xml:10
-#: templates/selection_to_pattern.xml:10
-msgid "Edit"
-msgstr ""
-
-#: templates/embroider.xml:3
-msgid "Embroider"
-msgstr ""
-
-#: templates/embroider.xml:5
-msgid "Create a stitch file"
-msgstr ""
-
-#: templates/embroider.xml:6
-msgid "Save your embroidery file through | File > Save a Copy ... |"
-msgstr ""
-
-#: templates/embroider.xml:7
-msgid "Choose from listed embroidery file formats and save."
-msgstr ""
-
-#: templates/embroider.xml:9
-msgid "Multiple file formats can be saved by choosing the zip file format."
-msgstr ""
-
-#: templates/embroider.xml:14 templates/print.xml:10 templates/simulator.xml:10
-#: templates/stitch_plan_preview.xml:10
-msgid "Visualise and Export"
-msgstr ""
-
-#: templates/embroider_settings.xml:3
-msgid "Preferences"
-msgstr ""
-
-#: templates/embroider_settings.xml:13
-msgid "Output Settings"
-msgstr ""
-
-#: templates/embroider_settings.xml:16
-msgid "Collapse length (mm)"
-msgstr ""
-
-#: templates/embroider_settings.xml:17
-msgid "Jump stitches smaller than this will be treated as normal stitches."
-msgstr ""
-
-#: templates/flip.xml:3
-msgid "Flip Satin Column Rails"
-msgstr ""
-
-#: templates/global_commands.xml:3
-msgid "Add Commands"
-msgstr ""
-
-#: templates/global_commands.xml:5
-msgid "These commands affect the entire embroidery design."
-msgstr ""
-
-#. Inkscape submenu under Extensions -> Ink/Stitch
-#: templates/global_commands.xml:15 templates/layer_commands.xml:14
-#: templates/object_commands.xml:13
-msgid "Commands"
-msgstr ""
-
-#: templates/import_threadlist.xml:3
-msgid "Import Threadlist"
-msgstr ""
-
-#: templates/import_threadlist.xml:6 templates/install_custom_palette.xml:8
-msgid "Choose file"
-msgstr ""
-
-#: templates/import_threadlist.xml:20 templates/install.xml:10
-#: templates/install_custom_palette.xml:13
-msgid "Thread Color Management"
-msgstr ""
-
-#: templates/input.xml:9
-#, python-format
-msgid "convert %(file_extension)s file to Ink/Stitch manual-stitch paths"
-msgstr ""
-
-#: templates/install.xml:3
-msgid "Install thread color palettes for Inkscape"
-msgstr ""
-
-#: templates/install_custom_palette.xml:3
-msgid "Install custom palette"
-msgstr ""
-
-#: templates/install_custom_palette.xml:6
-msgid "Choose a .gpl color palette file to install into Inkscape."
-msgstr ""
-
-#: templates/install_custom_palette.xml:7
-msgid "Restart Inkscape to use."
-msgstr ""
-
-#: templates/layer_commands.xml:3
-msgid "Add Layer Commands"
-msgstr ""
-
-#: templates/layer_commands.xml:5
-msgid "Commands will be added to the currently-selected layer."
-msgstr ""
-
-#: templates/lettering.xml:3
-msgid "Lettering"
-msgstr ""
-
-#: templates/lettering_custom_font_dir.xml:3
-#: templates/lettering_custom_font_dir.xml:18
-msgid "Custom font directory"
-msgstr ""
-
-#: templates/lettering_custom_font_dir.xml:10
-#: templates/lettering_generate_json.xml:10
-#: templates/lettering_remove_kerning.xml:10
-msgid "Font Management"
-msgstr ""
-
-#: templates/lettering_custom_font_dir.xml:15
-msgid "Set a custom directory for additional fonts to be used with the lettering tool."
-msgstr ""
-
-#: templates/lettering_custom_font_dir.xml:21
-msgid "Usage: The custom font directory must contain a subdirectory for each font."
-msgstr ""
-
-#: templates/lettering_generate_json.xml:3
-msgid "Generate JSON"
-msgstr ""
-
-#: templates/lettering_generate_json.xml:15
-msgid "Generates font.json which can be used by the lettering tool."
-msgstr ""
-
-#: templates/lettering_generate_json.xml:17
-msgid "The generated file can be viewed and updated with a standard text editor tool."
-msgstr ""
-
-#: templates/lettering_generate_json.xml:21
-msgid "SVG Font File"
-msgstr ""
-
-#: templates/lettering_generate_json.xml:25
-msgid "Name"
-msgstr ""
-
-#: templates/lettering_generate_json.xml:32
-msgid "Autoroute Satin"
-msgstr ""
-
-#: templates/lettering_generate_json.xml:33
-msgid "Disable if you defined manual routing in your font."
-msgstr ""
-
-#: templates/lettering_generate_json.xml:34
-msgid "Reversible"
-msgstr ""
-
-#: templates/lettering_generate_json.xml:35
-msgid "If disabled back and forth stitching will not be possile for this font."
-msgstr ""
-
-#: templates/lettering_generate_json.xml:36
-msgid "Force letter case"
-msgstr ""
-
-#: templates/lettering_generate_json.xml:38
-msgid "Upper"
-msgstr ""
-
-#: templates/lettering_generate_json.xml:39
-msgid "Lower"
-msgstr ""
-
-#: templates/lettering_generate_json.xml:43
-msgid "Min Scale"
-msgstr ""
-
-#: templates/lettering_generate_json.xml:44
-msgid "Max Scale"
-msgstr ""
-
-#: templates/lettering_generate_json.xml:48
-msgid "Default Glyph"
-msgstr ""
-
-#: templates/lettering_generate_json.xml:52
-msgid "Kerning"
-msgstr ""
-
-#: templates/lettering_generate_json.xml:54
-msgid "If your font file contains kerning information, you can completely ignore the following settings (unless you want to overwrite them).\n"
-"                   If the kerning information cannot be found, these values will apply automatically."
-msgstr ""
-
-#: templates/lettering_generate_json.xml:59
-#: templates/lettering_generate_json.xml:66
-msgid "Force"
-msgstr ""
-
-#: templates/lettering_generate_json.xml:60
-msgid "Overwrite leading information from font file."
-msgstr ""
-
-#: templates/lettering_generate_json.xml:61
-msgid "Leading (px)"
-msgstr ""
-
-#: templates/lettering_generate_json.xml:62
-msgid "Line height (default: 100)"
-msgstr ""
-
-#: templates/lettering_generate_json.xml:67
-msgid "Overwrite word spacing information from font file."
-msgstr ""
-
-#: templates/lettering_generate_json.xml:68
-msgid "Word spacing (px)"
-msgstr ""
-
-#: templates/lettering_generate_json.xml:69
-msgid "Space character width (default: 20)"
-msgstr ""
-
-#: templates/lettering_remove_kerning.xml:3
-msgid "Remove Kerning"
-msgstr ""
-
-#: templates/lettering_remove_kerning.xml:15
-msgid "Removes Kerning information from given SVG files"
-msgstr ""
-
-#: templates/lettering_remove_kerning.xml:19
-msgid "Make sure you keep a copy of the original file. After running this extension kerning information will be lost unrevertably from these files."
-msgstr ""
-
-#: templates/lettering_remove_kerning.xml:23
-msgid "Select Font Files"
-msgstr ""
-
-#: templates/object_commands.xml:3
-msgid "Attach Commands to Selected Objects"
-msgstr ""
-
-#: templates/output.xml:9
-#, python-format
-msgid "Save design in %(file_extension)s format using Ink/Stitch"
-msgstr ""
-
-#: templates/output_params_txt.xml:4
-msgid "negate X coordinate values"
-msgstr ""
-
-#: templates/output_params_txt.xml:4
-msgid "Negate x coordinates"
-msgstr ""
-
-#: templates/output_params_txt.xml:5
-msgid "negate Y coordinate values"
-msgstr ""
-
-#: templates/output_params_txt.xml:5
-msgid "Negate y coordinates"
-msgstr ""
-
-#: templates/output_params_txt.xml:6
-msgid "Z coordinate value"
-msgstr ""
-
-#: templates/output_params_txt.xml:6
-msgid "Either alternate Z value between 0 and 1 or travel custom value."
-msgstr ""
-
-#: templates/output_params_txt.xml:7
-msgid "alternate Z value"
-msgstr ""
-
-#: templates/output_params_txt.xml:8 templates/output_params_txt.xml:10
-msgid "Z travel per stitch"
-msgstr ""
-
-#: templates/output_params_txt.xml:11
-msgid "increment z coordinate by this amount per stitch if \"Z travel per stitch\" is enabled"
-msgstr ""
-
-#: templates/output_params_txt.xml:15
-#, python-format
-msgid "Use '%X' for x-coordinate. Use '%Y' for y-coordinate and '%Z' for z-coordinate. Use '\\n' for a new line."
-msgstr ""
-
-#: templates/output_params_txt.xml:17 templates/output_params_txt.xml:19
-msgid "Use '\\n' for a new line. Leave empty to use default value. Use 'none' to remove."
-msgstr ""
-
-#: templates/output_params_txt.xml:20
-msgid "START"
-msgstr ""
-
-#: templates/output_params_txt.xml:21 templates/output_params_txt.xml:23
-msgid "Use '\\n' for a new line."
-msgstr ""
-
-#: templates/output_params_txt.xml:22
-msgid "END"
-msgstr ""
-
-#: templates/output_params_txt.xml:26
-msgid "laser mode"
-msgstr ""
-
-#: templates/output_params_txt.xml:27
-msgid "Laser mode (generate g-code for grbl laser mode)"
-msgstr ""
-
-#: templates/output_params_txt.xml:28
-msgid "dynamic laser power"
-msgstr ""
-
-#: templates/output_params_txt.xml:29
-msgid "Use Grbl's M4 dynamic laser power mode.  Ensures consistent laser cutting power regardless of motor speed.  Only for PWM-capable lasers."
-msgstr ""
-
-#: templates/output_params_txt.xml:31
-msgid "laser warm-up time"
-msgstr ""
-
-#: templates/output_params_txt.xml:32
-msgid "When turning on the laser, wait this many seconds for laser to warm up (G4 command)"
-msgstr ""
-
-#: templates/output_params_txt.xml:33
-msgid "spindle speed"
-msgstr ""
-
-#: templates/output_params_txt.xml:34
-msgid "spindle speed (laser power for laser mode, set to -1 to omit)"
-msgstr ""
-
-#: templates/output_params_txt.xml:35
-msgid "min spindle speed"
-msgstr ""
-
-#: templates/output_params_txt.xml:36
-msgid "minimum spindle speed value (grbl $31 setting)"
-msgstr ""
-
-#: templates/output_params_txt.xml:37
-msgid "max spindle speed"
-msgstr ""
-
-#: templates/output_params_txt.xml:38
-msgid "minimum spindle speed value (grbl $30 setting)"
-msgstr ""
-
-#: templates/output_params_txt.xml:39
-msgid "feed rate (in mm/min, set to -1 to omit)"
-msgstr ""
-
-#: templates/params.xml:3
-msgid "Params"
-msgstr ""
-
-#: templates/print.xml:3
-msgid "PDF Export"
-msgstr ""
-
-#: templates/remove_embroidery_settings.xml:3
-msgid "Remove embroidery settings"
-msgstr ""
-
-#: templates/remove_embroidery_settings.xml:5
-msgid "Use this extension to remove the information Ink/Stitch has stored in your document.  This can be especially useful if you copy and paste objects from an embroidery design into another document."
-msgstr ""
-
-#: templates/remove_embroidery_settings.xml:6
-msgid "Remove Params"
-msgstr ""
-
-#: templates/remove_embroidery_settings.xml:7
-msgid "Removes params from selected objects or all objects if nothing is selected."
-msgstr ""
-
-#: templates/remove_embroidery_settings.xml:8
-msgid "Remove Commands"
-msgstr ""
-
-#: templates/remove_embroidery_settings.xml:9
-msgid "Removes visual commands from selected objects or all objects if nothing is selected."
-msgstr ""
-
-#: templates/remove_embroidery_settings.xml:10
-msgid "Remove Print Settings from SVG metadata"
-msgstr ""
-
-#: templates/reorder.xml:3
-msgid "Re-stack objects in order of selection"
-msgstr ""
-
-#: templates/selection_to_pattern.xml:3
-msgid "Selection to pattern"
-msgstr ""
-
-#: templates/simulator.xml:3
-msgid "Simulator / Realistic Preview"
-msgstr ""
-
-#: templates/stitch_plan_preview.xml:3
-msgid "Stitch Plan Preview"
-msgstr ""
-
-#: templates/troubleshoot.xml:3
-msgid "Troubleshoot Objects"
-msgstr ""
-
-#: templates/zip.xml:8
-msgid "Ink/Stitch: ZIP export multiple formats (.zip)"
-msgstr ""
-
-#: templates/zip.xml:9
-msgid "Create a ZIP with multiple embroidery file formats using Ink/Stitch"
-msgstr ""
-
-#: templates/zip.xml:17
-msgid "Scalable Vector Graphic"
-msgstr ""
-
-#: templates/zip.xml:18
-msgid "Threadlist"
-msgstr ""
-
 #. name for left arrow keyboard key
 #: electron/src/renderer/components/Simulator.vue:52
 msgid "← Arrow left"
@@ -2571,7 +2600,7 @@ msgstr ""
 msgid "Controls"
 msgstr ""
 
-#: electron/src/renderer/components/Simulator.vue:223
+#: electron/src/renderer/components/Simulator.vue:226
 msgid "cursor"
 msgstr ""
 
@@ -2664,11 +2693,15 @@ msgstr ""
 msgid "Play forward"
 msgstr ""
 
-#: electron/src/renderer/components/Simulator.vue:220
+#: electron/src/renderer/components/Simulator.vue:223
 msgid "realistic"
 msgstr ""
 
-#: electron/src/renderer/components/Simulator.vue:260
+#: electron/src/renderer/components/Simulator.vue:219
+msgid "render jumps"
+msgstr ""
+
+#: electron/src/renderer/components/Simulator.vue:263
 msgid "Rendering stitch-plan..."
 msgstr ""
 
@@ -2707,5 +2740,1320 @@ msgstr ""
 
 #: electron/src/renderer/components/InstallPalettes.vue:60
 msgid "Try again"
+msgstr ""
+
+#: inx/inkstitch_about.inx:3 inx/inkstitch_about.inx:6
+msgid "About"
+msgstr ""
+
+#: inx/inkstitch_about.inx:8
+msgid "Ink/Stitch - Manual Install"
+msgstr ""
+
+#: inx/inkstitch_about.inx:10
+msgid "An open-source machine embroidery design platform based on Inkscape."
+msgstr ""
+
+#: inx/inkstitch_about.inx:13
+msgid "https://inkstitch.org"
+msgstr ""
+
+#: inx/inkstitch_about.inx:15
+msgid "License"
+msgstr ""
+
+#: inx/inkstitch_apply_threadlist.inx:3
+msgid "Apply Threadlist"
+msgstr ""
+
+#: inx/inkstitch_apply_threadlist.inx:6
+#: inx/inkstitch_install_custom_palette.inx:8
+#: inx/inkstitch_palette_to_text.inx:17
+msgid "Choose file"
+msgstr ""
+
+#: inx/inkstitch_apply_threadlist.inx:7
+msgid "Choose method"
+msgstr ""
+
+#: inx/inkstitch_apply_threadlist.inx:8
+msgid "Apply Ink/Stitch threadlist"
+msgstr ""
+
+#: inx/inkstitch_apply_threadlist.inx:9
+msgid "Apply other threadlist*"
+msgstr ""
+
+#: inx/inkstitch_apply_threadlist.inx:11
+msgid "*Choose color palette"
+msgstr ""
+
+#: inx/inkstitch_apply_threadlist.inx:87 inx/inkstitch_generate_palette.inx:10
+#: inx/inkstitch_install.inx:10 inx/inkstitch_install_custom_palette.inx:13
+#: inx/inkstitch_palette_split_text.inx:10 inx/inkstitch_palette_to_text.inx:9
+msgid "Thread Color Management"
+msgstr ""
+
+#: inx/inkstitch_auto_run.inx:3 inx/inkstitch_auto_run.inx:24
+msgid "Auto-Route Running Stitch"
+msgstr ""
+
+#: inx/inkstitch_auto_run.inx:10
+msgid "Tools: Stroke"
+msgstr ""
+
+#: inx/inkstitch_auto_run.inx:15
+msgid "Auto-Route Running Stitch Options"
+msgstr ""
+
+#: inx/inkstitch_auto_run.inx:17
+msgid "Add nodes at intersections"
+msgstr ""
+
+#: inx/inkstitch_auto_run.inx:19
+msgid "Preserve order of running stitches"
+msgstr ""
+
+#: inx/inkstitch_auto_run.inx:21 inx/inkstitch_auto_satin.inx:5
+msgid "Trim jump stitches"
+msgstr ""
+
+#: inx/inkstitch_auto_run.inx:23 inx/inkstitch_cutwork_segmentation.inx:42
+#: inx/inkstitch_generate_palette.inx:24 inx/inkstitch_palette_to_text.inx:19
+msgid "Help"
+msgstr ""
+
+#: inx/inkstitch_auto_run.inx:25
+msgid "Add nodes at intersections:"
+msgstr ""
+
+#: inx/inkstitch_auto_run.inx:27
+msgid "- Enabled (automatic). Ink/Stitch will add some nodes for better routing. This is the default setting."
+msgstr ""
+
+#: inx/inkstitch_auto_run.inx:29
+msgid "- Disabled (manual). Choose this option if you have manually set nodes at crucial spots."
+msgstr ""
+
+#: inx/inkstitch_auto_run.inx:32
+msgid "Use Start- end end commands to define where auto-routing for running stitch should start and end."
+msgstr ""
+
+#: inx/inkstitch_auto_run.inx:34
+msgid "More info on our website:"
+msgstr ""
+
+#: inx/inkstitch_auto_run.inx:35
+msgid "https://inkstitch.org/docs/stroke-tools#auto-route-running-stitch"
+msgstr ""
+
+#: inx/inkstitch_auto_satin.inx:3
+msgid "Auto-Route Satin Columns"
+msgstr ""
+
+#: inx/inkstitch_auto_satin.inx:6
+msgid "Preserve order of satin columns"
+msgstr ""
+
+#: inx/inkstitch_auto_satin.inx:12 inx/inkstitch_convert_to_satin.inx:10
+#: inx/inkstitch_convert_to_stroke.inx:13 inx/inkstitch_cut_satin.inx:10
+#: inx/inkstitch_flip.inx:10
+msgid "Tools: Satin"
+msgstr ""
+
+#: inx/inkstitch_break_apart.inx:3
+msgid "Break Apart Fill Objects"
+msgstr ""
+
+#: inx/inkstitch_break_apart.inx:10
+msgid "Tools: Fill"
+msgstr ""
+
+#: inx/inkstitch_break_apart.inx:18
+msgid "Simple"
+msgstr ""
+
+#: inx/inkstitch_break_apart.inx:19
+msgid "Complex"
+msgstr ""
+
+#: inx/inkstitch_cleanup.inx:3
+msgid "Cleanup Document"
+msgstr ""
+
+#: inx/inkstitch_cleanup.inx:7
+msgid "Remove Small Fill Areas"
+msgstr ""
+
+#: inx/inkstitch_cleanup.inx:7
+msgid "Removes areas smaller than dedined by threshold."
+msgstr ""
+
+#: inx/inkstitch_cleanup.inx:8
+msgid "Fill area threshold (px²)"
+msgstr ""
+
+#: inx/inkstitch_cleanup.inx:10
+msgid "Remove Small strokes"
+msgstr ""
+
+#: inx/inkstitch_cleanup.inx:10
+msgid "Removes small strokes shorter than defined by threshold."
+msgstr ""
+
+#: inx/inkstitch_cleanup.inx:11
+msgid "Stroke threshold (px)"
+msgstr ""
+
+#: inx/inkstitch_commands_scale_symbols.inx:3
+msgid "Scale Command Symbols"
+msgstr ""
+
+#: inx/inkstitch_commands_scale_symbols.inx:11
+#: inx/inkstitch_global_commands.inx:17 inx/inkstitch_layer_commands.inx:14
+#: inx/inkstitch_object_commands.inx:21
+#: inx/inkstitch_object_commands_toggle_visibility.inx:10
+msgid "Commands"
+msgstr ""
+
+#: inx/inkstitch_commands_scale_symbols.inx:12
+#: inx/inkstitch_object_commands_toggle_visibility.inx:11
+msgid "View"
+msgstr ""
+
+#: inx/inkstitch_convert_to_satin.inx:3
+msgid "Convert Line to Satin"
+msgstr ""
+
+#: inx/inkstitch_convert_to_stroke.inx:3
+msgid "Convert Satin to Stroke"
+msgstr ""
+
+#: inx/inkstitch_convert_to_stroke.inx:8
+msgid "Keep satin column"
+msgstr ""
+
+#: inx/inkstitch_convert_to_stroke.inx:8
+msgid "Do not delete original satin column."
+msgstr ""
+
+#: inx/inkstitch_cut_satin.inx:3
+msgid "Cut Satin Column"
+msgstr ""
+
+#: inx/inkstitch_cutwork_segmentation.inx:3
+msgid "Cutwork segmentation"
+msgstr ""
+
+#: inx/inkstitch_cutwork_segmentation.inx:13
+msgid "Cutwork Options"
+msgstr ""
+
+#: inx/inkstitch_cutwork_segmentation.inx:15
+msgid "#1"
+msgstr ""
+
+#: inx/inkstitch_cutwork_segmentation.inx:16
+#: inx/inkstitch_cutwork_segmentation.inx:22
+#: inx/inkstitch_cutwork_segmentation.inx:28
+#: inx/inkstitch_cutwork_segmentation.inx:34
+msgid "start"
+msgstr ""
+
+#: inx/inkstitch_cutwork_segmentation.inx:17
+#: inx/inkstitch_cutwork_segmentation.inx:23
+#: inx/inkstitch_cutwork_segmentation.inx:29
+#: inx/inkstitch_cutwork_segmentation.inx:35
+msgid "end"
+msgstr ""
+
+#: inx/inkstitch_cutwork_segmentation.inx:18
+#: inx/inkstitch_cutwork_segmentation.inx:24
+#: inx/inkstitch_cutwork_segmentation.inx:30
+#: inx/inkstitch_cutwork_segmentation.inx:36
+msgid "color"
+msgstr ""
+
+#: inx/inkstitch_cutwork_segmentation.inx:21
+msgid "#2"
+msgstr ""
+
+#: inx/inkstitch_cutwork_segmentation.inx:27
+msgid "#3"
+msgstr ""
+
+#: inx/inkstitch_cutwork_segmentation.inx:33
+msgid "#4"
+msgstr ""
+
+#: inx/inkstitch_cutwork_segmentation.inx:39
+msgid "Sort elements by color"
+msgstr ""
+
+#: inx/inkstitch_cutwork_segmentation.inx:40
+msgid "Keep original"
+msgstr ""
+
+#: inx/inkstitch_cutwork_segmentation.inx:43
+msgid "This extension separates a path depending on the angle."
+msgstr ""
+
+#: inx/inkstitch_cutwork_segmentation.inx:44
+msgid "* If you don't want to use 4 needles, set both angle values to 0 for the rest of the rows."
+msgstr ""
+
+#: inx/inkstitch_cutwork_segmentation.inx:45
+msgid "* A horizontal line has an angle of 0 degrees."
+msgstr ""
+
+#: inx/inkstitch_cutwork_segmentation.inx:46
+msgid "* After the conversion through this extension, don't rotate your design again."
+msgstr ""
+
+#: inx/inkstitch_cutwork_segmentation.inx:48
+msgid "Please adjust angle and color options to your specific needle kit."
+msgstr ""
+
+#: inx/inkstitch_cutwork_segmentation.inx:49
+msgid "On our website we have collected some common setups."
+msgstr ""
+
+#: inx/inkstitch_cutwork_segmentation.inx:50
+msgid "https://inkstitch.org/docs/cutwork/"
+msgstr ""
+
+#: inx/inkstitch_duplicate_params.inx:3
+msgid "Duplicate Params"
+msgstr ""
+
+#: inx/inkstitch_duplicate_params.inx:10 inx/inkstitch_reorder.inx:10
+#: inx/inkstitch_selection_to_guide_line.inx:10
+#: inx/inkstitch_selection_to_pattern.inx:10
+msgid "Edit"
+msgstr ""
+
+#: inx/inkstitch_embroider.inx:3
+msgid "Embroider"
+msgstr ""
+
+#: inx/inkstitch_embroider.inx:14 inx/inkstitch_print.inx:10
+#: inx/inkstitch_simulator.inx:10 inx/inkstitch_stitch_plan_preview.inx:10
+msgid "Visualise and Export"
+msgstr ""
+
+#: inx/inkstitch_embroider_settings.inx:3
+msgid "Preferences"
+msgstr ""
+
+#: inx/inkstitch_embroider_settings.inx:17
+msgid "Collapse length (mm)"
+msgstr ""
+
+#: inx/inkstitch_embroider_settings.inx:17
+msgid "Jump stitches smaller than this will be treated as normal stitches."
+msgstr ""
+
+#: inx/inkstitch_flip.inx:3
+msgid "Flip Satin Column Rails"
+msgstr ""
+
+#: inx/inkstitch_generate_palette.inx:3
+msgid "Generate Color Palette"
+msgstr ""
+
+#: inx/inkstitch_generate_palette.inx:11
+#: inx/inkstitch_palette_split_text.inx:11
+msgid "Generate Palette"
+msgstr ""
+
+#: inx/inkstitch_generate_palette.inx:17
+msgid "Generate Palette Options"
+msgstr ""
+
+#: inx/inkstitch_generate_palette.inx:18
+msgid "Palette name"
+msgstr ""
+
+#: inx/inkstitch_generate_palette.inx:20
+msgid "Folder (optional):"
+msgstr ""
+
+#: inx/inkstitch_generate_palette.inx:22
+msgid "⚠ Restart Inkscape to use your color palette."
+msgstr ""
+
+#: inx/inkstitch_generate_palette.inx:25
+msgid "Generate a custom color palette for Ink/Stitch"
+msgstr ""
+
+#: inx/inkstitch_generate_palette.inx:26
+msgid "Sadly we can not sort color swatches in Inkscape. With this extension you can export colors from text elements in their stacking order. The text will be used as the color name and number."
+msgstr ""
+
+#: inx/inkstitch_generate_palette.inx:30
+msgid "On our website we describe all necessary steps to generate a color palette for Ink/Stitch."
+msgstr ""
+
+#: inx/inkstitch_generate_palette.inx:31
+msgid "https://inkstitch.org/docs/thread-color#generate-color-palette"
+msgstr ""
+
+#: inx/inkstitch_global_commands.inx:3
+msgid "Add Commands"
+msgstr ""
+
+#: inx/inkstitch_input_100.inx:3
+msgid "100 file input"
+msgstr ""
+
+#: inx/inkstitch_input_100.inx:8
+msgid "Ink/Stitch: Toyota Embroidery Format (.100)"
+msgstr ""
+
+#: inx/inkstitch_input_100.inx:9
+msgid "convert 100 file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_10O.inx:3
+msgid "10O file input"
+msgstr ""
+
+#: inx/inkstitch_input_10O.inx:8
+msgid "Ink/Stitch: Toyota Embroidery Format (.10o)"
+msgstr ""
+
+#: inx/inkstitch_input_10O.inx:9
+msgid "convert 10O file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_BRO.inx:3
+msgid "BRO file input"
+msgstr ""
+
+#: inx/inkstitch_input_BRO.inx:8
+msgid "Ink/Stitch: Bits & Volts Embroidery Format (.bro)"
+msgstr ""
+
+#: inx/inkstitch_input_BRO.inx:9
+msgid "convert BRO file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_DAT.inx:3
+msgid "DAT file input"
+msgstr ""
+
+#: inx/inkstitch_input_DAT.inx:8
+msgid "Ink/Stitch: Sunstar or Barudan Embroidery Format (.dat)"
+msgstr ""
+
+#: inx/inkstitch_input_DAT.inx:9
+msgid "convert DAT file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_DSB.inx:3
+msgid "DSB file input"
+msgstr ""
+
+#: inx/inkstitch_input_DSB.inx:8
+msgid "Ink/Stitch: Tajima(Barudan) Embroidery Format (.dsb)"
+msgstr ""
+
+#: inx/inkstitch_input_DSB.inx:9
+msgid "convert DSB file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_DST.inx:3
+msgid "DST file input"
+msgstr ""
+
+#: inx/inkstitch_input_DST.inx:8 inx/inkstitch_output_DST.inx:8
+msgid "Ink/Stitch: Tajima Embroidery Format (.dst)"
+msgstr ""
+
+#: inx/inkstitch_input_DST.inx:9
+msgid "convert DST file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_DSZ.inx:3
+msgid "DSZ file input"
+msgstr ""
+
+#: inx/inkstitch_input_DSZ.inx:8
+msgid "Ink/Stitch: ZSK USA Embroidery Format (.dsz)"
+msgstr ""
+
+#: inx/inkstitch_input_DSZ.inx:9
+msgid "convert DSZ file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_EMD.inx:3
+msgid "EMD file input"
+msgstr ""
+
+#: inx/inkstitch_input_EMD.inx:8
+msgid "Ink/Stitch: Elna Embroidery Format (.emd)"
+msgstr ""
+
+#: inx/inkstitch_input_EMD.inx:9
+msgid "convert EMD file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_EXP.inx:3
+msgid "EXP file input"
+msgstr ""
+
+#: inx/inkstitch_input_EXP.inx:8 inx/inkstitch_output_EXP.inx:8
+msgid "Ink/Stitch: Melco Embroidery Format (.exp)"
+msgstr ""
+
+#: inx/inkstitch_input_EXP.inx:9
+msgid "convert EXP file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_EXY.inx:3
+msgid "EXY file input"
+msgstr ""
+
+#: inx/inkstitch_input_EXY.inx:8
+msgid "Ink/Stitch: Eltac Embroidery Format (.exy)"
+msgstr ""
+
+#: inx/inkstitch_input_EXY.inx:9
+msgid "convert EXY file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_FXY.inx:3
+msgid "FXY file input"
+msgstr ""
+
+#: inx/inkstitch_input_FXY.inx:8
+msgid "Ink/Stitch: Fortron Embroidery Format (.fxy)"
+msgstr ""
+
+#: inx/inkstitch_input_FXY.inx:9
+msgid "convert FXY file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_GT.inx:3
+msgid "GT file input"
+msgstr ""
+
+#: inx/inkstitch_input_GT.inx:8
+msgid "Ink/Stitch: Gold Thread Embroidery Format (.gt)"
+msgstr ""
+
+#: inx/inkstitch_input_GT.inx:9
+msgid "convert GT file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_INB.inx:3
+msgid "INB file input"
+msgstr ""
+
+#: inx/inkstitch_input_INB.inx:8
+msgid "Ink/Stitch: Inbro Embroidery Format (.inb)"
+msgstr ""
+
+#: inx/inkstitch_input_INB.inx:9
+msgid "convert INB file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_JEF.inx:3
+msgid "JEF file input"
+msgstr ""
+
+#: inx/inkstitch_input_JEF.inx:8 inx/inkstitch_output_JEF.inx:8
+msgid "Ink/Stitch: Janome Embroidery Format (.jef)"
+msgstr ""
+
+#: inx/inkstitch_input_JEF.inx:9
+msgid "convert JEF file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_JPX.inx:3
+msgid "JPX file input"
+msgstr ""
+
+#: inx/inkstitch_input_JPX.inx:8
+msgid "Ink/Stitch: Janome Embroidery Format (.jpx)"
+msgstr ""
+
+#: inx/inkstitch_input_JPX.inx:9
+msgid "convert JPX file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_KSM.inx:3
+msgid "KSM file input"
+msgstr ""
+
+#: inx/inkstitch_input_KSM.inx:8
+msgid "Ink/Stitch: Pfaff Embroidery Format (.ksm)"
+msgstr ""
+
+#: inx/inkstitch_input_KSM.inx:9
+msgid "convert KSM file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_MAX.inx:3
+msgid "MAX file input"
+msgstr ""
+
+#: inx/inkstitch_input_MAX.inx:8
+msgid "Ink/Stitch: Pfaff Embroidery Format (.max)"
+msgstr ""
+
+#: inx/inkstitch_input_MAX.inx:9
+msgid "convert MAX file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_MIT.inx:3
+msgid "MIT file input"
+msgstr ""
+
+#: inx/inkstitch_input_MIT.inx:8
+msgid "Ink/Stitch: Mitsubishi Embroidery Format (.mit)"
+msgstr ""
+
+#: inx/inkstitch_input_MIT.inx:9
+msgid "convert MIT file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_NEW.inx:3
+msgid "NEW file input"
+msgstr ""
+
+#: inx/inkstitch_input_NEW.inx:8
+msgid "Ink/Stitch: Ameco Embroidery Format (.new)"
+msgstr ""
+
+#: inx/inkstitch_input_NEW.inx:9
+msgid "convert NEW file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_PCD.inx:3
+msgid "PCD file input"
+msgstr ""
+
+#: inx/inkstitch_input_PCD.inx:8
+msgid "Ink/Stitch: Pfaff Embroidery Format (.pcd)"
+msgstr ""
+
+#: inx/inkstitch_input_PCD.inx:9
+msgid "convert PCD file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_PCM.inx:3
+msgid "PCM file input"
+msgstr ""
+
+#: inx/inkstitch_input_PCM.inx:8
+msgid "Ink/Stitch: Pfaff Embroidery Format (.pcm)"
+msgstr ""
+
+#: inx/inkstitch_input_PCM.inx:9
+msgid "convert PCM file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_PCQ.inx:3
+msgid "PCQ file input"
+msgstr ""
+
+#: inx/inkstitch_input_PCQ.inx:8
+msgid "Ink/Stitch: Pfaff Embroidery Format (.pcq)"
+msgstr ""
+
+#: inx/inkstitch_input_PCQ.inx:9
+msgid "convert PCQ file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_PCS.inx:3
+msgid "PCS file input"
+msgstr ""
+
+#: inx/inkstitch_input_PCS.inx:8
+msgid "Ink/Stitch: Pfaff Embroidery Format (.pcs)"
+msgstr ""
+
+#: inx/inkstitch_input_PCS.inx:9
+msgid "convert PCS file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_PEC.inx:3
+msgid "PEC file input"
+msgstr ""
+
+#: inx/inkstitch_input_PEC.inx:8 inx/inkstitch_output_PEC.inx:8
+msgid "Ink/Stitch: Brother Embroidery Format (.pec)"
+msgstr ""
+
+#: inx/inkstitch_input_PEC.inx:9
+msgid "convert PEC file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_PES.inx:3
+msgid "PES file input"
+msgstr ""
+
+#: inx/inkstitch_input_PES.inx:8 inx/inkstitch_output_PES.inx:8
+msgid "Ink/Stitch: Brother Embroidery Format (.pes)"
+msgstr ""
+
+#: inx/inkstitch_input_PES.inx:9
+msgid "convert PES file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_PHB.inx:3
+msgid "PHB file input"
+msgstr ""
+
+#: inx/inkstitch_input_PHB.inx:8
+msgid "Ink/Stitch: Brother Embroidery Format (.phb)"
+msgstr ""
+
+#: inx/inkstitch_input_PHB.inx:9
+msgid "convert PHB file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_PHC.inx:3
+msgid "PHC file input"
+msgstr ""
+
+#: inx/inkstitch_input_PHC.inx:8
+msgid "Ink/Stitch: Brother Embroidery Format (.phc)"
+msgstr ""
+
+#: inx/inkstitch_input_PHC.inx:9
+msgid "convert PHC file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_SEW.inx:3
+msgid "SEW file input"
+msgstr ""
+
+#: inx/inkstitch_input_SEW.inx:8
+msgid "Ink/Stitch: Janome Embroidery Format (.sew)"
+msgstr ""
+
+#: inx/inkstitch_input_SEW.inx:9
+msgid "convert SEW file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_SHV.inx:3
+msgid "SHV file input"
+msgstr ""
+
+#: inx/inkstitch_input_SHV.inx:8
+msgid "Ink/Stitch: Husqvarna Viking Embroidery Format (.shv)"
+msgstr ""
+
+#: inx/inkstitch_input_SHV.inx:9
+msgid "convert SHV file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_STC.inx:3
+msgid "STC file input"
+msgstr ""
+
+#: inx/inkstitch_input_STC.inx:8
+msgid "Ink/Stitch: Gunold Embroidery Format (.stc)"
+msgstr ""
+
+#: inx/inkstitch_input_STC.inx:9
+msgid "convert STC file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_STX.inx:3
+msgid "STX file input"
+msgstr ""
+
+#: inx/inkstitch_input_STX.inx:8
+msgid "Ink/Stitch: Data Stitch Embroidery Format (.stx)"
+msgstr ""
+
+#: inx/inkstitch_input_STX.inx:9
+msgid "convert STX file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_TAP.inx:3
+msgid "TAP file input"
+msgstr ""
+
+#: inx/inkstitch_input_TAP.inx:8
+msgid "Ink/Stitch: Happy Embroidery Format (.tap)"
+msgstr ""
+
+#: inx/inkstitch_input_TAP.inx:9
+msgid "convert TAP file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_TBF.inx:3
+msgid "TBF file input"
+msgstr ""
+
+#: inx/inkstitch_input_TBF.inx:8
+msgid "Ink/Stitch: Tajima Embroidery Format (.tbf)"
+msgstr ""
+
+#: inx/inkstitch_input_TBF.inx:9
+msgid "convert TBF file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_U01.inx:3
+msgid "U01 file input"
+msgstr ""
+
+#: inx/inkstitch_input_U01.inx:8 inx/inkstitch_output_U01.inx:8
+msgid "Ink/Stitch: Barudan Embroidery Format (.u01)"
+msgstr ""
+
+#: inx/inkstitch_input_U01.inx:9
+msgid "convert U01 file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_VP3.inx:3
+msgid "VP3 file input"
+msgstr ""
+
+#: inx/inkstitch_input_VP3.inx:8 inx/inkstitch_output_VP3.inx:8
+msgid "Ink/Stitch: Pfaff Embroidery Format (.vp3)"
+msgstr ""
+
+#: inx/inkstitch_input_VP3.inx:9
+msgid "convert VP3 file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_XXX.inx:3
+msgid "XXX file input"
+msgstr ""
+
+#: inx/inkstitch_input_XXX.inx:8
+msgid "Ink/Stitch: Singer Embroidery Format (.xxx)"
+msgstr ""
+
+#: inx/inkstitch_input_XXX.inx:9
+msgid "convert XXX file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_ZXY.inx:3
+msgid "ZXY file input"
+msgstr ""
+
+#: inx/inkstitch_input_ZXY.inx:8
+msgid "Ink/Stitch: ZSK TC Embroidery Format (.zxy)"
+msgstr ""
+
+#: inx/inkstitch_input_ZXY.inx:9
+msgid "convert ZXY file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_install.inx:3
+msgid "Install thread color palettes for Inkscape"
+msgstr ""
+
+#: inx/inkstitch_install_custom_palette.inx:3
+msgid "Install custom palette"
+msgstr ""
+
+#: inx/inkstitch_install_custom_palette.inx:6
+msgid "Choose a .gpl color palette file to install into Inkscape."
+msgstr ""
+
+#: inx/inkstitch_install_custom_palette.inx:7
+msgid "Restart Inkscape to use."
+msgstr ""
+
+#: inx/inkstitch_layer_commands.inx:3
+msgid "Add Layer Commands"
+msgstr ""
+
+#: inx/inkstitch_lettering.inx:3
+msgid "Lettering"
+msgstr ""
+
+#: inx/inkstitch_lettering_custom_font_dir.inx:3
+#: inx/inkstitch_lettering_custom_font_dir.inx:18
+msgid "Custom font directory"
+msgstr ""
+
+#: inx/inkstitch_lettering_custom_font_dir.inx:10
+#: inx/inkstitch_lettering_force_lock_stitches.inx:10
+#: inx/inkstitch_lettering_generate_json.inx:10
+#: inx/inkstitch_lettering_remove_kerning.inx:10
+#: inx/inkstitch_letters_to_font.inx:10
+msgid "Font Management"
+msgstr ""
+
+#: inx/inkstitch_lettering_force_lock_stitches.inx:23
+#: inx/inkstitch_lettering_force_lock_stitches.inx:24
+msgid "Minimum distance (mm)"
+msgstr ""
+
+#: inx/inkstitch_lettering_force_lock_stitches.inx:26
+msgid "Add force lock stitches attribute to the last element of each glyph"
+msgstr ""
+
+#: inx/inkstitch_lettering_generate_json.inx:3
+msgid "Generate JSON"
+msgstr ""
+
+#: inx/inkstitch_lettering_generate_json.inx:21
+msgid "SVG Font File"
+msgstr ""
+
+#: inx/inkstitch_lettering_generate_json.inx:25
+msgid "Name"
+msgstr ""
+
+#: inx/inkstitch_lettering_generate_json.inx:33
+msgid "Autoroute Satin"
+msgstr ""
+
+#: inx/inkstitch_lettering_generate_json.inx:33
+msgid "Disable if you defined manual routing in your font."
+msgstr ""
+
+#: inx/inkstitch_lettering_generate_json.inx:35
+msgid "Reversible"
+msgstr ""
+
+#: inx/inkstitch_lettering_generate_json.inx:35
+msgid "If disabled back and forth stitching will not be possile for this font."
+msgstr ""
+
+#: inx/inkstitch_lettering_generate_json.inx:36
+msgid "Force letter case"
+msgstr ""
+
+#: inx/inkstitch_lettering_generate_json.inx:38
+msgid "Upper"
+msgstr ""
+
+#: inx/inkstitch_lettering_generate_json.inx:39
+msgid "Lower"
+msgstr ""
+
+#: inx/inkstitch_lettering_generate_json.inx:43
+msgid "Min Scale"
+msgstr ""
+
+#: inx/inkstitch_lettering_generate_json.inx:44
+msgid "Max Scale"
+msgstr ""
+
+#: inx/inkstitch_lettering_generate_json.inx:48
+msgid "Default Glyph"
+msgstr ""
+
+#: inx/inkstitch_lettering_generate_json.inx:60
+#: inx/inkstitch_lettering_generate_json.inx:67
+msgid "Force"
+msgstr ""
+
+#: inx/inkstitch_lettering_generate_json.inx:60
+msgid "Overwrite leading information from font file."
+msgstr ""
+
+#: inx/inkstitch_lettering_generate_json.inx:62
+msgid "Leading (px)"
+msgstr ""
+
+#: inx/inkstitch_lettering_generate_json.inx:62
+msgid "Line height (default: 100)"
+msgstr ""
+
+#: inx/inkstitch_lettering_generate_json.inx:67
+msgid "Overwrite word spacing information from font file."
+msgstr ""
+
+#: inx/inkstitch_lettering_generate_json.inx:69
+msgid "Word spacing (px)"
+msgstr ""
+
+#: inx/inkstitch_lettering_generate_json.inx:69
+msgid "Space character width (default: 20)"
+msgstr ""
+
+#: inx/inkstitch_lettering_remove_kerning.inx:3
+msgid "Remove Kerning"
+msgstr ""
+
+#: inx/inkstitch_lettering_remove_kerning.inx:23
+msgid "Select Font Files"
+msgstr ""
+
+#: inx/inkstitch_letters_to_font.inx:3
+msgid "Letters to font"
+msgstr ""
+
+#: inx/inkstitch_letters_to_font.inx:22
+msgid "File format"
+msgstr ""
+
+#: inx/inkstitch_letters_to_font.inx:47
+msgid "Font directory"
+msgstr ""
+
+#: inx/inkstitch_letters_to_font.inx:49
+msgid "Import commands"
+msgstr ""
+
+#: inx/inkstitch_object_commands.inx:3
+msgid "Attach Commands to Selected Objects"
+msgstr ""
+
+#: inx/inkstitch_object_commands_toggle_visibility.inx:3
+msgid "Display|Hide Object Commands"
+msgstr ""
+
+#: inx/inkstitch_output_CSV.inx:3
+msgid "CSV file output"
+msgstr ""
+
+#: inx/inkstitch_output_CSV.inx:8
+msgid "Ink/Stitch: Comma-separated values [DEBUG] (.csv)"
+msgstr ""
+
+#: inx/inkstitch_output_CSV.inx:9
+msgid "Save design in CSV format using Ink/Stitch"
+msgstr ""
+
+#: inx/inkstitch_output_DST.inx:3
+msgid "DST file output"
+msgstr ""
+
+#: inx/inkstitch_output_DST.inx:9
+msgid "Save design in DST format using Ink/Stitch"
+msgstr ""
+
+#: inx/inkstitch_output_EXP.inx:3
+msgid "EXP file output"
+msgstr ""
+
+#: inx/inkstitch_output_EXP.inx:9
+msgid "Save design in EXP format using Ink/Stitch"
+msgstr ""
+
+#: inx/inkstitch_output_JEF.inx:3
+msgid "JEF file output"
+msgstr ""
+
+#: inx/inkstitch_output_JEF.inx:9
+msgid "Save design in JEF format using Ink/Stitch"
+msgstr ""
+
+#: inx/inkstitch_output_PEC.inx:3
+msgid "PEC file output"
+msgstr ""
+
+#: inx/inkstitch_output_PEC.inx:9
+msgid "Save design in PEC format using Ink/Stitch"
+msgstr ""
+
+#: inx/inkstitch_output_PES.inx:3
+msgid "PES file output"
+msgstr ""
+
+#: inx/inkstitch_output_PES.inx:9
+msgid "Save design in PES format using Ink/Stitch"
+msgstr ""
+
+#: inx/inkstitch_output_PMV.inx:3
+msgid "PMV file output"
+msgstr ""
+
+#: inx/inkstitch_output_PMV.inx:8
+msgid "Ink/Stitch: Brother Stitch Format [DEBUG] (.pmv)"
+msgstr ""
+
+#: inx/inkstitch_output_PMV.inx:9
+msgid "Save design in PMV format using Ink/Stitch"
+msgstr ""
+
+#: inx/inkstitch_output_SVG.inx:3
+msgid "SVG file output"
+msgstr ""
+
+#: inx/inkstitch_output_SVG.inx:8
+msgid "Ink/Stitch: Scalable Vector Graphics [DEBUG] (.svg)"
+msgstr ""
+
+#: inx/inkstitch_output_SVG.inx:9
+msgid "Save design in SVG format using Ink/Stitch"
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:3
+msgid "TXT file output"
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:8
+msgid "Ink/Stitch: G-code Format (.txt)"
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:9
+msgid "Save design in TXT format using Ink/Stitch"
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:17
+msgid "Coordinate Settings"
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:18
+msgid "negate X coordinate values"
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:18
+msgid "Negate x coordinates"
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:19
+msgid "negate Y coordinate values"
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:19
+msgid "Negate y coordinates"
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:20
+msgid "Z coordinate value"
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:20
+msgid "Either alternate Z value between 0 and 1 or travel custom value."
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:21
+msgid "alternate Z value"
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:22 inx/inkstitch_output_TXT.inx:25
+msgid "Z travel per stitch"
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:25
+msgid "increment z coordinate by this amount per stitch if \"Z travel per stitch\" is enabled"
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:27
+msgid "Custom Commands"
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:29
+msgid "Use '%X' for x-coordinate. Use '%Y' for y-coordinate and '%Z' for z-coordinate."
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:31 inx/inkstitch_output_TXT.inx:33
+msgid "Leave empty to use default value. Use 'none' to remove."
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:34
+msgid "START"
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:35
+msgid "END"
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:37
+msgid "Laser Settings"
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:39
+msgid "laser mode"
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:39
+msgid "Laser mode (generate g-code for grbl laser mode)"
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:42
+msgid "dynamic laser power"
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:42
+msgid "Use Grbl's M4 dynamic laser power mode. Ensures consistent laser cutting power regardless of motor speed. Only for PWM-capable lasers."
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:44
+msgid "laser warm-up time"
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:44
+msgid "When turning on the laser, wait this many seconds for laser to warm up (G4 command)"
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:46
+msgid "spindle speed"
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:46
+msgid "spindle speed (laser power for laser mode, set to -1 to omit)"
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:48
+msgid "min spindle speed"
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:48
+msgid "minimum spindle speed value (grbl $31 setting)"
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:50
+msgid "max spindle speed"
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:50
+msgid "minimum spindle speed value (grbl $30 setting)"
+msgstr ""
+
+#: inx/inkstitch_output_TXT.inx:51
+msgid "feed rate (in mm/min, set to -1 to omit)"
+msgstr ""
+
+#: inx/inkstitch_output_U01.inx:3
+msgid "U01 file output"
+msgstr ""
+
+#: inx/inkstitch_output_U01.inx:9
+msgid "Save design in U01 format using Ink/Stitch"
+msgstr ""
+
+#: inx/inkstitch_output_VP3.inx:3
+msgid "VP3 file output"
+msgstr ""
+
+#: inx/inkstitch_output_VP3.inx:9
+msgid "Save design in VP3 format using Ink/Stitch"
+msgstr ""
+
+#: inx/inkstitch_palette_split_text.inx:3
+msgid "Split text"
+msgstr ""
+
+#: inx/inkstitch_palette_split_text.inx:16
+msgid "Line Height"
+msgstr ""
+
+#: inx/inkstitch_palette_to_text.inx:3 inx/inkstitch_palette_to_text.inx:20
+msgid "Palette to text"
+msgstr ""
+
+#: inx/inkstitch_palette_to_text.inx:16
+msgid "Choose a .gpl color palette file to import colors as text elements."
+msgstr ""
+
+#: inx/inkstitch_palette_to_text.inx:21
+msgid "Import a .gpl palette into Inkscape as text elements to edit color entries."
+msgstr ""
+
+#: inx/inkstitch_palette_to_text.inx:23
+msgid "Read more on our webiste:"
+msgstr ""
+
+#: inx/inkstitch_palette_to_text.inx:24
+msgid "https://inkstitch.org/docs/thread-color#palette-to-text"
+msgstr ""
+
+#: inx/inkstitch_params.inx:3
+msgid "Params"
+msgstr ""
+
+#: inx/inkstitch_print.inx:3
+msgid "PDF Export"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:3
+msgid "Remove embroidery settings"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:7
+msgid "Remove Params"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:7
+msgid "Removes params from selected objects or all objects if nothing is selected."
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:9
+msgid "Remove Commands"
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:9
+msgid "Removes visual commands from selected objects or all objects if nothing is selected."
+msgstr ""
+
+#: inx/inkstitch_remove_embroidery_settings.inx:10
+msgid "Remove Print Settings from SVG metadata"
+msgstr ""
+
+#: inx/inkstitch_reorder.inx:3
+msgid "Re-stack objects in order of selection"
+msgstr ""
+
+#: inx/inkstitch_selection_to_guide_line.inx:3
+msgid "Selection to guide line"
+msgstr ""
+
+#: inx/inkstitch_selection_to_pattern.inx:3
+msgid "Selection to pattern"
+msgstr ""
+
+#: inx/inkstitch_simulator.inx:3
+msgid "Simulator / Realistic Preview"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:3
+msgid "Stitch Plan Preview"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:14
+msgid "Move stitch plan beside the canvas"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:15
+msgid "Design layer visibility"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:16
+msgid "Unchanged"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:17
+msgid "Hidden"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:18
+msgid "Lower opacity"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:20
+msgid "Needle points"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:22
+msgid "Hit Ctrl+Z to undo this action after inspection."
+msgstr ""
+
+#: inx/inkstitch_troubleshoot.inx:3
+msgid "Troubleshoot Objects"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:3
+msgid "embroidery ZIP file output"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:8
+msgid "Ink/Stitch: ZIP export multiple formats (.zip)"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:9
+msgid "Create a ZIP with multiple embroidery file formats using Ink/Stitch"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:20
+msgid ".SVG: Scalable Vector Graphic"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:21
+msgid ".TXT: Threadlist"
 msgstr ""
 

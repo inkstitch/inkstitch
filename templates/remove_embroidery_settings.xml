@@ -3,16 +3,16 @@
     <name>Remove embroidery settings</name>
     <id>org.inkstitch.remove_embroidery_settings</id>
     <param name="description" type="description">Use this extension to remove the information Ink/Stitch has stored in your document.  This can be especially useful if you copy and paste objects from an embroidery design into another document.</param>
-    <param name="del_params" type="boolean" _gui-text="Remove Params"
-           _gui-description="Removes params from selected objects or all objects if nothing is selected.">true</param>
-    <param name="del_commands" type="boolean" _gui-text="Remove Commands"
-           _gui-description="Removes visual commands from selected objects or all objects if nothing is selected.">false</param>
-    <param name="del_print" type="boolean" _gui-text="Remove Print Settings from SVG metadata">false</param>
+    <param name="del_params" type="boolean" gui-text="Remove Params"
+           gui-description="Removes params from selected objects or all objects if nothing is selected.">true</param>
+    <param name="del_commands" type="boolean" gui-text="Remove Commands"
+           gui-description="Removes visual commands from selected objects or all objects if nothing is selected.">false</param>
+    <param name="del_print" type="boolean" gui-text="Remove Print Settings from SVG metadata">false</param>
     <param name="extension" type="string" gui-hidden="true">remove_embroidery_settings</param>
     <effect>
         <object-type>all</object-type>
         <effects-menu>
-            <submenu name="Ink/Stitch">
+            <submenu name="Ink/Stitch" translatable="no">
                 <submenu name="Troubleshoot" />
             </submenu>
         </effects-menu>

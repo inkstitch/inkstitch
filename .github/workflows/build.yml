@@ -8,18 +8,20 @@ on:
       - "v*"
 jobs:
   linux:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         with:
           submodules: recursive
       - uses: actions/setup-python@v2
         with:
-          python-version: '3.9.x'
+          python-version: '3.8.5'
       - uses: actions/setup-node@v1
         with:
           node-version: '16.x'
-
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1
       - uses: actions/cache@v2
         id: pip-cache
         with:
@@ -63,8 +65,8 @@ jobs:
           python -m pip --version
           python -m pip debug
 
-          python -m pip install pycairo==1.11.1
-          python -m pip install PyGObject==3.30.5
+          python -m pip install pycairo
+          python -m pip install PyGObject
 
           # colormath - last official release: 3.0.0
           # we need already submitted fixes - so let's grab them from the github repository
@@ -79,6 +81,7 @@ jobs:
           make dist
         env:
           BUILD: linux
+          INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
       - uses: actions/upload-artifact@v2
         with:
           name: inkstitch-linux
@@ -114,6 +117,20 @@ jobs:
           make dist
         env:
           BUILD: windows
+      - uses: dlemstra/code-sign-action@v1
+        with:
+          certificate: '${{ secrets.INKSTITCH_CODE_SIGNING_CERTIFICATE }}'
+          folder: 'dist'
+          recursive: true
+      - shell: bash
+        run: |
+          bash bin/build-windows-installer
+        env:
+          BUILD: windows
+      - uses: dlemstra/code-sign-action@v1
+        with:
+          certificate: '${{ secrets.INKSTITCH_CODE_SIGNING_CERTIFICATE }}'
+          folder: 'artifacts'
       - uses: actions/upload-artifact@v2
         with:
           name: inkstitch-windows
@@ -126,7 +143,7 @@ jobs:
           submodules: recursive
       - uses: actions/setup-python@v2
         with:
-          python-version: '3.9.x'
+          python-version: '3.8.x'
       - uses: actions/setup-node@v1
         with:
           node-version: '16.x'
@@ -150,9 +167,12 @@ jobs:
           pip install wheel
           pip install PyGObject
           pip install git+https://github.com/gtaylor/python-colormath
-
           pip install -r requirements.txt
-          pip install pyinstaller==4.3
+          # with --no-binary argument may fix notary issues as well shapely speedups error issue
+          pip install -U lxml --no-binary lxml
+          pip uninstall --yes shapely
+          pip install -v -U Shapely==1.8.1 --no-binary Shapely
+          pip install pyinstaller
 
           echo "${{ env.pythonLocation }}/bin" >> $GITHUB_PATH
       - shell: bash
@@ -160,6 +180,15 @@ jobs:
           make dist
         env:
           BUILD: osx
+          MACOS_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE }}
+          MACOS_CERTIFICATE_PWD: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE_PASSWORD }}
+          KEYCHAIN_PWD: ${{ secrets.KEYCHAIN_PASSWORD }}
+          INSTALLER_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE }}
+          INSTALLER_PWD: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE_PASSWORD }}
+          NOTARY_ACCOUNT: ${{ secrets.INKSTITCH_NOTARIZE_AC }}
+          NOTARY_PASSWORD: ${{ secrets.INKSTITCH_NOTARIZE_PASS }}
+
+
       - uses: actions/upload-artifact@v2
         with:
           name: inkstitch-mac
@@ -211,4 +240,10 @@ jobs:
           prerelease: "${{env.prerelease}}"
           title: "${{env.title}}"
           files: |
+            artifacts/*.exe
+            artifacts/*.pkg
+            artifacts/*.deb
+            artifacts/*.rpm
+            artifacts/*.tar.xz
+            artifacts/*.sh
             artifacts/*.zip

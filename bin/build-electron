@@ -2,15 +2,29 @@
 
 set -e
 set -x
+ARCH="$(uname -m)"
+# Check for cpu arch to build mac and linux electron arch
+if [[ "$ARCH" = "arm64" ]] || [[ "$ARCH" = "aarch64" ]]; then
+    echo "Found ARM"
+    sed -i'' -e 's/CPU_ARCH/'arm64'/' electron/package.json
+else
+    echo "Found x64"
+    sed -i'' -e 's/CPU_ARCH/'x64'/' electron/package.json
+fi
 
 if [ "$BUILD" = "windows" ]; then
   args="-w --ia32"
 elif [ "$BUILD" = "linux" ]; then
-  args="-l --x64"
+  args="-l"
 elif [ "$BUILD" = "osx" ]; then
+  cp installer_scripts/electron-entitlements.plist electron/build/
   args="-m"
 fi
 
+# electron version setting on release
+if [[ "$VERSION" =~ ^v[0-9][.0-9]+$ ]]; then
+    sed -i'' -e 's/11.99.11/'"${VERSION#v}"'/' electron/package.json
+fi
 cd electron
 which yarn > /dev/null 2>&1 || npm install -g yarn
 yarn --link-duplicates --pure-lockfile

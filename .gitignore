@@ -17,3 +17,4 @@ locales/
 /.idea
 /VERSION
 /src/
+.DS_STORE

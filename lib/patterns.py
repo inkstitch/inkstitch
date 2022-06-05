@@ -3,25 +3,17 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-import inkex
 from shapely import geometry as shgeo
 
+from .marker import get_marker_elements
 from .stitch_plan import Stitch
-from .svg.tags import EMBROIDERABLE_TAGS
 from .utils import Point
 
 
-def is_pattern(node):
-    if node.tag not in EMBROIDERABLE_TAGS:
-        return False
-    style = node.get('style') or ''
-    return "marker-start:url(#inkstitch-pattern-marker)" in style
-
-
 def apply_patterns(patches, node):
-    patterns = _get_patterns(node)
-    _apply_stroke_patterns(patterns['stroke_patterns'], patches)
-    _apply_fill_patterns(patterns['fill_patterns'], patches)
+    patterns = get_marker_elements(node, "pattern")
+    _apply_fill_patterns(patterns['fill'], patches)
+    _apply_stroke_patterns(patterns['stroke'], patches)
 
 
 def _apply_stroke_patterns(patterns, patches):
@@ -64,42 +56,13 @@ def _apply_fill_patterns(patterns, patches):
             patch.stitches = patch_points
 
 
-def _get_patterns(node):
-    from .elements import EmbroideryElement
-    from .elements.fill import Fill
-    from .elements.stroke import Stroke
-
-    fills = []
-    strokes = []
-    xpath = "./parent::svg:g/*[contains(@style, 'marker-start:url(#inkstitch-pattern-marker)')]"
-    patterns = node.xpath(xpath, namespaces=inkex.NSS)
-    for pattern in patterns:
-        if pattern.tag not in EMBROIDERABLE_TAGS:
-            continue
-
-        element = EmbroideryElement(pattern)
-        fill = element.get_style('fill')
-        stroke = element.get_style('stroke')
-
-        if fill is not None:
-            fill_pattern = Fill(pattern).shape
-            fills.append(fill_pattern)
-
-        if stroke is not None:
-            stroke_pattern = Stroke(pattern).paths
-            line_strings = [shgeo.LineString(path) for path in stroke_pattern]
-            strokes.append(shgeo.MultiLineString(line_strings))
-
-    return {'fill_patterns': fills, 'stroke_patterns': strokes}
-
-
 def _get_pattern_points(first, second, pattern):
     points = []
     intersection = shgeo.LineString([first, second]).intersection(pattern)
     if isinstance(intersection, shgeo.Point):
         points.append(Point(intersection.x, intersection.y))
     if isinstance(intersection, shgeo.MultiPoint):
-        for point in intersection:
+        for point in intersection.geoms:
             points.append(Point(point.x, point.y))
     # sort points after their distance to first
     points.sort(key=lambda point: point.distance(first))

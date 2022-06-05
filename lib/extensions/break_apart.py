@@ -27,7 +27,7 @@ class BreakApart(InkstitchExtension):
         self.minimum_size = 5
 
     def effect(self):  # noqa: C901
-        if not self.svg.selected:
+        if not self.svg.selection:
             inkex.errormsg(_("Please select one or more fill areas to break apart."))
             return
 
@@ -83,7 +83,7 @@ class BreakApart(InkstitchExtension):
                     if diff.geom_type == 'MultiPolygon':
                         polygons.remove(other)
                         polygons.remove(polygon)
-                        for p in diff:
+                        for p in diff.geoms:
                             polygons.append(p)
                         # it is possible, that a polygons overlap with multiple
                         # polygons, this means, we need to start all over again

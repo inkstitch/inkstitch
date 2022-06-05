@@ -5,7 +5,7 @@
 
 from inkex import NSS, Boolean, errormsg
 
-from ..elements import Fill, Stroke
+from ..elements import FillStitch, Stroke
 from ..i18n import _
 from .base import InkstitchExtension
 
@@ -24,7 +24,7 @@ class Cleanup(InkstitchExtension):
         self.fill_threshold = self.options.fill_threshold
         self.stroke_threshold = self.options.stroke_threshold
 
-        self.svg.selected.clear()
+        self.svg.selection.clear()
 
         count = 0
         svg = self.document.getroot()
@@ -38,7 +38,7 @@ class Cleanup(InkstitchExtension):
             return
 
         for element in self.elements:
-            if (isinstance(element, Fill) and self.rm_fill and element.shape.area < self.fill_threshold):
+            if (isinstance(element, FillStitch) and self.rm_fill and element.shape.area < self.fill_threshold):
                 element.node.getparent().remove(element.node)
                 count += 1
             if (isinstance(element, Stroke) and self.rm_stroke and

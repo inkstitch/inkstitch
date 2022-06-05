@@ -16,7 +16,7 @@ jobs:
           git submodule update --init --recursive
       - uses: actions/setup-python@v1
         with:
-          python-version: '3.x'
+          python-version: '3.9.x'
       - env:
           CROWDIN_API_KEY: ${{ secrets.CROWDIN_API_KEY }}
         run: |
@@ -26,9 +26,21 @@ jobs:
           wget --quiet https://downloads.crowdin.com/cli/v2/crowdin-cli.zip
           unzip -j crowdin-cli.zip
 
-          sudo apt-get install python2.7 gettext
+          sudo apt-get update
+          sudo apt install gettext
+          # for wxPython
+          sudo apt install glib-networking libsdl1.2-dev
+          # for PyGObject
+          sudo apt install libgirepository1.0-dev libcairo2-dev
+          # for shapely
+          sudo apt install libgeos-dev build-essential libgtk-3-dev
+
           python -m pip install --upgrade pip
-          python -m pip install flask==0.* jinja2 Babel ./pyembroidery
+          python -m pip install wheel
+          python -m pip install pycairo==1.11.1
+          python -m pip install PyGObject==3.30.5
+          python -m pip install -r requirements.txt
+          python -m pip install Babel
 
           make messages.po
           echo "uploading messages.po to crowdin"

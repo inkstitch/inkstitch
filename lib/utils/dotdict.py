@@ -15,7 +15,7 @@ class DotDict(dict):
 
     def update(self, *args, **kwargs):
         super(DotDict, self).update(*args, **kwargs)
-        self.dotdictify()
+        self._dotdictify()
 
     def _dotdictify(self):
         for k, v in self.items():

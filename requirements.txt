@@ -3,12 +3,12 @@
 # This installs inkex, the Inkscape python extension library.
 # We need the new style handling that was added after the inkex version bundled
 # with Inkscape 1.1.  That's why we're installing from Git.
--e git+https://gitlab.com/inkscape/extensions.git@139d71470e7d6bbe9fcd869f385fc73e3a8a8bea#egg=inkscape-core-extensions
+-e git+https://gitlab.com/inkscape/extensions.git@e44fdcbe6bcc917ef3a2164eb0c130f7276fb83f#egg=inkex
 
 backports.functools_lru_cache
 wxPython
 networkx
-shapely
+shapely==1.8.2
 lxml
 appdirs
 numpy<=1.17.4
@@ -19,6 +19,8 @@ stringcase
 tinycss2
 flask
 fonttools
+trimesh
+scipy
 
 pywinutils; sys.platform == 'win32'
 pywin32; sys.platform == 'win32'

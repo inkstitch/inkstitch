@@ -9,9 +9,10 @@ import sys
 from base64 import b64decode
 
 import appdirs
-import inkex
 import wx
 import wx.adv
+
+import inkex
 
 from ..elements import nodes_to_elements
 from ..gui import PresetsPanel, SimulatorPreview, info_dialog
@@ -174,7 +175,7 @@ class LetteringFrame(wx.Frame):
                 image.Rescale(300, 20, quality=wx.IMAGE_QUALITY_HIGH)
                 self.font_chooser.Append(font.marked_custom_font_name, wx.Bitmap(image))
             else:
-                self.font_chooser.Append(font.name)
+                self.font_chooser.Append(font.marked_custom_font_name)
 
     def get_font_descriptions(self):
         return {font.name: font.description for font in self.fonts.values()}
@@ -272,12 +273,15 @@ class LetteringFrame(wx.Frame):
             font.render_text(self.settings.text, destination_group, back_and_forth=self.settings.back_and_forth, trim=self.settings.trim)
         except FontError as e:
             if raise_error:
-                inkex.errormsg("Error: Text cannot be applied to the document.\n%s" % e)
+                inkex.errormsg(_("Error: Text cannot be applied to the document.\n%s") % e)
                 return
             else:
                 pass
 
-        if self.settings.scale != 100:
+        # destination_group isn't always the text scaling group (but also the parent group)
+        # the text scaling group label is dependend on the user language, so it would break in international file exchange if we used it
+        # scaling (correction transform) on the parent group is already applied, so let's use that for recognition
+        if self.settings.scale != 100 and not destination_group.get('transform', None):
             destination_group.attrib['transform'] = 'scale(%s)' % (self.settings.scale / 100.0)
 
     def generate_patches(self, abort_early=None):
@@ -395,10 +399,10 @@ class Lettering(CommandsExtension):
         self.cancelled = True
 
     def get_or_create_group(self):
-        if self.svg.selected:
+        if self.svg.selection:
             groups = set()
 
-            for node in self.svg.selected.values():
+            for node in self.svg.selection:
                 if node.tag == SVG_GROUP_TAG and INKSTITCH_LETTERING in node.attrib:
                     groups.add(node)
 

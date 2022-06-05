@@ -17,11 +17,13 @@ class StitchGroup:
     between them by the stitch plan generation code.
     """
 
-    def __init__(self, color=None, stitches=None, trim_after=False, stop_after=False, tie_modus=0, stitch_as_is=False, tags=None):
+    def __init__(self, color=None, stitches=None, trim_after=False, stop_after=False,
+                 tie_modus=0, force_lock_stitches=False, stitch_as_is=False, tags=None):
         self.color = color
         self.trim_after = trim_after
         self.stop_after = stop_after
         self.tie_modus = tie_modus
+        self.force_lock_stitches = force_lock_stitches
         self.stitch_as_is = stitch_as_is
         self.stitches = []
 

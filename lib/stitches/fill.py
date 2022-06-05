@@ -131,8 +131,6 @@ def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing=Non
     # fill regions at the same angle and spacing always line up nicely.
     start -= (start + normal * center) % row_spacing
 
-    rows = []
-
     current_row_y = start
 
     while current_row_y < end:
@@ -143,8 +141,8 @@ def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing=Non
 
         res = grating_line.intersection(shape)
 
-        if (isinstance(res, shapely.geometry.MultiLineString)):
-            runs = [line_string.coords for line_string in res.geoms]
+        if (isinstance(res, shapely.geometry.MultiLineString) or isinstance(res, shapely.geometry.GeometryCollection)):
+            runs = [line_string.coords for line_string in res.geoms if isinstance(line_string, shapely.geometry.LineString)]
         else:
             if res.is_empty or len(res.coords) == 1:
                 # ignore if we intersected at a single point or no points
@@ -159,14 +157,12 @@ def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing=Non
                 runs.reverse()
                 runs = [tuple(reversed(run)) for run in runs]
 
-            rows.append(runs)
+            yield runs
 
         if end_row_spacing:
             current_row_y += row_spacing + (end_row_spacing - row_spacing) * ((current_row_y - start) / height)
         else:
             current_row_y += row_spacing
-
-    return rows
 
 
 def section_to_stitches(group_of_segments, angle, row_spacing, max_stitch_length, staggers, skip_last):
@@ -221,6 +217,7 @@ def pull_runs(rows, shape, row_spacing):
 
     # print >>sys.stderr, "\n".join(str(len(row)) for row in rows)
 
+    rows = list(rows)
     runs = []
     count = 0
     while (len(rows) > 0):

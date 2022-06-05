@@ -13,8 +13,13 @@ from io import StringIO
 if getattr(sys, 'frozen', None) is None:
     # When running in development mode, we want to use the inkex installed by
     # pip install, not the one bundled with Inkscape which is not new enough.
-    sys.path.remove('/usr/share/inkscape/extensions')
-    sys.path.append('/usr/share/inkscape/extensions')
+    if sys.platform == "darwin":
+        extensions_path = "/Applications/Inkscape.app/Contents/Resources/share/inkscape/extensions"
+    else:
+        extensions_path = "/usr/share/inkscape/extensions"
+
+    sys.path.remove(extensions_path)
+    sys.path.append(extensions_path)
 
 from inkex import errormsg
 from lxml.etree import XMLSyntaxError
@@ -23,6 +28,11 @@ import lib.debug as debug
 from lib import extensions
 from lib.i18n import _
 from lib.utils import restore_stderr, save_stderr, version
+
+# ignore warnings in releases
+if getattr(sys, 'frozen', None):
+    import warnings
+    warnings.filterwarnings('ignore')
 
 logger = logging.getLogger('shapely.geos')
 logger.setLevel(logging.DEBUG)
@@ -72,10 +82,13 @@ else:
             errormsg(shapely_errors.getvalue())
 
     if exception:
-        errormsg(_("Ink/Stitch experienced an unexpected error.") + "\n")
-        errormsg(_("If you'd like to help, please file an issue at "
-                   "https://github.com/inkstitch/inkstitch/issues "
-                   "and include the entire error description below:") + "\n")
+        errormsg(_("Ink/Stitch experienced an unexpected error. This means it is a bug in Ink/Stitch.") + "\n")
+        errormsg(_("If you'd like to help please\n"
+                   "- copy the entire error message below\n"
+                   "- save your SVG file and\n"
+                   "- create a new issue at https://github.com/inkstitch/inkstitch/issues") + "\n")
+        errormsg(_("Include the error description and also (if possible) "
+                   "the svg file.") + "\n")
         errormsg(version.get_inkstitch_version() + "\n")
         errormsg(exception)
         sys.exit(1)

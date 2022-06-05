@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <name>Import Threadlist</name>
-    <id>org.inkstitch.import_threadlist</id>
-    <param name="extension" type="string" gui-hidden="true">import_threadlist</param>
+    <name>Apply Threadlist</name>
+    <id>org.inkstitch.apply_threadlist</id>
+    <param name="extension" type="string" gui-hidden="true">apply_threadlist</param>
     <param name="filepath" type="path" gui-text="Choose file" mode="file" filetypes="txt"/>
-    <param name="method" type="optiongroup" _gui-text="Choose method">
-       <option value="1">Import Ink/Stitch threadlist</option>
-       <option value="2">Import other threadlist*</option>
+    <param name="method" type="optiongroup" gui-text="Choose method">
+       <option value="1">Apply Ink/Stitch threadlist</option>
+       <option value="2">Apply other threadlist*</option>
     </param>
-    <param name="palette" type="enum" _gui-text="*Choose color palette">
+    <param name="palette" type="enum" gui-text="*Choose color palette">
     {%- for item in threadcatalog %}
        <item value="{{ item }}">{{ item }}</item>
     {%- endfor %}
@@ -16,7 +16,7 @@
     <effect>
         <object-type>all</object-type>
         <effects-menu>
-            <submenu name="Ink/Stitch">
+            <submenu name="Ink/Stitch" translatable="no">
                 <submenu name="Thread Color Management" />
             </submenu>
         </effects-menu>

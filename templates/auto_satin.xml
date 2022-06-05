@@ -2,14 +2,14 @@
 <inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
     <name>Auto-Route Satin Columns</name>
     <id>org.inkstitch.auto_satin</id>
-    <param name="trim" type="boolean" _gui-text="Trim jump stitches">true</param>
-    <param name="preserve_order" type="boolean" _gui-text="Preserve order of satin columns">false</param>
+    <param name="trim" type="boolean" gui-text="Trim jump stitches">true</param>
+    <param name="preserve_order" type="boolean" gui-text="Preserve order of satin columns">false</param>
     <param name="extension" type="string" gui-hidden="true">auto_satin</param>
     <effect>
         <object-type>all</object-type>
         <effects-menu>
-            <submenu name="Ink/Stitch">
-                <submenu name="Satin Tools" />
+            <submenu name="Ink/Stitch" translatable="no">
+                <submenu name="Tools: Satin" />
             </submenu>
         </effects-menu>
     </effect>

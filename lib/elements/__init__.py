@@ -3,11 +3,10 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from .auto_fill import AutoFill
 from .clone import Clone
 from .element import EmbroideryElement
 from .empty_d_object import EmptyDObject
-from .fill import Fill
+from .fill_stitch import FillStitch
 from .image import ImageObject
 from .polyline import Polyline
 from .satin_column import SatinColumn

@@ -20,7 +20,7 @@ from ..utils import Point, cache
 
 class Param(object):
     def __init__(self, name, description, unit=None, values=[], type=None, group=None, inverse=False,
-                 options=[], default=None, tooltip=None, sort_index=0):
+                 options=[], default=None, tooltip=None, sort_index=0, select_items=None):
         self.name = name
         self.description = description
         self.unit = unit
@@ -32,6 +32,7 @@ class Param(object):
         self.default = default
         self.tooltip = tooltip
         self.sort_index = sort_index
+        self.select_items = select_items
 
     def __repr__(self):
         return "Param(%s)" % vars(self)
@@ -86,8 +87,11 @@ class EmbroideryElement(object):
         return params
 
     def replace_legacy_param(self, param):
-        value = self.node.get(param, "").strip()
-        self.set_param(param[10:], value)
+        # remove "embroider_" prefix
+        new_param = param[10:]
+        if new_param in INKSTITCH_ATTRIBS:
+            value = self.node.get(param, "").strip()
+            self.set_param(param[10:], value)
         del self.node.attrib[param]
 
     @cache
@@ -202,10 +206,22 @@ class EmbroideryElement(object):
            # L10N options to allow lock stitch before and after objects
            options=[_("Both"), _("Before"), _("After"), _("Neither")],
            default=0,
-           sort_index=4)
+           sort_index=10)
     @cache
     def ties(self):
         return self.get_int_param("ties", 0)
+
+    @property
+    @param('force_lock_stitches',
+           _('Force lock stitches'),
+           tooltip=_('Sew lock stitches after sewing this element, '
+                     'even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences.'),
+           type='boolean',
+           default=False,
+           sort_index=10)
+    @cache
+    def force_lock_stitches(self):
+        return self.get_boolean_param('force_lock_stitches', False)
 
     @property
     def path(self):
@@ -249,6 +265,11 @@ class EmbroideryElement(object):
     @cache
     def parse_path(self):
         return apply_transforms(self.path, self.node)
+
+    @property
+    @cache
+    def paths(self):
+        return self.flatten(self.parse_path())
 
     @property
     def shape(self):
@@ -312,6 +333,7 @@ class EmbroideryElement(object):
 
         for patch in patches:
             patch.tie_modus = self.ties
+            patch.force_lock_stitches = self.force_lock_stitches
 
         if patches:
             patches[-1].trim_after = self.has_command("trim") or self.trim_after

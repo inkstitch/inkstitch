@@ -149,7 +149,7 @@ def get_viewbox_transform(node):
             sx = sy = max(sx, sy) if 'slice' in aspect_ratio else min(sx, sy)
 
         scale_transform = inkex.transforms.Transform("scale(%f, %f)" % (sx, sy))
-        transform = transform * scale_transform
+        transform = transform @ scale_transform
     except ZeroDivisionError:
         pass
 
