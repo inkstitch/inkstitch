@@ -189,7 +189,8 @@ def _get_start_rotation(line):
 
 
 def _generate_satin_guide_helper_lines(stroke, outline, guide_line):
-    rail_points = guide_line.plot_points_on_rails(guide_line.center_line.length / stroke.line_count, 0)
+    spacing = guide_line.center_line.length / (stroke.line_count - 1)
+    rail_points = guide_line.plot_points_on_rails(spacing, 0)
 
     point0 = rail_points[0][0]
     point1 = rail_points[1][0]
