@@ -9,7 +9,7 @@ tutorial-type:
   - Sample File
 stitch-type:
   - "Ripple Stitch"
-  - "Contour Stitch"
+  - "Contour Fill"
   
 techniques:
 field-of-use:
