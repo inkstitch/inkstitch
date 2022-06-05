@@ -41,14 +41,14 @@ Paramètres||Description
 ---|---|---
 Points droits le long des chemins   |  ☑  |Doit être activé pour que ces paramètres prennent effet.
 Méthode      || Choisir Broderie Ondulée
-Répéter                      || Définir combien de fois le chemin final de broderie est excuté en va et vient le long du parcours <br />◦ par défaut: 1 (aller une fois du début à la fin du chemin)<br />◦ Nombre impair: les points se termineront à la fin du chemin<br />◦ Nombre pair: la couture va revenir au début du chemin
+Répéter                      || Définir combien de fois le chemin final de broderie est exécuté en va et vient le long du parcours <br />◦ par défaut: 1 (aller une fois du début à la fin du chemin)<br />◦ Nombre impair: les points se termineront à la fin du chemin<br />◦ Nombre pair: la couture va revenir au début du chemin
 Nombre de répétitions du point triple || Activer [Mode point triple](/fr/docs/stitches/bean-stitch/)<br />◦ Repasse sur chaque point le nombre de fois indiqué.<br />◦ Une valeur de 1 triplera chaque point (avant, arrière, avant).<br />◦ Une valeur de 2 permettra de quintupler chaque point, etc..<br />
 Longueur du point droit||Longueur des points dans le [Mode Point Droit](/fr/docs/stitches/running-stitch/)
 Nombre de lignes|<img src="/assets/images/docs/ripple_only_lines.svg" alt="Nombre de lignes"/>|Choisir le nombre de réplications de l'ondulation dans la broderie. La valeur par défaut est 10.
 ◦Sauter les premières lignes <br /> ◦Sauter les dernières lignes  |<img src="/assets/images/docs/ripple_only_skip.svg" alt="Sauter"/>| Permet de sauter (ne pas broder)  ce nombre de réplications au début et/ou à la fin
 Exposant de la distance entre les lignes|<img src="/assets/images/docs/ripple_only_exponent.svg" alt="Exposant"/>| ◦ La valeur par défaut de 1 espace les réplications de manière constante<br />◦ Avec une valeur supérieure à  1 l'espace  entre deux réplications consécutives augmente au fur et à mesure qu'on s'éloigne du chemin qui définit l'ondulation  <br />◦ Avec une valeur inférieure à  1 l'espace  entre deux réplications consécutives diminue au fur et à mesure qu'on s'éloigne du chemin qui définit l'ondulation
 Inverser effet exposant |☑  ou ▢| Èchange le rôle de la  première et de la dernière réplication pour le calcul de la distance entre les réplications
-Renverser |☑  ou ▢|  Renverse le  chemin final de broderie . N'a pas d'effet sur les autres paramètres
+Changer le sens |☑  ou ▢|  Change le sens du  chemin final de broderie . N'a pas d'effet sur les autres paramètres
 Distance grille  maximum |<img src="/assets/images/docs/ripple_only_grid.svg" alt="Distance"/>| Si une distance positive est spécifiée, les ondulations de la broderie sont complétées  en une "grille", par un chemin "perpendiculaire" aux ondulations. Le paramètre contrôle l'écart de ces perpendiculaires. Intervertir  n'a pas  d'influence sur ce paramètre.
 Mettre les axes à l'echelle|XY or X or Y or None | for guided ripple only
 Tourner| ☑  or ▢| for guided ripple only
